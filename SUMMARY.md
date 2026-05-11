@@ -21,3 +21,4 @@
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
++   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
