@@ -1,0 +1,107 @@
+name: Building Embedded Systems with C++： A Practical Guide to Developing Efficient
+  and Programming for ARM Microcontrollers Reliable Embedded Systems
+name_cn: C++ 嵌入式系统构建指南：ARM 微控制器高效编程与可靠嵌入式系统开发实用指南
+slug: building-embedded-systems-with-c-a-practical-guide-to-develo
+toc:
+- - '#'
+  - C++ 嵌入式系统构建指南：ARM 微控制器高效编程与可靠嵌入式系统开发实用指南
+- - '##'
+  - 配置时钟使能部分详解
+- - '##'
+  - 理解类与对象
+- - '##'
+  - Dynamic Allocation
+- - '###'
+  - 动态分配示例代码
+- - '##'
+  - 理解函数模板
+- - '##'
+  - 默认参数的用法
+- - '##'
+  - 理解引用方式和按值与指针传递的区别解读
+- - '##'
+  - UNDERSTANDING PASS BY ADDRESS
+- - '##'
+  - RETURN BY ADDRESS
+- - '##'
+  - Class Properties & Accessors/Mutators
+- - '###'
+  - CLASS CONSTRUCTORS (构造函数)
+- - '##'
+  - UNDERSTANDING THIS POINTER
+- - '##'
+  - FRIEND 友元函数
+- - '##'
+  - 继承示例
+- - '##'
+  - CLASS POINTERS
+- - '###'
+  - 'Sample Code Block : Inheritance Demo'
+- - '##'
+  - 重写
+- - '#'
+  - POLYMORPHISM (PART I) （第一部分）
+- - '##'
+  - 多态性(第二部分)
+- - '###'
+  - _friend_ 特性
+- - '##'
+  - STATIC VARIABLES
+- - '##'
+  - STATIC FUNCTIONS
+- - '##'
+  - CLASS DESTRUCTORS
+- - '###'
+  - INTRODUCTION TO MICROCONTROLLER TEMPLATE PROGRAMMING
+- - '##'
+  - DEVELOPING A TEMPLATE FOR ACCESSING MICROCONTROLLER REGISTERS （第一版）
+- - '##'
+  - Project Setup
+- - '###'
+  - Template Class Declaration
+- - '####'
+  - 'Example Usage Code Block Preview:'
+- - '##'
+  - 寄存器的位映射 (第一部分)
+- - '##'
+  - 实现与用法
+- - '#'
+  - ARM CORTEX-M 通用输入输出模块概述
+- - '#'
+  - 使用 BSRR 寄存器开发 GPIO 输出驱动程序
+- - '##'
+  - BSRR 的使用机制
+- - '#'
+  - DEVELOPING A GPIO INPUT DRIVER （原文标题保留）
+- - '##'
+  - UART 资料流程
+- - '##'
+  - 双向 UART 通讯
+- - '#'
+  - SysTick 定时器概览
+- - '##'
+  - GP 通用定时器概述
+- - '##'
+  - 分析通用定时器的寄存器
+- - '##'
+  - 模数转换 (ADC) 简介
+- - '##'
+  - I²C 简介
+- - '#'
+  - I²C 通信协议学习
+- - '##'
+  - I²C 的基本特性
+- - '##'
+  - CREATING I²C REGISTERS
+- - '###'
+  - 构造读写函数示例(Language:C)
+- - '###'
+  - SPI 配置步骤：
+- - '#'
+  - 测试 SPI 库
+- - '##'
+  - 安装 Keil uVision
+- - '###'
+  - Installing packs
+- - '##'
+  - INSTALLING PACKS 詳細步骤解说

@@ -1,0 +1,77 @@
+name: C Programming Success in a Day： Beginners' Guide To Fast, Easy and Efficient
+  Learning of C Programming
+name_cn: C 编程一日精通：快速、轻松且高效学习 C 语言的初学者指南
+slug: c-programming-success-in-a-day-beginners-guide-to-fast-easy-
+toc:
+- - '#'
+  - C 编程一日精通：快速、轻松且高效学习 C 语言的初学者指南
+- - '##'
+  - 引言
+- - '###'
+  - '`[原行复刻形式放回并加反引号]`'
+- - '##'
+  - C 语言的各类常量
+- - '###'
+  - '*Enumeration Constants(枚举常数值)*'
+- - '###'
+  - String Constant (字符串常量)
+- - '##'
+  - 变量
+- - '##'
+  - While 循环
+- - '##'
+  - Break 和 Continue
+- - '#'
+  - 第五章：指针与数组
+- - '##'
+  - 多维数组
+- - '#'
+  - 第七章：字符串、结构体、联合体和类型定义
+- - '##'
+  - Unions
+- - '###'
+  - strlen
+- - '###'
+  - <time.h>
+- - '###'
+  - ctime
+- - '###'
+  - <math.h>
+- - '###'
+  - abs
+- - '###'
+  - pow
+- - '###'
+  - sqrt
+- - '###'
+  - log
+- - '#'
+  - 第 8 章：命令行参数、递归与二进制文件
+- - '###'
+  - 命令行参数
+- - '##'
+  - 第九章：文件处理 – 创建与打开文件
+- - '###'
+  - 系统定向 vs 流式数据文件类型？
+- - '##'
+  - 错误与可能的返回值
+- - '#'
+  - 第 10 章：文件读取/写入数据
+- - '#'
+  - 参数说明
+- - '##'
+  - flags（第一个 tag）
+- - '##'
+  - width (第二个 tag)
+- - '###'
+  - height? 不，
+- - '##'
+  - C 语言中的 `closegraph` 函数
+- - '###'
+  - '**注意**'
+- - '##'
+  - 'Circle 圆形在 Language 中用法――Drawing a circle via interesting c.syntax 并存解释──太长简:'
+- - '##'
+  - C 语言中的 getbkcolor 函数
+- - '##'
+  - 结论

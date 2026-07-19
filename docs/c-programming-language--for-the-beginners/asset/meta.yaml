@@ -1,0 +1,120 @@
+name: C Programming language- For the Beginners
+name_cn: C 语言初学者指南
+slug: c-programming-language--for-the-beginners
+toc:
+- - '#'
+  - C 语言初学者指南
+- - '#'
+  - 3. C 语言选择排序程序
+- - '#'
+  - 10. 计算类编程题
+- - '##'
+  - 1. C 程序：计算并输出 `nPr`（排列数）的值
+- - '##'
+  - 2. C 程序：计算并输出 `nCr`（组合数）的值
+- - '##'
+  - 3. C 语言程序示例库乘法运算之浮点数相乘
+- - '###'
+  - 1. 用二进制基数表示法把十进制数字转化为其对应的
+- - '##'
+  - '`else ifif` 语句示例'
+- - '###'
+  - 'Output:'
+- - '####'
+  - '**重要点总结:**'
+- - '#'
+  - C 语言中的 Switch Case 语句 – with 例示
+- - '#'
+  - 嵌套循环
+- - '##'
+  - C – `continue statement`
+- - '#'
+  - Continue reading this article instead.（请改为阅读本文。）
+- - '#'
+  - C 语言中的二维数组
+- - '##'
+  - 指针逻辑
+- - '###'
+  - Pointer Logic As Written in Original Text
+- - '###'
+  - C 语言 string 函数 – `strncmp`
+- - '###'
+  - 如何在 C 语言中调用函数？
+- - '####'
+  - 'Example: Creating a user defined function'
+- - '###'
+  - 引用传递函数调用 — 使用指针增加数值
+- - '#'
+  - 5.3 C – 函数指针
+- - '###'
+  - 如何声明函数指针？
+- - '#'
+  - 5.4 向函数传递指针
+- - '#'
+  - 5.5 C 中的文件 I/O
+- - '###'
+  - 5.5.1 打开文件
+- - '##'
+  - 各种文件打开模式
+- - '#'
+  - 库函数 C 教程
+- - '##'
+  - C strcat() 函数
+- - '###'
+  - C strcat() 声明
+- - '###'
+  - 示例：C strcat() 函数
+- - '##'
+  - C strncat() 函数及示例
+- - '###'
+  - C strncat() 函数声明
+- - '###'
+  - 示例：C 中的 strncat() 函数
+- - '##'
+  - C strchr() 函数
+- - '###'
+  - C strchr() 声明
+- - '###'
+  - 示例：strchr() 函数
+- - '##'
+  - C strcmp() 函数
+- - '###'
+  - C strcmp() 函数声明
+- - '###'
+  - 示例：C 中的 strcmp() 函数
+- - '#'
+  - 带示例的 C 语言 `strncmp()` 函数
+- - '##'
+  - C 语言的 *无宽首行*
+- - '###'
+  - C 语言 `strncmp()`
+- - '#'
+  - C `strspn()` 函数
+- - '##'
+  - C `strspn()` 声明
+- - '##'
+  - 用 C 语言编写程序，通过递归函数反转给定数字
+- - '###'
+  - 使用递归实现给定数组的反转：
+- - '##'
+  - C 语言程序检查阿姆斯特朗数
+- - '##'
+  - 示例：检查闰年的程序
+- - '###'
+  - 结合实例理解 – Enter years 演示：
+- - '#'
+  - Part：使用循环求前 n 个自然数之和
+- - '##'
+  - Foreword for Section Scope：
+- - '##'
+  - C 语言实现：连接两个无空格等标准符号
+- - '##'
+  - C 语言中的插入排序程序
+- - '##'
+  - Program to Multiply two Floating Point Numbers （两浮点数相乘程序）
+- - '###'
+  - 'Example: Program to display the product using float numbers'
+- - '##'
+  - C 程序将十进制转换为八进制数
+- - '#'
+  - 计算面积的程序

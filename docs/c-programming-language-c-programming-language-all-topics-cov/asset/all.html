@@ -1,0 +1,3930 @@
+<p><img src="Images/cover00096.jpeg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<p><strong>UNIT -1</strong></p>
+<p><strong>Concepts of Object Oriented programming:</strong> Object
+oriented paradigm-differences between Object Oriented Programming and
+Procedure oriented programming, Basic concepts of Object Oriented
+Programming,Encapsulation, Inheritance and Polymorphism. Benefits of OOP
+.Structure of a C++ program, namespace, Data types, C++ tokens,
+identifiers, variables, constants, operators, control structures &amp;
+loops.</p>
+<p><img src="Images/image00047.jpeg" /></p>
+<h3><strong>Overview of C language:</strong></h3>
+<p>1.C language is known as structure oriented language or procedure
+oriented language<br />
+2.Employs top-down programming approach where a problem is viewed as a
+sequence of tasks to be performed.<br />
+3.All program code of c can be executed in C++ but converse many not be
+possible<br />
+4. Function overloading and operator overloading are not possible.<br />
+5. Local variables can be declared only at the beginning of the
+block.<br />
+6. Program controls are through jumps and calls to subroutines.<br />
+7.Polymorphism, encapsulation and inheritance are not possible.<br />
+For solving the problems, the problem is divided into a number of
+modules. Each module is a subprogram.<br />
+8. Data abstraction property is not supported by procedure oriented
+language.<br />
+9. Data in procedure oriented language is open and can be accessed by
+any function.</p>
+<p><strong>Overview of C++ language:</strong><br />
+1. C++ can be considered as an incremental version of c language which
+consists all programming language constructs with newly added features
+of object oriented programming.<br />
+2.c++ is structure(procedure) oriented and object oriented programming
+language.<br />
+3.The file extension of C++ program is “.CPP”<br />
+4. Function overloading and operator overloading are possible.<br />
+5. Variables can be declared in inline i.e when required<br />
+6. In c++ more emphasis is give on data rather than procedures<br />
+7.Polymorphism, encapsulation and inheritance are possible.<br />
+8. Data abstraction property is supported by c++.<br />
+9. Data access is limited. It can be accessed by providing various
+visibility modes both for data and member functions. there by providing
+data security by data hiding<br />
+10.Dymanic binding is supported by C++<br />
+11..It supports all features of c language<br />
+12.It can be called as an incremental version of c language</p>
+<p><strong><font>Difference Between Procedure Oriented Programming (POP)
+&amp; Object Oriented Programming (OOP)</font><br />
+<font>Procedure Oriented Programming</font></strong></p>
+<p>1<br />
+program is divided into small parts called
+<strong>functions</strong>.</p>
+<p>Importance is not given to <strong>data</strong> but to 2 functions
+as well as <strong>sequence</strong> of<br />
+actions to be done.</p>
+<p>3 follows <strong>Top Down approach</strong>. 4 It does not have any
+access specifier.</p>
+<p>5<br />
+Data can move freely from function to function in the system.</p>
+<p><font><strong>Object Oriented Programming</strong></font> program is
+divided into parts called <strong>objects</strong>.</p>
+<p>Importance is given to the data rather than procedures or functions
+because it works as a <strong>real world</strong>.</p>
+<p>OOP follows <strong>Bottom Up approach</strong>. OOP has access
+specifiers named<br />
+Public, Private, Protected, etc.<br />
+objects can move and communicate with each other through member
+functions. 6<br />
+To add new data and function in POP is not so easy.</p>
+<p>Most function uses Global data for sharing 7 that can be accessed
+freely from function to<br />
+function in the system.</p>
+<p>It does not have any proper way for hiding<sub>8 data so it is
+<strong>less secure</strong>.</sub></p>
+<p>9 Overloading is not possible. OOP provides an easy way to add new
+data and function.<br />
+In OOP, data can not move easily from function to function,it can be
+kept public or private so we can control the access of data. OOP
+provides Data Hiding so provides <strong>more security</strong>.<br />
+In OOP, overloading is possible in the form of Function Overloading and
+Operator<br />
+Overloading.</p>
+<p>Example of Procedure Oriented 10 Programming are : C, VB,
+FORTRAN,</p>
+<p>Pascal.<br />
+Example of Object Oriented Programming are : C++, JAVA, VB.NET,
+C#.NET.</p>
+<h3><strong>Principles( or features) of object oriented
+programming:</strong></h3>
+<p>1. Encapsulation<br />
+2. Data abstraction<br />
+3. Polymorphism<br />
+4. Inheritance<br />
+5. Dynamic binding<br />
+6. Message passing<br />
+<strong>Encapsulation:</strong> Wrapping of data and functions together
+as a single unit is known as encapsulation. By default data is not
+accessible to outside world and they are only accessible through the
+functions which are wrapped in a class. prevention of data direct access
+by the program is called data hiding or information hiding</p>
+<p><strong>Data abstraction :</strong></p>
+<p>Abstraction refers to the act of representing essential features
+without including the back ground details or explanation. Classes use
+the concept of abstraction and are defined as a list of attributes such
+as size, weight, cost and functions to operate on these attributes. They
+encapsulate all essential properties of the object that are to be
+created. The attributes are called as data members as they hold data and
+the functions which operate on these data are called as member
+functions.</p>
+<p>Class use the concept of data abstraction so they are called
+<strong>abstract data type</strong> (ADT)</p>
+<p><strong>Polymorphism:</strong> Polymorphism comes from the Greek
+words “poly” and “morphism”. “poly” means many and “morphism” means form
+i.e.. many forms. Polymorphism means the ability to take more than one
+form. For example, an operation have different behavior in different
+instances. The behavior depends upon the type of the data used in the
+operation.<br />
+Different ways to achieving polymorphism in C++ program:</p>
+<p>1) Function overloading 2) Operator overloading<br />
+#include&lt;iostream&gt;<br />
+using namespace<br />
+std; int main()<br />
+{int a=4; a=a&lt;&lt;2;</p>
+<p>cout&lt;&lt;”a=”&lt;&lt;a&lt;&lt;endl;<br />
+return 0;<br />
+}<br />
+<strong>Inheritance:</strong> Inheritance is the process by which one
+object can acquire the properties of another.</p>
+<p>Inheritance is the most promising concept of OOP, which helps realize
+the goal of constructing software from reusable parts, rather than hand
+coding every system from scratch. Inheritance not only supports reuse
+across systems, but also directly facilitates extensibility within a
+system. Inheritance coupled with polymorphism and dynamic binding
+minimizes the amount of existing code to be modified while enhancing a
+system.</p>
+<p>When the class child, inherits the class parent, the class child is
+referred to as derived class (sub class) and the class parent as a base
+class (super class). In this case, the class child has two parts: a
+derived part and an incremental part. The derived part is inherited from
+the class parent. The incremental part is the new code written
+specifically for the class child.<br />
+<strong>Dynamic binding:</strong></p>
+<p>Binding refers to linking of procedure call to the code to be
+executed in response to the call. Dynamic binding(or late binding) means
+the code associated with a given procedure call in not known until the
+time of call at run time.</p>
+<p><strong>Message passing:</strong><br />
+An object oriented program consists of set of object that communicate
+with each other.<br />
+Objects communicates with each other by sending and receiving
+information . A message for an object is a request for execution of a
+procedure and there fore invoke<br />
+the function that is called for an object and generates result</p>
+<p><strong>Benefits of object oriented programming (OOPs)</strong><br />
+<font size="-1"><sup></sup> <strong>Reusability:</strong> In OOP‟ s
+programs functions and modules that are written by a user can be reused
+by<sup><br />
+  other users without any modification. 
+<strong>Inheritance</strong>: Through this we can eliminate redundant
+code and extend the use of existing classes.</sup> <strong>Data
+Hiding:</strong> The programmer can hide the data and functions in a
+class from other classes. It helps the programmer to <sup></sup> build
+the secure programs.<sup><br />
+</sup> <strong>Reduced complexity of a problem:</strong> The given
+problem can be viewed as a collection of different objects. Each object
+is responsible for a specific task. The problem is solved by interfacing
+the objects. This technique reduces the</font></p>
+<p><font size="-1"><sup></sup> complexity of the program
+design.</font><sup><font size="-1"></font><br />
+</sup> <strong>Easy to Maintain and Upgrade</strong>: OOP makes it easy
+to maintain and modify existing code as new objects<br />
+<sup></sup> can be created with small differences to existing ones.
+Software complexity can be easily managed.<sup></sup></p>
+<p><font size="-1"><sup></sup> <strong>Message Passing:</strong> The
+technique of message communication between objects makes the
+interface<sup></sup><br />
+with external systems easier.<br />
+<br />
+</font><br />
+<sup></sup> <strong>Modifiability:</strong> it is easy to make minor
+changes in the data representation or the procedures in an OO program.
+Changes inside a class do not affect any other part of a program, since
+the only</p>
+<h3>public interface that the external world has to a class is through
+the use of methods.<sup></sup></h3>
+<p><strong>BASIC STRUCTURE OF C++ LANGUAGE :</strong> The program
+written in C++ language follows this basic structure. The sequence of
+sections should be as they are in the basic structure. A C program
+should have one or more sections but the sequence of sections is to be
+followed.</p>
+<p>1. Documentation section<br />
+2. Linking section<br />
+3. Definition section<br />
+4. Global declaration section &amp; class declarations<br />
+5.Member function definition<br />
+6. Main function<br />
+section main()<br />
+{<br />
+Declaration section<br />
+Executable section<br />
+}<br />
+<strong>1. DOCUMENTATION SECTION :</strong> comes first and is used to
+document the use of logic or reasons in your program. It can be used to
+write the program's objective, developer and logic details. The
+documentation is done in C language with /* and */ . Whatever is written
+between these two are called comments.<br />
+<strong>2. LINKING SECTION :</strong> This section tells the compiler to
+link the certain occurrences of keywords or functions in your program to
+the header files specified in this section. e.g.
+#include&lt;iostream&gt;</p>
+<p><font size="-1"></font><br />
+using namespace std;<br />
+<font size="-1">directive causes the preprocessor to add the contents of
+the iostream file to the program. It contains declarations </font><br />
+</p>
+<p><font size="-1">for cout and cin.<sup></sup></font><br />
+cout is a predefined object that represents the standard output stream.
+The operator &lt;&lt; is an<br />
+insertion operator, causes the string in double quotes to be displayed
+on the screen.<sup></sup> screen</p>
+<p><img src="Images/image00048.jpeg" />cout &lt;&lt; “C++”<br />
+Object<br />
+Insertion Operator variable</p>
+<p>The statement cin&gt;&gt;n; is an input statement and causes the
+program to wait for the user to type in a number. The number keyed is
+placed on the variable “n”. The identifier cin is a predefined object in
+C++ that corresponds to the standard input stream. The operator &gt;&gt;
+is known as extraction operator. It extracts the value from the keyboard
+and assigns it to the value variable on its right.</p>
+<p>Object Extraction operator variable<br />
+cin<sub>&gt;&gt;</sub> 45.5<br />
+Keyboard<br />
+<img src="Images/image00049.jpeg" /></p>
+<p><strong>3. DEFINITION SECTION :</strong> It is used to declare some
+constants and assign them some value. e.g. #define MAX 25<br />
+Here #define is a compiler directive which tells the compiler whenever
+MAX is found in</p>
+<p>the program replace it with 25.<br />
+<strong>4. GLOBAL DECLARATION SECTION :</strong> Here the variables and
+class definations which are used through out the program (including main
+and other functions) are declared so as to make them global(i.e
+accessible to all parts of program). <strong>A CLASS</strong> is a
+collection of data and functions that act or manipulate the data. The
+data components of a class are called <strong>data members</strong> and
+function components of a class are called <strong>member
+functions</strong></p>
+<p>A class ca also termed as a blue print or prototype that defines the
+variable or functions common to all objects of certain kind. It is a
+<strong>user defined data type</strong><br />
+e.g.<br />
+int i; //this declaration is done outside and before main()</p>
+<p><strong>5. SUB PROGRAM OR FUNCTION SECTION :</strong> This has all
+the sub programs or the functions which our program needs.<br />
+void display()<br />
+{<br />
+cout&lt;&lt;”C++ is better that C”;<br />
+}</p>
+<p><strong>SIMPLE „C++</strong> ‟ <strong>PROGRAM:</strong><br />
+#include&lt;iostream&gt; using namespace std; void display() {</p>
+<p>cout&lt;&lt;”C++ is better that C”; }<br />
+int main()<br />
+{</p>
+<p>display() return 0; }</p>
+<p><strong>6. MAIN FUNCTION SECTION :</strong> It tells the compiler
+where to start the execution from main()<br />
+{</p>
+<p>point from execution starts</p>
+<p>}<br />
+main function has two sections<br />
+1. declaration section : In this the variables and their data types are
+declared.<br />
+2. Executable section or instruction section : This has the part of
+program which actually performs<br />
+the task we need.</p>
+<h3><strong>namespace:</strong></h3>
+<p>namespace is used to define a scope that could hold global
+identifiers. ex:-namespace scope for c++ standard library.<br />
+A classes ,functions and templates are declared within the namespace
+named std using namespace std;--&gt;directive can be used.</p>
+<p><strong>user defined name space:</strong> syntax for defining name
+space is</p>
+<p>namespace namespace_name<br />
+{<br />
+//declarations of variables.functions,classes etc... }<br />
+ex:<br />
+#include&lt;iostream&gt;<br />
+using namespace std;<br />
+namespace sample<br />
+{`</p>
+<p>int m;<br />
+void display(int n)</p>
+<p>{ cout&lt;&lt;"in namespace N="&lt;&lt;n&lt;&lt;endl;<br />
+}<br />
+}</p>
+<p>using namespace sample;<br />
+int main()<br />
+{<br />
+int a=5;<br />
+m=100;<br />
+display(200);<br />
+cout&lt;&lt;"M in sample name space:"&lt;&lt;sample::m;<br />
+return 0;}</p>
+<p>#include&lt;iostream&gt;<br />
+This directive causes the preprocessor to add content of iostream file
+to the program. some old versions of C++ used iostream.h .if complier
+does not support ANSI (american nation standard institute) C++ then use
+header file iostream.h</p>
+<p><strong>DATA TYPES:</strong><br />
+A data type is used to indicate the type of data value stored in a
+variable. All C compilers support a variety of data types. This variety
+of data types allows the programmer to select the type appropriate to
+the needs of the application as well as the machine. ANSI C supports the
+following classes of data types: 1.Primary (fundamental) data
+types.<br />
+2.Derived data types.</p>
+<p>3.User-defined data types C++ data types<br />
+<img src="Images/image00050.jpeg" /><strong>Primary data types<br />
+int<br />
+char Derived data types</strong><br />
+<img src="Images/image00051.jpeg" /></p>
+<p>Array<br />
+Pointer<br />
+Reference</p>
+<p><strong>float User defined data types</strong><br />
+<img src="Images/image00052.jpeg" /></p>
+<p>Structure<br />
+Union<br />
+Class<br />
+enumeration</p>
+<p><strong>double</strong><br />
+bool<br />
+<img src="Images/image00053.jpeg" />void</p>
+<p>Primary data types:<br />
+1.integer data type<br />
+2.character data type<br />
+3.float point data type<br />
+4.Boolean data type 5.void data type</p>
+<p><strong>integer data type:</strong> -<br />
+This data type is used to store whole numbers. These numbers do not
+contain the decimal part. The size of the integer depends upon the world
+length of a machine (16-bit or 32-bit). On a 16-bit machine, the range
+of integer values is - 32,768 to +32,767.integer variables are declared
+by keyword int. C provides control over range of integer values and
+storage space occupied by these values through the data types: short
+int, int, long int in both signed and unsigned forms.</p>
+<p>Signed integers: (16-bit machine):<br />
+A signed integer uses 1 bit for sign and 15 bits for the magnitude of
+the number<br />
+<img src="Images/image00054.jpeg" />MSB(most significant bit)</p>
+<h2>100</h2>
+<h1>=</h1>
+<h2><sub>(10)</sub> 00000000001100100<sub>(2)</sub></h2>
+<p>Representation of negative number :</p>
+<h2>-100<sub>(10)=</sub>1111111110011100<sub>(2)</sub></h2>
+<p><img src="Images/image00055.jpeg" /></p>
+<h3><sub>15 14 13 12 11 10 9 8 7</sub> -1*2 +1*2 +1*2 +1*2 +1*2 +1*2
++1*2 +1*2<sub>+1*2 +</sub></h3>
+<p><font size="-2">6 5 4 3 2 1 0</font></p>
+<h2>0*2 +0*2 +1*2 +1*2 +1*2 +0*2 +0*2</h2>
+<p>= -32768+16384+8192+4096+2048+1024+512+256+128+0+0+26+8+4+0+0 =<br />
+100(10)<br />
+NOTE: <strong>Signed bit (MSB BIT)</strong>: 0 represents positive
+integer, 1 represents negative numbers<br />
+<strong>Unsigned integers</strong>: Unsigned integers use all 16 bits to
+store the magnitude. Stores numbers does not have any sign &amp; Size
+qualifier and range of integer data type on a 16-bit and machine are
+shown in the table:<br />
+<font size="-1">DATA TYPE</p>
+<p>short int<br />
+or</p>
+<p>signed short int short int<br />
+or<br />
+signed short int signed int<br />
+or<br />
+int<br />
+unsigned int<br />
+long int<br />
+or<br />
+signed long int unsigned long int<br />
+long long int or<br />
+signed long long</p>
+<p>int MEMORY REQUIRED<sub>RANGE</sub></p>
+<p>OR STORAGE SIZE IN BYTES FORMAT TURBO C GCC/ COMPILERS TURBO C GCC
+SPECIER ( 16 BIT)<sup>IN LINUX</sup> ( 16 BIT) (32 BIT)<sub>(32
+BIT)</sub><br />
+2 2<br />
+-32768 -32768<br />
+To To<sub>%hd</sub><br />
+(-2</font><br />
+15<br />
+<font size="-1">32767<sub>15 -1) (-215</sub>32767<br />
+to +2 to +2<sup>15</sup> -1)<br />
+0 to 65535 0 to 65535 2 2 (0 to +2 -1) (0 to +2 -1) %hu<br />
+-32768 -2,147,843,648<sub>%d</sub> 2<br />
+4<br />
+To to<br />
+2,147,843,647 to +2<br />
+or (-2<sup>153276715</sup> -1) (-2<sup>31</sup> to +2<sup>31</sup>-1) %i
+0 to 65535 0 to 4,294,967,295 2 4 (0 to +2<sup>16</sup> -1) (0
+to2<sup>32</sup>-1 ) %u<br />
+-2,147,843,648 -2,147,843,648 to to 4 4 2,147,843,647 2,147,843,647 %ld
+(-2<sup>31</sup> to +2<sup>31</sup>-1) (-2<sup>31</sup> to
++2<sup>31</sup>-1) 0 to 4,294,967,295 0 to 4,294,967,295 4 4 (0
+to2<sup>32</sup>-1 ) (0 to2<sup>32</sup>-1 ) %lu<br />
+-9223372036854775808<br />
+<sup>Not 8 -------To %Ld</sup>supported 9223372036854775807
+(-2<sup>63</sup> to +2<sup>63</sup>-1)</font></p>
+<p><strong><em>Character data type</em> :</strong>
+(<strong>char</strong>)<br />
+A single character can be defined as a character data type. Character
+data type occupies one byte of memory for storage of character. The
+qualifiers <strong>signed</strong> or <strong>unsigned</strong> can be
+applied on char data type. <strong>char</strong> is the key word used
+for declaring variables<br />
+size and range of character data type on 16 bit or 32 bit machine can be
+shown below</p>
+<p>Data type <font size="-1">MEMORY REQUIRED RANGE FORMAT SPECIER OR
+STORAGE SIZE (in bytes)</font><br />
+char or signed char<br />
+1<br />
+<font size="-1">-128 to 127(-2</font> 7 <font size="-1">to</font><br />
+<sup>7</sup><font size="-1">2</font> -1) %c Unsigned signed char 1 0 to
+256 (0 to 2 -1) %c<br />
+<strong>Floating Point Types:</strong></p>
+<p>Floating point number represents a real number with 6 digits
+precision occupies 4 bytes of memory. Floating point variables are
+declared by the keyword <strong>float.</strong><br />
+Double floating point data type occupies 8 bytes of memory giving 14
+digits of precision. These are also known as double precision numbers.
+Variables are declared by keyword <strong>double
+<font size="-1"><font face="Courier, serif">long
+double</font></font></strong> refers to a floating point data type that
+is often more precise than double precision.</p>
+<p><img src="Images/image00056.jpeg" /></p>
+<p><strong>Boolean data type:</strong><br />
+Boolean or logical data type is a data type, having two values (usually
+denoted true and false), intended<br />
+to represent the truth values of logic and Boolean algebra. It is named
+after George Boole, who first<br />
+defined an algebraic system of logic in the mid 19th century. The
+Boolean data type is the primary result<br />
+of conditional statements, which allow different actions and change
+control flow depending on whether a<br />
+programmer-specified Boolean condition evaluates to true or false.<br />
+<strong>C99 added a Boolean (true/false) type which is defined in the
+&lt;stdbool.h&gt;<br />
+header</strong> Boolean variable is defined by kkey word
+<strong>bool;</strong> Ex:</p>
+<p>bool b;<br />
+where b is a variable which can store true(1) of false (0)</p>
+<p><em><strong>Void type</strong><br />
+The void type has no values</em>. This is usually used to specify the
+return type of functions. The type of the function said to be void when
+it does not return any value to the calling function. This is also used
+for declaring general purpose pointer called void pointer.</p>
+<h3><strong>Derived data types.</strong></h3>
+<p>Derived datatypes are Arrays , pointer and references are examples
+for derived data types. <strong>User-defined data types:</strong><br />
+they The data types defined by the user are known as the user-defined
+data types.<br />
+They are structure,union,class and enumeration</p>
+<h3><strong>C++ Tokens</strong></h3>
+<p>IDENTIFIERS: Identifiers are the names given to various program
+elements such as variables, functions and arrays. These are user defined
+names consisting of sequence of letters and digits.<br />
+<font size="-1"></font><br />
+Rules for declaring identifiers:<br />
+<font size="-1"><sub></sub> <br />
+<sub> </sub> The first character must be an alphabet or
+underscore.<sub><br />
+ </sub> It must consist of only letters, digits and
+underscore.<sub><br />
+ </sub> Identifiers may have any length but only first 31 characters
+are significant.<br />
+<sub></sub> It must not contain white space or blank
+space.<sup></sup><br />
+<br />
+We should not use keywords as identifiers.<sup></sup><br />
+Upper and lower case letters are different.<sup></sup></font><br />
+Example: ab Ab aB AB are treated differently<br />
+<strong>Examples of valid identifiers:</strong><br />
+a, x, n, num, SUM, fact, grand_total, sum_of_digits, sum1</p>
+<p><strong>Examples of <em>Invalid
+identifiers</em></strong>:<font color="#FF0000">
+$</font>amount,<font color="#FF0000">
+³</font>num<font color="#FF0000">´</font>,
+grand<font color="#FF0000">-</font>total, sum of digits, 4num.
+<font color="#FF0000">$</font>amount : Special character is not
+permitted<br />
+grand<font color="#FF0000">-</font>total : hyphen is not
+permitted.<br />
+sum of digits : blank spaces between the words are not allowed.<br />
+4num : should not start with a number (first character must be a letter
+or underscore</p>
+<p><em><strong>Note:</strong></em> Some compilers of C recognize only
+the first 8 characters only; because of this they are unable to
+distinguish identifiers with the words of length more than eight
+characters.<br />
+<strong>Variables:</strong>A named memory location is called
+variable.<br />
+OR<br />
+<font size="-1">It is an identifier used to store the value of
+particular data type in the memory. Since variable name is identifier we
+use following rules which are same as of identifier <sup>Rules for
+declaring Variables names:  </sup> The first character must be an
+alphabet or underscore.<sub> It must consist of only letters, digits
+and underscore.</sub></p>
+<p><sup></sup> Identifiers may have any length but only first 31
+characters are significant.<sup> </sup> It must not contain white
+space or blank space.<sup><br />
+</sup> We should not use keywords as identifiers.<sup></sup></p>
+<p><sup></sup> Upper and lower case letters are
+different.<sup><br />
+</sup> Variable names must be unique in the given scope<br />
+<sup></sup> Ex:int a,b,a;//is in valid<sup></sup></p>
+<p></font> Int a,b;//is valid</p>
+<p><strong>Variable declaration:</strong> The declaration of variable
+gives the name for memory location and its size and specifies the range
+of value that can be stored in that location.<br />
+Syntax:<br />
+Data type variable name;<br />
+Ex: a 10 2000<br />
+int a=10;<br />
+float x=2.3; x 2.300000 5000</p>
+<p><strong>KEYWORDS :</strong><br />
+There are certain words, called keywords (reserved words) that have a
+predefined meaning in<br />
+„C++‟ language. These keywords are only to be used for their intended
+purpose and not as identifiers. The following table shows the standard
+„C++‟ keywords<br />
+auto break default do float for register return struct switch volatile
+while this public throw catch case<br />
+double<br />
+goto<br />
+short<br />
+typedef class<br />
+private template char const continue else enum extern if int long signed
+sizeof static union unsigned void friend new delete protected inline
+try</p>
+<p><strong>CONSTANTS: <em>Constants refer to values that do not change
+during the execution of a program.</em></strong> Constants can be
+divided into two major categories:<br />
+1.<em>Primary constants</em>:<br />
+a)Numeric constants</p>
+<p><font size="-1"><sup> </sup>Integer constants.<br />
+<sup></sup> Floating-point (real)</p>
+<p><sup></sup> constants. b)Character constants<sup><br />
+</sup> Single character constants<sup><br />
+</sup> String constants<sup></sup></p>
+<p></font> 2.<em>Secondary constants</em>:<br />
+<font size="-1"><sub></sub> <br />
+<br />
+<br />
+Enumeration constants.<br />
+Symbolic constants.<sup><br />
+ </sup> Arrays, unions, etc.<sup></sup></font></p>
+<p><sup></sup> <strong>Rules</strong> for declaring constants:<br />
+1.Commas and blank spaces are not permitted within the constant.<br />
+<sup></sup>2.The constant can be preceded by minus (-) signed if
+required.<br />
+3.The value of a constant must be within its minimum bounds of its
+specified data type.<br />
+<strong>Integer constants</strong>: An integer constant is an
+integer-valued number. It consists of sequence<br />
+<font size="-1"></font>of digits. Integer constants can be written in
+three different number systems:<br />
+1.Decimal integer (base 10).<br />
+2.Octal integer (base 8).<br />
+3.Hexadecimal (base 16).</p>
+<p><strong><em>Decimal integer constant</em> :</strong> It consists of
+set of digits, 0 to 9.<br />
+Valid declaration: 0, 124, -56, + 67, 4567 etc.<br />
+Invalid declaration: $245, 2.34, 34 345, 075.<br />
+23,345,00. it is also an invalid declaration.</p>
+<p><em><strong>Note:</strong> Embedded spaces, commas, characters,
+special symbols are not allowed between digits</em></p>
+<h3><sup></sup> <em>They can be preceded by an optional + or ±
+sign.</em><sup></sup></h3>
+<p><strong>Octal integer</strong> : It consists of set of digits, 0 to
+7. Ex: 037, 0, 0765, 05557 etc. (valid representation) It is a sequence
+of digits preceded by 0.<br />
+Ex: Invalid representations<br />
+0394: digit 9 is not permitted (digits 0 to 7 only) 235: does not begin
+with 0. (Leading number must be 0).</p>
+<p><strong>Hexadecimal integer:</strong> It consists of set of digits, 0
+to 9 and alphabets A, B, C, D, E, and F. Hexadecimal integer is a
+sequence of digits preceded by 0x or 0X. We can also use a through f
+instead of A to F.<br />
+Ex: 0X2, 0x9F, 0Xbcd, 0x0, 0x1. (Valid representations)<br />
+Ex: Invalid representations: 0af, 0xb3g, 0Xgh.</p>
+<p>0af: does not begin with 0x or 0X.<br />
+0xb3g, 0Xgh: illegal characters like g, h. (only a to f are allowed)</p>
+<p>The magnitude (maximum value) of an integer constant can range from
+zero<br />
+to some maximum value that varies from one computer to another.<br />
+Typical maximum values for most personal computers are: (16-bit
+machines)<br />
+Decimal integer constant: 32767 (215-1)<br />
+Octal integer constant: 077777<br />
+Hexadecimal integer constant: 0X7FFF<br />
+Note: The largest value that can be stored is machine dependent.</p>
+<p><strong>Floating point constants or Real constants :</strong> The
+numbers with fractional parts are called real constants. These are the
+numbers with base-10 which contains either a decimal part or exponent
+(or both). <strong>Representation:</strong> These numbers can be
+represented in either decimal notation or exponent notation (scientific
+notation).<br />
+Decimal notation: 1234.56, 75.098, 0.0002, -0.00674 (valid
+notations)<br />
+<strong>Exponent or scientific notation:</strong></p>
+<p>General form: Mantissa e exponent<br />
+<strong>Mantissa:</strong> It is a real number expressed in decimal
+notation or an integer notation.<br />
+<strong>Exponent:</strong> It is an integer number with an optional plus
+(+) or minus (-) sign.<br />
+<strong>E or e</strong>: The letter separating the mantissa and decimal
+part.<br />
+Ex: (Valid notations)<sub>3</sub></p>
+<p>1.23456<strong>E+</strong>3 (1.23456×10 )<br />
+<font size="-1">1</font></p>
+<p>7.5098 <strong>e+</strong>1 (7.5098×10 )<br />
+<font size="-1">-4</font><br />
+2<strong>E</strong>4 (2×10 <font size="-1">)</font><br />
+<em>These exponential notations are useful for representing numbers that
+are either very large or very small.</em> Ex: 0.00000000987 is
+equivalent to <strong>9.87e-9</strong></p>
+<p><strong>Character constants:<br />
+<em>Single character constants</em>:</strong> It is character(or any
+symbol or digit) enclosed within single quotes. Ex: „a‟ „1‟„*‟<br />
+Every Character constants have integer values known as
+<strong>ASCII</strong> values</p>
+<p><strong>ASCII:</strong> ASCII stands for American Standard Code for
+Information Interchange. Pronounced ask-ee, ASCII is a code for
+representing English characters as numbers, with each letter assigned a
+number from 0 to 255.Computers can only understand numbers, so an ASCII
+code is the numerical representation of a character such as 'a' or '@'
+or an action of some sort.A SCII codes represent text in computers,
+communications equipment, and other devices that use text. Most modern
+character-encoding schemes are based on ASCII, though they support many
+additional characters. Below is the ASCII character table and this
+includes descriptions of the first 32 non-printing characters.
+<strong>String constants or string literal:</strong></p>
+<p>String constant is a <em>sequence of zero or more characters</em>
+enclosed by double quotes.<br />
+Example:</p>
+<p>“MRCET” “12345” “*)(&amp;%”<br />
+<strong>Escape Sequences or Backslash Character Constants</strong><br />
+C language supports some nonprintable characters, as well as backslash (
+<strong>\</strong> ) which can be expressed as escape sequences. An
+escape sequence always starts with backslash followed by one or more
+special characters.<br />
+For example, a new line character is represented "\n" or endl<br />
+<em><strong>These are used in formatting output screen</strong></em>,
+i.e. escape sequence are used in<br />
+output functions. Some escape sequences are given below:</p>
+<p><img src="Images/image00057.jpeg" /><strong>OPERATORS AND
+EXPRESSIONS</strong></p>
+<p>An <em><strong>operator</strong></em> is a symbol which represents a
+particular operation that can be performed on data. An
+<em><strong>operand</strong></em> is the object on which an operation is
+performed.<br />
+By combining the operators and operands we form an <em>expression</em>.
+An <em><strong>expression</strong></em> is a sequence<br />
+of operands and operators that reduces to a single value.</p>
+<p>C operators can be classified as<br />
+1. Arithmetic operators<br />
+2. Relational operators<br />
+3. Logical operators<br />
+4. Assignment operators<br />
+5. Increment or Decrement operators<br />
+6. Conditional operator<br />
+7. Bit wise operators<br />
+8. unary operator<br />
+9. Special operators<br />
+10.Additional operators in c++</p>
+<p><strong>1. ARITHMETIC OPERATORS :</strong> All basic arithmetic
+operators are present in C. operator meaning<br />
++ add<br />
+- subtract<br />
+* multiplication<br />
+/ division<br />
+% modulo division(remainder)<br />
+An arithmetic operation involving only real operands(or integer
+operands) is called real arithmetic(or</p>
+<p>integer arithmetic). If a combination of arithmetic and real is
+called mixed mode arithmetic. <strong>/*C program on Integer Arithmetic
+Expressions*/</strong><br />
+#include&lt;iostraem.h&gt;<br />
+void main()<br />
+{<br />
+int a, b;<br />
+cout&lt;"Enter any two integers";<br />
+cin&gt;&gt;a&gt;&gt;b;<br />
+cout&lt;&lt;"a+b"&lt;&lt; a+b;<br />
+cout&lt;&lt;"a-b"&lt;&lt; a-b;<br />
+cout&lt;&lt;"a*b"&lt;&lt; a*b;<br />
+cout&lt;&lt;"a/b"&lt;&lt; a/b;<br />
+cout&lt;&lt;"a%b"&lt;&lt; a%b;<br />
+}</p>
+<p><strong>OUTPUT:</strong> a+b=23<br />
+a-b=17<br />
+a*b=60<br />
+a/b=6<br />
+a% b=2</p>
+<p><strong>2. RELATIONAL OPERATORS :</strong> We often compare two
+quantities and depending on their relation take certain decisions for
+that comparison we use relational operators. operator meaning</p>
+<p>&lt; is less than<br />
+&gt; is greater than<br />
+&lt;= is less than or equal to &gt;= is greater than or equal to == is
+equal to<br />
+!= is not equal to</p>
+<p><strong>/* C program on relational operators*/</strong>
+#include&lt;iostream.h&gt;<br />
+void main()<br />
+{<br />
+int a,b;<br />
+clrscr();<br />
+cout&lt;&lt;"Enter a, b values:";<br />
+cin&gt;&gt;a&gt;&gt;b;<br />
+cout&lt;&lt;"a&gt;b"&lt;&lt; a&gt;b;<br />
+cout&lt;&lt;"a&gt;=b"&lt;&lt; a&gt;=b;<br />
+cout&lt;&lt;"a&lt;b"&lt;&lt; a&lt;b;<br />
+cout&lt;&lt;"a&lt;=b"&lt;&lt; a&lt;=b;<br />
+cout&lt;&lt;"a==b"&lt;&lt; a==b;<br />
+cout&lt;&lt;"a!=b"&lt;&lt; a!=b;<br />
+}<br />
+OUTPUT:<br />
+Enter a, b values: 5 9<br />
+a&gt;b: 0 //false<br />
+a&lt;b: 1 //true<br />
+a&gt;=a: 1 //true<br />
+a&lt;=b: 1 //true<br />
+a==b: 0 //false<br />
+a!=b: 1 //true<br />
+<strong>3.LOGICAL OPERATORS:</strong><br />
+<font size="-1">Logical Data: A piece of data is called logical if it
+conveys the idea of true or false. In C++ we use int data type to
+represent logical data. If the data value is zero, it is considered as
+false. If it is non -zero (1 or any integer other than 0) it is
+considered as true. C++ has three logical operators for combining
+logical values and creating new logical values:</font></p>
+<p><img src="Images/image00058.jpeg" /></p>
+<p><strong>Note:Below program works in compiler that support C99
+standards</strong><br />
+#include&lt;iostream.h&gt;<br />
+#include&lt;stdbool.h&gt;<br />
+int main()<br />
+{<br />
+bool a,b;</p>
+<p>/*logical and*/<br />
+a=0;b=0;<br />
+cout&lt;&lt;<font size="-1">" a&amp;&amp;b "&lt;&lt;
+a&amp;&amp;b&lt;&lt;endl;</font><br />
+a=0;b=1;<br />
+cout&lt;&lt;<font size="-1">" a&amp;&amp;b "&lt;&lt;
+a&amp;&amp;b&lt;&lt;endl;</font><br />
+a=1;b=0;<br />
+cout&lt;&lt;<font size="-1">" a&amp;&amp;b "&lt;&lt;
+a&amp;&amp;b&lt;&lt;endl;</font><br />
+a=1;b=1;<br />
+cout&lt;&lt;<font size="-1">" a&amp;&amp;b "&lt;&lt;
+a&amp;&amp;b&lt;&lt;endl;</font></p>
+<p>/*logical or*/<br />
+a=0;b=0;<br />
+cout&lt;&lt;<font size="-1">" a||b "&lt;&lt;
+a||b&lt;&lt;endl;</font></p>
+<p>a=0;b=1;<br />
+cout&lt;&lt;<font size="-1">" a||b "&lt;&lt;
+a||b&lt;&lt;endl;</font><br />
+a=1;b=0;<br />
+cout&lt;&lt;<font size="-1">" a||b "&lt;&lt;
+a||b&lt;&lt;endl;</font><br />
+a=1;b=1;<br />
+cout&lt;&lt;<font size="-1">" a||b "&lt;&lt;
+a||b&lt;&lt;endl;</font></p>
+<p>/*logical not*/<br />
+a=0;<br />
+cout&lt;&lt;<font size="-1">" a||b "&lt;&lt;
+a||b&lt;&lt;endl;</font></p>
+<p>a=1;<br />
+cout&lt;&lt;<font size="-1">" a||b "&lt;&lt;
+a||b&lt;&lt;endl;</font><br />
+return 0;<br />
+}</p>
+<p>OUTPUT:</p>
+<p>0&amp;&amp;0=0<br />
+0&amp;&amp;1=0<br />
+1&amp;&amp;0=0<br />
+1&amp;&amp;1=1<br />
+0||0=0<br />
+0||1=1<br />
+1||0=1<br />
+1||1=1 !0 =1 !1 =0</p>
+<p><strong>4.ASSIGNMENT OPERATOR:</strong></p>
+<p>The assignment expression evaluates the operand on the right side of
+the operator (=) and places its value in the variable on the left.<br />
+Note: The left operand in an assignment expression must be a single
+variable.<br />
+There are two forms of assignment:<br />
+•Simple assignment<br />
+•Compound assignment</p>
+<p>Simple assignment :<br />
+In algebraic expressions we found these expressions.<br />
+Ex: a=5; a=a+1; a=b+1;<br />
+Here, the left side operand must be a variable but not a constant. The
+left side variable must be able to receive a value of the expression. If
+the left operand cannot receive a value and we assign one to it, we get
+a compile error.</p>
+<p>Compound Assignment:<br />
+A compound assignment is a shorthand notation for a simple assignment.
+It requires that the left operand be repeated as a part of the right
+expression. Syntax: variable operator+=value</p>
+<p>Ex: A+=1; it is equivalent to A=A+1;</p>
+<p>Advantages of using shorthand assignment operator:<br />
+1. What appears on the left-hand side need not be repeated and therefore
+it becomes easier to write.<br />
+2. The statement is more concise and easier to read.<br />
+3. The statement is more efficient.</p>
+<p><img src="Images/image00059.jpeg" /></p>
+<p>5. <font size="-1"><strong>INCREMENT (++) AND DECREMENT (--)
+OPERATORS:</strong></font><br />
+The operator ++ adds one to its operand where as the operator - -
+subtracts one from its operand. These operators are unary operators and
+take the following form:</p>
+<p>Both the increment and decrement operators may either precede or
+follow the operand.<br />
+Postfix Increment/Decrement :( a++/a--)<br />
+<font size="-1">In postfix increment (Decrement) the value is
+incremented (decremented) by one. Thus the a++ has the same effect
+as</font></p>
+<p><img src="Images/image00060.jpeg" /></p>
+<p>a=a+1; a--has the same effect as a=a-1.<br />
+The difference between a++ and a+1 is, if ++ is after the operand, the
+increment takes place after the expression is evaluated.<br />
+The operand in a postfix expression must be a variable.<br />
+Ex1:<br />
+int a=5;<br />
+B=a++; Here the value of B is 5. the value of a is 6.<br />
+Ex2:<br />
+int x=4; y=x--; Here the value of y is 4, x value is 3<br />
+Prefix Increment/Decrement (++a/ --a)<br />
+In prefix increment (decrement) the effect takes place before the
+expression that contains the operator is evaluated. It is the reverse of
+the postfix operation. ++a has the same effect as a=a+1.<br />
+--a has the same effect as a=a-1.<br />
+Ex: int b=4;<br />
+A= ++b;<br />
+In this case the value of b would be 5 and A would be 5.<br />
+The effects of both postfix and prefix increment is the same: the
+variable is incremented by 1. But they behave differently when they used
+in expressions as shown above. The execution of these operators is fast
+when compared to the equivalent assignment statement.</p>
+<p>#include&lt;iostream.h&gt; int main()<br />
+{</p>
+<p>int a=1;<br />
+int b=5;<br />
+++a;<br />
+cout&lt;&lt;"a="&lt;&lt;a&lt;&lt;endl;<br />
+--b;<br />
+cout&lt;&lt;"b="&lt;&lt;b&lt;&lt;endl;<br />
+cout&lt;&lt;"a="&lt;&lt;a++&lt;&lt;endl;<br />
+cout&lt;&lt;"a="&lt;&lt;a&lt;&lt;endl;<br />
+cout&lt;&lt;"b="&lt;&lt;b--&lt;&lt;endl;<br />
+cout&lt;&lt;"b="&lt;&lt;b&lt;&lt;endl;<br />
+return 0;<br />
+}<br />
+a=2<br />
+b=4<br />
+a=2<br />
+a=3<br />
+b=4<br />
+b=3<br />
+<strong>6.CONDITIONAL OPERATOR OR TERNARY OPERATOR:</strong></p>
+<p><strong>A ternary operator requires two operands to operate<br />
+Syntax:</strong></p>
+<p>#include&lt;iostream.h&gt;<br />
+void main()<br />
+{</p>
+<p><img src="Images/image00061.jpeg" />int a, b,c;<br />
+cout&lt;&lt;"Enter a and b values:";<br />
+cin&gt;&gt;a&gt;&gt;b;</p>
+<p>c=a&gt;b?a:b;<br />
+cout&lt;&lt;"largest of a and b is "&lt;&lt;c; }<br />
+Enter a and b values:1 5<br />
+largest of a and b is 5</p>
+<p><strong>7. BIT WISE OPERATORS :</strong> C supports special operators
+known as bit wise operators for manipulation of data at bit level. They
+are not applied to float or double.<br />
+operator meaning<br />
+&amp; Bitwise AND</p>
+<p>^ Bitwise exclusive OR<br />
+&lt;&lt; left shift<br />
+&gt;&gt; right shift<br />
+~ one's complement</p>
+<p><strong>Bitwise AND operator (&amp;)</strong><br />
+The bitwise AND operator is a binary operator it requires two integral
+operands (character or integer). It does a bitwise comparison as shown
+below:</p>
+<p><img src="Images/image00062.jpeg" /></p>
+<p><strong>Shift Operators</strong><br />
+The shift operators move bits to the right or the left. These are of two
+types:<br />
+. •Bitwise shift right operator<br />
+. •Bitwise shift left operator</p>
+<p><strong>Bitwise shift right operator</strong><br />
+<font size="-1">It is a binary operator it requires two integral
+operands. The first operand is the value to be shifted and the second
+operand specifies the number of bits to be shifted.</font> When bits are
+shifted to right,the bits at the right most end are deleted and a zero
+is inserted at the MSB bit.<br />
+#include&lt;iostream.h&gt;<br />
+void main()<br />
+{<br />
+int x,shift;</p>
+<p>cout&lt;&lt;”Enter a number:”);<br />
+cin&gt;&gt;x;<br />
+cout&lt;&lt;”enter now many times to right shift: “;<br />
+cin&gt;&gt;shift;<br />
+cout&lt;&lt;”Before Right Shift:”&lt;&lt;x;<br />
+x=x&gt;&gt;shift;<br />
+cout&lt;&lt;”After right shift:”&lt;&lt;x;</p>
+<p>}<br />
+Run1:<br />
+Enter a number:8<br />
+enter now many times to right shift:1<br />
+Before Right Shift:8<br />
+After right shift:4</p>
+<p><img src="Images/image00063.jpeg" /><img
+src="Images/image00064.jpeg" /></p>
+<p>8.SPECIAL OPERATORS<br />
+These operators which do not fit in any of the above classification are
+,(comma), sizeof, Pointer operators(&amp; and *) and member selection
+operators (. and -&gt;). The comma operator is used to link related
+expressions together.</p>
+<p><img src="Images/image00065.jpeg" /></p>
+<h3>9.UNARY OPERATOR: operator which operates</h3>
+<p>on single operand is called unary operator<br />
+<strong>Operators in c++:</strong> All above operators of c language are
+also valid in c++.New operators introduced in c++ are</p>
+<p>Sno Operator<br />
+1. Scope resolution operator<br />
+2. Pointer to a member declarator<br />
+3. Pointer to member operator<br />
+4. Pointer to member operator<br />
+5. new<br />
+6. delete<br />
+7. endl<br />
+8. setw<br />
+9. insertion<br />
+10. Extraction</p>
+<p><strong>1.Scope Resolution operator: Scope:</strong>Visibility or
+availability of a variable in a program is called as scope. There are
+two types of scope. i)Local scope ii)Global scope<br />
+<strong>Local scope:</strong> visibility of a variable is local to the
+function in which it is declared. <strong>Global scope:</strong>
+visibility of a variable to all functions of<br />
+a program Scope resolution operator in <strong>“::” .</strong><br />
+This is used to access global variables if same variables are declared
+as local<br />
+and global PROGRAM1.2:</p>
+<p>#include&lt;iostream.h&gt;<br />
+int a=5;<br />
+void main()<br />
+{<br />
+int a=10;</p>
+<p>cout&lt;&lt;”Local a=”&lt;&lt;a&lt;&lt;endl;<br />
+cout&lt;&lt;”Global a=”&lt;&lt;::a&lt;&lt;endl;<br />
+}<br />
+Expected output:<br />
+Local a=10<br />
+Global a=5<br />
+Member Dereferencing operator:<br />
+1. Pointer to a member declarator ::*<br />
+2. Pointer to member operator -&gt;*,-&gt;<br />
+3. Pointer to member operator .*<br />
+<strong>Pointer to a member declarator ::*</strong><br />
+This operator is used for declaring a pointer to the member of<br />
+the class #include&lt;iostream.h&gt;<br />
+class sample<br />
+{public:<br />
+int x;<br />
+};<br />
+int main()<br />
+{ sample s; //object int sample ::*p;//pointer decleration s.*p=10;
+//correct<br />
+cout&lt;&lt;s.*p;<br />
+}<br />
+Output:10<br />
+Symbol<br />
+::<br />
+::*<br />
+-&gt;*,-&gt;<br />
+.*<br />
+Memory allocating operator Memory release operator Line feed
+operator<br />
+Field width operator<br />
+&lt;&lt;<br />
+&gt;&gt;</p>
+<p><strong>2.Pointer to member operator -&gt;*</strong>
+#include&lt;iostream.h&gt;<br />
+class sample</p>
+<p>{<br />
+public: int x;</p>
+<p>void display()<br />
+{<br />
+cout&lt;&lt;"x="&lt;&lt;x&lt;&lt;endl; }</p>
+<p>};<br />
+int main()<br />
+{</p>
+<p>sample s; //object sample *ptr;</p>
+<p>int sample::*f=&amp;sample::x; s.x=10;<br />
+ptr=&amp;s;<br />
+cout&lt;&lt;ptr-&gt;*f;</p>
+<p>ptr-&gt;display();<br />
+}<br />
+<strong>3. Pointer to member operator .*</strong>
+#include&lt;iostream.h&gt;<br />
+class sample</p>
+<p>{<br />
+public: int x;</p>
+<p>};<br />
+int main()<br />
+{</p>
+<p>sample s; //object<br />
+int sample ::*p;//pointer decleration s.*p=10; //correct<br />
+cout&lt;&lt;s.*p;</p>
+<p>}</p>
+<p><strong>Manipulators:</strong><br />
+Manipulators are the operators used to format the data that is to be
+displayed on screen.The most commonly used manipulators are endl and
+setw<br />
+endl:it is used in output statement and inserts a line feed. It is
+similar to new line character (“\n”) ex:</p>
+<p>………………..</p>
+<p>cout&lt;&lt;”a=2”&lt;&lt;endl;<br />
+cout&lt;”name=sunil”&lt;&lt;endl; ……………….<br />
+Output:<br />
+a=2<br />
+name=sunil setw:</p>
+<p>this manipulator allows a specified width for a field that is to be
+printed on screen and by default the value printed is right
+justified.This function is available in header file iomanip.h</p>
+<p>#include&lt;iostream.h&gt;<br />
+#include&lt;iomanip.h&gt;<br />
+using namespace std;<br />
+int main()<br />
+{<br />
+int s=123;<br />
+cout&lt;&lt;"s="&lt;&lt;setw(10)&lt;&lt;s ;<br />
+}<br />
+output<br />
+s= 123</p>
+<p><strong>Insertion (&lt;&lt;) and Extraction (&gt;&gt;)
+operators:</strong><br />
+the operators are use with output and input objects<br />
+ex:<br />
+cout&lt;&lt;”Enter n”;<br />
+cin&gt;&gt;n</p>
+<h3><strong>Control statements:</strong>The flow of execution of
+statements in a program is called as control. Control</h3>
+<p>statement is a statement which controls flow of execution of the
+program. Control statements are classified into following
+categories.<br />
+1.Sequential control statements 2.Conditional control statements</p>
+<p>3.Unconditional control statements<br />
+<strong>1.Sequential</strong> statements statements) are executed in the
+same they appear in the program. i.e. By executes the statements in the
+program order.<br />
+<strong>2.Conditional control statements :</strong>Statements that are
+executed when a condition is true. These statements are divided into
+three categories. they are</p>
+<p><strong>control statements:</strong>ensures that the<br />
+<strong><font size="-1">(type) expression;</font> Or<br />
+<font size="-1">type (expression);</font></strong> Sequential
+control</p>
+<p>instructions(or order in which default system in sequential
+1.Decision making statements<br />
+2.Switch case control statement or<br />
+3.Loop control statements or repetations</p>
+<p><strong>1.Decision making statements:</strong> These statements are
+used to control the flow of execution of a program by making a decision
+depending on a condition, hence they are named as decision making
+statements. Decision making statements are of four types</p>
+<p>1.Simple if<br />
+2.if else<br />
+3.nested if else<br />
+4.If else ladder</p>
+<p><strong>1.Simple if statement:</strong> if the test expression is
+true then if statement executes statements that immediately follow
+if</p>
+<p>Syntax:<br />
+If(test expression) {<br />
+List of statements; }</p>
+<p>/*largest of two numbers*/ #include&lt;stdio.h&gt;<br />
+int main()<br />
+{<br />
+int a,b;<br />
+cout&lt;&lt;“Enter any two integers:”; cin&gt;&gt;a&gt;&gt;b;<br />
+if(a&gt;b)</p>
+<p>cout&lt;&lt;“A is larger than B \n A=”&lt;&lt;a; if(b&gt;a)<br />
+cout&lt;&lt;“B is larger than A\n A=”&lt;&lt;b; return 0;<br />
+}<br />
+<strong>2. if–else statement:</strong></p>
+<p><img src="Images/image00066.jpeg" /></p>
+<p>If test expression is true block of statements following if are
+executed and if test expression is false then statements in else block
+are executed<br />
+if (test expression)<br />
+{<br />
+statement block1;<br />
+}<br />
+else<br />
+{<br />
+statement block2;<br />
+}</p>
+<p>/*largest of two numbers*/</p>
+<p>#include&lt;iostream.h&gt;<br />
+int main()</p>
+<p><img src="Images/image00067.jpeg" /></p>
+<p>{<br />
+int a,b;<br />
+cout&lt;&lt;”Enter any two integers:”;<br />
+cin&gt;&gt;a&gt;&gt;b;</p>
+<p>if(a&gt;b)<font size="-1">cout&lt;&lt;“A is larger than B\n
+A=”&lt;&lt;a;<br />
+<sup>else</sup> cout&lt;&lt;“B is larger than A\n
+A=”&lt;&lt;b;</font><br />
+return 0;<br />
+}<br />
+<strong>3.Nesting of</strong> if-else
+<strong>statements</strong><font size="-1"> It's also possible to nest
+one if statement inside another. When a series of decisions are to be
+made.</font></p>
+<p>If –else statement placed inside another if else statement<br />
+Syntax:<br />
+If(test expression)<br />
+{If(test expression) {</p>
+<p>//statements<br />
+}<br />
+else<br />
+{ //statements }</p>
+<p>}<br />
+else<br />
+{If(test expression) {</p>
+<p>//statements<br />
+}<br />
+else<br />
+{ //statements }</p>
+<p>}<br />
+/*largest of three numbers*/ #include&lt;iostream.h&gt;
+#include&lt;conio.h&gt;<br />
+int main()<br />
+{<br />
+int a,b,c;<br />
+cout&lt;&lt;"Enter a,b,c values:"; cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</p>
+<p>if(a&gt;b) {</p>
+<p><img src="Images/image00068.jpeg" /></p>
+<p>if(a&gt;c) {<br />
+cout&lt;&lt;"A ia largest among three numbers\n"; cout"A=
+"&lt;&lt;a;<br />
+}<br />
+else<br />
+{<br />
+cout&lt;&lt;"C ia largest among three numbers\n"; cout&lt;&lt;"c=
+"&lt;&lt;c;<br />
+}<br />
+}<br />
+else<br />
+{<font size="-1">if(b&gt;c)</font><br />
+{ cout&lt;&lt;"B ia largest among three numbers\n";
+cout&lt;&lt;"B="&lt;&lt;b;<br />
+}<br />
+else<br />
+{<br />
+cout&lt;&lt;"C ia largest among three numbers\n";
+cout&lt;&lt;"c="&lt;&lt;c;<br />
+}<br />
+}<br />
+getch();<br />
+return 0;<br />
+}<br />
+<strong>4.if else ladder</strong></p>
+<p>if(condition1)<br />
+statement1; else if(condition2) statement 2; else if(condition3)
+statement n;</p>
+<p>else<br />
+default statement.<br />
+statement-x;</p>
+<p>The nesting of if-else depends upon the conditions with which we have
+to deal. <font size="-1">The condition is evaluated from top to
+bottom.if a condition is true the statement associated with it is
+executed.</font> When all the conditions become false then final else
+part containing default statements will be executed.</p>
+<p>#include&lt;iostream.h&gt;<br />
+void main()<br />
+{<br />
+int per;<br />
+cout&lt;&lt;”Enter<br />
+percentage”; cin&gt;&gt;per;<br />
+if(per&gt;=80)</p>
+<p>cout&lt;&lt;”Secured</p>
+<p>Distinction”&lt;&lt;endl; else if(per&gt;=60)<br />
+cout&lt;&lt;”Secured First<br />
+Division”&lt;&lt;endl; else<br />
+if(per&gt;=50)<br />
+cout&lt;&lt;”Secured<br />
+Second Division”&lt;&lt;endl;<br />
+else if(per&gt;=40)<br />
+cout&lt;&lt;”Secured Third<br />
+Division”&lt;&lt;endl;<br />
+else<br />
+cout&lt;&lt;”Fail”&lt;&lt;endl</p>
+<p>}<br />
+<img src="Images/image00069.jpeg" />THE SWITCH STATEMENT or
+<font size="-1">MULTIWAY SELECTION</font> :<br />
+<font size="-1">In addition to two-way selection, most programming
+languages provide another selection concept known as
+multiway</font><br />
+selection. Multiway selection chooses among several alternatives. C has
+two different ways to implement multiway selection: the switch statement
+and else-if construct<br />
+If for suppose we have more than one valid choices to choose from then
+we can use switch statement in place of if statements.<br />
+switch(expression)</p>
+<p>{.<br />
+case value-1: block-1 break;</p>
+<p>case value-2:<br />
+block-2 break;</p>
+<p>-------<br />
+-------<br />
+default:</p>
+<p>default block; }<br />
+<img src="Images/image00070.jpeg" /></p>
+<p>/*program to simulate a simple calculator */<br />
+#include&lt;iostream.h&gt;<br />
+int main()<br />
+{<br />
+float a,b;<br />
+char opr;</p>
+<p>cout&lt;&lt;"Enter number1 operator number2 : ";<br />
+cin&gt;&gt;a&gt;&gt;oper&gt;&gt;b;<br />
+switch(opr)<br />
+{<br />
+case '+':</p>
+<p>cout&lt;&lt;"Sum : "&lt;&lt;(a + b)&lt;&lt;endl; break;<br />
+case '-': cout&lt;&lt;"Difference : "&lt;&lt;(a -b)&lt;&lt;endl;</p>
+<p>break;<br />
+case '*': cout&lt;&lt;”Product : "&lt;&lt;a * b&lt;&lt;endl;<br />
+break;<br />
+case '/': cout&lt;&lt;”Quotient :"&lt;&lt;(a / b)&lt;&lt;endl;<br />
+break;<br />
+default: cout&lt;&lt;”Invalid Operation!"&lt;&lt;endl; }<br />
+return 0;<br />
+}</p>
+<h3><strong>Loop control statements or repetitions:</strong></h3>
+<p>A block or group of statements executed repeatedly until some
+condition is satisfied is called Loop. The group of statements enclosed
+within curly brace is called block or compound statement. We have two
+types of looping structures.<br />
+One in which condition is tested before entering the statement block
+called entry control. The other in which condition is checked at exit
+called exit controlled loop.<br />
+Loop statements can be divided into three categories as given
+below<br />
+1.while loop statement<br />
+2.do while loop statement<br />
+3.for loop statement</p>
+<p><strong>1.WHILE STATEMENT :</strong><br />
+While(test condition)</p>
+<p>{<br />
+body of the loop<br />
+}<br />
+It is an entry controlled loop. The condition is evaluated and if<br />
+it is true then body of loop is executed. After execution of body
+the<br />
+condition is once again evaluated and if is true body is executed
+once<br />
+again. This goes on until test condition becomes false.</p>
+<p>c program to find sum of n natural numbers */<br />
+#include&lt;iostream.h&gt;<br />
+int main()<br />
+{<br />
+int i = 1,sum = 0,n;</p>
+<p>cout&lt;&lt;"Enter N"&lt;&lt;end;</p>
+<p><img src="Images/image00071.jpeg" /></p>
+<p>cin&gt;&gt;n;<br />
+while(i&lt;=n)<br />
+{<br />
+sum = sum + i;<br />
+i = i + 1;<br />
+}</p>
+<p>cout&lt;&lt;”Sum of first”&lt;&lt;n&lt;”natural numbers
+is:”&lt;&lt;sum&lt;&lt;endl; return 0;<br />
+}<br />
+<strong>2.DO WHILE STATEMENT :</strong><br />
+<img src="Images/image00072.jpeg" /></p>
+<p>The while loop does not allow body to be executed if test condition
+is false. The do while is an exit controlled loop and its body is
+executed at least once.</p>
+<p>do</p>
+<p>{<br />
+body<br />
+}while(test condition);</p>
+<p>/*c program to find sum of n natural numbers */
+#include&lt;stdio.h&gt;<br />
+int main()<br />
+{<br />
+int i = 1,sum = 0,n;</p>
+<p>cout&lt;&lt;”Enter N"&lt;&lt;endl;<br />
+cin&gt;&gt;n</p>
+<p>do{<br />
+sum = sum + i;<br />
+i = i + 1;<br />
+} while(i&lt;=n);<br />
+cout&lt;&lt;”Sum of first”&lt;&lt; n&lt;&lt;” natural numbers<br />
+is:”&lt;&lt;sum; return 0;</p>
+<p>}<br />
+Note: if test condition is false. before the loop is being executed then
+While loop executes <strong>zero</strong> number of times where as
+do--while executes <strong>one</strong> time</p>
+<p><strong>It is also an entry control loop that provides a more concise
+structure3.FOR LOOP :</strong><br />
+Syntax:<br />
+for(initialization; test expression; increment/decrement)</p>
+<p>{<br />
+statements;<br />
+}<br />
+For statement is divided into three expressions<br />
+each is separated by semi colon;<br />
+1.initilization expression is used to initialize variables<br />
+2.test expression is responsible of continuing the loop. If<br />
+it is true, then the program control flow goes inside the<br />
+loop and executes the block of statements associated<br />
+with it .If test expression is false loop terminates<br />
+3.increment/decrement expression consists of increment<br />
+or decrement operator This process continues until test</p>
+<p><img src="Images/image00073.jpeg" /></p>
+<p>condition satisfies.</p>
+<p>/*c program to find sum of n natural numbers */<br />
+#include&lt;stdio.h&gt;<br />
+int main()<br />
+{<br />
+int i ,sum = 0,n;</p>
+<p>cout&lt;&lt;”Enter N";<br />
+cin&gt;&gt;n;<br />
+for(i=1;i&lt;=n;i++)<br />
+{<br />
+sum = sum + i;<br />
+}<br />
+cout&lt;&lt;“Sum of first”&lt;&lt;n&lt;&lt;” natural numbers<br />
+is:%d”&lt;&lt;sum; return 0;<br />
+}</p>
+<h3><strong>Nested loops:</strong>Writing one loop control statement
+within another loop control statement is called nested loop</h3>
+<p>statement<br />
+<img src="Images/image00074.jpeg" /></p>
+<p>Ex:<br />
+for(i=1;i&lt;=10;i++)<br />
+for(j=1;j&lt;=10;j++)<br />
+cout&lt;&lt;i&lt;&lt;j;</p>
+<p>/*program to print prime numbers upto a given number*/<br />
+#include&lt;stdio.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+void main()<br />
+{</p>
+<p>int n,i,fact,j;<br />
+clrscr();<br />
+cout&lt;&lt;"enter the number:";</p>
+<p>cin&gt;&gt;n<br />
+for(i=1;i&lt;=n;i++)<br />
+{fact=0;</p>
+<p>//THIS LOOP WILL CHECK A NO TO BE PRIME NO. OR NOT.
+for(j=1;j&lt;=i;j++)<br />
+{<br />
+if(i%j==0) fact++;<br />
+}<br />
+if(fact==2)<br />
+cout&lt;&lt;i&lt;&lt;”\t”; }<br />
+getch( );<br />
+<strong>Output:</strong><br />
+Enter the number : 5 2 3 5</p>
+<h3><strong>Unconditional control statements:</strong></h3>
+<p>Statements that transfers control from on part of the program to
+another part unconditionally Different unconditional statements
+are<br />
+1)goto<br />
+2)break<br />
+3)continue</p>
+<h2>1.goto :<font size="-1"> <strong>goto statement</strong> is used for
+unconditional branching or transfer of the program execution
+to</font></h2>
+<p><font size="-1">the labeled statement.</font><br />
+<img src="Images/image00075.jpeg" /></p>
+<p>/*c program to find sum of n natural numbers */<br />
+#include&lt;stdio.h&gt;<br />
+int main()<br />
+{<br />
+int i ,sum = 0,n;</p>
+<p>cout&lt;&lt;”Enter N";<br />
+cin&gt;&gt;n;<br />
+i=1;<br />
+L1:</p>
+<p>sum = sum + i; i++;<br />
+if(i&lt;=n) goto L1;</p>
+<p>cout&lt;&lt;“Sum of first “&lt;&lt;n&lt;” natural numbers
+is”&lt;&lt;sum; return 0;</p>
+<h2><strong>break:</strong>when a break statement is encountered within
+a loop ,loop is immediately exited and the program continues with the
+statements immediately following loop</h2>
+<p>/*c program to find sum of n natural numbers */<br />
+#include&lt;stdio.h&gt;<br />
+int main()<br />
+{<br />
+int i ,sum = 0,n;</p>
+<p>cout&lt;&lt;”Enter N";<br />
+cin&gt;&gt;n;<br />
+i=1;<br />
+L1:</p>
+<p>sum = sum + i; i++;<br />
+if(i&gt;n) break;</p>
+<p>goto L1;<br />
+cout&lt;&lt;”Sum of first”&lt;&lt;n&lt;&lt;”natural numbers is:
+”&lt;&lt;sum; return 0;<br />
+}</p>
+<h3><strong>Continue:</strong>It is used to continue the iteration of
+the loop statement by skipping the statements after continue statement.
+It causes the control to go directly to the test condition and then to
+continue the loop.</h3>
+<p>/*c program to find sum of n positive numbers read from
+keyboard*/<br />
+#include&lt;stdio.h&gt;<br />
+int main()<br />
+{<br />
+int i ,sum = 0,n,number;</p>
+<p>cout&lt;&lt;Enter N";<br />
+cin&gt;&gt;n;<br />
+for(i=1;i&lt;=n;i++)</p>
+<p>{<br />
+cout&lt;&lt;“Enter a number:”;<br />
+cin&gt;&gt;number;<br />
+if(number&lt;0) continue;<br />
+sum = sum + number;</p>
+<p>}<br />
+cout&lt;&lt;“Sum of”&lt;&lt;n&lt;&lt;” numbers is:”&lt;&lt;sum;<br />
+return 0;</p>
+<p><strong>UNIT -2</strong></p>
+<p><strong>Functions, Classes and Objects:</strong><br />
+Introduction of Classes,Class Definition, Defining a
+Members,Objects,Access Control, Class Scope,Scope Resolution
+Operator,Inline functions,Memory Allocation for Objects, Static Data
+Members, Static Member Functions, Arrays of Objects, Objects as Function
+Arguments,Friend Functions.</p>
+<p><img src="Images/image00076.jpeg" /></p>
+<p>Introduction of Class:<br />
+An object oriented programming approach is a collection of objects and
+each object consists of<br />
+corresponding data structures and procedures. The program is reusable
+and more maintainable.<br />
+The important aspect in oop is a <strong>class</strong> which has
+similar syntax that of structure.</p>
+<h3><strong>class</strong>: It is a collection of data and member
+functions that manipulate data. The data components of class are</h3>
+<p>called data members and functions that manipulate the data are called
+member functions.</p>
+<p>It can also called as blue print or prototype that defines the
+variables and functions common to all objects of certain kind. It is
+also known as user defined data type or ADT(abstract data type) A class
+is declared by the keyword <strong>class</strong>.</p>
+<p>Syntax:class class_name<br />
+{<br />
+Access specifier :<br />
+Variable declarations;<br />
+Access specifier :<br />
+function declarations;<br />
+};<br />
+<img src="Images/image00077.jpeg" /><strong>Access Control:<br />
+Access specifier or access modifiers</strong> are the labels that
+specify type of access given to members of a class. These are used for
+data hiding. These are also called as visibility modes. There are three
+types of access specifiers</p>
+<p>1.private<br />
+2.public<br />
+3.protected</p>
+<p><strong>1.Private:</strong></p>
+<p>If the data members are declared as private access then they cannot
+be accessed from other functions outside the class. It can only be
+accessed by the functions declared within the class. It is declared by
+the key word „<strong>private</strong>‟ .</p>
+<p><strong>2.public:</strong><br />
+If the data members are declared public access then they can be accessed
+from other functions out side the class. It is declared by the key word
+„<strong>public</strong>‟ .</p>
+<p><strong>3.protected:</strong> The access level of protected
+declaration lies between public and private. This access specifier is
+used at the time of inheritance<br />
+Note:<br />
+If no access specifier is specified then it is treated by default as
+private The default access specifier of structure is public where as
+that of a class is “private”</p>
+<p>Example:<br />
+class student<br />
+{<br />
+private : int roll;</p>
+<p>char name[30]; public:<br />
+void get_data()<br />
+{<br />
+cout&lt;&lt;”Enter roll number and name”:
+cin&gt;&gt;roll&gt;&gt;name;<br />
+}<br />
+void put_data()<br />
+{<br />
+cout&lt;&lt;”Roll number:”&lt;&lt;roll&lt;&lt;endl; cout&lt;&lt;”Name
+:”&lt;&lt;name&lt;&lt;endl;<br />
+}<br />
+};<br />
+Object:-Instance of a class is called object. Syntax:<br />
+class_name object_name; Ex:<br />
+student s;<br />
+<strong>Accessing members</strong>:-dot operator is used to access
+members of class</p>
+<p><strong>Object-name.function-name(actual arguments);</strong> Ex:
+s.get_data(); s.put_data();</p>
+<p><strong>Note:</strong><br />
+1.If the access specifier is not specified in the class the default
+access specifier is private<br />
+2.All member functions are to be declared as public if not they are not
+accessible outside the class. Object:<br />
+Instance of a class is called as object.<br />
+Syntax:<br />
+Class_name object name;</p>
+<p>Example:<br />
+<strong>student s;</strong><br />
+in the above example s is the object. It is a real time entity that can
+be used</p>
+<p><strong>Write a program to read data of a student</strong><br />
+#include&lt;iostream&gt;<br />
+using namespace std;<br />
+class student<br />
+{<br />
+private:</p>
+<p>int roll;<br />
+char name[20];<br />
+public: void getdata()</p>
+<p>{cout&lt;&lt;”Enter Roll number:”;<br />
+cin&gt;&gt;roll;<br />
+cout&lt;&lt;”Enter Name:”;<br />
+cin&gt;&gt;name;</p>
+<p>}<br />
+void putdata()</p>
+<p>{ cout&lt;&lt;”Roll no:”&lt;&lt;roll&lt;&lt;endl;<br />
+cout&lt;&lt;Name:”&lt;&lt;name&lt;&lt;endl;<br />
+}<br />
+};<br />
+int main()<br />
+{<br />
+student s;</p>
+<p>s.getdata();<br />
+s.putdata();<br />
+returm 0;</p>
+<p>}</p>
+<h3><strong>Scope Resolution operator: Scope:</strong>Visibility or
+availability of a variable in a program is called as scope. There are
+two types of scope. i)Local scope ii)Global scope <strong>Local
+scope:</strong> visibility of a variable is local to the function in
+which it is declared. <strong>Global scope:</strong> visibility of a
+variable to all functions of a program Scope resolution operator in
+<strong>“::” .</strong> This is used to access global variables if same
+variables are declared as local and global<br />
+#include&lt;iostream.h&gt; int a=5; void main() { int a=1;
+cout&lt;&lt;”Local a=”&lt;&lt;a&lt;&lt;endl; cout&lt;&lt;”Global
+a=”&lt;&lt;::a&lt;&lt;endl; }</h3>
+<p><strong>Class Scope:</strong><br />
+Scope resolution operator(::) is used to define a function outside a
+class.</p>
+<p>#include &lt;iostream&gt;<br />
+using namespace std;<br />
+class sample<br />
+{<br />
+public:</p>
+<p>void output(); //function declaration<br />
+};<br />
+// function definition outside the<br />
+class void sample::output() {</p>
+<p>cout &lt;&lt; "Function defined outside the class.\n";<br />
+<font size="-1">};</font><br />
+int main() { sample obj;</p>
+<p>obj.output(); return 0;<br />
+}<br />
+Output of program:<br />
+Function defined outside the class.</p>
+<p>Write a program to find area of rectangle
+#include&lt;iostream.h&gt;<br />
+class rectangle<br />
+{<br />
+int L,B;<br />
+public:</p>
+<p>void get_data(); void area(); };</p>
+<p>void rectangle::get_data() {<br />
+cout&lt;&lt;”Enter Length of rectangle”; cin&gt;&gt;L;<br />
+cout&lt;&lt;”Enter breadth of rectangle”; cin&gt;&gt;B;<br />
+}<br />
+int rectangle::area()<br />
+{<br />
+return L*B;<br />
+}<br />
+int main()<br />
+{<br />
+rectangle r;<br />
+r.get_data();<br />
+cout&lt;&lt;”Area of rectangle is”&lt;&lt;r.area();<br />
+return 0;<br />
+}</p>
+<h3><strong>INLINE FUNCTIONS:</strong></h3>
+<p><strong>Definition:</strong><br />
+An inline function is a function that is expanded in line when it is
+invoked. Inline expansion makes a program run faster because the
+overhead of a function call and return is eliminated. It is defined by
+using key word <strong>“inline”</strong></p>
+<p><strong>Necessity of Inline Function:</strong><br />
+<font size="-1"><sup></sup> One of the objectives of using functions in
+a program is to save some memory space, which becomes appreciable
+<sup></sup> when a function is likely to be called many
+times.<sup><br />
+</sup> Every time a function is called, it takes a lot of extra time in
+executing a series of instructions for tasks such as jumping to the
+function, saving registers, pushing arguments into the stack, and
+returning to the calling
+function.</font><sup><font size="-1"></font><br />
+</sup> When a function is small, a substantial percentage of execution
+time may be spent in such overheads. One solution to this problem is to
+use macro definitions, known as macros. Preprocessor macros are
+<sub>popular in C. The major drawback with macros is that they are not
+really functions and</sub><br />
+<font size="-1"><sub></sub> therefore, the usual error checking does
+not occur during compilation.</font></p>
+<p>C++ has different solution to this problem. To eliminate the cost of
+calls to small functions, C++ proposes a new feature called inline
+function.<sup></sup><br />
+<strong>General Form:</strong></p>
+<p>inline function-header {<br />
+function body; }</p>
+<p>Eg:<br />
+#include&lt;iostream.h&gt;<br />
+inline float mul(float x, float y)<br />
+{<br />
+return (x*y);<br />
+}<br />
+inline double div(double p, double q)<br />
+{<br />
+return (p/q);<br />
+}<br />
+int main()<br />
+{<br />
+float a=12.345;<br />
+float b=9.82;<br />
+cout&lt;&lt;mul(a,b);<br />
+cout&lt;&lt;div(a,b);<br />
+return 0;<br />
+}<br />
+Properties of inline function:<br />
+1.Inline function sends request but not a command to compiler<br />
+2.Compiler my serve or ignore the request<br />
+3.if function has too many lines of code or if it has complicated logic
+then it is executed as normal function</p>
+<p><font size="-1"><sup><strong>Situations where inline does not
+work:</strong>  </sup> A function that is returning value , if it
+contains switch ,loop or both then it is treated as<br />
+<sub> </sub> normal function.<br />
+<sub></sub> if a function is not returning any value and it contains a
+return statement then it is treated as normal function<sup> </sup> If
+function contains static variables then it is executed as normal
+function<sup></sup></font></p>
+<h3><sup></sup>If the inline function is declared as recursive function
+then it is executed as normal function.<sup></sup></h3>
+<p><strong>Memory Allocation for Objects:</strong> Memory for objects is
+allocated when they are declared but not when class is defined. All
+objects in a given class uses same member functions. The member
+functions are created and placed in memory only once when they are
+defined in class definition</p>
+<p><img src="Images/image00078.jpeg" /></p>
+<h3><strong>STATIC CLASS MEMBERS</strong></h3>
+<p>Static Data Members<br />
+Static Member Functions</p>
+<p><strong>Static Data Members:</strong><br />
+A data member of a class can be qualified as static. A static member
+variable has certain<br />
+special characteristics:<sub></sub></p>
+<h3></h3>
+<p><font size="-1"></p>
+<p><sup></sup>It is initialized to zero when the first object of its
+class is created. No other initialization is permitted. <sup></sup>
+Only one copy of that member is created for the entire class and is
+shared by all the objects of that class, no matter how </p>
+<p>many objects are created.<sup></sup><br />
+It is visible only within the class, but its lifetime is the entire
+program.<br />
+<br />
+<sup></sup> Static data member is defined by
+keyword<strong>„static</strong>‟<sup></sup></font></p>
+<h3>Syntax: Data type class name::static_variable Name; Ex: int
+item::count;</h3>
+<p>#include&lt;iostream.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+class item<br />
+{</p>
+<p>static int count; int number; public:</p>
+<p>void getdata(int a) {<br />
+number=a;<br />
+count++;<br />
+}<br />
+void getcount()<br />
+{<br />
+cout&lt;&lt;"count is"&lt;&lt;count;<br />
+}<br />
+};<br />
+int item::count;//decleration<br />
+int main()<br />
+{<br />
+item a,b,c;<br />
+a.getcount();<br />
+b.getcount();<br />
+c.getcount();<br />
+a.getdata(100);<br />
+b.getdata(200);<br />
+c.getdata(300);<br />
+cout&lt;&lt;"After reading data";<br />
+a.getcount();<br />
+b.getcount();<br />
+c.getcount();<br />
+return 0;<br />
+}<br />
+Output:<br />
+count is 0<br />
+count is 0<br />
+count is 0<br />
+After reading data<br />
+count is 3<br />
+count is 3<br />
+count is 3</p>
+<p><strong>Static Member Functions</strong><br />
+Like static member variable, we can also have static member functions. A
+member function that is<br />
+declared static has the following properties:<br />
+A static function can have access to only other static members
+(functions or variables) declared in the same class.<br />
+A static member function is to be called using the class name (instead
+of its objects) as<br />
+follows: <strong>class-name :: function-name;</strong></p>
+<p>#include&lt;iostream.h&gt;<br />
+class test<br />
+{</p>
+<p>int code;<br />
+static int count; public:<br />
+void setcode()</p>
+<p>{<br />
+code=++count;<br />
+}<br />
+void showcode()<br />
+{<br />
+cout&lt;&lt;”object number”&lt;&lt;code;<br />
+}<br />
+static void showcount()<br />
+{<br />
+cout&lt;&lt;”count”&lt;&lt;count;<br />
+}<br />
+};<br />
+int test::count;<br />
+int main()<br />
+{<br />
+test t1,t2;<br />
+t1.setcode();<br />
+t2.setcode();<br />
+test::showcount();<br />
+test t3;<br />
+t3.setcode();<br />
+test::showcount();<br />
+t1.showcode();<br />
+t2.showcode();<br />
+t3.showcode();<br />
+return 0;<br />
+}<br />
+Output:<br />
+count 2<br />
+count 3<br />
+object number 1<br />
+object number 2<br />
+object number 3</p>
+<p><strong>Arrays of Objects</strong> : Arrays of variables of type
+"class" is known as "Array of objects". An array of objects is stored
+inside the memory in the same way as in an ordinary array.<br />
+Syntax:</p>
+<p>class class_name<br />
+{</p>
+<p>private:<br />
+data_type members; data_type members; member functions;</p>
+<p>};</p>
+<p>Array of objects:<br />
+<strong>Class_name object_name[size];</strong><br />
+Where size is the size of array<br />
+Ex:<br />
+Myclass obj[10];</p>
+<p>Write a program to initialize array of objects and print them
+#include&lt;iostream&gt;<br />
+using namespace std;<br />
+class MyClass<br />
+{<br />
+int a;<br />
+public:</p>
+<p>void set(int x)</p>
+<p>{<br />
+a=x;<br />
+}<br />
+int get()<br />
+{<br />
+return a;<br />
+}<br />
+};<br />
+int main()<br />
+{<br />
+MyClass obj[5];<br />
+for(int i=0;i&lt;5;i++)<br />
+obj[i].set(i);<br />
+for(int i=0;i&lt;5;i++)<br />
+cout&lt;&lt;"obj["&lt;&lt;i&lt;&lt;"].get():"&lt;&lt;obj[i].get()&lt;&lt;endl;
+}<br />
+Output:<br />
+obj[0].get():0<br />
+obj[1].get():1<br />
+obj[2].get():2<br />
+obj[3].get():3<br />
+obj[4].get():4</p>
+<p><strong>Objects as Function Arguments:</strong> Objects can be used
+as arguments to<br />
+functions This can be done in three ways<br />
+a. Pass-by-value or call by value<br />
+b. Pass-by-address or call by address<br />
+c. Pass-by-reference or call by reference</p>
+<p><strong>a.Pass-by-value</strong> – A copy of object (actual object)
+is sent to function and assigned to the object of called function
+(formal object). Both actual and formal copies of objects are stored at
+different memory locations. Hence, changes made in formal object are not
+reflected to actual object. write a program to swap values of two
+objects<br />
+<strong>write a program to swap values of two objects</strong><br />
+#include&lt;iostream.h&gt;<br />
+using namespace std;<br />
+class sample2;<br />
+class sample1<br />
+{<br />
+int a;<br />
+void getdata(int x);<br />
+friend void display(sample1 x,sample2 y); friend void swap(sample1
+x,sample2 y);</p>
+<p>};<br />
+void sample1::getdata(int x)<br />
+{</p>
+<p>a=x; }<br />
+class sample2 {<br />
+int b;<br />
+public:</p>
+<p>void getdata(int x);<br />
+friend void display(sample1 x,sample2 y);</p>
+<p>friend void swap(sample1 x,sample2 y); };<br />
+void sample2::getdata(int x)<br />
+{<br />
+b=x;<br />
+}<br />
+void display(sample1 x,sample2 y)<br />
+{</p>
+<p>cout&lt;&lt;"Data in object 1 is"&lt;&lt;endl;
+cout&lt;&lt;"a="&lt;&lt;x.a&lt;&lt;endl;<br />
+cout&lt;&lt;"Data in object 2 is"&lt;&lt;endl;
+cout&lt;&lt;"b="&lt;&lt;y.b&lt;&lt;endl;</p>
+<p>}<br />
+void swap(sample1 x,sample2 y)<br />
+{<br />
+int t;</p>
+<p>t=x.a;<br />
+x.a=y.b;<br />
+y.b=t;</p>
+<p>}<br />
+int main()<br />
+{<br />
+sample1 obj1;<br />
+sample2 obj2;</p>
+<p>obj1.getdata(5);<br />
+obj2.getdata(15);<br />
+cout&lt;&lt;"Before Swap of data between Two objects\n<br />
+"; display(obj1,obj2);<br />
+swap(obj1,obj2);<br />
+cout&lt;&lt;"after Swap of data between Two objects\n ";<br />
+display(obj1,obj2);</p>
+<p>}<br />
+Before Swap of data between Two objects</p>
+<p>Data in object 1 is a=5<br />
+Data in object 2 is b=15<br />
+after Swap of data between Two objects</p>
+<p>Data in object 1 is a=5<br />
+Data in object 2 is b=15<br />
+<strong>b. Pass-by-address:</strong> Address of the object is sent as
+argument to function. Here ampersand(&amp;) is used as address operator
+and arrow (-&gt;) is used as de referencing operator. If any change made
+to formal arguments then there is a change to actual arguments
+<strong>write a program to swap values of two objects</strong><br />
+#include&lt;iostream.h&gt;<br />
+using namespace std; class sample2;<br />
+class sample1<br />
+{<br />
+int a;<br />
+public:</p>
+<p>void getdata(int x);<br />
+friend void display(sample1 x,sample2 y); friend void swap(sample1
+*x,sample2 *y);</p>
+<p>};<br />
+void sample1::getdata(int x)<br />
+{<br />
+a=x;<br />
+}<br />
+class sample2<br />
+{<br />
+int b;<br />
+public:</p>
+<p>void getdata(int x);<br />
+friend void display(sample1 x,sample2 y); friend void swap(sample1
+*x,sample2 *y);</p>
+<p>};<br />
+void sample2::getdata(int x)<br />
+{</p>
+<p>b=x;<br />
+}<br />
+void display(sample1 x,sample2 y) {</p>
+<p>cout&lt;&lt;"Data in object 1 is"&lt;&lt;endl;
+cout&lt;&lt;"a="&lt;&lt;x.a&lt;&lt;endl;<br />
+cout&lt;&lt;"Data in object 2 is"&lt;&lt;endl;
+cout&lt;&lt;"b="&lt;&lt;y.b&lt;&lt;endl;</p>
+<p>}<br />
+void swap(sample1 *x,sample2 *y) {<br />
+int t;</p>
+<p>t=x-&gt;a;<br />
+x-&gt;a=y-&gt;b;<br />
+y-&gt;b=t;</p>
+<p>}<br />
+int main()<br />
+{<br />
+sample1 obj1;<br />
+sample2 obj2;</p>
+<p>obj1.getdata(5);<br />
+obj2.getdata(15);<br />
+cout&lt;&lt;"Before Swap of data between Two objects\n ";
+display(obj1,obj2);<br />
+swap(&amp;obj1,&amp;obj2);<br />
+cout&lt;&lt;"after Swap of data between Two objects\n ";
+display(obj1,obj2);</p>
+<p>}<br />
+Before Swap of data between Two objects<br />
+Data in object 1 is a=5<br />
+Data in object 2 is b=15<br />
+after Swap of data between Two objects<br />
+Data in object 1 is a=15<br />
+Data in object 2 is b=5</p>
+<p><strong>c.Pass-by-reference</strong> :A reference of object is sent
+as argument to function.<br />
+Reference to a variable provides alternate name for previously defined
+variable. If any change made to reference variable then there is a
+change to original variable.</p>
+<p>A reference variable can be declared as follows</p>
+<h3><strong>Datatype &amp; reference variable =variable;</strong></h3>
+<p>Ex: int x=5;<br />
+int &amp;y=x;</p>
+<p><img src="Images/image00079.jpeg" /></p>
+<p>Write a program to find sum of n natural numbers using reference
+variable<br />
+#include&lt;iostream.h&gt;<br />
+using namespace std;<br />
+int main()<br />
+{<br />
+int i=0;<br />
+int &amp;j=i;<br />
+int s=0;<br />
+int n;<br />
+cout&lt;&lt;"Enter n:";<br />
+cin&gt;&gt;n;<br />
+while(j&lt;=n)<br />
+{<br />
+s=s+i;<br />
+i++;<br />
+}<br />
+cout&lt;&lt;"sum="&lt;&lt;s&lt;&lt;endl;<br />
+}<br />
+Output:<br />
+Enter n:10<br />
+sum=55<br />
+<strong>write a program to swap values of two objects</strong><br />
+#include&lt;iostream.h&gt;<br />
+using namespace std;<br />
+class sample2;<br />
+class sample1<br />
+{<br />
+int a;<br />
+public:</p>
+<p>void getdata(int x);<br />
+friend void display(sample1 x,sample2 y); friend void swap(sample1
+&amp;x,sample2 &amp;y); void sample1::getdata(int x) {<br />
+a=x;<br />
+}<br />
+class sample2<br />
+{<br />
+int b;<br />
+public:</p>
+<p>void getdata(int x);<br />
+friend void display(sample1 x,sample2 y); friend void swap(sample1
+&amp;x,sample2 &amp;y);</p>
+<p>};<br />
+void sample2::getdata(int x)<br />
+{<br />
+b=x;<br />
+}<br />
+void display(sample1 x,sample2 y)<br />
+{</p>
+<p>cout&lt;&lt;"Data in object 1 is"&lt;&lt;endl;
+cout&lt;&lt;"a="&lt;&lt;x.a&lt;&lt;endl;<br />
+cout&lt;&lt;"Data in object 2 is"&lt;&lt;endl;
+cout&lt;&lt;"b="&lt;&lt;y.b&lt;&lt;endl;</p>
+<p>}<br />
+void swap(sample1 &amp;x,sample2 &amp;y) {<br />
+int t;</p>
+<p>t=x.a;<br />
+x.a=y.b;<br />
+y.b=t;</p>
+<p>}<br />
+int main()<br />
+{<br />
+sample1 obj1;<br />
+sample2 obj2;</p>
+<p>obj1.getdata(5);<br />
+obj2.getdata(15);<br />
+cout&lt;&lt;"Before Swap of data between Two objects\n ";
+display(obj1,obj2);<br />
+swap(obj1,obj2);<br />
+cout&lt;&lt;"after Swap of data between Two objects\n ";
+display(obj1,obj2);</p>
+<p>}<br />
+Output:<br />
+Before Swap of data between Two objects<br />
+Data in object 1 is a=5<br />
+Data in object 2 is b=15<br />
+after Swap of data between Two objects<br />
+Data in object 1 is a=15<br />
+Data in object 2 is b=5</p>
+<h3><strong>FRIEND FUNCTIONS:</strong>The private members cannot be
+accessed from outside the class. i.e.… a non</h3>
+<p>member function cannot have an access to the private data of a class.
+In C++ a non member function can access private by making the function
+friendly to a class.<br />
+<strong>Definition:</strong></p>
+<p>A friend function is a function which is declared within a class and
+is defined outside the class. It does not require any scope resolution
+operator for defining . It can access private members of a class. It is
+declared by using keyword <strong>“friend”</strong><br />
+Ex:<br />
+class sample<br />
+{<br />
+int x,y;<br />
+public:</p>
+<p>sample(int a,int b);<br />
+friend int sum(sample s);<br />
+<strong>};</strong><br />
+sample::sample(int a,int b)<br />
+{<br />
+x=a;y=b;<br />
+}<br />
+int sum(samples s)<br />
+{<br />
+int sum;</p>
+<p>sum=s.x+s.y;<br />
+return 0;<br />
+}<br />
+void main()<br />
+{<br />
+Sample obj(2,3);<br />
+int res=sum(obj);<br />
+cout&lt;&lt; “sum=”&lt;&lt;res&lt;&lt;endl;<br />
+}<br />
+<strong>A friend function possesses certain special
+characteristics:</strong></p>
+<p><font size="-1"></p>
+<p><sub></sub> <br />
+<br />
+It is not in the scope of the class to which it has been declared as
+friend.<br />
+Since it is not in the scope of the class, it cannot be called using the
+object of that class. It can be invoked like a normal</p>
+<p><sup></sup> function without the help of any object.<sup><br />
+</sup> Unlike member functions, it cannot access the member names
+directly and has to use an object name and dot membership operator with
+each member name.<br />
+<br />
+<sup></sup> It can be declared either in the public or private part of
+a class without affecting its meaning.<sup><br />
+</sup> Usually, it has the objects as
+arguments.<sup></sup></font></p>
+<p>#include&lt;iostream.h&gt;<br />
+class sample<br />
+{<br />
+int a;<br />
+int b;<br />
+public:</p>
+<p>void setvalue()<br />
+{<br />
+a=25;<br />
+b=40;<br />
+}<br />
+friend float mean(sample s); float mean(sample s) {</p>
+<p>return float(s.a+s.b)/2.0;<br />
+}<br />
+int main()<br />
+{<br />
+sample X;</p>
+<p>X.setvalue();<br />
+cout&lt;&lt;”Mean value=”&lt;&lt;mean(X); return 0;</p>
+<p>}<br />
+<strong>write a program to find max of two numbers using friend function
+for two different<br />
+classes</strong> #include&lt;iostream&gt;<br />
+using namespace std;<br />
+class sample2;<br />
+class sample1<br />
+{<br />
+int x;<br />
+public:<br />
+sample1(int a);<br />
+friend void max(sample1 s1,sample2 s2)<br />
+};<br />
+sample1::sample1(int a)<br />
+{<br />
+x=a;<br />
+}<br />
+class sample2<br />
+{<br />
+int y;<br />
+public:<br />
+sample2(int b);<br />
+friend void max(sample1 s1,sample2 s2)<br />
+};<br />
+Sample2::sample2(int b)<br />
+{<br />
+y=b;<br />
+}<br />
+void max(sample1 s1,sample2 s2)<br />
+{<br />
+If(s1.x&gt;s2.y)<br />
+cout&lt;&lt;”Data member in Object of class sample1 is larger
+”&lt;&lt;endl;<br />
+else<br />
+cout&lt;&lt;”Data member in Object of class sample2 is larger
+”&lt;&lt;endl;<br />
+}<br />
+void main()<br />
+{<br />
+sample1 obj1(3);<br />
+sample2 obj2(5);<br />
+max(obj1,obj2);<br />
+}</p>
+<p>Write a program to add complex numbers using friend function</p>
+<p>#include&lt;iostream&gt; using namespace std; class complex<br />
+{<br />
+float real,img; public:</p>
+<p>complex();<br />
+complex(float x,float y)<br />
+friend complex add_complex(complex c1,complex c2);</p>
+<p>};<br />
+complex::complex()<br />
+{</p>
+<p>real=img=0;<br />
+}<br />
+complex::complex(float x,float y) {</p>
+<p>real=x;img=y;<br />
+}<br />
+complex add_complex(complex c1,complex c2) {<br />
+complex t;</p>
+<p>t.real=c1.real+c2.real;<br />
+t.img=c1.img+c2.img;<br />
+return t;</p>
+<p>}<br />
+void complex::display ()<br />
+{</p>
+<p>if(img&lt;0)</p>
+<p>{ img=-img;<br />
+cout&lt;&lt;real&lt;&lt;"-i"&lt;&lt;img&lt;&lt;endl<br />
+}<br />
+else<br />
+{<br />
+cout&lt;&lt;real&lt;&lt;"+i"&lt;&lt;img&lt;&lt;endl<br />
+}<br />
+}<br />
+int main()<br />
+{<br />
+complex obj1(2,3);<br />
+complex obj2(-4,-6);<br />
+complex obj3=add_compex(obj1,obj2);<br />
+obj3.display();<br />
+return 0;<br />
+}</p>
+<h3><strong>Friend Class:</strong>A class can also be declared to be the
+friend of some other class. When we create a friend</h3>
+<p>class then all the member functions of the friend class also become
+the friend of the other class. This requires the condition that the
+friend becoming class must be first declared or defined (forward
+declaration). #include &lt;iostream.h&gt;<br />
+class sample_1<br />
+{</p>
+<p>friend class sample_2;//declaring friend class int a,b;<br />
+public:</p>
+<p>void getdata_1() {<br />
+cout&lt;&lt;"Enter A &amp; B values in class sample_1";
+cin&gt;&gt;a&gt;&gt;b;<br />
+}<br />
+void display_1()<br />
+{<br />
+cout&lt;&lt;"A="&lt;&lt;a&lt;&lt;endl;
+cout&lt;&lt;"B="&lt;&lt;b&lt;&lt;endl;<br />
+}<br />
+};<br />
+class sample_2<br />
+{<br />
+int c,d,sum;<br />
+sample_1 obj1; public:<br />
+void getdata_2()<br />
+{<br />
+obj1.getdata_1();<br />
+cout&lt;&lt;"Enter C &amp; D values in class sample_2";
+cin&gt;&gt;c&gt;&gt;d;<br />
+}<br />
+void sum_2()<br />
+{<br />
+sum=obj1.a+obj1.b+c+d;<br />
+}</p>
+<p>void display_2() {</p>
+<p>}<br />
+};<br />
+int main()<br />
+{<br />
+sample_1 s1;</p>
+<p>s1.getdata_1();<br />
+s1.display_1();<br />
+sample_2 s2;</p>
+<p>s2.getdata_2();<br />
+s2.sum_2();<br />
+s2.display_2();</p>
+<p>}</p>
+<p>Enter A &amp; B values in class sample_1:1 2 A=1<br />
+B=2<br />
+Enter A &amp; B values in class sample_1:1 2 3 4 Enter C &amp; D values
+in class sample_2:A=1 B=2<br />
+C=3<br />
+D=4<br />
+SUM=10<br />
+cout&lt;&lt;"A="&lt;&lt;obj1.a&lt;&lt;endl;
+cout&lt;&lt;"B="&lt;&lt;obj1.b&lt;&lt;endl;
+cout&lt;&lt;"C="&lt;&lt;c&lt;&lt;endl;<br />
+cout&lt;&lt;"D="&lt;&lt;d&lt;&lt;endl;<br />
+cout&lt;&lt;"SUM="&lt;&lt;sum&lt;&lt;endl;</p>
+<p><strong>UNIT -3</strong></p>
+<p><strong>Constructors, Destructors, Inheritance:</strong><br />
+Introduction to Constructors, Default Constructors,Parameterized
+Constructors, Copy Constructors Multiple Constructors in a Class,
+Destructors.<br />
+<strong>Inheritance :</strong>Introduction to inheritance, Defining
+Derived Classes, Single Inheritance, Multiple Inheritance, Multi-Level
+Inheritance, Hierarchical Inheritance, Hybrid Inheritance.</p>
+<h3><sup></sup> Introduction to Constructors: C++ provides a special
+member function called the <sub></sub> constructor which enables an
+object to initialize itself when it is created.<sup></sup></h3>
+<p><strong>Definition:</strong> A constructor is a special member
+function whose task is to initialize the objects of its class. It is
+special because its name is the same name as the class name. The
+constructor is invoked whenever an object of its associated class is
+created. It is called constructor because it constructs the values of
+data members of the class.</p>
+<p>A constructor is declared and defined as follows:</p>
+<p>class integer {<br />
+int m,n; public:<br />
+integer( ); ……….. ………..<br />
+};<br />
+integer :: integer( )<br />
+{<br />
+m=0; n=0;<br />
+}</p>
+<p>int main()<br />
+{ integer obj1; ………..<br />
+………..<br />
+}</p>
+<p><img src="Images/image00080.jpeg" /></p>
+<p>integer obj1; =&gt; not only creates object obj1 but also initializes
+its data members m and n to zero. There is no need to write any
+statement to invoke the constructor function.<br />
+<strong>CHARACTERISTICS OF CONSTRUCTOR</strong></p>
+<p><font size="-1"></p>
+<p><sup></sup> They should be declared in the public
+section.<sup><br />
+</sup> They are invoked automatically when the objects are
+created.<sup><br />
+</sup> They do not have return type, not even void.<sup><br />
+</sup> They cannot be inherited, though a derived class can call the
+base class constructor.<sup><br />
+</sup> Like other c++ functions, they can have default
+arguments.<sup></sup></p>
+<p><sup> </sup> Constructors cannot be
+virtual.<sup></sup></font></p>
+<h3><sup> </sup> We cannot refer to their addresses.<sup>
+</sup>They make „implicit calls‟ to the operators new and delete when
+memory allocation is required.<sup></sup></h3>
+<p><strong>Constructors are of 3 types:</strong><br />
+1. Default Constructor<br />
+2. Parameterized Constructor<br />
+3. Copy Constructor<br />
+1.Default Constructor: A constructor that accepts no parameters is
+called the <strong>default constructor</strong>.</p>
+<p>#include&lt;iostream.h&gt;</p>
+<p>#include&lt;conio.h&gt;<br />
+class item<br />
+{</p>
+<p>int m,n; public: item()<br />
+{</p>
+<p>m=10; n=20; }<br />
+void put(); };<br />
+void item::put()<br />
+{<br />
+cout&lt;&lt;m&lt;&lt;n; }<br />
+void main()<br />
+{<br />
+item t;<br />
+t.put();<br />
+getch();<br />
+}</p>
+<h3><strong>2.Parameterized Constructors:</strong>The constructors that
+take parameters are called parameterized constructors.
+#include&lt;iostream.h&gt; class item { int m,n; public: item(int x, int
+y) { m=x; n=y; } }; When a constructor has been parameterized, the
+object declaration statement such as</h3>
+<p>item t; may not work. We must pass the initial values as arguments to
+the constructor function when an object is declared. This can be done in
+2 ways: item t=item(10,20); //explicit call</p>
+<h3>item t(10,20); //implicit call Eg: #include&lt;iostream.h&gt;
+#include&lt;conio.h&gt; class item { int m,n; public: item(int x,int y)
+{ m=x; n=y; } void put(); }; void item::put() { cout&lt;&lt;m&lt;&lt;n;
+} void main() { item t1(10,20); item t2=item(20,30); t1.put(); t2.put();
+getch(); } <strong>3.Copy Constructor:</strong> A copy constructor is
+used to declare and initialize an object from another object.</h3>
+<p>Eg:<br />
+item t2(t1); or<br />
+item t2=t1;</p>
+<p>1. The process of initializing through a copy constructor is known as
+copy initialization.<br />
+2. t2=t1 will not invoke copy constructor. t1 and t2 are objects,
+assigns the values of t1 to t2.<br />
+3. A copy constructor takes a reference to an object of the same class
+as itself as an argument. #include&lt;iostream.h&gt;<br />
+class sample<br />
+{<br />
+int n;<br />
+public:<br />
+sample()<br />
+{<br />
+n=0;<br />
+}<br />
+sample(int a)<br />
+n=a;<br />
+}<br />
+sample(sample &amp;x) {<br />
+n=x.n; }<br />
+void display() {<br />
+cout&lt;&lt;n; }<br />
+};<br />
+void main()<br />
+{<br />
+sample A(100);<br />
+sample B(A);<br />
+sample C=A;<br />
+sample D;<br />
+D=A;<br />
+A.display();<br />
+B.display();<br />
+C.display();<br />
+D.display();<br />
+}</p>
+<p>Output: 100 100 100 100</p>
+<h3><strong>Multiple Constructors in a Class:</strong> Multiple
+constructors can be declared in a class. There can be any</h3>
+<p>number of constructors in a class.</p>
+<h3>class complex { float real,img; public: complex()//default
+constructor { real=img=0; } complex(float r)//single parameter
+parameterized constructor { real=img=r; } complex(float r,float i) //two
+parameter parameterized constructor { real=r;img=i; }
+complex(complex&amp;c)//copy constructor { real=c.real; img=c.img;<br />
+} complex sum(complex c ) complex t; t.real=real+c.real;
+t.img=img+c.img; return t; } void show() { If(img&gt;0)
+cout&lt;&lt;real&lt;&lt;"+i"&lt;&lt;img&lt;&lt;endl; else { img=-img;
+cout&lt;&lt;real&lt;&lt;"-i"&lt;&lt;img&lt;&lt;endl; } } }; void main()
+{ complex c1(1,2); complex c2(2,2); compex c3; c3=c1.sum(c3);
+c3.show();<br />
+}</h3>
+<p><strong>DESTRUCTORS:</strong> A destructor, is used to destroy the
+objects that have been created by a constructor. Like a constructor, the
+destructor is a member function whose name is the same as the class name
+but is preceded <strong>by a tilde.<br />
+Eg: ~item() { }</strong></p>
+<p>1. A destructor never takes any argument nor does it return any
+value.<br />
+2. It will be invoked implicitly by the compiler upon exit from the
+program to clean up storage that is no longer accessible.<br />
+3. It is a good practice to declare destructors in a program since it
+releases memory space for future use.</p>
+<h3>#include&lt;iostream&gt; using namespace std; class Marks { public:
+int maths; int science;<br />
+//constructor Marks() { cout &lt;&lt; "Inside Constructor"&lt;&lt;endl;
+cout &lt;&lt; "C++ Object created"&lt;&lt;endl; }<br />
+//Destructor ~Marks() { cout &lt;&lt; "Inside Destructor"&lt;&lt;endl;
+cout &lt;&lt; "C++ Object destructed"&lt;&lt;endl; } };<br />
+int main( ) { Marks m1; Marks m2; return 0; }<br />
+Output: Inside Constructor C++ Object created Inside Constructor C++
+Object created Inside Destructor C++ Object destructed Inside Destructor
+C++ Object destructed<br />
+<strong>INHERITANCE:</strong> . The mechanism of deriving a new class
+from an old one is called <strong>inheritance</strong> or</h3>
+<p><strong>derivation</strong>. The old class is referred to as the
+<strong>base class</strong> and the new one is called the
+<strong>derived class</strong> or <strong>sub class</strong>. The
+derived class inherits some or all of the traits from the base
+class.<br />
+A class can also inherit properties from more than one class or from
+more than one level.Reusability is an important feature of OOP<br />
+A derived class can be defined by specifying its relationship with the
+base class in addition to its own details.</p>
+<h3>class derived-class-name : visibility-mode base-class-name { ………
+………</h3>
+<p>}<br />
+<img src="Images/image00081.jpeg" /></p>
+<p>The <strong>colon</strong> indicates that the derived class name is
+derived from the base-class-name. the visibility mode is optional and if
+present, may be either <strong>private or protected or public.</strong>
+The default is private. Visibility mode specifies whether the features
+of the base class are privately derived or publicly derived.</p>
+<p>class ABC : private XYZ //private derivation<br />
+{<br />
+members of ABC;<br />
+};</p>
+<p>class ABC:public XYZ {<br />
+members of ABC; };<br />
+//public derivation</p>
+<p>class ABC:protected XYZ {</p>
+<p>// protected derivation members of ABC;<br />
+};<br />
+class ABC:XYZ //private by default {<br />
+members of ABC;<br />
+};</p>
+<p>When a base class is <strong>privately inherited</strong> by a
+derived class, public members of the base class can only be accessed by
+the member functions of the derived class.private membes of base class
+are inaccessible to the objects of the derived class</p>
+<p>When a base class is <strong>protected inherited</strong> by a
+derived class, public members of the base class can only be accessed by
+the member functions of the derived class.private membes of base class
+are inaccessible to the objects of the derived class. If private members
+of base class are to be inherited to derived class then declare them as
+protected</p>
+<p>When the base class is <strong>publicly inherited</strong>, public
+members of the base class is publicly inherited, public members of the
+base class become public members of the derived class and therefore they
+are accessible to the objects of the derived class. In both the cases,
+the private members are not inherited and therefore, the private members
+of a base class will never become the members of its derived class</p>
+<p>In inheritance, some of the base class data elements and member
+functions are „inherited‟ into the derived class. We can add our own
+data and member functions and thus extend the functionality of the base
+class. Inheritance, when used to modify and extend the capability of the
+existing classes, becomes a very powerful tool for incremental program
+development</p>
+<p><img src="Images/image00082.jpeg" /></p>
+<p>Types of Inheritance:<br />
+1.Single Inheritance<br />
+2.Multi level Inheritance<br />
+3.Mutiple Inheritance<br />
+4.Hybrid inheritance<br />
+5. Hierarchical Inheritance.<br />
+<strong>1.SINGLE INHERITANCE:</strong> one derived class inherits from
+only one base class. It is the most simplest form of Inheritance.</p>
+<p>#include&lt;iostream&gt; using namespace std; class A<br />
+{<br />
+public:<br />
+int a,b;<br />
+void get()<br />
+{<br />
+cout&lt;&lt;"Enter any two Integer values"&lt;&lt;endl;
+cin&gt;&gt;a&gt;&gt;b;<br />
+}<br />
+};<br />
+A/ /Base class</p>
+<p><img src="Images/image00083.jpeg" />B//Derived class</p>
+<p>class B:public A<br />
+{<br />
+int c;<br />
+public:<br />
+void add()<br />
+{<br />
+c=a+b;<br />
+cout&lt;&lt;a&lt;&lt;"+"&lt;&lt;b&lt;&lt;"="&lt;&lt;c; }<br />
+};</p>
+<p>int main()<br />
+{<br />
+B b;<br />
+b.get();<br />
+b.add();<br />
+}</p>
+<h3>Output: Enter any two Integer values</h3>
+<p><strong>2.MULTILEVEL INHERITANCE:</strong> In this type of
+inheritance the derived class inherits from a class, which in turn
+inherits from some other class. The Super class for one, is sub class
+for the other. A<br />
+B<br />
+<img src="Images/image00084.jpeg" />C</p>
+<p>#include&lt;iostream.h&gt; class A<br />
+{<br />
+public:</p>
+<p>int a,b;<br />
+void get() {<br />
+cout&lt;&lt;"Enter any two Integer values"&lt;&lt;endl;
+cin&gt;&gt;a&gt;&gt;b;<br />
+}</p>
+<p>};</p>
+<p>class B:public A {<br />
+public:</p>
+<p>int c;<br />
+void add() {<br />
+c=a+b; }</p>
+<p>};</p>
+<p>class C:public B {<br />
+public:</p>
+<p>void show()<br />
+{<br />
+cout&lt;&lt;a&lt;&lt;"+"&lt;&lt;b&lt;&lt;"="&lt;&lt;c; }</p>
+<p>};<br />
+int main()<br />
+{<br />
+C c;</p>
+<p>c.get();<br />
+c.add();<br />
+c.show();</p>
+<p>}<br />
+Output:<br />
+Enter any two Integer values</p>
+<h3><strong>3.Multiple Inheritance:</strong>In this type of inheritance
+a single derived class may inherit from two or more</h3>
+<p>than two base classes.<br />
+A B<br />
+<img src="Images/image00085.jpeg" /></p>
+<p>C Syntax:<br />
+class D : visibilityA, visibility B,….<br />
+{<br />
+………………<br />
+}</p>
+<p>#include&lt;iostream.h&gt; class A<br />
+{<br />
+public:<br />
+int a;</p>
+<p>void getA()<br />
+{<br />
+cout&lt;&lt;"Enter an Integer value"&lt;&lt;endl; cin&gt;&gt;a;<br />
+}</p>
+<p>};<br />
+class B<br />
+{<br />
+public:</p>
+<p>int b;<br />
+void getB()<br />
+{<br />
+cout&lt;&lt;"Enter an Integer value"&lt;&lt;endl; cin&gt;&gt;b;<br />
+}</p>
+<p>};</p>
+<p>class C:public A,public B {<br />
+public:<br />
+int c;</p>
+<p>void add()<br />
+{<br />
+c=a+b;<br />
+cout&lt;&lt;a&lt;&lt;"+"&lt;&lt;b&lt;&lt;"="&lt;&lt;c&lt;&lt;endl; }</p>
+<p>};<br />
+int main()<br />
+{<br />
+C obj;<br />
+obj.getA();<br />
+obj.getB();<br />
+obj.add();<br />
+}<br />
+Enter an Integer<br />
+value 12 Enter an<br />
+Integer value 13 12+13=25</p>
+<h3><strong>4.Hybrid Inheritance</strong>:<font> Hybrid inheritance is
+combination of two or more inheritances such </font></h3>
+<p><font>as single,multiple,multilevel or Hierarchical
+inheritances.</font><br />
+A<br />
+B<br />
+<img src="Images/image00086.jpeg" />C<br />
+D</p>
+<p>#include&lt;iostream.h&gt; class arithmetic<br />
+{<br />
+protected:</p>
+<p>int num1, num2; public:<br />
+void getdata()<br />
+{<br />
+cout&lt;&lt;"For Addition:";<br />
+cout&lt;&lt;"\nEnter the first number: ";<br />
+cin&gt;&gt;num1;<br />
+cout&lt;&lt;"\nEnter the second number: ";<br />
+cin&gt;&gt;num2;<br />
+}<br />
+};<br />
+class plus:public arithmetic<br />
+{<br />
+protected:<br />
+int sum;<br />
+public:<br />
+void add()<br />
+{<br />
+sum=num1+num2;<br />
+}<br />
+};<br />
+class minus<br />
+{<br />
+protected:<br />
+int n1,n2,diff;<br />
+public:<br />
+void sub()<br />
+{<br />
+cout&lt;&lt;"\nFor Subtraction:";<br />
+cout&lt;&lt;"\nEnter the first number: ";<br />
+cin&gt;&gt;n1;<br />
+cout&lt;&lt;"\nEnter the second number: "; cin&gt;&gt;n2;<br />
+diff=n1-n2;<br />
+}<br />
+};<br />
+class result:public plus, public minus {<br />
+public:<br />
+void display()<br />
+{<br />
+cout&lt;&lt;"\nSum of "&lt;&lt;num1&lt;&lt;" and "&lt;&lt;num2&lt;&lt;"=
+"&lt;&lt;sum;<br />
+cout&lt;&lt;"\nDifference of "&lt;&lt;n1&lt;&lt;" and
+"&lt;&lt;n2&lt;&lt;"= "&lt;&lt;diff;<br />
+}<br />
+};<br />
+int main()<br />
+{<br />
+result z;<br />
+z.getdata();<br />
+z.add();<br />
+z.sub();<br />
+z.display();<br />
+}</p>
+<p>For Addition:<br />
+Enter the first number: 1<br />
+Enter the second number: 2<br />
+For Subtraction:<br />
+Enter the first number: 3<br />
+Enter the second number: 4<br />
+Sum of 1 and 2= 3<br />
+Difference of 3 and 4= -1</p>
+<h3><strong>5.Hierarchical Inheritance:</strong> Inheriting is a method
+of inheritance where one or more derived</h3>
+<p>classes is derived from common base class.<br />
+A<br />
+<img src="Images/image00087.jpeg" />B C D</p>
+<p>#include&lt;iostream.h&gt; class A //Base Class {</p>
+<p>public:<br />
+int a,b;<br />
+void getnumber() {<br />
+cout&lt;&lt;"\n\nEnter Number :\t"; cin&gt;&gt;a;<br />
+}</p>
+<p>};<br />
+class B : public A //Derived Class 1 {</p>
+<p>public:<br />
+void square()<br />
+{<br />
+getnumber(); //Call Base class property cout&lt;&lt;"\n\n\tSquare of the
+number :\t"&lt;&lt;(a*a);</p>
+<p>}<br />
+};<br />
+class C :public A //Derived Class 2<br />
+{</p>
+<p>public:<br />
+void cube()<br />
+{<br />
+getnumber(); //Call Base class property cout&lt;&lt;"\n\n\tCube of the
+number :::\t"&lt;&lt;(a*a*a); }</p>
+<p>};<br />
+int main()<br />
+{<br />
+B b1; //b1 is object of Derived class 1<br />
+b1.square(); //call member function of class B C c1; //c1 is object of
+Derived class 2<br />
+c1.cube(); //call member function of class C }<br />
+Enter Number : 2</p>
+<p>Square of the number : 4<br />
+Enter Number : 3<br />
+Cube of the number ::: 27<br />
+<strong>UNIT -4</strong></p>
+<p><strong>Pointers, Virtual Functions and Polymorphism:</strong>
+Introduction, Memory Management, new Operator and delete Operator,
+Pointers to Objects, this Pointer, Pointers to<br />
+Derived Classes,Polymorphism,compile time polymorphism,Run time
+polymorphism, Virtual Functions,Pure Virtual Functions,Virtual Base
+Classes,Virtual Destructors,Function<br />
+Overloading, Operator overloading, Rules for Operator overloading-binary
+and unary operators.</p>
+<p><img src="Images/image00088.jpeg" /></p>
+<h3><strong>Introduction to Memory Management:<br />
+DYNAMIC MEMORY ALLOCATION &amp; DEALLOCATION (new &amp;
+delete)</strong></h3>
+<p>C uses malloc() and calloc() functions to allocate memory dynamically
+at run time. It uses the function free() to deallocated dynamically
+allocated memory.<br />
+<font size="-1"><sup></sup> C++ supports these functions, it defines
+two unary operators <strong>new</strong> and <strong>delete</strong>
+that perform the task of allocating and</p>
+<p><br />
+deallocating the memory in a better and easier way.<sup></sup></p>
+<p>A object can be created by using<br />
+<strong>new</strong><br />
+, and destroyed by using<br />
+<strong>delete</strong><br />
+.<br />
+</font><br />
+<sup></sup> A data object created inside a block with
+<strong>new</strong>, will remain in existence until it is explicitly
+destroyed by using <strong>delete</strong>.<sup></sup></p>
+<h3><strong>new operator:</strong></h3>
+<p><strong>new operator</strong> can be used to create objects of any
+type .Hence new operator allocates sufficient memory to hold data of
+objects and it returns address of the allocated memory. Syntax:</p>
+<p>pointer-variable = <strong>new</strong> data-type; Ex: int *p = new
+int;</p>
+<h3><sup></sup> To create memory space for arrays:<sup></sup></h3>
+<p>pointer-variable = <strong>new</strong> data-type[size];<br />
+Ex: int *p = new int[10];</p>
+<h3>d<strong>elete operator:</strong></h3>
+<p>If the variable or object is no longer required or needed is
+destroyed by “<strong>delete</strong>” operator, there by some amount of
+memory is released for future purpose. Synatx:<br />
+delete pointer-variable; Eg: delete p; <sup></sup>If we want to free a
+dynamically allocated</p>
+<h3><sup></sup>array: delete [size] pointer-variable;</h3>
+<p>Program: write a program to find sum of list of integers</p>
+<p>#include&lt;iostream&gt; using namespace std; int main()<br />
+{<br />
+int n,*p;<br />
+cout&lt;&lt;"Enter array size:";<br />
+cin&gt;&gt;n;<br />
+p=new int[n];<br />
+cout&lt;&lt;"Enter list of integers"&lt;&lt;endl; for(int
+i=0;i&lt;n;i++)<br />
+cin&gt;&gt;p[i];</p>
+<p>//logic for summation<br />
+int s=0;<br />
+for( int i=0;i&lt;n;i++)</p>
+<p>s=s+p[i];<br />
+cout&lt;&lt;"Sum of array elements is\n";<br />
+cout&lt;&lt;s;<br />
+delete [ ]p;<br />
+return 0;<br />
+}<br />
+Enter array size:5<br />
+Enter list of integers<br />
+1 2 3 4 5<br />
+Sum of array elements is<br />
+15</p>
+<h3><strong>Member Dereferencing operator:</strong></h3>
+<p>1. Pointer to a member declarator ::*<br />
+2. Pointer to member operator -&gt;*<br />
+3. Pointer to member operator .* <strong>Pointer to a member declarator
+::*</strong><br />
+This operator is used for declaring a pointer to the member of the class
+#include&lt;iostream.h&gt;<br />
+class sample<br />
+{public:<br />
+int x;<br />
+};<br />
+int main()<br />
+{ sample s; //object int sample ::*p;//pointer decleration s.*p=10;
+//correct<br />
+cout&lt;&lt;s.*p;<br />
+}<br />
+Output:10<br />
+<strong>2.Pointer to member operator -&gt;*</strong><br />
+#include&lt;iostream.h&gt;<br />
+class sample<br />
+{<br />
+public: int x;<br />
+void display()<br />
+{<br />
+cout&lt;&lt;"x="&lt;&lt;x&lt;&lt;endl; }<br />
+};<br />
+int main() {<br />
+sample s; //object sample *ptr;<br />
+int sample::*f=&amp;sample::x; s.x=10;<br />
+ptr=&amp;s;<br />
+cout&lt;&lt;ptr-&gt;*f;<br />
+ptr-&gt;display();<br />
+}<br />
+<strong>3. Pointer to member operator .*</strong>
+#include&lt;iostream.h&gt;<br />
+class sample<br />
+{<br />
+public: int x; };<br />
+int main()<br />
+{<br />
+sample s; //object<br />
+int sample ::*p;//pointer decleration<br />
+s.*p=10; //correct<br />
+cout&lt;&lt;s.*p;<br />
+}</p>
+<p><strong>Pointers to Objects:</strong> Pointers to objects are useful
+for creating objects at run time. To access members arrow operator
+(<sup></sup>) and de referencing operator or indirection (*) are
+used.<br />
+<strong>Declaration of pointer</strong>.</p>
+<p>className*ptr<br />
+ex:<br />
+item *obj;<br />
+Here obj is a pointer to object of type item.</p>
+<p>class item {<br />
+int code; float price;<br />
+public:<br />
+void getdata(int a,float b) {<br />
+code=a; price=b; }<br />
+void show()<br />
+{<br />
+cout&lt;&lt;”code:”&lt;&lt;code&lt;&lt;”\n”&lt;&lt;”Price:”&lt;&lt;price&lt;&lt;endl;
+}<br />
+};</p>
+<p><strong>Declaration of object and pointer to class item:</strong>
+item obj;<br />
+item *ptr=&amp;obj;</p>
+<p>The member can be accessed as follow. a) Accessing members using dot
+operator obj.getdata(101,77.7); obj.show();</p>
+<p>b)using pointer<br />
+ptr-&gt;getdata(101,77.7);<br />
+ptr-&gt;show();</p>
+<p>c)Using de referencing operator and dot operator
+(*ptr).getdata(101,77.7);<br />
+(*ptr).show();</p>
+<p><strong>Creating array of objects using pointer:<br />
+item *ptr=new item[10];</strong><br />
+Above declaration creates memory space for an array of 10 objects of
+type item.</p>
+<p>#include&lt;iostream.h&gt;<br />
+class item<br />
+{</p>
+<p>int code; float price; public:</p>
+<p>void getdata(int a,float b) {<br />
+code=a; price=b;<br />
+}<br />
+void show()<br />
+{<br />
+cout&lt;&lt;code&lt;&lt;"\t"&lt;&lt;price&lt;&lt;endl;<br />
+}<br />
+};<br />
+int main()<br />
+{<br />
+int n;<br />
+int cd;<br />
+float pri;<br />
+cout&lt;&lt;"Enter number of objects to be created:";<br />
+cin&gt;&gt;n;<br />
+item *ptr=new item[n];<br />
+item *p;<br />
+p=ptr;<br />
+for(int i=0;i&lt;n;i++)<br />
+{<br />
+cout&lt;&lt;"Enter data for object"&lt;&lt;i+1; cout&lt;&lt;"\nEnter
+Code:";cin&gt;&gt;cd; cout&lt;&lt;"Enter price:";cin&gt;&gt;pri;
+p-&gt;getdata(cd,pri);<br />
+p++;<br />
+}<br />
+p=ptr;<br />
+cout&lt;&lt;"Data in various objects are "&lt;&lt;endl;
+cout&lt;&lt;"Sno\tCode\tPrice\n";<br />
+for(i=0;i&lt;n;i++)<br />
+{<br />
+cout&lt;&lt;i+1&lt;&lt;"\t"; ptr-&gt;show(); ptr++;<br />
+}<br />
+return 0;<br />
+}</p>
+<h3><strong>Pointers to Derived Classes:</strong> Pointers can be
+declared to derived class. it can be used to access</h3>
+<p>members of base class and derived class. A base class pointer can
+also be used to point to object of derived class but it can access only
+members that are inherited from base class.</p>
+<p>#include&lt;iostream.h&gt; class base<br />
+{<br />
+public:</p>
+<p>int a;<br />
+void get_a(int x) {</p>
+<p>a=x;<br />
+}<br />
+void display_a() {</p>
+<p>cout&lt;&lt;"In base"&lt;&lt;"\n"&lt;&lt;"a="&lt;&lt;a&lt;&lt;endl;
+}<br />
+};<br />
+class derived:public base<br />
+{<br />
+int b;<br />
+public:</p>
+<p>void get_ab(int x,int y) {<br />
+a=x;<br />
+b=y;<br />
+}<br />
+void display_ab()<br />
+{<br />
+cout&lt;&lt;"In Derived
+"&lt;&lt;"\n"&lt;&lt;"a="&lt;&lt;a&lt;&lt;"\nb="&lt;&lt;b&lt;&lt;endl;<br />
+}<br />
+};<br />
+int main()<br />
+{<br />
+base b;<br />
+base *bptr;<br />
+bptr=&amp;b;//points to the object of base class<br />
+bptr-&gt;get_a(100);<br />
+bptr-&gt;display_a();</p>
+<p>derived d;<br />
+derived *dptr;<br />
+dptr=&amp;d;//points to the object of derived class</p>
+<p>dptr-&gt;get_a(400);<br />
+dptr-&gt;display_a();<br />
+dptr-&gt;get_ab(300,200); dptr-&gt;display_ab();</p>
+<p>bptr=&amp;d;//points to the object of derived class
+bptr-&gt;get_a(400);<br />
+bptr-&gt;display_a();</p>
+<p>return 0;<br />
+}<br />
+Output:</p>
+<p>In base<br />
+a=100</p>
+<p>In base<br />
+a=400<br />
+In Derived<br />
+a=300<br />
+b=200<br />
+In base<br />
+a=400</p>
+<h3><strong>RUNTIME POLYMORPHISM USING VIRTUAL FUNCTIONS</strong></h3>
+<p><strong>Static &amp; Dynamic Binding</strong><br />
+Polymorphism means „one name‟ „multiple forms.<br />
+The overloaded member functions are „selected‟ for invoking by matching
+arguments, both type and number. This information is known to the
+compiler at the compile time and compiler is able to select the
+appropriate function for a particular call at the compile time itself.
+This is called <strong>Early Binding</strong> or <strong>Static
+Binding</strong> or <strong>Static Linking</strong>. Also known as
+<strong>compile time polymorphism</strong>. Early binding means that an
+object is bound to its function call at the compile time.</p>
+<p>It would be nice if the appropriate member function could be selected
+while the program is running. This is known as <strong>runtime
+polymorphism</strong>. C++ supports a mechanism known as <strong>virtual
+function</strong> to achieve run time polymorphism.</p>
+<p>At the runtime, when it is known what class objects are under
+consideration, the appropriate version of the function is invoked. Since
+the function is linked with a particular class much later after the
+compilation, this process is termed as late binding. It is also known as
+<strong>dynamic binding</strong> because the selection of the
+appropriate function is done dynamically at run time.</p>
+<p>Polymorphism<br />
+<img src="Images/image00089.jpeg" />Run time</p>
+<p><font size="-1">Compile time</font><br />
+Polymorphism<br />
+Polymorphism</p>
+<p>Function Operator Virtual Overloading Overloading Functions<br />
+<strong>VIRTUAL FUNCTIONS</strong></p>
+<p>Polymorphism refers to the property by which objects belonging to
+different classes are able to respond to the same message, but different
+forms. An essential requirement of polymorphism is therefore the ability
+to refer to objects without any regard to their classes.</p>
+<p>When we use the same function name in both the base and derived
+classes, the function in the bas class is declared as virtual using the
+keyword virtual preceding its normal declaration.</p>
+<p>When a function is made virtual, C++ determines which function to use
+at runtime based on the type of object pointed to by the base pointer,
+rather than the type of the pointer. Thus, by making the base pointer to
+point to different objects, we can execute different versions of the
+virtual function.</p>
+<p>#include&lt;iostream.h&gt;<br />
+class Base<br />
+{<br />
+public:<br />
+void display()<br />
+{<br />
+cout&lt;&lt;”Display Base”;<br />
+}<br />
+virtual void show()<br />
+{<br />
+cout&lt;&lt;”Show Base”;<br />
+}<br />
+};<br />
+class Derived : public Base<br />
+{<br />
+public:<br />
+void display()<br />
+{<br />
+cout&lt;&lt;”Display Derived”;<br />
+}<br />
+void show()<br />
+{<br />
+cout&lt;&lt;”show derived”;<br />
+}<br />
+};</p>
+<p>void main()<br />
+{<br />
+Base b;<br />
+Derived d;<br />
+Base *ptr;<br />
+cout&lt;&lt;”ptr points to Base”; ptr=&amp;b;<br />
+ptr-&gt;display(); //calls Base ptr-&gt;show(); //calls Base
+cout&lt;&lt;”ptr points to derived”; ptr=&amp;d;<br />
+ptr-&gt;display(); //calls Base ptr-&gt;show(); //class Derived }</p>
+<p>Output:</p>
+<p>ptr points to Base Display Base Show Base</p>
+<p>ptr points to Derived<br />
+Display Base<br />
+Show Derived<br />
+When ptr is made to point to the object d, the statement
+ptr-&gt;display(); calls only the function associated with the Base
+i.e.. Base::display()<br />
+where as the statement<br />
+ptr-&gt;show();<br />
+calls the derived version of show(). This is because the function
+display() has not been made virtual in the Base class.<br />
+<strong>Rules For Virtual Functions:</strong><br />
+When virtual functions are created for implementing late binding,
+observe some basic rules that satisfy the compiler requirements.</p>
+<p>1. The virtual functions must be members of some class.<br />
+2. They cannot be static members.<br />
+3. They are accessed by using object pointers.<br />
+4. A virtual function can be a friend of another class.<br />
+5. A virtual function in a base class must be defined, even though it
+may not be used.<br />
+6. The prototypes of the base class version of a virtual function and
+all the derived class versions must be identical. C++ considers them as
+overloaded functions, and the virtual function mechanism is
+ignored.<br />
+7. We cannot have virtual constructors, but we can have virtual
+destructors.<br />
+8. While a base pointer points to any type of the derived object, the
+reverse is not true. i.e. we cannot use a pointer to a derived class to
+access an object of the base class type.<br />
+9. When a base pointer points to a derived class, incrementing or
+decrementing it will not make it to point to the next object of the
+derived class. It is incremented or decremented only relative to its
+base type. Therefore we should not use this method to move the pointer
+to the next object.<br />
+10. If a virtual function is defined in the base class, it need not be
+necessarily redefined in the derived class. In such cases, calls will
+invoke the base function.</p>
+<p><strong>OVERLOADING</strong></p>
+<p><strong>OPERATOR OVERLOADING</strong><br />
+C++ has the ability to provide the operators with as special meaning for
+a data type. The mechanism of giving such special meanings to an
+operator is known as operator overloading. We can overload all the
+operators except the following:</p>
+<p>Class member access operato r (“.” And ”<br />
+.*”) Scope resolution operator <strong>“::”</strong><br />
+<font size="-1">Size operator (sizeof)<br />
+Conditional operator</font></p>
+<p>To define an additional task to an operator, specify what it means in
+relation to the class to which the operator is applied. This is done
+with the help of a special function, <strong>called operator
+function.</strong> The process of overloading involves following
+steps:</p>
+<p>1. Create a class that defines the data type that is to be used in
+the overloading operation.<br />
+2. Declare the operator function <strong>operator op()</strong> in the
+public part of the class. It may be a member function or a friend
+function.<br />
+3. Here op is the operator to be overloaded.<br />
+<font size="-1">4.</font> Define the operator function to implement the
+required operations.<br />
+General Form:</p>
+<p>return-type classname :: operator op(arglist) {<br />
+Function body<br />
+}<br />
+<img src="Images/image00090.gif" /></p>
+<p>Ex:<br />
+complex complex::operator+(complex c)<br />
+{<br />
+complex t;<br />
+t.real=real+c.real;<br />
+t.img=img+c.img;<br />
+return t;<br />
+}<br />
+<strong>Concept of Operator Overloading</strong><br />
+One of the unique features of C++ is Operator Overloading. Applying
+overloading to operators means,<br />
+same operator in responding different manner. For example operator + can
+be used as concatenate<br />
+operator as well as additional operator.</p>
+<p>That is 2+3 means 5 (addition), where as<br />
+"2"+"3" means 23 (concatenation).</p>
+<p>Performing many actions with a single operator is operator
+overloading. We can assign a user defined function to an operator. We
+can change function of an operator, but it is not recommedned to change
+the actual functions of operator. We can't create new operators using
+this operatorloading. Operator overloading concept can be applied in
+following two major areas (Benefits)</p>
+<p>1. Extension of usage of operators<br />
+2. Data conversions</p>
+<p><strong>Rules to be followed for operator overloading:</strong><br />
+1.Only existing operators can be overloaded.<br />
+2.Overloaded operators must have at least one operand that is of user
+defined operators<br />
+3.We cannot change basic meaning of an operator.<br />
+4.Overloaded operator must follow minimum characteristics that of
+original operator<br />
+5.When using binary operator overloading through member function, the
+left hand operand must be an object of relevant class<br />
+The number of arguments in the overloaded operator‟ s arguments list
+depends</p>
+<p>1. Operator function must be either member function or friend
+function.<br />
+2. If operator function is a friend function then it will have one
+argument for unary operator &amp; two arguments for binary
+operator<br />
+3. If operator function is a member function then it will have Zero
+argument for unary operator &amp; one arguments for binary operator</p>
+<p><strong>Unary Operator Overloading</strong></p>
+<p>An unary operator means, an operator which works on single operand.
+For example, ++ is an unary operator, it takess single operand (c++).
+So, when overloading an unary operator, it takes no argument (because
+object itself is considered as argument).</p>
+<p><strong>Syntax for Unary Operator (Inside a class)</strong></p>
+<p>return-type operator operatorsymbol( ) {<br />
+//body of the function<br />
+}</p>
+<p>Ex:<br />
+void operator-() {</p>
+<p>real=-real;<br />
+img=-img;<br />
+}<br />
+<strong>Syntax for Unary Operator (Outside a class)</strong><br />
+return-type classname::operator operatorsymbol( )<br />
+{<br />
+//body of the function<br />
+}</p>
+<p>Example 1:<br />
+void operator++() {<br />
+counter++; }<br />
+Example 2:</p>
+<p>void complex::operator-() {<br />
+real=-real;<br />
+img=-img;</p>
+<p>}<br />
+<strong>The following simple program explains the concept of unary
+overloading.</strong> #include &lt; iostream.h &gt;<br />
+#include &lt; conio.h &gt;</p>
+<p>// Program Operator<br />
+Overloading class fact<br />
+{</p>
+<p>int a; public: fact ()</p>
+<p>{ a=0;<br />
+}<br />
+fact (int i)<br />
+{<br />
+a=i;<br />
+}<br />
+fact operator!()<br />
+{<br />
+int f=1,i;<br />
+fact t;<br />
+for (i=1;i&lt;=a;i++) {<br />
+f=f*i; }<br />
+t.a=f;<br />
+return t;<br />
+}<br />
+void display()<br />
+{<br />
+cout&lt;&lt;”The factorial ”&lt;&lt; a; }<br />
+};<br />
+void main()<br />
+{<br />
+int x; cout&lt;&lt;”enter a number”; cin&gt;&gt;x;<br />
+fact s(x),p;<br />
+p=!s;<br />
+p.display();<br />
+}</p>
+<p>Output for the above program:<br />
+Enter a number 5<br />
+The factorial of a given number 120</p>
+<p>Explanation:<br />
+We have taken „!‟ as operator to overload. Here class name is fact.
+Constructor without parameters to take initially value of „x‟as 0.
+Constructor with parameter to take the value of „x‟ . We have create two
+objects one for doing the factorial and the other for return the
+factorial. Here number of parameter for an overloaded function is 0.
+Factorial is unary operator because it operates on one dataitem.
+operator overloading find the factorial of the object. The display
+function for printing the result.</p>
+<p><strong>Overloading Unary Operator</strong></p>
+<p>Example 1:<br />
+<strong>Write a program to overload unary operator–</strong>
+#include&lt;iostream&gt;<br />
+using namespace std;<br />
+class complex<br />
+{<br />
+float real,img; public:</p>
+<p>complex();<br />
+complex(float x, float y); void display();</p>
+<p>void operator-();<br />
+};<br />
+complex::complex()<br />
+{<br />
+real=0;img=0;<br />
+}<br />
+complex::complex(float x, float y) {<br />
+real=x;<br />
+img=y;<br />
+}<br />
+void complex::display()<br />
+{<br />
+int imag=img;</p>
+<p>if(img&lt;0)<br />
+{<br />
+imag=-img;<br />
+cout&lt;&lt;real&lt;&lt;" -i"&lt;&lt;imag&lt;&lt;endl; }<br />
+else<br />
+cout&lt;&lt;real&lt;&lt;" +i"&lt;&lt;img&lt;&lt;endl; }<br />
+void complex::operator-()<br />
+{<br />
+real=-real;<br />
+img=-img;<br />
+}<br />
+int main()<br />
+{<br />
+complex c(1,-2);<br />
+c.display();<br />
+cout&lt;&lt;"After Unary - operation\n";<br />
+-c;<br />
+c.display();<br />
+}</p>
+<p>Example 2:<br />
+#include&lt;iostream.h&gt;<br />
+using namespace std;<br />
+class space<br />
+{<br />
+int x,y,z;<br />
+public:<br />
+void getdata(int a,int b,int c); void display();<br />
+void operator-();<br />
+};<br />
+void space :: getdata(int a,int b,int c) {<br />
+x=a;<br />
+y=b;<br />
+z=c;<br />
+}<br />
+void space :: display()<br />
+{<br />
+cout&lt;&lt;"x="&lt;&lt;x&lt;&lt;endl;<br />
+cout&lt;&lt;"y="&lt;&lt;y&lt;&lt;endl;<br />
+cout&lt;&lt;"z="&lt;&lt;z&lt;&lt;endl;<br />
+}<br />
+void space :: operator-()<br />
+{<br />
+x=-x;<br />
+y=-y;<br />
+z=-z;<br />
+}<br />
+int main()<br />
+{<br />
+space s;<br />
+s.getdata(10,-20,30);<br />
+s.display();<br />
+-s;<br />
+cout&lt;&lt;"after negation\n";<br />
+s.display();<br />
+}</p>
+<p>Output:<br />
+x=10<br />
+y=-20<br />
+z=30<br />
+after negation x=-10<br />
+y=20<br />
+z=-30</p>
+<p>It is possible to overload a unary minus operator using a friend
+function as follows:</p>
+<h3><strong>friend void operator-(space &amp;s);</strong></h3>
+<p>Example 3:<br />
+<strong>Unary minus operator using a friend function</strong>
+#include&lt;iostream.h&gt;<br />
+#include&lt;iostream.h&gt;<br />
+using namespace std;<br />
+class space<br />
+{<br />
+int x,y,z;<br />
+public:<br />
+void getdata(int a,int b,int c);<br />
+void display();<br />
+friend void operator-(space &amp;); };<br />
+void space :: getdata(int a,int b,int c) {<br />
+x=a;<br />
+y=b;<br />
+z=c;<br />
+}</p>
+<p>void space :: display()<br />
+{<br />
+cout&lt;&lt;x&lt;&lt;" "&lt;&lt;y&lt;&lt;" "&lt;&lt;z&lt;&lt;endl;
+}<br />
+void operator-(space &amp;s)<br />
+{<br />
+s.x=-s.x;<br />
+s.y=-s.y;<br />
+s.z=-s.z;<br />
+}</p>
+<p>int main()<br />
+{<br />
+space S;<br />
+S.getdata(10,-20,30); S.display();<br />
+-S;<br />
+cout&lt;&lt;"after negation\n"; S.display();<br />
+}</p>
+<p>Output:<br />
+10 -20 30 after negation<br />
+-10 20<font size="-1">-30</font></p>
+<h3><strong>Binary Operator Overloading</strong></h3>
+<p>An binary operator means, an operator which works on two operands.
+For example, + is an binary operator, it takes single operand (c+d). So,
+when overloading an binary operator, it takes one argument (one is
+object itself and other one is passed argument).</p>
+<p><strong>Syntax for Binary Operator (Inside a class)</strong><br />
+return-type operator operatorsymbol(argument)<br />
+{<br />
+//body of the function<br />
+}</p>
+<p><img src="Images/image00091.jpeg" /></p>
+<p><strong>Syntax for Binary Operator definition (Outside a
+class)</strong> return-type classname::operator operatorsymbol(argument)
+{<br />
+//body of the function<br />
+}</p>
+<p><img src="Images/image00092.gif" /></p>
+<p>Example<br />
+complex operator+(complex s)<br />
+{</p>
+<p>complex t;<br />
+t.real=real+s.real;<br />
+t.img=img+s.img;<br />
+return t;</p>
+<p>}<br />
+The following program explains binary operator overloading: #include
+&lt; iostream.h &gt;<br />
+#include &lt; conio.h &gt;<br />
+class sum<br />
+{<br />
+int a;<br />
+public:</p>
+<p>sum()</p>
+<p>{<br />
+a=0; }<br />
+sum(int i) {</p>
+<p>a=i;<br />
+}<br />
+sum operator+(sum p1) {</p>
+<p>sum t;<br />
+t.a=a+p1.a; return t;</p>
+<p>}<br />
+void main ()<br />
+{</p>
+<p>cout&lt;&lt;”Enter Two Numbers:” int a,b;<br />
+cin&gt;&gt;a&gt;&gt;b;<br />
+sum x(a),y(b),z;<br />
+z.display();<br />
+z=x+y;<br />
+cout&lt;&lt;”after applying operator \n”; z.display();<br />
+getch();</p>
+<p>}<br />
+Output for the above program:<br />
+Enter two numbers 5 6<br />
+After applying operator<br />
+The sum of two numbers 11<br />
+Explanation:The class name is „sum‟ . We have create three objects two
+for to do the sum and the other for returning the sum. ‟ +‟ is a binary
+operator operates on members of two objects and returns the result which
+is member of a object.here number of parameters are 1. The sum is
+displayed in display function.</p>
+<p><strong>Write a program to over load arithmetic operators on complex
+numbers using member function</strong> #include&lt;iostream.h&gt;<br />
+class complex<br />
+{</p>
+<p>float real,img; public:<br />
+complex(){ }<br />
+complex(float x, float y)<br />
+{<br />
+real=x;<br />
+img=y;<br />
+}<br />
+complex operator+(complex c)<br />
+void display();<br />
+};<br />
+complex complex::operator+(complex c) {<br />
+complex temp;<br />
+temp.real=real+c.real;<br />
+temp.img=img+c.img;<br />
+return temp;<br />
+}<br />
+void complex::display()<br />
+{<br />
+int imag=img;<br />
+If(img&lt;0)<br />
+{<br />
+imag=-imag;<br />
+cout&lt;&lt;real&lt;&lt;”-i”&lt;&lt;imag;<br />
+}<br />
+else<br />
+cout&lt;&lt;real&lt;&lt;”+i”&lt;&lt;img; }<br />
+int main()<br />
+{<br />
+complex c1,c2,c3;<br />
+c1=complex(2.5,3.5);<br />
+c2=complex(1.6,2.7);<br />
+c3=c1+c2;<br />
+c3.display();<br />
+return 0;<br />
+}<br />
+<strong>Overloading Binary Operators Using Friends</strong></p>
+<p>1. Replace the member function declaration by the friend function
+declaration in the class friend complex operator+(complex, complex)</p>
+<p><font size="-1">2.</font> Redefine the operator function as
+follows:<br />
+complex operator+(complex a, complex b) {</p>
+<p>return complex((a.x+b.x),(a.y+b.y));<br />
+}<br />
+<strong>Write a program to over load arithmetic operators on complex
+numbers using friend function</strong> #include&lt;iostream.h&gt;<br />
+class complex<br />
+{</p>
+<p>float real,img; public:<br />
+complex(){ }<br />
+complex(float x, float y)<br />
+{<br />
+real=x;<br />
+img=y;<br />
+}<br />
+friend complex operator+(complex);<br />
+void display();<br />
+};<br />
+complex operator+(complex c1, complex c2) {<br />
+complex temp;<br />
+temp.real=c1.real+c2.real;<br />
+temp.img=c1.img+c2.img;<br />
+return temp;<br />
+}<br />
+void complex::display()<br />
+{<br />
+If(img&lt;0)<br />
+{<br />
+img=-img;<br />
+cout&lt;&lt;real&lt;&lt;”-i”&lt;&lt;img;<br />
+}<br />
+else<br />
+cout&lt;&lt;real&lt;&lt;”+i”&lt;&lt;img; }<br />
+int main()<br />
+{<br />
+complex c1,c2,c3;<br />
+c1=complex(2.5,3.5);<br />
+c2=complex(1.6,2.7);<br />
+c3=c1+c2;<br />
+c3.display();<br />
+return 0;<br />
+}</p>
+<p><strong>UNIT -5</strong></p>
+<p><strong>Templates and Exception handling:</strong><br />
+Introduction, Class Templates, Class Templates with Multiple Parameters,
+Function Templates, Function Templates with Multiple Parameters, Member
+Function Templates. <strong>Exception Handling :Basics of Exception
+Handling,</strong> Types of exceptions, Exception Handing Mechanism,
+Throwing and Catching Mechanism, Rethrowing an Exception, Specifying
+Exceptions.</p>
+<p><img src="Images/image00093.jpeg" /></p>
+<h3>GENERIC PROGRAMMING(<strong>Templates</strong>)</h3>
+<p>Generic programming is an approach where generic types are used as
+parameters in algorithms so that they work for a variety of suitable
+data types and data structures.</p>
+<p>A significant benefit of object oriented programming is reusability
+of code which eliminates redundant coding. An important feature of C++
+called templates strengthens this benefit of OOP and provides great
+flexibility to the language. Templates support generic programming,
+which allows to develop reusable software components such as functions,
+classes etc.. supporting different data types in a single framework.</p>
+<p>Templates Concept<br />
+Introduction<br />
+Instead of writing different functions for the different data types, we
+can define common</p>
+<p>function. For example</p>
+<p>int max(int a,int b); // Returns maximum of two integers float<br />
+max(float a,float b); // Return maximum of two floats char<br />
+max(char a,char b); // Returns maximum of two characters<br />
+(this is called as function overloading)<br />
+But, instead of writing three different functions as above, C++ provided
+the facility called "Templates". With the help of templates you can
+define only one common function as follows:</p>
+<p>T max(T a,T b); // T is called generic data type</p>
+<p>Template functions are the way of making function/class abstracts by
+creating the behavior of function without knowing what data will be
+handled by a function. In a sense thisis what is known as “generic
+functions or programming”.<br />
+Template function is more focused on the algorithmic thought rather than
+a specific means of single data type. For example you could make a
+templated stack push function. This push function can handle the
+insertion operation to a stack on any data type rather then having to
+create a stack push function for each different type.<br />
+Syntax:</p>
+<p>template &lt; class type &gt;<br />
+ret_type fun_name(parameter list)<br />
+{</p>
+<p>--------------//body of function<br />
+---------------<br />
+} //www.suhritsolutions.com</p>
+<p>Features of templates:</p>
+<p>1. It eliminates redundant code<br />
+2. It enhances the reusability of the code.<br />
+3. It provides great flexibility to language Templates are classified
+into two types. They are</p>
+<p>1.Function templates<br />
+2.Class Templates.<br />
+Function Templates<br />
+The templates declared for functions are called as function templates. A
+function template defines how an individual function can be
+constructed.<br />
+Syntax :<br />
+template &lt; class type,………&gt;<br />
+ret _type fun_ name(arguments)<br />
+{<br />
+-----------------// body of the function<br />
+----------------<br />
+}</p>
+<p>CLASS TEMPLATES</p>
+<p>The templates declared for classes are called class templates. A
+class template specifies how individual classes can be constructed
+similar to the normal class specification. These classes model a generic
+class which support similar operations for different data types. General
+Form of a Class Template</p>
+<p>template &lt;class T&gt; class class-name {<br />
+…….<br />
+…….<br />
+};</p>
+<p>A class created from a class template is called a template class. The
+syntax for defining an object of a template class is:<br />
+classname&lt;type&gt; objectname(arglist);</p>
+<p>#include&lt;iostream.h&gt;<br />
+#include&lt;conio.h&gt;<br />
+template &lt;class T&gt;<br />
+class swap<br />
+{<br />
+T a,b;<br />
+public:<br />
+swap(T x,T y)<br />
+{<br />
+a=x;<br />
+b=y;<br />
+}<br />
+void swapab()<br />
+{<br />
+T temp;<br />
+temp=a;<br />
+a=b;<br />
+b=temp;<br />
+}<br />
+void showdata()<br />
+{<br />
+cout&lt;&lt;a&lt;&lt;b;<br />
+}<br />
+};</p>
+<p>void main()<br />
+{<br />
+int m,n;<br />
+float m1,n1;<br />
+cout&lt;&lt;”Enter integer values”; cin&gt;&gt;m&gt;&gt;n;<br />
+cout&lt;&lt;”Enter floating values”; cin&gt;&gt;m1&gt;&gt;n1;<br />
+swap&lt;int&gt; c1(m,n);<br />
+swap&lt;float&gt; c2(m1,n1);<br />
+c1.swapab();<br />
+c1.showdata();<br />
+c2.swapab();<br />
+c2.showdata();<br />
+}</p>
+<p><strong>Class Template with Multiple Parameters</strong><br />
+Syntax:</p>
+<p>template &lt;class T1, class T2,….&gt; class class-name<br />
+{<br />
+…….<br />
+…….<br />
+}</p>
+<p>#include&lt;iostream.h&gt;<br />
+template &lt;class T1,class T2&gt; class Test<br />
+{<br />
+T1 a;<br />
+T2 b;<br />
+public:</p>
+<p>Test(T1 x,T2 y)<br />
+{<br />
+a=x;<br />
+b=y;<br />
+}<br />
+void show()<br />
+{<br />
+cout&lt;&lt;a&lt;&lt;b;<br />
+}<br />
+};<br />
+void main()<br />
+{<br />
+Test&lt;float,int&gt; test1(1.23,123); Test&lt;int,char&gt;
+test2(100,‟w‟); test1.show();<br />
+test2.show();<br />
+}</p>
+<p>FUNCTION TEMPLATES<br />
+Like class template we can also define function templates that would be
+used to create a family of functions with different argument types.</p>
+<p>General Form:<br />
+template &lt;class T&gt;<br />
+return-type function-name (arguments of type T) {<br />
+………<br />
+………<br />
+}<br />
+#include&lt;iostream.h&gt;<br />
+template&lt;class T&gt;<br />
+void swap(T &amp;x, T &amp;y)<br />
+{<br />
+T temp = x;<br />
+x=y;<br />
+y=temp;<br />
+}<br />
+void fun(int m,int n,float a,float b)<br />
+{<br />
+cout&lt;&lt;m&lt;&lt;n;<br />
+swap(m,n);<br />
+cout&lt;&lt;m&lt;&lt;n;<br />
+cout&lt;&lt;a&lt;&lt;b;<br />
+swap(a,b);<br />
+cout&lt;&lt;a&lt;&lt;b;<br />
+}<br />
+int main()<br />
+{<br />
+fun(100,200,11.22,33.44);<br />
+return 0;<br />
+}<br />
+Example 2:<br />
+#include &lt; iostream.h &gt;<br />
+#include &lt; conio.h &gt;<br />
+template<br />
+T max(T a, T b)<br />
+if(a&gt;b)</p>
+<p>return a; else<br />
+return b; }<br />
+void main( ) {<br />
+char ch1,ch2,ch3;<br />
+cout&lt;&lt;”enter two characters”&lt;&lt; ch2&lt;&lt; ch3;
+cin&gt;&gt;ch2&gt;&gt;ch3;<br />
+d=max(ch2,ch3);<br />
+cout&lt;&lt;”max(ch2,ch3)”&lt;&lt; ch1;<br />
+int a,b,c;<br />
+cout&lt;&lt;”enter two integers:”;<br />
+cin&gt;&gt;a&gt;&gt;b;<br />
+c=max(a,b);<br />
+cout&lt;&lt;”max(a,b):”&lt;&lt; c&lt;&lt; endl;<br />
+float f1,f2,f3;<br />
+cout&lt;&lt;”enter two floats&lt; f1f2 &gt;:”; cin&gt;&gt;f1,f2;<br />
+f3=max(f1,f2);<br />
+cout&lt;&lt;”max(f1,f2):”&lt;&lt; f3;<br />
+}</p>
+<p>output: enter two characters: A,B max(ch2,ch3):B<br />
+enter two integers:20,10 max (a,b) :20<br />
+enter two floats :20.5,30.9 max (f1,f2) :30.9</p>
+<p><strong>Function Template with Multiple Parameters</strong><br />
+Like template class, we can use more than one generic data type in the
+template statement, using a comma-separated list as shown below:<br />
+template &lt;class T1, class T2,.&gt; return-type function<br />
+name(arguments of types T1,T2.) {</p>
+<p>…….. …….. }</p>
+<p>#include&lt;iostream.h&gt;<br />
+#inlcude&lt;string.h&gt;<br />
+template&lt;clas T1, class T2&gt; void display(T1 x,T2 y) {<br />
+cout&lt;&lt;x&lt;&lt;y;<br />
+}<br />
+int main()<br />
+display(1999,”EBG”); display(12.34,1234); return 0;<br />
+}</p>
+<h3><strong>Exception handling</strong></h3>
+<p>Exceptions: Exceptions are runtime anomalies or unusual conditions
+that a program may encounter while executing .Anomalies might include
+conditions such ass division by zero, accessing an array outside of its
+bounds or running out of memory or disk space. When a program encounters
+an exception condition, it must be identified and handled.</p>
+<p>Exceptions provide a way to transfer control from one part of a
+program to another. C++ exception handling is built upon three keywords:
+try, catch, and throw.</p>
+<p>Types of exceptions:There are two kinds of exceptions<br />
+1.Synchronous exceptions<br />
+2.Asynchronous exceptions</p>
+<p>1.Synchronous exceptions:Errors such as “Out -ofrange index” and
+“over flow” are synchronous exceptions<br />
+2.Asynchronous exceptions: The errors that are generated by any event
+beyond the control of the program are called asynchronous exceptions</p>
+<p>The purpose of exception handling is to provide a means to detect and
+report an exceptional circumstance</p>
+<h3><strong>Exception Handling Mechanism:</strong></h3>
+<p>An exception is said to be thrown at the place where some error or
+abnormal condition is detected. The throwing will cause the normal
+program flow to be aborted, in a raised exception. An exception is
+thrown programmatic, the programmer specifies the conditions of a
+throw.</p>
+<p>In handled exceptions, execution of the program will resume at a
+designated block of code, called a catch block, which encloses the point
+of throwing in terms of program execution. The catch block can be, and
+usually is, located in a different function than the point of
+throwing.</p>
+<p>C++ exception handling is built upon three keywords: try, catch, and
+throw.<br />
+Try is used to preface a block of statements which may generate
+exceptions. This block of statements is known as try block. When an
+exception is detected it is thrown by using throw statement in the try
+block. Catch block catches the exception thrown by throw statement in
+the try block and handles it appropriately.</p>
+<p><img src="Images/image00094.jpeg" /><img
+src="Images/image00095.jpeg" /></p>
+<p>#include&lt;iostream&gt;<br />
+using namespace std;<br />
+int main()<br />
+{<br />
+int a,b;<br />
+cout&lt;&lt;"Enter any two integer values";<br />
+cin&gt;&gt;a&gt;&gt;b;<br />
+int x=a-b;</p>
+<p>try<br />
+{<br />
+if(x!=0)<br />
+{<br />
+cout&lt;&lt;"Result(a/x)="&lt;&lt;a/x&lt;&lt;endl; }<br />
+else<br />
+{<br />
+throw x;<br />
+}<br />
+}<br />
+catch(int ex)<br />
+{<br />
+cout&lt;&lt;"Exception caught:Divide By Zero \n";<br />
+}<br />
+}</p>
+<p>THROWING MECHANISM<br />
+When an exception is detected, it can be thown by using throw statement
+in any one of the following forms <font size="-1"><sup></sup>
+throw(exception);<sup><br />
+</sup> throw exception;<sup></sup></font></p>
+<h3><sub>throw;</sub></h3>
+<p>CATCHING MECHANISM:</p>
+<p>Catch block is as below<br />
+Catch(data type arg)<br />
+{<br />
+//statements for handling<br />
+//exceptions<br />
+}</p>
+<h2><strong>Multiple catch statements:</strong></h2>
+<p>try<br />
+{<br />
+//try block<br />
+}<br />
+catch(data type1 arg)<br />
+{<br />
+//catch block1<br />
+}<br />
+catch(data type2 arg)<br />
+{<br />
+//catch block2<br />
+}<br />
+………………<br />
+……………..<br />
+catch(data typeN arg)<br />
+{<br />
+//catch blockN<br />
+}</p>
+<p>• When an exception is thrown, the exception handler are searched in
+order fore an appropriate match.<br />
+• It is possible that arguments of several catch statements match the
+type of an exception. In such cases the first handler that matches the
+exception type is executed</p>
+<p>Write a Program to catch multiple catch statements
+#include&lt;iostream.h&gt;<br />
+void test(int x)<br />
+{</p>
+<p>try {<br />
+if(x==1) throw x;<br />
+else<br />
+if(x==0) throw 'x';<br />
+else<br />
+if(x==-1) throw 1.0;<br />
+cout&lt;&lt;"end of try block"&lt;&lt;endl;<br />
+}<br />
+catch(char c)<br />
+{<br />
+cout&lt;&lt;"caught a character"&lt;&lt;endl;<br />
+}<br />
+catch(int m)<br />
+{</p>
+<p>cout&lt;&lt;"caught an integer"&lt;&lt;endl; }<br />
+catch(double d)<br />
+{<br />
+cout&lt;&lt;"caught a double"&lt;&lt;endl; }</p>
+<p>}<br />
+int main()<br />
+{<br />
+test(1);<br />
+test(0);<br />
+test(-1);<br />
+test(2);<br />
+return 0;<br />
+}</p>
+<p>Output:<br />
+caught an integer caught a character caught a double end of try
+block</p>
+<h3><strong>Catch All Exceptions:</strong></h3>
+<p>all possible types of exceptions and therefore may not be able to
+design independent <strong>catch</strong> handlers to catch them. In
+such circumstances, we can force a <strong>catch</strong> statement to
+catch all exceptions instead of a certain type alone.</p>
+<p>catch(…)<br />
+{<br />
+………<br />
+}</p>
+<p>Write a Program to catch all exceptions
+#include&lt;iostream.h&gt;<br />
+void test(int x)<br />
+{<br />
+try<br />
+{<br />
+if(x==0) throw x;<br />
+if(x==0) throw 'x';<br />
+if(x==-1) throw 1.0;<br />
+}<br />
+catch(...)<br />
+{<br />
+cout&lt;&lt;"caught exception"&lt;&lt;endl; }<br />
+}<br />
+int main()<br />
+{<br />
+test(-1);<br />
+test(0); test(1);</p>
+<p>return 0;<br />
+}</p>
+<h3><strong>Re-throwing an Exception:</strong></h3>
+<p>It is possible to pass exception caught by a catch block again to
+another exception handler. This I known as Re-throwing.</p>
+<p>#include &lt;iostream&gt;<br />
+using namespace std;<br />
+void MyHandler()<br />
+{</p>
+<p>try</p>
+<p>{<br />
+throw "hello";<br />
+}<br />
+catch (const char*)<br />
+{<br />
+cout &lt;&lt;"Caught exception inside MyHandler\n";<br />
+throw; //rethrow char* out of function<br />
+}<br />
+}<br />
+int main()<br />
+{<br />
+cout&lt;&lt; "Main start...."&lt;&lt;endl;<br />
+try<br />
+{<br />
+MyHandler();<br />
+}<br />
+catch(const char*)<br />
+{<br />
+cout &lt;&lt;"Caught exception inside Main\n";<br />
+}<br />
+cout &lt;&lt; "Main end"; return 0;<br />
+}</p>
+<h3><strong>Specifying Exceptions:</strong></h3>
+<p>Specification of exception restrict functions to throw some specified
+exceptions only with the use of throw(exception list) in the the header
+of the function.<br />
+<strong>General form</strong><br />
+Type function_name(argument list) throw(exceptions -list)<br />
+{<br />
+Statements<br />
+try<br />
+{</p>
+<p>statements }<br />
+}</p>
+<p>#include &lt;iostream&gt; using namespace std; void test(int x)
+throw(int,float,char) {</p>
+<p>switch(x)<br />
+{<br />
+case 1:throw x;</p>
+<p>break;<br />
+case 2:throw 'x';<br />
+break;<br />
+case 3:throw double(x);<br />
+break;<br />
+case 4:throw float(x);<br />
+break;<br />
+}<br />
+}<br />
+int main()<br />
+{<br />
+try {<br />
+test(4);//test(4) leads to abnormal termination }<br />
+catch(int i)<br />
+{<br />
+cout &lt;&lt;"Caught int type exception\n"; }<br />
+catch(float f)<br />
+{<br />
+cout &lt;&lt;"Caught float type exception\n"; }<br />
+catch(char c)<br />
+{<br />
+cout &lt;&lt;"Caught char type exception\n"; }<br />
+catch(double i)<br />
+{<br />
+cout &lt;&lt;"Caught Double type exception\n"; }</p>
+<p>return 0; }<br />
+</p>

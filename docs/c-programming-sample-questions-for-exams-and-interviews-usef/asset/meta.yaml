@@ -1,0 +1,179 @@
+name: C PROGRAMMING SAMPLE QUESTIONS FOR EXAMS AND INTERVIEWS： Useful for Students
+  in Exams and Interviews
+name_cn: C 编程考试与面试样题：适用于学生备考和求职
+slug: c-programming-sample-questions-for-exams-and-interviews-usef
+toc:
+- - '#'
+  - '第一章 ：理解问题及其解决方法 '
+- - '##'
+  - I 节 – 方法基础：
+- - '###'
+  - 2. 降低了相关 ROM 芯片的成本，因为代码体积减小。
+- - '###'
+  - 3. 程序易于修改。
+- - '###'
+  - 4. 便于纠正错误。
+- - '#'
+  - 'Questions & Answers on Programming Languages  '
+- - '##'
+  - Advantages of Symbolic Level Language?
+- - '#'
+  - Question Set
+- - '#'
+  - 创建和运行程序
+- - '##'
+  - 什么是算法？
+- - '###'
+  - 开发过程中涉及的步骤：
+- - '####'
+  - TURBO 编辑器平台常识问答录解析片段—
+- - '#'
+  - 2.4 什么是 C 令牌 (Tokens)？
+- - '##'
+  - 问：什么是关键字 (Keyword)？
+- - '#'
+  - '例: if, switch'
+- - '###'
+  - 1) 静态变量初始化
+- - '###'
+  - 2) 动态变量初始化
+- - '#'
+  - ‘C’ 程序的结构
+- - '#'
+  - 2.8 什么是输入输出语句？
+- - '###'
+  - printf()
+- - '###'
+  - scanf()
+- - '#'
+  - 3. 什么是控制语句？
+- - '##'
+  - 3.1 什么是条件语句？
+- - '###'
+  - 3.1.1 什么是简单 if 语句？
+- - '###'
+  - 3.1.2 什么是 if else 语句？
+- - '###'
+  - 3.1.3 什么是 else-if 语句？
+- - '###'
+  - 3.1.4 什么是嵌套 if？
+- - '###'
+  - 3.1.5 什么是使用 switch Case 的多路选择语句？
+- - '##'
+  - 3.2 什么是迭代语句？
+- - '###'
+  - 3.2.1 使用 `while` 语句进行循环的作用是什么？
+- - '###'
+  - 3.2.2 前测试循环
+- - '###'
+  - 后测试循环
+- - '###'
+  - 中测试循环
+- - '#'
+  - 程序示例与 C 语言知识点总结
+- - '##'
+  - 阶乘计算程序
+- - '###'
+  - N 个数求平均值的程序
+- - '#'
+  - 数组（Array）教程
+- - '##'
+  - 声明（Declaration）
+- - '##'
+  - 初始化（Initialization）
+- - '###'
+  - '**问:什么是二维 (Two Dimensional) SQL array?并举例说明?**'
+- - '####'
+  - '**问: 编写一个实现简单二维(2D Array) 的 C 程序。**'
+- - '#####'
+  - 【两都有我们可以最后方法】
+- - '##'
+  - 什么是字符串？
+- - '###'
+  - 存储方式：
+- - '###'
+  - What is SQLite?
+- - '#'
+  - C 语言中的字符串处理函数
+- - '###'
+  - '`strlen()`'
+- - '#'
+  - 问题：结构化编程有哪些优点？
+- - '#'
+  - 问题：如何编写函数？给出它的描述？
+- - '###'
+  - 函数体
+- - '###'
+  - 函数语句
+- - '###'
+  - 返回值
+- - '#'
+  - 问题：函数有哪些优点？
+- - '#'
+  - 问题：解释函数的类型？
+- - '###'
+  - 1. 预定义的 (PREDEFINED)
+- - '###'
+  - 2. 用户定义的 (USER DEFINED)
+- - '#'
+  - 问题：什么是函数和内置函数？
+- - '#'
+  - 问题：什么是参数？解释参数的类型？
+- - '#'
+  - 函数参数与变量作用域
+- - '##'
+  - 局部变量
+- - '##'
+  - Local Variables.
+- - '##'
+  - Call by reference：(Passing address to Function)
+- - '##'
+  - 使用递归求阶乘的 C 程序
+- - '##'
+  - Using recursive C program to implement Fibonacci sequence 用递归实现斐波那契数列的 C 程序
+- - '##'
+  - Towers or Hanno Tower problem and its recusive solution . {#tower-of-hanoi}
+- - '####'
+  - What s towers hanse ? How does it implmeent recursoin ?
+- - '###'
+  - Differences Between Recursion And Iteration?
+- - '#'
+  - 'Standard Library Headers And Preprocessor Infrastructure:'
+- - '#'
+  - 预处理指令示例
+- - '##'
+  - 问题：请根据以上知识编写一个相关 C 程序？
+- - '####'
+  - '在函数中传递不同维度的数组  '
+- - '###'
+  - 传一维数组
+- - '#'
+  - C 语言指针与相关概念
+- - '##'
+  - 'PROGRAM: 悬挂指针示例'
+- - '###'
+  - '改进现有代码片段结构说明，超越源码中发现的边缘 '
+- - '####'
+  - 从安全默认角度运用的正确变量处理机制
+- - '#'
+  - 方法 4：在 `main` 内部初始化
+- - '##'
+  - 如何访问结构体成员？
+- - '#'
+  - 链表
+- - '#'
+  - 栈
+- - '#'
+  - 队列
+- - '#'
+  - '树  '
+- - '#'
+  - 图库
+- - '##'
+  - 什么是联合体？
+- - '###'
+  - '定义联合体  '
+- - '#'
+  - 11.2 如何对文件进行输入/输出操作？
+- - '##'
+  - C 语言 fputc()与 fgetc()

@@ -1,0 +1,13 @@
+name: Beginning Programming with C++ For Dummies
+name_cn: C++ 编程入门指南
+slug: beginning-programming-with-c-for-dummies
+toc:
+- - '##'
+  - C++ 编程入门指南
+- - '##'
+  - 第一部分：让我们开始](#04_617977-pp01.xhtml_a1)
+- - '#'
+  - '# Chapter #{Number}: {Title}'
+- - '#'
+  - C++ Programming ...        -> This is a heading level original '#' . That remains
+    correct for the book title.

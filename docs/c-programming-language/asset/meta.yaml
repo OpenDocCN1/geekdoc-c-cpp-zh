@@ -1,0 +1,120 @@
+name: C Programming Language
+name_cn: C 语言
+slug: c-programming-language
+toc:
+- - '#'
+  - C 语言
+- - '###'
+  - (iii) 红杉 (Sequoia)
+- - '###'
+  - (iv) K 计算 (K Computer)
+- - '###'
+  - (v) Mira
+- - '###'
+  - (vi) Piz Daint
+- - '###'
+  - (vii) 沙丁二世 (Shaheen II)
+- - '###'
+  - (viii) 奔马 (Stampede)
+- - '###'
+  - (ix) 九州皇 (Juqueen)
+- - '###'
+  - (x) 肯星 (Vulcan)
+- - '##'
+  - 1. Mac
+- - '##'
+  - 1. 手机
+- - '##'
+  - 1. 数据库
+- - '##'
+  - 使用 C 语言的主要优势
+- - '##'
+  - C 语言的日常用途
+- - '##'
+  - 为什么要费力学习 C 编程语言？
+- - '#'
+  - 第 2 章：设置本地环境
+- - '##'
+  - 准备学习 C 编程语言
+- - '##'
+  - 设置环境
+- - '######'
+  - Linux/UNIX 下的编译器安装
+- - '#'
+  - Chapter 3：结构与数据类型
+- - '##'
+  - C 语言基础语法
+- - '###'
+  - 什么是标识符?
+- - '####'
+  - 使用空白
+- - '##'
+  - 关于 C 语言的相关细节
+- - '###'
+  - C 语言中的关键概念
+- - '##'
+  - 整数字面量
+- - '##'
+  - C 语言中的链接（Linkage）是什么？
+- - '###'
+  - Categories Of Operators
+- - '####'
+  - Arithmetic
+- - '##'
+  - What Is Linkage In C?
+- - '##'
+  - 'Priorities of operators in plain order:'
+- - '#'
+  - Chapter 6 Making Decisions In C
+- - '#'
+  - 'Switch 选择结构工作原理:'
+- - '##'
+  - 'Conditional Operator 条款运作机制:'
+- - '###'
+  - 1. 嵌套循环
+- - '####'
+  - a) 嵌套 `for` 循环的语法格式如下：
+- - '####'
+  - b) 嵌套 `while` 循环的语法格式如下：
+- - '####'
+  - c) 嵌套 `do...while` 循环的语法格式如下：
+- - '###'
+  - 2. 无限循环
+- - '#'
+  - 第 8 章：C 编程中的函数
+- - '##'
+  - 函数声明
+- - '###'
+  - 1. 返回类型
+- - '###'
+  - 2. 函数名
+- - '###'
+  - 3. 参数
+- - '###'
+  - 4. 函数体
+- - '##'
+  - 为什么要使用函数？
+- - '##'
+  - C 函数如何工作
+- - '###'
+  - 按值调用 C 函数
+- - '#'
+  - 'Chapter 9: Structures and Union in C'
+- - '##'
+  - How To Define C Structure (如何定义 C 结构)
+- - '###'
+  - Declaring Structure Variables (创建结构性变量的实例)
+- - '###'
+  - 如何访问联合体成员
+- - '#'
+  - 第 11 章：C 语言的输入/输出
+- - '##'
+  - Dealing With Printf
+- - '#'
+  - Chapter 12：C 的头类型文件和变换种类
+- - '###'
+  - How the include syntax Works
+- - '####'
+  - how Include operation works
+- - '#'
+  - 结论

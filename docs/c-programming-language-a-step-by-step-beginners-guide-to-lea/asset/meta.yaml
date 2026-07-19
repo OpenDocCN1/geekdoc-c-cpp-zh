@@ -1,0 +1,61 @@
+name: C Programming Language, A Step By Step Beginner's Guide To Learn C Programming
+  In 7 Days.
+name_cn: C语言编程：7天入门循序渐进指南
+slug: c-programming-language-a-step-by-step-beginners-guide-to-lea
+toc:
+- - '#'
+  - C语言编程：7天入门循序渐进指南
+- - '#'
+  - 'L1 Introduction  '
+- - '##'
+  - 环境设置
+- - '###'
+  - '设定 C 语言编程区 '
+- - '###'
+  - 第 3 节:C 的结构及其数据类型
+- - '##'
+  - 'Pre– processor commands      '
+- - '##'
+  - 关于 C 语言的相关细节
+- - '###'
+  - C 标准规定输出方法
+- - '#'
+  - 'Chapter: Pointers and Variables in C'
+- - '##'
+  - 整数字面量
+- - '##'
+  - C 语言的运算符
+- - '###'
+  - 笔者译员的附带复述……
+- - '####'
+  - (1) *四种典型(*)之一‧ 【arithmetic Operation(Operator)–】
+- - '#'
+  - 'Chapter 6: Making Decisions In C'
+- - '##'
+  - 题注复杂内容……（已精简冗余）
+- - '##'
+  - 'Switch 开关指令的运行原理 :'
+- - '##'
+  - 'conditional-operation-Statement 工作原理 :'
+- - '###'
+  - ✅ 确定正式交付版本·无干扰重发
+- - '#'
+  - 'Chapter 9: Structures and Union in C'
+- - '##'
+  - Struct 变量的声明方式对比……
+- - '###'
+  - (i).直接在尾部注明列表紧跟大括号闭合并加上分号结束即可
+- - '###'
+  - (ii).
+- - '##'
+  - 如何访问联合体成员
+- - '###'
+  - 关于在程序中使用联合体的说明：
+- - '#'
+  - Chapter11 标准样式示范省略重复说明继承初始约束即可.
+- - '##'
+  - 整型提升的工作原理是什么？
+- - '#'
+  - 结论
+- - '#'
+  - 参考资料与致谢：

@@ -1,0 +1,48 @@
+name: C Programming Language - Always Beginners
+name_cn: C 语言入门指南
+slug: c-programming-language---always-beginners
+toc:
+- - '#'
+  - C 语言入门指南
+- - '##'
+  - 低级别与高级别语言层次
+- - '##'
+  - C 语言运算符
+- - '##'
+  - 决策结构
+- - '###'
+  - 1. if 语句
+- - '##'
+  - '#include<stdio.h>'
+- - '####'
+  - '*** 恢复用户输入后的最终片段 ***'
+- - '##'
+  - For 循环
+- - '##'
+  - break, continue 语句 (C 语言)
+- - '###'
+  - 1. break 语句
+- - '###'
+  - 2. 继续标记:continue 详解
+- - '##'
+  - 排版后的文档
+- - '##'
+  - '`strlwr( )`'
+- - '###'
+  - 基于原始需求的修正还原版：
+- - '###'
+  - '`strupr()` — 《ctype.h》内的库函式概览之一例之下'
+- - '####'
+  - ● ~~~横杠前缀待删~~ → 『修改完成』
+- - '#'
+  - 函数基础
+- - '##'
+  - 函数的组成部分
+- - '###'
+  - '使用 IO BIT 除了常见形式外还有两种特殊 Udf:'
+- - '####'
+  - With argument no return value (有參數無回傳)
+- - '#####'
+  - A . No Arguments & No Return Value （无引数不回传）
+- - '##'
+  - C 语言中的用户定义函数（User‑Defined Function）

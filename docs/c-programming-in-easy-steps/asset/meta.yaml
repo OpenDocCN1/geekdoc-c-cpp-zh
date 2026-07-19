@@ -1,0 +1,108 @@
+name: C Programming in Easy Steps
+name_cn: C 语言简易教程
+slug: c-programming-in-easy-steps
+toc:
+- - '#'
+  - C 语言简易教程
+- - '#'
+  - 标志位
+- - '##'
+  - 创建一个声明及显示读取键入限制全局范围记录推进更改数字阵列描写的多维度提要等内容...
+- - '##'
+  - '**重要警告**: 变数简称大小写敏感...'
+- - '#'
+  - 类型转换与数组
+- - '##'
+  - 包含标准输入/输出库函数
+- - '##'
+  - 添加一个声明并初始化各种数据类型变量的主函数
+- - '#'
+  - 变量与常量
+- - '##'
+  - 变量基础
+- - '#'
+  - 变量赋值与运算
+- - '##'
+  - 复合赋值运算符
+- - '###'
+  - 'Add and assign:'
+- - '##'
+  - 比较值的大小
+- - '#'
+  - include ...
+- - '#'
+  - Branching Switches
+- - '###'
+  - switch.c
+- - '##'
+  - 按次数循环
+- - '###'
+  - '... '
+- - '#'
+  - 函数原型与定义
+- - '##'
+  - 开始一个新程序
+- - '##'
+  - 后续步骤：
+- - '###'
+  - 示例结构化教程片段（重新排版本）
+- - '####'
+  - (A)第一个例子 -无参数返回值演示
+- - '##'
+  - Chapter :Function Prototypes & Definitions📘 Pre-Call Structure
+- - '##'
+  - 使用自定议标题目录与引用施法说明文档...
+- - '##'
+  - Complete Revised Document Text
+- - '###'
+  - Pointer Use Part1 - Integer Pointers Demo
+- - '##'
+  - Manipulating Strings
+- - '###'
+  - Reading Strings
+- - '##'
+  - '`strcpy.c`'
+- - '##'
+  - Joining strings (拼接字符串)
+- - '###'
+  - '**别忘了！**'
+- - '#'
+  - C 语言结构体与联合体指南
+- - '##'
+  - scanf(), gets(), puts()基础
+- - '###'
+  - 在结构体中使用字符指针与数组的对比
+- - '#'
+  - 文本文件读写操作
+- - '##'
+  - 使用 `fputc()` 逐字符写入
+- - '###'
+  - Hot tip
+- - '##'
+  - 读取和写入行
+- - '##'
+  - 获取某个事件前后各一次当前时间（time.h头文件）
+- - '##'
+  - 实用小贴士余终其它情况...
+- - '##'
+  - Windows API MessageBox 函数详解
+- - '###'
+  - MessageBox 的参数解析
+- - '#'
+  - 文件操作与格式化输入/输出函数
+- - '##'
+  - '`tmpnam()` 函数'
+- - '##'
+  - '`setvbuf()` 和 `setbuf()`'
+- - '###'
+  - 📁 `<stdio.h>` — I/O Functions
+- - '###'
+  - '✔ Function categorize basics:'
+- - '#'
+  - 排版后
+- - '##'
+  - F
+- - '###'
+  - C / D 区间部分
+- - '####'
+  - A ~ B

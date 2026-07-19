@@ -1,0 +1,13 @@
+name: Black Hat Hacking with C++： Master Offensive Programming, Malware Engineering,
+  and Real-World Exploit Development
+name_cn: C++ 黑帽攻击：精通攻性编程、恶意软件工程与实战漏洞开发
+slug: black-hat-hacking-with-c-master-offensive-programming-malwar
+toc:
+- - '#'
+  - 'C++ 黑帽攻击...              <- # -> ## (更高层次之下的书名应降级)'
+- - '#'
+  - '前言                         <- # -> ##'
+- - '#'
+  - '关于本书                     <- # -> ##  '
+- - '##'
+  - The Book Name line was correct as heading; now fix mismatches below.

@@ -1,0 +1,31 @@
+name: C Programming in Linux： Learn how to program in Linux
+name_cn: C 语言 Linux 编程指南
+slug: c-programming-in-linux-learn-how-to-program-in-linux
+toc:
+- - '#'
+  - C 语言 Linux 编程指南
+- - '##'
+  - Small Node | Library of commonly used methods
+- - '###'
+  - 函数指针小结
+- - '####'
+  - '#### 练习：运用某个库实现以下功能：以写入方式打开文件、写命令行信息、关闭后再读取屏幕内容；尝试寻找合适素材自行搜索相关资料。'
+- - '#'
+  - 逻辑循环与控制流
+- - '###'
+  - 流程语法支持下列控制结构.当需要顺序计数时可以这样操作 ：For （初始值;继续保持条件 ;每次增量变化 ）while 等待满足真伪判断分别对待至少执行一次测试单选另一种情况
+    else 多分支基于整数或者字符数值默认 break 跳出适用处.
+- - '##'
+  - Encoding Issue
+- - '##'
+  - MySQL 5.1 参考手册 / 连接器与 API / MySQL C API 包含：
+- - '#'
+  - 《M 工大指》
+- - '###'
+  - 字体函数
+- - '####'
+  - “颜色处理功能:”
+- - '##'
+  - The Ghost 项目
+- - '###'
+  - PHP 网站生成器项目

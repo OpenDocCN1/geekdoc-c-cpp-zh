@@ -1,0 +1,3236 @@
+<p><img src="d2d_images/cover.jpg" /></p>
+<p><span
+id="cover-ed047dd1-965a-47cf-9c74-c8fa4e3436d9.xhtml"></span></p>
+<div class="svg_outer">
+<div class="svg_inner">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 933 1400" preserveaspectratio="xMidYMid meet">
+<image height="1400" width="933" xlink:href="d2d_images/cover.jpg"></image>
+</svg>
+</div>
+</div>
+<p><span id="c001.xhtml"></span></p>
+<p>C Programming Language</p>
+<p>The Ultimate Guide for Beginners</p>
+<p>Darrel L. Graham</p>
+<p><span id="c002.xhtml"></span></p>
+<h1 class="chapter-title">TABLE OF CONTENTS</h1>
+<p><a href="#c003.xhtml__Toc452520164">Introduction</a></p>
+<p><a href="#c004.xhtml__Toc452520165">Chapter 1: What Is The C
+Language?</a></p>
+<p><a href="#c005.xhtml__Toc452520166">Chapter 2: Setting Up Your Local
+Environment</a></p>
+<p><a href="#c006.xhtml__Toc452520167">Chapter 3: The C Structure and
+Data Type</a></p>
+<p><a href="#c007.xhtml__Toc452520168">Chapter 4: C Constants and
+Literals</a></p>
+<p><a href="#c008.xhtml__Toc452520169">Chapter 5: C Storage
+Classes</a></p>
+<p><a href="#c009.xhtml__Toc452520170">Chapter 6: Making Decisions In
+C</a></p>
+<p><a href="#c010.xhtml__Toc452520171">Chapter 7: The Role Of Loops In C
+Programming</a></p>
+<p><a href="#c011.xhtml__Toc452520172">Chapter 8: Functions in C
+Programming</a></p>
+<p><a href="#c012.xhtml__Toc452520173">Chapter 9: Structures and Union
+in C</a></p>
+<p><a href="#c013.xhtml__Toc452520174">Chapter 10: Bit Fields and
+Typedef Within C</a></p>
+<p><a href="#c014.xhtml__Toc452520175">Chapter 11: Input Output (I/O) In
+C</a></p>
+<p><a href="#c015.xhtml__Toc452520176">Chapter 12: C Header Files and
+Type Casting</a></p>
+<p><a href="#c016.xhtml__Toc452520177">Chapter 13: Benefits Of Using The
+C Language</a></p>
+<p><a href="#c017.xhtml__Toc452520178">Conclusion</a></p>
+<p><a href="#c018.xhtml__Toc452520179">Resources and
+Attributions</a></p>
+<p><span id="c003.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c003.xhtml__Toc452520164">©
+Copyright 2016 - All rights reserved.</span></h1>
+<p><span class="first-in-chapter">T</span>he contents of this book may
+not be reproduced, duplicated or transmitted without direct written
+permission from the author.</p>
+<p>Under no circumstances will any legal responsibility or blame be held
+against the publisher for any reparation, damages, or monetary loss due
+to the information herein, either directly or indirectly.</p>
+<p>Legal Notice:</p>
+<p>This book is copyright protected. This is only for personal use. You
+cannot amend, distribute, sell, use, quote or paraphrase any part or the
+content within this book without the consent of the author.</p>
+<p>Disclaimer Notice:</p>
+<p>Please note the information contained within this document is for
+educational and entertainment purposes only. Every attempt has been made
+to provide accurate, up to date and reliable complete information. No
+warranties of any kind are expressed or implied. Readers acknowledge
+that the author is not engaging in the rendering of legal, financial,
+medical or professional advice. The content of this book has been
+derived from various sources. Please consult a licensed professional
+before attempting any techniques outlined in this book.</p>
+<p>By reading this document, the reader agrees that under no
+circumstances are is the author responsible for any losses, direct or
+indirect, which are incurred as a result of the use of information
+contained within this document, including, but not limited to, —errors,
+omissions, or inaccuracies.</p>
+<h1>Introduction</h1>
+<p><span style="font-style: italic">C Programming Language</span>
+introduces you to the most commonly used programming language, one that
+has been the basis for many other versions over the years. It is a great
+book, not just for beginning programmers, but also for computer users
+who would want to have an idea what is happening behind the scenes as
+they work with various computer programs.</p>
+<p>In this book, you are going to learn what the C programming language
+entails, how to write conditions, expressions, statements and even
+commands, for the language to perform its functions efficiently. You
+will learn too how to organize relevant expressions so that after
+compilation and execution, the computer returns useful results and not
+error messages. Additionally, this book details the data types that you
+need for the C language and how to present it as well.</p>
+<p>Simply put, this is a book for programmers, learners taking other
+computer courses, and other computer users who would like to be versed
+with the workings of the most popular computer language, C.</p>
+<p><span id="c004.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c004.xhtml__Toc452520165">Chapter 1:
+What Is The C Language?</span></h1>
+<p><span style="font-weight: bold"><span
+class="first-in-chapter">C</span> </span>Programming is one of the most
+useful and easy to use computer programming languages. The person who
+came up with this C Programming went by the name of Dennis M. Ritchie,
+and he worked at Bell Telephone Laboratories. At the time, precisely in
+1972, C Programming was meant to help in improving the now widely used
+UNIX operating system, whose development had begun in 1969. And did it?
+Yes, it did. Its kernel code now began to use fewer lines than it did
+before when it used the assembly programming language, which is commonly
+abbreviated as <span style="font-style: italic">asm</span>.</p>
+<p>That does not mean that the C language is restricted to only a few
+lines. It can actually take as few as three lines or as many as millions
+of them. At the same time, it is written in a single text file or a
+number of them, the text files bearing the extension, ‘c’, as in, <span
+style="font-style: italic">hello.c. </span></p>
+<p>As for its introduction to the market, the C programming language was
+not available to the public until 1978 when Ritchie joined hands with
+Brian Kernighan to produce the first set for commercial use. That is
+where the now common term, <span style="font-style: italic">K &amp; R
+standard,</span> was derived from – Kernighan and Ritchie. It is
+important to point out that the C programming language was officially
+formalized by the <span style="font-style: italic">American National
+Standard Institute</span>, abbreviated as ANSI, in 1988.</p>
+<p>Other Early Projects Improved By C</p>
+<p>Oracle</p>
+<p>UNIX was not the only project to be made more efficient by the C
+Language. The Oracle database also benefitted when, in 1983, its initial
+code that had been written in <span
+style="font-style: italic">asm</span> was re-written in the C language.
+The development of the Oracle database had begun in 1977.</p>
+<p>Windows 1.0</p>
+<p>Windows 1.0, which was released in 1985, is said to be partially
+written in C and partially in assembly or <span
+style="font-style: italic">asm</span>. The source code is, however, not
+available to the public.</p>
+<p>The Linus kernel</p>
+<p>The Linux kernel, which was released in 1992 as a composite part of
+the GNU operating system, and whose development began in 1991, also uses
+the C Language. Although some of GNU’s components use Lisp programming
+languages, it still has others that use the C programming language.
+Incidentally, any idea what GNU represents? Well, apparently, IT is not
+all serious stuff without fun – GNU is ... Wait for it... <span
+style="font-style: italic">‘GNU’s Not Unix’</span> - some artistic
+thinking there.</p>
+<p>Anyway, for practical purposes, C language is more procedural than
+anything else and can be used for different operating systems. It is
+actually the most used so far worldwide, though it faces great
+competition from Java, another popular programming language.</p>
+<p>Who uses the C Programming Language today?</p>
+<p>The C Programming language is mostly used by software developers or
+programmers and particularly those using the operating system, UNIX, C
+compiler, and virtually every application program of UNIX. Suffice it to
+say, the C programming language is today the most used professional
+language in the world of computers.</p>
+<p>Modern systems based on C Programming</p>
+<p>The C Programming language, as has been stated before is still widely
+in use. It cannot pass as a programming language of old just because it
+helped to upgrade ancient programs. As this book will show, despite
+software experts having developed other programming languages, C is
+still in great demand.</p>
+<p>Here are some modern systems still based on C:</p>
+<ol type="1">
+<li>Microsoft Windows</li>
+</ol>
+<p>The Microsoft Windows operating systems dominate the computer market,
+taking around 90% market share. And their kernel is written in the C
+programming language for most part, fewer parts being written in <span
+style="font-style: italic">asm</span>.</p>
+<ol type="1">
+<li>Linux</li>
+</ol>
+<p>Linux is another system written in the C programming language. This
+is significant because, in addition to Linux being used in personal
+computers, it is also the system used by the world’s topmost
+supercomputers; actually the top 500 of them. Just to bring it home
+better, here are the 10 leading supercomputers in the world, part of the
+list of computers using the C language:</p>
+<div class="blockquote">
+<p>(i)  Tianhe-2</p>
+<p>Tianhe-2 is the name of the world’s most powerful supercomputer. It
+is owned by the <span style="font-style: italic">National Supercomputer
+Center</span>, which is in Guangzho, China. This great computer was
+built in China by the <span style="font-style: italic">National
+University of Defense Technology</span>, abbreviated as NUDT.</p>
+<p>(ii)  Titan</p>
+<p>This one joined the top league after being upgraded in 2012. Its
+location is <span style="font-style: italic">Oak Ridge National
+Laboratory</span> in the US<span style="font-style: italic">,</span> and
+its user is the <span style="font-style: italic">United States
+Department of Energy. </span></p>
+<p>(iii)  Sequoia</p>
+<p>This is another US supercomputer, and it is located in Lawrence
+Livermore National Laboratory in the state of California.  It has been
+used largely in matters of climate, energy, as well as astronomy.</p>
+<p>(iv)  K Computer</p>
+<p>The K Computer is a product of Fujitsu, who built it at the Advanced
+Institute for Computational Science (AICS). This institute is within
+RIKEN, Japan’s biggest research institution, situated in the city of
+Kobe.</p>
+<p>(v)  Mira</p>
+<p>This is another of US’s supercomputers. It is located within the
+<span style="font-style: italic">Argonne National Laboratory</span>,
+which is at the outskirts of Chicago, and is largely used the <span
+style="font-style: italic">US Department of Energy. </span></p>
+<p>(vi)  Piz Daint</p>
+<p>This one is to be found in Switzerland, precisely in its southern
+city of Lugano. It is located at the Swiss National Supercomputing
+Center. Europe does not have a more powerful supercomputer than this
+one.</p>
+<p>(vii)  Shaheen II</p>
+<p>This supercomputer is located at the King Abdullah University of
+Science and Technology in Saudi Arabia, and is the newest amongst the
+top 10, having gone live in 2015.</p>
+<p>(viii)  Stampede</p>
+<p>This one is located within the Texas Advanced Computing Center in the
+US.</p>
+<p>(ix)  Juqueen</p>
+<p>This supercomputer, which is found in Germany, is Europe’s second to
+make the list of Top 10. It is located within <span
+style="font-style: italic">Forschungszentrum Juelich</span>.</p>
+<p>(x)  Vulcan</p>
+<p>This is a US supercomputer located within the Lawrence Livermore
+National Laboratory.</p>
+</div>
+<ol type="1">
+<li>Mac</li>
+</ol>
+<p>The Mac is entirely run on C, including its drivers and programs, and
+that applies on all its models, just as happens in Windows and the
+Linux.</p>
+<ol type="1">
+<li>Mobile Phones</li>
+</ol>
+<p>When it comes to the Windows phone, the android, and also the iOS,
+their kennels are in the C language. In short, their kernels are written
+just like those ones in the computers described above, only they are
+mobile adaptations.</p>
+<ol type="1">
+<li>Databases</li>
+</ol>
+<p>Most databases used in financial systems; telecommunications;
+entertainment; health and education systems; the general web and
+elsewhere; are mostly written in C; or even C++. These include the most
+popularly used, like the Oracle, MySQL, MS SQL Server, and even
+PostgreSQSL.</p>
+<p>Main Advantages of Using the C Programming Language</p>
+<p>1)  It is a structured language</p>
+<p>2)  It is relatively easy for someone to learn from scratch</p>
+<p>3)  It is efficient in the writing of programs</p>
+<p>4)  It does well in different computer platforms</p>
+<p>5)  It also does fine with low-level activity.</p>
+<p>Everyday Use of C</p>
+<p>It may be helpful, for the sake of beginners, to provide a breakdown
+of where the C programming language is most commonly used. The C
+language is actually easy to find, not just in Operating Systems, but
+also in Language Compilers; Assemblers; Text Editors; Print Spoolers;
+Network Drivers; Language Interpreters; Utilities; Network Drivers; and
+as already mentioned, in modern programs and databases.</p>
+<p>Suffice it to say, the C programming language is very popular with
+writers of modern software applications, some of which are used in 3D
+movies and embedded systems like those used in TVs, remote controls, and
+so on.</p>
+<p>Taking the example of a common utility item, the motor vehicle, here
+are some of its features that have been programmed in the C
+language:</p>
+<ol type="1">
+<li>The automatic transmission</li>
+<li>The systems that detect the vehicle tire pressure</li>
+<li>The sensors that monitor the levels of oxygen, temperature and
+oil</li>
+<li>The various memory categories, including that of mirror
+settings</li>
+<li>The dashboard display</li>
+<li>The anti lock brakes</li>
+<li>The vehicle stability control, which is automatic</li>
+<li>The cruise as well as the airbag controls</li>
+<li>The child proof locking system</li>
+<li>The climate control</li>
+</ol>
+<p>The motor vehicle example is just one among other utility items that
+have systems written in C. Even many vending machines from where you buy
+soda have C language systems. Many cash registers at shopping stores are
+also run in programs written in the C language.</p>
+<p>What these devices that make life relatively easy have in common are
+embedded systems that run like small computers that have program running
+microprocessors written in C. That is why the systems detect it when
+someone presses a key and they react in ways pre-set. They also display
+relevant information accordingly. Many manufacturers of utility items
+prefer to have programs written in the C language because it has
+features that allow for flexibility; enhance efficiency; and which are
+compatible with many types of hardware.</p>
+<p>Why Bother Learning The C Programming Language?</p>
+<p>Is C the only programming language accessible to users today? Of
+course not! There are other programming languages that programmers and
+other computer users can learn and utilize, some low than C, and still
+some higher and more modern than C. So why C...? </p>
+<p>There are other reasons for wanting to learn the C programming
+language, besides the ones already mentioned in this book. First of all,
+the C programming language existed long before many other computer
+languages were ever thought of. As such, it has built a rich source code
+base. In short, you can learn a lot and there is a rich pool of
+resources to tap from in this regard. C also has lots of functions that
+you can use to meet your program needs.</p>
+<p>At the same time, for the same reason that the C programming language
+has been in use for a long time, you are unlikely to find challenges in
+its use that you cannot get solutions to fast. Users of C have, over the
+years posted questions over the internet and received solutions from
+other users as well as experts, and you can learn a lot about C from
+those discussions. In addition, there are many tutorials provided free
+on the web, and those too make it relatively easy for someone with
+interest to learn the C language.</p>
+<p>Another plus for C is that it is the computer language that UNIX
+uses, and UNIX is among the leading computer software. Other great
+operating systems use the C programming language as well. For that
+reason, C has become more like the lingua franca of the programming
+world. It is also worthwhile noting that the way C expresses ideas makes
+it easy for users to appreciate them and also implement them with little
+or no support.</p>
+<p>Something else that would encourage you to learn the C programming
+language is that it has been the basis for other computer languages, and
+many other languages have picked something worthwhile from C. You will,
+for example, find some principles and some commands being in use in C
+and also in use in other computer languages. What this means that you
+can share tips with other programmers who use other languages and
+communicate easily with them too.</p>
+<p><span id="c005.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c005.xhtml__Toc452520166">Chapter 2:
+Setting Up Your Local Environment</span></h1>
+<p><span class="first-in-chapter">I</span>t often helps to have a
+strategy when trying to learn something new. In the case of learning the
+C programming language, it is imperative that you proceed from the
+basics to the more complex aspects. That is why it is a good thing we
+began the book by laying out the beginnings of C and how it has helped
+build other programming languages.</p>
+<p>Preparing To Learn The C Programming Language</p>
+<p>It is a good idea to begin by downloading and then installing the
+compiler. The reason you need to do this early is so as to have a
+program that can interpret your C code, and converting it into computer
+friendly signals.</p>
+<p>Is there a universal compiler available?</p>
+<p>The answer is in the negative, as there are some programs that are
+suitable for Windows and not great with other operating systems, or
+great for Linux and not very good with other operating systems.</p>
+<p>Here are some helpful suggestions:</p>
+<ul>
+<li>Install Microsoft Visual Studio Express, or even MinGW, if your
+computer is running on Windows.</li>
+<li>Install XCode in case your computer is running on Mac</li>
+<li>Install gcc if your computer has Linux as the operating system</li>
+</ul>
+<p>As has already been noted, you can write a C program in lines as few
+as three or as many as you wish. The text files need to have the
+extension, “.c”. You can, for example, write <span
+style="font-style: italic">hi.c</span>, when your source statement
+contains, <span style="font-style: italic">hi</span>. To write your C
+program, you use a text editor like <span
+style="font-style: italic">vi</span>, <span
+style="font-style: italic">vim</span>, <span
+style="font-style: italic">Emacs</span> and such others. Essentially,
+you use a text editor to enter your statements from the source to the
+program, using your chosen language, say, the C programming
+language.</p>
+<p>IBM is known for using <span style="font-style: italic">XEDIT</span>
+as their text editor, and operators who use UNIX systems are known for
+using <span style="font-style: italic">Emacs</span> as well as <span
+style="font-style: italic">vi</span> as their preferred text editors.
+For fresh starters, <span style="font-style: italic">vi</span> stands
+for visual editor. In accomplishing laying out commands, it uses
+keystroke combinations in place of menus, making it faster than most
+other text editors. You may also like the <span
+style="font-style: italic">Pico</span> text editor if you are entirely
+new in using UNIX systems.</p>
+<p>Setting the Environment</p>
+<p>In this chapter, you are going to learn how to set up your C
+programming environment, if that is the way you want to go. Otherwise,
+if you simply want to test how successful you are in writing in the C
+language, you can log onto <a href="http://www.compileonline.com"
+style="font-style: italic">http://www.compileonline.com</a>. In setting
+the environment required for the C programming language, you need to
+ascertain that the computer you are using has two specific software
+tools, namely, the text editor and the C compiler.</p>
+<div class="poetry">
+<p>(1) Role of the text editor tool</p>
+</div>
+<p>This is the tool to use when doing the actual typing of your program.
+Besides the text editors already mentioned, like the <span
+style="font-style: italic">vi</span> and the <span
+style="font-style: italic">Emacs</span>, there are others like the <span
+style="font-style: italic">Windows Notepad</span>, the <span
+style="font-style: italic">OS Edit command</span>, <span
+style="font-style: italic">Epsilon</span>, and even <span
+style="font-style: italic">Brief</span>.</p>
+<p>When you use a text editor, what you create goes by the term, <span
+style="font-style: italic">source file</span>, and what it contains are
+the <span style="font-style: italic">source codes</span> for your
+program. As noted earlier, C programs have the extension “.c”.</p>
+<p>The text editor is so basic to programming that you cannot begin
+doing any programming without a text editor ready for use. However, with
+your chosen text editor ready, you write your computer program; next you
+save it in form of a file; and after compiling it, you execute it.</p>
+<div class="poetry">
+<p>(2) Role of the Compiler</p>
+</div>
+<p>What, exactly, is a compiler? Well, you can term it a computer
+program, though sometimes its make-up is a combination of more than one
+computer program. What is its role in the C language? The role of the
+compiler is to make the source file you have created usable by your
+computer. In short, as it is initially, the source code that you have
+written in your source file is the human readable source that is now
+contained in your program. Yet you would like that source code put into
+binary form, which is what your target computer language is made of.
+Once you are done, you will have translated your source code into object
+code, the term used after the process.</p>
+<p>So, a compiler effectively compiles your source code into your chosen
+machine language, making it possible for your computer’s CPU (Central
+Processing Unit) to execute your instructions, and finally producing
+executable programs. You will often have a ready compiler on the net,
+which you can use free of charge. Many programmers prefer using GNU
+C/C++ compiler, although, depending on the operating system one has,
+some go for HP and sometimes Solaris. The reason you see C and C++ put
+together is that what works for the C language also works for C++.</p>
+<p>Installing your GNU C/C++ compiler:</p>
+<p>It is not surprising to find the compiler already installed on your
+system, particularly when your computer is using either Linux or UNIX,
+so it is good to check before proceeding to install afresh.</p>
+<p>Checking If Your Computer Has The Compiler</p>
+<p>How do you check? Simple – after opening a terminal, try and locate,
+say, your Linux C compiler. And the way to do this is by using the <span
+style="font-style: italic">which-</span>command: <span
+style="font-style: italic">$ which gcc.</span> If your machine actually
+has the C compiler, you will, very likely, see the output, <span
+style="font-style: italic">/usr/bin/gcc</span>. That /usr/bin is,
+obviously, a directory.</p>
+<p>Now, to see the compiler version that you have, you need to type,
+<span style="font-style: italic">$ gcc –v </span>as your command, within
+the command line available.  Just in case your computer already has the
+compiler you are looking for, the message you will receive will look
+like this:</p>
+<p>Using specs already built in</p>
+<p>Target: i386-redhat-linux</p>
+<p>Configured with: ../configure—prefix=/usr .......</p>
+<p>Thread model: posix</p>
+<p>gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)</p>
+<p>Installing a Linux/UNIX Compiler </p>
+<p>Suppose your computer does not have the compiler installed? Well, you
+will have to do the installation yourself. Luckily, it is an easy
+process. All you need to do is log onto <a
+href="http://gcc.gnu.org/install/"
+style="font-style: italic">http://gcc.gnu.org/install/</a><span
+style="font-style: italic">,</span> and follow the simple guidance
+provided on the site.</p>
+<p>Installing The Mac OS X Compiler</p>
+<p>However, in case your computer is using the Mac OS X, and not Linux
+or UNIX, you can log onto the apple website,
+developer.apple.com/technologies/tools/, and then download the relevant
+code, which happens to be <span style="font-style: italic">Xcode</span>.
+The site gives instructions that are easy to follow, so installation of
+your <span style="font-style: italic">Xcode</span> development
+environment should be relatively easy. After you have the environment
+ready, you will be in a position to make use of the GNU compiler in
+relation to the C programming language.</p>
+<p>Installing the Windows compiler</p>
+<p>What you need to do in case your computer is using Windows, is to log
+onto <a href="http://www.mingw.org"
+style="font-style: italic">www.mingw.org</a>, which is actually the
+homepage for <span style="font-style: italic">MinGW</span>, and by
+clicking on the link provided you will be able to download the <span
+style="font-style: italic">MinGW</span>, which is the compiler you need
+for your computer. During the process, you should be able to ascertain
+that you are downloading a version of <span
+style="font-style: italic">MinGW</span> that is current – the latest.
+Just to be sure you are downloading the correct program, see that it
+reads something like: <span
+style="font-style: italic">MinGW-&lt;version&gt;.exe</span>.</p>
+<p>Note too that there is a minimum set of programs you need to download
+for Windows if you want to have your compiler working as required. They
+include <span style="font-style: italic">gcc-core; gcc-g++;
+binutils,</span> as well as <span
+style="font-style: italic">MinGW</span> runtime. You could install
+others as well, but those mentioned make the bare minimum. Remember to
+include to the PATH variable the sub-directory, <span
+style="font-style: italic">bin</span>, as you install your MinGW, reason
+being that it will help you specify tools in the command line just by
+looking at their names, which are relatively simple. After successful
+completion of your installation, you should be able to run the tools you
+downloaded right from the command line – tools like the <span
+style="font-style: italic">gcc</span>; <span
+style="font-style: italic">ranlib</span>, and the rest. </p>
+<p><span id="c006.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c006.xhtml__Toc452520167">Chapter 3:
+The C Structure and Data Type</span></h1>
+<p><span class="first-in-chapter">I</span>t is important that you know
+how the structure of C looks like at the bare minimum, before you can
+proceed to learn what its main building blocks are. Once you know these
+basics, they will become your reference points as you learn more about
+the C language.</p>
+<p>Here are the basic components of the C program:</p>
+<ol type="1">
+<li>The pre-processor commands</li>
+<li>The functions</li>
+<li>The variables</li>
+<li>The Statements as well as Expressions</li>
+<li>The comments</li>
+</ol>
+<p>Example</p>
+<p>Let us use our example: “Hello, learners!” What code could we use to
+print those words?</p>
+<div class="blockquote">
+<p>(i)  First of all, you would have your first program line as: <span
+style="font-style: italic">#include &lt;stdio.h&gt;</span>, being your
+pre-processor command.</p>
+<p>(ii) Your next would contain: <span style="font-style: italic">int
+main(),</span> being the program’s main function; and that is where the
+program begins to execute commands.</p>
+<p>(iii)  The line that follows is: /*...*/. The compiler usually
+ignores it because it is where you are meant to add your comments if you
+so wish. You call such lines simply <span
+style="font-style: italic">comments</span>. Just for illustration’s
+sake, you could enter the comments: <span style="font-style: italic">/*
+beginning to learn C */</span>.</p>
+<p>(iv)  The next line that follows is: printf(...); and that is the
+line that enables your message, “Hello, learners!” to appear on your
+screen. So, essentially, after your entry, you will have: printf(“Hello
+learners!\n”)</p>
+<p>(v)  Finally, you have the next line returning the value 0 and
+terminating the main function, (). </p>
+</div>
+<p>Compiling and Executing the C language program</p>
+<p>At this juncture, you need to learn how to go about saving your
+source code, and also running it. Remember we mentioned entering your
+source code so that your computer’s CPU can process it accordingly.</p>
+<p>The easy steps to follow:</p>
+<ul>
+<li>Get your text editor open, and then type in the source code that you
+have</li>
+<li>Next, save your file in the name of <span
+style="font-style: italic">hello.c</span></li>
+<li>The next action is opening a command prompt and moving to the
+specific directory where you have just saved your file.</li>
+<li>Once there, type, <span style="font-style: italic">gcc
+hello.c</span></li>
+<li>Tap enter after typing that and you will have compiled your
+code</li>
+<li>In case your process has been good and you have no errors within
+your code, you will be prompted to proceed to the line that follows.
+After this, you will see an executable file generated – <span
+style="font-style: italic">a.out</span></li>
+<li>You now need to type <span style="font-style: italic">a.out</span>
+to have your program executed.</li>
+<li>Everything having gone well, you should be able to view your output
+– <span style="font-style: italic">Hello learners!</span> – displayed on
+your screen.</li>
+<li>So, basically, what you should be seeing on your screen is something
+like this:</li>
+</ul>
+<p>$ gcc hello.c</p>
+<p>$ ./a.out</p>
+<p>Hello, learners!</p>
+<p>Basic C Syntax</p>
+<p>For any process to work well, and for you to be able to issue the
+right commands, you should be able to identify every item for what it
+is. That will avoid confusion and minimize errors. For that reason, in C
+programming, you need identifiers.</p>
+<p>What, Exactly, Is An Identifier?</p>
+<p>In C language programming, an identifier helps you to locate a
+variable; a function; and any other item that you, as the user, may have
+defined.  You will see an identifier beginning with an alphabet –
+anywhere from A up to Z; and sometimes an underscore: ‘_’, which is then
+followed by a zero and sometimes letters or more underscores. Sometimes
+digits, anywhere from 0 to 9, may follow.</p>
+<p><span style="font-weight: bold">Note</span>:</p>
+<ul>
+<li>When using the C language programming, you cannot use punctuation
+like @, %, £, and such, within your identifiers.</li>
+<li>The C language is also case sensitive. In other words, the lower
+case cannot respond to the upper case situation. For example, learners
+and Learners are recognized as two entirely different identifiers.</li>
+</ul>
+<p>To make it more clear, below are some identifiers that are acceptable
+when using C:</p>
+<p>abc; hername30; a40c9; retVal; _temp; a</p>
+<p>In C language programming, there are some words that you cannot use
+at all whether as constants, as variables, or as identifier names. They
+are said to be reserved keywords.</p>
+<p>Reserved keywords in C include <span style="font-style: italic">auto,
+else, long, switch, break, enum, register, typedef,  case, char, extern,
+float, return, short, union, unsigned, const, continue, for, goto,
+signed, sizeof, volatile, default, do, int, if, struct, static, packed,
+while and double.</span></p>
+<p>Use of White Space in C</p>
+<p>If there is a line that is entirely blank, the compiler automatically
+ignores it. Such a line is termed <span style="font-style: italic">white
+space.</span> However, <span style="font-style: italic">white
+spaces</span> are not restricted to blank spaces alone. They also
+include newline characters (e.g. \n) as well as tabs and comments.</p>
+<p>Does a white space accomplish anything in the C programming language?
+Yes, it does. It shows the end of one statement element and marks the
+beginning of another. In short, ordinarily a statement is made up of
+different parts, each carrying some meaning; and those parts combine
+within the statement to convey some information. For that information to
+be understood in the C language, and with precision, you need to input
+your text in a way that the compiler will identify each bit for what it
+is.</p>
+<p><span style="font-weight: bold">Example</span>:</p>
+<p>When you have an expression like <span style="font-style: italic">int
+main</span>, the only way the compiler is going to recognize <span
+style="font-style: italic">int</span> and <span
+style="font-style: italic">main</span> correctly is by having some
+whitespace character separating them. In such a case, space is the most
+commonly used. However, there are situations where you are at liberty to
+either use whitespace or leave it out altogether.</p>
+<p>Example:</p>
+<p>In the statement, dessert=cream + candy; //get the entire dessert,
+you can include some space between dessert and the equals sign or leave
+it out altogether. Likewise, you can put space between the equals sign
+and cream or leave it out. In such instances, you would be expected to
+use your discretion in a manner to enhance readability. Otherwise,
+whether you use the whitespace or not will not affect the way the
+compiler picks that part of the statement.</p>
+<p>Types Of Data In C</p>
+<p>Why is type important when it comes to a programming language? Well,
+there are different reasons, including the storage space some types
+occupy on your machine as opposed to others. In the C programming
+language, there are data types that represent variables whereas others
+are used to declare functions. The type of data does not just determine
+storage space but also the manner in which its bit pattern is understood
+during processing.</p>
+<p>Here are the main data types in C:</p>
+<div class="poetry">
+<p>(1) The basic</p>
+</div>
+<p>The basic data type in C is also referred to as the primary data
+type.  It includes the arithmetic type, which is further categorized as
+integer, abbreviated as <span style="font-style: italic">int</span>;
+floating, usually represented as <span
+style="font-style: italic">float</span>; and character, usually
+represented by <span style="font-style: italic">char</span> and
+sometimes <span style="font-style: italic">void</span>. When void is
+specified, it means that no value is being returned or reflected; and as
+for the integer, they represent variables.</p>
+<p>Here is a simple table to demonstrate how the basic data type is
+categorized:</p>
+<div style="text-align: center; text-indent: 0">
+<table>
+<tbody>
+<tr>
+<td colspan="5"><p>Basic/Primary Type of Data</p></td>
+</tr>
+<tr>
+<td><p>Character</p></td>
+<td colspan="2"><p>Integer</p></td>
+<td><p>Float</p></td>
+<td><p>Void</p></td>
+</tr>
+<tr>
+<td></td>
+<td><p>signed </p></td>
+<td><p>unsigned</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><p>Char</p></td>
+<td><p>Int</p></td>
+<td><p>int</p></td>
+<td><p>float</p></td>
+<td></td>
+</tr>
+<tr>
+<td><p>signed char</p></td>
+<td><p>short int</p></td>
+<td><p>short int</p></td>
+<td><p>double</p></td>
+<td></td>
+</tr>
+<tr>
+<td><p>unsigned char</p></td>
+<td><p>long int</p></td>
+<td><p>long int</p></td>
+<td><p>long double</p></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note that the integer data type stores whole numbers. In this regard,
+taking a 16-bit computer as an example, the signed int takes up two
+bytes; the unsigned int takes up two bytes; the signed short int takes
+up one byte; while the signed and unsigned long int take up space of
+four bytes each.</p>
+<p>When it comes to the float type of data, plain float takes up space
+of four bytes; the double takes up eight bytes; while the long double
+takes up ten bytes.</p>
+<p>And as for the character type of data, which basically stores the
+value of characters, signed char takes up space of just a byte, and the
+same case applies to the unsigned char.</p>
+<p>The void type of data ordinarily represents functions that produce no
+value whatsoever. Sometimes these are functions that do not accept any
+parameters.</p>
+<p>As has been noted, functions in the C language whose return type is
+void are those returning no value. Here is how they look like:</p>
+<p>void exit (int status)</p>
+<p>Again, there are those functions in C that accept no parameter.
+However, a function not accepting parameters can, nevertheless, accept
+void as in the example below:</p>
+<p>int rand(void)</p>
+<div class="poetry">
+<p>(2) Derived</p>
+</div>
+<div class="poetry">
+
+</div>
+<p>Under the derived type of data are functions; various data
+structures; and also pointers.</p>
+<p>What could pointers be?</p>
+<p>Well, a pointer happens to be a variable that has an address of
+another variable. It gives direction as to where that other variable is,
+helping to recall the contents of that other variable. You need to
+realize that pointers have nothing to do with object type. Take the
+following function, for example:</p>
+<div class="poetry">
+<p>void *malloc(size_t size)</p>
+</div>
+<p>This function, which obviously has a pointer to no other value but
+void, is one that can always be casted to any type of data you have.
+Remember to always declare your pointer before beginning to use it for
+storage of whatever variable address you want. Below is a demonstration
+of the general form you use for pointer declaration:</p>
+<div class="poetry">
+<p>type *var-name;</p>
+</div>
+<p><span style="font-style: italic">Type,</span> in this case, stands
+for the base type of your pointer, which needs to be a valid data type
+used in the C language. var-name is the pointer variable’s name. You
+need to know that although the asterisk used is the same one you
+ordinarily use for multiplication, within the C language you use it to
+mark the designation of the variable as pointer.</p>
+<p>Real examples of pointer declarations:</p>
+<table>
+<tbody>
+<tr>
+<td><p>int</p></td>
+<td><p>*ip;</p></td>
+<td><p>/*pointer to an integer*/</p></td>
+</tr>
+<tr>
+<td><p>double</p></td>
+<td><p>*dp;</p></td>
+<td><p>/*pointer to a double*/</p></td>
+</tr>
+<tr>
+<td><p>float</p></td>
+<td><p>*fp;</p></td>
+<td><p>/*pointer to a float*/</p></td>
+</tr>
+<tr>
+<td><p>char</p></td>
+<td><p>*ch;</p></td>
+<td><p>/*pointer to a character*/</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note that whether you are entering pointer values that are integers
+or character; float or even double; what cuts across them all is the
+requirement that the value be one long number that is hexadecimal, and
+which is a representation of the memory address. Otherwise the pointers
+only differ in the specific constant or variable data type that each of
+them points to.</p>
+<p>When you are doing your variable declaration, if you have no
+particular address to assign to the pointer variable, assign it a null
+value so it becomes a NULL pointer. You can refer to it as a pointer
+with zero value. In many operating systems (OS), programs will not
+access address 0/zero; the OS simply reserves it. </p>
+<p>Pertinent Details Pertaining To C</p>
+<p>Pointers are of fundamental importance in the C programming language,
+the reason every programmer needs to be aware of its basic concepts.
+Luckily, they are concepts that are easy to learn and to remember.</p>
+<p>Below are the pointer concepts and their explanations:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td><ol type="1">
+<li>The pointer arithmetic</li>
+</ol></td>
+<td><p>The C language has a choice of 4 arithmetic operators to choose
+from when creating a pointer; namely, ++;—; + and -</p></td>
+</tr>
+<tr>
+<td><ol type="1">
+<li>Pointer arrays</li>
+</ol></td>
+<td><p>An array does not hold a singular pointer but a number of
+them.</p></td>
+</tr>
+<tr>
+<td><ol type="1">
+<li>Pointer to pointer</li>
+</ol></td>
+<td><p>The C language enables you to create a pointer on another
+pointer</p></td>
+</tr>
+<tr>
+<td><ol type="1">
+<li>Passing a pointer to a particular function</li>
+</ol></td>
+<td><p>You do this by declaring your chosen function parameter in
+pointer type. Any function accepting a pointer also accepts an array of
+pointers.</p></td>
+</tr>
+<tr>
+<td><ol type="1">
+<li>Returning pointer from function</li>
+</ol></td>
+<td><p>This involves allowing a function to actually return a pointer to
+a variable that is local, static, and one with memory that is
+dynamically allocated.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Clarification of Pointer to Pointer</p>
+<p>This is a case of having pointers in a form of chain. Ordinarily what
+you have is a pointer with a variable address. However, with a case of
+pointer to pointer, the pointer you create first has an address of your
+second pointer. That second pointer, in turn, has the location where the
+actual value you want is. You are required to always declare when you
+have a pointer to pointer variable. And how do you do that? Well, you
+add one more asterisk next to the usual one that you place before the
+pointer name. Then you end up with something like this:</p>
+<p>int **var;</p>
+<p>Still, what, exactly, are Variables?</p>
+<p>Variables come up often in conversation, and they appear in many
+functions, not least in the C language. When it comes to the C
+programming language, a variable is simply a representative of storage
+area. It is the place where programs in C perform their manipulations.
+Practically, you can use variables to store various data value.
+Variables are different from constants because as you execute your
+program in the C language, you can alter your variables, something you
+cannot do with constants. During programming, you may give your
+variables names that have ordinary meaning, like <span
+style="font-style: italic">height</span> or <span
+style="font-style: italic">weight</span>; <span
+style="font-style: italic">age</span>; <span
+style="font-style: italic">average</span>; and such.</p>
+<p>It is important to note that variables are of specific types and the
+type of each determines its memory size as well as its layout. It also
+determines the value range that can be accommodated within the memory.
+The variable type also determines the particular operations that you can
+apply to the variable in question.</p>
+<p>How do variables look like? Well, they come in form of digits; also
+letters, as well as the underscore.  And you need to declare them before
+you begin using your program for two major reasons:</p>
+<div class="poetry">
+<p>a)  So that the compiler can recognize the name of the variable</p>
+<p>b)  So that it can be aptly categorized – given its appropriate data
+type</p>
+</div>
+<p>Also when defining a variable in the C language, you need to follow
+some stringent rules.</p>
+<p>Variable related rules:</p>
+<ul>
+<li>Provide a variable name that does not exceed eight characters</li>
+<li>The name you provide should not have a digit at the beginning</li>
+<li>Do not include blanks or any space within your chosen variable
+name</li>
+<li>Use digits or alphabets; and even special symbols such as underscore
+(_) as you wish in creating a variable name.</li>
+<li>You cannot use keywords to represent variable names</li>
+</ul>
+<p>In fact, whenever you are declaring names of variables or for
+functions, or you are declaring your constants, be keen not to include a
+C keyword.</p>
+<p>Incidentally, what are keywords within the C programming
+language?</p>
+<p>The C keywords are grouped as <span
+style="font-style: italic">auto</span>, <span
+style="font-style: italic">double</span>, <span
+style="font-style: italic">int</span> and <span
+style="font-style: italic">struct</span>. Normally, the compiler will do
+the categorizations of the keywords, the keywords essentially making
+part of the C syntax. C keywords are actually pre-defined and so you
+just need to know which ones they are.</p>
+<p>Take the example: <span style="font-style: italic">int cash
+</span></p>
+<p><span style="font-style: italic">Cash</span> happens to be the
+variable, and its type is integer. The keyword indicating cash then is
+<span style="font-style: italic">int</span>.</p>
+<p>What You Need To Know About Keywords In C:</p>
+<div class="blockquote">
+<p>1  In C, keywords are also referred to as <span
+style="font-style: italic">reserved words</span>.</p>
+<p>2  The keywords used in C are 32 in number.</p>
+<p>3  You need to learn the specific C keywords so that you do not use
+them as variables in functions.</p>
+<p>4  When using a C keyword, you are required to assume the meaning the
+compiler has provided or defined for that keyword.</p>
+</div>
+<p>Here are the 32 keywords used in C programming:</p>
+<p>auto</p>
+<p>The C keywords under auto are specifically <span
+style="font-style: italic">break; case; char; const; continue;
+default</span>; as well as <span style="font-style: italic">do</span>.
+These plus <span style="font-style: italic">auto</span> make a total of
+eight.</p>
+<p>double</p>
+<p>Under double are the keywords <span style="font-style: italic">else;
+enum; extern; float; for; goto</span> as well as <span
+style="font-style: italic">if</span>. These plus <span
+style="font-style: italic">double</span> make a total of eight.</p>
+<p>int</p>
+<p>The C keywords under int are <span style="font-style: italic">long;
+register; return; short; signed; sizeof</span>; as well as <span
+style="font-style: italic">static</span>. These ones plus <span
+style="font-style: italic">int</span> make a total of eight.</p>
+<p>struct</p>
+<p>The C keywords under struct are specifically <span
+style="font-style: italic">switch; typedef; union; unsigned; void;
+volatile</span>; as well as <span
+style="font-style: italic">while</span>. These keywords plus <span
+style="font-style: italic">struct</span> add up to eight.</p>
+<p><span id="c007.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c007.xhtml__Toc452520168">Chapter 4:
+C Constants and Literals</span></h1>
+<p><span class="first-in-chapter">I</span>n the C programming language,
+the term literal can also be used in place of constant. Now, what,
+exactly, is a constant in the context of C programming? Well, it is the
+term used for a fixed value in the data being entered in the program,
+which the program cannot alter in the course of execution. Constants
+come in all data types – floating, character, integer and even string.
+You can also find constants of enumeration.</p>
+<p>When it comes to actual C programming, you use constants in the same
+way you use regular variables; only that with constants you would not be
+able to modify their values after you have defined them.</p>
+<p>What would happen if you tried to alter the value of a constant?
+Simple: The program will return an error message. After clarifying the
+nature of constants, let us go through some basic rules that will help
+in using them.</p>
+<p>Rules to observe in constructing constants in C:</p>
+<div class="blockquote">
+<p>(1) Integer Constants</p>
+<p>a.  Every integer constant needs to have a digit</p>
+<p>b.  No integer constant should have a decimal</p>
+<p>c.  It is alright for an integer constant to be either positive or
+even negative</p>
+<p>d.  You must not add a comma or even a blank anywhere within your
+integer constant</p>
+<p>e.  Whenever there is no sign preceding an integer constant, the
+assumption is that the constant is positive</p>
+<p>f.  For the sake of processing in your computer program, when you are
+selecting your integer constants, the range you have to work with is
+from -32768 to 32767.</p>
+<p>(2) C language real constants</p>
+<p>Incidentally, these are the same ones we referred to earlier as <span
+style="font-style: italic">floating point constants</span>.</p>
+<p>a.  Each of them also needs at least a single digit</p>
+<p>b.  It is also necessary that it contains a decimal</p>
+<p>c.  Just like with integer constants, it is acceptable as positive or
+negative</p>
+<p>d.  Here too, in case you do not put a sign before the constant, it
+is interpreted as being positive</p>
+<p>e.  And as for commas and blanks, here too they are not
+acceptable.</p>
+<p>(3) Character constants</p>
+</div>
+<ol type="a">
+<li>This one comes in singular: one alphabet, one digit, or even one
+special symbol. In short, its length is always one character.</li>
+<li>A character constant is enclosed within a single quote</li>
+</ol>
+<div class="poetry">
+<p>(4) String Constants</p>
+</div>
+<ol type="a">
+<li>A string constant needs to be enclosed in a double quote.</li>
+</ol>
+<div class="poetry">
+<p>(5) Backlash Characters</p>
+</div>
+<ol type="a">
+<li>In the C programming language, you use a backlash character when it
+carries a special meaning</li>
+<li>You also use the backlash here to denote the character’s special
+function</li>
+</ol>
+<p>Let us analyze the various literals that exist in C.</p>
+<p>The Integer Literals</p>
+<p>These ones are usually decimals, octals, and sometimes hexadecimals.
+They bear a prefix that actually defines the base. For example, Ox (OX)
+marking a hexadecimal, 0 indicating octal, and of course nil marking a
+decimal. </p>
+<p>You can also have a suffix on an integer literal, for example, <span
+style="font-style: italic">U</span> combined with <span
+style="font-style: italic">L</span> to denote <span
+style="font-style: italic">unsigned</span> and <span
+style="font-style: italic">long</span>, in that respective order. You
+also need to appreciate that when it comes to the suffix, both the upper
+and lower cases are acceptable.</p>
+<p>Here below are some great examples of literal integers:</p>
+<table>
+<tbody>
+<tr>
+<td><p>078</p></td>
+<td><p>/*Illegal: 8 is not an octal digit*/</p></td>
+</tr>
+<tr>
+<td><p>215u</p></td>
+<td><p>/*Legal*//*</p></td>
+</tr>
+<tr>
+<td><p>032UU</p></td>
+<td><p>/* Illegal: cannot repeat a suffix*/</p></td>
+</tr>
+<tr>
+<td><p>212</p></td>
+<td><p>/*Legal*/</p></td>
+</tr>
+<tr>
+<td><p>OxFeeL</p></td>
+<td><p>Legal*/</p></td>
+</tr>
+</tbody>
+</table>
+<p>Additional examples of varied integer literals:</p>
+<table>
+<tbody>
+<tr>
+<td><p>85</p></td>
+<td><p>/* decimal */</p></td>
+</tr>
+<tr>
+<td><p>30</p></td>
+<td><p>/* int */</p></td>
+</tr>
+<tr>
+<td><p>30u</p></td>
+<td><p>/* unsigned int */</p></td>
+</tr>
+<tr>
+<td><p>0213</p></td>
+<td><p>/* octal */</p></td>
+</tr>
+<tr>
+<td><p>Ox4b</p></td>
+<td><p>/* hexadecimal */</p></td>
+</tr>
+<tr>
+<td><p>30l</p></td>
+<td><p>/* long */</p></td>
+</tr>
+<tr>
+<td><p>30ul</p></td>
+<td><p>/* unsigned long */</p></td>
+</tr>
+</tbody>
+</table>
+<p>The Floating Point Literals</p>
+<p>Floating point literals have combinations of parts – some integers,
+others decimal, some fractions, and still some exponents. When it comes
+to representation, these literals are shown in decimal; otherwise
+exponential.</p>
+<p>In times when your literals are coming in decimals, you need to
+remember the decimal point; and sometimes both the decimal point and the
+exponent. Then when the literals are coming in exponential form, you
+need to factor in the integer; fraction part; and sometimes you add the
+part that is fraction to that integer. Note that your signed exponent
+needs to be preceded by an <span style="font-style: italic">e</span> or
+<span style="font-style: italic">E</span>. </p>
+<p>Here is some demonstration of floating point literals:</p>
+<table>
+<tbody>
+<tr>
+<td><p>510E</p></td>
+<td><p>/* Illegal: incomplete exponent */</p></td>
+</tr>
+<tr>
+<td><p>3.14159</p></td>
+<td><p>/* Legal*/</p></td>
+</tr>
+<tr>
+<td><p>314159E-5L</p></td>
+<td><p>/* Legal*/</p></td>
+</tr>
+<tr>
+<td><p>.e55</p></td>
+<td><p>/* Illegal: missing integer or fraction */</p></td>
+</tr>
+<tr>
+<td><p>210f</p></td>
+<td><p>/* Illegal: no decimal or exponent */</p></td>
+</tr>
+</tbody>
+</table>
+<p>The Character Constants</p>
+<p>Character literals come in single quotes, for example, ‘x’. The
+character literal is then stored as a char type; just being one simple
+variable. You need to note that although it is fine to have simple
+character literals, sometimes you are called upon to create an escape
+sequence.</p>
+<p>Example of such an escape sequence:</p>
+<p>'\t'), or just a universal character like '\u02C0').</p>
+<p>Something else worth noting is that you can vary the meaning of a
+character constant just by preceding it with a backlash. Good examples
+are the newline, which is represented by <span
+style="font-style: italic">\n</span>; and the tab, which is represented
+by <span style="font-style: italic">\t.</span> In short, you can have
+character literals being plain characters, as in <span
+style="font-style: italic">x</span>; escape sequence, as in <span
+style="font-style: italic">\t</span>; and even as universal character,
+as in<span style="font-style: italic"> \u02CO</span>. </p>
+<p>Further Demonstrations of Escape Sequence Codes:</p>
+<table>
+<tbody>
+<tr>
+<td><p>Escape Sequence Codes</p></td>
+<td><p>Meaning</p></td>
+</tr>
+<tr>
+<td><p>\\</p></td>
+<td><p>\character</p></td>
+</tr>
+<tr>
+<td><p>\’</p></td>
+<td><p>‘character</p></td>
+</tr>
+<tr>
+<td><p>\”</p></td>
+<td><p>“character</p></td>
+</tr>
+<tr>
+<td><p>\?</p></td>
+<td><p>?character</p></td>
+</tr>
+<tr>
+<td><p>\a</p></td>
+<td><p>Alert (or bell)</p></td>
+</tr>
+<tr>
+<td><p>\b</p></td>
+<td><p>Backspace</p></td>
+</tr>
+<tr>
+<td><p>\f</p></td>
+<td><p>Form feed</p></td>
+</tr>
+<tr>
+<td><p>\n</p></td>
+<td><p>Newline</p></td>
+</tr>
+<tr>
+<td><p>\r</p></td>
+<td><p>Carriage return</p></td>
+</tr>
+<tr>
+<td><p>\t</p></td>
+<td><p>Horizontal tab</p></td>
+</tr>
+<tr>
+<td><p>\v</p></td>
+<td><p>Vertical tab</p></td>
+</tr>
+<tr>
+<td><p>\xhh ...</p></td>
+<td><p>Hexadecimal number of one or more digits</p></td>
+</tr>
+<tr>
+<td colspan="2"><p>Example of ‘Hello, learners’ in Escape
+Sequence</p></td>
+</tr>
+<tr>
+<td colspan="2"><p>#include &lt;stdio.h&gt;</p></td>
+</tr>
+<tr>
+<td colspan="2"><p>int main()</p></td>
+</tr>
+<tr>
+<td colspan="2"><p>{printf(“Hello\tlearners\n\n”); return 0}</p></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The escape sequence code after execution</p>
+<p>After the sequence code above has been compiled and also executed,
+the result you get is as follows:</p>
+<table>
+<tbody>
+<tr>
+<td><p>Hello  learners</p></td>
+</tr>
+</tbody>
+</table>
+<p>The String Literal</p>
+<p>As for the string literals or string constants, you need to know that
+they are enclosed within quotes, as in (“”). That string has characters
+that are plain, escape sequence or universal. Something else worth
+noting is that the characters in string literals never come in singular;
+always as two or more.</p>
+<p>Ordinarily, you begin your string literal with a backlash (\); and
+then you follow it up with characters that will determine the ultimate
+interpretation of your escape sequence. Just for example, if you want
+your computer to bring out <span
+style="font-style: italic">newline</span>, what you type as your escape
+sequence is <span style="font-style: italic">\n</span>.</p>
+<p>As for the universal characters, they are those that represent
+Unicode code points within the string literal. These are the ones you
+write like \uxxxx or \Uxxxxxxxx. <span
+style="font-style: italic">X</span> in this context represents one hex
+digit. What we are essentially saying is that you have the escape
+sequence, <span style="font-style: italic">\uxxxx</span> playing the
+role of marking or representing <span
+style="font-style: italic">xxxx</span> as the code point.</p>
+<p>Although string literals are sometimes long, you have an opportunity
+to break them by the use of white spaces. Here below is an example of
+three ways you can break one literal string, so that you end up with the
+same string in three identical forms:</p>
+<table>
+<tbody>
+<tr>
+<td><p>“hello, learners”</p></td>
+<td><p>“hello, \ learners”</p></td>
+<td><p>“hello, “ “l” “earners”</p></td>
+</tr>
+</tbody>
+</table>
+<p>Manner of Defining Constants</p>
+<p>When it comes to defining constants for use in the C language, this
+is done in two main ways:</p>
+<div class="poetry">
+<p>(i)  By a pre-processor: <span
+style="font-style: italic">#define</span></p>
+<p>(ii) By a keyword: <span style="font-style: italic">const</span></p>
+</div>
+<p>Pre-processing is the first thing that happens compilation is going
+on in the C program. It is a feature strictly unique to C language
+programming compilers. It is also important to note that every directive
+being undertaken by the pre-processor begins with <span
+style="font-style: italic">#</span>. By <span
+style="font-style: italic">directive</span> here we mean <span
+style="font-style: italic">command</span>.</p>
+<p>The benefits that come with the C pre-processor include:</p>
+<ul>
+<li>Easy process of developing programs</li>
+<li>It is relatively easy to read</li>
+<li>It is similarly easy to modify</li>
+<li>Its C code is easy to transport to varying machine
+architectures.</li>
+</ul>
+<p><span id="c008.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c008.xhtml__Toc452520169">Chapter 5:
+C Storage Classes</span></h1>
+<p><span class="first-in-chapter">W</span>hat does a storage class got
+to do with the C language? Storage classes in C actually play a big role
+in the name declaration syntax. A storage class indicates the scope the
+variables cover and also the duration they are to remain stored – what
+you can call their lifetime. It also controls its linkage. In the C
+programming language, storage classes are four.</p>
+<p>Here are C’s storage classes:</p>
+<ol type="1">
+<li>Auto</li>
+</ol>
+<p>This is C’s default storage class for every local variable. Its
+storage duration is automatic and it operates within functions.</p>
+<ol type="1">
+<li>Register</li>
+</ol>
+<p>The term register is used here because the storage class specifier
+prompts the compiler to put the object in question within the register
+in the processor. As for storage, the duration here is also automatic.
+The uniqueness with the register storage class is that it helps identify
+any local variable that needs to be stored within the register as
+opposed to being held within RAM (Random Access Memory). This
+automatically means that the size of your variable cannot exceed that of
+the register. Ordinarily that size which is meant to fit the register is
+only a single word; without adding something like <span
+style="font-style: italic">&amp;</span> as there is no memory location
+for it.</p>
+<ol type="1">
+<li>Static</li>
+</ol>
+<p>This is the same one sometimes referred to as <span
+style="font-style: italic">thread</span> storage. Its storage is static
+and has internal linkage. What this static storage class does is give
+indication to the compiler that the local variable needs to be spared as
+long as the program lasts. This is as opposed to it being destroying it
+when it gets out of scope. Owing to this manner of functioning, the
+variables retain their exact values in between function calls.</p>
+<ol type="1">
+<li>Extern</li>
+</ol>
+<p>This one is similar to static storage, with the difference being in
+its linkage, which happens to be external. It is the one that enables a
+global variable to be visible in every program file. However, you cannot
+initialize the variable if it is ‘extern’ but it will direct you to the
+relevant storage location. This happens usually in situations where you
+have created multiple files. What happens is that you define a global
+function or a global variable, and when checking out another file, you
+will see ‘extern’ being used to give direction or reference to the
+variable already defined; or even function.</p>
+<p>What is linkage in C? It is simply a name denoting object, value,
+reference, template, function, namespace, or even type.</p>
+<p>Operators in C</p>
+<p>In the C language, an operator is that symbol – and they are a number
+of them – that directs the compiler to do specific functions of a
+mathematical or logical nature. Some of C’s operators are in-built.</p>
+<p>Categories Of Operators In C</p>
+<div class="poetry">
+<p>(1) Arithmetic</p>
+</div>
+<p>These are specific and so it is easy to learn and remember them. We
+shall list them here below and demonstrate how you apply each of them.
+For our demonstration, we shall assume that variable A has the value of
+20, while variable B has the value of 40.</p>
+<table>
+<tbody>
+<tr>
+<td><p>Operator</p></td>
+<td><p>Operator’s Function</p></td>
+<td><p>Practical Example</p></td>
+</tr>
+<tr>
+<td><p>+</p></td>
+<td><p>To put together two operands</p></td>
+<td><p>A + B = 60</p></td>
+</tr>
+<tr>
+<td><p>-</p></td>
+<td><p>Reduces the 1<sup>st</sup> operand by the value of the
+2<sup>nd</sup> one.</p></td>
+<td><p>A – B = -20</p></td>
+</tr>
+<tr>
+<td><p>*</p></td>
+<td><p>Multiplies the 1<sup>st</sup> and 2<sup>nd</sup>
+operands</p></td>
+<td><p>A * B = 800</p></td>
+</tr>
+<tr>
+<td><p>/</p></td>
+<td><p>Divides the numerator by the denominator</p></td>
+<td><p>B / A = 2</p></td>
+</tr>
+<tr>
+<td><p>%</p></td>
+<td><p>One operator divided by the other and the remainder is the
+result</p></td>
+<td><p>B % A = 0</p></td>
+</tr>
+<tr>
+<td><p>++</p></td>
+<td><p>Role of increasing integer by 1.</p></td>
+<td><p>A++ = 21</p></td>
+</tr>
+<tr>
+<td><p>—</p></td>
+<td><p>Role of reducing integer by 1.</p></td>
+<td><p>A—= 19</p></td>
+</tr>
+</tbody>
+</table>
+<div class="poetry">
+<p>(2) Relational Operators</p>
+</div>
+<p><span class="first-in-scene">T</span>hese ones help you to determine
+the block to follow, once you compare the values between two variables
+already in storage.</p>
+<p>Here are further examples using the same two variables, A = 20 and B
+= 40.</p>
+<table>
+<tbody>
+<tr>
+<td><p>Operator</p></td>
+<td><p>Operator’s Function</p></td>
+<td><p>Practical Example</p></td>
+</tr>
+<tr>
+<td><p>==</p></td>
+<td><p>Verifies if two operands have equal value; if not, condition is
+returned as not true.</p></td>
+<td><p>(A ==B) is not true</p></td>
+</tr>
+<tr>
+<td><p>!=</p></td>
+<td><p>Verifies if two operands have equal value; if not, condition is
+returned as true.</p></td>
+<td><p>(A !=B) is true</p></td>
+</tr>
+<tr>
+<td><p>&gt;</p></td>
+<td><p>Evaluates if left operand has greater value than right operand;
+if so, condition is returned as true, otherwise untrue</p></td>
+<td><p>(A &gt; B) is not true</p></td>
+</tr>
+<tr>
+<td><p>&lt;</p></td>
+<td><p>Evaluates if left operand has less value than the right one; if
+so, condition is returned as true</p></td>
+<td><p>(A &lt; B) is true</p></td>
+</tr>
+<tr>
+<td><p>&gt;=</p></td>
+<td><p>Evaluates if left operand has value that is greater or equal to
+the right operand; if so, condition is returned as true, otherwise, not
+true</p></td>
+<td><p>(A &gt;= B) is not true</p></td>
+</tr>
+<tr>
+<td><p>&lt;=</p></td>
+<td><p>Evaluates if left operand has value that is less or equal to that
+of the right operand; if so, condition is returned as true, otherwise,
+false</p></td>
+<td><p>(A &lt;= B) is true</p></td>
+</tr>
+</tbody>
+</table>
+<div class="poetry">
+<p>(1) Logical Operators</p>
+</div>
+<p>There are basically three logical operators that the C programming
+language supports. Assuming that A is one of your variables and its
+value is 1; and B is the other one of your variables and its value is 0;
+this is how the program works:</p>
+<table>
+<tbody>
+<tr>
+<td><p>Operator</p></td>
+<td><p>Working Explanation</p></td>
+<td><p>Practical Example</p></td>
+</tr>
+<tr>
+<td><p>&amp;&amp;</p></td>
+<td><p>This one is named the <span style="font-style: italic">Logical
+AND Operator.</span> If the 1<sup>st</sup> as well as the 2<sup>nd</sup>
+operands happen to be non-zero, you will have the condition returned as
+true</p></td>
+<td><p>(A &amp;&amp; B) is false</p></td>
+</tr>
+<tr>
+<td><p>||</p></td>
+<td><p>This one is named the <span style="font-style: italic">Logical OR
+Operator</span>. It means that if either of your two operands happens to
+be non-zero, you will have the condition returned as true. </p></td>
+<td><p>(A || B) is true</p></td>
+</tr>
+</tbody>
+</table>
+<div class="poetry">
+<p>(2) Bitwise Operators</p>
+</div>
+<p>These operators work by manipulating data right at the bit level.
+They also shift bits from the right position to the left. Note that
+bitwise operators do not work with C’s float variables or the double
+float variables.</p>
+<p>Let us first observe the various roles of the different bitwise
+operators</p>
+<table>
+<tbody>
+<tr>
+<td><p>Operator</p></td>
+<td><p>What Operator Stands For</p></td>
+</tr>
+<tr>
+<td><p>&amp;</p></td>
+<td><p>Bitwise AND</p></td>
+</tr>
+<tr>
+<td><p>|</p></td>
+<td><p>Bitwise OR</p></td>
+</tr>
+<tr>
+<td><p>^</p></td>
+<td><p>Bitwise exclusive OR</p></td>
+</tr>
+<tr>
+<td><p>&lt;&lt;</p></td>
+<td><p>Left shift</p></td>
+</tr>
+<tr>
+<td><p>&gt;&gt;</p></td>
+<td><p>Right shift</p></td>
+</tr>
+</tbody>
+</table>
+<p>Here below is a table showing the workings of three bitwise
+operators: &amp;, | and ^:</p>
+<table>
+<tbody>
+<tr>
+<td><p>a</p></td>
+<td><p>b</p></td>
+<td><p>a &amp; b</p></td>
+<td><p>a | b</p></td>
+<td><p>a ^ b</p></td>
+</tr>
+<tr>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+<tr>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>What is essentially happening in our table above is that the left
+operand is specifying the value that needs to be shifted; while the
+right operand is specifying the actual number of positions those bits
+within the value need to be shifted. And that is how it generally works
+with bitwise operators.</p>
+<p>When it comes to the bitwise exclusive OR, otherwise abbreviated as
+<span style="font-style: italic">XOR</span>, what happens is that the
+exclusive OR operation considers two inputs and returns 1 (one) if
+either of those inputs is 1 (one). In short, it cannot return 1 if both
+of the inputs are 1; or if both of them are 0. If it so happens that you
+have both inputs as 1, or you have both of them as 0, then, the
+operation will return 0.</p>
+<div class="poetry">
+<p>(3) Assignment Operators</p>
+</div>
+<p>The C language supports a number of assignment operators. Below are
+the assignment operators that C supports and how they work:</p>
+<table>
+<tbody>
+<tr>
+<td><p>Operator</p></td>
+<td><p>What The Operator Does</p></td>
+<td><p>Example</p></td>
+</tr>
+<tr>
+<td><p>=</p></td>
+<td><p>Allocates values from operands on the right to those on the
+left</p></td>
+<td><p>m = n</p></td>
+</tr>
+<tr>
+<td><p>+=</p></td>
+<td><p>Adds the value of the right operand to that of the left operand;
+then assigns the resultant value to the left operand</p></td>
+<td><p>m += n means that m = m + n</p></td>
+</tr>
+<tr>
+<td><p>-=</p></td>
+<td><p>Here it subtracts the value of the right operand from that of the
+left operand; then assigns the resultant value to the left
+operand</p></td>
+<td><p>m -= n means that m = m - n</p></td>
+</tr>
+<tr>
+<td><p>*=</p></td>
+<td><p>The left operand gets multiplied by the right operand; and the
+product is then assigned to the left operand</p></td>
+<td><p>m *= n means that m = m * n</p></td>
+</tr>
+<tr>
+<td><p>/=</p></td>
+<td><p>The value of the left operand is divided by that of the right
+one; then the result is assigned to the left operand</p></td>
+<td><p>m /= n means that m = m/n</p></td>
+</tr>
+<tr>
+<td><p>%=</p></td>
+<td><p>Here the operator takes the left and right operands and uses them
+in modulus calculation; then gets the result assigned to the left
+operand.</p></td>
+<td><p>m %= n means that m = m % n</p></td>
+</tr>
+</tbody>
+</table>
+<div class="poetry">
+<p>(4) Conditional Operator</p>
+</div>
+<p>This operator also goes by the term <span
+style="font-style: italic">ternary</span> operator. Conditional
+operators play the role of evaluating conditional expressions. See
+illustration below:</p>
+<table>
+<tbody>
+<tr>
+<td><p>Operator</p></td>
+<td><p>What The Operator Does</p></td>
+<td><p>Example</p></td>
+</tr>
+<tr>
+<td><p>?:</p></td>
+<td><p>An expression is provided; and the operator represents the
+condition that if expression 1 is true, value 1 is assumed; otherwise
+value 2 is taken.</p></td>
+<td><p>If condition true ? then value y, otherwise, value z</p></td>
+</tr>
+</tbody>
+</table>
+<div class="poetry">
+<p>(5) Special Operators</p>
+</div>
+<p>Each special operator is different from the others, each performing
+its unique function. Here below are the main special operators in the C
+programming language:</p>
+<table>
+<tbody>
+<tr>
+<td><p>Operator</p></td>
+<td><p>Operator’s Role</p></td>
+<td><p>Practical Example</p></td>
+</tr>
+<tr>
+<td><p>&amp;</p></td>
+<td><p>Locates the variable’s address</p></td>
+<td><p>&amp; y returns y’s actual address</p></td>
+</tr>
+<tr>
+<td><p>*</p></td>
+<td><p>Acts as actual pointer to the variable</p></td>
+<td><p>*y is the actual pointer to variable y</p></td>
+</tr>
+<tr>
+<td><p>sizeof</p></td>
+<td><p>Provides the variable size</p></td>
+<td><p>sizeof (y) returns variable y’s size</p></td>
+</tr>
+</tbody>
+</table>
+<p><span class="first-in-scene">P</span>recedence Of Operators In The C
+Programming Language</p>
+<p>In the use of C programming language, whenever terms are grouped in
+an expression, each of those terms is evaluated. As a result, some are
+given precedence over others depending on the operators therein. There
+are, obviously then, those operators that are accorded higher precedence
+over others. Just to cite a simple example, the operator of
+multiplication takes higher precedence over that of addition.</p>
+<p>Let us try another example:</p>
+<p>Given y = 5+3*4, what would you give as the answer?</p>
+<p>If you have no idea about precedence, you might be tempted to go the
+linear way, adding 5 to 3 and then multiplying their sum by 4; in which
+case you would have 32. However, this is not correct in C programming
+where the multiplication operator is higher in precedence than the
+addition operator. So the correct way is to multiply 3 by 4, whereby you
+will get their product as 12; then add 5 to 12 and you get 17. That is
+the same way you are expected to treat different operators within the
+same expression – according to the precedence each has in C.</p>
+<p>Below is a table showing the precedence of various operators in
+descending order:</p>
+<ol type="1">
+<li>Operators taking the highest precedence: number one overall:
+<ol type="a">
+<li>A suffix and postfix, being increment as well as decrement ; from
+left to right, that is, ++—</li>
+<li>A function call, which is, ()</li>
+<li>An operator of array subscripting, which is, []</li>
+<li>An operator of structure, as well as union member access, which
+is<span style="font-weight: bold">.</span></li>
+<li>An operator of structure as well as union member via pointer, and
+that is, -&gt;</li>
+<li>The compound literal or C99, which is, (type){list}</li>
+</ol></li>
+</ol>
+<div class="blockquote">
+<p>All the above operators have left to right associativity; or you can
+call it fixity. It is indication of how you are expected to understand
+precedence in each case even when no parenthesis is used.</p>
+</div>
+<ol type="1">
+<li>Operators taking the second position in precedence
+<ol type="a">
+<li>A prefix increment as well as decrement, both denoted by ++—</li>
+<li>Unary plus as well as minus, both denoted by +-</li>
+<li>The logical NOT as well as the bitwise NOT, both denoted by !~</li>
+<li>The type cast as denoted by (type)</li>
+<li>Indirection, or otherwise, dereference, represented by *</li>
+<li>Address-of, represented by operator, &amp;</li>
+<li>The size as denoted by <span
+style="font-style: italic">sizeof</span></li>
+<li>Requiring alignment, or otherwise, C11; and that is represented by
+<span style="font-style: italic">alignof</span></li>
+</ol></li>
+</ol>
+<p>The associativity of this category of operators is right to left.</p>
+<ol type="1">
+<li>These are the operators coming third in precedence</li>
+</ol>
+<p>They include operators of multiplication, of division, and any
+remainder; and they are considered from left to the right. They are
+denoted by */% and have associativity of left to right.</p>
+<ol type="1">
+<li>Here are operators taking fourth position in precedence. They
+comprise those of addition and also subtraction, as denoted by +-. Here
+too, associativity is from left to right.</li>
+<li>The operators taking precedence in this fifth position have
+associativity of left to right. They include the bitwise left shift as
+well as the right shift. The operators themselves are
+&lt;&lt;&gt;&gt;</li>
+<li>The operators taking this sixth position in precedence include
+relational operators, which are:
+<ol type="a">
+<li>&lt; as well as &lt;=</li>
+<li>&gt; as well as &gt;=</li>
+</ol></li>
+</ol>
+<div class="blockquote">
+<p>So, essentially, the operators in play are &lt;&lt;= and &gt;&gt;=
+with associativity of left to right. </p>
+</div>
+<ol type="1">
+<li>Seventh in order of precedence are other relational operators.</li>
+</ol>
+<div class="blockquote">
+<p>They are specifically ==!= and their associativity is also from left
+to right.</p>
+</div>
+<ol type="1">
+<li>Eighth in order of precedence is the bitwise AND, simply denoted by
+&amp;.</li>
+</ol>
+<p>This, too, has associativity of left to right.</p>
+<ol type="1">
+<li>Ninth in precedence is the exclusive bitwise operator OR.</li>
+</ol>
+<div class="blockquote">
+<p>This is the one denoted by the operator ^; and it has left to right
+associativity as well.</p>
+</div>
+<ol type="1">
+<li>Tenth in order of precedence is bitwise OR, which you can term the
+inclusive OR. It has left to right associativity also, and it is the one
+denoted by the operator, |</li>
+<li>Eleventh in line is the Logical AND. This one also has left to right
+associativity. It is denoted by &amp;&amp;.</li>
+<li>The logical OR follows in order of precedence in twelfth position.
+Its associativity is also left to right. This operator is denoted by
+||</li>
+<li>This operator that is thirteenth in precedence is the ternary
+conditional. It is denoted by [note 1] and its associativity is right to
+left.</li>
+<li>The operators that take fourteenth position happen to be simple
+assignment</li>
+</ol>
+<ol type="a">
+<li>This is an assignment of sum as well as difference and it is denoted
+by +=-=</li>
+<li>Another one is assignment involving product and quotient; as well as
+remainder. It is denoted by *=/=%=</li>
+<li>In, this category too is bitwise assignment, which happens to
+comprise the left as well the right shift. These are denoted by &lt;&lt;
+= &gt;&gt;</li>
+<li>There is also another bitwise assignment, and that involves there
+operators, which are AND, also XOR, and lastly OR; denoted as
+&amp;=^=|=</li>
+</ol>
+<ol type="1">
+<li>The last one in line, ranking 15th, is the comma, and its
+associativity is from left to right. It is denoted by ,</li>
+</ol>
+<p><span id="c009.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c009.xhtml__Toc452520170">Chapter 6:
+Making Decisions In C</span></h1>
+<p><span class="first-in-chapter">W</span>hat does decision making
+entail within the context of C language programming? Well, you need to
+know the best order to execute certain expressions or statements
+provided; or those you have personally designed.  There is a way you can
+lay out your statements and your program fails to return any usable
+results; possibly returning errors. Some sets of statements actually
+require repeating before they can meet the conditions needed. As a
+programmer, the reason you go to these lengths is to be able to make
+pertinent decisions relating to your programming. The true or false
+results that your program returns are very important because they come
+about through a thorough process of evaluation. Essentially what C does
+is help you weigh different conditions against one another, in a bid to
+solve one or more problems that you are faced with. </p>
+<p>As a programmer using C, you are expected to be able to specify one
+condition, or even more, which the program will evaluate and test. These
+are handled together with a given statement or a select set of
+statements, and they are then executed if the condition or conditions
+you specified prove to be true. Otherwise, if the condition or
+conditions do not prove to be true, meaning they are proven as false,
+the alternative statements may be executed.</p>
+<p>The C language handles decision making in a simple but organized
+manner. Here are statements that C supports for the sake of
+decision-making:</p>
+<div class="poetry">
+<p>(1) The <span style="font-style: italic">if</span>-statement</p>
+<p>(2) The <span style="font-style: italic">switch</span> statement</p>
+<p>(3) The <span style="font-style: italic">conditional operator</span>
+statement</p>
+<p>(4) The <span style="font-style: italic">goto</span> statement</p>
+</div>
+<p>How The <span style="font-style: italic">if</span>-Statement
+Works:</p>
+<p>This one comes in four different forms as shown below:</p>
+<ol type="a">
+<li>The simple one</li>
+</ol>
+<p>This one simply mentions one condition or supposition and states that
+something specific is going to happen if that supposition holds true.
+However, if that supposition does not hold true, the suggested thing
+does not occur; rather the situation becomes different. In programming,
+and in this case C, you need to put that situation in form of a
+statement, so that your program can evaluate the condition and execute
+commands appropriately.</p>
+<p>Here is how you express it:</p>
+<ul>
+<li>If (your chosen expression) {this inside statement;} this outside
+statement</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<ol type="a">
+<li>If...else</li>
+</ol>
+<p>In this statement, you have two specified possibilities, so that if
+your expression does hold true, your first statement works; or else,
+which essentially means your expression failing to hold true, your
+second statement works. You could also have a situation where, should
+the condition be true, the program executes a set of statements; and if
+the condition is not true, the program executes a different set of
+statements.</p>
+<p>Here is how you express it in readiness for execution:</p>
+<ul>
+<li><span style="font-style: italic">If (your chosen expression)
+{1</span><sup>st</sup><span style="font-style: italic"> statement;} else
+{2</span><sup>nd</sup><span style="font-style: italic"> statement
+2}</span></li>
+<li><span style="font-style: italic">If (your chosen condition)
+{1</span><sup>st</sup><span style="font-style: italic"> statement;
+2</span><sup>nd</sup><span style="font-style: italic"> statement;} else
+{3</span><sup>rd</sup><span style="font-style: italic"> statement;
+4</span><sup>th</sup><span style="font-style: italic">
+statement}</span></li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<ol type="a">
+<li>If...else; nested</li>
+</ol>
+<p>This one is very near like <span
+style="font-style: italic">if...else,</span> only that it has a third
+alternative statement. Here is a situation where you may find it
+necessary to insert an if-statement or <span
+style="font-style: italic">if...else</span> statement right within
+another.</p>
+<p>Here is how you express a nested if:</p>
+<ul>
+<li><span style="font-style: italic">If (your 1st condition) {1st
+statement ;) else _ if (your 2nd condition) {2nd statement ;} else
+3</span><sup>rd</sup><span style="font-style: italic"> statement.
+</span></li>
+</ul>
+<ol type="a">
+<li>Else...if ladder</li>
+</ol>
+<p>In this form of statement, you have your chosen expression tested
+starting from the upper part of the ladder and progressing downwards,
+and in the process trying to verify the condition present. Only if the
+condition is found as expected is the related statement executed.</p>
+<p>Points worth Noting:</p>
+<ul>
+<li>In C, values that are non-zero or non-null are the only ones that
+can hold true. So, for a value that is zero or even null, the program
+automatically returns results as false.</li>
+<li>You can have one single statement within the if-statement that is
+not enclosed in curly braces – {}</li>
+</ul>
+<div class="blockquote">
+<p>See this example:</p>
+<p>Int a = 6</p>
+<p>If (a &gt; 5)</p>
+<p>Printf (“success”)</p>
+<p>As you can see, no curly braces have been used in the above example,
+and none were needed. However, if the situation were different such that
+there was an additional statement within the <span
+style="font-style: italic">if</span>-condition, you would need to
+enclose those statements within curly braces.</p>
+</div>
+<ul>
+<li>The operators, == need to be used carefully to avoid confusion
+between it and the = operator. The only time you can use ==
+appropriately within an expression that has an <span
+style="font-style: italic">if</span>-condition is if you are making a
+comparison. Otherwise the = operator in such an environment executes an
+assignment; not at all a comparison.</li>
+<li>Anything you enter as condition in an if-statement will hold true if
+it is not a nil/zero (0) value</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+<p><span style="font-weight: bold">Example</span>:</p>
+<p>if (25)</p>
+<p>Printf (“hi”);</p>
+</div>
+<div class="poetry">
+<p>In this particular example, you can be sure to see <span
+style="font-style: italic">hi</span> printed.</p>
+</div>
+<div class="poetry">
+
+</div>
+<p>What you have been using all along as the syntax of the <span
+style="font-style: italic">if</span>-condition is the Boolean
+expression. And what, exactly, is the Boolean expression? Simple: It is
+the expression you use in programming to produce a Boolean value after
+evaluation. By value here we simply mean the <span
+style="font-style: italic">true</span> or <span
+style="font-style: italic">false</span> results we have mentioned
+elsewhere in the book. In actual fact, these two alternatives – <span
+style="font-style: italic">true</span> and <span
+style="font-style: italic">false</span> – are values of the Boolean data
+type. They are the outcome of logic when working with Boolean
+algebra.</p>
+<p>And what would we say Boolean algebra is? Well, it is simply a branch
+of algebra that deals with the variables of truth; denoting <span
+style="font-style: italic">true</span> and <span
+style="font-style: italic">false</span> in terms of <span
+style="font-style: italic">1</span> and <span
+style="font-style: italic">0</span> respectively, as the case may be.
+The first person to initiate this algebraic system that deals with logic
+mathematically went by the name of George Boole; the reason the
+terminologies of Boolean value, Boolean expression and so on are in use
+today. As you can deduce, being able to return values through logic is
+very important because it means any decision you are going to make on
+the basis of those values has a solid basis. It means you are certain
+what conditions are bound to work and which ones are bound to fail.
+Hence it is fair to say that C helps in making verified data based
+decisions. </p>
+<p>How the <span style="font-style: italic">switch</span>-Statement
+Works:</p>
+<p>Just like the if-statement, the switch statement also influences a
+program’s flow in case the condition being tested proves to be true. One
+thing you need to note about the <span
+style="font-style: italic">switch</span> statement is that it sometimes
+has varied conditions. The way it goes is that if the statement has a
+variable that meets the first condition contained in the <span
+style="font-style: italic">switch</span> statement, whatever command
+there is goes through and is executed. In fact, you can enter a default
+within a <span style="font-style: italic">switch</span> statement but it
+is not mandatory. In case you have included a default, and all the
+variables within the <span style="font-style: italic">switch</span>
+statement fail to meet the condition given, the default you have in
+place takes place. </p>
+<p>In practice, switch statements come in handy in solving problems of a
+multiple-option nature; especially when dealing with a program like a
+menu, where you have particular values associated with specific
+options.</p>
+<p>How the <span style="font-style: italic">conditional
+operator</span>-Statement Works:</p>
+<p>You can denote the conditional operator like this:?<span
+style="font-style: italic">: operator</span></p>
+<p>This is a statement that you can use in place of the <span
+style="font-style: italic">if...else</span> statement. Here is an
+example of the form this statement takes:</p>
+<p>Exp1 ? Exp2 : Exp3;</p>
+<p>Each of these – Exp1, Exp2 and Exp3 – is an expression on its own. It
+is important that you do not forget to put the colon in its right
+position as illustrated above.</p>
+<p>How to determine the value of any given expression within the
+statement:</p>
+<p>(i)  Evaluation of Exp1 takes place first.</p>
+<ul>
+<li>What happens if it is found to be true? Evaluation of Exp2
+immediately takes place. At the end of the day, it is the value of Exp2
+that is taken as the entire expression’s value.</li>
+</ul>
+<p>(ii) Evaluation of Exp1 takes place first.</p>
+<ul>
+<li>What happens if it is found to be false? Exp2 is ignored, and
+instead evaluation of Exp3 is immediately takes place. The resultant
+value of the entire expression is that of Exp3.</li>
+</ul>
+<p>How The <span style="font-style: italic">goto</span>-Statement
+Works</p>
+<p>This one actually alters the conventional sequence of C programming.
+It is known for instigating a jump on unconditional basis, to a location
+within the function where there is a labeled statement. What happens
+then is that you can easily lose trace of the program flow; and that is
+not a good thing as it makes it difficult for you to modify the program
+even if you so wanted.  Suffice it to say, there are experts who
+discourage programmers from using the <span
+style="font-style: italic">goto</span> statement.</p>
+<p><span id="c010.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c010.xhtml__Toc452520171">Chapter 7:
+The Role Of Loops In C Programming</span></h1>
+<p><span class="first-in-chapter">W</span>hat, exactly, is a loop?
+Within the context of C programming, a loop is that programming function
+that enables iteration of a statement, or of a condition, on the basis
+of specific boundaries. Incidentally, the way loops work is more or less
+similar across different programming languages.</p>
+<p>Notably, when you are working with a given statement, or with a set
+of instructions, execution continues until such a time as a specified
+boundary condition – the anticipated loop body – is met. Thereafter,
+repetitions of that initial cycle of operation can continue, involving
+the whole loop body, until execution of the entire code block is
+accomplished as required. Still, on the overall, you get statements
+being executed in a sequential order. In short, if you have more than
+one statement in the same function, the program executes the first
+statement first; the second one follows; and so on. It is worth noting
+that you can have different execution paths even when they are complex.
+The main reason loops are important in programming is that it is their
+statements that facilitate execution other statements severally.</p>
+<p>Different Loops And How They Work:</p>
+<ol type="1">
+<li>The while loop</li>
+</ol>
+<p>The <span style="font-style: italic">while loop</span> operates while
+a certain condition happens to be true, repeating a statement or set of
+statements. It actually performs the evaluation of the test expression.
+It then ensures the condition is tested before it can execute the loop
+body. However, if the test expression proves to be false, what follows
+is the termination of the <span style="font-style: italic">while
+loop</span>.</p>
+<p>This is how <span style="font-style: italic">while loop</span> syntax
+looks like:</p>
+<p>while (condition) {statement;}</p>
+<p>Note that the statement needs not be one; there could be more.</p>
+<ol type="1">
+<li>The <span style="font-style: italic">for loop</span></li>
+</ol>
+<p>In this loop, execution of the initialization statement occurs just
+once. What follows immediately after is the testing of the expression.
+If ever it is found false, returning zero (0), the loop gets terminated.
+However, in case the result returned is non-zero, meaning the test has
+proven the expression to be true, the codes within <span
+style="font-style: italic">for loop</span> are automatically executed.
+Also the expression gets an update. After several repetitions of this
+process, the expression being tested finally turns false. You need to
+note that you use <span style="font-style: italic">for loop</span>
+mostly when you have a known number of iterations.</p>
+<p>This is how <span style="font-style: italic">for loop</span> syntax
+looks like:</p>
+<p>For (init; condition; increment) {statement;}</p>
+<p>Here, too, the statement can be more than one.</p>
+<ol type="1">
+<li>Do...while loop</li>
+</ol>
+<p>This loop is works almost similarly to how the while loop works but
+for one difference. Its body gets executed even before it can check the
+test expression. It is only after that initial execution that the
+evaluation of the test expression takes place. In the event that the
+test expression is proven to be true, the do...while loop’s body gets
+executed once again. The repetition process then continues till such a
+time as the test expression returns a zero (0) value; meaning it turns
+false.</p>
+<p>This is how <span style="font-style: italic">do...while loop</span>
+syntax looks like:</p>
+<p>do { statement; } while ( condition );</p>
+<p>You need to take note of the position of the statement – not at the
+end as in other loops, but right at the beginning; preceding the
+condition. Reason...? As pointed out earlier, the statement within the
+<span style="font-style: italic">do...while loop</span> must, of
+necessity, execute at least one time before it is time to test the
+condition. Hence the condition in this loop comes last.</p>
+<ol type="1">
+<li>Nested loops</li>
+</ol>
+<p>You are dealing with nested loops when you find yourself with loops
+within the other loops already mentioned – the while; the do...while; or
+even the for loop.</p>
+<div class="poetry">
+<p>a)  This is how a <span style="font-style: italic">nested for
+loop</span> syntax looks like:</p>
+</div>
+<div class="blockquote">
+<p>for ( init; condition; increment ) { for ( init; condition;
+increment) { statement; } statement }</p>
+</div>
+<div class="poetry">
+<p>b)  This is how a <span style="font-style: italic">nested while
+loop</span> syntax looks like:</p>
+</div>
+<div class="poetry">
+<p>while (condition) { while (condition) {statement;} statement; }</p>
+</div>
+<div class="poetry">
+<p>c)  This is how a <span style="font-style: italic">nested do...while
+loop</span> syntax looks like:</p>
+<p>Do { statement; do { statement; } while (condition);</p>
+</div>
+<div class="poetry">
+
+</div>
+<ol type="1">
+<li>The infinite loop</li>
+</ol>
+<p>Would you envisage a situation where a given condition never has a
+chance of turning out false? Such are the situations that call for the
+use of the <span style="font-style: italic">for loop</span>. Of course,
+of the three for expressions, none will be required. So, what you end up
+with is an endless loop simply because your conditional expression will,
+certainly, be empty. That is how you end up with an endless – or <span
+style="font-style: italic">infinite</span> – loop. And just in case you
+feel like terminating your infinite loop, simply press the keys, <span
+style="font-style: italic">Ctrl + C</span> simultaneously.</p>
+<p><span id="c011.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c011.xhtml__Toc452520172">Chapter 8:
+Functions in C Programming</span></h1>
+<p><span class="first-in-chapter">H</span>ow would you define a
+function? Well, for the purposes of the C programming language, a
+function may be termed as that set of statements that perform tasks as
+one and not as independent statements. You will find a function in every
+C program, even if it is just a single one. Essentially what you always
+have is a main function. Other functions then come in as additions
+defined by trivial programs that may be present. If you so wish, you can
+look at a function as a code module that readily takes in information –
+the kind of information that comes in symbolic names conventionally
+referred to as parameters – then processes some computations, and often
+returns some fresh information. Of course, the information a function
+returns depends on the captured parameter information.</p>
+<p>Anything unique about the main function? Yes, there is. Although in
+handling you treat the main function just like any other function, it is
+unique in that it is the only function that the operating system needs
+working whenever you, as the computer user, begin running your program.
+In short, every time you begin running your machine, the first code to
+be executed is the main function.</p>
+<p>Here is how the main function structurally looks like:</p>
+<table>
+<tbody>
+<tr>
+<td><p>Int</p></td>
+<td><p>//if successful, expect to return a zero (0)</p></td>
+</tr>
+<tr>
+<td><p>Main ()</p></td>
+<td><p>//this is the place for the name, which, in this regard, is
+main</p></td>
+</tr>
+<tr>
+<td><p>{}</p></td>
+<td><p>//this is the place for numerous codes; being the function
+body</p></td>
+</tr>
+</tbody>
+</table>
+<p>In C, a code is divided into diverse functions and you can do the
+division as you wish. However, for the purpose of logic, you need to
+distribute your code amongst the functions at hand in a way that leaves
+every function performing a defined task. You actually need to take
+every C function as a major building block within your program. Simply
+put, every C program that you have working is written through the use of
+functions. This is done so that the program can be used repetitively and
+with consistent efficiency, and also to make it better understood.</p>
+<p>As you continue working on C programming, there are some terms that
+you will come across and you need to know their meaning in the relevant
+context. One of those terms is <span style="font-style: italic">function
+declaration</span>. What is it? </p>
+<p>Function declaration</p>
+<p>Do you recall what a function is? A function declaration, on its
+part, is responsible for instructing the compiler on the function name,
+the return type, as well as the function parameters. And the function
+body is actually derived from the function definition.</p>
+<p>Here is the form that a function definition generally takes in C:</p>
+<p>Return_type function_name( parameter list ) {function body}</p>
+<p>Here below are the components of a function definition, including the
+header and the body, which are the main parts:</p>
+<ol type="1">
+<li>Return type</li>
+</ol>
+<p>It is anticipated that a function will return a value; and it
+actually may. Now, that value is of a certain data type. That data type
+is what we refer to as <span
+style="font-style: italic">return_type.</span> However, as you may have
+already noted, there are some functions that go well within the program,
+yet they do not return a value. This is the scenario where we declare
+that the <span style="font-style: italic">return_type</span> is void –
+<span style="font-style: italic">void</span> being one of C’s
+keywords.</p>
+<ol type="1">
+<li>Function name</li>
+</ol>
+<p>This is the exact function’s name.</p>
+<ol type="1">
+<li>Parameters</li>
+</ol>
+<p>First of all you need to realize that you do not have to work with
+parameters when it comes to functions in C programming. However, when
+you have them, it is important to know what they constitute. You can
+actually take a parameter the way you do a placeholder. What happens is
+that the minute you initiate a function, you give the parameter some
+value. It is this value that you can cite as being the actual parameter;
+or alternatively, the argument.</p>
+<p>From the parameter, you get a parameter list; and this one is in
+reference to the type; the order; as well as the actual number of
+parameters the function has. If you then add your parameter list to the
+function name, what you get is the function signature.</p>
+<ol type="1">
+<li>Function body</li>
+</ol>
+<p>When it comes to the function body, what you will find in it is an
+assembly of statements defining what the actual function is all
+about.</p>
+<p>Why Use C Functions?</p>
+<p>Let us summarize why it is important to use C functions:</p>
+<div class="blockquote">
+<p>a)  To save yourself the repetitive task of re-writing the program’s
+code or logic</p>
+<p>b)  You can call on the C functions any time you need a similar
+functionality</p>
+<p>c)  You always have access to the program anywhere and anytime,
+thanks to the functions that keep the program stable and working
+consistently even when your machine is off.</p>
+<p>d)  Functions make it possible and easy for you to track a huge C
+program. This is because you are not faced with plain massive data but
+data that is broken down in logical functions.</p>
+</div>
+<p>How C Function Works</p>
+<p>The C function has three distinct aspects, namely:</p>
+<div class="blockquote">
+<p>(i)  The prototype, which you can also term function declaration.</p>
+<p>What this one does is keep the compiler informed on the issues of
+function name; the function parameters; as well as the return value of
+the data type. The syntax for the function declaration is:</p>
+<p>return_type function_name ( argument list );</p>
+<p>(ii)  The function call</p>
+</div>
+<p>This is the caller of the real function. Its syntax is:</p>
+<p>function_name ( arguments list );</p>
+<div class="poetry">
+<p>(iii)  The function definition</p>
+</div>
+<p>This is where you find the entire set of statements requiring
+execution. The syntax for the function definition is:</p>
+<p>return_type function_name ( arguments list ) { body of function;
+}</p>
+<p>You need to remember that it is important to declare a function and
+to clearly define it before you can proceed to call in a C program.</p>
+<p>Calling a C function</p>
+<p>When it comes to calling a C function within a program, the best way
+to go about it is:</p>
+<div class="poetry">
+<p>(i)  Calling it by value</p>
+<p>(ii) Calling it by reference</p>
+</div>
+<p>Calling a C Function By Value</p>
+<div class="blockquote">
+<p>(i)  When it comes to calling a C function by value, you have the
+variable’s value passed right to the C function in its parameter
+state.</p>
+<p>(ii)  As you make your call, you need to note that you cannot modify
+the real parameter value through the formal parameter.</p>
+<p>(iii)  It is important to appreciate during your calling of the C
+function that the actual parameter and the formal parameter have varying
+memory.</p>
+</div>
+<p>You also need to take note of the difference between the actual
+parameter and the formal parameter. Here lies the primary
+difference: </p>
+<ul>
+<li>The actual parameter is effectively the one used in the course of a
+function call.</li>
+</ul>
+<p>The formal parameter happens to be the argument that you use within
+the function definition.</p>
+<p><span id="c012.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c012.xhtml__Toc452520173">Chapter 9:
+Structures and Union in C</span></h1>
+<p><span class="first-in-chapter">T</span>he general meaning of C
+structures as represented by the C keyword, <span
+style="font-style: italic">struct</span>, is a data type declaration of
+a complex nature, which defines a variable list whose items are grouped
+under a single name within a memory block. It makes it convenient to
+reach individual variables through just one pointer.</p>
+<p>As such, when we speak of structures in the C programming language
+context, we are referring to a data type that is user defined, and which
+facilitates combination of data items that are varied in nature.
+Structures effectively stand for records just the same way you safeguard
+literature in libraries. This enables you to track down details about
+the book title, the author and such other pertinent details.</p>
+<p>Here is the syntax of struct:</p>
+<p>Struct <span style="font-style: italic">structure_name {
+//statements};</span></p>
+<p>In case you want a C structure that reflects the dictionary name, its
+prices as well as its number of pages, you could have it as follows:</p>
+<p>Struct <span style="font-weight: bold">Dictionary </span><span
+style="font-style: italic">{ char name [15]; int price; int pages;
+};</span></p>
+<p>How To Define C Structure</p>
+<p>It is necessary to utilize the <span
+style="font-style: italic">struct</span> statement in defining the
+structure of the C language, a statement that is good at defining fresh
+data type that happens to have in excess of one member. Important to
+note too is the fact that it is optional to use a structure tag. As you
+do your definition, you need to appreciate that every member definition
+is an ordinary variable definition, as exemplified by <span
+style="font-style: italic">int i; float f,</span> and such other valid
+definitions that are variable based. Before you insert the semi-colon,
+you are at liberty to specify additional structure variables. Being at
+liberty, of course, means that you do not have to.</p>
+<p>When you want to declare structure variables, remember it is all
+right and doable to declare the variables after you have completed
+defining the structure itself. Act</p>
+<p>Declaring Structure Variables</p>
+<p>It is possible to declare variables of a <span
+style="font-weight: bold">structure</span>, after the structure is
+defined. <span style="font-weight: bold">Structure</span> variable
+declaration is similar to the declaration of variables of any other data
+types. Structure variables can be declared in following two ways.</p>
+<p>Getting Access To Structure Members</p>
+<p>How do you access structure members? You accomplish this by using
+what is known in C as <span style="font-style: italic">member access
+operator</span>, which is coded as period (.). That code exists right
+between the name of the structure variable and the very structure member
+you are trying to have access to. The keyword to use in trying to define
+any variable of the structure kind is <span
+style="font-style: italic">struct</span>. </p>
+<p>Just to alert you, a structure can pass for a function argument in C,
+just as you do with other variables or even pointers. Here is an
+example:</p>
+<div class="poetry">
+<p>#include &lt;stdio.h&gt;</p>
+</div>
+<p>Relating Pointers With Structures</p>
+<p>It is also possible to define a pointer to a structure just as you
+are able to define a pointer to a variable of any kind. Here is a
+fitting example:</p>
+<div class="poetry">
+<p>struct dictionaries * struct _pointer;</p>
+</div>
+<p>Hereafter you can always store the particular address associated with
+a structure variable within the pointer variable just defined above.
+What you need to do in order to locate the actual address associated
+with a structure variable is to place the operator, &amp;, right before
+the name of the structure.</p>
+<p>Here below is a fitting example:</p>
+<p>Struct_pointer = &amp;dictionaries1;</p>
+<p>To succeed in accessing the members of any structure by use of a
+pointer associated with the structure, you need to make use of operator,
+<span style="font-style: italic">-&gt;</span>.</p>
+<p>Here below is a suitable illustration:</p>
+<div class="poetry">
+<p>struct_pointer-&gt;title;</p>
+</div>
+<p>Bit Fields</p>
+<p>What are they? Bit fields is generally a term applied, within the
+computer programming arena, to encompass storage of multiple neighboring
+bits that bear logic; also in situations where sets of bits as well as
+single bits are easily addressed. The bit field often represents
+integral kinds of already known bit=width, one that is fixed in
+nature.</p>
+<p>Another thing you need to know about bit fields is that they
+facilitate data packing within a structure. This comes in handy
+particularly in times when data storage or the memory in general, is at
+a real premium. You will find more details pertaining to bit fields
+later in the book.</p>
+<p>Union in C</p>
+<p>Do you recall that a computer has storage space in which to store
+data? Now that is very central in explaining what union in the C
+programming language is because union happens to be some special data
+type, which facilitates taking into the computer memory varied data
+types. In C, union is almost similar to structure; actually being more
+like a derived mode of structure. In fact, the main difference you will
+see is in the definition, and only on the part of the keyword. Whereas
+you use <span style="font-style: italic">struct</span> when defining
+structure in C, with union in C the keyword you use is <span
+style="font-style: italic">union</span>.</p>
+<p>Still, you need to note that even when the union comes with a number
+of members, it is only one of them that can bear value at any one time.
+Suffice it to say, it is the union, this special data, which enables the
+memory to work with efficiency even as it handles different tasks.</p>
+<p>You can define a union this way:</p>
+<div class="poetry">
+<p>union car { char name [20] ; int price ; } ;</p>
+</div>
+<p>In order to appreciate better what a union is, you need to take the
+union statement into account, where you will notice the new data type
+being laid out with its numerous members, all helping in running your
+program.</p>
+<p>Below is the union statement format:</p>
+<div class="blockquote">
+<p>Union [union tag] { member definition; member definition; ... member
+definition; } [a single or several union variables];</p>
+</div>
+<p>Something else you need to note is that it is optional for you to use
+a union tag. You also need to know that every one of your member
+definitions is basically an ordinary variable definition, such as, <span
+style="font-style: italic">int i; float f;</span> or any of those other
+variable definitions that are valid. </p>
+<p>How would you define data of a union type that bears three members,
+<span style="font-style: italic">i, f,</span> as well as <span
+style="font-style: italic">str</span>?</p>
+<p>To accomplish this, you need first of all to have it clear in your
+mind that the minute you finalize the definition of the union, and even
+before you can insert your ending semi-colon, there is room to specify a
+union variable, or even multiple of them. Note you have room to do that
+but you are not obliged to do it – it remains optional.</p>
+<p>Here is how you define the data with three members:</p>
+<div class="poetry">
+<p>union data { int i; float f; char str[20]; } data;</p>
+</div>
+<p>What becomes clear is that your data type variable is capable of
+storing an integer, a floating point number, and sometimes even a whole
+string of characters. So you end up having that one variable that is,
+certainly, in a single memory location, being utilized as storage for
+multiple data types. Gladly, it is possible for you to utilize a built
+in data type of your choice, or a user defined data type within a union,
+all depending on the prevailing requirement.</p>
+<p>Another important thing to know is that you need not worry about
+accommodation of a large union member because the memory a union
+occupies happens to be sufficient to accommodate the largest of your
+union members.</p>
+<p>If you consider the example provided immediately above, the data type
+is ready to occupy memory space of 20 bytes; reason being that 20 bytes
+happens to be the maximum space that a character string can occupy. If
+you would like to know the size of the entire memory that the above
+union has occupied, here it is:</p>
+<div class="blockquote">
+<p>#include &lt;stdio.h&gt; #include &lt;string.h&gt; union data { int
+I; float f; char str[20] }; int main( ) { union data data; printf( “data
+occupied memory size : %d\n, sizeof(data)); return 0; }</p>
+</div>
+<p>When whatever is up here above, meaning the code, has been duly
+compiled and actually executed, the result you receive is very simple.
+Here it is:</p>
+<div class="poetry">
+<p>data occupied memory size : 20</p>
+</div>
+<p>How To Access Union Members</p>
+<p>In order to access a union member, what you use is what is referred
+to as member access operator. And while this might sound technical, the
+member access operator is simple to understand because it is coded, (.)
+– a period. This period appears right between the name of the union
+variable and the select union member; the one you are trying to access.
+In defining union type variables, the keyword you need to use is <span
+style="font-style: italic">union</span>.</p>
+<p>Illustration on using unions within your program:</p>
+<div class="blockquote">
+<p>#include &lt;stdio.h&gt; #include &lt;string.h&gt; union data { int
+i; float f; char str[20]; }; int main( ) { union data data; data.i = 10;
+data.f = 220.5; strcpy( data.str, “C programming”); printf( data.i:
+%d\n”, data.i); printf( data.f : %f\n”, data.f); printf( “data.str :
+%s\n”, data.str); return 0; }</p>
+</div>
+<p>However, the way this illustration is, the members of the union,
+<span style="font-style: italic">i</span> and <span
+style="font-style: italic">f,</span> could have their values corrupted
+because the final value has taken up the entire memory. You could get
+the following results after code compilation and execution:</p>
+<div class="poetry">
+<p>data.i : 1917853763</p>
+<p>data.f : 4122360580327794860452759994368.000000</p>
+<p>data.str : C Programming</p>
+</div>
+<p>Solution...? Use one member at a time.</p>
+<p>Illustrating how best to use unions within your program:</p>
+<div class="blockquote">
+<p>#include &lt;stdio.h&gt; #include &lt;string.h&gt; union data { int
+i; float f; char str[20]; }; int main( ) { union data data; data.i = 10;
+data.f = 220.5; strcpy( data.str, “C programming”); printf( “data.str :
+%s\n”, data.str); return 0; }</p>
+</div>
+<p>In this latter illustration, you have opted to use one member only,
+giving it priority, and as a result, you will have every union member
+now printed properly. After the code has been compiled and also
+executed, here is the result you are bound to receive:</p>
+<div class="poetry">
+<p>data.i : 10</p>
+<p>data.f : 220.500000</p>
+<p>data.str : C Programming</p>
+</div>
+<p><span id="c013.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c013.xhtml__Toc452520174">Chapter
+10: Bit Fields and Typedef Within C</span></h1>
+<p><span class="first-in-chapter">B</span>its are essential in managing
+data storage in your machine. That is the reason structure, as well as
+union members, has their sizes specified in bits. What you want is to be
+able to utilize the storage at your disposal as efficiently as possible
+because it is in no way infinite. It is limited in scope and capacity
+and you need to be able to operate successfully within the limited
+range.</p>
+<p>Take a situation where the C program you have has some variables that
+are either true or false, and they are all grouped in a single structure
+named status. In short, suppose you had the structure looking like the
+illustration below:</p>
+<div class="blockquote">
+<p>struct { unsigned int widthValidated; unsigned int heightValidated; }
+status;</p>
+</div>
+<p>Bit Field Storage</p>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>Ordinarily what you do is establish the variables within a structure,
+thereafter you define each variable’s width, and that informs the C
+compiler the precise number of bytes you need to utilize. Here is an
+example of how you can write the structure from the illustration
+above:</p>
+<div class="blockquote">
+<p>Struct { unsigned int widthValidated : 1; unsigned int
+heightValidated : 1; } status;</p>
+</div>
+<p>To be clear, you need in total 4 bytes for the status variable’s
+memory space. However, practically, you are only going to use up 2 bits
+because they are sufficient to store the values you have in the
+illustration above. In C, classes as well as structures can have some
+members occupying less storage space than a major type. Such are the
+members referred to as bit fields.</p>
+<p>Bit field can be used to reduce memory consumption with the knowledge
+that it is only some bits which will be used for the variable. Bit
+fields allow efficient packaging of data in the machine memory.</p>
+<p>The obvious fact is that an integer takes two bytes (16-bits) in
+memory. Sometimes we need to store value that takes less than 2-bytes.
+In such cases, there is wastage of memory. For example, if we use a
+variable temp to store value either 0 or just 1. In our current
+scenario, only a single bit of memory is going to be used rather then
+16-bits. By using bit field, we can save lot of memory.</p>
+<p>What you use for creating bit fields in C include <span
+style="font-style: italic">unsigned int; signed int,</span> and
+sometimes <span style="font-style: italic">Bool</span> when it comes to
+C99. You begin by setting up your bit field using structure declaration,
+which basically labels every field and also ascertains what its width
+is. After this, the compiler packs all the bit fields in adjacent
+location and which are of uniform type, and ends up reducing the number
+of words. This subsequently drastically reduces the storage space
+required for the bit fields. In short, you can credit the bit fields
+with allowing data packing into a structure.</p>
+<p>For instance:</p>
+<ul>
+<li>Numerous objects can be packed to form a machine word. For example,
+it is possible to compact 1-bit flags</li>
+<li>It is also possible to read file formats of a non-standard nature;
+or those with external file formats. A good example is reading 9-bit
+integers.</li>
+</ul>
+<div class="blockquote">
+<p>The way the C programming language enables this is through structure
+definition, where you can put: bit length somewhere following the
+variable.</p>
+</div>
+<p>A suitable illustration:</p>
+<div class="blockquote">
+<p>struct packed_struct { unsigned int f1:1; unsigned int f2:1 unsigned
+int f3:1; unsigned int f4:1; unsigned int type:4; unsigned int my_int:9;
+} pack;</p>
+</div>
+<p>There are six members in total in the above illustration. They
+include four 1-bit flags, which are f1, f2 as well as f3; a single 4-bit
+type; and also one 9-bit <span style="font-style: italic">my_int</span>.
+It is C that then conveniently packs those bit fields in a compact
+manner.</p>
+<p>It is important to know also that C allocates bit fields within
+integers starting from the one that is least significant to the one that
+is most significant. Let us observe the code below:</p>
+<div class="blockquote">
+<p>struct mybitfields unsigned a : 4; unsigned b : 5; unsigned c : 7; }
+test; int main( void ) { test.a = 2; test.b = 31; test.c = 0;</p>
+</div>
+<p>This is how C would arrange the bits:</p>
+<div class="poetry">
+<p>00000001 11110010</p>
+<p>cccccccbbbbbaaaa</p>
+</div>
+<p>Typedef Within C</p>
+<p>Are you familiar with the tact of using an alias? While that may be
+common to people, it is not practically confined to human folk. The C
+language has a way of creating aliases for data types; and <span
+style="font-style: italic">typedef</span> is the keyword that helps in
+this process. Essentially what happens is that you give an entirely new
+name to your chosen data type. Sometimes the type name represented is a
+complex one.</p>
+<p>Here below is an example:</p>
+<p>You are required in this instance to provide a definition for the
+term, byte, for 1-byte numbers. The definition is:</p>
+<div class="poetry">
+<p>typedef unsigned char BYTE;</p>
+</div>
+<p>The important part that follows now is that you can now use <span
+style="font-style: italic">BYTE</span>, which is, in this position, an
+identifier, taking it to be the abbreviation for the data type shown as
+<span style="font-style: italic">unsigned char</span>.</p>
+<p>What you would have after processing is complete is:</p>
+<div class="poetry">
+<p>BYTE b1, b2;</p>
+</div>
+<p>The uppercase in BYTE stands out. Why do we use the uppercase as
+opposed to the lowercase? Simple: It has always been the custom.
+However, this is not all. It is helpful to use the uppercase so that you
+are always reminded that this type name is actually symbolic – symbolic
+abbreviation. Still, nothing prevents you from writing your symbolic
+abbreviation in lowercase. In short, if you so wish, you could write
+your abbreviation as:</p>
+<div class="poetry">
+<p>Typedef unsigned char byte</p>
+</div>
+<p><span style="font-style: italic">Typedef</span> is also used to
+provide a name for data types that happen to be user-defined. You may,
+for instance, use a structure based <span
+style="font-style: italic">typedef</span> in defining an entirely new
+data type. Thereafter, you use the fresh data type in defining structure
+variables.</p>
+<p>Comparing <span style="font-style: italic">typedef</span> to <span
+style="font-style: italic">#define</span></p>
+<p>The big question is: what is <span
+style="font-style: italic">#define</span> first of all? Only after we
+know what it is can we make a good comparison. <span
+style="font-style: italic">#define</span> is actually a C-directive.
+Next thing you should know is that it is also used in defining aliases
+for different data types. Can we call that a similarity with <span
+style="font-style: italic">typedef</span>? Sure, we can.</p>
+<p>So, where does the difference between <span
+style="font-style: italic">typedef</span> and <span
+style="font-style: italic">#define</span> lie?</p>
+<p>Well, you will find more than one difference when you compare <span
+style="font-style: italic">typedef to #define</span>. Here are the
+differences:</p>
+<ul>
+<li>Remember <span style="font-style: italic">typedef</span> provides
+symbolic names for data types? Although #define does this as well, it
+goes further to provide aliases for data values also. Incidentally, this
+is as simple as defining <span style="font-style: italic">1</span> as
+simply <span style="font-style: italic">ONE</span>.</li>
+<li>You will find the other difference right within the processing. In
+C, it is the compiler that determines what your <span
+style="font-style: italic">typedef</span> is all about; performing its
+interpretation. However, when it comes to your #define statements, it is
+the pre-processor that does the processing.</li>
+</ul>
+<p>How would you use $define within your program?</p>
+<p>Here is a good example:</p>
+<div class="blockquote">
+<p>Include &lt;stdio.h&gt; #define TRUE 1 #define FALSE 0 int main( ) {
+printf( “Value of TRUE : %d\n”. TRUE); printf( “Value of FALSE : %d\n”.
+FALSE); return 0; }</p>
+</div>
+<p>What is the result after compilation as well as execution of the
+code? Here it is:</p>
+<div class="poetry">
+<p>Value of TRUE : 1</p>
+<p>Value of FALSE : 0</p>
+</div>
+<p><span id="c014.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c014.xhtml__Toc452520175">Chapter
+11: Input Output (I/O) In C</span></h1>
+<p><span class="first-in-chapter">I</span>s this, by any chance, the
+conventional input and output that are found in various processes? Well,
+the input and output here may well be associated with a process, but
+they are not necessarily conventional in the real sense. In C, the two
+happen to be facilitated by some functions that are in-built within the
+program; the functions being <span
+style="font-style: italic">printf()</span> and also <span
+style="font-style: italic">scanf(). </span></p>
+<p>In order to appreciate what input means in C, after mentioning that
+it is the act of feeding data right into your program, you need to know
+that input sometimes comes as a file. Other times it emerges from some
+command line.</p>
+<p>As far as output goes, you will be right to associate it with what
+you see on your computer screen; what comes out through your printer; or
+in general whatever data that comes into any of your files. When your
+data that has become your output does not appear on your screen, it is
+often saved within your computer in form of text or what is referred to
+as binary files.</p>
+<p>One thing you need to know is that every time you have a program
+running that calls for the use of your keyboard or even your screen,
+certain three files automatically open. In fact, the C program has a way
+of treating every device as a computer file even when all you are
+interested in is displaying some data.</p>
+<p>Incidentally, what do we name as file in C programming? In simple
+language, what you refer to as file is some disk space where you store
+grouped data. You could also look at a file as representing some byte
+sequence, irrespective of whether the file happens to be text or
+binary.</p>
+<p>Why have files, anyway? Simple – to ensure your data is well
+preserved for use at a later time. If you terminate a computer program
+and you happen not to have a file, all the data you have been looking
+at, and probably working with, will be lost. However, once you create
+your file, your data remains intact all through, and all you need to do
+is give your computer a few simple commands and your file appears. In C,
+what you are bound to find in plenty are functions.</p>
+<p>Here are two main categories of the high level Input/Output
+functions:</p>
+<div class="poetry">
+<p>(1) The text file</p>
+<p>(2) The binary file</p>
+</div>
+<p>The file functions in C are not complicated, so you will find them
+easy to learn. At all times, you need to get in touch with the <span
+style="font-style: italic">stdio</span> library for your functions to
+succeed. Of course, you have already seen it used in examples provided
+in earlier chapters of this book. The question at this juncture is: what
+exactly is in the <span style="font-style: italic">stdio</span> library?
+Well, what you may actually be interested in that is stored in the <span
+style="font-style: italic">stdio</span> library are the file functions
+involving input as well as output.</p>
+<p>––––––––</p>
+<p><span class="first-in-scene">H</span>ere they are below:</p>
+<div class="blockquote">
+<p>(i)  Fopen</p>
+<p>This one performs the function of opening your text file. You may
+find this prototype from <span style="font-style: italic">fopen</span>
+helpful:</p>
+<p>FILE *fopen( const char * filename, const char * mode );</p>
+<p>(ii) Fclose</p>
+<p>This is the one that performs the function of closing your text
+file</p>
+<p>(iii)  Feof</p>
+<p>This one performs the function of detecting your end-of-file marker
+in the file</p>
+<p>(iv)  Fscanf</p>
+<p>The function performed by this one is reading the input from your
+file that happens to be formatted</p>
+<p>(v) Fprintf</p>
+<p>This one does the function of printing the file output that happens
+to be formatted</p>
+<p>(vi)  Fgets</p>
+<p>This one undertakes the function of reading any string your file
+contains</p>
+<p>(vii)  Fputs</p>
+<p>This one performs the function of printing any string required into
+your file</p>
+<p>(viii) Fgetc</p>
+<p>This is the one that performs the function of reading characters
+right from your file</p>
+<p>(ix)  Fputc</p>
+<p>This is the one that does the function of printing characters right
+into your file</p>
+</div>
+<p>Dealing With File Opening  In Case Of I/O Text File</p>
+<p>This is the function denoted by <span
+style="font-style: italic">Fopen.</span> It is important that you know
+that besides opening your text file, this function utilizes a specific
+mode as it undertakes file opening. The three modes it often uses
+are:</p>
+<ul>
+<li>Read, denoted as <span style="font-style: italic">r</span></li>
+<li>Write, denoted as <span style="font-style: italic">w</span></li>
+<li>Append, denoted as <span style="font-style: italic">a. </span></li>
+</ul>
+<p>There are other modes besides the three already named, and they are
+as follows:</p>
+<ul>
+<li>The one used for reading as well as writing and is denoted as
+mode<span style="font-style: italic"> r+</span></li>
+<li>The one that does the opening of the text file for the purposes of
+reading as well as writing; proceeds to truncate it so that it reduces
+to a length of zero; or if no file exists proceeds to create one. This
+is the mode referred to as <span style="font-style: italic">w+.
+</span></li>
+<li>This is the mode credited with opening your text file for reading as
+well as writing; and beyond that it engages in creating a file where
+none exists. On top of those functions borne by this same mode, it
+enables reading right from the beginning while only facilitating
+appending when it comes to writing.</li>
+</ul>
+<p>The way text file opening works is by the <span
+style="font-style: italic">fopen</span> statement opening file,
+“output.txt” within the write or w-mode. In cases where the function
+finds the file not existing, the file gets created.</p>
+<p>However, you need to be cautious not to try creating a file when
+another one is in existence because if you do, the existing file gets
+destroyed and you are left with the new one.</p>
+<p>As for the <span style="font-style: italic">fopen</span> command, it
+function is to return a pointer to your file, and that gets stored
+within the variable <span style="font-style: italic">ptr_file</span>.
+Just in case your file fails to open, you get the variable ptr_file
+returning <span style="font-style: italic">NULL.if(!ptr_file).
+</span></p>
+<p>What then assesses if your file has opened is the <span
+style="font-style: italic">if-statement</span>, and that is executed
+only after <span style="font-style: italic">fopen</span> performs its
+function. How do you tell if or not your file has opened? Well, you will
+observe the program returning a one (1) in case <span
+style="font-style: italic">fopen</span> failed in its function of
+opening the file. Of course, this then becomes your indication that
+something is amiss and needs addressing.</p>
+<p>––––––––</p>
+<p><span class="first-in-scene">R</span>eading your text file in C</p>
+<p>The function that reads your file content is the <span
+style="font-style: italic">fgets</span>; but that is only after you have
+successfully opened your file in <span
+style="font-style: italic">read</span> or <span
+style="font-style: italic">r-mode. </span>The <span
+style="font-style: italic">fscanf</span> function is also helpful in
+this situation, and that is on condition your file is well
+formatted.</p>
+<p>When you want to prepare a file for reading, you open the file as
+<span style="font-style: italic">“input.txt”,</span> and the function
+you apply for this purpose is <span
+style="font-style: italic">fopen</span>; the mode being read mode or
+r-mode. The process involves <span
+style="font-style: italic">fgets</span>, which is essentially a library
+function, reading every line comprising not more than 1,000 characters.
+Then in case <span style="font-style: italic">fgets</span> is successful
+in executing the function, which means it has read all the lines in the
+text file and reached the end of file, otherwise referred to as EOF, the
+value you should expect to see returned by <span
+style="font-style: italic">fgets</span> is NULL. What follows thereafter
+is the printing of every line on <span
+style="font-style: italic">stdout</span>, ordinarily on your screen, and
+it goes on till EOF comes. At this juncture, you would be fine
+instigating the closing command to bring the program to a successful
+end.</p>
+<p>Dealing With File Closing: <span
+style="font-style: italic">Fclose(Ptr_File) </span></p>
+<p>The fclose statement closes the text file for you. If what you are
+doing is writing files, you should not expect this function to take
+place before you initiate it. So it is for you to instigate the <span
+style="font-style: italic">fclose</span> command at the time you deem
+appropriate. Something else, if in the course of typing your command you
+omit ‘f’ and type only ‘close’, the function will not operate. It is
+worth noting that the <span style="font-style: italic">close</span>
+command is entirely different from <span
+style="font-style: italic">fclose</span> in C programming.</p>
+<p>You need to note that the <span
+style="font-style: italic">fclose</span> function, or <span
+style="font-style: italic">fclose(),</span> ordinarily returns a zero
+whenever it is successful. However, whenever it encounters an error
+while attempting to close the file, the result it returns is <span
+style="font-style: italic">EOF</span>. This EOF, though meaning End of
+File, happens to be also a constant, which is defined within <span
+style="font-style: italic">stdio.h</span>, a file in the header. There
+is also something else that this function does besides closing your file
+– it does flush any pending data, the one remaining in the buffer, and
+sends it into the file before closing the file.</p>
+<p>Any danger if files fail to close in the right manner? Sure! If the
+affected files happen to be many, you run the risk of your program
+crashing. This is after failing to locate any remaining file handles,
+and probably, running out of memory space.</p>
+<p>Dealing With <span style="font-style: italic">Printf</span></p>
+<p>When it comes to the printf statement, you should not expect to see
+the newline, <span style="font-style: italic">\n</span>, anywhere within
+the format string. The newline is rendered redundant by virtue of the
+<span style="font-style: italic">fgets</span> function adding the
+newline, <span style="font-style: italic">\n</span>, to each line end
+after reading it.</p>
+<p><span id="c015.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c015.xhtml__Toc452520176">Chapter
+12: C Header Files and Type Casting</span></h1>
+<p><span class="first-in-chapter">W</span>hat, exactly, is a header
+file? It is an important file in C programming, as it contains
+declarations as well as macro definitions, and those are shared amongst
+a good number of source files. What you do when you want to reach a
+header file in C is ensure you have included it in your pre-processing
+command or directive that you issue; and that is by typing <span
+style="font-style: italic">‘#include’. </span>It is actually the same
+way you see the header file that comes with the C compiler having <span
+style="font-style: italic">stdio.h. </span></p>
+<p>The header file has an extension that is denoted as .h and it is the
+one that bears the declarations of the C function as well as the macro
+definitions. Headers in C come in two types, namely:</p>
+<ul>
+<li>Programmer written files</li>
+<li>Compiler attached files</li>
+</ul>
+<p>When you include a header file, the impact of it is equivalent to
+having the header file content copied. Even then, you are discouraged
+from attempting to copy a header file’s content because you would be
+risking creating many errors. The danger is particularly high in cases
+where your source files are many within the program.</p>
+<p>Instead of attempting to work on the content in the header file, you
+need to adopt the accepted and widely used practice of keeping a select
+set of items in your header files. Those C items include:</p>
+<ul>
+<li>The constants</li>
+<li>The macros</li>
+<li>The global variables for the system</li>
+<li>The function prototypes</li>
+</ul>
+<p>With these properly secured within the header file, you are at
+liberty to include that particular header file as and when you need
+to.</p>
+<p>How The <span style="font-style: italic">include syntax</span>
+Works</p>
+<p>In the working of the pre-processing directive, #include, you as the
+user, and your system header files, are brought together by the program.
+These are the two forms that the directive takes:</p>
+<div class="poetry">
+<p>a)  #include &lt;file&gt;</p>
+</div>
+<p>What this directive initiates is a search through specific system
+directories contained in a standard list. This search is meant to track
+down a file that bears the name, <span
+style="font-style: italic">file</span>. As a programmer, you are at an
+advantage as you can also pre-pend directories to the existing standard
+list. The way to do this is by using the –I option as you compile your
+own source code. </p>
+<div class="poetry">
+<p>b)  #include “file”</p>
+</div>
+<p>This happens to be the form you are meant to use for your header
+files whenever you are writing using own program. What it does is search
+for a specific file that goes by the name of file, and the place it
+searches is right within the directory with your current file. Here,
+too, you can pre-pend your directories to the list with the existing –I
+option as you compile your own source code. </p>
+<p>How The <span style="font-style: italic">include operation</span>
+Works</p>
+<p>This one, which you may also refer to as the <span
+style="font-style: italic">#include</span> directive, works by simply
+guiding the C pre-processor into scanning some specific file as your
+input, and then proceeding to work with the remaining part of the source
+file which is current.</p>
+<p>As for the pre-processor output, it has varied categories of output
+as follows:</p>
+<ul>
+<li>The output generated at program initiation</li>
+<li>Output emanating from the file you have included</li>
+<li>Output emanating from text following execution of the <span
+style="font-style: italic">#include</span> directive</li>
+</ul>
+<p>Let us take the example of a header file, say, <span
+style="font-style: italic">header.h</span>:</p>
+<div class="poetry">
+<p>char *test (void);</p>
+</div>
+<p>And the main program using the header file is named <span
+style="font-style: italic">program.c</span></p>
+<p>This is generally what you would comprehensively have:</p>
+<div class="poetry">
+<p>int x; #include “header.h” int main (void) { puts (test () ); }</p>
+</div>
+<p>In this case, the compiler will be seeing a token stream similar to
+the one it would see if it was <span
+style="font-style: italic">program.c</span> reading. See such a
+situation here below:</p>
+<div class="poetry">
+<p>Int x; char*test (void); int main (void) { puts (test ()); }</p>
+</div>
+<p>Establishing One-Time Headers</p>
+<p>You need to guard against having headers processed severally so that
+you end up with more than one header, which is basically an error. The
+way to do this is to include the header file only once; the only way
+there is to ensure the C compiler processes it once only. The question
+is how to go about ascertaining that you include your header file only
+that once. Gladly, there is a standard way of doing this, and it also
+happens to be simple. This standard method involves enclosing the entire
+file contents within a conditional.</p>
+<p>See example here below:</p>
+<div class="poetry">
+<p>#ifndef HEADER_FILE</p>
+<p>#define HEADER_FILE</p>
+<p>the entire header file file</p>
+<p>#endif</p>
+</div>
+<p>This is how our example here, what is referred to as <span
+style="font-style: italic">construct,</span> works. It is generally
+known as wrapper <span style="font-style: italic">#ifndef.</span> When
+you find yourself including the header a second time, be sure the
+conditional will come out false. This is because the header file, (or
+HEADER_FILE), happens to be already defined. The processor, on the other
+hand, will efficiently ignore the file contents so that the C compiler
+does not get opportunity to see it a repeat time.</p>
+<p>The Workings Of Computed Includes</p>
+<p>It is practical to imagine that you may sometimes have several header
+files to choose from when you want to include one into your C program.
+However, there may be specifications to fulfill, like particular
+configuration parameters and so on. To be able to accomplish your task,
+here are some conditionals you may want to use:</p>
+<div class="blockquote">
+<p>#if SYSTEM_1 # include “system_1.h” #elifSYSTEM_2 # #include
+“system_2.h” #elifSYSTEM_3 ... #endif</p>
+</div>
+<p>Does this help you accomplish your mission? It sure does – but it
+brings along a problem. If you continue with the above conditionals,
+soon it is going to prove too tedious for comfort or even too clumsy for
+your concentration. So it is advisable to make use of the advantages of
+C, where you can use a macro to represent a header name; a function your
+pre-processor has enabled. When you do this, you speak of utilizing a
+<span style="font-style: italic">computed include</span>. In short, you
+do not write any header name anywhere, the way you would do as an
+#include argument. This is how to use a macro name:</p>
+<div class="poetry">
+<p>#define SYSTEM_H “system_1.h” ... #include SYSTEM_H</p>
+</div>
+<p>Any idea what is going to happen? SYSTEM_H as you see it will undergo
+expansion. In the process, your pre-processor will be seeking out <span
+style="font-style: italic">system_1.h</span> just as would happen if
+your <span style="font-style: italic">#include</span> had been there all
+along, written as it is.</p>
+<p>C Type Casting</p>
+<p>What do you reckon type casting is within the context of the C
+programming language? It is one of the easiest things you will learn
+about C. For starters, you can define it as a means of converting a
+variable from what it is, to a different data type.</p>
+<p>You may, for instance, wish to have a <span
+style="font-style: italic">long-</span>value integer into just a simple
+one. In such a case, you could typecast <span
+style="font-style: italic">long</span> onto <span
+style="font-style: italic">int</span>. Alternatively, you could do your
+value conversion from one integer to another by overtly making use of
+the cast operator.</p>
+<p>You can also explain type casting as alteration of a particular
+expression associated with a particular type so that it now belongs to a
+different type. Type casting is a common thing in C language
+programming. It is generally advisable to alter lower data type turning
+it to a higher data type because that way you do not risk losing data.
+On the other hand, whenever you convert higher data type to a lower data
+type, you find your data having been truncated. Just to give you an
+idea, if you were to convert <span
+style="font-style: italic">float</span> to <span
+style="font-style: italic">int</span>, all data coming after the decimal
+disappears.</p>
+<p>Another yet simpler explanation of what typecasting is indicates that
+it is one way of making a type of variable to behave as if it were
+another type. You can take an example of an <span
+style="font-style: italic">int</span> acting as if it were a <span
+style="font-style: italic">char</span>; and the behavior alluded to here
+is a one-time thing – only during the operation at hand. If you want an
+easy way to typecast, simply pick the variable type of your choice, and
+then put it within parenthesis before the variable whose behavior you
+want altered. For example, (char)a outright makes variable <span
+style="font-style: italic">a</span> to function as if it is a char.</p>
+<p>––––––––</p>
+<p><span class="first-in-scene">S</span>ee one illustration below:</p>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+<p>(type_name) expression</p>
+</div>
+<p>You may also wish to learn from a situation where a floating point
+operation takes place. In such a scenario, you have the cast operator
+causing a split of an integer variable, actually being done by another.
+Look at the illustration here below:</p>
+<div class="blockquote">
+<p>#include &lt;stdio.h&gt; #include &lt;stdio.h&gt; main() { int sum =
+17, count = 5; double mean;  mean = (double) sum / count; printf(“Value
+of mean : %f\n”, mean );</p>
+</div>
+<p>The result returned after compilation and also execution of the code
+laid out above is as follows:</p>
+<div class="poetry">
+<p>Value of mean : 3.400000</p>
+</div>
+<p>What you need to know at this point is that the program’s cast
+operator takes priority, or has precedence over any integer division or
+division of any other sort. Consequently, the sum value is straightaway
+converted into type double; and only after that is it divided following
+count with a double value.</p>
+<p>At times, however, you have type conversions that are implicit, being
+done automatically by the C compiler. Other times, the type conversions
+happening explicitly via the employment of the program cast operator.
+Good practice calls for you to engage the cast operator when you need to
+make type conversions.</p>
+<p>How the integer promotion works</p>
+<p>Integer promotion in C is the simple process whereby integer type
+values <span style="font-style: italic">smaller</span> than <span
+style="font-style: italic">int</span>, or otherwise <span
+style="font-style: italic">unsigned int,</span> happen to undergo
+conversion so that they become either <span
+style="font-style: italic">int</span>, or alternatively, <span
+style="font-style: italic">unsigned int</span>.</p>
+<p>Here is an example where you add a character accompanied by an
+integer:</p>
+<div class="blockquote">
+<p>#include &lt;stdio.h&gt; main() { int i = 17; char c = ‘c’; /* ascii
+values is 99 */ int sum; sum = i + c; printf(“value of sum : %d/n”,  sum
+); }</p>
+<p>Have you any idea what result you get after compilation and
+subsequent execution of the code just above? Here it is:</p>
+<p>Value of sum : 116</p>
+</div>
+<p><span id="c016.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c016.xhtml__Toc452520177">Chapter
+13: Benefits Of Using The C Language</span></h1>
+<p><span class="first-in-chapter">I</span>t is an established fact that
+C, as a programming language, is very popular, in spite of the fact that
+it came into the market more than three decades ago. It is popular too
+notwithstanding the emergence of newer programming languages. A beginner
+may wonder: What is it that attracts users to pick C and not any other
+programming language, or in some cases, in addition?</p>
+<p>Here are some of the positive things users have said about C:</p>
+<ol type="1">
+<li>The C language provides a foundation for several other programming
+languages. Not only does it have a lot in common with its newer
+variations, like C++ and others, but other computer languages have
+picked fundamental principles from it. For that reason, C is taken to be
+the main building block for many computer languages existing in the
+market today.</li>
+<li>The C programming language is rich in data types and has a wide
+range of operators. These operators are not just many but they are also
+very powerful in their execution of commands and functions. It is for
+this reason that many users have found C to be highly efficient,
+impressively fast, and also pretty easy to comprehend and use.</li>
+<li>C is one computer language that you can aptly term portable. What
+does that portability entail? Well, the C language is one that you can
+write purposely for one computer, and then you find it easy to run and
+use on an entirely different computer. Often you are able to do that
+without having to alter a thing, and if it is necessary to make some
+changes, they are often minimal.</li>
+<li>The C programming language has a range of keywords that you can
+remember with ease. They are just 32 in number. However, C has the
+advantage of having built in functions, and these make the use of C all
+the more efficient. C has at its disposal a reasonable number of
+standard functions, and these enable users to develop programs with
+relative ease.</li>
+<li>C can be said to be versatile. With the great number of functions
+that it spools from its library, it does not only extend itself as need
+be, but it also enables the user to add personalized functions to the
+library with relative ease. On the overall, C makes programming easy
+whether you are a beginner or a veteran.</li>
+<li>The C programming language is among the best structured languages in
+use in the computer world. For that reason, as a user, you are able to
+think of a challenge in terms of C’s function modules; or what you might
+call blocks.</li>
+</ol>
+<p>Being well structured brings other advantages. For starters, being
+able to fit a problem to where it belongs in terms of function blocks,
+means you can rectify the problem faster. Also the fact that C is an
+assembly of modules making a whole program means understanding and
+dealing with the entire program is easy. By the same token, it becomes
+easy for someone to debug, test and also maintain this modular structure
+that is the C programming language.</p>
+<ol type="1">
+<li>C is procedure oriented</li>
+</ol>
+<p>Where does the advantage lie in this case? Well, it is in your
+ability to create your customized procedures or even functions, which
+you can then apply to suit your environment, executing your tasks as you
+deem appropriate.</p>
+<p>Another benefit that comes with being procedure oriented is that of
+ease of learning. This is because C adheres to specific algorithms in
+executing your statements.</p>
+<ol type="1">
+<li>The compilation speed experienced in C is far ahead of other
+programming languages. In actual fact, C’s compiler is capable of
+compiling about a thousand code lines in one or two seconds. The speed
+is further enhanced by optimization of the code making execution
+exemplary fast.</li>
+<li>C’s syntax is easy to understand for its language. You will find its
+keywords mainly in English, which makes it easy for many users to
+remember them. Some examples of English words in the syntax are switch;
+if; else; and so on.</li>
+<li>The C programming languages accords you great preparation for other
+programming languages. Once you master C, you are in a position to
+easily learn application development.</li>
+</ol>
+<p>The Challenges Faced By Users</p>
+<p>In most cases, there is more than one side to an issue. In our case,
+to this highly popular programming language.  Good and handy as it is,
+the C language does present some challenges sometimes. Here they
+are:</p>
+<p>(1) The C programming language does not have Object Oriented
+Programming System, otherwise referred to as OOPS. Be that as it may,
+developers of C have gotten over that hitch through development of the
+more modern C++, a variant of the original C.</p>
+<p>(2) C does not avail runtime checking</p>
+<p>(3) The rules of C are not very stringent especially when it comes to
+type checking. That is why you can easily overlook an integer value.</p>
+<p>(4) There is a challenge relating to floating data type</p>
+<p>(5) The C programming language also fails to have the namespace
+concept</p>
+<p>(6) It also fails to have the constructor concept as well as the
+destructor concept.</p>
+<p>Looking at the whole picture of advantages gauged against the
+disadvantages, it is clear that the advantages outweigh the challenges.
+In actual fact, a good number of the challenges are somewhat lightweight
+and users are able to live with them without jeopardizing their work or
+use.</p>
+<p><span id="c017.xhtml"></span></p>
+<h1 class="chapter-title"><span
+id="c017.xhtml__Toc452520178">Conclusion</span></h1>
+<p><span class="first-in-chapter">H</span>ow great it is to finally have
+a book with simple tips on the C programming language! Everyone who has
+wanted to learn what the C language is all about can now learn that from
+this book, <span style="font-style: italic">C Programming: The Ultimate
+Guide For Beginners</span>.</p>
+<p>If you have completed reading it, I hope you now understand the
+reason C is so popular amongst programmers and other computer users who
+are technology savvy. I also hope that you have learnt specifically the
+type of data C handles and how it does it; how it stores its files and
+how you can retrieve them; and all the numerous other details that make
+the C programming language popular over many other computer languages in
+the market.</p>
+<p>It is our hope that you have found this book a helpful guide.</p>
+<p><span id="c018.xhtml"></span></p>
+<h1 class="chapter-title"><span id="c018.xhtml__Toc452520179">Resources
+and Attributions</span></h1>
+<ol type="1">
+<li><span style="font-style: italic">After All These Years, the World is
+Still Powered by C Programming: </span><a
+href="https://www.toptal.com/c/after-all-these-years-the-world-is-still-powered-by-c-programming">https://www.toptal.com/c/after-all-these-years-the-world-is-still-powered-by-c-programming</a></li>
+<li><span style="font-style: italic">The 10 Most Powerful
+Supercomputers:</span>  <a
+href="https://www.weforum.org/agenda/2015/07/10-most-powerful-supercomputers/">https://www.weforum.org/agenda/2015/07/10-most-powerful-supercomputers/</a></li>
+<li>Where is My Linux GNU C or GCC Compilers Are Installed?</li>
+</ol>
+<div class="poetry">
+<p><a
+href="http://www.cyberciti.biz/faq/locate-linux-gnu-c-or-gcc-compiler-location/">http://www.cyberciti.biz/faq/locate-linux-gnu-c-or-gcc-compiler-location/</a></p>
+</div>
+<ol type="1">
+<li>developer.apple.com/technologies/tools/</li>
+<li><span style="font-style: italic">Data types in C language: </span><a
+href="http://www.studytonight.com/c/datatype-in-c.php">http://www.studytonight.com/c/datatype-in-c.php</a></li>
+<li><span style="font-style: italic">C 32 keywords: </span><a
+href="http://www.c4learn.com/c-programming/c-keywords/">http://www.c4learn.com/c-programming/c-keywords/</a></li>
+<li><span style="font-style: italic">C Programming Keywords and
+Identifiers: </span><a
+href="https://www.google.com/#q_43ec3e5dee6e706af7766fffea512721_double_26b17225b626fb9238849fd60eabdf60_keywords_26b17225b626fb9238849fd60eabdf60_in_26b17225b626fb9238849fd60eabdf60_c_26b17225b626fb9238849fd60eabdf60_language">https://www.google.com/#q=double+keywords+in+c+language</a></li>
+<li><span style="font-style: italic">Escape sequences in C</span>: <a
+href="https://en.wikipedia.org/wiki/Escape_sequences_in_C">https://en.wikipedia.org/wiki/Escape_sequences_in_C</a></li>
+<li><span style="font-style: italic">The C Preprocessor: </span><a
+href="https://www.cs.cf.ac.uk/Dave/C/node14.html">https://www.cs.cf.ac.uk/Dave/C/node14.html</a></li>
+<li><span style="font-style: italic">Operators in C Language: </span><a
+href="http://www.studytonight.com/c/operators-in-c.php">http://www.studytonight.com/c/operators-in-c.php</a></li>
+<li><span style="font-style: italic">C programming while and do...while
+loop: </span><a
+href="http://www.programiz.com/c-programming/c-do-while-loops">http://www.programiz.com/c-programming/c-do-while-loops</a></li>
+<li><span style="font-style: italic">C-Function: </span><a
+href="http://fresh2refresh.com/c-programming/c-function/">http://fresh2refresh.com/c-programming/c-function/</a></li>
+<li><span style="font-style: italic">The crazy programmer: </span><a
+href="http://www.thecrazyprogrammer.com/2013/07/what-are-advantages-and-disadvantages.html">http://www.thecrazyprogrammer.com/2013/07/what-are-advantages-and-disadvantages.html</a></li>
+<li><span style="font-style: italic">C Language Advantages and
+Disadvantages : C Language Features</span>: <a
+href="http://latest-technology-guide.blogspot.co.ke/2012/12/c-language-advantages-and-disadvantages.html">http://latest-technology-guide.blogspot.co.ke/2012/12/c-language-advantages-and-disadvantages.html</a></li>
+</ol>

@@ -1,0 +1,106 @@
+name: C Programming Professional Made Easy 2nd Edition： Expert C Programming Language
+  Success In A Day For Any Computer User! (C Programming, C++programming, ... Developers,
+  Coding, CSS, Java, PHP)
+name_cn: C 编程高级轻松学（第2版）：任何计算机用户都能一日掌握专家级 C 语言！(C 编程, C++  编程,...开发者，编码 , CSS、Java、PHP)
+slug: c-programming-professional-made-easy-2nd-edition-expert-c-pr
+toc:
+- - '##'
+  - 变量
+- - '###'
+  - '**编写变量名的规则**'
+- - '##'
+  - 使用变量
+- - '###'
+  - '**声明**'
+- - '####'
+  - 置于何处率先书写？
+- - '##'
+  - 存贮接受到的数值输入示例
+- - '###'
+  - '***用算演改造***'
+- - '##'
+  - 选择作用语句结构
+- - '#'
+  - 第 5 章 存储类
+- - '##'
+  - Auto
+- - '###'
+  - Register
+- - '###'
+  - Static
+- - '###'
+  - Extern
+- - '#'
+  - 第 6 章 运算符
+- - '##'
+  - 算术运算符
+- - '##'
+  - 关系运算符
+- - '##'
+  - 位运算符
+- - '#'
+  - 第 7 章 决策制定
+- - '##'
+  - If 语句
+- - '#'
+  - 嵌套if else语句与 C 语言中的决策控制
+- - '##'
+  - Nested If Statements
+- - '###'
+  - Syntax
+- - '####'
+  - 'Nested Switch With Common Values :'
+- - '#'
+  - 第 8 章 C 语言循环
+- - '##'
+  - 不同类型的循环
+- - '###'
+  - While 循环
+- - '####'
+  - 语法
+- - '####'
+  - 流程图
+- - '####'
+  - 示例：
+- - '###'
+  - For 循环
+- - '####'
+  - 语法
+- - '####'
+  - 流程图
+- - '####'
+  - For 循环中的控制流
+- - '####'
+  - 示例：
+- - '####'
+  - For 循环的不同用法
+- - '###'
+  - Do While 循环
+- - '####'
+  - 语法
+- - '####'
+  - 流程图
+- - '####'
+  - 示例：
+- - '###'
+  - 嵌套循环
+- - '####'
+  - 语法
+- - '####'
+  - 示例：
+- - '###'
+  - Break 语句
+- - '####'
+  - 语法
+- - '####'
+  - 流程图
+- - '##'
+  - Continue 语句
+- - '###'
+  - 第一：一台高端电脑
+- - '###'
+  - 第二：一台 Android 设备
+- - '###'
+  - 第三：Android SDK
+- - '##'
+  - 查看我的其他书籍
