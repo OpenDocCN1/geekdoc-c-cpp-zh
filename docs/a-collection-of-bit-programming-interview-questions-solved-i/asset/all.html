@@ -1,0 +1,2284 @@
+<p><img src="images/00073.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 1217 1826" preserveaspectratio="none">
+<image width="1217" height="1826" xlink:href="images/00073.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3">A collection of Bit Programming Interview
+Questions Solved in C++</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre5">Antonio Gulli</span></p>
+</div>
+<div class="calibre6">
+
+</div>
+<p> </p>
+<div class="calibre1">
+<p><span class="calibre9">Copyright © 201</span><span class="calibre9">4
+Antonio Gulli</span></p>
+<p><span class="calibre9">All rights reserved.</span></p>
+<p><span class="calibre9">ISBN:</span></p>
+<p><span class="calibre9">ISBN-13:</span></p>
+<p><span class="calibre9"> </span></p>
+</div>
+<div class="calibre6">
+
+</div>
+<p> </p>
+<div class="calibre1">
+<p><span class="calibre9">Bits is the third</span><span
+class="calibre9"> of a series of 25 Chapters devoted to algorithms,
+problem solving, and C++ programming. </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre11">DEDICATION</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre13">To Leonardo, my second child.</span></p>
+<p><span class="calibre13">Hoping </span><span class="calibre13"> that
+you keep your curiosity and energy </span></p>
+<p><span class="calibre13">for the rest of your life.</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9"> </span></p>
+</div>
+<div class="calibre6">
+
+</div>
+<p> </p>
+<div class="calibre1">
+<p><span class="calibre11">ACKNOWLEDGMENTS</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre12">Thanks to Antonio Savona for his code
+review</span></p>
+</div>
+<div class="calibre6">
+
+</div>
+<p> </p>
+<div class="calibre1">
+<p><span id="part0000.html__Toc383672134" class="calibre16"></span><span
+id="part0000.html__Toc376895954" class="calibre16"><span
+class="calibre17">Contents</span></span></p>
+<p><span id="part0000.html_toc" class="calibre16"></span><a
+href="#part0000.html__Toc383672134" class="calibre16"><span
+class="calibre19">Contents</span></a></p>
+<p><a href="#part0000.html__Toc383672135" class="calibre16"><span
+class="calibre19">1.</span><span class="calibre9">             
+</span><span class="calibre19">Given an unsigned int, swap the bits in
+odd and even positions</span></a></p>
+<p><a href="#part0000.html__Toc383672136" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672137" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672138" class="calibre16"><span
+class="calibre19">2.</span><span class="calibre9">             
+</span><span class="calibre19">Print the binary representation of an
+unsigned int</span></a></p>
+<p><a href="#part0000.html__Toc383672139" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672140" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672141" class="calibre16"><span
+class="calibre19">3.</span><span class="calibre9">             
+</span><span class="calibre19">Compute whether or not an unsigned number
+is a power of two</span></a></p>
+<p><a href="#part0000.html__Toc383672142" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672143" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672144" class="calibre16"><span
+class="calibre19">4.</span><span class="calibre9">             
+</span><span class="calibre19">Set the i-th bit</span></a></p>
+<p><a href="#part0000.html__Toc383672145" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672146" class="calibre16"><span
+class="calibre19">5.</span><span class="calibre9">             
+</span><span class="calibre19">Unset the i-th bit</span></a></p>
+<p><a href="#part0000.html__Toc383672147" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672148" class="calibre16"><span
+class="calibre19">6.</span><span class="calibre9">             
+</span><span class="calibre19">Toggle the i-th bit</span></a></p>
+<p><a href="#part0000.html__Toc383672149" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672150" class="calibre16"><span
+class="calibre19">7.</span><span class="calibre9">             
+</span><span class="calibre19">Given an unsigned number with only one
+bit set, find the position of this bit</span></a></p>
+<p><a href="#part0000.html__Toc383672151" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672152" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672153" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672154" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672155" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672156" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672157" class="calibre16"><span
+class="calibre19">8.</span><span class="calibre9">             
+</span><span class="calibre19">Count the number of bits set in an
+unsigned number</span></a></p>
+<p><a href="#part0000.html__Toc383672158" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672159" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672160" class="calibre16"><span
+class="calibre19">Solution for sparse bitmaps</span></a></p>
+<p><a href="#part0000.html__Toc383672161" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672162" class="calibre16"><span
+class="calibre19">Solution for dense bitmaps</span></a></p>
+<p><a href="#part0000.html__Toc383672163" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672164" class="calibre16"><span
+class="calibre19">Solution for 32bit integers</span></a></p>
+<p><a href="#part0000.html__Toc383672165" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672166" class="calibre16"><span
+class="calibre19">9.</span><span class="calibre9">             
+</span><span class="calibre19">Add two numbers without using arithmetic
+operators</span></a></p>
+<p><a href="#part0000.html__Toc383672167" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672168" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672169" class="calibre16"><span
+class="calibre19">10.</span><span class="calibre9">             
+</span><span class="calibre19">Given an array of integers where all the
+numbers are appearing twice find the only number which appears
+once</span></a></p>
+<p><a href="#part0000.html__Toc383672170" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672171" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672172" class="calibre16"><span
+class="calibre19">11.</span><span class="calibre9">             
+</span><span class="calibre19">Given an array of integers where all the
+numbers are appearing twice find the only two numbers which appears
+once</span></a></p>
+<p><a href="#part0000.html__Toc383672173" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672174" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672175" class="calibre16"><span
+class="calibre19">12.</span><span class="calibre9">             
+</span><span class="calibre19">Multiply two numbers without using
+arithmetic operators</span></a></p>
+<p><a href="#part0000.html__Toc383672176" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672177" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672178" class="calibre16"><span
+class="calibre19">13.</span><span class="calibre9">             
+</span><span class="calibre19">Compute the two’s complement for a given
+integer</span></a></p>
+<p><a href="#part0000.html__Toc383672179" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672180" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672181" class="calibre16"><span
+class="calibre19">14.</span><span class="calibre9">             
+</span><span class="calibre19">Isolate the rightmost bit set to
+1</span></a></p>
+<p><a href="#part0000.html__Toc383672182" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672183" class="calibre16"><span
+class="calibre19">15.</span><span class="calibre9">             
+</span><span class="calibre19">Create a mask for trailing
+zeros</span></a></p>
+<p><a href="#part0000.html__Toc383672184" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672185" class="calibre16"><span
+class="calibre19">16.</span><span class="calibre9">             
+</span><span class="calibre19">Compute parity for a 32 bit
+number</span></a></p>
+<p><a href="#part0000.html__Toc383672186" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672187" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672188" class="calibre16"><span
+class="calibre19">17.</span><span class="calibre9">             
+</span><span class="calibre19">Swap two integers variables with no
+additional memory</span></a></p>
+<p><a href="#part0000.html__Toc383672189" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672190" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672191" class="calibre16"><span
+class="calibre19">18.</span><span class="calibre9">             
+</span><span class="calibre19">Swap bit </span><span class="calibre21">i
+</span><span class="calibre19">and </span><span
+class="calibre21">j</span><span class="calibre19"> in a 64 bit
+number</span></a></p>
+<p><a href="#part0000.html__Toc383672192" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672193" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672194" class="calibre16"><span
+class="calibre19">19.</span><span class="calibre9">             
+</span><span class="calibre19">Reverse the order of bits in an unsigned
+integer</span></a></p>
+<p><a href="#part0000.html__Toc383672195" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672196" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672197" class="calibre16"><span
+class="calibre19">20.</span><span class="calibre9">             
+</span><span class="calibre19">Convert an integer to a string and a
+string to an integer</span></a></p>
+<p><a href="#part0000.html__Toc383672198" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672199" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672200" class="calibre16"><span
+class="calibre19">21.</span><span class="calibre9">             
+</span><span class="calibre19">Convert a number from base b1 to base
+b2</span></a></p>
+<p><a href="#part0000.html__Toc383672201" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672202" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672203" class="calibre16"><span
+class="calibre19">22.</span><span class="calibre9">             
+</span><span class="calibre19">Given a set S, compute the powerset of
+S</span></a></p>
+<p><a href="#part0000.html__Toc383672204" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672205" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672206" class="calibre16"><span
+class="calibre19">23.</span><span class="calibre9">             
+</span><span class="calibre19">Add two decimal strings representing two
+integers</span></a></p>
+<p><a href="#part0000.html__Toc383672207" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672208" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672209" class="calibre16"><span
+class="calibre19">24.</span><span class="calibre9">             
+</span><span class="calibre19">Generate all the bit patterns from 0 to
+</span><img src="images/00001.jpeg" class="calibre22" /><span
+class="calibre19"> such that successive patterns differ by one
+bit.</span></a></p>
+<p><a href="#part0000.html__Toc383672210" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672211" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672212" class="calibre16"><span
+class="calibre19">25.</span><span class="calibre9">             
+</span><span class="calibre19">Represent  unsigned integers with
+variable length encoding using the continuation bit</span></a></p>
+<p><a href="#part0000.html__Toc383672213" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672214" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672215" class="calibre16"><span
+class="calibre19">26.</span><span class="calibre9">             
+</span><span class="calibre19">Represent an integer with variable length
+encoding using gamma encoding</span></a></p>
+<p><a href="#part0000.html__Toc383672216" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672217" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672218" class="calibre16"><span
+class="calibre19">27.</span><span class="calibre9">             
+</span><span class="calibre19">Represent an integer with variable length
+encoding using delta encoding</span></a></p>
+<p><a href="#part0000.html__Toc383672219" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<p><a href="#part0000.html__Toc383672220" class="calibre16"><span
+class="calibre19">Code</span></a></p>
+<p><a href="#part0000.html__Toc383672221" class="calibre16"><span
+class="calibre19">28.</span><span class="calibre9">             
+</span><span class="calibre19">Compute the average with no
+division</span></a></p>
+<p><a href="#part0000.html__Toc383672222" class="calibre16"><span
+class="calibre19">Solution</span></a></p>
+<div class="calibre6">
+
+</div>
+<br />
+
+</p>
+<h1 class="calibre23"><span class="calibre24">1.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc383058896"
+class="calibre16"></span><span id="part0000.html__Toc383672135"
+class="calibre16"><span class="calibre24">Given an unsigned int, swap
+the bits in odd and even positions</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895955"
+class="calibre16"></span><span id="part0000.html__Toc383058897"
+class="calibre16"></span><span id="part0000.html__Toc383672136"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Assume that an unsigned int is 32bits and that
+we swap the bits in position </span><img src="images/00002.jpeg"
+class="calibre27" /><span class="calibre9"> with those in
+position</span><img src="images/00003.jpeg" class="calibre28" /><span
+class="calibre9">,</span><img src="images/00004.jpeg"
+class="calibre29" /><span class="calibre9">. In order to select all the
+even bits we can AND with  bitmask 0xAAAAAAAAAA, which is a 32 bit
+number with even bits set (0xA is decimal 10, 1010 binary). For
+selecting all the odd bits we can AND with bitmask 0×55555555, which is
+a number with all even bits sets (0x5 is decimal5, 0101 in binary). Then
+we need to shift left (respectively right) of one position and OR the
+two intermediate results.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895956"
+class="calibre16"></span><span id="part0000.html__Toc383058898"
+class="calibre16"></span><span id="part0000.html__Toc383672137"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+swapBits(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">x</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> evenBits =
+</span><span class="calibre33">x</span><span class="calibre32"> &amp;
+0xAAAAAAAA;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> oddBits  =
+</span><span class="calibre33">x</span><span class="calibre32"> &amp;
+0x55555555;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              evenBits &gt;&gt;= 1; 
+</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">oddBits &lt;&lt;= 1;   </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> (evenBits |
+oddBits); </span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre23"><span class="calibre24">2.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc376895957"
+class="calibre16"></span><span id="part0000.html__Toc383058899"
+class="calibre16"></span><span id="part0000.html__Toc383672138"
+class="calibre16"><span class="calibre24">Print the binary
+representation of an unsigned int</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895958"
+class="calibre16"></span><span id="part0000.html__Toc383058900"
+class="calibre16"></span><span id="part0000.html__Toc383672139"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">An easy solution is to AND the </span><img
+src="images/00005.jpeg" class="calibre34" /><span class="calibre9"> bit
+with the number </span><img src="images/00006.jpeg"
+class="calibre35" /><span id="part0000.html__Toc376895959"></span><span
+id="part0000.html__Toc383058901"></span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383672140"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">void</span><span class="calibre32">
+bin(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i = 1 &lt;&lt; 31;
+i &gt; 0; i = i &gt;&gt; 1)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32"> &amp; i) std::cout
+&lt;&lt; 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">else</span><span class="calibre32"> std::cout &lt;&lt;
+0;</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre9"> </span></p>
+<h1 class="calibre36"><span class="calibre24">3.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc376895960"
+class="calibre16"></span><span id="part0000.html__Toc383058902"
+class="calibre16"></span><span id="part0000.html__Toc383672141"
+class="calibre16"><span class="calibre24">Compute whether or not an
+unsigned number is a power of two</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895961"
+class="calibre16"></span><span id="part0000.html__Toc383058903"
+class="calibre16"></span><span id="part0000.html__Toc383672142"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Suppose that the number is nonzero. If it is a
+power of two, than the only bit set is in position</span><img
+src="images/00007.jpeg" class="calibre37" /><span class="calibre9">. In
+this case we subtract 1, so all the bits at the left of </span><img
+src="images/00008.jpeg" class="calibre37" /><span class="calibre9">will
+be unset. Therefore a positive number </span><img
+src="images/00009.jpeg" class="calibre38" /><span class="calibre9"> is a
+power of 2 if and only if  </span><img src="images/00010.jpeg"
+class="calibre39" /><span class="calibre9"> is 0. Note that this check
+only works if </span><img src="images/00011.jpeg"
+class="calibre40" /><span class="calibre9"> </span><span
+id="part0000.html__Toc376895962"></span><span
+id="part0000.html__Toc383058904"></span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383672143"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">bool isPowerOfTwo(unsigned n) </span></p>
+<p><span class="calibre31">{ return n &amp;&amp; (!(n &amp; (n - 1)));
+}</span><span id="part0000.html__Toc376895963"></span></p>
+<p><span class="calibre31"> </span></p>
+<h1 class="calibre36"><span class="calibre24">4.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc383672144"
+class="calibre16"><span class="calibre24">Set the i-th
+bit</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383672145"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">For a given number </span><span
+class="calibre13">n</span><span class="calibre9"> we can set the i-th
+bit with the expression</span></p>
+<p><span class="calibre9"> </span></p>
+<p><img src="images/00012.jpeg" class="calibre41" /></p>
+<h1 class="calibre36"><span class="calibre24">5.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc383672146"
+class="calibre16"><span class="calibre24">Unset the i-th
+bit</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383672147"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">For a given number </span><span
+class="calibre13">n</span><span class="calibre9"> we can unset the i-th
+bit with the expression</span></p>
+<p><span class="calibre9"> </span></p>
+<p><img src="images/00013.jpeg" class="calibre42" /></p>
+<h1 class="calibre36"><span class="calibre24">6.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc383672148"
+class="calibre16"><span class="calibre24">Toggle the i-th
+bit</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383672149"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">For a given number </span><span
+class="calibre13">n</span><span class="calibre9"> we can toggle the i-th
+bit with the expression</span></p>
+<p><span class="calibre9"> </span></p>
+<p><img src="images/00014.jpeg" class="calibre43" /></p>
+<p><span class="calibre31"> </span></p>
+<h1 class="calibre36"><span class="calibre24">7.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc383058905"
+class="calibre16"></span><span id="part0000.html__Toc383672150"
+class="calibre16"><span class="calibre24">Given an unsigned number with
+only one bit set, find the position of this bit</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895964"
+class="calibre16"></span><span id="part0000.html__Toc383058906"
+class="calibre16"></span><span id="part0000.html__Toc383672151"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">If there is only one bit set, then the number
+must be a power of two. For identifying the position set we can AND the
+number with an appropriate bitmask. </span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895965"
+class="calibre16"></span><span id="part0000.html__Toc383058907"
+class="calibre16"></span><span id="part0000.html__Toc383672152"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+findPosition(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i = 1, pos =
+1;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (!(i &amp;
+</span><span class="calibre33">n</span><span
+class="calibre32">))</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              i = i &lt;&lt; 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              ++pos;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> pos;</span></p>
+<p><span class="calibre32">}</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058908"
+class="calibre16"></span><span id="part0000.html__Toc383672153"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Another solution is using the logarithm for
+returning the position of the only bit set in the given unsigned
+</span><img src="images/00009.jpeg" class="calibre38" /><span
+class="calibre9">. The code returns -1 if </span><img
+src="images/00009.jpeg" class="calibre38" /><span class="calibre9"> is
+not a power of 2.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058909"
+class="calibre16"></span><span id="part0000.html__Toc383672154"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">int</span><span class="calibre32">
+findPosition2(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32"> &amp; (</span><span
+class="calibre33">n</span><span class="calibre32"> - 1))</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> -1;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32">)(log((</span><span
+class="calibre31">double</span><span class="calibre32">)</span><span
+class="calibre33">n</span><span class="calibre32">) / log(2.0)) +
+1;</span></p>
+<p><span class="calibre32">}</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058910"
+class="calibre16"></span><span id="part0000.html__Toc383672155"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Yet another solution runs in </span><img
+src="images/00015.jpeg" class="calibre44" /><span class="calibre9">. The
+key intuition is to perform a logarithmic binary search on the log
+</span><img src="images/00016.jpeg" class="calibre27" /><span
+class="calibre9">bits used for representing the unsigned int </span><img
+src="images/00009.jpeg" class="calibre38" /><span
+class="calibre9">.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058911"
+class="calibre16"></span><span id="part0000.html__Toc383672156"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">int</span><span class="calibre32">
+findPosition3(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32"> &amp; (</span><span
+class="calibre33">n</span><span class="calibre32"> - 1))</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> -1;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32"> == 1 &lt;&lt;
+31)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> 32;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> position =
+16;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> half = 1 &lt;&lt;
+15;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> stride =
+16;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (1)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32"> == half)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre31">return</span><span class="calibre32">
+position;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">else</span><span class="calibre32"> </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32"> &gt; half)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre33">n</span><span class="calibre32"> = </span><span
+class="calibre33">n</span><span class="calibre32"> &gt;&gt;
+stride;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            position = position +
+(stride &gt;&gt; 1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              }</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">else</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre33">n</span><span class="calibre32"> = </span><span
+class="calibre33">n</span><span class="calibre32"> &amp; ((1 &lt;&lt;
+stride) - 1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            position = position -
+(stride &gt;&gt; 1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              }</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              half = half &gt;&gt; (stride &gt;&gt;
+1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              stride &gt;&gt;= 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+position;</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre36"><span class="calibre24">8.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc376895966"
+class="calibre16"></span><span id="part0000.html__Toc383058912"
+class="calibre16"></span><span id="part0000.html__Toc383672157"
+class="calibre16"><span class="calibre24">Count the number of bits set
+in an unsigned number</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895967"
+class="calibre16"></span><span id="part0000.html__Toc383058913"
+class="calibre16"></span><span id="part0000.html__Toc383672158"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">We can simply loop and count the bits with
+complexity</span><img src="images/00017.jpeg" class="calibre45" /><span
+class="calibre9">, where </span><img src="images/00016.jpeg"
+class="calibre27" /><span class="calibre9">is the number of bits in the
+unsigned.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895968"
+class="calibre16"></span><span id="part0000.html__Toc383058914"
+class="calibre16"></span><span id="part0000.html__Toc383672159"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+countBits(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> count =
+0;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32">)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              count += </span><span
+class="calibre33">n</span><span class="calibre32"> &amp; 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">n</span><span class="calibre32"> &gt;&gt;=
+1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+count;</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058915"
+class="calibre16"></span><span id="part0000.html__Toc383672160"
+class="calibre16"><span class="calibre24">Solution</span><span
+class="calibre24"> for sparse bitmaps</span></span></h2>
+<p><span class="calibre9">This solution works better for sparse
+</span><span class="calibre9">unsigned s because it runs in a time
+proportional to the number of bits set to 1. The line n &amp;= (n – 1)
+sets the rightmost 1 in the bitmap to 0.</span><span
+id="part0000.html__Toc383058916"></span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383672161"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+countBitsSparse(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> count =
+0;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32">)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              count++;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">n</span><span class="calibre32"> &amp;= (</span><span
+class="calibre33">n</span><span class="calibre32"> - 1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+count;</span></p>
+<p><span class="calibre32">}</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058917"
+class="calibre16"></span><span id="part0000.html__Toc383672162"
+class="calibre16"><span class="calibre24">Solution for dense
+bitmaps</span></span></h2>
+<p><span class="calibre9">This solution works better for dense bitmaps
+because</span><span class="calibre9"> it runs in a time proportional to
+the number of bits set to 0.  First you must toggle all the bits and
+then subtract the numbers of the set bits from </span><img
+src="images/00018.jpeg" class="calibre46" /><span class="calibre9">. The
+line n &amp;= (n – 1) sets the rightmost 1 in the bitmap to
+0.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058918"
+class="calibre16"></span><span id="part0000.html__Toc383672163"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+countBitsDense(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> count = 8 *
+</span><span class="calibre31">sizeof</span><span
+class="calibre32">(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32">);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre33">n</span><span class="calibre32"> = ~</span><span
+class="calibre33">n</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32">)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              count--;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">n</span><span class="calibre32"> &amp;= (</span><span
+class="calibre33">n</span><span class="calibre32"> - 1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+count;</span></p>
+<p><span class="calibre32">}</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058919"
+class="calibre16"></span><span id="part0000.html__Toc383672164"
+class="calibre16"><span class="calibre24">Solution for 32bit
+integers</span></span></h2>
+<p><span class="calibre9">This solution works better for unsigned
+</span><span class="calibre9">32 bits integers. Here you use an
+additional lookup table containing the number of 1s enclosed in the
+binary representation of the 8 bit </span><img src="images/00019.jpeg"
+class="calibre34" /><span class="calibre9"> number. Using pre-computed
+lookup tables is a commonly adopted trick for speeding up operations on
+lookup tables.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058920"
+class="calibre16"></span><span id="part0000.html__Toc383672165"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">static</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+bitInChar[256];</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre31">void</span><span class="calibre32">
+fillBitsInChar()</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i = 0; i &lt; 256;
+++i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              bitInChar[i] = countBits(i);</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+countBitsConstantFor32BitsInt(</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> </span><span
+class="calibre33">n</span><span class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+bitInChar[</span><span class="calibre33">n</span><span
+class="calibre32"> &amp; 0xffu] +</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              bitInChar[(</span><span
+class="calibre33">n</span><span class="calibre32"> &gt;&gt; 8) &amp;
+0xffu] +</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              bitInChar[(</span><span
+class="calibre33">n</span><span class="calibre32"> &gt;&gt; 16) &amp;
+0xffu] +</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              bitInChar[(</span><span
+class="calibre33">n</span><span class="calibre32"> &gt;&gt; 24) &amp;
+0xffu];</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre36"><span class="calibre24">9.</span><span
+class="calibre25">     </span><span id="part0000.html__Toc376895969"
+class="calibre16"></span><span id="part0000.html__Toc383058921"
+class="calibre16"></span><span id="part0000.html__Toc383672166"
+class="calibre16"><span class="calibre24">Add two numbers without using
+arithmetic operators</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895970"
+class="calibre16"></span><span id="part0000.html__Toc383058922"
+class="calibre16"></span><span id="part0000.html__Toc383672167"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">We can use XOR for adding two bits and the AND
+operator for computing the carry. In the code we also implemented a
+subtract operation.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895971"
+class="calibre16"></span><span id="part0000.html__Toc383058923"
+class="calibre16"></span><span id="part0000.html__Toc383672168"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">int</span><span class="calibre32">
+add(</span><span class="calibre31">int</span><span class="calibre32">
+</span><span class="calibre33">x</span><span class="calibre32">,
+</span><span class="calibre31">int</span><span class="calibre32">
+</span><span class="calibre33">y</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (</span><span
+class="calibre33">y</span><span class="calibre32"> != 0)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> carry =
+</span><span class="calibre33">x</span><span class="calibre32"> &amp;
+</span><span class="calibre33">y</span><span
+class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">x</span><span class="calibre32"> = </span><span
+class="calibre33">x</span><span class="calibre32"> ^ </span><span
+class="calibre33">y</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">y</span><span class="calibre32"> = carry &lt;&lt;
+1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> </span><span
+class="calibre33">x</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span id="part0000.html__Toc376895972"><span
+class="calibre31">int</span><span class="calibre32"> negate(</span><span
+class="calibre31">int</span><span class="calibre32"> </span><span
+class="calibre33">x</span><span class="calibre32">) {</span></span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+add(~</span><span class="calibre33">x</span><span class="calibre32">,
+1);</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre31">int</span><span class="calibre32">
+subtract(</span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">x</span><span
+class="calibre32">, </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">y</span><span
+class="calibre32">) {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> add(</span><span
+class="calibre33">x</span><span class="calibre32">, negate(</span><span
+class="calibre33">y</span><span class="calibre32">));</span></p>
+<p><span class="calibre32">}</span></p>
+<div class="calibre6">
+
+</div>
+<br />
+
+</p>
+<p><span class="calibre32"> </span></p>
+<h1 class="calibre36"><span class="calibre24">10.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383672169"
+class="calibre16"></span><span id="part0000.html__Toc383058924"
+class="calibre16"><span class="calibre24">Given an array of integers
+where all the numbers are appearing twice find the only number which
+appears once</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383672170"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">We can identify the only number that appears
+one time by XOR’ing the array of integers. If a number is duplicate then
+XOR operation will be 0. In other words, if we XOR all the numbers the
+result is exactly the number which appears once.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383672171"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre9">Left as exercise. </span></p>
+<h1 class="calibre36"><span class="calibre24">11.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383672172"
+class="calibre16"><span class="calibre24">Given an array of integers
+where all the numbers are appearing twice find the only two numbers
+which appears once</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383672173"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">XOR-ing all the numbers produces as result the
+number </span><img src="images/00020.jpeg" class="calibre47" /><span
+class="calibre9"> where </span><img src="images/00021.jpeg"
+class="calibre48" /><span class="calibre9"> and </span><img
+src="images/00022.jpeg" class="calibre27" /><span class="calibre9"> are
+the only two numbers which appear once.  Let </span><img
+src="images/00023.jpeg" class="calibre49" /><span class="calibre9"> be
+the first bit set to 1 in </span><img src="images/00024.jpeg"
+class="calibre50" /><span class="calibre9">We can partition all the
+numbers into sets: the numbers having the </span><img
+src="images/00023.jpeg" class="calibre49" /><span class="calibre9"> bit
+set to 1 and the numbers having it set to 0. Clearly n1 and n2 cannot be
+in the same set. So the solution of this problem has been reduced to the
+solution of the previous problem.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383672174"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre9">Left as exercise.</span></p>
+<h1 class="calibre36"><span class="calibre24">12.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383672175"
+class="calibre16"><span class="calibre24">Multiply two numbers without
+using arithmetic operators</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383058925"
+class="calibre16"></span><span id="part0000.html__Toc383672176"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Without loss of generality let’s assume that
+we multiply </span><img src="images/00025.jpeg"
+class="calibre38" /><span class="calibre9">, and </span><img
+src="images/00026.jpeg" class="calibre29" /><span class="calibre9">. The
+code is dealing with the case </span><img src="images/00027.jpeg"
+class="calibre29" /><span class="calibre9">. While </span><img
+src="images/00028.jpeg" class="calibre29" /><span class="calibre9">If y
+is even, we can multiply </span><img src="images/00025.jpeg"
+class="calibre38" /><span class="calibre9"> by 2 and divide </span><img
+src="images/00029.jpeg" class="calibre51" /><span class="calibre9"> by
+2, otherwise we add </span><img src="images/00025.jpeg"
+class="calibre38" /><span class="calibre9"> to the result and we
+subtract 1 to </span><img src="images/00029.jpeg"
+class="calibre51" /><span class="calibre9">. The code implements the
+following logic. </span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058926"
+class="calibre16"></span><span id="part0000.html__Toc383672177"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">int</span><span class="calibre32">
+isEven(</span><span class="calibre31">int</span><span class="calibre32">
+</span><span class="calibre33">n</span><span class="calibre32">)
+{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> !(</span><span
+class="calibre33">n</span><span class="calibre32"> &amp; 1);</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre31">int</span><span class="calibre32">
+multiply(</span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">x</span><span
+class="calibre32">, </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">y</span><span
+class="calibre32">) {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> res = 0;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">x</span><span class="calibre32"> &lt; 0 &amp;&amp;
+</span><span class="calibre33">y</span><span class="calibre32"> &lt; 0)
+{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+multiply(negate(</span><span class="calibre33">x</span><span
+class="calibre32">), negate(</span><span class="calibre33">y</span><span
+class="calibre32">));</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">x</span><span class="calibre32"> &gt;= 0 &amp;&amp;
+</span><span class="calibre33">y</span><span class="calibre32"> &lt; 0)
+{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+multiply(</span><span class="calibre33">y</span><span
+class="calibre32">, </span><span class="calibre33">x</span><span
+class="calibre32">);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (</span><span
+class="calibre33">y</span><span class="calibre32"> &gt; 0) {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (isEven(</span><span
+class="calibre33">y</span><span class="calibre32">)) {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre33">x</span><span class="calibre32"> &lt;&lt;= 1
+;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre33">y</span><span class="calibre32"> &gt;&gt;=
+1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              }</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">else</span><span class="calibre32"> {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            res = add(res,
+</span><span class="calibre33">x</span><span
+class="calibre32">);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre33">y</span><span class="calibre32"> = add(</span><span
+class="calibre33">y</span><span class="calibre32">, -1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              }</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> res;</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<h1 class="calibre36"><span class="calibre24">13.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383058927"
+class="calibre16"></span><span id="part0000.html__Toc383672178"
+class="calibre16"><span class="calibre24">Compute the two’s complement
+for a given integer</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383058928"
+class="calibre16"></span><span id="part0000.html__Toc383672179"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">The two's complement of an n-bit number is the
+result of subtracting the number from </span><img
+src="images/00030.jpeg" class="calibre52" /><span class="calibre9">. The
+two's complement system has the advantage that the arithmetic operations
+of addition, subtraction, and multiplication are identical to the ones
+defined for unsigned binary numbers. This requires  inputs  to be
+represented with the same number of bits and any overflow beyond those
+bits is discarded from the result.  Indeed zero has only a single
+representation.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058929"
+class="calibre16"></span><span id="part0000.html__Toc383672180"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">int</span><span class="calibre32">
+complement2(</span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre33">n</span><span class="calibre32"> = ~</span><span
+class="calibre33">n</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre33">n</span><span class="calibre32"> = </span><span
+class="calibre33">n</span><span class="calibre32"> + 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> </span><span
+class="calibre33">n</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre36"><span class="calibre24">14.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383672181"
+class="calibre16"><span class="calibre24">Isolate the rightmost bit set
+to 1</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383672182"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Let’s build some example. Suppose that
+</span><img src="images/00031.jpeg" class="calibre53" /><span
+class="calibre9">, if we compute </span><img src="images/00032.jpeg"
+class="calibre54" /><span class="calibre9"> in two’s complement we get
+</span><img src="images/00033.jpeg" class="calibre55" /><span
+class="calibre9">. Therefore </span><img src="images/00034.jpeg"
+class="calibre56" /><span class="calibre9"> selects the rightmost bit
+set to 1.</span></p>
+<h1 class="calibre36"><span class="calibre24">15.</span><span
+class="calibre25"> </span><span class="calibre24"> </span><span
+id="part0000.html__Toc383672183" class="calibre16"><span
+class="calibre24">Create a mask for trailing zeros</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383672184"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">If we are able to identify the rightmost bit
+set to 1, then we can create the mask for trailing zeros just
+subtracting 1. The solution is therefore  </span><img
+src="images/00035.jpeg" class="calibre57" /></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9"> </span></p>
+<h1 class="calibre36"><span class="calibre24">16.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383058930"
+class="calibre16"></span><span id="part0000.html__Toc383672185"
+class="calibre16"><span class="calibre24">Compute parity for a 32 bit
+number</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895973"
+class="calibre16"></span><span id="part0000.html__Toc383058931"
+class="calibre16"></span><span id="part0000.html__Toc383672186"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Given a number</span><img
+src="images/00036.jpeg" class="calibre27" /><span class="calibre9">, we
+can drop the last bit with the expression</span><img
+src="images/00037.jpeg" class="calibre58" /><span class="calibre9">.
+Then if the number of bits set to 1 is even, we return 1, otherwise we
+return 0.  In other words, we need to maintain a bit which changes its
+status from 0 to 1 as many times as the number of bits set to 1
+in</span><img src="images/00036.jpeg" class="calibre27" /><span
+class="calibre9">. This is achieved in our code with the
+variable</span><img src="images/00038.jpeg" class="calibre59" /><span
+class="calibre9">. In many practical implementations we can avoid to
+process every single bit in isolation by storing a number of
+pre-computed parity tables for a number of bits. </span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895974"
+class="calibre16"></span><span id="part0000.html__Toc383058932"
+class="calibre16"></span><span id="part0000.html__Toc383672187"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">short</span><span class="calibre32">
+parity(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">long</span><span
+class="calibre32"> n)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">short</span><span class="calibre32"> result =
+0;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (n)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              result ^= 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              n &amp;= (n - 1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+result;</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre31">static</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+preComputedParity[1 &lt;&lt; 16];</span></p>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">short</span><span class="calibre32">
+partityFast(_int64 </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> mask =
+0xffff;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+preComputedParity[</span><span class="calibre33">n</span><span
+class="calibre32"> &gt;&gt; 48] ^</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              preComputedParity[(</span><span
+class="calibre33">n</span><span class="calibre32"> &gt;&gt; 32) &amp;
+mask] ^</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              preComputedParity[(</span><span
+class="calibre33">n</span><span class="calibre32"> &gt;&gt; 16) &amp;
+mask] ^</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              preComputedParity[</span><span
+class="calibre33">n</span><span class="calibre32">  &amp;
+mask];</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre36"><span class="calibre24">17.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383058933"
+class="calibre16"></span><span id="part0000.html__Toc383672188"
+class="calibre16"></span><span id="part0000.html__Toc376895975"
+class="calibre16"><span class="calibre24">Swap two integers variables
+with no additional memory</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383058934"
+class="calibre16"></span><span id="part0000.html__Toc383672189"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">The solution uses XOR operation and it needs
+no additional storage. The interested reader can think about how to swap
+two variables which are not integers.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058935"
+class="calibre16"></span><span id="part0000.html__Toc383672190"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">void</span><span class="calibre32">
+swap(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> &amp; </span><span class="calibre33">i</span><span
+class="calibre32">, </span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> &amp; </span><span class="calibre33">j</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre33">i</span><span class="calibre32"> ^= </span><span
+class="calibre33">j</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre33">j</span><span class="calibre32"> ^= </span><span
+class="calibre33">i</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre33">i</span><span class="calibre32"> ^= </span><span
+class="calibre33">j</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre36"><span class="calibre24">18.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383058936"
+class="calibre16"></span><span id="part0000.html__Toc383672191"
+class="calibre16"><span class="calibre24">Swap bit </span><span
+class="calibre60">i </span><span class="calibre24">and </span><span
+class="calibre60">j</span><span class="calibre24"> in a 64 bit
+number</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895976"
+class="calibre16"></span><span id="part0000.html__Toc383058937"
+class="calibre16"></span><span id="part0000.html__Toc383672192"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">If </span><img src="images/00023.jpeg"
+class="calibre49" /><span class="calibre9"> is equal to</span><img
+src="images/00039.jpeg" class="calibre54" /><span class="calibre9">,no
+swap is required. We need to swap </span><img src="images/00023.jpeg"
+class="calibre49" /><span class="calibre9"> and </span><img
+src="images/00040.jpeg" class="calibre51" /><span class="calibre9"> if
+those two bits are different, which means that they are XOR’d to 1. If
+they are different, then there are only two cases possible: (0, 1) and
+(1, 0) and for those a XOR with 1 will swap the result. If the two bits
+are different, then their XOR is 0 and for any number </span><img
+src="images/00041.jpeg" class="calibre61" /><span class="calibre9">.
+Those observations are implemented in the code below.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895977"
+class="calibre16"></span><span id="part0000.html__Toc383058938"
+class="calibre16"></span><span id="part0000.html__Toc383672193"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">int</span><span class="calibre32">
+swapBits(</span><span class="calibre31">int</span><span
+class="calibre32"> n, </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i, </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> j)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (i == j)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> n;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> xor = ((n &gt;&gt;
+i) ^ (n &gt;&gt; j)) &amp; 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> n ^ (xor
+&lt;&lt; i) ^ (xor &lt;&lt; j);</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre36"><span class="calibre24">19.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc376895978"
+class="calibre16"></span><span id="part0000.html__Toc383058939"
+class="calibre16"></span><span id="part0000.html__Toc383672194"
+class="calibre16"><span class="calibre24">Reverse the order of bits in
+an unsigned integer</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383058940"
+class="calibre16"></span><span id="part0000.html__Toc383672195"
+class="calibre16"></span><span id="part0000.html__Toc376895979"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">We simply apply the function used for swapping
+bits. First solution re-use the code defined for a previous exercise,
+while the second one manipulates bits directly.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058941"
+class="calibre16"></span><span id="part0000.html__Toc383672196"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+reverse(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> numBits =
+</span><span class="calibre31">sizeof</span><span
+class="calibre32">(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32">) * 8;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> halfBits =
+numBits &gt;&gt; 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i = 0; i &lt;
+halfBits; ++i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">n</span><span class="calibre32"> =
+swapBits(</span><span class="calibre33">n</span><span
+class="calibre32">, i, numBits - i - 1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> </span><span
+class="calibre33">n</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre31"> </span></p>
+<p><span class="calibre31">unsigned</span><span class="calibre32">
+</span><span class="calibre31">int</span><span class="calibre32">
+mirror(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> n)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i = 0; i &lt;= 15;
+i++)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              n = (n &amp; (0xffffffff - (1 &lt;&lt;
+i) - (1 &lt;&lt; (31 - i)))) |</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            ((n &amp; (1 &lt;&lt; i))
+&lt;&lt; (31 - i * 2)) | </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            ((n &amp; (1 &lt;&lt; (31
+- i))) &gt;&gt; (31 - i * 2));</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> n;</span></p>
+<p><span class="calibre32">}</span></p>
+<div class="calibre6">
+
+</div>
+<br />
+
+</p>
+<h1 class="calibre36"><span class="calibre24">20.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc376895981"
+class="calibre16"></span><span id="part0000.html__Toc383058942"
+class="calibre16"></span><span id="part0000.html__Toc383672197"
+class="calibre16"><span class="calibre24">Convert an integer to a string
+and a string to an integer</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895982"
+class="calibre16"></span><span id="part0000.html__Toc383058943"
+class="calibre16"></span><span id="part0000.html__Toc383672198"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">For a base 10 integer</span><img
+src="images/00036.jpeg" class="calibre27" /><span class="calibre9"> we
+know that we can get the last digit with the operation </span><img
+src="images/00042.jpeg" class="calibre62" /><span class="calibre9"> and
+that we can right shift the number with </span><img
+src="images/00043.jpeg" class="calibre63" /><span class="calibre9">.
+Also the ASCII character for the digit </span><img
+src="images/00044.jpeg" class="calibre51" /><span class="calibre9"> is
+</span><img src="images/00045.jpeg" class="calibre64" /><span
+class="calibre9"> . If the number is negative, we need to prepend 
+character ‘-‘.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895983"
+class="calibre16"></span><span id="part0000.html__Toc383058944"
+class="calibre16"></span><span id="part0000.html__Toc383672199"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre32">std::</span><span
+class="calibre65">string</span><span class="calibre32">
+toString(</span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32"> == 0) </span><span
+class="calibre31">return</span><span class="calibre32"> </span><span
+class="calibre66">"0"</span><span class="calibre32">;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              std::</span><span
+class="calibre65">string</span><span class="calibre32">
+result;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">result.reserve(10);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32">&lt;0)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">n</span><span class="calibre32"> = -</span><span
+class="calibre33">n</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              result.push_back(</span><span
+class="calibre66">'-'</span><span class="calibre32">);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> i =
+log10(</span><span class="calibre33">n</span><span class="calibre32">);
+i &gt;= 0(</span><span class="calibre33">n</span><span
+class="calibre32">); i--)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              result.push_back(</span><span
+class="calibre66">'0'</span><span class="calibre32"> + (</span><span
+class="calibre33">n</span><span class="calibre32"> / (</span><span
+class="calibre31">int</span><span class="calibre32">)pow(10, i)) %
+10);</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+result;</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre31">int</span><span class="calibre32">
+toInt(</span><span class="calibre31">const</span><span
+class="calibre32"> std::</span><span
+class="calibre65">string</span><span class="calibre32"> &amp;
+</span><span class="calibre33">s</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">s</span><span class="calibre32">.empty()) </span><span
+class="calibre31">return</span><span class="calibre32"> 0;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">const</span><span class="calibre32"> </span><span
+class="calibre31">bool</span><span class="calibre32"> negative =
+(</span><span class="calibre33">s</span><span class="calibre32">[0] ==
+</span><span class="calibre66">'-'</span><span class="calibre32">) ?
+</span><span class="calibre31">true</span><span class="calibre32"> :
+</span><span class="calibre31">false</span><span
+class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> result =
+0;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i = (negative ? 1 :
+0); </span></p>
+<p><span class="calibre32">i &lt; </span><span
+class="calibre33">s</span><span class="calibre32">.size();
+++i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32">
+(isdigit(</span><span class="calibre33">s</span><span
+class="calibre32">[i]))</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            result = result * 10 +
+</span><span class="calibre33">s</span><span class="calibre32">[i] -
+</span><span class="calibre66">'0'</span><span
+class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              }</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> (negative) ?
+-result : result;</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre23"><span class="calibre24">21.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc376895984"
+class="calibre16"></span><span id="part0000.html__Toc383058945"
+class="calibre16"></span><span id="part0000.html__Toc383672200"
+class="calibre16"><span class="calibre24">Convert a number from base b1
+to base b2</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895985"
+class="calibre16"></span><span id="part0000.html__Toc383058946"
+class="calibre16"></span><span id="part0000.html__Toc383672201"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">We can generalize the solution presented in
+the previous exercise. The idea is to convert from base </span><img
+src="images/00046.jpeg" class="calibre48" /><span class="calibre9"> into
+decimal and from the decimal into base </span><img
+src="images/00047.jpeg" class="calibre68" /></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895986"
+class="calibre16"></span><span id="part0000.html__Toc383058947"
+class="calibre16"></span><span id="part0000.html__Toc383672202"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre32">std::</span><span
+class="calibre65">string</span><span class="calibre32">
+convertFromBaseToBase(</span><span class="calibre31">const</span><span
+class="calibre32"> std::</span><span
+class="calibre65">string</span><span class="calibre32"> &amp;
+</span><span class="calibre33">s</span><span class="calibre32">,
+</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> </span><span
+class="calibre33">b1</span><span class="calibre32">, </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> </span><span
+class="calibre33">b2</span><span class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">s</span><span class="calibre32">.empty()) </span><span
+class="calibre31">return</span><span class="calibre32"> </span><span
+class="calibre33">s</span><span class="calibre32">;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">bool</span><span class="calibre32"> negative =
+(</span><span class="calibre33">s</span><span class="calibre32">[0] ==
+</span><span class="calibre66">'-'</span><span
+class="calibre32">);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> n = 0,
+reminder;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i = (negative ? 1 :
+0); </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              i &lt; </span><span
+class="calibre33">s</span><span class="calibre32">.size();
+++i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              n = n * </span><span
+class="calibre33">b1</span><span class="calibre32"> +
+(isdigit(</span><span class="calibre33">s</span><span
+class="calibre32">[i]) ? </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre33">s</span><span class="calibre32">[i] - </span><span
+class="calibre66">'0'</span><span class="calibre32"> : </span><span
+class="calibre33">s</span><span class="calibre32">[i] - </span><span
+class="calibre66">'A'</span><span class="calibre32"> + 10);</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              std::</span><span
+class="calibre65">string</span><span class="calibre32">
+result;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (n)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              reminder = n % </span><span
+class="calibre33">b2</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              result.push_back(reminder &gt;= 10 ?
+</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre66">'A'</span><span class="calibre32"> + reminder - 10 :
+</span><span class="calibre66">'0'</span><span class="calibre32"> +
+reminder);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              n /= </span><span
+class="calibre33">b2</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32">
+(negative)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              result.push_back(</span><span
+class="calibre66">'-'</span><span class="calibre32">);</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              reverse(result.begin(),
+result.end());</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">
+result;</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre36"><span class="calibre24">22.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc376895987"
+class="calibre16"></span><span id="part0000.html__Toc383058948"
+class="calibre16"></span><span id="part0000.html__Toc383672203"
+class="calibre16"><span class="calibre24">Given a set S, compute the
+powerset of S</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895988"
+class="calibre16"></span><span id="part0000.html__Toc383058949"
+class="calibre16"></span><span id="part0000.html__Toc383672204"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">The powerset of </span><img
+src="images/00048.jpeg" class="calibre51" /><span class="calibre9"> is
+the set of all the subsets of S. For instance given the set </span><img
+src="images/00049.jpeg" class="calibre45" /><span class="calibre9"> ,the
+powerset is</span><img src="images/00050.jpeg" class="calibre51" /></p>
+<p><img src="images/00051.jpeg" class="calibre69" /><span
+class="calibre9">.</span></p>
+<p><span class="calibre9">If we represent the presence (absence) of
+</span><img src="images/00019.jpeg" class="calibre34" /><span
+class="calibre9"> element in </span><img src="images/00048.jpeg"
+class="calibre51" /><span class="calibre9"> with a bit set to 1
+(respectively, 0), then we can build the powerset by generating all the
+bitmasks from 0 to </span><img src="images/00052.jpeg"
+class="calibre70" /><span class="calibre9"> where </span><img
+src="images/00009.jpeg" class="calibre38" /><span class="calibre9"> is
+the size of</span><img src="images/00053.jpeg" class="calibre27" /><span
+class="calibre9">. Note that the position of the </span><img
+src="images/00019.jpeg" class="calibre34" /><span class="calibre9"> bit
+is given by </span><img src="images/00054.jpeg"
+class="calibre71" /><span class="calibre9">. </span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895989"
+class="calibre16"></span><span id="part0000.html__Toc383058950"
+class="calibre16"></span><span id="part0000.html__Toc383672205"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">void</span><span class="calibre32">
+powerSet(</span><span class="calibre31">const</span><span
+class="calibre32"> std::</span><span
+class="calibre65">vector</span><span class="calibre32">&lt;</span><span
+class="calibre31">char</span><span class="calibre32">&gt; &amp;
+</span><span class="calibre33">set</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> i = 0; i &lt; (1
+&lt;&lt; </span><span class="calibre33">set</span><span
+class="calibre32">.size()); ++i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> n = i;  </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (n)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> bit = n &amp; ~(n -
+1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            std::cout &lt;&lt;
+</span><span class="calibre33">set</span><span
+class="calibre32">[log2(bit)];</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            n &amp;= n - 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              }</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              std::cout &lt;&lt; </span><span
+class="calibre66">","</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">}</span></p>
+<div class="calibre6">
+
+</div>
+<br />
+
+</p>
+<h1 class="calibre23"><span class="calibre24">23.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383058951"
+class="calibre16"></span><span id="part0000.html__Toc383672206"
+class="calibre16"></span><span id="part0000.html__Toc376895993"
+class="calibre16"><span class="calibre24">Add two decimal strings
+representing two integers</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383058952"
+class="calibre16"></span><span id="part0000.html__Toc383672207"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">The two strings can represent very large
+integers. The algorithm used for summing the value is the one taught at
+primary school. </span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058953"
+class="calibre16"></span><span id="part0000.html__Toc383672208"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span id="part0000.html__Toc376895996"><span
+class="calibre31">int</span><span class="calibre32">
+padDecimalStrings(std::</span><span class="calibre65">string</span><span
+class="calibre32"> &amp;</span><span class="calibre33">str1</span><span
+class="calibre32">, std::</span><span
+class="calibre65">string</span><span class="calibre32">
+&amp;</span><span class="calibre33">str2</span><span
+class="calibre32">)</span></span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> len1 = </span><span
+class="calibre33">str1</span><span class="calibre32">.size();</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> len2 = </span><span
+class="calibre33">str2</span><span class="calibre32">.size();</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (len1 &lt;
+len2)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">str1</span><span class="calibre32">.insert(0, len2 -
+len1, </span><span class="calibre66">'0'</span><span
+class="calibre32">);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> len2;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">else</span><span class="calibre32"> </span><span
+class="calibre31">if</span><span class="calibre32"> (len1 &gt;
+len2)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">str2</span><span class="calibre32">.insert(0, len1 -
+len2, </span><span class="calibre66">'0'</span><span
+class="calibre32">);</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> len1;</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">std::</span><span
+class="calibre65">string</span><span class="calibre32">
+addDecimalStrings(std::</span><span class="calibre65">string</span><span
+class="calibre32"> </span><span class="calibre33">s1</span><span
+class="calibre32">, std::</span><span
+class="calibre65">string</span><span class="calibre32"> </span><span
+class="calibre33">s2</span><span class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> len =
+padDecimalStrings(</span><span class="calibre33">s1</span><span
+class="calibre32">, </span><span class="calibre33">s2</span><span
+class="calibre32">);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> b1, b2, sum, carry
+= 0; </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">std::</span><span class="calibre65">string</span><span
+class="calibre32"> res;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">res.resize(len);</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> i = len - 1; i
+&gt;= 0; i--)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              b1 = </span><span
+class="calibre33">s1</span><span class="calibre32">[i] - </span><span
+class="calibre66">'0'</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              b2 = </span><span
+class="calibre33">s2</span><span class="calibre32">[i] - </span><span
+class="calibre66">'0'</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              sum = (b1 + b2 + carry);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              carry = sum / 10;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              res[i] = (</span><span
+class="calibre31">char</span><span class="calibre32">)sum % 10 +
+</span><span class="calibre66">'0'</span><span
+class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (carry)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              res = </span><span
+class="calibre66">'1'</span><span class="calibre32"> + res;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> res;</span></p>
+<p><span class="calibre72">}</span><span class="calibre9"> </span></p>
+<h1 class="calibre36"><span class="calibre24">24.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383058954"
+class="calibre16"></span><span id="part0000.html__Toc383672209"
+class="calibre16"><span class="calibre24">Generate all the bit patterns
+from 0 to </span><img src="images/00055.jpeg" class="calibre73" /><span
+class="calibre24"> such that successive patterns differ by one
+bit.</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376895997"
+class="calibre16"></span><span id="part0000.html__Toc383058955"
+class="calibre16"></span><span id="part0000.html__Toc383672210"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Those patterns are named Gray code after the
+inventor Frank Gray</span><span id="part0000.html__ftnref1"></span><a
+href="#part0000.html__ftn1">[1]</a><span class="calibre9">.  It is
+convenient to generate them incrementally as</span><img
+src="images/00056.jpeg" class="calibre74" /><span class="calibre9">If we
+analyze the pattern, we understand that any list </span><img
+src="images/00057.jpeg" class="calibre70" /><span class="calibre9"> is
+generated from the previous list </span><img src="images/00058.jpeg"
+class="calibre75" /><span class="calibre76"> </span><span
+class="calibre9">in three steps. At the beginning each element in
+</span><img src="images/00058.jpeg" class="calibre75" /><span
+class="calibre76">  </span><span class="calibre9">is prepended by a 0.
+Then the list </span><img src="images/00058.jpeg"
+class="calibre75" /><span class="calibre76">  </span><span
+class="calibre9">is reversed and each element is prepended by a 1. As
+final step the two intermediate lists are juxtaposed to create the new
+list</span><img src="images/00059.jpeg" class="calibre77" /><span
+class="calibre9">. This process is repeated until we generate</span><img
+src="images/00060.jpeg" class="calibre78" /><span
+class="calibre9">.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376895998"
+class="calibre16"></span><span id="part0000.html__Toc383058956"
+class="calibre16"></span><span id="part0000.html__Toc383672211"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">void</span><span class="calibre32">
+gray(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">n</span><span class="calibre32"> == 0)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32">;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              std::</span><span
+class="calibre65">vector</span><span
+class="calibre32">&lt;std::</span><span
+class="calibre65">string</span><span class="calibre32">&gt;
+gray;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">gray.push_back(</span><span
+class="calibre66">"0"</span><span class="calibre32">);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">gray.push_back(</span><span
+class="calibre66">"1"</span><span class="calibre32">);</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> i = 2; i &lt; (1
+&lt;&lt; </span><span class="calibre33">n</span><span
+class="calibre32">); i = i &lt;&lt; 1)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> j = i - 1; j &gt;=
+0; j--)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                           
+gray.push_back(gray[j]);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> j = 0; j &lt; i;
+j++)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            gray[j] = </span><span
+class="calibre66">"0"</span><span class="calibre32"> +
+gray[j];</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> j = i; j &lt; 2 *
+i; j++)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            gray[j] = </span><span
+class="calibre66">"1"</span><span class="calibre32"> +
+gray[j];</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">unsigned</span><span class="calibre32"> i = 0; i &lt;
+gray.size(); i++)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              std::cout &lt;&lt; gray[i] &lt;&lt;
+std::endl;</span></p>
+<p><span class="calibre32">}</span></p>
+<h1 class="calibre36"><span class="calibre24">25.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc376895999"
+class="calibre16"></span><span id="part0000.html__Toc383058957"
+class="calibre16"></span><span id="part0000.html__Toc383672212"
+class="calibre16"><span class="calibre24">Represent  unsigned integers
+with variable length encoding using the continuation
+bit</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376896000"
+class="calibre16"></span><span id="part0000.html__Toc383058958"
+class="calibre16"></span><span id="part0000.html__Toc383672213"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">The key idea is to take a 64bit unsigned
+integer </span><img src="images/00016.jpeg" class="calibre27" /><span
+class="calibre9">and represent it with a list of bytes. For each byte
+seven bits are used for storing the integers with variable length
+encoding. In addition the most significant bit is the continuation bit
+and it is used to signal whether or not we need an additional byte for
+encoding </span><span class="calibre13">n</span><span
+class="calibre9">.  For example: if the number is less than </span><img
+src="images/00061.jpeg" class="calibre70" /><span class="calibre9"> , we
+need only one byte where the most significant bit it set to 0. Otherwise
+if the number is less than </span><img src="images/00062.jpeg"
+class="calibre34" /><span class="calibre9"> , we need two bytes where
+the first byte has the continuation bit set to 1 and the second byte has
+the continuation bit set to 0. This representation is used for saving
+space when implementing an inverted index</span><span
+id="part0000.html__ftnref2"></span><a
+href="#part0000.html__ftn2">[2]</a><span class="calibre9">, a data
+structure frequently used by search engines. The inverted index is
+similar to the analytical index used to memorize the page where a word
+occurs in a book. The crucial intuition is to store the difference
+between two consecutive pages for each word and adopt a variable length
+encoding in order to save space.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376896001"
+class="calibre16"></span><span id="part0000.html__Toc383058959"
+class="calibre16"></span><span id="part0000.html__Toc383672214"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">void</span><span class="calibre32">
+encodeContinuationBit(</span><span class="calibre31">__int64</span><span
+class="calibre32"> </span><span class="calibre33">n</span><span
+class="calibre32">, </span></p>
+<p><span class="calibre32">std::</span><span
+class="calibre65">vector</span><span class="calibre32">&lt;</span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">short</span><span class="calibre32">&gt; &amp;
+</span><span class="calibre33">encode</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">__int64</span><span class="calibre32"> x =
+</span><span class="calibre33">n</span><span
+class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">short</span><span class="calibre32"> e;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (!x) </span><span
+class="calibre33">encode</span><span
+class="calibre32">.push_back(0);</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (x)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              e = x &amp; 127;</span></p>
+<p><span class="calibre32"> </span><span class="calibre32">             
+              x &gt;&gt;= 7;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (x)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            e |= (1 &lt;&lt;
+7);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre33">encode</span><span
+class="calibre32">.push_back(e);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">} </span></p>
+<p><span class="calibre32">}</span></p>
+<div class="calibre6">
+
+</div>
+<p><span class="calibre9"> </span></p>
+<h1 class="calibre36"><span class="calibre24">26.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc376896002"
+class="calibre16"></span><span id="part0000.html__Toc383058960"
+class="calibre16"></span><span id="part0000.html__Toc383672215"
+class="calibre16"><span class="calibre24">Represent an integer with
+variable length encoding using gamma encoding</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc376896003"
+class="calibre16"></span><span id="part0000.html__Toc383058961"
+class="calibre16"></span><span id="part0000.html__Toc383672216"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Gamma encoding is another variable length
+encoding for integers</span><span id="part0000.html__ftnref3"></span><a
+href="#part0000.html__ftn3">[3]</a><span class="calibre9">. The number
+</span><img src="images/00025.jpeg" class="calibre38" /><span
+class="calibre9"> is represented with </span><img
+src="images/00063.jpeg" class="calibre80" /><span class="calibre9">
+bits. The integer is separated into two parts. The former is the highest
+power of 2 not greater than x  (say </span><img src="images/00064.jpeg"
+class="calibre81" /><span class="calibre9"> and it is represented in
+unary with log(x) bits set to 0 followed by a 1. The latter is the
+remaining binary digit representing </span><img src="images/00065.jpeg"
+class="calibre82" /><span class="calibre9">.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc376896004"
+class="calibre16"></span><span id="part0000.html__Toc383058962"
+class="calibre16"></span><span id="part0000.html__Toc383672217"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">void</span><span class="calibre32">
+gammaEncoding(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">x</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> i;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">unsigned</span><span class="calibre32"> lenOfX =
+0;</span></p>
+<p><span class="calibre32"> </span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (i = </span><span
+class="calibre33">x</span><span class="calibre32">; i &gt; 1; i
+&gt;&gt;= 1) </span><span class="calibre83">// floor(log2(x))</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              lenOfX++;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (i = lenOfX; i &gt;
+0; --i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              std::cout &lt;&lt; </span><span
+class="calibre66">'0'</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">std::cout &lt;&lt; </span><span
+class="calibre66">'1'</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre33">x</span><span class="calibre32"> -= (1 &lt;&lt;
+lenOfX);          </span><span class="calibre83">// reminder</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (i = 1 &lt;&lt;
+(lenOfX -1); i &gt; 0; i &gt;&gt;= 1)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (</span><span
+class="calibre33">x</span><span class="calibre32"> &amp; i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              std::cout &lt;&lt; 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">else</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              std::cout &lt;&lt; 0;</span></p>
+<p><span class="calibre32">}</span></p>
+<div class="calibre6">
+
+</div>
+<br />
+
+</p>
+<p><span class="calibre17"> </span></p>
+<h1 class="calibre36"><span class="calibre24">27.</span><span
+class="calibre25"> </span><span class="calibre24"> </span><span
+id="part0000.html__Toc383058963" class="calibre16"></span><span
+id="part0000.html__Toc383672218" class="calibre16"><span
+class="calibre24">Represent an integer with variable length encoding
+using delta encoding</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383058964"
+class="calibre16"></span><span id="part0000.html__Toc383672219"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">Delta encoding is another variable length
+encoding for integers</span><span id="part0000.html__ftnref4"></span><a
+href="#part0000.html__ftn4">[4]</a><span class="calibre9">. The number
+</span><img src="images/00025.jpeg" class="calibre38" /><span
+class="calibre9"> is represented with </span><img
+src="images/00066.jpeg" class="calibre84" /><span class="calibre9">
+bits. The integer is separated into two parts. The former one is the
+highest power of 2 not greater than x  (say </span><img
+src="images/00064.jpeg" class="calibre81" /><span class="calibre9"> and
+it is represented by encoding the number </span><img
+src="images/00067.jpeg" class="calibre71" /><span class="calibre9"> with
+gamma encoding. The latter one is the remaining binary digit
+representing </span><img src="images/00065.jpeg"
+class="calibre82" /><span class="calibre9">.</span></p>
+<h2 class="calibre30"><span id="part0000.html__Toc383058965"
+class="calibre16"></span><span id="part0000.html__Toc383672220"
+class="calibre16"><span class="calibre24">Code</span></span></h2>
+<p><span class="calibre31">void</span><span class="calibre32">
+deltaEncoding(</span><span class="calibre31">unsigned</span><span
+class="calibre32"> </span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">x</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> len = 0,
+lengthOfLen = 0, i;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> i = </span><span
+class="calibre33">x</span><span class="calibre32">; i &gt; 0; i
+&gt;&gt;= 1)  </span><span class="calibre83">//
+1+floor(log2(num))</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              len++;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> i = len; i &gt; 1;
+i &gt;&gt;= 1)  </span><span class="calibre83">//
+floor(log2(len))</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              lengthOfLen++;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> i = lengthOfLen; i
+&gt; 0; --i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              std::cout &lt;&lt; 0;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> i = lengthOfLen; i
+&gt;= 0; --i)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              std::cout &lt;&lt; ((len &gt;&gt; i)
+&amp; 1);</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">for</span><span class="calibre32"> (</span><span
+class="calibre31">int</span><span class="calibre32"> i = len - 2; i
+&gt;= 0; i--)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              std::cout &lt;&lt; ((</span><span
+class="calibre33">x</span><span class="calibre32"> &gt;&gt; i) &amp;
+1);</span></p>
+<p><span class="calibre32">}</span></p>
+<div class="calibre6">
+
+</div>
+<br />
+
+</p>
+<p><span class="calibre32"> </span></p>
+<h1 class="calibre36"><span class="calibre24">28.</span><span
+class="calibre25"> </span><span id="part0000.html__Toc383672221"
+class="calibre16"><span class="calibre24">Compute the average with no
+division</span></span></h1>
+<h2 class="calibre26"><span id="part0000.html__Toc383672222"
+class="calibre16"><span class="calibre24">Solution</span></span></h2>
+<p><span class="calibre9">This problem solves a bug in binary search and
+merge sort reported in 2006 more than 60 years after the first binary
+search algorithm has been published.</span><span
+id="part0000.html__ftnref5"></span><a
+href="#part0000.html__ftn5">[5]</a><span class="calibre9"> Binary search
+is typically implemented as it follows:</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre31">int</span><span class="calibre32">
+binSearch(</span><span class="calibre31">int</span><span
+class="calibre32"> </span><span class="calibre33">a</span><span
+class="calibre32">[], </span><span
+class="calibre31">unsigned</span><span class="calibre32"> </span><span
+class="calibre31">int</span><span class="calibre32"> </span><span
+class="calibre33">size</span><span class="calibre32">, </span><span
+class="calibre31">int</span><span class="calibre32"> </span><span
+class="calibre33">key</span><span class="calibre32">) {</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> low = 0;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> high = </span><span
+class="calibre33">size</span><span class="calibre32">;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">while</span><span class="calibre32"> (low &lt;= high)
+{</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> mid = (low + high)
+/ 2;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">int</span><span class="calibre32"> midVal =
+</span><span class="calibre33">a</span><span
+class="calibre32">[mid];</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">if</span><span class="calibre32"> (midVal &lt;
+</span><span class="calibre33">key</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            low = mid + 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">else</span><span class="calibre32"> </span><span
+class="calibre31">if</span><span class="calibre32"> (midVal &gt;
+</span><span class="calibre33">key</span><span
+class="calibre32">)</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            high = mid - 1;</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">              </span><span
+class="calibre31">else</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">                            </span><span
+class="calibre31">return</span><span class="calibre32"> mid;
+</span><span class="calibre83">// key found</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre32">}</span></p>
+<p><span class="calibre32">              </span><span
+class="calibre31">return</span><span class="calibre32"> -(low + 1); 
+</span><span class="calibre83">// key not found.</span></p>
+<p><span class="calibre32">}</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">and the bug is in the line</span><span
+class="calibre9"> </span><span class="calibre9">int </span><img
+src="images/00068.jpeg" class="calibre85" /><span class="calibre9">;
+</span><span class="calibre9">since the sum overflow to a negative value
+if the sum of </span><img src="images/00069.jpeg"
+class="calibre86" /><span class="calibre9"> and </span><img
+src="images/00070.jpeg" class="calibre87" /><span class="calibre9"> is
+greater than the maximum positive int value </span><img
+src="images/00071.jpeg" class="calibre88" /><span class="calibre9">. In
+C and C++ this causes an array index out of bounds with unpredictable
+results. In other languages this situation will throw and exception. The
+solution is to compute:</span></p>
+<p><span class="calibre9"> </span></p>
+<p><img src="images/00072.jpeg" class="calibre89" /></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">It is quite amazing to think that it took more
+than 60 years to detect a bug in a piece of code so commonly used in the
+industry and studied by generations of students and
+academics!!</span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9"> </span></p>
+</div>
+<div class="calibre6">
+
+</div>
+<p> </p>
+<div class="calibre1">
+<p><span class="calibre11">ABOUT THE AUTHOR</span></p>
+<p><span class="calibre12"> </span></p>
+<p><span class="calibre9">An experienced data mining engineer,
+passionate about technology and innovation in consumers’ space.
+Interested in search and machine learning on massive dataset with a
+particular focus on query analysis, suggestions, entities,
+personalization, freshness and universal ranking. Antonio Gullì has
+worked in small startups, medium (Ask.com, Tiscali) and large
+corporations (Microsoft). His carrier path is about mixing industry with
+academic experience. </span></p>
+<p><span class="calibre9"> </span></p>
+<p><span class="calibre9">“Nowadays, you must have a great combination
+of research skills and a just-get-it-done attitude.”</span></p>
+<p><span class="calibre9"> </span></p>
+</div>
+<hr />
+<p><span id="part0000.html__ftn1"></span><a
+href="#part0000.html__ftnref1">[1]</a><span class="calibre9"> </span><a
+href="http://en.wikipedia.org/wiki/Gray_code"><span
+class="calibre19">http://en.wikipedia.org/wiki/Gray_code</span></a><span
+class="calibre9"> </span></p>
+<p><span id="part0000.html__ftn2"></span><a
+href="#part0000.html__ftnref2">[2]</a><span class="calibre9"> </span><a
+href="http://en.wikipedia.org/wiki/Inverted_index"><span
+class="calibre19">http://en.wikipedia.org/wiki/Inverted_index</span></a><span
+class="calibre9"> </span></p>
+<p><span id="part0000.html__ftn3"></span><a
+href="#part0000.html__ftnref3">[3]</a><span class="calibre9"> </span><a
+href="http://nlp.stanford.edu/IR-book/html/htmledition/gamma-codes-1.html"><span
+class="calibre19">http://nlp.stanford.edu/IR-book/html/htmledition/gamma-codes-1.html</span></a><span
+class="calibre9"> </span></p>
+<p><span id="part0000.html__ftn4"></span><a
+href="#part0000.html__ftnref4">[4]</a><span class="calibre9"> </span><a
+href="http://nlp.stanford.edu/IR-book/html/htmledition/gamma-codes-1.html"><span
+class="calibre19">http://nlp.stanford.edu/IR-book/html/htmledition/gamma-codes-1.html</span></a><span
+class="calibre9"> </span></p>
+<p><span id="part0000.html__ftn5"></span><a
+href="#part0000.html__ftnref5">[5]</a><span class="calibre9"> </span><a
+href="http://googleresearch.blogspot.co.uk/2006/06/extra-extra-read-all-about-it-nearly.html"><span
+class="calibre19">http://googleresearch.blogspot.co.uk/2006/06/extra-extra-read-all-about-it-nearly.html</span></a><span
+class="calibre9"> </span></p>

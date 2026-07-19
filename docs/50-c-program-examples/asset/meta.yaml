@@ -1,0 +1,6 @@
+name: 50 C++ Program Examples
+name_cn: 50 个 C++ 程序示例
+slug: 50-c-program-examples
+toc:
+- - '##'
+  - 38. 互斥与线程同步

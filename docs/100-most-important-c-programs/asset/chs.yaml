@@ -1,0 +1,502 @@
+- "# 100 个重要的 C 程序\n\n\n\n![](img/cover.jpeg)\n\n\n## 1. 打印文本的程序\n```c\n#include <stdio.h>\n\
+  #include <conio.h>\nmain()\n{\n    clrscr();\n    printf(\"HELLO\");\n    printf(\"\
+  Aditya Shakkarwar phone : +918437164247\");\n    getch();\n}\n```\n\n## 2. 读取两个数字并打印给定数字之的和程序。\n\
+  ```c\n#include <stdio.h>\n#include <conio.h>\nmain()\n{\n    int a,b, sum;\n   \
+  \ clrscr ();\n    printf (\"ENTER VALUE FOR A \");\n    scanf(\"%d\",&a);\n    printf(\"\
+  ENTER VALUE FOR B \");\n    scanf(\"%d\",&b);\n    sum=a+b;\n    printf(\"Sum Of\
+  \ Given Numbers are %d\", sum);\n    getch();\n}\n```\n\n## 3. 接受学生学号、三门科目的成绩并计算总分、平均分并打印的程序。\n\
+  ```c\n#include <stdio.h>\n#include <conio.h>\nmain()\n{\n    int r,b,c,d, tot, avg;\n\
+  \    clrscr();\n    printf (\"ENTER STUDENT ROLL NO ; \");\n    scanf(\"%d\",&r);\n\
+  \    printf(\"ENTER FIRST SUBJECT MARKS ;\");\n    scanf(\"%d\",&b);\n    printf(\"\
+  ENTER SECOND SUBJECT MARKS;\");\n    scanf(\"%d\",&c);\n    printf(\"ENTER THIRD\
+  \ SUBJECT MARKS ;\");\n    scanf(\"%d\",&d);\n    tot=b+c+d;\n    avg=tot/3;\n \
+  \   printf(\"\\n\\n\\t\\t Lovely Professional University \\n\\n\");\n    printf(\"\
+  \\t STUDENT RNO ; %d \",r);\n    printf(\"\\t FIRST SUBJECT MARKS ;%d \",b);\n \
+  \   printf(\"\\t SECOND SUBJECT MARKS ;%d \",C);\n    printf(\"\\t THIRD SUBJECT\
+  \ MARKS ;%d \",d);\n    printf(\"\\t AVERAGE MARKS ;%d\", avg);\n    getch();\n\
+  }\n```\n\n## 4. 读取三个数字并打印给定三个数字中最大的程序。\n```c\n#include <stdio.h>\n#include <conio.h>\n\
+  main( )\n{\n    int a,b,c,big=0;\n    clrscr( );\n    printf(\"ENTER VALUE FOR A:\"\
+  );\n    scanf(\"%d\",&a);\n    printf(\"ENTER VALUE FOR B:\");\n    scanf(\"%d\"\
+  ,&b);\n    print(\"ENTER VALUE FOR C:\");\n    scanf(\"%d\",&c);\n    if (a>big)\n\
+  \        big=a ;\n    if(b>big)\n        big=b;\n    if(c>big)\n        big=c;\n\
+  \    printf(\"BIGGEST OF ABOVE NUMBER IS %d\",big);\n    getch( );\n}\n```\n\n##\
+  \ 5. 读取一个数字并判断该数字是偶数还是奇数的程序。\n```c\n#include <stdio.h>\n#include <conio.h>\nmain()\n\
+  {\n    int n,r;\n    clrscr();\n    printf(\"ENTER A NUMBER ;\");\n    scanf(\"\
+  %d\", &n);\n    r=n%2;\n    if(r == 0)\n        printf(\"the above given number\
+  \ is even\");\n    else\n        printf(\"the above given number is odd\");\n  \
+  \  getch();\n}\n```\n\n## 6. 接受一个年份并判断给定年份是否为闰年的程序。\n```c\n#include <stdio.h>\n\
+  #include <conio.h>\nmain( )\n{\n    int y;\n    clrscr( );\n    printf(\"enter a\
+  \ year:\");\n    scanf(\"%d\",&y);\n    if((y%4==0 && y%100!=0)|y%400==0)\n    \
+  \    printf(\"the above given year IS a leap year\");\n    else\n        printf(\"\
+  the above given year IS not a leap year\");\n    getch();\n}\n```\n\n## 7. 个位数字\n\
+  ```c\n#include <stdio.h>\n#include <conio.h>\nmain( )\n{\n    int a,b,c,d;\n   \
+  \ clrscr( );\n    printf ( \" Enter a two digit number :\");\n    scanf (\" %d\"\
+  , &a);\n    b=a/10;\n    c=a%10;\n    d=b+c;\n    printf(\"sum of individual digits\
+  \ of givennumbers id %d\", d);\n    getch( );\n}\n```\n\n## 8. 接受三位数并打印其各位数字之和的程序。\n\
+  ```c\n#include <stdio.h>\n#include <conio.h>\nmain( )\n{\n    int a,b,c,n, sum;\n\
+  \    clrscr( );\n    printf (\" Enter a Three Digit Number:\");\n    scanf (\"%d\"\
+  ,&n);\n    a=n/100;\n    b=((n%100)/10);\n    c=n%10;\n    sum=a+b+c;\n    printf\
+  \ (\" Sum of Individual Digits of Given Numbers is %d\", Sum);\n    getch( );\n\
+  }\n```\n\n\n\n\n\n## 9. 接收一个数字并检查该数字是否为阿姆斯特数的程序。\n\n代码：\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\n\nmain( )\n{\n    int n, a, b, c, d;\n    clrscr( );\n    printf\
+  \ (“ Enter a Three Digit Number: “);\n    scanf (“%d”, &n);\n    a=n/100;\n    b=((n/10)%10);\n\
+  \    c=n%10;\n    d=a*a*a*+b*b*b +c*c*c;\n    if (n= =d)\n        printf (“The Given\
+  \ Number is Armstrong number”);\n    else\n        printf (“The Given Number is\
+  \ Not Armstrong number”);\n    getch( );\n}\n```\n\n## 10. 打印 1 到 10 之间的奇数的程序\n\n\
+  代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\nmain( )\n{\n    int i;\n\
+  \    clrscr( );\n    for (i=1; i<=10; i+=2)\n        printf(“%d\\n”,i);\n    getch(\
+  \ );\n}\n```\n\n## 11. 倒序打印 1 到 10 的自然数的程序\n\n代码：\n```c\n# include <stdio.h>\n#\
+  \ include <conio.h>\n\nmain( )\n{\n    int i;\n    clrscr( );\n    for (i=10; i>=1;\
+  \ i--)\n        printf(“%d\\n”,i);\n    getch( );\n}\n```\n\n## 12. 打印 1 到 10 的自然数和的程序。\n\
+  \n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\nmain( )\n{\n    int n,sum=0,i;\n\
+  \    clrscr( );\n    for (i=1; i<=10; i++)\n        sum=sum+i;\n    printf(“sum\
+  \ of natural numbers from 1 to 10 is %d\\n”,sum);\n    getch( );\n}\n```\n\n## 13.\
+  \ 接收一个数字并打印该数字的乘法表的程序\n\n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\n\
+  main( )\n{\n    int i,t;\n    clrscr( );\n    printf(“which table u want:”);\n \
+  \   scanf(“%d”,&t);\n    for (i=1; i<=10; i++)\n        printf(“\\n%d*%d=%d”,t,i,i*t);\n\
+  \    getch( );\n}\n```\n\n## 14. 打印 1 到 10 乘法表的程序\n\n代码：\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\n\nmain( )\n{\n    int i,j;\n    clrscr( );\n    for (i=1; i<=10;\
+  \ i++)\n        for(j=1;j<=10;j++)\n            printf(“\\n%d*%d=%d”,i,j,i*j);\n\
+  \    getch( );\n}\n```\n\n## 15. 打印斐波那契数列的程序\n\n代码：\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\n\nmain( )\n{\n    int a=0,b=1,c=0,i;\n    clrscr( );\n    printf(“%d”,a);\n\
+  \    printf(“\\n%d”,b);\n    for (i=1; i<=10; i++)\n    {\n        c =a+b;\n   \
+  \     printf(“\\n%d”,c);\n        a=b;\n        b=c;\n    }\n    getch( );\n}\n\
+  ```\n\n## 16. 打印数字金字塔的程序\n\n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  \nmain()\n{\n    int i,j;\n    clrscr( );\n    for(i=1;i<=5;i++)\n    {\n      \
+  \  for(j=1;j<=i;j++)\n            printf(“%d”,j);\n        printf(“\\n”);\n    }\n\
+  \    getch();\n}\n```\n\n## 17. 打印数字金字塔的程序\n\n代码：\n```c\n# include <stdio.h>\n#\
+  \ include <conio.h>\n\nmain( )\n{\n    int i,j ,l,k=40;\n    clrscr( );\n    for(i=1;i<=9;i+=2)\n\
+  \    {\n        for(l=1;l<=k;l++)\n            printf(“ “);\n        for(j=1;j<=i;j++);\n\
+  \        printf(“%d”,j);\n        printf(“\\n”);\n        k=k-2;\n    }\n    getch(\
+  \ );\n}\n```\n\n## 18. 打印数字菱形的程序\n\n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  \nmain( )\n{\n    int i,j,l,n,s,k=40;\n    clrscr( );\n    for(i=1;i<=9;i+=2)\n\
+  \    {\n        for(l=1;l<=k;l++)\n            printf(“ “);\n        for(j=1;j<=i;j++)\n\
+  \            printf(“\\n”);\n        k=k-2;\n    }\n    k=k+4;\n    for(n=7;n>=1;n-=2)\n\
+  \    {\n        for(i=1;i<=k;i++)\n            printf(“ “);\n        for(s=1;s<n;s++)\n\
+  \            printf(\"%d”,s);\n        printf(“\\n”);\n        k=k+2;\n    }\n \
+  \   getch( );}\n\n## 19. 打印字符金字塔的程序\n\n代码：\n```c\n# include <stdio.h>\n# include\
+  \ <conio.h>\n\nmain( )\n{\n    char i,j;\n    clrscr();\n    for(i=65;i<=70;i++)\n\
+  \    {\n        for(j=65;j<=i;j++)\n            printf(\"%c”,j);\n        printf(“\\\
+  n”);\n    }\n    getch();}\n\n## 20. 打印字符菱形的程序\n\n代码：\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\n\nmain( )\n{\n    char i,j,n,r;\n    int s,sp=40;\n    clrscr(\
+  \ );\n    for(i=65;i<=75;i+=2)\n    {\n        for(s=1;s<=sp;s++)\n            printf(“\
+  \ “);\n        for(j=65;j<i;j++)\n            printf(\"%c”,j);\n        printf(“\\\
+  n”);\n        sp=sp-2;\n    }\n    sp=sp+4;\n    for(n=73;n>=65;n-=2)\n    {\n \
+  \       for(s=1;s<=sp;s++)\n            printf(“ “);\n        for(r=65;r<=n;r++)\n\
+  \            printf(\"%c”,r);\n        printf(“\\n”);\n        sp=sp+2;\n    }\n\
+  \    getch( );}\n\n## 21. 使用三元运算符找到两个数中最大的程序\n\n代码：\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\n\nmain( )\n{\n    int a,b,big;\n    clrscr( );\n    printf(“enter\
+  \ a”);\n    scanf(“%d”,&a);\n    printf(“enter the value of b”);\n    scanf(“%d”,&b);\n\
+  \    big=(a>b)?a:b;\n    printf(“biggest of the numbers %d”,big);\n    getch();}\n\
+  \n## 22. 使用三元运算符找到四个数中最大的程序\n\n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  \nmain( )\n{\n    int a,b,c,d,big;\n    clrscr( );\n    printf(“enter a”);\n   \
+  \ scanf(“%d”,&a);\n    printf(“enter the value of b”);\n    scanf(“%d”,&b);\n  \
+  \  printf(“enter the value of c”);\n    scanf(“%d”,&c);\n    printf(“enter the value\
+  \ of d”);\n    scanf(“%d”,&d);\n    big=(a>b)?(a>c)?(a>d)?a:(c>d)?c:d:(b>c)?(b>d)?b:d:(c>d)?c:d;\n\
+  \    printf(“biggest of the 4 numbers %d”,big);\n    getch();}\n\n## 23. 使用三元运算符打印四个数中最小的程序\n\
+  \n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\nmain( )\n{\n    int a,b,c,d,small;\n\
+  \    clrscr( );\n    printf(“enter a”);\n    scanf(“%d”,&a);\n    printf(“enter\
+  \ the value of b”);\n    scanf(“%d”,&b);\n    printf(“enter the value of c”);\n\
+  \    scanf(“%d”,&c);\n    printf(“enter the value of d”);\n    scanf(“%d”,&d);\n\
+  \    small=(a<b)?(a<c)?(a<d)?a:(c<d)?c:d:(b<c)?(b<d)?b:d:(c<d)?c:d:(c<d)?c:d;\n\
+  \    printf(“smallest of the given 4 numbers %d”,small);\n    getch();}\n\n## 24.\
+  \ 接收年份并使用三元运算符检查年份是否为闰年的程序\n\n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  \nmain( )\n{\n    int y,leap;\n    clrscr( );\n    printf(“enter any yr”);\n   \
+  \ scanf(“%d”,&y);\n    leap=(y%400= =0)?:(y%100!=0)?(y%4= =0)?1:0:0;\n    if(leap=\
+  \ =1)\n        printf(“ the given year is leap year”);\n    else\n        printf(“given\
+  \ year is not leap year);\n    getch( );\n}\n```\n\n## 25. 接收一个大写字符并以小写打印的程序\n\n\
+  代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\nmain( )\n{\n    char ch,c1;\n\
+  \    clrscr( );\n    printf(“enter a in uppercase”);\n    ch=getchar();\n    c1=ch+32;\n\
+  \    printf(“the given char in lowercase is”);\n    putchar(c1);\n    getch();}#\
+  \ 26. 接收任意大小的字符并以另一种大小打印的程序\n\n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  \nmain( )\n{\n    char ch,c1;\n    clrscr( );\n    printf(“enter a char in any”);\n\
+  \    ch=getchar();\n    if(ch>=65 && ch<=90)\n        c1=ch+32;\n    else\n    \
+  \    if(ch>=97 && ch<=122)\n        c1=ch-32;\n    printf(“the given char in anothercase\
+  \ IS”);\n    putchar(c1);\n    getch();}# 27. 使用 while 循环打印 1 到 10 的数字\n\n代码：\n\
+  ```c\n# include <stdio.h>\n# include <conio.h>\n\nmain( )\n{\n    int a=0;\n   \
+  \ clrscr();\n    while(a<10)\n    {\n        a=a+1;\n        printf(\"%d\\n”,a);\n\
+  \    }\n    getch();}# 28. 使用 while 循环接收字符串并打印的程序\n\n代码：\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\n\nmain( )\n{\n    char ch;\n    clrscr();\n    printf(“enter\
+  \ string”);\n    while(( ch=getchar( ))!=’n’)\n    {\n        putchar(ch);\n   \
+  \ }\n    getch();}# 29. 接收大写字符串并以小写打印的程序\n\n代码：\n```c\n# include <stdio.h>\n# include\
+  \ <conio.h>\n\nmain( )\n{\n    char ch,c;\n    clrscr();\n    printf(“enter string\
+  \ in upper case:”);\n    while(( ch=getchar( ))!=’n’)\n    {\n        c=ch+32;\n\
+  \        putchar(c);\n    }\n    printf(“ is lower case”);\n    getch();}# 30. 接收任意大小的字符串并以另一种大小打印的程序\n\
+  \n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\nmain( )\n{\n    char ch;\n\
+  \    clrscr( );\n    printf(“enter string :\"););\n    while(( ch=getchar( ))!=’n’)\n\
+  \    {\n        if(ch>=’A’ && ch<=’Z’)\n            putchar(ch+32);\n        else\n\
+  \            if(ch>=’a’ && ch<=’z’)\n            putchar(ch-32);\n        else\n\
+  \            putchar(ch);\n    }\n    printf(“ is the string”);\n    getch( )}#\
+  \ 31. 接收字符串并在新行打印每个单词的程序\n\n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  \nmain( )\n{\n    char ch;\n    clrscr( );\n    printf(“enter string :\");\n   \
+  \ while(( ch=getchar( ))!=’n’)\n    {\n        putchar(ch);\n        if(ch= =’ ‘)\n\
+  \            printf(“\\n”);\n    }\n    getch( )}# 32. 接收字符串并统计大写字母、小写字母和特殊字符数量的程序\n\
+  \n代码：\n```c\n# include <stdio.h>\n# include <conio.h>\n\nmain( )\n{\n    char ch;\n\
+  \    int c=0,s=0,s1=0;\n    clrscr( );\n    printf(“enter a string :\");\n    while((\
+  \ ch=getchar( ))!=’n’)\n    {\n        if(ch>=’A’&& ch<=’Z’)\n            c=c+1;\n\
+  \        else\n        if(ch>=’a’ && ch<=’z’)\n            s=s+1;\n        else\n\
+  \            s1=s1+1;\n    }\n    printf(“ no of capital letters are %d”,c);\n \
+  \   printf(“ no of smal1 letters are %d”,s);\n    printf(“ no of special characters\
+  \ are\n%d”,s1);\n    getch( )}\n```\n\n\n\n\n```c\ncase 6: printf(“SIX”);\n\nbreak;\n\
+  \ncase 7: printf(“SEVEN”);\n\nbreak;\n\ncase 8: printf(“EIGHT”);\n\nbreak;\n\ncase\
+  \ 9: printf(“NINE”);\n\nbreak;\n\ndefault:\n\nprintf(“please enter the number between\
+  \ 0\n\nand 9”);\n\n}\n\ngetch( );\n\n}\n```\n\n## 34. 打印 1 到 100 之间质数的程序\n\n**代码：**\n\
+  \n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\nint n, i, check;\n\
+  \nclrscr();\n\nfor(i=1;i<=100;i++)\n{\n\ncheck=1;\nfor(n=2;n<=i/2;n++)\nif(i%n =\
+  \ =0)\n{\ncheck=0;\nbreak;\n}\nif(check= =1)\nprintf(“\\n %d is a prime”,i);\nelse\n\
+  printf(“\\n %d is not a prime”,i);\n}\n\ngetch( );\n\n}\n```\n\n## 35. 使用函数接受两个数字并打印两个数和的程序\n\
+  \n**代码：**\n\n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\n\
+  int a,b,c;\n\nclrscr();\nprintf(“enter the value for a:”)\nscanf(“%d”,&a);\nprintf(“enter\
+  \ the value for b:”)\nscanf(“%d”,&b);\nc=add(a,b);\nprintf(“sum of two numbers is\
+  \ %d”,c);\ngetch( );\n\n}\n\nint add(int x, int y)\n{\n\nint z;\nz=x+y;\nreturn\
+  \ z;\n\n}\n```\n\n## 36. 接受一个数字并求给定数字阶的程序\n\n**代码：**\n\n```c\n# include <stdio.h>\n\
+  \n# include <conio.h>\n\nmain( )\n{\n\nint n,f;\n\nclrscr( );\nprintf(“enter a number:”)\n\
+  scanf(“%d”,&n);\nf= fact(n);\nprintf(“factorial value is %d”,f);\ngetch();\n\n}\n\
+  \nint fact(int n)\n{\n\nint i, fa=1;\nfor(i=n;i>=1;i--)\nfa=fa*i;\nreturn fa;\n\n\
+  }\n```\n\n## 37. 接受一个数字并检查给定数字是否为阿姆斯特数的程序\n\n**代码：**\n\n```c\n# include <stdio.h>\n\
+  \n# include <conio.h>\n\nmain( )\n{\n\nint n,arm;\n\nclrscr();\nprintf(“enter any\
+  \ 3 digit number:”)\nscanf(“%d”,&n);\narm= armstrong(n);\nif(arm= =n)\nprintf(“%d\
+  \ is Armstrong number”,n);\nelse\nprintf(“%d not a Armstrong number”,n);\ngetch(\
+  \ );\n\n}\n\nint Armstrong (int n)\n{\n\nint a,b,c,d;\na=n/100;\nb=((n/10)%10);\n\
+  c=n%10;\nd=a*a*a+b*b*b+c*c*c;\nreturn d;\n\n}\n```\n\n## 38. 接受一个数字并打印给定数字与其反转数的和\n\
+  \n**代码：**\n\n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\n\
+  int a,b,n;\n\nclrscr( );\nprintf(“enter a number:”)\nscanf(“%d”,&n);\na=rev(n);\n\
+  printf(“REVERSE OF A GIVEN\n\nNUMBER IS %d”,a);\nb=add(n,a);\nprintf(“\\n sum of\
+  \ a and reverse\n\nnumber is %d”,b);\ngetch( );\n\n}\n\nint rev(int n)\n{\n\nint\
+  \ r,rev=0,s;\nwhile(n>0)\n{r=n%10;\nrev=rev*10+r;\nn/10;\n}eturn rev;\n\n}\n\nint\
+  \ add(int n, int a)\n{\n\nreturn n+a;\n}\n\n## 39. 接受 10 个数字并按顺序打印前 5 个，倒序打印后 5\
+  \ 个的程序\n\n**代码：**\n\n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n\
+  {\n\nint i,a[10];\nfor(i=0;i<10;i++)\n{\n\nprintf(“enter value for a[%d]”,i);\n\
+  scanf(“%d”,&a[i]);\n}\nfor(i=0;i<=4;i++)\nprintf(\"A[%d]=%d”,i,a[i]);\nfor(i=9;i>=5;i--)\n\
+  printf(“A[%d]=%d”,i,a[i]);\ngetch( );\n\n}\n```\n\n## 40. 接受字符串并使用 for 循环打印给定字符串反转的程序\n\
+  \n**代码：**\n\n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\n\
+  int i,j;\nchar name[80];\n\nclrscr( );\nprintf(“ enter a string”);\ngets(name);\n\
+  for(i=0;i<80 && ((name[i]=\ngetchar())!=’\\n’);i++);\nif(name[i]= =’n’)\nname[i]=’\\\
+  0’;\nfor(j=i;j>=0;j--)\nputchar(name[j]);\nprintf(“is the reverse of given string”);\n\
+  getch( );\n}\n```# 41. 接受字符串并检查给定字符串是否为回文\n\n**代码：**\n\n```c\n# include <stdio.h>\n\
+  \n# include <conio.h>\n\nmain( )\n{\n\nint i,lim,c,check=1;\nchar word[80];\n\n\
+  clrscr( );\nprintf(“ enter a string”);\nfor(i=0;i<80 && ((word[i]=\ngetchar())!=’\\\
+  n’);i++);\nlim=i-1;\nc=lim/2;\nfor(i=0;i<=0;i++,lim--)\nif(word[i]!= word[lim])\n\
+  {\ncheck=0;\nbreak;\n}\nif(check= =1)\nprintf(“the given string is palindrome);\n\
+  else\nprintf(“ not palindrome”);\ngetch( );\n}\n```\n\n# 42. 接受 3 维数组的值并打印\n\n**代码：**\n\
+  \n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\nint a[3][3],i,j;\n\
+  \nclrscr( );\nfor(i=0;i<=2;i++)\nfor(j=0;j<=2++)\n{\n\nprintf(“ enter the value\
+  \ for a[%d][%d]\n:”,i,j);\nscanf(“%d”,&a[i][j]);\n}\nfor(i=0;i<=2;i++)\n{\n\nfor(j=0;j<=2++)\n\
+  printf(“ %d:”,a[i][j]);\nprintf(\\n);\n}\ngetch( );\n}\n```# 43. 打印上三角的程序\n\n**代码：**\n\
+  \n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\nint a[4][4],i,j,c;\n\
+  \nclrscr( );\nprintf(“ enter which no want”);\nscanf(“%d”,&c);\nfor(i=0;i<4;i++)\n\
+  for(j=0;j<4;j++)\nif(i<j)\na[i][j]=c;\nelse\na[i][j]=0;\nfor(i=0;i<4;i++)\nfor(j=0;j<4;j++)\n\
+  {\n\nprintf(“ %d:”,a[i][j]);\nprintf(\\n);\n}\ngetch( );\n}\n```# 44. 接受两个 3 维数组并将它们的和存储在第三个数组中\n\
+  \n**代码：**\n\n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\n\
+  int a[3][3],b[3][3],c[3][3],i,j;\n\nclrscr( );\nfor(i=0;i<3;i++)\nfor(j=0;j<3;j++)\n\
+  {\n\nprintf(“enter the two values for\na[%d][%d] & b[%d][%d”, i,j,i,j);\nscanf(“%d%d”,&a[i][j],&b[i][j]);\n\
+  }\nfor(i=0;i<3;i++)\n{\n\nfor(j=0;j<3;j++)\n{\n\nc[i][j]=a[i][j]+b[i][j];\nprintf(“%d”,c[i][j]);\n\
+  }\nprintf(“\\n”);\n}\ngetch( );\n}\n```# 45. 接受字符串并使用函数找到给定字符串的长度\n\n**代码：**\n\n\
+  ```c\n# include <stdio.h>\n\n# include <conio.h>\n\nint getline(char str[]);\n\n\
+  main( )\n{\n\nchar str[80];\nint length;\n\nclrscr( );\nprintf(“ enter a string”);\n\
+  length=getline(str);\nprintf(“length of the given string is\n%d”,length);\ngetch(\
+  \ );\n}\n\nint getline(char str[])\n{\n\nint i;\nfor(i=0;i<80&&((str[i]=getchar(\
+  \ ))!=’\\n’);\ni++);\nif(str[i]= =’n’)\nstr[i]=’\\0’;\nreturn i;\n\n}\n```# 46.\
+  \ 统计一行文本中的单词、字母、元音、辅音和数字\n\n**代码：**\n\n```c\n#include<stdio.h>\n\n#include<conio.h>\n\
+  \nmain( )\n{\n\nint noa=0,nob=0,noc=0,nov=0,now=0,noch=0,l,i;\nchar ch,s[100];\n\
+  \nclrscr( );\nprintf(“enter 2 lines of text”);\ngets(s);\nl=strlen(s);\nfor(i=0;i<1;i++)\n\
+  {\n\nswitch(s[i])\n{case ‘a’:\ncase ‘e’:\ncase ‘i’:\ncase ‘o’:\ncase ‘u’:\ncase\
+  \ ‘A’:\ncase ‘E’:\ncase ‘I’:\ncase ‘O’:\ncase ‘U’:\nnov++;\nbreak;\n}\nif(isalpha(s[i]))\n\
+  noa++;\nif(isdigit(s[i]))\nnod++;\nif(noa[i+1]!=’ ‘)\nnoch=l-nob;\nnoc=l-now;\n\
+  now=l-a;nov=l-nod; // Note: The provided source text has logic inconsistencies/variable\
+  \ naming.\n```# 47. 接受两个字符串并比较它们是否相等\n\n**代码：**\n\n```c\n# include <stdio.h>\n\n\
+  # include <conio.h>\n\nint getline (char str[ ], int );\n\nint strc(char str1[ ],\
+  \ str2[])\n\nmain( )\n{\n\nchar str1[80],str2[80];\nint comp;\n\nclrscr( );\nprintf(“enter\
+  \ first:”);\ngetline(str1,80);\nprintf(“enter second:”);\ngetline(str2,80);\ncomp=strc(str1,str2);\n\
+  if(comp>0)\nprintf(“first string is bigger”);\nelse\nif(comp==0)\nprintf(“both the\
+  \ strings are equal”);\ngetch( );\n}\n\nint getline(char str[ ], int lim)\n{\n\n\
+  int i;\nfor(i=0;i<lim&&((str[i]=getchar())!=’\\n’);\ni++);\nif(str[i]=’\\n’)\nstr[i]=’\\\
+  0’;\nreturn i;\n\n}\n\nint strc(char str1[ ], str2[])\n{\n\nint i;\nfor(i=0;str1[i];i++)\n\
+  if(str1[i]!=str2[i])\nreturn str1[i]-str2[i];\nreturn 0;\n\n}\n```# 48. 使用冒泡排序对输入的数字\n\
+  \n**代码：**\n\n```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\n\
+  int a[100],i,j,n,t;\n\nclrscr( );\nprintf(“enter the array size”);\nscanf(“%d”,&n);\n\
+  for(i=1;i<n;i++)\nscanf(“%d”,&a[i]);\nfor(i=1;i<=n;i++)\nfor(j=i+1;j<n;j++)\nif(a[i]>a[j])\n\
+  {\nt=a[i]\na[i]=a[j];\na[j]=t;\n}\nprintf(“the sorted elements are “);\nfor(i=1;i<=n;i++)\n\
+  print(“%d”,a[i]);\ngetch( );\n\n}\n```# 49. 读取日期、月、年并打印次日的日期、月、年\n\n**代码：**\n\n\
+  ```c\n# include <stdio.h>\n\n# include <conio.h>\n\nmain( )\n{\n\nint month[12]={31,28,31,30,31,30,31,31,30,31,30,31};\n\
+  int d,m,y,nd,nm,ny,ndays;\n\nclrscr( );\nprintf(“enter the date,month,year”);\n\
+  scanf(“%d%d%d”,&d,&m,&y);\nndays=month[m-1];\nif(m==2)\n{\nif(y%100==0)\n{\nif(y%400==0)\n\
+  ndays=29;\n}\nelse\nif(y%4==0)\nndays=29;\n}\nnd=nd+1;\nnm=m;\nny=y;\nif(nd>ndays)\n\
+  {\nnd=1;\nnm++;\n}\nif(nm>12)\n{\nnm=1;\nny++;\n}\nprintf(“Given date is\n%d:%d:%d\\\
+  n”,d,m,y);\nprintf(“next days date is\n%d:%d:%d”,nd,nm,ny);\ngetch( );\n\n}\n```\n\
+  \n\n\n# 50. 使用指针交换两个值的程序。\n\nCode:\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  \nvoid interchange(int *x,int *y);\n\nmain( )\n{\n    int a,b;\n    clrscr( );\n\
+  \    printf(“enter values of a and b”);\n    scanf(“%d%d”,&a,&b);\n    interchange(&a,&b);\n\
+  }\n\nvoid interchange(x,y)\nint *x,*y;\n{\n    int t;\n    t=*x;\n    *x=*y;\n \
+  \   *y=t;\n    printf(“%d=x, %d=y”,*x,*y);\n    getch( );\n}\n```\n\n# 51. 输出“杨斯卡三角形”的程序。\n\
+  \nCode:\n```c\n#include<stdio.h>\n#include<conio.h>\nmain()\n{\n    int n,p=1,q,num,sp;\n\
+  \    clrscr( );\n    printf(“enter the number of rows”);\n    scanf(“%d”,&n);\n\
+  \    for(p=0;p<=n;p++)\n    {\n        for(sp=1;sp<=40-(3*p);sp++)\n           \
+  \ printf (“ ”);\n        for(q=0;q<n;q++)\n        {\n            if((q==q)||(q==0))\n\
+  \                num=1;\n            else\n                num=num*((q-q)+1)/q;\n\
+  \            printf(“%2d”,num);\n            printf(“\\n”);\n        }\n    }\n\
+  \    getch( );\n}\n```\n\n# 52. 检查给定数字是否为完美数的程序。\n\nCode:\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\nmain( )\n{\n    int i,n,s=0;\n    clrscr();\n    printf(“enter\
+  \ the number”);\n    scanf(“%d”,&n);\n    for(i=1;i<n/2;i++)\n        if(n%i==0)\n\
+  \            s+=i;\n    if(s= =n)\n        printf(“the number is perfect no”);\n\
+  \    else\n        printf(“the number is not perfect “);\n    getch( );\n}\n```\n\
+  \n# 53. 检查给定数字是否为质数的程序。\n\nCode:\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  main( )\n{\n    int i,n,c=0;\n    clrscr( );\n    printf(“enter a number”);\n  \
+  \  scanf(“%d”,&n);\n    for(i=0;i<=n;i++)\n        if(n%i==0)\n            c++;\n\
+  \    if(c==2)\n        printf(“given number is a prime number”);\n    else\n   \
+  \     printf(“given number is not prime number”);\n    getch( );\n}\n```\n\n# 54.\
+  \ 读取 ‘n’ 个数字并以所有可能的矩阵顺序打印程序。\n\nCode:\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  main( )\n{\n    int i,n,c,p,q,r,k,a[20];\n    clrscr();\n    printf(“enter the array\
+  \ size”);\n    scanf(”%d”,&n);\n    printf(“enter the elements”);\n    for(i=1;i<=n;i++)\n\
+  \        scanf(“%d”,&a[i]);\n    i=1;\n    while(i<=n)\n    {\n        if(n%i==0)\n\
+  \        {\n            r=i;\n            c=n/i;\n            k=1;\n           \
+  \ for(p=1;p<=r;p++)\n            {\n                for(q=1;q<=c;q++)\n        \
+  \            printf(“%d”,a[k++])\n                printf(“\\n”);\n            }\n\
+  \            i++;\n            getch( );\n        }\n    }\n}\n```\n\n# 55. 使用二分查找搜索元素的程序。\n\
+  \nCode:\n```c\n# include <stdio.h>\n# include <conio.h>\nmain( )\n{\n    int a[100],i,n,x,\
+  \ mid, top, bot,c;\n    clrscr();\n    printf(“enter the array size;”);\n    scanf(“%d”,&n);\n\
+  \    printf(“enter the array elements”);\n    for(i=1;i<=n;i++)\n        scanf(“%d”,&a[i]);\n\
+  \    top=1;\n    bot=n;\n    c=0;\n    printf(“enter the element to searched”);\n\
+  \    scanf(“%d”,&x);\n    while((top <=bot)&&(c==0))\n    {\n        mid=(top+bot)/2;\n\
+  \        if(a[mid]<x)\n            top=mid+1;\n        else\n        if(a[mid]>x)\n\
+  \            bot=mid-1;\n        else\n            c=1;\n    }\n    if(c==1)\n \
+  \       printf(“elements is at position;%d”,mid);\n    else\n        printf(“elements\
+  \ is not in list”);\n    getch( );\n}\n```\n\n# 56. 接受两个数字并使用指针打印它们和的程序。\n\nCode:\n\
+  ```c\n# include <stdio.h>\n# include <conio.h>\nmain( )\n{\n    int a, b,c;\n  \
+  \  clrscr( );\n    a=10;\n    b=20;\n    c=*a)+*b;\n    printf(“%d”,c);\n    getch(\
+  \ );\n}\n```\n\n## 57. 两个矩阵相法的程序。\n\nCode:\n```c\n# include <stdio.h>\n# include\
+  \ <conio.h>\nmain( )\n{\n    int\n    a[10][10],b[10][10],c[10][10],i,j,m,n,p,q,\n\
+  \    k;\n    clrscr( );\n    printf(“enter the size of first matrices”);\n    scanf(“%d%d”,&m,&n);\n\
+  \    printf(“enter the size of second matrix”);\n    scanf(“%d%d”,&p,&q);\n    if(n==p)\n\
+  \    {\n        printf(“enter first matrices”);\n        for(i=1;i<m;i++)\n    \
+  \        for(j=1;j<n;j++)\n                scanf(“%d”,&a[i][j]);\n        printf(“enter\
+  \ second matrix”);\n        for(i=1;i<p;i++)\n            for(j=1;j<q;j++)\n   \
+  \             scanf(“%d”,&b[i][j]);\n        for(i=1;i<m;i++)\n            for(j=1;j<n;j++)\n\
+  \            {\n                c[i][j]=0;\n                for(k=1;k<n;k++)\n \
+  \                   c[i][j]+=a[i][k]*b[k][j];\n            }\n        printf(“the\
+  \ multiplication is”);\n        for(i=1;i<m;i++)\n        {\n            for(j=1;j<n;j++)\n\
+  \                printf(“%2d”,c[i][j]);\n            printf(“\\n”);\n        }\n\
+  \    }\n    else\n        printf(“multiplication is not possible”);\n    getch(\
+  \ );\n}\n```\n\n## 58. 输出 1-100 之间质数的程序。\n\nCode:\n```c\n# include <stdio.h>\n#\
+  \ include <conio.h>\nmain\n )\n{\n    int i,n,c;\n    clrscr( );\n    for(n=1;n<=100;n++)\n\
+  \    {\n        c=0;\n        for(i=1;i<=n;i++)\n            if(n%i==0)\n      \
+  \          c++;\n        if(c==2)\n            printf(“n%d”,n);\n    }\n    getch(\
+  \ );\n}\n```\n\n## 59. 接受字符串并找到字符串长度的程序。\n\nCode:\n```c\n# include <stdio.h>\n#\
+  \ include <conio.h>\nmain\n )\n{\n    char name[80];\n    int i;\n    clrscr( );\n\
+  \    printf(“enter a string;);\n    for(i=0;i<80&&((name[i]=getchar())='\\n');i++);\n\
+  \    printf(“%d is the size of string”,i);\n    getch( );\n}\n```\n\n# 60. 矩阵范数（oc）程序。\n\
+  \nCode:\n```c\n# include <stdio.h>\n# include <conio.h>\n# include <math.h>\nmain\n\
+  \ )\n{\n    int a[10][10],i,j,m,n, sum=0;\n    float norm;\n    clrscr( );\n   \
+  \ printf(“enter the size”);\n    scanf(“%d%d”,&m,&n);\n    printf(“enter the element\
+  \ of matrix”);\n    for(i=1;i<=m;i++)\n        for(j=1;j<=n;j++)\n        {\n  \
+  \          scanf(“%d”,&a[i][j]);\n            sum=sum+(a[i][j]*a[j][i]);\n     \
+  \   }\n    norm=sqrt(sum);\n    printf(“norm=%f”,norm);\n    getch( );\n}\n```\n\
+  \n# 61. 一个读取 ‘n’ 个学生信息（姓名，3 门科目）并计算总分、按特定格式结果的结构体程序。\n\nCode:\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\nstruct student\n{\n    char name[20];\n    int m1,m2,m3, tot;\n\
+  \    char result[10];\n}\nstud[10];\nint i,n;\nmain( )\n{\n    clrscr( );\n    printf(“enter\
+  \ no of students \\n”);\n    scanf(“%d”,&n);\n    for(i=0;i<n;i++)\n    {\n    \
+  \    printf(“enter %d student deata \\n”,i);\n        printf(“enter name\\n”);\n\
+  \        scanf(“%s”, stud[i].name);\n        printf(“enter marks of 3 subjects \\\
+  n”);\n        scanf(“%d%d%d”,&stud[i].m1,&stud[i].m2,&stud[i].m3);\n        stud[i].tot=stud[i].m1+stud[i].m2+stud[i].m3;\n\
+  \        if((stud[i].m1>35)&&stud[i].m2>35)&&stud[i].m3>35))\n            strcpy(stud[i].result,$$pass”);\n\
+  \        else\n            strcpy(stud[i].result,$$fail”);\n    }\n    clrscr( );\n\
+  \    printf(“name total result \\n”);\n    for(i=0;i<n;i++)\n    {\n        printf(“%s\
+  \ %d %s \\n”,stud[i].name,stud[i].tot,stud[i].result);\n    }\n}\n```\n```\n\n#\
+  \ 62. 找到方矩阵是否为 a)对称 b)反对称 c) 无的程序。\n\nCode:\n```c\n# include <stdio.h>\n# include\
+  \ <conio.h>\nmain( )\n{\n    int a[10][10],i,j,m,n,c=0,c1=0;\n    clrscr( );\n \
+  \   printf(“enter array size”);\n    scanf(“%d%d”,&m,&n);\n    printf(“enter the\
+  \ elements”);\n    for(i=1;i<=m;i++)\n        for(j=1;j<=n;j++)\n            scanf(“%d”,&a[i][j]);\n\
+  \    for(i=1;i<=m;i++)\n        for(j=1;j<=n;j++)\n        {\n            if(a[i][j]==a[j][i])\n\
+  \                c=1;\n            else\n            if(a[i][j]==-a[j][i])\n   \
+  \             c1=1;\n        }\n    printf(“the given matrix is \\n”);\n    for(i=1;i<=m;i++)\n\
+  \    {\n        for(j=1;j<=n;j++)\n            printf(“%d”,a[i][j]);\n        printf(“\\\
+  n”);\n    }\n    if(c==0)\n        printf(“the given matrix is symmetric”);\n  \
+  \  else\n    if(c1==0)\n        printf(“the matrix is skew symmetric”);\n    else\n\
+  \        printf(“none of two”);\n    getch( );\n}\n```\n\n## 63. 给定边长计算三角形面积的程序。\n\
+  \nCode:\n```c\n# include <stdio.h>\n# include <conio.h>\nmain( )\n{\n    int a,b,c;\n\
+  \    float s, area;\n    clrscr( );\n    printf(“enter sides of the triangle”);\n\
+  \    scanf(“%d%d%d”,&a,&b,&c);\n    if((a+b)<c||(b+c)<a||(a+c)<b)\n        printf(“finding\
+  \ area is not possible”);\n    else\n    {\n        s=(a+b+c)/2;\n        area=sqrt(s*(s-a)*(s-b)*(s-c));\n\
+  \    }\n    printf(“area=%.2f”,area);\n}\n```\n\n# 64. 1-500 之间的阿姆哈数程序。\n\nCode:\n\
+  ```c\n#include<stdio.h>\n#include <conio.h>\nmain( )\n{\n    int i,n,s,r;\n    clrscr(\
+  \ );\n    for(i=1;i<=500;i++)\n    {\n        n=i;\n        s=0;\n        while(n>0)\n\
+  \        {\n            r=n%10;\n            s=s+(r*r*r);\n            n=n/10;\n\
+  \        }\n        if(i==s)\n            printf(“\\n%d”,s);\n    }\n}\n```\n}\n\
+  ```\n\n# 65. 检查给定数字是否为阿姆哈数的程序。\n\nCode:\n```c\n# include <stdio.h>\n# include <conio.h>\n\
+  main( )\n{\n    int i,n,s,r,k;\n    clrscr( );\n    printf(“enter a number”);\n\
+  \    scanf(“%d”,&n);\n    k=n;\n    s=0;\n    while(n>0)\n    {\n        r=n%10;\n\
+  \        s=s+(r*r*r);\n        n=n/10;\n    }\n    if(k==s)\n        printf：“given\
+  \ number is Armstrong\\n%d”,k);\n    else\n        printf：“given number is not Armstrong\\\
+  n%d”,k);\n    getch();\n}\n```\n\n# 66. 打印杨洛德三角形的程序。\n\nCode:\n```c\n# include <stdio.h>\n\
+  # include <conio.h>\nmain( )\n{\n    int i,n,s,j,k=1;\n    clrscr( );\n    printf(“enter\
+  \ a number of rows”);\n    scanf(“%d”,&n);\n    for(i=1;i<=n;i++)\n    {\n     \
+  \   for(s=1;s<=40-i;s++)\n            printf (“ ”);\n        for(j=1;j<=i;j++)\n\
+  \            printf(“%3d”,k++);\n        printf (“\\n”);\n    }\n    getch( );\n\
+  }\n```\n\n## 67. 在 3 个结构体中读取数据并打印的程序。\n\nCode:\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  struct book\n{\n    char code;\n    int piece;\n    float price;\n};\nstruct book\
+  \ b1,b2,b3;\nmain( )\n{\n    clrscr( );\n    printfıştırenter code,piece,price”);\n\
+  \    scanfıştır%c%d%f”,&b1.code,&b1.piece,&b1.price);\n    printfıştırenter code,piece,price”);\n\
+  \    scanfıştır%c%d%f”,&b2.code,&b2.piece,&b2.price);\n    printfıştırenter code,piece,price”);\n\
+  \    scanfıştır%c%d%f”,&b3.code,&b3.piece,&b3.price);\n}\n```\n```\n\n\n\n\n\n```c\n\
+  scanf(“%c%d%f”,&b3.code,&b3.piece,&b3.price);\nprintf(“the details are”);\nprintf(“\\\
+  n %c%d%f”,b1.code,b1.piece,b1.price);\nprintf(“\\n %c%d%f”,b2.code,b2.piece,b2.price);\n\
+  printf(“\\n %c%d%f”,b3.code,b3.piece,b3.price);\ngetch( );\n}\n```\n\n## 68. 打印对角矩阵的程序。\n\
+  \n```c\n#include<conio.h>\n#include<stdio.h>\n\nmain()\n{\nint a[4][4],i,j;\nclrscr(\
+  \ );\n\nfor(i=0;i<4;i++)\nfor(j=0;j<4;j++)\nif(i==j)\n    a[i][j]=7;\nelse\n   \
+  \ a[i][j]=0;\nfor(i=0;i<4;i++)\n{\nfor(j=0;j<4;j++)\n    printf(“%d”,a[i][j]);\n\
+  \    printf(“\\n”);\n}\ngetch();\n}\n```\n\n# 69. 将一个文件的内容复制到另一个文件的程序。\n\n```c\n\
+  #include<stdio.h>\n#include<conio.h>\n\nmain( )\n{\nFILE *fp1,*fp2;\nchar ch;\n\
+  fp1=fopen(“text1”,”w”);\nprintf(enter the text”);\nwhile((ch=getchar( ))!=EOF)\n\
+  \    putc(ch,fp1);\nfclose(fp1);\nfp1=fopen(“text1”,”r”);\nfp2=fopen(“text2”,”w”);\n\
+  while((ch=getc(fp1))!=EOF)\n    putc(ch,fp2);\nfclose(fp2);\ngetch( );\n}\n```\n\
+  \n# 70. 创建一个数字文件，并将奇数复制到第二个文件，偶数复制到第三个文件。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nmain( )\n{\nFILE *fp1,*fp2,*fp3;\nint i;\nfp1=fopen(“DATA1”,”w”);\nprintf(“enter\
+  \ the number”);\nscanf(“%d”,&i);\nwhile(i!=eof( ))\n{\n    putw(i,fp1);\n} \nfclose(fp1);\n\
+  fp1=fopen(“DATA1”,”r”);\nfp2=fopen(“DATA2”,”w”);\nfp3=fopen(“DATA3”,”w”);\nwhile((i=getw(fp1))!=EOF())\n\
+  if(i%2= =0)\n    putw(i,fp3);\nelse\n    putw(i,fp2);\nfse(fp1);\nfse(fp2);\nfse(fp3);\n\
+  getch( );\n}\n```\n\n## 71. 程序结构体，用于存储酒店信息，包括名称、等级、房间费、房间数量。\n\n## a) 按房间费变更顺序打印指定等级的酒店。\n\
+  ### b) 打印房间费小于给定数值的酒店。\n\n##c\n#include<stdio.h>\n#include<conio.h>\n\nmain( )\n\
+  {\nstruct hotel\n{\nchar name[20];\nchar city[10];\nchar grade;\nint rc,nr;\n};\n\
+  struct hotel ht[20],t;\nint i,n,j,c;\nchar gr;\nclrscr( );\nprintf(“enter no. of\
+  \ hotels\\n”);\nscanf(“%d”,&n);\nfor(i=0;i<n;i++)\n{\n    printf(“enter name of\
+  \ hotel \\n”);\n    scanf(“%s”,&ht[i].name);\n    printf(“enter name of city \\\
+  n”);\n    scanf(“%s”,&ht[i].city);\n    printf(“enter the grade \\n”);\n    scanf(“%s”.ht[i].grade);\n\
+  \    ht[i].grade=getche( );\n    printf(“enter room charge \\n”);\n    scanf(“%d”,&ht[i].rc);\n\
+  \    printf(“enter no of rooms \\n”);\n    scanf(“%d”,&ht[i].nr);\n}\nfor(i=0;i<n;i++)\n\
+  for(j=0;j<n-i;j++)\n{\n    t=ht[j];\n    ht[j]=ht[j+i];\n    ht[j+1]=t;\n}\nprintf(“enter\
+  \ a grade to print the hotels \\n”);\ngr=getche();\nclrscr();\nprintf(“hotel name\
+  \ city grade roomcharge no of room”);\nfor(i=0;i<n;i++)\nif(gr==ht[i].grade)\n \
+  \   printf(“%s %s %c %d %d”,ht[i].name,ht[i].city,ht[i].grade,ht[i].rc,ht[i].nr);\n\
+  getch();\nprintf(“enter a room charge to print hotels less than given charge \\\
+  n”);\nscanf(“%d”,&c);\nprintf(“hotel name city grade roomcharge no of rooms”);\n\
+  for(i=0;i<n;i++)\nif(c<=ht[i].rc)\n    printf(“%s %s %c %d %d”,ht[i].name,ht[i].city,ht[i].grade,ht[i].rc,ht[i].nr);\n\
+  }\n\n## 72. 读取整数后执行以下处理的程序：\n### a) 按给定顺序打印。\n### b) 用第一个和最后一个元素的乘积替换第二个元素。\n###\
+  \ c) 用所有元素的平均值替换中间值。\n### d) 将所有元素替换为零。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nmain( )\n{\nint a[10],i,n,sum=0;\nclrscr( );\nprintf(“enter the array “);\nscanf(“%d”,&n);\n\
+  printf(“enter the elements”);\nfor(i=0;i<n;i++)\n{\n    scanf(“%d”,&a[i]);\n   \
+  \ sum=sum+a[i];\n}\nprintf(“The given arrays is: “);\nfor(i=0;i<n;i++)\n    printf(“%d”,a[i]);\n\
+  a[1]=a[0]*a[n-1];\nprintf(“\\n the given are after replacing 2nd element”);\nfor(i=0;i<n;i++)\n\
+  \    printf(“%d”,a[i]);\na[(1+n/2)]=sum/n;\nprintf(“\\n the given array after replacing\
+  \ middle element by average of all”);\nfor(i=0;i<n;i++)\nif(a[i]<0)\n    a[i]=0;\n\
+  printf(“\\n given array after replacing values by zero”);\nfor(i=0;i<n;i++)\n  \
+  \  printf(“%d”,a[i]);\nprintf(“\\n”);\ngetch();\n}\n```\n\n# 73. 使用选择排序排序输入的元素。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nmain( )\n{\nint a[100],i,n,j,t,min,pos;\n\
+  clrscr();\nprintf(“enter the array size”);\nscanf(“%d”,&n);\nprintf(“enter the elements”);\n\
+  for(i=0;i<n;i++)\n    scanf(“%d”,a[i]);\nfor(i=0;i<n;i++)\n{\n    min=a[i];\n  \
+  \  pos=i;\n    for(j=0;j<n-1;j++)\n    if(min>a[j])\n    {\n        min=a[j];\n\
+  \        pos=j;\n    }\n    t=a[i];\n    a[i]=a[pos];\n    a[pos]=t;\n}\nprintf(“the\
+  \ sorted elements are”);\nfor(i=0;i<n;i++)\n    printf(“%d”,a[i]);\ngetch( );\n\
+  }\n```\n\n# 74. 不使用实际除法判断数字是否能被 11 整除的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  #include<math.h>\n\nmain( )\n{\nint a,b,n,evensum=0,oddsum=0,div;\nclrscr( );\n\
+  printf(“enter a number”);\nscanf(“%d”,&n);\na=n;\nb=n/10;\nwhile(a>0)\n{\n    oddsum=oddsum+(a%10);\n\
+  \    a=a/10;\n}\nwhile(b>0)\n{\n    evensum=evensum+(b%10);\n    b=b/10;\n}\ndiv=abs(evensum-oddsum);\n\
+  if(div%11==0)\n    printf(“The number is divisible by 11”);\nelse\n    printf(“The\
+  \ number is not divisible by 11”);\ngetch();\n}\n```\n\n## 75. 使用数组找到输入的 n 个数字的最大值和最小值的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nmain( )\n{\nint i,n,a[10],min,max;\n\
+  clrscr( );\nprintf(“ enter how many number”);\nscanf(“%d”,&n);\nprintf(“enter the\
+  \ elements”);\nfor(i=0;i<n;i++)\n    scanf(”%d”,&a[i]);\nmin=a[0];\nfor(i=0;i<n;i++)\n\
+  if(min>a[i])\n    min=a[i];\nprintf(“minimum=%d”,min);\nmax=0;for(i=0;i<n;i++)\n\
+  if(max<a[i]);\n    max=a[i];\nprintf(“\\n maximum=%d”,max);\ngetch( );\n}\n```\n\
+  \n## 76. 打印以下级数直到其和超过 2.6 或项值超过 1.5：x+x2/2!+x3/3!+------------。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n\nmain( )\n{\nfloat x,sum=0,prod=1;\nint i;\nclrscr( );\nprintf(“enter\
+  \ x value”);\nscanf(“%f’,&x);\ni=1;\nwhile((sum<2.6)&&(prod<=1.5))\n{\n    prod=prod*(x/i);\n\
+  \    if(prod<=1.5)\n        sum=sum+prod;\n    i++;\n}\ngetch( );\n}\n```\n\n##\
+  \ 77. 按照以下格式打印学生成绩分布表的程序。\n## 1-5 \n## 6-10 \n## 11-15 \n## 16-20 \n## 21-25 \n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\n\nmain( )\n{\nint a[10],i,n,n1=0,n2=0,n3=0,n4=0,n5=0;\n\
+  clrscr();\n\nprintf(“enter the array “);\nscanf(“%d”,&n);\nprintf(“enter the elements”);\n\
+  for(i=0;i<n;i++)\n{\n    scanf(“%d”,&a[i]);\n    if(a[i]>=1 && a[i]<=5) n1++;\n\
+  \    if(a[i]>=6 && a[i]<=10) n2++;\n    if(a[i]>=11 && a[i]<=15) n3++;\n    if(a[i]>=16\
+  \ && a[i]<=20) n4++;\n    if(a[i]>=21 && a[i]<=25) n5++;\n}\nprintf(“distribution\
+  \ table:\\n\");\nprintf(“1-5: %d\\n”,n1);\nprintf(“6-10: %d\\n”,n2);\nprintf(“11-15:\
+  \ %d\\n”,n3);\nprintf(“16-20: %d\\n”,n4);\nprintf(“21-25: %d\\n”,n5);\ngetch();\n\
+  }\n```\n\n\n\n\n\n```\nprintf(“%c”,s[i]);\n\ni++;\n\nif(s[i]=’\\0’)\nbreak;\n}\n\
+  \nprintf(“\\t\\t %d”,nc);\n\nprintf(“\\n”);\n\n}} getch();\n\n}\n```\n\n## 81. 接受两个字符串并比较这两个字符串的程序\n\
+  \nCode:\n\n```c\n#include<stdio.h>\n#include<conio.h>\nint strcomp (char *pt1, char\
+  \ *pt2);\n\nvoid read-string(char*pt);\n\nmain( )\n{\nchar line [80],line2[80];\n\
+  clrscr( );\nprintf(“enter first string;”);\nread-string (line1);\nprintf(“enter\
+  \ second string”);\nread-string(line2);\nif(strcomp (line1,line2)>0)\nprintf(“second\
+  \ string biggest”);\nelse\nif(strcomp (line1,line2)>0)\nprintf(“ first string biggest;”);\n\
+  else\nprintf(“both the strins are equal”);\ngetch( );\n}\nvoid read-string(char*pt)\n\
+  {\nfor(;(*pt=getchar( ))!=’\\n’;pt++);\n*pt=’\\0’;\n}\nint strcomp (char *pt1, char\
+  \ *pt2)\n{\nfor(;*pt1!=’\\0’;pt1++;pt2++)\nif(*pt1!=*pt2)\nbreak;\nreturn *pt1-*pt2;\n\
+  }\n```\n\n## 82. 使用指针和函数接受字符串的程序\n\nCode:\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  main( )\n{\nint ch[20];\nclrscr ( );\nprintf(“enter a string”);\nread_array(ch);\n\
+  printf(“%s”,ch);\ngetch( );\n}\nvoid read_string (char*pt)\n{\nfor(;(*pt=getchar(\
+  \ ))!=’/n’;pt++);\n*pt=’\\0’;\n}\n```\n\n## 83. 读取字符串并打印字符串中每个单词的前两个字符的程序\n\nCode:\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nmain( )\n{\nchar s[100];\nint i,l;\n\
+  clrscr( );\nprintf(“enter a string”);\ngets(s);l=strlen(s);\nfor(i=0;i<l;i++)\n\
+  {\nif(s[i]!=’ ‘ && s[i]=’ ‘) \n{\nprintf(“%c %c”,s[i],s[i+1])\ni=i+2;\nwhile(s[i]!=’\
+  \ ‘)\ni++;\n}}\ngetch( );\n}\n```\n\n# 84. 接受两个数字并使用指针打印给定两个数字之和的程序\n\nCode:\n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\nmain( )\n{\nint a, b,c;\nclrscr( );\n\
+  a=10;\nb=20;\nc=*(&a)+*(&b);\nprintf(“%d”,c);\ngetch( );\n}\n```\n\n## 85. 接受字符串并使用函数打印给定字符串反转的程序\n\
+  \nCode:\n\n```c\n#include<stdio.h>\n#include<stdio.h>\nint getline (char str[]);\n\
+  void printline (char str[],int i);\nmain( )\n{\nchar str[80];\nint 1;\nclrscr( );\n\
+  1=getline(str );\nprintline(str,1);\nprintline(str,1);\ngetch ( );\n}\nint getline(char\
+  \ str[])\n{\nint 1;\nprintf(“enter a string;”);\nfor(i=0;i<80&&((str[i]=getchar())!=’\\\
+  n’);i++);\nif(str[i]=’\\0’;\nreturn i;\n}\nvoid printline(char str[],int 1)\n{\n\
+  int j;\nfor(j=1;j<=0;j--)\nprintf(“%c”,str[j]);\nprintf(‘is the revefrse string”);\n\
+  }\n```\n\n## 86. 接受两个三维数组并将这两个数组的差存储在第三个数组中的程序\n\nCode:\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nmain( )\n{\nint a[3][3],b[3][3],c[3][3],i,j;\nclrscr( );\nfor(i=0;i<3;i++)\n\
+  for(j=0;j<3;j++)\n{\nprintf(“enter two values for a[%d][%d] &\nb[%d][%d]:”,i,j,i,j);\n\
+  scanf(“%d%d”,&a[i][j],&b[i][j]);\n}\nfor(i=0;i<3;i++)\n{\nfor(j=0;j<3;j++)\n{\n\
+  c[i][j]=a[i][j]-b[i][j];\nprintf(“%d”,,c[i][j]);\n}\nprintf(“\\n”);\n}\ngetch( );\n\
+  ```\n\n# 87. 接受一个一维数组并使用指针打印它们的程序\n\nCode:\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  main( )\n{\nint a[5],*b,i;\nclrscr( );\nb=&a[0];\nfor(i=0;i<=4;i++)\n{\nprintf(“enter\
+  \ the value for a[%d]”,i)\nscanf(“%d”,b);\nb++;\n}\nb=&a[0];\nfor(i=0;i<=4;i++)\n\
+  {\nprintf(“\\n%d”,*b);\nb++;\n}\ngetch( );\n```\n\n## 88. 接受两个字符串并找出其中最大的一个程序\n\n\
+  Code:\n\n```c\n#include<stdio.h>\n#include<conio.h>\nint getline(char line[],int\
+  \ lim);\nmain( )\n{\nchar str1[80],str2[80];\nint len1,len2;\nclrscr( );\nprintf(“enter\
+  \ first string”);\nlen1=getline(str1,80);\nprintf(“enter second string”);\nlen2=getline(str1,80);\n\
+  if(len1 >len2)\nprintf(“first string bigger”);\nelse\nif(len1<len2)\nprintf(“second\
+  \ string bigger”);\nelse\nprintf(“both strings are equal”);\ngetch( );\n}\nint getline(char\
+  \ line[],int lim)\n{\nint i;\nfor(i=0;i<lim && ((line[i]=getchar( ))!=’\\n’);i++);\n\
+  if(line[i]==’\\n’)\nline[i]=’0’;\nreturn i;\n}\n```\n\n## 89. 使用常量打印 4 阶矩阵的程序\n\n\
+  Code:\n\n```c\n#include<stdio.h>\n#include<conio.h>\nmain( )\n{\nint a[4][4],i,j,c;\n\
+  clrscr( );\nprintf(“enter constant”);\nscanf(“%d”,&c);\nfor(i=0;i<4;i++)\n{\nfor(j=0;j<4;j++)\n\
+  a[i][j]=c;\nfor(i=0;i<4;i++)\n{\nfor(j=0;j<4;j++)\nprintf(“%d”,a[i][j]);\nprintf(“\\\
+  n”);\n}\n}\ngetch( );\n}\n```\n\n## 90. 接受字符串并反序打印每个单词的程序\n\nCode:\n\n```c\n#include<conio.h>\n\
+  #include<stdio.h>\nmain( )\n{\nchar name[80];\nint i,j,start=0,len;\nclrscr( );\n\
+  printf(“enter a string”);\nscanf(“%s”,name);\nfor(i=0;i<80&&((name[i]=getchar( ))!=’\\\
+  n’);i++);\nlen=i;\nfor(i=0;i<len;i++)\nif(name[i]==’\\n’)\n{\nend=i;\nwhile((end--)>=start)\n\
+  printf(“%c”,name[end]);\nstart=i+1;\n}\ngetch( );\n}\n\n## 91. 使用不同的数组接受一维数组并按升序打印的程序\n\
+  \nCode:\n\n```c\n#include<conio.h>\n#include<stdio.h>\nvoid read_array(int x[]);\n\
+  void sort_array(int y[]);\nvoid print_array(int z[]);\nmain()\n{\nint a[10];\nclrscr(\
+  \ );\nread_array(a);\nsort_array(a);\nprint_array(a);\ngetch( );\n}\nvoid read_array(int\
+  \ x[])\n{\nint i;\nfor(i=0;i<10;i++)\n{\nprintf(“enter value for a[%d]”,i);\nscanf(“%d”,&x[i]);\n\
+  }\nvoid sort_array(int y[])\n{\nint i,j,k;\nfor(i=0;i<9;i++)\nfor(j=i+1;j<=9;j++)\n\
+  if(y[i]>y[j])\n{\nk=y[i];\ny[i]=y[j];\ny[j]=k;\n}\n}\nvoid print_array(int z[])\n\
+  {\nint i;\nfor(i=0;i<10;i++)\nprintf(“%d\\n”,z[i]);\n}\n```\n\n## 92. 接受数据将其存储到文件中并打印的程序\n\
+  \nCode:\n\n```c\n#include<conio.h>\n#include<stdio.h>\nmain( )\n{\nFILE *fp;\nchar\
+  \ c;\nfp=fopen(“data.dat”,”w”);\nclrscr();\nprintf(“enter text”);\nwhile(1)\n{\n\
+  c=getchar( );\nif(c==eof)\nbreak;\nputc(c);\n}\nclose(fp);\nfp=fopen(“data.dat”,”r”);\n\
+  while(1)\n{\nc=getc(fp);\nif(c==eof)\nbreak;\nputchar(c);\n}\ngetch( );\nfclose(fp);\n\
+  }\n\n## 93. 接受小写数据将其转换为大写存储到文件中并打印的程序\n\nCode:\n\n```c\n#include<conio.h>\n#include<stdio.h>\n\
+  main( )\n{\nFILE *fp;\nchar c;\nfp=fopen(“data2.dat”,”w”);\nclrscr( );\nprintf(“enter\
+  \ text”);\nwhile(1)\n{\nc=getchar( );\nif(c==eof)\nbreak;\nputc(toupper(c));\n}\n\
+  fclose(fp);\nfp=fopen(“data2.dat”,”r”);\nwhile(1)\n{\nc=getc(fp);\nif(c==eof)\n\
+  break;\nputchar(c);\n}\ngetch( );\nfclose(fp);\n}\n\n# 94. 将一个文件的内容复制到另一个文件的程序\n\
+  \nCode:\n\n```c\n#include<conio.h>\n#include<stdio.h>\nmain( )\n{\nFILE *fp1,*fp2;\n\
+  char ch;\nfp1=fopen(“text1”,”w”);\nprintf(“enter text”);\nwhile((ch=getchar()))!=EOF\n\
+  putc(ch,fp1);\nfclose(fp1);\nfp1=fopen(“text1”,”r”);\nfp2=fopen(“text2”,”w”);\n\
+  while((ch=getc(fp1)))!=EOF)\nputc(ch,fp2);\nfclose(fp1);\nfclose(fp2);\n}\n```\n\
+  \n# 95. 创建数字文件并将奇数复制到第二个文件、偶数复制到第三个文件的程序\n\nCode:\n\n```c\n#include<conio.h>\n#include<stdio.h>\n\
+  main( )\n{\nFILE *fp1,*fp2,*fp3;\nint i;\nclrscr( );\nfp1=fopen(“data1”,”w”);\n\
+  printf(“enter number”);\nwhile(scanf(“%d”,&i)!=EOF)\nputw(i,fp1);\nfclose(fp1);\n\
+  fp1=fopen(“data1”,”r”);\nfp2=fopen(“data2”,”w”);\nfp3=fopen(“data3”,”w”);\nwhile((i=getc(fp1)))!=EOF)\n\
+  if(i%2==0)\nputc(i,fp3);\nelse\nputw(i,fp2);\nfclose(fp1);\nfclose(fp2);\nfclose(fp3);\n\
+  }\n```\n\n# 97. 接受两个数字并使用函数交换两个值的程序\n\nCode:\n\n```c\n#include<conio.h>\n#include<stdio.h>\n\
+  void swap (int a, int b);\n\nmain( )\n{\nint a,b;\nclrscr( );\nprintf(“enter value\
+  \ for a;”);\nscanf(“%d”,&a);\nprintf(“enter value for b;”);\nscanf(“%d”,&b);\nswap(a,b);\n\
+  getch( );\n}\nvoid swap(int a,int b)\n{\nint c;\nc=a;\na=b;\nb=c;\nprintf(“\\na=%d”,a);\n\
+  printf(“\\nb=%d”,b);\n}\n```\n\n\n\n\n\n## 98. 静态变量示例程序。\n\n代码：\n\n```c\n#include<conio.h>\n\
+  #include<stdio.h>\n\nstatic int i=1;\n\nmain( )\n{\nint j;\nclrscr( );\nfor (j=1;j<=5;j++);\n\
+  fun( );\ngetch( );\n}\n\nfun( )\n{\nprintf(“\\n%d”,i);\ni=i+1;\n}\n```\n\n## 99.\
+  \ 接受字符串并打印末尾空格的程序。\n\n代码：\n\n```c\n#include<conio.h>\n#include<stdio.h>\n\nmain(\
+  \ )\n{\nchar n,n1;\nclrscr ( );\nprintf(“enter a string;”);\nwhile((n=getchar( )!=’\\\
+  n’)\nif(n>=’a’ && n<=’z’)\nputchar(n);\nelse\nif(n>=’a’ && n<=’z’)\nputchar(n);\n\
+  getch( );\n}\n```\n\n## 100. 打印反对角线的程序。\n\n代码：\n\n```c\n#include<conio.h>\n#include<stdio.h>\n\
+  \nmain( )\n{\nint a[4][4],i,j,c;\nclrscr( );\nprintf(“enter which number you want;”);\n\
+  scanf(“%d”,&c);\nfor(i=0;i<4;i++)\nfor(j=0;j<4;j++)\nif(i+j= =3)\na[i]]j]=c;\nelse\n\
+  a[i][j]=0\nfor(i=0;i<4;i++)\n{\nfor(j=0;j<4;j++)\nprintf(“%d”,a[i][j]);\nprintf(“\\\
+  n”);\n}\ngetch( );\n}\n```\n\n感谢阅读本电子书。\n\n如果您有任何问题，可以随时通过邮件向我咨询。\n\n我的邮箱：`adityashakkarwar@gmail.com`\n\
+  \n感谢 !!!\n\n"

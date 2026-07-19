@@ -1,0 +1,2315 @@
+- fmt: "\n![](images/00076.jpeg)\n\n# A collection of Tree Programming Interview Questions\
+    \ Solved in C++\n\nAntonio Gulli\n\nCopyright © 2015 Antonio Gulli\nAll rights\
+    \ reserved.\n\nISBN:\nISBN-13:\n\n\"Tree\" is the fifth of a series of 25 Chapters\
+    \ devoted to algorithms, problem solving and C++ programming.\n\n## DEDICATION\n\
+    To my wife Francesca\nLove always finds a path between forgiveness and karma\n\
+    \n## ACKNOWLEDGMENTS\n\n## Table of Contents\n1. [1 Implementing a preorder visit\
+    \ for a Binary Tree](#\n   - [Solution]\n   - [Code]\n   - [Complexity]\n2. [2\
+    \ Computing the diameter of a binary tree](#\n   - [Solution]\n   - [Code]\n \
+    \  - [Complexity]\n3. [3 Implementing an in-order visit for a Binary Tree](#\n\
+    \   - [Solution]\n   - [Code]\n   - [Complexity]\n4. [4 Implementing a post-order\
+    \ visit for a Binary Tree](#\n   - [Solution]\n   - [Code]\n   - [Complexity]\n\
+    5. [5 Implementing a level order visit for a Binary Tree](#\n   - [Solution]\n\
+    \   - [Code]\n   - [Complexity]\n6. [6 Counting the number of leaves in a tree](#\n\
+    \   - [Solution]\n   - [Code]\n   - [Complexity]\n7. [7 Checking if two binary\
+    \ trees are structurally identical](#\n   - [Solution]\n   - [Code]\n   - [Complexity]\n\
+    8. [8 Printing all the paths in a binary tree](#\n   - [Solution]\n   - [Code]\n\
+    \   - [Complexity]\n9. [9 Verifying if a path sum is equal to an integer](#\n\
+    \   - [Solution]\n   - [Code]\n   - [Complexity]\n10. [10 Find the maximum path\
+    \ sum between two leaves of a binary tree](#\n    - [Solution]\n    - [Code]\n\
+    \    - [Complexity]\n11. [11 Reconstructing a tree given its pre-order and in-order\
+    \ traversals](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n12. [12 Printing\
+    \ a zig-zag traversal](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n\
+    13. [13 Printing the lowest common ancestor (LCA)](#\n    - [Solution]\n    -\
+    \ [Code]\n    - [Complexity]\n14. [14 Implementing “find” and “insert” in a Binary\
+    \ Search Tree](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n15. [15\
+    \ Print a BST in order](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n\
+    16. [16 Implementing findMin and findMax in a BST](#\n    - [Solution]\n    -\
+    \ [Code]\n    - [Complexity]\n17. [17 Implementing deleteNode in a BST](#\n  \
+    \  - [Solution]\n    - [Code]\n    - [Complexity]\n18. [18 Implementing the lowest\
+    \ common ancestor in a BST](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n\
+    19. [19 Checking if a tree is a BST](#\n    - [Solution]\n    - [Code]\n    -\
+    \ [Complexity]\n20. [20 Converting a Double linked list into a BST](#\n    - [Solution]\n\
+    \    - [Code]\n    - [Complexity]\n21. [21 Converting a BST into a Double Linked\
+    \ List](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n22. [22 Finding\
+    \ the k-th element in a BST](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n\
+    23. [23 Printing all the keys in a BST within a given interval](#\n    - [Solution]\n\
+    \    - [Code]\n    - [Complexity]\n24. [24 Merging Two Binary Search Trees](#\n\
+    \    - [Solution]\n    - [Code]\n    - [Complexity]\n25. [25 Finding out there\
+    \ is a triplet in a Balanced BST that adds to zero](#\n    - [Solution]\n    -\
+    \ [Code]\n    - [Complexity]\n26. [26 Implementing a B-Tree](#\n    - [Solution]\n\
+    \    - [Code]\n    - [Complexity]\n27. [27 Implementing a Skiplist](#\n    - [Solution]\n\
+    \    - [Code]\n    - [Complexity]\n28. [28 Implementing Tries](#\n    - [Solution]\n\
+    \    - [Code]\n    - [Complexity]\n29. [29 Implementing a segment tree](#\n  \
+    \  - [Solution]\n    - [Code]\n    - [Complexity]\n30. [30 Implementing Range\
+    \ minimum queries](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n31.\
+    \ [31 Implementing a suffix tree](#\n    - [Solution]\n    - [Code]\n    - [Complexity]\n\
+    \n# 1 Implementing a preorder visit for a Binary Tree\n\n### Solution\n"
+  raw: '
+
+
+    ![](images/00076.jpeg)
+
+
+    A collection of Tree Programming Interview Questions Solved in C++
+
+
+    Antonio Gulli
+
+
+    Copyright © 2015 Antonio Gulli
+
+
+    All rights reserved.
+
+
+    ISBN:
+
+
+    ISBN-13:
+
+
+    “Tree” is the fifth of a series of 25 Chapters devoted to algorithms, problem
+    solving and C++ programming.
+
+
+    DEDICATION
+
+
+    To my wife Francesca
+
+
+    Love always finds a path between forgiveness and karma
+
+
+    ACKNOWLEDGMENTS
+
+
+    Table of Contents
+
+
+    [1 Implementing a preorder visit for a Binary Tree](#part0000_split_005.html__Toc418655653)
+
+
+    [Solution](#part0000_split_005.html__Toc418655654)
+
+
+    [Code](#part0000_split_005.html__Toc418655655)
+
+
+    [Complexity](#part0000_split_005.html__Toc418655656)
+
+
+    [2 Computing the diameter of a binary tree](#part0000_split_006.html__Toc418655657)
+
+
+    [Solution](#part0000_split_006.html__Toc418655658)
+
+
+    [Code](#part0000_split_006.html__Toc418655659)
+
+
+    [Complexity](#part0000_split_006.html__Toc418655660)
+
+
+    [3 Implementing an in-order visit for a Binary Tree](#part0000_split_007.html__Toc418655661)
+
+
+    [Solution](#part0000_split_007.html__Toc418655662)
+
+
+    [Code](#part0000_split_007.html__Toc418655663)
+
+
+    [Complexity](#part0000_split_007.html__Toc418655664)
+
+
+    [4 Implementing a post-order visit for a Binary Tree](#part0000_split_008.html__Toc418655665)
+
+
+    [Solution](#part0000_split_008.html__Toc418655666)
+
+
+    [Code](#part0000_split_008.html__Toc418655667)
+
+
+    [Complexity](#part0000_split_008.html__Toc418655668)
+
+
+    [5 Implementing a level order visit for a Binary Tree](#part0000_split_009.html__Toc418655669)
+
+
+    [Solution](#part0000_split_009.html__Toc418655670)
+
+
+    [Code](#part0000_split_009.html__Toc418655671)
+
+
+    [Complexity](#part0000_split_009.html__Toc418655672)
+
+
+    [6 Counting the number of leaves in a tree](#part0000_split_010.html__Toc418655673)
+
+
+    [Solution](#part0000_split_010.html__Toc418655674)
+
+
+    [Code](#part0000_split_010.html__Toc418655675)
+
+
+    [Complexity](#part0000_split_010.html__Toc418655676)
+
+
+    [7 Checking if two binary trees are structurally identical](#part0000_split_011.html__Toc418655677)
+
+
+    [Solution](#part0000_split_011.html__Toc418655678)
+
+
+    [Code](#part0000_split_011.html__Toc418655679)
+
+
+    [}](#part0000_split_011.html__Toc418655680)
+
+
+    [Complexity](#part0000_split_011.html__Toc418655681)
+
+
+    [8 Printing all the paths in a binary tree](#part0000_split_012.html__Toc418655682)
+
+
+    [Solution](#part0000_split_012.html__Toc418655683)
+
+
+    [Code](#part0000_split_012.html__Toc418655684)
+
+
+    [Complexity](#part0000_split_012.html__Toc418655685)
+
+
+    [9 Verifying if a path sum is equal to an integer](#part0000_split_013.html__Toc418655686)
+
+
+    [Solution](#part0000_split_013.html__Toc418655687)
+
+
+    [Code](#part0000_split_013.html__Toc418655688)
+
+
+    [Complexity](#part0000_split_013.html__Toc418655689)
+
+
+    [10 Find the maximum path sum between two leaves of a binary tree](#part0000_split_014.html__Toc418655690)
+
+
+    [Solution](#part0000_split_014.html__Toc418655691)
+
+
+    [Code](#part0000_split_014.html__Toc418655692)
+
+
+    [Complexity](#part0000_split_014.html__Toc418655693)
+
+
+    [11 Reconstructing a tree given its pre-order and in-order traversals](#part0000_split_015.html__Toc418655694)
+
+
+    [Solution](#part0000_split_015.html__Toc418655695)
+
+
+    [Code](#part0000_split_015.html__Toc418655696)
+
+
+    [Complexity](#part0000_split_015.html__Toc418655697)
+
+
+    [12 Printing a zig-zag traversal](#part0000_split_016.html__Toc418655698)
+
+
+    [Solution](#part0000_split_016.html__Toc418655699)
+
+
+    [Code](#part0000_split_016.html__Toc418655700)
+
+
+    [Complexity](#part0000_split_016.html__Toc418655701)
+
+
+    [13 Printing the lowest common ancestor (LCA)](#part0000_split_017.html__Toc418655702)
+
+
+    [Solution](#part0000_split_017.html__Toc418655703)
+
+
+    [Code](#part0000_split_017.html__Toc418655704)
+
+
+    [Complexity](#part0000_split_017.html__Toc418655705)
+
+
+    [14 Implementing “find” and “insert” in a Binary Search Tree](#part0000_split_018.html__Toc418655706)
+
+
+    [Solution](#part0000_split_018.html__Toc418655707)
+
+
+    [Code](#part0000_split_018.html__Toc418655708)
+
+
+    [Complexity](#part0000_split_018.html__Toc418655709)
+
+
+    [15 Print a BST in order](#part0000_split_019.html__Toc418655710)
+
+
+    [Solution](#part0000_split_019.html__Toc418655711)
+
+
+    [Code](#part0000_split_019.html__Toc418655712)
+
+
+    [Complexity](#part0000_split_019.html__Toc418655713)
+
+
+    [16 Implementing findMin and findMax in a BST](#part0000_split_020.html__Toc418655714)
+
+
+    [Solution](#part0000_split_020.html__Toc418655715)
+
+
+    [Code](#part0000_split_020.html__Toc418655716)
+
+
+    [Complexity](#part0000_split_020.html__Toc418655717)
+
+
+    [17 Implementing deleteNode in a BST](#part0000_split_021.html__Toc418655718)
+
+
+    [Solution](#part0000_split_021.html__Toc418655719)
+
+
+    [Code](#part0000_split_021.html__Toc418655720)
+
+
+    [Complexity](#part0000_split_021.html__Toc418655721)
+
+
+    [18 Implementing the lowest common ancestor in a BST](#part0000_split_022.html__Toc418655722)
+
+
+    [Solution](#part0000_split_022.html__Toc418655723)
+
+
+    [Code](#part0000_split_022.html__Toc418655724)
+
+
+    [Complexity](#part0000_split_022.html__Toc418655725)
+
+
+    [19 Checking if a tree is a BST](#part0000_split_023.html__Toc418655726)
+
+
+    [Solution](#part0000_split_023.html__Toc418655727)
+
+
+    [Code](#part0000_split_023.html__Toc418655728)
+
+
+    [Complexity](#part0000_split_023.html__Toc418655729)
+
+
+    [20 Converting a Double linked list into a BST](#part0000_split_024.html__Toc418655730)
+
+
+    [Solution](#part0000_split_024.html__Toc418655731)
+
+
+    [Code](#part0000_split_024.html__Toc418655732)
+
+
+    [Complexity](#part0000_split_024.html__Toc418655733)
+
+
+    [21 Converting a BST into a Double Linked List](#part0000_split_025.html__Toc418655734)
+
+
+    [Solution](#part0000_split_025.html__Toc418655735)
+
+
+    [Code](#part0000_split_025.html__Toc418655736)
+
+
+    [Complexity](#part0000_split_025.html__Toc418655737)
+
+
+    [22 Finding the k-th element in a BST](#part0000_split_026.html__Toc418655738)
+
+
+    [Solution](#part0000_split_026.html__Toc418655739)
+
+
+    [Code](#part0000_split_026.html__Toc418655740)
+
+
+    [Complexity](#part0000_split_026.html__Toc418655741)
+
+
+    [23 Printing all the keys in a BST within a given interval](#part0000_split_027.html__Toc418655742)
+
+
+    [Solution](#part0000_split_027.html__Toc418655743)
+
+
+    [Code](#part0000_split_027.html__Toc418655744)
+
+
+    [Complexity](#part0000_split_027.html__Toc418655745)
+
+
+    [24 Merging Two Balanced Binary Search Trees](#part0000_split_028.html__Toc418655746)
+
+
+    [Solution](#part0000_split_028.html__Toc418655747)
+
+
+    [Code](#part0000_split_028.html__Toc418655748)
+
+
+    [Complexity](#part0000_split_028.html__Toc418655749)
+
+
+    [25 Finding out if there is a triplet in a Balanced BST that adds to zero](#part0000_split_029.html__Toc418655750)
+
+
+    [Solution](#part0000_split_029.html__Toc418655751)
+
+
+    [Code](#part0000_split_029.html__Toc418655752)
+
+
+    [Complexity](#part0000_split_029.html__Toc418655753)
+
+
+    [26 Implementing a B-Tree](#part0000_split_030.html__Toc418655754)
+
+
+    [Solution](#part0000_split_030.html__Toc418655755)
+
+
+    [Code](#part0000_split_030.html__Toc418655756)
+
+
+    [Complexity](#part0000_split_031.html__Toc418655757)
+
+
+    [27 Implementing a Skiplist](#part0000_split_032.html__Toc418655758)
+
+
+    [Solution](#part0000_split_032.html__Toc418655759)
+
+
+    [Code](#part0000_split_032.html__Toc418655760)
+
+
+    [Complexity](#part0000_split_032.html__Toc418655761)
+
+
+    [28 Implementing Tries](#part0000_split_033.html__Toc418655762)
+
+
+    [Solution](#part0000_split_033.html__Toc418655763)
+
+
+    [Code](#part0000_split_033.html__Toc418655764)
+
+
+    [29 Implementing a segment tree](#part0000_split_034.html__Toc418655765)
+
+
+    [Solution](#part0000_split_034.html__Toc418655766)
+
+
+    [Code](#part0000_split_034.html__Toc418655767)
+
+
+    [Complexity](#part0000_split_034.html__Toc418655768)
+
+
+    [30 Implementing Range minimum queries](#part0000_split_035.html__Toc418655769)
+
+
+    [Solution](#part0000_split_035.html__Toc418655770)
+
+
+    [Code](#part0000_split_035.html__Toc418655771)
+
+
+    [Complexity](#part0000_split_035.html__Toc418655772)
+
+
+    [31 Implementing a suffix tree](#part0000_split_036.html__Toc418655773)
+
+
+    [Solution](#part0000_split_036.html__Toc418655774)
+
+
+    [Code](#part0000_split_036.html__Toc418655775)
+
+
+    [Complexity](#part0000_split_036.html__Toc418655776)
+
+
+    ## 1 Implementing a preorder visit for a Binary Tree
+
+
+    ### Solution'
+  toc: []
+  trans: "\n\n![](img/00076.jpeg)\n\n# 使用 C++ 解决的树结构面试题集\n\nAntonio Gulli\n\nCopyright\
+    \ © 2015 Antonio Gulli\n保留所有权利。\n\nISBN:\nISBN-13:\n\n《树》是包含 25 章关于算法、问题解决和 C++\
+    \ 编程的系列书籍中的第五本。\n\n## 献辞\n致我的妻子 Francesca\n爱总会在宽恕与因果之间找到出路\n\n## 致谢\n\n## 目录\n\
+    1. 1 实现二叉树的前序遍历](#\n    - [解决方案]\n    - [代码]\n    - [复杂度]\n14. 14 在二叉搜索树中实现“查找”和“插入”](#\n\
+    \    - [解决方案]\n    - [代码]\n    - [复杂度]\n16. 16 在 BST 中实现 findMin 和 findMax](#\n\
+    \    - [解决方案]\n    - [代码]\n    - [复杂度]\n28. [28 实现字典树 (Tries)](#\n    - [解决方案]\n\
+    \    - [代码]\n    - [复杂度]\n29. [29 实现线段树](#\n    - [解决方案]\n    - [代码]\n    - [复杂度]\n\
+    30. [30 实现区间最小查询](#\n    - [解决方案]\n    - [代码]\n    - [复杂度]\n31. [31 实现后缀树](#\n\
+    \    - [解决方案]\n    - [代码]\n    - [复杂度]\n\n# 1 实现二叉树的前序遍历\n\n### 解决方案\n\n"
+- fmt: "\nA binary tree is a tree where every node has at most two children. The non-recursive\
+    \ pre-order visit can be implemented by using a stack.\n\nIn a loop:\n* First\
+    \ the current node is visited.\n* Then the left children are pushed until a leaf\
+    \ is reached.\n* Then if the stack is empty, we leave the loop. Otherwise the\
+    \ top of the stack is popped out and the visit continues towards the right children.\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nstruct binaryTree {\n    tVal v__;\n\
+    \    struct binaryTree<tVal> * left;\n    struct binaryTree<tVal> * right;\n \
+    \   binaryTree(tVal v) : v__(v), left(NULL), right(NULL) {}\n};\n\ntemplate<typename\
+    \ tVal>\nvoid nonRecursivePreOrder(binaryTree<tVal> * root) {\n    std::stack<binaryTree<tVal>\
+    \ *> s;\n    while (true) {\n        //left\n        while (root) {\n        \
+    \    std::cout << \" v=\" << root->v__;\n            s.push(root);\n         \
+    \   root = root->left;\n        }\n        if (s.empty())\n            break;\n\
+    \        // this one\n        root = s.top();\n        s.pop();\n        //right\n\
+    \        root = root->right;\n    }\n}\n```\n\n### Complexity\nTime complexity\
+    \ is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg)\n\n\
+    ## 2 Computing the diameter of a binary tree\n\n### Solution\nThe solution can\
+    \ be computed easily with the use of recursion\n\n### Code\n```cpp\ntemplate<typename\
+    \ tVal>\nunsigned diameter(binaryTree<tVal> * root, unsigned & dim) {\n    unsigned\
+    \ left, right;\n    if (!root)\n        return 0;\n    left = diameter(root->left,\
+    \ dim);\n    right = diameter(root->right, dim);\n    if (left + right > dim)\n\
+    \        dim = left + right;\n    return ((left > right) ? left : right) + 1;\n\
+    }\n```\n\n### Complexity\nTime complexity is ![](images/00001.jpeg) and space\
+    \ complexity is ![](images/00001.jpeg).\n\n## 3 Implementing an in-order visit\
+    \ for a Binary Tree\n\n### Solution\nA non-recursive in-order visit can be implemented\
+    \ by using a stack.\n\nIn a loop:\n* First the left children are pushed until\
+    \ a leaf is reached.\n* Then if the stack is empty, we leave the loop. Otherwise\
+    \ the top of the stack pops out and the current node is visited.\n* Finally the\
+    \ visit continues towards the right children\n\n### Code\n```cpp\ntemplate<typename\
+    \ tVal>\nvoid nonRecursiveInOrder(binaryTree<tVal> * root) {\n    std::stack<binaryTree<tVal>\
+    \ *> s;\n    while (true) {\n        //left\n        while (root) {\n        \
+    \    s.push(root);\n            root = root->left;\n        }\n        if (s.empty())\n\
+    \            break;\n        // this one\n        root = s.top();\n        s.pop();\n\
+    \        std::cout << \" v=\" << root->v__;\n        //right\n        root = root->right;\n\
+    \    }\n}\n```\n\n### Complexity\nTime complexity is ![](images/00001.jpeg) and\
+    \ space complexity is ![](images/00001.jpeg)\n\n## 4 Implementing a post-order\
+    \ visit for a Binary Tree\n\n### Solution\nDuring post-ordering every single node\
+    \ is visited twice: the first time when moving towards the left children and then\
+    \ again, when moving towards the right children. In order to differentiate the\
+    \ two cases, we can compare if the current element and the right child of the\
+    \ element at the top of the stack are the same.\n\n### Code\n```cpp\ntemplate<typename\
+    \ tVal>\nvoid nonRecursivePostOrder(binaryTree<tVal> * root) {\n    std::stack<binaryTree<tVal>\
+    \ *> s;\n    while (true) {\n        if (root) {\n            s.push(root);\n\
+    \            root = root->left;\n        } else {\n            if (s.empty())\n\
+    \                break;\n            if (!s.top()->right) {\n                root\
+    \ = s.top();\n                s.pop();\n                std::cout << \" v=\" <<\
+    \ root->v__;\n                if (root == s.top()->right) {\n                \
+    \    std::cout << \" v=\" << s.top()->v__;\n                    s.pop();\n   \
+    \             }\n            }\n            if (!s.empty())\n                root\
+    \ = s.top()->right;\n            else\n                root = NULL;\n        }\n\
+    \    }\n}\n```\n\n### Complexity\nTime complexity is ![](images/00001.jpeg) and\
+    \ space complexity is ![](images/00001.jpeg)\n\n## 5 Implementing a level order\
+    \ visit for a Binary Tree\n\n### Solution\nLevel order visits can be implemented\
+    \ for all nodes at one level before going to the next level. The idea is very\
+    \ simple.\n\nIn a loop:\n* First the root is visited\n* Then while traversing\
+    \ nodes at ![](images/00002.jpeg)all the nodes at level ![](images/00003.jpeg)\
+    \ are stored in a queue\n* The loop is continued until all the levels are completed\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nvoid nonRecursiveLevelOrder(binaryTree<tVal>\
+    \ * root) {\n    std::queue<binaryTree<tVal> *> q;\n    binaryTree<tVal> * tmp;\n\
+    \    if (!root)\n        return;\n    q.push(root);\n    while (!q.empty()) {\n\
+    \        tmp = q.front();\n        q.pop();\n        std::cout << \" v=\" << tmp->v__;\n\
+    \        if (tmp->left)\n            q.push(tmp->left);\n        if (tmp->right)\n\
+    \            q.push(tmp->right);\n    }\n}\n```\n\n### Complexity\nTime complexity\
+    \ is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg).\n\n\
+    ## 6 Counting the number of leaves in a tree\n\n### Solution\nA solution can be\
+    \ provided by modifying the level order visit where we increment a counter every\
+    \ time we reach a leaf node.\n\n### Code\n```cpp\ntemplate<typename tVal>\nunsigned\
+    \ NumLeavesRecursiveLevelOrder(binaryTree<tVal> * root) {\n    std::queue<binaryTree<tVal>\
+    \ *> q;\n    binaryTree<tVal> * tmp;\n    unsigned count = 0;\n    if (!root)\n\
+    \        return count;\n    q.push(root);\n    while (!q.empty()) {\n        tmp\
+    \ = q.front();\n        q.pop();\n        if (!tmp->left && !tmp->right)\n   \
+    \         count++; // another leaf\n        else {\n            if (tmp->left)\n\
+    \                q.push(tmp->left);\n            if (tmp->right)\n           \
+    \     q.push(tmp->right);\n        }\n    }\n    return count;\n}\n```\n\n###\
+    \ Complexity\nTime complexity is ![](images/00001.jpeg) and space complexity is\
+    \ ![](images/00001.jpeg).\n\n## 7 Checking if two binary trees are structurally\
+    \ identical\n\n### Solution\nA solution can be provided by recursion. We consider\
+    \ as base cases when both nodes are null, or if only one of them is null. Otherwise\
+    \ the algorithm checks if both nodes contain the same value and if both left children\
+    \ and right children are recursively structurally identical.\n\n### Code\n```cpp\n\
+    template<typename tVal>\nunsigned structIdentical(binaryTree<tVal> * r1, binaryTree<tVal>\
+    \ * r2) {\n    if (!r1 && !r2)\n        return true;\n    if (!r1 || !r2)\n  \
+    \      return false;\n    return (r1->v__ == r2->v__ && structIdentical(r1->left,\
+    \ r2->left) && structIdentical(r1->right, r2->right));\n}\n```\n\n### Complexity\n\
+    Time complexity is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg).\n\
+    \n## 8 Printing all the paths in a tree\n\n### Solution\nA solution can be provided\
+    \ by recursion. The idea is to keep a vector ![](images/00004.jpeg)passing during\
+    \ recursion, while every node is pushed_back() to ![](images/00005.jpeg). Every\
+    \ time we reach a leaf, the vector is printed.\n\n```cpp\ntemplate<typename tVal>\n\
+    void printAllPaths(binaryTree<tVal> * root, std::vector<tVal> path) {\n    if\
+    \ (!root)\n        return;\n    path.push_back(root->v__);\n    if (!root->left\
+    \ && !root->right) {\n        std::vector<tVal>::iterator it = path.begin();\n\
+    \        for (; it != path.end(); it++)\n            std::cout << \" v=\" << *it;\n\
+    \        std::cout << std::endl;\n    } else {\n        printAllPaths(root->left,\
+    \ path);\n        printAllPaths(root->right, path);\n    }\n}\n```\n\n## 9 Verifying\
+    \ if a path sum is equal to an integer\n\n### Solution\nThe idea is to subtract\
+    \ the current value from the given sum, while visiting recursively the tree.\n\
+    \n```cpp\ntemplate<typename tVal>\nbool hasSum(binaryTree<tVal> * root, int sum)\
+    \ {\n    if (!root)\n        return (sum == 0);\n    else {\n        int remainingSum\
+    \ = sum - root->v__;\n        if ((root->left && root->right) || (!root->left\
+    \ && !root->right))\n            return (hasSum(root->left, remainingSum) || hasSum(root->right,\
+    \ remainingSum));\n        else\n            if (root->left)\n               \
+    \ return hasSum(root->left, remainingSum);\n            else\n               \
+    \ return hasSum(root->right, remainingSum);\n    }\n}\n```\n"
+  raw: "A binary tree is a tree where every node has at most two children.  The non-recursive\
+    \ pre-order visit can be implemented by using a stack.\n\nIn a loop:\n\n*   First\
+    \ the current node is visited.\n\n*   Then the left children are pushed until\
+    \ a leaf is reached\n\n*   Then if the stack is empty, we leave the loop. Otherwise\
+    \ the top of the stack is popped out and the visit continues towards the right\
+    \ children.\n\n### Code\n\ntemplate<typename  tVal>\n\n struct  binaryTree\n\n\
+       {\n\n tVal v__;\n\n struct  binaryTree<tVal> * left;\n\n struct  binaryTree<tVal>\
+    \ * right;\n\n      binaryTree(tVal  v) : v__(v),\n\n         left(NULL), right(NULL)\
+    \ {}\n\n   };\n\n template<typename  tVal>\n\n void nonRecursivePreOrder(binaryTree<tVal>\
+    \ * root)\n\n   {\n\n      std::stack<binaryTree<tVal> *> s;\n\n while (true)\n\
+    \n      {\n\n //left\n\n while (root)\n\n         {\n\nstd::cout << \" v=\" <<\
+    \ root->v__;\n\n            s.push(root);\n\n root = root->left;\n\n         }\n\
+    \n if (s.empty())\n\n break;\n\n // this one\n\n root = s.top();\n\n         s.pop();\n\
+    \n //right\n\n root = root->right;\n\n      }\n\n   }\n\n### Complexity\n\nTime\
+    \ complexity is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg)\n\
+    \n## 2 Computing the diameter of a binary tree\n\n### Solution\n\nThe solution\
+    \ can be computed easily with the use of recursion\n\n### Code\n\ntemplate<typename\
+    \  tVal>\n\n unsigned diameter(binaryTree<tVal> * root, unsigned & dim)\n\n  \
+    \ {\n\n unsigned left, right;\n\n if (!root)\n\n return 0;\n\n      left = diameter(root->left,\
+    \ dim);\n\n      right = diameter(root->right, dim);\n\n if (left + right > dim)\n\
+    \n dim = left + right;\n\n return ((left > right) ? left : right) + 1;\n\n   }\n\
+    \n### Complexity\n\nTime complexity is ![](images/00001.jpeg) and space complexity\
+    \ is ![](images/00001.jpeg).\n\n## 3 Implementing an in-order visit for a Binary\
+    \ Tree\n\n### Solution\n\nA non-recursive in-order visit can be implemented by\
+    \ using a stack.\n\nIn a loop:\n\n*   First the left children are pushed until\
+    \ a leaf is reached\n\n*   Then if the stack is empty, we leave the loop. Otherwise\
+    \ the top of the stack pops out and the current node is visited.\n\n*   Finally\
+    \ the visit continues towards the right children\n\n### Code\n\n template<typename\
+    \  tVal>\n\n void nonRecursiveInOrder(binaryTree<tVal> * root)\n\n   {\n\n     \
+    \ std::stack<binaryTree<tVal> *> s;\n\n while (true)\n\n      {\n\n //left\n\n\
+    \ while (root)\n\n         {\n\n            s.push(root);\n\n root = root->left;\n\
+    \n         }\n\n if (s.empty())\n\n break;\n\n // this one\n\n root = s.top();\n\
+    \n         s.pop();\n\nstd::cout << \" v=\" << root->v__;\n\n //right\n\n root\
+    \ = root->right;\n\n      }\n\n   }\n\n### Complexity\n\nTime complexity is ![](images/00001.jpeg)\
+    \ and space complexity is ![](images/00001.jpeg)\n\n## 4 Implementing a post-order\
+    \ visit for a Binary Tree\n\n### Solution\n\nDuring post-ordering every single\
+    \ node is visited twice: the first time when moving towards the left children\
+    \ and then again, when moving towards the right children. In order to differentiate\
+    \ the two cases, we can compare if the current element and the right child of\
+    \ the element at the top of the stack are the same.\n\n### Code\n\n template<typename\
+    \  tVal>\n\n void nonRecursivePostOrder(binaryTree<tVal> * root)\n\n   {\n\n     \
+    \ std::stack<binaryTree<tVal> *> s;\n\n while (true)\n\n      {\n\n if (root)\n\
+    \n         {\n\n            s.push(root);\n\n root = root->left;\n\n         }\n\
+    \n else {\n\n if (s.empty())\n\n break;\n\n else\n\n if (!s.top()->right)\n\n\
+                   {\n\n root = s.top();\n\n                  s.pop();\n\nstd::cout\
+    \ << \" v=\" << root->v__;\n\n if (root == s.top()->right)\n\n                 \
+    \ {\n\nstd::cout << \" v=\" << s.top()->v__;\n\n                     s.pop();\n\
+    \n                  }\n\n               }\n\n if (!s.empty())\n\n root = s.top()->right;\n\
+    \n else\n\n root = NULL;\n\n} // else\n\n} // while\n\n   }\n\n### Complexity\n\
+    \nTime complexity is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg)\n\
+    \n## 5 Implementing a level order visit for a Binary Tree\n\n### Solution\n\n\
+    Level order visits can be implemented for all nodes at one level before going\
+    \ to the next level. The idea is very simple.\n\nIn a loop:\n\n*   First the root\
+    \ is visited\n\n*   Then while traversing nodes at level ![](images/00002.jpeg)all\
+    \ the nodes at level ![](images/00003.jpeg) are stored in a queue\n\n*   The loop\
+    \ is continued until all the levels are completed\n\n### Code\n\ntemplate<typename\
+    \  tVal>\n\n void nonRecursiveLevelOrder(binaryTree<tVal> * root)\n\n   {\n\n\
+          std::queue<binaryTree<tVal> *> q;\n\n binaryTree<tVal> * tmp;\n\n if (!root)\n\
+    \n return;\n\n      q.push(root);\n\n while (!q.empty())\n\n      {\n\n        \
+    \ tmp = q.front();\n\n         q.pop();\n\nstd::cout << \" v=\" << tmp->v__;\n\
+    \n if (tmp->left)\n\n            q.push(tmp->left);\n\n if (tmp->right)\n\n           \
+    \ q.push(tmp->right);\n\n      }\n\n   }\n\n### Complexity\n\nTime complexity\
+    \ is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg).\n\n\
+    ## 6 Counting the number of leaves in a tree\n\n### Solution\n\nA solution can\
+    \ be provided by modifying the level order visit where we increment a counter\
+    \ every time we reach a leaf node.\n\n### Code\n\ntemplate<typename  tVal>\n\n\
+    \ unsigned NumLeavesNonRecursiveLevelOrder(binaryTree<tVal> * root)\n\n   {\n\n\
+          std::queue<binaryTree<tVal> *> q;\n\n binaryTree<tVal> * tmp;\n\n unsigned\
+    \ count = 0;\n\n if (!root)\n\n return count;\n\n      q.push(root);\n\n while\
+    \ (!q.empty())\n\n      {\n\n         tmp = q.front();\n\n         q.pop();\n\n\
+    \ if (!tmp->left && !tmp->right)\n\ncount++; // another leaf\n\n else\n\n        \
+    \ {\n\n if (tmp->left)\n\n               q.push(tmp->left);\n\n if (tmp->right)\n\
+    \n               q.push(tmp->right);\n\n         }\n\n      }\n\n return count;\n\
+    \n   }\n\n### Complexity\n\nTime complexity is ![](images/00001.jpeg) and space\
+    \ complexity is ![](images/00001.jpeg).\n\n## 7 Checking if two binary trees are\
+    \ structurally identical\n\n### Solution\n\nA solution can be provided by recursion.\
+    \ We consider as base cases when both nodes are null, or if only one of them is\
+    \ null. Otherwise the algorithm checks if both nodes contain the same value and\
+    \ if both left children and right children are recursively structurally identical.\n\
+    \n### Code\n\ntemplate<typename  tVal>\n\n unsigned structIdentical(binaryTree<tVal>\
+    \ * r1, binaryTree<tVal> * r2)\n\n   {\n\n if (!r1 && !r2)\n\n return  true;\n\
+    \n if (!r1 || !r2)\n\n return  false;\n\n return (r1->v__ == r2->v__ &&\n\n        \
+    \ structIdentical(r1->left, r2->left) &&\n\n         structIdentical(r1->right,\
+    \ r2->right));\n\n###  }\n\n### Complexity\n\nTime complexity is ![](images/00001.jpeg)\
+    \ and space complexity is ![](images/00001.jpeg).\n\n## 8 Printing all the paths\
+    \ in a binary tree\n\n### Solution\n\nA solution can be provided by recursion.\
+    \ The idea is to keep a vector ![](images/00004.jpeg)passing during recursion,\
+    \ while every node is pushed_back() to ![](images/00005.jpeg). Every time we reach\
+    \ a leaf, the vector is printed.\n\n### Code\n\ntemplate<typename  tVal>\n\n void\
+    \ printAllPaths(binaryTree<tVal> * root,\n\n      std::vector<tVal> path)\n\n\
+       {\n\n if (!root)\n\n return;\n\n path.push_back(root->v__);\n\n if (!root->left\
+    \ && !root->right)\n\n      {\n\n         std::vector<tVal>::iterator it = path.begin();\n\
+    \n for (; it != path.end(); it++)\n\nstd::cout << \" v=\" << *it;\n\n        \
+    \ std::cout << std::endl;\n\n      }\n\n else\n\n      {\n\n         printAllPaths(root->left,\
+    \ path);\n\n         printAllPaths(root->right, path);\n\n      }\n\n   }\n\n\
+    ### Complexity\n\nTime complexity is ![](images/00001.jpeg) and space complexity\
+    \ is ![](images/00001.jpeg).\n\n## 9 Verifying if a path sum is equal to an integer\n\
+    \n### Solution\n\nThe idea is to subtract the current value from the given sum,\
+    \ while visiting recursively the tree.\n\n### Code\n\ntemplate<typename  tVal>\n\
+    \n bool hasSum(binaryTree<tVal> * root,\n\n int  sum)\n\n   {\n\n if (!root)\n\
+    \n return (sum == 0);\n\n else\n\n      {\n\n int remainingSum = sum - root->v__;\n\
+    \n if ((root->left && root->right) ||\n\n            (!root->left && !root->right))\n\
+    \n return (hasSum(root->left, remainingSum) ||\n\n            hasSum(root->right,\
+    \ remainingSum));\n\n else\n\n if (root->left)\n\n return hasSum(root->left, remainingSum);\n\
+    \n else\n\n return hasSum(root->right, remainingSum);\n\n      }\n\n   }\n\n###\
+    \ Complexity"
+  toc: []
+  trans: "\n\n二叉树是每个节点最多有两个子节点的树。非递归的前序遍历可以使用栈来实现。\n\n在循环中：\n* 首先访问当前节点。\n* 然后将左子节点推入栈，直到到达叶子节点。\n\
+    * 接着，如果栈为空，则退出循环。否则，从栈顶弹出元素并继续向右子节点遍历。\n\n### Code\n```cpp\ntemplate<typename\
+    \ tVal>\nstruct binaryTree {\n    tVal v__;\n    struct binaryTree<tVal> * left;\n\
+    \    struct binaryTree<tVal> * right;\n    binaryTree(tVal v) : v__(v), left(NULL),\
+    \ right(NULL) {}\n};\n\ntemplate<typename tVal>\nvoid nonRecursivePreOrder(binaryTree<tVal>\
+    \ * root) {\n    std::stack<binaryTree<tVal> *> s;\n    while (true) {\n     \
+    \   //left\n        while (root) {\n            std::cout << \" v=\" << root->v__;\n\
+    \            s.push(root);\n            root = root->left;\n        }\n      \
+    \  if (s.empty())\n            break;\n        // this one\n        root = s.top();\n\
+    \        s.pop();\n        //right\n        root = root->right;\n    }\n}\n```\n\
+    \n### Complexity\n时间复杂度为 ![](img/00001.jpeg) 空间复杂度为 ![](img/00001.jpeg)\n\n##\
+    \ 2 计算二叉树的直径\n\n### Solution\n可以使用递归方便地计算该解决方案\n\n### Code\n```cpp\ntemplate<typename\
+    \ tVal>\nunsigned diameter(binaryTree<tVal> * root, unsigned & dim) {\n    unsigned\
+    \ left, right;\n    if (!root)\n        return 0;\n    left = diameter(root->left,\
+    \ dim);\n    right = diameter(root->right, dim);\n    if (left + right > dim)\n\
+    \        dim = left + right;\n    return ((left > right) ? left : right) + 1;\n\
+    }\n```\n\n### Complexity\n时间复杂度为 ![](img/00001.jpeg) 空间复杂度为 ![](img/00001.jpeg)。\n\
+    \n## 3 实现二叉树的中序遍历\n\n### Solution\n非递归的中序遍历可以使用栈来实现。\n\n在循环中：\n* 首先将左子节点推入栈，直到到达叶子节点。\n\
+    * 接着，如果栈为空，则退出循环。否则，从栈顶弹出并访问当前节点。\n* 最后，继续向右子节点遍历\n\n### Code\n```cpp\ntemplate<typename\
+    \ tVal>\nvoid nonRecursiveInOrder(binaryTree<tVal> * root) {\n    std::stack<binaryTree<tVal>\
+    \ *> s;\n    while (true) {\n        //left\n        while (root) {\n        \
+    \    s.push(root);\n            root = root->left;\n        }\n        if (s.empty())\n\
+    \            break;\n        // this one\n        root = s.top();\n        s.pop();\n\
+    \        std::cout << \" v=\" << root->v__;\n        //right\n        root = root->right;\n\
+    \    }\n}\n```\n\n### Complexity\n时间复杂度为 ![](img/00001.jpeg) 空间复杂度为 ![](img/00001.jpeg)\n\
+    \n## 4 实现二叉树的后序遍历\n\n### Solution\n在后序遍历期间，每个节点都会被访问两次：第一次是在向左子节点移动时，第二次是在向右子节点移动时。为了区分这两种情况，我们可以比较当前元素与栈顶元素的右子节点是否相同。\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nvoid nonRecursivePostOrder(binaryTree<tVal>\
+    \ * root) {\n    std::stack<binaryTree<tVal> *> s;\n    while (true) {\n     \
+    \   if (root) {\n            s.push(root);\n            root = root->left;\n \
+    \       } else {\n            if (s.empty())\n                break;\n       \
+    \     if (!s.top()->right) {\n                root = s.top();\n              \
+    \  s.pop();\n                std::cout << \" v=\" << root->v__;\n            \
+    \    if (root == s.top()->right) {\n                    std::cout << \" v=\" <<\
+    \ s.top()->v__;\n                    s.pop();\n                }\n           \
+    \ }\n            if (!s.empty())\n                root = s.top()->right;\n   \
+    \         else\n                root = NULL;\n        }\n    }\n}\n```\n\n###\
+    \ Complexity\n时间复杂度为 ![](img/00001.jpeg) 空间复杂度为 ![](img/00001.jpeg)\n\n## 5 实现二叉树的层序遍历\n\
+    \n### Solution\n层序遍历可以在进入下一层之前对该层的所有节点进行遍历。该思路非常简单。\n\n在循环中：\n* 首先访问根节点\n* 然后在遍历\
+    \ ![](img/00002.jpeg) 处的节点时，将 ![](img/00003.jpeg) 层上的所有节点存储在队列中\n* 持续循环直到完成所有层级\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nvoid nonRecursiveLevelOrder(binaryTree<tVal>\
+    \ * root) {\n    std::queue<binaryTree<tVal> *> q;\n    binaryTree<tVal> * tmp;\n\
+    \    if (!root)\n        return;\n    q.push(root);\n    while (!q.empty()) {\n\
+    \        tmp = q.front();\n        q.pop();\n        std::cout << \" v=\" << tmp->v__;\n\
+    \        if (tmp->left)\n            q.push(tmp->left);\n        if (tmp->right)\n\
+    \            q.push(tmp->right);\n    }\n}\n```\n\n### Complexity\n时间复杂度为 ![](img/00001.jpeg)\
+    \ 空间复杂度为 ![](img/00001.jpeg)\n\n## 6 计算二叉树的叶子节点数量\n\n### Solution\n可以通过修改层序遍历来实现，每当我们到达叶子节点时增加一个计数器。\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nunsigned NumLeavesLevelOrder(binaryTree<tVal>\
+    \ * root) {\n    std::queue<binaryTree<tVal> *> q;\n    binaryTree<tVal> * tmp;\n\
+    \    unsigned count = 0;\n    if (!root)\n        return count;\n    q.push(root);\n\
+    \    while (!q.empty()) {\n        tmp = q.front();\n        q.pop();\n      \
+    \  if (!tmp->left && !tmp->right)\n            count++;\n        else {\n    \
+    \        if (tmp->left)\n                q.push(tmp->left);\n            if (tmp->right)\n\
+    \                q.push(tmp->right);\n        }\n    }\n    return count;\n}\n\
+    ```\n\n### Complexity\n时间复杂度为 ![](img/00001.jpeg) 空间复杂度为 ![](img/00001.jpeg)\n\
+    \n## 7 检查两棵二叉树是否结构相同\n\n### Solution\n可以使用递归来实现。基础情况为两个节点都为空，或者其中一个一个为空。否则，算法检查两个节点的值是否相同，以及左子树和右子树是否结构相同。\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nbool structIdentical(binaryTree<tVal>\
+    \ * r1, binaryTree<tVal> * r2) {\n    if (!r1 && !r2)\n        return true;\n\
+    \    if (!r1 || !r2)\n        return false;\n    return (r1->v__ == r2->v__ &&\
+    \ structIdentical(r1->left, r2->left) && structIdentical(r1->right, r2->right));\n\
+    }\n```\n\n### Complexity\n时间复杂度为 ![](img/00001.jpeg) 空间复杂度为 ![](img/00001.jpeg)\n\
+    \n## 8 打印树中的所有路径\n\n### Solution\n可以使用递归来实现。该思路是在递归过程中传递一个 vector，并将每个节点 `push_back`\
+    \ 进去。每当我们到达叶子节点时，打印该 vector。\n\n### Code\n```cpp\ntemplate<typename tVal>\nvoid\
+    \ printAllPaths(binaryTree<tVal> * root, std::vector<tVal> path) {\n    if (!root)\n\
+    \        return;\n    path.push_back(root->v__);\n    if (!root->left && !root->right)\
+    \ {\n        std::vector<tVal>::iterator it = path.begin();\n        for (; it\
+    \ != path.end(); it++)\n            std::cout << \" v=\" << *it;\n        std::cout\
+    \ << std::endl;\n    } else {\n        printAllPaths(root->left, path);\n    \
+    \    printAllPaths(root->right, path);\n    }\n}\n```\n\n## 9 验证路径之和是否等于某个整数\n\
+    \n### Solution\n该思路是在递归遍历树时，从给的和中减去当前值。\n\n```cpp\ntemplate<typename tVal>\nbool\
+    \ hasSum(binaryTree<tVal> * root, int sum) {\n    if (!root)\n        return (sum\
+    \ == 0);\n    else {\n        int remainingSum = sum - root->v__;\n        if\
+    \ ((root->left && root->right) || (!root->left && !root->right))\n           \
+    \ return (hasSum(root->left, remainingSum) || hasSum(root->right, remainingSum));\n\
+    \        else\n            if (root->left)\n                return hasSum(root->left,\
+    \ remainingSum);\n            else\n                return hasSum(root->right,\
+    \ remainingSum);\n    }\n}\n```\n"
+- fmt: "\nTime complexity is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg).\n\
+    \n## 10. Find the maximum path sum between two leaves of a binary tree\n\n###\
+    \ Solution\nThe maximum path sum between two leaves can either touch the root\
+    \ of the three or can be located on a subtree only if it belongs to the tree itself.\
+    \ Hence we have the following cases of recursion:\n\n- The base case is when the\
+    \ root is `NULL` and we return `0`.\n- Then we compute recursively the maximum\
+    \ path sum for the left and right subtree respectively.\n- Then we compute the\
+    \ maximum for the left subtree, for the right subtree, and for the subtree rooted\
+    \ at the current node. If this maximum improves the total maximum observed so\
+    \ far, then the total maximum is updated.\n- Returning from recursion we compute\
+    \ the maximum between the right and left subtrees and add the weight for the current\
+    \ node.\n\n### Code\n```cpp\ntemplate<typename  tVal>\ntVal max(tVal  a, tVal\
+    \  b)\n  {\n  return (a >= b) ? a : b;\n  }\n\ntemplate<typename  tVal>\nint maxPathSum(binaryTree<tVal>\
+    \ * root, tVal &res)\n  {\n  if (!root)\n    return 0;\n  int lLPSum = maxPathSum(root->left,\
+    \ res);\n  int rLPSum = maxPathSum(root->right, res);\n  int curr_sum = max((lLPSum\
+    \ + rLPSum + root->v__),\n         max(lLPSum, rLPSum));\n  if (res < curr_sum)\n\
+    \    res = curr_sum;\n  return max(lLPSum, rLPSum) + root->v__;\n  }\n```\n\n\
+    ### Complexity\nTime complexity is ![](images/00001.jpeg) and space complexity\
+    \ is ![](images/00001.jpeg).\n\n## 11. Reconstructing a tree given its pre-order\
+    \ and in-order traversals\n\n### Solution\nIn a preorder visit the root is always\
+    \ the leftmost element of each subtree. So we start to put the leftmost element\
+    \ of the preorder array of visits as the root of the whole tree. Now: if we search\
+    \ that very element in the inorder array, we can immediately infer all elements\
+    \ that are before that very value, belonging to the left subtree and all elements\
+    \ after that same value, belonging to the right subtree. The solution can be therefore\
+    \ computed recursively.\n\n### Code\n```cpp\ntemplate<typename  tVal>\nunsigned\
+    \ search(std::vector<tVal> inorder,\n  unsigned  start, unsigned  end, tVal  v)\n\
+    \  {\n  for (unsigned i = start; i <= end; i++)\n    if (inorder[i] == v)\n  \
+    \    return i;\n  }\n\ntemplate<typename  tVal>\nbinaryTree<tVal> * buildBTfromInorderAndPreorder(\n\
+    \  const std::vector<tVal> & inOrder,\n  const std::vector<tVal> & preOrder,\n\
+    \  unsigned & preIndex,\n  unsigned  inStart, unsigned  inEnd)\n  {\n  binaryTree<tVal>\
+    \ * n;\n  n->v__ = preOrder[preIndex++];\n  if (inStart == inEnd)\n    return\
+    \ n;\n  int inIndex =\n      search(inOrder, inStart, inEnd, n->v__);\n\n  n->left\
+    \ =\n      buildBTfromInorderAndPreorder(inOrder, preOrder,\n      inStart, inIndex\
+    \ - 1);\n  n->right =\n      buildBTfromInorderAndPreorder(inOrder, preOrder,\n\
+    \      inIndex+1, inEnd);\n  }\n```\n\n### Complexity\nTime complexity is ![](images/00006.jpeg).\
+    \ A question for the interested reader could be, whether or not this one is the\
+    \ optimal complexity.\n\n## 12. Printing a zig-zag traversal\n\n### Solution\n\
+    A Zig-Zag traversal is implemented by using two stacks which are swapped at every\
+    \ level. During the visit of `currentLevel` all children are inserted in the `nextLevel`\
+    \ stack. To be considered: a Boolean value is maintained for determining the direction\
+    \ of a visit (either left to right, or right to left) and this direction in reversed\
+    \ at every cycle. When a `currentLevel` stack is empty, then it is swapped with\
+    \ `nextLevel`. By using two stacks, a zig-zag visit is a variant of a level order\
+    \ visit.\n\n### Code\n```cpp\ntemplate<typename  tVal>\nvoid printZigZag(binaryTree<tVal>\
+    \ * root)\n  {\n  binaryTree<tVal> * tmp;\n  bool left2right = true;\n  if (!root)\n\
+    \    return;\n\n      std::stack<binaryTree<tVal> *> currLevel;\n      std::stack<binaryTree<tVal>\
+    \ *> nextLevel;\n      currLevel.push(root);\n  while (!currLevel.empty())\n \
+    \     {\n        tmp = currLevel.top();\n        currLevel.pop();\n        if\
+    \ (tmp)\n        {\n        std::cout << \" v=\" << tmp->v__;\n        if (left2right)\n\
+    \          {\n            nextLevel.push(tmp->left);\n            nextLevel.push(tmp->right);\n\
+    \          }\n        else\n          {\n            nextLevel.push(tmp->right);\n\
+    \            nextLevel.push(tmp->left);\n          }\n        }\n      if (currLevel.empty())\n\
+    \        {\n        left2right = !left2right;\n        currLevel.swap(nextLevel);\n\
+    \      }\n  }\n```\n\n### Complexity\nTime complexity is ![](images/00001.jpeg)\
+    \ and space complexity is ![](images/00001.jpeg).\n\n## 13. Printing the lowest\
+    \ common ancestor (LCA)\n\n### Solution\nA solution can be computed recursively.\
+    \ The lowest common ancestor for two nodes ![](images/00007.jpeg) and ![](images/00008.jpeg)\
+    \ is ![](images/00009.jpeg) if the root is ![](images/00010.jpeg).Otherwise the\
+    \ LCA is ![](images/00007.jpeg) (respectively ![](images/00011.jpeg)) if the root\
+    \ is ![](images/00007.jpeg) (respectively ![](images/00011.jpeg)). Those are the\
+    \ base cases. Then the solution is recursively computed for the left and for the\
+    \ right subtree. After returning from recursion, if both left and right are available,\
+    \ then the LCA is the current root, otherwise it is left, if this is available\
+    \ (respectively right, if this is available).\n\n### Code\n```cpp\ntemplate<typename\
+    \  tVal>\nbinaryTree<tVal> * LCA(binaryTree<tVal> * root,\n  binaryTree<tVal>\
+    \ * n1, binaryTree<tVal> * n2)\n  {\n  if (!root)\n    return NULL;\n  if (root\
+    \ == n1 || root == n2)\n    return root;\n  binaryTree<tVal> * left =\n      LCA(root->left,\
+    \ n1, n2);\n  binaryTree<tVal> * right =\n      LCA(root->right, n1, n2);\n  if\
+    \ (left && right)\n    return root;\n  else\n    return (left : right);\n  }\n\
+    ```\n\n### Complexity\nTime complexity is ![](images/00001.jpeg) and space complexity\
+    \ is ![](images/00001.jpeg).\n\n## 14. Implementing “find” and “insert” in a Binary\
+    \ Search Tree\n\n### Solution\nA Binary Search Tree (BST) is a tree where each\
+    \ node has no more than two children. The left subtree of a node contains only\
+    \ nodes with keys being strictly less than the node's key. The right subtree of\
+    \ a node contains only nodes with keys being greater than the node's key.\n\n\
+    `Find()` begins by examining the [root node](http://en.wikipedia.org/wiki/Tree_(data_structure)#root_nodes).\
+    \ If the tree is null, the key does not exist in the tree. If the key equals the\
+    \ one of the root, `find()` returns the root. If the key is less than the one\
+    \ of the root, the left subtree is searched. If the key is greater than the one\
+    \ of the root, the right subtree is searched. This method is repeated recursively\
+    \ or iteratively. Here below we propose a recursive version and we leave to the\
+    \ interested reader the task of implementing an iterative version on his own.\n\
+    \n`Insert()` follows a similar approach. The candidate key for insertion is searched\
+    \ inside the tree. If it is found, the process returns. Otherwise if the search\
+    \ reaches a null node, the key is inserted in that position. The process can be\
+    \ either recursive or iterative.\n\n### Code\n```cpp\ntemplate<typename  tVal>\n\
+    template<typename  tVal>\nstruct binaryTree\n  {\n  tVal v__;\n  struct binaryTree<tVal>\
+    \ * left;\n  struct binaryTree<tVal> * right;\n  binaryTree(tVal  v) : v__(v),\n\
+    \    left(NULL), right(NULL) {}\n  };\n\ntemplate<typename  tVal>\nbinaryTree<tVal>\
+    \ * find(binaryTree<tVal> * const root,\n  const tVal k)\n  {\n  if (!root)\n\
+    \    return NULL;\n  return ((root->v__ < k) ? find(root->right, k) :\n      (root->v__\
+    \ > k ? find(root->left, k) : root));\n  }\n\ntemplate<typename  tVal>\nvoid insert(binaryTree<tVal>\
+    \ * & root, const tVal k)\n  {\n  if (!root)\n    {\n    root = new binaryTree<tVal>(k);\n\
+    \    return;\n    }\n  if (root->v__ < k)\n    insert(root->right, k);\n  else\
+    \ if (root->v__ > k)\n    insert(root->left, k);\n  }\n```\n\n### Complexity\n\
+    Average time complexity of “insert” and “find” is ![](images/00012.jpeg)) , where\
+    \ ![](images/00013.jpeg) expresses the number of nodes in the tree. However if\
+    \ the tree is not balanced, complexity is ![](images/00014.jpeg)).\n\n## 15. Print\
+    \ a BST in order\n\n### Solution\n"
+  raw: "Time complexity is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg).\n\
+    \n## 10 Find the maximum path sum between two leaves of a binary tree\n\n### Solution\n\
+    \nThe maximum path sum between two leaves can either touch the root of the three\
+    \ or can be located on a subtree only if it belongs to the tree itself. Hence\
+    \ we have the following cases of recursion:\n\n*   The base case is when the root\
+    \ is NULL and we return 0\n\n*   Then we compute recursively the maximum path\
+    \ sum for the left and right subtree respectively\n\n*   Then we compute the maximum\
+    \ for the left subtree, for the right subtree, and for the subtree rooted at the\
+    \ current node. If this maximum improves the total maximum observed so far, then\
+    \ the total maximum is updated\n\n*   Returning from recursion we compute the\
+    \ maximum between the right and left subtrees and add the weight for the current\
+    \ node.\n\n### Code\n\ntemplate<typename  tVal>\n\n tVal max(tVal  a, tVal  b)\n\
+    \n   {\n\n return (a >= b) ? a : b;\n\n   }\n\n template<typename  tVal>\n\n int\
+    \ maxPathSum(binaryTree<tVal> * root, tVal &res)\n\n   {\n\n if (!root)\n\n return\
+    \ 0;\n\n int lLPSum = maxPathSum(root->left, res);\n\n int rLPSum = maxPathSum(root->right,\
+    \ res);\n\n int curr_sum = max((lLPSum + rLPSum + root->v__),\n\n         max(lLPSum,\
+    \ rLPSum));\n\n if (res < curr_sum)\n\n res = curr_sum;\n\n return max(lLPSum,\
+    \ rLPSum) + root->v__;\n\n   }\n\n### Complexity\n\nTime complexity is ![](images/00001.jpeg)\
+    \ and space complexity is ![](images/00001.jpeg).\n\n## 11 Reconstructing a tree\
+    \ given its pre-order and in-order traversals\n\n### Solution\n\nIn a preorder\
+    \ visit the root is always the leftmost element of each subtree. So we start to\
+    \ put the leftmost element of the preorder array of visits as the root of the\
+    \ whole tree. Now: if we search that very element in the inorder array, we can\
+    \ immediately infer all elements that are before that very value, belonging to\
+    \ the left subtree and all elements after that same value, belonging to the right\
+    \ subtree. The solution can be therefore computed recursively.\n\n### Code\n\n\
+    \ template<typename  tVal>\n\n unsigned search(std::vector<tVal> inorder,\n\n\
+    \ unsigned  start, unsigned  end, tVal  v)\n\n   {\n\n for (unsigned i = start,\
+    \ i <= end; i__++)\n\n if (inorder[i] == v)\n\n return i;\n\n   }\n\n template<typename\
+    \  tVal>\n\n binaryTree<tVal> * buildBTfromInorderAndPreorder(\n\n const std::vector<tVal>\
+    \ & inOrder,\n\n const std::vector<tVal> & preOrder,\n\n unsigned & preIndex,\n\
+    \n unsigned  inStart, unsigned  inEnd)\n\n   {\n\n binaryTree<tVal> * n;\n\nn->v__\
+    \ = preOrder[preIndex++];\n\n if (inStart == inEnd)\n\n return n;\n\n int inIndex\
+    \ =\n\n         search(inOrder, inStart, inEnd, n->v__);\n\n      n->left =\n\n\
+             buildBTfromInorderAndPreorder(inOrder, preOrder,\n\n inStart, inIndex\
+    \ - 1);\n\n      n->right =\n\n         buildBTfromInorderAndPreorder(inOrder,\
+    \ preOrder,\n\ninIndex+1, inEnd);\n\n   }\n\n### Complexity\n\nTime complexity\
+    \ is ![](images/00006.jpeg). A question for the interested reader could be, whether\
+    \ or not this one is the optimal complexity.\n\n## 12 Printing a zig-zag traversal\n\
+    \n### Solution\n\nA Zig-Zag traversal is implemented by using two stacks which\
+    \ are swapped at every level. During the visit of currentLevel all children are\
+    \ inserted in the nextLevel stack. To be considered: a Boolean value is maintained\
+    \ for determining the direction of a visit (either left to right, or right to\
+    \ left) and this direction in reversed at every cycle. When a currentLevel stack\
+    \ is empty, then it is swapped with nextLevel. By using two stacks, a zig-zag\
+    \ visit is a variant of a level order visit.\n\n### Code\n\n template<typename\
+    \  tVal>\n\n void printZigZag(binaryTree<tVal> * root)\n\n   {\n\n binaryTree<tVal>\
+    \ * tmp;\n\n bool left2right = true;\n\n if (!root)\n\n return;\n\n      std::stack<binaryTree<tVal>\
+    \ *> currLevel;\n\n      std::stack<binaryTree<tVal> *> nextLevel;\n\n      currLevel.push(root);\n\
+    \n while (!currLevel.empty())\n\n      {\n\n         tmp = currLevel.top();\n\n\
+             currLevel.pop();\n\n if (tmp)\n\n         {\n\nstd::cout << \" v=\" <<\
+    \ tmp->v__;\n\n if (left2right)\n\n            {\n\n               nextLevel.push(tmp->left);\n\
+    \n               nextLevel.push(tmp->right);\n\n            }\n\n else\n\n           \
+    \ {\n\n               nextLevel.push(tmp->right);\n\n               nextLevel.push(tmp->left);\n\
+    \n            }\n\n         }\n\n if (currLevel.empty())\n\n         {\n\n           \
+    \ left2right = !left2right;\n\n            currLevel.swap(nextLevel);\n\n        \
+    \ }\n\n      }\n\n   }\n\n### Complexity\n\nTime complexity is ![](images/00001.jpeg)\
+    \ and space complexity is ![](images/00001.jpeg).\n\n## 13 Printing the lowest\
+    \ common ancestor (LCA)\n\n### Solution\n\nA solution can be computed recursively.\
+    \ The lowest common ancestor for two nodes ![](images/00007.jpeg) and ![](images/00008.jpeg)\
+    \ is ![](images/00009.jpeg)if the root is ![](images/00010.jpeg)Otherwise the\
+    \ LCA is ![](images/00007.jpeg) (respectively![](images/00011.jpeg)) if the root\
+    \ is ![](images/00007.jpeg) (respectively![](images/00011.jpeg)). Those are the\
+    \ base cases. Then the solution is recursively computed for the left and for the\
+    \ right subtree. After returning from recursion, if both left and right are available,\
+    \ then the LCA is the current root, otherwise it is left, if this is available\
+    \ (respectively right, if this is available).\n\n### Code\n\ntemplate<typename\
+    \  tVal>\n\n binaryTree<tVal> * LCA(binaryTree<tVal> * root,\n\n binaryTree<tVal>\
+    \ * n1, binaryTree<tVal> * n2)\n\n   {\n\n if (!root)\n\n return  NULL;\n\n if\
+    \ (root == n1 || root == n2)\n\n return  root;\n\n binaryTree<tVal> * left =\n\
+    \n         LCA(root->left, n1, n2);\n\n binaryTree<tVal> * right =\n\n        \
+    \ LCA(root->right, n1, n2);\n\n if (left && right)\n\n return  root;\n\n else\n\
+    \n return (left ? left : right);\n\n   }\n\n### Complexity\n\nTime complexity\
+    \ is ![](images/00001.jpeg) and space complexity is ![](images/00001.jpeg).\n\n\
+    ## 14 Implementing “find” and “insert” in a Binary Search Tree\n\n### Solution\n\
+    \nA Binary Search Tree (BST) is a tree where each node has no more than two children.\
+    \ The left subtree of a node contains only nodes with keys being strictly less\
+    \ than the node's key. The right subtree of a node contains only nodes with keys\
+    \ being greater than the node's key.\n\nFind() begins by examining the [root node](http://en.wikipedia.org/wiki/Tree_(data_structure)#root_nodes).\
+    \ If the tree is null, the key does not exist in the tree. If the key equals the\
+    \ one of the root, find() returns the root. If the key is less than the one of\
+    \ the root, the left subtree is searched. If the key is greater than the one of\
+    \ the root, the right subtree is searched. This method is repeated recursively\
+    \ or iteratively. Here below we propose a recursive version and we leave to the\
+    \ interested reader the task of implementing an iterative version on his own.\n\
+    \nInsert() follows a similar approach. The candidate key for insertion is searched\
+    \ inside the tree. If it is found, the process returns. Otherwise if the search\
+    \ reaches a null node, the key is inserted in that position. The process can be\
+    \ either recursive or iterative.\n\n### Code\n\n template<typename  tVal>\n\n\
+    \ template<typename  tVal>\n\n struct  binaryTree\n\n   {\n\n tVal v__;\n\n struct\
+    \  binaryTree<tVal> * left;\n\n struct  binaryTree<tVal> * right;\n\n      binaryTree(tVal\
+    \  v) : v__(v),\n\n         left(NULL), right(NULL) {}\n\n   };\n\n template<typename\
+    \  tVal>\n\n binaryTree<tVal> * find(binaryTree<tVal> * const  root,\n\n const\
+    \  tVal  k)\n\n   {\n\n if (!root)\n\n return  NULL;\n\n return ((root->v__ <\
+    \ k) ? find(root->right, k) :\n\n         (root->v__ > k ? find(root->left, k)\
+    \ : root));\n\n   }\n\n template<typename  tVal>\n\n void insert(binaryTree<tVal>\
+    \ * & root, const  tVal  k)\n\n   {\n\n if (!root)\n\n      {\n\n root = new \
+    \ binaryTree<tVal>(k);\n\n return;\n\n      }\n\n if (root->v__ < k)\n\n        \
+    \ insert(root->right, k);\n\n else  if (root->v__ > k)\n\n         insert(root->left,\
+    \ k);\n\n   }\n\n### Complexity\n\nAverage time complexity of “insert” and “find”\
+    \ is![](images/00012.jpeg)) , where ![](images/00013.jpeg) expresses the number\
+    \ of nodes in the tree. However if the tree is not balanced, complexity is![](images/00014.jpeg)).\n\
+    \n## 15 Print a BST in order\n\n### Solution"
+  toc: []
+  trans: "\n时间复杂度为 ![](img/00001.jpeg)，空间复杂度为 ![](img/00001.jpeg)。\n\n## 10. 寻找二叉树中两个叶子节点之间的最大路径和\n\
+    \n### 解决方案\n两个叶子节点之间的最大路径和可能通过根节点，也可能仅位于某个子树中。因此，我们有以下递归情况：\n\n- 基础情况是根为 `NULL`，我们返回\
+    \ `0`。\n- 然后我们分别递归计算左子树和右子树的最大路径和。\n- 接着计算左子树、右子树以及以当前节点为根的子树的最大值。如果这个值改进了目前观察到的总最大值，则更新总最大值。\n\
+    - 从递归返回时，我们计算左右子树之间的最大值，并加上当前节点的权重。\n\n### 代码\n```cpp\ntemplate<typename  tVal>\n\
+    tVal max(tVal  a, tVal  b)\n  {\n  return (a >= b) ? a : b;\n  }\n\ntemplate<typename\
+    \  tVal>\nint maxPathSum(binaryTree<tVal> * root, tVal &res)\n  {\n  if (!root)\n\
+    \    return 0;\n  int lLPSum = maxPathSum(root->left, res);\n  int rLPSum = maxPathSum(root->right,\
+    \ res);\n  int curr_sum = max((lLPSum + rLPSum + root->v__),\n         max(lLPSum,\
+    \ rLPSum));\n  if (res < curr_sum)\n    res = curr_sum;\n  return max(lLPSum,\
+    \ rLPSum) + root->v__;\n  }\n```\n\n### 复杂度\n时间复杂度为 ![](img/00001.jpeg)，空间复杂度为\
+    \ ![](img/00001.jpeg)。\n\n## 11. 给定前序和中序遍历重建二叉树\n\n### 解决方案\n在前序遍历中，根节点总是每个子树的最左侧元素。因此我们开始将前序遍历数组中最左侧的元素作为整棵树的根。现在：如果我们在中序数组中搜索该元素，可以立即推断出该值之前的所有元素（属于左子树）以及该值之后的所有元素（属于右子树）。因此，该解决方案可以通过递归计算。\n\
+    \n### 代码\n```cpp\ntemplate<typename  tVal>\nunsigned search(std::vector<tVal>\
+    \ inorder,\n  unsigned  start, unsigned  end, tVal  v)\n  {\n  for (unsigned i\
+    \ = start; i <= end; i++)\n    if (inorder[i] == v)\n      return i;\n  }\n\n\
+    template<typename  tVal>\nbinaryTree<tVal> * buildBTfromInorderAndPreorder(\n\
+    \  const std::vector<tVal> & inOrder,\n  const std::vector<tVal> & preOrder,\n\
+    \  unsigned & preIndex,\n  unsigned  inStart, unsigned  inEnd)\n  {\n  binaryTree<tVal>\
+    \ * n;\n  n->v__ = preOrder[preIndex++];\n  if (inStart == inEnd)\n    return\
+    \ n;\n  int inIndex =\n      search(inOrder, inStart, inEnd, n->v__);\n\n  n->left\
+    \ =\n      buildBTfromInorderAndPreorder(inOrder, preOrder,\n      inStart, inIndex\
+    \ - 1);\n  n->right =\n      buildBTfromInorderAndPreorder(inOrder, preOrder,\n\
+    \      inIndex+1, inEnd);\n  }\n```\n\n### 复杂度\n时间复杂度为 ![](img/00006.jpeg)。感兴趣的读者可能会思考，这个复杂度是否为最优复杂度。\n\
+    \n## 12. 打印之形遍历（Zig-Zag traversal）\n\n### 解决方案\n之形遍历通过使用两个栈实现，并且在每一层之间进行交换。在访问\
+    \ `currentLevel` 期间，所有子节点都被插入 `nextLevel` 栈中。需要考虑的是：维护一个布尔值来确定访问方向（从左到右或从右到左），并且该方向在每个循环中反转。当\
+    \ `currentLevel` 栈为空时，将其与 `nextLevel` 交换。通过使用两个栈，之形遍历是层序遍历的一种变体。\n\n### 代码\n```cpp\n\
+    template<typename  tVal>\nvoid printZigZag(binaryTree<tVal> * root)\n  {\n  binaryTree<tVal>\
+    \ * tmp;\n  bool left2right = true;\n  if (!root)\n    return;\n\n      std::stack<binaryTree<tVal>\
+    \ *> currLevel;\n      std::stack<binaryTree<tVal> *> nextLevel;\n      currLevel.push(root);\n\
+    \  while (!currLevel.empty())\n      {\n        tmp = currLevel.top();\n     \
+    \   currLevel.pop();\n        if (tmp)\n        {\n        std::cout << \" v=\"\
+    \ << tmp->v__;\n        if (left2right)\n          {\n            nextLevel.push(tmp->left);\n\
+    \            nextLevel.push(tmp->right);\n          }\n        else\n        \
+    \  {\n            nextLevel.push(tmp->right);\n            nextLevel.push(tmp->left);\n\
+    \          }\n        }\n      if (currLevel.empty())\n        {\n        left2right\
+    \ = !left2right;\n        currLevel.swap(nextLevel);\n      }\n```\n\n### 复杂度\n\
+    时间复杂度为 ![](img/00007.jpeg)，空间复杂度为 ![](img/00007.jpeg)。\n\n## 13. 打印两个节点的公共祖先（LCA）\n\
+    \n### 解决方案\n两个节点的公共祖先可以通过根节点，也可能仅位于某个子树中。因此我们有以下递归情况：\n\n- 基础情况是根为 `NULL`，我们返回\
+    \ `NULL`。\n- 然后我们递归计算左子树和右子树的公共祖先。\n- 接着计算左子树、右子树以及以当前节点为根的子树的公共祖先。如果这个值改进了目前观察到的总公共祖先，则更新总公共祖先。\n\
+    - 从递归返回时，我们计算左右子树之间的公共祖先，并加上当前节点。\n\n### 代码\n```cpp\ntemplate<typename  tVal>\n\
+    binaryTree<tVal> * LCA(binaryTree<tVal> * root,\n  binaryTree<tVal> * n1, binaryTree<tVal>\
+    \ * n2)\n  {\n  if (!root)\n    return NULL;\n  if (root == n1 || root == n2)\n\
+    \    return root;\n  binaryTree<tVal> * left =\n      LCA(root->left, n1, n2);\n\
+    \  binaryTree<tVal> * right =\n      LCA(root->right, n1, n2);\n  if (left &&\
+    \ right)\n    return root;\n  return (left ? left : right);\n  }\n```\n\n### 复杂度\n\
+    时间复杂度为 ![](img/00008.jpeg)，空间复杂度为 ![](img/00008.jpeg)。\n\n## 14. 在二叉搜索树中实现“查找”和“插入”\n\
+    \n### 解决方案\n二叉搜索树（BST）是一种每个节点最多有两个子节点的树。其左子树包含所有严格小于节点值的键，右子树包含所有大于节点值的键。\n\n\
+    `Find()` 通过检查[根节点](http://en.wikipedia.org/Tree_(data_structure)#root_nodes) 开始。如果树为空，键不在树中。如果键等于根节点，`find()`\
+    \ 返回根节点。如果键小于根节点，搜索左子树。如果键大于根节点，搜索右子树。该方法可以递归或迭代地执行。\n\n`Insert()` 遵循类似的方法。在树内部搜索待插入的键。如果已找到，则返回。否则，如果搜索到达空节点，则将键插入该位置。该过程可以是递归的或迭代的。下面我们提供一个递归版本，并将迭代版本的任务留给感兴趣的读者自行实现。\n\
+    \n### 代码\n```cpp\ntemplate<typename  tVal>\ntemplate<typename  tVal>\nstruct binaryTree\n\
+    \  {\n  tVal v__;\n  struct binaryTree<tVal> * left;\n  struct binaryTree<tVal>\
+    \ * right;\n  binaryTree(tVal  v) : v__(v),\n    left(NULL), right(NULL) {}\n\
+    \  };\n\ntemplate<typename  tVal>\nbinaryTree<tVal> * find(binaryTree<tVal> *\
+    \ const root,\n  const tVal k)\n  {\n  if (!root)\n    return NULL;\n  return\
+    \ ((root->v__ < k) ? find(root->right, k) :\n      (root->v__ > k ? find(root->left,\
+    \ k) : root));\n  }\n\ntemplate<typename  tVal>\nvoid insert(binaryTree<tVal>\
+    \ * & root, const tVal k)\n  {\n  if (!root)\n    {\n    root = new binaryTree<tVal>(k);\n\
+    \    return;\n    }\n  if (root->v__ < k)\n    insert(root->right, k);\n  else\
+    \ if (root->v__ > k)\n    insert(root->left, k);\n  }\n```\n\n### 复杂度\n“插入”和“查找”的平均时间复杂度为\
+    \ ![](img/00012.jpeg)，其中 ![](img/00013.jpeg) 表示树中的节点数。然而，如果树不平衡，复杂度为 ![](img/00014.jpeg))\n\
+    \n## 15. 按序打印二叉搜索树\n\n### 解决方案\n\n"
+- fmt: "\nA BST is a binary tree, so the in-order visit starts with the left subtree,\
+    \ and then it continues with the current node and finally the right subtree.\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nvoid printInorder(binaryTree<tVal>\
+    \ * const node) {\n    if (!node)\n        return;\n    printInorder(node->left);\n\
+    \    std::cout << \" n=\" << node->v__;\n    printInorder(node->right);\n}\n```\n\
+    \n### Complexity\nTime complexity is![](images/00014.jpeg)), where ![](images/00013.jpeg)\
+    \ is the number of nodes in the tree.\n\n## 16 Implementing findMin and findMax\
+    \ in a BST\n\n### Solution\nThe minimum key is located in the leftmost children,\
+    \ while the maximum key is located in the rightmost children.\n\n### Code\n```cpp\n\
+    template<typename tVal>\nbinaryTree<tVal> * findMin(binaryTree<tVal> * root) {\n\
+    \    if (!root)\n        return NULL;\n    while (root->left) { root = root->left;\
+    \ }\n    return root;\n}\n\ntemplate<typename tVal>\nbinaryTree<tVal> * findMax(binaryTree<tVal>\
+    \ * root) {\n    if (!root)\n        return NULL;\n    while (root->right) { root\
+    \ = root->right; }\n    return root;\n}\n```\n\n### Complexity\nAverage time complexity\
+    \ is![](images/00012.jpeg)) , where ![](images/00013.jpeg) is the number of nodes\
+    \ in the tree. However if the tree is not balanced, complexity is![](images/00014.jpeg)).\n\
+    \n## 17 Implementing deleteNode in a BST\n\n### Solution\nThe code `deleteNode()`\
+    \ starts by finding the key to delete in the tree. If there is no key, the algorithm\
+    \ returns. Otherwise there are two different cases:\n\n- If the node is internal,\
+    \ `deleteNode()` finds the maximum key in the left subtree rooted to the node,\
+    \ where the key has been found. This maximum key replaces the searched key, which\
+    \ is therefore removed. Then the maximum is deleted by the left subtree.\n- If\
+    \ the node is external and there is one chil (either on the left or on right side)\
+    \ then the child replaces the father. In any case the external node is freed.\n\
+    \nThe following code implements the algorithm:\n\n### Code\n```cpp\ntemplate<typename\
+    \ tVal>\nbinaryTree<tVal> * deleteNode(binaryTree<tVal> * root, const tVal key)\
+    \ {\n    binaryTree<tVal> * tmp;\n    if (!root)\n        return NULL;\n    else\
+    \ if (key < root->v__)\n        root->left = deleteNode(root->left, key);\n  \
+    \  else if (key > root->v__)\n        root->right = deleteNode(root->right, key);\n\
+    \    else {\n        // internal node\n        if (root->left && root->right)\
+    \ {\n            tmp = findMax(root->left);\n            root->v__ = tmp->v__;\n\
+    \            root->left = deleteNode(root->left, root->v__);\n        }\n    \
+    \    else {\n            tmp = root;\n            if (root->left == NULL)\n  \
+    \              root = root->right;\n            if (root->right == NULL)\n   \
+    \             root = root->left;\n            delete tmp;\n        }\n    }\n\
+    \    return root;\n}\n```\n\n### Complexity\nAverage time complexity is![](images/00012.jpeg))\
+    \ , where ![](images/00013.jpeg) is the number of nodes in the tree. However if\
+    \ the tree is not balanced, complexity is![](images/00014.jpeg)).\n\n## 18 Implementing\
+    \ the lowest common ancestor in a BST\n\n### Solution\nThe lowest common ancestor\
+    \ (LCA) of two nodes ![](images/00007.jpeg) (with key ![](images/00015.jpeg))\
+    \ and ![](images/00016.jpeg)(with key ![](images/00017.jpeg)) for a tree rooted\
+    \ at the root node is a node with key ![](images/00018.jpeg)such that either ![](images/00019.jpeg)\
+    \ or ![](images/00020.jpeg). If these conditions are not met, LCA navigates the\
+    \ three by either moving left (if ![](images/00021.jpeg) ) or right, otherwise\
+    \ until either the one of the conditions is met or an external node is reached.\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nbinaryTree<tVal> * lca(binaryTree<tVal>\
+    \ * const root, binaryTree<tVal> * const n1, binaryTree<tVal> * const n2) {\n\
+    \    if (!root || !n1 || !n2)\n        return;\n    while (true) {\n        if\
+    \ (((n1->v__ < root->v__) && (root->v__ < n2->v__)) || ((n1->v__ > root->v__)\
+    \ && (root->v__ > n2->v__)))\n            return root;\n        else if (n1->v__\
+    \ < root->v__)\n            root = root->left;\n        else\n            root\
+    \ = root->right;\n    }\n}\n```\n\n### Complexity\nThe worst case time complexity\
+    \ is![](images/00014.jpeg)).\n\n## 19 Checking if a tree is a BST\n\n### Solution\n\
+    A solution can be computed recursively by checking if the left subtree, the current\
+    \ node and the right subtree follow the BST ordering. It is therefore convenient\
+    \ to pass the previous key by reference and compare the current node with that.\n\
+    \n### Code\n```cpp\ntemplate<typename tVal>\nbool isBST(binaryTree<tVal> * const\
+    \ root, tVal & prev) {\n    if (!root)\n        return true;\n    if (!isBST(root->left,\
+    \ prev))\n        return false;\n    if (root->v__ < prev)\n        return false;\n\
+    \    prev = root->v__;\n    return isBST(root->right, prev);\n}\n```\n\n### Complexity\n\
+    The worst case time complexity is![](images/00014.jpeg)).\n\n## 20 Converting\
+    \ a Double linked list into a BST\n\n### Solution\nConverting a double linked\
+    \ list into a BST can be easily recursively. The forward pointer of the double\
+    \ linked list can be used as a right child of a node and the backward pointer\
+    \ as left child. The algorithm starts by finding the element located in middle\
+    \ of the list (this is left as an exercise). This node is the root of the BST.\
+    \ Then the left side and the right side are computed recursively.\n\n### Code\n\
+    ```cpp\ntemplate<typename tVal>\nstruct dLL {\n    tVal v__;\n    struct dLL *\
+    \ prev;\n    struct dLL * next;\n    dLL(tVal v) : v__(v), prev(NULL), next(NULL)\
+    \ {}\n};\n\ntemplate<typename tVal>\ndLL<tVal> * findMiddleNode(dLL<tVal> *head);\n\
+    \ntemplate<typename tVal>\nbinaryTree<tVal> * doubleListToBST(dLL<tVal> * head)\
+    \ {\n    dLL<tVal> * tmp, * p, *q;\n    if (!head || !head->next)\n        return\
+    \ null;\n    tmp = findMiddleNode(head);\n    p = head;\n    while (p->next !=\
+    \ tmp)\n        p = p->next;\n    p->next = NULL;\n    q = tmp->next;\n    tmp->next\
+    \ = NULL;\n    tmp->v__ = doubleListToBST(head);\n    tmp->next = doubleListToBST(q);\n\
+    \    return tmp;\n}\n```\n\n### Complexity\nTime complexity is![](images/00014.jpeg)),\
+    \ where ![](images/00013.jpeg) is the number of nodes in the list.\n\n## 21 Converting\
+    \ a BST into a Double Linked List\n\n### Solution\nConverting a BST into a double\
+    \ linked list can be easily achieved recursively. The right child of a node can\
+    \ be used as forward pointer of the double linked list and the left child as backward\
+    \ pointer. A special case happens at the beginning, when the tail pointer of the\
+    \ double linked list is not defined as detailed in the code.\n\n### Code\n```cpp\n\
+    template <typename tVal>\nvoid bstToDoubleList(binaryTree<tVal> *root, binaryTree<tVal>\
+    \ ** head, binaryTree<tVal> ** tail) {\n    if (!root)\n        return;\n    if\
+    \ (root->left)\n        bstToDoubleList(root->left, head, tail);\n    root->left\
+    \ = *tail;\n    if (*tail)\n        (*tail)->right = root;\n    else\n       \
+    \ *head = root;\n    *tail = root;\n    if (root->right)\n        bstToDoubleList(root->right,\
+    \ head, tail);\n};\n```\n\n### Complexity\nTime complexity is![](images/00014.jpeg)),\
+    \ where ![](images/00013.jpeg) is the number of nodes in the list.\n\n## 22 Finding\
+    \ the k-th element in a BST\n\n### Solution\nIt is easy to solve the problem recursively\
+    \ by keeping a reference to a counter as explained in the code below.\n\n### Code\n\
+    ```cpp\ntemplate<typename tVal>\nbinaryTree<tVal> * findkth(binaryTree<tVal> *\
+    \ const root, const tVal k, unsigned & count) {\n    if (!root)\n        return\
+    \ NULL;\n    binaryTree<tVal> * left = findkth(root->left, k, count);\n    if\
+    \ (left)\n        return left;\n    if (++count == k)\n        return root;\n\
+    \    return findkth(root->right, k, count);\n}\n```\n\n### Complexity\nTime complexity\
+    \ is![](images/00022.jpeg)), where ![](images/00023.jpeg) is the position of the\
+    \ key to be found.\n\n## 23 Printing all the keys in a BST within a given interval\n\
+    \n### Solution\n"
+  raw: "A BST is a binary tree, so the in-order visit starts with the left subtree,\
+    \ and then it continues with the current node and finally the right subtree.\n\
+    \n### Code\n\n template<typename  tVal>\n\n void printInorder(binaryTree<tVal>\
+    \ * const  node)\n\n   {\n\n if (!node)\n\n return;\n\n      printInorder(node->left);\n\
+    \nstd::cout << \" n=\" << node->v__;\n\n      printInorder(node->right);\n\n  \
+    \ }\n\n### Complexity\n\nTime complexity is![](images/00014.jpeg)), where ![](images/00013.jpeg)\
+    \ is the number of nodes in the tree.\n\n## 16 Implementing findMin and findMax\
+    \ in a BST\n\n### Solution\n\nThe minimum key is located in the leftmost children,\
+    \ while the maximum key is located in the rightmost children.\n\n### Code\n\n\
+    \ template<typename  tVal>\n\n binaryTree<tVal> * findMin(binaryTree<tVal> * root)\n\
+    \n   {\n\n if (!root)\n\n return  NULL;\n\n while (root->left) { root = root->left;\
+    \ }\n\n return  root;\n\n   }\n\n template<typename  tVal>\n\n binaryTree<tVal>\
+    \ * findMax(binaryTree<tVal> * root)\n\n   {\n\n if (!root)\n\n return  NULL;\n\
+    \n while (root->right) { root = root->right; }\n\n return  root;\n\n   }\n\n###\
+    \ Complexity\n\nAverage time complexity is![](images/00012.jpeg)) , where ![](images/00013.jpeg)\
+    \ is the number of nodes in the tree. However if the tree is not balanced, complexity\
+    \ is![](images/00014.jpeg)).\n\n## 17 Implementing deleteNode in a BST\n\n###\
+    \ Solution\n\nThe code deleteNode() starts by finding the key to delete in the\
+    \ tree. If there is no key, the algorithm returns. Otherwise there are two different\
+    \ cases:\n\n*   If the node is internal, deleteNode() finds the maximum key in\
+    \ the left subtree rooted to the node, where the key has been found. This maximum\
+    \ key replaces the searched key, which is therefore removed. Then the maximum\
+    \ is deleted by the left subtree.\n\n*   If the node is external and there is\
+    \ one chil (either on the left or on right side) then the child replaces the father.\
+    \ In any case the external node is freed.\n\nThe following code implements the\
+    \ algorithm:\n\n### Code\n\ntemplate<typename  tVal>\n\n binaryTree<tVal> * deleteNode(binaryTree<tVal>\
+    \ * root,\n\n const  tVal  key)\n\n   {\n\n binaryTree<tVal> * tmp;\n\n if (!root)\n\
+    \n return  NULL;\n\n else  if (key < root->v__)\n\n root->left = deleteNode(root->left,\
+    \ key);\n\n else  if (key > root->v__)\n\n root->right = deleteNode(root->right,\
+    \ key);\n\n else {\n\n // internal node\n\n if (root->left && root->right)\n\n\
+             {\n\n            tmp = findMax(root->left);\n\n root->v__ = tmp->v__;\n\
+    \n root->left = deleteNode(root->left, root->v__);\n\n         }\n\n else\n\n\
+             {\n\ntmp = root;\n\n if (root->left == NULL)\n\n root = root->right;\n\
+    \n if (root->right == NULL)\n\n root = root->left;\n\n delete tmp;\n\n        \
+    \ }\n\n      }\n\n return  root;\n\n   }\n\n### Complexity\n\nAverage time complexity\
+    \ is![](images/00012.jpeg)) , where ![](images/00013.jpeg) is the number of nodes\
+    \ in the tree. However if the tree is not balanced, complexity is![](images/00014.jpeg)).\n\
+    \n## 18 Implementing the lowest common ancestor in a BST\n\n### Solution\n\nThe\
+    \ lowest common ancestor (LCA) of two nodes ![](images/00007.jpeg) (with key ![](images/00015.jpeg))\
+    \ and ![](images/00016.jpeg)(with key ![](images/00017.jpeg))  for a tree rooted\
+    \ at the root node is a node with key ![](images/00018.jpeg)such that either ![](images/00019.jpeg)\
+    \ or ![](images/00020.jpeg). If these conditions are not met, LCA navigates the\
+    \ three by either moving left (if ![](images/00021.jpeg) ) or right, otherwise\
+    \ until either the one of the conditions is met or an external node is reached.\n\
+    \n### Code\n\n template<typename  tVal>\n\n binaryTree<tVal> * lca(binaryTree<tVal>\
+    \ * const  root,\n\n binaryTree<tVal> * const  n1, binaryTree<tVal> * const  n2)\n\
+    \n   {\n\n if (!root || !n1 || !n2)\n\n return;\n\n while (true)\n\n      {\n\n\
+    \ if ((n1->v__ < root->v__) && (root->v__ < n2->v__ ) ||\n\n            (n1->v__\
+    \ > root->v__) && (root->v__ > n2->v__ ))\n\n return  root;\n\n else  if (n1->v__\
+    \ < root->v__)\n\n root = root->left;\n\n else\n\n root = root->right;\n\n     \
+    \ }\n\n   }\n\n### Complexity\n\nThe worst case time complexity is![](images/00014.jpeg)).\n\
+    \n## 19 Checking if a tree is a BST\n\n### Solution\n\nA solution can be computed\
+    \ recursively by checking if the left subtree, the current node and the right\
+    \ subtree follow the BST ordering. It is therefore convenient to pass the previous\
+    \ analyzed key by reference and compare the current node with that key.\n\n###\
+    \ Code\n\ntemplate<typename  tVal>\n\n bool isBST(binaryTree<tVal> * const  root,\n\
+    \n tVal & prev)\n\n   {\n\n if (!root)\n\n return  true;\n\n if (!isBST(root->left,\
+    \ prev))\n\n return  false;\n\n if (root->v__ < prev)\n\n return  false;\n\n prev\
+    \ = root->v__;\n\n return isBST(root->right, prev);\n\n   }\n\n### Complexity\n\
+    \nThe worst case time complexity is![](images/00014.jpeg)).\n\n## 20 Converting\
+    \ a Double linked list into a BST\n\n### Solution\n\nConverting a double linked\
+    \ list into a BST can be easily achieved recursively. The forward pointer of the\
+    \ double linked list can be used as a right child of a node and the backward pointer\
+    \ as left child. The algorithm starts by finding the element located in the middle\
+    \ position of the list (this is left as an exercise). This node is the root of\
+    \ the BST. Then the left side and the right side are computed recursively.\n\n\
+    ### Code\n\n template<typename  tVal>\n\n struct  dLL\n\n   {\n\n tVal v__;\n\n\
+    \ struct  dLL<tVal> * prev;\n\n struct  dLL<tVal> * next;\n\n      dLL(tVal  v)\
+    \ : v__(v),\n\n         prev(NULL), next(NULL) {}\n\n   };\n\n template <typename\
+    \  tVal>\n\n dLL<tVal> * findMiddleNode(dLL<tVal> *head);\n\n // left is prev\n\
+    \n // right is next\n\n template <typename  tVal>\n\n binaryTree<tVal> * doubleListToBST(dLL<tVal>\
+    \ * head)\n\n   {\n\n dLL<tVal> * tmp, * p, *q;\n\n // head and head->next exist\n\
+    \n if (!head || !head->next)\n\n return null;\n\n // find middle point\n\n     \
+    \ tmp = findMiddleNode(head);\n\n // find the precedessor\n\np = head;\n\n while\
+    \ (p->next != tmp)\n\n         p = p->next;\n\n // break first half\n\np->next\
+    \ = NULL;\n\n // start next half\n\n      q = tmp->next;  \n\ntmp->next = NULL;\n\
+    \n // recurisve\n\n      tmp->prex = doubleListToBST(head);\n\n      tmp->next\
+    \ = doubleListToBST(q);\n\n return tmp;\n\n   }\n\n### Complexity\n\nTime complexity\
+    \ is![](images/00014.jpeg)) , where ![](images/00013.jpeg) is the number of nodes\
+    \ in the list.\n\n## 21 Converting a BST into a Double Linked List\n\n### Solution\n\
+    \nConverting a BST into a double linked list can be easily achieved recursively.\
+    \ The right child of a node can be used as forward pointer of the double linked\
+    \ list and the left child as backward pointer. A special case happens at the beginning,\
+    \ when the tail pointer of the double linked list is not defined as detailed in\
+    \ the code.\n\n### Code\n\n template <typename  tVal>\n\n void bstToDoubleList(binaryTree<tVal>\
+    \ *root,\n\n binaryTree<tVal> ** head, binaryTree<tVal> ** tail)\n\n   {\n\n if\
+    \ (!root)\n\n return;\n\n if (root->left)\n\n         bstToDoubleList(root->left,\
+    \ head, tail);\n\n root->left = *tail;\n\n if (*tail)\n\n         (*tail)->right\
+    \ = root;\n\n else\n\n         *head = root;\n\n      *tail = root;\n\n if (root->right)\n\
+    \n         bstToDoubleList(root->right, head, tail);\n\n   };\n\n### Complexity\n\
+    \nTime complexity is![](images/00014.jpeg)) , where ![](images/00013.jpeg) is\
+    \ the number of nodes in the list.\n\n## 22 Finding the k-th element in a BST\n\
+    \n### Solution\n\nIt is easy to solve the problem recursively by keeping a reference\
+    \ to a counter as explained in the code below.\n\n### Code\n\n template<typename\
+    \  tVal>\n\n binaryTree<tVal> * findkth(binaryTree<tVal> * const  root,\n\n const\
+    \  tVal  k, unsigned & count)\n\n   {\n\n if (!root)\n\n return  NULL;\n\n binaryTree<tVal>\
+    \ * left = findkth(root->left, k, count);\n\n if (left)\n\n return left;\n\n if\
+    \ (++count == k)\n\n return  root;\n\n return findkth(root->right, k, count);\n\
+    \n   }\n\n### Complexity\n\nTime complexity is![](images/00022.jpeg)), where ![](images/00023.jpeg)\
+    \ is the position of the key to be found.\n\n## 23 Printing all the keys in a\
+    \ BST within a given interval\n\n### Solution"
+  toc: []
+  trans: "\nBST 是一种二叉搜索树，因此中序遍历从左子树开始，然后是当前节点，最后是右子树。\n\n### 代码\n```cpp\ntemplate<typename\
+    \ tVal>\nvoid printInorder(binaryTree<tVal> * const node) {\n    if (!node)\n\
+    \        return;\n    printInorder(node->left);\n    std::cout << \" n=\" << node->v__;\n\
+    \    printInorder(node->right);\n}\n```\n\n### 复杂度\n时间复杂度为![](img/00014.jpeg)),其中\
+    \ ![](img/00013.jpeg) 是树中节点的数量。\n\n## 16 在 BST 中实现 findMin 和 findMax\n\n### 解决方案\n\
+    最小键位于最左侧的子节点，而最大键位于最右侧的节点。\n\n### 代码\n```cpp\ntemplate<typename tVal>\nbinaryTree<tVal>\
+    \ * findMin(binaryTree<tVal> * root) {\n    if (!root)\n        return NULL;\n\
+    \    while (root->left) { root = root->left; }\n    return root;\n}\n\ntemplate<typename\
+    \ tVal>\nbinaryTree<tVal> * findMax(binaryTree<tVal> * root) {\n    if (!root)\n\
+    \        return NULL;\n    while (root->right) { root = root->right; }\n    return\
+    \ root;\n}\n```\n\n### 复杂度\n平均时间复杂度为![](img/00012.jpeg))，其中 ![](img/00013.jpeg)\
+    \ 是树中节点的数量。然而，如果树不是平衡的，复杂度为![](img/00014.jpeg))。\n\n## 17 在 BST 中实现 deleteNode\n\
+    \n### 解决方案\n代码 `deleteNode()` 首先在树中查找要删除的键。如果没有该键，算法将返回。否则，有两种不同的情况：\n\n- 如果节点是内部节点，`deleteNode()`\
+    \ 会在以节点为根的左子树中找到最大键并找到它。该最大键将替换被搜索的键，从而将其移除。然后通过左子树删除该最大值。\n- 如果节点是外部节点且只有一个孩子（在左侧或右侧），则该子节点替换父节点。在任何情况下，外部节点都会被释放。\n\
+    \n以下代码实现了该算法：\n\n### 代码\n```cpp\ntemplate<typename tVal>\nbinaryTree<tVal> * deleteNode(binaryTree<tVal>\
+    \ * root, const tVal key) {\n    binaryTree<tVal> * tmp;\n    if (!root)\n   \
+    \     return NULL;\n    else if (key < root->v__)\n        root->left = deleteNode(root->left,\
+    \ key);\n    else if (key > root->v__)\n        root->right = deleteNode(root->right,\
+    \ key);\n    else {\n        // 内部节点\n        if (root->left && root->right) {\n\
+    \            tmp = findMax(root->left);\n            root->v__ = tmp->v__;\n \
+    \           root->left = deleteNode(root->left, root->v__);\n        }\n     \
+    \   else {\n            tmp = root;\n            if (root->left == NULL)\n   \
+    \             root = root->right;\n            if (root->right == NULL)\n    \
+    \            root = root->left;\n            delete tmp;\n        }\n    }\n \
+    \   return root;\n}\n```\n\n### 复杂度\n平均时间复杂度为![](img/00012.jpeg))，其中 ![](img/00013.jpeg)\
+    \ 是树中节点的数量。然而，如果树不是平衡的，复杂度为![](img/00014.jpeg))。\n\n## 18 在 BST 中实现最低公共祖先\n\n\
+    ### 解决方案\n对于以根节点为根的树，两个节点 ![](img/00007.jpeg)（键为 ![](img/00017.jpeg））的最低公共祖先 (LCA)\
+    \ 是键为 ![](img/00018.jpeg)的节点，满足 ![](img/00019.jpeg)或 ![](img/00020.jpeg)。如果不满足这些条件，LCA\
+    \ 通过向左（如果 ![](img/00021.jpeg））或向右移动来导航三者，直到满足其中一个条件或到达外部节点。\n\n### 代码\n```cpp\n\
+    template<typename tVal>\nbinaryTree<tVal> * lca(binaryTree<tVal> * const root,\
+    \ binaryTree<tVal> * const n1, binaryTree<tVal> * const n2) {\n    if (!root ||\
+    \ !n1 || !n2)\n        return;\n    while (true) {\n        if (((n1->v__ < root->v__)\
+    \ && (root->v__ < n2->v__)) || ((n1->v__ > root->v__) && (root->v__ > n2->v__)))\n\
+    \            return root;\n        else if n1->v__ < root->v__)\n            root\
+    \ = root->left;\n        else\n            root = root->right;\n    }\n}\n```\n\
+    \n### 复杂度\n最坏情况下的时间复杂度为![](img/00014.jpeg))。\n\n## 19 检查树是否为 BST\n\n### 解决方案\n\
+    可以通过递归计算解决方案，通过检查左子树、当前节点和右子树是否遵循 BST 排序。因此，这种方法很方便。\n\n### 代码\n```cpp\ntemplate<typename\
+    \ tVal>\nbool isBST(binaryTree<tVal> * const root, tVal & prev) {\n    if (!root)\n\
+    \        return true;\n    if (root->left && !isBST(root->left, prev))\n     \
+    \   return false;\n    prev = root->v__;\n    if (root->right && !isBST(root->right,\
+    \ prev))\n        return false;\n    return true;\n}\n```\n\n### 复杂度\n最坏情况的时间复杂度为![](img/00014.jpeg))。\n\
+    \n## 20 将双链表转换为 BST\n\n### 解决方案\n将双链表转换为 BST 可以轻松实现。节点的右孩子可以作为双链表的前向指针，左孩子作为后向指针。在开始时会发生特殊情况，即双链表的尾部指针如代码所示。\n\
+    \n### 代码\n```cpp\ntemplate<typename tVal>\nstruct dLL {\n    tVal v__;\n    struct\
+    \ dLL *prev;\n    struct dLL *next;\n    dLL(tVal v) : v__(v), prev(NULL), next(NULL)\
+    \ {}\n};\n\ntemplate<typename tVal>\ndLL<tVal> * findMiddleNode(dLL<tVal> *head);\n\
+    \ntemplate<typename tVal>\nbinaryTree<tVal> * doubleListToBST(dLL<tVal> * head)\
+    \ {\n    dLL<tVal> *tmp, *p, *q;\n    if (!head || !head->next)\n        return\
+    \ NULL;\n    tmp = findMiddleNode(head);\n    p = head;\n    while (p->next !=\
+    \ tmp)\n        p = p->next;\n    p->next = NULL;\n    q = tmp->next;\n    tmp->next\
+    \ = NULL;\n    tmp->v__ = doubleListToBST(head);\n    tmp->next = doubleListToBST(q);\n\
+    \    return tmp;\n}\n```\n\n### 复杂度\n时间复杂度为![](img/00014.jpeg))，其中 ![](img/00013.jpeg)\
+    \ 是列表中节点的数量。\n\n## 21 将 BST 转换为双链表\n\n### 解决方案\n可以通过递归轻松将 BST 转换为双链表。节点的右孩子可以作为双链表的前向指针，左孩子作为后向指针。算法从开始开始，如代码详细定义。\n\
+    \n### 代码\n```cpp\ntemplate <typename tVal>\nvoid bstToDoubleList(binaryTree<tVal>\
+    \ *root, binaryTree<tVal> ** head, binaryTree<tVal> ** tail) {\n    if (!root)\n\
+    \        return;\n    if (root->left)\n        bstToDoubleList(root->left, head,\
+    \ tail);\n    root->left = *tail;\n    if (*tail)\n        (*tail)->right = root;\n\
+    \    else\n        *head = root;\n    *tail = root;\n    if (root->right)\n  \
+    \      bstToDoubleList(root->right, head, tail);\n}\n```\n\n### 复杂度\n时间复杂度为![](img/00014.jpeg))，其中\
+    \ ![](img/00013.jpeg) 是树中节点的数量。\n\n## 22 在 BST 中查找第 k 个元素\n\n### 解决方案\n可以通过保持计数器的引用来递归解决该问题，如下代码所示。\n\
+    \n### 代码\n```cpp\ntemplate<typename tVal>\nbinaryTree<tVal> * findkth(binaryTree<tVal>\
+    \ * const root, const tVal k, unsigned & count) {\n    if (!root)\n        return\
+    \ NULL;\n    binaryTree<tVal> * left = findkth(root->left, k, count);\n    if\
+    \ (left)\n        return left;\n    if (++count == k)\n        return root;\n\
+    \    return findkth(root->right, k, count);\n}\n```\n\n### 复杂度\n时间复杂度为![](img/00022.jpeg))，其中\
+    \ ![](img/00023.jpeg) 是要查找键的位置。\n\n## 23 打印 BST 中给定区间内的所有键\n\n### 解决方案\n\n"
+- fmt: "\nGiven two keys `![]images/00024.jpeg)` such that `![]images/00025.jpeg)`,\
+    \ the `BST` tree is navigated so that if the current node has a key larger or\
+    \ equal than `![]images/00023.jpeg)` , the navigation continues recursively with\
+    \ the left children. Then the range condition is checked and if it is met, the\
+    \ current node is printed. Finally the navigation continues recursively with the\
+    \ right children.\n\n### Code\n\n```cpp\ntemplate<typename tVal>\nbinaryTree<tVal>\
+    \ * rangePrint(binaryTree<tVal> * const root, const tVal k, const tVal h) \n{\n\
+    \    if (!root)\n        return NULL;\n    if (root->v__ >= k)\n        rangePrint(root->left,\
+    \ k, h);\n    if (root->v__ >= k && root->v__ <= h)\n        std::cout << \" v=\"\
+    \ << root->v__;\n    if (root->v__ <= h)\n        rangePrint(root->right, k, h);\n\
+    }\n```\n\n### Complexity\n\nThe worst time complexity is `![]images/00014.jpeg))`\
+    \ , where `![]images/00013.jpeg)` is the number of nodes in the tree.\n\n## 24\
+    \ Merging Two Balanced Binary Search Trees\n\n### Solution\n\nThe most efficient\
+    \ method for merging two `BST` is to store each one of them in an array. Then\
+    \ the two sorted arrays are merged and the resulting array is converted back to\
+    \ a new `BST`.\n\n### Code\n\n```cpp\ntemplate<typename tVal>\nvoid storeInorder(binaryTree<tVal>\
+    \ * const root, std::vector<tVal> & inorder) \n{\n    if (!root)\n        return;\n\
+    \    storeInorder(root->left, inorder);\n    inorder.push_back(root->v__);\n \
+    \   storeInorder(root->right, inorder);\n}\n\ntemplate<typename tVal>\nvoid dumpVector(const\
+    \ std::vector<tVal> &v1)\n{\n    std::cout << std::endl;\n    std::vector<tVal>::const_iterator\
+    \ it = v1.begin();\n    for (; it != v1.end(); it++)\n        std::cout << *it\
+    \ << \" \";\n    std::cout << std::endl;\n}\n\ntemplate<typename tVal>\nvoid merge(const\
+    \ std::vector<tVal> & v1, const std::vector<tVal> & v2, std::vector<tVal> & merged)\n\
+    {\n    unsigned m = v1.size(), n = v2.size();\n    if (merged.size() != n + m)\n\
+    \        return;\n    unsigned i = 0, j = 0, k = 0;\n    while (i < m && j < n)\n\
+    \    {\n        if (v1[i] < v2[j])\n            merged[k] = v1[i++];\n       \
+    \ else\n            merged[k] = v2[j++];\n        k++;\n    }\n    while (i <\
+    \ m)\n        merged[k++] = v1[i++];\n    while (j < n)\n        merged[k++] =\
+    \ v2[j++];\n}\n\ntemplate<typename tVal>\nbinaryTree<tVal> * sortedArrayToBST(const\
+    \ std::vector<tVal> &v, int start, int end)\n{\n    if (start > end)\n       \
+    \ return NULL;\n    int mid = (start + end) / 2;\n    binaryTree<tVal> *root =\
+    \ new binaryTree<tVal>(v[mid]);\n    root->left = sortedArrayToBST(v, start, mid\
+    \ - 1);\n    root->right = sortedArrayToBST(v, mid + 1, end);\n    return root;\n\
+    }\n\ntemplate<typename tVal>\nbinaryTree<tVal> * mergeTrees(binaryTree<tVal> *\
+    \ const root1, binaryTree<tVal> * const root2)\n{\n    std::vector<int> v1;\n\
+    \    storeInorder(root1, v1);\n    std::vector<int> v2;\n    storeInorder(root2,\
+    \ v2);\n    std::vector<int> merged(v1.size() + v2.size());\n    merge(v1, v2,\
+    \ merged);\n    dumpVector(merged);\n    return sortedArrayToBST(merged, 0, merged.size()\
+    \ - 1);\n}\n\ntemplate<typename tVal>\nvoid dump(binaryTree<tVal> * const root)\n\
+    {\n    if (!root)\n        return;\n    else\n        std::cerr << \" v==\" <<\
+    \ root->v__ << \" \";\n    if (root->left)\n        std::cerr << \" ->left \"\
+    ;\n        dump(root->left);\n    if (root->right)\n        std::cerr << \" ->right\
+    \ \";\n        dump(root->right);\n}\n```\n\n### Complexity\n\nThis method has\
+    \ complexity `![]images/00026.jpeg)` , where `![]images/00013.jpeg)` and `![]images/00027.jpeg)`\
+    \ are the numbers of nodes in the two `BSTs`.\n\n## 25 Finding out there is a\
+    \ triplet in a Balanced BST that adds to zero\n\n### Solution\n\nThe optimal solution\
+    \ is to convert the `BST` into a double linked list. Then it is possible to iterate\
+    \ through the list and for each negative element try to find a pair in the list,\
+    \ which is equal to the key of the current node multiplied by `-1`.\n\n### Code\n\
+    \n```cpp\ntemplate<typename tVal>\nvoid bstToDoubleList(binaryTree<tVal> *root,\
+    \ binaryTree<tVal> ** head, binaryTree<tVal> ** tail) \n{\n    if (!root)\n  \
+    \      return;\n    if (root->left)\n        bstToDoubleList(root->left, head,\
+    \ tail);\n        root->left = *tail;\n    if (*tail)\n        (*tail)->right\
+    \ = root;\n    else\n        *head = root;\n    *tail = root;\n    if (root->right)\n\
+    \        bstToDoubleList(root->right, head, tail);\n};\n\ntemplate<typename tVal>\n\
+    bool isPresentInDLL(binaryTree<tVal> * head, binaryTree<tVal> * tail, int sum)\
+    \ \n{\n    while (head != tail)\n    {\n        int curr = head->v__ + tail->v__;\n\
+    \        if (curr == sum)\n            return true;\n        else if (curr > sum)\n\
+    \            tail = tail->left;\n        else\n            head = head->right;\n\
+    \    }\n    return false;\n}\n\ntemplate<typename tVal>\nbool isTripletPresent(binaryTree<tVal>\
+    \ *root) \n{\n    if (!root)\n        return false;\n    binaryTree<tVal>* head\
+    \ = NULL;\n    binaryTree<tVal>* tail = NULL;\n    bstToDoubleList(root, &head,\
+    \ &tail);\n    while ((head->right != tail) && (head->v__ < 0))\n    {\n     \
+    \   if (isPresentInDLL(head->right, tail, -1 * head->v__))\n            return\
+    \ true;\n        else\n            head = head->right;\n    }\n    return false;\n\
+    }\n```\n\n### Complexity\n\nThis part is left to the reader as an exercise\n\n\
+    ## 26 Implementing a B-Tree\n\n### Solution\n\nA `b-tree` allows insertion and\
+    \ deletion in logarithmic time and it is typically used for systems that write\
+    \ and read large blocks of data such as databases or file systems.\n\nIn `B-trees`\
+    \ internal nodes have a variable number of children nodes within a predefined\
+    \ range `![]images/00028.jpeg)`. When data is inserted or removed from a node,\
+    \ its number of children nodes changes and therefore internal nodes may be joined\
+    \ or split for guaranteeing that they don’t exceed the range. Each internal node\
+    \ of a `B-tree` will contain a number of sorted keys. Keys act as separation values\
+    \ which divide a tree into subtrees as explained in the image below. Therefore\
+    \ `![]images/00029.jpeg)` is the minimum branching factor for the tree.\n\n![http://bluerwhite.org/btree/tree1.png](images/00030.jpeg)\n\
+    \nThe factor of `2` will guarantee that nodes can be split or combined. If an\
+    \ internal node has `![]images/00031.jpeg)` keys, then adding a key to that node\
+    \ can be accomplished by splitting the `![]images/00032.jpeg)` key node into two\
+    \ `![]images/00033.jpeg)` key nodes and by adding the key to the parent. Each\
+    \ split node maintains the required minimum number of keys. Likewise if each internal\
+    \ node and its neighbor have `![]images/00033.jpeg)` keys, then a key can be deleted\
+    \ from the internal node by joining with its neighbor. Deleting the key would\
+    \ leave `![]images/00034.jpeg)` keys to the internal node but joining the neighbor\
+    \ would add `![]images/00035.jpeg)` keys plus one more key coming from the neighbor's\
+    \ parent. The total is still `![]images/00031.jpeg)` keys. The number of branches\
+    \ from a node is one more than the number of keys stored in that node. A B-tree\
+    \ is kept balanced by requiring that all leaf-nodes are at the same depth.\n\n\
+    More formally a B-tree of order `[]images/00036.jpeg)` is defined as a tree which\
+    \ satisfies the following properties:\n\n1. Every node has at most `![]images/00037.jpeg)`\
+    \ children.\n2. Every non-leaf node (except for the root) has at least `![]images/00038.jpeg)`\
+    \ children.\n3. The root has at least two children if it is not a leaf node.\n\
+    4. A non-leaf node with `![]images/00023.jpeg)` children contains `![]images/00039.jpeg)`\
+    \ keys.\n5. All leaves appear in the same level\n6. Each internal node’s keys\
+    \ act as a separation value which divides its subtrees.\n\nSearch\n\nThis operation\
+    \ is similar to the one of searching a binary search tree. Starting from the root,\
+    \ the tree is recursively traversed from top to bottom and at each level the search\
+    \ chooses the subtree, which has separation keys on both sides of the search value.\
+    \ The search within a node can be linear or binary.\n"
+  raw: "Given two keys ![](images/00024.jpeg) such that ![](images/00025.jpeg), the\
+    \ BST tree is navigated so that if the current node has a key larger or equal\
+    \ than ![](images/00023.jpeg) , the navigation continues recursively with the\
+    \ left children. Then the range condition is checked and if it is met, the current\
+    \ node is printed. Finally the navigation continues recursively with the right\
+    \ children.\n\n### Code\n\n template<typename  tVal>\n\n binaryTree<tVal> * rangePrint(binaryTree<tVal>\
+    \ * const  root,\n\n const  tVal  k, const  tVal  h)\n\n   {\n\n if (!root)\n\n\
+    \ return  NULL;\n\n if (root->v__ >= k)\n\n         rangePrint(root->left, k,\
+    \ h);\n\n if (root->v__ >= k && root->v__ <= h)\n\nstd::cout << \" v=\" << root->v__;\n\
+    \n if (root->v__ <= h)\n\n         rangePrint(root->right, k, h);\n\n   }\n\n\
+    ### Complexity\n\nThe worst time complexity is![](images/00014.jpeg)) , where\
+    \ ![](images/00013.jpeg) is the number of nodes in the tree.\n\n## 24 Merging\
+    \ Two Balanced Binary Search Trees\n\n### Solution\n\nThe most efficient method\
+    \ for merging two BST is to store each one of them in an array. Then the two sorted\
+    \ arrays are merged and the resulting array is converted back to a new BST.\n\n\
+    ### Code\n\n template<typename  tVal>\n\n void storeInorder(binaryTree<tVal> *\
+    \ const  root,\n\n      std::vector<tVal> & inorder)\n\n   {\n\n if (!root)\n\n\
+    \ return;\n\n      storeInorder(root->left, inorder);\n\n inorder.push_back(root->v__);\n\
+    \n      storeInorder(root->right, inorder);\n\n   }\n\n template<typename  tVal>\n\
+    \n void dumpVector(const std::vector<tVal> &v1)\n\n   {\n\n      std::cout <<\
+    \ std::endl;\n\n      std::vector<tVal>::const_iterator it = v1.begin();\n\n for\
+    \ (; it != v1.end(); it++)\n\nstd::cout << *it << \" \";\n\n      std::cout <<\
+    \ std::endl;\n\n   }\n\n template<typename  tVal>\n\n void merge(const std::vector<tVal>\
+    \ & v1,\n\n const std::vector<tVal> & v2,\n\n      std::vector<tVal> & merged)\n\
+    \n   {\n\n unsigned m = v1.size(), n = v2.size();\n\n if (merged.size() != n +\
+    \ m)\n\n return;\n\n unsigned i = 0, j = 0, k = 0;\n\n while (i < m && j < n)\n\
+    \n      {\n\n if (v1[i] < v2[j])\n\n merged[k] = v1[i++];\n\n else\n\n merged[k]\
+    \ = v2[j++];\n\n         k++;\n\n      }\n\n while (i < m)\n\n merged[k++] = v1[i++];\n\
+    \n while (j < n)\n\n merged[k++] = v2[j++];\n\n   }\n\n template<typename  tVal>\n\
+    \n binaryTree<tVal> * sortedArrayToBST(const std::vector<tVal> &v,\n\n int  start,\
+    \ int  end)\n\n   {\n\n if (start > end)\n\n return  NULL;\n\n int mid = (start\
+    \ + end) / 2;\n\n binaryTree<tVal> *root =\n\n new  binaryTree<tVal>(v[mid]);\n\
+    \n      root->left = sortedArrayToBST(v, start, mid - 1);\n\n      root->right\
+    \ = sortedArrayToBST(v, mid + 1, end);\n\n return root;\n\n   }\n\n template<typename\
+    \  tVal>\n\n binaryTree<tVal> * mergeTrees(binaryTree<tVal> * const  root1,\n\n\
+    \ binaryTree<tVal>  * const  root2)\n\n   {\n\n      std::vector<int> v1;\n\n\
+          storeInorder(root1, v1);\n\n      std::vector<int> v2;\n\n      storeInorder(root2,\
+    \ v2);\n\n      std::vector<int> merged(v1.size() + v2.size());\n\n      merge(v1,\
+    \ v2, merged);\n\n      dumpVector(merged);\n\n return sortedArrayToBST(merged,\
+    \ 0, merged.size() - 1);\n\n   }\n\n template<typename  tVal>\n\n void dump(binaryTree<tVal>\
+    \ * const  root)\n\n   {\n\n if (!root)\n\n return;\n\n else\n\nstd::cerr << \"\
+    \ v==\" << root->v__ << \" \";\n\n if (root->left)\n\n      {\n\nstd::cerr <<\
+    \ \" ->left \";\n\n         dump(root->left);\n\n      }\n\n if (root->right)\n\
+    \n      {\n\nstd::cerr << \" ->right \";\n\n         dump(root->right);\n\n     \
+    \ }\n\n   }\n\n}\n\n### Complexity\n\nThis method has complexity ![](images/00026.jpeg)\
+    \ , where ![](images/00013.jpeg) and ![](images/00027.jpeg) are the numbers of\
+    \ nodes in the two BSTs.\n\n## 25 Finding out if there is a triplet in a Balanced\
+    \ BST that adds to zero\n\n### Solution\n\nThe optimal solution is to convert\
+    \ the BST into a double linked list. Then it is possible to iterate through the\
+    \ list and for each negative element we try to find a pair in the list,which sum\
+    \ is equal to the key of the current node multiplied by -1.\n\n### Code\n\n template\
+    \ <typename  tVal>\n\n void bstToDoubleList(binaryTree<tVal> *root,\n\n binaryTree<tVal>\
+    \ ** head, binaryTree<tVal> ** tail)\n\n   {\n\n if (!root)\n\n return;\n\n if\
+    \ (root->left)\n\n         bstToDoubleList(root->left, head, tail);\n\n root->left\
+    \ = *tail;\n\n if (*tail)\n\n         (*tail)->right = root;\n\n else\n\n        \
+    \ *head = root;\n\n      *tail = root;\n\n if (root->right)\n\n         bstToDoubleList(root->right,\
+    \ head, tail);\n\n   };\n\n template <typename  tVal>\n\n bool isPresentInDLL(binaryTree<tVal>\
+    \ * head,\n\n binaryTree<tVal> * tail, int  sum)\n\n   {\n\n while (head != tail)\n\
+    \n      {\n\n int curr = head->v__ + tail->v__;\n\n if (curr == sum)\n\n return\
+    \  true;\n\n else  if (curr > sum)\n\n tail = tail->left;\n\n else\n\n head =\
+    \ head->right;\n\n      }\n\n return  false;\n\n   }\n\n template <typename  tVal>\n\
+    \n bool isTripletPresent(binaryTree<tVal> *root)\n\n   {\n\n if (!root)\n\n return\
+    \  false;\n\n binaryTree<tVal>* head = NULL;\n\n binaryTree<tVal>* tail = NULL;\n\
+    \n      bstToDoubleList(root, &head, &tail);\n\n while ((head->right != tail)\
+    \ && (head->v__ < 0))\n\n      {\n\n if (isPresentInDLL(head->right, tail, -1\
+    \ * head->v__))\n\n return  true;\n\n else\n\n            head = head->right;\n\
+    \n      }\n\n return  false;\n\n   }\n\n### Complexity\n\nThis part is left to\
+    \ the reader as an exercise\n\n## 26 Implementing a B-Tree\n\n### Solution\n\n\
+    A b-tree allows insertion and deletion in logarithmic time and it is typically\
+    \ used for systems that write and read large blocks of data such as databases\
+    \ or file systems.\n\nIn B-trees internal nodes have a variable number of children\
+    \ nodes within a predefined range![](images/00028.jpeg). When data is inserted\
+    \ or removed from a node, its number of children nodes changes and therefore internal\
+    \ nodes may be joined or split for guaranteeing that they don’t exceed the range.\
+    \ Each internal node of a B-tree will contain a number of sorted keys. Keys act\
+    \ as separation values which divide a tree into subtrees as explained in the image\
+    \ below. Therefore ![](images/00029.jpeg) is the minimum branching factor for\
+    \ the tree.\n\n![http://bluerwhite.org/btree/tree1.png](images/00030.jpeg)\n\n\
+    The factor of 2 will guarantee that nodes can be split or combined. If an internal\
+    \ node has ![](images/00031.jpeg) keys, then adding a key to that node can be\
+    \ accomplished by splitting the ![](images/00032.jpeg)key node into two ![](images/00033.jpeg) key\
+    \ nodes and by adding the key to the parent. Each split node maintains the required\
+    \ minimum number of keys. Likewise if each internal node and its neighbor have ![](images/00033.jpeg)keys,\
+    \ then a key can be deleted from the internal node by joining with its neighbor.\
+    \ Deleting the key would leave ![](images/00034.jpeg) keys to the internal node\
+    \ but joining the neighbor would add![](images/00035.jpeg)keys plus one more key\
+    \ coming from the neighbor's parent. The total is still ![](images/00031.jpeg) keys.\
+    \ The number of branches from a node is one more than the number of keys stored\
+    \ in that node. A B-tree is kept balanced by requiring that all leaf-nodes are\
+    \ at the same depth.\n\nMore formally a B-tree of order![](images/00036.jpeg) is\
+    \ defined as a tree which satisfies the following properties:\n\n1.  Every node\
+    \ has at most ![](images/00037.jpeg) children.\n\n2.  Every non-leaf node (except\
+    \ for the root) has at least ![](images/00038.jpeg) children.\n\n3.  The root\
+    \ has at least two children if it is not a leaf node.\n\n4.  A non-leaf node with ![](images/00023.jpeg) children\
+    \ contains  ![](images/00039.jpeg) keys.\n\n5.  All leaves appear in the same\
+    \ level\n\n6.  Each internal node’s keys act as a separation value which divides\
+    \ its subtrees.\n\nIt can be shown that a b-tree of height h with all its nodes\
+    \ completely filled has![](images/00040.jpeg) keys. The height of the B-tree is\
+    \ therefore ![](images/00041.jpeg) and this value makes the insert, logarithmically\
+    \ finds and deletes operations in the worst case\n\nSearch\n\nThis operation is\
+    \ similar to the one of searching a binary search tree. Starting from the root,\
+    \ the tree is recursively traversed from top to bottom and at each level the search\
+    \ chooses the subtree, which has separation keys on both sides of the search value.\
+    \ The search within a node can be linear or binary."
+  toc: []
+  trans: "\n给定两个键 `![]images/00024.jpeg)` 使得 `![]images/00025.jpeg)`，对 `BST` 树进行导航，如果当前节点的键大于或等于\
+    \ `![]images/00023.jpeg)`，则递归地向左子节点导航。然后检查范围条件，如果满足，则打印当前节点。最后递归地向右子节点导航。\n\n\
+    ### 代码\n\n```cpp\ntemplate<typename tVal>\nbinaryTree<tVal> * rangePrint(binaryTree<tVal>\
+    \ * const root, const tVal k, const tVal h) \n{\n    if (!root)\n        return\
+    \ NULL;\n    if (root->v__ >= k)\n        rangePrint(root->left, k, h);\n    if\
+    \ (root->v__ >= k && root->v__ <= h)\n        std::cout << \" v=\" << root->v__;\n\
+    \    if (root->v__ <= h)\n        rangePrint(root->right, k, h);\n}\n```\n\n###\
+    \ 复杂度\n\n最坏时间复杂度为 `![]images/00014.jpeg))`，其中 `![]images/00013.jpeg)` 是树中的节点数。\n\
+    \n## 24 合并两个平衡二叉搜索树\n\n### 解决方案\n\n合并两个 `BST` 的最有效的方法是将它们每一个都存储在数组中。然后合并这两个排序数组，并将生成的数组转换回一个新的\
+    \ `BST`。\n\n### 代码\n\n```cpp\ntemplate<typename tVal>\nvoid storeInorder(binaryTree<tVal>\
+    \ * const root, std::vector<tVal> & inorder) \n{\n    if (!root)\n        return;\n\
+    \    storeInorder(root->left, inorder);\n    inorder.push_back(root->v__);\n \
+    \   storeInorder(root->right, inorder);\n}\n\ntemplate<typename tVal>\nvoid dumpVector(const\
+    \ std::vector<tVal> &v1)\n{\n    std::cout << std::endl;\n    std::vector<tVal>::const_iterator\
+    \ it = v1.begin();\n    for (; it != v1.end(); it++)\n        std::cout << *it\
+    \ << \" \";\n    std::cout << std::endl;\n}\n\ntemplate<typename tVal>\nvoid merge(const\
+    \ std::vector<tVal> & v1, const std::vector<tVal> & v2, std::vector<tVal> & merged)\n\
+    {\n    unsigned m = v1.size(), n = v2.size();\n    if (merged.size() != n + m)\n\
+    \        return;\n    unsigned i = 0, j = 0, k = 0;\n    while (i < m && j < n)\n\
+    \    {\n        if (v1[i] < v2[j])\n            merged[k] = v1[i++];\n       \
+    \ else\n            merged[k] = v2[j++];\n        k++;\n    }\n    while (i <\
+    \ m)\n        merged[k++] = v1[i++];\n    while (j < n)\n        merged[k++] =\
+    \ v2[j++];\n}\n\ntemplate<typename tVal>\nbinaryTree<tVal> * sortedArrayToBST(const\
+    \ std::vector<tVal> &v, int start, int end)\n{\n    if (start > end)\n       \
+    \ return NULL;\n    int mid = (start + end) / 2;\n    binaryTree<tVal> *root =\
+    \ new binaryTree<tVal>(v[mid]);\n    root->left = sortedArrayToBST(v, start, mid\
+    \ - 1);\n    root->right = sortedArrayToBST(v, mid + 1, end);\n    return root;\n\
+    }\n\ntemplate<typename tVal>\nbinaryTree<tVal> * mergeTrees(binaryTree<tVal> *\
+    \ const root1, binaryTree<tVal> * const root2)\n{\n    std::vector<int> v1;\n\
+    \    storeInorder(root1, v1);\n    std::vector<int> v2;\n    storeInorder(root2,\
+    \ v2);\n    std::vector<int> merged(v1.size() + v2.size());\n    merge(v1, v2,\
+    \ merged);\n    dumpVector(merged);\n    return sortedArrayToBST(merged, 0, merged.size()\
+    \ - 1);\n}\n\ntemplate<typename tVal>\nvoid dump(binaryTree<tVal> * const root)\n\
+    {\n    if (!root)\n        return;\n    else\n        std::cerr << \" v==\" <<\
+    \ root->v__ << \" \";\n    if (root->left)\n        std::cerr << \" ->left \"\
+    ;\n        dump(root->left);\n    if (root->right)\n        std::cerr << \" ->right\
+    \ \";\n        dump(root->right);\n}\n```\n\n### 复杂度\n\n该方法的复杂度为 `![]images/00026.jpeg)`，其中\
+    \ `![]images/00013.jpeg)` 和 `![]images/00027.jpeg)` 是两个 `BST` 中的节点数。\n\n## 25\
+    \ 在平衡 BST 中寻找和为 0 的元组\n\n### 解决方案\n\n最优解决方案是将 `BST` 转换为双向链表。然后可以遍历列表，并对于每个负元素尝试在列表中寻找一个等于当前节点键的对。\n\
+    \n### 代码\n\n```cpp\ntemplate<typename tVal>\nvoid stToDoubleList(binaryTree<tVal>\
+    \ *root, binaryTree<tVal> ** head, binaryTree<tVal> ** tail) \n{\n    if (!root)\n\
+    \        return;\n    if (root->left)\n        stToDoubleList(root->left, head,\
+    \ tail);\n    if (!*head)\n        *head = root;\n    else\n        (*tail)->right\
+    \ = root;\n    *tail = root;\n    if (root->right)\n        stToDoubleList(root->right,\
+    \ head, tail);\n}\n\ntemplate<typename tVal>\nbool isPresent(binaryTree<tVal>\
+    \ * head, binaryTree<tVal> * tail, int sum) \n{\n    while (head != tail)\n  \
+    \  {\n        int curr = head->v__;\n        if (curr == sum)\n            return\
+    \ true;\n        else if (curr > sum)\n            tail = head;\n        else\n\
+    \            head = head->right;\n    }\n    return false;\n}\n\ntemplate<typename\
+    \ tVal>\nbool isTriplet(binaryTree<tVal> *root)\n{\n    if (!root)\n        return\
+    \ false;\n    binaryTree<tVal>* head = NULL;\n    binaryTree<tVal>* tail = NULL;\n\
+    \    stToDoubleList(root, &head, &tail);\n    while (head != NULL && (head->v__\
+    \ < 0))\n    {\n        if (isPresent(head->right, tail, -head->v__))\n      \
+    \      return true;\n        else\n            head = head->right;\n    }\n  \
+    \  return false;\n}\n```\n\n### 复杂度\n\n## 26 实现 B 树\n\n### 解决方案\n\n`B 树` 允许在对数时间内进行插入，通常用于读写大量数据的系统，如数据库。在\
+    \ `B 树` 中，内部节点具有在范围 `![]images/0028.jpeg)` 内的子节点数量。键作为分离值，将树划分为子树，如下所示：![`bluerwhite.org/btree/tree1.png`](img/0029)\n\
+    \n 分支因子 `2` 保证了节点可以分裂或合并。如果内部节点有 `![]images/00031.jpeg)` 个键，可以通过将该 `![]images/0032.jpeg)`\
+    \ 键节点分裂为两个 `![]images/0033.jpeg)` 键节点并将键添加到父节点来完成。每个分裂节点都维持所需的键数。同样，如果每个内部节点及其邻居都有\
+    \ `![]images/0033.jpeg)` 个键，则可以通过与邻居合并来从内部节点删除键。删除键将为内部节点留下 `![]images/0034.jpeg)`\
+    \ 个键，但合并邻居将增加 `![]images/0035.jpeg)` 个键，加上来自邻居父的一个键。总数仍为 `![]images/0031.jpeg)`\
+    \ 个键。节点的分支数比存储在节点中的键数多一。B 树通过要求所有叶节点处于同一深度来保持平衡。\n\n更正式地说，阶为 `[]images/0036.jpeg)`\
+    \ 的 B 树定义为满足以下属性的树：\n\n1. 每个节点最多有 `![]images/0037.jpeg)` 个子。\n2. 非叶节点（根节点外）至少有\
+    \ `![]images/0038.jpeg)` 个子。\n3. 如果根节点不是叶节点，则至少有两个子。\n4. 具有 `![]images/0023.jpeg)`\
+    \ 个子的非叶节点包含 `![]images/0039.jpeg)` 个键。\n5. 所有叶子节点出现在同一层\n6. 每个内部节点的键都作为分离值，将其子树划分。\n\
+    \n### 搜索\n\n此操作与搜索二叉搜索树的操作相似。从根节点开始，递归地从上向下遍历树，并在每一层选择在搜索值两侧都有分离键的子树。节点内的搜索可以是线性搜索或二分搜索。\n\
+    \n"
+- fmt: "\n# Insertion\n\nTo insert a new key, search the tree to find the leaf node,\
+    \ where the new key should be added:\n\n* If the node contains fewer than `images/00042.jpeg`,\
+    \ then there is room for the new element, which can be inserted by following the\
+    \ order.\n* Otherwise if the node is full and it must be split into two nodes:\n\
+    \    * The median element is selected among the leaf's elements and the new element.\n\
+    \    * Values less than the median one are put in the new left node and values\
+    \ greater than the median one are put in the new right node.\n    * The median\
+    \ acts as a separation value.\n\nThe separation key is inserted in the node's\
+    \ parent, which should be split, if full. If the node is the root, we need to\
+    \ create a new root above the old one.\n\nIf the splitting goes all the way up\
+    \ to the root, it creates a new root with a single separator key and two children.\
+    \ When a node is split, one key goes to the parent, but one additional key is\
+    \ added.\n\n# Deletion\n\nThe idea is to find and delete the item, then restructure\
+    \ the tree to regain its invariants. This operation is left as an exercise.\n\n\
+    # Code\n\n```cpp\n#ifndef BTREE_HEAD_\n#define BTREE_HEAD_ 1\n#include <iostream>\n\
+    \nnamespace Tree{\ntypedef int tKey;\nclass BtreeNode;\ntypedef BtreeNode * BtreeLink;\n\
+    class BtreeNode {\nprivate:\n    unsigned t__; // 2t-1 keys, 2t children\n   \
+    \ bool leaf__; // is a leaf\n    unsigned n__; // current number\n    tKey * keys__;\
+    \ // array of key\n    BtreeLink * children__; // ptr to array of children\n\n\
+    public:\n    // constructor\n    BtreeNode(unsigned t, bool leaf) :\n        t__(t),\
+    \ leaf__(leaf), n__(0),\n        keys__(new tKey[2 * t__ - 1]),\n        children__(new\
+    \ BtreeLink[2 * t__])\n    {};\n\n    // traverse\n    void traverse(unsigned\
+    \ lev=0) {\n        std::cout << \"lev=\" << lev << \" \";\n        // n keys,\
+    \ n+1 childrens\n        unsigned i = 0;\n        for (; i < n__; i++) {\n   \
+    \         std::cout << \" \" << keys__[i];\n            if (!leaf__)\n       \
+    \         children__[i]->traverse(lev+1);\n        }\n        // last children\n\
+    \        if (!leaf__)\n            children__[i]->traverse(lev + 1);\n    }\n\n\
+    \    // delete all\n    void deleteAll() {\n        //n+1 children\n        for\
+    \ (unsigned i = 0; i <= n__; i++) {\n            if (!leaf__)\n              \
+    \  children__[i]->deleteAll();\n        }\n        delete[] children__;\n    \
+    \    delete[] keys__;\n    };\n\n    // dstrc\n    ~BtreeNode() {\n        deleteAll();\n\
+    \    }\n\n    // search in btree\n    BtreeLink search(tKey k) {\n        unsigned\
+    \ i = 0;\n        // search right location\n        for (; i < n__ && k > keys__[i];\
+    \ i++);\n        // found the key\n        if (keys__[i] == k)\n            return\
+    \ this;\n        // not found\n        if (leaf__)\n            return NULL;\n\
+    \        // recursively\n        return children__[i]->search(k);\n    }\n\n \
+    \   // insert in a node that is not full\n    void insertNonFull(tKey k) {\n \
+    \       // rightmost key\n        int i = n__ - 1;\n        if (leaf__) {\n  \
+    \          // one position is available\n            // so copy the keys and\n\
+    \            // find the right spot\n            while (i >= 0 && keys__[i] >\
+    \ k) {\n                keys__[i + 1] = keys__[i];\n                i--;\n   \
+    \         }\n            // found the right position\n            keys__[i + 1]\
+    \ = k;\n            n__++;\n        } else { // non leaf\n            // find\
+    \ the right spot\n            while (i >= 0 && keys__[i] > k)\n              \
+    \  i--;\n            // full and recursively insert\n            if (children__[i\
+    \ + 1]->n__ == 2 * t__ - 1) {\n                splitChild(i + 1, children__[i\
+    \ + 1]);\n                if (keys__[i + 1] < k)\n                    i++; //\
+    \ next children\n            }\n            children__[i + 1]->insertNonFull(k);\n\
+    \        }\n        std::cout << \"traversing n==\" << n__;\n        traverse();\n\
+    \        std::cout << std::endl;\n    }\n\n    void splitChild(int i, BtreeLink\
+    \ l) {\n        BtreeLink m = new BtreeNode(l->t__, l->leaf__);\n        m->n__\
+    \ = t__ - 1;\n        // copy the right keys from t to 2t-1\n        for (unsigned\
+    \ j = 0; j < t__ - 1; j++)\n            m->keys__[j] = l->keys__[j + t__];\n \
+    \       // copy the children from t to 2t\n        if (!l->leaf__) {\n       \
+    \     for (unsigned j = 0; j < t__; j++)\n                m->children__[j] = l->children__[j\
+    \ + t__];\n        }\n        // one key less\n        l->n__ = t__ - 1;\n   \
+    \     // make room\n        for (int j = n__; j >= i+1; j--)\n            children__[j\
+    \ + 1] = children__[j];\n        // connect the new node\n        children__[i\
+    \ + 1] = m;\n        // make room\n        for (int j = n__ - 1; j >= i; j--)\n\
+    \            keys__[j + 1] = keys__[j];\n        //copy the middle key\n     \
+    \   keys__[i] = l->keys__[t__ - 1];\n        n__++;\n    }\n    friend class Btree;\n\
+    };\n\nclass Btree {\n    BtreeNode * root;\n    unsigned t__;\npublic:\n    Btree(unsigned\
+    \ t) : root(NULL), t__(t) {};\n\n    void traverse() {\n        if(root) root->traverse();\n\
+    \    }\n\n    BtreeLink search(tKey k) {\n        return(root ? root->search(k)\
+    \ : NULL);\n    }\n\n    void insert(tKey k) {\n        if (!root) {\n       \
+    \     root = new BtreeNode(t__, true);\n            root->keys__[0] = k;\n   \
+    \         root->n__ = 1;\n        } else {\n            // full root\n       \
+    \     if (root->n__ == 2 * t__ - 1) {\n                BtreeLink btn = new BtreeNode(t__,\
+    \ false);\n                btn->children__[0] = root;\n                // split\
+    \ the root\n                // move 1 key to children\n                splitChild(0,\
+    \ root);\n                if (btn->keys__[0] < k)\n                    btn->children__[1]->insertNonFull(k);\n\
+    \                else\n                    btn->children__[0]->insertNonFull(k);\n\
+    \                // change root\n                root = btn;\n            } else\
+    \ {\n                root->insertNonFull(k);\n            }\n        }\n    }\n\
+    };\n#endif\n```\n\n# Complexity\n\nThe table below provides space complexity for\
+    \ the average and worst case, by reporting also space and time complexity for\
+    \ search, insert and delete.\n\n| | Average case | Worst case |\n| --- | :---\
+    \ | :--- |\n| Space | `images/00043.jpeg` | `images/00043.jpeg` |\n| Search |\
+    \ `images/00044.jpeg` | `images/00044.jpeg` |\n| Insert | `images/00044.jpeg`\
+    \ | `images/00044.jpeg` |\n| Delete | `images/00044.jpeg` | `images/00044.jpeg`\
+    \ |\n\n# 27 Implementing a Skiplist\n\n### Solution\n\nSkiplists allow to find\
+    \ elements in a list with an average logarithmic time. The idea is to maintain\
+    \ additional pointers, which allow to skip elements as in the image.\n\n![http://igoro.com/wp-content/uploads/2008/07/skiplist.png](images/00045.jpeg)\n\
+    \nA skip list has many layers. The bottom one is an ordinary list. Each higher\
+    \ layer acts as \"fast lane\" for the lists below. In particular: an element in\
+    \ `images/00046.jpeg` layer appears in `images/00047.jpeg` layer with some probability\
+    \ `p(typically images/00048.jpeg)=0.5)`. Each element appears averagely in `images/00049.jpeg`\
+    \ lists, and the most frequent ones in `images/00050.jpeg` lists.\n\n### Code\n\
+    \n```cpp\n#ifndef SKIP_HEAD_\n#define SKIP_HEAD_\n#include <iostream>\n#define\
+    \ DEBUG2 1\nnamespace Tree{\ntypedef int num;\ntemplate <typename Tkey, typename\
+    \ Tval>\nclass Skiplist{\nprivate:\n    struct node {\n        Tkey key_; // the\
+    \ key\n        Tval val_; // the val\n        num size_; // size of array\n  \
+    \      node **next_; // array of pointers\n        node(const Tkey key, const\
+    \ Tval val, num size) :\n            key_(key), val_(val), size_(size), next_(new\
+    \ node*[size_]) {\n            for (num i = 0; i < size_; ++i) next_[i] = 0;\n\
+    \        }\n    };\n    typedef node* const link;\n    Tkey default_key_; // default\
+    \ item in skiplist\n    Tval default_val_; // default val in skiplist\n    link\
+    \ head_; // head of skiplist\n    num lgN_; // current number of link in skiplist\n\
+    \    num lgNmax_; // max number of link in skiplist\n    // random skiplist expansion\n\
+    \    num rand_sl_gen__() {\n        num i, j, t = rand(); // t is in [0, RAND_MAX]\n\
+    \        // generate j=2, 4, ... i < lgNmax_\n        // t > RAND_MAX / 2^i\n\
+    \        for (i = 1, j = 2; i < lgNmax_; i++, j += j)\n            if (t > RAND_MAX\
+    \ / j) break;\n        // t is a number < 1/2^i\n        if (i > lgN_) // expand\
+    \ current level\n            lgN_ = i; // this grows logaritmcally\n        return\
+    \ i;\n    }\n    // remove a key and a val\n    void remove__(link t, Tkey key,\
+    \ num k) {\n#ifdef DEBUG2\nstd::cerr << \"remove__ \" << t << \" key=\"\n```\n"
+  raw: "Insertion\n\nTo insert a new key, search the tree to find the leaf node, where\
+    \ the new key should be added:\n\n*   If the node contains fewer than![](images/00042.jpeg),\
+    \ then there is room for the new element, which can be inserted by following the\
+    \ order.\n\n*   Otherwise if the node is full and it must be split into two nodes:\n\
+    \n    *   The median element is selected among the leaf's elements and the new\
+    \ element.\n\n    *   Values less than the median one are put in the new left\
+    \ node and values greater than the median one are put in the new right node\n\n\
+    \    *   The median acts as a separation value.\n\nThe separation key is inserted\
+    \ in the node's parent, which should be split, if full. If the node is the root,\
+    \ we need to create a new root above the old one.\n\nIf the splitting goes all\
+    \ the way up to the root, it creates a new root with a single separator key and\
+    \ two children. When a node is split, one key goes to the parent, but one additional\
+    \ key is added.\n\nDeletion\n\nThe idea is to find and delete the item, then restructure\
+    \ the tree to regain its invariants. This operation is left as an exercise.\n\n\
+    ### Code\n\n#ifndef BTREE_HEAD_\n\n#define  BTREE_HEAD_ 1\n\n#include  <iostream>\n\
+    \nnamespace Tree{\n\n typedef  int  tKey;\n\n class  BtreeNode;\n\n typedef  BtreeNode\
+    \ * BtreeLink;\n\n class  BtreeNode\n\n   {\n\n private:\n\n unsigned t__; //\
+    \ 2t-1 keys, 2t children\n\n bool leaf__; // is a leaf\n\n unsigned n__; // current\
+    \ number\n\n tKey * keys__; // array of key\n\n BtreeLink * children__; // ptr\
+    \ to array of children\n\n public:\n\n // constructor\n\n      BtreeNode(unsigned\
+    \  t, bool  leaf) :\n\n         t__(t), leaf__(leaf), n__(0),\n\n         keys__(new\
+    \  tKey[2 * t__ - 1]),\n\n         children__(new  BtreeLink[2 * t__])\n\n     \
+    \ {};\n\n // traverse\n\n void traverse(unsigned  lev=0)\n\n      {\n\nstd::cout\
+    \ << \"lev=\" << lev << \" \";\n\n // n keys, n+1 childrens\n\n unsigned i = 0;\n\
+    \n for (; i < n__; i++)\n\n         {\n\nstd::cout << \" \" << keys__[i];\n\n\
+    \ if (!leaf__)\n\n               children__[i]->traverse(lev+1);\n\n         }\n\
+    \n // last children\n\n if (!leaf__)\n\n            children__[i]->traverse(lev\
+    \ + 1);\n\n      };\n\n // delete all\n\n void deleteAll()\n\n      {\n\n //n+1\
+    \ children\n\n for (unsigned i = 0; i <= n__; i++)\n\n         {\n\n if (!leaf__)\n\
+    \n               children__[i]->deleteAll();\n\n         }\n\n delete[] children__;\n\
+    \n delete[] keys__;\n\n      };\n\n // dstrc\n\n      ~BtreeNode()\n\n      {\n\
+    \n         deleteAll();\n\n      }\n\n // search in btree\n\n //\n\n BtreeLink\
+    \ search(tKey  k)\n\n      {\n\n unsigned i = 0;\n\n // search right location\n\
+    \n for (; i < n__ && k > keys__[i]; i++);\n\n // found the key\n\n if (keys__[i]\
+    \ == k)\n\n return  this;\n\n // not found\n\n if (leaf__)\n\n return  NULL;\n\
+    \n // recursively\n\n return children__[i]->search(k);\n\n      }\n\n // insert\
+    \ in a node that is not full\n\n void insertNonFull(tKey  k)\n\n      {\n\n //\
+    \ rightmost key\n\n int i = n__ - 1;\n\n if (leaf__)\n\n         {\n\n // one\
+    \ position is available\n\n // so copy the keys and\n\n // find the right spot\n\
+    \n while (i >= 0 && keys__[i] > k)\n\n            {\n\n               keys__[i\
+    \ + 1] = keys__[i];\n\n               i--;\n\n            }\n\n // found the right\
+    \ position\n\nkeys__[i + 1] = k;\n\n            n__++;\n\n         }\n\n else\
+    \  // non leaf\n\n         {\n\n // find the right spot\n\n while (i >= 0 && keys__[i]\
+    \ > k)\n\n               i--;\n\n // full\n\n // split and recursively insert\n\
+    \n if (children__[i + 1]->n__ == 2 * t__ - 1)\n\n            {\n\n              \
+    \ splitChild(i + 1, children__[i + 1]);\n\n if (keys__[i + 1] < k)\n\ni++; //\
+    \ next children\n\n            }\n\n            children__[i + 1]->insertNonFull(k);\n\
+    \n         }\n\nstd::cout << \"traversing n==\" << n__;\n\n         traverse();\n\
+    \n         std::cout << std::endl;\n\n      }\n\n void splitChild(int  i, BtreeLink\
+    \  l)\n\n      {\n\n BtreeLink m = new  BtreeNode(l->t__, l->leaf__);\n\n        \
+    \ m->n__ = t__ - 1;\n\n // copy the right keys from t to 2t-1\n\n for (unsigned\
+    \ j = 0; j < t__ - 1; j++)\n\nm->keys__[j] = l->keys__[j + t__];\n\n // copy the\
+    \ children from t to 2t\n\n if (!l->leaf__)\n\n         {\n\n for (unsigned j\
+    \ = 0; j < t__ ; j++)\n\nm->children__[j] = l->children__[j + t__];\n\n        \
+    \ }\n\n // one key less\n\n l->n__ = t__ - 1;\n\n // make room\n\n for (int j\
+    \ = n__ ; j >= i+1; j--)\n\n            children__[j + 1] = children__[j];\n\n\
+    \ // connect the new node\n\n         children__[i + 1] = m;\n\n // make room\n\
+    \n for (int j = n__ - 1; j >= i; j--)\n\n            keys__[j + 1] = keys__[j];\n\
+    \n //copy the middle key\n\n         keys__[i] = l->keys__[t__ - 1];\n\n        \
+    \ n__++;\n\n      }\n\n friend  class  Btree;\n\n   };\n\n class  Btree\n\n  \
+    \ {\n\n BtreeNode * root;\n\n unsigned t__;\n\n public:\n\n      Btree(unsigned\
+    \  t) :\n\n         root(NULL), t__(t) {};\n\n void traverse()\n\n      {\n\n\
+    \ if(root) root->traverse();\n\n      }\n\n BtreeLink search(tKey  k)\n\n     \
+    \ {\n\n return(root ? root->search(k) : NULL);\n\n      }\n\n void insert(tKey\
+    \  k)\n\n      {\n\n if (!root)\n\n         {\n\nroot = new  BtreeNode(t__, true);\n\
+    \nroot->keys__[0] = k;\n\n            root->n__ = 1;\n\n         }\n\n else\n\n\
+             {\n\n // full root\n\n if (root->n__ == 2 * t__ - 1)\n\n            {\n\
+    \n BtreeLink btn = new  BtreeNode(t__, false);\n\n               btn->children__[0]\
+    \ = root;\n\n // split the root\n\n // move 1 key to one children\n\n              \
+    \ btn->splitChild(0, root);\n\n if (btn->keys__[0] < k)\n\n                  btn->children__[1]->insertNonFull(k);\n\
+    \n else\n\n                  btn->children__[0]->insertNonFull(k);\n\n // change\
+    \ root\n\n               root = btn;\n\n            }\n\n else\n\n              \
+    \ root->insertNonFull(k);\n\n         }\n\n      }\n\n   };\n\n};\n\n#endif\n\n\
+    ### Complexity\n\nThe table here below provides space complexity for the average\
+    \ and the worst case, by reporting also space and time complexity for search,\
+    \ insert and delete.\n\n|  | Average case | Worst case |\n\n| Space | ![](images/00043.jpeg)\
+    \ | ![](images/00043.jpeg) |\n\n| Search | ![](images/00044.jpeg) | ![](images/00044.jpeg)\
+    \ |\n\n| Insert | ![](images/00044.jpeg) | ![](images/00044.jpeg) |\n\n| Delete\
+    \ | ![](images/00044.jpeg) | ![](images/00044.jpeg) |\n\n## 27 Implementing a\
+    \ Skiplist\n\n### Solution\n\nSkiplists allow to find elements in a list with\
+    \ an average logarithmic time. The idea is to maintain additional pointers, which\
+    \ allow to skip elements as in the image.\n\n![http://igoro.com/wordpress/wp-content/uploads/2008/07/skiplist.png](images/00045.jpeg)\n\
+    \nA skip list has many layers. The bottom one is an ordinary ordered list. Each\
+    \ higher layer acts as \"fast lane\" for the lists below. In particular: an element\
+    \ in the ![](images/00046.jpeg) layer appears in the ![](images/00047.jpeg) layer with\
+    \ some probabilityp (typically ![](images/00048.jpeg)=0.5). Each element appears\
+    \ averagely in ![](images/00049.jpeg) lists, and the most frequent ones in![](images/00050.jpeg)\
+    \ lists.\n\n### Code\n\n#ifndef SKIP_HEAD_\n\n#define  SKIP_HEAD_\n\n#include\
+    \  <iostream>\n\n#define  DEBUG2 1\n\nnamespace Tree{\n\n typedef  int  num;\n\
+    \n template <typename  Tkey, typename  Tval>\n\n class  Skiplist{\n\n private:\n\
+    \n struct  node\n\n      {\n\n Tkey key_; // the key\n\n Tval val_; // the val\n\
+    \n num size_; // size of array \n\n node **next_; // array of pointers\n\n        \
+    \ node(const  Tkey  key, const  Tval  val, num  size) :\n\n            key_(key),\
+    \ val_(val), size_(size), next_(new  node*[size_])\n\n         {\n\n for (num\
+    \ i = 0; i < size_; ++i) next_[i] = 0;\n\n         }\n\n      };\n\n typedef \
+    \ node* const  link;\n\n Tkey default_key_; // default item in skiplist\n\n Tval\
+    \ default_val_; // default val in skiplist\n\n link head_; // head of skiplist\n\
+    \n num lgN_; // current number of link in skiplist\n\n num lgNmax_; // max number\
+    \ of link in skiplist\n\n // random skiplist expansion\n\n num rand_sl_gen__()\n\
+    \n      {\n\n num i, j, t = rand(); // t is in [0, RAND_MAX]\n\n // generate j=2,\
+    \ 4, ... i < lgNmax_\n\n // t > RAND_MAX / 2^i\n\n for (i = 1, j = 2; i < lgNmax_;\
+    \ i++, j += j)\n\n if (t > RAND_MAX / j) break;             \n\n // t is a number\
+    \ < 1/2^i\n\n if (i > lgN_) // expand current level\n\nlgN_ = i; // this grows\
+    \ logaritimcally\n\n return i;\n\n      }\n\n // remove a key and a val\n\n void\
+    \ remove__(link  t, Tkey  key, num  k)\n\n      {\n\n#ifdef  DEBUG2\n\nstd::cerr\
+    \ << \"remove__ \" << t << \" key=\""
+  toc: []
+  trans: "\n\n# 插入\n\n要插入新键，请遍历树找到叶子节点，即新键应该添加的位置：\n\n* 如果节点包含的元素少于 `images/00042.jpeg`，则有空间容纳新元素，可以按照顺序进行插入。\n\
+    * 否则，如果节点已满，则必须将其分为两个节点：\n    * 在叶子节点的元素和新元素之间选择中位数元素。\n    * 小于中位数的放在新的左侧节点中，大于中位数的放在新的右侧节点中。\n\
+    \    * 中位数作为分隔值。\n\n分隔键被插入到节点的父节点中，如果父节点也满了，则对其进行拆分。如果该节点是根节点，我们需要在旧根上方创建一个新根节点。\n\
+    \n如果拆分一直持续根节点，它将创建一个包含单个分隔键和两个子节点的新根。当一个节点被拆分时，一个键会进入父节点，但会额外增加一个键。\n\n# 删除\n\n\
+    思路是找到并删除该项，然后重构树以恢复其不变性。此操作留作练习题。\n\n# 代码\n\n```cpp\n#ifndef BTREE_HEAD_\n#define\
+    \ BTREE_HEAD_ 1\n#include <iostream>\n\nnamespace Tree{\ntypedef int tKey;\nclass\
+    \ BtreeNode;\ntypedef BtreeNode * BtreeLink;\nclass BtreeNode {\nprivate:\n  \
+    \  unsigned t__; // 2t-1 keys, 2t children\n    bool leaf__; // 是否为叶子\n    unsigned\
+    \ n__; // 当前数量\n    tKey * keys__; //键数组\n    BtreeLink * children__; // 指子节点数组的指针\n\
+    \npublic:\n    // 构造函数\n    BtreeNode(unsigned t, bool leaf) :\n        t__(t),\
+    \ leaf__(leaf), n__(0),\n        keys__(new tKey[2 * t__ - 1]),\n        children__(new\
+    \ BtreeLink[2 * t__])\n    {};\n\n    // 遍历\n    void traverse(unsigned lev=0)\
+    \ {\n        std::cout << \"lev=\" << lev << \" \";\n        // n keys, n+1 childrens\n\
+    \        unsigned i = 0;\n        for (; i < n__; i++) {\n            std::cout\
+    \ << \" \" << keys__[i];\n            if (!leaf__)\n                children__[i]->traverse(lev+1);\n\
+    \        }\n        // 最后一个孩子\n        if (!leaf__)\n            children__[i]->traverse(lev\
+    \ + 1);\n    }\n\n    // 删除所有\n    void deleteAll() {\n        //n+1 children\n\
+    \        for (unsigned i = 0; i <= n__; i++) {\n            if (!leaf__)\n   \
+    \             children__[i]->deleteAll();\n        }\n        delete[] children__;\n\
+    \        delete[] keys__;\n    };\n\n    // 析构\n    ~BtreeNode() {\n        deleteAll();\n\
+    \    }\n\n    // 在 B 树中搜索\n    BtreeLink search(tKey k) {\n        unsigned i\
+    \ = 0;\n        // 查找右位置\n        for (; i < n__ && k > keys__[i]; i++);\n   \
+    \     // 找到键\n        if (keys__[i] == k)\n            return this;\n        //\
+    \ 未找到\n        if (leaf__)\n            return NULL;\n        // 递归\n        return\
+    \ children__[i]->search(k);\n    }\n\n    // 在非满节点中插入\n    void insertNonFull(tKey\
+    \ k) {\n        // 最右键\n        int i = n__ - 1;\n        if (leaf__) {\n    \
+    \        // 有一个位置可用\n            // 所以复制键并\n            // 找到正确位置\n          \
+    \  while (i >= 0 && keys__[i] > k) {\n                keys__[i + 1] = keys__[i];\n\
+    \                i--;\n            }\n            // 找到正确位置\n            keys__[i\
+    \ + 1] = k;\n            n__++;\n        } else { // 非叶子\n            // 找到正确位置\n\
+    \            while (i >= 0 && keys__[i] > k)\n                i--;\n         \
+    \   // 满了并递归插入\n            if (children__[i + 1]->n__ == 2 * t__ - 1) {\n   \
+    \             splitChild(i + 1, children__[i + 1]);\n                if (keys__[i\
+    \ + 1] < k)\n                    i++; // 下一个孩子\n            }\n            children__[i\
+    \ + 1]->insertNonFull(k);\n        }\n        std::cout << \"traversing n==\"\
+    \ << n__;\n        traverse();\n        std::cout << std::endl;\n    }\n\n   \
+    \ void splitChild(int i, BtreeLink l) {\n        BtreeLink m = new BtreeNode(l->t__,\
+    \ l->leaf__);\n        m->n__ = t__ - 1;\n        // 从 t 到 2t-1 拷贝右侧键\n      \
+    \  for (unsigned j = 0; j < t__ - 1; j++)\n            m->keys__[j] = l->keys__[j\
+    \ + t__];\n        // 从 t 到 2t 拷贝孩子\n        if (!l->leaf__) {\n            for\
+    \ (unsigned j = 0; j < t__; j++)\n                m->children__[j] = l->children__[j\
+    \ + t__];\n        }\n        // 少一个键\n        l->n__ = t__ - 1;\n        // 留出空间\n\
+    \        for (int j = n__; j >= i+1; j--)\n            children__[j + 1] = children__[j];\n\
+    \        // 连接新节点\n        children__[i + 1] = m;\n        // 留出空间\n        for\
+    \ (int j = n__ - 1; j >= i; j--)\n            keys__[j + 1] = keys__[j];\n   \
+    \     // 拷贝中间的键\n        keys__[i] = l->keys__[t__ - 1];\n        n__++;\n   \
+    \ }\n    friend class Btree;\n};\n\nclass Btree {\n    BtreeNode * root;\n   \
+    \ unsigned t__;\npublic:\n    Btree(unsigned t) : root(NULL), t__(t) {};\n\n \
+    \   void traverse() {\n        if(root) root->traverse();\n    }\n\n    BtreeLink\
+    \ search(tKey k) {\n        return(root ? root->search(k) : NULL);\n    }\n\n\
+    \    void insert(tKey k) {\n        if (!root) {\n            root = new BtreeNode(t__,\
+    \ true);\n            root->keys__[0] = k;\n            root->n__ = 1;\n     \
+    \   } else {\n            if (root->n__ == 2 * t__ - 1) {\n                BtreeNode\
+    \ *s = new BtreeNode(t__, false);\n                root = s;\n               \
+    \ s->children_[0] = root;\n                splitChild(0, root);\n            }\n\
+    \            root->insertNonFull(k);\n        }\n    }\n};\n#endif\n```\n[/content]\n\
+    \n翻译：\n\n[content]\n\n# 插入\n\n要插入新键，请遍历树找到叶子节点，即新键应该添加的位置：\n\n* 如果节点包含的元素少于 `images/00042.jpeg`，则有空间容纳新元素，可以按照顺序进行插入。\n\
+    * 否则，如果节点已满，则必须将其分为两个节点：\n    * 在叶子节点的元素和新元素之间选择中位数元素。\n    * 小于中位数的放在新的左侧节点中，大于中位数的放在新的右侧节点中。\n\
+    \    * 中位数作为分隔值。\n\n分隔键被插入到节点的父节点中，如果父节点也满了，则对其进行拆分。如果该节点是根节点，我们需要在旧根上方创建一个新根节点。\n\
+    \n如果拆分一直持续根节点，它将创建一个包含单个分隔键和两个子节点的新根。当一个节点被拆分时，一个键会进入父节点，但会额外增加一个键。\n\n# 删除\n\n\
+    思路是找到并删除该项，然后重构树以恢复其不变性。此操作留作练习题。\n\n# 代码\n\n```cpp\n#ifndef BTREE_HEAD_\n#define\
+    \ BTREE_HEAD_ 1\n#include <iostream>\n\nnamespace Tree{\ntypedef int tKey;\nclass\
+    \ BtreeNode;\ntypedef BtreeNode * BtreeLink;\nclass BtreeNode {\nprivate:\n  \
+    \  unsigned t__; // 2t-1 keys, 2t children\n    bool leaf__; // 是否为叶子\n    unsigned\
+    \ n__; // 当前数量\n    tKey * keys__; //键数组\n    BtreeLink * children__; // 指子节点数组的指针\n\
+    \npublic:\n    // 构造函数\n    BtreeNode(unsigned t, bool leaf) :\n        t__(t),\
+    \ leaf__(leaf), n__(0),\n        keys__(new tKey[2 * t__ - 1]),\n        children__(new\
+    \ BtreeLink[2 * t__])\n    {};\n\n    // 遍历\n    void traverse(unsigned lev=0)\
+    \ {\n        std::cout << \"lev=\" << lev << \" \";\n        // n keys, n+1 childrens\n\
+    \        unsigned i = 0;\n        for (; i < n__; i++) {\n            std::cout\
+    \ << \" \" << keys__[i];\n            if (!leaf__)\n                children__[i]->traverse(lev+1);\n\
+    \        }\n        // 最后一个孩子\n        if (!leaf__)\n            children__[i]->traverse(lev\
+    \ + 1);\n    }\n\n    // 删除所有\n    void deleteAll() {\n        //n+1 children\n\
+    \        for (unsigned i = 0; i <= n__; i++) {\n            if (!leaf__)\n   \
+    \             children__[i]->deleteAll();\n        }\n        delete[] children__;\n\
+    \        delete[] keys__;\n    };\n\n    // 析构\n    ~BtreeNode() {\n        deleteAll();\n\
+    \    }\n\n    // 在 B 树中搜索\n    BtreeLink search(tKey k) {\n        unsigned i\
+    \ = 0;\n        // 查找右位置\n        for (; i < n__ && k > keys__[i]; i++);\n   \
+    \     // 找到键\n        if (keys__[i] == k)\n            return this;\n        //\
+    \ 未找到\n        if (leaf__)\n            return NULL;\n        // 递归\n        return\
+    \ children__[i]->search(k);\n    }\n\n    // 在非满节点中插入\n    void insertNonFull(tKey\
+    \ k) {\n        // 最右键\n        int i = n__ - 1;\n        if (leaf__) {\n    \
+    \        // 有一个位置可用\n            // 所以复制键并\n            // 找到正确位置\n          \
+    \  while (i >= 0 && keys__[i] > k) {\n                keys__[i + 1] = keys__[i];\n\
+    \                i--;\n            }\n            // 找到正确位置\n            keys__[i\
+    \ + 1] = k;\n            n__++;\n        } else { // 非叶子\n            // 找到正确位置\n\
+    \            while (i >= 0 && keys__[i] > k)\n                i--;\n         \
+    \   // 满了并递归插入\n            if (children__[i + 1]->n__ == 2 * t__ - 1) {\n   \
+    \             splitChild(i + 1, children__[i + 1]);\n                if (keys__[i\
+    \ + 1] < k)\n                    i++; // 下一个孩子\n            }\n            children__[i\
+    \ + 1]->insertNonFull(k);\n        }\n        std::cout << \"traversing n==\"\
+    \ << n__;\n        traverse();\n        std::cout << std::endl;\n    }\n\n   \
+    \ void splitChild(int i, BtreeLink l) {\n        BtreeLink m = new BtreeNode(l->t__,\
+    \ l->leaf__);\n        m->n__ = t__ - 1;\n        // 从 t 到 2t-1 拷贝右侧键\n      \
+    \  for (unsigned j = 0; j < t__ - 1; j++)\n            m->keys__[j] = l->keys__[j\
+    \ + t__];\n        // 从 t 到 2t 拷贝孩子\n        if (!l->leaf__) {\n            for\
+    \ (unsigned j = 0; j < t__; j++)\n                m->children__[j] = l->children__[j\
+    \ + t__];\n        }\n        // 少一个键\n        l->n__ = t__ - 1;\n        // 留出空间\n\
+    \        for (int j = n__; j >= i+1; j--)\n            children__[j + 1] = children__[j];\n\
+    \        // 连接新节点\n        children__[i + 1] = m;\n        // 留出空间\n        for\
+    \ (int j = n__ - 1; j >= i; j--)\n            keys__[j + 1] = keys__[j];\n   \
+    \     // 拷贝中间的键\n        keys__[i] = l->keys__[t__ - 1];\n        n__++;\n   \
+    \ }\n    friend class Btree;\n};\n\nclass Btree {\n    BtreeNode * root;\n   \
+    \ unsigned t__;\npublic:\n    Btree(unsigned t) : root(NULL), t__(t) {};\n\n \
+    \   void traverse() {\n        if(root) root->traverse();\n    }\n\n    BtreeLink\
+    \ search(tKey k) {\n        return(root ? root->search(k) : NULL);\n    }\n\n\
+    \    void insert(tKey k) {\n        if (!root) {\n            root = new BtreeNode(t__,\
+    \ true);\n            root->keys__[0] = k;\n            root->n__ = 1;\n     \
+    \   } else {\n            if (root->n__ == 2 * t__ - 1) {\n                BtreeNode\
+    \ *s = new BtreeNode(t__, false);\n                root = s;\n               \
+    \ s->children_[0] = root;\n                splitChild(0, root);\n            }\n\
+    \            root->insertNonFull(k);\n        }\n    }\n};\n#endif\n```\n[/content]\n\
+    \n# 跳表 (Skip List)\n\n跳表是一种通过多层索引来通过快速查找、插入和删除的数据结构。它在平均复杂度上可以与平衡二搜索树相比，但实现更为简单。\n\
+    \n## 结构\n\n跳表由多个层有序链表组成：\n- 底层是一个全排序的单向链表，包含了所有的元素。\n- 每一层都是作为下层的索引，层越高，元素越稀疏。\n\
+    \n## 算法\n\n### 查找 (Search)\n\n从顶层节点开始，向右移动。如果下一个节点的键大于目标值，则向下移动一层，直到找到目标值或到达底部且未找到该键。\n\
+    \n### 插入 (Insert)\n\n首先使用查找算法找到元素应该所在的位置。然后，对于每一层，根据给定的概率 $p$（通常为 $0.5$）决定是否在该层创建一个新节点并将其插入。\n\
+    \n### 删除 (Delete)\n\n首先查找该元素。如果存在，在所有包含该元素的层中将其删除，并更新相关节点的指针。\n\n## 代码\n\n```cpp\n\
+    #ifndef SKIP_HEAD_\n#define SKIP_HEAD_\n#include <iostream>\n#include <cstdlib>\n\
+    #define DEBUG2 1\nnamespace Tree{\ntypedef int num;\ntemplate <typename Tkey,\
+    \ typename Tval>\nclass Skiplist{\nprivate:\n    struct node {\n        Tkey key_;\
+    \ // 键\n        Tval val_; // 值\n        num size_; // 数组大小\n        node **next_;\
+    \ // 指针数组\n        node(const Tkey key, const Tval val, num size) :\n        \
+    \    key_(key), val_(val), size_(size), next_(new node*[size_]) {\n          \
+    \  for (num i = 0; i < size_; ++i) next_[i] = 0;\n        }\n    };\n    typedef\
+    \ node* const link;\n    Tkey default_key_; // 跳表的默认键\n    Tval default_val_;\
+    \ // 跳表的默认值\n    link head_; // 跳表头\n    num lgN_; // 当前连接层数\n    num lgNmax_;\
+    \ // 最大连接层数\n    // 随机跳表扩展\n    num rand_sl_gen__() {\n        num i, j, t = rand();\
+    \ // t 在 [0, RAND_MAX]\n        // 生成 j=2, 4, ... i < lgNmax_\n        // t >\
+    \ RAND_MAX / 2^i\n        for (i = 1, j = 2; i < lgNmax_; i++, j += j)\n     \
+    \       if (t > RAND_MAX / j) break;\n        // t 是一个小于 1/2^i 的数字\n        if\
+    \ (i > lgN_) // 扩展当前层\n            lgN_ = i; // 这呈对数增长\n        return i;\n  \
+    \  }\n    // 删除一个键和值\n    void remove__(link t, Tkey key, num k) {\n#ifdef DEBUG2\n\
+    std::cerr << \"remove__ \" << t << \" key=\"\n```\n"
+- fmt: "\n```cpp\n<< key << \" level=\" << k << std::endl;\n\n#endif\n\nif (t == 0)\
+    \ return; // null?\n\nlink x = t->next_[k]; // next cell\n\nif ((x != 0) && //\
+    \ not null\n(x->key_ >= key)) // >=\n{\n    if (key == x->key_) { // found it\n\
+    \        t->next_[k] = x->next_[k]; // remove\n#ifdef DEBUG2\n        std::cerr\
+    \ << \" done\" << std::endl;\n#endif\n    }\n    if (k == 0) // can delete\n \
+    \   { // no more links in level\n        delete x;\n        return;\n    }\n \
+    \   // try to remove one level below\n    remove__(t, key, k - 1);\n    return;\n\
+    }\n// x->key_ < key\n// try to remove in the same level\nremove__(t->next_[k],\
+    \ key, k);\n}\n\n// remove all keys\nvoid remove_all__(link t, num k)\n{\n#ifdef\
+    \ DEBUG\n    std::cerr << \"remove__ \" << t << \" level=\" << k << std::endl;\n\
+    #endif\nif (t == 0) return;\nlink x = t->next_[k];\nif (x != 0)\n{\n    t->next_[k]\
+    \ = x->next_[k]; // remove\n    // can delete\n    if (k == 0)\n    { // no more\
+    \ links in level\n        delete x;\n        return;\n    }\n    // try to remove\
+    \ one level below\n    remove_all__(t, k - 1);\n}\n// x->key_ >= key\n// try to\
+    \ remove in the same level\nremove_all__(t->next_[k], k);\n}\n\n// search a key,\
+    \ given a link and the current level\nTval search__(link t, const Tkey key, num\
+    \ k) const\n{\n#ifdef DEBUG\n    std::cerr << \"search__ \" << t << \" key=\"\
+    \ << key << \" level=\" << k << std::endl;\n#endif\nif (t == 0) // search failed\n\
+    \    return default_val_;\n#ifdef DEBUG\n    std::cerr << \"key =\" << key <<\
+    \ \" val = \" << t->val_ << std::endl;\n#endif\nif (key == t->key_) // search\
+    \ success\n    return t->val_;\nlink x = t->next_[k]; // link to the next level\n\
+    if ((x == 0) || // null?\n(key < x->key_)) // search key < next level link's key\n\
+    {\n    if (k == 0) // no more levels available\n        return default_val_;\n\
+    \    // try previous level\n    return search__(t, key, k - 1);\n}\n// key > x->key_\n\
+    // keep searching on the same level\nreturn search__(x, key, k);\n}\n\n// insert\
+    \ the new node pointed by link x with level k\nvoid insert__(link t, link x, num\
+    \ k)\n{\n#ifdef DEBUG\n    std::cerr << \"insert__ \" << t << \" \" << x << \"\
+    \ level=\" << k << \" key=\" << x->key_ << \" value=\" << x->val_ << std::endl;\n\
+    #endif\nTkey key = x->key_; // current key\nlink tk = t->next_[k]; // link to\
+    \ next level current link\nif ((tk == 0) || // null?\n(key < tk->key_)) // search\
+    \ key < next level link's key\n{\n    if (k < x->size_) // is curr lev allowed\
+    \ for this node?\n    { // insert:\n        x->next_[k] = tk; // new node's successor\
+    \ is tk\n        t->next_[k] = x; // t'successor is x\n#ifdef DEBUG\n        std::cerr\
+    \ << \"\\td inserted key=\" << key << \" value=\" << x->val_ << std::endl;\n#endif\n\
+    \    }\n    if (k == 0) // level 0\n        return; // return\n    // k >= x->size__\n\
+    \    // insert down a level\n    insert__(t, x, k - 1);\n    return;\n}\n// k\
+    \ > tk->key_\ninsert__(tk, x, k); // stay in the same level\n}\n\npublic:\n  \
+    \  Skiplist(num lgNmax = 5) :\n        head_(node(default_key_, default_val_,\
+    \ lgNmax + 1)), lgN_(0), lgNmax_(lgNmax) {}\n    ~Skiplist() { remove_all_(head_,\
+    \ lgN_); }\n    // search a key and get a val\n    // start from head_ and current\
+    \ level reached lgN\n    inline Tval search(const Tkey key) const\n    {\n   \
+    \     return search_(head_, lgN_);\n    }\n    // insert a key and a val\n   \
+    \ // start from head_ and the new node with j=rand_sl_gen() links with probability\
+    \ 1/t^j current level is lgN\n    inline void insert(const Tkey key, const Tval\
+    \ val)\n    {\n        insert_(head_, node(key, val, rand_sl_gen()), lgN_);\n\
+    \    }\n    inline void remove(Tkey key)\n    {\n        remove_(head_, lgN_ -\
+    \ 1);\n    }\n}; // end Skiplist\n}; // end Tree\n#endif\n\n### Complexity\n\n\
+    The table below provides space complexity for the average and worst cases, by\
+    \ reporting space and time complexity for search, insert and delete.\n\n| | Average\
+    \ case | Worst case |\n| :--- | :--- | :--- |\n| Space | `images/00043.jpeg` |\
+    \ `images/00051.jpeg` |\n| Search | `images/00044.jpeg` | `images/00044.jpeg`\
+    \ |\n| Insert | `images/00044.jpeg` | `images/00044.jpeg` |\n| Delete | `images/00044.jpeg`\
+    \ | `images/00044.jpeg` |\n\n## 28 Implementing Tries\n\n### Solution\n\nA trie\
+    \ is an ordered tree data structure used to store dynamic set or associative array,\
+    \ where the keys are usually strings. Typically the strings are not explicitly\
+    \ memorize, instead each key has a position in the tree, which defines the key\
+    \ with which the position is associated. All the descendants of a node have a\
+    \ common prefix of the string associated with that node, and the root is associated\
+    \ with empty string. In the example below trie works for an alphabet of 26 symbols\
+    \ and the position of each child identifies the current symbol for the inserted\
+    \ string. An example is provided in the image.\n\n![standard trie](http://www.geeksforgeeks.org/wp-content/uploads/standardtrie.png](images/00052.jpeg)\n\
+    \n### Code\n\n```ifndef TRIE_HEAD_\n#define TRIE_HEAD_ 1\n#include <iostream>\n\
+    // suppose the trie is for 26 chars only\n#define BRANCHLEVEL 26\nnamespace Tree\n\
+    {\n// this trie is used to memorize keys implicitly\ntemplate <typename Tkey>\n\
+    class Trie\n{\nprivate:\n    // a node contains a ptr to array of nodes\n    struct\
+    \ node\n    {\n        // branch for this node\n        node **next;\n       \
+    \ node() : next(new node*[BRANCHLEVEL])\n        {\n            for (unsigned\
+    \ int i = 0; i < BRANCHLEVEL; i++)\n                next[i] = NULL;\n        }\n\
+    \    };\n    typedef node *link;\n    link head; // the head\n    // recursive\
+    \ deletion of nodes\n    void deleteTrie__(link l)\n    {\n        if (!l)\n \
+    \           return;\n        else\n        {\n            for (unsigned int i\
+    \ = 0; i < BRANCHLEVEL; i++)\n                deleteTrie__(l->next[i]);\n    \
+    \        delete[] l;\n        }\n    }\n    // specialized version for Tkey ==\
+    \ std::string\n    // this is equivalent to hash each letter\n    unsigned digit(std::string\
+    \ & k, unsigned d)\n    {\n        if (d < k.length())\n            return k[d]\
+    \ % BRANCHLEVEL;\n        else\n            return BRANCHLEVEL;\n    }\n    //\
+    \ search the key k from link ed digit d\n    bool search__(link l, Tkey k, unsigned\
+    \ d)\n    {\n        // get the d-th branch value from k\n        unsigned int\
+    \ i = digit(k, d);\n        if (i == BRANCHLEVEL) // found\n            return\
+    \ true;\n        if (!l)\n            return false;\n        // i-th branch in\
+    \ the tree\n        return search__(l->next[i], k, d + 1);\n    }\n    // recursively\
+    \ insert the key\n    void insert__(link& l, Tkey k, unsigned d)\n    {\n    \
+    \    // get the d-th branch value from k\n        unsigned int i = digit(k, d);\n\
+    \        if (i == BRANCHLEVEL)\n            return;\n        if (!l)\n       \
+    \     l = new node();\n        insert__(l->next[i], k, d + 1);\n    }\n\npublic:\n\
+    \    Trie() : head(NULL) {};\n    ~Trie()\n    {\n        deleteTrie__(head);\n\
+    \    }\n    bool search(Tkey key)\n    {\n        return search__(head, key, 0);\n\
+    \    }\n    void insert(Tkey key, Tval val)\n    {\n        insert__(head, key,\
+    \ 0);\n    }\n}; // end class Trie\n}; // end namespace Tree\n#endif\n\n## 29\
+    \ Implementing a segment tree\n\n```cpp\ninline int getMid(int s, int e)\n```\n"
+  raw: "<< key << \" level=\" << k << std::endl;\n\n#endif\n\n if (t == 0) return;\
+    \ // null?\n\n link x = t->next_[k];// next cell\n\n if ((x != 0) && // not null\n\
+    \n(x->key_ >= key)) // >=\n\n         {\n\n if (key == x->key_){ // found it\n\
+    \n t->next_[k] = x->next_[k]; //   remove\n\n#ifdef  DEBUG2\n\nstd::cerr << \"\
+    \ done\" << std::endl;\n\n#endif\n\n            }\n\n if (k == 0) // can delete\n\
+    \n{ //   no more links in level\n\n delete x;\n\n return;\n\n            }\n\n\
+    \ // try to remove one level below\n\n            remove__(t, key, k - 1);\n\n\
+    \ return;\n\n         }\n\n // x->key_ < key\n\n // try to remove in the same\
+    \ level\n\n         remove__(t->next_[k], key, k);\n\n      }\n\n // remove all\
+    \ keys\n\n void remove_all__(link  t, num  k)\n\n      {\n\n#ifdef DEBUG\n\nstd::cerr\
+    \ << \"remove__ \" << t << \" level=\"\n\n            << k << std::endl;\n\n#endif\n\
+    \n if (t == 0) return;\n\n link x = t->next_[k];\n\n if (x != 0)\n\n         {\n\
+    \n t->next_[k] = x->next_[k]; //   remove\n\n // can delete\n\n if (k == 0)\n\n\
+    { //   no more links in level\n\n delete x;\n\n return;\n\n            }\n\n //\
+    \ try to remove one level below\n\n            remove_all__(t, k - 1);\n\n        \
+    \ }\n\n // x->key_ >= key\n\n // try to remove in the same level\n\n         remove_all__(t->next_[k],\
+    \ k);\n\n      }\n\n // search a key, given a link and the current level\n\n Tval\
+    \ search__(link  t, const  Tkey  key, num  k) const\n\n      {\n\n#ifdef DEBUG\n\
+    \nstd::cerr << \"search__ \" << t << \" key=\"\n\n<< key << \" level=\" << k <<\
+    \ std::endl;\n\n#endif\n\n if (t == 0) // search failed\n\n return default_val_;\n\
+    \n#ifdef DEBUG\n\nstd::cerr << \"key =\" << key << \" val = \"\n\n         <<\
+    \ t->val_ << std::endl;\n\n#endif\n\n if (key == t->key_) // search success\n\n\
+    \ return  t->val_;\n\n link x = t->next_[k]; // link to the next level\n\n if\
+    \ ((x == 0) || //   null?\n\n            (key < x->key_)) //   search key < next\
+    \ level link's key\n\n         {\n\n if (k == 0) // no more levels available\n\
+    \n return default_val_;\n\n // try previous level\n\n return search__(t, key,\
+    \ k - 1);\n\n         }\n\n // key > x->key_\n\n //   keep searching on the same\
+    \ level\n\n return search__(x, key, k);\n\n      }\n\n // insert the new node\
+    \ pointed by link x with level k\n\n void insert__(link  t, link  x, num  k)\n\
+    \n      {\n\n#ifdef DEBUG\n\nstd::cerr << \"insert__ \" << t << \" \" << x <<\
+    \ \" level=\" << k\n\n<< \" key=\" << x->key_ << \" value=\" << x->val_ << std::endl;\n\
+    \n#endif\n\n Tkey key = x->key_; // current key\n\n link tk = t->next_[k]; //\
+    \ link to next level current link\n\n if ((tk == 0) || //   null?\n\n(key < tk->key_))\
+    \ //   search key < next level link's key\n\n         {\n\n if (k < x->size_)\
+    \ // is curr lev allowed for this node?\n\n{ //   insert:\n\n x->next_[k] = tk;//\
+    \ new node's successor is tk\n\n t->next_[k] = x; // t'successor is x\n\n#ifdef\
+    \ DEBUG\n\nstd::cerr << \"\\tdone inserted key=\" << key\n\n<< \" value=\" <<\
+    \ x->val_ << std::endl;\n\n#endif\n\n            }\n\n if (k == 0) // level 0\n\
+    \n return; //   return\n\n // k >= x->size__\n\n //  insert down a level\n\n           \
+    \ insert__(t, x, k - 1);\n\n return; \n\n         }\n\n // k > tk->key_\n\ninsert__(tk,\
+    \ x, k); //   stay in the same level\n\n      }\n\n public:\n\n      Skiplist(num\
+    \  lgNmax = 5) :\n\n         head_(new  node(default_key_, default_val_, lgNmax\
+    \ + 1)),\n\n         lgN_(0), lgNmax_(lgNmax) {};\n\n      ~Skiplist(){ remove_all__(head_,\
+    \ lgN_); };\n\n // search a key and get a val\n\n //   start from head_ and current\
+    \ level reached lgN_\n\n inline  Tval search(const  Tkey  key) const\n\n     \
+    \ {\n\n return search__(head_, key, lgN_);\n\n      };\n\n // insert a key and\
+    \ a val\n\n // start from head_ and\n\n // the new randomized node with\n\n //  \
+    \ j=rand_sl_gen() links built with\n\n //  probability 1/t^j current level is\
+    \ lgN_\n\n //\n\n inline  void insert(const  Tkey  key, const  Tval  val)\n\n\
+          {\n\ninsert__(head_, new  node(key, val, rand_sl_gen__()), lgN_);\n\n     \
+    \ };\n\n inline  void remove(Tkey  key)\n\n      {\n\nremove__(head_, key, lgN_\
+    \ -1);\n\n      }\n\n}; // end class Skiplist\n\n}; // end namespace Tree\n\n\
+    #endif\n\n### Complexity\n\nThe table here below provides space complexity for\
+    \ the average and the worst cases, by reporting also space and time complexity\
+    \ for search, insert and delete.\n\n|  | Average case | Worst case |\n\n| Space\
+    \ | ![](images/00043.jpeg) | ![](images/00051.jpeg) |\n\n| Search | ![](images/00044.jpeg)\
+    \ | ![](images/00043.jpeg) |\n\n| Insert | ![](images/00044.jpeg) | ![](images/00043.jpeg)\
+    \ |\n\n| Delete | ![](images/00044.jpeg) | ![](images/00043.jpeg) |\n\n## 28 Implementing\
+    \ Tries\n\n### Solution\n\nA trie is an ordered tree data structure used to store\
+    \ dynamic set or associative array, where the keys are usually strings. Typically\
+    \ the strings are not explicitly memorized, instead each key has a position in\
+    \ the tree, which defines the key with which the position is associated. All the\
+    \ descendants of a node have a common prefix of the string associated with that\
+    \ node, and the root is associated with the empty string. In the example below\
+    \ the trie works for an alphabet of 26 different symbols and the position of each\
+    \ child identifies the current symbol for the inserted string.  An example is\
+    \ provided in the image.\n\n![http://www.geeksforgeeks.org/wp-content/uploads/standardtrie.png](images/00052.jpeg)\n\
+    \n### Code\n\nifndef TRIE_HEAD_\n\n#define  TRIE_HEAD_ 1\n\n#include  <iostream>\n\
+    \n// suppose the trie is for 26 chars only\n\n#define  BRANCHLEVEL 26\n\nnamespace\
+    \ Tree{\n\n // this trie is used to memorize keys implicitely\n\n template <typename\
+    \  Tkey>\n\n class  Trie{\n\n private:\n\n // a node contains a ptr to array of\
+    \ nodes\n\n struct  node\n\n      {\n\n // branch for this node\n\n node **next;\n\
+    \n         node() : next(new  node*[BRANCHLEVEL])\n\n         {\n\n for (unsigned\
+    \  int i = 0; i < BRANCHLEVEL; i++)\n\nnext[i] = NULL;\n\n         }\n\n     \
+    \ };\n\n typedef  node *link;\n\n link head; // the head\n\n //recursive deletion\
+    \ of nodes\n\n //\n\n void deleteTrie__(link  l)\n\n      {\n\n if (!l)\n\n return;\n\
+    \n else\n\n         {\n\n for (unsigned  int i = 0; i < BRANCHLEVEL; i++)\n\n\
+                   deleteTrie__(l->next[i]);\n\n delete[] l;\n\n         }\n\n     \
+    \ }\n\n // specialized version for Tkey == std::string\n\n // this is equivalent\
+    \ to hash each letter\n\n //\n\n unsigned digit(std::string & k, unsigned  d)\n\
+    \n      {\n\n if (d < k.length())\n\n return  k[d] % BRANCHLEVEL;\n\n else\n\n\
+    \ return  BRANCHLEVEL;\n\n      }\n\n // search the key k from link l ed digit\
+    \ d\n\n bool search__(link  l, Tkey  k, unsigned  d)\n\n      {\n\n // get the\
+    \ d-th branch value from k\n\n unsigned  int i = digit(k, d);\n\n if (i == BRANCHLEVEL)\
+    \ // found\n\n return  true;\n\n if (!l)\n\n return  false;\n\n // i-th branch\
+    \ in the tree\n\n return search__(l->next[i], k, d + 1);\n\n      }\n\n // recursively\
+    \ insert considering the key\n\n void insert__(link& l, Tkey  k, unsigned  d)\n\
+    \n      {\n\n // get the d-th branch value from k\n\n unsigned  int i = digit(k,\
+    \ d);\n\n if (i == BRANCHLEVEL)\n\n return;\n\n if (!l)\n\n l = new  node();\n\
+    \n         insert__(l->next[i], k, d + 1);\n\n      }\n\n public:\n\n      Trie()\
+    \ : head(NULL) {};\n\n      ~Trie()\n\n      {\n\n         deleteTrie__(head);\n\
+    \n      }\n\n bool search(Tkey  k)\n\n      {\n\n return search__(head, k, 0);\n\
+    \n      }\n\n void insert(Tkey  k)\n\n      {\n\ninsert__(head, k, 0);\n\n     \
+    \ }\n\n}; // end class Trie\n\n}; // end namespace Tree\n\n#endif\n\n## 29 Implementing\
+    \ a segment tree\n\n### Solution\n\nGiven an ![](images/00053.jpeg), a segment\
+    \ tree allows:\n\na) to find the sum of elements in the range ![](images/00054.jpeg)\
+    \ where ![](images/00055.jpeg) in time ![](images/00056.jpeg)\n\nb) To update\
+    \ a specific element ![](images/00057.jpeg) such that ![](images/00058.jpeg)\n\
+    \nSegment trees have the following properties\n\n*   Leaf nodes are the elements\
+    \ of an![](images/00059.jpeg)\n\n*   Each internal node represents a merge operation\
+    \ of the leaf nodes. Different types of problems have different representations\
+    \ of merge operations. In the code below we simply use a merge operation which\
+    \ sum all the leaves under the node\n\nFrequently segment trees are represented\
+    \ in an array where for each node ![](images/00046.jpeg) the left child is in\
+    \ position ![](images/00060.jpeg) and right child is in position ![](images/00061.jpeg)\n\
+    \n![the sum interval tree for [1..7]](images/00062.jpeg)\n\n### Code\n\n inline\
+    \  int getMid(int  s, int  e)"
+  toc: []
+  trans: "\n\n```cpp\n<< key << \" level=\" << k << std::endl;\n\n#endif\n\nif (t\
+    \ == 0) return; // 空指针？\n\nlink x = t->next_[k]; // 下一个节点\n\nif ((x != 0) && //\
+    \ 非空\n(x->key_ >= key)) // 大于\n{\n    if (key == x->key_) { // 找到了\n        t->next_[k]\
+    \ = x->next_[k]; // 移除\n#ifdef DEBUG2\n        std::cerr << \" done\" << std::endl;\n\
+    #endif\n    }\n    if (k == 0) // 可以删除\n    { // 该层级没有更多链接\n        delete x;\n\
+    \        return;\n    }\n    // 尝试移除下面一层\n    remove__(t, key, k - 1);\n    return;\n\
+    }\n// x->key_ < key\n// 尝试在同一层级移除\nremove__(t->next_[k], key, k);\n}\n\n// 移除所有键\n\
+    void remove_all__(link t, num k)\n{\n#ifdef DEBUG\n    std::cerr << \"remove__\
+    \ \" << t << \" level=\" << k << std::endl;\n#endif\nif (t == 0) return;\nlink\
+    \ x = t->next_[k];\nif (x != 0)\n{\n    t->next_[k] = x->next_[k]; // 移除\n   \
+    \ // 可以删除\n    if (k == 0)\n    { // 该层级没有更多链接\n        delete x;\n        return;\n\
+    \    }\n    // 尝试移除下面一层\n    remove_all__(t, k - 1);\n}\n// x->key_ >= key\n//\
+    \ 尝试在同一层级移除\nremove_all__(t->next_[k], k);\n}\n\n// 给定链接和当前层级搜索一个键\nTval search__(link\
+    \ t, const Tkey key, num k) const\n{\n#ifdef DEBUG\n    std::cerr << \"search__\
+    \ \" << t << \" key=\" << key << \" level=\" << k << std::endl;\n#endif\nif (t\
+    \ == 0) // 搜索失败\n    return default_val_;\n#ifdef DEBUG\n    std::cerr << \"key\
+    \ =\" << key << \" val = \" << t->val_ << std::endl;\n#endif\nif (key == t->key_)\
+    \ // 搜索成功\n    return t->val_;\nlink x = t->next_[k]; // 指向下一层的链接\nif ((x == 0)\
+    \ || // 空指针？\n(key < x->key_)) // 搜索键小于下一层链接的键\n{\n    if (k == 0) // 没有更多可用的层级\n\
+    \        return default_val_;\n    // 尝试上一层\n    return search__(t, key, k - 1);\n\
+    }\n// key > x->key_\n// 在同一层级继续搜索\nreturn search__(x, key, k);\n}\n\n// 在层级 k\
+    \ 插入由链接 x 指向的新节点\nvoid insert__(link t, link x, num k)\n{\n#ifdef DEBUG\n    std::cerr\
+    \ << \"insert__ \" << t << \" \" << x << \" level=\" << k << \" key=\" << x->key_\
+    \ << \" value=\" << x->val_ << std::endl;\n#endif\nTkey key = x->key_; // 当前键\n\
+    link tk = t->next_[k]; // 指向下一层级的当前链接\nif ((tk == 0) || // 空指针？\n(key < tk->key_))\
+    \ // 搜索键小于下一层链接的键\n{\n    if (k < x->size_) // 当前层级允许该节点存在吗？\n    { // 插入：\n \
+    \       x->next_[k] = tk; // 新节点的后继是 tk\n        t->next_[k] = x; // t 的后继是 x\n\
+    #ifdef DEBUG\n        std::cerr << \"\\td inserted key=\" << key << \" value=\"\
+    \ << x->val_ << std::endl;\n#endif\n    }\n    if (k == 0) // 层级 0\n        return;\
+    \ // 返回\n    // k >= x->size__\n    // 向下一层插入\n    insert__(t, x, k - 1);\n  \
+    \  return;\n}\n// k > tk->key_\ninsert__(tk, x, k); // 留在同一层级\n}\n\npublic:\n\
+    \    Skiplist(num lgNmax = 5) :\n        head_(node(default_key_, default_val_,\
+    \ lgNmax + 1)), lgN_(0), lgNmax_(lgNmax) {}\n    ~Skiplist() { remove_all_(head_,\
+    \ lgN_); }\n    // 搜索一个键并获取值\n    // 从 head_ 开始，当前层级达到 lgN\n    inline Tval search(const\
+    \ Tkey key) const\n    {\n        return search_(head_, lgN_);\n    }\n    //\
+    \ 插入一个键和一个值\n    // 从 head_ 开始，新节点根据 j=rand_sl_gen() 以概率 1/t^j 建立链接，当前层级为 lgN\n\
+    \    inline void insert(const Tkey key, const Tval val)\n    {\n        insert_(head_,\
+    \ node(key, val, rand_sl_gen()), lgN_);\n    }\n    inline void remove(Tkey key)\n\
+    \    {\n        remove_(head_, lgN_ - 1);\n    }\n}; // 结束 Skiplist\n}; // 结束\
+    \ Tree\n#endif\n\n### 复杂度\n\n下表提供了平均情况和最坏情况下的空间复杂度，报告了搜索、插入和删除的空间与时间复杂度。\n\n|\
+    \ 操作 | 平均情况 | 最坏情况 |\n| :--- | :--- | :--- |\n| 搜索 | $O(\\log n)$ | $O(n)$ |\n\
+    | 插入 | $O(\\log n)$ | $O(n)$ |\n| 删除 | $O(\\log n)$ | $O(n)$ |\n\n"
+- fmt: "\n```cpp\n{ return  s + (e - s) / 2; }\n\nint getSumUtil(const int segmentTree[],\
+    \ int segmentStart, int segmentEnd,\n int queryStart, int queryEnd, int index)\n\
+    {\n  // contained in the interval\n  if (queryStart <= segmentStart && segmentEnd\
+    \ <= queryEnd)\n    return segmentTree[index];\n\n  // If outside interval\n \
+    \ if (segmentEnd < queryStart || segmentStart > queryEnd)\n    return 0;\n\n \
+    \ // If a part of this segment overlaps with the given range\n  unsigned mid =\
+    \ getMid(segmentStart, segmentEnd);\n\n  // get the mid point and go left and\
+    \ right in the segmentTree\n  return getSumUtil(segmentTree, segmentStart, mid,\n\
+    \    queryStart, queryEnd, 2 * index + 1) +\n         getSumUtil(segmentTree,\
+    \ mid + 1, segmentEnd,\n    queryStart, queryEnd, 2 * index + 2);\n}\n\nvoid updateValueUtil(int\
+    \ segmentTree[], int segmentStart, int segmentEnd,\n int whereToUpdate, int valueToAdd,\
+    \ int index)\n{\n  // not the right interval\n  if (whereToUpdate < segmentStart\
+    \ ||\n    whereToUpdate > segmentEnd)\n    return;\n\n  // update\n  segmentTree[index]\
+    \ += valueToAdd;\n  if (segmentEnd != segmentStart)\n  {\n    // recursively get\
+    \ mid point and go left or right\n    int mid = getMid(segmentStart, segmentEnd);\n\
+    \n    updateValueUtil(segmentTree, segmentStart, mid,\n      whereToUpdate, valueToAdd,\
+    \ 2 * index + 1);\n    updateValueUtil(segmentTree, mid + 1, segmentEnd,\n   \
+    \   whereToUpdate, valueToAdd, 2 * index + 2);\n  }\n}\n\nvoid updateValue(int\
+    \ array[], int segmentTree[], int n,\n int whereToAdd, int newValue)\n{\n  if\
+    \ (whereToAdd < 0 || whereToAdd > n - 1)\n    return;\n  int diff = newValue -\
+    \ array[whereToAdd];\n  array[whereToAdd] = newValue;\n\n  updateValueUtil(segmentTree,\
+    \ 0, n - 1,\n    whereToAdd, diff, 0);\n}\n\nint getSum(int segmentTree[], int\
+    \ n,\n int queryStart, int queryEnd)\n{\n  // Check for erroneous input values\n\
+    \  if (queryStart < 0 || queryEnd > n - 1 ||\n    queryStart > queryEnd)\n   \
+    \ return -1;\n  return getSumUtil(segmentTree, 0, n - 1,\n    queryStart, queryEnd,\
+    \ 0);\n}\n\nint constructSTUtil(const int array[], int segmentTree[],\n int segmentStart,\
+    \ int segmentEnd, int segmentIndex)\n{\n  if (segmentStart == segmentEnd)\n  {\n\
+    \    segmentTree[segmentIndex] = array[segmentStart];\n    return array[segmentStart];\n\
+    \  }\n  int mid = getMid(segmentStart, segmentEnd);\n  segmentTree[segmentIndex]\
+    \ =\n      constructSTUtil(array, segmentTree,\n        segmentStart, mid, segmentIndex\
+    \ * 2 + 1) +\n         constructSTUtil(array, segmentTree,\n        mid + 1, segmentEnd,\
+    \ segmentIndex * 2 + 2);\n  return segmentTree[segmentIndex];\n}\n\nint *constructSegmentTree(int\
+    \ array[], int n)\n{\n  int x = (int)(ceil(log2(n))); //Height of segment tree\n\
+    \  int max_size = 2 * (int)pow(2, x) - 1; //Maximum size of segment tree\n  int\
+    \ *segmentTree = new int[max_size];\n\n  constructSTUtil(array, segmentTree, 0,\
+    \ n - 1, 0);\n  return segmentTree;\n}\n```\n\n### Complexity\n\nTime complexity\
+    \ is ![](images/00063.jpeg)for both update and range sum operations.\n\n## 30\
+    \ Implementing Range minimum queries\n\n### Solution\n\nGiven an ![](images/00053.jpeg),\
+    \ a segment tree allows to find the minimum in the range ![](images/00054.jpeg)\
+    \ where ![](images/00055.jpeg) in time ![](images/00056.jpeg). In this case the\
+    \ segment tree has the following properties\n\n- Leaf nodes are the elements of\
+    \ an![](images/00059.jpeg)\n- Each internal node represents the minimum of all\
+    \ the leaves under the node\n\nFrequently segment trees are represented in an\
+    \ array where for each node ![](images/00046.jpeg) the left child is in position\
+    \ ![](images/00060.jpeg) and right child is in position ![](images/00061.jpeg)\n\
+    \n### Code\n\nLeft as an exercise\n\n### Complexity\n\nMinimum is computed with\
+    \ ![](images/00056.jpeg) time.\n"
+  raw: "{ return  s + (e - s) / 2; }\n\n int getSumUtil(const  int  segmentTree[],\
+    \ int  segmentStart, int  segmentEnd,\n\n int  queryStart, int  queryEnd, int\
+    \  index)\n\n   {\n\n // contained in the interval\n\n if (queryStart <= segmentStart\
+    \ && segmentEnd <= queryEnd)\n\n return  segmentTree[index];\n\n // If outside\
+    \ interval\n\n if (segmentEnd < queryStart || segmentStart > queryEnd)\n\n return\
+    \ 0;\n\n // If a part of this segment overlaps with the given range\n\n unsigned\
+    \ mid = getMid(segmentStart, segmentEnd);\n\n // get the mid point and go left\
+    \ and right in the segmentTree\n\n return getSumUtil(segmentTree, segmentStart,\
+    \ mid,\n\n queryStart, queryEnd, 2 * index + 1) +\n\n         getSumUtil(segmentTree,\
+    \ mid + 1, segmentEnd,\n\n queryStart, queryEnd, 2 * index + 2);\n\n   }\n\n void\
+    \ updateValueUtil(int  segmentTree[], int  segmentStart, int  segmentEnd,\n\n\
+    \ int  whereToUpdate, int  valueToAdd, int  index)\n\n   {\n\n // not the right\
+    \ interval\n\n if (whereToUpdate < segmentStart ||\n\n whereToUpdate > segmentEnd)\n\
+    \n return;\n\n // update\n\n segmentTree[index] += valueToAdd;\n\n if (segmentEnd\
+    \ != segmentStart)\n\n      {\n\n // recursively get mid point and go left or\
+    \ right\n\n int mid = getMid(segmentStart, segmentEnd);\n\n         updateValueUtil(segmentTree,\
+    \ segmentStart, mid,\n\n whereToUpdate, valueToAdd, 2 * index + 1);\n\n        \
+    \ updateValueUtil(segmentTree, mid + 1, segmentEnd,\n\n whereToUpdate, valueToAdd,\
+    \ 2 * index + 2);\n\n      }\n\n   }\n\n void updateValue(int  array[], int  segmentTree[],\
+    \ int  n,\n\n int  whereToAdd, int  newValue)\n\n   {\n\n if (whereToAdd < 0 ||\
+    \ whereToAdd > n - 1)\n\n return;\n\n int diff = newValue - array[whereToAdd];\n\
+    \n array[whereToAdd] = newValue;\n\n      updateValueUtil(segmentTree, 0, n -\
+    \ 1,\n\n whereToAdd, diff, 0);\n\n   }\n\n int getSum(int  segmentTree[], int\
+    \  n,\n\n int  queryStart, int  queryEnd)\n\n   {\n\n // Check for erroneous input\
+    \ values\n\n if (queryStart < 0 || queryEnd > n - 1 ||\n\n queryStart > queryEnd)\n\
+    \n return -1;\n\n return getSumUtil(segmentTree, 0, n - 1,\n\n queryStart, queryEnd,\
+    \ 0);\n\n   }\n\n int constructSTUtil(const  int  array[], int  segmentTree[],\n\
+    \n int  segmentStart, int  segmentEnd, int  segmentIndex)\n\n   {\n\n if (segmentStart\
+    \ == segmentEnd)\n\n      {\n\n segmentTree[segmentIndex] = array[segmentStart];\n\
+    \n return  array[segmentStart];\n\n      }\n\n int mid = getMid(segmentStart,\
+    \ segmentEnd);\n\n segmentTree[segmentIndex] =\n\n         constructSTUtil(array,\
+    \ segmentTree,\n\n segmentStart, mid, segmentIndex * 2 + 1) +\n\n         constructSTUtil(array,\
+    \ segmentTree,\n\nmid + 1, segmentEnd, segmentIndex * 2 + 2);\n\n return  segmentTree[segmentIndex];\n\
+    \n   }\n\n int *constructSegmentTree(int  array[], int  n)\n\n   {\n\n int x =\
+    \ (int)(ceil(log2(n))); //Height of segment tree\n\n int max_size = 2 * (int)pow(2,\
+    \ x) - 1; //Maximum size of segment tree\n\n int *segmentTree = new  int[max_size];\n\
+    \n      constructSTUtil(array, segmentTree, 0, n - 1, 0);\n\n return segmentTree;\n\
+    \n   }\n\n### Complexity\n\nTime complexity is ![](images/00063.jpeg)for both\
+    \ update and range sum operations.\n\n## 30 Implementing Range minimum queries\n\
+    \n### Solution\n\nGiven an ![](images/00053.jpeg), a segment tree allows to find\
+    \ the minimum in the range ![](images/00054.jpeg) where ![](images/00055.jpeg)\
+    \ in time ![](images/00056.jpeg). In this case the segment tree has the following\
+    \ properties\n\n*   Leaf nodes are the elements of an![](images/00059.jpeg)\n\n\
+    *   Each internal node represents the minimum of all the leaves under the node\n\
+    \nFrequently segment trees are represented in an array where for each node ![](images/00046.jpeg)\
+    \ the left child is in position ![](images/00060.jpeg) and right child is in position\
+    \ ![](images/00061.jpeg)\n\n### Code\n\nLeft as an exercise\n\n### Complexity\n\
+    \nMinimum is computed with ![](images/00056.jpeg) time complexity. However, there\
+    \ is a![](images/00001.jpeg) preprocessing time and ![](images/00064.jpeg)extra\
+    \ space required.\n\n## 31 Implementing a suffix tree\n\n### Solution\n\nA Suffix\
+    \ Tree (also known as Pat Tree) is a tree containing all the suffixes of a given\
+    \ string ![](images/00065.jpeg). The construction of a suffix tree takes linear\
+    \ time and also linear space (although with very large constants). Once the suffix\
+    \ three is built, it is possible to solve a myriad of problems on textual strings[[1]](#part0000_split_037.html__ftn1) \
+    \ such as:\n\n*   Check a string ![](images/00066.jpeg) , if length m is a substring\
+    \ of![](images/00067.jpeg) in ![](images/00068.jpeg)time\n\n*   Find  the longest\
+    \ common substrings of strings ![](images/00069.jpeg) and ![](images/00070.jpeg)\
+    \ in ![](images/00071.jpeg) time\n\nThe list is very long and cannot be reported\
+    \ here. The interested reader can find these articles relevant\n\n*   [http://www.di.unipi.it/~grossi/IND/survey.pdf](http://www.di.unipi.it/~grossi/IND/survey.pdf)\n\
+    \n*   [http://www.inf.fu-berlin.de/lehre/WS02/ALP3/material/sufficTree.pdf](http://www.inf.fu-berlin.de/lehre/WS02/ALP3/material/sufficTree.pdf)\n\
+    \nThe suffix tree for the string ![](images/00065.jpeg) of length ![](images/00013.jpeg) is\
+    \ defined as a tree such that:\n\n*   The tree has exactly ![](images/00013.jpeg)\
+    \ leaves\n\n*   Every internal node has at least two children, with the only exception\
+    \ of the root\n\n*   Each edge is labeled with a non-empty substring of ![](images/00065.jpeg)\n\
+    \n*   It is not allowed to have two edges starting out of a node with labels beginning\
+    \ with the same character\n\n*   The string obtained by concatenating all the\
+    \ labels on the path from the root to leaf ![](images/00046.jpeg) represents suffix\
+    \ ![](images/00072.jpeg), ![](images/00073.jpeg)\n\n![](images/00065.jpeg) is\
+    \ padded with a terminal symbol not seen in the string (usually denoted ![](images/00074.jpeg)).\
+    \ This ensures that no suffix is a prefix of another.\n\n![](images/00075.jpeg)\n\
+    \n### Code\n\nThe interested reader can access these libraries:\n\n*   [http://codingplayground.blogspot.de/2010/05/suffix-tree-with-unicode-support.html](http://codingplayground.blogspot.de/2010/05/suffix-tree-with-unicode-support.html)\n\
+    \n*   [https://code.google.com/p/patl/](https://code.google.com/p/patl/)\n\n###\
+    \ Complexity\n\nThe construction of a suffix tree takes linear time and also linear\
+    \ space (although with very large constants).\n\nABOUT THE AUTHOR\n\nAn experienced\
+    \ data mining engineer, passionate about technology and innovation in consumers’\
+    \ space. Interested in search and machine learning on massive dataset with a particular\
+    \ focus on query analysis, suggestions, entities, personalization, freshness and\
+    \ universal ranking. Antonio Gullì has worked in small startups (Ideare.com, StudioITech),\
+    \ medium (Ask.com, Tiscali) and large corporations (Microsoft, Elsevier). His\
+    \ carrier path is about mixing industry with academic experience.\n\n“Nowadays\
+    \ you must have a great combination of research skills and a just-get-it-done\
+    \ attitude.”\n\n* * *\n\n[[1]](#part0000_split_036.html__ftnref1)  [http://en.wikipedia.org/wiki/Suffix_tree](http://en.wikipedia.org/wiki/Suffix_tree)"
+  toc: []
+  trans: "\n\n```cpp\n{ return  s + (e - s) / 2; }\n\nint getSumUtil(const int segmentTree[],\
+    \ int segmentStart, int segmentEnd,\n int queryStart, int queryEnd, int index)\n\
+    {\n  // 包含在范围内\n  if (queryStart <= segmentStart && segmentEnd <= queryEnd)\n\
+    \    return segmentTree[index];\n\n  // 如果区间外部\n  if (segmentEnd < queryStart\
+    \ || segmentStart > queryEnd)\n    return 0;\n\n  // 如果此段的一部分与给定范围重叠\n  unsigned\
+    \ mid = getMid(segmentStart, segmentEnd);\n\n  // 获取中间点并在线段树中向左右递归\n  return getSumUtil(segmentTree,\
+    \ segmentStart, mid,\n    queryStart, queryEnd, 2 * index + 1) +\n         getSumUtil(segmentTree,\
+    \ mid + 1, segmentEnd,\n    queryStart, queryEnd, 2 * index + 2);\n}\n\nvoid updateValueUtil(int\
+    \ segmentTree[], int segmentStart, int segmentEnd,\n int whereToUpdate, int valueToAdd,\
+    \ int index)\n{\n  // 不是正确的区间\n  if (whereToUpdate < segmentStart ||\n    whereToUpdate\
+    \ > segmentEnd)\n    return;\n\n  // 更新\n  segmentTree[index] += valueToAdd;\n\
+    \  if (segmentEnd != segmentStart)\n  {\n    // 递归获取中间点并向左或向右\n    int mid = getMid(segmentStart,\
+    \ segmentEnd);\n\n    updateValueUtil(segmentTree, segmentStart, mid,\n      whereToUpdate,\
+    \ valueToAdd, 2 * index + 1);\n    updateValueUtil(segmentTree, mid + 1, segmentEnd,\n\
+    \      whereToUpdate, valueToAdd, 2 * index + 2);\n  }\n}\n\nvoid updateValue(int\
+    \ array[], int segmentTree[], int n,\n int whereToAdd, int newValue)\n{\n  if\
+    \ (whereToAdd < 0 || whereToAdd > n - 1)\n    return;\n  int diff = newValue -\
+    \ array[whereToAdd];\n  array[whereToAdd] = newValue;\n\n  updateValueUtil(segmentTree,\
+    \ 0, n - 1,\n    whereToAdd, diff, 0);\n}\n\nint getSum(int segmentTree[], int\
+    \ n,\n int queryStart, int queryEnd)\n{\n  // 检查错误的输入值\n  if (queryStart < 0 ||\
+    \ queryEnd > n - 1 ||\n    queryStart > queryEnd)\n    return -1;\n  return getSumUtil(segmentTree,\
+    \ 0, n - 1,\n    queryStart, queryEnd, 0);\n}\n\nint constructSTUtil(const int\
+    \ array[], int segmentTree[],\n int segmentStart, int segmentEnd, int segmentIndex)\n\
+    {\n  if (segmentStart == segmentEnd)\n  {\n    segmentTree[segmentIndex] = array[segmentStart];\n\
+    \    return array[segmentStart];\n  }\n  int mid = getMid(segmentStart, segmentEnd);\n\
+    \  segmentTree[segmentIndex] =\n      constructSTUtil(array, segmentTree,\n  \
+    \      segmentStart, mid, segmentIndex * 2 + 1) +\n         constructSTUtil(array,\
+    \ segmentTree,\n        mid + 1, segmentEnd, segmentIndex * 2 + 2);\n  return\
+    \ segmentTree[segmentIndex];\n}\n\nint *constructSegmentTree(int array[], int\
+    \ n)\n{\n  int x = (int)(ceil(log2(n))); // 线段树的高度\n  int max_size = 2 * (int)pow(2,\
+    \ x) - 1; // 线段树的最大大小\n  int *segmentTree = new int[max_size];\n\n  constructSTUtil(array,\
+    \ segmentTree, 0, n - 1, 0);\n  return segmentTree;\n}\n```\n\n### 复杂度\n\n更新和区间求和操作的时间复杂度均为\
+    \ ![](img/00063.jpeg)。\n\n## 30 实现区间最小值查询\n\n### 解决方案\n\n给定一个 ![](img/00053.jpeg)，线段树允许在范围\
+    \ ![](img/00054.jpeg) 内找到最小值，其中 ![](img/00055.jpeg)，其查询时间复杂度为 ![](img/00056.jpeg)。在这种情况下，线段树具有以下属性：\n\
+    \n- 叶子节点是 ![](img/00059.jpeg) 的元素\n- 每个内部节点代表该节点下所有叶子节点的最小值\n\n线段树通常用数组表示，对于每个节点\
+    \ ![](img/00046.jpeg)，左子位于位置 ![](img/00060.jpeg)，右子位于位置 ![](img/00061.jpeg)。\n\
+    \n### 代码\n\n留作练习\n\n### 复杂度\n\n最小值的计算通过 ![](img/00056.jpeg) 时间完成。\n\n"

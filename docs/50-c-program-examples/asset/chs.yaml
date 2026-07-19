@@ -1,0 +1,209 @@
+- "# 50 个 C++ 程序示例\n\n\n\n![](img/image_rsrcZH.jpg)\n\n\n\n## 1. Hello World\n```cpp\n\
+  #include <iostream>\n\nint main() {\n  std::cout << \"Hello, World!\" << std::endl;\n\
+  \  return 0;\n}\n```\n\n## 2. 基础输入输出\n```cpp\n#include <iostream>\n\nint main()\
+  \ {\n  int num;\n  std::cout << \"Enter a number: \";\n  std::cin >> num;\n  std::cout\
+  \ << \"You entered: \" << num << std::endl;\n  return 0;\n}\n```\n\n## 3. 算术运算\n\
+  ```cpp\n#include <iostream>\n\nint main() {\n  int a = 5, b = 3;\n  std::cout <<\
+  \ \"Sum: \" << a + b << std::endl;\n  std::cout << \"Difference: \" << a - b <<\
+  \ std::endl;\n  std::cout << \"Product: \" << a * b << std::endl;\n  std::cout <<\
+  \ \"Quotient: \" << a / b << std::endl;\n  return 0;\n}\n```\n\n## 4. 条件判断语句 (if-else)\n\
+  ```cpp\n#include <iostream>\n\nint main() {\n  int num;\n  std::cout << \"Enter\
+  \ a number: \";\n  std::cin >> num;\n  if (num > 0) {\n    std::cout << \"Positive\"\
+  \ << std::endl;\n  } else if (num < 0) {\n    std::cout << \"Negative\" << std::endl;\n\
+  \  } else {\n    std::cout << \"Zero\" << std::endl;\n  }\n  return 0;\n}\n```\n\
+  \n## 5. 循环 (for 循环)\n```cpp\n#include <iostream>\n\nint main() {\n  for (int i =\
+  \ 1; i <= 5; ++i) {\n    std::cout << i << \" \";\n  }\n  std::cout << std::endl;\n\
+  \  return 0;\n}\n```\n\n## 6. 循环 (while 循环)\n```cpp\n#include <iostream>\n\nint\
+  \ main() {\n  int i = 1;\n  while (i <= 5) {\n    std::cout << i << \" \";\n   \
+  \ i++;\n  }\n  std::cout << std::endl;\n  return 0;\n}\n```\n\n## 7. 循环 (do-while\
+  \ 循环)\n```cpp\n#include <iostream>\n\nint main() {\n  int i = 1;\n  do {\n    std::cout\
+  \ << i << \" \";\n    i++;\n  } while (i <= 5);\n  std::cout << std::endl;\n  return\
+  \ 0;\n}\n```\n\n## 8. 数组\n```cpp\n#include <iostream>\n\nint main() {\n  int arr[5]\
+  \ = {1, 2, 3, 4, 5};\n  for (int i = 0; i < 5; ++i) {\n    std::cout << arr[i] <<\
+  \ \" \";\n  }\n  std::cout << std::endl;\n  return 0;\n}\n```\n\n## 9. 函数\n```cpp\n\
+  #include <iostream>\n\nint add(int a, int b) {\n  return a + b;\n}\n\nint main()\
+  \ {\n  int result = add(3, 5);\n  std::cout << \"Sum: \" << result << std::endl;\n\
+  \  return 0;\n}\n```\n\n## 10. 递归\n```cpp\n#include <iostream>\n\nint factorial(int\
+  \ n) {\n  if (n <= 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}\n\
+  \nint main() {\n  int num = 5;\n  int fact = factorial(num);\n  std::cout << \"\
+  Factorial of \" << num << \" is \" << fact << std::endl;\n  return 0;\n}\n```\n\n\
+  ## 11. 字符串\n```cpp\n#include <iostream>\n#include <string>\n\nint main() {\n  std::string\
+  \ greeting = \"Hello, C++\";\n  std::cout << greeting << std::endl;\n  return 0;\n\
+  }\n```\n\n## 12. 字符串输入输出\n```cpp\n#include <iostream>\n#include <string>\n\nint\
+  \ main() {\n  std::string name;\n  std::cout << \"Enter your name: \";\n  std::cin\
+  \ >> name;\n  std::cout << \"Hello, \" << name << \"!\" << std::endl;\n  return\
+  \ 0;\n}\n```\n\n## 13. 字符串拼接\n```cpp\n#include <iostream>\n#include <string>\n\n\
+  int main() {\n  std::string first_name = \"John\";\n  std::string last_name = \"\
+  Doe\";\n  std::string full_name = first_name + \" \" + last_name;\n  std::cout <<\
+  \ \"Full Name: \" << full_name << std::endl;\n  return 0;\n}\n```\n\n## 14. 字符串长度\n\
+  ```cpp\n#include <iostream>\n#include <string>\n\nint main() {\n  std::string text\
+  \ = \"C++ Programming\";\n  int length = text.length();\n  std::cout << \"Length\
+  \ of the string: \" << length << std::endl;\n  return 0;\n}\n```\n\n## 15. 字符串比较\n\
+  ```cpp\n#include <iostream>\n#include <string>\n\nint main() {\n  std::string str1\
+  \ = \"apple\";\n  std::string str2 = \"banana\";\n  if (str1 == str2) {\n    std::cout\
+  \ << \"Strings are equal\" << std::endl;\n  } else {\n    std::cout << \"Strings\
+  \ are not equal\" << std::endl;\n  }\n  return 0;\n}\n```\n\n## 16. 字符串数组\n```cpp\n\
+  #include <iostream>\n#include <string>\n\nint main() {\n  std::string fruits[] =\
+  \ {\"apple\", \"banana\", \"cherry\"};\n  for (int i = 0; i < 3; ++i) {\n    std::cout\
+  \ << \"Fruit: \" << fruits[i] << std::endl;\n  }\n  return 0;\n}\n```\n\n## 17.\
+  \ 多维数组\n```cpp\n#include <iostream>\n\nint main() {\n  int matrix[3][3] = {{1, 2,\
+  \ 3}, {4, 5, 6}, {7, 8, 9}};\n  for (int i = 0; i < 3; ++i) {\n    for (int j =\
+  \ 0; j < 3; ++j) {\n      std::cout << matrix[i][j] << \" \";\n    }\n    std::cout\
+  \ << std::endl;\n  }\n  return 0;\n}\n```\n\n## 18. 指针\n```cpp\n#include <iostream>\n\
+  \nint main() {\n  int num = 42;\n  int *ptr = &num;\n  std::cout << \"Value: \"\
+  \ << *ptr << std::endl;\n  std::cout << \"Address: \" << ptr << std::endl;\n  return\
+  \ 0;\n}\n```\n\n## 19. 动态内存分配\n```cpp\n#include <iostream>\n\nint main() {\n  int\
+  \ *arr = new int[5];\n  for (int i = 0; i < 5; ++i) {\n    arr[i] = i + 1;\n  }\n\
+  \  for (int i = 0; i < 5; ++i) {\n    std::cout << arr[i] << \" \";\n  }\n  delete[]\
+  \ arr;\n  return 0;\n}\n```\n\n## 20. 结构体\n```cpp\n#include <iostream>\n#include\
+  \ <string>\n\nstruct Person {\n  std::string name;\n  int age;\n};\n\nint main()\
+  \ {\n  Person person;\n  person.name = \"John\";\n  person.age = 30;\n  std::cout\
+  \ << \"Name: \" << person.name << std::endl;\n  std::cout << \"Age: \" << person.age\
+  \ << std::endl;\n  return 0;\n}\n```\n\n## 21. 类与对象\n```cpp\n#include <iostream>\n\
+  #include <string>\n\nclass Student {\npublic:\n  std::string name;\n  int age;\n\
+  \  void display() {\n    std::cout << \"Name: \" << name << std::endl;\n    std::cout\
+  \ << \"Age: \" << age << std::endl;\n  }\n};\n\nint main() {\n  Student student;\n\
+  \  student.name = \"Alice\";\n  student.age = 20;\n  student.display();\n  return\
+  \ 0;\n}\n```\n\n## 22. 类构造函数\n```cpp\n#include <iostream>\n#include <string>\n\n\
+  class Person {\npublic:\n  std::string name;\n  int age;\n  Person(std::string n,\
+  \ int a) {\n    name = n;\n    age = a;\n  }\n  void display() {\n    std::cout\
+  \ << \"Name: \" << name << std::endl;\n    std::cout << \"Age: \" << age << std::endl;\n\
+  \  }\n};\n\nint main() {\n  Person person(\"Bob\", 25);\n  person.display();\n \
+  \ return 0;\n}\n```\n\n## 23. 类继承\n```cpp\n#include <iostream>\n#include <string>\n\
+  \nclass Animal {\npublic:\n  std::string name;\n  Animal(std::string n) : name(n)\
+  \ {}\n  void speak() {\n    std::cout << \"Animal speaks\" << std::endl;\n  }\n\
+  };\n\nclass Dog : public Animal {\npublic:\n  Dog(std::string n) : Animal(n) {}\n\
+  \  void speak() {\n    std::cout << \"Dog barks\" << std::endl;\n  }\n};\n\nint\
+  \ main() {\n  Dog dog(\"Buddy\");\n  std::cout << \"Name: \" << dog.name << std::endl;\n\
+  \  dog.speak();\n  return 0;\n}\n```\n\n## 24. 运算符重载\n```cpp\n#include <iostream>\n\
+  \nclass Complex {\npublic:\n  double real;\n  double imag;\n  Complex(double r,\
+  \ double i) : real(r), imag(i) {}\n  Complex operator +(const Complex& other) {\n\
+  \    return Complex(real + other.real, imag + other.imag);\n  }\n  void display()\
+  \ {\n    std::cout << real << \" + \" << imag << \"i\" << std::endl;\n  }\n};\n\n\
+  int main() {\n  Complex c1(2.0, 3.0);\n  Complex c2(1.0, 1.0);\n  Complex result\
+  \ = c1 + c2;\n  result.display();\n  return 0;\n}\n```\n\n## 25. 异常处理\n```cpp\n\
+  #include <iostream>\n\nint main() {\n  try {\n    int denominator = 0;\n    if (denominator\
+  \ == 0) {\n      throw \"Division by zero!\";\n    }\n    int result = 10 / denominator;\n\
+  \    std::cout << \"Result: \" << result << std::endl;\n  } catch (const char* error)\
+  \ {\n    std::cerr << \"Error: \" << error << std::endl;\n  }\n  return 0;\n}\n\
+  ```\n\n## 26. 文件输入输出\n```cpp\n#include <iostream>\n#include <fstream>\n\nint main()\
+  \ {\n  std::ofstream outfile(\"sample.txt\");\n  if (outfile.is_open()) {\n    outfile\
+  \ << \"Hello, C++ File IO!\" << std::endl;\n    outfile.close();\n  }\n  return\
+  \ 0;\n}\n```\n\n\n\n\n\n```cpp\nstd::cout << \"File written successfully.\" << std::endl;\n\
+  } else {\n    std::cerr << \"Unable to open file.\" << std::endl;\n}\n\nreturn 0;\n\
+  }\n```\n\n## 27. 从文件读取\n\n```cpp\n#include <iostream>\n#include <fstream>\n#include\
+  \ <string>\n\nint main() {\n    std::ifstream infile(\"sample.txt\");\n    if (infile.is_open())\
+  \ {\n        std::string line;\n        while (std::getline(infile, line)) {\n \
+  \           std::cout << line << std::endl;\n        }\n        infile.close();\n\
+  \    } else {\n        std::cerr << \"Unable to open file.\" << std::endl;\n   \
+  \ }\n    return 0;\n}\n```\n\n## 28. 写入与读取二进制数据\n\n```cpp\n#include <iostream>\n\
+  #include <fstream>\n\nint main() {\n    // 写入二进制数据\n    int data[] = {1, 2, 3, 4,\
+  \ 5};\n    std::ofstream outfile(\"data.bin\", std::ios::binary);\n    if (outfile.is_open())\
+  \ {\n        outfile.write(reinterpret_cast<char*>(data), sizeof(data));\n     \
+  \   outfile.close();\n        std::cout << \"Binary data written successfully.\"\
+  \ << std::endl;\n    } else {\n        std::cerr << \"Unable to open file.\" <<\
+  \ std::endl;\n    }\n    // 读取二进制数据\n    int readData[5];\n    std::ifstream infile(\"\
+  data.bin\", std::ios::binary);\n    if (infile.is_open()) {\n        infile.read(reinterpret_cast<char*>(readData),\
+  \ sizeof(readData));\n        infile.close();\n        for (int i = 0; i < 5; ++i)\
+  \ {\n            std::cout << readData[i] << \" \";\n        }\n        std::cout\
+  \ << std::endl;\n    } else {\n        std::cerr << \"Unable to open file.\" <<\
+  \ std::endl;\n    }\n    return 0;\n}\n```\n\n## 29. 模板函数\n\n```cpp\n#include <iostream>\n\
+  template <typename T>\nT max(T a, T b) {\n    return (a > b) ? a : b;\n}\n\nint\
+  \ main() {\n    int a = 5, b = 8;\n    std::cout << \"Max: \" << max(a, b) << std::endl;\n\
+  \    double x = 3.14, y = 2.71;\n    std::cout << \"Max: \" << max(x, y) << std::endl;\n\
+  \    return 0;\n}\n```\n\n## 30. 模板类\n\n```cpp\n#include <iostream>\ntemplate <typename\
+  \ T>\nclass Pair {\npublic:\n    T first;\n    T second;\n    Pair(T f, T s) : first(f),\
+  \ second(s) {}\n};\n\nint main() {\n    Pair<int> intPair(1, 2);\n    Pair<double>\
+  \ doublePair(3.14, 2.71);\n    std::cout << \"Int Pair: \" << intPair.first << \"\
+  , \" << intPair.second << std::endl;\n    std::cout << \"Double Pair: \" << doublePair.first\
+  \ << \", \" << doublePair.second << std::endl;\n    return 0;\n}\n```\n\n## 31.\
+  \ 标准模板库 (STL) Vector\n\n```cpp\n#include <iostream>\n#include <vector>\n\nint main()\
+  \ {\n    std::vector<int> numbers;\n    numbers.push_back(1);\n    numbers.push_back(2);\n\
+  \    numbers.push_back(3);\n    for (int i : numbers) {\n        std::cout << i\
+  \ << \" \";\n    }\n    std::cout << std::endl;\n    return 0;\n}\n```\n\n## 32.\
+  \ STL 迭代器\n\n```cpp\n#include <iostream>\n#include <vector>\n\nint main() {\n  \
+  \  std::vector<int> numbers = {1, 2, 3, 4, 5};\n    for (std::vector<int>::iterator\
+  \ it = numbers.begin(); it != numbers.end(); ++it) {\n        std::cout << *it <<\
+  \ \" \";\n    }\n    std::cout << std::endl;\n    return 0;\n}\n```\n\n## 33. STL\
+  \ Map\n\n```cpp\n#include <iostream>\n#include <map>\n\nint main() {\n    std::map<std::string,\
+  \ int> scores;\n    scores[\"Alice\"] = 95;\n    scores[\"Bob\"] = 85;\n    scores[\"\
+  Charlie\"] = 90;\n    std::cout << \"Alice's score: \" << scores[\"Alice\"] << std::endl;\n\
+  \    for (const auto& pair : scores) {\n        std::cout << pair.first << \": \"\
+  \ << pair.second << std::endl;\n    }\n    return 0;\n}\n```\n\n## 34. STL Sets\n\
+  \n```cpp\n#include <iostream>\n#include <set>\n\nint main() {\n    std::set<int>\
+  \ numbers;\n    numbers.insert(5);\n    numbers.insert(2);\n    numbers.insert(8);\n\
+  \    for (int n : numbers) {\n        std::cout << n << \" \";\n    }\n    std::cout\
+  \ << std::endl;\n    return 0;\n}\n```\n\n## 35. Lambda 表达式\n\n```cpp\n#include\
+  \ <iostream>\n#include <vector>\n#include <algorithm>\n\nint main() {\n    std::vector<int>\
+  \ numbers = {3, 1, 4, 1, 5, 9, 2, 6, 3, 5};\n    std::cout << \"Even numbers: \"\
+  ;\n    std::for_each(numbers.begin(), numbers.end(), [](int n) {\n        if (n\
+  \ % 2 == 0) {\n            std::cout << n << \" \";\n        }\n    });\n    std::cout\
+  \ << std::endl;\n    return 0;\n}\n```\n\n## 36. C++ 算法\n\n```cpp\n#include <iostream>\n\
+  #include <vector>\n#include <algorithm>\n\nint main() {\n    std::vector<int> numbers\
+  \ = {3, 1, 4, 1, 5, 9, 2, 6, 3, 5};\n    // 排序 vector\n    std::sort(numbers.begin(),\
+  \ numbers.end());\n    // 打印 vector\n    for (int n : numbers) {\n        std::cout\
+  \ << n << \" \";\n    }\n    std::cout << std::endl;\n    // 在 vector 中查找 5 的位置\n\
+  \    auto pos = std::lower_bound(numbers.begin(), numbers.end(), 5);\n    if (pos\
+  \ != numbers.end()) {\n        std::cout << \"Found 5 at position \" << (pos - numbers.begin())\
+  \ << std::endl;\n    } else {\n        std::cout << \"5 not found\" << std::endl;\n\
+  \    }\n    return 0;\n}\n```\n\n## 37. C++ 线程\n\n```cpp\n#include <iostream>\n\
+  #include <thread>\n\nvoid hello() {\n    std::cout << \"Hello from thread!\" <<\
+  \ std::endl;\n}\n\nint main() {\n    std::thread t1(hello);\n    t1.join();\n  \
+  \  return 0;\n}\n```\n\n## 38. 互锁与线程同步\n\n```cpp\n#include <iostream>\n#include\
+  \ <thread>\n#include <mutex>\n\nstd::mutex mtx;\nvoid printNumbers() {\n    for\
+  \ (int i = 1; i <= 10; ++i) {\n        std::lock_guard<std::mutex> lock(mtx);\n\
+  \        std::cout << i << \" \";\n    }\n    std::cout << std::endl;\n}\n\nint\
+  \ main() {\n    std::thread t1(printNumbers);\n    std::thread t2(printNumbers);\n\
+  \    t1.join();\n    t2.join();\n    return 0;\n}\n```\n\n## 39. C++ 智能指针\n\n```cpp\n\
+  #include <iostream>\n#include <memory>\n\nint main() {\n    std::shared_ptr<int>\
+  \ ptr1 = std::make_shared<int>(42);\n    std::shared_ptr<int> ptr2 = ptr1;\n   \
+  \ std::cout << \"ptr1: \" << *ptr1 << \", ptr2: \" << *ptr2 << std::endl;\n    return\
+  \ 0;\n}\n```\n\n## 40. Lambda 捕获\n\n```cpp\n#include <iostream>\n\nint main() {\n\
+  \    int x = 10;\n    auto lambda = [x]() {\n        std::cout << \"Captured value:\
+  \ \" << x << std::endl;\n    };\n    lambda();\n    return 0;\n}\n```\n\n## 41.\
+  \ C++ RAII (资源获取初始化)\n\n```cpp\n#include <iostream>\n#include <fstream>\n\nclass\
+  \ FileWriter {\npublic:\n    FileWriter(const std::string& filename) {\n       \
+  \ file.open(filename);\n    }\n    ~FileWriter() {\n        if (file.is_open())\
+  \ {\n            file.close();\n        }\n    }\n    void write(const std::string&\
+  \ text) {\n        if (file.is_open()) {\n            file << text;\n        }\n\
+  \    }\nprivate:\n    std::ofstream file;\n};\n\nint main() {\n    FileWriter writer(\"\
+  output.txt\");\n    writer.write(\"Hello, RAII!\");\n    return 0;\n}\n```\n\n##\
+  \ 42. C++ 移动语义\n\n```cpp\n#include <iostream>\n#include <vector>\n\nint main() {\n\
+  \    std::vector<int> source = {1, 2, 3};\n    std::vector<int> destination = std::move(source);\n\
+  \    std::cout << \"Source size: \" << source.size() << std::endl;\n    std::cout\
+  \ << \"Destination size: \" << destination.size() << std::endl;\n    return 0;\n\
+  }\n```\n\n## 43. C++ 类型别名 (using)\n\n```cpp\n#include <iostream>\nusing Age = int;\n\
+  \nint main() {\n    Age myAge = 30;\n    std::cout << \"My age is: \" << myAge <<\
+  \ std::endl;\n    return 0;\n}\n```\n\n## 44. C++ 枚举\n\n```cpp\n#include <iostream>\n\
+  enum Color { RED, GREEN, BLUE };\n\nint main() {\n    Color myColor = GREEN;\n \
+  \   if (myColor == GREEN) {\n        std::cout << \"It's green!\" << std::endl;\n\
+  \    }\n    return 0;\n}\n```\n\n## 45. C++ 枚举类\n\n```cpp\n#include <iostream>\n\
+  enum class Color { RED, GREEN, BLUE };\n\nint main() {\n    Color myColor = Color::GREEN;\n\
+  \    if (myColor == Color::GREEN) {\n        std::cout << \"It's green!\" << std::endl;\n\
+  \    }\n    return 0;\n}\n```\n\n## 46. C++ 标准输入输出操纵符\n\n```cpp\n#include <iostream>\n\
+  #include <iomanip>\n\nint main() {\n    double pi = 3.1415926535893;\n    std::cout\
+  \ << \"Default: \" << pi << std::endl;\n    std::cout << std::fixed << pi << std::endl;\n\
+  \    std::cout << std::scientific << pi << std::endl;\n    return 0;\n}\n```\n\n\
+  ## 47. C++ 位运算运算符\n\n```cpp\n#include <iostream>\n\nint main() {\n    int a = 5;\
+  \  // 101\n    int b = 3;  // 011\n    int bitwiseAnd = a & b;\n    int bitwiseOr\
+  \ = a | b;\n    int bitwiseXor = a ^ b;\n    int bitwiseNotA = ~a;\n    int leftShift\
+  \ = a << 1;\n    int rightShift = a >> 1;\n    std::cout << \"AND: \" << bitwiseAnd\
+  \ << std::endl;\n    std::cout << \"OR: \" << bitwiseOr << std::endl;\n    std::cout\
+  \ << \"XOR: \" << bitwiseXor << std::endl;\n    std::cout << \"NOT A: \" << bitwiseNotA\
+  \ << std::endl;\n    std::cout << \"Left Shift: \" << leftShift << std::endl;\n\
+  \    std::cout << \"Right Shift: \" << rightShift << std::endl;\n    return 0;\n\
+  }\n```\n\n## 48. C++ 异常类\n\n```cpp\n#include <iostream>\n#include <stdexcept>\n\n\
+  int main() {\n    try {\n        throw std::runtime_error(\"This is a custom exception\"\
+  );\n    } catch (const std::exception& e) {\n        std::cerr << \"Exception: \"\
+  \ << e.what() << std::endl;\n    }\n    return 0;\n}\n```\n\n## 49. C++ 闭包 (std::function)\n\
+  \n```cpp\n#include <iostream>\n#include <functional>\n\nint main() {\n    std::function<int(int,\
+  \ int)> add = [](int a, int b) {\n        return a + b;\n    };\n    std::cout <<\
+  \ \"Sum: \" << add(3, 5) << std::endl;\n    return 0;\n}\n```\n\n## 50. C++ 自定义迭代器\n\
+  \n```cpp\n#include <iostream>\n#include <vector>\n\nclass MyIterator {\n```\n\n\n\
+  \n\n\n```cpp\nprivate:\n    int index;\n    std::vector<int>& data;\n\npublic:\n\
+  \    MyIterator(std::vector<int>& arr) : index(0), data(arr) {}\n\n    bool hasNext()\
+  \ {\n        return index < data.size();\n    }\n\n    int next() {\n        return\
+  \ data[index++];\n    }\n};\n\nint main() {\n    std::vector<int> numbers = {1,\
+  \ 2, 3, 4, 5};\n    MyIterator iterator(numbers);\n    while (iterator.hasNext())\
+  \ {\n        std::cout << iterator.next() << \" \";\n    }\n    std::cout << std::endl;\n\
+  \    return 0;\n}\n```\n\n感谢\n\n"

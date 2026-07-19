@@ -1,0 +1,52 @@
+name: 10 Lessons About C++ You Need To Learn To Become A Master Programmer
+name_cn: 成为大师程序员需要学习的 10 堂 C++ 课程
+slug: 10-lessons-about-c-you-need-to-learn-to-become-a-master-prog
+toc:
+- - '#'
+  - 第 2 章：进阶 Windows 编程
+- - '##'
+  - 2.1 为动态链接库添加类
+- - '###'
+  - 为类创建源代码
+- - '###'
+  - 将项目生成为 DLL
+- - '###'
+  - 编译 DLL
+- - '###'
+  - 创建引用该 DLL 的独立应用程序
+- - '###'
+  - 开始使用 DLL 功能
+- - '###'
+  - 引用 DLL 头文件
+- - '###'
+  - 告诉系统运行时定位 DLL 的位置
+- - '##'
+  - 章节总结
+- - '#'
+  - 第 3 章：开始使用 Boost 库
+- - '##'
+  - 3.1 介绍
+- - '##'
+  - 3.2 前提条件
+- - '##'
+  - 3.3 在 Microsoft Visual Studio 中配置 Boost
+- - '##'
+  - 3.4 在 Eclipse 中配置 Boost
+- - '##'
+  - 3.5 在 NetBeans 中配置 Boost
+- - '##'
+  - 4.1 实现 Dijkstra 算法
+- - '##'
+  - 4.2 测试图的连通性
+- - '##'
+  - 4.3 Kruskal 算法
+- - '#'
+  - 第 10 章：STL 进应用
+- - '##'
+  - 10.2 选择 STL 容器
+- - '##'
+  - 10.3 STL 算法及其用法
+- - '###'
+  - 变异与转换
+- - '##'
+  - 10.4 更多 STL 提示、技巧与示例

@@ -1,0 +1,782 @@
+<p><img src="image_rsrcZH.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveaspectratio="xMidYMid meet" viewbox="0 0 1203 1920" height="100%" width="100%">
+<image xlink:href="image_rsrcZH.jpg" height="1920" width="1203"></image>
+</svg>
+<p><span id="part0001.xhtml"></span></p>
+<p>50 C++ PROGRAM EXAMPLES</p>
+<p>By – Devbrat Rudra (B.E-CSE)</p>
+<p>INDEX</p>
+<p>1. Hello World</p>
+<p>2. Basic Input and Output</p>
+<p>3. Arithmetic Operations</p>
+<p>4. Conditional Statements (if-else)</p>
+<p>5. Loops (for loop)</p>
+<p>6. Loops (while loop)</p>
+<p>7. Loops (do-while loop)</p>
+<p>8. Arrays</p>
+<p>9. Functions</p>
+<p>10. Recursion</p>
+<p>11. Strings</p>
+<p>12. String Input and Output</p>
+<p>13. String Concatenation</p>
+<p>14. String Length</p>
+<p>15. String Comparison</p>
+<p>16. Arrays of Strings</p>
+<p>17. Multidimensional Arrays</p>
+<p>18. Pointers</p>
+<p>19. Dynamic Memory Allocation</p>
+<p>20. Structures</p>
+<p>21. Classes and Objects</p>
+<p>22. Class Constructors</p>
+<p>23. Class Inheritance</p>
+<p>24. Operator Overloading</p>
+<p>25. Exception Handling</p>
+<p>26. File Input and Output</p>
+<p>27. Read from a File</p>
+<p>28. Write and Read Binary Data</p>
+<p>29. Template Functions</p>
+<p>30. Template Classes</p>
+<p>31. Standard Template Library (STL) Vectors</p>
+<p>32. STL Iterators</p>
+<p>33. STL Maps</p>
+<p>34. STL Sets</p>
+<p>35. Lambda Expressions</p>
+<p>36. C++ Standard Library Algorithms</p>
+<p>37. C++ Threads</p>
+<p>38. Mutex and Thread Synchronization</p>
+<p>39. C++ Smart Pointers</p>
+<p>40. C++ Lambda Capture</p>
+<p>41. C++ RAII (Resource Acquisition Is Initialization)</p>
+<p>42. C++ Move Semantics</p>
+<p>43. C++ Type Aliases (using)</p>
+<p>44. C++ Enums</p>
+<p>45. C++ Enum Classes</p>
+<p>46. C++ Standard Library Input/Output Stream Manipulators</p>
+<p>47. C++ Bitwise Operators</p>
+<p>48. C++ Exception Classes</p>
+<p>49. C++ Closures (std::function)</p>
+<p>50. C++ Custom Iterators</p>
+<p>1. Hello World:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>std::cout &lt;&lt; "Hello, World!" &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>2. Basic Input and Output:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int num;</p>
+<p>std::cout &lt;&lt; "Enter a number: ";</p>
+<p>std::cin &gt;&gt; num;</p>
+<p>std::cout &lt;&lt; "You entered: " &lt;&lt; num &lt;&lt;
+std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>3. Arithmetic Operations:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int a = 5, b = 3;</p>
+<p>std::cout &lt;&lt; "Sum: " &lt;&lt; a + b &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; "Difference: " &lt;&lt; a - b &lt;&lt;
+std::endl;</p>
+<p>std::cout &lt;&lt; "Product: " &lt;&lt; a * b &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; "Quotient: " &lt;&lt; a / b &lt;&lt;
+std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>4. Conditional Statements (if-else):</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int num;</p>
+<p>std::cout &lt;&lt; "Enter a number: ";</p>
+<p>std::cin &gt;&gt; num;</p>
+<p>if (num &gt; 0) {</p>
+<p>std::cout &lt;&lt; "Positive" &lt;&lt; std::endl;</p>
+<p>} else if (num &lt; 0) {</p>
+<p>std::cout &lt;&lt; "Negative" &lt;&lt; std::endl;</p>
+<p>} else {</p>
+<p>std::cout &lt;&lt; "Zero" &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>5. Loops (for loop):</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>for (int i = 1; i &lt;= 5; ++i) {</p>
+<p>std::cout &lt;&lt; i &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>6. Loops (while loop):</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int i = 1;</p>
+<p>while (i &lt;= 5) {</p>
+<p>std::cout &lt;&lt; i &lt;&lt; " ";</p>
+<p>i++;</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>7. Loops (do-while loop):</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int i = 1;</p>
+<p>do {</p>
+<p>std::cout &lt;&lt; i &lt;&lt; " ";</p>
+<p>i++;</p>
+<p>} while (i &lt;= 5);</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>8. Arrays:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int arr[5] = {1, 2, 3, 4, 5};</p>
+<p>for (int i = 0; i &lt; 5; ++i) {</p>
+<p>std::cout &lt;&lt; arr[i] &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>9. Functions:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int add(int a, int b) {</p>
+<p>return a + b;</p>
+<p>}</p>
+<p>int main() {</p>
+<p>int result = add(3, 5);</p>
+<p>std::cout &lt;&lt; "Sum: " &lt;&lt; result &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>10. Recursion:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int factorial(int n) {</p>
+<p>if (n &lt;= 1) {</p>
+<p>return 1;</p>
+<p>}</p>
+<p>return n * factorial(n - 1);</p>
+<p>}</p>
+<p>int main() {</p>
+<p>int num = 5;</p>
+<p>int fact = factorial(num);</p>
+<p>std::cout &lt;&lt; "Factorial of " &lt;&lt; num &lt;&lt; " is "
+&lt;&lt; fact &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>11. Strings:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>int main() {</p>
+<p>std::string greeting = "Hello, C++";</p>
+<p>std::cout &lt;&lt; greeting &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>12. String Input and Output:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>int main() {</p>
+<p>std::string name;</p>
+<p>std::cout &lt;&lt; "Enter your name: ";</p>
+<p>std::cin &gt;&gt; name;</p>
+<p>std::cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; "!" &lt;&lt;
+std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>13. String Concatenation:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>int main() {</p>
+<p>std::string first_name = "John";</p>
+<p>std::string last_name = "Doe";</p>
+<p>std::string full_name = first_name + " " + last_name;</p>
+<p>std::cout &lt;&lt; "Full Name: " &lt;&lt; full_name &lt;&lt;
+std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>14. String Length:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>int main() {</p>
+<p>std::string text = "C++ Programming";</p>
+<p>int length = text.length();</p>
+<p>std::cout &lt;&lt; "Length of the string: " &lt;&lt; length &lt;&lt;
+std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>15. String Comparison:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>int main() {</p>
+<p>std::string str1 = "apple";</p>
+<p>std::string str2 = "banana";</p>
+<p>if (str1 == str2) {</p>
+<p>std::cout &lt;&lt; "Strings are equal" &lt;&lt; std::endl;</p>
+<p>} else {</p>
+<p>std::cout &lt;&lt; "Strings are not equal" &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>16. Arrays of Strings:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>int main() {</p>
+<p>std::string fruits[] = {"apple", "banana", "cherry"};</p>
+<p>for (int i = 0; i &lt; 3; ++i) {</p>
+<p>std::cout &lt;&lt; "Fruit: " &lt;&lt; fruits[i] &lt;&lt;
+std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>17. Multidimensional Arrays:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int matrix[3][3] = {{1, 2, 3},</p>
+<p>{4, 5, 6},</p>
+<p>{7, 8, 9}};</p>
+<p>for (int i = 0; i &lt; 3; ++i) {</p>
+<p>for (int j = 0; j &lt; 3; ++j) {</p>
+<p>std::cout &lt;&lt; matrix[i][j] &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>18. Pointers:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int num = 42;</p>
+<p>int *ptr = &amp;num;</p>
+<p>std::cout &lt;&lt; "Value: " &lt;&lt; *ptr &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; "Address: " &lt;&lt; ptr &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>19. Dynamic Memory Allocation:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int *arr = new int</p>
+<p>[5];</p>
+<p>for (int i = 0; i &lt; 5; ++i) {</p>
+<p>arr[i] = i + 1;</p>
+<p>}</p>
+<p>for (int i = 0; i &lt; 5; ++i) {</p>
+<p>std::cout &lt;&lt; arr[i] &lt;&lt; " ";</p>
+<p>}</p>
+<p>delete[] arr;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>20. Structures:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>struct Person {</p>
+<p>std::string name;</p>
+<p>int age;</p>
+<p>};</p>
+<p>int main() {</p>
+<p>Person person;</p>
+<p>person.name = "John";</p>
+<p>person.age = 30;</p>
+<p>std::cout &lt;&lt; "Name: " &lt;&lt; person.name &lt;&lt;
+std::endl;</p>
+<p>std::cout &lt;&lt; "Age: " &lt;&lt; person.age &lt;&lt;
+std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>21. Classes and Objects:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>class Student {</p>
+<p>public:</p>
+<p>std::string name;</p>
+<p>int age;</p>
+<p>void display() {</p>
+<p>std::cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>};</p>
+<p>int main() {</p>
+<p>Student student;</p>
+<p>student.name = "Alice";</p>
+<p>student.age = 20;</p>
+<p>student.display();</p>
+<p>return 0;</p>
+<p>}</p>
+<p>22. Class Constructors:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>class Person {</p>
+<p>public:</p>
+<p>std::string name;</p>
+<p>int age;</p>
+<p>Person(std::string n, int a) {</p>
+<p>name = n;</p>
+<p>age = a;</p>
+<p>}</p>
+<p>void display() {</p>
+<p>std::cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; "Age: " &lt;&lt; age &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>};</p>
+<p>int main() {</p>
+<p>Person person("Bob", 25);</p>
+<p>person.display();</p>
+<p>return 0;</p>
+<p>}</p>
+<p>23. Class Inheritance:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>class Animal {</p>
+<p>public:</p>
+<p>std::string name;</p>
+<p>Animal(std::string n) : name(n) {}</p>
+<p>void speak() {</p>
+<p>std::cout &lt;&lt; "Animal speaks" &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>};</p>
+<p>class Dog : public Animal {</p>
+<p>public:</p>
+<p>Dog(std::string n) : Animal(n) {}</p>
+<p>void speak() {</p>
+<p>std::cout &lt;&lt; "Dog barks" &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>};</p>
+<p>int main() {</p>
+<p>Dog dog("Buddy");</p>
+<p>std::cout &lt;&lt; "Name: " &lt;&lt; dog.name &lt;&lt; std::endl;</p>
+<p>dog.speak();</p>
+<p>return 0;</p>
+<p>}</p>
+<p>24. Operator Overloading:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>class Complex {</p>
+<p>public:</p>
+<p>double real;</p>
+<p>double imag;</p>
+<p>Complex(double r, double i) : real(r), imag(i) {}</p>
+<p>Complex operator + (const Complex&amp; other) {</p>
+<p>return Complex(real + other.real, imag + other.imag);</p>
+<p>}</p>
+<p>void display() {</p>
+<p>std::cout &lt;&lt; real &lt;&lt; " + " &lt;&lt; imag &lt;&lt; "i"
+&lt;&lt; std::endl;</p>
+<p>}</p>
+<p>};</p>
+<p>int main() {</p>
+<p>Complex c1(2.0, 3.0);</p>
+<p>Complex c2(1.0, 1.0);</p>
+<p>Complex result = c1 + c2;</p>
+<p>result.display();</p>
+<p>return 0;</p>
+<p>}</p>
+<p>25. Exception Handling:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>try {</p>
+<p>int denominator = 0;</p>
+<p>if (denominator == 0) {</p>
+<p>throw "Division by zero!";</p>
+<p>}</p>
+<p>int result = 10 / denominator;</p>
+<p>std::cout &lt;&lt; "Result: " &lt;&lt; result &lt;&lt; std::endl;</p>
+<p>} catch (const char* error) {</p>
+<p>std::cerr &lt;&lt; "Error: " &lt;&lt; error &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>26. File Input and Output:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;fstream&gt;</p>
+<p>int main() {</p>
+<p>std::ofstream outfile("sample.txt");</p>
+<p>if (outfile.is_open()) {</p>
+<p>outfile &lt;&lt; "Hello, C++ File IO!" &lt;&lt; std::endl;</p>
+<p>outfile.close();</p>
+<p>std::cout &lt;&lt; "File written successfully." &lt;&lt;
+std::endl;</p>
+<p>} else {</p>
+<p>std::cerr &lt;&lt; "Unable to open file." &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>27. Read from a File:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;fstream&gt;</p>
+<p>#include &lt;string&gt;</p>
+<p>int main() {</p>
+<p>std::ifstream infile("sample.txt");</p>
+<p>if (infile.is_open()) {</p>
+<p>std::string line;</p>
+<p>while (std::getline(infile, line)) {</p>
+<p>std::cout &lt;&lt; line &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>infile.close();</p>
+<p>} else {</p>
+<p>std::cerr &lt;&lt; "Unable to open file." &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>28. Write and Read Binary Data:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;fstream&gt;</p>
+<p>int main() {</p>
+<p>// Writing binary data</p>
+<p>int data[] = {1, 2, 3, 4, 5};</p>
+<p>std::ofstream outfile("data.bin", std::ios::binary);</p>
+<p>if (outfile.is_open()) {</p>
+<p>outfile.write(reinterpret_cast&lt;char*&gt;(data), sizeof(data));</p>
+<p>outfile.close();</p>
+<p>std::cout &lt;&lt; "Binary data written successfully." &lt;&lt;
+std::endl;</p>
+<p>} else {</p>
+<p>std::cerr &lt;&lt; "Unable to open file." &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>// Reading binary data</p>
+<p>int readData[5];</p>
+<p>std::ifstream infile("data.bin", std::ios::binary);</p>
+<p>if (infile.is_open()) {</p>
+<p>infile.read(reinterpret_cast&lt;char*&gt;(readData),
+sizeof(readData));</p>
+<p>infile.close();</p>
+<p>for (int i = 0; i &lt; 5; ++i) {</p>
+<p>std::cout &lt;&lt; readData[i] &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>} else {</p>
+<p>std::cerr &lt;&lt; "Unable to open file." &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>29. Template Functions:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>template &lt;typename T&gt;</p>
+<p>T max(T a, T b) {</p>
+<p>return (a &gt; b) ? a : b;</p>
+<p>}</p>
+<p>int main() {</p>
+<p>int a = 5, b = 8;</p>
+<p>std::cout &lt;&lt; "Max: " &lt;&lt; max(a, b) &lt;&lt; std::endl;</p>
+<p>double x = 3.14, y = 2.71;</p>
+<p>std::cout &lt;&lt; "Max: " &lt;&lt; max(x, y) &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>30. Template Classes:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>template &lt;typename T&gt;</p>
+<p>class Pair {</p>
+<p>public:</p>
+<p>T first;</p>
+<p>T second;</p>
+<p>Pair(T f, T s) : first(f), second(s) {}</p>
+<p>};</p>
+<p>int main() {</p>
+<p>Pair&lt;int&gt; intPair(1, 2);</p>
+<p>Pair&lt;double&gt; doublePair(3.14, 2.71);</p>
+<p>std::cout &lt;&lt; "Int Pair: " &lt;&lt; intPair.first &lt;&lt; ", "
+&lt;&lt; intPair.second &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; "Double Pair: " &lt;&lt; doublePair.first &lt;&lt;
+", " &lt;&lt; doublePair.second &lt;&lt; std::endl;</p>
+<p>return 0</p>
+<p>;</p>
+<p>}</p>
+<p>31. Standard Template Library (STL) Vectors:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;vector&gt;</p>
+<p>int main() {</p>
+<p>std::vector&lt;int&gt; numbers;</p>
+<p>numbers.push_back(1);</p>
+<p>numbers.push_back(2);</p>
+<p>numbers.push_back(3);</p>
+<p>for (int i : numbers) {</p>
+<p>std::cout &lt;&lt; i &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>32. STL Iterators:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;vector&gt;</p>
+<p>int main() {</p>
+<p>std::vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};</p>
+<p>for (std::vector&lt;int&gt;::iterator it = numbers.begin(); it !=
+numbers.end(); ++it) {</p>
+<p>std::cout &lt;&lt; *it &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>33. STL Maps:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;map&gt;</p>
+<p>int main() {</p>
+<p>std::map&lt;std::string, int&gt; scores;</p>
+<p>scores["Alice"] = 95;</p>
+<p>scores["Bob"] = 85;</p>
+<p>scores["Charlie"] = 90;</p>
+<p>std::cout &lt;&lt; "Alice's score: " &lt;&lt; scores["Alice"]
+&lt;&lt; std::endl;</p>
+<p>for (const auto&amp; pair : scores) {</p>
+<p>std::cout &lt;&lt; pair.first &lt;&lt; ": " &lt;&lt; pair.second
+&lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>34. STL Sets:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;set&gt;</p>
+<p>int main() {</p>
+<p>std::set&lt;int&gt; numbers;</p>
+<p>numbers.insert(5);</p>
+<p>numbers.insert(2);</p>
+<p>numbers.insert(8);</p>
+<p>for (int n : numbers) {</p>
+<p>std::cout &lt;&lt; n &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>35. Lambda Expressions:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;vector&gt;</p>
+<p>#include &lt;algorithm&gt;</p>
+<p>int main() {</p>
+<p>std::vector&lt;int&gt; numbers = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3,
+5};</p>
+<p>std::cout &lt;&lt; "Even numbers: ";</p>
+<p>std::for_each(numbers.begin(), numbers.end(), [](int n) {</p>
+<p>if (n % 2 == 0) {</p>
+<p>std::cout &lt;&lt; n &lt;&lt; " ";</p>
+<p>}</p>
+<p>});</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>36. C++ Standard Library Algorithms:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;vector&gt;</p>
+<p>#include &lt;algorithm&gt;</p>
+<p>int main() {</p>
+<p>std::vector&lt;int&gt; numbers = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3,
+5};</p>
+<p>// Sort the vector</p>
+<p>std::sort(numbers.begin(), numbers.end());</p>
+<p>// Print sorted vector</p>
+<p>for (int n : numbers) {</p>
+<p>std::cout &lt;&lt; n &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>// Find the position of 5 in the sorted vector</p>
+<p>auto pos = std::lower_bound(numbers.begin(), numbers.end(), 5);</p>
+<p>if (pos != numbers.end()) {</p>
+<p>std::cout &lt;&lt; "Found 5 at position " &lt;&lt; (pos -
+numbers.begin()) &lt;&lt; std::endl;</p>
+<p>} else {</p>
+<p>std::cout &lt;&lt; "5 not found" &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>37. C++ Threads:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;thread&gt;</p>
+<p>void hello() {</p>
+<p>std::cout &lt;&lt; "Hello from thread!" &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>int main() {</p>
+<p>std::thread t1(hello);</p>
+<p>t1.join();</p>
+<p>return 0;</p>
+<p>}</p>
+<p>38. Mutex and Thread Synchronization:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;thread&gt;</p>
+<p>#include &lt;mutex&gt;</p>
+<p>std::mutex mtx;</p>
+<p>void printNumbers() {</p>
+<p>for (int i = 1; i &lt;= 10; ++i) {</p>
+<p>std::lock_guard&lt;std::mutex&gt; lock(mtx);</p>
+<p>std::cout &lt;&lt; i &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>int main() {</p>
+<p>std::thread t1(printNumbers);</p>
+<p>std::thread t2(printNumbers);</p>
+<p>t1.join();</p>
+<p>t2.join();</p>
+<p>return 0;</p>
+<p>}</p>
+<p>39. C++ Smart Pointers:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;memory&gt;</p>
+<p>int main() {</p>
+<p>std::shared_ptr&lt;int&gt; ptr1 =
+std::make_shared&lt;int&gt;(42);</p>
+<p>std::shared_ptr&lt;int&gt; ptr2 = ptr1;</p>
+<p>std::cout &lt;&lt; "ptr1: " &lt;&lt; *ptr1 &lt;&lt; ", ptr2: "
+&lt;&lt; *ptr2 &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>40. C++ Lambda Capture:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int x = 10;</p>
+<p>auto lambda = [x]() {</p>
+<p>std::cout &lt;&lt; "Captured value: " &lt;&lt; x &lt;&lt;
+std::endl;</p>
+<p>};</p>
+<p>lambda();</p>
+<p>return 0;</p>
+<p>}</p>
+<p>41. C++ RAII (Resource Acquisition Is Initialization):</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;fstream&gt;</p>
+<p>class FileWriter {</p>
+<p>public:</p>
+<p>FileWriter(const std::string&amp; filename) {</p>
+<p>file.open(filename);</p>
+<p>}</p>
+<p>~FileWriter() {</p>
+<p>if (file.is_open()) {</p>
+<p>file.close();</p>
+<p>}</p>
+<p>}</p>
+<p>void write(const std::string&amp; text) {</p>
+<p>if (file.is_open()) {</p>
+<p>file &lt;&lt; text;</p>
+<p>}</p>
+<p>}</p>
+<p>private:</p>
+<p>std::ofstream file;</p>
+<p>};</p>
+<p>int main() {</p>
+<p>FileWriter writer("output.txt");</p>
+<p>writer.write("Hello, RAII!");</p>
+<p>return 0;</p>
+<p>}</p>
+<p>42. C++ Move Semantics:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;vector&gt;</p>
+<p>int main() {</p>
+<p>std::vector&lt;int&gt; source = {1, 2, 3};</p>
+<p>std::vector&lt;int&gt; destination = std::move(source);</p>
+<p>std::cout &lt;&lt; "Source size: " &lt;&lt; source.size() &lt;&lt;
+std::endl;</p>
+<p>std::cout &lt;&lt; "Destination size: " &lt;&lt; destination.size()
+&lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>43. C++ Type Aliases (using):</p>
+<p>#include &lt;iostream&gt;</p>
+<p>using Age = int;</p>
+<p>int main() {</p>
+<p>Age myAge = 30;</p>
+<p>std::cout &lt;&lt; "My age is: " &lt;&lt; myAge &lt;&lt;
+std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>44. C++ Enums:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>enum Color { RED, GREEN, BLUE };</p>
+<p>int main() {</p>
+<p>Color myColor = GREEN;</p>
+<p>if (myColor == GREEN) {</p>
+<p>std::cout &lt;&lt; "It's green!" &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>45. C++ Enum Classes:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>enum class Color { RED, GREEN, BLUE };</p>
+<p>int main() {</p>
+<p>Color myColor = Color::GREEN;</p>
+<p>if (myColor == Color::GREEN) {</p>
+<p>std::cout &lt;&lt; "It's green!" &lt;&lt; std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>46. C++ Standard Library Input/Output Stream Manipulators:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;iomanip&gt;</p>
+<p>int main() {</p>
+<p>double pi = 3.141592653589793;</p>
+<p>std::cout &lt;&lt; "Default: " &lt;&lt; pi &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; "Fixed: " &lt;&lt; std::fixed &lt;&lt; pi &lt;&lt;
+std::endl;</p>
+<p>std::cout &lt;&lt; "Scientific: " &lt;&lt; std::scientific &lt;&lt;
+pi &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>47. C++ Bitwise Operators:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>int main() {</p>
+<p>int a = 5;  // 0101</p>
+<p>int b = 3;  // 0011</p>
+<p>int bitwiseAnd = a &amp; b;</p>
+<p>int bitwiseOr = a | b;</p>
+<p>int bitwiseXor = a ^ b;</p>
+<p>int bitwiseNotA = ~a;</p>
+<p>int leftShift = a &lt;&lt; 1;</p>
+<p>int rightShift = a &gt;&gt; 1;</p>
+<p>std::cout &lt;&lt; "AND: " &lt;&lt; bitwiseAnd &lt;&lt;
+std::endl;</p>
+<p>std::cout &lt;&lt; "OR: " &lt;&lt; bitwiseOr &lt;&lt; std::endl;</p>
+<p>std::cout &lt;&lt; "XOR: " &lt;&lt; bitwiseXor &lt;&lt;
+std::endl;</p>
+<p>std::cout &lt;&lt; "NOT A: " &lt;&lt; bitwiseNotA &lt;&lt;
+std::endl;</p>
+<p>std::cout &lt;&lt; "Left Shift: " &lt;&lt; leftShift &lt;&lt;
+std::endl;</p>
+<p>std::cout &lt;&lt; "Right Shift: " &lt;&lt; rightShift &lt;&lt;
+std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>48. C++ Exception Classes:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;stdexcept&gt;</p>
+<p>int main() {</p>
+<p>try {</p>
+<p>throw std::runtime_error("This is a custom exception");</p>
+<p>} catch (const std::exception&amp; e) {</p>
+<p>std::cerr &lt;&lt; "Exception: " &lt;&lt; e.what() &lt;&lt;
+std::endl;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>49. C++ Closures (std::function):</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;functional&gt;</p>
+<p>int main() {</p>
+<p>std::function&lt;int(int, int)&gt; add = [](int a, int b) {</p>
+<p>return a + b;</p>
+<p>};</p>
+<p>std::cout &lt;&lt; "Sum: " &lt;&lt; add(3, 5) &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>50. C++ Custom Iterators:</p>
+<p>#include &lt;iostream&gt;</p>
+<p>#include &lt;vector&gt;</p>
+<p>class MyIterator {</p>
+<p>private:</p>
+<p>int index;</p>
+<p>std::vector&lt;int&gt;&amp; data;</p>
+<p>public:</p>
+<p>MyIterator(std::vector&lt;int&gt;&amp; arr) : index(0), data(arr)
+{}</p>
+<p>bool hasNext() {</p>
+<p>return index &lt; data.size();</p>
+<p>}</p>
+<p>int next() {</p>
+<p>return data[index++];</p>
+<p>}</p>
+<p>};</p>
+<p>int main() {</p>
+<p>std::vector&lt;int&gt; numbers = {1, 2, 3, 4, 5};</p>
+<p>MyIterator iterator(numbers);</p>
+<p>while (iterator.hasNext()) {</p>
+<p>std::cout &lt;&lt; iterator.next() &lt;&lt; " ";</p>
+<p>}</p>
+<p>std::cout &lt;&lt; std::endl;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Thank You</p>

@@ -1,0 +1,522 @@
+name: 2D Computer Graphics in Modern C++ and Standard Library
+name_cn: 现代 C++ 与标准库 2D 计算机图形学
+slug: 2d-computer-graphics-in-modern-c-and-standard-library
+toc:
+- - '#'
+  - 现代 C++ 与标准库
+- - '#'
+  - 2D 计算机图形学
+- - '##'
+  - 2D 绘制基础
+- - '###'
+  - 历史
+- - '###'
+  - 标准库
+- - '###'
+  - 编译代码示例
+- - '###'
+  - 前提条件
+- - '####'
+  - 下载源代码
+- - '##'
+  - 使用标准库绘制像素
+- - '###'
+  - 使用标准库生成纹理
+- - '###'
+  - 使用标准库绘制线条
+- - '####'
+  - 减法
+- - '####'
+  - 除法
+- - '####'
+  - 加法
+- - '##'
+  - 没有直线曲线，只有曲线线条
+- - '###'
+  - 使用标准库绘制矩形
+- - '###'
+  - 使用标准库绘制圆
+- - '##'
+  - 直接像素操作函数
+- - '##'
+  - 探索 ppmpp.hpp 中的颜色辅助函数
+- - '###'
+  - 颜色混合函数
+- - '###'
+  - 色彩空间转换函数
+- - '##'
+  - 探索 ppmpp.hpp 中 Image 类的构造函数和运算符
+- - '###'
+  - 构造函数
+- - '###'
+  - 拷贝构造函数和赋值运算符
+- - '###'
+  - 移动构造函数和赋值运算符
+- - '###'
+  - 比较运算符
+- - '##'
+  - 探索 ppmpp.hpp 中 Image 类的公共方法
+- - '###'
+  - 基础图像操作方法
+- - '###'
+  - 像素操作方法
+- - '###'
+  - 绘图和形状方法
+- - '###'
+  - 高级图像处理方法
+- - '###'
+  - 文件输入输出
+- - '##'
+  - 更多细节
+- - '###'
+  - 深入理解 `ppmpp.hpp` 中的 `blendColors` 函数
+- - '####'
+  - 函数签名
+- - '####'
+  - 逻辑
+- - '####'
+  - 实际应用
+- - '####'
+  - 使用示例
+- - '###'
+  - 深入理解 `ppmpp.hpp` 中的 `setHSV` 和 `getHSV` 函数
+- - '####'
+  - '`setHSV` 函数'
+- - '####'
+  - '`getHSV` 函数'
+- - '####'
+  - 实际应用
+- - '##'
+  - 'PPMMP: 图像处理函数参考'
+- - '###'
+  - '`void setPixel(int xCoord, int yCoord, const Pixel& newPixel)`'
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '###'
+  - '`void getAngledLine(Coord& lineCoords, const Point& center, double degrees, int
+    length)`'
+- - '####'
+  - 目的
+- - '####'
+  - 功能
+- - '#'
+  - 角度转换
+- - '##'
+  - 使用示例
+- - '##'
+  - 备注
+- - '#'
+  - void drawBezierQuadratic(const Point& pt0, const Point& pt1, const Point& pt2,
+    int split, const Pixel& bezierColor)
+- - '##'
+  - 目的
+- - '##'
+  - 参数
+- - '##'
+  - 功能
+- - '##'
+  - 使用示例
+- - '##'
+  - 备注
+- - '#'
+  - void drawBezierCubic(const Point& pt0, const Point& pt1, const Point& pt2, const
+    Point& pt3, int split, const Pixel& bezierColor)
+- - '##'
+  - 目的
+- - '##'
+  - 参数
+- - '##'
+  - 功能
+- - '##'
+  - 使用示例
+- - '##'
+  - 备注
+- - '#'
+  - void drawRectangle(const Point& xy, const Point& wh, const Pixel& bezierColor)
+- - '##'
+  - 目的
+- - '##'
+  - 参数
+- - '##'
+  - 功能
+- - '##'
+  - 使用示例
+- - '###'
+  - 备注
+- - '###'
+  - '`void drawFilledRectangle(const Point& xy, const Point& wh, const Pixel& rectangleColor)`'
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '####'
+  - 备注
+- - '###'
+  - '`void drawCircle(const Point& xy, int radius, const Pixel& circleColor)`'
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '####'
+  - 备注
+- - '###'
+  - '`void drawFilledCircle(const Point& xy, int radius, const Pixel& circleColor)`'
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '####'
+  - 备注
+- - '###'
+  - '`void drawWedge(const Point& xy, int radius, int startAngle, int endAngle, const
+    Pixel& circleColor)`'
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 106
+- - '##'
+  - 备注
+- - '###'
+  - void drawFilledWedge(const Point& center, int radius, int startAngle, int endAngle,
+    const Pixel& wedgeColor)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 107
+- - '##'
+  - 备注
+- - '###'
+  - void drawTriangle(const Point& pt1, const Point& pt2, const Point& pt3, const
+    Pixel& triangleColor)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 108
+- - '##'
+  - 备注
+- - '###'
+  - void drawFilledTriangle(const Point& pt1, const Point& pt2, const Point& pt3,
+    const Pixel& fillColor)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 109
+- - '##'
+  - 备注
+- - '###'
+  - drawRotatedRectangle(int x, int y, int w, int h, double angle, const Pixel& px)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '###'
+  - 备注
+- - '###'
+  - void drawFilledRotatedRectangle(int x, int y, int w, int h, double angle, const
+    Pixel& px)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '###'
+  - 备注
+- - '###'
+  - void drawRotatedEllipse(int x, int y, int w, int h, double angle, const Pixel&
+    px)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '###'
+  - 备注
+- - '###'
+  - void drawFilledRotatedEllipse(int x, int y, int w, int h, double angle, const
+    Pixel& px)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 113
+- - '####'
+  - 备注
+- - '###'
+  - void drawRotatedPolygon(const std::vector<Point>& vertices, double angle, const
+    Pixel& px)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 14
+- - '####'
+  - 备注
+- - '###'
+  - void drawFilledRotatedPolygon(const std::vector<Point>& vertices, double angle,
+    const Pixel& px)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 15
+- - '####'
+  - 备注
+- - '###'
+  - getAverageRgb()
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '###'
+  - applyGaussianBlur()
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '###'
+  - applyAntiAliasing()
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '###'
+  - upscale(int scale)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '###'
+  - applyBloom(double threshold, double sigma)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 21
+- - '##'
+  - 备注
+- - '##'
+  - applyLens(int numb)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 22
+- - '##'
+  - 备注
+- - '##'
+  - drawGradients(const std::vector<Color>& colors, double angle_degree)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 23
+- - '##'
+  - 备注
+- - '##'
+  - void read(const std::string& filename)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '#'
+  - 图 24
+- - '##'
+  - 备注
+- - '##'
+  - void write(const std::string& filename)
+- - '####'
+  - 目的
+- - '####'
+  - 参数
+- - '####'
+  - 功能
+- - '####'
+  - 使用示例
+- - '####'
+  - 备注
+- - '#'
+  - 接下来该去哪里
+- - '#'
+  - '1 LaTeX:'
+- - '##'
+  - 在数学和 C++ 中理解阶乘
+- - '##'
+  - 在数学中探索求和概念及其在 C++ 中的实现
+- - '##'
+  - 计算数字的平均值
+- - '##'
+  - 在集合论中理解符号“x e X”及其代码中的实现
+- - '##'
+  - 在数学和 C++ 中使用嵌套求和计算方差
+- - '##'
+  - 平方根
+- - '###'
+  - 立方根
+- - '##'
+  - 复数
+- - '##'
+  - 点积与叉积
+- - '###'
+  - 标量乘法
+- - '###'
+  - 向量乘法
+- - '####'
+  - 点积
+- - '####'
+  - 叉积
+- - '###'
+  - Sigma 求和
+- - '###'
+  - 大 Pi 乘积
+- - '##'
+  - 管道符号 (Pipes)
+- - '###'
+  - 绝对值
+- - '###'
+  - 欧几里得范数
+- - '###'
+  - 行列式
+- - '###'
+  - 尖符号 (Hat)
+- - '##'
+  - 元素 (element of)
+- - '###'
+  - 常用数集
+- - '###'
+  - 函数
+- - '####'
+  - 分段函数
+- - '####'
+  - 常用函数
+- - '####'
+  - 符号
+- - '###'
+  - 撇
+- - '###'
+  - Floor & Ceiling（取整与上取）
+- - '###'
+  - Arrows（箭头）
+- - '####'
+  - Material implication（实质蕴含）
+- - '####'
+  - Equality（等号）
+- - '####'
+  - Conjunction and Disjunction（合与析取）
+- - '###'
+  - 逻辑否定
+- - '###'
+  - 区间
+- - '####'
+  - 交集
+- - '####'
+  - 并集
+- - '####'
+  - 差集
+- - '##'
+  - 额外
+- - '###'
+  - 挑战 1 - 现代 C++ 中的 PixMap 转 SVG
+- - '###'
+  - 挑战 2 - 现代 C++ 中的 PixMap 转换为旋转填充混合椭圆

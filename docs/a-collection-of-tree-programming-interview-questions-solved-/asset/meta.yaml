@@ -1,0 +1,228 @@
+name: A collection of Tree Programming Interview Questions Solved in C++ (Volume 5)
+name_cn: C++ 树形编程面试题集（第 5 卷）
+slug: a-collection-of-tree-programming-interview-questions-solved-
+toc:
+- - '##'
+  - 1 实现二叉树的前序遍历
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 2 计算二叉树的直径
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 3 实现二叉树的中序遍历
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 4 实现二叉树的后序遍历
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 5 实现二叉树的层序遍历
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 6 计算二叉树的叶子节点数量
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 7 检查两棵二叉树是否结构相同
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 8 打印树中的所有路径
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '##'
+  - 9 验证路径之和是否等于某个整数
+- - '###'
+  - Solution
+- - '##'
+  - 10. 寻找二叉树中两个叶子节点之间的最大路径和
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 11. 给定前序和中序遍历重建二叉树
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 12. 打印之形遍历（Zig-Zag traversal）
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 13. 打印两个节点的公共祖先（LCA）
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 14. 在二叉搜索树中实现“查找”和“插入”
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 15. 按序打印二叉搜索树
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 16 在 BST 中实现 findMin 和 findMax
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 17 在 BST 中实现 deleteNode
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 18 在 BST 中实现最低公共祖先
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 19 检查树是否为 BST
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 20 将双链表转换为 BST
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 21 将 BST 转换为双链表
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 22 在 BST 中查找第 k 个元素
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 23 打印 BST 中给定区间内的所有键
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 24 合并两个平衡二叉搜索树
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 25 在平衡 BST 中寻找和为 0 的元组
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity
+- - '##'
+  - 26 实现 B 树
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '##'
+  - 跳表 (Skip List)
+- - '###'
+  - 结构
+- - '###'
+  - 算法
+- - '###'
+  - 查找 (Search)
+- - '###'
+  - 插入 (Insert)
+- - '###'
+  - 删除 (Delete)
+- - '###'
+  - 代码
+- - '###'
+  - Complexity
+- - '##'
+  - 30 实现区间最小值查询
+- - '###'
+  - Solution
+- - '###'
+  - Code
+- - '###'
+  - Complexity

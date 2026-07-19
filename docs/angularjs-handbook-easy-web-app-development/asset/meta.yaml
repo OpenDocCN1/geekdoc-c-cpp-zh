@@ -1,0 +1,46 @@
+name: AngularJS Handbook： Easy Web App Development
+name_cn: AngularJS 手册：易于 Web 应用开发
+slug: angularjs-handbook-easy-web-app-development
+toc:
+- - '#'
+  - AngularJS 手册：易于 Web 应用开发
+- - '##'
+  - 免责声明
+- - '#'
+  - 第 1 章- AngularJS 概述
+- - '#'
+  - 第 2 章- AngularJS 与 HTML
+- - '##'
+  - 测试
+- - '#'
+  - 第 3 章 - XHRs
+- - '##'
+  - 控制器 (Controller)
+- - '#'
+  - 第 4 章 - 链接与图片 (Images)
+- - '#'
+  - 第 5 章 - 使用动画
+- - '##'
+  - 模板 (The Template)
+- - '##'
+  - 使用 CSS 过渡动画的 ng-Repeat 动画
+- - '##'
+  - ngView 的动画
+- - '##'
+  - 使用 JavaScript ngClass 动画
+- - '#'
+  - 第 6 章- `$watch()`, `$digest()` 和 `$apply()`
+- - '##'
+  - '`$watch()`'
+- - '##'
+  - '`$digest()`'
+- - '##'
+  - '`$apply()`'
+- - '#'
+  - 第 7 章 - "$scope" 的层级结构
+- - '#'
+  - 第 8 章- 重构 AngularJS 应用
+- - '##'
+  - 事件处理器和绑定输出
+- - '##'
+  - 结论

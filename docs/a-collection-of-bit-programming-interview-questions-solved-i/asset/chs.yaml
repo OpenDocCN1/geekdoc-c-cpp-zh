@@ -1,0 +1,158 @@
+- "# C++ 实现位运算编程面试题集\n\n\n\n![](img/0007.jpeg)\n\n\n\n\n\n位运算篇是系列 25 章关于算法、问题解决和 C++\
+  \ 编程章节中的第三部分。\n\n## 献辞\n\n给我的第二个孩子 Leonardo。\n希望你一生都保持好奇心和活力。\n\n## 致谢\n\n感谢 Antonio\
+  \ Savona 的代码审查\n\n\n- 1. 给定一个无符号整数，交换奇偶位置的比特位 的所有比特模式，使得相邻模式之间仅差一个位](#\n- 解决方案`，我们要交换位置![](img/0003.jpeg)\
+  \ 的比特。为了选择偶数位，我们可以与 `0AAAAAAAA` 进行与与运算，这是一个偶数位为 1 的 32 位数（`0xA` 是十进制 10，二进制为 `1010`）。对于选择奇数位，我们可以与位掩码\
+  \ `0x55555555` 进行与运算，这是一个所有位均为 1 的数（`0x5` 是十进制 5，二进制为 `0101`）。然后我们需要向左（或向右）移动一位，并将两个结果进行或运算。\n\
+  \n### 代码\n\n```cpp\nunsigned int swapBits(unsigned int x) {\n    unsigned int evenBits\
+  \ = x & 0AAAAAAAA;\n    unsigned int oddBits = x & 0x55555555;\n    evenBits >>=\
+  \ 1;\n    oddBits <<= 1;\n    return (evenBits | oddBits);\n}\n```\n\n## 2. 打印无符号整数的二进制表示\n\
+  \n### 解决方案\n\n一个简单的解决方案是将![](img/0005.jpeg)` 比特与数字![](img/0006.jpeg)` 进行与运算。\n\n\
+  ### 代码\n\n```cpp\nvoid bin(unsigned n) {\n    for (unsigned int i = 1 << 31; i >\
+  \ 0; i = i >> 1) {\n        if (n & i) std::cout << 1;\n        else std::cout <<\
+  \ 0;\n    }\n}\n```\n\n## 3. 判断一个无符号数是否为 2 的幂\n\n### 解决方案\n\n假设该数非零。如果它是 2 的幂，那么唯一的置\
+  \ 1 比特位于位置![](img/0007.jpeg)。在这种情况下我们减去 1，因此 ![](img/0008.jpeg) 左的所有位都会被置零。因此，一个正数![](img/0009.jpeg)是\
+  \ 2 的幂当且仅当 ![](img/0010.jpeg) 为 0。注意这种检查仅适用于 ![](img/0011.jpeg)。\n\n```cpp\nbool\
+  \ isPowerOfTwo(unsigned n) {\n    return n && (!(n & (n - 1)));\n}\n```\n\n## 4.\
+  \ 将第 i 位置 1\n\n### 解决方案\n\n对于给定的数字 `n`，我们可以通过表达式![](img/0012.jpeg) 将第 i 位置 1。\n\n\
+  ## 5. 将第 i 位置 0\n\n### 解决方案\n\n对于给定的数字 `n`，我们可以通过表达式![](img/0013.jpeg) 将第 i 位置 0。\n\
+  \n## 6. 反转第 i 位\n\n### 解决方案\n\n对于给定的数字 `n`，我们可以通过表达式![](img/0014.jpeg) 反转第 i 位。\n\
+  \n## 7. 给定一个只有一个比特 1 的无符号数，找到该位的位置\n\n### 解决方案\n\n如果只有一个比特被置 1，那么该数必须是 2 的幂。为了识别所设置的位置，我们可以将该数与合适的位掩码进行与运算。\n\
+  \n\n\n\n\n```cpp\n unsigned int i = 1, pos = 1;\n\n while (!(i & n))\n {\n     \
+  \        i = i << 1;\n             ++pos;\n }\n\n return pos;\n}\n```\n\n### 解决方案\n\
+  \n另一种解决方案是使用对数来返回给定无符号整型 ![](img/00009.jpeg) 中唯一设置的 1 位的位置。如果 ![](img/00009.jpeg)\
+  \ 不是 2 的幂，代码将返回 -1。\n\n### 代码\n\n```cpp\nint findPosition2(unsigned int n)\n{\n\
+  \ if (n & (n - 1))\n  return -1;\nreturn (unsigned int)(log((double)n) / log(2.0))\
+  \ + 1;\n}\n```\n\n### 解决方案\n\n另一种解决方案的运行时间为 ![](img/00015.jpeg)。关键的直觉是对表示无符号整型 ![](img/00009.jpeg)\
+  \ 的对数 ![](img/00016.jpeg) 位进行对数级的二分查找。\n\n### 代码\n\n```cpp\nint findPosition3(unsigned\
+  \ int n)\n{\n if (n & (n - 1))\n  return -1;\n if (n == 1 << 31)\n  return 32;\n\
+  \ unsigned int position = 16;\n unsigned int half = 1 << 15;\n unsigned int stride\
+  \ = 16;\n while (1)\n {\n  if (n == half)\n  return position;\n  else if (n > half)\n\
+  \             {\n  n = n >> stride;\n                              position = position\
+  \ + (stride >> 1);\n             }\n  else\n             {\n  n = n & ((1 << stride)\
+  \ - 1);\n                              position = position - (stride >> 1);\n  \
+  \           }\n  half = half >> (stride >> 1);\n  stride >>= 1;\n }\n return position;\n\
+  }\n```\n\n## 8. 计算无符号数中设置为 1 的位个数\n\n### 解决方案\n\n我们可以简单地循环并计数位，复杂度为 ![](img/00017.jpeg)，其中\
+  \ ![](img/00016.jpeg) 是无符号数的位数。\n\n### 代码\n\n```cpp\nunsigned int countBits(unsigned\
+  \ int n)\n{\n unsigned int count = 0;\n while (n)\n {\n count += n & 1;\n  n >>=\
+  \ 1;\n }\n return count;\n}\n```\n\n### 针对稀疏位图的解决方案\n\n该解决方案对于稀疏无符号数效果更好，因为它的运行时间与设置为\
+  \ 1 的位个数成正比。`n &= (n – 1)` 这一行将位图中最右侧的 1 设置为 0。\n\n### 代码\n\n```cpp\nunsigned int\
+  \ countBitsSparse(unsigned int n)\n{\n unsigned int count = 0;\n while (n)\n {\n\
+  \                   count++;\n  n &= (n - 1);\n }\n return count;\n}\n```\n\n###\
+  \ 针对稠密位图的解决方案\n\n该解决方案对于稠密位图效果更好，因为它的运行时间与设置为 0 的位个数成正比。首先，你必须翻转所有位，然后从 ![](img/00018.jpeg)\
+  \ 中减去设置为 1 的位个数。`n &= (n – 1)` 这一行将位图中最右侧的 1 设置为 0。\n\n### 代码\n\n```cpp\nunsigned\
+  \ int countBitsDense(unsigned int n)\n{\n unsigned int count = 8 * sizeof(unsigned\
+  \ int);\n n = ~n;\n while (n)\n {\n                   count--;\n  n &= (n - 1);\n\
+  \ }\n return count;\n}\n```\n\n### 针对 32 位整数的解决方案\n\n该解决方案对于 32 位无符号整数效果更好。在这里，你使用了一个额外的查找表，其中包含\
+  \ 8 位 ![](img/00019.jpeg) 数字二进制表示中所包含的 1 的个数。使用预计算的查找表是加速查找表的一种常用技巧。\n\n### 代码\n\
+  \n```cpp\nstatic int bitInChar[256];\nvoid fillBitsInChar()\n{\n for (unsigned int\
+  \ i = 0; i < 256; ++i)\n              bitInChar[i] = countBits(i);\n}\nunsigned\
+  \ int countBitsConstant32Bits(unsigned int n)\n{\n return bitInChar[n & 0xffu] +\n\
+  \              bitInChar[(n >> 8) & 0xffu] +\n              bitInChar[(n >> 16)\
+  \ & 0xffu] +\n              bitInChar[(n >> 24) & 0xffu];\n}\n```\n\n## 9. 不使用算术运算符相加两个数\n\
+  \n### 解决方案\n\n我们可以使用异或运算来加两个位，并使用与运算来计算进位。在代码中我们还实现了减法。\n\n### 代码\n\n```cpp\nint\
+  \ add(int x, int y)\n{\n while (y != 0)\n {\n  int carry = x & y;\n  x = x ^ y;\n\
+  \  y = carry << 1;\n }\n return x;\n}\nint negate(int x) {\n return add(~x, 1);\n\
+  }\nint subtract(int x, int y) {\n return add(x, negate(y));\n}\n```\n\n## 10. 给定整数数组，其中所有数字都出现两次，找到只出现一次的数字\n\
+  \n### 解决方案\n\n我们可以通过对整数数组进行异或运算来识别只出现一次的数字。如果一个数字是重复的，那么异或运算的结果为 0。换句话说，如果我们异或所有数字，结果就是那个数字。\n\
+  \n### 代码\n\n\n\n\n\n```cpp\npreComputedParity[(n >> 16) & mask] ^\npreComputedParity[n\
+  \ & mask];\n}\n```\n\n## 17. 在不使用额外内存的情况下交换两个整数变量\n\n### 解决方案\n该解决方案使用了异或运算，不需要额外的存储空间。感兴趣的读者可以思考如何交换两个非整数的变量。\n\
+  \n### 代码\n```cpp\nvoid swap(unsigned int & i, unsigned int & j)\n{\n  i ^= j;\n\
+  \  j ^= i;\n  i ^= j;\n}\n```\n\n## 18. 交换 64 位数中的第 i 和第 j 位\n\n### 解决方案\n如果 ![](img/00023.jpeg)\
+  \ 等于 ![](img/00039.jpeg)，则不需要交换。如果这两个位不同，则我们需要交换 ![](img/00023.jpeg) 和 ![](img/00040.jpeg)，这意味着它们通过异或运算后结果为\
+  \ 1。如果它们不同，那么只有两种可能：(0, 1) 和 (1, 0)，对于这些情况，与 1 进行异或将交换结果。如果两个位不同，那么它们的异或结果为 0，对于任何数字\
+  \ ![](img/00041.jpeg)。这些观察结果实现在下面的代码中。\n\n### 代码\n```cpp\nint swapBits(int n, unsigned\
+  \ int i, unsigned int j)\n{\n  if (i == j)\n    return n;\n  int xor = ((n >> i)\
+  \ ^ (n >> j)) & 1;\n  return n ^ (xor << i) ^ (xor << j);\n}\n```\n\n## 19. 反转无符号整数的位顺序\n\
+  \n### 解决方案\n我们只需应用了用于交换位的函数。第一种方案复用了之前练习中定义的代码，而第二个方案直接操作位。\n\n### 代码\n```cpp\n\
+  unsigned int reverse(unsigned int n)\n{\n  unsigned numBits = sizeof(unsigned int)\
+  \ * 8;\n  unsigned halfBits = numBits >> 1;\n  for (unsigned int i = 0; i < halfBits;\
+  \ ++i)\n    n = swapBits(n, i, numBits - i - 1);\n  return n;\n}\n\nunsigned int\
+  \ mirror(unsigned int n)\n{\n  for (unsigned int i = 0; i <= 15; i++)\n  {\n   \
+  \ n = (n & (0xffffffff - (1 << i) - (1 << (31 - i)))) |\n        ((n & (1 << i))\
+  \ << (31 - i * 2)) |\n        ((n & (1 << (31 - i))) >> (31 - i * 2));\n  }\n  return\
+  \ n;\n}\n```\n\n## 20. 将整数转换为字符串以及将字符串转换为整数\n\n### 解决方案\n对于 10 进制整数 ![](img/00036.jpeg)，我们知道可以通过操作\
+  \ ![](img/00042.jpeg) 获取最后一位，并且可以通过 ![](img/00043.jpeg) 对数字进行右移。此外，数字 ![](img/00044.jpeg)\
+  \ 的 ASCII 字符是 ![](img/00045.jpeg)。如果数字是负数，我们需要在前面加上字符‘-’。\n\n### 代码\n```cpp\nstd::string\
+  \ toString(int n)\n{\n  if (n == 0) return \"0\";\n  std::string result;\n  result.reserve(10);\n\
+  \  if (n < 0)\n  {\n    n = -n;\n    result.push_back('-');\n  }\n  for (int i =\
+  \ log10(n); i >= 0; i--)\n    result.push_back('0' + (n / (int)pow(10, i)) % 10);\n\
+  \  return result;\n}\n\nint toInt(const std::string & s)\n{\n  if (s.empty()) return\
+  \ 0;\n  const bool negative = (s[0] == '-') ? true : false;\n  int result = 0;\n\
+  \  for (unsigned int i = (negative ? 1 : 0); i < s.size(); ++i)\n  {\n    if (isdigit(s[i]))\n\
+  \      result = result * 10 + s[i] - '0';\n  }\n  return (negative) ? -result :\
+  \ result;\n}\n```\n\n## 21. 将数字从基 b1 转换为基 b2\n\n### 解决方案\n我们可以泛化之前练习中提出的解决方案。主意是将基\
+  \ ![](img/0046.jpeg) 转换为十进制，再从十进制转换为基 ![](img/0047.jpeg)。\n\n### 代码\n```cpp\nstd::string\
+  \ convertFromToBase(const std::string & s, unsigned int b1, unsigned int b2)\n{\n\
+  \  if (s.empty()) return s;\n  bool negative = (s[0] == '-');\n  int n = 0, reminder;\n\
+  \  for (unsigned int i = (negative ? 1 : 0); i < s.size(); ++i)\n    n = n * b1\
+  \ + (isdigit(s[i]) ? s[i] - '0' : s[i] - 'A' + 10);\n  std::string result;\n  while\
+  \ (n)\n  {\n    reminder = n % b2;\n    result.push_back(reminder >= 10 ? 'A' +\
+  \ reminder - 10 : '0' + reminder); // 注：此处原文逻辑略有偏差，此处按意图翻译\n    n /= b2;\n  }\n\
+  \  if (negative)\n    result.push_back('-');\n  reverse(result.begin(), result.end());\n\
+  \  return result;\n}\n```\n\n## 22. 给定集合 S，计算其幂集\n\n### 解决方案\n![](img/0048.jpeg)\
+  \ 的幂集是 ![](img/0049.jpeg) 的所有子集。例如，给定 ![](img/0050.jpeg)，幂集是 ![](img/0051.jpeg)。如果\
+  \ ![](img/0052.jpeg) 中的 ![](img/0053.jpeg) 存在 ![](img/0054.jpeg)，我们可以通过 ![](img/0055.jpeg)\
+  \ 的 ![](img/0056.jpeg) 来构建幂集。注意 ![](img/0057.jpeg) 的 ![](img/0058.jpeg) 是通过 ![](img/0059.jpeg)。\n\
+  \n### 代码\n```cpp\nvoid powerSet(const std::vector<char> set)\n{\n  for (unsigned\
+  \ int i = 0; i < (1 << set.size()); ++i)\n  {\n    unsigned int n = i;\n    for\
+  \ (unsigned int j = 0; j < set.size(); ++j)\n    {\n      if ((n >> j) & 1)\n  \
+  \      std::cout << set[j];\n    }\n    std::cout << std::endl;\n  }\n}\n```\n\n\
+  ## 23. 两个整数字符串字符串\n\n### 解决方案\n两个字符串可以表示非常大的整数。用于求和的 ![](img/0061.jpeg) 算法是小学里教的。\n\
+  \n### 代码\n```cpp\nint padDecimalStrings(std::string &str1, std::string &str2)\n\
+  {\n  int len1 = str1.size();\n  int len2 = str2.size();\n  if (len1 < len2)\n  {\n\
+  \    str1.insert(0, len2 - len1, '0');\n    return len2;\n  }\n  else if (len1 >\
+  \ len2)\n    str2.insert(0, len1 - len2, '0');\n  return len1;\n}\n\nstd::string\
+  \ addDecimalStrings(std::string s1, std::string s2)\n{\n  int len = padDecimalStrings(s1,\
+  \ s2);\n  int b1, b2, sum, carry = 0;\n  std::string res;\n  res.resize(len);\n\
+  \  for (int i = len - 1; i >= 0; i--)\n  {\n    b1 = s1[i] - '0';\n    b2 = s2[i]\
+  \ - '0';\n    sum = b1 + b2 + carry;\n    carry = sum / 10;\n    res[i] = (char)sum\
+  \ % 10 + '0';\n  }\n  if (carry)\n    res = '1' + res;\n  return res;\n}\n```\n\n\
+  ## 24. 生成从 0 到 ![](img/0067.jpeg) 的所有模式，使得相邻模式之间只有一位不同\n\n### 解决方案\n这些模式以发明者 Frank\
+  \ Gray[#000] 命名。以 ![](img/0068.jpeg) 增量地生成它们是方便的。如果我们分析模式，就能理解 ![](img/0069.jpeg)\
+  \ 是通过三个步骤从之前的 ![](img/0070.jpeg) 生成的。在开始时，images/0071.jpeg) 中的每个元素前面加上 0。然后将 ![](img/0072.jpeg)\
+  \ 反转，并在每个元素前面加上 1。作为最后一步，将这两个中间列表拼接以创建新的 ![](img/0073.jpeg)。这个过程重复直到我们生成 ![](img/0074.jpeg)。\n\
+  \n### 代码\n```cpp\nvoid gray(unsigned int n)\n{\n  if (n == 0)\n    return;\n  std::vector<std::string>\
+  \ gray;\n  gray.push_back(\"0\");\n  gray.push_back(\"1\");\n  for (int i = 2; i\
+  \ < (1 << n); i = i << 1)\n  {\n    for (int j = i - 1; j >= 0; j--)\n      gray.push_back(gray[j]);\n\
+  \    for (int j = 0; j < i; j++)\n      gray[j] = \"0\" + gray[j];\n    for (int\
+  \ j = i; j < 2 * i; j++)\n      gray[j] = \"1\" + gray[j];\n  }\n  for (unsigned\
+  \ i = 0; i < gray.size(); i++)\n    std::cout << gray[i] << std::endl;\n}\n```\n\
+  \n## 25. 使用连续位用变长编码表示无符号整数\n\n### 解决方案\n\n\n\n\n核心思想是将一个 64 位无符号整数 ![](img/00016.jpeg)\
+  \ 用字节列表来表示。对于每个字节，使用 7 位来存储具有变长编码的整数。此外，最高位（most significant bit）是延续位（continuation\
+  \ bit），用于指示我们是否需要额外的字节来对 `n` 进行编码。例如：如果数字小于 ![](img/00061.jpeg)，我们只需要一个字节，其最高位被置为\
+  \ 0。否则，如果数字小于 ![](img/00062.jpeg)，我们需要两个字节，第一个字节的延续位置为 1，而第二个字节的延续位置为 0。这种表示法用于在实现倒排索引[[2]](#part0000.html__ftn2)时节省空间，倒排索引是搜索引擎频繁使用的数据结构。倒排索引类似于用于记录书中某个单词出现页码的分析索引。其关键的直觉是存储每个单词两个连续页之间的差值，并采用变长编码来节省空间。\n\
+  \n## Code\n\n```cpp\nvoid encodeContinuationBit(__int64 n, std::vector<unsigned\
+  \ short> & encode)\n{\n  __int64 x = n;\n  unsigned short e;\n  if (!x) encode.push_back(0);\n\
+  \  while (x)\n  {\n    e = x & 127;\n    x >>= 7;\n    if (x)\n      e |= (1 <<\
+  \ 7);\n    encode.push_back(e);\n  }\n}\n```\n\n## 26. 使用 gamma 编码用变长编码表示整数\n\n\
+  ## Solution\n\nGamma 编码是另一种整数的变长编码[[3]](#part0000.html__ftn3)。数字 ![](img/00025.jpeg)\
+  \ 用 ![](img/00063.jpeg) 位表示。该整数分为两部分：前部分是不大于 `x` 的最大 2 的幂（假设为 ![](img/00064.jpeg)），用一一编码表示，即\
+  \ `log(x)` 位置为 0，后面跟一个 1。后部分是表示 ![](img/00065.jpeg) 的剩余二进制位。\n\n## Code\n\n```cpp\n\
+  void gammaEncoding(unsigned int x)\n{\n  int i;\n  unsigned lenOfX = 0;\n  for (i\
+  \ = x; i > 1; i >>= 1) // floor(log2(x))\n    lenOfX++;\n  for (i = lenOfX; i >\
+  \ 0; --i)\n    std::cout << '0';\n  std::cout << '1';\n  x -= (1 << lenOfX); //\
+  \ reminder\n  for (i = 1 << (lenOfX - 1); i > 0; i >>= 1)\n    if (x & i)\n    \
+  \  std::cout << 1;\n    else\n      std::cout << 0;\n}\n```\n\n## 27. 使用 delta 编码用变长编码表示整数\n\
+  \n## Solution\n\nDelta 编码是另一种整数的变长编码[[4]](#part0000.html__ftn4)。数字 ![](img/00025.jpeg)\
+  \ 用 ![](img/00066.jpeg) 位表示。该整数分为两部分：前部分是不大于 `x` 的最大 2 的幂（假设为 ![](img/00064.jpeg)），通过对\
+  \ gamma 编码数字 ![](img/00067.jpeg) 来表示。后部分是表示 ![](img/00065.jpeg) 的剩余二进制位。\n\n## Code\n\
+  \n```cpp\nvoid deltaEncoding(unsigned int x)\n{\n  int len = 0, lengthOfLen = 0,\
+  \ i;\n  for (int i = x; i > 0; i >>= 1) // 1+floor(log2(num))\n    len++;\n  for\
+  \ (int i = len; i > 1; i >>= 1) // floor(log2(len))\n    lengthOfLen++;\n  for (int\
+  \ i = lengthOfLen; i > 0; --i)\n    std::cout << 0;\n  for (int i = lengthOfLen;\
+  \ i >= 0; --i)\n    std::cout << 0;\n  for (int i = len - 2; i >= 0; --i)\n    std::cout\
+  \ << (x >> i);\n}\n```\n\n## 28. 无除法计算平均值\n\n## Solution\n\n这解决了一个在二分查找实现 60 多年后才报告的\
+  \ [[5]](#part0000.html__ftn5) Bug，通常实现方式如下：\n\n```cpp\nint binSearch(int a[], unsigned\
+  \ int size, int key) {\n  int low = 0;\n  int high = size;\n  while (low <= high)\
+  \ {\n    int mid = (low + high) / 2;\n    int midVal = a[mid];\n    if (midVal <\
+  \ key)\n      low = mid + 1;\n    else if (midVal > key)\n      high = mid - 1;\n\
+  \    else\n      return mid; // key found\n  }\n  return -(low + 1); // key not\
+  \ found\n}\n```\n\n错误出现在 ![](img/0068.jpeg) 这一行，因为 ![](img/0069.jpeg) 和 ![](img/0070.jpeg)\
+  \ 之和大于 `int` 的最大值 ![](img/0071.jpeg)。在 C 和 C++ 中这会导致数组索引越界并产生不可预的结果。在其他语言中这会抛出异常。解决方案是计算\
+  \ ![](img/0072.jpeg)。\n\n关于作者\n\n一位经验丰富的数据挖掘工程师，对消费者领域的技术和创新充满热情。对海量数据集上的搜索和机器学习感兴趣，特别是查询分析、建议、实体、新鲜度和通用排名。Antonio\
+  \ Gull 曾在小型、中型公司（Ask.com, Tiscali）以及大型企业（Microsoft）工作过。他的职业生涯是将工业界与学术经验相结合。\n\n\
+  “如今，你必须具备研究能力和解决问题的态度。”\n\n* *\n\n[[1]](#part0000.html__ftn1) [http://en.wikipedia.org/wiki/Gray_code]\n\
+  [[2]](#part0000.html__ftn2) [http://en.wikipedia.org/wiki/Inverted_index]\n[[3]](#part0000.html__ftn3)\
+  \ [http://nlp.stanford.edu/IR-book/html/htmledition/gamma-codes-1.html]\n[[4]](#part0000.html__ftn4)\
+  \ [http://nlp.stanford.edu/IR-book/html/htmledition/gamma-codes-1.html]\n[[5]](#part0000.html__ftn5)\
+  \ [http://googleresearch.blogspot.co.uk/2006/06/extra-extra-read-all-about-it-nearly.html]\n"

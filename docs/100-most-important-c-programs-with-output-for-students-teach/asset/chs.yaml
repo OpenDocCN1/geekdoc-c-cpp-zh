@@ -1,0 +1,1432 @@
+- "# 100+ 个重要的 C 程序带输出：学生与教师指南\n\n\n\n![](img/00001.jpeg)\n\n\n\n\n\n# 目录\n\n1. [编写一个执行加、减、乘、除程序。]\n\
+  2. [如何在不使用加法运算符的情况下两个数字？]\n3. [如何在不使用减法运算符的情况下减两个数字？]\n4. [编写一个交换两个数字的程序。]\n5. [编写一个计算数字各位和或计算数字和的程序。]\n\
+  6. [编写一个打印复数的程序。]\n7. [编写一个检查输入字母是否为元音的程序。]\n8. [编写一个检查给定整数是正数还是负数的程序。]\n9. [编写一个计算梯形面积的程序。]\n\
+  10. [编写一个使用函数（按值传递）交换两个数字的程序。]\n11. [编写一个寻找三个数中最大数的程序。]\n12. [编写一个使用三元运算符寻找四个数中最大数的程序。]\n\
+  13. [编写一个使用三元运算符寻找四个数中最小程序。]\n14. [编写一个使用动态内存分配查找最大元素的程序。]\n15. [编写一个打印 1 到 100\
+  \ 完美数的程序。]\n16. [编写一个反转给定数字的程序。]\n17. [编写一个计算数字的根或数字之和直到得到一位数的程序。]\n18. [编写一个不使用循环打印\
+  \ 1 到 n 数字的程序。]\n19. [编写一个使用 For 循环计算前 n 个自然数和的程序。]\n20. [编写一个检查数字是偶数还是奇数的程序。]\n\
+  21. [编写一个计算前 n 个奇数和偶数之和的程序。]\n22. [编写一个检查数字是否为强数（Strong number）的程序。]\n23. [编写一个使用数组升序实现的简单泡泡排序程序。]\n\
+  24. [如何在 C 中计算数字的幂。]\n25. [编写一个检查年份是否为闰年的程序。]\n26. [编写一个寻找数字最大公约数（HCF）和最小公倍数（LCM）的程序。]\n\
+  27. [编写一个打印乘法表的程序。]\n28. [编写一个使用 break 和 continue 打印 1-200 之间质数的程序。]\n29. [编写一个检查数字是否为质数的程序。]\n\
+  30. [编写一个寻找数字质因程序的。]\n31. [编写一个计算数字阶的程序。]\n32. [编写一个打印斐波那契数列的程序。]\n33. [编写一个打印 1\
+  \ 到 500 之间阿姆斯特数（Armstrong numbers）的程序。]\n34. [编写一个检查数字是否为阿姆斯特数的程序。]\n35. [编写一个使用自定义函数检查数字是否为质数或阿姆斯特数的程序。]\n\
+  36. [编写一个检查数字是否可以表示为两个数字之和的程序。]\n37. [编写一个检查数字是否为回文数的程序。]\n38. [编写一个反转数字并检查其是否为回文数的程序。]\n\
+  39. [编写一个寻找等差数列（A.P.）和的程序。]\n40. [编写一个寻找等比数列（G.P.）和的程序。]\n41. [编写一个寻找无限等比数列和的程序。]\n\
+  42. [编写一个寻找序列 1 + 2 + …. + n 之和的程序。]\n43. [编写一个寻找序列 1³ + 2³ + …. + n³ 和的程序。]\n44.\
+  \ [编写一个求二元方程根的程序。]\n45. [编写一个打印数字金字塔的程序。]\n46. [编写一个以杨斯加三角形模式打印数字的程序。]\n47. [编写一个以倒杨斯加三角形模式打印“*”的程序。]\n\
+  48. [编写一个以弗洛伊德三角形模式打印数字的程序。]\n49. [编写一个以弗洛伊德三角形模式打印字符的程序。]\n50. [编写一个以倒弗洛伊德三角形模式打印“*”的程序。]\n\
+  51. [编写一个打印菱图案的程序。]\n52. [编写一个使用二分查找在数组中搜索元素的程序。]\n53. [编写一个二进制转十进制的程序。]\n54. [编写一个十进制转八进制转换器程序。]\n\
+  55. [如何将大二进制数转换为十六进制。]\n56. [编写一个十六进制转二进制的程序。]\n57. [编写一个将八进制数转换为十进制数的程序。]\n58.\
+  \ [编写一个将数字的每个数字转换为英文单词的程序。]\n59. [编写一个两个二进制数相法的程序。]\n60. [编写一个打印任何名字首字母的程序。]\n61.\
+  \ [编写一个矩阵相加程序。]\n62. [编写一个寻找矩阵对角线元素和的程序。]\n63. [编写一个检查两个矩阵是否相等的程序。]\n64. [编写一个检查给定矩阵是否为单位矩阵的程序。]\n\
+  65. [编写一个检查给定矩阵是否为稀疏矩阵或稠密矩阵的程序。]\n\n\n\n\n\n# 66. 编写一个程序计算每行和每列元素的和。\n# 67. 编写一个程序查找给定矩阵中奇数和偶数的频率。\n\
+  # 68. 编写一个程序交换两个数组。\n# 69. 编写一个程序打印下三角矩阵。\n# 70. 编写一个程序打印上三角矩阵。\n## 71. 编写一个程序两个矩阵相法。\n\
+  # 72. 编写一个程序求矩阵的逆。\n# 73. 编写一个程序求矩阵的转置。\n# 74. 编写一个程序求矩阵行列式。\n# 75. 编写一个程序找到数组中的最大元素。\n\
+  # 76. 编写一个程序找到数组中的第二大。\n## 77. 编写一个程序找到数组中的第二。\n# 78. 编写一个程序在数组的指定位置插入元素。\n# 79.\
+  \ 编写一个程序删除数组中的重复元素。\n# 80. 编写一个程序从数组的指定位置删除元素。\n# 81. 编写一个程序使用 `strcmp` 函数比较两个字符串。\n\
+  # 82. 编写一个程序在不使用字符串函数的情况下比较两个字符串。\n# 83. 编写一个程序使用 `strlen` 函数查找字符串长度。\n# 84. 编写一个程序不使用库函数查找字符串长度。\n\
+  # 85. 编写一个程序使用 `strcpy` 库函数复制字符串。\n# 86. 编写一个程序不使用 `strcpy` 库函数复制字符串。\n# 87. 编写一个程序使用\
+  \ `strrev` 库函数反转字符串。\n# 88. 编写一个程序不使用 `strrev` 库函数反转字符串。\n# 89. 编写一个程序交换字符串。\n#\
+  \ 90. 编写一个程序按字母排序字符串。\n# 91. 编写一个程序找到字符串的回文。\n# 92. 编写一个程序在不使用字符串函数的情况下找到字符串的回文。\n\
+  # 93. 编写一个程序使用 `strcat` 字符串函数拼接字符串。\n# 94. 编写一个程序不使用字符串函数进行字符串拼接。\n# 95. 编写一个程序使用库函数检查输入的字符是否为大写字母。\n\
+  # 96. 编写一个程序将大写字母转换为小写字母。\n# 97. 编写一个程序删除字符串中的元音。\n# 98. 编写一个程序统计给定字符串中大写字母、小写字母、特殊符号的数量。\n\
+  # 99. 编写一个程序找到元音、辅音和空格的数量。\n## 100. 编写一个程序检查两个字符串是否为字母异位。\n# 101. 编写一个程序删除第二个字符串中所有出现在第一个字符串中的。\n\
+  # 102. 编写一个程序分别使用递归和迭代反转字符串。\n# 103. 编写一个程序接受用户的年、月、日并显示该日期是星期几。\n# 104. 编写一个程序将字符串转换为\
+  \ ASCII 值。\n# 105. 编写一个程序将罗马数字转换为阿拉伯数字。\n# 106. 编写一个程序将任何数字转换为英文单词。\n# 107. 编写一个程序使用指针两个数字相加。\n\
+  ## 108. 编写一个程序使用引用传递两个两个数字。\n# 109. 编写一个程序使用指针（引用传递）交换变量。\n# 110. 编写一个程序使用指针计算数组元素的和。\n\
+  # 111. 编写一个程序不使用 `size` 操作符查找结构体数据类型的大小。\n# 112. 编写一个程序使用结构体存储并显示单个学生的信息。\n# 113.\
+  \ 编写一个程序使用结构体读取并打印 50 个学生的详细信息。\n# 114. 编写一个程序使用结构体和动态内存分配存储信息。\n# 115. 编写一个程序通过向函数传递结构体打印两个复数的和。\n\
+  # 116. 编写一个程序查看联合体（union）和结构体（structure）之间的区别。\n# 117. 编写一个程序读取或打开文件。\n# 118. 编写一个程序复制文件。\n\
+  # 119. 编写一个程序合并两个文件。\n# 120. 编写一个程序删除文件。\n# 121. 编写一个 C 程序，使用 `fwrite()` 将结构体数组的所有成员写入文件。从文件中读取该数组并在屏幕上显示。\n\
+  # 122. 编写一个程序向数据文件写入并从数据文件读取。\n# 123. 编写一个程序合并多个文件并存储在一个文件中。\n# 124. 编写一个程序查找文本文件的行数。\n\
+  # 125. 编写一个程序替换文本文件中的指定行。\n# 126. 编写一个程序从文本文件中删除特定行。\n## 127. 编写一个程序实现呆滞排序（stooge\
+  \ sort）。\n# 128. 编写一个程序使用递归获取两个数的最小公倍数（LCM）。\n# 129. 编写一个程序使用递归求数的最大公约数（GCD）。\n\
+  # 130. 编写一个程序使用递归获取数字的幂。\n## 131. 编写一个程序使用递归求数字阶阶。\n## 132. 编写一个程序使用递归打印斐波那契数列。\n\
+  ## 133. 编写一个程序使用递归将十进制数转换为二进制。\n## 134. 编写一个程序使用递归找到数组中的最大数字。\n# 135. 编写一个程序使用递归求数字的反转。\n\
+  \n\n\n\n\n# 136. 编写一个显示 ATM 交易的程序。\n\n# 快速选题：\n\n# 答案-\n\n# 面试问答：\n\n## 1. 编写一个执行加、减、乘、除法的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int first, second,\
+  \ add, subtract, multiply;\n    float divide;\n    printf(\"Enter two integers:\\\
+  n\");\n    scanf(\"%d%d\", &first, &second);\n    add = first + second;\n    subtract\
+  \ = first - second;\n    multiply = first * second;\n    divide = first / (float)second;\n\
+  \    printf(\"Sum = %d\\n\",add);\n    printf(\"Difference = %d\\n\",subtract);\n\
+  \    printf(\"Multiplication = %d\\n\",multiply);\n    printf(\"Division = %.2f\\\
+  n\",divide);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n```\nEnter two integers:\n\
+  3\n5\nSum = 8\nDifference = -2\nMultiplication = 15\nDivision = 0.60\n```\n\n##\
+  \ 2. 如何在不使用加法运算符的情况下两个数？\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n\
+  {\n    int a,b;\n    int sum;\n    printf(\"Enter any two integers: \");\n    scanf(\"\
+  %d%d\",&a,&b);\n    sum = a - ~b -1;\n    printf(\"Sum of two integers: %d\",sum);\n\
+  \    return 0;\n    getch();\n}\n```\n\n示例输出：\n```\nEnter any two integers: 5, 10\n\
+  Sum of two integers: 15\n```\n\n公式：\n在 C 语言中 `~` 是按位取反运算符。它相当于：\n`~b = -(b + 1)`\n\
+  所以，`a - ~b -1`\n`= a-[-(b + 1)] -1`\n`= a + b + 1 - 1`\n`= a + b`\n\n## 3. 如何在不使用减法运算符的情况下两个两个数？\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a,b;\n  \
+  \  int subtract;\n    printf(\"Enter any two integers: \");\n    scanf(\"%d%d\"\
+  ,&a,&b);\n    subtract = a + ~b + 1;\n    printf(\"Difference of two integers: %d\"\
+  ,subtract);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n```\nEnter any two integers:\
+  \ 5, 4\nDifference of two integers: 1\n```\n\n公式：\n在 C 语言中 `~` 是按位取反运算符。它相当于：\n\
+  `~b = -(b + 1)`\n所以，`a + ~b +1`\n`= a+[-(b + 1)] +1`\n`= a - b - 1 + 1`\n`= a -\
+  \ b`\n\n## 4. 编写一个交换两个数的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\nint\
+  \ main()\n{\n    int a,b,temp;\n    printf(\"Enter any two integers: \");\n    scanf(\"\
+  %d%d\",&a,&b);\n    printf(\"Before swapping: a = %d, b=%d\",a,b);\n    temp = a;\n\
+  \    a = b;\n    b = temp;\n    printf(\"\\nAfter swapping: a = %d, b=%d\",a,b);\n\
+  \    return 0;\n    getch();\n}\n```\n\n示例输出：\n```\nEnter any two integers: 3, 6\n\
+  Before swapping: a = 3, b=6\nAfter swapping: a = 6, b=6\n```\n\n## 5. 编写一个计算数字各位位或计算数字之和的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int num,sum=0,r;\n\
+  \    printf(\"Enter a number: \");\n    scanf(\"%d\",&num);\n    while(num)\n  \
+  \  {\n        r=num%10;\n        num=num/10;\n        sum=sum+r;\n    }\n    printf(\"\
+  Sum of digits of number:  %d\",sum);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n\
+  ```\nEnter a number: 123\nSum of digits of number:  6\n```\n\n## 6. 编写一个打印复数的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a,b;\n  \
+  \  printf(\"Enter the real part of complex number: \");\n    scanf(\"%d\",&a);\n\
+  \    printf(\"Enter the imaginary part of complex number: \");\n    scanf(\"%d\"\
+  ,&b);\n    printf(\"\\nComplex number is: %d%+di\",a,b );\n    return 0;\n    getch();\n\
+  }\n```\n\n示例输出：\n```\nEnter the real part of complex number: 4\nEnter the imaginary\
+  \ part of complex number: 2\nComplex number is: 4+2i\n```\n复数的定义：复数是二维数，即由实部和虚部组成。复数写写为\
+  \ `a + ib`，其中 `a` 和 `b` 是实数。\n\n## 7. 编写一个检查输入是否为元元的程序。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n\nint main()\n{\n    char ch;\n    printf(\"Enter a character:\"\
+  );\n    scanf(\"%c\", &ch);\n    if (ch == 'a' || ch == 'A' || ch == 'e' || ch ==\
+  \ 'E' || ch == 'i' || ch == 'I' || ch =='o' || ch=='O' || ch == 'u' || ch == 'U')\n\
+  \    printf(\"%c is a vowel.\\n\", ch);\n    else\n    printf(\"%c is not a vowel.\\\
+  n\", ch);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n```\nEnter a character:\
+  \ i\ni is a vowel\n\n## 8. 编写一个检查给定整数是正是负的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    int number;\n    printf(\"Enter a number: \\n\");\n    scanf(\"\
+  %d\", &number);\n    if (number >= 0)\n    printf(\"%d is positive number \\n\"\
+  , number);\n    else\n    printf(\"%d is negative number \\n\", number);\n    getch();\n\
+  }\n```\n\n示例输出：\n```\nEnter a number: -4\n-4 is negative number\n\n## 9. 编写一个计算梯形面积的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    float b1,b2,h;\n\
+  \    float area;\n    printf(\"Enter the size of two bases and height of the trapezium:\
+  \ \");\n    scanf(\"%f%f%f\",b1,&b2,&h);\n    area = 0.5 * ( b1 + b2 ) * h;\n  \
+  \  printf(\"Area of trapezium is: %.3f\",area);\n    return 0;\n    getch();\n}\n\
+  ```\n\n示例输出：\n```\nEnter the size of two bases and height of the trapezium: 5, 8,\
+  \ 3\nArea of trapezium is: 19.500\n```\n梯形公式：`Area = (1/2) * (a + b) * h`\n\n##\
+  \ 10. 编写一个使用函数（值传递）交换两个数的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\nvoid\
+  \ swap(int a, int b)\n{\n    int temp;\n    temp = a;\n    a = b;\n    b = temp;\n\
+  }\n\nint main()\n{\n    int num1 = 10,num2 = 30;\n    printf(\"Before swapping:\\\
+  n num1 = %d\\n num2 = %d\\n\",num1,num2);\n    swap(num1,num2);\n    printf(\"After\
+  \ swapping:\\n num1 = %d\\n num2 = %d \\n\",num1,num2);\n    return 0;\n    getch();\n\
+  }\n```\n\n示例输出：\n```\nBefore swapping:\nnum1 = 10\nnum2 = 30\nAfter swapping:\n\
+  num1 = 10\nnum2 = 30\n```\n（注：原文中的示例输出没有变化，这对于值传递来说是预期的。）\n\n## 11. 编写一个寻找三个数之间最大值的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a,b,c;\n\
+  \    printf(\"\\nEnter 3 numbers: \");\n    scanf(\"%d %d %d\",&a,&b,&c);\n    if(a-b>0\
+  \ && a-c>0)\n    printf(\"\\nGreatest is a :%d\",a);\n    else\n    if(b-c>0)\n\
+  \    printf(\"\\nGreatest is b :%d\",b);\n    else\n    printf(\"\\nGreatest is\
+  \ c :%d\",c);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n```\nEnter 3 numbers:\
+  \ 2, 6, 4\nGreatest is b: 6\n```\n\n## 12. 编写一个使用三元运算符寻找四个数中最大值的程序。\n\n```c\n#include<stdio.h>\n\
+  # include<conio.h>\n\nmain( )\n{\n    int a,b,c,d,big;\n    printf(\"Enter value\
+  \ a:\");\n    scanf(\"%d\",&a);\n    printf(\"Enter the value of b:\");\n    scanf(\"\
+  %d\",&b);\n    printf(\"Enter the value of c:\");\n    scanf(\"%d\",&c);\n    printf(\"\
+  Enter the value of d:\");\n    scanf(\"%d\",&d);\n    big=(a>b)?(a>c)?(a>d)?a:d:(c>d)?c:d:(b>c)?(b>d)?b:d:(c>d)?c:d;\n\
+  \    printf(\"Biggest of the given 4 numbers is: %d\",big);\n    getch();\n}\n```\n\
+  \n示例输出：\n```\nEnter value a: 8\nEnter the value of b: 4\nEnter the value of c: 9\n\
+  Enter the value of d: 6\nBiggest of the given 4 numbers is: 9\n```\n\n### 三元运算符\n\
+  三元运算符是一个接受三个参数的运算符。第一个参数是比较参数，第二个是为真时的结果，第三个是为假时的结果。它通常被称为条件运算符。\n在计算机编程中，`?:` 是许多编程语言中基础条件表达式的一部分。\n\
+  语法：`expression 1 ? expression 2 : expression 3`\n\n## 13. 编写一个使用三元运算符寻找四个数中最小值的程序。\n\
+  \n```c\n# include <stdio.h>\n# include <conio.h>\n\nmain( )\n{\n    int a,b,c,d,small;\n\
+  \    printf(\"Enter value a: \");\n    scanf(\"%d\",&a);\n    printf(\"Enter the\
+  \ value of b: \");\n    scanf(\"%d\",&b);\n    printf(\"Enter the value of c: \"\
+  );\n    scanf(\"%d\",&c);\n    printf(\"Enter the value of d: \");\n    scanf(\"\
+  %d\",&d);\n    small=(a<b)?(a<c)?(a<d)?a:d:(c<d)?c:d:(b<c)?(b<d)?b:d:(c<d)?c:d;\n\
+  \    printf(\"Smallest of the given 4 numbers is: %d\",small);\n    getch();\n}\n\
+  ```\n\n示例输出：\n```\nEnter value a: 5\nEnter the value of b: 7\nEnter the value of\
+  \ c: 3\nEnter the value of d: 9\nSmallest of the given 4 numbers is: 3\n```\n\n\
+  ## 14. 编写一个使用动态内存分配寻找最大元素的程序。\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n\
+  #include <conio.h>\n\nint main()\n{\n    int i,n;\n    float *data;\n}\n```\n\n\n\
+  \n\n\n```c\nprintf(\"Enter total number of elements(1 to 100): \");\nscanf(\"%d\"\
+  ,&n);\ndata=(float*)calloc(n,sizeof(float));\nif(data==NULL)\n{\n    printf(\"Error!!!\
+  \ memory not allocated.\");\n    exit(0);\n}\nprintf(\"\\n\");\nfor(i=0;i<n;++i)\n\
+  {\n    printf(\"Enter Number %d: \",i+1);\n    scanf(\"%f\",data+i);\n}\nfor(i=1;i<n;++i)\n\
+  {\n    if(*data<*(data+i))\n        *data=*(data+i);\n}\nprintf(\"Largest element\
+  \ = %.2f\",*data);\nreturn 0;\ngetch();\n```\n\n示例输出：\n输入元素总个数 (1 到 100): 10\n输入数字\
+  \ 1: 5\n输入数字 2: 8\n输入数字 3: 6.2\n输入数字 4: 5.4\n输入数字 5: 30\n输入数字 6: -7\n输入数字 7: -56\n\
+  输入数字 8: 53\n输入数字 9: 56\n输入数字 10: 34\n最大元素 = 56.00\n\n### 动态内存分配\n\n数组的确切大小在编译时是未知的，即编译器将编程语言编写的代码编译成可执行格式的时间。你最初声明的数组大小有时不足，有时又超过。动态内存分配允许程序在运行时获取更多内存空间，或者在不需要空间时释放空间。\n\
+  \n虽然 C 语言本身没有任何动态分配内存的技术，但在 `\"stdlib.h\"` 下有 4 个库函数用于动态内存分配。\n\n| 函数 | 函数用途 |\n\
+  | :--- | :--- |\n| `malloc()` | 分配请求的字节数并返回分配空间第一个字节的指针。语法：`ptr=(cast-type*)malloc(byte-size)`\
+  \ |\n| `calloc()` | 为数组元素分配空间，初始化为零，然后返回内存指针。语法：`ptr=(cast-type*)calloc(n,element-size);`\
+  \ |\n| `free()` | 释放之前分配的空间。语法：`free(ptr);` |\n| `realloc()` | 改变之前分配的大小。语法：`ptr=realloc(ptr,newsize);`\
+  \ |\n\n### 15. 写一个程序打印 1 到 100 之间的完美数。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  int main()\n{\n    int n,i,sum;\n    printf(\"Perfect numbers are: \");\n    for(n=1;n<=100;n++)\n\
+  \    {\n        i=1;\n        sum = 0;\n        while(i<n)\n        {\n        \
+  \    if(n%i==0)\n                sum=sum+i;\n            i++;\n        }\n     \
+  \   if(sum==n)\n        printf(\"%d \",n);\n    }\n    return 0;\n    getch();\n\
+  }\n```\n示例输出：\n完美数有: 6, 28\n\n#### 完美数的定义\n什么是完美数？\n完美数是一个正整数，其除该数本身以外的所有因数之和等于该数本身。例如，6\
+  \ 是一个完美数，因为 6 的因数是 1、2 和 3。它的因数之和为 `1+2+3=6`。注意：6 是最小的完美数。下一个完美数是 28，因为 `1+2+4+7+14=28`。一些完美数有：496,\
+  \ 8128。\n\n### 16. 写一个程序反转给定的数字。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  int main()\n{\n    int num,r,reverse=0;\n    printf(\"Enter any number: \");\n \
+  \   scanf(\"%d\",&num);\n    while(num)\n    {\n        r=num%10;\n        reverse=reverse*10+r;\n\
+  \        num=num/10;\n    }\n    printf(\"Reversed of number: %d\",reverse);\n \
+  \   return 0;\n    getch();\n}\n```\n示例输出：\n输入任意数字: 12\n反转后的数字: 21\n\n### 17. 写一个程序找到数字的数根，或者当数字各位数字和不是一位数时的结果。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n{\n    long int num,sum,r;\n\
+  \    printf(\"\\nEnter any number:-\");\n    scanf(\"%ld\",&num);\n    while(num>10)\n\
+  \    {\n        sum=0;\n        while(num)\n        {\n            r=num%10;\n \
+  \           num=num/10;\n            sum+=r;\n        }\n        if(sum>10)\n  \
+  \          num=sum;\n        else\n            break;\n    }\n    printf(\"\\nGeneric\
+  \ root of number:%ld\",sum);\n    return 0;\n    getch();\n}\n```\n示例输出：\n输入任意数字:\
+  \ 731\n数字的数根: 2\n\n#### 数根 (Generic Root)\n数字的数根定义为数字各位数字之和，直到得到一位数。例如：456 的数根为\
+  \ `4+5+6=15`，因为 15 是两位，所以 `1+5=6`。\n\n### 18. 写一个程序不使用循环打印从 1 到 n 的数字。\n\n```c\n\
+  #include<stdio.h>\n#include<conio.h>\nvoid num(int);\nint main()\n{\n    int n;\n\
+  \    printf(\"\\nEnter number:\");\n    scanf(\"%d\", &n);\n    num(n);\n    return\
+  \ 0;\n}\nvoid num(int n)\n{\n    static int c = 1;\n    if (c == n+1)\n        return;\n\
+  \    printf(\"%d\", c);\n    c++;\n    num(n);\n}\n```\n示例输出：\n输入 n 数字: 100\n1 2\
+  \ 3 4 5 6 7 8 9……50……100\n\n### 19. 写一个程序使用 For 循环找到前 n 个自然数的和。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nint main()\n{\n    int num, n, sum = 0;\n    printf(\"Enter the\
+  \ value of n: \");\n    scanf(\"%d\", &n);\n    for (num = 1; num <= n; num++)\n\
+  \    {\n        sum = sum + num;\n    }\n    printf(\"Sum = %d\\n\", sum);\n   \
+  \ getch();\n}\n```\n示例输出：\n输入 n 的值: 50\nSum = 1275\n\n### 20. 写一个程序检查数字是偶还是奇。\n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n{\n    int n;\n    printf(\"\
+  Input integer:\\n\");\n    scanf(\"%d\", &n);\n    n%2 == 0 ? printf(\"Even\\n\"\
+  ) : printf(\"Odd\\n\");\n    return 0;\n    getch();\n}\n```\n示例输出：\n输入整数: 2\nEven\n\
+  输入整数: 3\nOdd\n\n### 21. 写一个程序计算到 n 的奇数的和。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  int main()\n{\n    int i, n, odd_sum = 0, even_sum = 0;\n    printf(\"Enter the\
+  \ value of n:\\n\");\n    scanf(\"%d\", &n);\n    for (i = 1; i <= n; i++)\n   \
+  \ {\n        if (i % 2 == 0)\n            even_sum = even_sum + i;\n        else\n\
+  \            odd_sum = odd_sum + i;\n    }\n    printf(\"Sum of odd numbers = %d\\\
+  n\", odd_sum);\n    printf(\"Sum of even numbers = %d\\n\", even_sum);\n    getch();\n\
+  }\n```\n示例输出：\n输入 n 的值: 10\n奇数的和 = 25\n偶数的和 = 30\n\n### 22. 写一个程序检查一个数字是否为强数。\n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n{\n    int num, i, r, sum,\
+  \ temp, min, max;\n    printf(\"Enter minimum range: \");\n    scanf(\"%d\", &min);\n\
+  \    printf(\"Enter maximum range: \");\n    scanf(\"%d\", &max);\n    printf(\"\
+  Strong numbers in range: \");\n    for (num = min; num <= max; num++)\n    {\n \
+  \       temp = num;\n        sum = 0;\n        while (temp)\n        {\n       \
+  \     i = 1;\n            int f = 1;\n            r = temp % 10;\n            while\
+  \ (i <= r)\n            {\n                f = f * i;\n                i++;\n  \
+  \          }\n            sum = sum + f;\n            temp = temp / 10;\n      \
+  \  }\n        if (sum == num)\n        printf(\"%d \", num);\n    }\n    return\
+  \ 0;\n    getch();\n}\n```\n示例输出：\n输入最小范围: 100\n输入最大范围: 10000\n范围内的强数有: 145 405\n\
+  \n#### 强数的定义\n如果一个数字的各位阶乘之和等于其本身，则该数被称为强数。例如 145，因为 `1! + 4! + 5! = 1 + 24 + 120\
+  \ = 145`。\n\n### 23. 写一个使用数组升序进行简单排序的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  int main()\n{\n    int s, temp, i, j, a[20];\n    printf(\"Enter total numbers of\
+  \ elements: \");\n    scanf(\"%d\", &s);\n    printf(\"Enter %d elements: \", s);\n\
+  \    for (i = 0; i < s; i++)\n    scanf(\"%d\", &a[i]);\n    for (i = s - 2; i >=\
+  \ 0; i--)\n    {\n        for (j = 0; j <= i; j++)\n        {\n            if (a[j]\
+  \ > a[j + 1])\n            {\n                temp = a[j];\n                a[j]\
+  \ = a[j + 1];\n                a[j + 1] = temp;\n            }\n        }\n    }\n\
+  \    printf(\"After sorting: \");\n    for (i = 0; i < s; i++)\n    printf(\" %d\"\
+  , a[i]);\n    return 0;\n    getch();\n}\n```\n示例输出：\n输入元素总个数: 5\n输入 5 个元素: 6 2\
+  \ 0 11 9\n排序后:  0 2 6 9 11\n\n# 24. 如何在 C 中计算数字的幂。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nint main()\n{\n    int pow, num, i=1;\n    long int sum=1;\n\
+  \    printf(\"\\nEnter a number: \");\n    scanf(\"%d\", &num);\n    printf(\"\\\
+  nEnter power: \");\n    scanf(\"%d\", &pow);\n}\n```\n\n\n\n\n```c\nwhile(i<=pow)\n\
+  {\n    sum=sum*num;\n    i++;\n}\nprintf(\"\\n%d to the power %d is: %ld\",num,pow,sum);\n\
+  return 0;\ngetch();\n}\n```\n示例输出：\n输入一个数字: 4\n输入幂: 2\n4 的 2 次方是: 16\n\n## 25. 编写一个程序来检查年份是否为闰年。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n{\n    int year;\n   \
+  \ printf(\"Enter any year: \");\n    scanf(\"%d\",&year);\n    if(((year%4==0)&&(year%100!=0))||(year%400==0))\n\
+  \    printf(\"%d is a leap year\",year);\n    else\n    printf(\"%d is not a leap\
+  \ year\",year);\n    return 0;\n    getch();\n}\n```\n示例输出：\n输入任意年份: 2010\n2010\
+  \ 不是闰年\n\n## 26. 编写一个程序寻找两个数字的最大公约数 (HCF) 和最小公倍数 (LCM)。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h> \nint main()\n{\n    int a, b, x, y, t, hcf, lcm;\n    printf(\"\
+  Enter two integers:\\n\");\n    scanf(\"%d%d\", &x, &y);\n    a = x;\n    b = y;\n\
+  \    while (b != 0)\n    {\n        t = b;\n        b = a % b;\n        a = t;\n\
+  \    }\n    hcf = a;\n    lcm = (x*y)/hcf;\n    printf(\"Highest common factor of\
+  \ %d and %d = %d\\n\", x, y, hcf);\n    printf(\"Least common multiple of %d and\
+  \ %d = %d\\n\", x, y, lcm);\n    return 0;\n    getch();\n}\n```\n示例输出：\n输入两个整数:\
+  \ 9, 24\n9 和 24 的最大公约数 = 3\n9 和 24 的最小公倍数 = 72\n\n# 27. 编写一个程序打印乘法表。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nint main()\n{\n    int r,i,j,k;\n    printf(\"Enter the number\
+  \ range: \");\n    scanf(\"%d\",&r);\n    for(i=1;i<=r;i++)\n    {\n        for(j=1;j<=10;j++)\n\
+  \        printf(\"%d*%d=%d \",i,j,i*j);\n        printf(\"\\n\");\n    }\n    return\
+  \ 0;\n    getch();\n}\n```\n示例输出：\n输入数字范围: 5\n1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 1*6=6\
+  \ 1*7=7 1*8=8 1*9=9 1*10=10\n2*1=2 2*2=4 2*3=6 2*4=8 2*5=10 2*6=12 2*7=14 2*8=16\
+  \ 2*9=18 2*10=20\n3*1=3 3*2=6 3*3=9 3*4=12 3*5=15 3*6=18 3*7=21 3*8=24 3*9=27 3*10=30\n\
+  4*1=4 4*2=8 4*3=12 4*4=16 4*5=20 4*6=24 4*7=28 4*8=32 4*9=36 4*10=40\n5*1=5 5*2=10\
+  \ 5*3=15 5*4=20 5*5=25 5*6=30 5*7=35 5*8=40 5*9=45 5*10=50\n\n# 28. 使用 break 和 continue\
+  \ 编写一个程序打印 1-200 之间的质数。\n\n```c\n#include<conio.h>\n#include<math.h>\n#include<stdio.h>\n\
+  int main()\n{\n    int i, j;\n    i = 2;\n    while ( i < 300 )\n    {\n       \
+  \ j = 2;\n        while ( j < sqrt(i) )\n        {\n            if ( i % j == 0\
+  \ )\n            break;\n            else\n            {\n                ++j;\n\
+  \                continue;\n            }\n        }\n        if ( j > sqrt(i) )\n\
+  \        printf(\"%d\\t\", i);\n        ++i;\n    }\n    return 0;\n    getch();\n\
+  }\n```\n示例输出：\n注：2 是唯一的偶质数。\n2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,\
+  \ 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131,\
+  \ 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223,\
+  \ 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293.\n质数：\n大于\
+  \ 1 的自然数除了 1 和自身外没有其他因数。换句话说，我们可以说它只有 1 和自身两个因数。\n例如：5\n它们的因数是 1 和 5。\n\n## 29.\
+  \ 编写一个程序检查一个数字是否为质数。\n\n```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n\
+  {\n    char c;\n    int n;\n    printf(\"Enter positive integer: \");\n    scanf(\"\
+  %d\",&n);\n    printf(\"Enter to check Prime or Armstrong number: \");\n    scanf(\"\
+  \ %c\",&c);\n    if(c=='p' || c=='P')\n    {\n        if(prime(n))\n        printf(\"\
+  %d is a prime number.\",n);\n        else\n        printf(\"%d is not a prime number.\"\
+  ,n);\n    }\n    return 0;\n    getch();\n}\n```\n示例输出：\n输入正整数: 29\n29 是质数。\n\n\
+  ## 30. 编写一个程序寻找一个数字的质因子。\n\n```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n\
+  {\n    int num,i=1,j,k;\n    printf(\"\\nEnter a number:\");\n    scanf(\"%d\",&num);\n\
+  \    while(i<=num)\n    {\n        k=0;\n        if(num%i==0)\n        {\n     \
+  \       j=1;\n            while(j<=i)\n            {\n                if(i%j==0)\n\
+  \                    k++;\n                j++;\n            }\n            if(k==2)\n\
+  \                printf(\"\\n%d is prime factor\",i);\n        }\n        i++;\n\
+  \    }\n    return 0;\n    getch();\n}\n```\n示例输出：\n输入数字: 27\n3 是\n正整数的质因子是能整除该整数的质数。\n\
+  例如：15 的因数是 3 和 5 (3×5=15)。\n\n## 31. 编写一个程序寻找一个数字的阶乘。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nint Factorial(int);\nint main()\n{\n    int i,factorial,num;\n\
+  \    printf(\"Enter a number: \");\n    scanf(\"%d\",&num);\n    factorial = Factorial(num);\n\
+  \    printf(\"Factorial of %d is: %d\",num,factorial);\n    return 0;\n    getch();\n\
+  }\nint Factorial(int num)\n{\n    int i,f=1;\n    for(i=1;i<=num;i++)\n    f=f*i;\n\
+  \    return f;\n}\n```\n示例输出：\n输入数字: 8\n8 的阶乘是: 40320\n阶乘 (n!) 由 1 到 n 的数字乘积表示。\n\
+  当 n>0 时，n! = 1×2×3...n\n\n## 32. 编写一个程序打印斐波那契数列。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  int main()\n{\n    int k,r;\n    long i=0,j=1,f;\n    printf(\"Enter the number\
+  \ range:\");\n    scanf(\"%d\",&r);\n    printf(\"FIBONACCI: \");\n    for(k=2;k<r;k++)\n\
+  \    {\n        f=i+j;\n        i=j;\n        j=f;\n        printf(\" %ld\",j);\n\
+  \    }\n    return 0;\n    getch();\n}\n```\n示例输出：\n输入数字范围: 15\n斐波那契数列: 0 1 2 3\
+  \ 5 8 13 21 34 55 89 144 233 377\n\n# 33. 编写一个程序打印 1 到 500 的阿姆斯特数。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nint main()\n{\n    int num,r,sum,temp;\n    for(num=1;num<=500;num++)\n\
+  \    {\n        temp=num;\n        sum = 0;\n        while(temp!=0)\n        {\n\
+  \            r=temp%10;\n            temp=temp/10;\n            sum=sum+(r*r*r);\n\
+  \        }\n        if(sum==num)\n        printf(\"%d \",num);\n    }\n    return\
+  \ 0;\n    getch();\n}\n```\n示例输出：\n1 153 370 371 407\n什么是阿姆斯特数？\n各位数字数字的位数幂之和等于该本身的数字被称为阿姆斯特数。\n\
+  例如：153\n153 的位数是 3，\n且 1³ + 5³ + 3³ = 1 + 125 + 27 = 153\n\n## 34. 编写一个程序检查一个数字是否为阿姆斯特数。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n{\n    int n, n1, rem,\
+  \ num=0;\n    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\
+  \    n1=n;\n    while(n1!=0)\n    {\n        rem=n1%10;\n        num+=rem*rem;\n\
+  \        n1/=10;\n    }\n    if(num==n)\n    printf(\"%d is an Armstrong number\"\
+  ,n);\n    else\n    printf(\"%d is not an Armstrong number\",n);\n    return 0;\n\
+  \    getch();\n}\n```\n示例输出：\n输入正整数: 143\n143 不是阿姆斯特数\n\n## 35. 编写一个程序使用用户自定义函数检查一个数字是否为质数或阿姆斯特数。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint prime(int);\nint arm(int);\nint\
+  \ main()\n{\n    char c;\n    int n;\n    printf(\"Enter positive integer: \");\n\
+  \    scanf(\"%d\",&n);\n    printf(\"Enter to check Prime or Armstrong number: \"\
+  );\n    scanf(\" %c\",&c);\n    if(c=='p' || c=='P')\n    {\n        if(prime(n))\n\
+  \        printf(\"%d is a prime number.\",n);\n        else\n        printf(\"%d\
+  \ is not a prime number.\",n);\n    }\n    if(c=='a' || c=='A')\n    {\n       \
+  \ if(arm(n))\n        printf(\"%d is an Armstrong number.\",n);\n        else\n\
+  \        printf(\"%d is not an Armstrong number.\",n);\n    }\n    return 0;\n}\n\
+  int prime(int n)\n{\n    int i, flag=1;\n    for(i=2;i<=n/2;++i)\n    {\n      \
+  \  if(n%i==0)\n        {\n            flag=0;\n            break;\n        }\n \
+  \   }\n    return flag;\n}\nint arm(int n)\n{\n    int num=0, temp, flag=0;\n  \
+  \  temp=n;\n    while(n!=0)\n    {\n        num+=(n%10)*(n%10)*(n%10);\n       \
+  \ n/=10;\n    }\n    if(num==temp)\n        flag=1;\n    return flag;\n}\n```\n\n\
+  \n\n\n输入 P 检查质数，输入 A 检查阿姆斯特朗数：a\n\n143 不是阿姆斯特斯特数。\n\n## 36. 写一个程序检查一个数是否可以表示为两个质数之和。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint prime(int n);\n\nint main()\n\
+  {\n    int n, i, flag=0;\n    printf(\"Enter a positive integer: \");\n    scanf(\"\
+  %d\",&n);\n    for(i=2; i<=n/2; ++i)\n    {\n        if (prime(i)!=0)\n        {\n\
+  \            if ( prime(n-i)!=0)\n            {\n                printf(\"%d = %d\
+  \ + %d\\n\", n, i, n-i);\n                flag=1;\n            }\n        }\n  \
+  \  }\n    if (flag==0)\n    printf(\"%d can't be expressed as sum of two prime numbers.\"\
+  ,n);\n    return 0;\n    getch();\n}\nint prime(int n)\n{\n    int i, flag=1;\n\
+  \    for(i=2; i<=n/2; ++i)\n    if(n%i==0)\n        flag=0;\n    return flag;\n\
+  }\n```\n\nSample output:\nEnter a positive integer: 34\n34 = 3 + 31\n34 = 5 + 29\n\
+  34 = 11 + 23\n34 = 17 + 17\n\n## 37. 写一个程序检查一个数是否为回文数。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n\nint main()\n{\n    int n, reverse = 0, temp;\n    printf(\"\
+  Enter a number:\\n\");\n    scanf(\"%d\",&n);\n    temp = n; \n    while( temp !=\
+  \ 0 )\n    {\n        reverse = reverse * 10;\n        reverse = reverse + temp%10;\n\
+  \        temp = temp/10;\n    }\n    if ( n == reverse )\n    printf(\"%d is a palindrome\
+  \ number.\\n\", n);\n    else\n    printf(\"%d is not a palindrome number.\\n\"\
+  , n);\n    return 0;\n    getch();\n}\n```\n\nSample output:\nEnter a number: 123321\n\
+  123321 is a palindrome number.\nEnter a number: 123456\n123456 is not a palindrome\
+  \ number.\n\n### 回文数:\n回文数或数字回文数是指其数字反转后保持不变的数字。例如 16461, 它是“对称”的。\n\n## 38. 写一个程序反转一个数并检查它是否为回文数。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int num, temp,\
+  \ remainder, reverse = 0;\n    printf(\"Enter an integer: \");\n    scanf(\"%d\"\
+  , &num);\n    temp = num;\n    while (num > 0)\n    {\n        remainder = num %\
+  \ 10;\n        reverse = reverse * 10 + remainder;\n        num /= 10;\n    }\n\
+  \    printf(\"Given number is = %d\\n\", temp);\n    printf(\"Its reverse is  =\
+  \ %d\\n\", reverse);\n    if (temp == reverse)\n    printf(\"Number is a palindrome\
+  \ \\n\");\n    else\n    printf(\"Number is not a palindrome \\n\");\n    getch();\n\
+  }\n```\n\nSample Output:\nEnter an integer: 2476\nGiven number is = 2476\nIts reverse\
+  \ is  = 6742\nNumber is not a palindrome\n\n## 39. 写一个程序求等差数列（A.P. series）的和。\n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n{\n    int a,d,n,i,tn;\n\
+  \    int sum=0;\n    printf(\"Enter the first number of A.P. series: \");\n    scanf(\"\
+  %d\",&a);\n    printf(\"Enter the total numbers in A.P. series: \");\n    scanf(\"\
+  %d\",&n);\n    printf(\"Enter the common difference of A.P. series: \");\n    scanf(\"\
+  %d\",&d);\n    sum = ( n * ( 2 * a + ( n -1 ) * d )/ 2;\n    tn = a + (n-1) * d;\n\
+  \    printf(\"Sum of the series A.P.: \");\n    for(i=a;i<=tn; i= i + d )\n    {\n\
+  \        if(i != tn)\n        printf(\"%d + \",i);\n        else\n        printf(\"\
+  %d = %d \",i,sum);\n    }\n    return 0;\n    getch();\n}\n```\n\nSample output:\n\
+  Enter the first number of A.P. series: 1\nEnter the total numbers in A.P. series:\
+  \ 5\nEnter the common difference of A.P. series: 3\nSum of the series: 1 + 4 + 7\
+  \ + 10 + 13 = 35\n\n等差数列（A.P.）定义:\n一组数字，其中任意两个相邻数之差恒等于同一个常数。这个常数被称为公差。等差数列示例：5 10\
+  \ 15 20 25，因为任意两个相邻数的差都是 5。等差数列求和公式为：`Sn= n/2(2a + (n-1) d)`，通项公式为：`Tn= a + (n-1)\
+  \ d`\n\n## 40. 写一个程序求等比数列（G.P. series）的和。\n\n```c\n#include<stdio.h>\n#include<math.h>\n\
+  #include<conio.h>\nint main()\n{\n    float a,r,tn;\n    int n;\n    float sum=0;\n\
+  \    printf(\"Enter the first number of G.P. series: \");\n    scanf(\"%f\",&a);\n\
+  \    printf(\"Enter the total numbers in G.P. series: \");\n    scanf(\"%d\",&n);\n\
+  \    printf(\"Enter the common ratio of G.P. series: \");\n    scanf(\"%f\",&r);\n\
+  \    sum = (a*(1 - pow(r,n+1)))/(1-r);\n    tn = a * (1 - pow(r,n-1));\n    printf(\"\
+  tn term of G.P.: %f\",tn);\n    printf(\"\\nSum of G.P.: %f\",sum);\n    return\
+  \ 0;\n    getch();\n}\n```\n\nSample output:\nEnter the first number of G.P. series:\
+  \ 1\nEnter the total numbers in G.P. series: 5\nEnter the common ratio of G.P. series:\
+  \ 2\ntn term of G.P.: 15.000000\nSum of G.P. : 63.000000\n\n等比数列（G.P.）定义:\n一组数字，其中任意两个相邻数的比恒等于同一个常数。这个常数被称为公比。等比数列示例：2\
+  \ 4 8 16 32 64，因为任意两个相邻数的比都是 2。等比数列求和公式为：`Sn=a(1–rn+1)/(1-r)` 如果 `1 > r`，`= a/(r-1)`\
+  \ 如果 `r > 1`。通项公式为：`Tn= arn-1`\n\n## 41. 写一个程序求无限等比数列的和。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nint main()\n{\n    float a,r;\n    float sum=0;\n    printf(\"\
+  Enter the first number of G.P. series: \");\n    scanf(\"%f\",&a);\n    printf(\"\
+  Enter the common ratio of G.P. series: \");\n    scanf(\"%f\",&r);\n    if(1 > r)\n\
+  \        sum = a/(1-r);\n    else\n        sum = a/(r-1);\n    printf(\"\\nSum of\
+  \ infinite G.P. series: %f\",sum);\n    return 0;\n    getch();\n}\n```\n\nSample\
+  \ output:\nEnter the first number of G.P. series: 1\nEnter the common ratio of G.P.\
+  \ series: .5\nSum of infinite G.P. series: 2.000000\nEnter the first number of G.P.\
+  \ series: 5\nEnter the common ratio of G.P. series: 2\nSum of infinite G.P. series:\
+  \ -5.000000\n\n## 42. 写一个程序求数列 1 + 2 + …. n 的和。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  int main()\n{\n    int n,i;\n    int sum=0;\n    printf(\"Enter n i.e. max values\
+  \ of series: \");\n    scanf(\"%d\",&n);\n    sum = (n * (n + 1)) / 2;\n    printf(\"\
+  Sum of the series: \");\n    for(i =1;i <= n;i++)\n    {\n        if(i!=n)\n   \
+  \     printf(\"%d + \",i);\n        else\n        printf(\"%d = %d \",i,sum);\n\
+  \    }\n    return 0;\n    getch();\n}\n```\n\nSample output:\nEnter n i.e. max\
+  \ values of series: 5\nSum of the series: 1 + 2 + 3 + 4 + 5 = 15\n\n## 43. 写一个程序求数列\
+  \ 1³ + 2³ + …. n³ 的和。\n\n```c\n#include<math.h>\n#include<conio.h>\nint main()\n\
+  {\n    int n,i;\n    int sum=0;\n    printf(\"Enter the n i.e. max values of series:\
+  \ \");\n    scanf(\"%d\",&n);\n    sum = pow(((n * (n + 1)) / 2),2);\n    printf(\"\
+  Sum of the series : \");\n    for(i =1;i<=n;i++)\n    {\n        if(i != n)\n  \
+  \      printf(\"%d³ + \",i);\n        else\n        printf(\"%d³ = %d \",i,sum);\n\
+  \    }\n    return 0;\n    getch();\n}\n```\n\nSample output:\nEnter the n i.e.\
+  \ max values of series: 3\nSum of the series : 1³ + 2³ + 3³ = 36\n\nMathematical\
+  \ Formula:\nSum of the series 1 + 2 + 3 + … n = `n (n+1)/2`\nMathematical Formula:\n\
+  Sum of the series 1³ + 2³ + 3³ + … n³ = `(n (n+1)/2)2`\n\n## 44. 写一个程序求二次方程的根。\n\
+  \n```c\n#include<stdio.h>\n#include<math.h>\n#include<conio.h>\nint main()\n{\n\
+  \    float a, b, c, determinant, r1,r2, real, imag;\n    printf(\"Enter coefficients\
+  \ a, b and c: \");\n    scanf(\"%f%f%f\",&a,&b,&c);\n    determinant=b*b-4*a*c;\n\
+  \    if (determinant>0)\n    {\n        r1= (-b+sqrt(determinant))/(2*a);\n    \
+  \    r2= (-b-sqrt(determinant))/(2*a);\n        printf(\"Roots are: %.2f and %.2f\"\
+  ,r1 , r2);\n    }\n    else if (determinant==0)\n    {\n        r1 = r2 = -b/(2*a);\n\
+  \        printf(\"Roots are: %.2f and %.2f\", r1, r2);\n    }\n    else\n    {\n\
+  \        real= -b/(2*a);\n        imag = sqrt(-determinant)/(2*a);\n        printf(\"\
+  Roots are: %.2f+%.2fi and %.2f-%.2fi\", real, imag, real, imag);\n    }\n    return\
+  \ 0;\n    getch();\n}\n```\n\nSample output:\nEnter coefficients a, b and c: 2 4\
+  \ 6\nRoots are: -1.00+1.41i and -1.00-1.41i\n\n## 45. 写一个程序打印数字矩形金字塔。\n\n```c\n\
+  #include<stdio.h>\n```\n\n\n\n\n\n```c\n#include<conio.h>\n\nint main()\n{\n   \
+  \ int number, row, col;\n    printf(\"\\nEnter Number of Rows to be display : \"\
+  );\n    scanf(\"%d\", &number);\n    for (row = 1; number >= row; row++)\n    {\n\
+  \        for (col = 1; col <= number; col++)\n            printf(\"%d\\t\", row);\n\
+  \        printf(\"\\n\");\n    }\n    return 0;\n    getch();\n}\n```\n示例输出：\n```\n\
+  Enter Number of Rows to be display: 5\n1       1       1       1       1\n2    \
+  \   2       2       2       2\n3       3       3       3       3\n4       4    \
+  \   4       4       4\n5       5       5       5       5\n```\n\n## 46. 写一个程序以杨斯卡三角形的模式打印数字。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nlong fact(int);\n\nint main()\n\
+  {\n    int line,i,j;\n    printf(\"Enter the no. of lines: \");\n    scanf(\"%d\"\
+  ,&line);\n    for(i=0;i<line;i++)\n    {\n        for(j=0;j<line-i-1;j++)\n    \
+  \        printf(\" \");\n        for(j=0;j<=i;j++)\n            printf(\"%ld \"\
+  ,fact(i)/(fact(j)*fact(i-j)));\n        printf(\"\\n\");\n    }\n    return 0;\n\
+  \    getch();\n}\n\nlong fact(int num)\n{\n    long f=1;\n    int i=1;\n    while(i<=num)\n\
+  \    {\n        f=f*i;\n        i++;\n    }\n    return f;\n}\n```\n示例输出：\n```\n\
+  Enter the no. of lines: 8\n1\n1 1\n1 2 1\n1 3 3 1\n1 4 6 4 1\n1 5 10 10 5 1\n1 6\
+  \ 15 20 15 6 1\n1 7 21 35 35 21 7 1\n```\n\n## 47. 写一个程序以“*”作为倒置杨斯卡三角形的模式打印。\n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int rows,i,j,space;\n\
+  \    printf(\"Enter number of rows: \");\n    scanf(\"%d\",&rows);\n    for(i=rows;i>=1;--i)\n\
+  \    {\n        for(space=0;space<rows-i;++space)\n            printf(\"  \");\n\
+  \        for(j=i;j<=2*i-1;++j)\n            printf(\"* \");\n        for(j=0;j<i-1;++j)\n\
+  \            printf(\"* \");\n        printf(\"\\n\");\n    }\n    return 0;\n \
+  \   getch();\n}\n```\n示例输出：\n```\nEnter number of rows: 8\n***************\n*************\n\
+  ***********\n*********\n*******\n*****\n***\n*\n```\n\n## 48. 写一个程序以弗洛伊德三角形的模式打印数字。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int i,j,r,k=1;\n\
+  \    printf(\"Enter the range: \");\n    scanf(\"%d\",&r);\n    printf(\"FLOYD'S\
+  \ TRIANGLE\\n\");\n    for(i=1;i<=r;i++)\n    {\n        for(j=1;j<=i;j++,k++)\n\
+  \            printf(\"%d\",k);\n        printf(\"\\n\");\n    }\n    return 0;\n\
+  \    getch();\n}\n```\n示例输出：\n```\nEnter the range: 8\nFLOYD'S TRIANGLE\n1\n2 3\n\
+  4 5 6\n7 8 9 10\n11 12 13 14 15\n16 17 18 19 20 21\n22 23 24 25 26 27 28\n29 30\
+  \ 31 32 33 34 35 36\n```\n\n## 49. 写一个程序以弗洛伊德三角形的模式打印字符。\n\n```c\n#include <stdio.h>\n\
+  #include <conio.h>\n\nmain()\n{\n    char i,j;\n    for(i=65;i<=70;i++)\n    {\n\
+  \        for(j=65;j<=i;j++)\n            printf(\"%c\",j);\n        printf(\"\\\
+  n\");\n    }\n    getch();\n}\n```\n示例输出：\n```\nA\nAB\nABC\nABCD\nABCDE\nABCDEF\n\
+  ```\n\n## 50. 写一个程序以“*”作为倒置弗洛伊德模式的模式打印。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    int i,j,rows;\n    printf(\"Enter the number of rows: \");\n\
+  \    scanf(\"%d\",&rows);\n    for(i=rows;i>=1;--i)\n    {\n        for(j=1;j<=i;++j)\n\
+  \            printf(\"* \");\n        printf(\"\\n\");\n    }\n    return 0;\n \
+  \   getch();\n}\n```\n示例输出：\n```\nEnter the number of rows: 10\n**********\n*********\n\
+  *******\n******\n****\n**\n*\n```\n\n## 51. 写一个程序打印菱形模式。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n\nint main()\n{\n    int n, c, k, space = 1;\n    printf(\"Enter\
+  \ number of rows\\n\");\n    scanf(\"%d\", &n);\n    space = n - 1;\n    for (k\
+  \ = 1; k <= n; k++)\n    {\n        for (c = 1; c <= space; c++)\n            printf(\"\
+  \ \");\n        space--;\n        for (c = 1; c <= 2*k-1; c++)\n            printf(\"\
+  *\");\n        printf(\"\\n\");\n    }\n    space = 1;\n    for (k = 1; k <= n -\
+  \ 1; k++)\n    {\n        for (c = 1; c <= space; c++)\n            printf(\" \"\
+  );\n        space++;\n        for (c = 1; c <= 2*k-1; c++)\n            printf(\"\
+  *\");\n        printf(\"\\n\");\n    }\n    return 0;\n    getch();\n}\n```\n示例输出：\n\
+  ```\nEnter number of rows\n10\n         *\n        ***\n       *****\n      ******\n\
+  \     **********\n   **************\n*******************\n  **************\n   ************\n\
+  \    **********\n     ********\n       *****\n\n## 52. 写一个程序使用二分查找在数组中搜索元素。\n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a[10],i,n,m,c=0,l,u,mid;\n\
+  \    printf(\"Enter the size of an array: \");\n    scanf(\"%d\",&n);\n    printf(\"\
+  Enter the elements in ascending order: \");\n    for(i=0;i<n;i++)\n    {\n     \
+  \   scanf(\"%d\",&a[i]);\n    }\n    printf(\"Enter the number to search: \");\n\
+  \    scanf(\"%d\",&m);\n    l=0,u=n-1;\n    while(l<=u)\n    {\n        mid=(l+u)/2;\n\
+  \        if(m==a[mid])\n        {\n            c=1;\n            break;\n      \
+  \  }\n        else if(m<a[mid])\n        {\n            u=mid-1;\n        }\n  \
+  \      else\n            l=mid+1;\n    }\n    if(c==0)\n        printf(\"The number\
+  \ is not found.\");\n    else\n        printf(\"The number is found.\");\n    return\
+  \ 0;\n    getch();\n}\n```\n示例输出：\n```\nEnter the size of an array: 5\nEnter the\
+  \ elements in ascending order: 4 7 8 11 21\nEnter the number to search: 11\nThe\
+  \ number is found.\n```\n\n## 53. 写一个程序二进制转十进制。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    long binaryNumber,decimalNumber=0,j=1,remainder;\n    printf(\"\
+  Enter any binary number: \");\n    scanf(\"%ld\",&binaryNumber);\n    while(binaryNumber!=0)\n\
+  \    {\n        remainder=binaryNumber%10;\n        decimalNumber=decimalNumber+remainder*j;\n\
+  \        j=j*2;\n        binaryNumber=binaryNumber/10;\n    }\n    printf(\"Equivalent\
+  \ decimal value: %ld\",decimalNumber);\n    return 0;\n    getch();\n}\n```\n示例输出：\n\
+  ```\nEnter any binary number: 1101\nEquivalent decimal value: 13\n```\n公式：\n二进制系统：它是\
+  \ 2 进制，使用数字 0 和 1。\n十进制系统：它是 10 进制，使用数字 0 到 9。\n从二进制转十进制的方法：将每个位数字从右侧乘以 1, 2, 4,\
+  \ 8, 16 等，然后相加。\n二进制转十进制示例：\n例如，我们要将二进制数 10111 转换为十进制：\nStep 1: 1 * 1 = 1\nStep\
+  \ 2: 1 * 2 = 2\nStep 3: 1 * 4 = 4\nStep 4: 1 * 8 = 8\nStep 5: 0 * 16 = 0\nStep 6:\
+  \ 1 * 32 = 32\n其十进制值：1 + 2 + 4 + 8 + 0 + 32 = 47\n即 (101111)2 = (47)10\n\n## 54.\
+  \ 写一个十进制转八进制的转换器。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n\
+  {\n    long decimalNumber,remainder,quotient;\n    int octalNumber[100],i=1,j;\n\
+  \    printf(\"Enter any decimal number: \");\n    scanf(\"%ld\",&decimalNumber);\n\
+  \    quotient=decimalNumber;\n    while(quotient!=0)\n    {\n        octalNumber[i++]=\
+  \ quotient % 8;\n        quotient = quotient / 8;\n    }\n    printf(\"Equivalent\
+  \ octal value of decimal number %ld: \",decimalNumber);\n    for(j = i -1;j> 0;j--)\n\
+  \        printf(\"%d\",octalNumber[j]);\n    return 0;\n    getch();\n}\n```\n示例输出：\n\
+  ```\nEnter any decimal number: 50\nEquivalent octal value of decimal number 50:\
+  \ 62\n```\n算法：\n八进制系统：它是 8 进制，使用数字 0 到 7。\n十进制系统：它是 10 进制，使用数字 0 到 9。\n十进制转八进制转换方法：\n\
+  Step 1: 将原始十进制除以 8\nStep 2: 将商除以 8\nStep 3: 重复步骤 2，直到商为 0。\n结果八进制数将是每步余数的倒序排列。\n\
+  十进制转八进制示例：\n例如，我们将十进制数 525 转换为八进制。\nStep 1: 525 / 8 Remainder : 5 , Quotient : 65\n\
+  Step 2: 65 / 8 Remainder : 1 , Quotient : 8\nStep 3: 8 / 8 Remainder : 0 , Quotient\
+  \ : 1\nStep 4: 1 / 8 Remainder : 1 , Quotient : 0\n所以对应的八进制数是：1015\n即 (525)10 =\
+  \ (1015)8\n\n# 55. 如何将大位二进制数转换为十六进制。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  #define MAX 1000\nint main()\n{\n    char binaryNumber[MAX],hexaDecimal[MAX];\n\
+  \    int temp;\n    long int i=0,j=0;\n    printf(\"Enter any number binary number:\
+  \ \");\n    scanf(\"%s\",binaryNumber);\n    while(binaryNumber[i])\n    {\n   \
+  \     binaryNumber[i] = binaryNumber[i] -48;\n        ++i;\n    }\n    --i;\n  \
+  \  while(i-2>=0)\n    {\n```\n\n\n\n\n\n```c\ntemp = binaryNumber[i-3] *8 + binaryNumber[i-2]\
+  \ *4 + binaryNumber[i-1] *2 + binaryNumber[i];\n\nif(temp > 9)\n    hexaDecimal[j++]\
+  \ = temp + 55;\nelse\n    hexaDecimal[j++] = temp + 48;\n\ni=i-4;\n}\n\nif(i ==\
+  \ 1)\n    hexaDecimal[j] = binaryNumber[i-1] *2 + binaryNumber[i] + 48;\nelse if(i==0)\n\
+  \    hexaDecimal[j] = binaryNumber[i] + 48;\nelse\n    --j;\n\nprintf(\"Equivalent\
+  \ hexadecimal value: \");\n\nwhile(j>=0)\n{\n    printf(\"%c\",hexaDecimal[j--]);\n\
+  }\n\nreturn 0;\n\ngetch();\n}\n```\n\n### Sample output\n```\nEnter any number any\
+  \ binary number: 1010011011100011110\n001001111011110001000100011101110111011110\n\
+  Equivalent hexadecimal value: 14DC789EF111DDDE\n```\n\n### Formula\n#### 二进制转十六进制的转换方法：\n\
+  **步骤 1**: 将二进制数从右侧每 4 位一组进行排列。\n\n**步骤 2**: 将每组替换为以下值：\n\n| 二进制数 | 十六进制值 |\n| :---\
+  \ | :--- |\n| 0000 | 0 |\n| 0001 | 1 |\n| 0010 | 2 |\n| 0011 | 3 |\n| 0100 | 4 |\n\
+  | 0101 | 5 |\n| 0110 | 6 |\n| 0111 | 7 |\n| 1000 | 8 |\n| 1001 | 9 |\n| 1010 | A\
+  \ |\n| 1011 | B |\n| 1100 | C |\n| 1101 | D |\n| 1110 | E |\n| 1111 | F |\n\n####\
+  \ 二进制转十六进制的示例：\n例如，我们想要将二进制数 `11011010101001101` 转换为十六进制。\n\n**步骤 1**: `0001 1011\
+  \ 0101 0100 1101`\n**步骤 2**: `1 B 5 4 D`\n所以 `(1011010101001101)2 = (1B54D)16`\n\
+  \n---\n\n# 56. 写一个用于十六进制转二进制的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  #define MAX 1000\n\nint main()\n{\n    char binaryNumber[MAX],hexaDecimal[MAX];\n\
+  \    long int i=0;\n    printf(\"Enter any hexadecimal number: \");\n    scanf(\"\
+  %s\",hexaDecimal);\n    printf(\"\\nEquivalent binary value: \");\n\n    while(hexaDecimal[i])\n\
+  \    {\n        switch(hexaDecimal[i])\n        {\n            case '0': printf(\"\
+  0000\"); break;\n            case '1': printf(\"0001\"); break;\n            case\
+  \ '2': printf(\"0010\"); break;\n            case '3': printf(\"0011\"); break;\n\
+  \            case '4': printf(\"0100\"); break;\n            case '5': printf(\"\
+  0101\"); break;\n            case '6': printf(\"0110\"); break;\n            case\
+  \ '7': printf(\"0111\"); break;\n            case '8': printf(\"1000\"); break;\n\
+  \            case '9': printf(\"1001\"); break;\n            case 'A': printf(\"\
+  1010\"); break;\n            case 'B': printf(\"1011\"); break;\n            case\
+  \ 'C': printf(\"1100\"); break;\n            case 'D': printf(\"1101\"); break;\n\
+  \            case 'E': printf(\"1110\"); break;\n            case 'F': printf(\"\
+  1111\"); break;\n            case 'a': printf(\"1010\"); break;\n            case\
+  \ 'b': printf(\"1011\"); break;\n            case 'c': printf(\"1100\"); break;\n\
+  \            case 'd': printf(\"1101\"); break;\n            case 'e': printf(\"\
+  1110\"); break;\n            case 'f': printf(\"1111\"); break;\n            default:\
+  \ printf(\"\\nInvalid digit %c \",hexaDecimal[i]);\n                return 0;\n\
+  \        }\n        i++;\n    }\n    return 0;\n    getch();\n}\n```\n\n### Sample\
+  \ output\n```\nEnter any hexadecimal number: AD5\nEquivalent binary value: 101011010101\n\
+  ```\n\n### 公式:（使用上方表格）\n#### 十六进制转二进制的转换方法：\n要将十六进制数转换为二进制，使用十六进制转二进制表将每个十六进制位替换为对应的二进制数。\n\
+  \n#### 十六进制转二进制的示例：\n例如，我们想要将十六进制数 `65B2` 转换为二进制。为此，我们将每个十六进制位替换为二进制值：\n十六进制数：`6\
+  \ 5 B 2`\n二进制值：`0110 0101 1011 0010`\n所以 `(65B2)16 = (0110010110110010)2`\n\n---\n\
+  \n# 57. 写一个将八进制转换为十进制的程序。\n\n```c\n#include<stdio.h>\n#include<math.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    long int octal,decimal =0;\n    int i=0;\n    printf(\"Enter\
+  \ any octal number: \");\n    scanf(\"%ld\",&octal);\n    while(octal!=0)\n    {\n\
+  \        decimal = decimal + (octal % 10) * pow(8,i++);\n        octal = octal/10;\n\
+  \    }\n    printf(\"Equivalent decimal value: %ld\",decimal);\n    return 0;\n\
+  \    getch();\n}\n\n### Sample output\n```\nEnter any octal number: 346\nEquivalent\
+  \ decimal value: 230\n```\n\n### 公式\n#### 八进制转十进制的转换方法：\n将八进制数转换为十进制，将八进制数的每个位从右侧分别乘以\
+  \ `8⁰`、`8¹`、`8²`、`8³` 等，然后求和。\n\n#### 八进制转十进制的示例：\n例如，将八进制数 `3401` 转换为十进制数。\n**步骤\
+  \ 1**: `1 * 8 ⁰ = 1`\n**步骤 2**: `0 * 8 ¹ = 0`\n**步骤 3**: `4 * 8 ² = 256`\n**步骤 4**:\
+  \ `3 * 8 ³ = 1536`\n**和** = `1 + 0 + 256 + 1536 = 1793`\n所以 `(3401)8 = (1793)10`\n\
+  \n---\n\n# 58. 写一个将数字的每个位转换为英文单词的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    int number,i=0,digit;\n    char *word[1000];\n    printf(\"\
+  Enter any integer: \");\n    scanf(\"%d\",&number);\n    while(number)\n    {\n\
+  \        digit = number %10;\n        number = number /10;\n        switch(digit)\n\
+  \        {\n            case 0: word[i++] = \"zero\"; break;\n            case 1:\
+  \ word[i++] = \"one\"; break;\n            case 2: word[i++] = \"two\"; break;\n\
+  \            case 3: word[i++] = \"three\"; break;\n            case 4: word[i++]\
+  \ = \"four\"; break;\n            case 5: word[i++] = \"five\"; break;\n       \
+  \     case 6: word[i++] = \"six\"; break;\n            case 7: word[i++] = \"seven\"\
+  ; break;\n            case 8: word[i++] = \"eight\"; break;\n            case 9:\
+  \ word[i++] = \"nine\"; break;\n        }\n    }\n    for(j=i-1;j>=0;j--)\n    {\n\
+  \        printf(\"%s \",word[j]);\n    }\n    return 0;\n    getch();\n}\n```\n\n\
+  ### Sample output\n```\nEnter any integer: 2345120\ntwo four five one zero\n```\n\
+  \n---\n\n# 59. 写一个二进制数乘法的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\nint\
+  \ binaryAddition(int,int);\n\nint main()\n{\n    long int binary1,binary2,multiply=0;\n\
+  \    int digit,factor=1;\n    printf(\"Enter first binary number: \");\n    scanf(\"\
+  %ld\",&binary1);\n    printf(\"Enter second binary number: \");\n    scanf(\"%ld\"\
+  ,&binary2);\n    while(binary2!=0)\n    {\n        digit = binary2 %10;\n      \
+  \  if(digit ==1)\n        {\n            binary1=binary1*factor;\n            multiply=binaryAddition(binary1,multiply);\n\
+  \        }\n        else\n            binary1=binary1*factor;\n        binary2 =\
+  \ binary2/10;\n        factor = 10;\n    }\n    printf(\"Product of two binary numbers:\
+  \ %ld\",multiply);\n    return 0;\n    getch();\n}\n\nint binaryAddition(int binary1,int\
+  \ binary2)\n{\n    int i=0,remainder = 0,sum[20];\n    int binarySum=0;\n    while(binary1!=0||binary2!=0)\n\
+  \    {\n        sum[i++]=(binary1 %10 + binary2 %10 + remainder )% 2;\n        remainder=(binary1\
+  \ %10 + binary2 %10 + remainder ) / 2;\n        binary1 = binary1/10;\n        binary2\
+  \ = binary2/10;\n    }\n    if(remainder!=0)\n        sum[i++] = remainder;\n  \
+  \  --i;\n    while(i>=0)\n        binarySum = binarySum*10 + sum[i--];\n    return\
+  \ binarySum;\n}\n```\n\n### Sample output\n```\nEnter first binary number: 1101\n\
+  Enter second binary number: 11\nProduct of two binary numbers: 10011\n```\n\n\n\n\
+  \n\n```c\nfor(j=0;j<3;j++)\n    printf(\"%d\\t\",a[i][j]);\n}\n\nprintf(\"\\nThe\
+  \ Second matrix is:\\n\");\nfor(i=0;i<3;i++)\n{\n    printf(\"\\n\");\n    for(j=0;j<3;j++)\n\
+  \        printf(\"%d\\t\",b[i][j]);\n}\nfor(i=0;i<3;i++)\n    for(j=0;j<3;j++)\n\
+  \        c[i][j]=a[i][j]+b[i][j];\nprintf(\"\\nThe Addition of two matrix is:\\\
+  n\");\nfor(i=0;i<3;i++)\n{\n    printf(\"\\n\");\n    for(j=0;j<3;j++)\n       \
+  \ printf(\"%d\\t\",c[i][j]);\n}\nreturn 0;\ngetch();\n```\n\n示例输出：\n输入第一个矩阵： 2 4\
+  \ 6 8 0 1 3 5 7\n输入第二个矩阵： 1 2 3 4 5 6 7 8 9\n第一个矩阵是：\n2      4      6\n8      0\
+  \      1\n3      5      7\n第二个矩阵是：\n1      2      3\n4      5      6\n7      8 \
+  \     9\n两个矩阵相的和是：\n3      6      9\n12     5      7\n10     13     16\n\n# 62.\
+  \ 写一个程序求矩阵对角线元素之和。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n\
+  {\n    int a[10][10],i,j,sum=0,m,n;\n    printf(\"\\nEnter the row and column of\
+  \ matrix: \");\n    scanf(\"%d %d\",&m,&n);\n    printf(\"\\nEnter the elements\
+  \ of matrix: \");\n    for(i=0;i<m;i++)\n        for(j=0;j<n;j++)\n            scanf(\"\
+  %d\",&a[i][j]);\n    printf(\"\\nThe matrix is\\n\");\n    for(i=0;i<m;i++)\n  \
+  \  {\n        printf(\"\\n\");\n        for(j=0;j<m;j++)\n        {\n          \
+  \  printf(\"%d\\t\",a[i][j]);\n        }\n    }\n    for(i=0;i<m;i++)\n    {\n \
+  \       for(j=0;j<n;j++)\n        {\n            if(i==j)\n                sum=sum+a[i][j];\n\
+  \        }\n    }\n    printf(\"\\n\\nSum of the diagonal elements of a matrix is:\
+  \ %d\",sum);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n输入矩阵的行和列： 3 3\n输入矩阵的元素：\
+  \ 2\n3\n5\n6\n7\n9\n2\n6\n7\n矩阵是\n2      3      5\n6      7      9\n2      6   \
+  \   7\n矩阵的对角线元素之和为： 16\n\n# 63. 写一个程序检查两个矩阵是否相等。\n\n```c\n#include<stdio.h>\n#include<stdlib.h>\n\
+  #include<conio.h>\nint main()\n{\n    int a[10][10], b[10][10];\n    int i, j, row1,\
+  \ column1, row2, column2, flag = 1;\n    printf(\"Enter the order of the matrix\
+  \ A\\n\");\n    scanf(\"%d %d\", &row1, &column1);\n    printf(\"Enter the order\
+  \ of the matrix B\\n\");\n    scanf(\"%d %d\", &row2, &column2);\n    printf(\"\
+  Enter the elements of matrix A\\n\");\n    for(i=0;i<row1;i++)\n        for(j=0;j<column1;j++)\n\
+  \            scanf(\"%d\", &a[i][j]);\n    printf(\"Enter the elements of matrix\
+  \ B\\n\");\n    for(i=0;i<row2;i++)\n        for(j=0;j<column2;j++)\n          \
+  \  scanf(\"%d\", &b[i][j]);\n    printf(\"MATRIX A is \\n\");\n    for(i=0;i<row1;i++)\n\
+  \        for(j=0;j<column1;j++)\n            printf(\"%3d\", a[i][j]);\n    printf(\"\
+  \\n\");\n    printf(\"MATRIX B is \\n\");\n    for(i=0;i<row2;i++)\n        for(j=0;j<column2;j++)\n\
+  \            printf(\"%3d\", b[i][j]);\n    printf(\"\\n\");\n    if (row1 == row2\
+  \ && column1 == column2)\n    {\n        printf(\"Matrices can be compared \\n\"\
+  );\n        for(i=0;i<row1;i++)\n            for(j=0;j<column2;j++)\n          \
+  \  {\n                if (a[i][j] != b[i][j])\n                {\n             \
+  \       flag = 0;\n                    break;\n                }\n            }\n\
+  \    }\n    else\n    {\n        printf(\" Cannot be compared\\n\");\n        exit(1);\n\
+  \    }\n    if (flag == 1)\n        printf(\"Two matrices are equal \\n\");\n  \
+  \  else\n        printf(\"But, two matrices are not equal \\n\");\n    return 0;\n\
+  \    getch();\n}\n```\n\n示例输出：\n输入矩阵 A 的阶\n3\n3\n输入矩阵 B 的阶\n3\n3\n输入矩阵 A 的元素\n1\n\
+  2\n3\n4\n5\n6\n7\n8\n9\n输入矩阵 B 的元素\n1\n2\n3\n4\n5\n6\n7\n8\n9\nMATRIX A is\n  1\
+  \  2  3\n  4  5  6\n  7  8  9\nMATRIX B is\n  1  2  3\n  4  5  6\n  7  8  9\n矩阵可以比较\n\
+  两个矩阵相等。\n\n# 64. 写一个程序检查给定矩阵是否为单位矩阵。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  int main()\n{\n    int a[10][10];\n    int i, j, row, column, flag = 1;\n    printf(\"\
+  Enter the order of the matrix A\\n\");\n    scanf(\"%d %d\", &row, &column);\n \
+  \   printf(\"Enter the elements of matrix A\\n\");\n    for(i=0;i<row; i++)\n  \
+  \      for(j=0;j<column; j++)\n            scanf(\"%d\", &a[i][j]);\n    printf(\"\
+  MATRIX A is \\n\");\n    for(i=0;i<row; i++)\n        for(j=0; j<column; j++)\n\
+  \            printf(\"%3d\", a[i][j]);\n    printf(\"\\n\");\n    for(i=0;i<row;\
+  \ i++)\n        for(j=0; j<column; j++)\n        {\n            if (a[i][j] != 1\
+  \ && a[j][i] != 0)\n            {\n                flag = 0;\n                break;\n\
+  \            }\n        }\n    if (flag == 1 )\n        printf(\"It is identity\
+  \ matrix \\n\");\n    else\n        printf(\"It is not a identity matrix \\n\");\n\
+  \    return 0;\n    getch();\n}\n```\n\n示例输出：\n输入矩阵 A 的阶\n2\n3\n输入矩阵 A 的元素\n1\n\
+  2\n3\n9\n8\n7\nMATRIX A is\n  1  2  3\n  9  8  7\n不是单位矩阵\n单位矩阵：\n一种主对角线元素全为 1 而其他所有元素均为\
+  \ 0 的方矩阵。将给定矩阵乘以单位矩阵的效果是保持给定矩阵不变。\n\n# 65. 写一个程序检查给定矩阵是稀疏矩阵还是稠密矩阵。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nint main ()\n{\n    static int array[10][10];\n    int i, j,\
+  \ m, n;\n    int counter = 0;\n    printf(\"Enter the order of the matix \\n\");\n\
+  \    scanf(\"%d %d\", &m, &n);\n    printf(\"Enter the co-efficients of the matix\
+  \ \\n\");\n    for (i = 0; i < m; ++i)\n    {\n        for (j = 0; j < n; ++j)\n\
+  \        {\n            scanf(\"%d\", &array[i][j]);\n            if (array[i][j]\
+  \ == 0)\n            {\n                ++counter;\n            }\n        }\n \
+  \   }\n    if (counter > ((m * n) / 2))\n    {\n        printf(\"The given matrix\
+  \ is sparse matrix \\n\");\n    }\n    else\n        printf(\"The given matrix is\
+  \ dense matrix \\n\");\n    printf(\"There are %d number of zeros\", counter);\n\
+  \    return 0;\n    getch();\n}\n```\n\n示例输出：\n输入矩阵的阶\n2\n3\n输入矩阵的系数\n2\n3\n5\n\
+  0\n给定矩阵是稀疏矩阵。\n稀疏矩阵是指大部分元素均为 0 的矩阵。\n相比之下，如果大部分元素是非 0，则该矩阵被认为是稠密矩阵。\n\n# 66. 写一个程序计算矩阵每一行和每一列元素之和。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint row(int array1[10][10], int k,\
+  \ int c);\nint col(int array1[10][10], int k, int r);\nint main()\n{\n    int arr[10][10];\n\
+  \    int i, j, row, col, rowsum, colsum, sumall=0;\n    printf(\"Enter the order\
+  \ of the matrix \\n\");\n    scanf(\"%d %d\", &row, &col);\n    printf(\"Enter the\
+  \ elements of the matrix \\n\");\n    for(i=0; i<row; i++)\n        for(j=0; j<col;\
+  \ j++)\n            scanf(\"%d\", &arr[i][j]);\n    printf(\"Input matrix is \\\
+  n\");\n    for(i=0; i<row; i++)\n        for(j=0; j<col; j++)\n            printf(\"\
+  %3d\", arr[i][j]);\n    printf(\"\\n\");\n    for(i=0; i < row; i++)\n    {\n  \
+  \      rowsum = row(arr, i, col);\n        printf(\"Sum of row %d = %d\\n\", i +\
+  \ 1, rowsum);\n    }\n    for(j=0; j < col; j++)\n    {\n        colsum = col(arr,\
+  \ j, row);\n        printf(\"Sum of column %d = %d\\n\", j + 1, colsum);\n    }\n\
+  \    for(j=0; j < row; j++)\n    {\n        sumall = sumall + row(arr, j, col);\n\
+  \    }\n    printf(\"Sum of all elements of matrix = %d\\n\", sumall);\n}\n\nint\
+  \ row(int array1[10][10], int k, int c)\n{\n    int rsum = 0, i;\n    for (i = 0;\
+  \ i < c; i++)\n        rsum = rsum + array1[k][i];\n    return(rsum);\n}\n\nint\
+  \ col(int array1[10][10], int k, int r)\n{\n    int csum = 0, j;\n    for (j = 0;\
+  \ j < r; j++)\n        csum = csum + array1[j][k];\n    return(csum);\n}\ngetch();\n\
+  }\n```\n\n示例输出：\n输入矩阵的阶\n3\n3\n输入矩阵的元素\n1\n2\n3\n4\n5\n6\n7\n8\n9\n输入矩阵是\n  1  2\
+  \  3\n  4  5  6\n  7  8  9\n行 1 之和 = 6\n行 2 之和 = 15\n行 3 之和 = 24\n列 1 之和 = 12\n\
+  列 2 之和 = 15\n列 3 之和 = 18\n矩阵所有元素之和 = 45\n\n\n\n\n第 2 列和 = 15\n第 3 列和 = 18\n矩阵所有元素和\
+  \ = 45\n\n## 67. 写一个程序找出给定矩阵中奇数和偶数的频率。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    static int array[10][10];\n    int i, j, m, n, even = 0, odd\
+  \ = 0;\n    printf(\"Enter the order of the matrix: \\n\");\n    scanf(\"%d %d\"\
+  , &m, &n);\n    printf(\"Enter the coefficients of matrix: \\n\");\n    for (i =\
+  \ 0; i < m; ++i)\n    {\n        for (j = 0; j < n; ++j)\n        {\n          \
+  \  scanf(\"%d\", &array[i][j]);\n            if ((array[i][j] % 2) == 0)\n     \
+  \       {\n                ++even;\n            }\n            else\n          \
+  \      ++odd;\n        }\n    }\n    printf\n    (\"The given matrix is: \\n\");\n\
+  \    for (i = 0; i < m; ++i)\n    {\n        for (j = 0; j < n; ++j)\n        {\n\
+  \            printf(\" %d\", array[i][j]);\n        }\n        printf(\"\\n\");\n\
+  \    }\n    printf(\"\\n The frequency of occurance of odd number = %d \\n\", odd);\n\
+  \    printf(\"The frequency of occurance of even number = %d\\n\", even);\n    return\
+  \ 0;\n    getch();\n}\n```\n\n**Sample output:**\n```\nEnter the order of the matrix:\n\
+  2\n3\nEnter the coefficients of matrix:\n1\n2\n3\n4\n5\n6\nThe given matrix is:\n\
+  1 2 3\n4 5 6\nThe frequency of occurance of odd number = 3\nThe frequency of occurance\
+  \ of even number = 3\n```\n\n## 68. 写一个程序交换两个数组。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    int a[10],b[10],c[10],i;\n    printf(\"Enter First array:\"\
+  );\n    for(i=0;i<10;i++)\n    scanf(\"%d\",&a[i]);\n    printf(\"\\nEnter Second\
+  \ array:\");\n    for(i=0;i<10;i++)\n    scanf(\"%d\",&b[i]);\n    printf(\"Arrays\
+  \ before swapping:\");\n    printf(\"\\nFirst array:\");\n    for(i=0;i<10;i++)\n\
+  \    {\n        printf(\"%d\",a[i]);\n    }\n    printf(\"\\nSecond array:\");\n\
+  \    for(i=0;i<10;i++)\n    {\n        printf(\"%d\",b[i]);\n    }\n    for(i=0;i<10;i++)\n\
+  \    {\n        c[i]=a[i];\n        a[i]=b[i];\n        b[i]=c[i];\n    }\n    printf(\"\
+  \\nArrays after swapping:\");\n    printf(\"\\nFirst array:\");\n    for(i=0;i<10;i++){\n\
+  \    {\n        printf(\"%d\",a[i]);\n    }\n    printf(\"\\nSecond array:\");\n\
+  \    for(i=0;i<10;i++){\n    {\n        printf(\"%d\",b[i]);\n    }\n    return\
+  \ 0;\n    getch();\n}\n```\n\n**Sample output:**\n```\nEnter First array: 1 2 3\
+  \ 4 5 6 7 8 9 9\nEnter Second array: 9 8 7 6 5 4 3 2 1 1\nArrays before swapping:\n\
+  First array: 1 2 3 4 5 6 7 8 9 9\nSecond array: 9 8 7 6 5 4 3 2 1 1\nArrays after\
+  \ swapping:\nFirst array: 9 8 7 6 5 4 3 2 1 1\nSecond array: 1 2 3 4 5 6 7 8 9 9\n\
+  ```\n\n## 69. 写一个程序打印下三角矩阵。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\nint\
+  \ main()\n{\n    int a[3][3],i,j;\n    float determinant=0;\n    printf(\"Enter\
+  \ the 9 elements of matrix: \");\n    for(i=0;i<3;i++)\n    for(j=0;j<3;j++)\n \
+  \   scanf(\"%d\",&a[i][j]);\n    printf(\"\\nThe matrix is\\n\");\n    for(i=0;i<3;i++)\n\
+  \    {\n        printf(\"\\n\");\n        for(j=0;j<3;j++)\n        printf(\"%d\\\
+  t\",a[i][j]);\n    }\n    printf(\"\\nSetting zero in upper matrix\\n\");\n    for(i=0;i<3;i++)\n\
+  \    {\n        printf(\"\\n\");\n        for(j=0;j<3;j++)\n        if(i>=j)\n \
+  \       printf(\"%d\\t\",a[i][j]);\n        else\n        printf(\"%d\\t\",0);\n\
+  \    }\n    return 0;\n    getch();\n}\n```\n\n**Sample output:**\n```\nEnter the\
+  \ 9 elements of matrix: 1\n2\n3\n4\n5\n6\n7\n8\n9\nThe matrix is:\n1 2 3\n4 5 6\n\
+  7 8 9\nSetting zero in upper matrix:\n1 0 0\n4 5 0\n7 8 9\n```\n\n## 70. 写一个程序打印上三角矩阵。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a[3][3],i,j;\n\
+  \    float determinant=0;\n    printf(\"Enter the 9 elements of matrix: \");\n \
+  \   for(i=0;i<3;i++)\n    for(j=0;j<3;j++)\n    scanf(\"%d\",&a[i][j]);\n    printf(\"\
+  \\nThe matrix is\\n\");\n    for(i=0;i<3;i++)\n    {\n        printf(\"\\n\");\n\
+  \        for(j=0;j<3;j++)\n        printf(\"%d\\t\",a[i][j]);\n    }\n    printf(\"\
+  \\nSetting zero in lower matrix\\n\");\n    for(i=0;i<3;i++)\n    {\n        printf(\"\
+  \\n\");\n        for(j=0;j<3;j++)\n        if(i<=j)\n        printf(\"%d\\t\",a[i][j]);\n\
+  \        else\n        printf(\"%d\\t\",0);\n    }\n    return 0;\n    getch();\n\
+  }\n\n**Sample output:**\n```\nEnter the 9 elements of matrix: 1\n2\n3\n4\n5\n6\n\
+  7\n8\n9\nThe matrix is:\n1 2 3\n4 5 6\n7 8 9\nSetting zero in lower matrix:\n1 2\
+  \ 3\n0 5 6\n0 0 9\n```\n\n## 71. 写一个用于矩阵乘法的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    int a[5][5],b[5][5],c[5][5],i,j,k,sum=0,m,n,o,p;\n    printf(\"\
+  \\nEnter the row and column of first matrix:\");\n    scanf(\"%d %d\",&m,&n);\n\
+  \    printf(\"\\nEnter the row and column of second matrix:\");\n    scanf(\"%d\
+  \ %d\",&o,&p);\n    if(n!=o)\n    {\n        printf(\"Matrix mutplication is not\
+  \ possible\");\n        printf(\"\\nColumn of first matrix must be same as row of\
+  \ second matrix\");\n    }\n    else\n    {\n        printf(\"\\nEnter the First\
+  \ matrix:\");\n        for(i=0;i<m;i++)\n        for(j=0;j<n;j++)\n        scanf(\"\
+  %d\",a[i][j]);\n        printf(\"\\nEnter the Second matrix:\");\n        for(i=0;i<o;i++)\n\
+  \        for(j=0;j<p;j++)\n        scanf(\"%d\",b[i][j]);\n        printf(\"\\nThe\
+  \ First is:\\n\");\n        for(i=0;i<m;i++)\n        {\n            printf(\"\\\
+  n\");\n            for(j=0;j<n;j++)\n            printf(\"%d\",a[i][j]);\n     \
+  \   }\n        printf(\"\\nThe Second is:\\n\");\n        for(i=0;i<o;i++)\n   \
+  \     {\n            printf(\"\\n\");\n            for(j=0;j<p;j++)\n          \
+  \  printf(\"%d\",b[i][j]);\n        }\n        for(i=0;i<m;i++)\n        for(j=0;j<p;j++)\n\
+  \        {\n            sum=0;\n            for(k=0;k<n;k++)\n            sum=sum+a[i][k]*b[k][j];\n\
+  \            c[i][j]=sum;\n        }\n        printf(\"\\nThe multiplication of\
+  \ two matrix:\\n\");\n        for(i=0;i<m;i++)\n        {\n            printf(\"\
+  \\n\");\n            for(j=0;j<p;j++)\n            printf(\"%d\",c[i][j]);\n   \
+  \     }\n    }\n    return 0;\n    getch();\n}\n```\n\n**Sample output:**\n```\n\
+  Enter the row and column of first matrix: 2 2\nEnter the row and column of second\
+  \ matrix: 2 2\nEnter the First matrix: 2 3\n4 5\nEnter the Second matrix: 6 7\n\
+  8 9\nThe First is:\n2 3\n4 5\nThe Second is:\n6 7\n8 9\nThe multiplication of two\
+  \ matrix:\n36 41\n64 73\n```\n\n## 72. 写一个程序求矩阵的逆。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n\nint main()\n{\n    int a[3][3],i,j;\n    float determinant=0;\n\
+  \    printf(\"Enter the 9 elements of matrix: \");\n    for(i=0;i<3;i++)\n    for(j=0;j<3;j++)\n\
+  \    scanf(\"%d\",a[i][j]);\n    printf(\"\\nThe matrix is\\n\");\n    for(i=0;i<3;i++)\n\
+  \    {\n        printf(\"\\n\");\n        for(j=0;j<3;j++)\n        printf(\"%d\\\
+  t\",a[i][j]);\n    }\n    for(i=0;i<3;i++)\n    determinant = determinant + (a[0][i]*(a[1][1]*a[2][2]-a[1][2]*a[2][1]));\n\
+  \    printf(\"\\nInverse of matrix is: \\n\");\n    for(i=0;i<3;i++)\n    {\n  \
+  \      for(j=0;j<3;j++)\n        printf(\"%.2f\\t\",(a[1][j]*a[2][2]-a[1][2]*a[2][j])/determinant);\n\
+  \    }\n    return 0;\n    getch();\n}\n```\n\n**Sample output:**\n```\nEnter the\
+  \ 9 elements of matrix: 3\n5\n2\n1\n5\n8\n3\n9\n2\nThe matrix is:\n3 5 2\n1 5 8\n\
+  3 9 2\nInverse of matrix is:\n0.70    -0.25    0.07\n-0.09    0.00    0.14\n-0.34\
+  \    0.25    -0.11\n```\n\n## 73. 写一个程序求矩阵的转置。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    int a[10][10], trans[10][10], r, c, i, j;\n    printf(\"Enter\
+  \ rows and column of matrix: \");\n    scanf(\"%d %d\", &r, &c);\n    printf(\"\\\
+  nEnter elements of matrix:\\n\");\n    for(i=0;i<r;i++)\n    for(j=0;j<c;j++)\n\
+  \    {\n        printf(\"Enter elements ad%d: \",i+1,j+1);\n        scanf(\"%d\"\
+  ,&a[i][j]);\n    }\n    printf(\"\\nEnter Matrix: \\n\");\n    for(i=0;i<r;i++)\n\
+  \    {\n        for(j=0;j<c;j++)\n        {\n            printf(\"%d \",a[i][j]);\n\
+  \        }\n        if(j==c-1)\n        printf(\"\\n\\n\");\n    }\n    for(i=0;\
+  \ i<r;i++)\n    for(j=0; j<c;j++)\n    {\n        trans[j][i]=a[i][j];\n    }\n\
+  \    printf(\"\\nTranspose of Matrix:\\n\");\n    for(i=0; i<c;i++)\n    {\n   \
+  \     for(j=0; j<r;j++)\n        {\n            printf(\"%d \",trans[i][j]);\n \
+  \       }\n        if(j==r-1)\n        printf(\"\\n\\n\");\n    }\n    return 0;\n\
+  \    getch();\n}\n```\n\n**Sample output:**\n```\nEnter rows and column of matrix:\
+  \ 2\n3\nEnter elements of matrix:\nEnter elements ad11: 1\nEnter elements ad12:\
+  \ 2\nEnter elements ad13: 3\n```\n\n\n\n\n输入元素 `a21`: 4\n\n输入元素 `a22`: 5\n\n输入元素\
+  \ `a23`: 6\n\n输入的矩阵：\n1 2 3\n4 5 6\n\n矩阵转置：\n1 4\n2 5\n3 6\n\n## 74. 编写一个程序计算矩阵的行列式。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a[3][3],i,j;\n\
+  \    int determinant=0;\n    printf(\"输入矩阵的 9 个元素: \");\n    for(i=0;i<3;i++)\n\
+  \        for(j=0;j<3;j++)\n            scanf(\"%d\",&a[i][j]);\n    printf(\"\\\
+  n 第一个矩阵是\\n\");\n    for(i=0;i<3;i++)\n    {\n        printf(\"\\n\");\n       \
+  \ for(j=0;j<3;j++)\n            printf(\"%d\\t\",a[i][j]);\n    }\n    for(i=0;i<3;i++)\n\
+  \        determinant = determinant + (a[0][i]*(a[1][(i+1)%3]*a[2][(i+2)%3] - a[1][(i+2)%3]*a[2][(i+1)%3]));\n\
+  \    printf(\"\\n 矩阵的行列式为: %d\",determinant);\n    return 0;\n    getch();\n}\n\
+  ```\n\n示例输出：\n输入矩阵的 9 个元素: 1\n3\n2\n5\n4\n6\n7\n9\n8\n第一个矩阵是\n1       3       2\n\
+  5       4       6\n7       9       8\n矩阵的行列式为: 18\n\n# 75. 编写一个程序找到数组中的最大元素。\n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a[50],size,i,big;\n\
+  \    printf(\"\\nEnter 数组的大小: \");\n    scanf(\"%d\",&size);\n    printf(\"\\n 向数组中输入%d\
+  \ 个元素: \", size);\n    for(i=0;i<size;i++)\n        scanf(\"%d\",&a[i]);\n    big=a[0];\n\
+  \    for(i=1;i<size;i++)\n    {\n        if(big<a[i])\n            big=a[i];\n \
+  \   }\n    printf(\"\\n 最大: %d\",big);\n    return 0;\n    getch();\n}\n```\n\n\
+  示例输出：\n输入数组的大小: 5\n向数组中输入 5 个元素: 3\n6\n9\n8\n7\n最大: 9\n\n## 76. 编写一个程序找到数组中的第二大元素。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a[50],size,i,j=0,big,secondbig;\n\
+  \    printf(\"输入数组的大小: \");\n    scanf(\"%d\",&size);\n    printf(\"向数组中输入%d 个元素:\
+  \ \", size);\n    for(i=0;i<size;i++)\n        scanf(\"%d\",&a[i]);\n    big=a[0];\n\
+  \    for(i=1;i<size;i++)\n    {\n        if(big<a[i])\n        {\n            big=a[i];\n\
+  \            j = i;\n        }\n    }\n    secondbig=a[size-j-1];\n    for(i=1;i<size;i++)\n\
+  \    {\n        if(secondbig <a[i] && j != i)\n            secondbig=a[i];\n   \
+  \ }\n    printf(\"第二大: %d\", big);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n\
+  输入数组的大小: 5\n向数组中输入 5 个元素: 2\n4\n6\n8\n第二大: 8\n\n## 77. 编写一个程序找到数组中的最小元素。\n\n```c\n\
+  #include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a[50],size,i,j=0,small,secondsmall;\n\
+  \    printf(\"输入数组的大小: \");\n    scanf(\"%d\",&size);\n    printf(\"向数组中输入%d 个元素:\
+  \ \", size);\n    for(i=0;i<size;i++)\n        scanf(\"%d\",&a[i]);\n    small=a[0];\n\
+  \    for(i=1;i<size;i++)\n    {\n        if(small>a[i])\n        {\n           \
+  \ small=a[i];\n            j = i;\n        }\n    }\n    secondsmall=a[size-j-1];\n\
+  \    for(i=1;i<size;i++)\n    {\n        if(secondsmall > a[i] && j != i)\n    \
+  \        secondsmall =a[i];\n    }\n    printf(\"第二小: %d\", secondsmall);\n    return\
+  \ 0;\n    getch();\n}\n```\n\n示例输出：\n输入数组的大小: 5\n向数组中输入 5 个元素: 5 7 3 2 6\n第二小: 3\n\
+  \n# 78. 编写一个程序在数组的指定位置插入元素。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\nint\
+  \ main()\n{\n    int array[100], position, c, n, value;\n    printf(\"输入数组个数\\n\"\
+  );\n    scanf(\"%d\", &n);\n    printf(\"输入%d 个元素\\n\", n);\n    for (c = 0; c <\
+  \ n; c++)\n        scanf(\"%d\", &array[c]);\n    printf(\"要插入元素的位置\\n\");\n   \
+  \ scanf(\"%d\", &position);\n    printf(\"要插入的值\\n\");\n    scanf(\"%d\", &value);\n\
+  \    for (c = n - 1; c >= position - 1; c--)\n        array[c+1] = array[c];\n \
+  \   array[position-1] = value;\n    printf(\"结果数组为\\n\");\n    for (c = 0; c <=\
+  \ n; c++)\n        printf(\"%d\\n\", array[c]);\n    return 0;\n    getch();\n}\n\
+  ```\n\n示例输出：\n输入数组个数\n5\n输入 5 个元素\n1\n2\n3\n4\n5\n要插入元素的位置\n3\n要插入的值\n8\n结果数组为\n\
+  1\n2\n8\n3\n4\n5\n\n# 79. 编写一个程序删除数组中的重复元素。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    int arr[50];\n    int *p;\n    int i, j, k, size, n;\n    printf(\"\
+  \\n 数组的大小: \");\n    scanf(\"%d\", &n);\n    printf(\"\\n 向数组中输入%d 个元素:\\n\", n);\n\
+  \    for(i=0; i<n; i++)\n        scanf(\"%d\", &arr[i]);\n    size=n;\n    p=arr;\n\
+  \    for(i=0; i<size; i++)\n    {\n        for(j=0; j<size; j++)\n        {\n  \
+  \          if(i==j)\n                continue;\n            else if(*(p+i)==*(p+j))\n\
+  \            {\n                k=j;\n                size--;\n                while(k\
+  \ < size)\n                {\n                    *(p+k)=*(p+k+1);\n           \
+  \         k++;\n                }\n            }\n        }\n        j=0;\n    }\n\
+  \    printf(\"\\n 删除重复后的数组: \");\n    for(i=0; i < size; i++)\n    {\n        printf(\"\
+  %d\", arr[i]);\n    }\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n数组的大小: 5\n\
+  向数组中输入 5 个元素:\n1\n2\n2\n3\n3\n删除重复后的数组: 1 2 3\n\n# 80. 编写一个程序从数组的指定位置删除元素。\n\n```c\n\
+  #include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int a[50], i, pos, size;\n\
+  \    printf(\"\\n 数组的大小: \");\n    scanf(\"%d\", &size);\n    printf(\"\\n 向数组中输入%d\
+  \ 个元素:\", size);\n    for(i=0; i<size; i++)\n        scanf(\"%d\", &a[i]);\n   \
+  \ printf(\"\\n 要删除的位置: \");\n    scanf(\"%d\", &pos);\n    i=0;\n    while(i!=pos-1)\n\
+  \        i++;\n    while(i<size)\n    {\n        a[i]=a[i+1];\n        i++;\n  \
+  \  }\n    size--;\n    for(i=0; i<size; i++)\n        printf(\" %d\", a[i]);\n \
+  \   return 0;\n    getch();\n}\n```\n\n示例输出：\n数组的大小: 5\n向数组中输入 5 个元素: 1\n2\n3\n\
+  4\n5\n要删除的位置: 3\n1 2 4 5\n\n# 81. 编写一个程序使用 `strcmp` 函数比较两个字符串。\n\n```c\n#include<stdio.h>\n\
+  #include<string.h>\n#include<conio.h>\n\nint main()\n{\n    char a[100], b[100];\n\
+  \    printf(\"输入第一个字符串: \");\n    gets(a);\n    printf(\"输入第二个字符串: \");\n    gets(b);\n\
+  \    if (strcmp(a,b) == 0)\n        printf(\"输入的字符串相同。\\n\");\n    else\n      \
+  \  printf(\"输入的字符串不同。\\n\");\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n输入第一个字符串:\
+  \ rohit\n输入第二个字符串: rohit\n输入的字符串相同。\n\n# 82. 编写一个程序在不使用字符串函数的情况下比较两个字符串。\n\n```c\n\
+  #include<stdio.h>\n#include<conio.h>\n\nint stringCompare(char[],char[]);\n\nint\
+  \ main()\n{\n    char str1[100],str2[100];\n    int compare;\n    printf(\"输入第一个字符串:\
+  \ \");\n    scanf(\"%s\",str1);\n    printf(\"输入第二个字符串: \");\n    scanf(\"%s\",str2);\n\
+  \    compare = stringCompare(str1,str2);\n    if(compare == 1)\n        printf(\"\
+  输入的字符串相同。\");\n    else\n        printf(\"输入的字符串不同\");\n    return 0;\n    getch();\n\
+  }\n\nint stringCompare(char str1[],char str2[])\n{\n    int i=0,flag=0;\n    while(str1[i]!='\\\
+  0' && str2[i]!='\\0')\n    {\n        if(str1[i]!=str2[i])\n        {\n        \
+  \    flag=1;\n            break;\n        }\n        i++;\n    }\n    if(flag==0\
+  \ && str1[i]=='\\0' && str2[i]=='\\0')\n        return 1;\n    else\n        return\
+  \ 0;\n}\n```\n\n示例输出：\n输入第一个字符串: Rohit\n输入第二个字符串: Rohit\n输入的字符串相同。\n输入第一个字符串: Rohit\n\
+  输入第二个字符串: Kumar\n输入的字符串不同\n\n## 83. 编写一个程序使用 `strlen` 函数找到字符串的长度。\n\n```c\n#include<stdio.h>\n\
+  #include<string.h>\n#include<conio.h>\n\nint main()\n{\n    char a[100];\n    int\
+  \ length;\n    printf(\"输入一个字符串计算其长度: \");\n    gets(a);\n    length = strlen(a);\n\
+  \    printf(\"输入的字符串长度为 = %d\\n\",length);\n    return 0;\n    getch();\n}\n```\n\
+  \n示例输出：\n输入一个字符串计算其长度: awesome\n输入的字符串长度为 = 7\n\n## 84. 编写一个程序在不使用库函数找到字符串的长度。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    char str[100];\n\
+  \    int length;\n    printf(\"\\nEnter 字符串 : \");\n}\n```\n\n\n\n\n```c\ngets(str);\n\
+  length = 0;\nwhile (str[length] != '\\0')\n    length++;\nprintf(\"\\nLength of\
+  \ the String is : %d\", length);\nreturn(0);\ngetch();\n}\n```\n\n示例程序：\n输入字符串:\
+  \ rohit\n字符串长度为: 5\n\n# 85. 编写一个使用“strcpy”库函数复制字符串的程序。\n\n```c\n#include<stdio.h>\n\
+  #include<string.h>\n#include<conio.h>\n\nint main()\n{\n    char source[1000], destination[1000];\n\
+  \    printf(\"Input a string: \");\n    gets(source);\n    strcpy(destination, source);\n\
+  \    printf(\"Source string:      \\\"%s\\\"\\n\", source);\n    printf(\"Destination\
+  \ string: \\\"%s\\\"\\n\", destination);\n    return 0;\n    getch();\n}\n```\n\n\
+  示例输出：\nInput a string: amazing\nSource string: “amazing”\nDestination string: “amazing”\n\
+  \n# 86. 编写一个不使用 strcpy 库函数复制字符串的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nvoid stringCopy(char[],char[]);\n\nint main()\n{\n    char str1[100],str2[100];\n\
+  \    printf(\"Enter any string: \");\n    scanf(\"%s\",str1);\n    stringCopy(str1,str2);\n\
+  \    printf(\"After copying: %s\",str2);\n    return 0;\n    getch();\n}\n\nvoid\
+  \ stringCopy(char str1[],char str2[])\n{\n    int i=0;\n    while(str1[i]!='\\0')\n\
+  \    {\n        str2[i] = str1[i];\n        i++;\n    }\n    str2[i]='\\0';\n}\n\
+  ```\n\n示例输出：\nEnter any string: rohit\nAfter copying: rohit\n\n# 87. 编写一个使用“strrev”库函数反转字符串的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<string.h>\n#include<conio.h>\n\nint main()\n\
+  {\n    char arr[100];\n    printf(\"Enter a string to reverse: \");\n    gets(arr);\n\
+  \    strrev(arr);\n    printf(\"Reverse of entered string is: %s\\n\",arr);\n  \
+  \  return 0;\n    getch();\n}\n```\n\n示例输出：\nEnter a string to reverse: spectacular\n\
+  Reverse of entered string is: ralucatceps\n\n# 88. 编写一个不使用 strrev 库函数反转字符串的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    char str[50];\n\
+  \    char rev[50];\n    int i=-1,j=0;\n    printf(\"Enter any string : \");\n  \
+  \  scanf(\"%s\",str);\n    while(str[++i]!='\\0');\n    while(i>=0)\n        rev[j++]\
+  \ = str[--i];\n    rev[j]='\\0';\n    printf(\"Reverse of string is : %s\",rev);\n\
+  \    return 0;\n    getch();\n}\n```\n\n示例输出：\nEnter any string: rohit\nReverse\
+  \ of string is: tihor\n\n# 89. 编写一个交换字符串的程序。\n\n```c\n#include<stdio.h>\n#include<string.h>\n\
+  #include<conio.h>\n#include<malloc.h>\n\nint main()\n{\n    char first[100], second[100],\
+  \ *temp;\n    printf(\"Enter the first string:\\n\");\n    gets(first);\n    printf(\"\
+  Enter the second string:\\n\");\n    gets(second);\n    printf(\"\\nBefore Swapping:\\\
+  n\");\n    printf(\"First string: %s\\n\",first);\n    printf(\"Second string: %s\\\
+  n\\n\",second);\n    temp = (char*)malloc(100);\n    strcpy(temp,first);\n    strcpy(first,second);\n\
+  \    strcpy(second,temp);\n    printf(\"After Swapping:\\n\");\n    printf(\"First\
+  \ string: %s\\n\",first);\n    printf(\"Second string: %s\\n\",second);\n    return\
+  \ 0;\n    getch();\n}\n```\n\n示例输出：\nEnter the first string:\nhello\nEnter the second\
+  \ string:\nbye\nBefore Swapping:\nFirst string: hello\nSecond string: bye\nAfter\
+  \ Swapping:\nFirst string: bye\nSecond string: hello\n\n# 90. 编写一个按字母顺序对字符串排序的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n#include<stdlib.h>\n#include<string.h>\n\
+  \nint main()\n{\n    char ch, input[100], output[100];\n    int no[26] = {0}, n,\
+  \ c, t, x;\n    printf(\"Enter some text\\n\");\n    scanf(\"%s\", input);\n   \
+  \ n = strlen(input);\n    for (c = 0; c < n; c++)\n    {\n        ch = input[c]\
+  \ - 'a';\n        no[ch]++;\n    }\n    t = 0;\n    for (ch = 'a'; ch <= 'z'; ch++)\n\
+  \    {\n        x = ch - 'a';\n        for (c = 0; c < no[x]; c++)\n        {\n\
+  \            output[t] = ch;\n            t++;\n        }\n    }\n    output[t]\
+  \ = '\\0';\n    printf(\"%s\\n\", output);\n    return 0;\n    getch();\n}\n```\n\
+  \n示例程序：\nEnter some text\ngame\naeg\n\n# 91. 编写一个寻找回文的程序。\n\n```c\n#include<stdio.h>\n\
+  #include<string.h>\n#include<conio.h>\n\nint main()\n{\n    char a[100], b[100];\n\
+  \    printf(\"Enter the string to check it is palindrome: \");\n    gets(a);\n \
+  \   strcpy(b,a);\n    strrev(b);\n    if (strcmp(a,b) == 0)\n        printf(\"Entered\
+  \ string is a\\n\");\n    else\n        printf(\"Entered string is not a\\n\");\n\
+  \    return 0;\n    getch();\n}\n```\n\n示例输出：\nEnter the string to check it is palindrome:\
+  \ amazing\nEntered string is not a\n\n# 92. 编写一个不使用字符串函数寻找字符串回文的程序。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n\nint main()\n{\n    char str[100];\n    int i=0,j=-1,flag=0;\n\
+  \    printf(\"Enter a string: \");\n    scanf(\"%s\",str);\n    while(str[++j]]!='0');\n\
+  \    j--;\n    while(i<j)\n        if(str[i++] != str[j--])\n        {\n       \
+  \     flag=1;\n            break;\n        }\n    if(flag == 0)\n        printf(\"\
+  The string is a palindrome\");\n    else\n        printf(\"The string is not palindrome\"\
+  );\n    return 0;\n    getch();\n}\n```\n\n示例输出：\nEnter a string: rohit\nThe string\
+  \ is not palindrome\nEnter a string: wow\nThe string is a palindrome\n\n# 93. 编写一个使用“strcat”函数拼接字符串的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<string.h>\n#include<conio.h>\n\nint main()\n\
+  {\n    char a[1000], b[1000];\n    printf(\"Enter the first string: \");\n    gets(a);\n\
+  \    printf(\"Enter the second string: \");\n    gets(b);\n    strcat(a,b);\n  \
+  \  printf(\"String obtained on concatenation is %s\\n\",a);\n    return 0;\n   \
+  \ getch();\n}\n```\n\n示例输出：\nEnter the first string: awesome\nEnter the second string:\
+  \ amazing\nString obtained on concatenation is awesomeamazing\n\n# 94. 编写一个使用字符串函数拼接字符串的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nvoid stringConcat(char[],char[]);\n\
+  \nint main()\n{\n    char str1[100],str2[100];\n    int compare;\n    printf(\"\
+  Enter first string: \");\n    scanf(\"%s\",str1);\n    printf(\"Enter second string:\
+  \ \");\n    scanf(\"%s\",str2);\n    stringConcat(str1,str2);\n    printf(\"String\
+  \ after concatenation: %s\",str1);\n    return 0;\n    getch();\n}\n\nvoid stringConcat(char\
+  \ str1[],char str2[])\n{\n    int i=0,j=0;\n    while(str1[i]'\\0')\n    {\n   \
+  \     i++;\n    }\n    while(str2[j]]!='0')\n    {\n        str1[i] = str2[j]; \
+  \  \n        i++;\n        j++;\n    }\n    str1[i] = '\\0';\n}\n```\n\n示例输出：\n\
+  Enter first string: rohit\nEnter second string: kumar\nString after concatenation:\
+  \ rohitkumar\n\n# 95. 编写一个不使用库函数检查输入字符是否为大写字母的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\n    char ch;\n    printf(\"\\nEnter The Character : \");\n    scanf(\"\
+  %c\", &ch);\n    if (ch >= 'A' && ch <= 'Z')\n        printf(\"Character is uppercase\"\
+  );\n    else if (ch >= 'a' && ch <= 'z')\n        printf(\"Character is Not Uppercase\"\
+  );\n    else\n        printf(\"Non alphabet\");\n    return(0);\n    getch();\n\
+  }\n```\n\n示例输出：\nEnter The Character : d\nCharacter is Not Uppercase\nEnter The\
+  \ Character : D\nCharacter is uppercase\n\n# 96. 编写一个从大写转换为小写的转换程序。\n\n```c\n#include<stdio.h>\n\
+  #include<string.h>\n#include<conio.h>\n\nint main()\n{\n    char str[20];\n    int\
+  \ i;\n    printf(\"Enter any string:\");\n    scanf(\"%s\",str);\n    printf(\"\
+  The string is:%s\",str);\n    for(i=0;i<=strlen(str);i++)\n    {\n        if(str[i]>65&&str[i]<=90)\n\
+  \            str[i]=str[i]+32;\n    }\n    printf(\"\\nThe string in lower case\
+  \ is:%s\",str);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\nEnter any string:\
+  \ ROHIT\nThe string is: ROHIT\nThe string in lower case is: rohit\n\n# 97. 编写一个从字符串中删除元音的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<string.h>\n#include<conio.h>\n\nint check_vowel(char);\n\
+  \nint main()\n{\n    char s[100], t[100];\n    int i, j = 0;\n    printf(\"Enter\
+  \ a string to delete vowels:\\n\");\n    gets(s);\n    for(i = 0; s[i] != '\\0';\
+  \ i++)\n    {\n        if(check_vowel(s[i]) == 0)\n        {\n            t[j] =\
+  \ s[i];\n            j++;\n        }\n    }\n    t[j] = '\\0';\n    strcpy(s, t);\n\
+  \    printf(\"String after deleting vowels: %s\\n\", s);\n    return 0;\n    getch();\n\
+  }\n\nint check_vowel(char c)\n{\n```\n\n\n\n\n\n```c\nswitch(c)\n{\n    case 'a':\n\
+  \    case 'A':\n    case 'e':\n    case 'E':\n    case 'i':\n    case 'I':\n   \
+  \ case 'o':\n    case 'O':\n    case 'u':\n    case 'U':\n        return 1;\n  \
+  \  default:\n        return 0;\n}\n```\n\n示例输出：\n输入要删除元元的字符串：\nrohit kumar gupta\n\
+  删除元音后的字符串：rht kmr gpt\n\n# 98. 写一个程序，统计给定字符串中大写字母、小写字母、数字和特殊符号的数量。\n\n```c\n#include<conio.h>\n\
+  #include<stdio.h>\n\nint main(void)\n{\n    char str[80];\n    int x, cap, small,\
+  \ dig, sym;\n    printf(\"\\nEnter 一个字符串 : \");\n    gets(str);\n    x = cap = small\
+  \ = dig = sym = 0;\n    for( ; str[x] != '\\0' ; x++)\n    {\n        if(str[x]\
+  \ >= 'A' && str[x] <= 'Z') cap++;\n        else if(str[x] >= 'a' && str[x] <= 'z')\
+  \ small++;\n        else if(str[x] >= '0' && str[x] <= '9') dig++;\n        else\
+  \ sym++;\n    }\n    printf(\"\\n 大写字母 %d\\n 小写字母 %d\", cap, small);\n    printf(\"\
+  \\n 数字 %d\\n 特殊符号 %d\", dig, sym);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n\
+  输入一个字符串：Rohit@123\n大写字母 1\n小写字母 4\n数字 3\n特殊符号 1\n\n# 99. 写一个程序，统计元音、辅音、数字和空格的数量。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    char line[150];\n\
+  \    int i,v,c,ch,d,s,o;\n    o=v=c=ch=d=s=0;\n    printf(\"输入一行字符串:\\n\");\n  \
+  \  gets(line);\n    for(i=0;line[i]!='\\0';++i)\n    {\n        if(line[i]=='a'\
+  \ || line[i]=='e' || line[i]=='i' || line[i]=='o' || line[i]=='u' || line[i]=='A'\
+  \ || line[i]=='E' || line[i]=='I' || line[i]=='O' || line[i]=='U')\n           \
+  \ ++v;\n        else if((line[i]>='a'&& line[i]<='z') || (line[i]>='A'&& line[i]<='Z'))\n\
+  \            ++c;\n        else if(line[i]>='0'&&c<='9')\n            ++d;\n   \
+  \     else if (line[i]==' ')\n            ++s;\n    }\n    printf(\"元音: %d\",v);\n\
+  \    printf(\"\\n 辅音: %d\",c);\n    printf(\"\\n 数字: %d\",d);\n    printf(\"\\n\
+  \ 空格: %d\",s);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n输入一行字符串：\nMy name\
+  \ is Rohit Gupta\n元音: 6\n辅音: 9\n数字: 0\n空格: 2\n\n# 100. 写一个程序，检查两个字符串是否为字母变位词（anagrams）。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint check_anagram(char [], char []);\n\
+  \nint main()\n{\n    char a[100], b[100];\n    int flag;\n    printf(\"输入第一个字符串:\\\
+  n\");\n    gets(a);\n    printf(\"输入第二个字符串:\\n\");\n    gets(b);\n    flag = check_anagram(a,\
+  \ b);\n    if (flag == 1)\n        printf(\"\\\"s\\\"和\\\"s\\\"是字母变位词。\\n\", a,\
+  \ b);\n    else\n        printf(\"\\\"s\\\"和 \\\"%s\\\"不是字母变位词。\\n\", a, b);\n \
+  \   return 0;\n    getch();\n}\n\nint check_anagram(char a[], char[])\n{\n    int\
+  \ first[26] = {0}, second[26] = {0}, c = 0;\n    while (a[c] != '\\0')\n    {\n\
+  \        first[a[c]-'a']++;\n        c++;\n    }\n    c = 0;\n    while (b[c] !=\
+  \ '\\0')\n    {\n        second[b[c]-'a']++;\n        c++;\n    }\n    for (c =\
+  \ 0; c < 26; c++)\n    {\n        if (first[c] != second[c])\n            return\
+  \ 0;\n    }\n    return 1;\n}\n```\n\n示例输出：\n输入第一个字符串：creative\n输入第二个字符串：reactive\n\
+  \"creative\"和\"reactive\"是字母变位词。\n字母变位词：\n通过重新排列另一个单词而形成的单词、短语或名称，例如 spar 由 rasp\
+  \ 组成。\n\n# 101. 写一个程序，删除第二个字符串中所有在第一个字符串中出现的字符。\n\n```c\n#include <stdio.h>\n#include\
+  \ <conio.h>\n#include <string.h>\n#include <ctype.h>\n#include <stdlib.h>\n#define\
+  \ CHAR_SIZE 26\n\nvoid alphacheck(char *, int []);\nvoid create(char [], char [],\
+  \ int[]);\n\nint main()\n{\n    char str1[50], str2[50];\n    int a1[CHAR_SIZE]\
+  \ = {0};\n    char str2_rem[50];\n    printf(\"输入字符串 1: \");\n    scanf(\"%s\",\
+  \ str1);\n    printf(\"输入字符串 2: \");\n    scanf(\"%s\", str2);\n    alphacheck(str1,\
+  \ a1);\n    create(str2_rem, str2, a1);\n    printf(\"从第二个字符串删除字符后得到：%s\\n\", str2_rem);\n\
+  \    return 0;\n    getch();\n}\n\nvoid alphacheck(char *str, int a[])\n{\n    int\
+  \ i, index;\n    for (i = 0; i < strlen(str); i++)\n    {\n        str[i] = tolower(str[i]);\n\
+  \        index = str[i] - 'a';\n        if (!a[index])\n            a[index] = 1;\n\
+  \    }\n}\n\nvoid create(char str_rem[], char str[], int list[])\n{\n    int i,\
+  \ j = 0, index;\n    for (i = 0; i < strlen(str); i++)\n    {\n        index = str[i]\
+  \ - 'a';\n        if (!list[index])\n            str_rem[j++] = str[i];\n    }\n\
+  \    str_rem[j] = '\\0';\n}\n```\n\n示例输出：\n输入字符串 1：develop\n输入字符串 2：developer\n\
+  从第二个字符串删除字符后得到：r\n\n# 102. 写一个程序，使用递归和迭代反转字符串。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  #include<string.h>\nvoid disp_str1_rec(char *stng);\n\nint main()\n{\n    char str1[100],\
+  \ *ptr;\n    int len1 = 0, i;\n    char ch;\n    printf(\"输入字符串：n\");\n    scanf(\"\
+  %s\", str1);\n    ptr = str1;\n    len1 = strlen(str1);\n    printf(\"迭代：n\");\n\
+  \    for (i = len1 - 1; i >= 0; i--)\n    {\n        ch = str1[i];\n        printf(\"\
+  %c\", ch);\n    }\n    printf(\"\\n 递归：n\");\n    disp_str1_rec(ptr);\n    getch();\n\
+  }\n\nvoid disp_str1_rec(char *stng)\n{\n    char ch;\n    if (*stng != '\\0')\n\
+  \    {\n        ch = *stng;\n        stng++;\n        disp_str1_rec(stng);\n   \
+  \     printf(\"%c\", ch);\n    }\n    else\n    return;\n}\n```\n\n示例输出：\n输入字符串：Developer\n\
+  迭代：\nrepoleD\n递归：\nDeveloper\n\n# 103. 写一个程序，接受用户输入的年、月、日并显示星期几。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n#include<math.h>\nint fm(int date, int month, int year)\n{\n\
+  \    int fmonth, leap;\n    if ((year % 100 == 0) && (year % 400 != 0))\n      \
+  \  leap = 0;\n    else if (year % 4 == 0)\n        leap = 1;\n    else\n       \
+  \ leap = 0;\n    fmonth = 3 + (2 - leap) * ((month + 2) / (2 * month))\n    + (5\
+  \ * month + month / 9) / 2;\n    fmonth = fmonth % 7;\n    return fmonth;\n}\n\n\
+  int day_of_week(int date, int month, int year)\n{\n    int dayOfWeek;\n    int YY\
+  \ = year % 100;\n    int century = year / 100;\n    printf(\"\\n 日期：%d/%d/%d \\\
+  n\", date, month, year);\n    dayOfWeek = 1.25 * YY + fm(date, month, year) - 2\
+  \ * (century % 4);\n    dayOfWeek = dayOfWeek % 7;\n    switch (dayOfWeek)\n   \
+  \ {\n        case 0:\n            printf(\"星期 = Saturday\");\n            break;\n\
+  \        case 1:\n            printf(\"星期 = Sunday\");\n            break;\n   \
+  \     case 2:\n            printf(\"星期 = Monday\");\n            break;\n      \
+  \  case 3:\n            printf(\"星期 = Tuesday\");\n            break;\n        case\
+  \ 4:\n            printf(\"星期 = Wednesday\");\n            break;\n        case\
+  \ 5:\n            printf(\"星期 = Thursday\");\n            break;\n        case 6:\n\
+  \            printf(\"星期 = Friday\");\n            break;\n        default:\n  \
+  \          printf(\"数据不正确\");\n    }\n    return 0;\n    getch();\n}\n\nint main()\n\
+  {\n    int date, month, year;\n    printf(\"\\输入年份： \");\n    scanf(\"%d\", &year);\n\
+  \    printf(\"\\输入月份： \");\n    scanf(\"%d\", &month);\n    printf(\"\\输入日期： \"\
+  );\n    scanf(\"%d\", &date);\n    day_of_week(date, month, year);\n    return 0;\n\
+  }\n```\n\n示例输出：\n输入年份：2016\n输入月份：02\n输入日期：26\n日期：26/2/2016\n星期 = Friday\n\n# 104.\
+  \ 写一个程序，将字符串转换为 ASCII 值。\n\n```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n\
+  {\n    char str[100];\n    int i=0;\n    printf(\"输入任意字符串： \");\n    scanf(\"%s\"\
+  , str);\n    printf(\"给定字符串每个字符的 ASCII 值： \");\n    while(str[i])\n        printf(\"\
+  %d \", str[i++]);\n    return 0;\n    getch();\n}\n```\n\n\n\n\n\n示例输出：\n\n输入任何字符串：Rohit\n\
+  \n给定字符串每个字符的 ASCII 值：82 111 104 105 116\n\n## 什么是 ASCII？\n\n`ASCII`（美国信息交换标准代码）是计算机和互联网上最常用的文本文件格式。在\
+  \ `ASCII` 文件中，每个字母、数字或特殊字符都用一个 7 位的二进制数（一个由七个 0 或 1 组成的字符串）表示。共定义了 128 种可能的字符。\n\
+  \n## 105. 写一个程序将罗马数字转换为阿拉伯数字。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n#include<string.h>\n\
+  \nint digitValue(char);\n\nint main()\n{\n    char roman_Number[1000];\n    int\
+  \ i=0;\n    long intint number =0;\n    printf(\"输入任何罗马数字（有效数字为 I, V, X, L, C, D,\
+  \ M）:  \\n\");\n    scanf(\"%s\",roman_Number);\n    while(roman_Number[i])\n  \
+  \  {\n        if(digitValue(roman_Number[i]) < 0)\n        {\n            printf(\"\
+  无效的罗马数字：%c\",roman_Number[i]);\n            return 0;\n        }\n        if((strlen(roman_Number)\
+  \ -i) > 2)\n        {\n            if(digitValue(roman_Number[i]) < digitValue(roman_Number[i+2]))\n\
+  \            {\n                printf(\"无效的罗马数字\");\n                return 0;\n\
+  \            }\n        }\n        if(digitValue(roman_Number[i]) >= digitValue(roman_Number[i+1]))\n\
+  \            number = number + digitValue(roman_Number[i]);\n        else\n    \
+  \    {\n            number = number + (digitValue(roman_Number[i+1]) - digitValue(roman_Number[i]));\n\
+  \            i++;\n        }\n        i++;\n    }\n    printf(\"它的十进制值为：%ld\",number);\n\
+  \    return 0;\n}\n\nint digitValue(char c)\n{\n    int value=0;\n    switch(c)\n\
+  \    {\n        case 'I': value = 1;  break;\n        case 'V': value = 5;  break;\n\
+  \        case 'X': value = 10;  break;\n        case 'L': value = 50;  break;\n\
+  \        case 'C': value = 100;  break;\n        case 'D': value = 500;  break;\n\
+  \        case 'M': value = 1000;  break;\n        case '\\0': value = 0;  break;\n\
+  \        default: value = -1; \n    }\n    return value;\n}\n```\n\n示例输出：\n输入任何罗马数字（有效数字为\
+  \ I, V, X, L, C, D, M）：\nXVIII\n它的十进制值为：18\n\n## 106. 写一个程序将任何数字转换为英文单词。\n\n```c\n\
+  #include<stdio.h>\n#include<conio.h>\n#include<string.h>\nvoid toWord(int,int);\n\
+  char * getPositionValue(int);\nchar * digitToWord(int);\nchar word[100][30];\nint\
+  \ i =0;\nint main()\n{\n    int j,k,subnumer;\n    unsigned long int number;\n \
+  \   printf(\"输入任何正数： \");\n    scanf(\"%lu\",&number);\n    if(number ==0)\n   \
+  \ {\n        printf(\"Zero\");\n        return 0;\n    }\n    while(number)\n  \
+  \  {\n        if(i==1)\n        {\n            toWord(number %10,i);\n         \
+  \   number = number/10;\n        }\n        else\n        {\n            toWord(number\
+  \ %10,i);\n            number = number/100;\n        }\n        i++;\n    }\n  \
+  \  printf(\"单词形式的数字： \");\n    *word[i-1] = *word[i-1] - 2;\n    for(j=i-1;j>=0;j--)\n\
+  \    printf(\"%s\",word[j]);\n    getch();\n    return 0;\n}\nvoid toWord(int number,int\
+  \ position)\n{\n    char numberToword[100]={\" \";\n    if(number ==0)\n    {\n\
+  \    }\n    else if (number < 20 || number%10==0)\n    {\n        strcpy(numberToword,digitToWord(number));\n\
+  \    }\n    else\n    {\n        strcpy(numberToword,digitToWord((number/10)*10));\n\
+  \        strcat(numberToword,digitToWord(number%10));\n    }\n    strcat(numberToword,getPositionValue(position));\n\
+  \    strcpy(word[i],numberToword);\n}\nchar * getPositionValue(int postion)\n{\n\
+  \    static positionValue[10]=\" \";\n    switch(postion)\n    {\n        case 1:\
+  \ strcpy(positionValue,\"hundreds \"); break;\n        case 2: strcpy(positionValue,\"\
+  thousand \"); break;\n        case 3: strcpy(positionValue,\"lakh \"); break;\n\
+  \        case 4: strcpy(positionValue,\"crore \"); break;\n        case 5: strcpy(positionValue,\"\
+  arab \"); break;\n        case 6: strcpy(positionValue,\"kharab \"); break;\n  \
+  \      case 7: strcpy(positionValue,\"neel \"); break;\n        case 8: strcpy(positionValue,\"\
+  padam \"); break;\n    }\n    return positionValue;\n}\nchar * digitToWord(int digit)\n\
+  {\n    static digitInWord[10]=\" \";\n    switch(digit)\n    {\n        case 1:\
+  \ strcpy(digitInWord, \"one \"); break;\n        case 2: strcpy(digitInWord, \"\
+  two \"); break;\n        case 3: strcpy(digitInWord, \"three \"); break;\n     \
+  \   case 4: strcpy(digitInWord, \"four \"); break;\n        case 5: strcpy(digitInWord,\
+  \ \"five \"); break;\n        case 6: strcpy(digitInWord, \"six \"); break;\n  \
+  \      case 7: strcpy(digitInWord, \"seven \"); break;\n        case 8: strcpy(digitInWord,\
+  \ \"eight \"); break;\n        case 9: strcpy(digitInWord, \"nine \"); break;\n\
+  \        case 10: strcpy(digitInWord, \"ten \"); break;\n        case 11: strcpy(digitInWord,\
+  \ \"eleven \"); break;\n        case 12: strcpy(digitInWord, \"twelve \"); break;\n\
+  \        case 13: strcpy(digitInWord, \"thirteen \"); break;\n        case 14: strcpy(digitInWord,\
+  \ \"fourteen \"); break;\n        case 15: strcpy(digitInWord, \"fifteen \"); break;\n\
+  \        case 16: strcpy(digitInWord, \"sixteen \"); break;\n        case 17: strcpy(digitInWord,\
+  \ \"seventeen \"); break;\n        case 18: strcpy(digitInWord, \"eighteen \");\
+  \ break;\n        case 19: strcpy(digitInWord, \"nineteen \"); break;\n        case\
+  \ 20: strcpy(digitInWord, \"twenty \"); break;\n        case 21: strcpy(digitInWord,\
+  \ \"twenty-one \"); break;\n        case 22: strcpy(digitInWord, \"twenty-two \"\
+  ); break;\n        case 23: strcpy(digitInWord, \"twenty-three \"); break;\n   \
+  \     case 24: strcpy(digitInWord, \"twenty-four \"); break;\n        case 25: strcpy(digitInWord,\
+  \ \"twenty-five \"); break;\n        case 26: strcpy(digitInWord, \"twenty-six \"\
+  ); break;\n        case 27: strcpy(digitInWord, \"twenty-seven \"); break;\n   \
+  \     case 28: strcpy(digitInWord, \"twenty-eight \"); break;\n        case 29:\
+  \ strcpy(digitInWord, \"twenty-nine \"); break;\n        case 30: strcpy(digitInWord,\
+  \ \"thirty \"); break;\n        case 31: strcpy(digitInWord, \"thirty-one \"); break;\n\
+  \        case 32: strcpy(digitInWord, \"thirty-two \"); break;\n        case 33:\
+  \ strcpy(digitInWord, \"thirty-three \"); break;\n        case 34: strcpy(digitInWord,\
+  \ \"thirty-four \"); break;\n        case 35: strcpy(digitInWord, \"thirty-five\
+  \ \"); break;\n        case 36: strcpy(digitInWord, \"thirty-six \"); break;\n \
+  \       case 37: strcpy(digitInWord, \"thirty-seven \"); break;\n        case 38:\
+  \ strcpy(digitInWord, \"thirty-eight \"); break;\n        case 39: strcpy(digitInWord,\
+  \ \"thirty-nine \"); break;\n        case 40: strcpy(digitInWord, \"forty \"); break;\n\
+  \        case 41: strcpy(digitInWord, \"forty-one \"); break;\n        case 42:\
+  \ strcpy(digitInWord, \"forty-two \"); break;\n        case 43: strcpy(digitInWord,\
+  \ \"forty-three \"); break;\n        case 44: strcpy(digitInWord, \"forty-four \"\
+  ); break;\n        case 45: strcpy(digitInWord, \"forty-five \"); break;\n     \
+  \   case 46: strcpy(digitInWord, \"forty-six \"); break;\n        case 47: strcpy(digitInWord,\
+  \ \"forty-seven \"); break;\n        case 48: strcpy(digitInWord, \"forty-eight\
+  \ \"); break;\n        case 49: strcpy(digitInWord, \"forty-nine \"); break;\n \
+  \       case 50: strcpy(digitInWord, \"fifty \"); break;\n        case 51: strcpy(digitInWord,\
+  \ \"fifty-one \"); break;\n        case 52: strcpy(digitInWord, \"fifty-two \");\
+  \ break;\n        case 53: strcpy(digitInWord, \"fifty-three \"); break;\n     \
+  \   case 54: strcpy(digitInWord, \"fifty-four \"); break;\n        case 55: strcpy(digitInWord,\
+  \ \"fifty-five \"); break;\n        case 56: strcpy(digitInWord, \"fifty-six \"\
+  ); break;\n        case 57: strcpy(digitInWord, \"fifty-seven \"); break;\n    \
+  \    case 58: strcpy(digitInWord, \"fifty-eight \"); break;\n        case 59: strcpy(digitInWord,\
+  \ \"fifty-nine \"); break;\n        case 60: strcpy(digitInWord, \"sixty \"); break;\n\
+  \        case 61: strcpy(digitInWord, \"sixty-one \"); break;\n        case 62:\
+  \ strcpy(digitInWord, \"sixty-two \"); break;\n        case 63: strcpy(digitInWord,\
+  \ \"sixty-three \"); break;\n        case 64: strcpy(digitInWord, \"sixty-four \"\
+  ); break;\n        case 65: strcpy(digitInWord, \"sixty-five \"); break;\n     \
+  \   case 66: strcpy(digitInWord, \"sixty-six \"); break;\n        case 67: strcpy(digitInWord,\
+  \ \"sixty-seven \"); break;\n        case 68: strcpy(digitInWord, \"sixty-eight\
+  \ \"); break;\n        case 69: strcpy(digitInWord, \"sixty-nine \"); break;\n \
+  \       case 70: strcpy(digitInWord, \"seventy \"); break;\n        case 71: strcpy(digitInWord,\
+  \ \"seventy-one \"); break;\n        case 72: strcpy(digitInWord, \"seventy-two\
+  \ \"); break;\n        case 73: strcpy(digitInWord, \"seventy-three \"); break;\n\
+  \        case 74: strcpy(digitInWord, \"seventy-four \"); break;\n        case 75:\
+  \ strcpy(digitInWord, \"seventy-five \"); break;\n        case 76: strcpy(digitInWord,\
+  \ \"seventy-six \"); break;\n        case 77: strcpy(digitInWord, \"seventy-seven\
+  \ \"); break;\n        case 78: strcpy(digitInWord, \"seventy-eight \"); break;\n\
+  \        case 79: strcpy(digitInWord, \"seventy-nine \"); break;\n        case 80:\
+  \ strcpy(digitInWord, \"eighty \"); break;\n        case 81: strcpy(digitInWord,\
+  \ \"eighty-one \"); break;\n        case 82: strcpy(digitInWord, \"eighty-two \"\
+  ); break;\n        case 83: strcpy(digitInWord, \"eighty-three \"); break;\n   \
+  \     case 84: strcpy(digitInWord, \"eighty-four \"); break;\n        case 85: strcpy(digitInWord,\
+  \ \"eighty-five \"); break;\n        case 86: strcpy(digitInWord, \"eighty-six \"\
+  ); break;\n        case 87: strcpy(digitInWord, \"eighty-seven \"); break;\n   \
+  \     case 88: strcpy(digitInWord, \"eighty-eight \"); break;\n        case 89:\
+  \ strcpy(digitInWord, \"eighty-nine \"); break;\n        case 90: strcpy(digitInWord,\
+  \ \"ninety \"); break;\n        case 91: strcpy(digitInWord, \"ninety-one \"); break;\n\
+  \        case 92: strcpy(digitInWord, \"ninety-two \"); break;\n        case 93:\
+  \ strcpy(digitInWord, \"ninety-three \"); break;\n        case 94: strcpy(digitInWord,\
+  \ \"ninety-four \"); break;\n        case 95: strcpy(digitInWord, \"ninety-five\
+  \ \"); break;\n        case 96: strcpy(digitInWord, \"ninety-six \"); break;\n \
+  \       case 97: strcpy(digitInWord, \"ninety-seven \"); break;\n        case 98:\
+  \ strcpy(digitInWord, \"ninety-eight \"); break;\n        case 99: strcpy(digitInWord,\
+  \ \"ninety-nine \"); break;\n    }\n    return digitInWord;\n}\n```\n\n\n\n\n```c\n\
+  ptr = numArray;\nfor (i = 0; i < 10; i++) {\n    sum = sum + *ptr;\n    ptr++;\n\
+  }\nprintf(\"The sum of array elements : %d\", sum);\ngetch();\n```\n\n示例输出：\n输入\
+  \ 10 个元素： 11 12 13 14 15 16 17 18 19 20\n数组元素之和为 155。\n\n# 111. 编写一个程序，在不使用 size\
+  \ 运算符的情况下查找结构体数据类型的大小。\n\n```c\n#include<stdio.h>\n#include<conio.h>\nstruct student\
+  \ {\n    int roll;\n    char name[100];\n    float marks;\n};\n\nint main() {\n\
+  \    struct student *ptr = 0;\n    ptr++;\n    printf(\"Size of the structure student:\
+  \  %d\",ptr);\n    return 0;\n    getch();\n}\n```\n\n示例输出：\n结构体 student 的大小:  108\n\
+  \n# 112. 编写一个程序，使用结构体存储并显示单个学生的信息。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  struct student {\n    char name[50], subject[50];\n    int roll;\n    float marks;\n\
+  };\n\nint main() {\n    struct student s;\n    printf(\"Enter information of students:\\\
+  n\\n\");\n    printf(\"Enter name: \");\n    scanf(\"%s\",s.name);\n    printf(\"\
+  Enter roll number: \");\n    scanf(\"%d\",&s.roll);\n    printf(\"Enter subject:\"\
+  );\n    scanf(\"%s\",s.subject);\n    printf(\"Enter marks: \");\n    scanf(\"%f\"\
+  ,&s.marks);\n    printf(\"\\nDisplaying Information\\n\");\n    printf(\"Name: %s\\\
+  n\",s.name);\n    printf(\"Subject: %s\\n\",s.subject);\n    printf(\"Roll: %d\\\
+  n\",s.roll);\n    printf(\"Marks: %.2f\\n\",s.marks);\n    return 0;\n    getch();\n\
+  }\n```\n\n示例输出：\n输入学生信息：\n输入姓名：Rohit\n输入学号：24\n输入科目：CSE\n输入分数：82\n显示信息：\n姓名：Rohit\n\
+  科目：CSE\n学号：24\n分数：82.00\n\n# 113. 编写一个程序，使用结构体读取并打印 50 个学生的详情。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n#define SIZE 50\nstruct student {\n    char name[30];\n    int\
+  \ rollno;\n    int sub[3];\n};\n\nint main() {\n    int i, j, max, count, total,\
+  \ n, a[SIZE], ni;\n    struct student st[SIZE];\n    printf(\"Enter how many students:\
+  \ \");\n    scanf(\"%d\", &n);\n    for (i = 0; i < n; i++) {\n        printf(\"\
+  \\nEnter name and roll number for student %d : \", i);\n        scanf(\"%s\", &st[i].name);\n\
+  \        scanf(\"%d\", &st[i].rollno);\n    }\n    for (i = 0; i < n; i++) {\n \
+  \       for (j = 0; j <= 2; j++) {\n            printf(\"\\nEnter marks of student\
+  \ %d for subject %d : \", i, j);\n            scanf(\"%d\", &st[i].sub[j]);\n  \
+  \      }\n    }\n    for (i = 0; i < n; i++) {\n        total = 0;\n        for\
+  \ (j = 0; j < 3; j++) {\n            total = total + st[i].sub[j];\n        }\n\
+  \        printf(\"\\nTotal marks obtained by student %s are %d\", st[i].name,total);\n\
+  \        a[i] = total;\n    }\n    for (j = 0; j < 3; j++) {\n        max = 0;\n\
+  \        for (i = 0; i < n; i++) {\n            if (max < st[i].sub[j]) {\n    \
+  \            max = st[i].sub[j];\n                ni = i;\n            }\n     \
+  \   }\n        printf(\"\\nStudent %s got maximum marks = %d in Subject %d\",st[ni].name,\
+  \ max, j);\n    }\n    max = 0;\n    for (i = 0; i < n; i++) {\n        if (max\
+  \ < a[i]) {\n            max = a[i];\n            ni = i;\n        }\n    }\n  \
+  \  printf(\"\\n%s obtained the highest marks.\", st[ni].name);\n    getch();\n}\n\
+  ```\n\n示例输出：\n输入学生人数：2\n输入学生 0 的姓名和学号：Rohit\n24\n输入学生 1 的姓名和学号：Rohan\n25\n输入学生 0\
+  \ 在科目 0 的分数：72\n输入学生 0 在科目 1 的分数：78\n输入学生 0 在科目 2 的分数：85\n输入学生 1 在科目 0 的分数：75\n\
+  输入学生 1 在科目 1 的分数：86\n输入学生 1 在科目 2 的分数：89\nRohit 获得的总分是 235\nRohan 获得的总分是 250\nRohan\
+  \ 在科目 0 获得最高分 =75\nRohan 在科目 1 获得最高分 =86\nRohan 在科目 2 获得最高分 =89\nRohan 获得了最高分。\n\
+  \n# 114. 编写一个程序，使用动态内存通过结构体存储信息。\n\n```c\n#include<stdio.h>\n#include<stdlib.h>\n\
+  #include<conio.h>\nstruct name {\n    int a;\n    char c[30];\n};\n\nint main()\
+  \ {\n    struct name *ptr;\n    int i,n;\n    printf(\"Enter n: \");\n    scanf(\"\
+  %d\",&n);\n    ptr=(struct name*)malloc(n*sizeof(struct name));\n    for(i=0;i<n;++i)\
+  \ {\n        printf(\"Enter string and integer:\\n\");\n        scanf(\"%s%d\",&ptr+i)->c,(ptr+i)->a);\n\
+  \    }\n    printf(\"Displaying Information:\\n\");\n    for(i=0;i<n;++i)\n    \
+  \    printf(\"%s\\t%d\\t\",(ptr+i)->c,(ptr+i)->a);\n    return 0;\n    getch();\n\
+  }\n```\n\n示例输出：\n输入 n：2\n输入字符串和整数：\nProgramming 22\n输入字符串和整数：\nStructure 33\n显示信息：\n\
+  Programming\t22\nStructure\t33\n\n# 115. 编写一个程序，通过向函数传递结构体打印两个复数的和。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\ntypedef struct complex {\n    float real;\n    float imag;\n\
+  }complex;\n\ncomplex add(complex n1,complex n2);\nint main(){\n    complex n1,n2,temp;\n\
+  \    printf(\"For 1st complex number \\n\");\n    printf(\"Enter real and imaginary:\\\
+  n\");\n    scanf(\"%f%f\",n1.real,&n1.imag);\n    printf(\"For 2nd complex number\
+  \ \\n\");\n    printf(\"Enter real and imaginary:\\n\");\n    scanf(\"%f%f\",n2.real,&n2.imag);\n\
+  \    temp=add(n1,n2);\n    printf(\"Sum=%.1f+%.1f\",temp.real,temp.imag);\n    return\
+  \ 0;\n}\n\ncomplex add(complex n1,complex n2) {\n    complex temp;\n    temp.real=n1.real+n2.real;\n\
+  \    temp.imag=n1.imag+n2.imag;\n    return(temp);\n}\ngetch();\n```\n\n示例输出：\n\
+  第一个复数：\n输入实部和虚部：\n2\n4\n第二个复数：\n输入实部和虚部：\n6\n7\nSum=8.0+11.0\n\n# 16. 编写一个程序，查看联合体（union）和结构体（structure）之间的差异。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nunion job {\n    char name[32];\n\
+  \    float salary;\n    int worker_no;\n}u;\n\nstruct job {\n    char name[32];\n\
+  \    float salary;\n    int worker_no;\n}s;\n\nint main() {\n    printf(\"size of\
+  \ union = %d\",sizeof(u));\n    printf(\"\\nsize of structure = %d\", sizeof(s));\n\
+  \    return 0;\n    getch();\n}\n```\n\n示例输出：\n联合体的大小 = 32\n结构体的大小 = 40\n\n# 17.\
+  \ 编写一个程序读取或打开文件。\n\n```c\n#include<stdio.h>\n#include<stdlib.h>\n#include<conio.h>\n\
+  int main() {\n    char ch, file_name[25];\n    FILE *fp;\n    printf(\"Enter the\
+  \ name of file you wish to see\\n\");\n    gets(file_name);\n    fp = fopen(file_name,\"\
+  r\");\n    if( fp == NULL ) {\n        perror(\"Error opening the file.\\n\");\n\
+  \        exit(EXIT_FAILURE);\n    }\n    printf(\"The contents of %s file are :\\\
+  n\", file_name);\n    while( ch = fgetc(fp) ) != EOF\n        printf(\"%c\",ch);\n\
+  \    fclose(fp);\n    return 0;\n    getch();\n}\n```\n\n# 18. 编写一个程序拷贝文件。\n\n```c\n\
+  #include<stdio.h>\n#include<stdlib.h>\nint main() {\n    char ch, source_file[20],\
+  \ target_file[20];\n    FILE *source, *target;\n    printf(\"Enter name of file\
+  \ to copy\\n\");\n    gets(source_file);\n    source = fopen(source_file, \"r\"\
+  );\n    if( source == NULL ) {\n        printf(\"Press any key to exit...\\n\");\n\
+  \        exit(EXIT_FAILURE);\n    }\n    printf(\"Enter name of target file\\n\"\
+  );\n    gets(target_file);\n    target = fopen(target_file, \"w\");\n    if( target\
+  \ == NULL ) {\n        fclose(source);\n        printf(\"Press any key to exit...\\\
+  n\");\n        exit(EXIT_FAILURE);\n    }\n    while( ch = fgetc(source) ) != EOF\n\
+  \        fputc(ch, target);\n    printf(\"File copied successfully.\\n\");\n   \
+  \ fclose(source);\n    fclose(target);\n    return 0;\n}\n```\n\n# 19. 编写一个程序合并两个文件。\n\
+  \n```c\n#include<stdio.h>\n#include<stdlib.h>\n#include<conio.h>\nint main() {\n\
+  \    FILE *fs1, *fs2, *ft;\n    char ch, file1[20], file2[20], file3[20];\n    printf(\"\
+  Enter name of first file\\n\");\n    gets(file1);\n    printf(\"Enter name of second\
+  \ file\\n\");\n    gets(file2);\n    printf(\"Enter name of file which will store\
+  \ contents of two files\\n\");\n    gets(file3);\n    fs1 = fopen(file1,\"r\");\n\
+  \    fs2 = fopen(file2,\"r\");\n    if( fs1 == NULL || fs2 == NULL ) {\n       \
+  \ perror(\"Error \");\n        printf(\"Press any key to exit...\\n\");\n      \
+  \  getch();\n        exit(EXIT_FAILURE);\n    }\n    ft = fopen(file3,\"w\");\n\
+  \    \n```\n\n\n\n\n\n```c\nperror(\"Error \");\nprintf(\"Press any key to exit...\\\
+  n\");\nexit(EXIT_FAILURE);\n}\n\nwhile( ( ch = fgetc(fs1) ) != EOF )\n    fputc(ch,ft);\n\
+  \nwhile( ( ch = fgetc(fs2) ) != EOF )\n    fputc(ch,ft);\nprintf(\"Two files were\
+  \ merged into %s file successfully.\\n\",file3);\nfclose(fs1);\nfclose(fs2);\nfclose(ft);\n\
+  return 0;\n}\n```\n\n# 120. 写一个删除文件的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint main()\n{\nint status;\nchar file_name[25];\nprintf(\"Enter the name of file\
+  \ you wish to delete\\n\");\ngets(file_name);\nstatus = remove(file_name);\nif(\
+  \ status == 0 )\n    printf(\"%s file deleted successfully.\\n\",file_name);\nelse\n\
+  {\n    printf(\"Unable to delete the file\\n\");\n    perror(\"Error\");\n}\nreturn\
+  \ 0;\ngetch();\n}\n```\n\n# 121. 写一个 C 程序，使用 `fwrite()` 将结构体数组的所有成员写入文件。从文件中读取数组并显示在屏幕上。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nstruct s\n{\nchar name[50];\nint\
+  \ height;\n};\n\nint main()\n{\nstruct s a[5],b[5];  \nFILE *fptr;\nint i;\nfptr=fopen(\"\
+  file.txt\",\"wb\");\nfor(i=0;i<5;++i)\n{\n    fflush(stdin);\n    printf(\"Enter\
+  \ name: \");\n    gets(a[i].name);\n    printf(\"Enter height: \");\n    scanf(\"\
+  %d\",&a[i].height);\n}\nfwrite(a,sizeof(a),1,fptr);\nfclose(fptr);\nfptr=fopen(\"\
+  file.txt\",\"rb\");\nfread(b,sizeof(b),1,fptr);\nfor(i=0;i<5;++i)\n{\n    printf(\"\
+  Name: %s\\nHeight: %d\",b[i].name,b[i].height);\n}\nfclose(fptr);\ngetch();\n}\n\
+  ```\n\n# 122. 写一个向数据文件写入并从数据文件读取的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nstruct Student\n{\n  int roll;\n  char name[12];\n  int percent;\n} s1 = { 10,\
+  \ \"SMJC\", 80 };\n\nint main()\n{\nFILE *fp;\nstruct Student s2;\nfp = fopen(\"\
+  ip.txt\", \"w\");\nfwrite(&s1, sizeof(s1), 1, fp);\nfclose(fp);\nfp = fopen(\"ip.txt\"\
+  , \"r\");\nfread(&s2, sizeof(s2), 1, fp);\nfclose(fp);\nprintf(\"\\nRoll : %d\"\
+  , s2.roll);\nprintf(\"\\nName : %s\", s2.name);\nprintf(\"\\nPercent : %d\", s2.percent);\n\
+  return (0);\ngetch();\n}\n```\n\n# 123. 写一个合并多个文件并将它们存储在一个文件中的程序。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n\nvoid concatenate(FILE *fp1,FILE *fp2,char *argv[],int argc);\n\
+  int main(int argc,char *argv[]){\nFILE *fp1,*fp2;\nconcatenate(fp1,fp2,argv,argc);\n\
+  return 0;\ngetch();\n}\nvoid concatenate(FILE *fp1,FILE *fp2,char **argv,int argc)\n\
+  {\nint i,ch;\nfp2=fopen(\"files\",\"a\");\nfor(i=1;i<argc-1;i++)\n{\n    fp1=fopen(argv[i],\"\
+  r\");\n    while((ch=getc(fp1))!=EOF)\n        putc(ch,fp2);\n}\n```\n\n# 24. 写一个查找文本文件中行数的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n{\nFILE *fileptr;\nint\
+  \ count_lines = 0;\nchar filechar[40], chr;\nprintf(\"Enter file name: \");\nscanf(\"\
+  %s\",filechar);\nfileptr=fopen(filechar, \"r\");\nchr=getc(fileptr);\nwhile (chr\
+  \ != EOF)\n{\n    if (chr == '\\n')\n        count_lines = count_lines + 1;\n  \
+  \  chr=getc(fileptr);\n}\nfclose(fileptr);\nprintf(\"There are %d lines in %s in\
+  \ a file\\n\", count_lines,filechar);\nreturn 0;\ngetch();\n}\n```\n\n# 25. 写一个替换文本文件中指定行的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint main(void)\n{\nFILE *fileptr,\
+  \ *fileptr2;\nchar filechar[40];\nchar c;\nint delete_line, temp = 1;\nprintf(\"\
+  Enter file name: \");\nscanf(\"%s\",filechar);\nfileptr=fopen(filechar, \"r\");\n\
+  c=getc(fileptr);\nwhile (c != EOF)\n{\n    printf(\"%c\", c);\n    c=getc(fileptr);\n\
+  }\nprintf(\"\\n Enter line to be deleted and replaced\");\nscanf(\"%d\", &delete_line);\n\
+  rewind(fileptr);\nfileptr2=fopen(\"replica.c\", \"w\");\nc=getc(fileptr);\nwhile\
+  \ (c != EOF)\n{\n    if (c == '\\n')\n        temp++;\n    if (temp != delete_line)\n\
+  \        putc(c,fileptr2);\n    else\n    {\n        while ((c = getc(fileptr))\
+  \ != '\\n')\n        {\n        }\n        printf(\"Enter new text\");\n       \
+  \ fflush(stdin);\n        putc('\\n', fileptr2);\n        while ((c = getchar())\
+  \ != '\\n')\n            putc(c,fileptr2);\n        fputs(\"\\n\",fileptr2);\n \
+  \       temp++;\n    }\n    c=getc(fileptr);\n}\nfclose(fileptr);\nfclose(fileptr2);\n\
+  remove(filechar);\nrename(\"replica.c\", filechar);\nfileptr=fopen(filechar, \"\
+  r\");\nc=getc(fileptr);\nwhile (c != EOF)\n{\n    printf(\"%c\", c);\n    c=getc(fileptr);\n\
+  }\nfclose(fileptr);\nreturn 0;\ngetch();\n}\n```\n\n# 26. 写一个从文本文件中删除特定行的程序。\n\n\
+  ```c\n#include<stdio.h>\n#include<conio.h>\nint main()\n{\nFILE *fileptr, *fileptr2;\n\
+  char filename[40];\nchar ch;\nint delete_line, temp = 1;\nprintf(\"Enter file name:\
+  \ \");\nscanf(\"%s\",filename);\nfileptr=fopen(filename, \"r\");\nch=getc(fileptr);\n\
+  while (ch != EOF)\n{\n    printf(\"%c\", ch);\n    ch=getc(fileptr);\n}\nrewind(fileptr);\n\
+  printf(\"\\n Enter line number of the line to be deleted:\");\nscanf(\"%d\", &delete_line);\n\
+  fileptr2=fopen(\"replica.c\", \"w\");\nch=getc(fileptr);\nwhile (ch != EOF)\n{\n\
+  \    ch=getc(fileptr);\n    if (ch == '\\n')\n        temp++;\n    if (temp != delete_line)\n\
+  \        putc(ch,fileptr2);\n}\nfclose(fileptr);\nfclose(fileptr2);\nremove(filename);\n\
+  rename(\"replica.c\", filename);\nprintf(\"\\n contents of file after modified are\
+  \ as follows:\\n\");\nfileptr=fopen(filename, \"r\");\nch=getc(fileptr);\nwhile\
+  \ (ch != EOF)\n{\n    printf(\"%c\", ch);\n    ch=getc(fileptr);\n}\nfclose(fileptr);\n\
+  return 0;\ngetch();\n}\n```\n\n# 127. 写一个实现龟排序（stooge sort）的程序。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\nvoid stoogesort(int a[], int, int);\nint main()\n{\nint b[7],\
+  \ i;\nprintf(\"Enter the values you want to sort using STOGE SORT!!!:\\n\");\nfor\
+  \ (i = 0;i < 7;i++)\n    scanf(\" %d\", &b[i]);\nstoogesort(b, 0, 6);\nprintf(\"\
+  sorted by stooge sort \\n\");\nfor (i = 0;i < 7;i++)\n{\n    printf(\"%d \", b[i]);\n\
+  }\nprintf(\"\\n\");\ngetch();\nreturn 0;\n}\nvoid stoogesort(int a[], int i, int\
+  \ j)\n{\nint temp, k;\nif (a[i] > a[j])\n{\n    temp = a[i];\n    a[i] = a[j];\n\
+  \    a[j] = temp;\n}\nif ((i + 1) >= j)\n    return;\nk = (int)((j - i + 1) / 3);\n\
+  stoogesort(a, i, j - k);\nstoogesort(a, i + k, j);\nstoogesort(a, i, j - k);\n}\n\
+  ```\n示例输出:\nEnter the values you want to sort using STOGE SORT!!!:\n23\n43\n12\n\
+  45\n97\n56\n34\nsorted by stooge sort\n12 23 34 43 45 56 97\n```\n\n# 128. 写一个使用递归获取两个数最小公倍数（LCM）的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\nint lcm(int,int);\nint main()\n{\n\
+  int a,b,l;\nprintf(\"Enter any two positive integers \");\nscanf(\"%d%d\",&a,&b);\n\
+  if(a>b)\n    l = lcm(a,b);\nelse\n    l = lcm(b,a);\nprintf(\"LCM of two integers\
+  \ is %d\",l);\ngetch();\nreturn 0;\n}\n\nint lcm(int a, int b)\n{\nstatic int temp\
+  \ = 1;\nif(temp % b == 0 && temp % a == 0)\n    return temp;\n// logic continues...\n\
+  }\n```\n\n\n\n\n\n```c\ntemp++;\nlcm(a,b);\nreturn temp;\n}\n```\n\n示例输出：\n输入任意两个整数\
+  \ 2\n5\n两个整数的最小公倍数是 10\n\n## 129. 编写一个使用递归求数字最大公约数（GCD）的程序。\n\n```c\n#include<stdio.h>\n\
+  #include<conio.h>\n\nint gcd(int, int);\n\nint main()\n{\n    int a, b, result;\n\
+  \    printf(\"输入要寻找 GCD 的两个数字: \");\n    scanf(\"%d%d\", &a, &b);\n    result =\
+  \ gcd(a, b);\n    printf(\"%d 和 %d 的最大公约数是 %d。\\n\", a, b, result);\n    getch();\n\
+  }\n\nint gcd(int a, int b)\n{\n    while (a != b)\n    {\n        if (a > b)\n \
+  \       {\n            return gcd(a - b, b);\n        }\n        else\n        {\n\
+  \            return gcd(a, b - a);\n        }\n    }\n    return a;\n}\n```\n\n\
+  示例输出：\n输入要寻找 GCD 的两个数字: 100\n70\n100 和 70 的最大公约数是 10。\n\n## 130. 编写一个使用递归求数字幂的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int pow,num;\n\
+  \    long int res;\n    long int power(int,int);\n    printf(\"\\n 输入一个数字: \");\n\
+  \    scanf(\"%d\",&num);\n    printf(\"\\n 输入指数: \");\n    scanf(\"%d\",&pow);\n\
+  \    res=power(num,pow);\n    printf(\"\\n%d 的 %d 次方是: %ld\",num,pow,res);\n   \
+  \ getch();\n    return 0;\n}\n\nint i=1;\nlong int sum=1;\nlong int power(int num,int\
+  \ pow)\n{\n    if(i<=pow)\n    {\n        sum=sum*num;\n        power(num,pow-1);\n\
+  \    }\n    else\n        return sum;\n}\n```\n\n示例输出：\n输入一个数字: 24\n输入指数: 2\n24\
+  \ 的 2 次方是: 576\n\n## 131. 编写一个使用递归求数字阶乘的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nint fact(int);\n\nint main()\n{\n    int num,f;\n    printf(\"\\n 输入一个数字: \");\n\
+  \    scanf(\"%d\",&num);\n    f=fact(num);\n    printf(\"\\n%d 的阶乘是: %d\",num,f);\n\
+  \    getch();\n    return 0;\n}\n\nint fact(int n)\n{\n    if(n==1)\n        return\
+  \ 1;\n    else\n        return(n*fact(n-1));\n}\n```\n\n示例输出：\n输入一个数字: 6\n6 的阶乘是:\
+  \ 720\n\n## 132. 编写一个使用递归打印斐波那契数列的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nvoid printFibonacci(int);\n\nint main()\n{\n    int k,n;\n    long int i=0,j=1,f;\n\
+  \    printf(\"输入斐波那契数列的范围: \");\n    scanf(\"%d\",&n);\n    printf(\"斐波那契数列: \"\
+  );\n    printf(\"%d %d \",0,1);\n    printFibonacci(n);\n    getch();\n    return\
+  \ 0;\n}\n\nvoid printFibonacci(int n)\n{\n    static long int first=0,second=1,sum;\n\
+  \    if(n>0)\n    {\n        sum = first + second;\n        first = second;\n  \
+  \      second = sum;\n        printf(\"%ld \",sum);\n        printFibonacci(n-1);\n\
+  \    }\n}\n```\n\n示例输出：\n输入斐波那契数列的范围: 20\n斐波那契数列: 0 1 1 2 3 5 8 13 21 34 55 89 144\
+  \ 233 377 610 987 1597 2584 4181 6765\n\n## 133. 编写一个将十进制数转换为二进制数的程序。\n\n```c\n\
+  #include<stdio.h>\n#include<conio.h>\n\nlong toBinary(int);\n\nint main()\n{\n \
+  \   long binaryNo;\n    int decimalNo;\n    printf(\"输入任意十进制数: \");\n    scanf(\"\
+  %d\",&decimalNo);\n    binaryNo = toBinary(decimalNo);\n    printf(\"二进制值是: %ld\"\
+  ,binaryNo);\n    getch();\n    return 0;\n}\n\nlong toBinary(int decimalNo)\n{\n\
+  \    static long binaryNo,remainder,factor = 1;\n    if(decimalNo != 0)\n    {\n\
+  \        remainder = decimalNo % 2;\n        binaryNo = binaryNo + remainder * factor;\n\
+  \        factor = factor * 10;\n        toBinary(decimalNo / 2);\n    }\n    return\
+  \ binaryNo;\n}\n```\n\n示例输出：\n输入任意十进制数: 22\n二进制值是: 10110\n\n## 134. 编写一个使用递归寻找数组中最大数的程序。\n\
+  \n```c\n#include<stdio.h>\n#include<conio.h>\n\n#define MAX 100\n\nint getMaxElement(int\
+  \ []);\nint size;\n\nint main()\n{\n    int arr[MAX],max,i;\n    printf(\"输入数组大小:\
+  \ \");\n    scanf(\"%d\",&size);\n    printf(\"输入数组的 %d 个元素: \", size);\n    for(i=0;i<size;i++)\n\
+  \        scanf(\"%d\",&arr[i]);\n    max=getMaxElement(arr);\n    printf(\"数组的最大元素是:\
+  \ %d\",max);\n    getch();\n    return 0;\n}\n\nint getMaxElement(int arr[])\n{\n\
+  \    static int i=0,max=-9999;\n    if(i < size)\n    {\n        if(max<arr[i])\n\
+  \            max=arr[i];\n        i++;\n        getMaxElement(arr);\n    }\n   \
+  \ return max;\n}\n```\n\n示例输出：\n输入数组大小: 5\n输入数组的 5 个元素: 5\n8\n9\n4\n数组的最大元素是: 9\n\
+  \n## 135. 编写一个使用递归求数字反转的程序。\n\n```c\n#include<stdio.h>\n#include<math.h>\n#include<conio.h>\n\
+  \nint rev(int, int);\n\nint main()\n{\n    int num, result;\n    int length = 0,\
+  \ temp;\n    printf(\"输入要反转的数字: \");\n    scanf(\"%d\", &num);\n    temp = num;\n\
+  \    while (temp != 0)\n    {\n        length++;\n        temp = temp / 10;\n  \
+  \  }\n    result = rev(num, length);\n    printf(\"%d 反转后是 %d.\\n\", num, result);\n\
+  \    return 0;\n    getch();\n}\n\nint rev(int num, int len)\n{\n    if (len ==\
+  \ 1)\n    {\n        return num;\n    }\n    else\n    {\n        return ((num %\
+  \ 10) * pow(10, len - 1)) + rev(num / 10);\n    }\n}\n```\n\n示例输出：\n输入要反转的数字: 123456\n\
+  123456 反转后是 654321。\n\n## 136. 编写一个显示 ATM 交易的程序。\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\
+  \nunsigned long amount=1000, deposit, withdraw;\nint choice, pin, k;\nchar transaction\
+  \ ='y';\n\nint main()\n{\n    while (pin != 1520)\n    {\n        printf(\"输入密码:\
+  \ \");\n        scanf(\"%d\", &pin);\n        if (pin != 1520)\n            printf(\"\
+  请输入正确的密码\\n\");\n    }\n    do\n    {\n        printf(\"****欢迎使用 ATM 服务****\\n\"\
+  );\n        printf(\"1. 查询余额\\n\");\n        printf(\"2. 取款\\n\");\n        printf(\"\
+  3. 存款\\n\");\n        printf(\"4. 退出\\n\");\n        printf(\"**************************\\\
+  n\");\n        printf(\"输入您的选择: \");\n        scanf(\"%d\", &choice);\n        switch\
+  \ (choice)\n        {\n            case 1:\n                printf(\"\\n 余额为: %lu\
+  \ \", amount);\n                break;\n            case 2:\n                printf(\"\
+  \\n 输入取款金额: \");\n                scanf(\"%lu\", &withdraw);\n                if\
+  \ (withdraw % 100 != 0)\n                    printf(\"\\n 请输入 100 的倍数金额\");\n  \
+  \              else if (withdraw >(amount - 500))\n                    printf(\"\
+  \\n 余额不足\");\n                else\n                {\n                    amount\
+  \ = amount - withdraw;\n                    printf(\"\\n\\n 请取款\");\n          \
+  \          printf(\"\\n 您的当前余额为%lu\", amount);\n                }\n            \
+  \    break;\n            case 3:\n                printf(\"\\n 输入存款金额: \");\n  \
+  \              scanf(\"%lu\", &deposit);\n                amount = amount + deposit;\n\
+  \                printf(\"\\n 余额为: %lu \", amount);\n                break;\n  \
+  \          case 4:\n                printf(\"\\n 感谢使用 ATM\");\n                break;\n\
+  \            default:\n                printf(\"\\n 无效选择\");\n        }\n      \
+  \  if (choice != 4)\n        {\n            printf(\"\\n\\n 是否要进行再次交易?(y/n): \"\
+  );\n            fflush(stdin);\n            scanf(\"%c\", &transaction);\n     \
+  \       if (transaction == 'n'|| transaction == 'N')\n            {\n          \
+  \      k = 1;\n            }\n        }\n    } while (!k);\n    printf(\"\\n\\n\
+  \ 感谢使用我们的服务\");\n    getch();\n}\n```\n\n示例输出：\n输入密码: 2345\n请输入正确的密码\n输入密码: 1520\n\
+  ****欢迎使用 ATM 服务****\n1. 查询余额\n2. 取款\n3. 存款\n4. 退出\n**************************\n\
+  输入您的选择: 1\n余额为: 1000 \n\n是否要进行再次交易?(y/n): y\n\n****欢迎使用 ATM 服务****\n1. 查询余额\n2.\
+  \ 取款\n3. 存款\n4. 退出\n**************************\n输入您的选择: 2\n输入取款金额: 200\n请取款\n您的当前余额为\
+  \ 800\n\n是否要进行再次交易?(y/n): y\n\n****欢迎使用 ATM 服务****\n1. 查询余额\n2. 取款\n3. 存款\n4. 退出\n\
+  **************************\n输入您的选择: 3\n输入存款金额: 500\n余额为: 1300 \n\n是否要进行再次交易?(y/n):\
+  \ y\n\n****欢迎使用 ATM 服务****\n1. 查询余额\n2. 取款\n3. 存款\n4. 退出\n**************************\n\
+  输入您的选择: 4\n感谢使用 ATM\n\n感谢使用我们的服务\n\n\n\n\n\n所有程序已在 Dev C++ 5.9.2 上成功运行并检查\n\n# 快速选择题：\n\
+  \n1. 哪是有效的 C 表达式？\n   a) `int my_num = 100,000;`\n   b) `int my_num = 100000;`\n\
+  \   c) `int my num = 1000;`\n   d) `int $my_num = 10000;`\n\n2. `int` 类型的大小是多少？\n\
+  \   a) 4 字节\n   b) 8 字节\n   c) 取决于系统/编译器\n   d) 无法\n\n3. 关于数据类型的大小，哪个是正确的？\n   a)\
+  \ `char > int > float`\n   b) `int > char > float`\n   c) `char < int < double`\n\
+  \   d) `double > char > int`\n\n4. 下列声明中哪一个不受 C 语言支持？\n   a) `String str;`\n   b)\
+  \ `char *str;`\n   c) `float str = 3e2;`\n   d) (a) 和 (c)\n\n5. 下面哪一个不是指针声明？\n \
+  \  a) `char a[10];`\n   b) `char a[] = {‘1’, ‘2’, ‘3’, ‘4’};`\n   c) `char *str;`\n\
+  \   d) `char a;`\n\n6. 下述声明之间是否存在差异？\n   1: `extern int fun();`\n   2: `int fun();`\n\
+  \   a) 两者相同\n   b) 没有区别，除了 `extern int fun();` 可能在另一个文件中\n   c) `int fun();` 被 `extern\
+  \ int fun();` 覆盖\n   d) 以上均不是\n\n7. 在下列程序中你需要添加哪条语句才能使其正常工作？\n```c\n#include<stdio.h>\n\
+  \nint main()\n{\n    printf(\"%f\\n\", log(36.0));\n    return 0;\n}\n```\n   a)\
+  \ `#include<conio.h>`\n   b) `#include<math.h>`\n   c) `#include<stdlib.h>`\n  \
+  \ d) `#include<dos.h>`\n\n8. 默认情况下，实数被视为\n   a) Float\n   b) double\n   c) long\
+  \ double\n   d) far double\n\n9. 如果在 C 程序中你给一个下标超过数组大小的数组元素赋值会发生什么？\n   a) 元素将被设置为\
+  \ 0。\n   b) 编译器将报告错误。\n   c) 如果某些重要数据被覆盖，程序可能会崩溃。\n   d) 数组大小将适当增长。\n\n10. 在 C 中，如果你将数组作为参数传递给函数，实际传递的是什么？\n\
+  \    a) 数组元素的值\n    b) 数组的第一个元素\n    c) 数组的基地址\n    d) 数组最后一个元素的地址\n\n11. 下列哪些是\
+  \ C 语言中的单目运算符？\n    1. `!`\n    2. `sizeof`\n    3. `~`\n    4. `&&`\n    a) 1,\
+  \ 2\n    b) 1, 3\n    c) 2, 4\n    d) 1, 2, 3\n\n12. 用于将控制权从函数传回调用函数的关键字是\n    a)\
+  \ Switch\n    b) `goto`\n    c) go back\n    d) `return`\n\n13. `(void*)0` 是什么？\n\
+  \    a) NULL 指针的表示\n    b) void 指针的表示\n    c) 错误\n    d) 以上都不是\n\n14. 这段 C 代码的输出是什么？\n\
+  ```c\n#include <stdio.h>\n\nint main()\n{\n    int a = 1, b = 1, c;\n    c = a++\
+  \ + b;\n    printf(\"%d, %d\", a, b);\n}\n```\n   a) `a = 1, b = 1`\n   b) `a =\
+  \ 2, b = 1`\n   c) `a = 1, b = 2`\n   d) `a = 2, b = 2`\n\n15. 这段 C 代码的输出是什么？\n\
+  ```c\n#include <stdio.h>\n\nint main()\n{\n    int a = 5, b = -7, c = 0, d;\n  \
+  \  d = ++a && ++b || ++c;\n    printf(\"\\n%d %d %d %d\", a, b, c, d);\n}\n```\n\
+  \   a) `6 -6 0 0`\n   b) `6 -5 0 1`\n   c) `-6 -6 0 1`\n   d) `6 -6 0 1`\n\n16.\
+  \ 下列哪一个不能在 switch-case 语句中检查？\n    a) 字符\n    b) 整数\n    c) 浮点数\n    d) 枚举\n\n17.\
+  \ 下列哪个是 C 语言中条件运算符的正确用法？\n    a) `a>b ? c=30 : c=40;`\n    b) `a>b ? c=30;`\n  \
+  \  c) `max = a>b ? a>c?a:c:b`\n    d) `return (a>b)?(a:b)`\n\n18. 程序的输出是什么？\n```c\n\
+  #include<stdio.h>\n\nint main()\n{\n    float a=0.7;\n    if(a < 0.7)\n        printf(\"\
+  C\\n\");\n    else\n        printf(\"C++\\n\");\n    return 0;\n}\n```\n   a) C\n\
+  \   b) C++\n   c) 编译器错误\n   d) 以上\n\n19. 如果两个字符串相同，`strcmp()` 返回\n    a) -1\n  \
+  \  b) 1\n    c) 0\n    d) 是\n\n20. 用于查找字符串中字符最后一次出现的库函数是\n    a) `strstr()`\n  \
+  \  b) `last()`\n    c) `strrchr()`\n    d) `strstr()`\n\n21. 下列哪个函数适用于读取单词字符串？\n\
+  \    a) `printf();`\n    b) `scanf();`\n    c) `gets();`\n    d) `puts();`\n\n22.\
+  \ 为了打印下面的 a 和 b，你会使用哪个 `printf()` 语句？\n```c\n#include<stdio.h>\nfloat a=3.14;\n\
+  double b=3.14;\n```\n   a) `printf(\"%f %lf\", a, b);`\n   b) `printf(\"%Lf %f\"\
+  , a, b);`\n   c) `printf(\"%Lf %Lf\", a, b);`\n   d) `printf(\"%f %Lf\", a, b);`\n\
+  \n23. 下列哪些是不同类型的集合？\n    a) 字符串\n    b) 结构\n    c) 字符\n    d) 以上\n\n24. 下列哪一个是用户定义类型？\n\
+  ```c\nstruct book {\n    char name[10];\n    float price;\n    int pages;\n};\n\
+  long int l = 25;\nenum day {Sun, Mon, Tue};\n```\n   a) 1\n   b) 2\n   c) 3\n  \
+  \ d) 1 和 2\n\n25. 结构、联合和枚举之间的共同点是什么？\n    a) 它们允许定义新值\n    b) 它们允许定义数据类型\n    c)\
+  \ 它们允许定义指针\n    d) 它们允许定义结构\n\n26. 如果一个变量是结构体指针，那么使用哪个运算符通过指针访问结构体的成员？\n    a) `.`\n\
+  \    b) `&`\n    c) `*`\n    d) `->`\n\n27. 指针是\n    a) 用于创建变量的关键字\n    b) 存储指令地址的变量\n\
+  \    c) 存储其他变量地址的变量\n    d) 以上都是\n\n28. 下述声明意味着？`int (*ptr)[10];`\n   a) `ptr` 是指向\
+  \ 10 个整数的指针数组\n   b) `ptr` 是一个指向 10 个整数数组的指针\n   c) `ptr` 是 10 个整数的数组\n   d) `ptr`\
+  \ 是数组指针\n\n29. 在以下代码中，`p2` 是整数指针还是整数？\n```c\ntypedef int *ptr;\nptr p1, p2;\n```\n\
+  \   a) 整数\n   b) 整数指针\n   c) 声明错误\n   d) 以上都不是\n\n30. 如果打开文件时发生错误，`fopen` 返回\n \
+  \   a) 无\n    b) EOF\n    c) NULL\n    d) 取决于编译器\n\n# 答案-\n1) b, 2) c, 3) c, 4)\
+  \ a, 5) d, 6) b, 7) b, 8) b, 9) c, 10) c, 11) d, 12) d, 13) a, 14) b, 15) d, 16)\
+  \ c, 17) c, 18) a, 19) c, 20) c, 21) c, 22) a, 23) b, 24) b, 25) b, 26) d, 27) c,\
+  \ 28) b, 29) b, 30) c\n\n# 面试问答：\n\nQ.1 程序没有 `main()` 函数可以编译吗？\n可以编译，但不能执行，因为执行需要\
+  \ `main()` 函数的定义。\n\nQ.2 变量声明和变量定义之间有什么区别？\n声明为变量关联类型，而定义是为变量赋值。\n\nQ.3 局部变量和全局变量的默认值是什么？\n\
+  局部变量获得垃圾值，全局变量获得值 0。\n\nQ.4 可以创建自己的头文件吗？\n可以，可以创建自定义的头文件。只需在其中包含你想在程序中使用的函数原型，并使用\
+  \ `#include` 指令后跟你的头文件名称即可。\n\nQ.5 每个程序语句末尾分号（`;`）的作用是什么？\n这与代码的解析过程和编译有关。分号充当分隔符，让编译器知道每条语句何时结束，并可以继续将语句拆分为较小的元素进行语法检查。\n\
+  \nQ.6 我可以使用 `int` 类型来存储值 32768 吗？为什么？\n不可以。`int` 类型能够存储从 -32768 到 32767 的值。\n\n\n\
+  \n\n`if` 命令只能用于比较数值和单字符值。对于字符串值的比较，有一个名为 `strcmp` 的函数，它专门用于处理字符串。\n\n### Q.11 表达式\
+  \ `++a` 和 `a++` 之间有什么区别？\n\n在第一个表达式中，增量操作会先发生于变量 `a`，并使用得到的结果作为值。这也被称为前缀增量。在第二个表达式中，变量\
+  \ `a` 的当前值将先用于操作，然后 `a` 本身的值才会递增。这也被称为后置增量。\n\n### Q. 12 负整数是如何存储的？\n\n获取相同正整数的补码。例如：`1101`\
+  \ (-5)\n\n- 步骤-1？取 `5` 的反码：`1010`\n- 步骤-2？在上述基础上加 `1`，得到 `1011`，即为 `-5`。\n\n###\
+  \ Q.13 三元运算符分类下有多少个运算符？\n\n只有一个运算符，即条件运算符 `? :` `。\n\n### Q.14 switch 语句中的 default\
+  \ case 默认需要 break 吗？\n\n是的，如果它不是最后一个 case，并且我们不希望控制流在执行 default 之后流到下一个 case（如果有的话）。\n\
+  \n### Q.15 使用哪个关键字可以执行无条件分支？\n\n`goto`\n\n### Q.16 哪个函数可以释放动态分配的内存？\n\n`free()`\n\
+  \n### Q.17 什么是指针的指针（二级指针）？\n\n它是一个可以存放另一个指针变量地址的指针变量。通过两次引用来指向指定指针变量所持的数据。\n\n例如：`int\
+  \ x = 5, *p=&x, **q=&p;`\n\n### Q.18 声明 void 指针的优势是什么？当我们不知道指针变量将持有什么种类型的内存地址时，我们就为此声明一个\
+  \ void 指针。\n\n### Q.19 何时使用 `->`（箭头）运算符？\n\n如果结构体/联合体变量是一个指针变量，则使用箭头运算符来访问结构体/联合体的元素。\n\
+  \n### Q.20 什么是嵌套结构？\n\n包含另一个结构体的元素作为其成员的结构被称为嵌套结构。\n\n感谢阅读我的书。希望你已经从这本书中中学到了很多编程知识。\n\
+  \n请帮个小忙！！！！\n\n请花一分钟在 Amazon 上留留评价，让我知道你是否从这本书中学到了东西。\n\n谢谢你！！！！\n"

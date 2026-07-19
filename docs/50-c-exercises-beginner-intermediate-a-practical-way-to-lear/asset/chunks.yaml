@@ -1,0 +1,4023 @@
+- fmt: '
+
+    ![](image_rsrc1SU.jpg)
+
+
+    # 50 C Exercises Beginner & Intermediate
+
+    A Practical Way to Learn C Programming
+
+    Daniel Christofis
+
+
+    ## Contents
+
+    - [Title Page](#part0001.xhtml)
+
+    - [An Overview of C Programming](#part0003.xhtml)
+
+    - [The significance of C](#part0004.xhtml)
+
+    - [Section 1: Basics of C](#part0005.xhtml)
+
+    - [Section 2: Control Structures](#part0006.xhtml)
+
+    - [Section 3: Loops](#part0007.xhtml)
+
+    - [Section 4: Functions](#part0008.xhtml)
+
+    - [Section 5: Arrays](#part0009.xhtml)
+
+    - [Section 6 Strings and Characters](#part0010.xhtml)
+
+    - [Section 7 Pointers](#part0011.xhtml)
+
+    - [Section 8: Functions](#part0012.xhtml)
+
+    - [Section 9 Structures](#part0013.xhtml)
+
+    - [Section 10 Files and I/O](#part0014.xhtml)
+
+    - [Beginner 1 Solutions:](#part0015.xhtml)
+
+    - [Beginner 2 Solutions:](#part0016.xhtml)
+
+    - [Beginner 3 Solutions:](#part0017.xhtml)
+
+    - [Beginner 4 Solutions:](#part0018.xhtml)
+
+    - [Beginner 5 Solutions:](#part0019.xhtml)
+
+    - [Intermediate 1 Solutions:](#part0020.xhtml)
+
+    - [Intermediate 2 Solutions:](#part0021.xhtml)
+
+    - [Intermediate 3 Solutions:](#part0022.xhtml)
+
+    - [Intermediate 4 Solutions:](#part0023.xhtml)
+
+    - [Intermediate 5 Solutions:](#part0024.xhtml)
+
+
+    ## An Overview of C Programming
+
+    Dennis Ritchie created the C programming language at Bell Labs in the early 1970s,
+    and it is still used today. It was developed as an extension to the B programming
+    language, featuring new data types and functionalities. Over the years, C has
+    evolved into one of the most extensively used programming languages in the world,
+    influencing the development of numerous modern programming languages such as C++,
+    C#, Objective-C, and, more indirectly, languages such as Java and Python.
+
+
+    ## The significance of C
+
+    C is frequently used in system programming, particularly in the creation of operating
+    systems. Linux and Windows kernels, for example, contain C code.
+
+
+    C is a compiled language, thus it can run quicker than interpreted languages.
+    As a result, it is appropriate for resource-constrained environments or when high
+    performance is required.
+
+
+    One of the most major advantages of C is its ability to code once and run anywhere
+    (with little modifications). This means that a C programme can be created on one
+    system and then run on another with no or little changes.
+
+
+    C follows a procedural programming paradigm, which is useful for jobs that require
+    a step-by-step approach.
+
+
+    Modern Language basis: Learning C lays a solid basis for understanding more sophisticated
+    languages. C is the source of syntax and concepts in many current languages.
+
+
+    ## Beginner
+
+
+    ### Section 1: Basics of C
+
+    - Introduction to fundamental C syntax and operations.
+
+    - Simple I/O, arithmetic calculations, and constants usage.
+
+
+    ### Section 2: Control Structures
+
+    - Introduction to conditional statements.
+
+    - Decision making using `if-else` and `switch-case`.
+
+
+    ### Section 3: Loops
+
+    - Introduction to iteration.
+
+
+    ### Section 4: Functions
+
+    - Introduction to modular programming.
+
+
+    ### Section 5: Arrays
+
+    - Introduction to data structures.
+
+
+    ### Section 6 Strings and Characters
+
+    - Introduction to string manipulation.
+
+
+    ### Section 7 Pointers
+
+    - Introduction to memory management.
+
+
+    ### Section 8: Functions
+
+    - Focusing on recursion.
+
+
+    ### Section 9: Structures
+
+    - Introduction to user-defined structures.
+
+
+    ### Section 10: Files and I/O
+
+    - Introduction to file operations.
+
+
+    ## Beginner
+
+
+    ### Section 1: Basics of C
+
+    - 1-1: Write a program that prints "Hello, World!".
+
+    - 1-2: Write a program that takes input and outputs its length.
+
+    - 1-3: Write a program that converts Celsius to Fahrenheit.
+
+    - 1-4: Write a program that calculates the area of a circle.
+
+    - 1-5: Write a program that finds the sum of numbers.
+
+
+    ### Section 2: Control Structures
+
+    - 2-1: Write a program that checks if a number is even or odd.
+
+    - 2-2: Write a program that prints the month name.
+
+    - 2-3: Write a program that checks a character is a vowel or consonant.
+
+    - 2-4: Write a program that finds the greatest among three numbers.
+
+    - 2-5: Write a program that checks a leap year or not.
+
+
+    ### Section 3: Loops
+
+    - 3-1: Write a program that prints the first 10 natural numbers.
+
+    - 3-2: Write a program that calculates the factorial of a number.
+
+    - 3-3: Write a program that prints the Fibonacci series up to a number of terms.
+
+    - 3-4: Write a program that finds prime numbers within a range.
+
+    - 3-5: Write a program that multiplication table of a number.
+
+
+    ### Section 4: Functions
+
+    - 4-1: Write a function that returns the sum of two numbers.
+
+    - 4-2: Create a function that finds the largest of three numbers.
+
+    - 4-3: Write a function to compute the factorial of a number.
+
+    - 4-4: Create a function to check if a number is prime or not.
+
+    - 4-5: Write a function to convert a string to uppercase.
+
+
+    ### Section 5: Arrays
+
+    - 5-1: Write a program to find the largest and smallest element in an array.
+
+    - 5-2: Create a program to reverse the elements of an array.
+
+    - 5-3: Write a program to find the sum and average of elements in an array.
+
+    - 5-4: Create a program that sorts an array of numbers in ascending order.
+
+    - 5-5: Write a program to search for a particular element in an array using linear
+    search.
+
+
+    ## Intermediate
+
+
+    ### Section 6: Strings and Characters
+
+    - 6-1: Write a program that takes a string as input and outputs its length.
+
+    - 6-2: Implement a program that checks if a given string is a palindrome.
+
+    - 6-3: Create a program that concatenates two strings without `strcat()`.
+
+    - 6-4: Write a program to replace all spaces in a string with a hyphen.
+
+    - 6-5: Implement a program to count the number of vowels and consonants in a string.
+
+
+    ### Section 7 Pointers
+
+    - 7-1: Write a program that swaps the values of two integers using pointers.
+
+    - 7-2: Implement a program to find the length of a string using pointers.
+
+    - 7-3: Create a program that reverses a string using pointers.
+
+    - 7-4: Write a program to compute the sum of all elements of an array using pointers.
+
+    - 7-5: Implement a program that sorts an array of integers in ascending order
+    using pointers.
+
+
+    ### Section 8: Functions
+
+    - 8-1: Implement a recursive function to compute the nth Fibonacci number.
+
+    - 8-2: Write a program that implements the binary search algorithm using functions.
+
+    - 8-3: Implement a program that calculates the n-th power of a number using a
+    recursive function.
+
+    - 8-4: Create a function to check if a number is prime and then implement a function
+    that prints prime numbers up to n.
+
+    - 8-5: Implement a recursive function to compute the greatest common divisor (GCD)
+    of two numbers.
+
+
+    ### Section 9 Structures
+
+    - 9-1: Define a structure to represent a complex number. Implement functions to
+    add, subtract, and multiply two complex numbers.
+
+    - 9-2: Create a structure to represent a date (day, month, year). Write a program
+    that finds the difference (in days) between two given dates.
+
+    - 9-3: Implement a student structure that contains name, roll number, and marks
+    for 3 subjects. Write a function to calculate the average marks of a student.
+
+    - 9-4: Write a program to store and display the information of books using structures
+    (Book ID, Title, Author, Price).
+
+    '
+  raw: '
+
+
+    ![](image_rsrc1SU.jpg)
+
+
+    50 C Exercises Beginner & Intermediate
+
+
+    A Practical Way to Learn C Programming
+
+
+    Daniel Christofis
+
+
+    Contents
+
+
+    [Title Page](#part0001.xhtml)
+
+
+    [An Overview of C Programming](#part0003.xhtml)
+
+
+    [The significance of C](#part0004.xhtml)
+
+
+    [Section 1: Basics of C](#part0005.xhtml)
+
+
+    [Section 2: Control Structures](#part0006.xhtml)
+
+
+    [Section 3: Loops](#part0007.xhtml)
+
+
+    [Section 4: Functions](#part0008.xhtml)
+
+
+    [Section 5: Arrays](#part0009.xhtml)
+
+
+    [Section 6 Strings and Characters](#part0010.xhtml)
+
+
+    [Section 7 Pointers](#part0011.xhtml)
+
+
+    [Section 8 Functions](#part0012.xhtml)
+
+
+    [Section 9 Structures](#part0013.xhtml)
+
+
+    [Section 10 Files and I/O](#part0014.xhtml)
+
+
+    [Beginner 1 Solutions:](#part0015.xhtml)
+
+
+    [Beginner 2 Solutions:](#part0016.xhtml)
+
+
+    [Beginner 3 Solutions:](#part0017.xhtml)
+
+
+    [Beginner 4 Solutions:](#part0018.xhtml)
+
+
+    [Beginner 5 Solutions:](#part0019.xhtml)
+
+
+    [Intermediate 1 Solutions:](#part0020.xhtml)
+
+
+    [Intermediate 2 Solutions:](#part0021.xhtml)
+
+
+    [Intermediate 3 Solutions:](#part0022.xhtml)
+
+
+    [Intermediate 4 Solutions:](#part0023.xhtml)
+
+
+    [Intermediate 5 Solutions:](#part0024.xhtml)
+
+
+    An Overview of C Programming
+
+
+    Dennis Ritchie created the C programming language at Bell Labs in the early 1970s,
+    and it is still used today. It was developed as an extension to the B programming
+    language, featuring new data types and functionalities. Over the years, C has
+    evolved into one of the most extensively used programming languages in the world,
+    influencing the development of numerous modern programming languages such as C++,
+    C#, Objective-C, and, more indirectly, languages such as Java and Python.
+
+
+    The significance of C
+
+
+    C is frequently used in system programming, particularly in the creation of operating
+    systems. Linux and Windows kernels, for example, contain C code.
+
+
+    C is a compiled language, thus it can run quicker than interpreted languages.
+    As a result, it is appropriate for resource-constrained environments or when high
+    performance is required.
+
+
+    One of the most major advantages of C is its ability to code once and run anywhere
+    (with little modifications). This means that a C programme can be created on one
+    system and then run on another with no or little changes.
+
+
+    C follows a procedural programming paradigm, which is useful for jobs that require
+    a step-by-step approach.
+
+
+    Modern Language basis: Learning C lays a solid basis for understanding more sophisticated
+    languages. C is the source of syntax and concepts in many current languages.
+
+
+    Beginner
+
+
+    Section 1: Basics of C
+
+
+    -Introduction to fundamental C syntax and operations.
+
+
+    -Simple I/O, arithmetic calculations, and constants usage.
+
+
+    Section 2: Control Structures
+
+
+    -Introduction to conditional statements.
+
+
+    -Decision making using if-else and switch-case constructs.
+
+
+    Section 3: Loops
+
+
+    -Basics of iteration in C.
+
+
+    -Using loops for repetitive tasks with for, while, and do-while constructs.
+
+
+    Section 4: Functions
+
+
+    -Introduction to modular programming.
+
+
+    -Creation and usage of user-defined functions, both iterative and recursive.
+
+
+    Section 5: Arrays
+
+
+    -Basics of array data structures.
+
+
+    -Manipulation, sorting, searching, and basic operations on arrays.
+
+
+    Intermediate
+
+
+    Section 6: Strings and Characters
+
+
+    -Introduction to string manipulation.
+
+
+    -Operations like length calculation, concatenation, and character replacements.
+
+
+    Section 7: Pointers
+
+
+    -Basics of pointer variables and memory management.
+
+
+    -Pointer arithmetic, string manipulations, and array operations using pointers.
+
+
+    Section 8: Functions
+
+
+    -Advanced functions, focusing on recursion.
+
+
+    -Algorithm implementations, such as binary search, and more recursive tasks.
+
+
+    Section 9: Structures
+
+
+    -Introduction to user-defined data structures.
+
+
+    -Implementations using structures, including mathematical operations, date manipulations,
+    and more.
+
+
+    Section 10: Files and I/O
+
+
+    -Introduction to file operations in C.
+
+
+    -File creation, reading, writing, copying, and more advanced file manipulations.
+
+
+    Beginner
+
+
+    Section 1: Basics of C
+
+
+    1-1: Write a program that prints "Hello, World!" to the screen.
+
+
+    1-2: Write a program to input a number from the user and display its double.
+
+
+    1-3: Write a program that converts temperatures from Celsius to Fahrenheit and
+    vice versa.
+
+
+    1-4: Write a program that finds the area of a circle given its radius. (Use the
+    constant PI).
+
+
+    1-5: Write a program to calculate the sum, average, and product of three numbers.
+
+
+    Section 2: Control Structures
+
+
+    2-1: Write a program to check if a number is even or odd.
+
+
+    2-2: Write a program to input a month number and print the corresponding month
+    name.
+
+
+    2-3: Create a program that accepts a character and checks if it''s a vowel or
+    a consonant.
+
+
+    2-4: Write a program that finds the greatest among three numbers.
+
+
+    2-5: Input a year and check if it''s a leap year or not.
+
+
+    Section 3: Loops
+
+
+    3-1: Write a program to print the first 10 natural numbers using a for loop.
+
+
+    3-2: Create a program to calculate the factorial of a number.
+
+
+    3-3: Write a program that prints a Fibonacci series up to a given number of terms.
+
+
+    3-4: Create a program to find all prime numbers within a specified range.
+
+
+    3-5: Write a program to display the multiplication table of a given number.
+
+
+    Section 4: Functions
+
+
+    4-1: Write a function that returns the sum of two numbers.
+
+
+    4-2: Create a function that finds and returns the largest of three numbers.
+
+
+    4-3: Write a recursive function to compute the factorial of a number.
+
+
+    4-4: Create a function that checks if a given number is a prime or not.
+
+
+    4-5: Write a function to convert a given string to uppercase.
+
+
+    Section 5: Arrays
+
+
+    5-1: Write a program to find the largest and smallest element in an array.
+
+
+    5-2: Create a program to reverse the elements of an array.
+
+
+    5-3: Write a program to find the sum and average of elements in an array.
+
+
+    5-4: Create a program that sorts an array of numbers in ascending order.
+
+
+    5-5: Write a program to search for a particular element in an array using the
+    linear search technique.
+
+
+    Intermediate
+
+
+    Section 6 Strings and Characters
+
+
+    6-1\. Write a program that takes a string as input and outputs its length.
+
+
+    6-2\. Implement a program that checks if a given string is a palindrome.
+
+
+    6-3\. Create a program that concatenates two strings without using the standard
+    library function strcat().
+
+
+    6-4\. Write a program to replace all spaces in a string with a hyphen.
+
+
+    6-5\. Implement a program to count the number of vowels and consonants in a given
+    string.
+
+
+    Section 7 Pointers
+
+
+    7-1\. Write a program that swaps the values of two integers using pointers.
+
+
+    7-2\. Implement a program to find the length of a string using pointers.
+
+
+    7-3\. Create a program that reverses a string using pointers.
+
+
+    7-4\. Write a program to compute the sum of all elements of an array using pointers.
+
+
+    7-5\. Implement a program that sorts an array of integers in ascending order using
+    pointers.
+
+
+    Section 8 Functions
+
+
+    8-1\. Implement a recursive function to compute the nth Fibonacci number.
+
+
+    8-2\. Write a program that implements the binary search algorithm using functions.
+
+
+    8-3\. Implement a program that calculates the n-th power of a number using a recursive
+    function.
+
+
+    8-4\. Create a function to check if a number is prime and then implement a function
+    that prints prime numbers up to n.
+
+
+    8-5\. Implement a recursive function to compute the greatest common divisor (GCD)
+    of two numbers.
+
+
+    Section 9 Structures
+
+
+    9-1\. Define a structure to represent a complex number. Implement functions to
+    add, subtract, and multiply two complex numbers.
+
+
+    9-2\. Create a structure to represent a date (day, month, year). Write a program
+    that finds the difference (in days) between two given dates.
+
+
+    9-3\. Implement a student structure that contains name, roll number, and marks
+    for 3 subjects. Write a function to calculate the average marks of a student.
+
+
+    9-4\. Write a program to store and display the information of books using structures
+    (Book ID, Title, Author, Price).'
+  toc: []
+  trans: '
+
+
+    ![](img/image_rsrc1SU.jpg)
+
+
+    # 50 道 C 语言练习：初级与中级
+
+    学习 C 编程的实用方法
+
+    Daniel Christofis
+
+
+    ## 目录
+
+    - 标题页
+
+    - C 语言概览
+
+    - C 语言的重要性
+
+    - 第一部分：C 语言基础
+
+    - 第二部分：控制结构
+
+    - 第三部分：循环
+
+    - 第四部分：函数
+
+    - 第五部分：数组
+
+    - 第六部分：字符串与字符
+
+    - 第七部分：指针
+
+    - 第八部分：函数
+
+    - 第九部分：结构体
+
+    - 第十部分：文件与 I/O
+
+    - 初级 1 答案：
+
+    - 初级 2 答案：
+
+    - 初级 3 答案：
+
+    - 初级 4 答案：
+
+    - 初级 5 答案：
+
+    - 中级 1 答案：
+
+    - 中级 2 答案：
+
+    - 中级 3 答案：
+
+    - 中级 4 答案：
+
+    - 中级 5 答案：
+
+
+    ## C 语言概览
+
+    Dennis Ritchie 于 20 世纪 70 年代初在贝尔实验室创建了 C 编程语言，它在今天仍被广泛使用。它是作为 B 语言的扩展而开发的，具有新的数据类型和功能。多年来，C
+    已成为世界上使用最广泛的编程语言之一，影响了如 C++、C#、Objective-C 等许多现代编程语言的发展，并间接地影响了 Java 和 Python
+    等语言。
+
+
+    ## C 语言的重要性
+
+    C 语言经常用于系统编程，特别是在操作系统的创建中。例如，Linux 和 Windows 内核包含了 C 代码。
+
+
+    C 是一种编译型语言，因此它的运行速度比解释型语言更快。结果，它适用于资源受限的环境或需要高性能的场景。
+
+
+    C 语言最大的优势之一是能够“一次编写，随处运行”（只需少许修改）。这意味着一个 C 程序可以在一个系统中创建，然后在另一个系统中无需或仅需少量修改即可运行。
+
+
+    C 遵循过程化范式，这对于需要逐步步进的任务非常有用。
+
+
+    现代语言的基础：学习 C 语言为理解更复杂的语言奠下了坚实的基础。C 是许多当前语言语法和概念的来源。
+
+
+    ## 初级
+
+
+    ### 第一部分：C 语言基础
+
+    - 基础 C 语法和操作的介绍。
+
+    - 简单的 I/O、算术计算和常量的使用。
+
+
+    ### 第二部分：控制结构
+
+    - 条件语句的介绍。
+
+    - 使用 `if-else` 和 `switch-case` 进行决策。
+
+
+    ### 第三部分：循环
+
+    - 迭代的介绍。
+
+
+    ### 第四部分：函数
+
+    - 模块化编程的介绍。
+
+
+    ### 第五部分：数组
+
+    - 数据结构的介绍。
+
+
+    ### 第六部分：字符串与字符
+
+    - 字符串操作的介绍。
+
+
+    ### 第七部分：指针
+
+    - 内存管理的介绍。
+
+
+    ### 第八部分：函数
+
+    - 专注于递归。
+
+
+    ### 第九部分：结构体
+
+    - 用户定义结构的介绍。
+
+
+    ### 第十部分：文件与 I/O
+
+    - 文件操作的介绍。
+
+
+    ## 初级
+
+
+    ### 第一部分：C 语言基础
+
+    - 1-1: 编写打印“Hello, World!”的程序。
+
+    - 1-2: 编写接收输入并输出其长度的程序。
+
+    - 1-3: 编写将摄氏度转换为华氏度的程序。
+
+    - 1-4: 编写计算圆面积的程序。
+
+    - 1-5: 编写计算数字之和的程序。
+
+
+    ### 第二部分：控制结构
+
+    - 2-1: 编写检查数字是偶数还是奇数的程序。
+
+    - 2-2: 编写打印月份名称的程序。
+
+    - 2-3: 编写检查字符是否为元音或辅音的程序。
+
+    - 2-4: 编写找到三个数中最大值的程序。
+
+    - 2-5: 编写检查是否为闰年的程序。
+
+
+    ### 第三部分：循环
+
+    - 3-1: 编写打印前 10 个自然数的程序。
+
+    - 3-2: 编写计算数字阶乘的程序。
+
+    - 3-3: 编写打印到指定项项的斐波那契数列的程序。
+
+    - 3-4: 编写查找指定范围内质数的程序。
+
+    - 3-5: 编写输出某个数字的乘法表的程序。
+
+
+    ### 第四部分：函数
+
+    - 4-1: 编写一个返回两个数字之和的函数。
+
+    - 4-2: 创建一个找到三个数中最大值的函数。
+
+    - 4-3: 编写一个计算数字阶乘的函数。
+
+    - 4-4: 创建一个检查数字是否为质数的函数。
+
+    - 4-5: 编写一个将字符串转换为大写的 de 函数。
+
+
+    ### 第五部分：数组
+
+    - 5-1: 编写查找数组中最大和最小元素的程序。
+
+    - 5-2: 创建一个反转数组元素的程序。
+
+    - 5-3: 编写一个计算数组元素总和和平均值的程序。
+
+    - 5-4: 创建一个按升序排序数组的程序。
+
+    - 5-5: 编写一个使用线性查找在数组中寻找特定元素的程序。
+
+
+    ## 中级
+
+
+    ### 第六部分：字符串与字符
+
+    - 6-1: 编写一个接收字符串并输出其长度的程序。
+
+    - 6-2: 实现一个检查字符串是否为回文的程序。
+
+    - 6-3: 创建一个不使用 `strcat()` 连接两个字符串的程序。
+
+    - 6-4: 编写一个将字符串中所有空格替换为连字符的程序。
+
+    - 6-5: 实现一个统计字符串中元音和辅音数量的程序。
+
+
+    ### 第七部分：指针
+
+    - 7-1: 编写使用指针交换两个整数值的程序。
+
+    - 7-2: 实现一个使用指针查找字符串长度的程序。
+
+    - 7-3: 创建一个使用指针反转字符串的程序。
+
+    - 7-4: 编写一个使用指针计算数组所有元素之和的程序。
+
+    - 7-5: 实现一个使用指针按升序排序整数数组的程序。
+
+
+    ### 第八部分：函数
+
+    - 8-1: 实现一个计算第 n 斐波那契数的递归函数。
+
+    - 8-2: 编写一个使用函数实现二分查找算法的程序。
+
+    - 8-3: 实现一个使用递归函数计算数字 n 方的程序。
+
+    - 8-4: 创建一个检查数字是否为质数的函数，然后实现一个打印 n 以内质数的函数。
+
+    - 8-5: 实现一个计算两个数字最大公约数(GCD)的递归函数。
+
+
+    ### 第九部分：结构体
+
+    - 9-1: 定义一个表示复数的结构体。实现两个复数的加、减、乘函数。
+
+    - 9-2: 创建一个表示日期（日、月、年）的结构体。编写一个计算两个日期之间差值（天）的程序。
+
+    - 9-3: 实现一个包含姓名、学号和三门科目成绩的学生结构体。编写一个计算学生平均分数的函数。
+
+    - 9-4: 编写一个使用结构体存储并显示书籍信息（书籍 ID、标题、作者、价格）的程序。
+
+
+    '
+- fmt: "\n## 9-5. Create a structure called `Time` that has three integer members\
+    \ for `hours`, `minutes`, and `seconds`. Create a function that adds two times.\n\
+    \n## Section 10 Files and I/O\n\n### 10-1. Write a program that creates a text\
+    \ file and writes a string entered by the user into the file.\n\n### 10-2. Implement\
+    \ a program to read a file and count the number of lines, words, and characters\
+    \ in the file.\n\n### 10-3. Create a program that copies the content of one file\
+    \ into another file.\n\n### 10-4. Implement a program to merge two text files\
+    \ into a third text file.\n\n### 10-5. Write a program that reads a file and displays\
+    \ the longest line in the file.\n\n## Beginner 1 Solutions:\n\n```c\n#include\
+    \ <stdio.h>\n\nint main() {\n    // #1-1\n    printf(\"Hello, World!\\n\");\n\n\
+    \    // #1-2\n    double number;\n    printf(\"Enter a number: \");\n    scanf(\"\
+    %lf\", &number);\n    printf(\"Double of %lf is %lf\\n\", number, 2 * number);\n\
+    \n    // #1-3\n    double celsius, fahrenheit;\n    printf(\"Enter temperature\
+    \ in Celsius: \");\n    scanf(\"%lf\", &celsius);\n    fahrenheit = (celsius *\
+    \ 9/5) + 32;\n    printf(\"Temperature in Fahrenheit: %lf\\n\", fahrenheit);\n\
+    \n    // #1-4\n    const double PI = 3.141592653589793;\n    double radius;\n\
+    \    printf(\"Enter the radius of the circle: \");\n    scanf(\"%lf\", &radius);\n\
+    \    double area = PI * radius * radius;\n    printf(\"Area of the circle: %lf\\\
+    n\", area);\n\n    // #1-5\n    double num1, num2, num3, sum, average, product;\n\
+    \    printf(\"Enter three numbers: \");\n    scanf(\"%lf %lf %lf\", &num1, &num2,\
+    \ &num3);\n    sum = num1 + num2 + num3;\n    average = sum / 3;\n    product\
+    \ = num1 * num2 * num3;\n    printf(\"Sum = %lf, Average = %lf, Product = %lf\\\
+    n\", sum, average, product);\n    return 0;\n}\n```\n\n## Beginner 1 Output:\n\
+    \n#1-1\nHello, World!\n\n#1-2\nEnter a number: 5.0\nDouble of 5.000000 is 10.000000\n\
+    \n#1-3\nEnter temperature in Celsius: 25\nTemperature in Fahrenheit: 77.000000\n\
+    \n#1-4\nEnter the radius of the circle: 5\nArea of the circle: 78.539816\n\n#1-5\n\
+    Enter three numbers: 1 2 3\nSum = 6.000000, Average = 2.000000, Product = 6.000000\n\
+    \n## Beginner 2 Solutions:\n\n```c\n#include <stdio.h>\n\nint main() {\n    //\
+    \ #2-1\n    int num;\n    printf(\"Enter an integer: \");\n    scanf(\"%d\", &num);\n\
+    \    if (num % 2 == 0) {\n        printf(\"%d is even\\n\", num);\n    } else\
+    \ {\n        printf(\"%d is odd\\n\", num);\n    }\n\n    // #2-2\n    int month;\n\
+    \    printf(\"Enter month number (1-12): \");\n    scanf(\"%d\", &month);\n  \
+    \  switch(month) {\n        case 1: printf(\"January\\n\"); break;\n        case\
+    \ 2: printf(\"February\\n\"); break;\n        // ... Similarly for other months\n\
+    \        case 12: printf(\"December\\n\"); break;\n        default: printf(\"\
+    Invalid month number\\n\");\n    }\n\n    // #2-3\n    char ch;\n    printf(\"\
+    Enter a character: \");\n    scanf(\" %c\", &ch); // Note the space before %c\
+    \ to consume any leftover '\\n'\n    if(ch=='a' || ch=='e' || ch=='i' || ch=='o'\
+    \ || ch=='u' ||\n        ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')\
+    \ {\n        printf(\"%c is a vowel\\n\", ch);\n    } else {\n        printf(\"\
+    %c is a consonant\\n\", ch);\n    }\n\n    // #2-4\n    double a, b, c;\n    printf(\"\
+    Enter three numbers: \");\n    scanf(\"%lf %lf %lf\", &a, &b, &c);\n    double\
+    \ largest = (a > b) ? (a > c ? a : c) : (b > c ? b : c);\n    printf(\"Largest\
+    \ number is: %lf\\n\", largest);\n\n    // #2-5\n    int year;\n    printf(\"\
+    Enter a year: \");\n    scanf(\"%d\", &year);\n    if((year % 4 == 0 && year %\
+    \ 100 != 0) || (year % 400 == 0)) {\n        printf(\"%d is a leap year\\n\",\
+    \ year);\n    } else {\n        printf(\"%d is not a leap year\\n\", year);\n\
+    \    }\n    return 0;\n}\n```\n\n## Beginner 2 Output:\n\n#2-1\nEnter an integer:\
+    \ 4\n4 is even\n\n#2-2\nEnter month number (1-12): 7\nJuly\n\n#2-3\nEnter a character:\
+    \ e\ne is a vowel\n\n#2-4\nEnter three numbers: 5 3 7\nLargest number is: 7.000000\n\
+    \n#2-5\nEnter a year: 2000\n2000 is a leap year\n\n## Beginner 3 Solutions:\n\n\
+    ```c\n#include <stdio.h>\n\nint main() {\n    // #3-1\n    for(int i = 1; i <=\
+    \ 10; i++) {\n        printf(\"%d \", i);\n    }\n    printf(\"\\n\");\n\n   \
+    \ // #3-2\n    int n, factorial = 1;\n    printf(\"Enter positive integer: \"\
+    );\n    scanf(\"%d\", &n);\n    for(int i = 1; i <= n; i++) {\n        factorial\
+    \ *= i;\n    }\n    printf(\"Factorial of %d = %d\\n\", n, factorial);\n\n   \
+    \ // #3-3\n    int terms, t1 = 0, t2 = 1, nextTerm;\n    printf(\"Enter number\
+    \ of terms: \");\n    scanf(\"%d\", &terms);\n    printf(\"Fibonacci Series: \"\
+    );\n    for (int i = 1; i <= terms; ++i) {\n        printf(\"%d \", t1);\n   \
+    \     nextTerm = t1 + t2;\n        t1 = t2;\n        t2 = nextTerm;\n    }\n \
+    \   printf(\"\\n\");\n\n    // #3-4\n    int start, end;\n    printf(\"Enter two\
+    \ numbers (intervals): \");\n    scanf(\"%d %d\", &start, &end);\n    printf(\"\
+    Prime numbers between %d and %d are: \", start, end);\n    for(int i = start;\
+    \ i <= end; i++) {\n        int flag = 1;\n        for(int j = 2; j <= i; j++)\
+    \ {\n            if(i % j == 0) {\n                flag = 0;\n               \
+    \ break;\n            }\n        }\n        if(flag && i != 1) printf(\"%d \"\
+    , i);\n    }\n    printf(\"\\n\");\n\n    // #3-5\n    int multiplier;\n    printf(\"\
+    Enter a number: \");\n    scanf(\"%d\", &multiplier);\n    for(int i = 1; i <=\
+    \ 10; i++) {\n        printf(\"%d = %d\\n\", i, multiplier * i);\n    }\n    return\
+    \ 0;\n}\n```\n\n## Beginner 3 Output:\n\n#3-1\n1 2 3 4 5 6 7 8 9 10\n\n#3-2\n\
+    Enter positive integer: 5\nFactorial of 5 = 120\n\n#3-3\nEnter number of terms:\
+    \ 7\nFibonacci Series: 0 1 1 2 3 5 8\n\n#3-4\nEnter two numbers (intervals): 10\
+    \ 50\nPrime numbers between 10 and 50 are: 11 13 17 19 23 29 31 37 41 43 47\n\n\
+    #3-5\nEnter a number: 5\n1 = 5\n2 = 10\n3 = 15\n4 = 20\n5 = 25\n6 = 30\n7 = 35\n\
+    8 = 40\n9 = 45\n10 = 50\n\n## Beginner 4 Solutions:\n\n```c\n#include <stdio.h>\n\
+    #include <stdbool.h>\n\n// #4-1\ndouble sum_of_two(double a, double b) {\n   \
+    \ return a + b;\n}\n\n// #4-2\ndouble largest_of_three(double a, double b, double\
+    \ c) {\n    return (a > b) ? (a > c ? a : c) : (b > c ? b : c);\n}\n\n// #4-3\n\
+    int factorial_recursive(int n) {\n    if (n == 0 || n == 1) {\n        return\
+    \ 1;\n    } else {\n        return n * factorial_recursive(n - 1);\n    }\n}\n\
+    \n// #4-4\nbool is_prime(int n) {\n    if (n <= 1) return false;\n    for (int\
+    \ i = 2; i * i <= n; i++) {\n        if (n % i == 0) return false;\n    }\n  \
+    \  return true;\n}\n\n// #4-5\nvoid to_uppercase(char *str) {\n    for (int i\
+    \ = 0; str[i]; i++) {\n        if (str[i] >= 'a' && str[i] <= 'z') {\n       \
+    \     str[i] -= 'a' - 'A';\n        }\n    }\n}\n\nint main() {\n    // #4-1 Test\n\
+    \    printf(\"Sum of 5 and 3: %lf\\n\", sum_of_two(5, 3));\n\n    // #4-2 Test\n\
+    \    printf(\"Largest of 5, 3, and 7: %lf\\n\", largest_of_three(5, 3, 7));\n\n\
+    \    // #4-3 Test\n    printf(\"Factorial of 5: %d\\n\", factorial_recursive(5));\n\
+    \n    // #4-4 Test\n    printf(\"Is 17 prime? %s\\n\", is_prime(17) ? \"Yes\"\
+    \ : \"No\");\n\n    // #4-5 Test\n    char str[] = \"hello World!\";\n    to_uppercase(str);\n\
+    \    printf(\"Uppercase: %s\\n\", str);\n    return 0;\n}\n```\n\n## Beginner\
+    \ 4 Output:\n\n#4-1\nSum of 5 and 3: 8.000000\n\n#4-2\nLargest of 5, 3, and 7:\
+    \ 7.000000\n\n#4-3\nFactorial of 5: 120\n\n#4-4\nIs 17 prime? Yes\n\n#4-5\nUppercase:\
+    \ HELLO WORLD!\n\n## Beginner 5 Solutions:\n\n```c\n#include <stdio.h>\n\nint\
+    \ main() {\n    int arr[] = {10, 8, 5, 20, 90};\n\n    // #5-1\n    int min =\
+    \ arr[0], max = arr[0];\n    for (int i = 1; i < 5; i++) {\n        if (arr[i]\
+    \ < min) min = arr[i];\n        if (arr[i] > max) max = arr[i];\n    }\n    printf(\"\
+    Minimum: %d, Maximum: %d\\n\", min, max);\n\n    // #5-2\n    int rev[5];\n  \
+    \  for (int i = 0; i < 5; i++) {\n        rev[i] = arr[4 - i];\n    }\n    printf(\"\
+    Reversed: \");\n    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", rev[i]);\n\
+    \    }\n    printf(\"\\n\");\n\n    // #5-3\n    double sum = 0, average;\n  \
+    \  for (int i = 0; i < 5; i++) {\n        sum += arr[i];\n    }\n    average =\
+    \ sum / 5;\n    printf(\"Sum: %lf, Average: %lf\\n\", sum, average);\n\n    //\
+    \ #5-4\n    for (int i = 0; i < 5; i++) {\n        for (int j = i + 1; j < 5;\
+    \ j++) {\n            if (arr[i] > arr[j]) {\n                int temp = arr[i];\n\
+    \                arr[i] = arr[j];\n                arr[j] = temp;\n          \
+    \  }\n        }\n    }\n    printf(\"Sorted: \");\n    for (int i = 0; i < 5;\
+    \ i++) {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n  \
+    \  // #5-5\n    int search, flag = 0;\n    printf(\"Enter a number to search:\
+    \ \");\n    scanf(\"%d\", &search);\n    for (int i = 0; i < 5; i++) {\n     \
+    \   if (arr[i] == search) {\n            flag = 1;\n            break;\n     \
+    \   }\n    }\n    if (flag) {\n        printf(\"%d found in the array.\\n\", search);\n\
+    \    } else {\n        printf(\"%d not found in the array.\\n\", search);\n  \
+    \  }\n    return 0;\n}\n```\n\n## Beginner 5 Output:\n\n#5-1\nMinimum: 5, Maximum:\
+    \ 90\n\n#5-2\nReversed: 90 8 5 20 10\n\n#5-3\nSum: 133.000000, Average: 26.600000\n\
+    \n#5-4\nSorted: 5 8 10 20 90\n\n#5-5\nEnter a number to search: 20\n20 found in\
+    \ the array.\n\n## Intermediate 1 Solutions:\n\n```c\n#include <stdio.h>\n#include\
+    \ <stdbool.h>\n#include <string.h>\n\n// #6-1\nint string_length(char *str) {\n\
+    \    int len = 0;\n    while (*str++) {\n        len++;\n    }\n    return len;\n\
+    }\n\n// #6-2\n```\n"
+  raw: '9-5\. Create a structure called Time that has three integer members for hours,
+    minutes, and seconds. Create a function that adds two times.
+
+
+    Section 10 Files and I/O
+
+
+    10-1\. Write a program that creates a text file and writes a string entered by
+    the user into the file.
+
+
+    10-2\. Implement a program to read a file and count the number of lines, words,
+    and characters in the file.
+
+
+    10-3\. Create a program that copies the content of one file into another file.
+
+
+    10-4\. Implement a program to merge two text files into a third text file.
+
+
+    10-5\. Write a program that reads a file and displays the longest line in the
+    file.
+
+
+    Beginner 1 Solutions:
+
+
+    #include <stdio.h>
+
+
+    int  main() {
+
+
+    // #1-1
+
+
+    printf("Hello, World!\n");
+
+
+    // #1-2
+
+
+    double number;
+
+
+    printf("Enter a number: ");
+
+
+    scanf("%lf", &number);
+
+
+    printf("Double of %lf is %lf\n", number, 2  * number);
+
+
+    // #1-3
+
+
+    double celsius, fahrenheit;
+
+
+    printf("Enter temperature in Celsius: ");
+
+
+    scanf("%lf", &celsius);
+
+
+    fahrenheit = (celsius *  9/5) +  32;
+
+
+    printf("Temperature in Fahrenheit: %lf\n", fahrenheit);
+
+
+    // #1-4
+
+
+    const  double PI =  3.141592653589793;
+
+
+    double radius;
+
+
+    printf("Enter the radius of the circle: ");
+
+
+    scanf("%lf", &radius);
+
+
+    double area = PI * radius * radius;
+
+
+    printf("Area of the circle: %lf\n", area);
+
+
+    // #1-5
+
+
+    double num1, num2, num3, sum, average, product;
+
+
+    printf("Enter three numbers: ");
+
+
+    scanf("%lf %lf %lf", &num1, &num2, &num3);
+
+
+    sum = num1 + num2 + num3;
+
+
+    average = sum /  3;
+
+
+    product = num1 * num2 * num3;
+
+
+    printf("Sum = %lf, Average = %lf, Product = %lf\n", sum, average, product);
+
+
+    return  0;
+
+
+    }
+
+
+    Beginner 1 Output:
+
+
+    #1-1
+
+
+    Hello, World!
+
+
+    #1-2
+
+
+    Enter a number: 5.0
+
+
+    Double of 5.000000 is 10.000000
+
+
+    #1-3
+
+
+    Enter temperature in Celsius: 25
+
+
+    Temperature in Fahrenheit: 77.000000
+
+
+    #1-4
+
+
+    Enter the radius of the circle: 5
+
+
+    Area of the circle: 78.539816
+
+
+    #1-5
+
+
+    Enter three numbers: 1 2 3
+
+
+    Sum = 6.000000, Average = 2.000000, Product = 6.000000
+
+
+    Beginner 2 Solutions:
+
+
+    #include <stdio.h>
+
+
+    int  main() {
+
+
+    // #2-1
+
+
+    int num;
+
+
+    printf("Enter an integer: ");
+
+
+    scanf("%d", &num);
+
+
+    if (num %  2  ==  0) {
+
+
+    printf("%d is even\n", num);
+
+
+    } else {
+
+
+    printf("%d is odd\n", num);
+
+
+    }
+
+
+    // #2-2
+
+
+    int month;
+
+
+    printf("Enter month number (1-12): ");
+
+
+    scanf("%d", &month);
+
+
+    switch(month) {
+
+
+    case  1: printf("January\n"); break;
+
+
+    case  2: printf("February\n"); break;
+
+
+    // ... Similarly for other months
+
+
+    case  12: printf("December\n"); break;
+
+
+    default: printf("Invalid month number\n");
+
+
+    }
+
+
+    // #2-3
+
+
+    char ch;
+
+
+    printf("Enter a character: ");
+
+
+    scanf(" %c", &ch); // Note the space before %c to consume any leftover ''\n''
+
+
+    if(ch==''a''  || ch==''e''  || ch==''i''  || ch==''o''  || ch==''u''  ||
+
+
+    ch==''A''  || ch==''E''  || ch==''I''  || ch==''O''  || ch==''U'') {
+
+
+    printf("%c is a vowel\n", ch);
+
+
+    } else {
+
+
+    printf("%c is a consonant\n", ch);
+
+
+    }
+
+
+    // #2-4
+
+
+    double a, b, c;
+
+
+    printf("Enter three numbers: ");
+
+
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+
+    double largest = (a > b) ? (a > c ? a : c) : (b > c ? b : c);
+
+
+    printf("Largest number is: %lf\n", largest);
+
+
+    // #2-5
+
+
+    int year;
+
+
+    printf("Enter a year: ");
+
+
+    scanf("%d", &year);
+
+
+    if((year %  4  ==  0  && year %  100  !=  0) || (year %  400  ==  0)) {
+
+
+    printf("%d is a leap year\n", year);
+
+
+    } else {
+
+
+    printf("%d is not a leap year\n", year);
+
+
+    }
+
+
+    return  0;
+
+
+    }
+
+
+    Beginner 2 Output:
+
+
+    #2-1
+
+
+    Enter an integer: 4
+
+
+    4 is even
+
+
+    #2-2
+
+
+    Enter month number (1-12): 7
+
+
+    July
+
+
+    #2-3
+
+
+    Enter a character: e
+
+
+    e is a vowel
+
+
+    #2-4
+
+
+    Enter three numbers: 5 3 7
+
+
+    Largest number is: 7.000000
+
+
+    #2-5
+
+
+    Enter a year: 2000
+
+
+    2000 is a leap year
+
+
+    Beginner 3 Solutions:
+
+
+    #include <stdio.h>
+
+
+    int  main() {
+
+
+    // #3-1
+
+
+    for(int i =  1; i <=  10; i++) {
+
+
+    printf("%d ", i);
+
+
+    }
+
+
+    printf("\n");
+
+
+    // #3-2
+
+
+    int n, factorial =  1;
+
+
+    printf("Enter a positive integer: ");
+
+
+    scanf("%d", &n);
+
+
+    for(int i =  1; i <= n; i++) {
+
+
+    factorial *= i;
+
+
+    }
+
+
+    printf("Factorial of %d = %d\n", n, factorial);
+
+
+    // #3-3
+
+
+    int terms, t1 =  0, t2 =  1, nextTerm;
+
+
+    printf("Enter number of terms: ");
+
+
+    scanf("%d", &terms);
+
+
+    printf("Fibonacci Series: ");
+
+
+    for (int i =  1; i <= terms; ++i) {
+
+
+    printf("%d ", t1);
+
+
+    nextTerm = t1 + t2;
+
+
+    t1 = t2;
+
+
+    t2 = nextTerm;
+
+
+    }
+
+
+    printf("\n");
+
+
+    // #3-4
+
+
+    int start, end;
+
+
+    printf("Enter two numbers(intervals): ");
+
+
+    scanf("%d %d", &start, &end);
+
+
+    printf("Prime numbers between %d and %d are: ", start, end);
+
+
+    for(int i = start; i <= end; i++) {
+
+
+    int flag =  1;
+
+
+    for(int j =  2; j <= i/2; j++) {
+
+
+    if(i % j ==  0) {
+
+
+    flag =  0;
+
+
+    break;
+
+
+    }
+
+
+    }
+
+
+    if(flag && i !=  1) printf("%d ", i);
+
+
+    }
+
+
+    printf("\n");
+
+
+    // #3-5
+
+
+    int multiplier;
+
+
+    printf("Enter a number: ");
+
+
+    scanf("%d", &multiplier);
+
+
+    for(int i =  1; i <=  10; i++) {
+
+
+    printf("%d x %d = %d\n", multiplier, i, multiplier * i);
+
+
+    }
+
+
+    return  0;
+
+
+    }
+
+
+    Beginner 3 Output:
+
+
+    #3-1
+
+
+    1 2 3 4 5 6 7 8 9 10
+
+
+    #3-2
+
+
+    Enter a positive integer: 5
+
+
+    Factorial of 5 = 120
+
+
+    #3-3
+
+
+    Enter number of terms: 7
+
+
+    Fibonacci Series: 0 1 1 2 3 5 8
+
+
+    #3-4
+
+
+    Enter two numbers(intervals): 10 50
+
+
+    Prime numbers between 10 and 50 are: 11 13 17 19 23 29 31 37 41 43 47
+
+
+    #3-5
+
+
+    Enter a number: 5
+
+
+    5 x 1 = 5
+
+
+    5 x 2 = 10
+
+
+    5 x 3 = 15
+
+
+    5 x 4 = 20
+
+
+    5 x 5 = 25
+
+
+    5 x 6 = 30
+
+
+    5 x 7 = 35
+
+
+    5 x 8 = 40
+
+
+    5 x 9 = 45
+
+
+    5 x 10 = 50
+
+
+    Beginner 4 Solutions:
+
+
+    #include <stdio.h>
+
+
+    #include <stdbool.h>
+
+
+    // #4-1
+
+
+    double  sum_of_two(double a, double b) {
+
+
+    return a + b;
+
+
+    }
+
+
+    // #4-2
+
+
+    double  largest_of_three(double a, double b, double c) {
+
+
+    return (a > b) ? (a > c ? a : c) : (b > c ? b : c);
+
+
+    }
+
+
+    // #4-3
+
+
+    int  factorial_recursive(int n) {
+
+
+    if (n ==  0  || n ==  1) {
+
+
+    return  1;
+
+
+    } else {
+
+
+    return n * factorial_recursive(n -  1);
+
+
+    }
+
+
+    }
+
+
+    // #4-4
+
+
+    bool  is_prime(int n) {
+
+
+    if (n <=  1) return  false;
+
+
+    for (int i =  2; i * i <= n; i++) {
+
+
+    if (n % i ==  0) return  false;
+
+
+    }
+
+
+    return  true;
+
+
+    }
+
+
+    // #4-5
+
+
+    void  to_uppercase(char  *str) {
+
+
+    for (int i =  0; str[i]; i++) {
+
+
+    if (str[i] >=  ''a''  && str[i] <=  ''z'') {
+
+
+    str[i] -=  ''a''  -  ''A'';
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    int  main() {
+
+
+    // #4-1 Test
+
+
+    printf("Sum of 5 and 3: %lf\n", sum_of_two(5, 3));
+
+
+    // #4-2 Test
+
+
+    printf("Largest of 5, 3, and 7: %lf\n", largest_of_three(5, 3, 7));
+
+
+    // #4-3 Test
+
+
+    printf("Factorial of 5: %d\n", factorial_recursive(5));
+
+
+    // #4-4 Test
+
+
+    printf("Is 17 prime? %s\n", is_prime(17) ?  "Yes"  :  "No");
+
+
+    // #4-5 Test
+
+
+    char str[] =  "hello World!";
+
+
+    to_uppercase(str);
+
+
+    printf("Uppercase: %s\n", str);
+
+
+    return  0;
+
+
+    }
+
+
+    Beginner 4 Output:
+
+
+    #4-1
+
+
+    Sum of 5 and 3: 8.000000
+
+
+    #4-2
+
+
+    Largest of 5, 3, and 7: 7.000000
+
+
+    #4-3
+
+
+    Factorial of 5: 120
+
+
+    #4-4
+
+
+    Is 17 prime? Yes
+
+
+    #4-5
+
+
+    Uppercase: HELLO WORLD!
+
+
+    Beginner 5 Solutions:
+
+
+    #include <stdio.h>
+
+
+    // #5-1
+
+
+         int arr[] = {10, 20, 5, 8, 90};
+
+
+         int min = arr[0], max  = arr[0];
+
+
+        for (int i = 1;  i <  5; i++) {
+
+
+                if (arr[i] < min) min = arr[i];
+
+
+                if (arr[i] > max) max = arr[i];
+
+
+    }
+
+
+        printf("Minimum: %d, Maximum: %d\n",  min,  max);
+
+
+    // #5-2
+
+
+    int rev[5];
+
+
+    for (int i =  0; i <  5; i++) {
+
+
+    rev[i] = arr[4  - i];
+
+
+    }
+
+
+    printf("Reversed: ");
+
+
+    for (int i =  0; i <  5; i++) {
+
+
+    printf("%d ", rev[i]);
+
+
+    }
+
+
+    printf("\n");
+
+
+    // #5-3
+
+
+    double arr_sum =  0, arr_avg;
+
+
+    for (int i =  0; i <  5; i++) {
+
+
+    arr_sum += arr[i];
+
+
+    }
+
+
+    arr_avg = arr_sum /  5;
+
+
+    printf("Sum: %lf, Average: %lf\n", arr_sum, arr_avg);
+
+
+    // #5-4
+
+
+    for (int i =  0; i <  5; i++) {
+
+
+    for (int j = i +  1; j <  5; j++) {
+
+
+    if (arr[i] > arr[j]) {
+
+
+    int temp = arr[i];
+
+
+    arr[i] = arr[j];
+
+
+    arr[j] = temp;
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    printf("Sorted: ");
+
+
+    for (int i =  0; i <  5; i++) {
+
+
+    printf("%d ", arr[i]);
+
+
+    }
+
+
+    printf("\n");
+
+
+    // #5-5
+
+
+    int search, flag =  0;
+
+
+    printf("Enter a number to search: ");
+
+
+    scanf("%d", &search);
+
+
+    for (int i =  0; i <  5; i++) {
+
+
+    if (arr[i] == search) {
+
+
+    flag =  1;
+
+
+    break;
+
+
+    }
+
+
+    }
+
+
+    if (flag) {
+
+
+    printf("%d found in the array.\n", search);
+
+
+    } else {
+
+
+    printf("%d not found in the array.\n", search);
+
+
+    }
+
+
+    return  0;
+
+
+    }
+
+
+    Beginner 5 Output:
+
+
+    #5-1
+
+
+    Minimum: 5, Maximum: 90
+
+
+    #5-2
+
+
+    Reversed: 90 8 5 20 10
+
+
+    #5-3
+
+
+    Sum: 133.000000, Average: 26.600000
+
+
+    #5-4
+
+
+    Sorted: 5 8 10 20 90
+
+
+    #5-5
+
+
+    Enter a number to search: 20
+
+
+    20 found in the array.
+
+
+    Intermediate 1 Solutions:
+
+
+    #include <stdio.h>
+
+
+    #include <stdbool.h>
+
+
+    #include <string.h>
+
+
+    // #6-1
+
+
+    int  string_length(char  *str) {
+
+
+    int len =  0;
+
+
+    while (*str++) {
+
+
+    len++;
+
+
+    }
+
+
+    return len;
+
+
+    }
+
+
+    // #6-2'
+  toc: []
+  trans: "\n\n## 9-5. 创建一个名为 `Time` 的结构体，包含三个整数成员：`hours`、`minutes` 和 `seconds`。创建一个函数来计算两个时间。\n\
+    \n## 第 10 节 文件与输入/输出\n\n### 10-1. 编写一个程序，创建一个文本并将并将输入的字符串写入文件。\n\n### 10-2. 实现一个程序，读取文件并统计文件中的行数、单词数和字符数。\n\
+    \n### 10-3. 创建一个程序，将一个文件的内容复制到另一个文件中。\n\n### 10-4. 实现一个程序，将两个文本文件合并到第三个文件中。\n\n\
+    ### 10-5. 编写一个程序，读取文件并显示文件中长的一行。\n\n## 初学者 1 答案：\n\n```c\n#include <stdio.h>\n\
+    \nint main() {\n    // #1-1\n    printf(\"Hello, World!\\n\");\n\n    // #1-2\n\
+    \    double number;\n    printf(\"Enter a number: \");\n    scanf(\"%lf\", &number);\n\
+    \    printf(\"Double of %lf is %lf\\n\", number, 2 * number);\n\n    // #1-3\n\
+    \    double celsius, fahrenheit;\n    printf(\"Enter temperature in Celsius: \"\
+    );\n    scanf(\"%lf\", &celsius);\n    fahrenheit = (celsius * 9/5) + 32;\n  \
+    \  printf(\"Temperature in Fahrenheit: %lf\\n\", fahrenheit);\n\n    // #1-4\n\
+    \    const double PI = 3.141592653589793;\n    double radius;\n    printf(\"Enter\
+    \ the radius of the circle: \");\n    scanf(\"%lf\", &radius);\n    double area\
+    \ = PI * radius * radius;\n    printf(\"Area of the circle: %lf\\n\", area);\n\
+    \n    // #1-5\n    double num1, num2, num3, sum, average, product;\n    printf(\"\
+    Enter three numbers: \");\n    scanf(\"%lf %lf %lf\", &num1, &num2, &num3);\n\
+    \    sum = num1 + num2 + num3;\n    average = sum / 3;\n    product = num1 * num2\
+    \ * num3;\n    printf(\"Sum = %lf, Average = %lf, Product = %lf\\n\", sum, average,\
+    \ product);\n    return 0;\n}\n```\n\n## 初学者 1 输出：\n\n#1-1\nHello, World!\n\n\
+    #1-2\nEnter a number: 5.0\nDouble of 5.000000 is 10.000000\n\n#1-3\nEnter temperature\
+    \ in Celsius: 25\nTemperature in Fahrenheit: 77.000000\n\n#1-4\nEnter the radius\
+    \ of the circle: 5\nArea of the circle: 78.539816\n\n#1-5\nEnter three numbers:\
+    \ 1 2 3\nSum = 6.000000, Average = 2.000000, Product = 6.000000\n\n## 初学者 2 答案：\n\
+    \n```c\n#include <stdio.h>\n\nint main() {\n    // #2-1\n    int num;\n    printf(\"\
+    Enter an integer: \");\n    scanf(\"%d\", &num);\n    if (num % 2 == 0) {\n  \
+    \      printf(\"%d is even\\n\", num);\n    } else {\n        printf(\"%d is odd\\\
+    n\", num);\n    }\n\n    // #2-2\n    int month;\n    printf(\"Enter month number\
+    \ (1-12): \");\n    scanf(\"%d\", &month);\n    switch(month) {\n        case\
+    \ 1: printf(\"January\\n\"); break;\n        case 2: printf(\"February\\n\");\
+    \ break;\n        // ... 其他月份类似\n        case 12: printf(\"December\\n\"); break;\n\
+    \        default: printf(\"Invalid month\\n\");\n    }\n\n    // #2-3\n    char\
+    \ ch;\n    printf(\"Enter a character: \");\n    scanf(\" %c\", &ch); // 注意在 %c\
+    \ 前加空格以消耗换行符\n    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' ||\n\
+    \        ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U') {\n        printf(\"\
+    %c is a vowel\\n\", ch);\n    } else {\n        printf(\"%c is a consonant\\n\"\
+    , ch);\n    }\n\n    // #2-4\n    double a, b, c;\n    printf(\"Enter three numbers:\
+    \ \");\n    scanf(\"%lf %lf %lf\", &a, &b, &c);\n    double largest = (a > b)\
+    \ ? (a > c ? a : c) : (b > c ? b : c);\n    printf(\"Largest number is %lf\\n\"\
+    , largest);\n\n    // #2-5\n    int year;\n    printf(\"Enter a year: \");\n \
+    \   scanf(\"%d\", &year);\n    if((year % 4 == 0 && year % 100 != 0) || (year\
+    \ % 400 == 0)) {\n        printf(\"%d is a leap year\\n\", year);\n    } else\
+    \ {\n        printf(\"%d is not a leap year\\n\", year);\n    }\n    return 0;\n\
+    }\n```\n\n## 初学者 2 输出：\n\n#2-1\nEnter an integer: 4\n4 is even\n\n#2-2\nEnter\
+    \ month number (1-12): 7\nJuly\n\n#2-3\nEnter a character: e\ne is a vowel\n\n\
+    #2-4\nEnter three numbers: 5 3 7\nLargest number is 7.000000\n\n#2-5\nEnter a\
+    \ year: 2000\n2000 is a leap year\n\n## 初学者 3 答案：\n\n```c\n#include <stdio.h>\n\
+    \nint main() {\n    // #3-1\n    for(int i = 1; i <= 10; i++) {\n        printf(\"\
+    %d \", i);\n    }\n    printf(\"\\n\");\n\n    // #3-2\n    int n, factorial =\
+    \ 1;\n    printf(\"Enter positive integer: \");\n    scanf(\"%d\", &n);\n    for(int\
+    \ i = 1; i <= n; i++) {\n        factorial *= i;\n    }\n    printf(\"Factorial\
+    \ of %d = %d\\n\", n, factorial);\n\n    // #3-3\n    int terms, t1 = 0, t2 =\
+    \ 1, nextTerm;\n    printf(\"Enter number of terms: \");\n    scanf(\"%d\", &terms);\n\
+    \    printf(\"Fibonacci Series: \");\n    for (int i = 1; i <= terms; i++) {\n\
+    \        printf(\"%d \", t1);\n        nextTerm = t1 + t2;\n        t1 = t2;\n\
+    \        t2 = nextTerm;\n    }\n    printf(\"\\n\");\n\n    // #3-4\n    int start,\
+    \ end;\n    printf(\"Enter two numbers (intervals): \");\n    scanf(\"%d %d\"\
+    , &start, &end);\n    printf(\"Prime numbers between %d and %d are: \", start,\
+    \ end);\n    for(int i = start; i <= end; i++) {\n        int flag = 1;\n    \
+    \    for(int j = 2; j <= i; j++) {\n            if(i % j == 0) {\n           \
+    \     flag = 0;\n                break;\n            }\n        }\n        if(flag\
+    \ && i != 1) printf(\"%d \", i);\n    }\n    printf(\"\\n\");\n\n    // #3-5\n\
+    \    int multiplier;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &multiplier);\n\
+    \    for(int i = 1; i <= 10; i++) {\n        printf(\"%d = %d\\n\", i, multiplier\
+    \ * i);\n    }\n    return 0;\n}\n```\n\n## 初学者 3 输出：\n\n#3-1\n1 2 3 4 5 6 7 8\
+    \ 9 10\n\n#3-2\nEnter positive integer: 5\nFactorial of 5 = 120\n\n#3-3\nEnter\
+    \ number of terms: 7\nFibonacci Series: 0 1 1 2 3 5 8\n\n#3-4\nEnter two numbers\
+    \ (intervals): 10 50\nPrime numbers between 10 and 50 are: 11 13 17 19 23 29 31\
+    \ 37 41 43 47\n\n#3-5\nEnter a number: 5\n1 = 5\n2 = 10\n3 = 15\n4 = 20\n5 = 25\n\
+    6 = 30\n7 = 35\n8 = 40\n9 = 45\n10 = 50\n\n## 初学者 4 答案：\n\n```c\n#include <stdio.h>\n\
+    #include <stdbool.h>\n\n// #4-1\ndouble sum_of_two(double a, double b) {\n   \
+    \ return a + b;\n}\n\n// #4-2\ndouble largest_of_three(double a, double b, double\
+    \ c) {\n    return (a > b) ? (a > c ? a : c) : (b > c ? b : c);\n}\n\n// #4-3\n\
+    int factorial_recursive(int n) {\n    if (n == 0 || n == 1) {\n        return\
+    \ 1;\n    } else {\n        return n * factorial_recursive(n - 1);\n    }\n}\n\
+    \n// #4-4\nbool is_prime(int n) {\n    if (n <= 1) return false;\n    for (int\
+    \ i = 2; i <= n; i++) {\n        if (n % i == 0) return false;\n    }\n    return\
+    \ true;\n}\n\n// #4-5\nvoid to_uppercase(char *str) {\n    for (int i = 0; str[i]\
+    \ != '\\0'; i++) {\n        if (str[i] >= 'a' && str[i] <= 'z') {\n          \
+    \  str[i] = str[i] - ('a' - 'A');\n        }\n    }\n}\n\nint main() {\n    //\
+    \ #4-1 Test\n    printf(\"Sum of 5 and 3: %lf\\n\", sum_of_two(5, 3));\n\n   \
+    \ // #4-2 Test\n    printf(\"Largest of 5, 3, and 7: %lf\\n\", largest_of_three(5,\
+    \ 3, 7));\n\n    // #4-3 Test\n    printf(\"Factorial of 5: %d\\n\", factorial_recursive(5));\n\
+    \n    // #4-4 Test\n    printf(\"Is 17 prime? %s\\n\", is_prime(17) ? \"Yes\"\
+    \ : \"No\");\n\n    // #4-5 Test\n    char str[] = \"hello World!\";\n    to_uppercase(str);\n\
+    \    printf(\"Uppercase: %s\\n\", str);\n    return 0;\n}\n```\n\n## 初学者 4 输出：\n\
+    \n#4-1\nSum of 5 and 3: 8.000000\n\n#4-2\nLargest of 5, 3, and 7: 7.000000\n\n\
+    #4-3\nFactorial of 5: 120\n\n#4-4\nIs 17 prime? Yes\n\n#4-5\nUppercase: HELLO\
+    \ WORLD!\n\n## 初学者 5 答案：\n\n```c\n#include <stdio.h>\n\nint main() {\n    int\
+    \ arr[] = {10, 8, 5, 20, 90};\n\n    // #5-1\n    int min = arr[0], max = arr[0];\n\
+    \    for (int i = 1; i < 5; i++) {\n        if (arr[i] < min) min = arr[i];\n\
+    \        if (arr[i] > max) max = arr[i];\n    }\n    printf(\"Minimum: %d, Maximum:\
+    \ %d\\n\", min, max);\n\n    // #5-2\n    int rev[5];\n    for (int i = 0; i <\
+    \ 5; i++) {\n        rev[i] = arr[4 - i];\n    }\n    printf(\"Reversed: \");\n\
+    \    for (int i = 0; i < 5; i++) {\n        printf(\"%d \", rev[i]);\n    }\n\
+    \    printf(\"\\n\");\n\n    // #5-3\n    double sum = 0, average;\n    for (int\
+    \ i = 0; i < 5; i++) {\n        sum += arr[i];\n    }\n    average = sum / 5;\n\
+    \    printf(\"Sum: %lf, Average: %lf\\n\", sum, average);\n\n    // #5-4\n   \
+    \ for (int i = 0; i < 5; i++) {\n        for (int j = i + 1; j < 5; j++) {\n \
+    \           if (arr[i] > arr[j]) {\n                int temp = arr[i];\n     \
+    \           arr[i] = arr[j];\n                arr[j] = temp;\n            }\n\
+    \        }\n    }\n    printf(\"Sorted: \");\n    for (int i = 0; i < 5; i++)\
+    \ {\n        printf(\"%d \", arr[i]);\n    }\n    printf(\"\\n\");\n\n    // #5-5\n\
+    \    int search, flag = 0;\n    printf(\"Enter a number to search: \");\n    scanf(\"\
+    %d\", &search);\n    for (int i = 0; i < 5; i++) {\n        if (arr[i] == search)\
+    \ {\n            flag = 1;\n            break;\n        }\n    }\n    if (flag)\
+    \ {\n        printf(\"%d found in the array.\\n\", search);\n    } else {\n  \
+    \      printf(\"%d not found in the array.\\n\", search);\n    }\n    return 0;\n\
+    }\n```\n\n## 初学者 5 输出：\n\n#5-1\nMinimum: 5, Maximum: 90\n\n#5-2\nReversed: 90\
+    \ 8 5 20 10\n\n#5-3\nSum: 133.000000, Average: 26.600000\n\n#5-4\nSorted: 5 8\
+    \ 10 20 90\n\n#5-5\nEnter a number to search: 20\n20 found in the array.\n\n##\
+    \ 中级 1 答案：\n\n```c\n#include <stdio.h>\n#include <stdbool.h>\n#include <string.h>\n\
+    \n// #6-1\nint string_length(char *str) {\n    int len = 0;\n    while (*str++)\
+    \ {\n        len++;\n    }\n    return len;\n}\n\n// #6-2\n```\n\n"
+- fmt: "\n```c\nbool is_palindrome(char *str) {\n    int len = string_length(str);\n\
+    \    for (int i = 0; i < len / 2; i++) {\n        if (str[i] != str[len - 1 -\
+    \ i]) {\n            return false;\n        }\n    }\n    return true;\n}\n\n\
+    // #6-3\nvoid concatenate_strings(char *dest, char *src) {\n    while (*dest)\
+    \ {\n        dest++;\n    }\n    while ((*dest++ = *src++));\n}\n\n// #6-4\nvoid\
+    \ replace_spaces_with_hyphen(char *str) {\n    while (*str) {\n        if (*str\
+    \ == ' ') {\n            *str = '-';\n        }\n        str++;\n    }\n}\n\n\
+    // #6-5\nvoid count_vowels_and_consonants(char *str, int *vowels, int *consonants)\
+    \ {\n    *vowels = 0;\n    *consonants = 0;\n    while (*str) {\n        if ((*str\
+    \ >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z')) {\n            switch\
+    \ (*str) {\n                case 'A': case 'E': case 'I': case 'O': case 'U':\n\
+    \                case 'a': case 'e': case 'i': case 'o': case 'u':\n         \
+    \           (*vowels)++;\n                    break;\n                default:\n\
+    \                    (*consonants)++;\n            }\n        }\n        str++;\n\
+    \    }\n}\n\nint main() {\n    // #6-1 Test\n    char str1[] = \"Hello, World!\"\
+    ;\n    printf(\"Length of '%s': %d\\n\", str1, string_length(str1));\n    // #6-2\
+    \ Test\n    char str2[] = \"radar\";\n    printf(\"Is '%s' a palindrome? %s\\\
+    n\", str2, is_palindrome(str2) ? \"Yes\" : \"No\");\n    // #6-3 Test\n    char\
+    \ dest[50] = \"Hello, \";\n    char src[] = \"World!\";\n    concatenate_strings(dest,\
+    \ src);\n    printf(\"Concatenated: %s\\n\", dest);\n    // #6-4 Test\n    char\
+    \ str3[] = \"Hello World!\";\n    replace_spaces_with_hyphen(str3);\n    printf(\"\
+    Spaces replaced: %s\\n\", str3);\n    // #6-5 Test\n    char str4[] = \"Programming\
+    \ in C\";\n    int vowels, consonants;\n    count_vowels_and_consonants(str4,\
+    \ &vowels, &consonants);\n    printf(\"In '%s', Vowels: %d, Consonants: %d\\n\"\
+    , str4, vowels, consonants);\n    return 0;\n}\n```\n\n### Intermediate 1 Output:\n\
+    \n#6-1\nLength of 'Hello, World!': 13\n\n#6-2\nIs 'radar' a palindrome? Yes\n\n\
+    #6-3\nConcatenated: Hello, World!\n\n#6-4\nSpaces replaced: Hello-World!\n\n#6-5\n\
+    In 'Programming in C', Vowels: 5, Consonants: 11\n\n### Intermediate 2 Solutions:\n\
+    \n```c\n#include <stdio.h>\n\n// #7-1\nvoid swap_values(int *a, int *b) {\n  \
+    \  int temp = *a;\n    *a = *b;\n    *b = temp;\n}\n\n// #7-2\nint string_length_pointer(char\
+    \ *str) {\n    int len = 0;\n    while (*str++) {\n        len++;\n    }\n   \
+    \ return len;\n}\n\n// #7-3\nvoid reverse_string_pointer(char *str) {\n    char\
+    \ *start = str;\n    char *end = str + string_length_pointer(str) - 1;\n    while\
+    \ (start < end) {\n        swap_values(start, end);\n        start++;\n      \
+    \  end--;\n    }\n}\n\n// #7-4\nint sum_array_pointer(int *arr, int len) {\n \
+    \   int sum = 0;\n    int *end = arr + len;\n    while (arr < end) {\n       \
+    \ sum += *arr++;\n    }\n    return sum;\n}\n\n// #7-5\nvoid sort_array_pointer(int\
+    \ *arr, int len) {\n    for (int i = 0; i < len - 1; i++) {\n        for (int\
+    \ j = i + 1; j < len; j++) {\n            if (*(arr + i) > *(arr + j)) {\n   \
+    \             swap_values(arr + i, arr + j);\n            }\n        }\n    }\n\
+    }\n\nint main() {\n    // #7-1 Test\n    int x = 5, y = 8;\n    printf(\"Before\
+    \ swap: x = %d, y = %d\\n\", x, y);\n    swap_values(&x, &y);\n    printf(\"After\
+    \ swap: x = %d, y = %d\\n\", x, y);\n    // #7-2 Test\n    char str1[] = \"OpenAI\"\
+    ;\n    printf(\"Length of '%s': %d\\n\", str1, string_length_pointer(str1));\n\
+    \    // #7-3 Test\n    char str2[] = \"Programming\";\n    reverse_string_pointer(str2);\n\
+    \    printf(\"Reversed string: %s\\n\", str2);\n    // #7-4 Test\n    int arr1[]\
+    \ = {1, 2, 3, 4, 5};\n    printf(\"Sum of array: %d\\n\", sum_array_pointer(arr1,\
+    \ 5));\n    // #7-5 Test\n    int arr2[] = {5, 12, 45, 2, 9};\n    sort_array_pointer(arr2,\
+    \ 5);\n    printf(\"Sorted array: \");\n    for (int i = 0; i < 5; i++) {\n  \
+    \      printf(\"%d \", arr2[i]);\n    }\n    printf(\"\\n\");\n    return 0;\n\
+    }\n```\n\n### Intermediate 2 Output:\n\n#7-1\nBefore swap: x = 5, y = 8\nAfter\
+    \ swap: x = 8, y = 5\n\n#7-2\nLength of 'OpenAI': 6\n\n#7-3\nReversed string:\
+    \ gnimmargP\n\n#7-4\nSum of array: 15\n\n#7-5\nSorted array: 2 5 9 12 45\n\n###\
+    \ Intermediate 3 Solutions:\n\n```c\n#include <stdio.h>\n#include <stdbool.h>\n\
+    \n// #8-1\nint fibonacci(int n) {\n    if (n <= 1) return n;\n    return fibonacci(n-1)\
+    \ + fibonacci(n-2);\n}\n\n// #8-2\nint binary_search(int arr[], int l, int r,\
+    \ int x) {\n    if (r >= l) {\n        int mid = l + (r - l) / 2;\n        if\
+    \ (arr[mid] == x) return mid;\n        if (arr[mid] > x) return binary_search(arr,\
+    \ l, mid-1, x);\n        return binary_search(arr, mid+1, r, x);\n    }\n    return\
+    \ -1;\n}\n\n// #8-3\ndouble power(double base, int exponent) {\n    if (exponent\
+    \ == 0) return 1;\n    else if (exponent < 0) return power(base, -exponent);\n\
+    \    return base * power(base, exponent-1);\n}\n\n// #8-4\nbool is_prime(int n)\
+    \ {\n    if (n <= 1) return false;\n    for (int i = 2; i * i <= n; i++) {\n \
+    \       if (n % i == 0) return false;\n    }\n    return true;\n}\n\nvoid print_primes_to_n(int\
+    \ n) {\n    for (int i = 2; i <= n; i++) {\n        if (is_prime(i)) printf(\"\
+    %d \", i);\n    }\n    printf(\"\\n\");\n}\n\n// #8-5\nint gcd(int a, int b) {\n\
+    \    if (b == 0) return a;\n    return gcd(b, a % b);\n}\n\nint main() {\n   \
+    \ // #8-1 Test\n    int n = 9;\n    printf(\"Fibonacci number at position %d:\
+    \ %d\\n\", n, fibonacci(n));\n    // #8-2 Test\n    int arr[] = {2, 3, 4, 10,\
+    \ 40};\n    int x = 10;\n    int result = binary_search(arr, 0, 4, x);\n    if\
+    \ (result == -1) printf(\"Element not present in array\\n\");\n    else printf(\"\
+    Element %d is present at index %d\\n\", x, result);\n    // #8-3 Test\n    double\
+    \ base = 2.0;\n    int exponent = -3;\n    printf(\"%.2lf raised to the power\
+    \ %d is %.2lf\\n\", base, exponent, power(base, exponent));\n    // #8-4 Test\n\
+    \    int limit = 50;\n    printf(\"Prime numbers up to %d: \", limit);\n    print_primes_to_n(limit);\n\
+    \    // #8-5 Test\n    int num1 = 56, num2 = 98;\n    printf(\"GCD of %d and %d\
+    \ is %d\\n\", num1, num2, gcd(num1, num2));\n    return 0;\n}\n```\n\n### Intermediate\
+    \ 3 Output:\n\n#8-1\nFibonacci number at position 9: 34\n\n#8-2\nElement 10 is\
+    \ present at index 3\n\n#8-3\n2.00 raised to the power -3 is 0.12\n\n#8-4\nPrime\
+    \ numbers up to 50: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47\n\n#8-5\nGCD of 56\
+    \ and 98 is 14\n\n### Intermediate 4 Solutions:\n\n```c\n#include <stdio.h>\n\n\
+    // #9-1\ntypedef struct {\n    float real;\n    float imag;\n} Complex;\n\nComplex\
+    \ add(Complex a, Complex b) {\n    Complex result;\n    result.real = a.real +\
+    \ b.real;\n    result.imag = a.imag + b.imag;\n    return result;\n}\n\nComplex\
+    \ subtract(Complex a, Complex b) {\n    Complex result;\n    result.real = a.real\
+    \ - b.real;\n    result.imag = a.imag - b.imag;\n    return result;\n}\n\nComplex\
+    \ multiply(Complex a, Complex b) {\n    Complex result;\n    result.real = a.real\
+    \ * b.real - a.imag * b.imag;\n    result.imag = a.real * b.imag + a.imag * b.real;\n\
+    \    return result;\n}\n\n// #9-2\ntypedef struct {\n    int day;\n    int month;\n\
+    \    int year;\n} Date;\n\nint differenceBetweenDates(Date d1, Date d2) {\n  \
+    \  // Simplified logic for the exercise\n    return (d2.year - d1.year) * 365\
+    \ + (d2.month - d1.month) * 31 + (d2.day - d1.day);\n}\n\n// #9-3\ntypedef struct\
+    \ {\n    char name[50];\n    int roll_number;\n    float marks[3];\n} Student;\n\
+    \nfloat averageMarks(Student s) {\n    float sum = 0;\n    for (int i = 0; i <\
+    \ 3; i++) sum += s.marks[i];\n    return sum / 3;\n}\n\n// #9-4\ntypedef struct\
+    \ {\n    int bookID;\n    char title[100];\n    char author[50];\n    float price;\n\
+    } Book;\n\nvoid displayBookInfo(Book b) {\n    printf(\"Book ID: %d\\nTitle: %s\\\
+    nAuthor: %s\\nPrice: %.2f\\n\", b.bookID, b.title, b.author, b.price);\n}\n\n\
+    // #9-5\ntypedef struct {\n    int hours;\n    int minutes;\n    int seconds;\n\
+    } Time;\n\nTime addTimes(Time t1, Time t2) {\n    Time sum;\n    sum.seconds =\
+    \ (t1.seconds + t2.seconds) % 60;\n    int carry = (t1.seconds + t2.seconds) /\
+    \ 60;\n    sum.minutes = (t1.minutes + t2.minutes + carry) % 60;\n    carry =\
+    \ (t1.minutes + t2.minutes + carry) / 60;\n    sum.hours = t1.hours + t2.hours\
+    \ + carry;\n    return sum;\n}\n\nint main() {\n    // Test cases for each part\
+    \ will be here\n    // #9-1 Test\n    Complex c1 = {2, 3};\n    Complex c2 = {1,\
+    \ 2};\n    Complex sum = add(c1, c2);\n    printf(\"#9-1\\nSum: %f + %fi\\n\"\
+    , sum.real, sum.imag);\n    // #9-2 Test\n    Date d1 = {1, 1, 2021};\n    Date\
+    \ d2 = {2, 3, 2021};\n    printf(\"\\n#9-2\\nDifference between dates 01/01/2021\
+    \ and 02/03/2021: %d days\\n\", differenceBetweenDates(d1, d2));\n    // #9-3\
+    \ Test\n    Student john = {\"John\", 101, {80.0, 75.5, 79.5}};\n    printf(\"\
+    \\n#9-3\\nAverage marks for John: %.2f\\n\", averageMarks(john));\n    // #9-4\
+    \ Test\n    Book sampleBook = {101, \"The Great Book\", \"John Doe\", 19.99};\n\
+    \    printf(\"\\n#9-4\\n\");\n    displayBookInfo(sampleBook);\n    // #9-5 Test\n\
+    \    Time t1 = {2, 30, 45};\n    Time t2 = {1, 20, 20};\n    Time sumTime = addTimes(t1,\
+    \ t2);\n    return 0;\n}\n```\n"
+  raw: 'bool  is_palindrome(char  *str) {
+
+
+    int len = string_length(str);
+
+
+    for (int i =  0; i < len /  2; i++) {
+
+
+    if (str[i] != str[len -  1  - i]) {
+
+
+    return  false;
+
+
+    }
+
+
+    }
+
+
+    return  true;
+
+
+    }
+
+
+    // #6-3
+
+
+    void  concatenate_strings(char  *dest, char  *src) {
+
+
+    while (*dest) {
+
+
+    dest++;
+
+
+    }
+
+
+    while ((*dest++  =  *src++));
+
+
+    }
+
+
+    // #6-4
+
+
+    void  replace_spaces_with_hyphen(char  *str) {
+
+
+    while (*str) {
+
+
+    if (*str ==  '' '') {
+
+
+    *str =  ''-'';
+
+
+    }
+
+
+    str++;
+
+
+    }
+
+
+    }
+
+
+    // #6-5
+
+
+    void  count_vowels_and_consonants(char  *str, int  *vowels, int  *consonants)
+    {
+
+
+    *vowels =  0;
+
+
+    *consonants =  0;
+
+
+    while (*str) {
+
+
+    if ((*str >=  ''A''  &&  *str <=  ''Z'') || (*str >=  ''a''  &&  *str <=  ''z''))
+    {
+
+
+    switch (*str) {
+
+
+    case  ''A'': case  ''E'': case  ''I'': case  ''O'': case  ''U'':
+
+
+    case  ''a'': case  ''e'': case  ''i'': case  ''o'': case  ''u'':
+
+
+    (*vowels)++;
+
+
+    break;
+
+
+    default:
+
+
+    (*consonants)++;
+
+
+    }
+
+
+    }
+
+
+    str++;
+
+
+    }
+
+
+    }
+
+
+    int  main() {
+
+
+    // #6-1 Test
+
+
+    char str1[] =  "Hello, World!";
+
+
+    printf("Length of ''%s'': %d\n", str1, string_length(str1));
+
+
+    // #6-2 Test
+
+
+    char str2[] =  "radar";
+
+
+    printf("Is ''%s'' a palindrome? %s\n", str2, is_palindrome(str2) ?  "Yes"  :  "No");
+
+
+    // #6-3 Test
+
+
+    char dest[50] =  "Hello, ";
+
+
+    char src[] =  "World!";
+
+
+    concatenate_strings(dest, src);
+
+
+    printf("Concatenated: %s\n", dest);
+
+
+    // #6-4 Test
+
+
+    char str3[] =  "Hello World!";
+
+
+    replace_spaces_with_hyphen(str3);
+
+
+    printf("Spaces replaced: %s\n", str3);
+
+
+    // #6-5 Test
+
+
+    char str4[] =  "Programming in C";
+
+
+    int vowels, consonants;
+
+
+    count_vowels_and_consonants(str4, &vowels, &consonants);
+
+
+    printf("In ''%s'', Vowels: %d, Consonants: %d\n", str4, vowels, consonants);
+
+
+    return  0;
+
+
+    }
+
+
+    Intermediate 1 Output:
+
+
+    #6-1
+
+
+    Length of ''Hello, World!'': 13
+
+
+    #6-2
+
+
+    Is ''radar'' a palindrome? Yes
+
+
+    #6-3
+
+
+    Concatenated: Hello, World!
+
+
+    #6-4
+
+
+    Spaces replaced: Hello-World!
+
+
+    #6-5
+
+
+    In ''Programming in C'', Vowels: 5, Consonants: 11
+
+
+    Intermediate 2 Solutions:
+
+
+    #include <stdio.h>
+
+
+    // #7-1
+
+
+    void  swap_values(int  *a, int  *b) {
+
+
+    int temp =  *a;
+
+
+    *a =  *b;
+
+
+    *b = temp;
+
+
+    }
+
+
+    // #7-2
+
+
+    int  string_length_pointer(char  *str) {
+
+
+    int len =  0;
+
+
+    while (*str++) {
+
+
+    len++;
+
+
+    }
+
+
+    return len;
+
+
+    }
+
+
+    // #7-3
+
+
+    void  reverse_string_pointer(char  *str) {
+
+
+    char  *start = str;
+
+
+    char  *end = str + string_length_pointer(str) -  1;
+
+
+    while (start < end) {
+
+
+    swap_values(start, end);
+
+
+    start++;
+
+
+    end--;
+
+
+    }
+
+
+    }
+
+
+    // #7-4
+
+
+    int  sum_array_pointer(int  *arr, int len) {
+
+
+    int sum =  0;
+
+
+    int  *end = arr + len;
+
+
+    while (arr < end) {
+
+
+    sum +=  *arr++;
+
+
+    }
+
+
+    return sum;
+
+
+    }
+
+
+    // #7-5
+
+
+    void  sort_array_pointer(int  *arr, int len) {
+
+
+    for (int i =  0; i < len -  1; i++) {
+
+
+    for (int j = i +  1; j < len; j++) {
+
+
+    if (*(arr + i) >  *(arr + j)) {
+
+
+    swap_values(arr + i, arr + j);
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    }
+
+
+    int  main() {
+
+
+    // #7-1 Test
+
+
+    int x =  5, y =  8;
+
+
+    printf("Before swap: x = %d, y = %d\n", x, y);
+
+
+    swap_values(&x, &y);
+
+
+    printf("After swap: x = %d, y = %d\n", x, y);
+
+
+    // #7-2 Test
+
+
+    char str1[] =  "OpenAI";
+
+
+    printf("Length of ''%s'': %d\n", str1, string_length_pointer(str1));
+
+
+    // #7-3 Test
+
+
+    char str2[] =  "Programming";
+
+
+    reverse_string_pointer(str2);
+
+
+    printf("Reversed string: %s\n", str2);
+
+
+    // #7-4 Test
+
+
+    int arr1[] = {1, 2, 3, 4, 5};
+
+
+    printf("Sum of array: %d\n", sum_array_pointer(arr1, 5));
+
+
+    // #7-5 Test
+
+
+    int arr2[] = {52, 12, 45, 2, 9};
+
+
+    sort_array_pointer(arr2, 5);
+
+
+    printf("Sorted array: ");
+
+
+    for (int i =  0; i <  5; i++) {
+
+
+    printf("%d ", arr2[i]);
+
+
+    }
+
+
+    printf("\n");
+
+
+    return  0;
+
+
+    }
+
+
+    Intermediate 2 Output:
+
+
+    #7-1
+
+
+    Before swap: x = 5, y = 8
+
+
+    After swap: x = 8, y = 5
+
+
+    #7-2
+
+
+    Length of ''OpenAI'': 6
+
+
+    #7-3
+
+
+    Reversed string: gnimmargorP
+
+
+    #7-4
+
+
+    Sum of array: 15
+
+
+    #7-5
+
+
+    Sorted array: 2 9 12 45 52
+
+
+    Intermediate 3 Solutions:
+
+
+    #include <stdio.h>
+
+
+    #include <stdbool.h>
+
+
+    // #8-1
+
+
+    int  fibonacci(int n) {
+
+
+    if (n <=  1) return n;
+
+
+    return fibonacci(n-1) + fibonacci(n-2);
+
+
+    }
+
+
+    // #8-2
+
+
+    int  binary_search(int arr[], int l, int r, int x) {
+
+
+    if (r >= l) {
+
+
+    int mid = l + (r - l) /  2;
+
+
+    if (arr[mid] == x) return mid;
+
+
+    if (arr[mid] > x) return binary_search(arr, l, mid-1, x);
+
+
+    return binary_search(arr, mid+1, r, x);
+
+
+    }
+
+
+    return  -1;
+
+
+    }
+
+
+    // #8-3
+
+
+    double  power(double base, int exponent) {
+
+
+    if (exponent ==  0) return  1;
+
+
+    else  if (exponent <  0) return  1  / power(base, -exponent);
+
+
+    return base * power(base, exponent-1);
+
+
+    }
+
+
+    // #8-4
+
+
+    bool  is_prime(int n) {
+
+
+    if (n <=  1) return  false;
+
+
+    for (int i =  2; i * i <= n; i++)
+
+
+    if (n % i ==  0) return  false;
+
+
+    return  true;
+
+
+    }
+
+
+    void  print_primes_up_to_n(int n) {
+
+
+    for (int i =  2; i <= n; i++)
+
+
+    if (is_prime(i)) printf("%d ", i);
+
+
+    printf("\n");
+
+
+    }
+
+
+    // #8-5
+
+
+    int  gcd(int a, int b) {
+
+
+    if (b ==  0) return a;
+
+
+    return gcd(b, a % b);
+
+
+    }
+
+
+    int  main() {
+
+
+    // #8-1 Test
+
+
+    int n =  9;
+
+
+    printf("Fibonacci number at position %d: %d\n", n, fibonacci(n));
+
+
+    // #8-2 Test
+
+
+    int arr[] = {2, 3, 4, 10, 40};
+
+
+    int x =  10;
+
+
+    int result = binary_search(arr, 0, 4, x);
+
+
+    (result ==  -1) ? printf("Element not present in array\n")
+
+
+    : printf("Element %d is present at index %d\n", x, result);
+
+
+    // #8-3 Test
+
+
+    double base =  2.0;
+
+
+    int exponent =  -3;
+
+
+    printf("%.2lf raised to the power %d is %.2lf\n", base, exponent, power(base,
+    exponent));
+
+
+    // #8-4 Test
+
+
+    int limit =  50;
+
+
+    printf("Prime numbers up to %d: ", limit);
+
+
+    print_primes_up_to_n(limit);
+
+
+    // #8-5 Test
+
+
+    int num1 =  56, num2 =  98;
+
+
+    printf("GCD of %d and %d is %d\n", num1, num2, gcd(num1, num2));
+
+
+    return  0;
+
+
+    }
+
+
+    Intermediate 3 Output:
+
+
+    #8-1
+
+
+    Fibonacci number at position 9: 34
+
+
+    #8-2
+
+
+    Element 10 is present at index 3
+
+
+    #8-3
+
+
+    2.00 raised to the power -3 is 0.12
+
+
+    #8-4
+
+
+    Prime numbers up to 50: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
+
+
+    #8-5
+
+
+    GCD of 56 and 98 is 14
+
+
+    Intermediate 4 Solutions:
+
+
+    #include <stdio.h>
+
+
+    // #9-1
+
+
+    typedef  struct {
+
+
+    float real;
+
+
+    float imag;
+
+
+    } Complex;
+
+
+    Complex add(Complex a, Complex b) {
+
+
+    Complex result;
+
+
+    result.real = a.real + b.real;
+
+
+    result.imag = a.imag + b.imag;
+
+
+    return result;
+
+
+    }
+
+
+    Complex subtract(Complex a, Complex b) {
+
+
+    Complex result;
+
+
+    result.real = a.real - b.real;
+
+
+    result.imag = a.imag - b.imag;
+
+
+    return result;
+
+
+    }
+
+
+    Complex multiply(Complex a, Complex b) {
+
+
+    Complex result;
+
+
+    result.real = a.real * b.real - a.imag * b.imag;
+
+
+    result.imag = a.real * b.imag + a.imag * b.real;
+
+
+    return result;
+
+
+    }
+
+
+    // #9-2
+
+
+    typedef  struct {
+
+
+    int day, month, year;
+
+
+    } Date;
+
+
+    int daysInMonth[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+
+    int  differenceBetweenDates(Date d1, Date d2) {
+
+
+    // Assuming d2 is always later than d1 for simplicity
+
+
+    // This function calculates difference assuming all months have 31 days. It''s
+    an approximation.
+
+
+    return (d2.year - d1.year) *  365  + (d2.month - d1.month) *  31  + (d2.day -
+    d1.day);
+
+
+    }
+
+
+    // #9-3
+
+
+    typedef  struct {
+
+
+    char name[50];
+
+
+    int roll_number;
+
+
+    float marks[3]; // marks in 3 subjects
+
+
+    } Student;
+
+
+    float  averageMarks(Student s) {
+
+
+    return (s.marks[0] + s.marks[1] + s.marks[2]) /  3;
+
+
+    }
+
+
+    // #9-4
+
+
+    typedef  struct {
+
+
+    int bookID;
+
+
+    char title[100];
+
+
+    char author[50];
+
+
+    float price;
+
+
+    } Book;
+
+
+    void  displayBookInfo(Book b) {
+
+
+    printf("Book ID: %d\nTitle: %s\nAuthor: %s\nPrice: %.2f\n", b.bookID, b.title,
+    b.author, b.price);
+
+
+    }
+
+
+    // #9-5
+
+
+    typedef  struct {
+
+
+    int hours, minutes, seconds;
+
+
+    } Time;
+
+
+    Time addTimes(Time t1, Time t2) {
+
+
+    Time sum;
+
+
+    sum.seconds = (t1.seconds + t2.seconds) %  60;
+
+
+    int carry = (t1.seconds + t2.seconds) /  60;
+
+
+    sum.minutes = (t1.minutes + t2.minutes + carry) %  60;
+
+
+    carry = (t1.minutes + t2.minutes + carry) /  60;
+
+
+    sum.hours = t1.hours + t2.hours + carry;
+
+
+    return sum;
+
+
+    }
+
+
+    int  main() {
+
+
+    // Test cases for each part will be placed here
+
+
+    // #9-1 Test
+
+
+    Complex c1 = {2, 3};
+
+
+    Complex c2 = {1, 2};
+
+
+    Complex sum = add(c1, c2);
+
+
+    printf("#9-1\nSum: %f + %fi\n", sum.real, sum.imag);
+
+
+    // #9-2 Test
+
+
+    Date d1 = {1, 1, 2021};
+
+
+    Date d2 = {2, 3, 2021};
+
+
+    printf("\n#9-2\nDifference between dates 01/01/2021 and 02/03/2021: %d days\n",
+    differenceBetweenDates(d1, d2));
+
+
+    // #9-3 Test
+
+
+    Student john = {"John", 101, {80.0, 75.5, 79.5}};
+
+
+    printf("\n#9-3\nAverage marks for John: %.2f\n", averageMarks(john));
+
+
+    // #9-4 Test
+
+
+    Book sampleBook = {101, "The Great Book", "John Doe", 19.99};
+
+
+    printf("\n#9-4\n");
+
+
+    displayBookInfo(sampleBook);
+
+
+    // #9-5 Test
+
+
+    Time t1 = {2, 30, 45};
+
+
+    Time t2 = {1, 20, 20};
+
+
+    Time sumTime = addTimes(t1, t2);'
+  toc: []
+  trans: "\n\n```c\nbool is_palindrome(char *str) {\n    int len = string_length(str);\n\
+    \    for (int i = 0; i < len / 2; i++) {\n        if (str[i] != str[len - 1 -\
+    \ i]) {\n            return false;\n        }\n    }\n    return true;\n}\n\n\
+    // #6-3\nvoid concatenate_strings(char *dest, char *src) {\n    while (*dest)\
+    \ {\n        dest++;\n    }\n    while ((*dest++ = *src++));\n}\n\n// #6-4\nvoid\
+    \ replace_spaces_with_hyphen(char *str) {\n    while (*str) {\n        if (*str\
+    \ == ' ') {\n            *str = '-';\n        }\n        str++;\n    }\n}\n\n\
+    // #6-5\nvoid count_vowels_and_consonants(char *str, int *vowels, int *consonants)\
+    \ {\n    *vowels = 0;\n    *consonants = 0;\n    while (*str) {\n        if ((*str\
+    \ >= 'A' && *str <= 'Z') || (*str >= 'a' && *str <= 'z')) {\n            switch\
+    \ (*str) {\n                case 'A': case 'E': case 'I': case 'O': case 'U':\n\
+    \                case 'a': case 'e': case 'i': case 'o': case 'u':\n         \
+    \           (*vowels)++;\n                    break;\n                default:\n\
+    \                    (*consonants)++;\n            }\n        }\n        str++;\n\
+    \    }\n}\n\nint main() {\n    // #6-1 Test\n    char str1[] = \"Hello, World!\"\
+    ;\n    printf(\"Length of '%s': %d\\n\", str1, string_length(str1));\n    // #6-2\
+    \ Test\n    char str2[] = \"radar\";\n    printf(\"Is '%s' a palindrome? %s\\\
+    n\", str2, is_palindrome(str2) ? \"Yes\" : \"No\");\n    // #6-3 Test\n    char\
+    \ dest[50] = \"Hello, \";\n    char src[] = \"World!\";\n    concatenate_strings(dest,\
+    \ src);\n    printf(\"Concatenated: %s\\n\", dest);\n    // #6-4 Test\n    char\
+    \ str3[] = \"Hello World!\";\n    replace_spaces_with_hyphen(str3);\n    printf(\"\
+    Spaces replaced: %s\\n\", str3);\n    // #6-5 Test\n    char str4[] = \"Programming\
+    \ in C\";\n    int vowels, consonants;\n    count_vowels_and_consonants(str4,\
+    \ &vowels, &consonants);\n    printf(\"In '%s', Vowels: %d, Consonants: %d\\n\"\
+    , str4, vowels, consonants);\n    return 0;\n}\n```\n\n### 中间 1 输出:\n\n#6-1\n\
+    Length of 'Hello, World!': 13\n\n#6-2\nIs 'radar' a palindrome? Yes\n\n#6-3\n\
+    Concatenated: Hello, World!\n\n#6-4\nSpaces replaced: Hello-World!\n\n#6-5\nIn\
+    \ 'Programming in C', Vowels: 5, Consonants: 11\n\n### 中间 2 解决方案:\n\n```c\n#include\
+    \ <stdio.h>\n\n// #7-1\nvoid swap_values(int *a, int *b) {\n    int temp = *a;\n\
+    \    *a = *b;\n    *b = temp;\n}\n\n// #7-2\nint string_length_pointer(char *str)\
+    \ {\n    int len = 0;\n    while (*str++) {\n        len++;\n    }\n    return\
+    \ len;\n}\n\n// #7-3\nvoid reverse_string_pointer(char *str) {\n    char *start\
+    \ = str;\n    char *end = str + string_length_pointer(str) - 1;\n    while (start\
+    \ < end) {\n        swap_values(start, end);\n        start++;\n        end--;\n\
+    \    }\n}\n\n// #7-4\nint sum_array_pointer(int *arr, int len) {\n    int sum\
+    \ = 0;\n    int *end = arr + len;\n    while (arr < end) {\n        sum += *arr++;\n\
+    \    }\n    return sum;\n}\n\n// #7-5\nvoid sort_array_pointer(int *arr, int len)\
+    \ {\n    for (int i = 0; i < len - 1; i++) {\n        for (int j = i + 1; j <\
+    \ len; j++) {\n            if (*(arr + i) > *(arr + j)) {\n                swap_values(arr\
+    \ + i, arr + j);\n            }\n        }\n    }\n}\n\nint main() {\n    // #7-1\
+    \ Test\n    int x = 5, y = 8;\n    printf(\"Before swap: x = %d, y = %d\\n\",\
+    \ x, y);\n    swap_values(&x, &y);\n    printf(\"After swap: x = %d, y = %d\\\
+    n\", x, y);\n    // #7-2 Test\n    char str1[] = \"OpenAI\";\n    printf(\"Length\
+    \ of '%s': %d\\n\", str1, string_length_pointer(str1));\n    // #7-3 Test\n  \
+    \  char str2[] = \"Programming\";\n    reverse_string_pointer(str2);\n    printf(\"\
+    Reversed string: %s\\n\", str2);\n    // #7-4 Test\n    int arr1[] = {1, 2, 3,\
+    \ 4, 5};\n    printf(\"Sum of array: %d\\n\", sum_array_pointer(arr1, 5));\n \
+    \   // #7-5 Test\n    int arr2[] = {5, 12, 45, 2, 9};\n    sort_array_pointer(arr2,\
+    \ 5);\n    printf(\"Sorted array: \");\n    for (int i = 0; i < 5; i++) {\n  \
+    \      printf(\"%d \", arr2[i]);\n    }\n    printf(\"\\n\");\n}\n```\n\n### 中间\
+    \ 2 输出:\n\n#7-1\nBefore swap: x = 5, y = 8\nAfter swap: x = 8, y = 5\n\n#7-2\n\
+    Length of 'OpenAI': 6\n\n#7-3\nReversed string: gnimmargP\n\n#7-4\nSum of array:\
+    \ 15\n\n#7-5\nSorted array: 2 5 9 12 45\n\n### 中间 3 解决方案:\n\n```c\n#include <stdio.h>\n\
+    #include <stdbool.h>\n\n// #8-1\nint fibonacci(int n) {\n    if (n <= 1) return\
+    \ n;\n    return fibonacci(n-1) + fibonacci(n-2);\n}\n\n// #8-2\nint binary_search(int\
+    \ arr[], int l, int r, int x) {\n    if (r >= l) {\n        int mid = l + (r -\
+    \ l) / 2;\n        if (arr[mid] == x) return mid;\n        if (arr[mid] > x) return\
+    \ binary_search(arr, l, mid-1, x);\n        return binary_search(arr, mid+1, r,\
+    \ x);\n    }\n    return -1;\n}\n\n// #8-3\ndouble power(double base, int exponent)\
+    \ {\n    if (exponent == 0) return 1;\n    else if (exponent < 0) return 1 / power(base,\
+    \ -exponent);\n    return base * power(base, exponent-1);\n}\n\n// #8-4\nbool\
+    \ is_prime(int n) {\n    if (n <= 1) return false;\n    for (int i = 2; i * i\
+    \ <= n; i++) {\n        if (n % i == 0) return false;\n    }\n    return true;\n\
+    }\n\nvoid print_primes_to_n(int n) {\n    for (int i = 2; i <= n; i++) {\n   \
+    \     if (is_prime(i)) printf(\"%d \", i);\n    }\n    printf(\"\\n\");\n}\n\n\
+    // #8-5\nint gcd(int a, int b) {\n    if (b == 0) return a;\n    return gcd(b,\
+    \ a % b);\n}\n\nint main() {\n    // #8-1 Test\n    int n = 9;\n    printf(\"\
+    Fibonacci number at position %d: %d\\n\", n, fibonacci(n));\n    // #8-2 Test\n\
+    \    int arr[] = {2, 3, 4, 10, 40};\n    int x = 10;\n    int result = binary_search(arr,\
+    \ 0, 4, x);\n    if (result == -1) printf(\"Element not present in array\\n\"\
+    );\n    else printf(\"Element %d is present at index %d\\n\", x, result);\n  \
+    \  // #8-3 Test\n    double base = 2.0;\n    int exponent = -3;\n    printf(\"\
+    %.2lf raised to the power %d is %.2lf\\n\", base, exponent, power(base, exponent));\n\
+    \    // #8-4 Test\n    int limit = 50;\n    printf(\"Prime numbers up to %d: \"\
+    , limit);\n    print_primes_to_n(limit);\n    // #8-5 Test\n    int num1 = 56,\
+    \ num2 = 98;\n    printf(\"GCD of %d and %d is %d\\n\", num1, num2, gcd(num1,\
+    \ num2));\n    return 0;\n}\n```\n\n### 中间 3 输出:\n\n#8-1\nFibonacci number at\
+    \ position 9: 34\n\n#8-2\nElement 10 is present at index 3\n\n#8-3\n2.00 raised\
+    \ to the power -3 is 0.12\n\n#8-4\nPrime numbers up to 50: 2 3 5 7 11 13 17 19\
+    \ 23 29 31 37 41 43 47\n\n#8-5\nGCD of 56 and 98 is 14\n\n### 中间 4 解决方案:\n\n```c\n\
+    #include <stdio.h>\n\n// #9-1\ntypedef struct {\n    float real;\n    float imag;\n\
+    } Complex;\n\nComplex add(Complex a, Complex b) {\n    Complex result;\n    result.real\
+    \ = a.real + b.real;\n    result.imag = a.imag + b.imag;\n    return result;\n\
+    }\n\nComplex subtract(Complex a, Complex b) {\n    Complex result;\n    result.real\
+    \ = a.real - b.real;\n    result.imag = a.imag - b.imag;\n    return result;\n\
+    }\n\nComplex multiply(Complex a, Complex b) {\n    Complex result;\n    result.real\
+    \ = a.real * b.real - a.imag * b.imag;\n    result.imag = a.real * b.imag + a.imag\
+    \ * b.real;\n    return result;\n}\n\nComplex divide(Complex a, Complex b) {\n\
+    \    float denominator = b.real * b.real + b.imag * b.imag;\n    Complex result;\n\
+    \    result.real = (a.real * b.real + a.imag * b.imag) / denominator;\n    result.imag\
+    \ = (a.imag * b.real - a.real * b.imag) / denominator;\n    return result;\n}\n\
+    \n// #9-2\ntypedef struct {\n    int day;\n    int month;\n    int year;\n} Date;\n\
+    \nint differenceBetweenDates(Date d1, Date d2) {\n    // Simplified logic for\
+    \ demonstration\n    return (d2.year - d1.year) * 365 + (d2.month - d1.month)\
+    \ * 30 + (d2.day - d1.day);\n}\n\n// #9-3\ntypedef struct {\n    char name[50];\n\
+    \    float marks[3];\n} Student;\n\nfloat averageMarks(Student s) {\n    float\
+    \ sum = 0;\n    for (int i = 0; i < 3; i++) {\n        sum += s.marks[i];\n  \
+    \  }\n    return sum / 3.0;\n}\n\n// #9-4\ntypedef struct {\n    int id;\n   \
+    \ char title[100];\n    char author[50];\n    float price;\n} Book;\n\nvoid displayBookInfo(Book\
+    \ b) {\n    printf(\"ID: %d\\nTitle: %s\\nAuthor: %s\\nPrice: %.2f\\n\", b.id,\
+    \ b.title, b.author, b.price);\n}\n\nint main() {\n    // Test cases for each\
+    \ part will be here\n    // #9-1 Test\n    Complex c1 = {2.0, 3.0};\n    Complex\
+    \ c2 = {1.0, 2.0};\n    Complex sum = add(c1, c2);\n    printf(\"#9-1\\nSum: %f\
+    \ + %fi\\n\", sum.real, sum.imag);\n\n    // #9-2 Test\n    Date d1 = {1, 1, 2021};\n\
+    \    Date d2 = {2, 3, 2021};\n    printf(\"\\n#9-2\\nDifference between dates\
+    \ 01/01/2021 and 02/03/2021: %d days\\n\", differenceBetweenDates(d1, d2));\n\n\
+    \    // #9-3 Test\n    Student john = {\"John\", {80.0, 75.5, 79.5}};\n    printf(\"\
+    \\n#9-3\\nAverage marks for John: %.2f\\n\", averageMarks(john));\n\n    // #9-4\
+    \ Test\n    Book sampleBook = {101, \"The Great Book\", \"John Doe\", 19.99};\n\
+    \    printf(\"\\n#9-4\\n\");\n    displayBookInfo(sampleBook);\n\n    // #9-5\
+    \ Test\n    Time t1 = {2, 30, 45};\n    Time t2 = {1, 20, 20};\n    Time sumTime\
+    \ = addTimes(t1, t2); // Note: addTimes needs to be defined\n    return 0;\n}\n\
+    ```\n*(注：由于提供的文本在 #9-5 处出现了 `Time` 类型和 `addTimes` 函数但在原始代码中未给出定义，上述翻译保留了原文的逻辑结构。)*"
+- fmt: "\n```c\nprintf(\"\\n#9-5\\nSum of times 2:30:45 and 1:20:20 is %d:%02d:%02d\\\
+    n\", sumTime.hours, sumTime.minutes, sumTime.seconds);\n\nreturn 0;\n\n}\n```\n\
+    \n## Intermediate 4 Output\n\n### #9-1\nSum: 3.000000 + 5.000000i\n\n### #9-2\n\
+    (Using the approximation method described in the code)\nDifference between dates\
+    \ 01/01/2021 and 02/03/2021: 63 days\n\n### #9-3\nAverage marks for John: 78.33\n\
+    \n### #9-4\nBook ID: 101\nTitle: The Great Book\nAuthor: John Doe\nPrice: 19.99\n\
+    \n### #9-5\nSum of times 2:30:45 and 1:20:20 is 3:51:05\n\n## Intermediate 5 Solutions\n\
+    \n```c\n#include <stdio.h>\n#include <string.h>\n\n// #10-1\nvoid createFileAndWrite()\
+    \ {\n    FILE *file;\n    char str[1000];\n    file = fopen(\"user_input.txt\"\
+    , \"w\");\n    if (file == NULL) {\n        printf(\"Unable to create file.\\\
+    n\");\n        return;\n    }\n    printf(\"Enter a string: \");\n    fgets(str,\
+    \ sizeof(str), stdin);\n    fputs(str, file);\n    fclose(file);\n}\n\n// #10-2\n\
+    void countFileContents() {\n    FILE *file;\n    char ch;\n    int lines = 0,\
+    \ words = 1, characters = 0;\n    file = fopen(\"user_input.txt\", \"r\");\n \
+    \   if (file == NULL) {\n        printf(\"Unable to open file.\\n\");\n      \
+    \  return;\n    }\n    while ((ch = fgetc(file)) != EOF) {\n        characters++;\n\
+    \        if (ch == '\\n' || ch == '\\0')\n            lines++;\n        if (ch\
+    \ == ' ' || ch == '\\t' || ch == '\\n' || ch == '\\0')\n            words++;\n\
+    \    }\n    fclose(file);\n    printf(\"Lines: %d\\nWords: %d\\nCharacters: %d\\\
+    n\", lines, words, characters);\n}\n\n// #10-3\nvoid copyFile() {\n    FILE *srcFile,\
+    \ *destFile;\n    char ch;\n    srcFile = fopen(\"user_input.txt\", \"r\");\n\
+    \    if (srcFile == NULL) {\n        printf(\"Unable to open source file to read.\\\
+    n\");\n        return;\n    }\n    destFile = fopen(\"copy.txt\", \"w\");\n  \
+    \  if (destFile == NULL) {\n        printf(\"Unable to open destination file to\
+    \ write.\\n\");\n        return;\n    }\n    ch = fgetc(srcFile);\n    while (ch\
+    \ != EOF) {\n        fputc(ch, destFile);\n        ch = fgetc(srcFile);\n    }\n\
+    \    printf(\"File own successfully.\\n\");\n    fclose(srcFile);\n    fclose(destFile);\n\
+    }\n\n// #10-4\nvoid mergeFiles() {\n    FILE *file1, *file2, *file3;\n    char\
+    \ ch;\n    file1 = fopen(\"file1.txt\", \"r\");\n    file2 = fopen(\"file2.txt\"\
+    , \"r\");\n    file3 = fopen(\"merged.txt\", \"w\");\n    if (file1 == NULL ||\
+    \ file2 == NULL || file3 == NULL) {\n        printf(\"Error in opening files.\\\
+    n\");\n        return;\n    }\n    while ((ch = fgetc(file1)) != EOF)\n      \
+    \  fputc(ch, file3);\n    while ((ch = fgetc(file2)) != EOF)\n        fputc(ch,\
+    \ file3);\n    printf(\"Merged file1.txt and file2.txt into merged.txt\\n\");\n\
+    \    fclose(file1);\n    fclose(file2);\n    fclose(file3);\n}\n\n// #10-5\nvoid\
+    \ displayLongestLine() {\n    FILE *file;\n    char line[1000], longestLine[1000]\
+    \ = \"\";\n    file = fopen(\"user_input.txt\", \"r\");\n    if (file == NULL)\
+    \ {\n        printf(\"Unable to open file.\\n\");\n        return;\n    }\n  \
+    \  while (fgets(line, sizeof(line), file) != NULL) {\n        if (strlen(line)\
+    \ > strlen(longestLine)) {\n            strcpy(longestLine, line);\n        }\n\
+    \    }\n    fclose(file);\n    printf(\"Longest Line: %s\", longestLine);\n}\n\
+    \nint main() {\n    // #10-1 Test\n    printf(\"#10-1\\n\");\n    createFileAndWrite();\n\
+    \    // #10-2 Test\n    printf(\"\\n#10-2\\n\");\n    countFileContents();\n \
+    \   // #10-3 Test\n    printf(\"\\n#10-3\\n\");\n    copyFile();\n    // #10-4\
+    \ Test\n    printf(\"\\n#10-4\\n\");\n    mergeFiles();\n    // #10-5 Test\n \
+    \   printf(\"\\n#10-5\\n\");\n    displayLongestLine();\n    return 0;\n}\n```\n\
+    \nFor `#10-1`, I assumed the user enters the string \"Hello, World! This is a\
+    \ sample string.\"\n\nFor `#10-2`, the counts are based on the above string. One\
+    \ newline character is counted for the end of the line.\n\nFor `#10-3`, the success\
+    \ message is displayed assuming no issues occurred during the copy process.\n\n\
+    For `#10-4`, the success message is displayed assuming `file1.txt` and `file2.txt`\
+    \ exist and have been merged into `merged.txt`.\n\nFor `#10-5`, the longest line\
+    \ is displayed assuming the longest line in `user_input.txt` is the same line\
+    \ entered in `#10-1`.\n\n## Intermediate 5 Output\n\n### #10-1\nEnter a string:\
+    \ Hello, World! This is a sample string.\n\n### #10-2\nLines: 1\nWords: 7\nCharacters:\
+    \ 40\n\n### #10-3\nFile copied successfully.\n\n### #10-4\nMerged file1.txt and\
+    \ file2.txt into merged.txt\n\n### #10-5\nLongest Line: Hello, World! This is\
+    \ a sample string.\n\nWe hope you are enjoying your recent purchase from Amazon!\
+    \ We wanted to take a moment to kindly remind you about the importance of leaving\
+    \ a review for the product you bought. Your feedback is incredibly valuable to\
+    \ us and other potential buyers.\n\nBy sharing your thoughts and experiences with\
+    \ the product, you help others make informed decisions. Your review can be a guiding\
+    \ light for fellow customers, ensuring they choose the best products for their\
+    \ needs.\n\nWe would greatly appreciate it if you could spare a few moments to\
+    \ write an honest review. Your feedback helps us improve our products and services,\
+    \ making it a win-win situation for everyone.\n\nThank you for being a valued\
+    \ customer and for considering writing a review. We truly appreciate your support.\n\
+    \nIntroducing my personal blog. Stay connected!\n\n[https://premiumbookself.wordpress.com/](\n\
+    \n![A qr code on a black background Description automatically generated](image_rsrc1SV.jpg)\n"
+  raw: 'printf("\n#9-5\nSum of times 2:30:45 and 1:20:20 is %d:%02d:%02d\n", sumTime.hours,
+    sumTime.minutes, sumTime.seconds);
+
+
+    return  0;
+
+
+    }
+
+
+    Intermediate 4 Output:
+
+
+    #9-1
+
+
+    Sum: 3.000000 + 5.000000i
+
+
+    #9-2
+
+
+    (Using the approximation method described in the code)
+
+
+    Difference between dates 01/01/2021 and 02/03/2021: 63 days
+
+
+    #9-3
+
+
+    Average marks for John: 78.33
+
+
+    #9-4
+
+
+    Book ID: 101
+
+
+    Title: The Great Book
+
+
+    Author: John Doe
+
+
+    Price: 19.99
+
+
+    #9-5
+
+
+    Sum of times 2:30:45 and 1:20:20 is 3:51:05
+
+
+    Intermediate 5 Solutions:
+
+
+    #include <stdio.h>
+
+
+    #include <string.h>
+
+
+    // #10-1
+
+
+    void  createFileAndWrite() {
+
+
+    FILE  *file;
+
+
+    char str[1000];
+
+
+    file = fopen("user_input.txt", "w");
+
+
+    if (file ==  NULL) {
+
+
+    printf("Unable to create file.\n");
+
+
+    return;
+
+
+    }
+
+
+    printf("Enter a string: ");
+
+
+    fgets(str, sizeof(str), stdin);
+
+
+    fputs(str, file);
+
+
+    fclose(file);
+
+
+    }
+
+
+    // #10-2
+
+
+    void  countFileContents() {
+
+
+    FILE  *file;
+
+
+    char ch;
+
+
+    int lines =  0, words =  1, characters =  0;
+
+
+    file = fopen("user_input.txt", "r");
+
+
+    if (file ==  NULL) {
+
+
+    printf("Unable to open file.\n");
+
+
+    return;
+
+
+    }
+
+
+    while ((ch = fgetc(file)) != EOF) {
+
+
+    characters++;
+
+
+    if (ch ==  ''\n''  || ch ==  ''\0'')
+
+
+    lines++;
+
+
+    if (ch ==  '' ''  || ch ==  ''\t''  || ch ==  ''\n''  || ch ==  ''\0'')
+
+
+    words++;
+
+
+    }
+
+
+    fclose(file);
+
+
+    printf("Lines: %d\nWords: %d\nCharacters: %d\n", lines, words, characters);
+
+
+    }
+
+
+    // #10-3
+
+
+    void  copyFile() {
+
+
+    FILE  *srcFile, *destFile;
+
+
+    char ch;
+
+
+    srcFile = fopen("user_input.txt", "r");
+
+
+    if (srcFile ==  NULL) {
+
+
+    printf("Unable to open source file to read.\n");
+
+
+    return;
+
+
+    }
+
+
+    destFile = fopen("copy.txt", "w");
+
+
+    if (destFile ==  NULL) {
+
+
+    printf("Unable to open destination file to write.\n");
+
+
+    return;
+
+
+    }
+
+
+    ch = fgetc(srcFile);
+
+
+    while (ch != EOF) {
+
+
+    fputc(ch, destFile);
+
+
+    ch = fgetc(srcFile);
+
+
+    }
+
+
+    printf("File copied successfully.\n");
+
+
+    fclose(srcFile);
+
+
+    fclose(destFile);
+
+
+    }
+
+
+    // #10-4
+
+
+    void  mergeFiles() {
+
+
+    FILE  *file1, *file2, *file3;
+
+
+    char ch;
+
+
+    file1 = fopen("file1.txt", "r");
+
+
+    file2 = fopen("file2.txt", "r");
+
+
+    file3 = fopen("merged.txt", "w");
+
+
+    if (file1 ==  NULL  || file2 ==  NULL  || file3 ==  NULL) {
+
+
+    printf("Error in opening files.\n");
+
+
+    return;
+
+
+    }
+
+
+    while ((ch = fgetc(file1)) != EOF)
+
+
+    fputc(ch, file3);
+
+
+    while ((ch = fgetc(file2)) != EOF)
+
+
+    fputc(ch, file3);
+
+
+    printf("Merged file1.txt and file2.txt into merged.txt\n");
+
+
+    fclose(file1);
+
+
+    fclose(file2);
+
+
+    fclose(file3);
+
+
+    }
+
+
+    // #10-5
+
+
+    void  displayLongestLine() {
+
+
+    FILE  *file;
+
+
+    char line[1000], longestLine[1000] =  "";
+
+
+    file = fopen("user_input.txt", "r");
+
+
+    if (file ==  NULL) {
+
+
+    printf("Unable to open file.\n");
+
+
+    return;
+
+
+    }
+
+
+    while (fgets(line, sizeof(line), file) !=  NULL) {
+
+
+    if (strlen(line) > strlen(longestLine)) {
+
+
+    strcpy(longestLine, line);
+
+
+    }
+
+
+    }
+
+
+    fclose(file);
+
+
+    printf("Longest Line: %s", longestLine);
+
+
+    }
+
+
+    int  main() {
+
+
+    // #10-1 Test
+
+
+    printf("#10-1\n");
+
+
+    createFileAndWrite();
+
+
+    // #10-2 Test
+
+
+    printf("\n#10-2\n");
+
+
+    countFileContents();
+
+
+    // #10-3 Test
+
+
+    printf("\n#10-3\n");
+
+
+    copyFile();
+
+
+    // #10-4 Test
+
+
+    printf("\n#10-4\n");
+
+
+    mergeFiles();
+
+
+    // #10-5 Test
+
+
+    printf("\n#10-5\n");
+
+
+    displayLongestLine();
+
+
+    return  0;
+
+
+    }
+
+
+    For #10-1, I assumed the user enters the string "Hello, World! This is a sample
+    string."
+
+
+    For #10-2, the counts are based on the above string. One newline character is
+    counted for the end of the line.
+
+
+    For #10-3, the success message is displayed assuming no issues occurred during
+    the copy process.
+
+
+    For #10-4, the success message is displayed assuming file1.txt and file2.txt exist
+    and have been merged successfully into merged.txt.
+
+
+    For #10-5, the longest line is displayed assuming the longest line in user_input.txt
+    is the same line entered in #10-1.
+
+
+    Intermediate 5 Output:
+
+
+    #10-1
+
+
+    Enter a string: Hello, World! This is a sample string.
+
+
+    #10-2
+
+
+    Lines: 1
+
+
+    Words: 7
+
+
+    Characters: 40
+
+
+    #10-3
+
+
+    File copied successfully.
+
+
+    #10-4
+
+
+    Merged file1.txt and file2.txt into merged.txt
+
+
+    #10-5
+
+
+    Longest Line: Hello, World! This is a sample string.
+
+
+    We hope you are enjoying your recent purchase from Amazon! We wanted to take a
+    moment to kindly remind you about the importance of leaving a review for the product
+    you bought. Your feedback is incredibly valuable to us and other potential buyers.
+
+
+    By sharing your thoughts and experiences with the product, you help others make
+    informed decisions. Your review can be a guiding light for fellow customers, ensuring
+    they choose the best products for their needs.
+
+
+    We would greatly appreciate it if you could spare a few moments to write an honest
+    review. Your feedback helps us improve our products and services, making it a
+    win-win situation for everyone.
+
+
+    Thank you for being a valued customer and for considering writing a review. We
+    truly appreciate your support.
+
+
+    Introducing my personal blog. Stay connected!
+
+
+    [https://premiumbookself.wordpress.com/](https://premiumbookself.wordpress.com/)
+
+
+    ![A qr code on a black background Description automatically generated](image_rsrc1SV.jpg)'
+  toc: []
+  trans: "\n\n```c\nprintf(\"\\n#9-5\\nSum of times 2:30:45 and 1:20:20 is %d:%02d:%02d\\\
+    n\", sumTime.hours, sumTime.minutes, sumTime.seconds);\n\nreturn 0;\n\n}\n```\n\
+    \n## Intermediate 4 输出\n\n### #9-1\n和: 3.000000 + 5.000000i\n\n### #9-2\n（使用代码中描述的近似方法）\n\
+    日期 01/01/2021 和 02/03/2021 之间的差：63 天\n\n### #9-3\nJohn 的平均分：78.33\n\n### #9-4\n\
+    书籍 ID: 101\n标题: The Great Book\n作者: John Doe\n价格: 19.99\n\n### #9-5\n时间 2:30:45\
+    \ 和 1:20:20 的和为 3:51:05\n\n## Intermediate 5 解答案\n\n```c\n#include <stdio.h>\n\
+    #include <string.h>\n\n// #10-1\nvoid createFileAndWrite() {\n    FILE *file;\n\
+    \    char str[1000];\n    file = fopen(\"user_input.txt\", \"w\");\n    if (file\
+    \ == NULL) {\n        printf(\"无法创建文件。\\n\");\n        return;\n    }\n    printf(\"\
+    Enter 一个字符串: \");\n    fgets(str, sizeof(str), stdin);\n    fputs(str, file);\n\
+    \    fclose(file);\n}\n\n// #10-2\nvoid countFileContents() {\n    FILE *file;\n\
+    \    char ch;\n    int lines = 0, words = 1, characters = 0;\n    file = fopen(\"\
+    user_input.txt\", \"r\");\n    if (file == NULL) {\n        printf(\"无法打开文件。\\\
+    n\");\n        return;\n    }\n    while ((ch = fgetc(file)) != EOF) {\n     \
+    \   characters++;\n        if (ch == '\\n' || ch == '\\0')\n            lines++;\n\
+    \        if (ch == ' ' || ch == '\\t' || ch == '\\n' || ch == '\\0')\n       \
+    \     words++;\n    }\n    fclose(file);\n    printf(\"Lines: %d\\nWords: %d\\\
+    nCharacters: %d\\n\", lines, words, characters);\n}\n\n// #10-3\nvoid copyFile()\
+    \ {\n    FILE *srcFile, *destFile;\n    char ch;\n    srcFile = fopen(\"user_input.txt\"\
+    , \"r\");\n    if (srcFile == NULL) {\n        printf(\"无法打开源文件进行读取。\\n\");\n\
+    \        return;\n    }\n    destFile = fopen(\"copy.txt\", \"w\");\n    if (destFile\
+    \ == NULL) {\n        printf(\"无法打开目标文件进行写入。\\n\");\n        return;\n    }\n\
+    \    ch = fgetc(srcFile);\n    while (ch != EOF) {\n        fputc(ch, destFile);\n\
+    \        ch = fgetc(srcFile);\n    }\n    printf(\"文件复制成功。\\n\");\n    fclose(srcFile);\n\
+    \    fclose(destFile);\n}\n\n// #10-4\nvoid mergeFiles() {\n    FILE *file1, *file2,\
+    \ *file3;\n    char ch;\n    file1 = fopen(\"file1.txt\", \"r\");\n    file2 =\
+    \ fopen(\"file2.txt\", \"r\");\n    file3 = fopen(\"merged.txt\", \"w\");\n  \
+    \  if (file1 == NULL || file2 == NULL || file3 == NULL) {\n        printf(\"打开文件出错。\\\
+    n\");\n        return;\n    }\n    while ((ch = fgetc(file1)) != EOF)\n      \
+    \  fputc(ch, file3);\n    while ((ch = fgetc(file2)) != EOF)\n        fputc(ch,\
+    \ file3);\n    printf(\"已将 file1.txt 和 file2.txt 合并到 merged.txt\\n\");\n    fclose(file1);\n\
+    \    fclose(file2);\n    fclose(file3);\n}\n\n// #10-5\nvoid displayLongestLine()\
+    \ {\n    FILE *file;\n    char line[1000], longestLine[1000] = \"\";\n    file\
+    \ = fopen(\"user_input.txt\", \"r\");\n    if (file == NULL) {\n        printf(\"\
+    无法打开文件。\\n\");\n        return;\n    }\n    while (fgets(line, sizeof(line), file)\
+    \ != NULL) {\n        if (strlen(line) > strlen(longestLine)) {\n            strcpy(longestLine,\
+    \ line);\n        }\n    }\n    fclose(file);\n    printf(\"Longest Line: %s\"\
+    , longestLine);\n}\n\nint main() {\n    // #10-1 测试\n    printf(\"#10-1\\n\");\n\
+    \    createFileAndWrite();\n    // #10-2 测试\n    printf(\"\\n#10-2\\n\");\n  \
+    \  countFileContents();\n    // #10-3 测试\n    printf(\"\\n#10-3\\n\");\n    copyFile();\n\
+    \    // #10-4 测试\n    printf(\"\\n#10-4\\n\");\n    mergeFiles();\n    // #10-5\
+    \ 测试\n    printf(\"\\n#10-5\\n\");\n    displayLongestLine();\n    return 0;\n\
+    }\n```\n\n对于 #10-1，我假设用户输入了 \"Hello, World! This is a sample string.\"\n\n对于 #10-2，计数是基于上述字符串。行末尾计算了一个换行字符。\n\
+    \n对于 #10-3，如果复制过程中没有出现问题，则显示成功消息。\n\n对于 #10-4，如果 `file1.txt` 和 `file2.txt` 存在并已合并到\
+    \ `merged.txt`，则显示成功消息。\n\n对于 #10-5，如果 `user_input.txt` 中最长的行是 #10-1 中输入的同一行，则会显示该行。\n\
+    \n## Intermediate 5 输出\n\n### #10-1\n输入一个字符串: Hello, World! This is a sample string.\n\
+    \n### #10-2\nLines: 1\nWords: 7\nCharacters: 40\n\n### #10-3\n文件复制成功。\n\n### #10-4\n\
+    已将 file1.txt 和 file2.txt 合并到 merged.txt\n\n### #10-5\nLongest Line: Hello, World!\
+    \ This is a sample string.\n\n我们希望您对在 Amazon 购买的商品满意！我们想借此机会提醒您，为您购买的产品留下评价很重要。您的反馈对我们以及其他潜在买家都至关重要。\n\
+    \n通过分享您对产品的看法和经验，您可以帮助他人做出决定。您的评价可以成为其他客户的指南，确保他们选择最适合自己的产品。\n\n如果您能抽几分钟写一条诚实的评价，我们将不胜感激。您的反馈有助于我们改进产品和服务，这对所有人来说都是双赢的。\n\
+    \n感谢您成为我们的价值客户，并考虑编写评价。我们非常感谢您的支持。\n\n介绍我的个人博客。保持联系！\n\n`premiumbookself.wordpress.com/`\n\
+    \n"
