@@ -333,6 +333,7 @@
 +   [C++ CUDA 编程：从基础到精通](docs/cuda-programming-with-cfrom-basics-to-expert-proficiency/README.md)
 +   [网络心理学：个体、社会与数字技术研究 (BPS 心理学教科书)](docs/cyberpsychology-the-study-of-individuals-society-and-digital/README.md)
 +   [C++ 数据类型、变量、运算符与控制结构：C++ 编程入门指南](docs/data-types-and-variables-operators-and-control-structures-in/README.md)
++   [David Chisnall Objective C 常用句手册 Pearson 2011](docs/david-chisnall-objective-c-phrasebook-pearson-2011/README.md)
 +   [E. Balaguruswamy 的 ANSI C 解决方案：第 8 版](docs/e-balaguruswamys-ansi-c-solutions-8th-edition/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
