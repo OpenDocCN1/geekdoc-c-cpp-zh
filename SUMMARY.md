@@ -284,6 +284,7 @@
 +   [Coding Interview Ninja：50 道带 Java 解决方案的编程题，面试实践指南](docs/coding-interview-ninja-50-coding-questions-with-java-solutio/README.md)
 +   [编程精通：C# 初学者及进阶指南，通往 C# 及其他领域的逐步进阶之路 - Python、Java、SQL 等](docs/coding-mastery-unlocking-c-for-beginners-and-beyond-a-step-b/README.md)
 +   [C++ 编程入门完整教程](docs/complete-tutorial-to-begin-programming-in-c/README.md)
++   [计算童话](docs/computational-fairy-tales/README.md)
 +   [C++ Concurrency In Action](docs/cpp-concur-act/README.md)
 +   [C++ 核心准则](docs/cpp-cr-gdln/README.md)
 +   [C++ FAQ Lite](docs/cpp-faq-lite/README.md)
