@@ -248,6 +248,7 @@
 +   [C#：一天内分步学习 C# 编程的实用中级指南（#2020 更新版 ｜高效计算机编程语言）](docs/c-the-practical-intermediates-guide-to-learn-c-programming-i/README.md)
 +   [C++：终极初学者指南！](docs/c-the-ultimate-beginners-guide/README.md)
 +   [C#：初学者指南 C# 编程，包含分步指导与实用示例](docs/c-the-ultimate-beginners-guide-to-c-programming-with-step-by/README.md)
++   [C++：学习 C++ 的终极快速课程（从基础到高级）（指南、C 编程、HTML、Javascript、编程、全部、互联网、编码、CSS、Java、PHP 书籍 2）](docs/c-the-ultimate-crash-course-to-learning-c-from-basics-to-adv/README.md)
 +   [C++：快速学习 C++ 和 SQL 编程终极指南（C 初学者指南、C语言编程、JAVA、编码、CSS、PHP）（编程、计算机语言、编码、HTML、Javascript、开发者书籍 1）](docs/c-the-ultimate-guide-to-learn-c-and-sql-programming-fast-c-f/README.md)
 +   [C++：快速精通 C 编程终极指南（初学者、编码、java、php、html、数据库）（编程、计算机语言第 1 册）](docs/c-the-ultimate-guide-to-master-c-programming-fast-beginners-/README.md)
 +   [C# 单元测试：NUnit、Moq 及进阶](docs/c-unit-testing-nunit-moq-and-beyond/README.md)
