@@ -1,0 +1,547 @@
+name: Contagious Architecture： Computation, Aesthetics, and Space (Technologies of
+  Lived Abstraction)
+name_cn: 传染性建筑：计算、美学与空间（生活抽象的技术）
+slug: contagious-architecture-computation-aesthetics-and-space-tec
+toc:
+- - '#'
+  - 传染性建筑：计算、美学与空间（生活抽象的技术）
+- - '##'
+  - 1.0.1 编写生命体
+- - '##'
+  - 二阶控制论与自生成系统
+- - '##'
+  - 向演化模型的转变
+- - '#'
+  - 怀特的过程形而上学
+- - '#'
+  - 哈曼的批判与算法对象
+- - '#'
+  - 诱惑与性质的概念
+- - '#'
+  - 重新评估怀特与哈曼
+- - '#'
+  - 结论：本体地位与计算
+- - '#'
+  - 怀特的过程形而上学
+- - '#'
+  - 哈曼的面向对象的形而学
+- - '#'
+  - 无限性的内在性
+- - '#'
+  - 算法对象与选择
+- - '#'
+  - 永恒对象的关系
+- - '#'
+  - 2 软扩展：拓扑控制与部分-拓扑性空间事件
+- - '##'
+  - 2.0 不变函数
+- - '##'
+  - 2.2 参数主义或深层关系性
+- - '##'
+  - 2.3 软性时间性（Soft temporalities）
+- - '##'
+  - 2.5 盲点：空间事件
+- - '##'
+  - 2.6 延展的整体拓扑学
+- - '##'
+  - 2.8 参数摄取
+- - '##'
+  - 局部拓扑模式与广泛的新颖性
+- - '##'
+  - 审美形式与过程的诞生
+- - '###'
+  - 软思维
+- - '###'
+  - 神经架构 vs. 内在性
+- - '###'
+  - 算法经验与转化
+- - '###'
+  - 3.0.1 神经建筑
+- - '###'
+  - 3.0.2 活跃式架构
+- - '###'
+  - 3.0.3 负性统摄（Negative prehension）
+- - '###'
+  - 3.1 控制论思维
+- - '###'
+  - 控制论系统与响应式架构
+- - '###'
+  - 动态对话 vs. 预编程
+- - '###'
+  - 思维架构
+- - '##'
+  - 3.2 生态思维
+- - '###'
+  - 3.3 交互思维
+- - '###'
+  - 技术认知本质（The Nature of Technocognition）
+- - '###'
+  - 延展表型与心灵架构（The Extended Phenotype and Mind Architecture）
+- - '###'
+  - 3.5 心软件（Mindware）与湿硬件（Wetware）
+- - '#'
+  - 术语表
+- - '###'
+  - 细胞自动机
+- - '###'
+  - 认知主义
+- - '###'
+  - 计算主义
+- - '###'
+  - 控制论，一阶
+- - '###'
+  - 数据
+- - '###'
+  - 涌现主义
+- - '###'
+  - 去肉化
+- - '###'
+  - Incomputable（不可计算的）
+- - '###'
+  - Infinitesimal calculus（无限微积分）
+- - '###'
+  - Information（信息）
+- - '###'
+  - Invariant function（不变函数）
+- - '###'
+  - Mereotopology（部分拓扑学）
+- - '###'
+  - Metamodeling（元建模）
+- - '###'
+  - Negative prehension（负性统摄）
+- - '###'
+  - Neuroarchitecture（神经建筑学）
+- - '###'
+  - Omega (Ω)
+- - '###'
+  - 后控制论控制 (Postcybernetic control)
+- - '###'
+  - 摄取 (Prehension)
+- - '###'
+  - 原概念主义 (Protoconceptualism)
+- - '###'
+  - 随机性 (Randomness)
+- - '###'
+  - 脚本 (Scripting)
+- - '###'
+  - 推测理性 (Speculative reason)
+- - '###'
+  - 图灵机 (Turing machine)
+- - '#'
+  - 无处计算
+- - '#'
+  - 湿硬件（Wetware）
+- - '#'
+  - 注释
+- - '##'
+  - 前言：奇异的形式主义
+- - '###'
+  - 元生物学 (Metabiology)
+- - '###'
+  - 生成算法与遗传演化
+- - '###'
+  - 本体论探究与历史
+- - '###'
+  - 混沌演化 (Chaosmosis) 与图谱学
+- - '#'
+  - 3 扫描隧道显微镜
+- - '#'
+  - 4 建筑的设计材料
+- - '#'
+  - 5 魏泽（Weiser）
+- - '#'
+  - 6 传播媒体
+- - '#'
+  - 7 关于智能建筑、智能家具和智能服装
+- - '#'
+  - 8 Alan Key 的工作
+- - '#'
+  - 9 人体工程学（Ergonomics）
+- - '#'
+  - 10 与 1990 年的小隔间不同
+- - '###'
+  - 11 安德鲁·皮柯基（Andrew Pickering）
+- - '###'
+  - 12 Peter M. Asaro
+- - '###'
+  - 13 稳态器（homeostat）
+- - '###'
+  - 14 对于阿什比来说
+- - '###'
+  - 15 詹姆斯（James James）
+- - '###'
+  - 16 汤普森（Evan Thompson）
+- - '###'
+  - 17 关于此主题
+- - '###'
+  - 18 词汇
+- - '#'
+  - 参考文献
+- - '#'
+  - 索引
+- - '#'
+  - 0 零下 (Subzero)
+- - '#'
+  - 1 进化 (Evolution)
+- - '#'
+  - 2 协同进化 (coevolution)
+- - '#'
+  - 3 神经进化 (neuroevolution)
+- - '#'
+  - 4 开放式 (open-ended)
+- - '#'
+  - 5 剥肉化 (Excarnation)
+- - '#'
+  - 6 延展心灵 (Extended mind)
+- - '#'
+  - 7 扩张 (Extension)
+- - '#'
+  - 8 软 (soft)
+- - '#'
+  - 9 广连续体 (Extensive continuum)
+- - '#'
+  - 10 额外空间 (Extraspace)
+- - '#'
+  - 11 谬误 (Fallacy)
+- - '#'
+  - 12 反馈 (Feedback)
+- - '#'
+  - 13 算法的 (algorithmic)
+- - '#'
+  - 14 连续的 (continuous)
+- - '#'
+  - 15 循环 (cycle)
+- - '#'
+  - 16 数字的 (digital)
+- - '#'
+  - 17 生成的 (enactive)
+- - '#'
+  - 18 交互 (interaction)
+- - '#'
+  - 19 交互式的 (interactive)
+- - '#'
+  - 20 环 (loop)
+- - '#'
+  - 21 神经反馈 (neurofeedback)
+- - '#'
+  - 22 本体论 (ontology)
+- - '#'
+  - 23 积极的 (positive)
+- - '#'
+  - 24 后控制论 (postcybernetic)
+- - '#'
+  - 25 实时 (real-time)
+- - '#'
+  - 26 响应的 (responsive)
+- - '#'
+  - 27 反馈向 (Feedbackward)
+- - '#'
+  - 28 前馈 (Feedforward)
+- - '#'
+  - 29 感觉 (Feeling)
+- - '#'
+  - 30 感觉思考 (feeling-thought)
+- - '#'
+  - 31 第一人称 (First-person)
+- - '#'
+  - 32 感知 (perception)
+- - '#'
+  - 33 折叠 (Fold)
+- - '#'
+  - 34 点折叠 (point-fold)
+- - '#'
+  - 35 形式主义 (Formalism)
+- - '#'
+  - 36 弗雷金，爱德华 (Fredkin, Edward)
+- - '#'
+  - 37 功能主义 (Functionalism)
+- - '#'
+  - 38 计算的 (computational)
+- - '#'
+  - 39 经验的 (empirical)
+- - '#'
+  - 40 延展的 (extended)
+- - '#'
+  - 41 机械的 (mechanical)
+- - '#'
+  - 42 模糊 (Fuzzy)
+- - '#'
+  - 43 算法 (algorithm)
+- - '#'
+  - 44 自动化 (automation)
+- - '#'
+  - 45 计算 (calculation)
+- - '#'
+  - 46 程度 (degree)
+- - '#'
+  - 47 逻辑 (logic)
+- - '#'
+  - 48 状态 (state)
+- - '#'
+  - 49 几何学 (Geometry)
+- - '#'
+  - 50 算法生成的 (algorithmically generated)
+- - '#'
+  - 51 永恒 (eternal)
+- - '#'
+  - 52 欧几里得的 (Euclidean)
+- - '#'
+  - 53 分数的 (fractional)
+- - '#'
+  - 54 拓扑的 (topological)
+- - '#'
+  - 55 白头德式的 (Whiteheadian)
+- - '#'
+  - 56 吉布森，詹姆斯·J. (Gibson, James J.)
+- - '#'
+  - 57 故障 (Glitch)
+- - '#'
+  - 58 哥德尔，库尔 (Gödel, Kurt)
+- - '#'
+  - 59 古尔德，斯蒂芬·杰伊 (Gould, Stephen Jay)
+- - '#'
+  - 60 图形用户界面 (GUI)
+- - '#'
+  - 61 增长 (Growth)
+- - '#'
+  - 62 盖塔利，费利克斯 (Guattari, Félix)
+- - '#'
+  - 63 哈迪德，扎哈 (Hadid, Zaha)
+- - '#'
+  - 64 汉森，马克 (Hansen, Mark)
+- - '#'
+  - 65 哈克，奥斯曼 (Haque)
+- - '#'
+  - 66 哈尔曼，格拉姆 (Graham)
+- - '#'
+  - 67 亨塞尔，米歇尔 (Hensel)
+- - '#'
+  - 68 稳态平衡 (Homeostatic)
+- - '#'
+  - 69 理想主义 (Idealism)
+- - '#'
+  - 70 抽象的 (abstract)
+- - '#'
+  - 71 神经的 (neural)
+- - '#'
+  - 72 神经学的 (neurological)
+- - '#'
+  - 73 拓扑的 (topological)
+- - '#'
+  - 74 内在性 (Immanence)
+- - '#'
+  - 75 直接性 (Immediacy)
+- - '#'
+  - 76 包含 (Inclusion)
+- - '#'
+  - 77 完备性 (Incompleteness)
+- - '#'
+  - 78 算法的 (algorithm)
+- - '#'
+  - 79 永恒对象 (eternal object)
+- - '#'
+  - 80 信息 (information)
+- - '#'
+  - 81 数量 (quantity)
+- - '#'
+  - 82 不计算性 (Incomputability)
+- - '#'
+  - 83 可计算的 (Computable)
+- - '#'
+  - 84 概率 (probability)
+- - '#'
+  - 85 实际 (actual)
+- - '#'
+  - 86 偶然的 (contingent)
+- - '#'
+  - 87 连续的
+- - '#'
+  - 88 离散的 (discrete)
+- - '#'
+  - 89 错误的 (false)
+- - '#'
+  - 90 不可计算 (incomputable)
+- - '#'
+  - 91 不定的 (indeterminate)
+- - '#'
+  - 92 极小的 (infinitesimal)
+- - '#'
+  - 93 不可数的 (nondumerable)
+- - '#'
+  - 94 模式的 (patternless)
+- - '#'
+  - 95 量子的 (quantic)
+- - '#'
+  - 96 随机的 (random)
+- - '#'
+  - 97 超验 (transcendental)
+- - '#'
+  - 98 算法信息论 (information theory)
+- - '#'
+  - 99 熵的 (entropic)
+- - '#'
+  - 100 不压缩的 (incompressible)
+- - '#'
+  - 101 过载 (overload)
+- - '#'
+  - 102 处理 (processing)
+- - '#'
+  - 103 声音的 (sonic)
+- - '#'
+  - 104 空间的 (spatial)
+- - '#'
+  - 105 理论 (theory)
+- - '#'
+  - 106 神经信息学 (Institute of Neuroinformatics)
+- - '#'
+  - 107 智能 (Intelligence)
+- - '#'
+  - 108 动物 (animal)
+- - '#'
+  - 109 人工的 (artificial)
+- - '#'
+  - 110 意识的 (conscious)
+- - '#'
+  - 111 嵌入 (embedded)
+- - '#'
+  - 112 经验的 (empirical)
+- - '#'
+  - 113 形式的 (formal)
+- - '#'
+  - 114 类的 (human)
+- - '#'
+  - 115 群体 (swarm)
+- - '#'
+  - 116 交互 (Interaction)
+- - '#'
+  - 117 界面 (Interface)
+- - '#'
+  - 118 图形用户界面 (GUI)
+- - '#'
+  - 119 不变函数 (Invariant function)
+- - '#'
+  - 120 詹姆斯，威廉 (James, William)
+- - '#'
+  - 121 杰里科，娜塔莉 (Jerijenko, Natalie)
+- - '#'
+  - 122 凯，艾伦 (Kay, Alan)
+- - '#'
+  - 123 科什内，贝罗 (Khoshne, Behro)
+- - '#'
+  - 124 基特勒，弗里德希 (Kittler)
+- - '#'
+  - 125 知识 (Knowledge)
+- - '#'
+  - 126 审美 (aesthetic)
+- - '#'
+  - 127 先验 (a priori)
+- - '#'
+  - 128 科学的 (scientific)
+- - '#'
+  - 129 传感器 (sensorotor)
+- - '#'
+  - 130 空间的 (spatial)
+- - '#'
+  - 131 库吉亚 (Kokugia)
+- - '#'
+  - 132 柯尔莫哥夫，安德烈 (Kolmogorov, Andrey)
+- - '#'
+  - 133 温特，斯坦福 (Winter, Sanford)
+- - '#'
+  - 134 尔瓦尼，哈雷什 (Lvani, Haresh)
+- - '#'
+  - 135 利奇，尼尔 (Leach, Neil)
+- - '#'
+  - 136 莱布尼茨，戈特弗里德·威廉 (Leibniz, Gottfried Wilhelm)
+- - '#'
+  - 137 线 (Line)
+- - '#'
+  - 138 点 (and point)
+- - '#'
+  - 139 林，格雷格 (Lynn, Greg)
+- - '#'
+  - 140 马伦斯 (Malentues)
+- - '#'
+  - 141 莫诺维奇，列夫 (Manovich, Lev)
+- - '#'
+  - 142 映射 (Mapping)
+- - '#'
+  - 143 认知 (cognitive)
+- - '#'
+  - 144 数字的 (digital)
+- - '#'
+  - 145 马塔里奇，玛雅 (Matarić, Maja)
+- - '#'
+  - 146 物质主义 (Materialism)
+- - '#'
+  - 147 肯定的 (affirmative)
+- - '#'
+  - 148 消除的 (eliminative)
+- - '#'
+  - 149 理想的 (ideal)
+- - '#'
+  - 150 物理的 (physical)
+- - '#'
+  - 151 物质性 (Materiality)
+- - '#'
+  - 152 数学 (Mathematics)
+- - '#'
+  - 153 矩阵 (Matrix)
+- - '#'
+  - 154 计算的 (computational)
+- - '#'
+  - 155 数字的 (digital)
+- - '#'
+  - 156 欧几里得的 (Euclidean)
+- - '#'
+  - 157 拓扑的 (topological)
+- - '#'
+  - 158 物质 (Matter)
+- - '#'
+  - 159 马图纳，亨伯托 (Maturana, Humberto)
+- - '#'
+  - 160 麦林，亚历克斯 (Mclean, Alex)
+- - '#'
+  - 161 媒体 (Media)
+- - '#'
+  - 162 媒介质 (Metamedium)
+- - '#'
+  - 163 艺术 (art)
+- - '#'
+  - 164 背景 (background)
+- - '#'
+  - 165 计算机 (computerized)
+- - '#'
+  - 166 内容 (content)
+- - '#'
+  - 167 数字的 (digital)
+- - '#'
+  - 168 生态 (ecology)
+- - '#'
+  - 169 交互式的 (interactive)
+- - '#'
+  - 170 旧的 (old)
+- - '#'
+  - 171 便携的 (portable)
+- - '#'
+  - 172 后媒体 (postmedia)
+- - '#'
+  - 173 社交的 (social)
+- - '#'
+  - 174 无处不在 (ubiquitous)
+- - '#'
+  - 175 通用的 (universal)
+- - '#'
+  - 176 门格斯，阿奇 (Menges, Achim)
+- - '#'
+  - 177 形形论 (Mereology)
+- - '#'
+  - 178 构形拓扑学 (Mereotopology)
+- - '#'
+  - 179 抽象的 (of abstraction)
+- - '#'
+  - 180 延伸 (of extension)
+- - '#'
+  - 181 元生物学 (Metabiology)
+- - '#'
+  - 182 元计算 (Metacomputation)

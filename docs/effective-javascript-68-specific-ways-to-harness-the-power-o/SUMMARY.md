@@ -1,0 +1,2 @@
++   [Effective JavaScript：利用 JavaScript  de 68 种特定方法（高效软件开发系列）](README.md)
++   [Effective JavaScript：利用 JavaScript  de 68 种特定方法（高效软件开发系列）](effective-javascript-68-specific-ways-to-harness-the-power-o_0.md)
