@@ -287,6 +287,7 @@
 +   [零基础编程入门指南：从零到大师：如何学习 Python、Java、SQL、C、C++、C#、HTML 和 CSS](docs/coding-for-absolute-beginners-from-zero-to-hero-how-to-learn/README.md)
 +   [初学者编程指南：从零开始 Python、Java、SQL、C、C++、C#、HTML 和 CSS 的逐步学习指南](docs/coding-for-beginners-a-step-by-step-guide-to-learn-python-ja/README.md)
 +   [初学者编程入门指南：适合全年龄段的基础编程](docs/coding-for-beginners-in-easy-steps-basic-programming-for-all/README.md)
++   [编码自由：黑客的伦理与美学](docs/coding-freedom-the-ethics-and-aesthetics-of-hacking-the-ethi/README.md)
 +   [趣味编程：通过游戏、动画和移动应用学习 C 编程](docs/coding-fun-learn-c-programming-with-games-animations-and-mob/README.md)
 +   [Python 编程：学习 Python 编程领域的初学者指南](docs/coding-in-python-a-comprehensive-beginners-guide-to-learn-th/README.md)
 +   [Coding Interview Ninja：50 道带 Java 解决方案的编程题，面试实践指南](docs/coding-interview-ninja-50-coding-questions-with-java-solutio/README.md)
