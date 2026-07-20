@@ -149,6 +149,7 @@
 +   [C++ 核心指南详解：现代 C++ 最佳实践](docs/c-core-guidelines-explained-best-practices-for-modern-c/README.md)
 +   [C++：速成课程 - 在 12 小时内学习 C 语言的终极初学者指南](docs/c-crash-course---the-ultimate-beginners-course-to-learning-c/README.md)
 +   [C++ 速成教程：入门指南](docs/c-crash-course-a-fast-paced-introduction-1/README.md)
++   [C# 设计模式精要：四人帮全部 23 种模式；包括 MVC 在内的 4 种额外模式；三层应用示例；易懂示例](docs/c-design-pattern-essentials-all-23-patterns-from-gang-of-fou/README.md)
 +   [C#：设计模式：日常编程问题的标准解决方案；适用于：游戏编程、系统管理、应用程序编程……及数据库系统（设计模式系列）](docs/c-design-patterns-the-easy-way-standard-solutions-for-everyd/README.md)
 +   [C++ 基础：全分级分步指南](docs/c-essentials-a-step-by-step-guide-for-all-levels/README.md)
 +   [C++ 初学者指南](docs/c-essentials-for-dummies/README.md)
