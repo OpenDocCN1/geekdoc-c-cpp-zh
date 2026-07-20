@@ -306,6 +306,7 @@
 +   [MATLAB 和 Python 中的有限元法计算框架](docs/computational-framework-for-the-finite-element-method-in-mat/README.md)
 +   [计算机图形学从零开始：程序员 3D 渲染入门指南](docs/computer-graphics-from-scratch-a-programmers-introduction-to/README.md)
 +   [C++ OpenGL 计算机图形编程指南](docs/computer-graphics-programming-in-opengl-using-c/README.md)
++   [C++ OpenGL 计算机图形编程，第三版](docs/computer-graphics-programming-in-opengl-using-c-third-editio/README.md)
 +   [计算机编程：4合1：SQL 初学者指南、C# 初学者指南、C# 中级指南、Kali Linux 黑实战，掌握编程与网络安全所需的一切](docs/computer-programming-4-books-in-1-sql-for-beginners-c-for-be/README.md)
 +   [计算机编程全书：初学者编码指南：从零学习 Python、Java、SQL、C、C++、C#、HTML 和 CSS 的分步指南](docs/computer-programming-all-in-onecoding-for-beginners-a-step-b/README.md)
 +   [零基础计算机编程入门指南：从基础到进阶快速上手学习 Python、Php、C++、C#、Html 和 Css、Java、Javascript 以及 SQL](docs/computer-programming-basics-for-absolute-beginners-learn-fro/README.md)
