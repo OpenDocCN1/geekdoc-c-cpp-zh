@@ -307,6 +307,7 @@
 +   [C++ OpenGL 计算机图形编程指南](docs/computer-graphics-programming-in-opengl-using-c/README.md)
 +   [零基础计算机编程入门指南：从基础到进阶快速上手学习 Python、Php、C++、C#、Html 和 Css、Java、Javascript 以及 SQL](docs/computer-programming-basics-for-absolute-beginners-learn-fro/README.md)
 +   [初学者计算机编程与网络安全：4合1：分步学习专业编程与数据保护的终极手册。本书包含：Python、Java、C++ 及网络安全](docs/computer-programming-for-beginners-and-cybersecurity-4-manus/README.md)
++   [计算机编程：即使是初学者也能掌握项目编程所需的完美技能最完整速成课程。学习并掌握最佳编程语言！](docs/computer-programming-the-most-complete-crash-course-for-lear/README.md)
 +   [自信的数据技能：掌握数据处理基础并助力你的职业发展 (自信系列)](docs/confident-data-skills-master-the-fundamentals-of-working-wit/README.md)
 +   [热爱编程者的非大学学历酷职业（无需大学的酷职业）](docs/cool-careers-without-college-for-people-who-love-coding-cool/README.md)
 +   [C++ Concurrency In Action](docs/cpp-concur-act/README.md)
