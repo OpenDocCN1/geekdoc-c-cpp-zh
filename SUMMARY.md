@@ -326,6 +326,7 @@
 +   [创建计算机游戏：设计并构建你自己的游戏](docs/create-computer-games-design-and-build-your-own-game/README.md)
 +   [自底向上的计算机科学](docs/csbu/README.md)
 +   [C++ CUDA 编程：从基础到精通](docs/cuda-programming-with-cfrom-basics-to-expert-proficiency/README.md)
++   [网络心理学：个体、社会与数字技术研究 (BPS 心理学教科书)](docs/cyberpsychology-the-study-of-individuals-society-and-digital/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
