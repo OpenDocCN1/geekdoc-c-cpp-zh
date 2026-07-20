@@ -249,6 +249,7 @@
 +   [CGI 编程 101：为万维网编程 Perl（第二版）](docs/cgi-programming-101-programming-perl-for-the-world-wide-web-/README.md)
 +   [ChatGPT 初学者指南：面向作家、程序员、企业和内容创者的最完整且易用的指南](docs/chatgpt-for-dummies-the-most-complete-and-easy-to-use-guide-/README.md)
 +   [时空之钥 (Boss 之战系列, #2)](docs/chrono-trigger-boss-fight-books-2/README.md)
++   [接近机器：技术狂热及其不满](docs/close-to-the-machine-technophilia-and-its-discontents/README.md)
 +   [C++ Concurrency In Action](docs/cpp-concur-act/README.md)
 +   [C++ 核心准则](docs/cpp-cr-gdln/README.md)
 +   [C++ FAQ Lite](docs/cpp-faq-lite/README.md)
