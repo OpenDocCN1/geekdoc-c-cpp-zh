@@ -303,6 +303,7 @@
 +   [计算童话](docs/computational-fairy-tales/README.md)
 +   [MATLAB 和 Python 中的有限元法计算框架](docs/computational-framework-for-the-finite-element-method-in-mat/README.md)
 +   [计算机图形学从零开始：程序员 3D 渲染入门指南](docs/computer-graphics-from-scratch-a-programmers-introduction-to/README.md)
++   [C++ OpenGL 计算机图形编程指南](docs/computer-graphics-programming-in-opengl-using-c/README.md)
 +   [零基础计算机编程入门指南：从基础到进阶快速上手学习 Python、Php、C++、C#、Html 和 Css、Java、Javascript 以及 SQL](docs/computer-programming-basics-for-absolute-beginners-learn-fro/README.md)
 +   [初学者计算机编程与网络安全：4合1：分步学习专业编程与数据保护的终极手册。本书包含：Python、Java、C++ 及网络安全](docs/computer-programming-for-beginners-and-cybersecurity-4-manus/README.md)
 +   [自信的数据技能：掌握数据处理基础并助力你的职业发展 (自信系列)](docs/confident-data-skills-master-the-fundamentals-of-working-wit/README.md)
