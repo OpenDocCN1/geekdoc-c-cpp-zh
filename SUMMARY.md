@@ -246,6 +246,7 @@
 +   [C# 单元测试：NUnit、Moq 及进阶](docs/c-unit-testing-nunit-moq-and-beyond/README.md)
 +   [C++14 常见问题解答](docs/c14-faqs/README.md)
 +   [面向程序员的 C++20：面向对象的自然方法，第 3 版](docs/c20-for-programmers-an-objects-natural-approach-3rd-edition/README.md)
++   [C++23 最佳实践：提升 C++ 的简单规则与具体行动项](docs/c23-best-practices-simple-rules-with-specific-action-items-f/README.md)
 +   [C#8 与 .NET Core 3.0 开发：构建稳健的 Web API、交互式 Web 应用，精通模式匹配并探索泛型和异步编程等高级特性。](docs/c8-and-net-core-30-development-build-robust-web-apis-interac/README.md)
 +   [Carbon 语言：C++ 的目标继任者](docs/carbon-programming-language-the-aimed-successor-of-c/README.md)
 +   [CGI 编程 101：为万维网编程 Perl（第二版）](docs/cgi-programming-101-programming-perl-for-the-world-wide-web-/README.md)
