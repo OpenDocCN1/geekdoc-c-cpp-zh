@@ -134,6 +134,7 @@
 +   [C#：成为 C# 大师（C# 编程语言、C# 教程、C# 编码、.NET、Visual Studio、C# 运算符、Python、Powershell、Javascript）](docs/c-become-a-master-in-c-c-programming-language-c-tutorial-c-c/README.md)
 +   [C++ 脑筋急转弯：锻炼你的思维](docs/c-brain-teasers-exercise-your-mind/README.md)
 +   [C# & C++：5本合1 - 从入门到高级的顶级编程课程 (2023)](docs/c-c-5-books-in-1---the-1-coding-course-from-beginner-to-adva/README.md)
++   [C、C++ 与 C# 入门指南，特版](docs/c-c-c-in-easy-steps-special-edition/README.md)
 +   [C# 速成教程：学习 C# 编程语言基础的初学者指南](docs/c-c-crash-course-beginners-course-to-learn-the-basics-of-c-p/README.md)
 +   [C++：8 小时学会 C++ 编程，初学者指南，快速学习编码](docs/c-c-programming-in-8-hours-for-beginners-learn-coding-fast/README.md)
 +   [C# & C++ 编程解锁指南：[7合1] 克服编程恐惧，精通游戏与移动/IoT 开发，从新手到专业人士的 IT 专家转型指南](docs/c-c-programming-unlocked-7-in-1-conquer-coding-fears-master-/README.md)
