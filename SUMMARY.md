@@ -351,6 +351,7 @@
 +   [C# 深度学习：. 与 Kelp.Net：终极 Kelp.Net 深度学习指南](docs/deep-learning-with-c-net-and-kelp-net-the-ultimate-kelp-net-/README.md)
 +   [C++ Arduino 防御性编程](docs/defensive-c-arduino-programming/README.md)
 +   [使用 Ember 2 构建出的 Web 应用](docs/deliver-audacious-web-apps-with-ember-2-for-sandi-frank/README.md)
++   [高质量自动化测试设计模式：高质量测试属性与最佳实践](docs/design-patterns-for-high-quality-automated-tests-high-qualit/README.md)
 +   [机器学习文档处理指南](docs/document-processing-using-machine-learning/README.md)
 +   [E. Balaguruswamy 的 ANSI C 解决方案：第 8 版](docs/e-balaguruswamys-ansi-c-solutions-8th-edition/README.md)
 +   [简单 C++ 编程指南：通过实战项目学习 C++ 编程的逐步指南](docs/easy-c-programming-guide-step-by-step-guide-to-learn-c-progr/README.md)
