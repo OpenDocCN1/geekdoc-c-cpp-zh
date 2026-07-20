@@ -318,6 +318,7 @@
 +   [Modern C++ 并发编程](docs/concurrency-with-modern-c/README.md)
 +   [自信的数据技能：掌握数据处理基础并助力你的职业发展 (自信系列)](docs/confident-data-skills-master-the-fundamentals-of-working-wit/README.md)
 +   [连接游戏：视频游戏制作能教给我们关于学习与素养的什么（约翰·D与凯瑟琳·T·麦阿瑟基金会数字媒体与学习系列）](docs/connected-gaming-what-making-video-games-can-teach-us-about-/README.md)
++   [持续交付：通过构建、测试和部署自动化实现可靠的软件发布](docs/continuous-delivery-reliable-software-releases-through-build/README.md)
 +   [热爱编程者的非大学学历酷职业（无需大学的酷职业）](docs/cool-careers-without-college-for-people-who-love-coding-cool/README.md)
 +   [酷信息图表：数据数据可视化与设计的有效沟通](docs/cool-infographics-effective-communication-with-data-visualiz/README.md)
 +   [C++ Concurrency In Action](docs/cpp-concur-act/README.md)
