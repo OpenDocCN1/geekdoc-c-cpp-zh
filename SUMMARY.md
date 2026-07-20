@@ -315,6 +315,7 @@
 +   [初学者计算机编程指南：本书包含 - Python、C++、Linux 入门指南以及 Kali Linux 黑客攻击。通过此合集循序渐进地学习编程](docs/computer-programming-for-beginners-this-book-includes---pyth/README.md)
 +   [计算机编程：即使是初学者也能掌握项目编程所需的完美技能最完整速成课程。学习并掌握最佳编程语言！](docs/computer-programming-the-most-complete-crash-course-for-lear/README.md)
 +   [编程语言概念与语义，2：基于 Ocaml、Python、C++、Ada 和 Java 的模块化与面向对象构建](docs/concepts-and-semantics-of-programming-languages-2-modular-an/README.md)
++   [Modern C++ 并发编程](docs/concurrency-with-modern-c/README.md)
 +   [自信的数据技能：掌握数据处理基础并助力你的职业发展 (自信系列)](docs/confident-data-skills-master-the-fundamentals-of-working-wit/README.md)
 +   [连接游戏：视频游戏制作能教给我们关于学习与素养的什么（约翰·D与凯瑟琳·T·麦阿瑟基金会数字媒体与学习系列）](docs/connected-gaming-what-making-video-games-can-teach-us-about-/README.md)
 +   [热爱编程者的非大学学历酷职业（无需大学的酷职业）](docs/cool-careers-without-college-for-people-who-love-coding-cool/README.md)
