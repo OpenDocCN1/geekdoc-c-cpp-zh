@@ -1,0 +1,1885 @@
+- "# CryENGINE 游戏编程指南\n\n\n\n![](img/cover.jpeg)\n\n![](img/index-1_1.jpg)\n\n\n\n\
+  \n\n\n\n\n\n\n\n\n\n## 致谢\n\n### 作者\nFilip Lundgren\nRuan Pearce-Authers\n\n###\
+  \ 项目协调员\nKranti Berde\n\n### 校对员\nDirk Manuel\nTerry Evans\nLindsey Thomas\n\n###\
+  \ 审核员\nChris Parthemos\nHendrik Polczynski\n\n### 索引员\nRoss Rothenstine\nRekha Nair\n\
+  \n### 采购编辑\n### 图形\nSam Wood\nRonak Dhruv\nAbhinash Sahu\n\n### 主技术编辑\nArun Nadar\n\
+  \n### 制作协调员\nAditi Gajjar\n\n### 技术编辑\nAdonia Jones\nAnusri Ramchandran\nRohit Kumar\
+  \ Singh\n\n### 封面制作\nAdonia Jones\n\n## 关于作者\n\n**Filip Lundgren** 是 Poppermost\
+  \ Production AB 的技术总监，在那里负责 `SNOW` —— 这是首款免费的开放世界滑雪游戏。Filip 自 2007 年 `Crysis 1 SDK`\
+  \ 发布以来一直使用 `CryENGINE`，并开发了如 `CryMono` 和 `CryENGINE` 工具箱等社区工具。\n\n编写本书是一次很棒的体验，许多\
+  \ `CryENGINE` 社区成员提供了帮助。非常感谢 `CryDev` 社区和我们的审核员提供的宝贵建议，这些建议帮助形成了现在的这本书。\n\n**Ruan\
+  \ Pearce-Authers** 是一位游戏程序员，目前任于 Crytek GmbH。\n\n2009 年，他开始管理 Crytek 的开发社区，并为 `CryENGINE`\
+  \ 用户提供技术支持。在此之前，他本人活跃于 `Crysis` 模社区，并为 Free SDK 制作了示例项目和额外工具。他共同开发了 `CryMono` 引擎扩展以为\
+  \ `CryENGINE` 引入对 `.NET` 的支持，以及专门用 `C#` 编写的 `Tanks` 游戏示例。目前，Ruan 在法兰克福担任 Crytek\
+  \ 获奖的、进入免费市场的作品 `Warface` 的开发团队成员。\n\n我想感谢我的家人、与我一起合作过一些奇妙侧项目的行业内朋友，以及我出色的女朋友 Iulia，感谢她在本书创作期间一直给予我的支持。\n\
+  \n## 关于审核员\n\n**Terry Evans** 是一位拥有犹他州大学学位的软件开发者。\n\n由于在 `Unix`、`Linux`、`Windows`、`OS/2`、`Mac\
+  \ OS X`、`iOS` 和 `Android` 上开发解决方案，他拥有丰富的背景，但在职业生涯中最喜欢开发游戏。他是 Entrada Interactive\
+  \ 的创始人也是目前的首席开发人员，该公司正在使用 `CryENGINE 3` 开发一款名为 `Miscreated` 的末日后多人生存游戏。访问 `MiscreatedGame.com`\
+  \ 了解有关他最新项目的更多信息。\n\n**Chris Parthemos** 是刚进入游戏开发领域的新人，但他曾为大型工作室的 AAA 游戏开发内容。他的教育背景包括南方德克萨斯大学公会学院的交互式开发硕士，重点是设计和脚本。\n\
+  \n**Hendrik Polczynski** 位来自德国的软件开发者。他从事软件工作已超过 10 年。他喜欢承担从行业自动化到 Web、UI 和游戏开发的各种不同领域。你可以在\
+  \ `github.com/hendrikp` 或他的 YouTube 频道找到他的开源项目。Hendrik 正在维护围绕 `CryDev` 社区和 `CryENGINE\
+  \ 3 FreeSDK` 的几个开源项目。当 Hendrik 不工作时，他正在攻读计算机科学与媒体应用的学士学位，或者协助 Entrada Interactive\
+  \ 开发 `Miscreated` —— 这是一部与你玩过的任何游戏都不同的末日后生存类 MMORPG。\n\n**Ross Rothenstine** 白天是行业软件工程师，晚上是业余游戏程序员。他在大学里声誉卓著，因为可以将任何主要的课程项目在结束时转变成一个可玩的游戏。他专注于游戏引擎架构以及复杂的子系统如何以优雅的方式出现以实现扩展性和健壮性。\n\
+  \n\n\n\n\n\n\n\n\n\n\n# 流程图 (Flowgraph)\n\nCryENGINE flowgraph 是一种强大的基于节点的可视化脚本系统，帮助开发人员快速原型化并创建特定关卡的逻辑，而无需处理复杂的代码库。\n\
+  \n在本章中，我们将：\n\n*   讨论流程图（flowgraphs）的概念\n*   创建新的流程图\n*   调试我们的流程图\n*   在 Lua、C#\
+  \ 和 C++ 中创建自定义流程图节点 (`flownode`)\n\n## 流程图的概念\n\n多年来，编写代码一直是创建游戏行为和逻辑的主要方法，甚至可以说是唯一的方法。让我们以一个关卡设计师为例，他正在为最新的游戏作品构建一个战斗区域。\n\
+  \n按照传统做法，该设计师必须要求程序员来为这个场景创建逻辑。这导致了几个问题：\n\n*   它造成了设计与实现之间的脱节\n*   程序员被迫花费本该由设计师负责的工作时间\n\
+  *   设计师对其/她的章节的运行效果没有即时反馈\n\n![](img/index-43_1.jpg)\n\n*使用流程图进行可视化脚本编程*\n\n这就是\
+  \ CryENGINE 的 `flowgraph`（通常被称为 `FG`）所解决的问题。\n\n它提供了一组 `flownodes`，最好将其视为方便的逻辑乐高积木，设计师可以利用它们拼凑出整个场景。不再需要向游戏代码团队提出请求；设计师可以立即实现他们的想法！我们稍后会详细讨论创建节点本身，但现在，让我们来看一些简单的流程图，这样你就可以迈出进入\
+  \ CryENGINE 游戏逻辑的第一步！\n\n## 打开流程图编辑器\n\n要开始，我们需要打开 Sandbox。Sandbox 包含了流程图编辑器作为其许多有用工具之一，可以通过\
+  \ `View` | `Open View Pane` 打开它。\n\n在打开流程图编辑器时，你应该始终加载了一个关卡，因为 `flowgraph`s 是关卡特有的。如果你忘记了如何创建新关卡，请翻回\
+  \ *第 1 章*，*引言与设置*！\n\n你刚刚访问了你的第一个 Sandbox 工具！你将看到一个带有许多子部分和功能的新窗口，但不要担心，让我们逐个解决它们吧。\n\
+  \n**[ 24 ]**\n\n![](img/index-44_1.png)\n\n*第 2 章*\n\n## 流程图编辑器浏览\n\n流程图以 XML 文件的格式保存在磁盘上，但可以由流程图编辑器解析和编辑，以便为游戏逻辑创建过程提供可视化界面。\n\
+  \n**[ 25 ]**\n\n![](img/index-45_1.png)\n\n*使用流程图进行可视化脚本编程*\n\n### 组件\n\n编辑器的此部分包含项目中的所有\
+  \ `flownodes`，并组织成整齐的类别。让我们快速查看一下，打开 `Misc` 文件夹。你会看到一组分配到类别的节点：`Terminology`（术语）。\n\
+  \n*   **Graph (图)**：指的是包含一组相互链接的节点的上下文。\n*   **Node (节点)**：这是类的可视化表示，可以从输入端口接收数据和事件，并通过其输出端口发送数据。它与图中的其他节点连接以创建逻辑。\n\
+  *   **Port (端口)**：这是函数的可视化表示。节点可以指定多个输入和输出端口，然后从它们发送或接收事件。\n\n### 组件类别\n\n你在这里可能缺少了标记为\
+  \ `Debug` 的节点；CryENGINE 为节点分配类别，以指示它们合适的使用位置。\n\n*   **Release (发布)**：此节点适用于生产环境。\n\
+  *   **Advanced (高级)**：虽然此节点适用于生产环境，但在某些情况下它可能有复杂的行为。\n*   **Debug (调试)**：此节点应仅用于内部测试。\n\
+  *   **Obsolete (废弃)**：不应使用此节点，且此节点在组件列表中可见。\n\n**[ 26 ]**\n\n![](img/index-46_1.png)\n\
+  \n![](img/index-46_2.png)\n\n*第 2 章*\n\n例如，当你处理一个打算向公众发布的关卡时，你可能不想意外包含任何 `Debug`\
+  \ 节点！我们可以通过 `View` | `Components` 在流程图编辑器内部启用或禁用前三个类的显示：\n\n### 流程图类型\n\n在创建新的流程图之前，我们想知道我们的目的与什么类型最相关。不同类型的流程图允许专门化，例如创建处理玩家用户界面布局和绘制的\
+  \ `UI graphs`。\n\n**[ 27 ]**\n\n*使用流程图进行可视化脚本编程* **AI Actions (AI 动作)**\n\n这些是你可以创建的流程图，用于将\
+  \ AI 行为封装成方便的节点，以便在其他地方复用。我们将在你学习 `人工智能` (`AI`) 后后讨论这些。\n\n**UI Actions (UI 动作)**\n\
+  \nCryENGINE 允许你通过 UI 事件系统使用流程图来编写用户界面和游戏内抬头显示器（HUD）。我们将在 *第 7 章*，*用户界面*中讨论这些。\n\n\
+  **Material FX (材质特效)**\n\nCryENGINE 支持设计师方便编辑的流程图，用于控制如何处理材质事件，例如，当附近被射击时，产生一个尘粒子并用一层灰尘遮挡玩家的屏幕。\n\
+  \n**FG Modules (FG 模块)**\n\n你可以将流程图封装成方便的模块，以便在不同情况下进行复用。我们稍后会详细描述这些。\n\n**Entities\
+  \ (实体)**\n\n这是我们在本章中花费大部分时间的地方！90% 的情况下，流程图会被分配给实体（也称为 `graph entity`），并且这发生在游戏世界中。\n\
+  \n**Prefabs (预制件)**\n\nCryENGINE 支持预制件，即将实体打包成单个文件的集合。预制件中的任何流程图将显示在此文件夹中。\n\n###\
+  \ 创建流程图\n\n现在我们对流程图编辑器的工作原理有了基本了解，让我们开始创建第一个流程图吧！你可以先关闭流程图编辑器。\n\n**[ 28 ]**\n\n\
+  ![](img/index-48_1.png)\n\n*第 2 章*\n\n## 流程图实体\n\n流程图实体是一种极其轻量的 CryENGINE 对象，用于不需要应用于特定实体的流程图。像所有实体一样，可以在\
+  \ Sandbox 的 `Rollbar` 中找到它。\n\n如果你不什么是实体，请跳过此节直到阅读 *第 3 章*，*创建和利用实体*。\n\n### 实例化\
+  \ FlowgraphEntity\n\n选择 `FlowgraphEntity`，然后双击视图或将其拖入。你现在会在 `Rollbar` 中看到一组全新的选项，包括实体参数，但对我们最重要的是\
+  \ `Entity:` `FlowgraphEntity` 部分。\n\n**[ 29 ]**\n\n![](img/index-49_1.png)\n\n*使用流程图进行可视化脚本编程*\n\
+  \n### 附加新流程图\n\n在 `Entity:` `FlowgraphEntity` 部分中，我们需要找到 `Flow Graph` 子部分，然后点击 `Create`\
+  \ 按钮：从这里，你将获得将流程图分配到组的选项。\n\n现在现在这样做并不真的重要，但它对于将相关的流程图分组很有用，特别是在处理较大的项目时。组用于为流程图创建结构，允许开发人员将不同的流程图分类到文件夹中。一旦完成，你应该看到流程图编辑器出现，背景上覆盖着的网格。我们现在可以开始创建逻辑了！\n\
+  \n## 向流程图中添加节点\n\n向新图添加节点的最简单方法浏览 `Components` 列表并拖入新节点。然而，如果你知道要添加的节点名称，这种方法并不高效。因此，你也可以在流程图编辑器内部使用\
+  \ `Q` 快捷键调出搜索功能，然后输入你想添加的节点名称。\n\n在我们的案例中，我们将从 `Misc:Start` 节点开始，这是一个在关卡加载或启动编辑器测试会议时触发其他事件的简单节点：\n\
+  \n**[ 30 ]**\n\n![](img/index-50_1.png)\n\n![](img/index-50_2.png)\n\n\n\n\n\n#\
+  \ 第 2 章\n\n## 输入和输出端口\n\n节点放置后，你将看到你的第一个节点输入和输出端口示例。在这种情况下，我们有两个输入值 `InGame` 和 `InEditor`，以及一个输出端口，在本例中方便地命名为\
+  \ `output`：输入端口用于向节点提供数据或触发事件，而输出端口则用于将数据和事件传递给图中的其他节点。在这个示例中，可以编辑 `Misc:Start`\
+  \ 节点来定义它实际在哪些游戏上下文中执行。可能你 own 了一些只想在编辑器（Editor）运行运行调试逻辑，这种情况下我们可以将 `InGame` 设置为\
+  \ false 或 0。\n\n## 端口类型\n\n为了指定端口处理什么类型的数据，我们需要知道端口类型。在 Flowgraph 编辑器中，我们可以通过颜色来判断端口的类型。\n\
+  \n以下是可用端口类型的列表：\n\n- **Void（空）**：用于不传递特定值的端口，但通过激活来发出信号。\n- **Int（整数）**：用于端口仅接收整数值。\n\
+  - **Float（浮点数）**：用于表示端口处理浮点值。\n\n**[ 31 ]**\n\n![](img/index-51_1.png)\n\n*Visual\
+  \ Scripting with Flowgraph*\n\n- **EntityId（实体 ID）**：表示端口期望一个实体标识符。（有关实体 ID 的更多信息，请参考*第\
+  \ 3 章：创建和利用自定义实体*）\n- **Vec3（三维向量）**：用于处理三维向量的端口。\n- **String（字符串）**：在此，端口期望一个字符串。\n\
+  - **Bool（布尔）**：用于端口期望 true 或 false 的布尔值。连接不同类型的端口将导致值的自动转换。\n\n## 目标实体\n\nFlownodes\
+  \ 可以包含一个目标实体，允许用户将当前关卡中的实体链接到 flownode。这对于旨在影响游戏世界中实体的节点非常有用，例如，截图所示，`Entity:GetPos`\
+  \ 节点获取指定实体的世界变换。\n\n我们也可以通过将 `EntityId` 输出端口连接到 `Choose Entity`（选择实体）端口来动态指定实体。\n\
+  \n将实体分配给支持该特性的节点有两种方法：\n\n- 通过将另一个 flownodes 的 `EntityId` 输出连接到 `Choose Entity`\
+  \ 输入\n- 通过右键点击 `Choose Entity` 输入并选择：\n    - **Assign selected entity（分配已选实体）**：将节点链接到编辑器视口中当前选中的实体\n\
+  \    - **Assign graph entity（分配图实体）**：将节点链接到该图表所分配的实体\n\n**[ 32 ]**\n\n![](img/index-52_1.png)\n\
+  \n![](img/index-52_2.png)\n\n*第 2 章*\n\n## 连接 flownodes\n\n单个 flownode 的功能有限；让我们连接两个，并构建一个真正的图表！\n\
+  \n为了演示，我们将使用 `Time:TimeOfDay` 节点：要像上一个截图所示在端口之间创建链接，只需点击输出端口，并按住鼠标键将光标拖动到输入端口。释放鼠标，连接就会建立！\n\
+  \n我们还修改了 `Time` 输入端口的值；输入端口可以通过输出端口提供数据，也可以直接在编辑器中编辑其值。要此操作，只需点击节点并查看 Flowgraph\
+  \ 编辑器中的 `Inputs`（输入）部分。从那里，你可以简单地编辑值：\n\n你还可以看到关于节点的价值信息：例如，在这里我们可以看到此节点用于设置一天的时间以及游戏中时间流逝的速度。\n\
+  \n**[ 33 ]**\n\n*Visual Scripting with Flowgraph* 完成此后，你现在可以关闭 Flowgraph 编辑器。Flowgraphs\
+  \ 不需要手动保存；它们会随关卡自动保存。\n\n尽管 flowgraphs 会随关卡保存，但经常使用 `File` | `Save` 手动保存是一个好习惯，以免丢失工作。\n\
+  \n## 测试我们的 flowgraph\n\n正如我们在上一章中学到的，使用 Sandbox 在 CryENGINE 中测试逻辑非常简单。只需按下 `Ctrl`\
+  \ + `G` 快捷键，观察你进入游戏模式。现在，当你这样做时，你应该看到关卡的照明和整体氛围发生了变化，因为你刚刚改变了时间！\n\n恭喜你，你刚刚迈出了使用\
+  \ CryENGINE 创建游戏的第一步！现在看起来并不多，但让我们这个图表多做一些事情。\n\n## 常用 flownode 概述\n\n为了让事情变得复杂一点，我们需要了解\
+  \ CryENGINE 默认为我们提供了哪些节点。\n\n## 构建时钟\n\n我们能够访问的最实用的节点之一（至少对于调试目的）是 `HUD:DisplayDebugMessage`\
+  \ 节点。它允许你在游戏窗口中显示信息，并可以选择带有超时时间。基于此，让我们根据之前学到的时间信息构建一个简单的调试时钟。\n\n`Time:TimeOfDay`\
+  \ 节点输出 CryENGINE 时间格式的当前时间，其定义为小时加上分钟除以 60。例如，下午 1:30 在 CryENGINE 时间中表示为 13.5。我们现在知道我们需要一些数学运算，所以是时候检查\
+  \ Math flownode 类别了。\n\n我们将做的第一件事是通过通过向下取整当前时间来获取小时。要执行此操作，放置 `Math:Floor`，然后连接\
+  \ `Time:TimeOfDay` 的输出到 `A`。\n\n**[ 34 ]**\n\n![](img/index-54_1.png)\n\n![](img/index-54_2.png)\n\
+  \n*第 2 章*\n\n进入游戏，你应该看到小时。然后我们需要从原始值中减去数值以获取分钟。要执行此操作，我们需要 `Math:Sub` 从原始值中减去。之后，`Math:Mul`\
+  \ 节点将新时间放大 60，所以你的图表应该是这样的：\n\n**[ 35 ]**\n\n![](img/index-55_1.png)\n\n*Visual\
+  \ Scripting with Flowgraph*\n\n## 监听玩家输入\n\n如果现在我们想允许玩家测试不同的时间呢？通常情况下，这是设置按键监听最简单的方法，我们在按下特定键时触发事件。CryENGINE\
+  \ 经常将此功能很好地封装在一个节点中，即 `Input:Key`。\n\n让我们现在设置，使得按下 `P` 键会让时间移动得极快，而再次按下 `O` 则会让它停止。`Input:Key`\
+  \ 节点是一个调试节点。在生产环境中使用调试节点通常被认为是坏习惯，因为可能会出现意外结果，所以请不要将此节点用于实际游戏逻辑\n\n我们需要设置 `Time:TimeOfDay`\
+  \ 节点的 `Speed` 值，但在这种情况下，我们还需要输入两个值！我们使用两个键节点调用 `Math:SetNumber` 节点，然后 `Logic:Any`\
+  \ 节点会将信息传递给 `Time:TimeOfDay` 节点，同时调用 `SetSpeed`：进入游戏，按下 *P* 开始时间移动！再次按下 *O*，时间应该应该冻结。\n\
+  \n## 循环执行\n\n你可能注意到我们的时钟不再正确更新了。这是因为大多数节点在未被触发时不会输出数据；在这种情况下，如果不触发 `GetTime` 或 `SetTime`，我们将得任何输出。我们有两种调用它的方法：我们可以使用\
+  \ `Time:Time` 每每一帧执行一次，或者使用 `Time:Timer`。\n\n**[ 36 ]**\n\n![](img/index-56_1.png)\n\
+  \n\n\n\n后者可以控制 `tick` 的粒度，在这种情况下，我们可能希望它在快速移动时每帧都更新，所以让我们保持简单吧。将 `tick` 输出连接到我们的\
+  \ `GetTime` 输入，我们的时钟应该就能再次正确更新了！\n\n## Flowgraph 模块\n\n流程图模块系统允许将流程图导出为模块，该模块可以从另一个图表触发。\n\
+  \n通过创建模块，我们可以在多个关卡中复用逻辑，而无需维护多个版本的相同图表。我们还可以在模块之间发送和接收唯一数据，从而以非常模块化的方式实现动态逻辑。\n\n\
+  ### [ 37 ]\n\n![](img/index-57_1.jpg)\n\n![](img/index-57_2.png)\n\n*使用 Flowgraph\
+  \ 进行视觉化脚本*\n\n## 创建模块\n\n要开始创建你自己的模块，打开 Flowgraph 编辑器并选择 `File`（文件） | `New FG Module...`\
+  \ | `Global`：\n\n在生成的 `Save`（保存）对话框中，用你选择的名称保存模块。然后你将看到模块的默认视图：\n\n模块默认包含两个节点；`Module:Start_MyModule`\
+  \ 和 `Module:End_MyModule`。\n\n- `Module:Start_MyModule` 包含三个输出端口：\n    - `Start`：当模块被加载时被调用\n\
+  \n### [ 38 ]\n\n![](img/index-58_1.png)\n\n*第 2 章*\n\n    - `Update`：当模块应该更新时被调用\n\
+  \    - `Cancel`：当模块应该取消时被调用，它默认连接到 `Module:End_MyModule` 的 `Cancel` 输入\n- `Module:End_MyModule`\
+  \ 包含两个输入端口：\n    - `Success`：在完成模块时应该调用，并向调用者传递“成功”状态\n    - `Cancel`：用于提前结束模块，并向调用者传递“已取消”状态\n\
+  \n最后，为了为你的模块填充逻辑，只需将 `Start` 输出端口连接到你的逻辑节点即可。\n\n## 调用模块\n\n要调用已有的模块，在 Module 节点类别中找到相关节点。调用节点命名为\
+  \ `Module:Call_<ModuleName>`：然后只需触发 `Call` 端口即可激活你的模块，触发 `Cancel` 即可中止它。\n\n## 模块参数/端口\n\
+  \n从我们之前学到的，我们能够调用带有空端口的模块。这在所有情况下可能都不是最优的，因为你可能想向模块传递额外数据。\n\n### [ 39 ]\n\n![](img/index-59_1.png)\n\
+  \n![](img/index-59_2.jpg)\n\n*使用 Flowgraph 进行视觉化脚本*\n\n为了实现这一点，模块系统暴露了模块参数。通过在 Flowgraph\
+  \ 编辑器中选择 `Tools`（工具） | `Edit Module...`（编辑模块），我们可以为我们的模块添加一组参数：此操作将打开 `Module Ports`（模块端口）窗口，允许我们添加和删除端口：\n\
+  \n通过选择 `New Input`（输入）或 `New Output`（输出），我们将能够添加在激活模块可以使用的新端口。\n\n### [ 40 ]\n\n\
+  ![](img/index-60_1.png)\n\n![](img/index-60_2.png)\n\n![](img/index-60_3.png)\n\n\
+  *第 2 章*\n\n添加新的输入或输出会自动输出 `Module:Start_MyModule` 或 `Module:End_MyModule` 节点，允许你接收数据：所有\
+  \ `Module:Call_MyModule` 节点也会自动更新，让你立即访问新参数：\n\n## 自定义流程节点\n\n总结一下，CryENGINE 默认提供了许多实用的节点，涵盖了全范围的功能。然而，作为一名程序员，你经常会发现设计师会要求访问某些流程图默认无法提供的隐藏功能。\n\
+  \n例如，假设你正在创建一个一个角色扮演游戏，并且你拥有一套经验值系统。在你的编写的代码中，有很多方法可以奖励玩家经验值，但关卡设计师也希望能够在关卡中的任意点利用此功能。\n\
+  \n### [ 41 ]\n\n![](img/index-61_1.png)\n\n*使用 Flowgraph 进行视觉化脚本*\n\n在这种情况下，你非常适合创建一个自定义流程节点（flownode）；你可以为代码中存在的系统创建一个简化表示，也许允许设计师在节点被触发时只需指定要给玩家的经验值数量。\n\
+  \n不过，现在我们将查看一些简单一点的东西。假设我们没有现有的 CryENGINE 节点可以使用，并且我们想要实现之前看到的 `Math:Mul` 节点。回顾一下，它只是一个简单的节点。\n\
+  \n## 在 C++ 中创建自定义节点\n\n回到*第 1 章*，*引言与设置*，我们查看了编译和运行 `GameDLL`，在 Visual Studio 中名为\
+  \ `MiniGame.sln`。现在我们要创建一个运行时使用的 CryENGINE 实例。\n\n### 组织节点\n\nCryENGINE 的标准做法是在\
+  \ `GameDLL` 项目中有一个 `Nodes` 文件夹。如果不存在，请创建它。\n\n### [ 42 ]\n\n![](img/index-62_1.png)\n\
+  \n*第 2 章*\n\n### 创建新节点文件\n\n首先，我们包含了 `stdafx.h`；这为文件提供了常用功能和包含。之后，我们包含了第二个文件 `Nodes/GBaseNode.h`。虽然它不是一个\
+  \ CryENGINE 组件，但该文件被广泛使用。\n\n然后我们创建实际的类定义。我们继承自基类，并指定我们的节点是实例化的：\n\n```cpp\n#include\
+  \ \"stdafx.h\"\n#include \"Nodes/GBaseNode.h\"\n\nclass CTutorialNode : public CFlowNode<eInstanced>\n\
+  {\n};\n\nREGISTER_FLOW_NODE(\"Tutorial\", CTutorialNode);\n```\n\n### [ 43 ]\n\n\
+  *使用 Flowgraph 进行视觉化脚本*\n\n### 代码拆解\n\n对于我们正在创建的节点，我们不需要存储任何私有信息，因此只需在类的第一行使用修饰符将所有信息设为公共：\n\
+  \n```cpp\npublic:\n```\n\n然后我们开始实现两个函数，构造函数和 `Clone` 方法。我们在这些函数中不需要任何逻辑，因此实现非常简单；构造函数没有初始化任何内容，`Clone`\
+  \ 简单地返回当前节点的新实例：\n\n```cpp\nCTutorialNode(SActivationInfo *pActInfo)\n{\n}\n\nvirtual\
+  \ IFlowNodePtr Clone(SActivationInfo *pActInfo)\n{\n    return new CTutorialNode(pActInfo);\n\
+  }\n```\n\n### [ 44 ]\n\n*第 2 章*\n\n在这里，我们首次介绍了 `SActivationInfo`。这个结构体包含了节点的状态以及它所在的图的信息，我们稍后会用到。\n\
+  \n现在，我们的节点还需要三个函数才能通过编译：\n\n```cpp\nvirtual void ProcessEvent(EFlowEvent evt, SActivationInfo\
+  \ *pActInfo)\n{\n}\n\nvirtual void GetConfiguration(SFlowNodeConfig &config)\n{\n\
+  }\n\nvirtual void GetMemoryUsage(ICrySizer *s) const\n{\n    s->Add(*this);\n}\n\
+  ```\n\n`ProcessEvent` 是我们执行大部分节点逻辑的地方；该函数在我们的节点发生有趣事件时被调用，例如端口被触发时。\n\n\n\n\n`GetConfiguration`\
+  \ 控制节点的显示方式，以及它包含的输入端口和输出端口。`GetMemoryUsage` 不需要我们进行任何额外的实现，因此我们只需要为内存跟踪添加该节点的引用即可。\n\
+  \n现在，验证你的代码是否可以编译是一个很好的点；如果没有通过，请检查你是否正确声明了所有函数签名，并包含了相应的头文件。\n\n## 实现 GetConfiguration\n\
+  \n如前所述，`GetConfiguration` 是我们设置节点如何在 Flowgraph 编辑器中使用的的地方。首先，让我们设置一个枚举（enum）来描述我们的输入端口；我们将使用两个值，left（左）和\
+  \ right（右），以及一个用于触发计算的激活端口。在类内部声明它：`enum EInput`\n\n```cpp\nenum EInput\n{\n   \
+  \ EIP_Activate,\n    EIP_Left,\n    EIP_Right\n};\n```\n\n**[ 45 ]**\n\n*使用 Flowgraph\
+  \ 进行视觉化脚本* 当然，我们还需要为计算准备一个输出端口，因此也为它创建一个单值的枚举。虽然不是强制要求的，但保持一致是一个良好的习惯，而且大多数节点都会有多个输出：\n\
+  \n```cpp\nenum EOutput\n{\n    EOP_Result\n};\n```\n\n## 创建端口\n\n声明这些后，我们就可以开始构建我们的节点了。端口定义为\
+  \ `GetConfiguration` 中声明的常量静态数组中的项，并使用一些辅助函数进行构造，即用于特定类型值的 `InputPortConfig<T>`、允许所有值的\
+  \ `InputPortConfig_AnyType` 以及用于不使用数据端口的 `InputPortConfig_Void`。\n\n考虑到这些，我们知道除了两个\
+  \ float 泛型端口外，我们的触发输入还需要一个 void 输入。我们还时一个 float 输出。\n\n```cpp\nvirtual void GetConfiguration(SFlowNodeConfig\
+  \ &config)\n{\n    static const SInputPortConfig inputs[] =\n    {\n        InputPortConfig_Void(\"\
+  Activate\", \"触发计算\"),\n        InputPortConfig<float>(\"Left\", 0, \"计算的左侧\"),\n\
+  \        InputPortConfig<float>(\"Right\", 0, \"计算的右侧\"),\n        {0}\n    };\n\
+  }\n```\n\n如你所见，我们可以指定端口名称、描述，以及使用数据的端口的默认值。它们应该与我们之前声明的枚举顺序匹配。\n\n更改已使用节点的端口名称会破坏现有的图表。填充可选的\
+  \ `humanName` 参数来显示名称。\n\n**[ 46 ]**\n\n*第 2 章*\n\n现在我们重复该过程，但使用输出函数集：`static const\
+  \ SOutputPortConfig outputs[] =`\n\n```cpp\n{\n    OutputPortConfig<float>(\"Result\"\
+  , \"计算结果\"),\n    {0}\n};\n```\n\n## 将数组分配给节点配置\n\n遵循创建端口的过程，我们需要将这些数组分配给 `config`\
+  \ 参数，并提供描述和分类：`config.pInputPorts = inputs;`, `config.pOutputPorts = outputs;`,\
+  \ `config.sDescription = _HELP(\"两个数字相乘\");` `config.SetCategory(EFLN_APPROVED);`。\n\
+  \n如果你现在编译代码，节点在编辑器中应该是完全可见的。但正如你看到的，它现在什么都没做；要修复这个问题，我们必须实现 `ProcessEvent`！\n\n\
+  ## Flownode 配置标志\n\n`SFlowNodeConfig` 结构体允许你为 flownode 分配可选标志，如下：\n\n- `EFLN_TARGET_ENTITY`:\
+  \ 用于指示此节点应支持目标实体。要获取当前分配的目标实体，请查看 `SActivationInfo::pEntity`。\n- `EFLN_HIDE_UI`:\
+  \ 在流程图 UI 中隐藏该节点。\n- `EFLN_UNREMOVEABLE`: 禁用用户删除节点的能力。\n\n在 `GetConfiguration` 中添加标志（在此例中支持目标实体），只需将该标志添加到\
+  \ `nFlags` 变量中：\n\n`config.nFlags |= EFLN_TARGET_ENTITY;`\n\n**[ 47 ]**\n\n*使用 Flowgraph\
+  \ 进行视觉化脚本* **实现 ProcessEvent**\n\n`ProcessEvent` 是我们捕获节点所有有趣事件的地方，例如端口被触发。在我们的情况下，每当\
+  \ `Activate` 端口被触发时，都要执行计算，因此我们需要检查端口激活情况。不过，我们可以通过检查我们想要处理的事件来节省一些处理工作。\n\n```cpp\n\
+  virtual void ProcessEvent(EFlowEvent evt, SActivationInfo *pActInfo)\n{\n    switch\
+  \ (evt)\n    {\n        case eFE_Activate:\n        {\n        }\n        break;\n\
+  \    }\n}\n```\n\n通常你会处理多个一个事件，所以养成在此处使用 `switch` 语句的习惯是好的。\n\n在内部，让我们看看我们用于检查激活状态、检索数据并触发输出的各种\
+  \ flownode 函数：`if (IsPortActive(pActInfo, EIP_Activate))`\n\n```cpp\n    float left\
+  \ = GetPortFloat(pActInfo, EIP_Left);\n    float right = GetPortFloat(pActInfo,\
+  \ EIP_Right); \n    float answer = left * right;\n    ActivateOutput(pActInfo, EOP_Result,\
+  \ answer);\n}\n```\n\n总结来说，我们使用 `GetPort*` 函数通过各种端口类型来获取值，然后触发输出。\n\n**[ 48 ]**\n\
+  \n![](img/index-68)\n\n*第 2 章*\n\n现在现在是时候加载编辑器并测试了；如果一切顺利，你已经写好了 C++ 代码。\n\n## 在\
+  \ C# 中创建节点\n\nCryMono 也支持创建节点以免污染主命名空间。打开 `Scripts/GameCode.sln`，在 `flownodes` 文件夹创建一个新的\
+  \ `.cs` 文件：\n\n```csharp\nusing CryEngine.Flowgraph;\n\nnamespace GameCode.FlowNodes\n\
+  {\n    [FlowNode(Name = \"Multiplier\", Category = \"CSharp\", Filter = FlowNodeFilter.Approved)]\n\
+  \    public class TutorialNode : FlowNode\n    {\n    }\n}\n```\n\n**[ 49 ]**\n\n\
+  *使用 Flowgraph 进行视觉化脚本* 我们使用 `FlowNode` 类代替 `GetConfiguration` 来设置元数据，如类别和可见性。你的节点必须包含此属性并继承\
+  \ `FlowNode` 才能被 CryEngine 注册；不需要任何手动调用。\n\n记住属性可以在不带名称的情况下放置。例如，`FlowNodeAttribute`\
+  \ 可以作为 `[FlowNode]`。\n\n## 添加输入\n\n输入在 C# 中定义为函数，它们接受一个定义数据类型的参数，或者对于 void 端口不接受参数。它们还需要被\
+  \ `Port` 属性装饰。在我们的情况下，让我们设置与 C++ 版本中相同的三个输入：\n\n```csharp\n[Port]\npublic void Activate()\n\
+  {\n}\n\n[Port]\npublic void Left(float value)\n{\n}\n\n[Port]\npublic void Right(float\
+  \ value)\n{}\n```\n\n我们稍后来看 `Activate` 的实现。虽然你可以通过设置属性中的可选参数来覆盖端口名称，但简单的方法是让你的函数名称定义它在编辑器中的显示方式。\n\
+  \n## 添加输出\n\n输出存储为 `OutputPort` 或 `OutputPort<T>` 的实例（如果需要值的话）。让我们现在作为类的属性添加我们的\
+  \ `Result` 输出：\n\n```csharp\npublic OutputPort<float> Result { get; set; }\n```\n\
+  \n**[ 50 ]**\n\n![](img/index-70)\n\n## 实现 Activate\n\n让我们回到 `Activate` 输入；同样，我们需要检索我们的两个值并触发输出。`FlowNode`\
+  \ 类为这些操作提供了方便的函数：\n\n```csharp\nvar left = GetPortValue<float>(Left);\nvar right\
+  \ = GetPortValue<float>(Right);\nvar answer = left * right;\nResult.Activate(answer);\n\
+  ```\n\n\n\n\n就是这样！下次当你打开 Flowgraph 编辑器时，你会看到新的 `CSharpTutorial:Multiplier` 节点，它的功能与你之前实现的\
+  \ C++对应版本完全相同：\n\n再次祝贺你，你已经迈出了使用 .NET 平台和 CryENGINE 游戏代码的第一步！\n\n## 目标实体\n\n在 CryMono\
+  \ 中添加对目标实体（target entities）的支持很容易，只需将 `FlowNode` 属性中的 `TargetsEntity` 属性设置为 true\
+  \ 即可：\n\n```python\n[FlowNode(TargetsEntity = true)]\n```\n\n然后你就可以通过 `FlowNode.TargetEntity`\
+  \ 获取实体实例，假设它已经在包含该节点的流程图内部被赋值。\n\n## [ 51 ]\n\n### 使用 Flowgraph 进行视觉脚本 - 总结\n\n\
+  在本章中，我们学习了为什么流程图对于赋能设计师非常有用，并创建了自己的流程图。\n\n我们还研究了 CryENGINE 提供的一些现有节点，并用两种编程语言创建了我们自己的节点。你现在应该对流程图系统有了良好的理解，以及如何利用它来为自己服务。\n\
+  \n在未来的章节中，我们将将介绍流程图可以实现的一些额外功能，包括设计用户界面、实现材质效果、创建表示世界中实体的特殊节点（flownodes），以及将 AI\
+  \ 功能封装成方便的重用模块。\n\n现在，如果你想进一步探索流程图的世界，为什么不尝试研究如何实现更多的内置节点呢？熟悉编写 C++ 节点和 C# 节点之间的区别，看看你更偏好哪一种。\n\
+  \n如果你特别想尝试 CryMono，可以尝试在 Sandbox 运行时编辑并保存你的节点脚本；你可能会惊喜地发现，它们在后台被重新编译并重新加载了！这应该帮助你测试新的节点想法，而不会被编译时间和重启阻碍你的实验。\n\
+  \n## [ 52 ]\n\n### 创建和利用自定义实体\n\nCryENGINE 实体系统提供了创建从简单的物理对象到复杂的天气模拟管理器等一切内容。\n\n\
+  在本章中我们将：\n\n- 详细阐述实体系统的基本概念和实现\n- 使用 `Lua`、`C#` 和 `C++` 创建我们的第一个自定义实体\n- 学习游戏对象系统\n\
+  \n### 介绍实体系统\n\n实体系统的存在是为了在游戏世界生成和管理实体。实体是逻辑容器，允许在运行时发生巨大的行为改变。例如，实体可以在游戏的任何时候更改其模型、位置和朝向。\n\
+  \n考虑这一点；你在引擎中交互过的每一个物品、武器、车辆甚至玩家都是实体。实体系统是引擎中存在的最模块之一，程序员经常需要处理它。\n\n可以通过 `IEntitySystem`\
+  \ 接口访问实体系统，管理游戏中所有的实体。实体使用 `entityId` 类型定义进行引用，这允许在任何给定的时间内存在 65536 个唯一实体。\n\n如果实体被标记为删除，例如\
+  \ `IEntity::Remove(bool bNow = false)`，实体系统将在下一帧开始时的更新之前删除该实体。如果 `bNow` 参数设置为 true，则实体将立即被移除。\n\
+  \n### 创建和利用自定义实体 - 实体类\n\n实体仅仅是实体类的实例，由 `IEntityClass` 接口表示。每个实体类都分配了一个用于标识它的名称，例如\
+  \ `SpawnPoint`。\n\n这些类可以通过 `IEntityClassRegistry::RegisterClass` 注册，或者通过 `IEntityClassRegistry::RegisterStdClass`\
+  \ 使用默认的 `IEntityClass` 实现。\n\n### 实体\n\n`IEntity` 接口用于访问实体实现本身。\n\n`IEntity` 的核心实现包含在\
+  \ `CryEntitySystem.dll` 中，无法修改。相反，我们能够使用游戏对象扩展（请看本章中的游戏对象扩展章节）和自定义实体类来扩展实体。\n\n\
+  ### entityId\n\n每个实体实例都被分配了一个唯一标识符，该标识符在整个游戏会话期间有效。\n\n### EntityGUID\n\n除了 `entityId`\
+  \ 参数外，实体还被赋予全局唯一标识符，与 `entityId` 不同，它在保存游戏等情况下可以在不同的游戏会话之间持续。\n\n## 游戏对象\n\n当实体需要扩展功能时，它们可以使用游戏对象和游戏对象扩展。这允许任何实体共享一个更大的功能集。\n\
+  \n游戏对象允许处理实体到网络的绑定、序列化、每帧更新，以及利用现有（或创建新的）游戏对象扩展的能力，例如 `Inventory` 和 `AnimatedCharacter`。\n\
+  \n通常在 CryENGINE 开发中，游戏对象仅对于更重要的实体实现是必要的，如 actor。actor 系统将在*第 5 章，创建自定义 Actor* 中进行更深入的解释，以及\
+  \ `IActor` 游戏对象扩展。\n\n## [ 54 ]\n\n# 第 3 章\n\n## 实体池系统\n\n实体池系统允许对实体进行“池化”，从而有效地控制当前处理的实体。此系统通常通过流程图访问，并允许根据事件在运行时禁用/启用实体组。\n\
+  \n池也用于频繁创建和释放的实体，例如子弹。\n\n一旦实体被标记为由实体系统处理，默认情况下它会在游戏中被隐藏。在实体准备好之前，它不存在于游戏世界中。一旦实体不再需要，释放该实体也是理想的的。\n\
+  \n例如，如果你有一组 AI 只有在玩家到达定义的检查点触发器时才需要激活，可以使用 `AreaTrigger`（及其包含的 flownode）和 `Entity:EntityPool`\
+  \ flownode 来设置。\n\n### 创建自定义实体\n\n现在我们已经学习了实体系统的基础，是时候创建我们的第一个实体了。在这个练习中，我们将演示使用\
+  \ `Lua`、`C#` 和 `C++` 创建实体的能力。\n\n### 使用 Lua 创建实体\n\nLua 实体的设置非常简单，围绕着两个文件：实体定义和脚本本身。要创建一个\
+  \ Lua 实体，我们首先必须创建实体定义以告诉引擎脚本的位置：\n\n```xml\n<Entity\nName=\"MyLuaEntity\"\nScript=\"\
+  Scripts/Others/MyLuaEntity.lua\"\n/>\n```\n\n只需将此文件保存为 `Game/Entities/` 目录下的 `MyLuaEntity.ent`，引擎就会搜索\
+  \ `Scripts/Others/MyLuaEntity.lua`。\n\n现在我们可以开始创建脚本本身了！首先，在之前设置的路径创建脚本并添加一个与实体同名的空表：`MyLuaEntity\
+  \ = { }`\n\n## [ 55 ]\n\n![](img/index-75_1.png)\n\n### 创建和利用自定义实体\n\n解析脚本时，引擎执行的操作是搜索与实体名称相同的表，就像你在\
+  \ .ent 定义文件中定义的那样。这个主表用于存储变量、编辑器属性和其他信息。\n\n例如，我们可以通过添加字符串变量来添加自己的属性：\n\n```lua\n\
+  MyLuaEntity = {\n  Properties = {\n    myProperty = \"\",\n  },\n}\n```\n\n可以通过在\
+  \ `Properties` 表中添加子表创建属性类别。这对于组织非常有用。\n\n完成更改后，当你通过位于编辑器右侧的 `RollupBar` 生成类实例时，你应该看到下面的截图：\n\
+  \n## [ 56 ]\n\n# 第 3 章\n\n### 常用的 Lua 实体回调\n\n脚本系统提供了一组回调，可用于在实体事件发生时触发特定逻辑。例如，`OnInit`\
+  \ 函数在实体初始化时被调用：\n\n```lua\nfunction MyEntity:OnInit()\n\nend\n```\n\n### 使用 C# 创建实体\n\
+  \n\n\n\n第三方扩展 `CryMono` 允许在 .NET 中创建实体，这将引导我们演示如何在 C# 中创建我们自己的实体的能力。\n\n首先，打开 `Game/Scripts/Entities`\
+  \ 目录，并创建一个名为 `MyCSharpEntity.cs` 的新文件。该文件将包含我们的实体代码，并在引擎启动时运行时进行编译。\n\n现在，使用你喜欢的\
+  \ IDE 打开该脚本（`MyCSharpEntity.cs`）。我们将使用 Visual Studio 来提供 `IntelliSense`（智能感知）和代码高亮。\n\
+  \n打开后，让我们创建一个基础骨架实体。我们需要添加对 `CryEngine` 命名空间的引用，该空间存储了最常用的 `CryENGINE` 类型。\n\n```c\n\
+  using CryEngine;\n\nnamespace CryGameCode\n{\n\n[Entity]\n\npublic class MyCSharpEntity\
+  \ : Entity\n{\n\n\n\n\n\n}\n```\n\n**[ 57 ]**\n\n![](img/index-77_1.png)\n\n*创建和利用自定义实体*\n\
+  \n现在，保存文件并启动编辑器。你的实体现在应该出现在 `RollupBar`（折叠栏）的 `Default` 类别下。将 `MyEntity` 拖入视口中以将其生成：我们使用实体属性（`[Entity]`）作为一种为实体注册过程提供额外信息的方法，例如，使用\
+  \ `Category` 属性将导致使用自定义的编辑器类别，而不是 `Default`。\n\n```\n[Entity(Category = \"Others\"\
+  )]\n```\n\n### 添加编辑器属性\n\n编辑器属性允许关卡设计人员为实体提供参数，也许是为了指示触发区域的大小，或者指定实体的默认健康值。\n\n\
+  在 `CryMono` 中，可以通过为支持的类型（查看下方的代码片段）标记 `EditorProperty` 属性来实现。例如，如果我们要添加一个新的字符串属性：\n\
+  \n```csharp\n[EditorProperty]\n\npublic string MyProperty { get; set; }\n```\n\n\
+  现在，当你启动编辑器并将 `MyCSharpEntity` 拖入视口时，你应该能看到 `MyProperty` 出现在 `RollupBar` 的下部分。\n\n\
+  **[ 58 ]**\n\n![](img/index-78_1.png)\n\n*第 3 章*\n\nC# 中的 `MyProperty` 字符串变量会在用户通过编辑器编辑它时自动更新。记住，编辑器属性将随关卡一起保存，允许实体在纯游戏模式下也能使用关卡设计人员定义的编辑器属性。\n\
+  \n### 属性文件夹\n\n与 Lua 脚本一样，`CryMono` 实体也可以将编辑器属性放在文件夹中以达到组织目的。为了创建文件夹，你可以如所示利用 `EditorProperty`\
+  \ 属性的 `Folder` 属性：\n\n```csharp\n[EditorProperty(Folder = \"MyCategory\")]\n```\n\
+  \n你现在知道如何使用 `CryMono` 创建带有自定义编辑器属性的实体了！\n\n这在创建简单的游戏元素供关卡设计人员在运行时放置和修改时非常有用，而无需去寻找最近的程序员。\n\
+  \n**[ 59 ]**\n\n*创建和利用自定义实体* **在 C++ 中创建实体**\n\n在 C++ 中创建实体比使用 Lua 或 C# 创建稍微复杂一点，并且可以根据实体的需求以不同的方式完成。在本示例中，我们将详细介绍通过实现\
+  \ `IEntityClass` 来创建自定义实体类。\n\n### 创建自定义实体类\n\n实体类由 `IEntityClass` 接口表示，我们将派自它并通过\
+  \ `IEntityClassRegistry::RegisterClass(IEntityClass *pClass)` 其注册。\n\n首先，为我们的实体类创建头文件。在\
+  \ Visual Studio 中右键点击你的项目或其任何过滤器，并在右键菜单中选择 `添加` | `新建项`。\n\n在提示时创建你的头文件（`.h`）。我们将其命名为\
+  \ `CMyEntityClass`。\n\n现在，打开生成的 `MyEntityClass.h` 头文件，创建一个派自 `IEntityClass` 的新类：\n\
+  \n```cpp\n#include <IEntityClass.h>\n\nclass CMyEntityClass : public IEntityClass\n\
+  {\n\n};\n```\n\n现在我们已经设置好了类，我们需要实现从 `IEntityClass` 继承的纯虚方法，以便类成功编译。\n\n对于大多数方法，我们可以简单地返回空指针、零或空字符串。然而，有几个方法我们必须处理类才能正常工作：\n\
+  \n- `Release()`：当类应该释放时调用，应简单执行 `delete this;` 来销毁该类\n- `GetName()`：它应该返回类的名称\n\
+  - `GetEditorClassInfo()`：它应该返回 `ClassInfo` 结构体，其中包含给编辑器的编辑器类别、辅助程序和图标字符串\n- `SetEditorClassInfo()`：当需要更新刚才解释的编辑器类信息时调用\n\
+  \n**[ 60 ]**\n\n*第 3 章*\n\n`IEntityClass` 是实体类的最基本要求，尚不支持编辑器属性（我们稍后会进一步介绍这一点）。\n\
+  \n要注册实体类，我们需要调用 `IEntityClassRegistry::RegisterClasses`。这必须在 `CGameStartup` 中的 `IGameFramework::CompleteInit`\
+  \ 调用之前完成。我们将在 `GameFactory.cpp` 的 `InitGameFactory` 函数中执行：\n\n```cpp\nIEntityClassRegistry::SEntityClassDesc\
+  \ classDesc; classDesc.sName = \"MyEntityClass\";\n\nclassDesc.editorClassInfo.sCategory\
+  \ = \"MyCategory\"; IEntitySystem *pEntitySystem = gEnv->pEntitySystem; IEntityClassRegistry\
+  \ *pClassRegistry = pEntitySystem->GetClassRegistry();\n\nbool result = pClassRegistry->RegisterClass(new\
+  \ CEntityClass(classDesc));\n```\n\n### 实现属性处理器\n\n为了处理属性，我们需要通过一个新的 `IPropertyHandler`\
+  \ 实现来扩展我们的 `IEntityClass` 实现。\n\n属性处理器的实现如下所示。\n\n属性处理器负责属性的设置、获取和序列化。\n\n首先创建一个名为\
+  \ `MyPropertyHandler.h` 的头文件。\n\n以下是 `IPropertyHandler` 的基本实现。\n\n为了正确支持属性，你需要实现\
+  \ `LoadEntityProperties`（后者用于读取属性值）。\n\n然后创建一个派自 `IPropertyHandler` 的新类：\n\n```cpp\n\
+  class CMyPropertyHandler : public IPropertyHandler\n{\n\n};\n```\n\n**[ 61 ]**\n\
+  \n*创建和利用自定义实体* 为了让新类能够编译，你需要实现 `IPropertyHandler` 中定义的纯虚方法。对于属性处理器正常工作至关重要的方法如下所示：\n\
+  \n- `LoadEntityProperties`：当启动器加载关卡时调用，用于读取编辑器保存的实体属性值\n- `GetPropertyCount`：它应该返回注册到类的属性数量\n\
+  - `GetPropertyInfo`：用于获取指定索引的属性信息，最重要的是在编辑器获取属性时\n- `SetProperty`：用于设置实体的属性值\n-\
+  \ `GetProperty`：用于获取实体的属性值\n- `GetDefaultProperty`：用于检索指定索引的默认属性值\n\n要使用新的属性处理器，创建其实例（将请求的属性传递给构造函数），并在\
+  \ `IEntityClass::GetPropertyHandler()` 中返回新创建的处理器。\n\n我们现在有了一个基础实体类实现，它可以轻松扩展以支持编辑器属性。这种实现非常有可扩展性，可以用于许多用途，例如，后面看到的\
+  \ C# 脚本简单地自动化了这一过程，减轻了程序员的代码责任。\n\n### 流程节点 (flownodes)\n\n在前章节中，我们涵盖了流程图系统以及流程节点的创建。你可能注意到，在图内部右键点击时，上下文选项之一是\
+  \ `添加选中实体`。此功能允许你从关卡中选择一个实体，然后将其实体流程节点添加到图中。\n\n默认情况下，实体流程节点不包含任何端口，因此如右侧所示大部分没有用处。\n\
+  \n**[ 62 ]**\n\n![](img/index-82_1.png)\n\n\n\n\n![](img/index-82_2.png)\n\n# 第\
+  \ 3 章\n\n然而，我们可以轻松创建自己的实体流程节点 `flownode`，目标是我们在三种语言中选定的实体。\n\n## 在 Lua 中创建实体流程节点\n\
+  \n通过扩展我们在 *使用 Lua 创建实体* 节中创建的实体，我们可以为它添加它自己的实体流程节点：\n\n```lua\nfunction MyLuaEntity:Event_OnBooleanPort()\n\
+  \n  BroadcastEvent(self, \"MyBooleanOutput\"); end\n\nMyLuaEntity.FlowEvents =\n\
+  \n{\n  Inputs =\n  {\n    MyBooleanPort = { MyLuaEntity.Event_OnBooleanPort, \"\
+  bool\" },\n  },\n  Outputs =\n  {\n    MyBooleanOutput = \"bool\",\n  },\n}\n```\n\
+  \n我们刚刚为我们的 `MyLuaEntity` 类创建了一个实体流程节点。如果你启动编辑器，生成你的实体，选择它，然后在流程图中点击 **Add Selected\
+  \ Entity**（添加已选实体），你应该能看到该节点出现出现。\n\n**[ 63 ]**\n\n![](img/index-83_1.png)\n\n*创建和利用自定义实体*\n\
+  \n### 使用 C# 创建实体流程节点\n\n在 C# 中创建实体流程节点非常简单，因为它的实现与普通流程节点几乎完全相同。要为你的实体创建一个新的流程节点，只需继承自\
+  \ `EntityFlowNode<T>`，其中 `T` 是你的实体类名：\n\n```csharp\nusing CryEngine.Flowgraph;\n\
+  \npublic class MyEntity : Entity { }\npublic class MyEntityNode : EntityFlowNode<MyEntity>\n\
+  {\n  [Port]\n  public void Vec3Test(Vec3 input) { }\n  [Port]\n  public void FloatTest(float\
+  \ input) { }\n  [Port]\n  public void VoidTest()\n  {\n  }\n  [Port]\n  OutputPort<bool>\
+  \ BoolOutput { get; set; }\n}\n```\n\n我们刚刚在 C# 中创建了一个实体流程节点。这允许我们轻松地从上一节中学到的知识，并在新节点的逻辑中使用\
+  \ `TargetEntity`。\n\n**[ 64 ]**\n\n*第 3 章*\n\n### 在 C++ 中创建实体流程节点\n\n本节假设你已经阅读了第\
+  \ 2 章《使用 Flowgraph 进行视觉化脚本》中的 *在 C++ 中创建自定义节点* 节。\n\n简而言之，实体流程节点的实现与普通节点完全相同。区别在于节点注册的方式，以及实体支持\
+  \ `TargetEntity` 的前提条件（更多信息请参阅上一节）。\n\n#### 注册实体节点\n\n我们使用与之前相同的方法来注册实体节点，唯一的区别是类别必须是\
+  \ `entity`，且节点名称必须与其所属的实体相同：\n\n`REGISTER_FLOW_NODE(\"entity:MyCppEntity\", CMyEntityFlowNode);`\
+  \ **最终代码**\n\n最后，根据我们现在以及在上一节中学到的知识，我们可以轻松地在 C++ 中创建第一个实体流程节点：\n\n```cpp\n#include\
+  \ \"stdafx.h\"\n#include \"Nodes/G2FlowBaseNode.h\"\n\nclass CMyEntityFlowNode :\
+  \ public CFlowBaseNode<eNCT_Instanced>\n{\n  enum EInput\n  {\n    EIP_InputPort,\n\
+  \  };\n  enum EOutput\n  {\n    EOP_OutputPort\n  };\n\npublic:\n  CMyEntityFlowNode(SActivationInfo\
+  \ *pActInfo)\n  {\n  }\n  virtual IFlowNodePtr Clone(SActivationInfo *pActInfo)\n\
+  \  {\n    return new CMyEntityFlowNode(pActInfo);\n  }\n  virtual void ProcessEvent(EFlowEvent\
+  \ evt, SActivationInfo *pActInfo)\n  {\n  }\n  virtual void GetConfiguration(SFlowNodeConfig\
+  \ &config)\n  {\n    static const SInputPortConfig inputs[] =\n    {\n      InputPortConfig_Void(\"\
+  Input\", \"Our first input port\"),\n      {0}\n    };\n    static const SOutputPortConfig\
+  \ outputs[] =\n    {\n      OutputPortConfig_Void(\"Output\", \"Our first output\
+  \ port\"),\n      {0}\n    };\n    config.pInputPorts = inputs;\n    config.pOutputPorts\
+  \ = outputs;\n    config.sDescription = _HELP(\"Entity flow node sample\"); config.nFlags\
+  \ |= EFLN_TARGET_ENTITY;\n  }\n  virtual void GetMemoryUsage(ICrySizer *s) const\n\
+  \  {\n    s->Add(*this);\n  }\n};\n\nREGISTER_FLOW_NODE(\"entity:MyCppEntity\",\
+  \ CMyEntityFlowNode);\n```\n\n**[ 65 ]**\n\n*创建和利用自定义实体* **[ 66 ]**\n\n## 游戏对象\n\
+  \n正如章节开头提到的，当实体需要更高级的功能时，就会使用游戏对象（game objects），例如，如果实体需要绑定到网络上。\n\n实现游戏对象有两种方法：一种通过\
+  \ `IGameObjectSystem::RegisterExtension` 直接注册实体（从而在实体生成时自动创建游戏对象），另一种是利用 `IGameObjectSystem::CreateGameObjectForEntity`\
+  \ 方法在运行时为实体创建游戏对象。\n\n#### 游戏对象扩展\n\n可以通过创建扩展（extensions）来扩展游戏对象，这允许开发者挂钩许多实体和游戏对象的回调。例如，这就是\
+  \ Actor（角色）的默认实现方式，我们将在 *第 5 章* *创建自定义 Actor* 中涵盖这一内容。\n\n我们将使用 C++ 创建我们的游戏对象扩展。在本节早些时候创建的\
+  \ CryMono 实体之所以能够实现，得益于自定义的游戏对象扩展，目前无法通过 C# 或 Lua 创建此类扩展。\n\n##### 在 C++ 中创建游戏对象扩展\n\
+  \nCryEngine 提供了一个名为 `CGameObjectHelper` 的模板类用于创建游戏对象扩展。这个辅助类用于避免重复编写游戏对象所需的代码，例如基础的\
+  \ RMI 功能（我们将在第 8 章 *多人游戏与网络* 中介绍）。\n\n要正确实现 `IGameObjectExtension`，只需继承该模板类，并将第一个模板参数为你编写的类，第二个参数为\
+  \ `IGameObjectExtension`。\n\n**[ 67 ]**\n\n*创建和利用自定义实体* 通常第二个参数是 `IGameObjectExtension`，但对于特定的实现（如\
+  \ `IActor`），它可以不同。\n\n```cpp\nclass CMyGameObjectExtension : public CGameObjectHelper<CMyGameObjectExtension,\
+  \ IGameObjectExtension>\n{\n```\n\n来实现所有的纯虚函数。许多方法可以重写并返回 false，而更重要的方法如下：\n\n-\
+  \ `Init`: 用于初始化扩展。只需执行 `SetGameObject(pGameObject);` 并返回 `true`。\n- `NetSerialize`:\
+  \ 用于在网络上序列化内容。\n\n你还需要在一个新类中实现 `IGameObjectExtensionCreator`，作为扩展工厂。当扩展准备激活时，将调用工厂的\
+  \ `Create()` 方法来获取新的实例：\n\n```cpp\nstruct SMyGameObjectExtensionCreator : public\
+  \ IGameObjectExtensionCreator\n{\n  virtual IGameObjectExtension *Create() { return\
+  \ new CMyGameObjectExtension(); }\n  virtual void GetGameObjectExtensionRMIData(void\
+  \ **ppRMI, size_t *nCount) { return CMyGameObjectExtension::GetGameObjectExtensionRMIData(ppRMI,\
+  \ nCount); }\n};\n```\n\n**[ 68 ]**\n\n*第 3 章*\n\n现在你创建了游戏对象扩展实现以及游戏对象创建器，只需注册扩展：`static\
+  \ SMyGameObjectExtensionCreator creator;`\n`gEnv->pGameFramework->GetIGameObjectSystem()->RegisterExtension(\"\
+  MyGameObjectExtension\", &creator, myEntityClassDesc);`\n\n通过向 `IGameObjectSystem::RegisterExtension`\
+  \ 传递实体类描述，你是在让它为你创建一个实体类。如果你已经这样做了，只需将最后一个参数 `pEntityCls` 设置为 `NULL` 即可使用你之前注册的类。\n\
+  \n**激活我们的扩展**\n\n为了激活你的游戏对象扩展，你需要在实体生成后调用 `IGameObject::ActivateExtension`。一种方法是使用实体系统同步\
+  \ `IEntitySystemSink` 并监听 `OnSpawn` 事件。\n\n我们现在已经注册了自己的游戏对象扩展。当实体生成时，我们的实体系统同步的\
+  \ `OnSpawn` 方法将被调用，允许我们创建游戏对象扩展的实例。\n\n**总结**\n\n\n\n\n在本章中，我们学习了核心实体系统是如何实现和暴露的，并创建了我们自己的自定义实体。\n\
+  \n现在你应该已经熟悉了为实体创建伴随流节点（flownodes）的过程，并掌握了关于游戏对象及其扩展的相关性知识。\n\n在随后的章节中，我们将介绍现有的游戏对象扩展和实体实现，例如通过创建我们自己的参与者（actor）并实现基础人工智能（AI）。\n\
+  \n如果你想更深入地熟悉实体系统，为什么不尝试自己创建一个稍微复杂一点的实体呢？\n\n在下一章中，我们将介绍游戏规则系统。\n\n# [ 69 ]\n\n#\
+  \ 游戏规则 (Game Rules)\n\n参与者（Actors）和实体（entities）是游戏中不可或缺的组成，但游戏规则是将它们连接在一起的纽带。游戏规则系统管理所有的初始玩家事件，例如\
+  \ `OnConnect`、`OnDisconnect` 和 `OnEnteredGame`。\n\n使用游戏规则系统，我们可以创建自定义的游戏流程，以控制并将我们的游戏机制结合在一起。\n\
+  \n在本章中，我们将：\n\n- 学习游戏模式（game mode）的基本概念\n- 在 C++ 中创建我们的 `IGameRules` 实现\n- 使用 Lua\
+  \ 和 C# 编写游戏规则脚本\n\n## 游戏规则简介\n\n在思考一个游戏时，我们通常会将注意力引向游戏机制，例如死亡处理和游戏结束条件。根据我们在之前章节中学习的知识，我们实际上无法实现这一点，因为每个实体和参与者都没有影响一个更宏大的方案。\n\
+  \n游戏规则的作用顾名其义：控制游戏的规则。规则可以很简单，例如当一个参与者射击另一个参与者时会发生的规则；也可以很复杂，例如回合的开始和结束。\n\nCryEngine\
+  \ 的游戏规则实现围绕两个听起来非常相似但实际上大不同的类型展开：\n\n- **游戏规则 (Game rules)**：此实现是通过 C++ 中的 `IGameRules`\
+  \ 接口完成的，它处理诸如 `OnClientConnect` 和 `OnClientDisconnect` 等回调。\n\n*游戏规则 (Game Rules)*\n\
+  \n- **游戏模式 (Game mode)**：它依赖于游戏规则的实现，但通过参与者生成和击杀条件等游戏条件对其进行了扩展。例如，我们可以有两个游戏模式：`SinglePlayer`（单机）和\
+  \ `DeathMatch`（击斗模式），它们都依赖于 `IGameRules` 实现提供的默认行为，但每个模式都增加了额外的功能，例如支持多个玩家。\n\n\
+  ## IGameRules 接口 – 游戏规则\n\n在`第 3 章`《创建和利用自定义实体》结束时，我们学习了游戏对象扩展。我们将在本章中利用这些知识来实现\
+  \ To `IGameRules`，这是一种用于初始化游戏上下文并将游戏机制结合在一起的游戏对象扩展。\n\n务必记住，当前激活的游戏模式是一个实体。\n\n\
+  这有时可能会通过请求实体事件被滥用。例如，在 Crytek 的游戏《孤星危机》（Crysis）中，一种常见的黑客手段围绕向游戏模式发送子弹或击杀事件展开。这本质上“杀死”了游戏规则实体，并导致服务器硬崩溃。\n\
+  \n`IGameRules` 实现通常负责游戏模式最基础的行为，并将所有其他内容转发给其 C# 或 Lua 脚本。\n\n## 脚本 – 游戏模式\n\n在注册我们的\
+  \ `IGameRules` 实现后，我们需要注册一个利用它的游戏模式。这是通过 `IGameRulesSystem::RegisterGameRules` 函数完成的（通常在\
+  \ `IGame::Init` 内部完成）。\n\n```cpp\npGameRulesSystem->RegisterGameRules(\"MyGameMode\"\
+  , \"GameRules\");\n```\n处理完之前的代码段后，游戏规则系统将感知到我们的游戏模式。当 `sv_gamerules` 控制台变量变为 `MyGameMode`\
+  \ 时，系统将创建一个新实体并激活其名为 `GameRules`（在上一节中注册）的游戏对象扩展。\n\n控制台变量 `sv_gamerules` 在 CryENGINE\
+  \ 启动时被设置为 `sv_gamerulesdefault` 的值，除非运行在专用服务器上。\n\n此时，游戏将自动在 `Scripts/GameRules/`\
+  \ 目录下搜索与你的游戏模式同名的 Lua 脚本。对于之前的代码段，它将找到并加载 `Scripts/GameRules/MyGameMode.lua`。\n\n\
+  # [ 72 ]\n\n*第 4 章*\n\n(等待，文本继续...)\n\n## 加载关卡\n\n当使用 `map` 控制命令加载关卡时，游戏框架会在 `Game/Levels`\
+  \ 搜索关卡。\n\n通过使用 `IGameRulesSystem::AddGameRulesLevelLocation`，我们可以在 `Game/Levels`\
+  \ 中添加子目录，在寻找新关卡时会搜索这些目录。例如：\n\n```cpp\ngEnv->pGameFramework->GetIGameRulesSystem()->AddGameRulesLevelLocation\
+  \ (\"MyGameMode\", \"MGM_Levels\");\n```\n当在 `sv_gamerules` 设置为 `MyGameMode` 时加载关卡，游戏框架现在会在\
+  \ `Levels/MGM_Levels/` 目录下搜索关卡目录。\n\n这允许将特定模式的关卡移动到 `Game/Levels` 目录下的子目录，使得按游戏模式分类关卡变得简单得多。\n\
+  \n## 实现游戏规则接口\n\n现在我们已经知道了游戏规则系统的基本工作原理，我们可以尝试创建一个自定义的 `IGameRules` 实现。\n\n在开始之前，考虑你的游戏是否真的需要自定义的\
+  \ `IGameRules` 实现。随 `CGameRules` 带的默认 `GameDLL` 是专门用于**第一人称射击游戏** (****FPS**) 的\
+  \ `IGameRules` 实现。如果你的游戏设定与 FPS 类似，或者你可以重用现有的功能，这可能比从头编写一个实现更好。\n\n为了开始，我们需要创建两个新文件：`GameRules.cpp`\
+  \ 和 `GameRules.h`。\n\n完成后，打开 `GameRules.h` 并创建一个新类。\n\n我们将我们的命名为 `GameRules`。\n\n\
+  # [ 73 ]\n\n*游戏规则 (Game Rules)*\n\n类就绪后，我们必须派生 `IGameRules`。正如之前提到的，游戏规则作为游戏对象扩展处理的。因此，我们必须使用\
+  \ `CGameObjectHelper` 模板类：\n\n```cpp\nclass CGameRules: public CGameObjectHelper<CGameRules,\n\
+  ```\n\n第三个可选 `CGameObjectHelper` 参数定义了该游戏对象支持的 RMI。我们将在*第 8 章**网络*中进一步讨论它。\n\n类存在后，我们可以开始实现\
+  \ `IGameRules` 和 `IGameObjectExtension` 结构体中定义的虚方法。与实体一样，我们可以实现返回无、`nullptr`、零、`false`\
+  \ 或空字符串的函数。需要单独处理的方法如下：\n\n| 函数名 | 描述 |\n| :--- | :--- |\n| `IGameObjectExtension::Init`\
+  \ | 初始化游戏对象扩展。应调用 `IGameRulesSystem::SetCurrentGameRules(this)` |\n| `IGameRules::OnClientConnect`\
+  \ | 当新客户端连接时在服务器上调用，必须使用 `IActorSystem::CreateActor` 创建新参与者 |\n| `IGameRules::OnClientDisconnect`\
+  \ | 当客户端断开时在服务器上调用，必须包含对 `IActorSystem::RemoveActor` 的调用 |\n| `IGameObjectExtension::Release`\
+  \ | Release 函数应删除实例并在析构函数中调用 `IGameRulesSystem::SetGameRules(nullptr)` |\n\n## 注册游戏对象扩展\n\
+  \n完成后，使用 `REGISTER_FACTORY` 宏注册游戏规则实现。\n\n游戏对象扩展必须在游戏初始化早期注册，因此最常见是在 `IGame::Init`\
+  \ 函数中完成（通过默认 GameDLL 中的 `GameFactory.cpp`）：\n\n```cpp\nREGISTER_FACTORY(pFramework,\
+  \ \"GameRules\", CGameRules, false);\n```\n\n# [ 74 ]\n\n*第 4 章*\n\n## 创建自定义游戏模式\n\
+  \n为了开始，我们需要注册第一个游戏模式。\n\n注意 `IGameRules` 实现与游戏模式本身之间的区别。游戏模式依赖于 `IGameRules` 实现，并单独注册。\n\
+  \n\n\n要注册自定义游戏模式，CryENGINE 暴露了 `IGameRulesSystem::RegisterGameRules` 函数：\n\n```\n\
+  gEnv->pGameFramework->GetIGameRulesSystem()->RegisterGameRules(\"MyGameMode\", \"\
+  GameRules\");\n```\n\n上述代码将创建一个名为 `MyGameMode` 的游戏模式，它依赖于我们之前注册的 `GameRules` 游戏对象扩展。\n\
+  \n当加载地图并将 `sv_gamerules` 设置为 `MyGameMode` 时，游戏规则实体将被创建并赋值为 `MyGameMode`。在生成后，我们之前创建的\
+  \ `IGameRules` 扩展将被构造。\n\n如果你只是创建现有游戏模式的副本或子类，例如派自 `SinglePlayer.lua` 的默认 `DeathMatch.lua`\
+  \ 脚本，你需要单独注册 `DeathMatch` 游戏模式。\n\n## 脚本编程\n\n游戏模式通常是强脚本导向的，生成、杀死和复活等游戏流程被委托给 `Lua`\
+  \ 或 `C#` 等次要语言。\n\n### Lua 脚本\n\n由于 `Lua` 脚本已集成到 CryENGINE 中，我们不需要对其进行任何额外的加载即可工作。要访问你的脚本表（基于\
+  \ `Game/Scripts/GameRules` 中与你的游戏模式同名的 `Lua` 文件）：`m_script = GetEntity()->GetScriptTable();`\n\
+  \n[ 75 ]\n\n*游戏规则*\n\n### 调用方法\n\n要对你的脚本表进行调用方法，请参考 `IScriptSystem::BeginCall` 和\
+  \ `EndCall` 函数：\n\n```\nIScriptSystem *pScriptSystem = gEnv->pScriptSystem; pScriptSystem->BeginCall(m_script,\
+  \ \"MyMethod\"); pScriptSystem->EndCall();\n```\n\n执行上述代码时，我们将能够执行游戏模式脚本表内部名为 `MyMethod`\
+  \ 的函数中的 `Lua` 代码。该表的示例所示：\n\n```\nMyGameMode = { }\n\nfunction MyGameMode:MyMethod()\n\
+  \nend\n```\n\n### 带参数调用方法\n\n要为你的 `Lua` 方法提供参数，请在脚本调用的开始和之间之间 `IScriptSystem::PushFuncParam`：\n\
+  \n```\npScriptSystem->BeginCall(m_script, name);\n\npScriptSystem->PushFuncParam(\"\
+  myStringParameter\"); pScriptSystem->EndCall();\n```\n\n`IScriptSystem::PushFuncParam`\
+  \ 是一个模板函数，它尝试使用提供的值创建一个 `ScriptAnyValue` 对象。如果默认的 `ScriptAnyValue` 构造函数不支持你的类型，将会出现编译错误。\n\
+  \n恭喜，你现在调用了一个带有字符串参数的 `Lua` 函数：\n\n```\nfunction MyGameMode:MyMethod(stringParam)\n\
+  \nend\n```\n\n### 获取从 Lua 返回的值\n\n你也可以通过向 `IScriptSystem::EndCall` 传递额外的参数来获取 `Lua`\
+  \ 函数的返回值。\n\n```cpp\nint result = 0;\n\npScriptSystem->EndCall(&result);\n\nCryLog(\"\
+  MyMethod returned %i!\", result);\n```\n\n[ 76 ]\n\n*第 4 章*\n\n### 获取表值\n\n有时可能需要直接从\
+  \ `Lua` 表获取值，这可以使用 `IScriptTable::GetValue` 完成：\n\n```cpp\nbool bValue = false;\n\
+  \nm_script->GetValue(\"bMyBool\", &bValue);\n```\n\n上述代码将在脚本中搜索名为 `bMyBool` 的变量，如果成功，则将其值赋给原生变量\
+  \ `bValue`。\n\n### CryMono 脚本\n\n要在你的 `IGameObjectExtension::Init` 实现中创建 `CryMono`\
+  \ 脚本实例，请参考 `IMonoScriptSystem::InstantiateScript`：\n\n```\nIMonoObja *pScript =\
+  \ GetMonoScriptSystem()->InstantiateScript(GetEntity()->GetClass()->GetName(), eScriptFlag_GameRules);\n\
+  ```\n\n此代码将找到与当前游戏模式同名的 `CryMono` 类，并返回它的新实例。\n\n没有同时使用 `Lua` 和 `CryMono` 游戏规则脚本。请决定哪种最适合你的用例。\n\
+  \n### 调用方法\n\n现在你已经有了类实例，可以使用 `IMonoObject::CallMethod` 辅助函数调用其中一个函数：\n\n```\nm_pScript->CallMethod(\"\
+  OnClientConnect\", channelId, isReset, playerName)\n```\n\n此代码将搜索名为 `OnClientConnect`\
+  \ 具有匹配参数的方法并调用它：\n\n```cpp\npublic bool OnClientConnect(int channelId, bool isReset\
+  \ = false, string playerName = \"\")\n\n{\n\n}\n```\n\n[ 77 ]\n\n*游戏规则*\n\n### 返回值\n\
+  \n`IMonoObject::CallMethod` 默认返回 `mono::object` 类型，代表一个箱的托管对象。要获取原生值，我们必须对其解箱：\n\
+  \n```cpp\nmono::object result = m_pScript->CallMethod(\"OnClientConnect\", channelId,\
+  \ isReset, playerName);\n\nIMonoObject *pResult = *result;\n\nbool result = pResult->Unbox<bool>();\n\
+  ```\n\n### 属性\n\n要获取托管对象中属性的值，请查看 `IMonoObject::GetPropertyValue`：\n\n```cpp\nmono::object\
+  \ propertyValue = m_pScript->GetPropertyValue(\"MyFloatProperty\"); if(propertyValue)\n\
+  {\n\nIMonoObject *pObject = *propertyValue;\nfloat value = pObject->Unbox<float>();\n\
+  }\n```\n\n直接设置属性值也是可能的：\n\n```cpp\nfloat myValue = 5.5f;\n\nmono::object boxedValue\
+  \ = GetMonoScriptSystem()->BoxAnyValue(myValue)); m_pScript->SetPropertyValue(\"\
+  MyFloatProperty\", boxedValue);\n```\n\n### 字段\n\n以类似于属性的方式获取和设置字段的值，但使用 `IMonoObject`\
+  \ 方法 `GetFieldValue` 和 `SetFieldValue`。\n\n### 在 C# 中创建游戏模式\n\n现在你已经有了基础的知识，为什么不这样做呢？为了开始，我们需要实体。\n\
+  \n[ 78 ]\n\n*第 4 章*\n\n### 定义我们的意图\n\n让我们明确一下要做什么：\n1. 生成我们的实体。\n2. 将我们的实体分配给一个团队。\n\
+  3. 当实体进入游戏时检查。\n\n### 创建实体\n\n我们首先要做的是生成我们的实体。为此，我们需要在 `Game/Scripts` 中创建一个 `MyActor.cs`\
+  \ 文件并添加：\n\n```public class MyActor : Actor\n```\n\n此代码片段是实体所需的最小配置。\n\n我们还应该更新实体的视图，以确保玩家进入游戏时能看到内容。\n\
+  \n```csharp\nprotected override void UpdateView(ref ViewParams viewParams)\n\n{\n\
+  \nvar fov = MathHelpers.DegreesToRadians(60);\n\nviewParams.FieldOfView = fov;\n\
+  \nviewParams.Position = Position;\n\nviewParams.Rotation = Rotation;\n\n}\n```\n\
+  \n上述代码将简单地将相机设置为玩家的位置和旋转。要了解更多关于创建实体和视图的信息，请参考 *自定义实体*。\n\n现在我们已经有了实体，可以继续创建游戏模式：\n\
+  \n```csharp\npublic class ReachThequarters : CryEngine.GameRules\n```\n\n[ 79 ]\n\
+  \n*游戏规则*\n\n与 `Scripts/` 目录中的所有 CryMono 类型一样，我们的游戏模式将在 CryENGINE 启动时自动注册，紧随 `IGameFramework::Init`\
+  \ 调用之后。\n\n在创建特定游戏逻辑之前，我们必须确保实体在实体连接时被创建。为此，我们实现一个 `OnClientConnect` 方法：\n\n```csharp\n\
+  public bool OnClientConnect(int channelId, bool isReset = false, string playerName\
+  \ = \"Dude\")\n{\n    // 只有服务器可以创建实体。\n    if (!Game.IsServer)\n        return false;\n\
+  \n    var actor = Actor.Create<MyActor>(channelId, playerName);\n    if (actor ==\
+  \ null)\n    {\n        Debug.LogWarning(\"创建玩家失败.\");\n        return false;\n\
+  \    }\n\n    return true;\n}\n```\n\n然而，由于脚本函数不是自动化的，我们需要修改 `IGameRules` 实现中的 `OnClientConnect`\
+  \ 方法，以便在 C# 中接收此回调：\n\n```cpp\nbool CGameRules::OnClientConnect(int channelId, bool\
+  \ isReset)\n{\n    const char *playerName;\n    if (gEnv->bServer && gEnv->bMultiplayer)\n\
+  \    {\n        if (INetChannel *pNetChannel = gEnv->pGameFramework->GetNetChannel(channelId))\n\
+  \            playerName = pNetChannel->GetNickname();\n    }\n    else\n       \
+  \ playerName = \"Dude\";\n\n    return m_pScript->CallMethod(\"OnClientConnect\"\
+  , channelId, isReset, playerName) != 0;\n}\n```\n\n\n\n\n记住，游戏模式的 `OnClientConnect`\
+  \ 被调用的非常早，就在新客户端连接到服务器的那个点。如果在 `OnClientConnect` 退出后，指定的 `channelId` 还没有创建 actor，游戏将抛出致命错误。\n\
+  \n### 生成 actor (Spawning the actor)\n\n现在客户端连接会创建 actor，但实际上如何将 actor 移动到 `SpawnPoint`\
+  \ 呢？首先，在 `Scripts` 目录任何地方创建一个新的 `SpawnPoint.cs` 文件：\n\n```csharp\n[Entity(Category\
+  \ = \"Others\", EditorHelper = \"Editor/Objects/spawnpointhelper.cgf\")]\npublic\
+  \ class SpawnPoint : Entity\n{\n    public void Spawn(EntityBase otherEntity)\n\
+  \    {\n        otherEntity.Position = this.Position;\n        otherEntity.Rotation\
+  \ = this.Rotation;\n    }\n}\n```\n\n重启编辑器后，该实体应该会出现在 `RollupBar` 中。我们将调用 `spawnPoint.Spawn`\
+  \ 函数来生成我们的 actor。\n\n首先，我们需要打开 `ReachTheHeadquarters` 类并添加一个新的 `OnClientEnteredGame`\
+  \ 函数：\n\n```csharp\npublic void OnClientEnteredGame(int channelId, EntityId playerId,\
+  \ bool reset)\n{\n    var player = Actor.Get<MyActor>(channelId); \n    if (player\
+  \ == null)\n    {\n        Debug.LogWarning(\"Failed to get player\"); \n      \
+  \  return;\n    }\n\n    var random = new Random();\n    // 获取所有类型为 SpawnPoint 的生成实体\n\
+  \    var spawnPoints = Entity.GetByClass<SpawnPoint>();\n\n    // 获取一个随机的生成点\n \
+  \   var spawnPoint = spawnPoints.ElementAt(random.Next(spawnPoints.Count())); \n\
+  \    if(spawnPoint != null)\n    {\n        // 找到了！在这里生成玩家。\n        spawnPoint.Spawn(player);\n\
+  \    }\n}\n```\n\n此函数会在客户端进入游戏时被调用。在 `Launcher` 模式下，这通常发生在玩家完成加载之后；而在编辑器中，它在玩家通过\
+  \ `Ctrl` + `G` 切换到 `pure game mode` 时被调用。\n\n在目前的状态下，我们将首先获取玩家的 `MyActor` 实例，然后在随机选择的\
+  \ `SpawnPoint` 处生成。\n\n不要忘记在你的 `IGameRules` 实现中调用脚本的 `OnClientEnteredGame` 函数！\n\
+  \n### 处理断线 (Handling disconnections)\n\n我们还必须确保在玩家断线时移除 actor：\n\n```csharp\npublic\
+  \ override void OnClientDisconnect(int channelId)\n{\n    Actor.Remove(channelId);\n\
+  }\n```\n\n不要忘记在你的 `IGameRules` 实现中调用 `OnClientConnect` 函数！\n\n如果在断线后没有移除玩家，会导致 actor\
+  \ 持续留在游戏世界中，并且由于关联玩家不再连接到服务器，可能会出现更严重的问题。\n\n### 第 4 章：将玩家分配到队伍 (Assigning the player\
+  \ to a team)\n\n现在玩家可以连接并生成了，让我们来实现一个基础的队伍系统，以便跟踪每个玩家所属队伍。\n\n首先，为我们的游戏模式添加一个新的的\
+  \ `Teams` 属性：\n\n```csharp\npublic virtual IEnumerable<string> Teams\n{\n    get\n\
+  \    {\n        return new string[] { \"Red\", \"Blue\" };\n    }\n}\n```\n\n这段代码简单决定了我们的游戏模式允许哪些队伍，在我们的情况下是红色和蓝色。\n\
+  \n现在，让我们也为 `MyActor` 类添加新属性，以确定 actor 所属的队伍：\n\n```csharp\npublic string Team {\
+  \ get; set; }\n```\n\n太棒了！然而，我们还需要将相同的代码添加到 `SpawnPoint` 实体中，以避免将同一队伍的玩家生成在一起。\n\
+  \n完成后完成后，打开 `ReachTheHeadquarters` 游戏模式类并导航到我们之前创建的 `OnClientEnteredGame` 函数。我们要做的是扩展\
+  \ `SpawnPoint` 的选择，只使用属于玩家队伍的点。\n\n查看以下代码片段：\n\n```csharp\n// 获取所有类型为 SpawnPoint\
+  \ 的生成实体\nvar spawnPoints = Entity.GetByClass<SpawnPoint>();\n```\n\n现在将此片段替换为以下内容：\n\
+  \n```csharp\n// 获取所有属于玩家队伍的 SpawnPoint 类型生成实体\nvar spawnPoints = Entity.GetByClass<SpawnPoint>().Where(x\
+  \ => x.Team == player.Team);\n```\n\n这将自动移除所有 `Team` 属性不等于玩家的 `SpawnPoints`。\n\n\
+  等一下，我们还必须将玩家分配到一个队伍！为此，在获取 `SpawnPoints` 之前添加以下内容：\n\n```csharp\nplayer.Team = Teams.ElementAt(random.Next(Teams.Count()));\n\
+  ```\n\n当玩家进入游戏时，我们将选择一个随机队伍分配给他们。如果你愿意，为什么不扩展此功能以确保队伍始终平衡？例如，如果红色队伍比蓝色队伍多两个玩家，则不允许新玩家加入红色队伍。\n\
+  \n在继续之前，请随意尝试当前的设置。你应该能够在游戏内生成生成了！\n\n### 实现总部 (Implementing Headquarters)\n\n最后，让我们开始创建游戏结束条件：总部（Headquarters）。简单来说，每个队伍将有一个\
+  \ `Headquarters` 实体，当玩家进入对方的总部时，该玩家所在的队伍获胜。\n\n#### 添加游戏结束事件\n\n在创建 `Headquarters`\
+  \ 实体之前，为我们的 `ReachTheHeadquarters` 类添加一个新的的 `EndGame` 函数：\n\n```csharp\npublic void\
+  \ EndGame(string winningTeam)\n{\n    Debug.LogAlways(\"{0} won the game!\", winningTeam);\n\
+  }\n```\n\n我们将从 `Headquarters` 实体中调用它，以通知游戏模式游戏应该结束。\n\n#### 创建总部实体\n\n现在我们需要创建 `Headquarters`\
+  \ 实体。该实体将通过 `Sandbox` 放置在每个关卡中，每个队伍一个。我们将暴露三个 `Editor` 属性：`Team`、`Minimum` 和 `Maximum`：\n\
+  \n- `Team`：决定 `Headquarters` 实例属于哪个队伍，在我们的情况下是蓝色或红色。\n- `Minimum`：指定触发区域的最小尺寸。\n\
+  - `Maximum`：指定触发区域的最大尺寸。\n\n```csharp\npublic class Headquarters : Entity\n{\n \
+  \   public override void OnSpawn()\n    {\n        TriggerBounds = new BoundingBox(Minimum,\
+  \ Maximum);\n    }\n    protected override void OnEnterArea(EntityId entityId, int\
+  \ areaId, EntityId areaEntityId)\n    {\n    }\n\n    [EditorProperty]\n    public\
+  \ string Team { get; set; }\n\n    [EditorProperty]\n    public Vec3 Minimum { get;\
+  \ set; }\n\n    [EditorProperty]\n    public Vec3 Maximum { get; set; }\n}\n```\n\
+  \n很好！现在只需扩展 `OnEnterArea` 方法，在游戏应该结束时通知我们的游戏模式：\n\n```csharp\nprotected override\
+  \ void OnEnterArea(EntityId entityId, int areaId, EntityId areaEntityId)\n{\n  \
+  \  var actor = Actor.Get<MyActor>(entityId); \n    if (actor == null)\n        return;\n\
+  \n    if (actor.Team != Team)\n    {\n        var gameMode = CryEngine.GameRules.Current;\n\
+  \        var rthGameRules = gameMode as ReachTheHeadquarters;\n        if (rthGameRules\
+  \ != null)\n            rthGameRules.EndGame(actor.Team);\n    }\n}\n```\n\n`Headquarters`\
+  \ 实体现在会在对方实体进入时通知游戏模式。\n\n### 旁路——触发边界与实体区域 (Detour – trigger bounds and entity\
+  \ areas)\n\n实体可以通过注册区域来接收回调。这可以通过将实体与形状实体链接或手动创建触发代理来实现。在 C# 中，我们可以像之前的代码片段那样通过设置\
+  \ `EntityBase.TriggerBounds` 属性来手动创建代理。\n\n当实体位于区域内部或附近时，它将开始在该实体上接收事件。这允许创建特定的实体以跟踪玩家何时以及何时进入特定区域。\n\
+  \n查看下表获取可用回调列表，可以通过 C++ 实体事件和 C# `Entity` 类中的虚函数接收：\n\n| 回调名称 | 说明 |\n| :--- | :---\
+  \ |\n| `OnEnterArea` | 当实体进入与其链接的区域时调用。 |\n| `OnLeaveArea` | 当位于与其链接的区域内的实体离开时触发。\
+  \ |\n| `OnEnterNearArea` | 当实体移动到与其链接的区域附近时触发。 |\n| `OnMoveNearArea` | 当实体与其链接的区域附近移动时调用。\
+  \ |\n| `OnLeaveNearArea` | 当实体离开与其链接的区域附近时调用。 |\n| `OnMoveInsideArea` | 当实体重新定位到与其链接的区域内部时触发。\
+  \ |\n\n\n\n\n基础示例现在已完成，但需要一些微调才能运行！首先，我们需要创建一个新关卡，并为每个团队放置 `Headquarters`（总部）。\n\
+  \n[ 86 ]\n\n![](img/index-106_1.png)\n\n![](img/index-106_2.png)\n\n# 第 4 章\n\n\
+  首先，打开 Sandbox Editor，通过导航到 `File`（文件） | `New`（新建）创建一个新关卡：这将弹出 `New Level` 对框，我们可以在其中设置关卡名称和地形设置。\n\
+  \n点击 `OK` 后，你的关卡将被创建并加载。完成后，就是时候为我们的关卡添加必要的游戏性元素了！\n\n开始，打开 `RollupBar` 并将 `Headquarters`\
+  \ 实体拖入视口以生成该实体：\n\n[ 87 ]\n\n![](img/index-107_1.jpg)\n\n## 游戏规则\n\n生成实体后，我们必须设置在\
+  \ `Headquarters` 类中创建的编辑器属性。\n\n将 `Team` 设置为 `Red`（红色），并将 `Maximum` 设置为 `10,10,10`。这告诉该类\
+  \ `Headquarters` 属于哪个团队，以及我们将查询的区域的最大尺寸，以检测另一个玩家是否进入其中。\n\n完成此操作后，生成另一个 `Headquarters`\
+  \ 实体（或复制现有的），遵循相同的流程，这次将 `Team` 属性设置为 `Blue`（蓝色）。\n\n现在，我们只需要为每个团队生成一个 `SpawnPoint`（生成点）实体就可以准备就绪了！\n\
+  \n再次打开 `RollupBar` 并转到 `Others`（其他） | `SpawnPoint`：\n\n[ 88 ]\n\n![](img/index-108_1.png)\n\
+  \n![](img/index-108_2.jpg)\n\n# 第 4 章\n\n现在，将实体拖到视口以生成它，方法与你之前生成 `Headquarters`\
+  \ 时相同。生成后，将 `Team` 属性设置为 `Red`，然后对蓝色团队重复该过程：\n\n[ 89 ]\n\n## 游戏规则\n\n完成！你现在应该能够使用\
+  \ `Ctrl` + `G` 或导航到 `Game`（游戏） | `Switch to Game`（切换到游戏）进入游戏。然而，由于我们还没有添加任何类型的玩家移动，玩家将无法向敌总部移动以结束游戏。\n\
+  \n要学习如何处理玩家输入和移动，请参阅下一章 `Chapter 5`, `Creating Custom Actors`（创建自定义 Actor）。\n\n\
+  ## 总结\n\n在本章中，我们学习了游戏规则系统的基本行为，并创建了我们自己的 `IGameRules` 实现。\n\n在注册了你自己的游戏模式并在 C# 中创建了\
+  \ `Headquarters` 示例后，你应该对游戏规则系统有了良好的理解。\n\n我们创建了第一个游戏模式，现在可以进入下一章了。请记住未来章节中游戏规则的目的，这样你就可以将游戏中需要创建的所有游戏机制结合在一起。\n\
+  \n对游戏规则还不满意吗？为什么不尝试用你喜欢的脚本语言为你的游戏创建一个基础规则集，或者扩展我们之前创建的示例呢。在下一章中，我们将学习如何创建自定义 Actor。\n\
+  \n[ 90 ]\n\n## 创建自定义 Actor\n\n使用 CryENGINE actor 系统，我们可以创建具有自定义行为的玩家或 AI 控制的实体来填充我们的游戏世界。\n\
+  \n在本章中，我们将涵盖以下主题：\n\n- 学习 actor 的目的以及实现它们的核心思想\n- 在 C++ 和 C# 中创建自定义 actor\n- 创建我们的第一个玩家相机处理器\n\
+  - 实现基础玩家移动\n\n## 介绍 actor 系统\n\n我们在 `Chapter 3`, `Creating and Utilizing Custom\
+  \ Entities` 中学习了什么是游戏对象扩展以及如何使用它们。我们将基于这些知识在 C++ 和 C# 中创建自定义 actor。\n\nActor 由 `IActor`\
+  \ 结构体表示，它们是核心层中的游戏对象扩展。这意味着每个 actor 都有一个底层实体和一个用于处理网络和 `IActor` 扩展的游戏对象。\n\nActor\
+  \ 由 `IActorSystem` 接口处理，该接口管理每个 actor 的创建、删除和注册。\n\n## 通道标识符\n\n在网络上下文中，每个玩家都被分配了一个通道\
+  \ ID 和一个 Net Nub 索引，我们将在 `Chapter 8`, `Multiplayer and Networking` 中进一步介绍。\n\n##\
+  \ 创建自定义 Actor\n\n### Actor 生成\n\n玩家 actor 应该在客户端连接到游戏时生成，位于 `IGameRules::OnClientConnect`\
+  \ 内部。要生成 actor，使用所示的 `IActorSystem::CreateActor`：\n\n```cpp\nIActorSystem *pAS =\
+  \ gEnv->pGameFramework->GetIActorSystem(); pAS ->CreateActor(channelId, \"MyPlayerName\"\
+  , \"MyCppActor\", Vec3(0, 0, 0), Quat(IDENTITY), Vec3(1, 1, 1));\n```\n\n注意，之前的代码仅适用于玩家控制的\
+  \ actor。非玩家 actor 可以随时创建。\n\n### 删除 actor\n\n为了确保玩家 actor 在客户端断开连接时正确删除，我们需要通过 `IGameRules::OnClientDisconnect`\
+  \ 回调手动删除它：\n\n```cpp\npActorSystem->RemoveActor(myActorEntityId);\n```\n\n在断开连接后忘记移除玩家\
+  \ actor 可能会导致崩溃或严重的伪影。\n\n### 视图系统\n\n为了方便处理玩家和其他相机源视图（views）的需求，CryENGINE 提供了视图系统，可以通过\
+  \ `IViewSystem` 接口访问。\n\n视图系统基于任意数量的视图，由 `IView` 接口表示，每个视图都有处理位置、旋转和配置的能力。\n\n为了方便处理玩家和其他相机源视图的需求，CryENGINE\
+  \ 提供了视图系统，可以通过 `IViewSystem` 接口访问。\n\n视图系统的核心是拥有任意数量的视图，由 `IView` 接口表示，每个视图都有更新位置、旋转和配置的能力。\n\
+  \n请记住，任何时候都只有一个视图是激活的。\n\n```cpp\nIViewSystem *pViewSystem = gEnv->pGameFramework()->GetViewSystem();\n\
+  IView *pNewView = pViewSystem->CreateView();\n```\n\n[ 92 ]\n\n# 第 5 章\n\n我们可以使用\
+  \ `IViewSystem::SetActiveView` 函数设置激活视图：\n\n```cpp\npViewSystem->SetActiveView(pNewView);\n\
+  ```\n\n激活后，视图将更新系统相机。要修改视图的参数，我们可以调用 `IView::SetCurrentParams`。例如，要更改位置，使用以下代码：\n\
+  \n```cpp\nSViewParams viewParams = *GetCurrentParams();\nviewParams.position = Vec3(0,\
+  \ 0, 10);\nSetCurrentParams(viewParams);\n```\n\n现在的位置现在是 (0,0)。\n\n## 将视图链接到游戏对象\n\
+  \n每个视图还可以将其链接到游戏对象，允许游戏对象扩展订阅 `UpdateView` 和 `PostUpdateView` 函数。\n\n这些函数允许轻松地更新分配视图的位置、旋转和配置。例如，这用于\
+  \ actor，以便为玩家提供易用的自定义相机处理方法。\n\n关于相机处理的更多信息，请参见本章稍后的 *Camera handling* 部分。\n\n##\
+  \ 创建自定义 Actor\n\n现在我们已经知道了 actor 系统是如何工作的，现在可以可以在 C# 和 C++ 中创建我们的第一个 actor。\n\n\
+  默认情况下无法纯使用 Lua 脚本创建 actor。通常，actor 是在 C++ 中创建的，并处理 `Game/Scripts/Entities/Actors`\
+  \ 文件夹中的 Lua 脚本。\n\n### 在 C# 中创建 Actor\n\n使用 CryMono，我们可以完全在 C# 中创建自定义 actor。这样做，我们可以如所示派生\
+  \ `Actor` 类：\n\n```csharp\npublic class MyActor : Actor\n{\n}\n```\n\n[ 93 ]\n\n\
+  ![](img/index-113_1.png)\n\n之前的代码是在 CryMono 中创建 actor 的最小配置。你可以进入游戏规则实现，并在客户端连接时通过\
+  \ `Actor.Create` 静态方法生成 actor。\n\n## CryMono 类层次结构\n\n如果你对各种 CryMono/C# 类感到困惑，请查看以下继承图：\n\
+  \n注意，在使用 `Entity.Get` 查询实体（通过 `Actor.Get` 查询 actor）时，你将获得一个 `EntityBase` 或 `ActorBase`\
+  \ 类型的对象。\n\n这是因为原生实体和 actor 存在于托管系统之外，在查询时返回的是受限的表示。\n\n## 混合使用原生和 CryMono actor\n\
+  \n\n\n\n如果你倾向于在 C++ 中自己创建 actor，你仍然可以通过使用 `NativeActor` 类在 CryMono 代码中引用它。要实现这一点，只需在\
+  \ C# 中创建一个新类，其名称与你注册 `IActor` 实现时使用的名称一致，并所示派自 `NativeActor`：\n\n[ 94 ]\n\n*第 5\
+  \ 章*\n\n## C++ actor 注册\n\nActor 注册是通过使用注册工厂完成的。此过程可以使用所示的 `REGISTER_FACTORY` 宏进行自动化：\n\
+  \n`REGISTER_FACTORY(pFramework, \"Player\", CPlayer, false);` **C# 声明**\n\n在 C#\
+  \ 中声明一个基于原生的 actor 非常简单，只需要如下面的代码所示派自 `CryEngine.NativeActor` 类即可：\n\n```csharp\n\
+  public class Player : NativeActor\n{\n\n}\n```\n\n这允许继续使用 C# 代码，但将你的大部分代码保留在 C++\
+  \ 的 `IActor` 实现中。\n\n`CryEngine.NativeActor` 直接继承自 `CryEngine.ActorBase`，因此不包含常见的\
+  \ `CryEngine.Actor` 回调函数，例如 `OnEditorReset`。要获得这些额外功能，你需要在你的 `IActor` 实现中创建它们。\n\
+  \n## 在 C++ 中创建 actor\n\n要在 C++ 中创建 actor，我们依赖于 `IActor` 接口。由于 actor 是核心游戏对象的扩展，我们不能简单地派自\
+  \ `IActor`，而必须使用所示的 `CGameObjectExtensionHelper` 模板：\n\n```cpp\nclass CMyCppActor\
+  \ : public CGameObjectExtensionHelper<CMyCppActor, IActor>\n{\n\n};\n```\n\n第三个\
+  \ `CGameObjectExtensionHelper` 参数定义了该游戏对象支持的最大 `RMI`（远程机器调用）数量。我们将在*第 8 章**多人游戏与网络*中进一步讨论它。\n\
+  \n现在我们已经有了该类，我们需要实现 `IActor` 结构体中定义的纯虚方法。\n\n[ 95 ]\n\n*创建自定义 Actor*\n\n注意，`IActor`\
+  \ 派自 `IGameObjectExtension`，这意味着我们还需要实现它的纯虚方法。\n\n有关此信息，请参阅*第 4 章**游戏规则*中的*实现游戏规则**接口*部分。\n\
+  \n对于大多数 `IActor` 方法，我们可以实现空位函数，它们不返回任何内容，或者返回 `nullptr`、`zero` 或空字符串等虚拟值。异常列如下所示：\n\
+  \n| 函数名 | 说明 |\n| :--- | :--- |\n| `IGameObjectExtension::Init` | 用于初始化游戏对象扩展。应该调用\
+  \ `IGameObjectExtension::SetGameObject` 和 `IActorSystem::AddActor`。 |\n| 类析构函数 |\
+  \ 始终调用 `IActorSystem::RemoveActor`。 |\n| `IActor::IsPlayer` | 用于判断 actor 是否由人类玩家控制。我们在这里可以直接返回\
+  \ `GetChannelId() != 0`，因为通道标识符仅对玩家为非零。 |\n| `IActor::GetActorClassName` | 用于获取\
+  \ actor 类的名称，例如在我们的案例中为 `CMyCppActor`。 |\n| `IActor::GetEntityClassName` | 获取实体类名称的辅助函数。我们可以直接返回\
+  \ `GetEntity()->GetClass()->GetName()`。 |\n\n当你解决了纯虚函数后，移动到下一节注册你的 actor。完成后，你可以在\
+  \ `IGameRules::OnClientConnect` 中创建用于连接玩家的 actor。\n\n## 注册 actor\n\n要向游戏框架（包含在 `CryAction.dll`\
+  \ 中）注册 actor，我们可以使用在 `GameFactory.cpp` 中注册 C++ 游戏规则实现时相同的设置：\n\n`REGISTER_FACTORY(pFramework,\
+  \ \"MyCppActor\", CMyCppActor, false);` 在执行之前的代码后，你将能够通过 `IActorSystem::CreateActor`\
+  \ 函数生成你的 actor。\n\n[ 96 ]\n\n*第 5 章*\n\n## 相机处理\n\n玩家控制的 actor 在 `IActor::UpdateView(SViewParams\
+  \ &viewParams)` 和 `IActor::PostUpdateView(SViewParams &viewParams)` 函数管理视口相机。\n\n\
+  `SViewParams` 结构体用于定义相机属性，如位置、旋转和视野。通过修改 `UpdateView` 方法内部的 `viewParams` 引用，我们可以移动相机到游戏所需的位置。\n\
+  \nCryMono actor 以 C++ actor 相同接收并处理 `UpdateView(ref ViewParams viewParams)` 和 `PostUpdateView(ref\
+  \ ViewParams viewParams)` 事件。\n\n## 实现 IGameObjectView\n\n为了获取视图事件，我们需要实现并注册一个游戏对象视图。\n\
+  \n要做到这一点，首先派自 `IGameObjectView`，并实现它包含的两个纯虚函数：\n\n- `UpdateView`: 用于更新视图位置、旋转和视野\n\
+  - `PostUpdateView`: 在更新视图后调用\n\n在实现游戏对象视图后，我们需要确保在 actor 扩展初始化时（在 `Init` 中）捕获了它：\n\
+  \n```cpp\nif(!GetGameObject()->CaptureView(this)) return false;\n```\n\n你的 actor\
+  \ 现在应该会接收视图更新回调了，这些回调可以用于移动视口相机。别忘记在析构函数中释放视图：`GetGameObject()->ReleaseView(this);`\n\
+  \n## 创建俯视相机\n\n为了展示如何创建自定义相机，我们将扩展上一节中创建的示例以创建一个俯视相机。为了开始，我们将以距离查看的方式打开你的 `.cs`\
+  \ 文件。\n\n[ 97 ]\n\n*创建自定义 Actor*\n\n## 视图\n\n为了俯视相机并以距离查看，打开 C# actor 的 `UpdateView`\
+  \ 方法，并在所示的 `.cs` 文件中实现。\n\n除非你对 `UpdateView` 函数做了任何更改，它应该类似于下面的代码：\n\n```csharp\n\
+  protected override void UpdateView(ref ViewParams viewParams)\n{\n    var fov =\
+  \ MathHelpers.DegreesToRadians(60);\n    viewParams.FieldOfView = fov;\n    viewParams.Position\
+  \ = Position;\n    viewParams.Rotation = Rotation\n}\n```\n\n这只是将相机放置在玩家相同的位置，具有相同的方向。我们需要做的第一个更改是将相机向上移动一点。为了这样做，我们将玩家旋转的第二列附加到位置上，并将相机放在玩家相同的\
+  \ x 和 y 位置，但在其上方：\n\n```csharp\nvar playerRotation = Rotation;\nfloat distanceFromPlayer\
+  \ = 5;\nvar upDir = playerRotation.Column2;\nviewParams.Position = Position + upDir\
+  \ * distanceFromPlayer;\n```\n\n可以进入游戏查看。当你准备好后，我们还需要更改视图旋转向下：\n\n```csharp\n//\
+  \ 朝下\nvar angles = new Vec3(MathHelpers.DegreesToRadians(-90), 0, 0);\n// 四元数\n\
+  viewParams.Rotation = Quat.CreateRotationXYZ(angles);\n```\n\n[ 98 ]\n\n![](img/index-118.jpg)\n\
+  \n*第 5 章*\n\n完成！我们的相机现在应该正对着下。\n\n这大致就是你使用新相机看到的内容。注意视图中缺少玩家角色。这是因为我们没有向玩家实体加载对象。我们可以通过在\
+  \ `OnSpawn` 函数中调用 `EntityBase.LoadObject` 来快速解决这个问题：\n\n```csharp\npublic override\
+  \ void OnSpawn()\n{\n    // 加载对象\n    LoadObject(\"Objects/default/primitive_cube.cgf\"\
+  );\n    // 物理化为 50KG\n    var physicalizationParams = new PhysicalizationParams(PhysicalizationType.Rigid);\
+  \ \n    physicalizationParams.mass = 50;\n    Physicalize(physicalizationParams);\n\
+  }\n```\n\n[ 99 ]\n\n![](img/index-119.jpg)\n\n*创建自定义 Actor*\n\n你现在应该能够在场景中看到代表玩家角色的立方体。注意它也是物理化的，允许它推动或被其他物理化物体推动。\n\
+  \n你现在应该对玩家视图是如何运作有了基本的了解。\n\n\n\n\n想要了解更多内容，为什么不尝试创建一个你自己的相机呢，即一个 RPG 风格的等轴测相机？\n\
+  \n我们现在进入下一个章节，`Player input`（玩家输入）。\n\n## 玩家输入\n\n当你无法控制角色时，它们通常会显得非常无趣。为了帮助将事件映射到输入，我们可以利用以下三个系统：`System\
+  \ name`\n\n| 系统名称 | 描述 |\n| :--- | :--- |\n| `IHardwareMouse` | 当需要直接获取鼠标事件时，例如\
+  \ x/y 屏幕位置和鼠标轮增量。 |\n| `IActionMapManager` | 允许注册与键位绑定相关的回调函数。这是键盘和鼠标按钮输入的首选方法，因为它允许每个玩家通过其动作映射配置（action\
+  \ map profile）自定义偏好的输入方式。动作映射通常通过游戏内界面暴露，以简化最终用户的键位映射。 |\n| `IInput` | 用于监听原始输入事件，例如检测空格键何时被按下或释放。除非用于聊天和文本输入等少数边缘情况，否则不建议使用原始输入，相反，动作映射更好。\
+  \ |\n\n### 硬件鼠标\n\n硬件鼠标实现提供了 `IHardwareMouseEventListener` 结构体，以便接收鼠标事件回调。在派生并实现其虚函数后，使用\
+  \ `IHardwareMouse::AddListener` 来利用它：\n\n```\ngEnv->pHardwareMouse->AddListener(this);\n\
+  ```\n\n监听器通常从构造函数或初始化函数中调用。确保你不要重复注册监听器，并在类的析构函数中始终移除它们，以防止悬空指针。\n\n### 动作映射\n\n\
+  在之前的表中简要提到，动作映射允许将按键绑定到命名的动作。这用于允许对不同游戏状态下的输入进行简单映射。\n\n例如，如果游戏有两种类型的车辆，你可能不希望对两者使用相同的按键。\n\
+  \n动作映射还允许实时更改动作映射的按键。这允许玩家自定义他们偏好的输入方法。\n\n![](img/index-121_1.png)\n\n## 创建自定义角色\n\
+  \n### 监听动作映射事件\n\n默认动作映射配置包含在 `Game/Libs/Config/defaultProfile.xml` 中。当游戏发布时，默认配置会被复制到用户的个人文件夹（通常在\
+  \ `My Games/Game_Title` 中），用户可以对其修改以重新映射键位，例如更改触发 `screenshot` 动作的按键。\n\n要监听动作映射事件，我们必须先在\
+  \ profile xml 中创建一个新动作，或者选择一个现有动作并对其修改。在这个示例中，我们将利用现有的 screenshot 动作。\n\n### IActionListener\n\
+  \n动作映射系统提供了 `IActionListener` 结构体，为需要动作映射事件的类提供回调支持。\n\n利用监听器相对简单：\n\n1. 派生 `IActorListener`\
+  \ 结构体。\n2. 实现 `OnAction` 事件。\n3. 注册你的监听器：\n\n```\ngEnv->pGameFramework->GetIActionMapManager()->AddExtraActionListener(this);\n\
+  ```\n\n监听器应该只注册一次，这就是为什么倾向在构造函数或初始化函数中进行注册。确保在类实例销毁时移除你的监听器。\n\n### 启用动作映射部分\n\n\
+  动作映射系统允许在同一个配置中创建多个动作映射部分，使游戏代码能够实时切换不同的动作映射部分。这对于具有多个玩家状态的游戏（例如行走和使用车辆）非常有用。在这种情况下，车辆和步行动作映射将包含在不同的部分，并在进入或离开车辆时启用/禁用这些部分。\n\
+  \n```xml\n<actionmap name=\"walk\" version=\"22\">\n  <action name=\"walkBack\"\
+  \ onPress=\"1\" keyboard=\"s\" />\n</actionmap>\n<actionmap name=\"drive\" version=\"\
+  22\">\n  <action name=\"break\" onPress=\"1\" keyboard=\"s\" />\n</actionmap>\n\
+  ```\n\n要启用你的自定义动作映射，调用 `IActionMapManager::EnableActionMap`：\n\n```\ngEnv->pFramework->GetIActionMapManager()->EnableActionMap(\"\
+  walk\", true);\n```\n\n这应该在玩家应该接收到这些新动作的精确时刻完成。在上一个例子中，当玩家离开车辆时启用 \"walk\" 动作。\n\
+  \n## 动画角色\n\n`IAnimatedCharacter` 是一个游戏对象扩展，允许对象实现移动和物理集成。通过使用它，角色可以请求物理移动请求、利用动画图功能等。\n\
+  \n由于该扩展是可选的，任何游戏对象都可以通过简单的获取它来激活，正如*第 3 章，创建和利用自定义实体*中所述：\n\n```\nm_pAnimatedCharacter\
+  \ = static_cast<IAnimatedCharacter*>(GetGameObject()->AcquireExtension(\"AnimatedCharacter\"\
+  ))\n```\n\n一旦获取，动画角色即可立即使用。动画角色功能等移动请求需要 `eEPE_OnPostStepImmediate` 物理事件，可以通过 `IGameObject::EnablePhysicsEvent`\
+  \ 启用。\n\n### 移动请求\n\n当动画角色被物理化为一个活动实体时，它可以请求移动。这本质上是 `pe_action_move` 物理请求的封装（更多信息请参见*第\
+  \ 9 章*，*物理编程*），以便于更简单的用法。\n\n在处理玩家移动等高级机制时，角色移动请求非常有用。\n\n注意请求移动与直接设置玩家位置之间的区别。通过请求速度变化，我们能够让实体对碰撞做出反应。\n\
+  \n### 添加移动请求\n\n要添加移动请求，利用 `IAnimatedCharacter::AddMovement`，它需要一个 `SCharacterMoveRequest`\
+  \ 对象：\n\n```\nSCharacterMoveRequest request;\nrequest.type = eCMT_Normal;\nrequest.velocity\
+  \ = Vec3(1, 0, 0);\nrequest.rotation = Quat(IDENTITY);\nm_pAnimatedCharacter->AddMovement(request);\n\
+  ```\n\n上面的代码显示了一个移动请求的基础示例，它将持续设置朝前的（世界空间）方向（如果持续提交）。移动请求必须通过物理循环添加，参见通过 `IGameObject::ProcessEvent`\
+  \ 发送的 `ENTITY_EVENT_PREPHYSICSUPDATE`\n\n## Mannequin 动画系统\n\nCryEngine 3.5 引入了高级\
+  \ Mannequin 动画系统。该系统的设计目的是解耦动画和游戏逻辑，在 CryAnimation 模块和游戏代码之间作为额外的层。\n\n请记住 Mannequin\
+  \ 可以应用于任何实体，而不只是角色。然而，Mannequin 默认集成在 `IAnimatedCharacter` 扩展中，使得角色更容易使用新的动画系统。\n\
+  \nMannequin 依赖于一组类型，在使用之前应该清楚这些类型：\n\n| 类型 | 描述 |\n| :--- | :--- |\n| **Fragment\
+  \ (片段)** | 指代状态，例如“落地”。每个片段可以在多个层上指定多个动画，以及一组效果。这使得在同时处理第一人称和第三人称视角时，动画更加平滑。 |\n\
+  | **Fragment ID (片段 ID)** | 为了避免直接传递片段，我们可以通过其片段 ID 来标识它们。 |\n| **Scope (范围)** |\
+  \ 范围允许解耦角色的部分，以便分别处理例如上半身和下半身的动画。在创建新范围时，每个片段都可以向该范围添加额外的动画和效果以扩展其行为。 |\n\n\n\n\n\
+  \n同时处理两种状态。\n\n**[ 105 ]**\n\n## 创建自定义 Actor\n\n### 名称\n### 描述\n\n### 标签 (Tag)\n\
+  标签是指选择标准，允许根据激活的标签来选择子片段（subfragments）。例如，如果我们有两个名为“Idle”（空闲）的片段，但其中一个被分配了“Injured”（受伤）标签，我们可以根据玩家是否受伤动态地在这两个片段变体之间切换。\n\
+  \n### 选项 (Options)\n如果我们最终有多个共享相同标识符和标签的片段，我们就多个选项。默认行为是在查询片段时随机选择这些选项中的一个，从而使实体的动画产生变化。\n\
+  \n## 人体模型编辑器 (Mannequin Editor)\n`Mannequin Editor` 用于通过沙盒编辑器（Sandbox Editor）实时调整角色动画和人体模型模型配置。\n\
+  \n### 预览设置\n`Mannequin Editor` 使用存储在 `Animations/Mannequin/Preview` 中的预览文件来加载默认模型和动画数据库。启动\
+  \ `Mannequin Editor` 时，我们需要通过选择 `File`（文件） | `Load Preview Setup`（加载预览设置）来加载我们的预览设置。\n\
+  \n加载完成后，我们将看到预览设置的视觉化表示，如下截图所示：\n\n**[ 106 ]**\n\n![](img/index-126_1.jpg)\n\n*第\
+  \ 5 章*\n\n我们的预览文件内容如下所示：\n\n```xml\n<MannequinPreview>\n<controllerDef filename=\"\
+  Animations/Mannequin/ADB/SNOWControllerDefinition.xml\"/>\n<contexts>\n<contextData\
+  \ name=\"Char3P\" enabled=\"1\" database=\"Animations/Mannequin/ADB/Skiing.adb\"\
+  \ context=\"Char3P\" model=\"scripts/config/base.cdf\"/>\n</contexts>\n<History\
+  \ StartTime=\"-4.3160208e+008\" EndTime=\"-4.3160208e+008\"/>\n</MannequinPreview>\n\
+  ```\n\n我们将在章节后续部分详细介绍控制器定义、上下文数据等细节。\n\n### 创建上下文 (contexts)\n如本章前面提到的，上下文可以根据角色状态应用不同的动画和效果。\n\
+  \n**[ 107 ]**\n\n![](img/index-127_1.jpg)\n![](img/index-127_2.png)\n\n*创建自定义 Actor*\n\
+  我们可以通过 `Mannequin Editor` 中选择 `File` | `Context Editor`（上下文编辑器）来创建和修改上下文。\n\n要创建一个新上下文，只需点击左上角的\
+  \ `New`（新建），这将打开 `New Context`（新建上下文）对话框，如下截图所示：这允许我们在创建之前对其进行调整，包括选择要使用的动画数据库和模型。\n\
+  \n完成后完成后，只需点击 `OK`（确定）即可看到已创建的上下文。\n\n**[ 108 ]**\n\n![](img/index-128_1.png)\n\n\
+  *第 5 章*\n\n### 创建片段 (fragments)\n默认情况下，我们可以在 `Mannequin Editor` 的左上部分看到片段工具箱。除了添加或编辑选项外，我们还将使用该工具创建和编辑片段。\n\
+  \n上一个截图显示了打开了 `BackFlip`后空翻）片段的片段工具箱，它暴露了两个选项。\n\n要创建一个新片段，点击 `New Id…` 按钮，在打开的消息框中输入所需的名称，然后点击\
+  \ `OK`。\n\n**[ 109 ]**\n\n![](img/index-129_1.png)\n![](img/index-129_2.png)\n\n\
+  *创建自定义 Actor*\n你现在应该能看到如下所示的 `Mannequin FragmentID Editor` 对话框：\n\n我们现在可以选择该片段应在哪些范围（scopes）内运行。在我们情况下，只需勾选\
+  \ `Char3P` 并点击 `OK`。\n\n你现在可以在片段工具箱中看到你的片段了：\n\n**[ 110 ]**\n\n![](img/index-130_1.png)\n\
+  \n*第 5 章*\n\n### 添加选项 (options)\n向你的片段添加新选项有两种方法：\n- 打开角色编辑器（Character Editor），选择你的动画，然后将其拖到你的人体模型片段（Mannequin\
+  \ Fragment）上。\n- 点击片段工具箱中的 New 按钮，并手动修改选项。\n\n### 创建和使用标签\n如前文所述，人体模型系统允许创建 `Tags`（标签），允许根据标签当前是否激活为每个片段选择特定的选项。\n\
+  \n要创建一个新标签，打开 `Mannequin Editor` 并选择 `File -> Tag Definition Editor`（标签定义编辑器）：\n\
+  \n打开后，你将看到 `Mannequin Tag Definitions Editor`。编辑器为你提供了两个部分：`Tag Definitions`（标签定义）和\
+  \ `Tags`（标签）。\n\n**[ 111 ]**\n\n![](img/index-131_1.jpg)\n\n*创建自定义 Actor*\n我们首先需要做的的是是创建一个\
+  \ `Tag Definition`（标签定义）。这是一个跟踪一组标签的文件。执行此操作，按下 `Tag Definitions` 部分中的 `+` 符号，然后指定你的定义名称。\n\
+  \n太棒了！你现在应该在 `Mannequin Tag Definitions` 编辑器中看到你的标签定义。要创建一个新标签，选择 `MyTags.xml` 并点击标签创建图标（`Tags`\
+  \ 部分中右起第三个）。\n\n这将为你展示一个 `Tag Creation`（标签创建）对话框，你只需要指定标签的名称。\n\n**[ 112 ]**\n\n\
+  ![](img/index-132_1.jpg)\n![](img/index-132_2.png)\n\n*第 5 章*\n### 为选项附加标签\n现在你已经创建了标签，我们可以在片段编辑器（Fragment\
+  \ Editor）中选择任何片段选项。通过勾选标签旁边的复选框，我们告诉动画系统该选项具有优先权。\n\n**[ 113 ]**\n\n![](img/index-133_1.png)\n\
+  \n*创建自定义 Actor*\n### 启动片段\n在 C++ 中，片段由 `IAction` 接口表示，如果需要，每个游戏可以自由地实现或扩展它。队列片段是通过调用\
+  \ `IActionController::Queue` 函数完成的，在此之前我们必须获取片段的 `FragmentId`。\n\n### 获取片段标识符\n\
+  为了获取片段标识符，我们需要获取当前的动画上下文，以获得当前的控制器定义，并从中获取片段 ID。\n\n**[ 114 ]**\n\n### 保存\n要保存 `Mannequin\
+  \ Editor` 的更改，只需点击 `File` | `Save Changes`（保存更改），并在弹出的 `Mannequin File Manager`\
+  \ 对话框中确认更改。\n准备好保存时，只需点击 `Save`（保存）即可更新系统。\n\n\n\n\n\n```cpp\nSAnimationContext\
+  \ *pAnimContext = pActionController->GetContext(); bool enable = true;\n\npAnimContext->state.Set(tagId,\
+  \ enable);\n```\n\n### [ 115 ]\n\n## 创建自定义 Actor\n\n完成！我们的标签现在已经激活，并将在动画系统中显示为激活状态。\n\
+  \n如果你的动作（action）被设置为动态更新，它将立即选择合适的选项。\n\n#### 强制动作重新查询选项\n\n默认的 `IAction` 实现在标签更改时，不会自动选择相关的选项。为了改变这一点，我们需要创建一个派自于它的新类，并使用以下代码覆盖它的\
+  \ `Update` 函数：\n\n```cpp\nIAction::EStatus CUpdatedAction::Update(float timePassedSeconds)\n\
+  {\n    TBase::Update(timePassedSeconds);\n\n    const IScope &rootScope = GetRootScope();\n\
+  \n    if(rootScope.IsDifferent(m_fragmentID, m_fragTags))\n    {\n        SetFragment(m_fragmentID,\
+  \ m_fragTags);\n    }\n\n    return m_eStatus;\n}\n```\n\n上述代码的作用是检查何时有了更好的选项可用，并转而选择该选项。\n\
+  \n#### 调试人体模型（Mannequin）\n\n要启用 Mannequin 调试，我们需要向动作控制器附加 `AC_DebugDraw` 标记：\n\n\
+  ```cpp\npActionController->SetFlag(AC_DebugDraw, g_pGameCVars->pl_debugMannequin\
+  \ != 0);\n```\n\n你现在会看到可视化的片段和标签选择的调试信息。这在处理 Mannequin 工作时非常有用。\n\n####为自定义实体设置\
+  \ Mannequin\n\n正如本章早期提到的，动画角色游戏对象扩展默认集成了 Mannequin。这在使用 actor 时非常非常方便，但在某些情况下，在自定义实体上使用\
+  \ Mannequin 提供的功能可能是很有用的。\n\n### [ 116 ]\n\n# 第 5 章\n\n首先，我们需要在实体扩展中存储指向动作控制器和动画上下文的指针，如下所示：\n\
+  \n```cpp\nIActionController *m_pActionController;\nSAnimationContext *m_pAnimationContext;\n\
+  ```\n\n然后我们需要初始化 Mannequin；这通常在游戏对象扩展的 `PostInit` 函数中完成。\n\n#### 初始化 Mannequin\n\
+  \n首先要做的是获取 Mannequin 接口：\n\n```cpp\n// Mannequin 初始化\nIMannequin &mannequinInterface\
+  \ = gEnv->pGame->GetIGameFramework()->GetMannequinInterface();\nIAnimationDatabaseManager\
+  \ &animationDBManager = mannequinInterface.GetAnimationDatabaseManager();\n```\n\
+  \n#### 加载控制器定义\n\n接下来，我们必须加载为实体创建的控制器定义：\n\n```cpp\nconst SControllerDef *pControllerDef\
+  \ = animationDBManager.LoadControllerDef(\"Animations/Mannequin/ADB/myControllerDefinition.xml\"\
+  );\n```\n\n太棒了！现在我们有了控制器定义，可以使用以下代码创建动画上下文：\n\n```cpp\nm_pAnimationContext = new\
+  \ SAnimationContext(*pControllerDef);\n```\n\n我们现在可以创建动作控制器：\n\n```cpp\nm_pActionController\
+  \ = mannequinInterface.CreateActionController(pEntity, *m_pAnimationContext);\n\
+  ```\n\n#### 设置激活上下文\n\n现在我们已经初始化了动作控制器，我们需要设置默认上下文。首先，获取上下文标识符：\n\n```cpp\nconst\
+  \ TagID mainContextId = m_pAnimationContext->controllerDef.m_scopeContexts.Find(\"\
+  Char3P\");\n```\n\n### [ 117 ]\n\n## 创建自定义 Actor\n\n```cpp\nCRY_ASSERT(mainContextId\
+  \ != TAG_ID_INVALID);\n```\n\n然后加载我们将使用的动画数据库：\n\n```cpp\nconst IAnimationDatabase\
+  \ *pAnimationDatabase = animationDBManager.Load(\"Animations/Mannequin/ADB/myAnimDB.abd\"\
+  );\n```\n\n加载后，只需调用 `IActionController::SetScopeContext`：\n\n```cpp\nm_pActionController->SetScopeContext(mainContextId,\
+  \ *pEntity, pCharacterInstance, pAnimationDatabase);\n```\n\n一旦设置了上下文，Mannequin\
+  \ 就会初始化并准备好处理为你的实体的队列片段。记住，你可以使用之前使用的 `IActionController::SetScopeContext` 函数随时更改范围上下文。\n\
+  \n## 总结\n\n在本章中，我们学习了 actor 系统是如何运作的，并用 C# 和 C++ 创建了自定义的 actor。通过观察输入和摄像系统，我们将能够处理基础的玩家输入视图设置。\n\
+  \n你还应该对 Mannequin 的用例有良好的理解，以及如何设置自定义实体来利用它们。我们现在拥有了游戏所需的所有核心功能：流节点（flow nodes）、实体（entities）、游戏规则和\
+  \ actor。在接下来的章节中，我们将基于现有知识，详细介绍这些系统如何协同工作。\n\n如果你想在继续后续之前继续研究 actor，请尽管尝试实现一个为新场景定制的你自己的\
+  \ actor；例如，等轴测相机结合基础的 RPG 玩家元素。\n\n在下一章中，我们将使用学到的关于 actor 的知识来创建`人工智能`（`AI`）。\n\n\
+  ### [ 118 ]\n\n#### 人工智能\n\nCryENGINE AI 系统允许创建在游戏世界中漫游的非玩家控制的 actor。\n\n在本章中，我们将：\n\
+  * 学习 AI 系统如何与 Lua 脚本集成\n* 发现什么是目标管道（goal pipes）以及如何创建它们\n* 使用 AI 信号\n* 注册自定义的 AI\
+  \ Actor 类\n* 学习如何使用行为选择树\n* 创建我们自己的 AI 行为\n\n\n\n\n\n管道（Pipes）最初在 `Scripts/AI/GoalPipes/PipeManager.lua`\
+  \ 的 `PipeManager:CreateGoalPipes` 函数中注册，使用了 `AI.LoadGoalPipes` 函数：`AI.LoadGoalPipes(\"\
+  Scripts/AI/GoalPipes/MyGoalPipes.xml\");`。这段代码段将加载 `Scripts/AI/GoalPipes/MyGoalPipes.xml`，其中可能包含以下目标管道定义：\n\
+  \n```xml\n<GoalPipes>\n  <GoalPipe name=\"myGoalPipes_findPlayer\">\n    <Locate\
+  \ name=\"player\" />\n    <Speed id=\"Run\"/>\n    <Script code=\"entity.Behavior:AnalyzeSituation(entity);\"\
+  />\n  </GoalPipe>\n</GoalPipes>\n```\n\n当选择此管道时，分配的 AI 将开始寻找玩家，切换到 `Run` 移动速度状态，并调用当前选择的行为脚本中包含的\
+  \ `AnalyzeSituation` 函数。\n\n目标管道对于方便地推送一组目标非常有效。例如，根据上一个脚本，我们只需选择 `myGoalPipes_findPlayer`\
+  \ 管道，即可让 AI 运行并寻找玩家。\n\n### 选择管道\n\n目标管道通常使用 Lua 中的实体函数 `SelectPipe` 触发：`myEntity:SelectPipe(0,\
+  \ \"myGoalPipe\");`。或者可以通过 C++ 触发，使用 `IPipeUser::SelectPipe` 函数。\n\n### 信号\n\n为了给\
+  \ AI 实体提供一种直观的相互通信方式，我们可以使用信号系统（signal system）。信号是事件，可以从另一个 AI 实体、或者从 C++ 或 Lua\
+  \ 代码的其他地方发送到特定的 AI 单元。\n\n信号可以使用 Lua 中的 `AI.Signal` 函数发送，或者使用 C++ 中的 `IAISystem::SendSignal`发送。\n\
+  \n[ 121 ]\n\n![](img/index-141_1.jpg)\n\n*人工智能*\n\n### AI 行为\n\n行为需要分配给每个 Actor（actor），它们定义了实体的决策能力。通过在运行时使用**行为选择树**选择行为，Actor\
+  \ 可以给人一种动态适应周围环境的印象。\n\n行为选择树是使用放置在 `Scripts/AI/SelectionTrees/` 中的 XML 文件创建的。每个树管理着一组**行为叶子**（behavior\
+  \ leaves），每个叶子代表一种可以根据条件启用的 AI 行为。\n\n#### 示例\n\n例如，参见此处所示的非常基础的选择树 XML 定义形式：\n\n\
+  ```xml\n<SelectionTrees>\n  <SelectionTree name=\"SelectionTreeSample\" type=\"\
+  BehaviorSelectionTree\">\n    <Variables>\n      <Variable name=\"IsEnemyClose\"\
+  />\n    </Variables>\n    <SignalVariables>\n      <Signal name=\"OnEnemySeen\"\
+  \ variable=\"IsEnemyClose\" value=\"true\"/>\n      <Signal name=\"OnNoTarget\"\
+  \ variable=\"IsEnemyClose\" value=\"false\"/>\n      <Signal name=\"OnLostSightOfTarget\"\
+  \ variable=\"IsEnemyClose\" value=\"false\"/>\n    </SignalVariables>\n    <LeafTranslations\
+  \ />\n    <Priority name=\"Root\">\n      [ 122 ]\n      *第 6 章*\n      <Leaf name=\"\
+  BehaviorSampleCombat\" condition=\"IsEnemyClose\"/>\n      <Leaf name=\"BehaviorSampleIdle\"\
+  />\n    </Priority>\n  </SelectionTree>\n</SelectionTrees>\n```\n\n为了更好地理解该示例，我们将对其进行拆解：\n\
+  \n```xml\n<SelectionTree name=\"SelectionTreeSample\" type=\"BehaviorSelectionTree\"\
+  >\n  <!-- 这段代码代码仅仅定义了选择树的名称，AI 系统在 AI 初始化期间会解析它。如果你想重命名树，只需更改 name 属性： -->\n  <Variables>\n\
+  \    <Variable name=\"IsEnemyClose\"/>\n  </Variables>\n```\n\n每个选择树可以定义一组变量，这些变量可以根据信号设置（见下一个代码段），或在每个行为脚本内部设置。\n\
+  \n变量简单的布尔条件，可以通过查询它们来确定下一个选择哪个叶子或行为：\n\n```xml\n<SignalVariables>\n  <Signal name=\"\
+  OnEnemySeen\" variable=\"IsEnemyClose\" value=\"true\"/>\n  <Signal name=\"OnNoTarget\"\
+  \ variable=\"IsEnemyClose\" value=\"false\"/>\n  <Signal name=\"OnLostSightOfTarget\"\
+  \ variable=\"IsEnemyClose\" value=\"false\"/>\n</SignalVariables>\n```\n\n每个行为树还可以监听如\
+  \ `OnEnemySeen` 等信号，以便方便地设置变量值。例如，在我们刚刚看到的代码段中，当敌人被发现时，`IsEnemyClose` 变量始终被设为 true，然后在丢失目标时被设为\
+  \ false。\n\n[ 123 ]\n\n*人工智能*\n\n然后我们可以在查询新叶子时使用该变量（见以下代码段），允许 AI 根据简单的信号事件切换到不同的行为脚本：\n\
+  \n```xml\n<Priority name=\"Root\">\n  <Leaf name=\"BehaviorSampleCombat\" condition=\"\
+  IsEnemyClose\"/>\n  <Leaf name=\"BehaviorSampleIdle\"/>\n</Priority>\n```\n\n通过在\
+  \ `Priority` 元素内部指定叶子，我们可以在运行时根据简单条件启用行为（叶子）。\n\n例如，上一个代码段将在敌人靠近时启用 `BehaviorSampleCombat`\
+  \ 行为脚本，否则它将回退到 `BehaviorSampleIdle` 行为。\n\n行为选择树系统将按顺序查询叶子，并回退到最后一个剩下的叶子。在这种情况下，它将首先查询\
+  \ `BehaviorSampleCombat`，如果 `IsEnemyClose` 变量被设为 false，则回退到 `BehaviorSampleIdle`。\n\
+  \n### IAIObject\n\n已向 AI 系统注册的实体可以调用 `IEntity::GetAI` 来获取 `IAIObject` 指针。\n\n通过访问实体的\
+  \ AI 对象，我们可以对其进行操作，例如在 C++ 中：\n\n```cpp\nif(IAIObject *pAI = pEntity->GetAI())\n\
+  {\n  gEnv->pAISystem->SendSignal(SIGNAL_SENDER, 0, \"MySignal\", pAI);\n}\n```\n\
+  \n### 创建自定义 AI\n\n创建自定义 AI 的过程非常直接。AI 有两个部分：IActor 实现和 AI 定义。\n\n[ 124 ]\n\n![](img/index-144_1.jpg)\n\
+  \n*第 6 章*\n\n### 注册 Actor 实现\n\nAI Actor 通常使用相同的 IActor 实现，至少是共享的。\n\n#### C# 中\n\
+  \n在 C# 中注册 AI Actor 与我们之前的方法非常相似。基本上，我们所做的是派自 `AIActor` 而不是 `Actor`。`AIActor` 类直接派自\
+  \ `Actor`，因此不会丢失任何回调和成员。但是它必须显式实现，以便让 CryEngine 实体是由 AI 控制的。\n\n```csharp\npublic\
+  \ class MyCSharpIActor : AIActor\n{\n}\n```\n\n你现在可以在 Sandbox 中的 AI 类别中放置你的实体了：\n\
+  \n[ 125 ]\n\n*人工智能*\n\n#### C++ 中\n\n正如我们刚刚看到的 C# Actor 一样，在 AI 系统中注册 Actor 并不困难。只需派自我们在上一个章节创建的实现：\n\
+  \n```cpp\nclass CMyAIActor : public CCppActor\n{\n};\n```\n\n然后打开你的 GameDLL 中的 `GameFactory.cpp`\
+  \ 文件并使用相同的设置注册 Actor，只是最后一个参数应该是 true，以告诉 CryEngine 该 Actor 类型由 AI 控制：\n\n```cpp\n\
+  REGISTER_FACTORY(pFramework, \"MyAIActor\", CMyAIActor, true);\n```\n\n### 创建 AI\
+  \ 实体\n\n当当 AI Actor 生成时，AI 系统将搜索 AI 实体定义。定义用于设置 Actor 的默认属性，例如它的编辑器属性。\n\n我们需要的第一步是打开\
+  \ `Scripts/Entities/AI` 并创建一个与我们的 Actor 类同名的 `.lua` 文件。在我们的情况下，对于 C++ 实现是 `MyAIActor.lua`，对于\
+  \ C# Actor 是 `MyCSharpAIActor.lua`。\n\n脚本保持最少代码，因为我们只需要加载基础 AI。基础 AI 使用 `Script.ReloadScript`\
+  \ 函数加载。默认情况下，CryEngine 使用 `Scripts/Entities/AI/Shared/BasicAI.lua` 作为基础 AI 定义。\n\
+  \n\n\n\n\n```\nScript.ReloadScript(\"SCRIPTS/Entities/AI/AISample_x.lua\");\n```\n\
+  \n--------------------------------------------------------------\n\n`MyCSharpAIActor\
+  \ = CreateAI(AISample_x)`\n\n[ 126 ]\n\n![](img/index-146_1.png)\n\n# 第 6 章\n\n\
+  好了！你的 AI 现在已正确注册，现在可以通过编辑器（Editor）进行放置。\n\n关于基础 AI 定义的更多信息，请参阅本章后面的`AI 基础定义拆解`章节。\n\
+  \n## AI 行为与角色\n\n当我们生成自定义的 AI actor 时，默认会出现四个实体属性。\n\n这些属性决定了 AI 应该使用哪些系统来做出决策：\n\
+  \n[ 127 ]\n\n### 人工智能\n\n#### 理解和使用行为选择树\n行为选择树是我们的 AI actor 最重要的实体属性，因为它决定了 actor\
+  \ 使用哪种行为选择树。如果我们的项目包含多个行为选择树，我们可以由于不同的选择树轻松地生成多个行为完全不同的 AI actor。选择树系统的存在是为了提供一种在运行时查询和选择行为脚本的方法。\n\
+  \n要查看当前可用的树或创建你自己的树，请导航到 `Scripts/AI/SelectionTrees`。对于我们的示例，我们将使用位于 `Scripts/AI/SelectionTrees/FogOfWar.xml`\
+  \ 中的 `FogOfWar` 选择树：\n\n```xml\n<SelectionTree name=\"FogOfWar\" type=\"BehaviorSelectionTree\"\
+  >\n<Variables>\n<Variable name=\"IsFar\"/>\n<Variable name=\"IsClose\"/>\n<Variable\
+  \ name=\"AwareOfPlayer\"/>\n</Variables>\n<SignalVariables>\n<Signal name=\"OnEnemySeen\"\
+  \ variable=\"AwareOfPlayer\" value=\"true\"/>\n<Signal name=\"OnNoTarget\" variable=\"\
+  AwareOfPlayer\" value=\"false\"/>\n<Signal name=\"OnLostSightOfTarget\" variable=\"\
+  AwareOfPlayer\" value=\"false\"/>\n</SignalVariables>\n<LeafTranslations />\n<Priority\
+  \ name=\"Root\">\n<Leaf name=\"FogOfWarSeekST\" condition=\"IsFar\"/>\n<Leaf name=\"\
+  FogOfWarEscapeST\" condition=\"IsClose\"/>\n<Leaf name=\"FogOfWarAttackST\" condition=\"\
+  AwareOfPlayer\"/>\n<Leaf name=\"FogOfWarIdleST\"/>\n</Priority>\n</SelectionTree>\n\
+  ```\n\n#### 变量\n每个选择树都暴露了一组可以在运行时设置的变量。这些变量将被叶子节点查询，以确定激活何种行为。\n\n[ 128 ]\n\n# 第\
+  \ 6 章\n\n#### 信号变量\n信号变量提供了一种在接收到信号时设置变量的简单方法\n\n例如，在之前的树中，我们可以看到当接收到 `OnEnemySeen`\
+  \ 信号时，动态设置 `AwareOfPlayer`。当 AI 丢失玩家，变量会被设置为 false。\n\n#### 叶子节点 / 行为查询\n叶子节点根据变量条件决定播放何种行为。\n\
+  \n在之前的树中，我们可以看到当所有其他条件都设置为 false 时，`FogOfWarIdleST` 行为会被默认激活。然而，假设 `IsFar` 变量被设置为\
+  \ true，系统将自动切换到 `FogOfWarSeekST` 行为。\n\n行为从 `Scripts/AI/Behaviors/Personalities/`\
+  \ 目录加载，在我们的情况下，它将在 `Scripts/AI/Behaviors/Personalities/FogOfWarST/` 内部找到引用行为。\n\n\
+  #### 角色\n`Character` 属性用于为 actor 设置 AI 角色。\n\n在我们的示例中，`Character` 属性将默认为空字符串，因为自从引入行为选择树以来，该系统被认为是过时的（请查看`理解和使用行为选择树`章节）。\n\
+  \nAI 角色包含在 `Scripts/AI/Characters/Personalities` 中的 `.lua` 脚本中中。例如，我们可以打开并修改 `Scripts/AI/Characters/Personalities/FogOfWar.lua`\
+  \ 来修改我们的默认性格。\n\n你也可以通过通过在 Personalities 目录中添加新文件并以 `FogOfWar` 为基准创建新性格。\n\n`Character`\
+  \ 属性定义了所有适用行为，在我们的情况下，包括 `FogOfWarAttack`、`FogOfWarSeek`、`FogOfWarEscape` 和 `FogOfWarIdle`。actor\
+  \ 将根据内部和外部条件在这些行为之间切换。\n\n[ 129 ]\n\n### 人工智能\n\n#### 导航类型\n`NavigationType` 属性决定使用哪种类型的\
+  \ AI 导航。这允许系统动态确定哪些路径对于该类型的 AI 是行的。\n\n这在我们的示例中默认为 `MediumSizedCharacter`，可以设置为\
+  \ `Scripts/AI/Navigation.xml` 中包含的任何导航定义。\n\n#### 创建自定义行为\n我们几乎完成了！剩下的步骤是理解如何创建和修改\
+  \ AI 行为，并使用我们之前描述的行为选择树来激活它们。\n\n首先，用你喜欢的文本编辑器打开 `Scripts/AI/Behaviors/Personalities/FogOfWarST/FogOfWarIdleST.lua`。由于之前描述的行为树设置，这是当所有其他变量都设置为\
+  \ false 时将激活的行为。\n\n行为通过调用 `CreateAIBehavior` 函数创建，其中第一个参数设置为新行为的名称，第二个参数包含行为行为的表。\n\
+  \n因此，一个行为的最少配置将是：\n```lua\nlocal Behavior = CreateAIBehavior(\"MyBehavior\", {\n\
+  \    Alertness = 0,\n    Constructor = function (self, entity)\n    end,\n    Destructor\
+  \ = function(self, entity)\n    end,\n})\n```\n\n这段代码段将设置 AI 的 `Alertness` 为 0，并在行为启动时什么都不做。\n\
+  \n```lua\nConstructor = function (self, entity)\n    Log(\"Idling...\");\n    AI.SetBehaviorVariable(entity,\
+  \ \"AwareOfPlayer\", false);\n    entity:SelectPipe(0,\"fow_idle_st\");\nend,\n\
+  ```\n\n[ 130 ]\n\n# 第 6 章\n\n当行为被激活时，我们应该在控制台中看到 `Idling...`，前提是日志设置得足够高（使用 `verbosity`）。\n\
+  \n日志记录，行为将通过 `AI.SetBehaviorVariable` 将 `AwareOfPlayer` 设置为 false。我们可以随时使用函数更改变量的值，告诉行为选择树查询另一个行为。\n\
+  \n在设置变量为 false 后，构造函数选择了 `fow_idle_st` 目标。\n\n#### 监听信号\n要在行为中监听信号，只需创建一个新函数：`OnMySignal\
+  \ = function(self, sender)` {} 将在发送 `OnMySignal` 信号时调用，以及关联的实体和行为表。\n\n#### AI 基础定义拆解\n\
+  在本章之前，我们创建了依赖于 `Scripts/Entities/AI/AISample_x` 基础定义。本节将描述基础定义的功能，以便更好地理解设置。\n\n\
+  首先，用你喜欢的文本编辑器打开定义，例如 Notepad++。\n\n#### AISample_x 表\n打开 `AISample_x.lua` 时看到的第一行代码是它的表定义，它定义了每个角色的默认属性。\n\
+  \n每个 AI 定义都可以覆盖基础定义中设置的属性。\n\n[ 131 ]\n\n### 人工智能\n\n#### Properties 表\n`Properties`\
+  \ 表的作用与标准 Lua 实体相同，用于定义在编辑器中选择实体时显示的属性。\n\n我们基础 AI 定义中的默认属性读取自 `CryAISystem.dll`。不支持移除这些属性会导致\
+  \ AI 初始化失败。\n\n#### AIMovementAbility 表\n`AIMovementAbility` 子表定义了 actor 的移动能力，例如步行和跑步速度。\n\
+  \n#### CreateAI 函数\n`CreateAI` 函数将基础 AI 表与指定的子表合并。\n\n这意味着 AI 定义中存在的任何表将出现在任何派自它的\
+  \ AI 定义中。\n\n`CreateAI` 函数还使实体变得可生成，并通过调用 AI 的 `Expose()` 函数将其暴露给网络。\n\n#### RegisterAI\
+  \ 函数\n\n\n\n\n当 actor 需要注册到 AI 系统中时，会调用 `RegisterAI` 函数。该函数会在实体生成时以及编辑器属性发生更改时自动调用。\n\
+  \n## 总结\n\n在本章中，我们学习了 AI 系统的核心思想和实现方法，并创建了一个自定义的 AI actor 实现。\n\n在创建了自身的 AI 实体定义和行为选择树后，你应该已经了解\
+  \ CryEngine 中是如何创建 AI actor 的。\n\n现在你应该已经很好地理解如何利用 AI 系统来实现优势，让你能够创建在游戏世界中巡逻的 AI\
+  \ 控制单元。\n\n如果你对 AI 还没有学完，为什么不尝试用新学到的知识自己创建一些你喜欢的更复杂的内容呢？\n\n在下一章中，我们将介绍创建自定义用户界面的过程，允许创建主菜单和**平视显示**（**HUD**）。\n\
+  \n## [ 132 ]\n\n# 用户界面\n\nCryENGINE 集成了 Scaleform `GFx`，允许渲染基于 Adobe Flash 的用户界面、HUD\
+  \ 和动画纹理。通过使用 UI 流程图解决方案在运行时将 UI 元素结合在一起，开发者可以直观地创建并扩展用户界面。\n\n在本章中，我们将涵盖以下主题：\n\n\
+  - 学习 CryENGINE 的 Scaleform 实现以及它带来的优势。\n- 创建我们的主菜单。\n- 实现 UI 游戏事件系统\n\n## Flash\
+  \ 电影片段和 UI 图\n\n为了给开发者提供创建用户界面的解决方案，CryENGINE 集成了 Adobe Scaleform `GFx`，这是一种用于游戏引擎的实时\
+  \ Flash 渲染器。该系统允许在 Adobe Flash 中创建用户界面，然后将其导出并在引擎立即使用。\n\n还可以在材料中使用 Flash `.swf`\
+  \ 文件，允许在游戏世界中的 3D 对象上渲染 Flash 电影片段。\n\n增加了 UI 流程图系统，创建模块化动态用户界面的工作大大简化，该系统允许使用流程图系统创建和维护任何\
+  \ Flash UI 元素。\n\nUI 流程图系统基于两种类型：**元素**（elements）和**动作**（actions）。每个元素代表一个 Flash\
+  \ 文件（`.swf` 或 `.gfx`），而每个动作代表一个表示 UI 状态的流程图。\n\n*用户界面*\n\n### 元素\n\nUI 元素通过 `Game/Libs/UI/UIElements/`\
+  \ 中的 XML 文件配置，代表每个 Flash 文件。通过修改 UI 元素的配置，我们可以更改它接收的事件和对齐模式，并暴露导出 SWF 文件中存在的不同函数和回调。\n\
+  \n### XML 详解\n\n元素的最少配置可以参考以下代码：\n\n```xml\n<UIElements name=\"Menus\">\n  <UIElement\
+  \ name=\"MyMainMenu\" mouseevents=\"1\" keyevents=\"1\" cursor=\"1\" controller_input=\"\
+  1\">\n    <GFx file=\"Menus_Startmenu.swf\" layer=\"3\">\n      <Constraints>\n\
+  \        <Align mode=\"fullscreen\" scale=\"1\"/>\n      </Constraints>\n    </GFx>\n\
+  \    <functions>\n    </functions>\n    <events>\n    </events>\n    <Arrays>\n\
+  \    </Arrays>\n    <MovieClips>\n    </MovieClips>\n  </UIElement>\n</UIElements>\n\
+  ```\n\n之前的 XML 代码可以保存为 `Game/Libs/UI/UIElements/MyMainMenu.xml`，并将加载 `Game/Libs/UI/`\
+  \ 文件夹中名为 `Menus_Startmenu.swf` 的 Flash 文件。\n\n一旦创建，我们就可以通过流程图节点如 `UI:Display:Config`（用于重新配置任何元素，例如，在运行时为元素启用鼠标事件）来选择我们的新\
+  \ UI 元素。\n\n## [ 134 ]\n\n![](img/index-154_1.png)\n\n*第 7 章*\n\n现在我们知道它是如何工作的，让我们来拆解一下：\n\
+  \n```xml\n<UIElements name=\"Menus\">\n  这个第一个元素定义了文件的开头，并决定了我们的元素应该放在哪个类别中。\n \
+  \ <UIElement name=\"MyMainMenu\" mouseevents=\"1\" keyevents=\"1\" cursor=\"1\"\
+  \ controller_input=\"1\">\n```\n\n`UIElement` XML 元素用于决定初始配置，包括默认名称，并确定哪些事件应该被默认接收。\n\
+  \n如之前所示，每个元素可以通过一组属性进行配置，允许定义定义要监听什么种类型的事件：**属性名称**（Attribute name）\n\n| 属性名称 |\
+  \ 说明 |\n| :--- | :--- |\n| name | 定义元素的名称（字符串）。 |\n| mouseevents | 决定是否将鼠标事件发送到\
+  \ Flash 文件 (0/1)。 |\n| cursor | 决定在元素可见时是否显示光标 (0/1)。 |\n| keyevents | 决定是否将按键事件发送到\
+  \ Flash 文件 (0/1)。 |\n\n## [ 135 ]\n\n*用户界面*\n\n| 属性名称 | 说明 |\n| :--- | :--- |\n\
+  | console_mouse | 决定摇杆在控制台硬件上是否作为光标使用 (0/1)。 |\n| console_cursor | 决定在控制台硬件上运行时，元素可见时是否显示光标\
+  \ (0/1)。 |\n| layer | 定义元素的显示顺序，以防存在多个元素。 |\n| alpha | 设置元素的背景透明度 (0-1)。允许游戏内透明效果，例如，在你的主菜单后面显示一个游戏内关卡。\
+  \ |\n\n注意，上述属性可以使用 `UI:Display:Config` 节点进行实时调优。\n\n```xml\n<GFx file=\"Menus_Startmenu.swf\"\
+  \ layer=\"3\">\n```\n\n`GFx` 元素决定了加载哪个 Flash 文件。可以加载多个 `GFx` 文件并将它们放入不同的层。\n\n```xml\n\
+  <Constraints>\n  <Align mode=\"fullscreen\" scale=\"1\"/>\n</Constraints>\n```\n\
+  \n`Constraints` 允许配置 `GFx` 元素在屏幕上的显示方式，让开发者能够微调元素性能。\n\n## 136 ]\n\n*第 7 章*\n\n\
+  目前有三种模式：\n\n| 模式名称 | same | 额外属性 |\n| :--- | :--- | :--- |\n| fixed | 在固定模式下，开发者可以使用\
+  \ `top`、`left`、`width` 和 `height` 属性设置距离顶部和左侧的像素，以及设置分辨率。 | |\n| dynamic | 在动态模式下，元素通过\
+  \ `halign`、`valign`、`scale` 和 `anchors` 进行对齐。 | `halign` 可以设置为左、中、右，而 `valign` 可以设置为顶、中、下。如果\
+  \ `scale` 设置为 1，元素将按比例缩放到屏幕分辨率。如果 `max` 设置为 1，元素将最大化以确保覆盖屏幕的 100%。 |\n| fullscreen\
+  \ | 当激活此模式时，元素视口与渲染视口完全相同。 | 如果 `scale` 设置为 1，元素将拉伸至屏幕分辨率。 |\n\n## 动作\n\nUI 动作是\
+  \ UI 流程图实现的核心。每个动作由一个流程图表示，并定义了一个 UI 状态。例如，主菜单中的每个屏幕将使用单独的动作处理。\n\n## [ 137 ]\n\n\
+  ![](img/index-157_1.png)\n![](img/index-157_2.png)\n\n*用户界面*\n\n所有可用的 UI 动作可以在流程图编辑器的\
+  \ **Flow Graphs** 工具箱中看到。\n\n要创建一个新的 UI 动作，导航到 **File | New UI action**，并在打开的 **另存为**\
+  \ 对话框中指定新动作的名称：\n\n## [ 138 ]\n\n![](img/index-158_1.png)\n![](img/index-158_2.png)\n\
+  ![](img/index-158_3.png)\n\n*第 7 章*\n\n通过使用 `UI:Action:Control` 节点并在 `UIAction`\
+  \ 输入端口指定待处理动作的名称，可以可以启动动作。\n\n一旦启动，指定名称的 UI 图将被激活，假设它包含如所示的 `UI:Action:Start` 节点：图可以通过监听\
+  \ `StartAction` 输出端口来初始化请求的 UI。动作完成后，应该调用如所示的 `UI:Action:End`：就是这样。UI 图被保存为 `Game/Libs/UI/`\
+  \ 中的流程图 XML 文件。\n\n\n\n\n操作。初始 UI 动作称为 `Sys_StateControl`，它将始终保持激活状态。状态控制器图负责根据关卡加载等系统事件加载并启用菜单。\n\
+  \n系统状态控制动作（`Sys_StateControl.xml`）始终处于激活状态，用于启动初始动作，例如在引擎启动时显示主菜单。\n\n**[ 139 ]**\n\
+  \n*用户界面*\n\n## 创建主菜单\n\n现在我们已经对 UI 流图的实现有了基本的了解，让我们开始创建我们自己的主菜单吧。\n\n### 创建菜单元素\n\
+  \n我们需要完成的第一件事是创建 UI 元素定义，以便为引擎提供加载我们导出的 SWF 文件的方法。\n\n为此，在 `Game/Libs/UI/UIElements/`\
+  \ 下创建一个名为 `MainMenuSample.xml` 的新 XML 文档。菜单所需的最小代码如下文所示：\n\n```xml\n<UIElements\
+  \ name=\"Menus\">\n\n<UIElement name=\"MainMenuSample\" mouseevents=\"1\" keyevents=\"\
+  1\"\ncursor=\"1\" controller_input=\"1\">\n\n<GFx file=\"MainMenuSample.swf\" layer=\"\
+  3\">\n\n<Constraints>\n\n<Align mode=\"dynamic\" halign=\"left\" valign=\"top\"\
+  \ scale=\"1\"\nmax=\"1\"/>\n</Constraints>\n\n</GFx>\n\n</UIElement>\n\n</UIElements>\n\
+  ```\n\n有了上述代码后，引擎将知道从哪里加载我们的 SWF 文件，以及如何在屏幕上对其对齐。\n\n可以使用 `GFxExport.exe`（通常存在于\
+  \ `<root>/Tools/` 目录）重新导出 SWF 文件，以便在引擎内部使用更加高效。这通常在游戏发布之前完成。\n\n### 暴露 ActionScript\
+  \ 资产\n\n接下来，我们需要暴露 Flash 源文件中定义的函数和事件，以便允许引擎调用并接收这些内容。\n\n在暴露函数和事件时，我们创建简单的流图节点，这些节点可以被任何流图使用。\n\
+  \n**[ 140 ]**\n\n![](img/index-160_1.jpg)\n\n*第 7 章*\n\n创建完成后，可以通过导航到 **UI** | **Functions**\
+  \ 来访问函数节点，如下所示：\n\n**[ 141 ]**\n\n*用户界面*\n\n可以通过导航到 **UI** | **Events** 找到事件。\n\n\
+  也可以在 C++ 中创建 UI 动作和元素，这实际上让用户界面具备了从原生代码发送和获取事件的能力。我们将在本章后后的*创建 UI 游戏事件系统*部分介绍这一点。\n\
+  \n## 函数\n\n要暴露一个方法，我们需要在 UIElement 定义中添加一个新的 `<functions>` 部分，如下代码所示：\n\n```xml\n\
+  <functions>\n\n<function name=\"SetupScreen\" funcname=\"setupScreen\" desc=\"设置屏幕，清除之前的\
+  \ movieclips 并配置设置\">\n\n<param name=\"buttonX\" desc=\"按钮的初始 x 位置\"\ntype=\"int\"\
+  \ />\n<param name=\"buttonY\" desc=\"按钮的初始 y 位置\"\ntype=\"int\" />\n<param name=\"\
+  buttonDividerSize\" desc=\"按钮之间的间隔大小\" type=\"int\" />\n</function>\n\n<function\
+  \ name=\"AddBigButton\" funcname=\"addBigButton\" desc=\"在屏幕上添加主按钮\">\n\n<param\
+  \ name=\"id\" desc=\"按钮 ID，随 onBigButton 事件发送\" type=\"string\" />\n<param name=\"\
+  title\" desc=\"按钮文本\" type=\"string\" />\n</function>\n\n</functions>\n```\n\n使用上述代码，引擎将创建两个节点，我们可以利用这些节点从\
+  \ UI 图中调用 `setupScreen` 和 `addBigButton` ActionScript 方法。\n\n函数始终位于相同的流图类别中：**UI:Functions:ElementName:FunctionName**\n\
+  \n**[ 142 ]**\n\n![](img/index-162_1.png)\n\n*第 7 章*\n\n当上一张截图显示的任一节点的 **Call**\
+  \ 端口被触发时，将使用指定的参数调用 ActionScript 方法。\n\n`instanceID` 输入端口决定了在哪个元素实例上调用函数。如果值设置为\
+  \ -1（默认值），它将在所有实例上调用；否则，如果设置为 -2，它将在所有已初始化的实例上调用。\n\n## 事件\n\n设置事件与函数类似，通过使用所示的\
+  \ `<events>` 标签来实现：\n\n```xml\n<events>\n\n<event name=\"OnBigButton\" fscommand=\"\
+  onBigButton\"\ndesc=\"当大按钮被按下时触发\">\n\n<param name=\"id\" desc=\"按钮 ID\" type=\"\
+  string\" />\n</event>\n\n</events>\n```\n\n**[ 143 ]**\n\n![](img/index-163_1.png)\n\
+  \n*用户界面*\n\n之前的代码将导致引擎提供 **OnBigButton** 节点，当 Flash 文件调用 `onBigButton` fscommand\
+  \ 并带有相关的按钮 ID 时，该节点会被触发。\n\n从 Flash 调用 fscommand 相对简单。以下代码将触发 `onBigButton` 事件以及相关的按钮\
+  \ ID 字符串。\n\n```javascript\nfscommand(\"onBigButton\", buttonId);\n```\n\n与函数类似，事件始终被放在\
+  \ **UI:Events:ElementName:EventName**。\n\n## 变量\n\n也可以通过元素定义对 Flash 源文件中存在的变量进行访问。这允许通过使用\
+  \ **UI:Variable:Var** 节点来获取和设置变量的值。\n\n首先，在元素内部定义变量：\n\n```xml\n<variables>\n\n\
+  <variable name=\"MyTextField\"\nvarname=\"_root.m_myTextField.text\"/>\n</variables>\n\
+  ```\n\n重启编辑器后，放置一个新的 **UI:Variable:Var** 节点并浏览你的变量，如下所示：\n\n**[ 144 ]**\n\n![](img/index-164_1.png)\n\
+  \n![](img/index-164_2.png)\n\n*第 7*\n\n可以通过流图随时设置或获取变量的值：\n\n### 数组\n\n在上一节中，我们设置了\
+  \ Flash 变量的值。这也适用于数组，通过使用 **UI:Variable:Array** 节点。\n\n首先，在元素的 `<arrays>` 部分中暴露数组：\n\
+  \n```xml\n<arrays>\n\n<array name=\"MyArray\" varname=\"_root.m_myArray\"/>\n</arrays>\n\
+  ```\n\n**[ 145 ]**\n\n![](img/index-165_1.png)\n\n*用户界面*\n\n只需重启数组并重复之前的过程，但使用 **UI:Variable:Array**\
+  \ 节点。要通过 UI 图创建新数组，使用 **UI:Util:ToArray** 节点：\n\n### 将 MovieClip 实例暴露到流图\n\n与暴露变量一样，也可以通过\
+  \ UI 图直接访问 MovieClip。这允许跳转特定帧、更改属性等操作。\n\n可以通过在流图编辑器中导航到 **UI** | **MovieClip**\
+  \ 找到所有允许 MovieClip 交互的节点，如下所示：\n\n**[ 146 ]**\n\n![](img/index-166_1.png)\n\n*第\
+  \ 7 章*\n\n首先，在元素定义中所示添加或编辑 `<movieclips>` 部分：\n\n```xml\n<movieclips>\n\n<movieclip\
+  \ name=\"MyMovieClip\"\ninstancename=\"_root.m_myMovieclip\"/>\n</movieclips>\n\
+  ```\n\n**[ 147 ]**\n\n![](img/index-167_1.png)\n\n*用户界面*\n\n这将使流图能够访问 Flash 文件中的\
+  \ **m_myMovieClip** movieclip。\n\n一旦编辑器重启，我们可以例如如文所示，使用 **UI:MovieClip:GotoAndPlay**\
+  \ 节点直接跳转到指定片段的特定帧。\n\n\n\n\n当你完成后，创建另一个 UI 操作并将其命名为 `MainMenu`。打开它后，放置一个 `UI:Action:Start`\
+  \ 节点。当我们之前创建的 `UI:Action:Control` 节点执行时，它的 `StartAction` 输出端口将自动激活。\n\n我们现在可以将 `Start`\
+  \ 节点连接到 `UI:Display:Display` 和 `UI:Display:Config` 节点，以初始化主菜单，确保用户可以看到它。\n\n我们的\
+  \ Flash 文件现在会在游戏启动时显示，但目前还缺少来自 flowgraph 的任何额外配置。\n\n**[ 149 ]**\n\n![](img/index-169_1.png)\n\
+  \n*用户界面*\n\n### 添加按钮\n\n现在我们的主菜单文件已经初始化，我们需要在 Flash 文件中添加一些 ActionScript 代码，以便从我们的\
+  \ UI 图表中动态生成并处理按钮。\n\n本节假设你有一个可以在运行时进行实例化的 `MovieClip`。\n\n在我们的示例中，我们将使用一个名为 `BigButton`\
+  \ 的自定义按钮。\n\n我们主菜单的 Flash 源文件（`.fla`）存在于示例安装的 `Game/Libs/UI/` [文件夹中，可以从 https://github.com/inkdev/CryENGINE-Game-Programming-Sample\
+  \ 下载](https://github.com/inkdev/CryENGINE-Game-Programming-Sample) 。\n\n本节还假设你有两个\
+  \ ActionScript 函数：`SetupScreen` 和 `AddBigButton`。\n\n`SetupScreen` 应该配置场景的默认设置，并移除所有之前生成的对象。在我们需要，我们希望在每次调用\
+  \ `SetupScreen` 时，使用 `AddBigButton` 生成的按钮都会被移除。\n\n`AddBigButton` 应该是一个简单的函数，如所示生成一个预创建的按钮实例：\n\
+  \n```javascript\nvar button = _root.attachMovie(\"BigButton\", \"BigButton\" + m_buttons.length,\
+  \ _root.getNextHighestDepth());\n```\n\n当点击按钮时，它应该调用一个我们在 flowgraph 中捕获的事件：`fscommand(\"\
+  onBigButton\", button._id);`。\n\n**[ 150 ]**\n\n![](img/index-170_1.png)\n\n![](img/index-170_2.png)\n\
+  \n*第 7 章*\n\n关于创建函数和事件的信息，请参阅之前讨论的*暴露 ActionScript 资源*部分。\n\n当你完成后，将节点添加到你的 `MainMenu`\
+  \ 操作中，并在配置元素后调用它们：\n\n启动 Launcher 应用程序时，我们的主菜单现在应该出现，但目前对用户对其的任何交互都没有反馈。\n\n为了解决这个问题，我们可以利用我们在本章早些时候暴露的\
+  \ `OnBigButton` 节点。当按钮被点击时，该节点将发送事件，并附带一个我们可以用来确定哪个节点被点击了的字符串标识符：**\n\n**[ 151 ]**\n\
+  \n![](img/index-171_1.png)\n\n*用户界面*\n\n在之前的图中，我们拦截了按钮事件并使用 `String:Compare` 节点来检查我们需要对输入进行的操作。如果点击了\
+  \ `IDD_Quit` 按钮，我们就退出游戏；如果点击了 `IDD_Start` 节点，我们就加载 `Demo` 卡。\n\n### 最终结果\n\n假设你没有创建自己的菜单设计，现在启动\
+  \ Launcher 时，你应该能看到下面的截图：既然你已经学会了创建一个简单菜单有多容易，为什么不尝试创建一个在玩家生成时显示的平视显示器（`HUD`）呢？\n\
+  \n### 引擎 ActionScript 回调\n\n有很多由引擎自动调用的 ActionScript 回调。只需在你的 Flash 源文件根目录下定义函数，引擎就能调用它们。\n\
+  \n- `cry_onSetup(isConsole:Boolean)`：当引擎最初加载 SWF 文件时调用此函数。\n- `cry_onShow()`：当 SWF\
+  \ 文件显示时调用此函数。\n- `cry_onHide()`：当 SWF 文件被隐藏时调用此函数。\n- `cry_onResize(_iWidth:Number,\
+  \ _iHeight:Number)`：当游戏内分辨率发生更改时调用此函数。\n- `cry_onBack()`：当用户按下后退键时调用此函数。\n- `cry_requestHide()`：当元素被隐藏时调用此函数。\n\
+  \n**[ 152 ]**\n\n*第 7 章*\n\n### 创建 UI 游戏事件系统\n\nUI 系统利用 `IUIGameEventSystem` 接口与\
+  \ flowgraph 通信，允许以与暴露 ActionScript 资源相同的方式定义自定义函数和事件。\n\n这用于允许用户界面访问游戏和引擎功能，例如获取可玩关卡的列表。每个游戏事件系统都指定了其类别，然后在\
+  \ Flowgraph 编辑器中用于定义注册的函数和事件的类别。\n\n例如，如果我们使用 `IFlashUI::CreateEventSystem` 创建一个名为\
+  \ `MyUI` 的事件系统，将通过导航到 **UI** | **Functions** | **MyUI** 找到所有函数。\n\n#### 实现 IUIGameEventSystem\n\
+  \n实现 `IUIGameEventSystem` 不需要花费太多精力；我们只需要分配以下三个纯虚函数：\n\n- `GetTypeName`：不直接重写；请使用\
+  \ `UIEVENTSYSTEM` 宏。\n- `InitEventSystem`：调用以初始化事件系统。\n- `UnloadEventSystem`：调用以卸载事件系统。\n\
+  \n因此，最少配置如下（以下文件被保存为 `MyUIGameEventSystem.h`）：\n\n```cpp\nclass CMyUIGameEventSystem\
+  \ : public IUIGameEventSystem {\npublic:\n    CMyUIGameEventSystem() {}\n    UIEVENTSY(\"\
+  MyUIEvents\");\n    virtual void InitEventSystem() {}\n    virtual void UnloadEventSystem()\
+  \ {}\n};\n```\n\n现在我们有了类定义，可以进入代码部分。从创建一个名为 `MyUIGameEventSystem.cpp` 的文件开始。\n\n\
+  **[ 153 ]**\n\n*用户界面*\n\n一旦创建了此文件，使用 `REGISTER_UIY` 宏注册事件系统。这用于从 `CUIManager` 类自动创建你的类实例。\n\
+  \n将宏放在 CPP 文件的底部，方法作用域之外所示：\n\n```cpp\nREGISTER_UIY(CMyUIGameEventSystem);\n```\n\
+  \n注意，`REGISTER_UIY` 宏只在 CryGame 项目中有效。我们的事件系统现在应该可以通过编译并与 CryGame 中的其他事件系统一起创建。我们的事件系统目前没有任何功能。阅读后续章节以学习如何向\
+  \ flowgraph 暴露函数和事件。\n\n#### 接收事件\n\n事件系统可以暴露与注册节点相同的功能。通过暴露函数，我们可以允许图表与游戏交互，例如请求玩家健康。\n\
+  \n为了开始，我们需要为 `CMyUIGameEventSystem` 类添加两个新成员：`SUIEventDispatcher<CMyUIGameEventSystem>\
+  \ m_eventReceiver;` 和 `IUIEventSystem *m_pUIFunctions;`。事件分发器负责在 flowgraph 中触发时调用函数。\n\
+  \n要开始创建一个函数，请在类声明中添加以下代码：\n\n```cpp\nvoid OnMyUIFunction(int intParameter) {\n \
+  \   // 记录调用是否成功\n    CryLogAlways(\"OnMyUIFunction %i\", intParameter);\n}\n```\n\
+  \n要注册我们的函数，请在你的 `InitEventSystem` 函数内添加以下代码：\n\n```cpp\nm_pUIFunctions = gEnv->pFlashUI->CreateEventSystem(\"\
+  MyUI\", IUIEventSystem::eEST_UI_TO_SYSTEM);\nm_eventReceiver.Init(m_pUIFunctions,\
+  \ this, \"MyUIGameEvents\");\n\n// 注册我们的函数\n{\n    SUIEventDesc eventDesc(\"MyUIFunction\"\
+  , \"description\");\n    eventDesc.AddParam<SUIParameterDesc::eUIPT_Int>(\"IntInput\"\
+  , \"parameter description\");\n    m_eventReceiver.RegisterEvent(eventDesc, &CMyUIGameEventSystem::OnMyUIFunction);\n\
+  }\n```\n\n**[ 154 ]**\n\n![](img/index-174_1.png)\n\n*第 7 章*\n\n#### 发布事件\n\n向 UI\
+  \ 图表暴露事件非常有用，允许你处理基于事件的 UI 逻辑，例如在用户请求时显示计分板。\n\n\n\n首先，让我们在你的类中添加以下代码：\n\n```cpp\n\
+  enum EUIEvent\n{\n    eUIE_MyUIEvent\n};\n```\n\n`SUIEventSenderDispatcher<EUIEvent>\
+  \ m_eventSender; IUIEventSystem *m_pUIEvents;`\n\n`EUIEvent` 举例包含了我们要注册的各种事件，并用于让事件发送者知道你正尝试向\
+  \ UI 系统发送哪种事件。\n\n**[ 155 ]**![](img/index-175_1.png)\n\n*用户界面*\n\n现在，我们需要在 `InitEventSystem`\
+  \ 函数中添加一些代码，以如下所示暴露我们的事件：\n\n```cpp\n// 创建并注册导出的事件系统\nm_pUIEvents = gEnv->pFlashUI->CreateEventSystem(\"\
+  MyUI\", IUIEventSystem::eEST_SYSTEM_TO_UI);\n\nm_eventSender.Init(m_pUIEvents);\n\
+  \n// 注册我们的事件\n{\n    SUIEventDesc eventDesc(\"OnMyUIEvent\", \"description\"); \n\
+  \    eventDesc.AddParam<SUIParameterDesc::eUIPT_String>(\"String\", \"String output\
+  \ description\");\n    m_eventSender.RegisterEvent<eUIE_MyUIEvent>(eventDesc);\n\
+  }\n```\n\n在成功重新编译后，`OnMyUIEvent` 节点应该出现在编辑器中：\n\n### 分发事件\n\n要分发你的 UI 事件，请使用 `SUIEventSenderDispatcher::SendEvent`：`m_eventSender.SendEvent<eUIE_MyUIEvent>(\"\
+  MyStringParam\")`。\n\n**[ 156 ]**\n\n*第 7 章*\n\n## 总结\n\n在本章中，我们学习了如何在 CryENGINE\
+  \ 中创建用户界面，并利用这些知识创建了我们自己的主菜单。\n\n你现在已经拥有实现自己的 UI 和 UI 事件系统所需的基础知识。\n\n如果你愿意在进入下一章之前更多地接触用户界面，为什么不扩展一下我们之前创建的主菜单呢？一个很好的起点可以是实现一个关卡选择屏幕。\n\
+  \n在下一章中，我们将介绍创建网络游戏的过程，以实现多人功能。\n\n**[ 157 ]**\n\n# 多人游戏与网络\n\n使用 CryENGINE 的网络系统，我们可以从单机游戏转向创建一个拥有大量人类玩家的动态世界。\n\
+  \n在本章中，我们将：\n• 学习网络系统的基础\n• 利用远程方法调用 (RMIs)\n• 使用方面（aspects）对网络流数据进行序列化\n\n### 网络系统\n\
+  \nCryENGINE 的网络实现是一种灵活的设置，用于与游戏服务器和其他客户端通信。\n\n所有网络消息都从`独立网络线程`发送，以避免网络更新被游戏帧率限制。\n\
+  \n### 网络标识符\n\n在本地，每个实体都由一个实体标识符 (`entityId`) 表示。然而，对于网络上下文，将这些内容通过网络传输是不可行的，因为它们无法保证指向远程客户端或服务器上的同一个实体。\n\
+  \n为了解决这个问题，每个游戏对象都被分配了一个网络对象标识符，由 `SNetObjectID` 结构表示，它包含对标识符及其盐（salt）的简单封装。\n\n\
+  在编写跨网络序列化实体和 `entityId` 的游戏代码时，我们不需要直接处理 `SNetObjectID` 结构，因为从 `entityId` 到 `SNetObjectID`（在远程机器上转换回\
+  \ `entityId`）的过程是自动的。\n\n*多人游戏与网络* 为了确保你的实体 ID 映射到远程机器上的同一个实体，在序列化时使用 `eid` 压缩策略。在本文章后面的*压缩策略*章节中阅读更多关于策略以及如何使用它们的信息。\n\
+  \n### 网络通道\n\nCryENGINE 提供了 `INetChannel` 接口来表示两台机器之间的持续连接。例如，如果客户端 A 和客户端 B 需要相互通信，则两台机器上都会创建一个网络通道来管理发送和接收的消息。\n\
+  \n每个通道都通过通道标识符引用，这对于确定哪个客户端属于哪台机器非常有用。例如，要检索连接到特定通道的玩家实例，我们使用 `IActorSystem::GetActorByChannelId`。\n\
+  \n### 网络节点 (nubs)\n\n所有网络通道都由 `INetNub` 接口处理，该接口由一个或多个基于包通信的端口组成。\n\n### 设置多人游戏\n\
+  \n要设置多人游戏，我们需要两台运行相同游戏版本的计算机。\n\n### 启动服务器\n\n有两种方法可以创建一个远程客户端可以连接的服务器。说明如下：\n\n\
+  #### 专用服务器\n\n专用服务器的目的是创建一个不渲染或不播放音频的客户端，以便完全专注于支持没有本地客户端的服务器。\n\n要启动专用服务器，请执行以下步骤：\n\
+  1. 启动 `Bin32/DedicatedServer.exe`。\n2. 输入 `map` 后跟你想加载的关卡名称，然后按 `Enter`。\n\n**[\
+  \ 160 ]**![](img/index-180_1.png)\n\n*第 8 章*\n\n### 启动器 (Launcher)\n\n也可以通过启动器启动服务器，实际上允许你和朋友一起玩，而无需启动单独服务器应用程序。\n\
+  \n通过启动器启动服务器，请遵循以下步骤：\n1. 启动你的启动器应用程序。\n2. 打开控制台。\n\n**[ 161 ]**![](img/index-181_1.jpg)\n\
+  \n*多人游戏与网络*\n\n3. 输入 `map <level name> s`。\n\n在 `map` 命令后添加 `s` 将告诉 CryENGINE 以服务器模式加载关卡。\n\
+  \n在 `map` 命令后不加 `s` 则将让 CryENGINE 以单机模式加载关卡。\n\n### 通过控制台连接服务器\n\n使用 `connect` 命令连接到服务器：\n\
+  • `connect <ip> <port>`\n\n默认连接端口为 64089。\n\n你也可以通过 `cl_serveraddr` 变量设置 IP，通过 `cl_serverport`\
+  \ 设置端口，然后直接调用 `connect`。\n\n记住你可以同时运行启动器，这在调试多人游戏时非常有用。\n\n**[ 162 ]**\n\n*第八章*\n\
+  \n### 调试网络游戏\n\n调试网络游戏时非常有用的控制台变量是 `netlog 1`，这将导致网络系统输出更多关于问题和事件的信息。\n\n### 使用游戏对象联网\n\
+  \n#### 扩展\n\n游戏对象有两种联网方法：RMIs 和通过方面（aspect）进行序列化。本质上，RMIs 允许基于事件的数据传输，而方面会在数据失效时持续同步。\n\
+  \n在能够进行网络通信之前，每个游戏对象必须通过 `IGameObject::BindToNetwork` 函数绑定到网络。这可以在你的 `GameObjectExtension`\
+  \ 实现中调用。\n\n#### 远程方法调用 (RMI)\n\n**远程方法调用 (RMI)** 用于在远程客户端或服务器上调用函数。这对于同步状态非常有用，例如告诉所有客户端名为“Dude”的玩家刚刚生成，应该移动到特定的位置和方向。\n\
+  \n### RMI 结构\n\n要声明 RMI，我们可以利用列出的宏：\n• `DECLARE_SERVER_RMI_NOATTACH`\n• `DECLARE_CLIENT_RMI_NOATTACH`\n\
+  • `DECLARE_SERVER_RMI_PREATTACH`\n• `DECLARE_CLIENT_RMI_PREATTACH`\n• `DECLARE_SERVER_RMI_POSTATTACH`\n\
+  • `DECLARE_CLIENT_RMI_POSTATTACH`\n\n**[ 163 ]**\n\n*多人游戏与网络* 示例如：\n\n```cpp\nDECLARE_CLIENT_RMI_NOATTACH(ClMoveEntity,\
+  \ SMoveEntityParams, eNRT_ReliableUnordered);\n```\n\n最后一个参数指定包可靠性，但在最新版本的 CryENGINE\
+  \ 中已大部分过时。\n\n创建时请记住你暴露的是哪种类型的 RMI。\n\n例如，`DECLARE_CLIENT` 用于在远程客户端调用的函数，而 `DECLARE_SERVER`\
+  \ 定义了客户端请求后在服务器调用的函数。\n\n#### 参数\n\nRMI 声明宏需要提供三个参数：\n• **函数名称**：这是第一个参数，决定方法的名称，并用于函数声明以及调用\
+  \ RMI 本身。\n\n\n\n\n\n- **RMI 参数**：RMI 必须指定一个包含所有与方法一起序列化的成员的结构体。该结构体必须包含一个名为 `SerializeWith`\
+  \ 的函数，该函数接受一个 `TSerialize` 参数。\n- **数据包传输可靠性枚举**：这是定义数据包传输可靠性的最后一个参数。\n\n我们刚刚看到的宏之间有三种类型的差异：**挂载类型（Attach\
+  \ type）**\n\n挂载类型定义了 RMI 在网络序列化期间挂载的时机：\n\n- `NOATTACH`：当 RMI 不依赖于游戏对象数据时使用此项，因此它可以在游戏对象数据序列化之前或之后挂载。\n\
+  - `PREATTACH`：在此类型下，RMI 将在游戏对象数据序列化之前挂载。它用于 RMI 需要为传入的数据做准备的情况。\n- `POSTATTACH`：在此类型下，RMI\
+  \ 在游戏对象数据序列化后挂载。它用于新接收的数据与 RMI 相关的情况。\n\n**[ 164 ]**\n\n*第 8 章*\n\n## 服务器/客户端分离\n\
+  \n你可能通过观察 RMI 声明宏已经发现，一个 RMI 不能同时针对客户端和服务器。\n\n正因如此，我们必须决定由哪个目标来运行我们的函数，或者为每个目标各创建一个宏。\n\
+  \n在处理服务器权威型游戏语境时，这是一个非常实用的功能，因为在可以在服务器和客户端上远程触发的函数之间存在持续的区分。\n\n## 函数定义\n\n要定义 RMI\
+  \ 函数，我们可以使用 `IMPLEMENT_RMI` 宏：`IMPLEMENT_RMI(CGameRules, ClMoveEntity)`\n\n```\n\
+  {}\n```\n\n该宏在 RMI 被调用时定义了一个函数，带有两个参数：\n\n- `params`：它包含了从远程机器发送的反序列化后的数据。\n- `pNetChannel`：这是一个\
+  \ `INetChannel` 实例，描述了源机器与目标机器之间建立的连接。\n\n## RMI \n\n为了演示如何创建一个基础 RMI，我们将创建一个 RMI，允许客户端请求重新定位一个实体。这将导致服务器向所有客户端发送一个\
+  \ `ClMoveEntity` RMI，通知它们新实体。\n\n首先，我们需要打开头文件。我们在这里定义 RMI 及其参数。从创建一个名为 `SMoveEntityParams`\
+  \ 的新结构体开始。\n\n然后我们将添加三个参数：\n\n- `EntityID entityId`：这是我们要移动的实体的标识\n- `Vec3 position`：这决定了实体应该移动到哪个位置\n\
+  - `Quat orientation`：用于设置实体生成时的旋转\n\n**[ 165 ]**\n\n*多人游戏与网络* 在添加参数后，我们需要在 `SMoveEntityParams`\
+  \ 结构体内定义 `SerializeWith` 函数。它会在向网络发送数据时被调用，并在接收数据时再次调用。\n\n```cpp\nvoid SerializeWith(TSerialize\
+  \ ser)\n{\n    ser.Value(\"entityId\", entityId, 'eid'); ser.Value(\"position\"\
+  , position, 'wrld'); ser.Value(\"orientation\", orientation, 'ori0');\n}\n```\n\n\
+  `eid` 压缩策略的使用需要注意，以确保 `entityId` 指向同一个实体。请参考本章的 *Network* *identifiers* 部分获取关于为什么需要该策略的信息。\n\
+  \n现在我们已经定义了 RMI 参数，我们需要声明两个 RMI：一个用于客户端，一个用于服务器：\n\n`DECLARE_SERVER_RMI_NOATTACH(SvRequestMoveEntity,\
+  \ SMoveEntityParams, eNRT_ReliableUnordered);`\n\n`DECLARE_CLIENT_RMI_NOATTACH(ClMoveEntity,\
+  \ SMoveEntityParams, eNRT_ReliableUnordered);`\n\n现在剩下的就是创建函数实现，我们可以在 CPP 文件中通过\
+  \ `IMPLEMENT_RMI` 宏来完成：`IMPLEMENT_RMI(CGameRules, SvRequestMoveEntity)`\n\n```cpp\n\
+  {\n    IEntity *pEntity = gEnv->pEntitySystem->GetEntity(params.entityId);\n   \
+  \ if(pEntity == nullptr)\n        return true;\n\n    pEntity->SetWorldTM(Matrix34::Create(Vec3(1,\
+  \ 1, 1), params.orientation, params.position));\n    GetGameObject()->InvokeRMI(ClMoveEntity(),\
+  \ params, eRMI_ToAllClients | eRMI_NoLocalCalls);\n    return true;\n}\n```\n\n\
+  **[ 166 ]**\n\n*第 8 章*\n\n这段代码定义了 `SvRequestMoveEntity` 函数，当客户端执行以下操作时，该函数会被调用：\n\
+  \n`GetGameObject()->InvokeRMI(SvRequestMoveEntity(), params, eRMI_Server);`\n\n\
+  尝试自己实现 `ClMoveEntity` 函数。它应该像我们在 `SvRequestMoveEntity` 中做的那样，设置实体的世界变换（`IEntity::SetWorldTM`）。\n\
+  \n## 网络序列化\n\n游戏对象扩展可以实现 `IGameObjectExtension::NetSerialize` 函数，该函数用于跨网络序列化与扩展相关的数据。\n\
+  \n## 特性（Aspects）\n\n为了允许分离特定机制相关的数据，网络序列化过程暴露了**特性（Aspects）**。当一个特性在服务器或客户端上被标记为“脏”（已更改）时，网络将触发此序列化，并调用带有特定特性的\
+  \ `NetSerialize` 函数。\n\n要将你的特性标记为脏，调用 `IGameObject::ChangedNetworkState`：`GetGameObject()->ChangedNetworkState(eEA_GameF);`\
+  \ 这将触发 `NetSerialize` 来序列化你的特性并将其数据发送到远程机器。当特性的值发生变化时，它被认为是“脏”的。例如，如果我们想要序列化一组相关的标记，我们将创建一个特性并将其标记为脏：\n\
+  \n```cpp\nbool MyGameObjectExtension::NetSerialize(TSerialize ser, EAspects aspect,\
+  \ uint8 profile)\n{\n    switch(aspect)\n    {\n        case eEA_ClientF:\n    \
+  \    {\n            ser.EnumValue(\"inputFlags\", (EInputFlags)m_inputFlags, EInputFlag_First,\
+  \ EInputFlag_Last);\n        }\n        break;\n    }\n}\n```\n\n**[ 167 ]**\n\n\
+  *多人游戏与网络* `TSerialize::EnumValue` 是 `TSerialize::Value` 的特殊形式，它可以计算枚举的最小最大值，有效地充当动态压缩策略。\n\
+  \n尽可能使用 `EnumValue` 和压缩策略以减少带宽消耗。\n\n现在，当 `eEA_ClientF` 特性在客户端被标记为脏时，`NetSerialize`\
+  \ 函数将被调用并将 `m_inputFlags` 值写入网络，以便服务器感知客户端提供的输入标记。\n\n\n\n\n\n• ori1: 这用于在网络上序列化\
+  \ `Quat` 结构体，用于玩家朝向。\n\n## 创建新的压缩策略\n\n添加新的压缩策略只需修改 `CompressionPolicy.xml` 即可。\n\
+  \n例如，如果我们想创建一个新的 `Vec3` 策略，其中 X 和 Y 轴最大只能达到 2048 米，而 Z 轴限制为 1024 米：\n\n```xml\n\
+  <Policy name=\"wrld2\" impl=\"QuantizedVec3\">\n<XParams min=\"0\" max=\"2047.0\"\
+  \ nbits=\"24\"/> YParams min=\"0\" max=\"2047.0\" nbits=\"24\"/>\n<ZParams min=\"\
+  0\" max=\"1023.0\" nbits=\"24\"/>\n</Policy>\n```\n\n## 将 Lua 实体暴露到网络\n\n现在我们已经知道如何在\
+  \ C++ 中处理网络通信了，让我们来看看如何将 Lua 实体暴露到网络中。\n\n### Net.Expose\n\n为了定义 RMI 和服务器属性，我们需要在\
+  \ .lua 脚本的全局作用域内调用 `Net.Expose`：\n\n```lua\nNet.Expose({\nClass = MyEntity,\nClientMethods\
+  \ = {\nClRevive = { RELIABLE_ORDERED, POST_ATTACH, ENTITYID, },\n},\nServerMethods\
+  \ = {\nSvRequestRevive = { RELIABLE_UNORDERED, POST_ATTACH, ENTITYID, },\n},\nServerProperties\
+  \ = {\n},\n});\n```\n\n**[ 169 ]**\n\n*多人游戏与网络* 上述函数将定义 `ClRevive` 和 `SvRequestRevive`\
+  \ RMI，它们可以通过为实体自动创建的三个子表来调用：\n\n• allClients\n• otherClients\n• server\n\n### 函数实现\n\
+  \n远程函数定义在实体脚本的 Client 或 Server 子表中，这样网络系统可以快速找到它们，同时避免了名称冲突。\n\n例如，参考以下 `SvRequestRevive`\
+  \ 函数：`function MyEntity.Server:SvRequestRevive(playerEntityId) end`\n\n### 触发 RMI\n\
+  \n在服务器上，我们可以触发所有远程客户端上的 `ClRevive` 函数，并带上我们之前定义的参数。\n\n#### 在服务器上\n\n若要在服务器上调用我们的\
+  \ `SvRequestRevive` 函数，只需使用：`self.server:SvRequestRevive(playerEntityId);`\n\n####\
+  \ 在所有客户端上\n\n若想让所有客户端接收 `ClRevive` 调用：`self.allClients:ClRevive(playerEntityId);`\n\
+  \n#### 在所有其他客户端上\n\n若要向除当前客户端外的所有客户端发送 `ClRevive` 调用：`self.otherClients:ClRevive(playerEntityId);`\n\
+  \n**[ 170 ]**\n\n*第 8 章*\n\n## 将实体绑定到网络\n\n在能够发送和接收 RMI 之前，我们必须将实体绑定到网络。这通过为我们的实体创建一个游戏对象来实现：`CryAction.CreateGameObjectForEntity(self.id);`\n\
+  \n我们的实体现在有了一个功能性的游戏对象，但尚未为网络使用进行设置。要启用此，请调用 `CryAction.BindGameObjectToNetwork`\
+  \ 函数：\n\n```cpp\nCryAction.BindGameObjectToNetwork(self.id);\n```\n\n完成！我们的实体现在已绑定到网络，可以发送和接收\
+  \ RMI。注意，这应该在实体生成后立即进行。\n\n## 总结\n\n在本章中，我们学习了 CryENGINE 实例如何通过网络进行远程通信，并创建了我们自己的\
+  \ RMI 函数。\n\n你现在应该了解网络相关方面和压缩策略的功能，并具备了如何将实体暴露到网络的基础知识。\n\n如果你想在进入下一章之前继续学习多人游戏和网络，为什么不创建一个基础的多人游戏示例呢？其中玩家可以向服务器发送生成请求，导致玩家在所有远程客户端上进行生成？\n\
+  \n在下一章中，我们将介绍物理系统以及如何利用它来获得优势。\n\n**[ 171 ]**\n\n# 物理编程\n\nCryENGINE 物理系统是一个可扩展的物理实现，它允许创建一个真正动态的世界。凭借其庞大的\
+  \ API，开发者会发现在实现物理模拟时有充足的活动空间。\n\n在本章中，我们将：\n\n• 学习物理系统的工作原理\n• 发现如何调试我们的物理化几何体\n\
+  • 学习如何进行射线投影和原元求交，以发现接触点、地面法线等\n• 创建我们自己的物理化实体\n• 使用模拟爆炸 `CryPhysics` 让物体“砰”地爆炸\n\
+  \n物理实体系统围绕物理实体概念展开，可以通过 `IPhysicalEntity` 接口访问。物理实体代表带有物理代理的几何体，该代理可以影响并受求交、碰撞及其他事件的影响。\n\
+  \n虽然可以通过 `IPhysicalWorld::CreatePhysicalEntity` 函数在没有底层实体（`IEntity`）的情况下创建物理实体，但最常见的是调用\
+  \ `IEntity::Physicalize` 来启用实体当前加载的模型的物理代理。\n\n物理代理是渲染网格的简化模型。这用于减少物理系统的负载。\n\n\
+  *物理编程*\n\n当调用 `IEntity::Physicalize` 时，会创建一个新的实体代理，它将通过调用 `IPhysicalWorld::CreatePhysicalEntity`\
+  \ 来处理其物理化表示。CryENGINE 允许创建多种物理实体类型，取决于物理化物体的用途。\n\n## 物理化实体类型\n\n以下是 CryENGINE 目前实现的物理化实体类型：\n\
+  \n• `PE_NONE`: 当实体不应被物理化时使用，或者在我们想要去物理化时传递给 `IEntity::Physicalize`。在未物理化的情况下，该实体将没有物理代理，因此无法与其他物体发生物理相互作用。\n\
+  \n• `PE_STATIC`: 这告诉物理系统利用该实体的物理代理，但绝不允许通过物理交互对其进行移动或旋转。\n\n• `PE_RIGID`: 将刚体类型应用于对象上，允许外部物体碰撞并移动目标物体。\n\
+  \n• `PE_WHEELEDVEHICLE`: 一种用于车辆的特殊类型。\n\n• `PE_LIVING`: 用于活体角色（如人类），它们需要地面对齐和地面接触查询。\n\
+  \n• `PE_PARTICLE`: 基于传递给 `SEntityPhysicalizeParams` 的粒子进行物理化，有助于避免处理快速移动物体（如弹药）的问题。\n\
+  \n• `PE_ARTICULATED`: 用于由关节连接的多个刚体结构，例如布娃娃（ragdoll）。\n\n• `PE_ROPE`: 用于创建物理化绳子对象，它可以连接两个物理实体或悬挂。它也用于沙盒绳子工具。\n\
+  \n• `PE_SOFT`: 这是一个连接顶点集合，可以与环境交互，例如布料。\n\n**[ 174 ]**\n\n![](img/index-194.jpg)\n\
+  \n*第 9 章*\n\n## 物理实体标识符\n\n所有物理实体都被分配了唯一标识符，可以通过 `IPhysicalWorld::GetPhysicalEntityId`\
+  \ 获取，并使用 `IPhysicalEntityById` 获取物理实体。\n\n物理实体 ID 被序列化，作为将数据与特定物理实体关联的一种，因此在重新加载之间应保持一致。\n\
+  \n## 绘制实体代理\n\n我们可以利用 `p_draw_helpers` CVar 来获取关卡中各种物理化对象的视觉反馈。\n\n要绘制所有物理化对象，只需将该\
+  \ CVar 设置为 1。\n\n对于更复杂的用法，使用 `p_draw_helpers [Entity_Types]_[Helper_Types]`。\n\n\
+  **[ 175 ]**\n\n![](img/index-195.jpg)\n\n*物理编程*\n\n**实体类型**\n\n以下是实体类型列表：\n\n• `t`:\
+  \ 显示地形\n• `s`: 显示静态实体\n• `r`: 显示休眠刚体\n• `R`: 显示激活刚体\n• `l`: 显示活体实体\n• `i`: 显示独立实体\n\
+  • `g`: 显示触发器\n• `a`: 显示区域\n• `y`: 显示 `RayWorldIntersection` 射线\n• `e`: 显示爆炸遮挡图\n\
+  \n\n\n\n\n以下是辅助类型列表：\n\n- `g`: 显示几何形状\n- `c`: 显示接触点\n- `b`: 显示包围盒 (bounding boxes)\n\
+  - `l`: 显示可破坏对象的四面体网格\n- `j`: 显示结构性关节（将强制主几何体半透明）\n- `t(#)`: 显示深度为 `#` 的包围体树 (bounding\
+  \ volume trees)\n- `f(#)`: 仅显示设置此位标记的几何形状（多个 `f` 可堆叠）\n\n## 物理实体动作、参数与状态\n\n`IPhysicalEntity`\
+  \ 接口提供了三种修改和获取实体物理状态的方法：\n\n### 参数\n\n物理实体参数决定了几何体的物理表示在世界中的行为。可以通过 `IPhysicalEntity::GetParams`\
+  \ 函数获取参数，并使用 `IPhysicalEntity::SetParams` 进行设置。\n\n所有参数都作为派生自 `pe_params` 的结构体传递。例如，要修改实体受到的重力，我们可以使用\
+  \ `pe_simulation_params`：\n\n```\npe_simulation_params simParams;\nsimParams.gravity\
+  \ = Vec3(0, 0, -9.81f);\nGetEntity()->GetPhysics()->SetParams(&simParams);\n```\n\
+  \n这段代码将作用于实体的重力加速度改为 `-9.81f`。\n\n大多数物理实体参数结构体的默认构造函数会将某些数据标记为未使用；这样我们就不需要担心覆盖那些我们没有设置的参数。\n\
+  \n[ 177 ]\n\n*物理编程 (Physics Programming)*\n\n### 动作\n\n动作在用法上与参数类似，允许开发者强制执行某些物理事件，例如冲量（impulses）或重置实体速度。\n\
+  \n所有动作都派生自 `pe_action` 结构体，可以通过 `IPhysicalEntity::Action` 函数应用。\n\n例如，要对实体应用一个简单的冲量使其飞向空中，请使用：\n\
+  \n```\npe_action_impulse impulseAction;\nimpulseAction.impulse = Vec3(0, 0, 10);\n\
+  GetEntity()->GetPhysics()->Action(&impulseAction);\n```\n\n### 状态\n\n也可以从实体获取各种状态数据，例如，确定其重心位置或获取其速度。\n\
+  \n所有状态都派生自 `pe_status` 结构体，可以通过 `IPhysicalEntity::GetStatus` 函数检索。\n\n例如，获取像玩家这样的活动物理实体的速度，请使用：\n\
+  \n```\npe_status_living livStat;\nGetEntity()->GetPhysics()->GetStatus(&livStat);\n\
+  Vec3 velocity = livStat.vel;\n```\n\n## 物理化实体类型详情\n\n默认的物理化实体实现有许多参数、动作和状态。我们列出了其中一些最常用的类型选择：\n\
+  \n### 常用参数\n\n- `pe_params_pos`: 用于设置物理实体的位置和朝向。\n- `pe_params_bbox`: 允许将实体的包围盒强制设置为特定值，或在配合\
+  \ `GetParams` 使用时查询它，以及查询相交情况。\n\n[ 178 ]\n\n*第 9 章*\n\n- `pe_params_outer_entity`:\
+  \ 允许指定一个外部物理实体。如果与该外部实体的碰撞发生在其（外部实体）的包围盒内，则将忽略忽略。\n- `pe_simulation_params`: 为兼容的实体设置仿真参数。\n\
+  \n### 常用动作\n\n- `pe_action_impulse`: 对实体应用一次性冲量。\n- `pe_action_add_constraint`:\
+  \ 用于在两个物理实体之间添加约束。例如，可以使用忽略约束（ignore constraint）让幽灵穿过墙壁。\n- `pe_action_set_velocity`:\
+  \ 用于强制设置物理实体的速度。\n\n### 常用状态\n\n- `pe_status_pos`: 请求实体或实体部分的当前变换。\n- `pe_status_dynamics`:\
+  \ 用于获取实体的运动统计数据，如加速度、角加速度和速度。\n\n### 静态 (Static)\n\n对静态类型的实体进行物理化将创建一个基础物理化实体类型，所有的扩展类型（如刚体或活体）都派生自它。\n\
+  \n静态实体是经过物理化的，但它们不会移动。例如，如果向静态物体投掷一个球，球会弹回来，而不会移动目标物体。\n\n### 刚体 (Rigid)\n\n这指的是基础物理化实体，当受到外力影响时可以在世界中移动。\n\
+  \n如果使用之前的例子，向刚体物体投掷球会导致刚体物体被推开。\n\n[ 179 ]\n\n*物理编程 (Physics Programming)*\n\n###\
+  \ 轮式 (Wheeled vehicle)\n\n这代表一个轮式车辆，简单来说，该实现是一个带有额外车辆功能（如轮子、刹车和 CryENGINE）的刚体。\n\
+  \n### 特有参数\n\n- `pe_params_car`: 用于获取或设置车辆特定参数，例如 CryENGINE 功率、转速 (RPM) 和档位数量。\n\
+  - `pe_params_wheel`: 用于获取或设置车辆任一轮子的特定参数，如摩擦力、表面 ID 和阻尼。\n\n### 特有状态\n\n- `pe_status_vehicle`:\
+  \ 用于获取车辆统计数据，允许获取速度、当前档位等信息。\n- `pe_status_wheel`: 获取特定轮子的状态，例如接触法线、扭矩和表面 ID。\n\
+  - `pe_status_vehicle_abilities`: 允许检查特定转弯的最大可能速度。\n\n### 特有动作\n\n- `pe_action_drive`:\
+  \ 用于车辆事件，如刹车、油门板和换挡切换。\n\n### 活体 (Living)\n\n活体实体实现是处理角色及其移动请求的专门设置。\n\n活体实体有两种状态：在地面上和空中。在地面上时，它们会“粘”在地面上，直到施加使其离开地面的速度。记得第\
+  \ 5 章《创建自定义角色》中的动画角色请求吗？系统在核心部分使用了活体的 `pe_action_move` 请求。\n\n[ 180 ]\n\n*第 9 章*\n\
+  \n### 特有参数\n\n- `pe_player_dimensions`: 用于设置与实体相关的静态属性，如尺寸碰撞体以及是否使用胶囊或圆柱进行碰撞。\n\
+  - `pe_player_dynamics`: 用于设置与实体相关的动态参数，如惯性、重力和质量。\n\n### 特有状态\n\n- `pe_status_living`:\
+  \ 获取当前的活体状态，包括飞行时间、速度和地面法线。\n- `pe_status_check_stance`: 用于检查维度是否引起碰撞。参数含义与 `pe_player_dimensions`\
+  \ 相同。\n\n### 特有动作\n\n- `pe_action_move`: 用于提交实体移动请求。\n\n### 粒子 (Particle)\n\n也可以使用粒粒子表示。这通常用于高速移动的物体，例如弹药。本质上，这意味着我们实体的物理表示仅仅是一个二维平面。\n\
+  \n### 特有参数\n\n- `pe_params_particle`: 用于设置粒子特定的...\n\n### 关节体 (Articulated)\n\n\
+  关节体结构由关节连接的多个刚体组成，例如布娃娃（ragdoll）。这种方法允许设置断裂限制等。\n\n### 特有参数\n\n- `pe_params_joint`:\
+  \ 在设置时在两个刚体之间创建关节，在配合 `GetParams` 使用时查询现有的关节。\n- `pe_params_articulated_body`: 用于设置关节特定的参数。\n\
+  \n[ 181 ]\n\n*物理编程 (Physics Programming)*\n\n### 绳子 (Rope)\n\n当你想要创建将多个物理化物体系在一起的绳子时，应该使用绳子。该系统允许绳子连接到动态或静态表面。\n\
+  \n### 特有参数\n\n- `pe_params_rope`: 用于更改或获取物理绳子参数\n\n### 软体 (Soft)\n\n软体是由非刚性连接顶点顶点系统，可以与环境交互，例如织物物体。\n\
+  \n\n\n\n\n- `pe_params_softbody`: 这用于配置物理化软体的 `Unique actions`（唯一操作）。\n- `pe_action_attach_points`:\
+  \ 这用于将软实体的某些顶点挂载到另一个物理实体上。\n\n### 射线世界相交\n\n使用 `IPhysicalWorld::RayWorldIntersection`\
+  \ 函数，我们可以从世界中的一个点发射射线到另一个点，以检测到特定物体的距离、表面类型、地面法线等。\n\n`RayWorldIntersection` 非常易用，而且我们可以证明这一点！首先，请看下面射线投射的示例：\n\
+  \n```cpp\nray_hit hit;\n\nVec3 origin = pEntity->GetWorldPos();\n\nVec3 dir = Vec3(0,\
+  \ 0, -1);\n\nint numHits = gEnv->pPhysicalWorld->RayWorldIntersection(origin, dir,\
+  \ ent_static | ent_terrain, rwi_stop_at_pierceable | rwi_colltype_any, &hit, 1);\n\
+  \nif(numHits > 0)\n{\n    // 击到了东西！\n}\n```\n\n#### [ 182 ]\n*第 9 章*\n\n#### ray_hit\
+  \ 结构体\n\n我们将我们的 `ray_hit hit` 变量的引用传递给 `RayWorldIntersection`，我们可以在那里获取有关射线命中的所有信息。\n\
+  \n##### 常用成员变量\n\n- `float dist`: 这是起点（在我们的例中为实体的的位置）到射线命中地点的距离。\n- `IPhysicalEntity\
+  \ *pCollider`: 这是指向与射线碰撞的物理实体的指针。\n- `short surface_idx`: 这是射线碰撞的材料表面类型的表面标识符（参见\
+  \ `IMaterialManager::GetSurfaceType` 以获取其 `ISurfaceType` 指针）。\n- `Vec3 pt`: 这是世界坐标系下的接触点。\n\
+  - `Vec3 n`: 这是接触点处的表面法线。\n- `ray_hit *next`: 如果我们的射线命中多次，此指针指向下一个 `ray_hit` 结构体。更多信息请参阅*允许多次射线命中*（Allowing\
+  \ multiple ray hits）章节。\n\n#### 起点和方向\n\n`RayWorldIntersection` 函数的第一个和第二个参数定义了射线从哪里发射，以及在特定方向上发射多远。\n\
+  \n在我们的例中，我们从实体的当前位置发射射线，向下一个单位。\n\n#### 物体类型和射线标志\n\n注意在 `dir` 之后，我们向 `RayWorldIntersection`\
+  \ 函数传递了两个类型的标志。这些标志指示了射线如何与物体相交，以及忽略哪些碰撞。\n\n#### [ 183 ]\n*物理编程*\n\n#### 物体类型\n\
+  \n`object types` 参数期望基于 `entity_query_flags` 枚举的标志，用于确定我们希望允许射线与哪些类型的物体碰撞。如果射线碰撞了我们未定义的物体类型，它将简单地忽略它并穿过。\n\
+  \n- `ent_static`: 指静态物体。\n- `ent_sleeping_rigid`: 表示处于休眠状态的刚体。\n- `ent_rigid`: 表示活跃的刚体。\n\
+  - `ent_living`: 指生物物体，例如玩家。\n- `ent_independent`: 表示独立物体。\n- `ent_terrain`: 表示地形。\n\
+  - `ent_all`: 指所有类型的物体。\n\n#### 射线标志\n\n射线标志参数基于 `rwi_flags` 枚举，用于确定投射的行为。\n\n####\
+  \ 允许多次射线命中\n\n如之前所述，也可以允许射线多次命中物体。为了做到这一点，我们只需要创建一个 `ray_hit` 数组并将其传递给 `RayWorldIntersection`\
+  \ 函数，同时传入命中次数。\n\n\n\n\nCryENGINE 中的色器（Shader）使用一种基于 HLSL 的特殊语言编写，称为 CryFX。该系统与\
+  \ HLSL 非常相似，但针对材质和色器参数、`#include` 宏等核心引擎功能进行了优化。\n\n请注意，在本书编写时，Free SDK 尚未启用色器编写功能；但未来可能会发生变化。\n\
+  \n### 色器变体 (Shader permutations)\n每当材质更改色器生成参数时，就会创建一个基础色器的变体。引擎还暴露了将引擎变量暴露给色器的功能，以便在运行时禁用或调整效果。\n\
+  \n这是由于 CryFX 语言允许使用 `#ifdef`、`#endif` 和 `#include` 块，使得引擎能够在运行时剔除色器代码的某些部分。\n\n\
+  ### [ 190 ]\n*第 10 章*\n\n### 色器缓存 (Shader cache)\n由于在所有平台上运行时编译色器都是不可行的，CryENGINE\
+  \ 提供了色器缓存系统。这允许存储一组预编译的色器，为用户的设备节省大量工作。\n\n如上一节所述，色器本身可能包含大量的变体。因此，在设置缓存时，必须确保所有需要的变体都已编译。\n\
+  \n### PAK 文件\n渲染器可以从 Engine 文件夹加载四个 `.pak` 文件，其中包含色器定义、源代码文件等。\n\n| 存档名称 | 描述 |\n\
+  | :--- | :--- |\n| Shaders.pak | 包含色器源码和 `.ext`（定义）文件。当使用预编译色器缓存时，色器源码通常会排除在此存档之外。\
+  \ |\n| ShadersBin.pak | 包含色器源码的二进制解析信息。 |\n| ShaderCache.pak | 包含所有已编译的色器；仅在当前层级的色器缓存中找不到色器时使用。\
+  \ |\n| ShaderCacheStartup.pak | 在启动期间加载以加快启动速度；应仅包含主菜单所需的色器。 |\n\n### 渲染节点 (Render\
+  \ nodes)\n提供 `IRenderNode` 接口是为了为 Cry3DEngine 系统提供管理对象的方法。这允许生成对象可见性层级（提供了一种简单剔除当前不可见对象的方法）以及对对象的渲染。\n\
+  \n### [ 191 ]\n*渲染编程*\n\n### 渲染流程分解 (Rendering breakdown)\n游戏的渲染分为两个步骤：\n1. 帧更新\
+  \ (Pre update)\n2. 后更新 (Post update)\n\n### 帧更新 (Pre update)\n每帧渲染场景的初始步骤发生在 `IGameFramework::PreUpdate`\
+  \ 函数中。帧更新负责更新大多数游戏系统（如流程图、视图系统等），并对 `ISystem::RenderBegin` 进行初始调用。\n\n`PreUpdate`\
+  \ 最常见的调用来源是 `CryGame.dll` 中的 `CGame::Update`。始终记住，此过程仅适用于启动器（Launcher）；编辑器以独特的方式处理游戏更新和渲染。`RenderBegin`\
+  \ 信号新帧的开始，并告诉渲染器设置新帧、清除缓冲区等。\n\n### 后更新 (Post update)\n更新游戏系统后，该是渲染场景了。这个初始步骤通过\
+  \ `IGameFramework::PostUpdate` 函数完成。在渲染之前，必须更新对 `PreUpdate` 之后获取的新信息至关重要的系统。这包括\
+  \ UI 闪烁、动画同步等。完成这些之后，`PostUpdate` 将调用 `ISystem::Render`，而该函数将使用 `I3DEngine::RenderWorld`\
+  \ 函数渲染世界。渲染世界后，系统将调用所有游戏对象的 `FlashUI::Update` 和 `PostUpdate`，最后以调用 `ISystem::RenderEnd`结束。\n\
+  \n### [ 192 ]\n![](img/index-212.jpg)\n*第 10 章*\n\n### 渲染上下文 (Rendering contexts)\n\
+  渲染上下文本质上是原生窗口句柄的封装器。在 Windows 上，这允许你指定 `HWND`，然后让渲染器直接在其绘图。渲染上下文的性质是特定平台的，因此无法保证从渲染模块（如\
+  \ D3D）到另一个模块（如 OpenGL）的效果相同。注意：渲染上下文目前仅在以编辑器模式运行时支持，该模式用于渲染窗口。\n\n### [ 193 ]\n\
+  *渲染编程*\n\n### 渲染 (Rendering)\n为了用你的窗口句柄创建一个新上下文，请调用 `IRender::CreateContext`。注意，上下文在创建时会自动启用；调用\
+  \ `IRender::MakeMainContext` 可重新启用主视图。在渲染上下文时，你需要做的第一件事是激活它。这可以通过 `IRender::SetCurrentContext`\
+  \ 完成。一旦启用，渲染器就会知道它应该传递的窗口。接下来你需要做的是使用 `IRender::ChangeViewport` 更新上下文的分辨率。这会指示渲染器其应该渲染区域的位置和大小。之后，只需调用典型的渲染函数，如\
+  \ `IRender::BeginFrame`（参见“渲染流程分解”部分），然后通过 `IRender::MakeMainContext` 使主上下文激活来完成。\n\
+  \n### 使用 I3DEngine::RenderWorld 函数\n在某些情况下，手动调用 `I3DEngine::RenderWorld` 而不是依赖游戏框架的更新过程是有意义的。为了这样做，我们需要稍微更改一下。首先，如所示调用\
+  \ `IRender::SetCurrentContext`，然后调用 `IRender::MakeMainContext`：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\n\
+  gEnv->pRenderer->MakeMainContext();\n```\n很好，现在我们的上下文将被激活。但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在\
+  \ `SetCurrentContext` 之后直接调用 `IRender::ChangeViewport`：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\n\
+  gEnv->pRenderer->MakeMainContext();\n// 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在\
+  \ SetCurrentContext 之后直接调用 IRender::ChangeViewport：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\n\
+  gEnv->pRenderer->MakeMainContext();\n// 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在\
+  \ SetCurrentContext 之后直接调用 IRender::ChangeViewport：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\n\
+  gEnv->pRenderer->MakeMainContext();\n// 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在\
+  \ SetCurrentContext 之后直接调用 IRender::ChangeViewport：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\n\
+  gEnv->pRenderer->MakeMainContext();\n// 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在\
+  \ SetCurrentContext 之后直接调用 IRender::ChangeViewport：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\n\
+  gEnv->pRenderer->MakeMainContext();\n// 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在\
+  \ SetCurrentContext 之后直接调用 IRender::ChangeViewport：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\n\
+  gEnv->pRenderer->MakeMainContext();\n// 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在\
+  \ SetCurrentContext 之后直接调用 IRender::ChangeViewport：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\n\
+  gEnv->pRenderer->MakeMainContext();\n// 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在。CurrentContext\
+  \ 之后直接调用 ender,  ,\n```：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\ngEnv->pRenderer->MakeMainContext();\n\
+  // 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。\n，，所示在\nCurrentContext 之后直接调用\nenderender,\
+  \ ,\n```：\n```cpp\ngEnv->pRenderer->SetCurrentContext(hWnd);\ngEnv->pRenderer->MakeMainContext();\n\
+  // 很好，现在我们的上下文将被激活。但但为了实际进行渲染，我们需要填充中间的空白。首先，如所示在\n```cpp\ngEnv->pRenderer->ChangeViewport(0,\
+  \ 0, width, height);\n```\n这会将视口设置为 0, 0 以及指定的宽度和高度。\n\n### 194 ]\n*第 10 章*\n设置视口大小后，你应该根据分辨率配置相机并如所示调用\
+  \ `IRender::SetCamera`：\n```cpp\nCCamera camera;\n// 根据宽度、高度和视野场 (60) 设置视锥\ncamera.SetFrustum(width,\
+  \ height, DEG2RAD(60));\n// 设置相机缩放、方向和位置。\nVec3 scale(1, 1, 1);\nQuat rotation =\
+  \ Quat::CreateRotationXYZ(Ang3(DEG2RAD(-45)), 0, 0));\nVec3 position(0, 0, 0);\n\
+  camera.SetMatrix(Matrix34::Create(scale, rotation, position));\ngEnv->pRenderer->SetCamera(m_camera);\n\
+  ```\n非常好！渲染器现在知道渲染时应该使用哪个相机了。我们之后还需要将其传递给 `I3DEngine::RenderWorld`。在此之前，我们必须通过以下代码清除缓冲区移除上一帧：\n\
+  ```cpp\n// 设置清除颜色为纯黑色\nColorF clearColor(0.f);\ngEnv->pRenderer->SetClearColor(Vec3(clearColor.r,\
+  \ clearColor.g, clearColor.b));\ngEnv->pRenderer->ClearBuffer(FRT_CLEAR, &clearColor);\n\
+  ```\n随后调用 `IRender::RenderBegin` 以指示开始渲染：\n```cpp\ngEnv->pSystem->RenderBegin();\n\
+  gEnv->pSystem->SetViewCamera(m_camera);\n// 在此处插入渲染代码\ngEnv->pSystem->RenderEnd();\n\
+  ```\n现在我们只需要在 `SetViewCamera` 和 `RenderEnd` 调用之间渲染场景：\n```cpp\ngEnv->pRenderer->SetViewport(0,\
+  \ 0, width, height);\ngEnv->p3DEngine->Update();\nint renderFlags = SHDF_ALLOW_AO\
+  \ | SHDF_ALLOWPOSTPROCESS | SHDF_ALLOW_WATER | SHDF_ALLOWHDR | SHDF_ZPASS;\ngEnv->p3DEngine->RenderWorld(renderFlags,\
+  \ &camera, 1, __FUNCTION__);\n```\n\n### [ 195 ]\n*渲染编程*\n完成！世界现在根据我们的相机设置进行渲染，并且应该在通过\
+  \ `IRender::SetCurrentContext` 设置的窗口可见。\n\n### I3DEngine::RenderWorld 标志\n\n\n\n\
+  \n\n渲染标志（render flags）决定了世界应该如何绘制。例如，我们可以排除 `SHDF_ALLOW_WATER` 来完全避免渲染水。下表列出了可用标志及其功能：\n\
+  \n| 标志名称 | 说明 |\n| :--- | :--- |\n| `SHDF_ALLOWHDR` | 如果未设置，将不使用 HDR。 |\n| `SHDF_ZPASS`\
+  \ | 允许 Z 轴通过（Z-Pass）。 |\n| `SHDF_ZPASS_ONLY` | 仅允许 Z 轴通过，而不允许其他通过。 |\n| `SHDF_DO_NOT_CLEAR_Z_BUFFER`\
+  \ | 如果设置，Z 缓冲区将永远不会清空。 |\n| `SHDF_ALLOWPOSTPROCESS` | 如果未设置，所有后处理效果将被忽略。 |\n| `SHDF_ALLOW_AO`\
+  \ | 如果设置，将使用环境遮蔽（Ambient Occlusion）。 |\n| `SHDF_ALLOW_WATER` | 如果未设置，所有水都将被忽略且不渲染。\
+  \ |\n| `SHDF_NOASYNC` | 不进行异步绘制。 |\n| `SHDF_NO_DRAWNEAR` | 排除近平面上的所有渲染。 |\n| `SHDF_STREAM_SYNC`\
+  \ | 启用同步纹理流。 |\n| `SHDF_NO_DRAWCAUSTICS` | 如果设置，将不绘制水焦散光。 |\n\n### 着色器 (Shaders)\n\
+  在 CryEngine 中创建自定义着色器相对简单，只需复制现有的着色器（`.cfx`）及其扩展文件（`.ext`即可。为了本示例，从 `Engine/Shaders`\
+  \ 复制 `Illum.ext` 并将其命名为 `MyShader.ext`。然后复制 `Engine/Shaders/HWScripts/CryFX/Illum.cfx`\
+  \ 并将其重命名为 `MyShader.cfx`。\n\n注意，创建自定义着色器应该经过充分考虑；如果可以直接使用现有的着色器，那是最佳选择。这是因为 CryEngine\
+  \ 的着色器变体数量已经达到了可行的极限。\n\n正如章节之前提到的，在本书编写时，CryEngine Free SDK 尚未启用自定义着色器编写。\n\n**[\
+  \ 196 ]**\n\n![](img/index-216_1.png)\n\n*第 10 章*\n\n### 着色器描述\n每个着色器都需要定义一个描述，用于设置其选项。选项设置在全局变量\
+  \ `Script` 中，如下代码所示：\n\n```\nfloat Script : STANDARDSGLOBAL\n\nstring Script =\n\
+  \"Public;\"\n\"SupportsDeferredShading;\"\n\"SupportsAttrInstancing;\"\n\"ShaderDrawType\
+  \ = Light;\"\n\"ShaderType = General;\";\n```\n\n### 纹理槽位 (Texture slots)\n每个材质可以在一组纹理槽位中指定纹理的文件路径，所示：我们可以通过一组辅助函数（如下）通过着色器访问这些纹理槽位，然后将其添加到自定义采样器中，随后通过使用\
+  \ `GetTexture2D` 函数进行加载。\n\n| 槽位名称 | 辅助函数名称 |\n| :--- | :--- |\n| 漫反射 (Diffuse)\
+  \ | `$Diffuse` |\n| 光泽 (Gloss/Specular) | `$Gloss` |\n| 凸凹 (Bump) | `$BumpHeight`\
+  \ |\n| 环境 (Environment) | `$Env` |\n| 环境立方贴图 (Environment Cubemap) | `$EnvironmentCubeMap`\
+  \ |\n| 细节 (Detail) | `$Detail` |\n\n**[ 197 ]**\n\n*渲染编程*\n\n| 槽位名称 | 辅助函数名称 |\n\
+  | :--- | :--- |\n| 不透明度 (Opacity) | `$Opacity` |\n| 贴花 (Decal) | `$DecalOverlay`\
+  \ |\n| 次表面 (Subsurface) | `$Subsurface` |\n| 自定义 (Custom) | `$CustomMap` |\n| 自定义二次\
+  \ (Custom Secondary) | `$CustomSecondaryMap` |\n\n### 着色器标志 (Shader flags)\n通过使用\
+  \ `#ifdef` 和 `#endif` 预处理器命令，可以定义编译前或运行时移除的代码区域。这允许使用具有多个可切换子效果的单一通用着色器（übershader），例如\
+  \ `Illum`。\n\n例如，我们可以如下检查用户是否正在运行 DX11：\n\n```\n#if D3D11\n//在此处包含 DX11 特定的着色器代码\n\
+  #endif\n```\n\n### 材质标志 (Material flags)\n材质标志通过 `Material Editor`材质编辑器）设置，允许每个材质使用不同的效果，例如视差投影映射（Parallax\
+  \ Occlusion Mapping）和曲面细分（Tessellation）。材质标志在编译时评估。\n\n要创建一个新的材质标志，打开你的着色器的 `.ext`\
+  \ 文件并使用以下代码创建一个新属性：\n\n```\nProperty\n{\n    Name = %MYPROPERTY\n    Mask = 0x160000000\n\
+  \    Property (My Property)\n    Description (My property is a very good property)\n\
+  }\n```\n\n现在当你重新启动编辑器时，你的属性应该出现在材质编辑器中。\n\n**[ 198 ]**\n\n*第 10 章*\n\n以下是可能的属性数据列表：\n\
+  \n| 属性数据 | 说明 |\n| :--- | :--- |\n| Name (名称) | 定义属性的内部名称，以及你应该通过 `#ifdef` 块检查的内容。\
+  \ |\n| Mask (掩码) | 用于识别属性的唯一掩码。不应与着色器定义（`.ext`）中的其他属性冲突。 |\n| Property (属性) | 属性的公开名称，显示在材质编辑器中。\
+  \ |\n| Description (描述) | 属性的公开描述，当在材质编辑器中悬停在属性上时显示。 |\n| DependencySet (依赖集) |\
+  \ 当用户修改该属性设置的纹理槽位值时，材质标志将被激活。这通常与 `Hidden` 标志结合使用。 |\n| DependencyReset (依赖重置) |\
+  \ 当用户修改该属性设置的纹理槽位值时，材质标志将被重置。 |\n| Hidden (隐藏) | 如果设置，属性将不可见。 |\n| Engine flags\
+  \ (引擎标志) | 由引擎直接设置，包含如当前运行平台的信息。 |\n| Runtime flags (运行时标志) | 运行时标志由 `%RT_` 前缀设置或取消。\
+  \ |\n| Samplers (采样器) | 采样器是纹理的表示。 |\n\n**[ 199 ]**\n\n*渲染编程*\n\n一个采样器的示例如下：\n\n\
+  ```\nsampler\n{\n    Texture = $Diffuse;\n    MinFilter = LINEAR;\n    MagFilter\
+  \ = LINEAR;\n    AddressU = Wrap;\n    AddressV = Wrap;\n    AddressW = Wrap;\n\
+  }\n```\n\n通过采样器，我们可以引用特定的纹理。\n\n### 采样器使用纹理槽位\n在某些情况下，最好让你的采样器指向纹理槽位之一。要这样做，只需将纹理路径替换为纹理槽位的名称：\n\
+  \n```\nsampler2D mySamplerWithTexture = sampler_state\n{\n    Texture = $Diffuse;\n\
+  \    MinFilter = LINEAR;\n    MagFilter = LINEAR;\n    MipFilter = LINEAR;\n   \
+  \ AddressU = Wrap;\n    AddressV = Wrap;\n    AddressW = Wrap;\n}\n```\n\n加载后，纹理将是\
+  \ `Diffuse` 槽位指定的。\n\n### 获取纹理\n现在我们已经有了采样器，可以学习如何在着色器中获取纹理数据。这是通过如下使用 `GetTexture2D`\
+  \ 函数实现的：\n\n```\nhalf4 myMap = GetTexture2D(mySampler, baseTC.xy);\n```\n\n**[ 200\
+  \ ]**\n\n*第 10 章*\n\n### 在运行时操作静态对象\n在本节中，我们将学习如何在运行时修改静态网格，允许在游戏过程中操作渲染网格和物理网格。\n\
+  \n为了实现此，首先我们需要获取对象的 `IStatObj` 实例。例如，如果你正在修改一个实体，可以如下所示使用 `IEntity::GetStatObj`：\n\
+  \n```\nIStatObj *pStatObj = pMyEntity->GetStatObj(0);\n```\n\n注意，我们将 0 作为 `IEntity::GetStatObj`\
+  \ 的第一个参数。这是为了获取最高细节级别（LOD）的对象。这意味着对该静态对象所做的更改不会反映在它的其他 LOD 中。\n\n你现在拥有一个指向模型静态数据的接口指针。\n\
+  \n我们现在可以调用 `IStatObj::GetIndexedMesh` 或 `IStatObj::GetRenderMesh`。后者可能是最好的开始点，因为它由优化的索引网格数据构建，如下所示：\n\
+  \n```\nIIndexedMesh *pIndexedMesh = pStatObj->GetIndexedMesh();\nif(pIndexedMesh)\n\
+  {\n    IIndexedMesh::SMeshDescription meshdesc;\n    pIndexedMesh->GetMesh(meshdesc);\n\
+  }\n```\n\n我们现在可以访问包含网格信息的 `meshdesc` 变量。\n\n注意我们需要调用 `IStatObj::UpdateVertices`\
+  \ 来应用我们对网格所做的更改。\n\n\n\n\n记住，修改静态对象会将更改影响到所有使用它的对象。在编辑之前，使用 `IStatObj::Clone` 方法创建它的副本，从而允许你只操作场景中的一个对象。\n\
+  \n**[ 201 ]**\n\n*渲染编程*\n\n### 在运行时修改材质\n\n在本节中，我们将在运行时修改材质。\n\n与 `IStatObj` 类似，我们也可以克隆材质，以避免对当前所有使用该材质的对象进行更改。要做到这一点，请调用\
+  \ `IMaterialManager::CloneMaterial`，它可以通过 `gEnv->p3DEngine->GetMaterialManager()`\
+  \ 访问。\n\n我们需要做的第一件事是获取我们想要编辑的材质实例。如果附近有一个实体（entity），我们可以像所示使用 `IEntity::GetMaterial`：`IMaterial\
+  \ *pMaterial = pEntity->GetMaterial();` 请注意，如果没有设置自定义材质，`IEntity::GetMaterial` 将返回\
+  \ `null`。在这种情况下，你可能希望依赖于如 `IStatObj::GetMaterial` 这样的函数。\n\n### 克隆材质\n\n注意，`IMaterial`\
+  \ 实例可以用于多个对象。这意味着修改一个对象的参数可能会导致获取该对象的其他对象也发生变化。\n\n为了解决这个问题，我们可以在修改材质之前通过 `IMaterialManager::Clone`\
+  \ 方法对其进行克隆，如下：\n\n```\nIMaterial *pNewMaterial = gEnv->p3DEngine->GetMaterialManager()->CloneMaterial(pMaterial);\n\
+  ```\n\n然后我们只需要将克隆材质应用到获取原始实例的实体上：\n\n```\npEntity->SetMaterial(pNewMaterial);\n\
+  ```\n\n现在我们可以继续修改材质参数，或者与分配给它的着色器相关的参数。\n\n### 材质参数\n\n修改材质的参数有时很有用。这允许我们像下截图所示调整每个材质的属性，如\
+  \ `Opacity`（透明度）、`AlphaTest`（Alpha 测试）和 `Diffuse Color`（漫反射）。\n\n**[ 202 ]**\n\n\
+  ![](img/index-222_1.png)\n\n*第 10 章*\n\n要设置或获取材质参数，请使用 `IMaterial::SetGetMaterialParamFloat`\
+  \ 或 `IMaterial::SetGetMaterialVec3`。\n\n例如，要查看材质的 alpha 通道，请使用以下代码：`float newAlpha\
+  \ = 0.5f;`\n\n```\npMaterial->SetGetMaterialParamFloat(\"alpha\", 0.5f, false);\n\
+  ```\n\n材质现在应该会以半倍强度绘制 alpha。\n\n以下是可用参数列表：**参数名称**\n\n| 参数名称 | 类型 |\n|---|---||\n\
+  | \"alpha\" | float |\n| \"opacity\" | float |\n| \"glow\" | float |\n| \"shininess\"\
+  \ | float |\n| \"diffuse\" | Vec3 |\n| \"emissive\" | Vec3 |\n| \"specular\" | Vec3\
+  \ |\n\n**[ 203 ]**\n\n![](img/index-223_1.png)\n\n*渲染编程*\n\n### 着色器参数\n\n正如我们早之前学到的，每个着色器（shader）都可以暴露一组参数，允许材质在不影响全局着色器的情况下调整着色器的行为。\n\
+  \n要修改材质的着色器参数，我们首先需要获取与材质链接的着色器项：\n\n```\nconst SShaderItem& shaderItem(pMaterial->GetShaderItem());\n\
+  ```\n\n现在我们已经有了着色器项，可以通过以下代码访问 `IRenderShaderResources::GetParameters`：\n\n```\n\
+  DynArray<SShaderParam> params = shaderItem.m_pShaderResources->GetParameters();\n\
+  ```\n\n现在我们可以修改其中包含的参数并调用 `IRenderShaderResources::SetShaderParams`，如下：\n\n```cpp\n\
+  // 遍历参数以找到我们想要修改的那一个\nfor(auto it = params.begin(), end = params.end(); it != end;\
+  \ ++it)\n{\n    SShaderParam param = *it;\n    if(!strcmp(paramName, param.m_Name))\n\
+  \    {\n        UParamVal paramVal;\n        paramVal.m_Float = 0.7f;\n        //\
+  \ 设置参数的值（在此情况下为 0.7f） \n        param.SetParam(paramName, &params, paramVal);\n\n\
+  \        SInputShaderResources res;\n        shaderItem.m_pShaderResources->ConvertToInputResource(&res);\
+  \ \n        res.m_ShaderParams = params;\n\n        // 更新资源中的参数。\n        shaderItem.m_pShaderResources->SetShaderParams(&res,shaderItem.m_pShader);\
+  \ \n        break;\n    }\n}\n```\n\n**[ 204 ]**\n\n![](img/index-224_1.jpg)\n\n\
+  *第 10 章*\n\n### 示例 – 植被的动态 alpha 测试\n\n现在来测试一下你的知识吧！\n\n我们在示例中包含了一棵配置好使用 alpha 测试属性的树（如下所示所示）。当\
+  \ alpha 测试增加时，会模拟叶子掉落的效果。\n\n为了展示这一点，我们将编写一小段代码在运行时修改此设置。\n\n**[ 205 ]**\n\n*渲染编程*\n\
+  \n从创建一个名为 `CTreeOfTime` 的新类开始。可以创建一个新的游戏对象扩展，或者从我们在*第 3 章*《创建和利用自定义实体》中创建的示例派生出来。\n\
+  \n一旦创建完成，我们需要在实体生成时加载我们的树对象，如下所示：\n\n```cpp\nvoid CTreeOfTime::ProcessEvent(SEntityEvent&\
+  \ event)\n{\n    switch(event.event)\n    {\n        case ENTITY_EVENT_INIT:\n \
+  \       case ENTITY_EVENT_RESET:\n        case ENTITY_EVENT_START_LEVEL:\n     \
+  \   {\n            IEntity *pEntity = GetEntity();\n            pEntity->LoadGeometry(0,\
+  \ \"Objects/trees/ash_01.cgf\");\n        }\n        break;\n    }\n}\n```\n\n我们的实体现在会在生成时在其槽位（0）加载\
+  \ Objects/trees/ash_01.cgf。接下来，我们需要根据当前时间来更新 alpha 测试属性。\n\n```cpp\nif(IStatObj\
+  \ *pStatObj = GetEntity()->GetStatObj(0))\n{\n    IMaterial *pMaterial = pStatObj->GetMaterial();\n\
+  \    if(pMaterial == nullptr) return;\n\n    IMaterial *pBranchMaterial = pMaterial->Gettl(0);\n\
+  \    if(pBranchMaterial == nullptr) return;\n\n    // 让 alpha 在 12 达到峰值\n    float\
+  \ alphaTest = abs(gEnv->p3DEngine->GetOfDay()->GetTime() - 12) / 12;\n\n    pBranchMaterial->SetGetMaterialParamFloat(\"\
+  alpha\", alphaTest, false);\n}\n```\n\n**[ 206 ]**\n\n![](img/index-226_1.jpg)\n\
+  \n*第 10 章*\n\n你现在有一个让树循环掉落和恢复叶子的周期了。这是通过运行时修改材质可以实现的许多技术之一。\n\n## 总结\n\n在本章中，我们学习了引擎如何使用着色器，并拆解了渲染过程。你现在应该了解如何使用渲染上下文、在运行时操作静态对象以及通过编程修改材质。\n\
+  \n如果你还没有准备好进入关于特效和声音的章节，为什么不尝试一下挑战呢？例如，你可以创建一个在攻击时会变形的自定义对象。\n\n**[ 207 ]**\n\n\
+  # 特效与声音\n\nCryEngine 拥有一个非常模块化的特效系统，允许以最小努力在运行时生成特效。引擎还集成了 FMOD，为开发者提供了动态播放音频、音乐和本地化对话的工具。\n\
+  \n在本章中，我们将涵盖以下主题：\n\n• 学习特效和声音系统\n• 如何创建和触发材质特效\n• 如何通过 FMOD Designer 自定义声音\n• 回放自定义声音\n\
+  • 如何将声音集成到粒子和物理事件中\n\n### 介绍特效\n\n没有特效，游戏世界通常难以令人信，并且被认为是缺乏生命的。\n\n简单添加声音和粒子等特效可以让世界变得生动，给玩家带来更强的沉浸感。\n\
+  \n虽然引擎中没有一个处理所有类型特效的统一系统，我们将涵盖许多处理各种特效的系统。这包括材质特效、粒子特效、声音特效等。\n\n### 材质特效\n\n材质特效系统处理材质之间的反应，例如根据石头落到的材质播放不同的粒子和声音特效。\n\
+  \n### 表面类型\n\n每个材质都被分配了一个**表面类型**，指示它是哪种表面。例如，如果我们创建一个石头材质，我们应该使用 `mat_rock` 表面类型。\n\
+  \n\n\n\n\n通过分配表面类型，物理系统将能够收集有关碰撞如何行为的信息，例如，通过获取表面类型的摩擦值。多个表面类型之间的交互还允许根据相互接触的表面类型产生变化的动态效果。\n\
+  \n可以非常方便地通过程序化查询表面类型，允许各种系统根据表面类型创建并触发不同的代码执行路径。\n\n在 C++ 中，表面类型由 `ISurfaceType`\
+  \ 接口表示，可以通过 `IMaterial::GetSurfaceType` 获取。\n\n在使用 C# 时，表面类型由 `CryEngine.SurfaceType`\
+  \ 类表示，可以通过 `CryEngine.Material.SurfaceType` 属性进行检索。\n\n### 添加或修改表面类型\n\n表面类型定义在\
+  \ `Game/Libs/MaterialEffects/SurfaceTypes.xml` 中。\n\n引擎在启动时解析该文件，允许材料使用加载的表面类型。\n\
+  \n每个表面类型都使用 `SurfaceType` 元素定义，例如下面代码所示的 `mat_fabric`：\n\n```xml\n<SurfaceType name=\"\
+  mat_fabric\">\n    <Physics friction=\"0.80000001\" elasticity=\"0\" pierceability=\"\
+  7\" can_shatter=\"1\"/>\n</SurfaceType>\n```\n\n物理属性在碰撞发生时由物理系统进行查询。\n\n### 粒子效果\n\
+  \n粒子效果由 `IParticleManager` 接口处理，可以通过 `I3DEngine::GetParticleManager` 访问。要获取 `IParticleEffect`\
+  \ 对象的指针，请参见 `IParticleManager::FindEffect`。\n\n粒子效果通过 **Sandbox** 编辑器包含的**粒子编辑器（Particle\
+  \ Editor）** 创建，通常保存到 `Game/Libs/Particles`。\n\n**[ 210 ]**\n\n![](img/index-230_1.png)\n\
+  \n*第 11 章*\n\n### 音效\n\nCryENGINE 音频系统由 FMOD 驱动，这是一个用于游戏的音频内容创作工具。通过使用 FMOD，引擎支持轻松创建和操作声音，以便立即在游戏中使用。\n\
+  \n可以通过 `ISoundSystem` 接口访问声音系统，通常通过 `gEnv->pSoundSystem` 指针检索。声音由 `ISound` 接口表示，可以通过\
+  \ `ISoundSystem::CreateSound` 或 `ISoundSystem::GetSound` 获取其指针。\n\n通过访问 `ISound`\
+  \ 接口，我们可以更改语义、距离倍数等，并通过 `ISound::Play` 实际播放声音。\n\n### FMOD Designer\n\n每当我们向项目正在使用的不同声音库中添加更多声音时，就会使用这个设计器。\n\
+  \n**[ 211 ]**\n\n*效果与声音*\n\n该设计器允许创建和维护声库（sound banks），声库本质上是区分不同声音的库。声库中包含事件、声音定义和音乐。这些可以被赋予静态和动态修饰符，例如根据游戏环境为声音提供独特的\
+  \ 3D 效果。\n\n### 创建并触发材料效果\n\n如接下来的章节所示，触发自定义材料效果有两种方法。\n\n#### 基于物理交互的自动播放\n\n当两个材料由于物理事件发生碰撞时，引擎将根据分配给材料的表面类型，在\
+  \ `Game/Libs/MaterialEffects/MaterialEffects.xml` 中查找材料效果。这允许在发生特定交互时播放各种粒子和音效。\n\
+  \n例如，如果岩石撞击木头，我们可以播放特定的声音事件以及木头碎屑粒子。\n\n首先，用 Microsoft Excel 打开 `MaterialEffects.xml`。\n\
+  \n虽然可以手动修改材料效果文档，但由于 Excel 格式的复杂性，不建议这样做。\n\n**[ 212 ]**\n\n![](img/index-232_1.png)\n\
+  \n*第 11 章*\n\n你现在应该可以在 Excel 程序中看到材料效果工作表。各种表面类型排列在网格中，行和列的交叉点定义了使用何种效果。\n\n例如，根据上一个截图中显示的工作表，如果表面类型为\
+  \ `mat_flesh` 的材料与 `mat_vegetation` 表面碰撞，引擎将加载 `collision:vegetation_spruce`Effects。\n\
+  \n可以通过 `Libs/MaterialEffects/SurfaceTypes.xml` 查看（或修改）表面类型的完整列表。\n\n**[ 213 ]**\n\
+  \n*效果与声音*\n\n#### 添加新表面类型\n\n如果你需要向材料效果文档中添加新的表面类型，只需添加相应的行和带有表面类型名称的列，以便引擎加载它。\n\
+  \n记住，你的表面类型名称在行和列中必须以相同的顺序出现。\n\n#### 效果定义\n\n既然我们知道了系统如何寻找各种表面类型碰撞的效果，那么我们如何找到并创建效果呢？\n\
+  \n效果包含在 `Libs/MaterialEffects/FXLibs/` 中，以纯 XML 文件的形式存在。例如，之前使用的 `collision:vegetation_spruce`Effects\
+  \ 的定义包含在 `Libs/MaterialEffects/FXLibs/Collision.xml` 中，内容如下：\n\n```xml\n<FXLib>\n\
+  \    <Effect name=\"vegetation_spruce\">\n        <Particle>\n            <Name>Snow.Vegetation.SpruceNeedleGroup</Name>\n\
+  \        </Particle>\n    </Effect>\n</FXLib>\n```\n\n这告诉引擎在触发效果时播放指定的粒子。例如，正如之前定义的，如果表面类型为\
+  \ `mat_flesh` 的材料与另一个 `mat_vegetation` 类型材料碰撞，引擎将生成 `Snow.Vegetation.SpruceNeedleGroup`。\n\
+  \n通过访问 `ISound` 接口，我们可以更改语义、距离倍数等，并通过 `ISound::Play` 实际播放声音。\n\n那么声音呢？声音可以以类似于粒子的方式通过事件播放，如代码所示替换\
+  \ Particle 标签并指定声音名称：\n\n```xml\n<Sound>\n    <Name>Sounds/Animals:Pig</Name>\n\
+  </Sound>\n```\n\n**[ 214 ]**\n\n![](img/index-234_1.png)\n\n*第 11 章*\n\n现在当效果播放时，我们应该能听到猪的叫声（squirm）。这就是当你撞击植被时发生的情况，对吗？\n\
+  \n值得注意的是，一个效果并不一定包含一种特定类型的效果，也可以同时播放多种效果。\n\n例如，根据之前的代码，我们可以创建一个在触发时既播放声音又生成粒子效果的效果。\n\
+  \n也可以触发自定义材料效果，这在创建根据交互名称而不同的脚步效果时非常有用。\n\n冒号（`:`）代表效果类别，即我们在 `Libs/MaterialEffects/FXLibs/`\
+  \ 文件夹中创建的效果库。\n\n之前的截图是程序化触发的自定义材料效果的部分选取。\n\n**[ 215 ]**\n\n*效果与声音*\n\n#### 触发自定义事件\n\
+  \n要获取效果的 ID，如代码所示，调用 `IMaterialEffects::GetEffectId` 提供交互名称和相关的表面类型：\n\n```cpp\n\
+  IMaterialEffects *pMaterialEffects = gEnv->pGame->GetIGameFramework()->GetIMaterialEffects();\n\
+  MFXEffectId effectId = pMaterialEffects->GetEffectId(\"footstep_player\", surfaceId);\n\
+  ```\n\n获取表面标识符有许多方法。例如，使用 `RayWorldIntersection` 投射线允许我们通过 `ray_hit::surface_idx`\
+  \ 变量获取碰撞表面 ID。我们也可以对任何材料实例简单地调用 `IMaterial::GetSurfaceTypeId`\n\n根据传递给 `GetEffectId`\
+  \ 的表面类型，我们现在应该拥有 `footstep_player`效果的标识符。例如，对比上一个截图，并假设我们传递了 `mat_metal` 标识符，我们应该拥有\
+  \ `footstep_player:metal_thick`效果的 ID。\n\n我们可以如代码所示通过 `IMaterialEffects::ExecuteEffect`\
+  \ 来执行效果：\n\n```cpp\nSMFXRunTimeEffectParams params;\nparams.pos = Vec3(0, 0, 10);\n\
+  bool result = gEnv->pGame->GetIGameFramework();\n```\n\n\n\n\n\n`GetIMaterialEffects()->ExecuteEffect(effectId,\
+  \ params);` 也可以通过调用 `IMaterialEffects::GetResources` 来获取效果资源，如下所示：\n\n```cpp\nif(effectId\
+  \ != InvalidEffectId)\n{\n    SMFXResourceListPtr->pList = pMaterialEffects->GetResources(effectId);\n\
+  \    if(pList && pList->m_particleList)\n    {\n        const char *particleEffectName\
+  \ = pList->m_particleList->m_particleParams.name;\n    }\n}\n```\n\n**[ 216 ]**![](img/index-236_1.jpg)\n\
+  \n*第 11 章*\n\n# 基于动画的事件与效果\n\n基于动画的事件用于在动画的特定时间段触发特定的效果。例如，我们可以用此将声音与动画关联，确保声音与其对应的动画同步播放。\n\
+  \n首先，通过 `Sandbox Editor`（沙编辑器）打开 `Character Editor`（角色编辑器），加载任意角色定义，然后选择任意动画。\n\n\
+  点击窗口底部中央的 `Animation Control`（动画控制）选项卡，并在动画中选择你想要播放声音的时间点。\n\n当滑块定位在你声音应该播放的时间时，点击\
+  \ `New Event`（新建事件）。\n\n**[ 217 ]**![](img/index-237_1.png)\n\n*效果与声音*\n\n事件的 `Name`（名称）字段应为\
+  \ `sound`，并将 `Parameter`（参数）字段设置为你想要播放的声音路径。\n\n点击 `Save`（保存）后，声音应该会在指定时间随动画开始播放。\n\
+  \n## 生成粒子发射器\n\n正如在粒子效果（Particle effects）章节中提到的，粒子效果由 `IParticleEffect` 接口表示。然而，粒子效果不等同于粒子发射器。效果接口处理默认效果的属性，并可以生成在游戏中显示视觉效果的单个发射器。\n\
+  \n发射器由 `IParticleEmitter` 接口表示，最常见的获取方式是调用 `IParticleEffect::Spawn`。\n\n## 使用 FMod\
+  \ 导出声音\n\n你想将一些声音导出到引擎中？我们首先需要的是通过 `FMOD Designer` 创建一个新的 FMod 项目。为此，请先通过 `<Engine\
+  \ Root>/Tools/FmodDesigner/fmod_designer.exe` 打开设计器。\n\n**[ 218 ]**![](img/index-238_1.png)\n\
+  \n*第 11 章*\n\n要创建一个新项目，点击 `File` 菜单，选择 `New Project`，然后将项目保存到你合适的位置。我们将保存到 `Game/Sounds/Animals/Animals.fdp`。\n\
+  \n关于 FMOD 声音系统的深入教程，请参阅 CryENGINE 文档 http://docs.cryengine.com/display/SDKDOC3/The+FMOD+Designer。\n\
+  \n## 将声音添加到项目\n\n现在我们已经有了声音项目，是时候添加一些声音了。为此确保你在 `Events`（事件）菜单中，并激活了 `Groups`（组）选项卡，如下截图所示：\n\
+  \n**[ 219 ]**![](img/index-239_1.png)\n\n*效果与声音*\n\n现在，要添加声音只需将 `.wav` 文件拖入你选择的组，它就会出现在那里。现在你可以导航到\
+  \ `Project` | `Build` 或按下 `Ctrl` + `B` 来为你的项目构建波库（wave bank），引擎将加载它来检测声音。\n\n通过向事件组添加更多声音，系统会在请求该组时随机挑选一个声音。\n\
+  \n通过在 FMOD 中选择事件组，我们还可以修改其属性，本质上是调整声音播放时的处理方式。\n\n**[ 220 ]**![](img/index-240_1.png)\n\
+  \n*第 11 章*\n\n大多数属性会静态地影响声音，而以 `Randomization`（随机化）结尾的属性会创建一个运行时随机应用的效果。例如，通过调整\
+  \ `Pitch` Randomization（音音调随机化），我们可以确保声音的音调将根据我们选择的值进行随机偏移，从而赋予声音独特的特色。\n\n## 播放声音\n\
+  \n在播放音频时，我们必须区分由程序员触发的动态声音和关卡创建者触发的静态声音。\n\n**[ 221 ]**![](img/index-241_1.jpg)\n\
+  \n*效果与声音*\n\n触发音频事件有多种方法，应根据声音的用途进行评估。\n\n### 使用 SoundSpots（声点）\n\n`soundspot` 实体是为了让关卡设计师能够轻松放置在特定区域播放预定义声音的实体。声音实体支持循环声音，或在每次从脚本事件触发它时播放一次。\n\
+  \n要使用声点，首先通过 Rollupbar（工具栏）放置 `SoundSpot` 实体的新实例，或导航到 `Sound` | `Soundspot`。放置后，你应该能看到与后续截图示例类似的内容：\n\
+  \n**[ 222 ]**![](img/index-242_1.png)(index-242_2.png)\n\n*第 11 章*\n\n我们现在可以分配一个在声点内播放的声音。为此，点击\
+  \ `Source` 实体属性，然后通过 `Sound Browser`（声音浏览器）窗口选择声音，如下截图所示：\n\n然后你可以设置 `SoundSpot`\
+  \ 使其始终播放声音，或者通过 flowgraph（流程图）触发。例如，在接下来的截图中，声点将播放它的声音。\n\n**[ 223 ]**\n\n*效果与声音*\n\
+  \n### 程序化播放声音\n\n要程序化播放声音，我们首先需要获取感兴趣声音的 `ISound` 指针：\n\n```cpp\nISound *pSound\
+  \ = gEnv->pSoundSystem->CreateSound(\"Sounds/Animals:Pig\", 0);\nIEntitySoundProxy\
+  \ *pSoundProxy = (IEntitySoundProxy *)pEntity->CreateProxy(ENTITY_SOUND);\nif(pSoundProxy)\n\
+  \    pSoundProxy->Play(pSound);\n```\n\n通过使用声音代理（proxy），我们可以确保声音随实体移动。\n\n### 声音标志（Flags）\n\
+  \n通过 `ISoundSystem::CreateSound` 接口创建声音时，我们可以指定一组影响声音播放的标志。某些标志在引擎中使用之前需要在 FMOD\
+  \ 中设置。\n\n这些标志包含在 `ISound.h` 中，是以 `FLAG_SOUND_` 为头的宏。例如，我们可以为声音应用 `FLAG_SOUND_DOPPLER`\
+  \ 以模拟多普勒效应。\n\n### 声音语义（Semantics）\n\n语义本质上是应用于声音的修饰符，是每个声音播放所必需的。不同的声音语义可以在 `ISound.h`（在\
+  \ CryCommon 项目中）`ESoundSemantic` 枚中查看。\n\n**[ 224 ]**\n\n*第 11 章*\n\n## 总结\n\n在本章中，我们将声音从\
+  \ FMOD 导出到引擎中，并学习了如何调整它们。你现在应该知道如何通过 Sandbox Editor 或程序化来触发声音，并且对材质效果有了性的了解。\n\n\
+  如果你还没有准备好进入下一章，为什么不尝试扩展你的知识呢？一种可能性是深入粒子编辑器并创建你自己的带有自定义效果和声音的粒子。在下一章中，我们将涵盖调试和分析你的游戏逻辑。\n\
+  \n**[ 225 ]**![](img/index-246_1.png)\n\n# 调试与分析\n\n创建高效且无 bug 代码是很困难。因此，引擎暴露了许多工具来帮助开发者解决这个问题，允许轻松识别\
+  \ bug 并使性能问题可视化。在编写游戏和引擎逻辑时，始终记住调试和分析工具很重要，以确保你的代码运行优化并可以轻松扫描问题。仅仅添加几个游戏日志警告对于解决未来的问题可能至关重要！\n\
+  \n在本章中我们将涵盖以下主题：\n\n• 学习调试 CryENGINE 程序的常用方法\n\n\n\n\n\n# 使用内置性能分析器\n*   创建我们自己的控制台变量和命令\n\
+  \n## 调试游戏逻辑\n保持代码无 bug 是非常困难的，尤其是当你只依赖调试器时。CryENGINE 暴露了许多系统来帮助调试代码，即使在你没有附加到运行进程时也是如此。\n\
+  \n始终记住你是用哪种配置构建的 `GameDll`。这在 Visual Studio 中构建项目之前可以进行更改，如下截图所示：\n\n*调试与性能分析*\n\
+  \n默认情况下，有三种主要的配置，如下表所示：**Configuration name**（配置名称）\n\n| Configuration name | Description\
+  \ |\n| :--- | :--- |\n| Profile | 开发应用时使用，确保生成调试数据库。 |\n| Debug | 当你需要关闭编译优化，并专门为为此模式开启额外的\
+  \ CryENGINE 辅助工具时使用。 |\n| Release | 此模式旨在早期用于发送给最终用户的最终版本。此配置会执行许多操作，包括禁用调试数据库的生成以及多个仅用于调试的\
+  \ CryENGINE 系统。 |\n\nCryENGINE 游戏的常见做法是将所有库（如 `CryGame`）链接到一个启动器（Launcher）应用程序中以确保安全性。\n\
+  \n## 日志到控制台和文件\n日志系统允许将文本打印到控制台和根文件结构中的 `.log` 文件。日志名称取决于启动了哪个应用程序：\n\n| Log name\
+  \ | Description |\n| :--- | :--- |\n| Game.log | 启动器应用程序使用。 |\n| Editor.log | 仅由\
+  \ Sandbox Editor 应用程序使用。 |\n| Server.log | 用于服务器。 |\n\n日志功能通常用于处理非常严重的问题，或警告设计人员使用了不支持的行为。\n\
+  \n记录严重错误和初始化统计最大的好处是，你通常可以通过简单的读取他们的游戏日志，弄清楚为什么你的代码在最终用户的计算机上没有按预期运行。\n\n## 日志详细程度\n\
+  日志详细程度通过使用 `log_verbosity` 控制台变量（控制台的视觉部分）和 `log_writeToFileVerbosity`（写入磁盘的日志）来设置。\n\
+  \n**[ 228 ]**\n\n*第 12 章*\n\n详细程度决定了哪些消息应该被记录/显示，对于过滤掉不严重的消息很有用。\n\n| Verbosity\
+  \ level | Description |\n| :--- | :--- |\n| -1 (no logging) | 抑制所有日志信息，包括 `CryLogAlways`。\
+  \ |\n| 0 (always) | 抑制所有日志信息，排除使用 `CryLogAlways` 记录的信息。 |\n| 1 (error) | 与级别 0 相同，但带有额外的错误。\
+  \ |\n| 2 (warning) | 与级别 1 相同，但带有额外的警告。 |\n| 3 (message) | 与级别 2 相同，但带有额外的消息。 |\n\
+  | 4 (comment) | 最高详细，记录之前提到的所有以及额外的注释。 |\n\n## 全局日志函数\n以下是全局日志函数列表：\n\n* `CryLog`:\
+  \ 此函数将消息记录到控制台和文件日志，假设日志详细程度为 3 或更高。\n```cpp\nCryLog(\"MyMessage\")\n```\n* `CryLogAlways`:\
+  \ 此函数将消息记录到控制台和文件，假设日志详细程度为 0 或更高。\n```cpp\nCryLogAlways(\"This is always logged,\
+  \ unless log_verbosity is set to -1\")\n```\n* `CryWarning`: 此函数向日志和控制台输出警告，前缀为\
+  \ [Warning]。它也用于警告设计人员他们错误地使用了功能。只有在日志详细程度为 2 或更高时，才会记录到文件。\n```cpp\nCryWarning(VALIDATOR_MODULE_GAME,\
+  \ VALIDATOR_WARNING, \"My warning!\")\n```\n* `CryFatalError`: 此函数用于指定发生了严重错误，结果是弹出一个消息框后终止程序。\n\
+  ```cpp\nCryFatalError(\"Fatal error, shutting down!\")\n```\n* `CryComment`: 此函数输出注释，假设日志详细程度为\
+  \ 4。\n```cpp\nCryComment(\"My note\")\n```\n\n**[ 229 ]**\n\n![](img/index-249_1.jpg)\n\
+  \n*调试与性能分析*\n\n注意：C# 中的日志是通过使用静态 `Debug` 类完成的。例如，要记录一条消息，可以使用 `Debug.Log(\"message\"\
+  )`。\n```csharp\nDebug.Log(\"message\")\n```\n要使用 Lua 记录日志，使用 `System.Log` 函数，例如\
+  \ `System.Log(\"MyMessage\")`。\n```lua\nSystem.Log(\"MyMessage\")\n```\n\n## 持久调试\n\
+  持久调试系统允许绘制持久性辅助工具，为游戏逻辑提供视觉反馈。例如，在下图中，该系统用于在每一帧绘制玩家在其实世界位置上的朝向，其中每个箭头持续指定的秒数后会消失。\n\
+  \n该系统可以带来非常有趣的效果，例如查看玩家旋转和物理交互的方法，如免费游戏 SNOW 所示：**C++**\n\n可以通过游戏框架访问访问 `IPersistantDebug`\
+  \ 接口，如下所示：\n```cpp\nIPersistantDebug *pPersistantDebug = gEnv->pGame->GetIGameFramework()->GetIPersistantDebug();\n\
+  ```\n\n**[ 230 ]**\n\n*第 12 章*\n\n在调用各种绘图函数之前，我们需要调用 `IPersistantDebug::Begin` 来指示一组新的持久性调试应该开始。\n\
+  ```cpp\npPersistantDebug->Begin(\"myPersistentDebug\", false);\n```\n最后一个布尔值参数指定了系统是否应该清除所选范围（\"\
+  myPersistentDebug\"）之前绘制的所有持久性调试对象。\n\n我们现在可以使用各种 `Add` 函数，例如 `AddSphere`：\n```cpp\n\
+  pPersistantDebug->AddSphere(Vec3(0, 0, 10), 0.3f, ColorF(1, 0, 0), 2.0f);\n```\n\
+  在之前的代码段中，系统将在游戏中的 0, 0, 10 处绘制一个半径为 0.3 的球。\n\n## C#\n在 C# 中，可以使用静态 `Debug` 类访问持久性调试接口。例如，像我们之前那样添加一个球：\n\
+  ```csharp\nDebug.DrawSphere(new Vec3(0, 0, 10), 0.3f, Color.Red, 2.0f);\n```\n\n\
+  ## CryAssert\n`CryAssert` 系统允许开发者确保某些变量保持在边界内。通过仅在开发者版本中编译的检查，可以持续进行测试。\n\n通过在 `StdAfx`\
+  \ 头文件中定义 `USE_CRYASSERT` 宏可以使用，如下所示：\n```cpp\nCRY_ASSERT(pPointer != nullptr)\n\
+  ```\n这将在每次代码运行时进行检查（发布模式除外），并在失败时输出警告框。\n\n**[ 231 ]**\n\n![](img/index-251_png)\n\
+  \n*调试与性能分析*\n\n## 性能分析\n在处理像 CryENGINE 这样的实时产品时，程序员必须不断考虑代码的性能。为了辅助这一点，我们将使用 `profile`\
+  \ 变量。\n\n该 `CVar` 允许获取代码中最密集部分的视觉统计数据，如下截图所示：\n\n在之前的截图中，`profile` 被设置为 1（默认模式），会对每帧调用的最密集函数进行排序。\n\
+  \n**[ 232 ]**\n\n*第 12 章*\n\n## Profile 用\n目前 `profile` 变量支持 13 种不同状态，如下表所示：\n\n\
+  | Value | Description |\n| :--- | :--- |\n| 0 | 默认值；设置此值时，性能分析系统将处于活动状态。 |\n| 1\
+  \ | 自时间 |\n| 2 | 层级时间 |\n| 3 | 扩展自时间 |\n| 4 | 扩展层级时间 |\n| 5 | 峰值时间 |\n| 6 | 子系统信息\
+  \ |\n| 7 | 调用次数 |\n| 8 | 标准差 |\n| 9 | 内存分配 |\n| 10 | 内存分配（字节） |\n| 11 | 阻塞 |\n|\
+  \ -1 | 用于启用性能分析系统，不在屏幕上绘制信息。 |\n\n## C++ 中的性能分析\n要在 C++ 中进行性能分析，我们可以利用 `FUNCTION_PROFILER`\
+  \ 预处理器宏定义，如下：\n```cpp\nFUNCTION_PROFILER(GetISystem(), PROFILE_GAME);\n```\n该宏将设置必要的性能分析对象：一个供该方法使用的静态\
+  \ `CFrameProfiler` 对象，以及一个每次运行该方法都会创建的 `CFrameProfilerSection` 对象（在返回时销毁）。\n\n\n\
+  \n\n\n如果性能分析器检测到你的代码与其他引擎函数的运行关系非常密切，它将显示在性能图表的更上方，如下截图所示：\n\n如果你想调试代码的某个部分，也可以使用\
+  \ `FRAME_PROFILER` 宏，它的用法与 `FUNCTION_PROFILER` 相同，不同在于它允许你指定被分析部分的名称。\n\n`FRAME_PROFILER`\
+  \ 的一个使用用例是在 `if` 块内部，因为帧分析区域会在块结束后被销毁：\n\n```cpp\nif (true) {\n    FRAME_PROFILER(\"\
+  MyCheck\", gEnv->pSystem, PROFILE_GAME);\n    auto myCharArray = new char[100000];\n\
+  \    for(int i = 0; i < 100000; i++)\n        myCharArray[i] = 'T';\n    // Frame\
+  \ profiler section is now destroyed\n}\n```\n\n**[ 234 ]**\n\n![](img/index-254_1.png)\n\
+  \n*第 12 章*\n\n我们现在可以对游戏中的代码进行性能分析，如下截图所示：\n\n### 在 C# 中进行性能分析\n\n也可以以类似的方式对你的 C#\
+  \ 代码进行性能分析。区别在于我们不能依赖托管代码中的析构函数/终结器，因此我们必须自己做一些工作。\n\n我们要做的第一件事是创建一个 `CryEngine.Profiling.FrameProfiler`\
+  \ 对象，该对象将在实体的整个生命周期内存在。然后，每当你需要分析函数时，只需在新的帧性能分析器对象上调用 `FrameProfiler.CreateSection`，在使用完成后，对生成的对象调用\
+  \ `FrameProfilerSection.End`：\n\n```csharp\nusing CryEngine.Profiling;\n\npublic\
+  \ SpawnPoint()\n{\n    ReceiveUpdates = true;\n    m_frameProfiler = FrameProfiler.Create(\"\
+  SpawnPoint.OnUpdate\");\n}\n\npublic override void OnUpdate()\n{\n    var section\
+  \ = m_frameProfiler.CreateSection();\n    var stringArray = new string[10000];\n\
+  \    for(int i = 0; i < 10000; i++)\n        stringArray[i] = \"is it just me or\
+  \ is it laggy in here\";\n\n    section.End();\n}\n\nFrameProfiler m_frameProfiler;\n\
+  ```\n\n**[ 235 ]**\n\n![](img/index-255_1.png)\n\n*调试与性能分析*\n\n这将导致性能分析器列出 `SpawnPoint.OnUpdate`，如下截图所示：\n\
+  \n### 控制台\n\n虽然与调试没有直接关联，但 CryENGINE 控制台提供了创建命令的手段，可以从游戏中直接执行函数，并创建可以修改以改变世界行为方式的变量。\n\
+  \n冷知识：通过在控制台中使用标签（`#`）符号，我们可以在游戏中直接执行 Lua，例如：`#System.Log(\"My message!\")`。\n\n\
+  ### 控制台变量\n\n**控制台变量**（通常称为 `CVars`）允许将代码中的变量暴露在 CryENGINE 控制台中，从而有效地在运行时或通过配置（`.cfg`）文件调优设置。\n\
+  \n几乎每个子系统在运行时都会使用控制台变量，以便在不需要修改代码的情况下调优系统行为。\n\n**[ 236 ]**\n\n*第 12 章*\n\n### 注册一个\
+  \ CVar\n\n在注册新的 `CVar` 时，区分引用传递变量和包装变量是非常重要的。\n\n区别在于，引用传递 `CVar` 指向你自己的代码中定义的变量，当通过控制台更改值时，该变量会直接更新。\n\
+  \n包装变量将变量本身包含在 `CrySystem.dll` 内部特殊的 `ICVar` (C++) 实现中。\n\n引用传递的 `CVars` 最常用，因为每当我们想知道控制台变量的值时，都需要调用\
+  \ `IConsole::GetCVar`。\n\n#### 在 C++ 中\n\n在 C++ 中注册引用传递的控制台变量，如所示调用 `IConsole::Register`：\n\
+  \n```cpp\ngEnv->pConsole->Register(\"g_myVariable\", &m_myVariable, 3.0f, VF_CHEAT,\
+  \ \"My variable description!\");\n```\n\n现在，`g_myVariable` `CVar` 的默认值为 `3.0f`。如果我们通过控制台更改了值，`m_myVariable`\
+  \ 将立即更新。\n\n要了解 `VF_CHEAT` 标志的作用，请参见后文讨论的*标志（Flags）*部分。\n\n要注册包装的控制台变量，请使用 `IConsole::RegisterString`、`RegisterFloat`\
+  \ 或 `RegisterInt`。\n\n#### 在 C# 中\n\n通过 CryMono 注册引用传递的控制台变量，如如下代码所示，使用 `CVar.RegisterFloat`\
+  \ 或 `CVar.RegisterInt`：\n\n```csharp\nfloat m_myVariable;\nCVar.RegisterFloat(\"\
+  g_myCSharpCVar\", ref m_myVariable, \"My variable is awesome\");\n```\n\n由于 C++\
+  \ 和 C# 字符串后端结构的不同，无法创建引用传递的字符串 `CVars`。\n\n如果你喜欢使用包装变量，请使用 `CVar.Register`。\n\n\
+  **[ 237 ]**\n\n*调试与性能分析*\n\n### 标志\n\n在注册新的 `CVar` 时，开发者应该指定一个默认标志。标志控制变量在修改或查询时的行为。\n\
+  \n- `VF_NULL`：此标志设置为零，当没有其他标志存在时使用。\n- `VF_CHEAT`：此标志用于启用作弊时，例如在多人模式下。\n- `VF_READONLY`：此标志设置变量是只读。\n\
+  - `VF_REQUIRE_LEVEL_RELOAD`：此标志警告用户更改变量需要重新加载关卡。\n- `VF_REQUIRE_APP_RELOAD`：此标志警告用户更改变量需要重新启动应用程序。\n\
+  - `VF_MODIFIED`：此标志在变量被修改时设置。\n- `VF_WASINCONFIG`：此标志设置通过配置（`.cfg`）文件更改变量。\n- `VF_RESTRICTED`：此标志设置变量处于受限（发布）模式。\n\
+  - `VF_INVISIBLE`：此标志设置变量不可见。\n- `VF_ALWAYONCHANGE`：此标志始终接受新值并调用更改回调。\n- `VF_BLOCKFRAME`：此标志在变量更改后一帧阻塞后续执行。\n\
+  - `VF_CONST_CVAR`：此标志设置变量不应通过配置文件编辑。\n- `VF_CHEAT_ALWAYS_CHECK`：此标志设置变量是易受攻击的，并且应该持续检查。\n\
+  - `VF_CHEAT_NOCHECK`：此标志与 `VF_CHEAT` 相同，但不会被检查。\n\n### 控制台变量组\n\n为了创建不同的系统规格（低/中/高/极高），通常称为**系统规格（Sys\
+  \ Spec）**，我们可以利用控制台变量组。这些组允许在规格更改时同时更改多个 CVar 值。\n\n**[ 238 ]**\n\n*第 12 章*\n\n\
+  如果你不确定系统规格的作用，请阅读本节后面讨论的*系统规格（System specifications）*。\n\n要更改系统规格，用户只需更改 `sys_spec`\
+  \ 控制台变量的值。更改后，引擎将解析 `Engine/Config/CVarGroups/` 中的链接文件并设置 CVar 值。\n\n例如，如果更改了 `sys_spec_GameEffects`\
+  \ `CVar`，引擎将打开 `Engine/Config/CVarGroups/sys_spec_GameEffects.cfg`。\n\n`sys_spec_Full`\
+  \ 组被认为是根组，当 `sys_spec` `CVar` 更改时将触发更新所有子组，例如 `sys_spec_Quality`。\n\n### cfg 结构\n\
+  \n变量组配置文件的结构相对容易理解。例如，下面的 `sys_spec_GameEffects` 文件：\n\n```ini\n[default]\n; 此 CVarGroup\
+  \ 的默认值\n= 3\ni_lighteffects = 1\ng_ragdollUnseenTime = 2\ng_ragdollMinTime = 13\n\
+  g_ragdollDistance = 30\n[1]\ng_ragdollMinTime = 5\ng_ragdollDistance = 10\n[2]\n\
+  g_ragdollMinTime = 8\ng_ragdollDistance = 20\n[3]\n[4]\ng_ragdollMinTime = 15\n\
+  g_ragdollDistance = 40\n```\n\n**[ 239 ]**\n\n*调试与性能分析*\n\n前三行定义了该配置文件的默认规格，在这种情况下为高\
+  \ (3)。\n\n默认规格之后是高规格下 CVar 的默认值。这些将作为基准并应用到所有规格，除非被覆盖。\n\n\n\n\n在默认配置之后是低级配置 ([1])、中等配置\
+  \ ([2]) 和极高配置 ([4])。放置在定义之后的 CVars 决定了在该配置下变量应该设置为什么什么值。\n\n## 系统规格\n\n当前系统规格由 `sys_spec`\
+  \ CVar 的值决定。更改变量的值将自动加载针对该规格进行特殊调整的着色器和 CVar 组。例如，如果游戏在你的电脑上运行得不太顺畅，你可能想将配置更改为低级\
+  \ (1)。\n\n* 0: 自定义\n* 1: 低级\n* 2: 中等\n* 3: 高配\n* 4: 极高\n* 5: Xbox 360\n* 6: PlayStation\
+  \ 3\n\n## 控制台命令\n\n控制台命令（通常称为 `CCommands`）本质上是映射到控制台变量的函数。然而，当在控制台中输入命令时，它不会更改引用变量的值，而是触发一个在注册命令时指定的函数。\n\
+  \n注意，控制台变量还可以指定 `On Change` 回调，这些回调会在值改变时被自动调用。当内部变量与你的意图无关时，优先使用控制台命令。\n\n## [\
+  \ 240 ]\n\n*第 12 章*\n\n### 在 C# 中注册控制台命令\n\n在 C# 中注册控制台命令，使用如下所示的 `ConsoleCommand.Register`：\n\
+  \n```csharp\npublic void OnMyCSharpCommand(ConsoleCommandArgs e)\n{\n\n}\n\nConsoleCommand.Register(\"\
+  MyCSharpCommand\", OnMyCSharpCommand, \"C# Commands are awesome.\");\n```\n\n现在在控制台中触发\
+  \ `MyCSharpCommand` 将导致 `OnMyCSharpCommand` 函数被调用。\n\n### 参数\n\n当你的回调被触发时，你能够获取在命令之后添加的参数集。例如，如果用户通过输入\
+  \ `MyCommand 2` 来激活命令，我们可能想要获取字符串中的 `2` 部分。\n\n要实现这一点，请使用 `ConsoleCommandArgs.Args`\
+  \ 数组，并指定你想要的参数所在的索引。对于上一个示例，代码看起来如下：\n\n```csharp\nstring firstArgument = null;\n\
+  \nif(e.Args.Length >= 1)\n    firstArgument = e.Args[0];\n```\n\n要获取与命令一起指定的完整命令行，请使用\
+  \ `ConsoleCommandArgs.FullCommandLine`。\n\n### 在 C++ 中创建控制台命令\n\n在 C++ 中添加新的控制台命令，使用如下所示的\
+  \ `IConsole::AddCommand`：\n\n```cpp\nvoid MyCommandCallback(IConsoleCmdArgs *pCmdArgs)\n\
+  {\n\n}\n\ngEnv->pConsole->AddCommand(\"MyCommand\", MyCommandCallback, VF_NULL,\
+  \ \"My command is great!\");\n```\n\n编译并启动引擎后，你可以在控制台中输入 `MyCommand` 并触发你的 `MyCommandCallback`\
+  \ 函数。\n\n## [ 241 ]\n\n*调试与性能分析*\n\n## 总结\n\n在本章中，我们：\n\n* 学习了如何使用引擎的一系列调试工具\n*\
+  \ 对代码进行了性能分析以确保最佳性能\n* 学习了什么是控制台变量 (CVars) 以及如何使用它们\n* 创建了自定义控制台命令\n\n你现在应该已经对如何在\
+  \ CryENGINE 中进行最佳编程有了基础理解。请确保始终牢记性能分析和调试方法，以确保你的代码运行最优。假设你已经按照顺序阅读了书的章节，你现在应该了解最重要的引擎系统的运行原理。我们希望你喜欢阅读，并祝你在使用新获得的\
+  \ CryENGINE 知识时好运！\n\n## [ 242 ]\n\n## 索引\n\n### 符号\n* AISample_x table 131\n* CreateAI\
+  \ function 132\n\n### .pak 文件\n* RegisterAI function 132\n* ShaderCache.pak 191\n\
+  \n### AI 实体定义\n* ShaderCacheStartup.pak 191\n* creating 126\n* ShadersBin.pak 191\n\
+  \n### AISample_x 表\n* Shaders.pak 191\n* about 131\n* AIMovementAbility table 132\n\
+  \n### A\n* Properties table 132\n* alpha attribute 136\n\n### 动作映射\n* Ambient Occlusion\
+  \ 196\n* about 101\n\n## 动画角色\n* events, IActionListener 102\n* about 103\n* events,\
+  \ listening for 102\n* movement requests 104\n* sections, enabling 103\n* movement\
+  \ requests, adding 104\n\n### ActionScript 资源\n* animation-based events 217, 218\n\
+  * <functions> section, adding 142, 143\n* Animation Control tab 217\n* events, setting\
+  \ up 143, 144\n\n### 关节化结构\n* exposing 140, 142\n... (索引已略)\n\n\n\n\n\n# 已使用，用于创建实体\
+  \ flownode 64\n\n## 控制台命令\n\n## C++\n- 关于 240\n- 控制台命令，在 241 创建\n- 注册，在 C# 中 241\n\
+  - CVars，注册，在 237\n- 注册，在 C++ 中 241\n- 实体，创建在 60\n- console_cursor 属性 136\n- 实体 flownode，创建在\
+  \ 65\n- console_mouse 属性 136\n- 游戏对象扩展，创建在 67-69\n\n## 控制台变量。*参见* CVars\n- IPersistantDebug\
+  \ 231\n- CreateAIBehavior 函数 130\n- 持久调试 231\n- CreateAI 函数 132\n- 性能分析 233\n- Create()\
+  \ 方法 68\n\n## 相机处理\n\n### CryAction.BindGameObjectToNetwork\n- 关于 97\n- 函数 171\n\
+  - IGameObjectView，实现 97\n- CryAction 项目 19\n- 俯视相机，创建 97\n- CryAssert 231\n- Category\
+  \ 属性 58\n- CryAssert 系统 231\n\n## CCommands。*参见* 控制台命令\n- CryComment 函数 229\n\n\
+  ## CE 游戏编程示例解决方案\n- CryCommon 项目 19\n\n## 详解\n\n### CryDev 账户\n- CryAction 项目 19\n\
+  - 注册 15\n- CryCommon 项目 19\n\n## CryENGINE\n- CryGame 项目 19\n- 关于 7\n\n### CGameObjectExtensionHelper\
+  \ 参数\n- AI 119\n- 74, 95\n- 实体系统 53\n\n### CGame::Update. *参见* 更新后\n- 流程图 23, 24\n\
+  - Character 属性 129\n- 文件夹结构 20\n- ClMoveEntity 函数 167\n- 游戏规则 71\n- ClRevive 函数\
+  \ 170\n- 安装类型，选择 9\n- CMyUIGameEventSystem 类 154\n- 物理系统 173\n- [ 244 ]\n\n### CryENGINE\n\
+  - 移除 92\n- 网络系统 159\n- 表示 91\n- CryENGINE 游戏规则。*参见* 游戏规则\n- 生成 92\n\n### CryENGINE\
+  \ 网络系统\n- 视图，链接到游戏对象 93\n- 关于 159\n- 视图系统 92\n- 网络通道 160\n- 自定义 actor，在 C# 中创建\n\
+  - 网络通道，初学者教程 160\n- 关于 94\n- 网络标识符 159, 160\n- C++ actor 95\n\n### CryENGINE 渲染器\n\
+  - C# 声明 95\n- 关于 189\n- CryMono actors，使用 94\n- 着色器 190\n- CryMono 类 94\n\n### CryENGINE\
+  \ 示例\n- 自定义 actor，在 C++ 中创建\n- 下载 9\n- 关于 95, 96\n- CryFatalError 函数 229\n- actors，注册\
+  \ 96\n\n### CryGame 项目\n- 自定义 AI\n- 关于 19\n- actor 实现，注册 125\n\n### CE 游戏示例解决方案\n\
+  - AI 实体定义，注册 126\n- 详解 19\n- 行为 127\n- 编译 18, 19\n- 创建 124\n- CryLogAlways 函数 229\n\
+  - 自定义行为，创建在 130\n- CryLog 函数 229\n\n### 自定义行为\n### CryMono\n- 创建 130\n- 关于 57\n\
+  - 信号，监听 131\n- 流程节点，注册 15\n\n### 自定义 CryENGINE 示例安装\n- 集成 10\n- CryMono，集成 10\n\
+  - 接口文件夹，包含 12, 13\n- 函数测试 10\n- 项目，编译 11\n- 使用 10\n- 开始初始化 14\n\n### 自定义实体\n###\
+  \ CryMono 脚本\n- 创建 55\n- 关于 77\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用\
+  \ 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryPak 94\n\n### 自定义实体\n\
+  ### 物理\n- 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua\
+  \ 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryModule 94\n\n### 自定义实体\n### 编辑器\n\
+  - 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55,\
+  \ 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryTutorial 94\n\n### 自定义实体\n### CSharp\n- 关于\
+  \ 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n\
+  - 属性值，获取 78\n- Lua 实体回调 57\n- CryCursor 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n\
+  - 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua\
+  \ 实体回调 57\n- CryActor 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++\
+  \ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryFlow\
+  \ 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77,\
+  \ 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryInputs 94\n\n### 自定义实体\n\
+  - 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55,\
+  \ 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryOutputs 94\n\n### 自定义实体\n- 关于 119\n- 在 C#\
+  \ 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取\
+  \ 78\n- Lua 实体回调 57\n- CryTargets 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n- 字段\
+  \ 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调\
+  \ 57\n- CryBbox 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n\
+  - 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CrySimulation\
+  \ 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77,\
+  \ 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryOuter 94\n\n### 自定义实体\n\
+  - 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55,\
+  \ 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryDynamics 94\n\n### 自定义实体\n- 关于 119\n- 在 C#\
+  \ 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取\
+  \ 78\n- Lua 实体回调 57\n- CryPos 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n- 字段 78\n\
+  - 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n\
+  - CryWarning 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n\
+  - 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryActivate 94\n\
+  \n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n\
+  - 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua 实体回调 57\n- CryHandle 94\n\n### 自定义实体\n- 关于\
+  \ 119\n- 在 C# 中创建 57\n- 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n\
+  - 属性值，获取 78\n- Lua 实体回调 57\n- CryMethod 94\n\n### 自定义实体\n- 关于 119\n- 在 C# 中创建 57\n\
+  - 字段 78\n- 在 C++ 中创建 60\n- 方法，调用 77, 78\n- 在 Lua 中创建 55, 56\n- 属性值，获取 78\n- Lua\
+  \ 实体回调 57\n- CryType 94\n\n\n\n\n\n# 动态模式 137\n# 标记 238\n# 组 238\n\n## E\n### 注册\
+  \ 237\n### 在 C# 中注册 237\n\n## 编辑器\n### 在 C++ 中注册 237\n### 关于 16\n\n## CVars, 标记\n\
+  ### 起始 16\n### VF_ALWAYSONCHANGE 238\n### 编辑器文件夹 20\n### VF_BLOCKFRAME 238\n\n##\
+  \ 编辑器属性\n### VF_CHEAT 238\n### 添加 58, 59\n### VF_CHEAT_ALWAYS_CHECK 238\n### 文件夹\
+  \ 59\n### VF_CHEAT_NOCHECK 238\n\n## 效果\n### VF_CONST_CVAR 238\n### 关于 209\n###\
+  \ VF_INVISIBLE 238\n### 材质特效 209\n### VF_MODIFIED 238\n### 粒子特效 210\n### VF_NULL\
+  \ 238\n### 音效 211\n### VF_READONLY 238\n\n## 元素, UI 流图\n### VF_REQUIRE_APP_RESTART\
+  \ 238\n### 关于 134\n### VF_REQUIRE_LEVEL_RELOAD 238\n### XML 详解 134-137\n### VF_RESTRICTEDMODE\
+  \ 238\n### EndGame 函数 84\n### VF_WASINCONFIG 238\n\n## 引擎 ActionScript 回调\n## CVars,\
+  \ 组\n### cry_onSetup(isConsoleBoolean) 152\n### 关于 239\n### Cfg 结构 239\n### cry_onShow()\
+  \ 152\n### 系统规格 240\n\n## 引擎文件夹 20\n### 实体\n### D\n### 关于 54\n### EntityGUID 54\n\
+  ### 专用服务器 18\n### entityId 54\n\n### 默认物理化实体\n### EntityBase.TriggerBounds 属性 86\n\
+  ###  179\n\n### 实体类\n### 参数 178\n### 关于 54\n### 状态 179\n### 注册 54\n\n### 默认物理化实体,\
+  \ 实体\n### 实体节点 flownodes\n### pe_action_add_constraint 179\n### 关于 62, 63\n### pe_action_impulse\
+  \ 179\n### 创建, C# 使用 64\n### pe_action_set_velocity 179\n### 创建, 在 C++ 中 65\n###\
+  \ 在 Lua 中创建 63\n### 端口类型 31\n### 节点, 注册 65\n### 目标实体 32\n### 最终代码 65\n### 测试 34\n\
+  ### EntityID entityId 参数 165\n### void 端口 39\n### entityId 参数 54\n\n## 流图编辑器\n###\
+  \ 组件分类 26, 27\n### 绘制 175\n### 组件 26\n### 实体类型 176\n### 流图类型 27\n### 辅助类型 177\n\
+  ### 图 26\n\n### 实体系统\n### 位置 25\n### 关于 53\n### 节点 26\n### 实体 54\n### 打开 24\n###\
+  \ 实体类 54\n### 端口 26\n### 实体池系统 55\n### 类型 27\n### 游戏对象 54\n### 类型, AI Actions 28\n\
+  \n### 实体类型\n### 类型, FG Modules 28\n### a 176\n### 类型, 图实体 28\n### e 176\n### 类型,\
+  \ 材质 FX 28\n### g 176\n### 类型, 预制件 28\n### i 176\n### 类型, UI Actions 28\n### l 176\n\
+  \n### 流图模块\n### r 176\n### 关于 37\n### R 176\n### 调用 39\n### s 176\n### 创建 38, 39\n\
+  ### t 176\n### Module Ports 窗口 40\n### y 176\n### FlowAttribute 类 50\n### 爆炸\n###\
+  \ FlowNode 类 51\n### 模拟 186\n### FMod\n### Expose() 132\n### 用于音频导出 218, 219\n\n\
+  ## 文件夹结构, ENGINE F\n### Bin32 20\n### Bin64 20\n### 查看流图编辑器 20\n### FG Modules 28\n\
+  ### 引擎 20\n### 第一人射击游戏 (FPS) 73\n### 游戏 20\n### 固定模式 137\n### 本地化 20\n\n### 流图\n\
+  ### PAK 文件 20\n### 关于 23\n### footstep_player 效果 216\n### 附加 30\n### 片\n### 创建 28\n\
+  ### 流图实体 29\n### 选项, 添加 111\n### FlowgraphEntity, 生成 29\n### 队列 115, 116\n### flownodes,\
+  \ 连接 33\n\n### 片标识符\n### 输入端口 31\n### 获取 114\n### 模块参数 40\n### 全屏模式 137\n### 节点,\
+  \ 添加到 30\n### 输出端口 31\n\n## G\n### 目标管道, AI\n### 关于 120\n### 游戏文件夹 20\n### 自定义管道,\
+  \ 创建 121\n\n### 游戏逻辑\n### 选择 121\n### 调试 227\n### 图 26\n\n### 游戏逻辑, 调试\n### 图实体\
+  \ 28\n### Profile 配置 228\n### Release 配置 228\n\n## H\n### 游戏模式\n### 关于 72\n### 硬件鼠标\n\
+  ### 注册 72, 73\n### 实现 101\n\n#### 游戏对象扩展\n### Headquarters\n### 关于 67\n### 游戏结束事件,\
+  \ 添加 84\n### 激活 69\n### 实现 84\n### 创建, 在 C++ 中 67-69\n\n### Headquarters 实体\n##\
+  \ 游戏对象\n### 创建 84, 85\n### 关于 67\n\n### 显示显示器 (HUD) 152\n### 用于网络 163\n\n\n\n\n\n\
+  ## 辅助类型\n- `extensions` 67\n- `b` 177\n\n## 游戏规则\n- `c` 177\n- `about` 71\n- `f`\
+  \ 177\n- `IGameRules` 接口 72\n- `g` 177\n- `level, loading` 73\n- `j` 177\n\n## 游戏规则接口\n\
+  - `l` 177\n- `custom game modes, creating` 75\n- `t` 177\n- `game object extension,\
+  \ registering` 74\n- `HUD:DisplayDebugMessage`  34\n- `implementing` 73, 74\n- `humanName`\
+  \ 参数 46\n\n## GetConfiguration\n- `HWND` 193\n- `Flownode configuration flags` 47\n\
+  - `implementing` 45, 46\n\n## I\n- `node configuration, assigning to` 47\n- `ports,\
+  \ creating` 46, 47\n\n## I3DEngine::RenderWorld\n- `ProcessEvent, implementing`\
+  \ 48, 49\n- `about` 192\n- `GetDefaultProperty` 62\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `GetEditorClassInfo()` method 60\n- `using` 194, 195\n- `GetName()` method\
+  \ 60\n\n## I3DEngine::RenderWorld flags\n- `GetPort: functions` 48\n- `about` 196\n\
+  - `GetProperty` 62\n- `SHDF_ALLOW_AO` 196\n- `GetPropertyCount` 62\n- `SHDF_ALLOWHDR`\
+  \ 196\n- `GetPropertyInfo` 62\n- `SHDF_ALLOW_POSTPROCESS` 196\n- `GetTexture2D`\
+  \ function 197, 200\n- `SHDF_ALLOW_WATER` 196\n\n## 全局日志函数\n- `SHDF_DO_NOT_CLEAR_Z_BUFFER`\
+  \ 196\n- `CryComment` 229\n- `SHDF_NOASYNC` 196\n- `CryFatalError` 229\n- `SHDF_NO_DRAW_CAUSTICS`\
+  \ 196\n- `CryLog` 229\n- `SHDF_NO_DRAWNEAR` 196\n- `CryLogAlways` 229\n- `SHDF_STREAM_SYNC`\
+  \ 196\n- `CryWarning` 229\n- `SHDF_ZPASS_ONLY` 196\n- `IActionControl::Queue` function\
+  \ 114\n- `IActionMapManager` 101\n- `IAIObject` 124\n- `IAnimatedCharacter` 103\n\
+  - `IEntityClass` 61\n- `about` 17\n- `IGameFramework::PreUpdate` function 192\n\
+  - `starting` 17\n- `IGameObject::ActivateExtension` 69\n- `layer` attribute 136\n\
+  - `IGameObject::BindToNetwork` function 163\n- `Level of Detail (LOD)` 201\n- `IGameObjectExtension::Init`\
+  \ function 74\n- `living entity`\n- `IGameObjectExtension::NetSerialize`\n- `about`\
+  \ 180\n- `tion` 167\n- `action_move` action 181\n- `player_dimensions` parameter\
+  \ 181\n- `IGameObjectExtension::Release / Destruc`\n- `function` 74\n- `player_dynamics`\
+  \ parameter 181\n- `IGameRules::OnClientConnect` function 74\n- `status_check_stance`\
+  \ status 181\n- `IGameRules::OnClientDisconnect` function\n- `status_living` status\
+  \ 181\n- 74\n- `LoadEntityXMLProperties` 62\n- `IHardwareMouse` 100\n- `Localization\
+  \ folder` 20\n- `IInput` 101\n- `log verbosity` 228, 229\n- `IMaterialManager::Clone`\
+  \ method 202\n\n## Lua\n- `IMonoObject::CallMethod` 78\n- `entity flownode, creating\
+  \ in` 63\n- `INetChannel` interface 160\n- `used, for entity creating` 55, 56\n\
+  - `InitEventSystem` function 156\n\n## Lua 实体\n- `Input:Key` node 36\n- `exposing,\
+  \ to network` 169\n- `IntelliSense` 57\n- `Net.Expose` 169\n- `IPhysicalEntity::Action`\
+  \ function 178\n\n### Lua 脚本\n- `IPhysicalEntity::GetParams` function 177\n- `about`\
+  \ 75\n- `IPhysicalEntity::GetStatus` function 178\n- `method, invoking` 76\n- `IPhysicalEntity`\n\
+  - `method, invoking` 76\n- `returned` 181\n- `table, obtaining` 77\n- `status` 178\n\
+  - `IPhysicalEntity::RayWorld`\n- `main`\n- `I3DEngine::RenderWorld` flags 196\n\
+  - `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld`\
+  \ flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `main` 191\n\
+  - `I3DEngine::RenderWorld` flags 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags\
+  \ 196\n- `main` 191\n- `I3DEngine::RenderWorld` flags 196\n- `about`\n- 196\n- `fLownode\
+  \ configuration flags` 47\n- `implementing` 45, 46\n- `node configuration, assigning\
+  \ to` 47\n- `ports, creating` 46, 47\n- `ProcessEvent, implementing` 48, 49\n- `about`\
+  \ 192\n- `GetDefaultProperty` 62\n- `I3DEngine::RenderWorld` flags 196\n- `GetEditorClassInfo()`\
+  \ method 60\n- `using` 194, 195\n- `GetName()` method 60\n- `GetPort: functions`\
+  \ 48\n- `about` 196\n- `GetProperty` 62\n- `SHDF_ALLOW_AO` 196\n- `GetPropertyCount`\
+  \ 62\n- `SHDF_ALLOWHDR` 196\n- `GetPropertyInfo` 62\n- `SHDF_ALLOW_POSTPROCESS`\
+  \ 196\n- `GetTexture2D` function 197, 200\n- `SHDF_ALLOW_WATER` 196\n- `SHDF_DO_NOT_CLEAR_Z_BUFFER`\
+  \ 196\n- `CryComment` 229\n- `SHDF_NOASYNC` 196\n- `CryFatalError` 229\n- `SHDF_NO_DRAW_CAUSTICS`\
+  \ 196\n- `CryLog` 229\n- `SHDF_NO_DRAWNEAR` 196\n- `CryLogAlways` 229\n- `SHDF_STREAM_SYNC`\
+  \ 196\n- `CryWarning` 229\n- `SHDF_ZPASS_ONLY` 196\n- `IActionControl::Queue` function\
+  \ 114\n- `IActionMapManager` 101\n- `IAIObject` 124\n- `IAnimatedCharacter` 103\n\
+  - `IEntityClass` 61\n- `about` 17\n- `IGameFramework::PreUpdate` function 192\n\
+  - `starting` 17\n- `IGameObject::ActivateExtension` 69\n- `layer` attribute 136\n\
+  - `IGameObject::BindToNetwork` function 163\n- `Level of Detail (LOD)` 201\n- `IGameObjectExtension::Init`\
+  \ function 74\n- `living entity`\n- `IGameObjectExtension::NetSerialize`\n- `about`\
+  \ 180\n- `tion` 167\n- `action_move` action 181\n- `player_dimensions` parameter\
+  \ 181\n- `IGameObjectExtension::Release / Destruc`\n- `function` 74\n- `player_dynamics`\
+  \ parameter 181\n- `IGameRules::OnClientConnect` function 74\n- `status_check_stance`\
+  \ status 181\n- `IGameRules::OnClientDisconnect` function\n- `status_living` status\
+  \ 181\n- 74\n- `LoadEntityXMLProperties` 62\n- `IHardwareMouse` 100\n- `Localization\
+  \ folder` 20\n- `IInput` 101\n- `log verbosity` 228, 229\n- `IMaterialManager::Clone`\
+  \ method 202\n\n\n\n\n\n# RMIs,在客户端上调用 170](#index_split_002.html_p189)\n# 控制器定义，加载\
+  \ 117](#index_split_001.html_p136)\n# RMIs,在其他客户端上调用 170](#index_split_002.html_p189)\n\
+  # 初始化 117](#index_split_001.html_p136)\n# RMIs,在服务器上调用 170](#index_split_002.html_p189)\n\
+  # 设置 116](#index_split_001.html_p135)\n\n# NetSerialize 函数 168](#index_split_002.html_p187)\n\
+  # Mannequin FragmentID 编辑器 110](#index_split_001.html_p129)\n\n## 网络方面序列化\n## 材质效果\n\
+  \n## 关于 167](#index_split_002.html_p186)\n基于自动化的物理交互\n\n## 方面 167, 168](#index_split_002.html_p186)\n\
+  ## 播放 212, 213](#index_split_002.html_p231)\n\n## 新关卡对话 87](#index_split_001.html_p106)\n\
+  ## 表面类型 210](#index_split_002.html_p229)\n\n## NOATTACH 164](#index_split_002.html_p183)\n\
+  ## 触发 212, 215, 216](#index_split_002.html_p231)\n\n## 节点 26](#index_split_000.html_p45)\n\
+  ## 材质 FX 28](#index_split_000.html_p47)\n\n## 材质\n## O\n\n## 克隆 202](#index_split_002.html_p221)\n\
+  植被的动态 alpha 测试\n\n## 对象粒子表示\n## 示例 205, 206](#index_split_002.html_p224)\n## 关于\
+  \ 181](#index_split_002.html_p200)\n## 在运行时修改 202-206](#index_split_002.html_p221)\n\
+  ## pe_params_particle 参数 181](#index_split_002.html_p200)\n## 参数 202, 203](#index_split_002.html_p221)\n\
+  \n## OnClientConnect 函数 82](#index_split_001.html_p101)\n## 着色器参数 204](#index_split_002.html_p223)\n\
+  ## OnClientConnect 方法 80](#index_split_001.html_p99)\n\n## Math:Mul 节点 35, 42](#index_split_000.html_p54)\n\
+  ## OnClientEnteredGame 函数 81, 83](#index_split_001.html_p100)\n## Math:Sub 节点 35](#index_split_000.html_p54)\n\
+  ## OnInit 函数 57](#index_split_001.html_p76)\n\n## 成员变量，ray_hit 体\n## OnMyCSharpCommand\
+  \ 函数 241](#index_split_002.html_p260)\n## float dist 183](#index_split_002.html_p202)\n\
+  ## OnMyUIEvent 节点 156](#index_split_002.html_p175)\n## IPhysicalEntity :pCollider\
+  \ 183](#index_split_002.html_p202)\n## OpenGL 渲染器 189](#index_split_002.html_p208)\n\
+  ## ray_hit :next 183](#index_split_002.html_p202)\n## 其他 | 产生点 88](#index_split_001.html_p107)\n\
+  ## short surface_idx 183](#index_split_002.html_p202)\n## Vec3 n 183](#index_split_002.html_p202)\n\
+  \n## P\n## Vec3 pt 183](#index_split_002.html_p202)\n\n## PAK 文件\n## Misc:Start\
+  \ 节点 30](#index_split_000.html_p49)\n## 调试器，调试 21](#index_split_000.html_p40)\n\
+  ## Module:Call_MyModule 节点 41](#index_split_000.html_p60)\n## 文件查询优先级 20](#index_split_000.html_p39)\n\
+  ## Module:End_MyModule 节点 41](#index_split_000.html_p60)\n## 粒子效果 210](#index_split_002.html_p29)\n\
+  ## Module:Start_MyModule 41](#index_split_000.html_p60)\n## 粒子发射器\n## 鼠标事件 135](#index_split_002.html_p154)\n\
+  ## 产生 218](#index_split_002.html_p237)\n\n## 多人游戏\n## pe_action_add_constraint 179](#index_split_002.html_p198)\n\
+  ## 设置 160](#index_split_002.html_p179)\n## pe_action_attach_points 182](#index_split_002.html_p201)\n\
+  \n## 多人游戏设置\n## pe_action_drive 参数 180](#index_split_002.html_p199)\n## 网络游戏 163](#index_split_002.html_p182)\n\
+  ## pe_action_impulse 动作 179](#index_split_002.html_p198)\n## 通过控制台 162](#index_split_002.html_p181)\n\
+  ## pe_action_move 动作 181](#index_split_002.html_p200)\n## pe_action_set_velocity\
+  \ 动作 179](#index_split_002.html_p198)\n\n## 物理实体\n## PE_ARTICULATED 174](#index_split_002.html_p193)\n\
+  ## 关节体结构 181](#index_split_002.html_p200)\n## PE_LIVING 174](#index_split_002.html_p193)\n\
+  ## 实体 175](#index_split_002.html_p194)\n## PE_NONE 174](#index_split_002.html_p193)\n\
+  ## 活实体 180](#index_split_002.html_p199)\n## pe_params_articulated_body 181](#index_split_002.html_p200)\n\
+  ## 粒子表示 181](#index_split_002.html_p200)\n## pe_params_bbox 178](#index_split_002.html_p197)\n\
+  ## 绳 182](#index_split_002.html_p201)\n## pe_params_car 180](#index_split_002.html_p199)\n\
+  ## 轮式车辆 180](#index_split_002.html_p199)\n## pe_params_joint 181](#index_split_002.html_p200)\n\
+  \n## 物理实体\n## pe_params_outer_entity 参数 179](#index_split_002.html_p198)\n## PE_ARTICULATED\
+  \ 174](#index_split_002.html_p193)\n## pe_params_particle 参数 181](#index_split_002.html_p200)\n\
+  ## PE_LIVING 174](#index_split_002.html_p193)\n## pe_params_posparameter 178](#index_split_002.html_p197)\n\
+  ## PE_NONE 174](#index_split_002.html_p193)\n## pe_params_rope 参数 182](#index_split_002.html_p201)\n\
+  ## PE_PARTICLE 174](#index_split_002.html_p193)\n## pe_params_softbody 参数 182](#index_split_002.html_p201)\n\
+  ## PE_RIGID 174](#index_split_002.html_p193)\n## pe_params_wheel 参数 180](#index_split_002.html_p199)\n\
+  ## PE_ROPE 174](#index_split_002.html_p193)\n## PE_PARTICLE 174](#index_split_002.html_p193)\n\
+  \n## 持久调试系统\n## 端口 26](#index_split_000.html_p45)\n## 关于 230](#index_split_002.html_p249)\n\
+  \n## 端口类型，流程图\n## C# 231](#index_split_002.html_p250)\n## Bool 32](#index_split_000.html_p51)\n\
+  ## C++ 230, 231](#index_split_002.html_p249)\n## EntityId 32](#index_split_000.html_p51)\n\
+  ## Cry 231](#index_split_002.html_p250)\n## Float 32](#index_split_000.html_p51)\n\
+  ## pe_simulation_params 179](#index_split_002.html_p198)\n## Int 32](#index_split_000.html_p51)\n\
+  ## PE_SOFT 174](#index_split_002.html_p193)\n## String 32](#index_split_000.html_p51)\n\
+  ## Vec3 32](#index_split_000.html_p51)\n\n## PE_STATIC 174](#index_split_002.html_p193)\n\
+  ## pe_player_dimensions 181](#index_split_002.html_p200)\n## pe_player_dynamics\
+  \ 参数 181](#index_split_002.html_p200)\n## PE_WHELEDVEHICLE 174](#index_split_002.html_p193)\n\
+  ## PE_RIGID 174](#index_split_002.html_p193)\n## rigid object 179](#index_split_002.html_p198)\n\
+  ## PE_ROPE 174](#index_split_002.html_p193)\n## static 实体 179](#index_split_002.html_p198)\n\
+  \n## ProcessEvent\n## 分析分析\n## 基于自动化的物理交互\n## 关于 232](#index_split_002.html_p251)\n\
+  \n## 播放\n## C# 235, 236](#index_split_002.html_p254)\n## 自定义事件，触发 215, 216](#index_split_002.html_p234)\n\
+  ## C++ 233, 234](#index_split_002.html_p254)\n## 效果 214](#index_split_002.html_p233)\n\
+  ## 分析用途 233](#index_split_002.html_p252)\n## 新表面类型，添加 214](#index_split_002.html_p233)\n\
+  \n## 纯游戏模式 17](#index_split_000.html_p36)\n\n## 物理实体\n## 创建 185](#index_split_002.html_p204)\n\
+  \n## Q\n## 在 C# 中创建 185, 186](#index_split_002.html_p204)\n## 在 C++ 中创建 185](#index_split_002.html_p204)\n\
+  \n## Quat 朝向参数 165](#index_split_002.html_p184)\n\n## [ 251 ]\n\n## R\n## 采样\n##\
+  \ 关于 200](#index_split_002.html_p219)\n## 随机化 221](#index_split_002.html_p240)\n\
+  ## 纹理槽，与采样器一起 200](#index_split_002.html_p219)\n\n**ray_hit 体**\n\n\n\n\n\n# 纹理\n\
+  - 获取 200\n\n# 成员变量\n- 183\n\n## 脚本\n- `ray_hit::surface_idx` 变量 216\n- 关于 75\n\n\
+  ## RayWorldIntersection\n- CryMono 脚本 77\n- 关于 182, 184\n- Lua 脚本 75\n- 多次射线命中，允许\
+  \ 184\n\n## Server\n- 对象类型参数 184\n- 专用服务器 160\n- 原点 183\n- 启动，通过 Launcher 161\n\
+  - 射线标记参数 184\n- `SetEditorClassInfo()` 方法 60\n- `ray_hit` 结构 183\n- `SetProperty`\
+  \ 62\n- `RegisterAI` 函数 132\n\n## 着色器\n- `Release()` 方法 60\n- 关于 190, 196\n- 远程方法调用。参见\
+  \ `RMI`\n- 缓存 191\n\n## 渲染上下文\n- 描述 197\n- `IRenderer::SetCurrentContext`, 使用 194\n\
+  - 标记 198\n- 使用，用于视口渲染 193, 194\n- 变体 190\n\n## 渲染\n- 纹理槽 197\n- 关于 192\n\n## 着色器缓存\n\
+  - 更新后 192\n- `.pak` 文件 191\n- 更新前 192\n- 关于 191\n\n## RMI\n## 着色器标记\n- 示例 165, 166\n\
+  - 关于 198\n- 结构 163\n- 引擎标记 199\n\n## RMI 结构\n- 材质标记 198, 199\n- 函数名参数 164\n- 运行时标记\
+  \ 199\n- `NOATTACH` 164\n- `SimulateExplosion` 函数 186\n- 包交付可靠性枚举参数 `solution` 19\n\
+  - 164\n- 声音浏览器 窗口 223\n- `POSTATTACH` 164\n\n## 音效\n- `PREATTACH` 164\n- 关于 211\n\
+  - RMI 函数，定义 165\n- FMOD Designer 211, 212\n- RMI 参数参数 164\n\n## 声音\n- 服务端/客户端分离\
+  \ 165\n- 添加，到项目中的 219-221\n\n## 绳索\n- 导出，使用 FMod 218, 219\n- 创建 182\n- 播放 221\n\
+  - `pe_params_rope` 182\n- 程序化播放 224\n- `SoundSpots`, 使用 222, 223\n\n## 声音，程序化播放\n\
+  - 标记 224\n\n## 示例\n- 语义 224\n- 专用服务器 18\n- `SpawnPoint` 81\n- 编辑器 16\n- 静态实体 179\n\
+  - Launcher 17\n\n## 静态对象\n- 运行时操作 201\n- 252\n\n## UI 流程图\n- 时钟，构建 34, 35\n- 关于\
+  \ 133\n- 循环，执行 36, 37\n- 元素 134\n- 概述 34, 35\n- UI  137\n- 玩家输入，监听 36\n\n## UI 函数：元素名：函数名\n\
+  - `UIEventDispatcher::SendEvent` 156\n- 142\n\n## 表面类型\n## UI 事件系统\n- 添加 210\n-\
+  \ 创建 153\n- 修改 210\n- 事件，分发 155, 156\n- `RequestMoveEntity` 167\n- 事件，接收 154, 155\n\
+  - `Sys Spec` 238\n- `IGameEventSystem`, 实现 153\n- `sys_spec_Full` 组 239\n- 154\n\
+  - `Sys_StateControl` 139\n- UI 图 27\n- `UI:Variable:Array` 节点 146\n\n## T V\n- 标签创建\
+  \ 112\n- 标签\n- `Vec3` 位置参数 165\n- 动作，强制进入重新查询选项 Visual Studio Express 2012\n- 116\n\
+  - 安装 8\n- 追加，到选项中的 113\n- 创建 111, 112\n- 使用 111, 112\n- `Time:TimeOfDay` 节点 33,\
+  \ 34\n\n## 轮式车辆\n- 工具 | 编辑模块... 40\n- 关于 180\n\n## 俯视图\n- `e_status_wheel` 状态 180\n\
+  - 创建 97\n- `pe_action_drive` 动作 180\n- 顶视图，面向 98-100\n- `pe_params_car` 参数 180\n\
+  - `TSerialize::EnumValue` 168\n- `pe_params_wheel` 参数 180\n- `TSerialize::value`\
+  \ 168\n- `pe_status_vehicle_abilities` 状态 180\n- `pe_status_vehicle` 状态 180\n\n\
+  ## U WYSIWYP (所见即所得)\n- Play) 16\n- `UI:Action:Control` 139\n- `UI:Action:End` 139\n\
+  \n## UI 动作\n- 关于 137\n- 按钮，添加 150-152\n- 创建 138\n- 主菜单动作，创建 149\n- 开始 139\n- 状态控制图，创建\
+  \ 148, 149\n- UI 动作 27\n- `UI:Display:Config` 节点 134, 136, 149\n- `UI:Events:ElementName:EventName`\
+  \ 144\n\n\n\n\nPackt 是一家现代且独特的出版公司，专注于为开发者、管理员和新手等社区制作高质量、前沿性的书籍。\n\n欲了解更多信息，请访问我们的网站：www.packtpub.com。\n\
+  \n## 为 Packt 写作\n\n我们欢迎所有对写作感兴趣的人士咨询。书籍提案书应发送至 `author@packtpub.com`。如果您的书籍想法仍处于早期阶段，并且您希望在编写正式书籍提案之前先进行讨论，请联系我们；我们的一位策划编辑将与您联系。\n\
+  \n我们不仅在寻找已出版的作者；如果您拥有强大的技术但没有写作经验，我们丰富的编辑可以帮助您开启写作生涯，或者简单地为您的专业知识获得额外的奖励。\n\n![](img/index-275_1.jpg)\n\
+  ![](img/index-275_2.jpg)\n\n## CryENGINE 3 游戏开发\n\n### 入学者指南\n\nISBN: 978-1-84969-200-7\
+  \ 平装本：354 页 探索如何使用 `CryENGINE 3` 免费 SDK，这是下一代实时游戏开发工具 1。\n\n1. 通过学习利用屡获奖的 `CryENGINE®\
+  \ 3` 游戏引擎的力量，开始开发您任何规模的游戏。\n2. 使用 `CryENGINE® 3 Sandbox` 实时构建您的游戏世界，我们将分享对一些开箱即用工具和特性的见解。\n\
+  3. 通过书中详细的资产创建示例，学习如何为自己的自定义游戏创建自定义内容，从而发挥您的想象力。\n\n### CryENGINE 3 菜谱\n\nISBN:\
+  \ 978-1-84969-106-2 平装本：324 页 由 Crytek 开发者编写的 90 多份食谱，用于创建第三代实时游戏。\n\n1. 利用屡获奖的\
+  \ `CryENGINE3` 的力量开始开发您的 AAA 游戏或模拟程序。\n2. 使用强大的 `CryENGINE 3 Sandbox` 创建整个游戏世界。\n\
+  3. 使用书中的多种创建食谱，为 `CryENGINE3` 创建您自己专属的自定义内容。\n\n请查看 `www.PacktPub.com` 获取有关我们书目的信息。\n\
+  \n![](img/index-276_1.jpg)\n![](img/index-276_2.jpg)\n\n## Torque 3D 游戏开发\n\n###\
+  \ 菜谱\n\nISBN: 978-1-84969-354-7 平装本：380 页 提供 80 多个实用食谱和隐藏技巧，以充分利用 `Torque 3D` 游戏引擎的性能。\n\
+  \n1. 清晰的逐步说明和实用示例，帮助加深您对 `Torque 3D` 及其所有子系统的理解。\n2. 探索图形、声音、网络和用户输入等核心主题。\n3. 有帮助的技巧和技术，增加您的\
+  \ `Torque 3D` 游戏的潜力。\n\n## 用于 iPhone 1 的 Cocos2d 游戏开发 菜谱\n\nISBN: 978-1-84951-400-2\
+  \ 平装本：446 页 使用 `cocos2d` 进行 iOS 2D 游戏开发的 90 多份食谱。\n\n1. 发现涵盖游戏开发过程所有领域的高级 `Cocos2d`、`OpenGL\
+  \ ES` 和 `iOS` 技术。\n2. 学习如何创建俯视等轴测游戏、横版平台跳跃游戏以及具有真实光照的游戏。\n3. 充满了趣味且引人入胜的食谱，带有可以插入您的项目中的模块化库。请查看\
+  \ `www.PacktPub.com` 获取有关我们书目的信息。\n\n# 文档大纲\n\n* [封面]\n* [版权]\n* [致谢]\n* [关于作者]\n\
+  * [关于评审员]\n* [www.PacktPub.com]\n* [目录]\n* [前言]\n* [第 1 章：引言与设置]\n    * [安装 Visual\
+  \ Studio Express 2012]\n    * [选择您的 CryENGINE 安装类型]\n    * [下载书籍的 CryENGINE 示例安装]\n\
+  \        * [刚刚发生了什么？]\n        * [验证构建功能是否可用]\n        * [集成 CryMono (C# 支持)]\n\
+  \            * [编译 CryMono 项目]\n            * [通过 `CryGame.dll` 库加载并初始化 CryMono]\n\
+  \    * [注册您的 CryDev 账户]\n        * [刚刚发生了什么？]\n        * [运行示例应用程序]\n        * [编辑器\
+  \ (Editor)]\n            * [启动编辑器]\n        * [启动器 (Launcher)]\n            * [启动启动器]\n\
+  \        * [专用服务器 (Dedicated server)]\n    * [编译 CryGame (C++)]\n        * [刚刚发生了什么？]\n\
+  \        * [CE 编程解决方案]\n            * `CryGame`\n            * `CryAction`\n   \
+  \         * `CryCommon`\n    * [CryENGINE 文件夹]\n        * [PAK 文件]\n           \
+  \ * [文件查询]\n            * [附加调试器]\n        * [刚刚发生了什么？]\n    * [总结]\n* [第 2 章：使用\
+  \ Flowgraph 进行视觉化脚本]\n    * [flowgraph 的概念]\n    * [打开 Flowgraph 编辑器]\n    * [Flowgraph\
+  \ 编辑器之旅]\n        * [组件 (Components)]\n            * [术语]\n            * [组件分类]\n\
+  \        * [Flowgraph 类型]\n            * [AI 动作 (AI Actions)]\n            * [UI\
+  \ 动作 (UI Actions)]\n            * [材质特效 (Material FX)]\n            * [FG 模块 (FG\
+  \ Modules)]\n            * [实体 (Entities)]\n            * [预制体 (Prefabs)]\n    *\
+  \ [创建 flowgraph]\n        * [flowgraph 实体]\n            * [生成 FlowgraphEntity]\n\
+  \        * [挂载新的 flowgraph]\n        * [向 flowgraph 添加节点]\n        * [输入和输出端口]\n\
+  \            * [端口类型]\n        * [目标实体]\n        * [连接流程节点]\n        * [测试我们的 flowgraph]\n\
+  \    * [内置流程节点 (Stock flownode) 概述]\n        * [构建时钟]\n        * [监听玩家输入]\n    \
+  \    * [循环执行]\n    * [Flowgraph 模块 (Flowgraph modules)]\n        * [创建模块]\n    \
+  \    * [调用模块]\n        * [模块参数/端口]\n    * [自定义流程节点 (Custom flownodes)]\n    * [使用\
+  \ C++ 创建自定义节点]\n        * [组织节点]\n        * [创建节点文件]\n            * [代码拆解]\n   \
+  \     * [Node 函数概述]\n        * [实现 GetConfiguration]\n            * [创建端口]\n\n\n\
+  \n\n\n## 将数组分配给节点配置\n# 实现 ProcessEvent\n# 在 C# 中创建自定义节点\n## 添加输入\n## 添加输出\n## 实现\
+  \ Activate\n## 目标实体\n## 总结\n\n# 第 3 章：创建与利用自定义实体\n## 实体系统简介\n### 实体类\n### 实体\n####\
+  \ `entityId`\n#### `EntityGUID`\n## 游戏对象\n## 实体池系统\n### 创建自定义实体\n### 使用 Lua 创建实体\n\
+  ### 常用的 Lua 实体回调\n### 在 C# 中创建实体\n### 添加编辑器属性\n### 在 C++ 中创建实体\n### 创建自定义实体类\n##\
+  \ 实体飞行节点 (Entity Flownodes)\n### 在 Lua 中创建实体飞行节点\n### 使用 C# 创建实体飞行节点\n### 在 C++\
+  \ 中创建实体飞行节点\n#### 注册实体节点\n#### 最终代码\n## 游戏对象\n#### 游戏对象扩展\n##### 在 C++ 中创建游戏对象扩展\n\
+  #### 激活我们的扩展\n## 总结\n\n# 第 4 章：游戏规则\n## 游戏规则导论\n### `IGameRules` 接口 – 游戏规则\n###\
+  \ 脚本编写 – 游戏模式\n## 加载关卡\n## 实现游戏规则接口\n## 注册游戏对象扩展\n## 创建自定义游戏模式\n## 脚本编写\n### Lua\
+  \ 脚本编写\n### 调用方法\n### 带参数调用方法\n#### 获取 Lua 返回的值\n### 获取表值\n### CryMono 脚本编写\n###\
+  \ 调用方法\n####返回值\n### 属性\n### 字段\n### 在 C# 中创建基础游戏模式\n### 定义我们的意图\n#### 创建角色 (Actor)\n\
+  #### 生成 Actor\n#### 处理断开连接\n#### 将玩家分配到队伍\n#### 实现\n#### 添加游戏结束逻辑\n### 创建实体\n####\
+  \ 填充关卡\n## 总结\n\n# 第 5 章：创建自定义 Actor\n## Actor 系统简介\n## 通道标识符\n### Actor 实例化\n####\
+  \ 移除 Actor\n### 视图系统\n## 将视图链接到游戏对象\n## 创建自定义 Actor\n### 在 C# 中创建 Actor\n#### `CryMono`\
+  \ 层级结构\n#### 同时使用原生 Actor 和 `CryMono` Actor\n### 在 C++ 中创建 Actor\n#### 注册 Actor\n\
+  ## 相机处理\n### 实现 `IGameObjectView`\n### 创建俯视视角相机\n#### 视图旋转\n## 玩家输入\n### 硬件鼠标\n\
+  ### 动作映射 (Action maps)\n### 监听动作映射事件\n#### 启用动作映射区域\n## 动画角色\n### 移动请求\n### 添加移动请求\n\
+  ## Mannequin 动画系统\n### Mannequin 编辑器\n### 预览设置\n#### 创建上下文 (Context)\n#### 创建片段\
+  \ (Fragment)\n#### 创建并使用标签\n#### 保存\n### 启动片段\n#### 获取片段标识\n#### 队列片段\n### 设置标签\n\
+  #### 强制动作进入重新查询选项\n### 调试 Mannequin\n### 为自定义实体设置 Mannequin\n#### 初始化 Mannequin\n\
+  #### 加载控制器定义\n#### 设置激活上下文\n## 总结\n\n# 第 6 章：人工智能\n## 人工智能 (AI) 系统\n### 脚本编写\n###\
+  \ AI Actor\n### 目标管道 (Goal pipes)\n#### 创建自定义管道\n#### 选择管道\n### 信号\n### AI 行为\n\
+  #### 示例\n### `IAIObject`\n## 创建自定义 AI\n### 注册 AI Actor 实现\n#### 在 C# 中\n#### 在 C++\
+  \ 中\n\n\n\n\n## 创建 AI 实体定义\n## AI 行为与角色\n### 理解和使用行为选择树\n### 角色\n### 导航类型 (NavigationType)\n\
+  ## 创建自定义行为\n### 监听信号\n\n## AI 基础定义详解\n### AISample_x 表\n#### 属性表 (Properties table)\n\
+  #### AIMovementAbility 表\n### `CreateAI` 函数\n### `RegisterAI` 函数()\n## 总结\n\n# 第\
+  \ 7 章：用户界面\n## Flash 电影剪辑与 UI 图\n### 元素\n#### XML 详解\n#### 动作 (Actions)\n### 创建主菜单\n\
+  ### 创建菜单元素\n### 暴露 ActionScript 资产\n#### 函数\n#### 事件\n#### 变量\n#### 数组\n### 将 MovieClip\
+  \ 实例暴露给流程图 (flowgraph)\n### 创建 UI 动作\n#### 创建状态控制图\n#### 创建 MainMenu 动作\n#### 添加按钮\n\
+  #### 最终结果\n## 引擎 ActionScript 回调\n## 创建 UI 游戏事件系统\n### 实现 `IUIGameEventSystem`\n\
+  ### 接收事件\n### 分发事件\n#### 分发事件\n## 总结\n\n# 第 8 章：多人游戏与网络连接\n## 网络系统\n### 网络标识符\n\
+  ### 网络通道 (Net channels)\n#### 网络 节点点 (Net nubs)\n### 设置多人游戏\n### 启动服务器\n#### 专有服务器\n\
+  #### 启动器 (Launcher)\n### 通过控制台连接服务器\n### 调试网络游戏\n## 使用游戏对象扩展的网络\n### 远程调用 (RMI)\n\
+  #### RMI 结构\n#### RMI 示例\n#### 网络序列化\n#### 特性 (Aspects)\n#### 压缩策略\n#### 创建新的压缩策略\n\
+  ### 将实体暴露网络\n#### `Net.Expose`\n#### 函数实现\n#### 调用 RMI\n#### 将我们的实体绑定到网络\n## 总结\n\
+  \n# 第 9 章：物理\n## CryPhysics\n### 物理类型\n### 引入物理标识符\n#### 绘制实体代理 (proxies)\n### 物理实体动作、参数与状态\n\
+  #### 参数\n#### 动作\n#### 状态\n### 物理实体类型详情\n#### 通用参数\n#### 动作\n#### 状态\n#### 静态 (Static)\n\
+  #### 刚体 (Rigid)\n### 轮式车辆\n#### 特有参数\n#### 特有状态\n#### 特有动作\n### 生物 (Living)\n####\
+  \ 特有参数\n#### 特有状态\n#### 特有动作\n### 粒子 (Particle)\n#### 特有参数\n### 关节体 (Articulated)\n\
+  #### 特有参数\n### 绳子 (Rope)\n#### 特有参数\n### 软体 (Soft)\n#### 特有参数\n#### 特有动作\n## 射线世界交叉\n\
+  ### `ray_hit` 结构体\n#### 常用成员变量\n### 起与方向\n### 对象类型与射线标记\n#### 对象类型\n#### 射线标记\n\
+  ### 允许多次射线命中\n## 创建物理化实体\n### 使用 C++ \n### 使用 C# \n## 模拟爆炸\n## 总结\n\n# 第 10 章：渲染编程\n\
+  ## 渲染器细节\n### 着色器 (Shaders)\n#### 着色器变体 (permutations)\n#### 着色器缓存\n## 渲染节点\n##\
+  \ 渲染详解\n### 更新前 (Pre update)\n### 更新后 (Post update)\n## 使用渲染上下文渲染新视口\n### 渲染\n####\
+  \ 使用 `I3DEngine.RenderWorld()`\n## 着色器\n### 着色器描述\n#### 纹理槽 (Texture slots)\n####\
+  \ 着色器标记 (flags)\n#### 材质标记 (flags)\n\n\n\n\n### 引擎标记](#index_split_002.html_p218)\n\
+  ### 运行时标记](#index_split_002.html_p218)\n### 采样器](#index_split_002.html_p218)\n####\
+  \ 在采样器器纹理插槽](#index_split_002.html_p219)\n### 获取纹理](#index_split_002.html_p219)\n\
+  ### 在运行时操作静态对象](#index_split_002.html_p220)\n### 在运行时修改材质](#index_split_002.html_p221)\n\
+  #### 克隆材质](#index_split_002.html_p221)\n#### 材质参数](#index_split_002.html_p221)\n\
+  #### 着色器参数](#index_split_002.html_p223)\n#### 示例 – 植被的动态 Alpha 测试](#index_split_002.html_p224)\n\
+  # 总结](#index_split_002.html_p226)\n\n# 第 11 章：特效与声音](#index_split_002.html_p228)\n\
+  ## 特效简介](#index_split_002.html_p228)\n### 材质特效](#index_split_002.html_p228)\n#####\
+  \ 表面类型](#index_split_002.html_p229)\n#### 粒子特效](#index_split_002.html_p229)\n####\
+  \ 音效](#index_split_002.html_p230)\n##### FMOD Designer](#index_split_002.html_p230)\n\
+  ### 创建和触发材质特效](#index_split_002.html_p231)\n#### 基于物理交互的自动播放](#index_split_002.html_p231)\n\
+  ##### 添加新的表面类型](#index_split_002.html_p233)\n##### 特效定义](#index_split_002.html_p233)\n\
+  #### 触发自定义事件](#index_split_002.html_p234)\n### 基于动画的事件与特效](#index_split_002.html_p236)\n\
+  ### 实例化粒子发射器](#index_split_002.html_p237)\n### 使用 FMod 导出声音](#index_split_002.html_p237)\n\
+  #### 向项目添加添加声音](#index_split_002.html_p238)\n### 播放声音](#index_split_002.html_p240)\n\
+  #### 使用 SoundSpots](#index_split_002.html_p241)\n#### 通过程序播放声音](#index_split_002.html_p243)\n\
+  ##### 声音标记](#index_split_002.html_p243)\n##### 声音语义](#index_split_002.html_p243)\n\
+  # 总结](#index_split_002.html_p244)\n\n# 第 12 章：调试与性能分析](#index_split_002.html_p246)\n\
+  ## 调试游戏逻辑](#index_split_002.html_p246)\n### 记录到控制台和文件](#index_split_002.html_p247)\n\
+  ##### 日志详细程度](#index_split_002.html_p247)\n##### 全局日志函数](#index_split_002.html_p248)\n\
+  ### 持久化调试](#index_split_002.html_p249)\n##### C++](#index_split_002.html_p249)\n\
+  ##### C#](#index_split_002.html_p250)\n### CryAssert](#index_split_002.html_p250)\n\
+  ## 性能分析](#index_split_002.html_p251)\n#### 用法分析](#index_split_002.html_p252)\n####\
+  \ 在 C++ 中性能分析](#index_split_002.html_p252)\n#### 在 C# 中性能分析](#index_split_002.html_p254)\n\
+  ## 控制台](#index_split_002.html_p255)\n### 控制台变量](#index_split_002.html_p255)\n#####\
+  \ 注册一个 CVar](#index_split_002.html_p256)\n##### 标记](#index_split_002.html_p257)\n\
+  ##### 控制台变量组](#index_split_002.html_p257)\n#### 控制台命令](#index_split_002.html_p259)\n\
+  ##### 在 C# 中注册控制台命令](#index_split_002.html_p260)\n##### 在 C++ 中创建控制台命令](#index_split_002.html_p260)\n\
+  # 总结](#index_split_002.html_p261)\n\n"
