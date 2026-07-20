@@ -241,6 +241,7 @@
 +   [C#编程：.NET 上多功能现代语言](docs/c-programming-versatile-modern-language-on-net/README.md)
 +   [机器人开发 C++ 编程练习：使用 OpenCV 和 ROS 构建并编程机器人的分步指南](docs/c-programming-workbook-for-robotic-development-a-step-by-ste/README.md)
 +   [C++：高效学习 C++ 编程的简单技巧与秘籍](docs/c-simple-and-effective-tips-and-tricks-to-learn-c-programmin/README.md)
++   [C++ Templates：完全指南](docs/c-templates-the-complete-guide/README.md)
 +   [C++：初学者指南，通过真实示例快速轻松掌握 C++ 编程基础（C++ 编程步步阶指南）](docs/c-the-crash-course-for-beginners-to-learn-the-basics-of-c-pr/README.md)
 +   [C++：新手硬核 C++ 速成课 - 8 小时学会在 C++ 编程！（编程系列丛 1）](docs/c-the-no-bs-c-crash-course-for-newbies---learn-c-programming/README.md)
 +   [C#：一天内分步学习 C# 编程的实用中级指南（#2020 更新版 ｜高效计算机编程语言）](docs/c-the-practical-intermediates-guide-to-learn-c-programming-i/README.md)
