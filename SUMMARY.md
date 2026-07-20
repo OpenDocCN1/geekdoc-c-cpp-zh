@@ -178,6 +178,7 @@
 +   [C#：初学者终极速成，快速掌握 C# 编程](docs/c-learn-c-programming-with-the-ultimate-crash-course-for-beg/README.md)
 +   [C++ 低延迟：多线程与热点优化](docs/c-low-latency-multithreading-and-hotpath-optimizations/README.md)
 +   [C# 精通之路：C# 编程全面指南](docs/c-mastery-a-comprehensive-guide-to-programming-in-c/README.md)
++   [C++ 数据结构第 6 版](docs/c-plus-data-structures-6th-edition/README.md)
 +   [C Primer Plus (6版)](docs/c-primer-plus-c-primer-plus-6-developers-library/README.md)
 +   [C 语言编程透视](docs/c-prog-toushi/README.md)
 +   [C++ 编程：多范式编程语言基础与数据管理入门初学者指南 (2022 速成课程)](docs/c-programming-a-beginners-guide-to-learning-the-fundamentals/README.md)
