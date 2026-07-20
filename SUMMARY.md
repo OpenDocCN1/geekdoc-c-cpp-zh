@@ -268,6 +268,7 @@
 +   [CGI 编程 101：为万维网编程 Perl（第二版）](docs/cgi-programming-101-programming-perl-for-the-world-wide-web-/README.md)
 +   [混沌猴子：硅谷的暴利财富与随机失败](docs/chaos-monkeys-obscene-fortune-and-random-failure-in-silicon-/README.md)
 +   [R 数据科学并行计算：R、C 和 CUDA 示例](docs/chapman-and-hall-crc-the-r-series-crc-press-matloff-norman-s/README.md)
++   [Chapman & Hall／CRC 大数据系列：大数据管理与处理 (1)](docs/chapman-hallcrc-big-data-series-big-data-management-and-proc/README.md)
 +   [ChatGPT 初学者指南：面向作家、程序员、企业和内容创者的最完整且易用的指南](docs/chatgpt-for-dummies-the-most-complete-and-easy-to-use-guide-/README.md)
 +   [时空之钥 (Boss 之战系列, #2)](docs/chrono-trigger-boss-fight-books-2/README.md)
 +   [CISSP 入学者指南，第 6 版](docs/cissp-for-dummies-6th-edition-for-dummies-computertech/README.md)
