@@ -275,6 +275,7 @@
 +   [敏捷之道：回归基础](docs/clean-agile-back-to-basics/README.md)
 +   [整洁架构：软件结构与设计的工艺指南（Robert C. Martin 系列）](docs/clean-architecture-a-craftsmans-guide-to-software-structure-/README.md)
 +   [洁净代码：敏捷软件手工艺手册（第2版）](docs/clean-code-a-handbook-of-agile-software-craftsmanship-2nd-ed/README.md)
++   [洁净之道：准则、标准与伦理](docs/clean-craftsmanship-disciplines-standards-and-ethics/README.md)
 +   [接近机器：技术狂热及其不满](docs/close-to-the-machine-technophilia-and-its-discontents/README.md)
 +   [云计算：实用方法](docs/cloud-computing-a-practical-approach/README.md)
 +   [Windows Azure 平台云计算计算指南](docs/cloud-computing-with-the-windows-azure-platform/README.md)
