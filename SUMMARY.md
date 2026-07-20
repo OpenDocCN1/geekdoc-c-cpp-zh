@@ -180,6 +180,7 @@
 +   [C 编程入门指南：案例研究介绍应用编程与系统编程](docs/c-how-to-program-with-case-studies-introducing-applications-/README.md)
 +   [C++ 24 小时实战，Sams 自学指南（第6版）](docs/c-in-24-hours-sams-teach-yourself-6th-edition/README.md)
 +   [C++ 一日通：C++ 终极初学者指南，包含 7 个实战项目](docs/c-in-one-day-the-ultimate-beginners-guide-to-c-with-7-awesom/README.md)
++   [Sams 自学系列：每天一小时 C++](docs/c-in-one-hour-a-day-sams-teach-yourself/README.md)
 +   [C++ 入门指南与高级编程](docs/c-introduction-and-professional-programming/README.md)
 +   [C++：一天学会 C++！快速掌握 C++ 基础的终极速课程 (C++、C++ 课程、C++ 开发、C++ 书籍、初学者 C++)](docs/c-learn-c-in-a-day---the-ultimate-crash-course-to-learning-t/README.md)
 +   [C#：一天学会并精通 C#。带实战项目的 C# 初学者指南。（通过实战项目快速学习编程指南 3）](docs/c-learn-c-in-one-day-and-learn-it-well-c-for-beginners-with-/README.md)
