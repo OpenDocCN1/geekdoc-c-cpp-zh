@@ -357,6 +357,7 @@
 +   [对象设计：通过哈利·波特故事详解对象对象设计模式](docs/designing-with-objects-object-oriented-design-patterns-expla/README.md)
 +   [离散代数方法：算术、密码学、自动机与群 (De Gruyter 教科书)](docs/discrete-algebraic-methods-arithmetic-cryptography-automata-/README.md)
 +   [机器学习文档处理指南](docs/document-processing-using-machine-learning/README.md)
++   [Clifford A Shaffer C 语言数据结构与算法分析第3版 Dover 出版社 2011](docs/dr-clifford-a-shaffer-data-structures-and-algorithm-analysis/README.md)
 +   [E. Balaguruswamy 的 ANSI C 解决方案：第 8 版](docs/e-balaguruswamys-ansi-c-solutions-8th-edition/README.md)
 +   [简单 C++ 编程指南：通过实战项目学习 C++ 编程的逐步指南](docs/easy-c-programming-guide-step-by-step-guide-to-learn-c-progr/README.md)
 +   [Effective C++：改进程序与设计的 55 种特效，第三版 (Gal Zentner 图书系列)](docs/effective-c-55-specific-ways-to-improve-your-programs-and-de/README.md)
