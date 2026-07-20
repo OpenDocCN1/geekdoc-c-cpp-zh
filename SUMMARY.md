@@ -339,6 +339,7 @@
 +   [C 数据结构：初学者实用指南](docs/data-structures-using-c-a-practical-approach-for-beginners/README.md)
 +   [C++ 数据类型、变量、运算符与控制结构：C++ 编程入门指南](docs/data-types-and-variables-operators-and-control-structures-in/README.md)
 +   [David Chisnall Objective C 常用句手册 Pearson 2011](docs/david-chisnall-objective-c-phrasebook-pearson-2011/README.md)
++   [C# 深度学习：. 与 Kelp.Net：终极 Kelp.Net 深度学习指南](docs/deep-learning-with-c-net-and-kelp-net-the-ultimate-kelp-net-/README.md)
 +   [使用 Ember 2 构建出的 Web 应用](docs/deliver-audacious-web-apps-with-ember-2-for-sandi-frank/README.md)
 +   [E. Balaguruswamy 的 ANSI C 解决方案：第 8 版](docs/e-balaguruswamys-ansi-c-solutions-8th-edition/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
