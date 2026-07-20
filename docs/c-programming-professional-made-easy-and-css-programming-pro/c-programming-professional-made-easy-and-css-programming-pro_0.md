@@ -1,0 +1,1512 @@
+# C++ 编程高级指南与 CSS 编程高级指南
+
+
+
+![](img/00002.jpeg)
+
+
+
+
+
+
+## 目录
+- 引言
+- 第 1 章 - C++ 简介
+- 第 2 章 - C++ 变量与运算符
+- 第 3 章 - 关于用户输入的一切
+- 第 4 章 - 使用流程语句
+- 结论
+
+### 引言
+感谢你的下载，并祝贺你下载《C++ 编程专业精通》这本书。
+
+本书包含了关于如何学习 `C++` 编程语言及其应用经过的步骤和策略。
+
+你不需要成为专业开发者也可以编写快速且简单的 `C++` 程序。通过这本书，任何具有基础计算机知识的人都可以探索并享受 `C++` 编程语言的威力。书中包含了以下任何初学者今天即可开始编码的基础主题：
+
+* 基础 `C++` 术语
+* 理解 `C++` 程序结构
+* 变量 `Variables`、表达式 `Expressions` 和运算符 `Operators`
+* 使用输入输出流进行用户交互
+* 创建逻辑比较
+* 创建循环并使用条件语句
+* 以及更多！
+
+再次感谢下载本书，希望你读得愉快！
+
+# 第 1 章 – C++ 简介
+### 你将学到：
+* `C++` 语言的简史
+* `C++` 基础术语
+* `C++` 程序结构
+
+`C++` 是今天人们使用的流行的编程语言之一。更具体地说，`C++` 是一个由“命令”组成的库，告诉你的计算机要做什么以及如何做。这些命令构成了 `C++` 源代码。
+
+请注意，`C++` 与之前的 `C` 语言语言不同。事实上，当 `Bjarne Stroustrup` 在 1983 年创建它时，它被认为是 `C` 语言的更好版本。
+
+即使在今天，`C++` 语言仍然是世界上许多编程专家的“起点”。尽管它特别容易学习和应用，但精通 `C++` 的天花板非常高。
+
+### `C++` 基础术语
+当然，学习 `C++` 编程语言的第一步是理解基础术语。为了防止你在阅读本书时在任何时候产生不必要的困惑，本节解释了 `C++` 程序语法中最常用的术语。就像整个编程语言本身一样，C++` 中的大多数术语都易于记忆和理解。
+
+#### 编译器 (Compiler)
+在进行任何操作之前，请注意，运行你用 `C++` 编写的代码需要一个`compiler`。将编译器想象成“翻译器”，它们将编程语言转换为机器语言——计算机能理解的语言。机器语言由两个字符（1 和 0）组成，这就是它也被称为二进制语言。如果你在学校学习 `C++`，那么你不必担心为 `C++` 寻找编译器或集成开发环境。
+
+#### 集成开发环境 (Integrated Development Environment)
+集成开发环境 (`IDE`) 本质上是你用来编写 `C++` 程序的软件。IDE 附带运行你代码所需的编译器是有意义的。如果你没有 `C++` 编程经验并尝试自学，你可以选择免费的 `C++ IDE`，如 `Code::Blocks`。对于完全初学者来说，一个好的选择是选择简单的 `C++ IDE`，如 `Quincy 2005`，因为它需要的设置非常少。
+
+#### 变量与参数 (Variables and Parameters)
+`Variables` 是程序内存中的独立区块，包含一个给定的值。一个值可以设置为常量，通过运算符由其他变量的值确定，或者通过用户输入设置/更改。`Variables` 由变量名或标识符表示。在 `C++` 编程中，只要所有字符有效，你就可以使用任何所需的变量名。记住，标识符中只能字母数字和“下划线” (`_`)。不允许使用标点符号和其他符号。
+
+记住，变量在使用之前总是需要先声明。声明变量与决定它们的实际值不同；这意味着这两个过程是在两个不同的代码中完成的。这些将在下一章中解释。
+
+“参数”（Parameters）的工作方式与普通变量相同。事实上，它们的写法甚至完全相同。然而，参数和变量的初始化方式不同。参数专门包含在函数中，允许将参数传递到调用函数的另一个独立位置。
+
+#### 语句 (Statements)
+每个用 `C++` 编写的程序由不同的代码行组成，执行设置变量、调用函数和其他表达式等任务。这些行就是语句。每个单独的语句始终以分号 (`;`) 结束。更重要的是，函数中的语句是根据先后顺序顺序执行的。当然，这种顺序可以使用流程语句（如“if 语句”和“循环”）来改变。
+
+#### 函数 (Functions)
+`Functions` 是 `C++` 程序中的块，结构用于完成单个任务。你可以在程序运行的任何点调用函数。大括号或花括号 (`{}`) 包围着函数中的语句或“体”。除了函数名，函数还通过相应的“类型”设置返回值的形式。你还可以在函数的开头使用并设置参数。它们封装在括号 `()` 中，并使用逗号 (`,`) 分隔。
+
+在 `C++` 中，以下是创建函数最常用的语法：
+
+```
+"type" "name" ( 参数 1, 参数 2, 参数 3, …)
+{
+    "语句";
+}
+```
+
+#### 注释 (Comments)
+在处理特别大的项目时，大多数资深程序员使用“注释”，作为 `C++` 程序特定部分的描述。注释被编译器完全忽略，因此可以忽略正确的代码语法。注释以双斜杠 (`//`) 或斜杠星号 (`/*`) 开头。你将在本书的示例中发现注释以帮助你理解。一个快速的例子就是下面的“Hello World!”程序。当然，你也可以在未来的项目中使用注释以便参考和调试。
+
+### `C++` 程序结构
+`C++` 的程序结构非常容易理解。编译器从上到下读取每一行代码。这就是为什么 `C++` 程序的开头通常从预处理器指令以及变量及其值的声明开始。说明这种结构最好的方法是使用 `C++` 世界中最著名的例子——“Hello World!”程序。注意下面的代码行以及注释：
+
+```cpp
+#include <iostream> // 这是一个预处理器指令
+
+int main() // 这一行启动名为 main 的函数，每个 C++ 程序中都应该找到它
+
+{
+    std::cout << “Hello World!"; // 大括号之间的语句构成了 main 函数体
+
+    return 0; // return 0; 语句用于告诉程序函数运行正常。然而，某些编译器在 main 函数中不需要这一行
+}
+```
+
+
+
+
+
+第一行（`#include <iostream>`）是一个预处理器指令，它定义了标准 C++ 编程库的一个部分，称为输入/输出流（Input/Output Stream），或简称为 `iostream`。该部分处理 C++ 程序中的输入和输出操作。记住，如果你想在主函数体中使用 `std::cout`，这一点是非常重要的。
+
+第一行 `int main ()` 初始化了主函数。记住 `int` 指的是整数数据类型，`main` 指的是函数的名称。除了 `int` 之外还有其他数据类型，但目前你应该关注整数数据类型。由于 `Hello World!` 程序不需要参数，因此在函数名后的括号之间留了空白。此外，请记住，在初始化函数后**不应该**放置分号（`;`）。
+
+接下来是函数体，由左大括号表示。程序的这一特定部分（`std::cout`）指的是标准字符输出设备，即计算机的显示设备。接着是来自输入/输出流的插入运算符（`<<`），这意味着该行的其余部分（不包括引号）将被输出。最后，用分号（`;`）结束语句。
+
+函数体的最后一行是返回语句（`return = 0;`）。记住，返回表达式（在本例中为 `0`）取决于初始化函数时指定的数据类型。然而，可以使用 `void` 函数类型创建不需要返回语句的函数。例如；`void main ()`。
+
+实现此点的另一种方法是在预处理器行下方包含 `using namespace std;` 行，这样你就不需要每次使用时都编写 `std::` 了。如果你选择这种方法，代码看起来如下：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    cout << "Hello World!";
+    return 0;
+}
+```
+
+# 第 2 章 – C++ 变量与运算符
+
+### 你将学到：
+- C++ 运算符介绍及如何使用
+- 变量的声明与值的确定
+- 在程序输出中创建新行
+
+在 C++ 程序中，变量和常量是通过运算符进行控制或“操作”的。注意，C++ 编程语言中的基础运算符与算术运算符相同。这包括用于赋值表达式的等号（`=`）、用于加法的加号（`+`）、用于减法的减号（`-`）、用于乘法的星号（`*`）、用于除法的正斜杠（`/`）以及用于获取任何表达式余数的百分号（`%`）。
+
+C++ 还使用其他运算符来完成基础算术运算以外的额外任务。如上一章所述，`iostream` 头文件允许你使用插入运算符（`<<`）来处理输出。即使没有 `#include` 指令，也可以访问不同的运算符。这些“基础”运算符可以归类为增/减运算符、比较运算符、复合赋值运算符和逻辑运算符。
+
+## 声明变量
+在 C++ 操作中使用变量之前，你必须首先声明它们并确定它们的值。再次，声明变量和赋予值是两个独立的过程。声明变量的语法如下：
+
+`"type" "variable";`
+
+就像初始化函数一样，你需要为给定的指定要使用的数据类型。例如；假设你想将 `x` 声明为整数变量。初始化应该像这样：
+
+`int x;`
+
+在声明 `x` 后，你可以使用赋值运算符（`=`）给它赋值。例如；要将值 `99` 赋值给变量 `x`，请使用以下行：
+
+`x = 99;`
+
+确保在给变量赋值之前先声明它。或者，你可以使用单行声明变量并赋值。这可以通过以下方式实现：
+
+`int x = 99;`
+
+除了在编写程序时设置这些表达式外，你还可以使用操作和用户输入在程序运行时确定它们的值。但首先，你需要学习 C++ 中的其他运算符。
+
+## 增/减运算符
+递增运算符由两个加号（`++`）组成，而递减运算符由两个减号（`--`）组成。增/减运算符的主要目的是缩短对任何给定变量加或减 1 的表达式。例如；如果 `x = 2`，那么 `++x` 应该等于 `3`，而 `--x` 应该等于 `1`。
+
+如果用于确定两个或多个变量的值，增/减运算符可以作为前缀或后缀包含。当作为后缀使用（`x++` 或 `x--`）时，它表示 `x` 在加或减 1 之前的原始值。当单独运行时，`++x` 和 `x++` 的含义相同。但在设置其他变量时，区别就显而易见了。这里有一个简单的示例来说明这种区别：
+
+```cpp
+X = 5;
+Y = ++x;
+```
+
+在这个示例中，`y` 的值是在增加 `x` 的值之后确定的。换句话说，示例中 `y` 的值等于 `6`。
+
+```cpp
+X = 5;
+Y = x++;
+```
+
+在这个示例中，`y` 的值是在增加 `x` 的值之前确定的。换句话说，示例中 `y` 的值等于 `6`。（注：此处原文逻辑可能有误，通常 x++ 赋值后应为 5）
+
+## 复合赋值运算符
+除了基础算术运算符和标准赋值运算符（`=`）外，还可以使用复合赋值运算符在赋值之前执行操作。复合赋值运算符基本上是使用基础算术运算符的普通表达式的简写版本。
+
+以下是复合赋值运算符的示例：
+
+```cpp
+x -= 1;          // 等同于 x = x - 1;
+x *= y;          // 等同于 x = x * y;
+x += 1;          // 等同于 x = x + 1;
+x /= y;          // 等同于 x = x / y;
+```
+
+## 比较运算符
+变量和其他表达式可以使用关系运算符或比较运算符进行比较。这些运算符用于检查一个值是否大于、小于或等于另一个值。以下是 C++ 中的比较运算符及其描述：
+
+- `==` : 检查值是否相等
+- `<` : 检查第一个值是否小于第二个
+- `>` : 检查第一个值是否大于第二个
+- `<=` : 检查第一个值是否小于等于第二个
+- `>=` : 检查第一个值是否大于等于第二个
+- `!=` : 检查值是否不等
+
+比较运算符常用于条件语句。它们还可以用于评估表达式并返回布尔值（`true` 或 `false`）。使用上述比较运算符；这里是一些示例表达式及其对应的布尔值：
+
+`(8 == 1)` // 此行结果为 `false`
+`(8 > 1)` // 此行结果为 `true`
+`(8 != 1)` // 此行结果为 `true`
+`(8 <= 1)` // 此行结果为 `false`
+
+还要注意，布尔值 `false` 等于 `0`，而 `true` 等于其他非零整数。除了数值外，在使用比较运算符时还可以检查变量的值。在创建表达式时只需使用变量的标识符即可。当然，在进行有效比较之前，必须声明变量并赋予标识值。这里有一个示例场景：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+    int a = 3; // 先设置 a 和 b 的值
+    int b = 4;
+    cout << "Comparison a < b = " << (a < b);
+    return 0;
+}
+```
+
+此代码的输出如下：
+
+Comparison a < b = true
+
+
+
+
+请注意，插入运算符 (`<<`) 用于在输出语句中插入表达式 `a < b` 的值，这在第 7 行中表示（`cout << “Comparison a < b = “…)`）。不要忘记你需要一个输出语句来检查代码是否正常工作。以下代码不会产生错误，但也不会产生输出：
+
+```cpp
+#include <iostream>
+
+int main (
+{
+    int a = 3;
+    int b = 4;
+    (a < b);
+    return 0;
+}
+```
+
+在这段代码中，`a < b` 也是正确的。然而，由于省略了程序输出所需的行，因此不会产生任何输出。
+
+## 逻辑运算符
+
+C++ 中还有其他逻辑运算符可以确定布尔数据的值。它们是非逻辑 (`!`)、与逻辑 (`&&`) 和或逻辑 (`||`) 运算符。以下是它们如何使用的具体示例：
+
+`!(6 > 2)` // 非逻辑运算符 (`!`) 会完全反转任何关系表达式并产生相反的结果。这个表达式为假，因为 `6 > 2` 是正确的
+
+`(6 > 2 && 5 < 10)` // 与运算符 (`&&`) 仅在两个表达式都正确时才产生真。这个表达式为真，因为 `6 > 2` 和 `5 < 10` 都是正确的
+
+`(6 = 2 || 5 < 10)` // 或运算符 (`||`) 只要其中一个表达式正确就会产生真。这个表达式为真，因为尽管 `6 = 2` 是假的，但 `5 < 10` 是正确的。
+
+你还可以在这两个逻辑运算符之外使用非逻辑运算符。例如：
+
+`!(6 = 2 || 5 < 10)` // 这个表达式为假
+
+`!(6 > 2 && 5 < 10)` // 这个表达式也是假
+
+`!(6 < 2 && 5 < 10)` // 这个表达式为真
+
+## 创建新行
+
+从本书的这里开始，你将学习生成多行输出的简单 C++ 程序。若要在生成输出时创建新行，你只需要使用换行符 (`\n`)。或者，你在使用 `cout` 代码时可以使用 `endl;` 操纵符来创建新行。主要区别在于，每当你配合 `cout` 使用 `endl;` 操纵符时，输出流的内部缓冲区会被“刷新”。以下是使用这两者的示例：
+
+```cpp
+cout << “Sentence number one \nSentence number two”;
+```
+
+上面的示例使用了换行符。
+
+```cpp
+cout << “Sentence number one” << endl;
+cout << “Sentence number two”;
+```
+
+上面的示例使用了 `endl;`。
+
+当然，第一种代码（使用 `\n`）相对简单，更适用于一般的输出目的。两者都会产生以下输出：
+
+Sentence number one
+Sentence number two
+
+# 第 3 章 – 关于用户输入
+
+### 你将学到：
+* 利用输入流
+* 使用输入来确定或修改值
+* 如何输入和输出字符串
+
+到目前，你已经学习了如何编写一个可以执行算术运算、比较并产生输出的 C++ 程序。这次，你将学习如何编写计算机程序最重要的方面之一——用户输入。
+
+如前所述，用户输入可以被用于确定或修改某些变量的值。C++ 程序使用称为“流”（streams）的抽象来处理输入和输出。由于你已经了解输出 (`cout`) 的语法，现在是时候学习输入 (`cin`) 的语法了。
+
+### 提取运算符
+
+输入语法 `cin` 配合提取运算符 (`>>`) 用于格式化输入。这种组合结合键盘是大多数程序环境的标准输入。记住，在进行输入之前，你仍然需要先声明变量。这是一个简单的示例：
+
+```cpp
+int x; // 此行声明了变量标识符 x。注意数据类型 “int”，它意味着只接受整数值
+cin >> x; // 这一行从 cin 语法中提取输入并存储到 x 中
+```
+
+也可以在一行内请求多个变量的用户输入。例如；假设你想为变量 `x` 和 `y` 存储整数值。它看起来应该是这样的：
+
+```cpp
+int x, y; // 这一行声明了两个变量
+cin >> x >> y; // 这一行为变量 x 和 y 提取用户输入
+```
+
+注意，程序会自动要求用户为两个变量输入两个值。先输入哪个取决于变量在行中的顺序（在这种情况下，会先请求变量 `x` 的输入）。
+
+这是一个提取用户输入并产生输出的程序示例：
+
+```cpp
+#include <iostream> // 再次，这对于输入输出至关重要
+using namespace std;
+
+int main ()
+{
+    int x;
+    cin >> x;
+    cout << “You inserted: ” << x;
+    return 0;
+}
+```
+
+
+
+
+```cpp
+if (age >= 18)
+    cout << “You are allowed to drink.”;
+else
+    cout << “You are not yet allowed to drink.”;
+```
+
+记住，条件只能使用比较运算符和逻辑运算符来设置（请参考第 2 章）。注意，你也可以通过用大括号括起来行使用 `if/else` 条件执行多条语句。还可以使用逻辑运算符（如与 `&&` 和 或 `||`）来使用复合条件。
+
+最后，你可以在 `else` 语句之后使用另一个 `if` 语句来提供更多可能性。当然，你也需要为你使用的每个 `if` 语句指定条件。以下是一个很好的示例，展示了在使用用户输入的同时，通过 `if` 和 `else` 语句可以做什么：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int number;
+    cout << “Enter a number from 1-3\n”;
+    cin >> number;
+    if (number == 1 || number == 2)
+        cout << “You have entered either 1 or 2.”;
+    else if (number == 3)
+        cout << “You have entered 3.”;
+    else
+    {
+        cout << “Please follow the instructions\n”;
+        cout << “Please Try Again.”;
+    }
+    return 0;
+}
+```
+
+上面的程序有 3 种可能的结果。如果用户输入 `1` 或 `2` 中的任何数字，就会得到第一个结果。如果用户输入数字 `3`，就会得到第二个结果。最后，如果用户输入了指定之外的其他数字，就会得到第三个结果。
+
+## 创建选择（是或否）
+
+利用 `if/else` 语句的另一种方法是创建“是否”选择。为此，你需要使用变量类型 `char`，它可以存储来自 8 位字符集的字符字符（你可以使用 `char16_t`、`char32_t` 或 `wchar_t` 来处理更大的字符集；但通常没有必要）。和其他所有变量一样，`char` 变量在使用之前需要声明。
+
+当然，你希望用户来做选择，这就是为什么你需要使用 `cin` 函数来提取用户输入。这是一个询问用户性别的简单程序：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+char gender; // this is the char variable declaration
+    cout << “Male or Female? (M/F)”;
+    cin >> gender; // user input is stored to gender
+    if (gender == ‘m’ || gender == ‘M’)
+        cout << “You have selected Male.”;
+    else if (gender == ‘f’ || gender == ‘F’)
+        cout << “You have selected Female.”;
+    else
+    {
+        cout << “Please follow the instructions\n”;
+        cout << “Please Try Again.”;
+    }
+    return 0;
+}
+```
+（注：提供的文本在第二个示例中包含一些不一致的格式和缺失括号，为了可读性已进行了清理，同时保留了逻辑）。
+
+
+
+
+
+首先，你需要一台高端电脑。通常情况下，其他的编程开发工具包并不需要强大的电脑来创建应用程序。然而，为 Android 编写程序略有不同。你需要更多的计算能力来运行 Android 模拟器，模拟器是那些允许你在计算机上测试程序的程序。
+
+使用一台没有优良处理器和足够内存（RAM）的低性能电脑，只会让你运行那些模拟器变得变得困难。如果你能够运行它，它的运行速度也会很慢。
+
+其次，你需要一台 Android 设备。该设备将成为你的测试设备。通过它，你将知道你的程序在 Android 设备上的表现如何。在选择测试设备时，确保它与你应用目标市场的设备水平相当。如果你目标是平板电脑用户，请使用平板电脑。如果你目标是智能手机用户，请使用智能手机。
+
+第三，你需要来自 Google 的 Android `SDK`（软件开发包）。`SDK` 是一组文件和程序，可以允许你创建并编译程序的代码。截至本文写作，最新版本的 Android `SDK` 文件大小约为 350mb。你将花费 15 到 30 分钟来下载它。如果你解压 Android `SDK` 文件，它将占用你计算机约 450mb 的磁盘空间。下载页链接为：http://developer.android.com/sdk/index.html
+
+`SDK` 可以运行在 Windows XP、Windows 7、Mac OSX 10.8.5（或更高）以及可以运行 32 位应用并带有 `glibc`（GNU C 库）`2.11` 或更高版本的 Linux 发行版上。
+
+一旦解解了下载的文件，打开 `SDK Manager`。该程序是开发包的更新工具。为了确保你拥有包组件的最新版本，请定期运行管理器并下载这些更新。此外，你还可以使用 `SDK Manager` 下载旧版本的 `SDK`。如果你想为带有旧 Android 操作系统的设备编写程序，就必须这样做。
+
+[点击此处在 Amazon 上查看《一天学会 Android 编程》的剩余内容。](http://www.amazon.com/Android-Programming-Power-Beginners-Development-ebook/dp/B00QMK9MRO)
+
+## 查看我的其他书籍
+
+在下方，你可以找到我在 Amazon 和 Kindle 上同样受欢迎的其他书籍。只需点击下方链接查看即可。或者，你可以访问我在 Amazon 上的作者主页来查看我的其他作品。
+
+* [点击此处在 Amazon 上查看《一天学会 C 编程》。](http://www.amazon.com/Programming-Success-Day-programming-Developers-ebook/dp/B00Q3Y55PM)
+* [点击此处在 Amazon 上查看《一天学会 Android 编程》。](http://www.amazon.com/Android-Programming-Power-Beginners-Development-ebook/dp/B00QMK9MRO)
+* [点击此处在 Amazon 上查看《一天学会 Python 编程》。](http://www.amazon.com/Python-Programming-Day-Beginners-beginners-ebook/dp/B00R1WXCD2)
+* [点击此处在 Amazon 上查看《PHP 专业编程：轻松入门》。](http://www.amazon.com/PHP-Programming-Professional-Made-Easy-ebook/dp/B00RES3EWC)
+* [点击此处在 Amazon 上查看《CSS 专业编程：轻松入门》。](http://www.amazon.com/CSS-Programming-Professional-Made-Easy-ebook/dp/B00RET2L2U)
+* [点击此处在 Amazon 上查看《C 专业编程：轻松入门》。](http://www.amazon.com/Programming-Professional-Made-Easy-programming-ebook)
+* [点击此处在 Amazon 上查看《HTML 专业编程：轻松入门](http://www.amazon.com/HTML-Programming-Professional-Made-Easy-ebook/dp/B00SGGKHSU)
+* [点击此处在 Amazon 上查看《JavaScript 专业编程：轻松入门](http://www.amazon.com/JavaScript-Professional-Programming-Made-Easy-ebook/dp/B00SDM365S)
+* [点击此处在 Amazon 上查看《Windows 8 初学者技巧》。](http://www.amazon.com/Windows-Tips-Beginners-Networking-Technology-ebook/dp/B00RW2E6JA)
+
+如果链接由于任何原因无法使用，你只需在 Amazon 网站上搜索这些标题即可找到它们。
+
+## 第 2 本书
+
+### Rails 专业编程：轻松入门
+作者：SAM KEY
+
+针对任何电脑用户的专家 Rails 编程一日成功！
+
+版权所有 2015 Sam Key - 保留所有权利。
+
+严以任何形式通过电子手段或打印格式复制、复制或传输本文档的任何部分都是不法的。严禁录本书，除非获得出版者的书面许可，否则不允许对本文进行任何存储。保留所有权利。
+
+## 目录
+
+* 第 1 章 为什么 Rails 很重要
+* 第 2 章 入门
+* 第 3 章 创建你的第一个项目
+* 第 4 章 说“你好！”
+* 第 5 章 让我们做些事情
+* 第 6 章 创建文章标题
+* 第 7 章 创建表单
+* 第 8 章 保存你的数据
+* 第 9 章 制作你的数据
+* 第 10 章 创建一些规则
+* 第 11 章更新文章
+* 第 12 章 删除某些数据
+
+## 《一天学会 C 编程》预览
+
+### 引言
+
+我想感谢并祝贺你下载《专业编程：轻松入门：针对任何电脑用户的专家 Rails 编程一日成功！》
+
+本书包含了学习 Ruby on Rails 的证明步骤。Rails 是最新且流行的平台之一。由于互联网的增长，该平台一直针对对设计感兴趣的受众。
+
+# 第 1 章 为什么 Rails 很重要
+
+如果你是一名程序员，`Ruby on Rails` 平台可能是你需要学习的下一个程序。如果你的工作主要基于设计，并且你想尝试一些让网站易于操作且漂亮的东西，那么它值得关注。它也可能是开启你职业或在办公室里创造筹码的平台。是的，这个平台可能是你晋升的王牌，或者是你想要的那个网站。
+
+### Rails 能为你做什么
+
+如果你好奇这个程序对大多数电脑用户能做什么，这里是你可以从中获得的优点。
+
+#### 1. 编写代码
+
+编码并不是火箭科学，如果你使用 `Ruby`，你可能甚至感觉不到在使用在使用编程语言。你会想要学习编码以记住你在平台上的体验，所以还是花时间学习吧。
+
+如果你开始学习 `Rails`，你不需要计算机科学专业。如果你是一个对 Web 应用非常有意的商人，并想自己尝试编写，那么这个平台可能是你的最佳选择。
+
+#### 2. 编写更好的代码
+
+有时并不是争论哪个平台是最好的，并在 `Python`、`Java`、`PHP` 或 `Ruby` 之间争得不可开。如果你已经熟悉了其他编程语言，你仍然需要跟上时潮流并学习新技巧。`Ruby on Rails` 提供了这种机会。
+
+#### 3. 编写更快的代码
+
+`RoR` 是一个美丽的平台，允许你编写更短的代码，并且拥有一套很棒的异常处理功能，使其非常容易发现和处理可能的错误。你不再需要维护扩展库中常见的引用计数。你还可以从 `C` 使用 `Ruby` 的优秀支持，这让你在想要编写 `C` 扩展时拥有更好的控制。
+
+
+
+
+RoR 让任何程序员都变得高效，因为它具有主见性（opinionated），并且会对你如何以最可能的方式编写代码给出建议。RoR 的“不要重复自己”（DRY）原则还让你跳过那些反复编写代码的常规编码过程，这些过程通常会导致代码冗长、复杂且难以调试。这意味着在项目结束时，你可以查看代码，并更好地理解那里发生了什么。
+
+## 4. 了解 Twitter 是如何运作的
+
+是的，Twitter 是使用 RoR 创建的。如果你是一个 SEO 专家、网页设计师或仅仅是一个技术极客，了解这个社交媒体平台是如何构建的绝对对你有所帮助。你还会发现，今天许多热门的新网站都是在这个平台上构建的。
+
+## 5. 学习一个拥有优秀社区的平台
+
+与其他编程语言相比，RoR 相对年轻，正因如此，它拥有一个非常活跃且协作紧密的社区。你绝对能与其他几个开发者交流，并可能一起构建某些东西。这对你的简历总是有益的。
+
+## 6. 它支持所有的操作系统，并提供独立于操作系统的线程。这意味着它具有非常良好的移植性，甚至可以在运行 Windows 95 的计算机上运行。
+
+如果这些优点听起来很棒，那么是时候开始你的 Rails 项目了！
+
+# 第 2 章 入门
+
+如果你想学习如何使用 Rails，你首先需要准备以下内容：
+
+1\. `Ruby` – 选择 `1.9.3` 或更高版本的语言。你可以通过访问 `ruby-lang.org` 下载它。
+
+2\. `RubyGems` 打包系统 – 它通常随着版本为 `1.9` 或更高的 `Ruby` 一起安装。
+
+3\. 安装 `SQLite3` 数据库
+
+正如你可能猜到的那样，Rails 是一个用 `Ruby` 语言编写的、专注于 Web 应用程序开发的框架。这意味着你需要学习一点 `Ruby` 编码，以消除进入 `Rails` 时的任何困难。如果你打开了浏览器，可以通过登录 `tryruby.org` 在练习 `Ruby` 代码方面获得极大的帮助，那里提供了一个非常棒交互交互式教程。先尝试一下，掌握使用 `Ruby` 编码的感觉。
+
+如果你还没有任何可用的 `SQLite 3`，可以在 `sqlite.org` 找到它。你也可以在那里获取安装说明。
+
+### 安装 Rails
+
+1\. 运行 `Rails` 安装程序（适用于 Windows 和 Mac 用户）或 `Tokaido`（Mac OS X 用户）
+
+2\. 通过在开始菜单上运行 `Run` 命令，然后在提示符中输入 `cmd`（Windows）来检查电脑上安装的 `Ruby` 版本。如果你在 Mac OS X 上运行，启动 `Terminal.app`。
+
+输入 `$ ruby –v`（无说明文字）。按下回车后，你将看到已安装的 `Ruby` 版本。
+
+3\. 输入 `$ sqlite3 –version` 检查安装的 `SQLite3` 版本。
+
+4\. 安装 `Rails` 后，在 `Terminal.app` 或命令行提示符中输入 `$ rails –version`。如果显示类似 `Rails 4.2.0` 的内容，那么你就可以准备了。
+
+### 关于 $ 符号的说明
+
+在本书中使用 `$` 符号是为了看起来像终端提示符，你可以在其后输入代码。如果你在 Windows 上使用 `Rails` 平台，你会看到类似这样的内容：`c:\source_code>`。
+
+# 第 3 章 创建你的第一个项目
+
+这是大多数 Web 开发者都在推崇 `Rails` 的点之一：它带有生成器（generators），或者说是为了让开发变得简单得多的脚本，它们提供了启动特定项目所需的所有内容。在这些脚本中，有一个新的应用生成器，它为你的新 `Rails` 应用提供了所需的结构，这样你不需要自己写一个了。现在这让你可以直接进入代码编写！
+
+由于你极可能要构建一个网站或 API（应用程序接口），你可能想开始编写一个博客应用程序。要开始，启动终端并进入任何你可以创建文件的目录。在提示符上输入 `$ rails new blog`。
+
+按下回车后，`Rails` 将开始在目录中创建一个名为 `Blog` 的应用程序。它还会开始创建你已经在 `Gemfile` 中列出的 gem 依赖，并执行 `bundle install`。
+
+现在，输入 `$ cd blog` 进入你的博客应用所在目录。
+
+### 里面有什么？
+
+一旦你进入该目录，你会发现 `Rails` 默认已经安装了许多文件。如果你不太确定这些文件的用途，这里是这些文件或文件夹功能的简要介绍：
+
+1\. `app/` - 包含你刚刚创建的应用的模型（models）、助手（helpers）、邮件发送器（mailers）、资源（assets）和控制器（controllers）。你以后会更多地关注这个文件夹。
+
+2\. `bin/` - 包含你将用于运行应用的脚本。还包含了你将用于部署、设置或运行你将创建的应用的其他脚本。
+
+3\. `config/` - 允许你调整应用的数据库、路由等。
+
+4\. `config.ru` - 这是基于 `Rack` 的服务器用于运行运行的配置。
+
+5\. `db/` - 包含你的数据库和数据库迁移（migrations）。
+
+6\. `Gemfile`, `Gemfile.lock` - 这些允许你告诉程序你正在构建的应用需要什么种的 gem 依赖。
+
+7\. `lib/` - 包含应用所需的扩展模块。
+
+8\. `log` - 包含应用的日志文件。
+
+9\. `public/` - 这是唯一一个其他人能看到的文件夹。它包含了你所有编译后的资源和创建的静态文件。
+
+10\. `Rakefile` - 该文件将用于定位并加载可以从命令行运行的任务。你可以在 `lib` 目录中添加你偏好的任务。
+
+11\. `README.rdoc` - 就像 readme 一样，这是一个简要文档，告诉其他人它是如何运作的、如何设置等。
+
+12\. `test/` - 包含你所有的单元测试和测试所需的所有内容。
+
+13\. `tmp/` - 存放所有的临时文件。
+
+14\. `vendor/` - 包含所有供应商（vendored）gems。
+
+### 启动 Web 服务器
+
+由于你已经有了应用程序的骨架，你可能想设置应用如何在互联网上启动。要启动 Web 服务器，请进入 `blog` 所在的目录，然后输入 `$ bin/rails server`。
+
+**重要提示：**
+
+如果你想使用 JavaScript 资源压缩或编译 CoffeeScript，你的电脑上需要可用的 JavaScript 运行时。否则，当你尝试编译这些资源时，会看到 `execjs` 错误。如果你想查看所有支持的运行时，可以访问 `github.com/sstephenson/execjs#readme`。
+
+
+
+控制器的目的是允许你的程序接收任何请求。当你进行路由（route）时，你实际上是让 Rails 决定你设置的哪些控制器将接收何种类型的请求。这可能意味着会有不同的路由指向该控制器，并由特定的动作（action）触发。需要一个 `action` 来收集发送到视图（view）所需的任何信息。
+
+## 2. 视图 (View)
+
+这个东西的主要目的是让 Rails 能够显示提供给动作的信息，并以其他人可以阅读的格式进行显示。已经提供了不同的视图模板，它们是用 eRuby 编写的，可以在信息发送给任何想要查看这些信息的人之前在请求循环中使用。
+
+懂了吗？很好。现在，为了设置你的欢迎页，你需要生成一个控制器，将其命名为“welcome”，并使用名为“index”的动作。你的代码看起来如下：
+
+```
+$ bin/rails generate controller welcome index
+```
+
+现在，Rails 将为你创建一组文件以及路由供你使用。当 Rails 完成这些操作后，你将看到：
+
+```
+create  app/controllers/welcome_controller.rb
+route  get 'welcome/index'
+invoke  erb
+create    app/views/welcome
+create    app/views/welcome/index.html.erb
+invoke  test_unit
+create    test/controllers/welcome_controller_test.rb
+invoke  helper
+create    app/helpers/welcome_helper.rb
+invoke  assets
+invoke     coffee
+create      app/assets/javascripts/welcome.js.coffee
+invoke     scss
+create      app/assets/stylesheets/welcome.css.scss
+```
+
+如果你想查看控制器的代码路径，请前往 `app/controllers/welcome_controller.rb`。如果你想查看视图，可以在 `app/views/welcome/index.html.erb` 找到它。
+
+有趣的部分来了。调出文本编辑器并打开 `app/views/welcome/index.html.erb`。清除你看到的所有代码，并将其替换为以下内容：
+
+```html
+<h1>Hello Rails!</h1>
+```
+
+执行此操作后，你已经成功地告知了 Rails 你希望显示“Hello Rails!”。这意味着当你访问 `http://localhost:3000` 时，这也是你想看到的问候语，而那里仍在显示“Welcome aboard”。
+
+### 创建应用主页
+
+你需要的下一件事是告诉 Rails 主页在哪里。为此，再次调出文本编辑器并打开 `config/routes.rb`。你应该会看到类似的内容：
+
+```ruby
+Rails.application.routes.draw do
+  get 'welcome/index'
+  # 优先级基于创建顺序：
+  # 先创建的 -> 优先级最高。
+  #
+  # 你可以使用 "root" 为你的网站根目录设置路由
+  # root 'welcome#index'
+  #
+  # ...
+end
+```
+
+这些行代表了路由文件，它告诉 Rails 如何将请求链接到特定的动作和控制器。现在，找到 `root 'welcome#index'` 这一行并取消注释。当你回到 `http://localhost:3000` 时，你会发现它现在显示的是 Hello Rails!
+
+# 第 5 章 让我们做些更多事情
+
+现在你已经学会了如何创建控制器、视图和动作，现在是时候创建一个新的资源（resource）了。资源是将相似对象组合在一起的东西，就像你对人、植物和动物分组一样。为了资源创建项目，你使用 `CRUD` 方法（创建、读取、更新、删除）。
+
+Rails 让构建网站变得简单，因为它已经带有一个用于资源的方法，可以用于创建 REST 资源。REST，或表述状态转换（Representational State Transfer），被认为是 Web 的架构结构，用于设计所有使用网络的应用程序，而不是使用相当复杂的操作来连接两台机器，你可以使用 HTTP 让机器之间进行通信。这意味着在很多方面，互联网是基于 RESTful 设计的。
+
+现在，按照你正在创建的项目，调出 `config/routes.rb` 并确保它看起来像这样：
+
+```ruby
+Rails.application.routes.draw do
+  resources :articles
+  root 'welcome#index'
+end
+```
+
+如果你查看 rake 路由（rake routes），你会发现 Rails 已经为所有涉及 REST 的动作制作路由。它看起来像这样：
+
+```
+$ bin/rake routes
+    Prefix Verb   URI Pattern                  Controller#Action
+    articles GET    /articles(.:format)         articles#index
+               POST   /articles(.:format)         articles#create
+    new_article GET    /articles/new               articles#new
+    edit_article GET    /articles/:id/edit         articles#edit
+    articles  GET    /articles/:id(.:format)     articles#show
+               PATCH  /articles/:id(.:format)     articles#update
+               PUT    /articles/:id(.:format)     articles#update
+               DELETE /articles/:id(.:format)     articles#destroy
+```
+
+# 第 6 章 创建文章
+
+现在你已经学会了如何创建控制器、视图和动作，现在是时候创建一个新的资源了。资源是将相似对象组合在一起的东西，就像你对人、植物和动物分组一样。为了资源创建项目，你使用 `CRUD` 方法（创建、读取、更新、删除）。
+
+Rails 让构建网站变得简单，因为它已经带有一个用于资源的方法，可以用于创建 REST 资源。REST，或表述状态转换（Representational State Transfer），被认为是 Web 的架构结构，用于设计所有使用网络的应用程序，而不是使用相当复杂的操作来连接两台机器，你可以使用 HTTP 让机器之间进行通信。这意味着在很多方面，互联网是基于 RESTful 设计的。
+
+控制器的目的是允许你的程序接收任何请求。当你进行路由（route）时，你实际上是让 Rails 决定你设置的哪些控制器将接收何种类型的请求。这可能意味着会有不同的路由指向该控制器，并由特定的动作（action）触发。需要一个 `action` 来收集发送到视图（view）所需的任何信息。
+
+## 视图 (View)
+
+这个东西的主要目的是让 Rails 能够显示提供给动作的信息，并以其他人可以阅读的格式进行显示。已经提供了不同的视图模板，它们是用 eRuby 编写的，可以在信息发送给任何想要查看这些信息的人之前在请求循环中使用。
+
+懂了吗？很好。现在，为了设置你的欢迎页，你需要生成一个控制器，将其命名为“welcome”，并使用一个名为“index”的动作。你的代码看起来如下：
+
+```
+$ bin/rails generate controller welcome index
+```
+
+现在，Rails 将为你创建一组文件以及路由供你使用。当 Rails 完成这些操作后，你将看到：
+
+```
+create  app/controllers/welcome_controller.rb
+route  get 'welcome/index'
+invoke  erb
+create    app/views/welcome
+create    app/views/welcome/index.html.erb
+invoke  test_unit
+create    test/controllers/welcome_controller_test.rb
+invoke  helper
+create    app/helpers/welcome_helper.rb
+invoke  assets
+invoke     coffee
+create      app/assets/javascripts/welcome.js.coffee
+invoke     scss
+create      app/assets/stylesheets/welcome.css.scss
+```
+
+如果你想查看控制器的代码路径，请前往 `app/controllers/welcome_controller.rb`。如果你想查看视图，可以在 `app/views/welcome/index.html.erb` 找到它。
+
+有趣的部分来了。调出文本编辑器并打开 `app/views/welcome/index.html.erb`。清除你看到的所有代码，并将其替换为以下内容：
+
+```html
+<h1>Hello Rails!</h1>
+```
+
+执行此操作后，你已经成功地告知了 Rails 你希望显示“Hello Rails!”。这意味着当你访问 `http://localhost:3000` 时，这也是你想看到的问候语，而那里仍在显示“Welcome aboard”。
+
+### 创建应用主页
+
+你需要的下一件事是告诉 Rails 主页在哪里。为此，再次调出文本编辑器并打开 `config/routes.rb`。你应该会看到类似的内容：
+
+```ruby
+Rails.application.routes.draw do
+  get 'welcome/index'
+  # 优先级基于创建顺序：
+  # 先创建的 -> 优先级最高。
+  #
+  # 你可以使用 "root" 为你的网站根目录设置路由
+  # root 'welcome#index'
+  #
+  # ...
+end
+```
+
+这些行代表了路由文件，它告诉 Rails 如何将请求链接到特定的动作和控制器。现在，找到 `root 'welcome#index'` 这一行并取消注释。当你回到 `http://localhost:3000` 时，你会发现它现在显示的是 Hello Rails!
+
+# 第 5 章 让我们做些更多事情
+
+现在你已经学会了如何创建控制器、视图和动作，现在是时候创建一个新的资源（resource）了。资源是将相似对象组合在一起的东西，就像你对人、植物和动物分组一样。为了资源创建项目，你使用 `CRUD` 方法（创建、读取、更新、删除）。
+
+Rails 让构建网站变得简单，因为它已经带有一个用于资源的方法，可以用于创建 REST 资源。REST，或表述状态转换（Representational State Transfer），被认为是 Web 的架构结构，用于设计所有使用网络的应用程序，而不是使用相当复杂的操作来连接两台机器，你可以使用 HTTP 让机器之间进行通信。这意味着在很多方面，互联网是基于 RESTful 设计的。
+
+现在，按照你正在创建的项目，调出 `config/routes.rb` 并确保它看起来像这样：
+
+```ruby
+Rails.application.routes.draw do
+  resources :articles
+  root 'welcome#index'
+end
+```
+
+如果你查看 rake 路由（rake routes），你会发现 Rails 已经为所有涉及 REST 的动作制作路由。它看起来像这样：
+
+```
+$ bin/rake routes
+    Prefix Verb   URI Pattern                  Controller#Action
+    articles GET    /articles(.:format)         articles#index
+               POST   /articles(.:format)         articles#create
+    new_article GET    /articles/new               articles#new
+    edit_article GET    /articles/:id/edit         articles#edit
+    articles  GET    /articles/:id(.:format)     articles#show
+               PATCH  /articles/:id(.:format)     articles#update
+               PUT    /articles/:id(.:format)     articles#update
+               DELETE /articles/:id(.:format)     articles#destroy
+```
+
+# 第 6 章 创建文章
+
+现在你已经学会了如何创建控制器、视图和动作，现在是时候创建一个新的资源了。资源是将相似对象组合在一起的东西，就像你对人、植物和动物分组一样。为了资源创建项目，你使用 `CRUD` 方法（创建、读取、更新、删除）。
+
+Rails 让构建网站变得简单，因为它已经带有一个用于资源的方法，可以用于创建 REST 资源。REST，或表述状态转换（Representational State Transfer），被认为是 Web 的架构结构，用于设计所有使用网络的应用程序，而不是使用相当复杂的操作来连接两台机器，你可以使用 HTTP 让机器之间进行通信。这意味着在很多方面，互联网是基于 RESTful 设计的。
+
+控制器的目的是允许你的程序接收任何请求。当你进行路由（route）时，你实际上是让 Rails 决定你设置的哪些控制器将接收何种类型的请求。这可能意味着会有不同的路由指向该控制器，并由特定的动作（action）触发。需要一个 `action` 来收集发送到视图（view）所需的任何信息。
+
+## 视图 (View)
+
+这个东西的主要目的是让 Rails 能够显示提供给动作的信息，并以其他人可以阅读的格式进行显示。已经提供了不同的视图模板，它们是用 eRuby 编写的，可以在信息发送给任何想要查看这些信息的人之前在请求循环中使用。
+
+懂了吗？很好。现在，为了设置你的欢迎页，你需要生成一个控制器，将其命名为“welcome”，并使用一个名为“index”的动作。你的代码看起来如下：
+
+```
+$ bin/rails generate controller welcome index
+```
+
+现在，Rails 将为你创建一组文件以及路由供你使用。当 Rails 完成这些操作后，你将看到：
+
+```
+create  app/controllers/welcome_controller.rb
+route  get 'welcome/index'
+invoke  erb
+create    app/views/welcome
+create    app/views/welcome/index.html.erb
+invoke  test_unit
+create    test/controllers/welcome_controller_test.rb
+invoke  helper
+create    app/helpers/welcome_helper.rb
+invoke  assets
+invoke     coffee
+create      app/assets/javascripts/welcome.js.coffee
+invoke     scss
+create      app/assets/stylesheets/welcome.css.scss
+```
+
+如果你想查看控制器的代码路径，请前往 `app/controllers/welcome_controller.rb`。如果你想查看视图，可以在 `app/views/welcome/index.html.erb` 找到它。
+
+有趣的部分来了。调出文本编辑器并打开 `app/views/welcome/index.html.erb`。清除你看到的所有代码，并将其替换为以下内容：
+
+```html
+<h1>Hello Rails!</h1>
+```
+
+执行此操作后，你已经成功地告知了 Rails 你希望显示“Hello Rails!”。这意味着当你访问 `http://localhost:3000` 时，这也是你想看到的问候语，而那里仍在显示“Welcome aboard”。
+
+### 创建应用主页
+
+你需要的下一件事是告诉 Rails 主页在哪里。为此，再次调出文本编辑器并打开 `config/routes.rb`。你应该会看到类似的内容：
+
+```ruby
+Rails.application.routes.draw do
+  get 'welcome/index'
+  # 优先级基于创建顺序：
+  # 先创建的 -> 优先级最高。
+  #
+  # 你可以使用 "root" 为你的网站根目录设置路由
+  # root 'welcome#index'
+  #
+  # ...
+end
+```
+
+这些行代表了路由文件，它告诉 Rails 如何将请求链接到特定的动作和控制器。现在，找到 `root 'welcome#index'` 这一行并取消注释。当你回到 `http://localhost:3000` 时，你会发现它现在显示的是 Hello Rails!
+
+# 第 5 章 让我们做些更多事情
+
+现在你已经学会了如何创建控制器、视图和动作，现在是时候创建一个新的资源（resource）了。资源是将相似对象组合在一起的东西，就像你对人、植物和动物分组一样。为了资源创建项目，你使用 `CRUD` 方法（创建、读取、更新、删除）。
+
+Rails 让构建网站变得简单，因为它已经带有一个用于资源的方法，可以用于创建 REST 资源。REST，或表述状态转换（Representational State Transfer），被认为是 Web 的架构结构，用于设计所有使用网络的应用程序，而不是使用相当复杂的操作来连接两台机器，你可以使用 HTTP 让机器之间进行通信。这意味着在很多方面，互联网是基于 RESTful 设计的。
+
+现在，按照你正在创建的项目，调出 `config/routes.rb` 并确保它看起来像这样：
+
+```ruby
+Rails.application.routes.draw do
+  resources :articles
+  root 'welcome#index'
+end
+```
+
+如果你查看 rake 路由（rake routes），你会发现 Rails 已经为所有涉及 REST 的动作制作路由。它看起来像这样：
+
+```
+$ bin/rake routes
+    Prefix Verb   URI Pattern                  Controller#Action
+    articles GET    /articles(.:format)         articles#index
+               POST   /articles(.:format)         articles#create
+    new_article GET    /articles/new               articles#new
+    edit_article GET    /articles/:id/edit         articles#edit
+    articles  GET    /articles/:id(.:format)     articles#show
+               PATCH  /articles/:id(.:format)     articles#update
+               PUT    /articles/:id(.:format)     articles#update
+               DELETE /articles/:id(.:format)     articles#destroy
+```
+
+# 第 6 章 创建文章
+
+现在你已经学会了如何创建控制器、视图和动作，现在是时候创建一个新的资源了。资源是将相似对象组合在一起的东西，就像你对人、植物和动物分组一样。为了资源创建项目，你使用 `CRUD` 方法（创建、读取、更新、删除）。
+
+Rails 让构建网站变得简单，因为它已经带有一个用于资源的方法，可以用于创建 REST 资源。REST，或表述状态转换（Representational State Transfer），被认为是 Web 的架构结构，用于设计所有使用网络的应用程序，而不是使用相当复杂的操作来连接两台机器，你可以使用 HTTP 让机器之间进行通信。这意味着在很多方面，互联网是基于 RESTful 设计的。
+
+控制器的目的是允许你的程序接收任何请求。当你进行路由（route）时，你实际上是让 Rails 决定你设置的哪些控制器将接收何种类型的请求。这可能意味着会有不同的路由指向该控制器，并由特定的动作（action）触发。需要一个 `action` 来收集发送到视图（view）所需的任何信息。
+
+## 视图 (View)
+
+这个东西的主要目的是让 Rails 能够显示提供给动作的信息，并以其他人可以阅读的格式进行显示。已经提供了不同的视图模板，它们是用 eRuby 编写的，可以在信息发送给任何想要查看这些信息的人之前在请求循环中使用。
+
+懂了吗？很好。现在，为了设置你的欢迎页，你需要生成一个控制器，将其命名为“welcome”，并使用一个名为“index”的动作。你的代码看起来如下：
+
+```
+$ bin/rails generate controller welcome index
+```
+
+现在，Rails 将为你创建一组文件以及路由供你使用。当 Rails 完成这些操作后，你将看到：
+
+```
+create  app/controllers/welcome_controller.rb
+route  get 'welcome/index'
+invoke  erb
+create    app/views/welcome
+create    app/views/welcome/index.html.erb
+invoke  test_unit
+create    test/controllers/welcome_controller_test.rb
+invoke  helper
+create    app/helpers/welcome_helper.rb
+invoke  assets
+invoke     coffee
+create      app/assets/javascripts/welcome.js.coffee
+invoke     scss
+create      app/assets/stylesheets/welcome.css.scss
+```
+
+如果你想查看控制器的代码路径，请前往 `app/controllers/welcome_controller.rb`。如果你想查看视图，可以在 `app/views/welcome/index.html.erb` 找到它。
+
+有趣的部分来了。调出文本编辑器并打开 `app/views/welcome/index.html.erb`。清除你看到的所有代码，并将其替换为以下内容：
+
+```html
+<h1>Hello Rails!</h1>
+```
+
+执行此操作后，你已经成功地告知了 Rails 你希望显示“Hello Rails!”。这意味着当你访问 `http://localhost:3000` 时，这也是你想看到的问候语，而那里仍在显示“Welcome aboard”。
+
+### 创建应用主页
+
+你需要的下一件事是告诉 Rails 主页在哪里。为此，再次调出文本编辑器并打开 `config/routes.rb`。你应该会看到类似的内容：
+
+```ruby
+Rails.application.routes.draw do
+  get 'welcome/index'
+  # 优先级基于创建顺序：
+  # 先创建的 -> 优先级最高。
+  #
+  # 你可以使用 "root" 为你的网站根目录设置路由
+  # root 'welcome#index'
+  #
+  # ...
+end
+```
+
+这些行代表了路由文件，它告诉 Rails 如何将请求链接到特定的动作和控制器。现在，找到 `root 'welcome#index'` 这一行并取消注释。当你回到 `http://localhost:3000` 时，你会发现它现在显示的是 Hello Rails!
+
+# 第 7 章 创建表单
+
+调出 `app/views/articles/new.html.erb` 并添加以下内容：
+
+```html
+<h1>New Article</h1>
+```
+
+执行此操作后，你已经成功地告知了 Rails 你希望显示“New Article”。这意味着当你访问 `http://localhost:3000` 时，这也是你想看到的问候语，而那里仍在显示“Welcome aboard”。
+
+## 创建表单 (Form)
+
+调出 `app/views/articles/new.html.erb` 并添加以下内容：
+
+```erb
+<%= form_for :article do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+```
+
+你会发现你刚刚创建了一个表单，它有一个文章标题的空间、提交按钮，而且还带框！这就是 `form_for` 代码的功能。你会意识到，当你提交要创建的文章时，它需要在另一个 URL 中完成，然后整个文本都应该去哪里。编辑 `app/views/articles/new.html.erb`，找到 `form_for` 这一行并让它看起来像这样：
+
+```erb
+<%= form_for :article, url: articles_path do |f| %>
+```
+
+在 Rails 中，`create` 动作负责为提交创建新的表单，因此你的表单应该是朝着这个动作工作的。
+
+## 创建模型 (Model)
+
+Rails 已经提供了一个生成器，你的项目可以使用它启动模型。为了让 Rails 开始生成模型，请在终端上运行以下命令：
+
+```
+$ bin/rails generate model Article title:string text:text
+```
+
+
+
+
+刚刚发生的情况是，你告诉 `Rails` 你需要一个 `Article` 模型，该模型包含 `title` 和 `text` 属性，它们分别对应不同的字符串。你会发现平台创建了很多文件，但你最感兴趣的是 `db/migrate/20140120191729_create_articles.rb`，它包含了你博客的数据库。
+
+现在，你想运行一次迁移（migration），只需一行代码即可完成：
+
+```bash
+$ bin/rake db:migrate
+```
+
+`Rails` 会执行的是执行此命令，这意味着它创建了 `Articles` 表：
+
+```
+== CreateArticles: migrating =================================================
+-- create_table(:articles)
+   -> 19s
+== CreateArticles: migrated (20s) ========================================
+```
+
+# 第 8 章 保存你的数据
+
+打开 `app/controllers/articles_controller.rb` 将 `create` 动作修改为：
+
+```ruby
+def create
+  @article = Article.new(params[:article])
+  @article.save
+  redirect_to @article
+end
+```
+
+你几乎可以创建文章了！但是，当你刷新页面时，会看到 Forbidden Attributes（禁止属性）错误，并指向 `Article.new(params[:article])` 这一行。`Rails` 之所以让你感到困难，是因为它要求你在控制器中指定哪些参数，否则可能会导致程序崩溃。
+
+要修复这个问题，编辑你看到的错误所在行并将其改为：
+
+```ruby
+@article = Article.new(params.require(:article).permit(:title, :text))
+```
+
+## 显示你的成果
+
+为了让页面显示文章，你可以通过 `app/controllers/articles_controller.rb` 添加 `show` 动作：
+
+```ruby
+class ArticlesController < ApplicationController
+  def show
+    @article = Article.find(params[:id])
+  end
+
+  def new
+end
+```
+
+现在添加一些样式。创建一个名为 `app/views/articles/show.html.erb` 的文件并放入以下内容：
+
+```ererb
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+```
+
+刷新 `http://localhost:3000/articles/new`，你就会可以创建并显示文章了！
+
+# 第 9 章 让你的文章整洁
+
+找到一种方法列出你要创建的所有文章，以便数据库井井。为此，打开 `app/controllers/articles_controller.rb` 并添加以下内容进行控制：
+
+```ruby
+class ArticlesController < ApplicationController
+  def index
+    @articles = Article.all
+  end
+
+  def show
+    @article = Article.find(params[:id])
+  end
+
+  def new
+end
+```
+
+现在，为了添加视图，打开 `app/views/articles/index.html.erb` 并添加以下内容：
+
+```ererb
+<h1>Article List</h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+    </tr>
+  <% end %>
+</table>
+```
+
+访问 `http://localhost:3000/articles`，你会看到你目前创建的所有文章。
+
+## 使用链接进一步整理
+
+你确实需要为已创建的文章创建链接，以便读者可以轻松查看。要添加链接，打开 `app/views/welcome/index.html.erb` 并将其改为：
+
+```ererb
+<h1>Hello, Rails!</h1>
+<%= link_to 'My Blog', controller: 'articles' %>
+```
+
+现在，如果你想添加一个可以立即编写新文章的链接怎么办？你只需要在 `app/views/articles/index.html.erb` 中添加以下内容来获得 New Article 链接：
+
+```ererb
+<%= link_to 'New article', new_article_path %>
+```
+
+如果你想创建一个返回之前的链接，在同一个文件中添加以下内容：
+
+```ererb
+<%= form_for :article, url: articles_path do |f| %>
+  ...
+<% end %>
+
+<%= link_to 'Back', articles_path %>
+```
+
+# 第 10 章创建规则
+
+创建博客程序时，你不希望用户意外提交空白页面，然后直接回到原来而不知道他们做了什么。`Rails` 可以通过编辑 `app/models/article.rb` 文件来帮助确保这种情况不会发生：
+
+```ruby
+class Article < ActiveRecord::Base
+  validates :title, presence: true,
+             length: { minimum: 5 }
+end
+```
+
+这意味着标题至少要有 5 个字符，文章才能通过，否则它不会被保存。现在博客的规则已经就绪，你需要向博客用户显示发生了错误，并且表单应该正确填写。为此，调整 `app/controllers/articles_controller.rb` 中的 `create` 和 `new` 动作如下所示：
+
+```ruby
+def new
+  @article = Article.new
+end
+
+def create
+  @article = Article.new(article_params)
+  if @article.save
+    redirect_to @article
+  else
+    render 'new'
+  end
+end
+
+private
+
+  def article_params
+    params.require(:article).permit(:title, :text)
+  end
+```
+
+为了向用户展示这个，在 `app/views/index.html.erb` 中添加以下内容：
+
+```ererb
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
+```
+
+# 第 11 章 更新文章
+
+你希望用户对他们刚刚写的文章改变主意。这涉及 `update` 动作，提示你在 `ArticlesController` 中添加：
+
+```ruby
+def new
+  @article = Article.new
+end
+
+def edit
+  @article = Article.find(params[:id])
+end
+```
+
+为了允许此视图，创建一个文件并命名为 `app/views/articles/edit.html.erb`，然后放入：
+
+```ererb
+<h1>Editing article</h1>
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+  <% if @article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
+      <ul>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', articles_path %>
+```
+
+现在，你需要在 `app/controllers/articles_controller.rb` 中创建 `update` 动作：
+
+```ruby
+def update
+  @article = Article.find(params[:id])
+  if @article.update(article_params)
+    redirect_to @article
+  else
+    render 'edit'
+  end
+end
+```
+
+
+
+
+
+```ruby
+def update
+  @article = Article.find(params[:id])
+  if @article.update(article_params)
+    redirect_to @article
+  else
+    render 'edit'
+  end
+end
+
+private
+
+  def article_params
+    params.require(:article).permit(:title, :text)
+  end
+end
+```
+
+为了显示“编辑”（Edit）链接，你可以修改 `app/views/articles/index.html.erb`，让该链接出现在“显示”（Show）链接之后。
+
+```html
+<table>
+  <tr>
+    <th>Title（标题）</th>
+    <th>Text（正文）</th>
+    <th colspan="2"></th
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show（显示）', article_path(article) %></td>
+      <td><%= link_to 'Edit（编辑）', edit_article_path(article) %></td>
+    </tr>
+  <% end %>
+</table>
+```
+
+现在，为了让用户有机会编辑他的作品，请在模板 `app/views/articles/show.html.erb` 中添加这些行：
+
+...
+
+```html
+<%= link_to 'Back（返回）', articles_path %> |
+<%= link_to 'Edit（编辑）', edit_article_path(@article) %>
+```
+
+# 第 12 章 删除某些数据
+
+不，这并不意味着你要毁掉构建的整个程序。在这个阶段，你需要为用户提供删除其所写的某些文章的功能。由于你正在创建一个 RESTful 程序，你将需要使用以下路由：
+
+`DELETE /articles/:id(.:format) articles#destroy`
+
+此路由使得 Rails 能够轻松删除资源，你需要确保它被放置在保护方法或私有方法之前。让我们在 `app/controllers/articles_controller.rb` 文件中添加这个 action：
+
+```ruby
+def destroy
+  @article = Article.find(params[:id])
+  @article.destroy
+  redirect_to articles_path
+end
+```
+
+执行此操作后，你会发现 `app/controllers/articles_controller.rb` 中的 `ArticlesController` 现在如下所示：
+
+```ruby
+class ArticlesController < ApplicationController
+  def index
+    @articles = Article.all
+  end
+  def show
+    @article = Article.find(params[:id])
+  end
+  def new
+    @article = Article.new
+  end
+  def edit
+    @article = Article.find(params[:id])
+  end
+  def create
+    @article = Article.new(article_params)
+    if @article.save
+      redirect_to @article
+    else
+      render 'new'
+    end
+  end
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
+    end
+  end
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path
+  end
+  private
+    def article_params
+      params.require(:article).permit(:title, :text)
+    end
+end
+```
+
+现在，是时候让用户知道他们有这个选项了。打开 `app/views/articles/index.html.erb` 文件并添加以下行：
+
+```html
+<h1>Listing Articles（文章列表）</h1>
+<%= link_to 'New article（新建文章）', new_article_path %>
+
+<table>
+  <tr>
+    <th>Title（标题）</th>
+    <th>Text（正文）</th>
+    <th colspan="3"></th
+  </tr>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show（显示）', article_path(article) %></td>
+      <td><%= link_to 'Edit（编辑）', edit_article_path(article) %></td>
+      <td><%= link_to 'Delete（删除）', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?（你确定吗？’) } %></td>
+    </tr>
+  <% end %>
+</table>
+```
+
+你会注意到你还添加了一个功能，让用户确认他是否真的想要删除提交的文章。现在，为了让确认框出现，你需要确保你的机器中拥有 `jquery_ujs` 文件。
+
+# 结语
+
+再次感谢你下载这本书！
+
+希望这本书能够帮助你掌握 Ruby on Rails 的基础知识，并让你能够根据书中讨论的代码和流程创建一个网页。
+
+下一步是探索该平台的其他应用，并学习其他的 Rails 技术，这些技术将改进你的程序设计和集成。
+
+最后，如果你喜欢这本书，请花时间分享你的想法并在 Amazon 上发表评论。我们尽力接触读者并提供我们能提供的最佳价值。你的好评将帮助我们实现这一目标。我们将不胜感激！
+
+感谢并祝你好运！
+
+![thank-you](img/00001.jpeg)
+
+[点击此处在 amazon.com 上留下评论](https://www.amazon.com)
+
+# C 语言编程成功入门预览
+
+## 第 1 章：Hello World
+
+在 C 语言编程中，当你编写程序时，必须有一个 `main` 函数。为了让你了解 C 代码看起来像什么样，请看示例：
+
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello World!\n");
+    return 0;
+}
+```
+
+正如你在第一行看到的，代码使用了 `#include` 指令来包含 `stdio.h`。在 C 语言中，你需要包含某些头文件才能使用特定的函数。`stdio.h` 是标准输入输出头文件，它包含了 `printf` 的定义。
+
+`int main()` 表明 `main` 函数将返回一个整数（integer）。
+
+`{ ... }` 大括号定义了函数的体开始和结束。
+
+`printf("Hello World!\n");` 是 `printf` 函数，它的作用是将文本打印到程序窗口中。`Hello World!\n` 是你想打印的字符串，`\n` 是换行符。
+
+`return 0;` 这行代码表示 `main` 函数成功返回整数 0。
+
+## 变量
+
+在 C 语言中，你可以使用变量来存储数据。每个变量都必须声明一个类型。例如：
+
+```c
+int age = 25;
+float score = 95.5;
+char grade = 'A';
+```
+
+在上面的例子中，`int` 用于整数，`float` 用于浮点数（小数），`char` 用于单个字符。
+
+## 运算符
+
+运算符用于对对值执行操作。常用的运算符包括：
+
+- `+` (加法）
+- `-` (减法）
+- `*` (乘法）
+- `/` (除法）
+- `%` (取模/取余）
+
+例如：
+
+```c
+int sum = 10 + 5; // sum 为 15
+```
+
+## 条件语句
+
+`if` 语句允许程序根据条件执行代码：
+
+```c
+if (age >= 18) {
+    printf("成年");
+} else {
+    printf("未成年");
+}
+```
+
+## 循环
+
+循环允许重复执行代码块。`for` 循环非常常用：
+
+```c
+for (int i = 0; i < 5; i++) {
+    printf("%d\n", i);
+}
+```
+
+`while` 循环也是常用的：
+
+```c
+int i = 0;
+while (i < 5) {
+    printf("%d\n", i);
+    i++;
+}
+```
+
+## 函数
+
+函数是可重用的代码块。你可以定义并调用它们：
+
+```c
+void greet() {
+    printf("你好！");
+}
+
+int main() {
+    greet();
+    return 0;
+}
+```
+
+## 数组
+
+数组是存储相同类型多个值的列表：
+
+```c
+int numbers[5] = {1, 2, 3, 4, 5};
+```
+
+## 结构体
+
+结构体允许你将不同类型的数据组合在一起：
+
+```c
+struct Student {
+    char name[50];
+    int age;
+};
+
+struct Student s1 = {"Alice", 20};
+```
+
+通过学习这些基础，你已经开启了 C 语言编程之旅。继续练习并探索更多高级的概念！
+
+
+
+- [点击此处在 Amazon 上查看《CSS Programming Professional Made Easy](http://www.amazon.com/CSS-Programming-Professional-Made-Easy-ebook/dp/B00RET2L2U)
+- [点击此处在 Amazon 上查看《Windows 8 Tips for Beginners](http://www.amazon.com/Windows-Tips-Beginners-Networking-Technology-ebook/dp/B00RW2E6JA)
+- [点击此处在 Amazon 上查看《C Programming Professional Made Easy](http://www.amazon.com/Programming-Professional-Made-Easy-programming-ebook)
+- [点击此处在 Amazon 上查看《JavaScript Programming Made Easy](http://www.amazon.com/JavaScript-Professional-Programming-Made-Easy-ebook/dp/B00SDM365S)
+- [点击此处在 Amazon 上查看《C ++ Programming Success in a Day](http://www.amazon.com/Programming-Professional-Made-Easy-programming-ebook/dp/B00S776K5M)
+
+如果链接由于某种原因无法正常工作，您可以直接在 Amazon 网站上搜索这些标题来找到它们。
+

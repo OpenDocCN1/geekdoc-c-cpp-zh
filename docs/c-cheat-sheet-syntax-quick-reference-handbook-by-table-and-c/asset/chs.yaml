@@ -1,0 +1,1207 @@
+- "# C++ 速查表，语法快速参考手册（表格与图表）：语法快速学习指南\n\n\n\n![](img/image_rsrc767.jpg)\n\n\n## 关于本书\n\
+  本书涵盖了所有基础 C++ 语法，几乎每个语法条目都列出了一个程序示例和结果输出（300 个示例，300 个输出，300 个解释）。我们可以快速参考最有帮助的编程语法，例如常用命令语法、字符串函数语法、集合函数语法、类与对象语法等等……这些语法对于编程都非常有用。\n\
+  \n我们可以将这本书作为一份基础语法手册，因为它的条目是按字母顺序排列的，方便我们轻松参考重要的语法。\n\n无论现在还是未来，C++ 语法书都能为我们学习和工作中的编码提供巨大的帮助。\n\
+  \n在世界上，哪里能找到一本拥有“300 个示例，300 个输出，300 个解释”的书呢？\n\n----- 仅在此处！\n\n## 免责声明\n本书仅作为基础语法手册；它不能包含该主题的所有条目。其目的是作为查表书籍的补充，而不是完整的\
+  \ C++ 字典。\n\n## 类模板语法\n\n```cpp\ntemplate <class T>      // 定义一个类模板\nclass templateName{\
+  \ class body };   // 类模板\n```\n\n一个类模板可以替换多个类的代码。\n如果多个类体相同，仅数据类型不同，则可以使用类模板。\n\
+  `templateName <type>object;`\n// 创建类模板对象\n\ne.g.\n```cpp\n#include <iostream>\n\
+  using namespace std;\n\ntemplate< class T>     // 定义一个类模板\nclass Contrast{     //\
+  \ 类模板\npublic:\n    Contrast(T a, T b)     // 构造函数\n    { x = a; y = b;}\n    T\
+  \ max( )      // \"T\" 可能是不同的数据类型\n    { return (x > y) ? x : y;}\nprivate:\n  \
+  \  T x, y;     // \"T\" 可能是不同的数据类型\n};\n\nint main( ){\n    Contrast <int>con1(\
+  \ 10, 20);     // 创建一个对象 \"con1\"\n    cout << con1.max( ) << endl;     // 数据类型为\
+  \ \"int\"\n    Contrast <float>con2( 20.01, 20.02 );    // 创建 \"con2\"\n    cout\
+  \ << con2.max( ) << endl;     // 数据类型为 \"float\"\n    Contrast <long> con3( 67891,\
+  \ 67892 );     // 创建 \"con3\"\n    cout << con3.max( ) << endl;     // 数据类型为 \"\
+  long\"\n    return 0;\n}\n```\n// 输出: 20        20.02        67892\n\n## clog 语法\n\
+  \n```cpp\nclog << variable;\n```\n\n// 输出日志消息\n\ne.g.\n```cpp\nint main( ){\n  \
+  \  char msg[] = \"The file is executed only one time\";\n    clog << \"Log message\
+  \ : \" << msg << endl;\n}\n```\n// 输出: Log message : The file is executed only one\
+  \ time\n\n## 注释语法\n\n注释 `//` 用于单行注释。\n注释 `/*…*/` 用于多行注释。\n// C++ 注释用于解释当前代码，描述这些代码正在做什么。C++\
+  \ 编译器会忽略注释。\n\ne.g.\n```cpp\ncout << \"Hello World\" ;   // 输出 \"Hello World\"\n\
+  \n/*\n这里是多行注释\n\"cout <<\"  是一个 C++ 输出命令，意味着显示或打印。\n*/\n```\n\n## 条件编译语法\n\n```cpp\n\
+  #if expression\n编译代码 1       // 如果为真，编译此代码\n#else\n编译代码 2       // 如果为假，编译此代码\n\
+  #endif\n```\n\n如果条件测试结果为真，则会编译 C++ 程序的一部分；如果条件测试为假，则不编译。\n\ne.g.\n```cpp\n#include<iostream>\n\
+  using namespace std;\n#define ID 100\nint main( ){\n#if ID > 0\ncout<< \"ID>0\"\
+  \ << endl;\n#else\ncout<< \"ID<0\" << endl;\n#endif\nreturn 0;\n}\n```\n// 输出: ID>0\n\
+  \n## 条件编译语法\n\n```cpp\n#ifdef identifier\n编译代码 1       // 如果已定义，编译此代码\n#else\n编译代码\
+  \ 2       // 如果未定义，编译此代码\n#endif\n```\n\n如果字符串之前被定义过，则会编译 C++ 程序的一部分；如果字符串未定义，则不编译。\n\
+  \ne.g.\n```cpp\n#include<iostream>\nusing namespace std;\n#define VARIABLE \"This\
+  \ is a string.\"\nint main( ){\n#ifdef VARIABLE\ncout<< \"VARIABLE has been defined\"\
+  \ <<endl;\n#else\ncout<< \"VARIABLE has not been defined\" << endl;\n#endif\nreturn\
+  \ 0;\n}\n```\n// 输出: VARIABLE has been defined.\n\n## 条件运算符语法\n\n```cpp\n(test-expression)\
+  \ ? (if-true-do-this) : (if-false-do-this);\n```\n\n// 当 `test-expression` 返回真时，执行\
+  \ `if-true-do-this`。\n// 当 `test-expression` 返回假时，执行 `if-false-do-this`。\n\ne.g.\n\
+  ```cpp\nint main( ) {\n    int a = 100; int b =200;\n    string result = (a < b)\
+  \ ? \"apple\" : \"banana\";\n    // (test-expression) ? (if-true-do-this) : (if-false-do-this);\n\
+  \    cout << result << endl;\n    return 0;\n}\n```\n// 输出: apple\n\n## 常量定义语法\n\
+  \n```cpp\n#define CONSTANT-NAME \"value\"\n```\n\n// `#define` 定义一个常量。\n// `CONSTANT_NAME`\
+  \ 是常量名，使用大写。\n// 注意：尽量不要在 `#define` `CONSTANT_NAME` 语句结束加分号。\n\ne.g.\n```cpp\n#include\
+  \ <iostream>\nusing namespace std;\n#define SYMBOL \"$\"   // 定义一个常量\n#define PRICE\
+  \ 80    // 定义一个常量\n#define MONEY \" dollars\" // 定义一个常量\n\nint main( ) {\n    int\
+  \ num = 10;\n    cout << SYMBOL << num * PRICE << MONEY;\n    return 0;\n}\n```\n\
+  // 输出: $800 dollars\n\n## 常量定义语法\n\n```cpp\nconst type variable = value;\n```\n\n\
+  // `const` 用于定义常量。\n// 常量名通常是大大写的。\n\ne.g.\n```cpp\n#include <iostream>\nusing namespace\
+  \ std;\nconst int LENGTH = 100; \nconst int WIDTH = 50;\n\nint main(){\n    int\
+  \ rectangle; \n    rectangle = LENGTH * WIDTH;\n    cout << rectangle;\n    return\
+  \ 0;\n}\n```\n// 输出: 5000\n\n## constexpr 语法\n\n```cpp\nconstexpr variables/function/constructors\n\
+  ```\n\n// `constexpr` 意味着常量表达式，它可以用于变量、函数、构造函数。`constexpr` 在编译时求值而不是在运行时求值。\n\n\
+  e.g.\n```cpp\n#include <iostream>\nconstexpr int sum(int a, int b){ return (a +\
+  \ b); }\n\n// 通过 constexpr，编译器在编译时求值。\nint main(){\n    constexpr int s = sum(10,\
+  \ 20);\n    std::cout << s;\n    return 0;\n}\n```\n// 输出: 30\n\n## 构造函数语法\n\n```cpp\n\
+  class ClassName{\n    ClassName( ) {…} ; // 构造函数\n};\n```\n\n// 构造函数用于初始化变量。构造函数名与类名相同。当创建对象时，构造函数会被调用。\n\
+  \ne.g.\n```cpp\n#include<string>\n#include <iostream>\nusing namespace std;\n\n\
+  class Flower {     // 创建一个名为 Flower 的类\n```\n\n\n\n\n\n```cpp\npublic:    // 指定访问权限\n\
+  \  string c1, c2;\n\n  void beautify() {  cout << \"Green\" <<endl; };\n\n  Flower(){\
+  \  c1= \"Red\";  c2 = \"Yellow\"; };    // 构造函数\n\n  // 定义一个构造函数 \"Flower()\"\n\
+  };\n\nint main( ) {\n  Flower obj;    // 创建名为 \"obj\" 的对象并调用构造函数\n  cout << obj.c1\
+  \ << endl;\n  cout << obj.c2 << endl;\n  obj.beautify();\n  return 0;\n}\n```\n\
+  Output:\nRed\nYellow\nGreen\n\n---\n\n### continue 语法：\n\n```cpp\ncontinue;\n```\n\
+  `continue` 关键字用于停止当前的迭代，忽略后续代码，然后继续下一次循环。\n\ne.g.\n```cpp\nint num = 0;\n\nwhile\
+  \ ( num < 10 ){\n  num++;\n  if ( num == 5 )  continue; // 进入下一次 while 循环\n  cout\
+  \ <<  num ;      // 如果 num 是 5，则跳过这段代码\n}\n```\nOutput: `1234678910`\n注意输出中没有 `5`。\n\
+  \n---\n\n### 类型转换语法：\n\n```cpp\n( type ) variable;\n```\n将一种数据类型转换为另一种数据类型。\n\n\
+  e.g.\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main(){\n  double\
+  \ x = 2.718281828;\n  float y = 3.14;\n  int z ;\n  z = (int)x;\n  cout << \"Value\
+  \ of (int)x is: \" << z << endl ;\n  z = (int)y;\n  cout << \"Value of (int)y is:\
+  \ \" << z << endl ;  \n  return 0;\n}\n```\nOutput:\nValue of `(int)x` is: 2\nValue\
+  \ of `(int)y` is: 3\n\n---\n\n### cos() 语法：\n\n```cpp\ncos(num)\n```\n返回以弧度为单位的\
+  \ num 的余值。\n\ne.g.\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace\
+  \ std;\n\nint main(){\n  double degree=30;\n  double r = degree*3.14/180; \n  cout\
+  \ << cos(r);\n}\n```\nOutput: `0.866158`\n\n---\n\n### cosh() 语法：\n\n```cpp\ncosh(num)\n\
+  ```\n返回 num 的双曲余弦。\n\ne.g.\n```cpp\n#include <cmath>\n#include <iostream>\nusing\
+  \ namespace std;\n\nint main(){\n  cout << cosh(0.6);\n}\n```\nOutput: `1.18547`\n\
+  \n---\n\n### cout 语法：\n\n```cpp\ncout << \"   \";  // 在同一行中打印结果\ncout << \"   \"\
+  \ << endl; // 在不同行中打印结果\n```\ne.g.\n```cpp\ncout << \" 1 \";     // 在同一行输出\ncout\
+  \ << \" 2 \";\ncout << \" 3 \";\n```\nOutput: `1  2  3`\n\ne.g.\n```cpp\ncout <<\
+  \ \" 1 \" << endl ;    // 在不同行输出\ncout << \" 2 \" << endl ;\ncout << \" 3 \" <<\
+  \ endl ;\n```\nOutput:\n1\n2\n3\n\n---\n\n### ctime() 语法：\n\n```cpp\ntime_t t //\
+  \ 定义一个 time_t 类型变量 \"t\"。\nctime(&t) // 返回表示本地时间的字符串\n```\ne.g.\n```cpp\n#include\
+  \ <ctime>\n#include <iostream>\nusing namespace std;\n\nint main(){\n  time_t t;\n\
+  \  ctime(&t); // 返回当前日期和时间\n  cout<<\"Today is: \"<< ctime(&t);\n}\n```\nOutput:\
+  \ `Today is : Today is: Mon Dec 26 22:37:09 2022`\n\n---\n\n### 当前日期与时间语法：\n\n```cpp\n\
+  time_t now = time(0);    // 获取当前系统的日期与时间\nchar* dt = ctime(&now);    // 将 \"now\"\
+  \ 转换为字符串类型\n```\n获取日期和时间，请先包含 `<ctime>`。\n\ne.g.\n```cpp\n#include <iostream>\n\
+  #include <ctime>\nusing namespace std;\n\nint main( ){\n  time_t now = time(0);\
+  \      // 获取当前系统的日期与时间\n  char* dt = ctime(&now);      // 将 \"now\" 转换为字符串类型\n \
+  \ cout << dt << endl;\n}\n```\nOutput: `Sun Aug  7    16:02:18    2022`\n\n---\n\
+  \n### 数据类型语法：\n\n```cpp\ntype variable = value;\n```\n数据类型指定了变量的属性。\n\ne.g.\n```cpp\n\
+  #include <iostream>\n#include <string>\nusing namespace std;\n\nint main () {\n\
+  \  int myNum = 10;             // 整数\n  float myFloat = 10.99;      // 浮点数\n  double\
+  \ myDouble = 10.9999;  // 双精度浮点数\n  char myCharacter = 'C';     // 字符\n  bool myBool\
+  \ = true;        // 布尔值\n  string myString = \"C Plus Plus\";   // 字符串\n  cout <<\
+  \ \"int type: \" << myNum << \"\\n\";\n  cout << \"float type: \" << myFloat <<\
+  \ \"\\n\";\n  cout << \"double type: \" << myDouble << \"\\n\";\n  cout << \"char\
+  \ type: \" << myCharacter << \"\\n\";\n  cout << \"bool type: \" << myBool << \"\
+  \\n\";\n  cout << \"string type: \" << myString << \"\\n\";\n  return 0;\n}\n```\n\
+  Output:\nint type: 10\nfloat type: 10.99\ndouble type: 10.9999\nchar type: C\nbool\
+  \ type: 1\nstring type: C Plus Plus\n\n---\n\n### UTC 日期时间语法：\n\n```cpp\ntime_t\
+  \ now = time(0);    // 获取当前日期时间\ntm *gm = gmtime(&now);    // 将 \"now \" 转换为 tm\
+  \ 类型\nchar* utc = asctime(gm); // 获取 UTC 日期时间\n```\n获取日期和时间，请先包含 `<ctime>`。\n\n\
+  e.g.\n```cpp\n#include <iostream>\n#include <ctime>\nusing namespace std;\n\nint\
+  \ main( ){\n  time_t now = time(0);    // 获取当前日期时间\n  tm *gm = gmtime(&now);   \
+  \ // 将 \"now \" 转换为 tm 类型\n  char* utc = asctime(gm); // 获取 UTC 日期时间\n  cout <<\
+  \ utc << endl;\n}\n```\nOutput: `Sun Aug 7    16:28:29      2022`\n\n---\n\n###\
+  \ 默认参数语法：\n\n```cpp\nvoid functionName( type variable = value ) {\n}\n```\n如果调用函数时不带参数，C++\
+  \ 编译器将应用默认参数。\n`(type variable = value)` 是一个默认参数。\n\ne.g.\n```cpp\n#include <iostream>\n\
+  #include <string>\nusing namespace std;\n\nvoid myFunction(string city = \"New York\"\
+  ) {\n  cout << city << \"\\n\";\n}\n\nint main() {\n  myFunction(\"Atlanta\");\n\
+  \  myFunction(\"Boston\");\n  myFunction(\"Chicago\");\n  myFunction();\n  return\
+  \ 0;\n}\n```\nOutput:\nAtlanta\nBoston\nChicago\nNew York\n\n---\n\n### 定义变量语法：\n\
+  \n```cpp\ndataType variableName = value;\n```\n变量是一个与值关联的符号名称。\n\ne.g.\n```cpp\n\
+  void main ( ) {\n  char  mychar = 'm';\n  int myinteger = 168;\n  float myflt =\
+  \ 28.98;\n  double mydbl = 0.12345679;\n  boolean myBool = true;\n}\n```\n\n---\n\
+  \n### 删除变量语法：\n\n```cpp\nvariable = new type; // 为变量分配内存\ndelete variable; // 释放内存\n\
+  ```\ne.g.\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main (){\n \
+  \ double* myVar = NULL; // 初始化指针为空 Null\n  myVar = new double; // 为变量分配内存\n  *myVar\
+  \ = 100; // 将值存储到内存地址\n  cout << \"Value of myVar : \" << *myVar << endl;\n  delete\
+  \ myVar; // 释放内存\n  return 0;\n}\n```\nOutput: `Value of myVar : 100`\n\n---\n\n\
+  ### 删除数组语法：\n\n```cpp\nMyClass* myArr = new MyClass[3]; // 为数组分配内存\ndelete [] myArr;\
+  \ // 释放数组内存\n```\ne.g.\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass\
+  \ MyClass{\npublic:\n  MyClass() {\n    cout << \"Call constructor!\" <<endl;\n\
+  \  }\n  ~MyClass() {\n    cout << \"Call destructor!\" <<endl;\n  }\n};\n\nint main(\
+  \ ){\n  MyClass* myArr = new MyClass[3]; // 分配内存\n  delete [] myArr; // 释放内存\n \
+  \ return 0;\n}\n```\nOutput:\nCall constructor!\nCall constructor!\nCall constructor!\n\
+  Call destructor!\nCall destructor!\nCall destructor!\n\n---\n\n### 解引用语法：\n\n```cpp\n\
+  dataType *pointer; // 声明指针\n*pointer = &variable; // *pointer 访问变量的值\n```\n如果 `*pointer\
+  \ = &variable`，意味着可以通过指针根据变量的地址访问变量的值，这被称为指针的“解引用”。\n\ne.g.\n```cpp\n#include <iostream>\n\
+  #include <string>\nusing namespace std;\n\nint main() {\n  string greet = \"Hello\"\
+  ; // 变量声明\n  string *ptr = &greet; // *ptr 访问 \"greet\" 的值\n}\n```\n\n\n\n\n\n```cpp\n\
+  cout << ptr << \"\\n\";      // 显示 ptr 指向的 greet 地址\ncout << *ptr << \"\\n\";  \
+  \   // 显示 *pt 访问的 greet 值\nreturn 0;\n}\n```\n**Output:**\n```\n0x7ffdb3c71d70\n\
+  Hello\n```\n\n`string *ptr = &greet;`: 这行代码意味着通过解引用指针 `*ptr` 通过指针访问 `\"greet\"`\
+  \ 的值。\n\n### 析构函数语法\n\n```cpp\n~ destructor( );\n```\n析构函数用于释放内存占用，清理构造函数产生的数据。\n\
+  析构函数的名称与类名相同，但前面有一个 `~` 符号。\n析构函数没有任何参数，也没有返回值。\n\n例如：\n```cpp\nclass Flower { \
+  \    // 声明一个类\npublic:\nstring c1, c2;\nFlower() {  c1= \"yellow\";  c2 = \"purple\"\
+  ; } ;  // 构造函数\n~ Flower();      // 定义析构函数。\n};\n```\n析构函数的声明必须紧跟构造函数之后。\n\n###\
+  \ detach() 语法\n\n```cpp\nthreadObj.detach();\n```\n将指定的线程与线程对象分离。\n线程退出后，所有分配的资源将被释放。\n\
+  \n例如：\n```cpp\n#include <iostream>\n#include <chrono>\n#include <thread>\nvoid func02()\
+  \ {\n  std::cout << \"Start thread02.\\n\";\n  std::this_thread::sleep_for(std::chrono::seconds(3));\n\
+  \  std::cout << \"Exit thread02.\\n\";\n}\n\nvoid func01() {\n  std::cout << \"\
+  Start thread01.\\n\";\n  std::thread th(func02);\n  th.detach();   // 将线程从线程对象中分离\n\
+  \  std::this_thread::sleep_for(std::chrono::seconds(2));\n  std::cout << \"Exit\
+  \ thread01.\\n\";\n}\n\nint main() {\n  func01();\n  std::this_thread::sleep_for(std::chrono::seconds(4));\n\
+  }\n```\n**Output:**\n```\nStart thread01.\nStart thread02.\nExit thread01.\nExit\
+  \ thread02.\n```\n\n### div() 语法\n\n```cpp\ndiv(x, y).quot // 返回 x/y 的商\ndiv(x,\
+  \ y).rem  // 返回 x/y 的余数\n```\n例如：\n```cpp\n#include <iostream>\n#include <cstdlib>\n\
+  using namespace std;\nint main(){\n  cout << \"Quotient of 19/2 = \" << div(19,\
+  \ 2).quot << endl;\n  cout << \"Remainder of 19/2 = \" << div(19, 2).rem << endl;\n\
+  }\n```\n**Output:**\n```\nQuotient of 19/2 = 9\nRemainder of 19/2 = 1\n```\n\n###\
+  \ do / while 循环语法\n\n```cpp\ndo{ // 在此处编写某些 c++ 代码 } while ( test-expression);\n\
+  ```\n`do...while` 循环执行一次代码块，如果指定的指定的条件为真，则重复循环。\n`do…while` 先执行代码，再检查条件。\n\n例如：\n\
+  ```cpp\nint counter = 0;\ndo {    // 在检查条件之前运行代码\n  cout <<  \"@\";\n  counter++;\n\
+  } while (counter < 8);      // 运行 8 次\n```\n**Output:**\n```\n@@@@@@@@\n```\n\n\
+  ### e.what( ) 语法\n\n```cpp\ntry\n{…}\ncatch(exception& e)\n{\n  cout  << e.what(\
+  \ )  <<endl;\n}\n```\n`e.what( )` 可以产生异常消息。\n`e` 是一个异常对象。\n\n例如：\n```cpp\nint main\
+  \ () {\n  string str = \"JavaScript\";\n  try{\n    str.at(100);\n  }\n  catch(exception\
+  \ &e){  // e 是异常对象\n  cout<<\"Catch an exception: \"<< e.what( ) << endl;\n  //\
+  \ \"e.what( )\" 创建了一个异常消息。\n  }\n  return 0;\n}\n```\n**Output:**\n```\nCatch an\
+  \ exception: basic_string::at: __......\n```\n\n### empty() 语法\n\n```cpp\nmyString.empty();\n\
+  ```\n`myString.empty();` 可以测试用户在提交数据之前是否输入了单词或句子。如果 `myString` 为空，它返回 true，允许我们输入某些内容；否则返回\
+  \ false。\n\n例如：\n```cpp\n#include <string>\n#include <iostream>\nusing namespace\
+  \ std;\nint main( ) {\n  string myString;\n  if ( myString.empty()) {    // 如果还没有输入内容\n\
+  \  cout << \"Please enter your name: \";\n  getline (cin, myString);  // 假设输入了 John\
+  \ Smith\n  cout << myString << endl;\n  }\n  else {\n  cout << \"You have entered\
+  \ your name, thank you! \";\n  }\n  return 0;\n}\n```\n**Output:**\n```\nPlease\
+  \ enter your name:   John Smith\n```\n\n### 封装语法\n\n```cpp\nprivate:\npublic:\n\
+  ```\n封装确保数据对用户隐藏的。\n`private` 访问修符将访问限制在类内部。\n`public` 访问修符允许从类外部访问。\n\n `private`\
+  \ 访问修符将访问限制在类内部。\n`public` 访问修符允许从类外部访问。\n\n例如：\n```cpp\nclass Programmer {\nprivate:\n\
+  \  long income;\npublic:\n  void setIncome(long i) { income = i; }\n  long getIncome()\
+  \ { return income; }\n};\n\nint main() {\n  Programmer p;\n  p.setIncome(50000);\n\
+  \  cout << \"Income: \" << p.getIncome() << endl;\n  return 0;\n}\n```\n\n### 文件末尾语法\n\
+  \n```cpp\nfileObject.eof();\n```\n如果文件读取到达文件末尾，`eof( )` 将返回 true，否则 `eof( )` 返回\
+  \ false。\n\n例如：\n```cpp\n#include <iostream>\n#include <fstream>\n#include <string>\n\
+  using namespace std;\nint main(){\n  char ch;\n  ifstream fileObject(\"test.txt\"\
+  );\n  while ( ! fileObject.eof() ) {  // 不在文件末尾\n    fileObject.get(ch);\n    if\
+  \ (!fileObject.eof()) {\n      cout << ch; // 从文件中读取字符\n    }\n  }\n  fileObject.close();\n\
+  \  return 0;\n}\n```\n\n### 转义序列语法\n\n` \\ ` 反斜杠字符可以用于转义字符。\n`\\n` 将内容输出到下一行。\n\
+  `\\r` 产生回车。\n`\\t` 产生制表符。\n`\\'` 输出单引号。\n`\\\"` 输出双引号。\n\n例如：\n```cpp\ncout << \"\
+  \  \\\" Hello World!  \\\"  \";  // \\\" 转义双引号\n```\n**Output:**\n```\n\"Hello World!\"\
+  \n```\n```cpp\ncout << \"Hello \\t\\t\\t World\" ;  // 注意有三个制表符。\n```\n**Output:**\n\
+  ```\nHello       World\n```\n\n### 异常语法\n\n```cpp\ntry { }\ncatch (...) { } // 注意符号\
+  \ (…)\n```\n如果你不知道 `try` 块中的异常类型，可以在 `catch` 块中使用“三个点”符号 `...`。\n\n\n\n\n\n## 异常处理\n\
+  \n例如：\n\n```cpp\nint main (){\n    try{\n        int x = 100, y = 0;\n        if(\
+  \ y == 0 ){\n            throw y;  // 我们可以在这里设置“抛出一个异常”\n            x = x / y;\n\
+  \        }\n    }\n    catch (...){  // 使用 (…) 捕获任何类型的异常\n        cout << \"An exception\
+  \ occurred.\" << endl;\n    }\n    return 0;\n}\n```\n// 输出:   An exception occurred.\n\
+  \n### 异常消息语法\n\n```cpp\ntry\n{…}\ncatch(exception& e)\n{  cout  << e.what( ) <<endl;\n\
+  }\n```\n// `e.what( )` 可以产生异常消息。\n// `e` 是一个异常对象。\n\n例如：\n```cpp\nint main () {\n\
+  \    string str = \"JavaScript\";\n    try{\n        str.at(100);\n    }\n    catch(exception\
+  \ &e) {  // e 是一个异常对象\n        cout<<\"Catch an exception: \"<< e.what( ) << endl;\n\
+  \        // \"e.what( )\" 创建一个异常消息。\n    }\n    return 0;\n}\n```\n// 输出:   Catch\
+  \ an exception: basic_string::at: __......\n\n## exit() 语法\n\n```cpp\nexit(0); \
+  \    // 程序无错误退出\nexit(non_zero);  // 程序错误退出\n```\n\n例如：\n```cpp\n#include <cstdlib>\n\
+  #include <iostream>\nusing namespace std;\n\nint main(){\n    cout<<\"Program is\
+  \ going to exit right away!\";\n    exit(0);   // 程序成功退出\n    cout<<\"Because program\
+  \ has been exited, this is never executed\";\n}\n```\n// 输出:   Program is going\
+  \ to exit right away!\n\n## exp() 语法\n\n```cpp\nexp(num)\n```\n// 返回 e 的幂\n\n例如：\n\
+  ```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n\
+  \    cout << exp(3.14);\n}\n```\n// 输出:   23.1039\n\n## expm1() 语法\n\n```cpp\nexpm1(num)\n\
+  ```\n// 返回 ex - 1\n\n例如：\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace\
+  \ std;\n\nint main(){\n    cout << expm1(3.14);\n}\n```\n// 输出:   22.1039\n\n##\
+  \ extern 语法\n\n```cpp\nextern type variable;\n```\n// 我们可以使用 `extern` 关键字在任何地方声明变量\n\
+  \n例如：\n```cpp\n#include <iostream>\nusing namespace std;\n\nextern int x, y, z;\
+  \ // 在这里声明三个变量\n\nint main (){\n    int x, y, z;\n    x = 10;  y = 20; z = x+y;\n\
+  \    cout << z << endl ;\n    return 0;\n}\n```\n// 输出:   30\n\n## extern 函数语法\n\
+  \n```cpp\nextern functionName( );\n```\n// `extern functionName( );` 声明了一个可以在另一个文件中调用的函数。\n\
+  \n例如：\n(file1.cpp)\n```cpp\n#include<iostream>\nusing namespace std;\nextern void\
+  \ min(int, int);    // 声明一个 extern 函数\nint c;\nint main( ){\n    int a = 100, b\
+  \ = 200;\n    min(a, b);    // 调用 file2 中的函数\n    cout << c << endl;\n    return\
+  \ 0;\n}\n```\n(file2.cpp)\n```cpp\n#include <iostream>\nusing namespace std;\nextern\
+  \ int c;    // 定义一个 extern 变量\nvoid min(int x, int y){\n    c = ( x < y) ? x : y;\n\
+  }\n```\n// 输出:   100\n\n## extern 变量语法\n\n```cpp\nextern type variable;\n```\n//\
+  \ `extern type variable` 声明了一个可以在其他文件中使用的变量。\n\n例如：\n(file1.cpp)\n```cpp\n#include<iostream>\n\
+  using namespace std;\nextern int c;    // 声明一个 extern 变量\nint main( ){\n    cout\
+  \ << c << endl;\n    return 0;\n}\n```\n(file2.cpp)\n```cpp\n#include <iostream>\n\
+  using namespace std;\nint a = 100, b = 200;\nint c = a + b;\n```\n// 输出:   300\n\
+  \n## fabs() 语法\n\n```cpp\nfabs(num)\n```\n// 返回浮点数的绝对值。\n// `abs()` 用于整数数据类型。`fabs()`\
+  \ 用于整数、float、double 和 char 数据类型。\n\n例如：\n```cpp\n#include <iostream>\n#include <cmath>\n\
+  using namespace std;\n\nint main() {\n    cout<<\"Fabs(3.14) = \"<< fabs(-3.14);\n\
+  }\n```\n// 输出:   Fabs(3.14) = 3.14\n\n## fdim() 语法\n\n```cpp\nfdim(num1, num2)\n\
+  ```\n// 返回 num1 和 num2 之间的差。\n\n例如：\n```cpp\n#include <iostream>\n#include <cmath>\n\
+  using namespace std;\n\nint main(){\n    double x = 3.14, y = 1.11;\n    double\
+  \ diff = fdim(x, y);\n    cout << \"fdim(3.14, 1.11) = \" << diff << endl;\n}\n\
+  ```\n// 输出:   fdim(3.14, 1.11) = 2.03\n\n## find() 语法\n\n```cpp\nmyString.find(substring,\
+  \ start)\n```\n// `find( )` 可以定位子字符串的位置（索引）。\n// \"Substring\" 意味着需要搜索的子字符串。\n//\
+  \ \"start\" 意味着查找子字符串的起始索引。\n\n例如：\n```cpp\n#include<string>\n#include <iostream>\n\
+  using namespace std;\n\nint main( ) {\n    string myString = \"An operating system.\"\
+  ;\n    string substring = \"system\";     // 定义子字符串\n    int position = myString.find(\
+  \ substring, 0 );   // 获取索引\n    cout << \"The index of the substring is: \" <<\
+  \ position << endl;\n    return 0;\n};\n```\n// 输出:   The index of the substring\
+  \ is: 13\n\n## floor() 函数语法\n\n```cpp\nfloor(x);\n```\n// 返回小于或等于 x 的最大整数\n\n例如：\n\
+  ```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main\
+  \ (){\n    float  f = 100.88;\n    cout << \"floor(f): \" << floor(f) << endl;\n\
+  \    return 0;\n}\n```\n// 输出:\nfloor(f): 100\n\n## fma() 语法\n\n```cpp\nfma(x,y,z)\n\
+  ```\n// 在不丢失精度的情况下返回 x*y+z\n\n例如：\n```cpp\n#include <iostream>\n#include <cmath>\n\
+  using namespace std;\n\nint main(){\n    int x = 2, y = 3, z = 4;\n    int result\
+  \ = fma(x, y, z);\n    cout << \"fma(2, 3, 4) = \" << result << endl;\n}\n```\n\
+  // 输出:   10\n\n## fmax() 语法\n\n```cpp\nfmax(x, y)\n```\n// 返回 x 和 y 中的最大值\n\n例如：\n\
+  ```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n\
+  \    double x = 1.11, y = 3.14;\n    double result = fmax(x, y);\n    cout << \"\
+  fmax(1.11, 3.14) = \" << result << endl;\n}\n```\n// 输出:   fmax(1.11, 3.14) = 3.14\n\
+  \n## fmin() 语法\n\n```cpp\nfmin(x, y)\n```\n// 返回 x 和 y 中的最小值\n\n例如：\n```cpp\n#include\
+  \ <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n    double\
+  \ x = 1.11, y = 3.14;\n    double result = fmin(x, y);\n    cout << \"fmin(1.11,\
+  \ 3.14) = \" << result << endl;\n}\n```\n// 输出:   fmin(1.11, 3.14) = 1.11\n\n##\
+  \ fmod() 语法\n\n```cpp\nfmod(x,y)\n```\n// 返回 x/y 的浮点余数\n\n例如：\n```cpp\n#include\
+  \ <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n    cout <<\
+  \ \"Remainder of 3.14/2 = \" << fmod(3.14, 2);\n}\n```\n// 输出:   Remainder of 3.14/2\
+  \ = 1.14\n\n## for 循环语法\n\n```cpp\nfor( init, test-expression, increment) { // 代码;\
+  \ }\n```\n// `for loop` 按指定的次数执行代码块。\n\n例如：\n```cpp\nint x;\nfor (x = 0; x <= 5;\
+  \ x++){   // 重复 5 次\n    cout << x;\n}\n```\n// 输出:   012345\n\n## 友元函数语法\n\n```cpp\n\
+  friend type functionName(arg);\n```\n// 如果一个函数被定义类的“友元函数”，那么该“友元函数”就可以访问类的私有成员。\n\
+  \n例如：\n```cpp\n#include<iostream>\nusing namespace std;\n\nclass Week{\npublic:\n\
+  Week(int, int, int);\nfriend void show( Week &);   // 定义友元函数\n\nprivate:   // 定义私有成员\n\
+  int Mon;  int Tue;  int Wed;\n};\n\nWeek::Week(int m, int t, int w){   // 构造函数\n\
+  Mon = m;  Tue = t;  Wed = w;\n}\n\nvoid show ( Week &wk ){  // 这是一个友元函数\ncout <<\
+  \ wk.Mon<< endl;\ncout << wk.Tue<< endl;\ncout << wk.Wed<< endl;\n}\n\nint main\
+  \ ( ){\n    Week weekObject( 1, 2, 3 );  // 创建对象\n    show( weekObject );  // 调用友元函数\n\
+  \    return 0;\n}\n```\n// 输出:   1\n      2\n      3\n\n## 函数语法\n\n```cpp\ntype\
+  \ functionName(  );\n```\n// 声明一个函数\n\n\n\n\n\n## 函数基础\n\n```cpp\ntype functionName(\
+  \ ) {\n    // 定义一个函数\n\n....\n\n};\n\nfunctionName( );   // 调用一个函数\n```\n\n// 函数是一个可以重复使用的代码块。\n\
+  \n在使用函数之前，我们需要先声明一个函数。\n\n例如：\n\n```cpp\n#include <iostream>\n\nusing namespace\
+  \ std;\n\nvoid myFunction( );   // 声明一个函数\n\nint main( ) {\n    myFunction( ); \
+  \    // 调用函数\n    return 0;\n}\n\nvoid myFunction ( ) {   // 定义一个函数\n    cout <<\
+  \ \"This is a function demo.\" <<endl;\n}\n```\n// 输出: This is a function demo.\n\
+  \n---\n\n## 函数模板\n\n```cpp\ntemplate <typename T> type functionName( T a, T b)\n\
+  ```\n\n// 一个函数模板可以替代多个函数的代码。\n\n如果几个函数的函数体相同，仅数据类型不同，你可以使用`Function Template`。\n\
+  \n// `T` 是一个类型参数。它代表不同的数据类型。\n\n例如：\n\n```cpp\n#include <iostream>\n\nusing namespace\
+  \ std;\n\ntemplate <typename T> T min(T a, T b, T c){\n    // 定义一个函数模板 \"min( )\"\
+  \n    if ( b < a ) a = b;\n    if ( c < a ) a = c;\n    return a;\n}\n\nint main(\
+  \ ){\n    int n, n1 = 10, n2 = 20, n3 = 30;\n    double d, d1 = 10.01, d2 = 10.02,\
+  \ d3 = 10.03;\n    long g, g1= 67891, g2 = 67892, g3 = 67893;\n    n = min( n1,\
+  \ n2, n3 );\n    d = min( d1, d2, d3 );\n    g = min( g1, g2, g3 );\n    cout <<\
+  \ n << endl;\n    cout << d << endl;\n    cout << g << endl;\n    return n + n;\n\
+  }\n```\n// 输出: 10 10.01 67891\n\n---\n\n## 带参数的函数\n\n```cpp\ntype functionName(\
+  \ arg );   // 声明一个函数\n\ntype functionName ( arg ) {     // 定义一个函数\n\n……\n\n};\n\n\
+  functionName ( argument );      // 调用函数\n```\n\n// 当函数被调用时，函数会同时接收一个参数。\n\n例如：\n\
+  \n```cpp\n#include <iostream>\n\nusing namespace std;\n\nvoid myFunction(string\
+  \ arg );   // 声明一个函数\n\nint main( ) {\n    myFunction ( \"with arguments.\" ); \
+  \  // 调用函数\n    return 0;\n}\n\nvoid myFunction ( string arg ) {  // 定义一个函数\n  \
+  \  cout << \"This is a function \" + arg << endl;\n}\n```\n// 输出: This is a function\
+  \ with arguments.\n\n---\n\n## 标准库函数\n\n### gcd()\n```cpp\nstd::gcd(num1, num2)\n\
+  ```\n// 获取两个数的最大公约数\n\n例如：\n\n```cpp\n#include <iostream>\n#include <numeric>\n\n\
+  using namespace std;\n\nint main(){\n    cout << \"gcd(100, 200) = \" << std::gcd(100,\
+  \ 200) << endl;\n}\n```\n// 输出: gcd(100, 200) = 100\n\n### get()\n```cpp\ncin.get(char\
+  \ c);\n```\n// `cin.get(char c)` 用于输入一个字符\n// 字符始终被包含在一对单引号中。\n\n例如：\n\n```cpp\n\
+  int main(){\n    char c;\n    cout << \"Input one character:  \";\n    cin.get(\
+  \ c );     // 输入一个字符\n    cout << c <<endl;   // 输出该字符\n    return 0;\n} // 假设通过键盘输入了一个字符\
+  \ \"A\"\n```\n// 输出: Input one character: A\n\n### getchar()\n```cpp\nchar c = getchar();\n\
+  ```\n// 接收用户输入的字符，并将其存储在变量 `c` 中\n\n例如：\n\n```cpp\n#include <cstdio>\n#include <iostream>\n\
+  \nusing namespace std;\n\nint main(){\n    char c = getchar();\n    cout << c; \
+  \  // 假设我们在键盘上输入了字符 \"A\"\n}\n```\n// 输出: A\n\n### getenv()\n```cpp\ngetenv(\"path\"\
+  )\n```\n// 返回指向包含环境信息的字符串的指针，例如路径名、设备……\n\n例如：\n\n```cpp\n#include <iostream>\n\
+  #include <cstdlib>\n\nusing namespace std;\n\nint main(){\n    cout << getenv(\"\
+  path\");\n}\n```\n// 输出: Variable = path, Value= ……\n\n### getline()\n```cpp\ngetline(cin,\
+  \ myString);\n```\n// `getline(cin, myString);` 可以让用户输入字符串句子。\n\n例如：\n\n```cpp\n\
+  #include <string>\n#include <iostream>\n\nusing namespace std;\n\nint main( ) {\n\
+  \    string myString;   // 声明一个字符串\n    cout << \"Please enter a sentence: \" <<\
+  \ endl;\n    getline(cin, myString);   // 输入 \"C++ is Very Good!\"\n    cout <<\
+  \  myString << endl;\n    return 0;\n}\n```\n// 输出:\nPlease enter a sentence:\n\
+  C++ is Very Good!\n\n---\n\n## 类与封装\n\n### Getter 语法\n```cpp\nprivate:   // 封装\n\
+  type variable;     // 设置一个私有变量\npublic:\nvoid setVariable() {   }     // setter\n\
+  long getVariable() { return … }   // getter\n```\n封装的含义是确保秘密数据对用户隐藏。\n// 我们必须先将类变量声明为\
+  \ `private`。\n// 如果我们想访问 `private` 变量，可以使用公有的的 `getter` 和 `setter` 方法。\n\n例如：\n\n\
+  ```cpp\n#include <iostream>\nusing namespace std;\n\nclass Programmer {\nprivate:\
+  \   // 封装\n    long income;      // 设置一个私有变量\npublic:\n    void setIncome(int money)\
+  \ {   // setter\n        income = money;\n    }\n    long getIncome() {   // getter\n\
+  \        return income;\n    }\n};\n\nint main() {\n    Programmer guy;\n    guy.setIncome(90000);\n\
+  \    cout << \"Monthly income is: $\"<< guy.getIncome(); \n    return 0;\n}\n```\n\
+  // 输出: Monthly income is: $90000\n\n## 全局变量与局部变量\n\n```cpp\ntype global_variable\
+  \ = value;   // 定义一个全局变量\nvoid myFunction( ) {               // 定义一个函数\n    type\
+  \ local_variable = value;           // 定义一个局部变量\n}\n```\n// 局部变量定义在函数内部。\n// 全局变量定义在函数外部。\n\
+  \n例如：\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nvoid test1();  void\
+  \ test2();\n\nint main(){\n    test1();  test2();\n    return 0;\n}\n\nint a = 100,\
+  \ b = 200;    // 定义两个全局变量\nvoid test1 ( ) {               // 定义一个函数\n    int x =\
+  \ 30, y = 40;\n}\n\nvoid test2 ( ) {   // 定义一个函数\n    int x = 50, y = 60;\n    cout\
+  \ << a << \",\" << b << endl;\n    cout << x << \",\" << y << endl;\n}\n```\n//\
+  \ 输出:\n100,200\n50,60\n\n---\n\n## 控制流\n\n### goto 语法\n```cpp\nlabel:\ngoto label;\n\
+  ```\n// 提供从 `goto` 语句到 `label` 语句的无条件跳转。\n\n例如：\n\n```cpp\n#include <iostream>\n\
+  using namespace std;\n\nvoid number(){\n    int num = 0;\nlabel:\n    cout << num\
+  \ << \" \";\n    num++;\n    if (num <= 9)\n    goto label;\n}\n\nint main(){\n\
+  \    number();\n    return 0;\n}\n```\n// 输出: 0 1 2 3 4 5 6 7 8 9\n\n### hypot()\
+  \ 语法\n```cpp\nhypot(x, y)\n```\n// 返回 $x² + y²$ 的平方根，如下：\n\n例如：\n\n```cpp\n#include\
+  \ <iostream>\n#include <cmath>\nusing namespace std;\n\nint main(){\n    int x =\
+  \ 3, y = 4;\n    int result = hypot(x, y);\n    cout << \"hypot(3, 4) = \" << result\
+  \ << endl;\n}\n```\n// 输出: hypot(3, 4) = 5\n\n### if 语句\n```cpp\nif ( test-expression\
+  \ ) { // 如果真则执行此操作  }\n```\n// `if statement` 只有当指定的条件为真时才执行 `{ }` 中的代码；如果条件为假，则不执行\
+  \ `{…}` 中的任何代码。\n\n例如：\n\n```cpp\nint a=200;\nint b=100;\nif (a>b){   // 如果真则执行此操作\n\
+  \    cout << \"a is greater than b.\";\n}\n```\n// 输出: a is greater than b\n\n###\
+  \ if-else 语句\n```cpp\nif ( test-expression) {   // 如果真则执行此操作  }\nelse  {   // 如果假则执行此操作\
+  \  }\n```\n// `if...else 语句` 在条件为真时运行某些代码，在条件为假时运行另一个代码。\n\n例如：\n\n```cpp\nint a\
+  \ = 100; int b = 200;\nif (a > b) {   // 如果真则执行此操作\n    cout << \"a is greater than\
+  \ b.\";\n}\nelse {   // 如果假则执行此操作\n    cout << \"a is less than b\";\n}\n```\n//\
+  \ 输出: a is less than b\n\n\n\n\n\n## ifstream 语法\n\n`ifstream` 语法：\n\n```cpp\nifstream\
+  \ fileObject( \"myFile.txt\" );  // 创建输入对象\ngetline( fileObject, myString);    //\
+  \ 从文件中读取 myString\n```\n\n- `ifstream fileObject ( \"myFile.txt\" );` 创建了一个输入文件对象\
+  \ `fileObject`。\n- `ifstream` 类用于从文件中读取数据。\n- `fileObject` 是一个输入文件对象。\n- 为了处理文件，我们需要先导入\
+  \ `#include <fstream>`。\n\n### 示例\n\n\n\n假设 `\"myFile.txt\"` 的路径为 `\"D:\\\\myFile.txt\"\
+  `。\n`\"myFile.txt\"` 的内容为：\"C++ is a very good language.\"`\n\n```cpp\n#include\
+  \ <iostream>\n#include <fstream>\n#include <string>\n\nusing namespace std;\n\n\
+  int main(){\n    string myString;\n    ifstream fileObject ( \"D:\\\\myFile.txt\"\
+  \ ); // 创建一个对象\n    getline ( fileObject, myString ); // 将文件读取到 myString\n    cout\
+  \ << myString <<endl;    // 显示 myString 的内容\n    fileObject.close ( );\n    return\
+  \ 0;\n}\n```\n// 输出：`C++ is a very good language.`\n\n## 继承语法\n\n继承语法：\n\n`derived\
+  \ class : public base class`\n\n- 基类可以被其派生类继承。派生类可以继承基类的所有的公共成员。\n- 基类可以被父类。\n-\
+  \ 派生类可以被视为子类。\n\n### 示例\n\n```cpp\n#include<string>\n#include <iostream>\n\nusing\
+  \ namespace std;\n\nclass Computer {  // 基类\npublic:\n    void display( ){\n   \
+  \     cout << \"Computer OK!\" << endl;\n    }\n};\n\nclass Laptop : public Computer\
+  \ { \n    // 派生类继承基类\n};\n\nint main ( ){\n    Laptop Lt;    // 派生类创建对象 Lt\n   \
+  \ Lt. display( );  // Lt 调用基类的方法\n    return 0;\n}\n```\n// 输出：`Computer OK!`\n\n\
+  ## 内联函数语法\n\n内联函数语法：\n\n`inline type functionName( );`\n\n- 内联函数可以提高程序的执行效率。每当调用内联函数时，编译器都会用函数中的实际代码替换函数调用。\n\
+  \n### 示例\n\n```cpp\n#include <iostream>\nusing namespace std;\n\ninline int sum(int\
+  \ n);   // 定义内联函数\nint main( ){\n    int number;\n    cout << \"Please enter a number:\
+  \ \";\n    cin >> number;\n    number = sum(number);\n    cout << \"Result: \" <<\
+  \ number << endl;\n    number = sum(number);\n    cout << \"Result: \" << number\
+  \ << endl;\n    number = sum(number);\n    cout << \"Result: \" << number << endl;\n\
+  }\n\nint sum(int n){\n    return n + n;\n}   // 假设我们输入了数字 3 并回车\n```\n// 输出：\n`Please\
+  \ enter a number: 3`\n`Result: 6`\n`Result: 12`\n`Result: 24`\n\n### 用户输入语法\n\n\
+  用户输入语法：\n\n`cin >> variable;`\n\n- 从键盘获取用户输入。\n\n### 示例\n\n```cpp\nint main() {\n\
+  \    int num;\n    cout << \"Please enter a number: \";\n    cin >> num;  // 接受用户数字\n\
+  \    cout << num;\n    return 0;\n}\n```\n// 输出：`Please enter a number: 100`\n\n\
+  ## 字符输入语法\n\n字符输入语法：\n\n`cin.get(char c );`\n\n- 字符始终由一对单引号包含。\n\n### 示例\n\n```cpp\n\
+  int main(){\n    char c;\n    cout << \"Input character: \";\n    cin.get( c );\
+  \  // 输入字符\n    cout << c <<endl;  // 输出字符\n    return 0;\n} // 假设我们通过键盘输入了字符 \"\
+  A\"\n```\n// 输出：`Input character: A`\n\n## 字符串输入语法\n\n字符串输入语法：\n\n`cin >> variable;`\n\
+  \n- `cin >> variable` 可以输入单个单词。\n\n### 示例\n\n```cpp\n#include <string>\n#include\
+  \ <iostream>\nusing namespace std;\n\nint main( ) {\n    string myString;\n    cout\
+  \ << \"Please enter a word: \"<< endl;\n    cin >> myString;  // 输入 GOOD\n    cout\
+  \ << myString <<endl;\n    return 0;\n}\n```\n// 输出：`Please enter a word: GOOD`\n\
+  \n## getline 字符串语法\n\n字符串输入语法：\n\n`getline(cin, myString);`\n\n- `getline(cin, myString)`\
+  \ 可以允许用户输入句子。\n\n### 示例\n\n```cpp\n#include <string>\n#include <iostream>\nusing\
+  \ namespace std;\n\nint main( ) {\n    string myString;\n    cout << \"Please enter\
+  \ a sentence: \" << endl;\n    getline(cin, myString);  // 输入 \"C++ is Very Good!\"\
+  \n    cout << myString << endl;\n    return 0;\n}\n```\n// 输出：`Please enter a sentence:\
+  \ C++ is Very Good!`\n\n## insert() 语法\n\ninsert() 语法：\n\n`originalString = insert(index,\
+  \ substring);`\n\n- `originalString = insert(index, substring)` 可以向原始字符串中插入子字符串。\n\
+  - `index` 表示插入子字符串的位置。\n\n### 示例\n\n```cpp\n#include<string>\n#include <iostream>\n\
+  using namespace std;\n\nint main( ) {\n    string originalString = \"Flower is beautiful!\"\
+  ;\n    string substring = \"very \";\n    originalString.insert(10, substring);\
+  \ // 插入子字符串\n    cout << originalString << endl;\n    return 0;\n}\n```\n// 输出：`Flower\
+  \ is very beautiful!`\n\n## isalnum() 语法\n\nisalnum() 语法：\n\n`isalnum('character')`\n\
+  \n- 检查给定字符是否为字母数字。\n\n### 示例\n\n```cpp\n#include <iostream>\n#include <cctype>\n\
+  using namespace std;\n\nint main(){\n    char c = '9';\n    if(isalnum(c)){ cout\
+  \ << c << \" is alpha-numeric\";}\n    else{ cout << c << \" is not alpha-numeric\"\
+  ;}\n}\n```\n// 输出：`9 is alpha-numeric`\n\n## isalpha() 语法\n\nisalpha() 语法：\n\n`isalpha('character')`\n\
+  \n- 检查给定字符是否为字母。\n\n### 示例\n\n```cpp\n#include <iostream>\n#include <cctype>\nusing\
+  \ namespace std;\n\nint main(){ \n    char c = '9';\n    if(isalpha(c)){ cout <<\
+  \ c << \" is alphabetic\";}\n    else{ cout << c << \" is not alphabetic\";}\n}\n\
+  ```\n// 输出：`9 is not alphabetic`\n\n## is_compound<> 语法\n\nis_compound<> 语法：\n\n\
+  `is_compound<type>::value`\n\n- 如果指定类型是复合类型，返回 1；否则返回 0。\n- 复合类型指数组、函数、指针、引用、联合体、类和枚举类型等……\n\
+  \n### 示例\n\n```cpp\n#include <iostream>\n#include <type_traits>\nusing namespace\
+  \ std;\n\nint main() {\n    cout << \"char: \" << is_compound<char>::value << endl;\n\
+  \    cout << \"double: \" << is_compound<double>::value << endl;\n    cout << \"\
+  float*: \" << is_compound<float*>::value << endl;\n    cout << \"double&: \" <<\
+  \ is_compound<double&>::value << endl;\n    cout << \"bool: \" << is_compound<bool>::value\
+  \ << endl;\n    return 0;\n}\n```\n// 输出：\n`char: 0`\n`double: 0`\n`float*: 1`\n\
+  `double&: 1`\n`bool: 0`\n\n## isdigit() 语法\n\nisdigit() 语法：\n\n`isdigit('character')`\n\
+  \n- 检查给定字符是否为数字。\n\n### 示例\n\n```cpp\n#include <iostream>\n#include <cctype>\nusing\
+  \ namespace std;\n\nint main(){ \n    char c = '9';\n    if(isdigit(c)){ cout <<\
+  \ c << \" is a digit\";}\n    else{ cout << c << \" is not a digit\";}\n}\n```\n\
+  // 输出：`9 is a digit`\n\n## isgraph() 语法\n\nisgraph() 语法：\n\n`isgraph('character')`\n\
+  \n- 检查给定字符是否可打印。\n\n### 示例\n\n```cpp\n#include <iostream>\n#include <cctype>\nusing\
+  \ namespace std;\n\nint main(){ \n    char c = '9';\n    if(isgraph(c)){ cout <<\
+  \ c << \" is printable\";}\n    else{ cout << c << \" is not printable\";}\n}\n\
+  ```\n// 输出：`9 is printable`\n\n## islower() 语法\n\nislower() 语法：\n\n`islower('character')`\n\
+  \n- 检查给定字符是否为小写字母。\n\n### 示例\n\n```cpp\n#include <iostream>\n#include <cctype>\n\
+  using namespace std;\n\nint main(){ \n    char c = 'A';\n    if(islower(c)){ cout\
+  \ << c << \" is an lowercase character\";}\n    else{ cout << c << \" is not an\
+  \ lowercase character\";}\n}\n```\n// 输出：`A is not an lowercase character`\n\n\n\
+  \n\n\n## ispunct() 语法\n\n`ispunct('character')`\n\n// 检查给定字符是否为标点符号。\n\ne.g.\n\n\
+  ```cpp\n#include <iostream>\n#include <cctype>\nusing namespace std;\n\nint main(){\
+  \  \n  char c = '?';\n  if(ispunct(c)){ cout << c << \" is a punctuation character\"\
+  ;}\n  else{ cout << c << \" is not a punctuation character\";}\n}\n// 输出: ? is a\
+  \ punctuation character\n```\n\n## isspace() 语法\n\n`isspace('character')`\n\n//\
+  \ 检查给定字符是否为空格。\n\ne.g.\n\n```cpp\n#include <iostream>\n#include <cctype>\nusing\
+  \ namespace std;\n\nint main(){  \n  char c = 'A';\n  if(isspace(c)){ cout << c\
+  \ << \" is a space\";}\n  else{ cout << c << \" is not a space\";}\n}\n// 输出: A\
+  \ is not a space\n```\n\n## isupper() 语法\n\n`isupper('character')`\n\n// 检查给定字符是否为大写字母。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\n#include <cctype>\nusing namespace std;\n\
+  \nint main(){  \n  char c = 'A';\n  if(isupper(c)){ cout << c << \" is an uppercase\
+  \ character\";}\n  else{ cout << c << \" is not an uppercase character\";}\n}\n\
+  // 输出: A is an uppercase character\n```\n\n## join() 语法\n\n`thread t1(threadFunction,\
+  \ argument);`    // 创建线程 t1\n`t1.join();`      // t1 合并主线程\n`thread t2(threadFunction,\
+  \ argument);`  // 创建线程 t2\n`t2.join();`      // t2 合并主线程\n`thread t3(threadFunction,\
+  \ argument);`  // 创建线程 t3\n`t3.join();`      // t3 合并主线程\n// `threadName.join()`可以将当前线程合并到主线程\n\
+  \ne.g.\n\n```cpp\nvoid threadFunction(arg){\n  cout << \"I am the running function\
+  \ of the thread\" << endl;\n}\n\nint main(){\n  thread t1(threadFunction, argument);\
+  \   // 创建线程 t1\n  t1.join();      // t1 合并主线程\n  thread t2(threadFunction, argument);\
+  \  // 创建线程 t2\n  t2.join();      // t2 合并主线程\n  thread t3(threadFunction, argument);\
+  \  // 创建线程 t3\n  t3.join();      // t3 合并主线程\n  return (0);\n}\n\nt1.detach(); \
+  \   // 将 t1 从主线程分离\nif (t1.joinable()){    // 检查 t1 是否可以合并主线程\n  t1.join();\n}\n\
+  else{\n  cout << \"t1 is detached\" << endl;\n}\n// 上述代码是多线程的主结构\n```\n\n## joinable()\
+  \ 语法\n\n`threadObj.joinable()`\n\n// 如果线程对象可以合并，则返回 1，否则返回 0。\n// 只有在线程运行结束后，另一个线程才能被合并。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\n#include <thread>\n\nvoid func() {\n  std::this_thread::sleep_for(std::chrono::seconds(2));\n\
+  }\n\nint main() {\n  std::thread t;\n  t = std::thread(func);    // 创建一个线程对象\n \
+  \ std::cout<<\"Before joining, will be joinable? \"<< t.joinable()'\\n';\n  t.join();\
+  \      // 合并到线程对象\n  std::cout<<\"After joining, will be joinable? \"<< t.joinable()'\\\
+  n';\n}\n// 输出:\nBefore joining, will be joinable? 1\nAfter joining, will be joinable?\
+  \ 0\n```\n\n## lambda 函数 语法\n\n`[ ] (parameters)->return-type{body}`\n\n// Lambda\
+  \ 表达式将函数视为对象。我们可以将其赋值给变量并作为参数传递，还可以像函数一样求值它们。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  using namespace std;\n\nint main() {\n  auto salute = [ ]()-> void{ // 创建一个 lambda\
+  \ 函数\n    cout << \"Hi, My friends!\";\n  };\n  salute();     // 调用 lambda 函数\n\
+  \  return 0;\n}\n// 输出: Hi, My friends!\n```\n\n## lcm() 语法\n\n`std::lcm(num1, num2)`\n\
+  \n// 获取两个数的最小公倍数\n\ne.g.\n\n```cpp\n#include <iostream>\n#include <numeric>\nusing\
+  \ namespace std;\n\nint main(){\n  cout << \"lcm(100, 200) = \" << std::lcm(100,\
+  \ 200) << endl;\n}\n// 输出: lcm(100, 200) = 200\n```\n\n## 局部变量 语法\n\n`int global_variable\
+  \ = value;` // 定义全局变量\n`void myFunction ()` // 定义函数\n`int local_variable = value;`\
+  \ // 定义局部变量\n// 局部变量定义在函数内部。\n// 全局变量定义在函数外部。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  using namespace std;\n\nint global_variable = 100; // 全局变量\n\nvoid test1() {\n \
+  \ int local_variable = 30; // 局部变量\n}\n\nvoid test2 () {\n  int local_variable =\
+  \ 50; // 局部变量\n}\n\nint main(){\n  test1();\n  test2();\n  cout << global_variable\
+  \ << endl;\n  return 0;\n}\n//（注：为了清晰起起简化）\n```\n\n## log() 语法\n\n`log(num)`\n\n\
+  // 返回参数的自然对数。\n\ne.g.\n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace\
+  \ std;\n\nint main(){\n  cout << log(100);\n}\n// 输出: 4.60517\n```\n\n## log2()\
+  \ 语法\n\n`log2(num)`\n\n// 返回数字以 2 为底的对数。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  #include <cmath>\nusing namespace std;\n\nint main(){\n  cout << \"log2(128) = \"\
+  \ << log2(128);\n}\n// 输出: log2(128) = 7\n```\n\n## log10() 语法\n\n`log10(num)`\n\
+  \n// 返回数字以 10 为底的对数。\n\ne.g.\n\n```cpp\n#include <iostream>\n#include <cmath>\n\
+  using namespace std;\n\nint main(){\n  cout << \"log10(100) = \" << log10(100);\n\
+  }\n// 输出: log10(100) = 2\n\n## math 函数 语法\n\n`math_function(x);`\n`math_function(x,\
+  \ y);`\n\n// 常用的数学函数有 `sin()`, `cos()`, `tan()`, `exp()`, `round()`, `ceil()`, `floor()`,\
+  \ `min()`……\n\ne.g.\n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace\
+  \ std;\n\nint main(){\n  short s = 100;\n  int i = -100;\n  long l = 1000;\n  float\
+  \ f = 100.88;\n  double d = 100.888;\n  cout << \"sin(d): \" << sin(d) << endl;\n\
+  \  cout << \"tan(d): \" << tan(d) << endl;\n  cout << \"abs(i): \" << abs(i) <<\
+  \ endl;\n  cout << \"round(f): \" << round(f) << endl;\n  cout << \"ceil(d): \"\
+  \ << ceil(d) << endl;\n  cout << \"floor(f): \" << floor(f) << endl;\n  cout <<\
+  \ \"sqrt(f): \" << sqrt(f) << endl;\n  cout << \"pow(d, 2): \" << pow(d, 2) << endl;\n\
+  \  cout << \"max(10, 100): \" << max(10, 100) << endl;\n  cout << \"min(10, 100):\
+  \ \" << min(10, 100) << endl;\n  return 0;\n}\n// 输出:\nsin(d): -0.349498\ntan(d):\
+  \ 0.373022\nabs(i): 100\nround(f): 101\nceil(d): 101\nfloor(f): 100\nsqrt(f): 10.0439\n\
+  pow(d, 2): 10178.4\nmax(10, 100): 100\nmin(10, 100): 10\n```\n\n## max() 函数 语法\n\
+  \n`max(x, y);`\n\n// 通过比较 x 和 y 返回较大的值。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  #include <cmath>\nusing namespace std;\n\nint main(){\n  cout << \"max(10, 100);\
+  \ \" << max(10, 100) << endl;\n  return 0;\n}\n// 输出: max(10, 100); 100\n```\n\n\
+  ## memchr() 语法\n\n`memchr(string, ch, count )`\n\n// 在字符串中搜索字符\n// \"count\" 是要搜索的字符个数\n\
+  \ne.g.\n\n```cpp\n#include <cstring>\n#include <iostream>\nusing namespace std;\n\
+  \nint main(){\n  char str[] = \"JavaScript in 8 Hours\";\n  char ch = 'S';\n  int\
+  \ count = 10;\n  if (memchr(str, ch, count))\n    cout << ch << \" is found in first\
+  \ \" << count << \" characters.\";\n  else\n    cout << ch << \" is not found in\
+  \ first \" << count << \" characters.\";\n}\n// 输出: S is found in first 10 characters.\n\
+  ```\n\n\n\n\n\n## `memcmp()` 语法\n\n`memcmp(object1, object2, num)`\n\n// 按字母顺序比较两个对象\n\
+  // \"num\" 指定了要比较的最大字节数\n\ne.g.\n```cpp\n#include <cstring>\n#include <iostream>\n\
+  \nusing namespace std;\nint main(){\n    int comp = memcmp(\"abcd\", \"efg\", 4);\n\
+  \    if ( comp == 0 ){ cout << \"abcd = efg\"; }\n    if ( comp > 0 ){ cout << \"\
+  abcd > efg\"; }\n    if ( comp < 0 ){ cout << \"abcd < efg\"; }\n}\n// Output: abcd\
+  \ < efg\n```\n\n## 内存分配语法\n\n`variable = new type;` // 为变量分配内存\n`*variable = value;`\
+  \ // 将值存储到内存地址\n`delete variable;` // 释放变量内存\n\ne.g.\n```cpp\n#include <iostream>\n\
+  using namespace std;\nint main (){\n    double* myVar = NULL; // 初始化指针为 Null\n \
+  \   myVar = new double;    // 为变量分配内存\n    *myVar = 100;         // 将值存储到内存地址\n\
+  \    cout << \"Value of myVar : \" << *myVar << endl;\n    delete myVar;       \
+  \  // 释放变量内存\n    return 0;\n}\n// Output: Value of myVar : 100\n```\n\n## 内存分配语法\n\
+  \n`MyClass* myArr = new MyClass[3];` // 分配数组内存\n`delete [] myArr;` // 释放数组内存\n\n\
+  e.g.\n```cpp\n#include <iostream>\nusing namespace std;\nclass MyClass{\npublic:\n\
+  \    MyClass() {\n        cout << \"Call constructor!\" <<endl;\n    }\n    ~MyClass()\
+  \ {\n        cout << \"Call destructor!\" <<endl;\n    }\n};\nint main( ){\n   \
+  \ MyClass* myArr = new MyClass[3]; // 分配内存\n    delete [] myArr;               \
+  \ // 释放内存\n    return 0;\n}\n// Output:\nCall constructor!\nCall constructor!\n\
+  Call constructor!\nCall destructor!\nCall destructor!\nCall destructor!\n```\n\n\
+  ## 多重继承语法\n\n`class ParentClass { // 父类 };`\n`class ChildClass: public ParentClass\
+  \ { // 子类 };`\n`class GrandSonClass: public ChildClass { // 孙子类 };`\n\n// 孙子类可以派生自子类，子类可以派生自父类。\n\
+  \ne.g.\n```cpp\n#include <iostream>\nusing namespace std;\nclass ParentClass { //\
+  \ 父类\npublic:\n    void myFunction() {\n        cout << \"The treasure from the\
+  \ parents\" ;\n    }\n};\nclass ChildClass: public ParentClass { // 子类 };\nclass\
+  \ GrandSonClass: public ChildClass { // 孙子类 };\nint main() {\n    GrandSonClass\
+  \ myObj;\n    myObj.myFunction();\n    return 0;\n}\n// Output:\nThe treasure from\
+  \ the parents\n```\n\n## 多重继承语法\n\n`class ParentClass1 { // 父类 1 };`\n`class ParentClass2\
+  \ { // 父类 2 };`\n`class ChildClass: public ParentClass1, public ParentClass2 { }`\n\
+  \n// 子类派生自 ParentClass1 和 ParentClass2\n// 子类可以通过逗号分隔每个父类，从而派生自多个父类。\n\ne.g.\n```cpp\n\
+  #include <iostream>\nusing namespace std;\nclass ParentClass1 { // 父类 1\npublic:\n\
+  \    void function1() {\n        cout << \"Some treasures from parent class1.\\\
+  n\" ;\n    }\n};\nclass ParentClass2 { // 父类 2\npublic:\n    void function2() {\n\
+  \        cout << \"Some treasures from parent class2.\\n\" ;\n    }\n};\nclass ChildClass:\
+  \ public ParentClass1, public ParentClass2 { };\nint main() {\n    ChildClass myObj;\n\
+  \    myObj.function1();\n    myObj.function2();\n    return 0;\n}\n// Output:\n\
+  Some treasures from parent class1.\nSome treasures from parent class2.\n```\n\n\
+  ## 多线程语法\n\n`thread t1(threadFunction, argument);` // 创建线程 t1\n`t1.join();` // t1\
+  \ 等并主线程\n`thread t2(threadFunction, argument);` // 创建线程 t2\n`t2.join();` // t2 等并主线程\n\
+  `thread t3(threadFunction, argument);` // 创建线程 t3\n`t3.join();` // t3 等并主线程\n\n\
+  // 多线程可以处理多个任务。\n\ne.g.\n```cpp\nvoid threadFunction(arg){\n    cout << \"I am the\
+  \ function of the thread\" << endl;\n}\nint main(){\n    thread t1(threadFunction,\
+  \ argument);\n    t1.join();\n    thread t2(threadFunction, argument);\n    t2.join();\n\
+  \    thread t3(threadFunction, argument);\n    t3.join();\n    t1.detach(); // 将\
+  \ t1 与主线程分离\n    if (t1.joinable()){ // 检查 t1 是否可以等并主线程\n        t1.join();\n  \
+  \  }\n    else{\n        cout << \"t1 is detached\" << endl;\n    }\n    return\
+  \ 0;\n}\n// 以上代码是多线程的结构\n```\n\n## 命名空间语法\n\n`namespace namespace_name { }` // 声明命名空间\n\
+  `namespace_name::variable;` // 引用变量\n`namespace_name::function;` // 引用函数\n\n// 命名空间用于解决冲突问题。\n\
+  \ne.g.\n```cpp\n#include <iostream>\nusing namespace std;\nnamespace x_space{ //\
+  \ 声明 x_space\n    void func(){\n        cout << \"This is x_space\" << endl;\n \
+  \   }\n}\nnamespace y_space{ // 声明 y_space\n    void func(){\n        cout << \"\
+  This is y_space\" << endl;\n    }\n}\nint main (){\n    x_space::func(); // 调用 x_space\
+  \ 中的函数\n    y_space::func(); // 调用 y_space 中的函数\n    return 0;\n}\n// Output:\n\
+  This is x_space\nThis is y_space\n```\n\n## 空指针语法\n\n`int *pointer = NULL;`\n\n\
+  // 空 指针是一个值为 零的常量。\n\ne.g.\n```cpp\n#include <iostream>\nusing namespace std;\n\
+  int main (){\n    int *ptr = NULL;\n    cout << \"The value of the ptr is \" <<\
+  \ ptr;\n    return 0;\n}\n// Output: The value of the ptr is 0\n```\n\n## 对象创建语法\n\
+  \n`ClassName objectName;` // 创建一个对象\n`object.variable;` // 对象引用一个变量\n`object.method-name();`\
+  \ // 对象引用一个方法\n\n// 对象是类的实例。\n\ne.g.\n```cpp\n#include<string>\n#include <iostream>\n\
+  using namespace std;\nclass Flower { // 声明一个名为 Flower 的类\npublic: // 指定访问权限\n  \
+  \  string c1, c2;\n    void beautify() { cout << \"Green\" << endl; };\n};\nint\
+  \ main( ) {\n    Flower obj; // 创建一个名为 \"obj\" 的对象。\n    obj.c1= \"Red \"; obj.c2\
+  \ = \"Yellow \";\n    cout << obj.c1 << endl; // 对象 obj 引用 c1\n    cout << obj.c2\
+  \ << endl; // 对象 obj 引用 c2\n    obj.beautify(); // 对象 obj 引用 beautify()\n    return\
+  \ 0;\n}\n// Output: Red Yellow Green\n```\n\n## 对象初始化语法\n\n`Class object{value}`\n\
+  \n// 创建并初始化一个对象\n\ne.g.\n```cpp\n#include <iostream>\nclass Coordinate{ // 定义一个类\n\
+  public:\n    int x, y;\n};\nint main(){\n    Coordinate c{10, 20}; // 创建并初始化对象 \"\
+  c\"\n    std::cout << \"(\" << c.x << \", \" << c.y << \")\";\n    return 0;\n}\n\
+  ```\n\n\n\n\n\n```cpp\n// Output:   ( 10 , 20 )\n```\n\n我们可以使用默认构造函数用默认值初始化对象，这会隐式调用默认构造函数。\n\
+  \ne.g. (2)\n\n```cpp\n#include <iostream>\n\nclass Coordinate{ // 定义一个类\n\npublic:\n\
+  \    int x, y;\n\n};\n\nint main(){\n    Coordinate c; // 创建并用默认值初始化对象 \"c\"\n \
+  \   std::cout << \"(\" << c.x << \", \" << c.y << \")\";\n    return 0;\n}\n```\n\
+  ```cpp\n// Output:   ( 0 , 0 )\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### `ofstream` 语法\n\n```cpp\nofstream fileObject (\"myFile.txt\"); // 创建一个输出对象\n\
+  fileObject << myString << endl; // 将 myString 写入文件\n```\n\n- `ofstream fileObject\
+  \ (\"myFile.txt\");` 创建输出文件对象 `fileObject`。\n- `ofstream` 类用于向文件写入数据。\n- `fileObject`\
+  \ 是一个输出文件对象。\n- 为了处理文件，我们需要先使用 `#include <fstream>`。\n\ne.g.\n\n```cpp\n#include\
+  \ <iostream>\n#include <fstream>\n#include <string>\nusing namespace std;\n\nint\
+  \ main(){\n    ofstream fileObject ( \"D:\\\\myFile.txt\" ); // 创建对象\n    string\
+  \ myString = \"C++ is a very good language.\";\n    fileObject << myString << endl;\
+  \ // 将 myString 写入文件\n    fileObject.close ( );\n    cout << \"Write to file successfully!\"\
+  \ << endl;\n    return 0;\n}\n```\n```cpp\n// Output:  Write to file successfully!\n\
+  ```\n\n------------------------------------------------------------------------------\n\
+  \n### 运算符重载语法\n\n```cpp\nClassName operator + (args){\n}\n```\n\n```cpp\nobject3\
+  \ = object1 + object2;\n```\n\n- `+`, `-`, `*`, `/` 定义了运算符重载。\n- 运算符重载可以加/减/乘除两个对象的属性，并返回一个新的对象。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass Carton{\npublic:\n\
+  \    double getVolume( void ){ return length * width * height; }\n    void setLength(\
+  \ double len ){ length = len; }\n    void setWidth( double wid ){ width = wid; }\n\
+  \    void setHeight( double hei ){ height = hei; }\n    Carton operator + (const\
+  \ Carton& obj){ // 运算符重载\n        Carton carton;\n        carton.length = this->length\
+  \ + obj.length;\n        carton.width = this->width + obj.width;\n        carton.height\
+  \ = this->height + obj.height;\n        return carton;\n    }\nprivate:\n    double\
+  \ length;  double width;   double height;     \n};\n\nint main( ){\n    Carton carton1;\
+  \   Carton carton2;   Carton carton3;             \n    double volume = 0.0;   \
+  \  // 声明体积\n    carton1.setLength(7.0);\n    carton1.setWidth(8.0);\n    carton1.setHeight(6.0);\n\
+  \    carton2.setLength(11.0);\n    carton2.setWidth(12.0);\n    carton2.setHeight(10.0);\n\
+  \    volume = carton1.getVolume();\n    cout << \"Volume of carton1 : \" << volume\
+  \ <<endl;\n    volume = carton2.getVolume();\n    cout << \"Volume of carton2 :\
+  \ \" << volume <<endl;\n    carton3 = carton1 + carton2;   // 相加两个对象\n    volume\
+  \ = carton3.getVolume();\n    cout << \"Volume of carton3 : \" << volume <<endl;\n\
+  \    return 0;\n}\n```\n```cpp\n// Output:\nVolume of carton1 : 336\nVolume of carton2\
+  \ : 1320\nVolume of carton3 : 5760\n```\n\n------------------------------------------------------------------------------\n\
+  \n### 运算符重载语法\n\n```cpp\nClassName operator * (args){\n}\n```\n\n```cpp\nobject3\
+  \ = object1 * object2;\n```\n\n- `+`, `-`, `*`, `/` 定义了运算符重载。\n- 运算符重载可以加/减/乘/除两个对象的属性，并返回一个新的对象。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nclass Carton{\npublic:\n\
+  \    double getVolume( void ){ return length * width * height; }\n    void setLength(\
+  \ double len ){ length = len; }\n    void setWidth( double wid ){ width = wid; }\n\
+  \    void setHeight( double hei ){ height = hei; }\n    Carton operator*(const Carton&\
+  \ obj){ // 运算符重载\n        Carton carton;\n        carton.length = this->length *\
+  \ obj.length;\n        carton.width = this->width * obj.width;\n        carton.height\
+  \ = this->height * obj.height;\n        return carton;\n    }\nprivate:\n    double\
+  \ length;  double width;   double height;     \n};\n\nint main( ){\n    Carton carton1;\
+  \   Carton carton2;   Carton carton3;             \n    double volume = 0.0;   \
+  \  // 声明体积\n    carton1.setLength(7.0);\n    carton1.setWidth(8.0);\n    carton1.setHeight(6.0);\n\
+  \    carton2.setLength(11.0);\n    carton2.setWidth(12.0);\n    carton2.setHeight(10.0);\n\
+  \    volume = carton1.getVolume();\n    cout << \"Volume of carton1 : \" << volume\
+  \ <<endl;\n    volume = carton2.getVolume();\n    cout << \"Volume of carton2 :\
+  \ \" << volume <<endl;\n    carton3 = carton1 * carton2;   // 相乘两个对象\n    volume\
+  \ = carton3.getVolume();\n    cout << \"Volume of carton3 : \" << volume <<endl;\n\
+  \    return 0;\n}\n```\n```cpp\n// Output:\nVolume of carton1 : 336\nVolume of carton2\
+  \ : 1320\nVolume of carton3 : 443520\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### 输出命令语法\n\n```cpp\ncout << \"   \";  // 在同一行打印结果。\ncout << \"   \" << endl;\
+  \ // 在不同行打印结果。\n```\n\ne.g.\n\n```cpp\ncout << \" 1 \";     // 在同一行输出\ncout << \"\
+  \ 2 \";\ncout << \" 3 \";\n```\n```cpp\n// Output:      1  2  3\n```\n\ne.g.\n\n\
+  ```cpp\ncout << \" 1 \" << endl ;    // 在不同行输出\ncout << \" 2 \" << endl ;\ncout\
+  \ << \" 3 \" << endl ;\n```\n```cpp\n// Output:      \n1\n2\n3\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### 重载语法\n\n```cpp\nmyFunction(arg1);\nmyFunction(arg2);\nmyFunction(arg3);\n\
+  ```\n\n- 重载意味着类中存在两个或多个同名的方法，且它们的参数不同。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  #include <string>\nusing namespace std;\n\nclass  Flower{\npublic:\n    Flower(string\
+  \ name);\n    Flower(string name, int number);\n    Flower(string name, int number,\
+  \ string color);\n};     // 三个构造函数\n\nint main( ){\n    Flower(\" Rose \");    \
+  \ // 重载\n    Flower(\" Rose \", 10);      // 重载\n    Flower(\" Rose \", 10, \" Red\
+  \ \");   // 重载\n    return 0;\n}\n```\n\n```cpp\nFlower::Flower(string name)\n{cout\
+  \ << name << endl;}\nFlower::Flower(string name, int number)\n{cout << name << number\
+  \ << endl;}\nFlower::Flower(string name, int number, string color)\n{cout << name\
+  \ <<number << color << endl;}\n```\n```cpp\n// Output:\nRose\nRose 10\nRose 10 Red\n\
+  ```\n\n-------------------------------------------------------------------------------\n\
+  \n### 重写语法\n\n```cpp\nmyFunction(arg){…}     // 此方法在基类中\nmyFunction(arg){…}    \
+  \ // 此方法在派生类中\n```\n\n- 如果名称和参数相同，派生类的方法可以重写基类的方法。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  using namespace std;\n\nclass Computer{ // 基类\npublic:\n    void harddrive( ){ cout\
+  \ << \"5T\" << endl; };\n    void memory( ){ cout << \"4G\" << endl; };\n};\n\n\
+  class Laptop: public Computer{ // 派生类\npublic:\n    void harddrive( ){ cout << \"\
+  10T\" << endl; };\n    void memory( ){ cout << \"8G\" << endl; };\n};\n\nint main(\
+  \ ){\n    Laptop myLaptop; // 创建对象\n    myLaptop.harddrive( );\n    myLaptop.memory(\
+  \ );\n    return 0;\n}\n```\n```cpp\n// Output:\n10T\n8G\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### 指针++ 语法\n\n```cpp\nptr++;\n```\n\n- 将指针移动到下一个地址。\n\ne.g.\n\n```cpp\nconst\
+  \ int MAX = 3;\nint main (){\n    int  arr[MAX] = {10, 20, 30};\n    int  *ptr;\
+  \ ptr = arr;\n    for (int i = 0; i < MAX; i++){\n        cout << \"Address of arr[\"\
+  \ << i << \"] = \";\n        cout << ptr << endl;\n        cout << \"Value of arr[\"\
+  \ << i << \"] = \";\n        cout << *ptr << endl;\n        ptr++;   // 移动到下一个地址\n\
+  \    }\n    return 0;\n}\n```\n```cpp\n// Output: \nAddress of arr[0] = 0x7ffd5bc55a58\n\
+  Value of arr[0] = 10\nAddress of arr[1] = 0x7ffd5bc55a5c\nValue of arr[1] = 20\n\
+  Address of arr[2] = 0x7ffd5bc55a60\nValue of arr[2] = 30\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### 指针-- 语法\n\n```cpp\nptr--;\n```\n\n- 将指针移动到上一个内存地址。\n\ne.g.\n\n```cpp\nconst\
+  \ int MAX = 3;\nint main (){\n    int  arr[MAX] = {10, 20, 30};\n    int  *ptr;\
+  \ ptr = &arr[MAX-1]; // 指向最后一个地址\n    for (int i = MAX; i > 0; i--){\n        cout\
+  \ << \"Address of arr[\" << i << \"] = \";\n        cout << ptr << endl;\n     \
+  \   cout << \"Value of arr[\" << i << \"] = \";\n        cout << *ptr << endl;\n\
+  \        ptr--;   // 移动到上一个地址\n    }\n    return 0;\n}\n```\n\n\n\n\n\n`arr[2]`\
+  \ 的值 = 20\n`arr[1]` 的地址 = 0x7ffd67ddecf8\n`arr[1]` 的值 = 10\n\n---\n\n### 指针数组语法\n\
+  \n`*pointer = array;`\n\n`*pointer = array;` 意味着指针最初指向数组的第一个元素。\n\n例如\n\n```cpp\n\
+  int main( ) {\n    int myArray[ 3 ] = { 10, 20, 30 };\n    int *pt = myArray;  \n\
+  \    // 指针指向第一个元素 myArray[0]\n    cout << \"The first value is: \" << *pt << endl;\n\
+  \    pt++;  // 指针移动到下一个元素 myArray[1]\n    cout << \"The second value is: \" << *pt\
+  \ << endl;\n    pt++; // 指针移动到下一个元素 myArray[2]\n    cout << \"The third value is:\
+  \ \" << *pt << endl;\n    return 0;\n}\n```\n\n// 输出:\nThe first value is: 10\n\
+  The second value is: 20\nThe third value is: 30\n\n---\n\n### 指针数组语法\n\n`int a,\
+  \ b, c;`\n`int *pointer[n] = { &a, &b, &c };`\n\n`int *pointer[n] = { &a, &b, &c\
+  \ };` 定义了一个指针数组。\n`n` 是数组的长度。\n`&a, &b, &c` 是数组的元素。\n\n例如\n\n```cpp\nint main( )\
+  \ {\n    int a, b, c;\n    a = 10, b = 11, c = 12;\n    int *myArray[3] = { &a,\
+  \ &b, &c };  \n    // 定义一个指针数组 \"myArray\"\n    cout << *myArray[0] + *myArray[1]\
+  \ << endl;     // a + b\n    cout << *myArray[2] - *myArray[1] << endl;      //\
+  \ c - b\n    return 0;\n}\n```\n\n// 输出: 21 1\n\n---\n\n### 指针初始化语法\n\n`dataType\
+  \ *pointer;` // 声明指针\n`*pointer = &variable;` // `*pointer` 访问变量的值\n`pointer = &variable;`\
+  \ // `pointer` 指向变量的地址\n\n指针名称前有一个 ` * `。\n`&` 运算符获取变量的内存地址。\n\n例如\n\n```cpp\n#include\
+  \ <string>\n#include <iostream>\nusing namespace std;\n\nint main( ) {\n    int\
+  \ num = 20;\n    int *pt = &num;      // *pt 访问 num 的值\n    cout << \"The value\
+  \ of num is: \" << *pt << endl;\n    pt = &num;      // pt 指向 num 的地址\n    cout\
+  \ << \"The address of num is: \" << pt << endl;\n    return 0;\n}\n```\n\n// 输出:\
+  \ The value of num is: 20\nThe address of num is: 0x7fff1bbfbaa8\n\n---\n\n### 指针交换语法\n\
+  \n`pt = pt1; pt1 = pt2; pt2 = pt;`\n\n`pt1` 的指针可以与 `pt2` 的指针交换。\n\n例如\n\n```cpp\n\
+  #include <string>\n#include <iostream>\nusing namespace std;\n\nint main( ) {\n\
+  \    int *pt, x, y;\n    x = 100, y = 200;\n    int *pt1 = &x;      // *pt1 访问 x\
+  \ 的值\n    int *pt2 = &y;      // *pt2 访问 y 的值\n    cout << x << \" \" << y << endl;\n\
+  \    pt = pt1; pt1 = pt2; pt2 = pt;      // 交换指针\n    cout << *pt1 << \" \" << *pt2\
+  \ << endl;\n    return 0;\n}\n```\n\n// 输出:\n100 200\n200 100\n\n---\n\n### 指针使用语法\n\
+  \n`dataType *pointer;` // 声明指针\n`*pointer = &variable;` // `*pointer` 访问变量的值\n`pointer\
+  \ = &variable;` // `pointer` 指向变量的地址\n\n例如\n\n```cpp\n#include<iostream>\nusing\
+  \ namespace std;\n\nint main( ){\n    int x = 100, y = 200;\n    int *xPt = &x;\
+  \      // *xPt 访问 x 的值\n    int *yPt = &y;      // *yPt 访问 y 的值\n    cout<<\"X value:\
+  \ \"<< *xPt <<endl;      // 显示值\n    cout<<\"X address: \"<< xPt <<endl;     //\
+  \ 显示地址\n    cout<<\"Y value: \"<< *yPt <<endl;      // 显示值\n    cout<<\"Y address:\
+  \ \"<< yPt <<endl;      // 显示地址\n    return 0;\n}\n```\n\n// 输出:\nX value: 100\n\
+  X address: 0x22ff55\nY value: 200\nY address: 0x22ff50\n\n---\n\n### 指针与字符串语法\n\n\
+  `char *pt = myString;`\n\n`char *pointer = \"string\";` 定义了一个指向字符串第一个字符的指针。\n\n\
+  例如\n\n```cpp\nint main( ) {\n    char str[ ] = \"myString\";  // 定义一个字符串\n    char\
+  \ *pt = str; // 指向 str 的第一个字符\n    int counter = 0;    // 定义一个计数器\n    while ( *pt\
+  \ != 0 ) {  // 条件\n        counter++;  // 计数\n    }\n    // ... 逻辑继续\n}\n```\n（注：此部分的原始原文在输入中是碎片化的，我已清理了提供的结构逻辑。）\n\
+  \n---\n\n### 多态语法\n\n`virtual method(){ }`\n\n多态意味着基类中的方法可以被派生类重写。\n\n例如\n\n```cpp\n\
+  #include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal {\n\
+  public:\n    virtual void yell() { }\n};\n\nclass Cat : public Animal {\npublic:\n\
+  \    void yell() override {\n};\n```\n\n\n\n\n\n# `puts()` 语法：\n\n`puts(\"string\"\
+  )`\n\n// 将字符串写入 `stdout`\n\n例如：\n\n```cpp\n#include <cstdio>\n\nusing namespace\
+  \ std;\n\nint main(){\nputs(\"Scala in 8 Hours\");\n}\n```\n// 输出：`Scala in 8 Hours`\n\
+  \n---\n\n# `raise()` 语法：\n\n`int raise (signal);`\n\n// `raise()` 函数可以生成一个信号。\n\
+  // `raise(SIGINT)` 可以生成一个 `SIGINT` 信号\n// `SIGINT` 是一个中断信号，可以通过手动按下 `Ctrl+C` 键生成，也可以通过\
+  \ `raise()` 函数生成。\n\n例如：\n\n```cpp\n#include <iostream>\n#include <csignal>\n#include\
+  \ <unistd.h>\nusing namespace std;\nvoid signalHandler( int mySignal ){\n// 定义一个处理信号的函数\n\
+  cout << \"Interrupt signal (\" << mySignal << \") received.\\n\";\nexit(mySignal);\n\
+  }\nint main (){\nint i = 0;\nsignal(SIGINT, signalHandler);\n// 定义要捕获的 SIGINT 信号和回调函数\n\
+  while(++i){\ncout << \"The program is running......\" << endl;\nif( i == 3 ){\n\
+  raise( SIGINT);   // 生成一个 SIGINT 信号\n}\nsleep(2);   // 睡眠 2 毫秒\n}\nreturn 0;\n}\n\
+  ```\n// 输出：\nThe program is running......\nThe program is running......\nThe program\
+  \ is running......\nInterrupt signal (2) received.\n// 随后程序运行终止。\n\n---\n\n# `rand()`\
+  \ 语法：\n\n`srand( (unsigned)time( NULL ) );` // 设置种子\n`num= rand();` // 生成一个随机数\n\
+  \n例如：\n\n```cpp\n#include <iostream>\n#include <ctime>\n#include <cstdlib>\nusing\
+  \ namespace std;\nint main (){\nint num;\nsrand( (unsigned)time( NULL ) );  // 设置种子\n\
+  num= rand();   // 生成一个随机数\ncout <<\"Random number is \" << num << endl;\nreturn\
+  \ 0;\n}\n```\n// 输出：`Random number is 900729318`\n\n---\n\n# 读取文件语法：\n\n`ifstream\
+  \ fileObject( \"myFile.txt\" );` // 创建输入对象\n`getline( fileObject, myString);` //\
+  \ 从文件读取 `myString`\n\n// `ifstream fileObject ( \"myFile.txt\" );` 创建了一个输入文件对象 `fileObject`。\n\
+  // `ifstream` 类用于从文件中读取数据。\n// `fileObject` 是一个输入文件对象。\n// 为了处理文件，我们需要先导入 `#include\
+  \ <fstream>`。\n\n例如：\n\n```cpp\n// 假设 \"myFile.txt\" 的路径为 \"D:\\\\myFile.txt\"。\n\
+  // \"myFile.txt\" 的内容为：\"C++ is a very good language.\"\n#include <iostream>\n#include\
+  \ <fstream>\n#include <string>\nusing namespace std;\nint main(){\nstring myString;\n\
+  ifstream fileObject ( \"D:\\\\myFile.txt\" ); // 创建一个对象\ngetline ( fileObject, myString\
+  \ ); // 将文件读取到 myString\ncout << myString <<endl;    // 显示 myString 的内容\nfileObject.close\
+  \ ( );\nreturn 0;\n}\n```\n// 输出：`C++ is a very good language.`\n\n---\n\n# `read()`\
+  \ 语法：\n\n`cin.read(stringArray, stringLength);`\n\n// `stringArray` 将字符串定义数组。\n\
+  // `stringLength` 定义字符串的最大尺寸。\n\n例如：\n\n```cpp\nint main(){\ncout<< \"Please input\
+  \ a sentence:\"<< endl;\nchar myString[ 80];  // 字符串可以包含 80 个字符\ncin.read ( myString\
+  \ , 10 );     // 最大输入 10 个字符\ncout << \"What you inputted is: \" << myString <<\
+  \ endl;\nreturn 0;\n}\n```\n// 假设我们输入了一个句子：Very Good\n// 输出：Please input a sentence:\n\
+  What you inputted is:   Very Good\n\n---\n\n# 递归语法：\n\n`type functionName(){`\n\
+  `functionName();` // 函数调用者调用自己\n}`\n\n// 函数内部的函数调用者调用自己，这被称为递归函数。\n\n例如：\n\n```cpp\n\
+  #include <iostream>\nusing namespace std;\nvoid myself(int n);\nint main() {\nmyself\
+  \ ( 1 );    // 声明一个函数\nreturn 0;\n}\nvoid myself(int n){    // 定义一个函数 \"myself(){\
+  \ }\"\ncout <<  \"Number \" << n << endl;\n++n;\nif ( n == 4) return;     // return\
+  \ 停止运行\nelse myself(n);     // 函数调用者调用 myself()\n}\n```\n// 输出：\nNumber 1\nNumber\
+  \ 2\nNumber 3\n\n---\n\n# 引用参数语法：\n\n`type functionName(&a, &b) { }`\n\n// `(&a,\
+  \ &b)` 不仅可以接收来自函数调用者的参数，还可以将参数传递给函数调用者。\n\n例如：\n\n```cpp\nvoid swap(int &a, int\
+  \ &b) {    // 引用参数\nint temp;\ntemp = a, a = b, b = temp;  // 引用交换\n}\nint main(\
+  \ ) {\nint x = 10, y = 20;\ncout << x << \" \" << y << endl;\nswap ( x, y );  //\
+  \ 调用函数并传递参数\ncout << x << \" \" << y << endl;\nreturn 0;\n}\n```\n// 输出：\n10   20\n\
+  20   10\n\n---\n\n# 引用对象语法：\n\n`ClassName &reference = object;`\n\n// 引用是变量或对象的别名。\n\
+  // 引用名之前带有符号 `&`。\n\n例如：\n\n```cpp\nclass Flower{    // 声明一个类\npublic:\nvoid display();\n\
+  };\nvoid Flower :: display( ){      // 定义一个方法\ncout <<\"The flower is beautiful\"\
+  \ << endl;\n}\nint main( ) {\nFlower obj; // 创建一个对象\nFlower &reference = obj; //\
+  \ \"reference\" 是 \"obj\" 的别名\nreference.display();\nreturn 0;\n}\n```\n// 输出：`The\
+  \ flower is beautiful`\n\n---\n\n# 引用变量语法：\n\n`type &reference = variable;`\n\n\
+  // 引用是变量或对象的别名。\n// 引用名之前带有符号 `&`。\n\n例如：\n\n```cpp\nint main( ) {\nint num = 100;\n\
+  int &reference = num; // \"reference\" 是 \"num\" 的别名\ncout << reference << endl;\n\
+  return 0;\n}\n```\n// 输出：`100`\n\n---\n\n# `remove()` 语法：\n\n`remove(myFile)`\n\n\
+  // 删除指定的文件，成功则返回 0，失败返回非 0。\n\n例如：\n\n```cpp\n#include <cstdio>\nusing namespace\
+  \ std;\nint main(){\nif ( !remove(\"myFile.txt\") ){ cout << \"Removed successfully!\"\
+  ;}\nelse{ cout << \"Not removed yet!\";}\n}\n```\n// 输出：Removed successfully\n\n\
+  ---\n\n# `rename()` 语法：\n\n`rename(oldFile, newFile)`\n\n// 将旧文件名重命名为新文件名，成功则返回\
+  \ 0，失败返回非 0。\n\n例如：\n\n```cpp\n#include <iostream>\n#include <cstdio>\nusing namespace\
+  \ std;\nint main(){\nif (rename(\"oldname.txt\", \"newname.txt\") != 0)\ncout <<\
+  \ \"File renamed failed!\";\nelse\ncout << \"File renamed successfully\";\n}\n```\n\
+  // 输出：File renamed successfully\n\n---\n\n# `return` 语法：\n\n`return value;`\n\n\
+  // `return value` 可以向函数调用者返回一个值。\n\n例如：\n\n```cpp\n#include <iostream>\nusing namespace\
+  \ std;\nint myFunction(int arg );  // 声明一个函数\nint main( ) {\ncout << \"The number\
+  \ is \" << myFunction(10) <<endl; \nreturn 0;   // \"myFunction(20)\" 是函数调用者\n}\n\
+  int myFunction ( int arg ) {  // 定义一个函数\nreturn ++arg;  // 向函数调用者返回一个值\n}\n```\n\
+  // 输出：The number is 11.\n\n---\n\n# `round()` 函数语法：\n\n`round(num);`\n\n// 返回 `num`\
+  \ 的最近的整数值，半数情况远离远离的方向舍入\n\n例如：\n\n```cpp\n#include <iostream>\n#include <cmath>\n\
+  using namespace std;\nint main (){\nfloat f = 100.88;\ncout << \"round(f): \" <<\
+  \ round(f) << endl;\nreturn 0;\n}\n```\n// 输出：round(f): 101\n\n---\n\n# `seekg()`\
+  \ 函数语法：\n\n`contentName.seekg(n, ios::beg / ios::cur / ios::end);`\n\n// 将读取指针设置到内容的起始、结束或当前位置的第\
+  \ N 个字符。\n// `n` 意味着第 N 个字符。\n// `ios::beg` 表示从内容的开始\n\n\n\n\n\n// `ios::cur` 表示从内容的当前位置\n\
+  // `ios::end` 表示从内容的末尾\n\ne.g.\n\n```cpp\n#include <fstream>\n#include <iostream>\n\
+  \nusing namespace std;\nint main(int argc, char** argv){\n    // 以输入/输出/截断模式打开新文件\n\
+  \    fstream myFile(\"abc.txt\",ios::in | ios::out | ios::trunc);\n    // 将字符串 \"\
+  C++ is excellent\" 添加文件中\n    myFile << \"C++ is excellent\";\n    // 移动到文件开始处的第\
+  \ 6 个字符\n    myFile.seekg(6, ios::beg);\n    // 从文件中读取接下来的 10 个字符到缓冲区\n    char\
+  \ contents[6];\n    myFile.read(contents, 10);\n    // 用空终止字符填充缓冲区\n    contents[10]\
+  \ = 0;\n    // 输出从文件中读取的内容并关闭\n    cout << contents << endl;\n    myFile.close();\n\
+  }\n```\n// 输出:   excellent\n\n---\n\n## `seekp()` 函数语法\n\n`contentName.seekg(n,\
+  \ ios::beg / ios::cur / ios::end);`\n\n// 将写入指针设置为距离内容开头、末尾或当前位置第 N 个字符。\n// \"\
+  n\" 表示第 N 个字符。\n// `ios::beg` 表示从内容的开始\n// `ios::cur` 表示从内容的当前位置\n// `ios::end`\
+  \ 表示从内容的末尾\n\ne.g.\n\n```cpp\n#include <sstream>\n#include <iostream>\n\nint main(){\n\
+  \    std::ostringstream str(\"javascript\");\n    str.seekp(4);    // 改变第 4 个字符的位置\n\
+  \    str << 'S';\n    str.seekp(0, std::ios::end);  \n    // 改变最后一个字符的位置\n    str\
+  \ << '!';\n    str.seekp(0);    // 改变第一个字符的位置\n    str << 'J';\n    std::cout <<\
+  \ str.str() << '\\n';\n}\n```\n// 输出:   JavaScript!\n\n---\n\n## setter 语法\n\n`private:`\
+  \    // 封装\n`type variable;`      // 设置私有变量\n`public:`\n`void setVariable() { }\
+  \   // setter\n`long getVariable() { return … }` // getter\n\n// 封装的含义是确保秘密数据对用户隐藏。\n\
+  // 我们必须先将类变量声明为 \"private\"。\n// 如果我们想访问 \"private\" 变量，可以使用公的 `getter` 和 `setter`\
+  \ 方法。\n\ne.g.\n\n```cpp\n#include <iostream>\nusing namespace std;\nclass Programmer\
+  \ {\nprivate:    // 封装\n    long income;      // 设置私有变量\npublic:\n    void setIncome(int\
+  \ money) {   // setter\n        income = money;\n    }\n    long getIncome() { \
+  \   // getter\n        return income;\n    }\n};\n\nint main() {\n    Programmer\
+  \ guy;\n    guy.setIncome(90000);\n    cout << \"Monthly income is: $\"<< guy.getIncome();\
+  \ \n    return 0;\n}\n```\n// 输出:   Monthly income is: $90000\n\n---\n\n## `signal()`\
+  \ 语法\n\n`signal(SIGINT, handler);`\n\n// `signal()` 用于捕获紧急信号。\n// `SIGINT` 是一个中断信号，可以通过手动按下\
+  \ Ctrl+C 键生成，也可以通过 `raise()` 函数生成。\n// \"handler\" 是处理信号的回调函数。\n\ne.g.\n\n```cpp\n\
+  #include <iostream>\n#include <csignal>\n#include <unistd.h>\nusing namespace std;\n\
+  void signalHandler( int mySignal ){\n    // 定义一个处理信号的函数\n    cout << \"Interrupt\
+  \ signal (\" << mySignal << \") received.\\n\";\n    exit(mySignal);\n}\nint main\
+  \ (){\n    signal(SIGINT, signalHandler);  \n    // 定义要捕获的 SIGINT 信号和回调函数\n    while(1){\n\
+  \        cout << \"The program is running…...\" << endl;\n        sleep(2);    \
+  \  // 睡眠 2 秒\n    }\n    return 0;\n}\n```\n// 输出:\nThe program is running…...\n\
+  The program is running…...\nThe program is running…...\n// 当我们按下 Ctrl+C 键时，可以看到结果：\n\
+  Interrupt signal (2) received.\n// 然后程序的运行被终止。\n\n---\n\n## 有符号数字语法\n\n`signed number;`\n\
+  // 声明有符号数字\n\ne.g.\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){\n\
+  \    signed num1;          // 声明有符号数字\n    unsigned num2;      // 声明无符号数字\n    num1\
+  \ = -1;\n    num2 = num1;\n    cout << num1 << \"   \" << num2;\n    return 0;\n\
+  }\n```\n// 输出:     -1    4294967295\n// 有符号的 -1 被解释为无符号的 4294967295\n\n---\n\n##\
+  \ `sin()` 语法\n\n`sin(num)`\n\n// 返回弧度为 num 的正值。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  #include <cmath>\nusing namespace std;\nint main(){\n    double degree=30;\n   \
+  \ double r = degree*3.14/180; \n    cout << sin(r);\n}\n```\n// 输出:   0.49977\n\n\
+  ---\n\n## `sinh()` 语法\n\n`sinh(num)`\n\n// 返回 num 的双曲正弦\n\ne.g.\n\n```cpp\n#include\
+  \ <cmath>\n#include <iostream>\nusing namespace std;\nint main(){\n    cout << sinh(0.6);\n\
+  }\n```\n// 输出:   0.636654\n\n---\n\n## `sizeof()` 语法\n\n`sizeof(dataType);`\n\n\
+  // 获取数据类型的大小\n\ne.g.\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main(){\n\
+  \    cout << \"Size of char : \" << sizeof(char) << endl;\n    cout << \"Size of\
+  \ int : \" << sizeof(int) << endl;\n    cout << \"Size of float : \" << sizeof(float)\
+  \ << endl;\n    cout << \"Size of double : \" << sizeof(double) << endl;\n    return\
+  \ 0;\n}\n```\n// 输出:\nSize of char : 1\nSize of int : 4\nSize of float : 4\nSize\
+  \ of double : 8\n\n---\n\n## `sqrt()` 函数语法\n\n`sqrt(x);`\n\n// 返回参数 `x` 的平方根\n\n\
+  e.g.\n\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\nint\
+  \ main (){\n    float  f = 100.88;\n    cout << \"sqrt(f): \" << sqrt(f) << endl;\n\
+  \    return 0;\n}\n```\n// 输出:\nsqrt(f): 10.0439\n\n---\n\n## `srand()` 语法\n\n`srand(\
+  \ (unsigned)time( NULL ) );`  // 设置种子\n`num= rand();` // 生成随机数\n\ne.g.\n\n```cpp\n\
+  #include <iostream>\n#include <ctime>\n#include <cstdlib>\nusing namespace std;\n\
+  int main (){\n    int num;\n    srand( (unsigned)time( NULL ) );  // 设置种子\n    num=\
+  \ rand();   // 生成随机数\n    cout <<\"Random number is \" << num << endl;\n    return\
+  \ 0;\n}\n```\n// 输出:   Random number is 900729318\n\n---\n\n## 静态函数语法\n\n`static\
+  \ type function( );`     // 声明静态函数\n`className :: function( );` // 类引用函数\n\n// 静态函数可以通过类或任何对象引用。非静态函数仅通过对象引用，而不通过类引用。\n\
+  \ne.g.\n\n```cpp\nclass Account {\npublic:\n    static int myfunction( int n );\
+  \   // 声明静态方法\n};\n\nint Account :: myfunction(int n){  // 类的方法\n    return n;\n\
+  }\n\nint main() {\n    cout << Account :: myfunction( 200 ) << endl; // 类直接引用方法\n\
+  \    return 0;\n}\n```\n// 输出:   200\n\n---\n\n## 静态全局变量语法\n\n`static type variable;`\n\
+  \n// 如果 \"static type variable;\" 定义在函数外部，它将是一个静态全局变量。\n// \"static type variable;\"\
+  \ 声明了一个只能在当前文件中使用的变量。\n\ne.g.\n\n(file1.cpp)\n```cpp\n#include <iostream>\nusing\
+  \ namespace std;\nstatic int c;  // 静态全局变量\nint main( ){\n    int a = 30, b = 40;\n\
+  \    c = a + b;   // \" \"c\" 是静态全局变量\n    cout << c << endl;\n    return 0;\n}\n\
+  ```\n\n(file2.cpp)\n```cpp\n#include <iostream>\nusing namespace std;\nint a = 100,\
+  \ b = 200;\nint c = a + b;  // \"c\" 不是静态全局变量\n```\n// 输出:   70\n\n---\n\n## 静态局部变量语法\n\
+  \n`static type variable;`\n\n// 如果 \"static type variable;\" 定义在函数内部，它将是一个静态局部变量。\n\
+  // 静态局部变量在每次函数调用保留变量的值\n\ne.g.\n\n```cpp\n#include<iostream>\nusing namespace std;\n\
+  void myFunction();\n\nint main( ){\n    myFunction( );\n    myFunction( );\n   \
+  \ myFunction( );\n    return 0;\n}\n\nvoid myFunction(){\n}\n```\n\n\n\n\n\n```cpp\n\
+  static int num = 1;    // 定义一个静态局部变量\n\nnum = num + 2;\n\ncout<< num << endl;\n\n\
+  }\n\n// 输出:     3    5    7\n```\n\n## 静态变量语法\n\n`static type variable;`      //\
+  \ 声明一个静态变量\n\n`className :: variable;`     // 类引用一个变量\n\n// 静态变量可以通过类或任何对象引用。非静态变量仅通过对象引用，不能通过类引用。\n\
+  \ne.g.\n\n```cpp\nclass Account {\npublic:\nstatic int num;   // 声明静态变量 num\n};\n\
+  \nint Account :: num = 100;  \n\nint main() {\ncout << Account :: num << endl; \
+  \ // 类引用一个变量\nreturn 0;\n}\n```\n// 输出:  100\n\n---\n\n## std::chrono::milliseconds()\
+  \ 语法\n\n`std::chrono::milliseconds(number)`\n\n// 设置毫秒级持续时间\n\ne.g.\n\n```cpp\n\
+  #include <iostream>\n#include <chrono>\n#include <thread>\n\nint main(){\nstd::this_thread::sleep_for(std::chrono::milliseconds(5000));\
+  \            \nstd::cout << \"After 5000 milliseconds, you can see me!\" << std::endl;\n\
+  }\n```\n// 输出:  After 5000 milliseconds, you can see me!\n\n---\n\n## std::chrono::seconds()\
+  \ 语法\n\n`std::chrono::seconds(number)`\n\n// 设置秒级持续时间\n\ne.g.\n\n```cpp\n#include\
+  \ <iostream>\n#include <chrono>\n#include <thread>\n\nint main(){\nstd::this_thread::sleep_for(std::chrono::seconds(5));\n\
+  std::cout << \"After 5 seconds, you can see me!\" << std::endl;\n}\n```\n// 输出:\
+  \  After 5 seconds, you can see me!\n\n---\n\n## std::this_thread::sleep_for() 语法\n\
+  \n`std::this_thread::sleep_for(duration)`\n\n// 暂停当前线程的运行直到指定的 `duration`。\n// duration\
+  \ 参数可以是 `std::chrono::seconds(number)`。\n// duration 参数可以是 `std::chrono::milliseconds(number)`。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\n#include <chrono>\n#include <thread>\n\n\
+  int main(){\nstd::this_thread::sleep_for(std::chrono::seconds(5));            \n\
+  std::cout << \"After 5 seconds, you can see me!\" << std::endl;\n}\n```\n// 输出:\
+  \  After 5 seconds, you can see me!\n\n---\n\n## strcat() 语法\n\n`strcat(s1, s2);`\n\
+  \n// 连接 `string1` 和 `string2`。\n\ne.g.\n\n```cpp\nint main (){\nchar str1[15] =\
+  \ \"Swift \";\nchar str2[15] = \"in 8 Hours\";\nstrcat( str1, str2);   // 连接 str1\
+  \ 和 str2\ncout << \"strcat( str1, str2): \" << str1 << endl;\nreturn 0;\n}\n```\n\
+  // 输出:  strcat( str1, str2): Swift in 8 Hours\n\n---\n\n## strchr() 语法\n\n`strchr(\"\
+  string\", 'ch')`\n\n// 在字符串中搜索第一次出现的字符。\n\ne.g.\n\n```cpp\n#include <cstring>\n\
+  #include <iostream>\nusing namespace std;\n\nint main(){\nif (strchr(\"JavaScript\"\
+  , 'S'))   // 搜索 \"S\"\ncout << \"S is found\";\nelse\ncout << \"S is not found\"\
+  ;\n}\n```\n// 输出:   S is found\n\n---\n\n## strcmp() 语法\n\n`strcmp(\"str1\", \"\
+  str2\")`\n\n// 比较两个字符串。如果 `str1` 小于 `str2`，返回负数；如果两个字符串相等，返回 0；如果 `str1` 大于 `str2`，返回正数。\n\
+  \ne.g.\n\n```cpp\n#include <cstring>\n#include <iostream>\nusing namespace std;\n\
+  \nint main() {\nint result = strcmp(\"JavaScript\", \"Java\");\ncout << result;\n\
+  }\n```\n// 输出:   1\n\n---\n\n## strcpy() 语法\n\n`strcpy(string1, string2);`\n\n//\
+  \ 将 `string2` 拷贝到 `string1`\n\ne.g.\n\n```cpp\nint main(){\nchar str1[6];\nchar\
+  \ str2[6] = \"Swift\";\nstrcpy( str1, str2);     // 将 str2 拷贝到 str1\ncout << str1\
+  \ << endl;\nreturn 0;\n}\n```\n// 输出:   Swift\n\n---\n\n## strerror() 语法\n\n`strerror(errno)`\n\
+  \n// 返回系统错误代码的描述。\n\ne.g.\n\n```cpp\n#include <errno.h>\n#include <cstring>\n#include\
+  \ <iostream>\nusing namespace std;\n\nint main () {\nFILE *fpt;\nfpt = fopen(\"\
+  myFile.txt\",\"r\");  // 假设文件不存在\nif( fpt == NULL ) {\ncout << \"Error Occurs: \"\
+  \ << strerror(errno);\n}}\n```\n// 输出:  Error Occurs: No such file or directory\n\
+  \n---\n\n## strlen() 语法\n\n`strlen(str);`\n\n// 获取字符串的长度。\n\ne.g.\n\n```cpp\nint\
+  \ main (){\nchar str[15] = \"JavaScript\";\ncout << \"strlen(str) : \" << strlen(str)\
+  \ << endl;\nreturn 0;\n}\n```\n// 输出:   strlen(str) : 10\n\n---\n\n## 字符串数组语法\n\n\
+  `type arrayName[type] = {'v1', 'v2', 'v3', … '\\0'};`\n\n// 字符串数组是一个以空字符 `\\0` 结尾的一维字符数组。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main(){\nchar\
+  \ greet[6] = {'H', 'e', 'l', 'l', 'o', '\\0'};  // 字符串数组\ncout << greet << endl;\n\
+  return 0;\n}\n```\n// 输出:   Hello\n\n---\n\n## 字符串连接语法\n\n`string1.append ( string2\
+  \ );`\n\n`string1 + string2;`\n\n// `append()` 可以将新字符串连接到现有字符串上。\n// `+` 可以将两个字符串在一起。\n\
+  \ne.g.\n\n```cpp\n#include<string>\n#include <iostream>\nusing namespace std;\n\
+  int main( ) {\nstring x= \"Java\", y= \"Script\", newWord, allWord;\nnewWord = x\
+  \ + y;    // 连接两个字符串\ncout << newWord <<endl;  \nallWord = x.append(y);     // 将字符串\
+  \ y 追加到字符串 x\ncout << allWord << endl;   \nreturn 0;\n};\n```\n// 输出:   JavaScript\
+  \       JavaScript\n\n---\n\n## 字符串大小语法\n\n`myString.size();`\n\n// `myString.size()`\
+  \ 可以检查字符串长度，返回该字符串中字符的总数。\n\ne.g.\n\n```cpp\n#include<string>\n#include <iostream>\n\
+  using namespace std;\n\nint main( ) {\nstring myString = \"operating system\";\n\
+  int stringSize = myString.size(); // 获取字符串的尺寸\ncout << \"length is: \" << stringSize\
+  \ << endl;\nreturn 0;\n}\n```\n// 输出:  length is: 16\n\n---\n\n## strstr() 语法\n\n\
+  `strstr(\"string\", \"substring\")`\n\n// 在字符串中搜索第一次出现的子字符串。\n\ne.g.\n\n```cpp\n\
+  #include <cstring>\n#include <iostream>\nusing namespace std;\n\nint main(){\nif\
+  \ (strstr(\"JavaScript\", \"Script\"))   // 搜索 \"Script\"\ncout << \"Script is found\"\
+  ;\nelse\ncout << \"Script is not found\";\n}\n```\n// 输出:   Script is found\n\n\
+  ---\n\n## struct 语法\n\n`struct typeName { type1 name1; type2 name2; type3 name3;\
+  \ };`\n\n// 结构体可以将多个相关变量组合在一起。\n// 结构体可以包含不同类型的变量。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  #include <cstring>\nusing namespace std;\n\nstruct Books{ // 声明结构体 Books\nchar title[50];\n\
+  char author[50];\nchar subtitle[100];\n};\n\nint main( ){\nBooks Kindle; // 定义变量\
+  \ Kindle\nstrcpy( Kindle.title, \"AngularJs\");\nstrcpy( Kindle.author, \"Ray Yao\"\
+  );\nstrcpy( Kindle.subtitle, \"In 8 Hours\");\ncout << \"Title : \" << Kindle.title\
+  \ <<endl;\ncout << \"Author : \" << Kindle.author <<endl;\ncout << \"Subtitle :\
+  \ \" << Kindle.subtitle <<endl;\nreturn 0;\n}\n```\n// 输出:\nTitle : AngularJs\n\
+  Author : Ray Yao\nSubtitle : In 8 Hours\n\n---\n\n## swap string 语法\n\n`string1.swap(string2);`\n\
+  \n// `swap()` 可以交换两个字符串的值。\n\ne.g.\n\n```cpp\n#include<string>\n#include <iostream>\n\
+  using namespace std;\n\nint main( ) {\nstring s1 = \"Number One.\";\nstring s2 =\
+  \ \"Number Two.\";\ncout << \"string1: \" << s1<< endl; \ncout << \"string2: \"\
+  \ << s2 << endl;\ns1.swap(s2);   // 交换两个字符串的值\ncout << \"string1: \" << s1<< endl;\n\
+  cout << \"string2: \" << s2 << endl;\nreturn 0;\n};\n```\n\n\n\n\n\n`string1`: 数字一。\n\
+  \n`string2`: 数字二。\n\n`string1`: 数字二。\n\n`string2`: 数字一。\n\n---\n\n## `swap()` 语法：\n\
+  \n```cpp\nswap(variable1, variable2);\n```\n// 交换两个变量的值\n\n示例：\n```cpp\n#include\
+  \ <iostream>\n#include <cmath>\nusing namespace std;\nint main(){\n    int x = 10;\
+  \  int y = 20;\n    cout << \"Ago Value: \" << x <<\" \"<< y <<endl;\n    swap(x,\
+  \ y);\n    cout << \"Now Value: \" << x <<\" \"<< y <<endl;\n}\n```\n\n// 输出:\n\
+  Ago Value:   10   20\nNow Value:   20 10\n\n---\n\n## `switch` 语句语法：\n\n```cpp\n\
+  switch ( variable ) {\ncase 1: 如果等于此情况，执行此操作；  break;\ncase 2: 如果等于此情况，执行此操作；  break;\n\
+  case 3: 如果等于此情况，执行此操作；  break;\ndefault : 如果不等于任何情况，运行默认代码；  break;\n}\n```\n//\
+  \ `variable` 的值将首先与每个 case 进行比较，如果等于其中一个 \"case\" 值，它将执行该 \"case\" 代码。`break;` 终止代码运行。\n\
+  \n示例：\n```cpp\nint number = 20;\nswitch ( number ) {    // \"number\" 比较每个 case\n\
+  case 10 : cout << \"Running case 10 \\n\" ;  break;\ncase 20 : cout << \"Running\
+  \ case 20 \\n\" ;  break;    // 匹配 \ncase 30 : cout << \"Running case 30 \\n\" ;\
+  \  break;\ndefault :  cout << \"Running default code \\n\" ;  break;\n}\n```\n//\
+  \ 输出: Running case 20\n\n---\n\n## `tan()` 语法：\n\n```cpp\ntan(x);\n```\n// 返回角度的正切值\n\
+  \n示例：\n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\nint\
+  \ main (){\n    double d = 100.888;\n    cout << \"tan(d): \" << tan(d) << endl;\n\
+  \    return 0;\n}\n```\n// 输出:\ntan(d): 0.373022\n\n---\n\n## `tanh()` 语法：\n\n```cpp\n\
+  tanh(num)\n```\n// 返回弧度角 num 的双曲正切\n\n示例：\n```cpp\n#include <iostream>\n#include\
+  \ <cmath>\nusing namespace std;\nint main(){\n    cout << \"tanh(0.6) = \" << tanh(0.6)\
+  \ << endl;\n}\n```\n// 输出: tanh(0.6) = 0.53705\n\n---\n\n## `tellg()` 语法：\n\n```cpp\n\
+  str.tellg();\n```\n// 用于输入流操作，并返回流中的当前指针位置。\n// `istringstream str(\"string\")`\
+  \ 定义了一个输入流\n\n示例：\n```cpp\n#include<string>\n#include <iostream>\n#include <bits/stdc++.h>\n\
+  using namespace std;\nint main(){\n    istringstream str(\"Hello! \");    // 定义一个输入流\n\
+  \    string content;\n    str >> content;\n    cout << \"After reading the content\
+  \ : \" << content << endl;\n    cout << \"tellg() returns \" << str.tellg();\n}\n\
+  ```\n// 输出:\nAfter reading the content: Hello!\ntellg() returns 6\n\n---\n\n## `tellp()`\
+  \ 语法：\n\n```cpp\nstr.tellp();\n```\n// 用于输出流操作，并返回流中的当前指针位置。\n\n示例：\n```cpp\n#include\
+  \ <iostream>\n#include <fstream>\nusing namespace std;\nint main() {\n    fstream\
+  \ myfile;     // 定义一个流\n    myfile.open(\"test.txt\", ios::out);   // 以写入模式打开文件\n\
+  \    myfile << \"R in 8 Hours\";     // 添加数据\n    cout << \"The position of the\
+  \ pointer is: \" << endl;\n    cout << myfile.tellp() << endl;  // 返回指针位置\n    myfile.close();\
+  \    // 关闭文件对象\n}\n```\n// 输出:\nThe position of the pointer is:\n15\n\n---\n\n##\
+  \ 类模板语法：\n\n```cpp\ntemplate <class T>      // 定义一个类模板\nclass templateName{ class\
+  \ body };    // 类模板\n```\n// 一个类模板可以替换多个类的代码。\n如果多个类体是相同的，只有数据类型不同，你可以使用类模板。\n`templateName\
+  \ <type>object;`\n// 创建类模板对象\n\n示例：\n```cpp\n#include <iostream>\nusing namespace\
+  \ std;\ntemplate< class T>    // 定义一个类模板\nclass Contrast{     // 类模板\npublic:\n\
+  \    Contrast(T a, T b)      // 构造函数\n    { x = a; y = b;}\n    T max( )      //\
+  \ \"T\" 可能是不同的数据类型。\n    { return (x > y) ? x : y;}\nprivate:\n    T x, y;     //\
+  \ \"T\" 可能是不同的数据类型。\n};\nint main( ){\n    Contrast <int>con1( 10, 20);     // 创建对象\
+  \ \"con1\"\n    cout << con1.max( ) << endl;     // 数据类型为 \"int\"\n    Contrast\
+  \ <float>con2( 20.01, 20.02 );     // 创建 \"con2\"\n    cout << con2.max( ) << endl;\
+  \     // 数据类型为 \"float\"\n    Contrast <long> con3( 67891, 67892 );     // 创建 \"\
+  con3\"\n    cout << con3.max( ) << endl;     // 数据类型为 \"long\"\n    return 0;\n\
+  }\n```\n// 输出:         20        20.02        67892\n\n---\n\n## 函数模板语法：\n\n```cpp\n\
+  template <typename T> type functionName(T a, T b)\n```\n// 一个函数模板可以替换多个函数的代码。\n\
+  如果多个函数体是相同的，只有数据类型不同，你可以使用函数模板。\n// \"T\" 是一个类型参数。它代表不同的数据类型。\n\n示例：\n```cpp\n#include\
+  \ <iostream>\nusing namespace std;\ntemplate <typename T> T min(T a, T b, T c){\n\
+  // 定义一个函数模板 \"min( )\"\nif ( b < a ) a = b;\nif ( c < a ) a = c;\nreturn a;\n}\n\
+  int main( ){\n    int  n, n1 = 10, n2 = 20, n3 = 30;\n    double  d, d1 = 10.01,\
+  \ d2 = 10.02, d3 = 10.02;\n    // ... 逻辑继续\n}\n```\n\n\n\n\n\n```cpp\nusing namespace\
+  \ std;\n\nint main(){\n    char letter = tolower('A');\n    cout << letter;\n}\n\
+  // 输出: a\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### `toupper()` 语法：\n\n```cpp\ntoupper(letter)\n```\n// 将小写字母转换为大写字母\n\ne.g.\n\
+  \n```cpp\n#include <iostream>\n\nusing namespace std;\n\nint main(){\n    char letter\
+  \ = toupper('a');\n    cout << letter;\n}\n// 输出: A\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### `try / catch` 语法：\n\n```cpp\ntry\n{ …… }      // 这里可能会发生异常\ncatch(exception)\n\
+  { …… }      // 捕获并处理异常\n```\n\n- `\"try {… …}\"` 在发生异常时会将异常抛出到 `catch( ) { }` 块。\n\
+  - `\"catch( ){  }\"` 捕获 `try` 块中的任何异常并处理。\n- 对于 `\"try-catch\"`，你需要使用 `#include<stdexcept>`。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\
+  \nint main(){\n    string str1 = \"JavaScript\";\n    string str2 = \"and\";\n \
+  \   try{      // 可能会发生异常\n        str1.insert(100, str2);     // \"100\" 导致错误\n\
+  \    }\n    catch(logic_error){     // 捕获异常\n        cout << \"Catch an exception.\"\
+  \ << endl;\n        cout << \"Out of range!\" << endl;\n    }\n    return 0;\n}\n\
+  // 输出:\nCatch an exception.\nOut of range!\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### 二维数组语法：\n\n```cpp\ntype arrayName [ rows ][ columns ];\n```\n// 定义一个包含多行多列的数组。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\n\nusing namespace std;\n\nint main(){\n \
+  \   // 定义一个包含 3 行 2 列的数组\n    int a[3][2] = { {0,1}, {2,3}, {4,5}};\n    // 输出每个数组元素的值\
+  \               \n    for( int i = 0; i < 3; i++ )\n    for( int j = 0; j < 2; j++\
+  \ ){\n        cout << \"a[\" << i << \"][\" << j << \"]: \";\n        cout << a[i][j]<<\
+  \ endl;\n    }\n    return 0;\n}\n// 输出:\na[0][0]: 0\na[0][1]: 1\na[1][0]: 2\na[1][1]:\
+  \ 3\na[2][0]: 4\na[2][1]: 5\n```\n\n-----------------------------------------------------------------------------\n\
+  \n### 类型别名语法：\n\n```cpp\nusing alias = type\n```\n// 为指定类型定义别名。\n\ne.g.\n\n```cpp\n\
+  #include <iostream>\n\nint main(){\n    using pi = float;      // 将 pi 定义为 float\
+  \ 别名\n    pi value{ 3.14 };     // 定义一个 float 类型的变量\n    std::cout << value << endl;\
+  \     // 打印浮点数值\n    return 0;\n}\n// 输出: 3.14\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### 类型转换语法：\n\n```cpp\nvariable 1= (data-type) variable 2;\n```\n// `(data-type)`\
+  \ 可以将一种数据类型转换为另一种数据类型。\n\ne.g.\n\n```cpp\nint main( ) {\n    int number1, number2;\n\
+  \    float  decimalNumber = 28.699;\n    bool  boolValue = false;\n    number1 =\
+  \ (int) decimalNumber; // 转换为 int\n    number2 = (int) boolValue; // 转换为 int\n \
+  \   cout << \"number1:  \" << number1 <<endl;\n    cout<<  \"number2:  \" << number2\
+  \ <<endl;\n    return 0;\n}\n// 输出:\nNumber 1:  28\nNumber 2:   0\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### `typedef` 语法：\n\n```cpp\ntypedef type newname;\n```\n// 重命名现有类型\n\ne.g.\n\n\
+  ```cpp\ntypedef  int  integer;      // 将 \"int\" 重命名为 \"integer\"\n// 现在，我们可以使用\
+  \ \"integer\" 来声明数值变量。\ninteger  myNumber = 100;     // 声明一个数值变量\n```\n\n-----------------------------------------------------------------------------\n\
+  \n 用户定义字面量语法：\n\n```cpp\ntype operator\"\" _suffix(type arg){\nreturn value;\n}\n\
+  ```\n\n- `\"User Defined Literal\"`（用户定义字面量）被视为字面量运算符调用。仅支持后缀形式。\n- 字面量运算符的语法是 `operator\"\
+  \"` 后跟后缀。\n- `\"_suffix\"` 通常是测量单位，例如 `_km`、`_ft`、`_hrs…`。\n- 用户定义字面量允许的类型如下：\n\n\
+  | 类型 | 含义： |\n| :--- | :--- |\n| unsigned long long int | 表示整数 |\n| long double\
+  \ | 表示浮点数 |\n| char | 表示单个字符 |\n| const char* | 表示字符串 |\n\ne.g.\n\n```cpp\n#include\
+  \ <iostream>\nusing namespace std;\n\nlong double operator\"\" _km (long double\
+  \ len){\n    return len*1000;\n}\n\nint main(){\n    long double distance = 1.0_km;\n\
+  \    cout << \"1 km = \" << distance << \" meter\";\n    return 0;\n}\n// 输出:  1\
+  \ km = 1000 meter\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### 用户输入语法：\n\n```cpp\ncin >> variable;\n```\n// 从键盘获取用户输入\n\ne.g.\n\n```cpp\n\
+  int main() {\n    int num;\n    cout << \"Please enter a number: \";\n    cin >>\
+  \ num;  // 接受用户输入的数字\n    cout << num;  // 假设输入数字 100\n    return 0;\n}\n// 输出:\
+  \  Please enter a number: 100\n```\n\n-------------------------------------------------------------------------------\n\
+  \n### UTC 日时间语法：\n\n```cpp\ntime_t now = time(0);    // 获取当前日期时间\ntm *gm = gmtime(&now);\
+  \    // 将 \"now \" 转换为 tm 类型\nchar* utc = asctime(gm);\n```\n\n等待，让我重新格式化它：\n\n\
+  ```cpp\ntime_t now = time(0);    // 获取当前日期时间\ntm *gm = gmtime(&now);    // 将 \"\
+  now \" 转换为 tm 类型\nchar* utc = asctime(gm);\n```\n\n- `time_t now = time(0)`: 获取当前日期时间。\n\
+  - `tm *gm = gmtime(&now)`: 将 `\"now \"` 转换为 `tm` 类型。\n- `char* utc = asctime(gm)`。\n\
+  \ne.g.\n\n```cpp\n#include <iostream>\n#include <ctime>\nusing namespace std;\n\n\
+  time_t now = time(0);\ntm *gm = gmtime(&now);\nchar* utc = asctime(gm);\ncout <<\
+  \ utc;\n// 输出: Sun Jan 1 00:00:00 2024\n```\n\n---------------------------------------------------------------\n\
+  \n### 变量定义：\n\n```cpp\ndataType variableName = value;\n```\n\ne.g.\n\n```cpp\nint\
+  \ myinteger = 100;\nfloat myflt = 10.5;\ndouble mydbl = 3.14159;\ncharchar = 'A';\n\
+  boolean mybool = true;\n```\n\n---------------------------------------------------------------\n\
+  \n### `virtual` 语法：\n\n```cpp\nclass AbstractClass;\nvirtual type functionName(\
+  \ ) = 0;\n```\n\n- `virtual type functionName( ) = 0;` 定义了一个 `纯虚方法`。\n- 任何包含 `virtual\
+  \ function` 的类都是 `抽象类`。\n- 它必须始终由派生类重写。\n\ne.g.\n\n```cpp\n#include <iostream>\n\
+  using namespace std;\n\nclass Ball {\npublic:\n    virtual void play( ) = 0;\n};\n\
+  \nclass Volleyball: public Ball {\npublic:\n    void play( ) {\n        cout <<\
+  \ \"Play volleyball.\" << endl;\n    }\n};\n\nclass Football: public Ball {\npublic:\n\
+  \    void play( ) {\n        cout << \"Play football.\" << endl;\n    }\n};\n\n\
+  void sport(Ball &b){\n    b.play();\n}\n\nint main((){\n    Volleyball v;\n    Football\
+  \ f;\n    sport(v);\n    sport(f);\n    return 0;\n}\n// 输出:\nPlay volleyball.\n\
+  Play football.\n```\n\n---------------------------------------------------------------\n\
+  \n### `while` 循环语法：\n\n```cpp\nwhile ( test-expression ) {  // 在此处编写 C++ 代码; }\n\
+  ```\n\n- `\"while loop\"` 在条件为真时循环执行块。\n\ne.g.\n\n```cpp\nint counter = 0;\nwhile\
+  \ (counter < 8){  // 执行 8 次\n    cout << \"&\";\n    counter++;  // 增加 1\n}\n//\
+  \ 输出: &&&&&&\n```\n\n---------------------------------------------------------------\n\
+  \n### `unsigned` 数字语法：\n\n```cpp\nunsigned number;\n```\n// 声明一个无符号数字\n\ne.g.\n\n\
+  ```cpp\n#include <iostream>\nusing namespace std;\n\nint main(){\n    signed num1;\
+  \      // 声明有符号数字\n    unsigned num2;   // 声明一个无符号数字\n    num1 = -1;\n    num2 =\
+  \ num1;\n    cout << num1 << \" \" << num2;\n    return 0;\n}\n// 输出: -1 4294967295\n\
+  ```\n\n- 有符号的 `-1` 被解释为无符号的 `4294967295`。\n\n---------------------------------------------------------------\n\
+  \n### vector 声明语法：\n\n```cpp\nvector <data-type> vectorName (size);\n```\n\n- vector\
+  \ 类似于大小可以改变的数组。\n- vector 可以是任何类型，其第一个索引从零开始。\n\ne.g.\n\n```cpp\nvector <int> myVector\
+  \ (10); // 10\n```\n\n\n\n\n\n```cpp\nvector <double> prices (60);    // 2\nvector\
+  \ <string> titles (18);         // 3\n```\n\n### 解析:\n1: 声明一个包含 10 个元素的 \"int\"\
+  \ 类型 vector \"myVector\"。\n2: 声明一个包含 60 个元素的 \"double\" 类型 vector \"prices\"。\n\
+  3: 声明一个包含 18 个元素的 \"string\" 类型 vector \"titles\"。\n\n## vector 方法语法\n\n- `v.push_back(value)`\
+  \ // 向 vector 的末尾添加一个元素\n- `v.size( ) // 返回 vector 的大小\n- `v.at(index)` // 返回 vector\
+  \ 在指定索引处的值\n- `v.pop_back( ) // 删除 vector 的最后一个元素\n\n### 示例\n```cpp\nint main (){\n\
+  \nvector < int > myVector(1);  // 创建包含 1 个元素的 vector。\nmyVector.push_back(20); //\
+  \  在末尾添加元素 20\nmyVector.push_back(30); //  在末尾添加元素 30\ncout<< \"myVector size: \"\
+  \ << myVector.size( ) << endl;\n// 获取元素个数\ncout<< \"The third element: \" << myVector.at(2)\
+  \ << endl;\n// 获取索引 2 处的值\nmyVector.pop_back( );\n//  移除最后一个元素\ncout<< \"Final element\
+  \ has been removed.\"<< endl;\nreturn 0;\n\n}\n```\n**输出:**\n```\nmyVector size:\
+  \ 3\nThe third element: 30\nFinal element has been removed.\n```\n\n## vector 方法语法\n\
+  \n- `v.front( ) // 返回第一个元素的值\n- `v.back( ) // 返回最后一个元素的值\n- `v.clear( ) // 清空 vector\n\
+  - `v.empty( ) // 如果 vector 为空返回 1，否则返回 0\n\n### 示例\n```cpp\nint main (){\n\nvector\
+  \ < int > myVector ( 1 );\nmyVector.push_back(20);\nmyVector.push_back(30);\ncout<<\
+  \ \"The first element: \" << myVector.front( ) <<endl;\n// 获取第一个元素的值\ncout<< \"\
+  The last element: \" << myVector.back( ) <<endl;\n// 获取最后一个元素的值\nmyVector.clear(\
+  \ );     // 清空所有元素\ncout<< \"myVector is empty? \" << myVector.empty( ) <<endl;\n\
+  // 检查 vector 是否为空\nreturn 0;\n\n}\n```\n**输出:**\n```\nThe first element: 0\nThe\
+  \ last element: 30\nmyVector is empty? 1 \n```\n\n## 虚函数语法\n\n`virtual type functionName(\
+  \ );`\n\n- `virtual type functionName( );` 定义一个虚函数。当该函数被调用时，执行派生类中的重写函数，而不是基类中的函数。\n\
+  \n### 示例\n```cpp\n#include<iostream>\nusing namespace std;\n\nclass Car{\npublic:\n\
+  virtual void drive( ){    // 定义一个虚函数\ncout << \"Drive a car.\" << endl;\n}};\n\n\
+  class Van: public Car{\npublic:\nvoid drive( ){\ncout << \"Drive a van.\" << endl;\n\
+  }};\n\nclass Bus: public Car{\npublic:\nvoid drive( ){\ncout << \"Drive a bus.\"\
+  \ << endl;\n}};\n\nvoid myFunction(Car &c){     // Car 的别名是 \"c\"。\nc.drive( );\
+  \    // 调用派生类中的 drive()\n}\n\nint main( ){\nVan v;   // 创建一个对象\nBus b;   // 创建一个对象\n\
+  myFunction(v);\nmyFunction(b);\nreturn 0;\n}\n```\n**输出:**\n```\nDrive a Van.\n\
+  Drive a Bus.\n```\n\n## 虚方法语法\n\n`virtual type method(){ }` \n\n- 在基类中定义一个虚方法\n\
+  `type method(){ }`\n- 派生类中的方法重写基类中的虚方法。\n- 多态意味着基类中的方法可以被派生类中的多个方法所重写。\n\n### 示例\n\
+  ```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\nclass Animal\
+  \ {     // 基类\npublic:\nvirtual void yell() {     // 虚方法\n}\n};\n\nclass Cat : public\
+  \ Animal {    // 派生类\npublic:\nvoid yell() {\ncout << \"The cat yells: mew mew \\\
+  n\" ;\n}\n};\n\nclass Dog : public Animal {    // 派生类\npublic:\nvoid yell() {\n\
+  cout << \"The dog yells: wow wow \\n\" ;\n}\n};\n\nint main() {\nCat myCat;\nDog\
+  \ myDog;\nmyCat.yell();\nmyDog.yell();\nreturn 0;\n}\n```\n**输出:**\n```\nThe cat\
+  \ yells: mew mew\nThe dog yells: wow wow\n```\n\n## volatile 语法\n\n- `int volatile\
+  \ variable;`     // 声明变量\n- `volatile int variable;`     // 声明变量\n- `int volatile\
+  \ *pointer;` // 声明指针\n- `volatile int *pointer;` // 声明指针\n- `volatile` 告诉编译器多线程中的变量值可能会在任何时间意外变化；编译器应该从内存读取变量而不是寄存器。\n\
+  - `volatile` 告诉编译器不要优化此值。\n- `volatile` 告诉编译器不要在寄存器中缓存变量。\n- `volatile` 告诉编译器不要改变赋值顺序。\n\
+  \n### 示例\n```cpp\nint main(){\nvolatile int number;\nnumber++;\n}\nint main(){\n\
+  int number;\nnumber++;\n}\n```\n**解析:**\n`volatile int`: 无法从内存拷贝到寄存器。\n`int number`:\
+  \ 可以从内存拷贝。\n\n## write() 语法\n\n`cout.write(stringArray, stringLength);`\n\n- `stringArray`\
+  \ 将字符串定义为数组。\n- `stringLength` 定义大小。\n\n### 示例\n```cpp\nusing namespace std;\nint\
+  \ main() {\nchar ch[ ] = \"This is a test\"; // 定义一个字符串\ncout.write(ch, strlen(ch))\
+  \ << endl; // 输出字符串\nreturn 0;\n}\n```\n**输出:**\n```\nThis is a test\n```\n\n##\
+  \ 写入文件语法\n\n`ofstream fileObject (\"myFile.txt\");` // 创建输出对象\n`fileObject << myString\
+  \ << endl;` // 将 myString 写入文件\n\n- `ofstream fileObject (\"myFile.txt\");` 创建一个输出文件\
+  \ `fileObject`。\n- `ofstream` 类用于向文件写入数据。\n- `fileObject` 是一个输出文件对象。\n- 处理文件，我们需要首先使用\
+  \ `<fstream>`。\n\n### 示例\n```cpp\n#include <iostream>\n#include <fstream>\n#include\
+  \ <string>\nusing namespace std;\nint main(){\nofstream fileObject ( \"D:\\\\myFile.txt\"\
+  \ ); // 创建一个对象\nstring myString = \"C++ is a good language.\";\nfileObject << myString\
+  \ << endl; // 将 myString 写入文件\nfileObject.close( );\ncout << \"Write to file!\"\
+  \ << endl;\nreturn 0;\n}\n```\n**输出:**\n```\nWrite to file!\n```\n\n## 附录：数据类型表\n\
+  \n| 数据类型 | 字节 | 范围 |\n| :--- | :--- | :--- |\n| bool | 1 | 0. (false, true) |\n\
+  | int | 4 | -2,147,483,648 ... 2,147,483,647 |\n| short int | 2 | -32,768 ... 32,767\
+  \ |\n| unsigned short int | 2 | 0 ... 65,535 |\n| unsigned int | 4 | 0 ... 4,294,967,295\
+  \ |\n| long int | 4 | -2,233,720,068,547,808 ... 2,233,720,068,547,807 |\n| unsigned\
+  \ long int | 4 | 0 ... 4,294,967,295 |\n| long long int | 8 | -(2⁶³) ... (2⁶³)-1\
+  \ |\n| unsigned long long int | 8 | 0 ... 18,446,744,073,709,551,615 |\n| char |\
+  \ 1 | -128 … 127 |\n| signed char | 1 | -128 ... 127 |\n| unsigned char | 1 | 0\
+  \ ... 255 |\n| float | 4 | -3.4×10³⁸ ... 3.4×10³⁸ |\n| double | 8 | -1.7×10³⁰⁸ ...\
+  \ 1.7×10³⁰⁸ |\n| long double | 12 | -1.1×10⁴⁹³² ... 1.1×10⁴⁹³² |\n| void | n/a |\
+  \ n/a |\n| wchar_t | 4 | -2,147,483,648 ... 2,147,483,647 (宽字符) |\n| char16_t |\
+  \ 2 | 0 ... 65,535 |\n| char32_t | 4 | 0 ... 4,294,967,295 |\n\n## C++ 关键字表\n\n\
+  以下是 C++ 关键字：\n\n| asm | auto | break |\n| delete | case | catch |\n| char | class\
+  \ | const |\n| continue | default | do |\n| double | else | enum |\n| float | friend\
+  \ | for |\n| goto | if | inline |\n| extern | short | int |\n| long | new | operator\
+  \ |\n| register | private | protected |\n| public | return | signed |\n| static\
+  \ | struct | switch |\n| this | throw(s) | typedef |\n| union | unsigned | virtual\
+  \ |\n| try | void | while |\n\n## 文件打开表\n\n打开文件时，我们可以指定“文件模式”。\n\n| 模式 | 用法 |\n\
+  | :--- | :--- |\n| ios :: in | 打开文件以读取输入 |\n| ios :: out | 打开文件以写入输出 |\n| ios ::\
+  \ app | 打开文件以追加输出 |\n| ios :: trunc | 打开文件或截断现有文件 |\n\n\n\n\n\n| ios | Description\
+  \ |\n| :--- | :--- |\n| `ios::ate` | 打开文件时不截断现有文件 |\n| `ios::binary` | 以二进制文件打开文件\
+  \ |\n\n## 算术运算符图表\n\n| 运算符 | 运算 |\n| :--- | :--- |\n| `+` | 加法，连接字符串 |\n| `-` |\
+  \ 减法 |\n| `*` | 乘法 |\n| `/` | 除法 |\n| `%` | 取模数 |\n| `++` | 加 1 |\n| `--` | 减 1\
+  \ |\n\n## 比较运算符图表\n\n| 运算符 | 运算 |\n| :--- | :--- |\n| `>` | 大于 |\n| `<` | 小于 |\n\
+  | `>=` | 大于等于 |\n| `<=` | 小于等于 |\n| `==` | 等于 |\n| `!=` | 不等于 |\n\n## 位运算符运算符图表\n\
+  \n| `x` | `y` | `x & y` | `x \\| y` | `x ^ y` |\n| :--- | :--- | :--- | :--- | :---\
+  \ |\n| 0 | 0 | 0 | 0 | 0 |\n| 0 | 1 | 0 | 1 | 1 |\n| 1 | 1 | 1 | 1 | 0 |\n| 1 |\
+  \ 0 | 0 | 1 | 1 |\n\n## 逻辑运算符图表\n\n| 运算符 | 等价 |\n| :--- | :--- |\n| `&&` | 与 |\n\
+  | `\\|` | 或 |\n| `!` | 否 |\n\n解释：\"1\"代表真，“0\"代表假。\n\n| `true && true;returns true;`\
+  \ | `true && false;returns false;` | `false && false;returns false;` |\n| `true\
+  \ \\| true;returns true;` | `true \\| false;returns true;` | `false \\| false;return\
+  \ false;` |\n| `! false;returns true;` | `! true;returns false;` | 无适用 |\n\n## 赋值运算符图表\n\
+  \n| 运算符 | 示例 | 等同于 |\n| :--- | :--- | :--- |\n| `+=` | `x += y` | `x = x + y` |\n\
+  | `-=` | `x -= y` | `x = x - y` |\n| `*=` | `x *= y` | `x = x * y` |\n| `/=` | `x\
+  \ /= y` | `x = x / y` |\n| `%=` | `x %= y` | `x = x % y` |\n| `&=` | `x &= y` |\
+  \ `x = x & y` |\n| `\\|=` | `x \\|= y` | `x = x \\| y` |\n| `^=` | `x ^= y` | `x\
+  \ = x ^ y` |\n| `>>=` | `x >>= y` | `x = x >> y` |\n| `<<=` | `x <<= y` | `x = x\
+  \ << y` |\n\n## 转义字符图表\n\n| 字符 | 描述 |\n| :--- | :--- |\n| `\\\\` | 生成一个 `\\` |\n\
+  | `\\'` | 生成一个 `'` |\n| `\\\"` | 插入 `\"` |\n| `\\?` | 生成一个 `?` |\n| `\\a` | 一个报警\
+  \ |\n| `\\b` | 生成一个退格 |\n| `\\f` | 分页 |\n| `\\n` | 换行 |\n| `\\r` | 回车 |\n| `\\t`\
+  \ | 产生一个制表符 |\n| `\\v` | 生成一个垂直符号 |\n| `\\ooo` | 生成一个八进制数 |\n| `\\xhh` | 生成一个十六进制\
+  \ |\n\n## 特殊成员函数图表\n\n| 成员函数 | 隐式定义 | 默认定义 |\n| :--- | :--- | :--- |\n| 析构函数 | 如果没有析构函数\
+  \ | 什么都不 |\n| 默认构造函数 | 如果没有构造函数 | 什么都不 |\n| 拷贝构造函数 | 如果没有移动构造和移动赋值 | 拷贝所有成员 |\n\
+  | 拷贝赋值运算符 | 如果没有移动构造和移动赋值 | 拷贝所有成员 |\n| 移动构造函数 | 如果没有析构函数、拷贝构造函数、拷贝赋值和移动赋值 | 移动所有赋值\
+  \ |\n| 移动赋值运算符 | 如果没有析构函数、拷贝构造函数、拷贝赋值和移动赋值 | 移动所有赋值 |\n\n## 错误图表\n\n| 错误 |  |\n\
+  | :--- | :--- |\n| `domain_error` | 超出预设条件 |\n| `invalid_argument_error` | 函数中的无效参数\
+  \ |\n| `length_error` | 长度过长或过短 |\n| `out_of_range_error` | 无效范围 |\n| `overflow_error`\
+  \ | 数据溢出 |\n\n## X++ 或 ++X 图表\n\n| 运算符 | 描述 |\n| :--- | :--- |\n| `++ x` | x 先加\
+  \ 1，再执行表达式 |\n| `x++` | 先执行表达式，后 x 加 1 |\n| `-- y` | y 先减 1，再执行表达式 |\n| `y --` |\
+  \ 先执行表达式，后 y 减 1。 |\n\n## Vector 方法图表\n\nvector 的方法如下：\n\n| 方法 | 操作 |\n| :--- |\
+  \ :--- |\n| `push_back(value)` | 在 vector 末尾添加一个元素 |\n| `size()` | 返回 vector 的大小\
+  \ |\n| `at(index)` | 返回指定索引处的值 |\n| `pop_back()` | 删除最后一个元素 |\n| `front()` | 返回第一个元素的值\
+  \ |\n| `back()` | 返回最后一个元素的值 |\n| `clear()` | 清空 vector |\n| `empty()` | 如果 vector\
+  \ 为空返回 1，不为空则返回 0 |\n\n## 变量图表\n\n| 类型 | 变量 |\n| :--- | :--- |\n| `int` | 存储整数（全数字），不带小数，例如\
+  \ 123 或 -123 |\n| `double` | 存储带小数的双倍精度数字，例如 19.999 或 -19.999 |\n| `char` | 存储单个字符，例如\
+  \ 'a' 或 'B'。字符值用单引号括起来 |\n| `string` | 存储文本，例如 \"Hello\"。字符串值用双引号括起来 |\n| `bool`\
+  \ | 存储两个状态：真或假。在 C++ 中，true 为 1，false 为 0。 |\n| `float` | 存储带小数的浮点数，例如 19.9 或 -19.9\
+  \ |\n| `void` | 无任何指定的数据类型，即无返回类型。 |\n\n## I/O 库图表\n\n| 头文件 | 描述 |\n| :--- | :---\
+  \ |\n| `<iostream>` | 该文件定义了 `CIN`、`COUT`、`CERR` 和 `CLOG` 对象，分别对应标准输入流、标准输出流、无缓冲标准错误流和缓冲错误流。\
+  \ |\n| `<iomanip>` | 该文件声明了用于通过参数流操纵符执行标准化 I/O 的服务，例如 `SETW` 和 `SETPrecision`。 |\n\
+  | `<ofstream>` | 该文件用于创建和写入文件 |\n| `<ifstream>` | 该文件用于从文件读取 |\n| `<fstream>` |\
+  \ `ofstream` 和 `ifstream` 的组合。该文件用于创建、读取和写入文件。 |\n\n## 数学函数图表\n\n| 函数 | 描述 |\n|\
+  \ :--- | :--- |\n| `abs(x)` | 返回 x 的绝对值 |\n| `acos(x)` | 返回 x 的反余弦 |\n| `asin(x)`\
+  \ | 返回 x 的反正弦 |\n| `atan(x)` | 返回 x 的反正正切 |\n| `cbrt(x)` | 返回 x 的立方根 |\n| `ceil(x)`\
+  \ | 返回大于或等于 x 的最小整数 |\n| `cos(x)` | 返回 x 的余弦 |\n| `cosh(x)` | 返回 x 的双曲余弦 |\n| `exp(x)`\
+  \ | 返回 Ex 的值 |\n| `expm1(x)` | 返回 ex -1 |\n| `fabs(x)` | 返回浮点数 x 的绝对值 |\n| `fdim(x,y)`\
+  \ | 返回 x 和 y 之间的正差值 |\n| `floor(x)` | 返回小于或等于 x 的最大整数 |\n| `hypot(x,y)` | 返回 `sqrt(x2\
+  \ ++y2)` 而不产生中间溢出或下溢 |\n| `fma(x,y,z)` | 返回 `x*y+z` 而不丢失精度 |\n| `fmax(x,y)` | 返回浮点数\
+  \ x 和 y 的最大值 |\n| `fmin(x,y)` | 返回浮点数 x 和 y 的最小值 |\n| `fmod(x,y)` | 返回 x 的浮点取模 |\n\
+  | `log(x)` | 返回 x 的自然对数 |\n| `max(x,y)` | 返回 x 和 y 的较大值 |\n| `min(x,y)` | 返回 x 和\
+  \ y 的较小值 |\n| `pow(x,y)` | 返回 x 的 y 次 |\n| `round(x)` | 返回远离零的最近整数 |\n| `sin(x)`\
+  \ | 返回 x 的正弦（x 为弧度） |\n| `sinh(x)` | 返回 x 的双曲正弦 |\n| `sqrt(x)` | 返回 x 的平方根 |\n\n\
+  ## 运算符优先级\n\n| 序列 | 运算符 |\n| :--- | :--- |\n| 1 | `()` `[]` `->` `++` `-` |\n| 2\
+  \ | `*` `/` `%` `++` `-` |\n| 3 | `+` `-` `sizeof` |\n| 4 | `<<` `>>` |\n| 5 | `<`\
+  \ `<=` `>` |\n| 6 | `==` `!=` |\n| 7 | `&` |\n| 8 | `^` |\n| 9 | `\\|` |\n| 10 |\
+  \ `&&` |\n| 11 | `\\|` |\n| 12 | `?:` |\n| 13 | `=` `+=` `-=` `*=` `/=` `%=` `>>=`\
+  \ `<<=` `&=` `^=` `\\|=` |\n| 14 | `,` |\n\n## 访问权限图表\n\n| 访问 | 公有 | 保护 | 私有 |\n\
+  | :--- | :--- | :--- | :--- |\n| 同类 | 是 | 是 | 是 |\n| 派生类 | 是 | 是 | 否 |\n| 外部类 |\
+  \ 是 | 否 | 否 |\n\n## 字符串函数图表\n\n| `strcpy(s1, s2)` | 将字符串 s2 拷贝到 s1，返回 s2 |\n| `strcat(s1,\
+  \ s2)` | 将字符串 s2 接到字符串 s1 后，返回新字符串 |\n| `strlen(s1)` | 返回字符串 s1 的长度 |\n| `strchr(s1,\
+  \ ch)` | 返回 s1 中字符 ch 第一次出现的指针 |\n| `strstr(s1, s2)` | 返回 s1 中字符串 s2 第一次出现的指针 |\n\
+  | `strcmp(s1, s2)` | 比较字符串 s1 和 s2。如果 s1 和 s2 相同，返回 0；如果 s1 < s2 返回小于 0；如果 s1 >\
+  \ s2 返回大于 0。 |\n\n## 打开模式图表\n\n| 模式 | 描述 |\n| :--- | :--- |\n| `ios::app` | 追加到文件末尾。\
+  \ |\n| `ios::ate` | 打开文件后，定位文件到末尾。 |\n| `ios::in` | 以读打开文件。 |\n| `ios::out` | 以写打开文件。\
+  \ |\n| `ios::trunc` | 如果文件存在，在打开前将其截断。 |\n\n## 日期与时间函数图表\n\n| `time_t time(time_t\
+  \ *time)` | 返回从 1970 年 1 月 1 日到现在的秒数。 |\n| `char *ctime(const time_t *time)` | 返回代表本地时间的字符串指针。\
+  \ |\n\n\n\n\n\n## 时间函数\n\n- `struct tm *localtime(const time_t *time)`: 返回一个指向本地时间的\
+  \ \"tm\" 指针。\n- `clock_t clock(void)`: 返回程序开始到处理器经过的时间。\n- `char * asctime(const\
+  \ struct tm * time)`: 返回一个指向时间信息字符串的指针。\n- `struct tm *gmtime(const time_t *time)`:\
+  \ 返回一个指向 GMT（格林治时间）的指针。\n- `time_t mktime(struct tm *time)`: 通过转换本地日历时间返回自 Epoch\
+  \ 时间的时间。\n- `double difftime(time_t time2, time_t time1)`: 返回 `time1` 和 `time2`\
+  \ 之间的秒数。\n- `size_t strftime()`: 返回指定格式的日期时间。\n\n## 信号列表\n\n| 信号 | 描述 |\n| :---\
+  \ | :--- |\n| `SIGABRT` | 程序的异常终止信号 |\n| `SIGFPE` | 算术操作错误的信号 |\n| `SIGILL` | 检测非法指令的信号\
+  \ |\n| `SIGINT` | 程序中断的信号 |\n| `SIGSEGV` | 非法访问访问信号 |\n| `SIGTERM` | 发送给程序的终止请求信号\
+  \ |\n\n## 文件位置指针列表\n\n- `fileObject.seekg( n, ios::beg )`: 文件读取指针位于 `fileObject`\
+  \ 起始后的 `n` 字节处。\n- `fileObject.seekg( n, ios::cur )`: 文件读取指针从 `fileObject` 当前位置向前移动\
+  \ `n` 字节。\n- `fileObject.seekg( n, ios::end )`: 文件读取指针位于 `fileObject` 结束位置之前的 `n`\
+  \ 字节处。\n- `fileObject.seekg( n )`: 文件读取指针位于 `fileObject` 起始后的 `n` 字节处。\n- `fileObject.seekp(\
+  \ n, ios::beg )`: 文件写入指针位于 `fileObject` 起始后的 `n` 字节处。\n- `fileObject.seekp( n, ios::cur\
+  \ )`: 文件写入指针从 `fileObject` 当前位置向前移动 `n` 字节。\n- `fileObject.seekp( n, ios::end )`:\
+  \ 文件写入指针位于 `fileObject` 结束位置之前的 `n` 字节处。\n- `fileObject.seekp( n )`: 文件写入指针位于 `fileObject`\
+  \ 起始后的 `n` 字节处。\n\n## 类型限定符列表\n\n| 限定符 | 含义 |\n| :--- | :--- |\n| `const` | 在程序执行期间不可修改\
+  \ |\n| `volatile` | 告诉编译器变量的值可能随时间变化 |\n\n## 异常列表\n\n| 异常 | 描述 |\n| :--- | :---\
+  \ |\n| `std::exception` | 此异常是所有标准 C++ 异常的父类。 |\n| `std::bad_alloc` | 当 `new` 运算符无法分配请求的空间时发生此异常。\
+  \ |\n| `std::bad_cast` | 此异常由 `dynamic_cast` 抛出。 |\n| `std::bad_exception` | 此异常可以处理\
+  \ C++ 程序中的意外错误 |\n| `std::bad_typeid` | 当 `typeid` 运算符应用于解引用空指针时抛出此异常。 |\n| `std::logic_error`\
+  \ | 此异常可以通过读取代码来检测 |\n| `std::domain_error` | 当使用无效的工作域时抛出此异常 |\n| `std::invalid_argument`\
+  \ | 当使用无效参数时抛出此异常 |\n| `std::length_error` | 当创建过长的字符串时抛出此异常 |\n| `std::out_of_range`\
+  \ | 当使用无效的工作范围时抛出此异常 |\n| `std::runtime_error` | 此异常无法通过读取代码来检测 |\n| `std::overflow_error`\
+  \ | 当发生代码溢出时抛出此异常。 |\n| `std::range_error` | 保存超出范围的值时抛出此异常 |\n| `std::underflow_error`\
+  \ | 当发生代码下溢时抛出此异常 |\n\n## 可重载运算符列表\n\n| `+` | `-` | `*` | `/` | `%` | `^` |\n| `&`\
+  \ | `|` | `~` | `!` | `,` | `=` |\n| `<` | `>` | `<=` | `>=` | `++` | `--` |\n|\
+  \ `<<` | `>>` | `==` | `!=` | `&&` | `||` |\n| `+=` | `-=` | `/=` | `%=` | `^=`\
+  \ | `&=` |\n| `|=` | `*=` | `<<=` | `>>=` | `[]` | `()` |\n| `->` | `->*` | `new`\
+  \ | `new []` | `delete` | `delete []` |\n\n## 不可重载运算符列表\n\n| `::` | `.*` | `.` |\
+  \ `?:` | `sizeof` | `typeid` |\n\n## Lambda 捕获列表\n\n| 捕获 | 描述 |\n| :--- | :--- |\n\
+  | `[]` | 空捕获列表，无捕获。 |\n| `[x]` | 按值/拷贝捕获 `x`。 |\n| `[&y]` | 按引用捕获 `y`。 |\n| `[x,\
+  \ &y]` | 按值/拷贝捕获 `x` 并按引用捕获 `y`。 |\n| `[=]` | 按值/拷贝捕获所有使用的变量。 |\n| `[&]` | 按引用捕获所有使用的变量。\
+  \ |\n| `[&, x, y]` | 按引用捕获所有使用的变量，但 `x` 和 `y` 按值/拷贝捕获。 |\n| `[=, &x, &y]` | 按值/拷贝捕获所有使用的变量，但\
+  \ `x` 和 `y` 按引用捕获。 |\n| `[this]` | 按引用捕获当前对象 |\n| `[*this]` | 按值/拷贝捕获当前对象 |\n\n\
+  ## 预处理器宏列表\n\n| 宏 | 返回 |\n| :--- | :--- |\n| `__LINE__` | 表示正在编译的源文件中当前行行的整数值。 |\n\
+  | `__FILE__` | 包含正在编译的源文件假设名称的字面量。 |\n| `__DATE__` | 格式为 \"mm dd yyyy\" 的字面量，包含编译过程开始的日期。\
+  \ |\n| `__TIME__` | 格式为 \"hh:mm:ss\" 的字面量，包含编译过程开始的时间。 |\n| `__cplusplus` | 整数值。所有\
+  \ C++ 编译器都定义了此常量。其值取决于版本。 |\n| `__STDC_HOSTED__` | 如果实现是托管实现（可用所有标准头文件）则为 1，否则为\
+  \ 0。 |\n| `__STDC__` | 实现定义。 |\n| `__STDC_VERSION__` | 实现定义。 |\n| `__STDC_MB_MIGHT_NEQ_WC__`\
+  \ | 如果字节编码在字符字面量中可能赋予字符不同的值 |\n| `__STDC_ISO_10646__` | 格式为 yyyymmL 的值，指定 Unicode\
+  \ 标准日期以及 `wchar_t` 字符的编码 |\n| `__STDCPP_STRICT_POINTER_SAFETY__` | 如果实现具有严格指针安全机制则为\
+  \ 1 |\n| `__STDCPP_THREADS__` | 如果实现支持线程则为 1 |\n\n"

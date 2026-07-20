@@ -1,0 +1,22 @@
+name: C++ Cookbook： How to write great code with the latest C++ releases
+name_cn: C++ 秘籍：如何使用最新 C++ 版本编写优秀代码
+slug: c-cookbook-how-to-write-great-code-with-the-latest-c-release
+toc:
+- - '#'
+  - C++ 秘籍：如何使用最新 C++ 版本编写优秀代码
+- - '##'
+  - 关于作者
+- - '##'
+  - 关于评审员
+- - '##'
+  - 前言
+- - '#'
+  - 第 21 章：让代码更快并调试
+- - '##'
+  - 食谱详情（示例）
+- - '###'
+  - 食谱 1.1：字符串格式化
+- - '###'
+  - 食谱 5.1：可移动 (Movable)
+- - '###'
+  - 食谱 10.1：什么是模块 (Module)

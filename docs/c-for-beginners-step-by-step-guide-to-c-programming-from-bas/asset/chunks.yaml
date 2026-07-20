@@ -1,0 +1,2452 @@
+- fmt: '
+
+    ![](image8.jpg)
+
+    '
+  raw: '
+
+
+    ![](image8.jpg)'
+  toc: []
+  trans: '
+
+
+    ![](img/image8.jpg)
+
+    '
+- fmt: "\n![](image8.jpg)C++Step-by-Step Guide to C++ Programming from Basics to Advanced©️\
+    \ Copyright 2017 by Robert Anderson - All rights reserved.\n\nIf you would like\
+    \ to share this book with another person, please purchase an additional copy for\
+    \ each recipient. Thank you for respecting the hard work of this author. Otherwise,\
+    \ the transmission, duplication or reproduction of any of the following work including\
+    \ specific information will be considered an illegal act irrespective of if it\
+    \ is done electronically or in print. This extends to creating a secondary or\
+    \ tertiary copy of the work or a recorded copy and is only allowed with express\
+    \ written consent from the Publisher. All additional right reserved.\n\n# TABLE\
+    \ OF CONTENT\n\n- [Chapter 1: Introduction and Installation](#part0004.xhtml)\
+    \ 5\n    - History of C++ 5\n    - Running C++ on Windows 5\n    - Running C++\
+    \ on Mac and Linux 8\n    - Running C++ Online 9\n    - Prerequisite 9\n- [Chapter\
+    \ 2: Basics](#part0006.xhtml) 11\n    - Variables and types 11\n    - Boolean\
+    \ 13\n    - Conditionals 16\n    - Iteration 27\n    - Functions 39\n    - Arrays\
+    \ 45\n    - User I/O 51\n    - End of chapter Quiz 53\n- [Chapter 3: Class Structure\
+    \ and OOP](#part0018.xhtml_QL-fs-umQ1Cfi0QczUJZNA2389) 56\n    - Inheritance 59\n\
+    \    - Encapsulation 62\n    - Polymorphism 66\n    - Interfaces 70\n    - End\
+    \ of chapter Quiz 77\n- [Chapter 4: Improved Techniques](#part0022.xhtml_QL-fs-umQ1Cfi0QczUJZNA2398)\
+    \ 79\n    - Structures 79\n    - Enums 81\n    - Unions 84\n    - Variable argument\
+    \ lists 88\n    - Namespaces 94\n    - End of chapter Quiz 97\n- [Chapter 5: Advanced\
+    \ Features](#part0028.xhtml) 99\n    - File I/O 99\n    - Recursion 108\n\n##\
+    \ Chapter 1: Introduction and Installation\n\n### History of C++\nC++ is a general\
+    \ purpose language. It was released in 1983 by Bjarne Stroustrup and was originally\
+    \ known as C with Classes. It is still one of the most popular languages in the\
+    \ world, used to create a wide range of applications, from video games to operating\
+    \ systems and web browsers.\n\n### Running C++ on Windows\nTo run C++ on Windows,\
+    \ you need to install a compiler. Visual Studio is a popular IDE for C++ development\
+    \ and provides all the tools you need to write, debug, and run your code.\n\n\
+    ### Running C++ on Mac and Linux\nOn Mac and Linux, you can use the `g++` compiler\
+    \ to compile your code from the terminal. This is a common way to develop C++\
+    \ on Unix-based environments.\n\n### Running C++ Online\nYou can run C++ online\
+    \ without installing anything by using online compilers. This is a great way to\
+    \ start practicing.\n\n### Prerequisite\nBefore starting, ensure you have a C++\
+    \ compiler installed or access to an online compiler.\n\n## Chapter 2: Basics\n\
+    \n### Variables and types\nVariables are used to store data. Each variable has\
+    \ a type that determines what kind of data it can hold. Common types include `int`\
+    \ for integers, `double` for floating-point numbers, `char` for characters, and\
+    \ `bool` for booleans.\n\n### Boolean\nBooleans are used as expressions, their\
+    \ values can only be true or false. They are used to signify certain states.\n\
+    \n### Conditionals\nConditionals allow you to execute code based on certain conditions.\
+    \ The `if` and `else` statements are most commonly used.\n\n### Iteration\nIteration\
+    \ is used to repeat a block of code multiple times. Common loops include `for`\
+    \ and `while` loops.\n\n### Functions\nFunctions are blocks of code that can be\
+    \ reused when needed. They help to organize your code and avoid repetition.\n\n\
+    ### Arrays\nArrays are collections of elements of the same type.\n\n### User I/O\n\
+    User I/O allows your program to interact with the user by taking input and providing\
+    \ output. `cin` and `cout` are used for this purpose.\n\n### End of chapter Quiz\n\
+    \n## Chapter 3: Class Structure and OOP\n\n### Inheritance\nInheritance allows\
+    \ one class to inherit properties and methods from another class.\n\n### Encapsulation\n\
+    Encapsulation is the practice of hiding data and the methods that operate on that\
+    \ data within a single unit or class.\n\n### Polymorphism\nPolymorphism allows\
+    \ different classes to be treated as instances of a common base class.\n\n###\
+    \ Interfaces\nInterfaces define a set of methods that a class must implement.\n\
+    \n## Chapter 4: Improved Techniques\n\n### Structures\nStructures let you group\
+    \ different types of variables together.\n\n### Enums\nEnums allow you to define\
+    \ a set of named constants.\n\n### Unions\nUnions are special types that can hold\
+    \ different data types.\n\n### Variable argument lists\nVariable argument lists\
+    \ allow functions to take a variable number of arguments.\n\n### Namespaces\n\
+    Namespaces are used to organize code and prevent name conflicts.\n\n## Chapter\
+    \ 5: Advanced Features\n\n### File I/O\nFile I/O allows your program to read from\
+    \ and write to files.\n\n### Recursion\nRecursion is a technique where a function\
+    \ calls itself.\n"
+  raw: '![](image8.jpg)C++Step-by-Step Guide to C++ Programming from Basics to Advanced©️
+    Copyright 2017 by Robert Anderson - All rights reserved.If you would like to share
+    this book with another person, please purchase an additional copy for each recipient.
+    Thank you for respecting the hard work of this author. Otherwise, the transmission,
+    duplication or reproduction of any of the following work including specific information
+    will be considered an illegal act irrespective of if it is done electronically
+    or in print. This extends to creating a secondary or tertiary copy of the work
+    or a recorded copy and is only allowed with express written consent from the Publisher.
+    All additional right reserved.TABLE OF CONTENT[Chapter 1: Introduction and Installation](#part0004.xhtml)
+                  5History of C++               5Running C++ on Windows              
+    5Running C++ on Mac and Linux               8Running C++ Online              
+    9Prerequisite               9[Chapter 2: Basics](#part0006.xhtml)              
+    11Variables and types               11­­Boolean               13Conditionals              
+    16Iteration               27Functions               39Arrays               45User
+    I/O               51End of chapter Quiz               53[Chapter 3: Class Structure
+    and OOP](#part0018.xhtml_QL-fs-umQ1Cfi0QczUJZNA2389)               56Inheritance
+                  59Encapsulation               62Polymorphism               66Interfaces
+                  70End of chapter Quiz               77[Chapter 4: Improved Techniques](#part0022.xhtml_QL-fs-umQ1Cfi0QczUJZNA2398)
+                  7 9Structures               79Enums               81Unions              
+    84Variable argument lists               88Namespaces               94End of chapter
+    Quiz               97[Chapter 5: Advanced Features](#part0028.xhtml)              
+    99File I/O               99Recursion               108Pre-processors              
+    113Dynamic memory and pointers               119End of chapter Quiz              
+    129Chapter 1: Introduction and InstallationHistory of C++C++ is a general purpose
+    programming language. It’s aim as a programming language is to offer a platform
+    to create efficient and bare-boned applications. C++ was released in 1983, and
+    first started on in 1979 by Bjarne Stroustrup where it was known as “C with classes”
+    where it was later in 1983 renamed to be C++.The language is still maintained
+    with updates every few years, where it is still one of the most popular languages
+    in the world.Running C++ on WindowsOne of the best ways to run C++ on a Windows
+    based computer is Visual Studio, this can be downloaded directly from Microsoft
+    with the most recent version being Visual Studio 2017.Download and run the installer,
+    throughout the installer you’ll be met with this menu, make sure C++ is selected.![](image89.jpg)Complete
+    the install and load up Visual Studio.To create a project you need to then select
+    FILE -> NEW PROJECT like so:![](image95.jpg)You’ll then be met with this window:![](image100.jpg)Follow
+    the menus through and you’ll be ready to run the code.Running C++ on Mac and LinuxRunning
+    on C++ on UNIX based environments can be achieved by the use of clang or “gcc”,
+    you can use it like so in the OS’s terminal window:gcc main.cpp -o main.out The
+    file can now be run like:./main.outYou can create a .cpp file in a notepad editor
+    of your choice.Running C++ OnlineA easy way to compile C++ online is by using
+    “TutorialPoints” C++ Online, like is below:[https://www.tutorialspoint.com/compile_cpp11_online.php](https://www.tutorialspoint.com/compile_cpp11_online.php)And
+    should look something like this:![](image127.jpg)PrerequisiteA few things need
+    to be explained before starting is basics:The first is the basic program design:#include
+    "stdafx.h"using namespace std;int main(){    return 0;}The program above is the
+    basic design provided, the code goes in the curly brackets of the main() section
+    and each aspect will be described in the later sections.You’ll also come across
+    lines that start with “//”, these are comments and their only purpose is to add
+    descriptions to label and explain code, they are defined by a distinctive green
+    colour://CommentThe next thing is output from a program, in examples in upcoming
+    chapters you will come across lines like:cout << "Print" << endl;This for the
+    time being is simply printing out data to the screen, the sections of it will
+    be explained in later sections.Chapter 2: BasicsVariables and typesThe basis of
+    a program is data, in the form of numbers and characters. The storing, manipulation
+    and output of this data gives functionality. Variables hold this data, think of
+    it as a box used to store a single item.C++ is a heavily typed language where
+    each variable must have a defined type. A type is an identifying keyword that
+    defines what the variable can hold. The first type we will come across is the
+    integer, this can hold real numbers (numbers without a decimal place), an integer
+    is defined below:int value = 6;- int is the defined type keyword, we will learn
+    about the difference possibilities later.- “value” is the ID for the variable,
+    this can be anything you want to call it, this is used to allow a variable to
+    have a meaningful name, the variable could be defined as “int pineapple = 3;”
+    , but it’s good practise to make them relevant. However, there are a few exception
+    to this as a variable cannot be a single digit i.e. ‘4’ or cannot contain special
+    characters (!”£$%^&*) etc.- “= 6;” Is the assignment section, where the values
+    of 3 is placed in the integer box for use later. This also ends with a semi colon,
+    this is used to signify the end of a line.This variable can now be used in valid
+    areas of the program, like so:int anotherValue = value;The value of “value” defined
+    earlier will now be placed in the anotherValue variable and they will now both
+    have the value of 3\. The value of value doesn’t change as it is just being copied
+    and placed into anotherValue .StringThe String is another crucial variable, this
+    variable type is used to store a series of characters, an example could be the
+    word “batman”, the word is composed of characters that are stored in the String
+    variable. It’s an array of characters (More on arrays later), but effectively
+    it’s the single characters of the word stored next to each other in memory. The
+    ‘\n’ is a special character that stands for a newline.#include "stdafx.h"#include
+    <string >using namespace std;int main(){​ //String class​ string wordStr = ""
+    ;​ //Character array​ char wordCharArray[] = "" ;​ return 0;}As you can see above
+    there are two ways to save a string, the first way is by using a ‘wrapper’ that
+    is something that hides functionality and adds extra on top, this makes it easier
+    to move around a string (we’ll talk about passing around variables later) and
+    the second way is to use a char array, string is the recommended way to store
+    a string variables.Note the use of:#include <string>This informs the program you
+    want to use the “string” wrapper in the program.­ ­BooleanBooleans are used as
+    expressions, their values can only be true or false  and are used to signify certain
+    states or flag certain events, they can also hold the result for a conditional
+    expression (More on conditional expressions later). These will make more sense
+    when we go thought conditional statements.bool True = true ;bool False = false
+    ;Float/DoubleFloating point variables are decimal values created with float point
+    precision math, the technical elements of how this works are outside of the scope
+    of this tutorial but can easily be explained through resources on the internet,
+    just search “floating point precision”. Floats allows for a higher level of accuracy
+    of a value by providing decimal precision. You can specify a ‘float’ value by
+    putting an ‘f’ and the end of the value.float decimalValue = 3.0f;VoidThis data
+    type is special and is used to specify no value is available. This sounds counter
+    intuitive, but we’ll see where this is used later.Notable keywords/termsconst
+    – This keyword turns the variable read-only, meaning it’s value cannot be changed
+    after it is initialised. The keyword is used like so:const float pi = 3.14f;Global
+    variable – This is a term describing a variable definition outside the main function.
+    For example, the int friendCount is a global variable and the int currentMonth
+    is not. Note the positions they’re defined://Globalint friendCount = 0;int main(){​
+    //Not Global​ int currentMonth = 5;return 0;}This means the global variable can
+    be used in any location in the program and can be dangerous if not used correctly.
+    One correct way it to use it in conjunction with the const keyword above, this
+    means functions can only reference the value and not change it.Recap'
+  toc: []
+  trans: '
+
+    ![](img/image8.jpg)C++从基础到高级的 C++编程一步步指南 ©️ 版权所有 2017 Robert Anderson - 保留所有权利。
+
+
+    如果您想与其他人分享这本书，请为每人额外购买一份。如果您想与其他人分享这本书，请为每一个人额外购买一份。如果您想与其他人分享这本书，请为每一个人额外购买一份。如果您想与其他人分享这本书，请为每一个人额外购买一份。
+
+
+    它是使用 C++来编写的。
+
+
+    # 目录
+
+
+    ## 第 1 章 简介与安装
+
+    - [C++的历史]
+
+    - [C++在 Windows 上运行]
+
+    - [C++在 Mac 和 Linux 上运行]
+
+    - [C++在线运行]
+
+
+    ## 第 2 章 基础
+
+    - [变量与类型]
+
+    - [布尔值]
+
+    - [条件语句]
+
+    - [迭代]
+
+    - [函数]
+
+    - [数组]
+
+    - [输入输出]
+
+
+    ## 第 3 章 类结构与面向对象编程
+
+    - [继承]
+
+    - [封装]
+
+    - [多态]
+
+    - [接口]
+
+
+    ## 第 4 章 改进技术
+
+    - [结构体]
+
+    - [枚举]
+
+    - [联合体]
+
+    - [可变参数列表]
+
+    - [命名空间]
+
+
+    ## 第 5 章 高级功能
+
+    - [文件输入输出]
+
+    - [递归]
+
+    '
+- fmt: "\n*   `int`: Holds real numbers\n*   `float` / `double`: Hold decimal numbers\n\
+    *   `void`: Specifies there is not type\n*   `boolean`: Holds either true or false\n\
+    *   `string`: An array of characters making up a word or sentence\n*   `global`:\
+    \ A variable that can be accessed anywhere\n*   `const`: Means after a variable\
+    \ has been initialised its value cannot be changed\n\n## Conditionals\n\n### If\
+    \ statement\nThere are situations where you need something to happen if a certain\
+    \ condition is the case, this is the role of the `If` statement and where conditional\
+    \ statements come into the mix.\n\n```cpp\nif (Condition){\n    //Code will run\
+    \ here if Condition is true\n    //Code will jump here if Condition is false\n\
+    }\n```\n\nIn use:\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace\
+    \ std;\nint main(){\n  int numberOfBooks = 10;\n  if (numberOfBooks > 0)\n  {\n\
+    \    cout << \"You have a book!\" << endl;\n  }\n}\n```\nOutput: `> You have a\
+    \ book !`\n\nThese allow a programmer to control the flow of the program and choose\
+    \ situations to happen when a possibility is true, we’ll go onto more examples\
+    \ later.\n\n### Else Statement\nElse’s are optional but these can be added to\
+    \ the end of an `if`-statement and will only run if the `if`-statement condition\
+    \ is false.\n\n```cpp\nif (Condition ){\n    //Code will run here if Condition\
+    \ is True\n}\nelse{\n    //Code will run here if Condition is False\n}\n```\n\n\
+    Else statements can also become an `else/if` statement where a new `if` statement\
+    \ is attached, this look like this:\n\n```cpp\nif (Condition1 ){\n    //Code will\
+    \ run here if Condition1 is True\n}\nif else (Condition2 ){\n     //Code will\
+    \ run here if Condition1 is False and Condition2 is True\n    //If neither are\
+    \ true no code will run\n}\n```\n\nYou can also chain another `else` statement\
+    \ onto an `else` statement effectively creating an infinite chain. If any conditions\
+    \ along the chain are true, the ones below are not checked, I’ll demonstrate this\
+    \ below:\n\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace\
+    \ std;\nint main(){\n  if (false )\n  {\n    cout << \"Contition1!\" << endl;\n\
+    \  }\n  else if (true ) //This condition is true!\n  {\n    cout << \"Contition2!\"\
+    \ << endl;\n  }\n  else if (true ) //Ignored, due to previous else statement being\
+    \ true\n  {\n    cout << \"Contition3!\" << endl;\n  }\n  else if (true ) //Also\
+    \ ignored due to condition 2 being true\n  {\n    cout << \"Contition4!\" << endl;\n\
+    \  }\n  return 0;\n}\n```\nOutput: `> Condition 2`\n\nAfter the body of condition\
+    \ 2 is hit and the `cout` statement is executed, the program does not go onto\
+    \ to check the other `else` statements.\n\n### Exercise\nAdapt a program to check\
+    \ if a value is equal to another and print “EQUAL”, if they’re not print “NOT\
+    \ EQUAL”, the skeleton code is below:\n\n```cpp\n#include \"stdafx.h\"\n#include\
+    \ <iostream>\nusing namespace std;\nint main(){\n  int value1 = 10;\n  int value2\
+    \ = 10;\n  //CODE GOES HERE\n}\n```\n\n### Solution\n```cpp\n#include \"stdafx.h\"\
+    \n#include <iostream>\nusing namespace std ;\nint main(){\n  int value1 = 10;\n\
+    \  int value2 = 10;\n  if (value1 == value2)\n  {\n    cout << \"EQUAL\" ;\n \
+    \ }\n  else\n  {\n    cout << \"NOT EQUAL\" ;\n  }\n  return 0;\n}\n```\nChange\
+    \ the values of `value1` and `value2` and see how the program changes.\n\n###\
+    \ Using multiple conditions\nYou can use more than one condition in a single statement,\
+    \ there’re two ways of doing this AND signified by `&&` and OR signified by `||`\
+    \ (Double vertical bar).\n\n*   `AND` checks if both conditions are true before\
+    \ triggering the body of the statement:\n    ```cpp\n    if (Condition1 && Condition2\
+    \ ){\n        //Code will run here if Condition1 AND Condition2 are True\n   \
+    \ }\n    ```\n*   `OR` checks if one of the conditions are true before triggering\
+    \ the body of the statement:\n    ```cpp\n    if (Condition1 || Condition2 ){\n\
+    \         //Code will run here if Condition1 OR Condition2 are True (Works if\
+    \ both are true)\n    }\n    ```\n\n## Recap\n*   `If` statement: Deals with conditional\
+    \ statements, code within it’s body will run if the condition is true\n*   `else`\
+    \ statement: Used as an extension to an `if` statement that is only checked if\
+    \ the `if` statement is false\n*   `&&`: Used to string two conditions together\
+    \ and will only return true if both are true\n*   `||` (Double Bar): Used to string\
+    \ two conditions together and will only return true if one of the conditions are\
+    \ true\n\n## Switch-Case\nSwitch cases are used to test a variable for equality\
+    \ with a constant expression without the need for multiple `if`-statements. One\
+    \ use for this structure is check users input string. Below is the basic structure\
+    \ of the switch case:\n\n```cpp\n// Switch-Case\nswitch (expression){\n    case\
+    \ constant-expression:\n        break ; //Break isn't needed\n    //Any number\
+    \ of case statements\n    // |\n    // |\n    \\ ///default :\n        break ;\n\
+    }\n```\n\nThe `switch` starts off with an `expression`, this is the variable that\
+    \ is to be compared to the `constant-expressions`, these constants are the literal\
+    \ values of the variable such as ‘1’ or ‘Z’. Breaks are optional but without them\
+    \ the code will ‘flow-down’ into other statements. There is an example below using\
+    \ a switch-case statement, the user inputs a character if the `char` is `N` or\
+    \ `Y`, ‘No’ and ‘Yes’ is output respectively but there’s a `default` case that\
+    \ applies for all situations, this needs to be at the end.\n\n```cpp\nchar character;\n\
+    //Reads in user input (Explained in more detail later)\nscanf(\"%s\" , &character);\n\
+    //Switch-Case\nswitch (character){\n    case 'N' :\n        printf(\"NO\\n\" );\n\
+    \        break ;\n    case 'Y' :\n        printf(\"YES\\n\" );\n        break\
+    \ ;\n    default : \n        printf(\"Do not understand!\\n\" );\n        break\
+    \ ;\n}\n```\n\nIf there is no break statement a ‘flow-down’ will occur, below\
+    \ is an example just like above but without the break statements and we’ll what\
+    \ the output is like:\n\n```cpp\nchar character;\n//Reads in user input (Explained\
+    \ in more detail later)\ncin >> character;\n//Switch-Case\nswitch (character){\n\
+    \    case 'N' :\n        printf(\"NO\\n\" );\n    case 'Y' :\n        printf(\"\
+    YES\\n\" );\n    default : \n        printf(\"Do not understand!\\n\" );\n}\n\
+    ```\nIf ‘N’ is the user input the Output will be:\n`>NO`\n`>YES`\n`>Do not understand!`\n\
+    This is because when one case statement is triggered it will continue down until\
+    \ a break statement is found to stop running the case body code.\n\n## Iteration\n\
+    Iteration means looping, and looping quickly gives programs the ability to perform\
+    \ lots of similar operations very quickly, there’re two types of iteration: ‘for\
+    \ loops’ and ‘while loops/do-while loop’\n\n### For Loop\nThe `for` loop is given\
+    \ an end value and loops up until that value, while keeping track of what loop\
+    \ number it’s currently on, here is an example below:\n\n```cpp\nfor (int x =\
+    \ 0; x > 10; x++){\n    cout << \"Loop!\" << endl;\n}\nfor(int x = 0 ; x > 10\
+    \ ; x++ )\n```\n\nEach part of the `for-loop` has a role:\n*   **Red**: This is\
+    \ the Declaration section to define the loop counter variable, this defines the\
+    \ start point of the counter.\n*   **Green**: This section is called the Conditional\
+    \ and it contains a conditional statement that is checked at the end of the loop\
+    \ to see if the `if`-statement should continue looping, so in this case the loop\
+    \ should continue looping if `x > 10`, if this condition becomes false the loop\
+    \ will not continue.\n*   **Blue**: The blue statement is the Increment section\
+    \ where the loop counter is incremented (increased in value), the `x++` is shorthand\
+    \ for `x = x + 1`. This can also be `x--`, if there was a case requiring the counter\
+    \ to decrease.\n\n*   Declaration section defines the loop counter\n*   Conditional\
+    \ section continues the loop if true\n*   Increment section is where the loop\
+    \ counter is incremented\n"
+  raw: '*   int ​ ​ Holds real numbers
+
+
+    *   float / double​ Hold decimal numbers
+
+
+    *   void​ ​ Specifies there is not type
+
+
+    *   boolean​ ​ Holds either true or false
+
+
+    *   string​ ​ An array of characters making up a word or sentence
+
+
+    *   global​ ​ A variable that can be accessed anywhere
+
+
+    *   const ​ ​ Means after a variable has been initialised its value cannot be
+    changed
+
+
+    ConditionalsIf statementThere are situations where you need something to happen
+    if a certain condition is the case, this is the role of the If statement and where
+    conditional statements come into the mix.if (Condition){​ //Code will run here
+    if Condition is true}//Code will jump here if Condition is falseIn use:#include
+    "stdafx.h"#include <iostream>using namespace std;int main(){​ int numberOfBooks
+    = 10;​ if (numberOfBooks > 0)​ {​ cout << "You have a book!" << endl;​ }}Output:>
+    You have a book !These allow a programmer to control the flow of the program and
+    choose situations to happen when a possibility is true, we’ll go onto more examples
+    later.Else StatementElse’s are optional but these can be added to the end of an
+    if-statement and will only run if the if-statement condition is falseif (Condition
+    ){      //Code will run here if Condition is True}else{      //Code will run here
+    if Condition is False}Else statements can also become an else/if statement where
+    a new if statement is attached, this look like this:if (Condition1 ){       //Code
+    will run here if Condition1 is True}if else (Condition2 ){      //Code will run
+    here if Condition1 is False and Condition2 is True}//If neither are true no code
+    will runYou can also chain another else statement onto an else statement effectively
+    creating an infinite chain. If any conditions along the chain are true, the ones
+    below are not checked, I’ll demonstrate this below:#include "stdafx.h"#include
+    <iostream>using namespace std;int main(){​ if (false )​ {​ cout << "Contition1!"
+    << endl;}​ else if (true ) //This condition is true!​ {​ cout << "Contition2!"
+    << endl;​ }​ else if (true ) //Ignored, due to previous else statement being true​
+    {​ cout << "Contition3!" << endl;​ }​ else if (true ) //Also ignored due to condition
+    2 being true​ {​ cout << "Contition4!" << endl;​ }​ return 0;}Output> Condition
+    2After the body of condition 2 is hit and the cout statement is executed, the
+    program does not go onto to check the other else statements.ExerciseAdapt a program
+    to check if a value is equal to another and print “EQUAL”, if they’re not print
+    “NOT EQUAL”, the skeleton code is below:#include "stdafx.h"#include <iostream>using
+    namespace std;int main(){​ int value1 = 10;​ int value2 = 10;​ //CODE GOES HERE}Solution#include
+    "stdafx.h"#include <iostream>using namespace std ;int main(){​ int value1 = 10;​
+    int value2 = 10;​ if (value1 == value2)​ {​ cout << "EQUAL" ;​ }​ else​ {​ cout
+    << "NOT EQUAL" ;​ }​ return 0;}Change the values of value1 and value2 and see
+    how the program changes.Using multiple conditionsYou can use more than one condition
+    in a single statement, there’re two ways of doing this AND signified by && and
+    OR signified by || (Double vertical bar).AND checks if both conditions are true
+    before triggering the body of the statementif (Condition1 && Condition2 ){      //Code
+    will run here if Condition1 AND Condition2 are True}OR checks if one of the conditions
+    are true before triggering the body of the statementif (Condition1 || Condition2
+    ){      //Code will run here if Condition1 OR Condition2 are True (Works if both
+    are true)}Recap
+
+
+    *   If statement ​ Deals with conditional statements, code within it’s body will
+    run if the condition is true
+
+
+    *   else statement​ Used as an extension to an if statement that is only checked
+    if the if statement is false
+
+
+    *   &&​ ​ Used to string two conditions together and will only return true if
+    both are true
+
+
+    *   || (Double Bar)​ Used to string two conditions together and will only return
+    true if one of the conditions are true
+
+
+    Switch-CaseSwitch cases are used to test a variable for equality with a constant
+    expression without the need for multiple if-statements. One use for this structure
+    is check users input string. Below is the basic structure of the switch case://Switch-Caseswitch
+    (expression){//Case statementcase constant-expression:​ break ; //Break isn''t
+    needed//Any number of case statements// |// |//\ /// .default :​ break ;}The switch
+    starts off with an ‘expression’, this is the variable that is to be compared to
+    the ‘constant-expressions’, these constants are the literal values of the variable
+    such as ‘1’ or ‘Z’. Breaks are optional but without them the code will ‘flow-down’
+    into other statements. There is an example below using a switch-case statement,
+    the user inputs a character if the char is N or Y, ‘No’ and ‘Yes’ is output respectively
+    but there’s a default case that applies for all situations, this needs to be at
+    the end.char character;//Reads in user input (Explained in more detail later)scanf("%s"
+    , &character);​ //Switch-Caseswitch (character){case ''N'' :​ printf("NO\n" );​
+    break ;​ case ''Y'' :​ printf("YES\n" );​ break ;​ default :​ printf("Do not understand!\n"
+    );​ break ;}If there is no break statement a ‘flow-down’ will occur, below is
+    an example just like above but without the break statements and we’ll what the
+    output is like:char character;//Reads in user input (Explained in more detail
+    later)char character;cin >> character;//Switch-Caseswitch (character){​ case ''N''
+    :​ printf("NO\n" );​ case ''Y'' :​ printf("YES\n" );​ default :​ printf("Do not
+    understand!\n" );}If ‘N’ is the user input the Output will be:>NO>YES>Do not understand!This
+    is because when one case statement is triggered it will continue down until a
+    break statement is found to stop running the case body code.IterationIteration
+    means looping, and looping quickly gives programs the ability to perform lots
+    of similar operations very quickly, there’re two types of iteration: ‘for loops’
+    and ‘while loops/do-while loop’For LoopThe for loop is given an end value and
+    loops up until that value, while keeping track of what loop number it’s currently
+    on, here is an example below:for (int x = 0; x > 10; x++){​ cout << "Loop!" <<
+    endl;}for(int x = 0 ; x > 10 ; x++ )Each part of the for-loop has a roleRedThis
+    is the Declaration section to define the loop counter variable, this defines the
+    start point of the counterGreenThis section is called the Conditional and it contains
+    a conditional statement that is checked at the end of the loop to see if the if-statement
+    should continue looping, so in this case the loop should continue looping if x
+    > 10, if this condition becomes false the loop will not continue.Blu eThe blue
+    statement is the Increment section where the loop counter is incremented (increased
+    in value), the x++ is shorthand for x = x + 1 . This can also be x-- , if there
+    was a case requiring the counter to decrease.
+
+
+    *   Declaration section defines the loop counter
+
+
+    *   Conditional section continues the loop if true
+
+
+    *   Increment section is where the loop counter is incremented'
+  toc: []
+  trans: "\n\n*   `int`: 存储整数\n*   `float` / `double`: 存储小数\n*   `void`: 指定没有类型\n\
+    *   `boolean`: 存储真或假\n*   `string`: 组成单词或句子的字符数组\n*   `global`: 可以在程序任何地方访问的变量\n\
+    *   `const`: 意味着变量初始化后其值不能被更改\n\n## 条件判断语句\n\n### If 语句\n在某些情况下，你可能需要在某个条件成立时执行某些操作，这就是\
+    \ `If` 语句的作用，也是条件语句介入的地方。\n\n```cpp\nif (Condition){\n    // 如果 Condition 为真，代码将在此处运行\n\
+    \    // 如果 Condition 为假，代码将跳转到此处\n}\n```\n\n用法示例：\n```cpp\n#include \"stdafx.h\"\
+    \n#include <iostream>\nusing namespace std;\nint main(){\n  int numberOfBooks\
+    \ = 10;\n  if (numberOfBooks > 0)\n  {\n    cout << \"You have a book!\" << endl;\n\
+    \  }\n}\n```\n输出：`> You have a book !`\n\n这些语句允许程序员控制程序的流程，并在可能性为真时选择发生的情况，我们稍后会介绍更多示例。\n\
+    \n### Else 语句\nElse 是可选的，但它们可以被添加到 `if`-语句的末尾，并且只有在 `if`-语句的条件为假时才会运行。\n\n```cpp\n\
+    if (Condition ){\n    // 如果 Condition 为真，代码将在此处运行\n}\nelse{\n    // 如果 Condition\
+    \ 为假，代码将在此处运行\n}\n```\n\nElse 语句也可以变成 `else/if` 语句，其中附加一个新的 `if` 语句，看起来如下：\n\n\
+    ```cpp\nif (Condition1 ){\n    // 如果 Condition1 为真，代码将在此处运行\n}\nif else (Condition2\
+    \ ){\n     // 如果 Condition1 为假且 Condition2 为真，代码将在此处运行\n    // 如果两者都为假，则没有代码运行\n\
+    }\n```\n\n你还可以将另一个 `else` 语句链接到另一个 `else` 语句上，有效地创建了一个无限链。如果链中的任何条件为真，下面的条件将不再被检查，我将在下面演示这一点：\n\
+    \n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nint\
+    \ main(){\n  if (false )\n  {\n    cout << \"Contition1!\" << endl;\n  }\n  else\
+    \ if (true ) // 这个条件为真！\n  {\n    cout << \"Contition2!\" << endl;\n  }\n  else\
+    \ if (true ) // 被忽略，因为之前的 else 语句为真\n  {\n    cout << \"Contition3!\" << endl;\n\
+    \  }\n  else if (true ) // 同样因为条件 2 为真而被忽略\n  {\n    cout << \"Contition4!\" <<\
+    \ endl;\n  }\n  return 0;\n}\n```\n输出：`> Condition 2`\n\n在进入条件 2 的体并执行 `cout`\
+    \ 语句后，程序不会继续检查其他的 `else` 语句。\n\n### 练习\n修改程序以检查一个值是否等于另一个值，如果相等则打印“EQUAL”，如果不相等则打印“NOT\
+    \ EQUAL”，骨架代码如下：\n\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing\
+    \ namespace std;\nint main(){\n  int value1 = 10;\n  int value2 = 10;\n  // 代码在此处\n\
+    }\n```\n\n### 答案\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace\
+    \ std ;\nint main(){\n  int value1 = 10;\n  int value2 = 10;\n  if (value1 ==\
+    \ value2)\n  {\n    cout << \"EQUAL\" ;\n  }\n  else\n  {\n    cout << \"NOT EQUAL\"\
+    \ ;\n  }\n  return 0;\n}\n```\n更改 `value1` 和 `value2` 的值，观察程序如何变化。\n\n### 使用多个条件\n\
+    你可以在单个语句中使用多个条件，有两种方法实现，分别由 `&&` 表示的 AND（与）和由 `||` 表示的 OR（或）。\n\n*   `AND` 在触发语句语句体之前检查两个条件是否都为真：\n\
+    \    ```cpp\n    if (Condition1 && Condition2 ){\n        // 如果 Condition1 且 Condition2\
+    \ 都为真，代码将在此处运行\n    }\n    ```\n*   `OR` 在触发语句语句体之前检查其中一个条件是否为真：\n    ```cpp\n\
+    \    if (Condition1 || Condition2 ){\n         // 如果 Condition1 或 Condition2 为真，代码将在此处运行（如果两者都为真也有效）\n\
+    \    }\n    ```\n\n## 总结\n*   `If` 语句：处理条件语句，如果条件为真，其体体内的代码将运行\n*   `else` 语句：作为\
+    \ `if` 语句的扩展，只有在 `if` 语句为假时才会检查\n*   `&&`：用于将两个条件连接在一起，只有当两者都为真时才返回真\n*   `||`（双杠）：用于将两个条件连接在一起，只有当其中一个条件为真时才返回真\n\
+    \n## Switch-Case\nSwitch cases 用于测试变量是否与某个常量表达式相等，而不需要多个 `if`-语句。这种结构的一个用途是检查用户输入的字符串。下面是\
+    \ switch case 的基本结构：\n\n```cpp\n// Switch-Case\nswitch (expression){\n    case\
+    \ constant-expression:\n        break ; // Break 不是必须的\n    // 任意数量的 case 语句\n\
+    \    // |\n    // |\n    \\default :\n        break ;\n}\n```\n\n`switch` 以一个\
+    \ `expression` 开始，这是要与 `constant-expressions` 进行比较的变量，这些常量是变量的字面值，例如‘1’或‘Z’。Break\
+    \ 是可选的，但如果没有它们，代码将“向下流动”到其他语句。下面是一个使用 switch-case 语句的示例，用户输入一个字符，如果 `char` 是 `N`\
+    \ 或 `Y`，分别输出“No”和“Yes”，但有一个适用于所有情况的 `default`，这需要放在最后。\n\n```cpp\nchar character;\n\
+    // 读取用户输入（稍后会详细解释）\nscanf(\"%s\" , &character);\n// Switch-Case\nswitch (character){\n\
+    \    case 'N' :\n        printf(\"NO\\n\" );\n        break ;\n    case 'Y' :\n\
+    \        printf(\"YES\\n\" );\n        break ;\n    default : \n        printf(\"\
+    Do not understand!\\n\" );\n        break ;\n}\n```\n\n如果没有 break 语句，将会发生“向下流动”，下面是一个与上面相同的示例但没有\
+    \ break 语句，我们来看看输出是什么：\n\n```cpp\nchar character;\n// 读取用户输入（稍后会详细解释）\ncin >>\
+    \ character;\n// Switch-Case\nswitch (character){\n    case 'N' :\n        printf(\"\
+    NO\\n\" );\n    case 'Y' :\n        printf(\"YES\\n\" );\n    default : \n   \
+    \     printf(\"Do not understand!\\n\" );\n}\n```\n如果用户输入‘N’，输出将是：\n`>NO`\n`>YES`\n\
+    `>Do not understand!`\n这是因为当一个 case 语句被触发时，它将继续向下直到找到 break 语句停止运行 case 体代码。\n\
+    \n## 迭代\n迭代意味着循环，循环让程序能够快速地执行许多相似的操作，迭代有两种类型：“for 循环”和“while 循环/do-while 循环”。\n\
+    \n### For Loop\n`for` 循环给了一个结束值并一直循环到该值，同时跟踪当前是第几次循环，下面是一个示例：\n\n```cpp\nfor (int\
+    \ x = 0; x > 10; x++){\n    cout << \"Loop!\" << endl;\n}\nfor(int x = 0 ; x >\
+    \ 10 ; x++ )\n```\n\n`for-loop` 的每个部分都有其作用：\n*   **红色**：这是定义循环计数变量的声明部分，它定义了计数器的起始点。\n\
+    *   **绿色**：这部分被称为条件，它包含一个在循环结束时检查的条件语句，以查看 `if`-语句是否应该继续循环，在这种情况下，如果 `x > 10`\
+    \ 则循环应该继续循环；如果此条件变为假，循环将不再继续。\n*   **蓝色**：蓝色语句是增量部分，循环计数器在此处增加（增加值），`x++` 是 `x\
+    \ = x + 1` 的简写。如果有需要计数器减小的情况，也可以是 `x--`。\n\n"
+- fmt: "\n# Conditional Loops\n\nConditional loops work like the `for` loop but don’t\
+    \ have a loop counter and will only loop while a condition is True. This means\
+    \ you can create an infinite loop, like so:\n\n```cpp\nwhile (true ){cout << \"\
+    This will never stop looping!\" << endl;}\n```\n\nNote:An infinite loop is normally\
+    \ constructed using a naked for-loop: `for (;;){}`. This loop will never end and\
+    \ your program will get stuck within the loop. The example below shows if the\
+    \ condition is false the program will never reach the code within the brackets:\n\
+    \n```cpp\nwhile (false ){​ cout << \"This will never loop!\" << endl;}\n```\n\n\
+    To use this loop effectively you can use it with a conditional statement (like\
+    \ the `if` statement) or you can use it with a `bool` variable, examples are below:\n\
+    \n```cpp\nint count = 0;\nwhile (count > 10){\n​ //Remember this, it’s the same\
+    \ as “count = count + 1;”\n​ count++;\n}\n```\n\nAs it says above you can also\
+    \ use a `while` loop directly with a Boolean variable:\n\n```cpp\nint count =\
+    \ 0;\nbool keepLooping = true ; //Bool is true (1) is true\nwhile (keepLooping){\n\
+    ​ //Remember this, it’s the same as “count = count + 1;”\n​ count++;\n​ if (count\
+    \ == 3)\n​ {\n​ keepLooping = 0; //keepLooping is now false, and the loop will\
+    \ stop\n​ }}\n```\n\nNote:The section in the brackets of the `while` loop is checking\
+    \ if that condition is true, you can also write it like so: `while (!stopLooping)\
+    \ {}`. This is effectively saying, keep looping while `stopLooping` is “not true”,\
+    \ the `!` symbol means “not”.\n\n## Do-While\n\nA `Do-While` loop is almost exactly\
+    \ the same as `While` loop but with one small difference, it checks if the condition\
+    \ is true after executing the code in the body of the loop, a `while` loop checks\
+    \ if the condition is true before executing the body. The code snippet below shows\
+    \ this difference:\n\n```cpp\nwhile (false ){​ cout << \"While Loop\" << endl;}\n\
+    do{\n​ cout << \"Do Loop\" << endl;} while (false )\n```\n\nOutput: `> Do Loop`\n\
+    Because even though the Boolean is false, the `Do` loop executed a single time\
+    \ because the check was at the end of the body.\n\n### Using a Do-Loop\n\nA real-world\
+    \ example of a do-loop cool be checking for user input, it prints out and asks\
+    \ for input if all is okay there is no need for looping if not it will loop. An\
+    \ example looking for the user to enter a ‘a’ is below:\n\n```cpp\n#include \"\
+    stdafx.h\"\n#include <iostream>\nusing namespace std;\nint main(){\n​ //Will loop\
+    \ if this is false\nbool correct = true ;\n​ do\n​ {\ncout << \"Please enter the\
+    \ letter 'a':\" ;\n​ //Takes in user input\nchar a;\ncin >> a;\n​ //Checks if\
+    \ answer is correct\nif (a != 'a' )\n​ {\n​ //Incorrect\ncorrect = false ;\ncout\
+    \ << \"Incorrect\" << endl;\n}\n​ else\n​ {\n​ //Correct\ncorrect = true ;\n}\n\
+    \n } while (!correct);\n​ //If the user has completed the task\ncout << \"Correct\"\
+    \ << endl;\n}\n```\n\n## Loop control keywords\n\nSometimes there are situations\
+    \ where you want to prematurely stop the entire loop or a single iteration (loop),\
+    \ this is where loop control keywords come into use. You have either a `break`\
+    \ or `continue` keyword.\n\n`break` – Will stop the entire loop, this can be useful\
+    \ if an answer has been found and the rest of the planned iterations would be\
+    \ pointless.\n\n```cpp\nfor (int x = 0; x < 5; x++){\nif (x == 3)\n​ {\nbreak;\n\
+    }\n​ //The technicalities of this statement will be explained later\ncout << \"\
+    Loop value: \" << x << endl;}\n```\nOutput:\n`> Loop value: 0`\n`> Loop value:\
+    \ 1`\n`> Loop value: 2`\n\nNow if the code is changed to not include the `break`:\n\
+    \n```cpp\nfor (int x = 0; x < 5; x++){\n​ //The technicals of this statement will\
+    \ be explained later\ncout << \"Loop value: \" << x << endl;}\n```\nOutput:\n\
+    `> Loop value: 0`\n`> Loop value: 1`\n`> Loop value: 2`\n`> Loop value: 3`\n`>\
+    \ Loop value: 4`\n\n`Continue` – If we use the code from above but replace it\
+    \ for a `continue` the code will look like so:\n\n```cpp\nfor (int x = 0; x <\
+    \ 5; x++){\nif (x == 3)\n​ {\ncontinue;\n}\n​ //The technicals of this statement\
+    \ will be explained later\ncout << \"Loop value: \" << x << endl;}\n```\nThe output\
+    \ it like so:\n`> Loop value: 0`\n`> Loop value: 1`\n`> Loop value: 2`\n`> Loop\
+    \ value: 4`\n\nThis shows that when `x = 3` the `continue` is executed and the\
+    \ loop is skipped and so is the `cout` statement is also skipped so there is no\
+    \ “Loop value: 3”.\n\n## Nested loops\n\nYou can also place loops within loops\
+    \ to perform specific roles, in the example we are using `for`-loops but this\
+    \ can also be done with the `while`/`do` loop. The example is printing out a 2D\
+    \ grid, the nested `for`-loop gives another dimension.\n\n```cpp\n//Prints a 5x5\
+    \ grid\nfor (int y = 0; y < 5; y++){\nfor (int x = 0; x < 5; x++)\n​ {\n//Prints\
+    \ an element of the row\ncout << \"X \" ;\n}\n​ //Moves down a row\ncout << endl;}\n\
+    ```\nOutput:\n`> X X X X X`\n`> X X X X X`\n`> X X X X X`\n`> X X X X X`\n`> X\
+    \ X X X X`\n\n# Functions\n\nFunctions are the building blocks of a program, they\
+    \ allow the reuse of code, the ability to keep it readable and stops the programmer\
+    \ repeating code. Repeating code is heavily advised against because bugs will\
+    \ be repeated multiple times and changes to code also need repeating. Functions\
+    \ give a centralised controlled area that deals with the distinct roles of the\
+    \ program.\n\nA method has two elements, parameters: (the items passed into the\
+    \ function) and the return type (the variable being returned) these are both optional\
+    \ and you can have a function with neither.\n\nA function must be defined above\
+    \ its call, like so:\n\n```cpp\n//Function call\nvoid PrintSmile(){\ncout << \"\
+    :)\" << endl;\n}\nint main(){\n//Method call\nPrintSmile();\nreturn 0;\n\n```\n\
+    \n### Function Parameters\n\nSometimes it might be useful to pass data into a\
+    \ program, there are two types of parameter passing, by reference and by value.\
+    \ Passing by reference is what it sounds like, it passes a direct reference to\
+    \ a variable not a copy, so any changes to that passed variable effect it back\
+    \ in the calling function. Passing by value is the passing of a copy of that variable,\
+    \ so any changes to that variable do not effect that passed variable.\n\n*   Passing\
+    \ by reference means changes to the parameter effects the passed variable\n* \
+    \  Passing by value means changes to parameter does not affect the passed variable\n"
+  raw: 'Conditional LoopsConditional loops work like the for loop but don’t have a
+    loop counter and will only loop while a condition is True. This means you can
+    create an infinite loop, like so:while (true ){cout << "This will never stop looping!"
+    << endl;}Note:An infinite loop is normally constructed using a naked for-loop:for
+    (;;){}This loop will never end and your program will get stuck within the loop.The
+    example below shows if the condition is false the program will never reach the
+    code within the bracketswhile (false ){​ cout << "This will never loop!" << endl;}To
+    use this loop effectively you can use it with a conditional statement (like the
+    if statement) or you can use it with a bool variable, examples are belowint count
+    = 0;while (count > 10){​ //Remember this, it’s the same as “count = count + 1;”​
+    count++;}As it says above you can also use a while loop directly with a Boolean
+    variable:int count = 0;bool keepLooping = true ; //Bool is true (1) is truewhile
+    (keepLooping){​ //Remember this, it’s the same as “count = count + 1;”​ count++;​
+    if (count == 3)​ {​ keepLooping = 0; //keepLooping is now false, and the loop
+    will stop​ }}Note:The section in the brackets of the while loop is checking if
+    that condition is true, you can also write it like so:while (!stopLooping) {}This
+    is effectively saying, keep looping while stopLooping is “not true”, the “!” is
+    symbol means “not”.Do-WhileA Do-While loop is almost exactly the same as While
+    loop but with one small difference, it checks if the condition is true after executing
+    the code in the body of the loop, a while loop checks the if the condition is
+    true before executing the body. The code snippet below shows this difference:while
+    (false ){​ cout << "While Loop" << endl;}do{​ cout << "Do Loop" << endl;} while
+    (false )Output:> Do Loo pBecause even though the Boolean is false, the Do loop
+    executed a single time because the check was at the end of the body.Using a Do-LoopA
+    real-world example of a do-loop cool be checking for user input, it prints out
+    and asks for input if all is okay there is no need for looping if not it will
+    loop. An example looking for the user to enter a ‘a’ is below#include "stdafx.h"#include
+    <iostream>using namespace std;int main(){​ //Will loop if this is false​ bool
+    correct = true ;​ do​ {​ cout << "Please enter the letter ''a'':" ;​ //Takes in
+    user input​ char a;​ cin >> a;​ //Checks if answer is correct​ if (a != ''a''
+    )​ {​ //Incorrect​ correct = false ;​ cout << "Incorrect" << endl;​ }​ else​ {​
+    //Correct​ correct = true ;​ }​ } while (!correct);​ //If the user has completed
+    the task​ cout << "Correct" << endl;}Loop control keywordsSometimes there are
+    situations where you want to prematurely stop the entire loop or a single iteration
+    (loop), this is where loop control keywords come into use.You have either a break
+    or continue keywor dbreak – Will stop the entire loop, this can be useful if an
+    answer has been found and the rest of the planned iterations would be pointless.for
+    (int x = 0; x < 5; x++){​ if (x == 3)​ {​ break;​ }​ //The technicalities of this
+    statement will be explained later​ cout << "Loop value: " << x << endl;}Output:>
+    Loop value: 0> Loop value: 1> Loop value: 2Now if the code is changed to not include
+    the break:for (int x = 0; x < 5; x++){​ //The technicals of this statement will
+    be explained later​ cout << "Loop value: " << x << endl;}Output:> Loop value:
+    0> Loop value: 1> Loop value: 2> Loop value: 3> Loop value: 4Continue – If we
+    use the code from above but replace it for a continue the code will look like
+    so:for (int x = 0; x < 5; x++){​ if (x == 3)​ {​ continue;​ }​ //The technicals
+    of this statement will be explained later​ cout << "Loop value: " << x << endl;}The
+    output it like so:Output:> Loop value: 0> Loop value: 1> Loop value: 2> Loop value:
+    4This shows that when x = 3 the continue is executed and the loop is skipped and
+    so is the cout statement is also skipped so there is no “Loop value: 3”Nested
+    loop sYou can also place loops within loops to perform specific roles, in the
+    example we are using for-loops but this can also be done with the while/do loop.The
+    example is printing out a 2D grid, the nested for-loop gives another dimension://Prints
+    a 5x5 gridfor (int y = 0; y < 5; y++){​ for (int x = 0; x < 5; x++)​ {​ //Prints
+    an element of the row​ cout << "X " ;​ }​ //Moves down a row​ cout << endl;}Output>
+    X X X X X> X X X X X> X X X X X> X X X X X> X X X X XFunctionsFunctions are the
+    building blocks of a program, they allow the reuse of code, the ability to keep
+    it readable and stops the programmer repeating code. Repeating code is heavily
+    advised against because bugs will be repeated multiple times and changes to code
+    also need repeating. Functions give a centralised controlled area that deals with
+    the distinct roles of the program. A method has two elements, parameters :(the
+    items passed into the function) and the return type (the variable being returned)
+    these are both optional and you can have a function with neither.A function must
+    be defined above its call, like so;//Function callvoid PrintSmile(){​ cout <<
+    ":)" << endl;}int main(){​ //Method call​ PrintSmile();​ return 0;}Function ParametersSometimes
+    it might be useful to pass data into a program, there are two types of parameter
+    passing, by reference and by value. Passing by reference is what it sounds like,
+    it passes a direct reference to a variable not a copy, so any changes to that
+    passed variable effect it back in the calling function. Passing by value is the
+    passing of a copy of that variable, so any changes to that variable do not effect
+    that passed variable.
+
+
+    *   Passing by reference means changes to the parameter effects the passed variable
+
+
+    *   Passing by value means changes to parameter does not affect the passed variable'
+  toc: []
+  trans: "\n\n# 条件循环\n\n条件循环的工作原理类似于 `for` 循环，但它没有循环计数器，并且只有在条件为真（True）时才会循环。这意味着你可以创建一个无限循环，如下所示：\n\
+    \n```cpp\nwhile (true ){cout << \"This will never stop looping!\" << endl;}\n\
+    ```\n\n注意：无限循环通常使用裸露的 for 循环来构建：`for (;;){}`。这个循环永远不会结束，你的程序将卡在循环中。下面的示例显示，如果条件为假（false），程序将永远到达括号内的代码：\n\
+    \n```cpp\nwhile (false ){​ cout << \"This will never loop!\" << endl;}\n```\n\n\
+    为了有效使用这种循环，你可以将其与条件语句（如 `if` 语句）结合使用，或者配合 `bool` 变量使用，示例如下：\n\n```cpp\nint count\
+    \ = 0;\nwhile (count > 10){\n​ //记住这个，它等同于 “count = count + 1;”\n​ count++;\n\
+    }\n```\n\n如上所述，你也可以直接对布尔变量使用 `while` 循环：\n\n```cpp\nint count = 0;\nbool keepLooping\
+    \ = true ; //Bool 为真 (1) 表示真\nwhile (keepLooping){\n​ //记住这个，它等同于 “count = count\
+    \ + 1;”\n​ count++;\n​ if (count == 3)\n​ {\n​ keepLooping = 0; //keepLooping\
+    \ 现在为假，循环将停止\n​ }}\n```\n\n注意：`while` 循环括号中的部分是在检查该条件是否为真，你也可以这样写：`while (!stopLooping)\
+    \ {}`。这实际上是说当 `stopLooping` 为“非真”时继续循环，`!` 符号表示“非”。\n\n## Do-While\n\n`Do-While`\
+    \ 循环与 `While` 循环几乎完全相同，但有一个细小的区别：它在执行完循环体代码后检查条件是否为真，而 `while` 循环在执行体之前检查条件是否为真。下面的代码段展示了这种差异：\n\
+    \n```cpp\nwhile (false ){​ cout << \"While Loop\" << endl;}\ndo{\n​ cout << \"\
+    Do Loop\" << endl;} while (false )\n```\n\n输出：`> Do Loop`\n因为即使布尔值为假，`Do` 循环也执行了一次，因为检查是在主体末尾进行的。\n\
+    \n### 使用 Do-Loop\n\ndo-loop 的真实世界示例可以是检查用户输入：它会打印并请求输入，如果一切正常则不需要循环；如果不正常，它将进行循环。下面是一个等待用户输入‘a’的示例：\n\
+    \n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nint\
+    \ main(){\n​ // 如果此为假，则将循环\nbool correct = true ;\n​ do\n​ {\ncout << \"Please\
+    \ enter the letter 'a':\" ;\n​ // 获取用户输入\nchar a;\ncin >> a;\n​ // 检查答案是否正确\n\
+    if (a != 'a' )\n​ {\n // //错误\ncorrect = false ;\ncout << \"Incorrect\" << endl;\n\
+    }\n​ else\n​ {\n​ // 正\ncorrect = true ;\n}\n\n } while (!correct);\n​ // 如果用户完成了任务\n\
+    cout << \"Correct\" << endl;\n}\n```\n\n## 循环控制关键字\n\n有时你可能希望提前停止整个循环或单次迭代（循环），这就是循环控制关键字用用场。你有\
+    \ `break` 或 `continue` 关键字可用。\n\n`break` – 将停止整个循环，如果已经找到了答案且剩余的计划迭代没有意义，这会非常有用。\n\
+    \n```cpp\nfor (int x = 0; x < 5; x++){\nif (x == 3)\n​ {\nbreak;\n}\n​ // 该语句的细节将在稍后解释\n\
+    cout << \"Loop value: \" << x << endl;}\n```\n输出：\n`> Loop value: 0`\n`> Loop\
+    \ value: 1`\n`> Loop value: 2`\n\n现在如果将代码更改为不包含 `break`：\n\n```cpp\nfor (int x\
+    \ = 0; x < 5; x++){\n​ // 该语句的细节将在稍后解释\ncout << \"Loop value: \" << x << endl;}\n\
+    ```\n输出：\n`> Loop value: 0`\n`> Loop value: 1`\n`> Loop value: 2`\n`> Loop value:\
+    \ 3`\n`> Loop value: 4`\n\n`Continue` – 如果我们使用上面的代码但将其替换为 `continue`，代码将如下：\n\n\
+    ```cpp\nfor (int x = 0; x < 5; x++){\nif (x == 3)\n​ {\ncontinue;\n}\n​ // 该语句的细节将在稍后解释\n\
+    cout << \"Loop value: \" << x << endl;}\n```\n输出如下：\n`> Loop value: 0`\n`> Loop\
+    \ value: 1`\n`> Loop value: 2`\n`> Loop value: 4`\n\n这表明当 `x = 3` 时执行了 `continue`，循环被跳过，`cout`\
+    \ 语句也会被跳过，因此没有“Loop value: 3”。\n\n## 嵌套循环\n\n你也可以将循环放在循环内部以执行特定角色，在示例中我们使用了 `for`\
+    \ 循环，但也可以用 `while`/`do` 循环实现。示例是打印一个二维网格，嵌套的 `for` 循环提供了另一个维度。\n\n```cpp\n// 打印\
+    \ 5x5 网格\nfor (int y = 0; y < 5; y++){\nfor (int x = 0; x < 5; x++)\n​ {\n// 打印行的某个元素\n\
+    cout << \"X \" ;\n}\n​ // 移动到行\ncout << endl;}\n```\n输出：\n`> X X X X X`\n`> X\
+    \ X X X X`\n`> X X X X X`\n`> X X X X X`\n`> X X X X X`\n\n# 函数\n\n函数是程序的构建块，它们允许代码复用，保持代码可读性并防止程序员重复代码。强烈建议不要重复代码，因为错误会多次出现，而且代码的更改也需要重复。函数提供了一个集中的控制区域，处理程序中的不同角色。\n\
+    \n一个方法包含两个元素：参数（传入函数的项）和返回值（被返回的变量），这些都是可选的，你可以定义一个两者都没有的函数。\n\n函数必须在调用之前定义，如下所示：\n\
+    \n```cpp\n// 函数调用\nvoid PrintSmile(){\ncout << \":)\" << endl;\n}\nint main(){\n\
+    // 方法调用\nPrintSmile();\nreturn 0;\n\n```\n\n### 函数参数\n\n有时向程序传递数据可能是很有用的，参数传递有两种类型：按引用传递和按值传递。按引用传递顾其思义，它传递的是变量的直接引用而不是副本，因此对该传入变量的任何更改都会影响调用函数。按值传递是传递该变量的副本，因此对该变量的任何更改都不会影响该传入的变量。\n\
+    \n*   按引用传递意味着对参数的更改会影响传入的变量\n*   按值传递意味着对参数的更改不会影响传入的变量\n\n"
+- fmt: "\n# Passing by value\n```cpp\nvoid Add(int num1 , int num2 ){\n  //Adds values\
+    \ together\n  int newValue = num1 + num2 ;\n  //Prints result\n  printf(\"The\
+    \ result is: %d\" , newValue);\n}\nint main(){\n  //Method call\n  Add(10, 4);\n\
+    \  return 0;\n}\n```\nOutput: `> The result is: 14`\n\nBelow is another example\
+    \ but this time a string is used a parameter:\n```cpp\nvoid PrintStr(char word\
+    \ []){\n  cout << word << endl;\n}\n```\nThe method call looks like this: `PrintStr(\"\
+    Flying Squirrel\")`. This is an incredibly useful feature that allows us to make\
+    \ general purpose code and change its function output by what is put in as a parameter.\n\
+    \n# Passing by reference\nPassing by reference is done with the use of pointers\
+    \ (Will be further explained later) but a pointer is a memory address, so any\
+    \ changes done affect the variable being passed in. A reference parameter is shown\
+    \ by the `&` and is done like so:\n```cpp\nvoid Change(int & ParaValue ){\n  ParaValue\
+    \ = 20;\n}\nint main(){\n  int value = 10;\n  Change(value);\n  cout << value\
+    \ << endl;\n  return 0;\n}\n```\nOutput: `> 20`\nAs you can see the `change` method\
+    \ alters the value of the integer `value` and effects the value back in the main\
+    \ method.\n\n# Returning values\nReturning allows us to return data from a method,\
+    \ this lets us do computation within a function and get the function to automatically\
+    \ return the result. Let’s take the one of the previous examples and adapt it\
+    \ so it returns the result instead of printing it:\n```cpp\nint Add(int num1 ,\
+    \ int num2 ){\n  //Adds values together\n  int newValue = num1 + num2 ;\n  //Returned\
+    \ keyword\n  return newValue;\n}\nint main(){\n  //Method call\n  int storeResult\
+    \ = Add(10, 4);\n  return 0;\n}\n```\nThe areas that changed have been highlighted.\
+    \ When a value is to be returned, the `return` keyword is used, after this line\
+    \ has run it returns to the line where the method was called so any code under\
+    \ the return will not run. The returned result is then stored in `storeResult`\
+    \ to be used later. Returning can happen with any variable type. I’ll show you\
+    \ an example below that checks if the number is an even value (Using the modulus\
+    \ operator talked about above that finds the remainder of a division):\n```cpp\n\
+    bool EvenNumber(int value ){\n  if (value % 2 == 0) {\n    //Return true\n   \
+    \ return 1;\n  }\n  return 0;\n}\nint main(){\n  if (EvenNumber(2)) {\n    cout\
+    \ << \"Even number!\" << endl;\n  }\n  if (EvenNumber(5)) {\n    cout << \"Odd\
+    \ number!\" << endl;\n  }\n  return 0;\n}\n```\nOutput: `>Even number!`\nThis\
+    \ program uses the return variable form the method `EvenNumber()` as a conditional\
+    \ for the if-statement and if it’s true it will print “Even number!”. As you can\
+    \ see from the output the first one prints but the second does not.\n\n# Arrays\n\
+    Arrays have been mentioned previously, it is a data structure that holds a set\
+    \ number of variables next to each other in memory. The array will be given a\
+    \ type, for example `int`. Arrays are used to quickly define lots of variables\
+    \ and keep relevant variables together. An array is defined below:\n\nA static\
+    \ size, with the size in the square brackets:\n```cpp\nint lotsOfNumber[20];\n\
+    ```\nOr you can define values at the definition, Note : a size does not need to\
+    \ be defined because it’s automatically determined by the number of values you\
+    \ specify:\n```cpp\nint lotsOfNumbers[] = {1,3,4};\n```\n\n*   Arrays start at\
+    \ 0, so the first index has an identifying value of 0, the second is 1 and so\
+    \ on. This means when accessing values, you need to remember it is always one\
+    \ less than the number of values it contains.\n\nYou can access an index like\
+    \ so:\n```cpp\nint var = lotsOfNumbers[0];\n```\nThis will grab the first index\
+    \ of the array and place it in `var`. Arrays are very useful to access the tightly\
+    \ related data very quickly, you can use a `for`-loop to loop through the indexes\
+    \ and use them according. An example is below:\n```cpp\nint lotsOfNumbers[] =\
+    \ { 1, 3, 4, 10};\nfor (int x = 0; x < 4; x++){\n  cout << x << endl;\n}\n```\n\
+    Output: `> 1 > 3 > 4 > 10`\n\nIn C++ you cannot get the length directly and need\
+    \ to work it out, this can be done simply using the `sizeof()` keyword, this returns\
+    \ the size of the elements in the brackets, so for example on a 64bit machine\
+    \ a `int` should be represented using 4`bytes` so `sizeof` will return 4. The\
+    \ length of an array can be worked out as so:\n```cpp\nint arrayLength = sizeof(lotsOfNumbers)\
+    \ / sizeof(lotsOfNumbers[0]);\n```\nThis takes the entire size of the array, and\
+    \ divides it by the first element and the division gives how many indices the\
+    \ array holds.\n\n## Multi-dimensional arrays\nYou can also define a second dimension\
+    \ in the array or even a third, this gives more flexibility when working with\
+    \ arrays. For example, a 2D array could be used to store coordinates or positions\
+    \ of a grid. A 2D array is defined as so:\n```cpp\nint arrayOfNumbers[][2] = {\
+    \ {1,1}, {1,1}};\n```\nYou access an element by putting the values in the square\
+    \ brackets for the x and y coordinate:\n```cpp\nint element = arrayOfNumbers[X\
+    \ ][Y ]\n```\nThe obvious difference is that the second dimension needs a value,\
+    \ this cannot be automatically resolved when creating an array and that the initialization\
+    \ requires nested curly brackets. Below is the 3D example:\n```cpp\nint arrayOfNumbers[][][2]\
+    \ = {{{1,1},{1,1}},{{1,1},{1,1}}};\n```\nBut at this stage it is starting to lose\
+    \ readability and it’s much better practise to lay it out like so:\n```cpp\nint\
+    \ arrayOfNumbers[][][2] ={\n  {{1,1},{1,1}},\n  {{1,1},{1,1}}\n};\n```\n\n## Passing\
+    \ Arrays in functions\nAs we saw when we learned about functions above, passing\
+    \ variables in as parameters can be very useful and so can passing in lots of\
+    \ variables stored as an array. However, we learnt above how to determine the\
+    \ size of an array above but this does not work with an array passed as a parameter,\
+    \ so we must pass in a variable that represents the number of elements that array\
+    \ is holding. There is a special variable type used to hold count variables, it’s\
+    \ called `size_t` and it is an unsigned integer value (Meaning it cannot become\
+    \ negative) used to hold values for a count. An example of an array being passed\
+    \ as a parameter is below:\n```cpp\nvoid Print_SingleDimenArray(size_t length\
+    \ , int ageArray []){\n  //Length is used to dynamically determine the for loop\
+    \ length\n  for (int i = 0; i < length ; i++) {\n    printf(\"%d\\n\" ,ageArray\
+    \ [i]);\n  }\n}\nint main(){\n  //An array of ages\n  int ages[] = { 32, 11, 12,\
+    \ 1, 8, 5, 10 };\n  //Size is determined as shown previously\n  size_t ageLen\
+    \ = sizeof (ages) / sizeof (ages[0]);\n  //Method call\n  Print_SingleDimenArray(ageLen,\
+    \ ages);\n}\n```\nOutput: `>32 > 11 > 12 > 1 > 8 > 5 > 10`\nThe array has been\
+    \ passed and used to print values. The length of the array is crucial to the program\
+    \ as it allows the for loop to work for arrays of varying length.\n\n*   Any changes\
+    \ to an array in any method will change the array variable in the calling method.\
+    \ This is what was mentioned earlier as passing by reference, the whole array\
+    \ isn’t copied and passed by reference with a little trickery occurring.\n"
+  raw: 'Passing by valuevoid Add(int num1 , int num2 ){​ //Adds values together​ int
+    newValue = num1 + num2 ;​ //Prints result​ printf("The result is: %d" , newValue);}int
+    main(){​ //Method call​ Add(10, 4);​ return 0;}Output:> The result is: 14Below
+    is another example but this time a string is used a parameter:void PrintStr(char
+    word []){​ cout << word << endl;}The method call looks like this:PrintStr("Flying
+    Squirrel" );This is an incredibly useful feature that allows us to make general
+    purpose code and change its function output by what is put in as a parameter.Passing
+    by referencePassing by reference is done with the use of pointers (Will be further
+    explained later) but a pointer is a memory address, so any changes done affect
+    the variable being passed in. A reference parameter is shown by the “&” and is
+    done like so:void Change(int & ParaValue ){​ ParaValue = 20;}int main(){​ int
+    value = 10;​ Change(value);​ cout << value << endl;​ return 0;}Output>2 0As you
+    can see the change method alters the value of the integer ‘value’ and effects
+    the value back in the main method.Returning valuesReturning allows us to return
+    data from a method, this lets us do computation within a function and get the
+    function to automatically return the result. Let’s take the one of the previous
+    examples and adapt it so it returns the result instead of printing it:int Add(int
+    num1 , int num2 ){​ //Adds values together​ int newValue = num1 + num2 ;​ //Returned
+    keyword​ return newValue;}int main(){​ //Method call​ int storeResult = Add(10,
+    4);​ return 0;}The areas that changed have been highlighted. When a value is to
+    be returned, the “return” keyword is used, after this line has run it returns
+    to the line where the method was called so any code under the return will not
+    run.The returned result is then stored in ‘storeResult’ to be used later. Returning
+    can happen with any variable type. I’ll show you an example below that checks
+    if the number is an even value (Using the modulus operator talked about above
+    that finds the remainder of a division): bool EvenNumber(int value ){​ if (value
+    % 2 == 0)​ {​ //Return true​ return 1;​ }​ return 0;}int main(){​ if (EvenNumber(2))​
+    {​ cout << "Even number!" << endl;}​ if (EvenNumber(5))​ {​ cout << "Odd number!"
+    << endl;}​ return 0;}Output:>Even number!This program uses the return variable
+    form the method EvenNumber() as a conditional for the if-statement and if it’s
+    true it will print “Even number!”. As you can see from the output the first one
+    prints but the second does not.ArraysArrays have been mentioned previously, it
+    is a data structure that holds a set number of variables next to each other in
+    memory. The array will be given a type, for example ‘int’. Arrays are used to
+    quickly define lots of variables and keep relevant variables together. An array
+    is defined below :A static size, with the size in the square brackets:int lotsOfNumber[20];Or
+    you can define values at the definition, Note : a size does not need to be defined
+    because it’s automatically determined by the number of values you specify:int
+    lotsOfNumbers[] = {1,3,4};
+
+
+    *   Arrays start at 0 , so the first index has an identifying value of 0, the
+    second is 1 and so on. This means when accessing values, you need to remember
+    it is always one less than the number of values it contains
+
+
+    You can access an index like so:int var = lotsOfNumbers[0];This will grab the
+    first index of the array and place it in ‘var’.Arrays are very useful to access
+    the tightly related data very quickly, you can use a for-loop to loop through
+    the indexes and use them according. An example is below:int lotsOfNumbers[] =
+    { 1, 3, 4, 10};for (int x = 0; x < 4; x++){​ cout << x << endl;}Output:> 1> 3>
+    4> 10In C++ you cannot get the length directly and need to work it out, this can
+    be done simply using the sizeof() keyword, this returns the size of the elements
+    in the brackets, so for example on a 64bit machine a int should be represented
+    using 4bytes so sizeof will return 4\. The length of an array can be worked out
+    as so:int arrayLength = sizeof(lotsOfNumbers) / sizeof(lotsOfNumbers[0]);This
+    takes the entire size of the array, and divides it by the first element and the
+    division gives how many indices the array holds.Multi-dimensional array sYou can
+    also define a second dimension in the array or even a third, this gives more flexibility
+    when working with arrays. For example, a 2D array could be used to store coordinates
+    or positions of a grid. A 2D array is defined as so:int arrayOfNumbers[][2] =
+    { {1,1}, {1,1}};You access an element by putting the values in the square brackets
+    for the x and y coordinateint element = arrayOfNumbers[X ][Y ]The obvious difference
+    is that the second dimension needs a value, this cannot be automatically resolved
+    when creating an array and that the initialization requires nested curly brackets.
+    Below is the 3D example:int arrayOfNumbers[][][2] = {{{1,1},{1,1}},{{1,1},{1,1}}};But
+    at this stage it is starting to lose readability and it’s much better practise
+    to lay it out like so:int arrayOfNumbers[][][2] ={​ {{1,1},{1,1}},​ {{1,1},{1,1}}};Passing
+    Arrays in functionsAs we saw when we learned about functions above, passing variables
+    in as parameters can be very useful and so can passing in lots of variables stored
+    as an array. However, we learnt above how to determine the size of an array above
+    but this does not work with an array passed as a parameter, so we must pass in
+    a variable that represents the number of elements that array is holding. There
+    is a special variable type used to hold count variables, it’s called size_t and
+    it is an unsigned integer value (Meaning it cannot become negative) used to hold
+    values for a count.An example of an array being passed as a parameter is below:void
+    Print_SingleDimenArray(size_t length , int ageArray []){​ //Length is used to
+    dynamically determine the for loop length​ for (int i = 0; i < length ; i++)​
+    {​ printf("%d\n" ,ageArray [i]);​ }}int main(){​ //An array of ages​ int ages[]
+    = { 32, 11, 12, 1, 8, 5, 10 };​ //Size is determined as shown previously​ size_t
+    ageLen = sizeof (ages) / sizeof (ages[0]);​ //Method call​ Print_SingleDimenArray(ageLen,
+    ages);}Output>32>11>12>1>8>5>1 0The array has been passed and used to print values.
+    The length of the array is crucial to the program as it allows the for loop to
+    work for arrays of varying length.
+
+
+    *   Any changes to an array in any method will change the array variable in the
+    calling method. This is what was mentioned earlier as passing by reference, the
+    whole array isn’t copied and passed by reference with a little trickery occurring.'
+  toc: []
+  trans: "\n\n# 按值传递\n```cpp\nvoid Add(int num1 , int num2 ){\n  // 将值相加\n  int newValue\
+    \ = num1 + num2 ;\n  // 打印结果\n  printf(\"The result is: %d\" , newValue);\n}\n\
+    int main(){\n  // 方法调用\n  Add(10, 4);\n  return 0;\n}\n```\n输出: `> The result\
+    \ is: 14`\n\n下面是另一个示例，这次使用字符串作为参数：\n```cpp\nvoid PrintStr(char word []){\n  cout\
+    \ << word << endl;\n}\n```\n方法的调用形式如下：`PrintStr(\"Flying Squirrel\")`。这是一个非常有用的功能，允许我们编写通用代码，并通过传入参数来更改其函数的输出。\n\
+    \n# 按引用传递\n按引用传递是通过使用指针实现的（稍后会详细解释），但指针是一个内存地址，因此进行的任何更改都会影响所传入的变量。引用参数通过 `&`\
+    \ 表示，用法如下：\n```cpp\nvoid Change(int & ParaValue ){\n  ParaValue = 20;\n}\nint\
+    \ main(){\n  int value = 10;\n  Change(value);\n  cout << value << endl;\n  return\
+    \ 0;\n}\n```\n输出: `> 20`\n如你所见，`change` 方法更改了整数 `value` 的值，并影响了主方法中的值。\n\n# 返回值\n\
+    返回允许我们从方法返回数据，这使得我们能够在函数内部进行计算并让函数自动返回结果。让我们选取之前的示例之一并进行修改，使其返回结果而不是打印结果：\n```cpp\n\
+    int Add(int num1 , int num2 ){\n  // 将值相加\n  int newValue = num1 + num2 ;\n  //\
+    \ return 关键字\n  return newValue;\n}\nint main(){\n  // 方法调用\n  int storeResult\
+    \ = Add(10, 4);\n  return 0;\n}\n```\n发生变化的区域已经高亮显示。当需要返回一个值时，使用 `return` 关键字，在该行执行后，它会返回到调用方法的地方，因此\
+    \ `return` 下的任何代码将不会执行。返回的结果将存储在 `storeResult` 中以供以后使用。返回可以是任何变量类型。我将在下面为你展示一个示例，检查数字是否为偶数（使用上面提到的取模运算符，它可以找到除法的余数）：\n\
+    ```cpp\nbool EvenNumber(int value ){\n  if (value % 2 == 0) {\n    // 返回 true\n\
+    \    return 1;\n  }\n  return 0;\n}\nint main(){\n  if (EvenNumber(2)) {\n   \
+    \ cout << \"Even number!\" << endl;\n  }\n  if (EvenNumber(5)) {\n    cout <<\
+    \ \"Odd number!\" << endl;\n  }\n  return 0;\n}\n```\n输出: `>Even number!`\n该程序使用方法\
+    \ `EvenNumber()` 返回变量作为 if 语句的条件，如果为真，它将打印“Even number!”。从输出中可以看到，第一个打印了但第二个没有。\n\
+    \n# 数组\n之前提到过数组，它是一种在内存中相邻存储固定数量变量的数据结构。数组会被赋予一个类型，例如 `int`。数组用于快速定义大量变量并将相关的变量放在一起。下面定义了一个数组：\n\
+    \n一个静态大小，在方括号中指定大小：\n```cpp\nint lotsOfNumber[20];\n```\n或者你可以在定义时指定值，注意：不需要定义大小，因为它是根据你指定的数值确确：\n\
+    ```cpp\nint lotsOfNumbers[] = {1,3,4};\n```\n\n*   数组从 0 开始，所以第一个索引的标识值为 0，第二个是\
+    \ 1，依此类推。这意味着在访问值时，你需要记住它始终比它包含的数值个数少 1。\n\n你可以这样访问索引：\n```cpp\nint var = lotsOfNumbers[0];\n\
+    ```\n这将获取数组的第一个索引并将其放置在 `var` 中。数组对于快速访问紧密相关的数据非常有用，你可以使用 `for` 循环遍历索引并根据需要使用它们。下文是一个示例：\n\
+    ```cpp\nint lotsOfNumbers[] = { 1, 3, 4, 10};\nfor (int x = 0; x < 4; x++){\n\
+    \  cout << x << endl;\n}\n```\n输出: `> 1 > 3 > 4 > 10`\n\n在 C++ 中，你无法直接获取长度，需要手动计算，这可以通过简单地使用\
+    \ `sizeof()` 关键字来实现，它返回方括号内元素的大小，例如在 64 位机器上，`int` 应该用 4 个 `bytes` 表示，因此 `sizeof`\
+    \ 将返回 4。数组的长度可以这样计算：\n```cpp\nint arrayLength = sizeof(lotsOfNumbers) / sizeof(lotsOfNumbers[0]);\n\
+    ```\n这获取整个数组的大小，并除以第一个元素，结果就是数组包含多少个索引。\n\n## 多维数组\n你还可以在数组中定义第二个维度，甚至是第三个维度，这在处理数组时提供了更大的灵活性。例如，二维数组可以存储网格的坐标或位置。二维数组的定义如下：\n\
+    ```cpp\nint arrayOfNumbers[][2] = { {1,1}, {1,1}};\n```\n你通过在方括号中放入 x 和 y 坐标的值来访问元素：\n\
+    ```cpp\nint element = arrayOfNumbers[X ][Y ]\n```\n明显的区别是第二个维度需要一个值，这在创建数组时无法自动解析，并且初始化需要嵌套的大括号。下面是三维示例：\n\
+    ```cpp\nint arrayOfNumbers[][][2] = {{{1,1},{1,1}},{{1,1},{1,1}}};\n```\n但在这种阶段开始失去可读性，更好的做法是将其排列如下所示：\n\
+    ```cpp\nint arrayOfNumbers[][][2] ={\n  {{1,1},{1,1}},\n  {{1,1},{1,1}}\n};\n\
+    ```\n\n## 在函数中传递数组\n正如我们在上面学习函数时看到的，将变量作为参数传递非常有用，传递存储在数组中的大量变量也是如此。然而，我们上面学习了如何确定数组的大小，但这对于作为参数传递的数组并不适用，因此我们必须传入一个代表数组包含元素数量的变量。有一种特殊的变量类型用于存储计数，它被称为\
+    \ `size_t`，它是一个无符号整数（意味着它不会变成负数），用于存储计数值。下面是一个作为参数传递的示例：\n```cpp\nvoid Print_SingleDimenArray(size_t\
+    \ length , int ageArray []){\n  // 长度用于动态确定 for 循环的长度\n  for (int i = 0; i < length\
+    \ ; i++) {\n    printf(\"%d\\n\" ,ageArray [i]);\n  }\n}\nint main(){\n  // 一个年龄数组\n\
+    \  int ages[] = { 32, 11, 12, 1, 8, 5, 10 };\n  // 正如之前所示确定大小\n  size_t ageLen\
+    \ = sizeof (ages) / sizeof (ages[0]);\n  // 方法调用\n  Print_SingleDimenArray(ageLen,\
+    \ ages);\n}\n```\n输出: `>32 > 11 > 12 > 1 > 8 > 5 > 10`\n数组已经被传递并用于打印值。数组的长度对于程序至关重要，因为它允许\
+    \ for 循环适用于不同长度的数组。\n\n*   方法中对数组的任何更改都会更改调用方法中的数组变量。这就是之前提到的按引用传递，整个数组并没有复制，而是通过一些小技巧实现的按引用传递。\n\
+    \n"
+- fmt: "\n# User I/O\nThere are situations and programming problems that involve the\
+    \ use of user interaction this is where user input and output comes in, the library\
+    \ that deals with this is known as “`iostream” and is included into the project\
+    \ like:\n\n```cpp\n#include <iostream>\n```\n\n## Printing/Output\nSometimes the\
+    \ user needs a prompt or information needs to be displayed, this is where console\
+    \ printing comes into use, the key word `cout` is used to print out data to the\
+    \ screen, this is then used with the stream insertion operator that is written\
+    \ as `<<` this is used to signify what is to be printed. And example is below:\n\
+    \n```cpp\ncout << \"Hello!\" << endl;\n```\nThe output would just be the word\
+    \ “Hello!” to the screen. The `endl` is just used to print a carriage return (`\\\
+    n`). You can also create an output involving a variable or another string, multiple\
+    \ stream insertion operators are used:\n\n```cpp\nint x = 10;\ncout << \"The value\
+    \ is: \" << x << endl;\n```\nOutput> The value is: 10\n\n## Reading/Input\nTaking\
+    \ in user input can also be useful, the operator used is known as the stream extraction\
+    \ operator `>>` and is used in conjunction with `cin`, it works like so:\n\n```cpp\n\
+    #include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nint main(){\n\
+    \  //Reads in name\n  char name[10];\n  cin >> name;\n  //Prints name\n  cout\
+    \ << name;\n}\n```\n\n## End of chapter Quiz\nThis section is designed to keep\
+    \ you on your toes about the previous content, there will be 10 questions that\
+    \ you can answer to test your knowledge, below in the neighbouring section will\
+    \ be the answers.\n\n1. Name the data type used to hold a series of characters?\n\
+    2. What is the “%” sign used for?\n3. What is this sign checking for “==””?\n\
+    4. If a “&&” is between two conditional statements in a singular if, what does\
+    \ it mean?\n5. What does “++” mean at the end of variable mean?\n6. What is this\
+    \ operator called: “>>”?\n7. Does an array have a built in property to find its\
+    \ size?\n8. What is this loop called, and what does it do?\n   ```cpp\n   for(;;){}\n\
+    \   ```\n9. What two values does a Boolean variable hold?\n10. Where is the type\
+    \ `void` used?\n\n### Answers\n1. String.\n2. Gets the modular of two numbers.\n\
+    3. If the two values either side are equal.\n4. That the statement will only be\
+    \ true if both of the conditionals are true.\n5. It will increment the value of\
+    \ that variable.\n6. The stream extraction operator.\n7. No, the only way to find\
+    \ it is to use the `sizeof()` operator to find the total size of the array and\
+    \ each elements size, then divide both values to find the size.\n8. It is called\
+    \ a naked for loop, and will just loop forever.\n9. True or False.\n10. Used when\
+    \ signifying a function does not return a value.\n\n# Chapter 3: Class Structure\
+    \ and OOP\nClasses are the building blocks of a program in C++, they allow easy\
+    \ cookie cutter way of creating places that store and represent data. A class\
+    \ in C++ has two files, the header file (`.h`) and the implementation file (`.cpp`).\n\
+    \n*   Header file should just contain definitions of classes and variables.\n\
+    *   The implementation file as the name suggests contains the actual functionality\
+    \ of the functions and variables.\n\nA header file looks like this when empty:\n\
+    ```cpp\nclass Example{\npublic :\n  Example();\n  ~Example();\n};\n```\nThere\
+    \ are some key bits about this, the public section defines how the methods can\
+    \ be accessed, don’t worry too much about this yet as this will be explained further\
+    \ in the Encapsulation section. And the `Example()` and `~Example()` functions\
+    \ are the Constructor and Destructor respectively, and the constructor runs when\
+    \ the class is created, and the destructor runs when the class is destroyed, this\
+    \ can either be done manually by calling the method or the compiler will do this\
+    \ automatically.\n\nThe `.cpp` file then looks like this:\n```cpp\n#include \"\
+    Example.h\"\nExample ::Example(){}\nExample ::~Example(){}\n```\nEach of these\
+    \ are references to the `Example’s classes. You can implement functions or variables\
+    \ that are not defined in the header file, however this is considered a bad practice.\n\
+    \nSo for example lets used a fleshed out version of a class to show how it can\
+    \ be used. An example is below:\n```cpp\nclass Shape{\npublic :\n  Shape(double\
+    \ len , double wid );\n  ~Shape();\n  double getArea();\nprivate :\n  double length;\n\
+    \  double width;\n  double area;\n};\n```\n```cpp\n#include \"Shape.h\"\n#include\
+    \ <iostream>\nusing namespace std;\nShape ::Shape(double len , double wid ){\n\
+    \  length = len ;\n  width = wid ;\n  area = length * width;\n  cout << \"Shape\
+    \ made!\" << endl;\n}\nShape ::~Shape(){}\ndouble Shape ::getArea(){\n  return\
+    \ area;\n}\n```\nAnd an instance of shape can be made like so:\n```cpp\nShape\
+    \ s = Shape (10, 10);\n```\nNote: the header file needs including at the top:\n\
+    ```cpp\n#include \"Shape.h\"\n```\nThis gives the programmer a really easy way\
+    \ to create lots of containers for useful data.\n\n## Inheritance\nInheritance\
+    \ is one of the most important concepts in object orientated programming, it’s\
+    \ the idea of taking a class, the base class and giving other classes it’s characteristics\
+    \ like functions and variables. This provides a perfect opportunity to reuse code.\n\
+    \nWith our shape example above, we can now create another class called “Square”\
+    \ but we inherit characteristics from the base class “Shape”. For displaying purposes\
+    \ I’m going to put all code into a single `.cpp` file from now on. The Square\
+    \ class is below:\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace\
+    \ std;\nclass Shape{\npublic :\n  double length;\n  double width;\n  double area;\n\
+    \  Shape(double l , double w ) {\n    length = l ;\n    width = w ;\n    area\
+    \ = l * w ;\n  }\n  ~Shape() {\n  }\n  double getArea() {\n    return area;\n\
+    \  }\n};\nclass Square : public Shape{\npublic :\n  Square(double l , double w\
+    \ ) : Shape (l , w ) {\n  }\n};\nint main(){\n  Square s = Square (10, 10);\n\
+    \  cout << s.getArea() << endl;\n}\n```\nOuput> 100\n\nSquare now has everything\
+    \ that Shape has defined as Public and Protected (These will be explained in the\
+    \ next section) but as mentioned above it’s a great way to repeat already created.\n\
+    \n### Exercise\nAdd a class called “Rectangle” and let it inherit from the shape\
+    \ class. Don’t forget to include a constructor for the rectangle class.\n\n###\
+    \ Solution\nSomething like this:\n```cpp\nclass Rectangle : public Shape{\npublic\
+    \ :\n  Rectangle(double l , double w ) : Shape (l , w ) {\n  }\n};\n```\n\n##\
+    \ Encapsulation\nEncapsulation is the idea of limiting access to sensitive variables\
+    \ or methods contained within a class, there’re three different access modifiers:\n\
+    \n| | Containing Class | Derived Class | Containing Assembly | Outside Assembly\
+    \ |\n| :--- | :--- | :--- | :--- | :--- |\n| Public | | | | |\n| Protected | |\
+    \ | | |\n| Private | | | | |\n\nAbove is a grid comparing where you can and cannot\
+    \ access a variable or method marked with either modifier.\n\n*   Containing class\
+    \ is the class that the object was defined.\n*   Derived class is any class that\
+    \ inherits another\n*   Containing Assembly is anywhere inside the current .exe\
+    \ or .dll file\n*   Outside Assembly is any other area that exists\n"
+  raw: 'User I/OThere are situations and programming problems that involve the use
+    of user interaction this is where user input and output comes in, the library
+    that deals with this is known as “iostream” and is included into the project like:#include
+    <iostream>Printing/OutputSometimes the user needs a prompt or information needs
+    to be displayed, this is where console printing comes into use, the key word cout
+    is used to print out data to the screen, this is then used with the stream insertion
+    operator that is written as “<<” this is used to signify what is to be printed.
+    And example is below:cout << "Hello!" << endl;The output would just be the word
+    “Hello!” to the screen. The endl is just used to print a carriage return (“\n
+    ”)You can also create an output involving a variable or another string, multiple
+    stream insertion operators are used:int x = 10;cout << "The value is: " << x <<
+    endl;Output> The value is: 10Reading/InputTaking in user input can also be useful,
+    the operator used is known as the stream extraction operator “>>” and is used
+    in conjunction with cin , it works like so:#include "stdafx.h"#include <iostream>using
+    namespace std;int main(){​ //Reads in name​ char name[10];​ cin >> name;​ //Prints
+    name​ cout << name;}End of chapter QuizThis section is designed to keep you on
+    your toes about the previous content, there will be 10 questions that you can
+    answer to test your knowledge, below in the neighbouring section will be the answers.
+
+
+    1.  Name the data type used to hold a series of characters?’
+
+
+    2.  What is the “%” sign used for?
+
+
+    3.  What is this sign checking for “==”?
+
+
+    4.  If a “&&” is between two conditional statements in a singular if, what does
+    it mean?
+
+
+    5.  What does “++” mean at the end of variable mean?
+
+
+    6.  What is this operator called: “>>”?
+
+
+    7.  Does an array have a built in property to find its size?
+
+
+    8.  What is this loop called, and what does it do?
+
+
+    for(;;){}
+
+
+    9.  What two values does a Boolean variable hold?
+
+
+    10.  Where is the type ‘void’ used?
+
+
+    Answers
+
+
+    1.  String.
+
+
+    2.  Gets the modular of two numbers.
+
+
+    3.  If the two values either side are equal.
+
+
+    4.  That the statement will only be true if both of the conditionals are true.
+
+
+    5.  It will increment the value of that variable.
+
+
+    6.  The stream extraction operator.
+
+
+    7.  No, the only way to find it is to use the sizeof() operator to find the total
+    size of the array and each elements size, then divide both values to find the
+    size.
+
+
+    8.  It is called a naked for loop, and will just loop forever.
+
+
+    9.  True or False.
+
+
+    10.  Used when signifying a function does not return a value.
+
+
+    Chapter 3: Class Structure and OOPClasses are the building blocks of a program
+    in C++, they allow easy cookie cutter way of creating places that store and represent
+    data. A class in C++ has two files, the header file (.h) and the implementation
+    file (.cpp).
+
+
+    *   Header file should just contain definitions of classes and variables.
+
+
+    *   The implementation file as the name suggests contains the actual functionality
+    of the functions and variables.
+
+
+    A header file looks like this when empty:class Example{public :​ Example();​ ~Example();};There
+    are some key bits about this, the public section defines how the methods can be
+    accessed, don’t worry too much about this yet as this will be explained further
+    in the Encapsulation section. And the Example() and ~Example() functions are the
+    Constructor and Destructor respectively, and the constructor runs when the class
+    is created, and the destructor runs when the class is destroyed, this can either
+    be done manually by calling the method or the compiler will do this automatically.The
+    .cpp file then looks like this:#include "Example.h"Example ::Example(){}Example
+    ::~Example(){}Each of these are references to the Example’s classes. You can implement
+    functions or variables that are not defined in the header file, however this is
+    considered a bad practice.So for example lets used a fleshed out version of a
+    class to show how it can be used. An example is below:class Shape{public :​ Shape(double
+    len , double wid );~Shape();​ double getArea();private :​ double length;​ double
+    width;​ double area;};#include "Shape.h"#include <iostream>using namespace std;Shape
+    ::Shape(double len , double wid ){​ length = len ;​ width = wid ;​ area = length
+    * width;​ cout << "Shape made!" << endl;}Shape ::~Shape(){}double Shape ::getArea(){​
+    return area;}And an instance of shape can be made like so:Shape s = Shape (10,
+    10);Note: the header file needs including at the top:#include "Shape.h"This gives
+    the programmer a really easy way to create lots of containers for useful data.InheritanceInheritance
+    is one of the most important concepts in object orientated programming, it’s the
+    idea of taking a class, the base class and giving other classes it’s characteristics
+    like functions and variables. This provides a perfect opportunity to reuse code.With
+    our shape example above, we can now create another class called “Square” but we
+    inherit characteristics from the base class “Shape”. For displaying purposes I’m
+    going to put all code into a single .cpp file from now on. The Square class is
+    below:#include "stdafx.h"#include <iostream>using namespace std;class Shape{public
+    :​ double length;​ double width;​ double area;​ Shape(double l , double w )​ {​
+    length = l ;​ width = w ;​ area = l * w ;​ }​ ~Shape()​ {​ }​ double getArea()​
+    {​ return area;​ }};class Square : public Shape{public :​ Square(double l , double
+    w ) : Shape (l , w )​ {​ }};int main(){​ Square s = Square (10, 10);​ cout <<
+    s.getArea() << endl;}Ouput> 100Square now has everything that Shape has defined
+    as Public and Protected (These will be explained in the next section) but as mentioned
+    above it’s a great way to repeat already created code.ExerciseAdd a class called
+    “Rectangle” and let it inherit from the shape class. Don’t forget to include a
+    constructor for the rectangle class.SolutionSomething like this:class Rectangle
+    : public Shape{public :​ Rectangle(double l , double w ) : Shape (l , w )​ {​
+    }} ;EncapsulationEncapsulation is the idea of limiting access to sensitive variables
+    or methods contained within a class, there’re three different access modifiers:
+
+
+    |  | Containing Class | Derived Class | Containing Assembly | Outside Assembly
+    |
+
+
+    | Public |  |  |  |  |
+
+
+    | Protected |  |  |  |  |
+
+
+    | Private |  |  |  |  |
+
+
+    Above is a grid comparing where you can and cannot access a variable or method
+    marked with either modifier.
+
+
+    *   Containing class is the class that the object was defined.
+
+
+    *   Derived class is any class that inherits another
+
+
+    *   Containing Assembly is anywhere inside the current .exe or .dll file
+
+
+    *   Outside Assembly is any other area that exists'
+  toc: []
+  trans: "\n\n# 用户 I/O\n在某些情况下和编程问题中涉及用户交互，这就是用户输入和输出用用场。处理这些内容的库被称为“`iostream`”，并如下所示包含在项目中：\n\
+    \n```cpp\n#include <iostream>\n```\n\n## 打印/输出\n有时用户需要提示或需要显示信息，这就是控制台打印大用用场。关键字\
+    \ `cout` 用于将数据打印到屏幕上，它与流插入运算符 `<<` 配合使用，该运算符用于指定要打印的内容。示例如下：\n\n```cpp\ncout <<\
+    \ \"Hello!\" << endl;\n```\n输出将会在屏幕上显示“Hello!”一单词。`endl` 仅用于打印回车符（`\\n`）。你也可以创建一个涉及变量或另一个字符串的输出，可以使用多个流插入运算符：\n\
+    \n```cpp\nint x = 10;\ncout << \"The value is: \" << x << endl;\n```\n输出> The\
+    \ value is: 10\n\n## 读取/输入\n获取用户输入也很有用，使用的运算符被称为流提取运算符 `>>`，并与 `cin` 配合使用，其工作方式如下：\n\
+    \n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nint\
+    \ main(){\n  //读取入 name\n  char name[10];\n  cin >> name;\n  //打印出 name\n  cout\
+    \ << name;\n}\n```\n\n## 章末测试\n本节旨在让你对之前的内容保持警惕，会有 10 个问题你可以回答以测试你的知识，答案在下面的相邻章节中。\n\
+    \n1. 用于存储一系列字符的数据类型是什么？\n2. “%”符号是做什么用的？\n3. 这个符号“==”是在检查什么？\n4. 如果在单个 if 语句的两个条件语句之间有“&&”，它意味着什么？\n\
+    5. 变量末尾的“++”意味着什么？\n6. 这个运算符叫什么：“>>”？\n7. 数组是否有查找其大小的内置属性？\n8. 这个循环叫什么，它是做什么的？\n\
+    \   ```cpp\n   for(;;){}\n   ```\n9. 布尔变量持有哪两个值？\n10. `void` 类型用在哪里？\n\n### 答案\n\
+    1. 字符串（String）。\n2. 获取两个数字的取模。\n3. 如果两边的值相等。\n4. 表示只有当两个条件都为真时，语句才为真。\n5. 它将增加该变量的值。\n\
+    6. 流提取运算符。\n7. 没有，唯一的方法是使用 `sizeof()` 运算符找到数组的总以及以及元素的大小，然后将两个值相除以得到大小。\n8. 它被称为裸\
+    \ for 循环，会无限循环。\n9. 真（True）或假（False）。\n10. 用于表示函数不返回值。\n\n# 第 3 章：类结构与 OOP\n类是\
+    \ C++ 程序的构建块，它们允许以一种方便的饼干模具方式创建存储和表示数据的地方。C++ 中的类有两个文件：头文件（`.h`）和实现文件（`.cpp`）。\n\
+    \n*   头文件应只包含类和变量的定义。\n*   实现文件正如其名，包含了函数和变量的实际功能。\n\n空的头文件看起来像这样：\n```cpp\nclass\
+    \ Example{\npublic :\n  Example();\n  ~Example();\n};\n```\n关于这里有一些关键点，公共部分定义了方法如何被访问，现在不用太担心这个，因为这将在封装节中进一步解释。`Example()`\
+    \ 和 `~Example()` 函数分别是构造函数和析构函数，构造函数在类创建时运行，析构函数在类销毁时运行，这既可以通过手动调用方法完成，也可以由编译器自动完成。\n\
+    \n`.cpp` 文件看起来像这样：\n```cpp\n#include \"Example.h\"\nExample ::Example(){}\nExample\
+    \ ::~Example(){}\n```\n这些中的每一个都是对 `Example` 类的引用。你可以实现未在头文件中定义的函数或变量，然而这被认为是一种坏做法。\n\
+    \n例如，让我们使用一个详细的类版本来展示如何使用它。示例如下：\n```cpp\nclass Shape{\npublic :\n  Shape(double\
+    \ len , double wid );\n  ~Shape();\n  double getArea();\nprivate :\n  double length;\n\
+    \  double width;\n  double area;\n};\n```\n```cpp\n#include \"Shape.h\"\n#include\
+    \ <iostream>\nusing namespace std;\nShape ::Shape(double len , double wid ){\n\
+    \  length = len ;\n  width = wid ;\n  area = length * width;\n  cout << \"Shape\
+    \ made!\" << endl;\n}\nShape ::~Shape(){}\ndouble Shape ::getArea(){\n  return\
+    \ area;\n}\n```\n一个 shape 的实例可以像这样创建：\n```cpp\nShape s = Shape (10, 10);\n```\n\
+    注意：头文件需要在顶部包含：\n```cpp\n#include \"Shape.h\"\n```\n这为程序员提供了一种非常方便的方法来创建许多有用数据的容器。\n\
+    \n## 继承\n继承是面向对象编程中最重要的概念之一，它是获取一个类（基类）并赋予其他类函数和变量的想法。这提供了一个重用代码的完美机会。\n\n通过上面的\
+    \ shape 示例，我们现在可以创建一个名为“Square”的类，但继承自基类“Shape”。为了显示，从现在起我将所有代码放在一个 `.cpp` 文件中。Square\
+    \ 类如下：\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\n\
+    class Shape{\npublic :\n  double length;\n  double width;\n  double area;\n  Shape(double\
+    \ l , double w ) {\n    length = l ;\n    width = w ;\n    area = l * w ;\n  }\n\
+    \  ~Shape() {\n  }\n  double getArea() {\n    return area;\n  }\n};\nclass Square\
+    \ : public Shape{\npublic :\n  Square(double l , double w ) : Shape (l , w ) {\n\
+    \  }\n};\nint main(){\n  Square s = Square (10, 10);\n  cout << s.getArea() <<\
+    \ endl;\n}\n```\n输出> 100\n\nSquare 现在拥有 Shape 定义为 Public 和 Protected 的所有（将在下一节解释），但如上所述，它是重复已内容的好方法。\n\
+    \n### 练习\n添加一个名为“Rectangle”的类并让它继承 shape 类。不要忘记为 rectangle 类包含构造函数。\n\n### 方案\n\
+    类似这样的：\n```cpp\nclass Rectangle : public Shape{\npublic :\n  Rectangle(double\
+    \ l , double w ) : Shape (l , w ) {\n  }\n};\n```\n\n## 封装\n封装是限制对类内部敏感变量或方法访问的思想，有不同的访问修饰符：\n\
+    \n| | 包含类 | 派生类 | 包含汇编 | 外部汇编 |\n| :--- | :--- | :--- | :--- | :--- |\n| 公共 (Public)\
+    \ | | | | |\n| 保护 (Protected) | | | | |\n| 私有 (Private) | | | | |\n\n上面的表格比较了带有任意修饰符标记的变量或方法在何处可以不可以访问。\n\
+    \n*   包含类是对象定义的类。\n*   派生类是任何继承其他类的类\n*   包含汇编是当前 .exe 或 .dll 文件内部的任何地方\n*   外部汇编是存在的任何其他区域\n\
+    \n"
+- fmt: "\nThis means you can control the access to variables. But what if a variable\
+    \ is marked as private, what if it needs to be accessed externally? You used “getters”\
+    \ and “setters”, methods that are specifically designed to retrieve and alter\
+    \ variables. These are a wonderful practise to keep code safe and secure, so let’s\
+    \ alter our shape class to make it more secure.\n\nBefore we could do this:\n\
+    ```cpp\nShape s = Shape (10,10);\ns.length = -1;\n```\n\nThis is undesirable as\
+    \ it invalid information, you cannot have a negative length, this is where a setter\
+    \ comes into use, the function can contain code to validate (check) the value\
+    \ that is attempting to be placed in the `length` variable, something like this:\n\
+    \n```cpp\nvoid setLength(double value ){\n  if (value > 0) {\n    length = value\
+    \ ;\n  }\n  else {\n    cout << \"Error: Value is negative!\" << endl;\n  }\n\
+    }\n```\n\nThis function performs the necessary checks on the value to prevent\
+    \ invalid information getting into variables in the class. Below is an improved\
+    \ version of the class:\n\n```cpp\nclass Shape{\nprivate :\n  double length;\n\
+    \  double width;\n  double area;\npublic :\n  Shape(double l , double w ) {\n\
+    \    length = l ;\n    width = w ;\n    area = l * w ;\n  }\n  ~Shape() {\n  }\n\
+    \  double getArea() {\n    return area;\n  }\n  double getLength() {\n    return\
+    \ length;\n  }\n  double getWidth() {\n    return width;\n  }\n}\n```\n\nAs you\
+    \ can see all the variables have been marked as Private and getters have been\
+    \ added, this is the way classes should be structure.\n\n## Polymorphism\n\nThe\
+    \ word polymorphism means having many forms and polymorphism in the context of\
+    \ OOP means having one method that can have many roles. We can use the example\
+    \ of the class `shape` and overload a method that determines the area if for example\
+    \ we wanted to make a `Triangle` class, this is the shape class but with a virtual\
+    \ `getArea()` method:\n\n```cpp\nclass Shape{\nprotected :\n  double length;\n\
+    \  double width;\n  double area;\npublic :\n  Shape(double l , double w ) {\n\
+    \    length = l ;\n    width = w ;\n  }\n  ~Shape() {\n  }\n  virtual double getArea()\
+    \ {\n    return length * width;\n  }\n};\n```\n\nVirtual methods give the option\
+    \ be overridden an changed by a class that inherits it, it is also an optional\
+    \ change.\n\n```cpp\nclass Triangle : public Shape{\npublic :\n  Triangle(double\
+    \ l , double w ) : Shape (l , w ) {\n  }\n  double getArea() override {\n    return\
+    \ 0.5 * (length * width);\n  }\n};\n```\n\nAbove is the implementation of the\
+    \ `Triangle` class, highlighted is the `override` keyword used to change the functionality\
+    \ of the virtual function.\n\n```cpp\nint main() {\n  Shape s = Shape (10, 10);\n\
+    \  cout << \"The shapes area is: \" << s.getArea() << endl;\n  Triangle t = Triangle\
+    \ (10, 10);\n  cout << \"The triangles area is: \" << t.getArea() << endl;\n}\n\
+    ```\n\nOutput:\n> The shapes area is: 100\n> The shapes area is: 50\n\nAs you\
+    \ can see from the example above each `getArea()` function is implemented differently\
+    \ and returns a different result. This polymorphic design still gives the ease\
+    \ of creating lots of new data types without the need for repeating code but with\
+    \ a level of customising involved.\n\n### Exercise\nAdd a new class called `Circle`,\
+    \ it will need a different constrictor that only takes height and the `getArea`\
+    \ method needs overloading.\n\n### Solution\n```cpp\nclass Circle : public Shape{\n\
+    public :\n  Circle(double h ) : Shape (h , 0) {\n  }\n  double getArea() override\
+    \ {\n    return 3.14 * ((length / 2) * (length / 2));\n  }\n};\n```\n\nAs you\
+    \ can see a constructor is provided that only includes the height and the `getArea()`\
+    \ returns an relatively imprecise area for the circle. Polymorphism if done correctly\
+    \ can give an extremely clean and readable code base with methods and classes\
+    \ adapting behaviour where necessary.\n\n## Interfaces\n\nAn interface describes\
+    \ the behaviour of capabilities of C++ class without committing to implementation.\
+    \ Interfaces are implemented using abstract classes, and are just the plan for\
+    \ the class .Abstract classes are made by adding a pure virtual functions to a\
+    \ class, a pure virtual function is a function with no body and is specified by\
+    \ placing a “=0” next to the function like so:\n\n```cpp\nvirtual double getVar()\
+    \ = 0;\n```\n\nThis means the role the function is just to be inherited and adapted.\
+    \ Failing to override a pure virtual function in an inherited class results in\
+    \ an error, so It’s considered a strict blueprint to design classes.\n\nAn error\
+    \ seen from not implementing a pure virtual function:\n![](image1287.jpg)\n\n\
+    Below is an example involving animals:\n\n```cpp\n#include \"stdafx.h\"\n#include\
+    \ <iostream>\nusing namespace std ;\nclass Animal{\npublic :\n  //Pure virtual\
+    \ function\n  virtual void MakeSound() = 0;\n};\nclass Dog : public Animal{\n\
+    public :\n  void MakeSound() {\n    cout << \"Bark!\" << endl;\n  }\n};\nclass\
+    \ Cat : public Animal{\npublic :\n  void MakeSound() {\n    cout << \"Meow!\"\
+    \ << endl;\n  }\n};\nclass Lion : public Animal{\npublic :\n  void MakeSound()\
+    \ {\n    cout << \"Raw!\" << endl;\n  }\n};\nint main() {\n  Dog d;\n  d.MakeSound();\n\
+    \  Cat c;\n  c.MakeSound();\n  Lion l;\n  l.MakeSound();\n}\n```\n\nOutput:\n\
+    > Bark!\n> Meow!\n> Raw !\n\nAs you can tell it’s a very rudimental pointless\
+    \ example, however it’s supposed to show how a base class can hold basic information\
+    \ and class that inherits it is supposed to add information on top, in this example\
+    \ the program states that anything that inherits animals needs to have a sound,\
+    \ this can be adapted upon to make complex designs for classes and easily fill\
+    \ in relevant implementation.\n\nAnother example below will use the classic shape\
+    \ example and have a base class called “Shape” that will have an abstract function\
+    \ “getArea()” that will need implementing for each shape:\n\n```cpp\n#include\
+    \ \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nclass Shape{\npublic\
+    \ :\n  //Pure virtual function\n  virtual int Area() = 0;\n  Shape(double h ,\
+    \ double w ) {\n    heigth = h ;\n    width = w ;\n  }\nprotected :\n  double\
+    \ heigth;\n  double width;\n};\nclass Circle : public Shape{\npublic :\n  Circle(double\
+    \ h , double w ) : Shape (h , w ) {}\n  int Area() {\n    return 3.14 * ((heigth\
+    \ / 2) * (heigth / 2));\n  }\n};\nclass Rectangle : public Shape{\npublic :\n\
+    \  Rectangle(double h , double w ) : Shape (h , w ) {}\n  int Area() {\n    return\
+    \ heigth * width;\n  }\n} ;\nint main() {\n  Rectangle r = Rectangle (10, 20);\n\
+    \  cout << r.Area() << endl;\n  Circle c = Circle (5, 5);\n  cout << c.Area()\
+    \ << endl;\n}\n```\n\nAnother simple example, but take your time and get used\
+    \ to it, abstract class architecture allows easy addition of new function and\
+    \ classes even if the design has been made due to the easy blueprint-esk design.\n\
+    \n## End of chapter Quiz\n\n1. What are the two files used to make a class?\n\
+    2. What symbol comes before the destructor definition?\n3. What role should a\
+    \ header file take?\n4. What does protected mean for a variable that is being\
+    \ inherited?\n5. What is the role of polymorphism?\n6. What keyword is used to\
+    \ change a virtual method?\n7. How do you signify a pure virtual function?\n8.\
+    \ Where can a function or variable marked as private be accessed?\n9. What is\
+    \ role of the constructor?\n10. What should the .cpp file contain?\n\n### Answers\n\
+    \n1. Header (.h) and C++ file (.cpp).\n2. The symbol `~` I used to show a destructor.\n\
+    3. Just definitions of functions and variables.\n4. It can only be accessed outside\
+    \ the definition class by a class that inherits it.\n5. To have a single base\
+    \ definition but lots of different implementations.\n6. `Override` is used to\
+    \ change a virtual method.\n7. With a normal function definition that is equal\
+    \ to zero.\n8. Only in the class where it was defined.\n9. Is a special function\
+    \ without a return type that is called when an instance of a class is created.\n\
+    10. Implication of functions and variables defined in the header file.\n\n## Chapter\
+    \ 4: Improved Techniques\n\n### Structures\n\nStructs originate from C, and come\
+    \ from the world of pre-class programming. However, they’re still useful and can\
+    \ be use in places where classes are deemed as overkill. A good example of using\
+    \ a structure being used can be for record keeping, for example you needed to\
+    \ keep track of football players in a team you would need to store:\n\n*   Name\n\
+    *   Kit Number\n*   Wage\n*   Strongest foot\n*   Etc\n"
+  raw: 'This means you can control the access to variables. But what if a variable
+    is marked as private, what if it needs to be accessed externally? You used “getters”
+    and “setters”, methods that are specifically designed to retrieve and alter variables.
+    These are a wonderful practise to keep code safe and secure, so let’s alter our
+    shape class to make it more secure.Before we could do this:Shape s = Shape (10,10);s.length
+    = -1;This is undesirable as it invalid information, you cannot have a negative
+    length, this is where a setter comes into use, the function can contain code to
+    validate (check) the value that is attempting to be placed in the length variable,
+    something like this:void setLength(double value ){​ if (value > 0)​ {​ length
+    = value ;​ }​ else​ {​ cout << "Error: Value is negative!" << endl;​ }}This function
+    performs the necessary checks on the value to prevent invalid information getting
+    into variables in the class. Below is an improved version of the class:class Shape{private
+    :​ double length;​ double width;​ double area;public :​ Shape(double l , double
+    w )​ {​ length = l ;​ width = w ;​ area = l * w ;​ }​ ~Shape()​ {​ }​ double getArea()​
+    {​ return area;​ }​ double getLength()​ {​ return length;​ }​ double getWidth()​
+    {​ return width;​ }}As you can see all the variables have been marked as Private
+    and getters have been added, this is the way classes should be structure.PolymorphismThe
+    word polymorphism means having many forms and polymorphism in the context of OOP
+    means having one method that can have many roles.We can use the example of the
+    class shape and overload a method that determines the area if for example we wanted
+    to make a Triangle class, this is the shape class but with a virtual getArea()
+    method:class Shape{protected :​ double length;​ double width;​ double area;public
+    :​ Shape(double l , double w )​ {​ length = l ;​ width = w ;​ }​ ~Shape()​ {​
+    }​ virtual double getArea()​ {​ return length * width;​ }};Virtual methods give
+    the option be overridden an changed by a class that inherits it, it is also an
+    optional change.class Triangle : public Shape{public :​ Triangle(double l , double
+    w ) : Shape (l , w )​ {​ }​ double getArea() override​ {​ return 0.5 * (length
+    * width);​ }};Above is the implementation of the Triangle class, highlighted is
+    the “override” keyword used to change the functionality of the virtual function.int
+    main(){​ Shape s = Shape (10, 10);​ cout << "The shapes area is: " << s.getArea()
+    << endl;​ Triangle t = Triangle (10, 10);​ cout << "The triangles area is: " <<
+    t.getArea() << endl;}Ouput>The shapes area is: 100>The shapes area is: 50As you
+    can see from the example above each getArea() function is implemented differently
+    and returns a different result.This polymorphic design still gives the ease of
+    creating lots of new data types without the need for repeating code but with a
+    level of customising involved.ExerciseAdd a new class called Circle, it will need
+    a different constrictor that only takes height and the getArea method needs overloading.Solutionclass
+    Circle : public Shape{public :​ Circle(double h ) : Shape (h , 0)​ {​ }​ double
+    getArea() override​ {​ return 3.14 * ((length / 2) * (length / 2));​ }};As you
+    can see a constructor is provided that only includes the height and the getArea()
+    returns an relatively imprecise area for the circle.Polymorphism if done correctly
+    can give an extremely clean and readable code base with methods and classes adapting
+    behaviour where necessary.InterfacesAn interface describes the behaviour of capabilities
+    of C++ class without committing to implementation. Interfaces are implemented
+    using abstract classes, and are just the plan for the class .Abstracts classes
+    are made by adding a pure virtual functions to a class, a pure virtual function
+    is a function with no body and is specified by placing a “=0” next to the function
+    like so:virtual double getVar() = 0;This means the role the function is just to
+    be inherited and adapted. Failing to override a pure virtual function in an inherited
+    class results in an error, so It’s considered a strict blueprint to design classes.An
+    error seen from not implementing a pure virtual function:![](image1287.jpg)Below
+    is an example involving animals:#include "stdafx.h"#include <iostream>using namespace
+    std ;class Animal{public :​ //Pure virtual function​ virtual void MakeSound()
+    = 0;};class Dog : public Animal{public :​ void MakeSound()​ {​ cout << "Bark!"
+    << endl;​ }};class Cat : public Animal{public :​ void MakeSound()​ {​ cout <<
+    "Meow!" << endl;​ }};class Lion : public Animal{public :​ void MakeSound()​ {​
+    cout << "Raw!" << endl;​ }};int main(){​ Dog d;​ d.MakeSound();​ Cat c;​ c.MakeSound();​
+    Lion l;​ l.MakeSound();}Output>Bark!>Meow!>Raw !As you can tell it’s a very rudimental
+    pointless example, however it’s supposed to show how a base class can hold basic
+    information and class that inherits it is supposed to add information on top,
+    in this example the program states that anything that inherits animals needs to
+    have a sound, this can be adapted upon to make complex designs for classes and
+    easily fill in relevant implementation.Another example below will use the classic
+    shape example and have a base class called “Shape” that will have an abstract
+    function “getArea()” that will need implementing for each shape:#include "stdafx.h"#include
+    <iostream>using namespace std;class Shape{public :​ //Pure virtual function​ virtual
+    int Area() = 0;​ Shape(double h , double w )​ {​ heigth = h ;​ width = w ;​ }protected
+    :​ double heigth;​ double width;};class Circle : public Shape{public :​ Circle(double
+    h , double w ) : Shape (h , w ) {}​ int Area()​ {​ return 3.14 * ((heigth / 2)
+    * (heigth / 2));​ }};class Rectangle : public Shape{public :​ Rectangle(double
+    h , double w ) : Shape (h , w ) {}​ int Area()​ {​ return heigth * width;​ }}
+    ;int main(){​ Rectangle r = Rectangle (10, 20);​ cout << r.Area() << endl;​ Circle
+    c = Circle (5, 5);​ cout << c.Area() << endl;}Another simple example, but take
+    your time and get used to it, abstract class architecture allows easy addition
+    of new function and classes even if the design has been made due to the easy blueprint-esk
+    design.End of chapter Quiz
+
+
+    1.  What are the two files used to make a class?
+
+
+    2.  What symbol comes before the destructor definition?
+
+
+    3.  What role should a header file take?
+
+
+    4.  What does protected mean for a variable that is being inherited?
+
+
+    5.  What is the role of polymorphism?
+
+
+    6.  What keyword is used to change a virtual method?
+
+
+    7.  How do you signify a pure virtual function?
+
+
+    8.  Where can a function or variable marked as private be accessed?
+
+
+    9.  What is role of the constructor?
+
+
+    10.  What should the .cpp file contain?
+
+
+    Answers
+
+
+    1.  Header (.h) and C++ file (.cpp).
+
+
+    2.  The symbol “~” I used to show a destructor.
+
+
+    3.  Just definitions of functions and variables.
+
+
+    4.  It can only be accessed outside the definition class by a class that inherits
+    it.
+
+
+    5.  To have a single base definition but lots of different implementations.
+
+
+    6.  Override is used to change a virtual method
+
+
+    7.  With a normal function definition that is equal to zero.
+
+
+    8.  Only in the class where it was defined.
+
+
+    9.  Is a special function without a return type that is called when an instance
+    of a class is created.
+
+
+    10.  Implication of functions and variables defined in the header file.
+
+
+    Chapter 4: Improved TechniquesStructuresStructs originate from C, and come from
+    the world of pre-class programming. However, they’re still useful and can be use
+    in places where classes are deemed as overkill.A good example of using a structure
+    being used can be for record keeping, for example you needed to keep track of
+    football players in a team you would need to store:
+
+
+    *   Name
+
+
+    *   Kit Number
+
+
+    *   Wage
+
+
+    *   Strongest foot
+
+
+    *   Etc'
+  toc: []
+  trans: "\n这意味着你可以控制对变量的访问。但如果一个变量被标记为私有（private），如果需要从外部访问怎么办？你使用了“get 器”（getters）和“set\
+    \ 器”（setters），这些是专门设计用于检索和修改变量的方法。这是保持代码安全性的良好实践，所以让我们修改我们的形状（shape）类以使其更加安全。\n\
+    \n在此之前我们可以这样做：\n```cpp\nShape s = Shape (10,10);\ns.length = -1;\n```\n\n这是不符合愿意的，因为这是无效信息，你不能拥有负长度，这就是设置器（setter）派用场的地方，该函数可以包含代码来验证（检查）尝试放入\
+    \ `length` 变量的值，如下所示：\n\n```cpp\nvoid setLength(double value ){\n  if (value >\
+    \ 0) {\n    length = value ;\n  }\n  else {\n    cout << \"Error: Value is negative!\"\
+    \ << endl;\n  }\n}\n```\n\n此函数对值进行了必要的检查，防止无效信息进入类中的变量。以下是该类的改进版本：\n\n```cpp\n\
+    class Shape{\nprivate :\n  double length;\n  double width;\n  double area;\npublic\
+    \ :\n  Shape(double l , double w ) {\n    length = l ;\n    width = w ;\n    area\
+    \ = l * w ;\n  }\n  ~Shape() {\n  }\n  double getArea() {\n    return area;\n\
+    \  }\n  double getLength() {\n    return length;\n  }\n  double getWidth() {\n\
+    \    return width;\n  }\n}\n```\n\n如你所见，所有变量都被标记为私有（Private）并添加了获取器（getters），这是类应该结构的方式。\n\
+    \n## 多态 (Polymorphism)\n\n多态一词意味着有许多形式，在面向对象编程（OOP）的语境下，多态意味着一个方法可以承担许多角色。我们可以使用\
+    \ `shape` 类作为示例，并重载一个确定面积的方法，如果我们想创建一个 `Triangle`（三角形）类，这是形状类但带有一个虚函数（virtual）`getArea()`：\n\
+    \n```cpp\nclass Shape{\nprotected :\n  double length;\n  double width;\n  double\
+    \ area;\npublic :\n  Shape(double l , double w ) {\n    length = l ;\n    width\
+    \ = w ;\n  }\n  ~Shape() {\n  }\n  virtual double getArea() {\n    return length\
+    \ * width;\n  }\n};\n```\n\n虚函数提供了被继承它的类重写和更改的选项，这也是可选的更改。\n\n```cpp\nclass Triangle\
+    \ : public Shape{\npublic :\n  Triangle(double l , double w ) : Shape (l , w )\
+    \ {\n  }\n  double getArea() override {\n    return 0.5 * (length * width);\n\
+    \  }\n};\n```\n\n上面是 `Triangle` 类的实现，高亮显示的是用于更改虚函数功能的 `override` 关键字。\n\n```cpp\n\
+    int main() {\n  Shape s = Shape (10, 10);\n  cout << \"The shapes area is: \"\
+    \ << s.getArea() << endl;\n  Triangle t = Triangle (10, 10);\n  cout << \"The\
+    \ triangles area is: \" << t.getArea() << endl;\n}\n```\n\n输出：\n> The shapes area\
+    \ is: 100\n> The shapes area is: 50\n\n如从上面的示例所示，每个 `getArea()` 函数的实现方式不同并返回不同的结果。这种多态设计仍然允许在不需要重复代码的情况下创建许多新数据类型，但包含了一种自定义程度。\n\
+    \n### 练习\n添加一个名为 `Circle` 的新类，它需要一个只接收高度的不同构造函数，并且 `getArea` 方法需要重载。\n\n### 答案\n\
+    ```cpp\nclass Circle : public Shape{\npublic :\n  Circle(double h ) : Shape (h\
+    \ , 0) {\n  }\n  double getArea() override {\n    return 3.14 * ((length / 2)\
+    \ * (length / 2));\n  }\n};\n```\n\n如你所见，提供了一个只包含高度的构造函数，且 `getArea()` 返回相对不精确的圆面积。多态如果做得正确，可以提供极其整洁且易读的代码库，使方法和类在需要时调整行为。\n\
+    \n## 接口 (Interfaces)\n\n接口描述了 C++ 类的能力行为，而不提交具体的实现。接口使用抽象类（abstract classes）实现，它们仅仅是类的蓝图。抽象类是通过向类中添加纯虚函数（pure\
+    \ virtual functions）创建的，纯虚函数是没有体的函数，通过在函数旁边放置“=0”来指定，如下所示：\n\n```cpp\nvirtual\
+    \ double getVar() = 0;\n```\n\n这意味着该函数的作用仅用于继承和适配。在继承的类中未能重写纯虚函数会导致错误，因此它被认为是设计类的严格蓝图。\n\
+    \n从由于未实现纯虚函数而看到的错误：\n![](img/image1287.jpg)\n\n下面是一个涉及动物的示例：\n\n```cpp\n#include\
+    \ \"stdafx.h\"\n#include <iostream>\nusing namespace std ;\nclass Animal{\npublic\
+    \ :\n  // 纯虚函数\n  virtual void MakeSound() = 0;\n};\nclass Dog : public Animal{\n\
+    public :\n  void MakeSound() {\n    cout << \"Bark!\" << endl;\n  }\n};\nclass\
+    \ Cat : public Animal{\npublic :\n  void MakeSound() {\n    cout << \"Meow!\"\
+    \ << endl;\n  }\n};\nclass Lion : public Animal{\npublic :\n  void MakeSound()\
+    \ {\n    cout << \"Raw!\" << endl;\n  }\n};\nint main() {\n  Dog d;\n  d.MakeSound();\n\
+    \  Cat c;\n  c.MakeSound();\n  Lion l;\n  l.MakeSound();\n}\n```\n\n输出：\n> Bark!\n\
+    > Meow!\n> Raw !\n\n如你所知这是一个非常原始且无意义的示例，然而，它应该展示基类如何持有基本信息，而继承它的类应该在其基础上添加信息。在这个示例中，程序规定任何继承动物的类都必须有声音，这可以被调整以为类创建复杂的设计并轻松地填充相关的实现。\n\
+    \n下面的另一个示例将使用经典的形状示例，并有一个名为“Shape”的基类，它将有一个抽象函数“getArea()”，这需要为每个形状进行实现：\n\n```cpp\n\
+    #include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nclass Shape{\n\
+    public :\n  // 纯虚函数\n  virtual int Area() = 0;\n  Shape(double h , double w )\
+    \ {\n    heigth = h ;\n    width = w ;\n  }\nprotected :\n  double heigth;\n \
+    \ double width;\n};\nclass Circle : public Shape{\npublic :\n  Circle(double h\
+    \ , double w ) : Shape (h , w ) {}\n  int Area() {\n    return 3.14 * ((heigth\
+    \ / 2) * (heigth / 2));\n  }\n};\nclass Rectangle : public Shape{\npublic :\n\
+    \  Rectangle(double h , double w ) : Shape (h , w ) {}\n  int Area() {\n    return\
+    \ heigth * width;\n  }\n} ;\nint main() {\n  Rectangle r = Rectangle (10, 20);\n\
+    \  cout << r.Area() << endl;\n  Circle c = Circle (5, 5);\n  cout << c.Area()\
+    \ << endl;\n}\n```\n\n另一个简单的示例，但请花点时间习惯它，抽象类架构允许由于蓝图式的设计，即使设计已经完成，也可以轻松添加新的函数和类。\n\
+    \n## 章末测试\n\n1. 用于创建类的是哪两个文件？\n2. 析构函数定义之前的符号是什么？\n3. 头文件应该承担什么角色？\n4. 对于被继承的变量，`protected`\
+    \ 意味着什么？\n5. 多态的作用是什么？\n6. 使用什么关键字来更改虚方法？\n7. 如何表示纯虚函数？\n8. 标记为私有（private）的函数或变量可以在哪里访问？\n\
+    9. 构造函数的作用是什么？\n10. .cpp 文件应该包含什么？\n\n### 答案\n\n1. 头文件 (.h) 和 C++ 文件 (.cpp)。\n\
+    2. 我使用符号 `~` 来表示析构函数。\n3. 仅包含函数和变量的定义。\n4. 它只能由继承它的类在定义类之外访问。\n5. 为了拥有一个基类定义但许多不同的实现。\n\
+    6. 使用 `Override` 来更改虚方法。\n7. 使用一个等于零的普通函数定义。\n8. 仅在定义它的类中。\n9. 是一个没有返回类型的特殊函数，在创建类实例时被调用。\n\
+    10. 头文件中定义的函数和变量的影响。\n\n## 第四章：改进技巧\n\n### 结构体 (Structures)\n\n结构体源于 C，来自类编程之前的世界。然而，它们仍然很有用，并且可以使用在认为类大过其实（overkill）的地方。使用结构体的一个很好的例子可以是用于记录，例如如果你需要跟踪球队中的足球运动员，你将需要：\n\
+    \n*   姓名\n*   球衣号码\n*   工资\n*   擅长的脚\n*   等等\n\n"
+- fmt: "\nIf there is no need to add functionality onto this information a structure\
+    \ is perfect for this situation. A structure storing this information is defined\
+    \ like this:\n\n```cpp\nstruct FootballPlayer{\n  string Name;\n  int KitNumber;\n\
+    \  double Wage;\n  string StrongestFoot;\n};\n```\n\nThis structure contains all\
+    \ the values that are relevant, this will provide a relevant container for similar\
+    \ information. A new instance of the structure is defined like so:\n\n```cpp\n\
+    FootballPlayer player1;\nplayer1.Name = \"Messi\" ;\nplayer1.KitNumber = 10;\n\
+    player1.Wage = 1000000;\nplayer1.StrongestFoot = \"Both\" ;\n```\n\nThis code\
+    \ will create a `FootballPlayer` and assign values to all its member variables.\
+    \ \n\nReal world usage of structures tend to be “simple” usage where they need\
+    \ to just store trivial data like the example above, when there needs to be functionality\
+    \ and encapsulation use a `class`. This is known a `POD` (Plain Old Data) encapsulation\
+    \ .Note: The default access for structure variables is public while `classes`\
+    \ default to private.\n\n## Enums\n\n`Enums` is short for `Enumerated Type` as\
+    \ has the role of a boolean but with unlimited user defined types, this can be\
+    \ used a flags for a situation like “HOME_SCREEN” or “SETTING_SCREEN”. An enum\
+    \ is defined like so:\n\n```cpp\nenum CurrentScreen{\n  HOME ,\n  SETTINGS ,\n\
+    \  CONTACTS ,\n  CALCULATOR\n};\n```\n\nWith each word in the brackets being a\
+    \ state the enum can be set as. A enum instance is created like so:\n\n```cpp\n\
+    int main(){\n  CurrentScreen phone1;\n  phone1 = HOME ;\n}\n```\n\nThis code above\
+    \ makes a new enum and assigns it as “HOME”. You can now use the enum to check\
+    \ what states it is, the example below will use a switch-case:\n\n```cpp\n#include\
+    \ \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nenum CurrentScreen{\n\
+    \  HOME ,\n  SETTINGS ,\n  CONTACTS ,\n  CALCULATOR\n};\nint main(){\n  CurrentScreen\
+    \ phone1;\n  //Change me\n  phone1 = HOME ;\n  switch (phone1)\n  {\n    case\
+    \ HOME :\n      cout << \"You're on the home page\" << endl;\n      break ;\n\
+    \    case SETTINGS :\n      cout << \"You're on the settings page\" << endl;\n\
+    \      break ;\n    case CONTACTS :\n      cout << \"You're on the contacts page\"\
+    \ << endl;\n      break ;\n    case CALCULATOR :\n      cout << \"You're on the\
+    \ calculator page\" << endl;\n      break ;\n    default :\n      break ;\n  }\n\
+    }\n```\n\n**Output**\nYou’re on the home page\n\nThis code shows you can use conditional\
+    \ structures along with an enum to easily create a nice branched structure. Mess\
+    \ around with the commented “Change me” enum definition and see how the output\
+    \ changes.\n\n## Unions\n\n`Unions` are a data structures designed to provide\
+    \ efficient memory usages, they can contain as many member variables as it needs\
+    \ however it can only store data for a single variable at a time. So the entire\
+    \ structure only takes up memory for the biggest member variable.\n\nThese have\
+    \ to be used with caution because setting value of another member variable will\
+    \ remove data stored in another, so it is incredibly easy to lose important data.\
+    \ A union is defined like so:\n\n```cpp\nunion Example{\n  int i;\n  int x;\n\
+    \  int y;\n};\n```\n\nAnd an instance and value is created like so:\n\n```cpp\n\
+    Example e;\ne.i = 4;\n```\n\nTo show how the size of the union works the program\
+    \ below works it through:\n\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\n\
+    using namespace std;\nunion Example{\n  int i;\n  int x;\n  int y;\n} ;\nint main(){\n\
+    \  Example e;\n  e.i = 4;\n  cout << \"Your int size is: \" << sizeof (int ) <<\
+    \ \" bytes\" << endl;\n  cout << \"The union has 3 variables that should be a\
+    \ total of:   << sizeof (int ) * 3 << \" bytes\" << endl;\n  cout << \"However,\
+    \ the union is \" << sizeof (e) << \" bytes\" << endl;\n}\n```\n\n**Output**\n\
+    Your int size is: 4 bytes\nThe union has 3 variables that should be a total of:\
+    \  12 bytes\nHowever, the union is 4 bytes\n\nAs you can tell the union is only\
+    \ the size of a single integer, these structures can be used to efficiently use\
+    \ memory is there’re situations where variables are idle and only one is needed\
+    \ . Below is code that shows what happens to all the values when one is changed:\n\
+    \n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nunion Example{\n  int i;\n\
+    \  int x;\n  int y;\n};\nvoid Print_Union(Example e ){\n  cout << \"i: \" << e\
+    \ .i << endl;\n  cout << \"x: \" << e .x << endl;\n  cout << \"y: \" << e .y <<\
+    \ endl;\n}\nint main(){\n  Example e;\n  cout << \"1\" << endl;\n  e.i = 4;\n\
+    \  Print_Union(e);\n  cout << \"2\" << endl;\n  e.y = 3;\n  Print_Union(e);\n\
+    \  cout << \"3\" << endl;\n  e.x = 1;\n  Print_Union(e);\n}\n```\n\n**Output**\n\
+    1\n> i: 4\n> x: 4\n> y: 4\n2\n> i: 3\n> x: 3\n> y: 3\n3\n> i: 1\n> x: 1\n> y:\
+    \ 1\n\nAs you can tell when you change one value, they all equal the same value,\
+    \ this is because all values share the same memory location and therefore when\
+    \ one changes they all change .\n\n## Variable argument lists\n\nVariable argument\
+    \ lists allow for the possibly of endless parameters. Before we have come across\
+    \ functions with a static set amount of parameters (variables you can pass into\
+    \ a method) like:\n\n```cpp\nint Add(int i, int y){}\n```\n\nHas two parameters\
+    \ integer `i` and integer `y`.\n\nThis is known as a `Variadic Function` or a\
+    \ function with unlimited arity (parameter number, so `Add` above has an arity\
+    \ of 2)\n\nThe variables are stored in a variable known as the `va_list` (corrected\
+    \ from `va_list`) this works as any other variable but it just holds the list\
+    \ of variables passed. A variadic function is defined like so:\n\n```cpp\nvoid\
+    \ Add(int numberOfVariables , ...){}\n```\n\nWhere `numberOfVariables` is the\
+    \ number of extra parameters passed, note this does not include this variable.\
+    \ This is required because the `va_list` does not know the total number of variables\
+    \ and does not keep track of where it is in the list. Using the `va_list` requires\
+    \ the use of a few functions:\n\n*   `va_start (va_list, numberOfVariables)`\n\
+    \    *   Grabs the variables passed in and assigns the number specified by the\
+    \ second parameter to the first parameter\n*   `va_arg (va_list, type)`\n    *\
+    \   Grabs the next variable from the specified list in the first parameter and\
+    \ creates a variable specified by `type`\n*   `va_end (va_list)`\n    *   Tidies\
+    \ up the list specified\n"
+  raw: "If there is no need to add functionality onto this information a structure\
+    \ is perfect for this situation. A structure storing this information is defined\
+    \ like this:struct FootballPlayer{​ string Name;​ int KitNumber;​ double Wage;​\
+    \ string StrongestFoot;};This structure contains all the values that are relevant,\
+    \ this will provide a relevant container for similar information.A new instance\
+    \ of the structure is defined like so:FootballPlayer player1;player1.Name = \"\
+    Messi\" ;player1.KitNumber = 10;player1.Wage = 1000000;player1.StrongestFoot =\
+    \ \"Both\" ;This code will create a FootballPlayer and assign values to all its\
+    \ member variables.Real world usage of structures tend to be “simple” usage where\
+    \ they need to just store trivial data like the example above, when there needs\
+    \ to be functionality and encapsulation use a class. This is known a POD (Plain\
+    \ Old Data) encapsulation .Note: The default access for structure variables is\
+    \ public while classes default to private.EnumsEnums is short for Enumerated Type\
+    \ as has the role of a boolean but with unlimited user defined types, this can\
+    \ be used a flags for a situation like “HOME_SCREEN” or “SETTING_SCREEN”.An enum\
+    \ is defined like so:enum CurrentScreen{​ HOME ,​ SETTINGS ,​ CONTACTS ,​ CALCULATOR};With\
+    \ each word in the brackets being a state the enum can be set as. A enum instance\
+    \ is created like so:int main(){​ CurrentScreen phone1;​ phone1 = HOME ;}This\
+    \ code above makes a new enum and assigns it as “HOME”. You can now use the enum\
+    \ to check what states it is, the example below will use a switch-case:#include\
+    \ \"stdafx.h\"#include <iostream>using namespace std;enum CurrentScreen{​ HOME\
+    \ ,​ SETTINGS ,​ CONTACTS ,​ CALCULATOR};int main(){​ CurrentScreen phone1;​ //Change\
+    \ me​ phone1 = HOME ;​ switch (phone1)​ {​ case HOME :​ cout << \"You're on the\
+    \ home page\" << endl;​ break ;​ case SETTINGS :​ cout << \"You're on the settings\
+    \ page\" << endl;​ break ;​ case CONTACTS :​ cout << \"You're on the contacts\
+    \ page\" << endl;​ break ;​ case CALCULATOR :​ cout << \"You're on the calculator\
+    \ page\" << endl;​ break ;​ default :​ break ;​ }}Output>You’re on the home pageThis\
+    \ code shows you can use conditional structures along with an enum to easily create\
+    \ a nice branched structure. Mess around with the commented “Change me” enum definition\
+    \ and see how the output changes.UnionsUnions are a data structures designed to\
+    \ provide efficient memory usages, they can contain as many member variables as\
+    \ it needs however it can only store data for a single variable at a time. So\
+    \ the entire structure only takes up memory for the biggest member variable.These\
+    \ have to be used with caution because setting value of another member variable\
+    \ will remove data stored in another, so it is incredibly easy to lose important\
+    \ data.A union is defined like so:union Example{​ int i;​ int x;​ int y;};And\
+    \ an instance and value is created like so:Example e;e.i = 4;To show how the size\
+    \ of the union works the program below works it through:\n\n #include \"stdafx.h\"\
+    #include <iostream>using namespace std;union Example{​ int i;​ int x;​ int y;}\
+    \ ;int main(){​ Example e;​ e.i = 4;​ cout << \"Your int size is: \" << sizeof\
+    \ (int ) << \" bytes\" << endl;​ cout << \"The union has 3 variables that should\
+    \ be a total of:  \" << sizeof (int ) * 3 << \" bytes\" << endl;​ cout << \"However,\
+    \ the union is \" << sizeof (e) << \" bytes\" << endl;}Depending on your CPU architecture\
+    \ your output will be:Ouput>Your int size is: 4 bytes>The union has 3 variables\
+    \ that should be a total of:  12 bytes>However, the union is 4 bytesAs you can\
+    \ tell the union is only the size of a single integer, these structures can be\
+    \ used to efficiently use memory is there’re situations where variables are idle\
+    \ and only one is needed .Below is code that shows what happens to all the values\
+    \ when one is changed:#include \"stdafx.h\"#include <iostream>using namespace\
+    \ std;union Example{​ int i;​ int x;​ int y;};void Print_Union(Example e ){​ cout\
+    \ << \"i: \" << e .i << endl;​ cout << \"x: \" << e .x << endl;​ cout << ​ \"\
+    y: \" << e .y << endl;}int main(){​ Example e;​ cout << \"1\" << endl;​ e.i =\
+    \ 4;​ Print_Union(e);​ cout << \"2\" << endl;​ e.y = 3;​ Print_Union(e);​ cout\
+    \ << \"3\" << endl;​ e.x = 1;​ Print_Union(e);}Ouput> 1> i: 4> x: 4> y: 4> 2>\
+    \ i: 3> x: 3> y: 3> 3> i: 1> x: 1> y: 1As you can tell when you change one value,\
+    \ they all equal the same value, this is because all values share the same memory\
+    \ location and therefore when one changes they all change .Variable argument listsVariable\
+    \ argument lists allow for the possibly of endless parameters. Before we have\
+    \ come across functions with a static set amount of parameters (variables you\
+    \ can pass into a method) like:int Add(int i, int y){}Has two parameters integer\
+    \ “i” and integer “y”.This is known as a Variadic Function or a function with\
+    \ unlimited arity (parameter number, so “Add” above has an arity of 2)The variables\
+    \ are stored in a variable known as the va_list this works as any other variable\
+    \ but it just holds the list of variables passed. A variadic function is defined\
+    \ like so:void Add(int numberOfVariables , ...){}Where “numberOfVariables” is\
+    \ the number of extra parameters passed, note this does not include this variable.\
+    \ This is required because the va_list does not know the total number of variables\
+    \ and does not keep track of where it is in the list.Using the va_ist requires\
+    \ the use of a few functions:\n\n*   va_start (va_list, numberOfVariables)\n\n\
+    \    *   Grabs the variables passed in and assigns the number specified by the\
+    \ second parameter to the first parameter\n\n*   va_arg (va_list, type)\n\n  \
+    \  *   Grabs the next variable from the specified list in the first parameter\
+    \ and creates a variable specified by “type”\n\n*   va_end (va_list)\n\n    *\
+    \   Tidies up the list specified"
+  toc: []
+  trans: "\n\n如果不需要在此信息上添加额外功能，那么结构体（structure）是这种情况的选择。存储此类信息的结构体定义如下：\n\n```cpp\n\
+    struct FootballPlayer{\n  string Name;\n  int KitNumber;\n  double Wage;\n  string\
+    \ StrongestFoot;\n};\n```\n\n该结构包含了所有相关值，这将为相似信息提供一个相关的容器。结构体的新实例定义方式如下：\n\n```cpp\n\
+    FootballPlayer player1;\nplayer1.Name = \"Messi\" ;\nplayer1.KitNumber = 10;\n\
+    player1.Wage = 1000000;\nplayer1.StrongestFoot = \"Both\" ;\n```\n\n这段代码将创建一个\
+    \ `FootballPlayer` 并为它的所有成员变量赋值。 \n\n结构体在现实世界中的用法倾向于“简单”使用，即只需要存储像上面示例那样的琐碎数据；当需要功能和封装时，请使用\
+    \ `class`。这被称为 `POD`（普通旧数据）封装。注意：结构体变量的默认访问权限是公有的（public），而 `classes` 默认是私有的（private）。\n\
+    \n## 枚举 (Enums)\n\n`Enums` 是 `Enumerated Type`（枚举类型）的缩写，它的作用类似于布尔值，但具有无限的用户定义类型，它可以用于“HOME_SCREEN”或“SETTING_SCREEN”等情况的标记。枚举的定义如下：\n\
+    \n```cpp\nenum CurrentScreen{\n  HOME ,\n  SETTINGS ,\n  CONTACTS ,\n  CALCULATOR\n\
+    };\n```\n\n括号中的每个单词都是枚举可以设置的状态。枚举实例的创建方式如下：\n\n```cpp\nint main(){\n  CurrentScreen\
+    \ phone1;\n  phone1 = HOME ;\n}\n```\n\n上面的代码创建了一个新枚举并将其赋值为“HOME”。你现在可以使用枚举来检查它处于什么种状态，下面的示例将使用\
+    \ switch-case 语句：\n\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing\
+    \ namespace std;\nenum CurrentScreen{\n  HOME ,\n  SETTINGS ,\n  CONTACTS ,\n\
+    \  CALCULATOR\n};\nint main(){\n  CurrentScreen phone1;\n  //Change me\n  phone1\
+    \ = HOME ;\n  switch (phone1)\n  {\n    case HOME :\n      cout << \"You're on\
+    \ the home page\" << endl;\n      break ;\n    case SETTINGS :\n      cout <<\
+    \ \"You're on the settings page\" << endl;\n      break ;\n    case CONTACTS :\n\
+    \      cout << \"You're on the contacts page\" << endl;\n      break ;\n    case\
+    \ CALCULATOR :\n      cout << \"You're on the calculator page\" << endl;\n   \
+    \   break ;\n    default :\n      break ;\n  }\n}\n```\n\n**输出**\nYou’re on the\
+    \ home page\n\n这段代码向你展示了如何结合条件结构和枚举来轻松创建一个良好的分支结构。可以尝试修改被注释的“Change me”枚举定义，观察输出如何变化。\n\
+    \n## 联合体 (Unions)\n\n`Unions` 是为了提供高效内存使用的数据结构，它们可以包含任意数量的成员变量，但一次只能存储一个变量的数据。因此，整个结构只占用最大成员变量的内存。\n\
+    \n这些结构必须谨慎使用，因为设置另一个成员变量的值将移除另一个变量中存储的数据，因此非常容易丢失重要数据。联合体的定义如下：\n\n```cpp\nunion\
+    \ Example{\n  int i;\n  int x;\n  int y;\n};\n```\n\n实例和值的创建方式如下：\n\n```cpp\n\
+    Example e;\ne.i = 4;\n```\n\n为了展示联合体的大小如何工作，下面的程序演示了这一过程：\n\n```cpp\n#include\
+    \ \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nunion Example{\n  int\
+    \ i;\n  int x;\n  int y;\n} ;\nint main(){\n  Example e;\n  e.i = 4;\n  cout <<\
+    \ \"Your int size is: \" << sizeof (int ) << \" bytes\" << endl;\n  cout << \"\
+    The union has 3 variables that should be a total of:   << sizeof (int ) * 3 <<\
+    \ \" bytes\" << endl;\n  cout << \"However, the union is \" << sizeof (e) << \"\
+    \ bytes\" << endl;\n}\n```\n\n**输出**\nYour int size is: 4 bytes\nThe union has\
+    \ 3 variables that should be a total of:  12 bytes\nHowever, the union is 4 bytes\n\
+    \n如你所见，联合体的大小仅为单个整数的大小，在存在变量空置且只需要一个变量的情况下，这些结构可以高效地使用内存。下面的代码展示了当改变一个值时，所有值会发生什么：\n\
+    \n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nunion Example{\n  int i;\n\
+    \  int x;\n  int y;\n};\nvoid Print_Union(Example e ){\n  cout << \"i: \" << e\
+    \ .i << endl;\n  cout << \"x: \" << e .x << endl;\n  cout << \"y: \" << e .y <<\
+    \ endl;\n}\nint main(){\n  Example e;\n  cout << \"1\" << endl;\n  e.i = 4;\n\
+    \  Print_Union(e);\n  cout << \"2\" << endl;\n  e.y = 3;\n  Print_Union(e);\n\
+    \  cout << \"3\" << endl;\n  e.x = 1;\n  Print_Union(e);\n}\n```\n\n**输出**\n1\n\
+    > i: 4\n> x: 4\n> y: 4\n2\n> i: 3\n> x: 3\n> y: 3\n3\n> i: 1\n> x: 1\n> y: 1\n\
+    \n如你所见，当你改变一个值时，它们都等于相同的值，这是因为所有值共享相同的内存位置，因此当一个改变时，所有的都会改变。\n\n## 可变参数列表 (Variable\
+    \ argument lists)\n\n可变参数列表允许无限参数的可能性。之前我们遇到过具有静态数量参数（可以传递到方法的变量）的函数，例如：\n\n```cpp\n\
+    int Add(int i, int y){}\n```\n\n有两个参数：整数 `i` 和整数 `y`。\n\n这被称为 `Variadic Function`（可变函数）或具有无限析度的函数（参数个数，因此上面的\
+    \ `Add` 析度为 2）。\n\n变量存储在一个名为 `va_list` 的变量中，它的工作方式与其他任何变量一样，只是它持有了所传递的变量列表。可变函数的定义如下：\n\
+    \n```cpp\nvoid Add(int numberOfVariables , ...){}\n```\n\n其中 `numberOfVariables`\
+    \ 是传递的额外参数的数量，注意这不包括该变量本身。这是必要的，因为 `va_list` 并不知道变量的总数，也不跟踪它在列表中的位置。使用 `va_list`\
+    \ 需要使用几个函数：\n\n*   `va_start (va_list, numberOfVariables)`\n    *   获取传入的变量，并将第二个参数指定的数量赋值给第一个参数。\n\
+    *   `va_arg (va_list, type)`\n    *   从第一个参数指定的列表中获取下一个变量，并创建一个类型由 `type` 指定的变量。\n\
+    *   `va_end (va_list)`\n    *   清理指定的列表。\n\n"
+- fmt: "\nWe can now use these functions to create a working variadic function:\n\n\
+    ```cpp\n#include \"stdafx.h\"\n#include <cstdarg>\n#include <iostream>\nusing\
+    \ namespace std;\nvoid Add(int numberOfVariables , ...){\n  //The variable list\n\
+    \  va_list arg;\n  //Grabs the list\n  va_start (arg, numberOfVariables );\n \
+    \ int total = 0;\n  for (int i = 0; i < numberOfVariables ; i++) {\n    //Grabs\
+    \ the next variable\n    total += va_arg (arg, int );\n  }\n  //Clean up\n  va_end\
+    \ (arg);\n  cout << \"Total is: \" << total << endl;\n}\nint main(){\n  //4 Arguments\n\
+    \  Add(4, 1, 2, 3, 4);\n  //10 Arguments\n  Add(10, 6, 9, 5, 11, 22, 1, 3, 56,\
+    \ 90, 63);\n}\n```\nOutput>\nTotal is: 10\nTotal is: 266\n\nEach section of the\
+    \ variable list process is labelled, this function adds all parameters it’s given.\
+    \ This gives a very dynamic way to create one function that can handle an almost\
+    \ infinite list of parameters.\n\n### Exercise\nCreate a function that multiplies\
+    \ all the parameters given and returns a value, print out that value. Note: this\
+    \ `#include` is required: `#include <cstdarg>`\n\n### Solution\nSomething like\
+    \ this:\n```cpp\n#include \"stdafx.h\"\n#include <cstdarg>\n#include <iostream>\n\
+    using namespace std;\nint Multi(int numberOfVariables , ...){\n  va_list arg;\n\
+    \  va_start (arg, numberOfVariables );\n  int total = 1;\n  for (int i = 0; i\
+    \ < numberOfVariables ; i++) {\n    //Grabs the next variable\n    total *= va_arg\
+    \ (arg, int );\n  }\n  va_end (arg);\n  return total;\n}\nint main(){\n  cout\
+    \ << \"The total is: \" << Multi(3, 56, 90, 63) << endl;\n}\n```\n\n### Namespaces\n\
+    Namespaces are used to prevent variables and functions with the same name getting\
+    \ mixed up, for example the function `Run()` can be applicable in many situations\
+    \ so there needs to be a way to distinguish between different `Run()` functions,\
+    \ this is where namespaces can be used. They are defined like so with all functions\
+    \ and variables in the curly brackets being part of that namespace:\n\n```cpp\n\
+    namespace NamespaceName{}\n```\n\nThe example below shows how they are used:\n\
+    Two namespaces are defined like so with the same function name:\n\n```cpp\nnamespace\
+    \ Proccesing{\n  void Run() {\n    cout << \"Processing!\" << endl;\n  }\n}\n\
+    namespace Initialisation{\n  void Run() {\n    cout << \"Initialisation started!\"\
+    \ << endl;\n  }\n}\n```\nThis gives the programmer the opportunity to pick which\
+    \ `Run()` they can execute by just specifying the namespace like so:\n`Proccesing::Run();`\n\
+    and\n`Initialisation::Run();`\nand with them both run together:\n```cpp\nint main(){\n\
+    \  Initialisation::Run();\n  Proccesing::Run();\n}\n```\nOutput>\nInitialisation\
+    \ started!\nProcessing!\n\nNamespaces therefore gives a way to neatly segment\
+    \ code, and improves readability by providing a way to almost label blocks of\
+    \ code.\n\n### End of chapter Quiz\n1. What is the recommended situation you should\
+    \ use a `struct`?\n2. What is `enum` short for?\n3. How the size of a `union`\
+    \ dictated?\n4. What is a key factor about a `union`?\n5. What is a Variadic function?\n\
+    6. What does a `va_list` hold?\n7. Why do you need to specified the number of\
+    \ parameters in a variable function?\n8. Why does `va_end()` need to be run?\n\
+    9. What is the base role of a `namespace`?\n10. What syntax is used when calling\
+    \ a function inside a namespace, say you’re calling the function `Add()` inside\
+    \ the namespace `Math`?\n\n### Answers\n1. For plain old data (POD).\n2. Enumerated\
+    \ type.\n3. It’s the size of its largest member variable\n4. All the member variables\
+    \ share the same memory location so only on variable can hold a value at once\n\
+    5. A function with a possibly unlimited number of parameters\n6. A list of passed\
+    \ in variables to a function\n7. There is no way to tell the size of a `va_list`,\
+    \ so you need to specify the number of passed parameters\n8. It performs the clean-up\
+    \ of the variable list when it has been used\n9. To segment and label variables\
+    \ and functions in a meaningful way.\n10. `Math::Add()`\n\n# Chapter 5: Advanced\
+    \ Features\n\n## File I/O\nYou will eventually come across a programming situation\
+    \ where you need data to exist between the program running and not running, this\
+    \ is where file saving comes into use. File saving is achieved by using functions\
+    \ in the `fstream` library, that is included like this:\n`#include <fstream>`\n\
+    You also need “iostream” that we’ve come across before for `cout` and `cin`\n\
+    `#include <iostream>`\n\nThere are three main objects that are used when saving\
+    \ and reading to file:\n* `ofstream`: This deals with the output stream, and is\
+    \ used to create and write data to a file\n* `ifstream`: This is the opposite\
+    \ of `ofstream` and is used to read data from files\n* `fstream`: This is a function\
+    \ that has the characteristic of both `ofstream` and `ifstream`.\n\n### Opening\
+    \ a file\nTo open a file we need to use the `open()` function that is a member\
+    \ of all the main objects, it works like so:\n```cpp\nfstream f;\nf.open(\"file.txt\"\
+    \ , ios ::in);\n```\nWhere:\n* `\"file.txt\"` Is the filename\n* `ios::in` is\
+    \ the flag for how the file is to be open, below is a table explaining all the\
+    \ options.\n\n| Name | Description |\n| :--- | :--- |\n| `ios::app` | Opens the\
+    \ file in append mode, all input is to be added to the end of the file |\n| `ios::ate`\
+    \ | Opens a file for input into a file, and moves the read/write control to the\
+    \ end of the file |\n| `ios::in` | Opens a file for reading |\n| `ios::out` |\
+    \ Opens a file for writing |\n| `Ios::trunc` | If the file exists, the data inside\
+    \ is deleted (truncated ) |\n"
+  raw: "We can now use these functions to create a working variadic function:#include\
+    \ \"stdafx.h\"#include <cstdarg>#include <iostream>using namespace std;void Add(int\
+    \ numberOfVariables , ...){​ //The variable list​ va_list arg;​ //Grabs the list​\
+    \ va_start (arg, numberOfVariables );​ int total = 0;​ for (int i = 0; i < numberOfVariables\
+    \ ; i++)​ {​ //Grabs the next variable​ total += va_arg (arg, int );​ }​ //Clean\
+    \ up​ va_end (arg);​ cout << \"Total is: \" << total << endl;}int main(){​ //4\
+    \ Arguments​ Add(4,​ 1, 2, 3, 4);​ //10 Arguments​ Add(10,​ 6, 9, 5, 11, 22, 1,\
+    \ 3, 56, 90, 63);}Ouput>Total is: 10>Total is: 266Each section of the variable\
+    \ list process is labelled, this function adds all parameters it’s given. This\
+    \ gives a very dynamic way to create one function that can handle an almost infinite\
+    \ list of parameters.ExerciseCreate a function that multiplies all the parameters\
+    \ given and returns a value, print out that value. Note: this #include is required:#include\
+    \ <cstdarg>SolutionSomething like this:#include \"stdafx.h\"#include <cstdarg>#include\
+    \ <iostream>using namespace std;int Multi(int numberOfVariables , ...){​ va_list\
+    \ arg;​ va_start (arg, numberOfVariables );​ int total = 1;​ for (int i = 0; i\
+    \ < numberOfVariables ; i++)​ {​ //Grabs the next variable​ total *= va_arg (arg,\
+    \ int );​ }​ va_end (arg);​ return total;}int main(){​ cout << \"The total is:\
+    \ \" << Multi(3, 56, 90, 63) << endl;}NamespacesNamespaces are used to prevent\
+    \ variables and functions with the same name getting mixed up, for example the\
+    \ function Run() can be applicable in many situations so there needs to be a way\
+    \ to distinguish between different Run() functions, this is where namespaces can\
+    \ be used.They are defined like so with all functions and variables in the curly\
+    \ brackets being part of that namespace:namespace NamespaceName{}The example below\
+    \ shows how they are used:Two namespaces are defined like so with the same function\
+    \ name:namespace Proccesing{​ void Run()​ {​ cout << \"Processing!\" << endl;​\
+    \ }}namespace Initialisation{​ void Run()​ {​ cout << \"Initialisation started!\"\
+    \ << endl;​ }}This gives the programmer the opportunity to pick which Run() they\
+    \ can execute by just specifying the namespace like so:Proccesing::Run();andInitialisation::Run();and\
+    \ with them both run together:int main(){​ Initialisation::Run();​ Proccesing::Run();}Output>\
+    \ Initialisation started!> Processing!Namespaces therefore gives a way to neatly\
+    \ segment code, and improves readability by providing a way to almost label blocks\
+    \ of code.End of chapter Quiz\n\n1.  What is the recommended situation you should\
+    \ use a struct?\n\n2.  What is enum short for?\n\n3.  How the size of a union\
+    \ dictated?\n\n4.  What is a key factor about a union?\n\n5.  What is a Variadic\
+    \ function?\n\n6.  What does a va_list hold?\n\n7.  Why do you need to specified\
+    \ the number of parameters in a variable function?\n\n8.  Why does va_end() need\
+    \ to be run?\n\n9.  What is the base role of a namespace?\n\n10.  What syntax\
+    \ is used when calling a function inside a namespace, say you’re calling the function\
+    \ Add() inside the namespace Math?\n\nAnswers\n\n1.  For plain old data (POD).\n\
+    \n2.  Enumerated type.\n\n3.  It’s the size of its largest member variable\n\n\
+    4.  All the member variables share the same memory location so only on variable\
+    \ can hold a value at once\n\n5.  A function with a possibly unlimited number\
+    \ of parameters\n\n6.  A list of passed in variables to a function\n\n7.  There\
+    \ is no way to tell the size of a va_list, so you need to specify the number of\
+    \ passed parameters\n\n8.  It performs the clean-up of the variable list when\
+    \ it has been used\n\n9.  To segment and label variables and functions in a meaningful\
+    \ way.\n\n10.  Math::Add()\n\nChapter 5: Advanced FeaturesFile I/OYou will eventually\
+    \ come across a programming situation where you need data to exist between the\
+    \ program running and not running, this is where file saving comes into use.File\
+    \ saving is achieved by using functions in the fstream library, that is included\
+    \ like this:#include <fstream>You also need “iostream” that we’ve come across\
+    \ before for “cout” and “cin”#include <iostream>There are three main objects that\
+    \ are used when saving and reading to file:\n\n*   ofstream\n\n    *   This deals\
+    \ with the output stream, and is used to create and write data to a file\n\n*\
+    \   ifstream\n\n    *   This is the opposite of ofstream and is used to read data\
+    \ from files\n\n*   fstream\n\n    *   This is a function that has the characteristic\
+    \ of both ofstream and ifstream.\n\nOpening a fileTo open a file we need to use\
+    \ the “open()” function that is a member of all the main objects, it works like\
+    \ so:fstream f;f.open(\"file.txt\" , ios ::in);Where:\n\n*   “file.txt” Is the\
+    \ filename\n\n*   “ios::in” is the flag for how the file is to be open, below\
+    \ is a table explaining all the options.\n\n| Name | Description |\n\n| ios::app\
+    \ | Opens the file in append mode, all input is to be added to the end of the\
+    \ file |\n\n| ios::ate | Opens a file for input into a file, and moves the read/write\
+    \ control to the end of the file |\n\n| ios::in | Opens a file for reading |\n\
+    \n| ios::out | Opens a file for writing |\n\n| Ios::trunc | If the file exists,\
+    \ the data inside is deleted (truncated ) |"
+  toc: []
+  trans: "\n\n我们现在可以使用这些函数来创建一个可工作的变变函数：\n\n```cpp\n#include \"stdafx.h\"\n#include\
+    \ <cstdarg>\n#include <iostream>\nusing namespace std;\nvoid Add(int numberOfVariables\
+    \ , ...){\n  // 变量列表\n  va_list arg;\n  // 获取列表\n  va_start (arg, numberOfVariables\
+    \ );\n  int total = 0;\n  for (int i = 0; i < numberOfVariables ; i++) {\n   \
+    \ // 获取下一个变量\n    total += va_arg (arg, int );\n  }\n  // 清理\n  va_end (arg);\n\
+    \  cout << \"Total is: \" << total << endl;\n}\nint main(){\n  // 4 个参数\n  Add(4,\
+    \ 1, 2, 3, 4);\n  // 10 个参数\n  Add(10, 6, 9, 5, 11, 22, 1, 3, 56, 90, 63);\n}\n\
+    ```\n输出>\nTotal is: 10\nTotal is: 266\n\n变量列表过程的每个部分都经过标记，此函数会加上它收到的所有参数。这提供了一种非常动态的方式，可以创建一个能够处理几乎无限参数列表的函数。\n\
+    \n### 练习\n创建一个乘以所有给定参数并返回一个值的函数，打印出该值。注意：需要此 `#include`：`#include <cstdarg>`\n\
+    \n### 方案\n类似如下代码：\n```cpp\n#include \"stdafx.h\"\n#include <cstdarg>\n#include\
+    \ <iostream>\nusing namespace std;\nint Multi(int numberOfVariables , ...){\n\
+    \  va_list arg;\n  va_start (arg, numberOfVariables );\n  int total = 1;\n  for\
+    \ (int i = 0; i < numberOfVariables ; i++) {\n    // 获取下一个变量\n    total *= va_arg\
+    \ (arg, int );\n  }\n  va_end (arg);\n  return total;\n}\nint main(){\n  cout\
+    \ << \"The total is: \" << Multi(3, 56, 90, 63) << endl;\n}\n```\n\n### 命名空间 (Namespaces)\n\
+    命名空间用于防止同名的变量和函数混淆，例如 `Run()` 函数可能适用于许多情况，因此需要一种方法来区分不同的 `Run()` 函数，这就是可以使用命名空间的地方。它们的定义如下所示，大括号内的所有函数和变量都是该命名空间的一部分：\n\
+    \n```cpp\nnamespace NamespaceName{}\n```\n\n下面的示例展示了如何使用它们：\n定义了两个具有相同函数名的命名空间：\n\
+    \n```cpp\nnamespace Proccesing{\n  void Run() {\n    cout << \"Processing!\" <<\
+    \ endl;\n  }\n}\nnamespace Initialisation{\n  void Run() {\n    cout << \"Initialisation\
+    \ started!\" << endl;\n  }\n}\n```\n这为程序员提供了机会，可以通过指定命名空间来选择执行哪一个 `Run()`：\n`Proccesing::Run();`\n\
+    以及\n`Initialisation::Run();`\n并且它们可以一起运行：\n```cpp\nint main(){\n  Initialisation::Run();\n\
+    \  Proccesing::Run();\n}\n```\n输出>\nInitialisation started!\nProcessing!\n\n因此，命名空间提供了一种整洁划分代码的方法，通过提供一种几乎可以标记代码块的方式来提高可读性。\n\
+    \n### 章末测试\n1. 建议在什么情况下你应该使用 `struct`？\n2. `enum` 是什么单词缩写？\n3. `union` 的大小是如何决定的？\n\
+    4. 关于 `union` 的关键因素是什么？\n5. 什么是变变函数 (Variadic function)？\n6. `va_list` 包含什么？\n\
+    7. 为什么在变量函数中需要指定参数的数量？\n8. 为什么需要运行 `va_end()`？\n9. `namespace` 的基本作用是什么？\n10.\
+    \ 在命名空间内部调用函数时使用什么语法，假设你在 `Math` 命名空间内调用函数 `Add()`？\n\n### 答案\n1. 用于简单的旧数据 (POD)。\n\
+    2. 枚举类型 (Enumerated type)。\n3. 它是其最大成员变量的大小。\n4. 所有成员变量共享相同的内存位置，因此一次只能有一个变量持有一个值。\n\
+    5. 一个具有可能无限数量参数的函数。\n6. 传递给函数的变量列表。\n7. 没有办法得知 `va_list` 的大小，所以你需要指定传递的参数数量。\n\
+    8. 它在变量列表使用后对其进行清理工作。\n9. 以有意义的方式划分和标记变量及函数。\n10. `Math::Add()`\n\n# 第 5 章：高级特性\n\
+    \n## 文件输入输出 (File I/O)\n你最终会遇到一种编程情况，你需要数据在程序运行和不运行之间存在，这就是文件保存用用场。文件保存通过使用 `fstream`\
+    \ 库中的函数实现的，其包含方式如下：\n`#include <fstream>`\n你还需要之前遇到过的用于 `cout` 和 `cin` 的“iostream”\n\
+    `#include <iostream>`\n\n在保存和读取文件时，主要使用了三个对象：\n* `ofstream`: 它处理输出流，用于创建文件并向其中写入数据。\n\
+    * `ifstream`: 这是 `ofstream` 的相反，用于从文件中读取数据。\n* `fstream`: 这是一个具有 `ofstream` 和\
+    \ `ifstream` 特性的函数。\n\n### 打开文件\n要打开文件，我们需要使用 `open()` 函数，它是所有主对象的成员，其工作原理如下：\n\
+    ```cpp\nfstream f;\nf.open(\"file.txt\" , ios ::in);\n```\n其中：\n* `\"file.txt\"\
+    ` 是文件名\n* `ios::in` 是文件打开方式的标志，下面是解释所有选项的表格。\n\n| 名称 |  |\n| :--- | :--- |\n|\
+    \ `ios::app` | 以追加模式打开文件，所有输入将添加到文件末尾 |\n| `ios::ate` | 以输入模式打开文件，并将读/写控制权移动到文件末尾\
+    \ |\n| `ios::in` | 以读取模式打开文件 |\n| `ios::out` | 以写入模式打开文件 |\n| `Ios::trunc` | 如果文件存在，内部数据将将被删除（截断）\
+    \ |\n\n"
+- fmt: "\nYou can also have two of these modes by OR ing them together, this can be\
+    \ useful if you want to open the file to write to it and you want to get rid of\
+    \ already existing data: `f.open(\"file.txt\" , ios ::out || ios ::trunc);` \n\
+    \n### Closing a file\nClosing a file is as simple as you’d image. To achieve this\
+    \ all you need to call is the `close()` function:\n```cpp\nf.close();\n```\nThis\
+    \ flushes the stream and releases all the allocated memory to the file.\n\n###\
+    \ Writing to a file\nWriting to a file is achieved by the use of the use of the\
+    \ insertion operator (`<<`), this has been met before in the case of `cout` and\
+    \ all that need to be done is data needs be streams to a `fstream` or `ofstream`\
+    \ instead of `cout`. This is done like so:\n```cpp\nf << \"Writing data!\" <<\
+    \ endl;\n```\n\n### Reading data\nReading data is the same as writing data, just\
+    \ flipped. You use the stream extraction operator (`>>`) much like we’ve done\
+    \ before with `cin` but instead use it with `fstream` or `ifstream`. It’s also\
+    \ done like so:\n```cpp\nchar data[100];\nf >> data;\n```\nNote: Reading like\
+    \ this will read all data up until a space or newline.\n\n### Working example\n\
+    Above is all you need to know to read a write to a file, below is working code\
+    \ example with reading and writing:\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\n\
+    #include <fstream>\nusing namespace std;\nint main(){\n  //Opens a file for writing\n\
+    \  fstream write;\n  write.open(\"file.txt\" , ios ::out);\n  //Writes data to\
+    \ file\n  write << \"Example Data\" << endl;\n  write << \"More example data\"\
+    \ << endl;\n  write.close();\n  //Opens a file for reading\n  fstream read;\n\
+    \  read.open(\"file.txt\" , ios ::in);\n  //\"!read.eof()\" = Read while not end\
+    \ of file\n  //.eof() is a bool to flag if the end of the file has been reached\n\
+    \  char data[100];\n  while (!read.eof())\n  {\n    //Reads in\n    read >> data;\n\
+    \    //Prints\n    cout << data << endl;\n  }\n  read.close();\n}\n```\n**Output**\n\
+    ```\nExample\nData\nMore\nexample\ndat a\n```\nAs you can tell, each read command\
+    \ is stopping when it reaches a space or a newline (as mentioned above), in this\
+    \ case it just complicates the read section because now we have all the sentences\
+    \ separated. One way we can fix this is by using `getline()`, We’ll adapt the\
+    \ above example to read whole lines, changes will be highlighted:\n```cpp\n#include\
+    \ \"stdafx.h\"\n#include <iostream>\n#include <fstream>\n#include <string>\nusing\
+    \ namespace std;\nint main(){\n  //Opens a file for writing\n  fstream write;\n\
+    \  write.open(\"file.txt\" , ios ::out);\n  //Writes data to file\n  write <<\
+    \ \"Example Data\" << endl;\n  write << \"More example data\" << endl;\n  write.close();\n\
+    \  //Opens a file for reading\n  fstream read;\n  read.open(\"file.txt\" , ios\
+    \ ::in);\n  //\"!read.eof()\" = Read while not end of file\n  //.eof() is a bool\
+    \ to flag if the end of the file has been reached\n  string data;\n  while (!read.eof())\n\
+    \  {\n    //Reads in\n    getline(read, data);\n    //Prints\n    cout << data\
+    \ << endl;\n  }\n  read.close();\n}\n```\n**Output**\n```\nExample Data\nMore\
+    \ example data\n```\nThe `<string>` library has been included as to access the\
+    \ `getline()` method, this method uses the `read` stream as the first parameter\
+    \ and the second parameter being the place for the data to be stored. As you can\
+    \ tell `data` has also been adapted to a string, this just allows a cleaner way\
+    \ of reading in because we don’t need to specify length.\n\n### Recursion\nA recursive\
+    \ function is a function that contains within its definition a call to itself,\
+    \ this therefore creates a loop and if you’re not a carful an infinite one. Recursion\
+    \ can be very useful as it creates iteration with a small code base, below is\
+    \ a recursive example:\n```cpp\nvoid Recursive(int count ){\n  if (!(count <=\
+    \ 0))\n  {\n    //Prints current value of count\n    cout << count << endl;\n\
+    \    //Makes recursive call\n    Recursive(count - 1);\n  }\n}\n```\nAll this\
+    \ function does is count down from the initial value that’s it’s called with,\
+    \ so: `Recursive(5);` \nWill output:\n```\n5\n4\n3\n2\n1\n```\nThe key bit about\
+    \ the function above is the `if` statement, this makes sure that recursive call\
+    \ stops, this is known as the stopping condition as stops the program from crashing\
+    \ due to overflowing function calls.\n\nA more useful example that you’ll see\
+    \ everywhere if you’re researching recursion is a factorial example, for anyone\
+    \ that needs refresh a factorial is the product of all the positive integers from\
+    \ 1 to a given number, so the factorial of 4 (written like `4!`) is: `4! = 4 *\
+    \ 3 * 2 * 1 = 24`\nAnd the recursive code looks like this:\n```cpp\nint Factorial(int\
+    \ value ){\n  if (value > 0)\n  {\n    return value * Factorial(value - 1);\n\
+    \  }\n  else\n  {\n    return 1;\n  }\n}\n```\nAs you can see there is a function\
+    \ call in a return statement, you’ll use this a lot in recursion as it means the\
+    \ function will fall into sort of like a recursive whole, hit the bottom (in this\
+    \ case `return 1`) and use this information at the bottom to fill in the gaps\
+    \ on the way up and determine an answers back at the top. This all gives a different\
+    \ way to deal with iteration in a clean concise way.\n\n### Exercise\nThis is\
+    \ a hard exercise and it aims to try and trigger a good understanding of recursion,\
+    \ so take your time and do some background research prior to starting. In this\
+    \ exercise I would like you to create a recursive function that calculates Fibonacci’s\
+    \ sequence with all the values below 1000, printing them as you go.\nStart it\
+    \ off with a call like so: `Fibonacci(0, 1);`\nNote: You’ll need two parameters,\
+    \ `previous` and `next`.\n\n### Solution\nSomething similar to this:\n```cpp\n\
+    #include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\nint Fibonacci(int\
+    \ previous , int next ){\n  //Print\n  cout << previous << endl;\n  if (next <\
+    \ 1000)\n  {\n    int newNext = previous + next ;\n    return Fibonacci(next ,\
+    \ newNext);\n  }\n}\nint main(){\n  Fibonacci(0, 1);\n}\n```\n**Output**\n```\n\
+    0\n1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n377\n610\n987\n```\nRemember\
+    \ there are always different ways of doing things, so if you got the same output\
+    \ it’s still correct!\n\n### Pre-processors\nAre just instructions for the compiler\
+    \ to process before any code is compiled, they all begin with a (`#`) and do not\
+    \ end with a semi colon (`;`) as they are not statements.\n\n#### #define\n`#define`\
+    \ is used to create a definition of a symbol or word, the most common example\
+    \ is using `#define` to specify if the program is in debug mode, this allows you\
+    \ to only run debug code when the debug flag is defined. You can also use them\
+    \ to define constant no-changing values, an example is below:\n```cpp\n#include\
+    \ \"stdafx.h\"\n#include <iostream>\n#define NUMBER 10\nusing namespace std;\n\
+    int main(){\n  cout << NUMBER << endl;\n}\n```\n**Output**\n```\n10\n```\nThis\
+    \ is used as kind of an alias system, not variable is defined here but you can\
+    \ put very important values in these define statements and create more readable\
+    \ code.\nYou can also use `#define` statement to create macro-functions, it is\
+    \ done like so:\n```cpp\n#define BIGGEST (a,b) ((a < b) ? b : a)\n```\nThis is\
+    \ effectively saying if b is greater than (`<`) a return (`?`) b as the value\
+    \ else (`:`) return a. And is called like any other function: `cout << BIGGEST\
+    \ (10, 2) << endl;`\nOne of the most useful real world uses of this would be to\
+    \ create a better syntax for a for loop within the `#define`, this is just for\
+    \ syntax purposes:\n```cpp\n#define For (index, max) for (index = 0; index < max;\
+    \ index++)\n```\nAll this does is just define a for loop within the `#define`\
+    \ body, you just put the list and the value you want to index and you then have\
+    \ a tidy syntax. I looks like this when used:\n```cpp\nint i;\nFor (i, 10){\n\
+    \  cout << i << endl;\n}\n```\nMuch nicer than the equivalent:\n```cpp\nfor (int\
+    \ i = 0; i < 10; i){\n  cout << i << endl;\n}\n```\nPlease note these do the exact\
+    \ same thing, it’s just a different syntax .\n\n#### Conditional Compilation\n\
+    This is used in conjunction with the `#define`, there is `#ifdef` (If defined)\
+    \ and `#ifndef` (If undefined) that both check for `#define` statements. It can\
+    \ be used like:\n```cpp\n#ifdef VERBOSE\n  cout << \"Print!\" << endl;\n#endif\n\
+    ```\nIt surrounds code and say for example there is not a `#define` above the\
+    \ code will be ignored.\n```cpp\n#define VERBOSE ;\n```\n`#ifndef` is just the\
+    \ opposite and will ignore code if there is a `#define`.\n\n#### The # and ##\
+    \ operators\nThe `#` operator replaces a macro with that given string, and example\
+    \ is below:\n```cpp\n#define CREATE_STRING (x) #x;\n```\nThen when it’s called\
+    \ it will be:\n`CREATE_STRING`\n"
+  raw: 'You can also have two of these modes by OR ing them together, this can be
+    useful if you want to open the file to write to it and you want to get rid of
+    already existing data:f.open("file.txt" , ios ::out || ios ::trunc);Closing a
+    fileClosing a file is as simple as you’d image. To achieve this all you need to
+    call is the “close()” function:f.close();This flushes the stream and releases
+    all the allocated memory to the file.Writing to a fileWriting to a file is achieved
+    by the use of the use of the insertion operator (<<), this has been met before
+    in the case of “cout” and all that need to be done is data needs to be streams
+    to a fsteam or ofstream instead of cout .This is done like so:f << "Writing data!"
+    << endl;Reading dataReading data is the same as writing data, just flipped. You
+    use the stream extraction operator (>>) much like we’ve done before with cin but
+    instead use it with fstream or ifstream .It’s also done like so:char data[100];f
+    >> data;Note: Reading like this will read all data up until a space or newlineWorking
+    exampleAbove is all you need to know to read a write to a file, below is working
+    code example with reading and writing:#include "stdafx.h"#include <iostream>#include
+    <fstream>using namespace std;int main(){​ //Opens a file for writing​ fstream
+    write;​ write.open("file.txt" , ios ::out);​ //Writes data to file​ write << "Example
+    Data" << endl;​ write << "More example data" << endl;​ write.close();​ //Opens
+    a file for reading​ fstream read;​ read.open("file.txt" , ios ::in);​ //"!read.eof()"
+    = Read while not end of file​ //.eof() is a bool to flag if the end of the file
+    has been reached​ char data[100];​ while (!read.eof())​ {​ //Reads in​ read >>
+    data;​ //Prints​ cout << data << endl;​ }​ read.close();}Output>Example>Data>More>example>dat
+    aAs you can tell, each read command is stopping when it reaches a space or a newline
+    (as mentioned above), in this case it just complicates the read section because
+    now we have all the sentences separated. One way we can fix this is by using “getline()”,
+    We’ll adapt the above example to read whole lines, changes will be highlighted:#include
+    "stdafx.h"#include <iostream>#include <fstream>#include <string>using namespace
+    std;int main(){​ //Opens a file for writing​ fstream write;​ write.open("file.txt"
+    , ios ::out);​ //Writes data to file​ write << "Example Data" << endl;​ write
+    << "More example data" << endl;​ write.close();​ //Opens a file for reading​ fstream
+    read;​ read.open("file.txt" , ios ::in);​ //"!read.eof()" = Read while not end
+    of file​ //.eof() is a bool to flag if the end of the file has been reached​ string
+    data;​ while (!read.eof())​ {​ //Reads in​ getline(read, data);​ //Prints​ cout
+    << data << endl;​ }​ read.close();}Output>Example Data>More example dataThe <string>
+    library has been included as to access the getline() method, this method uses
+    the “read” stream as the first parameter and the second parameter being the place
+    for the data to be stored. As you can tell “data” has also been adapted to a string,
+    this just allows a cleaner way of reading in because we don’t need to specify
+    length .RecursionA recursive function is a function that contains within its definition
+    a call to itself, this therefore creates a loop and if you’re not a carful an
+    infinite one.Recursion can be very useful as it creates iteration with a small
+    code base, below is a recursive example:void Recursive(int count ){​ if (!(count
+    <= 0))​ {​ //Prints current value of count​ cout << count << endl;​ //Makes recursive
+    call​ Recursive(count - 1);​ }}All this function does is count down from the initial
+    value that’s it’s called with, so:Recursive(5);Will output:>5>4>3>2> 1The key
+    bit about the function above is the if statement, this makes sure that recursive
+    call stops, this is known as the stopping condition as stops the program from
+    crashing due to overflowing function calls.A more useful example that you’ll see
+    everywhere if you’re researching recursion is a factorial example, for anyone
+    that needs  refresh a factorial is the product of all the positive integers from
+    1 to a given number, so the factorial of 4 (written like 4!) is:4! = 4 * 3 * 2
+    * 1 = 24And the recursive code looks like this:int Factorial(int value ){​ if
+    (value > 0)​ {​ return value * Factorial(value - 1);​ }​ else​ {​ return 1;​ }}As
+    you can see there is a function call in a return statement, you’ll use this a
+    lot in recursion as it means the function will fall into sort of like a recursive
+    whole, hit the bottom (in this case “return 1”) and use this information at the
+    bottom to fill in the gaps on the way up and determine an answers back at the
+    top. This all gives a different way to deal with iteration in a clean concise
+    way.ExerciseThis is a hard exercise and it aims to try and trigger a good understanding
+    of recursion, so take your time and do some background research prior to starting.
+    In this exercise I would like you to create a recursive function that calculates
+    Fibonacci’s sequence with all the values below 1000, printing them as you go.Start
+    it off with a call like so:Fibonacci(0, 1);Note: You’ll need two parameters, previous
+    and next.SolutionSomething similar to this:#include "stdafx.h"#include <iostream>using
+    namespace std;int Fibonacci(int previous , int next ){​ //Print​ cout << previous
+    << endl;​ if (next < 1000)​ {​ int newNext = previous + next ;​ return Fibonacci(next
+    , newNext);​ }}int main(){​ Fibonacci(0, 1);}Output> 0>1>1>2>3>5>8>13>21>34>55>89>144>233>377>610>98
+    7Remember there are always different ways of doing things, so if you got the same
+    output it’s still correct!Pre-processorsAre just instructions for the compiler
+    to process before any code is complied, they all begin with a (#) and do not end
+    with a semi colon (;) as they are not statements.#defineDefine is used to create
+    a definition of a symbol or word, the most common example is using #define to
+    specify if the program is in debug mode, this allows you to only run debug code
+    when the debug flag is defined. You can also use them to define constant no-changing
+    values, an example is below:#include "stdafx.h"#include <iostream>#define NUMBER
+    10using namespace std;int main(){​ cout << NUMBER << endl;}Output>10This is used
+    as kind of an alias system, not variable is defined here but you can put very
+    important values in these define statements and create more readable code.You
+    can also use #define statement to create macro-functions, it is done like so:#define
+    BIGGEST (a,b) ((a < b) ? b : a)This is effectively saying if b is greater than
+    (<) a return (?) b as the value else (:) return a.And is called like any other
+    function:cout << BIGGEST (10, 2) << endl;One of the most useful real world uses
+    of this would be to create a better syntax for a for loop within the #define,
+    this is just for syntax purposes:#define For (index, max) for (index = 0; index
+    < max; index++)All this does is just define a for loop within the #define body,
+    you just put the list and the value you want to index and you then have a tidy
+    syntax.I looks like this when used:int i;For (i, 10){​ cout << i << endl;}Much
+    nicer than the equivalent:for (int i = 0; i < 10; i){​ cout << i << endl;}Please
+    note these do the exact same thing, it’s just a different syntax .Conditional
+    CompilationThis is used in conjunction with the #define, there is #ifdef (If defined)
+    and #ifudef (If undefined) that both check for #define statements. It can be used
+    like:#ifdef VERBOSE​ cout << "Print!" << endl;#endifIt surrounds code and say
+    for example there is not a #define above the code will be ignored.#define VERBOSE
+    ;#ifudef is just the opposite and will ignore code if there is a #define.The #
+    and ## operatorsThe # operator replaces a macro with that given string, and example
+    is below:#define CREATE_STRING (x) #x;Then when it’s called it will be replace
+    the entire call with “x”, so:#include "stdafx.h"#include <iostream>using namespace
+    std;#define CREATE_STRING (x) #xint main(){​ cout << CREATE_STRING (STRING EXAMPLE)
+    << endl;}Output>STRING EXAMPLEThis is because:CREATE_STRING (STRING EXAMPLE)Calls:#define
+    CREATE_STRING (x) #xWhere:#define CREATE_STRING (STRING EXAMPLE) #STRING EXAMPLEAnd#STRING
+    EXAMPLEIs equal to:"STRING EXAMPLE"## OperatorThe double hash operator concatenates
+    two items into one, this is better explained with an example:#include "stdafx.h"#include
+    <iostream>using namespace std;#define MAKE_ONE (a, b) a ## bint main(){​ int numone
+    = 100;​ cout << MAKE_ONE (num, one) << endl;}Output>100Why has this happened?
+    Let’s walk it through:The double hash takes two items and concats them so:MAKE_ONE
+    (num, one)Resolves to:#define MAKE_ONE (num, one) num ## oneAnd;num ## oneis equal
+    to:numoneSo:cout << MAKE_ONE (num, one) << endl;Equalscout << numone << endl;And
+    the variable above is called and the output is 100.Dynamic memory and pointersTo
+    understand pointers you need to understand how variables are stored. Variables
+    are allocated a memory location, and the size is dependent of the size of the
+    variable. A pointer is a variable that holds the address of that location, so
+    it allows direct access to a variable.A pointer is defined like so:int * p;You
+    then need to assign the pointer to point at an actual memory location, to do this
+    we need to use the reference operator (&). The code below assigns a variable for
+    the pointer to point at:#include "stdafx.h"#include <iostream >using namespace
+    std;int main(){​ int i = 10;​ int * p = & i;}This defines a pointer to an integer,
+    lets print out the value just after initialisation and see what it looks like,
+    by adding the code below to the bottom of the body of the main method:cout <<
+    p << endl;Output> 008FF768This is the address that holds the integer “I”Note:
+    This value will be different every timeThis allows you to pass values by reference,
+    if you were to pass the pointer as a parameter any changes to the pointer will
+    result in a change to the base variable, the example below demonstrates this:#include
+    "stdafx.h"#include <iostream >using namespace std;void Change(int * pointer ){​
+    *pointer = 200;}int main(){​ int i = 10;​ int * p = &i;​ cout << "Before: " <<
+    i << endl;​ Change(p);​ cout << "After: " << i << endl;}Output>Before: 1 0>After:
+    200As you can tell the value of “I” has changed but without the direct changing
+    to the variable.Pointers can point to any data type, you can even have pointers
+    to objects.New and delete operatorsThe new operator allows manual allocation of
+    memory for a data type, see the example below:double * p = new double ;As you
+    can tell the new keyword allocates memory and returns a pointer to that memory,
+    in the case of the example above it’s a pointer to a double, this is manually
+    allocated memory and the compiler will not manually release the data and if this
+    isn’t manually rectified there can be what is called a memory leak where memory
+    is taken up unnecessarily.This is where the delete operator comes into use, this
+    is the opposite to the new keyword and will deallocate the memory for the variable.Let’s
+    put the operators into work:#include "stdafx.h"#include <iostream >using namespace
+    std;int main(){​ //Creates pointer​ double * p = NULL ;​ //This checks to see
+    if memory has been allocated​ //It just checks to make sure "p" is pointing to
+    something​ if (!(p = new double ))​ {​ cout << "ERROR: Memory problems" << endl;
+    //Will only print if there is a problem​ }​ //Changes value etc​ *p = 100;​ cout
+    << "P is: " << *p << endl;​ //Deallocates memory​ delete p;}As you can see there
+    is a check for the allocation of memory for p, this is a recommended practise
+    because it keeps tabs on any memory problems, if you were to just do this:double
+    * p;p = new double ;If the second line was to fail p could be pointing to any
+    memory location and would cause a crash if the value of p was changed.Dynamic
+    memory for arraysAs you can do with variables, you can also do with arrays with
+    the:'
+  toc: []
+  trans: "\n你也可以通过逻辑或（OR）将这两种模式组合在一起，如果你想打开文件进行写入并删除已存在的数据，这将非常有用：`f.open(\"file.txt\"\
+    \ , ios ::out || ios ::trunc);` \n\n### 关闭文件\n关闭文件就像你想象的样简单。要实现这一点，你只需要调用 `close()`\
+    \ 函数：\n```cpp\nf.close();\n```\n这会刷新流并释放所有分配给文件的内存。\n\n### 写入文件\n向文件写入是通过使用插入运算符（`<<`）实现的，这在\
+    \ `cout` 的情况下以前遇到过，现在做的只是将数据流向 `fstream` 或 `ofstream` 而不是 `cout`。操作方法如下：\n```cpp\n\
+    f << \"Writing data!\" << endl;\n```\n\n### 读取数据\n读取数据与写入数据相同，只是方向相反。你使用流提取运算符（`>>`），就像我们以前对\
+    \ `cin` 使用的那样，但现在将其用于 `fstream` 或 `ifstream`。操作方法同样如下：\n```cpp\nchar data[100];\n\
+    f >> data;\n```\n注意：这种读取方式将读取直到空格或换行符的所有数据。\n\n### 示例代码\n上述就是读写文件需要需要的所有知识，下面是一个包含读取和写入的工作代码示例：\n\
+    ```cpp\n#include \"stdafx.h\"\n#include <iostream>\n#include <fstream>\nusing\
+    \ namespace std;\nint main(){\n  // 打开文件进行写入\n  fstream write;\n  write.open(\"\
+    file.txt\" , ios ::out);\n  // 将数据写入文件\n  write << \"Example Data\" << endl;\n\
+    \  write << \"More example data\" << endl;\n  write.close();\n  // 打开文件进行读取\n\
+    \  fstream read;\n  read.open(\"file.txt\" , ios ::in);\n  //\"!read.eof()\" =\
+    \ 当未到文件结束时读取\n  //.eof() 是一个布尔标志，标记是否到达文件末尾\n  char data[100];\n  while (!read.eof())\n\
+    \  {\n    // 读取\n    read >> data;\n    // 打印\n    cout << data << endl;\n  }\n\
+    \  read.close();\n}\n```\n**输出**\n```\nExample\nData\nMore\nexample\ndat a\n```\n\
+    如你所见，每个读取命令在遇到空格或换行符时停止（如上所述），在这种情况下，这只是让读取部分变得复杂，因为现在所有句子都被分开了。修复此问题的一种方法是使用\
+    \ `getline()`，我们将上面的示例修改为读取整行，更改将将亮显示：\n```cpp\n#include \"stdafx.h\"\n#include\
+    \ <iostream>\n#include <fstream>\n#include <string>\nusing namespace std;\nint\
+    \ main(){\n  // 打开文件进行写入\n  fstream write;\n  write.open(\"file.txt\" , ios ::out);\n\
+    \  // 将数据写入文件\n  write << \"Example Data\" << endl;\n  write << \"More example\
+    \ data\" << endl;\n  write.close();\n  // 打开文件进行读取\n  fstream read;\n  read.open(\"\
+    file.txt\" , ios ::in);\n  //\"!read.eof()\" = 当未到文件结束时读取\n  //.eof() 是一个布尔标志，标记是否到达文件末尾\n\
+    \  string data;\n  while (!read.eof())\n  {\n    // 读取\n    getline(read, data);\n\
+    \    // 打印\n    cout << data << endl;\n  }\n  read.close();\n}\n```\n**输出**\n\
+    ```\nExample Data\nMore example data\n```\n包含了 `<string>` 库以便访问 `getline()` 方法，该方法使用\
+    \ `read` 流作为第一个参数，第二个参数是存储数据的地方。如你所见，`data` 也被调整为 `string` 类型，这提供了一种更整洁的读取方式，因为我们不需要指定长度。\n\
+    \n### 递归\n递归函数是指在 fact 定义内部包含对自身调用的函数，因此这创建了一个循环，如果你不小心，甚至是一个无限循环。递归非常有用，因为它可以用较小的代码量创建迭代，下面是一个递归示例：\n\
+    ```cpp\nvoid Recursive(int count ){\n  if (!(count <= 0))\n  {\n    // 打印 count\
+    \ 的当前值\n    cout << count << endl;\n    // 发起递归调用\n    Recursive(count - 1);\n\
+    \  }\n}\n```\n这个函数所做的工作就是从调用时的初始值开始递减，所以：`Recursive(5);` \n将输出：\n```\n5\n4\n3\n\
+    2\n1\n```\n上述函数的关键点是 `if` 语句，它确保递归调用的停止，这被称为停止条件，它可以防止程序因函数调用溢出而崩溃。\n\n如果你在研究递归，随处可见的一个更有用的例子是阶乘示例。对于任何需要复习阶乘的人来说，阶乘是指从\
+    \ 1 到给定数字的所有正整数的乘积，因此 4 的阶乘（写作 `4!`）是：`4! = 4 * 3 * 2 * 1 = 24`\n递归代码看起来如下：\n\
+    ```cpp\nint Factorial(int value ){\n  if (value > 0)\n  {\n    return value *\
+    \ Factorial(value - 1);\n  }\n  else\n  {\n    return 1;\n  }\n}\n```\n如你所见，在\
+    \ `return` 语句中有一个函数调用，你在递归中会经常使用它，因为这意味着函数将进入某种递归深渊，触及底部（在这种情况下是 `return 1`），并使用底部的信息在回溯过程中填充空隙，最终在顶部确定答案。这都提供了一种以简洁明了的方式处理迭代的不同方法。\n\
+    \n### 练习\n这是一个困难的练习，旨在尝试触发对递归的良好理解，因此在开始之前请花些时间做一些背景研究。在这个练习中，我希望你创建一个递归函数，计算所有小于\
+    \ 1000 的斐波那契数列值，并在过程中打印它们。\n从像这样的调用开始开始：`Fibonacci(0, 1);`\n注意：你需要两个参数，`previous`\
+    \ 和 `next`。\n\n### 答案\n类似于这样的代码：\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\n\
+    using namespace std;\nint Fibonacci(int previous , int next ){\n  // 打印\n  cout\
+    \ << previous << endl;\n  if (next < 1000)\n  {\n    int newNext = previous +\
+    \ next ;\n    return Fibonacci(next , newNext);\n  }\n}\nint main(){\n  Fibonacci(0,\
+    \ 1);\n}\n```\n**输出**\n```\n0\n1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n144\n233\n\
+    377\n610\n987\n```\n记住，做事总有不同的方法，所以如果你得到了相同的输出，它仍然是正确的！\n\n### 预处理器\n预处理器是指编译器在任何代码编译之前进行处理的指令，它们都以\
+    \ (`#`) 开头，且不以分号（`;`）结尾，因为它们不是语句。\n\n#### #define\n`#define` 用于创建符号或单词的定义，最常见的例子是使用\
+    \ `#define` 来指定程序是否处于调试模式，这允许在调试标志被定义时运行调试代码。示例如下：\n```cpp\n#include \"stdafx.h\"\
+    \n#include <iostream>\n#define NUMBER 10\nusing namespace std;\nint main(){\n\
+    \  cout << NUMBER << endl;\n}\n```\n**输出**\n```\n10\n```\n这被用作一种别名系统，并不是变量，但你可以使用它们来定义常量值。你还可以使用\
+    \ `#define` 语句创建宏函数，方法如下：\n```cpp\n#define BIGGEST (a,b) ((a < b) ? b : a)\n```\n\
+    这实际上是在说如果 b 大于 (`<`) a 则返回 b，否则 (`:`) 返回 a。像其他函数一样被调用：`cout << BIGGEST (10, 2)\
+    \ << endl;`\n这些最实用的实际用途之一是为 `#define` 创建更好的 for 循环语法：\n```cpp\n#define For (index,\
+    \ max) for (index = 0; index < max; index++)\n```\n这一切所做的只是在 `#define` 体内定义了一个\
+    \ for 循环，你只需要放入列表和索引的值，然后就有了一个整洁的语法。使用如下：\n```cpp\nint i;\nFor (i, 10){\n  cout\
+    \ << i << endl;\n}\n```\n比等效写法简洁得多：\n```cpp\nfor (int i = 0; i < 10; i){\n  cout\
+    \ << i << endl;\n}\n```\n请注意，这些的功能完全相同，只是语法不同。\n\n#### 条件编译\n这与 `#define` 结合使用，有\
+    \ `#ifdef`（如果定义）和 `#ifndef`（如果未定义），它们都检查 `#define` 语句。使用方法如下：\n```cpp\n#ifdef\
+    \ VERBOSE\n  cout << \"Print!\" << endl;\n#endif\n```\n它包裹代码，例如，如果上方没有 `#define`，则代码将被忽略。\n\
+    ```cpp\n#define VERBOSE ;\n```\n`#ifndef` 恰恰相反，如果存在 `#define` 则将忽略代码。\n\n####\
+    \ # 和 ## 运算符\n`#` 运算符将宏替换为给定的字符串，示例如下：\n```cpp\n#define CREATE_STRING (x) #x;\n\
+    ```\n那么当调用它时，结果将是：\n`CREATE_STRING`\n\n"
+- fmt: "\n- `new[]` to allocate a chunk of memory\n- `delete[]` to deallocate chunks\
+    \ of memory\n\nSo for example if we wanted to make an array of pointers to 5 objects:\n\
+    \n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\n\n\
+    class MyClass{\npublic : \n    MyClass() {\n        cout << \"Made!\" << endl;\n\
+    \    }\n    ~MyClass() {\n        cout << \"Deleted!\" << endl;\n    }\n};\n\n\
+    int main() {\n    //Create\n    MyClass * classes = new MyClass [5];\n    //Delete\n\
+    \    delete[] classes;\n}\n```\n\nOutput:\n```\nMade!\nMade!\nMade!\nMade!\nMade!\n\
+    Deleted!\nDeleted!\nDeleted!\nDeleted!\nDeleted!\n```\n\nAs you can see the first\
+    \ line in the `main()` creates 5 `MyClasses`, the constructors fire and print\
+    \ “Made!”, the next link then goes onto free the memory the destructors fire and\
+    \ print “Deleted!”, this can be used to create a lot of pointers with a very small\
+    \ amount of code.\n\n### Pointer arithmetic\n\nYou can add a value onto a pointer\
+    \ to move it along to the next memory location, let’s say we have a pointer to\
+    \ an integer, and on a 64bit system an `int` should be 4bytes. So:\n\n```cpp\n\
+    int * p = new int ;\np = p + 1;\n```\n\nThe code above will move to the next 4\
+    \ bytes, by `+1` you say move to the next variable sized gap, so for example if\
+    \ we had a “long long” that should be 8 bytes adding one will move 8 bytes along.\
+    \ You can also do this in the opposite direction and take away one, this does\
+    \ the exact same just in the other direction.\n\nThe example below demonstrates\
+    \ this:\n\n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    //A size check\n    cout << \"int is: \" << sizeof\
+    \ (int ) << \" bytes\" << endl;\n    //Creates memory\n    int * next = new int\
+    \ [10];\n    for (int i = 0; i < 10; i++) {\n        //Moves along 4 bytes\n \
+    \       cout << next + i << endl;\n    }\n    //Deletes memory\n    delete[] next;\n\
+    }\n```\n\nOutput:\n```\nint is: 4 bytes\n00DDDB50\n00DDDB54\n00DDDB58\n00DDDB5C\n\
+    00DDDB60\n00DDDB64\n00DDDB68\n00DDDB6C\n00DDDB70\n00DDDB74\n```\n\nAs you can\
+    \ see, memory is allocation and the pointer is moved along by 1 each time. As\
+    \ you can see from the output the hexadecimal addresses are 4 different from each\
+    \ other because the memory addresses are adjacent.\n\n### End of chapter Quiz\n\
+    \n1. What does the flag `ios::app` mean?\n2. Why is it important to close a file?\n\
+    3. Which operator is used to writing data to a file?\n4. What does `.eof()` signify?\n\
+    5. What does every recursive function need?\n6. What does `#ifdef` mean?\n7. What\
+    \ does the `##` operator achieve?\n8. When should `delete []` be used?\n9. What\
+    \ does the `new` operator return?\n10. What does adding 1 to a integer pointer?\n\
+    \n### Answers\n\n1. It will open the file in append mode.\n2. It releases resources\
+    \ attached to the file.\n3. Insertion operator (`<<`).\n4. Is a method that returns\
+    \ true when the end of the file is reached.\n5. A stopping condition to prevent\
+    \ endless looping.\n6. Will include the code it encapsulates if the alias is undefined.\n\
+    7. It concatenates and replace two values.\n8. When you want to delete a block\
+    \ of user assign memory.\n9. A pointer to a newly created memory location.\n10.\
+    \ If the integer is 4 bytes it will move along 4 bytes.\n"
+  raw: '*   new[] to allocate a chunk of memory
+
+
+    *   delete[] to deallocate chunks of memory
+
+
+    So for example if we wanted to make an array of pointers to 5 objects:
+
+
+     #include "stdafx.h"#include <iostream>using namespace std;class MyClass{public
+    :​ MyClass()​ {​ cout << "Made!" << endl;​ }​ ~MyClass()​ {​ cout << "Deleted!"
+    << endl;​ }};int main(){​ //Create​ MyClass * classes = new MyClass [5];​ //Delete​
+    delete[] classes;}Output>Made!>Made!>Made!>Made!>Made!>Deleted!>Deleted!>Deleted!>Deleted!>Deleted!As
+    you can see the first line in the main() creates 5 MyClasses, the constructors
+    fire and print “Made!”, the next link then goes onto free the memory the destructors
+    fire and print “Deleted!”, this can be used to create a lot of pointers with a
+    very small amount of code.Pointer arithmeticYou can add a value onto a pointer
+    to move it along to the next memory location, let’s say we have a pointer to an
+    integer, and on a 64bit system an int should be 4bytes. So:int * p = new int ;p
+    = p + 1;The code above will move to the next 4 bytes, by “+1” you say move to
+    the next variable sized gap, so for example if we had a “long long” that should
+    be 8 bytes adding one will move 8 bytes along. You can also do this in the opposite
+    direction and take away one, this does the exact same just in the other direction.The
+    example below demonstrates this:#include "stdafx.h"#include <iostream>using namespace
+    std;int main(){​ //A size check​ cout << "int is: " << sizeof (int ) << " bytes"
+    << endl;​ //Creates memory​ int * next = new int [10];​ for (int i = 0; i < 10;
+    i++)​ {​ //Moves along 4 bytes​ cout << next + i << endl;​ }​ //Deletes memory​
+    delete[] next;}Output>int is: 4 byte s>00DDDB50>00DDDB54>00DDDB58>00DDDB5C>00DDDB60>00DDDB64>00DDDB68>00DDDB6C>00DDDB70>00DDDB74As
+    you can see, memory is allocation and the pointer is moved along by 1 each time.
+    As you can see from the output the hexadecimal addresses are 4 different from
+    each other because the memory addresses are adjacent.End of chapter Quiz
+
+
+    1.  What does the flag “ios::app” mean?
+
+
+    2.  Why is it important to close a file?
+
+
+    3.  Which operator is used to writing data to a file?
+
+
+    4.  What does .eof() signify?
+
+
+    5.  What does every recursive function need?
+
+
+    6.  What does #ifudef mean?
+
+
+    7.  What does the “##” operator achieve?
+
+
+    8.  When should “delete []” be used?
+
+
+    9.  What does the “new” operator return?
+
+
+    10.  What does adding 1 to a integer pointer?
+
+
+    Answers
+
+
+    1.  It will open the file in append mode.
+
+
+    2.  It releases resources attached to the file.
+
+
+    3.  Insertion operator (<<).
+
+
+    4.  Is a method that returns true when the end of the file is reached.
+
+
+    5.  A stopping condition to prevent endless looping.
+
+
+    6.  Will include the code it encapsulates if the alias is undefined.
+
+
+    7.  It concatenates and replace two values.
+
+
+    8.  When you want to delete a block of user assign memory.
+
+
+    9.  A pointer to a newly created memory location
+
+
+    10.  If the integer is 4 bytes it will move along 4 bytes.'
+  toc: []
+  trans: "\n\n- 使用 `new[]` 分配一块内存\n- 使用 `delete[]` 释放多块内存\n\n例如，如果我们想创建一个指向 5 个对象指针的数组：\n\
+    \n```cpp\n#include \"stdafx.h\"\n#include <iostream>\nusing namespace std;\n\n\
+    class MyClass{\npublic : \n    MyClass() {\n        cout << \"Made!\" << endl;\n\
+    \    }\n    ~MyClass() {\n        cout << \"Deleted!\" << endl;\n    }\n};\n\n\
+    int main() {\n    //Create\n    MyClass * classes = new MyClass [5];\n    //Delete\n\
+    \    delete[] classes;\n}\n```\n\n输出：\n```\nMade!\nMade!\nMade!\nMade!\nMade!\n\
+    Deleted!\nDeleted!\nDeleted!\nDeleted!\nDeleted!\n```\n\n如你所见，`main()` 函数中的第一行创建了\
+    \ 5 个 `MyClasses`，构造函数执行并打印“Made!”，接下来的代码则释放内存，析构函数执行并打印“Deleted!”，这可以用极少的代码创建大量的指针。\n\
+    \n### 指针算术\n\n你可以给指针加上一个值以将其移动到下一个内存位置。假设我们有一个指向整数的指针，在 64 位系统上一个 `int` 应该是 4\
+    \ 字节。因此：\n\n```cpp\nint * p = new int ;\np = p + 1;\n```\n\n上面的代码将移动到下一个 4 字节。你可能会说\
+    \ `+1` 是移动到下一个变量大小的间隙，例如，如果我们有一个应该是 8 字节的“long long”，加 1 就会移动 8 字节。你也可以向相反方向操作并减\
+    \ 1，这的效果是一样的，只是方向相反。\n\n下面的示例演示了这一点：\n\n```cpp\n#include \"stdafx.h\"\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main() {\n    //A size check\n    cout\
+    \ << \"int is: \" << sizeof (int ) << \" bytes\" << endl;\n    //Creates memory\n\
+    \    int * next = new int [10];\n    for (int i = 0; i < 10; i++) {\n        //Moves\
+    \ along 4 bytes\n        cout << next + i << endl;\n    }\n    //Deletes memory\n\
+    \    delete[] next;\n}\n```\n\n输出：\n```\nint is: 4 bytes\n00DDDB50\n00DDDB54\n\
+    00DDDB58\n00DDDB5C\n00DDDB60\n00DDDB64\n00DDDB68\n00DDDB6C\n00DDDB70\n00DDDB74\n\
+    ```\n\n如你所见，内存被分配，且指针每次移动 1 位。从输出可以看出，十六进制地址之间相差 4，因为内存地址是相邻的。\n\n### 章末测试\n\n\
+    1. 标志 `ios::app` 代表什么？\n2. 为什么关闭文件很重要？\n3. 使用哪个运算符向文件写入数据？\n4. `.eof()` 代表什么？\n\
+    5. 每个递归函数都需要什么？\n6. `#ifdef` 代表什么？\n7. `##` 运算符实现了什么功能？\n8. 什么时候应该使用 `delete []`？\n\
+    9. `new` 运算符返回什么？\n10. 给整数指针加 1 会什么？\n\n### 答案\n\n1. 它将以追加模式打开文件。\n2. 它会释放与文件相关的资源。\n\
+    3. 插入运算符 (`<<`)。\n4. 这是一个在到达文件末尾时返回 true 的方法。\n5. 一个防止无限循环的停止条件。\n6. 如果别名未定义，则将包含其所封装的代码。\n\
+    7. 它连接并替换两个值。\n8. 当你想删除一个块用户分配的内存时。\n9. 指向新创建的内存位置的指针。\n10. 如果整数是 4 字节，它将移动 4\
+    \ 字节。\n\n"

@@ -1,0 +1,32 @@
+name: C++ for Game Developers： Building Scalable and Robust Gaming Applications
+name_cn: 游戏开发者的 C++：构建可扩展且健壮的游戏应用
+slug: c-for-game-developers-building-scalable-and-robust-gaming-ap
+toc:
+- - '#'
+  - 游戏开发者的 C++：构建可扩展且健壮的游戏应用
+- - '##'
+  - 前言
+- - '##'
+  - 序
+- - '##'
+  - 致谢
+- - '#'
+  - 第一章 游戏开发中的 C++ 简介
+- - '##'
+  - 理解 C++ 基础知识
+- - '###'
+  - 核心概念与语法
+- - '###'
+  - C++ 基础
+- - '####'
+  - 变量与数据类型
+- - '####'
+  - 控制流
+- - '####'
+  - 函数
+- - '####'
+  - C++ 中的内存管理
+- - '####'
+  - 面向对象编程快速入门
+- - '####'
+  - 类与对象

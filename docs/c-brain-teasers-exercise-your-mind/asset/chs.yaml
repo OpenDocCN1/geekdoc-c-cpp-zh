@@ -1,0 +1,898 @@
+- "# C++ 脑筋急转弯：锻炼你的思维\n\n\n\n![](img/cover.jpg)\n\n![Pragmatic Bookshelf](img/cover.jpg\
+  \ \"Pragmatic Bookshelf\")\n\n\n\n\n\n\n\n\n## 关于 Pragmatic Bookshelf\n\nPragmatic\
+  \ Bookshelf 是一家敏捷出版公司。我们在这里是因为我们想要改善开发者的生活。我们通过创建由程序员为程序员编写的及时、实用的著作来实现这一点。\n\n\
+  我们的 Pragmatic 课程、工作坊和其他产品可以帮助你和你的团队创建更好的软件并增加乐趣。欲更多信息以及最新的 Pragmatic 作品，请访问我们的网站\
+  \ [`pragprog.com`](http://pragprog.com)。\n\n我们的电子书不包含任何数字版权管理（DRM），并且一直没有 DRM。我们开创了测试书概念，即你可以在书籍编写期间购买并阅读，并向作者提供反馈，以帮助为所有人出一本更好的书。所有购买者的免费资源包括源代码下载（如适用）、错表和讨论论坛，均可以在\
+  \ pragprog.com 的书籍主页上获得。我们在这里是为了让你的生活更轻松。\n\n### 新书公告\n\n想关注我们的最新书籍、公告以及偶尔的特别优惠吗？只需在\
+  \ [pragprog.com](https://pragprog.com) 上创建一个账户（只需一个邮箱地址和一个密码）并勾选接收时事通讯。你也可以在 twitter\
+  \ 上关注我们 @pragprog。\n\n### 关于电子书格式\n\n如果你直接从 [pragprog.com](https://pragprog.com)\
+  \ 购买，你将以一个价格获得所有可用格式的电子书。你可以通过 Dropbox 在你的所有设备（包括 iPhone/iPad、Android、笔记本电脑等）之间同步你的电子书。在版本的寿命周期内，你可以获得免费更新。当然，需要时，你可以随时回来重新下载书籍。从\
+  \ Amazon Kindle 商店购买的电子书受 Amazon 政策限制。Amazon 文件格式的限制可能会导致电子书在设备设备显示不同。更多信息请参阅我们在\
+  \ [pragprog.com/#about-ebooks](https://pragprog.com/support/#about-ebooks) 中的常见。欲了解更多关于本书的信息并访问免费资源，请前往\
+  \ [`pragprog.com/book/akbrain`](https://pragprog.com/book/akbrain)，书籍的主页。\n\n感谢您的持续支持，\n\
+  \nPragmatic Bookshelf\n\n制作本书的团队包括：Dave Thomas（出版商）、Janet Furlow（COO）、Susannah Davidson（执行编辑）、Sandra\
+  \ Williams（开发编辑）、L. Sakhi MacMillan（文字编辑）、Potomac Indexing, LLC（索引）、Gilson Graphics（排版）\n\
+  \n如客户支持，请联系 support@pragprog.com。\n\n国际版权，请联系 rights@pragprog.com。\n\n\n# 《C++ 脑筋题集》早期好评\n\
+  \n如果你是 C++ 爱好者或专业的 C++ 开发者——希望两者兼顾——这本书就是为你准备的。二十五个谜题用通俗 C++ 解释了该语言有时令人惊讶的行为，以及为了避开潜在的陷阱和失望你可能需要的知识。\n\
+  \n| → | Daniela Engert |\n\n|  | ISO C++ 委员会成员及主旨演讲者 |\n\n缺乏经验的程序员将以轻松的方式学习 C++\
+  \ 编程语言中的许多陷阱以及如何避免它们。对要规避什么已有直觉的老深老兵将非常详细地学习该语言的工作原理以及原因。\n\n| → | Björn Fahller\
+  \ |\n\n|  | 国际 C++ 大会演讲者 |\n\n对于任何想要测试自己 C++ 知识的人来说，这是一本有趣且迷人的谜题集。谜题很有趣，解释也很容易。\n\
+  \n| → | Tina Ulbrich |\n\n|  | 国际 C++ 大会演讲者 |\n\n# Olve Maudal 前序\n\n很久以前我在奥斯陆当地的\
+  \ C++ 聚会上第一次见到 Anders Schau Knatten。从那时起，我们一直是会议相遇时聚在一起的朋友。Anders 曾在许多专注于 C++ 的会议上进行过演讲，如\
+  \ ACCU、NDC TechTown、CppCon、C++ on Sea 和 Meeting C++ 等。当我参加他的演讲时，我总能学到新东西。Anders\
+  \ 可以花几个小时讲述整数的真实行为，或者在 `main()` 调用之前发生的所有事情，或者如何有效地使用调试器。他还有这种迷人的能力：观察某些事物，调整它，重塑它，然后将其推向高度。这正是他在参加了我的几次著名的\
+  \ C++ 公益问答活动后所做的。Anders 很快就创建了优秀的网站 `cppquiz.org`([[1]](#f_0004.xhtml_FOOTNOTE-1))（试试看！）。现在他在会议上运行他自己改进版的\
+  \ C++ 公益问答活动。通过这本书，Anders 将自己的理念推向了更远。\n\n我热爱书籍，热爱 C++，也热爱谜题。《C++ 脑筋题集》将这三者结合在了一起。我已经使用并学习\
+  \ C++ 超过 30 年，但我确定我会反复阅读，每次都能学到新东西。如果你深投入 C++，你也会想读它。这本书是深入理解这种极其强大且迷人的编程语言的快速通道。书中包含\
+  \ 25 个精心挑选的 C++ 谜题，将挑战你对该语言的现有理解。当你尝试自己解决谜题后，Anders 将给你一个深入且坚实的解释，说明为什么这个谜题有趣，以及你如何学会推理这些问题。\n\
+  \n你可以用 C++ 编写优美的程序，但也完全可能搞砸。重要的是理解 C++ 之所以是这样，是因为它从 BCPL、C、Simula 67 和 Algol 68\
+  \ 演变而来。C++ 之所以是这样，是因为该语言在早期形成阶段就被迅速采用，并且已经拥有数百万活跃用户。C++ 之所以是这样，是因为它信任程序员并专注于解决现实问题。是的，C++\
+  \ 是复杂的，也许太复杂了，但它确实是许多领域的首选语言（双关语！）例如操作系统、嵌入式系统、高性能计算、性能关键型应用、视频游戏和太空探测器。事实上，这里有\
+  \ Bjarne Stroustrup（C++ 之父）的一句非常有见地的引言：\n\n> 语言只有两种：人们抱怨的语言和没人使用的语言。\n\n祝你在通往深入理解\
+  \ C++ 的旅程中一切顺利。这次 Anders 将是你的指南。玩得愉快！\n\nOlve Maudal 国际 C 和 C++ 演讲者、培训师及会议组织者 2024\
+  \ 年 6 月\n\n### 脚注\n\n\n[`cppquiz.org`](https://cppquiz.org)\n\n\n# 致谢\n\n\n\n\n\n\
+  首先，我要感谢 Olve Maudal 和 ACCU，是他们在 2013 年的 ACCU 会议上启发我创建了 `CppQuiz.org`[[2]](#f_0005.xhtml_FOOTNOTE-2)。我还要感谢多年年来在内容、实现和错误报告方面为\
+  \ `CppQuiz.org` 做出贡献的每个人。\n\n非常感谢我的编辑 Sandra Williams，她在一路上提供了至关重要的帮助。没有了你的指导、支持和建议，这本书将会单薄许多。还要感谢\
+  \ Margaret Eldridge 代表出版社与我联系，感谢 Frances Buontempo 为我们引见介绍。\n\n我很幸运能得到我所认识的一些顶尖\
+  \ C++ 人士的帮助。感谢 Daniela Engert、Björn Fahller、Olve Maudal、Karthik Nishanth、Tom Schultz、Tina\
+  \ Ulbrich、Sergei Vasilchenko 和 Piotr Wierciński 你们在技术审查方面提供的帮助！\n\n最后，我要感谢我的妻子 Charlotte，她的支持让我能够投入编写此书所需的时间和精力，并感谢\
+  \ Kristiane 和 Sebastian 的鼓励。\n\n### 脚注\n\n[[2]](#f_0005.xhtml_FNPTR-2)\n\n[`cppquiz.org`](https://cppquiz.org)\n\
+  \n\n# 前言\n\nC++ 是使用最广泛、最古老的编程语言之一。它以把所有默认行为搞错而闻名，而且正如 C++ 社区著名的例子所说，它能让你鼻子里飞出恶魔。[[3]](#f_0010.xhtml_FOOTNOTE-3))\
+  \ 你找不到更适合编程脑筋急转弯的书了！\n\n通过 25 个谜题，我们将探索 C++ 底工作的，包括它的一些重要特性。为了充分利用这本书，你应该具有一些编写\
+  \ C++ 的经验，并熟悉语言的基础，包括简单的面向对象编程和模板。\n\n完成这本书后，你将对初始化、生命周期、重载解析、隐式转换、继承、未定义行为等主题有更深入的理解。但重要的是，我希望你对\
+  \ C++ 的真实工作原理产生好奇心，即使只有少数几个答案能涵盖在这本书里。\n\n## 如何使用这本书\n\n书中包含了 25 个 C++ 谜题，并附有答案和解释。大多数将是格式良好的程序，C++\
+  \ 标准保证其输出。然而，某些程序可能存在编译错误，另一些可能存在未定义或未指定的行为。你的任务是找出在符合标准的 C++ 实现上编译并运行每个谜题中的程序时会发生什么。\n\
+  \n以这个虚拟的谜题为例，它是一个带有 `main` 函数的完整 C++ 程序：\n\n```cpp\n#include <iostream>\n\nint main()\
+  \ {\n  std::cout << (1 < 2);\n}\n```\n\n你的任务是阅读代码，并尝试猜测程序在编译运行时的输出会是什么。在翻页查看答案之前，请务必自己尝试一下！\n\
+  \n请注意以下技术细节：\n\n* 为了简洁起见，我定义的 `main` 没有参数（没有 `argc` / `argv`），且没有显式返回数值。这些都是可选的，省略它们会让谜题更容易读。\n\
+  * 我在所有的谜题中使用 `struct` 替代了 `class`。这在语义上没有区别——`struct` 的成员默认可见性是公有的而不是私有的，所以我们不需要到处写\
+  \ `public:`。\n* 像 C++ 中一常一样，`bool` 默认打印为 `1` 和 `0`，而不是 `true` 和 `false`。\n\n该谜题的答案是\
+  \ `1` 小于 `2`，所以程序打印 `1`（代表真）。\n\n然而，答对答案只有一半乐趣。另一半是理解它为什么那样运行。谜题是学习更多 C++ 底工作原理的借口。我鼓励你仔细阅读解释，直到理解它们。\n\
+  \n## 未定义行为 (Undefined Behavior)\n\n某些谜题可能包含未定义行为。未定义行为是在程序执行期间发生坏事时的术语，编译器无法（或更具体地说，不需要）检测到它。例如，我们可能会访问数组边界外的元素，或者符号整数的算术表达式可能会溢出。在这些情况下，C++\
+  \ 标准对实现没有任何限制，任何事情都可能发生，包括鼻恶魔。如果一个谜题有未定义行为，你的任务不仅要识别出未定义行为，还要猜测在典型系统上实际上会发生什么。它是真的让恶魔从鼻子里飞出来，还是发生了特定的事情？\n\
+  \n再次，让我们来看一个例子：\n\n```cpp\n#include <iostream>\n#include <limits>\n\nint main()\
+  \ {\n  std::cout << std::numeric_limits<int>::max() + 1;\n}\n```\n\n算术中的符号整数溢出是未定义行为，所以如果你识别出了这一点，你就成功了一半！\n\
+  \n对未定义行为情况下会发生什么做假设是一个坏主意。所以让我们接着做这件事吧！对于任何具有未定义行为的谜题，另一半任务是找出在你的电脑上运行该程序会发生什么。我的电脑对符号整数使用补码（C++20\
+  \ 之后的所有标准实现也是如此），我的 CPU 在溢出时不会产生异常。因此，当我给最大的正整数加 `1` 时，值直接回绕到最小负整数。由于我的系统使用 32 位\
+  \ `ints`，程序打印 `-2147483648`。你不需要知道那个精确数值，但如果你猜到会打印最小负整数，你就解决了它！\n\n| 不要要在家里这样做 |\n\
+  | --- |\n| ![images/aside-icons/warning.png](img/warning.png) | 猜测或测试未定义行为情况下发生什么是一个有趣的练习，可以让你更多地了解\
+  \ C++ 在你平台上的工作方式。它还可能让你在真实程序中看到某些错误模式发生时识别出它们。但不要根据你的发现就对你的真实程序做任何假设！你的假设在其他电脑上、升级编译器后或当你使用不同的优化设置编译时可能是不成立。如果编译器能证明存在未定义行为，它甚至允许从你的代码中移除错误检查！\
+  \ |\n\n## 未指定的和实现定义的行为 (Unspecified and Implementation-Defined Behavior)\n\nC++\
+  \ 标准并没有严格规定所有内容；它为实现留了一些自由空间。以下是一些例子：\n\n* 整数类型的具体大小\n* 函数参数的求值顺序\n* 全局变量的初始化顺序\n\
+  \n这允许每个实现根据该特定系统做出最合理的选择。\n\n大多数程序都具有一些未指定的或实现定义的行为；这并不是 bug。而且与未定义行为相反，恶魔不会从你鼻子里飞出来。只是不同的实现在允许的行为范围内表现可能略有不同。\n\
+  \n如果一个谜题有未指定的或实现定义的行为，请尝试也猜一下典型的行为是什么。\n\n## 动手实践代码\n\n学习任何与编程相关知识最重要的部分就是自己动手。书中的代码可以在\
+  \ The Pragmatic Bookshelf 的主页找到[[4]](#f_0010.xhtml_FOOTNOTE-4)。你可以通过在你喜爱的 IDE 或命令行中打开\
+  \ `CMakeLists.txt` 来本地构建它：\n\n```bash\nmkdir build\ncd build\ncmake ..\ncmake --build\
+  \ .\n```\n\n该项目每个谜题包含一个 `.cpp` 文件，每个文件生成一个二进制文件，命名均与书中对应的谜题相同。\n\n\n\n\n\n你也可以通过将代码粘贴到在线编译器中并在浏览器中直接运行。我强烈推荐使用\
+  \ Compiler Explorer，[[5]](#f_0010.xhtml_FOOTNOTE-5)，你可以在那里选择并比较不同的编译器版本和架构，尝试不同的优化级别，并添加其他编译器标志、清理选项等。\n\
+  \n让我们开始吧！噢，注意那些恶鬼。\n\n### 脚注\n\n[[3]](#f_0006.xhtml_FNPTR-3)\n\n[鼻腔恶鬼 (Nasal Demons)\
+  \ - 计算机术语词典](http://catb.org/jargon/html/N/nasal-demons.html)\n\n[[4]](#f_0010.xhtml_FNPTR-4)\n\
+  \n[`pragprog.com/titles/akbrain`](https://pragprog.com/titles/akbrain)\n\n[[5]](#f_0010.xhtml_FNPTR-5)\n\
+  \n[`godbolt.org`](https://godbolt.org)\n\n\n# 第一部分\n\nC++ 脑筋转弯\n\n### 谜题 1：多少？\n\
+  \n[how-many-degrees.cpp](http://media.pragprog.com/titles/akbrain/code/how-many-degrees.cpp)\n\
+  \n```cpp\n#include <iostream>\nstruct Degrees {\n  Degrees() : degrees_(0) {\n \
+  \   std::cout << \"Default constructed\\n\";\n  }\n  Degrees(double degrees) : degrees_(degrees)\
+  \ {\n    std::cout << \"Constructed with \" << degrees_ << \"\\n\";\n  }\n  double\
+  \ degrees_;\n};\n\nstruct Position {\n  Position() : latitude_{1} { longitude_ =\
+  \ Degrees{2}; }\n  Degrees latitude_;\n  Degrees longitude_;\n};\n\nint main() {\n\
+  \  Position position;\n}\n```\n\n**猜输出**\n![images/aside-icons/important.png](img/important.png)\
+  \ 在进入下一页之前，尝试猜一下输出。\n\n程序显示以下输出：\n\n```\nConstructed with 1\nDefault constructed\n\
+  Constructed with 2\n```\n\n### 讨论\n\n`Position` 结构体有两个类型为 `Degrees` 的成员。其中一个在成员初始化列表中初始化，另一个在构造函数体内初始化。那么，为什么我们看到了三个\
+  \ `Degrees` 对象被构造呢？\n\n在进入构造函数体之前，所有类成员都会被初始化。如果你显式地初始化成员（如我们对 `latitude_` 所的操作），则将使用该初始化。如果你没有（如\
+  \ `longitude_` 的情况），该成员将会被默认初始化，这就是为什么我们看到打印了 `Default constructed` 行。在所有成员初始化完成后，我们最终进入构造函数体，初始化一个临时对象\
+  \ `Degrees{2}`，然后将其拷贝赋值给之前默认初始化的 `longitude_`。\n\n请注意，你不需要在成员初始化列表中显式初始化成员，而是直接在成员声明中使用默认成员初始化，如下所示：\n\
+  \n```cpp\nstruct Position {\n  Position() { longitude = Degrees{2}; }\n  Degrees\
+  \ latitude{1}; // 默认成员初始化\n  Degrees longitude;\n};\n```\n\n如果你有多个构造函数，使用默认成员初始化是一个好主意。这样你就不需要记住在每个成员初始化列表中包含该成员。\n\
+  \n### 扩展阅读\n构造函数与成员初始化列表\n[`en.cppreference.com/w/cpp/language/constructor`](https://en.cppreference.com/w/cpp/language/constructor)\n\
+  \n### 谜题 2：字符串理论\n\n[string-theory.cpp](http://media.pragprog.com/titles/akbrain/code/string-theory.cpp)\n\
+  \n```cpp\n#include <iostream>\n#include <string>\nvoid serialize(const void*) {\
+  \ std::cout << \"const void*\"; }\nvoid serialize(const std::string&) { std::cout\
+  \ << \"const string&\"; }\n\nint main() {\n  serialize(\"hello world\");\n}\n```\n\
+  \n**猜输出**\n![images/aside-icons/important.png](img/important.png) 在进入下一页之前，尝试猜一下输出。\n\
+  \n程序显示以下输出：\n\n```\nconst void*\n```\n\n### 讨论\n\n为什么向 `serialize` 传递字符串会导致调用接收\
+  \ void 指针的重载，而不是接收字符串的重载？\n\n当我们调用具有多个重载的函数时，编译器使用一种名为“重载解析”（overload resolution）的过程来确定哪一个最合适。编译器通过尝试将每个函数参数转换为每个重载对应的参数类型来实现此。某些转换优于其他转换，如果参数本身已经是正确类型，则转换是最好的。\n\
+  \n所有参数均可成功转换的重载都会添加到“可行函数集”（viable functions）集合中。然后，编译器需要从该集合中选择一个重载。如果某个重载至少在一个参数上具有更好的转换，且在其他任何参数上都没有更差的转换，则该重载被视为最佳可行函数并被重载解析选中。如果没有哪个重载比所有其他重载更好，则调用格式错误且编译失败。\n\
+  \n看这个例子：\n\n```cpp\nserialize(int, int); // 1\nserialize(float, int); // 2\n```\n\
+  \n给定这两个重载，假设你这样调用 `serialize`：\n\n```cpp\nserialize(1, 2);\n```\n\n`serialize` 的两个重载都是可行的。但第一个重载在第一个参数上有更好的转换（`int\
+  \ → int` 对比 `int → float`），并且在第二个参数上没有更差的转换（`int → int`），因此它被选为最佳可行函数。\n\n这个谜题比上面的例子简单一点，因为\
+  \ `serialize` 的两个重载都只有一个参数。第一个接收 `const void*`，第二个接收 `const std::string&`。每个重载的转换是怎样的？\n\
+  \n`std::string` 是标准库中的一个类。它通常会在堆上分配内存（除非字符串非常小），并允许字符串在运行时增长或被修改。\n\n然而，字符串 `\"\
+  hello world\"` 并不是 `std::string`，而是简单的字符串字面量。字符串字面量是普通的 C 风格字符数组，它们由链接器编译到二进制文件中，且在运行时无法修改。字符串字面量的类型是\
+  \ `const char array`。`\"hello world\"` 有 11 个字符加上一个终止符 `\\0`，所以它的类型是 `12 const char\
+  \ array`。\n\n由于参数 `\"hello world\"` 既不是 `const void*` 也 `std::string`，而是 `12 const\
+  \ char array`，因此两个重载都需要转换。如果从参数到参数类型存在隐式转换，该重载会被添加到可行函数集中。否则，该重载将被忽略。\n\n让我们检查第一个重载，看看\
+  \ `12 const char array` 是否能隐式转换为 `const void*`。发生的第一件事是数组转换为指针。任何 `N T array` 都可以转换为指向第一个元素的\
+  \ `T pointer`。所以现在，我们的 `12 const char array` 已经变成了 `const char pointer`。\n\n接下来，任何\
+  \ `cv T pointer`（其中 `cv` 表示 `const`、`volatile`、`const volatile` 或三者皆无）都可以转换为 `cv\
+  \ void pointer`。所以现在，我们的 `const char pointer` 变成了 `const void pointer`，这正是第一个重载所预期的。\n\
+  \n\n\n\n\n注意，在这个转换序列中没有涉及任何构造函数或转换函数。这意味着这是一个标准转换序列，而不是用户定义的转换序列。这在稍后变得重要。\n\n现在让我们检查第二个重载函数，看看我们的“12\
+  \ 个 const char 数组”是否可以转换为“const std::string 的引用”。`std::string` 拥有一个构造函数 `std::string(const\
+  \ char* s)`，我们可以使用它。首先，我们像上面那样，将“12 个 const char 数组”转换为“指向 const char 的指针”。然后，我们将此指针传递给\
+  \ `std::string` 构造函数，并返回一个 `std::string` 对象，其中包含该字符串字面量的拷贝。`const std::string&`\
+  \ 参数可以直接绑定到我们的 `std::string` 参数上。\n\n注意，我们必须使用构造函数来实现这一点。这意味着这是一个用户定义的转换序列，而不是标准转换序列。`std::string`\
+  \ 是标准库类型并不重要；它仍然被视为用户定义的。对于你和标准库来说，规则是相同的。\n\n现在，编译器已经找到了从我们的“12 个 const char 数组”到每个重载参数类型的有效转换序列，并且必须弄清楚哪个序列是最好的：\n\
+  \n![images/string-theory-new.drawio.png](img/string-theory-new.drawio.png)\n\n我们只需要一个标准转换序列（顶部）来调用\
+  \ `const void*` 重载。要调用 `std::string` 重载，我们需要一个用户定义的转换序列（底部），这涉及到创建一个新的临时 `std::string`\
+  \ 对象。标准转换序列优于用户定义的转换序列，因此会调用第一个重载，并打印出 `const void*`。\n\n### 延伸阅读\n\n重载解析\n\n[`en.cppreference.com/w/cpp/language/overload_resolution`](https://en.cppreference.com/w/cpp/language/overload_resolution)\n\
+  \n`std::string`\n\n[`en.cppreference.com/w/cpp/string/basic_string`](https://en.cppreference.com/w/cpp/string/basic_string)\n\
+  \n字符串字面量\n\n[`en.cppreference.com/w/cpp/language/string_literal`](https://en.cppreference.com/w/cpp/language/string_literal)\n\
+  \n| 谜题 3 | 攻入星球！ |\n\n[hack-the-planet.cpp](http://media.pragprog.com/titles/akbrain/code/hack-the-planet.cpp)\n\
+  \n```cpp\n#include <iostream>\n\nint getUserId() {\n    return 1337;\n}\n\nvoid\
+  \ restrictedTask1() {\n    int id = getUserId();\n    if (id == 1337) {\n      \
+  \  std::cout << \"did task 1\\n\";\n    }\n}\n\nvoid restrictedTask2() {\n    int\
+  \ id;\n    if (id == 1337) {\n        std::cout << \"did task 2\\n\";\n    }\n}\n\
+  \nint main() {\n    restrictedTask1();\n    restrictedTask2();\n}\n```\n\n| 猜测输出\
+  \ |\n| --- |\n| ![images/aside-icons/important.png](img/important.png) | 在移动到下一页之前，尝试猜输出是什么。\
+  \ |\n\n![images/hline.png](img/hline.png)\n\n该程序存在未定义行为！但它可能会显示以下输出：\n\n| | did\
+  \ task 1 |\n| | did task 2 |\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n\
+  函数 `restrictedTask2` 中的变量 `id` 未初始化，并且有一个不确定的值。使用它的值是未定义行为。当程序遇到未定义行为时，可能会发生任何事情；C++\
+  \ 标准不提供任何保证。即使在我们获取 `id` 的值之前已经发生的程序部分也是未定义的！\n\n然而，如果你在自己的电脑上运行此程序，它可能会同时打印出 `did\
+  \ task 1` 和 `did task 2`，至少在不开启优化的情况下编译是这样。所以值 `1337` 就像魔法一样从 `restrictedTask1`\
+  \ 传送到了 `restrictedTask2`！这可能是如何发生的？\n\n大多数系统使用栈来处理局部变量。`restrictedTask1` 有一个局部变量\
+  \ `id`，它在自己的栈帧中为其预留了空间。恰好，`restrictedTask2` 具有相同数量和类型的局部变量（一个 `int`），因此它的栈帧布局将与\
+  \ `restrictedTask1` 相同。\n\n当在 `main` 中时，栈会增长到某个点——参见下图中左侧的插图。然后我们调用 `restrictedTask1`，栈增长，`restrictedTask1`\
+  \ 在其栈帧中为 `id` 预留空间并将 `id` 初始化为 `1337`。然后控制返回 `main`，栈再次缩小。\n\n![images/hack-the-planet2.drawio.png](img/hack-the-planet2.drawio.png)\n\
+  \n接下来，我们调用 `restrictedTask2`，栈再次增长，`restrictedTask2` 在其栈帧中为 `id` 预留空间但没有对其初始化。然而，`restrictedTask2`\
+  \ 的栈帧最终位于与 `restrictedTask1` 栈帧相同的位置。函数调用之间不会清除栈，因此 `restrictedTask2` 栈帧的内容将与 `restrictedTask1`\
+  \ 离开时完全一样，包括位于局部变量 `id` 位置上的值 `1337`。这导致两个函数中的 `id` 都是 `1337`。\n\n但是，如果你开启优化，`restrictedTask1`\
+  \ 和 `restrictedTask2` 可能会被内联到 `main` 中，且这些调用不会使用栈。你可以尝试通过使用 `-O2` (GCC/Clang) 或\
+  \ `/O2` (MSVC) 进行编译来亲自。在我的 x86_64 Linux 机器上，GCC 使用 `-O2` 会打印 `did task 1`，而 Clang\
+  \ 则会导致段错误。在你的机器上发生了什么呢？\n\n### 避免未定义的变量\n\n为了避免“鼻恶魔”（nasal demons）、像这样的安全漏洞以及一般的垃圾数据，你应该在使用变量之前始终对其进行初始化。这很容易出错，但可以寻求帮助的！首先，始终开启警告编译。GCC、Clang\
+  \ 和 MSVC 都会对这种特殊情况发出警告，`clang-tidy` 等工具也是如此。但这仅仅是因为证明 `id` 在使用时未初始化是非常直接的。通常，我们直到运行时才能知道这一点。这就是检测器（sanitizers）大显身场的地方。\n\
+  \n不同的检测器有不同的用途，但它们都会以各种方式在运行时监控代码，以检测编译器无法检测的问题。其中一种检测器是 `MemorySanitizer`，它旨在捕获对未初始化内存的使用。如果我们使用\
+  \ `MemorySanitizer` 运行此程序（向 Clang 传递 `-fsanitize=memory` 作为编译器选项），它将打印如下内容：\n\n\
+  | | ==1416660==WARNING: MemorySanitizer: use-of-uninitialized-value |\n| | #0 0x5603d43af5eb\
+  \ in restrictedTask2() example.cpp:14 |\n| | #1 0x5603d43af6d in main example.cpp:19\
+  \ |\n\n它告诉你你正在使用未初始化的内存，并给出发生时的堆栈轨迹。\n\n检测器会让你的程序运行慢得多，因此你通常希望有带有检测器的独立构建。检测器只有在问题实际发生于运行时才能检测到，所以请确保尽可能使用此版本运行你的测试套件。\n\
+  \n| 建议 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png) |  \n\n*   始终启用警告。在\
+  \ GCC/Clang 上使用 `-Wall -Wextra -pedantic` 是一个良好的开始，在 MSVC 上使用 `/W4`。\n*    如果你的\
+  \ IDE 支持与 `clang-tidy` 等静态检查工具集成，请开启它们。它们有时可以在你编译代码之前就报告此类问题。\n*   将警告视为错误，至少在你的持续集成（CI）作业中如此，这样你就不会遗漏任何警告。\n\
+  *   为尽可能多的检测器设置检测器构建，并使用这些构建运行测试。\n\n |\n\n### 延伸阅读\n\n未定义行为\n\n[`en.cppreference.com/w/cpp/language/ub`](https://en.cppreference.com/w/cpp/language/ub)\n\
+  \nOlve Maudal 和 Jon Jagger 写的《Deep C (and C++)》\n\n[`www.slideshare.net/olveudal/deep-c`](https://www.slideshare.net/olveudal/deep-c)\n\
+  \n检测器列表\n\n[`github.com/google/sanitizers`](https://github.com/google/sanitizers)\n\
+  \n| 谜题 4 | 全局变量 |\n\n[going-global.cpp](http://media.pragprog.com/titles/akbrain/code/going-global.cpp)\n\
+  \n```cpp\n#include <iostream>\n\nint id;\n```\n\n\n\n\n\n\n```cpp\nint main()\n\
+  {\n  std::cout << id;\n}\n```\n\n## 预测输出\n\n![images/aside-icons/important.png](img/important.png)\
+  \ 在移动到下一页之前，尝试猜一下输出是什么。\n\n![images/hline.png](img/hline.png)\n\n程序显示以下输出：\n\n0\n\
+  \n![images/hline.png](img/hline.png)\n\n### 讨论\n\n这个谜题看起来和谜题 3，谜题 3，入侵星球！ 相似；它们都使用了未初始化变量\
+  \ `id` 的值。然而，与谜题 3 不同，这不是未定义行为，程序打印了 0。这是为什么？\n\n区别在于谜题 3 中的 `id` 是局部变量，它们在每次函数被调用时产生并销毁。它们被认为具有自动存储生存期。而这个谜题中的\
+  \ `id` 是一个全局变量。更准确地说，`id` 是一个具有静态存储生存期的非局部变量；也就是说，`id` 的生命周期贯穿整个程序运行期间。\n\n与具有自动存储生存期的变量不同，具有静态存储生存期的变量是在程序启动时初始化的。对于没有初始化器的\
+  \ `int` 这种简单情况，它会被零初始化。如果 `id` 有一个初始化器，例如 `int id = 2;`，那么我们会说它被常量初始化为 2。（零初始化和常量初始化的统称为静态初始化。）\n\
+  \n为什么具有静态存储生存期且没有初始化器的变量会被初始化为零，而具有自动存储生存期的变量不是？在通常情况下，初始化变量并不是免费的。需要某些代码来执行该初始化。例如，如果你在函数中定义一个局部变量\
+  \ `int id = 0;`，大多数系统在每次调用该函数时都需要产生一些代码将其设置为零。C++ 无法保证这种操作是免费或代价微乎其微，而 C++ 的设计目标之一就是为你不使用的东西付费。因此，如果你决定省略初始化器并仅定义\
+  \ `int id;`，C++ 就不会让你付出那个代价。\n\n局部变量和非局部变量的另一个区别是作用域。局部变量只能在定义它的块中被访问。而非局部变量可以从文件的任何地方访问，或者如果它在头文件中声明，则可以在包含该头文件的整个程序的任何地方访问。所以，如果你省略了局部变量的初始化器，你对它下一次在何处使用有完美的控制。你可能没有给它初始化，是因为你会在接下来的一两行代码中初始化它。但如果你省略了非局部变量的初始化器，想要推理下一步谁会访问它就会困难得多。\n\
+  \n将具有静态存储生存期的非局部变量与具有自动存储生存期的局部变量对比：\n\n| | 初始化代价 | 作用域 |\n| --- | --- | --- |\n\
+  | 非局部静态 | 一次 | 整个文件/程序 |\n| 局部自动 | 每次进入块时 | 定义它的块 |\n\n控制具有静态存储生存期的非局部变量的使用很难，而且初始化它们是廉价的，所以\
+  \ C++ 会为你自动完成。\n\n不过，这有多便宜呢？让我们以 x86 架构为例。我之前提到过你支付一次初始化代价，但实际上你根本没有支付！当你的程序启动时，它需要为栈、堆、程序代码以及对我们来说重要的全局数据分配内存。在\
+  \ Linux 和 Windows 等系统上，当我们从操作系统获取新的物理内存时，它会被填充零，以防止你读取之前使用该相同内存页的程序的内存。编译器/链接器可以将所有未初始化的全局变量放在名为\
+  \ `.bss` 的段中。当程序启动并为 `.bss` 段分配内存时，它已经填充了零。所以这些变量是以零成本进行零初始化的！\n\n>! Note\n> ![images/aside-icons/tip.png](img/tip.png)\
+  \ `static` 一词在 C++ 中有很多用法。`id` 是否具有 `static` 限定符并不影响它的静态存储生存期。对于全局变量，使用 `static\
+  \ int id;` 而不是 `int id;` 只是赋予了它内部链接；也就是说，无法从其他编译单元（其他 cpp 文件）进行链接。无论如何它都有静态存储生存期。\n\
+  \n### 拓展阅读\n\n零初始化\n[`en.cppreference.com/w/cpp/language/zero_initialization`](https://en.cppreference.com/w/cpp/language/zero_initialization)\n\
+  \n关于全局变量初始化更多信息：从程序到进程\n[`www.youtube.com/watch?v=fGnbGX88z3Y`](https://www.youtube.com/watch?v=fGnbGX88z3Y)\n\
+  \n## 谜题 5 破坏性关系\n\n[a-destructive-relationship.cpp](http://media.pragprog.com/titles/akbrain/code/a-destructive-relationship.cpp)\n\
+  \n```cpp\n#include <iostream>\n#include <memory>\n\nstruct Widget\n{\n  virtual\
+  \ void draw() { std::cout << \"Widget draw\\n\"; }\n  virtual ~Widget() { std::cout\
+  \ << \"Widget destructor\\n\"; }\n};\n\nstruct Button : public Widget\n{\n  void\
+  \ draw() override { std::cout << \"Button draw\\n\"; }\n  ~Button() override { std::cout\
+  \ << \"Button destructor\\n\"; }\n};\n\nint main()\n{\n  std::unique_ptr<Widget>\
+  \ widget = std::make_unique<Button>();\n  widget->draw();\n}\n```\n\n## 预测输出\n\n\
+  ![images/aside-icons/important.png](img/important.png) 在移动到下一页之前，尝试猜一下输出是什么。\n\n\
+  ![images/hline.png](img/hline.png)\n\n程序显示以下输出：\n\nButton draw\nButton destructor\n\
+  Widget destructor\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n当我们调用 `draw`\
+  \ 时，程序只打印 `Button draw`。但当 `unique_ptr` 超出作用域并调用析构函数时，程序打印了 `Button destructor`\
+  \ 和 `Widget destructor`。这是为什么？\n\n动态多态的一种常用技术是使用虚函数。你声明一个带有一个或多个标记为 `virtual` 的类的，允许其他类重写这些函数。当你对指向派生类对象的基类指针调用虚函数时，将使用对象的动态类型，并调用重写后的函数。\n\
+  \n在这个示例中，想象有一个 UI 框架，其中包含一个具有某些共同行为的 `Widget` 类，以及 `Button`、`Text` 和 `Image` 等具体的\
+  \ UI 元素，它们在虚函数 `draw` 中重写了绘图行为。\n\n当我们对指向 `Widget` 的基类指针调用 `draw` 时（该指针实际上指向派生类\
+  \ `Button`），调用的是 `Button::draw` 而不是 `Widget::draw`，并打印了 `Button draw`。然而，对于析构函数，行为是不同的；我们可以看到它先打印\
+  \ `Button destructor`，然后也打印 `Widget destructor`。发生了什么？\n\n当对象被销毁时，它的所有部分都必须销毁。在这种情况下，`Button`\
+  \ 继承自 `Widget`，因此每个 `Button` 对象由一个 `Widget` 对象以及 `Button` 的任何成员（在本例中没有）组成。我们说 `Button`\
+  \ 拥有一个 `Widget` 子对象。如果 `Button` 是拥有类型为 `Widget` 的成员而不是继承它，它也会拥有一个 `Widget` 子对象。无论哪种，当完整对象被销毁时，子对象也必须被销毁以避免资源泄漏。幸运的是，C++\
+  \ 为我们处理了这一切；我们不需要在 `Button` 析构函数中手动调用 `Widget` 析构函数。\n\n\n\n\n\n 请注意，析构函数的体首先执行，然后才调用子对象的析构函数。这确保了你仍然可以在类的析构函数中使用成员和基类。因此，程序首先打印\
+  \ `Button` 析构函数，然后打印 `Widget` 析构函数。\n\n| 额外问题 |\n| --- |\n| ![images/aside-icons/note.png](img/note.png)\
+  \ | 如果 `Widget` 没有将其析构函数声明为虚，会发生什么？在哪些情况下会产生问题？ |\n\n根据 C++ 标准，如果被删除对象的静态类型与其动态类型不同，则静态类型必须是被删除对象动态类型的基类，且该静态类型必须具有虚析构函数。否则，行为是未定义的。\n\
+  \n因此，如果 `Widget` 没有将其析构函数声明为虚，而你通过指向 `Widget` 的指针删除一个 `Button` 对象，其行为是未定义的。在实践中，你通常会看到调用的是\
+  \ `Widget` 析构函数 own `Button` 析构函数，并遇到此类问题：\n\n- 派生类的任何成员都没有被销毁，可能导致内存泄漏或其他资源泄漏。\n\
+  - 如果派生类具有用户定义的析构函数，程序的正确性通常依赖于该逻辑在对象销毁时被执行。\n\n但在任何情况下，即使这些问题对你的特定程序没有产生具体影响，而且在测试期间一切看起来正常，你仍然应该将析构函数声明为虚，以避免未定义行为。\n\
+  \n| 建议 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png) | 得益于子对象的自动销毁，处理\
+  \ C++ 资源的良好技术是将资源获取即初始化（RAII）类型（例如 `unique_ptrs`）作为成员。如果你派自此类类，这种技术同样有效。 |\n\n###\
+  \ 扩展阅读\n\n析构函数的 CppReference\n[`en.cppreference.com/w/cpp/language/destructor`](https://en.cppreference.com/w/cpp/language/destructor)\n\
+  \n关于析构函数和子对象的 C++ 标准\n[`timsong-cpp.github.io/cppwp/std20/class.dtor#14`](https://timsong-cpp.github.io/cppwp/std20/class.dtor#14)\n\
+  \n| 谜题 6 | 谁先？ |\n| [whos-up-first.cpp](http://media.pragprog.com/titles/akbrain/code/whos-up-first.cpp)\
+  \ |\n\n```cpp\n#include <iostream>\nstruct Resource {\n  Resource() {\n    std::cout\
+  \ << \"Resource constructed\\n\";\n  }\n};\n\nstruct Consumer {\n  Consumer(const\
+  \ Resource &resource) {\n    std::cout << \"Consumer constructed\\n\";\n  }\n};\n\
+  \nstruct Job {\n  Job() : resource_{}, consumer_{resource_} {}\n  Consumer consumer_;\n\
+  \  Resource resource_;\n};\n\nint main() {\n  Job job;\n}\n```\n\n| 猜输出 |\n| ---\
+  \ |\n| ![images/aside-icons/important.png](img/important.png) | 在移动到下一页之前，尝试猜输出是什么。\
+  \ |\n\n![images/hline.png](img/hline.png)\n\n程序显示以下输出：\n\n```\nConsumer constructed\n\
+  Resource constructed\n```\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n类 `Job`\
+  \ 有两个成员 `consumer_` 和 `resource_`，按该顺序声明的。然而，在构造函数的成员初始化列表中（`: resource_{}, consumer_{resource_}`\
+  \ 部分）中，它们的初始化顺序是相反的。它们实际上按什么顺序初始化呢？\n\nC++ 总是按照成员在类中声明的顺序进行初始化，而不是它们在构造函数成员初始化列表中列出的顺序。这确保了成员总是以确定的顺序初始化，即使不同的构造函数在它们的成员初始化列表中列出了不同的顺序。因此，即使\
+  \ `resource` 看起来在构造函数首先被初始化，实际上先初始化的是 `consumer_`。\n\n如果一个成员依赖于另一个成员，那么以确定的顺序初始化成员至关重要。例如，在这个例子中，`consumer`\
+  \ 在构造函数中依赖 `resource`。构造函数看起来一切正常，但由于 `consumer_` 实际上在 `resource_` 之前初始化，`Consumer`\
+  \ 构造函数接收到的 `Resource` 尚未构造。如果我们尝试用它做任何事情，就会产生未定义行为。\n\n反之亦然。成员的销毁顺序与其在类中的声明顺序相反。销毁顺序可能与构造顺序一样重要，因为一个成员在析构函数中可能依赖另一个成员，或者存在其他的生命周期依赖。例如，假设谜题中的\
+  \ `Consumer` 运行一个使用 `Resource` 的线程，该 `Consumer` 在其析构函数环境中该线程。在当前的代码版本中，`resource_`\
+  \ 在线程仍在运行时被销毁，我们将面临使用已销毁的 `resource_` 的风险，导致未定义行为。然而，如果 `consumer_` 在 `resource_`\
+  \ 之后声明，那么 `consumer` 中的线程会在 `resource_` 被销毁之前停止。\n\n在成员初始化列表中错误的顺序列出成员会让读者感到困惑，因此我建议在成员初始化列表和类声明中使用相同的顺序。`GCC`、`Clang`\
+  \ 和 `MSVC` 都有相应的警告（分别是 `-Wreorder`、`-Wreorder-ctor` 和 `C5038`），如果你不使用一致的顺序会警告你。如果你使用\
+  \ `-Wall / /Wall` 编译，这些警告就会被启用，我总是建议这样做。不同的编译器通常有不同的警告，因此使用多个编译器编译是一个好主意。这还可以帮助你避免意外使用非标准的、特定平台的\
+  \ C++ 变体，这会使以后将项目移植到其他平台变得困难。\n\n| 建议 |\n| --- |\n| - 始终开启警告。<br>- 使用多个编译器编译。 |\n\
+  \n### 扩展阅读\n\n构造函数和成员初始化列表\n[`en.cppreference.com/w/cpp/language/constructor`](https://en.cppreference.com/w/cpp/language/constructor)\n\
+  \n| 谜题 7 | 好事终有尽时 |\n| [all-good-things-must-come-to-an-end.cpp](http://media.pragprog.com/titles/akbrain/code/all-good-things-must-come-to-an-end.cpp)\
+  \ |\n\n```cpp\n#include <iostream>\n#include <string>\n\nstruct Connection {\n \
+  \ Connection(const std::string &name) : name_(name) {\n    std::cout << \"Created\
+  \ \" << name_ << \"\\n\";\n  }\n\n  ~Connection() {\n    std::cout << \"Destroyed\
+  \ \" << name_ << \"\\n\";\n  }\n\n  std::string name_;\n};\n\nConnection global{\"\
+  global\"};\n\nConnection &get() {\n  static Connection localStatic{\"local static\"\
+  };\n  return localStatic;\n}\n\nint main() {\n  Connection local{\"local\"};\n \
+  \ Connection &tmp1 = get();\n  Connection &tmp2 = get();\n}\n```\n\n\n\n\n在谜题 3、谜题\
+  \ 3 入侵星球！ 以及谜题 4、谜题 4 全球化 中，我们学习了全局 id 和局部 id 在生命周期和初始化上的差异：\n\n```cpp\nint id;\
+  \ // 全局变量，整个程序期间只有一个实例\n\nvoid f() {\n    int id = 2; // 局部变量，每次调用 f 时都会重新创建\n}\n\
+  ```\n\n在这个谜题中，我们为对象生命周期添加了两个新的有趣维度：\n\n*   我们不再将变量初始化为简单的常量；而是有了一个带有副作用的构造函数。\n\
+  *   我们引入了具有静态存储周期的局部变量 `localStatic`。\n\n那么，当我们引入构造函数和局部静态变量时，行为会发生什么变化？让我们先考虑全局变量\
+  \ `global`。与之前看到的全局变量 `id` 一样，它具有静态存储周期，这意味着从初始化到程序结束时的销毁，只有一个实例是活跃的。\n\n我们之前见过，没有初始化器的全局\
+  \ `int id;` 被零初始化。我们还提到过，带有初始化器的全局变量 `int id = 2;` 会被常量初始化。两者都是静态初始的示例，静态初始化发生在程序启动期间。另一方面，全局变量\
+  \ `global` 使用非常量表达式初始化。`Connection` 构造函数不是 `constexpr`（它不可能是，因为要向 `std::cout` 输出内容）。无法进行静态初始化的对象改为动态初始化，这发生在较晚之后。\n\
+  \n然而，动态初始化何时发生呢？人们通常认为动态初始化发生在 `main` 之前——这很有道理：这是实现动态初始化的一种简单常见的方法。例如，Linux 有一个函数\
+  \ `__libc_start_main`，它在 `main` 之前被调用。`__libc_start_main` 在最终调用你的 `main` 函数之前会调用全局构造函数。\n\
+  \nC++ 标准并没有要求动态初始化发生在 `main` 之前，它只是允许。然而，标准要求全局变量的动态初始化必须发生在同一个编译单元（TU）中定义的任何函数被调用之前。（编译单元归其底就是包含所有\
+  \ `#include` 文件后的单个 `.cpp` 文件。）因此在这个谜题中，由于 `main` 定义在与 `global` 相同的 TU 中，`global`\
+  \ 实际上保证在 `main` 之前被初始化！\n\n初始化顺序的完整规则相当长且复杂。CppReference.com 有一个介绍,6，而 C++ 标准在 [basic.start].7\
+  \ 中包含了所有细节。\n\n接下来，来看 `localStatic`。像 `global` 一样，`localStatic` 也具有静态存储周期，因此 `localStatic`\
+  \ 只有一个实例，从初始化一直到程序结束。与全局变量不同，局部静态变量不在程序启动时初始化，而是在控制流第一次通过它们的声明时初始化。所以尽管 `localStatic`\
+  \ 具有静态存储周期，直到第一次调用 `get` 时 get 初始化。\n\n最后，`local` 是具有自动存储周期的简单局部变量；它在每次控制流通过其声明时都会初始化。\n\
+  \n让我们来看看程序的执行情况：\n\n*   程序启动，在调用 `main` 之前，`global` 被初始化。\n*   我们进入 `main`，`local`\
+  \ 被初始化。\n*   我们第一次调用 `get`，`localStatic` 被初始化。\n*   我们第二次调用 `get`，但由于 `localStatic`\
+  \ 已经初始化，它不会再次初始化。\n\n但我们还没有结束！我们还需要弄清楚这三个对象何时销毁。幸运的是，销毁规则简单得多。具有自动存储周期的局部对象在其声明的作用域结束时销毁。具有静态存储周期的对象在程序结束时按创建的反序销毁：\n\
+  \n*   当我们退出 `main` 时，`local` 离开作用域并销毁。\n*   `localStatic` 是最后一个初始化的静态存储对象，所以它第一个被销毁。\n\
+  *   `global` 先初始化，最后被销毁。\n\n使用静态局部变量而不是全局变量是更好地控制“全局”变量生命周期的好方法。你不需要每次需要时都引用全局对象，而是调用一个函数来获取它的引用，现在你就可以控制对象初始化的机了！如果你有多个相互依赖的全局变量，这会特别有用。\n\
+  \n最后，注意关于在多个 TU 中定义的全局变量的警告。虽然单个 TU 内部的全局变量初始化是有顺序的，但不同 TU 中的全局变量可以以任何顺序初始化。例如，你可能期望以下程序打印\
+  \ 1，但在我的电脑上它打印的是 0。\n\n[examples/siof/Value.h](http://media.pragprog.com/titles/akbrain/code/examples/siof/Value.h)\n\
+  \n```cpp\nstruct Value {\n    Value(int i_) : i(i_) {}\n    Value(const Value &other)\
+  \ : i(other.i) {}\n    int i;\n};\n```\n\n[examples/siof/source1.cpp](http://media.pragprog.com/titles/akbrain/code/examples/siof/source1.cpp)\n\
+  \n```cpp\n#include \"Value.h\"\n#include <iostream>\n\nextern Value value1;\nValue\
+  \ value2{value1}; // 无法保证 value1 已经初始化！\n\nint main() {\n    std::cout << value2.i;\n\
+  }\n```\n\n[examples/siof/source2.cpp](http://media.pragprog.com/titles/akbrain/code/examples/siof/source2.cpp)\n\
+  \n```cpp\n#include \"Value.h\"\n\nValue value1{1};\n```\n\n这种不同编译单元之间全局变量未知初始化顺序的问题被称为“静态初始化顺序灾难”（SIOF）。8\n\
+  \n| 建议 |\n| :--- |\n| ![images/aside-icons/tip.png](img/tip.png) |\n*   避免全局变量相互依赖，特别是当它们定义在不同的文件中。\n\
+  *   使用 `clang-tidy`；它有一个检查 `cppcoreguidelines-interfaces-global-init`，可以检测某些依赖全局变量的使用。\n\
+  *   使用带有局部静态变量的函数来控制生命周期，而不是全局变量。 |\n\n### 扩展阅读\n\n更多关于动态初始化：如何启动程序\n[`www.youtube.com/watch?v=OGPmZzhDPYw`](https://www.youtube.com/watch?v=OGPmZzhDPYw)\n\
+  \nCppReference.com 关于初始化\n[`en.cppreference.com/w/cpp/language/initialization`](https://en.cppreference.com/w/cpp/language/initialization)\n\
+  \nC++ 标准关于初始化和终止\n[`timsong-cpp.github.io/cppwp/std20/basic.start`](https://timsong-cpp.github.io/cppwp/std20/basic.start)\n\
+  \n静态初始化顺序灾难 (SIOF)\n[`en.cppreference.com/w/cpp/language/siof`](https://en.cppreference.com/w/cpp/language/siof)\n\
+  \n| 谜题 8 | 会移动吗？ |\n[will-it-move.cpp](http://media.pragprog.com/titles/akbrain/code/will-it-move.cpp)\
+  \ |\n\n```cpp\n#include <iostream>\n\nstruct Member {\n};\n\nstruct WillItMove {\n\
+  \    WillItMove() = default;\n    WillItMove(WillItMove &&) = default;\n    const\
+  \ Member constMember_{};\n};\n\nint main() {\n    WillItMove objectWithConstMember;\n\
+  \    WillItMove moved{std::move(objectWithConstMember)};\n    std::cout << \"It\
+  \ moved!\\n\";\n}\n```\n\n| 猜猜输出 |\n| :--- |\n| ![images/aside-icons/important.png](img/important.png)\
+  \ 在移动到下一页之前尝试猜猜输出是什么。 |\n\n![images/hline.png](img/hline.png)\n\n\n\n\n程序显示如下输出：\n\
+  \n| | 它移动了！ |\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n`WillItMove` 有一个\
+  \ `const` 成员。你不能从一个 `const` 对象移动，那么为什么我们仍然从 `objectWithConstMember` 移动呢？\n\n在这个谜题中，我们首先初始化了一个\
+  \ `WillItMove` 对象 `objectWithConstMember`。在接下来的行中，我们初始化了一个新的 `WillItMove` `moved{std::move(objectWithConstMember)};`。`WillItMove`\
+  \ 没有拷贝构造函数，所以初始化 `moved` 的唯一选择是移动构造函数。但移动构造函数如何从 `const` 成员 `constMember` 移动呢？\n\
+  \n让我们从外向内挖掘。\n\n首先，`std::move(objectWithConstMember)`做了什么？`std::move` 实际上并没有移动任何东西；它只是将左值\
+  \ `objectWithConstMember` 转换为右值。然后，这个右值被用于初始化 `moved`。\n\n| 左值与右值 |\n| --- |\n|\
+  \ ![images/aside-icons/note.png](img/note.png) | 左值与右值是分类表达式的一种方式。左值是一个求值为某个实际对象的表达式，该对象具有标识且无法从中移动。例如，表达式\
+  \ `objectWithConstMember` 求值为 `objectWithConstMember` 对象。它有名称且在内存中有位置，且其他人可能仍在使用它，因此类型系统不允许我们从它处移动。传统上，左值倾向于出现在赋值操作的左侧，因此名为左值（left-value）。另一方面，右值是一个求值为可以从中移动的内容的表达式，例如一个任何其他人都无法获取的临时变量。右值倾向于出现在赋值操作的右侧，因此名为右值（right-value）。`std::move`\
+  \ 将左值转换为右值，这是我们告诉类型系统“没关系，你可以继续从这个左值移动；我不再使用它了”的方法。随着 `std::move` 的引入，左值出现在赋值右侧（在\
+  \ `std::move` 内部）变得越来越常见，因此“左值”与“右值”的记忆法没有以前那么好用了。有关左值、右值以及其他值类别的完整概述，请参见 Lvalues,\
+  \ Rvalues, Glvalues, Prvalues, Xvalues, Help!^([9)。 |\n\n注意，尽管我们从一个右值初始化 `moved`，但这并不意味着我们需要使用移动构造函数来初始化它！我们只需要任何能够绑定到右值的构造函数。`const`\
+  \ 左值引用可以绑定到右值，所以如果我们有拷贝构造函数，也可以使用它。然而，我们没有，所以 `WillItMove` 的移动构造函数是我们的唯一选择。\n\n\
+  `WillItMove` 的移动构造函数已经通过 `WillItMove(WillItMove &&) = default;` 这一行被显式默认了，所以让我们关注默认移动构造函数做了什么。它如何能从一个\
+  \ `const` 成员移动呢？\n\n显式默认的移动构造函数使用源对象中的相应成员直接初始化所有子对象。本质上，它的定义类似于如下：\n\n```cpp\n\
+  [examples/default-move/default-move.cpp](http://media.pragprog.com/titles/akbrain/code/examples/default-move/default-move.cpp)\n\
+  ```\n\n| | Class(Class &&other) : |\n| | BaseClass1{std::move(other)}, |\n| | BaseClass2{std::move(other)},\
+  \ |\n| | /* ... */ |\n| | member1_{std::move(other).member1_}, |\n| | member2_{std::move(other).member2_}\
+  \ |\n| | /* ... */ |\n| | {} |\n\n所以对于我们的类 `WillItMove`，它看起来如下：\n\n```cpp\n[examples/default-move/default-move.cpp](http://media.pragprog.com/titles/akbrain/code/examples/default-move/default-move.cpp)\n\
+  ```\n\n| | WillItMove(WillItMove && other) : |\n| | constMember_{std::move(other).constMember_}{}\
+  \ |\n\n同样，即使 `std::move(other).constMember_` 是一个右值，我们也不一定需要使用 `Member` 的移动构造函数来初始化\
+  \ `constMember_`。拷贝或移动构造函数，只要可以绑定到 `std::move(other).constMember_` 即可。由于我们没有为 `Member`\
+  \ 声明任何特殊的成员函数，它隐式地获得了默认的拷贝构造函数和默认的移动构造函数。其中一个能绑定到 `const` 右值 `other.constMember_`\
+  \ 吗？\n\n`Member` 的隐式默认移动构造函数声明如下：\n\n| | Member(Member&&) |\n\n非 `const` 右值引用不能绑定到\
+  \ `const` 右值，因此我们无法使用移动构造函数直接初始化 `constMember_`。\n\n`Member` 的隐式默认拷贝构造函数声明如下：\n\n\
+  | | Member(const Member&) |\n\n常量左值引用可以绑定到 `const` 右值，因此我们可以使用拷贝构造函数直接初始化 `constMember_`。\n\
+  \n因此，`WillItMove` 的显式默认移动构造函数使用了 `Member` 的拷贝构造函数而非 `Member` 的移动构造函数来初始化 `constMember_`。\n\
+  \n### 扩展阅读\n\n移动构造函数\n[`en.cppreference.com/w/cpp/language/move_constructor`](https://en.cppreference.com/w/cpp/language/move_constructor)\n\
+  \n拷贝构造函数\n[`en.cppreference.com/w/cpp/language/copy_constructor`](https://en.cppreference.com/w/cpp/language/copy_constructor)\n\
+  \n直接初始化\n[`en.cppreference.com/w/cpp/language/direct_initialization`](https://en.cppreference.com/w/cpp/language/direct_initialization)\n\
+  \nstd::move\n[`en.cppreference.com/w/cpp/utility/move`](https://en.cppreference.com/w/cpp/utility/move)\n\
+  \n无移动构造函数与删除移动构造函数的区别\n[`blog.knatten.org/2021/10/15/the-difference-between-no-move-constructor-and-a-deleted-move-constructor/`](https://blog.knatten.org/2021/10/15/the-difference-between-no-move-constructor-and-a-deleted-move-constructor/)\n\
+  \n## 谜题 9 | 统计拷贝次数\n\n[counting-copies.cpp](http://media.pragprog.com/titles/akbrain/code/counting-copies.cpp)\n\
+  \n```cpp\n#include <iostream>\n\nstruct Resource\n{\n    Resource() = default;\n\
+  \    Resource(const Resource &other)\n    {\n        std::cout << \"copy\\n\";\n\
+  \    }\n};\n\nResource getResource()\n{\n    return Resource{};\n}\n\nint main()\n\
+  {\n    Resource resource1 = getResource();\n    Resource resource2{resource1};\n\
+  }\n```\n\n猜测输出\n| --- |\n| ![images/aside-icons/important.png](img/important.png)\
+  \ | 在移动到下一页之前，尝试猜测输出是什么。 |\n\n![images/hline.png](img/hline.png)\n\n程序显示如下输出：\n\n\
+  | | copy |\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n在这个程序中似乎发生了三次拷贝。一次是为了用临时\
+  \ `Resource{}` 初始化 `getResource` 的返回对象，一次是为了用该返回对象初始化 `resource1`，还有一次是为了初始化 `resource2`。然而，从\
+  \ `getResource()` 返回并初始化 `resource1` 时并没有发生拷贝。这怎么可能呢？\n\n让我们先看看返回语句，它似乎是从临时 `Resource{}`\
+  \ 初始化返回对象的。返回语句中的表达式 `Resource{}` 是一种被称为 prvalue 的右值，或“纯”右值。在之前的谜题 Puzzle 8 Will\
+  \ It Move? 中，我们首先接触了左值和右值，并了解到右值是你可以从中移动、绑定右值引用到其等的表达式。实际上，右值有两种类型——xvalues 和 prvalues：\n\
+  \n\n\n\n\n*   一个 `xvalue`（或“即将过期的左值”）是在当你对一个左值调用 `std::move` 时得到的结果。例如，在谜题 8 中，*它会移动吗？\
+  \ 中的表达式 `objectWithConstMember` 是一个左值。它求值为一个存在于某处的实际对象，我们可以获取它的地址，等等。当我们执行 `std::move(objectWithConstMember)`\
+  \ 时，我们现在有了一个 `xvalue`。这个表达式仍然求值为一个实际对象，但我们被允许将其视为右值并对其进行移动（move）。\n*   另一方面，一个 `prvalue`\
+  \ 是一个“纯”的右值。它是一个初始化新对象的表达式，而不是仅仅将现有的对象转换为右值。\n\n在 C++11 中，prvalues 是未命名的临时对象，编译器允许省略（或跳过）它们的拷贝。当未命名的临时对象作为返回语句的操作数时，这种形式的拷贝消除（如本谜题所示）被称为无命名返回值优化（URVO）——之所以称为无命名，是因为它适用于函数返回一个未命名的临时对象的情况。在\
+  \ C++17 中，在这些情况下避免拷贝变成了强制性。但语言并没有强制要求 URVO，而是通过改变语言，使得现在从根本上就没有一个可以用来优化掉拷贝的对象了！prvalues\
+  \ 不再是未命名的临时对象；它们仅仅代表一个对象的概念，该对象稍后才会具体化。\n\n另一种形式的返回值优化仍然不是强制性的，被称为具命名返回值优化（NRVO）。这适用于返回一个局部变量而不是\
+  \ prvalue 的情况；在这种情况下，实现允许省略拷贝，但不是必须这样做。即使拷贝构造函数有副作用，NRVO 依然适用；此时这些副作用就根本不会发生。这是一个优化可以改变程序可观测行为的极罕见情况！\n\
+  \n这里有一个同时包含无命名和具命名返回值优化的示例：\n\n[examples/rvo/rvo.cpp](http://media.pragprog.com/titles/akbrain/code/examples/rvo/rvo.cpp)\n\
+  \n```cpp\nResource getResource() {\n    return Resource{}; // 无命名 RVO (C++17 之前)\n\
+  }\n\nResource getResource() {\n    Resource resource;\n    return resource; // 具命名\
+  \ RVO\n}\n```\n\n现在让我们来看表达式 `Resource resource1 = getResource()`，它似乎将返回的对象拷贝到了 `resource1`\
+  \ 中。函数调用是一个 prvalue，所以同样的原理也适用于这里。对 `getResource()` 的调用并没有产生一个临时对象；它仅仅代表了返回值的概念，在\
+  \ `resource1` 用它初始化之前，实际上并没有创建 `Resource` 对象。\n\n在标准中定义诸如“对象的概念”之类的内容固然很好，但在实践中如何实现这一点呢？毕竟，`Resource`\
+  \ 对象最终应该位于 `main` 的栈帧上，但创建它的实际代码在 `getResource()` 中，而该函数无法访问 `main` 的栈帧。\n\n大多数系统使用的用于避免拷贝的技巧是：`main`\
+  \ 在它的栈帧中为 `resource1` 留出空间，就像为其他局部变量留空间一样。然后 `main` 将指向该内存的指针作为一个“秘密”额外参数传递给 `getResource()`，仿佛其签名是\
+  \ `getResource(Resource* ptr)`。现在 `getResource()` 就可以直接在这个内存位置上构造对象。\n\n为了使这种机制生效，调用者和被调用者必须达成这一约定，因此它是系统应用二进制接口（ABI）的一部分。一种流行的\
+  \ ABI 是 Itanium C++ ABI,10，例如它被用于 Linux。`GCC` 和 `Clang` 都符合这一 ABI，所以你可以自由地从由一个编译器编译的函数调用由另一个编译器编译的函数。Itanium\
+  \ C++ ABI 规定：\n\n> 如果返回类型是一个对于调用而言是非平凡的类类型，调用者将一个地址作为隐式参数传递。被调用者随后在该地址上构造返回值。\n\n\
+  如果我们在 Compiler Explorer 上尝试，选择 `x86_64` 架构，我们发现 `GCC` 和 `Clang` 的当前版本在 `main` 中都生成这段代码：\n\
+  \n```assembly\nlea rax, [rbp-4]\nmov rdi, rax\ncall getResource()\n```\n\n`[rbp-4]`\
+  \ 是 `resource1` 在 `main` 栈帧中的地址。这个地址被加载到 `rdi` 寄存器中（用于向函数传递第一个整数/指针参数），然后调用 `getResource()`。\n\
+  \n对于 `MSVC`，要追踪其 ABI ABI 信息较为困难。但使用 Compiler Explorer，我们可以在 `x86_64` 上看到类似的模式：\n\
+  \n```assembly\nlea rcx, QWORD PTR resource1$[rsp]\ncall Resource getResource(void)\
+  \ ; getResource\n```\n\n约定是相同的，除了用于指针的寄存器是 `rcx`。\n\n| 建议 |\n| :--- |\n| 所有主流编译器多年来都同时支持具命名和无命名返回值优化（我早在\
+  \ `Clang` 3、`GCC` 4 和 `Visual Studio` 2008 时就检查过 11\n- 保证的拷贝消除并不消除拷贝\n[`blog.tartanllama.xyz/guaranteed-copy-elision/`](https://blog.tartanllama.xyz/guaranteed-copy-elision/)\n\
+  - 返回值优化/拷贝消除\n[`en.cppreference.com/w/cpp/language/copy_elision`](https://en.cppreference.com/w/cpp/language/copy_elision)\n\
+  - Itanium C++ ABI\n[`itanium-cxx-abi.github.io/cxx-abi/abi.html`](https://itanium-cxx-abi.github.io/cxx-abi/abi.html)\n\
+  - 解释示例中的所有汇编\n[`www.youtube.com/watch?v=I7j6Q8xMc`](https://www.youtube.com/watch?v=I7j6Q8xMc)\n\
+  \n### 谜题 10：奇怪的赋值\n\n[a-strange-assignment.cpp](http://media.pragprog.com/titles/akbrain/code/a-strange-assignment.cpp)\n\
+  \n```cpp\n#include <iostream>\n#include <string>\n\nstd::string getName() {\n  \
+  \  return \"Alice\";\n}\n\nint main() {\n    std::string name{\"Bob\"};\n    getName()\
+  \ = name;\n    std::cout << \"Assigned to a function!\\n\";\n}\n```\n\n| 猜测输出 |\n\
+  | :--- |\n| 在进入下一页之前，尝试猜测输出。 |\n\n程序显示如下输出：\n\n```\nAssigned to a function!\n```\n\
+  \n### 讨论\n\n等等，什么？赋值给函数？这是什么意思？乍一看，我们似乎在将一个变量赋值给函数调用，这与我们常见的 `name = getName()`\
+  \ 相反。让我们仔细观察发生了什么。\n\n表达式 `getName()` 调用 `getName`，返回一个字符串 \"Alice\"。这产生了一个类型为 `std::string`\
+  \ 的临时对象，值为 \"Alice\"。然后我们将变量 `name`（包含值 \"Bob\"）拷贝赋值给这个临时对象。当我们这样看时，一切突然变得合理了。但仔细观察引发了一些问题。\n\
+  \n在谜题 9 中，谜题 9，计算拷贝中你被介绍了 prvalues：\n\n```cpp\nResource getResource() {\n    return\
+  \ Resource{};\n}\n\nResource resource1 = getResource();\n```\n\n\n\n\n在这里我们讨论过，函数调用\
+  \ `getResource()` 是一个 prvalue（纯值），它不会产生一个临时的 `Resource`。相反，返回值直接在 `resource1` 对象中被创建，并且不允许进行任何拷贝。\n\
+  \n这个谜题中的表达式 `getName()` 也是一个 prvalue，因此在我们将它赋值给某个东西之前，返回的对象甚至不存在，而我们并没有这样做！\n\n\
+  如果不存在对象，我们又如何能将 `name` 拷贝赋值给它呢？临时对象实例化（Temporary materialization）来救场。函数调用之所以是 prvalue\
+  \ 且不创建对象的原因是为了避免不必要的拷贝。在之前的 `Resource` 示例中，实际对象的创建被推迟到我们将 `getResource()` 的结果赋值给\
+  \ `resource1` 的时候。但有时我们调用函数仅仅是为了它的副作用，而不将结果赋值给任何东西，就像我们在这个谜题中调用 `getName()` 一样。当我们不对表达式的结果赋值给任何东西时，我们称之为弃值表达式（discarded-value\
+  \ expression）。我们仍然希望创建一个对象，因此会实例化一个临时对象。这就是这里发生的情况——prvalue 表达式 `getName()` 创建了一个临时的\
+  \ `std::string`。\n\n现在我们有了一个真正的 `std::string` 临时对象，我们可以很好地将 `name` 拷贝赋值给它了。\n\n\
+  ### 将引用绑定到 prvalues\n\n| | --- |\n| ![images/aside-icons/note.png](img/note.png)\
+  \ | 临时对象实例化重要的另一个情况是将引用绑定到 prvalue。想象一下，例如假设我们有一个像下面这样的函数：\n\n```cpp\nvoid useName(const\
+  \ std::string& name_ref);\nvoid useName(std::string&& name_ref);\n```\n\n如果我们接着执行\
+  \ `useName(getName());`，那么引用参数 `name_ref` 需要有实际的对象来绑定。而这确实就是将引用绑定到 prvalue 时发生的情况——会实例化一个临时对象。\
+  \ |\n\n### 进阶阅读\n\nLvalues, Rvalues, Glvalues, Prvalues, Xvalues, 帮助！\n\n[`blog.knatten.org/2018/03/09/lvalues-rvalues-glvalues-prvalues-xvalues-help/`](https://blog.knatten.org/2018/03/09/lvalues-rvalues-glvalues-prvalues-xvalues-help/)\n\
+  \n### 谜题 11 | 死亡时刻何时？\n\n[whats-the-time-of-death.cpp](http://media.pragprog.com/titles/akbrain/code/whats-the-time-of-death.cpp)\n\
+  \n```cpp\n#include <iostream>\n\nstruct MemoryArea {\n    MemoryArea(int number)\
+  \ : number_(number) {}\n    ~MemoryArea() { std::cout << \"Freed memory area \"\
+  \ << number_ << \"\\n\"; }\n\n    int number_;\n};\n\nMemoryArea getMemory(int number)\
+  \ {\n    return MemoryArea{number};\n}\n\nstruct DataSource {\n    DataSource(const\
+  \ MemoryArea &memoryArea)\n    : memoryArea_(memoryArea) {}\n    const MemoryArea\
+  \ &memoryArea_;\n};\n\nint main() {\n    const auto &reference1 = getMemory(1);\n\
+  \    std::cout << \"Bound reference 1\\n\";\n    const auto &reference2 = getMemory(2).number_;\n\
+  \    std::cout << \"Bound reference 2\\n\";\n    const auto &reference3 = DataSource(getMemory(3));\n\
+  \    std::cout << \"Bound reference 3\\n\";\n}\n```\n\n**猜猜输出**\n\n| | --- |\n|\
+  \ ![images/aside-icons/important.png](img/important.png) | 在移动到下一页之前，尝试猜猜输出是什么。\
+  \ |\n\n程序显示以下输出：\n\n| Bound reference 1 |\n| Bound reference 2 |\n| Freed memory\
+  \ area 3 |\n| Bound reference 3 |\n| Freed memory area 2 |\n| Freed memory area\
+  \ 1 |\n\n### 讨论\n\n正如我们现在看到的几次的那样，函数调用是一个 prvalue，在那个 prvalue 被用来初始化一个对象之前，该对象并不存在。在上一个谜题中，我们也看到了这个规则的例外：当我们不使用\
+  \ prvalue 来初始化对象时，我们称其为弃值表达式，并获知了此时会实例化一个临时对象。\n\n在这个谜题中，函数调用表达式的结果没有像谜题 9 [计数拷贝]\
+  \ 那样赋值给对象，但也没有像谜题 10 [奇怪的赋值] 那样被丢弃。相反，我们以各种方式将引用绑定到它们。那时会发生什么？\n\n*   对于第一次调用，我们将引用\
+  \ `reference1` 直接绑定到 prvalue。正如我们在谜题 10 中简要提到过的样，会实例化一个临时对象。\n*   对于第二次调用，我们访问了类\
+  \ prvalue 上的成员 `number_`。这是另一个需要实例化临时对象的情况。否则，就没有对象供我们访问其成员。\n*   对于第三次调用，我们将 prvalue\
+  \ 传递给 `DataSource` 构造函数。这实际上与第一次调用的情况相同；构造函数参数 `memoryArea` 绑定到 prvalue，并实例化一个临时对象。\n\
+  \n所以，对于 `getMemory` 的三次调用，每次都实例化了一个临时对象。但它们能存多久呢？\n\n通常，临时对象会在创建它们的完整表达式结束时被销毁。在谜题案例中，这意味着它们将在行尾被销毁。然而，在某些情况下，临时对象的生命周期会被延长。这某种程度上是过去的遗迹，已经不再非常好用。例如，对于\
+  \ `const auto &reference1 = getMemory(1);`，我们不如直接写 `const auto object1 = getMemory(1);`。得益于\
+  \ C++17 对 prvalue 的新规则，仍然不会额外的拷贝，而且我们不需要问这些问题了。问题越意味着代码越好！\n\n那么生命周期延长规则究竟是什么？尽管存在其他规则，但到目前为止最常见且这里相关的规则是这些：\n\
+  \n*   如果你将引用绑定到通过临时实例化获取的对象，那么该临时对象的生命周期与引用的生命周期相同。\n*   如果你将引用绑定到通过临时实例化获取的对象的成员，那么整个临时对象（而不只是成员）的生命周期与引用的生命周期相同。\n\
+  \n让我们检查每一行：\n\n```cpp\nconst auto &reference1 = getMemory(1);\n```\n\n我们将 `reference1`\
+  \ 绑定到从 `getMemory(1)` 得到的临时对象。临时对象 1 在 `reference1` 的寿命内持续——即到 `main` 结束。\n\n```cpp\n\
+  std::cout << \"Bound reference 1\\n\";\n```\n\n打印 Bound reference 1。\n\n```cpp\n\
+  const auto &reference2 = getMemory(2).number_;\n```\n\n我们将 `reference2` 绑定到从 `getMemory(2)`\
+  \ 得到的临时对象的成员 `number_` 上。整个临时对象 2（而不只是成员）在 `reference2` 的寿命内持续——即到 `main` 结束。\n\n\
+  ```cpp\nstd::cout << \"Bound reference 2\\n\";\n```\n\n打印 Bound reference 2。\n\n\
+  ```cpp\nconst auto &reference3 = DataSource(getMemory(3));\n```\n\n我们将构造函数参数 `memoryArea`\
+  \ 绑定到从 `getMemory(3)` 得到的临时对象。这用于创建一个新的 `DataSource` 类型对象。然后我们将 `reference3` 绑定到在调用构造函数时实例化的临时\
+  \ `DataSource`。临时对象 `DataSource` 在 `reference3` 的寿命内持续——即到 `main` 结束。\n\n但等等，这是一个陷阱！一旦\
+  \ `DataSource` 对象构造完成，`memoryArea` 参数就消失了。将其赋值给 `memoryArea_` 成员并没有帮助；那是另一个引用！所以，临时对象\
+  \ `MemoryArea` 3 的生命周期没有被延长，它在行尾就被释放了。打印了 Freed memory area 3，而 `DataSource` 原计划读取的\
+  \ `MemoryArea` 已经释放，现在变成了一个悬空引用。\n```cpp\nstd::cout << \"Bound reference 3\\n\"\
+  ;\n```\n\n打印 Bound reference 3。\n\n\n\n啊，}，这是 C++ 最强大的特性！在作用域结束时，局部变量按照它们构造的反顺序被销毁。首先，`reference3`\
+  \ 被销毁，这意味着临时对象 `DataSource` 被销毁（它的析构函数没有打印任何内容）。接着，`reference2` 被销毁，这意味着临时对象 `2`\
+  \ 被销毁，并打印了 `Destroyed 2`。最后，`reference1` 被销毁，这意味着临时对象 `1` 被销毁，并打印了 `Destroyed 1`。\n\
+  \n| 相关问题 |\n| --- |\n| ![images/aside-icons/warning.png](img/warning.png) | 在 C++\
+  \ 中与临时对象 3 类似的问题并不罕见。这里有一个著名的例子，它直到 C++23 才被修复。（在编写本文时，常见的编译器尚未实现此修复。）[examples/range-for/range-for.cpp](http://media.pragprog.com/titles/akbrain/code/examples/range-for/range-for.cpp)\
+  \ |\n\n```cpp\nclass MemoryAreaContainer {\npublic:\n    MemoryAreaContainer();\n\
+  \    std::vector<MemoryArea>& getMemoryAreas() {\n        return memoryAreas_;\n\
+  \    }\nprivate:\n    std::vector<MemoryArea> memoryAreas_;\n};\n```\n\n```cpp\n\
+  for (const auto &lp : MemoryAreaContainer{}.getMemoryAreas()) {\n    std::cout <<\
+  \ lp.number_ << std::endl;\n}\n```\n\n这看起来是无害的。但为了让临时 `MemoryAreaContainer` 持续到\
+  \ for 循环结束，我们需要对它绑定一个 `const` 引用。我们在这里使用的 `const` 引用并没有绑定到 `MemoryAreaContainer`，而是绑定到\
+  \ `getMemoryAreas()` 的返回值。因此，`MemoryAreaContainer` 临时对象在我们开始迭代之前就被销毁了。我们从 `getMemoryAreas()`\
+  \ 获取的引用指向的是已经销毁的 `memoryAreas_` 成员，是一个悬空引用。（这只是一个简单的简化；请参阅 `stmt.ranged` 以查看范围 for\
+  \ 语句展开后的完整代码。） |\n\n| 建议 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png)\
+  \ | |\n\n* 不要依赖生命周期延长，优于使用 `const auto obj = get()` 而非 `const auto& ref = get()`。\n\
+  * 不要依赖能够跨越函数调用的生命周期延长。\n* 跟上新的 C++ 标准、编译器和工具。许多 bug 在编译器甚至语言本身中被修复。\n* 使用清理器（sanitizers）。特别是地址清理器可以捕捉某些对已销对象的使用。\
+  \ |\n\n### 延伸阅读\n\n临时对象的生命周期\n[`en.cppreference.com/w/cpp/language/reference_initialization#Lifetime_of_a_temporary`](https://en.cppreference.com/w/cpp/language/reference_initialization#Lifetime_of_a_temporary)\n\
+  \n对损坏的范围 for 循环的最终修复\n[`www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p2644r1.pdf`](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2022/p2644r1.pdf)\
+  \ |\n\n| 谜题 12 | 一个错误的开始 |\n[a-false-start.cpp](http://media.pragprog.com/titles/akbrain/code/a-false-start.cpp)\
+  \ |\n\n```cpp\n#include <iostream>\n#include <stdexcept>\n\nstruct Engine {\n  \
+  \  ~Engine() { std::cout << \"Engine stopped\\n\"; }\n};\n\nstruct Machine {\n \
+  \   Machine() { throw std::runtime_error{\"Failed to start machine\"}; }\n    ~Machine()\
+  \ { std::cout << \"Machine stopped\\n\"; }\n\n    Engine engine_;\n};\n\nint main()\
+  \ {\n    try {\n        Machine machine;\n    } catch (...) {\n    }\n}\n```\n\n\
+  | 输出 |\n| --- |\n| ![images/aside-icons/important.png](img/important.png) 尝试猜猜输出。\
+  \ |\n\n![hline.png]\n\n该程序显示以下内容：\n\n```\nEngine stopped\n```\n![hline.png]\n\n\
+  ### 讨论\n\n在上面的谜题中，我们有一个 `Machine` 类，它包含一个 `Engine`。当 `Machine` 在构造期间抛出异常时，`Machine`\
+  \ 并没有完全初始化。那么 `engine_` 会被销毁吗？当我们构造 `Machine` 对象时，初始化顺序如下：\n\n* 虚基类\n* 直接基类\n* 非静态数据成员（如\
+  \ `Machine::engine_`）\n* 构造函数体\n\n当 `Machine` 构造函数抛出异常时，只有已经构造的成员会被销毁。`engine_`\
+  \ 已经构造，因此会被释放；而尚未初始化的成员是不需要处理的，因为它们从未被构造过。但是，如果你在构造函数中手动获取了资源，就必须小心。你不能依赖析构函数来清理它。例如，如果你调用\
+  \ `new` 并将指针赋值给成员，你不能依赖析构函数中的 `delete` 来清理。对于原始的 `open/close` 函数对也是如此。\n\n始终，为了让代码更健壮，请避免手动调用\
+  \ `delete` 和 `close`。相反，请使用标准库类型（如 `unique_ptr` 或 `fstream`）作为成员，它们会自动清理资源。如果你的类管理一个适应标准库类型的自定义资源（例如谜题中需要停止的引擎），请将该责任抽离到一个独立的的小类（如\
+  \ `Engine`），而不是在容器类中手动处理。这样你就不需要考虑管理它；只要它被构造过，就总是会被销毁。 |\n\n\n\n\n```cpp\nstd::cout\
+  \ << std::is_const_v<T>; // true if T is const\n}\n\ntemplate <typename T>\nvoid\
+  \ byReference(T &t) {\n    std::cout << std::is_const_v<T>; // true if T is const\n\
+  }\n\nint main() {\n    int nonConstInt = 0;\n    const int constInt = 0;\n\n   \
+  \ byValue(nonConstInt);\n    byValue(constInt);\n\n    byReference(nonConstInt);\n\
+  \    byReference(constInt);\n}\n```\n\n### 猜输出\n\n![images/aside-icons/important.png](img/important.png)\
+  \ 在移动到下一页之前，尝试猜输出是什么。\n\n![images/hline.png](img/hline.png)\n\n程序显示输出输出：\n\n| 0001\
+  \ |\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n这两个函数模板 `byValue` 和 `byReference`\
+  \ 分别通过值传递和引用传递接收参数。然后，我们使用非 const `int` 和 `const int` 作为参数调用这两个函数模板。在哪些情况下，`T` 被推导为\
+  \ `const`？\n\n在我们开始深入研究推导规则之前，让我们澄清两个容易混淆的概念。`template <typename T>` 中的 `T` 被称为**模板参数**（template\
+  \ parameter）。模板参数推导的目标是找到 `T`。另一方面，函数签名 `byValue(T t)` 和 `byReference(T &t)` 中的\
+  \ `T` 和 `T &` 被称为**模板参数类型**（template parameter types）。这些是函数模板的实际参数类型，也是我们用于推导的对象。\n\
+  \n我们将这些模板参数类型称为 `P`，以区别于模板参数 `T`。这里是三个示例：\n\n| 模板参数 | 模板参数类型 P |\n| --- | --- |\
+  \ --- |\n| template <typename T> | | |\n| void byValue(T t) | T | T |\n| template\
+  \ <typename T> | | |\n| void byReference(T & t) | T | T & |\n| template <typename\
+  \ ValueType> | | |\n| void f(const std::vector<ValueType>& v) | ValueType | const\
+  \ std::vector<ValueType>& |\n\n如你所见，在 `byValue` 和 `byReference` 中，模板参数都是 `T`。在 `byValue`\
+  \ 中，模板参数类型 `P` 只是 `T`，但在 `byReference` 中，它是 `T &`。\n\n处理完这些后，让我们深入研究推导规则。首先，看 `byValue`\
+  \ 的调用：\n\n```cpp\ntemplate <typename T> void byValue(T t);\n\nint nonConstInt =\
+  \ 0;\nconst int constInt = 0;\n\nbyValue(nonConstInt);\nbyValue(constInt);\n```\n\
+  \n记住，模板参数是 `T`，而模板参数类型 `P` 也仅仅是 `T`（与之相对，例如 `T &`）。\n\n在推导模板参数类型 `P` 时，如果它不是引用类型，推导规则规定忽略参数\
+  \ `argument` 的任何顶层 cv 限定符（`const` 或 `volatile`）。由于 `P` 只是 `T`，它不是引用类型，因此 cv 限定符被忽略了。\n\
+  \n等等，无论我们传递的是非 const 还是 const 参数，我们都假装它是非 const 的！这看起来有点猫吗吗？不是。当 `P` 不是引用类型时，意味着我们通过值传递参数。原始参数是否为\
+  \ `const` 无关，`byValue` 内部的参数 `t` 是拷贝，我们无法修改原始参数。\n\n由于顶层 cv 限定符被忽略了，我们在 `byValue`\
+  \ 的两次调用中都从非 const `int` 推导出 `P`，并在两种情况下都发现 `P == int`。由于 `P == T`，`T` 也是非 const\
+  \ 的。两次调用都打印了 0。\n\n接下来，看 `byReference` 的调用：\n\n```cpp\ntemplate <typename T> void\
+  \ byReference(T &t);\n\nint nonConstInt = 0;\nconst int constInt = 0;\n\nbyReference(nonConstInt);\n\
+  byReference(constInt);\n```\n\n模板参数是 `T`，模板参数类型 `P` 是 `T &`。\n\n这一次，`P` 是一个引用，我们不忽略参数的顶层\
+  \ cv 限定符。在这种情况下，这一点非常重要！引用参数 `t` 将绑定到我们的原始参数，因此确保不要尝试（例如）将非 const 引用绑定到 const 参数是非常重要的。\n\
+  \n当传递非 const `nonConstInt` 时，`P` 被推导为 `int &`，这意味着 `T` 是 `int`。它不是 `const`，所以打印\
+  \ 0。\n\n当传递 const `constInt` 时，`P` 被推导为 `const int &`，这意味着 `T` 是 `const int`。它是\
+  \ const，所以打印 1。\n\n模板参数推导的完整规则读起来可能有点困难，但至少关于忽略顶层 cv 限定符的这足够直观，我能够记住它。\n\n### Auto\n\
+  \n![images/aside-icons/tip.png](img/tip.png) `auto` 的推导规则基于模板参数推导规则。既然你知道了这些模板参数推导规则，也就知道了相应的\
+  \ `auto` 推导规则！\n\n```cpp\nauto t1 = nonConstInt; // 非 const 对象\nauto t2 = constInt;\
+  \ // 非 const 对象\nauto &t3 = nonConstInt; // 非 const 对象的引用\nauto &t4 = constInt;\
+  \ // const 对象的引用\n```\n\n### 扩展阅读\n\n模板参数推导\n\n[`en.cppreference.com/w/cpp/language/template_argument_deduction`](https://en.cppreference.com/w/cpp/language/template_argument_deduction)\n\
+  \n从函数调用中推导模板参数\n\n[`timsong-cpp.github.io/cppwp/std20/temp.deduct.call`](https://timsong-cpp.github.io/cppwp/std20/temp.deduct.call)\n\
+  \n### 谜题 14 | 亚里士德的部分之和\n\n```cpp\n#include <iostream>\n#include <type_traits>\n\
+  \nint main() {\n    char char1 = 1;\n    char char2 = 2;\n    // 如果 char1 + char2\
+  \ 的类型为 char 则为真\n    std::cout << std::is_same_v<decltype(char1 + char2), char>;\n\
+  }\n```\n\n\n\n\n让我们看看常规算术转换对我们的表达式 `char1 + char2` 做了什么。由于两个操作数都是整数类型，对它们都会执行一个被称为“整数提升”（integral\
+  \ promotions）的过程。该思想是在执行算术表达式之前，将较小的整数类型转换为 `int` 或 `unsigned int`。在转换了两个操作数后，我们现在可以使用普通的\
+  \ `int` 或 `unsigned int` 加法来相加它们，并得到 `int` 或 `unsigned int` 结果。\n\n提升较小整数类型的规则是：如果\
+  \ `int` 能够表示较小类型的所有值，则它可以转换为 `int`；否则，它可以被转换为 `unsigned int`。`char` 能够放入 `int` 中吗？通常是可以的，但这取决于具体实现。（我告诉过你，这是一个悲惨的故事。）\n\
+  \n这里的一个复杂化因素是，C++ 中基本类型的大小不是固定的。实现可以决定 `int` 是 16 位或 64 位，甚至认为 `char` 和 `long` 的大小相同。唯一的规则是这些：\n\
+  \n* `signed char`、`short`、`int`、`long` 和 `long long` 中的每一个类型都至少与列表中前一个类型一样大。\n*\
+  \ 对于列表中的每种类型，都存在一个无符号版本，其大小与符号版本相同。\n\n还定义了一些最小尺寸：\n\n| 类型 | 最小宽度 |\n| --- | ---\
+  \ |\n| signed char | 8 |\n| short | 16 |\n| int | 16 |\n| long | 32 |\n| long long\
+  \ | 64 |\n\n在典型的 64 位 Linux、Windows 或 macOS 系统上，`int` 是 32 位，而 `long` 在 Linux/macOS\
+  \ 上是 64 位，在 Windows 上是 32 位。但一个符合标准的实现也可以同样地决定所有整数类型都是 64 位。\n\n在这个谜途中，我们特别关注 `char`，但\
+  \ `char` 奇奇地没有出现在上述所有列表中。这是怎么了？`char` 有点特殊，因为实现可以选择由 `signed char` 还是 `unsigned\
+  \ char` 来支持它。无论哪种情况，`char` 是一个不同的类型。因此，`char`、`signed char` 和 `unsigned char` 实际上是三种不同的类型，而普通的\
+  \ `char` 是否有符号是取决于实现定义的！\n\n记住，我们感兴趣的是 `char` 中的所有值是否都能放入 `int` 中，以确定我们的 char 会被转换为\
+  \ `int` 还是 `unsigned int`。通常情况下它们都能放入，所以 `char1 + char2` 的两个操作数都会被转换为 `int`，结果也将是\
+  \ `int`。\n\n但假设实现选择了 `char` 和 `int` 都是 16 位。再假设实现选择了 `char` 是无符号的。那么 `int` 的范围是\
+  \ `-2^(16-1)` 到 `2^(16-1)-1`，即 `-32768` 到 `32767`（包含边界）。`char` 的范围是 `0` 到 `2¹⁶-1`，即\
+  \ `0` 到 `65535`（包含边界）。这意味着，一半的 char 无法放入 `int` 中！在这些系统上，`char1 + char2` 的操作数将会被提升为\
+  \ `unsigned int`，结果也将是 `unsigned int`。\n\n因此，`char1 + char2` 的类型可以是 `int` 也可以是 `unsigned\
+  \ int`。我们唯一确定的是它不是 `char`。\n\n### 延伸阅读\n\n* 常规算术混惑：[`shafik.github.io/c++/2021/12/30/usual_arithmetic_confusions.html`](https://shafik.github.io/c++/2021/12/30/usual_arithmetic_confusions.html)\n\
+  * 64 位数据模型：[`en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models`](https://en.wikipedia.org/wiki/64-bit_computing#64-bit_data_models)\n\
+  * 基本类型：[`timsong-cpp.github.io/cppwp/std20/basic.fundamental`](https://timsong-cpp.github.io/cppwp/std20/basic.fundamental)\n\
+  * 常规算术转换：[`timsong-cpp.github.io/cppwp/std20/expr.arith.conv`](https://timsong-cpp.github.io/cppwp/std20/expr.arith.conv)\n\
+  * 整数提升：[`timsong-cpp.github.io/cppwp/std20/conv.prom`](https://timsong-cpp.github.io/cppwp/std20/conv.prom)\n\
+  \n### 谜题 15 | 来自来自未来\n\n[back-from-the-future.cpp](http://media.pragprog.com/titles/akbrain/code/back-from-the-future.cpp)\n\
+  \n```cpp\n#include <future>\n#include <iostream>\n\nint main() {\n    char counter\
+  \ = 0;\n    auto future1 = std::async(std::launch::async, [&]() {\n        counter++;\n\
+  \    });\n    auto future2 = std::async(std::launch::async, [&]() {\n        return\
+  \ counter;\n    });\n\n    future1.wait();\n    // 强制转换为 int 以作为数值值而不是字符打印\n   \
+  \ std::cout << (int)future2.get();\n}\n```\n\n在移动到下一页之前，尝试猜猜输出是什么。\n\n该程序具有未定义行为（undefined\
+  \ behavior）！重要的是，答案并不是“ 0 或 1”。\n\n### 讨论\n\n当两个未同步的线程访问同一个内存位置，且这些访问中至少有一个修改操作时，我们就发生了数据竞态（data\
+  \ race）。这个程序启动了两个线程，一个修改 `counter`，另一个读取它。由于我们没有努力同步这两个线程，该程序存在数据竞态。\n\n如果你在你的机器上运行这个程序，你很可能会看到\
+  \ 0 或 1，取决于哪个线程先到达 `counter`。`counter` 是单字节的，所以你不可能看到（例如）任何写入了一半的值。`counter++` 操作要么在第二个线程读取\
+  \ `counter` 之前完全发生，要么在它之后完全发生。但这并不意味着你可以依赖此来实现某种“最终一致性”的逻辑！数据竞态会导致未定义行为，因此任何事情都可能发生。记住我们在序言中讨论过的——魔鬼可能会从你的鼻子里飞出来。不要尝试对未定义行为下的情况进行推理或测试。你的程序可能看起来运行正常，但在编译器升级后在另一个系统上崩溃，或者每运行一百万次就会崩溃。\n\
+  \n为了让这些线程安全地访问 `counter`，需要某种同步机制。经典的解决方案是用 `mutex` 保护 `counter`，但这很繁琐而且还引入了锁。锁可能是慢的，有锁的地方就可能死锁。更好的方法是使用原子变量（atomic），如下：\n\
+  \n[examples/std_atomic/std_atomic.cpp](http://media.pragprog.com/titles/akbrain/code/examples/std_atomic/std_atomic.cpp)\n\
+  \n```cpp\nstd::atomic<char> counter = 0;\nauto future1 = std::async(std::launch::async,\
+  \ [&]() {\n    counter++;\n});\nauto future2 = std::async(std::launch::async, [&]()\
+  \ {\n    return counter.load();\n});\n```\n\n使用 `std::atomic` 代替 `mutex` 可以使代码更简单，避免引入\
+  \ `mutex` 额外的变量，确保我们不会忘记锁定 `mutex`，并且可能使代码无锁化（lock-free）。\n\n### 无锁原子操作\n\n`std::atomic<char>`\
+  \ 是否无锁取决于实现，但它通常是无锁的。你可以通过 `std::atomic` 类模板的 `is_lock_free` / `is_always_lock_free`\
+  \ 成员在你的系统上检查：[examples/std_atomic/std_atomic.cpp](http://media.pragprog.com/titles/akbrain/code/examples/std_atomic/std_atomic.cpp)\n\
+  \n```cpp\nstatic_assert(counter.is_always_lock_free());\nassert(counter.is_lock_free());\n\
+  ```\n\n* 如果对于给定的 `T` `std::atomic<T>` 总是无锁的，则 `is_always_lock_free` 为真。这是一个 `static\
+  \ constexpr` 成员，可以在编译时检查。\n* 如果 `std::atomic<T>` 的特定实例无锁的，则 `is_lock_free()` 为真，即使\
+  \ `is_always_lock_free` 为假它也可能为真。某些原子变量例如可能只有在对齐时才是无锁的。这只能在运行时检查。\n\n在我的 M1 Macbook\
+  \ 和 x86_64 Linux 机器上，`int`、`long` 和 `double` 的 `std::atomic` 都是始终无锁的。\n\n\n\n\n\n\
+  检测数据竞态（data races）的一个工具是免费的 `ThreadSanitizer`。它是 LLVM 自带的许多检测器之一，只需通过传递 `-fsanitize=thread`\
+  \ 编译器选项并运行程序即可启用它。对于这个谜题，它会告诉你类似如下的内容：\n\n```text\n| ​  | WARNING: ThreadSanitizer:\
+  \ data race (pid=2735) |\n| ​  | Read of size 1 at 0x7ffed85a35cf by thread T2:\
+  \ |\n| ​  | (... stack trace ...) |\n| ​  |  |\n| ​  | Previous write of size 1\
+  \ at 0x7ffed85a35cf by thread T1: |\n| ​  | (... stack trace ...) |\n| ​  |  |\n\
+  | ​  | Location is stack of main thread. |\n| ​  |  |\n| ​  | Location is global\
+  \ '??' at 0x7ffed8584000 ([stack]+0x1f5cf) |\n| ​  |  |\n| ​  | Thread T2 (tid=2738,\
+  \ running) created by main thread at: |\n| ​  | (... stack trace ...) |\n| ​  |\
+  \  |\n| ​  | Thread T1 (tid=2737, finished) created by main thread at: |\n| ​  |\
+  \ (... stack trace ...) |\n```\n\n如你所见，它不仅告诉你有存在数据竞态，还告诉了变量的位置、读取和写入变量的代码堆栈跟踪，以及线程创建的堆栈跟踪。非常有用的东西！\n\
+  \n| 建议 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png) |  \n\n- 如果共享变量中至少有一个是写操作，请始终对这些访问进行同步。\n\
+  - `std::atomic` 通常是值同步的极佳选择。\n- 使用检测器（sanitizers）。\n\n| |\n\n### 延伸阅读\n\n`std::async`\n\
+  [`en.cppreference.com/w/cpp/thread/async`](https://en.cppreference.com/w/cpp/thread/async)\n\
+  \n`std::atomic`\n[`en.cppreference.com/w/cpp/atomic/atomic`](https://en.cppreference.com/w/cpp/atomic/atomic)\n\
+  \nC++ 标准中的数据竞态定义\n[`timsong-cpp.github.io/cppwp/std20/intro.races`](https://timsong-cpp.github.io/cppwp/std20/intro.races)\n\
+  \n`ThreadSanitizer`\n[`clang.llvm.org/docs/ThreadSanitizer.html`](https://clang.llvm.org/docs/ThreadSanitizer.html)\n\
+  \n### 谜题 16：一个重载的容器\n\n源码引用：`[an-overloaded-container.cpp](http://media.pragprog.com/titles/akbrain/code/an-overloaded-container.cpp)`\n\
+  \n```cpp\n#include <initializer_list>\n#include <iostream>\nstruct Container {\n\
+  \    Container(int, int) {\n        std::cout << \"Two ints\\n\";\n    }\n    Container(std::initializer_list<float>)\
+  \ {\n        std::cout << \"std::initializer_list<float>\\n\";\n    }\n};\n\nint\
+  \ main() {\n    Container container1(1, 2);\n    Container container2{1, 2};\n}\n\
+  ```\n\n| 猜猜输出 |\n| --- |\n| ![images/aside-icons/important.png](img/important.png)\
+  \ | 在移动到下一页之前，尝试猜猜输出是什么。 |\n\n程序显示如下输出：\n```text\nTwo ints\nstd::initializer_list<float>\n\
+  ```\n\n加问题：如果我们移除 `initializer_list` 构造函数会发生什么？它还能通过编译吗？\n\n### 讨论\n\n`struct Container`\
+  \ 有两个构造函数，一个接收两个 `int`，另一个接收一个 `std::initializer_list<float>`。构造了两个 `Container`\
+  \ 类型的对象，都以两个 `int` 作为参数。但区别在于，一个对象是使用括号 `(1,2)` 构建的，另一个是使用大括号 `{1,2}` 构建的。在种情况下调用了哪个构造函数？\n\
+  \n对于 `Container container1(1, 2)`，重载解析不出所料地选择了接收两个 `int` 的构造函数。\n\n对于 `Container\
+  \ container2{1, 2}`，重载解析选择了接收 `std::initialization<float>` 的构造函数，尽管我们传递了两个 `int`！这意味着\
+  \ `{1,2}` 是一个 `std::initializer_list` 吗？不是，`{1,2}` 并不是 `std::initializer_list<int>`，而是被称为\
+  \ `braced-init-list`（列表初始化列表）的表达式。`braced-init-list` 是一对包含零或多个元素的大括号。它可以出现在几种环境中；最常见的是用于初始化。以下是一些用于初始化的\
+  \ `braced-init-lists` 示例：\n\n源码引用：`[examples/braced-init-list/braced-init-list.cpp](http://media.pragprog.com/titles/akbrain/code/examples/braced-init-list/braced-init-list.cpp)`\n\
+  \n```cpp\nstd::array<int, 3> a{1, 2, 3};\nint i{2};\nint j{};\nf({1, 2});\nstd::map<int,\
+  \ std::string>{{1, \"one\"}, {2, \"two\"}};\nreturn {1, 2};\n```\n\n从 `i` 和 `j`\
+  \ 的初始化可以看出，即使大括号之间只有零或一个元素，而不是一个项的“列表”，该表达式仍被称为 `braced-init-list`。\n\n来自 `braced-init-list`\
+  \ 的初始化被称为 `list-initialization`（列表初始化），不幸的是，在这些语境下 `braced-init-list` 被称为 `initializer\
+  \ list`。`initializer list` 并不等同于类模板 `std::initializer_list<T>`。这些名字相当误淆。\n\n所以，如果\
+  \ `{1,2}` 不是 `std::initializer_list`，为什么它选择了 `std::initializer_list` 构造函数呢？重载解析对\
+  \ `list-initialization` 有一个特殊情况，它分为两个阶段：\n\n- 首先，它对所有接收 `std::initializer_list`\
+  \ 的构造函数进行重载解析，将 `braced-init-list` 视为单个参数。\n- 然后，且只有在第一阶段未成功时，它才对其他构造函数进行重载解析，将\
+  \ `braced-init-list` 中的元素视为独立的参数。\n\n因此在 `Container container2{1, 2}` 的情况下，重载解析首先尝试\
+  \ `std::initializer_list<float>` 构造函数。`int` 可以隐式转换为 `float`，同样，`int` 的初始化列表可以用于创建\
+  \ `std::initializer_list<float>`。因此，选中了 `std::initializer_list<float>` 构造函数，另一个构造函数甚至没有被考虑过。\n\
+  \n现在回答加问题：如果我们移除 `std::initializer_list<float>` 构造函数会发生什么？对于 `Container container1(1,\
+  \ 2)`，没有变化，因为这不是 `list-initialization`。对于 `Container container2{1, 2}`，重载解析在第一阶段没有找到任何接收\
+  \ `std::initializer_list` 的构造函数并移动到另一个构造函数。两种情况下都使用了接收两个 `int` 的构造函数，程序仍然可以编译。\n\
+  \n| std::vector |\n| --- |\n| ![images/aside-icons/note.png](img/note.png) | 如果你想过为什么\
+  \ `std::vector<int> v(1,2)` 得到一个元素为 2 的 vector，而 `std::vector<int> v{1,2}` 得到有两个元素\
+  \ 1 和 2 的 vector，现在你知道为什么了。 |\n\n- 第一种情况不是 `list-initialization`，它选择了接收 `size_type`\
+  \ 和 `T` 的构造函数。\n- 第二种情况是 `list-initialization`，它选择了接收 `std::initializer_list<T>`\
+  \ 的构造函数。\n\n### 谜题 17：强点\n\n源码引用：`[a-strong-point.cpp](http://media.pragprog.com/titles/akbrain/code/a-strong-point.cpp)`\n\
+  \n```cpp\n#include <iostream>\nstruct Points {\n    Points(int value) : value_(value)\
+  \ {}\n    int value_;\n};\n\nstruct Player {\n    explicit Player(Points points)\
+  \ : points_(points) {}\n    Points points_;\n};\n\nint main() {\n    Player player(3);\n\
+  \    std::cout << player.points_.value_;\n}\n```\n\n| 猜猜输出 |\n| --- |\n\n\n\n\n\n\
+  | ![images/aside-icons/important.png](img/important.png) | 在移动到下一页之前，尝试猜一下输出是什么。\
+  \ |\n\n程序显示了如下输出：\n\n|  | 3 |\n\n### 讨论\n\n`Player` 结构体有一个成员 `points_`，用于跟踪玩家的分数。我们没有使用\
+  \ `int` 这种基本类型来表示，而是使用了一个自定义类型 `Points`。这种技术通常被称为“强类型”，它可以使代码更易读并避免产生错误。例如，假设有一个函数\
+  \ `do_something(int player_id, int points, int lives)`，很容易失误并将参数传递为 `player_id,\
+  \ lives, points`，导致生命值数量被用作分数，反之亦然。当你为这些值使用独立的强类型时，这种错误会导致程序编译失败，而不是产生一个 bug（错误）。\n\
+  \n这个谜题中的问题是，我们是否允许直接从 `int` 构建一个 `Player` 对象（就像我们在表达式 `Player player(3)` 中做的那样），还是我们需要手动创建一个强类型\
+  \ `Points` 的对象并传递给 `Player` 构造函数。\n\n为了让 `Player player(3)` 运行，我们需要从 `int` 的隐式转换。只有没有标记为\
+  \ `explicit` 的构造函数（即所谓的转换构造函数）才能参与隐式转换。`Player` 的构造函数被标记为 `explicit`，因此它不是转换构造函数，那么这种转换是如何运作的呢？\n\
+  \n`Player player(3)` 是直接初始化的一个示例（`Player player{3}` 也是，但例如 `Player player = 3` 则不是）。我喜欢认为我们正在直接调用\
+  \ `Player` 的构造函数。在直接初始化中，使用重载解析来选择最佳构造函数。当我们从 `int` 直接初始化一个 `Player` 时，重载解析会尝试寻找从\
+  \ `int` 到 `Player` 的每个构造函数的隐式转换序列。`Player` 只有一个接收 `Points` 的构造函数，因此我们需要从 `int` 到\
+  \ `Points` 的隐式转换。`Points` 的构造函数不是 `explicit`，所以它是一个转换构造函数，可以使用于隐式转换序列。`3` 被隐式转换为\
+  \ `Points`，然后这个 `Points` 对象被传递给 `Player` 的构造函数。\n\n`Player` 构造函数本身并没有参与隐式转换；记住，我们是直接调用它的。所以它是否为\
+  \ `explicit` 并没有区别。\n\n另一方面，如果 `Points` 的构造函数是 `explicit` 的，那么它将不再是转换构造函数，并且无法用于隐式转换序列。我们不再不再能将\
+  \ `int 3` 隐式转换为 `Points`，程序将无法编译。\n\n为你的强类型加上 `explicit` 构造函数会使代码稍微冗长，但也更健壮。回到 `do_something`\
+  \ 的例子，你现在必须写 `do_something(PlayerId{42}, Points{3}, Lives{1})` 程序才能编译，而使用转换构造函数时，你仍然可能误写为\
+  \ `do_something(42, 1, 3)` 程序依然可以编译。我也觉得前者更具读性。\n\n| 拷贝初始化 vs. 直接初始化 |\n| --- |\n\
+  | ![images/aside-icons/note.png](img/note.png) | 如果我们写成这样呢：Player player = 3 这种形式被称为拷贝初始化，与直接初始化略有不同。现在我们不再直接调用\
+  \ `Player` 构造函数；而是尝试将 `int` 隐式转换为 `Player`。隐式转换序列只能包含一个用户定义的转换，但我们需要一个从 `int` 到\
+  \ `Player` 的转换，然后是第二个从 `Player` 到 `Points` 的转换。因此，无论任何构造函数是否为 `explicit`，`Player\
+  \ player = 3` 永远无法编译。 |\n\n| 建议 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png)\
+  \ | |\n\n- 将单参数构造函数标记为 `explicit`，以避免意外的隐式转换。\n- 使用强类型代替基本类型以避免 bug。\n- 考虑使用强类型库，例如\
+  \ Björn Fahller 的 `strong_type`，以减少创建强类型时的样板代码。 |\n\n### 进阶阅读\n\n直接初始化\n[`en.cppreference.com/w/cpp/language/direct_initialization`](https://en.cppreference.com/w/cpp/language/direct_initialization)\n\
+  \n拷贝初始化\n[`en.cppreference.com/w/cpp/language/copy_initialization`](https://en.cppreference.com/w/cpp/language/copy_initialization)\n\
+  \nC++ 核心准则 C.46: 默认声明单参数构造函数为 explicit\n[`isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c46-by-default-declare-single-argument-constructors-explicit`](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c46-by-default-declare-single-argument-constructors-explicit)\
+  \ |\n\n| 谜题 18 | 移出 (Moving Out) |\n[moving-out.cpp](http://media.pragprog.com/titles/akbrain/code/moving-out.cpp)\
+  \ |\n\n```cpp\n#include <iostream>\n#include <string>\n\nint main() {\n    std::string\
+  \ hello{\"Hello, World!\"};\n    std::string other(std::move(hello));\n    std::cout\
+  \ << \"'\" << hello << \"'\";\n}\n```\n\n| 猜猜输出 |\n| --- |\n| ![images/aside-icons/important.png](img/important.png)\
+  \ | 在移动到下一页之前，尝试猜一下输出是什么。 |\n\n程序具有未定义行为（unspecified behavior）！但它可能输出如下：\n\n|  |\
+  \ '' |\n\n### 讨论\n\n被移动过的对象（moved-from object）不应再次使用，因为资源已经从中移出，指针可能会指向已销毁的对象等等。\n\
+  \n一个特定的被移动过的对象的行为取决于该类的实现者。实现者在这里有很大的自由度，但至少对象应该是安全的销毁的，这样当一个被移动过的局部变量离开作用域时，就不会发生任何问题。除非明确说明，否则作为用户，你不应该假设某个类提供了进一步的保证。\n\
+  \nC++ 标准为标准库中的类提供了额外的保证，尽管如此：\n\n> C++ 标准库中定义的类型对象可以被移动。……除非另有说明，此类被移动过的对象应处于一个有效但未指定的状态。\n\
+  \n`std::string` 没有做另行说明，因此被移动过的字符串被放置在“有效但未指定的状态”。但这意味着什么呢？\n\nC++ 标准提供了以下定义：\n\n\
+  > (a) 对象的的值未指定，除非该对象满足不变性（invariants），且对对象的操作按照其类型指定的方式执行。\n\n所以，虽然我们不知道被移动过的字符串包含什么，但我们至少知道\
+  \ `.size()` 返回的是其中剩余字符串的大小，`.empty()` 在当且仅当 `.size() == 0` 时为真，以此此类推。尽管如此，对象的实际状态是未指定的，我们无法确定输出是什么，因此最好完全避免使用被移动过的对象。\n\
+  \n| std::string 移动构造函数的实现 |\n| --- |\n\n\n\n\n\n实现 `std::string` 移动构造函数的一种典型方式是让新字符串“窃取”旧字符串的内存以避免拷贝。此时，重要的是不能再通过旧字符串对象访问这块内存，否则对其中一个字符串的修改也会影响另一个。同样重要的一点是，旧字符串不要在它的析构函数中尝试释放这块内存。如果\
+  \ `std::string` 是通过一个指向堆上字符串缓冲区的指针实现的，可以想象移动构造函数将旧字符串的缓冲区指针设为 `null`。你可以使用类似的技术为你自己的类实现移动操作。\n\
+  \n某些实现通过将字符串存储在 `std::string` 对象内部而不是在堆上分配缓冲区来优化短字符串，这种技术被称为短字符串优化（Short String\
+  \ Optimization）。在这些情况下，移动构造函数无法窃取旧字符串的内存，因此需要拷贝。对于这种被移动过的字符串（moved-from string），一个合理的有效状态是它仍然包含原始字符串。我在\
+  \ Windows、Mac 和 Linux 上都测试了这一点，包括长字符串和短字符串。在所有情况下，它们输出的空字符串 `\"\"`。但正如常遇到的遇到未定义行为一样，我不会假设这总是成立的。我只会假设\
+  \ `std::string` 的不变性是满足的。\n\n### 建议\n\n- 不要使用被移动过的对象（销毁它们除外）。\n- 在你自己的类中，尝试让移动构造函数和移动赋值运算符将对象置于一个仍然满足不变性的有效状态。\n\
+  - 如果你做不到，至少确保调用析构函数是安全的。\n\n### 延伸阅读\n\n- `std::string` 构造函数：[`en.cppreference.com/w/cpp/string/basic_string/basic_string`](https://en.cppreference.com/w/cpp/string/basic_string/basic_string)\n\
+  - 库类型被移动后的状态：[`timsong-cpp.github.io/cppwp/std20/lib.types.movedfrom`](https://timsong-cpp.github.io/cppwp/std20/lib.types.movedfrom)\n\
+  - 有效但未指定的状态：[`timsong-cpp.github.io/cppwp/std20/defns.valid`](https://timsong-cpp.github.io/cppwp/std20/defns.valid)\n\
+  \n### 谜题 19：小求和\n\n[a-little-sum-thing.cpp](http://media.pragprog.com/titles/akbrain/code/a-little-sum-thing.cpp)\n\
+  \n```cpp\n#include <iostream>\n#include <numeric>\n#include <vector>\n\nint main()\
+  \ {\n    std::vector<int> v{-2, -3};\n    std::cout << std::accumulate(v.cbegin(),\
+  \ v.cend(), v.size());\n}\n```\n\n### 猜输出\n\n在进入下一页之前，尝试猜猜输出是什么。\n\n程序具有实现定义的行为（implementation-defined\
+  \ behavior）！但它输出了一个很大的数字，例如这个：\n\n```\n18446744073709551613\n```\n\n### 讨论\n\nvector\
+  \ 的大小为 2。当我们向它加上 -2 和 -3 时，为什么结果不是 -3 呢？\n\n`std::accumulate` 函数模板定义如下：\n\n```cpp\n\
+  template<class InputIterator, class T>\nconstexpr T accumulate(InputIterator first,\
+  \ InputIterator last, T init);\n```\n\n> 影响：通过用初始值 `init` 初始化累加器 `acc`，然后按照顺序对范围\
+  \ `first, last)` 中的每个迭代器 `i` 修改它（`acc = std::move(acc) + *i`……）来计算结果。\n\n让我们从推导模板参数开始。`InputIterator`\
+  \ 将被推导为 vector 的迭代器类型，这对于这个谜题没有意义，因为它只用于迭代。另一方面，`T` 将被推导为 `std::vector<int>::size()`\
+  \ 的类型，这是解题的关键。`std::vector<int>::size()` 返回 `size_type`，标准并没有对其进行详细规定。它只要求是一个无符号整数类型，只要满足该要求，实现就可以选择在该特定系统上最自然的表示形式。\n\
+  \n因此，`init` 的类型、返回值以及 `std::accumulate` 内部的累加器 `acc` 都是这种无符号整数类型 `size_type`。当我们向无符号类型加上负数时，注定会出现问题。但具体是什么问题呢？重要的是，这算未定义行为吗？\n\
+  \n有两种错误场景令人担忧：\n\n- 当将一种整数类型的值转换为另一种整数类型时，如果该值超出了新类型的范围。这听起来没有那么危险，因为操作实际上并没有发生溢出，而是回绕（wrap\
+  \ around）。这对于无符号整数是如此，而且从 C++20 开始，符号整数也是如此。例如，一个 8 位的符号整数如 `int8_t` 可以表示 -128 到\
+  \ 127 之间的值。如果我尝试给它赋值 128（大了 1），它会回绕到 -128。当发生回绕时，你定会得到错误的结果，但至少它不是未定义行为。\n- 进行算术运算时，如果结果超出了结果类型的范围。对于无符号整数，我们再次回绕。但对于符号整数，我们会得到溢出，这是未定义行为。\n\
+  \n由于我们正在向无符号的 `acc` 加上负数 -2 和 -3，我们至少可以预见到一些回绕，但我们可以预见到溢出导致未定义行为吗？这取决于我们最终是否加上了两个和超出结果类型范围的符号整数。让我们仔细观察\
+  \ `std::accumulate` 中发生了什么，看看这是否可能。\n\n算法首先用大小 2 初始化累加器 `acc`。`acc` 的类型为 `T`，我们之前推导出它是未指定的无符号整数类型\
+  \ `size_type`。然后我们逐将符号整数 -2 和 -3 加上 `acc`。最后，返回 `acc`。这些是列出的步骤：\n\n```cpp\nsize_type\
+  \ acc = 2; // size_type 是无符号的\nacc = acc + -2; // 无符号数和负符号数的加\nacc = acc + -3; //\
+  \ 无符号数和负符号数的加\nreturn acc;\n```\n\n现在，当我们把两个符号整数 -2 和 -3 加上未知的无符号整数类型 `size_type`\
+  \ 时会发生什么？在谜题 14，谜题 14，[亚里士德的部分之和 中，我们学习了通常算术转换和整数提升，这些在这里也发生了。\n\n由于我们不知道 `size_type`\
+  \ 和 `int` 的宽度，我们需要考虑三种情况：\n\n### 如果 size_type 能够放入 int 中\n\n如果 `int` 可以表示 `size_type`\
+  \ 的所有值，`acc` 将提升为 `int`，加法将在 `int` 类型上进行。由于 `size_type` 是无符号的，只有当 `size_type` 小于\
+  \ `int` 时才会发生。实现选择比 `int` 小的 `size_type` 非常不利，但根据标准这是可以的。在这种情况下发生如下：\n\n首先，我们将 -2\
+  \ 加上 `acc`。在将 `acc` 从 `size_type` 提升为 `int` 后，操作数的类型相同（`int`），不需要进一步转换。我们将 2 和 -2\
+  \ 相加得到 0，它符合结果类型 `int`。这个 `int` 0 被转换回 `size_type` 并存储在 `acc` 中。\n\n接下来，我们将 -3 加上\
+  \ `acc`。在将 `acc` 从 `size_type` 提升为 `int` 后，我们将 0 和 -3 相加得到 -3，它同样符合结果类型 `int`。`int`\
+  \ -3 被转换回 `size_type`。由于 `size_type` 是无符号的，-3 回绕到 `std::numeric_limits<size_type>::max()`\
+  \ - 2，它存储在 `acc` 中作为最终结果并返回。如果 `size_type` 是例如 `uint16_t`，结果将是 65533。这产生了回绕和错误的结果，但没有未定义行为。\n\
+  \n\n\n\n这里是该过程中涉及的类型和转换图表。`acc` 被提升为 `int`，与第一个值相加，结果转换回 `size_type` 并存储在 `acc`\
+  \ 中。然后我们对第二个值再次进行一次循环。\n\n![images/conversions1.drawio.png](img/conversions1.drawio.png)\n\
+  \n`size_type` 到 `int` 的提升没有问题，因为 `size_type` 可以放入 `int` 中。符号加法存在溢出的风险，并可能导致未定义行为，如果结果无法放入\
+  \ `int` 的话（但根据本谜题的输入，这种情况不会发生）。`int` 到 `size_type` 的转换在结果为负时可能会发生回绕（在本题中发生了这种情况），或者如果数值过大（在本题中未发生）。\n\
+  \n### 如果 size_type 无法放入 int 但可以放入 unsigned int\n\n如果 `int` 无法表示 `size_type` 的所有值，但\
+  \ `unsigned int` 可以，则 `acc` 将被提升为 `unsigned int`。这种情况只可能发生在 `size_type` 的宽度与 `int`\
+  \ 和 `unsigned int` 相同的情况下。如果 `size_type` 较小，它可以放入 `int`；如果它更宽，则无法放入 `unsigned int`。\n\
+  \n在 `acc` 从 `size_type` 提升为 `unsigned int` 之后，操作数的类型仍然不同，因此继续进行常规算术转换。由于 `size_type`\
+  \ 和 `int` 宽度相同，它们的秩（rank）也相同，`int` 被转换为 `unsigned int`（详参见[常规算术转换^([[14]](#f_0036.xhtml_FOOTNOTE-14))]\
+  \ ）。加法以 `unsigned int` 类型进行。\n\n首先，我们将 -2 加到 `acc` 上。`-2` 被转换为 `unsigned int`，且由于它是负数，它会回绕到\
+  \ `std::numeric_limits<unsigned int>::max() - 1`。当它与值为 `2` 的 `acc` 相加时，它会再次回绕到 `0`。\n\
+  \n接下来，我们将 `-3` 加到 `acc` 上。`-3` 被转换为 `unsigned int`，同样由于它是负数，它会回绕到 `std::numeric_limits<unsigned\
+  \ int>::max() - 2`。当它与值为 `0` 的 `acc` 相加时，结果为 `std::numeric_limits<unsigned int>::max()\
+  \ - 2`，并作为最终结果存储在 `acc` 中。在具有 32 位 `int` 的典型系统上，结果将是 `4294967293`。这产生了多次回绕和一个错误的结果，但没有产生未定义行为。\n\
+  \n这里是该过程中涉及的类型和转换图表。`acc` 被提升为 `unsigned int`，第一个值被转换为 `unsigned int`，它们相相加，结果转换回\
+  \ `size_type` 并存储在 `acc` 中。然后我们对第二个值再次进行一次循环。\n\n![images/conversions2.drawio.png](img/conversions2.drawio.png)\n\
+  \n`size_type` 到 `unsigned int` 的提升没有问题，因为 `size_type` 和 `unsigned int` 都是无符号类型且宽度相同。`int`\
+  \ 到 `unsigned int` 的转换在数值为负时可能会发生回绕（根据本题的输入，这种情况发生了）。无符号加法在结果过大时可能会回绕（在本题中未发生）。`unsigned\
+  \ int` 到 `size_type` 的转换没有问题，因为 `unsigned int` 和 `size_type` 都是无符号类型且宽度相同。\n\n###\
+  \ 如果 size_type 无法放入 int 还是 unsigned int\n\n这是最常见的情况，例如 `int` 是 32 位的而 `size_type`\
+  \ 是一个 64 位无符号类型。在这种情况下，不会对 `size_type` 执行整型提升（integral promotion）；我们只需要担心剩余的常规算术转换。由于\
+  \ `size_type` 比 `int` 大，`size_type` 的秩更高，这意味着 `int` 被转换为无符号类型 `size_type`，加法以 `size_type`\
+  \ 类型进行。\n\n首先，我们将 -2 加到 `acc` 上。`-2` 被转换为 `size_type` 并回绕到 `std::numeric_limits<size_type>::max()\
+  \ - 1`。当它与值为 `2` 的 `acc` 相加时，它会再次回绕到 `0`。\n\n接下来，我们将 `-3` 加到 `acc` 上。`-3` 被转换为 `size_type`\
+  \ 并回绕到 `std::numeric_limits<size_type>::max() - 2`。当它与值为 `0` 的 `acc` 相加时，结果为 `std::numeric_limits<size_type>::max()\
+  \ - 2`，并作为最终结果存储在 `acc` 中。在具有 32 位 `int` 和 64 位 `size_type` 的典型系统上，结果将是 `18446744073709551613`。同样，我们看到了多次回绕和一个错误的结果，但没有产生未定义行为。\n\
+  \n这里是该过程中涉及的类型和转换图表。第一个值被转换为 `size_type`，与 `acc` 相加，结果存储在 `acc` 中。然后我们对第二个值再次进行一次循环。\n\
+  \n![images/conversions3.drawio.png](img/conversions3.drawio.png)\n\n`int` 到 `size_type`\
+  \ 的转换在数值为负时可能会发生回绕，根据本题的输入，这种情况发生了）。无符号加法在结果过大时可能会回绕（在本题中未发生）。\n\n### 你还在看吗？\n\n\
+  我在上面省略了许多细节，特别是导致这些特定转换序列的精确规则，尽管如此，解释仍然变得很长。如果你读到了最后，太棒了，你抓住了要点。如果你在某处断开了，没担心，你还是抓住了要点！要点在于，整数之间隐式转换的推理是非常复杂的，在生产代码中最好避免。\n\
+  \n### 我们能做什么？\n\n遗憾的是，没有任何主要的编译器会对此发出警告，即使对 GCC 和 Clang 使用 `-Wall` `-Wextra` 以及对\
+  \ MSVC 使用 `/Wall`。某些编译器（如 GCC 和 Clang）具有额外的选项，如 `-Wsign-conversion`，它们没有包含在 `-Wall`\
+  \ 或 `-Wextra` 中，必须单独启用。遗憾的是，即使启用了它们，你对这个特定的谜题也不会得到任何警告。（如果 `accumulate` 函数是在你代码中定义的，你就得到了。）\n\
+  \n\n\n\n```cpp\nJormungandr jormungandr2{std::move(jormungandr1)};\n```\n\n```cpp\n\
+  }\n```\n\n### 猜输出\n\n![images/aside-icons/important.png](img/important.png) 在进入下一页之前，尝试猜猜输出是什么。\n\
+  \n![images/hline.png](img/hline.png)\n\n程序显示如下输出：\n\n```\nMonster copied\nJormungandr\
+  \ moved\n```\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n当我们用一个被移动的对象来初始化第二个\
+  \ `Jormungandr` 时，调用的是 `Jormungandr` 的移动构造函数，而不是 `Monster` 的拷贝构造函数。这是为什么呢？\n\n正如我们在谜题\
+  \ 8 中学到的，谜题 8 它会移动吗？，当我们将一个表达式包裹在 `std::move` 中时，它会变成一个右值（rvalue）。不过，这里有一个重要的细节：值类别（value\
+  \ categories）是针对表达式的，而不是对象的。因此，对象 `jormungandr1` 本身没有发生变化；只是表达式 `jormungandr1` 是左值（lvalue），而表达式\
+  \ `std::move(jormungandr1)` 是右值。如果你问我的话，如果把它们称为“l-表达式”和“r-表达式”而不是“左值”和“右值”，会更简单。\n\
+  \n当我们接着用表达式 `Jormungandr jormungandr2{std::move(jormungandr1)}` 拷贝初始化 `jormungandr2`\
+  \ 时，重载解析偏向于使用 `Jormungandr` 的移动构造函数而不是拷贝构造函数，因为表达式 `std::move(jormungandr1)` 是一个可以被移动的右值。是的，你读得没错，即使恰好调用了移动构造函数，这种形式始终被称为拷贝初始化（copy-initialization）。并没有所谓的移动初始化（move-initialization）。\n\
+  \n现在让我们关注 `Jormungandr` 移动构造函数的实现。你可能已经发现了这个 bug：我们忘记像这样将 `other` 包裹在 `std::move`\
+  \ 中：\n\n[examples/which-constructors/which-constructors.cpp](http://media.pragprog.com/titles/akbrain/code/examples/which-constructors/which-constructors.cpp)\n\
+  \n```cpp\nJormungandr(Jormungandr &&other) : Monster(std::move(other))\n```\n\n\
+  参数 `other` 是一个右值引用。但传递给 `Monster` 构造函数的表达式 `other` 却是一个左值！由于表达式 `other` 是左值，我们无法使用移动构造函数，重载解析便选择了拷贝构造函数。然而，在将其包裹在\
+  \ `std::move` 之后，表达式 `std::move(other)` 现在是一个右值，于是选中了移动构造函数。\n\n输出将变为变为：\n\n```\n\
+  Monster moved\nJormungandr moved\n```\n\n附加问题：如果 `Monster` 像这样定义，会发生什么？\n\n[examples/which-constructors/which-constructors.cpp](http://media.pragprog.com/titles/akbrain/code/examples/which-constructors/which-constructors.cpp)\n\
+  \n```cpp\nstruct Monster {\n    Monster() = default;\n    Monster(const Monster\
+  \ &other) {\n        std::cout << \"Monster copied\\n\";\n    }\n};\n```\n\n由于我们显式声明了拷贝构造函数，我们就不会隐式地获得默认或移动构造函数。我们显式声明了默认构造函数，但没有移动构造函数，所以\
+  \ `Monster` 并没有移动构造函数。\n\n当 `Jormungandr` 的移动构造函数执行 `: Monster(std::move(other))`\
+  \ 时，表达式 `std::move(other)` 仍然是一个右值。更具体地说，正如我们在谜题 9，统计拷贝次数 中看到的，当你将一个左值包裹在 `std::move()`\
+  \ 中时，它会变成一种称为 x 值（xvalue）的右值。这意味着对象仍然具有像左值一样的身份（identity），但我们被允许像右值一样对其进行移动。如果 `Monster`\
+  \ 在这里有一个移动构造函数（带有 `Monster &&` 参数），那么在传递右值时，重载解析将优先选择它而不是拷贝构造函数（带有 `const Monster\
+  \ &` 参数）。但由于它没有移动构造函数，且 const 左值引用可以绑定到右值，因此使用了拷贝构造函数。\n\n我们又回到了这个结果：\n\n```\nMonster\
+  \ copied\nJormungandr moved\n```\n\n### 扩展阅读\n\nLvalues, Rvalues, Glvalues, Prvalues,\
+  \ Xvalues, 求救!\n\n[`blog.knatten.org/2018/03/09/lvalues-rvalues-glvalues-prvalues-xvalues-help/`](https://blog.knatten.org/2018/03/09/lvalues-rvalues-glvalues-prvalues-xvalues-help/)\n\
+  \n没有移动构造函数与被删除移动构造函数之间的区别\n\n[`blog.knatten.org/2021/10/15/the-difference-between-no-move-constructor-and-a-deleted-move-constructor/`](https://blog.knatten.org/2021/10/15/the-difference-between-no-move-constructor-and-a-deleted-move-constructor/)\n\
+  \n### 谜题 21 | 字符大小\n\nLvalues, Rvalues, Glvalues, Prvalues, Xvalues, 求救!\n\n[`blog.knatten.org/2018/03/09/lvalues-rvalues-glvalues-prvalues-xvalues-help/`](https://blog.knatten.org/2018/03/09/lvalues-rvalues-glvalues-prvalues-xvalues-help/)\n\
+  \n没有移动构造函数与被删除移动构造函数之间的区别\n\n[`blog.knatten.org/2021/10/15/the-difference-between-no-move-constructor-and-a-deleted-move-constructor/`](https://blog.knatten.org/2021/10/15/the-difference-between-no-move-constructor-and-a-deleted-move-constructor/)\n\
+  \n谜题 21 | 字符大小\n\n[sizing-up-characters.cpp](http://media.pragprog.com/titles/akbrain/sizing-up-characters.cpp)\n\
+  \n```cpp\n#include <iostream>\n\nvoid serialize(char characters[]) {\n    std::cout\
+  \ << sizeof(characters) << \"\\n\";\n}\n\nint main() {\n    char characters[] =\
+  \ {'a', 'b', 'c'};\n    std::cout << sizeof(characters) << \"\\n\";\n    std::cout\
+  \ << sizeof(characters) / sizeof(characters[0]) << \"\\n\";\n    serialize(characters);\n\
+  }\n```\n\n### 猜输出\n\n![images/aside-icons/important.png](img/important.png) 在进入下一页之前，尝试猜猜输出是什么。\n\
+  \n![images/hline.png](img/hline.png)\n\n程序具有实现定义的行为！但在 64 位 CPU 上可能会输出：\n\n```\n\
+  3\n3\n```\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n程序定义了一个字符数组 `char characters[]\
+  \ = {'a', 'b', 'c'}`。我们然后用各种方式打印这个数组的大小。`sizeof` 运算符在每情况下做了什么？哪些是标准定义的，哪些是实现定义的？它们在你的电脑上输出什么？\n\
+  \n首先，程序定义了一个数组 `char characters[] = {'a', 'b', 'c'}`。我们然后用 `sizeof` 运算符打印这个数组的大小。`sizeof`\
+  \ 运算符产生操作数所占用的字节数，在这种情况下是 3，因为每个 `char` 是一个字节。\n\n但等等，在谜题 14，亚里士多德的部分之和 中，我们学过基本类型的大小并不是标准定义的，那么我们如何能确定答案是\
+  \ 3 呢？毕竟，`char` 可能是 16 位的。事实证明，`sizeof(char)` 被定义始终返回 1。\n\n接下来，我们打印 `sizeof(characters)\
+  \ / sizeof(characters[0])`。这是 C 或 C++ 中用于计算数组元素个数的老旧惯用法，在这个谜题中保证输出 3。这是因为 `sizeof(characters)`\
+  \ 返回 3（正如我们看到的），而 `sizeof(characters[0])` 等于 `sizeof(char)`，后者始终返回 1。\n\n最后，我们想要序列化我们的字符，所以将它们传递给\
+  \ `void serialize(char characters[])`。序列化函数为了序列化的目的想要知道数组有多大，就像我们在 `main` 中做的那样，执行了\
+  \ `sizeof(characters)`。但为什么这输出的是 8（特别是在我的电脑上）而不是 3 呢？这是因为 `char characters[]` 参数的类型实际上不是“char\
+  \ 数组”，而是“指向 char 的指针”！标准规定如下：\n\n> 在确定每个参数的类型后，任何类型为“T 数组”或函数类型 T 的参数都会调整为“指向 T\
+  \ 的指针”。\n\n\n\n\n\n因此，`serialize` 函数中的 `sizeof(characters)` 打印的是指针的大小，而不是数组的大小，因为在此时\
+  \ `characters` 的类型实际上是“指向 char 的指针”。这是该谜题中由实现决定的的部分，因为标准并没有定义指针的大小。在大多数现代计算机上，指针是\
+  \ 64 位的，等于 8 字节，因此在你的计算机上，你可能看到打印出 8。\n\n现在，我们是否也可以在这里使用似乎更强大的 `std::size` 函数模板，来获取数组中实际的元素数量呢？我们不能这样做，因为\
+  \ `characters` 是一个指针而不是数组。`std::size` 只对具有 `.size()` 成员函数的集合（collections）和视图（views）以及数组进行了定义。`std::size(characters)`\
+  \ 会导致编译失败，而不是给出错误的结果，这很不错。\n\n| 建议 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png)\
+  \ |  \n\n*   C++ 中的数组是非常局限的，当你将它们传递给函数时，尺寸等信息就会丢失。请优先使用 `std::vector` 或 `std::array`\
+  \ 等类型。\n*   在你的项目中开启警告。GCC 和 Clang 都会对 `serialize` 中使用 `sizeof(characters)` 发出警告。GCC\
+  \ 的信息如下：`warning: sizeof on array function parameter will return size of ’char *’\
+  \ instead of ’char[]'.`。（在编写时，我没能让 MSVC 对此给出警告。）\n\n### 进阶阅读\n\n`sizeof` 运算符\n[`en.cppreference.com/w/cpp/language/sizeof`](https://en.cppreference.com/w/cpp/language/sizeof)\n\
+  \n`std::size` 函数模板\n[`en.cppreference.com/w/cpp/header/std#size`](https://en.cppreference.com/w/cpp/header/std#size)\n\
+  \n### 谜题 2：虚幻类（The Phantom）\n\n[`media.pragprog.com/titles/akbrain/code/the-phantom.cpp`](https://media.pragprog.com/titles/akbrain/code/the-phantom.cpp)\n\
+  \n```cpp\n#include <iostream>\n#include <string>\n\nstruct GameObject {\n    GameObject()\
+  \ {\n        std::cout << \"Created a GameObject\\n\";\n    }\n    virtual void\
+  \ render() {\n        std::cout << \"Rendered a \" << getType() << \"\\n\";\n  \
+  \  }\n    virtual std::string getType() const {\n        return \"GameObject\";\n\
+  \    }\n};\n\nclass Spaceship : public GameObject {\npublic:\n    Spaceship() {}\n\
+  \    std::string getType() const override {\n        return \"Spaceship\";\n   \
+  \ }\n};\n\nvoid display(const GameObject &obj) {\n    obj.render();\n}\n\nint main()\
+  \ {\n    GameObject gameObject;\n    Spaceship spaceship;\n    display(gameObject);\n\
+  \    display(spaceship);\n}\n```\n\n| 预测输出 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png)\
+  \ 程序的输出如下：\n\n```\nCreated a GameObject\nRendered a GameObject\nCreated a Spaceship\n\
+  Rendered a Spaceship\n```\n\n### 讨论\n\n在这个谜题中，假设我们使用了虚函数来处理派生类。如果我们不使用虚函数，`sizeof`\
+  \ 将返回数组的大小，但当我们将其传递给函数时，尺寸信息就会丢失。这就是为什么我们需要使用虚函数。\n\n但是，如果我们使用 `std::size` 呢？`std::size`\
+  \ 只能用于数组或具有 `size()` 成员的容器。对于指针 `characters`，`std::size(characters)` 会导致编译错误，这比得到错误的结果要好。\n\
+  \n如果我们使用的是模板方法模式（Template Method Pattern），我们可以通过纯虚函数让派生类来定义基类行为。在在这种情况下，`GameObject`\
+  \ 是一个抽象类，无法实例化实例化。派生类来实现 `\n()`。\n\n\n\n然而，如果我们仍然想要实例化“原始”的 `GameObjects`，我们需要重新添加一个默认构造函数：\n\
+  \n[examples/spaceship/spaceship-parameter.cpp](http://media.pragprog.com/titles/akbrain/code/examples/spaceship/spaceship-parameter.cpp)\n\
+  \n```cpp\npublic:\n    GameObject() : GameObject(\"GameObject\")(){}\n```\n\n但是这引入了一个新问题：如果你忘记为\
+  \ `Spaceship` 添加用户定义的构造函数，那么默认的 `Spaceship` 构造函数将简单地使用 `GameObject` 的默认构造函数，我们又回到了在创建\
+  \ `SpaceShip` 时看到 `GameObject` 被创建的局面——这是不允许 `GameObjects` 被独立构造的另一个原因。\n\n最后，当问题是在如何在不使用动态多态的情况下在基类中使用派生类的信息时，如果不至少提到奇异递归模板模式（CRTP）惯用法，讨论是不完整的。虽然我们这里没有空间进行详细讨论，但其思想是将基类设为模板，然后将派生类作为其自身基类的模板参数。现在，基类只需通过查看其模板参数，就能在静态地知道正在实例化哪个派生类！这里有一个完整的示例：\n\
+  \n[examples/spaceship/spaceship-crtp.cpp](http://media.pragprog.com/titles/akbrain/code/examples/spaceship/spaceship-crtp.cpp)\n\
+  \n```cpp\n#include <iostream>\n\nstruct GameObject {\n    virtual void render()\
+  \ const = 0;\n};\n\ntemplate<typename Derived>\nstruct LoggingGameObject : public\
+  \ GameObject {\n    LoggingGameObject() {\n        std::cout << \"Created a \" <<\
+  \ Derived::typeName << \"\\n\";\n    }\n    void render() const override {\n   \
+  \     std::cout << \"Rendered a \" << Derived::typeName << \"\\n\";\n    }\n};\n\
+  \nstruct Spaceship : public LoggingGameObject<Spaceship> {\n    static constexpr\
+  \ auto typeName = \"Spaceship\";\n};\n\nvoid display(const GameObject &gameObject)\
+  \ { gameObject.render(); }\n\nint main() {\n    Spaceship spaceship;\n    display(spaceship);\n\
+  }\n```\n\n关于 CRTP 的更详细讨论，请参阅维基百科^15\n\n### 建议\n\n![images/aside-icons/tip.png](img/tip.png)\n\
+  \n*   启用警告。例如，像 `GCC` 和 `Clang` 这样的编译器会对构造函数和析构函数中的纯虚函数调用警告。\n*   在 CI 中使用多个编译器和平台。不同的编译器和链接器会给出不同的警告和错误。\n\
+  \n### 扩展阅读\n\n模板方法设计模式\n[`en.wikipedia.org/wiki/Template_method_pattern`](https://en.wikipedia.org/wiki/Template_method_pattern)\n\
+  \n奇异递归模板模式 (CRTP)\n[`en.wikipedia.org/wiki/Curiously_recurring_template_pattern`](https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern)\n\
+  \n### 谜题 23 | 良好开始\n\n[off-to-a-good-start.cpp](http://media.pragprog.com/titles/akbrain/code/off-to-a-good-start.cpp)\n\
+  \n```cpp\n#include <iostream>\n\nstruct Logger {};\nstruct Configuration {};\n\n\
+  Logger initializeLogger()\n{\n    std::cout << \"Initializing logger\\n\";\n   \
+  \ return Logger{};\n}\n\nConfiguration readConfiguration()\n{\n    std::cout <<\
+  \ \"Reading configuration\\n\";\n    return Configuration{};\n}\n\nvoid startProgram(Logger\
+  \ logger, Configuration configuration)\n{\n    std::cout << \"Starting program\\\
+  n\";\n}\n\nint main()\n{\n    startProgram(initializeLogger(), readConfiguration());\n\
+  }\n```\n\n### 猜输出\n\n![images/aside-icons/important.png](img/important.png) 在移动到下一页之前，尝试猜猜输出是什么。\n\
+  \n程序的行为是未定义的！但它将显示两种输出之一。这是其中一种可能的输出：\n\n```\nInitializing logger\nReading configuration\n\
+  Starting program\n```\n\n而这是另一个：\n\n```\nReading configuration\nInitializing logger\n\
+  Starting program\n```\n\n### 讨论\n\n在这个谜题中，我们想要启动一个依赖于日志器已设置且配置已读取的程序。只要这两者都在程序启动之前完成，我们就没问题。日志器设置和配置读取的顺序在这里似乎并不重要，但如果很重要呢？例如，如果初始化日志器设置了某个全局日志器实例，我们在读取配置时会使用它。我们可以依赖这两个函数按照程序中列出的顺序被调用吗？遗憾的是，我们不能，因为函数参数表达式的求值顺序是未指定的。这不仅仅是理论上的；当我在\
+  \ Linux 上测试此代码时，`GCC` 从右到左，而 `Clang` 从左到右。你可以在 Compiler Explorer 上查看在线演示^16\n\n\
+  然而，一切并非混乱；我们确实有一些保证：\n\n1.  参数的初始化（包括所有相关的副作用）保证在函数执行之前已完成。这保证了 `initializeLogger`\
+  \ 和 `readConfiguration` 在 `startProgram` 开始执行之前已经执行完毕，我们不会面临输出 `Initializing logger`\
+  \ 与 `Starting program` 织的风险。这听起来显而易见，但嘿，这是 `C++`，所以检查一下很好。\n2.  一个参数的初始化（包括所有相关的副作用）保证在另一个参数的初始化开始已完成。这保证了要么\
+  \ `initializeLogger` 完全在 `readConfiguration` 之前发生，反反之。\n3.  这里没有未定义行为；只是参数表达式可以以任何顺序进行求值。\n\
+  \n我们知道 `initializeLogger` 和 `readConfiguration` 都在 `startProgram` 之前发生，只是不知道具体的顺序。此外，我们甚至不能保证在每次运行程序时它们发生的顺序都是相同的，即使使用相同的编译器和同一台电脑！编译器不太可能生成这种非确定性的代码，但根据标准，这是可以接受的。如果实现者决定（例如，从右到左比从左到右更高效），编译器也可能在新版本中更改排序。\n\
+  \n那么我们能对此做什么呢？如果顺序实际上很重要，你只需要按照你想要的顺序一个接一个调用函数即可：\n\n[examples/deterministic-order/deterministic-order.cpp](http://media.pragprog.com/titles/akbrain/code/examples/deterministic-order/deterministic-order.cpp)\n\
+  \n```cpp\nint main()\n{\n    const auto logger = initializeLogger();\n    const\
+  \ auto configuration = readConfiguration();\n    startProgram(logger, configuration);\n\
+  }\n```\n\n### 建议\n\n*   不要依赖函数参数表达式的求值顺序。\n\n\n\n\n\n- 不要仅仅因为表达式在测试中恰好按照特定顺序执行，就假设它们总是以此顺序执行。\n\
+  \n### 延伸阅读\n\n求顺序\n[`en.cppreference.com/w/cpp/language/eval_order`](https://en.cppreference.com/w/cpp/language/eval_order)\n\
+  \n## 谜题 24 | 特殊字符串理论\n\n[a-specialized-string-theory.cpp](http://media.pragprog.com/titles/akbrain/code/a-specialized-string-theory.cpp)\n\
+  \n```cpp\n#include <iostream>\ntemplate<typename T>\nvoid serialize(T&) { std::cout\
+  \ << \"template\\n\"; } // 1\n\ntemplate<>\nvoid serialize<>(const std::string&)\
+  \ { std::cout << \"specialization\\n\"; } // 2\n\nvoid serialize(const std::string&)\
+  \ { std::cout << \"normal function\\n\"; } // 3\n\nint main() {\n  std::string hello_world{\"\
+  Hello, world!\"};\n  serialize(hello_world);\n  serialize(std::string{\"Good bye,\
+  \ world!\"});\n}\n```\n\n### 猜输出\n在进入下一页之前，尝试猜猜输出是什么。\n\n程序显示以下输出：\n\n```\ntemplate\n\
+  normal function\n```\n\n### 讨论\n\n你可能还记得我们在谜题 2、谜题 2、字符串理论 中的序列化库。在此期间，一位 C++ 专家出现了，并决定凡是有使用模板的地方都会变得更好。这是否真实是另一个话题了，但它确实让重载解析变得更有趣了！\n\
+  \n我们在谜题中找到了三个 `serialize` 的定义。第一个（标记为“1”的）是 `serialize` 的主函数模板。下一个（标记为“2”的）是该模板针对\
+  \ `std::string` 的显式特化。你可以通过空的 `template<>` 标签识别出它是一个特化版本。最后，我们看到了一个普通的非模板 `serialize`\
+  \ 函数（标记为“3”）。\n\n由于 `serialize` 名字被重载了，当我们写出对该名称的调用时，重载解析需要确定调用哪一个。正如我们在谜题 2、谜题\
+  \ 2、字符串理论 中学的那样，它通过创建一个该名称的所有候选函数的集合，然后从该集合中选择最佳的可行函数来实现。很清楚，普通的、非模板 `serialize`\
+  \ 函数 (3) 是一个候选者，但函数模板又是怎样的呢？编译器又是如何在函数模板特化版本和普通函数（两者签名相同）之间消除歧义的？\n\n当函数模板参与重载解析时，编译器会查看该名称的所有主模板。在这一阶段，它不会考虑特化版本，因此只考虑主模板\
+  \ (1)，而不考虑特化版本 (2)。如果我们有其他主模板重载，这些也会被考虑在内，但在本谜题中我们只有一个。另一个主模板的例子可以是针对指针的这个：\n\n\
+  ```cpp\ntemplate<typename T>\nvoid serialize(T*) { std::cout << \"pointer\\n\";\
+  \ }\n```\n\n你可以通过非空的 `template<typename T>` 识别出这是一个主模板，就像我们在谜题的主模板中看到的那样。\n\n由于主模板\
+  \ (1) 是本谜题中唯一的主模板，我们现在已经找到了应该作为重载解析候选者的 `serialize` 函数模板。但为了能够继续，重载解析需要一个具有实际类型的具体函数签名，而不仅仅是一个接受任意类型\
+  \ `T` 的模板。因此，接下来它会对 `serialize` 进行类型推导，以查看潜在的实例化是什么样的。这被称为“合成声明”。这个合成声明被添加到候选函数集合中（与非模板\
+  \ `serialize` 一起），然后进行常规重载解析。让我们看看类型推导和重载解析对于对 `serialize` 的两次调用具体是如何工作的。\n\n首先，看我们传递对象的那个调用：\n\
+  \n```cpp\nserialize(hello_world);\n```\n\n表达式 `hello_world` 是类型为 `std::string` 的左值。正如我们在谜题\
+  \ 13、谜题 13、持久的斗争 中学的那样，`T` 被推导出为 `std::string`，合成的签名签名 `void serialize(std::string&)`。我们现在有两个重载解析的候选者：\n\
+  \n```cpp\nvoid serialize(std::string&); // 从模板 (1) 合成\nvoid serialize(const std::string&);\
+  \ // 非模板函数 (3)\n```\n\n由于 `hello_world` 是非 const 的，重载解析倾向于 `serialize` 的模板版本，因为它接受非\
+  \ const 引用。\n\n现在重载解析已经决定使用函数模板，是时候寻找要使用的特化版本了。应该是实例化并使用主函数模板 (1)，还是使用显式特化 (2)？在这种情况下，这是一个简单的选择，因为我们需要签名为\
+  \ `void serialize(std::string&)` 的特化，但我们的显式特化签名是 `void serialize(const std::string&)`。我们必须使用主函数模板，并为\
+  \ `T = std::string` 进行隐含实例化，产生 `void serialize(std::string&)`。当调用此实例化时，会打印 `template`。\n\
+  \n接下来，让我们传递临时字符串的调用：\n\n```cpp\nserialize(std::string{\"Good bye, world!\"});\n\
+  ```\n\n表达式 `std::string{\"Good bye, world!\"}` 是类型为 `std::string` 的右值（prvalue），因此\
+  \ `T` 推导出 `std::string`，与上一个调用一样。我们再次拥有这两个重载解析的候选者：\n\n```cpp\nvoid serialize(std::string&);\
+  \ // 从模板 (1) 合成\nvoid serialize(const std::string&); // 非模板函数 (3)\n```\n\n由于 `std::string{\"\
+  Good bye, world!\"}` 是一个右值，函数模板中的非 const 引用无法绑定它。普通函数中的 const 引用可以，该函数被重载解析选中。由于没有选中模板，不会发生实例化，并打印\
+  \ `normal function`。\n\n附加问题：如果函数模板也接受 const 引用，像这样会怎样？\n\n[examples/template-vs-function/template-vs-function.cpp](http://media.pragprog.com/titles/akbrain/code/examples/template-vs-function/template-vs-function.cpp)\n\
+  \n```cpp\ntemplate<typename T>\nvoid serialize(const T&) { std::cout << \"template\\\
+  n\"; } // 1\n```\n\n现在，合成的签名将是 `void serialize(const std::string&)`，与非模板完全相同，重载解析需要在这些之间进行选择：\n\
+  \n```cpp\nvoid serialize(const std::string&); // 从模板 (1) 合成\nvoid serialize(const\
+  \ std::string&); // 非模板函数 (3)\n```\n\n如果重载解析发现两个同样优秀的可行候选者，通常会得到编译错误。那么这能编译吗？\n\n\
+  这实际上是没问题的。在涉及模板的重载解析中，有一个特殊规定：如果函数 `F1` 不是函数模板特化版本而 `F2` 是函数模板特化版本，则 `F1` 比 `F2`\
+  \ 更好。非模板函数被两次调用选中，程序输出以下内容：\n\n```\nnormal function\nnormal function\n```\n\n\n\n\
+  \n\n请注意，在上述两种情况下，显式函数模板特化都没有参与重载解析——它从来没有参与过。这可能不符合直觉，因此通常情况下，使用非模板重载比使用显式特化更好。请参阅“延伸阅读”下的前两个链接获取更多细节，以及一些此类混淆的更糟糕的示例。\n\
+  \n| 建议 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png) |\n*   优先使用非模板重载，而不是显式特化。\
+  \ |\n\n### 延伸阅读\n\n为什么不特化化函数模板？\n\n[`www.gotw.ca/publications/mill17.htm`](http://www.gotw.ca/publications/mill17.htm)\n\
+  \n函数模板的完全特化\n\n[`www.modernescpp.com/index.php/full-specialization-of-function-templates/`](https://www.modernescpp.com/index.php/full-specialization-of-function-templates/)\n\
+  \nC++ 核心准则 T.144：不要特化函数模板\n\n[`isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#t144-dont-specialize-function-templates`](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#t144-dont-specialize-function-templates)\n\
+  \n| 谜题 25 | 弱类型，强困惑 |\n[weakly-typed-strongly-puzzling.cpp](http://media.pragprog.com/titles/akbrain/code/weakly-typed-strongly-puzzling.cpp)\
+  \ |\n\n```cpp\n#include <iostream>\n\nint main() {\n  std::cout << +!!\"\"\";\n\
+  }\n```\n\n| 猜测输出 |\n| --- |\n| ![images/aside-icons/important.png](img/important.png)\
+  \ 在移动到下一页之前，尝试猜猜输出是什么。 |\n\n![images/hline.png](img/hline.png)\n\n程序显示了以下输出：\n\n\
+  | 1 |\n\n![images/hline.png](img/hline.png)\n\n### 讨论\n\n等等，什么？这是合法的 C++ 吗？这到底意味着什么，为什么它打印出\
+  \ 1？\n\n虽然 C++ 是一种静态类型语言，但它并不是特别强类型。正如我们在整书中看到的，C++ 实际上非常热于在没有显式指示的情况下在类型之间进行隐式转换。例如，在谜题\
+  \ 14 中亚里士多德的部分之和，我们看到两个 char 的和并不是一个 char；在谜题 17 中一个强项，我们看到应该如何显式声明构造函数以避免它们参与隐式转换；在谜题\
+  \ 19 中一点小加法问题，我们看到算术类型之间的隐式转换如何导致意料之外的结果。\n\n这种“热衷”是我们在当年 C++ 设计为 C 语言的扩展时继承的特性。如果我们今天重新编写它，这些大量的隐式转换将列在我们想要更改的事项清单的前列。\n\
+  \n那么，这里涉及到哪些隐式转换？这个表达式的最终类型是什么？为什么结果是 1？\n\n让我们从右侧开始，表达式 `\"\"`。这是一个字符串字面量，正如我们在谜题\
+  \ 2 中字符串理论中所讨论的，字符串字面量的类型是“n 个 const char 数组”，在这里 n 为 1（为了隐式的 `\\0` 终止符）。\n\n接下来是\
+  \ `!` 运算符，它对操作数取反。但你如何对一个字符数组取反呢？这不合理，对吧？确实不合理，但 `!` 运算符的操作数在取反之前会根据上下文转换为 `bool`。将数组转换为\
+  \ `bool` 也没有意义，但正如我们在谜题 2 中字符串理论中看到的，数组可以隐式转换为指针，而指针可以再次转换为 `bool`。当指针转换为 `bool`\
+  \ 时，如果它是空指针则转换为 false，否则转换为 true。由于此例中的指针是非空指针（它指向我们的字符串字面量），因此它转换为 true。最后，`!`\
+  \ 运算符对其取反，所以我们得到了 false。有人可能会认为整个转换序列其实也没有意义，我赞同，但至少我们可以理解每一步是如何工作的以及它们是如何组合得到这个结果的。\n\
+  \n接下来是另一个 `!`，这次它简单地对我们的 `bool` false 取反，得到 `bool` true。\n\n最后，是一元运算符 `+`。一元 `+`\
+  \ 的操作数会经过整数提升，对于 `bool` 来说，这意味着将 false 转换为 0 将 true 转换为 1。运算符本身什么都不做；它的结果与其操作数（提升后）相同。因此，我们的\
+  \ `bool` true 最终变成了 `int` 1，并被打印出来。\n\n编译器是否应该对这些内容发出警告是另一个话题，但没有主要的编译器会这样做，即使对于\
+  \ GCC 和 Clang 使用 `-Wall` `-Wextra`，以及对 MSVC 使用 `/Wall`。不过，如果你显式开启这些警告，你的编译器可能会提供一些警告。例如，如果给出\
+  \ `-Wstring-conversion` 选项，Clang 将会对字符串到 bool 的转换发出（该选项未包含在 `-Wall` 或 `-Wextra`\
+  \ 中）。请检查你的编译器文档以获取其支持的警告列表。\n\n| 建议 |\n| --- |\n| ![images/aside-icons/tip.png](img/tip.png)\
+  \ |\n*   尽可能开启所有警告。\n*   注意并非所有警告都包含在每个编译器的最高警告级别中。\n*   在生活中不要写这样的代码！ |\n\n###\
+  \ 延伸阅读\n\nCppReference 关于隐式转换\n\n[`en.cppreference.com/w/cpp/language/implicit_conversion`](https://en.cppreference.com/w/cpp/language/implicit_conversion)\n\
+  \n标准中的隐式转换序列\n\n[`timsong-cpp.github.io/cppwp/std20/over.best.ics`](https://timsong-cpp.github.io/cppwp/std20/over.best.ics)\n\
+  \n### 脚注\n\n[[6]](#f_0018.xhtml_FNPTR-6)\n\n[`en.cppreference.com/w/cpp/language/initialization`](https://en.cppreference.com/w/cpp/language/initialization)\n\
+  \n[[7]](#f_0018.xhtml_FNPTR-7)\n\n[`timsong-cpp.github.io/cppwp/std20/basic.start`](https://timsong-cpp.github.io/cppwp/std20/basic.start)\n\
+  \n[[8]](#f_0018.xhtml_FNPTR-8)\n\n[`en.cppreference.com/w/cpp/language/siof`](https://en.cppreference.com/w/cpp/language/siof)\n\
+  \n[[9]](#f_0018.xhtml_FNPTR-9)\n\n[`en.cppreference.com/w/cpp/language/implicit_conversion`](https://en.cppreference.com/w/cpp/language/implicit_conversion)\n\
+  \n[[10]](#f_0018.xhtml_FNPTR-10)\n\n[`timsong-cpp.github.io/cppwp/std20/basic.start`](https://timsong-cpp.github.io/cppwp/std20/basic.start)\n\
+  \n[[11]](#f_0018.xhtml_FNPTR-11)\n\n[`timsong-cpp.github.io/cppwp/std20/over.best.ics`](https://timsong-cpp.github.io/cppwp/std20/over.best.ics)\n\
+  \n[[12]](#f_0018.xhtml_FNPTR-12)\n\n[`timsong-cpp.github.io/cppwp/std20/over.best.ics`](https://timsong-cpp.github.io/cppwp/std20/over.best.ics)\n\
+  \n[[13]](#f_0018.xhtml_FNPTR-13)\n\n[`github.com/rollbear/strong_type`](https://github.com/rollbear/strong_type)\n\
+  \n[[14]](#f_0018.xhtml_FNPTR-14)\n\n[`timsong-cpp.github.io/cppwp/std20/over.best.ics`](https://timsong-cpp.github.io/cppwp/std20/over.best.ics)\n\
+  \n[[15]](#f_0018.xhtml_FNPTR-15)\n\n[`en.wikipedia.org/wiki/Curiously_recurring_template_pattern`](https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern)\n\
+  \n[[16]](#f_0018.xhtml_FNPTR-16)\n\n[`www.godbolt.org/z/P43cETdWd`](https://www.godbolt.org/z/P43cETdWd)\n\
+  \n\n\n\n\n如果你也想向世界分享你自己的专业知识，为什么不向我们提交你的写作想法呢？毕竟，我们许多优秀的作者最初都像你一样，是我们的读者。凭借高达 50%\
+  \ 的版税、世界级的编辑服务以及一个你信赖的品牌名称，你没有任何损失。今天就访问 `https://pragprog.com/become-an-author/`\
+  \ 了解更多并开始尝试。\n\n感谢您的持续支持。我们希望很快能再次听到您的消息！\n\nThe Pragmatic Bookshelf\n\n![images/Coupon.png](img/Coupon.png)\n\
+  \n## 您可能感兴趣的……\n\n*选择封面获取更多信息*\n\n### C 脑筋急转\n\n![](http://pragmaticprogrammer.com/titles/cbrain)\n\
+  \n你以为你了解 `C`，但你能解决这门流行编程语言中的 25 道谜题吗？著名的 `C` 程序员、作家 Dan Gookin 提供了一系列尖锐的问题、谜题和挑战，以保持你的\
+  \ `C` 编程技能敏锐。每一道题都将提供处理字符串、数值操作和其他活动各个方面的见解，让你获得充分利用 `C` 所有功能的技巧。挑战自己，并了解一些编写更好、更快、更准确的\
+  \ `C` 代码的强大技巧和细节。\n\nDan Gookin\n\n(118 页) ISBN: 9798888650486 $32.95\n\n### JavaScript\
+  \ 脑筋急转\n\n![](http://pragmaticprogrammer.com/titles/fkjsbrain)\n\n如果你曾感受过攻克棘手问题的快感，或目睹挑战大脑的优雅代码时的快乐，那么这本书为你为你定制的。准备好投入各种令人烧脑的\
+  \ `JavaScript` 脑筋急转中。每个谜题不仅仅是一个代码练习；它是开启新见解和磨炼能力的大门。在解决挑战的过程中，你将学会务实地思考，优化代码效率，并避开可能让你措手不及的隐藏陷阱。更重要的是——谜题的形式将帮助你记住所学的内容！\n\
+  \nFaraz K. Kelhini\n\n(128 页) ISBN: 9798888650523 $32.95\n\n### Rust 脑筋急转\n\n![](http://pragmaticprogrammer.com/titles/hwrustbrain)\n\
+  \n`Rust` 编程语言是一致的，并尽力避免让程序员惊讶。然而，像所有语言一样，`Rust` 也有它的特殊之处。但这些特性提供了教学机会。在书中，你将完成一系列挑战你对\
+  \ `Rust` 理解的脑筋急转。通过理解知识中的空白，你可以更好地完成你的工作并避免错误。书中的许多谜题来自作者创建软件的自身经验，另一些来自 `Rust`\
+  \ 社区的常见问题。无论来源如何，这些脑筋急转都很有趣，而且让我们面对吧：谁不喜欢一个好的谜题呢，对吧？\n\nHerbert Wolverson\n\n(138\
+  \ 页) ISBN: 9781680509175 $18.95\n\n### Pandas 脑筋急转\n\n![](http://pragmaticprogrammer.com/titles/d-pandas)\n\
+  \n这本书包含 25 个短程序将挑战你对 `Pandas` 的理解。像任何大型项目一样，`Pandas` 开发者不得不做出一些有时令人惊讶的设计决策。这本书利用这些特殊性作为教学机会。通过理解知识中的空白，你将更好地完成你的工作。一些谜题来自作者将\
+  \ Bug 送到生产环境的经验，另一些来自他人的类似经历。谜题和挑战很有趣，学习如何解决它们可以教你避免编程错误，甚至可能给你的同事和未来的雇主留下印象。\n\n\
+  Miki Tebeka\n\n(110 页) ISBN: 9781680509014 $18.95\n\n### 数学脑筋急转\n\n![](http://pragmaticprogrammer.com/titles/esbrain)\n\
+  \n用数学挑战你的大脑！仅需基础算术和逻辑，当你看到答案对位时，你将非常兴奋。无论是纯粹为了好玩还是测试你的知识，你将磨练解决问题的能力并锻炼你的大脑。你只需要逻辑思维、一点耐心和清醒的头脑。这里没有陷阱。这些谜题是对你可能刚刚学习或遗忘已久的数学概念的完美介绍或复习。准备好享受比以前任何时候都更多的数字乐趣。\n\
+  \nErica Sadun\n\n(186 页) ISBN: 9781680509748 $18.95\n\n### Go 脑筋急转\n\n![](http://pragmaticprogrammer.com/titles/d-gobrain)\n\
+  \n这本书包含 25 个短程序将挑战你对 `Go` 的理解。像任何大型项目一样，`Go` 开发者不得不做出一些有时令人惊讶的设计决策。这本书利用这些特殊性作为教学机会。通过理解知识中的空白，你将更好地完成你的工作。一些谜题来自作者将\
+  \ Bug 送到生产环境的经验，另一些来自他人的类似经历。谜题和挑战很有趣，学习如何解决它们可以教你避免编程错误，甚至可能给你的同事和未来的雇主留下印象。\n\n\
+  Miki Tebeka\n\n(110 页) ISBN: 9781680508994 $18.95\n\n### Python 脑筋急转\n\n![](http://pragmaticprogrammer.com/titles/d-pybrain)\n\
+  \n我们极客喜欢谜题并解决它们。`Python` 编程语言是一种简单的语言，但与其他所有语言一样，它也有特殊之处。这本书通过 30 个挑战你对 `Python`\
+  \ 理解的简单程序，利用这些特性提供教学机会。谜题将帮助你避免错误，看到知识中的空白，并更好地完成工作。用这些谜题给同事留下印象，或者仅仅在那些无聊的会议中度过时间。谜题很有趣！\n\
+  \nMiki Tebeka\n\n(116 页) ISBN: 9781680509007 $18.95\n\n### Python 中的复杂网络分析\n\n![](http://pragmaticprogrammer.com/titles/dzcnapy)\n\
+  \n使用 Python 模块 `networkx` 构建、分析和可视化网络。网络分析是一个强大的工具，你可以将其应用于许多数据集和场景。发现如何处理各种网络，包括社交网络、产品、时间性和语义网络。将几乎任何现实世界数据转换为复杂网络——例如化妆品推荐、对冲基金关系和在线友谊。分析并可视化网络，根据你的分析做出业务决策。如果你是一个好奇的\
+  \ `Python` 程序员、数据科学家或负责机械化任务的 `CNA` 专家，你将指数级地提高生产力。\n\nDmitry Zinoviev\n\n(260 页)\
+  \ ISBN: 9781680502695 $35.95\n\n### 测试驱动开发的现代 C++ 编程\n\n![](http://pragmaticprogrammer.com/titles/lotdd)\n\
+  \n如果你用 `C++` 编程，那么你被忽视了。测试驱动开发 (TDD) 是一种现代软件开发实践，可以大幅减少系统的缺陷数量，产生更具维护性的代码，并让你有信心更改软件以满足不断的需求。但推广\
+  \ TDD 的人忽略了 `C++` 程序员；直到现在。在本书中，Jeff Langr 为你提供了关于在 `C++` 中进行 TDD 的挑战和回报的实战课程。\n\
+  \nJeff Langr\n\n(366 页) ISBN: 9781937785482 $40\n\n### 嵌入式 C 的测试驱动开发\n\n![](http://pragmaticprogrammer.com/titles/jgade)\n\
+  \n仍在追逐 Bug 并看着你的代码退化吗？认为 TDD 只适用于桌面或 Web 应用吗？不是的：TDD 适用于你，嵌入式 `C` 程序员。TDD 帮助你防止缺陷并构建具有长寿命的软件。这是第一本为\
+  \ `C` 程序员教授 TDD 的“怎么做”和“为什么”。\n\nJames W. Grenning\n\n(354 页) ISBN: 9781934356623\
+  \ $34.95\n\n* * *\n\n"
