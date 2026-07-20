@@ -1,0 +1,311 @@
+# Python 编程：学习 Python 编程领域的初学者指南
+
+
+
+![](img/Image00000.jpg)
+
+
+
+
+
+
+
+游戏随后转向了 Python 条件语句和字典，变得更有趣。条件语句为游戏增加了逻辑，而字典提供了一种最有效存储数据的方法。你看到的最有趣的程序之一是邀请用户输入并整合到 while 循环中。你也会喜欢关于函数的章节，它让代码变得智能且富有吸引力。函数之所以有趣，是因为它们可以很容易与不同的数据类型以及 `for` 和 while 循环配对。
+
+面向对象编程将引入真实的编程。你将学习如何创建类、继承类，并借助编程对现实对象建模。你可以借助 Python 类创建一些非常有趣的程序。我清晰地编写了代码。每段代码都与其结果对应。你可以复制代码并粘贴到编辑器中，进行你喜欢的编辑，然后获取结果。这就是你轻松学习编程的方法。我所有的代码都是用 Python 3.8 写的，这就是为什么我建议你下载并安装它。这个过程已经是本书的一部分。
+
+我写这本书的目标是让一个必须从零开始 Python 编程的人可以轻松学习编程。本书是为那些刚刚开始的人准备的。我由于深入且全面地解释了每个概念，以便初学者能够理解并很好地消化。即使你刚刚进入编程的世界，你也可以轻松理解这些概念。我建议你在阅读本书时随身带上笔记本和笔，这样你可以记录重要的要点和代码语法以便记忆和练习。你也可以在智能设备上标记它们，并在想阅读时跳转到所需的页面。与其他许多枯燥的编程书籍不同，这本书将解释代码的每一步，以便你可以轻松复现所学内容。我希望你开始后会有愉快的阅读体验。如果你有了学习 Python 的动力，这本书应该五到六次阅读就能完成。
+
+## 第一章：从这里开始
+本章将带你了解开始 Python 编程的过程。你将学习如何在你的操作系统上下载和安装 Python。你还将学习如何启动编辑器并在其中编写代码。
+
+你应该了解的第一件事是在你的操作系统上设置 Python 环境。Python 在不同的操作系统上有不同的安装。目前有两个版本：`Python 2` 和 `Python 3`。每种编程语言都在不断演进，开发者通过添加新概念和想法使其变得更加强大和多功能。你可以安装两个版本的 Python。
+
+### 安装 Python 3
+Python 是最广泛使用的编程语言之一，首次发布于 1991 年。从那时，它获得了巨大的人气。与 `Linux` 不同，`Windows` 操作系统默认没有安装 Python。然而，在 `Windows` 系统上安装 Python 是非常简单的一步。
+
+在 `Windows` 上安装 Python 3 的前提条件是你必须安装了 `Windows 10` 并具有管理员权限。此外，你的系统中应该有命令提示符。另一个前提是桌面应用程序。
+
+安装过程的第一步是选择你想安装的版本。在这种情况下，我们的目标是访问 `python.org` 官方网站并下载 Python 3 安装程序。现在在你的系统中运行。当你刚刚开始学习 Python 语言时，我建议下载 `Python 2` 和 `Python 3` 版本来测试新旧。
+
+### 可执行安装程序
+你应该在你的操作系统上下载并安装可执行安装程序。这方面的第一步是打开浏览器并转到 `python.org` 的下载部分。确保你下载并安装适用于 `Windows` 的可执行安装程序。近似下载大小约为 25 MB。如果你的 `Windows` 是 32 位系统，你应该选择 `x86` 可执行安装程序。如果是 64 位，你应该选择 `x64` 可执行安装程序。然而，即使你安装错了版本，也可以卸载并重新安装。
+
+### 运行程序
+当 Python 的可执行安装程序下载完成后，你需要运行它。选择“为所有用户”（For all users）。这将确保系统上的所有用户都能使用它。不要忘记勾选“将 Python 3.8 添加 PATH”，这会将解释器链接到路径并方便编程。下一步，点击“安装”。
+
+安装完成后，你将获得 `IDLE`。你也可以通过导航到 Python 安装的目录或在搜索栏中输入 `python` 来验证你系统上的 Python。你还可以通过命令提示符来检查它。如果你选择安装 Python 2，可能不会附带安装 Pip。Pip 是一个强大的包，在软件构建和机器学习方面非常有帮助。因此，你应该确保你安装的版本带有 Pip。
+
+你也可以通过打开开始菜单并在搜索栏中输入 `python --version` 来确认你的系统中是否安装了 pip。如果系统中安装了 pip，你将看到一行以 `pip 19.0.3` 开头的字样。否则，系统会说无法识别 pip 为外部或内部命令。当你打开 Python 解释器或 `IDLE` 时，它将显示如下文本：
+
+```
+Python 3.8.5 (tags/v3.8.5, Jul 20 2020, 15:57:54) [MSC v1924 64 bit (AMD64)] on Windows
+Type "help", "credits", "license"
+```
+顶部写着 Python 版本。如果你安装的是 Python 2，文本如下：
+```
+Python 2.7.8 (default, Jun 30 2014, 16:08:48) [MSC v1500 64 bit (AMD64)] on Windows
+Type "copyright", "credits", "license"
+```
+
+## 第二章：Python 变量与数据类型
+当你运行扩展名为 `.py` 的文件时，意味着你正在运行一个 Python 程序。编辑器在 Python 解释器中运行程序。Python 解释器识别 Python 关键字、读取它们、识别它们并采取相应的行动。以 `print` 关键字为例。当 Python 解释器看到这个关键字时，它可以打印你在括号中的任何内容。当你在 Python 编辑器中编写代码时，你会发现 Python 编辑器用不同颜色突出你的代码。这就是它识别不同类型代码的方式。Python 的这一特性被称为语法高亮，在你学习编写 Python 程序时非常有用。
+
+### Python 变量
+Python 变量就像容器，你可以向其中填充不同类型的数据值。Python 与其他编程语言不同，因为它没有声明变量的命令。你只需要通过给它分配特定值就可以创建一个变量。在下面的示例中，我将创建一个变量并给它分配一些值。请记住，我在初始阶段使用的是 Python 解释器。在后面的章节中我将转向 Python 编辑器。
+
+```
+>>> greetings = "Hello, I am here to learn Python."
+>>> print(greetings)
+Hello, I am here to learn Python.
+```
+变量的名字是 `greetings`。变量存储了一个完整的句子作为它的唯一值。`print` 关键字正如我所说，用于显示变量的值。变量的值可以通过赋值另一个值来轻松替换。查看下面的示例。
+
+```
+>>> greetings = "Hello, I am here to learn Python."
+>>> print(greetings)
+Hello, I am here to learn Python.
+
+>>> greetings = "This is the world of Python."
+>>> print(greetings)
+This is the world of Python.
+```
+
+### 变量的命名
+当你为变量命名时，必须遵守一些准则和规则。如果你违反了规则，代码中将会出现错误。即使忽略规则不会触发错误，违反规则也会让代码看起来模糊且抽象。程序员的成功在于他的代码应该是易于理解和阅读的。在创建变量时，必须记住以下规则。
+
+
+
+
+
+### 命名规范
+
+- 变量名可以包含数字、字母和下划线。它们可以以下划线或字母开头，但不能以数字开头。例如，变量可以写成 `greetings_77`，但不能写成 `77_greetings`。
+- 在命名变量时，你必须避免使用 Python 关键字。例如，你不能将变量命名为 `print`，因为 `print` 是 Python 的关键字。
+- 如果你能够让变量名尽可能具有描述性，将有助于你在日后回顾代码时更好地阅读和理解。例如，`greetings` 比直接写 `g` 更好。
+
+
+
+
+## Python 变量命名规范
+
+在 Python 中，编写变量名是一项持续的练习。随着你不断深入编程世界，你将学习如何创建更好的变量名。当你在创建变量时，遇到错误是常见现象。你应该确保自己没有拼错不同的单词。查看可能的错误，并尝试学习如何避免和修复它们。
+
+我将使用同一个变量 `greetings` 来展示你是如何获得一个错误消息的。
+
+```python
+greetings = "This is the world of Python."
+print(greeting)
+Traceback (most recent call last):
+File "<pyshell#6>", line 1, in <module>
+print(greeting)
+NameError: name 'greeting' is not defined
+```
+
+我做的只是在代码中写错了拼写。Python 与其他编程语言的不同之处在于它会显示错误消息，告诉你是错误的确切行号。这有助于纠正错误和清理代码。
+
+通过写错误的拼写，我并不是说 Python 能够识别拼写的正错。我是想表达它会读取变量名并与你输入的命令进行匹配。如果不匹配，就会弹出错误消息。因此，即使你在为变量分配名称时拼错了单词，Python 也不会将其宣布为错误。
+
+```python
+greetings = "This is the world of Python."
+print(gretings)
+This is the world of Python.
+```
+
+我故意拼错了 `greetings` 这个单词，但 Python 仍然读取了它并运行了代码。很多编程错误仅仅是因为拼写错误引起的。你可以称它们为拼写错误（typos）。
+
+## Python 数据类型
+
+在编程中，你需要使用不同类型的数据。有些是简单的文本，而另一些是整数或列表。Python 支持多种数据类型。然而，你在创建时必须指定数据类型，以便 Python 能够轻松识别它并按照你的意愿进行处理。在接下来的章节中，我将介绍我在书中各种代码段中将使用的几种数据类型。
+
+简单来说，数据类型如下：
+
+### 这是 Python 列表
+```python
+a = ["tomato, potato, garlic, ginger, pumpkin"]
+print(a)
+['tomato, potato, garlic, ginger, pumpkin']
+```
+
+### 这是 Python 不变集合 (frozenset)
+```python
+a = frozenset({"tomato, potato, garlic, ginger, pumpkin"})
+print(a)
+frozenset({'tomato, potato, garlic, ginger, pumpkin'})
+```
+
+### 这是 Python 集合 (set)
+```python
+a = {"tomato, potato, garlic, ginger, pumpkin"}
+print(a)
+{'tomato, potato, garlic, ginger, pumpkin'}
+```
+
+### 这是 Python 元组 (tuple)
+```python
+a = ("tomato, potato, garlic, ginger, pumpkin")
+print(a)
+tomato, potato, garlic, ginger, pumpkin
+```
+
+### 这是字典 (dictionary)
+```python
+a = {"fruit" : "tomato", "veg: potato", "veg" : "garlic", "veg" : "ginger", "veg" : "pumpkin"}
+SyntaxError: invalid syntax
+a = {"fruit" : "tomato", "veg": "potato", "veg" : "garlic", "veg" : "ginger", "veg" : "pumpkin"}
+print(a)
+{'fruit': 'tomato', 'veg': 'pumpkin', 'veg1': 'garlic', 'veg2': 'ginger', 'veg3': 'pumpkin'}
+```
+
+在上面，我将一个字符串转换成了不同的数据类型。在代码的字典部分，你会看到一些错误。一个错误是因为缺少引号，而另一个错误是因为字典名称相似。字典是非常重要的，因为它们允许用户以对的形式存储重要数据。
+
+## Python 字符串
+
+第一个数据类型是 Python 字符串。大多数 Python 程序都需要收集和处理数据、存储并使用它们。最常见的数据类型之一就是字符串。它们初看之下似乎简单，但可以用多种方式使用。字符串通常以字符的形式书写。任何出现在引号内的内容都被称为字符串。你可以使用单引号或双引号来创建字符串。使用不同类型引号的灵活性并非偶然，它有几个用途。
+
+单引号允许你轻松地编写代码，而双引号允许你在文本中使用撇号。在接下来的示例中，你将学习如何使用这两种引号以及它们的优忌。
+
+```python
+a = "I am learning Python."
+print(a)
+I am learning Python.
+a = 'I am learning Python.'
+print(a)
+I am learning Python.
+a = "I am learning Tack's book on Python."
+print(a)
+I am learning Tack's book on Python.
+a = 'I am learning Tacky's book on Python.'
+SyntaxError: invalid syntax
+```
+
+如果你完全掌握了这一概念，字符串会非常有趣。你可以将文本转换为小写和大写。我将使用同一个字符串示例并对其进行实验，看看我们如何更改它的大小。
+
+```python
+a = "I am learning Python."
+print(a.title())
+I Am Learning Python.
+print(a.upper())
+I AM LEARNING PYTHON.
+print(a.lower())
+i am learning python.
+```
+
+正如你所看到的，最简单的任务之一就是更改大小。有三个关键字：`upper`、`lower` 和 `title`。
+
+## 第三章：Python 列表与元组
+
+本章将带你了解列表的概念。本章将解释 Python 列表是什么以及如何在 Python 程序中使用它们。列表是 Python 最强大的特性之一，允许你以易于访问的格式填充信息。
+
+### 列表方法
+
+列表是可以修改的。你可以使用 `append` 方法向列表末尾添加项目。`insert` 方法允许你在选择的位置添加项目。
+
+```python
+officeitems = ['printer', 'scanner', 'fan', 'table system']
+print(officeitems)
+officeitems.append('laptop')
+print(officeitems)
+officeitems.insert(0, 'air conditioner')
+print(officeitems)
+```
+
+### Del 方法
+
+`del` 语句用于从列表中删除特定项目。
+
+```python
+officeitems = ['printer', 'scanner', 'fan', 'table system']
+print(officeitems)
+del officeitems[0]
+print(officeitems)
+del officeitems[1]
+print(officeitems)
+del officeitems[2]
+print(officeitems)
+```
+
+### Pop 方法
+
+`pop()` 方法用于从列表中删除项目。`pop()` 方法倾向于从列表末尾弹出项目。
+
+```python
+officeitems = ['printer', 'scanner', 'fan', 'table system']
+print(officeitems)
+officeitems.pop()
+print(officeitems)
+```
+
+### Remove 方法
+
+`remove()` 方法用于通过值从列表中删除项目。
+
+```python
+officeitems = ['printer', 'scanner', 'fan', 'table system']
+print(officeitems)
+officeitems.remove('scanner')
+print(officeitems)
+officeitems.remove('table')
+print(officeitems)
+```
+
+### 列表组织
+
+Python 的 `sort()` 方法让排序列表变得有趣。`sort()` 方法按字母顺序排序列表。
+
+```python
+officeitems = ['printer', 'scanner', 'fan', 'table system']
+print(officeitems)
+officeitems.sort()
+print(officeitems)
+```
+
+`sort()` 也可以用于反字母顺序排序列表。
+
+```python
+officeitems = ['printer', 'scanner', 'fan', 'table system']
+print(officeitems)
+officeitems.sort(reverse=True)
+print(officeitems)
+```
+
+## 第四章：Python 条件判断
+
+编程的关键部分是检查一组条件，然后根据条件采取适当的操作。Python 中的 `if` 语句允许你测试程序的状态并采取行动。
+
+### If-else 语句
+
+当你在没有正确程序混合数据类型时，你会得到错误。例如，你不能混合 `date` 和 `day` 来显示字符串语句。
+
+```python
+place_name = "Silicon Valley"
+state_name = "California"
+country_name = "United States"
+location_info = place_name + " , " + state_name + " , " + country_name
+date = 4
+info = "Hi, I want to visit " + location_info.title() + " in the next month on" + date + " th."
+print(info)
+TypeError: can only concatenate str (not "int") to str
+```
+
+### If-elif-else 链
+
+`if-elif-else` 链允许你向块中添加更多条件。
+
+```python
+items = 5
+if items < 10:
+    print("You still can list the office")
+elif items < 15:
+    print("You can list the office")
+else:
+    print("Sorry, you cannot list the office")
+```
+
+## 第五章：Python 字典
+
+本章将带你了解 Python 字典的概念，这是 Python 编码最重要的部分。你可以以对的形式在字典中存储信息。你可以轻松地访问、修改和删除信息。
+
+### 定义字典
+
+要创建一个字典，可以使用 `dict()` 构造函数或大括号。每个条目由一个键和一个值组成。
