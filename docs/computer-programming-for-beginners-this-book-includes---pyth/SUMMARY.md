@@ -1,0 +1,2 @@
++   [初学者计算机编程指南：本书包含 - Python、C++、Linux 入门指南以及 Kali Linux 黑客攻击。通过此合集循序渐进地学习编程](README.md)
++   [初学者计算机编程指南：本书包含 - Python、C++、Linux 入门指南以及 Kali Linux 黑客攻击。通过此合集循序渐进地学习编程](computer-programming-for-beginners-this-book-includes---pyth_0.md)
