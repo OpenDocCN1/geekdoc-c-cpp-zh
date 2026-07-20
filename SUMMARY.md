@@ -106,6 +106,7 @@
 +   [C# 12 云端、Web 及桌面应用：使用 C# 12 进行软件开发的现代概念与技术](docs/c-12-for-cloud-web-and-desktop-applications-modern-concepts-/README.md)
 +   [C# 13 编程必备 - .NET 9 版](docs/c-13-programming-essentials---net-9-edition/README.md)
 +   [C# 13 编程精要 - .NET 9 版：使用 Visual Studio Code 学习 C# 和 .NET 9 编程](docs/c-13-programming-essentials---net-9-edition-learn-c-and-net-/README.md)
++   [C++：二合一 - 精通 C++ 终极初学者指南](docs/c-2-books-in-1---the-ultimate-beginners-guide-to-mastering-c/README.md)
 +   [C# 2012 程序员指南 (Deitel 开发者)](docs/c-2012-for-programmers-deitel-developer/README.md)
 +   [C#：3合1 - 零基础快速掌握 C# 编程的初学者、中级及高级终指南](docs/c-3-books-in-1---the-ultimate-beginner-intermediate-advanced/README.md)
 +   [C# 3.0：初学者指南](docs/c-30-a-beginners-guide-beginners-guide-osborne-mcgraw-hill/README.md)
