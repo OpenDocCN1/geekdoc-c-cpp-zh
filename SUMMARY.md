@@ -322,6 +322,7 @@
 +   [C++ FAQ Lite](docs/cpp-faq-lite/README.md)
 +   [C++到 Rust 短语手册](docs/cpp-rs-phsbk/README.md)
 +   [C++11 FAQ 中文版](docs/cpp11-faq/README.md)
++   [C 语言面试攻坚：500+面试题与解析，助你强化 C 语言概念，开启高薪编程生涯（英文版）](docs/cracking-c-programming-interview-500-interview-questions-and/README.md)
 +   [掌握 C++ 编程技巧：IT 面试系列](docs/cracking-the-c-programming-skills-it-job-interview-series/README.md)
 +   [创建计算机游戏：设计并构建你自己的游戏](docs/create-computer-games-design-and-build-your-own-game/README.md)
 +   [自底向上的计算机科学](docs/csbu/README.md)
