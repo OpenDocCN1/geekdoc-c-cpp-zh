@@ -181,6 +181,7 @@
 +   [C Primer Plus (6版)](docs/c-primer-plus-c-primer-plus-6-developers-library/README.md)
 +   [C 语言编程透视](docs/c-prog-toushi/README.md)
 +   [C++ 编程：多范式编程语言基础与数据管理入门初学者指南 (2022 速成课程)](docs/c-programming-a-beginners-guide-to-learning-the-fundamentals/README.md)
++   [C++ 编程：初学者掌握 C++ 并构建健壮程序的完整指南](docs/c-programming-a-complete-guide-for-beginners-to-master-c-and/README.md)
 +   [C 语言：C 语言全面指南](docs/c-programming-a-comprehensive-guide-to-c-programming/README.md)
 +   [C 语言：学习 C 语言基础的权威方法](docs/c-programming-a-definitive-method-for-learning-the-basics-of/README.md)
 +   [C 语言入门自学指南](docs/c-programming-a-self-teaching-introduction/README.md)
