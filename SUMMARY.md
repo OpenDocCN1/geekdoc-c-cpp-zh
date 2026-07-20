@@ -356,6 +356,7 @@
 +   [机器学习文档处理指南](docs/document-processing-using-machine-learning/README.md)
 +   [E. Balaguruswamy 的 ANSI C 解决方案：第 8 版](docs/e-balaguruswamys-ansi-c-solutions-8th-edition/README.md)
 +   [简单 C++ 编程指南：通过实战项目学习 C++ 编程的逐步指南](docs/easy-c-programming-guide-step-by-step-guide-to-learn-c-progr/README.md)
++   [Effective C++：改进程序与设计的 55 种特效，第三版 (Gal Zentner 图书系列)](docs/effective-c-55-specific-ways-to-improve-your-programs-and-de/README.md)
 +   [Effective JavaScript：利用 JavaScript  de 68 种特定方法（高效软件开发系列）](docs/effective-javascript-68-specific-ways-to-harness-the-power-o/README.md)
 +   [编程面试元素：C++ 内部指南](docs/elements-of-programming-interviews-the-insiders-guide-c/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
