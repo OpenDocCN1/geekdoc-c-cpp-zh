@@ -335,6 +335,7 @@
 +   [CSS3：挑战极限](docs/css3-ppushing-the-limits/README.md)
 +   [C++ CUDA 编程：从基础到精通](docs/cuda-programming-with-cfrom-basics-to-expert-proficiency/README.md)
 +   [网络心理学：个体、社会与数字技术研究 (BPS 心理学教科书)](docs/cyberpsychology-the-study-of-individuals-society-and-digital/README.md)
++   [Dashcode 入学者指南](docs/dashcode-for-dummies/README.md)
 +   [数据模型模式：元数据映射（数据管理系统系列）](docs/data-model-patterns-a-metadata-map-the-morgan-kaufmann-serie/README.md)
 +   [C 语言数据结构与程序设计：自学入门指南](docs/data-structures-and-program-design-using-c-a-self-teaching-i/README.md)
 +   [C 数据结构：初学者实用指南](docs/data-structures-using-c-a-practical-approach-for-beginners/README.md)
