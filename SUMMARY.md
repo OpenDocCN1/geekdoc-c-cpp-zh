@@ -290,6 +290,7 @@
 +   [趣味编程：通过游戏、动画和移动应用学习 C 编程](docs/coding-fun-learn-c-programming-with-games-animations-and-mob/README.md)
 +   [Python 编程：学习 Python 编程领域的初学者指南](docs/coding-in-python-a-comprehensive-beginners-guide-to-learn-th/README.md)
 +   [Coding Interview Ninja：50 道带 Java 解决方案的编程题，面试实践指南](docs/coding-interview-ninja-50-coding-questions-with-java-solutio/README.md)
++   [为儿童编写 iPhone 应用：Swift 入门指南](docs/coding-iphone-apps-for-kids-a-playful-introduction-to-swift/README.md)
 +   [编程精通：C# 初学者及进阶指南，通往 C# 及其他领域的逐步进阶之路 - Python、Java、SQL 等](docs/coding-mastery-unlocking-c-for-beginners-and-beyond-a-step-b/README.md)
 +   [C++ 编程入门完整教程](docs/complete-tutorial-to-begin-programming-in-c/README.md)
 +   [计算童话](docs/computational-fairy-tales/README.md)
