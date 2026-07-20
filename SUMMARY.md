@@ -208,6 +208,7 @@
 +   [C语言入门指南（傻瓜书系列·计算机/技术）](docs/c-programming-for-dummies-for-dummies-computertech/README.md)
 +   [为物联网的C编程：面向初学者的计算机运行Linux书籍——用户登录时如何自动运行程序](docs/c-programming-for-iot-computer-run-linux-book-for-beginners-/README.md)
 +   [AVR Butterfly与免费WinAVR编译器的微控制器C语言编程指南](docs/c-programming-for-microcontrollers-featuring-atmels-avr-butt/README.md)
++   [零基础学者 C++ 编程指南](docs/c-programming-for-the-absolute-beginner/README.md)
 +   [C++ 编程：从新手到专家的进阶指南](docs/c-programming-from-novice-to-expert-in-a-step-by-step-journe/README.md)
 +   [C# 编程入门：从零到精通](docs/c-programming-from-zero-to-proficiency-introduction/README.md)
 +   [3D 游戏开发 C++ 编程初学者指南](docs/c-programming-handbook-for-beginners-on-3d-games-development/README.md)
