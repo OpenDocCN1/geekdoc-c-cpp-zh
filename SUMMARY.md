@@ -112,6 +112,7 @@
 +   [C#：3合1 - 零基础快速掌握 C# 编程的初学者、中级及高级终指南](docs/c-3-books-in-1---the-ultimate-beginner-intermediate-advanced/README.md)
 +   [C++：三合一-初学者指南+简单有效的技巧+高效学习 C++ 编程高级指南](docs/c-3-in-1--beginners-guide-simple-and-effective-tips-and-tric/README.md)
 +   [C# 3.0：初学者指南](docs/c-30-a-beginners-guide-beginners-guide-osborne-mcgraw-hill/README.md)
++   [C# 4.0：完全参考](docs/c-40-the-complete-reference/README.md)
 +   [C# 5.0：程序员参考指南](docs/c-50-programmers-reference/README.md)
 +   [C# 6 程序员高级指南](docs/c-6-for-programmers-c-sharp-six-for-programmers/README.md)
 +   [C# 6 技术指南：使用 Visual Studio 2015 编程 C#](docs/c-6-headnotes-programming-c-with-visual-studio-2015/README.md)
