@@ -218,6 +218,7 @@
 +   [3D 游戏开发 C++ 编程初学者指南](docs/c-programming-handbook-for-beginners-on-3d-games-development/README.md)
 +   [C# 编程初学者与中级学习指南：未来已来！实践学习法](docs/c-programming-illustrated-guide-for-beginners-intermediates-/README.md)
 +   [C 语言简易教程](docs/c-programming-in-easy-steps/README.md)
++   [C++ 编程入门指南，第 6 版](docs/c-programming-in-easy-steps-6th-edition/README.md)
 +   [C 语言 Linux 编程指南](docs/c-programming-in-linux-learn-how-to-program-in-linux/README.md)
 +   [C 语言](docs/c-programming-language/README.md)
 +   [C 语言入门指南](docs/c-programming-language---always-beginners/README.md)

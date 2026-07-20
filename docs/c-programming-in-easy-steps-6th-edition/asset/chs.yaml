@@ -1,0 +1,1534 @@
+- "# C++ 编程入门指南，第 6 版\n\n\n\n![](img/cover.jpg)\n\n![image](img/cover.jpg)\n\n![image](img/ifc.jpg)\n\
+  \n![image](img/title.jpg)\n\n\n\n\n\n\n\n\n\n\n# 前言\n本书的创作为我——Mike McGrath 提供了一个更新我之前的\
+  \ C++ 书籍的好机会。书中提供的所有示例都演示了当前 Windows 和 Linux 操作系统上的编译器支持的 C++ 特性，适用于 Microsoft Studio\
+  \ 开发套。我衷心希望你们在发现 C++ 强大且富有表现力的可能性时，能像我编写这本书时一样享受其中。\n\n## 本书中的约定\n为了清晰每个示例中列出的代码，我采用了特定的色彩约定。C++\
+  \ 语言本身的组件为蓝色，数值和字符串值为红色，程序员指定的名称为黑色，注释为绿色，如下所示：\n\n```cpp\n// 存储并输出文本字符串值。\nstring\
+  \ myMessage = \"Hello from C++!\";\ncout << myMessage ;\n```\n\n此外，为了标识步骤中描述的每个源代码文件，步骤旁边会出现彩色图标和文件名：\n\
+  \n![image](img/pg6_1.jpg)\n`main.cpp`\n\n![image](img/pg6_2.jpg)\n`header.h`\n\n\
+  ## 获取源代码\n为了方便起见，我将书中示例的源代码文件放置在一个 ZIP 压缩包中，提供了 Windows 和 Linux 平台版本以及 Microsoft\
+  \ Studio IDE。你可以可以通过以下简单的步骤获取完整的压缩包：\n\n![image](img/1g1.jpg)\n访问 **[www.ineasysteps.com](http://www.ineasysteps.com)**，然后导航到免费资源\
+  \ (Free Resources) 并选择下载 (Downloads) 部分。\n\n![image](img/2g1.jpg)\n在列表中找到 C++ Programming\
+  \ in easy steps, 6th edition，然后点击标题为 All Code Examples 的超链接下载压缩包。\n\n![image](img/3g1.jpg)\n\
+  现在，将压缩包内容解压到你计算机上的任何方便的位置。\n\n\n\n如果你没有获得任何示例所示的结果，只需将你的代码与你下载的原始示例文件中的代码进行比较，以发现错误出在哪里。\n\
+  \n# 1\n\n## 开始上手\n\n欢迎来到精彩的 C++ 编程世界。本章将演示如何创建一个简单的 C++ 程序，以及如何在程序中存储数据。\n\n- 介绍\
+  \ C++\n- 安装编译器\n- 编写你的第一个程序\n- 编译并运行程序\n- 创建变量\n- 使用变量数组\n- 使用 vector 数组\n- 声明常量\n\
+  - 总结\n\n## 介绍 C++\n\nC++ 是 C 编程语言的扩展，由 Dennis Ritchie 在 1972 年首次在 UNIX 操作系统上实现。C\
+  \ 是一种灵活的编程语言，至今仍然非常流行，并被用于从微控制器到最先进科学系统的各种平台。\n\n![image](img/pg8_1.jpg)\n\n一种强大的编程语言（读音为“see\
+  \ plus plus”），设计用于让你表达思想。\n\nC++ 是由 Bjarne Stroustrup 博士在 1983 年至 1985 年间于新泽西州的\
+  \ AT&T 贝尔实验室工作期间开发的。他在原始 C 语言的基础上添加了特性，产生了他所谓的“带有类的 C”（C with classes）。这些类定义了具有特定特性的编程对象，将\
+  \ C 的过程化本质转换为 C++ 的面向对象编程语言。\n\nC 编程语言之所以得此名，是因为它继承了在 1970 年左右引入的名为“B”的早期编程语言。“C++”这个名字体现了一些程序员的幽默感，因为编程中的\
+  \ `++` 增运算符表示 C++ 是 C 语言的扩展。\n\nC++ 像 C 一样，不依赖于平台，因此可以在任何操作系统上创建程序。书中的大多数插图描述的是\
+  \ Windows 操作系统上的输出，纯粹是因为它是最常用的桌面平台。示例也可以在 Linux 或 macOS 等其他平台上创建。\n\n### 为什么要学习\
+  \ C++ 编程？\n\nC++ 语言受到许多专业程序员的喜爱，因为它允许他们创建快速、紧凑且健壮可移植的程序。\n\n使用现代的 C++ 集成开发环境（IDE），例如微软的\
+  \ Visual Studio Community 版，程序员可以快速创建复杂的应用程序。但为了充分发挥这些工具的作用，程序员必须首先学习大量的 C++ 语言本身。\n\
+  \n本书是 C++ 编程的入门教程，提供了程序代码及其输出示例，以演示这种强大语言的基础知识。\n\n![image](img/forget.jpg)\n\n\
+  微软免费的 Visual Studio Community 版 IDE 在书中用于演示可视化编程。\n\n### 我应该先学 C 语言吗？\n\n对于在转向 C++\
+  \ 之前熟悉 C 编程是否是一个优势，人们意见不一。先学习原始语言以便更轻松地理解更大的扩展语言似乎是合逻辑的。然而，C++ 并不仅仅是 C 的大版本，因为 C++\
+  \ 的面向对象编程方法与 C 的过程化本质有显著不同。因此，认为在没有 C 语言知识的情况下学习 C++ 更好，以避免混淆。\n\n本书并不假设读者具备任何编程语言的先前知识，因此适合\
+  \ C++ 编程的初学者，无论他们是否知道 C 语言。\n\n如果你觉得在转向 C++ 之前学习 C 语言编程对你有所帮助，我们建议你在阅读本书之前尝试[易学\
+  \ C 语言编程](http://www.ineasysteps.com/)中的示例。\n\n### C++ 的标准化\n\n随着 C++ 编程语言普及性的提高，它被全球许多程序员作为首选编程语言。其中一些程序员开始向语言中添加自己的扩展，因此有必要约定一个精确的\
+  \ C++ 版本，以便所有程序员在国际范围内共同共享。\n\n标准版本的 C++ 是由美国国家标准协会（ANSI）和国际标准化组织（ISO）的联合委员会定义的。这个版本有时被称为\
+  \ ANSI C++，它可以移植到任何平台和任何开发环境。\n\n书中所给示例符合 ANSI C++。示例程序运行在控制台窗口中（例如 Windows 系统上的命令提示符窗口或\
+  \ Linux 系统上的 shell 终端窗口），用以演示 C++ 语言本身的机制。最后一章中的一个示例说明了在 Windows 平台上通过视觉化开发工具自动生成的代码，一旦你熟悉了\
+  \ C++ 语言，就可以通过编辑来创建一个图形化的窗口应用程序。\n\n![image](img/hot.jpg)\n\n“ISO”不是缩写词，而是源自希腊单词“isos”，意为“相等”——就像“等距”（isometric）。\n\
+  \n## 安装编译器\n\nC++ 程序最初以纯文本文件创建，扩展名为 `.cpp`。这些文件可以在任何文本编辑器中编写，例如 Windows 的记事本应用程序或\
+  \ Linux 上的 Vi 编辑器。\n\n为了执行 C++ 程序，必须将其“编译”成计算机可以理解的字节码。C++ 编译器读取程序的文本版本并将其翻译成第二个文件——机器可读的、可执行格式。\n\
+  \n如果文本程序包含任何语法错误，编译器将报告这些错误且不会生成可执行文件。\n\n如果你使用 Windows 平台并安装了 C++ 集成开发环境（IDE），那么你已经可以使用\
+  \ C++ 编译器，因为编译器是视觉 IDE 的不可缺的一部分。优秀的免费微软 C++ IDE 在开始学习 C++ 时可能会显得笨重，因为它们总是创建许多高级程序使用的“项目”文件。\n\
+  \n流行的免费 GNU C++ 编译器根据通用公共许可证（GPL）免费提供。它包含在大多数 Linux 操作系统发行版中。GNU C++ 编译器也适用于 Windows\
+  \ 平台，并用于编译书中的示例。\n\n要发现系统是否已安装 GNU C++ 编译器，请在命令提示符处输入 `c++ -v` 然后按回车。如果可用，编译器将返回版本信息。如果你使用\
+  \ Linux 平台且计算机上没有 GNU C++ 编译器，请从发行版磁盘安装、从 GNU 网站下载或要求系统管理员安装。\n\nGNU 项目（读音为“guh-new”）于\
+  \ 1984 年启动，旨在开发一个完全免费的类 Unix 操作系统。GNU 的一部分是“Windows 最小化 GNU”（MinGW）。MinGW 包含了可以在\
+  \ Windows 系统上创建可执行 C++ 程序的 GNU C++ 编译器。Windows 用户可以按照此处的说明下载并安装 GNU C++ 编译器。\n\n\
+  要打开 Windows 命令提示符，按下 `Windows + R` 启动运行对话框，然后在对话框中输入 `cmd` 并按回车。\n\n\n\n\n\n![image](img/1b.jpg)连接互联网，启动网络浏览器然后导航到\
+  \ `[osdn.net/projects/mingw](http://osdn.net/projects/mingw)` 并点击链接下载 MinGW 安装程序\
+  \ `mingw-get-setup.exe`。\n\n![image](img/pg11_1.jpg)\n\n![image](img/2b.jpg)启动安装程序，并在“Installation\
+  \ Manager”对话框中接受建议的位置 `C:\\MinGW`。\n\n![image](img/3b.jpg)勾选 `Basic MinGW` 和 `C++\
+  \ Compiler` 项目，然后点击 `Installation`、`Apply Changes`、`Apply` 进行安装。\n\n![image](img/pg11_2.jpg)\n\
+  \nMinGW C++ 编译器是一个位于 `C:\\MinGW\\bin` 的二进制执行文件。为了允许从任何系统位置访问，现在应将此文件夹添加到系统路径（System\
+  \ Path）：\n\n![image](img/4b.jpg)打开 Windows “系统属性”对话框，然后选择`Advanced`选项卡并点击`Environment\
+  \ Variables`按钮 – 打开“环境变量”对话框。\n\n![image](img/5b.jpg)选择`Path`系统变量，然后点击`Edit`按钮并添加位置\
+  \ `C:\\MinGW\\bin;`。\n\n![image](img/6b.jpg)点击`OK`关闭每个对话框，然后打开命令提示符窗口输入命令 `c++`。如果安装成功，编译器应该响应你没有指定任何用于编译的输入文件\n\
+  \n![image](img/pg11_3.jpg)\n\n![image](img/hot.jpg)\n\n要打开系统属性对话框，按下 `Windows` +\
+  \ `R` 键启动运行对话框，然后在对话框中输入 `sysdm.cpl` 并按 `Enter` 。\n\n![image](img/pg11_4.jpg)\n\n\
+  ![image](img/pg11_5.jpg)\n\n![image](img/pg11_6.jpg)\n\n# 编写你的第一个程序\n\n按照以下步骤，完全按照列出的内容复制代码，创建一个简单的\
+  \ C++ 程序，它将输出传统的第一个程序问候语：\n\n![image](img/commonb.jpg)\n\nhello.cpp\n\n![image](img/1b.jpg)打开一个纯文本编辑器，例如\
+  \ Windows 记事本，然后输入这些“预处理器指令”：\n\n```cpp\n#include <iostream>\nusing namespace std\
+  \ ;\n```\n\n![image](img/2b.jpg)在预处理器指令下方几行，添加一个描述程序的“注释”\n\n```cpp\n// A C++ Program\
+  \ to output a greeting.\n```\n\n![image](img/3b.jpg)在注释下方，添加一个“main 函数”声明以包含程序语句\n\
+  \n```cpp\nint main()\n{\n}\n```\n\n![image](img/4b.jpg)在主函数的大括号（braces）之间，插入此输出“语句”：\n\
+  \n```cpp\ncout << “Hello World!” << endl ;\n```\n\n![image](img/5b.jpg)接下来，在主函数中插入最后的“return”语句\n\
+  \n```cpp\nreturn 0 ;\n```\n\n![image](img/6b.jpg)将程序保存到任何方便的位置命名为“hello.cpp” – 完整的程序看起来应该是这样：\n\
+  \n![image](img/pg12_1.jpg)\n\n![image](img/forget.jpg)\n\n本书中的注释均以绿色显示 – 以将它们与其他代码区分。\n\
+  \n![image](img/snake.jpg)\n\n在输入主方法的最后一个闭合 `}` 大括号后，始终按 `Return` 以添加换行符 – 你的编译器可能坚持源文件应以换行符结束。\n\
+  \n可以单独检查此处所示的程序代码的各个部分，以更清楚地理解每个部分：\n\n*   **预处理器指令 (Preprocessor Directives)**\
+  \ – 这些在程序代码之前由编译器处理，因此必须始终出现在页面开头。在这里，`#include` 指令编译器使用名为 `iostream` 的标准 C++ 输入输出库，在`<\
+  \ >` 尖括号之间指定库名。下一行是“使用指令”（using directive），允许使用指定命名空间中的函数而无需其命名名前缀。`iostream` 库的函数位于\
+  \ `std` 命名空间内 – 因此此 `using` 指令允许将 `std::cout` 和 `std::endl` 写为 `cout` 和 `endl`。\n\
+  *   **注释 (Comments)** – 这些应该让其他人更容易理解代码，以及自己在以后重新查看代码时。在 C++ 编程中，`//` 双斜杠之后单行上的所有内容都会被编译器忽略。\n\
+  *   **主函数 (Main function)** – 这是每个 C++ 程序的强制入口点。程序可以包含许多函数，但它们必须包含一个名为 `main` 的函数，否则编译器将无法编译程序。可选情况下，函数名后的括号可以指定一个用逗号分隔的“参数”值列表，供该函数使用。执行后，函数必须向操作系统返回其在声明中指定的数据类型的值\
+  \ – 在本情况下，是一个 `int`（整数）值。\n*   **语句 (Statements)** – 这些是程序运行时将执行的动作。每个语句必须以分号终止，就像英语句子必须以句号结束一样。在这里，第一条语句调用\
+  \ `cout` 库函数来输出文本和一个 `endl` 换行符。这些通过 `<<` 输出流运算符定向到标准输出。注意文本必须包含在双引号内。最后的语句使用 `return`\
+  \ 返回零值。C++ 编译器支持 `/*` 和 `*/` 之间的多行注释 – 但这些仅用于注释代码段。\n\n![image](img/hot.jpg)\n\n\
+  注意代码使用空格和缩进（统称为空白字符）来提高可读性。C++ 编译器忽略所有空白。\n\n# 编译与运行程序\n\n本书的 C++ 源文件存储在为此目的创建的目录中。该目录命名为\
+  \ `MyPrograms` – 其在 Windows 上的绝对地址为 `C:\\MinGW`，在 Linux 上为 /*user。你可以重建此目录来存储等待编译的程序：\n\
+  \n![image](img/1b.jpg)将 `hello.cpp` 程序文件移动到 `MyPrograms` 目录\n\n![image](img/2b.jpg)在命令提示符处，使用\
+  \ `cd` 命令导航到 `MyPrograms` 目录\n\n![image](img/3b.jpg)输入命令尝试编译程序：\n\n```bash\nc++\
+  \ hello.cpp\n```\n\n当尝试成功时，编译器会在源文件旁边创建一个执行文件。默认情况下，执行文件在 Windows 上名为 a.exe，在 Linux\
+  \ 上名为 a。同一目录下编译不同的源文件将覆盖第一个执行文件。这显然是不理想的，因此在编译程序时应为执行文件指定自定义名称，使用编译命令中的 `-o` 选项：\n\
+  \n```bash\nc++ hello.cpp -o hello.exe\n```\n\n![image](img/pg14_1.jpg)\n\n![image](img/pg15_1.jpg)\n\
+  \n![image](img/forget.jpg)\n\n`c++` 命令是 GNU C++编译编译别名 – 也可以使用 `g++` 命令。你可以通过命令查看编译器版本号：\n\
+  \n```bash\nc++ --version\n```\n\n并通过以下命令显示所有选项：\n\n```bash\nc++ --help\n```\n\n\
+  在 Windows 上运行生成的执行程序文件，只需在 `MyPrograms` 目录的提示符处输入文件名 – 可选省略文件扩展。在 Linux 中，必须使用完整文件名，并加上\
+  \ `./` 点斜 – 因为在没有明确指示的情况下，Linux 不查找当前目录：\n\n```bash\n./hello\n```\n\n![image](img/pg15_2.jpg)\n\
+  \n![image](img/pg15_3.jpg)\n\n![image](img/snake.jpg)\n\n\n\n\n书中的所有命令行示例都已使用写作时最新的最新\
+  \ GNU C++ 编译器进行了编译和测试——它们在其他编译器上可能无法完全复制。\n\n## 创建变量\n\n“变量”就像 C++ 程序中的一个容器，数据值可以存储在计算机的内存中。可以使用变量的名称来引用存储的值。\n\
+  \n![image](img/pg16_1.jpg)\n\n程序员可以为变量选择任何名称，只要它符合 C++ 的命名规范——所选名称只能包含字母、数字和下划线字符，但不能以数字开头。此外，必须避免使用书内封上列出的\
+  \ C++ 关键字。选择有意义的名称是一个良好的习惯，可以使代码更易于理解。\n\n要在程序中创建一个新变量，必须对其进行“声明”，并指定它可能包含的数据类型和所选的名称。变量声明的语法如下：\n\
+  \n```cpp\ndata-type variable-name ;\n```\n\n可以在单个声明中创建多个相同数据类型的变量，其格式为用逗号分隔的列表，语法如下：\n\
+  \n```cpp\ndata-type variable-name1 , variable-name2 , variable-name3 ;\n```\n\n\
+  ![image](img/snake.jpg)\n\nC++ 中的名称是区分大小写的——因此，名为 `VAR`、`Var` 和 `var` 的变量被视为三个独立的变量。传统上，C++\
+  \ 变量名是小写且很少以下划线开头，因为某些 C++ 库使用了这种约定。\n\n下表列出了五种基本的 C++ 数据类型，并带有简要描述和示例内容：\n\n| 数据类型\
+  \ | 描述 | 示例 |\n| :--- | :--- | :--- |\n| `char` | 单字节，可以存储一个字符 | ‘A’ |\n| `int`\
+  \ | 整数 | `100` |\n| `float` | 浮点数，精确到六位小数 | `0.123456` |\n| `double` | 浮点数，精确到十位小数\
+  \ | `0.0123456789` |\n| `bool` | `true` 或 `false` 的布尔值，或者数值上零为假，任何非零为真 | `false`\
+  \ 或 `0`, `true` 或 `1` |\n\n![image](img/snake.jpg)\n\n`char` 数据类型的字符值必须始终包含在单引号之间——而不是双引号。\n\
+  \n变量声明必须出现在可执行语句之前——这样它们在语句内部就可以被引用。\n\n当一个值赋值给变量时，该变量被称为已“初始化”。可选，可以在声明时初始化变量。任何初始化变量中存储的值都可以通过\
+  \ `cout` 函数显示在标准输出上，该函数在此处用于显示“Hello World!”问候。\n\n![image](img/1b.jpg)通过指定要包含的\
+  \ C++ 库类和要使用的命名空间前来启动新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commonb.jpg)\n\nvars.cpp\n\n![image](img/2b.jpg)添加一个包含最终 `return`\
+  \ 语句的 main 函数\n\n```cpp\nint main()\n{\n    // 程序代码放在这里。\n    return 0 ;\n}\n```\n\
+  \n![image](img/3b.jpg)在 main 函数中插入语句来声明和初始化各种数据类型的变量\n\n```cpp\nchar letter ; letter\
+  \ = ‘A’ ;  // 声明后初始化。\nint number ; number = 100 ; // 声明后初始化。\nfloat decimal = 7.5\
+  \ ;  // 声明并初始化。\ndouble pi = 3.14159 ;  // 声明并初始化。\nbool isTrue = false ;  // 声明并初始化。\n\
+  ```\n\n![image](img/4b.jpg)现在，插入语句输出每个存储的值\n\n```cpp\ncout << “char letter: ” <<\
+  \ letter << endl ;\ncout << “int number: ” << number << endl ;\ncout << “float decimal:\
+  \ ” << decimal << endl ;\ncout << “double pi: ” << pi << endl ;\ncout << “bool isTrue:\
+  \ ” << isTrue << endl ;\n```\n\n![image](img/5b.jpg)保存、编译并运行程序以查看输出\n\n![image](img/pg17_1.jpg)\n\
+  \n![image](img/hot.jpg)\n\n布尔变量名始终以“is”开头，以便它们能立即识别为布尔值。此外，对于所有由多个单词组成的变量名使用“驼峰命名法”（lowerCamelCase）——除第一个单词外的所有单词大大写开头，如\
+  \ `isTrue`。\n\n## 使用变量数组\n\n数组是一个可以存储多个数据项的变量——与普通变量不同，后者只能存储一个数据。数据项顺序存储在数组“元素”中，从\
+  \ 0 开始编号。因此，第一个值存储在元素 0 中，第二个值存储在元素 1 中，以此此类推。\n\n![image](img/pg18_1.jpg)\n\n数组的声明方式与其他变量相同，此外在声明中必须指定数组的大小，放在数组名称后的方括号中。例如，声明一个名为\
+  \ `nums` 存储六个整数的数组的语法如下：\n\n```cpp\nint nums[6] ;\n```\n\n可选，可以在声明时通过用大括号括起来逗号分隔列表为每个元素赋值来初始化数组。例如：\n\
+  \n```cpp\nint nums[6] = { 0, 1, 2, 3, 4, 5 } ;\n```\n\n![image](img/snake.jpg)\n\
+  \nC++ 中的名称是区分大小写的——因此，名为 `VAR`、`Var` 和 `var` 的变量被视为三个独立的变量。传统上，C++ 变量名是小写且很少以下划线开头，因为某些\
+  \ C++ 库使用了这种约定。\n\n下表列出了五种基本的 C++ 数据类型，并带有简要描述和示例内容：\n\n| 数据类型 | 描述 | 示例 |\n| :---\
+  \ | :--- | :--- |\n| `char` | 单字节，可以存储一个字符 | ‘A’ |\n| `int` | 整数 | `100` |\n| `float`\
+  \ | 浮点数，精确到六位小数 | `0.123456` |\n| `double` | 浮点数，精确到十位小数 | `0.0123456789` |\n| `bool`\
+  \ | `true` 或 `false` 的布尔值，或者数值上零为假，任何非零为真 | `false` 或 `0`, `true` 或 `1` |\n\n\n\n\
+  \n循环结构在第 3 章中引入，通常用于遍历数组元素。\n\n## 使用向量数组\n\n向量（vector）是普通数组的替代方案，它的优点是大小可以根据程序需要进行更改。与普通数组一样，可以为任何数据类型创建向量，并且它们的元素也从\
+  \ 0 开始编号。\n\n![image](img/pg20_1.jpg)\n\n为了在程序中使用向量，必须在程序开头使用 `#include <vector>`\
+  \ 预处理指令添加 C++ `vector` 库。该库包含了下表中的预定义函数，用于操作向量：\n\n| **函数:** | **描述:** |\n| :---\
+  \ | :--- |\n| `at(number)` | 获取指定元素编号包含的值 |\n| `back()` | 获取最后一个元素的值 |\n| `clear()`\
+  \ | 移除所有向量元素 |\n| `empty()` | 如果向量为空则返回 true (1)，否则返回 false (0) |\n| `front()` |\
+  \ 获取第一个元素的值 |\n| `pop_back()` | 移除最后一个元素 |\n| `push_back(value)` | 在向量末尾添加一个包含指定值的最终元素\
+  \ |\n| `size()` | 获取元素数量 |\n\n创建向量的声明如下：\n\n`vector < data-type > vector-name (\
+  \ size ) ;`\n\n一个 `int` 向量默认情况下，每个元素都会自动初始化为零值。可选情况下，可以在声明中的大小之后指定一个不同的初始值，语法如下：\n\
+  \n`vector < data-type > vector-name ( size , initial-value ) ;`\n\n操作向量的函数只需通过点操作符（dot\
+  \ operator）附加到所选的向量名称即可。例如，要获取名为“vec”的向量的大小，可以使用 `vec.size()`。\n\n![image](img/forget.jpg)\n\
+  \n单个向量元素可以像普通数组一样使用方括号引用，例如 `vec[3]`。\n\n![image](img/1b.jpg) 通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\
+  \n```cpp\n#include <vector>  // 向量支持。\n#include <iostream>\nusing namespace std\
+  \ ;\n```\n\n![image](img/commonb.jpg)\n\nvector.cpp\n\n![image](img/2b.jpg) 添加一个包含最终返回语句的\
+  \ main 函数\n\n```cpp\nint main()\n{\n    // 程序代码在此处。\n    return 0 ;\n}\n```\n\n\
+  ![image](img/3b.jpg) 在 main 函数中，插入语句来声明并初始化一个包含三个值为 100 的元素的向量数组\n\n`vector <int>\
+  \ vec( 3, 100 ) ;`\n\n![image](img/4b.jpg) 现在，插入语句来操作向量元素\n\n```cpp\ncout << “Vector\
+  \ size: ” << vec.size() << endl ;\ncout << “Is empty?: ” << vec.empty() << endl;\n\
+  cout << “First element: ” << vec.at(0) << endl;\nvec.pop_back() ;  // 移除最后一个元素。\n\
+  cout << “Vector size: ” << vec.size() << endl;\ncout << “Final element: ” << vec.back()\
+  \ << endl;\nvec.clear() ;  // 移除所有元素。\ncout << “Vector size: ” << vec.size() <<\
+  \ endl;\nvec.push_back( 200 ) ;  // 添加一个元素。\ncout << “Vector size: ” << vec.size()\
+  \ << endl;\ncout << “First element: ” << vec.front() << endl;\n```\n\n![image](img/5b.jpg)\
+  \ 保存、编译并运行程序以查看输出\n\n![image](img/pg21_1.jpg)\n\n![image](img/hot.jpg)\n\n示例此处展示了如何使用循环为向量填充数据，使每个元素具有不同的初始值。\n\
+  \n## 声明常量\n\n在程序执行期间不会更改的数据应该存储在常量容器中，而不是变量中。这使得编译器能够更好地检查代码中的错误——如果程序尝试更改存储在常量的值，编译器将报告错误导致编译失败。\n\
+  \n![image](img/pg22_1.jpg)\n\n通过在变量声明前加上 `const` 关键字并后跟一个空格，可以为任何数据类型创建常量。通常，常量名使用大写字母，以将它们区别于（小写的）变量名。与变量不同，常量必须在声明时初始化。例如，数学值\
+  \ pi 的常量的声明如下：\n\n`const double PI = 3.1415926536 ;`\n\n`enum` 关键字提供了一种简洁创建整数常量序列的方便方法。可选情况下，声明可以在\
+  \ `enum` 关键字之后包含该序列的名称。常量名在花括号内以逗号分隔的列表形式出现。例如，此声明创建了一个常量序列：\n\n`enum suit { CLUBS\
+  \ , DIAMONDS , HEARTS , SPADES } ;`\n\n默认情况下，每个常量的值都比列表中前一个常量大一。除非指定，否则第一个常量将有一个值。有时使用\
+  \ `typedef` 关键字来定义枚举常量列表是方便的。`typedef` 关键字简单地为结构体创建一个别名。\n\n```cpp\ntypedef enum\
+  \ { NEGATIVE , POSITIVE } charge;\n```\n\n然后可以像往一样创建自定义类型的变量。例如，对于上面的示例，将 `POSITIVE`\
+  \ 常量赋值给 `charge` 变量实际上赋值了 1。\n\n![image](img/1b.jpg) 通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\
+  \n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/commonb.jpg)\n\
+  \nconstant.cpp\n\n![image](img/2b.jpg) 添加一个包含最终返回语句的 main 函数\n\n```cpp\nint main()\n\
+  {\n    // 程序代码在此处。\n    return 0 ;\n}\n```\n\n![image](img/3b.jpg) 在 main 函数中，插入语句来声明常量并输出常量值\n\
+  \n`const double PI = 3.1415926536 ;`\n`cout << “6 circumference: ” << (PI * 6) <<\
+  \ endl;`\n\n![image](img/4b.jpg) 接下来，插入语句声明枚举常量列表并输出某些常量值\n\n```cpp\nenum { RED=1,\
+  \ YELLOW, GREEN, BROWN, BLUE, PINK, BLACK } ;\ncout << “I shot a red worth: ” <<\
+  \ RED << endl;\ncout << “Then a blue worth: ” << BLUE << endl;\ncout << “Total scored:\
+  \ ” << ( RED + BLUE ) << endl;\n```\n\n![image](img/5b.jpg) 现在，插入语句声明自定义数据类型并输出其赋值值\n\
+  \n```cpp\ntypedef enum { NEGATIVE , POSITIVE } charge;\ncharge neutral = NEGATIVE\
+  \ , live = POSITIVE ;\ncout << “Neutral wire: ” << neutral << endl;\ncout << “Live\
+  \ wire: ” << live << endl;\n```\n\n![image](img/6b.jpg) 保存、编译并运行程序以查看输出\n\n![image](img/pg23_1.jpg)\n\
+  \n![image](img/hot.jpg)\n\n在 PI 声明中，`*` 字符是 C++ 乘法运算符，`\\”` 中的反斜杠转义了引号标记——这样字符串不会提前终止。\n\
+  \n## 总结\n\n![image](img/pg24_1.jpg)\n\n- C++ 是一种面向对象的编程语言，是过程化 C 语言的扩展。\n- GNU C++\
+  \ 编译器适用于 Windows 和 Linux。\n- 预处理指令用于使标准 C++ 库中的函数程序可用。\n- 每个 C++ 程序必须包含一个 main 方法作为程序的入口点。\n\
+  - 语句定义了程序将执行的操作。\n\n\n\n\n\n- 建议对程序代码进行广泛注释，以明确其用途。\n- `c++` 命令调用编译器，其 `-o` 选项允许命令指定生成的可执行文件的名称。\n\
+  - 变量声明指定数据类型和一个选定的名称，通过该名称可以引用变量中的值。\n- `cout` 函数是 C++ `iostream` 库的一部分，用于将内容写入标准输出控制台。\n\
+  - 数组是一个固定大小的变量，以元素的形式存储多个数据项，元素从 0 开始编号。\n- 特殊字符 `\\0` 可以赋值给 `char` 数组的最后一个元素，以便将其视为单个文本字符串。\n\
+  - `vector` 变量以元素的形式存储多个数据项，并且可以动态调整大小。\n- 使用该变量的名称及其索引号可以引用数组或 vector 元素中存储的值。\n\
+  - 程序从不改变的变量值应该存储在常量中。\n- 常量列表可以通过 `enum` 关键字自动编号，并由 `typedef` 关键字赋予类型名称。\n\n# 2\n\
+  \n## 执行操作\n\n本章介绍了 C++ 运算符，并演示了它们可以执行的操作。\n\n- 算术运算\n- 赋值\n- 比较值\n- 逻辑评估\n- 检查条件\n\
+  - 确定大小\n- 设置优先级\n- 数据类型转换\n- 总结\n\n### 算术运算\n\n![image](img/pg26_1.jpg)\n\nC++ 程序中常用的算术运算符列如表所示，并包含了它们执行的操作：\n\
+  \n| 运算符: | 操作: |\n| :--- | :--- |\n| `+` | 加法 |\n| `-` | 减法 |\n| `*` | 乘法 |\n| `/`\
+  \ | 除法 |\n| `%` | 取模 |\n| `++` | 递增 |\n| `--` | 递减 |\n\n加法、减法、乘法和除法的运算符作用方式正如你预期的那样。然而，当使用多个运算符时，必须注意使用括号表达式以明确其含义——最内层括号内的操作优先执行：\n\
+  \n```\na = b * c - d % e / f ; // 这不清晰。\n```\n\n```\na = ( b * c ) - ( ( d % e )\
+  \ / f ) ; // 这更清晰。\n```\n\n`%` 取模运算符会将第一个数字除以第二个数字，并返回操作的余数。这对于判断一个数是奇数还是偶数很有用。\n\
+  \n`++` 递增运算符和 `--` 递减运算符会将给数字改变 1 并返回结果。它们最常用于循环中的迭代计数。向上计数时，`++` 运算符将值加 1；向下计数时，`--`\
+  \ 递减运算符将值减 1。\n\n![image](img/hot.jpg)\n\n用于运算符构成表达式的值被称为“操作数”——在表达式 `2 + 3` 中，数值\
+  \ `2` 和 `3` 就是操作数。\n\n递增和递减运算符可以放在值的之前或之后，产生不同的效果。如果放在操作数之前（前置），其值立即改变；如果放在操作数之后（后置），则先记录值，然后改变值。\n\
+  \n![image](img/1r.jpg)通过指定要包含的 C++ 库类和使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commonr.jpg)\n\narithmetic.cpp\n\n![image](img/2r.jpg)添加一个包含\
+  \ `return` 语句的 main 函数\n\n```cpp\nint main()\n{\n// 程序代码在这里。\nreturn 0 ;\n}\n```\n\
+  \n![image](img/3r.jpg)在 main 函数中，插入语句来声明并初始化两个整数变量\n\n```cpp\nint a = 8 , b = 4\
+  \ ;\n```\n\n![image](img/4r.jpg)接下来，插入语句来输出每个基础算术运算的结果\n\n```cpp\ncout << “Addition\
+  \ result: ” << ( a + b ) << endl;\ncout << “Subtraction result: ” << ( a - b ) <<\
+  \ endl;\ncout << “Multiplication result: ” << ( a * b ) << endl;\ncout << “Division\
+  \ result: ” << ( a / b ) << endl;\ncout << “Modulus result: ” << ( a % b ) << endl;\n\
+  ```\n\n![image](img/5r.jpg)现在，插入语句来输出后置和前置递增操作的结果\n\n```cpp\ncout << “Postfix increment:\
+  \ ” << a++ << endl;\ncout << “Postfix result: ” << a << endl;\ncout << “Prefix increment:\
+  \ ” << ++b << endl;\ncout << “Prefix result: ” << b << endl;\n```\n\n![image](img/6r.jpg)保存、编译并运行程序以查看输出\n\
+  \n![image](img/pg27_1.jpg)\n\n![image](img/forget.jpg)\n\n前置运算符立即改变变量值——后置运算符随后改变值。\n\
+  \n### 赋值\n\n![image](img/28.jpg)前置运算符立即改变变量值——后置运算符随后改变值。\n\n### 赋值操作\n\nC++ 中用于赋值的运算符下表所示。\n\
+  \n| 运算符: | 示例: | 等效于 |\n| :--- | :--- | :--- |\n| `=` | `a = b` | `a = b` |\n| `+=`\
+  \ | `a += b` | `a = a + b` |\n| `-=` | `a -= b` | `a = a - b` |\n| `*=` | `a *=\
+  \ b` | `a = a * b` |\n| `/=` | `a /= b` | `a = a / b` |\n| `%=` | `a %= b` | `a\
+  \ = a % b` |\n\n在上面的示例中，`=` 运算符表示赋值，而不是 `==` 运算符（相等）。\n\n其他运算符以相同的方式工作。\n\n![image](img/1r.jpg)通过指定要包含的\
+  \ C++ 库类和使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commonr.jpg)\n\narithmetic.cpp\n\n![image](img/2r.jpg)添加一个包含\
+  \ `return` 语句的 main 函数\n\n```cpp\nint main()\n{\n// 程序代码在这里。\nreturn 0 ;\n}\n```\n\
+  \n![image](img/3r.jpg)在 main 函数中，插入语句来声明并初始化两个整数变量\n\n```cpp\nint a = 8 , b = 4\
+  \ ;\n```\n\n![image](img/4r.jpg)接下来，插入语句来输出每个基础算术运算的结果\n\n```cpp\ncout << “Addition\
+  \ result: ” << ( a + b ) << endl;\ncout << “Subtraction result: ” << ( a - b ) <<\
+  \ endl;\ncout << “Multiplication result: ” << ( a * b ) << endl;\ncout << “Division\
+  \ result: ” << ( a / b ) << endl;\ncout << “Modulus result: ” << ( a % b ) << endl;\n\
+  ```\n\n![image](img/5r.jpg)现在，插入语句来输出后置和前置递增操作的结果\n\n```cpp\ncout << “Postfix increment:\
+  \ ” << a++ << endl;\ncout << “Postfix result: ” << a << endl;\ncout << “Prefix increment:\
+  \ ” << ++b << endl;\ncout << “Prefix result: ” << b << endl;\n```\n\n![image](img/6r.jpg)保存、编译并运行程序以查看输出\n\
+  \n![image](img/pg27_1.jpg)\n\n![image](img/forget.jpg)\n\n前置运算符立即改变变量值——后置运算符随后改变值。\n\
+  \n### 赋值\n\n![image](img/28.jpg)前置运算符立即改变变量值——后置运算符随后改变值。\n\n### 赋值操作\n\nC++ 中用于赋值的运算符下表所示。\n\
+  \n| 运算符: | 示例: | 等效于 |\n| :--- | :--- | :--- |\n| `=` | `a = b` | `a = b` |\n| `+=`\
+  \ | `a += b` | `a = a + b` |\n| `-=` | `a -= b` | `a = a - b` |\n| `*=` | `a *=\
+  \ b` | `a = a * b` |\n| `/=` | `a /= b` | `a = a / b` |\n| `%=` | `a %= b` | `a\
+  \ = a % b` |\n\n在上面的示例中，`=` 运算符表示赋值，而不是 `==` 运算符（相等）。\n\n其他运算符以相同的方式工作。\n\n\n\n\
+  与 `=` 赋值运算符不同，`==` 等于运算符用于比较操作数，其描述请参见此处。\n\n## 比较值\n\n![image](img/pg30_1.jpg)\n\
+  \nC++ 编程中常用的用于比较两个数值的运算符列如下表所示：\n\n| **运算符：** | **比较测试：** |\n| :--- | :--- |\n|\
+  \ `==` | 等于 |\n| `!=` | 不等于 |\n| `>` | 大于 |\n| `<` | 小于 |\n| `>=` | 大于等于 |\n| `<=`\
+  \ | 小于等于 |\n\n`==` 等于运算符比较两个操作数，如果两个操作数的数值相等，则返回 `true` (1)，否则将返回 `false` (0) 值。如果两者都是同一个数字，则它们是相等的；如果两者都是字符，则会对其它们的\
+  \ ASCII 码值进行数值比较。相反，`!=` 不等于运算符在两个操作数不相等时返回 `true` (1)，其使用的规则与 `==` 等于运算符相同，否则返回\
+  \ `false` (0)。相等和不等于运算符对于测试两个变量的状态以执行程序中的条件分支非常有用。\n\n![image](img/hot.jpg)\n\n\
+  A-Z 大写字母的 ASCII 码值为 65-90，a-z 小写字母的 ASCII 码值为 97-122。\n\n`>` “大于”运算符比较两个操作数，如果第一个的数值大于第二个，则返回\
+  \ `true` (1)；如果其数值等于或小于第二个，则返回 `false` (0)。`<` “小于”运算符进行相同的比较，但如果第一个操作数的数值小于第二个的，则返回\
+  \ `true` (1)，否则返回 `false` (0)。`>` “大于”或 `<` “小于”运算符常用于测试循环中迭代计数器的值。\n\n在 `>` “大于”或\
+  \ `<` “小于”运算符后添加 `=` 运算符，可以使其在两个操作数数值恰好相等时也返回 `true` (1)。\n\n每个比较操作都在此处 的程序中进行了演示。\n\
+  \n![image](img/1r.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀启动新程序\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commonr.jpg)\n\ncomparison.cpp\n\n![image](img/2r.jpg)添加一个包含最终\
+  \ `return` 语句的 main 函数\n\n```cpp\nint main()\n{\n    // 程序代码在此处。\n    return 0 ;\n\
+  }\n```\n\n![image](img/3r.jpg)在 main 函数中，插入语句声明并初始化可以转换为布尔值的变量\n\n```cpp\nint nil\
+  \ = 0, num = 0, max = 1 ; char cap = ‘A’, low = ‘a’ ;\n```\n\n![image](img/4r.jpg)接下来，插入语句输出整数和字符的相等比较结果\n\
+  \n```cpp\ncout << “Equality comparisons: ” ;\ncout << “(0 == 0) ” << ( nil == num\
+  \ ) << “(true)” ;\ncout << “(A == a) ” << ( cap == low ) << “(false)” ;\n```\n\n\
+  ![image](img/5r.jpg)现在，插入语句输出所有其他比较结果\n\n```cpp\ncout << endl << “Inequality comparison:\
+  \ ” ;\ncout << “(0 != 1) ” << ( nil != max ) << “(true)” ;\ncout << endl << “Greater\
+  \ comparison: ” ;\ncout << “(0 > 1) ” << ( nil > max ) << “(false)” ;\ncout << endl\
+  \ << “Lesser comparison: ” ;\ncout << “(0 < 1) ” << ( nil < max ) << “(true)” ;\n\
+  cout << endl << “Greater or equal comparison: ” ;\ncout << “(0 >= 0) ”<< ( nil >=\
+  \ num ) << “(true)” ;\ncout << endl << “Lesser or equal comparison: ” ;\ncout <<\
+  \ “(1 <= 0) ” << ( max <= num ) << “(false)” ;\n```\n\n![image](img/6r.jpg)保存、编译并运行程序以查看输出\n\
+  \n![image](img/pg31_1.jpg)\n\n![image](img/forget.jpg)\n\n大写字母 “A” 的 ASCII 码值为 65，但小写字母\
+  \ “a” 是 97 —— 因此它们这里的比较返回 `false` (0)。\n\n## 评估逻辑\n\n![image](img/pg32_1.jpg)\n\n\
+  C++ 编程中最常用的逻辑运算符列如下表所示：\n\n| **运算符：** | **操作：** |\n| :--- | :--- |\n| `&&` | 逻辑与\
+  \ |\n| `||` | 逻辑或 |\n| `!` | 逻辑非 |\n\n逻辑运算符用于具有布尔值 `true` 或 `false` 的操作数，或者可以转换为\
+  \ `true` 或 `false` 的值。\n\n逻辑 `&&` 与 运算符会评估两个操作数，只有当两个操作数本身都为 `true` 时才会返回 `true`。否则，`&&`\
+  \ 运算符将返回 `false`。这被用于条件分支，程序的运行方向通过测试两个条件来决定 —— 如果两个条件都满足，程序将进入某个方向，否则它将采取另一个方向。\n\
+  \n![image](img/snake.jpg)\n\n逻辑运算符用于具有布尔值 `true` 或 `false` 的操作数，或者可以转换为 `true` 或\
+  \ `false` 的值。\n\n逻辑 `&&` 与 运算符会评估两个操作数，只有当两个操作数本身都为 `true` 时才会返回 `true`。否则，`&&`\
+  \ 运算符将返回 `false`。这被用于条件分支，程序的运行方向通过测试两个条件来决定 —— 如果两个条件都满足，程序将进入某个方向，否则它将采取另一个方向。\n\
+  \n*(注：由于原文后续存在大量重复的无效段落，已根据指令要求仅保留核心逻辑内容)*\n\n\n\n\n`( *test-expression ) ? `if-true-return-this`\
+  \ : `if-false-return-this` ;`\n\n虽然三元运算符最初看起来可能有些困惑，但熟悉这个运算符是非常有价值的，因为它可以用最少的代码执行强大的程序分支。例如，当一个变量的值不为\
+  \ 1 时进行分支：\n\n`( var != 1 ) ? `if-true-do-this` : `if-false-do-this` ;`\n\n三元运算符在\
+  \ C++ 编程中常被用于将两个变量的最大值或最小值赋值给第三个变量。例如，这样赋值最小值：\n\n`c = ( a < b ) ? a : b ;`\n\n\
+  当括号中的表达式在变量 `a` 的值小于变量 `b` 的值时返回 `true` —— 因此在这种情况下，变量 `a` 的较小值被赋值给变量 `c`。\n\n同样地，将测试表达式中的\
+  \ `<` 小于运算符替换为 `>` 大于运算符，会将变量 `b` 的较大值赋值给变量 `c`。\n\n三元运算符的另一个用法是在测试表达式中使用 `%` 取模运算符来确定变量的值是奇数还是偶数：\n\
+  \n`( var % 2 != 0 ) ? `if-true(odd)-do-this` : `if-false(even)-do-this` ;`\n\n![image](img/forget.jpg)\n\
+  \n三元运算符有三个操作数：`?` 之前的那个，以及 `:` 之前和之后的两个。\n\n当变量值除以二有余数时，该数字为奇数 —— 没有余数时，数字为偶数。测试表达式\
+  \ `( var % 2 == 1 )` 具有相同的效果，但最好测试不相等性 —— 发现不同之处比发现相同之处更容易。\n\n程序在处 展示了三元运算符的用法。\n\
+  \n![image](img/1r.jpg)\n\n### 程序示例实现\n\n通过指定要包含的 C++ 库类和使用的命名空间前缀开始一个新程序\n\n```cpp\n\
+  #include <iostream>\nusing namespace std ;\n```\n\n![image](img/commonr.jpg)\n\n\
+  ternary.cpp\n\n![image](img/2r.jpg)\n\n添加一个包含最终 `return` 语句的 main 函数\n\n```cpp\n\
+  int main()\n{\n    // 程序代码在这里。\n    return 0 ;\n}\n```\n\n![image](img/3r.jpg)在\
+  \ main 函数中，插入声明三个整数变量的语句，并初始化其中两个\n\n```cpp\nint a, b, max ;\na = 1, b = 2 ;\n```\n\
+  \n![image](img/4r.jpg)插入语句输出第一个检查变量的值和奇偶性\n\n```cpp\ncout << “Variable a value is:\
+  \ ” ;\ncout << ( ( a != 1 ) ? “not 1, “ : “1, “ ) ;\ncout << ( ( a % 2 != 0 ) ?\
+  \ “odd” : “even” ) ;\n```\n\n![image](img/5r.jpg)接下来，插入语句输出第二个检查变量的值和奇偶性\n\n```cpp\n\
+  cout << endl << “Variable b value is: ” ;\ncout << ( ( b != 1 ) ? “not 1, “ : “1,\
+  \ “ ) ;\ncout << ( ( b % 2 != 0 ) ? “odd” : “even” ) ;\n```\n\n![image](img/6r.jpg)现在，插入语句输出两个存储变量中的较大值\n\
+  \n```cpp\nmax = ( a > b ) ? a : b ;\ncout << endl << “Greater value is: ” << max\
+  \ << endl ;\n```\n\n![image](img/7r.jpg)保存、编译并运行程序查看输出\n\n![image](img/pg35_1.jpg)\n\
+  \n![image](img/hot.jpg)\n\n三元运算符可以返回任何数据类型的值 —— 数字、字符串、布尔值等。\n\n### 确定大小\n\n变量声明分配系统内存，用于存储赋值给该变量的值。为此分配的内存量取决于系统和数据类型。\n\
+  \n![image](img/pg36_1.jpg)\n\n通常，`int` 数据类型默认创建为“长型”（long）值，它可以存储从 +2,147,483,647\
+  \ 到 -2,147,483,648 的值。另一方面，如果 `int` 数据类型默认创建为“短型”（short）值，它只能存储从 +32,767 到 -32,768\
+  \ 的值。\n\n在声明变量时，通过在 `int` 关键字前加上 `short` 或 `long` 修饰符可以显式指定首选范围。当你确定永远不会超出限制范围时，`short\
+  \ int` 有助于节省内存空间。\n\n当声明 `int` 变量时，它默认包含正整数或负整数，这些被称为“有符号”（signed）值。如果变量始终只包含正整数，可以将其限定为\
+  \ `unsigned`无符号）以增加其最大可能值。通常，`unsigned short int` 的范围从 0 到 65,535，`unsigned long\
+  \ int` 的范围从 0 到 4,294,967,295。\n\n可以使用 C++ 的 `sizeof` 运算符发现任何变量的内存大小。可以使用 `sizeof`\
+  \ 检查要检查的变量名。\n\n\n\n\n\n| `( )` | 函数调用 | `[ ]` | 数组索引 | LTR |\n| :--- | :--- | :---\
+  \ | :--- | :--- |\n| `->` | 类指针 | `.` | 类成员 | |\n| `!` | 逻辑非 | `*` | 指针 | RTL |\n\
+  | `--` | 递减 | `++` | 增 | |\n| `+` | 正号 | `-` | 负号 | |\n| `sizeof` | 大小 | `&` | 地址\
+  \ | |\n| `*` | 乘法 | `/` | 除法 | LTR |\n| `%` | 取模 | | | |\n| `+` | 加法 | `-` | 减法\
+  \ | LTR |\n| `<=` | 小于等于 | `<` | 小于 | LTR |\n| `>=` | 大于等于 | `>` | 大于 | |\n| `==`\
+  \ | 等于 | `!=` |不等 | LTR |\n| `&&` | 逻辑与 | | | LTR |\n| `||` | 逻辑或 | | | LTR |\n\
+  | `?:` | 三元运算符 | | | RTL |\n| `+= -= *= /= %=` | 赋值 | RTL | | |\n| `,` | 逗号 | |\
+  \ | LTR |\n\n除了表中的运算符外，还有许多“位”运算符，用于执行二进算术。这超出了本书的范围，但在[C 语言编程快速入门](http://www.ineasysteps.com/)中有一个专门介绍二进制算术的章节。这些运算符在\
+  \ C++ 中的执行方式完全相同。\n\n运算符优先级在相反程序中得到了。\n\n![image](img/forget.jpg)\n\n`*` 乘法运算符所在的行比\
+  \ `+` 加法运算符高——因此在表达式 `a=6+8*3` 中，乘法先完成，然后才是加法。\n\n![image](img/hot.jpg)\n\n`->`\
+  \ 类指针和 `.` 类成员运算符将在本书的后面介绍——但为了完整性，它们被包含在这里。\n\n![image](img/1r.jpg)\n\n通过指定要包含的\
+  \ C++ 库类和要使用的命名空间前缀来开始一个新程序：\n\n```cpp\n#include <iostream>\nusing namespace std\
+  \ ;\n```\n\n![image](img/commonr.jpg)\n\nprecedence.cpp\n\n添加一个包含最终返回语句的 main 函数：\n\
+  \n```cpp\nint main()\n{\n    // 程序代码写在这里。\n    return 0 ;\n}\n```\n\n![image](img/2r.jpg)在\
+  \ main 函数中，声明一个整数变量，并使用默认优先级的表达式结果进行初始化，然后输出结果：\n\n```cpp\nint num = 1 + 4 * 3 ;\n\
+  cout << endl << “Default order: ” << num << endl ;\n```\n\n![image](img/4r.jpg)接下来，使用显式优先级将此表达式的结果赋值变量，然后输出结果：\n\
+  \n```cpp\nnum = ( 1 + 4 ) * 3 ;\ncout << “Forced order: ” << num << endl << endl\
+  \ ;\n```\n\n![image](img/5r.jpg)使用方向优先级将另一个表达式的结果赋值给变量，然后输出结果：\n\n```cpp\nnum =\
+  \ 7 - 4 + 2 ;\ncout<< “Default direction: ” << num << endl ;\n```\n\n![image](img/6r.jpg)现在，使用显式优先级将此表达式的结果赋值变量，然后输出结果：\n\
+  \n```cpp\nnum = 7 - ( 4 + 2 ) ;\ncout << “Forced direction: ” << num << endl ;\n\
+  ```\n\n![image](img/7r.jpg)保存、编译并运行程序以查看输出：\n\n![image](img/pg39_1.jpg)\n\n![image](img/snake.jpg)\n\
+  \n不要依赖默认优先级，因为它在编译器之间可能会不同——始终使用括号来明确表达式。\n\n### 数据类型转换\n\n![image](img/pg40_1.jpg)\n\
+  \n存储在变量中的任何数据都可以通过名为“强制转换”（casting）的过程强制（迫）转换为不同数据类型的变量。转换语句只需在包含要转换数据的变量名之前的括号中指明该值应该转换到的数据类型。因此，转换语法看起来如下：\n\
+  \n`variable-name = ( data-type ) variable-name ;`\n\n这是传统的转换形式，在 C 编程语言中也可以找到。C++\
+  \ 中一种较新的替代方案使用尖角括号和 `static_cast` 关键字，如下：\n\n`variable-name = static_cast < data-type\
+  \ > variable-name ;`\n\n新版本允许通过避免使用括号在源代码中更容易地识别转换，因为括号很容易与表达式中的括号混淆。虽然优选较新的转换形式，但旧形式仍然广泛存在。\n\
+  \n为了准确存储算术运算的结果，转换通常是必要的，因为将一个整数除以另一个整数总是产生整数结果。例如，整数除法 `7/2` 产生被截断的整数结果 `3`。\n\n\
+  要存储准确的浮点数结果，需要将结果转换为适当的数据类型，例如 `float`，如下：\n\n`float result = ( float ) 7 / 2 ;`\n\
+  \n或者使用较新的转换形式：\n\n`float result = static_cast < float > 7 / 2 ;`\n\n![image](img/forget.jpg)\n\
+  \n\n\n\n\n- `sizeof` 运算符返回变量的内存字节大小。\n- `int` 变量可以被指定为 `short` 类型以处理较小的数字，或者指定为\
+  \ `long` 类型以处理较大的数字。\n- 当 `int` 变量仅存储正数时，可以将其指定为 `unsigned` 以扩展其数值范围。\n- 在复杂表达式中，通过添加括号\
+  \ `( )` 来显式设置运算符优先级是非常重要的。\n- 通过类型转换过程，可以将存储在变量中的数据强制转换为不同数据类型的变量。\n- C++ 支持传统的\
+  \ C 风格强制转换以及使用 `static_cast` 关键字的新更新形式强制转换。\n\n# 3 语句\n\n*本章将演示 C++ 条件语句，这些语句允许程序向不同的方向进行分支，并引入了\
+  \ C++ 函数结构。*\n\n- 使用 if 进行分支\n- 使用 switch 分支\n- 使用 for 循环\n- 使用 while 循环\n- 声明函数\n\
+  - 传递参数\n- 函数重载\n- 函数优化\n- 总结\n\n## 使用 if 进行分支\n\nC++ 的 `if` 关键字执行基础条件测试，评估给定表达式的布尔值为\
+  \ `true` 或 `false` —— 其语法看起来如下：\n\n```cpp\nif ( test-expression ) { statements-to-execute-when-true\
+  \ }\n```\n\n![image](img/pg44_1.jpg)\n\n测试语句后面的大括号可以包含一个或多个语句，每条语句都以分号结束，但这些语句仅在表达式被判定为\
+  \ `true` 时才会执行。当测试结果为 `false` 时，程序将继续执行下一个任务。\n\n可选地，`if` 语句可以在 `if` 语句块之后附加 `else`\
+  \ 语句块，在测试失败时提供备用执行语句，如下：\n\n```cpp\nif ( test-expression ) { statements-to-execute-when-true\
+  \ }\nelse { statements-to-execute-when-false }\n```\n\n![image](img/hot.jpg)\n\n\
+  当测试成功时只有一条语句需要执行，可以省略大括号 —— 但保留它们有助于代码的可读性。\n\n为了测试两个条件，测试表达式可以使用 `&&` 运算符 —— 例如，`if\
+  \ ( ( num > 5 ) && ( letter == ‘A’ ) )`。或者，可以将一个 `if` 语句“嵌套”另一个 `if` 语句中，这样内部语句块中的语句只有在两个测试都成功才会执行\
+  \ —— 但如果外部测试成功，外部语句块中的语句将被执行。\n\n![image](img/1g.jpg)通过指定要包含的 C++ 库类和使用的命名空间前缀开始一个新程序\n\
+  \n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/commong.jpg)\n\
+  \nifelse.cpp\n\n![image](img/2g.jpg)添加包含最终 `return` 语句的主函数\n\n```cpp\nint main()\n\
+  {\n    // 程序代码写在这里。\n    return 0 ;\n}``````\n\n![image](img/3g.jpg)在主函数中，插入语句声明并初始化两个变量\n\
+  \n```cpp\nint num = 8 ;\nchar letter = ‘A’ ;\n```\n\n![image](img/4g.jpg)接下来，插入一个\
+  \ `if-else` 语句来测试整数变量的值并输出相应的响应\n\n```cpp\nif ( num > 5 )\n{ cout << “Number exceeds\
+  \ five” << endl ; }\nelse\n{ cout << “Number is five or less” << endl ; }\n```\n\
+  \n![image](img/5g.jpg)在 `if` 语句块中，插入一个嵌套的 `if` 语句来测试字符变量的值并在匹配时输出\n\n```cpp\nif\
+  \ ( letter == ‘A’ ) { cout << “Letter is A” << endl ; }\n```\n\n![image](img/6g.jpg)保存、编译并运行程序以查看两个测试均成功\n\
+  \n![image](img/pg45_1.jpg)\n\n![image](img/7g.jpg)修改字符变量声明以更改其值\n\n```cpp\nchar\
+  \ letter = ‘B’ ;\n```\n\n![image](img/8g.jpg)再次保存、编译并运行程序以查看只有外部测试成功 —— 执行外部 `if`\
+  \ 语句\n\n![image](img/pg45_2.jpg)\n\n![image](img/9g.jpg)修改整数变量声明以更改其值\n\n```cpp\n\
+  int num = 3 ;\n```\n\n![image](img/10g.jpg)再次保存、编译并运行程序以查看两个测试均失败 —— 执行外部 `else`\
+  \ 语句\n\n![image](img/pg45_2.jpg)\n\n![image](img/hot.jpg)\n\n在测试布尔值时可以使用简写 —— 因此表达式\
+  \ `if ( flag == true )` 可以写为 `if ( flag )`\n\n![image](img/snake.jpg)\n\n避免嵌套超过三层的\
+  \ `if` 语句 —— 以避免混淆和错误。\n\n## 使用 switch 分支\n\n![image](img/pg46_1.jpg)\n\n`if` 和\
+  \ `else` 关键字在此处引入，允许程序根据测试的结果向不同的方向分支，并可以用于测试变量 —— 例如，测试整数：\n\n```cpp\nif ( num\
+  \ == 1 ) { cout << “Monday” }\nelse\nif ( num == 2 ) { cout << “Tuesday” }\nelse\n\
+  if ( num == 3 ) { cout << “Wednesday” }\nelse\nif ( num == 4 ) { cout << “Thursday”\
+  \ }\nelse\nif ( num == 5 ) { cout << “Friday” }\n```\n\n长 `if-else` 语句通常可以使用 `switch`\
+  \ 语句更高效地执行，`switch` 语句接收一个值，然后在 `case` 语句中寻找匹配值。如果没有找到匹配项，`case` 语句将执行执行，但你可以在最后的\
+  \ `case` 语句之后添加 `default` 语句来指定要执行的语句 —— 除非这正是你所需要的。例如，对于三个值，如下：\n\n```cpp\nswitch(\
+  \ variable-name )\n{\n    case value1 ; case value2 ; case value3 :\n        statements-to-executed\
+  \ ; break ;\n    case value4 ; case value5 ; case value6 :\n        statements-to-executed\
+  \ ; break ;\n}\n```\n\n通常，每个 `case` 语句将拥自己的执行语句并以 `break` 结束，如相反程序所示。\n\n缺少 `break`\
+  \ 关键字不是语法错误 —— 确保所有必要的 `break` 都存在。\n\n![image](img/1g.jpg) \n\n```cpp\n#include\
+  \ <iostream>\nusing namespace std ;\n```\n\nswitch.cpp\n\n![image](img/2g.jpg)添加包含最终\
+  \ `return` 语句的主函数\n\n```cpp\nint main()\n{\n    // 程序代码写在这里。\n    return 0 ;\n}```\n\
+  \n![image](img/3g.jpg)在主函数中，插入语句声明并初始化一个待匹配的整数变量\n\n```cpp\nint num = 3 ;\n```\n\
+  \n![image](img/4g.jpg)接下来，插入一个 `switch` 语句来寻找匹配\n\n```cpp\nswitch ( num )\n{\n \
+  \   case 1 : cout << num << “ : Monday” ; break ;\n    case 2 : cout << num << “\
+  \ : Tuesday” ; break ;\n    case 3 : cout << num << “ : Wednesday” ; break ;\n \
+  \   case 4 : cout << num << “ : Thursday” ; break ;\n    case 5 : cout << num <<\
+  \ “ : Friday” ; break ;\n}\n```\n\n![image](img/5g.jpg)在 `switch` 语句中，在最后的 `case`\
+  \ 语句之后插入 `default` 语句\n\n```cpp\ndefault : cout << num << “ : Weekend day” ;\n```\n\
+  \n![image](img/6g.jpg)保存、编译并运行程序以查看输出\n\n\n\n\n\n![image](img/7g.jpg)现在，修改整数变量声明以更改其值，然后保存、编译并再次运行程序\n\
+  \n```cpp\nint num = 6 ;\n```\n\n![image](img/pg47_1.jpg)\n\n![image](img/hot.jpg)\n\
+  \n注意，`default` 语句后面不需要跟 `break` 关键字 —— 因为 `default` 语句始终出现在 `switch` 语句的最后。\n\n\
+  ## 循环 (Looping for)\n\n循环是程序中一段会自动重复的代码。对循环块内包含的所有语句的完整执行称为一次“迭代”（iteration）或“通过”（pass）。\n\
+  \n![image](img/pg48_1.jpg)\n\n循环执行的迭代次数由循环内部的条件测试控制。只要被测试的表达式保持为 `true`，循环就会继续 ——\
+  \ 直到被测试的表达式变为 `false`，此时循环结束。\n\nC++ 编程中的三种循环结构是 `for` 循环、`while` 循环和 `do`-`while`\
+  \ 循环。可能最常用的循环是 `for` 循环，其语法如下：\n\n```cpp\nfor ( *initializer ; *test-expression\
+  \ ; *incrementer* ) { *statements* }\n```\n\n初始化器（initializer）为循环迭代次数的计数器设置起始值。为此使用一个整数变量，传统上通常命名为“i”。\n\
+  \n在循环的每次迭代中，都会评估测试表达式，只有当该表达式为 `true` 时，该迭代才会继续。当被测试的表达式变为 `false` 时，循环立即结束，不再再次执行语句。在每次迭代中，计数器加增，然后执行语句。\n\
+  \n循环可以嵌套在其他循环中 —— 这样内部循环在外部循环的每次迭代中都会完整执行其迭代。\n\n![image](img/1g.jpg)通过指定要包含的 C++\
+  \ 库类和使用的命名空间前缀来启动新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\
+  \n![image](img/commong.jpg)\n\nforloop.cpp\n\n![image](img/2g.jpg)添加一个包含最终 `return`\
+  \ 语句的 main 函数\n\n```cpp\nint main()\n{\n// 程序代码放在这里。\nreturn 0 ;\n}\n```\n\n![image](img/3g.jpg)在\
+  \ main 函数中，插入一条语句声明一个整数变量作为循环迭代计数器\n\n```cpp\nint i ;\n```\n\n![image](img/4g.jpg)接下来，插入一个\
+  \ `for` 循环在三次迭代的每次输出计数器值\n\n```cpp\nfor ( i = 1 ; i < 4 ; i++ )\n{\ncout << “Loop\
+  \ iteration: ” << i << endl ;\n}\n```\n\n![image](img/5g.jpg)保存、编译并运行程序查看输出\n\n\
+  ![image](img/pg49_1.jpg)\n\n![image](img/6g.jpg)现在，修改变量声明以添加第二个计数器\n\n```cpp\nint\
+  \ i , j ;  // 添加了整数变量“j”。\n```\n\n![image](img/7g.jpg)在 `for` 循环块内部输出语句之后添加一个内部循环，在每次迭代中输出其计数器值\n\
+  \n```cpp\nfor ( j = 1 ; j < 4 ; j++ )\n{ cout << “ Inner loop iteration: “ << j\
+  \ << endl ; }\n```\n\n![image](img/8g.jpg)再次保存、编译并运行程序，查看内部循环在外部循环的每次迭代中完整执行\n\n\
+  ![image](img/pg49_2.jpg)\n\n![image](img/hot.jpg)\n\n另一种，`for` 循环计数器可以通过在每次迭代中使用\
+  \ `i--` 而不是 `i++` 增器来递减计数器值。\n\n![image](img/forget.jpg)\n\n在循环的第三次迭代中，增器将计数器值增加到\
+  \ 4 —— 因此当下次评估时，测试返回为 false 且循环结束。\n\n## while 循环 (Looping while)\n\n`for` 循环的替代方案（此处）使用\
+  \ `while` 关键字，跟着一个要评估的表达式。当表达式为 `true` 时，测试表达式后大括号内的语句将被执行。表达式将再次被评估，`while` 循环将持续直到发现表达式为\
+  \ `false`。\n\n![image](img/pg50_1.jpg)\n\n循环的语句块必须包含影响被测试表达式的代码，以便将评估结果更改为 `false`，否则将导致导致锁定系统的死循环！如果在第一次评估时发现被测试表达式为\
+  \ `false`，则 `while` 循环的语句块将永远不会执行。\n\n`while` 循环的一种微妙变是将 `do` 关键字放在循环语句块之前并在之后加上\
+  \ `while` 测试，语法如下：\n\n```cpp\ndo { statements-to-be-executed } while ( test-expression\
+  \ ) ;\n```\n\n在 `do-while` 循环中，语句块将至少执行一次 —— 因为表达式在循环的第一次迭代之后才会被评估。\n\n![image](img/hot.jpg)\n\
+  \n如果你不小心启动了死循环，请按 `Ctrl + C` 键终止进程。\n\n`break` 语句可以包含在任何类型的循环中，在满足测试条件时立即终止循环。`break`\
+  \ 语句确保该循环不会再执行后续迭代。\n\n同样，`continue` 语句可以包含在任何循环中以跳到下一次迭代。\n\n![image](img/1g.jpg)通过指定要包含的\
+  \ C++ 库类和使用的命名空间前缀启动新程序\n\n```cpp\n#include <vector>\n#include <iostream>\nusing\
+  \ namespace std ;\n```\n\n![image](img/commong.jpg)\n\nwhile.cpp\n\n![image](img/2g.jpg)添加一个包含最终\
+  \ `return` 语句的 main 函数\n\n```cpp\nint main()\n{\n// 程序代码放在这里。\nreturn 0 ;\n}\n```\n\
+  \n![image](img/3g.jpg)在 main 函数中，插入语句声明整数 vector 和整数循环计数器\n\n```cpp\nvector <int>\
+  \ vec( 10 ) ;\nint i = 0 ;\n```\n\n![image](img/4g.jpg)接下来，插入一个 `while` 循环在每次迭代将计数器值赋值给\
+  \ vector 的元素\n\n```cpp\nwhile ( i < vec.size() )\n{\ni++; // 递增。\nvec[ i-1 ] = i\
+  \ ; // 赋值给元素。\ncout << “ | ” << vec.at( i-1 ) ;\n}\n```\n\n![image](img/5g.jpg)保存、编译并运行程序查看输出\n\
+  \n![image](img/pg51_1.jpg)\n\n![image](img/6g.jpg)修改 `while` 循环在增器后立即添加 `continue`\
+  \ 语句，使循环跳过第三次迭代\n\n```cpp\nif ( i == 3 ) { cout << “ | Skipped” ; continue ; }\n\
+  ```\n\n![image](img/7g.jpg)在 `continue` 语句之后现在添加 `break` 语句，使循环在第八次迭代退出\n\n```cpp\n\
+  if ( i == 8 ) { cout << endl << “Done” ; break ; }\n```\n\n![image](img/8g.jpg)再次保存、编译并运行程序，查看循环现在跳过了某些迭代\n\
+  \n![image](img/pg51_2.jpg)\n\n![image](img/forget.jpg)\n\n在此示例中必须通过预处理器指令包含 vector\
+  \ 库。\n\n![image](img/snake.jpg)\n\n`break` 和 `continue` 语句的位置很重要 —— 它们必须出现在增器之后，以避免创建死循环，但在影响程序的其他语句之前，以避免执行这些语句。\n\
+  \n## 函数声明 (Declaring functions)\n\n函数封装了一段为程序提供特定功能代码。当主程序调用函数时，其语句将被执行，并可以在完成后向主程序返回一个值。使用函数有三个主要好处：\n\
+  \n• 函数使程序代码更易理解和维护。\n\n• 经过测试的函数可以在其他程序重用。\n\n• 在大型项目中，多个程序员可以通过编写程序的不同函数来分担工作量。\n\
+  \n\n\n\n\n每个函数在程序代码早期被声明为“原型（prototype）”，它包含一个返回数值的数据类型，以及函数名及其后的括号，括号内可选地包含该函数可能使用的传入值的“参数”数据类型列表。函数原型声明的语法如下所示：\n\
+  \n`return-data-type function-name ( arguments-data-type-list ) ;`\n\n![image](img/hot.jpg)\n\
+  \n严格来说，函数原型中的参数被称为“形式参数（formal parameters）”。\n\n例如，一个名为 `computeArea`、返回 `float`\
+  \ 值并传递两个 `float` 参数的函数声明为：\n\n```cpp\nfloat computeArea( float, float ) ;\n```\n\
+  \n### 定义函数\n\n函数的定义出现在程序代码的后部分，它包含了对原型的重复，加上实际的函数体。函数体是每次调用该函数时要执行的语句，包含在一对括号中。\n\
+  \n![image](img/forget.jpg)\n\n如果函数不向调用者返回任何值，请使用 `void` 关键字。\n\n重要的一点是，编译器会根据原型对定义进行检查，因此实际返回的数据类型必须与原型中指定的匹配，且提供的任何参数在数量和数据类型上必须匹配。如果定义与原型不匹配，编译将失败。一个简单的\
+  \ `computeArea` 定义可能如下：\n\n```cpp\nfloat computeArea( float width, float height\
+  \ )\n{\n  return ( width * height ) ;\n}\n```\n\n### 变量作用域\n\n在函数中声明的变量只能在该函数内部局部使用，不能全局供其他函数访问。这种限制被称为“变量作用域（variable\
+  \ scope）”。\n\n![image](img/1g.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\n```cpp\n#include\
+  \ <iostream>\nusing namespace std ;\n```\n\n![image](img/commong.jpg)\n\nscope.cpp\n\
+  \n![image](img/2g.jpg)接下来，声明两个简单的函数原型\n\n```cpp\nfloat bodyTempC() ;\nfloat bodyTempF()\
+  \ ;\n```\n\n![image](img/3g.jpg)现在，添加一个包含对每个函数调用和最终 `return` 语句的主函数\n\n```cpp\n\
+  int main()\n{\n  cout << “Centigrade: ” << bodyTempC() << endl ;\n  cout << “Fahrenheit:\
+  \ ” << bodyTempF() << endl ;\n  return 0 ;\n}\n```\n\n![image](img/4g.jpg)在主函数之后，定义另外两个函数\
+  \ —— 每个函数都返回局部“temperature”变量的值\n\n```cpp\nfloat bodyTempC()\n{\n  float temperature\
+  \ = 37.0 ;\n  return temperature ;\n}\n\nfloat bodyTempF()\n{\n  float temperature\
+  \ = 98.6 ;\n  return temperature ;\n}\n```\n\n![image](img/5g.jpg)保存、编译并运行程序以查看输出\n\
+  \n![image](img/pg53_1.jpg)\n\n![image](img/hot.jpg)\n\n同名的变量在不同的作用域中声明时不会冲突 —— 它们相互不可见。\n\
+  \n### 传递参数\n\n函数调用经常为函数提供参数值。这些可以是任意数量和数据类型，但它们必须与函数原型声明中指定的匹配。\n\n![image](img/pg54_1.jpg)\n\
+  \n注意，传递给函数的参数仅提供原始值的副本，这种过程被称为“值传递（passing by value）”。\n\n传递给参数的值可以是程序代码中指定的“静态”值，也可以是用户输入的“动态”值。在命令行提示符下，可以使用\
+  \ C++ 的 `cin` 函数配合 `>>` 输入流操作符将值从标准输入重定向到变量，例如：\n\n```cpp\nfloat num ;\ncout <<\
+  \ “Please enter a number: ” ;\ncin >> num ;\n```\n\n输入可以作为函数调用中的参数传递给函数，例如 `workWith(\
+  \ num )`。\n\n![image](img/snake.jpg)\n\n函数原型必须在定义之前声明。通常，原型出现在主函数之前，而它们的定义出现在主函数之后。\n\
+  \n可选情况下，函数原型可以为参数分配默认值，当调用未传递参数值时将使用这些默认值。可以为多个参数分配默认值。\n\n通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\
+  \n![image](img/1g.jpg)\n\n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\
+  \n```.\n\nscope.cpp 接下来，声明两个简单的函数原型\n\n![image](img/2g.jpg)\n\n```cpp\nfloat bodyTempC()\
+  \ ;\nfloat bodyTempF() ;\n```\n\n![image](img/3g.jpg)现在，添加一个包含对每个函数调用和最终 `return`\
+  \ 语句的主函数\n\n```cpp\nint main()\n{\n  cout << “Centigrade: ” << bodyTempC() << endl\
+  \ ;\n  cout << “Fahrenheit: ” << bodyTempF() << endl ;\n  return 0 ;\n}\n```\n\n\
+  ![image](img/4g.jpg)在主函数之后，定义另外两个函数 —— 每个函数都返回局部“temperature”变量的值\n\n```cpp\nfloat\
+  \ bodyTempC()\n{\n  float temperature = 37.0 ;\n  return temperature ;\n}\n\nfloat\
+  \ bodyTempF()\n{\n  float temperature = 98.6 ;\n  return temperature ;\n}\n```\n\
+  \n![image](img/5g.jpg)保存、编译并运行程序以查看输出\n\n![image](img/pg53_1.jpg)\n\n![image](img/hot.jpg)\n\
+  \n同名的变量在不同的作用域中声明时不会冲突 —— 它们相互不可见。\n\n### 传递参数\n\n函数调用经常为函数提供参数值。这些可以是任意数量和数据类型，但它们必须与函数原型声明中指定的匹配。\n\
+  \n![image](img/pg54_1.jpg)\n\n注意，传递给函数的参数仅提供原始值的副本，这种过程被称为“值传递（passing by value）”。\n\
+  \n传递给参数的值可以是程序代码中指定的“静态”值，也可以是用户输入的“动态”值。在命令行提示符下，可以使用 C++ 的 `cin` 函数配合 `>>` 输入流操作符将值从标准输入重定向到变量，例如：\n\
+  \n```cpp\nfloat num ;\ncout << “Please enter a number: ” ;\ncin >> num ;\n```\n\n\
+  输入可以作为函数调用中的参数传递给函数，例如 `workWith( num )`。\n\n![image](img/snake.jpg)\n\n函数原型必须在定义之前声明。通常，原型出现在主函数之前，而它们的定义出现在主函数之后。\n\
+  \n可选情况下，函数原型可以为参数分配默认值，当调用未传递参数值时将使用这些默认值。可以为多个参数分配默认值。通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\
+  \n![image](img/1g.jpg)\n\n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\
+  \n![image](img/commong.jpg)\n\nscope.cpp 接下来，声明两个简单的函数原型\n\n![image](img/2g.jpg)\n\
+  \n```cpp\nfloat bodyTempC() ;\nfloat bodyTempF() ;\n```\n\n![image](img/3g.jpg)现在，添加一个包含对每个函数调用和最终\
+  \ `return` 语句的主函数\n\n```cpp\nint main()\n{\n  cout << “Centigrade: ” << bodyTempC()\
+  \ << endl ;\n  cout << “Fahrenheit: ” << bodyTempF() << endl ;\n  return 0 ;\n}\n\
+  ```\n\n![image](img/4g.jpg)在主函数之后，定义另外两个函数 —— 每个函数都返回局部“temperature”变量的值\n\n```cpp\n\
+  float bodyTempC()\n{\n  float temperature = 37.0 ;\n  return temperature ;\n}\n\n\
+  float bodyTempF()\n{\n  float temperature = 98.6 ;\n  return temperature ;\n}\n\
+  ```\n\n![image](img/5g.jpg)保存、编译并运行程序以查看输出\n\n![image](img/pg53_1.jpg)\n\n![image](img/hot.jpg)\n\
+  \n同名的变量在不同的作用域中声明时不会冲突 —— 它们相互不可见。\n\n### 传递参数\n\n函数调用经常为函数提供参数值。这些可以是任意数量和数据类型，但它们必须与函数原型声明中指定的匹配。\n\
+  \n![image](img/pg54_1.jpg)\n\n注意，传递给函数的参数仅提供原始值的副本，这种过程被称为“值传递（passing by value）”。\n\
+  \n传递给参数的值可以是程序代码中指定的“静态”值，也可以是用户输入的“动态”值。在命令行提示符下，可以使用 C++ 的 `cin` 函数配合 `>>` 输入流操作符将值从标准输入重定向到变量，例如：\n\
+  \n```cpp\nfloat num ;\ncout << “Please enter a number: ” ;\ncin >> num ;\n```\n\n\
+  输入可以作为函数调用中的参数传递给函数，例如 `workWith( num )`。\n\n![image](img/snake.jpg)\n\n函数原型必须在定义之前声明。通常，原型出现在主函数之前，而它们的定义出现在主函数之后。\n\
+  \n可选情况下，函数原型可以为参数分配默认值，当调用未传递参数值时将使用这些默认值。可以为多个参数分配默认值。通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\
+  \n![image](img/1g.jpg)\n\n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\
+  \n![image](img/commong.jpg)\n\nscope.cpp 接下来，声明两个简单的函数原型\n\n![image](img/2g.jpg)\n\
+  \n```cpp\nfloat bodyTempC() ;\nfloat bodyTempF() ;\n```\n\n![image](img/3g.jpg)现在，添加一个包含对每个函数调用和最终\
+  \ `return` 语句的主函数\n\n```cpp\nint main()\n{\n  cout << “Centigrade: ” << bodyTempC()\
+  \ << endl ;\n  cout << “Fahrenheit: ” << bodyTempF() << endl ;\n  return 0 ;\n}\n\
+  ```\n\n![image](img/4g.jpg)在主函数之后，定义另外两个函数 —— 每个函数都返回局部“temperature”变量的值\n\n```cpp\n\
+  float bodyTempC()\n{\n  float temperature = 37.0 ;\n  return temperature ;\n}\n\n\
+  float bodyTempF()\n{\n  float temperature = 98.6 ;\n  return temperature ;\n}\n\
+  ```\n\n![image](img/5g.jpg)保存、编译并运行程序以查看输出\n\n![image](img/pg53_1.jpg)\n\n![image](img/hot.jpg)\n\
+  \n同名的变量在不同的作用域中声明时不会冲突 —— 它们相互不可见。\n\n### 传递参数\n\n函数调用经常为函数提供参数值。这些可以是任意数量和数据类型，但它们必须与函数原型声明中指定的匹配。\n\
+  \n![image](img/pg54_1.jpg)\n\n注意，传递给函数的参数仅提供原始值的副本，这种过程被称为“值传递（passing by value）”。\n\
+  \n传递给参数的值可以是程序代码中指定的“静态”值，也可以是用户输入的“动态”值。在命令行提示符下，可以使用 C++ 的 `cin` 函数配合 `>>` 输入流操作符将值从标准输入重定向到变量，例如：\n\
+  \n```cpp\nfloat num ;\ncout << “Please enter a number: ” ;\ncin >> num ;\n```\n\n\
+  输入可以作为函数调用中的参数传递给函数，例如 `workWith( num )`。\n\n![image](img/snake.jpg)\n\n函数原型必须在定义之前声明。通常，原型出现在主函数之前，而它们的定义出现在主函数之后。\n\
+  \n可选情况下，函数原型可以为参数分配默认值，当调用未传递参数值时将使用这些默认值。可以为多个参数分配默认值。通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\
+  \n(抱歉，上述翻译过程中出现了重复逻辑错误，我将重新为您提供文本后半部分的正确合并翻译：)\n\n[content]\n以摄氏度：... “是 C” 摄氏度转换为华氏度\n\
+  \n![image](img/4g.jpg) 之后\n\n函数函数](5g.jpg) \n在函数定义中给参数和变量命名的名称不需要与调用函数中的变量名相同，但它有助于清晰程序。\n\
+  \n### 重载函数\n\n函数“重载（overloading）”允许同名的函数在同一个程序中和谐地共存，只要它们的参数在数量、数据类型或数量和数据类型上有所不同。编译器通过识别参数数量和数据类型将函数调用匹配到正确的函数版本\
+  \ —— 这一过程被称为“函数解析（function resolution）”。\n\n![image](img/pg56_1.jpg)当要执行的任务相似但细有不同时，创建重载函数是有用的。\n\
+  \n![image](img/1g.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commong.jpg)\n\noverload.cpp\n\n![image](img/2g.jpg)在预处理指令下方，声明一个返回\
+  \ float 值并有一个参数的函数原型\n\n```cpp\nfloat computeArea ( float ) ;\n```\n\n![image](img/3g.jpg)现在，声明两个重载函数原型\
+  \ —— 为第一个原型具有不同的参数\n\n```cpp\nfloat computeArea ( float, float ) ;\nfloat computeArea\
+  \ ( char, float, float ) ;\n```\n\n![image](img/4g.jpg)在原型声明下方，添加一个包含最终 `return`\
+  \ 语句的主函数\n\n```cpp\nint main()\n{\n  // 程序代码在此处。\n  return 0 ;\n}\n```\n\n\n\n\n\
+  ![image](img/5g.jpg)在 `main` 函数之后，定义第一个接收参数的函数\n\n```cpp\nfloat computeArea( float\
+  \ diameter )\n{\n  float radius = ( diameter / 2 ) ;\n  return ( 3.141593 * ( radius\
+  \ * radius ) ) ;\n}\n```\n\n![image](img/snake.jpg)\n\n仅通过返回数据类型不同的函数不能进行重载——必须是参数有所不同。函数解析时不考虑返回数据类型。\n\
+  \n![image](img/6g.jpg)在第一个函数定义下方，定义接收不同参数的重载函数\n\n```cpp\nfloat computeArea( float\
+  \ width, float height )\n{\n  return ( width * height ) ;\n}\n\nfloat computeArea(\
+  \ char letter, float width , float height )\n{\n  return ( ( width / 2 ) * height\
+  \ ) ;\n}\n```\n\n![image](img/7g.jpg)在 `main` 函数中，插入语句声明两个变量，并用用户输入初始化其中一个\n\n```cpp\n\
+  float num, area ;\ncout << “Enter dimension in feet: “ ;\ncin >> num ;\n```\n\n\
+  ![image](img/8g.jpg)调用第一个函数并输出其返回值\n\n```cpp\narea = computeArea( num ) ;\ncout\
+  \ << “Circle: Area = “ << area << “ sq.ft.” << endl ;\n```\n\n![image](img/9g.jpg)调用重载函数并输出它们的返回值\n\
+  \n```cpp\narea = computeArea( num, num ) ;\ncout << “Square: Area = “ << area <<\
+  \ “ sq.ft.” << endl ;\n\narea = computeArea( ‘T’, num, num ) ;\ncout << “Triangle:\
+  \ Area = “ << area << “sq.ft.” << endl ;\n```\n\n![image](img/10g.jpg)保存、编译并运行程序，然后在提示时输入一个数值以查看输出\n\
+  \n![image](img/pg57_1.jpg)\n\n![image](img/forget.jpg)\n\n传递给 `char` 参数的值从未被使用过——包含该参数仅仅是为了区分该重载函数。\n\
+  \n### 优化函数\n\n函数可以递归地调用自身，以重复执行其函数体包含的语句——类似于循环。和循环一样，递归函数必须包含一个增量器和一个条件测试，以便再次调用自身，或者在满足条件时停止重复。递归函数的语法如下：\n\
+  \n```cpp\nreturn-data-type function-name ( argument-list )\n{\n  statements-to-be-executed\
+  \ ;\n  incrementer ;\n  conditional-test-to-recall-or-exit ;\n}\n```\n\n![image](img/pg58_1.jpg)\n\
+  \n增量器会改变所传参数的值——因此后续调用会将调整后的值传回函数。\n\n![image](img/1g.jpg)通过指定要包含的 C++ 库类和使用的命名空间前缀开始一个新程序\n\
+  \n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/commong.jpg)\n\
+  \noptimize.cpp\n\n![image](img/2g.jpg)在预处理器指令下方，声明两个都是递归函数的原型\n\n```cpp\nint computeFactorials\
+  \ ( int, int ) ;\nint factorial ( int ) ;\n```\n\n![image](img/3g.jpg)在原型声明下方，添加一个包含最终\
+  \ `return` 语句的 `main` 函数\n\n```cpp\nint main()\n{\n  // Program code goes here.\n\
+  \  return 0 ;\n}\n```\n\n![image](img/4g.jpg)在 `main` 函数之后，添加第一个函数原型的定义——一个递归函数\n\
+  \n```cpp\nint computeFactorials( int num, int max )\n{\n  cout << “Factorial of\
+  \ “ << num << “: ” ;\n  cout << factorial( num ) << endl ;  // Statements.\n  num++\
+  \ ;  // Incrementer.\n  if ( num > max ) return 0 ;  // 退出或再次调用.\n  else return\
+  \ computeFactorials( num , max ) ;\n}\n```\n\n![image](img/hot.jpg)\n\n递归函数通常比循环消耗更多的系统资源——但它可以使代码更易读。\n\
+  \n![image](img/5g.jpg)为第二个原型定义一个递归函数\n\n```cpp\nint factorial( int n )\n{\n  int\
+  \ result ;\n  if ( n == 1 ) result = 1 ;  // 退出或...\n  else result = ( factorial(\
+  \ n - 1 ) * n ) ;  // 递减...\n  return result ;  // 再次调用.\n}\n```\n\n![image](img/6g.jpg)在\
+  \ `main` 函数开始处，插入对递归函数的调用\n\n```cpp\ncomputeFactorials( 1, 8 ) ;\n```\n\n![image](img/7g.jpg)保存、编译并运行程序查看输出\n\
+  \n![image](img/pg59_1.jpg)\n\n![image](img/forget.jpg)\n\n如果你意外运行了无限递归，请按下 `Ctrl\
+  \ + C` 键终止进程。\n\n输出列出了阶乘值（3 的阶乘是 3x2x1=6 等），但可以通过优化 `factorial()` 函数来改进程序。该函数如果使用三元运算符，不需要变量。\n\
+  \n![image](img/8g.jpg)用三元运算符替换 `factorial()` 函数\n\n```cpp\ninline factorial( int\
+  \ n )\n{\n  return ( n == 1 ) ? 1 : ( factorial( n - 1 ) * n ) ;\n}\n```\n\n\n\n\
+  \n\n![image](img/pg62_1.jpg)\n\n与`<iostream>`类库一样，`<string>` 库是 `std` 命名空间的一部分，C++\
+  \ 标准库类都使用了该命名空间。这意味着字符串对象可以被称为 `std::string`，或者在程序开头包含 `using namespace std;` 指令时，更简单地简称为\
+  \ `string`。\n\n一旦`<string>` 库可用，就可以像声明其他变量一样声明一个 `string` “变量”。在声明时，可以选择性使用 `=`\
+  \ 赋值运算符对变量进行初始化，也可以在程序的稍后部分进行初始化。\n\n此外，可以通过在变量名后的括号中包含一个文本字符串来初始化 `string` 变量。\n\
+  \nC++ 中的文本字符串必须始终包含在双引号 “ ” 之内——单引号 ' ' 仅用于围绕 `char` 数据类型的字符值。\n\n与 C 语言程序员必须使用的\
+  \ `char` 数组相比，C++ `string` 变量处理起来要容易得多，因为它会自动调整大小以容纳任何文本字符串的长度。在更底层的层级上，文本仍然存储为字符数组，但\
+  \ `string` 变量允许你忽略这些细节。因此，可以使用 `=` 赋值运算符将字符数组赋值给 `string` 变量。\n\n需要记住，当将数值赋给 `string`\
+  \ 变量时，它们不再是数值数据类型，因此不能对它们进行算术运算。例如，尝试用 `+` 加法运算符相加“7”和“6”的 `string` 值会产生拼接后的字符串“76”，而不是数值值\
+  \ 13。在这种情况下，`+` 运算符识别出上下文不是算术运算，因此采用“字符串连接运算符”的外壳来合并两个字符串。同样，`+=` 运算符将一个 `string`\
+  \ 追加到另一个 `string` 之后，这对于构建长文本字符串非常有用。\n\n在此处 描述的示例程序中，有几个 `string` 值被构建在一个长字符串中。\n\
+  \n![image](img/1p.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <string>\
+  \  // 字符串支持。\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/commonp.jpg)\n\
+  \nstring.cpp\n\n![image](img/2p.jpg)添加一个包含四个 string 变量声明和一个最终返回语句的 main 函数\n\n```cpp\n\
+  int main()\n{\n    string text = “9” ;\n    string term( “9 “ ) ;\n    string info\
+  \ = “Toys” ;\n    string color ;\n    // 在此处添加更多语句。\n    return 0 ;\n}\n```\n\n\
+  ![image](img/3p.jpg)在 main 函数中，变量声明之后插入语句来声明并初始化字符数组，然后将其值赋予未初始化的 string 变量\n\n\
+  ```cpp\nchar hue[4] = { ‘R’, ’e’, ’d’, ’\\0’ } ;\ncolor = hue ;\n```\n\n![image](img/4p.jpg)将较长的文本字符串赋值其中一个\
+  \ string 变量\n\n```cpp\ninfo = “Balloons” ;\n```\n\n![image](img/5p.jpg)通过组合第一个 string\
+  \ 变量中的所有 string 变量值来构建长字符串，然后输出组合后的字符串值\n\n```cpp\ntext += ( term + color + info\
+  \ ) ;\ncout << endl << text << endl ;\n```\n\n![image](img/6p.jpg)保存、编译并运行程序查看输出\n\
+  \n![image](img/pg63_1.jpg)\n\n![image](img/forget.jpg)\n\n记得添加特殊的 `\\0` 字符来标记 char\
+  \ 数组中字符串的结束。\n\n### 获取字符串输入\n\nC++ `cin` 函数在第 3 章中引入用于输入数值，它也可以将文本输入赋值给 `string`\
+  \ 变量。这有一个局限性，因为它每次只能用于输入一个单词——`cin` 函数在遇到空格时会停止读取，将任何其他文本留留在“输入缓冲区”中。\n\n![image](img/pg64_1.jpg)\n\
+  \n当你想要允许用户输入带有空格的字符串（例如句子）时，可以使用 `getline()` 函数。该函数需要两个参数来指定字符串的源和目的。例如，当 `cin`\
+  \ 函数是源而名为“str”的 string 变量是目的时：\n\n```cpp\ngetline( cin , str ) ;\n```\n\n`getline()`\
+  \ 函数从输入“流”中读取，直到遇到行尾的 `\\n` 换行符——该换行符是在按下 **Return** 键时产生的。\n\n混合使用 `cin` 和 `getline()`\
+  \ 函数时必须小心，因为 `getline()` 函数会自动读取输入缓冲区中留下的任何内容——给人一种程序跳过了指令的印象。可以使用 `cin.ignore()`\
+  \ 函数通过忽略输入缓冲区中留的内容来解决这个问题。\n\n![image](img/1p.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\
+  \n```cpp\n#include <string>  // 字符串支持。\n#include <iostream>\nusing namespace std\
+  \ ;\n```\n\n![image](img/commonp.jpg)\n\ninput.cpp\n\n![image](img/2p.jpg)添加一个包含一个\
+  \ string 声明和一个最终返回语句的 main 函数\n\n```cpp\nint main()\n{\n    string name ;\n    //\
+  \ 在此处添加更多语句。\n    return 0 ;\n}\n```\n\n![image](img/3p.jpg)在 main 函数中，插入语句将用户输入赋值给\
+  \ string 变量，然后输出其值\n\n```cpp\ncout << “Please enter your name: ” ;\ncin >> name\
+  \ ;\ncout << “Welcome “ << name << endl ;\n```\n\n![image](img/4p.jpg)接下来，插入语句再次请求名称，但这次使用\
+  \ getline 函数将输入赋值给 string 变量之前输出其值\n\n```cpp\ncout << “Please re-enter your full\
+  \ name: ” ;\ngetline( cin , name ) ;\ncout << “Thanks, “ << name << endl ;\n```\n\
+  \n![image](img/5p.jpg)保存、编译并运行程序，并在提示时输入全名\n\n![image](img/pg65_1.jpg)\n\n这个不理想的结果显示\
+  \ `cin` 读取到空格为止，将第二个名字留在缓冲区中，然后由 `getline()` 读取。即使你只输入了名字，问题仍然存在，因为 `cin` 将你按下 **Return**\
+  \ 键时产生的换行符留在了输入缓冲区中。\n\n![image](img/6p.jpg)通过在调用 getline 函数之前插入语句修改程序以解决此问题，指令其忽略输入缓冲区中的内容\n\
+  \n```cpp\ncin.ignore( 256, ‘\\n’ ) ;\n```\n\n![image](img/7p.jpg)再次保存、编译并运行程序，然后重新输入全名以查看程序按要求执行\n\
+  \n![image](img/pg65_2.jpg)\n\n### 解决字符串问题\n\n当你需要将 string 变量转换为不同的数据类型（也许为了对这些值进行算术运算）时，string\
+  \ 变量就会出现问题。由于 string 对象不是 C++ 的原生数据类型，无法通过强制类型转换将 string 变量值转换为 `int` 或任何常规数据类型。\n\
+  \n![image](img/pg66_1.jpg)\n\n解决方案由 C++ `<sstream>` 库提供，它允许 `stringstream` 对象作为中间介，通过它可以将\
+  \ `string` 值转换为数值数据类型，并将数值值转换为 `string` 数据类型。\n\n\n\n\n\n值可以使用与 `cout` 语句中相同的输出流运算符\
+  \ `<<` 加载到 `stringstream` 对象中。随后，可以使用与 `cin` 语句中相同的 `>>` 输入流运算符从 `stringstream`\
+  \ 对象中提取内容。\n\n为了重用 `stringstream` 对象，必须先将其恢复原始状态。这需要将其内容设置为空字符串 `string`，并清除其状态位标志。\n\
+  \n![image](img/1p.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序\n\n```cpp\n#include <string>\
+  \  // 包含 string 支持。\n#include <sstream> // 包含 stringstream 支持。\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commonp.jpg)\n\nconvert.cpp\n\n![image](img/2p.jpg)添加一个包含最终\
+  \ `return` 语句的 `main` 函数，并声明两个要转换的初始化变量\n\n```cpp\nint main()\n{\nstring term =\
+  \ “100” ;\nint number = 100 ;\n// 在此处添加更多语句。\nreturn 0 ;\n}\n```\n\n![image](img/3p.jpg)在\
+  \ `main` 函数中，插入语句声明一个整数变量、`string` 变量和一个 `stringstream` 对象\n\n```cpp\nint num ;\
+  \  // 用于存储转换后的字符串。\nstring text ;  // 用于存储转换后的整数。\nstringstream stream ;  // 执行转换。\n\
+  ```\n\n![image](img/4p.jpg)接下来，使用流输出运算符将初始化的 `string` 值加载到 `stringstream` 对象中\n\n\
+  ```cpp\nstream << term ;  // 加载字符串。\n```\n\n![image](img/5p.jpg)使用流输入运算符将内容从 `stringstream`\
+  \ 对象提取到未初始化的整数变量中\n\n```cpp\nstream >> num ;  // 提取整数。\n```\n\n![image](img/6p.jpg)对整数进行算术运算并输出结果\n\
+  \n```cpp\nnum /= 4 ;\ncout << “Integer value: ” << num << endl ;\n```\n\n![image](img/7p.jpg)重置\
+  \ `stringstream` 对象准备好重用\n\n```cpp\nstream.str(“”) ;  // 清空内容。\nstream.clear() ;\
+  \  // 清空位标志。\n```\n\n![image](img/8p.jpg)现在，使用流输出运算符将初始化的整数值加载到 `stringstream` 对象中\n\
+  \n```cpp\nstream << number ;  // 加载整数。\n```\n\n![image](img/9p.jpg)使用流输入运算符将内容从\
+  \ `stringstream` 对象提取到未初始化的 `string` 变量中\n\n```cpp\nstream >> text ;  // 提取字符串。\n\
+  ```\n\n![image](img/10p.jpg)对 `string` 进行拼接并输出结果\n\n```cpp\ntext += “ Per Cent”\
+  \ ;\ncout << “String value: ” << text << endl ;\n```\n\n![image](img/11p.jpg)保存、编译并运行程序查看转换后的输出值\n\
+  \n![image](img/pg67_1.jpg)\n\n![image](img/hot.jpg)\n\n注意此处是如何使用 `stringstream`\
+  \ 对象的 `str()` 函数将其内容重置为空字符串的。\n\n![image](img/forget.jpg)\n\n非空的 `stringstream`\
+  \ 对象具有指示其状态为 good、bad、eof 或 fail 的位标志——如此处所示，在重用之前应通过 `stringstream` 对象的 `clear()`\
+  \ 函数将其清除。\n\n## 发现字符串特性\n\nC++ `<string>` 库提供了许多函数，可以轻松处理字符串。要使用它们，只需在 `string`\
+  \ 变量名后加点和函数名即可。例如，对于名为“msg”的 `stringstream` 变量，你可以调用 `size()` 函数来返回其字符长度，即 `msg.size()`。\n\
+  \n![image](img/pg68_1.jpg)\n\n可以通过为 `string` 变量赋值一个没有空格的双引号空字符串——`“”`来清空所有字符，或者调用\
+  \ `<string>` 库的 `clear()` 函数。\n\n与 `char` 数组不同，`string` 变量会动态扩大以适应分配给它的字符数，其当前的内存大小可以通过\
+  \ `<string>` 库的 `capacity()` 函数显示。一旦扩大，即使给变量分配较小的字符串，分配的内存大小依然保留。\n\n`<string>`\
+  \ 库的 `empty()` 函数返回布尔 `true` (1) 或 `false` (0) 响应，以显示字符串是否为空。\n\n![image](img/1p.jpg)通过指定要包含的\
+  \ C++ 库类和要使用的命名空间前缀来启动新程序\n\n```cpp\n#include <string>  // 包含 string 支持。\n#include\
+  \ <iostream>\nusing namespace std ;\n```\n\n![image](img/commonp.jpg)\n\nfeatures.cpp\n\
+  \n![image](img/2p.jpg)在预处理器指令下方声明一个带有单个 `string` 数据类型参数的函数原型\n\n```cpp\nvoid computeFeatures(\
+  \ string ) ;\n```\n\n![image](img/3p.jpg)添加一个包含最终 `return` 语句的 `main` 函数，并声明一个化的\
+  \ `string` 变量\n\n```cpp\nint main()\n{\nstring text = “C++ is fun” ;\n// 在此处添加更多语句。\n\
+  return 0 ;\n}\n```\n\n![image](img/4p.jpg)在预处理器指令之后，定义函数以显示 `string` 值\n\n```cpp\n\
+  void computeFeatures( text )\n{\ncout << “String: ” << text << endl ;\n}\n```\n\n\
+  ![image](img/hot.jpg)`length()` 函数可以替代 `size()` 函数来显示字符串的大小。\n\n![image](img/5p.jpg)在定义中，添加语句输出\
+  \ `string` 变量的特性\n\n```cpp\ncout << “Size: ” << text.size() ;\ncout << “ Capacity:\
+  \ ” << text.capacity() ;\ncout << “ Empty?: ” << text.empty() << endl ;\n```\n\n\
+  ![image](img/6p.jpg)在 `main` 函数中，插入函数的调用\n\n```cpp\ncomputeFeatures( text ) ;\n\
+  ```\n\n![image](img/7p.jpg)接下来，在 `main` 函数中插入语句扩大 `string` 值并调用函数\n\n```cpp\ntext\
+  \ += “ for everyone” ;\ncomputeFeatures( text ) ;\n```\n\n![image](img/8p.jpg)现在，插入语句减少\
+  \ `string` 值\n\n```cpp\ntext = “C++ Fun” ;\ncomputeFeatures( text ) ;\n```\n\n![image](img/9p.jpg)最后，插入语句清空\
+  \ `string` 变量\n\n```cpp\ntext.clear() ;\ncomputeFeatures( text ) ;\n```\n\n![image](img/10p.jpg)保存、编译并运行程序查看输出\n\
+  \n## 合并与比较字符串\n\n当使用 `+` 运算符在赋值中拼接字符串时，合并后的字符串存储在 `string` 变量中。但当它用于 `cout` 函数时，字符串仅在输出中合并——变量值保持不变。\n\
+  \n![image](img/pg70_1.jpg)\n\n`<string>` 库的 `append()` 函数也可用于拼接字符串，在其括号内指定要追加的 `string`\
+  \ 值作为参数。当这用于 `cout` 函数时，字符串在变量中合并，然后将其值输出——在这种情况下，变量值会发生变化。\n\n字符串比较可以像数值比较一样，使用\
+  \ `==` 等等运算符进行。当两个字符串精确匹配时，它返回 `true` (1)，否则返回 `false` (0)。\n\n或者，`<string>` 库的\
+  \ `compare()` 函数也可用于比较作为其参数指定的 `string` 值。与 `==` 等等比较不同，`compare()` 函数在字符串完全相同时返回\
+  \ 0，这是通过检查 `string` 值的组合 ASCII 代码实现的。当 `string` 参数的总和大于第一个字符串时，它返回 -1，否则返回 1。\n\n\
+  \n\n\n\n![image](img/2p.jpg)添加一个主函数，包含一个最终的 `return` 语句并声明三个初始化的 `string` 变量\n\n\
+  ```cpp\nint main()\n{\nstring lang = “C++” ;\nstring term = “ Programming” ;\nstring\
+  \ text = “C++ Programming” ;\n// 在此处添加更多语句。\nreturn 0 ;\n}\n```\n\n![image](img/3p.jpg)在主函数中，插入语句使用\
+  \ `+` 拼接运算符输出两个 `string` 值的值，并输出第一个变量的（未改变）值\n\n```cpp\ncout << “Concatenated: ”\
+  \ << ( lang + term ) << endl ;\ncout << “Original: ” << lang << endl ;\n```\n\n\
+  ![image](img/4p.jpg)接下来，插入语句使用 `append()` 函数输出两个 `string` 值，并输出第一个变量的（已改变）值\n\n\
+  ```cpp\ncout << “Appended: ” << lang.append( term ) << endl ;\ncout << “Original:\
+  \ ” << lang << endl ;\n```\n\n![image](img/5p.jpg)使用 `==` 等值运算符比较两个不同的 `string`\
+  \ 值，然后比较两个匹配的 `string` 值\n\n```cpp\ncout << “Differ: ” << ( lang == term ) << endl\
+  \ ;\ncout << “Match: ” << ( lang == text ) << endl ;\n```\n\n![image](img/6p.jpg)现在，使用\
+  \ `compare()` 函数比较三个 `string` 值，检查它们的 ASCII 代码总和\n\n```cpp\ncout << “Match: ” <<\
+  \ lang.compare( text ) << endl ;\ncout << “Differ: ” << lang.compare( term ) <<\
+  \ endl ;\ncout << “Lower ASCII: ” << lang.compare( “zzzzz” ) << endl ;\n```\n\n\
+  ![image](img/7p.jpg)保存、编译并运行程序以查看输出\n\n![image](img/pg71_1.jpg)\n\n![image](img/forget.jpg)\n\
+  \n`+=` 赋值运算符也可以用于追加字符串。\n\n![image](img/hot.jpg)\n\n在比较中，会考虑字符顺序——因此比较“za”和“az”会发现“za”的总和更大。从\
+  \ ASCII 值来说，‘a’ 是 97，‘z’ 是 122。\n\n### 复制与交换字符串\n\n可以通过 `=` 赋值运算符将字符串值赋给 `string`\
+  \ 变量，也可以通过`<string>` 库的 `assign()` 函数。该函数通过其括号内的参数来指定要复制到变量的 `string` 值。\n\n![image](img/pg72_1.jpg)\n\
+  \n可选地，`assign()` 函数可以通过将起始字符的位置作为第二个参数，并将要复制的字符数作为第三个参数，仅复制指定 `string` 值的一部分。\n\n\
+  可以通过`<string>` 库的 `swap()` 函数交换 `string` 变量与另一个 `string` 变量的内容。在这种情况下，第一个变量的内容接收第二个变量的内容，而第二个变量接收第一个变量的内容。\n\
+  \n![image](img/1p.jpg)指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <string>\
+  \  // 包含字符串支持\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/commonp.jpg)\n\
+  \nswap.cpp\n\n![image](img/2p.jpg)添加一个主函数，包含一个最终的 `return` 语句并声明三个 `string` 变量——其中一个已初始化\n\
+  \n```cpp\nint main()\n{\nstring front ;\nstring back ;\nstring text = “Always laugh\
+  \ when you can. It\\’s cheap medicine.” ;\n// 在此处添加更多语句。\nreturn 0 ;\n}\n```\n\n\
+  ![image](img/3p.jpg)在主函数中，插入语句将初始化 `string` 变量的赋值赋给第一个未初始化的 `string` 变量\n\n```cpp\n\
+  front.assign( text ) ;\n```\n\n![image](img/4p.jpg)接下来，插入语句输出新赋值的 `string` 值\n\n\
+  ```cpp\ncout << endl << “Front: ” << front << endl ;\n```\n\n![image](img/5p.jpg)现在，插入语句仅将初始化变量的前\
+  \ 27 个字符赋给第一个变量\n\n```cpp\nfront.assign( text, 0, 27 ) ;\n```\n\n![image](img/6p.jpg)输出新赋值的\
+  \ `string` 值\n\n```cpp\ncout << endl << “Front: ” << front << endl ;\n```\n\n![image](img/7p.jpg)接下来，仅将初始化\
+  \ `string` 变量的最后部分赋给第二个未初始化的变量，从字符（元素）27 开始\n\n```cpp\nback.assign ( text, 27 ,\
+  \ text.size() ) ;\n```\n\n![image](img/8p.jpg)现在，输出这个新赋值的 `string` 值\n\n```cpp\n\
+  cout << “Back: ” << back << endl ;\n```\n\n![image](img/9p.jpg)最后，交换第一个和第二个 `string`\
+  \ 变量包含的赋值 `string` 值，然后输出交换后的值\n\n```cpp\nback.swap( front ) ;\ncout << endl <<\
+  \ “Front: ” << front << endl ;\ncout << “Back: ” << back << endl ;\n```\n\n![image](img/10p.jpg)保存、编译并运行程序以查看输出\n\
+  \n![image](img/pg73_1.jpg)\n\n![image](img/hot.jpg\n\n使用 `=` 赋值运算符赋值完整字符串，并使用 `assign()`\
+  \ 函数赋值部分字符串![image](img/hot.jpg) 查找子字符串\n\n`string` 值可以被搜索以查看它是否包含“子字符串”，使用 `find()`\
+  \ 函数。它的括号应该将要搜索的字符串作为第一个参数，并将从何处开始搜索的索引作为第二个参数![image](img/pg74_1.jpg) 当成功找到子字符串时，`find()`\
+  \ 函数返回首次出现的索引。当搜索失败时，`find()` 返回 -1。`<string>` 中还有几个与 `find()` 函数相关的函数。其中两个是 `find_first_of()`\
+  \ 函数和 `find_first_not_of()` 函数。与其 `find()` 搜索完整字符串，`find_first_of()` 函数搜索指定字符串中任何字符的首次出现。`find_last_of()`\
+  \ 和 `find_last_not_of()` 函数的工作原理类似但从 `string` 的末尾开始向前搜索。![image](img/1p.jpg) 指定要包含的\
+  \ C++ 库类和要使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <string>  // 包含字符串支持\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commonp.jpg)\n\nfind.cpp\n\n![image](img/2p.jpg)添加一个主函数，包含一个最终的\
+  \ `return` 语句、一个初始化字符串变量并声明一个用于存储搜索结果的整数变量\n\n```cpp\nint main()\n{\nstring text\
+  \ = “I can resist anything but temptation.” ;\nint num ;\n// 在此处添加更多语句。\nreturn\
+  \ 0 ;\n}\n```\n\n![image](img/3p.jpg)在主函数中，插入语句输出整个 `string` 变量中子字符串的起始位置\n\n```cpp\n\
+  num = text.find( “resist”, 0 ) ;\ncout << “Position: ” << num << endl ;\n```\n\n\
+  ![image](img/4p.jpg)接下来，插入语句在整个 `string` 变量中搜索不存在的子字符串并输出结果\n\n```cpp\nnum = text.find(\
+  \ “nonsuch” , 0 ) ;\ncout << “Result: ” << num << endl ;\n```\n\n![image](img/5p.jpg)现在，插入语句输出\
+  \ `string` 变量中“If ”子字符串内任何字符的首次出现位置\n\n```cpp\nnum = text.find_first_of( “If” )\
+  \ ;\ncout << “First I: ” << num << endl ;\n```\n\n![image](img/6p.jpg)插入语句报告不在“If\
+  \ ”子字符串内的第一个字符的字符串位置\n\n```cpp\nnum = text.find_first_not_of( “If” ) ;\ncout <<\
+  \ “First not I: ” << num << endl ;\n```\n\n![image](img/7p.jpg)接下来，插入语句在 `string`\
+  \ 变量中搜索字母“t”的最后出现并输出其位置\n\n```cpp\nnum = text.find_last_of( “t” ) ;\n```\n\n\n\n\
+  \n\n```cpp\ncout << “Last t: ” << num << endl ;\n```\n\n![image](img/8p.jpg)现在，添加一条语句来报告\
+  \ `string` 变量中最后一个不是“t”的字符的 `string` 位置。\n\n```cpp\nnum = text.find_last_not_of(\
+  \ “t” ) ;\n```\n\n```cpp\ncout << “Last not t: ” << num << endl ;\n```\n\n![image](img/9p.jpg)保存、编译并运行程序，查看搜索结果，结果将显示搜索失败或找到字符的位置。\n\
+  \n![image](img/pg75_1.jpg)\n\n![image](img/snake.jpg)\n\n搜索是区分大小写的，因此寻找“If”和“if”可能会产生不同的结果——在这里，大写的‘I’是匹配的。\n\
+  \n![image](img/forget.jpg)\n\n字符串中的第一个字符位于位置 0，而不是位置 1。\n\n### 替换子字符串\n\n`<string>`\
+  \ 库包含了许多用于操作子字符串的有用函数。可以使用 `insert()` 函数将一个 `string` 插入到另一个 `string` 中。这需要将要插入 `string`\
+  \ 的索引位置作为第一个参数，并将要插入的 `string` 值作为第二个参数。\n\n![image](img/pg76_1.jpg)\n\n相反，可以使用\
+  \ `erase()` 函数从 `string` 中删除子字符串。这需要将开始删除的索引位置作为第一个参数，并将要删除的字符数作为第二个参数。\n\n`replace()`\
+  \ 函数简洁地结合了 `erase()` 和 `insert()` 函数，同时删除子字符串并插入替换内容。它需要三个参数，分别指定开始删除的位置、要删除的字符数，以及要插入该位置的替换\
+  \ `string`。\n\n可以使用 `substr()` 函数从 `string` 中复制一个子字符串，将开始复制的索引位置作为第一个参数，并将要复制的字符数作为第二个参数。\n\
+  \n可以使用 `at()` 函数复制 `string` 中任何指定位置的字符，该函数需要索引位置作为参数。`string` 中最后一个字符的元素索引总是比 `string`\
+  \ 的长度少 1——因为索引计数从 0 开始，而不是从 1。\n\n![image](img/1p.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀来启动新程序。\n\
+  \n```cpp\n#include <string>  // 字符串支持\n#include <iostream>\nusing namespace std\
+  \ ;\n```\n\n![image](img/commonp.jpg)\n\nsub.cpp\n\n![image](img/2p.jpg)添加一个包含最终\
+  \ `return` 语句、已初始 `string` 变量声明以及输出 `string` 变量值语句的 main 函数。\n\n```cpp\nint main()\n\
+  {\n  string text = “I do like the seaside” ;\n  cout << “Original: ” << text <<\
+  \ endl ;\n  // Add more statements here.\n  return 0 ;\n}\n```\n\n![image](img/3p.jpg)在\
+  \ main 函数中，插入语句在索引位置 10 变量值处插入子字符串，并输出修改后的 `string`。\n\n```cpp\ntext.insert( 10,\
+  \ “to be beside “ ) ;\ncout << “Inserted: ” << text << endl ;\n```\n\n![image](img/4p.jpg)接下来，插入语句从索引位置\
+  \ 3 开始从修改后的 `string` 值中删除两个字符，并输出修订后的 `string`。\n\n```cpp\ntext.erase( 2, 3 ) ;\n\
+  cout << “Erased: ” << text << endl ;\n```\n\n![image](img/5p.jpg)现在，插入语句在索引位置 7\
+  \ 处删除 25 个字符，插入替换子字符串，然后再次修订后的 `string`。\n\n```cpp\ntext.replace( 7, 25, “strolling\
+  \ by the sea” ) ;\ncout << “Replaced: ” << text << endl ;\n```\n\n![image](img/6p.jpg)最后，插入语句输出索引位置\
+  \ 7 处复制的九个字符，并输出字符串中的最后一个字符。\n\n```cpp\ncout << “Copied: ” << text.substr( 7, 9\
+  \ ) << endl ;\ncout << “Last character: ” << text.at( text.size() - 1 ) << endl\
+  \ ;\n```\n\n![image](img/7p.jpg)保存、编译并运行程序，查看输出显示 `string` 如何被操作。\n\n![image](img/pg77_1.jpg)\n\
+  \n![image](img/hot.jpg)\n\n`insert()` 函数可以可选地拥有第三和第四个参数——指定子字符串中开始复制的位置以及要复制的字符数。\n\
+  \n![image](img/hot.jpg)\n\n`replace()` 函数可以可选地拥有第四和第五个参数——指定子字符串中开始复制的位置以及要复制的字符数。\n\
+  \n## 总结\n\n![image](img/pg78_1.jpg)\n\n• C++ `<string>` 库提供了一个模拟数据类型的“string”对象——这样就可以创建\
+  \ `string` 变量了。\n• 对于赋值给 `string` 变量的数值值，在将其转换为数值数据类型之前，无法对其进行算术运算。\n• 标准 `cin`\
+  \ 函数从标准输入读取直到遇到空格，因此可以用于输入单个单词，并提供了一个 `ignore()` 函数。\n• `getline()` 函数从标准输入读取直到遇到换行符，因此可以输入字符串。\n\
+  • `<sstream>` 库提供了一个“stringstream”对象，作为中间转换将字符串转换为其他类型。\n• 通过赋值空字符串 `\"\"` 或调用 `clear()`\
+  \ 函数可以清空 `string` 变量。\n• 通过调用 `size()`、`capacity()` 和 `empty()` 函数可以揭示 `string`\
+  \ 的特征。\n• 使用 `+` 运算符可以将多个 `string` 值拼接。\n• 使用 `+=` 运算符或调用 `append()` 函数可以将 `string`\
+  \ 追加到另一个 `string` 中。\n• 使用 `==` 运算符或调用 `compare()` 函数可以将 `string` 进行比较。\n• 使用 `=`\
+  \ 运算符或调用 `assign()` 函数可以将 `string` 值赋值给 `string`。\n• `swap()` 函数交换两个 `string` 变量的值。\n\
+  • 可以 `find()` 函数搜索 `string` 的子字符串，或使用专门函数如 `find_first_of()`，并通过 `at()` 函数从指定位置检索字符。\n\
+  • 子字符串可以通过 `insert()` 函数添加到 `string` 中，通过 `erase()` 函数删除，通过 `replace()` 函数替换，或通过\
+  \ `substr()` 函数复制。\n\n\n\n\n用于写入输出的文件流对象声明以 `ofstream` 关键字开始，然后是为该特定文件流对象选择的名称，随后是括号，其中用于指定要写入的文本文件。因此，声明语法如下：\n\
+  \n```\nofstream *object-name* ( *“file-name”* ) ;\n```\n\n指定文本文件的参数可以可选包含完整的文件路径，例如\
+  \ `“C:\\data\\log.txt”` 或 `“home/user/log.txt”`，否则程序将在程序所在的目录中查找该文件。\n\n在向文件写入输出之前，程序应始终先测试文件流对象是否已实际创建。通常，这是通过一个\
+  \ `if` 语句实现的，该语句允许程序仅在测试成功时才写入输出。\n\n如果指定的文件已存在，默认情况下它将被覆盖且不发出警告。否则，将创建一个新文件并进行写入。\n\
+  \n![image](img/snake.jpg)\n\n指定的文件名或路径必须包含在双引号内，就像 `string` 一样。\n\n在向指定的文件写入输出内容后，程序应始终调用关联文件流对象的\
+  \ `close()` 函数来关闭输出文件流。\n\n对应的程序首先构建一个用于写入输出的字符串。当文件流对象成功创建时，将其写入指定的文件，然后关闭文件流。\n\
+  \n![image](img/1o.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <fstream>\
+  \  // 文件流支持。\n#include <string>\n#include <iostream>\nusing namespace std ;\n```\n\
+  \n![image](img/commono.jpg)\n\nwrite.cpp\n\n![image](img/2o.jpg)添加一个包含最终 `return`\
+  \ 语句的 main 函数，并在 `string` 变量中构建一个长文本字符串\n\n```cpp\nint main()\n{\nstring poem =\
+  \ “\\n\\tI never saw a man who looked” ;\npoem.append( “\\n\\tWith such a wistful\
+  \ eye” ) ;\npoem.append( “\\n\\tUpon that little tent of blue” ) ;\npoem.append(\
+  \ “\\n\\tWhich prisoners call the sky” ) ;\n// 在处添加更多语句。\nreturn 0 ;\n}\n```\n\n\
+  ![image](img/3o.jpg)在 main 函数中，创建一个输出文件流对象\n\n```cpp\nofstream writer( “poem.txt”\
+  \ ) ;\n```\n\n![image](img/4o.jpg)插入语句将 `string` 写入文件或退出，然后保存、编译并运行程序以查看结果\n\n```cpp\n\
+  if ( ! writer )\n{\ncout << “Error opening file for output” << endl ;\nreturn -1\
+  \ ;  // 信号错误并退出程序。\n}\nwriter << poem << endl ;  // 输出。\nwriter.close() ;  // 关闭文件流。\n\
+  ```\n\n![image](img/pg81_1.jpg)\n\n![image](img/pg81_2.jpg)\n\n![image](img/hot.jpg)\n\
+  \n字符串值可以包含 `\\n` 换行和 `\\t` 制表符转义序列用于格式化行。\n\n![image](img/forget.jpg)\n\n注意换行符和制表符在文本文件中是如何保留的。\n\
+  \n### 追加到文件\n\n![image](img/pg82_1.jpg)\n\n当创建文件流对象时，其选择名称后的括号可以可选包含额外的参数，指定一组文件“模式”以控制该文件流对象的行为。这些文件模式是\
+  \ `ios` 命名空间的一部分，因此必须使用该前缀显式指定。下表列出了每个文件模式，并附带行为描述：\n\n| Mode: | 行为: |\n| :--- |\
+  \ :--- |\n| `ios::out` | 打开文件写入输出 |\n| `ios::in` | 打开文件以读取输入 |\n| `ios::app` | 打开文件并在任何现有内容的末尾追加输出\
+  \ |\n| `ios::trunc` | 截断现有文件（默认行为） |\n| `ios::ate` | 打开文件且不截断，并允许在文件的任何位置写入数据 |\n\
+  | `ios::binary` | 将文件视为二进制格式而非文本，因此数据可以存储在非文本格式中 |\n\n如果多个模式之间用“|”管道符分隔，则可以指定多个模式。例如，为二进制输出打开文件的语句的语法如下所示：\n\
+  \n```cpp\nofstream *object-name* ( *“file-name” , ios::out|ios::binary ) ;\n```\n\
+  \n![image](img/forget.jpg)\n\n预处理器指令 `using namespace std;` 允许省略 `std` 命名空间前缀——因此\
+  \ `cout` 指向 `std::cout` 函数。`ios` 命名空间存在于 `std` 命名空间内——可以使用命名空间前缀显式指定文件模式——例如 `std::ios::out`。\n\
+  \n当未显式指定模式时的默认行为是将文件视为文本文件，写入后将被截断。\n\n最常用的模式是 `ios::app`，它确保在向指定文件写入新输出时，现有内容将被追加而非覆盖。\n\
+  \n对应的程序将数据追加到上一个示例创建的文本文件中。\n\n![image](img/1o.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\
+  \n```cpp\n#include <fstream>  // 文件流支持。\n#include <string>\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commono.jpg)\n\nappend.cpp\n\n![image](img/2o.jpg)添加一个包含最终\
+  \ `return` 语句的 main 函数，并在 `string` 变量中构建文本字符串\n\n```cpp\nint main()\n{\nstring info\
+  \ = “\\n\\tThe Ballad of” ;\ninfo.append( “\\n\\tOscar Wilde 1898” ) ;\n// 在处添加更多语句。\n\
+  return 0 ;\n}\n```\n\n![image](img/3o.jpg)在 main 函数中，创建一个输出文件流对象——指定将追加文本的模式\n\n\
+  ```cpp\nofstream writer( “poem.txt” , ios::app ) ;\n```\n\n![image](img/4o.jpg)插入语句将\
+  \ `string` 写入文件或退出，然后保存、编译并运行程序以查看结果\n\n```cpp\nif ( ! writer )\n{\ncout << “Error\
+  \ opening file for output” << endl ;\nreturn -1 ;  // 信号错误并退出程序。\n}\nwriter << info\
+  \ << endl ;  // 追加输出。\nwriter.close() ;  // 关闭文件流。\n```\n\n![image](img/pg81_1.jpg)\n\
+  \n![image](img/pg81_2.jpg)\n\n![image](img/hot.jpg)\n\n读取字符。\n\n### 读取字符与行\n\n`ifstream`\
+  \ 文件流对象有一个 `get()` 函数，可以在循环中用于读取文件并将字符逐一赋予指定的 `char` 变量：\n\n![image](img/1o.jpg)通过指定要包含的库类和要使用的命名空间前缀开始一个新程序\n\
+  \n```cpp\n#include <fstream>  // 文件流支持。\n#include <string>\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commono.jpg)\n\nread.cpp\n\n![image](img/2o.jpg)添加一个包含最终\
+  \ `return` 语句的 main 函数和两个变量声明——一个变量存储字符，另一个计算循环次数\n\n```cpp\nint main()\n{\nchar\
+  \ letter ;\nint i ;\n// 在处添加更多语句。\nreturn 0 ;\n}\n```\n\n![image](img/3o.jpg)在 main\
+  \ 函数中，创建一个输入文件流对象以读取上一个示例中的文本文件\n\n```cpp\nifstream reader( “poem.txt” ) ;\n```\n\
+  \n![image](img/4o.jpg)插入语句，除非文件流对象存在否则退出\n\n```cpp\nif ( ! reader )\n{\ncout <<\
+  \ “Error opening input file” << endl ;\nreturn -1 ;  // 信号错误并退出程序。\n}\n```\n\n![image](img/5o.jpg)接下来，插入一个循环读取文本文件，将每个字符逐一赋予变量并输出其值\n\
+  \n```cpp\nelse\nfor ( i = 0 ; ! reader.eof() ; i++ )\n{\nreader.get( letter ) ;\n\
+  cout << letter ;\n}\n```\n\n![image](img/6o.jpg)最后，插入语句关闭文件流并输出循环的总次数\n\n```cpp\n\
+  reader.close() ;\ncout << “Iterations: ” << i << endl ;\n```\n\n\n\n\n![image](img/7o.jpg)保存、编译并运行程序，以在标准输出上显示文本文件内容和循环计数\n\
+  \n![image](img/pg85_2.jpg)\n\n![image](img/pg85_1.jpg)\n\n这个程序运行得足够好，但循环必须多次迭代才能输出文本的内容。通过在循环的每次迭代中读取一行可以提高效率：\n\
+  \n![image](img/8o.jpg)插入一个预处理器指令，使程序可以使用 C++ 字符串库\n\n```cpp\n#include <string>\n\
+  ```\n\n![image](img/9o.jpg)将 `char` 变量声明替换为 `string` 变量声明\n\n```cpp\nstring line\
+  \ ;\n```\n\n![image](img/10o.jpg)替换 `for` 循环中的两个语句以读取行，然后再次保存、编译并运行程序\n\n```cpp\n\
+  getline( reader , line ) ;\ncout << line << endl ;\n```\n\n![image](img/pg85_3.jpg)\n\
+  \n![image](img/forget.jpg)\n\n在每行输出后输出一个 `endl` – 因为 `getline()` 在遇到 `\\n` 换行符时停止读取。\n\
+  \n### 使用 `getline` 格式化\n\n`getline()` 函数可以包含第三个参数，用于指定停止读取行的分隔符。这可以用于从数据文件的制表符列表中读取文本：\n\
+  \n![image](img/1o.jpg)在纯文本编辑器中，创建一个包含 12 个数据项目的文本文件，每行四个项目，每个项目之间用制表符分隔\n\n![image](img/pg86_1.jpg)\n\
+  \n![image](img/commono.jpg)\n\nformat.cpp\n\n![image](img/2o.jpg)通过指定要包含的 C++ 库类和使用的命名空间前缀开始一个新程序\n\
+  \n```cpp\n#include <fstream>  // 包含文件流支持。\n#include <string>\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/3o.jpg)添加一个包含最终 `return` 语句四个变量声明的 main\
+  \ 函数 – 一个固定数值、一个存储数据的 `string` 数组以及两个设置为 0 的计数器变量\n\n```cpp\nint main()\n{\n  const\
+  \ int RANGE = 12 ;\n  string tab[ RANGE ] ;\n  int i = 0 , j = 0 ;\n  // Add more\
+  \ statements here.\n  return 0 ;\n}\n```\n\n![image](img/4o.jpg)插入一个语句创建一个输入文件流对象\n\
+  \n```cpp\nifstream reader( “records.txt” ) ;\n```\n\n![image](img/5o.jpg)插入语句，除非文件流对象存在否则退出\n\
+  \n```cpp\nif ( ! reader )\n{\n  cout << “Error opening input file” << endl ;\n \
+  \ return -1 ;\n}\n```\n\n![image](img/forget.jpg)\n\n`string` 数组必须有足够的元素来存储每个数据项\
+  \ – 它需要扩大以处理更多记录。\n\n![image](img/6o.jpg)接下来，插入一个循环，将每行读取到 `string` 数组中 – 每行的前三个项目读取到\
+  \ `\\t` 制表符，第四个项目读取到 `\\n` 换行符\n\n```cpp\nwhile ( ! reader.eof() )\n{\n  if ( (\
+  \ i + 1 ) % 4 == 0 )\n    getline( reader, tab[ i++ ], ‘\\n’ ) ;\n  else\n    getline(\
+  \ reader, tab[ i++ ], ‘\\t’ ) ;\n}\n```\n\n![image](img/pg87_1.jpg)\n\n![image](img/7o.jpg)现在，关闭文件流并重置计数器\n\
+  \n```cpp\nreader.close() ;\ni = 0 ;\n```\n\n![image](img/8o.jpg)插入第二个循环输出存储在每个数组元素中的数据，并用描述和换行进行格式化\n\
+  \n```cpp\nwhile ( i < RANGE )\n{\n  cout << endl << “Record Number: ” << ++j <<\
+  \ endl ;\n  cout << “Forename: ” << tab[ i++ ] << endl ;\n  cout << “Surname: ”\
+  \ << tab[ i++ ] << endl ;\n  cout << “Department: ” << tab[ i++ ] << endl ;\n  cout\
+  \ << “Telephone: ” << tab[ i++ ] << endl ;\n}\n```\n\n![image](img/9o.jpg)保存、编译并运行程序，查看来自文本文件的格式化输出\n\
+  \n![image](img/pg87_2.jpg)\n\n![image](img/hot.jpg)\n\n`if` 语句测试项目数（元素编号加 1）是否恰好被四整除，以决定读取到换行符或制表符为止。\n\
+  \n![image](img/snake.jpg)\n\n记录计数器必须使用前置增符在输出之前增加变量值。\n\n### 操作输入与输出\n\n输入和输出流的行为可以通过带有\
+  \ `cout` 和 `cin` 函数的“插入运算符”来修改。为它们的 `width()` 函数指定一个整数参数可以设置流的字符宽度。当内容未填充整个流宽度时，可以作为\
+  \ `fill()` 函数的参数指定填充字符以指示空部分。同样，通过为它们的 `precision()` 函数指定一个整数可以更改浮点数默认的六位小数精度。使用插入运算符修改流的语句应放在使用\
+  \ `<<` 或 `>>` 的语句之前。\n\n![image](img/pg88_1.jpg)<iostream>` 库提供了下表所示的“操纵符”，它们通过\
+  \ `<<` 或 `>>` 运算符修改流。\n\n| 操纵符 | 显示 |\n| :--- | :--- |\n| `noboolalpha` | 布尔值为 1\
+  \ 或 0 |\n| `boolalpha` | 布尔值为 “true” 或 “false” |\n| `dec`* | 整数为十进制 (decimal) |\n\
+  | `hex` | 整数为十六进制 (hexadecimal) |\n| `oct` | 整数为八进制 (octal) |\n| `right`* | 在输出宽度中右对齐\
+  \ |\n| `left` | 在输出宽度中左对齐 |\n| `internal` | 在输出宽度中内部分对齐 |\n| `noshowbase`* | 不显示进制前缀\
+  \ |\n| `showbase` | 显示进制前缀 |\n| `noshowpoint`* | 仅当有分数时显示小数点 |\n| `showpoint` |\
+  \ 所有浮点数显示小数点 |\n| `noshowpos`* | 正数前不显示正号 |\n| `showpos` | 正数前显示 + 号 |\n| `noskipws`*\
+  \ | 输入时不跳过空白 |\n| `skipws` | 跳过空白输入 |\n| `fixed`* | 浮点数固定六位小数 |\n| `scientific`\
+  \ | 浮点数使用科学计数法 |\n| `nouppercase`* | 科学计数法使用小写 e |\n| `uppercase` | 科学计数法使用大写 E\
+  \ |\n\n![image](img/forget.jpg)插入运算符仅修改一个对象 – 后续对象使用默认值，除非它们也被插入运算符修改。\n\n![image](img/hot.jpg)标记为\
+  \ * 的操纵符是默认行为。\n\n![image](img/1o.jpg)通过指定要包含的 C++ 库类和使用的命名空间前缀开始一个新程序\n\n```cpp\n\
+  #include <iostream>\nusing namespace std ;\n```\n\n![image](img/commono.jpg)\n\n\
+  manipulate.cpp\n\n![image](img/2o.jpg)添加一个包含最终 `return` 语句并声明两个初始化变量的 main 函数\n\n\
+  ```cpp\nint main()\n{\n  bool isTrue = 1 ;\n  int num = 255 ;\n  // Add more statements\
+  \ here.\n  return 0 ;\n}\n```\n\n![image](img/3o.jpg)在 main 函数中，插入语句设置输出流的宽度和填充符，然后在其上输出一个字符串\n\
+  \n```cpp\ncout.width( 40 ) ;\ncout.fill( ‘.’ ) ;\ncout << “Output” << endl ;\n```\n\
+  \n![image](img/4o.jpg)接下来，插入语句设置输出流的精度以停止对小数的截断 – 然后输出一个显示所有小数的浮点数\n\n```cpp\ncout.precision(\
+  \ 11 ) ;\ncout << “Pi: ” << 3.1415926536 << endl ;\n```\n\n![image](img/5o.jpg)现在，插入使用操纵符以修改格式输出变量值的语句\n\
+  \n```cpp\ncout << isTrue << “: ” << boolalpha << isTrue << endl ;\ncout << num <<\
+  \ “: ” << hex << showbase << uppercase << num << endl ;\n```\n\n![image](img/6o.jpg)保存、编译并运行程序查看输出\n\
+  \n**预测问题**\n\n尽管程序员尽了努力，C++ 程序不幸可能包含以下三种类型的任或多个 Bug：\n\n\n\n\n\n- **语法错误** – 代码中包含对\
+  \ C++ 语言的错误用法。例如，左括号没有相匹配的右括号。\n- **逻辑错误** – 代码在语法上是正确的，但尝试执行非法的操作。例如，程序可能会尝试除以零，从而导致错误。\n\
+  - **异常错误** – 程序按预期运行，直到遇到一种导致程序崩溃的异常情况。例如，程序可能会请求一个数字，但用户以单词形式而非数字形式输入了它。\n\n![image](img/pg90_1.jpg)\n\
+  \nC++ 标准允许编译器发现涉及语法和逻辑的“编译时”错误，但异常错误的可能性更难定位，因为它们只在“运行时”发生。这意味着程序员必须尝试预测可能出现的问题，并准备好处理这些异常。\n\
+  \n第一步是识别程序代码中在某些条件下可能导致异常错误的部分。然后，可以使用一个 `try` 块将其包围起来，该块使用 `try` 关键字，并将可疑代码包含在一对括号内。\n\
+  \n![image](img/hot.jpg)\n\n始终要考虑到用户会执行意料之外的操作——然后确保你的程序能够处理这些操作。\n\n当异常错误发生时，`try`\
+  \ 块会将异常“抛出”到紧随 `try` 块之后的 `catch` 块中。这使用了 `catch` 关键字，并将处理异常错误的语句包含在一对括号内。\n\n此地描述的程序包含一个包含递增整数循环的\
+  \ `try` 块。当整数达到 5 时，`throw()` 函数手动向 `catch` 块异常处理程序抛出一个异常，并传递整数参数。\n\n![image](img/1o.jpg)通过指定要包含的\
+  \ C++ 库类和使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commono.jpg)\n\ntry.cpp\n\n![image](img/2o.jpg)添加一个包含最终 `return`\
+  \ 语句并声明用于循环递增整数变量的 main 函数\n\n```cpp\nint main()\n{\n    int number ;\n    // 在此处添加更多语句。\n\
+  \    return 0 ;\n}\n```\n\n![image](img/3o.jpg)在 main 函数中插入 `try` 和 `catch` 块来处理“坏数字”异常\n\
+  \n```cpp\ntry\n{\n}\ncatch ( int num )\n{\n}\n```\n\n![image](img/4o.jpg)在 `try`\
+  \ 块中插入一个递增变量的循环\n\n```cpp\nfor ( number = 1 ; number < 21 ; number++ )\n{\n    if\
+  \ (number > 4 ) throw ( number ) ;\n    else\n        cout << “Number: ” << number\
+  \ << endl ;\n}\n```\n\n![image](img/5o.jpg)在 `catch` 块中插入一个异常处理语句\n\n```cpp\ncout\
+  \ << “Exception at: ” << num << endl ;\n```\n\n![image](img/6o.jpg)保存、编译并运行程序，查看抛出的异常如何被\
+  \ `catch` 块捕获\n\n![image](img/pg91_1.jpg)\n\n![image](img/forget.jpg)\n\n异常发生时，控制传递给\
+  \ `catch` 块——在本例中，循环没有完成。\n\n### 识别异常\n\n当程序在 `try` 块内发生异常时，会自动抛出一个“异常”对象。异常的引用可以传递给\
+  \ `catch` 关键字后括号中的关联 `catch` 块。这指定了 `exception` 类型的参数，以及由 `&` 引用运算符前缀指定的选异常名称——例如\
+  \ `exception &error`。\n\n![image](img/pg92_1.jpg)\n\n一旦异常引用传递给 `catch` 块，可以通过异常的\
+  \ `what()` 函数获取错误描述：\n\n![image](img/1o.jpg)通过指定要包含的 C++ 库类和使用的命名空间前缀开始一个新程序\n\n\
+  ```cpp\n#include <string>  // 字符串支持。\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commono.jpg)\n\nwhat.cpp\n\n![image](img/2o.jpg)添加一个包含最终 `return`\
+  \ 语句并声明初始化 `string` 变量的 main 函数\n\n```cpp\nint main()\n{\n    string lang = “C++”\
+  \ ;\n    // 在此处添加更多语句。\n    return 0 ;\n}\n```\n\n![image](img/3o.jpg)在 main 函数中插入一个包含尝试删除\
+  \ `string` 变量部分语句的 `try` 块\n\n```cpp\ntry { lang.erase( 4, 6 ) ; }\n```\n\n![image](img/4o.jpg)接下来，插入一个\
+  \ `catch` 块，包含一个通过 `cerr` 函数向标准错误输出发送描述的语句\n\n```cpp\ncatch ( exception &error )\n\
+  { cerr << “Exception: ” << error.what() << endl ; }\n```\n\n![image](img/5o.jpg)保存、编译并运行程序，查看被捕获异常的错误描述\n\
+  \n![image](img/pg91_1)\n\n![image](img/forget.jpg)\n\n错误描述会因不同的编译器而异——`stdexcept`\
+  \ 库定义了许多异常类。其基类名为“exception”，其他类从其派生。`cout` 将数据发送到标准输出，而 `cerr` 将数据发送到标准错误。当通过 `#include\
+  \ <stdexcept>` 使该库可用时，可以使用异常类。特定的异常类名可以出现在 `catch` 块中，以通用的 `exception` 类型。此外，异常可以通过\
+  \ `throw` 关键字手动产生。可选地，可以手动异常指定自定义错误消息，并通过其 `what()` 函数检索。\n\n### 处理错误\n\n异常类型信息可以通过包含\
+  \ C++ 标准 `<typeinfo>` 库来提供。它的 `typeid()` 函数接受异常参数，以便其 `name()` 函数返回类型名称：\n\n![image](img/1o.jpg)通过指定要包含的\
+  \ C++ 库类和使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <stdexcept> // 标准异常支持。\n#include <typeinfo>\
+  \  // 类型信息支持。\n#include <fstream>\n#include <string>\n#include <iostream>\nusing\
+  \ namespace std ;\n```\n\n![image](img/commono.jpg)\n\nexcept.cpp\n\n![image](img/2o.jpg)添加一个包含最终\
+  \ `return` 语句、两个初始化变量声明和一个输出文本语句的 main 函数\n\n```cpp\nint main()\n{\n    string lang\
+  \ = “C++” ;\n    int num = 1000000000 ; // 十亿。\n    // Try-catch 块放在此处。\n    cout\
+  \ << “Program continues...” << endl ;\n    return 0 ;\n}\n```\n\n![image](img/3o.jpg)在\
+  \ main 函数中插入一个 `try` 块，包含一个尝试替换 `string` 值的语句\n\n```cpp\ntry { lang.replace( 100,\
+  \ 1 , “C” ) ; }\n```\n\n![image](img/4o.jpg)在 `try` 块之后，添加一个 `catch` 块来处理范围异常，然后保存、编译并运行程序\n\
+  \n```cpp\ncatch ( out_of_range &e )\n{\n    cerr << “Range Exception: ” << e.what()\
+  \ << endl ;\n    cerr << “Exception Type: ” << typeid( e ).name() ;\n}\n```\n\n\n\
+  \n\n\n```cpp\ncerr << endl << “Program terminated.” << endl ;\nreturn -1 ;\n}\n\
+  ```\n\n![image](img/pg94_1.jpg)\n\n![image](img/forget.jpg)\n\n发生 `out_of_range`\
+  \ 错误是因为 `replace()` 函数尝试从第 100 个字符开始删除，但 `string` 变量只有三个字符。\n\n![image](img/5o.jpg)将\
+  \ `try` 块中的语句替换为尝试重置 `string` 变量大小的语句\n\n```cpp\nlang.resize( 3 * num ) ;\n```\n\
+  \n![image](img/pg95_1.jpg)\n\n![image](img/6o.jpg)在 `catch` 块之后，添加第二个 `catch` 块来处理通用异常\n\
+  \n```cpp\ncatch ( exception &e )\n{\ncerr << “Exception: ” << e.what() << endl ;\n\
+  cerr << “Exception Type: ” << typeid( e ).name() << endl ;\n}\n```\n\n![image](img/7o.jpg)保存、编译并再次运行程序，查看由第二个\
+  \ `catch` 块处理的异常\n\n![image](img/pg95_2.jpg)\n\n将 `try` 块中的语句替换为尝试打开不存在文件的语句\n\n\
+  ```cpp\nifstream reader( “nonsuch.txt” ) ;\nif ( ! reader ) throw logic_error( “File\
+  \ not found” ) ;\n```\n\n![image](img/9o.jpg)保存、编译并再次运行程序，查看再次由第二个 `catch` 块处理的异常以及指定的自定义错误消息\n\
+  \n![image](img/pg95_3.jpg)\n\n![image](img/snake.jpg)\n\n`catch` 块的顺序可能很重要——将 `exception`\
+  \ 错误处理器放在 `out_of_range` 错误处理器之前，将允许 `out_of_range` 错误被（较高层的）`exception` 处理器处理。\n\
+  \n![image](img/hot.jpg)\n\n异常对象通常被命名为“e”——此处所示。\n\n## 总结\n\n![image](img/pg96_1.jpg)\n\
+  \n- C++ `<fstream>` 库提供了使用 `ifstream` 输入流或 `ofstream` 输出流对象处理文件的函数。\n- 完成后，应调用流的\
+  \ `close()` 函数。\n- 文件模式可用于控制流的行为。\n- 输入流的 `get()` 函数每次读取一个字符。\n- `getline()` 函数可用于从输入流中一次读取一行。\n\
+  - 可选地，`getline()` 函数可以有第三个参数，指定停止读取的隔符字符。\n- 插入运算符可以与 `cin` 和 `cout` 函数一起使用修改它们的行为。\n\
+  - `cout.width()` 函数设置输出流的宽度。\n- `cout.fill()` 函数指定一个字符来占据输出的任何空部分。\n- `cout.precision()`\
+  \ 函数决定在输出浮点数时显示多少位小数。\n- 性能不佳的程序可能包含语法错误、逻辑错误或异常错误。\n- `try` 块可以用于封装在某些条件下可能导致异常错误的语句。\n\
+  - `catch` 块可以用于处理在其关联的 `try` 块产生的异常错误。\n- `try` 块中发生的异常错误会自动抛出到关联的 `catch` 块，或者可以使用\
+  \ `throw()` 函数手动抛出。\n- C++ `<stdexcept>` 库定义了一系列异常类来对常见异常进行分类，`<typeinfo>` 库提供了异常类型信息。\n\
+  \n6\n\n## 指向数据\n\n*本章演示如何利用指针和引用产生高效的 C++ 程序。*\n\n- 理解数据存储\n- 使用指针获取值\n- 进行指针算术运算\n\
+  - 向函数传递指针\n- 创建指针数组\n- 引用数据\n- 向函数传递引用\n- 比较指针与引用\n- 总结\n\n## 理解数据存储\n\n为了理解 C++\
+  \ 指针，了解数据数据如何在你的计算机上存储非常有帮助。将计算机内存想象成一排很长的、按顺序编号的槽，每个槽可以包含一个字节的数据。当程序中声明变量时，机器会保留若干槽来存储分配给该变量的数据。预留槽的数量取决于变量的数据类型。当程序使用变量名检索存储的数据时，它实际上访问的是该变量第一个预留槽的编号。\n\
+  \n![image](img/pg98_1.jpg)\n\n这种比较可以比作一排按顺序编号的长房子，每个房子可以容纳一个不同的家庭。任何家庭都可以通过其门牌号被显式引用。\n\
+  \n计算机内存中的槽编号以十六进制格式表示，并通过 `&` 引用运算符显示。\n\n![image](img/1bl.jpg)通过指定要包含的 C++ 库和使用的命名空间开始一个新程序\n\
+  \n```cpp\n#include <string>\n#include <iostream>\nusing std ;\n```\n\n![image](img/bb.jpg)address.cpp\n\
+  \n![image](img/2bl.jpg)添加包含返回语句并声明三个变量的 main 函数\n\n```cpp\nint main()\n{\nint num\
+  \ = 100 ;\ndouble sum = 0.123456789 ;\nstring text = “C Fun” ;\n// 在此处添加更多语句。\n\
+  return 0 ;\n}\n```\n\n![image](img/3bl.jpg)在 main 函数中插入输出每个变量内存地址的语句\n\n```cpp\n\
+  cout << “整数变量起始于: ” << &num << endl ;\ncout << “双精度变量起始于: ” << &sum << endl ;\n\
+  cout << “字符串变量起始于: ” << &text << endl ;\n```\n\n![image](img/4bl.jpg)保存、编译并运行程序查看地址\n\
+  \n例如，`num = 100` 将右侧的值（100）放入左侧命名变量（num）引用的内存中。\n\n![image](img/forget.jpg)地址是动态分配的——所以与此截图不同。\n\
+  \n赋值运算符 `=` 左侧的操作数被称为“L 值”，而右侧的操作数被称为“R 值”。考虑 L 值中的“L”代表“位置”（Location），考虑 R 值中的“R”代表“读取”（Read）。\n\
+  \nC++ 编程的一个重要规则是 R 值不能出现在赋值运算符 `=` 的左侧，但 L 值可以出现在任何侧。将 R 值放在赋值运算符左侧的代码将无法编译：\n\n\
+  ![image](img/5bl.jpg)在 return 语句之前，插入将 R 值错误放在赋值运算符左侧的语句\n\n```cpp\n200 = num ;\n\
+  5.5 = sum ;\n“Bad assignments” = text ;\n```\n\n![image](img/6bl.jpg)保存并尝试重新编译程序，查看由错误放置的\
+  \ R 值引起的错误\n\n![image](img/pg99_2.jpg)\n\n![image](img/hot.jpg)\n\nL 值是容器而 R 值是数据。\n\
+  \n## 使用指针获取值\n\n指针是高效 C++ 编程的有用部分——它们仅仅是存储其他变量地址的变量。\n\n![image](img/pg100_1.jpg)\n\
+  \n\n\n\n指针变量通过使用 `&` 引用操作符赋值另一个变量的内存地址来初始化。该赋值可以在声明语句中完成，也可以在声明后的单独语句中完成。仅通过名称引用指针变量将仅仅揭示它所包含的内存地址。\n\
+  \n在指针变量初始化后（无论是在声明中初始化还是通过随后的赋值初始化），它会“指向”它所包含地址地址处的变量。有用的是，这意味着通过在指针名称前加上 `*` 解引用运算符，就可以引用它指向的变量的值：\n\
+  \n![image](img/1bl.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commonbb.jpg)\n\nderef.cpp\n\n![image](img/2bl.jpg)添加一个\
+  \ main 函数，包含一个最后的 `return` 语句并声明两个初始化的普通整数变量\n\n```cpp\nint main()\n{\nint a = 8\
+  \ , b = 16 ;\n// 在此处添加更多语句。\nreturn 0 ;\n}\n```\n\n![image](img/3bl.jpg)在 main 函数中，插入一条语句声明并用第一个整数变量的内存地址初始化指针\n\
+  \n```cpp\nint* aPtr = &a ;  // aPtr 被赋值为 a 的地址。\n```\n\n![image](img/4bl.jpg)插入一条语句声明第二个指针，然后用第二个整数变量的地址对其初始化\n\
+  \n```cpp\nint* bPtr ;  // 声明 bPtr。\nbPtr = &b ;  // bPtr 被赋值为 b 的地址。\n```\n\n![image](img/5bl.jpg)接下来，插入语句输出每个指针的实际内存地址\n\
+  \n```cpp\ncout << “Addresses of pointers...” << endl ;\ncout << “aPtr: ” << &aPtr\
+  \ << endl ;\ncout << “bPtr: ” << &bPtr << endl << endl ;\n```\n\n![image](img/6bl.jpg)现在，插入语句输出每个指针内部存储的内存地址\n\
+  \n```cpp\ncout << “Values in pointers...” << endl ;\ncout << “aPtr: ” << aPtr <<\
+  \ endl ;\ncout << “bPtr: ” << bPtr << endl << endl ;\n```\n\n![image](img/7bl.jpg)最后，插入语句输出存储在每个指针的内存地址处的值——即指针指向的变量的值\n\
+  \n```cpp\ncout << “Values in addresses pointed to...” << endl ;\ncout << “a: ” <<\
+  \ *aPtr << endl ;\ncout << “b: ” << *bPtr << endl ;\n```\n\n![image](img/8bl.jpg)保存、编译并运行程序以查看指针地址和存储的值\n\
+  \n![image](img/pg101_1.jpg)\n\n![image](img/hot.jpg)\n\n`*` 解引用运算符也被称为“间接”运算符。\n\
+  \n![image](img/forget.jpg)\n\n内存地址是动态分配的——因此将与此截图中的地址有所不同。\n\n## 执行指针算术\n\n一旦指针变量用内存地址初始化，就可以赋值另一个地址，或使用指针算术来更改它。\n\
+  \n![image](img/pg102_1.jpg)\n\n`++` 增增运算符或 `--` 递减运算符将指针移动到该数据类型的下一个或上一个地址——数据类型越大，跳跃越大。\n\
+  \n使用 `+=` 和 `-=` 运算符可以实现更大的跳跃。\n\n指针算术在处理数组时特别有用，因为数组中的元素占据连续的内存地址。仅将数组的名称赋值给指针会自动为它分配第一个元素的地址。将指针加\
+  \ 1 会将指针移动到下一个元素。\n\n![image](img/1bl.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\n\
+  ```cpp\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/commonbb.jpg)\n\
+  \npoint.cpp\n\n![image](img/2bl.jpg)添加一个 main 函数，包含一个最后的 `return` 语句并声明一个包含 10 个元素的初始化整数数组\n\
+  \n```cpp\nint main()\n{\nint nums[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 } ;\n// 在此处添加更多语句。\n\
+  return 0 ;\n}\n```\n\n![image](img/3bl.jpg)在 main 函数中，插入一条语句声明指针，并用整数数组第一个元素的内存地址初始化它\n\
+  \n```cpp\nint* ptr = nums ;\n```\n\n![image](img/4bl.jpg)接下来，插入一条语句输出整数数组第一个元素的内存地址及其值\n\
+  \n```cpp\ncout << endl << “ptr at: ” << ptr << “ gets: ”<< *ptr ;\n```\n\n![image](img/5bl.jpg)现在，增加指针并输出它的新内存地址——整数数组中第二个元素的地址\n\
+  \n```cpp\nptr++ ;\ncout << endl << “ptr at: ” << ptr << “ gets: ”<< *ptr ;\n```\n\
+  \n![image](img/6bl.jpg)再次增加指针，输出它的新内存地址——整数数组中第三个元素的地址\n\n```cpp\nptr++ ;\ncout\
+  \ << endl << “ptr at: ” << ptr << “ gets: ”<< *ptr ;\n```\n\n![image](img/7bl.jpg)递减指针两个位置并输出它的内存地址——第一个元素的地址\n\
+  \n```cpp\nptr -= 2 ;\ncout << endl << “ptr at: ” << ptr << “ gets: ”<< *ptr ;\n\
+  ```\n\n![image](img/8bl.jpg)现在，插入一个循环输出数组中每个元素的值\n\n```cpp\nfor ( int i = 0 ; i\
+  \ < 10 ; i++ )\n{\ncout << endl << “Element: ” << i ;\ncout << “ Value: ” << *ptr\
+  \ ;\n}\n```\n\n![image](img/9bl.jpg)保存、编译并运行程序以查看指针地址和存储的值\n\n![image](img/pg103.jpg)\n\
+  \n![image](img/snake.jpg)\n\n`*=`、`/=` 和 `%=` 运算符无法移动指针。\n\n![image](img/hot.jpg)\n\
+  \n数组名称就像指向其元素的指针。\n\n## 将指针传递给函数\n\n指针可以使用 `*` 解引用运算符访问指向变量的数据。这也可以通过赋值适当数据类型的新值来更改存储的数据。\n\
+  \n![image](img/pg104)\n\n指针可以作为参数传递给函数——与传递变量的效果有所不同：\n\n- 当变量传递给函数时，数据是“按值”传递给函数内部的局部变量——因此函数操作的是原始值。\n\
+  - 当指针传递给函数时，数据是“按引用”传递的——因此函数操作的是原始值。\n\n按引用传递的用处允许函数直接操作调用函数内的变量。\n\n![image](img/1bl.jpg)通过指定要包含的\
+  \ C++ 库类和要使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commonbb.jpg)\n\nfnptr.cpp\n\n![image](img/2bl.jpg)在预处理指令之后，声明两个接受单个指针参数的函数原型\n\
+  \n```cpp\nvoid writeOutput ( int* ) ;\nvoid computeTriple ( int* ) ;\n```\n\n![image](img/3bl.jpg)添加一个\
+  \ main 函数，包含一个最后的 `return` 语句并声明一个初始化的普通整数变量\n\n```cpp\nint main()\n{\nint num =\
+  \ 5 ;\n// 在此处添加更多语句。\nreturn 0 ;\n}\n```\n\n![image](img/4bl.jpg)在 main 函数中，插入第二个变量声明，用普通整数变量的地址初始化指针\n\
+  \n```cpp\nint* ptr = &num ;\n```\n\n![image](img/5bl.jpg)在 main 函数块之后定义一个输出指针指向的变量当前值的函数\n\
+  \n```cpp\nvoid writeOutput( int* value )\n{\ncout << “Current value: ” << *value\
+  \ << endl ;\n}\n```\n\n![image](img/6bl.jpg)定义另一个乘以指针指向的变量当前值的函数\n\n```cpp\nvoid\
+  \ computeTriple( int* value )\n{\n*value *= 3 ;  // 相乘并赋值解引用值。\n}\n```\n\n![image](img/7bl.jpg)在\
+  \ main 函数中，将指针参数传递给函数以输出它指向的变量值\n\n```cpp\nwriteOutput( ptr ) ;\n```\n\n\n\n\n![image](img/8bl.jpg)接下来，使用指针增加变量的值，然后显示其新值\n\
+  \n```\n*ptr += 15 ;  // 对引用值进行加并赋值。\n```\n\n```\nwriteOutput( ptr ) ;\n```\n\n![image](img/9bl.jpg)现在，将指针参数传递给函数以将该指针指向的变量乘以三倍，然后显示其新值\n\
+  \n```\ncomputeTriple( ptr ) ;\nwriteOutput( ptr ) ;\n```\n\n![image](img/10bl.jpg)保存、编译并运行程序，查看计算值的输出\n\
+  \n![image](img/pg105_1.jpg)\n\n![image](img/forget.jpg)\n\n函数原型和定义都必须包含一个指针参数。\n\
+  \n![image](img/hot.jpg)\n\n直接操作调用函数内变量的函数不需要返回语句。\n\n### 创建指针数组\n\n普通的 `char` 数据类型变量可以分配单个字符值，但指向常量\
+  \ `char` 数组的指针可以很有用地分配一个字符字符串。该字符串实际上存储为字符数组，每个元素一个字符，但引用 `char` 指针将自动检索整个字符串。\n\
+  \n![image](img/pg106_1.jpg)\n\n这种仅通过变量名从 `char` 指针检索字符串值的能力，类似于通过变量名从普通 `char` 数组检索字符串的方法。\n\
+  \n多个字符串可以存储在常量 `char` 指针数组中，每个元素一个字符串。你甚至可以在一个“主”`char` 指针数组中存储多个 `char` 指针数组——每个元素一个数组。\n\
+  \n![image](img/1bl.jpg)指定要包含的 C++ 库类和要使用的命名空间名前来开始新程序\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commonbb.jpg)\n\narrptr.cpp\n\n![image](img/2bl.jpg)添加一个包含最终\
+  \ return 语句并声明两个初始化变量的 main 函数——一个普通的字符数组和一个具有相同字符串值的字符指针\n\n```cpp\nint main()\n\
+  {\n    char letters[ 8 ] = { ‘C’, ‘+’ , ‘+’ , ‘ ’ , ‘F’, ‘u’, ‘n’, ‘\\0’ } ;\n \
+  \   const char* text = “C++ Fun” ;\n    // 在此处添加更多语句\n    return 0 ;\n}\n```\n\n\
+  ![image](img/3bl.jpg)在 main 函数中，插入语句声明并初始化两个额外的字符指针变量，并具有唯一的字符串值\n\n```cpp\nconst\
+  \ char* term = “Element:” ;\nconst char* lang = “C++” ;\n```\n\n![image](img/4bl.jpg)接下来，插入一条语句声明字符指针数组，并用三个字符串值初始化\n\
+  \n```cpp\nconst char* ap1[ 3 ] = { “Great ” , “Program” , “Code ” } ;\n```\n\n![image](img/forget.jpg)\n\
+  \n字符值必须包含在单引号中，但字符串值必须包含在双引号中——即使它们被赋值给 `char` 指针。\n\n![image](img/5bl.jpg)现在，插入一条语句声明第二个字符指针数组，用三个字符串值初始化——将其中一个指针变量作为它的第一个元素\n\
+  \n```cpp\nconst char* ap2[ 3 ] = { lang , “is ” , “Fun” } ;\n```\n\n![image](img/6bl.jpg)声明两个“主”字符指针数组，每个数组初始化了三个\
+  \ `char` 指针数组元素\n\n```cpp\nconst char* ap3[ 3 ] = { ap2[ 0 ] , ap2[ 1 ] , ap1[ 0\
+  \ ] } ;\nconst char* ap4[ 3 ] = { ap1[ 2 ] , ap2[ 1 ] , ap2[ 2 ] } ;\n```\n\n![image](img/7bl.jpg)在声明之后，插入语句输出前两个变量相同的字符串值\n\
+  \n```cpp\ncout << letters << endl ;\ncout << text << endl ;\n```\n\n![image](img/8bl.jpg)接下来，插入一个包含语句的循环，输出字符指针内部的值和迭代次数\n\
+  \n```cpp\nfor ( int i = 0 ; i < 3 ; i++ )\n{\n    cout << term << i << “ ” ;\n}\n\
+  ```\n\n![image](img/9bl.jpg)在循环块内，插入语句输出四个字符指针数组的每个元素值\n\n```cpp\ncout << ap1[ i\
+  \ ] << “ ” ;\ncout << ap2[ i ] << “ ” ;\ncout << ap3[ i ] << “ ” ;\ncout << ap4[\
+  \ i ] << endl ;\n```\n\n![image](img/10bl.jpg)保存、编译并运行程序，查看字符字符串输出\n\n![image](img/pg107_1.jpg)\n\
+  \n![image](img/forget.jpg)\n\n要在 `char` 数组中包含空格，赋值的引号之间必须有一个空格如 ‘ ’`——两个单引号在一起（‘‘\
+  \ `）被视为空元素并导致编译器错误。\n\n![image](img/snake.jpg)\n\n记住 `char` 数组的最后一个元素必须包含特殊的 `\\\
+  0` 字符，以将该数组指定为字符串。\n\n### 引用数据\n\nC++ “引用”（reference）是程序中变量或对象的别名。引用必须在声明时初始化，通过为其赋值它所引用的变量或对象的名称来完成。\n\
+  \n引用始终是其声明语句中关联项的别名。\n\n**将引用传递给函数**\n\n\n\n\n引用可以访问其所引用的变量中存储的数据，就像变量本身一样，并且可以通过分配适当数据类型的新值来更改存储的数据。\n\
+  \n![image](img/pg110_1.jpg)\n\n此外，引用可以像指针一样，作为参数传递给函数：\n\n• 当变量被传递给函数时，它们的数据是“按值”传递给函数内部的局部变量\
+  \ – 因此函数在原始值的副本上进行操作。\n• 当引用被传递给函数时，它们的数据是“按引用”传递的 – 因此函数在原始值上进行操作。\n\n按引用传递的处是允许函数可以直接操作调用函数内部声明的变量值。\n\
+  \n![image](img/1bl.jpg)通过指定要包含的 C++ 库类和使用的命名空间前缀创建一个新程序\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commonbb.jpg)\n\nfnref.cpp\n\n![image](img/2bl.jpg)在预处理器指令之后，声明两个函数原型，每个原型接受一个引用参数\n\
+  \n```cpp\nvoid writeOutput ( int& ) ;\nvoid computeTriple ( int& ) ;\n```\n\n![image](img/3bl.jpg)添加一个包含最终\
+  \ return 语句并声明一个初始化普通整数变量的 main 函数\n\n```cpp\nint main()\n{\n    int num = 5 ;\n\
+  \    // 在这里添加更多语句。\n    return 0 ;\n}\n```\n\n![image](img/4bl.jpg)在 main 函数中，插入第二个变量声明，将引用初始化为整数变量的别名\n\
+  \n```cpp\nint& ref = num ;\n```\n\n![image](img/forget.jpg)\n\n这个示例可能看起来很熟悉，因为它重创建了此处的示例\
+  \ – 但将指针替换为了引用。\n\n![image](img/5bl.jpg)在 main 函数块之后，定义一个函数输出引用所指变量的当前值\n\n```cpp\n\
+  void writeOutput( int& value )\n{\n    cout << “Current value: ” << value << endl\
+  \ ;\n}\n```\n\n![image](img/6bl.jpg)定义另一个函数，将引用所指变量的当前值乘以 3\n\n```cpp\nvoid computeTriple(\
+  \ int& value )\n{\n    value *= 3 ;  // 乘以并赋值引用的值。\n}\n```\n\n![image](img/7bl.jpg)在\
+  \ main 函数中，将引用参数传递给函数以输出其引用的变量值\n\n```cpp\nwriteOutput( ref ) ;\n```\n\n![image](img/8bl.jpg)接下来，使用引用增加变量值，然后显示其新值\n\
+  \n```cpp\nref += 15 ;  // 加上并赋值引用的值。\nwriteOutput( ref ) ;\n```\n\n![image](img/9bl.jpg)现在，将引用参数传递给函数以将其引用的变量乘以\
+  \ 3，然后显示其新值\n\n```cpp\ncomputeTriple( ref ) ;\nwriteOutput( ref ) ;\n```\n\n![image](img/10bl.jpg)保存、编译并运行程序以查看计算值的输出\n\
+  \n![image](img/pg111_1.jpg)\n\n![image](img/forget.jpg)\n\n函数原型和定义必须包含一个引用参数。\n\n\
+  ![image](img/hot.jpg)\n\n直接操作调用函数内部变量的函数不需要 return 语句。\n\n### 比较指针与引用\n\n指针和引用都可以用于引用变量值，并按引用而非按值传递给函数。从技术上讲，按引用传递比按值传递高效，因此鼓励使用指针和引用。\n\
+  \n![image](img/pg112_1.jpg)\n\n使用指针还是引用的取决于程序需求。C++ 程序员通常倾向于尽可能使用引用，因为它们比指针更容易使用、也更容易理解。然而，引用必须遵守某些规则，这些规则使得使用指针变得必要：\n\
+  \n| 规则: | 引用: | 指针: |\n| :--- | :--- | :--- |\n| 可以不初始化就声明 | 否 | 是 |\n| 可以重新赋值 |\
+  \ 否 | 是 |\n| 可以包含 0 (null) 值 | 否 | 是 |\n| 最容易使用 | 是 | 否 |\n\n作为一个一般规则，使用引用或指针的选择可以通过遵循以下指南来确定：\n\
+  \n• 如果你不想在声明时初始化，请使用指针；\n• 或者\n如果你想要重新赋值另一个变量，请使用指针；\n• 否则\n始终使用引用。\n\n然而，指针比引用更灵活，甚至可以指向函数。在这种情况下，指针的声明必须与它指向的函数的返回数据类型和参数精确匹配。此外，指针名在声明中必须包含括号内以避免编译器错误。可以通过名称给函数指针分配一个函数，以便通过指针调用该函数。\n\
+  \n![image](img/forget.jpg)\n\n引用必须在声明中初始化以引用变量或对象 – 之后将始终引用该项。\n\n![image](img/1bl.jpg)通过指定要包含的\
+  \ C++ 库类和使用的命名空间前缀创建一个新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commonbb.jpg)\n\npref.cpp\n\n![image](img/2bl.jpg)在预处理器指令之后，定义一个内联函数输出两个参数的总和\n\
+  \n```cpp\ninline void add ( int& a, int* b )\n{\n    cout << “Total: ” << a + b\
+  \ << endl ;\n}\n```\n\n![image](img/3bl.jpg)添加一个包含最终 return 语句的 main 函数，并两个整数变量、一个引用和一个指针\n\
+  \n```cpp\nint main()\n{\n    int num = 100 , sum = 500 ;\n    int& rNum = num ;\n\
+  \    int* ptr = &num ;\n    // 在这里添加更多语句。\n    return 0 ;\n}\n```\n\n![image](img/4bl.jpg)在\
+  \ main 函数中，插入通过引用和指针输出的语句\n\n```cpp\ncout << “Reference: ” << rNum << endl ;\ncout\
+  \ << “Pointer: ” << *ptr << endl ;\n```\n\n![image](img/5bl.jpg)现在，将第二个整数变量赋值给指针并通过指针输出其值，然后调用函数输出和\n\
+  \n```cpp\nptr = &sum ;\ncout << “Pointer now: ” << *ptr << endl ;\nadd( rNum , ptr\
+  \ )\n```\n\n![image](img/6bl.jpg)保存、编译并运行程序查看输出\n\n![image](img/pg113_1.jpg)\n\n\
+  ![image](img/hot.jpg)\n\nC 程序员倾向于将 `&` 和 `*` 放在变量名之前，但在 C++ 中通常将其放在数据类型之后 – 因为该特性是类型的属性，而不是名称属性。\n\
+  \n## 总结\n\n![image](img/pg114_1.jpg)\n\n• 数据存储在按顺序编号的计算机内存中。\n• `=` 运算符左侧的操作数是左值，右侧的是右值。\n\
+  • 右值只能出现在 `=` 运算符的右侧。\n• 指针是存储另一个变量内存地址的变量 – 即它指向的变量。\n• `*` 字符在指针声明中作为左值出现，表示该语句创建一个指针变量。\n\
+  • 一旦声明，可以使用 `*` 解引用运算符引用指针指向的变量内部的值。\n• 指针算术可以遍历数组元素存储的值。\n• 变量按值传递给函数，而指针和引用按引用传递。\n\
+  • 按引用传递允许接收函数直接操作调用函数内部声明的变量。\n• 字符串值可以赋值给 `char` 类型的指针，并使用指针名检索整个字符串。\n• 指针数组的每个元素都可以存储数据或指针。\n\
+  • 引用不是变量，仅仅是变量的别名。\n• `&` 字符在引用声明中作为左值出现，表示该语句创建一个别名。\n\n\n\n\n- `&` 引用操作符可以引用指针内部存储的内存地址。\n\
+  - 引用比指针更易使用，但与指针不同，引用必须在声明时始终初始化，且不能被赋值不同的变量。\n\n# 7\n\n# 创建类和对象\n\n本章介绍了封装和继承两个主题——这是\
+  \ C++ 面向对象编程的前两个原则。\n\n- 数据封装\n- 创建对象\n- 创建多个对象\n- 初始化类成员\n- 重载方法\n- 继承类属性\n- 调用基构造函数\n\
+  - 重写基方法\n- 总结\n\n## 数据封装\n\n类是一种可以在单个实体中同时包含变量和函数的数据结构。这些统称为其“成员”，而函数被称为其“方法”。\n\
+  \n从类外部访问类成员受类声明中“访问修饰符”的控制。通常，这些饰符会拒绝对变量成员的访问，但允许访问可以存储和检索这些变量成员数据的方法。这种“数据隐藏”技术确保了存储的数据被安全地封装在类变量成员内部，它是面向对象编程（OOP）的第一大原则。\n\
+  \n![image](img/pg116_1.jpg)\n\n类声明以 `class` 关键字开始，后面跟着空格，然后是程序员指定的名称——遵循通常的 C++\
+  \ 命名规范，但大写字母开头。接下来是访问修饰符和类成员，它们包含在一对括号内。每个类声明必须在右大括号后以分号结束——因此类声明语法如下：\n\n```cpp\n\
+  class ClassName\n{\n    access specifier :\n        member1 ;\n        member2 ;\n\
+  \    access specifier :\n        member3 ;\n        member4 ;\n};\n```\n\n访问修饰符可以是\
+  \ `public`、`private` 或 `protected` 关键字中的任意一个，用于指定其列出成员的访问权限：\n\n- 公有成员（Public）可以在类可见的任何地方访问。\n\
+  - 私有成员（Private）仅供同类的其他成员访问。\n- 保护成员（Protected）仅供同类的其他成员以及该类派生类的成员访问。\n\n默认情况下，所有类成员都有私有访问权限——因此，任何出现在类声明中没有访问修饰符的成员都具有私有权限。\n\
+  \n![image](img/forget.jpg)\n\n使用 `protected` 访问修饰符的派生类将在本章稍后介绍。\n\n任何现实世界的对象都可以通过属性和动作来定义。例如，狗有年龄、重量和颜色等属性，以及它可以执行的吠等动作。C++\
+  \ 中的类机制提供了一种在程序中创建虚拟狗对象的方法，其中类的变量成员可以代表其属性，方法则代表其动作：\n\n```cpp\nclass Dog\n{\n \
+  \   private: // 默认访问级别。\n        int age, weight ;\n        string color;\n    public\
+  \ :\n        void bark() ;\n        // ... 其他用于存储/检索数据的方法。\n};\n```\n\n![image](img/forget.jpg)\n\
+  \n虽然程序类无法完美模拟真实世界对象，但目标是封装所有相关的属性和动作。\n\n重要的是，类声明只定义了一个数据结构——为了创建对象，你必须声明该数据结构的一个“实例”。这与声明普通\
+  \ C++ 数据类型的实例的方式完全相同：\n\n| `int num ;` | `// 创建一个名为“num”的实例。// 属于普通的 C++ int 数据类型。`\
+  \ |\n| `Dog fido ;` | `// 创建一个名为“fido”的实例。// 属于程序员定义的 Dog 数据结构。` |\n\n或者，可以通过在类声明右大括号和最终分号之间指定其名称来创建实例对象。可以通过指定用逗号分隔的对象名称列表来创建多个实例。例如，下面列出的类声明创建了四个名为“fido”、“pooch”、“rex”和“sammy”的\
+  \ Dog 类实例对象。\n\n```cpp\nclass Dog\n{\n    int age, weight ;\n    string color;\n\
+  \    public:\n        void bark() ;\n        // ... 其他用于存储/检索数据的方法。\n} fido, pooch,\
+  \ rex, sammy ;\n```\n\nC++ 编程中的封装原则描述了数据和功能在类成员中的组合——即 Dog 类中的年龄、重量、颜色属性和 bark 动作。\n\
+  \n![image](img/hot.jpg)\n\n类名通常以大写字母开头，对象名以小字母开头。\n\n## 创建对象\n\n为了从类的私有成员中分配和检索数据，必须向类中添加特殊的公有访问方法。这些是“设置器”（setter）方法，用于分配数据，以及“访问器”（getter）方法，用于检索数据。访问方法通常以它们处理的变量命名，首字母大写，并分别以“set”或“get”为缀。例如，处理\
+  \ `age` 变量的访问方法可以命名为 `setAge()` 和 `getAge()`。\n\n![image](img/pg116.jpg)\n\n\n\n\
+  \n\n![image](img/12v.jpg)现在，添加对普通输出方法的调用\n\n```\nfido.bark() ;\n```\n\n![image](img/13v.jpg)保存、编译并运行程序以查看输出\n\
+  \n![image](img/pg119_2.jpg)\n\n![image](img/hot.jpg)\n\n随着新功能的加入，该程序将在接下来的页面中被修改。\n\
+  \n## 创建多个对象\n\n程序可以很容易地创建多个对象，只需声明类的多个实例，并且通过为其 setter 方法（设置方法）分配单独的值，每个对象都可以拥有独特的属性。\n\
+  \n![image](img/pg120_1.jpg)\n\n将 setter 方法合并为一个接受每个私有变量参数的单一方法通常是非常方便的。这意味着在程序中可以使用单个语句为所有值赋值，但该方法内部将包含多个语句。\n\
+  \n上一个示例中的类声明包含了仅有一行的短方法，这些方法是“内联”创建的——完全位于类声明块内部。当方法超过两行时，不应内内联创建，而应该在类声明块中声明为“原型”（prototype），并在类声明之后单独定义。定义必须在方法名前名前加上类名和作用域解析运算符\
+  \ `::` 以识别包含其原型的类。\n\n![image](img/1v.jpg)将上一个示例的副本“object.cpp”重命名为新程序“multiple.cpp”\n\
+  \n![image](img/commonv.jpg)\n\nmultiple.cpp\n\n![image](img/2v.jpg)在 `Dog` 类声明中，将三个\
+  \ setter 方法替换为单一的组合 setter 原型，指定参数的数据类型但不指定它们的名称\n\n```\nvoid setValues ( int, int,\
+  \ string ) ;\n```\n\n![image](img/3v.jpg)在 `Dog` 类声明之后，使用 `::` 作用域解析运算符添加该原型的定义块，以识别其所在的类\n\
+  \n```\nvoid Dog::setValues ( int age, int weight, string color )\n{\n}\n```\n\n\
+  注意，为了方便识别，参数名称与它们将赋值的变量名称相同。当类方法定义的参数与类成员同名时，可以使用 `this ->` 类指针来显式地引用类成员。例如，`this\
+  \ -> age` 指的是类成员变量，而 `age` 指的是参数。\n\n![image](img/forget.jpg)\n\n注意，原型是一个语句——所以它必须以分号结束。\n\
+  \n![image](img/4v.jpg)在方法定义块中，插入三个语句将从传递的参数赋值给类变量\n\n```\nthis -> age = age ;\n\
+  this -> weight = weight ;\nthis -> color = color ;\n```\n\n![image](img/5v.jpg)在主方法的括号之间，将对三个\
+  \ setter 方法的调用替换为组合 setter 方法的单一调用——传递三个参数\n\n```\nfido.setValues( 3, 15, “brown”\
+  \ ) ;\n```\n\n![image](img/6v.jpg)在主方法中，声明名为“pooch”的 `Dog` 类的第二个实例\n\n```\nDog pooch\
+  \ ;\n```\n\n![image](img/7v.jpg)添加对组合 setter 方法的第二次调用——为新对象传递三个参数\n\n```\npooch.setValues(\
+  \ 4, 18, “gray” ) ;\n```\n\n![image](img/8v.jpg)添加调用每个 getter 方法的语句以检索已赋值的值\n\n\
+  ```\ncout << “Pooch is a “ << pooch.getAge() ;\ncout << “ year old “ << pooch.getColor()\
+  \ ;\ncout << “ dog who weighs “ << pooch.getWeight() ;\ncout << “ pounds .” ;\n\
+  ```\n\n![image](img/9v.jpg)现在，添加对普通输出方法的第二次调用\n\n```\npooch.bark() ;\n```\n\n![image](img/10v.jpg)保存、编译并运行程序以查看输出\n\
+  \n![image](img/pg121_2.jpg)\n\n![image](img/pg121_1.jpg)\n\n![image](img/forget.jpg)\n\
+  \n当参数名称和类成员名称不同时，在 setter 方法定义中不需要 `this ->` 类指针。\n\n## 初始化类成员\n\n类变量成员可以通过一个特殊的“构造函数”（constructor）方法进行初始化，该方法每当创建类的实例时都会被调用。构造函数方法的命名与类名完全相同，并且需要参数来设置类变量的初始值。\n\
+  \n![image](img/pg122_1.jpg)\n\n当声明构造函数方法时，还应该声明一个相关的“析构函数”（destructor）方法——它每当类实例销毁时都会被调用。析构方法的命名始终为类名，前面加上一个\
+  \ `~` 波浪符号。\n\n构造方法和析构方法没有返回值，并且自动调用——它们不能被显式调用。\n\n初始化类变量的值通过创建对象的语句传递给构造方法，位于对象名称后的括号中。\n\
+  \n![image](img/1v.jpg)将上一个示例的副本“multiple.cpp”重命名为新程序“constructor.cpp”\n\n![image](img/commonv.jpg)\n\
+  \nconstructor.cpp\n\n![image](img/2v.jpg)在 `Dog` 类声明的公共部分，将 `setValues` 方法原型替换为此构造函数原型\n\
+  \n```\nDog ( int, int, string ) ;\n```\n\n![image](img/3v.jpg)现在，添加相关的析构函数原型\n\n\
+  ```\n~Dog() ;\n```\n\n![image](img/4v.jpg)在 `Dog` 类声明之后，将 `setValues` 定义块替换为构造函数块\n\
+  \n```\nDog::Dog ( int age, int weight, string color )\n{\n}\n```\n\n![image](img/5v.jpg)在构造函数定义中，插入三个语句将传递的参数赋值给类变量\n\
+  \n```\nthis -> age = age ;\nthis -> weight = weight ;\nthis -> color = color ;\n\
+  ```\n\n![image](img/hot.jpg)\n\n类方法的定义也称为方法的“实现”（implementation）。\n\n![image](img/6v.jpg)在构造函数定义之后，添加析构函数块\n\
+  \n```\nDog::~Dog()\n{\n}\n```\n\n![image](img/7v.jpg)在析构函数定义中，插入一个语句，每当实例销毁时输出确认信息\n\
+  \n```\ncout << “Object destroyed.” << endl ;\n```\n\n![image](img/8v.jpg)在主方法中，编辑创建“fido”对象的语句——将值传递给它的构造函数方法\n\
+  \n```\nDog fido( 3, 15, “brown” )\n```\n\n![image](img/9v.jpg)同样，编辑创建“pooch”对象的语句——将值传递给构造函数方法\n\
+  \n```\nDog pooch( 4, 18, “gray” ) ;\n```\n\n![image](img/10v.jpg)删除调用“fido”和“pooch”对象的\
+  \ `setValues` 方法的语句——构造函数现在取代了该方法\n\n![image](img/11v.jpg)保存、编译并运行程序——看到与相同的输出，加上对象销毁时的确认信息\n\
+  \n![image](img/pg123_1.jpg)\n\n![image](img/snake.jpg)\n\n析构函数的定义于类名 `Dog`、作用域运算符\
+  \ `::`，然后是析构方法名 `~Dog`。\n\n![image](img/forget.jpg)\n\n## 方法重载\n\n正如 C++ 允许函数重载一样，类方法也可以重载——包括构造方法。重载构造方法在创建对象时不向构造函数传递值时，为成员变量分配默认值非常有用。\n\
+  \n![image](img/pg124_1.jpg)\n\n![image](img/1v.jpg)将上一个示例的副本“constructor.cpp”重命名为新程序“overloaded.cpp”\n\
+  \n![image](img/commonv.jpg)\n\noverloaded.cpp\n\n![image](img/2v.jpg)在 `Dog` 类声明的公共部分，内联添加一个重载的\
+  \ bark 方法——在调用时输出传递的字符串参数\n\n```\nvoid bark ( string noise ) { cout << noise <<\
+  \ endl ; }\n```\n\n![image](img/3v.jpg)现在，声明一个不带参数的构造方法原型（默认构造函数方法）和一个接受两个参数的重载构造方法原型\n\
+  \n```cpp\nDog() ;\n```\n\n\n\n\n\n`Dog ( int, int ) ;`\n\n![image](img/4v.jpg)在\
+  \ `Dog` 类声明后，添加默认构造函数方法的定义——在不传递任何参数的情况下创建对象时，为类变量分配默认值。\n\n```cpp\nDog::Dog()\n\
+  {\n    age = 1 ;\n    weight = 2 ;\n    color = “black” ;\n}\n```\n\n![image](img/5v.jpg)现在，为重载构造函数方法添加定义——在传递两个参数创建对象时，为类变量分配默认值。\n\
+  \n```cpp\nDog::Dog ( int age, int weight )\n{\n    this -> age = age ;\n    this\
+  \ -> weight = weight ;\n    color = “white” ;\n}\n```\n\n![image](img/forget.jpg)\n\
+  \n当参数名称与成员名称相同时，使用 `this ->` 指针来显式标识类成员。\n\n![image](img/6v.jpg)在 `main` 方法中，插入一条在不传递任何参数的情况下创建一个\
+  \ `Dog` 对象——调用默认构造函数。\n\n```cpp\nDog rex ;\n```\n\n![image](img/7v.jpg)添加调用每个 getter\
+  \ 方法的语句来获取由默认构造函数方法设置的默认值。\n\n```cpp\ncout << “Rex is a “ << rex.getAge() ;\ncout\
+  \ << “ year old “ << rex.getColor() ;\ncout << “ dog who weighs “ << rex.getWeight()\
+  \ ;\ncout << “ pounds .” ;\n```\n\n![image](img/8v.jpg)现在，添加重载输出方法的调用。\n\n```cpp\n\
+  rex.bark( “GRRR!” ) ;\n```\n\n![image](img/9v.jpg)插入一条传递两个参数创建 `Dog` 语句——调用重载构造函数。\n\
+  \n```cpp\nDog sammy( 2, 6 ) ;\n```\n\n![image](img/10v.jpg)添加语句获取由重载构造函数方法设置的值，并调用重载输出方法。\n\
+  \n```cpp\ncout << “Sammy is a “ << sammy.getAge() ;\ncout << “ year old “ << sammy.getColor()\
+  \ ;\ncout << “ dog who weighs “ << sammy.getWeight() ;\ncout << “ pounds .” ;\n\
+  sammy.bark( “BOWOW!” ) ;\n```\n\n![image](img/11v.jpg)保存、编译并运行程序。\n\n![image](img/pg125_1.jpg)\n\
+  \n![image](img/snake.jpg)\n\n在不传递参数创建对象时，不要在对象名后加括号——注意是 `Dog rex ;` 而不是 `Dog rex()\
+  \ ;`。\n\n![image](img/hot.jpg)\n\n这是 `Dog` 类的最终版本。在继续之前，请确保你能轻松识别它的公共成员和私有成员。\n\n\
+  ## 继承类属性\n\n一个 C++ 类可以作为一个全新的类创建（如之前的示例所示），也可以从现有类中“派生”。重要的是，派生类会继承它所派生的父类（基类）的成员——除了它自己的成员之外。\n\
+  \n![image](img/pg126_1.jpg)\n\n从基类继承成员的能力允许创建派生类，这些派生类共享某些已经在基类中定义的共同属性。例如，“Polygon”（多边形）基类可以定义所有多边形共\
+  \ `width`（宽度）和 `height`（高度）属性。“Rectangle”（矩形）和“Triangle”（三角形）类可以从 Polygon 类派生——继承宽度和高度属性，加上它们定义自身独特特征的成员。\n\
+  \n![image](img/pg126_2.jpg)\n\n继承的优点非常强大，并且是面向对象编程（OOP）的第二个原则。\n\n派生类的声明在其类名后添加一个冒号\
+  \ `:`，后面跟一个访问限定符和它派生的类。\n\n![image](img/1v.jpg)通过指定要包含的 C++ 库类和使用的命名空间前缀开始新程序。\n\
+  \n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/commonv.jpg)\n\
+  \nderived.cpp\n\n![image](img/2v.jpg)声明一个名为 “Polygon”的类，包含两个保护变量（仅该类成员及其派生类的成员可访问），以及一个用于给这些变量赋值的公共方法。\n\
+  \n```cpp\nclass Polygon\n{\nprotected:\n    int width, height ;\npublic:\n    void\
+  \ setValues( int w, int h ) { width = w; height = h ; }\n} ;\n```\n\n![image](img/3v.jpg)在\
+  \ Polygon 类之后，声明一个派自 Polygon 类的 Rectangle 类并添加一个独特方法。\n\n```cpp\nclass Rectangle\
+  \ : public Polygon\n{\npublic:\n    int area() { return ( width * height ) ; }\n\
+  } ;\n```\n\n![image](img/4v.jpg)在 Rectangle 类之后，声明一个派自 Polygon 类的 Triangle 类并添加一个独特方法。\n\
+  \n```cpp\nclass Triangle : public Polygon\n{\npublic:\n    int area() { return (\
+  \ ( width * height ) / 2 ) ; }\n} ;\n```\n\n![image](img/5v.jpg)在 Triangle 类之后，添加包含最终\
+  \ `return` 语句的 main 方法并创建每个派生类的实例。\n\n```cpp\nint main()\n{\n    Rectangle rect\
+  \ ; Triangle trgl ;\n    return 0 ;\n}\n```\n\n![image](img/6v.jpg)插入对继承自 Polygon\
+  \ 基类调用——以初始化继承的变量。\n\n```cpp\nrect.setValues( 4, 5 ) ;\ntrgl.setValues( 4, 5 ) ;\n\
+  ```\n\n![image](img/7v.jpg)输出每个派生类独特方法的返回值。\n\n```cpp\ncout << “Rectangle area :\
+  \ “ << rect.area() << endl ;\ncout << “Triangle area : “ << trgl.area() << endl\
+  \ ;\n```\n\n![image](img/8v.jpg)保存、编译并运行程序。\n\n![image](img/pg127.jpg)不要混淆实例和派生类——实例是类的拷贝，而派生类是继承基类属性的新类。\n\
+  \n## 调用构造函数\n\n虽然派生类继承父类的成员，但并不继承它的构造函数和析构函数。需要注意的是，创建派生类对象时总是会调用基类的默认构造函数——当对象被销毁时调用基类的析构函数。这些调用是在派生类之外进行的。\n\
+  \n基类的默认构造函数没有参数，但该类也可以带有参数的重载构造函数。如果你希望在创建派生类对象时调用基类的重载构造函数，可以在派生类中创建一个匹配的重载构造函数——具有相同数量和类型的参数。\n\
+  \n![image](img/128.jpg)\n\n通过指定要包含的 C++ 库类和使用的命名空间前缀开始新程序。\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\nbasecon.cpp\n\n![image](img/2v.jpg)声明一个名为 “Parent”的类，它将作为一个基类。\n\
+  \n```cpp\nclass Parent\n{\n    // 类成员在这里\n} ;\n```\n\n![image](img/3v.jpg)在 Parent\
+  \ 类声明的大括号之间插入一个公共访问限定符并添加一个默认构造函数以输出文本——标识何时被调用。\n\n```cpp\npublic:\n    Parent()\n\
+  \    { cout << “Default Parent constructor called.” ; }\n```\n\n![image](img/4v.jpg)添加一个重载构造函数，接受一个整数参数并同样输出标识文本。\n\
+  \n```cpp\nParent ( int a )\n{ cout << endl << “Overloaded Parent constructor called.”\
+  \ ; }\n```\n\n![image](img/5v.jpg)在 Parent 类之后，声明一个派生的 “Daughter” 类。\n\n```cpp\n\
+  class Daughter : public Parent\n{\n} ;\n```\n\n![image](img/pg128_2.jpg)\n\nSon\
+  \ – Parent – Daughter\n\n![image](img/6v.jpg)在 Daughter 类声明中，插入一个公共访问限定符并添加一个默认构造函数以输出文本——标识何时被调用。\n\
+  \n```cpp\npublic :\n    Daughter ()\n    { cout << endl << “     Derived Daughter\
+  \ class default constructor called.” ; }\n```\n\n![image](img/7v.jpg)在 Daughter\
+  \ 类之后，声明一个派生的 “Son” 类。\n\n```cpp\nclass Son : public Parent\n{\n} ;\n```\n\n\n\n\
+  \n\n![image](img/8v.jpg)在 `Son` 类声明中，插入一个公共访问修符并添加一个接受单个整数参数的重载构造函数，同时输出标识性文本。\n\
+  \n```cpp\npublic :\n\nSon ( int a ) : Parent ( a )\n{ cout << endl << \"      Derived\
+  \ Son class overloaded constructor called.\"; }\n```\n\n![image](img/9v.jpg)在 `Son`\
+  \ 类之后，添加一个包含最终 `return` 语句的 main 方法，并创建每个派生类的实例 – 调用基类和派生类的构造函数。\n\n```cpp\nint\
+  \ main()\n{\n    Daughter emma ;\n    Son andrew(0) ;\n    return 0 ;\n}\n```\n\n\
+  ![image](img/10v.jpg)保存、编译并运行程序，以查看每个构造函数被顺序调用时的输出。\n\n![image](img/pg129_1.jpg)\n\
+  \n![image](img/snake.jpg)\n\n注意重载的 `Son` 类构造函数中的语法将整数参数传递给重载的基类构造函数。\n\n![image](img/forget.jpg)\n\
+  \n每个类自动拥有一个空的默认构造函数和析构函数 – 例如，`Son( ){ }` 和 `~Son( ){ }`。\n\n### 重写基类方法\n\n可以在派生类中声明一个方法来覆盖基类中匹配的方法\
+  \ – 如果两个方法的声明具有相同的名称、参数和返回类型。这实际上有效地隐藏了基类方法，因为除非显式调用（使用 `::` 作用域解析符进行精确识别），否则它是无法访问的。\n\
+  \n![image](img/pg130_1.jpg)\n\n然而，重写基类方法的方法必须谨慎，以避免无意中隐藏重载方法 – 派生类中的单个重写方法将隐藏基类中所有同名的重载方法！\n\
+  \n![image](img/1v.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始新程序。\n\n```cpp\n#include <string>\n\
+  #include <iostream>\nusing namespace std ;\n```\n\n![image](img/commonv.jpg)\n\n\
+  override.cpp\n\n![image](img/2v.jpg)声明一个名为 “Man”的类，它将作为一个基类。\n\n```cpp\nclass Man\n\
+  {\n    // 类成员在这里。\n} ;\n```\n\n![image](img/3v.jpg)在 `Man` 类声明的大括号之间，插入一个公共访问修符和一个内联输出方法。\n\
+  \n```cpp\npublic :\nvoid speak() { cout << \"Hello! \" << endl ; }\n```\n\n![image](img/4v.jpg)现在，插入一个重载的内联输出方法。\n\
+  \n```cpp\nvoid speak( string msg )\n{ cout << \" \" << msg << endl ; }\n```\n\n\
+  ![image](img/5v.jpg)在 `Man` 类声明之后，声明一个派自 `Man` 类的名为 “Hombre”的类。\n\n```cpp\nclass\
+  \ Hombre : public Man\n{\n    // 类成员在这里。\n} ;\n```\n\n![image](img/forget.jpg)\n\
+  \n派生类中的方法声明必须与基类中的匹配才能覆盖它 – 如果使用了 `const` 关键字。\n\n![image](img/6v.jpg)在 `Hombre`\
+  \ 类声明的大括号之间，插入一个访问修符和一个重写重载基类方法的方法 – 不带制表符输出。\n\n```cpp\npublic :\nvoid speak( string\
+  \ msg ) { cout << msg << endl ; }\n```\n\n![image](img/7v.jpg)在 `Hombre` 类声明之后，添加一个包含最终\
+  \ `return` 语句的 main 方法，并创建两个对象 – 基类的实例和派生类的实例。\n\n```cpp\nint main()\n{\n    Man\
+  \ henry ;\n    Hombre enrique ;\n    // 在此处添加更多语句。\n    return 0 ;\n}\n```\n\n![image](img/pg131_1.jpg)\n\
+  \n![image](img/8v.jpg)在 main 方法中，插入调用基类两个方法的语句。\n\n```cpp\nhenry.speak() ;\nhenry.speak(\
+  \ \"It’s a beautiful evening.\" ) ;\n```\n\n![image](img/9v.jpg)接下来，插入一条调用派生类中重写方法的语句\
+  \ – 不带制表符的输出。\n\n```cpp\nenrique.speak( \"Hola!\" ) ;\n```\n\n![image](img/10v.jpg)现在，插入一条显式调用基类中被重写方法的语句。\n\
+  \n```cpp\nenrique.Man::speak( \"Es una tarde hermosa.\" ) ;\n```\n\n![image](img/11v.jpg)保存、编译并运行程序，查看重写方法和被重写方法的输出。\n\
+  \n![image](img/pg131_2.jpg)\n\n![image](img/snake.jpg)\n\n在派生类中声明的重写方法隐藏了基类中的两个重载类。尝试调用\
+  \ `enrique.speak()` – 编译器将报错说该调用没有匹配的方法。\n\n## 总结\n\n![image](img/pg132_1.jpg)\n\
+  \n- 面向对象编程的第一原则是在单个类中对数据和功能进行封装。\n- 访问修符 `public`、`private` 和 `protected` 控制类成员从类外部的可访问性。\n\
+  - 类声明描述了一个可以从其创建实例对象的数据结构。\n- 公共的 setter 和 getter 类方法从私有类变量成员中存储和检索数据。\n- 作用域解析符\
+  \ `::` 可以显式识别一个类。\n- 与传递的参数同名的类成员可以显式识别。\n- 构造函数在对象创建时调用，析构函数在对象销毁时调用。\n- 面向对象编程的第二个原则是允许派生类继承基类的属性。\n\
+  - 在派生类声明中，类名后面跟着冒号、修符。\n\n# 8 利用多态\n\n***本章将演示如何将程序拆分为模块组件，并引入多态 – C++ 的第三原则。***\n\
+  \n- 指向类\n- 调用虚方法\n- 引导方法调用\n- 提供能力类\n- 抽象数据类型\n- 构建层次结构\n- 隔离类结构\n- 使用隔离类\n- 总结\n\
+  \n## 指向类\n\n面向对象编程（OOP）三个基石是封装、继承和多态。第 7 章(#chapter7.xhtml)的示例演示了如何将数据封装在 C++ 类中，以及派生类如何继承基类的属性。本章引入最后一个基石原则：多态。\n\
+  \n“多态”一词（源自希腊语，意为“多种形式”）描述了根据上下文赋予实体不同含义或目的。在 C++ 中，重载运算符可以被认为是多态的。例如，`*` 字符根据上下文可以表示乘法运算符或引用运算符。同样，`+`\
+  \ 字符根据上下文可以表示加法运算符或拼接运算符。\n\n重要的是，C++ 类方法也可以是态的。理解类多态的关键是意识到可以创建一个基类指针并与特定的派生类绑定。\n\
+  \n基类指针可以分配派生类的内存地址，以提供“上下文” – 唯一标识该派生类。例如，对于一个 `Base` 基类和一个派生类 `Sub` 类，可以这样创建指针：\n\
+  \n```cpp\nSub inst ;\nBase* pSub = &inst ;\n```\n\n\n\n\n\n或者更简单地使用 `new` 关键字，如下：\n\
+  \n```cpp\nBase* pSub = new Sub ;\n```\n\n![image](img/forget.jpg)\n\n返回第 6 章 了解更多关于指针的知识。\n\
+  \n当存在多个派生类时，可以创建基类指针，通过每个派生类的唯一内存地址进行绑定——可以使用 `addressoof` `&` 运算符获取地址。\n\n![image](img/1b.jpg)通过指定要包含的\
+  \ C++ 库类和要使用的命名空间缀来启动新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commonb.jpg)classptr.cpp\n\n![image](img/2b.jpg)声明一个 `Base`\
+  \ 类，包含一个以十六进制格式输出传递整数值的方法\n\n```cpp\nclass Base\n{\npublic:\nvoid Identify( int\
+  \ adr ) const\n{ cout << “Base class called by 0x” << hex << adr << endl ; }\n}\
+  \ ;\n```\n\n![image](img/3b.jpg)声明两个空的派生类，`SubA` 和 `SubB`\n\n```cpp\nclass SubA\
+  \ : public Base {     } ;\nclass SubB : public Base {     } ;\n```\n\n![image](img/4b.jpg)声明一个包含最终\
+  \ `return` 语句的 main 方法\n\n```cpp\nint main()\n{\n// Program code goes here.\nreturn\
+  \ 0 ;\n}\n```\n\n![image](img/5b.jpg)在 main 方法中，插入语句创建两个基类指针——每个指针绑定到特定的派生类\n\n\
+  ```cpp\nBase* ptrA = new SubA ;\nBase* ptrB = new SubB ;\n```\n\n![image](img/6b.jpg)现在，插入使用指针调用基类方法的语句，传递每个类的内存地址进行输出\n\
+  \n```cpp\nptrA -> Identify( (int) &ptrA ) ;\nptrB -> Identify( (int) &ptrB ) ;\n\
+  ```\n\n![image](img/7b.jpg)保存、编译并运行程序以查看地址\n\n![image](img/pg135_1.jpg)\n\n![image](img/forget.jpg)\n\
+  \n此处使用 `->` 类指针运算符来调用类方法。\n\n![image](img/hot.jpg)\n\n十六进制地址作为 `int` 数据类型传递，然后由\
+  \ `hex` 输出操纵符以十六进制格式显示。地址在每次程序执行时都会不同——它们是动态分配的。\n\n### 调用虚拟方法\n\n绑定到特定派生类的基类指针可以用于调用从基类继承的派生类方法。然而，派生类特有的方法必须通过实例对象调用。\n\
+  \n![image](img/pg136_1.jpg)\n\n绑定到特定派生类的基类指针也可以使用 `::` 作用域解析符显式调用基类中的方法。\n\n最有用的是，当基类方法被声明为“虚”方法时，派生类中的继承方法可以重写基类中的方法。这只是在基类中一个以\
+  \ `virtual` 关键字之前的普通方法声明。虚拟方法的声明表示该类将用作基类，从其派生出另一个类，该类可能包含一个用于重写虚拟基方法的方法。\n\n![image](img/1b.jpg)通过指定要包含的\
+  \ C++ 库类和要使用的命名空间缀来启动新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commonb.jpg)virtual.cpp\n\n![image](img/2b.jpg)声明一个名为“Parent”的基类，包含一个普通方法声明和一个虚拟方法声明\n\
+  \n```cpp\nclass Parent\n{\npublic :\nvoid Common() const\n{ cout << “I am part of\
+  \ this family, ; }\nvirtual void Identify() const\n{ cout << “I am the parent” <<\
+  \ endl ; }\n} ;\n```\n\n![image](img/3b.jpg)声明一个名为“Child”的派生类，包含一个重写虚拟基方法的方法\n\n\
+  ```cpp\nclass Child : public Parent\n{\npublic :\nvoid Identify() const\n{ cout\
+  \ << “I am the child” << endl ; }\n} ;\n```\n\n![image](img/snake.jpg)基类指针不能用于调用派生类中的非继承方法。\n\
+  \n![image](img/4b.jpg)声明一个派自“Child”类的“Grandchild”类，包含一个重写虚拟基方法的方法和一个普通方法声明\n\n```cpp\n\
+  class Grandchild : public Child\n{\npublic :\nvoid Identify() const\n{ cout << “I\
+  \ am the grandchild” << endl ; }\nvoid Relate() const\n{ cout << “Grandchild has\
+  \ parent and grandparent” ; }\n} ;\n```\n\n![image](img/pg137_1.jpg)Parent Child\
+  \ Grandchild\n\n![image](img/5b.jpg)声明一个包含最终 `return` 语句并创建每个派生类实例的 main 方法，加上这些派生类的基类指针\n\
+  \n```cpp\nint main()\n{\nChild son ;\nGrandchild grandson ;\nParent* ptrChild =\
+  \ &son ;\nParent* ptrGrandchild = &grandson ;\n// 在 main 方法中，插入对每个方法的调用\nptrChild\
+  \ -> Common() ; // 继承\nptrChild -> Identify() ; // 重写\nptrGrandchild -> Common()\
+  \ ; // 继承\nptrGrandchild -> Identify() ; // 重写\nptrChild -> Parent::Common() ; //\
+  \ 显式\nptrGrandchild -> Parent::Identify() ; // 显式\nreturn 0 ;\n}\n```\n\n\n\n\n\
+  ![image](img/forget.jpg)\n\n在字符串中需要使用反斜符 `\\` 来转义单引号。\n\n## 提供能力类\n\n其唯一目的是允许其他类派生自该类的类被称为“能力类”（capability\
+  \ classes）——它们为派生类提供能力。\n\n![image](img/pg140_1.jpg)\n\n能力类通常不包含数据，仅声明了若干可以在派生类中重写的虚拟方法。\n\
+  \n接下来的示例在之前的示例的基础上，展示了如何将 `Bird` 类更写地写为一个能力类。它的方法不再包含输出语句，但如果被显式调用，将返回 `-1`（错误）值。\n\
+  \n有必要将这些方法的返回类型从 `void` 更改为 `int`，并且这些更改必须反映在派生类中的每个重写方法中。\n\n![image](img/1b.jpg)通过指定要包含的\
+  \ C++ 库类和要使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <iostream>\nusing namespace std ;\n\
+  ```\n\n![image](img/commonb.jpg)\n\n`capability.cpp`\n\n![image](img/2b.jpg)声明一个名为“Bird”的基能力类，包含两个虚拟方法声明，如果被显式调用将报告错误\n\
+  \n```cpp\nclass Bird\n{\npublic :\n    virtual int Talk() const { return -1 ; }\n\
+  \    virtual int Fly() const { return -1 ; }\n} ;\n```\n\n![image](img/3b.jpg)声明一个名为“Pigeon”的派生类，包含两个重写基类方法的方法\n\
+  \n```cpp\nclass Pigeon : public Bird\n{\npublic :\n    int Talk() const { cout <<\
+  \ “Coo! Coo!” << endl ; return 0 ; }\n    int Fly() const { cout << “A pigeon flies\
+  \ away...” << endl ; return 0 ; }\n} ;\n```\n\n![image](img/forget.jpg)\n\n派生类中重写方法的返回值必须与基类中声明的返回值匹配。\n\
+  \n![image](img/4b.jpg)声明一个名为“Chicken”的派生类，包含两个重写基类方法的方法\n\n```cpp\nclass Chicken\
+  \ : public Bird\n{\npublic :\n    int Talk() const { cout << “Cluck! Cluck!” <<\
+  \ endl ; return 0 ; }\n    int Fly() const { cout << “I’m just a chicken – I can’t\
+  \ fly!” << endl ; return 0 ; }\n} ;\n```\n\n![image](img/5b.jpg)声明一个主方法，创建绑定派生类的基类指针\n\
+  \n```cpp\nint main()\n{\n    Bird* pPigeon = new Pigeon ;\n    Bird* pChicken =\
+  \ new Chicken ;\n}\n```\n\n![image](img/6b.jpg)在主方法中，插入方法调用和一条在显式调用基类方法并遇到错误时终止程序的语句\n\
+  \n```cpp\npPigeon -> Talk() ;\npChicken -> Talk() ;\npPigeon -> Bird::Talk() ;\n\
+  if ( -1 ) { cout << “Error! - Program ended.” << endl ; return 0 ; }\npPigeon ->\
+  \ Fly() ;  // 将不会被调用。\npChicken -> Fly() ; // 将不会被调用。\nreturn 0 ;  // 语句将不会执行。\n\
+  ```\n\n![image](img/7b.jpg)保存、编译并运行程序以查看输出\n\n![image](img/pg141_1.jpg)\n\n![image](img/snake.jpg)\n\
+  \n能力类方法旨在在派生类中被重写——它们不应被显式调用。\n\n![image](img/hot.jpg)\n\n更多错误处理的详细信息，请参考此处和此处。\n\
+  \n## 抽象数据类型\n\n抽象数据类型（ADT）代表一个概念而非一个实体对象，并且总是其他类的基类。通过将其一个或多个方法初始化为 `0`，可以将基类变为\
+  \ ADT。这些被称为“纯虚拟方法”，并且必须在派生类中被重写。\n\n![image](img/1b.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\
+  \n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/commonb.jpg)\n\
+  \n`adt.cpp`\n\n![image](img/2b.jpg)声明一个名为“Shape”的基 ADT 类，包含三个纯虚拟方法\n\n```cpp\nclass\
+  \ Shape\n{\npublic :\n    virtual int getArea() = 0 ;\n    virtual int getEdge()\
+  \ = 0 ;\n    virtual void Draw() = 0 ;\n} ;\n```\n\n![image](img/3b.jpg)声明一个名为“Rect”的派生类，包含两个私有变量\n\
+  \n```cpp\nclass Rect : public Shape\n{\nprivate :\n    int height, width ;\n} ;\n\
+  ```\n\n![image](img/4b.jpg)在派生类声明中，插入公共构造函数和析构函数\n\n```cpp\npublic :\n    Rect(\
+  \ int initWidth, int initHeight )\n    {\n        height = initHeight ;\n      \
+  \  width = initWidth ;\n    }\n    ~Rect() ;\n```\n\n![image](img/snake.jpg)\n\n\
+  创建 ADT 的实例对象是不允许的——尝试这样做会导致编译器错误。\n\n![image](img/5b.jpg)在派生类“Rect”声明中，插入公共方法以重写“Shape”基类\n\
+  \n```cpp\nint getArea() { return height * width ; }\nint getEdge() { return 2 *\
+  \ (height + width) ; }\nvoid Draw()\n{\n    for (int i = 0 ; i < height ; i++) {\
+  \ cout << “_” }\n}\n```\n\n![image](img/6b.jpg)声明一个主方法，包含返回语句并创建“Rect”类的实例——表示一个形状\n\
+  \n```cpp\nint main()\n{\n    Shape* pQuad = new Rect( 3, 7 ) ;\n    Shape* pSquare\
+  \ = new Rect( 5, 5 ) ;\n    return 0 ;\n}\n```\n\n![image](img/7b.jpg)在主方法中插入对方法的调用，然后保存、编译并运行程序以查看输出\n\
+  \n```cpp\npQuad -> Draw() ;\ncout << “Area is ” << pQuad -> getArea() << endl ;\n\
+  cout << “Perimeter is ” << pQuad -> getEdge() << endl ;\npSquare -> Draw() ;\ncout\
+  \ << “Area is ” << pSquare -> getArea() << endl ;\ncout << “Perimeter is ” << pSquare\
+  \ -> getEdge() << endl ;\n```\n\n![image](img/pg43.jpg)\n\n![image](img/forget.jpg)基类只需要包含一个虚拟方法即可创建抽象数据类型。\n\
+  \n## 构建复杂的层次结构\n\n有时从另一个 ADT 派生 ADT 以构建复杂的类层次结构。这提供了极大的活性，只要每个纯方法在某个派生类中定义都是完全可以的。\n\
+  \n![image](img/1b.jpg)通过指定要包含的 C++ 库类和要使用的命名空间前缀开始一个新程序\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/commonb.jpg)\n\n`hierarchy.cpp`\n\n![image](img/2b.jpg)声明一个名为“Boat”的基\
+  \ ADT 类，包含一个变量、访问方法和一个纯虚拟方法\n\n```cpp\nclass Boat\n{\nprotected:\nint length ;\n\
+  public:\n    int getLength() { return length ; }\n    virtual void Model() = 0 ;\n\
+  } ;\n```\n\n![image](img/3b.jpg)声明一个名为“Sailboat”的 ADT 类（派自 Boat 类）——同样包含一个变量、访问方法和一个纯虚拟方法\n\
+  \n```cpp\nclass Sailboat : public Boat\n{\nprotected :\nint mast ;\npublic :\n \
+  \   int getMast() { return mast ; }\n    virtual void Boom() = 0 ;\n} ;\n```\n\n\
+  ![image](img/4b.jpg)声明一个名为“Laser”的普通类（派自 Sailboat 类），其中所有成员将允许公共访问\n\n```cpp\nclass\
+  \ Laser : public Sailboat\n{\npublic :\n} ;\n```\n\n\n\n\n\n![image](img/6b.jpg)在\
+  \ `Laser` 类中，定义在该类派生类中声明的纯虚方法\n\n```cpp\nvoid Model() { cout << “Laser Classic”\
+  \ << endl ; }\nvoid Boom() { cout << “Boom: 14ft” << endl ; }\n```\n\n![image](img/7b.jpg)声明一个\
+  \ `main` 方法，包含一个最终的 `return` 语句，并在层次结构的底层创建一个派生类的实例\n\n```cpp\nint main()\n{\n \
+  \   Laser* pLaser = new Laser ;\n    // Add more statements here.\n    return 0\
+  \ ;\n}\n```\n\n![image](img/8b.jpg)在 `main` 方法中，插入对每个定义方法的调用\n\n```cpp\npLaser ->\
+  \ Model() ;\ncout << “Length: “ << pLaser -> getLength() << “ft” << endl ;\ncout\
+  \ << “Height: “ << pLaser -> getMast() << “ft” << endl ;\npLaser -> Boom() ;\n```\n\
+  \n![image](img/9b.jpg)保存、编译并运行程序以查看输出\n\n![image](img/pg145_2.jpg)\n\n![image](img/hot.jpg)\n\
+  \n尝试添加一个派自 `Boat` 类的 `Powerboat` 类（包含引擎信息），以及一个派自 `Powerboat` 类的 `Cruiser` 类 ——\
+  \ 用于为变量赋值并定义虚方法。\n\n### 隔离类结构\n\n书中每个示例程序的源代码通常包含在单个 `.cpp` 文件中以节省空间，但实际上，OOP 程序通常包含在三个单独文件中：\n\
+  \n*   头文件 `.h` – 仅包含类声明。\n*   实现文件 `.cpp` – 包含类定义，用于实现头文件中声明的方法，该文件通过 `#include`\
+  \ 指令引用。\n*   客户端 `.cpp` 文件 – 包含一个 `main` 方法，该方法使用头文件中声明的类成员，该文件同样通过 `#include` 指令引用。\n\
+  \n![image](img/pg146_1.jpg)\n\n例如，一个加法器程序可能由三个文件组成：`ops.h`（声明操作类的头文件）、`ops.cpp`（定义操作方法的实现文件）和\
+  \ `sum.cpp`（调用各种操作的客户端文件）。\n\n![image](img/hot.jpg)\n\n客户端文件有时被称为“驱动”（driver）文件。\n\
+  \n编译 `sum.cpp` 时，编译器会将包含的头文件和实现文件合并到程序中。它首先将头文件和实现文件转换为二进制对象文件（`ops.o`），然后将头文件和客户端文件转换为第二个二进制对象文件（`sum.o`）。最后，链接器将两个对象文件合并成单个可执行文件（`sum.exe`）。\n\
+  \n![image](img/pg146_2.jpg)\n\n![image](img/hot.jpg)\n\n使用 `#include` 指令引用头文件与使用\
+  \ `#include` 指令引用标准 C++ 库的方式类似。\n\n在独立的“模块化”文件中隔离类结构具有提高可移植性的优势，并且通过明确识别每个文件的目的使代码维护更加容易。\n\
+  \n要让编译器将三个源文件合并成单个可执行文件，只需要在编译器命令中显式指定 `.cpp` 文件 —— `#include` 指令确保头文件也会被识别。\n\n\
+  例如，在 `ops.cpp` 和 `sum.cpp` 中都使用 `#include “ops.h”` 语句，编译侧描述的示例的命令不需要在编译器命令中指定 `ops.h`\
+  \ 头文件，只需要 `c++ ops.cpp sum.cpp -o sum.exe`。\n\n![image](img/pg147_1.jpg)\n\n###\
+  \ 计算器\n\n此示例将允许用户输入一个简单的算术表达式并输出计算结果。它将在首次启动时提供说明，并允许用户输入后续表达式 —— 或通过字符 0 退出。\n\n\
+  ![image](img/1b.jpg)通过声明名为“Calculator”的类开始编写头文件\n\n```cpp\nclass Calculator\n{\n\
+  } ;\n```\n\n![image](img/pg147_2.jpg)\n\n#### ops.h\n\n![image](img/2b.jpg)在类声明中插入公共方法声明\n\
+  \n```cpp\npublic :\n    Calculator() ;\n    void launch() ;\n    void readInput()\
+  \ ;\n    void writeOutput() ;\n    bool run() ;\n```\n\n#### ops.cpp\n\n![image](img/3b.jpg)在类声明中插入私有声明\n\
+  \n```cpp\nprivate :\n    double num1 ;\n    double num2 ;\n    char oper ;\n   \
+  \ bool status ;\n```\n\n#### 类的应用\n\n![image](img/4b.jpg)使用 `#include` 开始头文件\n\n\
+  ```cpp\n#include <iostream>\nusing namespace std;\n```\n\n#### 隔离的方法\n\n![image](img/5b.jpg)用定义开始实现文件\n\
+  \n```cpp\nCalculator::Calculator()\n{\n    status = true ;\n}\n\nvoid Calculator::launch()\n\
+  {\n    cout << “CALCULATOR” << endl ;\n    cout << “Enter a number, an operator\
+  \ (+,-*,/), and another number.” << endl ;\n    cout << “Hit zero to exit.” << endl\
+  \ ;\n}\n\nvoid Calculator::readInput()\n{\n    cout << “> “ ; cin >> num1 ;\n  \
+  \  if ( num1 == 0 ) \n        status = false ;\n    else\n        cin >> oper >>\
+  \ cin >> num2 ;\n}\n\nvoid Calculator::writeOutput()\n{\n    if ( status ) \n  \
+  \      switch( oper )\n        {\n            case ‘+’ : { cout << ( num1 + num2\
+  \ ) << endl ; break; }\n            case ‘-’ : { cout << ( num1 - num2 ) << endl\
+  \ ; break; }\n            case ‘*’ : { cout << ( num1 * num2 ) << endl ; break;\
+  \ }\n            case ‘/’ : \n                if ( num2 != 0 ) \n              \
+  \      cout << ( num1 / num2 ) << endl ;\n                else \n              \
+  \      cout << “Cannot divide by 0” << endl ;\n                break;\n        }\n\
+  }\n\nbool Calculator::run()\n{\n    return status ;\n}\n```\n\n#### sum.cpp\n\n\
+  ![image](img/6b.jpg)使用包含指令开始编写客户端文件\n\n```cpp\n#include “ops.h”\n\nint main()\n\
+  {\n    Calculator* pCalc = new Calculator ;\n    pCalc -> launch() ;\n    while\
+  \ ( pCalc -> run() )\n    {\n        pCalc -> readInput() ;\n        pCalc -> writeOutput()\
+  \ ;\n    }\n    return 0 ;\n}\n```\n\n\n\n\n该程序循环运行，直到用户输入 0 并按下回车键——将“status”控制变量更改为\
+  \ `false`，从而退出程序。\n\n## 总结\n\n![image](img/pg150_1.jpg)\n\n*   面向对象编程的三基石是封装、继承和多态。\n\
+  *   多态实体根据其语境具有不同的含义或目的。\n* 基类指针可以用于调用其所绑定的派生类中继承的方法。\n* 基类指针还可以使用 `::` 作用域解析符显式地调用基类方法。\n\
+  * 虚基类方法旨在在派生类中被重写。\n*   多态允许将同名方法的调用定向到相应的重写方法。\n*   能力类（Capability classes）通常不包含数据，仅声明了可以在派生类中重写的虚方法。\n\
+  *   返回 `-1` 值的虚方法发出错误信号，表示它们不应被直接调用。\n* 抽象数据类型（ADT）代表一个概念，并且总是其他类的基类。\n*   使用赋值\
+  \ `=0` 声明纯虚拟方法表示该类是一个 ADT。\n*   类可以从 ADT 派生——但你无法创建 ADT 的实例。\n* 一个 ADT 可以从另一个 ADT\
+  \ 派生，创建一个复杂的类层次结构。\n* 程序可以拆分为头文件、实现文件和客户端文件，以帮助移植性并简化代码维护。\n* 被 `#include` 指令引用的头文件将在编译期间由编译器自动包含。\n\
+  \n9\n\n## 宏处理\n\n***本章演示了如何让 C++ 编译器在编译程序之前执行实用的任务。***\n\n探索编译\n* 定义替换符\n* 定义条件\n\
+  * 提供备选方案\n* 保护包含\n* 使用宏函数\n* 构建字符串\n* 调试断言\n* 总结\n\n## 探索编译\n\n每当 C++ 编译器运行时，它首先调用其预处理器来寻找可能包含在源代码中的任何编译器指令。这些指令中的每一个都以\
+  \ `#` 哈希字符开头，并将首先执行，以便在汇编和编译之前有效地修改源代码。\n\n![image](img/pg152_1.jpg)\n\n编译器指令对预处理器所做的更改创建了通常不可见的临时文件。正是这些临时文件被用于创建二进制对象文件：\n\
+  \n* 编译期间创建的第一个临时文件通过将编译器指令替换为实现这些指令的库代码来扩展原始源代码。该文本文件的命名与源文件相似，但扩展名为 `.ii`。\n* 编译期间创建的第二个临时文件是将临时扩展\
+  \ `.ii` 文件翻译成低级汇编语言指令。该文本文件的命名与源文件相似，但扩展名为 `.s`。\n* 编译期间创建的第三个临时文件是将临时汇编语言 `.s`\
+  \ 文件翻译成机器码。该二进制对象文件的命名与源文件相似，但扩展名为 `.o`。\n\n因此，编译过程利用预处理器来编译源代码，使用“汇编器”将其翻译成机器码，并使用“链接器”将一个或多个二进制对象转换为可执行程序。\n\
+  \n你可以通过指示编译器使用 `-save-temps` 编译器选项来保存它们，从而查看临时文件。然后可以在纯文本编辑器中打开这两个临时文本文件。\n\n最重要的是，你可以看到带有\
+  \ `.ii` 扩展名的临时文件包含了来自任何已包含库的完整函数定义。例如，它将 `#include <iostream>` 指令替换为 `cin`、`cout`、`cerr`\
+  \ 函数以及用于将错误消息重定向到文件的 `clog` 函数的定义。`.ii` 文件的末显示定义的函数属于“std”命名空间——因此它们可以在没有 `std::`\
+  \ 前缀的情况下出现。\n\n![image](img/1r.jpg)创建一个名为“prog.cpp”的简单程序，该程序在执行时将输出一条消息\n\n```cpp\n\
+  #include <iostream>\n\nusing namespace std ;\n\nint main()\n{\n    cout << “This\
+  \ is a simple test program” << endl ;\n    return 0 ;\n}\n```\n\n![image](img/commonr.jpg)\n\
+  \nprog.cpp\n\n![image](img/2r.jpg)使用 `-save-temps` 选项发布命令保存临时文件，并使用 `-c` 选项将此程序的源文件编译为对象文件——不生成可执行文件\
+  \ `c++ prog.cpp -save-temps -c`\n\n![image](img/3r.jpg)用记事本等纯文本编辑器打开 `.ii` 文件，然后滚动到文件末尾查看修改后的源代码——注意\
+  \ `<iostream>` 库函数如何在 `std` 命名空间中定义\n\n![image](img/pg153_1.jpg)\n\n![image](img/4r.jpg)用纯文本编辑器打开\
+  \ `.s` 文件查看低级汇编指令——注意消息字符串现在由特殊字符 `\\0` 终止\n\n![image](img/5r.jpg)使用 -save-temps\
+  \ 选项发布命令保存临时文件 `c++ prog -o prog`\n\n![image](img/pg153_2.jpg)\n\n![image](img/hot.jpg)一个或多个对象文件可以创建可执行文件——如处所示](#chapter08.xhtml_70)。\n\
+  \n## 定义替换\n\n正如预处理器为 `#include` 指令替换库代码一样，其他预处理器指令也可在汇编和编译之前替换文本或数值。\n\n![image](img/pg154_1.jpg)\n\
+  \n#define 指令指定一个宏，其由标识符名称和字符串或数值组成，由预处理器替换源代码中的每个出现。\n\n与 #include 预处理器指令一样，define\
+  \ 指令可以出现在源代码的开头。与常量相同，宏名称传统上使用大写，定义的字符串值应包含双引号内。对于表达式中的数值替换，宏名称应包含括号以确保正确的优先级。\n\
+  \n![image](img/1r.jpg)通过声明三个 define 直接启动新程序\n\n```cpp\n#define BOOK “C++ Programming\
+  \ in easy steps”\n#define NUM 200\n#define RULE “*******************************”\n\
+  ```\n\n![image](img/commonr.jpg)\n\ndefine.cpp\n\n![image](img/2r.jpg)指定要包含的库类和命名空间\n\
+  \n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/3r.jpg)添加包含返回语句的三个输出替换值的\
+  \ main 函数\n\n```cpp\nint main()\n{\n    cout << RULE << endl << BOOK << endl <<\
+  \ RULE ;\n    cout << endl << “NUM is: ” << NUM << endl ;\n    cout << “Double NUM:\
+  \ ” << ( NUM ) * 2 ) << endl ;\n    return 0 ;\n}\n```\n\n![image](img/4r.jpg)保存、编译并运行程序以查看输出\n\
+  \n```bash\nc++ .o -o define\n```\n\n![image](img/5r.jpg)数值常量通常最好声明为 `const` 变量——因为由预处理器替换的值不受类型检查。\n\
+  \n![image](img/6r.jpg)重新编译程序，保存临时文件 `c++ define.cpp -save-temps -o define.exe`\n\
+  \n\n\n\n\n![image](img/pg155_1.jpg)\n\n![image](img/hot.jpg)\n\nLinux 用户可以使用转义的双引号\
+  \ `\\””string”\\”` 或普通的单引号 `‘“string”’` 来在命令中包含引用的字符串。\n\n此外，也可以通过命令行使用 `-Dname`\
+  \ 选项进行替换，将宏替换为指定的值。请注意，双引号内的字符串值在命令中也必须用转义引号括——因此替换将包含双引号字符。\n\n![image](img/7r.jpg)删除或注释掉针对\
+  \ `BOOK` 和 `NUM` 标识符的 `define` 指令——保存程序文件以应用更改。\n\n![image](img/8r.jpg)重新编译程序并指定替换宏的值，然后再次运行程序\
+  \ `c++ -DNUM=50 -DBOOK=\\””Java in easy steps”\\”`。\n\n```bash\ndefine.cpp -o define.exe\n\
+  ```\n\n![image](img/pg155_2.jpg)\n\n![image](img/hot.jpg)\n\nLinux 用户可以使用转义的双引号\
+  \ `\\””string”\\”` 或普通的单引号 `‘”string”’` 来在命令中包含引用的字符串。\n\n![image](img/forget.jpg)\n\
+  \n尝试编译一个未定义标识符的程序将产生“未在此作用域中声明”的错误。\n\n### 定义条件\n\n预处理器可以通过使用宏函数执行条件测试，从而对程序源代码进行智能插入。`#ifdef`\
+  \ 指令执行最常见的预处理器功能，它会测试指定的宏是否已定义。当宏已定义时（测试返回真），预处理器将插入后续行上的所有指令或语句，直到遇到相应的 `#endif`\
+  \ 指令。\n\n![image](img/pg156_1.jpg)\n\n相反，`#ifndef` 指令测试指定的宏是否未定义。当该测试返回真时，它将插入后续行上的所有指令或语句，直到遇到相应的\
+  \ `#endif` 指令。\n\n为了满足任一条件测试，需要注意的是，`#define` 指令仅需指定宏名称来定义标识符——它不需要指定用于替换的值。\n\n\
+  以后可以使用 `#undef` 指令移除之前之前定义的任何宏——使得随后的 `#ifdef` 条件测试失败。随后可以通过另一个 `#define` 指令重新定义宏：\n\
+  \n![image](img/1r.jpg)启动一个带有条件测试的新程序，当宏尚未定义时插入一个指令。\n\n```cpp\n#ifndef BOOK\n#define\
+  \ BOOK “C++ Programming in easy steps”\n#endif\n```\n\n![image](img/commonr.jpg)\n\
+  \nifdef.cpp\n\n![image](img/2r.jpg)指定要包含的库类和命名空间\n\n```cpp\n#include <iostream>\n\
+  using namespace std ;\n```\n\n![image](img/3r.jpg)添加一个包含最终 `return` 语句的 main 函数。\n\
+  \n```cpp\nint main()\n{\n    // 程序代码在此。\n    return 0 ;\n}\n```\n\n![image](img/4r.jpg)在\
+  \ main 函数中，添加一个条件预处理器测试，在测试成功时插入输出语句。\n\n```cpp\n#ifdef BOOK\ncout << BOOK ;\n#endif\n\
+  ```\n\n![image](img/5r.jpg)添加另一个条件预处理器测试，在测试成功时定义一个新宏并插入输出语句。\n\n```cpp\n#ifndef\
+  \ AUTHOR\n#define AUTHOR “Mike McGrath”\ncout << “ by ” << AUTHOR << endl ;\n#endif\n\
+  ```\n\n![image](img/6r.jpg)接下来，添加一个条件测试，如果宏已经定义，则取消定义它。\n\n```cpp\n#ifdef BOOK\n\
+  #undef BOOK\n#endif\n```\n\n![image](img/7r.jpg)现在，添加一个条件测试，如果宏不再定义，则重新定义它并插入输出语句。\n\
+  \n```cpp\n#ifndef BOOK\n#define BOOK “Linux in easy steps”\ncout << BOOK “ by “\
+  \ << AUTHOR << endl ;\n#endif\n```\n\n![image](img/8r.jpg)保存、编译并运行程序以查看插入结果。\n\n\
+  ![image](img/pg157_1.jpg)\n\n![image](img/9r.jpg)重新编译程序，这次在命令中定义 `BOOK` 宏，然后再次运行程序，在输出的第一行中看到指定的值。\n\
+  \n```bash\nc++ -DBOOK=\\”“Python in easy steps”\\” ifdef.cpp -o ifdef.exe\n```\n\
+  \n![image](img/pg157_2.jpg)\n\n![image](img/snake.jpg)\n\n每个预处理器指令必须单独占一行——你不能在同一行上放置多个指令。\n\
+  \n![image](img/forget.jpg)\n\n在 Windows 系统上，命令中指定的字符串宏值必须用转义的双引号括。\n\n### 提供替代方案\n\
+  \n可以通过添加 `#else` 指令扩展 `#ifdef` 和 `#ifndef` 执行的条件测试提供替代方案。例如：\n\n```cpp\n#ifdef WEATHER\n\
+  cout << WEATHER ;\n#else\n#define WEATHER “Sunny”\n#endif\n```\n\n![image](img/pg158_1.jpg)\n\
+  \n同样，`#if`、`#else` 和 `#elif` 宏可以执行多个条件测试，就像普通的 C++ `if` 和 `else` 关键字一样。\n\n预定义宏是特定平台的，通常这些名称以双下划线开头，以避免与选择的名称意外冲突。要查看预定义宏列表，对空文件使用\
+  \ `-dM` 选项直接调用预处理器：\n\n```bash\ncpp -dM empty.txt\n```\n\n滚动列表查找 Windows 的 `_WIN32`\
+  \ 或 Linux 的 `__linux`。`_WIN32` 宏有一个下划线，而 `__linux` 宏有两个下划线。\n\n### 包含保护\n\n![image](img/pg158_2.jpg)\n\
+  \n![image](img/pg158_3.jpg)\n\n![image](img/snake.jpg)\n\n使用 `cpp` 命令（而不是 `c++`\
+  \ 命令）并确保 `-dM` 选项大小写正确。\n\n```cpp\n#if defined __WIN32\n#define PLATFORM “Windows”\n\
+  #elif defined __linux\n#define PLATFORM “Linux”\n#endif\n\n#include <iostream>\n\
+  using namespace std ;\n\nint main()\n{\n    cout << PLATFORM << “ System” << endl\
+  \ ;\n    return 0 ;\n}\n\nif ( PLATFORM == “Windows” )\n    cout << “Performing\
+  \ Windows-only tasks...” << endl ;\nif ( PLATFORM == “Linux” )\n    cout << “Performing\
+  \ Linux-only tasks...” << endl ;\n```\n\n\n\n\n通常，一个 C++ 程序将包含许多 `.h` 头文件和一个包含主程序的单个\
+  \ `.cpp` 实现文件。头文件通常可能包含一个或多个 `#include` 指令，以便从其他头文件中可以使用其他类或函数，并可能在定义出现在两个文件中时导致重复。例如，当一个头文件包含了了另一个包含函数定义的头文件时，编译器将认为该定义出现在了每个文件中——因此编译将失败。\n\
+  \n![image](img/pg160_1.jpg)\n\n解决此重定义问题的流行方案是使用预处理器指令，以确保编译器只接触到单一定义。这些被称为“包含保护符”（inclusion\
+  \ guards），并为每个头文件创建一个唯一的宏名称。按照惯例，该名称通常是文件名的大写版本，并将点更改为下划线——例如，文件 `rum.h` 对应 `RUM_H`。\n\
+  \n![image](img/hot.jpg)\n\n包含保护符也被“宏保护符”（macro guards）或简单称为“包含保护符”（include guards）。\n\
+  \n在创建一个用于防止重复的宏时，`#ifndef` 指令首先测试该定义是否已经由同一程序中包含的另一个头文件创建。如果定义已存在，编译器将忽略重复定义，否则\
+  \ `#define` 指令将允许编译器使用该头文件中的定义：\n\n![image](img/1r.jpg)创建一个名为“add.h”的头文件，其中包含“add”函数的内联声明\n\
+  \n```cpp\ninline int add ( int x, int y ) { return ( x + y ) ; }\n```\n\n![image](img/commonhr.jpg)\n\
+  \nadd.h\n\n![image](img/2r.jpg)现在，创建一个名为“triple.h”的头文件，其中包含一个处理器指令，使 `add` 函数可以在“triple”函数的内联声明中使用\n\
+  \n```cpp\n#include “add.h”\n\ninline int triple ( x ) { return add( x, add( x, x\
+  \ ) ) ; }\n```\n\n![image](img/commonhr.jpg)\n\ntriple.h\n\n![image](img/3r.jpg)使用预处理器指令开始一个新程序，使\
+  \ `add` 和 `triple` 函数均可用\n\n```cpp\n#include “add.h”\n\n#include “triple.h”\n```\n\
+  \n![image](img/commonr.jpg)\n\nguard.cpp\n\n![image](img/4r.jpg)指定要包含的库类和命名空间\n\n\
+  ```cpp\n#include <iostream>\n\nusing namespace std ;\n```\n\n![image](img/5r.jpg)添加一个主函数，其中包含调用包含头文件中\
+  \ `add()` 和 `triple()` 函数的语句\n\n```cpp\nint main()\n{\n  cout << “9 + 3 = “ << add(\
+  \ 9, 3 ) << endl ;\n  cout << “ 9 x 3 = “ << triple( 9 ) << endl ;\n  return 0 ;\n\
+  }\n```\n\n![image](img/6r.jpg)保存文件，然后尝试编译程序以查看编译是否失败，因为 `add` 函数似乎定义了两次——分别在“add.h”中和通过包含在“triple.h”中\n\
+  \n![image](img/pg161_1.jpg)\n\n![image](img/7r.jpg)编辑头文件“add.h”，将内联函数封装在预处理器包含保护符中\n\
+  \n```cpp\n#ifndef ADD_H\n#define ADD_H\n\ninline int add ( int x, int y ) { return\
+  \ ( x + y ) ; }\n#endif\n```\n\n![image](img/8r.jpg)保存修改后的文件，然后编译并运行程序——现在编译成功，因为包含保护符防止了\
+  \ `add` 函数的表面重复定义\n\n![image](img/pg161_2.jpg)\n\n![image](img/snake.jpg)\n\n使用传统的命名方案（即宏名称与文件名相似）以避免冲突。\n\
+  \n![image](img/forget.jpg)\n\n所有头文件都应该包含头保护——在 `triple.h` 文件中添加 `TRIPLE_H` 宏。\n\n\
+  ## 使用宏函数\n\n`#define` 指令可用于创建宏函数，这些函数会在编译前的源代码中被替换。\n\n![image](img/pg162_1.jpg)\n\
+  \n一个预处理器函数声明由一个宏名称以及紧随其包含函数参数的括号组成——在名称和括号之间不要留任何空格是非常重要的。声明之后紧跟在另一组括号内的函数定义。例如，一个将参数减半的预处理器宏函数看起来如下：\n\
+  \n```cpp\n#define HALF( n ) ( n / 2)\n```\n\n使用宏函数时需要小心，因为与普通的 C++ 函数不同，它们不执行任何形式的类型检查——因此很容易创建一个导致错误的宏。由于由于原因，内联函数通常比宏函数更优，但由于宏直接替换其代码，它们避免了函数调用的开销——因此程序运行得更快。结果差异可以在编译过程中创建的第一个临时文件中：\n\
+  \n![image](img/1r.jpg)通过定义两个处理单个参数的宏函数开始一个新程序\n\n```cpp\n#define SQUARE( n ) ( n\
+  \ * n )\n\n#define CUBE( n ) ( n * n * n )\n```\n\n![image](img/commonr.jpg)\n\n\
+  macro.cpp\n\n![image](img/2r.jpg)在宏定义之后，指定要包含的库类和要使用的命名空间前缀\n\n```cpp\n#include\
+  \ <iostream>\nusing namespace std ;\n```\n\n![image](img/3r.jpg)接下来，声明内联函数来处理单个参数——就像宏函数一样\n\
+  \n```cpp\ninline int square ( int n ) { return ( n * n ) }\n\ninline int cube (\
+  \ int n ) { return ( n * n * n ) }\n```\n\n![image](img/4r.jpg)添加一个主函数，其中包含最后的 `return`\
+  \ 语句\n\n```cpp\nint main()\n{\n  // 程序代码在这里\n  return 0 ;\n}\n```\n\n![image](img/5r.jpg)在主函数开头声明并初始化一个整数变量\n\
+  \n```cpp\nint num = 5 ;\n```\n\n![image](img/6r.jpg)现在，插入语句调用每个宏函数和每个内联函数\n\n```cpp\n\
+  cout << “Macro SQUARE: ” << SQUARE( num ) << endl ;\ncout << “Inline square: ” <<\
+  \ square( num ) << endl ;\ncout << “Macro CUBE: ” << CUBE( num ) << endl ;\ncout\
+  \ << “Inline cube: ” << cube( num ) << endl ;\n```\n\n![image](img/7r.jpg)保存文件，然后编译程序，保存临时文件并运行程序\n\
+  \n```bash\nc++ macro.cpp -save-temps -o macro.exe\n```\n\n![image](img/pg163_1.jpg)\n\
+  \n![image](img/8r.jpg)用纯文本编辑器打开临时“.ii”文件，查看宏函数已直接替换在每个输出语句中\n\n![image](img/pg163_2.jpg)\n\
+  \n## 构建字符串\n\n处理器 `#` 运算符被称为字符串化（stringizing）运算符，因为它将作为宏参数传递的字符序列转换为字符串——添加双引号来封装字符串。\n\
+  \n![image](img/pg164_1.jpg)\n\n作为字符串化运算符参数的字符序列前后的空白都会被忽略，字符之间的多个空格将减少为一个空格。\n\n\
+  字符串化运算符有助于将字符串值传递给预处理器 `#define` 指令，而无需为每个字符串加上双引号。\n\n宏定义可以使用 `##` 合并运算符将两个项合并为一个项。当合并后的项是变量名时，其值不会被宏展开——它只是允许变量名被宏替换。\n\
+  \n\n\n\n\n![image](img/3r.jpg)在宏定义之后，指定要包含的库类以及要使用的命名空间缀\n\n```cpp\n#include <string>\n\
+  #include <iostream>\nusing namespace std ;\n```\n\n![image](img/4r.jpg)添加一个包含最终返回语句的\
+  \ main 函数\n\n```cpp\nint main()\n{\n// Program code goes here.\nreturn 0 ;\n}\n\
+  ```\n\n![image](img/5r.jpg)在 main 函数块的开始，声明并初始化一个字符串变量，然后追加另一个字符串\n\n```cpp\nstring\
+  \ longerline = “They carried a net ” ;\nlongerline += “and their hearts were set”\
+  \ ;\n```\n\n![image](img/6r.jpg)现在，添加语句使用宏输出文本\n\n```cpp\nLINEOUT(In a bowl to sea\
+  \ went wise men three) ;\nLINEOUT(On a brilliant night in June) ;\nGLUEOUT( longer,\
+  \ line ) ;\nLINEOUT(On fishing up the moon.) ;\n```\n\n![image](img/7r.jpg)保存文件，然后编译程序，保存临时文件并运行程序\n\
+  \n```bash\nc++ strung.cpp -save-temps -o strung.exe\n```\n\n![image](img/pg165_1.jpg)\n\
+  \n![image](img/8r.jpg)用纯文本编辑器（如记事本）打开临时 `.ii` 文件，可以看到字符串值和变量名已在输出语句中替换\n\n![image](img/pg165_2.jpg)\n\
+  \n![image](img/hot.jpg)\n\n注意第二个语句包含多个空格，这些将被字符串化运算符移除\n\n![image](img/forget.jpg)\n\
+  \n合并运算符被称为“标记粘贴”（token-pasting）运算符，因为它将两个“标记”粘贴在一起。\n\n### 调试断言 (Debugging assertions)\n\
+  \n有时使用预处理器指令来辅助程序代码调试是有帮助的——通过定义一个 `ASSERT` 宏函数来对布尔值评估指定的条件。\n\n![image](img/pg166_1.jpg)\n\
+  \n要评估的条件将作为 `ASSERT` 函数的参数从调用者传递。该函数随后可以根据评估结果执行适当的语句。通过在每行末尾添加反斜杠 `\\`，可以在宏函数定义中包含多个语句，允许定义延续到下一行。\n\
+  \n可以在程序代码中添加许多调用 `ASSERT` 函数的语句，以在程序运行期间监控条件。例如，检查变量值变化的情况。\n\n![image](img/forget.jpg)\n\
+  \n在调试时，可以使用 C 风格的 `/* */` 注释运算符注释代码部分。\n\n有用的是，`ASSERT` 函数可以通过 `DEBUG` 宏控制。这允许通过简单更改\
+  \ `DEBUG` 控制宏的值来轻松开启或关闭调试：\n\n![image](img/1r.jpg)通过定义一个值为 1 的 DEBUG 宏来启动新程序——以控制\
+  \ `ASSERT` 函数\n\n```cpp\n#define DEBUG 1\n```\n\n![image](img/commonr.jpg)\n\nassert.cpp\n\
+  \n![image](img/2r.jpg)接下来，添加一个宏 `if-elif` 语句块，根据控制值定义 `ASSERT` 函数\n\n```cpp\n#if(\
+  \ DEBUG == 1 )\n// Definition for “on” goes here.\n#elif( DEBUG == 0 )\n// Definition\
+  \ for “off” goes here.\n#endif\n```\n\n![image](img/3r.jpg)在 `ASSERT` 函数语句块的顶部部分插入当调试控制设置为“开启”时的定义——用于从预定义的宏输出失败细节\n\
+  \n| `#define ASSERT( expr )` | `\\` |\n| :--- | :--- |\n| `cout << #expr << “ ...”\
+  \ << num ;` | `\\` |\n| `if ( expr != true )` | `\\` |\n| `{` | `\\` |\n| `cout\
+  \ << “ Fails in file: ” << __FILE__ ;` | `\\` |\n| `cout << “ at line: ” << __LINE__\
+  \ << endl ;` | `\\` |\n| `}` | `\\` |\n| `else cout << “ Succeeds” << endl ;` |\
+  \ |\n\n![image](img/snake.jpg)\n\n不要在定义的最后一行放置反斜杠续行符，并记得使用 `#` 字符串化运算符将表达式作为字符串输出。\n\
+  \n![image](img/4r.jpg)在 `ASSERT` 函数语句块的底部，插入当调试控制设置为“关闭”时的定义——仅输出当前的变量值\n\n```cpp\n\
+  #define ASSERT( result ) \\\ncout << “Number is “ << num << endl ;\n```\n\n![image](img/5r.jpg)在宏定义之后，指定要包含的库类以及要使用的命名空间缀\n\
+  \n```cpp\n#include <iostream>\nusing namespace std ;\n```\n\n![image](img/6r.jpg)添加一个包含最终返回语句的\
+  \ main 函数\n\n```cpp\nint main()\n{\n// Program code goes here.\nreturn 0 ;\n}\n\
+  ```\n\n![image](img/7r.jpg)在 main 函数块的开始，声明并初始化一个整数变量，然后调用宏 `ASSERT` 函数检查其递增后的值\n\
+  \n| `int num = 9 ;` | `ASSERT( num < 10 ) ;` |\n| :--- | :--- |\n| `num++ ;` | |\n\
+  \n![image](img/8r.jpg)保存、编译并运行程序以查看输出\n\n![image](img/pg167_1.jpg)\n\n```cpp\n#define\
+  \ DEBUG 0\n```\n\n![image](img/pg167_2.jpg)\n\n![image](img/forget.jpg)预定义宏以双下划线开头并以双下划线结尾\n\
+  \n![image](img/hot.jpg)此外，可以使用 `__DATE__` 和 `__TIME__` 预定义宏输出当前日期和时间\n\n### 总结 (Summary)\n\
+  \n![image](img/pg42_1)\n\n- C++ 编译器的 `-save-temps` 选项保存编译过程中产生的临时文件。\n- 编译首先将程序代码和包含的库代码写入单个\
+  \ .ii 文件，然后将其转换为汇编语言 .s 文件。\n- 汇编语言 .s 文件被翻译为机器码 .o 对象文件，用于创建可执行程序。\n- `#define`\
+  \ 指令定义一个宏名称和预处理器应替换该名称的值。\n- 预处理器可以使用 `#ifdef`, `#ifndef` 和 `#endif` 进行条件测试，并可以使用\
+  \ `#undef` 删除定义。\n- 每个头文件都应使用包含保护符防止类的重复定义，宏名称是文件名的大写版本，并将点替换为下划线。\n- `#define`\
+  \ 指令还可定义一个宏函数，该函数会在程序代码中被宏名称替换。\n- 内联函数通常比宏函数更好，因为与宏函数不同，它们会进行类型检查。\n- 预处理器 `#`\
+  \ 字符串化运算符将作为宏参数传递的字符转换为字符串值。\n- 两个标记可以通过预处理器 `##` 合并运算符合并成一个标记。\n- `ASSERT` 宏函数对于调试代码非常有用，并且可以通过\
+  \ `DEBUG` 宏控制以轻松开启或关闭调试。\n\n\n\n\n\nWindows 10 引入了**通用 Windows Platform** (UWP)，它允许您创建一个单一的**通用\
+  \ Windows 应用** (UWA)，该应用可以在任何现代基于 Windows 的设备上运行。UWA 的界面布局使用**可扩展应用程序标记语言** (XAML)\
+  \ 来指定组件。为了为 UWP 开发应用，您应该运行 Windows 10 或 Windows 11，并且您的 Visual Studio IDE 必须包含**通用\
+  \ Windows 应用开发工具**：\n\n![image](img/1g.jpg)进入 Windows 应用程序菜单并启动 `Visual Studio Installer`\n\
+  \n![image](img/pg170_2.jpg)\n\n![image](img/commong.jpg)\n\nUniversal\n\n![image](img/2g.jpg)点击安装程序的**修改**按钮以打开“修改”对话框\n\
+  \n![image](img/pg170_3.jpg)\n\n![image](img/3g.jpg)选择“工作负载”菜单，然后选择**通用 Windows 平台开发**工作负载组件\n\
+  \n![image](img/pg170_4.jpg)\n\n![image](img/4g.jpg)点击对话框中的**修改**按钮以下载并安装 UWP 开发工作负载组件\n\
+  \n![image](img/pg170_5.jpg)\n\n![image](img/5g.jpg)点击**启动**按钮打开 Visual Studio IDE\n\
+  \n![image](img/pg170_6.jpg)\n\n![image](img/6g.jpg)选择**创建新项目**选项\n\n![image](img/pg170_7.jpg)\n\
+  \n![image](img/7g.jpg)滚动项目选项列表，点击**安装用于 C++ 开发的 Windows 通用工具**选项以下载工具\n\n![image](img/pg170_8.jpg)\n\
+  \n![image](img/snake.jpg)\n\n本章示例针对 Windows 11 上的 Visual Studio 2022 说明 – 其他版本的说明可能会不同。\n\
+  \n![image](img/forget.jpg)\n\n根据您安装 Visual Studio 时的选择，您可能已经拥有通用 Windows 应用开发工具。\n\
+  \n![image](img/8g.jpg)再次选择**创建新项目**并选择**空白应用（通用 Windows - C++/CX）**项目选项\n\n![image](img/pg171_1.jpg)\n\
+  \n![image](img/9g.jpg)点击**下一步**打开**配置你的新项目**对话框，然后将项目命名为“Universal”并点击**创建**\n\n\
+  ![image](img/pg171_2.jpg)当要求选择目标和最小平台版本时，只需点击**确定**以接受默认选项\n\n![image](img/11g.jpg)在\
+  \ Visual Studio 创建新项目后，选择**视图, 解决方案管理器**以检查生成的文件：\n\n* **Assets** 文件夹中的一组 logo 图像。\n\
+  * 内部 XAML 和 C++ **App** 文件。\n* **MainPage** 的 XAML 和 C++ 文件 – 您将在此处创建界面组件和功能代码。\n\
+  * 其他杂项**Package** 包文件。\n\n![image](img/pg171_3.jpg)\n\n![image](img/snake.jpg)\n\
+  \n确保在**设置>隐私与安全性>开发人员**中启用了 Windows **开发模式**和**设备发现**选项。\n\n![image](img/forget.jpg)\n\
+  \n这些文件对于所有使用 C++ 的 UWP 应用都至关重要，并且存在于 Visual Studio 创建的每个以 C++ 为目标针对通用 Windows 平台的项目中。\n\
+  \n## 插入页面组件\n\nVisual Studio 提供了一个双部分窗口来向 UWP 应用中插入界面组件。这包含了组件的**设计**视图和用于 XAML\
+  \ 代码的 **XAML** 视图：\n\n![image](img/1g.jpg)打开**解决方案管理器**，然后双击 `MainPage.xaml` – 启动双部分窗口\n\
+  \n![image](img/pg172_1.jpg)\n\n![image](img/commong.jpg)\n\nUniversal\n\n![image](img/2g.jpg)看到默认情况下，**设计**视图在**横**模式下显示空白画布\n\
+  \n![image](img/pg172_2.jpg)有一个弹出的**工具箱**功能，允许您向画布上添加组件，但稍后需要在 XAML 代码中对它们进行编辑。在本示例中，组件从一开始就开始在\
+  \ XAML 代码中创建。\n\n![image](img/hot.jpg)\n\nXAML 的发音为“zammel”。\n\n![image](img/3g.jpg)现在，看到默认情况下，**XAML**\
+  \ 视图显示存在 `<Grid> </Grid>` 标签 – 这是画布的根元素，您可以在其中添加组件元素\n\n![image](img/pg173_1.jpg)组件元素最好嵌套在\
+  \ `<StackPanel>` 元素中，因为可以给它赋予一个 `x:Name` 以在功能代码中引用，并赋予一个 `Orientation` 属性以指定嵌套元素出现的方向。常见的组件元素包括\
+  \ `<Image>`、`<TextBox>`、`<TextBlock>`（标签）和 `<Button>`。多个 `<StackPanel>` 元素相互嵌套可以确定组件的**水平**和**垂直**布局：\n\
+  \n![image](img/4g.jpg)在根 `<Grid> </Grid>` 标签之间插入元素，使 **XAML** 视图代码看起来恰好像这样：\n\n\
+  ![image](img/pg173_2.jpg)\n\n![image](img/5g.jpg)当您在**设计**视图中添加组件时，它们看起来所示：\n\n\
+  ![image](img/pg173_3.jpg)\n\n```xml\n<Grid>\n    <StackPanel>\n        <Image x:Name=\"\
+  image1\" />\n        <TextBox x:Name=\"textbox1\" />\n        <TextBlock x:Name=\"\
+  textblock1\" Text=\"Label\" />\n        <Button x:Name=\"button1\" Content=\"Click\"\
+  \ />\n    </StackPanel>\n</Grid>\n```\n\n## 导入资源\n\n为了让 `<Image>` 组件显示图形，首先需要将图像文件添加到项目的\
+  \ **Assets** 文件夹。然后将其分配给 `<Image>` 标签的 `Source` 属性：\n\n![image](img/1g.jpg)将图像复制到项目的\
+  \ Assets 文件夹，通常位于 `C:\\Users\\username\\repos\\project\\Assets`\n\n![image](img/commong.jpg)\n\
+  \nUniversal\n\n![image](img/2g.jpg)打开解决方案管理器，然后右键点击 **Assets** 文件夹并从右键菜单中选择**添加**\n\
+  \n![image](img/3g.jpg)现在，从下一个键菜单中选择**现有项目…** – 打开现有项目对话框\n\n![image](img/pg174_1.jpg)在现有项目对话框中，浏览到图像文件的位置并点击**添加**按钮\n\
+  \n![image](img/pg174_2.jpg)\n\n![image](img/hot.jpg)用于显示的图像可以是任何文件格式 – 如 `.bmp`、`.gif`、`.jpg`、`.png`\
+  \ 或 `.tif`。\n\n![image](img/5g.jpg)在解决方案管理器中，选中的图像现在出现在项目的 Assets 文件夹中\n\n![image](img/pg175_1.jpg)在设计视图中选择\
+  \ Image 组件，点击**查看>属性**显示其属性\n\n![image](img/pg175_2.jpg)在属性窗口中，展开**常用**类别，然后点击 `Source`\
+  \ 项目的箭头按钮并从下拉列表中选择添加的图像\n\n![image](img/pg175_3.jpg)图像现在出现在**设计**视图中，其路径被添加到 **XAML**\
+  \ 视图代码和 `Source` 属性中\n\n![image](img/pg175_4.jpg)\n\n## 导入资源\n\n探索图像属性窗口中的**外观**和**变换**选项，发现如何修改它的显示方式。\n\
+  \n## 设计布局\n\n为了完成应用的布局，可以在 XAML 元素标签中添加设计属性，以指定它们显示的内容以及它们在界面上的精确位置：\n\n![image](img/1g.jpg)打开\
+  \ `MainPage.xaml`，然后为外部 `<StackPanel>` 元素添加两个属性以固定其位置 `HorizontalAlignment=\"Left\"\
+  \ VerticalAlignment=\"Top\"`\n\n接下来，通过修改初始分配值 200 来编辑 `<Image>` 元素 – 将其宽度 **Width=\"\
+  300\"**\n\n\n\n\n\n![image](img/3g.jpg)现在，为嵌套的 `<StackPanel>` 元素添加一个属性来固定它的位置\n\n\
+  ```xml\nVerticalAlignment = ”Center”\n```\n\n![image](img/4g.jpg)然后，修改所有六个 `<TextBlock>`\
+  \ 元素以指定初始内容、宽度以及四个边的边距\n\n```xmlText = ”...” Width = ”20” Margin = ”15”\nText =\
+  \ ”...” Width = ”20” Margin = ”15”\nText = ”...” Width = ”20” Margin = ”15”\nText\
+  \ = ”...” Width = ”20” Margin = ”15”\nText = ”...” Width = ”20” Margin = ”15”\n\
+  Text = ”...” Width = ”20” Margin = ”15”\n```\n\n![image](img/5g.jpg)编辑第一个 `<Button>`\
+  \ 元素进行重命名，指定它的按钮标签内容，并设置它的四个边边距\n\n```xmlx:Name = “BtnPick” Content = “Get My Lucky\
+  \ Numbers”\nMargin = “15”\n```\n\n![image](img/6g.jpg)编辑第二个 `<Button>` 元素进行重命名并指定它的按钮标签内容\n\
+  \n```xmlx:Name = “BtnReset” Content = ”Reset”\n```\n\n![image](img/7g.jpg)最后，为每个相应的\
+  \ `<Button>` 元素添加属性以指定它们的默认状态\n\n```xmlIsEnabled = ”True”\nIsEnabled = “True”\n\
+  ```\n\n![image](img/hot.jpg)\n\n单个 `Margin` 值会设置该组件周围的所有四个边距。你可以指定两个值来设置左右和上下边距；例如\
+  \ `Margin = ”10,30”`。或者，你也可以指定四个值来分别设置左、上、右、下边距；例如 `Margin = “10,30,10,50”`。\n\n\
+  属性在每个元素中出现的顺序并不重要，但 `MainPage.xaml` 文件中的元素现在应该类似于下方的截图：\n\n![image](img/pg177_2.jpg)\n\
+  \n![image](img/pg177_1.jpg)\n\n当你更改 `XAML` 视图代码时，`Design` 视图中的组件布局会随之改变，现在看起来应该是这样的：\n\
+  \n![image](img/pg177_3.jpg)\n\n![image](img/hot.jpg)\n\n你可以选择性添加 `Margin = ”0”`\
+  \ 属性，以显式要求元素没有边距宽度。\n\n### 添加运行时功能\n\n在此处使用 `XAML` 元素完成应用程序组件布局后，你现在准备好使用 C++ 编程代码添加功能了：\n\
+  \n![image](img/1g.jpg)在 `Design` 视图中，双击 `BtnPick` 按钮\n\n![image](img/commong.jpg)\n\
+  \n通用\n\n![image](img/2g.jpg)`MainPage.xaml.cpp` 后代码页面将在 `Code Editor` 中打开，并位于生成的\
+  \ `BtnPick_Click` 事件处理程序\n\n![image](img/3g.jpg)在 `BtnPick_Click` 事件处理块中，插入这些语句来创建一个\
+  \ 1 到 59 之间的随机整数数组\n\n```cpp\nint i , j , k , seq[ 60 ] ;\nsrand( ( int ) time(\
+  \ 0 ) ) ;\nfor ( i = 1 ; i < 60 ; i++ ) seq[ i ] = i ;\nfor ( i = 1 ; i < 60 ; i++\
+  \ )\n{\nj = ( ( int ) rand( ) % 59 ) + 1 ;\nk = seq[ i ] ; seq[ i ] = seq[ j ] ;\
+  \ seq[ j ] = k ;\n}\n// 在此处插入语句（步骤 4-5）。\n```\n\n![image](img/4g.jpg)接下来，插入语句将六个数组元素值赋值给\
+  \ `<TextBlock>` 组件\n\n```cpp\ntextBlock1->Text = seq[ 1 ].ToString( ) ;\ntextBlock2->Text\
+  \ = seq[ 2 ].ToString( ) ;\ntextBlock3->Text = seq[ 3 ].ToString( ) ;\ntextBlock4->Text\
+  \ = seq[ 4 ].ToString( ) ;\ntextBlock5->Text = seq[ 5 ].ToString( ) ;\ntextBlock6->Text\
+  \ = seq[ 6 ].ToString( ) ;\n```\n\n![image](img/5g.jpg)接下来，插入语句设置 `<Button>` 状态\n\
+  \n```cpp\nBtnPick->IsEnabled = false ;\nBtnReset->IsEnabled = true ;\n```\n\n![image](img/6g.jpg)返回\
+  \ `MainPage.xaml`，然后在 `Design` 视图中，双击 `BtnReset` 按钮\n\n![image](img/7g.jpg)`MainPage.xaml.cpp`\
+  \ 后代码页面将在 `Code Editor` 中打开，并位于生成的 `BtnReset_Click` 事件处理程序\n\n![image](img/hot.jpg)\n\
+  \n`srand()` 函数使用当前系统时间为随机数生成器种子，因此后续对 `rand()` 函数的调用将返回不同的伪随机数。\n\n![image](img/forget.jpg)\n\
+  \nUWP 应用中没有 `Label` 组件；它被称为 `TextBlock`。\n\n![image](img/snake.jpg)\n\nUWP 应用中没有\
+  \ `Enabled` 属性；它被称为 `IsEnabled`。\n\n![image](img/8g.jpg)在 `BtnReset_Click` 事件处理块中，插入语句将字符串赋值给\
+  \ `<TextBlock>` 组件\n\n```cpp\ntextBlock1->Text = ”...” ;\ntextBlock2->Text = ”...”\
+  \ ;\ntextBlock3->Text = ”...” ;\ntextBlock4->Text = ”...” ;\ntextBlock5->Text =\
+  \ ”...” ;\ntextBlock6->Text = ”...” ;\n```\n\n![image](img/9g.jpg)最后，插入语句设置 `<Button>`\
+  \ 状态\n\n```cpp\nBtnPick->IsEnabled = true ;\nBtnReset->IsEnabled = false ;\n```\n\
+  \n`MainPage.xaml.cpp` 后代码页面现在应该像下面的截图：\n\n![image](img/hot.jpg)\n\n返回 `MainPage.xaml`\
+  \ 文件，然后在 `Design` 视图中，查看已添加的 `<Button>` 元素\n\n![image](img/pg79.jpg)\n\n元素现在看起来如下所示：\n\
+  \n### 测试程序\n\n在此处使用 C++ 代码添加功能后，你现在准备好测试程序：\n\n![image](img/1g.jpg)在 Visual Studio\
+  \ 工具栏上，选择 `x64` 架构和 `Local Machine` 选项，然后点击 `Start` 按钮启用调试运行应用程序\n\n![image](img/pg80.jpg)\n\
+  \n![image](img/commong.jpg)等待应用程序生成并加载，然后点击按钮尝试它们的功能\n\n![image](img/2g.jpg)\n\n\
+  ![image](img/pg81.jpg)\n\n![image](img/pg82.jpg)\n\n![image](img/forget.jpg)\n\n\
+  你必须在 **设置** >**隐私和安全性** >**开发人员** 中将你的 PC 设置为 **开发者模式**。\n\n应用程序看起来很好——数字正在随机化，按钮状态也按要求改变。\n\
+  \n\n\n\n\n![image](img/1g.jpg)打开 `MainPage.xaml`，然后在 `XAML` 视图中，在起始 `<Grid>` 元素之后、组件元素之前添加这些元素：\n\
+  \n```xml\n<VisualStateManager.VisualStateGroups>\n  <VisualStateGroup>\n    <!--\
+  \ 在此处插入元素（步骤 2-3） -->\n  </VisualStateGroup>\n</VisualStateManager.VisualStateGroups>\n\
+  ```\n\n![image](img/commong.jpg)通用性\n\n![image](img/2g.jpg)接下来，插入识别宽屏的元素\n\n```xml\n\
+  <VisualState x:Name = “wideState” >\n  <VisualState.StateTriggers>\n    <AdaptiveTrigger\
+  \ MinWindowWidth = “641” />\n  </VisualState.StateTriggers>\n</VisualState>\n```\n\
+  \n![image](img/3g.jpg)现在，插入识别窄屏的元素，并更改外部 `<StackPanel>` 的 `Orientation`\n\n```xml\n\
+  <VisualState x:Name = “narrowState” >\n  <VisualState.StateTriggers>\n    <AdaptiveTrigger\
+  \ MinWindowWidth = “0” />\n  </VisualState.StateTriggers>\n  <VisualState.Setters>\n\
+  \    <Setter Target = “MainStack.Orientation” Value = “Vertical” />\n  </VisualState.Setters>\n\
+  </VisualState>\n```\n\n![image](img/hot.jpg)\n\nXAML 代码识别与 HTML 代码中相同的 `<!-- -->`\
+  \ 注释标签。\n\n![image](img/forget.jpg)\n\n请记住，此应用中的外部 `<StackPanel>` 包含一个 `<Image>`\
+  \ 和嵌套的 `<StackPanel>`，它们是水平并排显示的。如果垂直显示，它们应该一个接一个显示。\n\n`MainPage.xaml` 文件的开头现在应该类似于右侧对应的截图：\n\
+  \n![image](img/pg183_2.jpg)\n\n![image](img/pg183_1.jpg)\n\n![image](img/4g.jpg)选择\
+  \ `x64` 和 `Local Machine`，然后点击 Start 再次运行应用程序——它看起来运行仍然正常\n\n![image](img/pg183_3.jpg)\n\
+  \n![image](img/5g.jpg)现在，拖动窗口边缘缩小宽度，观察界面如何适应更窄的屏幕\n\n![image](img/pg183_4.jpg)\n\
+  \n"
