@@ -1,0 +1,177 @@
+- fmt: "\n![](image8.jpg)\n\n![](image8.jpg)\n\n### 2.1\n```c\n#include <stdio.h>\n\
+    int main(){\n  int a=5,b=8,c=18;\n  printf(\"%dx + %dy = %d\",a,b,c);\n  return\
+    \ 0;\n}\n```\n\n### 2.2\n```c\n/* void bar3d(int left, int top, int right, int\
+    \ bottom, int depth, int topflag);\nwhere,left specifies the X-coordinate of top\
+    \ left corner,top specifies the Y-coordinate of top left corner,right specifies\
+    \ the X-coordinate of right bottom corner,bottom specifies the Y-coordinate of\
+    \ right bottom corner,depth specifies the depth of bar in pixels,topflag determines\
+    \ whether a 3 dimensional top is put onthe bar or not ( if it is non-zero then\
+    \ it is put otherwise not ) */\n#include <graphics.h>\nint main(){\n  /* gm is\
+    \ Graphics mode which is a computer display mode that generates image using pixels.\
+    \ DETECT is a macro defined in \"graphics.h\" header file */\n  int gd = DETECT,\
+    \ gm;\n  // initgraph initializes the graphics system by loading a graphics driver\
+    \ from disk\n  initgraph(&gd, &gm, \"\");\n  // location of sides\n  int left,\
+    \ top, right, bottom;\n  // depth of the bar\n  int depth;\n  // top flag denotes\
+    \ top line.\n  int topflag;\n  // left, top, right, bottom, depth, topflag location's\n\
+    \  bar3d(left = 150, top = 250, right = 190, bottom = 350, depth = 20, topflag\
+    \ = 1);\n  bar3d(left = 220, top = 150, right = 260, bottom = 350, depth = 20,\
+    \ topflag = 0);\n  bar3d(left = 290, top = 200, right = 330, bottom = 350, depth\
+    \ = 20, topflag = 1);\n  // y axis line\n  line(100, 50, 100, 350);\n  // x axis\
+    \ line\n  line(100, 350, 400, 350);\n  getch();\n  // closegraph function closes\
+    \ the graphics mode and deallocates all memory allocated by graphics system .\n\
+    \  closegraph();\n  return 0;\n}\n```\n\n### 2.3\n```c\n#include <stdio.h>\nint\
+    \ main(){\n  for(int i=1;i<=10;i++)\n    printf(\"5 x %d = %d\\n\",i,(5*i));\n\
+    \  return 0;\n}\n```\n\n### 2.4\n```c\n#include <stdio.h>\nint main(){\n  int\
+    \ a,b,c;\n  float x=a/(b-c);\n  printf(\"\\n x = %f \");\n  return 0;\n}\n```\n\
+    \n### 2.5\n```c\n#include <stdio.h>\nint main(){\n  printf(\"Enter distance travelled\
+    \ : \\n\");\n  float distance;\n  scanf(\"%f\",&distance);\n  printf(\"Enter time\
+    \ taken : \\n\");\n  float time;\n  scanf(\"%f\",&time);\n  float speed=distance/time;\n\
+    \  printf(\"Average speed = %f\",speed);\n  return 0;\n}\n```\n\n### 2.6\n```c\n\
+    #include<stdio.h>\n#include<time.h>\nint main(){\n  time_t t;\n  // not a primitive\
+    \ datatype\n  time(&t);\n  printf(\"\\nCurrent system date and time: %s\", ctime(&t));\n\
+    \  return 0;\n}\n```\n\n### 2.7\n```c\n#include <stdio.h>\nint add(int a,int b){return\
+    \ a+b;}\nint sub(int a,int b){\n  if(a>=b)return a-b;\n  else return b-a;\n}\n\
+    int main(){\n  printf(\"20 + 10 = %d\\n\",add(20,10));\n  printf(\"20 - 10 = %d\\\
+    n\",sub(20,10));\n  return 0;\n}\n```\n\n### 2.8\n```c\n#include <stdio.h>\nint\
+    \ main(int argc, const char * argv[]) {\n  printf(\"Name : Qbyte\\n\");\n  printf(\"\
+    |-------------------------------|\\n\");\n  printf(\"|Adress : KP-7,KIIT,Odisha,India|\\\
+    n\");\n  printf(\"|-------------------------------|\\n\");\n  return 0;\n}\n```\n\
+    \n### 2.9\n```c\n#include <stdio.h>\nint main(int argc, const char * argv[]) {\n\
+    \  printf(\"*\\n\");\n  printf(\"*\\t*\\n\");\n  printf(\"*\\t*\\t*\\n\");\n \
+    \ printf(\"*\\t*\\t*\\t*\");\n  return 0;\n}\n```\n\n### 2.10\n```c\n#include\
+    \ <stdio.h>\nint main() {\n  printf(\" ----------                      -----------\\\
+    n\");\n  printf(\"|          |                      |           |\\n\");\n  printf(\"\
+    |         |                  ------------>>------------>    |           |\\n\"\
+    );\n  printf(\"|         |                                              |\\n\"\
+    );\n  return 0;\n}\n```\n\n### 2.11\n```c\n#include <stdio.h>\nint main() {\n\
+    \  printf(\"Enter lengths of 3 sides\");\n  float a,b,c;\n  scanf(\"%f %f %f\"\
+    ,&a,&b,&c);\n  float s=(a+b+c)/2;\n  float area=sqrt(s*(s-a)*(s-b)*(s-c));\n \
+    \ printf(\"\\nArea = %.3f\",area);\n  return 0;\n}\n```\n\n### 2.12\n```c\n#include\
+    \ <stdio.h>\nint main() {\n  printf(\"Enter 2 numbers\");\n  float x,y;\n  scanf(\"\
+    %f %f\",&x,&y);\n  printf(\"x\\�������������������y= %f\\n\",x);\n  printf(\"\
+    sum        = %f\\n\",x+y);\n  printf(\"Difference = %f\\n\",x-y);\n  printf(\"\
+    Product = %f\\n\",x*y);\n  printf(\"Division       = %f\\n\",x/y);\n  return 0;\n\
+    }\n```\n\n### 2.13\n```c\n#include <stdio.h>\nint main() {\n  printf(\"Enter first\
+    \ coordinates\");\n  float x1,y1,x2,y2;\n  scanf(\"%f %f\",&x1,&y1);\n  printf(\"\
+    Enter second coordinates\");\n  scanf(\"%f %f\",&x2,&y2);\n  float D=sqrt(pow((x2-x1),2)+pow((y2-y1),2));\n\
+    \  printf(\"Distance = %f\",D);\n  return 0;\n}\n```\n\n### 2.14\n```c\n#include\
+    \ <stdio.h>\nint main() {\n  float radius=sqrt(25+16);\n  //distance = (4-0)^2+(5-0)^2\n\
+    \  float perimeter=2*3.14159265*radius;\n  float area=3.14159265*radius*radius;\n\
+    \  printf(\"Perimeter = %f\\nArea = %f\",perimeter,area);\n  return 0;\n}\n```\n\
+    \n### 2.15\n```c\n#include <stdio.h>\nint main() {\n  float radius=(sqrt(9+16))/2;\n\
+    \  //diameter = (5-2)^2+(6-2)^2\n  radius=diameter/2;\n  float area=3.14159265*radius*radius;\n\
+    \  printf(\"Area = %f\",area);\n  return 0;\n}\n```\n\n### Interview Questions\n\
+    * Structured approach\n* Portable\n* Use of pointers : directly manage memory\n\
+    * Recursion : Call a function within a function\n* Semicolon(`;`)\n* No.\n* Braces\
+    \ `{}`\n* `main()`\n\n0----------------------------------- `@devcodes`-----------------------------------\n"
+  raw: '
+
+
+    ![](image8.jpg)
+
+
+    ![](image8.jpg)2.1#include <stdio.h>int main(){​ int a=5,b=8,c=18;​ printf("%dx
+    + %dy = %d",a,b,c);​ return 0;}2.2/* void bar3d(int left, int top, int right,
+    int bottom, int depth, int topflag);where,left specifies the X-coordinate of top
+    left corner,top specifies the Y-coordinate of top left corner,right specifies
+    the X-coordinate of right bottom corner,bottom specifies the Y-coordinate of right
+    bottom corner,depth specifies the depth of bar in pixels,topflag determines whether
+    a 3 dimensional top is put onthe bar or not ( if it is non-zero then it is put
+    otherwise not ) */#include <graphics.h>int main(){​ /* gm is Graphics mode which
+    is a computer display mode that generates image using pixels. DETECT is a macro
+    defined in "graphics.h" header file */​ int gd = DETECT, gm;​ // initgraph initializes
+    the graphics system by loading a graphics driver from disk​ initgraph(&gd, &gm,
+    "");​ // location of sides​ int left, top, right, bottom;​ // depth of the bar​
+    int depth;​ // top flag denotes top line.​ int topflag;​ // left, top, right,
+    bottom, depth, topflag location''s​ bar3d(left = 150, top = 250,​ right = 190,
+    bottom = 350,​ depth = 20, topflag = 1);​ bar3d(left = 220, top = 150,​ right
+    = 260, bottom = 350,​ depth = 20, topflag = 0);​ bar3d(left = 290, top = 200,​
+    right = 330, bottom = 350,​ depth = 20, topflag = 1);​ // y axis line​ line(100,
+    50, 100, 350);​ // x axis line​ line(100, 350, 400, 350);​ getch();​ // closegraph
+    function closes the graphics mode and deallocates all memory allocated by graphics
+    system .​ closegraph();​ return 0;}2.3#include <stdio.h>int main(){for(int i=1;i<=10;i++)printf("5
+    x %d = %d\n",i,(5*i));return 0;}2.4#include <stdio.h>int main(){int a,b,c;float
+    x=a/(b-c);printf("\n x = %f ");return 0;}2.5#include <stdio.h>int main(){printf("Enter
+    distance travelled : \n");float distance;scanf("%f",&distance);printf("Enter time
+    taken : \n");float time;scanf("%f",&time);float speed=distance/time;printf("Average
+    speed = %f",speed);return 0;}2.6#include<stdio.h>#include<time.h>int main(){time_t
+    t;   // not a primitive datatypetime(&t);printf("\nCurrent system date and time:
+    %s", ctime(&t));return 0;}2.7#include <stdio.h>int add(int a,int b){return a+b;}int
+    sub(int a,int b){if(a>=b)return a-b;elsereturn b-a;}int main(){printf("20 + 10
+    = %d\n",add(20,10));printf("20 - 10 = %d\n",sub(20,10));return 0;}2.8#include
+    <stdio.h>int main(int argc, const char * argv[]) {printf("Name : Qbyte\n");printf("|-------------------------------|\n");printf("|Adress
+    : KP-7,KIIT,Odisha,India|\n");printf("|-------------------------------|\n");return
+    0;}2.9#include <stdio.h>int main(int argc, const char * argv[]) {printf("*\n*\t*\n*\t*\t*\n*\t*\t*\t*");return
+    0;}2.10#include <stdio.h>int main() {printf(" ----------                         -----------\n");printf("|          |                       |           |\n");printf("|          |    >>------------>    |           |\n");printf("|          |                       |           |\n");printf("
+    ----------                         -----------\n");return 0;}2.11#include <stdio.h>int
+    main() {printf("Enter lengths of 3 sides");float a,b,c;scanf("%f %f %f",&a,&b,&c);float
+    s=(a+b+c)/2;float area=sqrt(s*(s-a)*(s-b)*(s-c));printf("\nArea = %.3f",area);return
+    0;}2.12#include <stdio.h>int main() {printf("Enter 2 numbers");float x,y;scanf("%f
+    %f",&x,&y);printf("x       = %f             y     = %f\n",x,y);printf("sum     =
+    %f        Difference = %f\n",x+y,x-y);printf("Product = %f        Division   =
+    %f\n",x*y,x/y);return 0;}2.13#include <stdio.h>int main() {printf("Enter first
+    coordinates");float x1,y1,x2,y2;scanf("%f %f",&x1,&y1);printf("Enter second coordinates");scanf("%f
+    %f",&x2,&y2);float D=sqrt(pow((x2-x1),2)+pow((y2-y1),2));printf("Distance = %f",D);return
+    0;}2.14#include <stdio.h>int main() {float radius=sqrt(25+16);      //distance
+    = (4-0)^2+(5-0)^2float perimeter=2*3.14159265*radius;float area=3.14159265*radius*radius;printf("Perimeter
+    = %f\nArea = %f",perimeter,area);return 0;}2.15#include <stdio.h>int main() {float
+    radius=(sqrt(9+16))/2; //diameter = (5-2)^2+(6-2)^2   radius=diameter/2float area=3.14159265*radius*radius;printf("Area
+    = %f",area);return 0;}Interview Questions2.1*Structured approach*Portable*Use
+    of pointers : directly manage memory*Recursion : Call a function within a function2.2Semicolon(;)2.3No.2.4Braces
+    {}2.5main()2.60----------------------------------- @devcodes--------------------------------'
+  toc: []
+  trans: "\n\n![](img/image8.jpg)\n\n![](img/image8.jpg)\n\n### 2.1\n```c\n#include\
+    \ <stdio.h>\nint main(){\n  int a=5,b=8,c=18;\n  printf(\"%dx + %dy = %d\",a,b,c);\n\
+    \  return 0;\n}\n```\n\n### 2.2\n```c\n/* void bar3d(int left, int top, int right,\
+    \ int bottom, int depth, int topflag);\n其中，left 指定左上角的 X 坐标，top 指定左上角的 Y 坐标，right\
+    \ 指定右下角的 X 坐标，bottom 指定右下角的 Y 坐标，depth 指定条形以像素为单位的深度，topflag 决定是否在条形上放置一个三维顶端（如果为非零则放置，否则不放置）\
+    \ */\n#include <graphics.h>\nint main(){\n  /* gm 是图形模式（Graphics mode），这是一种使用像素生成图像的计算机显示模式。DETECT\
+    \ 是在\"graphics.h\" 头文件中定义的宏宏 */\n  int gd = DETECT, gm;\n  // initgraph 通过从磁盘加载图形驱动程序初始化图形系统\n\
+    \  initgraph(&gd, &gm, \"\");\n  // 侧边位置\n  int left, top, right, bottom;\n  //\
+    \ 条形的深度\n  int depth;\n  // topflag 表示顶线。\n  int topflag;\n  // left, top, right,\
+    \ bottom, depth, topflag 的位置\n  bar3d(left = 150, top = 250, right = 190, bottom\
+    \ = 350, depth = 20, topflag = 1);\n  bar3d(left = 220, top = 150, right = 260,\
+    \ bottom = 350, depth = 20, topflag = 0);\n  bar3d(left = 290, top = 200, right\
+    \ = 330, bottom = 350, depth = 20, topflag = 1);\n  // y 轴线\n  line(100, 50, 100,\
+    \ 350);\n  // x 轴线\n  line(100, 350, 400, 350);\n  getch();\n  // closegraph 函数关闭图形模式并释放图形系统分配的所有内存。\n\
+    \  closegraph();\n  return 0;\n}\n```\n\n### 2.3\n```c\n#include <stdio.h>\nint\
+    \ main(){\n  for(int i=1;i<=10;i++)\n    printf(\"5 x %d = %d\\n\",i,(5*i));\n\
+    \  return 0;\n}\n```\n\n### 2.4\n```c\n#include <stdio.h>\nint main(){\n  int\
+    \ a,b,c;\n  float x=a/(b-c);\n  printf(\"\\n x = %f \");\n  return 0;\n}\n```\n\
+    \n### 2.5\n```c\n#include <stdio.h>\nint main(){\n  printf(\"请输入行驶的距离 : \\n\"\
+    );\n  float distance;\n  scanf(\"%f\",&distance);\n  printf(\"请输入所花费的时间 : \\n\"\
+    );\n  float time;\n  scanf(\"%f\",&time);\n  float speed=distance/time;\n  printf(\"\
+    平均速度 = %f\",speed);\n  return 0;\n}\n```\n\n### 2.6\n```c\n#include<stdio.h>\n\
+    #include<time.h>\nint main(){\n  time_t t;\n  // 不是基本数据类型\n  time(&t);\n  printf(\"\
+    \\n 当前系统日期时间: %s\", ctime(&t));\n  return 0;\n}\n```\n\n### 2.7\n```c\n#include\
+    \ <stdio.h>\nint add(int a,int b){return a+b;}\nint sub(int a,int b){\n  if(a>=b)return\
+    \ a-b;\n  else return b-a;\n}\nint main(){\n  printf(\"20 + 10 = %d\\n\",add(20,10));\n\
+    \  printf(\"20 - 10 = %d\\n\",sub(20,10));\n  return 0;\n}\n```\n\n### 2.8\n```c\n\
+    #include <stdio.h>\nint main(int argc, const char * argv[]) {\n  printf(\"Name\
+    \ : Qbyte\\n\");\n  printf(\"|-------------------------------|\\n\");\n  printf(\"\
+    |Adress : KP-7,KIIT,Odisha,India|\\n\");\n  printf(\"|-------------------------------|\\\
+    n\");\n  return 0;\n}\n```\n\n### 2.9\n```c\n#include <stdio.h>\nint main(int\
+    \ argc, const char * argv[]) {\n  printf(\"*\\n\");\n  printf(\"*\\t*\\n\");\n\
+    \  printf(\"*\\t*\\t*\\n\");\n  printf(\"*\\t*\\t*\\t*\");\n  return 0;\n}\n```\n\
+    \n### 2.10\n```c\n#include <stdio.h>\nint main() {\n  printf(\" ----------                 ----------------------\\\
+    n\");\n  printf(\"|                                    |\\n\");\n  printf(\"|                        ------------>>------------>             |\\\
+    n\");\n  printf(\"|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          \n\
+    �\n�  0\n\n\n\n```\n\n### 2.11\n```c\n#include <stdio.h>\nint main() {\n  printf(\"\
+    3 of\n\n\n\n, a,,;\n  \n\nf(\"%f\",&a,c);\n  float s=(a+b+c)/2;\n  float area=sqrt(s-a)*(s-b)*(s-c));\n\
+    \  printf(\"Area =3f\",area);\n  return 0;\n}\n\n\n\n### 2.12\n```c\n#include\
+    \ <stdio.h>\nint main() {\n  printf(\"Enter 2 numbers\");\n  float x,y;\n  scanf(\"\
+    %f %f\",&x,&y);\n  printf(\"x+y = %f\\n\",x+y);\n  printf(\"x-y = %f\\n\",x-y);\n\
+    \  printf(\"x*y = %f\\n\",x*y);\n  printf(\"x/y = %f\\n\",x/y);\n  return 0;\n\
+    }\n```\n\n### 2.13\n```c\n#include <stdio.h>\nint main() {\n  printf(\"Enter first\
+    \ coordinates\");\n  float x1,y1,x2,y2;\n  scanf(\"%f %f\",&x1,&y1);\n  printf(\"\
+    Enter second coordinates\");\n  scanf(\"%f %f\",&x2,&y2);\n  float D=sqrt(pow((x2-x1),2)+pow((y2-y1),2));\n\
+    \  printf(\"Distance = %f\",D);\n  return 0;\n}\n```\n\n### 2.14\n```c\n#include\
+    \ <stdio.h>\nint main() {\n  float radius=sqrt(25+16);\n  //distance = (4-0)²+(5-0)²\n\
+    \  float perimeter=2*3.14159265*radius;\n  float area=3.14159265*radius*radius;\n\
+    \  printf(\"Perimeter = %f\\nArea = %f\",perimeter,area);\n  return 0;\n}\n```\n\
+    \n### 2.15\n```c\n#include <stdio.h>\nint main() {\n  float radius=(sqrt(9+16))/2;\n\
+    \  //diameter = (5-2)²+(6-2)²\n  radius=diameter/2;\n  float area=3.14159265*radius*radius;\n\
+    \  printf(\"Area = %f\",area);\n  return 0;\n}\n```\n\n### Interview Questions\n\
+    * Structured approach\n* Portable\n* Use of pointers : directly manage memory\n\
+    * Recursion : Call a function within a function\n* Semicolon(`;`)\n* No.\n* Braces\
+    \ `{}`\n* `main()`\n\n"

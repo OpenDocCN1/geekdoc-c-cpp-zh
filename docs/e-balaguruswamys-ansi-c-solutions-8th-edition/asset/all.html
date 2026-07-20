@@ -1,0 +1,614 @@
+<p><img src="image8.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div>
+<img src="image8.jpg" class="class9" />
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<div id="part0001.xhtml_id_" class="class16">
+2.1
+</div>
+<div class="class18">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class18">
+int main()
+</div>
+<div class="class18">
+{
+</div>
+<div class="class18">
+<span class="class226">​</span> int a=5,b=8,c=18;
+</div>
+<div class="class18">
+<span class="class226">​</span> printf("%dx + %dy = %d",a,b,c);
+</div>
+<div class="class18">
+<span class="class226">​</span> return 0;
+</div>
+<div class="class18">
+}
+</div>
+<div class="class26">
+2.2
+</div>
+<div class="class16">
+/* void bar3d(int left, int top, int right, int bottom, int depth, int
+topflag);
+</div>
+<div class="class26">
+where,
+</div>
+<div class="class16">
+left specifies the X-coordinate of top left corner,
+</div>
+<div class="class16">
+top specifies the Y-coordinate of top left corner,
+</div>
+<div class="class16">
+right specifies the X-coordinate of right bottom corner,
+</div>
+<div class="class16">
+bottom specifies the Y-coordinate of right bottom corner,
+</div>
+<div class="class16">
+depth specifies the depth of bar in pixels,
+</div>
+<div class="class16">
+topflag determines whether a 3 dimensional top is put on
+</div>
+<div class="class16">
+the bar or not ( if it is non-zero then it is put otherwise not ) */
+</div>
+<div class="class26">
+#include &lt;graphics.h&gt;
+</div>
+<div class="class26">
+int main()
+</div>
+<div class="class16">
+{
+</div>
+<div class="class16">
+<span class="class224">​</span> /* gm is Graphics mode which is a
+computer display mode that generates image using pixels. DETECT is a
+macro defined in "graphics.h" header file */
+</div>
+<div class="class26">
+<span class="class224">​</span> int gd = DETECT, gm;
+</div>
+<div class="class26">
+<span class="class224">​</span> // initgraph initializes the graphics
+system by loading a graphics driver from disk
+</div>
+<div class="class16">
+<span class="class224">​</span> initgraph(&amp;gd, &amp;gm, "");
+</div>
+<div class="class26">
+<span class="class224">​</span> // location of sides
+</div>
+<div class="class16">
+<span class="class224">​</span> int left, top, right, bottom;
+</div>
+<div class="class26">
+<span class="class224">​</span> // depth of the bar
+</div>
+<div class="class16">
+<span class="class224">​</span> int depth;
+</div>
+<div class="class26">
+<span class="class224">​</span> // top flag denotes top line.
+</div>
+<div class="class16">
+<span class="class224">​</span> int topflag;
+</div>
+<div class="class26">
+<span class="class224">​</span> // left, top, right, bottom, depth,
+topflag location's
+</div>
+<div class="class16">
+<span class="class224">​</span> bar3d(left = 150, top = 250,
+</div>
+<div class="class16">
+<span class="class224">​</span> right = 190, bottom = 350,
+</div>
+<div class="class16">
+<span class="class224">​</span> depth = 20, topflag = 1);
+</div>
+<div class="class26">
+<span class="class224">​</span> bar3d(left = 220, top = 150,
+</div>
+<div class="class16">
+<span class="class224">​</span> right = 260, bottom = 350,
+</div>
+<div class="class16">
+<span class="class224">​</span> depth = 20, topflag = 0);
+</div>
+<div class="class26">
+<span class="class224">​</span> bar3d(left = 290, top = 200,
+</div>
+<div class="class16">
+<span class="class224">​</span> right = 330, bottom = 350,
+</div>
+<div class="class16">
+<span class="class224">​</span> depth = 20, topflag = 1);
+</div>
+<div class="class26">
+<span class="class224">​</span> // y axis line
+</div>
+<div class="class16">
+<span class="class224">​</span> line(100, 50, 100, 350);
+</div>
+<div class="class26">
+<span class="class224">​</span> // x axis line
+</div>
+<div class="class16">
+<span class="class224">​</span> line(100, 350, 400, 350);
+</div>
+<div class="class26">
+<span class="class224">​</span> getch();
+</div>
+<div class="class26">
+<span class="class224">​</span> // closegraph function closes the
+graphics mode and deallocates all memory allocated by graphics system .
+</div>
+<div class="class16">
+<span class="class224">​</span> closegraph();
+</div>
+<div class="class26">
+<span class="class224">​</span> return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.3
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main()
+</div>
+<div class="class16">
+{
+</div>
+<div class="class73">
+for(int i=1;i&lt;=10;i++)
+</div>
+<div class="class73">
+printf("5 x %d = %d\n",i,(5*i));
+</div>
+<div class="class73">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.4
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main()
+</div>
+<div class="class16">
+{
+</div>
+<div class="class73">
+int a,b,c;
+</div>
+<div class="class73">
+float x=a/(b-c);
+</div>
+<div class="class73">
+printf("\n x = %f ");
+</div>
+<div class="class73">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.5
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main()
+</div>
+<div class="class16">
+{
+</div>
+<div class="class73">
+printf("Enter distance travelled : \n");
+</div>
+<div class="class73">
+float distance;
+</div>
+<div class="class73">
+scanf("%f",&amp;distance);
+</div>
+<div class="class73">
+printf("Enter time taken : \n");
+</div>
+<div class="class73">
+float time;
+</div>
+<div class="class73">
+scanf("%f",&amp;time);
+</div>
+<div class="class73">
+float speed=distance/time;
+</div>
+<div class="class73">
+printf("Average speed = %f",speed);
+</div>
+<div class="class73">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.6
+</div>
+<div class="class16">
+#include&lt;stdio.h&gt;
+</div>
+<div class="class16">
+#include&lt;time.h&gt;
+</div>
+<div class="class16">
+int main()
+</div>
+<div class="class16">
+{
+</div>
+<div class="class73">
+time_t t;   // not a primitive datatype
+</div>
+<div class="class73">
+time(&amp;t);
+</div>
+<div class="class73">
+printf("\nCurrent system date and time: %s", ctime(&amp;t));
+</div>
+<div class="class73">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.7
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int add(int a,int b){
+</div>
+<div class="class18">
+return a+b;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class16">
+int sub(int a,int b){
+</div>
+<div class="class18">
+if(a&gt;=b)
+</div>
+<div class="class18">
+return a-b;
+</div>
+<div class="class18">
+else
+</div>
+<div class="class18">
+return b-a;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class16">
+int main(){
+</div>
+<div class="class18">
+printf("20 + 10 = %d\n",add(20,10));
+</div>
+<div class="class18">
+printf("20 - 10 = %d\n",sub(20,10));
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.8
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main(int argc, const char * argv[]) {
+</div>
+<div class="class18">
+printf("Name : Qbyte\n");
+</div>
+<div class="class18">
+printf("|-------------------------------|\n");
+</div>
+<div class="class18">
+printf("|Adress : KP-7,KIIT,Odisha,India|\n");
+</div>
+<div class="class18">
+printf("|-------------------------------|\n");
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.9
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main(int argc, const char * argv[]) {
+</div>
+<div class="class18">
+printf("*\n*\t*\n*\t*\t*\n*\t*\t*\t*");
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.10
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main() {
+</div>
+<div class="class18">
+printf(" ----------                         -----------\n");
+</div>
+<div class="class18">
+printf("|          |                       |           |\n");
+</div>
+<div class="class18">
+printf("|          |    &gt;&gt;------------&gt;    |           |\n");
+</div>
+<div class="class18">
+printf("|          |                       |           |\n");
+</div>
+<div class="class18">
+printf(" ----------                         -----------\n");
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.11
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main() {
+</div>
+<div class="class18">
+printf("Enter lengths of 3 sides");
+</div>
+<div class="class18">
+float a,b,c;
+</div>
+<div class="class18">
+scanf("%f %f %f",&amp;a,&amp;b,&amp;c);
+</div>
+<div class="class18">
+float s=(a+b+c)/2;
+</div>
+<div class="class18">
+float area=sqrt(s*(s-a)*(s-b)*(s-c));
+</div>
+<div class="class18">
+printf("\nArea = %.3f",area);
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.12
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main() {
+</div>
+<div class="class18">
+printf("Enter 2 numbers");
+</div>
+<div class="class18">
+float x,y;
+</div>
+<div class="class18">
+scanf("%f %f",&amp;x,&amp;y);
+</div>
+<div class="class18">
+printf("x       = %f             y     = %f\n",x,y);
+</div>
+<div class="class18">
+printf("sum     = %f        Difference = %f\n",x+y,x-y);
+</div>
+<div class="class18">
+printf("Product = %f        Division   = %f\n",x*y,x/y);
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.13
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main() {
+</div>
+<div class="class18">
+printf("Enter first coordinates");
+</div>
+<div class="class18">
+float x1,y1,x2,y2;
+</div>
+<div class="class18">
+scanf("%f %f",&amp;x1,&amp;y1);
+</div>
+<div class="class18">
+printf("Enter second coordinates");
+</div>
+<div class="class18">
+scanf("%f %f",&amp;x2,&amp;y2);
+</div>
+<div class="class18">
+float D=sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+</div>
+<div class="class18">
+printf("Distance = %f",D);
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class26">
+2.14
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main() {
+</div>
+<div class="class18">
+float radius=sqrt(25+16);      //distance = (4-0)^2+(5-0)^2
+</div>
+<div class="class18">
+float perimeter=2*3.14159265*radius;
+</div>
+<div class="class18">
+float area=3.14159265*radius*radius;
+</div>
+<div class="class18">
+printf("Perimeter = %f\nArea = %f",perimeter,area);
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class195">
+2.15
+</div>
+<div class="class16">
+#include &lt;stdio.h&gt;
+</div>
+<div class="class16">
+int main() {
+</div>
+<div class="class18">
+float radius=(sqrt(9+16))/2; //diameter =
+(5-2)^2+(6-2)^2   radius=diameter/2
+</div>
+<div class="class18">
+float area=3.14159265*radius*radius;
+</div>
+<div class="class18">
+printf("Area = %f",area);
+</div>
+<div class="class18">
+return 0;
+</div>
+<div class="class16">
+}
+</div>
+<div class="class204">
+Interview Questions
+</div>
+<div class="class26">
+2.1
+</div>
+<div class="class16">
+*Structured approach
+</div>
+<div class="class16">
+*Portable
+</div>
+<div class="class16">
+*Use of pointers : directly manage memory
+</div>
+<div class="class16">
+*Recursion : Call a function within a function
+</div>
+<div class="class26">
+2.2
+</div>
+<div class="class16">
+Semicolon(;)
+</div>
+<div class="class26">
+2.3
+</div>
+<div class="class16">
+No.
+</div>
+<div class="class26">
+2.4
+</div>
+<div class="class16">
+Braces {}
+</div>
+<div class="class26">
+2.5
+</div>
+<div class="class16">
+main()
+</div>
+<div class="class26">
+2.6
+</div>
+<div class="class16">
+0
+</div>
+<div class="class221">
+<span class="class-1">-----------------------------------
+@devcodes--------------------------------</span>
+</div>
