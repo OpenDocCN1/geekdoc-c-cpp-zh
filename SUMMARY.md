@@ -118,6 +118,7 @@
 +   [C# 7.0 傻指南](docs/c-70-all-in-one-for-dummies/README.md)
 +   [C# 7.0 傻瓜指南](docs/c-70-all-in-one-for-dummies-for-dummies-computertech/README.md)
 +   [C# 入门指南](docs/c-a-beginners-guide-beginners-guides/README.md)
++   [C++ 入门指南，第二版（McGraw-Hill 初学者指南）](docs/c-a-beginners-guide-second-edition-beginners-guides-mcgraw-h/README.md)
 +   [C#：初学者指南，第二版](docs/c-a-beginners-tutorial-second-edition/README.md)
 +   [C#：零基础初学者 C# 编程循序渐进指南](docs/c-a-step-by-step-guide-to-learn-c-programming-for-absolute-b/README.md)
 +   [C#：学习 C# 编程的高级指南](docs/c-advanced-guide-to-learn-c-programming-effectively/README.md)
