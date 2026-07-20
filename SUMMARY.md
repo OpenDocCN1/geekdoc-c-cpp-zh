@@ -340,6 +340,7 @@
 +   [Dashcode 入学者指南](docs/dashcode-for-dummies/README.md)
 +   [商业分析数据挖掘：R 语言概念、技术与应用](docs/data-mining-for-business-analytics-concepts-techniques-and-a/README.md)
 +   [数据模型模式：元数据映射（数据管理系统系列）](docs/data-model-patterns-a-metadata-map-the-morgan-kaufmann-serie/README.md)
++   [C++ 数据结构与算法（第二版）](docs/data-structures-and-algorithms-in-c-second-edition/README.md)
 +   [C 语言数据结构与程序设计：自学入门指南](docs/data-structures-and-program-design-using-c-a-self-teaching-i/README.md)
 +   [C 数据结构：初学者实用指南](docs/data-structures-using-c-a-practical-approach-for-beginners/README.md)
 +   [C++ 数据类型、变量、运算符与控制结构：C++ 编程入门指南](docs/data-types-and-variables-operators-and-control-structures-in/README.md)
