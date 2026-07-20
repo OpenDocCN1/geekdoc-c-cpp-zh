@@ -274,6 +274,7 @@
 +   [敏捷之道：回归基础](docs/clean-agile-back-to-basics/README.md)
 +   [洁净代码：敏捷软件手工艺手册（第2版）](docs/clean-code-a-handbook-of-agile-software-craftsmanship-2nd-ed/README.md)
 +   [接近机器：技术狂热及其不满](docs/close-to-the-machine-technophilia-and-its-discontents/README.md)
++   [CNC 加工手手册：构建、编程与实施指南](docs/cnc-machining-handbook-building-programming-and-implementati/README.md)
 +   [Mac OS X Cocoa 编程入门指南 (第4版)](docs/cocoa-programming-for-mac-os-x-4th-edition/README.md)
 +   [代码破解者：激发创意、重塑评估，并培养一批编程忍者！](docs/code-breaker-increase-creativity-remix-assessment-and-develo/README.md)
 +   [零基础编程入门指南：从零到大师：如何学习 Python、Java、SQL、C、C++、C#、HTML 和 CSS](docs/coding-for-absolute-beginners-from-zero-to-hero-how-to-learn/README.md)
