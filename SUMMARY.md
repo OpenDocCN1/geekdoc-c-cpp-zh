@@ -321,6 +321,7 @@
 +   [C++11 FAQ 中文版](docs/cpp11-faq/README.md)
 +   [掌握 C++ 编程技巧：IT 面试系列](docs/cracking-the-c-programming-skills-it-job-interview-series/README.md)
 +   [自底向上的计算机科学](docs/csbu/README.md)
++   [C++ CUDA 编程：从基础到精通](docs/cuda-programming-with-cfrom-basics-to-expert-proficiency/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
