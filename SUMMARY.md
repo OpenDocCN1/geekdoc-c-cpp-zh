@@ -109,6 +109,7 @@
 +   [C++：二合一 - 精通 C++ 终极初学者指南](docs/c-2-books-in-1---the-ultimate-beginners-guide-to-mastering-c/README.md)
 +   [C# 2012 程序员指南 (Deitel 开发者)](docs/c-2012-for-programmers-deitel-developer/README.md)
 +   [C#：3合1 - 零基础快速掌握 C# 编程的初学者、中级及高级终指南](docs/c-3-books-in-1---the-ultimate-beginner-intermediate-advanced/README.md)
++   [C++：三合一-初学者指南+简单有效的技巧+高效学习 C++ 编程高级指南](docs/c-3-in-1--beginners-guide-simple-and-effective-tips-and-tric/README.md)
 +   [C# 3.0：初学者指南](docs/c-30-a-beginners-guide-beginners-guide-osborne-mcgraw-hill/README.md)
 +   [C# 5.0：程序员参考指南](docs/c-50-programmers-reference/README.md)
 +   [C# 6 程序员高级指南](docs/c-6-for-programmers-c-sharp-six-for-programmers/README.md)
