@@ -1,0 +1,6001 @@
+- fmt: '
+
+    ![](cover.jpeg)
+
+
+    # C++
+
+    # The Ultimate Beginner’s Guide!
+
+
+    Andrew Johansen
+
+
+     Copyright 2015 by Andrew Johansen - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    ## Table of Contents
+
+
+    - Introduction
+
+    - Chapter 1: The C++ Programming Language – An Overview
+
+    - Chapter 2: The C++ Environment
+
+    - Chapter 3: The Basic Syntax of the C++ Programming Language
+
+    - Chapter 4: The Different Data Types and Variable Types in C++
+
+    - Chapter 5: The Scope of a Variable
+
+    - Chapter 6: Literals/Constants
+
+    - Chapter 7: Modifiers and Storage Classes
+
+    - Chapter 8: The Operators in the C++ Language
+
+    - Chapter 9: The Different Types of Loops in C++
+
+    - Chapter 10: The Decision-Making Statements in C++
+
+    - Chapter 11: The Different Functions in C++
+
+    - Chapter 12: Numbers in the C++ Language
+
+    - Chapter 13: C++ Arrays
+
+    - Conclusion
+
+
+    ## Introduction
+
+
+    I want to thank you and congratulate you for getting my book…
+
+
+    “C++: The Ultimate Beginner’s Guide!”
+
+
+    This book is written for people who want to learn the basics of the C++ programming
+    language. If you are looking for a comprehensive book that will teach you everything
+    you need to know about C++, this just might be what you’re looking for.
+
+
+    By reading this book, you’ll learn the basics of C++. You’ll discover the ideas,
+    concepts, techniques, and methods used by expert C++ programmers. For example,
+    this book will discuss variables, strings, functions, and data structures. That
+    means you’ll be able to write programs using the C++ language after reading this
+    material.
+
+
+    Thanks again for purchasing this book, I hope you enjoy it!
+
+
+    ## Chapter 1: The C++ Programming Language – An Overview
+
+
+    C++ is a compiled, free-form, case-sensitive, multi-purpose, and statically typed
+    programming language. It supports generic, procedural, and object-oriented programming.
+
+
+    Computer programmers consider C++ as an intermediate-level language, since it
+    has both low-level and high-level features.
+
+
+    Bjarne Stroustrup, a Danish computer scientist, created C++ in 1979. Since he
+    created this programming language as an improved version of “C” (another computer
+    language), he called it “C with Classes.” However, during 1983, the name was changed
+    to C++.
+
+
+    **Important Note:** A language is considered as “statically typed” if type checking
+    is conducted during the compilation.
+
+
+    ### C++ - An Objected-Oriented Programming Language
+
+
+    C++ is compatible with object-oriented programming. It also supports the four
+    foundations of object-oriented software development:
+
+
+    - Inheritance
+
+    - Encapsulation
+
+    - Polymorphism
+
+    - Data Hiding
+
+
+    ### The Three Major Parts of C++
+
+
+    The C++ programming language is composed of three major parts:
+
+
+    1. Core Language – This part serves as the foundation of C++ programs. It includes
+    literals, variables, operators, etc.
+
+    2. Standard Library – This part provides a wide range of functions that you can
+    use to manipulate the core language.
+
+    3. Standard Template Library (also known as STL) – This provides you with a wide
+    range of methods and techniques that you can use with C++.
+
+
+    ### Learning this Programming Language
+
+
+    When studying C++, you should concentrate on ideas and concepts related to writing
+    codes.
+
+
+    You are, after all, trying to learn a programming language because you want to
+    be a good programmer. You would want to be effective in terms of maintaining old
+    programs and creating new ones.
+
+
+    This programming language is compatible with a wide range of programming techniques.
+    You may use it as C, Smalltalk, Fortran, etc. Regardless of your preferred programming
+    style, you’ll surely achieve your goal of creating excellent programs and maintaining
+    runtime efficiency.
+
+
+    ### Using this Programming Language
+
+
+    A lot of people all over the world are using C++. That means it is reliable and
+    effective. Actually, C++ is one of the leading languages in the programming industry.
+
+
+    In general, programmers use C++ when writing device drivers and programs that
+    require direct hardware control. Researchers and programming instructors use C++
+    to accomplish their tasks: this language is powerful and easy-to-use. Even beginners
+    can master the basics of this language quickly.
+
+
+    According to computer experts, you are already using C++ if your computer runs
+    on either Windows or Macintosh. This is because these operating systems were written
+    using C++.
+
+
+    ## Chapter 2: The C++ Environment
+
+
+    You don’t have to establish your own C++ environment when reading this book. This
+    is because there are online tools that you can use to write and compile C++ codes.
+    These tools are user-friendly and capable of giving immediate feedback. That means
+    you’ll quickly discover the mistakes in your programs. One of the most popular
+    online tools is `www.compileonline.com`. You may access that site using your favorite
+    browser as you read this book.
+
+
+    To help you get started, here’s a basic code that you can use with `www.compileonline.com`:
+
+
+    ```
+
+    ![](cover.jpeg)
+
+    ```
+
+
+    You should immediately see the resulting program.
+
+
+    ### Setting Up a Local C++ Environment
+
+
+    If you still want to establish a local environment for the C++ language, your
+    computer must have the following programs:
+
+
+    1. Text Editing Software – You’ll use a text editor to write your C++ programs.
+    Here are the text editors commonly used by C++ programmers: `vi`, `vim`, `Brief`,
+    `EMACS`, and `Windows Notepad`.
+
+
+    The text editor’s name and version may change, depending on your machine’s operating
+    system. For instance, `Notepad` serves as the default text editor for Windows
+    computers. `Vi` or `vim`, however, are compatible with UNIX, Linux, and Windows.
+
+
+    The text files you’ll produce using an editor are known as source files. In the
+    C++ language, these files end with the following extensions: `.c`, `.cp`, or `.cpp`.
+
+
+    **Important Note:** Make sure that your computer has a text editor before you
+    use C++ locally. Without this kind of computer program, you won’t be able to write
+    any C++ code.
+
+
+    2. C++ Compiler – It is an actual compiler for the C++ programming language. You
+    will use this software to compile source codes into executable programs.
+
+    '
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    C++
+
+
+    The Ultimate Beginner’s Guide!
+
+
+    Andrew Johansen
+
+
+     Copyright 2015 by Andrew Johansen - All rights reserved.
+
+
+    This document is geared towards providing exact and reliable information in regards
+    to the topic and issue covered. The publication is sold with the idea that the
+    publisher is not required to render accounting, officially permitted, or otherwise,
+    qualified services. If advice is necessary, legal or professional, a practiced
+    individual in the profession should be ordered.
+
+
+    - From a Declaration of Principles which was accepted and approved equally by
+    a Committee of the American Bar Association and a Committee of Publishers and
+    Associations.
+
+
+    In no way is it legal to reproduce, duplicate, or transmit any part of this document
+    in either electronic means or in printed format. Recording of this publication
+    is strictly prohibited and any storage of this document is not allowed unless
+    with written permission from the publisher. All rights reserved.
+
+
+    The information provided herein is stated to be truthful and consistent, in that
+    any liability, in terms of inattention or otherwise, by any usage or abuse of
+    any policies, processes, or directions contained within is the solitary and utter
+    responsibility of the recipient reader. Under no circumstances will any legal
+    responsibility or blame be held against the publisher for any reparation, damages,
+    or monetary loss due to the information herein, either directly or indirectly.
+
+
+    Respective authors own all copyrights not held by the publisher.
+
+
+    The information herein is offered for informational purposes solely, and is universal
+    as so. The presentation of the information is without contract or any type of
+    guarantee assurance.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    Table of Contents
+
+
+    Introduction
+
+
+    Chapter 1: The C++ Programming Language – An Overview
+
+
+    Chapter 2: The C++ Environment
+
+
+    Chapter 3: The Basic Syntax of the C++ Programming Language
+
+
+    Chapter 4: The Different Data Types and Variable Types in C++
+
+
+    Chapter 5: The Scope of a Variable
+
+
+    Chapter 6: Literals/Constants
+
+
+    Chapter 7: Modifiers and Storage Classes
+
+
+    Chapter 8: The Operators in the C++ Language
+
+
+    Chapter 9: The Different Types of Loops in C++
+
+
+    Chapter 10: The Decision-Making Statements in C++
+
+
+    Chapter 11: The Different Functions in C++
+
+
+    Chapter 12: Numbers in the C++ Language
+
+
+    Chapter 13: C++ Arrays
+
+
+    Conclusion
+
+
+    Introduction
+
+
+    I want to thank you and congratulate you for getting my book…
+
+
+    “C++: The Ultimate Beginner’s Guide!”
+
+
+    This book is written for people who want to learn the basics of the C++ programming
+    language. If you are looking for a comprehensive book that will teach you everything
+    you need to know about C++, this just might be what you’re looking for.
+
+
+    By reading this book, you’ll learn the basics of C++. You’ll discover the ideas,
+    concepts, techniques, and methods used by expert C++ programmers. For example,
+    this book will discuss variables, strings, functions, and data structures. That
+    means you’ll be able to write programs using the C++ language after reading this
+    material.
+
+
+    Thanks again for purchasing this book, I hope you enjoy it!
+
+
+    Chapter 1: The C++ Programming Language – An Overview
+
+
+    C++ is a compiled, free-form, case-sensitive, multi-purpose, and statically typed
+    programming language. It supports generic, procedural, and object-oriented programming.
+
+
+    Computer programmers consider C++ as an intermediate-level language, since it
+    has both low-level and high-level features.
+
+
+    Bjarne Stroustrup, a Danish computer scientist, created C++ in 1979\. Since he
+    created this programming language as an improved version of “C” (another computer
+    language), he called it “C with Classes.” However, during 1983, the name was changed
+    to C++.
+
+
+    Important Note: A language is considered as “statically typed” if type checking
+    is conducted during the compilation.
+
+
+    C++ - An Objected-Oriented Programming Language
+
+
+    C++ is compatible with object-oriented programming. It also supports the four
+    foundations of object-oriented software development:
+
+
+    *   Inheritance
+
+
+    *   Encapsulation
+
+
+    *   Polymorphism
+
+
+    *   Data Hiding
+
+
+    The Three Major Parts of C++
+
+
+    The C++ programming language is composed of three major parts:
+
+
+    1.  Core Language – This part serves as the foundation of C++ programs. It includes
+    literals, variables, operators, etc.
+
+
+    2.  Standard Library – This part provides a wide range of functions that you can
+    use to manipulate the core language.
+
+
+    3.  Standard Template Library (also known as STL) – This provides you with a wide
+    range of methods and techniques that you can use with C++.
+
+
+    Learning this Programming Language
+
+
+    When studying C++, you should concentrate on ideas and concepts related to writing
+    codes.
+
+
+    You are, after all, trying to learn a programming language because you want to
+    be a good programmer. You would want to be effective in terms of maintaining old
+    programs and creating new ones.
+
+
+    This programming language is compatible with a wide range of programming techniques.
+    You may use it as C, Smalltalk, Fortran, etc. Regardless of your preferred programming
+    style, you’ll surely achieve your goal of creating excellent programs and maintaining
+    runtime efficiency.
+
+
+    Using this Programming Language
+
+
+    A lot of people all over the world are using C++. That means it is reliable and
+    effective. Actually, C++ is one of the leading languages in the programming industry.
+
+
+    In general, programmers use C++ when writing device drivers and programs that
+    require direct hardware control. Researchers and programming instructors use C++
+    to accomplish their tasks: this language is powerful and easy-to-use. Even beginners
+    can master the basics of this language quickly.
+
+
+    According to computer experts, you are already using C++ if your computer runs
+    on either Windows or Macintosh. This is because these operating systems were written
+    using C++.
+
+
+    Chapter 2: The C++ Environment
+
+
+    You don’t have to establish your own C++ environment when reading this book. This
+    is because there are online tools that you can use to write and compile C++ codes.
+    These tools are user-friendly and capable of giving immediate feedback. That means
+    you’ll quickly discover the mistakes in your programs. One of the most popular
+    online programming tools is [www.compileonline.com](http://www.compileonline.com).
+    You may access that site using your favorite browser as you read this book.
+
+
+    To help you get started, here’s a basic code that you can use with [www.compileonline.com](http://www.compileonline.com):
+
+
+    ![](images/00001.jpeg)
+
+
+    Try running this code on an online programming environment. You should immediately
+    see the resulting program.
+
+
+    Setting Up a Local C++ Environment
+
+
+    If you still want to establish a local environment for the C++ language, your
+    computer must have the following programs:
+
+
+    1.  Text Editing Software – You’ll use a text editor to write your C++ programs.
+    Here are the text editors commonly used by C++ programmers: vi, vim, Brief, EMACS,
+    and Windows Notepad.
+
+
+    The text editor’s name and version may change, depending on your machine’s operating
+    system. For instance, Notepad serves as the default text editor for Windows computers.
+    Vi or vim, however, are compatible with UNIX, Linux, and Windows machines.
+
+
+    The text files you’ll produce using an editor are known as source files. In the
+    C++ language, these files end with the following extensions: .c, .cp, or .cpp.
+
+
+    Important Note: Make sure that your computer has a text editor before you use
+    C++ locally. Without this kind of computer program, you won’t be able to write
+    any C++ code.
+
+
+    2.  C++ Compiler – It is an actual compiler for the C++ programming language.
+    You will use this software to compile source codes into executable programs.'
+  toc: []
+  trans: '
+
+
+    ![](img/cover.jpeg)
+
+
+    # C++
+
+    # 终极入门指南！
+
+
+    Andrew Johansen
+
+
+     版所有 2015 Andrew Johansen - 保留所有权利。
+
+
+    本文旨在就其涵盖的主题和问题提供准确且可靠的信息。本书的销售基于这样一个理念：即出版者不要求提供会计、官方许可或其他形式的合规专业服务。如果需要法律或专业建议，应聘请该专业领域的领域的资深人士。
+
+
+    - 摘自一份曾由美国律师协会委员会和出版商与协会委员会共同接受并批准的《原则宣言》。
+
+
+    以任何形式（电子手段或打印格式）复制、复印或传输本文档的任何部分都是违法的。严禁录制本书，除非获得出版者的书面许可，否则不允许对本文档进行任何存储。版权所有。
+
+
+    本文此处提供的信息据称是真实且一致的，对于因使用或滥用本文包含的任何政策、流程或指令而导致的任何疏忽或其他原因引起的任何责任，均由接收读者自行承担全部责任。在任何情况下，对于因本文信息（无论是直接还是间接）导致的任何赔偿、损害或资金损失，出版者均不承担任何法律责任或指责。
+
+
+    相应作者拥有出版者未持有的版权。
+
+
+    此处提供的信息仅供参考之用，且具有通用性。信息的呈现不带有任何合同或任何形式的保证。
+
+
+    所使用的商标均未经任何许可，且商标的发布未获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，其归其所有者所有，与本文无所属关系。
+
+
+    ## 目录
+
+
+    - 绪言
+
+    - 第一章：C++ 编程语言 – 概述
+
+    - 第二章：C++ 环境
+
+    - 第三章：C++ 编程语言的基础语法
+
+    - 第四章：C++ 中不同的数据类型和变量类型
+
+    - 第五章：变量的作用域
+
+    - 第六章：字面量/常量
+
+    - 第七章：修饰符与存储类
+
+    - 第八章：C++ 语言中的运算符
+
+    - 第九章：C++ 中不同的循环类型
+
+    - 第十章章：C++ 中的决策语句
+
+    - 第十一章章：C++ 中不同的函数
+
+    - 第十二章章：C++ 语言中的数字
+
+    - 第十三章章：C++ 数组
+
+    - 结论
+
+
+    ## 绪言
+
+
+    我想感谢并祝贺你买了我的书……
+
+
+    “C++：终极入门指南！”
+
+
+    这本书是为想要学习 C++ 编程语言基础的人士编写的。如果你正在寻找一本能够教你关于 C++ 所需一切知识的综合书籍，这可能正是你寻找的内容。
+
+
+    通过阅读这本书，你将学习 C++ 的基础知识。你将发现专家 C++ 程序员所使用的思想、概念、技术和方法。例如，本书将讨论变量、字符串、函数和数据结构。这意味着在阅读这些材料后，你将能够使用
+    C++ 语言编写程序。
+
+
+    再次感谢购买本书，希望你读得愉快！
+
+
+    ## 第一章：C++ 编程语言 – 概述
+
+
+    C++ 是一种编译型、自由格式的、大小敏感的、多用途的静态类型编程语言。它支持泛型、过程和面向对象的编程。
+
+
+    计算机程序员将 C++ 视为一种中间级语言，因为它既具有低级特性具有高级特性。
+
+
+    丹麦计算机科学家比雅恩·斯特斯特鲁普（Bjarne Stroustrup）于 1979 年创建了 C++。由于他将这种编程语言作为“C”（另一种计算机语言）的改进版本，因此他称其为“带有类的
+    C”。然而，在 1983 年，名称更改为 C++。
+
+
+    **重要提示：** 如果在编译期间进行类型检查，则该语言被认为是“静态类型”。
+
+
+    ### C++ - 一种面向对象的编程语言
+
+
+    C++ 兼容面向对象编程。它还支持面向对象软件开发的四大基础：
+
+
+    - 继承
+
+    - 封装
+
+    - 多态
+
+    - 数据隐藏
+
+
+    ### C++ 的三个主要部分
+
+
+    C++ 编程语言由三个大部分组成：
+
+
+    1. 核心语言 – 这部分是 C++ 程序的基础。它包含了字面量、变量、运算符等。
+
+    2. 标准库 – 这部分提供了广泛的函数，你可以使用它们来操作核心语言。
+
+    3. 标准模板库（也称为 STL） – 它提供了许多可以配合 C++ 使用的方法和技术。
+
+
+    ### 学习这种编程语言
+
+
+    在学习 C++ 时，你应该专注于与编写代码相关的思想和概念。
+
+
+    毕竟，你试图学习一种编程语言是因为你想成为一名优秀的程序员。你希望希望在维护旧程序和创建新程序方面是高效的。
+
+
+    这种编程语言与广泛的编程技术兼容。你可以将其作为 C、Smalltalk、Fortran 等使用。无论你偏好哪种编程风格，你一定能实现创建优秀程序并保持运行效率的目标。
+
+
+    ### 使用这种编程语言
+
+
+    世界各地许多人都在使用 C++。这意味着它是可靠且有效的。事实上，C++ 是编程行业领先的语言之一。
+
+
+    通常情况下，程序员在编写设备驱动程序和需要直接控制硬件的程序未使用 C++。研究人员和编程教师使用 C++ 来完成任务：这种语言强大且易用。即使是新手也能快速掌握这种语言的基础。
+
+
+    根据计算机专家的说法，如果你的计算机运行在 Windows 或 macOS，你已经在使用 C++ 了。因为这些操作系统是用 C++ 编写的。
+
+
+    ## 第二章：C++ 环境
+
+
+    在阅读本书时，不需要建立自己的 C++ 环境。这是因为有很多工具可以用来编写和编译 C++。这些工具易于使用并且提供即时反馈。这意味着你可以迅速发现程序中的错误。最流行的在线工具之一是
+    `www.compileonline.com`。在阅读本书时，你可以使用喜欢的浏览器访问该网站。
+
+
+    为了帮助你开始，这里有一个你可以配合 `www.compileonline.com` 使用的基础代码：
+
+
+    ```
+
+    ![](img/cover.jpeg)
+
+    ```
+
+
+    你应该能立即看到结果。
+
+
+    ### 本地 C++ 环境
+
+
+    如果你仍然想为本地建立 C++ 环境，你的计算机必须具备以下程序：
+
+
+    1. 文本编辑器 – 你将使用文本编辑器编写 C++ 程序。以下是 C++ 程序员常用的文本编辑器：`vi`、`vim`、`Brief`、`EMACS` 和
+    Windows 记事本。
+
+
+    文本编辑器的名称和版本可能会根据你的操作系统而变化。例如，记事本是 Windows 计算机的默认文本编辑器。然而，Vi 或 vim 适用于 UNIX、Linux
+    和 Windows。
+
+
+    你使用编辑器产生的源文件。在 C++ 语言中，这些文件以以下后缀命名：`.c`、`.cp` 或 `.cpp`。
+
+
+    **重要提示：** 在本地使用 C++ 之前，确保你的计算机上有文本编辑器。没有这种计算机程序，你将无法编写任何 C++ 代码。
+
+
+    2. C++ 编译器 – 它是 C++ 编程语言的实际编译器。你将使用该软件将源代码编译为可执行程序。
+
+
+    '
+- fmt: "\nIn general, compilers are not sensitive in terms of the file extension that\
+    \ you use for your source codes. If you won’t specify the file extension, however,\
+    \ C++ compilers will assign `.cpp` (which is the default extension for this language).\n\
+    \nThese days, the most popular compiler is the GNU C/C++ compiler.\n\n# How to\
+    \ Install the GNU C/C++ Compiler\n\n*   For UNIX/Linux computers – First, check\
+    \ whether your machine has `GCC` (GNU Compiler Collection). You can do this by\
+    \ accessing the computer’s command line and entering this command:\n\n![](images/00002.jpeg)\n\
+    \nIf your computer has `GCC`, your screen should give you this kind of message:\n\
+    \n![](images/00003.jpeg)\n\nIf your computer doesn’t have `GCC`, you have to visit\
+    \ [http://gcc.gnu.org/install](http://gcc.gnu.org/install) to download and install\
+    \ it. The given webpage includes detailed instructions so you won’t experience\
+    \ any difficulties.\n\n*   For Macintosh computers – The quickest and easiest\
+    \ way to get `GCC` is by downloading the Xcode programming environment from the\
+    \ Apple website. Just follow the detailed instructions provided there. Here’s\
+    \ the link: [http://developer.apple.com/technologies/tools](http://developer.apple.com/technologies/tools).\n\
+    \n*   For Windows computers – You have to download and install a program called\
+    \ `MinGW`. To do this, visit [www.mingw.org](http://www.mingw.org) and access\
+    \ the website’s download page. It would be best if you’ll get the latest version\
+    \ of `MinGW`.\n\nWhile getting `MinGW`, you should install these important programs:\
+    \ `gcc-core`, `binutils`, `gcc-g++`, and `MinGW runtime`. There are other supporting\
+    \ programs that you can download, depending on your situation and preferences.\n\
+    \nYou should add `MinGW`’s bin subdirectory into the `PATH` environment variable.\
+    \ By doing so, you can activate the tools inside this subdirectory just by entering\
+    \ their basic names.\n\nAfter completing the installation process, your computer\
+    \ will let you to run GNU tools such as `ar`, `gcc`, `g++`, `dlltool`, and `ranlib`\
+    \ using the command line.\n\n# Chapter 3: The Basic Syntax of the C++ Programming\
+    \ Language\n\nFor computer experts, C++ programs are collections of objects that\
+    \ interact with each other by invoking methods. At this point, let’s discuss the\
+    \ basic elements of this language:\n\n*   **Object** – An object has different\
+    \ behaviors and states.\n*   **Class** – This is defined as a blueprint/template\
+    \ that defines the states/behaviors of an object.\n*   **Method** – Basically,\
+    \ this is the behavior of an object. Classes may contain various methods. A method\
+    \ is the part of the language where data is controlled, logic is written, and\
+    \ actions are performed.\n*   **Instant Variable** – Every object has a distinct\
+    \ collection of instant variables. The values given to the instant variables create\
+    \ that state/s of the object concerned.\n\n## The Program Structure in C++\n\n\
+    Here’s a basic C++ code that prints “Hello World.”\n\n![](images/00004.jpeg)\n\
+    \nLet’s analyze the different parts of this code:\n\n*   C++ involves different\
+    \ headers, which hold useful or necessary data to the program. In the code given\
+    \ above, the `<iostream>` header is required.\n*   `using namespace std;` - This\
+    \ line asks the C++ compiler to utilize the namespace called `std`.\n*   The third\
+    \ line (i.e. `// main () is… begins.) is the comment section of this programming\
+    \ language. C++ comments start with two slashes (i.e. `//`).\n*   `int main()`\
+    \ serves as the primary function where execution of the program starts.\n*   The\
+    \ fifth line tells the screen to display “This is my first C++ program.”\n*  \
+    \ The last line (i.e. `return 0;`) ends the `main()` function and requires it\
+    \ to return “0” during the calling procedure.\n\n## Compiling and Executing C++\
+    \ Programs\n\nIn this section of the book, you’ll learn how to compile and execute\
+    \ C++ programs. Here are the steps you need to take:\n\n1.  Access your favorite\
+    \ text editor and write the code. At this point, you may enter the “Hello World”\
+    \ code given above.\n2.  Save the code as a C++-compatible source file. For this\
+    \ exercise, use the filename: `helloworld.cpp`.\n3.  Access a command prompt and\
+    \ check the location where you stored the source file.\n4.  Type in `g++ helloworld.cpp`\
+    \ and hit the Enter key – this action will compile the code. If your code doesn’t\
+    \ have any error, the command prompt will create an `a.out` file.\n5.  Then, run\
+    \ the program by typing `a.out`.\n6.  Your computer will open a new window and\
+    \ show you the following message:\n\n![](images/00005.jpeg)\n\n**Important Note:**\
+    \ You have to ensure that `g++` is in the appropriate path. Also, make sure that\
+    \ it runs in the location where you saved the source file.\n\n## Blocks and Semicolons\
+    \ in the C++ Language\n\nIn this language, you should use a semicolon to terminate\
+    \ a statement. Thus, each statement in your C++ codes should end with this character.\
+    \ Semicolons indicate the end of a programming entity.\n\nFor instance, here are\
+    \ four different C++ statements:\n\n*   `a + b;`\n*   `add(a, b);`\n*   `b = a+1;`\n\
+    *   `a = b;`\n\nBlocks, on the other hand, are sets of logically related statements\
+    \ that are enclosed by curly braces. Here’s an example:\n\n![](images/00006.jpeg)\n\
+    \nThis programming language doesn’t consider line endings as valid terminators.\
+    \ Thus, you don’t have to worry about line endings.\n\n```cpp{\n    a + b;\n \
+    \   add(a, b);\n    b = a+1;\n    a = b;\n}\n```\n\n## Identifiers of C++\n\n\
+    In this language, identifiers are names you use to identify classes, functions,\
+    \ variables, or any user-defined object. This programming language doesn’t consider\
+    \ line endings as valid terminators. Thus, the following example will illustrate\
+    \ this:\n\n```cpp\na = b\nb = a+1\nadd(a, b)\n```\n\nIdentifiers can start with\
+    \ a letter or an underscore. You may use numbers as the initial character, but\
+    \ `1identifier` is not.\n\nYou cannot use punctuation and special characters (e.g.\
+    \ commas, dollar signs, ampersands) when naming identifiers. Additionally the\
+    \ C++ programming language is case-sensitive. That means `SCIENCE`, `Science`,\
+    \ and `science` are three different identifiers.\n\nThe following list shows you\
+    \ several valid identifiers:\n\n*   `admin`\n*   `space_bar`\n*   `_perm`\n* \
+    \  `z_00`\n*   `yourtitle23`\n*   `a`\n*   `z56a9`\n*   `GetVal`\n\n## Keywords\
+    \ in C++\n\nSimilar to other programming languages, C++ has a set of “reserved”\
+    \ keywords (i.e. words that cannot be used when naming variables, constants, and\
+    \ other identifiers). The table below will show you the keywords in C++.\n\n|\
+    \ `new` | `asm` | `try` | `for` |\n| `if` | `int` | `do` | `this` |\n| `else`\
+    \ | `enum` | `auto` | `true` |\n| `bool` | `case` | `char` | `goto` |\n| `void`\
+    \ | `long` | `throw` | `break` |\n| `false` | `catch` | `union` | `class` |\n\
+    | `short` | `const` | `using` | `while` |\n| `private` | `explicit` | `protected`\
+    \ | `export` |\n| `typedef` | `public` | `register` | `extern` |\n| `typeid` |\
+    \ `typename` | `reinterpret_cast` | `return` |\n| `unsigned` | `friend` | `signed`\
+    \ | `const_cast` |\n| `virtual` | `continue` | `volatile` | `delete` |\n| `default`\
+    \ | `inline` | `sizeof` | `static` |\n| `struct` | `static_cast` | `wchar_t` |\
+    \ `switch` |\n| `double` | `mutable` | `namespace` | `dynamic_cast` |\n| `template`\
+    \ | | | |\n\n**Important Note:** Some C++ compilers are not compatible with trigraph\
+    \ sequences. Additionally, since these sequences are inherently complex, beginners\
+    \ are advised to stay away from them.\n\nIn language, some character sets have\
+    \ an alternate representation, known as trigraph sequence. Trigraphs are sequences\
+    \ of three characters where each sequence represents a character. Additionally\
+    \ each trigraph sequence begins with `??`.\n\nHere are the most popular trigraph\
+    \ sequences in this language:\n\n| Trigraph Sequence | Replacement |\n| :--- |\
+    \ :--- |\n| `??-` | `~` |\n| `??<` | `{` |\n| `??>` | `}` |\n| `??!` | `|` |\n\
+    | `??(` | `[` |\n| `??)` | `]` |\n| `??=` | `#` |\n| `??’` | `^` |\n| `??/` |\
+    \ `\\` |\n\n## Whitespace\n\nC++ compilers ignore lines that hold whitespace.\
+    \ These lines are known as blank lines.\n"
+  raw: 'In general, compilers are not sensitive in terms of the file extension that
+    you use for your source codes. If you won’t specify the file extension, however,
+    C++ compilers will assign .cpp (which is the default extension for this language).
+
+
+    These days, the most popular compiler is the GNU C/C++ compiler.
+
+
+    How to Install the GNU C/C++ Compiler
+
+
+    *   For UNIX/Linux computers – First, check whether your machine has GCC (GNU
+    Compiler Collection). You can do this by accessing the computer’s command line
+    and entering this command:
+
+
+    ![](images/00002.jpeg)
+
+
+    If your computer has GCC, your screen should give you this kind of message:
+
+
+    ![](images/00003.jpeg)
+
+
+    If your computer doesn’t have GCC, you have to visit [http://gcc.gnu.org/install](http://gcc.gnu.org/install)
+    to download and install it. The given webpage includes detailed instructions so
+    you won’t experience any difficulties.
+
+
+    *   For Macintosh computers – The quickest and easiest way to get GCC is by downloading
+    the Xcode programming environment from the Apple website. Just follow the detailed
+    instructions provided there. Here’s the link: [http://developer.apple.com/technologies/tools](http://developer.apple.com/technologies/tools).  
+
+
+    *   For Windows computers – You have to download and install a program called
+    MinGW. To do this, visit [www.mingw.org](http://www.mingw.org) and access the
+    website’s download page. It would be best if you’ll get the latest version of
+    MinGW.
+
+
+    While getting MinGW, you should install these important programs: gcc-core, binutils,
+    gcc-g++, and MinGW runtime. There are other supporting programs that you can download,
+    depending on your situation and preferences.
+
+
+    You should add MinGW’s bin subdirectory into the PATH environment variable. By
+    doing so, you can activate the tools inside this subdirectory just by entering
+    their basic names.
+
+
+    After completing the installation process, your computer will let you to run GNU
+    tools such as ar, gcc, g++, dlltool, and ranlib using the command line.
+
+
+    Chapter 3: The Basic Syntax of the C++ Programming Language
+
+
+    For computer experts, C++ programs are collections of objects that interact with
+    each other by invoking methods. At this point, let’s discuss the basic elements
+    of this language:
+
+
+    *   Object – An object has different behaviors and states.
+
+
+    *   Class – This is defined as a blueprint/template that defines the states/behaviors
+    of an object.
+
+
+    *   Method – Basically, this is the behavior of an object. Classes may contain
+    various methods. A method is the part of the language where data is controlled,
+    logic is written, and actions are performed.
+
+
+    *   Instant Variable – Every object has a distinct collection of instant variables.
+    The values given to the instant variables create that state/s of the object concerned.
+
+
+    The Program Structure in C++
+
+
+    Here’s a basic C++ code that prints “Hello World.”
+
+
+    ![](images/00004.jpeg)
+
+
+    Let’s analyze the different parts of this code:
+
+
+    *   C++ involves different headers, which hold useful or necessary data to the
+    program. In the code given above, the <iostream> header is required.
+
+
+    *   using namespace std; - This line asks the C++ compiler to utilize the namespace
+    called std.
+
+
+    *   The third line (i.e. // main () is… begins.) is the comment section of this
+    programming language. C++ comments start with two slashes (i.e. //).
+
+
+    *   int main() serves as the primary function where execution of the program starts.
+
+
+    *   The fifth line tells the screen to display “This is my first C++ program.”
+
+
+    *   The last line (i.e. return 0;) ends the main() function and requires it to
+    return “0” during the calling procedure.
+
+
+    Compiling and Executing C++ Programs
+
+
+    In this section of the book, you’ll learn how to compile and execute C++ programs.
+    Here are the steps you need to take:
+
+
+    1.  Access your favorite text editor and write the code. At this point, you may
+    enter the “Hello World” code given above.
+
+
+    2.  Save the code as a C++-compatible source file. For this exercise, use the
+    filename: “helloworld.cpp”
+
+
+    3.  Access a command prompt and check the location where you stored the source
+    file.
+
+
+    4.  Type in “g++ helloworld.cpp” and hit the Enter key – this action will compile
+    the code. If your code doesn’t have any error, the command prompt will create
+    an “a.out” file.
+
+
+    5.  Then, run the program by typing “a.out”
+
+
+    6.  Your computer will open a new window and show you the following message:
+
+
+    ![](images/00005.jpeg)
+
+
+    Important Note: You have to ensure that g++ is in the appropriate path. Also,
+    make sure that it runs in the location where you saved the source file.
+
+
+    Blocks and Semicolons in the C++ Language
+
+
+    In this language, you should use a semicolon to terminate a statement. Thus, each
+    statement in your C++ codes should end with this character. Semicolons indicate
+    the end of a programming entity.
+
+
+    For instance, here are four different C++ statements:
+
+
+    *   a + b;
+
+
+    *   add(a, b);
+
+
+    *   b = a+1;
+
+
+    *   a = b;
+
+
+    Blocks, on the other hand, are sets of logically related statements that are enclosed
+    by curly braces. Here’s an example:
+
+
+    ![](images/00006.jpeg)
+
+
+    This programming language doesn’t consider line endings as valid terminators.
+    Thus, you don’t have to worry about the placement of your statements. The following
+    example will illustrate this concept:
+
+
+    a = b; b = b+1; add(a, b);
+
+
+    is similar to
+
+
+    a = b;
+
+
+    b = b+1;
+
+
+    add(a, b);
+
+
+    The Identifiers of C++
+
+
+    In this language, identifiers are names you use to identify classes, functions,
+    modules, variables, or any user-defined object. Identifiers can start with a letter
+    or an underscore. You may use numbers when naming identifiers, but you cannot
+    use them as the initial character. Thus, “identifier1” is valid but “1identifier”
+    is not.
+
+
+    You cannot use punctuation and special characters (e.g. commas, periods, dollar
+    signs, ampersands) when naming identifiers. Additionally, the C++ programming
+    language is case-sensitive. That means “SCIENCE”, “Science”, and “science” are
+    three different identifiers.
+
+
+    The following list shows you several examples of valid identifiers:
+
+
+    *   admin
+
+
+    *   space_bar
+
+
+    *   _perm
+
+
+    *   z_000
+
+
+    *   yourtitle23
+
+
+    *   a
+
+
+    *   z56a9
+
+
+    *   GetVal
+
+
+    The Keywords in C++
+
+
+    Similar to other programming languages, C++ has a set of “reserved” keywords (i.e.
+    words that cannot be used when naming variables, constants, and other identifiers).
+    The table below will show you the keywords in the C++ language.
+
+
+    | new | asm | try | for |
+
+
+    | if | int | do | this |
+
+
+    | else | enum | auto | true |
+
+
+    | bool | case | char | goto |
+
+
+    | void | long | throw | break |
+
+
+    | false | catch | union | class |
+
+
+    | short | const | using | while |
+
+
+    | private | explicit | protected | export |
+
+
+    | typedef | public | register | extern |
+
+
+    | typeid | typename | reinterpret_cast | return |
+
+
+    | unsigned | friend | signed | const_cast |
+
+
+    | virtual | continue | sizeof | static |
+
+
+    | default | inline | volatile | delete |
+
+
+    | struct | static_cast | wchar_t | switch |
+
+
+    | double | mutable | namespace | dynamic_cast |
+
+
+    | template |  |  |  |
+
+
+    The Trigraphs
+
+
+    In this programming language, some character sets have an alternate representation,
+    known as trigraph sequence. Trigraphs are sequences that involve three characters
+    where each sequence represents a character. Additionally each trigraph sequence
+    begins with “??”.
+
+
+    Here are the most popular trigraph sequences in this language:
+
+
+    | Trigraph Sequence | Replacement |
+
+
+    | ??- | ~ |
+
+
+    | ??< | { |
+
+
+    | ??> | } |
+
+
+    | ??! | &#124; |
+
+
+    | ??( | [ |
+
+
+    | ??) | ] |
+
+
+    | ??= | # |
+
+
+    | ??’ | ^ |
+
+
+    | ??/ | \ |
+
+
+    Important Note: Some C++ compilers are not compatible with trigraph sequences.
+    Additionally, since these sequences are inherently complex, beginners are advised
+    to stay away from them.
+
+
+    Whitespace
+
+
+    C++ compilers ignore lines that hold whitespace. These lines are known as blank
+    lines.'
+  toc: []
+  trans: "\n\n通常情况下，编译器对你用于源代码的文件扩展名并不敏感。然而，如果你没有指定扩展名，C++ 编译器将分配 `.cpp`（这是该语言的默认扩展名）。\n\
+    \n如今，最流行的编译器是 GNU C/C++ 编译器。\n\n# 如何安装 GNU C/C++ 编译器\n\n*   对于 UNIX/Linux 计算机\
+    \ – 首先，检查你的机器上是否安装了 `GCC`（GNU 编译器集）。你可以访问计算机的命令行并输入此命令来检查：\n\n![](img/00002.jpeg)\n\
+    \n如果你的电脑安装了 `GCC`，屏幕会显示此类信息：\n\n![](img/00003.jpeg)\n\n如果你的电脑没有安装 `GCC`，你需要访问\
+    \ [`gcc.gnu.org/install`](http://gcc.gnu.org/install) 下载并安装它。提供的网页包含了详细的说明，因此你不会遇到任何困难。\n\
+    \n*   对于 Macintosh 计算机 – 获取 `GCC` 最快最简单的方法是从 Apple 网站下载 Xcode 编程环境。只需按照那里提供的详细说明操作即可。链接：[`developer.apple.com/technologies/tools`](http://developer.apple.com/technologies/tools)。\n\
+    \n*   对于 Windows 计算机 – 你需要下载并安装名为 `MinGW` 的程序。为此，访问 [www.mingw.org](http://www.mingw.org)\
+    \ 并进入网站的下载页。获取最新版本的 `MinGW` 是最好的。\n\n在获取 `MinGW` 的同时，你应该安装这些重要程序：`gcc-core`、`binutils`、`gcc-g++`\
+    \ 和 `MinGW runtime`。根据你的情况和喜好，下载其他辅助程序。\n\n你应该将 `MinGW` 的 bin 子目录添加到 `PATH` 环境变量。这样做，你只需输入基本名称即可激活该子目录中的工具。\n\
+    \n完成安装过程后，你的电脑将允许你通过命令行运行 `ar`、`gcc`、`g++`、`dlltool` 和 `ranlib` 等 GNU 工具。\n\n\
+    # 第三章 C++ 编程语言基础语法\n\n对于计算机专家来说，C++ 程序是通过调用方法相互作用的对象的集合。现在，让我们讨论一下这种语言的基本元素：\n\
+    \n*   **对象 (Object)** – 对象具有不同的行为和状态。\n*   **类 (Class)** – 被定义为一个蓝图/模板，用于定义对象的状态/行为。\n\
+    *   **方法 (Method)** – 基本上，这是对象的行为。类可以包含各种方法。方法是语言中控制数据、编写逻辑和执行操作的部分。\n*   **瞬时变量\
+    \ (Instant Variable)** – 每个对象都有一组独特的瞬时变量。赋予瞬时变量的值创建了该对象相关的状态。\n\n## C++ 中的程序结构\n\
+    \n这是一个打印“Hello World”的简单 C++ 代码。\n\n![](img/00004.jpeg)\n\n让我们分析这段代码的不同部分：\n\n\
+    *   C++ 涉及不同的头文件，这些头文件包含了程序所需的有用或必要数据。在上面的代码中，需要 `<iostream>` 头文件。\n*   `using\
+    \ namespace std;` - 这一行要求 C++ 编译器利用名为 `std` 的命名空间。\n*   第三行（即 `// main () is…\
+    \ begins.`）是该编程语言的注释部分。C++ 注释以两个斜杠（即 `//`）开头。\n*   `int main()` 作为主函数，程序执行从这里开始。\n\
+    *   第五行告诉屏幕显示“This is my first C++ program.”\n*   最后一行（即 `return 0;`）结束了 `main()`\
+    \ 函数并要求在调用过程中返回“0”。\n\n## 编译和执行 C++ 程序\n\n在本书的这一部分，你将学习如何编译和执行 C++ 程序。以下是你需要采取的步骤：\n\
+    \n1.  打开你喜欢的文本编辑器并编写代码。此时，你可以输入上面的“Hello World”代码。\n2.  将代码保存为兼容 C++ 的源文件。对于这次练习，使用文件名：`helloworld.cpp`。\n\
+    3.  打开命令行提示符并检查存储源文件的位置。\n4.  输入 `g++ helloworld.cpp` 并按回车键 – 此操作将编译代码。如果你的代码没有错误，命令行提示符将创建一个\
+    \ `a.out` 文件。\n5.  然后，输入 `a.out` 运行程序。\n6.  你的电脑将打开新窗口并显示以下消息：\n\n![](img/00005.jpeg)\n\
+    \n**注意：** 你必须确保 `g++` 在正确的路径中。同时，确保它在你保存源文件的位置运行。\n\n## C++ 语言中的块和分号\n\n在 във语言中，你应该使用分号来结束语句。因此，你\
+    \ C++ 代码中的每个语句都应该以该字符结尾。分号表示编程实体的结束。\n\n例如，这里有四条不同的 C++ 语句：\n\n*   `a + b;`\n\
+    *   `add(a, b);`\n*   `b = a+1;`\n*   `a = b;`\n\n另一方面，块（Blocks）是受花括号括起来的一组逻辑相关的语句。\n\
+    \n块（Blocks）是受花括号括起来的一组逻辑相关的语句。\n\n块（Blocks）是受花括号括起来的一组逻辑逻辑逻辑。\n\n结尾的示例：\n\n```cpp\n\
+    {\n    \n\n    add(a)\n}\n```\n\n## 标识符 (Identifiers)\n\n标识符以字母或下划线开头。C++ 是区分大小写的。这意味着\
+    \ `SCIENCE`、`science` 是不同的。\n\n在语言中，标识符用于标识类、函数、变量。此外，使用使用符号符号（（符号））标识。。。显示显示了了有效的标识符：\n\
+    \n![](img/00006.jpeg)\n\n## 关键字 (Keywords)\n\n与其他编程语言类似，C++ 有一组“保留”关键字（即不能用于命名变量、常量的单词）。下表显示了\
+    \ C++ 的关键字：\n\n| `new` | `asm` | `try` | `for` |\n| `if` | `int` | `do` | `this`\
+    \ |\n| `else` | `enum` | `auto` | `true` |\n| `bool` | `case` | `char` | `goto`\
+    \ |\n| `void` | `long` | `throw` | `break` |\n| `false` | `catch` | `union` |\
+    \ `class` |\n| `short` | `const` | `using` | `while` |\n| `private` | `explicit`\
+    \ | `protected` | `export` |\n| `typedef` | `public` | `register` | `extern` |\n\
+    | `typeid` | `typename` | `reinterpret_cast` | `return` |\n| `unsigned` | `friend`\
+    \ | `signed` | `const_cast` |\n| `virtual` | `volatile` | `namespace` | `delete`\
+    \ |\n| `default` | `inline` | `sizeof` | `static` |\n| `struct` | `static_cast`\
+    \ | `wchar_t` | `switch` |\n| `double` | `mutable` | | `dynamic_cast` |\n| `template`\
+    \ | | | |\n\n**注意：** 某些 C++ 编译器不兼容三连序列。此外，由于这些序列本质上很复杂，建议初学者避开它们。\n\n## 三连序列 (Trigraphs)\n\
+    \n在语言中，某些字符具有另一种表示方式，称为三连序列。三连序列是三个字符的序列，每个序列代表一个字符。此外，每个三连序列都以 `??` 开头。\n\n以下是该语言中最流行的三连序列：\n\
+    \n| 三连序列 | 替换 |\n| :--- | :--- |\n| `??-` | `~` |\n| `??<` | `{` |\n| `??>` |\
+    \ `}` |\n| `??!` | `|` |\n| `??(` | `[` |\n| `??)` | `]` |\n| `??=` | `#` |\n\
+    | `??’` | `^` |\n| `??/` | `\\` |\n\n## 空格 (Whitespace)\n\nC++ 编译器忽略包含空白的行。这些行被称为空行。\n\
+    \n"
+- fmt: '
+
+    Whitespace is a word used in this language to describe tabs, blanks, comments,
+    and newline characters. Basically, whitespaces allow you to divide your statements
+    into smaller parts. In addition, they help compilers in identifying the beginning
+    and end of code elements (e.g. `int`). Analyze the following examples:
+
+
+    ```cpp
+
+    int age;
+
+    ```
+
+
+    The statement given above requires a whitespace character between `age` and `int`.
+    The C++ compiler won’t work properly if the statement is written without a whitespace
+    character (i.e. `intage;`).
+
+
+    ```cpp
+
+    tree = leaves + wood;
+
+    ```
+
+
+    For the second example, you don’t have to place whitespace characters between
+    `tree` and `=`, or between `=` and `leaves`. You can add whitespace characters
+    to improve the readability of your C++ codes. However, these characters won’t
+    affect the resulting programs.
+
+
+    ## Comments in the C++ Language
+
+
+    A program comment is an explanatory statement that you may add to your codes.
+    Comments can help people read your source codes. In general, programming languages
+    support comments to improve the usability of the resulting computer programs.
+
+
+    This language allows you to place single- and multi-line comments in your codes.
+    C++ compilers ignore characters that are placed in the code’s comment section.
+
+
+    You should use `/*` to begin your comments and `*/` to terminate them. For instance:
+
+
+    ```cpp
+
+    /* This is an awesome comment */
+
+    ```
+
+
+    You may also use `//` to start your comments. Here’s an example:
+
+
+    ![](images/00007.jpeg)
+
+
+    C++ compilers will ignore the part that says “// prints Hello World”. The finished
+    program will give you Hello World once it is executed.
+
+
+    ## Chapter 4: The Different Data Types and Variable Types in C++
+
+
+    ### Data Types
+
+
+    Like other programming languages, C++ supports different types of data. That means
+    you have a wide range of options when it comes to storing information. C++ also
+    allows you to use various variables, which are memory locations designed to keep
+    values. Thus, “creating a variable” is synonymous with “reserving some memory
+    space.”
+
+
+    While writing your C++ programs, you’ll need to store different data types (i.e.
+    integer, Boolean, character, floating point, wide character, double floating point,
+    etc.). Depending on the variable’s data type, the OS (i.e. operating system) of
+    your computer allots memory and determines what kind of data can be stored inside
+    that memory.
+
+
+    ### The Primitive Types (Built-in)
+
+
+    This programming language offers a collection of user-defined and built-in data
+    types. Here are the major categories of data types in C++:
+
+
+    | Data Type | Keyword |
+
+    | :--- | :--- |
+
+    | Integer | int |
+
+    | Valueless | void |
+
+    | Character | char |
+
+    | Boolean | bool |
+
+    | Wide character | wchar_t |
+
+    | Double floating point | double |
+
+    | floating point | float |
+
+
+    You can modify the data types given above using these modifiers:
+
+
+    * `short`
+
+    * `long`
+
+    * `unsigned`
+
+    * `signed`
+
+
+    ### The typedef Declaration
+
+
+    You may use `typedef` to assign a new name to an existing data type. Here is the
+    syntax that you should use when making a `typedef` declaration:
+
+
+    ![](images/00008.jpeg)
+
+
+    For instance, the following statement informs the C++ compiler that `head` is
+    an alternative term for character:
+
+
+    ```cpp
+
+    typedef char head;
+
+    ```
+
+
+    Once you have executed that statement, the declaration below will be 100% valid
+    and produce a character variable called `letters`:
+
+
+    ```cpp
+
+    head letters;
+
+    ```
+
+
+    ### The Enumerated Types
+
+
+    Enumerated types declare an alternate type name and an array of identifiers. You
+    may use these identifiers as values for the data type you are working with. All
+    enumerators are constants whose data type is the given enumeration.
+
+
+    To generate an enumeration, you should use `enum` (a C++ keyword). Here is the
+    syntax that you should use:
+
+
+    ![](images/00009.jpeg)
+
+
+    In this syntax, “enum-name” represents the type name of the enumeration. You should
+    use commas to separate the names inside the brackets.
+
+
+    For instance, the code given below creates an enumeration called `sizes`, gives
+    it three different sizes, and a variable (i.e. `c`) to determine the type size.
+    Lastly, “large” is assigned to the `c`-variable.
+
+
+    ```cpp
+
+    enum sizes { small, medium, large } c;
+
+    c = large;
+
+    ```
+
+
+    By default, the first name’s value is equal to 0, the second name’s value is equal
+    to 1, the third name’s value is equal to 2, etc. However, you can add an initializer
+    to assign a certain value to your selected names.
+
+
+    For instance, in the enumeration given below, `medium` will get the value 100.
+
+
+    ```cpp
+
+    enum sizes { small, medium=100, large };
+
+    ```
+
+
+    A name’s value is 1 greater than the one before it. Thus, in the latest example,
+    the value of `large` is equal to 101.
+
+
+    ### Variable Types
+
+
+    Variables provide you with storage that can be modified and controlled by your
+    programs. Every variable belongs to a certain type, which states the following:
+
+
+    * The layout and size of the memory space
+
+    * The values that you can store inside the memory space
+
+    * The operations that you can apply
+
+
+    You may use the underscore, numbers and letters when naming a variable. However,
+    you can’t use a number as the first character of the variable’s name. For example,
+    `variable1` is valid but `1variable` isn’t. Additionally, this programming language
+    is case-sensitive. That means `VARIABLE`, `Variable`, and `variable` are considered
+    as three different entities.
+
+
+    | Variable Type | Description |
+
+    | :--- | :--- |
+
+    | `int` | This is natural size. |
+
+    | `bool` | This can store true or false. |
+
+    | `void` | It represents the lack of variable. |
+
+    | `char` | This is integer type. Often, it is represented as one byte. |
+
+    | `float` | This is single single point. |
+
+    | `wchar_t` | It represents wide characters. |
+
+    | `double` | This variable type. |
+
+
+    Additionally, the C++ programming language allows you to define other variable
+    types using certain tools (e.g. classes, array, etc.). The next part of the book
+    will explain how you can describe, declare, and utilize different types.
+
+
+    #### How to Define Variables in C++
+
+
+    By defining a variable, you are informing the C++ compiler regarding the location
+    and storage space you want to use for the variable. Your variable definitions
+    specify the data type, and hold a list of the variables that belong to that type.
+    Here’s the syntax:
+
+
+    ```cpp
+
+    type variable_list;
+
+    ```
+
+
+    In this syntax, `type` should be a C++-compatible data type (e.g. `int`, `bool`,
+    `float`). The `variable_list`, on the other hand, might hold single or multiple
+    identifiers. If you have more than one, separate the entries using commas. Here
+    are some legitimate declarations:
+
+
+    ```cpp
+
+    int a, z;
+
+    double y;
+
+    char x, a;
+
+    ```
+
+
+    The section `int a, z, x;` both defines and declares the variables `a`, `z`, and
+    `k`; this tells the C++ compiler to generate variables named `a`, `z`, and `k`
+    that belongs to the `int` type.
+
+
+    You may initialize (i.e. assign a value to a variable) your variables during the
+    declaration phase. The initializers in C++ have two main parts: (1) an equal sign,
+    and (2) a constant expression. Here’s the syntax:
+
+
+    ![](images/0010.jpeg)
+
+
+    Here are some initializers:
+
+
+    ```cpp
+
+    int x = 4, z = 10;
+
+    byte a = 99;
+
+    char b = ''b'';
+
+    ```
+
+
+    #### How to Declare Variables in C++
+
+
+    Variable declarations assure the C++ compiler that a variable exists with the
+    specified name and type. That means the language compiler can complete the compilation
+    process without having to perform further analysis regarding the variable. Variable
+    declarations have their meaning during the compile-time only.
+
+    '
+  raw: 'Whitespace is a word used in this language to describe tabs, blanks, comments,
+    and newline characters. Basically, whitespaces allow you to divide your statements
+    into smaller parts. In addition, they help compilers in identifying the beginning
+    and end of code elements (e.g. int). Analyze the following examples:
+
+
+    int age;
+
+
+    The statement given above requires a whitespace character between             
+    age and int. The C++ compiler won’t work properly if the statement is written
+    without a whitespace character (i.e. intage;).
+
+
+    tree = leaves + wood;
+
+
+    For the second example, you don’t have to place whitespace characters between
+    tree and =, or between = and leaves. You can add whitespace characters to improve
+    the readability of your C++ codes. However, these characters won’t affect the
+    resulting programs.
+
+
+    Comments in the C++ Language
+
+
+    A program comment is an explanatory statement that you may add to your codes.
+    Comments can help people read your source codes. In general, programming languages
+    support comments to improve the usability of the resulting computer programs.
+
+
+    This language allows you to place single- and multi-line comments in your codes.
+    C++ compilers ignore characters that are placed in the code’s comment section.
+
+
+    You should use /* to begin your comments and */ to terminate them. For instance:
+
+
+    /* This is an awesome comment */
+
+
+    You may also use // to start your comments. Here’s an example:
+
+
+    ![](images/00007.jpeg)
+
+
+    C++ compilers will ignore the part that says “// prints Hello World”. The finished
+    program will give you Hello World once it is executed.
+
+
+    Chapter 4: The Different Data Types and Variable Types in C++
+
+
+    Data Types
+
+
+    Like other programming languages, C++ supports different types of data. That means
+    you have a wide range of options when it comes to storing information. C++ also
+    allows you to use various variables, which are memory locations designed to keep
+    values. Thus, “creating a variable” is synonymous with “reserving some memory
+    space.”
+
+
+    While writing your C++ programs, you’ll need to store different data types (i.e.
+    integer, Boolean, character, floating point, wide character, double floating point,
+    etc.). Depending on the variable’s data type, the OS (i.e. operating system) of
+    your computer allots memory and determines what kind of data can be stored inside
+    that memory.
+
+
+    The Primitive Types (Built-in)
+
+
+    This programming language offers a collection of user-defined and built-in data
+    types. Here are the major categories of data types in C++:
+
+
+    | Data Type | Keyword |
+
+
+    | Integer | int |
+
+
+    | Valueless | void |
+
+
+    | Character | char |
+
+
+    | Boolean | bool |
+
+
+    | Wide character | wchar_t |
+
+
+    | Double floating point | double |
+
+
+    | floating point | float |
+
+
+    You can modify the data types given above using these modifiers:
+
+
+    *   short
+
+
+    *   long
+
+
+    *   unsigned
+
+
+    *   signed             
+
+
+    The typedef Declaration
+
+
+    You may use typedef to assign a new name to an existing data type. Here is the
+    syntax that you should use when making a typedef declaration:
+
+
+    ![](images/00008.jpeg)
+
+
+    For instance, the following statement informs the C++ compiler that head is an
+    alternative term for character:
+
+
+    typedef char head;
+
+
+    Once you have executed that statement, the declaration below will be 100% valid
+    and produce a character variable called letters:
+
+
+    head letters;
+
+
+    The Enumerated Types
+
+
+    Enumerated types declare an alternate type name and an array of identifiers. You
+    may use these identifiers as values for the data type you are working with. All
+    enumerators are constants whose data type is the given enumeration.
+
+
+    To generate an enumeration, you should use enum (a C++ keyword). Here is the syntax
+    that you should use:
+
+
+    ![](images/00009.jpeg)
+
+
+    In this syntax, “enum-name” represents the type name of the enumeration. You should
+    use commas to separate the names inside the brackets.
+
+
+    For instance,              the code given below creates an enumeration called
+    sizes, gives it three different sizes, and a variable (i.e. c) to determine the
+    type size. Lastly, “large” is assigned to the c-variable.
+
+
+    enum sizes { small, medium, large } c;
+
+
+    c = large;
+
+
+    By default, the first name’s value is equal to 0, the second name’s value is equal
+    to 1, the third name’s value is equal to 2, etc. However, you can add an initializer
+    to assign a certain value to your selected names.
+
+
+    For instance, in the enumeration given below, medium will get the value 100.
+
+
+    enum sizes { small, medium=100, large };
+
+
+    A name’s value is 1 greater than the one before it. Thus, in the latest example,
+    the value of large is equal to 101.
+
+
+    Variable Types
+
+
+    Variables provide you with storage that can be modified and controlled by your
+    programs. Every variable belongs to a certain type, which states the following:
+
+
+    *   The layout and size of the memory space
+
+
+    *   The values that you can store inside the memory space
+
+
+    *   The operations that you can apply
+
+
+    You may use the underscore, numbers and letters when naming a variable. However,
+    you can’t use a number as the first character of the variable’s name. For example,
+    variable1 is valid but 1variable isn’t. Additionally, this programming language
+    is case-sensitive. That means VARIABLE, Variable, and variable are considered
+    as three different entities.
+
+
+    At this point, let’s describe the different variable types discussed in the previous
+    chapter:
+
+
+    | Variable Type | Description |
+
+
+    | int | This is the natural integer size for programming. |
+
+
+    | bool | This variable can store true or false values. |
+
+
+    | void | It represents the lack of variable type. |
+
+
+    | char | This is one of the integer types. Often, it is represented as a single
+    byte (i.e. one octet). |
+
+
+    | float | This variable type is a single precision floating point value. |
+
+
+    | wchar_t | It represents wide characters. |
+
+
+    | double | This variable type is a double precision floating point value. |
+
+
+    Additionally, the C++ programming language allows you to define other variable
+    types using methods and certain tools (e.g. classes, array, data structures, etc.).
+
+
+    The next part of the book will explain how you can describe, declare, and utilize
+    different variable types.
+
+
+    How to Define Variables in C++
+
+
+    By defining a variable, you are informing the C++ compiler regarding the location
+    and storage space you want to use for the variable involved. Your variable definitions
+    specify the data type, and hold a list of the variables that belong to that type.
+    Here’s the syntax:
+
+
+    type variable_list;
+
+
+    In this syntax, type should be a C++-compatible data type (e.g. int, bool, float,
+    etc.). The variable_list, on the other hand, might hold single or multiple identifier
+    names. If you have more than one identifier, separate the entries using commas.
+    Here are some legitimate variable declarations:
+
+
+    int a, z, x;
+
+
+    double y;
+
+
+    char x, a;
+
+
+    float z, extra;
+
+
+    The section int a, z, x; both defines and declares the variables a, z, and k;
+    this tells the C++ compiler to generate variables named a, z, and k that belongs
+    to the int type.
+
+
+    You may initialize (i.e. assign a value to a variable) your variables during the
+    declaration phase. The initializers in C++ have two main parts: (1) an equal sign,
+    and (2) a constant expression. Here’s the syntax:
+
+
+    ![](images/00010.jpeg)
+
+
+    Here are some valid initializers:
+
+
+    int x = 4, z = 10;                            // definition and initialization
+    of x and z.
+
+
+    byte a = 99;                                           // definition and initialization
+    of a.
+
+
+    char b = ‘b’;                                          // the variable named b
+    has the value ‘b’.
+
+
+    How to Declare Variables in C++
+
+
+    Variable declarations assure the C++ compiler that a variable exists with the
+    specified name and type. That means the language compiler can complete the compilation
+    process without having to perform further analysis regarding the variable. Variable
+    declarations have their meaning during the compile-time only. C++ compilers require
+    actual variable declarations while the program is being linked.'
+  toc: []
+  trans: '
+
+
+    空白符（Whitespace）是该语言中用于描述制表符、空格、注释和换行符的词。基本上，空白符允许你将语句拆分为更小的部分。此外，它们帮助编译器识别代码元素的开始和结束（例如
+    `int`）。请分析以下示例：
+
+
+    ```cpp
+
+    int age;
+
+    ```
+
+
+    上述语句在 `age` 和 `int` 之间需要一个空白字符。如果语句在编写时没有空白字符（即 `intage;`），C++ 编译器将无法正常工作。
+
+
+    ```cpp
+
+    tree = leaves + wood;
+
+    ```
+
+
+    对于第二个示例，你不需要在 `tree` 和 `=` 之间，或在 `=` 和 `leaves` 之间放置空白字符。你可以添加空白字符来提高 C++ 代码的可读性。然而，这些字符不会影响最终生成的程序。
+
+
+    ## C++ 语言中的注释
+
+
+    程序注释是你可以添加到代码中的解释性语句。注释可以帮助人们理解阅读你的源代码。总的来说，编程语言支持注释以提高所生成的计算机程序的可用性。
+
+
+    该语言允许你在代码中放置单行和多行注释。C++ 编译器会忽略放置在代码注释区域的字符。
+
+
+    你应该使用 `/*` 开始注释，并使用 `*/` 结束注释。例如：
+
+
+    ```cpp
+
+    /* 这是一个非常棒的注释 */
+
+    ```
+
+
+    你也可以使用 `//` 来开始注释。这里有一个示例：
+
+
+    ![](img/00007.jpeg)
+
+
+    C++ 编译器将忽略“// prints Hello World”部分。完成后的程序一旦执行，将会为你输出 Hello World。
+
+
+    ## 第 4 章：C++ 中不同的数据类型和变量类型
+
+
+    ### 数据类型
+
+
+    与其他编程语言一样，C++ 支持不同类型的数据。这意味着在涉及存储信息时，你有广泛的选择。C++ 还允许你使用各种变量，变量是设计用于保留数值的内存位置。因此，“创建一个变量”等同于“预留一些内存空间”。
+
+
+    在编写 C++ 程序时，你需要存储不同类型的数据（即：整数、布尔值、字符、浮点数、宽字符、双精度浮点数等）。根据变量的数据类型，计算机的操作系统（即操作系统）会分配内存并决定在该内存中可以存储什么类型的数据。
+
+
+    ### 原生类型（内置）
+
+
+    这种编程语言提供了一系列用户定义和内置的数据类型。以下是 C++ 中数据类型的主要分类：
+
+
+    | 数据类型 | 关键字 |
+
+    | :--- | :--- |
+
+    | 整数 | int |
+
+    | 无值 | void |
+
+    | 字符 | char |
+
+    | 布尔值 | bool |
+
+    | 宽字符 | wchar_t |
+
+    | 双精度浮点数 | double |
+
+    | 浮点数 | float |
+
+
+    你可以使用这些修饰符修改上述数据类型：
+
+
+    * `short`
+
+    * `long`
+
+    * `unsigned`
+
+    * `signed`
+
+
+    ### typedef 声明
+
+
+    你可以使用 `typedef` 为现有的数据类型分配一个新名称。以下是你在进行 `typedef` 声明时应该使用的语法：
+
+
+    ![](img/00008.jpeg)
+
+
+    例如，以下语句告知 C++ 编译器 `head` 是字符的另一种备用术语：
+
+
+    ```cpp
+
+    typedef char head;
+
+    ```
+
+
+    一旦你执行了该语句，下面的声明将是 100% 有效的并产生一个名为 `letters` 的字符变量：
+
+
+    ```cpp
+
+    head letters;
+
+    ```
+
+
+    ### 枚举类型
+
+
+    枚举类型声明了一个备用类型名和标识符数组。你可以使用这些标识符作为你正在处理的数据类型的值。所有枚举员都是常量，其数据类型为给定的枚举。
+
+
+    要生成一个枚举，你应该使用 `enum`（一个 C++ 关键字）。以下是你应该使用的语法：
+
+
+    ![](img/00009.jpeg)
+
+
+    在此语法中，“enum-name”代表枚举的类型名。你应该使用逗号来分隔括号内的名称。
+
+
+    例如，给下面的代码创建了一个名为 `sizes` 的枚举，给它赋予了三个不同的尺寸，以及一个变量（即 `c`）来确定类型的大小。最后，将“large”赋值给变量
+    `c`。
+
+
+    ```cpp
+
+    enum sizes { small, medium, large } c;
+
+    c = large;
+
+    ```
+
+
+    默认情况下，第一个名称的值等于 0，第二个名称的值等于 1，第三个名称的值等于 2，以此此类推。然而，你可以添加一个初始化器来为所选的名称分配特定的值。
+
+
+    例如，在下面给出的枚举中，`medium` 将获得值 100。
+
+
+    ```cpp
+
+    enum sizes { small, medium=100, large };
+
+    ```
+
+
+    一个名称的值比前一个大 1。因此，在最新的示例中，`large` 的值等于 101。
+
+
+    ### 变量类型
+
+
+    变量提供了可以由你的程序修改和控制的存储。每个变量都属于特定的类型，该类型规定了：
+
+
+    * 内存空间的布局和大小
+
+    * 你可以在内存空间中存储的值
+
+    * 你可以应用的操作
+
+
+    在命名变量时可以使用下划线、数字和字母。但是，你不能使用数字作为变量名的第一个字符。例如，`variable1` 是有效的，但 `1variable` 则无效。此外，这种编程语言对大小写敏感。这意味着
+    `VARIABLE`、`Variable` 和 `variable` 被视为三个不同的实体。
+
+
+    | 变量类型 | 说明 |
+
+    | :--- | :--- |
+
+    | `int` | 整数大小。 |
+
+    | `bool` | 可以存储真或假。 |
+
+    | `void` | 表示无。 |
+
+    | `char` | 整数类型（通常为一个字节）。 |
+
+    | `float` | 单精度浮点。 |
+
+    | `wchar_t` | 表示宽字符。 |
+
+    | `double` | 变量类型。 |
+
+
+    此外，这种编程语言允许你使用某些工具定义其他类型（例如类、数组等）。本书的后续部分将介绍如何描述、声明和利用这些类型。
+
+
+    #### 如何在 C++ 中定义变量
+
+
+    通过定义变量，你是在告知 C++ 编译器你想要使用的位置和存储空间。你的变量定义指定了数据类型并持有属于该类型的变量列表。以下是你应该使用的语法：
+
+
+    ```cpp
+
+    type variable_list;
+
+    ```
+
+
+    '
+- fmt: '
+
+    You’ll find variable declarations extremely useful when you have several available
+    files and you specify a variable in one of them. You should use `extern`, another
+    C++ keyword, when declaring a variable in your statements. This language allows
+    you to declare the same variable several times in your program. However, you can
+    only define it once in a function, file, or code block.
+
+
+    ## Rvalues and Lvalues
+
+
+    The C++ language supports two types of expressions:
+
+
+    * `rvalue` – This term refers to a value stored somewhere in the memory. `Rvalues`
+    are expressions that cannot hold the value/s assigned to them. That means you
+    may place an `rvalue` on the right-hand side, but never on the left-hand side,
+    of your C++ statements.
+
+    * `lvalue` – These are expressions that point to a specific memory location. You
+    can place `lvalues` on either side of your C++ statements.
+
+
+    All variables are classified as `lvalues`. That means they can appear on the right-hand
+    and left-hand side of your statements. Numeric literals, on the other hand, are
+    considered as `rvalues`. That means they cannot be written on the left-side of
+    a C++ statement.
+
+
+    ## Chapter 5: The Scope of a Variable
+
+
+    Basically, the term “scope” refers to a part of a C++ program. Here are three
+    areas where you can declare variables:
+
+
+    * Outside the functions of your program. These variables are known as global variables
+    since they can be accessed at any part of the program.
+
+    * Inside a block or function. Variables declared this way are known as local variables.
+
+    * Inside the definition of a function parameter. These parameters are known as
+    formal parameters.
+
+
+    In this section of the book, you’ll learn about the global and local variables.
+    Formal parameters will be discussed in a later chapter.
+
+
+    ### The Global Variables
+
+
+    These variables are declared outside the functions. Typically, global variables
+    are placed on the top section of C++ programs. Variables that belong to this type
+    can store their value permanently.
+
+
+    You may access global variables using any function; thus, you may utilize global
+    variables at any part of your program.
+
+
+    ### The Local Variables
+
+
+    These variables are declared within a block or function. Since these variables
+    are placed within a certain function or code block, you can only use them for
+    statements that are located in the same function or block. You cannot use local
+    variables for external statements (i.e. statements stored outside the function
+    or block of code).
+
+
+    ### How to Initialize Global and Local Variables
+
+
+    Once local variables are defined, the system won’t initialize them. That means
+    you have to initialize them manually. On the other hand, the system initializes
+    global variables automatically. Here are some valid data types and their corresponding
+    initializer:
+
+
+    | Data Type | The Initializer |
+
+    | :--- | :--- |
+
+    | `char` | `''\0''` |
+
+    | `int` | `o` |
+
+    | `float` | `0` |
+
+    | `pointer` | `NULL` |
+
+    | `double` | `0` |
+
+
+    **Important Note:** While writing programs, you should initialize all of your
+    variables properly. If you won’t, your programs might generate unexpected or unwanted
+    results.
+
+
+    ## Chapter 6: Literals/Constants
+
+
+    The term “constant” refers to a fixed value that can prevent your program from
+    making future alterations. This kind of value is also known as a literal.
+
+
+    **Important Note:** C++ programs treat literals as ordinary variables. The only
+    difference is that programs cannot modify these literals in any way.
+
+
+    Literals can belong to any of the fundamental data types. Expert programmers divide
+    these values into five major categories. These are:
+
+
+    ### Boolean Values
+
+
+    The C++ programming language has two Boolean constants, which are considered as
+    keywords:
+
+
+    * `false` – A value that represents false.
+
+    * `true` – A value that represents true.
+
+
+    **Important Note:** True is not equal to `1` and false is not equal to `0`.
+
+
+    ### Characters
+
+
+    You should enclose character constants using single quotes. Constants that begin
+    with `L` (uppercase) belong to the “wide character” category and must be stored
+    inside a `wchar_t` variable. If your constant doesn’t begin with an uppercase
+    `L`, on the other hand, it is considered as a narrow character and can be kept
+    inside a simple `char` variable.
+
+
+    Character constants can take the form of plain characters (e.g. `‘y’`), universal
+    characters (e.g. `‘u01C0’`), or escape sequences (e.g. `''\n’`).
+
+
+    In the C++ programming language, some characters gain a special function if they
+    are introduced by a backslash. These characters are known as sequence codes. Check
+    the following examples:
+
+
+    | The Escape Sequence | The Meaning |
+
+    | :--- | :--- |
+
+    | `\''` | Single quote |
+
+    | `\?` | Question mark |
+
+    | `\”` | Double quote |
+
+    | `\\` | Backslash |
+
+    | `\b` | Backspace |
+
+    | `\f` | Form feed |
+
+    | `\a` | Bell or alert |
+
+    | `\n` | Newline |
+
+    | `\000` | An octal number that has 1 – 3 digits |
+
+    | `\v` | Vertical tab |
+
+    | `\r` | Carriage return |
+
+    | `\xhh` | Hexadecimal number |
+
+    | `\t` | Horizontal tab |
+
+
+    ### Strings
+
+
+    You must enclose string constants using double quotes. Strings contain characters
+    similar to that of character constants: escape sequences, universal characters,
+    and plain characters.
+
+
+    String constants allow you to divide long lines into smaller ones. If you’ll use
+    this functionality, you should add whitespaces between the smaller lines to separate
+    them.
+
+
+    ### Floating-Point
+
+
+    Floating-point constants have four parts: (1) exponent, (2) fraction, (3) integer,
+    and (4) decimal point. You may represent these constants either in exponential
+    or decimal form.
+
+
+    When writing a floating-point literal in the decimal form, include the exponent,
+    the decimal point, or both. When writing in the exponential form, on the other
+    hand, you should include the fraction, the integer, or both. Introduce signed
+    exponents using `E` or `e`.
+
+
+    ### Integers
+
+
+    Integer constants can be octal, decimal, or hexadecimal literals. You should use
+    a prefix to specify the radix (i.e. the base of the value) of these constants.
+    Here are the integer and their corresponding prefix:
+
+
+    * Decimal Integers – nothing
+
+    * Octal Integers – `o`
+
+    * Hexadecimal Integers – `X`
+
+
+    The C++ language allows you to add `L/l` or `U` as suffix for your integer literals.
+    These suffixes are not case-sensitive. Also, you can place them in any order.
+    The list below will show some integer constants:
+
+
+    * `0xFL` – Valid
+
+    * `16` – Valid
+
+    * `15U` – Valid
+
+    * `09` – Invalid - `9` is not an octal number
+
+    * `065` – Invalid – You cannot repeat any suffix
+
+
+    Here are some samples of valid Integer:
+
+
+    * `65` – decimal
+
+    * `0312` – octal
+
+    * `20` – int
+
+    * `20u` – unsigned int
+
+    * `20ul` – unsigned long
+
+    * `20l` – long
+
+
+    ## How to Define a Constant
+
+
+    In this programming language, you can define literals in two different ways:
+
+
+    * using `const` (a C++ keyword)
+
+    * using `#define` (a C++ preprocessor)
+
+
+    ### What is #define?
+
+
+    This preprocessor uses the following syntax while defining literals:
+
+
+    ```
+
+    #define CONSTANT value
+
+    ```
+
+
+    The example below will help you understand this preprocessor:
+
+
+    ```
+
+    #define PI 50
+
+    ```
+
+
+    If you will compile and execute the code given above, you’ll get this result:
+    50.
+
+
+    ### What is const?
+
+
+    Basically, `const` is a C++ keyword that you can use to declare literals with
+    a particular type. Here is the syntax of this keyword:
+
+
+    ```cppconst type variable_name = value;
+
+    ```
+
+
+    **Important Note:** According to expert programmers, you should use capital letters
+    when defining literals.
+
+    '
+  raw: 'You’ll find variable declarations extremely useful when you have several available
+    files and you specify a variable in one of them. You should use extern, another
+    C++ keyword, when declaring a variable in your statements. This language allows
+    you to declare the same variable several times in your program. However, you can
+    only define it once in a function, file, or code block.
+
+
+    Rvalues and Lvalues
+
+
+    The C++ language supports two types of expressions:
+
+
+    *   rvalue – This term refers to a value stored somewhere in the memory. Rvalues
+    are expressions that cannot hold the value/s assigned to them. That means you
+    may place an rvalue on the right-hand side, but never on the left-hand side, of
+    your C++ statements.
+
+
+    *   lvalue – These are expressions that point to a specific memory location. You
+    can place lvalues on either side of your C++ statements.
+
+
+    All variables are classified as lvalues. That means they can appear on the right-hand
+    and left-hand side of your statements. Numeric literals, on the other hand, are
+    considered as rvalues. That means they cannot be written on the left-side of a
+    C++ statement.
+
+
+    Chapter 5: The Scope of a Variable
+
+
+    Basically, the term “scope” refers to a part of a C++ program. Here are three
+    areas where you can declare variables:
+
+
+    *   Outside the functions of your program. These variables are known as global
+    variables since they can be accessed at any part of the program.
+
+
+    *   Inside a block or function. Variables declared this way are known as local
+    variables.
+
+
+    *   Inside the definition of a function parameter. These parameters are known
+    as formal parameters.
+
+
+    In this section of the book, you’ll learn about the global and local variables.
+    Formal parameters will be discussed in a later chapter.
+
+
+    The Global Variables
+
+
+    These variables are declared outside the functions. Typically, global variables
+    are placed on the top section of C++ programs. Variables that belong to this type
+    can store their value permanently.
+
+
+    You may access global variables using any function; thus, you may utilize global
+    variables at any part of your program.
+
+
+    The Local Variables
+
+
+    These variables are declared within a block or function. Since              these
+    variables are placed within a certain function or code block, you can only use
+    them for statements that are located in the same function or block. You cannot
+    use local variables for external statements (i.e. statements stored outside the
+    function or block of code).
+
+
+    How to Initialize Global and Local Variables
+
+
+    Once local variables are defined, the system won’t initialize them. That means
+    you have to initialize them manually. On the other hand, the system initializes
+    global variables automatically. Here are some valid data types and their corresponding
+    initializer:
+
+
+    | Data Type | The Initializer |
+
+
+    | char | ‘\0’ |
+
+
+    | int | o |
+
+
+    | float | 0 |
+
+
+    | pointer | NULL |
+
+
+    | double | 0 |
+
+
+    Important Note: While writing programs, you should initialize all of your variables
+    properly. If you won’t, your programs might generate unexpected or unwanted results.
+
+
+    Chapter 6: Literals/Constants
+
+
+    The term “constant” refers to a fixed value that can prevent your program from
+    making future alterations. This kind of value is also known as a literal.
+
+
+    Important Note: C++ programs treat literals as ordinary variables. The only difference
+    is that programs cannot modify these literals in any way.
+
+
+    Literals can belong to any of the fundamental data types. Expert programmers divide
+    these values into five major categories. These are:
+
+
+    Boolean Values
+
+
+    The C++ programming language has two Boolean constants, which are considered as
+    keywords:
+
+
+    *   false – A value that represents false.
+
+
+    *   true – A value that represents true.
+
+
+    Important Note: True is not equal to 1 and false is not equal to 0.
+
+
+    Characters
+
+
+    You should enclose character constants using single quotes. Constants that begin
+    with L (uppercase) belong to the “wide character” category and must be stored
+    inside a wchar_t variable. If your constant doesn’t begin with an uppercase L,
+    on the other hand, it is considered as a narrow character and can be kept inside
+    a simple char variable.
+
+
+    Character constants can take the form of plain characters (e.g. ‘y’), universal
+    characters (e.g. ‘\u01C0’), or escape sequences (e.g. ‘\n’).
+
+
+    In the C++ programming language, some characters gain a special function if they
+    are introduced by a backslash. These characters are known as sequence codes. Check
+    the following examples:
+
+
+    | The Escape Sequence | The Meaning |
+
+
+    | \’ | Single quote |
+
+
+    | \? | Question mark |
+
+
+    | \” | Double quote |
+
+
+    | \\ | Backslash |
+
+
+    | \b | Backspace |
+
+
+    | \f | Form feed |
+
+
+    | \a | Bell or alert |
+
+
+    | \n | Newline |
+
+
+    | \000 | An octal number that has 1 – 3 digits |
+
+
+    | \v | Vertical tab |
+
+
+    | \r | Carriage return |
+
+
+    | \xhh | Hexadecimal number |
+
+
+    | \t | Horizontal tab |
+
+
+    Strings
+
+
+    You must enclose string constants using double quotes. Strings contain characters
+    similar to that of character constants: escape sequences, universal characters,
+    and plain characters.
+
+
+    String constants allow you to divide long lines into smaller ones. If you’ll use
+    this functionality, you should add whitespaces between the smaller lines to separate
+    them.
+
+
+    Floating-Point
+
+
+    Floating-point constants have four parts: (1) exponent, (2) fraction, (3) integer,
+    and (4) decimal point. You may represent these constants either in exponential
+    or decimal form.
+
+
+    When writing a floating-point literal in the decimal form, include the exponent,
+    the decimal point, or both. When writing in the exponential form, on the other
+    hand, you should include the fraction, the integer, or both. Introduce signed
+    exponents using an E or e.
+
+
+    Integers
+
+
+    Integer constants can be octal, decimal, or hexadecimal literals. You should use
+    a prefix to specify the radix (i.e. the base of the value) of these constants.
+    Here are the integer constants and their corresponding prefix:
+
+
+    *   Decimal Integers – nothing
+
+
+    *   Octal Integers – o
+
+
+    *   Hexadecimal Integers – oX
+
+
+    The C++ language allows you to add L and/or U (L stands for long, U stands for
+    unsigned) as suffix for your integer literals. These suffixes are not case-sensitive.
+    Also, you can place them in any order.
+
+
+    The list below will show you some integer constants:
+
+
+    *   0xFalL                                          // Valid
+
+
+    *   616                                                        // Valid
+
+
+    *   615U                                                        // Valid
+
+
+    *   049                                                        // Invalid - 9
+    is not an octal number
+
+
+    *   065                                                        // Invalid – You
+    cannot repeat any suffix
+
+
+    Here are some samples of valid Integer constants:
+
+
+    *   65                                                                      //
+    decimal
+
+
+    *   0312                                                                     
+    // octal
+
+
+    *   20                                                                      //
+    int
+
+
+    *   20u                                                                      //
+    unsigned int
+
+
+    *   20ul                                                                     
+    // unsigned long
+
+
+    *   20l                                                                      //
+    long
+
+
+    How to Define a Constant
+
+
+    In this programming language, you can define literals in two different ways:
+
+
+    *   using const (a C++ keyword)
+
+
+    *   using #define (a C++ preprocessor)
+
+
+    What is #define?
+
+
+    This preprocessor uses the following syntax while defining literals:
+
+
+    ![](images/00011.jpeg)
+
+
+    The example below will help you understand this preprocessor:
+
+
+    ![](images/00012.jpeg)
+
+
+    If you will compile and execute the code given above, you’ll get this result:
+    50.
+
+
+    What is const?
+
+
+    Basically, const is a C++ keyword that you can use to declare literals with a
+    particular type. Here is the syntax of this keyword:
+
+
+    ![](images/00013.jpeg)
+
+
+    Important Note: According to expert programmers, you should use capital letters
+    when defining literals.'
+  toc: []
+  trans: '
+
+    当你有多个可用文件并且在其中一个文件中指定变量时，你会发现变量声明非常有用。在语句中声明变量时，你应该使用另一个 C++ 关键字 `extern`。该语言允许你在程序中多次声明同一个变量。但是，你只能在函数、文件或代码块中定义它一次。
+
+
+    ## Rvalues 和左值 Lvalues
+
+
+    C++ 语言支持两种类型的表达式：
+
+
+    * `rvalue` – 该术语指的是存储在内存某处的值。`Rvalues` 是不能包含赋值给它们的值的表达式。这意味着你可以将 `rvalue` 放在 C++
+    语句的右侧，但永远不能放在左侧。
+
+    * `lvalue` – 它们是指向特定内存位置的表达式。你可以将 `lvalues` 放在 C++ 语句的任意一侧。
+
+
+    所有变量都被归类为 `lvalues`。这意味着它们可以出现在语句的右侧和左侧。另一方面，数字字面量被视为 `rvalues`。这意味着它们不能写在 C++
+    语句的左侧。
+
+
+    ## 第 5 章：变量的作用域
+
+
+    基本上，“作用域”一词指的是 C++ 程序的一部分。这里有三个你可以声明变量的地方：
+
+
+    * 你的程序函数外部。这些变量被称为全局变量，因为它们可以在程序的任何部分被访问。
+
+    * 块或函数内部。以这种方式声明的变量被称为局部变量。
+
+    * 函数参数定义内部。这些参数被称为形式参数。
+
+
+    在书的这一部分中，你将学习全局变量和局部变量。形式参数将在后面的章节中讨论。
+
+
+    ### 全局变量
+
+
+    这些变量在函数外部声明。通常，全局变量被放置在 C++ 程序的顶部。属于这种类型的变量可以永久存储它们的值。
+
+
+    你可以使用任何函数访问全局变量；因此，你可以在程序的任何部分利用全局变量。
+
+
+    ### 局部变量
+
+
+    这些变量在块或函数内部声明。由于这些变量被放在特定的函数或代码块中，你只能将它们用于相同函数或块中的语句。你不能将局部变量用于外部语句（即存储在函数或代码块之外的语句）。
+
+
+    ### 如何初始化全局和局部变量
+
+
+    一旦定义了局部变量，系统就不会初始化它们。这意味着你必须手动初始化它们。另一方面，系统会自动初始化全局变量。以下是一些有效的数据类型及其对应的初始化器：
+
+
+    | 数据类型 | 初始化器 |
+
+    | :--- | :--- |
+
+    | `char` | `''\0''` |
+
+    | `int` | `o` |
+
+    | `float` | `0` |
+
+    | `pointer` | `NULL` |
+
+    | `double` | `0` |
+
+
+    **重要注意：** 在编写程序时，你应该妥善地初始化所有的变量。如果不这样做，你的程序可能会产生意外或不需要的结果。
+
+
+    ## 第 6 章：字面量/常量
+
+
+    “常量”一词指的是固定值，它可以防止你的程序进行未来的更改。这种值也被称为字面量。
+
+
+    **重要注意：** C++ 程序将字面量视为普通变量。唯一的区别是程序无法以任何方式修改这些字面量。
+
+
+    字面量可以属于任何基本数据类型。专家级程序员将这些值分为五大类。这些是：
+
+
+    ### 布尔值
+
+
+    C++ 编程语言有两个布尔常量，它们被认为是关键字：
+
+
+    * `false` – 代表虚的值。
+
+    * `true` – 代表真的值。
+
+
+    **重要注意：** true 不等于 `1` 且 false 不等于 `0`。
+
+
+    ### 字符
+
+
+    你应当使用单引号将字符常量括起来。以 `L`（大写）开头的常量属于“宽字符”类别，必须存储在 `wchar_t` 变量中。另一方面，如果你的常量不是大写 `L`
+    开头，它被视为窄字符并可以放在简单的 `char` 变量中。
+
+
+    字符常量可以用普通字符（例如 `‘y’`）、通用字符（例如 `‘u01C0’`）或转义序列（例如 `''\n’`）的形式存在。
+
+
+    在 C++ 编程语言中，某些字符如果通过斜斜引入将获得特殊功能。这些字符被称为序列代码。查看以下示例：
+
+
+    | 转义序列 | 含义 |
+
+    | :--- | :--- |
+
+    | `\''` | 单引号 |
+
+    | `\?` | 问号 |
+
+    | `\”` | 双引号 |
+
+    | `\\` | 反斜杠 |
+
+    | `\b` | 退格 |
+
+    | `\f` | 换页 |
+
+    | `\a` | 铃声或警报 |
+
+    | `\n` | 换行 |
+
+    | `\000` | 具有 1–3 位的八进制数 |
+
+    | `\v` | 垂直制表符 |
+
+    | `\r` | 回车 |
+
+    | `\xhh` | 十进制数 |
+
+    | `\t` | 水平制表符 |
+
+
+    ### 字符串
+
+
+    你必须使用双引号将字符串常量括起来。字符串包含与字符常量类似的字符：转义序列、通用字符和普通字符。
+
+
+    字符串常量允许将长行分成更短行。如果你使用此功能，应该在较短行之间添加空格以将它们分开。
+
+
+    ### 浮点数
+
+
+    浮点常量有四个部分：(1) 指数，(2) 小数，(3) 整数，(4) 小数。你可以以指数或小数形式表示这些常量。
+
+
+    在小数形式编写浮点字面量时，包含指数、小数点或两者。另一方面，在指数形式编写时，你应该包含小数、整数或两者。使用 `E` 或 `e` 引入。
+
+
+    ### 整数
+
+
+    整数常量可以是八进制、进制或十六进制字面量。你应该使用前缀来指定这些常数的基数（即值）。以下是整数及其对应的前缀：
+
+
+    * 十进制整数 – 无
+
+    * 八进制整数 – `o`
+
+    * 十六进制整数 – `X`
+
+
+    C++ 语言允许为你的整数字面量添加 `L/l` 或 `U` 作为后缀。这些后缀大小写不敏感。此外，你可以以任何顺序放置它们。下面的列表显示了一些整数：
+
+
+    * `0FL` 有效
+
+    * `16` 有效
+
+    * `15U` 有效
+
+    * `09` 无效 – `9` 不是八进制数
+
+    * `065` 有效
+
+
+    ## 如何定义常量
+
+
+    在该语言中，你可以通过两种不同的方式定义字面量：
+
+
+    * 使用 `const`（C++ 关键字）
+
+    * 使用 `#define`（C++ 预处理器）
+
+
+    ### 什么是 #define?
+
+
+    该预处理器在定义字面量时使用以下语法：
+
+
+    ```
+
+    define CONSTANT value
+
+    ```
+
+
+    下面的示例将帮助你理解这个预处理器：
+
+
+    ```define PI 50
+
+
+
+
+    如果你编译并执行上述代码，你将得到结果：50。
+
+
+    ### 什么是 const?
+
+
+    基本上，`const` 是一个 C++ 关键字，你可以用它声明具有特定类型的字面量。这是该关键字的语法：
+
+
+    ```cppconst type variable_name = value;
+
+    ```
+
+
+    **重要注意：** 根据专家级程序员的建议，定义字面量时应使用大写字母。
+
+    '
+- fmt: '
+
+    # Chapter 7: Modifiers and Storage Classes
+
+
+    ## The Different Kinds of Modifiers in the C++ Language
+
+
+    In the C++ language, you may use modifiers to introduce `double`, `int`, and `char`
+    data types. Modifiers allow you to change the meaning of data types so that they
+    can meet your needs.
+
+
+    This section will discuss the following modifiers:
+
+
+    * `short`
+
+    * `long`
+
+    * `unsigned`
+
+    * `signed`
+
+
+    You may apply all of these modifiers when working on integer constants. Additionally,
+    you can apply `unsigned` and `signed` on `char` constants. Finally, you can apply
+    `long` on double-precision floating point literals.
+
+
+    **Important Note:** This programming language allows you to combine modifiers.
+    You may use `signed` and `unsigned` to introduce `short` or `long` modifiers.
+    For instance, `signed short int`.
+
+
+    C++ offers a shortcut for declaring `long`, `short`, or `unsigned` integers. You
+    may simply enter `long`, `short`, or `unsigned`, respectively. This programming
+    language will add `int` automatically. For instance, the two statements given
+    below both declare short integer variables:
+
+
+    ```cpp
+
+    short a;
+
+    short int z;
+
+    ```
+
+
+    The following screenshot shows the code of a simple program. This program will
+    help you understand how C++ interprets signed and unsigned modifiers.
+
+
+    ![](images/00014.jpeg)
+
+
+    If you have entered and run the program correctly, you’ll get the following result:
+
+
+    ![](images/00015.jpeg)
+
+
+    ## The Different Kinds of Qualifiers
+
+
+    A type qualifier provides useful data about the variable it precedes. Here are
+    the qualifiers that you will encounter while using C++:
+
+
+    | Name of Qualifier | The Meaning |
+
+    | :--- | :--- |
+
+    | `volatile` | This modifier informs the C++ compiler that the value of a variable
+    can be changed using methods that are not specified in the statement. |
+
+    | `restrict` | This modifier provides you with different access methods to an
+    object. |
+
+    | `const` | You can use this modifier to prevent your program from changing an
+    object during the execution phase. |
+
+
+    ## The Storage Classes in C++
+
+
+    Storage classes define the visibility (also known as scope) and lifetime of functions
+    and/or variables inside a program. A storage class is a modifier that precedes
+    the object type that it modifies. The C++ language supports five storage classes,
+    namely:
+
+
+    * `static`
+
+    * `auto`
+
+    * `extern`
+
+    * `mutable`
+
+    * `register`
+
+
+    Let’s discuss each storage class in detail:
+
+
+    ### Static
+
+
+    This storage class tells the C++ compiler to keep a local variable as long as
+    a program is active. This is because C++ programs sometimes create and destroy
+    variables on a continuous cycle. Thus, tagging local variables as `static` allows
+    those variables to retain their values even if they go in/out of scope.
+
+
+    You may also apply this modifier on global variables. Once you have applied this
+    modifier, the scope of the variable will be limited to the file it is declared
+    in.
+
+
+    ### Auto
+
+
+    This serves as the default class for defining local variables. Here’s a basic
+    example:
+
+
+    ![](images/00016.jpeg)
+
+
+    This sample code defines two different variables that belong to the same class.
+    You can only use `auto` inside functions. That means you can only apply this storage
+    class on local variables.
+
+
+    ### Extern
+
+
+    With this storage class, you can make references to global variables that are
+    accessible to all of your program files. When using the `extern`, you cannot initialize
+    the variable since it only points the variable name to a memory location you have
+    defined previously.
+
+
+    If you have several files and you have defined a global function or variable,
+    which can also be used in different files, you may use `extern` on a different
+    file to reference your predefined function or variable.
+
+
+    This modifier is typically used when the programmer has multiple files that share
+    similar global functions or variables.
+
+
+    ### Mutable
+
+
+    You can only apply this modifier on class objects. The `mutable` storage class
+    allows an object’s member to override the `const` function.
+
+
+    ### Register
+
+
+    You should use this storage class when defining local variables that must be saved
+    inside a register (i.e. not in the machine’s RAM). Thus, the variable’s maximum
+    size is equal to the register’s size (typically a single word). Additionally,
+    these variables cannot possess the `&` operator since they don’t have a specific
+    location in the computer’s memory.
+
+
+    In general, you should use this `register` to store variables that need fast access
+    (e.g. counters). It is important to note that defining a `register` is different
+    from storing a variable in the register. That means you can store quick-access
+    variables inside a register, based on implementation and hardware limitations.
+
+
+    # Chapter 8: The Operators in the C++ Language
+
+
+    In this programming language, operators are symbols that require the compiler
+    to conduct logical or mathematical manipulations. The C++ language offers a wide
+    range of pre-installed operators. These are:
+
+
+    ## The Logical Operators
+
+
+    The list below will show you the logical operators available in the C++ programming
+    language. Let’s assume that `x = 2` and `y = 0`.
+
+
+    * `||` – This operator is known as “Logical OR.” The condition is true if one
+    of the operands is not equal to zero. For instance: `(x || y)` is true.
+
+    * `&&` – This is called “Logical AND.” If the two operands are not equal to zero,
+    the condition is true. Here’s an example: `(x && y)` is false.
+
+    * `!` – Programmers call this operator “logical NOT.” You can use it to reverse
+    the status of an operand. If the condition is false, `!` will give you true. For
+    example: `!(x && y)` is true.
+
+
+    ## The Arithmetic Operators
+
+
+    In this part of the book, you’ll learn about the arithmetic operators available
+    in C++. To help you understand how each operator works, let’s use two sample variables:
+    `x = 1; y = 3`.
+
+
+    * `+` – This operator adds operands. For example: `x + y = 4`.
+
+    * `-` – You should use this operator to perform subtraction. It subtracts the
+    right-hand operand from that of the left-operand. For instance: `y - x = 2`.
+
+    * `*` – This operator allows you to perform multiplication. For instance: `x *
+    y = 3`.
+
+    * `/` – With this operator, you can conduct division. For example: `y / x = 3`.
+
+    * `++` – This is known as the increment operator. It increases the value by one.
+    For example: `y++ = 4`.
+
+    * `--` – This is called the decrement operator. With this, you can decrease the
+    operand’s value by one. For instance: `x-- = 0`.
+
+
+    ## Assignment Operators
+
+
+    Here, you’ll learn about the assignment operators offered by C++:
+
+
+    * `=` – This operator is called “simple assignment.” It assigns the value of the
+    right-hand operand to the left-hand. For instance: `z = x + y`.
+
+    * `+=` – This is known as “Add AND.” It adds the values of both operands and assigns
+    the sum to the left-hand operand. For example: `z += x` is equal to `z = z + x`.
+
+    * `*=` – Programmers call this the “Multiply AND” operator. It multiplies the
+    value of the left-hand operand with that of the right-hand operand and gives the
+    result to the left-hand operand. For example: `z *= x` is equal to `z = z * x`.
+
+    * `-=` – This operator is called “Subtract AND.” It subtracts the value of the
+    right-hand operand from that of the left-hand operand and assigns the difference
+    to the left-hand. For instance: `z -= x` is equal to `z = z – x`.
+
+    * `/=` – This is called the “Divide AND” operator. It divides the value of the
+    left-hand operand with that of the right-hand operand and assigns the quotient
+    to the left-hand operand. For example: `z /= x` is equal to `z = z / x`.
+
+    * `&=` – This is called the “Bitwise AND” operator. The following example will
+    show you how it works: `z &= x` is identical to `z = z & x`.
+
+    * `|=` – Programmers refer this operator as “Bitwise inclusive OR and.” Here’s
+    how it works: `z |= x` is identical to `z = z | x`.
+
+    * `^=` – This is called “Bitwise exclusive OR and.” It works this way: `z ^= x`
+    is identical to `z = z ^ x`.
+
+    '
+  raw: 'Chapter 7: Modifiers and Storage Classes
+
+
+    The Different Kinds of Modifiers in the C++ Language
+
+
+    In the C++ language, you may use modifiers to introduce double, int, and char
+    data types. Modifiers allow you to change the meaning of data types so that they
+    can meet your needs.
+
+
+    This section will discuss the following modifiers:
+
+
+    *   short
+
+
+    *   long
+
+
+    *   unsigned
+
+
+    *   signed
+
+
+    You may apply all of these modifiers when working on integer constants. Additionally,
+    you can apply unsigned and signed on char constants. Finally, you can apply long
+    on double-precision floating point literals.
+
+
+    Important Note: This programming language allows you to combine modifiers. You
+    may use signed and unsigned to introduce short or long modifiers. For instance,
+    signed short int.
+
+
+    C++ offers a shortcut for declaring long, short, or unsigned integers. You may
+    simply enter long, short, or unsigned, respectively. This programming language
+    will add int automatically. For instance, the two statements given below both
+    declare short integer variables:
+
+
+    short a;
+
+
+    short int z;
+
+
+    The following screenshot shows the code of a simple program. This program will
+    help you understand how C++ interprets signed and unsigned modifiers.
+
+
+    ![](images/00014.jpeg)
+
+
+    If you have entered and run the program correctly, you’ll get the following result:
+
+
+    ![](images/00015.jpeg)
+
+
+    The Different Kinds of Qualifiers
+
+
+    A type qualifier provides useful data about the variable it precedes. Here are
+    the qualifiers that you will encounter while using C++:
+
+
+    | Name of Qualifier | The Meaning |
+
+
+    | volatile | This modifier informs the C++ compiler that the value of a variable
+    can be changed using methods that are not specified in the statement. |
+
+
+    | restrict | This modifier provides you with different access methods to an object.
+    |
+
+
+    | const | You can use this modifier to prevent your program from changing an object
+    during the execution phase. |
+
+
+    The Storage Classes in C++
+
+
+    Storage classes define the visibility (also known as scope) and lifetime of functions
+    and/or variables inside a program. A storage class is a modifier that precedes
+    the object type that it modifies. The C++ language supports five storage classes,
+    namely:
+
+
+    *   static
+
+
+    *   auto
+
+
+    *   extern
+
+
+    *   mutable
+
+
+    *   register
+
+
+    Let’s discuss each storage class in detail:
+
+
+    Static
+
+
+    This storage class tells the C++ compiler to keep a local variable as long as
+    a program is active. This is because C++ programs sometimes create and destroy
+    variables on a continuous cycle. Thus, tagging local variables as static allows
+    those variables to retain their values even if they go in/out of scope.
+
+
+    You may also apply this modifier on global variables. Once you have applied this
+    modifier, the scope of the variable will be limited to the file it is declared
+    in.
+
+
+    Auto
+
+
+    This serves as the default class for defining local variables. Here’s a basic
+    example:
+
+
+    ![](images/00016.jpeg)
+
+
+    This sample code defines two different variables that belong to the same class.
+    You can only use auto inside functions. That means you can only apply this storage
+    class on local variables.
+
+
+    Extern
+
+
+    With this storage class, you can make references to global variables that are
+    accessible to all of your program files. When using this extern, you cannot initialize
+    the variable since it only points the variable name to a memory location you have
+    defined previously.
+
+
+    If you have several files and you have defined a global function or variable,
+    which can also be used in different files, you may use extern on a different file
+    to reference your predefined function or variable.
+
+
+    This modifier is typically used when the programmer has multiple files that share
+    similar global functions or variables.
+
+
+    Mutable
+
+
+    You can only apply this modifier on class objects. The mutable storage class allows
+    an object’s member to override the const function.
+
+
+    Register
+
+
+    You should use this storage class when defining local variables that must be saved
+    inside a register (i.e. not in the machine’s RAM). Thus, the variable’s maximum
+    size is equal to the register’s size (typically a single word). Additionally,
+    these variables cannot possess the “&” operator since they don’t have a specific
+    location in the computer’s memory.
+
+
+    In general, you should use this register to store variables that need fast access
+    (e.g. counters). It is important to note that defining a “register” is different
+    from storing a variable in the register. That means you can store quick-access
+    variables inside a register, based on implementation and hardware limitations.
+
+
+    Chapter 8: The Operators in the C++ Language
+
+
+    In this programming language, operators are symbols that require the compiler
+    to conduct logical or mathematical manipulations. The C++ language offers a wide
+    range of pre-installed operators. These are:
+
+
+    The Logical Operators
+
+
+    The list below will show you the logical operators available in the C++ programming
+    language. Let’s assume that x = 2 and y = 0.
+
+
+    *   “||” – This operator is known as “Logical OR.” The condition is true if one
+    of the operands is not equal to zero. For instance: (x || y) is true.
+
+
+    *   “&&” – This is called “Logical AND.” If the two operands are not equal to
+    zero, the condition is true. Here’s an example: (x && y) is false.
+
+
+    *   “!” – Programmers call this operator “logical NOT.” You can use it to reverse
+    the status of an operand. If the condition is false, “!” will give you true. For
+    example: !(x && y) is true.
+
+
+    The Arithmetic Operators
+
+
+    In this part of the book, you’ll learn about the arithmetic operators available
+    in C++. To help you understand how each operator works, let’s use two sample variables:
+    x = 1; y = 3.
+
+
+    *   “+” – This operator adds operands. For example: x + y = 4.
+
+
+    *   “-” – You should use this operator to perform subtraction. It subtracts the
+    value of the right-hand operand from that of the left-hand operand. For instance:
+    y – x = 2.
+
+
+    *   “*” – This operator allows you to perform multiplication on your C++ statements.
+    For instance: x * y = 3.
+
+
+    *   “/” – With this operator, you can conduct division on your C++ codes. For
+    example: y / x = 3.
+
+
+    *   “++” – This is known as the increment operator. It increases the value of
+    an operand by one. For example: y++ = 4.
+
+
+    *   “—” – This is called the decrement operator. With this, you can decrease the
+    operand’s value by one. For instance: x-- = 0.
+
+
+    The Assignment Operators
+
+
+    Here, you’ll learn about the assignment operators offered by C++:
+
+
+    *   “=” – This operator is called “simple assignment.” It assigns the value/s
+    of the right-hand operand to the left-hand operand. For instance: (z = x + y)
+    assigns the value of x + y              to z.
+
+
+    *   “+=” This is known as “Add AND.” It adds the values of both operands and assigns
+    the sum to the left-hand operand. For example: (z += x) is equal to (z = z + x).
+
+
+    *   “*=” – Programmers call this the “Multiply AND” operator. It multiplies the
+    value of the left-hand operand with that of the right-hand operand and gives the
+    result to the left-hand operand. For example: (z *= x) is equal to (z = z * x).
+
+
+    *   “-=” – This operator is called “Subtract AND.” It subtracts the value of the
+    right-hand operand from that of the left-hand operand and assigns the difference
+    to the left-hand operand. For instance: (z -= x) is equal to (z = z – x).
+
+
+    *   “/=” This is called the “Divide AND” operator. It dives the value of the left-hand
+    operand with that of the right-hand operand and assigns the quotient to the left-hand
+    operand. For example: (z /= x) is equal to (z = z / x).
+
+
+    *   “&=” – This is called the “Bitwise AND” operator. The following example will
+    show you how it works: (z &= x) is identical to (z = z & x).
+
+
+    *   “|=” – Programmers refer this operator as “Bitwise inclusive OR and.” Here’s
+    how it works: (z |= x) is identical to (z = z | x).
+
+
+    *   “^=” – This is called “Bitwise exclusive OR and.” It works this way: (z ^=
+    x) is identical to (z = z ^ x).'
+  toc: []
+  trans: '
+
+
+    # 第 7 章：修饰符与存储类型
+
+
+    ## C++ 语言中不同的修饰符
+
+
+    在 C++ 语言中，你可以使用修饰符引入 `double`、`int` 和 `char` 数据类型。修饰符允许你更改数据类型的含义以满足你的需求。
+
+
+    本节将讨论以下修饰符：
+
+
+    * `short`
+
+    * `long`
+
+    * `unsigned`
+
+    * `signed`
+
+
+    处理整数常量时，你可以应用所有的修饰符。此外，你可以在 `char` 常量上应用 `unsigned` 和 `signed`。最后，你可以在双精度浮点字面量上应用
+    `long`。
+
+
+    **注意：** 该编程语言允许你组合修饰符。你可以使用 `signed` 和 `unsigned` 来引入 `short` 或 `long` 修饰符。例如：`signed
+    short int`。
+
+
+    C++ 为声明 `long`、`short` 或 `unsigned` 整数提供了快捷方式。你只需分别输入 `long`、`short` 或 `unsigned`。该编程语言会自动添加
+    `int`。例如，下面的两个语句都声明了短整型变量：
+
+
+    ```cpp
+
+    short a;
+
+    short int z;
+
+    ```
+
+
+    接下来的截图了一个简单程序的代码。该程序将帮助你理解 C++ 如何解释有符号和无符号修饰符。
+
+
+    ![](img/00014.jpeg)
+
+
+    如果你正确输入并运行了程序，将得到以下结果：
+
+
+    ![](img/00015.jpeg)
+
+
+    ## 不同的限定符
+
+
+    类型限定符（Type qualifier）为其其前的变量提供有用数据。以下是你在使用 C++ 时会遇到的限定符：
+
+
+    | 限定符名称 | 含义 |
+
+    | :--- | :--- |
+
+    | `volatile` | 此修饰符告知 C++ 编译器，变量的值可以使用语句未指定的方法进行更改。 |
+
+    | `restrict` | 此修饰符为你提供了对对象的不同访问方法。 |
+
+    | `const` | 你可以使用此修饰符防止程序在执行阶段更改对象。 |
+
+
+    ## C++ 中的存储类型
+
+
+    存储类型定义了程序内部函数和/或变量的可见性（也称为作用域）和生命周期。存储类型是位于其修饰的对象类型之前的修饰符。C++ 语言支持五种存储类型，即：
+
+
+    * `static`
+
+    * `auto`
+
+    * `extern`
+
+    * `mutable`
+
+    * `register`
+
+
+    让我们详细讨论每种存储类型：
+
+
+    ### Static
+
+
+    此存储类型告诉 C++ 编译器只要程序处于活动状态，就保留局部变量。这是因为 C++ 程序有时会在持续循环中创建和销毁变量。因此，将局部变量标记为 `static`
+    可以这些这些即使进入/离开作用域也能保留其值。
+
+
+    你也可以将此修饰符应用于全局变量。一旦你应用了此修饰符，变量的作用域将限制在声明它的文件中。
+
+
+    ### Auto
+
+
+    它是定义局部变量的默认类。这里有一个基本示例：
+
+
+    ![](img/00016.jpeg)
+
+
+    此示例代码定义了两个属于同一类的不同变量。你只能在函数内部使用 `auto`。这意味着你只能在局部变量上应用这种存储类型。
+
+
+    ### Extern
+
+
+    通过这种存储类型，你可以引用全局变量，这些变量对你的程序所有文件都可见。使用 `extern` 时，不能初始化变量，因为它仅仅是将变量名指向你之前定义的内存位置。
+
+
+    如果你有多个文件并且定义了一个全局函数或变量（该变量可以在不同的文件中使用），你可以在另一个文件中使用 `extern` 来引用你预定义的函数或变量。
+
+
+    当程序员有多个共享相似全局函数或变量的文件时，通常使用此修饰符。
+
+
+    ### Mutable
+
+
+    你只能将此修饰符应用于对象。`mutable` 存储类型允许对象的成员覆盖 `const` 函数。
+
+
+    ### Register
+
+
+    当你定义必须保存在寄存器中（即不在机器的 RAM 中）的局部变量时，应该使用这种存储类型。因此，变量的最大大小等于寄存器的大小（通常为单个字长）。此外，这些变量不能拥有
+    `&` 运算符，因为它们在计算机内存中没有特定的位置。
+
+
+    通常，你应该使用此 `register` 来存储需要快速访问的变量（例如计数器）。需要注意的是，定义 `register` 与将变量存储在寄存器中是不同的。这意味着根据实现和硬件限制，你可以将快速访问的变量存储在寄存器中。
+
+
+    # 第 8 章：C++ 语言中的运算符
+
+
+    在这个编程语言中，运算符是需要编译器执行逻辑或数学操作的符号。C++ 语言提供了广泛的预装运算符。这些是：
+
+
+    ## 逻辑运算符
+
+
+    下面的列表将向你展示 C++ 编程语言中可逻辑运算符。假设 `x = 2` 且 `y = 0`。
+
+
+    * `||` – 此运算符被称为“逻辑或”。如果其中一个操作数不等于零，则条件为真。例如：`(x || y)` 为真。
+
+    * `&&` – 这被称为“逻辑与”。如果两个操作数都不等于零，则条件为真。这是一个示例：`(x && y)` 为假。
+
+    * `!` – 程序员将此运算符称为“逻辑非”。你可以使用它来反转操作数的状态。如果条件为假，`!` 将给你真。例如：`!(x && y)` 为真。
+
+
+    ## 算术运算符
+
+
+    在这一部分，你将学习 C++ 中提供的算术运算符。为了帮助你理解每个运算符如何工作，让我们使用两个变量：`x = 1; y = 3;`。
+
+
+    * `+` – 此运算符相加。`x + y = 4`。
+
+    * `-` – 你可以使用此运算符执行减法。`y - x = 2`。
+
+    * `*` – 此运算符允许执行乘法。`x * y = 3`。
+
+    * `/` – 通过此运算符，你可以执行除法。`y / x = 3`。
+
+    * `++` – 这被称为自增运算符。它增加一个值。`y++ = 4`。
+
+    * `--` – 这被称为递减运算符。通过它你可以减少操作数的值。`x-- = 0`。
+
+
+    ## 赋值运算符
+
+
+    在这里，你将学习 C++ 提供的赋值运算符：
+
+
+    * `=` – 此运算符被称为“简单赋值”。它将右操作数的值赋值给左侧。例如：`z = x + y`。
+
+    * `+=` – 这被称为“相加”。它将两个操作数相加并将和赋给左。例如：`z += x` 等于 `z = z + x`。
+
+    * `*=` – 程序员称之为“相乘”。它将左操作数的值与右操作数的值相乘并将结果赋给左。例如：`z *= x` 等于 `z = z * x`。
+
+    * `-=` – 此运算符被称为“相减”。它从左操作数减去右操作数的值并将差赋给左。例如：`z -= x` 等于 `z = z – x`。
+
+    * `/=` – 此运算符被称为“相除”。它将左操作数的值除以右操作数的值并将商赋给左。例如：`z /= x` 等于 `z = z / x`。
+
+    * `&=` – 此运算符被称为“按位与”。接下来的示例将向你展示它是如何工作的：`z &= x` 等同于 `z = z & x`。
+
+    * `|=` – 程序员引用此运算符为“按位或”。它的工作原理如下：`z |= x` 等同于 `z = z | x`。
+
+    * `^=` – 这被称为“按位异或”。它的工作方式如下：`z ^= x` 等同于 `z = z ^ x`。
+
+
+    '
+- fmt: "\n*   `>>=` – This is known as “Right shift AND.” Here’s how it works: `(z\
+    \ >>= x)` is identical to `(z = z >> x)`.\n*   `<<=` – Programmers call this “Left\
+    \ shift AND.” It works this way: `(z <<= x)` is identical to `(z = z << x)`.\n\
+    \n## The Bitwise Operators\n\nYou can apply bitwise operators on bits. In general,\
+    \ you must use them to conduct bit-by-bit operations. The screenshot below shows\
+    \ the truth tables for `&`, `|`, and `^`.\n\n![](images/00017.jpeg)\n\nLet’s assume\
+    \ that `x = 60;` and `y = 13`. If we will convert these values into their binary\
+    \ form, we’ll get the following data:\n\n```\nx = 0011 1100\ny = 0000 1101\nx|y\
+    \ = 0011 1101\n~x = 1100 0011\nx&y = 0000 1100\nx^y = 0011 0001\n```\n\nThe table\
+    \ below will show you the bitwise operators available in C++. Let’s assume that\
+    \ `x = 60` and `y = 13`.\n\n*   `&` – This operator is known as “Binary AND.”\
+    \ If a bit exists in the two operands, Binary AND will copy it to the result.\
+    \ For example: `(x & y)` produces `12` (i.e. `0000 1100`).\n*   `^` – This is\
+    \ called the “Binary XOR.” It will copy a bit if it exists in one of the operands\
+    \ but not both. `(x ^ y)` gives `49`, or `0011 0001`.\n*   `|` – Programmers refer\
+    \ this as the “Binary OR” operator. It will copy a bit that exists in one of the\
+    \ operands. For example: `(x | y)` will give you `61`, i.e. `0011 1101`.\n*  \
+    \ `>>` – This operator is known as “Binary Right Shift.” It moves the value of\
+    \ the left-hand operand based on the bits given by the right-hand operand. For\
+    \ example: `x >> 2` gives `15`, i.e. `0000 1111`.\n*   `<<` – This is called “Binary\
+    \ Left Shift.” It moves the left-hand operand’s value according to the number\
+    \ or bits given by the right-hand operand. For instance: `x << 2` gives `240`,\
+    \ i.e. `1111 0000`.\n*   `~` – Programmers call this the “Binary Ones Complement.”\
+    \ This is a unary operator. Additionally, it “flips” the bits it is applied to.\
+    \ For example: `(~x)` gives – 61, i.e. `1100 0011` if written in the 2’s complement\
+    \ format because of a signed number.\n\n## The Relational Operators\n\nThis section\
+    \ of the book will focus on the relational operators available in the C++ programming\
+    \ language. Let’s assume that `x = 2` and `y = 4`.\n\n*   `==` – This operator\
+    \ checks the equality of two operands. If the operands are equal, the condition\
+    \ is true. For instance: `(x == y)` is not true.\n*   `>` – This operator checks\
+    \ the value of two operands. If the left-hand operand’s value is greater than\
+    \ that of the right-hand one, the condition is true. For example: `(y > x)` is\
+    \ true.\n*   `<` – This operator is the opposite of `<`. If the value of the left-hand\
+    \ operand is lesser than that of the right-hand operand, the condition is true.\
+    \ For instance: `(y < x)` is not true.\n*   `!=` This operator checks the equality\
+    \ between two operands. If the values are unequal, the condition is true. For\
+    \ example: `(x != y)` is true.\n*   `<=` – With this operator, you’ll check whether\
+    \ the left-hand operand’s value is less than or equal to that of the right-hand\
+    \ operand. If it is, the condition is true. For example: `(x <= y)` is true.\n\
+    *   `>=` – Here, you’ll check if the left-hand operand’s value is greater than\
+    \ or equal to that of the right-hand operand. If it is, the condition is true.\
+    \ For instance: `(y >= x)` is true.\n\n## The Miscellaneous Operators\n\nIn this\
+    \ section, you’ll learn about other operators offered by C++:\n\n*   `sizeof`\
+    \ - You should use this operator to determine a variable’s size. For instance,\
+    \ `sizeof(x)`, where `x` is an integer, will give you `4`.\n*   `Cast` – This\
+    \ operator allows you to convert data types.\n*   `,` – Programmers refer to this\
+    \ as the “comma operator.” It activates a group of operations in your statements.\
+    \ The comma expression’s value is equal to that of the last item in the comma-separated\
+    \ set.\n*   `.` and `->` – These operators are known as “dot” and “arrow,” respectively.\
+    \ You can use these operators to reference the members of unions, classes, and\
+    \ structures.\n*   `*` – This is known as the “pointer” variable. For instance:\
+    \ `*new;` will generate a pointer to a variable named `new`.\n*   `&` – This operator\
+    \ can give you the address of any variable. For instance: `&x;` will provide you\
+    \ with the address of that variable.\n*   `Condition ? X : Y`\n\n## Operator Precedence\
+    \ in C++\n\nOperator precedence determines the order in which operators are evaluated\
+    \ in an expression. Some operators have higher precedence than others, meaning\
+    \ they are evaluated first. The screenshot below shows the truth tables for `&`,\
+    \ `|`, and `^`.\n\n![](images/00017.jpeg)\n\nLet’s assume that `x = 60;` and `y\
+    \ = 13`. If we will convert these values into their binary form, we’ll get the\
+    \ following data:\n\n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x =\
+    \ 1100 0011\nx&y = 0000 1100\nx^y = 0011 0001\n```\n\nThe table below will show\
+    \ you the bitwise operators available in C++. Let’s assume that `x = 60` and `y\
+    \ = 13`.\n\n*   `&` – This operator is known as “Binary AND.” If a bit exists\
+    \ in the two operands, Binary AND will copy it to the result. For example: `(x\
+    \ & y)` produces `12` (i.e. `0000 1100`).\n*   `^` – This is called the “Binary\
+    \ XOR.” It will copy a bit if it exists in one of the operands but not both. `(x\
+    \ ^ y)` gives `49`, or `0011 0001`.\n*   `|` – Programmers refer this as the “Binary\
+    \ OR” operator. It will copy a bit that exists in one of the operands. For example:\
+    \ `(x | y)` will give you `61`, i.e. `0011 1101`.\n*   `>>` – This operator is\
+    \ known as “Binary Right Shift.” It moves the value of the left-hand operand based\
+    \ on the bits given by the right-hand operand. For example: `x >> 2` gives `15`,\
+    \ i.e. `0000 1111`.\n*   `<<` – This is called “Binary Left Shift.” It moves the\
+    \ left-hand operand’s value according to the number or bits given by the right-hand\
+    \ operand. For instance: `x << 2` gives `240`, i.e. `1111 0000`.\n*   `~` – Programmers\
+    \ call this the “Binary Ones Complement.” This is a unary operator. Additionally,\
+    \ it “flips” the bits it is applied to. For example: `(~x)` gives – 61, i.e. `1100\
+    \ 0011` if written in the 2’s complement format because of a signed number.\n\n\
+    ## Chapter 9: The Different Types of Loops\n\nIn some cases, you might need to\
+    \ repeat blocks of code. C++ offers different structures for this:\n\n| Type of\
+    \ Loop | Definition |\n| :--- | :--- |\n| for loop | This loop type executes a\
+    \ group of statements. It also controls the variable. |\n| while loop | This type\
+    \ will repeat statements while the specified condition is true. |\n| do… while\
+    \ loop | This is similar to a while loop. The only difference is that “do… while\
+    \ loop” checks the condition once the loop body has been executed. |\n| nested\
+    \ loop | You may place a loop within an existing “for,” “while,” or “do… while”\
+    \ loop. |\n\n### While Loop\n\nThis loop type executes the statement repeatedly\
+    \ while the condition is true.\n\n#### Syntax\n\nHere is the syntax of a C++ while\
+    \ loop:\n\n```\nwhile (condition) {\n    statement\n}\n```\n\nIn this syntax,\
+    \ statement(s) can be an individual statement or a group of statements. On the\
+    \ other hand, `condition` can take the form of any C++ expression, and true must\
+    \ be a non-zero value. Keep in mind that this loop will repeat the selected statement\
+    \ as long as the condition is true.\n\nIf the condition is false, the system passes\
+    \ program control to the line after the while loop.\n\n#### Diagram of a While\
+    \ Loop\n\n![](images/0020.jpeg)\n\nBased on this diagram, it is possible that\
+    \ a while loop will never run. If the condition is false, the system will ignore\
+    \ the loop’s body and execute the statements after the loop.\n\n#### For Loop\n\
+    \nThis loop is a control structure that helps you to write loops efficiently.\
+    \ This loop type is particularly useful when you have to execute loops multiple\
+    \ times.\n\nThe syntax for this loop type is:\n\n```\nfor (init; condition; increment)\
+    \ {\n    statement\n}\n```\n\nThe following list explains the control flow of\
+    \ `for loops:`\n\n1.  `init` – The system executes this step first (and once only).\
+    \ You can use this part to create and activate variables for loop control. This\
+    \ part isn’t mandatory – placing a semicolon is enough if you don’t have any entry\
+    \ for init.\n2.  `condition` – In this part of the syntax, you must specify the\
+    \ condition you want to use. If the result of the condition is true, the loop’s\
+    \ body will be executed. If the result is false, however, the loop’s body will\
+    \ be ignored. Then, the system will pass the control flow to the statement after\
+    \ the loop.\n"
+  raw: '*   “>>=” – This is known as “Right shift AND.” Here’s how it works: (z >>=
+    x) is identical to (z = z >> x).
+
+
+    *   “<<=” – Programmers call this “Left shift AND.” It works this way: (z <<=
+    x) is identical to (z = z << x).
+
+
+    The Bitwise Operators
+
+
+    You can apply bitwise operators on bits. In general, you must use them to conduct
+    bit-by-bit operations. The screenshot below shows the truth tables for &, |, and
+    ^.
+
+
+    ![](images/00017.jpeg)
+
+
+    Let’s assume that x = 60; and y = 13\. If we will convert these values into their
+    binary form, we’ll get the following data:
+
+
+    x = 0011 1100
+
+
+    y = 0000 1101
+
+
+    x|y = 0011 1101
+
+
+    ~x = 1100 0011
+
+
+    x&y = 0000 1100
+
+
+    x^y = 0011 0001
+
+
+    The table below will show you the bitwise operators available in C++. Let’s assume
+    that x = 60 and y = 13.
+
+
+    *   “&” – This operator is known as “Binary AND.” If a bit exists in the two operands,
+    Binary AND will copy it to the result. For example: (x & y) produces 12 (i.e.
+    0000 1100).
+
+
+    *   “^” – This is called the “Binary XOR.” It will copy a bit if it exists in
+    one of the operands but not both. (x ^ y) gives 49, or 0011 0001.
+
+
+    *   “|” – Programmers refer this as the “Binary OR” operator. It will copy a bit
+    that exists in one of the operands. For example: (x | y) will give you 61, i.e.
+    0011 1101.
+
+
+    *   “>>” – This operator is known as “Binary Right Shift.” It moves the value
+    of the left-hand operand based on the bits given by the right-hand operand. For
+    example: x >> 2 gives 15, i.e. 0000 1111.
+
+
+    *   “<<” – This is called “Binary Left Shift.” It moves the left-hand operand’s
+    value according to the number or bits given by the right-hand operand. For instance:
+    x << 2 gives 240, i.e. 1111 0000.
+
+
+    *   “~” – Programmers call this the “Binary Ones Complement.” This is a unary
+    operator. Additionally, it “flips” the bits it is applied to. For example: (~x
+    ) gives – 61, i.e. 1100 0011 if written in the 2’s complement format because of
+    a signed number.
+
+
+    The Relational Operators
+
+
+    This section of the book will focus on the relational operators available in the
+    C++ programming language. Let’s assume that x = 2 and y = 4.
+
+
+    *   “==” – This operator checks the equality of two operands. If the operands
+    are equal, the condition is true. For instance: (x == y) is not true.
+
+
+    *   “>” – This operator checks the value of two operands. If the left-hand operand’s
+    value is greater than that of the right-hand one, the condition is true. For example:
+    (y > x) is true.
+
+
+    *   “<” – This operator is the opposite of “<”. If the value of the left-hand
+    operand is lesser than that of the right-hand operand, the condition is true.
+    For instance: (y < x) is not true.
+
+
+    *   “!=” This operator checks the equality between two operands. If the values
+    are unequal, the condition is true. For example: (x != y) is true.
+
+
+    *   “<=” – With this operator, you’ll check whether the left-hand operand’s value
+    is less than or equal to that of the right-hand operand. If it is, the condition
+    is true. For example: (x <= y) is true.
+
+
+    *   “>=” – Here, you’ll check if the left-hand operand’s value is greater than
+    or equal to that of the right-hand operand. If it is, the condition is true. For
+    instance: (y >= x) is true.
+
+
+    The Miscellaneous Operators
+
+
+    In this section, you’ll learn about other operators offered by C++:
+
+
+    *   “sizeof” - You should use this operator to determine a variable’s size. For
+    instance, sizeof(x), where x is an integer, will give you 4.
+
+
+    *   “Cast” – This operator allows you to convert data types.
+
+
+    *   “,” – Programmers refer to this as the “comma operator.” It activates a group
+    of operations in your statements. The comma expression’s value is equal to that
+    of the last item in the comma-separated set.
+
+
+    *   “.” and “->” – These operators are known as “dot” and “arrow,” respectively.
+    You can use these operators to reference the members of unions, classes, and structures.
+
+
+    *   “*” – This is known as the “pointer” variable. For instance: *new; will generate
+    a pointer to a variable named new.
+
+
+    *   “&” – This operator can give you the address of any variable. For instance,
+    &x; will provide you with the address of that variable.
+
+
+    *   “Condition ? X : Y” – This is known as the conditional operator. If the condition
+    is true, this operator will give you the value of x. If it false, however, the
+    operator will give you the value of y.
+
+
+    The Operator Precedence in the C++ Language
+
+
+    Operator precedence dictates the division of terms in C++ expressions. This precedence
+    influences how the system evaluates expressions. Some operators are lower than
+    others in terms of precedence. For instance, the subtraction operator (i.e. “-”)
+    has lower precedence than the division operator (i.e. “/”).
+
+
+    Here’s a simple mathematical expression: (x = 8 – 6 /2). In this expression, x’s
+    value is 5, not 1 since “-” has lower precedence than “/” (i.e. subtraction will
+    be performed after division). Thus, 6 will be divided by 2\. Then, the quotient
+    will be subtracted from 8.
+
+
+    Chapter 9: The Different Types of Loops in C++
+
+
+    In some cases, you might need to repeat blocks of code several times. Typically,
+    C++ statements are conducted in a sequential manner: the system executes statements
+    according to their position in the code.
+
+
+    The C++ programming language offers different structures for controlling blocks
+    of codes. With these structures, you can easily manipulate codes even if they
+    have complex execution paths.
+
+
+    Loop statements allow you to execute one statement or a set of statements several
+    times. The screenshot given below shows the basic form of loop statements in major
+    computer languages:
+
+
+    ![](images/00018.jpeg)
+
+
+    C++ offers the following loop types:
+
+
+    | Type of Loop | Definition |
+
+
+    | for loop | This loop type executes a group of statements several times. It also
+    shortens the code that controls the looping variable. |
+
+
+    | while loop | This type will repeat statements as long as a specified condition
+    is met. Basically, while loop checks the condition prior to performing the body
+    of the loop. |
+
+
+    | do… while loop | This is similar to a while loop. The only difference is that
+    a “do… while loop” checks the condition once the loop body has been executed.
+    |
+
+
+    | nested loop | You may place a loop or a set of loops within an existing “for,”
+    “while,” or “do… while” loop. |
+
+
+    Let’s discuss each loop type in detail:
+
+
+    The While Loop
+
+
+    This loop type executes the targeted statement repeatedly while the specified
+    condition is true.
+
+
+    The Syntax
+
+
+    Here is the syntax of a C++ while loop:
+
+
+    ![](images/00019.jpeg)
+
+
+    In this syntax, statement(s) can be an individual statement or a group of statements.
+    On the other hand, (condition) can take the form of any C++ expression, and true
+    must be a non-zero value. Keep in mind that this loop will repeat the selected
+    statement as long as the condition is true.
+
+
+    If the condition is false, the system passes program control to the line after
+    the while loop.
+
+
+    The Diagram of a While Loop
+
+
+    ![](images/00020.jpeg)
+
+
+    Based on this diagram, it is possible that a while loop will never run. If the
+    condition is false, the system will ignore the loop’s body and execute the statements
+    after the loop.
+
+
+    The For Loop
+
+
+    This loop is a control structure that helps you to write loops efficiently. This
+    loop type is particularly useful when you have to execute loops multiple times.
+
+
+    The syntax for this loop type is:
+
+
+    ![](images/00021.jpeg)
+
+
+    The following list explains the control flow of “for loops:”
+
+
+    1.  init – The system executes this step first (and once only). You can use this
+    part to create and activate variables for loop control. This part isn’t mandatory
+    – placing a semicolon is enough if you don’t have any entry for init.
+
+
+    2.  condition – In this part of the syntax, you must specify the condition you
+    want to use. If the result of the condition is true, the loop’s body will be executed.
+    If the result is false, however, the loop’s body will be ignored. Then, the system
+    will pass the control flow to the statement after the loop.'
+  toc: []
+  trans: "\n\n*   `>>=` – 这被称为“右移并与”。它的工作原理如下：`(z >>= x)` 等同于 `(z = z >> x)`。\n* \
+    \  `<<=` – 程序员将此称为“左移并与”。它的工作方式如下：`(z <<= x)` 等同于 `(z = z << x)`。\n\n## 位运算符\n\
+    \n你可以在比特位上应用位运算符。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了 `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\
+    \n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\n```\nx = 0011 1100\ny = 0000\
+    \ 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000 1100\nx^y = 0011 0001\n```\n\
+    \n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n*   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x\
+    \ & y)` 产生 `12`（即 `0000 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x\
+    \ ^ y)` 得到 `49`，或 `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x\
+    \ | y)` 将给你 `61`，即 `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x\
+    \ >> 2` 得到 `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x\
+    \ << 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的。\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了 `&`、`|`\
+    \ 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n*   `==` – 此运算符检查两个操作数的相等性。如果操作数相等，则条件为真。例如：`(x == y)` 不为真。\n\
+    *   `>` – 此运算符检查两个操作数的值。如果左侧操作数的值大于右侧操作数的值，则条件为真。例如：`(y > x)` 为真。\n*   `<` – 此运算符是\
+    \ `<` 的相反运算符。如果左侧操作数的值小于右侧操作数的值，则条件为真。例如：`(y < x)` 不为真。\n*   `!=` – 此运算符检查两个操作数之间的相等性。如果值不相等，则条件为真。例如：`(x\
+    \ != y)` 为真。\n*   `<=` – 通过此运算符，你可以检查左侧操作数的值是否小于等于右侧操作数的值。如果是，则条件为真。例如：`(x <=\
+    \ y)` 为真。\n*   `>=` – 在这里，你检查左侧操作数的值是否大于等于右侧操作数的值。如果是，则条件为真。例如：`(y >= x)` 为真。\n\
+    \n## 杂项运算符\n\n在本节中，你将学习 C++ 提供的其他运算符：\n\n*   `sizeof` - 你应该使用此运算符来确定变量的大小。例如，`sizeof(x)`（其中\
+    \ `x` 是整数）将给你 `4`。\n*   `Cast` – 此运算符允许你转换数据类型。\n*   `,` – 程序员将此称为“逗号运算符”。它在你的语句中激活一组操作。逗号表达式的值等于逗号分隔集合中的最后一项。\n\
+    *   `.` 和 `->` – 这些运算符分别被称为“点”和“箭头”。你可以使用这些运算符引用联合体、类和结构的成员。\n*   `*` – 这被称为“指针”变量。例如：`*new;`\
+    \ 将生成一个指向名为 `new` 变量的指针。\n*   `&` – 此运算符可以给出地址。\n*   `? :` – 运算符优先级\n\n运算符优先级决定了运算符执行的顺序。通常情况下，你必须使用它们来执行逐位操作。下方的截图显示了\
+    \ `&`、`|` 和 `^` 的真值表。\n\n![](img/00017.jpeg)\n\n假设 `x = 60;` 且 `y = 13`。我们将这些值转换为二进制形式，将得到以下数据：\n\
+    \n```\nx = 0011 1100\ny = 0000 1101\nx|y = 0011 1101\n~x = 1100 0011\nx&y = 0000\
+    \ 1100\nx^y = 0011 0001\n```\n\n下表将显示 C++ 中可用的位运算符。假设 `x = 60` 且 `y = 13`。\n\n\
+    *   `&` – 此运算符被称为“按位与”。如果两个操作数中都存在某个比特，按位与将将其复制到结果中。例如：`(x & y)` 产生 `12`（即 `0000\
+    \ 1100`）。\n*   `^` – 这被称为“按位异或”。如果一个比特存在于一个操作数中但不同于另一个，它将复制该比特。`(x ^ y)` 得到 `49`，或\
+    \ `0011 0001`。\n*   `|` – 程序员将此称为“按位或”运算符。它将复制存在于操作数之一的比特。例如：`(x | y)` 将给你 `61`，即\
+    \ `0011 1101`。\n*   `>>` – 此运算符被称为“按位右移”。它根据右侧操作数提供的比特移动左侧操作数的值。例如：`x >> 2` 得到\
+    \ `15`，即 `0000 1111`。\n*   `<<` – 这被称为“按位左移”。它根据右侧操作数提供的比特数移动左侧操作数的值。例如：`x <<\
+    \ 2` 得到 `240`，即 `1111 0000`。\n*   `~` – 程序员将此称为“按位取反”。这是一个一元运算符。此外，它会“翻转”所作用的比特。例如：由于是符号数，如果以补码格式书写，`(~x)`\
+    \ 得到 - 61，即 `1100 0011`。\n\n## 关系运算符\n\n本书的这一部分节将侧重于 C++ 编程语言中可用的关系运算符。假设 `x =\
+    \ 2` 且 `y = 4`。\n\n第 9 章：循环类型\n\n在某些情况下，你可能需要重复代码块。C++ 提供了不同的结构：\n\n| 循环类型 | 定义\
+    \ |\n| :--- | :--- |\n| for loop | 此循环类型执行一组语句。它也控制变量。 |\n| while loop | 此类型在指定条件为真时重复执行。\
+    \ |\n| do… while loop | 这类似于 while loop。唯一的区别是“do… while loop”在执行体后检查条件。 |\n|\
+    \ nested loop | 你可以在现有的“for”、“while”或“do… while”循环中放置循环。 |\n\n### while 循环\n\n\
+    此循环类型在条件为真时重复执行语句。\n\n#### 语法\n\n这是 C++ while 循环的语法：\n\n```\nwhile (condition)\
+    \ {\n    statement\n}\n```\n\n在此语法中，statement 可以单个语句或一组语句。另一方面，`condition` 可以采取任何\
+    \ C++ 表达式的形式，且真是非零值。记住，只要条件为真，此循环就会重复选择的语句。\n\n#### while 循环图\n\n![](img/0020.jpeg)\n\
+    \n根据此图，while 循环可能永远不会运行。如果条件为假，系统将忽略循环体并执行循环后的语句。\n\n#### for 循环\n\n这种循环结构帮助你高效地编写循环。这种循环类型在需要执行多次循环时特别有用。\n\
+    \n这种循环类型的语法为：\n\n```\nfor (init; condition; increment) {\n    statement\n}\n```\n\
+    \n以下列表解释了 `for 循环` 的控制流：\n\n1.  `init` – 系统首先执行此步骤（仅执行一次）。你可以使用这部分创建并激活用于控制的变量。\n\
+    2.  `condition` – 在此部分，你必须指定要使用的条件。如果条件的结果为真，则执行循环体。然而，如果结果为假，循环体将被忽略。然后，系统将控制流传递到循环后的语句。\n\
+    \n"
+- fmt: "\n### 3. increment\nYou can use this part to modify the variables for loop\
+    \ control. You may simply place a semicolon on this part – it is not mandatory.\
+    \ Basically, increment becomes useful once the loop body is performed.\n\n###\
+    \ 4.\nThe system will recheck the condition’s result. If the result is true, the\
+    \ loop statement activates and the procedure starts again. This loop will terminate\
+    \ once the result becomes false.\n\n#### The Flow Diagram of a For Loop\n![](images/00022.jpeg)\n\
+    \n### The Do… While Loop\nUnlike the previous loop types, which check the condition\
+    \ before executing the loop’s body, `do… while` checks the specified condition\
+    \ once the loop has been performed.\n\n`do… while` loops are similar to `while`\
+    \ loops, the only difference is that `do… while` loops will execute at least once\
+    \ (regardless of the condition’s result).\n\nThe syntax of C++ `do… while` loops\
+    \ is:\n\n![](images/00023.jpeg)\n\nAs you can see, the condition is given at the\
+    \ loop’s final section. That means the loop will execute prior to testing the\
+    \ specified condition.\n\nIf the result is true, the control flow will be restarted\
+    \ and the targeted statement will be repeated again. This procedure will be repeated\
+    \ until the condition’s result becomes false.\n\n#### The Flow Diagram of Do…\
+    \ While Loops\n![](images/00024.jpeg)\n\n### The Nested Loops\nC++ allows you\
+    \ to place loops inside another loop. This process is called “nesting” a loop.\
+    \ The syntax for this type depends on the loop you want to nest:\n\n#### The Syntax\
+    \ for Nested For Loops\n![](images/00025.jpeg)\n\n#### The Syntax for Nested While\
+    \ Loops\n![](images/00026.jpeg)\n\n#### The Syntax for Do… While Loops\n![](images/00027.jpeg)\n\
+    \n### What is a Loop Control Statement?\nA loop control statement can alter the\
+    \ execution of a loop’s body. Once the execution is altered, all of the automatic\
+    \ objects you created for the previous process will be destroyed.\n\nThe C++ programming\
+    \ language supports these loop control statements:\n\n| The Control Statement\
+    \ | Definition |\n| :--- | :--- |\n| `goto` statement | This statement can transfer\
+    \ the loop control to a targeted statement. You should not use this loop control\
+    \ statement in your C++ programs. |\n| `continue` statement | This statement can\
+    \ cause the loop to ignore the rest of its body and check the condition immediately\
+    \ before reiteration. |\n| `break` statement | Break statements can terminate\
+    \ the switch or loop statement and pass control to the C++ statement after the\
+    \ switch or loop. |\n\nLet’s discuss each loop control statement in detail:\n\n\
+    #### The “goto” Statement\nBasically, `goto` statements allow you to set unconditional\
+    \ jumps in your functions.\n\n**Important Note:** Often, it is extremely hard\
+    \ to trace the flow of program control when `goto` statements are being used.\
+    \ That means you might encounter problems in reading or modifying your C++ programs\
+    \ if you’ll use a `goto` statement. Because of this reason, you are advised to\
+    \ stay away from this loop control statement.\n\nHere is the syntax of a C++ `goto`\
+    \ statement:\n\n![](images/00028.jpeg)\n\nIn the syntax given above, `label` is\
+    \ the identifier that specifies your labeled statement/s. Here is the syntax of\
+    \ C++ `goto` statements:\n\n![](images/00029.jpeg)\n\n#### The “continue” Statement\n\
+    Continue statements force the activation of a loop. They also ignore codes that\
+    \ may affect the loop’s functions.\n\nWhen it comes to `for` loops, this forced\
+    \ continuation executes the loop’s conditional check and increment parts. For\
+    \ `while` and `do… while` loops, however, control of the program is passed on\
+    \ to the conditional check.\n\nThe syntax of C++ `continue` statements is:\n\n\
+    ```cpp\ncontinue;\n```\n\nHere is the flow diagram of `continue` statements:\n\
+    \n![](images/00030.jpeg)\n\n#### The “break” Statement\nThis statement serves\
+    \ two purposes in the C++ language:\n\n*   If the system encounters a `break`\
+    \ statement within a loop, that loop will be terminated. Then, program control\
+    \ will be passed on to the statement after the loop.\n*   You can use it to end\
+    \ a case in your `switch` statement (you’ll learn about it in the next chapter).\n\
+    \nFor nested loops, `break` statements will terminate the innermost loop and execute\
+    \ the line after the code block.\n\nHere is the syntax of a C++ `break` statement:\n\
+    \n```cpp\nbreak;\n```\n\n#### The Flow Diagram of a Break Statement\n![](images/00031.jpeg)\n\
+    \n### Infinite Loops\nLoops become infinite if their condition is always true.\
+    \ In general, programmers use `for` loops to achieve this goal. Since the expressions\
+    \ involved in a `for` loop are optional, you can create endless loops just by\
+    \ leaving the condition part empty. Here’s an example:\n\n![](images/00032.jpeg)\n\
+    \nConditional expressions are supposed to be true if they aren’t present. C++\
+    \ users usually employ `for (;;)` to represent infinite loops. However, you may\
+    \ include an increment and initialization expression in your C++ statements.\n\
+    \n**Important Note:** You can press `Ctrl + C` to terminate infinite loops.\n\n\
+    ### Chapter 10: The Decision-Making Statements in C++\nA decision making structure\
+    \ requires you to indicate conditions, which can be tested or evaluated by your\
+    \ C++ program. You should also provide statements that will be run based on the\
+    \ condition’s result (i.e. either true or false). The image below shows the basic\
+    \ structure of a normal decision-making statement in C++ programs:\n\n![](images/00033.jpeg)\n\
+    \nThe C++ language offers the following decision-making statements:\n\n| Name\
+    \ of Statement | Definition |\n| :--- | :--- |\n| `switch` statement | This kind\
+    \ of statement allows you to test a variable’s equality against a group of values.\
+    \ |\n| `if` statement | Generally, an “if” statement involves a Boolean expression\
+    \ and one or more C++ statements. |\n| `if… else` statement | C++ allows you to\
+    \ place an “else” statement after an “if” statement. The “else” statement will\
+    \ run if the specified Boolean condition is false. |\n| nested switch statement\
+    \ | You may place a `switch` statement inside an existing `switch` statement.\
+    \ |\n| nested | You may place an `if` or `else` statement inside an `if` or `else`\
+    \ statement. |\n\nLet’s discuss each decision-making statement in detail:\n\n\
+    #### Switch Statements\nSwitch statements allow you to check a variable’s equality\
+    \ against a set of values. These values are called cases – the variable you want\
+    \ to check will be compared with each case.\n\nThe syntax of C++ `switch` statements\
+    \ is:\n\n![](images/00034.jpeg)\n\nWhen working with a `switch` statement, there\
+    \ are certain rules that you need to remember. These rules are:\n\n*   The expression\
+    \ of your `switch` should be an enumerated or integral class type. Alternatively,\
+    \ it may belong to a type where classes have one conversion function to the enumerated\
+    \ or integral class types.\n*   C++ doesn’t have a limit regarding the amount\
+    \ of case statements that you can add into your `switch`. However, make sure that\
+    \ each case has a colon and a value you can compare to.\n*   The case’s constant-expression\
+    \ and switch’s variable must belong to the same type of data. Additionally, your\
+    \ constant-expression must be a literal.\n*   If the variable you’re switching\
+    \ on is equivalent to one of the cases, the statements after that case will run\
+    \ until the system reaches a break statement. \n*   Once the system reaches a\
+    \ `break` statement, the `switch` statement will stop. Then, the control flow\
+    \ will be passed on to the line after the switch.\n*   You don’t have to place\
+    \ a `break` statement in all of your cases. If a case doesn’t have break, the\
+    \ control flow will be passed on to the next cases until the system finds a `break`\
+    \ statement.\n*   You may add a `default` case to your `switch` statements. In\
+    \ C++, you should include the `default` case at the end of your statement. Programmers\
+    \ generally use default cases when they need to perform a task but all of the\
+    \ cases are false. Additionally, default cases don’t need break statements.\n\n\
+    #### The Flow Diagram of a Switch Statement\n![](images/00035.jpeg)\n\n#### If\
+    \ Statements\nBasically, an `if` statement involves one Boolean expression and\
+    \ a statement or a group of statements.\n\nHere is the syntax of a C++ `if` statement:\n\
+    \n![](images/00036.jpeg)\n"
+  raw: '3.  increment – You can use this part to modify the variables for loop control.
+    You may simply place a semicolon on this part – it is not mandatory. Basically,
+    increment becomes useful once the loop body is performed.
+
+
+    4.  The system will recheck the condition’s result. If the result is true, the
+    loop statement activates and the procedure starts again. This loop will terminate
+    once the result becomes false.
+
+
+    The Flow Diagram of a For Loop
+
+
+    ![](images/00022.jpeg)
+
+
+    The Do… While Loop
+
+
+    Unlike the previous loop types, which check the condition before executing the
+    loop’s body, “do… while” checks the specified condition once the loop has been
+    performed.
+
+
+    Do… while loops are similar to while loops, the only difference is that do… while
+    loops will execute at least once (regardless of the condition’s result).
+
+
+    The syntax of C++ “do… while” loops is:
+
+
+    ![](images/00023.jpeg)
+
+
+    As you can see, the condition is given at the loop’s final section. That means
+    the loop will execute prior to testing the specified condition.
+
+
+    If the result is true, the control flow will be restarted and the targeted statement
+    will be repeated again. This procedure will be repeated until the condition’s
+    result becomes false.
+
+
+    The Flow Diagram of Do… While Loops
+
+
+    ![](images/00024.jpeg)
+
+
+    The Nested Loops
+
+
+    C++ allows you to place loops inside another loop. This process is called “nesting”
+    a loop. The syntax for this type depends on the loop you want to nest:
+
+
+    The Syntax for Nested For Loops
+
+
+    ![](images/00025.jpeg)
+
+
+    The Syntax for Nested While Loops
+
+
+    ![](images/00026.jpeg)
+
+
+    The Syntax for Do… While Loops
+
+
+    ![](images/00027.jpeg)
+
+
+    What is a Loop Control Statement?
+
+
+    A loop control statement can alter the execution of a loop’s body. Once the execution
+    is altered, all of the automatic objects you created for the previous process
+    will be destroyed.
+
+
+    The C++ programming language supports these loop control statements:
+
+
+    | The Control Statement | Definition |
+
+
+    | goto statement | This statement can transfer the loop control to a targeted
+    statement. You should not use this loop control statement in your C++ programs.
+    |
+
+
+    | continue statement | This statement can cause the loop to ignore the rest of
+    its body and check the condition immediately before reiteration. |
+
+
+    | break statement | Break statements can terminate the switch or loop statement
+    and pass control to the C++ statement after the switch or loop. |
+
+
+    Let’s discuss each loop control statement in detail:
+
+
+    The “goto” Statement
+
+
+    Basically, goto statements allow you to set unconditional jumps in your functions.
+
+
+    Important Note: Often, it is extremely hard to trace the flow of program control
+    when goto statements are being used. That means you might encounter problems in
+    reading or modifying your C++ programs if you’ll use a goto statement. Because
+    of this reason, you are advised to stay away from this loop control statement.
+
+
+    Here is the syntax of a C++ goto statement:
+
+
+    ![](images/00028.jpeg)
+
+
+    In the syntax given above, label is the identifier that specifies your labeled
+    statement/s. Here is the syntax of C++ goto statements:
+
+
+    ![](images/00029.jpeg)
+
+
+    The “continue” Statement
+
+
+    Continue statements force the activation of a loop. They also ignore codes that
+    may affect the loop’s functions.
+
+
+    When it comes to for loops, this forced continuation executes the loop’s conditional
+    check and increment parts. For while and do… while loops, however, control of
+    the program is passed on to the conditional check.
+
+
+    The syntax of C++ “continue” statements is:
+
+
+    continue;
+
+
+    Here is the flow diagram of continue statements:
+
+
+    ![](images/00030.jpeg)
+
+
+    The “break” Statement
+
+
+    This statement serves two purposes in the C++ language:
+
+
+    *   If the system encounters a break statement within a loop, that loop will be
+    terminated. Then, program control will be passed on to the statement after the
+    loop.
+
+
+    *   You can use it to end a case in your switch statement (you’ll learn about
+    it in the next chapter).
+
+
+    For nested loops, break statements will terminate the innermost loop and execute
+    the line after the code block.
+
+
+    Here is the syntax of a C++ break statement:
+
+
+    break;
+
+
+    The Flow Diagram of a Break Statement
+
+
+    ![](images/00031.jpeg)
+
+
+    Infinite Loops
+
+
+    Loops become infinite if their condition is always true. In general, programmers
+    use for loops to achieve this goal. Since the expressions involved in a “for”
+    loop are optional, you can create endless loops just by leaving the condition
+    part empty. Here’s an example:
+
+
+    ![](images/00032.jpeg)
+
+
+    Conditional expressions are supposed to be true if they aren’t present. C++ users
+    usually employ ‘for (;;)’ to represent infinite loops. However, you may include
+    an increment and initialization expression in your C++ statements.
+
+
+    Important Note: You can press Ctrl + C to terminate infinite loops.
+
+
+    Chapter 10: The Decision-Making Statements in C++
+
+
+    A decision making structure requires you to indicate conditions, which can be
+    tested or evaluated by your C++ program. You should also provide statements that
+    will be run based on the condition’s result (i.e. either true or false). The image
+    below shows the basic structure of a normal decision-making statement in C++ programs:
+
+
+    ![](images/00033.jpeg)
+
+
+    The C++ language offers the following decision-making statements:
+
+
+    | Name of Statement | Definition |
+
+
+    | switch statement | This kind of statement allows you to test a variable’s equality
+    against a group of values. |
+
+
+    | if statement | Generally, an “if” statement involves a Boolean expression and
+    one or more C++ statements. |
+
+
+    | if… else statement | C++ allows you to place an “else” statement after an “if”
+    statement. The “else” statement will run if the specified Boolean condition is
+    false. |
+
+
+    | nested switch statement | You may place a “switch” statement inside an existing
+    “switch” statement. |
+
+
+    | nested | You may place an “if” or “if else” statement inside an “if” or “if
+    else” statement. |
+
+
+    Let’s discuss each decision-making statement in detail:
+
+
+    Switch Statements
+
+
+    Switch statements allow you to check a variable’s equality against a set of values.
+    These values are called cases – the variable you want to check will be compared
+    with each case.
+
+
+    The syntax of C++ switch statements is:
+
+
+    ![](images/00034.jpeg)
+
+
+    When working with a switch statement, there are certain rules that you need to
+    remember. These rules are:
+
+
+    *   The expression of your switch statement should be an enumerated or integral
+    class type. Alternatively, it may belong to a type where classes have one conversion
+    function to the enumerated or integral class types.
+
+
+    *   C++ doesn’t have a limit regarding the amount of case statements that you
+    can add into your switch. However, make sure that each case has a colon and a
+    value you can compare to.
+
+
+    *   The case’s constant-expression and switch’s variable must belong to the same
+    type of data. Additionally, your constant-expression must be a literal.
+
+
+    *   If the variable you’re switching on is equivalent to one of the cases, the
+    statements after that case will run until the system reaches a break statement.
+
+
+    *   Once the system reaches a break statement, the switch statement will stop.
+    Then, the control flow will be passed on to the line after the switch.
+
+
+    *   You don’t have to place a break statement in all of your cases. If a case
+    doesn’t have break, the control flow will be passed on to the next cases until
+    the system finds a break statement.
+
+
+    *   You may add a default case to your switch statements. In C++, you should include
+    the default case at the end of your statement. Programmers generally use default
+    cases when they need to perform a task but all of the cases are false. Additionally,
+    default cases don’t need break statements.
+
+
+    The Flow Diagram of a Switch Statement
+
+
+    ![](images/00035.jpeg)
+
+
+    If Statements
+
+
+    Basically, an “if” statement involves one Boolean expression and a statement or
+    a group of statements.
+
+
+    Here is the syntax of a C++ if statement:
+
+
+    ![](images/00036.jpeg)'
+  toc: []
+  trans: '
+
+
+    ### 3. 递增
+
+    你可以使用这部分来修改用于循环控制的变量。你可以简单在该部分放置一个分号——这并不是强制性的。基本上，一旦循环体执行完毕，递增就会变得有用。
+
+
+    ### 4.
+
+    系统将重新检查条件的结果。如果结果为真，循环语句将激活，程序将重新开始。一旦结果变为假，该循环将终止。
+
+
+    #### For 循环的流程图
+
+    ![](img/00022.jpeg)
+
+
+    ### Do… While 循环
+
+    与之前的循环类型（这些类型在执行循环体之前检查条件）不同，`do… while` 在循环执行后才检查指定的条件。
+
+
+    `do… while` 循环与 `while` 循环相似，唯一的区别是 `do… while` 循环至少执行一次（无论条件结果如何）。
+
+
+    C++ `do… while` 循环的语法是：
+
+
+    ![](img/00023.jpeg)
+
+
+    如你所见，条件位于循环的最后部分。这意味着循环将在测试指定的条件之前执行。
+
+
+    如果结果为真，控制流将重启，目标语句将再次重复。此过程将一直重复，直到条件的结果变为假。
+
+
+    #### Do… While 循环的流程图
+
+    ![](img/00024.jpeg)
+
+
+    ### 嵌套循环
+
+    C++ 允许你将循环放在另一个循环内部。这个过程被称为“嵌套”循环。这种类型的语法取决于你想要嵌套的循环：
+
+
+    #### 嵌套 For 循环的语法
+
+    ![](img/00025.jpeg)
+
+
+    #### 嵌套 While 循环的语法
+
+    ![](img/00026.jpeg)
+
+
+    #### 嵌套 Do… While 循环的语法
+
+    ![](img/00027.jpeg)
+
+
+    ### 什么是循环控制语句？
+
+    循环控制语句可以改变循环体的执行。一旦执行被改变，你为之前的过程创建的所有自动对象都将被销毁。
+
+
+    C++ 编程语言支持这些循环控制语句：
+
+
+    | 控制语句 | 定义 |
+
+    | :--- | :--- |
+
+    | `goto` 语句 | 该语句可以将循环控制转移到目标语句。你不应该在 C++ 程序中使用这种循环控制语句。 |
+
+    | `continue` 语句 | 该语句可以导致循环忽略其主体的剩余部分，并在下次迭代前立即检查条件。 |
+
+    | `break` 语句 | break 语句可以终止 switch 或循环语句，并将控制传递给 switch 或循环之后的 C++ 语句。 |
+
+
+    让我们详细讨论每个循环控制语句：
+
+
+    #### “goto” 语句
+
+    基本上，`goto` 语句允许你在函数中设置无条件跳转。
+
+
+    **重要注意：** 通常，在使用 `goto` 语句时，追踪程序控制流是极其困难的。这意味着如果你使用 `goto` 语句，在读取或修改你的 C++ 程序时可能会遇到问题。由于这个原因，建议你远离这种循环控制语句。
+
+
+    这里是 C++ `goto` 语句的语法：
+
+
+    ![](img/00028.jpeg)
+
+
+    在上述语法中，`label` 是指定你的标记语句/语句的标识符。这里是 C++ `goto` 语句的语法：
+
+
+    ![](img/00029.jpeg)
+
+
+    #### “continue” 语句
+
+    continue 语句强制激活循环。它们还会忽略可能影响循环功能的代码。
+
+
+    当涉及 `for` 循环时，这种强制继续会执行循环的条件检查和递增部分。然而，对于 `while` 和 `do… while` 循环，程序的控制权将传递给条件检查。
+
+
+    C++ `continue` 语句的语法是：
+
+
+    ```cpp
+
+    continue;
+
+    ```
+
+
+    这里是 `continue` 语句的流程图：
+
+
+    ![](img/00030.jpeg)
+
+
+    #### “break” 语句
+
+    该语句在 C++ 语言中有两个用途：
+
+
+    *   如果系统在循环内部遇到 `break` 语句，该循环将终止。然后，程序控制权将传递到循环之后的语句。
+
+    *   你可以用它来结束 `switch` 语句中的一个 case（你将在下一章学习它）。
+
+
+    对于嵌套循环，`break` 语句将终止最内层循环并执行代码块之后的行。
+
+
+    这里是 C++ `break` 语句的语法：
+
+
+    ```cpp
+
+    break;
+
+    ```
+
+
+    #### Break 语句的流程图
+
+    ![](img/00031.jpeg)
+
+
+    ### 无限循环
+
+    如果循环的条件始终为真，循环就会变成无限循环。通常，程序员使用 `for` 循环来实现这个目标。由于 `for` 循环涉及的表达式是可选的，你只需留空条件部分就可以创建无尽循环。这里有一个例子：
+
+
+    ![](img/00032.jpeg)
+
+
+    如果不存在，则条件表达式被认为是真的。C++ 用户通常使用 `for (;;)` 来表示无限循环。然而，你可以在你的 C++ 语句中包含递增和初始化表达式。
+
+
+    **重要注意：** 你可以按 `Ctrl + C` 来终止无限循环。
+
+
+    ### 第 10 章：C++ 中的决策语句
+
+    决策结构需要你指示条件，这些条件可以由你的 C++ 程序进行测试或评估。你还应该提供根据条件的结果（即真或假）运行的语句。下面的图显示了 C++ 程序中普通决策语句的基本
+    结构：
+
+
+    ![](img/00033.jpeg)
+
+
+    C++ 语言提供了以下决策语句：
+
+
+    | 语句名称 | 定义 |
+
+    | :--- | :--- |
+
+    | `switch` 语句 | 这种语句允许你针对一组值检查变量的相等性。 |
+
+    | `if` 语句 | 通常，“if”语句涉及一个布尔表达式和一个或多个语句。 |
+
+    | `if… else` 语句 | C++ 允许在“if”语句之后放置一个“else”语句。当指定的布尔条件为假时，该“else”语句运行。 |
+
+    | 嵌套 switch 语句 | 你可以在 `switch` 语句内部放置一个 `switch` 语句。 |
+
+    | 嵌套 | 你可以在 `if` 或 `else` 语句内部放置 `if` 或 `else` 语句。 |
+
+
+    让我们详细讨论每个决策语句：
+
+
+    #### Switch 语句
+
+    switch 语句允许你针对值检查变量的相等性。这些值被称为 case —— 你检查的变量将与每个 case 进行比较。
+
+
+    C++ `switch` 语句的语法是：
+
+
+    ![](img/00034.jpeg)
+
+
+    在使用 `switch` 语句时，需要记住某些规则。这些规则是：
+
+
+    *   `switch` 的表达式应该是枚举类型或整数类型。或者，它可能属于具有枚举或整数类型转换函数的类型。
+
+    *   C++ 对你向 `switch` 中添加的 case 语句数量没有限制。但请确保每个 case 都有冒号和一个可以比较的值。
+
+    *   case 的常量表达式和 switch 的变量必须属于相同的数据类型。此外，你的常量表达式必须是一个字面量。
+
+    *   如果你正在切换的变量等同于某个 case，该 case 之后的语句将一直运行，直到系统遇到 break 语句。
+
+    *   一旦系统遇到 `break` 语句，`switch` 语句将停止。然后，控制流将传递到 switch 之后的。
+
+    *   你不需要在所有的 cases 中都放置 `break` 语句。如果某个 case 没有 break，控制流将传递到下一个 cases，直到系统找到
+    `break` 语句。
+
+    *   你可以为你的 `switch` 语句添加一个 `default` case。在 C++ 中，你应该将 `default` case 放在语句的末尾。程序员通常在需要执行任务但所有
+    case 都为假时使用默认 case。此外，默认 case 不需要 break 语句。
+
+
+    #### Switch 语句的流程图
+
+    ![](img/00035.jpeg)
+
+
+    #### If 语句
+
+    基本上，一个 `if` 语句涉及一个布尔表达式和一个语句或一组语句。
+
+
+    这里是 C++ `if` 语句的语法：
+
+
+    ![](img/00036.jpeg)
+
+
+    '
+- fmt: '
+
+    If the result of the Boolean expression is true, the system will execute the code
+    block within the “if” statement. If the result is false, however, the system will
+    execute the code found after the “if” statement.
+
+
+    The flow diagram of an “if” statement is:
+
+
+    ![](images/00037.jpeg)
+
+
+    ## If Else Statements
+
+
+    You may include an “else” statement after the “if” statement. This optional “else”
+    statement runs if the result of the Boolean expression is false.
+
+
+    The syntax of this statement is:
+
+
+    ![](images/00038.jpeg)
+
+
+    The code’s “if” section will run if the expression Boolean expression’s result
+    is true. If the result is false, on the other hand, the “else” section of the
+    code will run instead.
+
+
+    ### The Flow Diagram of an “If Else” Statement
+
+
+    ![](images/00039.jpeg)
+
+
+    ## Nested Switch Statements
+
+
+    C++ allows you to use a `switch` as a part of another `switch`. You won’t encounter
+    any problems even if the constants of the outer and inner switch hold identical
+    values.
+
+
+    In this programming language, you may use about 256 nesting levels for your switch
+    statements.
+
+
+    Here is the syntax for a C++ nested switch:
+
+
+    ![](images/00040.jpeg)
+
+
+    ## Nested If Statements
+
+
+    You can always nest an “if else” statement in your codes. That means you may add
+    an “if” or “if else” statement inside a different “if” or “if else” statement.
+
+
+    Here is the syntax of this C++ statement:
+
+
+    ![](images/00041.jpeg)
+
+
+    ## Chapter 11: The Different Functions in C++
+
+
+    Functions are group of statements designed to perform a particular task. Each
+    program written using C++ has a function, which exists in the `main()` section
+    of the code. Additionally, even the simplest C++ programs can have extra functions.
+
+
+    C++ allows you to divide your code into different functions. The method of division
+    depends on your needs and preferences, although you have to make sure that each
+    function accomplishes a certain task.
+
+
+    Function declarations inform the C++ compiler regarding the name, parameters,
+    and return type of a function. Function definitions, on the other hand, give the
+    function’s actual body.
+
+
+    The standard library of this programming language offers different functions.
+    Here are two basic functions and their capabilities:
+
+
+    * `strcat()` – This function concatenates two strings.
+
+    * `memcpy()` – It copies a memory location to a different one.
+
+
+    **Important Note:** Some programmers refer to functions as methods, procedures,
+    or sub-routines.
+
+
+    ### How to Define a Function
+
+
+    Here is the syntax of functions in C++:
+
+
+    ![](images/00042.jpeg)
+
+
+    Let’s discuss the different parts of a C++ function:
+
+
+    * **Name** – This is the function’s actual name.
+
+    * **Parameters** – Programmers consider parameters as placeholders. Whenever you
+    invoke a function, you give a value to the function’s parameter. C++ users refer
+    to this value as an argument or actual parameter. The list of parameters refers
+    to the order, number, and type of the function’s parameters. Keep in mind that
+    parameters aren’t mandatory: your functions can be active even without any parameter.
+
+    * **Return Type** – Functions can retrieve a value. The values returned by a function
+    belong to a data type called “return_type.” In some cases, functions perform the
+    required task without retrieving any value. Here, the `return_type` of the data
+    is “void.”
+
+    * **Function Body** – This part holds a group of C++ statements that determine
+    the purpose and capabilities of the function.
+
+
+    ### How to Declare a Function
+
+
+    Function declarations inform the C++ compiler about functions (i.e. their name
+    and how to call them). You may define the function’s body separately.
+
+
+    Function declarations have these parts:
+
+
+    ![](images/00043.jpeg)
+
+
+    You don’t have to worry about parameter names while declaring a function. You
+    can simply focus on the function’s type. That means the declaration below is valid:
+
+
+    ![](images/00044.jpeg)
+
+
+    You have to use a function declaration if you’ll call a function that is defined
+    in another source file. In this situation, you must declare the needed function
+    on top of the source file requiring the function.
+
+
+    ### How to Call a Function
+
+
+    When you create a function in C++, you define the function’s purpose. To run a
+    function, you should invoke or call the function.
+
+
+    When C++ programs run a function, the system transfers the program control to
+    the invoked function. An invoked function conducts the assigned task. Once it
+    completely executes its `return` statement or reaches its closing brace, the system
+    returns the program control to the C++ program.
+
+
+    To invoke a function, you just have to specify the function’s name and pass the
+    parameters. You may store any value that will be returned by the function.
+
+
+    ### The Arguments of a C++ Function
+
+
+    If your function has arguments, you should declare variables that are compatible
+    with the arguments’ values. Programmers refer to these variables as “formal parameters.”
+
+
+    Generally, formal parameters act like ordinary variables located within the function.
+    They pop into existence once the program enters the function. Then, they disappear
+    as soon as the program exits the function.
+
+
+    When you call a function, you can pass arguments to the function in three different
+    ways. These are:
+
+
+    | Type of Call | Definition |
+
+    | :--- | :--- |
+
+    | By pointer | This technique sends the argument’s address into the formal parameter/s.
+    Basically, the address helps you to access the argument involved in the call.
+    Thus, the modifications on the parameter influence the argument. |
+
+    | By value | In this technique, the argument’s actual value is sent to the function’s
+    formal parameter. In this situation, modifications on the parameter within the
+    function don’t influence the argument. |
+
+    | By reference | This technique copies the argument’s reference and gives it to
+    the function’s formal parameter. Within the function, references help you to access
+    the arguments involved in the call. Thus, the changes applied on the parameter
+    influence the argument. |
+
+
+    Following is more information regarding each technique:
+
+
+    #### By Pointer
+
+    To forward values using this technique, you should pass argument pointers to the
+    function as if you are working with ordinary values. That means you must declare
+    each parameter as a pointer type.
+
+
+    #### By Value
+
+    This technique copies the real value of the argument and gives it to the function’s
+    formal parameter. Actually, this technique serves as the default method of passing
+    arguments in the C++ programming language.
+
+
+    **Important Note:** Codes located inside a function cannot change the arguments
+    involved in invoking that function.
+
+
+    #### By Reference
+
+    To pass values using this technique, you just have to think that you are working
+    on ordinary values. Declare the parameter/s of the function as the reference type/s.
+
+
+    ### The Default Values of Parameters in C++
+
+
+    While defining a function, you may assign a default value to the last parameter.
+    You’ll benefit from this default value once you encounter a blank argument while
+    invoking a function.
+
+
+    You can assign a default value through an assignment operator. Then, place values
+    for the correct arguments in the function’s definition. If the system doesn’t
+    get any value when the function is invoked, it will use the default value you
+    assigned. If a value is returned, however, the default value will be ignored.
+
+
+    ## Chapter 12: Numbers in the C++ Language
+
+
+    When working with numbers, you typically use basic types of data (e.g. int, long,
+    short, double, float, etc.). You have learned about these data types in an earlier
+    chapter.
+
+
+    ### How to Perform Mathematical Operations in the C++ Language
+
+
+    Aside from the different functions that you may create, C++ offers powerful pre-installed
+    functions. You can access these functions through the libraries of C and C++ languages.
+    C++ allows you to include these functions in your programs.
+
+
+    The C++ programming language provides an excellent collection of math operations,
+    which you can perform on different numbers.
+
+
+    The table below shows some of the most useful mathematical operations offered
+    by C++:
+
+
+    | Mathematical Function | Purpose |
+
+    '
+  raw: 'If the result of the Boolean expression is true, the system will execute the
+    code block within the “if” statement. If the result is false, however, the system
+    will execute the code found after the “if” statement.
+
+
+    The flow diagram of an “if” statement is:
+
+
+    ![](images/00037.jpeg)
+
+
+    If Else Statements
+
+
+    You may include an              “else” statement after the “if” statement. This
+    optional “else” statement runs if the result of the Boolean expression is false.
+
+
+    The syntax of this statement is:
+
+
+    ![](images/00038.jpeg)
+
+
+    The code’s “if” section will run if the expression Boolean expression’s result
+    is true. If the result is false, on the other hand, the “else” section of the
+    code will run instead.
+
+
+    The Flow Diagram of an “If Else” Statement
+
+
+    ![](images/00039.jpeg)
+
+
+    Nested Switch Statements
+
+
+    C++ allows you to use a switch as a part of another switch. You won’t encounter
+    any problems even if the constants of the outer and inner switch hold identical
+    values.
+
+
+    In this programming language, you may              use about 256 nesting levels
+    for your switch statements.
+
+
+    Here is the syntax for a C++ nested switch:
+
+
+    ![](images/00040.jpeg)
+
+
+    Nested If Statements
+
+
+    You can always nest an “if else” statement in your codes. That means you may add
+    an “if” or “if else” statement inside a different “if” or “if else” statement.
+
+
+    Here is the syntax of this C++ statement:
+
+
+    ![](images/00041.jpeg)
+
+
+    Chapter 11: The Different Functions in C++
+
+
+    Functions are group of statements designed to perform a particular task. Each
+    program written using C++ has a function, which exists in the main() section of
+    the code. Additionally, even the simplest C++ programs can have extra functions.
+
+
+    C++ allows you to divide your code into different functions. The method of division
+    depends on your needs and preferences, although you have to make sure that each
+    function accomplishes a certain task.
+
+
+    Function declarations inform the C++ compiler regarding the name, parameters,
+    and return type of a function. Function definitions, on the other hand, give the
+    function’s actual body.
+
+
+    The standard library of this programming language offers different functions.
+    Here are two basic functions and their capabilities:
+
+
+    *   strcat() – This function concatenates two strings.
+
+
+    *   memcpy() – It copies a memory location to a different one.
+
+
+    Important Note: Some programmers refer to functions as methods, procedures, or
+    sub-routines.
+
+
+    How to Define a Function
+
+
+    Here is the syntax of functions in C++:
+
+
+    ![](images/00042.jpeg)
+
+
+    Let’s discuss the different parts of a C++ function:
+
+
+    *   Name – This is the function’s actual name.
+
+
+    *   Parameters – Programmers consider parameters as placeholders. Whenever you
+    invoke a function, you give a value to the function’s parameter. C++ users refer
+    to this value as an argument or actual parameter. The list of parameters refers
+    to the order, number, and type of the function’s parameters. Keep in mind that
+    parameters aren’t mandatory: your functions can be active even without any parameter.
+
+
+    *   Return Type – Functions can retrieve a value. The values returned by a function
+    belong to a data type called “return_type.” In some cases, functions perform the
+    required task without retrieving any value. Here, the return_type of the data
+    is “void.”
+
+
+    *   Function Body – This part holds a group of C++ statements that determine the
+    purpose and capabilities of the function.
+
+
+    How to Declare a Function
+
+
+    Function declarations inform the C++ compiler about functions (i.e. their name
+    and how to call them). You may define the function’s body separately.
+
+
+    Function declarations have these parts:
+
+
+    ![](images/00043.jpeg)
+
+
+    You don’t have to worry about parameter names while declaring a function. You
+    can simply focus on the function’s type. That means the declaration below is valid:
+
+
+    ![](images/00044.jpeg)
+
+
+    You have to use a function declaration if you’ll call a function that is defined
+    in another source file. In this situation, you must declare the needed function
+    on top of the source file requiring the function.
+
+
+    How to Call a Function
+
+
+    When you create a function in C++, you define the function’s purpose. To run a
+    function, you should invoke or call the function.
+
+
+    When C++ programs run a function, the system transfers the program control to
+    the invoked function. An invoked function conducts the assigned task. Once it
+    completely executes its return statement or reaches its closing brace, the system
+    returns the program control to the C++ program.
+
+
+    To invoke a function, you just have to specify the function’s name and pass the
+    parameters. You may store any value that will be returned by the function.
+
+
+    The Arguments of a C++ Function
+
+
+    If your function has arguments, you should declare variables that are compatible
+    with the arguments’ values. Programmers refer to these variables as “formal parameters.”
+
+
+    Generally, formal parameters act like ordinary variables located within the function.
+    They pop into existence once the program enters the function. Then, they disappear
+    as soon as the program exits the function.
+
+
+    When you call a function, you can pass arguments to the function in three different
+    ways. These are:
+
+
+    | Type of Call | Definition |
+
+
+    | By pointer | This technique sends the argument’s address into the formal parameter/s.
+    Basically, the address helps you to access the argument involved in the call.
+    Thus, the modifications on the parameter influence the argument. |
+
+
+    | By value | In this technique, the argument’s actual value is sent to the function’s
+    formal parameter. In this situation, modifications on the parameter within the
+    function don’t influence the argument. |
+
+
+    | By reference | This technique copies the argument’s reference and gives it to
+    the function’s formal parameter. Within the function, references help you to access
+    the arguments involved in the call. Thus, the changes applied on the parameter
+    influence the argument. |
+
+
+    Following is more information regarding each technique:
+
+
+    By Pointer
+
+
+    To forward values using this technique, you should pass argument pointers to the
+    function as if you are working with ordinary values. That means you must declare
+    each parameter as a pointer type.
+
+
+    By Value
+
+
+    This technique copies the real value of the argument and gives it to the function’s
+    formal parameter. Actually, this technique serves as the default method of passing
+    arguments in the C++ programming language.
+
+
+    Important Note: Codes located inside a function cannot change the arguments involved
+    in invoking that function.
+
+
+    By Reference
+
+
+    To pass values using this technique, you just have to think that you are working
+    on ordinary values. Declare the parameter/s of the function as the reference type/s.
+
+
+    The Default Values of Parameters in C++
+
+
+    While defining a function, you may assign a default value to the last parameter.
+    You’ll benefit from this default value once you encounter a blank argument while
+    invoking a function.
+
+
+    You can assign a default value through an assignment operator. Then, place values
+    for the correct arguments in the function’s definition. If the system doesn’t
+    get any value when the function is invoked, it will use the default value you
+    assigned. If a value is returned, however, the default value will be ignored.
+
+
+    Chapter 12: Numbers in the C++ Language
+
+
+    When working with numbers, you typically use basic types of data (e.g. int, long,
+    short, double, float, etc.). You have learned about these data types in an earlier
+    chapter.
+
+
+    How to Perform Mathematical Operations in the C++ Language
+
+
+    Aside from the different functions that you may create, C++ offers powerful pre-installed
+    functions. You can access these functions through the libraries of C and C++ languages.
+    C++ allows you to include these functions in your programs.
+
+
+    The C++ programming language provides an excellent collection of math operations,
+    which you can perform on different numbers.
+
+
+    The table below shows some of the most useful mathematical operations offered
+    by C++:
+
+
+    | Mathematical Function | Purpose |'
+  toc: []
+  trans: '
+
+    如果布尔表达式的结果为真（true），系统将执行“if”语句中的代码块。然而，如果结果为假（false），系统将执行“if”语句之后的代码。
+
+
+    “if”语句的流程图如下：
+
+
+    ![](img/00037.jpeg)
+
+
+    ## If-Else 语句
+
+
+    你可以在“if”语句之后包含一个“else”语句。这个可选的“else”语句会在布尔表达式的结果为假时运行。
+
+
+    该语句的语法如下：
+
+
+    ![](img/00038.jpeg)
+
+
+    如果布尔表达式的结果为真，则代码的“if”部分将运行。另一方面，如果结果为假，则将运行代码的“else”部分。
+
+
+    ### “If-Else”语句的流程图
+
+
+    ![](img/00039.jpeg)
+
+
+    ## 嵌套 switch 语句
+
+
+    C++ 允许你将一个 `switch` 作为另一个 `switch` 的一部分。即使外层和内部 `switch` 的常量具有相同的值，你也不会遇到任何问题。
+
+
+    在这一门编程语言中，你可以对 `switch` 语句使用约 256 层嵌套。
+
+
+    以下是 C++ 嵌套 `switch` 的语法：
+
+
+    ![](img/00040.jpeg)
+
+
+    ## 嵌套 if else 语句
+
+
+    你始终可以在代码中嵌套“if else”语句。这意味着你可以在另一个“if”或“if else”语句内部添加一个“if”或“if else”语句。
+
+
+    这是该 C++ 语句的语法：
+
+
+    ![](img/00041.jpeg)
+
+
+    ## 第 11 章：C++ 中的不同函数
+
+
+    函数是用于执行特定任务的语句组。每个使用 C++ 编写的程序都有一个函数，它存在于代码的 `main()` 部分。此外，即使是是最简单的 C++ 程序也可以有额外的函数。
+
+
+    C++ 允许你将代码划分为不同的函数。划分方法取决于你的需求和偏好，尽管你必须确保每个函数都能完成某项任务。
+
+
+    函数声明告知 C++ 编译器有关函数的名称、参数和返回类型。另一方面，函数定义提供了函数的实际体内容。
+
+
+    这门编程语言的标准库提供了不同的函数。以下是两个基本函数及其功能：
+
+
+    * `strcat()` – 此函数连接两个字符串。
+
+    * `memcpy()` – 此函数将一个内存位置复制到另一个内存位置。
+
+
+    **重要提示：** 有些程序员将函数称为方法、过程或子程序。
+
+
+    ### 如何定义函数
+
+
+    以下是 C++ 中函数的语法：
+
+
+    ![](img/00042.jpeg)
+
+
+    让我们讨论一下 C++ 函数的不同部分：
+
+
+    * **名称 (Name)** – 这是函数的实际名称。
+
+    * **参数 (Parameters)** – 程序员将参数视为占位符。每当你调用函数时，你都会给函数的参数赋值值。C++ 用户将此值称为参数（argument）或实际参数。参数列表指的是函数参数的顺序、数量和类型。记住，参数不是强制性的：即使没有任何参数，你的函数也可以运行。
+
+    * **返回类型 (Return Type)** – 函数可以获取值。函数返回的值属于名为“return_type”的数据类型。在某些情况下，函数执行所需任务而不获取任何值。在这里，数据的
+    `return_type` 是“void”。
+
+    * **函数体 (Function Body)** – 这部分包含一组 C++ 语句，决定了函数的用途和功能。
+
+
+    ### 如何声明函数
+
+
+    函数声明告知 C++ 编译器有关函数的信息（即它们的名称以及如何调用它们）。你可以单独定义函数体。
+
+
+    函数声明包含这些部分：
+
+
+    ![](img/00043.jpeg)
+
+
+    在声明函数时，你不需要担心参数名称。你只需要关注函数的类型。这意味着下面的声明是有效的：
+
+
+    ![](img/00044.jpeg)
+
+
+    如果你要调用一个在另一个源文件中定义的函数，就必须使用函数声明。在这种情况下，你必须在需要该函数的源顶部声明所需的函数。
+
+
+    ### 如何调用函数
+
+
+    当你在 C++ 中创建一个函数时，你定义了函数的用途。要运行函数，你应该调用（invoke or call）该函数。
+
+
+    当 C++ 程序运行函数时，系统会将程序控制权转移到被调用的函数。被调用的函数执行分配的任务。一旦它完全执行了 `return` 语句或到达其右括号，系统就会将程序控制权返回给
+    C++ 程序。
+
+
+    要调用函数，你只需要指定函数名称并传递参数。你可以存储函数返回的任何值。
+
+
+    ### C++ 函数的参数 (Arguments)
+
+
+    如果你的函数有参数，你应该声明与参数值兼容的变量。程序员将这些变量称为“形式参数（formal parameters）”。
+
+
+    通常，形式参数的作用就像位于函数内的普通变量。一旦程序进入函数，它们就会出现。然后一旦程序退出函数，它们就会消失。
+
+
+    当你调用函数时，你可以通过三种不同的方式向函数传递参数。这些是：
+
+
+    | 调用类型 | 定义 |
+
+    | :--- | :--- |
+
+    | 通过指针 (By pointer) | 此技术将参数的地址发送到形式参数中。基本上，地址帮助你访问调用涉及的参数。因此，对参数的修改会影响实际参数。 |
+
+    | 通过值 (By value) | 在此技术中，参数的实际值被发送到函数的形式参数。在这种情况下，对参数的修改不会影响实际参数。 |
+
+    | 通过引用 (By reference) | 此技术将参数的引用发送到形式参数中。基本上，引用帮助你访问调用涉及的参数。因此，对参数的修改会影响实际参数。
+    |
+
+
+    '
+- fmt: '
+
+
+    ### Functions
+
+
+    | `double tan(double);` | With this function, you can get the tangent of an angle
+    by taking it as a double. |
+
+    | `double cos(double);` | It allows you to get the cosine by taking any angle
+    as a double. |
+
+    | `double log(double);` | By using this function, you can determine a number’s
+    natural log. |
+
+    | `double sin(double);` | This function allows you to get the sine of an angle.
+    |
+
+    | `double sqrt(double);` | You can get the square root of any number by passing
+    it into this function. |
+
+    | `double pow(double, double);` | This function has two elements: (1) the number
+    you want to raise, and (2) the power you want to raise the number to. |
+
+    | `int abs(int);` | With this function, you can get an integer’s absolute value.
+    |
+
+    | `double hypot(double, double);` | This function allows you to get the length
+    of a right triangle’s hypotenuse. However, you must provide the length of the
+    remaining sides. |
+
+    | `double floor(double);` | This function searches for an integer that is lesser
+    than or equal to the assigned argument. |
+
+    | `double fabs(double);` | With this function, you can get a decimal number’s
+    absolute value. |
+
+
+    # Chapter 13: C++ Arrays
+
+
+    This programming language offers the “array,” which is a data structure. Arrays
+    keep a sequential set of elements that belong to the same type. Programmers use
+    arrays to store groups of data, although it is more beneficial to consider arrays
+    as sets of variables that belong to the same type.
+
+
+    Rather than declaring variables one by one (e.g. `number1`, `number2`, `number3`,
+    etc.), you may declare an array variable (e.g. `number`) and represent the variables
+    using `number[1]`, `number[2]`, `number[3]`, etc. You can access elements inside
+    an array using an index.
+
+
+    Each array has adjacent memory locations. The lowest memory location links to
+    the first object in the array while the highest memory location links to the final
+    object.
+
+
+    ## How to Declare an Array
+
+
+    When declaring an array, you should specify the type and quantity of the elements
+    needed in the array. Here’s the syntax that you should use:
+
+
+    ![](images/00045.jpeg)
+
+
+    This array is known as “single-dimension.” Your array’s “arraySize” section should
+    hold an integer literal that is greater than zero. The “type” section, on the
+    other hand, should contain any data type supported by C++. For instance, you should
+    use the statement below to declare an array that holds 10 elements. This array
+    is named `balance` and the data type is `double`.
+
+
+    ![](images/00046.jpeg)
+
+
+    ## How to Initialize an Array
+
+
+    In the C++ language, you may initialize array elements in two ways: (1) individually,
+    or (2) through a single C++ statement (see the example below).
+
+
+    ![](images/00047.jpeg)
+
+
+    The values between the curly braces must always be lower than or equal to the
+    quantity of elements you declared inside the brackets.
+
+
+    ## How to Access an Array Element
+
+
+    You can access array elements by indexing the name of the array. To do this, enter
+    the element’s index number inside the brackets after the array’s name.
+
+
+    ## The Different C++ Concepts Related to Arrays
+
+
+    Arrays play a huge part in using C++ for writing programs. Thus, you should be
+    familiar with them. The list below shows the most important array-related concepts
+    in the C++ language. As a C++ user, you have to master the following concepts:
+
+
+    | Concept | Explanation |
+
+    | :--- | :--- |
+
+    | Pointers to existing arrays | C++ allows you to create a pointer to the array’s
+    initial element just by entering the array’s name. Here, you don’t have to include
+    any index. |
+
+    | Multi-dimensional array | This programming language allows you to create multi-dimensional
+    arrays. Obviously, two-dimensional arrays are the most basic multi-dimensional
+    arrays you can create. |
+
+    | Passing an array to a function | You may pass an array’s pointer to a function.
+    To do this, you just have to specify the name of the array. You should not enter
+    any index. |
+
+    | Getting an array from a function | In C++, you can retrieve arrays from a function.
+    |
+
+
+    ## Conclusion
+
+
+    I hope this book was able to help you learn the basics of C++.
+
+
+    The next step is to use C++ in writing your own computer programs.
+
+
+    Would you do me a favor?
+
+
+    Finally, if you enjoyed this book, please take the time to share your thoughts
+    and post a positive review on Amazon. It’d be greatly appreciated!
+
+
+    Thank you and good luck!
+
+    '
+  raw: "| double tan(double); | With this function, you can get the tangent of an\
+    \ angle by taking it as a double. |\n\n| double cos(double); | It allows you to\
+    \ get the cosine by taking any angle as a double. |\n\n| double log(double); |\
+    \ By using this function, you can determine a number’s natural log. |\n\n| double\
+    \ sin(double); | This function allows you to get the sine of an angle. |\n\n|\
+    \ double sqrt(double); | You can get the square root of any number by passing\
+    \ it into this function. |\n\n| double pow(double, double); | This function has\
+    \ two elements: (1) the number you want to raise, and (2) the power you want to\
+    \ raise the number to. |\n\n| int abs(int); | With this function, you can get\
+    \ an integer’s absolute value. |\n\n| double hypot(double, double); | This function\
+    \ allows you to get the length of a right triangle’s hypotenuse. However, you\
+    \ must provide the length of the remaining sides. |\n\n| double floor(double);\
+    \ | This function searches for an integer that is lesser than or equal to the\
+    \ assigned argument. |\n\n| double fabs(double); | With this function, you can\
+    \ get a decimal number’s absolute value. |\n\nChapter 13: C++ Arrays\n\nThis programming\
+    \ language offers the “array,” which is a data structure. Arrays keep a sequential\
+    \ set of elements that belong to the same type. Programmers use arrays to store\
+    \ groups of data, although it is more beneficial to consider arrays as sets of\
+    \ variables that belong to the same type.\n\nRather than declaring variables one\
+    \ by one (e.g. number1, number2, number3, etc.), you may declare an array variable\
+    \ (e.g. number) and represent the variables using number[1], number[2], number[3],\
+    \ etc. You can access elements inside an array using an index.\n\nEach array has\
+    \ adjacent memory locations. The lowest memory location links to the first object\
+    \ in the array while the highest memory location links to the final object.\n\n\
+    How to Declare an Array\n\nWhen declaring an array, you should specify the type\
+    \ and quantity of the elements needed in the array. Here’s the syntax that you\
+    \ should use:\n\n![](images/00045.jpeg)\n\nThis array is known as “single-dimension.”\
+    \ Your array’s “arraySize” section should hold an integer literal that is greater\
+    \ than zero. The “type” section, on the other hand, should contain any data type\
+    \ supported by C++. For instance, you should use the statement below to declare\
+    \ an array that holds 10 elements. This array is named balance and the data type\
+    \ is double.\n\n![](images/00046.jpeg)\n\nHow to Initialize an Array\n\nIn the\
+    \ C++ language, you may initialize array elements in two ways: (1) individually,\
+    \ or (2) through a single C++ statement (see the example below).\n\n![](images/00047.jpeg)\n\
+    \nThe values between the curly braces must always be lower than or equal to the\
+    \ quantity of elements you declared inside the brackets.\n\nHow to Access an Array\
+    \ Element\n\nYou can access array elements by indexing the name of the array.\
+    \ To do this, enter the element’s index number inside the brackets after the array’s\
+    \ name.\n\nThe Different C++ Concepts Related to Arrays\n\nArrays play a huge\
+    \ part in using C++ for writing programs. Thus, you should be familiar with them.\
+    \ The list below shows the most important array-related concepts in the C++ language.\
+    \ As a C++ user, you have to master the following concepts:\n\n| Concept | Explanation\
+    \ |\n\n| Pointers to existing arrays | C++ allows you to create a pointer to the\
+    \ array’s initial element just by entering the array’s name. Here, you don’t have\
+    \ to include any index. |\n\n| Multi-dimensional array | This programming language\
+    \ allows you to create multi-dimensional arrays. Obviously, two-dimensional arrays\
+    \ are the most basic multi-dimensional arrays you can create. |\n\n| Passing an\
+    \ array to a function | You may pass an array’s pointer to a function. To do this,\
+    \ you just have to specify the name of the array. You should not enter any index.\
+    \ |\n\n| Getting an array from a function | In C++, you can retrieve arrays from\
+    \ a function. |\n\n Conclusion\n\nI hope this book was able to help you learn\
+    \ the basics of C++.\n\nThe next step is to use C++ in writing your own computer\
+    \ programs.\n\nWould you do me a favor?\n\nFinally, if you enjoyed this book,\
+    \ please take the time to share your thoughts and post a positive review on Amazon. \
+    \ It’d be greatly appreciated!\n\nThank you and good luck!"
+  toc: []
+  trans: '
+
+
+    ### Functions
+
+
+    | `double tan(double);` | 使用此函数，你可以通过将角度作为 double 类型来获取其正切值。 |
+
+    | `double cos(double);` | 它允许你通过将任何角度作为 double 类型来获取余弦。 |
+
+    | `double log(double);` | 通过使用此函数，你可以确定一个数的自然对数。 |
+
+    | `double sin(double);` | 此函数允许你获取角度的正弦值。 |
+
+    | `double sqrt(double);` | 你可以通过将任何数字传递给此函数来获取平方根。 |
+
+    | `double pow(double, double);` | 此函数有两个元素：(1) 你想要求幂的数，(2) 你想要计算的幂次。 |
+
+    | `int abs(int);` | 使用此函数，你可以获取整数的绝对值。 |
+
+    | `double hypot(double, double);` | 此函数允许你获取直角三角形斜边的长度。但是，你必须提供另外两条边的长度。 |
+
+    | `double floor(double);` | 此函数寻找一个小于或等于给定参数的整数。 |
+
+    | `double fabs(double);` | 使用此函数，你可以获取小数的绝对值。 |
+
+
+    # 第 13 章：C++ 数组
+
+
+    这种编程语言提供了“数组”，这是一种数据结构。数组存储了一组属于相同类型的顺序元素。程序员使用数组来存储数据组，尽管将数组视为一组相同类型的变量集合会更有益。
+
+
+    与其逐一个地声明变量（例如 `number1`、`number2`、`number3` 等），你可以声明一个数组变量（例如 `number`），并使用 `number[1]`、`number[2]`、`number[3]`
+    等来表示变量。你可以使用索引访问数组内部的元素。
+
+
+    每个数组都具有相邻的内存位置。最低的内存位置指向数组中的第一个对象，而最高的内存位置则指向最后一个对象。
+
+
+    ## 如何声明数组
+
+
+    在声明数组时，你应该指定数组中所需的元素类型和数量。以下是你应该使用的语法：
+
+
+    ![](img/00045.jpeg)
+
+
+    这种数组被称为“一维”数组。你的数组的“arraySize”部分应该包含一个大于零的整数字面量。另一方面，“type”部分应该包含 C++ 支持的任何数据类型。例如，你应该使用下面的语句来声明一个包含
+    10 个元素的数组。该数组名为 `balance`，数据类型为 `double`。
+
+
+    ![](img/00046.jpeg)
+
+
+    ## 如何初始化数组
+
+
+    在 C++ 语言中，你可以通过两种方式初始化数组元素：(1) 单独地，或者 (2) 通过单个 C++ 语句（见下例）。
+
+
+    ![](img/00047.jpeg)
+
+
+    大括号之间的值必须小于或等于你在括号内声明元素数量。
+
+
+    ## 如何访问数组元素
+
+
+    可以通过索引数组名称来访问数组元素。要这样做，在数组名称后的括号内输入元素的索引。
+
+
+    ## 与数组相关的不同 C++ 概念
+
+
+    数组在用 C++ 编写程序起着巨大的作用。因此，你应该熟悉它们。下面的列表显示了 C++ 语言中最重要的数组相关概念。作为 C++ 用户，你必须掌握以下概念：
+
+
+    | 概念 | 解释 |
+
+    | :--- | :--- |
+
+    | 指向现有数组的指针 | C++ 允许你通过输入数组名称创建一个指向数组初始元素的指针。在这里，你不需要包含任何索引。 |
+
+    | 多维数组 | 这种编程语言允许你创建多维数组。显然，二维数组是你可以创建的最基础的多维数组。 |
+
+    | 将数组传递给函数 | 你可以将数组的指针传递给函数。要这样做，你只需要指定数组的名称。你不应该输入任何索引。 |
+
+    | 从函数获取数组 | 在 C++ 中，你可以从函数检索数组。 |
+
+
+    ## 结论
+
+
+    我希望这本书能够帮助你学习 C++ 的基础知识。
+
+
+    下一步是使用 C++ 编写你自己的计算机程序。
+
+
+    你能帮我个忙吗？
+
+
+    最后，如果你喜欢这本书，请花时间分享你的想法并在 Amazon 上发表积极的评价。我将不胜感激！
+
+
+    感谢你并祝你好运！
+
+
+    '
