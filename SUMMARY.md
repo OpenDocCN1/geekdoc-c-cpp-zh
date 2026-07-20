@@ -175,6 +175,7 @@
 +   [C++ 游戏编程：从零开始 C++ 并逐步构建属于你自己的游戏新书](docs/c-game-programming-new-book-learn-c-from-scratch-and-start-b/README.md)
 +   [C 语言：Linux 与树莓派 C 语言编程](docs/c-here---programming-in-c-in-linux-and-raspberry-pi/README.md)
 +   [C 编程入门指南：案例研究介绍应用编程与系统编程](docs/c-how-to-program-with-case-studies-introducing-applications-/README.md)
++   [C++ 24 小时实战，Sams 自学指南（第6版）](docs/c-in-24-hours-sams-teach-yourself-6th-edition/README.md)
 +   [C++ 一日通：C++ 终极初学者指南，包含 7 个实战项目](docs/c-in-one-day-the-ultimate-beginners-guide-to-c-with-7-awesom/README.md)
 +   [C++ 入门指南与高级编程](docs/c-introduction-and-professional-programming/README.md)
 +   [C++：一天学会 C++！快速掌握 C++ 基础的终极速课程 (C++、C++ 课程、C++ 开发、C++ 书籍、初学者 C++)](docs/c-learn-c-in-a-day---the-ultimate-crash-course-to-learning-t/README.md)
