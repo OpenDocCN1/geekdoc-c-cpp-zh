@@ -407,6 +407,7 @@
 +   [Go 语言入门指南](docs/go-programming-language-for-dummies/README.md)
 +   [灰帽 C# 实战](docs/gray-hat-c/README.md)
 +   [黑客：计算机黑客、安全测试、渗透测试与基础安全！](docs/hacking-computer-hacking-security-testing-penetration-testin/README.md)
++   [Python 计算机编程手册](docs/handbook-of-computer-programming-with-python/README.md)
 +   [C++ 游戏物理编程实用指南：数值方法、碰撞检测与沉浸式模拟实践指南 (TechMastery 系列第 5 本)](docs/hands-on-c-programming-for-game-physics-practical-guide-to-n/README.md)
 +   [高性能编程 C# 与 .NET 速成指南：构建可扩展 .NET 应用，编写极速 C# 代码，加速你的 C# 开发，识别瓶颈……像一样（Python 先驱者圣经）](docs/high-performance-programming-c-and-net-crash-course-build-sc/README.md)
 +   [如何成为 C# 程序员：从初学者到专家的进阶指南](docs/how-to-become-a-c-programmer-step-by-step-beginners-to-exper/README.md)
