@@ -387,6 +387,7 @@
 +   [从 SAS® 到 Excel 的数据交换：ODS Excel 目标](docs/exchanging-data-from-sas-to-excel-the-ods-excel-destination/README.md)
 +   [Express.js：Node.js Web 框架指南](docs/expressjs-guide-book-on-web-framework-for-nodejs/README.md)
 +   [VHDL 示例 FPGA 原型设计：Xilinx Spatan-3 版本](docs/fgpa-prototyping-by-vhdl-examples-xilinx-spatantm-3-version/README.md)
++   [有限数学：模型与应用](docs/finite-mathematics-models-and-applications/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
 +   [FORTRAN 编程一天速成：FORTRAN 编程快速、简单高效学习初学者指南 (Fortran, Css, C++, C, C 编程... 编程, MYSQL, SQL 编程)](docs/fortran-programming-success-in-a-daybeginners-guide-to-fast-/README.md)
 +   [前端 Web 开发：Big Nerd Ranch 指南](docs/front-end-web-development-the-big-nerd-ranch-guide-big-nerd-/README.md)
