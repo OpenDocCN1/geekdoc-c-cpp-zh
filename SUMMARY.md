@@ -394,6 +394,7 @@
 +   [函数设计：原则、模式与实践](docs/functional-design-principles-patterns-and-practices/README.md)
 +   [C++ 函数式编程](docs/functional-programming-with-c/README.md)
 +   [Turbo C++ 鼠标编程游戏开发 - 第 16 套](docs/gaming-in-turbo-c-with-mouse-programming---suit-16/README.md)
++   [高性能编程 C# 与 .NET 速成指南：构建可扩展 .NET 应用，编写极速 C# 代码，加速你的 C# 开发，识别瓶颈……像一样（Python 先驱者圣经）](docs/high-performance-programming-c-and-net-crash-course-build-sc/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
 +   [Linux C 一站式学习](docs/linux-c-1stop-lrn/README.md)
