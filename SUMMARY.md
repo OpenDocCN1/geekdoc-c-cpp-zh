@@ -435,6 +435,7 @@
 +   [Python 计算与编程入门指南，第二版：数据理解应用（麻省理工出版社）](docs/introduction-to-computation-and-programming-using-python-sec/README.md)
 +   [Python 工程与科学计算入门指南](docs/introduction-to-engineering-and-scientific-computing-with-py/README.md)
 +   [C++ 语言编程入门指南 - C++ 编程](docs/introduction-to-programming-in-c-language---c-programming/README.md)
++   [工程师 C++ 编程入门指南 (IEEE Press)](docs/introduction-to-programming-with-c-for-engineers-ieee-press/README.md)
 +   [无线定位入门指南：iPhone SDK 示例](docs/introduction-to-wireless-localization-with-iphone-sdk-exampl/README.md)
 +   [iOS 5 编程：突破极限——为 Apple iPhone、iPad 和 iPod Touch 开发卓越移动应用](docs/ios-5-programming-pushing-the-limits-developing-extraordinar/README.md)
 +   [初学者指南：Java 与 C 计算机编程二合一](docs/java-and-c-computer-programming-for-beginners-2-book-in-one/README.md)
