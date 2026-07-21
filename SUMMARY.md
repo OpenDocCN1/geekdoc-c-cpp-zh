@@ -380,6 +380,7 @@
 +   [C# 和 .NET 企业级应用：使用 .NET 和 C# 开发健壮、安全且可扩展的应用](docs/enterprise-applications-with-c-and-net-develop-robust-secure/README.md)
 +   [C# Entity Framework 数据访问技术](docs/entity-framework-data-access-technology-with-c/README.md)
 +   [C# 12.0 核心教程（第八版 - 早期发布版）](docs/essential-c-120-eighth-edition---early-release/README.md)
++   [C# 6.0 核心 (第5版) (Addison-Wesley 微软技术)](docs/essential-c-60-5th-edition-addison-wesley-microsoft-technolo/README.md)
 +   [C# 8.0 核心指南 第 7 版](docs/essential-c-80-edition-7/README.md)
 +   [Qt GUI 开发核心 C++ 编程：使用 Qt 框架构建高效、可扩展且精美的跨平台应用程序实用指南](docs/essential-c-programming-for-gui-development-with-qt-a-practi/README.md)
 +   [金融服务合规核心策略](docs/essential-strategies-for-financial-services-compliance-essen/README.md)
