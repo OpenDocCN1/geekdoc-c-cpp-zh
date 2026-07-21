@@ -366,6 +366,7 @@
 +   [高效 C：专业 C 编程入门指南](docs/effective-c-an-introduction-to-professional-c-programming/README.md)
 +   [Effective JavaScript：利用 JavaScript  de 68 种特定方法（高效软件开发系列）](docs/effective-javascript-68-specific-ways-to-harness-the-power-o/README.md)
 +   [自我：疗愈五大创伤的最大障碍：羞辱、拒绝、遗弃、不公与背叛](docs/ego-the-greatest-obstacle-to-healing-the-5-wounds-humiliatio/README.md)
++   [同步编程入门：通过算法实现 C++ 与 Java](docs/elementary-synchronous-programming-in-c-and-java-via-algorit/README.md)
 +   [编程面试元素：C++ 内部指南](docs/elements-of-programming-interviews-the-insiders-guide-c/README.md)
 +   [Eloquent JavaScript：现代编程入门指南](docs/eloquent-javascript-a-modern-introduction-to-programming/README.md)
 +   [C++ 嵌入式系统编程：实战技术](docs/embedded-systems-programming-with-c-real-world-techniques/README.md)
