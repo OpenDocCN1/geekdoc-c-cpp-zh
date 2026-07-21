@@ -364,6 +364,7 @@
 +   [简单 C++ 编程指南：通过实战项目学习 C++ 编程的逐步指南](docs/easy-c-programming-guide-step-by-step-guide-to-learn-c-progr/README.md)
 +   [Effective C++：改进程序与设计的 55 种特效，第三版 (Gal Zentner 图书系列)](docs/effective-c-55-specific-ways-to-improve-your-programs-and-de/README.md)
 +   [高效 C：专业 C 编程入门指南](docs/effective-c-an-introduction-to-professional-c-programming/README.md)
++   [高效 C# (涵盖 C# 6.0)，包含内容更新计划)：提升 C# 的 50 种方法 (第 3 版) (高效软件开发系列)](docs/effective-c-covers-c-60-includes-content-update-program-50-s/README.md)
 +   [Effective JavaScript：利用 JavaScript  de 68 种特定方法（高效软件开发系列）](docs/effective-javascript-68-specific-ways-to-harness-the-power-o/README.md)
 +   [自我：疗愈五大创伤的最大障碍：羞辱、拒绝、遗弃、不公与背叛](docs/ego-the-greatest-obstacle-to-healing-the-5-wounds-humiliatio/README.md)
 +   [同步编程入门：通过算法实现 C++ 与 Java](docs/elementary-synchronous-programming-in-c-and-java-via-algorit/README.md)
