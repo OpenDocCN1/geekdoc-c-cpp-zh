@@ -1,0 +1,1835 @@
+<p><img src="cover.jpeg" /></p>
+<p><span id="titlepage.xhtml"></span></p>
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewbox="0 0 526 751" preserveaspectratio="none">
+<image width="526" height="751" xlink:href="cover.jpeg"></image>
+</svg>
+</div>
+<p><span id="part0000.html"></span></p>
+<div class="calibre1">
+<p><span class="calibre3">Gaming in Turbo C++ with Mouse Programming
+-</span></p>
+<p><span class="calibre3">Suit 16</span></p>
+<p><span class="calibre5"> </span></p>
+<p><span class="calibre5">BY: PRASENJIT DAS</span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre10">Introduction</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre13">"Suit 16" game comprises of 16 face cards out
+of the deck of 52 cards. The aim of the game is to collect 4 face cards
+of same suit in the maximum of 10 moves. There are four suits in the
+deck of 52 cards which are Spade, Club, Heart and Diamond. There are 13
+cards in each suit out of which 9 cards show numbers from 1 to 9 and
+rest of four are the face cards namely “Ace”, “Joker”, “Queen” and
+“King”. So, collectively from the four suits, there are 16 face cards,
+which have been used in this game.</span></p>
+<p><span class="calibre3"> </span></p>
+<p><span class="calibre15">GAME EXECUTION</span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre13">The game starts with a welcome screen showing
+the name of the game with 16 face cards. The welcome screen is as shown
+below:</span></p>
+<p><img src="images/00001.jpeg" class="calibre17" /></p>
+<p><span class="calibre13">The welcome screen is followed by the main
+screen of the game. Here onwards, the mouse click works as the input.
+The main screen of the game is as shown below:</span></p>
+<p><img src="images/00002.jpeg" class="calibre18" /></p>
+<p><span class="calibre13">The main screen consists of 4 main buttons
+which are “Play Game”, “Instructions”, “About Game” and “Exit”. The user
+exits the game on clicking the “Exit” button. On clicking the “About
+Game” button, the information about the game is displayed which is as
+shown below:</span></p>
+<p><img src="images/00003.jpeg" class="calibre19" /></p>
+<p><span class="calibre13">On clicking the “Instructions” button, the
+instructions for playing the game is displayed which is as shown
+below:</span></p>
+<p><img src="images/00004.jpeg" class="calibre20" /></p>
+<p><span class="calibre13">On clicking the “Play Game” button, the game
+starts with a loading screen. The game loading screen is as shown
+below:</span></p>
+<p><img src="images/00005.jpeg" class="calibre21" /></p>
+<p><span class="calibre13">The loading screen has been designed such
+that a person is approaching towards the game. After the loading
+animation, two buttons namely “Proceed” and “Abort” is displayed, where
+user has the option whether to proceed with the game or abort from the
+program. The “Abort” button is displayed all the time till the
+completion of the game so that the user has the option to abort from the
+program at any point of time. </span></p>
+<p><img src="images/00006.jpeg" class="calibre22" /></p>
+<p><span class="calibre13">On clicking the “Proceed” button, the next
+screen displayed is the card selection screen in which the user has to
+select 4 cards out of the total of 16 cards. The card selection screen
+is as shown below:</span></p>
+<p><img src="images/00007.jpeg" class="calibre23" /></p>
+<p><span class="calibre13">The actual game starts after the user has
+selected the four cards. The game screen is as shown below:</span></p>
+<p><img src="images/00008.jpeg" class="calibre24" /></p>
+<p><span class="calibre13">After user has selected his 4 cards, the rest
+of the 8 cards become reserve cards. There are 10 moves available in
+total in which the user has to collect 4 cards of same suit by replacing
+one card with one of the 8 reserve cards. Before each move, the reserve
+cards are reshuffled. The user looses the game if he is unable to
+collect 4 cards of same suit within 10 moves. After the game is
+finished, the main screen with 4 main buttons reappears.</span></p>
+<p><span class="calibre8"> </span></p>
+<p><span class="calibre15">PROGRAM LISTING</span></p>
+<p><span class="calibre11"> </span></p>
+<p><span class="calibre13">#include&lt;conio.h&gt;</span></p>
+<p><span class="calibre13">#include&lt;graphics.h&gt;</span></p>
+<p><span class="calibre13">#include&lt;stdio.h&gt;</span></p>
+<p><span class="calibre13">#include&lt;string.h&gt;</span></p>
+<p><span class="calibre13">#include&lt;stdlib.h&gt;</span></p>
+<p><span class="calibre13">#include&lt;dos.h&gt;</span></p>
+<p><span class="calibre13">#include&lt;process.h&gt;</span></p>
+<p><span class="calibre13">struct p</span></p>
+<p><span class="calibre13">{ char suit[2];</span></p>
+<p><span class="calibre13">  char card[2];</span></p>
+<p><span class="calibre13">  int color;</span></p>
+<p><span class="calibre13">  int rev_color;</span></p>
+<p><span class="calibre13">};</span></p>
+<p><span class="calibre13">p pack[16]={
+{3,'\0',"K",4,10},{3,'\0',"Q",4,10},</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {3,'\0',"J",4,10},{3,'\0',"A",4,10},</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {4,'\0',"K",4,10},{4,'\0',"Q",4,10},</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {4,'\0',"J",4,10},{4,'\0',"A",4,10},</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {5,'\0',"K",0,15},{5,'\0',"Q",0,15},</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {5,'\0',"J",0,15},{5,'\0',"A",0,15},</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {6,'\0',"K",0,15},{6,'\0',"Q",0,15},</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {6,'\0',"J",0,15},{6,'\0',"A",0,15}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">   };</span></p>
+<p><span class="calibre13">int bin[16];</span></p>
+<p><span class="calibre13">int rdm[16] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+10, 11, 12, 13, 14, 15};</span></p>
+<p><span class="calibre13">int pl[4],res[12];</span></p>
+<p><span class="calibre13">void design(int i, int j, int k)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  setfillstyle(1,15);</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  rectangle(i,j,i+70,j+90);</span></p>
+<p><span class="calibre13">  floodfill(i+1,j+1,6);</span></p>
+<p><span class="calibre13">  setcolor(pack[k].color);</span></p>
+<p><span class="calibre13">  settextstyle(0,0,2);</span></p>
+<p><span class="calibre13"> 
+outtextxy(i+60,j+10,pack[k].suit);</span></p>
+<p><span class="calibre13"> 
+outtextxy(i+10,j+80,pack[k].suit);</span></p>
+<p><span class="calibre13">  settextstyle(7,0,6);</span></p>
+<p><span class="calibre13"> 
+outtextxy(i+35,j+40,pack[k].card);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void design_rev(int i, int j, int
+k)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  setfillstyle(1,0);</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  rectangle(i,j,i+70,j+90);</span></p>
+<p><span class="calibre13">  floodfill(i+1,j+1,6);</span></p>
+<p><span class="calibre13">  setcolor(pack[k].rev_color);</span></p>
+<p><span class="calibre13">  settextstyle(0,0,2);</span></p>
+<p><span class="calibre13"> 
+outtextxy(i+60,j+10,pack[k].suit);</span></p>
+<p><span class="calibre13"> 
+outtextxy(i+10,j+80,pack[k].suit);</span></p>
+<p><span class="calibre13">  settextstyle(7,0,6);</span></p>
+<p><span class="calibre13"> 
+outtextxy(i+35,j+40,pack[k].card);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void design_bk(int i, int j)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  rectangle(i,j,i+70,j+90);</span></p>
+<p><span class="calibre13">  line(i+35,j,i+70,j+45);</span></p>
+<p><span class="calibre13">  line(i+70,j+45,i+35,j+90);</span></p>
+<p><span class="calibre13">  line(i+35,j+90,i,j+45);</span></p>
+<p><span class="calibre13">  line(i,j+45,i+35,j);</span></p>
+<p><span class="calibre13">  rectangle(i+17,j+22,i+53,j+68);</span></p>
+<p><span class="calibre13">  circle(i+35,j+45,11);</span></p>
+<p><span class="calibre13">  setfillstyle(9,9);</span></p>
+<p><span class="calibre13">  floodfill(i+1,j+1,6);</span></p>
+<p><span class="calibre13">  floodfill(i+69,j+1,6);</span></p>
+<p><span class="calibre13">  floodfill(i+69,j+89,6);</span></p>
+<p><span class="calibre13">  floodfill(i+1,j+89,6);</span></p>
+<p><span class="calibre13">  setfillstyle(2,9);</span></p>
+<p><span class="calibre13">  floodfill(i+35,j+2,6);</span></p>
+<p><span class="calibre13">  floodfill(i+68,j+45,6);</span></p>
+<p><span class="calibre13">  floodfill(i+35,j+88,6);</span></p>
+<p><span class="calibre13">  floodfill(i+2,j+45,6);</span></p>
+<p><span class="calibre13">  setfillstyle(6,9);</span></p>
+<p><span class="calibre13">  floodfill(i+40,j+28,6);</span></p>
+<p><span class="calibre13">  setfillstyle(9,9);</span></p>
+<p><span class="calibre13">  floodfill(i+35,j+45,6);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void welcome()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int i,j;</span></p>
+<p><span class="calibre13">  int
+m[7]={130,146,164,174,196,220,246};</span></p>
+<p><span class="calibre13">  rectangle(1,1,639,479);</span></p>
+<p><span class="calibre13">  rectangle(6,6,634,474);</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(7,7,15);</span></p>
+<p><span class="calibre13">  settextstyle(1,0,5);</span></p>
+<p><span class="calibre13">  settextjustify(1,1);</span></p>
+<p><span class="calibre13">  setcolor(14);</span></p>
+<p><span class="calibre13">  outtextxy(320,235,"SUIT 16");</span></p>
+<p><span class="calibre13"> 
+for(i=70,j=0;i&lt;=490;i+=140,j++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      design(i,10,j);</span></p>
+<p><span class="calibre13">      design(i,380,j+12);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13"> 
+for(i=40,j=0;i&lt;=170;i+=130,j++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      design(i,120,j+4);</span></p>
+<p><span class="calibre13">      design(i,270,j+6);</span></p>
+<p><span class="calibre13">      design(i+340,120,j+8);</span></p>
+<p><span class="calibre13">      design(i+340,270,j+10);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  setcolor(14);</span></p>
+<p><span class="calibre13"> 
+for(i=40,j=580;i&lt;=580;i++,j--)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      sound(2*i);</span></p>
+<p><span class="calibre13">      setcolor(14);</span></p>
+<p><span class="calibre13">      line(40,215,i,215);</span></p>
+<p><span class="calibre13">      line(j,265,580,265);</span></p>
+<p><span class="calibre13">      delay(5);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  while(!kbhit())</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      j=random(7);</span></p>
+<p><span class="calibre13">      sound(m[j]*4);</span></p>
+<p><span class="calibre13">      delay(100);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  nosound();</span></p>
+<p><span class="calibre13">  getch();</span></p>
+<p><span class="calibre13">  setcolor(2);</span></p>
+<p><span class="calibre13">  for(i=0;i&lt;=313;i++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      rectangle(7+i,7,633-i,473);</span></p>
+<p><span class="calibre13">      delay(5);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void button(int i, int j, char
+*st)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre13">  rectangle(i+1,j,i+154,j+26);</span></p>
+<p><span class="calibre13">  setfillstyle(1,7);</span></p>
+<p><span class="calibre13">  floodfill(i+2,j+1,15);</span></p>
+<p><span class="calibre13">  setcolor(0);</span></p>
+<p><span class="calibre13">  rectangle(i+2,j+26,i+155,j+27);</span></p>
+<p><span class="calibre13">  rectangle(i+154,j,i+155,j+26);</span></p>
+<p><span class="calibre13">  settextstyle(4,0,1);</span></p>
+<p><span class="calibre13">  outtextxy(i+79,j+9,st);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void reverse(int i, int j)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  setcolor(0);</span></p>
+<p><span class="calibre13">  rectangle(i+1,j,i+154,j+26);</span></p>
+<p><span class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre13">  rectangle(i+2,j+26,i+155,j+27);</span></p>
+<p><span class="calibre13">  rectangle(i+154,j,i+155,j+26);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void forward(int i, int j)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre13">  rectangle(i+1,j,i+154,j+26);</span></p>
+<p><span class="calibre13">  setcolor(0);</span></p>
+<p><span class="calibre13">  rectangle(i+2,j+26,i+155,j+27);</span></p>
+<p><span class="calibre13">  rectangle(i+154,j,i+155,j+26);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">union REGS in,out;</span></p>
+<p><span class="calibre13">void initmouse()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  in.x.ax=0;</span></p>
+<p><span class="calibre13">  int86(51,&amp;in,&amp;out);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void callmouse()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  in.x.ax=1;</span></p>
+<p><span class="calibre13">  int86(51,&amp;in,&amp;out);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void mousehide()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  in.x.ax=2;</span></p>
+<p><span class="calibre13">  int86(51,&amp;in,&amp;out);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void limit(int x1, int y1, int x2, int
+y2)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  in.x.ax=7;</span></p>
+<p><span class="calibre13">  in.x.cx=x1;</span></p>
+<p><span class="calibre13">  in.x.dx=x2;</span></p>
+<p><span class="calibre13">  int86(51,&amp;in,&amp;out);</span></p>
+<p><span class="calibre13">  in.x.ax=8;</span></p>
+<p><span class="calibre13">  in.x.cx=y1;</span></p>
+<p><span class="calibre13">  in.x.dx=y2;</span></p>
+<p><span class="calibre13">  int86(51,&amp;in,&amp;out);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void mousepos(int *c, int *x, int
+*y)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  in.x.ax=3;</span></p>
+<p><span class="calibre13">  int86(51,&amp;in,&amp;out);</span></p>
+<p><span class="calibre13">  *c=out.x.bx;</span></p>
+<p><span class="calibre13">  *x=out.x.cx;</span></p>
+<p><span class="calibre13">  *y=out.x.dx;</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void rt_clk()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  setfillstyle(1,10);</span></p>
+<p><span class="calibre13">  floodfill(158,425,15);</span></p>
+<p><span class="calibre13">  settextstyle(7,0,1);</span></p>
+<p><span class="calibre13">  setcolor(4);</span></p>
+<p><span class="calibre13">  outtextxy(388, 445, "Right Click Not
+Allowed.");</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void hd_bd(int x)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int i=8;</span></p>
+<p><span class="calibre13">  setcolor(i);</span></p>
+<p><span class="calibre13">  ellipse(x+7,204,280,0,10,15);</span></p>
+<p><span class="calibre13">  ellipse(x,224,320,50,3,7);</span></p>
+<p><span class="calibre13">  ellipse(x+12,224,130,270,3,7);</span></p>
+<p><span class="calibre13">  ellipse(x+17,211,250,90,3,2);</span></p>
+<p><span class="calibre13">  line(x,228,x+15,232);</span></p>
+<p><span class="calibre13">  int poly[] = {x+12, 204, x+10, 207, x+8,
+208, x+8, 210, x+7, 207, x+5, 207, x+3, 210, x+3, 218, x-5, 212, x-4,
+204};</span></p>
+<p><span class="calibre13">  drawpoly(10,poly);</span></p>
+<p><span class="calibre13">  ellipse(x+7,200,0,180,10,5);</span></p>
+<p><span class="calibre13">  ellipse(x+7,204,0,180,20,5);</span></p>
+<p><span class="calibre13">  line(x-13,204,x+27,204);</span></p>
+<p><span class="calibre13">  setfillstyle(1,8);</span></p>
+<p><span class="calibre13">  floodfill(x+1,207,i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,14);</span></p>
+<p><span class="calibre13">  floodfill(x+13,209,i);</span></p>
+<p><span class="calibre13">  floodfill(x+18,211,i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,4);</span></p>
+<p><span class="calibre13">  floodfill(x+7,203,i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(x+7,197,i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,0);</span></p>
+<p><span class="calibre13">  fillellipse(x+14,210,1,2);</span></p>
+<p><span class="calibre13">  arc(x+14,210,70,160,3);</span></p>
+<p><span class="calibre13">  ellipse(x+14,217,70,180,4,3);</span></p>
+<p><span class="calibre13">  setfillstyle(1,8);</span></p>
+<p><span class="calibre13">  floodfill(x+12,215,i);</span></p>
+<p><span class="calibre13">  line(x,227,x+15,232);</span></p>
+<p><span class="calibre13">  line(x+15,232,x+17,237);</span></p>
+<p><span class="calibre13">  line(x+17,237,x,232);</span></p>
+<p><span class="calibre13">  line(x,232,x,227);</span></p>
+<p><span class="calibre13">  setfillstyle(1,4);</span></p>
+<p><span class="calibre13">  floodfill(x+3,230,i);</span></p>
+<p><span class="calibre13">  ellipse(x+7,292,20,70,15,60);</span></p>
+<p><span class="calibre13">  ellipse(x+8,283,120,170,15,60);</span></p>
+<p><span class="calibre13">  line(x-7,273,x+21,272);</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(x-3,269,i);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void stand(int x)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  hd_bd(x);</span></p>
+<p><span class="calibre13">  int i=8;</span></p>
+<p><span class="calibre13">  setcolor(i);</span></p>
+<p><span class="calibre13">  int hnd[] = {x+9, 249, x+11, 239, x+1, 239,
+x+1, 250, x+7, 264, x+15, 264, x+7, 249};</span></p>
+<p><span class="calibre13">  drawpoly(7,hnd);</span></p>
+<p><span class="calibre13">  int plm[] = {x+9, 265, x+10, 267, x+16,
+267, x+14, 265};</span></p>
+<p><span class="calibre13">  drawpoly(4,plm);</span></p>
+<p><span class="calibre13">  setfillstyle(1,14);</span></p>
+<p><span class="calibre13">  floodfill(x+12,266,i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,3);</span></p>
+<p><span class="calibre13">  floodfill(x+7,244,i);</span></p>
+<p><span class="calibre13">  line(x+15,274,x+13,294);</span></p>
+<p><span class="calibre13">  line(x-1,274,x+1,294);</span></p>
+<p><span class="calibre13">  line(x+15,274,x-1,274);</span></p>
+<p><span class="calibre13">  line(x+13,294,x+1,294);</span></p>
+<p><span class="calibre13">  setfillstyle(1,12);</span></p>
+<p><span class="calibre13">  floodfill(x+7,279,i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,8);</span></p>
+<p><span class="calibre13">  ellipse(x+10,299,0,180,10,3);</span></p>
+<p><span class="calibre13">  line(x,299,x+20,299);</span></p>
+<p><span class="calibre13">  floodfill(x+10,298,8);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void one(int x)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int i=8;</span></p>
+<p><span class="calibre13">  setcolor(i-1);</span></p>
+<p><span class="calibre13">  int bkhnd[] = {x-17, 252, x-8, 246, x-15,
+239, x-23, 247, x-28, 261, x-23, 267, x-18, 250};</span></p>
+<p><span class="calibre13">  drawpoly(7,bkhnd);</span></p>
+<p><span class="calibre13">  int bkplm[] = {x-28, 263, x-28, 265, x-24,
+269, x-24, 267};</span></p>
+<p><span class="calibre13">  drawpoly(4,bkplm);</span></p>
+<p><span class="calibre13">  setfillstyle(1,14);</span></p>
+<p><span class="calibre13">  floodfill(x-27,264,i-1);</span></p>
+<p><span class="calibre13">  setfillstyle(1,3);</span></p>
+<p><span class="calibre13">  floodfill(x-15,244,i-1);</span></p>
+<p><span class="calibre13">  setcolor(i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,12);</span></p>
+<p><span class="calibre13">  int lgft[] = {x+1, 273, x+11, 295, x-1,
+295, x-13, 273, x+1, 273};</span></p>
+<p><span class="calibre13">  drawpoly(5,lgft);</span></p>
+<p><span class="calibre13">  floodfill(x-6,276,i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,8);</span></p>
+<p><span class="calibre13">  ellipse(x+10,299,0,180,10,3);</span></p>
+<p><span class="calibre13">  line(x,299,x+20,299);</span></p>
+<p><span class="calibre13">  floodfill(x+10,298,i);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void two(int x)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int i=8;</span></p>
+<p><span class="calibre13">  setcolor(i-1);</span></p>
+<p><span class="calibre13">  int fthnd[] = {x-2, 240, x-8, 232, x-15,
+239, x-7, 247, x+7, 252, x+13, 247, x-4, 241};</span></p>
+<p><span class="calibre13">  drawpoly(7,fthnd);</span></p>
+<p><span class="calibre13">  int ftplm[] = {x+9, 252, x+11, 252, x+15,
+248, x+13, 248};</span></p>
+<p><span class="calibre13">  drawpoly(4,ftplm);</span></p>
+<p><span class="calibre13">  setfillstyle(1,14);</span></p>
+<p><span class="calibre13">  floodfill(x+11,251,i-1);</span></p>
+<p><span class="calibre13">  setfillstyle(1,3);</span></p>
+<p><span class="calibre13">  floodfill(x-13,239,i-1);</span></p>
+<p><span class="calibre13">  setcolor(i-1);</span></p>
+<p><span class="calibre13">  setfillstyle(1,12);</span></p>
+<p><span class="calibre13">  int lgbk[] = {x-4, 273, x-20, 273, x-22,
+295, x-12, 295, x-4, 273};</span></p>
+<p><span class="calibre13">  drawpoly(5,lgbk);</span></p>
+<p><span class="calibre13">  floodfill(x-16,276,i-1);</span></p>
+<p><span class="calibre13">  setcolor(i);</span></p>
+<p><span class="calibre13">  setfillstyle(1,8);</span></p>
+<p><span class="calibre13">  ellipse(x-12,299,0,180,10,3);</span></p>
+<p><span class="calibre13">  line(x-2,299,x-22,299);</span></p>
+<p><span class="calibre13">  floodfill(x-12,298,i);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void ltlg(int x)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  one(x);</span></p>
+<p><span class="calibre13">  hd_bd(x-16);</span></p>
+<p><span class="calibre13">  two(x);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void rtlg(int x)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  two(x);</span></p>
+<p><span class="calibre13">  hd_bd(x-16);</span></p>
+<p><span class="calibre13">  one(x);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void loading_scr()</span></p>
+<p><span class="calibre13"> {</span></p>
+<p><span class="calibre13">  int i,st=1,lr=0;</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  rectangle(20,70,610,375);</span></p>
+<p><span class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre13">  rectangle(21,71,609,374);</span></p>
+<p><span class="calibre13">  setfillstyle(1,0);</span></p>
+<p><span class="calibre13">  floodfill(25,75,15);</span></p>
+<p><span class="calibre13">  rectangle(30,300,600,320);</span></p>
+<p><span class="calibre13">  line(21,330,609,330);</span></p>
+<p><span class="calibre13">  settextstyle(4,0,2);</span></p>
+<p><span class="calibre13">  setcolor(14);</span></p>
+<p><span class="calibre13">  settextjustify(1,1);</span></p>
+<p><span class="calibre13">  outtextxy(315,350,"Approaching to
+game..");</span></p>
+<p><span class="calibre13">  setfillstyle(6,14);</span></p>
+<p><span class="calibre13">  floodfill(35,310,15);</span></p>
+<p><span class="calibre13">  for(i=40;i&lt;=578;i+=22)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">       if(st)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13"> {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">   if(i&gt;40)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     i-=22;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">   stand(i);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">   st=0;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13"> }</span></p>
+<p><span class="calibre13">       else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13"> {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">   if(lr)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">       rtlg(i);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">       lr=0;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">   else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">       ltlg(i);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">       lr=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">   st=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13"> }</span></p>
+<p><span class="calibre13">       delay(200);</span></p>
+<p><span class="calibre13">       setfillstyle(1,0);</span></p>
+<p><span class="calibre13">       floodfill(25,75,15);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  setfillstyle(1,0);</span></p>
+<p><span class="calibre13">  floodfill(315,335,15);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void exit_game()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int i;</span></p>
+<p><span class="calibre13">  mousehide();</span></p>
+<p><span class="calibre13">  for(i=0;i&lt;=240;i++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      rectangle(i,i,640-i,480-i);</span></p>
+<p><span class="calibre13">      delay(5);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  closegraph();</span></p>
+<p><span class="calibre13">  exit(0);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void loading()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int x,y,c,op=0;</span></p>
+<p><span class="calibre13">  mousehide();</span></p>
+<p><span class="calibre13">  loading_scr();</span></p>
+<p><span class="calibre13">  button(270,385,"Proceed");</span></p>
+<p><span class="calibre13">  button(450,385,"Abort");</span></p>
+<p><span class="calibre13">  limit(200,380,600,410);</span></p>
+<p><span class="calibre13">  callmouse();</span></p>
+<p><span class="calibre13">  while(!op)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">     
+mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre13">      if(c&amp;2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rt_clk();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  floodfill(158,426,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      if(c&amp;1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if((y&gt;386)&amp;&amp;(y&lt;410))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      if((x&gt;271)&amp;&amp;(x&lt;424))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  op=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  reverse(270,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      else
+if((x&gt;451)&amp;&amp;(x&lt;604))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  op=2;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  reverse(450,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      switch(op)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  case 1: forward(270,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  case 2: forward(450,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      op=0;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  switch(op)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      case 1: forward(270,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousehide();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setfillstyle(1,0);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      floodfill(25,75,6);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setcolor(8);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      rectangle(250,382,610,414);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setfillstyle(1,3);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      floodfill(251,383,8);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setfillstyle(1,10);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      floodfill(25,75,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setfillstyle(1,2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      floodfill(25,75,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      break;</span></p>
+<p><span class="calibre13">      case 2: forward(450,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      exit_game();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      exit(0);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void rndm()</span></p>
+<p><span class="calibre13">{ int i,j,k,a,c;</span></p>
+<p><span class="calibre13">  for(i=0;i&lt;16;i++)</span></p>
+<p><span class="calibre13">     { c=16-i;</span></p>
+<p><span class="calibre13">       randomize();</span></p>
+<p><span class="calibre13">       a=rdm[(int)(rand()%c)];</span></p>
+<p><span class="calibre13">       for(j=0;j&lt;c;j++)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  { if(a==rdm[j])</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{ for(k=j;k&lt;(c-1);k++)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    rdm[k]=rdm[k+1];</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rdm[c-1]=a;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  }</span></p>
+<p><span class="calibre13">     }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void shuffle()</span></p>
+<p><span class="calibre13">{ int i,j,k,a,c;</span></p>
+<p><span class="calibre13">  for(i=0;i&lt;12;i++)</span></p>
+<p><span class="calibre13">     { c=12-i;</span></p>
+<p><span class="calibre13">       randomize();</span></p>
+<p><span class="calibre13">       a=res[(int)(rand()%c)];</span></p>
+<p><span class="calibre13">       for(j=0;j&lt;c;j++)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  { if(a==res[j])</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{ for(k=j;k&lt;(c-1);k++)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    res[k]=res[k+1];</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  res[c-1]=a;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  }</span></p>
+<p><span class="calibre13">     }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void select()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int x,y,x1,y1,c,crd=1,j=16;</span></p>
+<p><span class="calibre13">  for(int i=40;i&lt;=540;i+=100)</span></p>
+<p><span class="calibre13">    { design_bk(i,70);</span></p>
+<p><span class="calibre13">      delay(20);</span></p>
+<p><span class="calibre13">      design_bk(i,190);</span></p>
+<p><span class="calibre13">      delay(20);</span></p>
+<p><span class="calibre13">      if(i&lt;=340)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  design_bk(i,310);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  delay(20);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  button(450,380,"Abort");</span></p>
+<p><span class="calibre13">  limit(30,50,610,400);</span></p>
+<p><span class="calibre13">  callmouse();</span></p>
+<p><span class="calibre13">  setfillstyle(1,6);</span></p>
+<p><span class="calibre13">  floodfill(158,425,15);</span></p>
+<p><span class="calibre13">  settextstyle(7,0,1);</span></p>
+<p><span class="calibre13">  setcolor(14);</span></p>
+<p><span class="calibre13">  outtextxy(388,445,"Select any 4
+cards.");</span></p>
+<p><span class="calibre13">  rndm();</span></p>
+<p><span class="calibre13">  while(crd&lt;=4)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">     
+mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre13">      if(c&amp;2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rt_clk();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setfillstyle(1,6);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  floodfill(158,425,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  settextstyle(7,0,1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setcolor(14);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  outtextxy(388,445,"Select any 4 cards.");</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      if(c&amp;1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13"> 
+if((x&gt;451)&amp;&amp;(x&lt;604)&amp;&amp;(y&gt;380)&amp;&amp;(y&lt;406))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      crd=6;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      reverse(450,380);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  for(i=40;i&lt;=540;i+=100)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      if((x&gt;i)&amp;&amp;(x&lt;(i+70)))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(((y&gt;70)&amp;&amp;(y&lt;160))||</span></p>
+<p><span class="calibre13">                   
+((y&gt;190)&amp;&amp;(y&lt;280))||</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">         
+((i&lt;=340)&amp;&amp;(y&gt;310)&amp;&amp;(y&lt;400)))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      j=((x-40)/100)+(((y-70)/120)*6);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      x1=i;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      if((y&gt;70)&amp;&amp;(y&lt;160))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">y1=70;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      else
+if((y&gt;190)&amp;&amp;(y&lt;280))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">y1=190;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      else y1=310;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(bin[j]==1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      j=17;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setfillstyle(1,10);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      floodfill(158,425,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      settextstyle(7,0,1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setcolor(4);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      outtextxy(388,445,"Card already
+selected.");</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      setfillstyle(1,6);</span></p>
+<p><span class="calibre13">      floodfill(158,425,15);</span></p>
+<p><span class="calibre13">      settextstyle(7,0,1);</span></p>
+<p><span class="calibre13">      setcolor(14);</span></p>
+<p><span class="calibre13">      outtextxy(388,445,"Select any 4
+cards.");</span></p>
+<p><span class="calibre13">     
+if((j&lt;16)&amp;&amp;(!(bin[j])))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  mousehide();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  bin[j]=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rectangle(x1,y1,x1+70,y1+90);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setfillstyle(1,4);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  floodfill(x1+5,y1+5,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  pl[crd-1]=rdm[j];</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  design(x1,y1,pl[crd-1]);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  crd++;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  limit(30,50,610,410);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  callmouse();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  if(crd==6)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      mousehide();</span></p>
+<p><span class="calibre13">      forward(450,380);</span></p>
+<p><span class="calibre13">      exit_game();</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">int win_chk()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13"> 
+if((pack[pl[0]].suit[0]==pack[pl[1]].suit[0])&amp;&amp;</span></p>
+<p><span class="calibre13">    
+(pack[pl[1]].suit[0]==pack[pl[2]].suit[0])&amp;&amp;</span></p>
+<p><span class="calibre13">    
+(pack[pl[2]].suit[0]==pack[pl[3]].suit[0]))</span></p>
+<p><span class="calibre13">    return 1;</span></p>
+<p><span class="calibre13">  else</span></p>
+<p><span class="calibre13">    return 0;</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void reserve()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int a=0;</span></p>
+<p><span class="calibre13">  for(int i=0;i&lt;16;i++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      if(!bin[i])</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  res[a]=rdm[i];</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  a++;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  bin[i]=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void play_scr()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  mousehide();</span></p>
+<p><span class="calibre13">  setcolor(1);</span></p>
+<p><span class="calibre13">  rectangle(7,46,633,423);</span></p>
+<p><span class="calibre13">  setfillstyle(1,10);</span></p>
+<p><span class="calibre13">  floodfill(25,75,1);</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(25,75,15);</span></p>
+<p><span class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre13">  line(7,295,633,295);</span></p>
+<p><span class="calibre13">  rectangle(450,295,633,350);</span></p>
+<p><span class="calibre13">  line(550,295,550,350);</span></p>
+<p><span class="calibre13">  settextstyle(7,0,1);</span></p>
+<p><span class="calibre13">  setcolor(14);</span></p>
+<p><span class="calibre13">  outtextxy(490,320,"Moves:");</span></p>
+<p><span class="calibre13">  for(int
+i=40,a=0;i&lt;=540;i+=100,a++)</span></p>
+<p><span class="calibre13">    { design_bk(i,70);</span></p>
+<p><span class="calibre13">      design_bk(i,190);</span></p>
+<p><span class="calibre13">      if(i&lt;=340)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">design(i,310,pl[a]);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  button(450,380,"Abort");</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(388,425,15);</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void shuffle_scr()</span></p>
+<p><span class="calibre13"> {</span></p>
+<p><span class="calibre13">  int i,a,b,c,d,e,f;</span></p>
+<p><span class="calibre13">  setcolor(1);</span></p>
+<p><span class="calibre13">  rectangle(7,46,633,294);</span></p>
+<p><span class="calibre13">  setfillstyle(1,10);</span></p>
+<p><span class="calibre13">  floodfill(25,75,1);</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(25,75,15);</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  rectangle(20,50,610,285);</span></p>
+<p><span class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre13">  rectangle(21,51,609,284);</span></p>
+<p><span class="calibre13">  line(315,51,315,284);</span></p>
+<p><span class="calibre13">  settextstyle(7,0,3);</span></p>
+<p><span class="calibre13">  setcolor(14);</span></p>
+<p><span class="calibre13">  settextjustify(1,1);</span></p>
+<p><span class="calibre13"> 
+outtextxy(168,160,"RESHUFFLING");</span></p>
+<p><span class="calibre13">  outtextxy(168,190,"CARDS");</span></p>
+<p><span class="calibre13">  for(i=1;i&lt;=9;i++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      if(i%2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  a=6;b=1;c=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  d=2;e=1;f=2;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  a=2;b=1;c=2;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  d=6;e=1;f=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      setcolor(a);</span></p>
+<p><span class="calibre13">      setfillstyle(b,c);</span></p>
+<p><span class="calibre13">      rectangle(553,161,567,179);</span></p>
+<p><span class="calibre13">      floodfill(560,170,a);</span></p>
+<p><span class="calibre13">      rectangle(540,111,554,129);</span></p>
+<p><span class="calibre13">      floodfill(547,120,a);</span></p>
+<p><span class="calibre13">      rectangle(503,74,517,92);</span></p>
+<p><span class="calibre13">      floodfill(510,83,a);</span></p>
+<p><span class="calibre13">      rectangle(453,61,467,79);</span></p>
+<p><span class="calibre13">      floodfill(460,70,a);</span></p>
+<p><span class="calibre13">      rectangle(403,74,417,92);</span></p>
+<p><span class="calibre13">      floodfill(410,83,a);</span></p>
+<p><span class="calibre13">      rectangle(366,111,380,129);</span></p>
+<p><span class="calibre13">      floodfill(373,120,a);</span></p>
+<p><span class="calibre13">      rectangle(353,161,367,179);</span></p>
+<p><span class="calibre13">      floodfill(360,170,a);</span></p>
+<p><span class="calibre13">      rectangle(366,211,380,229);</span></p>
+<p><span class="calibre13">      floodfill(373,220,a);</span></p>
+<p><span class="calibre13">      rectangle(403,248,417,266);</span></p>
+<p><span class="calibre13">      floodfill(410,257,a);</span></p>
+<p><span class="calibre13">      rectangle(453,261,467,279);</span></p>
+<p><span class="calibre13">      floodfill(460,270,a);</span></p>
+<p><span class="calibre13">      rectangle(503,248,517,266);</span></p>
+<p><span class="calibre13">      floodfill(510,257,a);</span></p>
+<p><span class="calibre13">      rectangle(540,211,554,229);</span></p>
+<p><span class="calibre13">      floodfill(547,220,a);</span></p>
+<p><span class="calibre13">      setcolor(d);</span></p>
+<p><span class="calibre13">      setfillstyle(e,f);</span></p>
+<p><span class="calibre13">      rectangle(479,64,493,82);</span></p>
+<p><span class="calibre13">      floodfill(486,73,d);</span></p>
+<p><span class="calibre13">      rectangle(550,135,564,153);</span></p>
+<p><span class="calibre13">      floodfill(557,144,d);</span></p>
+<p><span class="calibre13">      rectangle(550,187,564,205);</span></p>
+<p><span class="calibre13">      floodfill(557,196,d);</span></p>
+<p><span class="calibre13">      rectangle(479,258,493,276);</span></p>
+<p><span class="calibre13">      floodfill(486,267,d);</span></p>
+<p><span class="calibre13">      rectangle(427,258,441,276);</span></p>
+<p><span class="calibre13">      floodfill(434,267,d);</span></p>
+<p><span class="calibre13">      rectangle(356,187,370,205);</span></p>
+<p><span class="calibre13">      floodfill(363,196,d);</span></p>
+<p><span class="calibre13">      rectangle(356,135,370,153);</span></p>
+<p><span class="calibre13">      floodfill(363,144,d);</span></p>
+<p><span class="calibre13">      rectangle(427,64,441,82);</span></p>
+<p><span class="calibre13">      floodfill(434,73,d);</span></p>
+<p><span class="calibre13">      rectangle(524,90,538,108);</span></p>
+<p><span class="calibre13">      floodfill(531,99,d);</span></p>
+<p><span class="calibre13">      rectangle(524,232,538,250);</span></p>
+<p><span class="calibre13">      floodfill(531,241,d);</span></p>
+<p><span class="calibre13">      rectangle(382,232,396,250);</span></p>
+<p><span class="calibre13">      floodfill(389,241,d);</span></p>
+<p><span class="calibre13">      rectangle(382,90,396,108);</span></p>
+<p><span class="calibre13">      floodfill(389,99,d);</span></p>
+<p><span class="calibre13">      delay(200);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void res_scr()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  setcolor(1);</span></p>
+<p><span class="calibre13">  rectangle(7,46,633,294);</span></p>
+<p><span class="calibre13">  setfillstyle(1,10);</span></p>
+<p><span class="calibre13">  floodfill(25,75,1);</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(25,75,15);</span></p>
+<p><span class="calibre13">  for(int i=40;i&lt;=540;i+=100)</span></p>
+<p><span class="calibre13">    { design_bk(i,70);</span></p>
+<p><span class="calibre13">      design_bk(i,190);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void loose()</span></p>
+<p><span class="calibre13">{ int x1,x2,y1,y2,i,j,x,y,c,fin=0;</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  rectangle(20,70,610,375);</span></p>
+<p><span class="calibre13">  setfillstyle(1,0);</span></p>
+<p><span class="calibre13">  floodfill(25,75,6);</span></p>
+<p><span class="calibre13">  button(450,385,"Finish");</span></p>
+<p><span class="calibre13">  limit(440,380,600,400);</span></p>
+<p><span class="calibre13">  callmouse();</span></p>
+<p><span class="calibre13">  settextstyle(7,0,8);</span></p>
+<p><span class="calibre13">  while(!fin)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      j=random(15)+1;</span></p>
+<p><span class="calibre13">      for(int
+k=0;k&lt;(random(300)*10);k=k+2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setcolor(j);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  x1=21+k;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(x1&gt;609)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    x1=609;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  y1=71+k;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(y1&gt;374)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    y1=374;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  x2=609-k;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(x2&lt;21)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    x2=21;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  y2=374-k;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(y2&lt;71)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    y2=71;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rectangle(x1,y1,x2,y2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setcolor(0);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  outtextxy(315,222,"You Loose");</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  delay(5);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">     
+mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre13">      if(c&amp;2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rt_clk();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  floodfill(158,426,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      if(c&amp;1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13"> 
+if((x&gt;451)&amp;&amp;(y&gt;385)&amp;&amp;(x&lt;604)&amp;&amp;(y&lt;411))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      fin=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      reverse(450,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      fin=0;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      forward(450,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  mousehide();</span></p>
+<p><span class="calibre13">  forward(450,385);</span></p>
+<p><span class="calibre13">  setcolor(2);</span></p>
+<p><span class="calibre13">  for(i=7;i&lt;=633;i++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      line(i,46,i,423);</span></p>
+<p><span class="calibre13">      delay(10);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void win()</span></p>
+<p><span class="calibre13">{ int a,b,c,i,j,x,y,fin=0;</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  rectangle(20,70,610,375);</span></p>
+<p><span class="calibre13">  setfillstyle(1,0);</span></p>
+<p><span class="calibre13">  floodfill(25,75,6);</span></p>
+<p><span class="calibre13">  button(450,385,"Finish");</span></p>
+<p><span class="calibre13">  limit(440,380,600,400);</span></p>
+<p><span class="calibre13">  callmouse();</span></p>
+<p><span class="calibre13">  settextstyle(7,0,8);</span></p>
+<p><span class="calibre13">  while(!fin)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      j=random(14)+1;</span></p>
+<p><span class="calibre13">      a=random(650);</span></p>
+<p><span class="calibre13">      b=random(450);</span></p>
+<p><span class="calibre13">      if(a&lt;21)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">a=21;</span></p>
+<p><span class="calibre13">      else if(a&gt;609)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">a=609;</span></p>
+<p><span class="calibre13">      if(b&lt;71)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">b=71;</span></p>
+<p><span class="calibre13">      else if(b&gt;374)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">b=374;</span></p>
+<p><span class="calibre13">      for(int
+k=0;k&lt;random(100);k=k+2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(k&gt;=(a-21))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(k&gt;=(609-a))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(k&gt;=(b-71))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(k&gt;=(374-b))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setcolor(j);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  circle(a,b,k);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  outtextxy(315,222,"You Win");</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  delay(5);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">     
+mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre13">      if(c&amp;2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rt_clk();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  floodfill(158,426,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      if(c&amp;1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13"> 
+if((x&gt;451)&amp;&amp;(y&gt;385)&amp;&amp;(x&lt;604)&amp;&amp;(y&lt;411))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      fin=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      reverse(450,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      fin=0;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      forward(450,385);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  mousehide();</span></p>
+<p><span class="calibre13">  forward(450,385);</span></p>
+<p><span class="calibre13">  setcolor(2);</span></p>
+<p><span class="calibre13">  for(i=7;i&lt;=633;i++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      line(i,46,i,423);</span></p>
+<p><span class="calibre13">      delay(10);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void play()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int
+x,y,c,x1,y1,x2,y2,a,i,j,p,r,mov=1,w=0;</span></p>
+<p><span class="calibre13">  char *ch;</span></p>
+<p><span class="calibre13">  for(i=0;i&lt;16;i++)</span></p>
+<p><span class="calibre13">    bin[i]=0;</span></p>
+<p><span class="calibre13">  loading();</span></p>
+<p><span class="calibre13">  select();</span></p>
+<p><span class="calibre13">  reserve();</span></p>
+<p><span class="calibre13">  play_scr();</span></p>
+<p><span class="calibre13">  while(mov&lt;=10)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      shuffle();</span></p>
+<p><span class="calibre13">      shuffle_scr();</span></p>
+<p><span class="calibre13">      res_scr();</span></p>
+<p><span class="calibre13">      setfillstyle(1,10);</span></p>
+<p><span class="calibre13">      floodfill(555,300,15);</span></p>
+<p><span class="calibre13">      setfillstyle(1,2);</span></p>
+<p><span class="calibre13">      floodfill(555,300,15);</span></p>
+<p><span class="calibre13">      setfillstyle(1,6);</span></p>
+<p><span class="calibre13">      floodfill(388,425,15);</span></p>
+<p><span class="calibre13">      settextstyle(7,0,1);</span></p>
+<p><span class="calibre13">      setcolor(14);</span></p>
+<p><span class="calibre13">      sprintf(ch,"%d",mov);</span></p>
+<p><span class="calibre13">      outtextxy(590,320,ch);</span></p>
+<p><span class="calibre13">      outtextxy(388,445,"Select a card to
+exchange.");</span></p>
+<p><span class="calibre13">      limit(20,300,610,400);</span></p>
+<p><span class="calibre13">      callmouse();</span></p>
+<p><span class="calibre13">      a=0;</span></p>
+<p><span class="calibre13">      while(!a)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(c&amp;2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      rt_clk();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">} while(c&amp;2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setfillstyle(1,6);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      floodfill(158,425,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      settextstyle(7,0,1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setcolor(14);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      outtextxy(388,445,"Select a card to
+exchange.");</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(c&amp;1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     
+if((x&gt;451)&amp;&amp;(x&lt;604)&amp;&amp;(y&gt;380)&amp;&amp;(y&lt;406))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  a=6;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  reverse(450,380);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      for(i=40;i&lt;=340;i+=100)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if((x&gt;i)&amp;&amp;(x&lt;(i+70)))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      if((y&gt;310)&amp;&amp;(y&lt;400))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  j=(x-40)/100;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  x1=i;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  y1=310;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  a=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">} while(c&amp;1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      if(a==6)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  mousehide();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  forward(450,380);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  exit_game();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      mousehide();</span></p>
+<p><span class="calibre13">      design_rev(x1,y1,pl[j]);</span></p>
+<p><span class="calibre13">      p=j;</span></p>
+<p><span class="calibre13">      limit(20,50,610,270);</span></p>
+<p><span class="calibre13">      callmouse();</span></p>
+<p><span class="calibre13">      setfillstyle(1,2);</span></p>
+<p><span class="calibre13">      floodfill(158,425,15);</span></p>
+<p><span class="calibre13">      setfillstyle(1,6);</span></p>
+<p><span class="calibre13">      floodfill(158,425,15);</span></p>
+<p><span class="calibre13">      settextstyle(7,0,1);</span></p>
+<p><span class="calibre13">      setcolor(14);</span></p>
+<p><span class="calibre13">      outtextxy(388,445,"Select a card in
+exchange.");</span></p>
+<p><span class="calibre13">      a=0;</span></p>
+<p><span class="calibre13">      while(!a)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(c&amp;2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      rt_clk();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">} while(c&amp;2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setfillstyle(1,6);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      floodfill(158,425,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      settextstyle(7,0,1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      setcolor(14);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      outtextxy(388,445,"Select a card in
+exchange.");</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if(c&amp;1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      for(i=40;i&lt;=540;i+=100)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if((x&gt;i)&amp;&amp;(x&lt;(i+70)))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">     
+if(((y&gt;70)&amp;&amp;(y&lt;160))||((y&gt;190)&amp;&amp;(y&lt;280)))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  j=((x-40)/100)+(((y-70)/120)*6);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  x2=i;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if((y&gt;70)&amp;&amp;(y&lt;160))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    y2=70;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    y2=190;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  a=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">} while(c&amp;1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      mousehide();</span></p>
+<p><span class="calibre13">      setcolor(15);</span></p>
+<p><span class="calibre13">     
+rectangle(x2,y2,x2+70,y2+90);</span></p>
+<p><span class="calibre13">      setfillstyle(1,4);</span></p>
+<p><span class="calibre13">      floodfill(x2+5,y2+5,15);</span></p>
+<p><span class="calibre13">      design(x2,y2,res[j]);</span></p>
+<p><span class="calibre13">      r=j;</span></p>
+<p><span class="calibre13">      a=pl[p];</span></p>
+<p><span class="calibre13">      pl[p]=res[r];</span></p>
+<p><span class="calibre13">      res[r]=a;</span></p>
+<p><span class="calibre13">      design(x1,y1,pl[p]);</span></p>
+<p><span class="calibre13">      design_bk(x2,y2);</span></p>
+<p><span class="calibre13">      if(win_chk())</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  w=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      setfillstyle(1,2);</span></p>
+<p><span class="calibre13">      floodfill(388,425,15);</span></p>
+<p><span class="calibre13">      mov++;</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  setcolor(2);</span></p>
+<p><span class="calibre13">  for(i=7;i&lt;=633;i++)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      line(i,46,i,423);</span></p>
+<p><span class="calibre13">      delay(10);</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(388,425,15);</span></p>
+<p><span class="calibre13">  if(w==1)</span></p>
+<p><span class="calibre13">    win();</span></p>
+<p><span class="calibre13">  else</span></p>
+<p><span class="calibre13">    loose();</span></p>
+<p><span class="calibre13">  limit(10,10,620,410);</span></p>
+<p><span class="calibre13">  callmouse();</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void inst_txt()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  settextstyle(4,0,4);</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  outtextxy(320,65,"Instruction");</span></p>
+<p><span class="calibre13">  settextstyle(4,0,2);</span></p>
+<p><span class="calibre13">  outtextxy(320,95,"1) Select 4 cards from
+randomly placed face hidden 16 cards.");</span></p>
+<p><span class="calibre13">  outtextxy(320,115,"2) The remaining 12
+cards are placed face hidden.");</span></p>
+<p><span class="calibre13">  outtextxy(320,135,"3) The cards choosen are
+to be replaced by one of");</span></p>
+<p><span class="calibre13">  outtextxy(320,155,"the cards in the
+remaining cards section.");</span></p>
+<p><span class="calibre13">  outtextxy(320,175,"4) One card is to be
+replaced at a time.");</span></p>
+<p><span class="calibre13">  outtextxy(320,195,"5) The card replacement
+is termed as \"Move\".");</span></p>
+<p><span class="calibre13">  outtextxy(320,215,"6) Collect four cards of
+same suit within 10 moves.");</span></p>
+<p><span class="calibre13">  outtextxy(320,235,"7) You may also abort
+the game in the midway.");</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void abt_txt()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  settextstyle(4,0,4);</span></p>
+<p><span class="calibre13">  setcolor(6);</span></p>
+<p><span class="calibre13">  outtextxy(320,65,"About Game");</span></p>
+<p><span class="calibre13">  settextstyle(4,0,2);</span></p>
+<p><span class="calibre13">  outtextxy(320,95,"\"Suit 16\" game
+comprises of 16 face cards out of");</span></p>
+<p><span class="calibre13">  outtextxy(320,115,"the deck of 52 cards.
+The aim of the game is to");</span></p>
+<p><span class="calibre13">  outtextxy(320,135,"collect 4 face cards of
+same suit in the maximum");</span></p>
+<p><span class="calibre13">  outtextxy(320,155,"of 10
+moves.");</span></p>
+<p><span class="calibre13">  outtextxy(320,205,"Programmer: PRASENJIT
+DAS");</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void common(int op)</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int ok=0,x,y,c;</span></p>
+<p><span class="calibre13">  setfillstyle(1,10);</span></p>
+<p><span class="calibre13">  floodfill(10,50,15);</span></p>
+<p><span class="calibre13">  limit(10,50,600,410);</span></p>
+<p><span class="calibre13">  button(244,390,"OK");</span></p>
+<p><span class="calibre13">  switch(op)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      case 2: inst_txt();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      break;</span></p>
+<p><span class="calibre13">      case 3: abt_txt();</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  while(!ok)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">     
+mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre13">      if(c&amp;2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rt_clk();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  floodfill(158,426,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      if(c&amp;1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13"> 
+if((x&gt;245)&amp;&amp;(y&gt;391)&amp;&amp;(x&lt;398)&amp;&amp;(y&lt;416))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      ok=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      reverse(244,390);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      ok=0;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      forward(244,390);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  forward(244,390);</span></p>
+<p><span class="calibre13">  limit(10,10,620,410);</span></p>
+<p><span class="calibre13">  mousehide();</span></p>
+<p><span class="calibre13">  setcolor(8);</span></p>
+<p><span class="calibre13">  rectangle(235,385,405,420);</span></p>
+<p><span class="calibre13">  setfillstyle(1,3);</span></p>
+<p><span class="calibre13">  floodfill(237,387,8);</span></p>
+<p><span class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre13">  floodfill(10,50,15);</span></p>
+<p><span class="calibre13">  callmouse();</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">int menuclk()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int i,x,y,c,op=0;</span></p>
+<p><span class="calibre13">  settextstyle(7,0,1);</span></p>
+<p><span class="calibre13">  setcolor(14);</span></p>
+<p><span class="calibre13">  outtextxy(388,445,"Click on Menu
+Buttons.");</span></p>
+<p><span class="calibre13">  while(!op)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">     
+mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre13">      if(c&amp;2)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  rt_clk();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  setfillstyle(1,2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  floodfill(158,426,15);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">      if(c&amp;1)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  if((y&gt;8)&amp;&amp;(y&lt;30))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      if((x&gt;8)&amp;&amp;(x&lt;161))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  op=1;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  reverse(7,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      else
+if((x&gt;165)&amp;&amp;(x&lt;318))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  op=2;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  reverse(164,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      else
+if((x&gt;321)&amp;&amp;(x&lt;474))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  op=3;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  reverse(320,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      else
+if((x&gt;477)&amp;&amp;(x&lt;630))</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  op=4;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  reverse(476,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  else</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      switch(op)</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">{</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  case 1: forward(7,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  case 2: forward(164,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  case 3: forward(320,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  break;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  case 4: forward(476,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      op=0;</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    }</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">  do</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    {</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      mousepos(&amp;c,&amp;x,&amp;y);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">    } while(c&amp;1);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">}</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  switch(op)</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      case 1: forward(7,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      play();</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      break;</span></p>
+<p><span class="calibre13">      case 2: forward(164,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      common(2);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      break;</span></p>
+<p><span class="calibre13">      case 3: forward(320,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      common(3);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      break;</span></p>
+<p><span class="calibre13">      case 4: forward(476,7);</span></p>
+<p><span class="calibre26"><span class="calibre27"></span></span><span
+class="calibre13">      exit_game();</span></p>
+<p><span class="calibre13">    }</span></p>
+<p><span class="calibre13">  return op;</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void screen()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  int clk;</span></p>
+<p><span class="calibre13">  setcolor(15);</span></p>
+<p><span class="calibre13">  line(6,45,634,45);</span></p>
+<p><span class="calibre13">  rectangle(6,424,156,474);</span></p>
+<p><span class="calibre13">  rectangle(156,424,634,474);</span></p>
+<p><span class="calibre13">  button(7,7,"Play Game");</span></p>
+<p><span class="calibre13">  button(164,7,"Instructions");</span></p>
+<p><span class="calibre13">  button(320,7,"About Game");</span></p>
+<p><span class="calibre13">  button(476,7,"Exit");</span></p>
+<p><span class="calibre13">  initmouse();</span></p>
+<p><span class="calibre13">  limit(10,10,620,410);</span></p>
+<p><span class="calibre13">  callmouse();</span></p>
+<p><span class="calibre13">  do</span></p>
+<p><span class="calibre13">    {</span></p>
+<p><span class="calibre13">      clk=menuclk();</span></p>
+<p><span class="calibre13">    } while(clk!=4);</span></p>
+<p><span class="calibre13">  closegraph();</span></p>
+<p><span class="calibre13">}</span></p>
+<p><span class="calibre13">void main()</span></p>
+<p><span class="calibre13">{</span></p>
+<p><span class="calibre13">  clrscr();</span></p>
+<p><span class="calibre13">  int gd=DETECT,gm;</span></p>
+<p><span class="calibre13"> 
+initgraph(&amp;gd,&amp;gm,"c:\\tc\\bgi");</span></p>
+<p><span class="calibre13">  getch();</span></p>
+<p><span class="calibre13">  welcome();</span></p>
+<p><span class="calibre13">  screen();</span></p>
+<p><span class="calibre13">}</span></p>
+</div>
