@@ -363,6 +363,7 @@
 +   [E. Balaguruswamy 的 ANSI C 解决方案：第 8 版](docs/e-balaguruswamys-ansi-c-solutions-8th-edition/README.md)
 +   [Python 地球观测指南：实用编程指南](docs/earth-observation-using-python-a-practical-programming-guide/README.md)
 +   [简单 C++ 编程指南：通过实战项目学习 C++ 编程的逐步指南](docs/easy-c-programming-guide-step-by-step-guide-to-learn-c-progr/README.md)
++   [Effective C（第2版）：专业 C 编程入门指南](docs/effective-c-2nd-edition-an-introduction-to-professional-c-pr/README.md)
 +   [Effective C++：改进程序与设计的 55 种特效，第三版 (Gal Zentner 图书系列)](docs/effective-c-55-specific-ways-to-improve-your-programs-and-de/README.md)
 +   [高效 C：专业 C 编程入门指南](docs/effective-c-an-introduction-to-professional-c-programming/README.md)
 +   [高效 C# (涵盖 C# 6.0)，包含内容更新计划)：提升 C# 的 50 种方法 (第 3 版) (高效软件开发系列)](docs/effective-c-covers-c-60-includes-content-update-program-50-s/README.md)
