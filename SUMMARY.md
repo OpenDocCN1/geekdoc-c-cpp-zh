@@ -401,6 +401,7 @@
 +   [函数式设计：原则、模式与实践 (Robert C. Martin 系列)](docs/functional-design-principles-patterns-and-practices-robert-c/README.md)
 +   [C++ 函数式编程](docs/functional-programming-with-c/README.md)
 +   [C 语言基础：深入底层机器](docs/fundamental-c-getting-closer-to-the-machine/README.md)
++   [C++ 游戏编程：创建 3D 游戏，第一版](docs/game-programming-in-c-creating-3d-games-first-edition/README.md)
 +   [Turbo C++ 鼠标编程游戏开发 - 第 16 套](docs/gaming-in-turbo-c-with-mouse-programming---suit-16/README.md)
 +   [生成式 AI 应用：规划、设计与实现 (C++ 生成式 AI 编程)](docs/generative-ai-applications-planning-design-and-implementatio/README.md)
 +   [LLVM 核心库入门指南](docs/getting-started-with-llvm-core-libraries/README.md)
