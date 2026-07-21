@@ -1,0 +1,342 @@
+name: Exchanging Data From SAS® to Excel： The ODS Excel Destination
+name_cn: 从 SAS® 到 Excel 的数据交换：ODS Excel 目标
+slug: exchanging-data-from-sas-to-excel-the-ods-excel-destination
+toc:
+- - '#'
+  - 从 SAS® 到 Excel 的数据交换：ODS Excel 目标
+- - '###'
+  - MSG_LEVEL= 选项
+- - '###'
+  - TAB_COLOR= 选项
+- - '####'
+  - SAS 代码 5-7 – 使用 TAB_COLOR= 选项的若干示例
+- - '###'
+  - ZOOM= 选项
+- - '####'
+  - SAS 代码 5-8 – 使用 ZOOM= 选项缩小图像
+- - '###'
+  - 结论
+- - '##'
+  - 第 6 章：影响输出特征的参数
+- - '###'
+  - 引言
+- - '###'
+  - 影响工作表级别的参数
+- - '#'
+  - 本书未讨论 SAS 注册表的修改
+- - '##'
+  - 在 ODS EXCEL 语句中使用 ODS 文档对象模型 (DOM)
+- - '###'
+  - SAS Code 6-1 – 使用 DOM 选项识别 CSS 元素
+- - '###'
+  - SAS Log 6-1 – DOM Trace 输出的部分列表
+- - '###'
+  - 表 6-2 – CSS 选择器类
+- - '###'
+  - 属性选择器
+- - '###'
+  - 组合器
+- - '###'
+  - ODS ANCHOR= 选项
+- - '###'
+  - _SIZING= 选项
+- - '###'
+  - 使用 CSSSTYLE= 选项使用级联样式表
+- - '###'
+  - 使用 CSS 文件进行颜色更改
+- - '###'
+  - SAS 代码 6-5 – 不使用层叠样式表创建 Excel 工作簿
+- - '###'
+  - 图 6-3 – 不使用层叠样式表的 Excel 工作簿
+- - '###'
+  - SAS 代码 6-6 – 使用层叠样式表创建 Excel 工作簿
+- - '###'
+  - 图 6-4 使用层叠样式表的 Excel 工作簿
+- - '###'
+  - 将图表发送到 Excel 并使用 CSS 文件修改输出
+- - '###'
+  - SAS 代码 6-7 – 用于更改图形颜色的 CSS 文件
+- - '###'
+  - SAS 代码 6-8 – 生成图表的宏
+- - '###'
+  - SAS 代码 6-9 – 不使用 CSS 输出图表
+- - '###'
+  - 图 6-5 – 不使用 CSS 的 Excel 图表
+- - '###'
+  - SAS 代码 6-10 – 使用 CSS 输出图表
+- - '###'
+  - 图 6-6 – 使用 CSS 的 Excel 图表
+- - '###'
+  - 使用 CSS 添加背景图像
+- - '###'
+  - SAS 代码 6-11 – 构建包含引用的 CSS 文件
+- - '###'
+  - 'IMAGE_DPI= '
+- - '###'
+  - STYLE= 选项
+- - '###'
+  - ODS EXCEL STYLE= 选项
+- - '##'
+  - EMBEDDED_FOOTNOTES= 子选项
+- - '###'
+  - 嵌入脚注已关闭
+- - '###'
+  - 嵌入脚注已开启
+- - '###'
+  - 工作表中嵌入脚注设为‘ON’且有多个输出
+- - '##'
+  - The EMBED_FOOTNOTES_ONCE= 子选项
+- - '###'
+  - 只有一个输出表的 EMBED_FOOTNOTES_ONCE
+- - '###'
+  - 具有多个输出表的 EMBED_FOOTNOTES_ONCE
+- - '##'
+  - EMBEDDED_TITLES= 子选项
+- - '###'
+  - EMBEDDED_TITLES=‘OFF’
+- - '###'
+  - EMBEDDED_TITLES=‘ON’
+- - '##'
+  - The EMBED_TITLES_ONCE= 子选项
+- - '###'
+  - 只有一个输出工作表的 EMBED_TITLES_ONCE
+- - '###'
+  - 工作表中有多个输出的 EMBED_TITLES_ONCE
+- - '###'
+  - FITTOPAGE= 子选项
+- - '###'
+  - GRIDLINES= 子选项
+- - '###'
+  - PAGES_FITHEIGHT= 子选项
+- - '###'
+  - PAGES_FITWIDTH= 子选项
+- - '###'
+  - SHEET_INTERVAL= 子选项
+- - '###'
+  - SHEET_INTERVAL=‘BYGROUP’ 示例
+- - '###'
+  - SHEET_INTERVAL=‘PAGE’ 示例
+- - '###'
+  - SHEET_INTERVAL=‘PROC’ 示例
+- - '###'
+  - SHEET_INTERVAL=‘NONE’ 示例
+- - '###'
+  - SHEET_INTERVAL=‘TABLE’ 示例
+- - '###'
+  - SHEET_LABEL= 子选项
+- - '###'
+  - SHEET_NAME= 子选项
+- - '###'
+  - SUPPRESS_BYLINES= 子选项
+- - '###'
+  - 结论
+- - '###'
+  - 引言
+- - '###'
+  - ODS Excel 目标子选项
+- - '###'
+  - The EMBEDDED_FOOTNOTES= 子选项
+- - '###'
+  - 嵌入脚注关闭
+- - '##'
+  - 图 7-1 – 关闭 `EMBEDDED_FOOTNOTES=` 选项的 Excel 输出
+- - '###'
+  - 开启嵌入式脚注
+- - '####'
+  - SAS 代码 7-2 – 使用 `EMBEDDED_FOOTNOTES='ON'` 选项
+- - '####'
+  - 图 7-2 – 开启 `EMBEDDED_FOOTNOTES=` 选项的 Excel 输出
+- - '###'
+  - 在工作表上有多个输出时设置 `EMBEDDED_FOOTNOTES=‘ON’`
+- - '###'
+  - SAS 代码 7-3 – 使用 `EMBEDDED_FOOTNOTES` 和 `SHEET_INTERVAL` 子选项。
+- - '###'
+  - 图 7-3 – `EMBEDDED_FOOTNOTES=` 选项开启且同一工作表上有多个输出
+- - '###'
+  - '`EMBED_FOOTNOTES_ONCE=` 子选项'
+- - '####'
+  - 只有一个输出表格时使用 `EMBED_FOOTNOTES_ONCE`
+- - '####'
+  - SAS 代码 7-4 – 显示如何在工作表上仅打印一次脚注
+- - '####'
+  - 图 7-4 – `EMBEDDED_FOOTNOTES` 和 `EMBED_FOOTNOTES_ONCE` 均为‘ON’的 Excel 输出
+- - '###'
+  - 有多个输出表格时使用 `EMBED_FOOTNOTES_ONCE`
+- - '####'
+  - SAS 代码 7-5 – 在工作表上仅打印一次脚注
+- - '####'
+  - 图 7-5 – `EMBEDDED_FOOTNOTES=` 和 `EMBED_FOOTNOTES_ONCE` 均为‘ON’且同一工作表上有多个输出
+- - '###'
+  - EMBEDDED_TITLES_ONCE= 子选项
+- - '###'
+  - 只有输出工作表
+- - '###'
+  - FITTOPAGE= 子选项
+- - '###'
+  - GRIDLINES= 子选项
+- - '###'
+  - PAGES_FITHEIGHT= 子选项
+- - '###'
+  - PAGES_FITWIDTH= 子选项
+- - '###'
+  - SHEET_INTERVAL= 子选项
+- - '###'
+  - SHEET_INTERVAL=‘BYGROUP’ 示例
+- - '###'
+  - SHEET_INTERVAL=‘PAGE’ 示例
+- - '###'
+  - SHEET_INTERVAL=‘PROC’ 示例
+- - '###'
+  - SHEET_INTERVAL=‘NONE’ 示例
+- - '###'
+  - SHEET_INTERVAL=‘TABLE’ 示例
+- - '###'
+  - SHEET_LABEL= 子选项
+- - '###'
+  - SHEET_NAME= 子选项
+- - '###'
+  - SUPPRESS_BYLINES= 子选项
+- - '###'
+  - 总结
+- - '##'
+  - ODS Excel目标操作
+- - '###'
+  - BLACKANDWHITE= 选项
+- - '###'
+  - CENTER_HORIZONTAL= 选项
+- - '###'
+  - CENTER_VERTICAL= 选项
+- - '###'
+  - DRAFTQUALITY= 选项
+- - '###'
+  - ORIENTATION= 选项
+- - '###'
+  - PAGE_ORDER_ACROSS= 选项
+- - '###'
+  - PRINT_AREA= 选项
+- - '###'
+  - PRINT_FOOTER= 选项
+- - '###'
+  - PRINT_FOOTER_MARGIN= 选项
+- - '###'
+  - ROWBREAKS_COUNT= 选项
+- - '###'
+  - ROWBREAKS_INTERVAL= 选项
+- - '###'
+  - ROWCOLHEADINGS= 选项
+- - '##'
+  - ODS Excel 目标
+- - '###'
+  - SCALE= 选项
+- - '###'
+  - 当使用 Excel 2013 时，如果你输入：
+- - '###'
+  - SAS 代码 8-15 – 将 ODS Excel 选项设置为正常尺寸的50%
+- - '###'
+  - TITLE_FOOTNOTE_NOBREAK= 选项
+- - '###'
+  - SAS 代码 8-16 – 默认设置 TITLE_FOOTNOTE_NOBREAK=
+- - '###'
+  - TITLE_FOOTNOTE_WIDTH= 选项
+- - '###'
+  - 表 9.2 – ODS Excel目标行特征
+- - '###'
+  - 表 9.3 – ODS Excel目标单元格特征
+- - '###'
+  - ABSOLUTE_COLUMN_WIDTH= 子选项
+- - '###'
+  - SAS 代码 9-5 – 为单列使用 `COLUMN_REPEAT=` 选项
+- - '###'
+  - SAS 代码 9-6 – 为列范围使用 `COLUMN_REPEAT=` 选项
+- - '###'
+  - SAS 代码 9-7 – 使用 HEADER使用 `COLUMN_REPEAT=` 选项
+- - '###'
+  - FROZEN_HEADERS= 选项
+- - '###'
+  - SAS 代码 9-8 – `FROZEN_HEADERS=` 选项的默认值
+- - '###'
+  - FROZEN_HEADERS= 选项
+- - '###'
+  - SAS 代码 9-8 – `FROZEN_HEADERS=` 选项的默认值
+- - '###'
+  - FROZEN_HEADERS=... `FROZEN_HEADERS=` 选项
+- - '###'
+  - SAS 代码 9-8 – `FROZEN_HEADERS=` 选项的默认值
+- - '###'
+  - HIDDEN_COLUMNS= 子选项
+- - '###'
+  - SAS 代码 9-10 – 使用 `HIDDEN_COLUMNS=`
+- - '###'
+  - ABSOLUTE_ROW_HEIGHT= 选项
+- - '###'
+  - SAS 代码 9-11 – 在重复模式中调整行的SAS代码
+- - '###'
+  - SAS 代码 9-12 – FROZEN_ROWHEADERS= 默认值
+- - '###'
+  - 图 9-16 – FROZEN_ROWHEADERS=‘ON’ 显示列‘B’缺失
+- - '###'
+  - SAS 代码 9-13 – FROZEN_ROWHEADERS= 子选项冻结四列
+- - '###'
+  - 图 9-17 - FROZEN_ROWHEADERS= 有四列冻结
+- - '##'
+  - HIDDEN_ROWS= 子选项
+- - '###'
+  - SAS 代码 9-14 – 隐藏一行和范围行的HIDDEN_ROWS=选项
+- - '###'
+  - 图 9-18 – 隐藏行的Excel输出
+- - '###'
+  - ROW_HEIGHTS= 子选项
+- - '###'
+  - SAS 代码 9-15 – 与ROW_HEIGHTS= 选项相关的行代码选项
+- - '###'
+  - 图 9-19 – 显示SAS代码 9-15产生的不同行高的Excel输出
+- - '##'
+  - ROW_REPEAT= 子选项
+- - '###'
+  - FORMULAS= 子选项
+- - '###'
+  - START_AT= 子选项
+- - '###'
+  - 结论
+- - '##'
+  - 索引
+- - '##'
+  - 示例
+- - '##'
+  - Excel (Microsoft)
+- - '##'
+  - F
+- - '##'
+  - G
+- - '##'
+  - H
+- - '##'
+  - I
+- - '##'
+  - K
+- - '##'
+  - L
+- - '##'
+  - M
+- - '###'
+  - Microsoft Excel
+- - '##'
+  - N
+- - '##'
+  - O
+- - '###'
+  - ODS Excel 目标
+- - '###'
+  - ODS EXCEL 语句
+- - '###'
+  - ODS EXCLUDE 语句
+- - '###'
+  - ODS PDF 语句
+- - '###'
+  - ODS SELECT 语句
+- - '###'
+  - ODS SHOW 语句
+- - '###'
+  - Office 2007 (Microsoft) 5
+- - '###'
+  - 选项
