@@ -403,6 +403,7 @@
 +   [函数设计：原则、模式与实践](docs/functional-design-principles-patterns-and-practices/README.md)
 +   [函数式设计：原则、模式与实践 (Robert C. Martin 系列)](docs/functional-design-principles-patterns-and-practices-robert-c/README.md)
 +   [C++ 函数式编程](docs/functional-programming-with-c/README.md)
++   [C++ 函数：C++ 编程进阶之路](docs/functions-in-c-second-step-in-c-programming/README.md)
 +   [C 语言基础：深入底层机器](docs/fundamental-c-getting-closer-to-the-machine/README.md)
 +   [C# 计算机编程基础：编程原理、面向对象编程、数据结构（免费编程书籍）](docs/fundamentals-of-computer-programming-with-c-programming-prin/README.md)
 +   [C++ 游戏编程：创建 3D 游戏，第一版](docs/game-programming-in-c-creating-3d-games-first-edition/README.md)
