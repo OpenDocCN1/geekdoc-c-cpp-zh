@@ -377,6 +377,7 @@
 +   [C# Entity Framework 数据访问技术](docs/entity-framework-data-access-technology-with-c/README.md)
 +   [C# 12.0 核心教程（第八版 - 早期发布版）](docs/essential-c-120-eighth-edition---early-release/README.md)
 +   [Qt GUI 开发核心 C++ 编程：使用 Qt 框架构建高效、可扩展且精美的跨平台应用程序实用指南](docs/essential-c-programming-for-gui-development-with-qt-a-practi/README.md)
++   [金融服务合规核心策略](docs/essential-strategies-for-financial-services-compliance-essen/README.md)
 +   [Excel 2019 透视表与仪表板入门指南：分步教程指南（Excel 2019 分步教程系列）](docs/excel-2019-pivot-tables-introduction-to-dashboards-the-step-/README.md)
 +   [Excel 工作簿：160 个练习及答案与注释](docs/excel-workbook-160-exercises-with-solutions-and-comments/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
