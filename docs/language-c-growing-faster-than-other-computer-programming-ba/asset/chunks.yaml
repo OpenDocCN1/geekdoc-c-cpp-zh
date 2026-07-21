@@ -1,0 +1,1101 @@
+- fmt: "\n![](image_rsrc5B.jpg)\n\n# Language C++ Growing Faster Than Other: Computer\
+    \ Programming Basics Getting Started The Easy Way Introduction\n\nComputer programming\
+    \ is the process of designing and writing computer programs.As a skill set, it\
+    \ includes a good sort of different tasks and techniques, but our tutorials aren't\
+    \ intended to show you everything. Instead, they're meant to supply basic, practical\
+    \ skills to assist you to understand and write code that reflects belongings you\
+    \ see and use within theworld.\n\n## What you would like to understand\n\nOur\
+    \ programming tutorials assume that you simply haven't any programming experience\
+    \ whatsoever. They do, however,require basic familiarity with the utilization\
+    \ of computers and web browsers. for instance, you ought to be comfortable downloading\
+    \ and opening files and using text editing software. If you do not feelconfident\
+    \ in those skills, consider spending a while with these tutorials first:\n\n-\
+    \ Computer Basics\n- Internet Basics\n\nAs long as you're comfortable with those\
+    \ basics, you ought to be prepared to start learning to program.\n\n## What these\
+    \ tutorials will cover\n\nThese tutorials specialize in one particular sort of\
+    \ programming: web development. once you visit websites, whether you employ a\
+    \ laptop, a smartphone, or anything, you're actually watching code, which an internet\
+    \ developer likely wrote, and which your browser is interpreting topoint out you\
+    \ what you see on the screen.These tutorials will show you ways to start writing\
+    \ three common sorts of code utilized in web development, whichcombined structure\
+    \ the typical website that you simply see every day: HTML, CSS, and JavaScript.\n\
+    \n## Parts of an internet site\n\nImagine that each website you visit may be a\
+    \ person. everyone is different in how they appear, act, and speak, but they're\
+    \ generally made from equivalent basic pieces.\n\n### HTML\n\nIf you imagine an\
+    \ internet site as an individual, you'll consider HTML as being the skeleton.HTML\
+    \ is in the middle of just about everything you see on the web. While it doesn't\
+    \ appear as if much on its own, it forms the building blocks on top of which all\
+    \ the opposite pieces rest. The HTML for a particularly simple website might looksom\
+    \ like this:\n\n```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>An Extremely\
+    \ Simple Website</title>\n</head>\n<body>\n<p>This is an extremely simple website.</p>\n\
+    </body>\n</html>\n```\n\n## Language C++ Growing Faster Than Other\n\nThe C++\
+    \ programming language has been around for quite a while, which suggests it’s\
+    \ built up quite the mountain of legacycode. But the language’s continuing ubiquityisn’t\
+    \ just a matter of developers trying to take care of longtime apps and platforms;\
+    \ because the latest update to the TIOBE Index makes clear, C++ is actively growing.Specifically,\
+    \ C++ has risen 1.48 percent over the past 12 months, reaching (in TIOBE’s estimation)\
+    \ a 7.11 percent market share. which may not appear to bestratospheric growth,\
+    \ but it beats out every single over “big” language on the list, including the\
+    \ ever-popular Python (which grew 0.59 percent over the past year). While C++\
+    \ is currently in fourth place on TIOBE’s overall list, C is in first (with 15.95\
+    \ percent), having overthrown Java(with 13.48 percent).\n\nWhat’s behind the strong\
+    \ performance of C++? That’s a superb question, but the note accompanying the\
+    \ rankings suggests that some recent updates have something to try to do with\
+    \ it: “I think that the new C++20 standard could be one among the most causes\
+    \ for this. Especially due to the new modules feature that's getting to replace\
+    \ the dreadful include mechanism. C++ beats other languages with a positive trend\
+    \ like R (+1.33%) and C# (+1.18%).”\n\nIn order to get its rankings, TIOBE utilizes\
+    \ data from a spread of aggregators and search engines, including Google, Wikipedia,\
+    \ YouTube, and Amazon. For alanguage to rank, it must be Turing complete, have\
+    \ its own Wikipedia entry, and earn quite 5,000 hits for +” programming” on Google.Thatmethod\
+    \ has attracted its share of critics over the years, who argue that the rankings\
+    \ are more a measure of those languages’ “buzz” than actual usage. In any case,\
+    \ “big” languages like Python and C++ tend to stay to the upper rankings, while\
+    \ smaller languages often experiencebig ranking swings up and down.\n\nC++ began\
+    \ its exi stence as “C with Classes,” but it’s managed to drift well faraway from\
+    \ C over the past few decades. If you’re learning the language, it also has extensive\
+    \ documentation (and you'll purchase the official standard) also asmany tutorials\
+    \ and courses..\n\n Computer Programming Basics Getting Started the Easy Way\n\
+    \nA computer virus is formed from a sequence of instructions a computer has got\
+    \ to perform. These instructions maycompany other important data that's needed\
+    \ to hold out those instructions. Hence, the method of programming involves the\
+    \ definition of the instructions and therefore the data. For you to return up\
+    \ with data for your computer, you ought to be conversant in programming basics\
+    \ and therefore the data three fundamental elements:\n\n1. Instructions that require\
+    \ to be administered.\n2. Order during which the instructions are to be administered.\n\
+    3. Data needed to try to to the instructions.\n\nThe first stage of programming\
+    \ basically involves paper processes. during this phase, you do not even get to\
+    \ work employing a computer, however, if you employ a word processing system whichwill\
+    \ enable you to write down your work to a computer file instead of during a piece\
+    \ of paper. you would like to try to do this soyou'll find out clearly and more\
+    \ specifically, what you would like your computer to perform before you start\
+    \ to instruct the pc to execute it.\n\nBear in mind that the pc will follow the\
+    \ instructions exactly as given. It can't say what you would like ; it can rather\
+    \ do what you want it to try to do. So before your program comes on the brink\
+    \ of a computer, you would like to try to several steps whichinclude:\n\n- Defining\
+    \ the matter: Before you instruct the pc what to try to do, you want to first\
+    \ be conversant in it. you would like to obviously tell the pc what it must accomplish\
+    \ or to get because of the outcome of all the activities it'llperform.\n- Identifying\
+    \ the answer: If you already know what the pc will produce as an outcome, you\
+    \ ought to takean-depth check out the knowledge you've got and determine the knowledge\
+    \ that you simply require. There's also a requirement for you to define the logical\
+    \ procedures, equations, and other methods you've got to utilize so you'll manipulate\
+    \ the raw input file into the top result you would like to realize.\n- Mapping\
+    \ the answer: This stage in programming has got to be laid call in proper order.\
+    \ do not forget that the sequence during which actions are used is as vital because\
+    \ of the actions themselves. When organizing the answer into the proper order,\
+    \ you'll be puttingchoices into consideration. When you're done defining the matter\
+    \ also as designing and mapping the answer, the subsequent thing you would like\
+    \ to try to do is to start with the task of writing the program code into one\
+    \ or a few computerlanguages (s).\n"
+  raw: '
+
+
+    ![](image_rsrc5B.jpg)
+
+
+    Language C++ Growing Faster Than Other: Computer Programming Basics Getting Started
+    The Easy WayIntroductionComputer programming is the process of designing and writing
+    computer programs.As a skill set, it includes a good sort of different tasks and
+    techniques, but our tutorials aren''t intended to show you everything. Instead,
+    they''re meant tosupply basic, practical skills to assist you to understand and
+    write code that reflects belongings you see and use within theworld.
+
+
+    What you would like to understand
+
+
+    Our programming tutorials assume that you simply haven''t any programming experience
+    whatsoever. They do, however,require basic familiarity with the utilization of
+    computers and web browsers. for instance, you ought to be comfortable downloading
+    and opening files and using text editing software. If you do not feelconfident
+    in those skills, consider spending a while with these tutorials first:
+
+
+    Computer Basics
+
+
+    Internet Basics
+
+
+    As long as you''re comfortable with those basics, you ought to be prepared to
+    start learning to program.
+
+
+    What these tutorials will cover These tutorials specialize in one particular sort
+    of programming: web development. once you visit websites, whether youemploy a
+    laptop, a smartphone, or anything, you''re actually watching code, which an internet
+    developer likely wrote, and which your browser is interpreting topoint out you
+    what you see on the screen.These tutorials will show you ways to start writing
+    three common sorts of code utilized in web development, whichcombined structure
+    the typical website that you simply see every day: HTML, CSS, and JavaScript.
+
+
+    Parts of an internet site
+
+
+    Imagine that each website you visit may be a person. everyone is different in
+    how they appear, act, and speak, but they''re generally made from equivalent basic
+    pieces.
+
+
+    HTML
+
+
+    If you imagine an internet site as an individual, you''ll consider HTML as being
+    the skeleton.HTML is in the middle of just about everything you see on the web.
+    While it doesn''t appear as if much on its own, it forms the building blocks on
+    top of which all the opposite pieces rest. The HTML for a particularly simple
+    website might looksomething like this:
+
+
+    <!DOCTYPE html>
+
+
+    <html>
+
+
+    <head>
+
+
+    <title>An Extremely Simple Website</title>
+
+
+    </head>
+
+
+    <body>
+
+
+    <p>This is an extremely simple website.</p>
+
+
+    </body>
+
+
+    </html>.Language C++ Growing Faster Than OtherThe C++ programming language has
+    been around for quite a while, which suggests it’s built up quite the mountain
+    of legacycode. But the language’s continuing ubiquityisn’t just a matter of developers
+    trying to take care of longtime apps and platforms; because the latest update
+    to theTIOBE Index makes clear, C++ is actively growing.Specifically, C++ has risen
+    1.48 percent over the past 12 months, reaching (in TIOBE’s estimation) a 7.11
+    percent market share. which may not appear to bestratospheric growth, but it beats
+    out every single over “big” language on the list, including the ever-popular Python
+    (which grew 0.59 percent over the past year). While C++ is currently in fourth
+    place on TIOBE’s overall list, C is in first (with 15.95 percent), having overthrown
+    Java(with 13.48 percent).What’s behind the strong performance of C++? That’s a
+    superb question, but the
+
+
+    note accompanying the rankings suggests that some recent updates have something
+    to try to do with it: “I think that the new
+
+
+    C++20 standard could be one among the most causes for this. Especially due to
+    the new modules feature that''s getting to
+
+
+    replace the dreadful include mechanism. C++ beats other languages with a positive
+
+
+    trend like R (+1.33%) and C# (+1.18%).”In order to get its rankings, TIOBE utilizes
+    data from a spread of aggregators and search engines, including Google, Wikipedia,
+    YouTube, and Amazon. For alanguage to rank, it must be Turing complete, have its
+    own Wikipedia entry, and earn quite 5,000 hits for +” programming” on Google.
+    Thatmethodology has attracted its share of critics over the years, who argue that
+    the rankings are more a measure of those languages’ “buzz” than actual usage.
+    In any case, “big” languages like Python and C++ tend to stay to the upper rankings,
+    while smaller languages often experiencebig ranking swings up and down.C++ began
+    its exi stence as “C with Classes,” but it’s managed to drift well faraway from
+    C over the past few decades. If you’re learning the language, it also has extensive
+    documentation (and you''ll purchase the official standard) also asmany tutorials
+    and courses..Computer Programming Basics Getting Started the Easy WayA computer
+    virus is formed from a sequence of instructions a computer has got to perform.
+    These instructions mayaccompany other important data that''s needed to hold out
+    those instructions. Hence, the method of programming involves the definition of
+    the instructions and therefore the data. For you to return up with data for your
+    computer, you ought to be conversant in programming basics and therefore the data
+    three fundamental elements:
+
+
+    1\. Instructions that require to be administered.
+
+
+    2\. Order during which the instructions are to be administered.
+
+
+    3\. Data needed to try to to the instructions.The first stage of programming basically
+    involves paper processes. during this phase, you do not even get to work employing
+    a computer, however, if you employ a word processing system whichwill enable you
+    to write down your work to a computer file instead of during a piece of paper.
+    you would like to try to do this soyou''ll find out clearly and more specifically,
+    what you would like your computer to perform before you start toinstruct the pc
+    to execute it.Bear in mind that the pc will follow the instructions exactly as
+    given. It can''t say what you would like ; it can rather do what you want it to
+    try to do. So before your program comes on the brink of a computer, you would
+    like to try to several steps whichinclude:
+
+
+    - Defining the matterBefore you instruct the pc what to try to do, you want to
+    first be conversant in it. you would like to obviously tell the pc what it must
+    accomplish or to get because of the outcome of all the activities it''llperform.
+
+
+    - Identifying the answerIf you already know what the pc will produce as an outcome,
+    you ought to take
+
+
+    an in-depth check out the knowledge you''ve got and determine the knowledge that
+    you simply require. There''s also a requirement for you to define the logical
+    procedures, equations, and other methods you''ve got to utilize so you''ll manipulate
+    the raw input file into the top result you would like to realize.- Mapping the
+    answerThis stage in programming has got to be laid call in proper order. do not
+    forget that the sequence during which actions are used is as vital because of
+    the actions themselves. When organizing the answer into the proper order, you''ll
+    be puttingchoices into consideration.When you''re done defining the matter also
+    as designing and mapping the answer, the subsequent thing you would like to try
+    to do is to start with the task of writing the program code into one or a few
+    computerlanguages (s).'
+  toc: []
+  trans: '
+
+
+    ![](img/image_rsrc5B.jpg)
+
+
+    # C++ 语言比其他语言增长更快：计算机编程入门简单上手方法 引言
+
+
+    计算机编程是设计和编写计算机程序的过程。作为一种技能组合，它包含了许多不同的任务和技术，但我们的教程并不打算向你展示所有内容。相反，它们的目的是提供基础的、实用的技能，帮助你理解并编写反映你在世界中所看到的和使用的属性的代码。
+
+
+    ## 你想要了解
+
+
+    我们的编程教程假设你完全没有任何编程经验。然而，它们确实要求你对计算机和网络浏览器的使用有基本的了解。例如，你应该习惯于下载和打开文件，并使用文本编辑软件。如果你对这些技能没有信心，可以考虑先花些时间学习这些教程：
+
+
+    - 计算机基础
+
+    - 互联网基础
+
+
+    只要你对这些基础了于胸，就应该准备好开始学习编程了。
+
+
+    ## 这些教程将涵盖的内容
+
+
+    这些教程专门针对一种特定的编程：Web 开发。当你访问网站时，无论你使用的是笔记本电脑、智能手机还是任何设备，你实际上都在看代码，这些代码可能是由互联网开发者编写的，并且你的浏览器正在解释这些代码，以便你在屏幕上看到你看到的内容。这些教程将向你展示如何开始编写
+    Web 开发中使用的三种常用代码，这些代码共同构成了你每天看到的典型网站：HTML、CSS 和 JavaScript。
+
+
+    ## 网站的组成部分
+
+
+    想象你访问的每个网站都可能是一个人。每个人在外观、行为和说话方式上都是不同的，但它们通常由等同的基础部分组成。
+
+
+    ### HTML
+
+
+    如果你将一个网站想象成个人，那么你会认为 HTML 是它的骨架。HTML 是你在网页上看到的几乎所有内容的核心。虽然它本身看起来没什么什么，但它构成了基石，所有其他部分都建立在其之上。一个特别简单的网站的
+    HTML 可能看起来像这样：
+
+
+    ```html
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+
+    <title>一个极其简单的网站</title>
+
+    </head>
+
+    <body>
+
+    <p>这是一个极其简单的网站。</p>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    ## C++ 语言比其他语言增长更快
+
+
+    C++ 编程语言已经存在了很长一段时间，这表明它已经积积了大量的遗留代码。但这种语言的持续流行不仅仅是因为开发者试图维护旧的应用程序和平台；正如 TIOBE
+    指数的最新更新所表明的，C++ 正在积极增长。具体而言，C++ 在过去的 12 个月中增长了 1.48%，达到（根据 TIOBE 的估计） 7.11% 的市场份额。这看起来可能不是爆炸式的增长，但它击败了列表上的每一种“大”语言，包括一直流行的
+    Python（它在过去一年中增长了 0.59%）。虽然 C++ 目前在 TIOBE 总排名中位第四，但 C 排名第一（占比 15.95%），已经超过了 Java（占比
+    13.48%）。
+
+
+    C++ 强劲表现背后的原因是什么？这是一个棒的问题，但伴随排名的注释表明最近的一些更新与此有关：“我认为新的 C++20 标准可能是导致这一现象的原因之一。特别是新的模块功能，它正在取代极其糟糕的
+    include 机制。C++ 以积极的态势优于诸如 R (+1.33%) 和 C# (+1.18%) 等其他语言。”
+
+
+    为了获得其排名，TIOBE 利用了来自多个聚合器和搜索引擎的数据，包括 Google、Wikipedia、YouTube 和 Amazon。一种语言要进入排名，必须是图灵完备的，拥有自己的
+    Wikipedia 词条，并在 Google 上搜索“programming”时获得至少 5,000 次点击。这种方法多年来吸引了一批批评者，他们认为排名与其说是衡量这些语言的“热度”，不如说是实际使用量。无论如何，Python
+    和 C++ 这样的“大”语言倾向于保持在高排名，而较小的语言往往会经历排名的剧烈波动。
+
+
+    C++ 起源于“带类的 C”，但在过去的几十年里，它已经成功地远离了 C 语言。如果你正在学习这种语言，它还有详尽的文档（你将购买官方标准）以及许多教程和课程。
+
+
+    计算机编程入门简单上手方法
+
+
+    计算机病毒是由计算机必须执行的一系列指令构的。这些指令可能包含存储这些指令所需的其他重要数据。因此，编程方法涉及指令的定义，以及数据的定义。为了让计算机返回数据，你必须熟悉编程基础，以及关于数据的三个基本要素：
+
+
+    1. 需要执行的指令。
+
+    2. 执行这些指令的顺序。
+
+    3. 执行指令所需的数据。
+
+
+    编程的第一阶段基本上涉及纸面处理。在这个阶段，你甚至不需要使用计算机，然而，如果你使用文字处理系统，你就可以将工作写到计算机文件中而不是纸上。你会尝试这样做，这样在你开始指示电脑执行之前，你就能清楚、更具体地发现你想让计算机执行什么。
+
+
+    请记住，计算机将完全按照给出的指令执行。它不能理解你想要什么；它只会执行你想让它尝试做的事。因此，在你的程序进入计算机之前，你想要尝试几个步骤，包括：
+
+
+    - 定义问题：在指示计算机尝试这样做之前，你希望先熟悉它。你想清楚地告诉计算机它必须完成什么，或者通过它执行的所有活动得到。
+
+    - 识别答案：如果你已经知道计算机将产生什么结果，你应该深入检查你拥有的知识，并确定你所需的知识。你还需要定义逻辑过程、方程和其他方法，以便你处理原始输入文件并你想实现的最终结果。
+
+    - 映射答案：编程的阶段必须按照正确的顺序排列。不要忘记动作的顺序对于动作本身同样重要。在将答案组织成正确的顺序时，你将在考虑各种选择。当你完成问题定义以及设计和映射答案后，下一个任务就是开始用一种或几种计算机语言编写程序代码。
+
+
+    '
+- fmt: "\n# Programming Overview\n\nBut before you proceed, you want to first choose\
+    \ the possible languages you would like to use also because of the particular\
+    \ computer platform. Usually, computer languages are optimized for various sorts\
+    \ of tasks. It is, hence, important to pick first the language which will best\
+    \ suit the task required. Indeed, learning programming basics is that the initiative\
+    \ a wannabe programmer has got to arm himself with, especially if he wants to\
+    \ pursue a career within the said field.\n\nTop programming languages: `C` reigns\
+    \ supreme but third-ranked `Python` gains on `Java` monthly programming languages\
+    \ index to detail fluctuations across the landscape. Its latest index identifies\
+    \ granular changes also as long-term trends. Software quality assurance company\
+    \ releases its top programming languages index monthly to detail shifts within\
+    \ the ever-evolving landscape. recently announced its latest updated index for\
+    \ October. uses a series of metrics including searches on Amazon, YouTube, Wikipedia,\
+    \ Bing, Google Yahoo, and Baidu to work out the rankings. Overall, the highest\
+    \ 10 saw no positional shifts since the September report, although there are granular\
+    \ data fluctuations and long term changes to notice.\n\n## Top Programming Languages:\
+    \ October Index\n\nIn the latest index, `C` remains within the top spot with a\
+    \ rating of `16.95%` representing a positive `0.77%` change over October 2019.\
+    \ `C` continued its reign at the highest from last month when the programming\
+    \ language held a rating of `15.95%`. In October of 2019, `C` was ranked number\
+    \ two consistent with the index.\n\nJava` remains the runner-up within the latest\
+    \ rankings with a `12.56%` rating. Overall, `Java` had a negative `4.32%` change\
+    \ since last October; the most important swing (negative or positive) within the\
+    \ top50. `Python` remains within the third position with an `11.28%` rating. The\
+    \ index notes this is often `Python`'s highest position since 2001. `Python` recorded\
+    \ a positive `2.19%` change since last October; the most important uptick registered\
+    \ within the top 50. In order, `C++`, `C#`, `Visual Basic`, and `JavaScript` round\
+    \ out the remaining top seven.\n\n`C++`, `C#`, `Visual Basic`, and `JavaScript`\
+    \ were rated within the same order in October 2019 ratings. The eighth-ranked\
+    \ programming language, `PHP`, jumped one spot from the October 2019 ratings.\
+    \ The ninth-ranked language within the latest rankings, `R`, surged six spots\
+    \ since October 2019. In order, `PHP`, `R`, and `SQL` round out the remaining\
+    \ top 10.\n\n## Long-term Changes Across Decades\n\nUsing an annual average for\
+    \ a 12-month period, also provides information related position changes over the\
+    \ decades, illustrating long-term fluctuations in rankings. supported these averages,\
+    \ some programming languages have consistently ranked near the highest for quite\
+    \ 30 years, while others have surged in recent decades. \n\nProgramming language\
+    \ `C` has ranked either first or second in 2020, 2015, 2010, 2005, 2000, 1995,\
+    \ and 1985 consistent with these rolling annual averages. Interestingly, `Java`\
+    \ ranked 29 in 1995, making a leap to 3rd in 2000, then to second 2005, using\
+    \ these annual averages. `Python` ranked 15th in 1995 before falling to 21 in\
+    \ 2000 and surging to the sixth spot in 2005, consistent with rolling annual averages.\n\
+    \n## Learn to Code in 6 Languages in 6 Hours for Less Than $35\n\nIn the old days,\
+    \ you'll call yourself a programmer if you knew some `HTML` and maybe a touch\
+    \ of `Java`. And while those languages are still in use, the planet of programming\
+    \ has gotten tons more multilingual. To be a programmer in today's job market,\
+    \ you would like to be conversant in all the main dialects. the great news is\
+    \ that programming languages aren't like spoken ones. The longer you spend with\
+    \ the essential commands, the more \"fluent\" you become, provided you've got\
+    \ the proper teacher. and therefore the Complete One Hour Coder Bundle is that\
+    \ the next neatest thing for knowledgeable programmers sitting at your desk.\n\
+    \nThis package of online courses may be a whirlwind tour through six of the foremost\
+    \ popular languages. it is a great start to a career in everything from web design\
+    \ to systems engineering, and every course only takes an hour. Here's what you'll\
+    \ learn:\n\n*   **C++**: This extremely versatile language is compatible with\
+    \ object-oriented programming, making it ideal for nearly any quite software development.\n\
+    *   **CSS**: If you are looking at a career in web design, familiarity with Cascading\
+    \ Style Sheets may be a must. There's simply no better thanks to getting your\
+    \ site to seem precisely the way you would like it and keep your changes consistent\
+    \ across pages.\n*   **HTML**: The terminology is just a requirement if you propose\
+    \ on pursuing any quite web coding job, and this foundational course gives you\
+    \ all you would like to make your first website.\n*   **Java**: Used almost everywhere\
+    \ and on all kinds of hardware, the introductory course focuses on mobile development.\
+    \ Web apps, mobile games, and more have `JavaScript` as their foundation. The\
+    \ course during this bundle takes you easily from your first lines of code to\
+    \ complex loops and arrays in one hour.\n*   **Python**: This most readable of\
+    \ languages is additionally one among the foremost powerful. `Python` is employed\
+    \ in everything from simple apps to deep learning algorithms, and you will see\
+    \ how during this crash program. If you are a self-starter who likes to find out\
+    \ by doing, there's really no better thanks to start than this bundle. PCMag readers\
+    \ can get the entire One-Hour Coder Bundle for $34.99—97 percent off the MSRP.\n\
+    \n## C++ Programming Basics\n\n`C++` may be a general-purpose programming language\
+    \ and widely used nowadays for competitive programming. it's imperative, object-oriented,\
+    \ and generic programming features. `C++` runs on any platform like Windows, Linux,\
+    \ Mac. However, to become proficient in any programming language, one first must\
+    \ understand the fundamentals of that language. Therefore, below are the fundamentals\
+    \ of `C++` within the format during which it'll assist you the foremost to urge\
+    \ the headstart:\n\n### Basic Syntax and First Program in C++\nLearning++ programming\
+    \ are often simplified into writing your program during a text editor and saving\
+    \ it with correct extension(`.CPP`, `.C`, `.CP`), and compiling your program employing\
+    \ a compiler or online IDE. The “Hello World” program is that the initiative towards\
+    \ learning any programming language and also one of the only programs you'll learn.\n\
+    \n### Basic I/O in C++\nC++` comes with libraries that provide us with some ways\
+    \ for performing input and output. In `C++` input and output are performed within\
+    \ the sort of a sequence of bytes or more commonly referred to as streams. the\
+    \ 2 keywords `count` and `cin` are used fairly often for taking inputs and printing\
+    \ outputs. These two are the foremost basic methods of taking input and output\
+    \ in `C++`.\n\n### Comments in C++\nA well-documented program may be a good practice\
+    \ as a programmer. It makes a program more readable and error finding becomes\
+    \ easier. One important part of good documentation is Comments. In programming,\
+    \ a comment may be a programmer-readable explanation annotation within the ASCII\
+    \ text file of a computer virus. These are statements that aren't executed by\
+    \ the compiler and interpreter.\n\n### Data Types and Modifiers in C++\nAll variables\
+    \ use data-type during declaration to limit the sort of knowledge to be stored.\
+    \ Therefore, we will say that data types are to tell the variables the sort of\
+    \ knowledge it can store. Whenever a variable is defined in `C++`, the compiler\
+    \ allocates some memory for that variable supported the data-type with which it's\
+    \ declared. Every data type requires a specialamount of memory.\n"
+  raw: 'But before you proceed, you want to first choose the possible languages you
+    wouldlike to use also because of the particular computer platform.Usually, computer
+    languages are optimized for various sorts of tasks. It is, hence, important to
+    pick first the language which will best suit the task required. Indeed, learning
+    programming basics is that the initiative a wannabe programmer has got to arm
+    himself with, especially if he wants topursue a career within the said field..Top
+    programming languages: C reigns supreme but third-ranked Python gains on Javamonthly
+    programming languages index to detail fluctuations across the landscape. Its latest
+    index identifies granular changesalso as long-term trends.Software quality assurance
+    company releases its top programming languages index monthly to detail shifts
+    within theever-evolving landscape. recently announced its latest updated index
+    for October. uses a series of metrics including searches on Amazon, YouTube, Wikipedia,
+    Bing, Google Yahoo, and Baidu to work out the rankings. Overall, the highest 10
+    saw no positional shifts since the September report, although thereare granular
+    data fluctuations and longterm changes to notice.
+
+
+    Top programming languages: October indexIn the latest index, C remains within
+    the top spot with a rating of 16.95% representing a positive 0.77% change over
+    October 2019\. C continued its reign at the highest from last month when theprogramming
+    language held a rating of 15.95%. In October of 2019, C was ranked number two
+    consistent with the index.Java remains the runner-up within the latest rankings
+    with a 12.56% rating. Overall, Java had a negative 4.32% change since last October;
+    the most important swing (negative or positive) within the top50\. Python remains
+    within the third position with an 11.28% rating. The index notes this is often
+    Python''s highest positionsince 2001\. Python recorded a positive 2.19% change
+    since last October; the most important uptick registered within the top 50\. In
+    order, C++, C#, Visual Basic, and JavaScript round out the remaining topseven.C++,
+    C#, Visual Basic, and JavaScript were rated within the same order in October 2019
+    ratings. The eighth-ranked programming language, PHP, jumped one spot from the
+    October 2019 ratings. The ninth-ranked language within the latest rankings, R,
+    surged six spots since October2019\. In order, PHP, R, and SQL round out the remaining
+    top 10.
+
+
+    Long-term changes across decades Using an annual average for a 12-month period,
+    also provides information related position changes over the decades,illustrating
+    long-term fluctuations in rankings. supported these averages, some programming
+    languages have consistently ranked near the highest for quite 30 years,while others
+    have surged in recent decades.
+
+
+    SEE: Python programming: Version 3.5 is now out of support, so upgrade (TechRepublic)Programming
+    language C has ranked either first or second in 2020, 2015, 2010, 2005,
+
+
+    2000, 1995, and 1985 consistent with these
+
+
+    rolling annual averages. Interestingly, Java ranked 29 in 1995, making a leap
+    to 3rd in 2000, then to second 2005, using these annual averages. Python ranked
+    15th in 1995 before falling to 21 in 2000 and surging to the sixth spot in 2005,
+    consistent with rolling annual averages..Learn to Code in 6 Languages in 6 Hours
+    For Less Than $35In the old days, you''ll call yourself a programmer if you knew
+    some HTML and maybe a touch of Java. And while thoselanguages are still in use,
+    the planet of programming has gotten tons more multilingual.To be a programmer
+    in today''s job market, you would like to be conversant in all the main dialects.
+    the great news is that programming languages aren''t like spoken ones. The longer
+    you spend with theessential commands, the more "fluent" you become, provided you''ve
+    got the proper teacher. and therefore the Complete One Hour Coder Bundle is that
+    the next neatest thing for knowledgeable programmerssitting at your desk.
+
+
+    This package of online courses may be a whirlwind tour through six of the foremost
+    popular languages. it is a great start to a career in everything from web design
+    tosystems engineering, and every course only takes an hour. Here''s what you''ll
+    learn:
+
+
+    C++: This extremely versatile language is compatible with object-oriented programming,
+    making it ideal for nearly any quite software development.CSS: If you are looking
+    at a career in web design, familiarity with Cascading Style Sheets may be a must.
+    There''s simply nobetter thanks to getting your site to seem precisely the way
+    you would like it and keep your changes consistent across pages.HTML: The terminology
+    is just a requirement if you propose on pursuing
+
+
+    any quite web coding job, and this foundational course gives you all you would
+    like to make your first website.Java: Used almost everywhere and on all kinds
+    of hardware, the introductory course focuses on mobile development.Web apps, mobile
+    games, and more have JavaScript as their foundation. The course
+
+
+    during this bundle takes you easily from
+
+
+    your first lines of code to complex loops and arrays in one hour.
+
+
+    Python: This most readable of languages is additionally one among the foremost
+    powerful. Python is employed in everything from simple apps to deep learning algorithms,
+    and you will see how during this crash program.If you are a self-starter who likes
+    to find out by doing, there''s really no better thanks
+
+
+    to start than this bundle. PCMag readers can get the entire One-Hour Coder Bundle
+    for $34.99—97 percent off the MSRP..C++ Programming BasicsC++ may be a general-purpose
+    programming language and widely used nowadays for competitive programming. it''s
+    imperative, object-oriented, and generic programming features. C++ runs on any
+    platform like Windows, Linux, Unix, Mac,etc.However, to become proficient in any
+    programming language, one first must understand the fundamentals of that language.
+    Therefore, below are the fundamentals of C++ within the format during which it''ll
+    assist you the foremost to urge the headstart:Basic Syntax and First Program in
+    C++: Learning C++ programming are often simplified into writing your program during
+    a text editor and saving it with correct extension(.CPP, .C, .CP), and compiling
+    your program employing a compiler or online IDE. The “Hello World” program is
+    that the initiativetowards learning any programming language and also one of the
+    only programs you''ll learn.Basic I/O in C++:C++ comes with libraries that provide
+    us with some ways for performing input and output. In C++ inputand output are
+    performed within the sort of a sequence of bytes or more commonly referred to
+    as streams. the 2 keywords count and cin are used fairly often fortaking inputs
+    and printing outputs. These two are the foremost basic methods of taking input
+    and output in C++.Comments in C++: A well-documented program may be a good practice
+    as a programmer. It makes a program more readable and error finding becomes easier.
+    One important part of good documentation is Comments. In programming, a comment
+    may be a programmer-readable explanationor annotation within the ASCII text file
+    of a computer virus. These are statements that aren''t executed by the compiler
+    andinterpreter.Data Types and Modifiers in C++: All variables use data-type during
+    declaration to limit the sort of knowledge to be stored. Therefore, we will say
+    that data types arewont to tell the variables the sort of knowledge it can store.
+    Whenever a variable is defined in C++, the compiler allocates some memory for
+    that variable supported the data-type with which it''s declared. Every data type
+    requires a specialamount of memory.'
+  toc: []
+  trans: '
+
+
+    # 编程概述
+
+
+    在继续之前，你首先想要选择你想要使用的可能语言，这也是因为考虑到特定的计算机平台。通常，计算机语言针对各种类型的任务进行了优化。因此，首先选择最适合所需任务的语言是非常关重要的。事实上，学习编程基础是任何一个准程序员为了武装自己而采取的积极举措，特别是如果他想在在该领域追求职业生涯。
+
+
+    热门编程语言：`C` 占据主导地位，但排名第三的 `Python` 在每月编程语言指数中由于整个格局的细粒度波动，正在追赶 `Java`。其最新指数还将细粒度的变化也识别为长期趋势。软件质量保证公司每月发布其热门编程语言指数，以详细说明不断演变的格局中的变化。最近发布了其
+    10 月份的最新更新指数。它使用一系列指标，包括在 Amazon、YouTube、Wikipedia、Bing、Google、Yahoo 和百度上的搜索，来确定排名。总体而言，自
+    9 月份报告以来，前 10 名没有发生位置移动，尽管存在细粒度的数据波动和长期变化需要注意。
+
+
+    ## 热门编程语言：10 月份指数
+
+
+    在最新指数中，`C` 仍位居第一，评分为 `16.95%`，代表比 2019 年 10 月增长了 `0.77%`。`C` 继续保持上个月的最高地位，上个月该编程语言的评分为
+    `15.95%`。在 2019 年 10 月，`C` 排名第二，与指数一致。
+
+
+    `Java` 在最新排名中位列第二，评分为 `12.56%`。总体而言，`Java` 自去年 10 月以来发生了 `4.32%` 的负增长；这是前 50 名中最重要的波动（负向或正向）。`Python`
+    仍位第三，评分为 `11.28%`。该指数指出这通常是 `Python` 自 2001 年来的最高排名。`Python` 自去年 10 月以来记录了 `2.19%`
+    的正增长；是前 50 名中记录的最大增长。按顺序，`C++`、`C#`、`Visual Basic` 和 `JavaScript` 剩余的前七名。
+
+
+    `C++`、`C#`、`Visual Basic` 和 `JavaScript` 在 2019 年 10 月的评分中处于相同的顺序。排名第八的编程语言 `PHP`
+    比 2019 年 10 月的排名上升了一位。最新排名中排名第九的语言 `R` 自 2019 年 10 月以来飙升了六位。按顺序，`PHP`、`R` 和 `SQL`
+    完成了剩余的前十名。
+
+
+    ## 跨越数十年的长期变化
+
+
+    使用 12 个月的年度平均值，也提供了有关几十年来位置变化的信息，说明了排名的长期波动。基于这些平均值，某些编程语言在近 30 年里一直位居最高位，而另一些在最近几十年中激增。
+
+
+    编程语言 `C` 在 2020 年、2015 年、2010 年、2005 年、2000 年、1995 年和 1985 年排名第一或第二，与这些滚动年度平均值一致。有趣的是，`Java`
+    在 1995 年排名第 29，在 2000 年跃升至第三，然后在 2005 年升至第二，使用这些年度平均值。`Python` 在 1995 年排名第 15，在
+    2000 年下降到 21，并在 2005 年飙升至第六，与滚动年度平均值一致。
+
+
+    ## 在 6 小时内学习 6 种语言编程，花费少于 35
+
+
+    在过去，如果你懂一些 `HTML` 可能还有一点 `Java`，就会称自己为程序员。虽然这些语言仍在在使用，但编程世界已经变得更加多语言化。在当今的就业市场上成为一名程序员，你希望精通所有主要的方言。好消息是，编程语言不像口语语言。你在这核心命令上花费的时间越长，你就会变得越“流利”，前提是你有一个合适的老师。因此，“完整一小时编码者包”（Complete
+    One Hour Coder Bundle）对于坐在办公桌前的知识丰富的程序员来说是下一个非常棒的东西。
+
+
+    这套在线课程可能是对六种最流行的语言进行的一种旋风之旅。它是从网页设计到系统工程等一切领域职业的良好开始，而且每个课程只需要一小时。以下是你将学到的：
+
+
+    *   **C++**: 这种极其多功能的语言兼容面向对象的编程，使其成为几乎任何高质量软件开发的理想选择。
+
+    *   **CSS**: 如果你正在考虑网页设计行业，熟悉级联样式表（Cascading Style Sheets）可能是必不可少的。没有更好的方法了，可以让你你的网站看起来完全像你想要的样子，并让你的更改在各个页面之间保持一致。
+
+    *   **HTML**: 如果你打算从事任何高质量的网络编码工作，熟悉术语是一项要求，这门基础课程将为你提供制作第一个网站所需的所有内容。
+
+    *   **Java**: 几乎用于任何地方和各种硬件，这门入门课程侧重于移动开发。网络应用、移动游戏等都以 `JavaScript` 为基础。该程序包中的课程将带你在一小时内轻松地从第一行代码过渡到复杂的循环和数组。
+
+    *   **Python**: 这种可读性最高的语言之一也是最强大的语言之一。`Python` 应用于从简单应用到深度学习算法的各个领域，你将在这个速成课程中看到。如果你是一个喜欢通过实践来发现问题的自学型人才，真的没有比这个包更好的起点了。PCMag
+    的读者可以以 34.99 美元获得整个一小时编码包，比原价优惠 97%。
+
+
+    ## C++ 编程基础
+
+
+    `C++` 可能是一种通用编程语言，并在如今广泛使用。它是命令式的、面向对象的并具有泛型特性。然而，要精通任何编程语言，必须先理解该语言的基础。因此，以下是
+    `C++` 的基础，它们将帮助你入门：
+
+
+    ### C++ 基础语法和第一个程序
+
+    学习 C++编程通常简化为在文本编辑器中编写程序并以正确的扩展名保存（`.CPP`, `.C`, `.CP`），然后使用编译器或在线 IDE 编译程序。
+
+
+    ### C++ 基础输入输出
+
+    C++ 自带库，为我们提供了某些执行输入输出的方法。在 `C++` 中，输入输出是在字节序列中或更常称为流中执行的。两个关键字 `count` 和 `cin`
+    经常用于获取输入和打印输出。这两个是 C++中获取输入输出的最基本方法。
+
+
+    ### C++ 注释
+
+    良好的文档是程序员的良好习惯。它使程序更具可读性，更容易发现错误。良好的文档的一个重要部分是注释。在编程中，注释可能是计算机程序文本文件中的程序员可读的解释注释。这些语句不会被编译器和解释器执行。
+
+
+    ### C++ 数据类型和修饰符
+
+    所有变量在声明时使用数据类型来限制存储的种类。因此，我们可以说数据类型是告诉变量它可以存储什么知识。每当在 `C++` 中定义变量时，编译器都会为该变量分配一些内存。每个数据类型都需要特定的内存。
+
+
+    '
+- fmt: '
+
+    # C++ Programming Basics
+
+
+    ## Uninitialized Variables in C++
+
+    “One of the items that have kept `C++` viable is that the zerooverhead rule: What
+    you don’t use, you don’t buy .” - Stroustrup. The overhead of initializing a stack
+    variable is expensive because it hampers the speed of execution, therefore these
+    variables can contain indeterminate values. it''s considered a best practice to
+    initialize a primitive data type variable before using it in code.
+
+
+    ## Undefined Behavior in C++
+
+    If a user starts learning in `C/C++` environment and is unclear with the concept
+    of undefined behavior then which will bring many problems within the future like
+    while debugging somebody else code could be actually difficult in tracing the
+    basis to the undefined error.
+
+
+    ## Variables and Kinds in C++
+
+    A variable may be a name given to a memory location. it''s the essential unit
+    of storage during a program. the worth stored during a variable is often changed
+    during program execution. A variable is merely a reputation given to a memory
+    location, all the operations done on the variable effects that memory location.
+    In `C++`, all the variables must be declared before use.
+
+
+    ### Variable Scope in C++
+
+    Generally, the scope is defined because of the extent up to which something is
+    often worked with. In programming also the scope of a variable is defined because
+    of the extent of the program code within which the variable can we accessed or
+    declared or workedwith. There are mainly two sorts of variable scopes, Local and
+    Global Variables.
+
+
+    ## Constants and Literals in C++
+
+    Because the name suggests the name constants is given to such variables or values
+    in `C++` programming language which can''t be modified once they''re defined.
+    they''re fixed values during a program. There are often any sorts of constants
+    like integer, float, octal, hexadecimal, character constants, etc. Every constant
+    has some range. The integers that are too big to suit into an `int` are going
+    to be taken as `long`. Now there are various ranges that differ from `unsigned`
+    to `signed` bits. Under the signed bit, the range of an `int` varies from `-128`
+    to `+127`, and under the unsigned bit, it varies from `0` to `255`. Literals are
+    quite constants and both the terms are used interchangeably in `C++`.
+
+
+    ### Types of Literals in C++
+
+    During this article, we''ll analyze the varied quite literals that `C++` provides.
+    The values assigned to every constant variable are mentioned because of the literals.
+    Generally, both terms, constants, and literals are used interchangeably. For eg,
+    `const int = 5;`, maybe a constant expression, and therefore the value `5` is
+    mentioned as a constant integer literal.
+
+
+    ## Access Modifiers in C++
+
+    Access modifiers are wont to implement a crucial feature of Object-Oriented Programming
+    referred to as Data Hiding. Access modifiers or Access Specifiers during a class
+    are wont to set the accessibility of the category members. That is, it sets some
+    restrictions on the category members to not get directly accessed by the surface
+    functions.
+
+
+    ## Storage Classes in C++
+
+    Storage Classes are wont to describe the features of a variable/function. These
+    features basically include the scope, visibility, and life-time which help us
+    to trace the existence of a specific variable during the runtime of a program.
+
+
+    ## Operators in C++
+
+    Operators are the inspiration for any programming language. Thus the functionality
+    of the `C/C++` programming language is incomplete without the utilization of operators.
+    we will define operators as symbols that help us to perform specific mathematical
+    and logical computations on operands. In other words, we will say that an operator
+    operates the operands.
+
+
+    ## Loops in C++
+
+    Loops in programming comes into use once we got to repeatedly execute a block
+    of statements. For example: Suppose we would like to print “Hello World” 10 times.
+    this will be wiped out two ways, Iterative method and by using Loops.
+
+
+    ## Decision Making in C++
+
+    There comes situations in the real-world once we got to make some decisions and
+    supported these decisions, we decide what should we do next. Similar situations
+    arise in programming also where we''d like to form some decisions and supported
+    these decisions we''ll execute a subsequent block of code. Decision-making statements
+    in programming languages decide the direction of the flow of program execution.
+
+
+    ## Forward Declarations in C++
+
+    It refers to the beforehand declaration of the syntax or signature of an identifier,
+    variable, function, class, etc. before its usage (done later within the program).
+    In `C++`, Forward declarations are usually used for Classes. In this, the category
+    is pre-defined before its use in order that it are often called and employed by
+    other classes that are defined before this.
+
+
+    ## Errors in C++
+
+    Error is an illegal operation performed by the user which ends up in abnormal
+    working of the program. Programming errors often remain undetected until the program
+    is compiled or executed. a number of the errors inhibit the program from getting
+    compiled or executed. Thus errors should be removed before compiling and executing..
+
+
+    ## Computer Programming Basics Language You Can Use in Creating Programs
+
+    Individuals who want to find out programming and therefore the languages which
+    will be utilized in making programs must first be conversant in the fundamentals.
+    Languages employed in programming should be one of your primary considerations.
+    before creating programs, it''s crucial that you simply know the various types
+    and levels of programming languages. Among these are:
+
+
+    ### 1. Machine Level LanguageWe all know that computers add bits and bytes and
+    it reads and understands binary digits 0 and 1. While you''re liberal to make
+    a program in any language you would like, it''s to be transformed into the languages
+    of Os and 1s before it is often implemented.It means you would like to write down
+    a program or to convert your written program into machine language. And this is
+    often no easy task. it''s nearly impossible to memorize an extended sequence of
+    0s and 1s for every instruction you would like to be executed. Yes, it''s true
+    that before the event of highlevel languages, those utilized in making programming
+    codes are machine level languages. lately, however, this level of language isn''t
+    used anymore in designing computer programs.
+
+
+    ### 2. Assembly Level LanguageThis level of programming is merely one level above
+    low level or machine languages. this is often actually the rationale why creating
+    a program using such languages isn''t a bit of cake, although, the programming
+    code produced is pretty understandable.Until now, there are many programs for
+    embedded technology that are created in a programming language. The program that''sresponsible
+    for transforming assemblylevel programs into machine-level programs is named the
+    assembler.
+
+
+    ### 3. High-Level LanguageThese computer languages are easier for humans to know.
+    It entails clear statements
+
+    '
+  raw: 'The uninitialized variable in C++: “One of the items that have kept C++ viable
+    is thatthe zerooverhead rule: What you don’t use, you don’t buy .” -Stroustrup.
+    The overhead of initializing a stack variable isexpensive because it hampers the
+    speed of execution, therefore these variables can contain indeterminate values.
+    it''s considered a best practice to initialize a primitive data type variable
+    before using itin code.Undefined Behaviour in C++: If a user starts learning in
+    C/C++ environment and is unclear with the concept of undefinedbehavior then which
+    will bring many problems within the future like while debugging somebody else
+    code could be actually difficult in tracing the basis to theundefined error.
+
+
+    Variables and kinds in C++: A variable may be a name given to a memory location.
+    it''s the essential unit of storage during a program. the worth stored during
+    a variable is often changed during program execution. A variable is merely a reputation
+    given to a memory location, all the operations done on the variable effects that
+    memory location. In C++, all the variables must be declared before use.Variable
+    Scope in C++: generally, the scope is defined because of the extent up to which
+    something is often worked with. In programming also the scope of a variable is
+    defined because of the extent of the program code within which the variable can
+    we accessed or declared or workedwith. There are mainly two sorts of variable
+    scopes, Local and Global Variables.
+
+
+    Constants and Literals in C++: because the name suggests the name constants is
+    given to such variables or values in C++ programming language which can''t be
+    modified once they''re defined. they''re fixed values during a program. There
+    are often any sorts of constants like integer, float, octal, hexadecimal, character
+    constants, etc. Every constant has some range. The integers that are too big to
+    suit into an int are going to be taken as long. Now there are various ranges that
+    differ fromunsigned to signed bits. Under the signed bit, the range of an int
+    varies from -128 to +127, and under the unsigned bit, it varies from 0 to 255\.
+    Literals are quite constantsand both the terms are used interchangeably in C++.
+
+
+    Types of Literals in C++: during this article, we''ll analyze the varied quite
+    literals that C++ provides. The valuesassigned to every constant variable are
+    mentioned because of the literals. Generally, both terms, constants, and literals
+    are used interchangeably. For eg, “const int = 5;“, maybe a constant expression,
+    and therefore the value 5 ismentioned as a constant integer literal.Access Modifiers
+    in C++: Access modifiers are wont to implement a crucial feature of Object-Oriented
+    Programming referred to as Data Hiding. Access modifiers or Access Specifiers
+    during a class are wont to set the accessibility of the category members. That
+    is, it sets somerestrictions on the category members to not get directly accessed
+    by the surface functions.
+
+
+    Storage Classes in C++: Storage Classes are wont to describe the features of a
+    variable/function. These features basicallyinclude the scope, visibility, and
+    life-time which help us to trace the existence of a specific variable during the
+    runtime of aprogram.Operators in C++: Operators are the inspiration for any programming
+    language.
+
+
+    Thus the functionality of the C/C++ programming language is incomplete without
+    the utilization of operators. we will define operators as symbols that help us
+    to perform specific mathematical and logical computations on operands. In other
+    words, we will say that an operator operates the operands.Loops in C++: Loops
+    in programming comes into use once we got to repeatedly execute a block of statements.
+    Forexample: Suppose we would like to print “Hello World” 10 times. this will be
+    wiped out two ways, Iterative method and by using Loops.Decision Making in C++:
+    There comes situations in the real-world once we got to make some decisions and
+    supported thesedecisions, we decide what should we do next. Similar situations
+    arise in programming also where we''d like to formsome decisions and supported
+    these decisions we''ll execute a subsequent block of code.Decision-making statements
+    in programming languages decide the direction of the flow of program execution.
+    Forward declarations in C++: It refers to the beforehand declaration of the syntax
+    or signature of an identifier, variable,function, class, etc. before its usage
+    (done later within the program). In C++, Forward declarations are usually used
+    for Classes. In this, the category is pre-defined before its use in order that
+    it are often called and employed by other classes that are definedbefore this.Errors
+    in C++: Error is an illegal operation performed by the user which ends up in abnormal
+    working of the program. Programming errors often remain undetected until the program
+    is compiled or executed. a number of the errors inhibit the program from getting
+    compiled or executed. Thus errors should be removedbefore compiling and executing..Computer
+    Programming Basics Language You Can Use in Creating ProgramsIndividuals who want
+    to find out programming and therefore the languages which will be utilized in
+    making programs must first be conversant in the fundamentals. Languages employed
+    inprogramming should be one of your primary considerations. before creating programs,
+    it''s crucial that you simply know the various types and levels of programming
+    languages. Among these are:
+
+
+    1\. Machine Level LanguageWe all know that computers add bits and bytes and it
+    reads and understands binary digits 0 and 1\. While you''re liberal to make a
+    program in any language you would like, it''s to be transformed into the languages
+    of Os and 1s before it is often implemented.It means you would like to write down
+    a program or to convert your written program into machine language. And this is
+    often no easy task. it''s nearly impossible to memorize an extended sequence of
+    0s and 1s for every instruction you would like to be executed.Yes, it''s true
+    that before the event of highlevel languages, those utilized in making programming
+    codes are machine levellanguages. lately, however, this level of language isn''t
+    used anymore in designing computer programs.
+
+
+    2\. Assembly Level LanguageThis level of programming is merely one level above
+    low level or machine languages. this is often actually the rationale why creating
+    a program using such languages isn''t a bit of cake, although, the programming
+    code produced is pretty understandable.Until now, there are many programs for
+    embedded technology that are created in a programming language. The program that''sresponsible
+    for transforming assemblylevel programs into machine-level programs is named the
+    assembler.3\. High-Level LanguageThese computer languages are easier for humans
+    to know. It entails clear statements'
+  toc: []
+  trans: '
+
+
+    # C++ 编程基础
+
+
+    ## C++ 中的未初始化变量
+
+    “让 `C++` 保持活力的因素之一是零开销原则：你不需要，就不需要付费。” —— 斯特拉斯谷（Stroustrup）。初始化栈变量的开销是昂贵的，因为它阻碍了执行速度，因此这些变量可能包含不确定值。在代码中使用原始数据类型变量之前对其进行初始化被认为是一种最佳实践。
+
+
+    ## C++ 中的未定义行为
+
+    如果用户在 `C/C++` 环境中开始学习，并且不清楚“未定义行为”的概念，那么将来可能会带来很多问题，例如在调试他人的代码时，追溯到未定义错误的根源可能变得非常困难。
+
+
+    ## C++ 中的变量与类型
+
+    变量可能是赋予内存位置的名称。它是程序运行期间基本的存储单元。变量中存储的值在程序执行过程中经常会发生。变量仅仅是赋予内存位置的一个名称，对变量进行的所有操作都会影响该内存位置。在
+    `C++` 中，所有变量在使用之前必须先声明。
+
+
+    ### C++ 中的变量作用域
+
+    通常，作用域是根据某物的使用范围定义的。在编程中，变量的作用域也是根据该变量可以被访问、声明或使用的程序代码范围来定义的。变量的作用域主要分为两种：局部变量和全局变量。
+
+
+    ## C++ 中的常量与字面量
+
+    正如名称所示，常量是在 `C++` 编程语言中赋值给某些变量或值，这些值一旦被定义就无法修改。它们在程序运行期间是固定值。通常有各种类型的常量，如整数、浮点、八进制、十六进制、字符常量等。每个常量都有一定的范围。大到无法放入
+    `int` 的整数将被视为 `long`。现在有多种范围，从无符号（`unsigned`）到有符号（`signed`）位。在有符号位下，`int` 的范围从
+    `-128` 到 `+127`，在无符号位下，范围从 `0` 到 `255`。字面量也是常量，这两个术语在 `C++` 中互换使用。
+
+
+    ### C++ 中的字面量类型
+
+    在本文中，我们将分析 `C++` 提供的各种字面量。赋值给每个常量变量是通过字面量提到的。通常，常量和字面量这两个术语是通用的。例如，`const int
+    = 5;`，可能是一个常量表达式，因此值 `5` 被称为常量整数字面量。
+
+
+    ## C++ 中的访问修饰符
+
+    访问修饰符用于实现面向对象编程中的一项关键特性，即数据隐藏。类中的访问修饰符或访问限定符用于设置类成员的可访问性。也就是说，它对类成员施加某些限制，使其无法被外部函数直接访问。
+
+
+    ## C++ 中的存储作用类
+
+    存储类用于描述变量/函数的特征。这些特征基本上包括作用域、可见性和生命周期，这些特征帮助我们在程序运行期间追踪特定变量的存在情况。
+
+
+    ## C++ 中的运算符
+
+    运算符是任何编程语言的灵感来源。因此，如果没有运算符的使用，`C/C++` 编程语言的功能就是完整的。我们将运算符定义为帮助我们对操作数执行特定数学和逻辑计算的符号。换句话说，我们可以说运算符操作着操作数。
+
+
+    ## C++ 中的循环
+
+    当我们需要重复执行语句块时，编程中的循环就会派上用场。例如：假设我们想打印 10 次“Hello World”。这可以通过两种实现：迭代方法和使用循环。
+
+
+    ## C++ 中的决策
+
+    在现实世界中，我们经常面临做出决策并支持这些决策、决定下一步该做什么的情况。编程中也会出现类似的情况，我们想要做出决策并支持这些决策，从而执行随后的代码块。编程语言中的决策语句决定了程序执行流的方向。
+
+
+    ## C++ 中的前向声明
+
+    它指的是在标识符、变量、函数、类等在使用之前，对其语法或签名进行提前声明（在在程序的后续部分完成）。在 `C++` 中，前向声明通常用于类。在这种情况下，类在在使用之前预先定义，以便它可以被之前定义的其他类调用和使用。
+
+
+    ## C++ 中的错误
+
+    错误是用户执行的非法操作，会导致程序运行异常。编程错误通常在程序编译或执行之前往往无法被检测到。许多错误会阻止程序的编译或执行。因此，在编译和执行之前应该消除错误。
+
+
+    ## 你可以用于创建程序的计算机编程基础语言
+
+    想要了解编程以及用于制作程序的语言的个人，必须首先通晓基础知识。编程中使用的语言应该是你的首要考虑因素之一。在创建程序之前，简单了解各种类型和层次的编程语言至关重要。这些包括：
+
+
+    ### 1. 机器级语言
+
+    我们都知道计算机通过位和字节运行，它读取并理解二进制数字 0 和 1。虽然你可以自由使用任何喜欢的语言编写程序，但在实现之前，它必须转换为 0 和 1 的语言。这意味着你需要编写一个程序，或者将你编写的程序转换为机器语言。这通常不是一项容易的任务。对于你想要执行的每一个指令，记忆一段扩展的
+    0 和 1 序列几乎是不可能的。是的，在高级语言出现之前，用于制作编程代码的语言是机器级语言。
+
+
+    ### 2. 汇编语言
+
+    这种编程语言仅比低级或机器级语言高一级。这通常是为什么使用此类语言创建程序并不容易的原因，尽管产生的编程代码相当易于理解。直到现在，许多嵌入式技术程序是用编程语言创建的。负责将汇编程序转换为机器级程序的程序被称为汇编器。
+
+
+    ### 3. 高级语言
+
+    这些计算机语言对人类来说更容易理解。它包含了清晰的语句。
+
+
+    '
+- fmt: "\nfor creating each instruction. Languages that fall during this category\
+    \ have different purposes. There are languages designed for web programming; some\
+    \ for desktop applications, while others can perform both tasks.\n\nOne thing\
+    \ in touch in mind though, highlevel language isn't easy for the pc to know. this\
+    \ is often where the importance of an interpreter or a compiler comes in. Such\
+    \ programs transform the programming codeinto a language form the machine can\
+    \ understand.\n\nAside from these three basic levels of languages, another generation\
+    \ of a programming language is now beingdesigned. this is often dubbed because\
+    \ of the fourth-generation language which is meant for those that have very minimal\
+    \ orno programming experience. \n\nDevelopers of such language want these inexperienced\
+    \ programmers to find out to organize their own code. this is often also the very\
+    \ reason why high-level languageslike `Java` already came with these systems.\
+    \ These enable an individual to write down a programming code without memorizingevery\
+    \ function.\n\nBear in mind that regardless of what programming language you would\
+    \ like to find out, you would like to possess properunderstanding of the fundamentals\
+    \ . If you are not conversant in programing language basics, you'll not be ready\
+    \ to make aprogram therein specific language. it's advisable that you simply take\
+    \ up computer courses so you will be ready to learn quite just the fundamentals\
+    \ of programming . MALINA PRONTO\n"
+  raw: for creating each instruction. Languages that fall during this category have
+    different purposes. There are languages designed for web programming; some for
+    desktop applications, while others can perform both tasks.One thing in touch in
+    mind though, highlevel language isn't easy for the pc to know. this is often where
+    the importance of an interpreter or a compiler comes in. Such programs transform
+    the programming codeinto a language form the machine can understand.Aside from
+    these three basic levels of languages, another generation of a programming language
+    is now beingdesigned. this is often dubbed because of the fourth-generation language
+    which is meant for those that have very minimal orno programming experience.Developers
+    of such language want these inexperienced programmers to find out to organize
+    their own code. this is often also the very reason why high-level languageslike
+    Java already came with these systems. These enable an individual to write down
+    a programming code without memorizingevery function.Bear in mind that regardless
+    of what programming language you would like to find out, you would like to possess
+    properunderstanding of the fundamentals . If you are not conversant in programing
+    language basics, you'll not be ready to make aprogram therein specific language.
+    it's advisable that you simply take up computer courses so you will be ready tolearn
+    quite just the fundamentals of programming .MALINA PRONTO
+  toc: []
+  trans: '
+
+    用于创建每条指令。属于这一类别的语言有不同的用途。有些语言是为 Web 设计的；有些用于桌面应用程序，而另一些则可以同时完成这两项任务。
+
+
+    但需要记住的一是，高级语言计算机并不容易理解。这通常就是解释器或编译器发挥重要作用的地方。这些程序将编程代码转换为机器可以理解的语言形式。
+
+
+    除了这三个基础层级的语言之外，另一代编程语言正在设计中。这通常被称为第四代语言，旨在为那些具有极少或没有编程经验的人们设计。
+
+
+    这类语言的开发者希望这些没有经验的编程人员能够自己学会如何组织自己的代码。这通常也是像 `Java` 这样的高级语言已经配备这些系统的原因。这些系统让个人能够在编写编程代码时，而不需要去背诵每一个函数。
+
+
+    请记住，无论你想学习哪种编程语言，你都需要对基础知识有正确的理解。如果你不熟悉编程语言的基础，你还没有准备好用该特定语言编写程序。建议你直接参加计算机课程，这样你就能准备好学习编程的基础知识了。MALINA
+    PRONTO
+
+    '
