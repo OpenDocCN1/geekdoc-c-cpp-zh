@@ -439,6 +439,7 @@
 +   [Javascript：Javascript 编程终极指南 (初学者指南、如何编程、软件开发、基础 Javascript、浏览器... 编码、CSS、Java、PHP) (第 7 卷)](docs/javascript-the-ultimate-guide-for-javascript-programming-jav/README.md)
 +   [Kotlin 与 C 编程示例：初学者编程指南](docs/kotlin-and-c-coding-examples-programming-for-beginners/README.md)
 +   [C++ 语言增长超过其他语言：计算机编程基础 - 轻松上手指南](docs/language-c-growing-faster-than-other-computer-programming-ba/README.md)
++   [一天学会 C++ 并精通它：实用分步进阶指南，快速学习编程](docs/learn-c-in-one-day-and-learn-it-well-learn-coding-fast-with-/README.md)
 +   [通过 Unity 创建游戏学习 C# 编程（初学者）：学习 C# 编程并享受其中](docs/learn-c-programming-by-creating-games-with-unity-beginner-le/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)

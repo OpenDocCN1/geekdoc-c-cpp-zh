@@ -1,0 +1,1141 @@
+- fmt: '
+
+    ![](image_rsrcX9.jpg)
+
+    '
+  raw: '
+
+
+    ![](image_rsrcX9.jpg)'
+  toc: []
+  trans: '
+
+
+    ![](img/image_rsrcX9.jpg)
+
+
+    '
+- fmt: '
+
+    # LEARN C++ IN ONE DAY AND LEARN IT WELL: LEARN CODING FAST WITH A Practical Step-by-Step
+    Programming Guide
+
+
+    DR. Moubachir Madani Fadoul
+
+    Copyright © 2020 by Dr. Moubachir Madani Fadoul All Right Reserved
+
+
+    No part of this publication may be reproduced, distributed, or transmitted in
+    any form or by any means, including photocopying, recording, or other electronic
+    or mechanical methods, or by any information storage and retrieval system without
+    the prior written permission of the publisher, except in the case of very brief
+    quotations embodied in critical reviews and certain other noncommercial uses permitted
+    by copyright law.
+
+
+    ## Table of Contents
+
+    - [Chapter 1. C++ Introduction]
+
+    - [Chapter 2. Functions]
+
+    - [Chapter 3. Functions]
+
+    - [Chapter 4. Files]
+
+    - [Chapter 5. Conclusion]
+
+
+    About The Author
+
+    Other Books By DR. MOUBACHIR MADANI FADOUL
+
+
+    ## Chapter 1. C++ Introduction
+
+
+    ### Why Use C++
+
+    `C++` is one of the widely popular programming languages used in the world. `C++`
+    is available in today''s operating systems, Embedded systems and graphical User
+    Interfaces. `C++` is an object-oriented programming language which allows code
+    to be reused, and gives a clear structure to programs and lowering development
+    costs. `C++` is portable and can be used to develop applications that can be adapted
+    to multiple platforms. `C++` is handy and easy to learn! As `C++` is close to
+    `Java` and `C#`, it is easy for programmers to switch to `C++` or vice versa.
+
+
+    ### 1.2 C++ Get Started
+
+    This step-by-step tutorial book teaches you the basics of `C++`. Any prior programming
+    experience is not required. Two things are need before start using `C++`: Many
+    compilers and text editors to choose from are available. In this step-by-step
+    tutorial book, IDE will be used.
+
+
+    #### C++ Install IDE
+
+    An “IDE (Integrated Development Environment)” is used to compile AND edit the
+    code. Popular IDE''s Code include: `Eclipse`, `Visual Studio`, and `Blocks`. All
+    are free, and they can be used to both debug and edit `C++` code.
+
+
+    #### C++ Quickstart
+
+    Open `Codeblocks` and go to `File > New > Empty File`. Write the following `C++`
+    code and save the file as `myfirstprogram.cpp`. If you don''t understand the code
+    above, don''t worry – the details will be discussed in later chapters. it should
+    look like this In `Codeblocks`:
+
+
+    Then, go to `Build > Build and Run` to execute (run) the program. The below shows
+    the result: Congratulations ! Now you have written and executed your first `C++`
+    program.
+
+
+    ### 1.3 C++ Syntax
+
+    The following code breaks up to understand it better:
+
+
+    Omitting Namespace
+
+    Some `C++` programs can be executed without the need for standard namespace. The
+    `namespace std` line is omitted and changed to the `std` keyword, followed by
+    the `::` operator for some objects:
+
+
+    ### 1.4 C++ Output (Print Text)
+
+    Together with the `<<` operator, the `cout` object is used to print text/output
+    values: Many `cout` objects can be added. However, note that a new line at the
+    end of the output cannot be inserted:
+
+
+    ### 1.5 New Lines
+
+    Inserting a new line can be done by using the `\n` character: Note: a blank line
+    can be created by two `\n` characters after each other: A new line can also be
+    inserted, with the `endl` manipulator:
+
+
+    ### 1.5 C++ Comments
+
+    To make the `C++` code more readable and explainable, comments are used. It also
+    prevents execution when testing another code. Comments can use multi-lined or
+    singled-lined. “Single-line comments” is indicated by two forward slashes (`//`).
+    the compiler will ignore (will not executed) any text between `//` and the end
+    of the line. In this example a single-line comment is used before a line of code:
+
+
+    ### 1.6 C++ Multi-line Comments
+
+    Multi-line comments begin with `/*` and ends with `*/`. The compiler will ignore
+    any text between `/*` and `*/`:
+
+
+    ### 1.7 C++ Variables
+
+    To store data values, variables are containers to be used. There are in `C++`,
+    different types of variables (defined with different keywords), for instance:
+
+
+    ### 1.8 Declaring (Creating) Variables
+
+    A variable can be created; the type must be specified and assigned a value: The
+    following example is creating a variable that should store a number: The variable
+    can also be declared without assigning the value, and later the value will be
+    assigned: Note that assigning a new value to an existing variable will overwrite
+    the previous value:
+
+
+    #### Other Types
+
+    The demonstration of different forms of data types:
+
+
+    ### 1.9 Display Variables
+
+    To display variables, the `cout` object is used together with the `<<` operator.
+    To combine both a variable and text, separate them with the `<<` operator:
+
+
+    ### Add Variables Together
+
+    The `+` operator can be used to add a variable to another variable:
+
+
+    ### 1.10 C++ Identifiers
+
+    All `C++` variables are identified with unique names. These unique names are called
+    `identifiers`. Identifiers can be more descriptive names (`sum`, `age`, `totalVolume`)
+    or short names (like `x` and `y`). Note: In order to create maintainable and understandable
+    code, it is recommended to use descriptive names: Constructing names for variables
+    (unique identifiers) can be generalized as:
+
+
+    ### 1.11 C++ Constants
+
+    For security reasons, neither yourself nor others can override existing variable
+    values, if you use the `const` keyword (declaring the variable as "constant",
+    which means “unchangeable and read-only”): When you have values that are unlikely
+    to change, it’s better to declare the variable as constant:
+
+
+    ### 1.12 C++ User Input
+
+    From the previous sections, we already learn that, `cout` is used to print (output)
+    values. Now to get user input, we use `cin`. With the “extraction operator (`>>`),
+    `cin` is a predefined variable that reads data from the keyboard”. The following
+    example allows the user to input a number, which is stored in the variable `x`.
+    Then we print the value of `x`:
+
+
+    #### Creating a Simple Calculator
+
+    This example allows the user to at least input two numbers. Then after we calculate
+    (adding) the two numbers, print the sum:
+
+
+    ### 1.13 C++ Data Types
+
+    As shown in the `Variables` section, a variable in `C++` must be a specified data
+    type:
+
+
+    #### Basic Data Types
+
+    The data type determines the type and size of information the variable will be:
+
+
+    ### 1.14 C++ Numeric Data Types
+
+    Storing a whole number without decimals is achieved by using `int`, like 1000
+    or 35, and `double` or `float` when you require a floating point number, such
+    as 44.43 or 89.65.
+
+
+    #### Scientific Numbers
+
+    To indicate the power of 10A, floating point number with the "e" is used:
+
+
+    ### 1.15 C++ Boolean Data Types
+
+    The “bool keyword” declares a boolean data type and can only take the values false
+    or true. If the value is returned, false = 0 and true = 1.
+
+
+    ### 1.16 Character Types
+
+    A single character is used to store the `char` data type”. A single quotes is
+    surrounding the character, like ''A'' or ''c'':
+
+
+    ### 1.17 String Types
+
+    A sequence of characters (text) is stored in the `string` type. This is not a
+    built-in type, but it behaves like a basic function. Double quotes are surrounding
+    the string values: Include an additional header file in the source code, to use
+    strings, the `<string>` library:
+
+
+    ### 1.18 Operators
+
+    Operators are performing operations on values and variables. The example below
+    used the `+` operator to add together two values: As in the example above, although
+    the `+` operator is used often to add together two values, it also adds together
+    a value and a variable, or a variable and another variable:
+
+
+    ### 1.19 User Input Strings
+
+    The extraction operator have used `>>` on `cin` to display a string entered by
+    a user: A space is considered in `cin` (tabs, whitespace, etc) as a terminating
+    character, which means that even if you type many words, it can only display a
+    single word: From the example above, the program is expected to print "John Doe",
+    but it prints only "John".
+
+    '
+  raw: 'LEARN C++ IN ONE DAY AND LEARN IT WELL: LEARN CODING FAST WITH A Practical
+    Step-by-Step Programming GuideDR. Moubachir Madani FadoulCopyright © 2020 by Dr.
+    Moubachir Madani FadoulAll Right ReservedNo part of this publication may be reproduced,
+    distributed, or transmitted in any form or by any means, including photocopying,
+    recording, or other electronic or mechanical methods, or by any information storage
+    and retrieval system without the prior written permission of the publisher, except
+    in the case of very brief quotations embodied in critical reviews and certain
+    other noncommercial uses permitted by copyright law.Table of Contents[Chapter
+    1\. C++ Introduction](#part0002.xhtml)[Chapter 2\. Functions](#part0002.xhtml_aW5)[Chapter
+    3\. Functions](#part0002.xhtml_aW6)[Chapter 4\. Files](#part0002.xhtml_aW7)[Chapter
+    5. Conclusion](#part0002.xhtml_aW8)About The AuthorOther Books By DR. MOUBACHIR
+    MADANI FADOULChapter 1\. C++ Introduction![](image_rsrcXA.jpg)Why Use C++C++ is
+    one of the widely popular programming languages used in the world.C++ is available
+    in today''s operating systems, Embedded systems and graphical User Interfaces.C++
+    is an object-oriented programming language which allows code to be reused, and
+    gives a clear structure to programs and lowering development costs.C++ is portable
+    and can be used to develop applications that can be adapted to multiple platforms.C++
+    is handy and easy to learn!As C++ is close to Java and C#, it is easy for programmers
+    to switch to C++ or vice versa1.2 C++ Get StartedThis step-by-step tutorial book
+    teaches you the basics of C++.Any prior programming experience is not required.Two
+    things are need before start using C++:![](image_rsrcXB.jpg)Many compilers and
+    text editors to choose from are available. In this step-by-step tutorial book,
+    IDE will be used (see below).C++ Install IDEAn “IDE (Integrated Development Environment)”
+    is used to compile AND edit the code.Popular IDE''s Code include: Eclipse, Visual
+    Studio, and Blocks. All are free, and they can be used to both debug and edit
+    C++ co                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            de.Note:
+     Web-based                                                                                                                                                                                                                                                                                                         also
+    can work, but with limited functionality.Code:: Blocks  is used in our step-by-step
+    tutorial book, which is the correct way to start.You can find the latest version
+    of Codeblocks at [http://www.codeblocks.org/downloads/26\. Download the setup.exe](http://www.codeblocks.org/downloads/26.%20Download%20the%C2%A0setup.exe)
+    of  mingw file, which installs the text editor with a compiler.C++ QuickstartWe
+    create our first C++ file as follows.“Open Codeblocks and go to File > New > Empty
+    File .Write the following C++ code and save the file as myfirstprogram.cpp (File
+    > Save File as )”:![](image_rsrcXC.jpg)If you don''t understand the code above,
+    don''t worry – the details will be discussed in later chapters. For now, you focus
+    should be on how to run the code.![](image_rsrcXD.jpg)it should look like this
+    In Codeblocks,:![](image_rsrcXE.jpg)Then, go to “Build > Build and Run”  to execute
+    (run) the program. The below example shows the result:![](image_rsrcXF.jpg)Congratulations
+    ! Now you have written and executed your first C++ program.1.3 C++ SyntaxThe following
+    code breaks up to understand it better:![](image_rsrcXG.jpg)Example explained![](image_rsrcXH.jpg)Omitting
+    NamespaceSome C++ programs can be executed without the need for standard namespace
+    library. The  namespace std line is omitted and changed to the std keyword, followed
+    by the “::” operator for some objects:![](image_rsrcXJ.jpg) ![](image_rsrcXK.jpg)1.4
+    C++ Output (Print Text)Together with the << operator, the “cout object” is used
+    to print text/output values:![](image_rsrcXM.jpg)Many “cout objects” can be added.
+    However, note that a new line at the end of the output cannot be inserted:![](image_rsrcXN.jpg)1.5
+    New LinesInserting a new line can be done by using the \n character:![](image_rsrcXP.jpg)Note:
+     a blank line can be created by two \n characters after each other:![](image_rsrcXR.jpg)A
+    new line can also be inserted, with the “endl” manipulator:![](image_rsrcXS.jpg)
+    1.5 C++ CommentsTo make the C++ code more readable and explainable, comments are
+    used. It also prevents execution when testing another code. Comments can use multi-lined
+    or singled-lined.“Single-line comments” is indicated by two forward slashes “(//)”.the
+    compiler will ignore (will not be executed) any text between // and the end of
+    the line.In this example a single-line comment is used before a line of code:![](image_rsrcXT.jpg)1.6
+    C++ Multi-line CommentsMulti-line comments begin with “/*” and ends with “*/”.The
+    compiler will ignore any text between “/* and */ “:![](image_rsrcXU.jpg)1.7 C++
+    VariablesTo store data values, variables are containers to be used.There are in
+    C++, different types  of variables (defined with different keywords), for instance:![](image_rsrcXV.jpg)1.8
+    Declaring (Creating) VariablesA variable can be created; the type must be specified
+    and assigned it a value:![](image_rsrcXW.jpg) The following example is creating
+    a variable that should store a number:![](image_rsrcXX.jpg)The variable can also
+    be declared without assigning the value, and later the value will be assigned:![](image_rsrcXY.jpg)Note
+    that assigning a new value to an existing variable will overwrite the previous
+    value:![](image_rsrcXZ.jpg)Other TypesThe demonstration of different forms of
+    data types:![](image_rsrcY0.jpg)1.9 Display VariablesTo display variables, the
+    “cout object” is used together with the “<< operator”.To combine both a variable
+    and text, separate them with the << operator:![](image_rsrcY1.jpg)Add Variables
+    TogetherThe + operator can be used to add a variable to another variable:![](image_rsrcY2.jpg)1.10
+    C++ IdentifiersAll C++ “variables” are identified with unique names .These unique
+    names are called “identifiers” .Identifiers can be more descriptive names (sum,
+    age, totalVolume) or short names (like x and y).Note:   In order to create maintainable
+    and understandable code, it is recommended to use descriptive names:![](image_rsrcY3.jpg)
+    Constructing names for variables (unique identifiers) can be generalized as:![](image_rsrcY4.jpg)1.11
+    C++ ConstantsFor security reasons, neither yourself nor others can override existing
+    variable values, if you use the “const” keyword (declaring the variable as "constant",
+    which means “unchangeable and read-only” ):![](image_rsrcY5.jpg)When you have
+    values that are unlikely to change, it’s better to declare the variable as constant:![](image_rsrcY6.jpg)1.12
+    C++ User InputFrom the previous sections, we already learn that, “cout” is used
+    to print (output) values. Now to get user input, we use “cin”.With the “extraction
+    operator (>>), “cin” is a predefined variable that reads data from the keyboard”.The
+    following example allows the user to input a number, which is stored in the variable x.
+    Then we print the value of x:![](image_rsrcY7.jpg)Creating a Simple CalculatorThis
+    example allows the user to at least input two numbers. Then after we calculate
+    (adding) the two numbers, print the sum:![](image_rsrcY8.jpg)1.13 C++ Data TypesAs
+    shown in the Variables section, a variable in C++ must be a specified data type:![](image_rsrcY9.jpg)Basic
+    Data TypesThe data type determines the type and size of information the variable
+    will be stored:![](image_rsrcYA.jpg)1.14 C++ Numeric Data TypesStoring a whole
+    number without decimals is achieved by using int, like 1000 or 35, and double or float when
+    you require a floating point number with decimals, such as 44.43 or 89.65.![](image_rsrcYB.jpg)Scientific
+    NumbersTo indicate the power of 10A, floating point number with the scientific
+    number with an "e" is used:![](image_rsrcYC.jpg)1.15 C++ Boolean Data TypesThe
+    “bool keyword” declares a boolean data type and can only take the values false
+    or true. If the value is returned, false = 0 and true = 1.![](image_rsrcYD.jpg)1.16
+    Character TypesA single  character is used to store the “char data type”. A single
+    quotes is surrounding the character, like ''A'' or ''c'':![](image_rsrcYE.jpg)![](image_rsrcYF.jpg)
+    1.17 String TypesA sequence of characters (text) is stored in the string type.
+    This is not a built-in type, but it behaves like a basic function. Double quotes
+    are surrounding the string values:![](image_rsrcYG.jpg) Include an additional
+    header file in the source code, to use strings, the <string> library:![](image_rsrcYH.jpg)1.18
+    OperatorsOperators are performing operations on values and variables.The example
+    below used the + operator to add together two values:![](image_rsrcYJ.jpg)As in
+    the example above, although the + operator is used often to add together two values,
+    it also adds together a value and a variable, or a variable and another variable:![](image_rsrcYK.jpg)1.19
+    User Input StringsThe extraction operator have used >> on “cin” to display a string
+    entered by a user:![](image_rsrcYM.jpg)A space is considered in “cin”  (tabs,
+    whitespace, etc) as a terminating character, which means that even if you type
+    many words, it can only display a single word:![](image_rsrcYN.jpg)From the example
+    above, the program is expected to print "John Doe", but it prints only "John".'
+  toc: []
+  trans: '
+
+
+    # 在一天内学会 C++ 并学好它：通过实用的分步编程指南快速学习编程
+
+
+    DR. Moubachir Madani Fadoul
+
+    版权所有 © 2020 Dr. Moubachir Madani Fadoul 版留所有
+
+
+    未经出版者书面许可，不得以任何形式或通过任何复制、传播或传输本书的内容，包括复印、录音或其他电子或机械方法，或通过信息存储和检索系统，但版权法允许的批判性评论中的极短引用以及根据法律允许的某些其他非商业用途除外。
+
+
+    ## 目录
+
+    - [第 1 章 C++ 简介]
+
+    - [第 2 章 函数]
+
+    - [第 3 章 函数]
+
+    - [第 4 章 文件]
+
+    - [第 5 章结论]
+
+
+    关于作者
+
+    DR. MOUBACHIR MADANI FADOUL 的其他书籍
+
+
+    ## 第 1 章 C++ 简介
+
+
+    #### 为什么使用 C++
+
+    `C++` 是世界上广泛流行的编程语言之一。`C++` 可于当今操作系统、嵌入式系统和图形用户界面。`C++` 是一种面向对象的编程语言，允许代码复用，为程序提供清晰的结构并降低开发成本。`C++`
+    具有移植性，可用于开发适应多个平台的应用程序。`C++` 方便且易学！由于 `C++` 类似于 `Java` 和 `C#`，程序员很容易切换到 `C++`
+    或反之。
+
+
+    ### 1.2 C++ 入门
+
+    本分步教程将教你 `C++` 的基础知识。不需要任何编程经验。在开始使用 `C++` 之前需要两件事：有很多编译器和文本编辑器供选择。在本分步教程书中，将使用
+    IDE。
+
+
+    #### C++ 安装 IDE
+
+    “IDE（集成开发环境）”用于编译和编辑代码。流行的 IDE 包括：`Eclipse`、`Visual Studio` 和 `Blocks`。它们都是免费的，可以用于调试和编辑
+    `C++` 代码。
+
+
+    #### C++ 快速上手
+
+    打开 `Codeblocks` 并转到 `File > New > Empty File`。编写以下 `C++` 代码并将文件保存为 `myfirstprogram.cpp`。如果你不理解上面的代码，不要担心——细节将在后面的章节中讨论。它在
+    `Codeblocks` 中看起来应该是这样：
+
+
+    然后，转到 `Build > Build and Run` 来执行（运行）程序。下面显示了结果：恭喜！现在你编写并执行了你的第一个 `C++` 程序。
+
+
+    ### 1.3 C++ 语法
+
+    以下代码被拆分以便更好地理解：
+
+
+    省略命名空间
+
+    某些 `C++` 程序可以在不需要标准命名空间的情况下执行。省略 `namespace std` 行改为 `std` 关键字，后面跟用于某些对象的 `::`
+    运算符：
+
+
+    ### 1.4 C++ 输出（打印文本）
+
+    `cout` 运算符用于打印文本/输出值：可以添加多个 `cout` 对象。但请注意，输出末尾无法插入新行：
+
+
+    ### 1.5 换行
+
+    可以通过使用 `\n` 字符插入换行：注意：可以通过两个连续的 `\n` 字符创建一个空行：也可以使用 `endl` 操符插入新行：
+
+
+    ### 1.5 C++ 注释
+
+    为了使 `C++` 代码更具可读性和解释性，使用了注释。它还可以在测试其他代码时防止执行。注释可以使用多行或单行。“单行注释”用两个正斜杠 (`//`) 表示。编译器将忽略
+    `//` 和行尾之间的任何文本（不执行）。在此示例中，在代码之前使用了单行注释：
+
+
+    ### 1.6 C++ 多行注释
+
+    多行注释以 `/*` 开始，以 `*/` 结束。编译器将忽略 `/*` 和 `*/` 之间的任何文本：
+
+
+    ### 1.7 C++ 变量
+
+    为了存储数据值，可以使用变量作为容器。`C++` 中有不同变量（用不同的关键字定义），例如：
+
+
+    ### 1.8 声明（创建）变量
+
+    可以创建一个变量；必须指定类型并赋值：以下示例是创建了一个应该存储数字的变量：变量也可以在不赋值的情况下声明，稍后分配值：注意，给现有变量分配新值将覆盖之前的值：
+
+
+    #### 其他类型
+
+    不同数据类型形式的演示：
+
+
+    ### 1.9 显示变量
+
+    要显示变量，使用 `cout` 对象结合 `<<` 运算符。要结合变量和文本，请用 `<<` 运算符将它们分开：
+
+
+    #### 将变量相加
+
+    `+` 运算符可以将一个变量加到另一个变量：
+
+
+    ### 1.10 C++ 标识符
+
+    所有 `C++` 变量都有唯一名称标识。这些唯一名称被称为 `标识符`。标识符可以是具描述性的名称（`sum`、`age`、`totalVolume`）或短名称（如
+    `x` 和 `y`）。注意：为了创建可维护且理解的代码，建议使用描述性名称：构造变量名称（唯一标识符）可以概括为：
+
+
+    ### 1.11 C++ 常数
+
+    出于安全考虑，如果你使用 `const` 关键字，你和其他都无法覆盖现有的变量值，“常量”意味着“不可更改且只读的”：当你有可能改变的值时，最好声明变量为常量：
+
+
+    ### 1.12 C++ 用户输入
+
+    从之前的章节，我们已经学到 `cout` 用于打印（输出）值。现在获取用户输入，我们使用 `cin`。通过提取运算符 (`>>`)，`cin` 是一个从键盘读取数据的预定义变量”。下面的示例允许用户输入一个数字，存储在变量
+    `x` 中。然后打印 `x` 的值：
+
+
+    #### 创建简单的计算器
+
+    此示例允许用户输入两个数字。然后我们计算（相加）这两个数字，打印和：
+
+
+    ### 1.13 C++ 数据类型
+
+    如 `变量` 部分所示，`C++` 中的变量必须是指定的数据类型：
+
+
+    #### 基本数据类型
+
+    数据类型决定了信息的类型和大小：
+
+
+    ### 1.14 C++ 数值数据类型
+
+    使用 `int` 存储整数（如 1000 或 35），当需要浮点数时使用 `double` 或 `float`，例如 44.43 或 89.65。
+
+
+    #### 科学计数
+
+    要表示 10 的次方，使用 "e"：
+
+
+    ### 1.15 C++ 布尔数据类型
+
+    “bool 关键字”声明布尔数据类型，只能取 false 或 true 值。如果返回值，false = 0，true = 1。
+
+
+    ### 1.16 字符类型
+
+    使用单个字符存储字符类型”。单引号围绕字符，如 ''A'' 或 ''c''：
+
+
+    ### 1.17 字符串类型
+
+    字符序列（文本）存储在 `string` 类型中。这不是内置类型，但它的行为像基本函数。双引号围绕字符串值：在源代码中包含额外的头文件，以使用字符串，需要
+    `<string>` 库：
+
+
+    ### 1.18 运算符
+
+    运算符对值和变量执行操作。下面的示例使用了 `+` 运算符将两个值相加：如上面的示例所示，尽管 `+` 运算符经常用于将两个值相加，它也可以结合一个值和一个变量，或者一个变量和另一个变量：
+
+
+    ### 1.19 用户输入字符串
+
+    提取运算符在 `cin` 上使用了 `>>` 来显示用户输入的字符串：空间在 `cin` 中（制表符、空白字符等）被视为终止字符，这意味着即使你输入了许多单词，它也只能显示单个单词：从上面的示例可以看出，程序预期打印
+    "John Doe"，但它只打印了 "John"。
+
+
+    '
+- fmt: "\nThat's why, the `getline()` function is often used to read a line of text,\
+    \ when working with strings. The first parameter takes `cin`, while, and the string\
+    \ variable as second:![](image_rsrcYP.jpg)\n\n## 1.19 Conditions and If Statements\n\
+    From mathematics, the usual logical conditions are supported by C++:![](image_rsrcYR.jpg)\
+    \ To perform different actions for different decisions, these conditions can be\
+    \ used. The following conditional statements are supported by C++:![](image_rsrcYS.jpg)\n\
+    \n### 1.20 The if Statement\nTo specify a block of C++ code to be executed if\
+    \ a condition is `true`, the `if statement` is used.![](image_rsrcYT.jpg)![](image_rsrcYU.jpg)\n\
+    The example below tests two values to find out if 20 is greater than 18. If the\
+    \ condition is `true`, print some text:![](image_rsrcYV.jpg)\n\n**Example explained**\n\
+    The example above uses two variables, `y` and `x`, to test whether `y` is greater\
+    \ than `x` (using the `>` operator). As `y` is 18, and `x` is 20, and its known\
+    \ that 20 is greater than 18, The screen prints \"x is greater than y\".\n\n###\
+    \ 1.21 The else Statement\nTo specify a block of code to be executed, the `else\
+    \ statement` is used, if the condition is `false`.![](image_rsrcYW.jpg)\n**Example\
+    \ explained**\nThe example above, `(time > 18)` time is greater than 18, so the\
+    \ condition is `false`. Because of this, the `else condition` in introduced, this\
+    \ print to the screen \"Good evening\". If the time was less than 18 `(time <\
+    \ 18)`, the program would print \"Good day\".\n\n### 1.22 Switch Statements\n\
+    To select one of many code blocks to be executed, use the `switch statement`.![](image_rsrcYX.jpg)\
+    \ To calculate the weekday name, the weekday number is used in the example:![](image_rsrcYY.jpg)\n\
+    \n### 1.23 The break Keyword\nThe C++ breaks out of the switch block, when it\
+    \ reaches a `break` keyword. This stops the code execution and case testing inside\
+    \ the block. The job is completed if a match is found, it's time for a break.\
+    \ More testing is not needed.![](image_rsrcYZ.jpg)\n\n### 1.24 The default Keyword\n\
+    Some codes are specified by the `default` keyword to run, if there is no case\
+    \ match:![](image_rsrcZ0.jpg)\n\n### 1.25 For Loop\nUse the `for loop` instead\
+    \ of a `while loop`, in case you exactly know how many times you want to loop\
+    \ through a block of code:![](image_rsrcZ1.jpg)\n**Example explained**\nStatement\
+    \ 1 before the loop starts `(int i = 0)`, sets a variable.\nStatement 2 the condition\
+    \ for the loop to run `(i must be less than 5)` are defined. The loop will start\
+    \ over again. If the condition is true, if it is false, the loop terminates. \n\
+    Statement 3 increases a value `(i++)` each time the code block in the loop has\
+    \ been executed.\n\n**Another Example**\nThis example prints only even values\
+    \ between 0 and 10:![](image_rsrcZ2.jpg)\n\n### 1.26 Break\nThe `break statement`\
+    \ has already been used in an earlier chapter of this step-by-step tutorial book.\
+    \ It jumps out of a `switch statement`. The `break statement` jumps out of a loop\
+    \ . When `i` is equal to 4, this example jumps out of the loop:![](image_rsrcZ3.jpg)\n\
+    \n### 1.27 Continue\nThe `continue statement` breaks one iteration inside the\
+    \ loop, provided that specified condition occurs, and continues with the next\
+    \ iteration in the loop. The value of 4 is skipped in this example:![](image_rsrcZ4.jpg)\n\
+    \n### 1.28 Arrays\nTo store multiple values in a single variable, arrays are used,\
+    \ instead for each value, declaring separate variables. Define the variable type,\
+    \ by declaring an array, specify the name of the array followed by `square brackets`\
+    \ and assign the number of elements to be stored:\n```cpp\nstring cars[4 ];\n\
+    ```\n"
+  raw: That's why, the “getline() function” is often used to read a line of text,
+    when working with strings. The first parameter takes “cin”, while, and the string
+    variable as second:![](image_rsrcYP.jpg)1.19 Conditions and If StatementsFrom
+    mathematics, the usual logical conditions are supported by C++:![](image_rsrcYR.jpg)
+    To perform different actions for different decisions, these conditions can be
+    used.The following conditional statements are supported by C++:![](image_rsrcYS.jpg)1.20
+    The if StatementTo specify a block of C++ code to be executed if a condition is true,
+    the “if statement” is used.![](image_rsrcYT.jpg)![](image_rsrcYU.jpg)The example
+    below tests two values to find out if 20 is greater than 18. If the condition
+    is true, print some text:![](image_rsrcYV.jpg)Example explainedThe example above
+    uses two variables, y and x, to test whether “y” is greater than “x” (using the “> operator”).
+    As y is 18, and x is 20, and its known that 20 is greater than 18, The screen
+    prints "x is greater than y".1.21 The else StatementTo specify a block of code
+    to be executed, the else statement is used, if the condition is false.![](image_rsrcYW.jpg)Example
+    explainedThe example above, (time > 18) time is greater than 18, so the condition
+    is false. Because of this, the else condition in introduced, this print to the
+    screen "Good evening". If the time was less than 18 (time < 18), the program would
+    print "Good day".1.22 Switch Statementsto select one of many code blocks to be
+    executed, use the switch statement.![](image_rsrcYX.jpg)To calculate the weekday
+    name, the weekday number is used in the example:![](image_rsrcYY.jpg)1.23 The
+    break KeywordThe C++ breaks out of the switch block, when it reaches a break keyword.This
+    stops the code execution and case testing inside the block.The job is completed
+    if a match is found, it's time for a break. More testing is not needed.![](image_rsrcYZ.jpg)
+    1.24 The default KeywordSome codes are specified by the default keyword to run,
+    if there is no case match:![](image_rsrcZ0.jpg)1.25 For LoopUse the for loop instead
+    of a while loop, in case you exactly know how many times you want to loop through
+    a block of code:![](image_rsrcZ1.jpg)Example explainedStatement 1 before the loop
+    starts (int i = 0), sets a variable.Statement 2 the condition for the loop to
+    run (i must be less than 5) are defined. The loop will start over again. If the
+    condition is true, if it is false, the loop terminates.Statement 3 increases a
+    value (i++) each time the code block in the loop has been executed.Another ExampleThis
+    example prints only even values between 0 and 10:![](image_rsrcZ2.jpg)1.26 BreakThe break statement
+    has already been used in an earlier chapter of this step-by-step tutorial book.
+    It jumps out of a “switch statement”.The break statement jumps out of a loop .When i is
+    equal to 4, this example jumps out of the loop:![](image_rsrcZ3.jpg)1.27 ContinueThe continue statement
+    breaks one iteration inside the loop, provided that specified condition occurs,
+    and continues with the next iteration in the loop.The value of 4 is skipped in
+    this example:![](image_rsrcZ4.jpg)1.28 ArraysTo store multiple values in a single
+    variable, arrays are used, instead for each value, declaring separate variables.Define
+    the variable type, by declaring an array, specify the name of the array followed
+    by “square brackets”  and assign the number of elements to be stored:string cars[4
+    ];
+  toc: []
+  trans: '
+
+    使用 `getline()` 函数来读取多行文本，当满足指定条件时，例如：
+
+
+    ## 19 条件与 if 语句
+
+    在 C++ 中，使用 `if` 语句来执行不同的操作。如果条件为真，则执行相应的代码块：
+
+
+    ## 20 if 语句
+
+    当条件为真时执行代码块，使用 `if` 语句。当满足特定条件时，它会执行：
+
+
+    **示例说明**
+
+    语句 1 在循环开始前 `(int i = 0)` 设置了一个变量。
+
+    语句 2 定义了循环运行的条件 `(i 必须小于 5)`。循环将重新开始。如果条件为真，则继续；如果为假，循环终止。
+
+    语句 3 在每次循环代码块执行后增加一个值 `(i++)`。
+
+
+    ## 21 else 语句
+
+    当条件为假时执行代码块，使用 `else` 语句。
+
+
+    **示例说明**
+
+    上面的示例在 `time > 18` 时，屏幕会打印“晚上好”。如果时间小于 18 `(time < 18)`，程序会打印“白天好”。
+
+
+    ## 22 switch 语句
+
+    为了在多个代码块中选择一个执行，使用 `switch` 语句。在示例中使用星期几数字来计算星期几：
+
+
+    ## 23 break 关键字
+
+    当遇到 `break` 关键字时，C++ 会跳出 `switch` 块。这会停止块的代码执行。如果找到了匹配项，工作完成，不再需要继续测试。
+
+
+    ## 24 default 关键字
+
+    如果没有匹配项，则通过 `default` 关键字指定运行某些代码：
+
+
+    ## 25 for 循环
+
+    当你确切知道要循环代码块的次数时，使用 `for` 循环代替 `while` 循环：
+
+
+    ## 26 break
+
+    `break` 语句在本逐步教程书的早期章节中已经使用过。它可以跳出 `switch` 语句。`break` 语句也可以跳出循环。当 `i` 等于 4 时，此示例跳出循环：
+
+
+    ## 27 continue
+
+    当指定的条件发生时，`continue` 语句会中断循环中的当前迭代，并继续循环的下一次迭代。此示例跳过了值 4：
+
+
+    ## 28 数组
+
+    为了在一个变量中存储多个值，可以使用数组，而不是为每个值声明单独的变量。通过声明数组来定义变量类型，指定数组名称后跟`方括号` 并分配要存储元素的数量：
+
+    '
+- fmt: "\nTo hold an array of four strings, a variable is declared. To insert values\
+    \ to it, an array literal is used - place the values in a comma-separated list,\
+    \ inside curly braces:![](image_rsrcZ5.jpg)\n\n### 1.29 Access the Elements of\
+    \ an Array\nBy referring to the index number, you access an array element. The\
+    \ value of the first element in `cars` is accessed in this statement:![](image_rsrcZ6.jpg)\n\
+    \n### 1.30 Change an Array Element\nBy referring to the index number can change\
+    \ the value of a specific element:![](image_rsrcZ7.jpg)\n\n### 1.31 Creating References\n\
+    A reference variable is a \"reference\" to an existing variable, and it is created\
+    \ with the `&` operator:![](image_rsrcZ8.jpg) \n\n### 1.32 Creating Pointers\n\
+    From the previous chapter, you learned that we get the “memory address” of a variable\
+    \ by using the `&` operator:![](image_rsrcZ9.jpg) To stores the memory address\
+    \ as its value, a pointer is used. A pointer variable is created with the `*`\
+    \ operator and points a data type (“like `int` or `string”) of the same type.\
+    \ The variable address you're working with is assigned to the pointer:![](image_rsrcZA.jpg)\n\
+    \n#### Example explained\nBy using the asterisk sign `*` (`string* ptr`), create\
+    \ a pointer variable with the name ”ptr”, that points to a “string” variable.\
+    \ Note that the type of the pointer must match the type of the variable you are\
+    \ working with. To store the memory address of the variable called `food`, use\
+    \ the `&` operator, and assign it to the pointer. Now, `ptr` holds the value of\
+    \ `food`'s memory address![](image_rsrcZB.jpg)\n\n# Chapter 2. Functions\nA block\
+    \ of code which only runs when it is called is defined as a function. In a function\
+    \ you can pass data, known as parameters. Functions are performing certain tasks,\
+    \ and they are necessarily for reusing code: Define the code once, and use it\
+    \ many times.\n\n### Create a Function\nSome pre-defined functions are provided\
+    \ in C++, such as `main()`, which executes code. But its possible to create your\
+    \ own functions in order to perform certain actions. To create (often referred\
+    \ to as declare) a function, specify the name of the function, followed by parentheses\
+    \ `()`:(image_rsrcZC.jpg) ![](image_rsrcZD.jpg)\n\n### 2.1 Call a Function\nDeclared\
+    \ functions are \"saved for later use\", and will be later executed, when they\
+    \ are called. Declared functions are not executed immediately. Calling a function\
+    \ can be done by writing the function's name followed by two parentheses `()`\
+    \ and a semicolon; In the following example, `myFunction()` is used to print a\
+    \ text (the action), when it is called:(image_rsrcZE.jpg)\n\n### 2.2 Function\
+    \ Declaration and Definition\nA C++ function consists of two parts:![](image_rsrcZF.jpg)\
+    \ ![](image_rsrcZG.jpg) However, the declaration and the definition of the function\
+    \ - for code optimization can be separate. You see often C++ programs that have\
+    \ function definition below `main()`, and function declaration above `main()`.\
+    \ This will make the code easier to read, and better organized:(image_rsrcZH.jpg)\n\
+    \n### 2.3 Arguments and Parameters\nInformation is entered into functions as a\
+    \ parameter. Inside the function, parameters act as variables. After the function\
+    \ name, parameters can be specified, inside the parentheses. If you want to add\
+    \ as many parameters as you want, just separate them with a comma:(image_rsrcZJ.jpg)\
+    \ In the following example a function takes a `string` called `fname` as parameter.\
+    \ When the function is called a first name is passed along, which is defined inside\
+    \ the function to “print the full name”:(image_rsrcZK.jpg)\n\n### 2.4 Return Values\n\
+    The `void` keyword that used in the previous examples specifies that the function\
+    \ cannot return a value. If you want the function to return a value, try to use\
+    \ a data type (such as `int`, `string`, etc.) instead of `void`, and use the `return`\
+    \ keyword inside the function:(image_rsrcZM.jpg) The result is also stored in\
+    \ a variable:(image_rsrcZN.jpg)\n\n### 2.4 Function Overloading\nThe function\
+    \ overloading allows multiple functions to have the same name with different parameters:(image_rsrcZP.jpg)\
+    \ The following example is having two functions that add numbers of different\
+    \ type:(image_rsrcZR.jpg) It is better to overload one, instead of defining two\
+    \ functions that should do the same thing. The example below overloads the `plusFunc`\
+    \ function to work for both `double` and `int`:(image_rsrcZS.jpg)\n\n# Chapter\
+    \ 3. Functions\nWhat is OOP?\n“OOP stands for Object-Oriented Programming”. Procedural\
+    \ programming is the functions that perform operations on the data or writing\
+    \ procedures, while object-oriented programming is creating objects that contain\
+    \ both functions and data. “Object-oriented programming” possesses many advantages\
+    \ “over procedural programming”:(image_rsrcZT.jpg)\n\n### 3.1 What are Classes\
+    \ and Objects?\nObjects and classes are the two main aspects of object-oriented\
+    \ programming. The following illustration illustrates the difference between objects\
+    \ and class:(image_rsrcZU.jpg) Another example:(image_rsrcZV.jpg) So, “a class\
+    \ is a template for objects, and an object is an instance of a class”. After creating\
+    \ the individual objects, individual objects inherit all functions and the variables\
+    \ from the class. The next section teaches more about objects and classes.\n\n\
+    ### 3.2 Classes/Objects\nC++ is an “object-oriented programming language”. Everything\
+    \ in C++ is connected with objects and classes, along with its methods and attributes.\
+    \ For example: in real life, a bicycle is an “object”. The bicycle comes with\
+    \ attributes such as weight and color, and methods such as drive and brake. Methods\
+    \ and attributes basically are functions and variables associated with the class.\
+    \ These are named often \"class members\". A class is a user-defined data type\
+    \ to be used in our program, and it worked as an object constructor, or \"blueprint\"\
+    \ to create objects.\n\n### 3.3 Create a Class\nUse the `class` keyword, to create\
+    \ a class:(image_rsrcZW.jpg) Example explained:(image_rsrcZX.jpg)\n\n### 3.4 Create\
+    \ an Object\nAn object is created in C++, from a class. the class named `MyClass`\
+    \ is already created, so now by using this we can create objects Creating an object\
+    \ of `MyClass` is done by specifying the class name, followed by the object name.\
+    \ Use the dot syntax `.` on the object, to access the class attributes (`myString`\
+    \ and `myNum`):(image_rsrcZY.jpg)image_rsrcZZ.jpg) The following example defines\
+    \ a function inside the class, and names it \"myMethod\".(image_rsrc100.jpg) Defining\
+    \ a function outside the class can be done by declaring the function inside the\
+    \ class and then defining it outside of the class. This is achieved by defining\
+    \ the name of the class, followed the scope resolution `::`, followed by the function’s\
+    \ name:(image_rsrc101.jpg)(image_rsrc102.jpg)\n\n### 3.8 Encapsulation\nThe idea\
+    \ of “Encapsulation”, is to ensure that \"sensitive\" data is kept hidden from\
+    \ the users. Achieving this by declaring class variables/attributes as `private`\
+    \ (cannot be accessed from outside the class). Providing the public `get` and\
+    \ `set` methods helps modifying or reading the value of a private member\n\n###\
+    \ 3.9 Access Private Members\nUse public \"get\" and \"set\" methods, to access\
+    \ a private attribute:(image_rsrc103.jpg) Example explained the `salary` attribute\
+    \ is set to `private` and have restricted access. The public `setSalary()` method\
+    \ takes a parameter `s` and assigns it to the `salary` attribute (`salary = s`).\
+    \ The value of the private `salary` attribute is returned by the public `getSalary()`\
+    \ method. Inside `main()`, we have created an object of `Employee` class. Now\
+    \ the `setSalary()` method is used to set the value of the private attribute to\
+    \ `50000`. Then we call the `getSalary()` method on the object to return the value.(image_rsrc104.jpg)\n\
+    \n### 3.10 Inheritance\nIt is possible in C++ to inherit methods and attributes\
+    \ from one class to another. The \"inheritance concept\" is grouped into two categories:(image_rsrc105.jpg),\
+    \ Use the `:` symbol, to inherit from a class. The example below shows from `Vehicle`\
+    \ class (parent), the `Car` class (child) inherits the methods and attributes(image_rsrc106.jpg)\n\
+    \n# Chapter 4. Files\nTo work with files, we use the `fstream` library. To use\
+    \ the “fstream library”, include both the `<fstream>` header file AND the standard\
+    \ `<iostream>`:(image_rsrc107.jpg)\n\n### 4.1 Create and Write To a File\nUse\
+    \ either the `fstream` or `ofstream` object, to create a file, and specify the\
+    \ name file. Use the insertion operator `<<`, to write to the file:(image_rsrc108.jpg)\n\
+    \n### 4.2 Read a File\nTo read from a file, use either the `ifstream` or `fstream`\
+    \ object, and the name of the file.(image_rsrc109.jpg)\n\n### 4.3 Exceptions\n\
+    Executing C++ code may experience different errors: coding errors made by the\
+    \ programmer, errors due to wrong input, or other unforeseeable things. If an\
+    \ error appears, C++ stops normally and generates an error message. The technical\
+    \ term for this is: “C++ will throw an exception (throw an error)”.\ntry and catch\n\
+    In C++, three keywords are exception handling: `try`, `throw` and `catch`:(image_rsrc10A.jpg)(image_rsrc10B.jpg)\
+    \ Example explained(image_rsrc10C.jpg)\n\n# Chapter 5. Conclusion\n(image_rsrc10D.jpg)\n\
+    \n### ABOUT THE AUTHOR\n[Description: pic](image_rsrc10E.jpg)\nDR. MOUBACHIR MADANI\
+    \ FADOUL is a tech-entrepreneur with 5 years in the electric and electronics engineering\
+    \ field. Experienced in all aspects of business formation and research. Visionary\
+    \ product developer with deep education in research and analytics. Effective communicator\
+    \ and motivator who identifies and leverages assets in teammates to reach organizational\
+    \ goals. A relentless optimist who believes there is no failure, only feedback.\n\
+    Learn more about MOUBACHIR ath://goo.gl/dMaS8Vhttps://goo.gl/oqNJoJ[Other Books\
+    \ By DR.MOUBACHIR MADANI](https://amzn.to/303K8Bq)[THE ULTIMATE SECRET OF WIRELESS\
+    \ ROUTER: HOW TO CHOOSE A ROUTER THAT CAN BOOST WI-FI SIGNAL AND INCREASE NETWORK\
+    \ CAPACITY](https://www.amazon.com/dp/B08CDYV8W2/ref=sr_1_1?dchild=1&qid=1594051547&refinements=p_27%3AD.+MOUBACHIR+MADANI+FADOUL&s=books&sr=1-1&text=DR.+MOUBACHIR+MADANI+FADOUL)[HOW\
+    \ TO BUILD A SUCCESSFUL APP THAT WORTH A MILLION DOLLAR](https://www.amazon.co.uk/dp/B08CFSGJ78)[ROBOT\
+    \ SURGERY: A MODERN APPROACH TO ARTIFICIAL INTELLIGENCE](https://www.amazon.com/dp/B08CRJ9GC1)[PYTHON:\
+    \ THE ULTIMATE BEGINNER’S GUIDE TO LEARN PYTHON PROGRAMMING STEP-BY-STEP](https://www.amazon.com/dp/B08CTHR9)[WHY\
+    \ LYX NOT MICROSOFT WORD OR LATEX? : THE BEGINNER’S TUTORIAL TO PROFESSIONALISM](https://www.amazon.com/dp/B08CY32T3B)[INTRODUCTION\
+    \ TO ALGORITHMS: THE MYSTERY OF ALGORITHMS](https://www.amazon.com/dp/B08D1ZFHJK)[LEARN\
+    \ JAVA IN ONE DAY AND LEARN IT WELL: LEARN CODING FAST WITH HANDS-ON EXAMPLES](https://www.amazon.com/dp/B08D6F83XP)Electrical\
+    \ and Electronics EBOOK S : https://bit.ly/3dSHPXh\n"
+  raw: '  To hold an array of four strings, a variable is declared. To insert values
+    to it, an array literal is used - place the values in a comma-separated list,
+    inside curly braces:![](image_rsrcZ5.jpg)1.29 Access the Elements of an ArrayBy
+    referring to the index number, you access an array element.The value of the first
+    element  in cars is accessed in this statement:![](image_rsrcZ6.jpg)1.30 Change
+    an Array ElementBy referring to the index number can change the value of a specific
+    element,:![](image_rsrcZ7.jpg)1.31 Creating ReferencesA reference variable is
+    a "reference" to an existing variable, and it is created with the “& operator”:![](image_rsrcZ8.jpg)
+    1.32 Creating PointersFrom the previous chapter, you learned that we get the “memory
+    address”  of a variable by using the & operator:![](image_rsrcZ9.jpg) To stores
+    the memory address as its value, a pointer  is used.A pointer variable is created
+    with the *  operator and points a data type (“like int  or string” ) of the same
+    type. The variable address you''re working with is assigned to the pointer:![](image_rsrcZA.jpg)
+    Example explainedBy using the asterisk sign *  (string* ptr ), create a pointer
+    variable with the name” ptr” , that points to  a “string”  variable. Note that
+    the type of the pointer must match the type of the variable you are working with.To
+    store the memory address of the variable called food, use the &  operator, and
+    assign it to the pointer.Now, ptr holds the value of food ''s memory address.![](image_rsrcZB.jpg)Chapter
+    2\. FunctionsA block of code which only runs when it is called is defined as a
+    function.In a function you can pass data, known as parameters.Functions are performing
+    certain tasks, and they are necessarily for reusing code: Define the code once,
+    and use it many times.Create a FunctionSome pre-defined functions are provided
+    in C++, such as “main()”, which executes code. But its possible to create your
+    own functions in order to perform certain actions.To create (often referred to
+    as declare) a function, specify the name of the function, followed by parentheses ():![](image_rsrcZC.jpg)
+    ![](image_rsrcZD.jpg)2.1 Call a FunctionDeclared functions are "saved for later
+    use", and will be later executed, when they are called.Declared functions are
+    not executed immediately.Calling a function can be done by writing the function''s
+    name followed by two parentheses () and a semicolon;In the following example, “myFunction()” is
+    used to print a text (the action), when it is called:![](image_rsrcZE.jpg)2.2
+    Function Declaration and DefinitionA C++ function consists of two parts:![](image_rsrcZF.jpg)
+    ![](image_rsrcZG.jpg) However, the declaration and the definition of the function
+    - for code optimization can be separate.You see often C++ programs that have function
+    definition below main(), and function declaration above main(). This will make
+    the code easier to read, and better organized:![](image_rsrcZH.jpg)2.3 Arguments
+    and ParametersInformation is entered into functions as a parameter.Inside the
+    function, parameters act as variables.After the function name, parameters can
+    be specified, inside the parentheses. If you want to add as many parameters as
+    you want, just separate them with a comma:![](image_rsrcZJ.jpg) In the following
+    example a function takes a string  called fname  as parameter. When the function
+    is called a first name is passed along, which is defined inside the function to
+    “print the full name”:![](image_rsrcZK.jpg)2.4 Return ValuesThe void keyword that
+    used in the previous examples specifies that the function cannot return a value.
+    If you want the function to return a value, try to use a data type (such as “int, string”,
+    etc.) instead of “void”, and use the return keyword inside the function:![](image_rsrcZM.jpg)The
+    result is also stored in a variable:![](image_rsrcZN.jpg)2.4 Function OverloadingThe function
+    overloading allows multiple functions to have the same name with different parameters:![](image_rsrcZP.jpg)
+    The following example is having two functions that add numbers of different type:![](image_rsrcZR.jpg)It
+    is better to overload one, instead of defining two functions that should do the
+    same thing.The example below overloads the “plusFunc function” to work for both “double”
+    and “int”:![](image_rsrcZS.jpg)Chapter 3\. FunctionsWhat is OOP?“OOP stands for
+    Object-Oriented Programming”.Procedural programming is the functions that perform
+    operations on the data or writing procedures, while object-oriented programming
+    is creating objects that contain both functions and data.“Object-oriented programming”
+    possesses many advantages “over procedural programming”:![](image_rsrcZT.jpg)3.1
+    What are Classes and Objects?Objects and classes are the two main aspects of object-oriented
+    programming.The following illustration illustrates the difference between objects
+    and class:![](image_rsrcZU.jpg)Another example:![](image_rsrcZV.jpg)So, “a class
+    is a template for objects, and an object is an instance of a class”.After creating
+    the individual objects, individual objects inherit all functions and the variables
+    from the class.The next section teaches much more about  objects and classes.3.2
+    Classes/ObjectsC++ is an “object-oriented programming language”.Everything in
+    C++ is connected with objects and classes, along with its methods and attributes.
+    For example: in real life, a bicycle is an “object” . The bicycle comes with attributes
+    , such as weight and color, and methods , such as drive and brake.Methods and
+    attributes basically  are functions  and  variables that associated with the class.
+    These are named often as "class members".A class is a user-defined data type to
+    be used in our program, and it worked as an object constructor, or a "blueprint"
+    to create objects.3.3 Create a ClassUse the  clas s  keyword, to create a class:![](image_rsrcZW.jpg)Example
+    explained![](image_rsrcZX.jpg)3.4 Create an ObjectAn object is created in C++,
+    from a class. the class named “MyClass” is already created, so now by using this
+    we can create objects.Creating an object of “MyClass” is done by specifying the
+    class name, followed by the object name.Use the dot syntax (.) on the object,
+    to access the class attributes (myString and  myNum ):![](image_rsrcZY.jpg)![](image_rsrcZZ.jpg)
+      The following example defines a function inside the class, and names it "myMethod
+    ".![](image_rsrc100.jpg)Defining a function outside the class definition, can
+    be done by declaring the function inside the class and then defining it outside
+    of the class. This is achieved by defining the name of the class, followed the
+    scope resolution :: operator, followed by the function’s name:![](image_rsrc101.jpg)
+    ![](image_rsrc102.jpg)3.8 EncapsulationThe idea of “Encapsulation”, is to ensure
+    that "sensitive" data is kept hidden from the users. Achieving this by declaring
+    class variables/attributes as private (cannot be accessed from outside the class).
+    Providing the public get  and set  methods helps modifying or reading the value
+    of a private member.3.9 Access Private MembersUse public "get" and "set" methods,
+    to access a private attribute:![](image_rsrc103.jpg)Example explainedThe salary attribute
+    is set to private and have restricted access.The public “setSalary() method” takes
+    a parameter (s) and assigns it to the salary attribute (salary = s).The value
+    of the private salary attribute is returned by the “public getSalary() method”.Inside main(),
+    we have created an object of the Employee class. Now the “setSalary() method”
+    is used to set the value of the private attribute to 50000\. Then we call the “getSalary() method”
+    on the object to return the value.Why Encapsulation?![](image_rsrc104.jpg) 3.10
+    InheritanceIt is possible in C++ to inherit methods and attributes from one class
+    to another. The "inheritance concept" is grouped into two categories:![](image_rsrc105.jpg)
+    , Use the “:”  symbol, to inherit from a class.The example below shows from the Vehicle
+     class (parent), the Car  class (child) inherits the methods and attributes![](image_rsrc106.jpg)Chapter
+    4\. FilesTo work with files, we use the “fstream” library.To use the “fstream
+    library”, include both the <fstream> header file AND the standard <iostream>:![](image_rsrc107.jpg)4.1
+    Create and Write To a FileUse either the “fstream” or “ofstream” object, to create
+    a file, and specify the name file.Use the insertion operator (<<), to write to
+    the file![](image_rsrc108.jpg)4.2 Read a FileTo read from a file, use either the ifstream or fstream object,
+    and the name of the file.![](image_rsrc109.jpg)4.3 ExceptionsExecuting C++ code
+    may experience different errors: coding errors made by the programmer, errors
+    due to wrong input, or other unforeseeable things.If an error appears, C++ stops
+    normally and generates an error message. The technical term for this is: “C++
+    will throw an exception  (throw an error)”.try and catchIn C++, three keywords
+    are exception handling: try, throw and catch:![](image_rsrc10A.jpg)![](image_rsrc10B.jpg)Example
+    explained![](image_rsrc10C.jpg)Chapter 5\. Conclusion![](image_rsrc10D.jpg)ABOUT
+    THE AUTHOR![Description: pic](image_rsrc10E.jpg)DR. MOUBACHIR MADANI FADOUL is
+    a tech-entrepreneur with 5 years in the electric and electronics engineering field.
+    Experienced in all aspects of business formation and research. Visionary product
+    developer with deep education in research and analytics. Effective communicator
+    and motivator who identifies and leverages assets in teammates to reach organizational
+    goals. A relentless optimist who believes there is no failure, only feedback.Learn
+    more about MOUBACHIR athttps://goo.gl/dMaS8Vhttps://goo.gl/oqNJoJ[Other Books
+    By DR.MOUBACHIR MADANI](https://amzn.to/303K8Bq)[THE ULTIMATE SECRET OF WIRELESS
+    ROUTER: HOW TO CHOOSE A ROUTER THAT CAN BOOST WI-FI SIGNAL AND INCREASE NETWORK
+    CAPACITY](https://www.amazon.com/dp/B08CDYV8W2/ref=sr_1_1?dchild=1&qid=1594051547&refinements=p_27%3ADR.+MOUBACHIR+MADANI+FADOUL&s=books&sr=1-1&text=DR.+MOUBACHIR+MADANI+FADOUL)[HOW
+    TO BUILD A SUCCESSFUL APP THAT WORTH A MILLION DOLLAR](https://www.amazon.co.uk/dp/B08CFSGJ78)[ROBOT
+    SURGERY: A MODERN APPROACH TO ARTIFICIAL INTELLIGENCE](https://www.amazon.com/dp/B08CRJ9GC1)[PYTHON:
+    THE ULTIMATE BEGINNER’S GUIDE TO LEARN PYTHON PROGRAMMING STEP-BY-STEP](https://www.amazon.com/dp/B08CTHR9KT)[WHY
+    LYX NOT MICROSOFT WORD OR LATEX? : THE BEGINNER’S TUTORIAL TO PROFESSIONALISM](https://www.amazon.com/dp/B08CY32T3B)[INTRODUCTION
+    TO ALGORITHMS: THE MYSTERY OF ALGORITHMS](https://www.amazon.com/dp/B08D1ZFHJK)[LEARN
+    JAVA IN ONE DAY AND LEARN IT WELL: LEARN CODING FAST WITH HANDS-ON EXAMPLES ](https://www.amazon.com/dp/B08D6F83XP)Electrical
+    and Electronics EBOOK S : https://bit.ly/3dSHPXh'
+  toc: []
+  trans: '
+
+
+    为了包含一个四个字符串的数组，声明了一个变量。要向其中插入值，可以使用数组字面量 - 将值放在逗号分隔的列表中，并放在大括号内：![](img/image_rsrcZ5.jpg)
+
+
+    ### 1.29 访问数组元素
+
+    通过引用索引号，你可以访问数组元素。在此语句中访问 `cars` 中第一个元素的值：![](img/image_rsrcZ6.jpg)
+
+
+    ### 1.30 修改数组元素
+
+    通过引用索引号可以更改特定元素的值：![](img/image_rsrcZ7.jpg)
+
+
+    ### 1.31 创建引用
+
+    引用变量是现有变量的“引用”，使用 `&` 运算符创建：![](img/image_rsrcZ8.jpg)
+
+
+    ### 1.32 创建指针
+
+    从上一章中，你已经学了使用 `&` 运算符获取变量的“内存地址”：![](img/image_rsrcZ9.jpg) 要将内存地址存储为其值，可以使用指针。指针变量用
+    `*` 运算符创建，并指向相同数据类型（如 `int` 或 `string`）。将你正在操作的变量地址分配给指针：![](img/image_rsrcZA.jpg)
+
+
+    #### 示例解释
+
+    使用星号 `*` (`string* ptr`) 创建一个名为“ptr”的指针变量，它指向一个“string”变量。注意指针的类型必须与你正在操作的变量类型匹配。要存储名为
+    `food` 的变量的内存地址，使用 `&` 运算符并将其分配给指针。现在，`ptr` 保存了 `food` 的地址的值![](img/image_rsrcZB.jpg)
+
+
+    # 第二章 函数
+
+    只有在调用时才运行的代码块定义为函数。在函数中，你可以传递数据，称为参数。函数执行某些任务，并且必然是为了代码复用：定义一次代码，使用多次。
+
+
+    ### 创建函数
+
+    C++ 中提供了一些预定义的函数，例如执行代码的 `main()`。但也可以创建自己的函数来执行某些操作。要创建（通常称为声明）函数，请指定函数名，后面跟上括号
+    `()`：(image_rsrcZC.jpg) ![](img/image_rsrcZD.jpg)
+
+
+    ### 2.1 调用函数
+
+    声明的函数被“保存以备后用”，并在被调用时以后执行。声明的函数不会立即执行。调用函数可以通过编写函数名后跟两个括号 `()` 和一个分号来实现；在接下来的示例中，调用时
+    `myFunction()` 用于打印文本（该动作）：(image_rsrcZE.jpg)
+
+
+    ### 2.2 函数的声明与定义
+
+    一个 C++ 函数由两部分组成：![](img/image_rsrcZF.jpg) ![](img/image_rsrcZG.jpg) 然而，为了代码优化，函数的声明和定义是可以分开的。你经常会看到
+    C++ 程序将函数定义在 `main()` 之下，将函数声明在 `main()` 之上。这使得代码更易读、组织更好：(image_rsrcZH.jpg)
+
+
+    ### 2.3 参数
+
+    信息以参数的形式输入到函数中。在函数内部，参数充当变量。在函数名后的括号内可以指定参数。如果你想添加尽可能多的参数，只需用逗号分隔它们：(image_rsrcZJ.jpg)
+    在接下来的示例中，函数接受一个名为 `fname` 的 `string` 作为参数。当调用函数时，会传递一个名字，它在函数内部被定义为“打印全名”：(image_rsrcZK.jpg)
+
+
+    ### 2.4 返回值
+
+    在示例示例使用的 `void` 关键字指定函数不能返回值。如果你想让函数返回值，尝试使用数据类型（如 `int`、`string` 等）代替 `void`，并在函数内部使用
+    `return` 关键字：(image_rsrcZM.jpg) 结果也存储在变量中：(image_rsrcZN.jpg)
+
+
+    ### 2.4 函数重载
+
+    函数重载允许多个函数具有相同的名称但不同的参数：(image_rsrcZP.jpg) 以下示例有两个相不同类型数字的函数：(image_rsrcZR.jpg)
+    重载一个比定义两个执行相同函数的更好。下面的示例重载了 `plusFunc` 函数，使其适用于 `double` 和 `int`：(image_rsrcZS.jpg)
+
+
+    # 第三章 函数
+
+    什么是 OOP？
+
+    “OOP 代表面向对象编程”。过程化编程是对数据执行操作的或编写过程，而面向对象编程是创建同时包含函数和数据的对象。“面向对象编程”相比“过程化编程”具有许多优势：(image_rsrcZT.jpg)
+
+
+    ### 3.1 什么是类和对象？
+
+    对象和类是面向对象编程的两个主要方面。下面的图说明了对象和类的区别：(image_rsrcZU.jpg) 另一个示例：(image_rsrcZV.jpg)
+    因此，“类是对象的模板，而对象是类的实例”。在创建了各个对象后，各个对象继承类中所有的函数和变量。下一节将介绍更多关于对象和类的知识。
+
+
+    ### 3.2 类/对象
+
+    C++ 是一种“面向对象的编程语言”。C++ 中的一切都与对象、类以及其方法和属性相关。例如：在生活中，自行车是一个“对象”。自行车具有重量和颜色等属性，以及行驶和刹车等方法。方法和属性基本上是类相关的函数和变量。这些通常被称为“类成员”。类是程序中定义的数据类型，作为对象的构造函数或“蓝图”。
+
+
+    ### 3.3 创建类
+
+    使用 `class` 关键字创建类：(image_rsrcZW.jpg) 示例解释：(image_rsrcZX.jpg)
+
+
+    ### 3.4 创建对象
+
+    对象是从类创建的。名为 `MyClass` 的类已经创建，所以现在通过这种方式创建对象。通过指定类名后跟对象名。在对象上使用点语法 `.` 访问类（`myString`
+    和 `myNum`）：(image_rsrcZY.jpg)image_rsrcZZ.jpg) 以下示例在类内部定义了一个函数并命名为 "myMethod"：(image_rsrc100.jpg)
+    在类外部定义函数可以通过指定类名后跟作用域运算符 `::` 以及函数名来实现：(image_rsrc101.jpg)(image_rsrc102.jpg)
+
+
+    ### 3.8 封装
+
+    “封装”的思想是确保敏感数据对用户隐藏。通过将类变量/属性声明为 `private`（无法从类外部访问）。提供公开的 `get` 和 `set` 方法有助于修改私有成员
+
+
+    ### 3.9 访问私有成员
+
+    使用公开的 "get" 和 "set" 方法访问私有属性：(image_rsrc103.jpg) 示例 `salary` 属性设置为 `private` 并限制访问。公开的
+    `setSalary()` 方法接收参数 `s` 并将其分配给 `salary` 属性（`salary = s`）。私有 `salary` 属性的值由公开的
+    `getSalary()` 方法返回。在 `main()` 中我们创建了 `Employee` 类的对象。现在使用 `setSalary()` 方法将私有属性设置为
+    `50000`。然后我们在对象上调用 `getSalary()` 方法返回值：(image_rsrc104.jpg)
+
+
+    ### 3.10 继承
+
+    在 C++ 中可以从一个类继承方法和属性。“继承概念”分为两类：(image_rsrc105.jpg 使用 `:` 符号继承类。下面的示例显示 `Vehicle`
+    类（父类），`Car` 类（子类）继承了方法和属性(image_rsrc106.jpg)
+
+
+    # 第四章 文件
+
+    处理文件时我们使用 `fstream` 库。要使用“fstream 库”，需要包含 `<fstream>` 和标准的 `<iostream>`：(image_rsrc107.jpg)
+
+
+    ### 4.1 创建并写入文件
+
+    使用 `fstream` 或 `ofstream` 对象创建文件并指定文件名。使用插入运算符 `<<` 写入文件：(image_rsrc108.jpg)
+
+
+    ### 4.2 读取文件
+
+    要读取文件，使用 `ifstream` 或 `fstream` 对象以及文件名：(image_rsrc109.jpg)
+
+
+    ### 4.3 异常
+
+    执行 C++ 代码可能会遇到不同的错误：程序员编写的代码错误、输入错误导致的错误或其他不可预的情况。如果出现错误，C++ 会正常停止并生成错误消息。这种技术的术语是：“C++
+    将抛出一个异常（错误）”。
+
+    try 和 catch
+
+    在 C++ 中，有三个异常处理关键字：`try`、`throw` 和 `catch`：(image_rsrc10A.jpg)(image_rsrc10B.jpg)
+    示例解释(image_rsrc10C.jpg)
+
+
+    # 第五章 结论
+
+    (image_rsrc10D.jpg)
+
+
+    ### 关于作者
+
+    Description: pic
+
+    MOUBACHIR MADANI FADOUL 博士是一位在电子工程领域拥有 5 年经验的技术创业者。精通创业和研究的各个方面。在研究和分析方面有深厚教育的远见型产品开发者。有效的沟通者和激励者，识别并利用团队成员的资产来实现组织目标。一个坚定的乐观主义者，相信没有失败，只有反馈。
+
+    了解更多关于 MOUBACHIR 的信息 ath://goo.gl/dMaS8Vhttps://goo.gl/oqNJoJ[MOUBACHIR MADANI
+    博士的其他书籍](https://amzn.to/303K8q)[无线路由器的终秘密：如何选择能够增强 Wi-Fi 信号并增加网络能力的路由器](https://www.amazon.com/dp/B08CDYV8W2/ref=sr_1_1?dchild=1&qid=1594051547&refinements=p_27%3AD.+MOUBACHIR+MADANI+FADOUL&s=books&sr=1-1&text=DR.+MOUBACHIR+MADANI+FADOUL)[如何构建价值百万美元的应用](https://www.amazon.co.uk/dp/B08CFSGJ78)[机器人手术：人工智能的现代方法](https://www.amazon.com/dp/B08CRJ9GC1)[Python：学习
+    Python 编程的终极入门指南，分步教学](https://www.amazon.com/dp/B08CTHR9)[为什么用 LyX 而不是 Microsoft
+    Word 或 LaTeX：专业化的教程](https://www.amazon.com/dp/B08CY32T3B)[算法简介：算法的奥秘](https://www.amazon.com/dp/B08D1ZFHJK)[一天学会
+    Java 并学好：通过实践示例快速学习编码](https://www.amazon.com/dp/B08D6F83XP)电气与电子电子书 S : https://bit.ly/3dSHPXh
+
+
+    '
