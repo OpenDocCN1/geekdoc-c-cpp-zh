@@ -114,6 +114,7 @@
 +   [C# 3.0：初学者指南](docs/c-30-a-beginners-guide-beginners-guide-osborne-mcgraw-hill/README.md)
 +   [C# 4.0：完全参考](docs/c-40-the-complete-reference/README.md)
 +   [C# 5.0：程序员参考指南](docs/c-50-programmers-reference/README.md)
++   [C# 5.0 实战](docs/c-50-unleashed/README.md)
 +   [C# 6 程序员高级指南](docs/c-6-for-programmers-c-sharp-six-for-programmers/README.md)
 +   [C# 6 技术指南：使用 Visual Studio 2015 编程 C#](docs/c-6-headnotes-programming-c-with-visual-studio-2015/README.md)
 +   [C# 7 和 .NET Core：现代跨平台开发 - 第二版](docs/c-7-and-net-core-modern-cross-platform-development---second-/README.md)
