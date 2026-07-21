@@ -1,0 +1,4504 @@
+- fmt: "\n![](images/00001.jpeg)\n\n# Express.js\nGuide Book on Web framework for\
+    \ Node.js\nBy Rick L.\nCopyright©2016 Rick L.\nAll Rights Reserved\nCopyright\
+    \ © 2016 by Rick L.\nAll rights reserved. No part of this publication may be reproduced,\
+    \ distributed, or transmitted in any form or by any means, including photocopying,\
+    \ recording, or other electronic or mechanical methods, without the prior written\
+    \ permission of the author, except in the case of brief quotations embodied in\
+    \ critical reviews and certain other noncommercial uses permitted by copyright\
+    \ law.\n\n## Table of Contents\n- [Introduction](#\n- [Chapter 1- Overview of\
+    \ ExpressJS](#\n- [Chapter 2- Session](#\n- [Chapter 3- serve-index](#\n- [Chapter\
+    \ 4- cookie- Sessions](#\n- [Chapter 5- Morgan in ExpressJS](#\n- [Chapter 6-\
+    \ CORS](#\n- [Chapter 7- Express-Paginate](#\n- [Chapter 8- Multer](#\n- [Chapter\
+    \ 9- Compression](#\n- [Chapter 10- csurf](#\n- [Chapter 11- body-parser](#\n\
+    - [Chapter 12- Flash](#\n- [method-override](#\n- [Chapter 13- serve-favicon](#\n\
+    - [Chapter 14- response-time](#\n- [Chapter 15- express-namespace](#\n- [Chapter\
+    \ 16- express-expose](#\n- [Chapter 17- connect-render](#\n- [Conclusion](#)\n\
+    \n## Disclaimer\nWhile all attempts have been made to verify the information provided\
+    \ in this book, the author does assume any responsibility for errors, omissions,\
+    \ or contrary interpretations of the subject matter contained within. The information\
+    \ provided in this book is for educational and entertainment purposes only. The\
+    \ reader is responsible for his or her own actions and the author does not accept\
+    \ any responsibilities for any liabilities or damages, real or perceived, resulting\
+    \ from the use of this information.\n\nThe trademarks that are used are without\
+    \ any consent, and the publication of the trademark is without permission or backing\
+    \ by the trademark owner. All trademarks and brands within this book are for clarifying\
+    \ purposes only and are the owned by the owners themselves, not affiliated with\
+    \ this document.\n\n# Introduction\nExpressJS is one of the most useful and interesting\
+    \ Node frameworks. It is used for the development of both web and mobile applications.\
+    \ These types of applications are the mostly widely used in software environments.\
+    \ This shows the need for you to know how this framework can be used for development.\
+    \ The framework has numerous modules which can be used for the purpose of enhancing\
+    \ the look and feel of your applications.\n\n# Chapter 1- Overview of ExpressJS\n\
+    ExpressJS is a Node framework which is very flexible and provides developers with\
+    \ numerous features for the development of web and mobile applications. The framework\
+    \ can be used for the development of APIs. In this book, we will discuss the various\
+    \ features of ExpressJS.\n\n# Chapter 2- Session\nTo install this in Express,\
+    \ just execute the following command:\n\n```\nnpm install express-session\n```\n\
+    \nThe above command will install the session into your system. To use it in your\
+    \ program, you have to use the `require` command. This is shown below:\n\n```javascript\n\
+    var session = require('express-session')\n```\n\nThe session middleware can be\
+    \ created by use of the given `options`. You should know that the data for the\
+    \ session should not be saved in the cookie itself, but here, only the session\
+    \ ID is stored. The data for the session is stored on the server side for the\
+    \ app. However, `MemoryStore`, which is the default server-side session storage\
+    \ was not developed for use in a production environment. In most cases, it will\
+    \ leak and not scale past a single process. It was developed for the purpose of\
+    \ debugging.\n\n`express-session` will accept the following properties in the\
+    \ object for options:\n\n### Cookie\nThese are the settings for the cookie of\
+    \ the session ID. Consider the example given below:\n\n```javascript\n{ path:\
+    \ '/', httpOnly: true, secure: false, maxAge: null }\n```\n\n### Genid\nThis is\
+    \ a function which is called for generation of a new session ID. The function\
+    \ provided should return a string which will be used as the session ID. `req`\
+    \ is given to the function as the first argument in case there is a need for a\
+    \ value to be attached to the `req` when the ID is being generated. The default\
+    \ value for this will be a function which can use `uid2` for the generation of\
+    \ the IDs.\n\nNote: To avoid confliction of the sessions, make sure that the generated\
+    \ IDs are unique, that is, they should be different from each other. Consider\
+    \ the example given below which shows how this can be done:\n\n```javascript\n\
+    application.use(session({\n    genid: function(req) {\n        return genuuid()\n\
+    \    },\n    secret: ' my secret '\n}))\n```\n\n### Name\nThis is the name of\
+    \ the session cookie which is to be set in the response. Note that it is read\
+    \ from the request. The default value for this is `connect.sid`. For those who\
+    \ have multiple apps which are running on the same host, then the session cookies\
+    \ have to be separated. To achieve this, one has to set different names in each\
+    \ of the apps.\n\n### Proxy\nWhenever you are setting secure cookies, you have\
+    \ to trust the reverse proxy. This can be done via the header `X-Forwarded-Proto`.\
+    \ The default value for this is `undefined`. The possible values for this are\
+    \ explained below:\n1. `true` - the header `X-Forwarded-Proto` will be used.\n\
+    2. `false` - all of the headers will be ignored, and the connection will be considered\
+    \ only if a direct `TLS/SSL` connection exists.\n3. `undefined` - this will use\
+    \ the settings for `trust proxy` from Express itself.\n\n### Resave\nThis will\
+    \ force the session to be saved back to the session store. This happens whether\
+    \ or not the session was modified. The necessity of this will depend on your session\
+    \ store. However, if a client makes parallel requests, race conditions may be\
+    \ created.\n\n### Rolling\nThe cookie will be forced to be set on each of the\
+    \ responses. The expiration date is also reset. The default value for this is\
+    \ `false`.\n\n### SaveUninitialized\nWith this, a session which was not initialized\
+    \ will be saved to the session store. An uninitialized session is one which is\
+    \ new and not modified in any way. The default setting for this is `true`. However,\
+    \ this has deprecated and is expected to change in the future.\n\n### Required\
+    \ option\nThis is the secret which is used for signing the cookie for the session\
+    \ ID. It can be made up of an array of secrets or a string just for a single secret.\
+    \ In case you provide an array of secrets, only the first element in the array\
+    \ will be used for signing the cookie for the session ID. The rest of the elements\
+    \ will be used for verification of the signature in requests.\n\n### Store\nThis\
+    \ is the instance of the session store. Its default is a new `MemoryStore` instance.\n\
+    \nConsider the example given below:\n\n```javascript\nvar application = express()\n\
+    application.set('trust proxy', 1) // trusting the first proxy\napplication.use(session({\n\
+    \    secret: 'my secret',\n    resave: false,\n    saveUninitialized: true,\n\
+    \    cookie: { secure: true }\n}))\n```\n\nWe need to be able to use the cookies\
+    \ in a production environment, and at the same time allow for testing in a development\
+    \ environment. The setup can be enabled by use of the `NODE_ENV`. Consider the\
+    \ example given below, which shows how this can be done:\n\n```javascript\nvar\
+    \ application = express()\nvar session = {\n    secret: ' my secret ',\n    cookie:\
+    \ {}\n}\n```\n"
+  raw: '
+
+
+    ![](images/00001.jpeg)
+
+
+    Express.js
+
+
+    Guide Book on Web framework for Node.js
+
+
+    By Rick L.
+
+
+    Copyright©2016 Rick L.
+
+
+    All Rights Reserved
+
+
+    Copyright © 2016 by Rick L.
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the author, except in the case of brief quotations embodied in critical reviews
+    and certain other noncommercial uses permitted by copyright law.
+
+
+    Table of Contents
+
+
+    [Introduction](#part0000_split_004.html__Toc445557340)
+
+
+    [Chapter 1- Overview of ExpressJS](#part0000_split_005.html__Toc445557341)
+
+
+    [Chapter 2- Session](#part0000_split_006.html__Toc445557342)
+
+
+    [Chapter 3- serve-index](#part0000_split_009.html__Toc445557343)
+
+
+    [Chapter 4- cookie- Sessions](#part0000_split_010.html__Toc445557345)
+
+
+    [Chapter 5- Morgan in ExpressJS](#part0000_split_011.html__Toc445557346)
+
+
+    [Chapter 6- CORS](#part0000_split_012.html__Toc445557349)
+
+
+    [Chapter 7- Express-Paginate](#part0000_split_015.html__Toc445557351)
+
+
+    [Chapter 8- Multer](#part0000_split_016.html__Toc445557352)
+
+
+    [Chapter 9- Compression](#part0000_split_018.html__Toc445557353)
+
+
+    [Chapter 10- csurf](#part0000_split_020.html__Toc445557355)
+
+
+    [Chapter 11- body-parser](#part0000_split_023.html__Toc445557356)
+
+
+    [Chapter 12- Flash](#part0000_split_025.html__Toc445557358)
+
+
+    [method-override](#part0000_split_026.html__Toc445557359)
+
+
+    [Chapter 13- serve-favicon](#part0000_split_028.html__Toc445557360)
+
+
+    [Chapter 14- response-time](#part0000_split_029.html__Toc445557362)
+
+
+    [Chapter 15- express-namespace](#part0000_split_031.html__Toc445557365)
+
+
+    [Chapter 16- express-expose](#part0000_split_032.html__Toc445557366)
+
+
+    [Chapter 17- connect-render](#part0000_split_037.html__Toc445557367)
+
+
+    [Conclusion](#part0000_split_038.html__Toc445557368)
+
+
+    Disclaimer
+
+
+    While all attempts have been made to verify the information provided in this book,
+    the author does assume any responsibility for errors, omissions, or contrary interpretations
+    of the subject matter contained within. The information provided in this book
+    is for educational and entertainment purposes only. The reader is responsible
+    for his or her own actions and the author does not accept any responsibilities
+    for any liabilities or damages, real or perceived, resulting from the use of this
+    information.
+
+
+    The trademarks that are used are without any consent, and the publication of the
+    trademark is without permission or backing by the trademark owner. All trademarks
+    and brands within this book are for clarifying purposes only and are the owned
+    by the owners themselves, not affiliated with this document.
+
+
+    # Introduction
+
+
+    ExpressJS is one of the most useful and interesting Node frameworks. It is used
+    for the development of both web and mobile applications. These types of applications
+    are the mostly widely used in software environments. This shows the need for you
+    to know how this framework can be used for development. The framework has numerous
+    modules which can be used for the purpose of enhancing the look and feel of your
+    applications.
+
+
+    # Chapter 1- Overview of ExpressJS
+
+
+    ExpressJS is a Node framework which is very flexible and provides developers with
+    numerous features for the development of web and mobile applications. The framework
+    can be used for the development of APIs. In this book, we will discuss the various
+    features of ExpressJS.
+
+
+    # Chapter 2- Session
+
+
+    To install this in Express, just execute the following command:
+
+
+    $ npm install express-session
+
+
+    The above command will install the session into your system. To use it in your
+    program, you have to use the “require” command. This is shown below:
+
+
+    var session =  require(''express-session'')
+
+
+    The session middleware can be created by use of the given “options.” You should
+    know that the data for the session should not be saved in the cookie itself, but
+    here, only the session ID is stored. The data for the session is stored on the
+    server side for the app. However, “MemoryStore,” which is the default server-side
+    session storage was not developed for use in a production environment. In most
+    cases, it will leak and not scale past a single process. It was developed for
+    the purpose of debugging.
+
+
+    “express-session” will accept the following properties in the object for options:
+
+
+    Cookie
+
+
+    These are the settings for the cookie of the session ID. Consider the example
+    given below:
+
+
+    { path: ''/'', httpOnly: true, secure: false, maxAge: null }.
+
+
+    Genid
+
+
+    This is a function which is called for generation of a new session ID. The function
+    provided should return a string which will be used as the session ID. “req” is
+    given to the function as the first argument in case there is a need for a value
+    to be attached to the “req” when the ID is being generated. The default value
+    for this will be a function which can use “uid2” for the generation of the IDs.
+
+
+    Note: To avoid confliction of the sessions, make sure that the generated IDs are
+    unique, that is, they should be different from each other. Consider the example
+    given below which shows how this can be done:
+
+
+    application.use(session({
+
+
+        genid:  function(req) {
+
+
+        return genuuid() // using UUIDs for the session IDs
+
+
+    },
+
+
+        secret: '' my secret ''
+
+
+    }))
+
+
+    Name
+
+
+    This is the name of the session ID cookie which is to be set in the response.
+    Note that it is read from the request. The default value for this is the “connect.sid.”
+    For those who have multiple apps which are running on the same host, then the
+    session cookies have to be separated from each other. To achieve this, one has
+    to set different names in each of the apps.
+
+
+    Proxy
+
+
+    Whenever you are setting secure cookies, you have to trust the reverse proxy.
+    This can be done via the header for “X-Forwarded-Proto.” The default value for
+    this is “undefined.”
+
+
+    The possible values for this are explained below:
+
+
+    1.  “true”- the header “X-Forwarded-Proto” will be used.
+
+
+    2.  “false”- all of the headers will be ignored, and the connection will be considered
+    only if a direct “TLS/SSL” connection exists.
+
+
+    3.  “Undefined”- this will use the settings for “trust proxy” from the Express
+    itself.
+
+
+    Resave
+
+
+    This will force the session to be saved back to the session store. This happens
+    whether or not the session was modified during the request. The necessity of this
+    will depend on your session store. However, if a client makes parallel requests,
+    race conditions may be created.
+
+
+    Rolling
+
+
+    The cookie will be forced to be set on each of the responses. The expiration date
+    is also reset. The default value for this is “false.”
+
+
+    saveUninitialized
+
+
+    With this, a session which was not initialized will be saved to the session store.
+    An uninitialized session is one which is new and not modified in any way. The
+    default setting for this is “true.” However, this has deprecated and is expected
+    to change in the future.
+
+
+    Required option
+
+
+    This is the secret which is used for signing the cookie for the session ID. It
+    can be made up of an array of secrets or a string just for a single secret. In
+    case you provide an array of secrets, only the first element in the array will
+    be used for signing the cookie for the session ID. The rest of the elements will
+    be used for verification of the signature in requests.
+
+
+    Store
+
+
+    This is the instance of the session store. Its default is a new “MemoryStore”
+    instance.
+
+
+    Consider the example given below:
+
+
+    var application = express()
+
+
+    application.set(''trust proxy'', 1) // trusting the first proxy
+
+
+    application.use(session({
+
+
+        secret: ''my secret'',
+
+
+        resave:  false,
+
+
+         saveUninitialized:  true,
+
+
+    cookie: { secure:  true }
+
+
+    }))
+
+
+    We need to be able to use the cookies in a production environment, and at the
+    same time allow for testing in a development environment. The setup can be enabled
+    by use of the “NODE_ENV.” Consider the example given below, which shows how this
+    can be done:
+
+
+    var application = express()
+
+
+    var session = {
+
+
+        secret: '' my secret '',
+
+
+        cookie: {}
+
+
+    }'
+  toc: []
+  trans: "\n\n![](img/00001.jpeg)\n\n# Express.js\nNode.js Web 框架指南\n作者：Rick L.\n\
+    版权所有 ©2016 Rick L.\n保留所有权利\nCopyright © 2016 by Rick L.\n保留所有权利。未经作者事先书面许可，不得以任何形式或通过任何手段（包括复印、录制或其他电子或机械方法）复制、发行或传输本书物的内容，但批判性评论中的简短引用以及版权法允许的某些非商业用途除外。\n\
+    \n## 目录\n- 引言\n\n## 免责声明\n虽然我们已尽力核实书中提供的信息，但作者对书中包含的主题可能出现的错误、遗漏或相反的解释不承担任何责任。书中提供的信息仅供教育和娱乐之用。读者对其自己的行为负责，作者对使用这些信息而导致的任何实际或感知的责任或损害不承担任何责任。\n\
+    \n书中使用的商标均未经任何许可，且商标的出版未获得商标所有者的许可或支持。书中的所有商标和品牌仅用于说明目的，归其所有者所有，与本文无关联。\n\n# 引言\n\
+    ExpressJS 是 Node 中最实用且有趣的框架之一。它被用于 Web 和移动应用程序的开发。这类应用程序在软件环境中使用最为广泛。这表明你有必要了解如何使用该框架进行开发。该框架拥有众多模块，可用于增强应用程序的视觉效果和体验。\n\
+    \n# 第 1 章- ExpressJS 概述\nExpressJS 是一个非常灵活的 Node 框架，为开发者开发 Web 和移动应用程序提供了许多功能。该框架可用于开发\
+    \ API。在书中，我们将讨论 ExpressJS 的各种特性。\n\n# 第 2 章- Session（会话）\n若要在 Express 中安装此功能，只需执行以下命令：\n\
+    \n```\nnpm install express-session\n```\n\n上述命令将 session 安装到你的系统中。要在你的程序中使用它，你必须使用\
+    \ `require` 命令。如下所示：\n\n```javascript\nvar session = require('express-session')\n\
+    ```\n\n可以通过给定的 `options` 创建 session 中间件。你应该知道，会话数据不应该保存在 cookie 中，但在这里只存储了 session\
+    \ ID。会话数据存储在应用程序的服务器端。然而，`MemoryStore`（默认的服务器端会话存储）并不是为生产环境设计的。在大多数情况下，它会发生内存泄漏，且无法扩展到单个进程之外。它是为了调试目的而开发的。\n\
+    \n`express-session` 接受 options 对象中的以下属性：\n\n### Cookie\n这些是会话 ID Cookie 的设置。考虑下例示例：\n\
+    \n```javascript\n{ path: '/', httpOnly: true, secure: false, maxAge: null }\n\
+    ```\n\n### Genid\n这是一个用于生成新 session ID 的函数。提供的函数应该返回一个将用作 session ID 的字符串。如果在生成\
+    \ ID 时需要向 `req` 附加值，则会将 `req` 作为第一个参数传递给函数。该默认值是一个函数，可以使用 `uid2` 来生成 ID。\n\n注意：为了避免会话冲突，请确保生成的\
+    \ ID 是唯一的，即它们之间应该是不同的。考虑下例示例，展示了如何实现这一点：\n\n```javascript\napplication.use(session({\n\
+    \    genid: function(req) {\n        return genuuid()\n    },\n    secret: ' my\
+    \ secret '\n}))\n```\n\n### Name\n这是设置在响应中的 session cookie 的名称。注意，它是从请求中读取的。默认值为\
+    \ `connect.sid`。对于那些在相同主机上运行多个应用程序的用户来说，session cookie 必须分开。为了实现这一点，必须在每个应用程序中设置不同的名称。\n\
+    \n### Proxy\n当你设置安全 cookie（secure cookies）时，必须信任反向代理。这可以通过标头 `X-Forwarded-Proto`\
+    \ 实现。默认值为 `undefined`。其可能的值解释如下：\n1. `true` - 将使用标头 `X-Forwarded-Proto`。\n2. `false`\
+    \ - 所有标头将被忽略，只有当存在直接的 `TLS/SSL` 连接时才会考虑连接。\n3. `undefined` - 将使用 Express 自身的 `trust\
+    \ proxy` 设置。\n\n### Resave\n强制将 session 保存回会话存储器。无论 session 是否被修改，这都会发生。其必要性取决于你的会话存储。然而，如果客户端发出并行请求，可能会产生竞态条件。\n\
+    \n### Rolling\n将在每个响应中强制设置 cookie。过期日期也会重置。默认值为 `false`。\n\n### SaveUninitialized\n\
+    通过此设置，未初始化的 session 将保存到会话存储器。未初始化的 session 是一个新的且未以任何方式修改的会话。默认设置为 `true`。然而，此设置已弃用，并预计在未来发生变化。\n\
+    \n### Required option\n这是用于对 session ID cookie 进行签名的密钥（secret）。它可以由密钥数组组成，也可以是单个密钥的字符串。如果你提供密钥数组，则只有数组中的第一个元素将用于对\
+    \ session ID cookie 进行签名。其余元素将用于对请求中的签名进行验证。\n\n### Store\n这是会话存储器的实例。它的默认值是一个新的\
+    \ `MemoryStore` 实例。\n\n考虑下示例：\n\n```javascript\nvar application = express()\n\
+    application.set('trust proxy', 1) // 信任第一个代理\napplication.use(session({\n    secret:\
+    \ 'my secret',\n    resave: false,\n    saveUninitialized: true,\n    cookie:\
+    \ { secure: true }\n}))\n```\n\n我们需要能够在生产环境中使用 cookie，同时允许在开发环境中进行测试。这种设置可以通过\
+    \ `NODE_ENV` 启用。考虑下例示例，展示了如何实现这一点：\n\n```javascript\nvar application = express()\n\
+    var session = {\n    secret: ' my secret ',\n    cookie: {}\n}\n```\n\n"
+- fmt: "\n```javascript\nif (application.get('env') === 'production') {\n  application.set('trust\
+    \ proxy', 1) // trusting the first proxy\n  session.cookie.secure = true // serving\
+    \ secure cookies\n}\napplication.use(session(session))\n```\n\n default setting\
+    \ for `cookie.maxAge` is `null`, and it will never expire, which means that the\
+    \ cookie will become a browser-session cookie. The cookie is only removed once\
+    \ the user has closed the browser. The session is also removed.\n\n`req.session`\n\
+    \nFor session data to be stored and accessed, you should use the property `req.session`,\
+    \ and the store initializes this as a JSON. The session objects will then be left\
+    \ fine. Consider the example given below, which shows a view counter which is\
+    \ specific to a user:\n\n```javascript\napplication.use(session({ secret: ' my\
+    \ secret ', cookie: { maxAge: 50000 }}))\n\napplication.use(function(req, res,\
+    \ next) {\n  var session = req.session\n  if (session.views) {\n    session.views++\n\
+    \    res.setHeader('Content-Type', 'text/html')\n    res.write('<p>views: ' +\
+    \ session.views + '</p>')\n    res.write('<p>will expires in: ' + (session.cookie.maxAge\
+    \ / 1000) + 's</p>')\n    res.end()\n  } else {\n    session.views = 1\n    res.end('\
+    \ This is a demo for sessions. Refresh the page!')\n  }\n})\n```\n\n### Session.regenerate()\n\
+    \nThis method is invoked when we want to generate the session. After this, a new\
+    \ session instance and SID will be initialized at the `req.session`. This is shown\
+    \ below:\n\n```javascript\nreq.session.regenerate(function(error) {\n  // a new\
+    \ session should be added here\n})\n```\n\n### Session.destroy()\n\nWith this,\
+    \ the session is destroyed, and the `req.session` removed. It will then be regenerated\
+    \ in the next request. This is shown below:\n\n```javascript\nreq.session.destroy(function(error)\
+    \ {\n  // a session cannot be accessed here.\n})\n```\n\n### Session.reload()\n\
+    \nThis is used for reloading the session as shown below:\n\n```javascript\nreq.session.reload(function(error)\
+    \ {\n  // the session has been updated\n})\n```\n\n### Session.save()\n\nThis\
+    \ is for saving the session as shown below:\n\n```javascript\nreq.session.save(function(error)\
+    \ {\n  // session has been saved\n})\n```\n\nConsider the example given below,\
+    \ which uses the `express-session` so as to store the page views for the user:\n\
+    \n```javascript\nvar express = require('express')\nvar purl = require('parseurl')\n\
+    var session = require('express-session')\nvar application = express()\n\napplication.use(session({\n\
+    \  secret: ' my secret ',\n  resave: false,\n  saveUninitialized: true\n}))\n\n\
+    application.use(function (req, res, next) {\n  var vws = req.session.views\n \
+    \ if (!vws) {\n    vws = req.session.views = {}\n  }\n  // getting the url pathname\n\
+    \  var pathname = purl(req).pathname\n  // counting the views\n  vws[pathname]\
+    \ = (vws[pathname] || 0) + 1\n  next()\n})\n\napplication.get('/foo', function\
+    \ (req, res, next) {\n  res.send('you have viewed this page ' + req.session.vws['/test']\
+    \ + ' times')\n})\n\napplication.get('/bar', function (req, res, next) {\n  res.send('you\
+    \ have viewed this page ' + req.session.vws['/bar'] + ' times')\n})\n```\n\nThat\
+    \ is how sessions can be used in ExpressJS.\n\n# Chapter 3- serve-index\n\nThis\
+    \ is used for serving pages having listings of a directory to a particular path.\
+    \ It can be installed by executing the command given below:\n\n`$ npm install\
+    \ serve-index`\n\nThe above command will install the `serve-index` to your computer.\
+    \ To use it in your program, it has to be included or called by use of the `require`\
+    \ method. This is shown below:\n\n```javascript\nvar svIndex = require('serve-index')\n\
+    ```\n\nThe API will then be included in your program.\n\n### serveIndex(path,\
+    \ options)\n\nThis will return the middleware which serves the index of the directory\
+    \ in the `path` you have given. The path here is based off of the value for `req.url`.\
+    \ For you to change the URL base, make use of the `app.use`.\n\nThe following\
+    \ properties are accepted by the serve index in the options object:\n\n**Filter**\n\
+    This filter function is applied to files. Its default value is `false`. It is\
+    \ called for each of the files, and it uses the signature `filter(filename, index,\
+    \ files, dir)`. `filename` will be the file’s name, `index` will be the array\
+    \ index, and `files` is the array of the files, while `dir` will be the absolute\
+    \ path in which the file is located.\n\n**Hidden**\nThis is used for displaying\
+    \ the hidden files. Its default value is `false`.\n\n**Icons**\nThis is for displaying\
+    \ icons. Its default value is `false`.\n\n**Stylesheet**\nThis is an optional\
+    \ path which leads to the CSS stylesheet. Its default value is the built-in stylesheet.\n\
+    \n**Template**\nThis is an optional path which leads to an HTML template, and\
+    \ is used for rendering the HTML string.\n\n**View**\nThis is the display mode.\n\
+    \nConsider the example given below, which shows how all the above can be used:\n\
+    \n```javascript\nvar fhandler = require('finalhandler')\nvar http = require('http')\n\
+    var svIndex = require('serve-index')\nvar svStatic = require('serve-static')\n\
+    \n// Creating a server\nvar server = http.createServer(function(req, res) {\n\
+    \  // ... =(\n\n,\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
+    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nreq,req,\n})\n\n// Listen\nserver.listen(3000)\n\
+    ```\n\n# Chapter 4- cookie Sessions\n\nThis is a module which is used for providing\
+    \ guest sessions so that each of visitors will have a session, whether authenticated\
+    \ or not. In the be ` ` the``` issession.\n\nFor the API to be used in the program,\
+    \ we have to use the `require` command as shown below:\n\n`var session = require\
+    \ require('-')`\n\nThe following options are accepted in the session object:\n\
+    \n**Name**\nThis is the name of the cookie which is to set. Its default value\
+    \ is `session`.\n\n**Keys**\nThis is the list of the keys to be used for signing\
+    \ and verifying the cookie. Cookies which have been set are always signed with\
+    \ `keys[0]`. The rest of the keys will then be valid for the purpose of verification,\
+    \ and this will allow for the rotation to be done.\n\n**Secret**\nThis is a string\
+    \ which will be used as a secret key in case the `keys` are not provided. There\
+    \ is also a number of cookie options which you need to know how to use.\n\nIf\
+    \ you need to destroy a particular session, do it as follows:\n\n`req.session\
+    \ = null`\n\nConsider the simple counter example given below. Here is the example:\n\
+    \n```javascript\nvar cookieSession = require('cookie-session')\nvar express =\
+    \ require('express')\nvar application = express()\n\napplication.set('trust proxy',\
+    \ 1) // trusting the first proxy\n\napplication.use(cookieSession({\n  name: 'session',\n\
+    \  keys: ['key1', 'key2']\n}))\n\napplication.use(function (req, res, next) {\n\
+    \  // Updating the views\n  req.session.views = (req.session.views || 0) + 1\n\
+    \  // Writing the response\n  res.end(req.session.views + ' views')\n})\n\napplication.listen(3000)\n\
+    ```\n\nConsider the next example given below:\n\n```javascript\nvar cookieSession\
+    \ = require('cookie-session')\nvar express = require('express')\nvar application\
+    \ = express()\n\napplication.set('trust proxy', 1) // trusting the first proxy\n\
+    \napplication.use(cookieSession({\n  name: 'session',\n  keys: ['key1', 'key2']\n\
+    }))\n\n// This will allow you to set req.session.maxAge for letting certain sessions\n\
+    // have a different value than the default one.\n\napplication.use(function (req,\
+    \ res, next) {\n  req.sessionOptions.maxAge = req.session.maxAge || req.sessionOptions.maxAge\n\
+    })\n\n// ... the logic should be added here ...\n```\n"
+  raw: 'if (application.get(''env'') === ''production'') {
+
+
+    application.set(''trust proxy'', 1) // trusting the first proxy
+
+
+         session.cookie.secure =  true // serving secure cookies
+
+
+    }
+
+
+        application.use(session(session))
+
+
+    The default setting for “cookie.maxAge” is “null,” and it will never expire, which
+    means that the cookie will become a browser-session cookie. The cookie is only
+    removed once the user has closed the browser. The session is also removed.
+
+
+    req.session
+
+
+    For session data to be stored and accessed, you should use the property “req.session,”
+    and the store initializes this as a JSON. The session objects will then be left
+    fine. Consider the example given below, which shows a view counter which is specific
+    to a user:
+
+
+    application.use(session({ secret: '' my secret '', cookie: { maxAge:  50000 }}))
+
+
+    application.use(function(req, res, next) {
+
+
+    var session = req.session
+
+
+    if (session.views) {
+
+
+    session.views++
+
+
+    res.setHeader(''Content-Type'', ''text/html'')
+
+
+    res.write(''<p>views: '' + session.views + ''</p>'')
+
+
+    res.write(''<p>will expires in: '' + (session.cookie.maxAge /  1000) + ''s</p>'')
+
+
+    res.end()
+
+
+    } else {
+
+
+    session.views =  1
+
+
+    res.end('' This is a demo for sessions. Refresh the page!'')
+
+
+    }
+
+
+    })
+
+
+    #### Session.regenerate()
+
+
+    This method is invoked when we want to generate the session. After this, a new
+    session instance and SID will be initialized at the “req.session.” This is shown
+    below:
+
+
+    req.session.regenerate(function(error) {
+
+
+    // a new session should be added here
+
+
+    })
+
+
+    #### Session.destroy()
+
+
+    With this, the session is destroyed, and the “req.session” removed. It will then
+    be regenerated in the next request. This is shown below:
+
+
+    req.session.destroy(function(error) {
+
+
+    // a session cannot be accessed here.
+
+
+    })
+
+
+    #### Session.reload()
+
+
+    This is used for reloading the session as shown below:
+
+
+    req.session.reload(function(error) {
+
+
+    // the session has been updated
+
+
+    })
+
+
+    #### Session.save()
+
+
+    This is for saving the session as shown below:
+
+
+    req.session.save(function(error) {
+
+
+    // session has been saved
+
+
+    })
+
+
+    Consider the example given below, which uses the “express-session” so as to store
+    the page views for the user:
+
+
+    var express =  require(''express'')
+
+
+    var purl =  require(''parseurl'')
+
+
+    var session =  require(''express-session'')
+
+
+    var application = express()
+
+
+    application.use(session({
+
+
+    secret: '' my secret '',
+
+
+    resave:  false,
+
+
+    saveUninitialized:  true
+
+
+    }))
+
+
+    application.use(function (req, res, next) {
+
+
+    var vws = req.session.views
+
+
+    if (!vws) {
+
+
+    vws = req.session.views = {}
+
+
+    }
+
+
+    // getting the url pathname
+
+
+    var pathname = purl(req).pathname
+
+
+    // counting the views
+
+
+    vws[pathname] = (vws[pathname] ||  0) +  1
+
+
+    next()
+
+
+    })
+
+
+    application.get(''/foo'', function (req, res, next) {
+
+
+    res.send(''you have viewed this page '' + req.session.vws[''/test''] + '' times'')
+
+
+    })
+
+
+    application.get(''/bar'', function (req, res, next) {
+
+
+    res.send(''you have viewed this page '' + req.session.vws[''/bar''] + '' times'')
+
+
+    })
+
+
+    That is how sessions can be used in ExpressJS.
+
+
+    # Chapter 3- serve-index
+
+
+    This is used for serving pages having listings of a directory to a particular
+    path. It can be installed by executing the command given below:
+
+
+    $ npm install serve-index
+
+
+    The above command will install the “serve-index” to your computer. To use it in
+    your program, it has to be included or called by use of the “require” method.
+    This is shown below:
+
+
+    var svIndex =  require(''serve-index'')
+
+
+    The API will then be included in your program.
+
+
+    ### serveIndex(path, options)
+
+
+    This will return the middleware which serves the index of the directory in the
+    “path” you have given. The path here is based off of the value for “req.url.”
+    For you to change the URL base, make use of the “app.use.”
+
+
+    The following properties are accepted by the serve index in the options object:
+
+
+    Filter
+
+
+    This filter function is applied to files. Its default value is “false.” It is
+    called for each of the files, and it uses the signature “filter(filename, index,
+    files, dir).” “Filename” will be the file’s name, “index” will be the array index,
+    and “files” is the array of the files, while “dir” will be the absolute path in
+    which the file is located.
+
+
+    Hidden
+
+
+    This is used for displaying the hidden files. Its default value is “false.”
+
+
+    Icons
+
+
+    This is for displaying icons. It default value is “false.”
+
+
+    Stylesheet
+
+
+    This is an optional path which leads to the CSS stylesheet. Its default value
+    is the built-in stylesheet.
+
+
+    Template
+
+
+    This is an optional path which leads to an HTML template, and is used for rendering
+    the HTML string.
+
+
+    View
+
+
+    This is the display mode.
+
+
+    Consider the example given below, which shows how all the above can be used:
+
+
+    var fhandler =  require(''finalhandler'')
+
+
+    var http =  require(''http'')
+
+
+    var svIndex =  require(''serve-index'')
+
+
+    var svStatic =  require(''serve-static'')
+
+
+    // The Serve directory works to indexe for public/ftp folder (having icons)
+
+
+    var index = svIndex(''public/ftp'', {''icons'':  true})
+
+
+    // Serving up the public/ftp folder files
+
+
+    var serve = svStatic(''public/ftp'')
+
+
+    // Creating a server
+
+
+    var server = http.createServer(function onRequest(req, res){
+
+
+    var done = fhandler(req, res)
+
+
+    serve(req, res, function onNext(error) {
+
+
+    if (error) return done(error)
+
+
+    index(req, res, done)
+
+
+    })
+
+
+    })
+
+
+    // Listen
+
+
+    server.listen(3000)
+
+
+    To serve the directory indexes with express, do the following:
+
+
+    var express =  require(''express'')
+
+
+    var svIndex =  require(''serve-index'')
+
+
+    var application = express()
+
+
+    // Serving URLs like the /ftp/thing as public/ftp/thing
+
+
+    application.use(''/ftp'', svIndex(''public/ftp'', {''icons'':  true}))
+
+
+    application.listen()
+
+
+    # Chapter 4- cookie- Sessions
+
+
+    This is a module which is used for providing guest sessions so that each of the
+    visitors will have a session, whether authenticated or not. In case the session
+    is new, the property “Set-Cookie” will be produced, regardless of whether you
+    are populating the session.
+
+
+    It can be installed by use of the following command:
+
+
+    $ npm install cookie-session
+
+
+    For the API to be used in the program, we have to use the “require” command as
+    shown below:
+
+
+    var cookieSession =  require(''cookie-session'')
+
+
+    The following options are accepted in the cookie session in the options object:
+
+
+    Name
+
+
+    This is the name of the cookie which is to be set. Its default value is “session”.
+
+
+    Keys
+
+
+    This is the list of the keys to be used for signing and verifying the cookie values.
+    Cookies which have been set are always signed with the “keys[0].” The rest of
+    the keys will then be valid for the purpose of verification, and this will allow
+    for the rotation to be done.
+
+
+    Secret
+
+
+    This is a string which will be used as a secret key in case the “keys” are not
+    provided. There is also a number of cookie options which you need to know how
+    to use.
+
+
+    If you need to destroy a particular session, do it as follows:
+
+
+    req.session =  null
+
+
+    Consider the simple view counter example given below. Here is the example:
+
+
+    var cookieSession =  require(''cookie-session'')
+
+
+    var express =  require(''express'')
+
+
+    var application = express()
+
+
+    appliation.set(''trust proxy'', 1) // trusting the first proxy
+
+
+    application.use(cookieSession({
+
+
+         name: ''session'',
+
+
+         keys: [''key1'', ''key2'']
+
+
+    }))
+
+
+    application.use(function (req, res, next) {
+
+
+         // Updating the views
+
+
+    req.session.views = (req.session.views ||  0) +  1
+
+
+         // Writing the response
+
+
+    res.end(req.session.views + '' views'')
+
+
+    })
+
+
+    application.listen(3000)
+
+
+    Consider the next example given below:
+
+
+    var cookieSession =  require(''cookie-session'')
+
+
+    var express =  require(''express'')
+
+
+    var application = express()
+
+
+    application.set(''trust proxy'', 1) // trusting the first proxy
+
+
+    application.use(cookieSession({
+
+
+    name: ''session'',
+
+
+    keys: [''key1'', ''key2'']
+
+
+    }))
+
+
+    // This will allow you to set req.session.maxAge for letting certain sessions
+
+
+    // have a different value other than the default one.
+
+
+    application.use(function (req, res, next) {
+
+
+    req.sessionOptions.maxAge = req.session.maxAge || req.sessionOptions.maxAge
+
+
+    })
+
+
+    // ... the logic should be added here ...'
+  toc: []
+  trans: "\n\n```javascript\nif (application.get('env') === 'production') {\n  application.set('trust\
+    \ proxy', 1) // 信任第一个代理\n  session.cookie.secure = true // 开启安全 cookie\n}\napplication.use(session(session))\n\
+    ```\n\n `cookie.maxAge` 的默认设置为 `null`，它永远不会过期，这意味着该 cookie 将成为浏览器会话 cookie。只有当用户关闭浏览器后，cookie\
+    \ 才会被移除。同时 session 也会被移除。\n\n`req.session`\n\n为了存储和访问 session 数据，你应该使用 `req.session`\
+    \ 属性，store 会将其初始化为 JSON。随后 session 对象将保持正常状态。考虑下面给出的示例，它展示了一个特定于用户的访问计数器：\n\n\
+    ```javascript\napplication.use(session({ secret: ' my secret ', cookie: { maxAge:\
+    \ 50000 }}))\n\napplication.use(function(req, res, next) {\n  var session = req.session\n\
+    \  if (session.views) {\n    session.views++\n    res.setHeader('Content-Type',\
+    \ 'text/html')\n    res.write('<p>views: ' + session.views + '</p>')\n    res.write('<p>will\
+    \ expires in: ' + (session.cookie.maxAge / 1000) + 's</p>')\n    res.end()\n \
+    \ } else {\n    session.views = 1\n    res.end(' This is a demo for sessions.\
+    \ Refresh the page!')\n  }\n})\n```\n\n### Session.regenerate()\n\n当我们需要生成 session\
+    \ 时，会调用此方法。之后，一个新的 session 实例和 SID 将在 `req.session` 中初始化。如下：\n\n```javascript\n\
+    req.session.regenerate(function(error) {\n  // 在此处应该添加一个新的 session\n})\n```\n\n\
+    ### Session.destroy()\n\n通过此方法，session 将被销毁，`req.session` 也被移除。它将在下一次请求中被重新生成。如下所示：\n\
+    \n```javascript\nreq.session.destroy(function(error) {\n  // 在此处无法访问 session。\n\
+    })\n```\n\n### Session.reload()\n\n这用于重新加载 session，如下所示：\n\n```javascript\nreq.session.reload(function(error)\
+    \ {\n  // session 已经更新\n})\n```\n\n### Session.save()\n\n这用于保存 session，如下所示：\n\
+    \n```javascript\nreq.session.save(function(error) {\n  // session 已保存\n})\n```\n\
+    \n考虑下面给出的示例，它使用了 `express-session` 来存储用户的页面访问：\n\n```javascript\nvar express =\
+    \ require('express')\nvar purl = require('parseurl')\nvar session = require('express-session')\n\
+    var application = express()\n\napplication.use(session({\n  secret: ' my secret\
+    \ ',\n  resave: false,\n  saveUninitialized: true\n}))\n\napplication.use(function\
+    \ (req, res, next) {\n  var vws = req.session.views\n  if (!vws) {\n    vws =\
+    \ req.session.views = {}\n  }\n  // 获取 url 路径\n  var pathname = purl(req).pathname\n\
+    \  // 计数访问\n  vws[pathname] = (vws[pathname] || 0) + 1\n  next()\n})\n\napplication.get('/foo',\
+    \ function (req, res, next) {\n  res.send('you have viewed this page ' + req.session.vws['/test']\
+    \ + ' times')\n})\n\napplication.get('/bar', function (req, res, next) {\n  res.send('you\
+    \ have viewed this page ' + req.session.vws['/bar'] + ' times')\n})\n```\n\n这就是在\
+    \ ExpressJS 中使用 session 的。\n\n# 第 3 章- serve-index\n\n这用于向特定路径提供带有目录列表的页面。可以通过执行以下命令进行安装：\n\
+    \n`$ npm install serve-index`\n\n上述命令将 `serve-index` 安装到你的电脑上。要在你的程序中使用它，必须通过\
+    \ `require` 方法进行包含或调用。如下所示：\n\n```javascript\nvar svIndex = require('serve-index')\n\
+    ```\n\nAPI 将被包含在你的程序中。\n\n### serveIndex(path, options)\n\n这将返回一个中间件，用于提供你给给 `path`\
+    \ 目录的索引。这里的路径基于 `req.url` 的值。如果你想更改 URL 基础，请使用 `app.use`。\n\nserve index 的 options\
+    \ 对象接受以下属性：\n\n**Filter（过滤器）**\n此过滤器函数应用于文件。其默认值为 `false`。它会为每个文件调用一次，使用的签名是 `filter(filename,\
+    \ index, files, dir)`。`filename` 是文件名，`index` 是数组索引，`files` 是文件数组，而 `dir` 是文件所在的绝对路径。\n\
+    \n**Hidden（隐藏文件）**\n这用于显示隐藏文件。其默认值为 `false`。\n\n**Icons（图标）**\n这用于显示图标。其默认值为 `false`。\n\
+    \n**Stylesheet（样式表）**\n这是一个指向 CSS 样式表的可选路径。其默认值是内置的样式表。\n\n**Template（模板）**\n\
+    这是一个指向 HTML 模板的可选路径，用于渲染 HTML 字符串。\n\n**View（视图）**\n这是显示模式。\n\n# 第 4 章- cookie\
+    \ Sessions\n\n这是一个用于提供 session 的模块，以便无论访问者是否已验证都拥有一个 session。为了在程序中使用该 API，我们必须使用如下所示的\
+    \ `require` 命令：\n\n`var session = require(')`\n\nsession 对象接受以下选项：\n\n**Name（名称）**\n\
+    这是 cookie 的名称。其默认值为 `session`。\n\n**Keys（密钥）**\n这是用于签名和验证 cookie 的密钥列表。设置的 cookie\
+    \ 总是使用 `keys[0]` 进行签名。其余密钥将用于验证，这将允许进行轮换。\n\n**Secret（密钥）**\n在未提供 `keys` 的情况下，此字符串将作为密钥使用。你还需要知道一些\
+    \ cookie 选项。\n\n如果你需要删除特定的 session，请如下操作：\n\n`req.session = null`\n\n考虑下面简单的计数器示例。示例如下：\n\
+    \n```javascript\nvar cookieSession = require('cookie-session')\nvar express =\
+    \ require('express')\nvar application = express()\n\napplication.set('trust proxy',\
+    \ 1) // 信任第一个代理\n\napplication.use(cookieSession({\n  name: 'session',\n  keys:\
+    \ ['key1', 'key2']\n}))\n\napplication.use(function (req, res, next) {\n  // 更新访问次数\n\
+    \  req.session.views = (req.session.views || 0) + 1\n  // 写入响应\n  res.end(req.session.views\
+    \ + ' views')\n})\n\napplication.listen(3000)\n```\n\n考虑下一个给出的示例：\n\n```javascript\n\
+    var cookieSession = require('cookie-session')\nvar express = require('express')\n\
+    var application = express()\n\napplication.set('trust proxy', 1) // 信任第一个代理\n\n\
+    application.use(cookieSession({\n  name: 'session',\n  keys: ['key1', 'key2']\n\
+    }))\n\n// 这允许你设置 req.session.maxAge，以便某些 session 拥有与默认不同的值。\n\napplication.use(function\
+    \ (req, res, next) {\n  req.sessionOptions.maxAge = req.session.maxAge || req.sessionOptions.maxAge\n\
+    })\n\n// ... 此处应该添加逻辑 ...\n```"
+- fmt: "\nYou have to note that the entire session object will be encoded and stored\
+    \ in a cookie. The maximum cookie size limit on the different browsers can then\
+    \ be exceeded. If the session object is large enough and it can exceed the limit\
+    \ of the browser when it has been encoded, what will happen in most cases is that\
+    \ the browser will refuse or avoid storing the cookie.\n\n# Chapter 5- Morgan\
+    \ in ExpressJS\n\nThis is logger middleware for the HTTP request for Node.js.\
+    \ To use the API in your program, you have to use the `require` keyword as shown\
+    \ below:\n\n```javascript\nvar morgan =  require('morgan')\n```\n\nThe following\
+    \ format is used for creating this:\n\n### `morgan(format, options)`\n\nAs shown\
+    \ in the above format, we have two parameters or arguments.\n\nThe following properties\
+    \ are accepted by Morgan in the `options` object:\n\n#### Immediate\nThe log line\
+    \ should be written on request rather than on response. This will mean that the\
+    \ requests will always be logged even if the server itself crashes, but it will\
+    \ be impossible for us to log the data from the response. \n\n#### Skip\nThis\
+    \ is a function used for the determination of whether or not logging was skipped.\
+    \ The default value for this is `false`, Consider the example given below, which\
+    \ shows how the function can be called:\n\n```javascript\n// EXAMPLE: only the\
+    \ log error responses\nmorgan('combined', {\nskip:  function (req, res) { return\
+    \ res.statusCode <  400 }\n})\n```\n\n#### Stream\nThis is an output stream which\
+    \ is used for writing log lines, and its default value is `process.stdout`.\n\n\
+    Consider the example given below, which shows how all the requests can be logged\
+    \ in the Apache combined format to the STDOUT. Here is the example:\n\n```javascript\n\
+    var express =  require('express')\nvar morgan =  require('morgan')\nvar application\
+    \ = express()\n\napplication.use(morgan('combined'))\n\napplication.get('/', function\
+    \ (req, res) {\n  res.send('hello, there!')\n})\n```\n\n### vanilla http server\n\
+    \nAn example which demonstrates how this can be done is given below:\n\n```javascript\n\
+    var fhandler =  require('finalhandler')\nvar http =  require('http')\nvar morgan\
+    \ =  require('morgan')\n// creating the \"middleware\"\nvar logger = morgan('combined')\n\
+    \nhttp.createServer(function (req, res) {\n  var done = finalhandler(req, res)\n\
+    \  logger(req, res, function (error) {\n    if (error) return done(error)\n  \
+    \  // responding to the request\n    res.setHeader('content-type', 'text/plain')\n\
+    \    res.end('hello, there!')\n  })\n})\n```\n\n#### Writing Logs to a File\n\n\
+    Consider the example given below, which shows how the requests can be logged in\
+    \ Apache combined format to our file `access.log`:\n\n```javascript\nvar express\
+    \ =  require('express')\nvar fs =  require('fs')\nvar morgan =  require('morgan')\n\
+    var application = express()\n\n// creating a write stream (in the append mode)\n\
+    var aLogStream = fs.createWriteStream(__dirname  + '/access.log', {flags: 'a'})\n\
+    \n// setting up the logger\napplication.use(morgan('combined', {stream: aLogStream}))\n\
+    application.get('/', function (req, res) {\n  res.send('hello, there!')\n})\n\
+    ```\n\n#### log file rotation\n\nIn the example given below, the app will log\
+    \ all the requests in the Apache combined format to any of the log files in our\
+    \ directory `log/` by use of the `file-stream-rotator` module. The example is\
+    \ as follows:\n\n```javascript\nvar FStreamRotator =  require('file-stream-rotator')\n\
+    var express =  require('express')\nvar fs =  require('fs')\nvar morgan =  require('morgan')\n\
+    var application = express()\nvar lDirectory =  __dirname  + '/log'\n\n// ensuring\
+    \ the log directory exists\nfs.existsSync(lDirectory) || fs.mkdirSync(lDirectory)\n\
+    \n// creating a rotating write stream\nvar aLogStream = FStreamRotator.getStream({\n\
+    \  filename: lDirectory + '/access-%DATE%.log',\n  frequency: 'daily',\n  verbose:\
+    \  false\n})\n\n// setting up the logger\napplication.use(morgan('combined', {stream:\
+    \ aLogStream}))\napplication.get('/', function (req, res) {\n  res.send('hello,\
+    \ there!')\n})\n```\n\n#### Custom token formats\n\nIn the next app, we will use\
+    \ the custom token formats. It works by adding an ID to all of the requests, and\
+    \ will then display it by use of the `:id` token. Here is the app:\n\n```javascript\n\
+    var express =  require('express')\nvar morgan =  require('morgan')\nvar id = \
+    \ require('node-uuid')\n\nmorgan.token('id', function getId(req) {\n  return req.id\n\
+    })\n\nvar application = express()\napplication.use(assignid)\napp.use(morgan(':id\
+    \ :method :url :response-time'))\napp.get('/', function (req, res) {\n  res.send('hello,\
+    \ world!')\n})\n\nfunction assignId(req, res, next) {\n  req.id  = uuid.v4()\n\
+    \  next()\n}\n```\n\n# Chapter 6- CORS\n\nThis is a Node.js package which provides\
+    \ an ExpressJS/Connect middleware which can be used for enabling of the various\
+    \ options for CORS.\n\nTo install it via npm command, execute the command given\
+    \ below:\n\n```bash\n$ npm install cors\n```\n\nThis can be used as shown below:\n\
+    \n```javascript\nvar express =  require('express')\nvar cors =  require('cors')\n\
+    var application = express();\n\napplication.use(cors());\napplication.get('/products/:id',\
+    \ function(req, res, next){\n  res.json({msg: 'This has CORS enabled for all the\
+    \ origins!'});\n});\n```\n\n#### Enable CORS for all the origins\n```javascript\n\
+    var express =  require('express')\nvar cors =  require('cors')\nvar application\
+    \ = express();\n\napplication.use(cors());\napplication.get('/products/:id', function(req,\
+    \ res, next){\n  res.json({msg: 'This has CORS enabled for all the origins!'});\n\
+    });\n```\n\n#### Enable CORS for a single route\n```javascript\nvar express =\
+    \  require('express')\nvar cors =  require('cors')\nvar application = express();\n\
+    \napplication.use(cors());\napplication.get('/products/:id', function(req, res,\
+    \ next){\n  res.json({msg: 'This has CORS enabled for all the origins!'});\n});\n\
+    ```\n\n#### Configure the CORS\n```javascript\nvar express =  require('express')\n\
+    var cors =  require('cors')\nvar application = express();\n\nvar cOptions = {\n\
+    \  origin: 'http://sample.com'\n};\n\napplication.get('/products/:id', cors(cOptions),\
+    \ function(req, res, next){\n  res.json({msg: 'This has CORS enabled for all the\
+    \ origins!'});\n});\n```\n\n#### Configuration of CORS w/ Dynamic Origin\n```javascript\n\
+    var express =  require('express')\nvar cors =  require('cors')\nvar application\
+    \ = express();\n\nvar whitelist = ['http://sample1.com', 'http://sample2.com'];\n\
+    \nvar cOptions = {\n  origin: function(origin, callback){\n    var orIsitelisted\
+    \ = whitelist.indexOf(origin) !==  -1;\n    callback(null, orIsitelisted);\n \
+    \ }\n};\n\napplication.get('/products/:id', cors(cOptions), function(req, res,\
+    \ next){\n  res.json({msg: 'This has CORS enabled for the domain.'});\n});\n```\n\
+    \n### How to enable CORS Pre-Flight\n\nCertain requests for CORS are considered\
+    \ to be complex, and these need an initial OPTIONS request. A CORS request which\
+    \ uses the HTTP verb is considered to be complex compared to the one which uses\
+    \ POST/GET/HEAD or the one using custom headers. For pre-fighting to be enabled,\
+    \ a new OPTIONS handler has to be added for the route which needs to be supported.\
+    \ This is shown below:\n\n```javascript\nvar express =  require('express')\nvar\
+    \ cors =  require('cors')\nvar application = express();\n\napplication.options('/products/:id',\
+    \ cors()); // enabling a pre-flight request for the DELETE request\napplication.del('/products/:id',\
+    \ cors(), function(req, res, next){\n  res.json({msg: 'This has CORS enabled for\
+    \ all the origins!'});\n});\n```\n\nPre-flight can also be enabled across the\
+    \ board as shown below:\n\n```javascript\napplication.options('*', cors()); //\
+    \ including before the other routes\n```\n\n#### Asynchronous configuration of\
+    \ CORS\n\n```javascript\nvar express =  require('express')\nvar cors =  require('cors')\n\
+    var application = express();\n\nvar whitelist = ['http://sample1.com', 'http://sample2.com'];\n\
+    \nvar cOptionsDelegate =  function(req, callback){\n  var cOptions;\n  if(whitelist.indexOf(req.header('Origin'))\
+    \ !==  -1){\n    cOptions = { origin:  true }; // reflecting (enabling) the requested\
+    \ origin in our CORS response\n  }else{\n    cOptions = { origin:  false }; //\
+    \ disabling the CORS for our request\n  }\n}\n```\n"
+  raw: 'You have to note that the entire session object will be encoded and stored
+    in a cookie. The maximum cookie size limit on the different browsers can then
+    be exceeded. If  the session object is large enough and it can exceed the limit
+    of the browser when it has been encoded, what will happen in most cases is that
+    the browser will refuse or avoid storing the cookie.
+
+
+    # Chapter 5- Morgan in ExpressJS
+
+
+    This is  logger middleware for the HTTP request for Node.js. To use the API in
+    your program, you have to use the “require” keyword as shown below:
+
+
+    var morgan =  require(''morgan'')
+
+
+    The following format is used for creating this:
+
+
+    ### morgan(format, options)
+
+
+    As shown in the above format, we have two parameters or arguments.
+
+
+    The following properties are accepted by Morgan in the options object:
+
+
+    Immediate
+
+
+    The log line should be written on request rather than on response. This will mean
+    that the requests will always be logged even if the server itself crashes, but
+    it will be impossible for us to log the data from the response.
+
+
+    Skip
+
+
+    This is a function used for the determination of whether or not logging was skipped.
+    The default value for this is “false,” Consider the example given below, which
+    shows how the function can be called:
+
+
+    // EXAMPLE: only the log error responses
+
+
+    morgan(''combined'', {
+
+
+    skip:  function (req, res) { return res.statusCode <  400 }
+
+
+    })
+
+
+    Stream
+
+
+    This is an output stream which is used for writing log lines, and its default
+    value is “process.stdout.”
+
+
+    Consider the example given below, which shows how all the requests can be logged
+    in the Apache combined format to the STDOUT. Here is the example:
+
+
+    var express =  require(''express'')
+
+
+    var morgan =  require(''morgan'')
+
+
+    var application = express()
+
+
+    application.use(morgan(''combined''))
+
+
+    application.get(''/'', function (req, res) {
+
+
+    res.send(''hello, there!'')
+
+
+    })
+
+
+    ### vanilla http server
+
+
+    An example which demonstrates how this can be done is given below:
+
+
+    var fhandler =  require(''finalhandler'')
+
+
+    var http =  require(''http'')
+
+
+    var morgan =  require(''morgan'')
+
+
+    // creating the "middleware"
+
+
+    var logger = morgan(''combined'')
+
+
+    http.createServer(function (req, res) {
+
+
+    var done = finalhandler(req, res)
+
+
+    logger(req, res, function (error) {
+
+
+    if (error) return done(error)
+
+
+    // responding to the request
+
+
+    res.setHeader(''content-type'', ''text/plain'')
+
+
+    res.end(''hello, there!'')
+
+
+    })
+
+
+    })
+
+
+    Writing Logs to a File
+
+
+    Consider the example given below, which shows how the requests can be logged in
+    Apache combined format to our file “access.log”:
+
+
+    var express =  require(''express'')
+
+
+    var fs =  require(''fs'')
+
+
+    var morgan =  require(''morgan'')
+
+
+    var application = express()
+
+
+    // creating a write stream (in the append mode)
+
+
+    var aLogStream = fs.createWriteStream(__dirname  + ''/access.log'', {flags: ''a''})
+
+
+    // setting up the logger
+
+
+    application.use(morgan(''combined'', {stream: aLogStream}))
+
+
+    application.get(''/'', function (req, res) {
+
+
+    res.send(''hello, there!'')
+
+
+    })
+
+
+    log file rotation
+
+
+    In the example given below, the app will log all the requests in the Apache combined
+    format to any of the log files in our directory “log/” by use of the file-stream-rotator
+    module. The example is as follows:
+
+
+    var FStreamRotator =  require(''file-stream-rotator'')
+
+
+    var express =  require(''express'')
+
+
+    var fs =  require(''fs'')
+
+
+    var morgan =  require(''morgan'')
+
+
+    var application = express()
+
+
+    var lDirectory =  __dirname  + ''/log''
+
+
+    // ensuring the log directory exists
+
+
+    fs.existsSync(lDirectory) || fs.mkdirSync(lDirectory)
+
+
+    // creating a rotating write stream
+
+
+    var aLogStream = FStreamRotator.getStream({
+
+
+    filename: lDirectory + ''/access-%DATE%.log'',
+
+
+    frequency: ''daily'',
+
+
+    verbose:  false
+
+
+    })
+
+
+    // setting up the logger
+
+
+    application.use(morgan(''combined'', {stream: aLogStream}))
+
+
+    application.get(''/'', function (req, res) {
+
+
+    res.send(''hello, there!'')
+
+
+    })
+
+
+    Custom token formats
+
+
+    In the next app, we will use the custom token formats. It works by adding an ID
+    to all of the requests, and will then display it by use of the “:id” token. Here
+    is the app:
+
+
+    var express =  require(''express'')
+
+
+    var morgan =  require(''morgan'')
+
+
+    var id =  require(''node-uuid'')
+
+
+    morgan.token(''id'', function getId(req) {
+
+
+    return req.id
+
+
+    })
+
+
+    var application = express()
+
+
+    application.use(assignid)
+
+
+    app.use(morgan('':id :method :url :response-time''))
+
+
+    app.get(''/'', function (req, res) {
+
+
+    res.send(''hello, world!'')
+
+
+    })
+
+
+    function assignId(req, res, next) {
+
+
+    req.id  = uuid.v4()
+
+
+    next()
+
+
+    }
+
+
+    # Chapter 6- CORS
+
+
+    This is a Node.js package which provides an ExpressJS/Connect middleware which
+    can be used for enabling of the various options for CORS.
+
+
+    To install it via npm command, execute the command given below:
+
+
+    $ npm install cors
+
+
+    This can be used as shown below:
+
+
+    var express =  require(''express'')
+
+
+    , cors =  require(''cors'')
+
+
+    , application = express();
+
+
+    application.use(cors());
+
+
+    application.get(''/products/:id'', function(req, res, next){
+
+
+    res.json({msg: ''This has CORS enabled for all the origins!''});
+
+
+    });
+
+
+    application.listen(80, function(){
+
+
+    console.log('' web server which is CORS enabled listening on port 80'');
+
+
+    });
+
+
+    To enable CORS for a single route, do it as follows:
+
+
+    var express =  require(''express'')
+
+
+    , cors =  require(''cors'')
+
+
+    , application = express();
+
+
+    application.get(''/products/:id'', cors(), function(req, res, next){
+
+
+    res.json({msg: ''This has the CORS enabled for all the origins!''});
+
+
+    });
+
+
+    application.listen(80, function(){
+
+
+    console.log('' web server which is CORS enabled now listening on port 80'');
+
+
+    });
+
+
+    To configure the CORS, do it as follows:
+
+
+    var express =  require(''express'')
+
+
+    , cors =  require(''cors'')
+
+
+    , application = express();
+
+
+    var cOptions = {
+
+
+    origin: ''http://sample.com''
+
+
+    };
+
+
+    application.get(''/products/:id'', cors(cOptions), function(req, res, next){
+
+
+    res.json({msg: ''This has CORS enabled only for sample.com.''});
+
+
+    });
+
+
+    application.listen(80, function(){
+
+
+    console.log('' web server which is CORS-enabled is now listening on port 80'');
+
+
+    });
+
+
+    ### Configuration of CORS w/ Dynamic Origin can be done as follows:
+
+
+    var express =  require(''express'')
+
+
+    , cors =  require(''cors'')
+
+
+    , application = express();
+
+
+    var whitelist = [''http://sample1.com'', ''http://sample2.com''];
+
+
+    var cOptions = {
+
+
+    origin:  function(origin, callback){
+
+
+    var orIsWhitelisted = whitelist.indexOf(origin) !==  -1;
+
+
+    callback(null, orIsWhitelisted);
+
+
+    }
+
+
+    };
+
+
+    application.get(''/products/:id'', cors(cOptions), function(req, res, next){
+
+
+    res.json({msg: ''This has CORS enabled for the whitelisted domain.''});
+
+
+    });
+
+
+    application.listen(80, function(){
+
+
+    console.log(''CORS-enabled web server listening on port 80'');
+
+
+    });
+
+
+    How to enable CORS Pre-Flight
+
+
+    Certain requests for CORS are considered to be complex, and these need an initial
+    OPTIONS request. A CORS request which uses the HTTP verb is considered to be complex
+    compared to the one which uses POST/GET/HEAD or the one using custom headers.
+    For pre-fighting to be enabled, a new OPTIONS handler has to be added for the
+    route which needs to be supported. This is shown below:
+
+
+    var express =  require(''express'')
+
+
+    , cors =  require(''cors'')
+
+
+    , application = express();
+
+
+    application.options(''/products/:id'', cors()); // enabling a pre-flight request
+    for the DELETE request
+
+
+    application.del(''/products/:id'', cors(), function(req, res, next){
+
+
+    res.json({msg: ''This has CORS enabled for all the origins!''});
+
+
+    });
+
+
+    application.listen(80, function(){
+
+
+    console.log('' The web server which is CORS-enabled is listening on port 80'');
+
+
+    });
+
+
+    Pre-flight can also be enabled across the board as shown below:
+
+
+    application.options(''*'', cors()); // including before the other routes
+
+
+    Asynchronous configuration of CORS
+
+
+    var express =  require(''express'')
+
+
+    , cors =  require(''cors'')
+
+
+    , application = express();
+
+
+    var whitelist = [''http://sample1.com'', ''http://sample2.com''];
+
+
+    var cOptionsDelegate =  function(req, callback){
+
+
+    var cOptions;
+
+
+    if(whitelist.indexOf(req.header(''Origin'')) !==  -1){
+
+
+    cOptions = { origin:  true }; // reflecting (enabling) the requested origin in
+    our CORS response
+
+
+    }else{
+
+
+    cOptions = { origin:  false }; // disabling the CORS for our request
+
+
+    }'
+  toc: []
+  trans: "\n\n你必须注意，整个话对象（session object）将被编码并存储在 cookie 中。不同浏览器的 cookie 最大大小限制可能会被超过。如果话对象足够大，并在编码后超过了浏览器的限制，在大多数情况下，浏览器将拒绝或避免存储该\
+    \ cookie。\n\n# 第 5 章- ExpressJS 中的 Morgan\n\n这是一个用于 Node.js HTTP 请求的日志中间件。要在你的程序中使用该\
+    \ API，你需要像下面所示使用 `require` 关键字：\n\n```javascript\nvar morgan =  require('morgan')\n\
+    ```\n\n使用以下格式来创建它：\n\n### `morgan(format, options)`\n\n如上述格式所示，我们有两个参数或参数。\n\n\
+    Morgan 在 `options` 对象中接受以下属性：\n\n#### Immediate（立即）\n\n日志行应该在请求时写入，而不是在响应时写入。这意味着即使服务器本身崩溃，请求也始终会被记录，但我们无法记录来自响应的数据。\n\
+    \n#### Skip（跳过）\n\n这是一个函数，用于确定是否跳过日志记录。默认值为 `false`。请考虑下例示例，它展示了如何调用该函数：\n\n```javascript\n\
+    // 示例：仅记录错误响应的日志\nmorgan('combined', {\nskip:  function (req, res) { return res.statusCode\
+    \ <  400 }\n})\n```\n\n#### Stream（流）\n\n这是一个用于写入日志行的输出流，其默认值为 `process.stdout`。\n\
+    \n考虑下例示例，它展示了如何以 Apache 组合格式将所有请求记录到 STDOUT。示例如下：\n\n```javascript\nvar express\
+    \ =  require('express')\nvar morgan =  require('morgan')\nvar application = express()\n\
+    \napplication.use(morgan('combined'))\n\napplication.get('/', function (req, res)\
+    \ {\n  res.send('hello, there!')\n})\n```\n\n### 原生 http 服务器\n\n下面提供了一个演示如何实现此操作的示例：\n\
+    \n```javascript\nvar fhandler =  require('finalhandler')\nvar http =  require('http')\n\
+    var morgan =  require('morgan')\n// 创建“中间件”\nvar logger = morgan('combined')\n\
+    \nhttp.createServer(function (req, res) {\n  var done = finalhandler(req, res)\n\
+    \  logger(req, res, function (error) {\n    if (error) return done(error)\n  \
+    \  // 响应请求\n    res.setHeader('content-type', 'text/plain')\n    res.end('hello,\
+    \ there!')\n  })\n})\n```\n\n#### 将日志写入文件\n\n考虑下例示例，它展示了如何以 Apache 组合格式将请求记录到我们的文件\
+    \ `access.log` 中：\n\n```javascript\nvar express =  require('express')\nvar fs\
+    \ =  require('fs')\nvar morgan =  require('morgan')\nvar application = express()\n\
+    \n// 创建一个写入流（追加模式）\nvar aLogStream = fs.createWriteStream(__dirname  + '/access.log',\
+    \ {flags: 'a'})\n\n// 设置记录器\napplication.use(morgan('combined', {stream: aLogStream}))\n\
+    application.get('/', function (req, res) {\n  res.send('hello, there!')\n})\n\
+    ```\n\n#### 日志文件轮转\n\n在下例示例中，应用程序将使用 `file-stream-rotator` 模块以 Apache 组合格式将所有请求记录到我们目录\
+    \ `log/` 中的任何一个日志文件中。示例所示：\n\n```javascript\nvar FStreamRotator =  require('file-stream-rotator')\n\
+    var express =  require('express')\nvar fs =  require('fs')\nvar morgan =  require('morgan')\n\
+    var application = express()\nvar lDirectory =  __dirname  + '/log'\n\n// 确保日志目录存在\n\
+    fs.existsSync(lDirectory) || fs.mkdirSync(lDirectory)\n\n// 创建轮转写入流\nvar aLogStream\
+    \ = FStreamRotator.getStream({\n  filename: lDirectory + '/access-%DATE%.log',\n\
+    \  frequency: 'daily',\n  verbose:  false\n})\n\n// 设置记录器\napplication.use(morgan('combined',\
+    \ {stream: aLogStream}))\napplication.get('/', function (req, res) {\n  res.send('hello,\
+    \ there!')\n})\n```\n\n#### 自定义 token 格式\n\n在下一个应用中，我们将使用自定义 token 格式。它的工作原理为所有请求添加一个\
+    \ ID，然后通过 `:id` token 显示它。以下是该应用：\n\n```javascript\nvar express =  require('express')\n\
+    var morgan =  require('morgan')\nvar id =  require('node-uuid')\n\nmorgan.token('id',\
+    \ function getId(req) {\n  return req.id\n})\n\nvar application = express()\n\
+    application.use(assignid)\napp.use(morgan(':id :method :url :response-time'))\n\
+    app.get('/', function (req, res) {\n  res.send('hello, world!')\n})\n\nfunction\
+    \ assignId(req, res, next) {\n  req.id  = uuid.v4()\n  next()\n}\n```\n\n# 第 6\
+    \ 章- CORS\n\n这是一个 Node.js 包，提供了一个 ExpressJS/Connect 中间件，用于启用 CORS 的各种选项。\n\n要通过\
+    \ npm 命令安装它，请执行下面的命令：\n\n```bash\n$ npm install cors\n```\n\n可以像下面所示使用：\n\n```javascript\n\
+    var express =  require('express')\nvar cors =  require('cors')\nvar application\
+    \ = express()\n\napplication.use(cors())\n\napplication.get('/', function (req,\
+    \ res) {\n  res.send('hello, world!')\n})\n```\n\n```\n路由\n```\n\n#### 为所有路由启用\
+    \ CORS\n```javascript\nvar express =  require('express')\nvar cors =  require('cors')\n\
+    var application = express()\n\napplication.use(cors())\n\napplication.get('/',\
+    \ function (req, res) {\n  res.send('hello, world!')\n})\n```\n\n#### 为特定路由启用\
+    \ CORS\n```javascript\nvar express =  require('express')\nvar cors =  require('cors')\n\
+    var application = express()\n\napplication.get('/products/:id', cors(), function\
+    \ (req, res) {\n  res.send('hello, world!')\n})\n```\n\n#### 为单条路由启用 CORS\n```javascript\n\
+    var express =  require('express')\nvar cors =  require('cors')\nvar application\
+    \ = express()\n\napplication.get('/products/:id', cors(), function (req, res)\
+    \ {\n  res.send('hello, world!')\n})\n```\n\n#### 配置 CORS\n```javascript\nvar\
+    \ express =  require('express')\nvar cors =  require('cors')\nvar application\
+    \ = express()\n\nvar cOptions = {\n  origin: 'http://sample.com'\n};\n\napplication.get('/products/:id',\
+    \ cors(cOptions), function (req, res) {\n  res.send('hello, world!')\n})\n```\n\
+    \n#### 动态源配置 CORS\n```javascript\nvar express =  require('express')\nvar cors\
+    \ =  require('cors')\nvar application = express();\n\nvar whitelist = ['http://sample1.com',\
+    \ 'http://sample2.com'];\n\nvar cOptions = {\n  origin: function(origin, callback){\n\
+    \    var orIsitelisted = whitelist.indexOf(origin) !== -1;\n    callback(null,\
+    \ orIsitelisted);\n  }\n};\n\napplication.get('/products/:id', cors(cOptions),\
+    \ function (req, res) {\n  res.send('hello, world!')\n})\n```\n\n### 如何启用 CORS\
+    \ 预检（Pre-Flight）\n\n某些 CORS 请求被认为是复杂的，这些请求需要初始的 OPTIONS 请求。使用 HTTP 方法的 CORS 请求与使用\
+    \ POST/GET/HEAD 或自定义标头的请求相比是复杂的。为了启用预检，必须为需要支持的路由添加新的 OPTIONS 处理器。所示：\n\n```javascript\n\
+    var express =  require('express')\nvar cors =  require('cors')\nvar application\
+    \ = express();\n\napplication.options('/products/:id', cors()); // 为 DELETE 请求启用预检请求\n\
+    application.del('/products/:id', cors(), function(req, res, next){\n  res.send('hello,\
+    \ world!')\n});\n```\n\n预检也可以在全局范围内启用，如下所示：\n\n```javascript\napplication.options('*',\
+    \ cors()); // 在其他路由之前包含\n```\n\n#### CORS 的异步配置\n\n```javascript\nvar express\
+    \ =  require('express')\nvar cors =  require('cors')\nvar application = express();\n\
+    \nvar whitelist = ['http://sample1.com', 'http://sample2.com'];\n\nvar cOptionsDelegate\
+    \ =  function(req, callback){\n  var cOptions;\n  if(whitelist.indexOf(req.header('Origin'))\
+    \ !== -1){\n    cOptions = { origin:  true }; // 在我们的 CORS 响应中反射（启用）请求的源\n  }else{\n\
+    \    cOptions = { origin:  false }; // 禁用我们请求的 CORS\n  }\n  callback(null, cOptions);\n\
+    }\n\napplication.get('/products/:id', cors(cOptionsDelegate), function (req, res)\
+    \ {\n  res.send('hello, world!')\n})\n```\n\n"
+- fmt: "\n```javascript\ncallback(null, cOptions); // callback needs two parameters:\
+    \ error and the options\n\n};\n\napplication.get('/products/:id', cors(cOptionsDelegate),\
+    \ function(req, res, next){\n\n  res.json({msg: 'This has CORS enabled for the\
+    \ whitelisted domain.'});\n\n});\n\napplication.listen(80, function(){\n\n  console.log('\
+    \ web server  with CORS enabled is listening on port 80');\n\n});\n```\n\nThat\
+    \ is how it can be done.\n\n# Chapter 7- Express-Paginate\n\nThis is to be used\
+    \ together with the pagination plugins for databases such as the MongoDB.\n\n\
+    To install, execute the command given below:\n\n```bash\nnpm install -S express-paginate\n\
+    ```\n\nFor it to be used in the program, one has to use the “require” keyword\
+    \ so as to include it into the program This is shown below:\n\n```javascript\n\
+    var paginate = require('express-paginate');\n```\n\nWith `paginate`, a new instance\
+    \ of `express-paginate` will be created. Consider the example given below:\n\n\
+    ```javascript\n// # app.js\n\nvar express = require('express');\n\nvar paginate\
+    \ = require('express-paginate');\n\nvar application = express();\n\n// keeping\
+    \ this before all the routes that will use pagination\n\napplication.use(paginate.middleware(10,\
+    \ 50));\n\napplication.get('/users', function(req, res, next) {\n  // we are assuming\
+    \ that `Users`was previously defined in our example\n  // as `var Users = database.model('Users')`\
+    \ for those using `mongoose`\n  // and that the Mongoose plugin `mongoose-paginate`\
+    \ has been added.\n  // to the model for Users via the `User.plugin(require('mongoose-paginate'))`\n\
+    \  Users.paginate({}, { page: req.query.page, limit: req.query.limit }, function(error,\
+    \ users, pageCount, itemCount) {\n    if (error) return next(error);\n    res.format({\n\
+    \      html: function() {\n        res.render('users', {\n          users: users,\n\
+    \          pageCount: pageCount,\n          itemCount: itemCount\n        });\n\
+    \      },\n      json: function() {\n        // Created by the API response for\
+    \ list objects\n        res.json({\n          object: 'list',\n          has_more:\
+    \ paginate.hasNextPages(req)(pageCount),\n          data: users\n        });\n\
+    \      }\n    });\n  });\n});\n\napplication.listen(3000);\n```\n\nThe second\
+    \ code for the app should be as follows:\n\n```jade\n//- users.jade\n\nh1 Users\n\
+    \n//- a link for sorting by name will be created by this\n//- you must have noticed\
+    \ that we only have to pass the querystring param\n//- which is to be modified\
+    \ here, but not the entire querystring\na(href=paginate.href({ sort: 'name' }))\
+    \ Sorting by name\n\n//- this will assume that you have `?age=1` or `?age=-1`\
+    \ in the querystring\n//- so the values will be negated by this and you will be\
+    \ given\n//- an opposite sorting order ( that is, desc with -1 or asc with 1)\n\
+    a(href=paginate.href({ sort: req.query.age === '1' ? -1 : 1 })) Sort by age\n\
+    ul\n\neach myuser in users\n  li= myuser.email\n\ninclude _paginate\n```\n\nThe\
+    \ third code should be as follows:\n\n```jade\n//- _paginate.jade\n\n//- In this\
+    \ example, we will make use of the Bootstrap 3.x pagination classes\nif paginate.hasPreviousPages\
+    \ || paginate.hasNextPages(pageCount)\n  .navigation.well-sm#pagination\n    ul.pager\n\
+    \      if paginate.hasPreviousPages\n        li.previous\n          a(href=paginate.href(true)).prev\n\
+    \          i.fa.fa-arrow-circle-left\n          | Previous\n      if paginate.hasNextPages(pageCount)\n\
+    \        li.next\n          a(href=paginate.href()).next\n          | Next&nbsp;\n\
+    \          i.fa.fa-arrow-circle-right\n```\n\n# Chapter 8- Multer\n\nThis is middleware\
+    \ in Node.js which is used to handle “multipart/form-data.” This is used for the\
+    \ purpose of uploading files to the server. To maximize its efficiency, it is\
+    \ built on top of “busboy.” You have to note that any form which is not multipart\
+    \ cannot be handled by Multer.\n\nThe installation of this can be done by execution\
+    \ of the following command:\n\n```bash\nnpm install --save multer\n```\n\nIt works\
+    \ by adding a “body” and a “file/files” object to the “request” object. In the\
+    \ “body” object, the values for the form fields will be stored. The “file/files”\
+    \ object will contain the files which have been uploaded to the server.\n\nConsider\
+    \ the example given below which shows how this can be done:\n\n```javascript\n\
+    var express = require('express')\nvar multer = require('multer')\nvar uploadfile\
+    \ = multer({ dest: 'uploads/' })\nvar application = express()\n\napplication.post('/profile',\
+    \ uploadfile.single('avatar'), function (req, res, next) {\n  // req.file is our\
+    \ `avatar` file\n  // req.body is for holding the text fields, if any are available\n\
+    })\n\napplication.post('/photos/upload', uploadfile.array('photos', 12), function\
+    \ (req, res, next) {\n  // req.files is an array of `photos` for files\n  // req.body\
+    \ will contain the text fields, if there were any\n})\n\nvar cUpload = uploadfile.fields([{\
+    \ name: 'avatar', maxCount: 1 }, { name: 'gallery', maxCount: 8 }])\napplication.post('/cool-profile',\
+    \ cUpload, function (req, res, next) {\n  // req.files is our object\n  // req.files\
+    \ is our object\n  // req.files is our object\n})\n```\n\n`req.file` is our `avatar`\
+    \ file. `req.body` is for holding the text fields, if any are available. `req.files`\
+    \ is an array of `photos` for files. `req.body` will contain the text fields,\
+    \ if there were any.\n\n```javascript\nvar express = require('express')\nvar multer\
+    \ = require('multer')\nvar application = express()\n\napplication.post('/profile',\
+    \ uploadfile.single('avatar'), function (req, res, next) {\n  // req.file is our\
+    \ `avatar` file\n  // req.body is for holding the text fields, if any are available\n\
+    })\n\n```.post('/('//profile', uploadfile.array('photos', 12), function (req,\
+    \ res, next) {\n  // req.files is an array of `photos` for files\n  // req.body\
+    \ will contain the text fields, if there were any\n})\n```\n\n`cUpload` is `uploadfile.fields([{\
+    \ name: 'avatar', maxCount: 1 }, { name: 'gallery', maxCount: 8 }])`. `application.post('/cool-profile',\
+    \ cUpload, function (req, res, next) { ... })` handles the `body` and `file/files`\
+    \ object to the `request` object. In the `body` object, the values for the form\
+    \ fields will be stored. The `file/files` object will contain the files which\
+    \ have been uploaded to the server.\n\n`req.files` is our object. `req.files`\
+    \ is our object. `req.files` is our object.\n\nWhen an error has been encountered,\
+    \ the Multer will pass it to Express. The standard Express error way can be used\
+    \ for the purpose of displaying an error.\n\nThese methods include `single()`,\
+    \ `array()` and `fields()`. Consider the example below which shows how `array()`\
+    \ can be used:\n\n```javascript\nvar express = require('express')\nvar application\
+    \ = express()\nvar multer = require('multer')\n\napplication.post('/profile',\
+    \ uploadfile.single('avatar'), function (req, res, next) {\n  // req.file is our\
+    \ `avatar` file\n  // req.body is for holding the text fields, if any are available\n\
+    })\n```\n\n`uploadfile` is `multer({ dest: 'uploads/' })`. In a normal web application,\
+    \ only the `dest` property might be required, and this can be configured as shown:\n\
+    \n```javascript\nvar uploadfile = multer({ dest: 'uploads/' })\n```\n\nFor those\
+    \ who are in need of exercising a greater control on your files, use the `storage`\
+    \ property other than the `dest` property. `DiskStorage` and `MemoryStorage` storage\
+    \ engines are shipped with Multer. You can use third parties so as to access more\
+    \ storage engines.\n\nIf you need to exercise full control of your files which\
+    \ are stored on the disk, use the disk engine. This is shown below:\n\n```javascript\n\
+    var storage = multer.diskStorage({\n  destination: function (req, file, cb) {\n\
+    \    cb(null, '/tmp/file-uploads')\n  },\n  filename: function (req, file, cb)\
+    \ {\n    cb(null, file.fdname + '-' + Date.now())\n  }\n})\n\nvar uploadfile =\
+    \ multer({ storage: storage })\n```\n\nThe only two options which are available\
+    \ include the `filename` and `destination`. They are the functions which determine\
+    \ how the files are to be stored. The `destination` property will determine the\
+    \ folder in the directory in which the uploaded file is to be stored. This can\
+    \ also be specified as a path in the program. If this property is not specified,\
+    \ then the default path is used in the operating system.\n\n### File Filter\n\n\
+    This property can be used for setting the files which are to be uploaded and the\
+    \ ones which are to be skipped. This function should be used as shown in the example\
+    \ given below:\n\n```javascript\nfunction fileFilter (req, file, cb) {\n  // The\
+    \ function will call the `cb` with a boolean\n  // to indicate that the file should\
+    \ be accepted\n  // if the file is to be rejected, pass `false`, like so:\n  cb(null,\
+    \ false)\n  // for the file to be accepted, pass `true`, like so:\n  cb(null,\
+    \ true)\n  // you can pass an error since something may go wrong at some point:\n\
+    \  cb(new Error('I have no clue!'))\n}\n```\n"
+  raw: 'callback(null, cOptions); // callback needs two parameters: error and the
+    options
+
+
+    };
+
+
+    application.get(''/products/:id'', cors(cOptionsDelegate), function(req, res,
+    next){
+
+
+    res.json({msg: ''This has CORS enabled for the whitelisted domain.''});
+
+
+    });
+
+
+    application.listen(80, function(){
+
+
+    console.log('' web server  with CORS enabled is listening on port 80'');
+
+
+    });
+
+
+    That is how it can be done.
+
+
+    # Chapter 7- Express-Paginate
+
+
+    This is to be used together with the pagination plugins for databases such as
+    the MongoDB.
+
+
+    To install, execute the command given below:
+
+
+    npm install -S express-paginate
+
+
+    For it to be used in the program, one has to use the “require” keyword so as to
+    include it into the program This is shown below:
+
+
+    var paginate =  require(''express-paginate'');
+
+
+    With “paginate,” a new instance of “express-paginate” will be created. Consider
+    the example given below:
+
+
+    // # app.js
+
+
+    var express =  require(''express'');
+
+
+    var paginate =  require(''express-paginate'');
+
+
+    var application = express();
+
+
+    // keeping this before all the routes that will use pagination
+
+
+    application.use(paginate.middleware(10, 50));
+
+
+    application.get(''/users'', function(req, res, next) {
+
+
+    // we are assuming that `Users`was previously defined in our example
+
+
+    // as `var Users = database.model(''Users'')` for those using `mongoose`
+
+
+    // and that the Mongoose plugin `mongoose-paginate` has been added.
+
+
+    // to the model for Users via the `User.plugin(require(''mongoose-paginate''))`
+
+
+    Users.paginate({}, { page: req.query.page, limit: req.query.limit }, function(error,
+    users, pageCount, itemCount) {
+
+
+    if (error) return next(error);
+
+
+    res.format({
+
+
+    html:  function() {
+
+
+    res.render(''users'', {
+
+
+    users: users,
+
+
+    pageCount: pageCount,
+
+
+    itemCount: itemCount
+
+
+    });
+
+
+    },
+
+
+    json:  function() {
+
+
+    // Created by the API response for list objects
+
+
+    res.json({
+
+
+    object: ''list'',
+
+
+    has_more: paginate.hasNextPages(req)(pageCount),
+
+
+    data: users
+
+
+    });
+
+
+    }
+
+
+    });
+
+
+    });
+
+
+    });
+
+
+    application.listen(3000);
+
+
+    The second code for the app should be as follows:
+
+
+    //- users.jade
+
+
+    h1 Users
+
+
+    //- a link for sorting by name will be created by this
+
+
+    //- you must have noticed that we only have to pass the querystring param
+
+
+    //- which is to be modified here, but not the entire querystring
+
+
+    a(href=paginate.href({ sort: ''name'' })) Sorting by name
+
+
+    //- this will assume that you have `?age=1` or `?age=-1` in the querystring
+
+
+    //- so the values will be negated by this and you will be given
+
+
+    //- an opposite sorting order ( that is, desc with -1 or asc with 1)
+
+
+    a(href=paginate.href({ sort: req.query.age === ''1'' ?  -1  :  1 })) Sort by age
+
+
+    ul
+
+
+    each myuser in users
+
+
+    li= myuser.email
+
+
+    include _paginate
+
+
+    The third code should be as follows:
+
+
+    //- _paginate.jade
+
+
+    //- In this example, we will make use of the Bootstrap 3.x pagination classes
+
+
+    if paginate.hasPreviousPages || paginate.hasNextPages(pageCount)
+
+
+    .navigation.well-sm#pagination
+
+
+    ul.pager
+
+
+    if paginate.hasPreviousPages
+
+
+    li.previous
+
+
+    a(href=paginate.href(true)).prev
+
+
+    i.fa.fa-arrow-circle-left
+
+
+    |  Previous
+
+
+    if paginate.hasNextPages(pageCount)
+
+
+    li.next
+
+
+    a(href=paginate.href()).next
+
+
+    | Next&nbsp;
+
+
+    i.fa.fa-arrow-circle-right
+
+
+    # Chapter 8- Multer
+
+
+    This is  middleware in Node.js which is used to handle “multipart/form-data.”
+    This is used for the purpose of uploading files to the server. To maximize its
+    efficiency, it is built on top of “busboy.”  You have to note that any form which
+    is not multipart cannot be handled by Multer.
+
+
+    The installation of this can be done by execution of the following command:
+
+
+    $ npm install --save multer
+
+
+    It works by adding a “body” and a “file/files” object to the “request” object.
+    In the “body” object, the values for the form fields will be stored. The “file/files”
+    object will contain the files which have been uploaded to the server.
+
+
+    Consider the example given below which shows how this can be done:
+
+
+    var express =  require(''express'')
+
+
+    var multer =  require(''multer'')
+
+
+    var uploadfile = multer({ dest: ''uploads/'' })
+
+
+    var application = express()
+
+
+    application.post(''/profile'', uploadfile.single(''avatar''), function (req, res,
+    next) {
+
+
+    // req.file is our `avatar` file
+
+
+    // req.body is for holding the text fields, if any are available
+
+
+    })
+
+
+    application.post(''/photos/upload'', uploadfile.array(''photos'', 12), function
+    (req, res, next) {
+
+
+    // req.files is an array of `photos` for files
+
+
+    // req.body will contain the text fields, if there were any
+
+
+    })
+
+
+    var cUpload = uploadfile.fields([{ name: ''avatar'', maxCount:  1 }, { name: ''gallery'',
+    maxCount:  8 }])
+
+
+    application.post(''/cool-profile'', cUpload, function (req, res, next) {
+
+
+    // req.files is our object (String -> Array) where fieldname is our key, and the
+    value is an array of the files
+
+
+    //
+
+
+    // example
+
+
+    //  req.files[''avatar''][0] -> File
+
+
+    //  req.files[''gallery''] -> Array
+
+
+    //
+
+
+    // req.body which contains the text fields, if any were available
+
+
+    })
+
+
+    For those who are in need of handling a text which is in multipart form, any of
+    the Multer methods can be used. These methods include the “single(),” “.array(),”
+    and “fields().” Consider the example given below, which shows how the “.array()”
+    can be used:
+
+
+    var express =  require(''express'')
+
+
+    var application = express()
+
+
+    var multer =  require(''multer'')
+
+
+    var uploadfile = multer()
+
+
+    application.post(''/profile'', uploadfile.array(), function (req, res, next) {
+
+
+    // req.body has our text fields
+
+
+    })
+
+
+    With Multer, an options object is accepted, in which the most basic one is our
+    “dest” property, and it specifies the destination of our uploaded files. If the
+    options object is omitted, the files which you upload will be kept in the memory
+    other than in the disk.
+
+
+    To avoid conflicts brought by naming, the Multer will rename the files and this
+    is its default setting. The rest of the function can be customized according to
+    what you need.
+
+
+    There exists a variety of options which can be passed to the Multer, so make sure
+    that you understand how these can be passed.
+
+
+    In a normal web application, only the “dest” property might be required, and this
+    can be configured as shown below:
+
+
+    var uploadfile = multer({ dest: ''uploads/'' })
+
+
+    For those who are in need of exercising a greater control on your uploaded files,
+    just use the “storage” property other than the “dest” property. “DiskStorage”
+    and “MemoryStorage” storage engines are shipped with Multer. You can use third
+    parties so as to access more storage engines.
+
+
+    If you need to exercise full control of your files which are stored on the disk,
+    use the disk storage engine. This is shown below:
+
+
+    var storage = multer.diskStorage({
+
+
+    destination:  function (req, file, cb) {
+
+
+    cb(null, ''/tmp/file-uploads'')
+
+
+    },
+
+
+    filename:  function (req, file, cb) {
+
+
+    cb(null, file.fdname + ''-'' +  Date.now())
+
+
+    }
+
+
+    })
+
+
+    var uploadfile = multer({ storage: storage })
+
+
+    The only two options which are available include the “filename” and “destination.”
+    They are the functions which determine how the files are to be stored. The”destination”
+    property will determine the folder in the directory in which the uploaded file
+    is to be stored.  This can also be specified as a path in the program. If this
+    property is not specified, then the default path is used in the operating system.
+
+
+    File Filter
+
+
+    This property can be used for setting the files which are to be uploaded and the
+    ones which are to be skipped. This function should be used as shown in the example
+    given below:
+
+
+    function fileFilter (req, file, cb) {
+
+
+    // The function will call the `cb` with a boolean
+
+
+    // to indicate that the file should be accepted
+
+
+    // if the file is to be rejected, pass `false`, like so:
+
+
+    cb(null, false)
+
+
+    // for the file to be accepted, pass `true`, like so:
+
+
+    cb(null, true)
+
+
+    // you can pass an error since something may go wrong at some point:
+
+
+    cb(new Error(''I have no clue!''))
+
+
+    }
+
+
+    Error Handling
+
+
+    When an error has been encountered, the Multer will pass it to Express. The standard
+    Express error way can be used for the purpose of displaying an error.'
+  toc: []
+  trans: "\n\n```javascript\ncallback(null, cOptions); // callback 需要两个参数：错误和选项\n\n\
+    };\n\napplication.get('/products/:id', cors(cOptionsDelegate), function(req, res,\
+    \ next){\n\n  res.json({msg: '该白名单域名已启用 CORS。'});\n\n});\n\napplication.listen(80,\
+    \ function(){\n\n  console.log('开启了 CORS 的 Web 服务器正在监听端口 80');\n\n});\n```\n\n\
+    实现方法如下。\n\n# 第 7 章- Express-Paginate\n\n此模块与 MongoDB 等数据库的分页插件配合使用。\n\n要安装，请执行以下命令：\n\
+    \n```bash\nnpm install -S express-paginate\n```\n\n要在程序中使用它，必须使用“require”关键字将其包含在程序中。如下所示：\n\
+    \n```javascript\nvar paginate = require('express-paginate');\n```\n\n使用 `paginate`\
+    \ 将创建一个新的 `express-paginate` 实例。考虑下面的示例：\n\n```javascript\n// # app.js\n\nvar\
+    \ express = require('express');\n\nvar paginate = require('express-paginate');\n\
+    \nvar application = express();\n\n// 保持在所有将使用分页的路由之前\n\napplication.use(paginate.middleware(10,\
+    \ 50));\n\napplication.get('/users', function(req, res, next) {\n  // 我们假设 `Users`\
+    \ 在之前的示例中已经定义\n  // 对于使用 `mongoose` 的用户，为 `var Users = database.model('Users')`\n\
+    \  // 并且 Mongoose 插件 `mongoose-paginate` 已经通过\n  // 通过 `User.plugin(require('mongoose-paginate'))`\
+    \ 添加到 Users 模型中\n  Users.paginate({}, { page: req.query.page, limit: req.query.limit\
+    \ }, function(error, users, pageCount, itemCount) {\n    if (error) return next(error);\n\
+    \    res.format({\n      html: function() {\n        res.render('users', {\n \
+    \         users: users,\n          pageCount: pageCount,\n          itemCount:\
+    \ itemCount\n        });\n      },\n      json: function() {\n        // 为列表对象创建\
+    \ API 响应\n        res.json({\n          object: 'list',\n          has_more: paginate.hasNextPages(req)(pageCount),\n\
+    \          data: users\n        });\n      }\n    });\n  });\n});\n\napplication.listen(3000);\n\
+    ```\n\n应用的第二个代码应该如下：\n\n```jade\n//- users.jade\n\nh1 用户\n\n//- 此处将创建一个按名称排序的链接\n\
+    //- 你可能已经注意到我们只需要传递查询字符串参数\n//- 该参数在此处进行修改，而不是修改整个查询字符串\na(href=paginate.href({\
+    \ sort: 'name' })) 按名称排序\n\n//- 这将假设你在查询字符串中有 `?age=1` 或 `?age=-1`\n//- 所以这些值会被此反转，你将得到\n\
+    //- 相反的排序顺序（即 -1 为倒序，1 为升序）\na(href=paginate.href({ sort: req.query.age === '1'\
+    \ ? -1 : 1 })) 按年龄排序\nul\n\neach myuser in users\n  li= myuser.email\n\ninclude\
+    \ _paginate\n```\n\n第三段代码应该如下：\n\n```jade\n//- _paginate.jade\n\n// 在此示例中，我们将利用\
+    \ Bootstrap 3.x 分页类\nif paginate.hasPreviousPages || paginate.hasNextPages(pageCount)\n\
+    \  .navigation.well-sm#pagination\n    ul.pager\n      if paginate.hasPreviousPages\n\
+    \        li.previous\n          a(href=paginate.href(true)).prev\n          i.fa.fa-arrow-circle-left\n\
+    \          | 上页\n      if paginate.hasNextPages(pageCount)\n        li.next\n\
+    \          a(href=paginate.href()).next\n          | 下页&nbsp;\n          i.fa.fa-arrow-circle-right\n\
+    ```\n\n# 第 8 章- Multer\n\n这是 Node.js 中的一个中间件，用于处理“multipart/form-data”。它用于将文件上传到服务器。为了最大化其效率，它构建在“busboy”之上。你必须注意，任何非\
+    \ multipart 表单都无法由 Multer 处理。\n\n可以通过执行以下命令进行安装：\n\n```bash\nnpm install --save\
+    \ multer\n```\n\n它通过通过向“request”对象添加一个“body”和一个“file/files”对象来工作。在“body”对象中将存储表单字段的值。“file/files”对象将包含已上传服务器的文件。\n\
+    \n考虑下面的示例，它展示了如何实现：\n\n```javascript\nvar express = require('express')\nvar multer\
+    \ = require('multer')\nvar uploadfile = multer({ dest: 'uploads/' })\nvar application\
+    \ = express()\n\napplication.post('/profile', uploadfile.single('avatar'), function\
+    \ (req, res, next) {\n  // req.file 是我们的 `avatar` 文件\n  // req.body 用于持有文本字段，如果有的话\n\
+    })\n\napplication.post('/photos/upload', uploadfile.array('photos', 12), function\
+    \ (req, res, next) {\n  // req.files 是一个包含 `photos` 文件的数组\n  // req.body 将包含文本字段，如果有的话\n\
+    })\n\nvar cUpload = uploadfile.fields([{ name: 'avatar' }])\n```\n\n"
+- fmt: "\nFor you to catch the errors which are originating from the `Multer`, just\
+    \ call the middleware function on your own. This is shown in the example given\
+    \ below:\n\n```javascript\nvar uploadfile = multer().single('avatar')\n\napplication.post('/profile',\
+    \ function (req, res) {\n  uploadfile(req, res, function (error) {\n    if (error)\
+    \ {\n      // An error has occurred when uploading\n      return\n    }\n    //\
+    \ Everything was okay\n  })\n})\n```\n\nThat is how it can be used.\n\n# Chapter\
+    \ 9- Compression\n\nThis is middleware available in Node.js. It supports the following\
+    \ compression codes:\n\n*   `deflate`\n*   `gzip`\n\nTo install this middleware\
+    \ in your system, execute the following command:\n\n```bash\n$ npm install compression\n\
+    ```\n\nTo include this API in your program, use the `require` keyword as shown\
+    \ below:\n\n```javascript\nvar compression = require('compression')\n```\n\nThere\
+    \ are different options which can be used so as to return the compression middleware.\n\
+    \n### .filter\n\nThis is the default filter function. It is used for construction\
+    \ of a custom filter function which will be an extension of our default function.\
+    \ The example given below shows how this can be used:\n\n```javascript\napplication.use(compression({filter:\
+    \ compress}))\n\nfunction compress(req, res) {\n  if (req.headers['x-no-compression'])\
+    \ {\n    // responses having this header request should not be compressed.\n \
+    \   return false\n  }\n  // fallback to standard filter function\n  return compression.filter(req,\
+    \ res)\n}\n```\n\n`red.flush()`\n\nWith this module, the response which has been\
+    \ compressed partially is flushed to the client. Let us give examples of these.\n\
+    \n### express/connect\n\nThis module can be used by use of the `app.use`, which\
+    \ is available in either Express and connect. Requests passed through the middleware\
+    \ are always compressed. Consider the example given below which shows how this\
+    \ can be done:\n\n```javascript\nvar compression = require('compression')\nvar\
+    \ express = require('express')\nvar application = express()\n\n// compressing\
+    \ all of the requests\napplication.use(compression())\n\n// adding all the routes\n\
+    ```\n\nThat is how it can be done.\n\n### Server-Sent Events\n\nThe working of\
+    \ this module with server-side is not done out of the box. For content to be compressed,\
+    \ a window for the output has to be buffered up so that we can get a good compression.\n\
+    \nTo do all this, we have to call the `red.flush()` for those who need the data\
+    \ written so as to make to our client. This is shown below:\n\n```javascript\n\
+    var compression = require('compression')\nvar express = require('express')\nvar\
+    \ application = express()\n\n// compressing the responses\napplication.use(compression())\n\
+    \n// the server-sent event stream\napplication.get('/events', function (req, res)\
+    \ {\n  res.setHeader('Content-Type', 'text/event-stream')\n  res.setHeader('Cache-Control',\
+    \ 'no-cache')\n  // sending a ping approx after every 2 seconds\n  var timer =\
+    \ setInterval(function () {\n    res.write('data: ping\\n\\n')\n    // !!! our\
+    \ most important part for the program\n    res.flush()\n  }, 2000)\n  res.on('close',\
+    \ function () {\n    clearInterval(timer)\n  })\n})\n```\n\n# Chapter 10- csurf\n\
+    \nThis is a token middleware for CSRF. It acts as a middleware for protection\
+    \ purposes. For it to be used, one has to begin by initializing a cookie-parser\
+    \ or a session middleware. It can be installed into one’s computer by executing\
+    \ the following command:\n\n```bash\n$ npm install csurf\n```\n\nTo use the API\
+    \ in your program, use the `require` command as shown below:\n\n```javascript\n\
+    var csurf = require('csurf')\n```\n\nThat is how it can be included into the program.\n\
+    \nThe options for this module take multiple and different objects which you can\
+    \ learn how to use.\n\nConsider the example given below, which shows a code for\
+    \ the server-side which can be used for generation of the CSRF form which can\
+    \ be used for posting back. This is the example:\n\n```javascript\nvar cParser\
+    \ = require('cookie-parser')\nvar csrf = require('csurf')\nvar bParser = require('body-parser')\n\
+    var express = require('express')\n\n// setting up the route middlewares\nvar csrfProtection\
+    \ = csrf({ cookie: true })\nvar pForm = bParser.urlencoded({ extended: false })\n\
+    \n// creating an express app\nvar application = express()\n\n// parsing cookies\n\
+    // this is needed because \"cookie\" is true in the csrfProtection\napplication.use(cParser())\n\
+    application.get('/form', csrfProtection, function(req, res) {\n  // passing the\
+    \ csrfToken to our view\n  res.render('send', { csrfToken: req.csrfToken() })\n\
+    })\napplication.post('/process', pForm, csrfProtection, function(req, res) {\n\
+    \  res.send('The data is now being processed')\n})\n```\n\nInside your view, the\
+    \ value for `csrfToken` should be set to the value of a hidden input field `_csrf`.\
+    \ This is shown below:\n\n```html\n<form action=\"/process\" method=\"POST\">\n\
+    \  <input type=\"hidden\" name=\"_csrf\" value=\"{{csrfToken}}\">\n  Best color:\
+    \ <input type=\"text\" name=\"bestColor\">\n  <button type=\"submit\">Submit</button>\n\
+    </form>\n```\n\nThat is how simply it can be done.\n\n### Ignoring the Routes\n\
+    \nIn API areas for the websites in which we will have our requests fully authenticated,\
+    \ the CSRF should be disabled. API routing can be ignored by the use of routers\
+    \ and Express. Consider the example given below, which shows how this can be done:\n\
+    \n```javascript\nvar cParser = require('cookie-parser')\nvar csrf = require('csurf')\n\
+    var bParser = require('body-parser')\nvar express = require('express')\n\n// setting\
+    \ up the route middlewares\nvar csrfProtection = csrf({ cookie: true })\nvar pForm\
+    \ = bParser.urlencoded({ extended: false })\n\n// creating an express app\nvar\
+    \ application = express()\n\n// parsing cookies\n// this is needed because \"\
+    cookie\" is true in the csrfProtection\napplication.use(cParser())\napplication.get('/form',\
+    \ csrfProtection, function(req, res) {\n  // passing the csrfToken to our view\n\
+    \  res.render('send', { csrfToken: req.csrfToken() })\n})\n\n// mounting the api\
+    \ before the csrf\napplication.use(api)\n\n// adding the csrf, after the \"/api\"\
+    \ has been mounted\napplication.use(csrfProtection)\n\napplication.get('/form',\
+    \ function(req, res) {\n  // passing the csrfToken to our view\n  res.render('send',\
+    \ { csrfToken: req.csrfToken() })\n})\n\nfunction createApiRouter() {\n  var router\
+    \ = new express.Router()\n  router.post('/getProfile', function(req, res) {\n\
+    \    res.send(' there is no csrf to get')\n  })\n  return router\n}\n```\n\nThat\
+    \ is how it can be done.\n\n### Custom error handling\n\nWhen the validation of\
+    \ the CSRF has failed, an error with `err.code === 'EBADCFTOKEN'` will be thrown.\
+    \ This can also be used so as to display error messages. Consider the example\
+    \ given below, which shows how this be done:\n\n```javascript\nvar bParser = require('body-parser')\n\
+    var cParser = require('cookie-parser')\nvar csrf = require('csurf')\nvar express\
+    \ = require('express')\nvar application = express()\n\napplication.use(bParser.urlencoded({\
+    \ extended: false }))\napplication.use(cParser())\napplication.use(csrf({ cookie:\
+    \ true }))\n\n// the error handler\napplication.use(function (error, req, res,\
+    \ next) {\n  if (error.code !== 'EBADCFTOKEN') return next(error)\n  // handling\
+    \ the CSRF token errors is here\n  res.status(403)\n  res.send(' The form was\
+    \ tampered with')\n})\n```\n\nThat is how it can be done.\n"
+  raw: 'For you to catch the errors which are originating from the Multer, just call
+    the middleware function on your own. This is shown in the example given below:
+
+
+    var uploadfile = multer().single(''avatar'')
+
+
+    application.post(''/profile'', function (req, res) {
+
+
+    uploadfile(req, res, function (error) {
+
+
+    if (error) {
+
+
+    // An error has occurred when uploading
+
+
+    return
+
+
+    }
+
+
+    // Everything was okay
+
+
+    })
+
+
+    })
+
+
+    That is how it can be used.
+
+
+    # Chapter 9- Compression
+
+
+    This is  middleware available in Node.js. It supports the following compression
+    codes:
+
+
+    *   deflate
+
+
+    *   gzip
+
+
+    To install this middleware in your system, execute the following command:
+
+
+    $ npm install compression
+
+
+    To include this API in your program, use the “require” keyword as shown below:
+
+
+    var compression =  require(''compression'')
+
+
+    There are different options which can be used so as to return the compression
+    middleware.
+
+
+    .filter
+
+
+    This is the default filter function. It is used for construction of a custom filter
+    function which will be an extension of our default function. The example given
+    below shows how this can be used:
+
+
+    application.use(compression({filter: compress}))
+
+
+    function compress(req, res) {
+
+
+    if (req.headers[''x-no-compression'']) {
+
+
+    // responses having this header request should not be compressed.
+
+
+    return  false
+
+
+    }
+
+
+    // fallback to standard filter function
+
+
+    return compression.filter(req, res)
+
+
+    }
+
+
+    red.flush()
+
+
+    With this module, the response which has been compressed partially is flushed
+    to the client. Let us give examples of these.
+
+
+    ### express/connect
+
+
+    This module can be used by use of the “app.use,” which is available in either
+    Express and connect. Requests passed through the middleware are always compressed.
+    Consider the example given below which shows how this can be done:
+
+
+    var compression =  require(''compression'')
+
+
+    var express =  require(''express'')
+
+
+    var application = express()
+
+
+    // compressing all of the requests
+
+
+    application.use(compression())
+
+
+    // adding all the routes
+
+
+    That is how it can be done.
+
+
+    Server-Sent Events
+
+
+    The working of this module with server-side is not done out of the box. For content
+    to be compressed, a window for the output has to be buffered up so that we can
+    get a good compression.
+
+
+    To do all this, we have to call the “red.flush()” for those who need the data
+    written so as to make it to our client. This is shown below:
+
+
+    var compression =  require(''compression'')
+
+
+    var express =  require(''express'')
+
+
+    var application = express()
+
+
+    // compressing the responses
+
+
+    application.use(compression())
+
+
+    // the server-sent event stream
+
+
+    application.get(''/events'', function (req, res) {
+
+
+    res.setHeader(''Content-Type'', ''text/event-stream'')
+
+
+    res.setHeader(''Cache-Control'', ''no-cache'')
+
+
+    // sending a ping approx after every 2 seconds
+
+
+    var timer =  setInterval(function () {
+
+
+    res.write(''data: ping\n\n'')
+
+
+    // !!! our most important part for the program
+
+
+    res.flush()
+
+
+    }, 2000)
+
+
+    res.on(''close'', function () {
+
+
+    clearInterval(timer)
+
+
+    })
+
+
+    })
+
+
+    # Chapter 10- csurf
+
+
+    This is a token middleware for CSRF. It acts as a middleware for protection purposes.
+    For it to be used, one has to begin by initializing a cookie-parser or a session
+    middleware. It can be installed into one’s computer by executing the following
+    command:
+
+
+    $ npm install csurf
+
+
+    To use the API in your program, use the “require” command as shown below:
+
+
+    var csurf =  require(''csurf'')
+
+
+    That is how it can be included into the program.
+
+
+    The options for this module take multiple and different objects which you can
+    learn how to use.
+
+
+    Consider the example given below, which shows a code for the server-side which
+    can be used for generation of the CSRF form which can be used for posting back.
+    This is the example:
+
+
+    var cParser =  require(''cookie-parser'')
+
+
+    var csrf =  require(''csurf'')
+
+
+    var bParser =  require(''body-parser'')
+
+
+    var express =  require(''express'')
+
+
+    // setting up the route middlewares
+
+
+    var csrfProtection = csrf({ cookie:  true })
+
+
+    var pForm = bParser.urlencoded({ extended:  false })
+
+
+    // creating an express app
+
+
+    var application = express()
+
+
+    // parsing cookies
+
+
+    // this is needed because "cookie" is true in the csrfProtection
+
+
+    application.use(cParser())
+
+
+    application.get(''/form'', csrfProtection, function(req, res) {
+
+
+    // passing the csrfToken to our view
+
+
+    res.render(''send'', { csrfToken: req.csrfToken() })
+
+
+    })
+
+
+    application.post(''/process'', pForm, csrfProtection, function(req, res) {
+
+
+    res.send(''The data is now being processed'')
+
+
+    })
+
+
+    Inside your view, the value for csrfToken should be set to the value of a hidden
+    input field “_csrf.” This is shown below:
+
+
+    <form action="/process" method="POST">
+
+
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+
+    Best color: <input type="text" name="bestColor">
+
+
+    <button type="submit">Submit</button>
+
+
+    </form>
+
+
+    That is how simply it can be done.
+
+
+    Ignoring the Routes
+
+
+    In API areas for the websites in which we will have our requests fully authenticated,
+    the CSRF should be disabled. API routing can be ignored by the use of routers
+    and Express. Consider the example given below, which shows how this can be done:
+
+
+    var cParser =  require(''cookie-parser'')
+
+
+    var csrf =  require(''csurf'')
+
+
+    var bParser =  require(''body-parser'')
+
+
+    var express =  require(''express'')
+
+
+    // setting up the route middlewares
+
+
+    var csrfProtection = csrf({ cookie:  true })
+
+
+    var pForm = bParser.urlencoded({ extended:  false })
+
+
+    // creating an  express app
+
+
+    var application = express()
+
+
+    // parsing cookies
+
+
+    // this is needed because "cookie" is true in the csrfProtection
+
+
+    application.use(cParser())
+
+
+    // creating an api router
+
+
+    var api = createApiRouter()
+
+
+    // mounting the api before the csrf is appended to our app stack
+
+
+    application.use(''/api'', api)
+
+
+    // adding the csrf, after the "/api" has been mounted
+
+
+    appliation.use(csrfProtection)
+
+
+    application.get(''/form'', function(req, res) {
+
+
+    // passing the csrfToken to our view
+
+
+    res.render(''send'', { csrfToken: req.csrfToken() })
+
+
+    })
+
+
+    application.post(''/process'', pForm, function(req, res) {
+
+
+    res.send(''csrf was required for getting here'')
+
+
+    })
+
+
+    function createApiRouter() {
+
+
+    var router =  new express.Router()
+
+
+    router.post(''/getProfile'', function(req, res) {
+
+
+    res.send('' there is no csrf here to get'')
+
+
+    })
+
+
+    return router
+
+
+    }
+
+
+    That is how it can be done.
+
+
+    Custom error handling
+
+
+    When the validation of the CSRF has failed, an error with “err.code === ''EBADCSRFTOKEN''”
+    will be thrown. This can also be used so as to display error messages. Consider
+    the example given below, which shows how this can be done:
+
+
+    var bParser =  require(''body-parser'')
+
+
+    var cParser =  require(''cookie-parser'')
+
+
+    var csrf =  require(''csurf'')
+
+
+    var express =  require(''express'')
+
+
+    var application = express()
+
+
+    application.use(bParser.urlencoded({ extended:  false }))
+
+
+    application.use(cParser())
+
+
+    application.use(csrf({ cookie:  true }))
+
+
+    // the error handler
+
+
+    application.use(function (error, req, res, next) {
+
+
+    if (error.code  !== ''EBADCSRFTOKEN'') return next(error)
+
+
+    // handling the CSRF token errors is done here
+
+
+    res.status(403)
+
+
+    res.send('' The form was tampered with'')
+
+
+    })
+
+
+    That is how it can be done.
+
+
+    # Chapter 11- body-parser
+
+
+    This is the Node.js middleware for body parsing. However, it does not handle multipart
+    bodies because of their large and complex nature. When dealing with multipart
+    bodies, you might have to deal with the following modules:
+
+
+    *   [multer](https://www.npmjs.org/package/multer#readme)
+
+
+    *   [busboy](https://www.npmjs.org/package/busboy#readme) and [connect-busboy](https://www.npmjs.org/package/connect-busboy#readme)
+
+
+    *   [formidable](https://www.npmjs.org/package/formidable#readme)
+
+
+    *   [multiparty](https://www.npmjs.org/package/multiparty#readme) and [connect-multiparty](https://www.npmjs.org/package/connect-multiparty#readme)
+
+
+    The module provides the user with the following parsers:
+
+
+    *   [URL-encoded form body parser](https://github.com/expressjs/body-parser#bodyparserurlencodedoptions)
+
+
+    *   [Raw body parser](https://github.com/expressjs/body-parser#bodyparserrawoptions)
+
+
+    *   [JSON body parser](https://github.com/expressjs/body-parser#bodyparserjsonoptions)'
+  toc: []
+  trans: "\n\n为了让你捕获来自 `Multer` 的错误，只需手动调用该中间件函数。下例所示：\n\n```javascript\nvar uploadfile\
+    \ = multer().single('avatar')\n\napplication.post('/profile', function (req, res)\
+    \ {\n  uploadfile(req, res, function (error) {\n    if (error) {\n      // 上传时发生错误\n\
+    \      return\n    }\n    // 一正常\n  })\n})\n```\n\n这就是它的使用方法。\n\n# 第 9 章-压缩\n\n\
+    这是 Node.js 中提供的一个中间件。它支持以下压缩算法：\n\n*   `deflate`\n*   `gzip`\n\n要在你的系统中安装此中间件，请执行以下命令：\n\
+    \n```bash\n$ npm install compression\n```\n\n要在程序中引入此 API，请如下所示使用 `require` 关键字：\n\
+    \n```javascript\nvar compression = require('compression')\n```\n\n可以使用不同的选项来返回压缩中间件。\n\
+    \n### .filter\n\n这是默认过滤器函数。它用于构建自定义过滤器函数，该函数将作为我们默认函数的扩展。下面的示例展示了如何使用它：\n\n```javascript\n\
+    application.use(compression({filter: compress}))\n\nfunction compress(req, res)\
+    \ {\n  if (req.headers['x-no-compression']) {\n    // 带有此标头的响应不应被压缩。\n    return\
+    \ false\n  }\n  // 回退到标准过滤器函数\n  return compression.filter(req, res)\n}\n```\n\
+    \n`red.flush()`\n\n通过此模块，部分压缩的会被刷新到客户端。让我们来看一些示例。\n\n### express/connect\n\n可以通过\
+    \ `app.use` 使用此模块，它在 Express 和 connect 中可用。通过中间件的请求始终会被压缩。考虑下面的示例，展示了如何实现：\n\n\
+    ```javascript\nvar compression = require('compression')\nvar express = require('express')\n\
+    var application = express()\n\n// 压缩所有请求\napplication.use(compression())\n\n//\
+    \ 添加所有路由\n```\n\n方法如下。\n\n### 服务器发送事件 (Server-Sent Events)\n\n该模块在服务器端的工作并非开箱即用。为了对内容进行压缩，必须缓冲输出窗口以便获得良好的压缩效果。\n\
+    \n为了完成这些操作，我们需要对那些需要将数据写入客户端的情况调用 `red.flush()`。如下所示：\n\n```javascript\nvar compression\
+    \ = require('compression')\nvar express = require('express')\nvar application\
+    \ = express()\n\n// 压缩响应\napplication.use(compression())\n\n// 服务器发送事件流\napplication.get('/events',\
+    \ function (req, res) {\n  res.setHeader('Content-Type', 'text/event-stream')\n\
+    \  res.setHeader('Cache-Control', 'no-cache')\n  // 大约每 2 秒发送一次 ping\n  var timer\
+    \ = setInterval(function () {\n    res.write('data: ping\\n\\n')\n    // !!! 我们程序中最重要的部分\n\
+    \    res.flush()\n  }, 2000)\n  res.on('close', function () {\n    clearInterval(timer)\n\
+    \  })\n})\n```\n\n# 第 10 章- csurf\n\n这是一个 CSRF 令牌中间件。它作为保护目的的中间件。要使用它，必须先初始化 cookie-parser\
+    \ 或 session 中件。可以通过执行以下命令将其安装到电脑上：\n\n```bash\n$ npm install csurf\n```\n\n在程序中使用该\
+    \ API，请如下所示使用 `require` 命令：\n\n```javascript\nvar csurf = require('csurf')\n```\n\
+    \n这就是将其包含在程序中的。\n\n该模块的选项接受多个不同的对象，你可以学习如何使用它们。\n\n考虑下面的示例，它展示了服务器端的代码，用于生成 CSRF\
+    \ 表单以供回传。示例如下：\n\n```javascript\nvar cParser = require('cookie-parser')\nvar csrf\
+    \ = require('csurf')\nvar bParser = require('body-parser')\nvar express = require('express')\n\
+    \n// 设置路由中间件\nvar csrfProtection = csrf({ cookie: true })\nvar pForm = bParser.urlencoded({\
+    \ extended: false })\n\n// 创建一个 express 应用\nvar application = express()\n\n//\
+    \ 解析 cookies\n// 这是必要的因为在 csrfProtection 中 \"cookie\" 为 true\napplication.use(cParser())\n\
+    application.get('/form', csrfProtection, function(req, res) {\n  // 将 csrfToken\
+    \ 传递给视图\n  res.render('send', { csrfToken: req.csrfToken() })\n})\napplication.post('/process',\
+    \ pForm, csrfProtection, function(req, res) {\n  res.send('数据正在处理中')\n})\n```\n\
+    \n在你的视图中，`csrfToken` 的值应设置为隐藏输入字段 `_csrf` 的值。如下所示：\n\n```html\n<form action=\"\
+    /process\" method=\"POST\">\n  <input type=\"hidden\" name=\"_csrf\" value=\"\
+    {{csrfToken}}\">\n  最佳颜色: <input type=\"text\" name=\"bestColor\">\n  <button\
+    \ type=\"submit\">提交</button>\n</form>\n```\n\n就是如此简单地完成。\n\n### 忽略路由\n\n对于请求将经过完全身份验证的网站\
+    \ API 区域，CSRF 应该被禁用。可以通过 Express 的路由来忽略 CSRF。考虑下面的示例，展示了如何实现：\n\n```javascript\n\
+    var cParser = require('cookie-parser')\nvar csrf = require('csurf')\nvar bParser\
+    \ = require('body-parser')\nvar express = require('express')\n\n// 设置路由中间件\nvar\
+    \ csrfProtection = csrf({ cookie: true })\nvar pForm = bParser.urlencoded({ extended:\
+    \ false })\n\n// 创建一个 express 应用\nvar application = express()\n\n// 解析 cookies\n\
+    // 这是必要的因为在 csrfProtection 中 \"cookie\" 为 true\napplication.use(cParser())\napplication.get('/form',\
+    \ csrfProtection, function(req, res) {\n  // 将 csrfToken 传递给视图\n  res.render('send',\
+    \ { csrfToken: req.csrfToken() })\n})\n\n// 在 csrf 之前挂载 api\napplication.use(api)\n\
+    \n// 在挂载 \"/api\" 之后添加 csrf\napplication.use(csrfProtection)\n\napplication.get('/form',\
+    \ function(req, res) {\n  // 将 csrfToken 传递给视图\n  res.render('send', { csrfToken:\
+    \ req.csrfToken() })\n})\n\nfunction createApiRouter() {\n  var router = new express.Router()\n\
+    \  router.post('/getProfile', function(req, res) {\n    res.send('没有 csrf 可获取')\n\
+    \  })\n  return router\n}\n```\n\n方法如下。\n\n### 自定义错误处理\n\n当 CSRF 验证失败时，会抛出一个 `err.code\
+    \ === 'EBADCFTOKEN'` 的错误。也可以用于显示错误消息。考虑下面的示例，展示了如何实现：\n\n```javascript\nvar bParser\
+    \ = require('body-parser')\nvar cParser = require('cookie-parser')\nvar csrf =\
+    \ require('csurf')\nvar express = require('express')\nvar application = express()\n\
+    \napplication.use(bParser.urlencoded({ extended: false }))\napplication.use(cParser())\n\
+    application.use(csrf({ cookie: true }))\n\n// 错误处理器\napplication.use(function\
+    \ (error, req, res, next) {\n  if (error.code !== 'EBADCFTOKEN') return next(error)\n\
+    \  // 在此处处理 CSRF 令牌错误\n  res.status(403)\n  res.send(' 表单已被篡改')\n})\n```\n\n方法如下。\n\
+    \n"
+- fmt: "\n# [Text body parser](https://github.com/expressjs/body-parser#bodyparsertextoptions)\n\
+    \nTo install it, just execute the following command:\n\n```bash\nnpm install body-parser\n\
+    ```\n\nTo use the API, include it in your program by use of the `require` command.\
+    \ This is shown below:\n\n```javascript\nvar bParser = require('body-parser')\n\
+    ```\n\nWith the object `bParser`, various factories are exposed for the purpose\
+    \ of creation of middlewares. The property `req.body` will be populated by all\
+    \ middlewares by use of the parsed body or an error will be parsed to the callback.\n\
+    \nIn Express, a generic JSON and URL-encoded parser can be added as a top-level\
+    \ middleware. With this, the bodies of all the incoming requests will be parsed.\
+    \ Consider the simple example given below, which shows how this can be done:\n\
+    \n```javascript\nvar express = require('express')\nvar bParser = require('body-parser')\n\
+    var application = express()\n\n// parsing the application/x-www-form-urlencoded\n\
+    application.use(bParser.urlencoded({ extended: false }))\n\n// parsing the application/json\n\
+    application.use(bParser.json())\n\napplication.use(function (req, res) {\n  res.setHeader('Content-Type',\
+    \ 'text/plain')\n  res.write('you posted:\\n')\n  res.end(JSON.stringify(req.body,\
+    \ null, 2))\n})\n```\n\n## express route-specific\n\nBody parsers can be added\
+    \ to the routes which need them. This is possible in Express and it can easily\
+    \ be done. This is the most easy and recommended way that the `body-parser` can\
+    \ be used in Express. Consider the example given below, which shows how this can\
+    \ be done:\n\n```javascript\nvar express = require('express')\nvar bParser = require('body-parser')\n\
+    var application = express()\n\n// creating an application/json parser\nvar jParser\
+    \ = bodyParser.json()\n\n// creating an application/x-www-form-urlencoded parser\n\
+    var urlenParser = bParser.urlencoded({ extended: false })\n\n// POST /login which\
+    \ will get the urlencoded bodies\napplication.post('/login', urlenParser, function\
+    \ (req, res) {\n  if (!req.body) return res.sendStatus(400)\n  res.send('welcome,\
+    \ ' + req.body.username)\n})\n\n// POST /api/users will get the JSON bodies\n\
+    application.post('/api/users', jParser, function (req, res) {\n  if (!req.body)\
+    \ return res.sendStatus(400)\n  // create a user in the req.body\n})\n```\n\n\
+    ### Changing the content type for parsers\n\nWith all parsers, a type option is\
+    \ accepted and with this, the content-type will be changeable and this should\
+    \ be the one to be parsed by the middleware. Consider the example given below,\
+    \ which shows how this can be done:\n\n```javascript\n// parsing the various and\
+    \ different custom JSON types as a JSON\napplication.use(bodyParser.json({ type:\
+    \ 'application/*+json' }))\n\n// parsing a custom thing into the Buffer\napplication.use(bParser.raw({\
+    \ type: 'application/vnd.custom-type' }))\n\n// parsing the HTML body into the\
+    \ string\napplication.use(bParser.text({ type: 'text/html' }))\n```\n\n# Chapter\
+    \ 12- Flash\n\nThis is the simplest manner in which Express can be implemented.\
+    \ To install it, execute the following command:\n\n```bash\nnpm i flash\n```\n\
+    \nConsider the example given below, which shows how this can be done:\n\n```javascript\n\
+    application.use(session()); // the session middleware\napplication.use(require('flash')());\n\
+    application.use(function (req, res) {\n  // flashing a message\n  req.flash('info',\
+    \ 'hello there!');\n  next();\n})\n```\n\nConsider the second example given below:\n\
+    \n```javascript\nfor msge in flash\na.alert(class='alert-' + msge.type)\np= message.msge\n\
+    ```\n\nHere is the final example:\n\n```javascript\nwhile msge = flash.shift()\
+    \ // consuming the messages as jade has read them\na.alert(class='alert-' + msge.type)\n\
+    p= message.msge\n```\n\n### An array of f\n\nLash messages can be as shown below:\n\
+    \n```json\n{\n  \"type\": \"info\",\n  \"message\": \"message\"\n}\n```\n\n# [method-override](https://github.com/expressjs/method-override)\n\
+    \nThis is used for overriding HTTP verbs. With it, one can use HTTP verbs such\
+    \ as `DELETE` and `PUT` in places where they are not supported by the client.\
+    \ To install it in your system, execute the following command:\n\n```bash\nnpm\
+    \ install method-override\n```\n\nFor this module to be used, you have to know\
+    \ that a bit has to be used before any of the modules which are in need of the\
+    \ request methods.\n\n### Using the header to override\n\nFor the header to be\
+    \ used for overriding, the header name has to be specified as a string argument\
+    \ to the function `methodOverride`. For the call to be made, the POST request\
+    \ has to be sent to the URL having the header as the overridden method. Consider\
+    \ the example given below showing, how this can be done:\n\n```javascript\nvar\
+    \ connect = require('connect')\nvar mthdOverride = require('method-override')\n\
+    \n// overriding with the X-HTTP-Method-Override header in our request\napplication.use(mthdOverride('X-HTTP-Method-Override'))\n\
+    ```\n\nConsider the example given below, which shows how this can be used with\
+    \ `XMLHttpRequest`:\n\n```javascript\nvar c = new XMLHttpRequest()\nc.onload =\
+    \ onload\nc.open('post', '/resource', true)\nc.setRequestHeader('X-HTTP-Method-Override',\
+    \ 'DELETE')\nc.send()\n\nfunction onload() {\n  alert('The response was obtained:\
+    \ ')\n}\n```\n\n# Chapter 13- serve-favicon\n\nThis is a middleware used for the\
+    \ purpose of favicons. The module can be installed into the system by executing\
+    \ the following command:\n\n```bash\nnpm install serve-favicon\n```\n\nConsider\
+    \ the example given below, showing how this can be done in express:\n\n```javascript\n\
+    var express = require('express')\nvar favicon = require('serve-favicon')\nvar\
+    \ application = express()\n\napplication.use(favicon(__dirname + '/public/favicon'))\n\
+    \n// Addition of your routes should be done.\napplication.listen(3000)\n```\n\n\
+    In connect, this can be done as follows:\n\n```javascript\nvar connect = require('connect')\n\
+    var favicon = require('serve-favicon')\nvar application = connect()\n\napplication.use(favicon(__dirname\
+    \ + '/public/favicon'))\n\n// Addition of your routes should be done.\napplication.listen(3000)\n\
+    ```\n\n### vanilla http server\n\nThis is a type of middleware which can be used\
+    \ everywhere. The example given below shows how this can be done with http:\n\n\
+    ```javascript\nvar http = require('http')\nvar favicon = require('serve-favicon')\n\
+    var fnhandler = require('finalhandler')\n\nvar _favicon = favicon(__dirname +\
+    \ '/public/favicon')\n\nvar server = http.createServer(function (req, res) {\n\
+    \  var done = fnhandler(req, res)\n\n  _favicon(req, res, function (err) {\n \
+    \   if (err) return done(err)\n    // responding to the request\n    res.statusCode\
+    \ = 404\n    res.end('')\n  })\n})\n\nserver.listen(3000)\n```\n\n# Chapter 14-\
+    \ response-time\n\nThis is the node.js response time header. It works by creating\
+    \ a middleware for recording the response time of its requests in the HTTP servers.\
+    \ The response time in this case will be the time when the request has entered\
+    \ the middleware to the time when the headers have been written to the client.\n\
+    \nThis module can be installed by executing the following command:\n\n```bash\n\
+    npm install response-time\n```\n\nThe module can be included into the program\
+    \ by use of the `require` keyword as shown below:\n\n```javascript\nvar respTime\
+    \ = require('response-time')\n```\n\nConsider the example given below, showing\
+    \ how this can be used in both the Express and the connect:\n\n```javascript\n\
+    var express = require('express')\nvar respTime = require('response-time')\nvar\
+    \ application = express()\n\napplication.use(respTime())\n\napplication.get('/',\
+    \ function (req, res) {\n  res.send('hello, there!')\n})\n```\n\n### That is how\
+    \ it can be used.\n\n### vanilla http server\n\nThis can be used as follows:\n\
+    \n```javascript\nvar finalhandler = require('finalhandler')\nvar http = require('http')\n\
+    var respTime = require('response-time')\n\nvar _responseTime = respTime()\n\n\
+    http.createServer(function (req, res) {\n  var done = fnhandler(req, res)\n\n\
+    \  _responseTime(req, res, function (err) {\n    if (err) return done(err)\n \
+    \   // responding to the request\n    res.setHeader('content-type', 'text/plain')\n\
+    \    res.end('hello, there!')\n  })\n}).listen(3000)\n```\n"
+  raw: '*   [Text body parser](https://github.com/expressjs/body-parser#bodyparsertextoptions)
+
+
+    To install it, just execute the following command:
+
+
+    $ npm install body-parser
+
+
+    To use the API, include it in your program by use of the “require” command. This
+    is shown below:
+
+
+    var bParser =  require(''body-parser'')
+
+
+    With the object “bParser,” various factories are exposed for the purpose of creation
+    of middlewares. The property “req.body” will be populated by all middlewares by
+    use of the parsed body or an error will be parsed to the callback.
+
+
+    In Express, a generic JSON and URL-encoded parser can be added as a top-level
+    middleware. With this, the bodies of all the incoming requests will be parsed.
+    Consider the simple example given below, which shows how this can be done:
+
+
+    var express =  require(''express'')
+
+
+    var bParser =  require(''body-parser'')
+
+
+    var application = express()
+
+
+    // parsing the application/x-www-form-urlencoded
+
+
+    application.use(bParser.urlencoded({ extended:  false }))
+
+
+    // parsing the application/json
+
+
+    application.use(bParser.json())
+
+
+    application.use(function (req, res) {
+
+
+    res.setHeader(''Content-Type'', ''text/plain'')
+
+
+    res.write(''you posted:\n'')
+
+
+    res.end(JSON.stringify(req.body, null, 2))
+
+
+    })
+
+
+    ### express route-specific
+
+
+    Body parsers can be added to the routes which need them. This is possible in Express
+    and it can easily be done. This is the most easy and recommended way that  the
+    body-parser can be used in Express. Consider the example given below, which shows
+    how this can be done:
+
+
+    var express =  require(''express'')
+
+
+    var bParser =  require(''body-parser'')
+
+
+    var application = express()
+
+
+    // creating an application/json parser
+
+
+    var jParser = bodyParser.json()
+
+
+    // creating an application/x-www-form-urlencoded parser
+
+
+    var urlenParser = bParser.urlencoded({ extended:  false })
+
+
+    // POST /login which will get the urlencoded bodies
+
+
+    application.post(''/login'', urlenParser, function (req, res) {
+
+
+    if (!req.body) return res.sendStatus(400)
+
+
+    res.send(''welcome, '' + req.body.username)
+
+
+    })
+
+
+    // POST /api/users will get the JSON bodies
+
+
+    application.post(''/api/users'', jParser, function (req, res) {
+
+
+    if (!req.body) return res.sendStatus(400)
+
+
+    // create a user in the req.body
+
+
+    })
+
+
+    Changing the content type for parsers
+
+
+    With all parsers, a type option is accepted and with this, the content-type will
+    be changeable and this should be the one to be parsed by the middleware. Consider
+    the example given below, which shows how this can be done:
+
+
+    // parsing the various and different custom JSON types as a JSON
+
+
+    application.use(bodyParser.json({ type: ''application/*+json'' }))
+
+
+    // parsing a custom thing into the Buffer
+
+
+    application.use(bParser.raw({ type: ''application/vnd.custom-type'' }))
+
+
+    // parsing the HTML body into the string
+
+
+    application.use(bParser.text({ type: ''text/html'' }))
+
+
+    # Chapter 12- Flash
+
+
+    This is the simplest manner in which Express can be implemented. To install it,
+    execute the following command:
+
+
+    npm i flash
+
+
+    Consider the example given below, which shows how this can be done:
+
+
+    application.use(session()); // the session middleware
+
+
+    application.use(require(''flash'')());
+
+
+    application.use(function (req, res) {
+
+
+    // flashing a message
+
+
+    req.flash(''info'', ''hello there!'');
+
+
+    next();
+
+
+    })
+
+
+    Consider the second example given below:
+
+
+    for msge in flash
+
+
+    a.alert(class=''alert-'' + msge.type)
+
+
+    p= message.msge
+
+
+    Here is the final example:
+
+
+    while msge = flash.shift() // consuming the messages as jade has read them
+
+
+    a.alert(class=''alert-'' + msge.type)
+
+
+    p= message.msge
+
+
+    An array of f
+
+
+    Lash messages can be as shown below:
+
+
+    {
+
+
+    "type": "info",
+
+
+    "message": "message"
+
+
+    }
+
+
+    # [method-override](https://github.com/expressjs/method-override)
+
+
+    This is used for overriding HTTP verbs. With it, one can use HTTP verbs such as
+    “DELETE” and “PUT” in places where they are not supported by the client. To install
+    it in your system, execute the following command:
+
+
+    $ npm install method-override
+
+
+    For this module to be used, you have to know that a bit has to be used before
+    any of the modules which are in need of the request methods.
+
+
+    Using the header to override
+
+
+    For the header to be used for overriding, the header name has to be specified
+    as a string argument to the function “methodOverride,” For the call to be made,
+    the POST request has to be sent to the URL having the header as the overridden
+    method. Consider the example given below showing, how this can be done:
+
+
+    var connect =  require(''connect'')
+
+
+    var mthdOverride =  require(''method-override'')
+
+
+    // overriding with the X-HTTP-Method-Override header in our request
+
+
+    application.use(mthdOverride(''X-HTTP-Method-Override''))
+
+
+    Consider the example given below, which shows how this can be used with “XMLHttpRequest”:
+
+
+    var c =  new XMLHttpRequest()
+
+
+    c.onload = onload
+
+
+    c.open(''post'', ''/resource'', true)
+
+
+    c.setRequestHeader(''X-HTTP-Method-Override'', ''DELETE'')
+
+
+    c.send()
+
+
+    function onload() {
+
+
+    alert(''The response was obtained: '' + this.responseText)
+
+
+    }
+
+
+    # Chapter 13- serve-favicon
+
+
+    This is a Node.js middleware which is used for the purpose of serving favicons.
+    A favicon is just a visual cue which browsers and other client software use for
+    the purpose of identifying a site.
+
+
+    The module can be installed into the system by executing the following command:
+
+
+    npm install serve-favicon
+
+
+    Consider the example given below, showing how this can be used in express:
+
+
+    var express =  require(''express'');
+
+
+    var favicon =  require(''serve-favicon'');
+
+
+    var application = express();
+
+
+    application.use(favicon(__dirname  + ''/public/favicon.ico''));
+
+
+    // Addition of your routes should be done here.
+
+
+    application.listen(3000);
+
+
+    In connect, this can be done as follows:
+
+
+    var connect =  require(''connect'');
+
+
+    var favicon =  require(''serve-favicon'');
+
+
+    var application = connect();
+
+
+    application.use(favicon(__dirname  + ''/public/favicon.ico''));
+
+
+    // Addition of your middleware should be done here, etc.
+
+
+    application.listen(3000);
+
+
+    ### vanilla http server
+
+
+    This is a type of middleware which can be used everywhere, including outside Express
+    and connect.
+
+
+    The example given below shows how this can be done:
+
+
+    var http =  require(''http'');
+
+
+    var favicon =  require(''serve-favicon'');
+
+
+    var fnhandler =  require(''finalhandler'');
+
+
+    var _favicon = favicon(__dirname  + ''/public/favicon.ico'');
+
+
+    var server = http.createServer(function onRequest(req, res) {
+
+
+    var done = fnhandler(req, res);
+
+
+    _favicon(req, res, function onNext(error) {
+
+
+    if (error) return done(error);
+
+
+    // just continue with processing of the request here, etc.
+
+
+    res.statusCode =  404;
+
+
+    res.end(''hello'');
+
+
+    });
+
+
+    });
+
+
+    server.listen(3000);
+
+
+    # Chapter 14- response-time
+
+
+    This is the node.js response time header. It works by creating a middleware for
+    recording the response time of its requests in the HTTP servers. The response
+    time in this case will be the time when the request has entered the middleware
+    to the time when the headers have been written to the client.
+
+
+    This module can be installed by executing the following command:
+
+
+    $ npm install response-time
+
+
+    The module can be included into the program by use of the “require” keyword as
+    shown below:
+
+
+    var respTime =  require(''response-time'')
+
+
+    Consider the example given below, which shows how this can be used in both the
+    Express and the connect:
+
+
+    var express =  require(''express'')
+
+
+    var respTime =  require(''response-time'')
+
+
+    var application = express()
+
+
+    application.use(respTime())
+
+
+    application.get(''/'', function (req, res) {
+
+
+    res.send(''hello, there!'')
+
+
+    })
+
+
+    ### That is how it can be used.
+
+
+    ### vanilla http server
+
+
+    This can be used as follows:
+
+
+    var finalhandler =  require(''finalhandler'')
+
+
+    var http =  require(''http'')
+
+
+    var respTime =  require(''response-time'')
+
+
+    // creating the "middleware"
+
+
+    var _responseTime = respTime()
+
+
+    http.createServer(function (req, res) {
+
+
+    var done = fnhandler(req, res)
+
+
+    _responseTime(req, res, function (err) {
+
+
+    if (error) return done(error)
+
+
+    // responding to the request
+
+
+    res.setHeader(''content-type'', ''text/plain'')
+
+
+    res.end(''hello, there!'')
+
+
+    })
+
+
+    })
+
+
+    That is how the module can be used.
+
+
+    Response time metris'
+  toc: []
+  trans: "\n\n# [Text body parser](https://github.com/expressjs/body-parser#bodyparsertextoptions)\n\
+    \n要安装它，只需执行以下命令：\n\n```bash\nnpm install body-parser\n```\n\n要使用该 API，请通过 `require`\
+    \ 命令将其包含在程序中。如下所示：\n\n```javascript\nvar bParser = require('body-parser')\n```\n\
+    \n通过 `bParser` 对象，暴露了各种用于创建中间件的工厂。`req.body` 属性将由所有中间件通过解析后的体进行填充，或者将错误解析传递给回调函数。\n\
+    \n在 Express 中，可以将一个通用的 JSON 和 URL 编码（URL-encoded）解析器作为顶级中间件添加。通过这种方式，所有请求的体都将被解析。考虑下面提供的简单示例，它展示了如何实现这一点：\n\
+    \n```javascript\nvar express = require('express')\nvar bParser = require('body-parser')\n\
+    var application = express()\n\n// 解析 application/x-www-form-urlencoded\napplication.use(bParser.urlencoded({\
+    \ extended: false }))\n\n// 解析 application/json\napplication.use(bParser.json())\n\
+    \napplication.use(function (req, res) {\n  res.setHeader('Content-Type', 'text/plain')\n\
+    \  res.write('you posted:\\n')\n  res.end(JSON.stringify(req.body, null, 2))\n\
+    })\n```\n\n## express 路由特定\n\n体解析器可以被添加到需要它们的路由中。这在 Express 中是可行的，并且可以轻松完成。这是在\
+    \ Express 中使用 `body-parser` 最简单且推荐的方法。考虑下面的示例，它展示了如何实现这一点：\n\n```javascript\n\
+    var express = require('express')\nvar bParser = require('body-parser')\nvar application\
+    \ = express()\n\n// 创建一个 application/json 解析器\nvar jParser = bodyParser.json()\n\
+    \n// 创建一个 application/x-www-form-urlencoded 解析器\nvar urlenParser = bParser.urlencoded({\
+    \ extended: false })\n\n// POST /login 将获取 urlencoded 的体\napplication.post('/login',\
+    \ urlenParser, function (req, res) {\n  if (!req.body) return res.sendStatus(400)\n\
+    \  res.send('welcome, ' + req.body.username)\n})\n\n// POST /api/users 将获取 JSON\
+    \ 的体\napplication.post('/api/users', jParser, function (req, res) {\n  if (!req.body)\
+    \ return res.sendStatus(400)\n  // 在 req.body 中创建一个用户\n})\n```\n\n### 更改解析器的内容类型\n\
+    \n对于所有解析器，都接受一个 `type` 选项，通过该选项，content-type 将是可以更改的，并且这应该是中间件要解析的内容。考虑下面的示例，它展示了如何实现这一点：\n\
+    \n```javascript\n// 将各种不同的自定义 JSON 类型解析为 JSON\napplication.use(bodyParser.json({\
+    \ type: 'application/*+json' }))\n\n// 将自定义内容解析为 Buffer\napplication.use(bParser.raw({\
+    \ type: 'application/vnd.custom-type' }))\n\n// 将 HTML 体解析为字符串\napplication.use(bParser.text({\
+    \ type: 'text/html' }))\n```\n\n# 第 12 章- Flash\n\n这是实现 Express 最简单的方式。要安装它，执行以下命令：\n\
+    \n```bash\nnpm i flash\n```\n\n考虑下面的示例，它展示了如何实现这一点：\n\n```javascript\napplication.use(session());\
+    \ // session 中间件\napplication.use(require('flash')());\napplication.use(function\
+    \ (req, res) {\n  // get 消息\n  req.flash('info', 'hello there!');\n  next();\n\
+    })\n```\n\n考虑下面的第二个示例：\n\n```javascript\nfor msge in flash\na.alert(class='alert-'\
+    \ + msge.type)\np= message.msge\n```\n\n这里是最后的示例：\n\n```javascript\nwhile msge\
+    \ = flash.shift() // 当 jade 读取了它们时，消耗这些消息\na.alert(class='alert-' + msge.type)\n\
+    p= message.msge\n```\n\n### f 数组\n\nFlash 消息可以如下所示：\n\n```json\n{\n  \"type\"\
+    : \"info\",\n  \"message\": \"message\"\n}\n```\n\n# [method-override](https://github.com/expressjs/method-override)\n\
+    \n这用于覆盖 HTTP 动词。通过它，可以在客户端不支持的地方使用如 `DELETE` 和 `PUT` 之类的 HTTP 动词。要在系统中安装它，请执行以下命令：\n\
+    \n```\nnpm install method-override\n```\n\n要使用此模块，你必须知道在任何需要请求方法的模块之前，必须先使用它。\n\
+    \n### 使用 header 进行覆盖\n\n为了将 header 用于覆盖，header 名称 必须作为字符串参数传递给函数 `methodOverride`。为了进行该调用，必须向\
+    \ POST 请求发送到带有该 header 作为被覆盖方法的 URL。考虑下面的示例，它展示了如何实现这一点：\n\n```javascript\nvar\
+    \ connect = require('connect')\nvar mthdOverride = require('method-override')\n\
+    \n// 在我们的请求中使用 X-HTTP-Method-Override header 进行覆盖\napplication.use(mthdOverride('X-HTTP-Method-Override'))\n\
+    ```\n\n考虑下面的示例，它展示了如何配合 `XMLHttpRequest` 使用：\n\n```javascript\nvar c = new XMLHttpRequest()\n\
+    c.open('POST', '/resource')\nc.setRequestHeader('X-HTTP-Method-Override', 'DELETE')\n\
+    c.send()\n```\n\n# 第 13 章- serve-favicon\n\n这是一个用于处理图标的中间件。通过执行以下命令可以安装该模块：\n\n\
+    ```bash\nnpm install-favicon\n```\n\n考虑下面的示例，它展示了如何在 Express 中实现这一点：\n\n```javascript\n\
+    var express = require('express')\nvar favicon = require('favicon')\nvar application\
+    \ = express()\n\napplication.use(favicon('public/public'))\n\napplication.listen(3000)\n\
+    ```\n\n在 connect 中，可以如下实现：\n\n```javascript\nvar connect = require('connect')\n\
+    var favicon = require('favicon')\nvar application = connect()\n\napplication.use(favicon('public/public'))\n\
+    \napplication.listen(3000)\n```\n\n### vanilla http server\n\n这是一个可以在任何地方使用的中间件类型。下面的示例展示了如何配合\
+    \ http 使用它：\n\n```javascript\nvar http = require('http')\nvar favicon = require('favicon')\n\
+    var finalhandler = require('finalhandler')\n\nvar _favicon = favicon()\n\nvar\
+    \ server = http.createServer(function (req, res) {\n  var done = finalhandler(req,\
+    \ res)\n\n  _favicon(req, res, function (err) {\n    if (err) return done(err)\n\
+    \    // 响应请求\n    res.statusCode = 404\n    res.end('')\n  })\n})\n\nserver.listen(3000)\n\
+    ```\n\n# 第 14 章- response-time\n\n这是 node.js 的响应时间 header。它通过创建一个中间件来记录 HTTP 服务器请求的响应时间。在这种情况下，响应时间将是请求进入中间件到头部被写入客户端的时间。\n\
+    \n可以通过执行以下命令安装此模块：\n\n```bash\nnpm install response-time\n```\n\n可以通过 `require`\
+    \ 关键字将模块包含在程序中，如下：\n\n```javascript\nvar respTime = require('response-time')\n\
+    ```\n\n考虑下面的示例，它展示了如何在 Express 和 connect 中使用它：\n\n```javascript\nvar express =\
+    \ require('express')\nvar respTime = require('response-time')\nvar application\
+    \ = express()\n\napplication.use(respTime())\n\napplication.get('/', function\
+    \ (req, res) {\n  res.send('hello, there!')\n})\n```\n\n### 这就是它的用法。\n\n### vanilla\
+    \ http server\n\n可以如下方式使用：\n\n```javascript\nvar finalhandler = require('finalhandler')\n\
+    var http = require('http')\nvar respTime = require('response-time')\n\nvar _responseTime\
+    \ = respTime()\n\nhttp.createServer(function (req, res) {\n  var done = finalhandler(req,\
+    \ res)\n\n  _responseTime(req, res, function (err) {\n    if (err) return done(err)\n\
+    \    // 响应请求\n    res.setHeader('content-type', 'text/plain')\n    res.end('hello,\
+    \ there!')\n  })\n}).listen(3000)\n```\n\n"
+- fmt: "\n```javascript\nvar express = require('express')\n\nvar respTime = require('response-time')\n\
+    \nvar StatsD = require('node-statsd')\n\nvar application = express()\n\nvar statistics\
+    \ = new StatsD()\n\nstatistics.socket.on('error', function (err) {\n  console.error(err.stack)\n\
+    })\n\napplication.use(respTime(function (req, res, time) {\n  var stat = (req.method\
+    \ + req.url).toLowerCase()\n    .replace(/[:\\.]/g, '')\n    .replace(/\\//g,\
+    \ '_')\n  statistics.timing(stat, time)\n}))\n\napplication.get('/', function\
+    \ (req, res) {\n  res.send('hello, there!')\n})\n```\n\n# Chapter 15- [express-namespace](https://github.com/expressjs/express-namespace)\n\
+    \nWith this, namespaced routing capabilities are added to Express. To install\
+    \ it into the system, one can execute the following command:\n\n```bash\n$ npm\
+    \ install express-namespace\n```\n\nConsider the example given below, which can\
+    \ be used for responding to any of the requests. Here is the example:\n\n```\n\
+    GET /forum/12\nGET /forum/12/view\nGET /forum/12/edit\nGET /forum/12/thread/5\n\
+    DELETE /forum/12\n```\n\nFor the module to be used, one must use the `app.namespace()`\
+    \ and `require('express-namespace')`. The module will then be made available to\
+    \ you.\n\nTo use it, we have to pass a callback function, and then perform a routing\
+    \ to the method. After each of the callbacks, the invocation will be completed,\
+    \ and the namespace will be stored together with its state. This is shown below:\n\
+    \n```javascript\napplication.namespace('/forum/:id', function(){\n  application.get('/(view)?',\
+    \ function(req, res){\n    res.send('GET forum ' + req.params.id);\n  });\n\n\
+    \  application.get('/edit', function(req, res){\n    res.send('GET forum ' + req.params.id\
+    \ + ' edit the page');\n  });\n\n  application.namespace('/thread', function(){\n\
+    \    application.get('/:tid', function(req, res){\n      res.send('GET forum '\
+    \ + req.params.id + ' thread ' + req.params.tid);\n    });\n  });\n\n  application.del('/',\
+    \ function(req, res){\n    res.send('DELETE the forum ' + req.params.id);\n  });\n\
+    });\n```\n\nThe current namespace can also be accessed via the `app.currentNamespace`.\
+    \ You should also know how to run the tests. However, before doing this, make\
+    \ sure that you have all of the sub-modules installed into the system. These can\
+    \ be installed by executing the following command:\n\n```bash\n$ git submodule\
+    \ update–init\n```\n\nThe tests can be run by executing the following command:\n\
+    \n```bash\n$ make test\n```\n\nThat is how the module can be used.\n\n# Chapter\
+    \ 16- [express-expose](https://github.com/expressjs/express-expose)\n\nThis is\
+    \ used for exposing the objects, functions, and raw js to the client side. This\
+    \ feature is good for sharing of settings, utils, and the current data for the\
+    \ user. The helpers and the local variables are also exposed to the client side.\n\
+    \nTo install this module, execute the command given below:\n\n```bash\nnpm install\
+    \ -S express-expose\n```\n\nIt can be used as shown below:\n\n```javascript\n\
+    var express = require('express');\n\nvar expose = require('express-expose');\n\
+    \napplication = expose(application);\n\napplication.expose(...);\n```\n\nThe above\
+    \ is how the module can be used in express 4.x. In express 2.x and 3.x, it can\
+    \ be done as follows:\n\n```javascript\nvar express = require('express');\n\n\
+    var expose = require('express-expose');\n\napplication.expose(...);\n```\n\n###\
+    \ How to express the objects\n\nOne way that objects can be exposed to the client\
+    \ side is by exposing the properties, and most probably the Express configuration.\
+    \ When the `app.expose(object)` is exposed, the properties will be exposed to\
+    \ the `application.*`. The example given below shows how this can be done:\n\n\
+    ```javascript\napplication.set('views', __dirname + '/views');\napplication.set('\
+    \ the view engine ', 'jade');\napplication.set('title', ' Sample ');\napplication.set('default\
+    \ language', 'en');\napplication.expose(application.settings);\n```\n\nHelper\
+    \ methods can also be exposed by another use case. This can be in the same way\
+    \ that you are currently exposing. This is shown below:\n\n```javascript\napplication.expose({\
+    \ en: 'English', fr: 'French' }, 'application', 'languages');\n```\n\nYou then\
+    \ need to output your default buffer to your template. For jade users, it can\
+    \ be done as follows:\n\n```html\nscript!= javascript\n```\n\nFor EJS users, this\
+    \ can be done as follows:\n\n```html\n<script><%- javascript %></script>\n```\n\
+    \nRaw JavaScript strings can also be exposed as shown below:\n\n```javascript\n\
+    application.expose('var some = \"variable\";');\n```\n\n### Exposing Functions\n\
+    \nA named function can easily be exposed. You only have to pass it with a default\
+    \ name for the buffer to replace it with a template name. An example of this is\
+    \ shown below:\n\n```javascript\napplication.expose(function someFunction(){\n\
+    \  return 'yes';\n}, 'foot');\n```\n\nThat is how it can be done.\n\n### Self-Calling\
+    \ Functions\n\nAn anonymous function can also be passed, and this will execute\
+    \ itself so as to create a wrapper function. Consider the example given below,\
+    \ which shows how this can be done:\n\n```javascript\napplication.expose(function(){\n\
+    \  function notify() {\n    alert('this will be executed finely:D');\n  }\n  notify();\n\
+    });\n```\n\nThat is how it can be done.\n\n### Request-Level Exposure\n\nAll the\
+    \ above which has been discussed can be applied to the request-level. Consider\
+    \ the example given below showing how to do this. Here is the example:\n\n```javascript\n\
+    application.get('/', function(req, res){\n  var user = { name: 'john' };\n  application.expose(user);\n\
+    \  res.render('index', { layout: false });\n});\n```\n\n# Chapter 17- connect-render\n\
+    \nThis is a helper for the template in connect. It can be installed by executing\
+    \ the following command:\n\n```bash\n$ render\n```\n\nIt can be used as shown\
+    \ below:\n\n```javascript\nvar connect = require('connect');\nvar render = require('connect-render');\n\
+    \napplication = connect(\nrender({\n  root: __dirname + '/views',\n  layout: 'layout.html',\n\
+    \  cache: true, // must be set `true` on production\n  open: \"<%\",\n  close:\
+    \ \"%>\", // the ejs close tag is %>\n  helpers: {\n    config: config,\n    sitename:\
+    \ 'NodeBlog Engine',\n    _csrf: function (req, res) {\n      return req.session\
+    \ ? req.session._csrf : \"\";\n    }\n  }\n})\n);\n```\n\nAll the above which\
+    \ has been discussed can be applied to the request-level. Consider the example\
+    \ given below showing how to do this:\n\n```javascript\nres.render('index.html',\
+    \ { title: 'Index Page', items: items });\n\n/**\n* rendering middleware for the\
+    \ `connect`\n*/\nfunction middleware(options) {}\n```\n\n# Conclusion\n\nIt can\
+    \ be said that ExpressJS is a Node framework. It provides developers with a framework\
+    \ which they can use to create web and mobile applications. It has numerous features\
+    \ which developers can take advantage of so as to create their applications. It\
+    \ works by use of its middleware. The framework also provides developers with\
+    \ numerous modules which they can use for the development of their applications.\n"
+  raw: 'var express =  require(''express'')
+
+
+    var respTime =  require(''response-time'')
+
+
+    var StatsD =  require(''node-statsd'')
+
+
+    var application = express()
+
+
+    var statistics =  new StatsD()
+
+
+    statistics.socket.on(''error'', function (err) {
+
+
+    console.error(err.stack)
+
+
+    })
+
+
+    application.use(respTime(function (req, res, time) {
+
+
+    var stat = (req.method  + req.url).toLowerCase()
+
+
+    .replace(/[:\.]/g, '''')
+
+
+    .replace(/\//g, ''_'')
+
+
+    statistics.timing(stat, time)
+
+
+    }))
+
+
+    application.get(''/'', function (req, res) {
+
+
+    res.send(''hello, there!'')
+
+
+    })
+
+
+    # Chapter 15- [express-namespace](https://github.com/expressjs/express-namespace)
+
+
+    With this, namespaced routing capabilities are added to Express. To install it
+    into the system, one can execute the following command:
+
+
+    $ npm install express-namespace
+
+
+    Consider the example given below, which can be used for responding to any of the
+    requests. Here is the example:
+
+
+    GET /forum/12
+
+
+    GET /forum/12/view
+
+
+    GET /forum/12/edit
+
+
+    GET /forum/12/thread/5
+
+
+    DELETE /forum/12
+
+
+    For the module to be used, one must use the “app.namespace()” and “require(''express-namespace'').”
+    The module will then be made available to you.
+
+
+    To use it, we have to pass a callback function, and then perform a routing to
+    the method. After each of the callbacks, the invocation will be completed, and
+    the namespace will be stored together with its state. This is shown below:
+
+
+    application.namespace(''/forum/:id'', function(){
+
+
+    application.get(''/(view)?'', function(req, res){
+
+
+    res.send(''GET forum '' + req.params.id);
+
+
+    });
+
+
+    application.get(''/edit'', function(req, res){
+
+
+    res.send(''GET forum '' + req.params.id + '' edit the page'');
+
+
+    });
+
+
+    application.namespace(''/thread'', function(){
+
+
+    application.get(''/:tid'', function(req, res){
+
+
+    res.send(''GET forum '' + req.params.id + '' thread '' + req.params.tid);
+
+
+    });
+
+
+    });
+
+
+    application.del(''/'', function(req, res){
+
+
+    res.send(''DELETE the forum '' + req.params.id);
+
+
+    });
+
+
+    });
+
+
+    The current namespace can also be accessed via the “app.currentNamespace.” You
+    should also know how to run the tests. However, before doing this, make sure that
+    you have all of the sub-modules installed into the system. These can be installed
+    by executing the following command:
+
+
+    $ git submodule update –init
+
+
+    The tests can be run by executing the following command:
+
+
+    $ make test
+
+
+    That is how the module can be used.
+
+
+    # Chapter 16- [express-expose](https://github.com/expressjs/express-expose)
+
+
+    This is used for exposing the objects, functions, and raw js to the client side.
+    This feature is good for sharing of settings, utils, and the current data for
+    the user. The helpers and the local variables are also exposed to the client side.
+
+
+    To install this module, execute the command given below:
+
+
+    npm install -S express-expose
+
+
+    It can be used as shown below:
+
+
+    var express =  require(''express'');
+
+
+    var expose =  require(''express-expose'');
+
+
+    application = expose(application);
+
+
+    application.expose(...);
+
+
+    The above is how the module can be used in express 4.x. In express 2.x and 3.x,
+    it can be done as follows:
+
+
+    var express =  require(''express'');
+
+
+    var expose =  require(''express-expose'');
+
+
+    application.expose(...);
+
+
+    How to express the objects
+
+
+    One way that objects can be exposed to the client side is by exposing the properties,
+    and most probably the Express configuration. When the “app.expose(object)” is
+    exposed, the properties will be exposed to the “application.*” The example given
+    below shows how this can be done:
+
+
+    application.set(''views'', __dirname  + ''/views'');
+
+
+    application.set('' the view engine '', ''jade'');
+
+
+    application.set(''title'', '' Sample '');
+
+
+    application.set(''default language'', ''en'');
+
+
+    application.expose(application.settings);
+
+
+    Helper methods can also be exposed by another use case. This can be in the same
+    way that you are currently exposing. This is shown below:
+
+
+    application.expose({ en: ''English'', fr: ''French'' }, ''application'', ''languages'');
+
+
+    You then need to output your default buffer to your template. For jade users,
+    it can be done as follows:
+
+
+    script!= javascript
+
+
+    For EJS users, this can be done as follows:
+
+
+    <script><%- javascript %></script>
+
+
+    Raw JavaScript strings can also be exposed as shown below:
+
+
+    application.expose(''var some = "variable";'');
+
+
+    Exposing Functions
+
+
+    A named function can easily be exposed. You only have to pass it with a default
+    name for the buffer to replace it with a template name. An example of this is
+    shown below:
+
+
+    application.expose(function someFunction(){
+
+
+    return ''yes'';
+
+
+    }, ''foot'');
+
+
+    That is how it can be done.
+
+
+    Self-Calling Functions
+
+
+    An anonymous function can also be passed, and this will execute itself so as to
+    create a wrapper function. Consider the example given below, which shows how this
+    can be done:
+
+
+    application.expose(function(){
+
+
+    function notify() {
+
+
+    alert(''this will be executed finely:D'');
+
+
+    }
+
+
+    notify();
+
+
+    });
+
+
+    That is how it can be done.
+
+
+    Request-Level Exposure
+
+
+    All the above which has been discussed can be applied to the request-level. Consider
+    the example given below showing how to do this. Here is the example:
+
+
+    application.get(''/'', function(req, res){
+
+
+    var user = { name: ''john'' };
+
+
+    res.expose(user, ''application.current.user'');
+
+
+    res.render(''index'', { layout:  false });
+
+
+    });
+
+
+    # Chapter 17- connect-render
+
+
+    This is a helper for the template render in connect. It can be installed by executing
+    the following command:
+
+
+    $ npm install connect-render
+
+
+    It can be used as shown below:
+
+
+    var connect =  require(''connect'');
+
+
+    var render =  require(''connect-render'');
+
+
+    var application = connect(
+
+
+    render({
+
+
+    root:  __dirname  + ''/views'',
+
+
+    layout: ''layout.html'',
+
+
+    cache:  true, // `false` for the debug
+
+
+    helpers: {
+
+
+    sitename: ''connect-render sample site'',
+
+
+    starttime:  new Date().getTime(),
+
+
+    now:  function (req, res) {
+
+
+    return  new Date();
+
+
+    }
+
+
+    }
+
+
+    })
+
+
+    );
+
+
+    application.use(function (req, res) {
+
+
+    res.render(''index.html'', { url: req.url });
+
+
+    });
+
+
+    application.listen(8080);
+
+
+    The API can be used as shown below:
+
+
+    /**
+
+
+    * connect-render: A Template Render helper for the connect
+
+
+    *
+
+
+    * Use case:
+
+
+    *
+
+
+    * var render = require(''connect-render'');
+
+
+    * var connect = require(''connect'');
+
+
+    *
+
+
+    * connect(
+
+
+    *   render({
+
+
+    *     root: __dirname + ''/views'',
+
+
+    *     cache: true, // must be set to `true` in the production env
+
+
+    *     layout: ''layout.html'', // or false if there is no layout
+
+
+    *     open: "<%",
+
+
+    *     close: "%>", // the default ejs close tag is ''%>''
+
+
+    *     helpers: {
+
+
+    *       config: config,
+
+
+    *       sitename: ''NodeBlog Engine'',
+
+
+    *       _csrf: function (req, res) {
+
+
+    *         return req.session ? req.session._csrf : "";
+
+
+    *       },
+
+
+    *     }
+
+
+    *   });
+
+
+    * );
+
+
+    *
+
+
+    * res.render(''index.html'', { title: ''Index Page'', items: items });
+
+
+    *
+
+
+    * // no layout
+
+
+    * res.render(''blue.html'', { items: items, layout: false });
+
+
+    *
+
+
+    * @param {Object} [options={}] for the render options.
+
+
+    *  - {String} layout, layout name, the default one is `''layout.html''`.
+
+
+    *    Set `layout=''''` or `layout=false` meaning that no layout.
+
+
+    *  - {String} root, the root dir for view files.
+
+
+    *  - {Boolean} cache, the cache view content, the default is `true`.
+
+
+    *    Must be set `cache = true` on production.
+
+
+    *  - {String} viewExt, the view file extname, the default is `''''`.
+
+
+    * @return {Function} rendering middleware for the `connect`
+
+
+    */
+
+
+    function middleware(options) {}
+
+
+    # Conclusion
+
+
+    It can be said that ExpressJS is a Node framework. It provides developers with
+    a framework which they can use to create web and mobile applications. It has numerous
+    features which developers can take advantage of so as to create their applications.
+    It works by use of its middleware. The framework also provides developers with
+    numerous modules which they can use for the development of their applications.'
+  toc: []
+  trans: "\n\n```javascript\nvar express = require('express')\n\nvar respTime = require('response-time')\n\
+    \nvar StatsD = require('node-statsd')\n\nvar application = express()\n\nvar statistics\
+    \ = new StatsD()\n\nstatistics.socket.on('error', function (err) {\n  console.error(err.stack)\n\
+    })\n\napplication.use(respTime(function (req, res, time) {\n  var stat = (req.method\
+    \ + req.url).toLowerCase()\n    .replace(/[:\\.]/g, '')\n    .replace(/\\//g,\
+    \ '_')\n  statistics.timing(stat, time)\n}))\n\napplication.get('/', function\
+    \ (req, res) {\n  res.send('hello, there!')\n})\n```\n\n# 第 15 章 [express-namespace](https://github.com/expressjs/express-namespace)\n\
+    \n通过此模块，Express 引入了命名空间路由功能。要将其安装到系统中，可以执行以下命令：\n\n```bash\n$ npm install express-namespace\n\
+    ```\n\n考虑下例示例，它可以用于响应任何请求。以下是示例：\n\n```\nGET /forum/12\nGET /forum/12/view\nGET\
+    \ /forum/12/edit\nGET /forum/12/thread/5\nDELETE /forum/12\n```\n\n要使用该模块，必须使用\
+    \ `app.namespace()` 和 `require('express-namespace')`。该模块随后将供你使用。\n\n要使用它，我们必须传递一个回调函数，然后对该方法进行路由。在每个回调函数之后，调用将完成，命名空间将与其状态一起存储。如下所示：\n\
+    \n```javascript\napplication.namespace('/forum/:id', function(){\n  application.get('/(view)?',\
+    \ function(req, res){\n    res.send('GET forum ' + req.params.id);\n  });\n\n\
+    \  application.get('/edit', function(req, res){\n    res.send('GET forum ' + req.params.id\
+    \ + ' edit the page');\n  });\n\n  application.namespace('/thread', function(){\n\
+    \    application.get('/:tid', function(req, res){\n      res.send('GET forum '\
+    \ + req.params.id + ' thread ' + req.params.tid);\n    });\n  });\n\n  application.del('/',\
+    \ function(req, res){\n    res.send('DELETE the forum ' + req.params.id);\n  });\n\
+    });\n```\n\n当前的命名空间也可以通过 `app.currentNamespace` 访问。你还应该知道如何运行测试。然而，在此之前，请确保你已将所有子模块安装到系统中。可以通过执行以下命令来安装它们：\n\
+    \n```bash\n$ git submodule update–init\n```\n\n可以通过执行以下命令运行测试：\n\n```bash\n$ make\
+    \ test\n```\n\n这就是该模块的使用方法。\n\n# 第 16 章 [express-expose](https://github.com/expressjs/express-expose)\n\
+    \n此模块用于将对象、函数和原始 JS 暴露给客户端。此功能非常适合共享设置、工具函数以及用户的当前数据。辅助方法和局部变量也会暴露给客户端。\n\n要安装此模块，请执行下述命令：\n\
+    \n```bash\nnpm install -S express-expose\n```\n\n它可以像下面所示使用：\n\n```javascript\n\
+    var express = require('express');\n\nvar expose = require('express-expose');\n\
+    \napplication = expose(application);\n\napplication.expose(...);\n```\n\n上述是在\
+    \ express 4.x 中该模块的方法。在 express 2.x 和 3.x 中，可以如下所示操作：\n\n```javascript\nvar express\
+    \ = require('express');\n\nvar expose = require('express-expose');\n\napplication.expose(...);\n\
+    ```\n\n### 如何暴露对象\n\n将对象暴露给客户端的一种方法是暴露属性，很可能还有 Express 的配置。当 `app.expose(object)`\
+    \ 被暴露时，这些属性将暴露到 `application.*`。下例展示了如何进行操作：\n\n```javascript\napplication.set('views',\
+    \ __dirname + '/views');\napplication.set(' the view engine ', 'jade');\napplication.set('title',\
+    \ ' Sample ');\napplication.set('default language', 'en');\napplication.expose(application.settings);\n\
+    ```\n\n辅助方法也可以通过另一个用例来暴露。这可以与你目前正在暴露的方式相同。如下所示：\n\n```javascript\napplication.expose({\
+    \ en: 'English', fr: 'French' }, 'application', 'languages');\n```\n\n然后你只需要将你的默认缓冲区输出到你的模板中。对于\
+    \ jade 用户，可以如下所示操作：\n\n```html\nscript!= javascript\n```\n\n对于 EJS 用户，可以如下所示操作：\n\
+    \n```html\n<script><%- javascript %></script>\n```\n\n原始 JavaScript 字符串也可以像下面所示暴露：\n\
+    \n```javascript\napplication.expose('var some = \"variable\";');\n```\n\n### 暴露函数\n\
+    \n命名函数可以很容易地暴露。你只需要带上默认名称传递它，以便缓冲区将其替换为模板名称。示例如下：\n\n```javascript\napplication.expose(function\
+    \ someFunction(){\n  return 'yes';\n}, 'foot');\n```\n\n这就是操作方法。\n\n### 自调用函数\n\
+    \n也可以传递匿名函数，它将自执行以创建一个封装函数。考虑下例示例，它展示了如何进行操作：\n\n```javascript\napplication.expose(function(){\n\
+    \  function notify() {\n    alert('this will be executed finely:D');\n  }\n  notify();\n\
+    });\n```\n\n方法如下。\n\n### 请求级暴露\n\n上述内容都可以应用于请求级别。考虑下例示例展示了如何进行此操作。这里是示例：\n\n```javascript\n\
+    application.get('/', function(req, res){\n  var user = { name: 'john' };\n  application.expose(user);\n\
+    \  res.render('index', { layout: false });\n});\n```\n\n# 第 17 章 connect-render\n\
+    \n这是 connect 中模板的辅助函数。可以通过执行以下命令安装：\n\n```bash\n$ render\n```\n\n它可以像下面所示使用：\n\
+    \n```javascript\nvar connect = require('connect');\nvar render = require('connect-render');\n\
+    \napplication = connect(\nrender({\n  root: __dirname + '/views',\n  layout: 'layout.html',\n\
+    \  cache: true, // 在生产环境中必须设置为 `true`\n  open: \"<%\",\n  close: \"%>\", // ejs\
+    \ 的结束标签为 %>\n  helpers: {\n    config: config,\n    sitename: 'NodeBlog Engine',\n\
+    \    _csrf: function (req, res) {\n      return req.session ? req.session._csrf\
+    \ : \"\";\n    }\n  }\n})\n);\n```\n\n上述内容都可以应用于请求级别。考虑下例示例展示了如何进行此操作：\n\n```javascript\n\
+    res.render('index.html', { title: 'Index Page', items: items });\n\n/**\n* `connect`\
+    \ 的渲染中间件\n*/\nfunction middleware(options) {}\n```\n\n# 总结\n\n可以说 ExpressJS 是一个\
+    \ Node 框架。它为开发者提供了一个可以用来创建 Web 和移动应用程序的框架。它拥有许多功能，开发者可以利用这些功能来创建他们的应用程序。它通过使用中间件工作。\n\
+    \n"
+- fmt: '
+
+    Each of these modules has its own command which can be used for its installation.
+    To use of any of its modules, you have to begin by installing it. It supports
+    the use of sessions which are very useful in the creation of web applications.
+    It has a variety of options which you can use for the purpose of development.
+    You should learn how to use the different options which are available for each
+    `ExpressJS` module.
+
+
+    The `serve-index` module is used for serving pages having listings of a directory
+    to a particular path.
+
+
+    This is very interesting in development. With the `cookie-sessions` module, one
+    can provide guest sessions so that each of the visitors will have a session, whether
+    authenticated or not. This is also one of the best and interesting features in
+    `Express`. This Node framework is very easy to learn even for beginners. This
+    book helps you in learning how to use it.
+
+    '
+  raw: 'Each of these modules has its own command which can be used for its installation.
+    To use of any of its modules, you have to begin by installing it. It supports
+    the use of sessions which are very useful in the creation of web applications.
+    It has a variety of options which you can use for the purpose of development.
+    You should learn how to use the different options which are available for each
+    ExpressJS module.  The serve-index module is used for serving pages having listings
+    of a directory to a particular path.
+
+
+    This is very interesting in development. With the “cookie-sessions” module, one
+    can provide guest sessions so that each of the visitors will have a session, whether
+    authenticated or not. This is also one of the best and interesting features in
+    Express. This Node framework is very easy to learn even for beginners. This book
+    helps you in learning how to use it.'
+  toc: []
+  trans: '
+
+
+    这些模块中的每一个都有自己对应的命令用于安装。要使用任何模块，你都必须从安装它开始。它支持会话（sessions）的使用，这在创建 Web 应用程序时非常有用。它提供了多种可用于开发目的的选项。你应该学习如何使用每个
+    `ExpressJS` 模块所提供的不同选项。
+
+
+    `serve-index` 模块用于向特定路径提供带有目录列表的页面。
+
+
+    这在开发过程中非常有趣。通过 `cookie-sessions` 模块，可以提供访客会话，使得每个访问者（无论是否经过验证）都拥有自己的会话。这也是 `Express`
+    中最好且有趣的特性之一。这个 Node 框架即使对于初学者来说也非常容易学习。这本书将帮助你学习如何使用它。
+
+    '
