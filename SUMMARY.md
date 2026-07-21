@@ -377,6 +377,7 @@
 +   [编程面试元素：C++ 内部指南](docs/elements-of-programming-interviews-the-insiders-guide-c/README.md)
 +   [Eloquent JavaScript：现代编程入门指南](docs/eloquent-javascript-a-modern-introduction-to-programming/README.md)
 +   [C++ 嵌入式系统编程：实战技术](docs/embedded-systems-programming-with-c-real-world-techniques/README.md)
++   [安全地使用现代 C++](docs/embracing-modern-c-safely/README.md)
 +   [SAS 端到端数据科学：实用编程指南](docs/end-to-end-data-science-with-sas-a-hands-on-programming-guid/README.md)
 +   [C# 和 .NET 企业级应用：使用 .NET 和 C# 开发健壮、安全且可扩展的应用](docs/enterprise-applications-with-c-and-net-develop-robust-secure/README.md)
 +   [C# Entity Framework 数据访问技术](docs/entity-framework-data-access-technology-with-c/README.md)
