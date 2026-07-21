@@ -425,6 +425,7 @@
 +   [中级 C 编程](docs/intermediate-c-programming/README.md)
 +   [心理治疗入门指南：图解指南](docs/introducing-psychotherapy-a-graphic-guide/README.md)
 +   [C++ 语言编程入门指南 - C++ 编程](docs/introduction-to-programming-in-c-language---c-programming/README.md)
++   [无线定位入门指南：iPhone SDK 示例](docs/introduction-to-wireless-localization-with-iphone-sdk-exampl/README.md)
 +   [Java 与 C 编程初学者指南：二本合一学习 Java 和 C 编程、基础与代码的实用初学者指南](docs/java-ans-c-computer-programming-for-beginners-2-book-in-one-/README.md)
 +   [Java 编程初学者指南：速成课程 (Java, Python, C++, R, C) (编程、Java 编程、C++ 编程、Python 编程、R 编程、C 编程，第 1 册)](docs/java-programming-for-beginners-crash-course-java-python-c-r-/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
