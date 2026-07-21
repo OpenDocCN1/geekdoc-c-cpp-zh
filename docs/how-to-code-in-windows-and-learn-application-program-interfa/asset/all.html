@@ -1,0 +1,1298 @@
+<p><img src="Images/cover00050.jpeg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<div id="part0000.xhtml_aid-1">
+<p><span id="part0000.xhtml_aid-3"
+style=" font-size:4.6rem; ">Introduction</span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<div
+style="border-bottom-color:#903163; border-bottom-style:solid; border-bottom-width:0.5pt; clear:both;margin:2.58% 0.00% 0.86%">
+<h1
+style="margin:0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; padding-bottom:6pt; font-weight:normal"><span
+style=" font-size:1.9rem; "> </span></h1>
+<h1
+style="margin:0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; padding-bottom:2pt; font-weight:normal"><span
+style=" font-size:1.9rem; ">Your First Window</span></h1>
+</div>
+<p><span style=" font-size:1.0rem">Welcome to Create Your Own Window, a
+book that uses the C++ programming language alongside the Windows API.
+With this book, you will learn the syntax required to build your very
+first window. Step by step, you can move through the stages of creating
+a fully functional windows that you can see on your PC
+screen.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h1
+style="margin:2.58% 0.00% 0.86%; page-break-inside:avoid; page-break-after:avoid; border-bottom-style:solid; border-bottom-width:0.5pt; border-bottom-color:#903163; padding-bottom:2pt; font-weight:normal"><span
+style=" font-size:1.9rem; ">The Window Example</span></h1>
+<p><span style=" font-size:1.0rem">By the end of this book you will be
+capable of writing code that builds a window and understanding it. The
+window you create will look the same or similar to this:</span></p>
+<p><img src="Images/image00048.jpeg" width="602" height="327" /></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The first stage that this book
+introduces you to is to make sure you have the programming experience
+required to understand the syntax needed for a window. To understand
+everything that is shown and explained in this book, you will need to
+understand the basics of C++ and some of Object-Oriented Programming.
+This includes understanding concepts such as:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<ul>
+<li><span style=" font-size:1.0rem">Variables.</span></li>
+<li><span style=" font-size:1.0rem">Classes.</span></li>
+<li><span style=" font-size:1.0rem">Inheritance.</span></li>
+<li><span style=" font-size:1.0rem">Functions.</span></li>
+<li><span style=" font-size:1.0rem">Passing values by reference and
+pointers.</span></li>
+<li><span style=" font-size:1.0rem">Loops.</span></li>
+<li><span style=" font-size:1.0rem">Statements.</span></li>
+</ul>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Now, let’s begin by looking at the
+code of a simple window called The Message Box.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h2
+style="margin:0.86% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+id="part0000.xhtml__Toc402695515"><span
+style=" font-size:1.7rem; color:#903163">Conventions &amp;
+Practices</span></span></h2>
+<p><span style=" font-size:1.0rem">There is no doubt about it, the
+Windows API is a difficult to learn, but very rewarding. I mean, you get
+to build your own Windows. You get to become Bill Gates – without the
+millions of dollars obviously. </span></p>
+<p><span style=" font-size:1.0rem">Throughout the pages of this book you
+will discover three boxes that have special information that focuses on
+programming techniques. The following illustrates the boxes that are
+spread out amongst the numerous pages.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span class="smallcaps">Programming Knowledge</span></p>
+<p><span style=" font-size:1.0rem">These boxes are filled with necessary
+information, which can help to enhance your knowledge of the C++
+language.</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span class="smallcaps">Programming Technical Talk</span></p>
+<p><span style=" font-size:1.0rem">These boxes are for the “geek” inside
+us, which desires to learn and absorb the information of in-depth C++
+concepts.</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span class="smallcaps">Programming Warnings</span></p>
+<p><span style=" font-size:1.0rem">These boxes point out dangerous areas
+that a programmer should be aware of before attempting to code
+something, via a certain programming concept.</span></p>
+</div>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<h1
+style="margin:2.58% 0.00% 0.86%; page-break-inside:avoid; page-break-after:avoid; border-bottom-style:solid; border-bottom-width:0.5pt; border-bottom-color:#903163; padding-bottom:2pt; font-weight:normal"><span
+id="part0000.xhtml_aid-2C" style=" font-size:1.9rem; ">Chapter 1: The
+MessageBox Window</span></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<h2
+style="margin:0.86% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.7rem; color:#903163">Your First Window: The Message
+Box</span></h2>
+<p><span style=" font-size:1.0rem">Do you remember the first program you
+created? If you read book 1 of C++ Programming Simplified, written by my
+good self, then your first program would probably have been The Hello
+Programmer application. Well, I hope you did and to begin your journey
+with Windows programming, we are going to the Hello Programmer
+application and converting it to work with the Windows API.</span></p>
+<p><span style=" font-size:1.0rem">Of course, creating a Windows version
+of the Hello Programmer application is much more than just the simple
+program you see here.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:1.0rem">#include &lt;iostream&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">using namespace std;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">int main()</span></p>
+<p><span style=" font-size:1.0rem">{</span></p>
+<p><span style=" font-size:1.0rem">    cout &lt;&lt; "Hello Programmer!"
+&lt;&lt; endl;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">    return 0;</span></p>
+<p><span style=" font-size:1.0rem">}</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Looks pretty easy doesn’t it? Well,
+remember those days when programming in C++ was easy, although not as
+rewarding as what you’re about to jump into – not literally. Don’t
+worry, I am not going to leave you without a flair gun stood in a
+sinking boat. Each stage we go through I’ll be there to hold your hand –
+again not literally  - and talk you through every part slowly. So, let’s
+us begin with the first step of building the MessageBox
+program.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 1: the &lt;Windows.h&gt;
+File</span></h3>
+<p><span style=" font-size:1.0rem">Before we create our Windows
+MessageBox, the initial line of code required is a pre-processor
+directive that includes the Windows.h header file. This is probably easy
+for any intermediate or advanced C++ programmer. However, I have written
+the line below.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">#include &lt;Windows.h&gt;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">By including the Windows header file,
+it allows the program to utilize everything required to construct a
+program, which operates in Windows.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span class="smallcaps">Warning: Windows Header File</span></p>
+<p><span style=" font-size:1.0rem">Depending on the compiler you are
+using to build your window shall depend on how its like the Windows
+header file to be included.</span></p>
+<p><span style=" font-size:1.0rem">Most compiler will accept #include
+&lt;Windows&gt;.</span></p>
+<p><span style=" font-size:1.0rem">However, in some case, like
+Code::Blocks, you will need to include a .h after the Windows. As
+such:</span></p>
+<p><span style=" font-size:1.0rem">#include &lt;Windows.h&gt;</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 2: Open With The WinMain
+function</span></h3>
+<p><span style=" font-size:1.0rem">Stated earlier, when creating a
+Windows application the main function, used for Windows console
+programs, is replaced with the WinMain function. Like the main function,
+WinMain is the beginning of any Windows application created. Therefore,
+when coding a programs using the Windows API, the initial line inside
+the WinMain function is the beginning of the program.</span></p>
+<p><span style=" font-size:1.0rem">The WinMain function also has several
+parameters that are used in a Windows program. The syntax below reveals
+the prototype for the WinMain function.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 11.57% 1.15%">
+<p><span style=" font-size:0.86rem">WINAPI int WinMain(HINSTANCE
+hInstance,</span></p>
+<p><span style=" font-size:0.86rem">                   HINSTANCE
+hPrevInstance, </span></p>
+<p><span style=" font-size:0.86rem">                   LPSTR cmdLine,
+int cmdShow);</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span class="smallcaps">Warning: The WinMain Is Not main</span></p>
+<p><span style=" font-size:1.0rem">Developing a console window using
+main and building a window by opening with WinMain is totally different.
+One of the only similarity’s it has is like main, WinMain is where the
+program begins.</span></p>
+</div>
+<p><span style=" font-size:1.0rem">Now, you might already be gapping at
+those parameters wondering what HINSTANCE and LPSTR mean. Put in a
+complex way, HINSTANCE is a handle to an instance. This means, to
+someone attempting Windows programming for the first time, that
+HINSTANCE is a type defined using typdef, which looks for the address in
+memory it is being utilized for. Therefore, it iss like any data type,
+which can define a variable. Later on we will look at the different
+types the Windows API has and uses in its programming. As for the
+example above, HINSTANCE creates a variable called hInstance and another
+called hPrevInstance. The second variable is basically ignored and not
+used in todays Windows programming, unless you wish to create a program
+for an older version of Windows, like Windows 95.</span></p>
+<p><span style=" font-size:1.0rem">Next we have LPSTR, which is another
+type created for the Windows API. It stands for </span><span
+style=" font-size:1.0rem; font-style:italic">Long Pointer to
+String</span><span style=" font-size:1.0rem">. In short terms, it is a
+pointer type that looks for a string variable. This means that when this
+type is used it requires to point to a string variable. Once we move
+onto creating the message box object, this will come into full
+practise.</span></p>
+<p><span style=" font-size:1.0rem">The last parameter is a classic int
+variable, which means it looks for a whole number. Again, we will see
+how this works with the message box object we shall create
+next.</span></p>
+<p><span style=" font-size:1.0rem">Once the WinMain function is
+complete, it opens up with brackets and we can start to create our
+message box. To create a message box we shall use the message box
+function known as MessageBox(). Like the WinMain function, the
+MessageBox object uses parameters to determine what information the
+message box will have in the program.</span></p>
+<p><span style=" font-size:1.0rem">To create the Hello Programmer
+message box follow the syntax:</span></p>
+<p><span style=" font-size:1.0rem">MessageBox(0</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">,“</span><span
+style=" font-size:1.0rem">Hello Programmer, nice to see you
+again</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">!”,“</span><span
+style=" font-size:1.0rem">Welcome Back</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">!”</span><span
+style=" font-size:1.0rem">, MB_OK);</span></p>
+<p><span style=" font-size:1.0rem">On the MSDN website, it displays the
+syntax for the MessageBox object as the following.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:1.0rem">int WINAPI MessageBox(</span></p>
+<p><span style=" font-size:1.0rem">  _In_opt_  HWND hWnd,</span></p>
+<p><span style=" font-size:1.0rem">  _In_opt_  LPCTSTR
+lpText,</span></p>
+<p><span style=" font-size:1.0rem">  _In_opt_  LPCTSTR
+lpCaption,</span></p>
+<p><span style=" font-size:1.0rem">  _In_      UINT uType</span></p>
+<p><span style=" font-size:1.0rem">);</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Let’s go through this before we end
+the program.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">HWND hWnd</span></h4>
+<p><span style=" font-size:1.0rem">The MessageBox function opens with a
+HWND (</span><span style=" font-size:1.0rem; font-style:italic">handle
+to window</span><span style=" font-size:1.0rem">/</span><span
+style=" font-size:1.0rem; font-style:italic">window handle</span><span
+style=" font-size:1.0rem">) object. A HWND object is another typedef
+that equals to an int variable. This type looks for a whole number. This
+is why in our small example the value of the HWND is set to 0, therefore
+telling the compiler there is no HWND for the MessageBox to
+use.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">LPCTSTR
+lpText</span></h4>
+<p><span style=" font-size:1.0rem">Next, a LPSTR type is required. The
+first LPSTR allocates the message inside the Message Box. This is
+important, as if you get these mixed up you’ll have the wrong piece of
+string in the wrong place. As you can see, the first variable in the
+example is called lpText, signifying it is used for the message in the
+dialog box.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">LPCTSTR
+lpCaption</span></h4>
+<p><span style=" font-size:1.0rem">The second LPSTR is to fill the
+caption of the dialog box. The caption is the header file of the dialog
+box.</span></p>
+<p><span style=" font-size:1.0rem">As you can see from the image above,
+the caption in the message dialog box read</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">s“</span><span
+style=" font-size:1.0rem">Message Bo</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">x”</span><span
+style=" font-size:1.0rem">and the message itself read</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">s“</span><span
+style=" font-size:1.0rem">Hello Programmer!.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">UINT uType</span></h4>
+<p><span style=" font-size:1.0rem">The last part of the MessageBox
+object parameters is an unsigned integer type. Although, you do not
+write a number in the parameter, but instead a typedef name that is
+equal to a value. In this case, the name is MB_OK. What this does is
+allows for the message box to have an OK button attached to
+it.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span class="smallcaps">Knowledge: The unsigned Means Not Below
+0</span></p>
+<p><span style=" font-size:1.0rem">Remember unsigned states that values
+cannot go below the rate of 0.</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span class="smallcaps">Knowledge: The OK Window</span></p>
+<p><span style=" font-size:1.0rem">Whether it is buttons, scroll bars or
+text boxes, they are all known as windows. This means that the OK button
+in the example is also a window</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Once the MessageBox function is wrote
+out, we can end the program with a return value of 0 and use a closing
+bracket.</span></p>
+<p><img src="Images/image00049.jpeg" width="201" height="164" /></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">This is the end product of the
+MessageBox program. I know it doesn’t look much, but hey, you have just
+made your first ever window. That is correct. Even a small block on the
+screen like this is a window.</span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<h1
+style="margin:2.58% 0.00% 0.86%; page-break-inside:avoid; page-break-after:avoid; border-bottom-style:solid; border-bottom-width:0.5pt; border-bottom-color:#903163; padding-bottom:2pt; font-weight:normal"><span
+id="part0000.xhtml_aid-88" style=" font-size:1.9rem; ">Chapter 2:
+Creating A Window</span></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<h2
+style="margin:0.86% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.7rem; color:#903163">Programming The Main
+Window</span></h2>
+<p><span style=" font-size:1.0rem">In the previous example you created
+your very own window application. Even though it was only a message
+dialog box, it used the basic fundamentals every windows application is
+required to have. </span></p>
+<p><span style=" font-size:1.0rem">Now, we are going to create a full
+screen window. It is a simple blank window with a white background.  A
+basic window averages around 70-80 lines of code.</span></p>
+<p><span style=" font-size:1.0rem">Well, what is the To begin with, you
+need to initialize the window and then create the window behind setting
+a loop.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 1: Window
+Class</span></h3>
+<p><span style=" font-size:1.0rem">After coding the Windows.h header
+file and opening the WinMain function, the initial step to creating a
+window is to allocate it a class called a Windows class.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">WNDCLASSEX</span></h4>
+<p><span style=" font-size:1.0rem">The following syntax is required to
+create a windows class.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 11.57% 1.15%">
+<p><span style=" font-size:0.86rem">WNDCLASSEX &lt;class
+name&gt;;</span></p>
+<p><span style=" font-size:0.86rem">WNDCLASSEX parentWindow;</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Once the window class is declared,
+then you can start to define it by filling in the specifications of its
+parameters.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Below is a list of the parameters
+that need attending to before moving onto the next stage.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse; margin-left:0pt" data-border="1">
+<tbody>
+<tr>
+<td
+style="background-color: #000000; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold; color:#ffffff">Parameter</span></p></td>
+<td
+style="background-color: #000000; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold; color:#ffffff">Description</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">cbClsExtra</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Determines the amount of reserved bytes
+required for the Windows Class. Normally, this is set to
+NULL.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">cbSize</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Sets the byte size of the Windows
+Class.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">cbWndExtra</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Determines the amount of reserved bytes
+required for the Window. Normally, this is set to NULL.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">hbrBackground</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Set the type of brush for drawing and
+colouring the window. It can alter the colour of the
+window.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">hCursor</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Set the cursor type used in the window. If set
+to NULL, then the default cursor will be used.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">hIcon</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Sets the original icon used for the window.
+This is the icon seen in the taskbar. If set to NULL, then the default
+icon will be used.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">hIconSm</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Set the small sized icon (seen in the Windows
+tray). If set to NULL, then the default icon will be
+used.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">hInstance</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Set the handle name of the instance that the
+Window uses.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">lpszClassName</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Set the name of the Windows class name between
+double quotes.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">lpfnWndProc</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Set the name found in the WinProc
+function.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">lpszMenuName</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Set the name of the menu that the window has.
+If the window has no menu then set to NULL.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">style</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">Set the style (shape) of the
+window.</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Once all of these are filled out as
+shown below, the next step is to make sure the window is registered in
+memory.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">       prWnd.cbClsExtra =
+0;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.cbSize = sizeof(
+WNDCLASSEX);</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.cbWndExtra =
+0;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hbrBackground = (
+HBRUSH)( COLOR_WINDOW+1);</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hCursor =
+LoadCursor(hInst , IDC_ARROW );</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hIcon =
+NULL;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hIconSm =
+NULL;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hInstance =
+hInst;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.lpfnWndProc = (
+WNDPROC)WndProc;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.lpszClassName =
+"DirectX Project";</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.lpszMenuName =
+NULL;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.style = CS_HREDRAW |
+CS_VREDRAW ;</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 2: Register the Windows
+Class</span></h3>
+<p><span style=" font-size:1.0rem">This part is simple, and requires
+only one line of code. First you write RegisterClassEx then in brackets
+() you reference the windows class you have just made. In this case it
+would look like the following.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">RegisterClassEx</span></h4>
+<p><span
+style=" font-size:0.86rem">RegisterClassEx(&amp;parentWindow);</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">There. Simple.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 3: Create The
+Window</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Now that you have the window
+registered in memory for the computer to use, you have to create its
+foundations. Do</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">n’</span><span
+style=" font-size:1.0rem">t get this confused with creating the windows
+class, as now you are forming the visual aspect of the window instead of
+telling the compiler what the window boarder and how the window should
+act.</span></p>
+<p><span style=" font-size:1.0rem">To begin to create a window you first
+have to use the handle variable (normally hWnd) and incorporate the
+CreateWindow function into the handle. The reason for this is due to the
+hWnd acting like a hook for holding the window up on the desktop when it
+is ran on the computer. Without a handle, the window would not have
+anything to grapple onto when trying to load.</span></p>
+<p><span style=" font-size:1.0rem">Once the hWnd is written an
+assignment operator is used and then you place the CreateWindow function
+in along with its lists of parameters.  I will take you through the
+parameters now.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse; margin-left:0pt" data-border="1">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr>
+<td
+style="background-color: #000000; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold; color:#ffffff">Parameter</span></p></td>
+<td
+style="background-color: #000000; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold; color:#ffffff">Description</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">LPSTR</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The first LPSTR looks for the name of the
+class you set in the windows class.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">LPSTR</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The second LPSTR looks for the name of the
+window caption.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">DWORD</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">This sets how the window will be displayed on
+the screen.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">int</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The following is the X position of where the
+window will be once it is open on the desktop.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">int</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The following is the Y position of where the
+window will be once it is open on the desktop.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">int</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The following is the width of the
+window.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">int</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The following is the height of the
+window.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">HWND</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">This is to set whether the window has a parent
+window in it hierarchy. If the window is the main window then this is
+set to NULL.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">HMENU</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">This is to set whether the window has a handle
+to a menu. If the window his no menu then this is set to
+NULL.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">HINSTANCE</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">This looks for the handle to the instance of
+the window.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">LPVOID</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">This is pointer to value used by the window to
+determine where it requires to use to create a certain type of
+structure. For a basic window this is set to NULL.</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">CreateWindow(...)</span></h4>
+<p><span style=" font-size:1.0rem">There is all the parameters and this
+is how they may look for your window.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">hWnd = CreateWindow("My First
+Window" ,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      "My
+Main Window",</span></p>
+<p><span
+style=" font-size:0.86rem">                                     
+WS_OVERLAPPEDWINDOW | WS_EX_TOPMOST | WS_VISIBLE,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      400,
+400,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      800,
+600,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      NULL,
+NULL,</span></p>
+<p><span
+style=" font-size:0.86rem">                                     
+hInstance, NULL);</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 4: Show &amp; Update The
+Window</span></h3>
+<p><span style=" font-size:1.0rem">Next, it is now time to tell the
+compiler how it will display the window. This is not how it will look
+but to tell it what handle to use to show and then update the window
+whenever a new event is created.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span class="smallcaps">Technical Talk: What is a Windows
+event?</span></p>
+<p><span style=" font-size:1.0rem">A Window event is anything that
+happens in the window. Whether that is a mouse click, a menu being open
+or the window resizing, they are all events and the compiler requires to
+be told when one happens so it update the window through the
+UpdateWindow function.</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">ShowWindow(…)</span></h4>
+<p><span style=" font-size:1.0rem">First we need to show the window
+before we can tell the compiler it needs updating. To do this the
+ShowWindow function is iniitated along with a set of parameters to tell
+the compiler what handle to use and the concept of how the handle is to
+be used.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.86rem">ShowWindow(hWnd,
+SW_SHOW);</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">We know that that hWnd is a handle to
+the window. But the SW_SHOW is an object type that tells the show window
+that after grabbing the handle it then has to utilise it to show the
+window.</span></p>
+<p><span style=" font-size:1.0rem">Looking at SW_SHOW we can easily tell
+that the SW stands for Show Window. What it really does is initialise
+the window and tells it to show it to the width, length and position
+dictated by the windows class.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 5: Translate &amp;
+Update</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">MSG</span></h4>
+<p><span style=" font-size:1.0rem">The final aspect that is required in
+the WinMain function is to create a MSG variable, which will be used to
+interrupt integer values for the window to interpret. To begin with a
+MSG variable needs to be created. The type definition of MSG is a simple
+int variable.</span></p>
+<p><span style=" font-size:1.0rem">The syntax to create a MSG variable
+is rather like any other type of variable, although, instead of a
+built-in type being written MSG replaces it.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.86rem">MSG message;</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">ZeroMemory(…)</span></h4>
+<p><span style=" font-size:1.0rem">Next the ZeroMemoryfunction is used
+to determine that its parameters are allocated a NULL value before being
+used. The reason for this is due to that you do</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">n’</span><span
+style=" font-size:1.0rem">t want a variabl</span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">e’</span><span
+style=" font-size:1.0rem">s data to be unnecessary wiped.</span></p>
+<p><span style=" font-size:1.0rem">The syntax for the ZeroMemory
+function is as follows.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:0.86rem">ZeroMemory(message,
+&amp;message);</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">As you can see, it uses the message
+variable and references it to see if it has any data stored in
+it.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">while Loop</span></h4>
+<p><span style=" font-size:1.0rem">The next stage is to create a loop
+that always stays true until the window is shut down, thus, it returns
+the value of 0.</span></p>
+<p><span style=" font-size:1.0rem">The loop is of the while loop method,
+or you can write it as a do while loop. These are two easiest loops to
+write for this stage in programming the window.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">while (true) {</span></p>
+<p><span style=" font-size:0.86rem">   // windows functions</span></p>
+<p><span style=" font-size:0.86rem">}</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">do</span></p>
+<p><span style=" font-size:0.86rem">{</span></p>
+<p><span style=" font-size:0.86rem">   // windows functions</span></p>
+<p><span style=" font-size:0.86rem">} while (true);</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">If you wanted to write this as a for
+loop than the following syntax will work.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">bool wndEvent = true;</span></p>
+<p><span style=" font-size:0.86rem">dor (wndEvent = true; wndEvent =
+false; ;)</span></p>
+<p><span style=" font-size:0.86rem">{</span></p>
+<p><span style=" font-size:0.86rem">   // windows functions</span></p>
+<p><span style=" font-size:0.86rem">}</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Do you see how much more there is to
+write with the for loop when coding this piece for a window? It may not
+seem like a lot more, but it is still an awkward method.</span></p>
+<p><span style=" font-size:1.0rem">Now that the loop is done (Ill be
+using a while loop), we can now move onto the two window functions
+required for translating and dispatching them.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">TranslateMessage(…)</span></h4>
+<p><span style=" font-size:1.0rem">First we your window will require to
+take the message and translate it to something it can understand. Thus,
+we use a function called TranslateMessage. This function takes only one
+parameter and it is the message variable. So, it will look like
+this:</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span
+style=" font-size:0.86rem">TranslateMessage(&amp;message);</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">DispatchMessage(…)</span></h4>
+<p><span style=" font-size:1.0rem">Following its translation, the
+message is then sent by reference to the DispatchMessage function, which
+sends it to the computer to achieve its task.</span></p>
+<p><span style=" font-size:1.0rem">Looking at the Dispatch function, we
+can see that it similar to the TranslateMessage.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span
+style=" font-size:0.86rem">DispatchMessage(&amp;message);</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Look at the while loop in its fullest
+then, this is how it looks with the two Windows functions.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">while (true) {</span></p>
+<p><span style=" font-size:0.86rem">  
+TranslateMessage(&amp;message);</span></p>
+<p><span style=" font-size:0.86rem">  
+DispatchMessage(&amp;message);</span></p>
+<p><span style=" font-size:0.86rem">}</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 6: The Event
+Loop</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">CallBack
+Function</span></h4>
+<p><span style=" font-size:1.0rem">The last part of the window is to
+create the callback function, which will hold the event loops. Even
+though it is called an Event Loop, what we are going to create is a
+switch statement that decides on an action to approach depending on the
+value given.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">To start the callback function we
+create the function heading. The syntax for the callbackfunction may
+look strange at first but each keyword used </span><span
+style=" font-size:1.0rem ;letter-spacing:0.25rem">I’</span><span
+style=" font-size:1.0rem">ll explain in this section.</span></p>
+<p><span style=" font-size:1.0rem">Let us look at the function
+first.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">LRESULT CALLBACK WndProc(HWND hWnd,
+UINT msg, WPARAM wParam, LPARAM lParam)</span></p>
+<p><span style=" font-size:0.86rem">{</span></p>
+<p><span style=" font-size:0.86rem">   // statements</span></p>
+<p><span style=" font-size:0.86rem">}</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">Of course, the switch statement
+resides inside the callback function. First, before we get into the
+function, we will look at each keyword in the function
+heading.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<table data-cellspacing="0" data-cellpadding="0"
+style="border-collapse:collapse; margin-left:0pt" data-border="1">
+<tbody>
+<tr>
+<td
+style="background-color: #000000; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold; color:#ffffff">Keyword</span></p></td>
+<td
+style="background-color: #000000; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold; color:#ffffff">Description</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">LRESULT</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The LRESULT is the beginning of the callback
+function.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">CALLBACK</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The CALLBACK is a typdef that is like a return
+statement and tells the compiler that the results from the functions
+needs to affect the whole window.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">WndProc</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The WndProc is the title of the opening of the
+function.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">HWND</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">We have already seen HWND. The HWND keyword is
+a handle to a window.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">UINT</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">We have already seen UINT as an unsigned
+integer. This will hold values for the messages passed into the switch
+statement.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">WPARAM</span></p></td>
+<td
+style="border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">WPARM is the Wide Parameter. Depending on the
+message the window needs will depend on whether if WPARAM or LPARAM is
+used.</span></p></td>
+</tr>
+<tr>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-left-color: #000000; border-left-style: solid; border-left-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem; font-weight:bold">LPARAM</span></p></td>
+<td
+style="border-bottom-color: #000000; border-bottom-style: solid; border-bottom-width: 0.5pt; border-right-color: #000000; border-right-style: solid; border-right-width: 0.5pt; border-top-color: #000000; border-top-style: solid; border-top-width: 0.5pt; padding-left: 5.4pt; padding-right: 5.4pt; vertical-align: top; width: 225.4pt"><p><span
+style=" font-size:1.0rem">The LPARAM is the Long Parameter. Depending on
+the message the window needs will depend on whether if WPARAM or LPARAM
+is used.</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">switch
+Statement</span></h4>
+<p><span style=" font-size:1.0rem">Delving into the function, we first
+encounter a switch statement with the value of whatever the variable of
+msg holds. First, we will look at the switch statement.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">switch (msg)             
+</span></p>
+<p><span style=" font-size:0.86rem">{</span></p>
+<p><span style=" font-size:0.86rem">   case 1: WM_Destroy</span></p>
+<p><span style=" font-size:0.86rem">   PostQuitWindow(0);</span></p>
+<p><span style=" font-size:0.86rem">}</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">The switch statement takes the msg
+variable and depending on the value it receives chooses from the cases
+it have to choose from.</span></p>
+<p><span style=" font-size:1.0rem">In the case of this switch statement
+example, there is only one option to choose from..</span></p>
+<p><span style=" font-size:1.0rem">But for now, we are going to look at
+WM_DESTROY. This type is a call to the window shutting down. The
+PostQuitWindow parameter value is 0, which makes the program shut down
+when the case is initialised.</span></p>
+<p><span style=" font-size:1.0rem">This is all there is to creating a
+simple window. The full coding of the window program is posted on the
+next page.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.5rem; color:#6b2449">Step 7: Adopting the Basic
+Window with OOP</span></h3>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h4
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.3rem; font-style:italic; ">Building A BasicWindow
+Class</span></h4>
+<p><span style=" font-size:1.0rem">Now we have seen how a basic window
+is created, it is time to start manipulating it using OOP. First we are
+going to create a class to store all the data required for the
+window.</span></p>
+<p><span style=" font-size:1.0rem">First, let us start off with the
+basics.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">class BasicWindow {</span></p>
+<p><span style=" font-size:0.86rem">public:</span></p>
+<p><span style=" font-size:0.86rem">API int WinMain(HINSTANCE,
+HINSTANCE, LPSTR, int);</span></p>
+<p><span style=" font-size:0.86rem">LRESULT CALLBACK WndProc(HWND, UINT,
+WPARAM, LPARAM);</span></p>
+<p><span style=" font-size:0.86rem">protected:</span></p>
+<p><span style=" font-size:0.86rem">HWND hWnd;</span></p>
+<p><span style=" font-size:0.86rem">HINSTANCE hInstance;</span></p>
+<p><span style=" font-size:0.86rem">};</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<p><span style=" font-size:1.0rem">For a start having HWND hWnd in the
+class will wipe out the need for a global HWND variable. This gives the
+appearance of clearer code straight away.</span></p>
+<p><span style=" font-size:1.0rem">Next, we have the two functions of
+the WinMain and also of the WndProc. Again, this makes your code cleaner
+as you are declaring the functions in the class.</span></p>
+<p><span style=" font-size:1.0rem">To use these objects and data
+methods, you have to add to your code the name of the class along with
+the dot operator before the data methods.</span></p>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<h1
+style="margin:2.58% 0.00% 0.86%; page-break-inside:avoid; page-break-after:avoid; border-bottom-style:solid; border-bottom-width:0.5pt; border-bottom-color:#903163; padding-bottom:2pt; font-weight:normal"><span
+id="part0000.xhtml_aid-K7" style=" font-size:1.9rem; ">Chapter 3:
+Putting The Window Together</span></h1>
+<div style="page-break-after:always">
+
+</div>
+<br />
+
+</p>
+<h2
+style="margin:0.86% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+style=" font-size:1.7rem; color:#903163">The Final Product</span></h2>
+<p><span style=" font-size:1.0rem">This is the final part of the book.
+Here we are going to put everything we have learnt together, which will
+build the window from the first few pages.</span></p>
+<p><span style=" font-size:1.0rem">Here is the code for the window in
+full.</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+<div
+style="border-bottom-color:#000000; border-bottom-style:solid; border-bottom-width:0.5pt; border-left-color:#000000; border-left-style:solid; border-left-width:0.5pt; border-right-color:#000000; border-right-style:solid; border-right-width:0.5pt; border-top-color:#000000; border-top-style:solid; border-top-width:0.5pt; clear:both;margin:0.00% 0.00% 1.15%">
+<p><span style=" font-size:0.86rem">// HEADER FILES INCLUDED</span></p>
+<p><span style=" font-size:0.86rem">#include
+&lt;Windows.h&gt;</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">// WINDOWS CLASS</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">class InWindows {</span></p>
+<p><span style=" font-size:0.86rem">public:</span></p>
+<p><span style=" font-size:0.86rem">        bool LoadWindow( HINSTANCE
+hInst);</span></p>
+<p><span style=" font-size:0.86rem">private:</span></p>
+<p><span style=" font-size:0.86rem">        HWND hWnd;</span></p>
+<p><span style=" font-size:0.86rem">        HINSTANCE hInst;</span></p>
+<p><span style=" font-size:0.86rem">};</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">LRESULT CALLBACK WndProc(HWND hWnd ,
+UINT uMsg , WPARAM wParam , LPARAM lParam )</span></p>
+<p><span style=" font-size:0.86rem">{</span></p>
+<p><span style=" font-size:0.86rem">        // MESSAGE CENTER FOR
+WINDOW</span></p>
+<p><span style=" font-size:0.86rem">        switch( uMsg)</span></p>
+<p><span style=" font-size:0.86rem">       {</span></p>
+<p><span style=" font-size:0.86rem">        case WM_DESTROY:</span></p>
+<p><span style=" font-size:0.86rem">             
+PostQuitMessage(0);</span></p>
+<p><span style=" font-size:0.86rem">               break;</span></p>
+<p><span style=" font-size:0.86rem">       }</span></p>
+<p><span style=" font-size:0.86rem">        return DefWindowProc(hWnd ,
+uMsg , wParam , lParam );</span></p>
+<p><span style=" font-size:0.86rem">}</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">bool InWindows
+::LoadWindow(HINSTANCE hInst)</span></p>
+<p><span style=" font-size:0.86rem">{</span></p>
+<p><span style=" font-size:0.86rem">        InWindows
+CreateWin;</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">        WNDCLASSEX prWnd;</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">       prWnd.cbClsExtra =
+0;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.cbSize = sizeof(
+WNDCLASSEX);</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.cbWndExtra =
+0;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hbrBackground = (
+HBRUSH)( COLOR_WINDOW+1);</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hCursor =
+LoadCursor(hInst , IDC_ARROW );</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hIcon =
+NULL;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hIconSm =
+NULL;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.hInstance =
+hInst;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.lpfnWndProc = (
+WNDPROC)WndProc;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.lpszClassName =
+"DirectX Project";</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.lpszMenuName =
+NULL;</span></p>
+<p><span style=" font-size:0.86rem">       prWnd.style = CS_HREDRAW |
+CS_VREDRAW ;</span></p>
+<p><span style=" font-size:0.86rem">       
+RegisterClassEx(&amp;prWnd);</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">       CreateWin.hWnd =
+CreateWindow("DirectX Project" ,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      "My
+Main Window",</span></p>
+<p><span
+style=" font-size:0.86rem">                                     
+WS_OVERLAPPEDWINDOW | WS_EX_TOPMOST | WS_VISIBLE,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      400,
+400,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      800,
+600,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      NULL,
+NULL,</span></p>
+<p><span
+style=" font-size:0.86rem">                                      hInst,
+NULL);</span></p>
+<p><span style=" font-size:0.86rem">       
+if(!CreateWin.hWnd)</span></p>
+<p><span style=" font-size:0.86rem">       {</span></p>
+<p><span style=" font-size:0.86rem">               MessageBox(hWnd,
+"Window Creation Failed" , "Failed To Create Window", MB_OK);</span></p>
+<p><span style=" font-size:0.86rem">               return
+false;</span></p>
+<p><span style=" font-size:0.86rem">       }</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">       ShowWindow(hWnd,
+SW_SHOW);</span></p>
+<p><span style=" font-size:0.86rem">      
+UpdateWindow(hWnd);</span></p>
+<p><span style=" font-size:0.86rem">        return true;</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">}</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">// START OF WINMAIN</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">int WINAPI WinMain(HINSTANCE hInst ,
+HINSTANCE hPrevInst , LPSTR lpCmdLine , int iCmdShow)</span></p>
+<p><span style=" font-size:0.86rem">{</span></p>
+<p><span style=" font-size:0.86rem">        InWindows theWindow; //
+WINDOW CLASS OBJECT</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">        if(!theWindow.LoadWindow(
+hInst ))</span></p>
+<p><span style=" font-size:0.86rem">       {</span></p>
+<p><span style=" font-size:0.86rem">               // IF PARENT WINDOW
+FAILS TO LOAD</span></p>
+<p><span style=" font-size:0.86rem">               MessageBox(NULL ,
+"Error Initializing Parent Window" , "Initialize Parent Window Failed",
+MB_OK);</span></p>
+<p><span style=" font-size:0.86rem">               return false; // QUIT
+PROGRAM</span></p>
+<p><span style=" font-size:0.86rem">       }</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">        MSG message;</span></p>
+<p><span style=" font-size:0.86rem">        ZeroMemory(&amp;message,
+sizeof (message));</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">        while( true )</span></p>
+<p><span style=" font-size:0.86rem">       {</span></p>
+<p><span style=" font-size:0.86rem">               if(
+PeekMessage(&amp;message, NULL , 0,0,PM_REMOVE ))</span></p>
+<p><span style=" font-size:0.86rem">              {</span></p>
+<p><span style=" font-size:0.86rem">                    
+TranslateMessage(&amp;message);</span></p>
+<p><span style=" font-size:0.86rem">                    
+DispatchMessage(&amp;message);</span></p>
+<p><span style=" font-size:0.86rem">              }</span></p>
+<p><span style=" font-size:0.86rem">       }</span></p>
+<p><span style=" font-size:0.86rem"> </span></p>
+<p><span style=" font-size:0.86rem">}</span></p>
+</div>
+<p><span style=" font-size:1.0rem"> </span></p>
+<h3
+style="margin:0.57% 0.00% 0.00%; page-break-inside:avoid; page-break-after:avoid; font-weight:normal"><span
+id="part0000.xhtml__Toc402695702"><span id="part0000.xhtml_aid-QC"
+style=" font-size:1.5rem; color:#6b2449">Last Words</span></span></h3>
+<p><span style=" font-size:0.95rem">I would like to thank you for
+purchasing or borrowing this kindle book from the kindle store. I truly
+hope it has been extremely helpful in learning how to develop and
+program a Window. If you have any questions about the book then please
+e-mail me at </span><a href="mailto:ltrobespierre@outlook.com"><span
+style=" font-size:0.95rem; text-decoration:underline; color:#828282">ltrobespierre@outlook.com</span></a><span
+style=" font-size:0.95rem">.</span></p>
+<p><span style=" font-size:0.95rem">Also, I would be eternally grateful
+if after reading this book you write a review on Amazon about how much
+you enjoyed or – heavens forbid – disliked this book.</span></p>
+<p><span style=" font-size:0.95rem">If you discover any errors in this
+book, please e-mail at the above address with the problem, including the
+chapter number and section. Thank you.</span></p>
+<p><span style=" font-size:0.95rem">Thank you again. I was a pleasure to
+write this book and I hope you had just as much desire from reading and
+learning the basics of the Windows API.</span></p>
+<p><span style=" font-size:0.95rem"> </span></p>
+<p><span style=" font-size:0.95rem">Once again,</span></p>
+<p><span style=" font-size:0.95rem"> </span></p>
+<p><span style=" font-size:0.95rem; font-style:italic; ">Thank
+you!</span></p>
+<p><span style=" font-size:1.0rem"> </span></p>
+</div>

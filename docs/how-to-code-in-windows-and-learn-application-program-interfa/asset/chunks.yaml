@@ -1,0 +1,2035 @@
+- fmt: "\n![](Images/cover00050.jpeg)\n\n# Introduction\n\n## Your First Window\n\n\
+    Welcome to `Create Your Own Window`, a book that uses the C++ programming language\
+    \ alongside the `Windows API`. With this book, you will learn the syntax required\
+    \ to build your very first window. Step by step, you can move through the stages\
+    \ of creating a fully functional windows that you can see on your PC screen.\n\
+    \n## The Window Example\n\nBy the end of this book you will be capable of writing\
+    \ code that builds a window and understanding it. The window you create will look\
+    \ the same or similar to this:\n\n![](Images/image00048.jpeg)\n\nThe first stage\
+    \ that this book introduces you to is to make sure you have the programming experience\
+    \ required to understand the syntax needed for a window. To understand everything\
+    \ that is shown and explained in this book, you will need to understand the basics\
+    \ of C++ and some of Object-Oriented Programming. This includes understanding\
+    \ concepts such as:\n\n* Variables.\n* Classes.\n* Inheritance.\n* Functions.\n\
+    * Passing values by reference and pointers.\n* Loops.\n* Statements.\n\nNow, let’s\
+    \ begin by looking at the code of a simple window called `The Message Box`.\n\n\
+    ## Conventions & Practices\n\nThere is no doubt about it, the `Windows API` is\
+    \ a difficult to learn, but very rewarding. I mean, you get to build your own\
+    \ Windows. You get to become Bill Gates – without the millions of dollars obviously.\n\
+    \nThroughout the pages of this book you will discover three boxes that have special\
+    \ information that focuses on programming techniques. The following illustrates\
+    \ the boxes that are spread out amongst the numerous pages.\n\n### Programming\
+    \ Knowledge\n\nThese boxes are filled with necessary information, which can help\
+    \ to enhance your knowledge of the C++ language.\n\n### Programming Technical\
+    \ Talk\n\nThese boxes are for the “geek” inside us, which desires to learn and\
+    \ absorb the information of in-depth C++ concepts.\n\n### Programming Warnings\n\
+    \nThese boxes point out dangerous areas that a programmer should be aware of before\
+    \ attempting to code something, via a certain programming concept.\n\n# Chapter\
+    \ 1: The MessageBox Window\n\n## Your First Window: The Message Box\n\nDo you\
+    \ remember the first program you created? If you read book 1 of `C++ Programming\
+    \ Simplified`, written by my good self, then your first program would probably\
+    \ have been `The Hello Programmer` application. Well, I hope you did and to begin\
+    \ your journey with Windows programming, we are going to the Hello Programmer\
+    \ application and converting it to work with the `Windows API`.\n\nOf course,\
+    \ creating a Windows version of the `Hello Programmer` application is much more\
+    \ than just the simple program you see here.\n\n```cpp\n#include <iostream>\n\n\
+    using namespace std;\n\nint main()\n{\n    cout << \"Hello Programmer!\" << endl;\n\
+    \    return 0;\n}\n```\n\nLooks pretty easy doesn’t it? Well, remember those days\
+    \ when programming in C++ was easy, although not as rewarding as what you’re about\
+    \ to jump into – not literally. Don’t worry, I am not going to leave you without\
+    \ a flair gun stood in a sinking boat. Each stage we go through I’ll be there\
+    \ to hold your hand – again not literally - and talk you through every part slowly.\
+    \ So, let’s us begin with the first step of building the MessageBox program.\n\
+    \n### Step 1: the `<Windows.h>` File\n\nBefore we create our Windows MessageBox,\
+    \ the initial line of code required is a pre-processor directive that includes\
+    \ the `Windows.h` header file. This is probably easy for any intermediate or advanced\
+    \ C++ programmer. However, I have written the line below.\n\n```cpp\n#include\
+    \ <Windows.h>\n```\n\nBy including the Windows header file, it allows the program\
+    \ to utilize everything required to construct a program, which operates in Windows.\n\
+    \n**Warning: Windows Header File**\n\nDepending on the compiler you are using\
+    \ to build your window shall depend on how its like the Windows header file to\
+    \ be included.\n\nMost compiler will accept `#include <Windows>`.\n\nHowever,\
+    \ in some case, like `Code::Blocks`, you will need to include a `.h` after the\
+    \ Windows. As such:\n\n```cpp\n#include <Windows.h>\n```\n\n### Step 2: Open With\
+    \ The `WinMain` function\n\nStated earlier, when creating a Windows application\
+    \ the main function, used for Windows console programs, is replaced with the `WinMain`\
+    \ function. Like the `main` function, `WinMain` is the beginning of any Windows\
+    \ application created. Therefore, when coding a programs using the `Windows API`,\
+    \ the initial line inside the `WinMain` function is the beginning of the program.\n\
+    \nThe `WinMain` function also has several parameters that are used in a Windows\
+    \ program. The syntax below reveals the prototype for the `WinMain` function.\n\
+    \n```cpp\nWINAPI int WinMain(HINSTANCE hInstance,\n                   HINSTANCE\
+    \ hPrevInstance,\n                   LPSTR cmdLine, int cmdShow);\n```\n\n**Warning:\
+    \ The WinMain Is Not main**\n\nDeveloping a console window using `main` and building\
+    \ a window by opening with `WinMain` is totally different. One of the only similarity’s\
+    \ it has is like `main`, `WinMain` is where the program begins.\n\nNow, you might\
+    \ already be gapping at those parameters wondering what `HINSTANCE` and `LPSTR`\
+    \ mean. Put in a complex way, `HINSTANCE` is a handle to an instance. This means,\
+    \ to someone attempting Windows programming for the first time, that `HINSTANCE`\
+    \ is a type defined using `typdef`, which looks for the address in memory it is\
+    \ being utilized for. Therefore, it iss like any data type, which can define a\
+    \ variable. Later on we will look at the different types the `Windows API` has\
+    \ and uses in its programming. As for the example above, `HINSTANCE` creates a\
+    \ variable called `hInstance` and another called `hPrevInstance`. The second variable\
+    \ is basically ignored and not used in todays Windows programming, unless you\
+    \ wish to create a program for an older version of Windows, like Windows 95.\n\
+    \nNext we have `LPSTR`, which is another type created for the `Windows API`. It\
+    \ stands for Long Pointer to String. In short terms, it is a pointer type that\
+    \ looks for a string variable. This means that when this type is used it requires\
+    \ to point to a string variable. Once we move onto creating the message box object,\
+    \ this will come into full practise.\n\nThe last parameter is a classic `int`\
+    \ variable, which means it looks for a whole number. Again, we will see how this\
+    \ works with the message box object we shall create next.\n\nOnce the `WinMain`\
+    \ function is complete, it opens up with brackets and we can start to create our\
+    \ message box. To create a message box we shall use the message box function known\
+    \ as `MessageBox()`. Like the `WinMain` function, the `MessageBox` object uses\
+    \ parameters to determine what information the message box will have in the program.\n\
+    \nTo create the Hello Programmer message box follow the syntax:\n\n```cpp\nMessageBox(0,“Hello\
+    \ Programmer, nice to see you again!\",\"Welcome Back!\", MB_OK);\n```\n\nOn the\
+    \ MSDN website, it displays the syntax for the `MessageBox` object as the following.\n\
+    \n```cpp\nint WINAPI MessageBox(_In_opt_ HWND hWnd,\n                     _In_opt_\
+    \ LPCTSTR lpText,\n                     _In_opt_ LPCTSTR lpCaption,\n        \
+    \             _In_ UINT uType);\n```\n\nLet’s go through this before we end the\
+    \ program.\n\n#### HWND hWnd\n\nThe `MessageBox` function opens with a `HWND`\
+    \ (handle to window/window handle) object. A `HWND` object is another typedef\
+    \ that equals to an `int` variable. This type looks for a whole number. This is\
+    \ why in our small example the value of the `HWND` is set to 0, therefore telling\
+    \ the compiler there is no `HWND` for the `MessageBox` to use.\n\n#### LPCTSTR\
+    \ lpText\n\nNext, a `LPSTR` type is required. The first `LPSTR` allocates the\
+    \ message inside the Message Box. This is important, as if you get these up you’ll\
+    \ have the wrong piece of string in the wrong place. As you can see, the first\
+    \ variable in the example is called `lpText`, signifying it is used for the message\
+    \ in the dialog box.\n\n#### LPCTSTR lpCaption\n\nThe second `LPSTR` is to fill\
+    \ the caption of the dialog box. The caption is the header file of the dialog\
+    \ box.\n\nAs you can see from the image above, the caption in the message dialog\
+    \ box reads“Message Box”and the message itself reads“Hello Programmer!.\n\n####\
+    \ UINT uType\n"
+  raw: '
+
+
+    ![](Images/cover00050.jpeg)
+
+
+    Introduction
+
+
+    # Your First Window
+
+
+    Welcome to Create Your Own Window, a book that uses the C++ programming language
+    alongside the Windows API. With this book, you will learn the syntax required
+    to build your very first window. Step by step, you can move through the stages
+    of creating a fully functional windows that you can see on your PC screen.
+
+
+    # The Window Example
+
+
+    By the end of this book you will be capable of writing code that builds a window
+    and understanding it. The window you create will look the same or similar to this:
+
+
+    ![](Images/image00048.jpeg)
+
+
+    The first stage that this book introduces you to is to make sure you have the
+    programming experience required to understand the syntax needed for a window.
+    To understand everything that is shown and explained in this book, you will need
+    to understand the basics of C++ and some of Object-Oriented Programming. This
+    includes understanding concepts such as:
+
+
+    *   Variables.
+
+
+    *   Classes.
+
+
+    *   Inheritance.
+
+
+    *   Functions.
+
+
+    *   Passing values by reference and pointers.
+
+
+    *   Loops.
+
+
+    *   Statements.
+
+
+    Now, let’s begin by looking at the code of a simple window called The Message
+    Box.
+
+
+    ## Conventions & Practices
+
+
+    There is no doubt about it, the Windows API is a difficult to learn, but very
+    rewarding. I mean, you get to build your own Windows. You get to become Bill Gates
+    – without the millions of dollars obviously.
+
+
+    Throughout the pages of this book you will discover three boxes that have special
+    information that focuses on programming techniques. The following illustrates
+    the boxes that are spread out amongst the numerous pages.
+
+
+    Programming Knowledge
+
+
+    These boxes are filled with necessary information, which can help to enhance your
+    knowledge of the C++ language.
+
+
+    Programming Technical Talk
+
+
+    These boxes are for the “geek” inside us, which desires to learn and absorb the
+    information of in-depth C++ concepts.
+
+
+    Programming Warnings
+
+
+    These boxes point out dangerous areas that a programmer should be aware of before
+    attempting to code something, via a certain programming concept.
+
+
+    # Chapter 1: The MessageBox Window
+
+
+    ## Your First Window: The Message Box
+
+
+    Do you remember the first program you created? If you read book 1 of C++ Programming
+    Simplified, written by my good self, then your first program would probably have
+    been The Hello Programmer application. Well, I hope you did and to begin your
+    journey with Windows programming, we are going to the Hello Programmer application
+    and converting it to work with the Windows API.
+
+
+    Of course, creating a Windows version of the Hello Programmer application is much
+    more than just the simple program you see here.
+
+
+    #include <iostream>
+
+
+    using namespace std;
+
+
+    int main()
+
+
+    {
+
+
+        cout << "Hello Programmer!" << endl;
+
+
+        return 0;
+
+
+    }
+
+
+    Looks pretty easy doesn’t it? Well, remember those days when programming in C++
+    was easy, although not as rewarding as what you’re about to jump into – not literally.
+    Don’t worry, I am not going to leave you without a flair gun stood in a sinking
+    boat. Each stage we go through I’ll be there to hold your hand – again not literally 
+    - and talk you through every part slowly. So, let’s us begin with the first step
+    of building the MessageBox program.
+
+
+    ### Step 1: the <Windows.h> File
+
+
+    Before we create our Windows MessageBox, the initial line of code required is
+    a pre-processor directive that includes the Windows.h header file. This is probably
+    easy for any intermediate or advanced C++ programmer. However, I have written
+    the line below.
+
+
+    #include <Windows.h>
+
+
+    By including the Windows header file, it allows the program to utilize everything
+    required to construct a program, which operates in Windows.
+
+
+    Warning: Windows Header File
+
+
+    Depending on the compiler you are using to build your window shall depend on how
+    its like the Windows header file to be included.
+
+
+    Most compiler will accept #include <Windows>.
+
+
+    However, in some case, like Code::Blocks, you will need to include a .h after
+    the Windows. As such:
+
+
+    #include <Windows.h>
+
+
+    ### Step 2: Open With The WinMain function
+
+
+    Stated earlier, when creating a Windows application the main function, used for
+    Windows console programs, is replaced with the WinMain function. Like the main
+    function, WinMain is the beginning of any Windows application created. Therefore,
+    when coding a programs using the Windows API, the initial line inside the WinMain
+    function is the beginning of the program.
+
+
+    The WinMain function also has several parameters that are used in a Windows program.
+    The syntax below reveals the prototype for the WinMain function.
+
+
+    WINAPI int WinMain(HINSTANCE hInstance,
+
+
+                       HINSTANCE hPrevInstance,
+
+
+                       LPSTR cmdLine, int cmdShow);
+
+
+    Warning: The WinMain Is Not main
+
+
+    Developing a console window using main and building a window by opening with WinMain
+    is totally different. One of the only similarity’s it has is like main, WinMain
+    is where the program begins.
+
+
+    Now, you might already be gapping at those parameters wondering what HINSTANCE
+    and LPSTR mean. Put in a complex way, HINSTANCE is a handle to an instance. This
+    means, to someone attempting Windows programming for the first time, that HINSTANCE
+    is a type defined using typdef, which looks for the address in memory it is being
+    utilized for. Therefore, it iss like any data type, which can define a variable.
+    Later on we will look at the different types the Windows API has and uses in its
+    programming. As for the example above, HINSTANCE creates a variable called hInstance
+    and another called hPrevInstance. The second variable is basically ignored and
+    not used in todays Windows programming, unless you wish to create a program for
+    an older version of Windows, like Windows 95.
+
+
+    Next we have LPSTR, which is another type created for the Windows API. It stands
+    for Long Pointer to String. In short terms, it is a pointer type that looks for
+    a string variable. This means that when this type is used it requires to point
+    to a string variable. Once we move onto creating the message box object, this
+    will come into full practise.
+
+
+    The last parameter is a classic int variable, which means it looks for a whole
+    number. Again, we will see how this works with the message box object we shall
+    create next.
+
+
+    Once the WinMain function is complete, it opens up with brackets and we can start
+    to create our message box. To create a message box we shall use the message box
+    function known as MessageBox(). Like the WinMain function, the MessageBox object
+    uses parameters to determine what information the message box will have in the
+    program.
+
+
+    To create the Hello Programmer message box follow the syntax:
+
+
+    MessageBox(0,“Hello Programmer, nice to see you again!”,“Welcome Back!”, MB_OK);
+
+
+    On the MSDN website, it displays the syntax for the MessageBox object as the following.
+
+
+    int WINAPI MessageBox(
+
+
+      _In_opt_  HWND hWnd,
+
+
+      _In_opt_  LPCTSTR lpText,
+
+
+      _In_opt_  LPCTSTR lpCaption,
+
+
+      _In_      UINT uType
+
+
+    );
+
+
+    Let’s go through this before we end the program.
+
+
+    #### HWND hWnd
+
+
+    The MessageBox function opens with a HWND (handle to window/window handle) object.
+    A HWND object is another typedef that equals to an int variable. This type looks
+    for a whole number. This is why in our small example the value of the HWND is
+    set to 0, therefore telling the compiler there is no HWND for the MessageBox to
+    use.
+
+
+    #### LPCTSTR lpText
+
+
+    Next, a LPSTR type is required. The first LPSTR allocates the message inside the
+    Message Box. This is important, as if you get these mixed up you’ll have the wrong
+    piece of string in the wrong place. As you can see, the first variable in the
+    example is called lpText, signifying it is used for the message in the dialog
+    box.
+
+
+    #### LPCTSTR lpCaption
+
+
+    The second LPSTR is to fill the caption of the dialog box. The caption is the
+    header file of the dialog box.
+
+
+    As you can see from the image above, the caption in the message dialog box reads“Message
+    Box”and the message itself reads“Hello Programmer!.
+
+
+    #### UINT uType'
+  toc: []
+  trans: "\n\n![](img/cover00050.jpeg)\n\n# 引言\n\n## 你的第一个窗口\n\n欢迎阅读《创建你自己的窗口》，这是一本结合\
+    \ C++ 语言与 `Windows API` 的书籍。通过这本书，你将学习构建你第一个窗口所需的语法。通过部就班，你将完成创建一个可以在你 PC 屏幕上看到的、具有完全功能的窗口的各个阶段。\n\
+    \n## 窗口示例\n\n在本书结束时，你将能够编写构建窗口的代码并理解其含义。你创建的窗口看起来与此相同或相似：\n\n![](img/image00048.jpeg)\n\
+    \n本书向你介绍的第一个阶段是确保你具备所需的编程经验，以理解理解窗口所需的语法。要理解书中书中显示和解释的所有内容，你需要了解 C++ 的基础知识以及一些面向对象编程的知识。这包括理解等概念：\n\
+    \n*   变量。\n*   类。\n*   继承。\n*   函数。\n*   通过引用和指针传递值。\n*   循环。\n*   语句。\n\n现在，让我们从一个名为“消息框”（The\
+    \ Message Box）的简单窗口代码开始看。\n\n## 规范与实践\n\n毫无疑问，`Windows API` 很难学习，但非常有回报。我的意思是，你可以构建自己的\
+    \ Windows。你可以成为比尔·盖斯（Bill Gates）——显然，不用拥有那几百万美元了。\n\n在本书的各个页中，你将发现三个包含特殊信息的框，重点关注编程技术。以下展示了散布在众多页面中的这些框。\n\
+    \n### 编程知识\n\n这些框充满了必要信息，可以帮助增强你对 C++ 语言的理解。\n\n### 编程技术探讨\n\n这些框是为了我们内心的“极客”准备的，他们渴望学习和吸收深度\
+    \ C++ 概念的信息。\n\n### 编程警告\n\n这些框指出了程序员在尝试通过特定的编程概念编写代码之前应该注意的危险区域。\n\n**警告：Windows\
+    \ 头文件**\n\n取决于你用于构建窗口的编译器，包含 Windows 头文件的方式也可能取决于该编译器的要求。\n\n大多数编译器将接受 `#include\
+    \ <Windows>`。\n\n然而，在某些情况下（例如 `Code::Blocks`），你需要在 Windows 之后加上 `.h`。如下所示：\n\n\
+    ```cpp\n#include <Windows.h>\n```\n\n### 第 2 步：使用 `WinMain` 函数打开\n\n如前所述，在创建 Windows\
+    \ 应用时，用于 Windows 控制台程序的主函数被 `WinMain` 函数取代了。与 `main` 函数一样，`WinMain` 是任何创建的 Windows\
+    \ 应用的起点。因此，在使用 `Windows API` 编写程序时，`WinMain` 函数内部的第一行就是程序的开始。\n\n`WinMain` 函数还有几个在\
+    \ Windows 程序中使用的参数。下面的语法展示了 `WinMain` 函数的原型。\n\n```cpp\nWINAPI int WinMain(HINSTANCE\
+    \ hInstance,\n                   HINSTANCE hPrevInstance,\n                  \
+    \ LPSTR cmdLine, int cmdShow);\n```\n\n**警告：WinMain 不是 main**\n\n使用 `main` 开发控制台窗口与通过\
+    \ `WinMain` 打开来构建窗口是完全不同的。它们唯一的相似之处在于像 `main` 一样，`WinMain` 是程序开始的地方。\n\n现在，你可能已经在盯着这些参数看，疑惑\
+    \ `HINSTANCE` 和 `LPSTR` 是什么意思了。用复杂的话，`HINSTANCE` 是一个实例的句柄（handle）。这意味着对于第一次尝试\
+    \ Windows 编程的人来说，`HINSTANCE` 是一个使用 `typedef` 定义的类型，它寻找正在被利用的内存地址。因此，它就像任何数据类型一样，可以定义变量。稍后我们将查看\
+    \ `Windows API` 在其编程中拥有并使用的不同类型。对于上面的示例，`HINSTANCE` 创建了一个名为 `hInstance` 的变量，另一个名为\
+    \ `hPrevInstance` 的变量。第二个变量基本上被忽略了。所以，让我们从构建 MessageBox 程序的第一步开始。\n\n### 第 1 步：`<Windows.h>`\
+    \ 文件\n\n在创建我们的 Windows 消息框之前，所需的初始行代码是一个包含 `Windows.h` 头文件的预处理器指令。对于任何中级或高级 C++\
+    \ 程序员来说，这可能简单而易。然而，我写了下面这一行：\n\n```cpp\n#include <Windows.h>\n```\n\n通过包含 Windows\
+    \ 头文件，允许程序利用构建在 Windows 中运行的程序所需的所有内容。\n\n**警告：Windows 头文件**\n\n取决于你用于构建窗口的编译器，包含\
+    \ Windows 头文件的方式也可能不同。\n\n大多数编译器将接受 `#include <Windows>`。\n\n然而，在某些情况下（例如 `Code::Blocks`），你需要在\
+    \ Windows 之后加上 `.h`。如下所示：\n\n```cpp\n#include <Windows.h>\n```\n\n### 第 2 步：使用\
+    \ `WinMain` 函数打开\n\n如前所述，在创建 Windows 应用时，用于 Windows 控制台程序的主函数被 `WinMain` 函数取代了。与\
+    \ `main` 函数一样，`WinMain` 是任何创建的 Windows 应用的起点。因此，在使用 `Windows API` 编写程序时，`WinMain`\
+    \ 函数内部的第一行就是程序的开始。\n\n`WinMain` 函数还有几个在 Windows 程序中使用的参数。下面的语法展示了 `WinMain` 函数的原型。\n\
+    \n```cpp\nWINAPI int WinMain(HINSTANCE hInstance,\n                   HINSTANCE\
+    \ hPrevInstance,\n                   LPSTR cmdLine, int cmdShow);\n```\n\n**警告：WinMain\
+    \ 不是 main**\n\n使用 `main` 开发控制台窗口与通过 `WinMain` 打开来构建窗口是完全不同的。它们唯一的相似之处在于像 `main`\
+    \ 一样，`WinMain` 是程序开始的地方。\n\n现在，你可能已经在盯着这些参数看，疑惑 `HINSTANCE` 和 `LPSTR` 是什么意思了。用复杂的话，`HINSTANCE`\
+    \ 是一个实例的句柄。这意味着对于第一次尝试 Windows 编程的人来说，`HINSTANCE` 是一个使用 `typedef` 定义的类型，它寻找正在被利用的内存地址。因此，它就像任何数据类型一样，可以定义变量。稍后我们将查看\
+    \ `Windows API` 在其编程中拥有并使用的不同类型。对于上面的示例，`HINSTANCE` 创建了一个名为 `hInstance` 的变量，另一个名为\
+    \ `hPrevInstance` 的变量。第二个变量基本上被忽略了。所以，让我们从构建 MessageBox 程序的第一步开始。\n\n### 第 1 步：`<Windows.h>`\
+    \ 文件\n\n在创建我们的 Windows 消息框之前，所需的初始行代码是一个包含 `Windows.h` 头文件的预处理器指令。对于任何中级或高级 C++\
+    \ 程序员来说，这可能简单而易。然而，我写了下面这一行：\n\n```cpp\n#include <Windows.h>\n```\n\n通过包含 Windows\
+    \ 头文件，允许程序利用构建在 Windows 中运行的程序所需的所有内容。\n\n**警告：Windows 头文件**\n\n取决于你用于构建窗口的编译器，包含\
+    \ Windows 头文件的方式也可能取决于要求。\n\n大多数编译器将接受 `#include <Windows>`。\n\n然而，在某些情况下（例如 `Code::Blocks`），你需要在\
+    \ Windows 之后加上 `.h`。如下所示：\n\n```cpp\n#include <Windows.h>\n```\n\n### 第 2 步：使用\
+    \ `WinMain` 函数打开\n\n如前所述，在创建 Windows 应用时，用于 Windows 控制台程序的主函数被 `WinMain` 函数取代了。与\
+    \ `main` 函数一样，`WinMain` 是任何创建的 Windows 应用的起点。因此，在使用 `Windows API` 编写程序时，`WinMain`\
+    \ 函数内部的第一行就是程序的开始。\n\n`WinMain` 函数还有几个在 Windows 程序中使用的参数。下面的语法展示了 `WinMain` 函数的原型。\n\
+    \n```cpp\nWINAPI int WinMain(HINSTANCE hInstance,\n                   HINSTANCE\
+    \ hPrevInstance,\n                   LPSTR cmdLine, int cmdShow);\n```\n\n**警告：WinMain\
+    \ 不是 main**\n\n使用 `main` 开发控制台窗口与通过 `WinMain` 打开来构建窗口是完全不同的。它们唯一的相似之处在于像 `main`\
+    \ 一样，`WinMain` 是程序开始的地方。\n\n现在，你可能已经在盯着这些参数看，疑惑 `HINSTANCE` 和 `LPSTR` 是什么意思了。用复杂的话，`HINSTANCE`\
+    \ 是一个实例的句柄。这意味着对于第一次尝试 Windows 编程的人来说，`HINSTANCE` 是一个使用 `typedef` 定义的类型，它寻找正在被利用的内存地址。因此，它就像任何数据类型一样，可以定义变量。稍后我们将查看\
+    \ `Windows API` 在其编程中拥有并使用的不同类型。对于上面的示例，`HINSTANCE` 创建了一个名为 `hInstance` 的变量，另一个名为\
+    \ `hPrevInstance` 的变量。第二个变量基本上被忽略了。所以，让我们从构建 MessageBox 程序的第一步开始。\n\n### 第 1 步：`<Windows.h>`\
+    \ 文件\n\n在创建我们的 Windows 消息框之前，所需的初始行代码是一个包含 `Windows.h` 头文件的预处理器指令。对于任何中级或高级 C++\
+    \ 程序员来说，这可能简单而易。然而，我写了下面这一行：\n\n```cpp\n#include <Windows.h>\n```\n\n通过包含 Windows\
+    \ 头文件，允许程序利用构建在 Windows 中运行的程序所需的所有内容。\n\n**警告：Windows 头文件**\n\n取决于你用于构建窗口的编译器，包含\
+    \ Windows 头文件的方式也可能取决于要求。\n\n大多数编译器将接受 `#include <Windows>`。\n\n然而，在某些情况下（例如 `Code::Blocks`），你需要在\
+    \ Windows 之后加上 `.h`。如下所示：\n\n```cpp\n#include <Windows.h>\n```\n\n### 第 2 步：使用\
+    \ `WinMain` 函数打开\n\n如前所述，在创建 Windows 应用时，用于 Windows 控制台程序的主函数被 `WinMain` 函数取代了。与\
+    \ `main` 函数一样，`WinMain` 是任何创建的 Windows 应用的起点。因此，在使用 `Windows API` 编写程序时，`WinMain`\
+    \ 函数内部的第一行就是程序的开始。\n\n`WinMain` 函数还有几个在 Windows 程序中使用的参数。下面的语法展示了 `WinMain` 函数的原型。\n\
+    \n```cpp\nWINAPI int WinMain(HINSTANCE hInstance,\n                   HINSTANCE\
+    \ hPrevInstance,\n                   LPSTR cmdLine, int cmdShow);\n```\n\n**警告：WinMain\
+    \ 不是 main**\n\n使用 `main` 开发控制台窗口与通过 `WinMain` 打开来构建窗口是完全不同的。它们唯一的相似之处在于像 `main`\
+    \ 一样，`WinMain` 是程序开始的地方。\n\n现在，你可能已经在盯着这些参数看，疑惑 `HINSTANCE` 和 `LPSTR` 是什么意思了。用复杂的话，`HINSTANCE`\
+    \ 是一个实例的句柄。这意味着对于第一次尝试 Windows 编程的人来说，`HINSTANCE` 是一个使用 `typedef` 定义的类型，它寻找正在被利用的内存地址。因此，它就像任何数据类型一样，可以定义变量。稍后我们将查看\
+    \ `Windows API` 在其编程中拥有并使用的不同类型。对于上面的示例，`HINSTANCE` 创建了一个名为 `hInstance` 的变量，另一个名为\
+    \ `hPrevInstance` 的变量。第二个变量基本上被忽略了。所以，让我们从构建 MessageBox 程序的第一步开始。\n\n# 第 1 章：MessageBox\
+    \ 窗口\n\n## 你的第一个窗口：消息框\n\n还记得你创建的第一个程序吗？如果你读过我写的《C++ 编程简化版》第一本书，那么你的第一个程序可能是 `The\
+    \ Hello Programmer` 应用程序。嗯，我希望你读过了，为了开始你的 Windows 编程之旅，我们将把 `Hello Programmer`\
+    \ 应用程序转换为与 `Windows API` 一工作。\n\n当然，创建一个 Windows 版本的 `Hello Programmer` 应用程序比你在这里看到的简单程序要得多。\n\
+    \n```cpp\n#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n    cout\
+    \ << \"Hello Programmer!\" << endl;\n    return 0;\n}\n```\n\n看起来挺容易的对吧？嗯，记得那些用\
+    \ C++ 编程很轻松的日子吧，虽然没有你即将投入的世界那么有回报——不是字面上的意思。别担心，我不会让你在沉没的船上没有信号枪。在我们经历的每一个阶段，我都会那里手着你的手——再次不是字面上的——并慢慢向你解释每一个部分。所以，让我们从构建\
+    \ MessageBox 程序的第一步开始。\n\n### 第 1 步：`<Windows.h>` 文件\n\n在创建我们的 Windows 消息框之前，所需的初始行代码是一个包含\
+    \ `Windows.h` 头文件的预处理器指令。对于任何中级或高级 C++ 程序员来说，这可能简单而易。然而，我写了下面这一行：\n\n```cpp\n\
+    #include <Windows.h>\n```\n\n通过包含 Windows 头文件，允许程序利用构建在 Windows 中运行的程序所需的所有内容。\n\
+    \n**警告：Windows 头文件**\n\n取决于你用于构建窗口的编译器，包含 Windows 头文件的方式也可能取决于该编译器的要求。\n\n大多数编译器将接受\
+    \ `#include <Windows>`。\n\n然而，在某些情况下（例如 `Code::Blocks`），你需要在 Windows 之后加上 `.h`。如下所示：\n\
+    \n```cpp\n#include <Windows.h>\n```\n\n### 第 2 步：使用 `WinMain` 函数打开\n\n如前所述，在创建\
+    \ Windows 应用时，用于 Windows 控制台程序的主函数被 `WinMain` 函数取代了。与 `main` 函数一样，`WinMain` 是任何创建的\
+    \ Windows 应用的起点。因此，在使用 `Windows API` 编写程序时，`WinMain` 函数内部的第一行就是程序的开始。\n\n`WinMain`\
+    \ 函数还有几个在 Windows 程序中使用的参数。下面的语法展示了 `WinMain` 函数的原型。\n\n```cpp\nWINAPI int WinMain(HINSTANCE\
+    \ hInstance,\n                   HINSTANCE hPrevInstance,\n                  \
+    \ LPSTR cmdLine, int cmdShow);\n```\n\n**警告：WinMain 不是 main**\n\n使用 `main` 开发控制台窗口与通过\
+    \ `WinMain` 打开来构建窗口是完全不同的。它们唯一的相似之处在于像 `main` 一样，`WinMain` 是程序开始的地方。\n\n现在，你可能已经在盯着这些参数看，疑惑\
+    \ `HINSTANCE` 和 `LPSTR` 是什么意思了。用复杂的话，`HINSTANCE` 是一个实例的句柄。这意味着对于第一次尝试 Windows\
+    \ 编程的人来说，`HINSTANCE` 是一个使用 `typedef` 定义的类型，它寻找正在被利用的内存地址。因此，它就像任何数据类型一样，可以定义变量。稍后我们将查看\
+    \ `Windows API` 在其编程中拥有并使用的不同类型。对于上面的示例，`HINSTANCE` 创建了一个名为 `hInstance` 的变量，另一个名为\
+    \ `hPrevInstance` 的变量。第二个变量基本上被忽略了。所以，让我们从构建 MessageBox 程序的第一步开始。\n\n"
+- fmt: '
+
+    The last part of the `MessageBox` object parameters is an unsigned integer type.
+    Although, you do not write a number in the parameter, but instead a typedef name
+    that is equal to a value. In this case, the name is `MB_OK`. What this does is
+    allows for the message box to have an OK button attached to it.
+
+
+    **Knowledge:** The unsigned Means Not Below 0
+
+
+    Remember `unsigned` states that values cannot go below the rate of 0.
+
+
+    **Knowledge:** The OK Window
+
+
+    Whether it is buttons, scroll bars or text boxes, they are all known as windows.
+    This means that the OK button in the example is also a window.
+
+
+    Once the `MessageBox` function is wrote out, we can end the program with a return
+    value of `0` and use a closing bracket.
+
+
+    ![](Images/image00049.jpeg)
+
+
+    This is the end product of the `MessageBox` program. I know it doesn’t look much,
+    but hey, you have just made your first ever window. That is correct. Even a small
+    block on the screen like this is a window.
+
+
+    # Chapter 2: Creating A Window
+
+
+    ## Programming The Main Window
+
+
+    In the previous example you created your very own window application. Even though
+    it was only a message dialog box, it used the basic fundamentals every windows
+    application is required to have.
+
+
+    Now, we are going to create a full screen window. It is a simple blank window
+    with a white background. A basic window averages around 70-80 lines of code.
+
+
+    Well, what is the To begin with, you need to initialize the window and then create
+    the window behind setting a loop.
+
+
+    ### Step 1: Window Class
+
+
+    After coding the `Windows.h` header file and opening the `WinMain` function, the
+    initial step to creating a window is to allocate it a class called a Windows class.
+
+
+    #### WNDCLASSEX
+
+
+    The following syntax is required to create a windows class.
+
+
+    ```cpp
+
+    WNDCLASSEX <class name>;
+
+    WNDCLASSEX parentWindow;
+
+    ```
+
+
+    Once the window class is declared, then you can start to define it by filling
+    in the specifications of its parameters.
+
+
+    Below is a list of the parameters that need attending to before moving onto the
+    next stage.
+
+
+    | Parameter | Description |
+
+    | :--- | :--- |
+
+    | `cbClsExtra` | Determines the amount of reserved bytes required for the Windows
+    Class. Normally, this is set to `NULL`. |
+
+    | `cbSize` | Sets the byte size of the Windows Class. |
+
+    | `cbWndExtra` | Determines the amount of reserved bytes required for the Window.
+    Normally, this is set to `NULL`. |
+
+    | `hbrBackground` | Set the type of brush for drawing and colouring the window.
+    It can alter the colour of the window. |
+
+    | `hCursor` | Set the cursor type used in the window. If set to `NULL`, then the
+    default cursor will be used. |
+
+    | `hIcon` | Sets the original icon used for the window. This is the icon seen
+    in the taskbar. If set to `NULL`, then the default icon will be used. |
+
+    | `hIconSm` | Set the small sized icon (seen in the Windows tray). If set to `NULL`,
+    then the default icon will be used. |
+
+    | `hInstance` | Set the handle name of the instance that the Window uses. |
+
+    | `lpszClassName` | Set the name of the Windows class name between double quotes.
+    |
+
+    | `lpfnWndProc` | Set the name found in the `WinProc` function. |
+
+    | `lpszMenuName` | Set the name of the menu that the window has. If the window
+    has no menu then set `NULL`. |
+
+    | `style` | Set the style (shape) of the window. |
+
+
+    Once all of these are filled out as shown below, the next step is to make sure
+    the window is registered in memory.
+
+
+    ```cpp
+
+    prWnd.cbClsExtra = 0;
+
+    prWnd.cbSize = sizeof(WNDCLASSEX);
+
+    prWnd.cbWndExtra = 0;
+
+    prWnd.hbrBackground = (HBRUSH)(COLOR_WINDOW+1);
+
+    prWnd.hCursor = LoadCursor(hInst , IDC_ARROW);
+
+    prWnd.hIcon = NULL;
+
+    prWnd.hIconSm = NULL;
+
+    prWnd.hInstance = hInst;
+
+    prWnd.lpfnWndProc = (WNDPROC)WndProc;
+
+    prWnd.lpszClassName = "DirectX Project";
+
+    prWnd.lpszMenuName = NULL;
+
+    prWnd.style = CS_HREDRAW | CS_VREDRAW;
+
+    ```
+
+
+    ### Step 2: Register the Windows Class
+
+
+    This part is simple, and requires only one line of code. First you write `RegisterClassEx`
+    then in brackets `()` you reference the windows class you have just made. In this
+    case it would look like the following.
+
+
+    #### RegisterClassEx
+
+
+    ```cpp
+
+    RegisterClassEx(&parentWindow);
+
+    ```
+
+
+    There. Simple.
+
+
+    ### Step 3: Create The Window
+
+
+    Now that you have the window registered in memory for the computer to use, you
+    have to create its foundations. Don’t get this confused with creating the windows
+    class, as now you are forming the visual aspect of the window instead of telling
+    the compiler what the window boarder and how the window should act.
+
+
+    To begin to create a window you first have to use the handle variable (normally
+    `hWnd`) and incorporate the `CreateWindow` function.
+
+
+    | Parameter | Description |
+
+    | :--- | :--- |
+
+    | `LPSTR` | The name of the class. |
+
+    | `LPSTR` | The caption of the window. |
+
+    | `DWORD` | How the window will be displayed. |
+
+    | `int` | The X position of the window. |
+
+    | `int` | The Y position of the window. |
+
+    | `int` | The width of the window. |
+
+    | `int` | The height of the window. |
+
+    | `HWND` | The parent window. |
+
+    | `HMENU` | The menu of the window. |
+
+    | `HINSTANCE` | The instance of the window. |
+
+    | `LPVOID` | Pointer to a value. |
+
+
+    ```cpp
+
+    hWnd = CreateWindow("First Window", "Main Window", WS_OVERAPPEDWINDOW | WS_TOPMOST
+    | WS_VISIBLE, 400, 400, 800, 600, NULL, NULL, hInstance, NULL);
+
+    ```
+
+
+    ### Step 4: Show & Update The Window
+
+
+    Next, it is now time to tell the compiler how it will display the window. This
+    is not how it will look but to tell it what handle to use to show and then update
+    the window whenever a new event is created.
+
+
+    **Technical Talk:** What is a Windows event?
+
+
+    A Window event is anything that happens in the window. Whether that is a mouse
+    click, a menu opening or the window resizing, they are all events and the compiler
+    requires to be told when one happens so it update the window through the `UpdateWindow`
+    function.
+
+
+    #### ShowWindow(…)
+
+
+    First we need to show the window before we can tell the compiler it needs updating.
+    To do this the `ShowWindow` function is initiated along with a set of parameters
+    to tell the compiler what handle to use and the concept of how the handle is to
+    be used.
+
+
+    ```cpp
+
+    ShowWindow(hWnd, SW_SHOW);
+
+    ```
+
+
+    We know that `hWnd` is a handle to the window. But the `SW_SHOW` is an object
+    type that tells the show window that after grabbing the handle it then has to
+    utilise it to show the window.
+
+
+    ### Step 5: Translate & Update
+
+
+    #### MSG
+
+    '
+  raw: 'The last part of the MessageBox object parameters is an unsigned integer type.
+    Although, you do not write a number in the parameter, but instead a typedef name
+    that is equal to a value. In this case, the name is MB_OK. What this does is allows
+    for the message box to have an OK button attached to it.
+
+
+    Knowledge: The unsigned Means Not Below 0
+
+
+    Remember unsigned states that values cannot go below the rate of 0.
+
+
+    Knowledge: The OK Window
+
+
+    Whether it is buttons, scroll bars or text boxes, they are all known as windows.
+    This means that the OK button in the example is also a window
+
+
+    Once the MessageBox function is wrote out, we can end the program with a return
+    value of 0 and use a closing bracket.
+
+
+    ![](Images/image00049.jpeg)
+
+
+    This is the end product of the MessageBox program. I know it doesn’t look much,
+    but hey, you have just made your first ever window. That is correct. Even a small
+    block on the screen like this is a window.
+
+
+    # Chapter 2: Creating A Window
+
+
+    ## Programming The Main Window
+
+
+    In the previous example you created your very own window application. Even though
+    it was only a message dialog box, it used the basic fundamentals every windows
+    application is required to have.
+
+
+    Now, we are going to create a full screen window. It is a simple blank window
+    with a white background.  A basic window averages around 70-80 lines of code.
+
+
+    Well, what is the To begin with, you need to initialize the window and then create
+    the window behind setting a loop.
+
+
+    ### Step 1: Window Class
+
+
+    After coding the Windows.h header file and opening the WinMain function, the initial
+    step to creating a window is to allocate it a class called a Windows class.
+
+
+    #### WNDCLASSEX
+
+
+    The following syntax is required to create a windows class.
+
+
+    WNDCLASSEX <class name>;
+
+
+    WNDCLASSEX parentWindow;
+
+
+    Once the window class is declared, then you can start to define it by filling
+    in the specifications of its parameters.
+
+
+    Below is a list of the parameters that need attending to before moving onto the
+    next stage.
+
+
+    | Parameter | Description |
+
+
+    | cbClsExtra | Determines the amount of reserved bytes required for the Windows
+    Class. Normally, this is set to NULL. |
+
+
+    | cbSize | Sets the byte size of the Windows Class. |
+
+
+    | cbWndExtra | Determines the amount of reserved bytes required for the Window.
+    Normally, this is set to NULL. |
+
+
+    | hbrBackground | Set the type of brush for drawing and colouring the window.
+    It can alter the colour of the window. |
+
+
+    | hCursor | Set the cursor type used in the window. If set to NULL, then the default
+    cursor will be used. |
+
+
+    | hIcon | Sets the original icon used for the window. This is the icon seen in
+    the taskbar. If set to NULL, then the default icon will be used. |
+
+
+    | hIconSm | Set the small sized icon (seen in the Windows tray). If set to NULL,
+    then the default icon will be used. |
+
+
+    | hInstance | Set the handle name of the instance that the Window uses. |
+
+
+    | lpszClassName | Set the name of the Windows class name between double quotes.
+    |
+
+
+    | lpfnWndProc | Set the name found in the WinProc function. |
+
+
+    | lpszMenuName | Set the name of the menu that the window has. If the window has
+    no menu then set to NULL. |
+
+
+    | style | Set the style (shape) of the window. |
+
+
+    Once all of these are filled out as shown below, the next step is to make sure
+    the window is registered in memory.
+
+
+           prWnd.cbClsExtra = 0;
+
+
+           prWnd.cbSize = sizeof( WNDCLASSEX);
+
+
+           prWnd.cbWndExtra = 0;
+
+
+           prWnd.hbrBackground = ( HBRUSH)( COLOR_WINDOW+1);
+
+
+           prWnd.hCursor = LoadCursor(hInst , IDC_ARROW );
+
+
+           prWnd.hIcon = NULL;
+
+
+           prWnd.hIconSm = NULL;
+
+
+           prWnd.hInstance = hInst;
+
+
+           prWnd.lpfnWndProc = ( WNDPROC)WndProc;
+
+
+           prWnd.lpszClassName = "DirectX Project";
+
+
+           prWnd.lpszMenuName = NULL;
+
+
+           prWnd.style = CS_HREDRAW | CS_VREDRAW ;
+
+
+    ### Step 2: Register the Windows Class
+
+
+    This part is simple, and requires only one line of code. First you write RegisterClassEx
+    then in brackets () you reference the windows class you have just made. In this
+    case it would look like the following.
+
+
+    #### RegisterClassEx
+
+
+    RegisterClassEx(&parentWindow);
+
+
+    There. Simple.
+
+
+    ### Step 3: Create The Window
+
+
+    Now that you have the window registered in memory for the computer to use, you
+    have to create its foundations. Don’t get this confused with creating the windows
+    class, as now you are forming the visual aspect of the window instead of telling
+    the compiler what the window boarder and how the window should act.
+
+
+    To begin to create a window you first have to use the handle variable (normally
+    hWnd) and incorporate the CreateWindow function into the handle. The reason for
+    this is due to the hWnd acting like a hook for holding the window up on the desktop
+    when it is ran on the computer. Without a handle, the window would not have anything
+    to grapple onto when trying to load.
+
+
+    Once the hWnd is written an assignment operator is used and then you place the
+    CreateWindow function in along with its lists of parameters.  I will take you
+    through the parameters now.
+
+
+    | Parameter | Description |
+
+
+    | LPSTR | The first LPSTR looks for the name of the class you set in the windows
+    class. |
+
+
+    | LPSTR | The second LPSTR looks for the name of the window caption. |
+
+
+    | DWORD | This sets how the window will be displayed on the screen. |
+
+
+    | int | The following is the X position of where the window will be once it is
+    open on the desktop. |
+
+
+    | int | The following is the Y position of where the window will be once it is
+    open on the desktop. |
+
+
+    | int | The following is the width of the window. |
+
+
+    | int | The following is the height of the window. |
+
+
+    | HWND | This is to set whether the window has a parent window in it hierarchy.
+    If the window is the main window then this is set to NULL. |
+
+
+    | HMENU | This is to set whether the window has a handle to a menu. If the window
+    his no menu then this is set to NULL. |
+
+
+    | HINSTANCE | This looks for the handle to the instance of the window. |
+
+
+    | LPVOID | This is pointer to value used by the window to determine where it requires
+    to use to create a certain type of structure. For a basic window this is set to
+    NULL. |
+
+
+    #### CreateWindow(...)
+
+
+    There is all the parameters and this is how they may look for your window.
+
+
+    hWnd = CreateWindow("My First Window" ,
+
+
+                                          "My Main Window",
+
+
+                                          WS_OVERLAPPEDWINDOW | WS_EX_TOPMOST | WS_VISIBLE,
+
+
+                                          400, 400,
+
+
+                                          800, 600,
+
+
+                                          NULL, NULL,
+
+
+                                          hInstance, NULL);
+
+
+    ### Step 4: Show & Update The Window
+
+
+    Next, it is now time to tell the compiler how it will display the window. This
+    is not how it will look but to tell it what handle to use to show and then update
+    the window whenever a new event is created.
+
+
+    Technical Talk: What is a Windows event?
+
+
+    A Window event is anything that happens in the window. Whether that is a mouse
+    click, a menu being open or the window resizing, they are all events and the compiler
+    requires to be told when one happens so it update the window through the UpdateWindow
+    function.
+
+
+    #### ShowWindow(…)
+
+
+    First we need to show the window before we can tell the compiler it needs updating.
+    To do this the ShowWindow function is iniitated along with a set of parameters
+    to tell the compiler what handle to use and the concept of how the handle is to
+    be used.
+
+
+    ShowWindow(hWnd, SW_SHOW);
+
+
+    We know that that hWnd is a handle to the window. But the SW_SHOW is an object
+    type that tells the show window that after grabbing the handle it then has to
+    utilise it to show the window.
+
+
+    Looking at SW_SHOW we can easily tell that the SW stands for Show Window. What
+    it really does is initialise the window and tells it to show it to the width,
+    length and position dictated by the windows class.
+
+
+    ### Step 5: Translate & Update
+
+
+    #### MSG'
+  toc: []
+  trans: '
+
+    `MessageBox` 对象的最后一个参数是一个无符号整数类型。尽管你没有在参数中写数字，而是写了一个等于某个值的定义名称。在这种情况下，名称为 `MB_OK`。它的作用是允许消息框带有一个
+    OK 按钮。
+
+
+    **知识点：** unsigned（无符号）意味着低于 0
+
+
+    记住 `unsigned` 状态表示值不能低于 0。
+
+
+    **知识点：** 窗口
+
+
+    无论是按钮、滚动条还是文本框，它们统被称为窗口。这意味着示例中的 OK 按钮也是一个窗口。
+
+
+    一旦写完 `MessageBox` 函数，我们就可以使用返回值 `0` 并配合右括号来结束程序。
+
+
+    ![](img/image00049.jpeg)
+
+
+    这就是 `MessageBox` 程序的最终产物。我知道它看起来没什么什么，但嘿，你刚刚创建了人生中第一个窗口。没错，即使是屏幕上这样一个小方块也是一个窗口。
+
+
+    # 第 2 章：创建一个窗口
+
+
+    ## 编写主窗口
+
+
+    在上一个示例中，你创建了属于自己的窗口应用程序。尽管它只是一个消息对话框，但它使用了每个 Windows 应用程序都具备的基础要素。
+
+
+    现在，我们将创建一个全屏窗口。它是一个带有白色背景的简单空白窗口。一个基础窗口大约包含 70-80 行代码。
+
+
+    那么，首先，你需要初始化窗口，然后在设置循环之前创建窗口。
+
+
+    ### 步骤 1: 窗口类
+
+
+    在编写了 `Windows.h` 头文件并打开 `WinMain` 函数后，创建窗口的第一步是为它分配一个名为 Windows 类的类。
+
+
+    #### WNDCLASSEX
+
+
+    创建 Windows 类需要以下语法。
+
+
+    ```cpp
+
+    WNDCLASSEX <class name>;
+
+    WNDCLASSEX parentWindow;
+
+    ```
+
+
+    一旦声明了窗口类，你就可以通过填充其参数的规范来开始定义它。
+
+
+    以下是在进入下一个阶段之前需要注意的参数列表。
+
+
+    | 参数 | 描述 |
+
+    | :--- | :--- |
+
+    | `cbClsExtra` | 决定 Windows 类所需的预留字节数。通常将其设置为 `NULL`。 |
+
+    | `cbSize` | 设置 Windows 类的字节大小。 |
+
+    | `cbWndExtra` | 决定窗口所需的预留字节数。通常将其设置为 `NULL`。 |
+
+    | `hbrBackground` | 设置用于绘制和着色窗口的画刷类型。它可以更改窗口的颜色。 |
+
+    | `hCursor` | 设置窗口中使用的光标类型。如果设置为 `NULL`，则使用默认光标。 |
+
+    | `hIcon` | 设置用于窗口的原始图标。这是在任务栏中看到的图标。如果设置为 `NULL`，则使用默认图标。 |
+
+    | `hIconSm` | 设置小尺寸图标（在 Windows 栏中显示）。如果设置为 `NULL`，则使用默认图标。 |
+
+    | `hInstance` | 设置窗口使用的实例句柄名称。 |
+
+    | `lpszClassName` | 在双引号之间设置 Windows 类的名称。 |
+
+    | `lpfnWndProc` | 设置在 `WinProc` 函数找到找到名称。 |
+
+    | `lpszMenuName` | 设置窗口拥有的菜单名称。如果窗口没有菜单，则设置为 `NULL`。 |
+
+    | `style` | 设置窗口的样式（形状）。 |
+
+
+    一旦像下面所示填充了所有内容，下一步是确保窗口已注册到内存中。
+
+
+    ```cpp
+
+    prWnd.cbClsExtra = 0;
+
+    prWnd.cbSize = sizeof(WNDCLASSEX);
+
+    prWnd.cbWndExtra = 0;
+
+    prWnd.hbrBackground = (HBRUSH)(COLOR_WINDOW+1);
+
+    prWnd.hCursor = LoadCursor(hInst , IDC_ARROW);
+
+    prWnd.hIcon = NULL;
+
+    prWnd.hIconSm = NULL;
+
+    prWnd.hInstance = hInst;
+
+    prWnd.lpfnWndProc = (WNDPROC)WndProc;
+
+    prWnd.lpszClassName = "DirectX Project";
+
+    prWnd.lpszMenuName = NULL;
+
+    prWnd.style = CS_HREDRAW | CS_VREDRAW;
+
+    ```
+
+
+    ### 步骤 2: 注册 Windows 类
+
+
+    这部分非常简单，只需要一行代码。首先你编写 `RegisterClassEx`，然后在括号 `()` 中引用你刚刚创建的 Windows 类。在这种情况下，它看起来如下。
+
+
+    #### RegisterClassEx
+
+
+    ```cpp
+
+    RegisterClassEx(&parentWindow);
+
+    ```
+
+
+    搞定。简单。
+
+
+    ### 步骤 3: 创建窗口
+
+
+    现在你已经将窗口注册到内存供计算机使用，你需要创建它的基础。不要将其与创建窗口类混淆，因为现在你正在形成窗口的视觉方面，而不是告诉编译器窗口边界以及窗口应该如何运行。
+
+
+    要开始创建窗口，你首先必须使用句柄变量（通常为 `hWnd`）并结合 `CreateWindow` 函数。
+
+
+    | 参数 | 描述 |
+
+    | :--- | :--- |
+
+    | `LPSTR` | 类名。 |
+
+    | `LPSTR` | 窗口标题。 |
+
+    | `DWORD` | 窗口如何显示。 |
+
+    | `int` | 窗口的 X 位置。 |
+
+    | `int` | 窗口的 Y 位置。 |
+
+    | `int` | 窗口的宽度。 |
+
+    | `int` | 窗口的高度。 |
+
+    | `HWND` | 父窗口。 |
+
+    | `HMENU` | 窗口的菜单。 |
+
+    | `HINSTANCE` | 窗口的实例。 |
+
+    | `LPVOID` | 指值的指针。 |
+
+
+    ```cpp
+
+    hWnd = CreateWindow("First Window", "Main Window", WS_OVERAPPEDWINDOW | WS_TOPMOST
+    | WS_VISIBLE, 400, 400, 800, 600, NULL, NULL, hInstance, NULL);
+
+    ```
+
+
+    ### 步骤 4: 显示并更新窗口
+
+
+    接下来，是时候告诉编译器它将如何显示窗口了。这并不是说它看起来如何，而是告诉它使用哪个句柄来显示，并在每当创建一个新事件时更新窗口。
+
+
+    **技术杂谈：** 什么是 Windows 事件？
+
+
+    窗口事件是窗口中发生的任何事情。无论是鼠标点击、菜单打开还是窗口调整大小，它们都是事件，并且编译器需要在事件发生时被通知，以便它通过 `UpdateWindow`
+    函数更新窗口。
+
+
+    #### ShowWindow(…)
+
+
+    首先，我们需要在显示窗口之前告诉编译器它需要更新。为了做到这一点，需要启动 `ShowWindow` 函数并带上一组参数，告诉编译器使用哪个句柄以及如何使用该句柄的概念。
+
+
+    ```cpp
+
+    ShowWindow(hWnd, SW_SHOW);
+
+    ```
+
+
+    我们知道 `hWnd` 是窗口的句柄。但 `SW_SHOW` 是一个对象类型，它告诉显示窗口函数在获取句柄后，利用它来显示窗口。
+
+
+    ### 步骤 5: 翻译与更新
+
+
+    #### MSG
+
+
+    '
+- fmt: "\nThe final aspect that is required in the `WinMain` function is to create\
+    \ a `MSG` variable, which will be used to interrupt integer values for the window\
+    \ to interpret. To begin with, a `MSG` variable needs to be created. The type\
+    \ definition of `MSG` is a simple `int` variable.\n\nThe syntax to create a `MSG`\
+    \ variable is rather like any other type of variable, although, instead of a built-in\
+    \ type being written `MSG` replaces it.\n\n```cpp\nMSG message;\n```\n\n### ZeroMemory(...)\n\
+    \nNext the `ZeroMemory` function is used to determine that its parameters are\
+    \ allocated a `NULL` value before being used. The reason for this is due that\
+    \ you don’t want a variable’s data to be unnecessary wiped.\n\nThe syntax for\
+    \ the `ZeroMemory` function is as follows.\n\n```cpp\nZeroMemory(message, &message);\n\
+    ```\n\nAs you can see, it uses the `message` variable and references it to see\
+    \ if it has any data stored in it.\n\n### while Loop\n\nThe next stage is to create\
+    \ a loop that always stays true until the window is shut down, thus, it returns\
+    \ the value of 0.\n\nThe loop is of the `while` loop method, or you can write\
+    \ it as a `do while` loop. These are two easiest loops to write for this stage\
+    \ in programming the window.\n\n```cpp\nwhile (true) {\n  // windows functions\n\
+    }\n\ndo\n{\n  // windows functions\n} while (true);\n```\n\nIf you wanted to write\
+    \ this as a `for` loop then the following syntax will work.\n\n```cpp\nbool wndEvent\
+    \ = true;\n\nfor (wndEvent = true; wndEvent = false; ;)\n{\n  // windows functions\n\
+    }\n```\n\nDo you see how much more there is to write with the `for` loop when\
+    \ coding this piece for a window? It may not seem like a lot more, but it is still\
+    \ an awkward method.\n\nNow that the loop is done (I'll be using a `while` loop),\
+    \ we can now move onto the two window functions required for translating and dispatching\
+    \ them.\n\n### TranslateMessage(...)\n\nFirst we your window will require to take\
+    \ the message and translate it to something it can understand. Thus, we use a\
+    \ function called `TranslateMessage`. This function takes only one parameter and\
+    \ it is the `message` variable. So, it will look like this:\n\n```cpp\nTranslateMessage(&message);\n\
+    ```\n\n### DispatchMessage(...)\n\nFollowing its translation, the message is then\
+    \ sent by reference to the `DispatchMessage` function, which sends it to the computer\
+    \ to achieve its task.\n\nLooking at the `Dispatch` function, we can see that\
+    \ it is similar to the `TranslateMessage`.\n\n```cpp\nDispatchMessage(&message);\n\
+    ```\n\nLook at the `while` loop in its fullest then, this is how it looks with\
+    \ the two Windows functions.\n\n```cpp\nwhile (true) {\n  TranslateMessage(&message);\n\
+    \  DispatchMessage(&message);\n}\n```\n\n### Step 6: The Event Loop\n\n#### Callback\
+    \ Function\n\nThe last part of the window is to create the callback function,\
+    \ which will hold the event loops. Even though it is called an Event Loop, what\
+    \ we are going to create is a `switch` statement that decides on an action to\
+    \ approach depending on the value given.\n\nTo start the callback function we\
+    \ create the function heading. The syntax for the callback function may look strange\
+    \ at first but each keyword used I’ll explain in this section.\n\nLet us look\
+    \ at the function first.\n\n```cpp\nLRESULT CALLBACK WndProc(HWND hWnd, UINT msg,\
+    \ WPARAM wParam, LPARAM lParam)\n{\n  // statements\n}\n```\n\nOf course, the\
+    \ `switch` statement resides inside the callback function. First, before we get\
+    \ into the function, we will look at each keyword in the function heading.\n\n\
+    | Keyword | Description |\n| :--- | :--- |\n| LRESULT | The `LRESULT` is the beginning\
+    \ of the callback function. |\n| CALLBACK | The `CALLBACK` is a typedef that is\
+    \ like a return statement and tells the compiler that the results from the functions\
+    \ needs to affect the whole window. |\n| WndProc | The `WndProc` is the title\
+    \ of the opening of the function. |\n| HWND | We have already seen `HWND`. The\
+    \ `HWND` keyword is a handle to a window. |\n| UINT | We have already seen `UINT`\
+    \ as an unsigned integer. This will hold values for the messages passed into the\
+    \ `switch` statement. |\n| WPARAM | `WPARAM` is the Wide Parameter. Depending\
+    \ on the message the window needs will depend on whether `WPARAM` or `LPARAM`\
+    \ is used. |\n| LPARAM | The `LPARAM` is the Long Parameter. Depending on the\
+    \ message the window needs will depend on whether `WPARAM` or `LPARAM` is used.\
+    \ |\n\n#### switch Statement\n\nDelving into the function, we first encounter\
+    \ a `switch` statement with the value of whatever the variable of `msg` holds.\
+    \ First, we will look at the `switch` statement.\n\n```cpp\nswitch (msg)\n{\n\
+    \  case 1: WM_Destroy\n    PostQuitWindow(0);\n}\n```\n\nThe `switch` statement\
+    \ takes the `msg` variable and depending on the value it receives chooses from\
+    \ the cases it have to choose from.\n\nIn the case of this `switch` statement\
+    \ example, there is only one option to choose from.\n\nBut for now, we are going\
+    \ to look at `WM_DESTROY`. This type is a call to the window shutting down. The\
+    \ `PostQuitWindow` parameter value is 0, which makes the program shut down when\
+    \ the case is initialized.\n\nThis is all there is to creating a simple window.\
+    \ The full coding of the window program is posted on the next page.\n\n### Step\
+    \ 7: Adopting the Basic Window with OOP\n\n#### Building A BasicWindow Class\n\
+    \nNow we have seen how a basic window is created, it is time to start manipulating\
+    \ it using OOP. First we are going to create a class to store all the data required\
+    \ for the window.\n\nFirst, let us start off with the basics.\n\n```cpp\nclass\
+    \ BasicWindow {\npublic:\n  API int WinMain(HINSTANCE, HINSTANCE, LPSTR, int);\n\
+    \  LRESULT WndProc(HWND, UINT, WPARAM, LPARAM);\nprotected:\n  HWND hWnd;\n  HINSTANCE\
+    \ hInstance;\n};\n```\n\nFor a start having `HWND hWnd` in the class will wipe\
+    \ out the need for a global `HWND` variable. This gives the appearance of clearer\
+    \ code. Next we have the two functions of `WinMain` and also of `WndProc`. Again,\
+    \ this makes your cleaner as you are declaring the functions in the class. To\
+    \ use these objects and data methods, you have to add to your code the name of\
+    \ the class with the dot operator before the data methods.\n\n### Chapter 3: Putting\
+    \ The Window Together Final Product\n\nThis is the final part of the book. Here\
+    \ we are going to put everything we have learnt together, which will build the\
+    \ window from the first few pages. Here is the code for the window in full.\n\n\
+    ```cpp\n#include <Windows.h>\n\nclass Windows {\npublic:\n  bool LoadWindow(HINSTANCE\
+    \ hInst);\nprivate:\n  HWND hWnd;\n  HINSTANCE hInst;\n};\n\nLRESULT CALLBACK\
+    \ WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {\n  switch (uMsg)\
+    \ {\n    case WM_DESTROY:\n      PostQuitMessage(0);\n      break;\n  }\n  return\
+    \ DefProc(hWnd, uMsg, wParam, lParam);\n}\n\nbool Windows::LoadWindow(HINSTANCE\
+    \ hInst) {\n  HWND CreateWin;\n  WNDCLAS prWnd;\n  prWnd.cbCls = 0;\n  prWnd.cbSize\
+    \ = sizeof(WNDCLAS);\n  prWnd.cbWndExtra = 0;\n  prWnd.hBackground = (HBRUSH)(COLOR_WINDOW+1);\n\
+    \  prWnd.hCursor = LoadCursor(hInst, IDC_ARROW);\n  prWnd.hIcon = NULL;\n  prWnd.hIconSm\
+    \ = NULL;\n  prWnd.hInstance = hInst;\n  prWnd.lpfnWndProc = (WNDPROC)WndProc;\n\
+    \  prWnd.lpszClassName = \"DirectX Project\";\n  prWnd.lpszMenu = NULL;\n  prWnd.style\
+    \ = CS_HREDRAW | CS_VREDRAW;\n  RegisterClassEx(&prWnd);\n  CreateWin.hWnd = CreateWindow(\n\
+    \    \"DirectX Project\",\n    \"My Main Window\",\n    WS_OVERLAPPEDWINDOW |\
+    \ WS_EX_TOPMOST | WS_VISIBLE,\n    400, 400,\n    800, 600,\n    NULL, NULL, hInst,\
+    \ NULL\n  );\n  if (!CreateWin.hWnd) {\n    MessageBox(hWnd, \"Window Creation\
+    \ Failed\", \"Failed To Create Window\", MB_OK);\n    return false;\n  }\n  ShowWindow(CreateWin.hWnd,\
+    \ SW_SHOW);\n  UpdateWindow(CreateWin.hWnd);\n  return true;\n}\n```\n"
+  raw: 'The final aspect that is required in the WinMain function is to create a MSG
+    variable, which will be used to interrupt integer values for the window to interpret.
+    To begin with a MSG variable needs to be created. The type definition of MSG is
+    a simple int variable.
+
+
+    The syntax to create a MSG variable is rather like any other type of variable,
+    although, instead of a built-in type being written MSG replaces it.
+
+
+    MSG message;
+
+
+    #### ZeroMemory(…)
+
+
+    Next the ZeroMemoryfunction is used to determine that its parameters are allocated
+    a NULL value before being used. The reason for this is due to that you don’t want
+    a variable’s data to be unnecessary wiped.
+
+
+    The syntax for the ZeroMemory function is as follows.
+
+
+    ZeroMemory(message, &message);
+
+
+    As you can see, it uses the message variable and references it to see if it has
+    any data stored in it.
+
+
+    #### while Loop
+
+
+    The next stage is to create a loop that always stays true until the window is
+    shut down, thus, it returns the value of 0.
+
+
+    The loop is of the while loop method, or you can write it as a do while loop.
+    These are two easiest loops to write for this stage in programming the window.
+
+
+    while (true) {
+
+
+       // windows functions
+
+
+    }
+
+
+    do
+
+
+    {
+
+
+       // windows functions
+
+
+    } while (true);
+
+
+    If you wanted to write this as a for loop than the following syntax will work.
+
+
+    bool wndEvent = true;
+
+
+    dor (wndEvent = true; wndEvent = false; ;)
+
+
+    {
+
+
+       // windows functions
+
+
+    }
+
+
+    Do you see how much more there is to write with the for loop when coding this
+    piece for a window? It may not seem like a lot more, but it is still an awkward
+    method.
+
+
+    Now that the loop is done (Ill be using a while loop), we can now move onto the
+    two window functions required for translating and dispatching them.
+
+
+    #### TranslateMessage(…)
+
+
+    First we your window will require to take the message and translate it to something
+    it can understand. Thus, we use a function called TranslateMessage. This function
+    takes only one parameter and it is the message variable. So, it will look like
+    this:
+
+
+    TranslateMessage(&message);
+
+
+    #### DispatchMessage(…)
+
+
+    Following its translation, the message is then sent by reference to the DispatchMessage
+    function, which sends it to the computer to achieve its task.
+
+
+    Looking at the Dispatch function, we can see that it similar to the TranslateMessage.
+
+
+    DispatchMessage(&message);
+
+
+    Look at the while loop in its fullest then, this is how it looks with the two
+    Windows functions.
+
+
+    while (true) {
+
+
+       TranslateMessage(&message);
+
+
+       DispatchMessage(&message);
+
+
+    }
+
+
+    ### Step 6: The Event Loop
+
+
+    #### CallBack Function
+
+
+    The last part of the window is to create the callback function, which will hold
+    the event loops. Even though it is called an Event Loop, what we are going to
+    create is a switch statement that decides on an action to approach depending on
+    the value given.
+
+
+    To start the callback function we create the function heading. The syntax for
+    the callbackfunction may look strange at first but each keyword used I’ll explain
+    in this section.
+
+
+    Let us look at the function first.
+
+
+    LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+
+
+    {
+
+
+       // statements
+
+
+    }
+
+
+    Of course, the switch statement resides inside the callback function. First, before
+    we get into the function, we will look at each keyword in the function heading.
+
+
+    | Keyword | Description |
+
+
+    | LRESULT | The LRESULT is the beginning of the callback function. |
+
+
+    | CALLBACK | The CALLBACK is a typdef that is like a return statement and tells
+    the compiler that the results from the functions needs to affect the whole window.
+    |
+
+
+    | WndProc | The WndProc is the title of the opening of the function. |
+
+
+    | HWND | We have already seen HWND. The HWND keyword is a handle to a window.
+    |
+
+
+    | UINT | We have already seen UINT as an unsigned integer. This will hold values
+    for the messages passed into the switch statement. |
+
+
+    | WPARAM | WPARM is the Wide Parameter. Depending on the message the window needs
+    will depend on whether if WPARAM or LPARAM is used. |
+
+
+    | LPARAM | The LPARAM is the Long Parameter. Depending on the message the window
+    needs will depend on whether if WPARAM or LPARAM is used. |
+
+
+    #### switch Statement
+
+
+    Delving into the function, we first encounter a switch statement with the value
+    of whatever the variable of msg holds. First, we will look at the switch statement.
+
+
+    switch (msg)             
+
+
+    {
+
+
+       case 1: WM_Destroy
+
+
+       PostQuitWindow(0);
+
+
+    }
+
+
+    The switch statement takes the msg variable and depending on the value it receives
+    chooses from the cases it have to choose from.
+
+
+    In the case of this switch statement example, there is only one option to choose
+    from..
+
+
+    But for now, we are going to look at WM_DESTROY. This type is a call to the window
+    shutting down. The PostQuitWindow parameter value is 0, which makes the program
+    shut down when the case is initialised.
+
+
+    This is all there is to creating a simple window. The full coding of the window
+    program is posted on the next page.
+
+
+    ### Step 7: Adopting the Basic Window with OOP
+
+
+    #### Building A BasicWindow Class
+
+
+    Now we have seen how a basic window is created, it is time to start manipulating
+    it using OOP. First we are going to create a class to store all the data required
+    for the window.
+
+
+    First, let us start off with the basics.
+
+
+    class BasicWindow {
+
+
+    public:
+
+
+    API int WinMain(HINSTANCE, HINSTANCE, LPSTR, int);
+
+
+    LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+
+
+    protected:
+
+
+    HWND hWnd;
+
+
+    HINSTANCE hInstance;
+
+
+    };
+
+
+    For a start having HWND hWnd in the class will wipe out the need for a global
+    HWND variable. This gives the appearance of clearer code straight away.
+
+
+    Next, we have the two functions of the WinMain and also of the WndProc. Again,
+    this makes your code cleaner as you are declaring the functions in the class.
+
+
+    To use these objects and data methods, you have to add to your code the name of
+    the class along with the dot operator before the data methods.
+
+
+    # Chapter 3: Putting The Window Together
+
+
+    ## The Final Product
+
+
+    This is the final part of the book. Here we are going to put everything we have
+    learnt together, which will build the window from the first few pages.
+
+
+    Here is the code for the window in full.
+
+
+    // HEADER FILES INCLUDED
+
+
+    #include <Windows.h>
+
+
+    // WINDOWS CLASS
+
+
+    class InWindows {
+
+
+    public:
+
+
+            bool LoadWindow( HINSTANCE hInst);
+
+
+    private:
+
+
+            HWND hWnd;
+
+
+            HINSTANCE hInst;
+
+
+    };
+
+
+    LRESULT CALLBACK WndProc(HWND hWnd , UINT uMsg , WPARAM wParam , LPARAM lParam
+    )
+
+
+    {
+
+
+            // MESSAGE CENTER FOR WINDOW
+
+
+            switch( uMsg)
+
+
+           {
+
+
+            case WM_DESTROY:
+
+
+                  PostQuitMessage(0);
+
+
+                   break;
+
+
+           }
+
+
+            return DefWindowProc(hWnd , uMsg , wParam , lParam );
+
+
+    }
+
+
+    bool InWindows ::LoadWindow(HINSTANCE hInst)
+
+
+    {
+
+
+            InWindows CreateWin;
+
+
+            WNDCLASSEX prWnd;
+
+
+           prWnd.cbClsExtra = 0;
+
+
+           prWnd.cbSize = sizeof( WNDCLASSEX);
+
+
+           prWnd.cbWndExtra = 0;
+
+
+           prWnd.hbrBackground = ( HBRUSH)( COLOR_WINDOW+1);
+
+
+           prWnd.hCursor = LoadCursor(hInst , IDC_ARROW );
+
+
+           prWnd.hIcon = NULL;
+
+
+           prWnd.hIconSm = NULL;
+
+
+           prWnd.hInstance = hInst;
+
+
+           prWnd.lpfnWndProc = ( WNDPROC)WndProc;
+
+
+           prWnd.lpszClassName = "DirectX Project";
+
+
+           prWnd.lpszMenuName = NULL;
+
+
+           prWnd.style = CS_HREDRAW | CS_VREDRAW ;
+
+
+            RegisterClassEx(&prWnd);
+
+
+           CreateWin.hWnd = CreateWindow("DirectX Project" ,
+
+
+                                          "My Main Window",
+
+
+                                          WS_OVERLAPPEDWINDOW | WS_EX_TOPMOST | WS_VISIBLE,
+
+
+                                          400, 400,
+
+
+                                          800, 600,
+
+
+                                          NULL, NULL,
+
+
+                                          hInst, NULL);
+
+
+            if(!CreateWin.hWnd)
+
+
+           {
+
+
+                   MessageBox(hWnd, "Window Creation Failed" , "Failed To Create Window",
+    MB_OK);
+
+
+                   return false;
+
+
+           }
+
+
+           ShowWindow(hWnd, SW_SHOW);
+
+
+           UpdateWindow(hWnd);
+
+
+            return true;
+
+
+    }
+
+
+    // START OF WINMAIN'
+  toc: []
+  trans: "\n\n`WinMain` 函数中要求的最后一个方面是创建一个 `MSG` 变量，该变量将用于中断窗口解释的整数值。首先，需要创建一个 `MSG`\
+    \ 变量。`MSG` 的类型定义是一个简单的 `int` 变量。\n\n创建 `MSG` 变量的语法与任何其他类型的变量非常相似，只不过没有写内置类型，而是用\
+    \ `MSG` 代替它。\n\n```cpp\nMSG message;\n```\n\n### ZeroMemory(...)\n\n接下来使用 `ZeroMemory`\
+    \ 函数来确保其参数在使用之前被分配了 `NULL` 值。这样做的原因是你不希望变量的数据被不必要地擦除。\n\n`ZeroMemory` 函数的语法如下。\n\
+    \n```cpp\nZeroMemory(message, &message);\n```\n\n如你所见，它使用了 `message` 变量并引用它以检查其中是否存储了数据。\n\
+    \n### while 循环\n\n下一个阶段是创建一个在窗口关闭之前一直为真的循环，因此它返回值为 0。\n\n该循环使用 `while` 循环方法，你也可以将其写为\
+    \ `do while` 循环。这些是编程窗口阶段最容易编写的两种循环。\n\n```cpp\nwhile (true) {\n  // windows functions\n\
+    }\n\ndo\n{\n  // windows functions\n} while (true);\n```\n\n如果你想将此写为 `for` 循环，那么以下语法将有效。\n\
+    \n```cpp\nbool wndEvent = true;\n\nfor (wndEvent = true; wndEvent = false; ;)\n\
+    {\n  // windows functions\n}\n```\n\n你看到在为窗口编写这段代码时，使用 `for` 循环需要写的内容多多少了吗？这看起来可能并不多，但仍然是一个笨拙的方法。\n\
+    \n现在循环已经完成（我将使用 `while` 循环），我们现在可以进入翻译和分发消息所需的两个窗口函数。\n\n### TranslateMessage(...)\n\
+    \n首先，你的窗口需要获取消息并将其翻译为它可以理解的内容。因此，我们使用一个名为 `TranslateMessage` 的函数。该函数只接受一个参数，即\
+    \ `message` 变量。它看起来如下：\n\n```cpp\nTranslateMessage(&message);\n```\n\n### DispatchMessage(...)\n\
+    \n在翻译之后，消息通过引用发送给 `DispatchMessage` 函数，该函数将其发送给计算机以完成其任务。\n\n观察 `Dispatch` 函数，可以看到它与\
+    \ `TranslateMessage` 类似。\n\n```cpp\nDispatchMessage(&message);\n```\n\n然后查看完整的\
+    \ `while` 循环，这是包含两个 Windows 函数时的样子。\n\n```cpp\nwhile (true) {\n  TranslateMessage(&message);\n\
+    \  DispatchMessage(&message);\n}\n```\n\n### 第 6 ：事件循环\n\n#### 回调函数\n\n窗口的最后部分是创建回调函数，它将包含事件循环。尽管它被称为事件循环，但我们要创建的是\
+    \ `switch` 语句，它根据给定的值决定采取的行动。\n\n要开始回调函数，我们创建函数头。回调函数的语法初看起来可能很奇怪，我将在本节中解释所使用的每个关键字。\n\
+    \n让我们先看函数。\n\n```cpp\nLRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam,\
+    \ LPARAM lParam)\n{\n  // statements\n}\n```\n\n当然，`switch` 语句位于回调函数内部。首先，在进入函数之前，我们将查看函数头中的每个关键字。\n\
+    \n| 关键字 | 描述 |\n| :--- | :--- |\n| LRESULT | `LRESULT` 是回调函数的开头。 |\n| CALLBACK\
+    \ | `CALLBACK` 是一个类型定义，类似于返回语句，并告诉编译器函数的执行需要影响整个窗口。 |\n| WndProc | `WndProc` 是函数开启的标题。\
+    \ |\n| HWND | 我们已经见过 `HWND`。`HWND` 关键字是窗口的句柄。 |\n| UINT | 我们已经见过 `UINT` 是无符号整数。它将持有传递给\
+    \ `switch` 语句的消息值。 |\n| WPARAM | `WPARAM` 是宽参数（Wide Parameter）。窗口需要的消息取决于使用 `WPARAM`\
+    \ 还是 `LPARAM`。 |\n| LPARAM | `LPARAM` 是长参数（Long Parameter）。窗口需要的消息取决于使用 `WPARAM`\
+    \ 还是 `LPARAM`。 |\n\n#### switch 语句\n\n深入函数，我们首先遇到一个 `switch` 语句，其值为变量 `msg` 所持有的值。首先，我们来看\
+    \ `switch` 语句。\n\n```cpp\nswitch (msg)\n{\n  case 1: WM_Destroy\n    PostQuitWindow(0);\n\
+    }\n```\n\n`switch` 语句获取 `msg` 变量，并根据接收到的值从可选分类中进行选择。\n\n在这个 `switch` 语句示例中，只有一个选项供选择。\n\
+    \n但现在，我们来查看 `WM_DESTROY`。这种类型是窗口关闭的调用。`PostQuitWindow` 参数值为 0，这使得程序在初始化 case 时关闭。\n\
+    \n这就是创建一个简单窗口的全部内容。窗口程序的完整代码将发布在下一页。\n\n### 第 7 ：使用 OOP 采用基础窗口\n\n#### 构建 BasicWindow\
+    \ 类\n\n现在我们已经看到了如何创建基础窗口，是时候使用 OOP（面向对象编程）来操作它了。我们将创建一个类来存储窗口所需的数据。\n\n首先，我们从基础开始。\n\
+    \n```cpp\nclass BasicWindow {\npublic:\n  API int WinMain(HINSTANCE, LPSTR, int);\n\
+    \  LRESULT WndProc(HWND, UINT, WPARAM, LPARAM);\nprotected:\n  HWND hWnd;\n  HINSTANCE\
+    \ hInstance;\n};\n```\n\n在类中使用 `HWND` 消除了对全局 `HWND` 变量的需求。这使得代码更整洁。接下来我们有 `WinMain`\
+    \ 和 `WndProc` 这两个函数。使用这些对象和方法，你需要在代码中添加类名和点运算符。\n\n### 第 章：组合窗口最终产品\n\n这是书的最后部分。我们将所学到的内容组合在一起，这将从前几页构建窗口。这里是完整的窗口代码。\n\
+    \n```cpp\n#include <Windows.h>\n\nclass Windows {\npublic:\n  bool LoadWindow(HINSTANCE\
+    \ hInst);\nprivate:\n  HWND hWnd;\n  HINSTANCE hInst;\n};\n\nLRESULT CALLBACK\
+    \ WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {\n  switch (uMsg)\
+    \ {\n    case WM_DESTROY:\n      PostQuitMessage(0);\n      break;\n  }\n  return\
+    \ DefProc(hWnd, uMsg, wParam, lParam);\n}\n\nbool Windows::LoadWindow(HINSTANCE\
+    \ hInst) {\n  HWND CreateWin;\n  WNDCLAS prWnd;\n  prWnd.cbCls = 0;\n  prWnd.cbSize\
+    \ = sizeof(WNDCLAS);\n  prWnd.cbWndExtra = 0;\n  prWnd.hBackground = (HBRUSH)(COLOR_WINDOW+1);\n\
+    \  prWnd.hCursor = LoadCursor(hInst, IDC_ARROW);\n  prWnd.hIcon = NULL;\n  prWnd.hIconSm\
+    \ = NULL;\n  prWnd.hInstance = hInst;\n  prWnd.lpfnWndProc = (WNDPROC)WndProc;\n\
+    \  prWnd.lpszClassName = \"DirectX Project\";\n  prWnd.lpszMenu = NULL;\n  prWnd.style\
+    \ = CS_HREDRAW | CS_VREDRAW;\n  RegisterClassEx(&prWnd);\n  CreateWin.hWnd = CreateWindow(\n\
+    \    \"DirectX Project\",\n    \"My Main Window\",\n    WS_OVERLAPPEDWINDOW |\
+    \ WS_EX_TOPMOST | WS_VISIBLE,\n    400, 400,\n    800, 600,\n    NULL, NULL, hInst,\
+    \ NULL\n  );\n  if (!CreateWin.hWnd) {\n    MessageBox(hWnd, \"Window Creation\
+    \ Failed\", \"Failed To Create Window\", MB_OK);\n    return false;\n  }\n  ShowWindow(CreateWin.hWnd,\
+    \ SW_SHOW);\n  UpdateWindow(CreateWin.hWnd);\n  return true;\n}\n```\n"
+- fmt: "\n```cpp\nint WINAPI WinMain(HINSTANCE hInst , HINSTANCE hPrevInst , LPSTR\
+    \ lpCmdLine , int iCmdShow)\n{\n    InWindows theWindow; // WINDOW CLASS OBJECT\n\
+    \    if(!theWindow.LoadWindow( hInst ))\n    {\n        // IF PARENT WINDOW FAILS\
+    \ TO LOAD\n        MessageBox(NULL , \"Error Initializing Parent Window\" , \"\
+    Initialize Parent Window Failed\", MB_OK);\n        return false; // QUIT PROGRAM\n\
+    \    }\n    MSG message;\n    ZeroMemory(&message, sizeof (message));\n    while(\
+    \ true )\n    {\n        if( PeekMessage(&message, NULL , 0,0,PM_REMOVE ))\n \
+    \       {\n            TranslateMessage(&message);\n            DispatchMessage(&message);\n\
+    \        }\n    }\n}\n```\n\n### Last Words\n\nI would like to thank you for purchasing\
+    \ or borrowing this kindle book from the kindle store. I truly hope it has been\
+    \ extremely helpful in learning how to develop and program a Window. If you have\
+    \ any questions about the book then please e-mail me at [ltrobespierre@outlook.com](mailto:ltrobespierre@outlook.com).\n\
+    \nAlso, I would be eternally grateful if after reading this book you write a review\
+    \ on Amazon about how much you enjoyed or – heavens forbid – disliked this book.\n\
+    \nIf you discover any errors in this book, please e-mail at the above address\
+    \ with the problem, including the chapter number and section. Thank you.\n\nThank\
+    \ you again. I was a pleasure to write this book and I hope you had just as much\
+    \ desire from reading and learning the basics of the Windows API.\n\nOnce again,\n\
+    \nThank you!\n"
+  raw: 'int WINAPI WinMain(HINSTANCE hInst , HINSTANCE hPrevInst , LPSTR lpCmdLine
+    , int iCmdShow)
+
+
+    {
+
+
+            InWindows theWindow; // WINDOW CLASS OBJECT
+
+
+            if(!theWindow.LoadWindow( hInst ))
+
+
+           {
+
+
+                   // IF PARENT WINDOW FAILS TO LOAD
+
+
+                   MessageBox(NULL , "Error Initializing Parent Window" , "Initialize
+    Parent Window Failed", MB_OK);
+
+
+                   return false; // QUIT PROGRAM
+
+
+           }
+
+
+            MSG message;
+
+
+            ZeroMemory(&message, sizeof (message));
+
+
+            while( true )
+
+
+           {
+
+
+                   if( PeekMessage(&message, NULL , 0,0,PM_REMOVE ))
+
+
+                  {
+
+
+                         TranslateMessage(&message);
+
+
+                         DispatchMessage(&message);
+
+
+                  }
+
+
+           }
+
+
+    }
+
+
+    ### Last Words
+
+
+    I would like to thank you for purchasing or borrowing this kindle book from the
+    kindle store. I truly hope it has been extremely helpful in learning how to develop
+    and program a Window. If you have any questions about the book then please e-mail
+    me at [ltrobespierre@outlook.com](mailto:ltrobespierre@outlook.com).
+
+
+    Also, I would be eternally grateful if after reading this book you write a review
+    on Amazon about how much you enjoyed or – heavens forbid – disliked this book.
+
+
+    If you discover any errors in this book, please e-mail at the above address with
+    the problem, including the chapter number and section. Thank you.
+
+
+    Thank you again. I was a pleasure to write this book and I hope you had just as
+    much desire from reading and learning the basics of the Windows API.
+
+
+    Once again,
+
+
+    Thank you!'
+  toc: []
+  trans: "\n\n```cpp\nint WINAPI WinMain(HINSTANCE hInst , HINSTANCE hPrevInst , LPSTR\
+    \ lpCmdLine , int iCmdShow)\n{\n    InWindows theWindow; // WINDOW CLASS OBJECT\n\
+    \    if(!theWindow.LoadWindow( hInst ))\n    {\n        // IF PARENT WINDOW FAILS\
+    \ TO LOAD\n        MessageBox(NULL , \"Error Initializing Parent Window\" , \"\
+    Initialize Parent Window Failed\", MB_OK);\n        return false; // QUIT PROGRAM\n\
+    \    }\n    MSG message;\n    ZeroMemory(&message, sizeof (message));\n    while(\
+    \ true )\n    {\n        if( PeekMessage(&message, NULL , 0,0,PM_REMOVE ))\n \
+    \       {\n            TranslateMessage(&message);\n            DispatchMessage(&message);\n\
+    \        }\n    }\n}\n```\n\n### 结语\n\n感谢你从 Kindle 商店购买或借阅本 Kindle 书。我真心希望它对你学习如何开发和编写\
+    \ Windows 程序非常有帮助。如果你对本书有任何问题，请通过邮件 ltrobespierre@outlook.com 与我取得联系。\n\n此外，如果你在读完本书后，能在亚马逊上写下评论，分享你对这本书的喜爱程度或者——老天保佑——你不喜欢，我将不胜感激。\n\
+    \n如果你在书中发现任何错误，请邮件至上述地址并说明问题，包括章节号和小节号。谢谢。\n\n再次表示感谢。写这本书是我的荣幸，希望你在阅读和学习 Windows\
+    \ API 基础知识的过程中也同样充满了动力。\n\n再次，\n\n感谢！\n\n"

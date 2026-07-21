@@ -1,0 +1,76 @@
+name: How To Code In Windows and Learn Application Program Interface With C++ Programming
+name_cn: C++ 语言 Windows 编程与应用程序接口学习指南
+slug: how-to-code-in-windows-and-learn-application-program-interfa
+toc:
+- - '#'
+  - C++ 语言 Windows 编程与应用程序接口学习指南
+- - '#'
+  - 引言
+- - '##'
+  - 你的第一个窗口
+- - '##'
+  - 窗口示例
+- - '##'
+  - 规范与实践
+- - '###'
+  - 编程知识
+- - '###'
+  - 编程技术探讨
+- - '###'
+  - 编程警告
+- - '###'
+  - 第 1 步：`<Windows.h>` 文件
+- - '###'
+  - 第 2 步：使用 `WinMain` 函数打开
+- - '#'
+  - 第 1 章：MessageBox 窗口
+- - '##'
+  - 你的第一个窗口：消息框
+- - '###'
+  - 第 1 步：`<Windows.h>` 文件
+- - '###'
+  - 第 2 步：使用 `WinMain` 函数打开
+- - '#'
+  - 第 2 章：创建一个窗口
+- - '##'
+  - 编写主窗口
+- - '###'
+  - '步骤 1: 窗口类'
+- - '####'
+  - WNDCLASSEX
+- - '###'
+  - '步骤 2: 注册 Windows 类'
+- - '####'
+  - RegisterClassEx
+- - '###'
+  - '步骤 3: 创建窗口'
+- - '###'
+  - '步骤 4: 显示并更新窗口'
+- - '####'
+  - ShowWindow(…)
+- - '###'
+  - '步骤 5: 翻译与更新'
+- - '####'
+  - MSG
+- - '###'
+  - ZeroMemory(...)
+- - '###'
+  - while 循环
+- - '###'
+  - TranslateMessage(...)
+- - '###'
+  - DispatchMessage(...)
+- - '###'
+  - 第 6 ：事件循环
+- - '####'
+  - 回调函数
+- - '####'
+  - switch 语句
+- - '###'
+  - 第 7 ：使用 OOP 采用基础窗口
+- - '####'
+  - 构建 BasicWindow 类
+- - '#'
+  - 第 3 章：组合窗口最终产品
+- - '##'
+  - 结语
