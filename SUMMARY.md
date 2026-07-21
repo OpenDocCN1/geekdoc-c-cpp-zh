@@ -381,6 +381,7 @@
 +   [Excel 2019 透视表与仪表板入门指南：分步教程指南（Excel 2019 分步教程系列）](docs/excel-2019-pivot-tables-introduction-to-dashboards-the-step-/README.md)
 +   [Excel 工作簿：160 个练习及答案与注释](docs/excel-workbook-160-exercises-with-solutions-and-comments/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
++   [Functional C#：在 C# 世界中拥抱函数式编程 (C# Functional Book 1)](docs/functional-c-embracing-functional-programming-in-a-c-world-c/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
 +   [Linux C 一站式学习](docs/linux-c-1stop-lrn/README.md)
