@@ -395,6 +395,7 @@
 +   [函数设计：原则、模式与实践](docs/functional-design-principles-patterns-and-practices/README.md)
 +   [C++ 函数式编程](docs/functional-programming-with-c/README.md)
 +   [Turbo C++ 鼠标编程游戏开发 - 第 16 套](docs/gaming-in-turbo-c-with-mouse-programming---suit-16/README.md)
++   [生成式 AI 应用：规划、设计与实现 (C++ 生成式 AI 编程)](docs/generative-ai-applications-planning-design-and-implementatio/README.md)
 +   [C++ 游戏物理编程实用指南：数值方法、碰撞检测与沉浸式模拟实践指南 (TechMastery 系列第 5 本)](docs/hands-on-c-programming-for-game-physics-practical-guide-to-n/README.md)
 +   [高性能编程 C# 与 .NET 速成指南：构建可扩展 .NET 应用，编写极速 C# 代码，加速你的 C# 开发，识别瓶颈……像一样（Python 先驱者圣经）](docs/high-performance-programming-c-and-net-crash-course-build-sc/README.md)
 +   [C++ 语言 Windows 编程与应用程序接口学习指南](docs/how-to-code-in-windows-and-learn-application-program-interfa/README.md)
