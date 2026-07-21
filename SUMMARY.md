@@ -356,6 +356,7 @@
 +   [使用 Ember 2 构建出的 Web 应用](docs/deliver-audacious-web-apps-with-ember-2-for-sandi-frank/README.md)
 +   [高质量自动化测试设计模式：高质量测试属性与最佳实践](docs/design-patterns-for-high-quality-automated-tests-high-qualit/README.md)
 +   [对象设计：通过哈利·波特故事详解对象对象设计模式](docs/designing-with-objects-object-oriented-design-patterns-expla/README.md)
++   [探索现代 C++ (C++ 深度系列)](docs/discovering-modern-c-c-in-depth-series/README.md)
 +   [离散代数方法：算术、密码学、自动机与群 (De Gruyter 教科书)](docs/discrete-algebraic-methods-arithmetic-cryptography-automata-/README.md)
 +   [机器学习文档处理指南](docs/document-processing-using-machine-learning/README.md)
 +   [Clifford A Shaffer C 语言数据结构与算法分析第3版 Dover 出版社 2011](docs/dr-clifford-a-shaffer-data-structures-and-algorithm-analysis/README.md)
