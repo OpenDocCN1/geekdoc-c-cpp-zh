@@ -369,6 +369,7 @@
 +   [编程面试元素：C++ 内部指南](docs/elements-of-programming-interviews-the-insiders-guide-c/README.md)
 +   [Eloquent JavaScript：现代编程入门指南](docs/eloquent-javascript-a-modern-introduction-to-programming/README.md)
 +   [C++ 嵌入式系统编程：实战技术](docs/embedded-systems-programming-with-c-real-world-techniques/README.md)
++   [C# 12.0 核心教程（第八版 - 早期发布版）](docs/essential-c-120-eighth-edition---early-release/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
