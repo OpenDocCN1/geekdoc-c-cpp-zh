@@ -447,6 +447,7 @@
 +   [Kotlin 与 C 编程示例：初学者编程指南](docs/kotlin-and-c-coding-examples-programming-for-beginners/README.md)
 +   [C++ 语言增长超过其他语言：计算机编程基础 - 轻松上手指南](docs/language-c-growing-faster-than-other-computer-programming-ba/README.md)
 +   [一天学会 C++ 并精通它：实用分步进阶指南，快速学习编程](docs/learn-c-in-one-day-and-learn-it-well-learn-coding-fast-with-/README.md)
++   [学习 C 编程：C 编程学习初学者指南](docs/learn-c-programming-a-beginners-guide-to-learning-c-programm/README.md)
 +   [C 语言编程：从入门到高级](docs/learn-c-programming-basics-to-advanced/README.md)
 +   [通过 Unity 创建游戏学习 C# 编程（初学者）：学习 C# 编程并享受其中](docs/learn-c-programming-by-creating-games-with-unity-beginner-le/README.md)
 +   [500 个程序学 C 语言编程：仅包含学习与算法程序（附源码）](docs/learn-c-programming-with-500-programs-only-learning-and-algo/README.md)

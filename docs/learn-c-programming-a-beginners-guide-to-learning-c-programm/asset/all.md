@@ -1,0 +1,4511 @@
+![](Images/cover00191.jpeg)
+
+C programming
+
+By Emma
+
+![](Images/image00181.jpeg)
+
+Amazon.com
+
+![](Images/image00182.jpeg)
+
+Chapter 1
+
+[Reading Book: Chapter One] First.
+
+We will now write a program that will show you Hello World on your computer. This is one of the history of Hamangi. Write this as the first step in the life of most of the world. I will use Codeblocks to run this book. But even if you use something else, there is no problem, the style of work is the same in all cases. Cut the Cudcos in the cut. If you can't do it yourself, you can also watch videos from Nature. Video - Installing Codeblock
+
+Inal hey gal. Now go to Programs in the Voger Start menu and launch Codeblocks. Ubute will be within Applications> Programming.
+
+Here you can see the show tips at startup.
+
+Now draw a fart inside John Hadid to keep the copper. I will save the files of that file. Give the fileer a name anywhere. And Save as type will be C / C ++ files.
+
+The name of the file seen in Nature is hello.c. The focus of all the files in the system will be .c.
+
+Here we will write our card or name. Type in the nature card and save the file.
+
+#include <stdio.h>
+
+int main ()
+
+{
+
+printf("Hello World");
+
+return 0;
+
+}
+
+Now go to Build and click on Compile Current File. If you have ever typed a game, Kyle will tell you that there are 0 errors, 0 warnings, syntax in the game. Now go to Build menu again and click on Run. Then the copper will be turned on.
+
+See you here, you have done Hello World. The next line says Process returned 0 (0x0) (meaning we don't have to worry anymore) and execution time: 0.031 s It takes 0.031 seconds to run. Then line O, Press any key to continue. If you can't find any key on the keyboard, you can press it anywhere. If you can run hard and look at the Hello World text, then tobacco is the best. You are doing an important job.
+
+Let's see what I wrote. The first line is: #include <stdio.h>, what you wrote later. The third line is empty. That's why it looks like a melody. Third line: int main (). A bell main function. The system starts working from the main function, so all the games have one (and only one) main function. At the beginning of the main function, it starts with the third bunny and ends with a third bunny. Before finishing I return 0; You have written, it is better not to explain now, I will tell you when I will talk about the function. So for now, let's write a part of Nature wherever you are: int main (): There will be a card. return 0; }
+
+Note the next line of the game: printf ("Hello World"); This is a team. Here printf () is a function whose function is to do something. The double quotation marks will be written on the inside of the screen. Perform this function. There is a file called stdio.h. This file is a bell header file (.h header filer attachment). The stdio.h file contains all the functions of the input and output, we will only use them, we do not need to know how the functions work now. And since you use the printf () function, #include <stdio.h> is written at the beginning of the game. There are many more such header files, some of which we will look at in the future.
+
+Now take care of one father. printf ("Hello World"); has one last symmetry. There is a semicolon just after the Sis Lauez team. The work of one team ends and the work of the last Hell Perer team begins. return 0; is also a team, so you also have to end with a symmetry. If you forget to give many simulations in the beginning, then there is a compile error. You can see the temptation to delete a semicolon.
+
+This is one of the most important things to keep in mind. You will notice that I have started from the left side of the editor in the line #include <stdio.h>, int main (), {and}. And printf and return 0 are preceded by four spaces. A bell indentation. Even if he did not do so, the work would continue and so many of the fathers of Eisen did not show mercy and did not innovate. Although it is a little difficult to get used to the habit of good habits, it is important to brush your teeth.
+
+If the habit of indifference is not reduced, then the gossip of the patient is heard in private or in private, in many places it would be omitted in the Irvine. I hope you will take it with the help of your father. I would like to instruct the same example of the book properly but it may be a little erratic while printing, so you will understand. Eisenhower is now known for four days. You can set the edit options so that the tab press is equal to four segments. In Codeblocks, select Settings in the Settings menu, select TAB Indents in TAB Options and enter TAB size in spaces 4.
+
+Chapter 2
+
+[Reading Book: Chapter Two] Data Type, Input and Output.
+
+In this chapter we will write some short stories. All of them will definitely see the cutie's tea and will make a little change and want to run and coil.
+
+Our first step will be to perform two numbers. Now, hey, the numbers have to be kept in the memory of the cutter, how do I do the water work? Don't cry! There is a genre of all-language lounge variable bells that are used to hold ear values. The variable is given a name, then the variable = kana value is inserted into the variable. There is no such thing as a mathematical equation. Chela, just write and run, then it can be explained.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a;  
+
+     int b;  
+
+     int sum;  
+
+     a = 50;  
+
+     b = 60;  
+
+     sum = a + b;  
+
+     printf("Sum is %d", sum);  
+
+     return 0;  
+
+}   
+
+Run the game, you will see: Sum is 110.
+
+Here a, b, sum are three variables containing different numbers. Then we have to give the bell that there are three variables named a, b, sum. And what kind of data will be in the next bell? int a; Given that we have told Kyler that there is a variable named a that will be used to hold the value of an integer. This is called bell variable direction. And int is the data type, which is why Kyler will understand that there will be so much Eiger type data. There are some more data types, we'll see. If we wanted to delete variables of the same type, we could not write separate lines but commas, such as: int a, b, sum; And last but not least, the last symmetry of the variable direction is used.
+
+Then I wrote two words:
+
+a = 50;
+
+b = 60;
+
+Here we assign the value of a to 50 and the value of b to 60 bells, unless we change this, Kyler will take the value of a 50 and the value of b is 60.
+
+Perr tam he: sum = a + b ;. So, the value of sum will be equal to a + b, that is, the sum of a and b will be the number so we put (or assigned) the variable of sum name.
+
+This time the result will be displayed in minutes, so we will use the printf function.
+
+printf("Sum is %d", sum);
+
+The two parts of the printf function seen here. The first part is not specified by "Sum is% d" but is followed by Sum is followed by the value of one Eiser variable which will replace% d. Then with the comma we have written the sum and explained that the value of sum in% d must be met. Just like I used% d in Izar, people with different variables will have to write something, which we will learn to use. It would be nice if I could write a chat now about what kind of data type, what kind of data, what to do and what to do, and you would be able to do that. Not only sound education but his alertness and dedication too are most required.
+
+We could also write this if we wanted to:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a, b, sum;  
+
+     a = 50;  
+
+     b = 60;  
+
+     sum = a + b;  
+
+     printf("Sum is %d", sum);  
+
+     retu
+
+Or,
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a = 50, b = 60, sum;  
+
+     sum = a + b;  
+
+     printf("Sum is %d", sum);  
+
+     return 0;  
+
+}   
+
+Now you are one. What will be the output of nature?
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     int x, y;  
+
+     x = 1;  
+
+     y = x;  
+
+     x = 2;  
+
+     printf("%d", y);  
+
+     return 0;  
+
+}  
+
+What is Maine? Output 1 Nike 2? The output will be 1, because the theme kyler looks like, the value of x is assigned to 1 (x = 1;). Then the value of x is again assigned to y (y = x;). Now the value of y is 1\. Then again the value of x is assigned to 2\. However, the meaning of y will not change. Y = x; There is no equation that will always be true. The value of a variable nid kane is set to '='.
+
+Here are some of the ones I found:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a = 50, b = 60, sum;  
+
+     sum = a + b;  
+
+     printf("%d + %d = %d", a, b, sum);  
+
+     return 0;  
+
+}  
+
+What does Ram Minute do? See you soon. printf ("% d +% d =% d", a, b, sum); Not printf ("% d +% d =% d", b, a, sum); Run the writing again. Now understand things.
+
+While reading, we come up with various topics, the answers to which we find in books, ask questions, search errands, or find answers. Two-thirds of us, most of the children, don't do the last job, because it takes a little time and effort to do it on their own, at the same time they don't want to give up. And our parents, teachers and disciples do not have the kindness to do what they want, but the way to do it.
+
+Anyway, at least I didn't go down without explaining myself first. See Copper Kyler Key Bell. Suppose, if we used int type variable decimal number (bab number or real number), then what is the difference?
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a = 50.45, b = 60, sum;  
+
+     sum = a + b;  
+
+     printf("%d + %d = %d", a, b, sum);  
+
+     return 0;  
+
+}  
+
+Here I used the value of a 50.45. Play this game, see what happens. If the main function returns, the last line of the main function returns 0; What happens if you don't write? Then return 0; What happens when you want to go without it.
+
+The output will be: 50 + 60 = 110.
+
+Siciller a has a value of 50, although we have assigned 50.45\. This is Barek Bell type cast. There is a double type data type in this language to keep the Bab number. If the double number of the type is changed to int, it becomes atomic. Kylerek bell can also be given: int a = (int) 50.45.
+
+int a = 50.99; Here the value of a will be 50\. int a = -50.9; The value of write a is -50\. In a word, if you type from double to int, the decimal part will be omitted.
+
+Another thing. The value of the variable that is typed does not change. The typed value can be kept in one variable. Nature can only understand the movement of the quota.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int n;  
+
+     double x;  
+
+     x = 10.5;  
+
+     n = (int)x;  
+
+     printf("Value of n is %d\n", n);  
+
+     printf("Value of x is %lf\n", x);  
+
+     return 0;  
+
+}  
+
+Seeing the output of the game. The value of x does not change. And you can understand that% lf (l here is the English short hand L) is used when doing double type variable in order to keep the number.
+
+ int data type can only be a whole number. What is the integer? Write a reply to the respondent:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a;  
+
+     a = 1000;  
+
+     printf("Value of a is %d", a);  
+
+     a = -21000;  
+
+     printf("Value of a is %d", a);  
+
+     a = 10000000;  
+
+     printf("Value of a is %d", a);  
+
+     a = -10000000;  
+
+     printf("Value of a is %d", a);  
+
+     a = 100020004000503;  
+
+     printf("Value of a is %d", a);  
+
+     a = -4325987632;  
+
+     printf("Value of a is %d", a);  
+
+     return 0;  
+
+}  
+
+Here we assign different numbers to a. Have you come up with all the standards? Come on. Connie Asin said one thing before explaining. Due to so many printfs in a row, it seems a bit awkward to look at the copper cutter. You can write to printf: printf ("Value of a is% d \ n", a) ;. Now I will not tell you what happens if you write print nin the printf function. I can understand only by running.
+
+Not all values ​​of a can be expressed in any way, all values ​​from -2146473648 to 2147483647 will be hard, because the number outside of this can not be kept int type variable. This is the limit of the number of Hela int type. In this type of int type data, four bytes are stored in the memory. Four bytes equals bits (1 byte = 8 bits). Two bets can be placed, 0 and 1\. Two bets can hold four numbers (00, 01, 10, 11). Then 32 bets can be kept: 2 ^ 32 number or 4294967296 number. Now if you are more rich and more indebted, then 2146473648 to 1 is equal to 2146473648 number and again from 0 to 2146473647 is equal to 2146473648 number, just 4294967296 number. Hope you understand the calculation.
+
+Now we will write the name of the yag that will be able to add the real number. Let them be in your mind, the integers are, -3, -2, -1, 0, 1, 2, 3 ... etc. And Bab number O-5, -3, -2.43, 0, 0.49,
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     double a, b, sum;  
+
+     a = 9.5;  
+
+     b = 8.743;  
+
+     sum = a + b;  
+
+     printf("Sum is: %lf\n", sum);  
+
+     printf("Sum is: %0.2lf\n", sum);  
+
+     return 0;  
+
+}   
+
+Ram Kyle and Run Kera. The output will be two lines of nature:
+
+Sum is: 18.243000
+
+Sum is: 18.24
+
+Using% lf, the first line has reached six cells after the decimal. Again the third line is two cells after the decimal, because you have written% 0.2lf (I would have written% 0.3lf if I wanted to get three cells,% 0.0lf if I didn't want to do the decimal part again). Double type data is 64 bits and can hold data from 1.7E-308 (1.7 x 10-308) to 1.7E + 308 (1.7 x 10308). The calculation of the details is that the cutter needs some more information, so I don't go straight anymore.
+
+Now we want to keep in mind that we will not write inside the cadre, but the input size from the user. We will use the scanf function to get input from the user (as you used it) (there are more functions in this function). Then write without delay:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a, b, sum;  
+
+     scanf("%d", &a);  
+
+     scanf("%d", &b);  
+
+     sum = a + b;  
+
+     printf("Sum is: %d\n", sum);  
+
+     return 0;  
+
+}  
+
+When the game is run, you will see a blank screen. Then you will write one number, then you will write another number with space or enter. Then you will see the air pressure chapel again.
+
+You are learning how to use the scanf function. scanf ("% d", & a); Here the scanf-bell is given by giving% d inside the double quotation mark to read the value of a variable or int type variable (I will give input from the user keyboard).
+
+And before the a seen, the empress (&) is used, and it is not stated that the number input will be assigned to the center of the variable. When you learn the basics a little better, you will understand the meaning of & a, for now we are focusing on the use. The values ​​of a and b are given by a scanf function as well: scanf ("% d% d", & a, & b) ;. What is the problem if the variable is not given before? If you want to run in nature, you will get some error. You haven't mentioned the error in this case, because the argument is a little water and now it has been explained, you will misunderstand and then you will scold me.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a, b, sum;  
+
+     scanf("%d", &a);  
+
+     scanf("%d", b);  
+
+     sum = a + b;  
+
+     printf("Sum is: %d\n", sum);  
+
+     return 0;  
+
+}  
+
+Now what would we do if we wanted to take double type data without input as an input? scanf used% lf instead of% d. It's not hard to write and watch. Then start reading the rest.
+
+Asal Kathak will not run, because the data type will also change. Suppose you don't write int, you have to write double. Run the game again.
+
+Whenever I tell you to write a book in the book, no matter how simple or easy it is, I have to write and run the script. Without doing this, we will not be able to move forward. Remember, people who don't drive don't sell cars, they don't sell swimming, they don't sell swimming, they don't just sell books.
+
+This time we will look at another type of data type, S he char (character) type. It takes one byte of space to keep this character typewriter forever. This type of data is usually used to store data. However, the signature orta will be in the English alphabet, or the language type variable will not be kept. Also run the article by Nature Ram Quta:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     char ch;  
+
+     printf("Enter the first letter of your name: ");  
+
+     scanf("%c", &ch);  
+
+     printf("The first letter of your name is: %c\n", ch);  
+
+     return 0;    }  
+
+As you can see from the card, the char typewriter uses% c inside the printf and scanf functions. Another function is getchar, which can also be used to read char type data. Visiting Nature Village:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     char ch;  
+
+     printf("Enter the first letter of your name: ");  
+
+     ch = getchar();  
+
+     printf("The first letter of your name is: %c\n", ch);  
+
+     return 0;  
+
+}   
+
+Run this. I will do the same in the future. The getchar function assigns another variable to the inside of the variable. And if you want to put some char type variables directly next to it, I will put cell quotation marks on either side of it. Such as: char c = 'A';
+
+Now let's see the nature:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int num1, num2;  
+
+     printf("Please enter a number: ");  
+
+     scanf("%d", &num1);  
+
+     printf("Please enter another number: ");  
+
+     scanf("%d", &num2);  
+
+     printf("%d + %d = %d\n", num1, num2, num1+num2);  
+
+     printf("%d - %d = %d\n", num1, num2, num1-num2);  
+
+     printf("%d * %d = %d\n", num1, num2, num1*num2);  
+
+     printf("%d / %d = %d\n", num1, num2, num1/num2);  
+
+     return 0;  
+
+}   
+
+Kyle and run. By looking at this, you can understand how the work of division, multiplication and division is done. This is the work of Tamader, O four. Addition, separation, multiplication, division between num1 and num2 is done without adding a function to the printf function and keeping one variable on the value. One of them is to write a letter. The second task is to use double type variable. The third task is to look at the value of num2 as 0\. The fourth task is to put a char type variable without using the direct quotient of the double quotation mark in the printf function, then use it.
+
+After doing four tasks, see Nature:
+
+#include <stdio.h>
+
+int main()  
+
+{  
+
+     int num1, num2, value;  
+
+     char sign;  
+
+     printf("Please enter a number: ");  
+
+     scanf("%d", &num1);  
+
+     printf("Please enter another number: ");  
+
+     scanf("%d", &num2);  
+
+     value = num1 + num2;  
+
+     sign = '+';  
+
+     printf("%d %c %d = %d\n", num1, sign, num2, value);  
+
+     value = num1 - num2;  
+
+     sign = '-';  
+
+     printf("%d %c %d = %d\n", num1, sign, num2, value);  
+
+     value = num1 * num2;  
+
+     sign = '*';  
+
+     printf("%d %c %d = %d\n", num1, sign, num2, value);  
+
+     value = num1 / num2;  
+
+     sign = '/';  
+
+     printf("%d %c %d = %d\n", num1, sign, num2, value);  
+
+     return 0;  
+
+}   
+
+I can understand what works only by looking at it. But you don't have to just look and understand. Card Kyle and Run Kera.
+
+There are a few more types of data. There are also various inputs and outputs, which you will learn from time to time (not all of them will be in this book, you will know by reading Sis's on book). You can write a lot of things based on what you are learning at the moment.
+
+Now keep up the good content. You can also use your own language inside the game cadre. Comment on a bell. Kyler will not take part in the game. How to start with a single line cam hell // chi. And if there is more than one line, you have to start with * and end with * /.
+
+Nature will have a hard time coiling and running.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     // test program - comment 1  
+
+     printf("Hello ");  
+
+     /* We have printed Hello,  
+
+     now we shall print World.  
+
+     Note that this is a multi-line comment */  
+
+     printf("World"); // printed world  
+
+     return 0;  
+
+}  
+
+What is the rule for naming variables? The name of the variable can be one or more errors, orgula can be from a to z, A to Z, 0 to 9 and _ (arrow or arbor). However, in more than one error, the first order cannot be digitized. You are int 7d in one game; See what Kyle said in the article. And the name of the variable is Hell Vela. For example, if the name of the variable to keep the sum is sum, it is good, even if the name is y, it is good. Giving a full name makes it easier to understand what the variable has been used for.
+
+Chapter 3
+
+[Reading Book: Chapter Three] Kishanal Lizak.
+
+Many of you may not know that 'Uncle Chowdhury's Bui is worse than Cutter'! Even though Uncle Chowdhury was very upset at the first hearing, you can understand that if you read a little, you will be better than everyone else. I don't know why it came. Everybody works in a courier meeting. Now we will learn a simple but very important subject of Ramayana. So O Kishanal Lizak. What can be done in the ear can be explained in writing. Without further ado, we started writing. You will definitely see it in the tea room of Tita Kuta.
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int n;   
+
+     n = 10;   
+
+     if(n >= 0) {   
+
+         printf("The number is positive\n");   
+
+     }   
+
+     else {   
+
+         printf("The number is negative\n");   
+
+     }   
+
+     return 0;   
+
+} 
+
+What is the function of the opera? Run different values ​​of n (eg: 0, -10, -2, 5, 988, etc.). It turns out that its job is to determine whether it is positive or negative. The number of ears can be filled with one hundred. He is equal to or greater than Shuner. Then our lizak stands for, 'If n is equal to or greater than zero, then n is positive, if not n is negative'. This father's language is called if and he uses it elsewhere. One hundred (Kishan) is written inside the if, which is only part of its inner work (meaning all the inner work of the third bani {used after if) | And Kishan is written under the name of Thom Boni. If the part of the inside of the if is the head, but the part of the inside of the other (inside the third part) works. All the language is in the language, but the style of writing may be different.
+
+Now we have to see, how to write Kishanguela? Copyright www.panhwar.com All rights reserved. Use the term 'cut or equal'. If two numbers are equal to one another, use the same number of words == Symbol (let's say there are two equal syllables here. At the beginning, many equal or equal number of people make a mistake = The tax goes up). The second number is not unequal, this fairy uses John! And cut or big fairies are used. There are more fathers. Let's learn to write once and for all. Here, the father of Eshen also has an idea. Where all the lines inside if or else start with if or else, its four cells (fours) start from the right.
+
+We could also write the opera name here:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int n;     
+
+     n = 10;   
+
+     if(n < 0) {   
+
+         printf("The number is negative\n");   
+
+     }   
+
+     else {   
+
+         printf("The number is positive\n");   
+
+     }   
+
+     return 0;   
+
+} 
+
+Here we have tested the theme which is not less than zero. If zid is cut, then n negv; And if it doesn't, it doesn't mean that it is equal to or greater than zero.
+
+Those of you who are a little skeptical think that it is not Pizv or Negv Kaenatai when it comes to zero. All the numbers bigger than Shuner are O Pizv and all the smaller numbers are O Negv. We can write in the Nature case when the quotient is explained:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int n = 10;    
+
+     if(n < 0) {   
+
+         printf("The number is negative\n");   
+
+     }   
+
+     else if (n > 0) {   
+
+         printf("The number is positive\n");   
+
+     }   
+
+     else if (n == 0) {  
+
+         printf("The number is zero!\n");   
+
+     }   
+
+     return 0;   
+
+}
+
+Let me explain a little:
+
+if (n <0): Here we have tested the theme not less than n zero. There is no question of a cut. We say that the number is negative. else if (n> 0): And if it is not cut, then you have tested if it is greater than n zero if (n> 0). This hundred sit hale number pizzav. else if (n == 0): And if n> 0 and zid are not sat but ears are left out? Examine the two equally. Then we check that n is not equal to zero and if it is equal to bell that is zero.
+
+When comparing two numbers, if the first is not greater than the third, nor is it smaller, then they must be equal. So we don't need the third kiss. We can ring the bell as soon as the first two kishan lies, the value of n is zero.
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int n = 10;    
+
+     if(n < 0) {   
+
+         printf("The number is negative\n");   
+
+     }   
+
+     else if (n > 0) {   
+
+         printf("The number is positive\n");   
+
+     }   
+
+     else {   
+
+         printf("The number is zero!\n");   
+
+     }   
+
+     return 0;   
+
+} 
+
+Again, there is no question that if he uses if all the time, he will have to use else or else if. Visiting Nature Village:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int number = 12;   
+
+     if(number > 10) {   
+
+         printf("The number is greater than ten\n");   
+
+     }   
+
+     return 0;  
+
+}
+
+Here it is clear that the value of the number is not greater than that of any other country.
+
+What will be the output when you look at nature?
+
+#include <stdio.h>
+
+If,
+
+int main()  
+
+{  
+
+     int n = 10;  
+
+     if (n < 30) {  
+
+         printf("n is less than 30.\n");  
+
+     }  
+
+     else if(n < 50) {  
+
+         printf("n is less than 50.\n");  
+
+     }  
+
+     return 0;
+
+}
+
+The output will be: n is less than 30\. Now you can just say the output of nature.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int n = 10;  
+
+     if (n < 30) {  
+
+         printf("n is less than 30.\n");  
+
+     }  
+
+     if(n < 50) {  
+
+         printf("n is less than 50.\n");  
+
+     }  
+
+     return 0;  
+
+}
+
+Now we will write another verse. It is difficult to determine whether the number is good or bad. Dividing the number by 2 is the best way to find out the number. If the remainder is zero, then the number is zero; And Bhageshsh Shun Na Hey Ek Hell Sa Bejar. Sis
+
+There is a modulus operator, which is printed with the '%' symbol. Then I don't want to.
+
+One number at the beginning: int number; Let's set a value for this number: number = 5; Now divide by dividing the number by 2 to find the remainder: remainder = number% 2; Now with the help of if we can get to the end by checking the value of remainder.
+
+The remainder has only two values ​​- 0 and 1\. Full text:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int number, remainder;   
+
+     number = 5;   
+
+     remainder = number % 2;   
+
+     if(remainder == 0) {   
+
+         printf("The number is even\n");   
+
+     }   
+
+     else {   
+
+         printf("The number is odd\n");   
+
+     }   
+
+     return 0;   
+
+}
+
+You can write without using the remainder variable:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int number = 9;   
+
+     if(number % 2 == 0) {   
+
+         printf("The number is even\n");   
+
+     }   
+
+     else {   
+
+         printf("The number is odd\n");   
+
+     }   
+
+     return 0;   
+
+}
+
+Ah, what would we do if we could only determine the number of roots? I would have left out the rest.
+
+Tamader John is now a shadow fairy. Can I get the rest without using modulus operator? Multiplication, division and subtraction (*, /, -) can be done once. You can make tea.
+
+Now let's look at another program. You can use one or less case (small letter or lower case letter) or capital letter (upper case letter). The simplest solution would be to have one type of variable type variable. Then one by one he can compare 26 lower case letters and 26 upper case letters. Whenever there is a mail, the bell can be rung.
+
+char ch = 'p';  
+
+if (ch == 'a')  
+
+{  
+
+     printf("%c is lower case\n", ch);  
+
+}  
+
+else if (ch == 'A')  
+
+{  
+
+     printf("%c is upper case\n", ch);  
+
+}  
+
+else if (ch == 'b')  
+
+{  
+
+     printf("%c is lower case\n", ch);  
+
+}  
+
+else if (ch == 'B')  
+
+{  
+
+     printf("%c is upper case\n", ch);  
+
+}    
+
+else if (ch == 'c')  
+
+{  
+
+     printf("%c is lower case\n", ch);  
+
+}  
+
+else if (ch == 'C')  
+
+{  
+
+     printf("%c is upper case\n", ch);  
+
+}  
+
+… Let's go like this.
+
+There is no need to write so many cards to solve this problem. To make this easier, we need to know the use of this operator (AND operator). Sis luage is coughed up with a '&&' sign. You will understand the work of copper as soon as you see the nature card.
+
+#include <stdio.h>  
+
+int main()
+
+{  
+
+     char ch = 'W';  
+
+     if(ch >= 'a' && ch <= 'z') {  
+
+         printf("%c is lower case\n", ch);  
+
+     }  
+
+     if(ch >= 'A' && ch <= 'Z') {  
+
+         printf("%c is upper case\n", ch);  
+
+     }  
+
+     return 0;  
+
+}
+
+'&&' will have one kishan on the left side and one kishan on the right side, and if two kishans are true then the gold kishan will be true. ch> = 'a' && ch <= 'z' is the whole kishan. Now there is a chisel to the left of && ch> = 'a' and another chisel to the right ch <= 'z'. If two Kishans are true, then the whole Kishan will be true. Now the card used by Kutter and Bajha has the value of b is twenty times greater than a, the value of c is greater than b and the value of d is greater than c. So in case of lower case, it must be equal to or greater than 'a' | Again, it will be equal to or less than 'z'. Similarly, the value of B is one twenty more than A, the value of C is one more than B. So, if the value of Cana Carra is between 'A' and 'Z', we can say that it is the upper case. Will be equal to or greater than 'A' and equal to or less than 'Z'. Another father. Else should be used before the third if. Then Kyler will not examine the inner truth of Thom if and the Kishan of Perr if. That will save time.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     char ch = 'k';  
+
+     if(ch >= 'a' && ch <= 'z') {  
+
+         printf("%c is lower case\n", ch);  
+
+     }  
+
+     else if(ch >= 'A' && ch <= 'Z') {  
+
+         printf("%c is upper case\n", ch);  
+
+     }  
+
+     return 0;  
+
+} 
+
+Hopefully, you understand the use of '&&'.
+
+Now I will look at the use of another operator. OR. A cough is '||' Gives a sign (successive misery). In '&&', just as there are hundreds of truths on both sides, so there are hundreds of truths in '||'.
+
+What will be the output of nature? If you can't see the card, run it.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int num = 5;  
+
+     if(num >= 1 || num <= 10) {  
+
+         printf("yes\n");  
+
+     }  
+
+     else {  
+
+         printf("no\n");  
+
+     }  
+
+     return 0;  
+
+Its output will be yes. Now set the value of num to 50\. What will be the output?
+
+This time the output will be yes. Because if the value of num is 50, the first hundred will be true (num> = 1) and the third hundred (n <= 10) will be false. But since we are two fields '||' You have used it, so wherever there is one hundred, the gold will be one hundred. Now one more problem. Kaena or vowel naik consonant, will be judged. We know, vowel gula he a, e, i, o, u. Now it is not possible to judge between the five of us if we give such a hundred: ch> = 'a' && ch <= 'u'. Because then everyone else will know that we need something else. So we can write as follows:
+
+if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {  
+
+     printf("%c is vowel\n", ch);  
+
+}  
+
+else {  
+
+     printf("%c is consonant\n", ch);  
+
+}
+
+Chapter 4
+
+[Reading Book: Chapter Four] Loop.
+
+You have already learned to use different conditions in the middle of the game. With these hundreds, you may have started to settle disputes. Very nice thing. Now we will look for another problem and its solution. Write a program that shows all integers from 1 to 10 minutes (there will be one number per line). The problem is very simple and the solution is so simple. I know, in a minute, you will be able to write Nature Grammar:
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     printf("1\n");  
+
+     printf("2\n");  
+
+     printf("3\n");  
+
+     printf("4\n");  
+
+     printf("5\n");  
+
+     printf("6\n");  
+
+     printf("7\n");  
+
+     printf("8\n");  
+
+     printf("9\n");  
+
+     printf("10\n");  
+
+     return 0;  
+
+}
+
+Here we have numbered everything from 1 to 10\. You can also use printf () to: printf ("1 \ n2 3 n3 4 n4 n5 6 n6 n7 8 n8 9 n9 10 n10 n");
+
+Again, I still write. n is an Eiser variable, the value of which we will set to 1\. Then we will value n. Then increase the value of n by one (write n = n + 1 or, in short, n ++).
+
+int n = 1;
+
+printf("%d\n", n);
+
+n = n + 1;
+
+printf("%d\n", n);
+
+n = n + 1;
+
+printf("%d\n", n);
+
+n = n + 1;
+
+/ * Aveb mat ten times * /
+
+Again, increasing the value of n to 1 is the result of a single line.
+
+printf("%d\n", n);
+
+n = n + 1;
+
+In return we can write:
+
+printf("%d\n", n++);
+
+Whatever it is, it can be done from 1 to 10\. What would we do if we were told to go from 1 to 100, or 1000, or 10000? It is important to do as much as you can. I know, you wouldn't agree to do so much.
+
+There is only one loop bell to solve this problem. The same thing can be done over and over again. One hundred bisayas are given in the middle of the looper, which will keep repeating the work inside the looper if it is not fulfilled. The two loops are while and for.
+
+We will now write that name using while.
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     int n = 1;  
+
+     while(n <= 10) {  
+
+         printf("%d\n", n);  
+
+         n++;  
+
+     }  
+
+     return 0;  
+
+}  
+
+What a surprise! Now we want to be able to sit as much as we want instead of 10, as many seats as we want. While the loop is written inside the first forest. I do hundreds of tests. As long as there are hundreds of truths, the inner workings of the looper continue. The inner workings of the loop will be inside the third boner. Like here we have done two things for the looper. You set the value of n and then the value of n increases by 1\. If the value of n increases by 1 then it will be 11 and then n <= 10 will be this hundredth (because 11> 10). And Ram will also come out of the loop. That is, the loop will be removed from the loop whenever there is a hundred.
+
+Eshen's father also cares. The inner part of the loop starts with the four-leaf clover.
+
+Eba's cousin John is one. What will be the output of nature during the day?
+
+#include <stdio.h>  
+
+int main()   
+
+{
+
+This,
+
+  int n = 1;  
+
+     while(n <= 10) {  
+
+         printf("%d\n", n);  
+
+     }  
+
+     n++;  
+
+     return 0;  
+
+} 
+
+Will it also do all the numbers from 1 to 10? Let's see. Run the game. What is the output?
+
+Each line of the minute is 1 and not left. Very sad. Let's see what is the reason behind the grief. int n = 1; Set the value of n to 1.
+
+Then I will do a hundred tests in the while loop. We have given a hundred n <= 10 so the value of n is subtracted or equal to 10\. This hundred is true because the value of n is 1\. Then we will set the value n to printf ("% d \ n", n); Then the value of n will increase by 1? It will not increase, because we have finished the third forest by giving the symbol '}' (meaning loop end). I will try again, I will test the value of n again ... and so on because the value of n has not increased, n <= 10 hundred is always true - never mind. Now you can take a while loop and ask for different types of research. You can keep a copper cutaway by using hundreds that are always honest. while (1) {... 1 Here 1 is used as a percentage. Cutter 1 says bejh honest. So the inner workings of the looper will continue all the time, not be. while (1 == 1) {...} will do the same. But now I have one of your useful jeans bells, so that you can get out of the jar loop. Hey break team. If you write a program without talking, you will lose your father.
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     int n = 1;  
+
+     while(n <= 100) {  
+
+         printf("%d\n", n);      
+
+         n++;  
+
+         if(n > 10) {  
+
+             break;  
+
+         }  
+
+     }  
+
+     return 0;  
+
+}
+
+What will I do this year? 1 to 10. Although within the while we have stated that the hundred is n <= 100, the inside of a looper has again called that if n> 10, then break; Let the groom go, or break the loop. The break always comes from the inside of the loop to the left. So after the value of n is 10, its value will increase by one (n ++;) i.e. the value of n will be 11\. And then n> 10 will be true, the result will go into the inside of the case. He was told to break when he went there, so he left the loop. It works like a break
+
+continue ;. If you use continue in the same place, the next part of the continue of the looper rice is no longer working. Kyle and Run by Nature Ram Card:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int n = 0;  
+
+     while (n < 10) {  
+
+         n = n + 1;  
+
+         if (n % 2 == 0) {  
+
+             continue;  
+
+         }  
+
+         printf("%d\n", n);  
+
+     }  
+
+     return 0;  
+
+} 
+
+This program will only use odd numbers between 1 and 10\. Printf ("% d \ n", n) because we continue to use the root number. The team will start working on the mountain step of the looper without exiting.
+
+This time we will write another program. We will now look at the minutes of the quotient that you are learning in the sixth grade. Let's start with the name of Chela 5\. The output of our game will be as follows:
+
+ 5 X 1 = 5
+
+5 X 2 = 10
+
+5 X 3 = 15
+
+ 5 X 4 = 20
+
+5 X 5 = 25
+
+5 X 6 = 30
+
+5 X 7 = 35
+
+ 5 X 8 = 40
+
+ 5 X 9 = 45
+
+ 5 X 10 = 50
+
+You will not start writing many printf functions now. With the help of Looper, I will write:
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     int n = 5;
+
+int i = 1;  
+
+     while (i <= 10) {  
+
+         printf("%d X %d = %d\n", n, i, n*i);  
+
+         i = i + 1;  
+
+     }  
+
+     return 0;  
+
+} 
+
+So we used while loop. Now learn to use the for loop. If we write the name of 5 using the for loop then the head will stand out:
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     int n = 5;  
+
+     int i;  
+
+     for(i = 1; i <= 10; i = i + 1) {  
+
+         printf("%d X %d = %d\n", n, i, n*i);  
+
+     }  
+
+     return 0;  
+
+}  
+
+For the first part of the looper is divided into three parts. Each part is separated by a semicolon (;). When we enter the loop, we will say that we will do everything once before the first semicolon. As we set the value of i to 1 here. Then the third part will work. The third part is usually used in hundreds (while we work inside the loop first bun). In the opera we have used the third part i <= 10 percent. If this is true, it will come out of the left loop. And if it is true, then the inside of the looper will do the work and after that the third part of the inside of the sign for the looper will do the work that is said to be done. Then again the third part will do a hundred tests. The first part will no longer work. Let's do it again. i <= 10 is true, because the value of i is 1\. Then the printf () function will work. Then i = i + 1 will be equal (the value of i will increase by one). Then again i <= 10 will be tested for true or false (the value of i is now 2). Then the inner work of the looper will be again (printf ()). The work inside the loop will continue until i <= 10 percent  . When the value of i is increased one by one, it will be 11 and will come out of the loop. There is no question that the inner part of the first loop of the looper should be used. If we don't want to use the ear part, we can leave it blank, but the symmetry must be given. Even if we set the value of i in advance, we will not enter the loop.
+
+int i = 1;  
+
+   for(; i<= 10; i = i + 1) {  
+
+       printf("%d X %d = %d\n", n, i, n*i);  
+
+   }  
+
+If you don't want to write the three parts, you can write the whole thing as follows:
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     int n = 5;  
+
+     int i = 1;  
+
+     for( ; ; ) {  
+
+         printf("%d X %d = %d\n", n, i, n*i);  
+
+         i = i + 1;  
+
+         if (i > 10) {  
+
+             break;  
+
+         }  
+
+     }  
+
+     return 0;  
+
+}
+
+Now we will do another thing. Using the for loop, multiply the number of times you have multiplied by 5 (n * i) and just write the name. Do you wonder how the name will be without multiplication again? We can write a 5 x 3-k 5 + 5 + 5\. You just have to be more discriminating with the help you render toward other people. Please write:
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     int m, n = 5;  
+
+     int i;  
+
+     m = 0;  
+
+     for(i = 1; i <= 10; i = i + 1) {  
+
+         m = m + n;  
+
+         printf("%d X %d = %d\n", n, i, m);  
+
+     }  
+
+     return 0;  
+
+}
+
+However, we did not multiply. See Kyle and Run. It will work hard. Just as the multiplication of Kaena numbers can be multiplied, so can Yag be done. If we see in the program that the work is done only by multiplying without multiplying, then it is better to sacrifice because the cesarean's censor does not do one time, not twenty times more than one time. Even though you may not understand it when you run the game. Cutter's Cessor Sec will be able to find out if he has read and written. For the time being, it is better to know that it is better to do one yag than to do one, because the time to do yag is not less than the time.
+
+That's what we learned for the loop. Now we will try to write not only the number of the same number but also the number of all the numbers from 1 to 20\. That is, the value of n will be 1 to 20 without 5\. One of the reasons for this is to keep the part of writing Namata repeatedly. We will do this by using a loop inside the loop. With the help of a looper, increase the value of n from 1 to 20. And I will write the name of one of the sleepers of n inside it.
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     int n, i;  
+
+     for(n = 1; n <= 20; n = n + 1) {  
+
+         for(i = 1; i <= 10; i = i + 1) {  
+
+             printf("%d X %d = %d\n", n, i, n*i);  
+
+         }      
+
+     }  
+
+     return 0;  
+
+}
+
+Now run Tamra Ram. Then your job will be to write the verses using the yaga without multiplying.
+
+We used another for loop inside the for loop, also called the nested loop bell. We can use it for or within the looper for or while or for the inside of the looper while for the while loop more than once. Of course, you should never need four or five times twenty. With ned loop we will now write another name. 1, 2, 3 - Perform all three permutations of these three numbers. The output will be as follows: The output will be as follows:
+
+1, 2, 3
+
+1, 3, 2
+
+2, 1, 3
+
+2, 3, 1
+
+3, 1, 2
+
+3, 2, 1
+
+This program can be written in many ways, but the best solution is to use the Ned Looper, as far as we have learned so far.
+
+Here we will use one loop for the first number, one loop inside the first loop of the third number and another loop inside the third loop for the third number.
+
+#include <stdio.h>   
+
+int main()   
+
+{
+
+int a, b, c;   
+
+     for (a = 1; a <= 3; a++) {   
+
+         for (b = 1; b <= 3; b++) {   
+
+             for (c = 1; c <= 3; c++) {   
+
+                 printf ("%d, %d, %d\n", a, b, c);   
+
+             }   
+
+         }   
+
+     }   
+
+     return 0;   
+
+}
+
+Now that we run, we get the following output:
+
+ 1, 1, 1
+
+1, 1, 2
+
+1, 1, 3
+
+1, 2, 1
+
+ 1, 2, 2
+
+ 1, 2, 3
+
+1, 3, 1
+
+1, 3, 2
+
+1, 3, 3
+
+2, 1, 1
+
+2, 1, 2
+
+2, 1, 3
+
+2, 2, 1
+
+2, 2, 2
+
+ 2, 2, 3
+
+2, 3, 1
+
+ 2, 3, 2
+
+2, 3, 3
+
+ 3, 1, 1
+
+ 3, 1, 2
+
+3, 1, 3
+
+ 3, 2, 1
+
+3, 2, 2
+
+ 3, 2, 3
+
+ 3, 3, 1
+
+ 3, 3, 2
+
+3, 3, 3
+
+But we don't want such things when it comes. When the value of a is 1 then the value of b and c will not be 1, again the values ​​of b and c will not be equal. So a, b and c will be different. Then we will change the hundred inside the loop a little bit. The third loop will add another hundred of b <= 3, b! = A. b <= 3 && b! = a means the value of b will be less than or equal to 3 and the value of b will not be equal to the value of a. In the third loop we now multiply c, c <= 3 && c! = A && c! = B
+
+The value will be equal to or equal to 3 and the value of c will not be equal to the value of a and the value of c will not be equal to the value of b. Then our face will look like this:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int a, b, c;   
+
+     for (a = 1; a <= 3; a++) {   
+
+         for (b = 1; b <= 3 && b != a; b++) {   
+
+             for (c = 1; c <= 3 && c != a && c != b; c++) {   
+
+                 printf ("%d, %d, %d\n", a, b, c);   
+
+             }   
+
+         }   
+
+     }   
+
+     return 0;   
+
+}
+
+If we run, what will be the output? 3, 2, 1
+
+Mom one line! I think we got into trouble when we went to work. Can you solve the problem with a little effort?
+
+The value of the a is 1 so a <= 3 is true. I went inside the first looper. Then the value of b at the beginning of the third looper is 1\. b <= 3 true. Ik b! = A mitha. Because the values ​​of a and b are equal, the values ​​of both are 1\. So I will not enter the third loop. Then the value of a increases by 1 (a ++). a <= 3 is true (the value of a is 2). Now the third loop will start. The value of b is 1\. This time b <= 3 and b! = A are two hundred percent true. The first will enter inside the third loop. The value of c at the beginning of the third looper is 1\. c <= 3 true, c! = a true c! = b mitha (the value of both is 1). So, we will get out of the third loop - only three hundred will enter the third loop and we will accept the values ​​of a, b and c. If we do some research, we will see that when the value of a is 3, the value of b is 2 and the value of c is 1, then all the hundreds are true and we get the output: 3, 2, 1. In the third loop we find that the value of b is equal to the value of a. Do not sign. We should make tea in the mountains if the two values ​​are equal. And if the two values ​​are not equal, then work on the mountain. Then we can write: for (b = 1; b <= 3; b ++) {if (b! = A) {/ * The value of b is not equal to the value of a. * / for (c = 1; c <= 3; c ++) {if (c! = a && c! = b) {/ * The value of c is not equal to the value of a and the value of c is equal to the value of b If the value is not equal, only the inner part will enter. * / printf ("% d,% d,% d \ n", a, b, c); }}
+
+Then our whole body stands like this:
+
+#include <stdio.h>   
+
+int main() 
+
+{   
+
+     int a, b, c;  
+
+  for (a = 1; a <= 3; a++) {   
+
+         for (b = 1; b <= 3; b++) {   
+
+             if (b != a) {                            
+
+                 for (c = 1; c <= 3; c++) {   
+
+                     if (c != b && c != a){                 
+
+                         printf ("%d, %d, %d\n", a, b, c);   
+
+                     }   
+
+                 }   
+
+             }   
+
+         }   
+
+     }   
+
+     return 0;   
+
+}    
+
+If we run, we will see the output of nature, which we wanted.
+
+1, 2, 3
+
+1, 3, 2
+
+2, 1, 3
+
+2, 3, 1
+
+3, 1, 2
+
+3, 2, 1
+
+Let's finally solve our problem. But we could have solved it a little easier.
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int a, b, c;   
+
+     for (a = 1; a <= 3; a++) {   
+
+         for (b = 1; b <= 3; b++) {   
+
+             for (c = 1; c <= 3; c++) {   
+
+                 if(b != a && c != a && c != b) {  
+
+                     printf ("%d, %d, %d\n", a, b, c);   
+
+                 }  
+
+             }   
+
+         }   
+
+     }   
+
+     return 0;   
+
+}
+
+We don't have to worry about it here. The value of a, b, c is not the same as the other when making a confession. Buita Velai, however, has less work to do with our foreground cutter than that, so it takes less time to run, or in the language of the cutter, the run time is shorter. It takes a lot of time to run a program, depending on how many assignment operations you have done and how many people have done comparison operations.
+
+Chapter 5
+
+[Reading Book: Chapter Five] A little calculation.
+
+In this chapter we will not learn anything new from the beginning. So far as we have learned, we will solve some simple mathematical problems.
+
+1) x + y = 15, x - y = 5 What is the value of x and y?
+
+Adding the equations pi 2x = 20, or x = 10\. Again we get pi, 2y = 10, or y = 5\. Now write a number where the values ​​of x + y and x - y are given, the values ​​of x and y are given. I will write later. In between you want to write your own. Easy.
+
+2) What is the value of 4x + 5y = 14, 5x + 6y = 17 Hell x and y?
+
+We can write the equations as follows: a1x + b1y = c1, a2x + b2y = c2\. You can solve this problem in different ways. There are two ways to solve this with the help of substitution and determinant. If you don't know Pitguela, look at the math books of Sas Eight or Nine. Let's see the solution, x = (b2c1 - b1c2) / (a1b2 - a2b1) and y = (a1c2 - a2c1) / (a1b2 - a2b1). Now the values ​​of x and y will be obtained by substituting the specified values ​​in place of a1, a2, b1, b2, c1, c2.
+
+To solve this type of equation we will also write a program whose input will be a1, a2, b1, b2, c1, c2 and output will be the values ​​of x and y. It is also easy. Make your own tea.
+
+Hopefully, you can solve both problems on your own. Now I give the first problem card:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     double x, y, x_plus_y, x_minus_y;  
+
+     printf("Enter the value of x + y: ");  
+
+     scanf("%lf", &x_plus_y);  
+
+     printf("Enter the value of x - y: ");  
+
+     scanf("%lf", &x_minus_y);  
+
+     x = (x_plus_y + x_minus_y) / 2;  
+
+     y = (x_plus_y - x_minus_y) / 2;  
+
+     printf("x = %0.2lf, y = %0.2lf\n", x, y);  
+
+     return 0;  
+
+}
+
+The solution is very simple. However, I did not use the data type int of the variable, I used double.
+
+This is the third issue card:
+
+#include <stdio.h>
+
+int main()  
+
+{  
+
+     double a1, a2, b1, b2, c1, c2, x, y;  
+
+     printf("a1 = ");  
+
+     scanf("%lf", &a1);  
+
+     printf("a2 = ");  
+
+     scanf("%lf", &a2);  
+
+     printf("b1 = ");  
+
+     scanf("%lf", &b1);  
+
+     printf("b2 = ");  
+
+     scanf("%lf", &b2);  
+
+     printf("c1 = ");  
+
+     scanf("%lf", &c1);  
+
+     printf("c2 = ");  
+
+     scanf("%lf", &c2);  
+
+     x = (b2 * c1 - b1 * c2) / (a1 * b2 - a2 * b1);  
+
+     y = (a1 * c2 - a2 * c1) / (a1 * b2 - a2 * b1);  
+
+     printf("x = %0.2lf, y = %0.2lf\n", x, y);  
+
+     return 0;  
+
+}
+
+It's easy too! However, I have doubled the value of copper (a1 * b2 - a2 * b1) (when multiplying the value of x, then multiplying the value of y). The more work we do at once and the better we do it at once, the less work we will do and the less work we will do. Again, if the value of (a1 * b2 - a2 * b1) is zero, then there is a problem, because something cannot be divided by zero. So if that value is zero then there is no solution to the equation. This time I will write more well.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     double a1, a2, b1, b2, c1, c2, d, x, y;
+
+printf("a1 = ");  
+
+     scanf("%lf", &a1);  
+
+     printf("a2 = ");  
+
+     scanf("%lf", &a2);  
+
+     printf("b1 = ");  
+
+     scanf("%lf", &b1);  
+
+     printf("b2 = ");  
+
+     scanf("%lf", &b2);  
+
+     printf("c1 = ");  
+
+     scanf("%lf", &c1);  
+
+     printf("c2 = ");  
+
+     scanf("%lf", &c2);  
+
+     d = a1 * b2 - a2 * b1;  
+
+     if ((int) d == 0) {  
+
+         printf("Value of x and y can not be determined.\n");  
+
+     }  
+
+     else {  
+
+         x = (b2 * c1 - b1 * c2) / d;  
+
+         y = (a1 * c2 - a2 * c1) / d;  
+
+         printf("x = %0.2lf, y = %0.2lf\n", x, y);  
+
+     }  
+
+     return 0;  
+
+}
+
+Who cares about a father here. I have written inside if if (int) d == 0\. Here I have typed the theme d (which is a double type variable) and then checked whether its value is equal to 0\. The test can be done as much as: if (d == 0.0) but there is a lot of trouble from time to time. You can understand the subject by reading about computer acumen.
+
+One wonders what is the benefit of solving these simple problems by roaming? Once the result is written, it is no longer possible to solve it. Then I will just input, I will solve the problem myself and output the tobacco.
+
+3) If I lent tobacco ten thousand rupees at 35% interest and the money was paid to tobacco in five years, how much money would I have to pay for five years and how much would I have to pay per month? If the loan is nothing but water, then you have to pay 10000 + 10000 * 35/100 rupees. Let's write a simple loan:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     double loan_amount, interest_rate, number_of_years, total_amount,
+
+monthly_amount;
+
+  printf("Enter the loan amount: ");  
+
+     scanf("%lf", &loan_amount);  
+
+     printf("Enter the interest rate: ");  
+
+     scanf("%lf", &interest_rate);  
+
+     printf("Number of years: ");  
+
+     scanf("%lf", &number_of_years);  
+
+     total_amount = loan_amount + loan_amount * interest_rate / 100.00;  
+
+     monthly_amount = total_amount / (number_of_years * 12);  
+
+     printf("Total amount: %0.2lf\n", total_amount);  
+
+     printf("Monthly amount: %0.2lf\n", monthly_amount);  
+
+     return 0;  
+
+}
+
+There is a little problem in our formula. If 35% interest is paid then there will be interest. In other words, 35% interest will be charged on mortgage loan every year. Then you have to pay 10000 + 10000 * 35 * 5/100 rupees for five years of copper pot. Now write the formula according to this formula.
+
+However, the calculation of debt is not so simple. You can get a loan only if you take a loan from a bank.
+
+4) Let's solve one of the problems of Padathiben.
+
+The initial velocity and acceleration started (the value of the constant will always be a, not increase or decrease). If its bug is v after t time, how far will it be in 2t time? (Issued by Shahriar Moore, A Valladolid Online Jazz 10071).
+
+At 2t, Aita will be gone v x 2t. This is the standard. Then start reading again. In the ninth-tenth Padathiban book, you will find two su: v = u + at s = ut + 0.5 at ^ 2 (here it is far from time). Then after 2t it will go away u x 2t + 0.5 x a x (2t) ^ 2 = u x 2t + 0.5 x a x 4t ^ 2 = u x 2t + a x 2t ^ 2 = 2t (u + at) = 2tv
+
+Now, each of you has to write a program, where the values ​​of v and t are to be given as input, at 2t you have to determine the distance. I wrote it myself.
+
+5) What is the sum of 1 + 2 + 3 +… + 998 + 999 + 1000?
+
+Those who do not know the value of the section, they can give a quick bell, the result of this section is 1000 x 1001/2\. Then let's write a program, where the value of the last step will be the input and the output will be the result.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int n, sum;  
+
+     scanf("%d", &n);  
+
+     sum = (n * (n + 1)) / 2;  
+
+     printf("Summation is %d\n", sum);  
+
+     return 0;  
+
+}
+
+If we do not know the result of the series, we can write a program using a loop.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int i, n, sum;  
+
+     scanf("%d", &n);  
+
+     for(i = 1, sum = 0; i <= n; i++) {  
+
+         sum = sum + i;  
+
+     }  
+
+     printf("Summation is %d\n", sum);  
+
+     return 0;  
+
+}  
+
+So I don't want to worry about the problem anymore. If you can calculate how much the value of one foot is higher than the previous foot, then you can use the loop to get the result. However, it is better not to use the loop. Because seeing the first group (where you used it). There is one yag, one multiplication and one division, no matter how big the value of n is. And in the third game (where you used the loop) you set the value of n as many times as you want, and then you put the sum sum variable (it takes a while to keep the value of the variable).
+
+Now you have to write a simple letter. The first number of positive numbers is the sum of the odd numbers. The value of n will be the input, and the sum will be the output.
+
+6) Our goal this time will be to convert the temperature from Celsius to Fahrenheit.
+
+Solisacea Fahrenheit Silver Su: ° F = (° C × 1.8) + 32.
+
+#include <stdio.h>  
+
+int main()
+
+{  
+
+     double celsius, farenheit;  
+
+     printf("Enter the temperature in celsius: ");  
+
+     scanf("%lf", &celsius);  
+
+     farenheit = 1.8 * celsius + 32;  
+
+     printf("Temperature in farenheit is: %lf\n", farenheit);  
+
+     return 0;  
+
+}
+
+Now it is your job to discover what that is and to bring it about.
+
+6) Now we will write the names of the two numbers Gasagu (GCD → Greatest Common Divisor or HCF → Highest Common Factor) and Lasagu (LCM → Least Common Multiple).
+
+Gasagu of the two numbers is the largest number among the numbers that divide the two numbers. Then whatever we do, the numbers a and b are new. Then in the middle of this, I will put the sign variable x variable again. The value of Gasagu is not always greater than x (the value of Gasagu of 5 and 10 will not be greater than 5). Now we will test whether a and b are separated by x, (a% x == 0 and b% x == 0). If it is, then we have got Gasagu. If both a and b are not infinitely divisible, then we will test the value of x by one. Until we continue to reduce the value of Gasagu pi x. At some point we will get Gasagu, because when the value of x is 1, then x gives a and b is a divisor. Would you like to write your own program?
+
+Couldn't see my card:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a, b, x, gcd;  
+
+     scanf("%d %d", &a, &b);  
+
+     if (a < b) {  
+
+  x = a;  
+
+     }  
+
+     else {  
+
+         x = b;  
+
+     }  
+
+     for(; x >= 1; x--) {  
+
+         if (a % x == 0 && b % x == 0) {  
+
+             gcd = x;  
+
+             break;  
+
+         }  
+
+     }  
+
+     printf("GCD is %d\n", gcd);  
+
+     return 0;  
+
+}
+
+To get the gcd seen in the game, he would have to get out of that loop (this is the one I used to break). If you don't use break, you will see what will happen.
+
+However, the bile I used to get rid of Gasagu is very simple, but it is not efficient. For example, if the number is too large and the co-prime loop rotates several times. Because Sahemdhilak Hell Gasagu will be 1\. You do not know that there is no common product other than the number 1 between the two numbers.
+
+Gasagu's groom John Euider is having a good time. With the help of division algorithm, Uday has shown the way to get rid of Gasagu. Gasagu can be easily boiled in this drink and Ram is also very effective. Two things need to be known: the value of a and 0's Gasagu is a. Gasagu of a and b = Gasagu of b and a% b.
+
+In this case, with the help of a looper, the value of a will be b and the value of b will be a% b, until the value of b is zero. Once the value of b is zero, it is understood that Gasagu is a (this is not the value of a at the beginning of the program, the value of b is the value of a at the time of zero).
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int a, b, t, x, gcd;  
+
+     scanf("%d %d", &a, &b);  
+
+     if (a == 0) gcd = a;  
+
+     else if (b == 0) gcd = b;  
+
+else {  
+
+         while (b != 0) {  
+
+             t = b;  
+
+             b = a % b;  
+
+             a = t;  
+
+         }  
+
+         gcd = a;  
+
+     }  
+
+     printf("GCD is %d\n", gcd);  
+
+     return 0;  
+
+}
+
+I want to make this program more efficient.
+
+Now it's time to get married. You are always learning how to get rid of lasagna. Write down the signature. And those who do not know how to sign, give them a sign. Hopefully, there will be no more problems in writing a letter to Lasagu.
+
+Lasagu of two numbers x Gasagu of two numbers = product of number dur.
+
+Chapter 6
+
+[Reading Book: Chapter Six]
+
+As a result, the demand for copper has increased a little. Chela, now let's do some public service work. We will write a list of the results of the math test for the students. The first periodical, the third periodical and the third year of the year are three hundred. The final results are then published with 50% of the annual examination, 25% of the second periodical examination and 25% of the first periodical examination. Then the input of our game is not those three fairies. We will see the top results. A kaena
+
+It doesn't matter:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int ft_marks, st_marks, final_marks;   
+
+     double total_marks;   
+
+     ft_marks = 80;   
+
+     st_marks = 74;   
+
+     final_marks = 97;   
+
+     total_marks = ft_marks / 4.0 + st_marks / 4.0 + final_marks / 2.0;   
+
+     printf("%0.0lf\n", total_marks);   
+
+     return 0;   
+
+}
+
+Our output is 87\. (If I did not write total_marks = ft_marks / 4.0 + st_marks / 4.0 + final_marks / 2.0; I would write total_marks = ft_marks / 4 + st_marks / 4 + final_marks / 2; )
+
+We couldn't help but benefit from our education. Because he has a large number of mats. Then Sarek will have to run four times! However, this is not the case. We should decide the final outcome of all through one game. This is not the work of Taman Kaena. We can start writing a program like this:
+
+#include
+
+int main() { int ft_marks_1, st_marks_1, final_marks_1, ft_marks_2, st_marks_2, final_marks_2, ft_marks_3, st_marks_3, final_marks_3
+
+Do you understand, what can I do? How many variables are needed when it is time to write? 160\. We don't want to increase our income so much by reducing the cost. In such a case, it will have to be written on our behalf. Don't cry! There is a wonderful genre called Array in all languages. So many variables of the same type can be kept together. The same name is given to the variable as the name of the variable. There is also C.
+
+Variables have the same data type as errors. Only the right type of data can be stored in the data type. For example, there will only be char typewriter items in the char typewriter array.
+
+How many elements will be in the array is given at the beginning. int ara [10]; Now we can delete an array, which is called ara, to have only the Eiser type data and this array can hold only ten numbers. The first hera [0] (yes, ara [1] or the third), the third ara [1], the third ara [2], and the tenth number hera [9]. That is, ara [i] is the i + 1st element.
+
+Let's make a little fuss about this time. I will definitely see you in Cutaway.
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int ara[5] = {10, 20, 30, 40, 50};   
+
+     printf("First element: %d\n", ara[0]);   
+
+     printf("Third element: %d\n", ara[2]);    
+
+     return 0;   
+
+}
+
+Do you see the output hard?
+
+Another program:
+
+#include <stdio.h>   
+
+int main()   
+
+{    
+
+     int ara[5] = {6, 7, 4, 6, 9};   
+
+     printf("%d\n", ara[-1]);   
+
+     printf("%d\n", ara[5]);   
+
+     printf("%d\n", ara[100]);    
+
+     return 0;   
+
+}
+
+What output should John come up with? I don't know and that's not all. Any kind of number could come. This is the garbage bell. Because when it comes to that array-1, 5, 100 this ined is nothing. Err daghai he5 so ined heb 0 to 4.
+
+Now if I want to show all the elements of Kaena Array at once, then what is the way? The way is to do the first element (ara [0]), the third element (ara [1]), the third element (ara [2])… and do everything one by one. And of course we don't have to help him.
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int ara[10] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+
+int i;   
+
+     for(i = 0; i < 10; i++) {   
+
+         printf("%d th element is: %d\n", i+1, ara[i]);   
+
+     }    
+
+     return 0;   
+
+}
+
+And if the last element to the first element to show the heta? There is no problem, just bring the index 9 to 0 in the loop. Now you have to write.
+
+This is a small problem. There are ten elements in one array, all of which must be contrasted. That is, the tenth element will be the first element, the first will be the tenth, the third will be the ninth, the ninth will be the third .. like this. We can do whatever we can to help him. The elements of the first array in the third array will be contrasted. Then in the third and the first array will be the result.
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int ara[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};   
+
+     int ara2[10];   
+
+     int i, j;   
+
+     for(i = 0, j = 9; i < 10; i++, j--) {   
+
+         ara2[j] = ara[i];   
+
+     }    
+
+     for(i = 0; i < 10; i++) {   
+
+         ara[i] = ara2[i];   
+
+     }   
+
+     for(i = 0; i < 10; i++) {   
+
+         printf("%d\n", ara[i]);   
+
+     }   
+
+     return 0;   
+
+}
+
+Let's say here that in the first array I did not say the number of elements inside the third bean, because by looking at the numbers inside the third bean of the syllable of the syllable one can understand that there are at least ten elements. There is nothing in the third ara or ara2 now. So you have to give a bell at the beginning to see how many ingredients it will contain. Then, according to Kyler's signature, I will take the place of the other in the memory of the cutter.
+
+You have worked very well. But with a little thought, you can see that there is no need to use a third eye. We could only work with a lot of chill.
+
+ int temp;
+
+ temp = ara[9];
+
+ara[9] = ara[0];
+
+ara[0] = temp;
+
+The first and tenth elements are exchanged. Then
+
+temp = ara[8];
+
+ara[8] = ara[1];
+
+ara[1] = temp;
+
+The third and ninth elements were exchanged. Then fill in the blanks:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int ara[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};    
+
+     int i, j, temp;   
+
+     for(i = 0, j = 9; i < 10; i++, j--) {   
+
+         temp = ara[j];   
+
+         ara[j] = ara[i];   
+
+         ara[i] = temp;   
+
+     }    
+
+     for(i = 0; i < 10; i++) {   
+
+         printf("%d\n", ara[i]);   
+
+     }   
+
+     return 0;   
+
+}
+
+Play the game. What did you do? What is the output like?
+
+10 
+
+20 
+
+30 
+
+40 
+
+50 
+
+60 
+
+70 
+
+80 
+
+90 
+
+100
+
+That doesn't work! When I came, I made a mistake. This kind of forget-me-not bug (bug) does not give a single output when the game is running. I have a card bug, they debug it.
+
+Now let's go back to our previous problem. We will now use one array of maths for everyone in the first period, another array for the second period, another for the annual period and one for the king.
+
+int ft_marks[40], st_marks[40], final_marks[40];  double total_marks[40];
+
+Whose Ral No. 1 will have Nargula in the first circle of the array (mean index will be 0). Nowadays, who is the total man in total_marks [34]? Whose resin nor 35\. Then if someone's real man is not his total man he total_marks [n-1].
+
+Now let's write the following:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int ft_marks[40] = {83, 86, 97, 95, 93, 95, 86, 52, 49, 41, 42, 47, 90,
+
+59, 63, 86, 40, 46, 92, 56, 51, 48, 67, 49, 42, 90, 42, 83, 47, 95, 69, 82,
+
+82, 58, 69, 67, 53, 56, 71, 62},   
+
+     st_marks[40] = {86, 97, 95, 93, 95, 86, 52, 49, 41, 42, 47, 90, 59, 63,
+
+86, 40, 46, 92, 56, 51, 48, 67, 49, 42, 90, 42, 83, 47, 95, 69, 82, 82, 58,
+
+69, 67, 53, 56, 71, 62, 49},   
+
+     final_marks[40] = {87, 64, 91, 43, 89, 66, 58, 73, 99, 81, 100, 64, 55,
+
+69, 85, 81, 80, 67, 88, 71, 62, 78, 58, 66, 98, 75, 86, 90, 80, 85, 100, 64,
+
+55, 69, 85, 81, 80, 67, 88, 71};   
+
+     int i;   
+
+     double total_marks[40];   
+
+     for(i = 0; i < 40; i++) {   
+
+         total_marks[i] = ft_marks[i] / 4.0 + st_marks[i] / 4.0 +
+
+final_marks[i] / 2.0;   
+
+     }    
+
+     for(i = 1; i <= 40; i++) {   
+
+         printf("Roll NO: %d\tTotal Marks: %0.0lf\n", i, total_marks[i-1]);   
+
+     }   
+
+     return 0;   
+
+}  
+
+See the run, what tune output! I have written in a place where you can see the inside of the printf function, so there will be a tab (view to the left of the keyboard). Tatal Maxi with a tub after rolling the ball. It looks a little better. You have used this person, you don't need Eminet.
+
+Seeing that it is so safe, he did not want to eat tobacco with his teacher's words, so he sat down with another whim. I want to see how many people you have. I mean 50 how many Paul, 51 how many Paul… this is another. Before reading the rest, you want to write on your own. If you don't do it now, stop reading books and I will have tea sometime later.
+
+Hopefully, some of you are writing. If the comp can't write even after one blow four, then we are now
+
+I could make a solution tea. From the beginning, one of the fathers noticed that no one was in his 50's. So from 50 to 100 ears, how many Paul's will be done. The first solution that comes to my mind is to look at the total_marks array, how many are 50, then look again at how many are 51 and now I will look at 100\. I will check all the numbers from 50 to 100 in the total_marks array.
+
+for(marks = 50; marks <= 100; marks++) Value With the help of a looper, the value of theme marks will be 50, then 51, and one by one it will be increased to 100.
+
+count = 0; You have got zero marks. We will do this for all the makers of marks. In this case, we will see that the total_marks array is equal to the number of marks, but the value of count is given by one. Then the number of times a mark is drawn, the value of the count will be the same.
+
+  for(i = 0; i < 40; i++) {       if(total_marks[i] == marks) {           count++;       }   }  
+
+printf("Marks: %d Count: %d\n", marks, count); Here we will give the marks and the number of times (count). }
+
+Then write the entire program:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int marks, i, count;   
+
+     int total_marks[] = {86, 78, 94, 68, 92, 78, 64, 62, 72, 61, 72, 66, 65,
+
+65, 80, 72, 62, 68, 81, 62, 56, 68, 58, 56, 82, 70, 74, 78, 76, 84, 88, 73,
+
+62, 66, 76, 70, 67, 65, 77, 63};   
+
+     for(marks = 50; marks <= 100; marks++) {
+
+  count = 0;   
+
+         for(i = 0; i < 40; i++) {   
+
+             if(total_marks[i] == marks) {   
+
+                 count++;   
+
+             }   
+
+         }   
+
+         printf("Marks: %d Count: %d\n", marks, count);   
+
+     }        
+
+     return 0;   
+
+}
+
+Nothing like that. I came up with a simple solution using Ned for Loop. Now how many times have we tested within the if (total_marks [i] == marks) How many times does this work? The outer loop will rotate 51 times and the inner loop will rotate 40 times. Then mat 51 x 40 = 2040 times.
+
+We will now try to write a little inexperienced. Quickly type and run in Nature Game:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int i;   
+
+     int total_marks[] = {86, 78, 94, 68, 92, 78, 64, 62, 72, 61, 72, 66, 65,
+
+65, 80, 72, 62, 68, 81, 62, 56, 68, 58, 56, 82, 70, 74, 78, 76, 84, 88, 73,
+
+62, 66, 76, 70, 67, 65, 77, 63};   
+
+     int marks_count[101];
+
+for(i = 0; i < 101; i++) {   
+
+         marks_count[i] = 0;   
+
+     }   
+
+     for(i = 0; i < 40; i++) {   
+
+         marks_count[total_marks[i]]++;   
+
+     }   
+
+     for(i = 50; i <= 100; i++) {   
+
+         printf("Marks: %d Count: %d\n", i, marks_count[i]);   
+
+     }        
+
+     return 0;   
+
+}
+
+What I have done here, I have used in the past. marks_count By typing an easy type and marks_count [n] we understand how many times the number n is in total_marks. Since men can range from 0 to 100, we decided to keep the number 101 in that array. int marks_count [101]; Since you don't know anything at the beginning, don't assume that all the numbers are zero. So, put all the cells of the marks_count array as 0: for (i = 0; i <101; i ++) {marks_count [i] = 0; } Now add the value of the circle in the marks_count array for each number of the total_marks array.
+
+for (i = 0; i <40; i ++) marks_count [total_marks [i]] ++; } Do you understand the problem, O Naik? A little tea. When the value of i is 0, then total_marks [i] is total_marks [0], i.e. 86\. Now we need to give the value of that cell (mean marks_count [86]) of the marks_count array one by one. In the beginning it was zero, now it will be one. We have done something to increase the value of marks_count [total_marks [i]] by one mark_count [total_marks [i]] ++; Asel Bapar also wrote: t_m = total_marks [i]; marks_count [t_m] ++; Those who scratch their heads here also run Nature Ram Quta. Here three times marks_count [total_marks [i]] ++; After doing marks_count and we have done one line.
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     int i, j;   
+
+     int total_marks[] = {6, 7, 4, 6, 9, 7, 6, 2, 4, 3, 4, 1};   
+
+     int marks_count[11];   
+
+     for(i = 0; i < 11; i++) {   
+
+         marks_count[i] = 0;   
+
+     }   
+
+     for(i = 0; i < 12; i++) {  
+
+  marks_count[total_marks[i]]++;   
+
+         for(j = 0; j <= 10; j++) {   
+
+             printf("%d ", marks_count[j]);   
+
+         }   
+
+         printf("\n");      
+
+     }       
+
+     return 0;   
+
+}
+
+Chapter 7
+
+[Reading Book: Chapter Seven] Function.
+
+You don't know a funny father? Does a writer spend twenty times more time writing than he writes all his life? It is also true to say that the father is the mother. The more time a person spends in his or her working life, the more time it takes to write a card! So when writing a card, you have to keep in mind that reading is also convenient.
+
+Those who have been reading from the beginning of the book are watching the function show many times. Those who are paying attention to more are also noticing that printf, scanf, etc., are all using a single function. Again, main and one function. We will now see what the function father is, what it needs. And then we will learn to perform our own functions. The function is used to perform a sleep function. As with the printf function we give the output of the minute. Again with scanf, getchar these functions we do not get input from the keyboard. Now that we've written the printf function, the cutter doesn't have to explain it anymore. What will the printf function do? How will the bell be called? That's why we refer to that hardware file (#include) in our program (where you use printf, scanf, etc.). String.h - again using the ringtone function - also refers to this hardware file. Now let's ask, if this card of printf function could have been written by us, then it would not have been written by our father! There are many such functions that can be used in the future. Well, main and I said it's a function, what do we do with that? We run a program with this function. Kyler knows that the main function should start working where it is. So only one game has the same main function.
+
+Let's see how we can perform the function ourselves. One of the functions we will use when we shoot arrows is as follows:
+
+return_type function_name (parameters) 
+
+{
+
+function_body
+
+return value
+
+}
+
+return_type: Here the bell should be given to return the type of data when the function is finished. S, int, double. If you don't want to return anything again, you can be satisfied. I will not return anything. This means that when you come to the function, you have to do something, you have to return the data to the end of the job. Whenever you use return at the location of the function, the function returns or exits from that location. There are multiple returns within many functions and there are hundreds of different drugs. Depending on the field, the function will be retrieved whenever the function is returned.
+
+function_name: Here we have to write the name of the function. The name of the function will be Het Heb Athapun Yate. For example, if we write a function to find the root of an ear number, we can give the name square_root or sqrt. We will not give the name beautiful, even if Kyler does not listen to it.
+
+parameters: Here we will give the necessary data for the function to work. For example, when we use the strlen function to determine the length of the ring, we have to determine the length of the ring (or will we determine the length of the ring?). Again, when you write the root function, you have to find the root of the number and give the bell. We can send all the data to that function through parameters. Again, if you don't want to send anything, you can keep it simple. For example, getchar () or main () function. When sending multiple parameters, each parameter must be separated by a comma (,).
+
+function_body: You have to give a bell on how the function will work. I have to write another card. return value: When the function finishes its work, it returns to the place from which it was called. We can send the value to Kaena while returning. The sqrt () function is what we want to do. Will it be possible to send it back immediately? If the value of the bog root is x, then we return x; I will send back the value by tem. int root = sqrt (25); Here, after determining the bug root of the sqrt function 25, the bug root will be returned and an easy variable named root will be stored.
+
+Give an example. Those of you who are in love are familiar with sin, cos, tan, etc. The value of sin 300 is 0.5\. Here sin is a function whose parameter we give the value of. And the function returns the value of sine (short sin) of that ear. This time Chela, without further ado, started playing. Then see what happened.
+
+#include <stdio.h>  
+
+int main()   
+
+{  
+
+     double a, b, c;  
+
+     a = 2.5;  
+
+     b = 2.5;  
+
+     c = a + b;  
+
+     printf("%lf\n" c);  
+
+     return 0;  
+
+} 
+
+Play the game. What is the output? 5.000000
+
+Now we write a function to add two numbers. I will not do the work of the main function.
+
+#include <stdio.h>  
+
+int add(int num1, int num2)   
+
+{  
+
+     double sum = num1 + num2;  
+
+     return sum;  
+
+}  
+
+int main()
+
+{  
+
+     double a, b, c;  
+
+     a = b = 2.5;  
+
+     c = add(a, b);  
+
+     printf("%lf\n", c);  
+
+     return 0;  
+
+}
+
+Play the game. What is the output? 4.000000! Oh, we made that mistake. If num1 and num2 come then it will not be int type, it will be double type. Due to the deviation of those two variables, the loss is reduced to 2.5 (do you mean type King?). We made a mistake:
+
+int add(double num1, double num2)   
+
+{  
+
+     double sum = num1 + num2;  
+
+     return sum;  
+
+} 
+
+What is the output run this time? 5.000000\. Let's solve the problem! Ah, this time we change the values ​​of a, b a little bit. a = 2.8; b = 2.7; Let's do it. What will be the output? 5.500000? This is supposed to be (2.8 + 2.7 = 5.5). You will get the output 5.000000\. What is the reason?
+
+Because, the return type of our function is int, which is equal to the return of one lease. After adding num1 and num2, the sum of 5.5 will be in the sum. So we double the return type.
+
+This time our program will work hard:
+
+#include <stdio.h>   
+
+double add(double n1, double n2)   
+
+{   
+
+     double sum = n1 + n2;   
+
+     return sum;   
+
+}   
+
+int main()   
+
+{  
+
+  double a, b, c;   
+
+     a = 2.8;   
+
+     b = 2.7;   
+
+     c = add(a, b);   
+
+     printf("%lf\n", c);   
+
+     return 0;   
+
+} 
+
+Now we will do one epirum. The add function will be written after the main function:
+
+#include <stdio.h>   
+
+int main()   
+
+{   
+
+     double a = 2.8, b = 2.7, c;   
+
+     c = add(a, b);   
+
+     printf("%lf\n", c);   
+
+     return 0;   
+
+}   
+
+double add(double n1, double n2)   
+
+{   
+
+     double sum = n1 + n2;   
+
+     return sum;   
+
+}  
+
+If you run this program, you will see that Kyler errors: "error:‘ add 'was not declared in this scope ", that is, you cannot recognize the add function. But not only this, with the help of Chinese medicine you can do great things. Add the prototype bell to the add function before the main function:
+
+double add (double n1, double n2);
+
+The typewriter does not write the whole function. Parts of O:
+
+return_type function_name (parameters);
+
+Make no mistake about it. And there is no problem if the name of the variable of the main function of the variable of the parameter of the data type is not the same, but the data type will be the same. Now Nature will work hard:
+
+#include <stdio.h>   
+
+double add(double x, double y); 
+
+int main()   
+
+{   
+
+     double a = 2.8, b = 2.7, c;   
+
+     c = add(a, b);   
+
+     printf("%lf\n", c);   
+
+     return 0;   
+
+}   
+
+double add(double n1, double n2)   
+
+{   
+
+     double sum = n1 + n2;   
+
+     return sum;   
+
+}
+
+This time we will do some more experiments.
+
+#include <stdio.h>  
+
+int test_function(int x)   
+
+{  
+
+     int y = x;  
+
+     x = 2 * y;  
+
+     return (x * y);  
+
+}  
+
+int main()   
+
+{  
+
+     int x = 10, y = 20, z = 30;  
+
+     z = test_function(x);  
+
+     printf("%d %d %d\n", x, y, z);  
+
+     return 0;  
+
+}
+
+If you don't want to go, just look at the card, what will be the output? We are not in a hurry, so we have to pray slowly.
+
+Now I agree that the output will be: 20 10 200 (i.e. x = 20, y = 10, z = 200)? Because we have changed the value of x, y to the value of test_function. The value of Them x is 10 which is the parameter, then we put the true value in y. The value of Maine y is now 10\. Then set the value of x to 2 * y to 20\. Then return x * y (whose value is 20 * 10 or 200). So the value of z will be 200.
+
+Now run the program, you will see the output: 10 20 200 (i.e. x = 10, y = 20, z = 200). What is the reason for this? The value of z is not taken into account, the function returns 200 and we assign it to z. By the way, take the values ​​of x and y. Since we have changed the value of x, y to the root of the original test_function, none of the x, y of the main function can come and go. The variables of each function are different. A bell is a local variable. We have set the value of x, y in the main function to the value x, y in the function_function. The local variable of a function does not have an on-function. You can now write a few words and see more tests. I left it to Samat to write the key.
+
+If we want to be able to have all the functions of our variable in our can, then we can do it by deviating from the global variable. At the beginning of the game, we will delete everything before writing the function or the metatype of the function. Such as:
+
+#include <stdio.h>  
+
+double pi = 3.14;  
+
+void my_fnc() {        pi = 3.1416; /* Here we have changed the value of pi a little * /
+
+return; /* This return if the return type of the function is void; Even if you don't give a shit * /
+
+}  
+
+int main() {        printf("%lf\n", pi); /* The value of pi here will be 3.14 * /
+
+my_fnc();        printf("%lf\n", pi); /* The value of pi here will be 3.1416 because we have changed the function to my_fnc. * /
+
+  return 0;  
+
+}  
+
+Again, if we were to add a variable named pi (double pi;) to the inside of the my_fnc function, it would not be a single local variable and would not change the ear of the main pi.
+
+So far we have used only variables as parameters of the function. This time we send it as the parameter of the function. We will write a list that will find the largest number from one lease. Write a function to find the service number from here, what time? int find_max (int ara [], int n) {/ * Here we have two parameters. The first is an array, and then a number that will indicate how many digits are in the array. However, when it comes to parameters, it doesn't matter how many elements there are, as we could also write int ara [11]. * /
+
+int max = ara [0]; / * Here we do not hold a variable which is the largest number and the first number in the array. Then we will compare the max of the rest of the elements of the array and if the value of the causal element of the array is greater than max then we will put the signature value in max. Or then the service number of that error will be max again. * /
+
+int i; for(i = 1; i < n; i++) { if (ara[i] > max) {
+
+max = ara[i]; /* ara[i] Assign the value of ara [i] to max if greater than max. * /
+
+}
+
+}
+
+return max; /* Return service quality from function * /
+
+}
+
+Now let's talk, how do we call this function? In place of the variable, it is called by its name, what do I say in an error? I will just give the name even if it is called an error. See the full program this time:
+
+#include <stdio.h>  
+
+int find_max(int ara[], int n);  
+
+int main()   
+
+{  
+
+     int ara[] = {-100, 0, 53, 22, 83, 23, 89, -132, 201, 3, 85};  
+
+     int n = 11;  
+
+     int max = find_max(ara, n);  
+
+     printf("%d\n", max);  
+
+     return 0;  
+
+}  
+
+int find_max(int ara[], int n)   
+
+{  
+
+     int max = ara[0];  
+
+     int i;  
+
+     for(i = 1; i < n; i++) {  
+
+         if (ara[i] > max) {  
+
+             max = ara[i];  
+
+         }  
+
+     }  
+
+     return max;  
+
+}
+
+Now write another function called find_min whose job will be to find the shortest number. Find_sum, find_average These functions can also be written. And you don't have to worry about what these functions will do.
+
+#include <stdio.h>  
+
+void test_function(int ara[])   
+
+{  
+
+     ara[0] = 100;  
+
+     return;  
+
+}  
+
+int main()   
+
+{  
+
+     int ara [] = {1, 2, 3, 4, 5};  
+
+     printf("%d\n", ara[0]);  
+
+     test_function(ara);  
+
+     printf("%d\n", ara[0]);  
+
+     return 0;  
+
+}
+
+What will be the output of this game? It doesn't matter if the first printf function 1 is done, what will the second printf do? Inside test_function we have assigned the value of the first element of the array to 100\. Now if the root changes another, then the value of ara [0] will be 100, and if it does not change then the value will be the same as before.
+
+We will see the output as 100, because the value of the first element of the array has changed. In other words, we realized that if we pass the arrow of the function, the arrow of that arrow does not have a separate arrow. Because we only send the name of the array inside the function, even though the memory of that array is in place. Now let's write a function to determine the result of a tree. Is it time to pick the fruit? If you don't mind, take a look at the book.
+
+Chapter 8
+
+[Reading Book: Chapter Eight] Bainir Sach.
+
+Let's start with a simple khala. This game needs two. A main man will hold one number. And the third person will do something and get the signature number. But 'What is the number of copper?' - It cannot be done directly. O: The number is greater than one N (one number), equal to the short nick?
+
+The number will be within a certain range (such as 1 to 100, 10 to 1000, -1000 to 100000).
+
+Now suppose that the number you have taken is a number within 1 to 1000\. Then a service a thousand times 'Is the number equal to N?' Taxes are paid. (Number 1? Number 2? ... Number 999 ?, Number 1000?). If he did this, Sankha would definitely be the bridegroom. But if the share is bad, he will do that a thousand times.
+
+We don't have that much time. Suppose, that number within 1 to 1000 is O 50\. Then we will stop:
+
+1) The number is greater than 500, equal to the short nick? Cut.
+
+2) The number is greater than 250, the equivalent is less? Cut.
+
+3) The number is greater than 125, equal to the short nick? Cut.
+
+4) The number is greater than 62, equal to the short nick? Cut.
+
+5) The number is greater than 31, equal to the short nick? Large.
+
+6) The number is greater than 46, equal to the short nick? Large.
+
+7) The number is greater than 54, equal to the short nick? Cut.
+
+8) The number is greater than 50, equal to the short nick? Equal.
+
+We got the number eight mom!
+
+Do you really understand? The number of times the tax is exceeded is exceeded. The opening time range was 1 to 1000\. Then you get 1 to 500\. Then 1 to 250, 1 to 125, 1 to 62, 31 to 62, 46 to 62, 46 to 54.
+
+Now we will see how to find the number of baini sach ke kare from one array. There must have been a number of smaller ones or larger ones. Nail baini sach cannot be used. Because who can say? First we have an Ezra where the numbers are from smaller to larger.
+
+int ara[] = {1, 4, 6, 8, 9, 11, 14, 15, 20, 25, 33 83, 87, 97, 99, 100};
+
+Now what will be the value of low and high? low = 1 and high = 100? There are a few problems here. We will not look for the median of all numbers here, but for the median of the error in. And it is possible to save the Aaret Baini from the Aarer Inedguela Manusa. Here ara's Sabin ined H0 and Seba ined H15\. Then we specify the value of two variables –
+
+low_indx = 0;
+
+high_indx = 15;
+
+Let's find the number.
+
+num = 97;
+
+Many of you may be wondering, what will happen if num number is not in ara? We will see. If the number is not found, then we have to keep the medicine in our hands.
+
+Since we have to do the khanja work over and over again, we have to use one loop. We will search the inside of the loop and find the number (or not the number) we will get out of the loop.
+
+while(1) {  
+
+     mid_indx = (low_indx + high_indx) / 2;       
+
+     if(num == ara[mid_indx]) {
+
+/* num if ara [mid_indx]- Is equal to, but we get it
+
+*/  
+
+         break;  
+
+     }       
+
+     if(num < ara[mid_indx]) {                 /* num  if ara[mid_indx]- is cut, but we low_indx From mid_indx – 1 I will look for limits. */
+
+  high_indx = mid_indx – 1;  
+
+     }  
+
+     else {    
+
+/ * num If the ara is greater than [mid_indx], then we will find the median in the range from mid_indx + 1 to high_indx. * /
+
+  low_indx = mid_indx + 1;  
+
+     }  
+
+}
+
+We wrote in Baini's Saecharam. Very simple. The loop will continue until the number is found, because we have written while (1) and 1 are always present. If a number is not in the ara, the loop will continue and our name will never be extended. So a boob needs to be made. Ah, how do we know that the number is not in ara? You have made it clear that we have exceeded the limit three times. If it continues like this, there will be a number within that limit at some point. Then the values ​​of low and high will be equal. And three times since the value of low has increased or the value of high has decreased, so when the value of low and high is equal, then the value of low will be greater than the value of high. Then we will understand that the number could not be found. So the lower the loop, the higher the loop. If you see low> high from the loop, then I understand that the number is not found, and if not, I understand that the number is found and its value is ara [mid_indx]. 
+
+Then let's write the whole article:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int ara[] = {1, 4, 6, 8, 9, 11, 14, 15, 20, 25, 33 83, 87, 97, 99, 100};  
+
+     int low_indx = 0;  
+
+     int high_indx = 15;
+
+  int mid_indx;  
+
+     int num = 97;  
+
+     while (low_indx <= high_indx) {  
+
+         mid_indx = (low_indx + high_indx) / 2;  
+
+         if (num == ara[mid_indx]) {  
+
+             break;  
+
+         }  
+
+         if (num < ara[mid_indx]) {  
+
+             high_indx = mid_indx – 1;  
+
+         }  
+
+         else {  
+
+             low_indx = mid_indx + 1;  
+
+         }  
+
+     }  
+
+     if (low_indx > high_indx) {  
+
+         printf("%d is not in the array\n", num);  
+
+     }  
+
+     else {  
+
+         printf("%d is found in the array. It is the %d th element of the
+
+array.\n", ara[mid_indx], mid_indx);  
+
+     }  
+
+     return 0;  
+
+}
+
+Chapter 9
+
+[Reading Book: Not Chapter] (String)
+
+For those of you who don't know Bengali or String Shar, there is no reason for them to be terrified. Again, those of you who are a little typewriter may have come up with a theory. Whatever it is, there is no reason to be angry.
+
+One or more character mail string arrows. Punishment is the type of car. However, its use is so widespread that it is considered a separate data type for the Kane Layage. However, in this case we will do the work with the help of char type.
+
+Here are some examples of nature:
+
+char country[11] = {'A', 'm', 'e', 'r', 'I', 'c', 'a', '\0'};    
+
+char country[] = {'A', 'm', 'e', 'r', 'l', 'c', 'a', '\0'};    
+
+char country[] = "America";    
+
+char *country = "America";  
+
+Now we can do the ringing. The same genes came in four directions. Given one of the last Null characters ('\ 0'), Kyler can understand the end of the ring. In the third example, the elements of the array are not written separately, they are written together. In this case, Kyler himself will take the Null character. The fourth example is a little weird. The item used here is called a pointer. In this book, even if we use such things from time to time, we will not go into the discussion.
+
+Now it's time to write.
+
+#include <stdio.h>     
+
+int main()     
+
+{     
+
+     char country[] = {'B', 'a', 'n', 'g', 'l', 'a', 'd', 'e', 's', 'h',
+
+'\0'};     
+
+     printf("%s\n", country);     
+
+     return 0;     
+
+}
+
+Here you can see that% s of printf is used for printing. And even though he didn't use the last '\ 0', he came. The current Kylerguela can understand this.
+
+#include <stdio.h>     
+
+int main()     
+
+{     
+
+     char country[] = {' B', 'a', 'n', 'g', 'l', 'a', 'd', 'e', 's', 'h', ' ',
+
+'i', 's', ' ', 'm', 'y', ' ', 'c', 'o', 'u', 'n', 't', 'r', 'y'};     
+
+     printf("%s\n", country);     
+
+     return 0;     
+
+}  
+
+Play the game. Then run Nature. Can you see the output path? What is the reason for the path?
+
+#include <stdio.h>     
+
+int main()     
+
+{     
+
+     char country[] = {'B', 'a', 'n', 'g', 'l', 'a', 'd', 'e', 's', 'h',
+
+'\0', 'i', 's', ' ', 'm', 'y', ' ', 'c', 'o', 'u', 'n', 't', 'r', 'y'};     
+
+     printf("%s\n", country);        
+
+     return 0;     
+
+}
+
+The path will be understood only by the movement of the two Qutas. The reason for this is that there is a '\ 0' in the middle of the third game, so the ring is lost there.
+
+This time we will write a letter. Insert all the capital letters (i.e. capital letter or uppercase character) inside one ring. But John must know one of our things. In contrast to each error, the computer uses a single digit card. According to the signature card, the value of 'A' is O 65, the value of 'B' is O 66, the value of 'C' is O 67 ... and the value of 'Z' is O 90\. So 'a' is 97, 'b' is 98 ... and 'z' is 122\. So we can determine which of the following is not a big hand: if (ch> = 'A' && ch <= 'Z') or if (ch> = 65 && ch <= 90). The same is true of the short hand error: if (ch> = 'a' && ch <= 'z') or if (ch> = 97 && ch <= 122). Now, if Kaena Kerer is a small hand, then what is the way to make him a big hand? The way is very simple. See an example: char ch = 'c'; ch = 'A' + (ch - 'a'); Here, subtracting 'a' from the ch is like subtracting 'a' from 'c' (originally from 99 to 97). Biyagfal 2\. If he does those 2 yags of 'A' this time, then 'C' will be lost!
+
+Now let's write the following:
+
+#include <stdio.h>     
+
+int main()     
+
+{     
+
+     char country[] = {'B', 'a', 'n', 'g', 'l', 'a', 'd', 'e', 's', 'h'};     
+
+     int i, length;     
+
+     printf("%s\n", country);     
+
+     length = 10;      
+
+  for(i = 0; i < length; i++) {     
+
+         if(country[i] >= 97 && country[i] <= 122) {     
+
+             country[i] = 'A' + (country[i] - 'a');     
+
+         }     
+
+     }     
+
+     printf("%s\n", country);     
+
+     return 0;     
+
+}
+
+Now you can write the price of silver from uppercase to lowercase. Then Kera started reading the book again.
+
+Here you can see how many elements there are (in the array of caravans). I have written it down and given it directly.
+
+Now we will write a function to measure the length of the cane! This is nothing like that. With the help of a looper, the elements of the ring will be examined and if the Null character ('\ 0') is found, the loop will be removed, that is, the loop will continue until '\ 0' is found. And the number of times the loop runs will be the same.
+
+#include <stdio.h>     
+
+int string_length(char str[])     
+
+{     
+
+     int i, length = 0;     
+
+     for(i = 0; str[i] != '\0'; i++) {     
+
+         length++;     
+
+     }     
+
+     return length;
+
+}     
+
+int main()     
+
+{     
+
+     char country[100];     
+
+     int length;     
+
+     while(1 == scanf("%s", country)) {                
+
+         length = string_length(country);     
+
+         printf("length: %d\n", length);     
+
+     }     
+
+     return 0;     
+
+}
+
+In the above paragraph, you can see that the scanf function has been used for the new input and% s has been used for the new input. The scanf function returns the same number as the component input. Usually we don't need a return value, so even if we use scanf we don't keep that value. As we took the input of two eziers, we wrote: scanf ("% d% d", & n1, & n2) ;. We could also type: value = scanf ("% d% d", & n1, & n2) ;. You will see that the value of value is 2\. The while (1 == scanf ("% s", country)) line is what happened, until the input of a country named scanf is returned, function 1 is returned, and the key inside the looper is true (1 == 1). , So the looper work will continue.
+
+Another thing to note is that the country has not been used before. What do you do when you see & country writing. However, one of the problems with the use of% s is that it does not contain the Cana Heights cara (such as: s, tub, etc.). For example, if the input is this, then scanf will take this as the key, then if the scanf function is called again, then it will take the input as the scan. To avoid this problem we can use the gets function. See Nature's example:
+
+#include <stdio.h>     
+
+int main()     
+
+{     
+
+     char ara[100];     
+
+     while(NULL != gets(ara)) {                     
+
+         printf("%s\n", ara);     
+
+     }     
+
+     return 0;     
+
+}  
+
+This will continue as long as you press ctrl + z (such as single-bed ctrl and z at once), then Ctrl + d. Ctrl + z or ctrl + d returns the function NULL. Another thing to do is that I char ara [100]; At the beginning of the day, the bell rang and the singer's service would be 100.
+
+Another father. string_length Even if you don't use two variables when you come to the function. We can also write functions:
+
+int string_length(char str[])     
+
+{     
+
+     int i;         
+
+     for(i = 0; str[i] != '\0'; i++);             
+
+     return i;     
+
+}
+
+Now your job will be to write using the string_length function for the loop while using the while loop.
+
+Our next step will be to concatenate. For example, if one ring is "bangla" and the other ring is "desh", then two pairs of "bangladesh" will be made.
+
+This is not the case in English: char str1 [] = "bangla", str2 [] = "desh", str3 [12];
+
+We have to keep "bangladesh" in str3. It would be very convenient if we could write something like: str3 = str1 + str2;
+
+It is not possible to repeat this in a single syllable. So one by one we have to keep the elements of str1 in str3, then we have to keep the elements of str2 in str3.
+
+#include <stdio.h>     
+
+int main()     
+
+{     
+
+     char str1[] = "bangla", str2[] = "desh", str3[12];     
+
+     int i, j, length1 = 6, length2 = 4;     
+
+     for(i = 0, j = 0; i < length1; i++, j++) {     
+
+         str3[j] = str1[i];     
+
+     }
+
+   for(i = 0, j = 0; i < length2; i++, j++) {     
+
+         str3[j] = str2[i];     
+
+     }     
+
+     str3[j] = '\0';     
+
+     printf("%s\n", str3);     
+
+     return 0;     
+
+}
+
+Play the game. What output should come? bangladesh. The output is desh. So we made a mistake. You should try to make a mistake now. Even after thirty minutes and four hours, if you can't make a mistake, start reading again.
+
+for(i = 0, j = 0; i < length1; i++, j++) {     
+
+     str3[j] = str1[i];     
+
+}
+
+Here we have set the value of i to 0 from the beginning because i will use str1 as the input. I will use j as the input of str3 so the value of j has also been set to 0\. Then you keep the elements of str1 one by one in str3 and multiply the values ​​of i and j by 1 (i ++, j ++). After the end of the loop, the value of i and j will be 6.
+
+Now in the next loop we will keep str2 to str3\. Now if i is used as an ind of str2, then its value must be set to 0 again at the beginning of the looper. We did it. If you make a mistake, it will set the value to 0\. Setting the value of j to 0 will be the first (0th) element of str2 as the first (0th) element of str3, which we do not want. We want the first element of str2 to be the same element as str3\. Then the value of j cannot be set to 0\. So the third loop is:
+
+for(i = 0; i < length2; i++, j++) {     
+
+     str3[j] = str2[i];     
+
+}
+
+Another father's law. After exiting the third loop, you assign '\ 0' to the end of str3 (str3 [j] = '\ 0';) so that the end of the ring can be understood by Kyler.
+
+Our next step will be to compare the two. That is, to make a small, large, equal decision between the two. Comparisons can be made using numbers such as>, <,> =, <=, ==, but not in English. We will need to make this comparison in the same way. For example, in alphabetical ordering.
+
+What is the big and small again? I will understand only if I give some examples without explaining the world. 'aab' is bigger than 'aaa'. Again, between 'ba' and 'ca', 'ca' is larger. In this case we will write a function string_compare () whose function will be to return 1 if it is greater than the first third by comparing the two, if 1 is equal to 1 and if 2 is equal then 0 will be returned. The return type of the function will be easy and the parameter will be double type.
+
+int string_compare(char a[], char b[])    
+
+{    
+
+}
+
+Our main task will be to compare the first element of a with the first element of b, the third element of b with the third element of a. Whenever the causal element of a is less than the causal element of b, we can give it a bell that is less than a, b. So, I will return the function by returning -1\. Similarly, whenever the causal element of a is greater than the causal element of b, it returns 1 and returns the function because a is greater than b. What if everything is equal? Then we will return 0\. Understand that the two are equal.
+
+int string_compare(char a[], char b[])     
+
+{     
+
+     int i, j;     
+
+     for(i = 0; a[i] != '\0' && b[i] != '\0'; i++) {     
+
+         if(a[i] < b[i]) {     
+
+             return -1;     
+
+         }     
+
+         if(a[i] > b[i]) {     
+
+             return 1;     
+
+         }     
+
+     }     
+
+     if(string_length(a) == string_length(b)) {     
+
+         return 0;     
+
+     }     
+
+     if(string_length(a) < string_length(b)) {     
+
+         return -1;     
+
+     }     
+
+     if(string_length(a) > string_length(b)) {     
+
+         return 1;     
+
+     }     
+
+}
+
+I discussed Bing's ginseng. Interestingly, however, there is a hardware file called string.h, and there are a number of functional functions (such as strcmp, strlen, strcpy, etc.). There is no reason for me to be sad, I have nothing to be angry with. It is always important to learn the basics, which will develop the copper waxing cycle.
+
+Now we will write another column that will take one ring as input (where there will be many words). This service will cost 1000\. There will be one or more s in the middle of the shagula. One hundred different lines should be used as output. Punctuation should not be done and the first step should be with a big hand.
+
+I gave many hundreds. But I am not very much. You can make your own tea. If not, how can it be solved now?
+
+Hey, how is the input new? Understand that since the input is valid, scanf ("% s") cannot be used. So we will use gets (). Talking about his father, can you have a hundred ears? Needless to say, we will have 'a' to 'z', 'A' to 'Z' and '0' to '9'.
+
+After that, when can we understand or explain to our friends that one hundred has started? We can keep a variable. If the name of the variable is_word_started then the value of 0 is not understood. Again, the last hell. When you see that the value of isword (started_ is 1) is not a '-' z 'or' A '-' Z ', or' 0 '-' 9 ', then we will understand. . If you can't write even after making tea, I hope you can make tea now. I will write the card now but I must try to do it myself before I can sign it.
+
+#include <stdio.h>    
+
+#include <string.h>    
+
+int main()    
+
+{    
+
+     char s[1002], word[100];    
+
+     int i, j, length, is_word_started;    
+
+     gets(s);    
+
+     length = strlen(s);    
+
+     is_word_started = 0;    
+
+     for (i = 0, j = 0; i < length; i++) {    
+
+         if (s[i] >= 'a' && s[i] <= 'z') {    
+
+             if (is_word_started == 0) {    
+
+                 is_word_started = 1;    
+
+                 word[j] = 'A' + s[i] - 'a'; // first character is capital    
+
+                 j++;    
+
+             }    
+
+             else {    
+
+                 word[j] = s[i];    
+
+                 j++;    
+
+             }    
+
+         }    
+
+         else if (s[i] >= 'A' && s[i] <= 'Z') {    
+
+             if (is_word_started == 0) {    
+
+                 is_word_started = 1;    
+
+             }    
+
+             word[j] = s[i];   
+
+or,
+
+j++;    
+
+         }    
+
+         else if (s[i] >= '0' && s[i] <= '9') {    
+
+             if (is_word_started == 0) {    
+
+                 is_word_started = 1;    
+
+             }    
+
+             word[j] = s[i];    
+
+             j++;    
+
+         }    
+
+         else {    
+
+             if (is_word_started == 1) {    
+
+                 is_word_started = 0;    
+
+                 word[j] = '\0';    
+
+                 printf("%s\n", word);    
+
+                 j = 0;    
+
+             }    
+
+         }    
+
+     }    
+
+     return 0;    
+
+}
+
+Do you understand a little problem? As you can see, I typed in the previous Quick Cut, Kyle and Run. People using Lina may receive a warning from Kyler because of the use of (gets), but not received.
+
+Anything can be written as input. Yaman: This is a test .. What is the output?
+
+The output is as follows:
+
+This
+
+Is
+
+A
+
+What a pity! test? Now the task of the copper will be to solve the mystery of the failure of the test. Then I will explain.
+
+As you can see, I have used the strlen function to determine the size of the ring. John has added me a string.h header file. I took the ring as input.
+
+. And the one who keeps the word is the one who decides. Then I want a loop from i = 0 to length to test the inner work of s.
+
+if (s [i]> = 'a' && s [i] <= 'z'). If it is a small hand, then the first one hundred will not know. Because Thom or Hell Otek will have to make silver again with big hands. We performed the test: if (is_word_started == 0). To be honest, this is not the beginning. So are we
+
+Let's set the value of is_word_started to 1\. And the big hand of the word [j] is s [i]. Then the value of j will increase by one. else if (s [i]> = 'A' && s [i] <= 'Z') and else if (s [i]> = '0' && s [i] <= '9') We do the same thing. s [i] k word [j] ta kip kir.
+
+So, if I wanted, I could write two hundred at a time: else if ((s [i]> = 'A' && s [i] <= 'Z') || (s [i]> = '0' && s [i] <= '9')) After that, like the inside cover of else, there are hundreds of times of if and else if. Therefore, whatever is inside the s [i] cannot be put in the word. And if the word starts from the beginning, it has to be finished and the word has to be done. And if the word does not start then there is no need to do anything.
+
+else {    
+
+     if (is_word_started == 1) {    
+
+         is_word_started = 0;    
+
+         word[j] = '\0';    
+
+         printf("%s\n", word);    
+
+         j = 0;    
+
+     }    
+
+}
+
+Can you solve a test-mystery? You have been making tea and I will write now without hesitation (I put the bell next to that test rehearsal).
+
+Now I will do it, I will write in such a way that the word is no longer used! See you in a little while. When it comes down to it, there is nothing we can do about it. So it doesn't need to come.
+
+#include <stdio.h>    
+
+#include <string.h>    
+
+int main()    
+
+{    
+
+     char s[1002], ch;    
+
+     int i, length, is_word_started;    
+
+     gets(s);    
+
+     length = strlen(s);    
+
+     is_word_started = 0;    
+
+     for (i = 0; i < length; i++) {    
+
+         if (s[i] >= 'a' && s[i] <= 'z') {    
+
+or,
+
+   if (is_word_started == 0) {    
+
+                 is_word_started = 1;    
+
+                 ch = 'A' + s[i] - 'a';    
+
+                 printf("%c", ch);    
+
+             }    
+
+             else {    
+
+                 printf("%c", s[i]);    
+
+             }    
+
+         }    
+
+         else if ((s[i] >= 'A' && s[i] <= 'Z') || (s[i] >= '0' && s[i] <=
+
+'9')) {    
+
+             if (is_word_started == 0) {    
+
+                 is_word_started = 1;    
+
+             }    
+
+             printf("%c", s[i]);    
+
+         }    
+
+         else {    
+
+             if (is_word_started == 1) {    
+
+                 is_word_started = 0;    
+
+                 printf("\n");    
+
+             }    
+
+         }    
+
+     }    
+
+     printf("\n");    
+
+     return 0;    
+
+}
+
+Now I understand the meaning and see the test with different inputs. For example: This is test number 9.9. And the more I try to solve this kind of problem, the more I will give.
+
+Chapter 10
+
+[Reading Book: Chapter Ten] Original number
+
+The Prime Number is just as much a matter for us as it is for the mathematicians. This basic number will solve many problems at different times. In this book, I have devoted a separate chapter to the subject matter. The basic numbers are all numbers which are integers greater than 1 and so on
+
+Only 1 and that number will be the final divisor. Very simple things. Now let's write a program to find out the basic number.
+
+#include <stdio.h>   
+
+int is_prime(int n)   
+
+{   
+
+     int i;   
+
+     if (n < 2) {  
+
+         return 0;  
+
+     }  
+
+     for(i = 2; i < n; i++) {   
+
+         if(n % i == 0) {   
+
+             return 0;   
+
+         }   
+
+     }   
+
+     return 1;   
+
+}   
+
+int main()   
+
+{    
+
+     int n;   
+
+     while(1) {   
+
+         printf("Please enter a number (enter 0 to exit): ");   
+
+         scanf("%d", &n);   
+
+         if(n == 0) {   
+
+             break;   
+
+         }    
+
+         if(1 == is_prime(n)) {   
+
+             printf("%d is a prime number.\n", n);   
+
+         }   
+
+        else {   
+
+            printf("%d is not a prime number.\n", n);   
+
+        }    
+
+     }   
+
+     return 0;   
+
+} 
+
+In order to determine the prime number, we have written a function whose parameter is one lease. Function We want to divide the number from n to 2 by n1 with the help of a looper. If n is divisible by the number in the middle of it, then we can give it the bell which is not a prime number and returns the function 0\. And if even after dividing by all the numbers, it can be seen that the ears cannot divide the whole number, then we can come to this conclusion as a prime number. And then return 1 from the function. We have learned to determine the basic number! The path you have taken while writing this is a very simple path. We also want to make it more efficient. You can easily understand the father. Love
+
+Give 2147483647 as input. It takes time to compile the basic numbers. Because then we want to divide all the numbers from 2147483647 to 2 2147483646\. We have to do more.
+
+One of the things that came to my mind was to take it. Instead of trying to divide all the numbers from 2 to n-1, you just want to divide by the numbers from 2 to n / 2\. Then the speed of love will be multiplied.
+
+Now let's talk about something else. If the number of ears is not divisible by 2, then the number of ears is not divisible by the number of roots. So it is useless to divide the tea into 2 baed on root numbers (4, 6, 8, 6). We can test the division by adding numbers to the beginning of the function. Now our function will look like this:
+
+int is_prime(int n)   
+
+{   
+
+   int i;   
+
+   if (n < 2) {  
+
+     return 0;  
+
+   }  
+
+   if(n == 2) {   
+
+     return 1;   
+
+   }    
+
+   if(n % 2 == 0) {   
+
+     return 0;   
+
+   }   
+
+   for(i = 3; i <= n / 2; i = i + 2) {   
+
+     if(n % i == 0) {   
+
+       return 0;   
+
+     }   
+
+   }   
+
+   return 1;   
+
+} 
+
+We have tested that the value of n is not 2\. If it is 2 then you have given the bell which is the prime number. Then we have tested n noun number. If it is thick, then it is not a basic number, only the 2nd root is a basic number which we have tested from the very beginning. Then we want to divide n by giving all odd numbers from 3 to n / 2\. Now you can see the test by giving various inputs. Examined by 2147483647, it will be understood that the speed of the game has increased more than before but it has taken a while. It took me about four seconds. It will not be given for so long. Those of you who know mathematics can find a way to increase your speed if you do a little research. There is no need to test all the numbers up to n / 2 when it comes to finding the product of n. The root of n has to be examined. If n = p x q, then any number p or q must be equal to or less than the bugmule of n. To determine the root, we will use the sqrt () function of the math.h header file. Here are some of the ones we found:
+
+#include <stdio.h>   
+
+#include <math.h>   
+
+int is_prime(int n)   
+
+{   
+
+     int i, root;  
+
+     if(n == 2) {   
+
+         return 1;
+
+  }     
+
+     if(n % 2 == 0) {   
+
+         return 0;   
+
+     }   
+
+     root = sqrt(n);   
+
+     for(i = 3; i <= root; i = i + 2) {   
+
+         if(n % i == 0) {   
+
+             return 0;   
+
+         }   
+
+     }   
+
+     return 1;   
+
+}   
+
+int main()   
+
+{    
+
+     int n, m;   
+
+     while(1) {   
+
+         printf("Please enter a number (enter 0 to exit): ");   
+
+         scanf("%d", &n);   
+
+         if(n == 0) {   
+
+             break;   
+
+         }    
+
+         if(1 == is_prime(n)) {   
+
+             printf("%d is a prime number.\n", n);   
+
+         }   
+
+         else {   
+
+             printf("%d is not a prime number.\n", n);   
+
+         }   
+
+     }   
+
+     return 0;   
+
+}
+
+Now, if you want to test it with different inputs. Let me tell you something. There's a bug in the room (I think I'm wrong). Find out and find out.
+
+Are you really happy after giving birth to a child? But our tea will not stop here. We now see another miracle, the calculation of Eratosthenes, who performed it more than two thousand years ago. One of them is called Sieve of Eratosthenes.
+
+Let's get rid of the bile. Let's say we get all the basic numbers from 2 to 40\. Write all numbers at the beginning: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40\. Now see, the first number of the list is O2.
+
+Exclude all the multiples of 2 (2 left, mean 2 archives greater than 2). Then there will be: 2, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39\. Now the third number of the list is 3\. Exclude all factors (greater than 3). 2, 3, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37\. Now subtract all the multiples of the third number 5 of the list. 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37\. It is useless to make a number of mountains.
+
+Because Tilkar's service number 37 is smaller than Bogmul 7's. So the multiplication of 7 has been omitted from the list. Because you understand the problem? The multiples of 7 seen are 14, 21, 28, 35\. Multiplying those numbers by 7 is the smallest number of 7 and we have already omitted their multiplication.  This time it's Emem's turn. We will use another one to keep the list. Suppose, his name is Hera. The arrow should be drawn in such a way that it can be drawn with ara (n) or ara [n]. If ara [n] has a value of 1, then n is a prime number and ara [n] has a value of 0 if n is not a prime number. Let's write the algorithm before the emulation:
+
+Step 1: Suppose there is an element in the array. At the beginning, set the value of all the components of the array to
+
+Step 2: Check that the value of each item is not 1\. If 1, then go to the third step.
+
+Step 3: Multiply that number by 2 to the smallest number and multiply the product by as many as the product is zero (0)
+
+Sit down
+
+That is to say, it is not true. Here, the value of m will be such that the product of m of that number is less than or equal to n.
+
+Now you want to write a card. This time I saw my card after making three wounds in the comp.
+
+#include <stdio.h>   
+
+#include <math.h>   
+
+const int size = 40;   
+
+int ara[size];   
+
+void print_ara()   
+
+{   
+
+     int i;   
+
+     for(i = 2; i < size; i++) {   
+
+         printf("%4d", ara[i]);   
+
+     }   
+
+     printf("\n");   
+
+     for(i = 2; i < size; i++) {   
+
+         printf("----");   
+
+     }   
+
+     printf("\n");   
+
+     for(i = 2; i < size; i++) {   
+
+         printf("%4d", i);   
+
+     }   
+
+     printf("\n\n\n");    
+
+}   
+
+void sieve()   
+
+{   
+
+     int i, j, root;   
+
+     for(i = 2; i < size; i++) {   
+
+         ara[i] = 1;   
+
+     }   
+
+     root = sqrt(size);   
+
+     print_ara();   
+
+     for(i = 2; i <= root; i++) {      
+
+         if(ara[i] == 1) {   
+
+             for(j = 2; i * j <= size; j++) {   
+
+                 ara[i * j] = 0;          
+
+             }   
+
+             print_ara();   
+
+         }   
+
+     }   
+
+}  
+
+int is_prime(int n)   
+
+{   
+
+     int i;   
+
+     if(n < 2) {   
+
+         return 0;   
+
+     }   
+
+     return ara[n];   
+
+}   
+
+int main()   
+
+{    
+
+     int n, m;   
+
+     sieve();   
+
+     while(1) {   
+
+         printf("Please enter a number (enter 0 to exit): ");   
+
+         scanf("%d", &n);   
+
+         if(n == 0) {   
+
+             break;   
+
+         }   
+
+         if(n >= size) {   
+
+             printf("The number should be less than %d\n", size);   
+
+             continue;   
+
+         }   
+
+         if(1 == is_prime(n)) {   
+
+             printf("%d is a prime number.\n", n);   
+
+         }   
+
+         else {   
+
+             printf("%d is not a prime number.\n", n);   
+
+         }   
+
+     }      
+
+     return 0;   
+
+}
+
+The third time I used a function to play or print an array, print_ara (). Before we see this input, we call the sieve () function and move the arrow. Then every time you take input, no matter what, if the input is n then check the value of ara [n], if the value is 1 then n is a prime number, if 0 is then n is not a prime number. You have to calculate how many numbers you want to calculate. Now there is no problem with speed in this game. Very fast. Have you seen any other problems? Do you understand that it costs a lot of money? Suppose, if we want to add up to 100 numbers, then we will need another 100 cars. The problem of 'not saving time' is one of the most common problems. In our problems we can reach a middle ground. The service value of n can be taken as the value of its base size. If tobacco is called, the value of n would be 100000000 (ten ka)
+
+Then you can use the root sieve function to add up to 10000 numbers. What to do then? No, nothing else can be said about what you will do. Another thing is to ring the bell. One lease occupies four bytes of space, whereas one car lets one byte. Therefore, the cost of memorization can be reduced by one-fourth to one-fourth of the cost by using the other side of the ijer. We don't need an Eiser array when it comes, because there will be only two types of values, 0 or 1\. In addition to this, there are some other ways to increase the efficiency of my sieve function. One of its mediums is to replace the ounce. Make tea for copper.
+
+Chapter 11
+
+[Reading Book: Chapter Eleven] Again
+
+Do you remember the words written by the math teacher? So we wrote the program using three more to figure out the math of the shadows. If you don't mind, take a look again.
+
+We have used one array of the first periodical, another array of the third periodical, another array of the final examination and another array of mats - we have used only four arrays.
+
+It would now be very troublesome to use all the subjects of all the subjects in one go, even if it is written in the name of determining the results of the whole year. That is why Matamu is the father of all-dimensional language. So far, all of the arrays we've used are one dimension arrays.
+
+Now we will write a little inexperienced in that program, using one mother. At present, there are only ten students in Kamena. Naturally, I wrote their narration:
+
+R o l l 1 :  R o l l 2 :  R o l l 3 :  R o l l 4 :  R o l l 5 :  R o l l 6 :  R o l l 7 :  R o l l 8 :  R o l l 9 :  R o l l 1 0 : 
+
+F i r s t t e r mi n a l e x a m 
+
+8 0            7 0         9 2            7 8          5 8       8 3        8 5         6 6        9 9        8 1
+
+S e c o n d t e r mian l e x a m 
+
+7 5            6 7             5 5             1 0 0         9 1       8 4        7 9        6 1          9 0         9 7
+
+F i n a l e x a m
+
+9 8             6 7              7 5           8 9               8 1          8 3        8 0       9 0           8 8       7 7
+
+Total Marks Sir's house is empty, because these are not calculated here. Only 25% of the first period, 25% of the third period and 50% of the final period will have to be paid. Now, we have 4 rows and 10 columns. As we wrote earlier, we used one of the first ra, one of the third ra, one of the third ra and one of the fourth ra. Now let's use a 2-D array (two dimensional array).
+
+The rules for deleting 2-D arrays are: data_type array_name [number of rows] [number of columns]; If you want to place the table above in a 2-D array of marks, then write: int marks [4] [10];
+
+Now, the first marks of the array are marks [0], the third marks are marks [1], the third marks are marks [2] and the fourth marks are marks [3]. Again marks [0] [0] O first column of Thom Ra, marks [0] [1] O third column of O Thom Ra,
+
+marks [0] [5] O first column of the first ra, marks [1] [0] O first column of the third ra, marks [2] [3] O fourth column of the third ra. Hope you understand.
+
+Now Bella, whose Ral No. 10 is in the ear of her third periodical fairy? And marks [0] [0] Whose ear and ear fairy are there?
+
+Marks [0] [0] will be the first periodical of Ral 1 and marks [1] [9] will be the third periodical of Ral 10\. The following numbers can be kept as follows:
+
+int marks[4][10] = {{80, 70, 92, 78, 58, 83, 85, 66, 99, 81}, {75, 67, 55,
+
+100, 91, 84, 79, 61, 90, 97}, {98, 67, 75, 89, 81, 83, 80, 90, 88, 77}, {0,
+
+0, 0, 0, 0, 0, 0, 0, 0, 0}};
+
+Notice here that we have placed four one-dimensional arrays inside one array. marks [0] are in the first periodic examination, not in the second periodical in marks [1], not in the final examination in marks [2] and not in the marks [3]. I wrote).
+
+Now Kyle and run Kera by typing Sunam Tamar Kuta.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int marks[4][10] = {{80, 70, 92, 78, 58, 83, 85, 66, 99, 81}, {75, 67,
+
+55, 100, 91, 84, 79, 61, 90, 97}, {98, 67, 75, 89, 81, 83, 80, 90, 88, 77},
+
+{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};  
+
+     int col;  
+
+     for(col = 0; col < 10; col++) {  
+
+         marks[3][col] = marks[0][col] / 4.0 + marks[1][col] / 4.0 +
+
+marks[2][col] / 2.0;  
+
+         printf("Roll NO: %d  Total Marks: %d\n", col + 1, marks[3][col]);  
+
+     }  
+
+     return 0;  
+
+}
+
+What if we wanted to take input from the user?
+
+int marks[4][10];  
+
+int i, j;  
+
+for (i = 0; i < 4; i++) {  
+
+     for (j = 0; j < 10; j++) {  
+
+         scanf("%d", &ara[i][j]);  
+
+     }  
+
+}  
+
+Now with the help of Ned Looper we can get input. The first loop is used for Ra and the third loop is for columns. When i = 0, that is, we do not input all the circles from j = 0 to 9, then the value of all circles from j = 0 to 9 (three columns) is input again from i = 1 (third ra). Hey Now we will write a program using 2-D array to find the number of numbers from 1 to 10\. The name of the acre will be in the first night, the name of the two will be in the third night and the name of that country will be in the tenth night. Would you like to write your own program? I don't even have a ghar medha, but I see my card. It takes a lot of time to write a lot of simple things while studying, but there is nothing to be disappointed about.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int namta[10][10];  
+
+     int row, col;  
+
+     for (row = 0; row < 10; row++) {  
+
+         for(col = 0; col < 10; col++) {  
+
+             namta[row][col] = (row + 1) * (col + 1);  
+
+         }  
+
+     }  
+
+     for (row = 0; row < 10; row++) {  
+
+         for(col = 0; col < 10; col++) {  
+
+             printf("%d x %d = %d\n", (row + 1), (col + 1), namta[row][col]);  
+
+         }  
+
+         printf("\n");  
+
+     }  
+
+     return 0;  
+
+}
+
+Even if you don't take the gold output, you can get it, there is nothing wrong with it.
+
+Now you have a problem. As the output changes, we can see how many nuts and how many odd numbers there are in the namta array. As many numbers as there are in that sign, he will also have to pay the price. Hopefully, you can write Ram Kathak. If there is a problem, you can use a copper brush.
+
+Ah, if someone said Bell, Sakvu would put the names of seven countries in one array, then what will he do? One char type can be named after a country. For example: char country [] = "USA" ;. Then we have to use one of the 2Ds to name the seven countries. How many people will be in this area? Seven. How many columns will there be? I don't know. In fact, the name of each country is different. So we can do one thing, we can talk about keeping 100 carats, because the name of the country is not 100 carats, it is less than 100 carats.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka",
+
+"Nepal", "Bhutan", "Maldives"};  
+
+     int row;  
+
+     for (row = 0; row < 7; row++) {  
+
+         printf("%s\n", saarc[row]);  
+
+     }  
+
+     return 0;  
+
+}  
+
+Run the writing of Ram Tamar Quta. Now you have it, saarc [3] [3], saarc [0] [5] and saarc [5] [0] - what are these three gheras? After a while I will write a letter, I will take his copper match.
+
+If we want to differentiate between the two, we can write:
+
+#include <stdio.h>  
+
+#include <string.h>  
+
+int main()  
+
+{  
+
+     char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka",
+
+"Nepal", "Bhutan", "Maldives"};  
+
+     int row, col, name_length;  
+
+     for (row = 0; row < 7; row++) {  
+
+         name_length = strlen(saarc[row]);  
+
+         for(col = 0; col < name_length; col++) {  
+
+             printf("%c ", saarc[row][col]);  
+
+         }  
+
+         printf("\n");  
+
+     }  
+
+     return 0;  
+
+} 
+
+Again, if I want to see what is in the ear, then I can do it with the head and the column.
+
+#include <stdio.h>  
+
+#include <string.h>  
+
+int main()  
+
+{  
+
+     char saarc[7][100] = {"Bangladesh", "India", "Pakistan", "Sri Lanka",
+
+"Nepal", "Bhutan", "Maldives"};  
+
+     int row, col, name_length;  
+
+     for (row = 0; row < 7; row++) {  
+
+         name_length = strlen(saarc[row]);  
+
+         for(col = 0; col < name_length; col++) {  
+
+             printf("(%d, %d) = %c, ", row, col, saarc[row][col]);  
+
+         }  
+
+         printf("\n");  
+
+     }  
+
+     return 0;  
+
+}
+
+Let's see the nature table this time.
+
+6    4    7   8    9
+
+3     7    1   9   9
+
+8    6   4    2   7
+
+2     4    2    5    9
+
+4     1    6    7    3
+
+Now you have to write your name using 2-D array. The first task will be to find the sum of the numbers in the third column and the third task will be to find the sum of the numbers in the first column.
+
+The output of the first game will be like this
+
+Sum of row 1: 34
+
+Sum of row 2: 29
+
+Sum of row 3: 27
+
+Sum of row 4: 22
+
+Sum of row 5: 21
+
+The output of the third game will be as follows:
+
+Sum of column 1: 23
+
+Sum of column 2: 22
+
+Sum of column 3: 20
+
+Sum of column 4: 31
+
+Sum of column 5: 37
+
+Many of them may take a while to write the third verse, but there is no reason to despair. It takes time. Now look at the nature chart. There is a little similarity in the words of the previous boy!
+
+ 6   3   8   2    4
+
+4    7   6    4    1
+
+7   1   4    2   6
+
+8   9    2    5    7
+
+9    9   7    9   3
+
+The first chhekar raguela new chhekar column came, and the first chhekar kalamguela new chhekar ra. As before, the first races were: 6, 4, 7, 8, 9\. And this boy's first column is: 6, 4, 7, 8, 9\. In the same way, the first six matches the new third column. Now we will write a column, which is a 5 x 5 array (i.e. 5th and 5th columns array), another 5 x 5 array in such a way that the first array is the third column of the third array and the first array of columns is the third array. Arik like the table away from the main opera. If the first column of the first array is: 1, 2, 3, 4, 5 then the first column of the third array will be 1, 2, 3, 4, 5\. What about copper? Then take a break and then go to Nature, run, look at the output and find out how you worked.
+
+#include <stdio.h>  
+
+#include <string.h>  
+
+int main()  
+
+{  
+
+     int ara1[5][5] = {{1, 2, 3, 4, 5}, {10, 20, 30, 40, 50}, {100, 200, 300,
+
+400, 500}, {1000, 2000, 3000, 4000, 5000}, {10000, 20000, 30000, 40000,
+
+50000}};  
+
+     int ara2[5][5];  
+
+     int r, c;  
+
+     printf("Content of first array (ara1): \n");  
+
+     for (r = 0; r < 5; r++) {  
+
+         for(c = 0; c < 5; c++) {  
+
+             printf("%d ", ara1[r][c]);  
+
+         }  
+
+         printf("\n");  
+
+     }  
+
+     printf("\n");  
+
+     // now start copy  
+
+     for (r = 0; r < 5; r++) {  
+
+         for(c = 0; c < 5; c++) {  
+
+             ara2[c][r] = ara1[r][c];  
+
+         }  
+
+     }  
+
+     printf("Content of second array (ara2): \n");  
+
+     for (r = 0; r < 5; r++) {  
+
+         for(c = 0; c < 5; c++) {  
+
+             printf("%d ", ara2[r][c]);  
+
+         }  
+
+         printf("\n");  
+
+     }  
+
+     return 0;  
+
+}
+
+If you have all the examples of 2-D arrays and the ones you have written yourself, you have run all the quotas and you have to understand (if you understand then you must try) then you should not have any problem with 2-D arrays. There may be other 3-D, 4-D or more twenty dimensions, but I will not discuss all of them in this book.
+
+Chapter 12
+
+[Reading Book: Chapter Twelve] The number of binaries
+
+We use it in our daily lives to calculate the number of decimal d e c i ma l () numbers. B i n a r y () number of binary or binary using a computer. The decimal numbers are drunk in ten, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 and the binarith two, 0 and 1\. In this chapter we will look at some of the basic properties of binary numbers and learn to pass from binary to decimal and from dismal to binary. Dismal We calculate: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,… 19, 20, 21,…, 98, 99, 100, 101\. ... See, whenever we use ten on the right side of the circle (single circle), we increase the value of the circle on the left side by one (and if it doesn't exist, we put 1 or 0, then we add 1, because 9 and 0 9 Same thing, so the integer number of 0 is 1 0), again using all the decimals from 0 to 9, then increase the value of the hundredth circle after the result (and if not, then put 1 or add 1 to 0). Another, In the same binarith we will calculate as follows: 0, 1, 1 0, 1 1, 1 0 0, 1 0 1, 1 1 0, 1 1 1, 1 0 0 0, 1 0 0 1, 1 0 1 0, 1 0 1 1 .... Since the mother is two, as soon as the two are used, one of the cells in the left is placed or the 1 of 0 is placed (we can place the zero in the left).
+
+In the case of Baini, of course, we will say one house, ten houses, one hundred houses, one house, two houses, two houses, four houses, eight houses. Who says that? A little tea.
+
+Just as dismal is written in two letters, 1 is written in 0 0, three is written in 1 0 0 0, four is written in binary, two is written in two (1 0), four is written in three (1 0 0), eight is written in four (1 0 0 0). , Five (1 0 0 0 0) is not used in the year. The first one on the right (1 0 0 = 1) is a single cell, the second one (1 0 1 = 1 0) is the tenth house, the third one (1 0 2 = 1 0 0) is the hundredth house, so the first one on the right is binary. (2 0 = 1) O acre house, Perer a (2 1 = 2) O house of two, then (2 2 = 4) O house of four, like this.
+
+Binary can be divided into decimal numbers as yag, biyag, guna, bhaga. It is not possible to do anything else if you can. Again, there is the father of the binary, but I will only discuss the whole number.
+
+The main accounts are:
+
+0 + 0 = 0 ,
+
+0 + 1 = 1 ,
+
+1 + 0 = 1 ,
+
+1 + 1 = 1 0  ।
+
+Dimmer's mathematical calculation, seen in 1 + 1, two (10) zero el themes, one in hand, I wrote next. 1 0 1 + 1 0 1 = How much? Adding a circle of the same acre, 1 + 1 = 1 0\. So Jagfeller will sit on an acre of land and hold 1 c a r r y (). Now the circumference of the two, 0 + 0 = 0, now he has to do 1 yag of this 0. Then Jagphel will sit in the circle of the two , This time I made a circle, 1 + 1 = 1 0\. Nothing at hand (no c a r r y). So the perimeter of the chair will sit 0 and the perimeter of 1 will sit. Yield: 1 0 1 0. This time 1 0 1 1 + 1 0 1 1 = how much? If the result of the jag is not 1 0 1 1 0, then you are also wrong about the jag.
+
+Disbursement will also be accounted for in the marriage.
+
+ 0 – 0 = 0 ,
+
+1 – 0 = 1 ,
+
+1 – 1 = 0 ,
+
+0 – 1 = 1  ।
+
+Lastly, what do we do when we do 2 3 - 1 5? Then take 1 (or borrow 1) to the left of 3, then write 1 3 - 5 = 8\. And the one I borrowed, he gave me 1 of the next cell. Similarly, if we make 0 - 1 in binary, we will hold one to the left of 0, then the number will be 1 0 (two), one of these two will be left out. You will have to make one yag in the next circle (the number of which is biyag). 1 1 0 - 1 0 1 = How much?
+
+If 1 is left out of 0 per acre, then 1 is borrowed here. So 1 0 1 is the sum of the two circles. Then the perimeter of the two is 1 - 1 = 0, the perimeter of the chair is 1 - 1 = 0\. So the result will be: 0 0 1 or 1\. There is no reason why you cannot share if you are able to do so.
+
+Again, just as we can write the decimal number as the sum of the denominator x 1 0 and the denominator of the denominator, the binary number can also be written as the denominator of the denominator x 2 and the denominator of the denominator. Such as 1 9 0 3 1 x 1 0: = 3 9 x 1 0 + 2 0 x 1 0 + 1 3 x + 1 0 0\. Binary 1 0 1 1 0 1 x 2: = 4 0 x 2 + 3 1 x 2 + 2 1 x 2 + 1 0 x 2 + 0\. In English a bell E x p o n e n t i a l E x p r e s s i o n.
+
+If 1 is left out of 0 per acre, then 1 is borrowed here. So 1 0 1 is the sum of the two circles. Then the perimeter of the two is 1 - 1 = 0, the perimeter of the chair is 1 - 1 = 0\. So the result will be: 0 0 1 or 1\. There is no reason why you cannot share if you are able to do so.
+
+Again, just as we can write the decimal number as the sum of the denominator x 1 0 and the denominator of the denominator, the binary number can also be written as the denominator of the denominator x 2 and the denominator of the denominator. Such as 1 9 0 3 1 x 1 0: = 3 9 x 1 0 + 2 0 x 1 0 + 1 3 x + 1 0 0\. Binary 1 0 1 1 0 1 x 2: = 4 0 x 2 + 3 1 x 2 + 2 1 x 2 + 1 0 x 2 + 0\. In English a bell E x p o n e n t i a l E x p r e s s i o n.
+
+1 0 1 1 0 1 x 2 =   4 0 x 2 +   3 1 x 2 +   2 1 x 2 +   1 0 x 2 +   0 1 x 1 6 0 x 8 1 x =    +    +   4 1 x 2 0 x 1 +    +    = 1 6 + 0 + 4 + 2 + 0 = 2
+
+Or binary 1 0 1 1 0 = dismal 2 2\. We haven't done a lot of work yet, let's write a program to find the dismal value of the number of chila binaries. Father, you know it. Now, hey, what's the point of reading a binary number? We can use ring.
+
+c h a r b i n a r y 1 0 1 1 0 [] = " ";
+
+i n t l e n 5  = ; // Beer Doug 5.
+
+i n t d e c i ma l 0  = ; // I can't calculate here, so I took the dismal value as 0
+
+This time, with the help of a looper, we will multiply the number of binary by 2 and add it to the dismailer. Thom kerra or b i n a r y 0 [] then it is '1', what time is it? -Aban is 4\. Then the value of Aben will decrease by saying Er, and the last Er of Ekba will be Aban 0.
+
+  int position = 4;  
+
+   int indx;  
+
+   for(indx = 0; indx < len; indx++) {  
+
+       decimal = decimal + pow(2, position);  
+
+       position--;  
+
+   }  
+
+If the bridegroom is from the loop, we get the dismal value of the gold binary number. See here, I have used the p o w function. Its work is called ma t h h. Hooder file. The value of a b is given by the bell p o w a b (,). Then our whole body stands like this:
+
+#include <stdio.h>  
+
+#include <string.h>  
+
+#include <math.h>  
+
+int main()   
+
+{  
+
+     char binary[65];  
+
+     int len, decimal, power, i;  
+
+     printf("Enter the binary number: ");  
+
+     scanf("%s", binary);  
+
+     decimal = 0;  
+
+     len = strlen(binary);  
+
+     power = len - 1;  
+
+     for(i = 0; i < len; i++) {  
+
+         decimal += pow(2, power);  
+
+         power--;  
+
+     }  
+
+     printf("Decimal value is %d\n", decimal);  
+
+     return 0;  
+
+}
+
+Ram Kyle runs. If you give input 1 0 1 1 0, then what is the output? The output should be 3 1 and the output should be 2 2\. Then we made a mistake. They want to make their own mistakes.
+
+When it comes to p o w 2 p o s i t i o n (,) we have forgotten to multiply the binary number by that p o s i t i o n. Or we should write:
+
+d e c i ma l b i n a r y i p o w 2 p o w e r += [ ] * ( , );
+
+Did one father notice that? 1 0 1 1 0 The acre of the circle is the last part of our array, and the circle of the square is the first layer of our array. The numbers in the array are as follows: ['1', '0', '1', '1', '0']. So binary 0 [] will have that power pow 2 (, 4 binary 1), [] will have that power pow (2, 3),…, and binary 4 [] will have that power pow 2 0 (,) . Now fix the armature and then run it. What is the output of input 1 0 1 1 0?
+
+I can see the output D e c i ma l v a l u e i s 1 5 1 0\. Hela in the wrong words? Where did I do it all. You don't have to be patient again, just as you need to be patient while playing tickets.
+
+Wrong if d e c i ma l b i n a r y i p o w 2 p o w e r + = [] * (,); Tame heyecha taite kaena seha nai. Because we've made a little change here. L kera b i n a r y i, [] has a value of '0' or '1' (meaning '0' or '1'). Now the cutter would say '0' and say '1' and '1' would say '49'. The trouble is here. Now how do I play this '0' and '1'?
+
+'0 ' – '0 ' = 4 8 – 4 8 = 0
+
+'1 ' – '0 ' = 4 9 – 4 8 = 1
+
+Isn't that great? We don't write b i n a r y i []. This time it will work harder (unless you make a mistake in the new case).
+
+This time we will look from dismal to binary silver. Let me show you the pitta with the help of an example. Dhera 95a bainairet silver kareb. Now we have to add the service value of n, where 2 n <= 95\. Year Powerla O 1, 2, 4, 8, 1 6, 3 2, 6 4, 1 2 8, .... Here we can see 6 4 <9 5 or 2 6 <9 5\. Then the value of n is 6\. And the sum of our binaries will be seven ar (0 to 6 mat seven a). Since 6 4 <95, this number can be renewed. Then the circumference of the charisma (left to right or right to right) will be 1 1 x x x x x x (). Now subtract the value of n from 1\. 6 4 + 2 5 = 6 4 + 3 2 = 96, which is greater than the value of 95\. So one will not be new. Therefore, in the outer circle, put 0 0 x x x (x x). Now the value of n is reduced by one again, the value of n is now 4\. 6 4 + 2 4 = 6 4 + 1 6 = 8 0 <9 5\. So the circumference of the shale will be 1 1 0 1 x x x x (). Now subtract the value of n by one n 3, =. 8 0 + 2 3 = 8 0 + 8 = 8 8 <9 5\. So Eater
+
+Circle 1 will sit 1 0 1 1 x x x (). Then similarly the product of n 2, = 8 8 + 2 2 = 8 8 + 4 = 9 2 <9 5. The perimeter of the chair will also sit 1 1 1 1 1 x x (). Then n 19 2 2 =, + 1 = 9 2 + 2 = 9 4 <9 5\. The circumference of the year is also 1 1 0 1 1 1 1 x (). Now n 0 9 4 2 =, + 0 = 9 4 + 1 = 9 5\. So the acreage is also 1\. So the sum of the binaries is 1 0 1 1 1 1 1\. You can now write down the decimal number of the decimal number in this paper and test it with different values.
+
+Now we will do the same thing a little. Viewing the Nature Table:
+
+                                          Quotient                        The rest
+
+9 5 / 2                                    4 7                                       1
+
+4 7 /2                                     2 3                                      1
+
+2 3 /2                                      1                                        1    
+
+1 1 /2                                      5                                         1
+
+5 /2                                        2                                         1
+
+2 /2                                        1                                         0
+
+1 /2                                         0                                        1
+
+This is the first time I've read this article, and it's the first time I've read it, and it's the first time I've read it. And we will do the same until we get the quotient. In this drink also, you can write a card from dismal to binary silver. The silver card will do a different function than ma i n function.
+
+Chapter 13
+
+[Reading book: Chapter thirteen] Some reading problems
+
+In this lesson, we will look at some simple problems and try to solve them.
+
+Our first problem is to draw different shapes. Nature's Chibguela.
+
+![](Images/image00183.jpeg) ![](Images/image00184.jpeg)
+
+![](Images/image00185.jpeg) ![](Images/image00186.jpeg)
+
+You have to write your four letters to draw these four types of figures. You just have to use the printf function, you have to use the loop. Then the loop or ned loop, and the 'c' and '' (suffixes) can be used to write the words. If you want to make more fun, you can make more different types of tea.
+
+What are the genes of palindrome, you know? Kaena Shake wrote Ubhave (starting from the last syllable) if the new syllable is the same but the same syllable. For example: madam. Even if you write from the beginning to the end, you will be madam. Now I can write a program.
+
+What can we do? The input is not an array as the first horn. Then I will put the effect in another array. Then if the two are the same ring, then let's go. Then write the following:
+
+#include <stdio.h>  
+
+#include <string.h>  
+
+int main()    {        char word[80], reverse_word[80];  
+
+     int i, j, len;  
+
+     scanf("%s", word);  
+
+     len = strlen(word);  
+
+     for(i = 0, j = len - 1; i < len; i++, j--) {  
+
+         reverse_word[i] = word[j];  
+
+     }  
+
+     reverse_word[i] = '\0';  
+
+     printf("%s\n", reverse_word);  
+
+     if (0 == strcmp(word, reverse_word)) {  
+
+         printf("%s is a palindrome.\n", word);  
+
+     }  
+
+     else {  
+
+         printf("%s is not a palindrome.\n", word);  
+
+     }  
+
+     return 0;  
+
+}
+
+What fun! I wrote it down. However, I have made some mistakes here, the least of which is to use the last one. So now you have to write your name in such a way that it works only by using another one. And then the strcmp function will not be needed. It may take twenty years to write a poem, but it is not a problem. But it will be difficult to write, this is hela.
+
+Are you familiar with the factorial genes? This is a mathematical operation that can be used to multiply the number of coins. n A positive full number of heels is coughed up n! And n! = n * (n - 1) * (n - 2) *… * 3 * 2 * 1\. Like 4! = 4 * 3 * 2 * 1 = 24. 6 again! = 6 * 5 * 4 * 3 * 2 * 1 = 720\. 1! = 1\. 0! = 1 (the value of the firewall of 0 is assumed to be 0, with the exception of 0). Now you have to write down the amount of money to be paid. Simple, one loop can be used. Now it is not possible to find out the difference between the two by giving different numbers. However, if you are using data type int, the value of a whole number of firewalls larger than 12 will not decrease (you can see it in Calelet's tax match). This is because a whole number greater than 12 goes beyond the value of the fractal number of the whole number. Now you have to solve an interesting problem. Calculate the product of the integer n (where the value of 1 <n <100, mean n can be from 2 to 99) as the product of the prime number. Like, we know, 5! = 120 = 2 * 2 * 2 * 3 * 5\. Here 2 is 3 times, 3 is 1 time and 5 is 1 time. So the input will be 5 hell output: 5! = (2, 3), (3, 1), (5, 1). Do you understand that a father who first increases the value of the firewall to n then breaks the basic product will be a hassle? This is because the value of n can be the service value of 99 and the value of the number of firearms greater than 12 cannot be maintained. You do not have the permission required to post. Just do a little math. And put the prime numbers from 2 to 99 in one array. There is nothing to be disappointed about as many of them may have taken two or three days.
+
+Now we will write one. If there are any numbers in the cane that will be used, all of them are arranged in a larger size than the cut. For example, if the case array is: int ara [] = {3, 1, 5, 2, 4}, then we will arrange the numbers of the signature array in such a way that ara [] = {1, 2, 3, 4, 5\. Is. I will write a little later, not beforehand how it will work. Copper has five numbers: 3, 1, 5, 2, 4\. Large meats will be arranged from scratch. What will you do? Find the shortest number and write it at the beginning: 1\. Then there are four numbers left: 3, 5, 2, 4\. Now the smallest of these four will be written after the number 1: 1, 2\. Left 3, 5, 4\. Eder medha sabecheya chat3\. So you write: 1, 2, 3\. Now bik 5, 4\. The difference between these two numbers is 4\. You will write after 3: 1, 2, 3, 4\. Now leave one number, 5\. You will write after 4\. 1, 2, 3, 4, 5\. The work of decorating copper was neglected. A sorting bell. This can be done in various ways. But we did it in a simple way.
+
+We have done our best, but Wikipedia has not shown the help of a wonderful animation. Animation can be seen once, so my advice is to watch it four or five times.
+
+![](Images/image00187.jpeg)
+
+How do I write now? Line the numbers in an array: int ara1 [] = {3, 1, 5, 2, 4; Now take another: int ara2 [5]; Here it is. So write one variable in 0\. int index_2 = 0; Now we have to keep the numbers in ara2 one by one. John needs one loop.
+
+for(index_2 = 0; index_2 < 5; index_2++) // We will place numbers from 0 to 4\. This loop needs another loop inside so that we can find the smallest number of ara1\. minimum = 100000; // I assigned a large number that is larger than any number in ara1.
+
+for (i = 0; i < 5; i++)
+
+{
+
+if (ara1[i] < minimum)
+
+{
+
+minimum = ara1[i];
+
+}
+
+}
+
+Now the first digit of ara1 has gone to minimum. Now put ara2: ara2 [index_2] = minimum. Finally we will see all the numbers of ara2\. This time Chela, Kyle and Run write the whole program and see what the output is.
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int ara1[] = {3, 1, 5, 2, 4};  
+
+     int ara2[5];  
+
+     int i, minimum, index_2;  
+
+     for (index_2 = 0; index_2 < 5; index_2++) {  
+
+         minimum = 10000;  
+
+         for (i = 0; i < 5; i++) {  
+
+             if (ara1[i] < minimum) {  
+
+                 minimum = ara1[i];  
+
+             }  
+
+         }  
+
+         ara2[index_2] = minimum;  
+
+     }  
+
+     for (i = 0; i < 5; i++) {  
+
+         printf("%d\n", ara2[i]);  
+
+     }  
+
+     return 0;  
+
+}
+
+What a tune! What is the output? The output is also very melodious, one by one five five.
+
+1
+
+1
+
+1
+
+1
+
+1
+
+But we don't want such an output. You have also made a fuss. Now seeing my card can't be wrong. There is a problem. The inner loop (where the smallest number is superimposed) will always have a minimum value of 1, because 1 is the smallest number among those five. In a third array, the number five becomes 1\. So when we subtract the minimum, we will find the smallest number of the cells in the array and give the value of the circle as a much larger number. Put one variable minimum_index. And the loop will now look like this:
+
+minimum = 10000;  
+
+for (i = 0; i < 5; i++) {  
+
+     if (ara1[i] < minimum) {  
+
+         minimum = ara1[i];  
+
+         minimum_index = i;  
+
+     }  
+
+}  
+
+Now we get the value of minimum and the signer also knows that it has come to ara1 [minimum_index]. ara1 [minimum_index] = 10000;
+
+Then let's do it again:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int ara1[] = {3, 1, 5, 2, 4};  
+
+     int ara2[5];  
+
+     int i, minimum, index_2, minimum_index;  
+
+     for (index_2 = 0; index_2 < 5; index_2++) {  
+
+         minimum = 10000;  
+
+         for (i = 0; i < 5; i++) {  
+
+             if (ara1[i] < minimum) {  
+
+                 minimum = ara1[i];  
+
+                 minimum_index = i;  
+
+             }  
+
+         }  
+
+         ara1[minimum_index] = 10000;  
+
+         ara2[index_2] = minimum;  
+
+     }  
+
+     for (i = 0; i < 5; i++) {  
+
+         printf("%d\n", ara2[i]);  
+
+     }  
+
+     return 0;  
+
+}  
+
+Now I will show the output hard. Ah, I did all the work. What is your job? Your work will be written in such a way that no third party is required. In the beginning, whatever is coming will be sung. The one with the shortest number takes the first cell of the array and the one with the most short number from the cell gets the number of the first circle. Now, the smallest number of copper arrows is in the first circle. The second of the remaining four circles is the third circle of the second circle and the number of the third circle is the number from which the number is obtained. Nothing more can be said.
+
+Now we will write a program with a robot. There is a rabbit with an N x N thread. In the beginning, one of them is unaware. We will do a few commas, a room to the right, left, up and down commas.
+
+![](Images/image00188.jpeg)
+
+See you soon. The house to the left of the upper ekba is (0, 0). The right-hand house of Opera Ekba is O (0, 8). The house to the left of Nature Ekba is (8, 0). The house to the right of Nature Aqua (8, 8). Suppose, in this case, there is a robot (2, 2). One house could be said to be above (1, 2) perimeter. It can be said that it is (3, 2). The right and the left would go as far as (2, 3) and (2, 1). U (up), D (down), L (left), R (right), S (stop). Now if the tobacco is given a starting bell and a comma bell, then the rabbit will have to give the last aban (aban after stopping).
+
+Would you like to write something on your own?
+
+You understand that a 2-D will be needed in this game. So there is no need for any more errors here. This is a common yoga-marriage program. Main kir, start aban he (x, y). Now if U comma goes up one cell, then the value of x will go one way, the value of y will not change. D minus one cell, then the value of x increases by one, the value of y does not change. Commenting R will increase the value of y by one, the value of x will remain unchanged. L comma will reduce the value of y to one, the value of x will remain unchanged. Then our whole system will look like this:
+
+#include <stdio.h>  
+
+int main()  
+
+{  
+
+     int x, y;  
+
+     char c;  
+
+     printf("Please enter the initial position: ");  
+
+     scanf("%d %d", &x, &y);  
+
+     while (1) {  
+
+         scanf("%c", &c);  
+
+         if (c == 'S') {  
+
+             break;  
+
+         }  
+
+![](Images/image00189.jpeg)
+
+The output will depend on the copper input. Such as:
+
+Please enter the initial position: 2 2
+
+D
+
+R
+
+  D
+
+R
+
+S 
+
+Final position of the robot is: 4, 4
+
+Simple and simple. But now if Bill Jade forbade us to go to any house and said that the robot would not do anything (that is, to remove that comma), then how would we write the letter? Give an example. Suppose, (0, 4) the house is blocked. If the rabbit is aban (0, 3) in circumference and comma 'R' is given, then its abaner kaena will not change. Because going to the right (Main, 0, 4) is not all.
+
+If you want to solve this problem, you have to use a 2-D array. With the help of this error, we will understand that the ear can be encircled and the ear can not be encircled. How? Very simple. I will keep 1 in the cells that can be accessed and 0 in the cells that cannot be accessed. Them 10 x 10 Derder one 2-D array deer: int grid [10] [10]; Then you can go all the way to the beginning.
+
+for (i = 0; i < 10; i++) {  
+
+     for (j = 0; j < 10; j ++) {  
+
+         grid[i][j] = 1;  
+
+     }  
+
+}
+
+Input from the user now that you can't go to any home:
+
+printf("Please enter the number of blocked cells: ");  
+
+scanf("%d", &n);  
+
+printf("Now enter the cells: ");  
+
+for (i = 0; i < n; i++) {  
+
+     scanf("%d %d", &x, &y);  
+
+     grid[x][y] = 0;  
+
+}
+
+Now it is not possible to go to Kaena Gher, one has to do one hundred tests.
+
+if (grid[x][y] == 1)
+
+{
+
+If it is true, then (x, y) will go round.
+
+}
+
+![](Images/image00190.jpeg)
+
+Chapter 14
+
+[Reading book: Chapter Tea] The beginning of the end
+
+We have come to the last chapter of the book. If you have read the previous chapters, for example, looking at your own quota, and whenever I have asked you to write your own quote, then try to write all of them yourself, then you will not! You're a real spit fire and that's exactly what we like on this site CC! If I could say that you are learning to love, you would love it too, I would love it too, what is the use of telling a lie?
+
+Raming is the subject of discussion. Many good things can be done in the face-to-face exams, even in the college-university wrestling exams. However, it is not possible for him to become a villain. This is all done through a kind of skill and only regular practice. It doesn't need to be a good person, it doesn't need to be a genius. We need love. When you forget to eat while you are bathing, you start working at night with a problem and after a while you will see that the area outside the bathroom is cracked, or if you forget to go to the bathroom, then you will understand. Now Tamar should read the book again and do the same thing again. Then if you want to learn more, you can read Sis's ear book. If you are enthusiastic about the father of the game, you can start a C ++ branch from a book. You can learn Java, C #, Chip, PHP or Python.
+
+You don't have to worry about learning so much because you are bringing in so many basic things. I have written a list of books and websites. One of the things you need to do is get rid of it.
+
+1) Possession of one or more programming lounges,
+
+2) Provision of use of one IDE,
+
+3) Concept of basic subject matter,
+
+4) Mathematics and alignment,
+
+5) Object oriented programming (OP) The basic knowledge and skills of algorithms and algorithms,
+
+6) Communication skills,
+
+7) The ability to solve problems in a timely manner or learn new things,
+
+8) The ability to stay behind a problem
+
+9) I love you.
+
+May your life be peaceful, may your own life be peaceful, may the life of the people around you be peaceful because of you. Good luck everyone.
+
+Bonus
+
+[Reading Book: Appendix] Reading Competition
+
+The competition between the two is a struggle between us. This does not mean that the fighters will fight one after the other and whoever stays until the end is the winner. When it comes to running competitions, there is a test where everyone has to solve a number of running problems at a given time. The one who solves the most perfect problem will be the winner. And if two people solve the same number of problems, then you have won in the shortest time between them. However, he is not a direct follower of the book. So there is no opportunity to face. Judges take a lot of time to solve the problem of competition. It is easy to solve the problem and also very difficult.
+
+The IOI (International Olympiad in Informatics) is one of the biggest competitions for college students. This competition has been held every year since 1989\. Each country competes for a year. For the past four years, Bangladesh has been participating in this competition. So far, our favorite is the 2009 Silver Medal of Saleh Abirul Islam. The task of forming a Bangladesh team to participate in the IOI was done in two steps. Theme Departmental Information Iliad. The National Information Iliad is then followed by the winner of the divisional stage. The members of the team are selected from among the winners of the National Iliad.
+
+ACM ICPC (ACM International Collegiate Programming Contest) is one of the biggest competitions for university students. The selection of the team is the result of a number of development footballers. Teams are selected from each continent through competition. A group consists of three members and one teacher. Funny thing is, there is no such thing as a member of the party who has to be a cousin. Anyone with a division can participate in this competition.
+
+In addition, ERNET is expected to offer a variety of racing competitions where students, teachers and veterinarians from all colleges and universities can take part. These include Google Code Jam (http://code.google.com/codejam), Topcoder (http://www.topcoder.com/tc) and Codechef (http://www.codechef.com/). . There are so many types it's hard to say. However, in all these trades, the farmers of Bangladesh have been subdued.
