@@ -425,6 +425,7 @@
 +   [如何使用 SPSS®：分析与解释的逐步指南](docs/how-to-use-spss-a-step-by-step-guide-to-analysis-and-interpr/README.md)
 +   [Html5 开发：入门初学者指南（第 2 卷）](docs/html5-development-the-beginning-beginners-guide-volume-2/README.md)
 +   [信息安全与优化](docs/information-security-and-optimization/README.md)
++   [深入理解计算机：五个程序与微型模型](docs/inside-computer-understanding-five-programs-plus-miniatures/README.md)
 +   [代码内部：揭秘 C、C++、Java、JavaScript 和 Python 等语言的工作原理](docs/inside-the-code-unraveling-how-languages-like-c-c-java-javas/README.md)
 +   [BIRT 集成与扩展 (第3版) (Eclipse 系列)](docs/integrating-and-extending-birt-3rd-edition-eclipse-series/README.md)
 +   [中级 C 编程](docs/intermediate-c-programming/README.md)
