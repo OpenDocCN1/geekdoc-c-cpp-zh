@@ -386,6 +386,7 @@
 +   [Express.js：Node.js Web 框架指南](docs/expressjs-guide-book-on-web-framework-for-nodejs/README.md)
 +   [FLTK 中文手册](docs/fltk-man/README.md)
 +   [FORTRAN 编程一天速成：FORTRAN 编程快速、简单高效学习初学者指南 (Fortran, Css, C++, C, C 编程... 编程, MYSQL, SQL 编程)](docs/fortran-programming-success-in-a-daybeginners-guide-to-fast-/README.md)
++   [前端 Web 开发：Big Nerd Ranch 指南](docs/front-end-web-development-the-big-nerd-ranch-guide-big-nerd-/README.md)
 +   [Functional C#：在 C# 世界中拥抱函数式编程 (C# Functional Book 1)](docs/functional-c-embracing-functional-programming-in-a-c-world-c/README.md)
 +   [C++ 函数式编程](docs/functional-programming-with-c/README.md)
 +   [Turbo C++ 鼠标编程游戏开发 - 第 16 套](docs/gaming-in-turbo-c-with-mouse-programming---suit-16/README.md)
