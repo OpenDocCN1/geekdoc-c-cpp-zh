@@ -391,6 +391,7 @@
 +   [FLTK 中文手册](docs/fltk-man/README.md)
 +   [FORTRAN 编程一天速成：FORTRAN 编程快速、简单高效学习初学者指南 (Fortran, Css, C++, C, C 编程... 编程, MYSQL, SQL 编程)](docs/fortran-programming-success-in-a-daybeginners-guide-to-fast-/README.md)
 +   [前端 Web 开发：Big Nerd Ranch 指南](docs/front-end-web-development-the-big-nerd-ranch-guide-big-nerd-/README.md)
++   [MongoDB 全栈开发：使用 PHP, NodeJS, ExpressJS, Python 和 React Native 进行后端、前端、API 及移动应用开发（英文版）](docs/full-stack-development-with-mongodb-covers-backend-frontend-/README.md)
 +   [Functional C#：在 C# 世界中拥抱函数式编程 (C# Functional Book 1)](docs/functional-c-embracing-functional-programming-in-a-c-world-c/README.md)
 +   [函数设计：原则、模式与实践](docs/functional-design-principles-patterns-and-practices/README.md)
 +   [C++ 函数式编程](docs/functional-programming-with-c/README.md)

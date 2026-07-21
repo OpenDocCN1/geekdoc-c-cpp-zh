@@ -1,0 +1,2 @@
++   [MongoDB 全栈开发：使用 PHP, NodeJS, ExpressJS, Python 和 React Native 进行后端、前端、API 及移动应用开发（英文版）](README.md)
++   [MongoDB 全栈开发：使用 PHP, NodeJS, ExpressJS, Python 和 React Native 进行后端、前端、API 及移动应用开发（英文版）](full-stack-development-with-mongodb-covers-backend-frontend-_0.md)
