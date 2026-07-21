@@ -417,6 +417,7 @@
 +   [如何开始编程：初学者指南，基础术语与概念：C++ 编程入门指南](docs/how-to-start-programming-easy-guides-for-beginners-fundament/README.md)
 +   [如何使用 SPSS®：分析与解释的逐步指南](docs/how-to-use-spss-a-step-by-step-guide-to-analysis-and-interpr/README.md)
 +   [Html5 开发：入门初学者指南（第 2 卷）](docs/html5-development-the-beginning-beginners-guide-volume-2/README.md)
++   [代码内部：揭秘 C、C++、Java、JavaScript 和 Python 等语言的工作原理](docs/inside-the-code-unraveling-how-languages-like-c-c-java-javas/README.md)
 +   [中级 C 编程](docs/intermediate-c-programming/README.md)
 +   [心理治疗入门指南：图解指南](docs/introducing-psychotherapy-a-graphic-guide/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
