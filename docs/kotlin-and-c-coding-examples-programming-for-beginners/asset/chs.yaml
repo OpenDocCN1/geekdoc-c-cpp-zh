@@ -1,0 +1,268 @@
+- "# Kotlin 与 C 编程示例：初学者编程指南\n\n\n\n![](img/cover.jpeg)\n\n\n## 目录\n- 对两个数进行算术运算的\
+  \ Kotlin 程序\n- 简单计算程序\n- 运行时输入数字（整数、浮点数、双精度）的程序\n- 寻找三个数中最大的 Kotlin 程序\n- 交换两个数字\
+  \ Kotlin 程序\n- 检查数字是偶数还是奇数的 Kotlin 程序\n- 打印乘法表的 Kotlin 程序\n- 计算并显示学生成绩的程序\n- 转换温度的\
+  \ Kotlin 程序\n- 显示斐波那契数列的 Kotlin 程序\n- 计算圆面积的 Kotlin 程序\n- 计算正方形面积的 Kotlin 程序\n-\
+  \ 计算圆柱面积的程序\n- 生成 4 位 OTP 的 Kotlin 程序\n- 计算五边形面积的 Kotlin 程序\n- 寻找质数的 Kotlin 程序\n\
+  - 进制转二进制的 Kotlin 程序\n- 计算两个数和和平均值的 C 程序\n- 打印字符 ASCII 值的 C 程序\n- 使用 goto 语句打印从 1\
+  \ 到 N 的所有数字 C 程序\n- 使用 while 循环打印从 1 到 N 的数字程序\n- 打印平方、立方和平方根的程序\n- 打印给定数字数表的程序\n\
+  - 三个数中最大数的程序\n- C 语言中的矩形面积程序\n- C 程序 - 英制转英寸\n- 使用文件处理创建文本文件的程序\n- 计算数字阶的 C 程序\n\
+  - 交换字节中两个位的程序\n- 使用四种不同方法交换两个数字的程序\n- 年龄计算器（计算年龄的 C 程序）\n- 设计数字钟的 C 程序\n- 计算复利的程序\n\
+  - 检查数字是否为完全平方程序\n- 程序中不用分号打印消息\n- 使用 C 语言的级数程序/示例\n\n# Kotlin 基础程序\n\n## 对两个数进行算术运算的\
+  \ Kotlin 程序\n示例：\n输入：\n```\na = 13\nb = 5\n```\n输出：\n```\na + b = 18\na - b = 8\n\
+  a * b = 65\na / b = 2\na % b = 3\n```\n\n```kotlin\n// 程序主入口点\nfun main(args: Array<String>)\
+  \ {\n    val a = 13\n    val b = 5\n    val sum = a + b // 加法\n    val sub = a -\
+  \ b // 减法\n    val muti = a * b // 乘法\n    val div = a / b // 除法\n    val rem =\
+  \ a % b // 余\n    // 在控制台打印\n    println(\"Addition of $a and $b is : $sum\")\n\
+  \    println(\"Subtraction of $a and $b is : $sub\")\n    println(\"Multiplication\
+  \ of $a and $b is: $muti\")\n    println(\"Division of $a and $b is : $div\")\n\
+  \    println(\"Remainder of $a and $b is : $rem\")\n}\n```\n输出：\n```\nAddition of\
+  \ 13 and 5 is : 18\nSubtraction of 13 and 5 is : 8\nMultiplication of 13 and 5 is:\
+  \ 65\nDivision of 13 and 5 is : 2\nRemainder of 13 and 5 is : 3\n```\n\n### 简单计算程序\n\
+  用户必须输入 (+, -, *, /, %) 中的任何选择来执行操作。\n\n```kotlin\n/**\n * 对两个数进行简单计算的 Kotlin 程序\n\
+  \ * 用户必须输入 ( +, -, *, /, % ) 中的任何选择来执行操作\n */\npackage com.includehelp.basic\nimport\
+  \ java.util.*\n\n// 程序主入口点\nfun main(args: Array<String>) {\n    // 获取输入的输入流\n \
+  \   val reader = Scanner(System.`in`)\n    // 输入整数值\n    print(\"Enter Integer Value\
+  \ : \")\n    var first = reader.nextInt()\n    // 输入整数值\n    print(\"Enter Integer\
+  \ Value : \")\n    var second = reader.nextInt()\n    // 输入任何字符作为选择\n    print(\"\
+  Enter any Action( +, -, /, % ) : \")\n    val choice = reader.next()[0]\n    try\
+  \ {\n        var result = when(choice) {\n            '+' -> first + second\n  \
+  \          '-' -> first - second\n            '*' -> first * second\n          \
+  \  '/' -> first / second\n            '%' -> first % second\n            else ->\
+  \ {\n                System.err.println(\"Not a Valid Operation choice\")\n    \
+  \            return\n            }\n        }\n        // 打印结果\n        println(\"\
+  Result is : $result\")\n    } catch (E: Exception) {\n        System.err.println(\"\
+  Exception : ${E.toString()}\")\n    }\n}\n```\n输出：\n```\nRUN 1:\nEnter Integer Value\
+  \ : 35\nEnter Integer Value : 8\nEnter any Action( +, -, /, % ) : %\nResult is :\
+  \ 3\nRUN 2:\nEnter Integer Value : 45\nEnter Integer Value : 67\nEnter any Action(\
+  \ +, -, /, % ) : /\nResult is : 6\n```\n\n### 运行时输入数字（整数、浮点数、双精度）的程序\n```kotlin\n\
+  import java.util.*\n\n// 程序主入口点\nfun main(args: Array<String>) {\n    // 获取输入的输入流\n\
+  \    val reader = Scanner(System.`in`)\n    // 输入整数值\n    print(\"Enter Integer\
+  \ Value : \")\n    val intValue = reader.nextInt()\n    println(\"Integer Number\
+  \ : $intValue\")\n    // 输入长型值\n    print(\"Enter Long Value : \")\n    val longValue\
+  \ = reader.nextLong()\n    println(\"Long Number : $longValue\")\n    // 输入浮点值\n\
+  \    print(\"Enter Float Value : \")\n    val floatValue = reader.nextFloat()\n\
+  \    println(\"Float Number : $floatValue\")\n    // 输入双精度值\n    print(\"Enter Double\
+  \ Value : \")\n    val doubleValue = reader.nextDouble()\n    println(\"Double Number\
+  \ : $doubleValue\")\n}\n```\n输出：\n```\nRun 1:\nEnter Integer Value : 123\nInteger\
+  \ Number : 123\nEnter Long Value : 34355566\nLong Number : 34355566\nEnter Float\
+  \ Value : 45.34\nFloat Number : 45.34\nEnter Double Value : 456.78\nDouble Number\
+  \ : 456.78\n```\n\n### 寻找三个数中最大的 Kotlin 程序\n示例：\n输入：\nFirst number: 10\nSecond number:\
+  \ 20\nThird number: 30\n输出：\nLargest number: 30\n\n```kotlin\npackage com.includehelp.basic\n\
+  import java.util.*\n\n// 程序主入口点\nfun main(args: Array<String>) {\n    // 获取输入的输入流\n\
+  \    val reader = Scanner(System.`in`)\n    // 输入整数值\n    print(\"Enter First Value\
+  \ : \")\n    var first = reader.nextInt()\n    // 输入第二个值\n    print(\"Enter Second\
+  \ Value : \")\n    var second = reader.nextInt()\n    // 输入第三个值\n    print(\"Enter\
+  \ Third Value : \")\n    var third = reader.nextInt()\n    // 寻找三个数中最大值的条件\n   \
+  \ val largest = if (first > second && first > third) {\n        first\n    } else\
+  \ if (second > third) {\n        second\n    } else {\n        third\n    }\n}\n\
+  ```\n\n\n\n\n\n## 交换两个数字的 Kotlin 程序\n\n### 示例:\n输入：\n第一个数字：10\n第二个数字：20\n输出：\n第一个数字：20\n\
+  第二个数字：10\n\n### 程序代码\n```kotlin\nimport java.util.*\n// 程序主方法入口点\nfun main(arg:\
+  \ Array<String>) {\n    // 输入流获取输入\n    var reader = Scanner(System.`in`)\n    //\
+  \ 输入两个值\n    println(\"Enter First Value : \")\n    var first = reader.nextInt();\n\
+  \    println(\"Enter Second Value : \")\n    var second = reader.nextInt();   \n\
+  \    println(\"Numbers Before Swap : \\n first = $first \\n second = $second \"\
+  )\n    // 交换数字的代码\n    var temp = first\n    first=second\n    second=temp\n   \
+  \ println(\"Numbers After  Swap : \\n first = $first \\n second = $second \")\n\
+  }\n```\n\n### 输出\n运行 1:\nEnter First Value :\n45\nEnter Second Value :\n12\nNumbers\
+  \ Before Swap :\nfirst = 45\nsecond = 12\nNumbers After  Swap :\nfirst = 12\nsecond\
+  \ = 45\n\n## 检查数字是偶数还是奇数的 Kotlin 程序\n\n### 示例:\n输入：\nN = 13\n输出：\n\"ODD\"\n输入：\n\
+  N = 24\n输出：\n\"EVEN\"\n\n### 程序代码\n```kotlin\n/*\n    * 输入整数的 Kotlin 程序\n    * 检查数字是偶数还是奇数\n\
+  */\nimport java.util.*\n// 程序主方法入口点\nfun main(args: Array<String>) {\n    // 输入输入的流\n\
+  \    val reader = Scanner(System.`in`)\n    // 输入值\n    println(\"Enter Integer\
+  \ Value : \")\n    var number = reader.nextInt();\n    val str = if(number%2==0)\
+  \ \"EVEN\" else \"ODD\"\n    println(\"Number is $str\")\n}\n```\n\n### 输出\n运行 1:\n\
+  Enter Integer Value :\n34\nNumber is EVEN\n---\n运行 2:\nEnter Integer Value :\n15\n\
+  Number is ODD\n\n## 打印乘法表的 Kotlin 程序\n\n### 程序代码\n```kotlin\nimport java.util.*\n\
+  // 程序主函数入口\nfun main(args: Array<String>) {\n    val sc = Scanner(System.`in`)\n\
+  \    println(\"Enter Number: \")\n    val num: Int = sc.nextInt()\n    // 循环打印给定数字的乘法表\n\
+  \    for (i in 1..10) {\n        val result = num * i\n        println(\"$num*$i\
+  \ = $result\")\n    }\n}\n```\n\n### 输出\nEnter Number:\n5\n5*1 = 5\n5*2 = 10\n5*3\
+  \ = 15\n5*4 = 20\n5*5 = 25\n5*6 = 30\n5*7 = 35\n5*8 = 40\n5*9 = 45\n5*10 = 50\n\n\
+  ## 计算并显示学生成绩的程序\n\n### 规则:\n百分比 >= 80 -> A\n百分比 >= 60 -> B\n百分比 >= 40 -> C\n其他 ->\
+  \ D\n注：每门科目最高分 100\n\n### 示例:\n输入：\nEnglish = 98\nPhysics = 34\nChemistry = 67\n\
+  Maths = 90\n输出：\n总分 = 356.0\n百分比 = 71.2\n等级 = B\n\n### 程序代码\n```kotlin\nimport java.util.*\n\
+  // 主函数，程序入口点\nfun main(args: Array<String>) {\n    // 课程科目名称数组\n    val subjectName\
+  \ = arrayOf<String>(\"English\",\"Physics\",\"Maths\")\n    // 输入流\n    val scanner\
+  \ = Scanner(System.`in`)\n    // 声明包含分数的数组\n    val marksArray = DoubleArray(5)\n\
+  \    // 开始输入分数\n    println(\"Input Marks->\")\n    for(i in marksArray.indices){\n\
+  \        print(\"${subjectName[i]} : \")\n        marksArray[i] = scanner.nextDouble()\n\
+  \    }\n    // 计算所有科目的总分\n    val total = marksArray.sum()\n    // 计算百分比\n    val\
+  \ percentage = marksArray.average()\n    // 打印总分和百分比\n    println(\"Total of All\
+  \ subjects Marks : $total\")\n    println(\"Percentage : $percentage\")\n    //\
+  \ 根据百分比确定等级\n    when{\n        percentage>80 -> println(\"Grade : A\")\n      \
+  \  percentage>60 -> println(\"Grade : B\")\n        percentage>40 -> println(\"\
+  Grade : C\")\n        else -> println(\"Grade : D\")\n    }\n}\n```\n\n### 输出\n\
+  运行 1:\nEnglish : 98\nPhysics : 42\nChemistry : 67\nMaths : 90\nTotal of All subjects\
+  \ Marks : 297\nPercentage : 74.25\nGrade : B\n\n## 温度转换的 Kotlin 程序\n\n### 示例:\n\
+  输入：\nFahrenheit = 67\n输出：\nCelsius = 19.444444444444443\n\n### 程序代码\n```kotlin\n\
+  package com.includehelp\nimport java.util.*\n// 主函数，程序入口点\nfun main(args: Array<String>)\
+  \ {\n    // 输入流\n    val scanner = Scanner(System.`in`)\n    // 输入华氏度温度\n    print(\"\
+  Enter temperature into Fahrenheit : \")\n    val fahrenheit = scanner.nextDouble()\n\
+  \    // 将华氏度转换为摄氏度\n    val celsius = (fahrenheit - 32) * 5/9\n    // 打印摄氏度\n  \
+  \  println(\"Celsius = $celsius\")\n}\n```\n\n### 输出\n将是:\n运行 1:\nEnter temperature\
+  \ into Fahrenheit : 67\nCelsius = 19.444444444444443\n---\n运行 2:\nEnter temperature\
+  \ into Fahrenheit : 78\nCelsius = 25.555555555555555\n\n## 显示斐波纳契数列的 Kotlin 程序\n\
+  \n### 示例:\n输入：\nterm1 = 0\n输出：\nterm2 = 1\n输入：\nN = 10\n输出：\nFibonacci series: 0\n\
+  \n### 程序代码\n```kotlin\n/**\n * 显示给定次数的斐波纳契数列\n * e.g. 0 1 1 2 3 5 8.... */\nimport\
+  \ java.util.*\n// 程序主函数入口\nfun main(args: Array<String>) {\n    // 输入流\n    val\
+  \ scanner = Scanner(System.`in`)\n    // 输入次数\n    println(\"Enter terms : \")\n\
+  \    val n = scanner.nextInt()\n    var term1 = 0\n    var term2 = 1\n    var count\
+  \ = 1\n    // 循环打印斐波纳契数列\n    while (count <= n){\n        print(\"$term1 \")\n\
+  \        val s = term1+term2\n        term1 = term2\n        term2 = s\n       \
+  \ count++\n    }\n}\n```\n\n### 输出\n运行 1:\nEnter terms : 10\n0 1 1 2 3 5 8 13 21\
+  \ 34 \n---\n运行 2:\nEnter terms : 5\n0 1 1 2 3 \n\n## 计算圆面积的 Kotlin 程序\n\n### 示例:\n\
+  输入：\nRadius: 3\n输出：\nArea of circle : 28.259999999999998\n\n### 程序代码\n```kotlin\n\
+  import java.util.*\n// PI 常量值\nval PI = 3.14\n/* 计算给定半径的圆面积 */\nfun getAreaOfCirlce(radius:\
+  \ Double): Double {\n    return PI * radius * radius\n}\n// 主方法入口点\nfun main(args:\
+  \ Array<String>){\n    val sc = Scanner(System.`in`)\n    // 输入半径\n    println(\"\
+  Enter Circle Radius : \")\n    val radius = sc.nextDouble()\n    // 调用函数获取圆面积\n\
+  \    val areaOfCircle = getAreaOfCirlce(radius)\n    // 打印圆面积\n    println(\"Area\
+  \ of circle : $areaOfCircle\")\n}\n```\n\n### 输出\n运行 1:\nEnter Circle Radius : 3\n\
+  Area of circle : 28.259999999999998\n-----\n运行 2:\nEnter Circle Radius : 8\nArea\
+  \ of circle : 200.96\n\n## 计算正方形面积的 Kotlin 程序\n\n### 示例:\n输入：\nside = 6\n输出：\narea\
+  \ = 36.0\n\n### 程序代码\n```kotlin\nimport java.util.*\n// 主函数，程序入口点\nfun main(args:\
+  \ Array<String>) {\n    // 输入流\n    val scanner = Scanner(System.`in`)\n    // 输入正方形边长\n\
+  \    print(\"Enter Side of Square : \")\n    val side = scanner.nextDouble()\n \
+  \   // 计算正方形面积\n    val squareArea = side*side\n    // 打印面积\n    println(\"Area\
+  \ of Square is : $squareArea\")\n}\n```\n\n### 输出\n运行 1:\nEnter Side of Square :\
+  \ 6\nArea of Square is : 36.0\n\n\n\n\n\n输入正方形边长：4.5\n正方形面积为：20.25\n\n## 计算圆柱面积的程序\n\
+  \n示例：\n输入：\n半径 = 5\n高度 = 7\n输出：\n圆柱表面积：75.39822368615503\n\n### 程序\n```kotlin\n\
+  package com.includehelp\nimport java.util.*\n\n//主函数，程序入口点\nfun main(args: Array<String>)\
+  \ {\n    // 输入流\n    val scanner = Scanner(System.`in`)\n    // 输入半径\n    print(\"\
+  输入圆柱半径： \")\n    val radius = scanner.nextDouble()\n    // 输入高度\n    print(\"输入圆柱高度：\
+  \ \")\n    val height = scanner.nextDouble()\n    // 圆柱表面积\n    val areaCylinder\
+  \ = 2*Math.PI*(radius+height)\n    // 打印面积\n    println(\"圆柱表面积为：$areaCylinder\"\
+  )\n}\n```\n\n输出\n运行 1：\n输入圆柱半径：5\n输入圆柱高度：7\n圆柱表面积为：75.39822368615503\n\n运行 2：\n\
+  输入圆柱半径：29\n输入圆柱高度：4\n圆柱表面积为：207.34511513692635\n\n## 生成 4 位 OTP 的 Kotlin 程序\n\n\
+  ### 程序\n```kotlin\n/**\n * 生成 4 位 OTP 的 Kotlin 程序\n */\n/**\n * 生成 4 位 OTP 字符串的函数\n\
+  \ * @return\n */\nfun generateOTP(): String {\n    val randomPin = (Math.random()\
+  \ * 9000).toInt() + 1000\n    return randomPin.toString()\n}\n\n// 程序主方法入口点\nfun\
+  \ main(args: Array<String>) {\n    // 调用函数生成 OTP\n    val otp1 = generateOTP()\n\
+  \    // 打印 OTP\n    println(\"OTP : $otp1\")\n}\n```\n\n输出\n运行 1：\nOTP : 7997\n\
+  运行 2：\nOTP : 7682\n运行 3：\nOTP : 6934\n运行 4：\nOTP : 4189\n\n## 计算五边形面积的 Kotlin 程序\n\
+  \n计算五边形面积的公式：= (5/2)sa ，其中：\n`s` - 五边形的边长\n`a` - 五边形的边高\n\n示例：\n输入：\nside= 5\napothem\
+  \ = 6\n输出：\narea = 75.0\n\n### 程序\n```kotlin\nimport java.util.*\n\n//主函数，程序入口点\n\
+  fun main(args: Array<String>) {\n    // 输入流\n    val scanner = Scanner(System.`in`)\n\
+  \    // 输入边长\n    print(\"输入五边形边长： \")\n    val s = scanner.nextDouble()\n    //\
+  \ 输入边高\n    print(\"输入五边形边高： \")\n    val a = scanner.nextDouble()\n    // 五边形面积\n\
+  \    val areaPentagon = (5.0/2.0)*s*a\n    // 打印面积\n    println(\"五边形面积为：$areaPentagon\"\
+  )\n}\n```\n\n输出\n运行 1：\n输入五边形边长：5\n输入五边形边高：6\n五边形面积为：75.0\n\n运行 2：\n输入五边形边长：8\n\
+  输入五边形边高：6\n五边形面积为：120.0\n\n## 查找质数的 Kotlin 程序\n\n示例：\n输入：\nstart = 1\nend = 100\n\
+  输出：\n[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,\
+  \ 73, 79, 83, 89, 97]\n\n### 程序\n```kotlin\n/**\n * 在给定范围（START 和 END）内查找质数的 Kotlin\
+  \ 程序\n * 质数是一个大于 1 的整数，其因数只有 1 和它本身。\n * 例如 7, 13, 17\n */\nimport java.util.*\n\
+  \n// 检查是否为质数的函数\nfun findPrimeNo(number: Long): Boolean {\n    if(number < 2) return\
+  \ false\n    for (i in 2..number/2) {\n        if (number % i == 0L) {\n       \
+  \     return false\n        }\n    }\n    return true\n}\n\n// 主函数，程序入口\nfun main(arg:\
+  \ Array<String>) {\n    // 输入流\n    val sc = Scanner(System.`in`)\n    // 输入范围起始值\n\
+  \    print(\"输入范围起始： \")\n    val start = sc.nextLong()\n    // 输入范围结束值\n    print(\"\
+  输入范围结束： \")\n    val end = sc.nextLong()\n    // 声明用于存储的可变列表\n    val list: MutableList<Long>\
+  \ = ArrayList()\n    // 遍历循环从开始到结束以查找范围内的数字\n    for (i in start..end) {\n     \
+  \   if (findPrimeNo(i)) {\n            list.add(i)\n        }\n    }\n    println(\"\
+  从 $start 到 $end 的质数：$list\")\n}\n```\n\n## 将十进制转换为二进制的 Kotlin 程序\n\n示例：\n输入：\nstart\
+  \ = 1\nend = 100\n输出：\n[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47,\
+  \ 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]\n\n| 十进制 | 除以 2 | 余数 |\n|---|---|---|\n\
+  | 12 | 6 | 0 |\n| 6 | 3 | 0 |\n| 3 | 1 | 1 |\n| 1 | 0 | 1 |\n| 0 | | |\n| 二进制 |\
+  \ | 1100 |\n\n### 程序\n```kotlin\nimport java.util.*\n\n/* 将十进制转换为二进制 */\n */\n/*\
+  \ 转换二进制的函数\n * @return\n */\nfun generateOTP(decimalNumber): String {\n    val randomPin\
+  \ = (Math.random() * 9000).toInt() + 1000\n    return randomPin.toString()\n}\n\n\
+  /* 将十进制转换为二进制 */\n */\n/* 转换二进制的函数\n * @return\n */\nfun generateOTP(decimalNumber):\
+  \ String {\n    val binaryStr = StringBuilder()\n    while (decimalNumber > 0) {\n\
+  \        val r = decimalNumber % 2\n        binaryStr.append(r)\n        decimalNumber\
+  \ /= 2\n    }\n    return binaryStr.reverse().toString()\n}\n\n// 主方法入口点\nfun main(arg:\
+  \ Array<String>) {\n    // 输入流\n    val sc = Scanner(System.`in`)\n    // 输入十进制数\n\
+  \    println(\"输入十进制数：\")\n    val decimalNumber = sc.nextInt()\n    // 打印二进制\n\
+  \    println(\"二进制为：${generateOTP(decimalNumber)}\")\n}\n```\n\n输出\n运行 1：\n输入十进制数：12\n\
+  二进制为：1100\n\n运行 2：\n输入十进制数：6\n二进制为：110\n\n运行 3：\n输入十进制数：3\n二进制为：11\n\n运行 4：\n输入十进制数：1\n\
+  二进制为：1\n\n## 计算两个数的和和平均值的 C 程序\n\n## 两个数的和和平均值\n\n### 程序\n```c\n/* 计算两个数的和和平均值 */\n\
+  #include <stdio.h>\nint main()\n{\n    int a,b,sum;\n    float avg;\n    printf(\"\
+  输入第一个数：\");\n    scanf(\"%d\",&a);\n    printf(\"输入第二个数：\");\n    scanf(\"%d\",&b);\n\
+  \    sum=a+b;\n    avg=(float)(a+b)/2;\n    printf(\"\\n%d 和 %d 的和为：%d\",a,b,sum);\n\
+  \    printf(\"\\n%d 和 %d 的平均值为：%f\",a,b,avg);\n    return 0;\n}\n```\n\n输出\n输入第一个数：10\n\
+  输入第二个数：15\n10 和 15 的和为：25\n10 和 15 的平均值为：12.500000\n\n## 打印字符的 ASCII 值的 C 程序\n\n\
+  ### 程序\n```c\n/* 打印字符的 ASCII 值 */\n#include <stdio.h>\nint main()\n{\n    char ch;\n\
+  \    //输入字符\n    printf(\"输入字符：\");\n    scanf(\"%c\",&ch);\n    printf(\"ASCII\
+  \ 值为：%d\\n\", ch);\n    return 0;\n}\n```\n\n输出\n输入字符：a\nASCII 值为 97\n\n## 使用 goto\
+  \ 语句打印 1 到 N 的数字 C 程序\n\n### 程序\n```c\n/* 使用 goto 语句打印 1 到 N 的数字 */\n#include <stdio.h>\n\
+  int main()\n{\n    int count,n;\n    //读取 N 的值\n    printf(\"输入 n 的值：\");\n    scanf(\"\
+  %d\",&n);\n    //初始化 count 为 1\n    count =1;\n    start: // 标签\n    printf(\"%d\
+  \ \",count);\n    count++;\n    if(count<=n)\n    goto start;\n    return 0;\n}\n\
+  ```\n\n输出\n输入 n 的值：10\n1 2 3 4 5 6 7 8 9 10 \n\n## 使用 while 循环打印 1 到 N 的数字 C 程序\n\
+  \n### 程序\n```c\n/* 使用 while 循环打印 1 到 N 的数字 */\n#include <stdio.h>\nint main()\n\
+  {\n    int number,n;\n    //输入 N 的值\n    printf(\"输入 N 的值：\");\n    scanf(\"%d\"\
+  ,&n);\n    //分配初始值\n    //我们想从这里开始打印数字\n    number =1;\n    while(number <= n) {\n\
+  \        printf(\"%d \",number);\n        number++;\n    }\n    return 0;\n}\n```\n\
+  \n输出\n输入 N 的值：10\n1 2 3 4 5 6 7 8 9 10 \n\n\n\n\n\n## print 语句\n\n```c\nprintf(\"\
+  Numbers from 1 to %d: \\n\",n);\n\n//while 循环，将打印数字\n//从 1 到 n\nwhile(number <=\
+  \ n)\n{\n    //打印数字\n    printf(\"%d \",number);\n    //循环计数器加 1\n    number++;\n\
+  }\nreturn 0;\n}\n```\n\n输出\n输入 N 的值: 25\n从 1 到 25 的数字为：\n1 2 3 4 5 6 7 8 9 10 11\
+  \ 12 13 14 15\n16 17 18 19 20 21 22 23 24 25\n\n## 打印平方、立方和平方根的程序\n\n### 程序\n```c\n\
+  /*打印 1 到 N 所有数字平方、立方和平方根的 C 程序。*/\n#include <stdio.h>\n#include <math.h>\nint main()\n\
+  {\n    int i,n;\n    ��� printf(\"输入 N 的值: \");\n       scanf(\"%d\",&n);\n      \
+  \ printf(\"编号     平方   立方     平方根\\n\",n);\n       for(i=1;i<=n;i++)\n    {\n  \
+  \            printf(\"%d \\t %ld \\t %ld \\t %.2f\\n\",i,(i*i),(i*i*i),sqrt((double)i));\n\
+  \    }\n       return 0;\n}\n```\n![](img/Image00000.jpg)\n\n## 打印指定数字乘表的程序\n\n\
+  ### 程序\n```c\n#include<stdio.h>\nint main()\n{\n//声明变量\nint count,t,r;\n//读取 t 的值\n\
+  printf(\"输入数字: \");\nscanf(\"%d\",&t);\ncount=1;\nstart:\nif(count<=10)\n{\n   \
+  \ // 乘法公式\n    r=t*count;\n    printf(\"%d*%d=%d\\n\",t,count,r);\n    count++;\n\
+  \    goto start;\n}\nreturn 0;\n}\n```\n输出\n输入数字: 10\n10*1=10\n10*2=20\n10*3=30\n\
+  10*4=40\n10*5=50\n10*6=60\n10*7=70\n10*8=80\n10*9=90\n10*10=100\n\n## 三个数中求最大数的程序\n\
+  \n### 程序\n```c\n/*找出 3 个数中最大值的 C 程序*/\n#include <stdio.h>\nint main()\n{\n    int\
+  \ a,b,c;\n    int largest;\n    printf(\"输入三个数字（用空格分隔）:\");\n    scanf(\"%d%d%d\"\
+  ,&a,&b,&c);\n    if(a>b && a>c)                    largest=a;\n    else if(b>a &&\
+  \ b>c)                            largest=b;\n    else\n             largest=c;\n\
+  \    printf(\"最大数字是 = %d\",largest);\n    return 0;\n}\n```\n输出\n第一次运行：\n输入三个数字（用空格分隔）:\
+  \ 10 20 30\n最大数字是 = 30\n第二次运行：\n输入三个数字（用空格分隔）:10 30 20\n最大数字是 = 30\n第三次运行：\n输入三个数字（用空格分隔）:30\
+  \ 10 20\n最大数字是 = 30\n第四次运行：\n输入三个数字（用空格分隔）:30 30 30\n最大数字是 = 30\n\n## C 语言矩形面积程序\n\
+  \n### 程序\n```c\n/*计算矩形面积的 C 程序。*/\n#include <stdio.h>\nint main()\n{\n    float\
+  \ l,b,area;\n    printf(\"输入长度的值: \");\n    scanf(\"%f\",&l);\n    printf(\"输入宽的值:\
+  \ \");\n    scanf(\"%f\",&b);\n    area=l*b;\n    printf(\"矩形面积: %f\\n\",area);\n\
+  \    return 0;\n}\n```\n输出\n    输入长度的值: 1.25\n    输入宽的值: 3.15\n    矩形面积: 3.937500\n\
+  \n## C 语言程序 - 英尺转换为英寸\n\n### 程序\n```c\n#include<stdio.h>\nint main()\n{\nint feet,inches;\n\
+  printf(\"输入英尺的值: \");\nscanf(\"%d\",&feet);\n// 转换为英寸\ninches=feet*12;\nprintf(\"\
+  总英寸为: %d\\n\",inches);\nreturn 0;\n}\n```\n输出\n    输入英尺的值: 15\n    总英寸为: 180\n\n\
+  ## 使用文件处理创建文本文件的程序\n\n### 程序\n```c\n#include< stdio.h\nint main()\n{\n   ;;指针指针指针\n\
+  \    指针����� char fName[20];\n        printf(\"输入要创建的文件名:\");\n        scanf(\"\
+  %s\",fName);\n        /*（打开）一个文件，以“w”模式写入*/\n    fp=fopen(fName,\"w\");\n       \
+  \ /*检查文件是否创建*/\n    if(fp==NULL)\n    {\n                printf(\"文件未创建!!!\");\n\
+  \                exit(0); /*退出程序*/\n    }\n        printf(\"文件创建成功。\");\n    return\
+  \ 0;\n}\n```\n输出\n    第一次运行：\n    输入要创建的文件名: file1.txt\n    文件创建成功。\n    第二次运行：\n\
+      输入要创建的文件名: file1.txt\n    文件创建成功。\n    第三次运行：\n    输入要创建的文件名: file1.txt\n   \
+  \ 文件未创建!!!\n\n## 计算数字阶乘的 C 程序\n\n阶乘是一个整数，如下所示。\n示例：\n5 的阶乘是 5*4*3*2*1=120\n\n##\
+  \ 计算阶乘的简单程序\n```c\n/*计算数字阶乘的 C 程序*/\n#include <stdio.h>\nint main()\n{\n    int\
+  \ num,i;\n    long int fact;\n    printf(\"输入一个数字: \");\n    scanf(\"%d\",&num);\n\
+      fact=1;\n    for(i=1; i<=num; i++)\n{\n       fact=fact*i;\n}\n    printf(\"\
+  %d 的阶乘是 %ld\\n\",num,fact);\n    return 0;\n}\n```\n\n 定义函数\n使用函数：使用函数计算阶乘。\n```c\n\
+  #include <stdio.h>\nlong factorial(int n) {\n    if (n <= 1)\n        return 1;\n\
+  \    else\n        return n * factorial(n-1);\n}\n\nint main()\n{\n    int num;\n\
+  \    printf(\"输入一个数字: \");\n    scanf(\"%d\",&num);\n    printf(\"%d 的阶乘是 %ld\\\
+  n\", num, factorial(num));\n    return 0;\n}\n```\n\n\n\n\n交换后（第一方法）: A= 200, B=\
+  \ 100\n\n交换后（第二方法）: A= 100, B= 200\n\n交换后（第三方法）: A= 200, B= 100\n\n交换后（第四方法）: A=\
+  \ 100, B= 200\n\n## 年龄计算器（计算年龄的 C 程序）\n\n### 程序\n\n```c\n/*年龄计算器（计算年龄的 C 程序）。*/\n\
+  #include <stdio.h>\n#include <time.h>\n/*检查给定年份是否为闰年*/\nint isLeapYear(int year,\
+  \ int mon)\n{\n    int flag = 0;\n    if (year % 100 == 0)\n    {\n        if (year\
+  \ % 400 == 0)\n        {\n            if (mon == 2)\n            {\n           \
+  \     flag = 1;\n            }\n        }\n    }\n    else if (year % 4 == 0)\n\
+  \    {\n        if (mon == 2)\n        {\n            flag = 1;\n        }\n   \
+  \ }\n    return (flag);\n}\nint main()\n{\n    int DaysInMon[] = {31, 28, 31, 30,\
+  \ 31, 30, 31, 31, 30, 31, 30, 31};\n    int days, month, year;\n    char dob[100];\n\
+  \    time_t ts;\n    struct tm *ct;\n    /*输入出生日期 */\n    printf(\"输入您的出生日期 (DD/MM/YYYY):\
+  \ \");\n    scanf(\"%d/%d/%d\",&days,&month, &year);\n    /*获取当前日期.*/\n    ts =\
+  \ time(NULL);\n    ct = localtime(&ts);\n    printf(\"Current Date: %d/%d/%d\\n\"\
+  ,\n           ct->tm_mday, ct->tm_mon + 1, ct->tm_year + 1900);\n    days = DaysInMon[month\
+  \ - 1] - days + 1;\n    /*闰年检查*/\n    if (isLeapYear(year, month))\n    {\n    \
+  \    days = days + 1;\n    }\n    /*按天、月、年计算年龄 */\n    days = days + ct->tm_mday;\n\
+  \    month = (12 - month) + (ct->tm_mon);\n    year = (ct->tm_year + 1900) - year\
+  \ - 1;\n    /*检查 2 月是否有 29 日 */\n    if (isLeapYear((ct->tm_year + 1900), (ct->tm_mon)\
+  \ + 1))\n    {\n        if (days >= DaysInMon[ct->tm_mon] + 1)\n        {\n    \
+  \        days = days - (DaysInMon[ct->tm_mon] + 1);\n            month = month +\
+  \ 1;\n        }\n    }\n    else if (days >= DaysInMon[ct->tm_mon])\n    {\n   \
+  \     days = days - DaysInMon[ct->tm_mon];\n        month = month + 1;\n    }\n\
+  \    if (month >= 12)\n    {\n        year = year + 1;\n        month = month -\
+  \ 12;\n    }\n    /*打印年龄 */\n    printf(\"\\n 嘿，你今年 %d 岁%d 个月零%d 天。\\n\", year,\
+  \ month, days);\n    return 0;\n}\n```\n\n## 设计数字钟的 C 程序\n\n### 程序\n\n```c\n/*设计数字钟的\
+  \ C 程序.*/\n#include <stdio.h>\n#include <time.h> // 用于 sleep() 函数\n#include <unistd.h>\n\
+  #include <stdlib.h>\nint main()\n{\n    time_t ts;\n    struct tm *ct;\n    while\
+  \ (1)\n    {\n        ts = time(NULL);\n        ct = localtime(&ts);\n        printf(\"\
+  \\r 时间: %02d:%02d:%02d\", ct->tm_hour, ct->tm_min, ct->tm_sec);\n        fflush(stdout);\n\
+  \        sleep(1);\n    }\n    return 0;\n}\n```\n"
