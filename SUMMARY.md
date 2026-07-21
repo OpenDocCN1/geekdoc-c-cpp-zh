@@ -394,6 +394,7 @@
 +   [MongoDB 全栈开发：使用 PHP, NodeJS, ExpressJS, Python 和 React Native 进行后端、前端、API 及移动应用开发（英文版）](docs/full-stack-development-with-mongodb-covers-backend-frontend-/README.md)
 +   [Functional C#：在 C# 世界中拥抱函数式编程 (C# Functional Book 1)](docs/functional-c-embracing-functional-programming-in-a-c-world-c/README.md)
 +   [函数设计：原则、模式与实践](docs/functional-design-principles-patterns-and-practices/README.md)
++   [函数式设计：原则、模式与实践 (Robert C. Martin 系列)](docs/functional-design-principles-patterns-and-practices-robert-c/README.md)
 +   [C++ 函数式编程](docs/functional-programming-with-c/README.md)
 +   [Turbo C++ 鼠标编程游戏开发 - 第 16 套](docs/gaming-in-turbo-c-with-mouse-programming---suit-16/README.md)
 +   [生成式 AI 应用：规划、设计与实现 (C++ 生成式 AI 编程)](docs/generative-ai-applications-planning-design-and-implementatio/README.md)
