@@ -424,6 +424,7 @@
 +   [代码内部：揭秘 C、C++、Java、JavaScript 和 Python 等语言的工作原理](docs/inside-the-code-unraveling-how-languages-like-c-c-java-javas/README.md)
 +   [中级 C 编程](docs/intermediate-c-programming/README.md)
 +   [心理治疗入门指南：图解指南](docs/introducing-psychotherapy-a-graphic-guide/README.md)
++   [Python 计算与编程入门指南，第二版：数据理解应用（麻省理工出版社）](docs/introduction-to-computation-and-programming-using-python-sec/README.md)
 +   [C++ 语言编程入门指南 - C++ 编程](docs/introduction-to-programming-in-c-language---c-programming/README.md)
 +   [无线定位入门指南：iPhone SDK 示例](docs/introduction-to-wireless-localization-with-iphone-sdk-exampl/README.md)
 +   [Java 与 C 编程初学者指南：二本合一学习 Java 和 C 编程、基础与代码的实用初学者指南](docs/java-ans-c-computer-programming-for-beginners-2-book-in-one-/README.md)
