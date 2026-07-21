@@ -434,6 +434,7 @@
 +   [Python 工程与科学计算入门指南](docs/introduction-to-engineering-and-scientific-computing-with-py/README.md)
 +   [C++ 语言编程入门指南 - C++ 编程](docs/introduction-to-programming-in-c-language---c-programming/README.md)
 +   [无线定位入门指南：iPhone SDK 示例](docs/introduction-to-wireless-localization-with-iphone-sdk-exampl/README.md)
++   [iOS 5 编程：突破极限——为 Apple iPhone、iPad 和 iPod Touch 开发卓越移动应用](docs/ios-5-programming-pushing-the-limits-developing-extraordinar/README.md)
 +   [Java 与 C 编程初学者指南：二本合一学习 Java 和 C 编程、基础与代码的实用初学者指南](docs/java-ans-c-computer-programming-for-beginners-2-book-in-one-/README.md)
 +   [Java 编程初学者指南：速成课程 (Java, Python, C++, R, C) (编程、Java 编程、C++ 编程、Python 编程、R 编程、C 编程，第 1 册)](docs/java-programming-for-beginners-crash-course-java-python-c-r-/README.md)
 +   [Javascript：Javascript 编程终极指南 (初学者指南、如何编程、软件开发、基础 Javascript、浏览器... 编码、CSS、Java、PHP) (第 7 卷)](docs/javascript-the-ultimate-guide-for-javascript-programming-jav/README.md)
