@@ -438,6 +438,7 @@
 +   [工程师 C++ 编程入门指南 (IEEE Press)](docs/introduction-to-programming-with-c-for-engineers-ieee-press/README.md)
 +   [无线定位入门指南：iPhone SDK 示例](docs/introduction-to-wireless-localization-with-iphone-sdk-exampl/README.md)
 +   [iOS 5 编程：突破极限——为 Apple iPhone、iPad 和 iPod Touch 开发卓越移动应用](docs/ios-5-programming-pushing-the-limits-developing-extraordinar/README.md)
++   [iOS 8 App 开发要要](docs/ios-8-app-development-essentials/README.md)
 +   [初学者指南：Java 与 C 计算机编程二合一](docs/java-and-c-computer-programming-for-beginners-2-book-in-one/README.md)
 +   [Java 与 C 编程初学者指南：二本合一学习 Java 和 C 编程、基础与代码的实用初学者指南](docs/java-ans-c-computer-programming-for-beginners-2-book-in-one-/README.md)
 +   [Java 核心基础第一卷：编程基础](docs/java-essentials-volume-1-programming-fundamentals/README.md)
