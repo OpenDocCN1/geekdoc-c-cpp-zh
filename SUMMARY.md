@@ -469,6 +469,7 @@
 +   [可视化学习 Python 3.0](docs/learn-python-30-visually/README.md)
 +   [通过 Unity 开发游戏学习 C#：使用 Unity 引擎构建、定制并优化专业游戏](docs/learning-c-by-developing-games-with-unity-build-customize-an/README.md)
 +   [金融现代 C++ 学习指南](docs/learning-modern-c-for-finance/README.md)
++   [C# 学习 RabbitMQ：IT 世界的魔法工具](docs/learning-rabbit-mq-with-c-a-magical-tool-for-the-it-wor/README.md)
 +   [Let Us C++：深入 C++ 语言细节，并了解为何程序员偏好 OOP 和 C++（英文版）](docs/let-us-c-dive-into-the-nitty-gritties-of-c-language-and-lear/README.md)
 +   [Let Us C 解决方案 - 第17版：Let US C 练习认证答案（英文版）](docs/let-us-c-solutions---17th-edition-authenticate-solutions-of-/README.md)
 +   [Let Us C 解决方案 - 第18版：Let US C 练习验证解决方案](docs/let-us-c-solutions---18th-edition-authenticate-solutions-of-/README.md)
