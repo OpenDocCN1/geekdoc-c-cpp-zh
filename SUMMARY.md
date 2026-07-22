@@ -509,6 +509,7 @@
 +   [C 和 C++ Windows 编程大师：现代开发者的完整指南](docs/mastering-windows-programming-with-c-and-c-a-complete-guide-/README.md)
 +   [C# 9 and .NET 5 微服务架构开发：使用 .NET 5 创建、开发并发布可扩展应用程序](docs/microservices-architecture-development-with-c-9-and-net-5-cr/README.md)
 +   [Java EE 架构师微服务：Java EE 架构师手册附录](docs/microservices-for-java-ee-architects-addendum-for-the-java-e/README.md)
++   [Microsoft SharePoint Foundation 2010 逐步指南](docs/microsoft-sharepoint-foundation-2010-step-by-step---includes/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
