@@ -1,0 +1,1171 @@
+- "# PerL 编程入门指南\n\n\n\n![](img/cover00476.jpeg)\n\n\n\n# 第一单元 PERL 简介\n\n## 1. PERL\
+  \ 简介与数据类型\n\n标量（Scalars）是简单的变量。它们以美元符号（`$`）开头。标量可以是数字、字符串或引用。引用实际上实际上是变量的地址，我们将在接下来的章节中看到。\n\
+  \n数组（Arrays）是标量的有序列表，你通过从 0 开始的数值索引访问它们。它们以“at”符号（`@`）开头。\n\n哈希表（Hashes）是无序的键值对集合，你使用键作为下标进行访问。它们以百分比符号（`%`）开头。\n\
+  \n![](img/image00428.jpeg)\n\n## 2. 构建 atgc.pl\n\n![](img/image00429.jpeg)\n![](img/image00430.jpeg)\n\
+  \n## 3. ~tr/// 函数\n\n这不是一个函数。这是一个置换运算符（transliteration operator）；它将 `SEARCHLIST`\
+  \ 中所有字符替换为 `REPLACEMENTLIST` 中的字符。\n\n语法：`tr/SEARCHLIST/REPLACEMENTLIST/`\n\n###\
+  \ 返回值\n此函数返回替换或删除的字符数量。示例\n\n以下是显示其基本用法示例代码：\n```\n#!/usr/bin/perl -w\n$string =\
+  \ 'the cat sat on the mat.';\n$string =~ tr/a-z/b/d;\nprint \"$string\\n\";\n```\n\
+  \n当执行上述代码时，它会产生以下结果。在这里，选项 `d` 用于删除匹配的字符。\n\n![](img/image00428.jpeg)\n\n## 4. ~s///\
+  \ 函数\n\n### 描述\n这不是一个函数。这是一个正则表达式替换运算符。根据 `PATTERN` 中指定的正则表达式，数据将被 `REPLACE` 替换。与\
+  \ `m//` 类似，分隔符由 `s` 之后的第一个字符定义。\n\n### 语法\n`s/PATTERN/REPLACE/`\n\n### 返回值\n此函数在失败时返回\
+  \ 0，在成功时返回替换的次数。示例\n\n```\n#!/usr/bin/perl -w\n$string = \"This is Test\";\n## 这会将\
+  \ Test 替换为 Best。\n$string =~ s/Test/Best/;\nprint \"$string\\n\";\n```\n\n当执行上述代码时，它产生以下结果\
+  \ — This is Best\n\n![](img/image00428.jpeg)\n\n## 5. 使用 Printf 函数格式化数值输出\n\n![](img/image00428.jpeg)\n\
+  ![](img/image00428.jpeg)\n![](img/image00431.jpeg)\n\n## 6. Chop 和 Chomp 运算符\n\n\
+  ![](img/image00428.jpeg)\n![](img/image00432.jpeg)\n![](img/image00428.jpeg)\n\n\
+  ## 7. 通用网关接口(CGI) - 简介与应用\n\n通用网关接口（CGI）是 Web 服务器将 Web 用户请求传递给应用程序并接收返回数据以转发给用户标准方法。当用户请求\
+  \ Web 页面（例如，通过点击高亮单词或输入网站地址）时，服务器返回请求的页面。然而，当用户在 Web 页面上填写表单并提交时，通常需要由应用程序处理。Web\
+  \ 服务器通常会将表单信息传递给一个处理数据的小应用程序，并可能会返回确认消息。这种在服务器和应用程序之间传递数据的方法或约定被称为通用网关接口（CGI）。它是\
+  \ Web 超文本传输协议（HTTP）的一部分。\n\n如果你正在创建一个网站并希望让 CGI 应用程序进行控制，你可以在 HTML 文件中编写的统一资源定位符（URL）中指定应用程序名称。如果你正在创建一个表单，此\
+  \ URL 可以作为 `FORMS` 标签的一部分。例如，你可能会编写：\n\n![](img/image00428.jpeg)\n```html\n<FORM\
+  \ METHOD=POST ACTION=http://www.mybiz.com/cgi-bin/formprog.pl>\n```\n\n\"mybiz.com\"\
+  \ 上的服务器会将控制权交给名为 `formprog.pl` 的 CGI 应用程序，以记录输入的数据并返回确认消息。（`.pl` 表示用 PERL 编写的程序，但也可以使用其他语言。）\n\
+  \n通用网关接口提供了一种一致的方法，使数据从用户请求传递到应用程序并返回用户。这意味着编写应用程序的人可以确保无论服务器使用何种操作系统（PC、Macintosh、UNIX、OS/390\
+  \ 或其他），它都能被使用。这仅仅是信息从 Web 服务器关于你的请求传递到应用程序并再次返回的一种基本方法。\n\nCGI 的重要性在于，它的灵活性使其成为从\
+  \ Web 服务器运行可执行文件的标准。该标准允许在网站上以无无尽的方式实现真正的交互性。\n\n![](img/image00428.jpeg)\n![](img/image00433.jpeg)![](img/image00434.jpeg)\n\
+  \n## CGI 的局限性与问题\n\n### 问题：\nImages/image00428.jpeg\n\n性能：每当用户请求时，服务器都必须启动 CGI 程序。当程序是用解释型语言（如\
+  \ Perl）编写时，服务器仍然需要进行解释或编译，这需要更多时间。如果命令被频繁调用，产生的工作量可能会使服务器崩溃。\n\n### CGI 的优势与应用：\n\
+  - **平台独立性**：大多数 Web 服务器支持 CGI，包括 Unix、Windows NT 和 Macintosh。\n- **语言独立性**：Perl、C、C++、Visual\
+  \ Basic、Java。\n- **可扩展性**：CGI 的简单性使其具有极的可扩展性。\n\n一个 CGI 程序的示例是 Wiki。用户代理请求名称；服务器执行\
+  \ CGI；CGI 程序检索条目的源码（如果存在），将其转换为 HTML 并传输给用户。如果点击“编辑此页面”链接，CGI 将内容填充到 HTML 区域或其他控件，并在用户提交时将其保存回服务器。\n\
+  \n# 第二单元\n\n## 数组与哈希表简介\n\n### 数组\n虽然我们经常处理单个变量，但有时处理变量集合很有用。对此，Perl 提供了选项：数组和哈希表。数组是最简单的集合类型，因此我们从数组开始。\n\
+  \n例如，假设你想测试“Hello”程序的所有可能输出。当然，你可以手动运行三次，每次更改 `$status` 变量的值。但你也可以使用包含状态变量所有可能值（'leaving'、'arriving'\
+  \ 和 'other'）的数组并遍历它。\n\n首先，如下定义数组：\n```perl\n@status = (\"leaving\", \"arriving\"\
+  , \"staying\", \"whatever\");\n```\n\n注意，数组不是以 `$` 符号开头，而是以 `@` 符号开头。\n\n现在你可以在\
+  \ hello 程序中添加如下内容：\n```perl\n@status = (\"leaving\", \"arriving\", \"staying\",\
+  \ \"whatever\"); foreach $status (@status) {\n```\n\n\n\n\n\n## Perl 数组操作与循环\n\n\
+  ## Foreach 循环\n\n这说明了几个点。首先，它演示了如何使用 `foreach` 语句遍历数组。`foreach` 的含义类似于：“对于数组中的每个元素，执行起始大括号和结束大括号之间的任何操作。”\n\
+  \n它还演示了一个循环结构，因为当程序运行到 `foreach` 循环的底部（最后一个大括号）时，只要数组中还有更多值，它就会再次回到顶部。一旦数组中的所有值都被使用完毕，循环就会终止。如果循环之后还有额外的指令，程序将从那里继续执行。\n\
+  \n注意 `print $greeting` 指令现在在分号前有一个点号和 `\\n`（在引号中）。`\\n` 是一个换行符。它告诉解释器在之后打印一个回车符。如果没有它，所有的问候语将全部连在同一行上。点号（在此背景下）被称为连接操作符。它将回车符与紧接其前的\
+  \ `$greeting` 连接在一起。\n\n```perl\nif ($status eq \"leaving\") {\n    $greeting =\
+  \ \"Goodbye\";\n}\nelsif ($status eq \"arriving\") {\n    $greeting = \"Hello\"\
+  ;\n}\nelse {\n    $greeting = \"Nice day\";\n}\nprint $greeting . \"\\n\";\n```\n\
+  \n### 练习\n目标：1) 熟悉条件判断\n指令：复制并运行上面的脚本，该脚本遍历数组并根据 `$status` 的内容更改 `$greeting` 的值。然后添加另一个\
+  \ `elsif` 条件，如果 `$status` 的值为 \"staying\"，则将 `$greeting` 的值改为 \"Set yourself down\
+  \ and rest\"。\n\n## Perl 记录 (Records)\n\nPerl 允许我们创建数组数组、数组哈希、哈希数组以及哈希哈希。这些复杂的、嵌套数据结构使用称为“引用”（references）的特殊变量来创建“记录”（records）（你使用“解引用”（dereferences）来访问记录的部分）。我们不会详细介绍\
+  \ Perl 引用和记录，但在我们开始解析 XML 时，知道它们是什么以及如何使用解引用来表示记录的特定部分是有用的。\n\n一个普通数组起始像这样：\n```perl\n\
+  @a_list = ();\n```\n\n我们可以将哈希表作为元素添加到数组中。哈希表没有普通的变量名，而是被称为“匿名”哈希：\n```perl\n@a_list\
+  \ = (\n    { 'key_1' => 'value_1', 'key_2' => 'value_2', 'key_3' => 'value_3' },\n\
+  \    { 'key_4' => 'value_4', 'key_5' => 'value_5', 'key_6' => 'value_6' }\n);\n\
+  ```\n\n要打印与 `key_2` 关联的值，我们使用特殊语法对其进行解引用：\n```perl\nprint %{$a_list[0]}->{\"key_2\"\
+  } . \"\\n\";\n```\n\n该打印命令的结果是 `value_2`。解引用的部分很容易识别：`$a_list[0]` 代表 `@a_list` 数组中的第一项，`key_2`\
+  \ 是我们匿名哈希中的键之一。困难的部分在于 `%` 以及你必须用来指示实际解引用的额外大括号。\n\n现在不要担心这些细节的含义，因为具体的用法取决于你解引用的是数组、哈希还是标量，以及你在什么语境下使用它们。此时最重要的是注意的是使用\
+  \ `->` 来连接嵌套的 Perl 记录层级。我们稍后会遇到。\n\n## 哈希 (Hashes)\n\n最后是另一种集合类型，哈希。本课程不会深入研究哈希，但简单来说，哈希类似于数组，不同之处在于不是通过数字引用其元素，而在哈希中你通过分配的键来引用它们。\n\
+  \n一个示例：\n```perl\n%names = (\n    'Durno' => 'John',\n    'Jordan' => 'Mark',\n\
+  \    'Hacker' => 'J.R.'\n);\n```\n\n注意哈希是用百分号表示的。要找到名为 Durno 的人的名字，你可以这样做：\n```perl\n\
+  $firstName = $names{'Durno'};\nprint $firstName;\n```\n\n## Split 函数\n\n`split`\
+  \ 函数根据分隔符将字符串拆分为多个字段。\n\n### 语法\n`split(pattern, string)`\n\n`split` 函数返回字段列表。如果没有指定限制，它返回所有字段。如果指定了限制，它返回最多指定数量的字段。\n\
+  \n### 返回值\n- 在**标量语境 (Scalar Context)** 中：返回第一个字段。\n- 在**数组语境 (Array Context)**\
+  \ 中：返回字段列表。\n\n### 示例\n```perl\nmy @fields = split(\":\", \"apple:banana:cherry\"\
+  );\nprint $fields[0]; # 输出 apple\n```\n\n## 复制数组\n\n复制一个 Perl 数组实际上非常简单，看起来像是个魔术，一旦你学会了怎么做。在其他语言中，`@array2`\
+  \ 似乎是对 `@array1` 的引用，但在 Perl 中它是一个拷贝。\n\n为了证明这确实复制了第一个数组，这里有一个短的 Perl 数组脚本来证明这一点：\n\
+  \n```perl\nmy @arr1 = qw/cheese pepperoni/;\nmy @arr2 = @arr1;\npush @arr1, 'works';\n\
+  \nsub print_arr() {\n    my (@arr) = @_;\n    foreach $elem (@arr) {\n        print\
+  \ \"$elem\\n\";\n    }\n}\n\nprint \"array1:\\n\";\nprint_arr(@arr1);\n\nprint \"\
+  \\narray2:\\n\";\nprint_arr(@arr2);\n```\n\n## 使用顺序数据填充数组\n\nPerl 为顺序数字和字母提供了快捷方法。例如，在数到\
+  \ 100 时不需要手动输入每个元素，我们可以这样做：\n\n```perl\n#!/usr/bin/perl\nmy @var_10 = (1..10);\n\
+  my @var_20 = (10..20);\nmy @var_abc = (a..z);\n\nprint \"@var_10\\n\"; # 打印 1 到\
+  \ 10 的数字\nprint \"@var_20\\n\"; # 打印 10 到 20 的数字\nprint \"@var_abc\\n\"; # 打印 a\
+  \ 到 z 的字母\n```\n\n\n\n\n\n## 3. qw 函数\n\n该函数是快速指定许多单引号单词的快捷。例如，`qw(foo bar baz)`\
+  \ 等同于 `('foo', 'bar', 'baz')`。一些程序员觉得使用 `qw` 让 Perl 脚本更易于读。你实际上可以使用任何一组分隔符，而不仅仅是括号。\n\
+  \n你只需要使用 `qw()` 来准备一个数组，如下面的示例所示。\n\n### 语法\n以下是该函数的简单语法 −\n\n```perl\nqw EXPR\n\
+  ```\n\n### 返回值\n此函数返回一个列表，由 `LIST` 中的元素组成，这些元素的评估方式就像它们被单引号一样。\n\n### 示例\n以下是显示其基本用法的示例代码\
+  \ −\n\n```perl\n#!/usr/bin/perl -w\n\n@array = qw(This is a list of words without\
+  \ interpolation); foreach $key (@array){\n\nprint\"Key is $key\\n\";\n\n}\n```\n\
+  \n当执行上述代码时，它产生以下结果 −\n\nKey is This Key is is Key is a Key is list Key is of\nKey\
+  \ is words Key is without\nKey is interpolation\n\n## 4. 数组大小的确定\n\n数组的大小可以使用数组的标量上下文（scalar\
+  \ context）来确定 - 返回值将数组中元素的数量 −\n\n```perl\n@array = (1,2,3);\n\nprint \"Size: \"\
+  ,scalar @array,\"\\n\";\n```\n\n返回值始终是数组的物理大小，而不是有效元素的数量。你可以使用此片段演示这一点，以及 `scalar\
+  \ @array` 和 `$#array` 之间的差异如下 −\n\n```perl\n#!/uer/bin/perl @array = (1,2,3);\n\n\
+  $array[50] =  4;\n\n$size =  @array;\n\n$max_index = $#array;\n\nprint  \"Size:$size\\\
+  n\";\nprint \"Max Index:  $max_index\\n\";\n```\n\n这将产生以下结果  −\n\nSize: 51\nMax\
+  \ Index: 50\n\n数组中只有四个元素包含信息，但数组的长度为 51，最高索引为 50。\n\n## 5. 访问数组的第一个和最后一个最后一个元素\n\
+  \n### Shift 函数\n此函数返回数组中的第一个值，将其删除并将数组列表的元素向左移动一位。如果没有指定 `ARRAY`，则移动子程序内的 `@_` 数组，否则移动\
+  \ `@ARGV`。`shift` 本质上与 `pop` 相同，但值是从数组的开头而不是末尾取的。\n\n### 语法\n以下是该函数的简单语法 −\n\n```perl\n\
+  shift ( [ARRAY] )\n\nshift\n```\n\n### 返回值\n如果数组为空，此函数返回 `undef`，否则返回数组中的第一个元素。\n\
+  \n### 示例\n以下是显示其基本用法的示例代码 −\n\n```perl\n#!/usr/bin/perl\n\n@array = (1..5);\n\n\
+  while ($element = shift(@array)) { print(\"$element - \");\n\n}\n\nprint(\"The End\\\
+  n\");\n```\n\n当执行上述代码时，它产生以下结果 −\n\n1 - 2 - 3 - 4 - 5 - The End\n\n## 6. Unshift\
+  \ 函数\n\n此函数将 `LIST` 中的元素按顺序放置在 `ARRAY` 的开头。这是 `shift()` 的相反函数。\n\n### 语法\n以下是该函数的简单语法\
+  \ −\n\n```perl\nunshift ARRAY, LIST\n```\n\n### 返回值\n此函数返回 `ARRAY` 中新元素的数量。\n\n\
+  ### 示例\n以下是显示其基本用法的示例代码 −\n\n```perl\n#!/usr/bin/perl -w @array = ( 1, 2, 3, 4);\n\
+  \nprint \"Value of array is @array\\n\" ; unshift( @array, 20, 30, 40 );\n\nprint\
+  \ \"Now value of array is @array\\n\" ;\n```\n\n当执行上述代码时，它产生以下结果 −\n\nValue of array\
+  \ is 1 2 3 4\nNow value of array is 20 30 40 1 2 3 4\n\n## 7. Push 函数\n\n此函数将 `LIST`\
+  \ 中的值推到列表 `ARRAY` 的末尾。与 `pop` 配合实现栈。\n\n### 语法\n以下是该函数的简单语法 −\n\n```perl\npush ARRAY,\
+  \ LIST\n```\n\n### 返回值\n此函数返回新数组中元素的数量。\n\n### 示例\n以下是显示其基本用法的示例代码 −\n\n```perl\n\
+  #!/usr/bin/perl -w\n\n$, = \",\";\n\n@array = ( 1, 2 );\n\nprint \"Before pushing\
+  \ elements @array \\n\"; push(@array, (3, 4, 5));\n\nprint \"After pushing elements\
+  \ @array \\n\";\n```\n\n当执行上述代码时，它产生以下结果 −\n\nBefore pushing elements 1 2\nAfter\
+  \ pushing elements 1 2 3 4 5\n\n## 8. Pop 函数\n\n此函数返回 `ARRAY` 的最后一个元素，从数组中移除该值。注意\
+  \ `ARRAY` 必须明确是一个数组，而不是列表。\n\n如果省略了 `ARRAY`，它将从主程序中的 `@ARGV` 或在 `eval STRING` 调用内、或\
+  \ `BEGIN`、`CHECK`、`INIT` 或 `END` 块中弹出最后一个值。否则，它尝试从子程序内的 `@_` 数组中弹出信息。它是 `push` 的相反操作，结合使用时，允许你实现“栈”。\n\
+  \n注意在应用 `pop` 之后数组将缩短。\n\n### 语法\n以下是该函数的简单语法 −\n\n```perl\npop ARRAY\n```\n\n###\
+  \ 返回值\n如果列表为空，此函数返回最后一个值，否则返回数组中的最后一个元素。\n\n### 示例\n以下是显示其基本用法的示例代码 −\n\n```perl\n\
+  #!/usr/bin/perl -w\n\n@a = (1, 2, 3);\n\nprint(\"pop() \", pop(@a), \"\\n\");\n\
+  ```\n\n当执行上述代码时，它产生以下结果 −\n\npop() 3\n\n## 9. 数组切片 (Array Slices)\n\n数组是一个存储有序列表的变量。要引用单个元素，将使用方括号。这里有一个简单的示例：\n\
+  \n```perl\n#!/usr/bin/perl\n\n@array = (1, 2, 3);\n\nprint $array[0];\nprint $array[1];\n\
+  ```\n\n## 10. Splice 函数\n\n此函数从 `ARRAY` 的 `OFFSET` 开始移除 `LENGTH` 个元素，并替换指定的 `LIST`。如果省略\
+  \ `LENGTH`，则从那里开始移除。\n\n切片允许一次性访问数组的多个元素：\n\n```perl\n#!/usr/bin/perl\n\n@ages =\
+  \ (25,30,40);\n\n@names = (\"John\", \"Paul\", \"Kumar\");\n\nprint @ages[0..1];\n\
+  print @names[1..2];\n```\n\n### 语法\n以下是该函数的简单语法 −\n\n```perl\nsplice ARRAY, OFFSET,\
+  \ LENGTH, LIST splice ARRAY, OFFSET\n```\n\n### 返回值\n此函数返回 −\n\n*   在标量上下文中，如果没有移除元素则返回\
+  \ `undef`\n*   在标量上下文中，移除的最后一个元素\n*   在列表中文中，失败时返回空列表\n*   在列表中文中，移除的元素列表\n\n###\
+  \ 示例\n以下是显示其基本用法的示例代码 −\n\n```perl\n#!/usr/bin/perl -w\n\n@array=(\"a\", \"e\",\
+  \ \"i\", \"o\", \"u\");\n\n@removedItems = splice(@array, 0 , 3, (\"A\", \"E\",\
+  \ \"I\"));\n\nprint \"Removed items: @removedItems\\n\";\n```\n\n当执行上述代码时，它产生以下结果\
+  \ −\n\nRemoved items: a e i\n\n## 11. 数组排序\n\nPerl 有名为 `sort` 的内置函数可以对数组排序。在最简单的形式下，你只需要给它一个数组，它就会返回排序后的元素。\n\
+  \n```perl\n@sorted = sort @original;\n```\n\n### 比较函数\nPerl 中 `sort` 的工作方式是，它遍历原始数组的每两个元素；在每次循环中，它将左侧的值放入变量\
+  \ `$a`，将右侧的值放入变量 `$b`。然后它调用一个比较函数。该“比较函数”如果 $a$ 的内容应该在左侧则返回 1，如果 $b$ 的内容应该在左侧则返回\
+  \ -1，或者如果两个值相同则无紧要，返回 0。\n\n默认情况下，你看不到这个比较函数，sort 根据 ASCII 表对值进行比较，但如果你愿意，可以显式地编写它：\n\
+  \n```perl\nsort { $a cmp $b } @words;\n```\n\n这段代码提供的结果与不带块的结果完全相同：`sort @words`。\n\
+  \n\n\n\n在这里你可以看到，默认情况下，perl 在比较函数中使用 `cmp`。这是因为 `cmp` 正好执行了我们这里的操作。它将两侧的值作为字符串进行比较：如果左参数“小于”右参数，则返回\
+  \ `1`；如果左参数“大于”右参数，则返回 `-1`；如果它们相同，则则返回 `0`。\n\n### 字母顺序排序\n\n如果你想忽略字符串中的大小写（这通常称为字母顺序排序），你可以像下面的示例那样操作：\n\
+  \n```perl\nmy @sorted_words = sort { lc($a) cmp lc($b) } @words;\n```\n\n在这里，为了比较，我们调用了\
+  \ `lc` 函数，它返回参数的小写版本。然后 `cmp` 比较这些小写版本，并决定原始字符串中哪个应该在前，哪个应该在后。\n\n结果是：\n\n```perl\n\
+  $VAR1 = [\n2. 'bar',\n3. 'foo',\n4. 'moo',\n5. 'Zorg'\n6];\n```\n\n### 在 Perl 中排序数字\n\
+  \n如果我们取一个数字数组并使用默认排序进行排序，结果可能不是我们预期的。\n\n```perl\nmy @numbers = (14, 3, 12, 2, 23);\n\
+  my @sorted_numbers = sort @numbers;\nsay Dumper \\@sorted_numbers;\n```\n\n```perl\n\
+  $VAR1 = [\n2.12,\n3.14,\n4.2,\n5.23,\n6.3];\n```\n\n如果你仔细考虑，当然，这并不奇怪。当比较函数看到 `12`\
+  \ 和 `3` 时，它将它们作为字符串进行比较。这意味着比较两个字符串中的第一个字符。\"1\"` 与 `\"3\"`。在 ASCII 表中 `\"1\"` 在\
+  \ `\"3\"` 之前，因此字符串 `\"12\"` 会在字符串 `\"3\"` 之前。\n\nPerl 并不会魔法地理解你想将这些值作为数字进行排序。\n\n\
+  不过没问题，我们可以写一个比较函数来将这两个值作为数字进行比较。为此，我们使用 `<=>`（也称为[宇宙船运算符](http://en.wikipedia.org/wiki/Spaceship_operator)），它将它的两个参数作为数字进行比较，并返回\
+  \ `1`、`-1` 或 `0`。\n\n```perl\nmy @sorted_numbers = sort { $a <=> $b } @numbers;\n\
+  ```\n\n结果如下：\n\n```perl\n$VAR1 = [\n2.2,\n3.3,\n4.12,\n5.14,\n6.23];\n```\n\n###\
+  \ 反转数组\n\n#### 反转列表 (LIST)\n\n在列表上下，返回一个由 `LIST` 元素按相反顺序组成的列表值。在标量上下，连接 `LIST` 的元素并返回一个所有字符顺序都相反的字符串值。\n\
+  \n```perl\nprint join(\", \", reverse \"world\", \"Hello\"); # Hello, world 2.\n\
+  print scalar reverse \"dlrow ,\" \"olleH\";# Hello, world 在标量上下不带参数使用，reverse()\
+  \ 反转 `$_`。\n$_ = \"dlrow ,olleH\";\nprint reverse; # 无输出，列表上下文\nprint scalar reverse;\
+  \ # Hello, world\n```\n\n注意，将数组反转自身（如 `@a = [reverse](http://perldoc.perl.org/functions/reverse.html)\
+  \ @a`）将尽可能保留不存在的元素；即对于非魔法数组或具有 `EXISTS` 和 `DELETE` 方法的绑定数组。\n\n### 创建哈希-向哈希添加元素-删除、排序和打印哈希元素\n\
+  \n哈希是键/值对的集合。哈希变量以百分号（`%`）开头。要引用哈希的单个元素，你将使用以 `$` 符号开头的哈希变量名，并在花括号中跟随与值相关的 `\"key\"\
+  `。\n\n这是一个使用哈希变量的简单示例：\n\n```perl\n#!/usr/bin/perl\n%data = ('John Paul', 45, 'Lisa',\
+  \ 30, 'Kumar', 40);\nprint \"\\$data{'John Paul'} = \\$data{'John Paul'}\\n\"; print\
+  \ \"\\$data{'Lisa'} = \\$data{'Lisa'}\\n\";\nprint \"\\$data{'Kumar'} = \\$data{'Kumar'}\\\
+  n\";\n```\n\n这将产生以下结果：\n\n```\n$data{'John Paul'} = 45\n$data{'Lisa'} = 30\n$data{'Kumar'}\
+  \ = 40\n```\n\n#### 创建哈希\n\n哈希通过以下两种方式之一创建。在第一种方法中，你逐个地为命名键分配值：\n\n```perl\n$data{'John\
+  \ Paul'} = 45;\n$data{'Lisa'} = 30;\n$data{'Kumar'} = 40;\n```\n\n在第二种情况下，你使用列表，它通过从列表中提取单独对来转换：对的第一个元素用作键，第二个用作值。例如：\n\
+  \n```perl\n%data = ('John Paul', 45, 'Lisa', 30, 'Kumar', 40);\n```\n\n为了清晰起见，你可以使用\
+  \ `=>` 作为 `,` 的别名，如下所示键/值对：\n\n```perl\n%data = ('John Paul' => 45, 'Lisa' => 30,\
+  \ 'Kumar' => 40);\n```\n\n这是上述形式的另一种变体，看这里，在这里所有的键都以连字符（`-`）开头，且不需要加引号：\n\n```perl\n\
+  %data = (-JohnPaul => 45, -Lisa => 30);\n```\n\n（注：提供的原始文本包含大量重复和碎片，此处已根据逻辑进行了清理和翻译，保留了所有核心信息和示例。）\n\
+  \n\n\n\n`m//` 的工作方式与 `q//` 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><`\
+  \ 都是有效的。上面的示例可以重写为：\n\n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again\
+  \ foo\"; if ($bar =~ m[foo]){\n    print \"First time is matching\\n\";\n}else{\n\
+  \    print \"First time is not matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~\
+  \ m{foo}){\n    print \"Second time is matching\\n\";\n}else{\n    print \"Second\
+  \ time is not matching\\n\";\n}\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用\
+  \ `m` 前缀。\n\n注意，整个匹配表达式（即 `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\
+  \n```perl\n$true = ($foo =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为\
+  \ 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\n```perl\nmy ($hours, $minutes,\
+  \ $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g`\
+  \ 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\n| 修饰 | 描述 |\n| :--- | :--- |\n| `i`\
+  \ | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n\
+  | `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。 |\n|\
+  \ `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本\
+  \ - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\
+  \n```perl\n#!/usr/bin/perl\n@list = qw/food foosball subeo footnote terfoot canic\
+  \ footbrdige/; foreach (@list) {\n    $first = $1 if ?(foo.*)?;\n    $last = $1\
+  \ if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\n\";\n```\n\n执行上述程序时，它会产生以下结果：`First:\
+  \ food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及\
+  \ `` `'` ，它包含匹配字符串之后的所有内容。`$` 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n\
+  $string = \"The food is in the salad bar\";\n$string =~ m/foo/; print \"Before:\
+  \ $`\\n\"; print \"Matched: $&\\n\"; print \"After:  $'\\n\";\n```\n\n执行上述程序时，它会产生以下结果：\n\
+  Before: The\nMatched: foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符\
+  \ `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\n`PATTERN`\
+  \ 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的 dog\
+  \ 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\";\n\
+  $string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog sat\
+  \ on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :--- | :---\
+  \ |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()`\
+  \ 和 `m><` 都是有效的。\n\n`m//` 的工作方式与 `q//` 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()`\
+  \ 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\n```perl\n#!/usr/bin/perl\n$bar = \"This is foo\
+  \ and again foo\"; if ($bar =~ m[foo]){\n    print \"First time is matching\\n\"\
+  ;\n}else{\n    print \"First time is not matching\\n\";\n}\n\n$bar = \"foo\";\n\
+  if ($bar =~ m{foo}){\n    print \"Second time is matching\\n\";\n}else{\n    print\
+  \ \"Second time is not matching\\n\";\n}\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用\
+  \ `m` 前缀。\n\n注意，整个匹配表达式（即 `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\
+  \n```perl\n$true = ($foo =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为\
+  \ 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\n```perl\nmy ($hours, $minutes,\
+  \ $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g`\
+  \ 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\n| 修饰 | 描述 |\n| :--- | :--- |\n| `i`\
+  \ | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n\
+  | `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。 |\n|\
+  \ `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本\
+  \ - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\
+  \n```perl\n#!/usr/bin/perl\n@list = qw/food foosball subeo footnote terfoot canic\
+  \ footbrdige/; foreach (@list) {\n    $first = $1 if ?(foo.*)?;\n    $last = $1\
+  \ if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First:\
+  \ food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及\
+  \ `` `'` ，它包含匹配字符串之后的所有内容。`$` 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n\
+  $string = \"The food is in the salad bar\";\n$string =~ m/foo/; print \"Before:\
+  \ $`\\n\"; print \"Matched: $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\n\
+  Before: The\nMatched: foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符\
+  \ `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\n`PATTERN`\
+  \ 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的 dog\
+  \ 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\";\n\
+  $string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n当执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n（注：由于系统限制，在之前的回复中出现了重复内容，此处已重新生成了干净、完整的中文译文）\n\n[content]\n`m//` 的工作方式与\
+  \ `q//` 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 3. 匹配运算符修饰\n\n匹配运算符支持自己的一组修饰。`/g` 修饰允许全局匹配。`/i` 修饰将使匹配不区分大小写。以下是修饰的完整列表：\n\
+  \n| 修饰 | 描述 |\n| :--- | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^`\
+  \ 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。 |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n\
+  | `x` | 允许在表达式中使用空白以提高清晰度。 |\n| `g` | 全局查找所有匹配项。 |\n| `cg` | 允许在全局匹配失败后继续搜索。 |\n\
+  \n### 仅匹配一次\n\n匹配运算符还有一个更简单的版本 - `?PATTERN?` 运算符。这基本上与 `m//` 运算符相同，不同之处在于它在每次调用重置之前只在搜索的字符串中匹配一次。\n\
+  \n例如，你可以使用它来获取列表中的第一个和最后一个元素：\n\n```perl\n#!/usr/bin/perl\n@list = qw/food foosball\
+  \ subeo footnote terfoot canic footbrdige/; foreach (@list) {\n    $first = $1 if\
+  \ ?(foo.*)?;\n    $last = $1 if /(foo.*)/;\n}\nprint \"First: $first, Last: $last\\\
+  n\";\n```\n\n当执行上述程序时，它会产生以下结果：`First: food, Last: footbrdige`。\n\n### 4. 正则表达式变量\n\
+  \n正则表达式变量包括 `$&`，它包含整个匹配字符串；`` ` ```，它包含匹配字符串之前的所有内容；以及 `` `'` ，它包含匹配字符串之后的所有内容。`$`\
+  \ 包含最后一次分组匹配的内容。以下代码演示了结果：\n\n```perl\n#!/usr/bin/perl\n$string = \"The food is\
+  \ in the salad bar\";\n$string =~ m/foo/; print \"Before: $`\\n\"; print \"Matched:\
+  \ $&\\n\"; print \"After:  $'\\n\";\n```\n\n当执行上述程序时，它会产生以下结果：\nBefore: The\nMatched:\
+  \ foo\nAfter: d is in the salad bar\n\n### 5. 替换运算符\n\n替换运算符 `s///` 实际上是匹配运算符的扩展，允许你将匹配到的文本替换为新文本。该运算符的形式为：`s/PATTERN/REPLACEMENT/`。\n\
+  \n`PATTERN` 是我们要查找的文本的正则表达式。`REPLACEMENT` 是我们用于替换所找到文本的文本或正则表达式规范。例如，我们可以使用以下正则表达式将所有的\
+  \ dog 替换为 cat：\n\n```perl\n#!/usr/bin/perl\n$string = \"The cat sat on the mat\"\
+  ;\n$string =~ s/cat/dog/;\nprint \"$string\\n\";\n```\n\n执行上述程序时，它产生以下结果：`The dog\
+  \ sat on the mat`。\n\n#### 替换运算符修饰\n\n以下是用于替换运算符的所有修饰符列表：\n\n| 修饰 | 描述 |\n| :---\
+  \ | :--- |\n| `i` | 使匹配不区分大小写。 |\n| `m` | 指定如果字符串包含换行符或回车符，`^` 和 `$` 运算符现在将匹配换行边界，而不是字符串边界。\
+  \ |\n| `o` | 仅评估一次表达式。 |\n| `s` | 允许使用 `.` 匹配换行符。 |\n| `x` | 允许在表达式中使用空白以提高清晰度。\
+  \ |\n| `g` | 将找到的所有表达式出现处替换为替换文本。 |\n| `e` | 将替换内容像 Perl 语句一样进行评估，并使用其返回值作为替换文本。\
+  \ |\n\n### 6. 翻译运算符\n\n（注：此处原文为 Translation Operator，译为翻译运算符）\n\n`m//` 的工作方式与 `q//`\
+  \ 运算符系列相同。你可以使用任何自然匹配的字符组合作为表达式的分隔符。例如，`m{}`、`m()` 和 `m><` 都是有效的。上面的示例可以重写为如下：\n\
+  \n```perl\n#!/usr/bin/perl\n$bar = \"This is foo and again foo\"; if ($bar =~ m[foo]){\n\
+  \    print \"First time is matching\\n\";\n}else{\n    print \"First time is not\
+  \ matching\\n\";\n}\n\n$bar = \"foo\";\nif ($bar =~ m{foo}){\n    print \"Second\
+  \ time is matching\\n\";\n}else{\n    print \"Second time is not matching\\n\";\n\
+  }\n```\n\n如果分隔符是正斜杠，你可以从 `m//` 中省略 `m`，但对于所有其他分隔符，你必须使用 `m` 前缀。\n\n注意，整个匹配表达式（即\
+  \ `=~` 或 `!~` 左侧的表达式加上匹配运算符）在表达式匹配时会返回真（在标量语境下）。因此，下述语句：\n\n```perl\n$true = ($foo\
+  \ =~ m/foo/);\n```\n\n如果 `$foo` 匹配正则，则将 `$true` 设置为 1；如果匹配失败，则为 0。在列表语境下，匹配返回任何分组表达式的内容。例如，当从时间字符串中提取小时、分钟和秒时，可以使用：\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n## 8. 更复杂的正则表达式\n\n你并不一定要匹配固定字符串。事实上，你可以通过更复杂的表达式匹配任何你想象到的内容。这里有一个快速表列了 Python\
+  \ 中使用的正则表达式语法：\n\n| 模式 | 描述 |\n| :--- | :--- |\n| `^` | 匹配行首。 |\n| `$` | 匹配行尾。 |\n\
+  | `.` | 匹配除换行符以外的单个字符。使用 `m` 选项允许匹配换行符。 |\n| `[...]` | 匹配括号内的单个字符。 |\n| `[^...]`\
+  \ | 匹配不在括号内的单个字符。 |\n| `*` | 匹配表达式 0 次或多次。 |\n| `+` | 匹配表达式一次或多次。 |\n| `?` | 匹配表达式\
+  \ 0 次或 1 次。 |\n| `{n}` | 匹配表达式的精确 n 次。 |\n| `{n,}` | 匹配表达式 n 次或多次。 |\n| `{n, m}`\
+  \ | 匹配表达式至少 n 次且最多 m 次。 |\n| `a\\|b` | 匹配 a 或 b。 |\n| `\\w` | 匹配单词字符。 |\n| `\\W`\
+  \ | 匹配非单词字符。 |\n| `\\s` | 匹配空白字符。等于 `[\\t\\n\\r\\f]`。 |\n| `\\S` | 匹配非空白字符。 |\n\
+  | `\\d` | 匹配数字。等于 `[0-9]`。 |\n| `\\D` | 匹配非数字。 |\n| `\\A` | 匹配字符串开头。 |\n| `\\Z`\
+  \ | 匹配字符串结尾。如果存在换行符，它匹配换行符之前。 |\n| `\\z` | 匹配字符串结尾。 |\n| `\\G` | 匹配上次匹配结束的位置。 |\n\
+  \n\n\n\n\n| `\\b` | 在括号外时匹配单词边界。在括号内时匹配退格符 `(0x08)`。 |\n| `\\B` | 匹配非单词边界。 |\n|\
+  \ `\\n`, `\\t`, 等. | 匹配换行符、回车、制表符等。 |\n| `\\1...\\9` | 匹配第 n 个分组子表达式。 |\n| `\\10`\
+  \ | 如果已经匹配，则匹配第 n 个分组子表达式。否则，引用字符代码的八进制表示。 |\n| `[aeiou]` | 匹配给定集合中的单个字符 |\n| `[^aeiou]`\
+  \ | 匹配给定集合之外的单个字符 |\n\n元字符 `^` 匹配字符串的开头，元符号 `$` 匹配字符串的结尾。以下是一些简短的示例。\n\n### 字符串中没有任何内容（起始和结束相邻）\n\
+  ```perl\n^$/\n```\n\n### 三个数字，每个数字后面跟着一个空白 字符（例如 \"3 4 5 \")\n```perl\n/(\\d\\s){3}/\n\
+  ```\n\n### 匹配一个字符串，其中每个奇数字母都是 a（例如 \"abacadaf\"）\n```perl\n/(a.)+/\n```\n\n### 字符串以一个或多个数字开头\n\
+  ```perl\n/^\\d+/\n```\n\n### 以一个或多个数字结尾的字符串\n```perl\n/\\d+$/\n```\n\n让我们来看另一个例子。`#!/usr/bin/perl`\n\
+  \n```perl\n$string = \"Cats go Catatonic\\nWhen given Catnip\"; ($start) = ($string\
+  \ =~ /\\A(.*?)  /);\n@lines = $string =~ /^(.*?)  /gm;\nprint \"First word: $start\\\
+  n\",\"Line starts: @lines\\n\";\n```\n\n执行上述程序时，它产生以下结果 − First word: Cats\nLine\
+  \ starts: Cats When\n\n## 9. 边界匹配\n\n`\\b` 匹配任何单词边界，该边界由 `\\w` 类和 `\\W` 类之间的差异定义。由于\
+  \ `\\w` 包含了单词字符，而 `\\W` 包含反之，这通常意味着单词的终止。`\\B` 断言匹配任何不是单词边界的位置。例如 −\n\n```perl\n\
+  /\\bcat\\b/ # 匹配 'the cat sat' 但不是 'cat on the mat'\n/\\Bcat\\B/ # 匹配 'verification'\
+  \ 但不是 'the cat on the mat'\n/\\bcat\\B/ # 匹配 'catatonic' 但不是  'polecat'\n/\\Bcat\\\
+  b/ # 匹配 'polecat' 但不是  'catatonic'\n```\n\n### 选择备选项\n\n`|` 字符就像 Perl 中的标准或 (or)\
+  \ 或位或 (bitwise OR)。它指定了正则表达式或组内的交替匹配。例如，要在表达式中匹配 \"cat\" 或 \"dog\"，你可能使用这种 −\n\n\
+  ```perl\nif ($string =~ /cat|dog/)\n```\n\n你可以将表达式中的单独元素组合在一起，以支持复杂匹配。搜索两个名字可以通过两个独立的测试来实现，如下\
+  \ −\n\n```perl\nif (($string =~ /Martin Brown/) || ($string =~ /Sharon  Brown/))\n\
+  ```\n\n这可以写成如下：\n\n```perl\nif ($string =~ /(Martin|Sharon) Brown/)\n```\n\n## 分组匹配\n\
+  \n从正则表达式的角度来看，两者之间没有区别，也许前者稍微清晰一点。\n\n```perl\n$string =~ /(\\S+)\\s+(\\S+)/;\n\
+  and\n$string =~ /\\S+\\s+\\S+/;\n```\n\n然而，分组的好处在于它允许我们从正则表达式中提取序列。分组以列表形式返回，按照它们在原始表达式出现的顺序。例如，在下面的片段中，我们从字符串中提取了小时、分钟和秒。\n\
+  \n```perl\nmy ($hours, $minutes, $seconds) = ($time =~ m/(\\d+):(\\d+):(\\d+)/);\n\
+  ```\n\n除了这种直接方法外，匹配的组也可以在特殊的 `$x` 变量可用，其中 `x` 是正则表达式中的组编号。因此，我们可以如下所示重写之前的示例 −\n\
+  \n```perl\n#!/usr/bin/perl\n$time = \"12:05:30\";\n$time =~ m/(\\d+):(\\d+):(\\\
+  d+)/;\nmy ($hours, $minutes, $seconds) = ($1, $2, $3);\nprint \"Hours : $hours,\
+  \ Minutes: $minutes, Second: $seconds\\n\";\n```\n执行上述程序时，它产生以下结果 − Hours : 12,\
+  \ Minutes: 05, Second: 30\n\n当组被用于替换表达式时，`$x` 语法可以用于替换文本。因此，我们可以使用这种方法格式化日期字符串 −\n\
+  \n```perl\n#!/usr/bin/perl\n$date = '03/26/1999';\n$date =~ s#(\\d+)/(\\d+)/(\\\
+  d+)#$3/$1/$2#;\nprint \"$date\\n\";\n```\n执行上述程序时，它产生以下结果 − 1999/03/26\n\n正则表达式是一个定义你正在查看的模式或模式的字符字符串。Perl\
+  \ 中正则表达式的语法与你在其他支持正则表达式的程序（如 `sed`、`grep` 和 `awk`）中看到的非常相似。\n\n应用正则表达式的基本方法是使用模式绑定运算符\
+  \ `~=` 和 `!~`。第一个运算符是测试赋值运算符。Perl 中有正则表达式运算符：\n\n*   匹配正则表达式 - `m//`\n*   替换正则表达式\
+  \ - `s///`\n*   字符转换正则表达式 - `tr///`\n\n斜杠在每情况下都是你所指定的正则表达式 (regex) 的分隔符。如果你习惯任何其他分隔符，可以使用它们来代替斜杠。\n\
+  \n## 10. 匹配运算符\n\n`~=` 和 `!~` 用于匹配。第一个运算符是测试赋值运算符。Perl 中有正则表达式运算符：\n\n*   匹配正则表达式\
+  \ - `m//`\n*   替换正则表达式 - `s///`\n*   字符转换正则表达式 - `tr///`\n\n\n\n\n\n# 以下是与翻译相关的运算符列表\n\
+  \n![](img/image00450.jpeg)\n\n`/d` 修饰符会删除匹配 `SEARCHLIST` 但在 `REPLACEMENTLIST` 中没有对应项目的字符。例如：\n\
+  \n![](img/image00451.jpeg)\n\n最后一个修饰符 `/s` 会移除被替换的重复字符序列，因此：\n\n![](img/image00452.jpeg)\n\
+  \n## 更复杂的正则表达式\n\n你不仅仅需要对固定字符串进行匹配。事实上，通过使用更复杂的正则表达式，你可以匹配几乎你所想象到的任何内容。这里有一个快速的备查表：\n\
+  \n![](img/image00453.jpeg)\n![](img/image00454.jpeg)\n\n量词可以指定你想要匹配的前一个“内容”的次数，其中“内容”可以是字面字符、上述列出的元字符之一，或者是括号中的一组字符或元字符。\n\
+  \n![](img/image00455.jpeg)\n\n元字符 `^` 匹配字符串的开头，符号 `$` 匹配字符串的结尾。\n\n这里是一些简短的示例\n\n\
+  ![](img/image00456.jpeg)\n\n让我们再看另一个示例\n\n![](img/image00457.jpeg)\n![](img/image00458.jpeg)\n\
+  \n## 边界匹配\n\n`\\b` 匹配任何单词边界，其定义取决于 `\\w` 类和 `\\W` 类之间的差异。因为 `\\w` 包含单词字符，而 `\\W`\
+  \ 则反之，这通常意味着单词的终止。`\\B` 断言匹配任何不是单词边界的位置。例如：\n\n![](img/image00459.jpeg)\n\n## 选择备选方案\n\
+  \n字符 `|` 就像 Perl 中的标准逻辑或（OR）或位或（bitwise OR）。它指定了正则表达式或组内的交替匹配。例如，在表达式中匹配 \"cat\"\
+  \ 或 \"dog\"，你可以使用以下内容：\n\n![](img/image00460.jpeg)\n\n你可以将表达式的各个元素分组，以支持复杂的匹配。搜索两个人的名字可以通过两个独立的测试来实现，如下：\n\
+  \n![](img/image00461.jpeg)\n\n## 分组匹配\n\n从正则表达式的角度来看，除了前者可能稍微清晰一点，两者没有区别。\n\n![](img/image00462.jpeg)\n\
+  \n然而，分组的好处在于它允许我们从正则表达式中提取序列。分组以列表的形式按照它们在原始文件中出现的顺序返回。例如，在下面的片段中，我们从字符串中提取了小时、分钟和秒。\n\
+  \n![](img/image00463.jpeg)\n\n除了这种直接方法外，匹配的组也可以通过特殊的 `$x` 变量可用，其中 `x` 是正则表达式中的组编号。因此，我们可以将前面的示例重写为：\n\
+  \n![](img/image00464.jpeg)\n\n当组被用于替换表达式时，`$x` 语法可以于替换文本。因此，我们可以使用这种方法格式化日期字符串：\n\
+  \n![](img/image00465.jpeg)\n\n## 使用 \\G 断言\n\n`\\G` 断言允许你从上一次匹配发生的地方继续搜索。\n\n例如，在下面的代码中，我们使用了\
+  \ `\\G`，以便我们可以搜索到正确的位置并提取某些信息，而无需创建一个更复杂的单个正则表达式：\n\n![](img/image00466.jpeg)\n\n\
+  `\\G` 断言实际上只是 `pos` 函数的等元符号，因此在正则表达式调用之间，你可以继续使用 `pos`，甚至通过将 `pos` 作为左值函数来修改 `pos`\
+  \ 的值（以及 `\\G`）：\n\n## 正则表达式变量\n\n正则表达式变量包括 `$`，它包含最后一次分组匹配的内容；`$&`，它包含整个匹配字符串；``\
+  \ ```，包含匹配字符串之前的所有内容；以及 `'`，它包含匹配字符串之后的所有内容。\n\n以下代码演示了结果：\n\n![](img/image00467.jpeg)\n\
+  \n## 12. 匹配量词和边界运算符\n\n量词可以指定你想要匹配的前一个“内容”的次数，其中“内容”可以是字面字符、上述列出的元字符之一，或者是括号中的一组字符或元字符。\n\
+  \n![](img/image00468.jpeg)\n\n元字符 `^` 匹配字符串的开头，符号 `$` 匹配字符串的结尾。\n\n这里是一些简短的示例\n\n\
+  ![](img/image00469.jpeg)\n\n让我们再看另一个示例\n\n![](img/image00470.jpeg)\n\n## 边界匹配\n\n\
+  `\\b` 匹配任何单词边界，其定义取决于 `\\w` 类和 `\\W` 类之间的差异。因为 `\\w` 包含单词字符，而 `\\W` 则反之，这通常意味着单词的终止。`\\\
+  B` 断言匹配任何不是单词边界的位置。例如：\n\n![](img/image00471.jpeg)\n\n## 选择备选方案\n\n字符 `|` 就像 Perl\
+  \ 中的标准逻辑或（OR）或位或（bitwise OR）。它指定了正则表达式或组内的交替匹配。例如，在表达式中匹配 \"cat\" 或 \"dog\"，你可以使用以下内容：\n\
+  \n![](img/image00472.jpeg)\n\n你可以将表达式的各个元素分组，以支持复杂的匹配。搜索两个人的名字可以通过两个独立的测试来实现，如下：\n\
+  \n![](img/image00473.jpeg)\n\n## Unit-IV\n\n### 1. Perl 控制语句\n\nPerl 控制语句– if 语句\
+  \ – if-else – if-elsif – if-elsif-else – while loop – until loop – foreach loop\n\
+  \n可能会遇到需要多次执行代码块的情况。通常情况下，语句按顺序执行：函数中的第一个语句执行，然后是第二个，依此类推。\n\n编程语言提供了各种控制结构，允许更复杂的执行路径。Perl\
+  \ 语言提供了以下类型的循环来处理 0474.jpeg\n\n| 循环类型 | 描述 |\n| [while loop](https://www.tutorialspoint.com/perl/while_loop.htm)\
+  \ | 当条件为真时重复语句。在执行循环体之前测试条件。 |\n| [until loop](https://www.tutorialspoint.com/perl/until_loop.htm)\
+  \ | 直到条件变为真时重复语句。在执行循环体之前测试条件。 |\n| [for loop](https://www.tutorialspoint.com/perl/for_loop.htm)\
+  \ | 多次执行语句序列并简化循环变量的代码。 |\n| [foreach loop](https://www.tutorialspoint.com/perl/foreach_loop.htm)\
+  \ | foreach 循环遍历列表值，并将变量设置为列表中的每个元素。 |\n| [do...while loop](https://www.tutorialspoint.com/perl/do_while_loop.htm)\
+  \ | 类似于 while 语句，但在循环体末尾测试条件 |\n| [nested loops](https://www.tutorialspoint.com/perl/nested_loops.htm)\
+  \ | 你可以在任何其他 while、for 或 do..while 中使用一个或多个循环\n\n### 2. 控制语句\n\n控制语句改变正常的执行序列。当执行离开作用域时，在该作用域内创建的所有自动对象都会被销。\n\
+  \nC 支持以下控制语句。点击以下链接查看详细信息。\n\n| 控制语句 | 描述 |\n| [next statement](https://www.tutorialspoint.com/perl/next_statement.htm)\
+  \ | 使循环跳过其剩余部分并立即重新测试条件以进行迭代。 |\n| [last statement](https://www.tutorialspoint.com/perl/last_statement.htm)\
+  \ | 终止循环语句并将执行转移到循环后的后续语句。 |\n\n\n\n\n\n| [continue 语句](http://www.tutorialspoint.com/perl/perl_continue_statement.htm)\
+  \ | 一个 `continue` 块，它在条件准备再次评估之前总是会被执行。 |\n| [redo 语句](http://www.tutorialspoint.com/perl/perl_redo_statement.htm)\
+  \ | `redo` 命令会重启循环块，而不再次评估条件。如果存在 `continue` 块，它将不会被执行。 |\n| [goto 语句](http://www.tutorialspoint.com/perl/perl_goto_statement.htm)\
+  \ | Perl 支持三种形式的 `goto` 命令：`goto label`、`goto expr` 和 `goto &name`。 |\n\n## 3. 无限循环\n\
+  \n如果一个条件永远不变为假，循环就会变成无限循环。`for` 循环传统上用于此目的。由于构成 `for` 循环的三个表达式中没有任何是必须的，你可以通过留空条件表达式来创建一个无限循环。\n\
+  \n```perl\n#!/usr/local/bin/perl\nfor( ; ; )\n{\n    printf \"This loop will run\
+  \ forever.\\n\";\n}\n```\n\n你可以通过按下 `Ctrl + C` 键来终止上面的无限循环。\n\n当条件表达式不存在时，假设它为真。你可以有一个初始化表达式和增加表达式，但程序员更经常使用\
+  \ `for (;;)` 结构来表示无限循环。\n\nPerl 条件语句有助于决策制定，这要求程序员指定一个或多个需要由程序评估或测试的条件，以及当条件被确定为真时执行的语句或多个语句，可选地，当条件被确定为假时执行的其他语句。\n\
+  \n以下是大多数编程语言中常见的典型决策结构的一般形式 ——\n\n![](img/image00475.jpeg)\n\n数字 `0`、字符串 `'0'` 和\
+  \ `\" \"`、空列表 `()` 以及 `undef` 在布尔上下文中均为假值，而所有其他值均为真值。通过 `!` 或 `not` 对真值进行取反会返回一个特殊的假值。\n\
+  \nPerl 编程语言提供了以下类型的条件语句。\n\n| 语句 | 说明 |\n| :--- | :--- |\n| `if` 语句 | `if` 语句由一个布尔表达式后跟一个或多个语句组成。\
+  \ |\n| `if...else` 语句 | `if` 语句可以跟随一个可选的 `else` 语句。 |\n| `if...elsif...else` 语句\
+  \ | `if` 语句可以跟随一个可选的 `elsif` 语句，然后是一个一个可选的 `else` 语句。 |\n| `unless` 语句 | `unless`\
+  \ 语句由一个布尔表达式后跟一个或多个语句组成。 |\n| `unless...else` 语句 | `unless` 语句可以跟随一个可选的 `else` 语句。\
+  \ |\n\n## 4. Perl 变量的作用域\n\nPerl 中有两种主要的变量类型。其中一种是使用已过时的 `use vars` 结构或 `our` 声明的包全局变量。\n\
+  \n另一个是使用 `my` 声明的词法变量。\n\n让我们看看当使用 `my` 声明变量会发生什么？该变量在代码的哪些部分可见？换句话说，变量的作用范围是什么？\n\
+  \n### 变量作用域：闭包块\n\n```perl\n#!/usr/bin/perl\nuse strict;\nuse warnings;\n{\n   \
+  \ my $email = 'foo@bar.com';\n    print \"$email\\n\"; # [foo@bar.com]\n}\n# print\
+  \ $email;\n# $email 不存在\n# Global symbol \"$email\" requires explicit package name\
+  \ at ...\n```\n\n在匿名块（一对大括号 `{}`）内部，我们首先看到名为 `$email` 的新变量的声明。该变量从其声明点一直到块的结束都存在。因此，右大括号\
+  \ `}` 之后的行必须被注释掉。如果你删除了 `# print $email;` 语句中的 `#` 并尝试运行脚本，你将得到以下编译时错误：Global symbol\
+  \ \"$email\" requires explicit package name at ....\n\n换句话说，每个用 `my` 声明的变量的作用域都是其所属的闭包块。\n\
+  \n### 变量作用域：随处可见\n\n变量 `$lname` 在代码开头声明。它在文件结束前的处处都是的。即使在块内部也是如此。即使这些是函数声明。如果我们在块内部更改变量，这将更改代码其余部分的值。即使当你离开块也是如此：\n\
+  \n```perl\n#!/usr/bin/perl\nuse strict;\nuse warnings;\nmy $lname = \"Bar\";\nprint\
+  \ \"$lname\\n\"; # Bar\n{\n    print \"$lname\\n\"; # Bar\n    $lname = \"Other\"\
+  ;\n    print \"$lname\\n\"; # Other\n}\nprint \"$lname\\n\"; # Other\n```\n\n###\
+  \ 变量被其他声明隐藏\n\n```perl\n#!/usr/bin/perl\nuse strict;\nuse warnings;\nmy $fname =\
+  \ \"Foo\";\nprint \"$fname\\n\"; # Foo\n{\n    print \"$fname\\n\"; # Foo\n    my\
+  \ $fname = \"Other\";\n    print \"$fname\\n\"; # Other\n}\nprint \"$fname\\n\"\
+  ; # Foo\n```\n\n在这种情况下，变量 `$fname` 在代码开头声明。如前所述，它在文件结束前的处处都是的，但在那些被同名局部声明变量隐藏的地方除外。在块内部，我们使用\
+  \ `my` 声明了另一个同名变量。这有效地隐藏了块外部声明的 `$fname` 直到我们离开块。在块结束 `}` 处，内部声明的 `$fname` 将被销毁，原始\
+  \ `$fname` 将再次可访问。多个块中的同名：你可以自由地在多个块中使用相同的变量名。这些变量之间没有联系。\n\n```perl\n#!/usr/bin/perl\n\
+  use strict;\nuse warnings;\n{\n    my $name = \"Foo\";\n    print \"$name\\n\";\
+  \ # Foo\n}\n{\n    my $name = \"Other\";\n    print \"$name\\n\"; # Other\n}\n```\n\
+  \n### 文件内包声明\n\n这是一个稍微高级的示例，但在这里提到它可能是重要的：\n\nPerl 允许我们使用文件内的 `package` 关键字在命名空间切换。包声明并不提供作用域。如果你在隐式主包（即你的脚本的主体）中声明一个变量，那么该\
+  \ `$fname` 变量即使在同一个文件的其他命名空间中也是可见的。如果你在 `Other` 命名空间中声明一个名为 `$lname` 的变量，当你稍后切换回主命名空间时，它将是可见的。如果\
+  \ `Other` 包的声明在另一个文件中，那么变量将拥有文件创建的独立作用域。\n\n```perl\n#!/usr/bin/perl\nuse strict;\n\
+  use warnings;\nmy $fname = \"Foo\";\nprint \"$fname\\n\"; # Foo\npackage Other;\n\
+  use strict;\nuse warnings;\nprint \"$fname\\n\"; # Foo\nmy $lname = 'Bar';\nprint\
+  \ \"$lname\\n\"; # Bar\n\npackage main;\nprint \"$fname\\n\"; # Foo\nprint \"$lname\\\
+  n\"; # Bar\n```\n\n## 5. BioPerl 及其应用\n\nBioPerl 是一系列 Perl 模块，旨在有助于开发用于生物信息学应用的\
+  \ Perl 脚本。它在人类基因组计划中发挥了不可缺的作用。BioPerl 是一个由 Open Bioinformatics Foundation 支持的活跃开源项目。\n\
+  \n\n\n\n\n#\n\nBioperl 的第一组 Perl 代码由 Tim Hubbard 和 Jong Bhak 在剑桥 MRC 中心（MRC Centre\
+  \ Cambridge）创建，那里由 Fred Sanger 完成了首次基因组测序。MRC 中心是现代生物信息学的枢纽和诞生地之一，因为它拥有海量的 DNA 序列和\
+  \ 3D 蛋白质结构。Bioperl 这个名字是由 Jong Bhak 和 Steve Brenner 在 MRC 中心蛋白质工程中心（CPE）的一间小房间里共同命名的，当时\
+  \ Alan Fersht 担任该中心的主管。在那个*小而而闹*的房间里，Cyrus Chothia 和 Tim Hubbard 正在与他们的一些博士生和同事一起工作。Tim\
+  \ Hubbard 是一位出色的 Perl 程序员，他当时一直使用 `th_lib.pl`，该文件包含了许多用于生物信息学的有用 Perl 子程序。Jong Bhak\
+  \ 作为 Tim Hubbard 的第一个博士生，创建了 `jong_lib.pl`。Jong 将这两个 Perl 子程序库合并成了 `Bio.pl`。1995\
+  \ 年的一天，Cyrus Chothia 的博士生 Steve Brenner 访问了该房间，并开始讨论他们如何命名这个 Perl 库。此前，他们就 Perl\
+  \ 是否在生物信息学方面优于 C 语言进行了长时间（几个月）的辩，因为 Steve Brenner 自己有一套用于生物信息学的 C 库。这两个博士生在经历了 `protein\
+  \ perl`、`protperl`、`PerlBio` 等名称后，将这个用于生物学的 Perl 库命名为 Bioperl。Steve Brenner 在 1995\
+  \ 年的 ISMB 剑桥组织了一场 Bioperl 会议，尽管会议并未真正举行。在接后的几个月里，Bioperl 有了一些用户，其中包括 Georg Fuellen，他在德国组织了一个培训课程。Georg\
+  \ 的同事和学生极大扩展了 Bioperl，随后其他人员也加入了进来，例如 Steve Chervitz，他活跃于为酵母基因数据库开发 Perl 代码。当另一位剑桥学生\
+  \ Ewan Birney 在另一场关于 Perl 是否在生物信息学方面优于 C 语言的长时间辩论后加入后，项目迎来了主要的扩张，Ewan 和许多其他人在开发\
+  \ Bioperl 方面非常活跃。\n\n第一个稳定版本于 2002 年 6 月 11 日发布；最新的稳定版本（就 API 而言）是 2011 年 4 月 14\
+  \ 日的 `1.6.9`。此外还会定期发布开发者版本。`1.6.0` 系列被认为是 BioPerl 最稳定（就 Bug 而言）的版本，推荐日常使用，但每夜构建（nightly\
+  \ builds）也非常稳定，许多 BioPerl 用户一直保持这些版本的更新。\n\n为了利用 BioPerl，用户需要对 Perl 编程语言有基础了解，包括如何使用\
+  \ Perl 引用、模块、对象和方法。\n\n## 特性与应用\n\nBioPerl 为生物信息学编程许多许多任务提供了软件模块。这些包括：\n\n*   从本地和远程数据库访问核苷酸和肽序列数据\n\
+  *   转换数据库/文件记录的格式\n*   处理单个序列\n*   搜索相似序列\n*   创建和处理序列比对\n*   在基因组 DNA 上搜索基因和其他结构\n\
+  *   开发机器可读的序列注释\n\n除了终端用户直接使用外，BioPerl 还为各种生物信息学工具提供了基础，包括：\n\n*   SynBrowse\n*\
+  \   Gene Comber, TFBS, MIMOX, BioParser, 简引物设计, 查询公共数据库, 当前比较表\n*   来自外部开发人员的新工具和算法通常直接集成到\
+  \ BioPerl 本身中\n*   处理进化树和嵌套分类 FPC Web 工具，其他编程语言中的相关库。\n\n在其他编程语言中实现的几个相关生物信息学库构成了\
+  \ [开放生物信息学基金会](https://en.wikipedia.org/wiki/Open_Bioinformatics_Foundation)的一部分，包括\
+  \ Biopython, BioJava, BioRuby, BioPHP, BioJS, Bioconductor 等。\n\n# 第五单元\n\n## 1\
+  \ PERL 模块简介\n\n## Getopt::Long - 命令行选项的扩展处理\n\n#### 语法概要 (SYNOPSIS)\n\n```perl\n\
+  1. use Getopt::Long;\n2. my $data = \"file\";\n3. my $length = 24;\n4. my $verbose;\n\
+  5. GetOptions (\"length=i\" => \\$length,\n6. \"file=s\" => \\$data,\n7. \"verbose\"\
+  \ => \\$verbose)\n8. die(\"Error in command line\");\n```\n\n#### 描述 (DESCRIPTION)\n\
+  \n`Getopt::Long` 模块实现了名为 `GetOptions()` 的函数。它解析命令行中的选项及其值。\n\n该函数遵循 POSIX 语法，提供了命令行选项的扩展。通常，选项使用长名称，通过双横杠\
+  \ `--` 引入。\n\n#### 命令行选项简介 (Command Line Options, an Introduction)\n\n程序传统上从命令行获取选项，例如文件名或其他信息。除了参数外，程序通常也会接收选项。选项对于程序运行并非必需，但用于修改其默认行为。\n\
+  \n命令行选项有几种形式。历史上，它们以单连字符 `-` 开头，由单个字母组成。\n\n1. `-lc`\n\n通常，这些单字符选项可以组合：\n\n1. `-ac`\n\
+  \n选项可以带有值，值放在选项之后。有时中间有空格，有时没有：\n\n1. `-s 24` `-s24`\n\n由于这些选项非常晦涩，开发了另一种使用长名称的样式。因此，与其晦涩的\
+  \ `-l`，可以使用具描述性的 `--long`。为了区分单字符选项和长选项，使用了两个横杠作为选项名前。早期的长选项实现使用加号 `+`。此外，选项值可以这样指定：\n\
+  \n1. `--size=24` 或 1 `--size 24`\n\n`+` 形式现在已过时并强烈弃用。\n\n#### 开始使用 Getopt::Long\
+  \ (Getting Started with Getopt::Long)\n\n`Getopt::Long` 是 `newgetopt.pl` 的 Perl\
+  \ 后继。这是第一个支持处理新样式命令行选项（特别是长选项名称）的 Perl 模块，因此名为 `Getopt::Long`。该模块还支持单字符选项组合。\n\n\
+  要在 Perl 程序中使用 `Getopt::Long`，必须在程序中包含以下行：\n\n```perl\nuse Getopt::Long;\n```\n\n\
+  这将加载 `Getopt::Long` 模块的核心部分并为你的程序做好准备。大部分的 `Getopt::Long` 代码在你真正调用其函数时才会加载。\n\n\
+  在默认配置下，选项名称可以为了唯一性进行缩写，不区分大小写，单连字符也是足够的。此外，选项可以放在非选项参数之间。\n\n##### 简单选项 (Simple\
+  \ options)\n\n最简单的选项是不带值的选项。它们在命令行中的出现即可启用该选项。常见的例子有：\n\n`--all --verbose --quiet\
+  \ --debug` 处理简单选项非常直观：\n\n```perl\nmy $verbose = '';\nmy $all = '';\nGetOptions\
+  \ ('verbose' => \\$verbose, 'all' => \\$all);\n```\n\n调用 `GetOptions()` 会解析位于 `@ARGV`\
+  \ 中的命令行参数，如果选项出现在命令行中，则将选项变量赋值为 1。否则，选项变量将不会被触。将选项值设为真通常被称为启用该选项。\n\n\n\n\n\n传递给\
+  \ `GetOptions()` 函数指定的选项名称被称为选项规范（option specification）。稍后我们将看到，这种规范包含的不仅仅是选项名称。对变量的引用被称为选项目标（option\
+  \ destination）。\n\n如果命令行可以成功处理，`GetOptions()` 将返回真值。否则，它将使用 `die()` 和 `warn()` 写入错误信息，并返回假结果。\n\
+  \n## 稍微复杂一点的选项\n\n`Getopt::Long` 支持简单选项的两种有用变体：可否定选项（negatable options）和增量选项（incremental\
+  \ options）。\n\n可否定选项通过在选项名后加感叹号 `!` 来指定：\n\n1. `my $verbose  =  '';#带有默认值的选项变量 (false)`\n\
+  2. `GetOptions ('verbose!' => \\$verbose);`\n\n现在，在命令行上使用 `--verbose` 将如预期地启用 `$verbose`。但也允许使用\
+  \ `--noverbose`，它将通过将 `$verbose` 的值设置为 `0` 来禁用它。通过使用合适的默认值，程序可以判断出 `$verbose` 是默认为\
+  \ `false`，还是通过使用 `--noverbose` 被禁用的。\n\n增量选项通过在选项名后加加号 `+` 来指定：\n\n1. `my $verbose\
+  \  =  '';#带有默认值的选项变量 (false)`\n2. `GetOptions ('verbose+' => \\$verbose);`\n\n命令行上使用\
+  \ `--verbose` 将增加 `$verbose` 的值。通过这样，程序可以跟踪该选项在命令行上出现的次数。例如，每次出现 `--verbose` 都可以增加程序的详细程度。\n\
+  \n## 混合命令行选项与其他参数\n\n通常情况下，程序会接收命令行选项以及其他参数，例如文件名。良好的做法始终先指定选项，最后指定其他参数。\n\n然而，`Getopt::Long`\
+  \ 允许选项和参数混合，并在将剩余参数传递给程序之前“过滤掉”所有选项。要停止 `Getopt::Long` 继续处理参数，请在命令行上插入双横线 `--`：\n\
+  \n1. `--size  24-------------all`\n\n在这个示例中，`--all` 将不会被视为选项，而是原样传递给程序中的 `@ARGV`。\n\
+  \n## 带有值的选项\n\n对于带有值的选项，必须指定选项值是否是必需，以及选项期望什么种类型的值。\n\n支持三种类型的值：整数、浮点数和字符串。\n\n\
+  如果选项值是必需的，`Getopt::Long` 将获取选项后的命令行参数并将其分配给选项变量。然而，如果选项值被指定为可选，则只有当该值本身看起来不像有效的命令行选项时才会执行赋值。\n\
+  \n1. `my $tag  =  '';#带有默认值的选项变量`\n2. `GetOptions ('tag=s' => \\$tag);`\n\n在选项规范中，选项名后跟着等号\
+  \ `=` 和字母 `s`。等号表示该选项需要一个值。字母 `s` 表示该值是一个任意字符串。其他可能的值类型是用于整数整数的 `i` 和用于浮点数值的 `f`。使用冒号\
+  \ `:` 代替等号表示选项值是可选的。在这种情况下，如果没有提供合适的值，字符串值选项将获得一个空字符串 `''`，而数值型选项将被设置为 `0`。\n\n\
+  ## 带有多个值的选项\n\n选项有时会接受多个值。例如，程序可以使用多个目录来搜索库文件：\n\n`--library lib/stdlib --library\
+  \ lib/extlib`\n\n要实现这种行为，只需将数组引用指定为选项的目标：\n\n```\nGetOptions (\"library=s\" => \\\
+  @libfiles);\n```\n\n或者，你可以通过添加 `\"@\"` 指定该选项可以有多个值，并将标量引用作为目标：\n\n```\nGetOptions\
+  \ (\"library=s@\" => \\$libfiles);\n```\n\n配合上面的示例使用，`@libfiles`（或 `@$libfiles`）在完成后将包含两个字符串：顺序依次为\
+  \ `\"lib/stdlib\"` 和 `\"lib/extlib\"`。也可以指定只允许整数或浮点数作为可接受的值。\n\n通常，允许逗号分隔的值列表以及选项的多次出现是非常有用的。使用\
+  \ Perl 的 `split()` 和 `join()` 操作符可以很容易实现：\n\n```perl\nGetOptions (\"library=s\"\
+  \ => \\@libfiles); @libfiles = split(/,/,join(',',@libfiles));\n```\n\n当然，为每个用途选择正确的分隔符字符串非常重要。警告：以下内容为实验性功能。\n\
+  \n选项可以一次接受多个值，例如：\n\n`--coordinates 52.2 16.4 --rgbcolor 255 255 149`\n\n这可以通过在选项规范中添加重复计数符（repeat\
+  \ specifier）来实现。重复计数符与正则表达式模式中可以使用的 `{...}` 重复计数符非常相似。例如，上述命令行将按如下处理：\n\n```\nGetOptions('coordinates=f{2}'\
+  \ => \\@coor, 'rgbcolor=i{3}' => \\@color);\n```\n\n选项的目标必须是一个数组或数组引用。\n\n还可以指定选项接受的参数最小和最大数量。`foo=s{2,4}`\
+  \ 表示一个至少接受两个且最多 4 个参数的选项。`foo=s{1,}` 表示一个或多个值；`foo:s{,}}` 表示零或多个选项值。\n\n## 带有哈希值的选项\n\
+  \n如果选项目标是哈希引用，选项将以 `key= value` 的形式接受值。值将存储在指定的哈希键中。\n\n```\nGetOptions (\"define=s\"\
+  \ => \\%defines);\n```\n或者，你可以使用：\n\n```\nGetOptions (\"define=s%\" => \\$defines);\n\
+  ```\n配合命令行选项使用：\n\n`--define os=linux --define vendor=redhat`\n\n哈希 `%defines` 将包含两个键，键为\
+  \ `\"os\"` 值为 `\"linux\"`，以及 `\"vendor\"` 值为 `\"redhat\"`。也可以指定只有整数或浮点数是可接受的值。键始终被视为字符串。\n\
+  \n## 处理选项的自定义子函数\n\n对（实际上：每次）遇到选项时应该执行的操作，可以通过指定子函数的引用（或匿名函数）作为选项目标来实现。当 `GetOptions()`\
+  \ 遇到选项时，它将带有两个或三个参数调用子函数。第一个参数是选项名称（实际上是一个字符串化为选项名称的对象）。对于标量或数组目标，第二个参数是需要存储的值。对于哈希目标，第二个参数是哈希的键，第三个参数是需要存储的值。存储值由子函数自行决定。\n\
+  \n这种机制的一个简单应用是实现相互相关的选项。例如：\n\n1. `my $verbose  =  ';#带有默认值的选项变量 (false)`\n2. `GetOptions\
+  \ ('verbose' => \\$verbose,`\n3. `'quiet' => sub { $verbose = 0 });`\n\n这里 `--verbose`\
+  \ 和 `--quiet` 控制同一个变量 `$verbose`，但值相反。\n\n如果子函数需要发出错误，它应该调用 `die()` 并并将所需的错误消息作为参数。`GetOptions()`\
+  \ 将捕获 `die()`，发布错误消息，并记录完成后必须返回错误结果。\n\n如果错误信息的文本以感叹号 `!` 开头，它会被 `GetOptions()`\
+  \ 特殊解释。目前实现了一个特殊命令：`die(\"!FINISH\")` 会导致 `GetOptions()` 停止处理选项，就像遇到了双横线 `--`。\n\
+  \n2.37 版本中，回调函数的第一个参数从字符串更改为对象。这样做是为了扩展和更详细的控制留出空间。该对象字符串化为选项名称，因此这种更改不应引入兼容性问题。\n\
+  \n这是一个在子函数内部访问选项名称和值的示例：\n\n```perl\n1. GetOptions ('opt=i' => \\&handler);\n2.\
+  \ sub handler {\n3. my ($opt_name, $opt_value) = @_;\n}\n```\n\n\n\n\n\n```perl\n\
+  4. print(\"Option name is $opt_name and value is  $opt_value\\n\"); 5.}\n```\n\n\
+  ## 具有多个名称的选项\n\n通常情况下，为选项提供备用的助记名称是用户友好的。例如，`-- height` 可以作为 `--length` 的替代名称。替代名称包含在选项规格中，并用竖线\
+  \ `|` 字符分隔。要实现上述示例：\n\n```perl\nGetOptions ('length|height=f' => \\$length);\n```\n\
+  \n第一个名称称为主名称（primary name），其他名称称为别名（aliases）。在使用哈希（hash）存储选项时，键将始终为主名称。\n\n### 多个替代名称。大小写与缩写\n\
+  \n在没有额外配置的情况下，`GetOptions()` 会忽略选项名称的大小写，并允许将选项缩写为唯一的字符串。\n\n```perl\nGetOptions\
+  \ ('length|height=f' => \\$length, \"head\" => \\$head);\n```\n\n此调用将允许使用 `--l`\
+  \ 和 `--L` 作为长度选项，但要求 head 和 height 选项至少输入 `--hea` 和 `--hei`。\n\n## 选项规格总结\n\n每个选项规格符由两部分组成：名称规格（name\
+  \ specification）和参数规格（argument specification）。\n\n名称规格包含选项的名称，可选地跟随一个由竖线字符分隔的替代名称列表。\n\
+  \n1. `lengthoption` 名称为 `\"length\"`\n2. `length|size|lname` 名称为 `\"length\"`，别名为\
+  \ `\"size\"` 和 `\"l\"`\n\n参数规格是可选的。如果省略，则该选项被视为布尔值（boolean），当在命令行使用该选项时，将赋值一个值 `1`。\n\
+  \n参数-参数规格可以是：\n\n### `!`\n\n该选项不接受参数，并且可以通过在其前面加上 `no` 或 `no-` 来进行取反（negated）。\n\
+  \n例如，`\"foo!\"` 将允许 `--foo`（赋值为 `1`）以及 `--nofoo` 和 `--no-foo`（赋值为 `0`）。如果该选项有别名，此规则也适用于别名。\n\
+  \n在启用捆绑（bundling）时对单字母选项使用取反是没有意义的，并且会产生警告。\n\n### `+`\n\n该选项不接受参数，并且每在命令行上出现一次，值就会加\
+  \ `1`。例如，`\"more+\"`，当使用 `--more --more --more` 时，值将增加三次，结果结果为 `3`（前提是初始值为 `0` 或未定义）。\n\
+  \n如果选项目标不是标量（scalar），则 `+` 规格符会被忽略。\n\n### `= type [ desttype ] [ repeat ]`\n\n\
+  该选项需要一个给定类型的参数。支持的类型有：\n\n*   `s`: 字符串（String）。字符的任意序列。参数以 `-` 或 `--` 开是有效的。\n*\
+  \   `i`: 整数（Integer）。可选的前加号或减号，后跟一串数字。\n*   `oo`: 扩展整数，Perl 风格。可以是可选的前加号或减号，后跟一串数字，或者是八进制字符串（一个零，后面可选跟上\
+  \ '0', '1' .. '7'），或十六进制字符串（`0x` 后跟 '0' .. '9'，'a' .. 'f'，不区分大小写），或二进制字符串（`0b` 后跟一系列\
+  \ '0' 和 '1'）。\n*   `f`: 实数（Real number）。例如 `3.14`、`-6.23E24` 等。\n\n`desttype` 可以是\
+  \ `@` 或 `%`，用于指定该选项是列表或哈希值的。只有当选项值的目标没有被其他指定时，才需要此项。不需要时应省略。\n\n`repeat` 指定了该选项在命令行上每次出现时所取值的数量。其格式为\
+  \ `{ [ min ] [ , [ max ] ] }`。\n\n*   `min` 表示参数的最少数量。对于带有 `=` 的选项，默认值为 `1`；对于带有\
+  \ `:` 的选项，值为 `0`（见下文）。注意，`min` 覆盖 `=` 和 `:` 的语义。\n*   `max` 表示参数的最大数量。它至少等于 `min`。如果省略了\
+  \ `max` 但保留了逗号，则获取参数值的数量没有上限。\n\n### `: type [ desttype ]`\n\n与 `=` 类似，但将参数指定为可选。如果省略，为字符串型选项将分配一个空字符串，为数值型选项将分配值\
+  \ `zero`。\n\n注意，如果字符串参数以 `-` 或 `--` 开头，它将被视为选项本身。\n\n### `: number [ desttype ]`\n\
+  \n与 `:i` 类似，但如果省略了值，将分配数字。\n\n### `: + [ desttype ]`\n\n与 `:i` 类似，但如果省略了值，该选项的当前值将加\
+  \ 1。\n\n## 3 LWP::Simple 模块\n\nLWP - Perl 的万维网库\n\n### SYNOPSIS\n\n```perl\nuse\
+  \ LWP;\nprint \"This is libwww-perl-$LWP::VERSION\\n\";\n```\n\n### DESCRIPTION\n\
+  \nlibwww-perl 集合是一组 Perl 模块，为万维网提供简单且一致的应用编程接口（API）。该库的主要重点是提供允许你编写 WWW 客户端的类和函数。该库还包含更通用的模块，甚至是帮助你实现简单\
+  \ HTTP 服务器的类。\n\n此库中的大多数模块提供面向对象的 API。用户代理（user agent）、发送的请求以及从 WWW 服务器收到的响应都由对象表示。这为这些服务提供了一个简单而强大的接口。该接口可以根据需要进行扩展和定制。\n\
+  \n该库的主要功能包括：\n\n*   包含各种可复用的组件（模块），可以单独或组合使用。\n*   提供 HTTP 风格的面向对象模型。在此框架内，我们支持访问\
+  \ `http`、`https`、`gopher`、`ftp`、`news`、`file` 和 `mail`。\n*   支持基本和摘要认证方案。\n*   支持透明重定向。\n\
+  *   支持通过代理服务器访问。\n*   提供 `robots.txt` 文件的解析器以及构建 HTML 表单的框架。\n*   支持 HTTP `cookies`。\n\
+  *   一些简单的命令行客户端，例如 `lwp-request` 和 `lwp-download`。\n\n## HTTP 通信\n\nlibwww-perl\
+  \ 基于 HTTP 通信。本节从规范文档开始\n\n<URL[:http://www.w3.org/Protocols/](http://www.w3.org/Protocols/)>：\n\
+  \n*   HTTP 协议基于请求/响应范式。客户端与服务器建立连接，并以请求方法、URI 和协议版本的形式向服务器发送请求，随后是一个类似于 MIME 的消息，其中包含请求修改器、客户端信息和可能的正文内容。服务器响应状态行，包括消息的协议版本和成功或错误代码，随后是一个类似于\
+  \ MIME 的消息，其中包含服务器信息、实体元数据和可能的正文内容。\n\n对于 libwww-perl，这意味着通信始终通过这些步骤进行：首先创建并配置请求对象。然后将该对象传递给服务器并返回一个响应对象供检查。请求始终与之前的请求无关，即服务是无状态的。这种简单模型用于任何我们想要访问的服务。\n\
+  \n\n\n\n\nlibwww-perl 请求对象的类名为 `HTTP::Request`。类名使用 `HTTP::` 作为前缀这一事实仅意味着我们使用了 HTTP\
+  \ 通信模型。它并不会限制我们尝试将此请求传递给什么类型的服务。例如，我们将 `HTTP::Requests` 同时发送到 `ftp` 和 `gopher` 节点，也会发送到本地文件系统。\n\
+  \n请求对象的主要属性有：\n\n* `method` 是一个短字符串，用于说明这是什么类型的请求。最常用的方法有 `GET`、`PUT`、`POST` 和 `HEAD`。\n\
+  * `uri` 是一个字符串，表示访问的协议、服务器以及我们想要访问的“文档”的名称。`uri` 还可能编码了其他各种参数。\n* `headers` 包含关于请求的额外信息，也可用于描述内容。`headers`\
+  \ 是一组键值对（keyword/value pairs）。\n* `content` 是任意长度的数据。\n\n## 响应对象 (Response Object)\n\
+  \nlibwww-perl 响应对象的类名为 `HTTP::Response`。此类对象的主要属性有：\n\n* `code` 是一个数值，表示请求的总体结果。\n\
+  * `message` 是一个人类可读的短字符串，与 `code` 对应。\n* `headers` 包含关于响应的额外信息并描述内容。\n* `content`\
+  \ 是任意长度的数据。\n\n由于我们不想在程序中直接处理所有可能的代码值，libwww-perl 响应对象提供了几种方法用于查询该响应的类型。最常用的响应分类方法是：\n\
+  \n```\nis_success()\n```\n请求已被成功接收、理解或接受。\n\n```\nis_error()\n```\n请求失败。服务器或资源可能不可，访问资源可能被拒绝，或者由于某些原因其他操作失败了。\n\
+  \n## 用户代理 (User Agent)\n\n假设我们已经创建了一个请求对象。为了接收响应，我们实际上对它做什么？\n\n答案是将其传递给一个用户代理对象，该对象会处理所有需要完成的工作（如底层通信和错误处理）并返回一个响应对象。用户代理代表你的应用程序在网络上的身份，并为你提供了一个可以接受请求并返回响应的接口。\n\
+  \n用户代理是你的应用程序代码与网络之间的接口层。通过这个接口，你可以访问网络上的各种服务器。\n\n用户代理的类名为 `LWP::UserAgent`。每个想要通信的\
+  \ libwww-perl 应用都应该至少创建一个该类的对象。该对象提供的主要方法是 `request()`。该方法接受一个 `HTTP::Request` 对象作为参数并（最终）返回一个\
+  \ `HTTP::Response` 对象。\n\n用户代理还有许多其他属性，让你配置它如何与网络以及与你的应用程序交互：\n\n* `timeout` 指定了在库断开连接并创建内部超时响应之前，我们给远程服务器响应的时间。\n\
+  * `agent` 指定了你的应用程序在网络上展示自己身份时使用的名称。\n* `from` 可以设置为负责运行应用程序员的电子邮件地址。如果设置了此项，则该地址将在每次请求时发送到服务器。\n\
+  * `parse_head` 指定了我们是否应该从 HTML 文档的 `<head>` 部分初始化响应头。\n* `proxyandno_proxyspecify`\
+  \ 指定了何时以及何时通过代理服务器进行。\n* `credentials` 提供了一种设置访问某些服务所需的用户名和密码的方法。\n\n许多应用程序希望对与网络交互的方式有更强的控制力，它们通过子类\
+  \ `LWP::UserAgent` 实现这一点。该库包含一个用于机器人应用的子类 `LWP::RobotUA`。\n\n## 3. 文件 – 操作文件 – 文件模式\
+  \ – 文件测试运算符\n\n* `-X FILEHANDLE`\n* `-X EXPR`\n* `-X DIRHANDLE`\n* `-X`\n\n这是一个文件测试，其中\
+  \ `X` 是下面列出的字母。该运算符接受一个参数（文件名、文件句柄或目录句柄），并测试关联的文件。如果省略参数，则测试 `STDIN`。除非另有说明，真时返回\
+  \ `1`，假时返回空。运算符如下：\n\n1. `-r` 权限是否可读。\n2. `-w` 是否可写。\n3. `-x` 是否可执行。\n4. `-o` 是否属于有效用户所有。\n\
+  5. `-R` 真实用户是否可读。\n6. `-W` 真实用户是否可写。\n7. `-X` 真实用户是否可执行。\n8. `-O` 是否属于真实用户所有。\n\
+  9. `-e` 是否存在。\n10. `-z` 是否为零。\n11. `-f` 是否为普通文件。\n12. `-d` 是否为目录。\n13. `-l` 是否为符号链接。\n\
+  14. `-p` 是否为命名管道（FIFO）。\n15. `-S` 是否为套接字。\n16. `-b` 是否为块设备文件。\n17. `-c` 是否为字符设备文件。\n\
+  18. `-t` 文件句柄是否打开到终端。\n19. `-u` 是否设置了 UID。\n20. `-g` 是否设置了 GID。\n21. `-k` 是否设置了粘位。\n\
+  22. `-T` 是否为“二进制”文件（`-B` 的相反）。\n23. `-M` 脚本启动时间减文件修改时间，以天为单位。\n24. `-A` 访问时间（Unix，其他平台可能不同）。\n\
+  25. `-C` inode 更改时间。\n\n示例：\n\n```\nwhile (<>) {\n    chomp($_);\n    next unless\
+  \ -f $_; # 忽略特殊文件\n    ...\n}\n```\n\n注意 `-s/a/b/` 并不会执行取反替换。然而，说 `-exp($foo)` 会按预期工作：只有在减号后面的单个字母才被解释为文件测试。\n\
+  \n这些运算符免受上述“看起来像函数”规则的限制。也就是说，运算符后的左括号不会影响后续代码的哪些构成参数。将左括号放在运算符之前以与后续代码分离（这仅适用于优先级高于一元运算符的运算符）：\n\
+  \n```\n-s($file) + 1024 # 错误的；等同于 -s($file + 1024)\n(-s $file) + 1024 # 正确\n```\n\
+  \n\n\n\n\n文件权限操作符 `-r`、`-R`、`-w`、`-W`、`-x` 和 `-X` 的解释默认基于基于文件的模式以及用户的 `uids` 和 `gids`。可能存在其他原因导致你实际上无法读取、写入或执行该文件：例如网络文件系统的访问控制、`ACLs`（访问控制列表）、只读文件系统以及无法识别的可执行格式。请注意，使用这六个特定运算符来验证某些操作是否可行通常是一个错误，因为这可能会受到竞态条件的影响。\n\
+  \n另请注意，对于本地文件系统上的超级用户，`-r`、`-R`、`-w` 和 `-W` 测试始终返回 1，而如果模式中设置了任何执行位，则 `-x` 和 `-X`\
+  \ 返回 1。因此，由超级用户运行的脚本可能需要执行 `stat()` 来确定文件的实际模式，或者临时将它们的有效 `uid` 设置为其他值。\n\n如果你正在使用\
+  \ ACL，有一个名为 `filetest` 的预指令，它产生的结果可能比原始的 `stat()` 模式位更准确。当在 `use filetest 'access'`\
+  \ 模式下，上述文件测试将测试权限是否可以使用 `access(2)` 系列系统调用授予（或不授予）。另请注意，在此预指令下，即使没有设置执行权限位（也没有设置任何额外的执行权限\
+  \ ACL），`-x` 和 `-X` 也可能返回真。这种奇怪现象源于底层系统调用的定义。还要注意，由于 `use filetest 'access'` 的实现，当此预指令生效时，特殊文件句柄\
+  \ `_` 不缓存文件测试的结果。更多信息请参阅 `filetest` 预指令的文档。\n\n`-T` 和 `-B` 选项的工作方式如下：检查文件的第一个块，查看其是否为包含非\
+  \ ASCII 字符的有效 UTF-8。如果是，它就是 `-T` 文件。否则，检查文件的相同部分是否存在异常字符，例如奇怪的控制代码或设置了高位的字符。如果超过三分之一的字符是异常字符，它就是\
+  \ `-B` 文件；否则它是 `-T` 文件。此外，任何在检查部分包含零字节的文件都被视为二进制文件。（如果在包含 `LC_CTYPE` 的 `use locale`\
+  \ 范围内执行，异常字符是指任何在当前 locale 中既不是可打印字符也不是空格的字符。）如果对文件句柄使用 `-T` 或 `-B`，则检查当前的 IO 缓冲区而不是第一个块。`-T`\
+  \ 和 `-B` 在空文件或在测试文件句柄时处于 EOF 的文件上返回真。由于执行 `-T` 测试必须读取文件，在大多数情况下你可能想先对文件使用 `-f`，例如\
+  \ `next unless -f $file && -T $file`。\n\n如果给任何文件测试（或 `stat` 或 `lstat` 运算符）提供一个由单个下划线\
+  \ `_` 组成的特殊文件句柄，则将使用上一个文件测试（或 `stat` 运算符）的 stat 结构，从而节省一次系统调用。（这对于 `-t` 不起，你需要记得\
+  \ `lstat()` 和 `-l` 在 stat 结构中留的是符号链接的值，而不是真实文件。）（此外，如果 stat 缓冲区是由 `lstat` 调用填充的，`-T`\
+  \ 和 `-B` 将用 `stat _` 的结果重置它。）\n\n### 示例\n\n```\n43. print \"Can do.\\n\" if -r $a\
+  \ || -w _ || -x _; 44.\n45. stat($filename);\n46. print \"Readable\\n\" if -r _;\n\
+  47. print \"Writable\\n\" if -w _;\n48. print \"Executable\\n\" if -x _;\n49. print\
+  \ \"Setuid\\n\" if -u _;\n50. print \"Setgid\\n\" if -g _;\n51. print \"Sticky\\\
+  n\" if -k _;\n52. print \"Text\\n\" if -T _;\n```\n\n\n\n\n它可能通过 `chdir()` 将你带出一个它无法通过\
+  \ `chdir()` 返回的目录。如果 `fastcwd` 遇到问题，它将返回 `undef`，但可能会将你留在不同的目录中。为了额外的安全措施，如果一切看起来运行正常，`fastcwd()`\
+  \ 函数将检查它是否将你留在与开始时相同的目录。如果发生了变化，它将[报错（die）](http://perldoc.perl.org/functions/die.html)\
+  \ 并显示消息“Unstable directory path, current directory changed unexpectedly”。这种情况永远不应该发生。\n\
+  \n### fastgetcwd\n\n```perl\nmy $cwd = fastgetcwd();\n```\n\n`fastgetcwd()` 函数作为\
+  \ `cwd()` 的同义词提供。\n\n getdcwd\n\n```perl\nmy $cwd = getdcwd();\nmy $cwd = getdcwd('C:');\n\
+  ```\n\nWin32 上提供了 `getdcwd()` 函数，用于获取指定驱动器上的当前工作目录，因为 Windows 为每个驱动器维护一个独立的当前工作目录。如果没有指定驱动器，则假设为当前驱动器。\n\
+  \n此函数简单地调用了 Microsoft C 库的 `_getdcwd()` 函数。\n\n### abs_path and friends\n\n这些函数仅在请求时导出。它们各接受一个参数并返回该参数的绝对路径。如果没有给出参数，它们将使用当前工作目录。\n\
+  \n#### abs_path\n\n```perl\nmy $abs_path = abs_path($file);\n```\n\n使用与 `getcwd()`\
+  \ 相同的算法。符号链接和相对路径组件（`.` 和 `..`）会被解析并返回规范路径，就像 `realpath(3)` 一样。\n\n#### realpath\n\
+  \n```perl\nmy $abs_path = realpath($file);\n```\n\n`abs_path()` 的同义词。\n\n#### fast_abs_path\n\
+  \n```perl\nmy $abs_path = fast_abs_path($file);\n```\n\n更危险但可能更快的 `abs_path` 版本。\n\
+  \n### $ENV{PWD}\n\n如果你请求覆盖内置的 `chdir()` 函数，即 `use Cwd qw(chdir);`，那么你的 `PWD` 环境变量将保持更新。请注意，只有当所有使用\
+  \ `chdir` 的包都从 `Cwd` 导入它时，它才会保持更新。\n\n由于某些操作系统上的路径分隔符不同（Unix 上为 `/`，MacPerl 上为 `:`\
+  \ 等），我们建议在任何涉及移植性的地方使用 `File::Spec` 模块。\n\n实际上，在 Mac OS 上，`getcwd()`、`fastgetcwd()`\
+  \ 和 `fastcwd()` 函数都是 `cwd()` 函数的别名，后者在 Mac OS 上调用 `pwd`。同样，`abs_path()` 函数是 `fast_abs_path()`\
+  \ 的别名。\n\n## 6. Perl 系统函数\n\n`system()` 函数通过派生子进程并等待子进程完成来执行执行操作系统命令，并为子进程返回某种退出状态供你进行测试。\n\
+  \n`system()` 函数的参数可以采取三种形式（括号可选）：\n\n1. `system($STRING);`\n2. `system($PROGRAM,\
+  \ @ARGUMENT_LIST);`\n3. `system { $PROGRAM } $FAUX_PROGRAM, @ARGUMENT_LIST`\n\n\
+  第一种形式是最常用的。决定你使用哪种形式（或 Perl 实际上使用哪种形式）取决于你尝试执行的命令是否包含 shell 元字符。Shell 元字符包括管道、重定向和语句分隔符等，例如：`(ps\
+  \ -aux | column 1 > pids); date`。具体字符为：`& ; ` ' \\ \" | * ? ~ < > ^ ( ) [ ] { }\
+  \ $ \\n \\r`\n\n如果你尝试执行的操作系统命令使用了这些任何字符，你必须使用第一种形式，例如：\n\n```perl\nsystem (\"$tace\
+  \ < $tcmd > $tout\");\n```\n\n在这种，唯一的字符串参数被传递给命令 shell。要记住的一点是，一旦引入了 `system()`\
+  \ 函数，你的脚本在不修改的情况下无法移植到运行在 Windows 以及可能的 Unix 操作系统上的 Perl。\n\n## 7. Perl 子程序和函数\n\
+  \nPerl 子程序或函数组共同执行任务的语句。你可以将代码分成不同的子程序。如何在不同子程序之间划分代码取决于你，但在逻辑上，划分通常是每个函数执行一个特定的任务。\n\
+  \nPerl 交替使用子程序（subroutine）、方法（method）和函数（function）。\n\n### 定义和调用子程序\n\nPerl 语言中子程序定义的通用形式如下：\n\
+  \n```perl\nsub subroutine_name{\n    子程序的主体\n}\n```\n\n调用该 Perl 子程序的典型方式如下：\n\n\
+  ```perl\nsubroutine_name( 参数列表 );\n```\n\n在 5.0 之前的 Perl 版本中，调用子程序的语法略有不同，如下所示。在最新的\
+  \ Perl 版本中仍然有效，但不建议这样做，因为它跳过了子程序的原型检查（prototypes）。\n\n```perl\n&subroutine_name(\
+  \ 参数列表 );\n```\n\n让我们来看下面的这个示例，它定义了一个简单的函数然后调用了它。因为 Perl 在执行程序之前会编译你的程序，所以你在哪里声明子程序并不重要。\n\
+  \n```perl\n#!/usr/bin/perl\n\n# 函数定义\nsub Hello{\n    print \"Hello, World!\\n\"\
+  ;\n}\n\n# 函数调用\nHello();\n```\n\n当执行上述程序时，它产生：`Hello, World!`\n\n### 向子程序传递参数\n\n\
+  你可以像在任何其他语言中向子程序传递各种参数，并在函数内部使用特殊数组 `@_` 进行访问。\n\n函数的第一个参数在 `$[0]` 中，第二个在 `$[1]`\
+  \ 中，以此此类推。你可以像传递标量一样传递数组和哈希作为参数，但传递多个数组或哈希通常会导致它们丢失身份标识。因此，我们将使用引用（references）来传递任何数组或哈希。\n\
+  \n让我们尝试下面的示例，它接收一个数字列表然后打印它们的平均值：\n\n```perl\n#!/usr/bin/perl\n\nsub Average{\n\
+  \    # 获取传递的参数总数。\n    $n = scalar(@_);\n    $sum = 0;\n    foreach $item (@_){\n\
+  \        $sum += $item;\n    }\n    $average = $sum / $n;\n    print \"Average for\
+  \ the given numbers : $average\\n\";\n}\n\n# 函数调用\nAverage(10, 20, 30);\n```\n\n\
+  当执行上述程序时，它产生：`Average for the given numbers : 20`\n\n### 向子程序传递列表\n\n由于 `@_` 变量是一个数组，它可以用于向子程序提供列表。然而，由于\
+  \ Perl 接受和解析列表的方式，从 `@_` 提取单个元素可能是困难的。如果你必须和标量一起传递列表，请将列表作为最后一个参数，如下所示：\n\n```perl\n\
+  #!/usr/bin/perl\n\nsub PrintList{\n    my @list = @_;\n    print \"Given list is\
+  \ @list\\n\";\n}\n\n$a = 10;\n@b = (1, 2, 3, 4);\n\n# 带列表参数调用\nPrintList($a, @b);\n\
+  ```\n\n当执行上述程序时，它产生：`Given list is 10 1 2 3 4`\n\n### 向子程序传递哈希\n\n当你向接受列表的子程序或操作符提供哈希时，哈希会被自动转换为键值对的列表。例如：\n\
+  \n```perl\n#!/usr/bin/perl\n\nsub PrintHash{\n    my (%hash) = @_;\n    foreach\
+  \ my $key ( keys %hash ){ \n        my $value = $hash{$key}; \n        print \"\
+  $key : $value\\n\";\n    }\n}\n\n%hash = ('name' => 'Tom', 'age' => 19);\n\n# 带哈希参数调用\n\
+  PrintHash(%hash);\n```\n\n当执行上述程序时，它产生：\nname : Tom\nage : 19\n\n### 从子程序返回数值\n\n\
+  你可以像在任何其他编程语言中从子程序返回数值。如果你没有从子程序返回数值，那么子程序中最后执行的任何计算结果都将自动成为返回值。\n\n你可以像返回标量一样从子程序返回数组和哈希，但返回多个数组或哈希通常会导致它们丢失身份标识。因此，我们将使用引用（在下一章中解释）从函数返回任何数组或哈希。\n\
+  \n\n\n让我们尝试以下示例，它接收一个数字列表并返回它们的平均值 −\n\n```perl\n#!/usr/bin/perl\n\n# 函数定义 sub Average{\n\
+  # 获取传递的参数总数。\n$n = scalar(@_);\n$sum = 0;\nforeach $item (@_){\n$sum += $item;\n\
+  }\n$average = $sum / $n;\nreturn $average;\n}\n\n# 函数调用\n$num = Average(10, 20,\
+  \ 30);\nprint \"Average for the given numbers : $num\\n\";\n```\n\n当执行上述程序时，它产生如下结果\
+  \ − 数字的平均值：20\n\n## 子程序中的私有变量\n\n默认情况下，Perl 中的所有变量都是全局变量，这意味着它们可以从程序的任何位置访问。但你可以随时使用\
+  \ `my` 操作符创建名为局部变量的私有变量。\n\n`my` 操作符将变量限制在代码的特定区域内，在该区域内，它可以被使用和访问。在该区域之外，该变量无法被使用或访问。该区域被称为它的作用域（scope）。局部作用域通常是一个由大括号包围的代码块，例如定义子程序体的大括号，或者标记\
+  \ `if`、`while`、`for`、`foreach` 和 `eval` 语句的代码块。\n\n以下示例了如何使用 `my` 操作符定义单个或多个私有变量\
+  \ −\n\n```perl\nsub somefunc {\nmy $variable; # $variable 在 somefunc() 外部不可见\nmy\
+  \ ($another, @an_array, %a_hash); # 一次声明多个变量\n}\n```\n\n让我们检查以下示例以区分全局变量和私有变量 −\n\
+  \n```perl\n#!/usr/bin/perl\n\n# 全局变量\n$string = \"Hello, World!\";\n\n# 函数定义 sub\
+  \ PrintHello{\n# PrintHello 函数的私有变量\nmy $string;\n$string = \"Hello, Perl!\";\n\
+  print \"Inside the function $string\\n\";\n}\n\n# 函数调用 PrintHello();\nprint \"Outside\
+  \ the function $string\\n\";\n```\n\n当执行上述程序时，它产生如下结果 − 函数内部 Hello, Perl! 函数外部 Hello,\
+  \ World!\n\n## 通过 local() 使用临时值\n\n`local` 主要用于变量的当前值必须对调用的子程序可见的情况。`local` 只是为全局（即包）变量提供临时值。这被称为动态作用域。局部作用域通过\
+  \ `my` 实现，它的工作方式更类似于 C 语言的自动声明。\n\n如果给 `local` 传递多个变量或表达式，必须将它们放在括号中。该操作符通过将参数列表中变量的当前值保存到隐藏堆栈中，并在退出代码块、子程序或\
+  \ `eval` 时恢复它们。\n\n让我们检查以下示例以区分全局变量和局部变量 −\n\n```perl\n#!/usr/bin/perl\n\n# 全局变量\n\
+  $string = \"Hello, World!\";\n\nsub PrintHello{\n# PrintHello 函数的私有变量 local $string;\n\
+  $string = \"Hello, Perl!\"; PrintMe();\nprint \"Inside the function PrintHello $string\\\
+  n\";\n}\n\nsub PrintMe{\nprint \"Inside the function PrintMe $string\\n\";\n}\n\n\
+  # 函数调用 PrintHello();\nprint \"Outside the function $string\\n\";\n```\n\n当执行上述程序时，它产生如下结果\
+  \ − 函数内部 PrintMe Hello, Perl! 函数内部 PrintHello Hello, Perl! 函数外部 Hello, World!\n\n\
+  ## 通过 state() 使用状态变量\n\n还有另一种类型的局部变量，它们与私有变量相似，但它们会保持状态，并且在多次调用子程序时不会重新初始化。这些变量使用\
+  \ `state` 操作符定义，并从 Perl 5.9.4 开始可用。\n\n让我们检查以下示例演示状态变量的使用 −\n\n```perl\nuse feature\
+  \ 'state';\n\nsub PrintCount{\nstate $count = 0; # 初始值\nprint \"Value of counter\
+  \ is $count\\n\";\n$count++;\n}\n\nfor (1..5){ PrintCount();\n}\n```\n\n当执行上述程序时，它产生如下结果\
+  \ − 计数器值为 0 计数器值为 1 计数器值为 2 计数器值为 3 计数器值为 4\n\n在 Perl 5.10 之前，你必须这样写 −\n\n```perl\n\
+  #!/usr/bin/perl\n{\nmy $count = 0; # 初始值\nsub PrintCount {\nprint \"Value of counter\
+  \ is $count\\n\";\n$count++;\n}\n}\nfor (1..5){ PrintCount();\n}\n```\n\n## 子程序调用上下文\n\
+  \n子程序或语句的上下文是由期望的返回值类型定义的。这允许你使用单个函数根据用户期望接收的内容来返回不同的值。例如，接下来的 `localtime()` 在标量上下文（scalar\
+  \ context）调用时返回字符串，但在列表上下文（list context）调用时返回列表。\n\n```perl\nmy $datestring = localtime(\
+  \ time );\n```\n\n在此示例中，`$timestr` 的值现在是由当前日期和时间组成的字符串，例如 Thu Nov 30 15:21:33 2000。。反地\
+  \ −\n\n```perl\n($sec,$min,$hour,$mday,$mon, $year,$wday,$yday,$isdst) = localtime(time);\n\
+  ```\n\n现在，各个变量包含了 `localtime()` 子程序返回的相应值。\n"
