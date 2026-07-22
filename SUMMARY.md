@@ -455,6 +455,7 @@
 +   [通过 Unity 创建游戏学习 C# 编程（初学者）：学习 C# 编程并享受其中](docs/learn-c-programming-by-creating-games-with-unity-beginner-le/README.md)
 +   [500 个程序学 C 语言编程：仅包含学习与算法程序（附源码）](docs/learn-c-programming-with-500-programs-only-learning-and-algo/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
++   [Let Us C++：深入 C++ 语言细节，并了解为何程序员偏好 OOP 和 C++（英文版）](docs/let-us-c-dive-into-the-nitty-gritties-of-c-language-and-lear/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
 +   [Linux C 一站式学习](docs/linux-c-1stop-lrn/README.md)
 +   [零基础学 qt4 编程](docs/lrn-qt4-0basic/README.md)

@@ -1,0 +1,41 @@
+name: Let Us C++： Dive into the nitty-gritties of C++ language and learn why programmers
+  prefer OOPs and C++ (English Edition)
+name_cn: Let Us C++：深入 C++ 语言细节，并了解为何程序员偏好 OOP 和 C++（英文版）
+slug: let-us-c-dive-into-the-nitty-gritties-of-c-language-and-lear
+toc:
+- - '#'
+  - Let Us C++：深入 C++ 语言细节，并了解为何程序员偏好 OOP 和 C++（英文版）
+- - '##'
+  - 关于作者
+- - '##'
+  - 致谢
+- - '##'
+  - 索引
+- - '##'
+  - 第三版序言
+- - '##'
+  - 第一版序言
+- - '##'
+  - OOP 导论
+- - '##'
+  - 迈向 C++
+- - '##'
+  - 函数
+- - '##'
+  - 类与对象
+- - '##'
+  - 类的细节
+- - '##'
+  - 继承
+- - '##'
+  - 多态
+- - '##'
+  - C++ 中的输入/输出
+- - '##'
+  - C++ 高级特性
+- - '##'
+  - 模板
+- - '##'
+  - 异常处理
+- - '##'
+  - 标准模板库
