@@ -506,6 +506,7 @@
 +   [C++ 泛型编程精通：解锁专家级技巧](docs/mastering-generic-programming-in-cunlock-the-secrets-of-expe/README.md)
 +   [精通高性能编程：C# 和 .NET 速成指南：构建可扩展 .NET 应用，优化 C# 性能](docs/mastering-high-performance-programming-a-c-and-net-crash-cou/README.md)
 +   [精通 Node.js 和 C++：中级开发者终极指南](docs/mastering-nodejs-and-c-the-ultimate-guide-for-intermediate-d/README.md)
++   [C 语言系统编程大师：文件、进程与 IPC](docs/mastering-system-programming-with-cfiles-processes-and-ipc/README.md)
 +   [C 和 C++ Windows 编程大师：现代开发者的完整指南](docs/mastering-windows-programming-with-c-and-c-a-complete-guide-/README.md)
 +   [C# 9 and .NET 5 微服务架构开发：使用 .NET 5 创建、开发并发布可扩展应用程序](docs/microservices-architecture-development-with-c-9-and-net-5-cr/README.md)
 +   [Java EE 架构师微服务：Java EE 架构师手册附录](docs/microservices-for-java-ee-architects-addendum-for-the-java-e/README.md)
