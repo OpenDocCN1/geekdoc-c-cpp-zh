@@ -464,6 +464,7 @@
 +   [金融现代 C++ 学习指南](docs/learning-modern-c-for-finance/README.md)
 +   [Let Us C++：深入 C++ 语言细节，并了解为何程序员偏好 OOP 和 C++（英文版）](docs/let-us-c-dive-into-the-nitty-gritties-of-c-language-and-lear/README.md)
 +   [Let Us C 解决方案 - 第17版：Let US C 练习认证答案（英文版）](docs/let-us-c-solutions---17th-edition-authenticate-solutions-of-/README.md)
++   [Let Us C 解决方案 - 第18版：Let US C 练习验证解决方案](docs/let-us-c-solutions---18th-edition-authenticate-solutions-of-/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
 +   [Linux C 一站式学习](docs/linux-c-1stop-lrn/README.md)
 +   [Linux Shell 编程：8 小时初学者指南](docs/linux-shell-programming-in-8-hours-for-beginners/README.md)
