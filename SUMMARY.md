@@ -526,6 +526,7 @@
 +   [现代 C++ 编程速成课程：通过实用示例和实践项目掌握 C++17 和 C++20](docs/modern-c-programming-crash-course-master-c17-and-c20-with-ha/README.md)
 +   [现代 Web 开发：理解领域、技术与用户体验（开发者参考）](docs/modern-web-development-understanding-domains-technologies-an/README.md)
 +   [更高效 C#（包含内容更新计划）：提升 C# 的 50 种方法（高效软件开发系列）](docs/more-effective-c-includes-content-update-program-50-specific/README.md)
++   [More OCaml：算法、方法与趣闻](docs/more-ocaml-algorithms-methods-and-diversions/README.md)
 +   [NLP：NLP 技术——建立自信并克服恐惧（含免费生命大师工具包) (NLP书籍，NLP 技术，NLP 初学者指南，NLP 神经语言编程，NLP 呆瓜指南第 3 卷)](docs/nlp-nlp-techniques--build-confidence-overcome-fear-free-life/README.md)
 +   [C 面对象编程使用指南](docs/object-oriented-programming-using-c--2/README.md)
 +   [Objective-C 面向对象编程](docs/object-oriented-programming-with-objective-c/README.md)
