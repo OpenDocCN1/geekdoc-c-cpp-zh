@@ -479,6 +479,7 @@
 +   [C# 高级指南](docs/mastering-c/README.md)
 +   [精通 C#：24 小时 C# 编程入门指南](docs/mastering-c-a-beginners-guide-to-c-programming-in-24hrs/README.md)
 +   [精通 C++ 网络自动化：跨配置管理、容器编排、Kubernetes 和云网络运行自动化](docs/mastering-c-network-automation-run-automation-across-configu/README.md)
++   [精通 C 语言语言：初学者与专家的实用指南](docs/mastering-c-programming-language-a-practical-approach-for-be/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
