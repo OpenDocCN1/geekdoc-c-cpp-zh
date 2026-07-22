@@ -1,0 +1,2 @@
++   [NLP：NLP 技术——建立自信并克服恐惧（含免费生命大师工具包) (NLP书籍，NLP 技术，NLP 初学者指南，NLP 神经语言编程，NLP 呆瓜指南第 3 卷)](README.md)
++   [NLP：NLP 技术——建立自信并克服恐惧（含免费生命大师工具包) (NLP书籍，NLP 技术，NLP 初学者指南，NLP 神经语言编程，NLP 呆瓜指南第 3 卷)](nlp-nlp-techniques--build-confidence-overcome-fear-free-life_0.md)
