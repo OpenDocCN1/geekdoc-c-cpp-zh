@@ -1,0 +1,97 @@
+name: PowerShell： For Beginners! Master The PowerShell Command Line In 24 Hours (Python
+  Programming, Javascript, Computer Programming, C++, SQL, Computer Hacking, Programming)
+name_cn: PowerShell：初学者指南！在24 小时内精通 PowerShell 命令行（Python 编程、Javascript、计算机编程、C++、SQL、计算机黑客、编程）
+slug: powershell-for-beginners-master-the-powershell-command-line-
+toc:
+- - '#'
+  - 第一章：搭建你的 PowerShell 实验场
+- - '##'
+  - 2. “x64” 操作系统
+- - '##'
+  - 运行 PowerShell
+- - '##'
+  - 为 PowerShell.exe 定制 Shell
+- - '##'
+  - PowerShell V3 在线资源
+- - '#'
+  - 第2 章：向 PowerShell 问好
+- - '##'
+  - 标准 PowerShell 控制台窗口（基于文本）
+- - '##'
+  - 配置基于文本的控制台
+- - '##'
+  - 集成脚本环境 (ISE) 控制台
+- - '##'
+  - 不允许拼写错误！
+- - '###'
+  - 如何确认你的 PowerShell 版本
+- - '###'
+  - PowerShell 实验室
+- - '###'
+  - 标签补全 (Tab Completion)
+- - '###'
+  - 通配符 (Wildcard)
+- - '###'
+  - 摘要帮助 (Summary Help)
+- - '###'
+  - 解释帮助文件 (Interpret a Help File)
+- - '###'
+  - 参数的类型类型 (Different Types of Parameters)
+- - '###'
+  - 参数值 (Parameter Values)
+- - '###'
+  - 参数值的类型 (Types of Parameter Values)
+- - '##'
+  - 获取常用参数的命令帮助
+- - '##'
+  - 如何访问在线帮助
+- - '##'
+  - 实验室测试
+- - '#'
+  - 第 4 章：使用命令 – 终于可以了！
+- - '##'
+  - 它是一个 Shell
+- - '##'
+  - 命令的元素
+- - '##'
+  - 创建命令的规则
+- - '##'
+  - 术语
+- - '##'
+  - 5. 命令
+- - '###'
+  - 推荐的 cmdlet 命名方式
+- - '###'
+  - 别名 (Alias)
+- - '###'
+  - 使用参数的快捷方式
+- - '###'
+  - Show-Command
+- - '###'
+  - 外部命令 (External Commands)
+- - '###'
+  - 解析错误消息
+- - '###'
+  - cmdlet 输入规则
+- - '##'
+  - 命令格式化
+- - '##'
+  - 参数输入规则
+- - '##'
+  - PowerShell 实验室
+- - '#'
+  - 第 5 章：管道功能
+- - '##'
+  - 导出逗号分隔值 (CSV)
+- - '##'
+  - 导出可扩展标记语言 (XML)
+- - '##'
+  - Compare Object 命令
+- - '##'
+  - PowerShell 输出型 cmdlets
+- - '##'
+  - 转换命令
+- - '##'
+  - 危险！cmdlets
+- - '#'
+  - 结语
