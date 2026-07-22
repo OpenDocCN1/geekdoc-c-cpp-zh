@@ -514,6 +514,7 @@
 +   [C 语言系统编程大师：文件、进程与 IPC](docs/mastering-system-programming-with-cfiles-processes-and-ipc/README.md)
 +   [C 和 C++ Windows 编程大师：现代开发者的完整指南](docs/mastering-windows-programming-with-c-and-c-a-complete-guide-/README.md)
 +   [精通 Xcode 4：开发与设计](docs/mastering-xcode-4-develop-and-design-bruno-matriccianos-libr/README.md)
++   [Excel 数学建模（数学教材）](docs/mathematical-modeling-with-excel-textbooks-in-mathematics/README.md)
 +   [Matlab 第四版：编程与问题解决入门指南](docs/matlab-fourth-edition-a-practical-introduction-to-programmin/README.md)
 +   [C# 9 and .NET 5 微服务架构开发：使用 .NET 5 创建、开发并发布可扩展应用程序](docs/microservices-architecture-development-with-c-9-and-net-5-cr/README.md)
 +   [Java EE 架构师微服务：Java EE 架构师手册附录](docs/microservices-for-java-ee-architects-addendum-for-the-java-e/README.md)
