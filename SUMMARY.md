@@ -516,6 +516,7 @@
 +   [Java EE 架构师微服务：Java EE 架构师手册附录](docs/microservices-for-java-ee-architects-addendum-for-the-java-e/README.md)
 +   [Microsoft SharePoint Foundation 2010 逐步指南](docs/microsoft-sharepoint-foundation-2010-step-by-step---includes/README.md)
 +   [Minecraft 高级建筑：惊艳作品赏](docs/minecraft-master-builds-a-showcase-of-breathtaking-creations/README.md)
++   [Mobilized：连接技术业务与未来内部指南](docs/mobilized-an-insiders-guide-to-the-business-and-future-of-co/README.md)
 +   [Modbus TCP／RTU (C#)：C# Modbus 编程](docs/modbus-tcprtu-c-modbus-programming-in-c/README.md)
 +   [现代 C++ 编程速成课程：通过实用示例和实践项目掌握 C++17 和 C++20](docs/modern-c-programming-crash-course-master-c17-and-c20-with-ha/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
