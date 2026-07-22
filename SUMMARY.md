@@ -455,6 +455,7 @@
 +   [学习 C 编程：C 编程学习初学者指南](docs/learn-c-programming-a-beginners-guide-to-learning-c-programm/README.md)
 +   [C 语言编程：从入门到高级](docs/learn-c-programming-basics-to-advanced/README.md)
 +   [通过 Unity 创建游戏学习 C# 编程（初学者）：学习 C# 编程并享受其中](docs/learn-c-programming-by-creating-games-with-unity-beginner-le/README.md)
++   [从零开始学习 C 编程：循序渐进的方法与问题解决方案](docs/learn-c-programming-from-scratch-a-step-by-step-methodology-/README.md)
 +   [500 个程序学 C 语言编程：仅包含学习与算法程序（附源码）](docs/learn-c-programming-with-500-programs-only-learning-and-algo/README.md)
 +   [快速上手 C#：即使是编程新手也能学会的 C# 初学者指南（成课程与实用项目书籍 2）](docs/learn-c-quickly-a-complete-beginners-guide-to-learning-c-eve/README.md)
 +   [Python：少儿、青少年及童心未学者编程基础，计算机编程轻松学！](docs/learn-coding-basics-for-kids-young-adults-and-people-that-ar/README.md)
