@@ -526,6 +526,7 @@
 +   [更高效 C#（包含内容更新计划）：提升 C# 的 50 种方法（高效软件开发系列）](docs/more-effective-c-includes-content-update-program-50-specific/README.md)
 +   [NLP：NLP 技术——建立自信并克服恐惧（含免费生命大师工具包) (NLP书籍，NLP 技术，NLP 初学者指南，NLP 神经语言编程，NLP 呆瓜指南第 3 卷)](docs/nlp-nlp-techniques--build-confidence-overcome-fear-free-life/README.md)
 +   [C 面对象编程使用指南](docs/object-oriented-programming-using-c--2/README.md)
++   [Objective-C 面向对象编程](docs/object-oriented-programming-with-objective-c/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
