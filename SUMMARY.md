@@ -461,6 +461,7 @@
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [可视化学习 Python 3.0](docs/learn-python-30-visually/README.md)
 +   [通过 Unity 开发游戏学习 C#：使用 Unity 引擎构建、定制并优化专业游戏](docs/learning-c-by-developing-games-with-unity-build-customize-an/README.md)
++   [金融现代 C++ 学习指南](docs/learning-modern-c-for-finance/README.md)
 +   [Let Us C++：深入 C++ 语言细节，并了解为何程序员偏好 OOP 和 C++（英文版）](docs/let-us-c-dive-into-the-nitty-gritties-of-c-language-and-lear/README.md)
 +   [Let Us C 解决方案 - 第17版：Let US C 练习认证答案（英文版）](docs/let-us-c-solutions---17th-edition-authenticate-solutions-of-/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
