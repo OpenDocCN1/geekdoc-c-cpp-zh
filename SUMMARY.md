@@ -447,6 +447,7 @@
 +   [初学者指南：Java 与 C 计算机编程二合一](docs/java-and-c-computer-programming-for-beginners-2-book-in-one/README.md)
 +   [Java 与 C 编程初学者指南：二本合一学习 Java 和 C 编程、基础与代码的实用初学者指南](docs/java-ans-c-computer-programming-for-beginners-2-book-in-one-/README.md)
 +   [Java 核心基础第一卷：编程基础](docs/java-essentials-volume-1-programming-fundamentals/README.md)
++   [Java 入门指南](docs/java-for-dummies/README.md)
 +   [Java 编程初学者指南：速成课程 (Java, Python, C++, R, C) (编程、Java 编程、C++ 编程、Python 编程、R 编程、C 编程，第 1 册)](docs/java-programming-for-beginners-crash-course-java-python-c-r-/README.md)
 +   [JavaScript 入门指南](docs/javascript-absolute-beginners-guide/README.md)
 +   [JavaScript 程序员参考手册](docs/javascript-programmer39s-reference/README.md)
