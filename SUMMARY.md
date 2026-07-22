@@ -469,6 +469,7 @@
 +   [STM32 学习嵌入式系统：嵌入式系统 RTOS 编程构建；基于 Cortex-M4 上使用 STM32 和 C 语言构建 NEC 解码器](docs/learn-embedded-system-with-stm32-building-an-rtos-programmin/README.md)
 +   [Learn Java：1周学会 Java 快速入门指南](docs/learn-java-a-crash-course-guide-to-learn-java-in-1-week/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
++   [C 语言编程：C 语言学习阶梯式自学实践指南](docs/learn-programming-with-c-an-easy-step-by-step-self-practice-/README.md)
 +   [可视化学习 Python 3.0](docs/learn-python-30-visually/README.md)
 +   [Learn Python 可视化 3.0：利用科学与创意教授非代码人员右脑学习的加速方法](docs/learn-python-visually-30-an-accelerated-method-which-uses-sc/README.md)
 +   [通过 Unity 开发游戏学习 C#：使用 Unity 引擎构建、定制并优化专业游戏](docs/learning-c-by-developing-games-with-unity-build-customize-an/README.md)
