@@ -499,6 +499,7 @@
 +   [精通 C 语言语言：初学者与专家的实用指南](docs/mastering-c-programming-language-a-practical-approach-for-be/README.md)
 +   [精通 C++：编程初学者全面指南](docs/mastering-c-swiftly-a-comprehensive-beginners-handbook-for-n/README.md)
 +   [精通计算机编程：Python、C、C++、C#、HTML 编码与道德黑客攻击综合指南](docs/mastering-computer-programming-a-comprehensive-guide-to-pyth/README.md)
++   [精通 C++ 并发与并行编程：构建健壮、可维护且高性能并发代码的高级技术与最佳实践](docs/mastering-concurrency-and-parallel-programming-atain-advance/README.md)
 +   [C++ 泛型编程精通：解锁专家级技巧](docs/mastering-generic-programming-in-cunlock-the-secrets-of-expe/README.md)
 +   [精通高性能编程：C# 和 .NET 速成指南：构建可扩展 .NET 应用，优化 C# 性能](docs/mastering-high-performance-programming-a-c-and-net-crash-cou/README.md)
 +   [精通 Node.js 和 C++：中级开发者终极指南](docs/mastering-nodejs-and-c-the-ultimate-guide-for-intermediate-d/README.md)
