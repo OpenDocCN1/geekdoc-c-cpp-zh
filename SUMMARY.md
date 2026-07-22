@@ -487,6 +487,7 @@
 +   [Linux Shell 编程：8 小时初学者指南](docs/linux-shell-programming-in-8-hours-for-beginners/README.md)
 +   [零基础学 qt4 编程](docs/lrn-qt4-0basic/README.md)
 +   [Lua 脚本：从零开始掌握完整的 Lua编程。“从零开始学习完整的 Lua 脚本，并在 C 和 C++ 应用程序中嵌入 Lua”](docs/lua-scripting-master-complete-lua-programming-from-scratch-l/README.md)
++   [Mac OS X Snow Leopard 圣经](docs/mac-os-x-snow-leopard-bible-description-based-on-print-versi/README.md)
 +   [网络安全的机器学习](docs/macnhine-learning-for-cyber-security/README.md)
 +   [C++编程大师：从初学者基础到高级技巧](docs/master-c-programming-from-beginner-basics-to-advanced-techni/README.md)
 +   [C# 高级指南](docs/mastering-c/README.md)
