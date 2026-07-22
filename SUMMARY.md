@@ -520,6 +520,7 @@
 +   [C# 9 and .NET 5 微服务架构开发：使用 .NET 5 创建、开发并发布可扩展应用程序](docs/microservices-architecture-development-with-c-9-and-net-5-cr/README.md)
 +   [Java EE 架构师微服务：Java EE 架构师手册附录](docs/microservices-for-java-ee-architects-addendum-for-the-java-e/README.md)
 +   [Microsoft SharePoint Foundation 2010 逐步指南](docs/microsoft-sharepoint-foundation-2010-step-by-step---includes/README.md)
++   [Microsoft SQL Server 2012 管理：MCSA 认证及进阶实战技能（考试 70-461, 70-462 和 70-463）](docs/microsoft-sql-server-2012-administration-real-world-skills-f/README.md)
 +   [Minecraft 高级建筑：惊艳作品赏](docs/minecraft-master-builds-a-showcase-of-breathtaking-creations/README.md)
 +   [Mobilized：连接技术业务与未来内部指南](docs/mobilized-an-insiders-guide-to-the-business-and-future-of-co/README.md)
 +   [Modbus TCP／RTU (C#)：C# Modbus 编程](docs/modbus-tcprtu-c-modbus-programming-in-c/README.md)
