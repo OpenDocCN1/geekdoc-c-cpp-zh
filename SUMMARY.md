@@ -543,6 +543,7 @@
 +   [Objective-C 编程：Big Nerd Ranch 指南，第 2 版](docs/objective-c-programming-the-big-nerd-ranch-guide-2e-big-nerd/README.md)
 +   [C# 和 .NET Core 并行编程：从零开始使用 C# 和 .NET Core 3.1 开发多线程应用](docs/parallel-programming-with-c-and-net-core-developing-multithr/README.md)
 +   [PerL 编程入门指南](docs/perl-programming/README.md)
++   [PHP 7：轻松易学指南](docs/php-7-in-easy-steps/README.md)
 +   [PHP 参考：PHP 5 入门到中级指南](docs/php-reference-beginner-to-intermediate-php-5/README.md)
 +   [PowerShell：初学者指南！在24 小时内精通 PowerShell 命令行（Python 编程、Javascript、计算机编程、C++、SQL、计算机黑客、编程）](docs/powershell-for-beginners-master-the-powershell-command-line-/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
