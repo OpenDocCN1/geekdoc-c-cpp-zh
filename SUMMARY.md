@@ -538,6 +538,7 @@
 +   [Objective-C 面向对象编程](docs/object-oriented-programming-with-objective-c/README.md)
 +   [Objective-C 开发者参考 (Developer Reference #29)](docs/objective-c-developer-reference-29/README.md)
 +   [Objective-C 短语手册，第二版](docs/objective-c-phrase-book-second-edition/README.md)
++   [Objective-C 编程：Big Nerd Ranch 指南，第 2 版](docs/objective-c-programming-the-big-nerd-ranch-guide-2e-big-nerd/README.md)
 +   [C# 和 .NET Core 并行编程：从零开始使用 C# 和 .NET Core 3.1 开发多线程应用](docs/parallel-programming-with-c-and-net-core-developing-multithr/README.md)
 +   [PerL 编程入门指南](docs/perl-programming/README.md)
 +   [PHP 参考：PHP 5 入门到中级指南](docs/php-reference-beginner-to-intermediate-php-5/README.md)
