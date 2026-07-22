@@ -1,0 +1,51 @@
+name: LEARN EMBEDDED SYSTEM WITH STM32： Building an RTOS Programming for Embedded
+  Systems Building an NEC Decoder with STM32 and C on Cortex-M4
+name_cn: STM32 学习嵌入式系统：嵌入式系统 RTOS 编程构建；基于 Cortex-M4 上使用 STM32 和 C 语言构建 NEC 解码器
+slug: learn-embedded-system-with-stm32-building-an-rtos-programmin
+toc:
+- - '#'
+  - STM32 学习嵌入式系统：嵌入式系统 RTOS 编程构建；基于 Cortex-M4 上使用 STM32 和 C 语言构建 NEC 解码器
+- - '##'
+  - 定器管理
+- - '###'
+  - 逻辑与信号处理
+- - '###'
+  - 软件层
+- - '###'
+  - ARM CORTEX M4 内存映射
+- - '##'
+  - 安装过程
+- - '###'
+  - STM32 引脚定义
+- - '##'
+  - 如何在编程环境中增大字体大小
+- - '##'
+  - 为什么用 C 以及基本程序结构
+- - '#'
+  - 微处理器 VS 微控制器
+- - '###'
+  - 输入模式：上拉、下拉、浮空模式
+- - '###'
+  - 输出模式：开漏极配置
+- - '##'
+  - 输出模式推挽（PUSH PULL）配置
+- - '#'
+  - GPIO 配置与 LED 闪烁
+- - '##'
+  - 逻辑运算
+- - '##'
+  - LED 闪烁逻辑
+- - '##'
+  - 中断服务程序 (ISR)
+- - '##'
+  - 启用外设时钟
+- - '###'
+  - 中断配置与 ADC 转换
+- - '#'
+  - ADC 配置与序列管理
+- - '##'
+  - 序列寄存器
+- - '##'
+  - ADC 激活与电源管理
+- - '###'
+  - 修复说明：
