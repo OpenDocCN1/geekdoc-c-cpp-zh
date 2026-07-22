@@ -531,6 +531,7 @@
 +   [C 面对象编程使用指南](docs/object-oriented-programming-using-c--2/README.md)
 +   [Objective-C 面向对象编程](docs/object-oriented-programming-with-objective-c/README.md)
 +   [Objective-C 开发者参考 (Developer Reference #29)](docs/objective-c-developer-reference-29/README.md)
++   [C# 和 .NET Core 并行编程：从零开始使用 C# 和 .NET Core 3.1 开发多线程应用](docs/parallel-programming-with-c-and-net-core-developing-multithr/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
