@@ -465,6 +465,7 @@
 +   [Let Us C 解决方案 - 第17版：Let US C 练习认证答案（英文版）](docs/let-us-c-solutions---17th-edition-authenticate-solutions-of-/README.md)
 +   [libuv 中文教程](docs/libuv-tut/README.md)
 +   [Linux C 一站式学习](docs/linux-c-1stop-lrn/README.md)
++   [Linux Shell 编程：8 小时初学者指南](docs/linux-shell-programming-in-8-hours-for-beginners/README.md)
 +   [零基础学 qt4 编程](docs/lrn-qt4-0basic/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
