@@ -468,6 +468,7 @@
 +   [Learn Java：1周学会 Java 快速入门指南](docs/learn-java-a-crash-course-guide-to-learn-java-in-1-week/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [可视化学习 Python 3.0](docs/learn-python-30-visually/README.md)
++   [Learn Python 可视化 3.0：利用科学与创意教授非代码人员右脑学习的加速方法](docs/learn-python-visually-30-an-accelerated-method-which-uses-sc/README.md)
 +   [通过 Unity 开发游戏学习 C#：使用 Unity 引擎构建、定制并优化专业游戏](docs/learning-c-by-developing-games-with-unity-build-customize-an/README.md)
 +   [Unity 3D C# 编程学习](docs/learning-c-programming-with-unity-3d/README.md)
 +   [金融现代 C++ 学习指南](docs/learning-modern-c-for-finance/README.md)
