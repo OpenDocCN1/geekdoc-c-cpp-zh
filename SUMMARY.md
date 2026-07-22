@@ -489,6 +489,7 @@
 +   [C# 高级指南](docs/mastering-c/README.md)
 +   [精通 C#：24 小时 C# 编程入门指南](docs/mastering-c-a-beginners-guide-to-c-programming-in-24hrs/README.md)
 +   [精通 C++：初学者与高级用户分步渐进指南，包含 26 个测验和 120 多道问题](docs/mastering-c-a-step-by-step-guide-for-the-beginner-and-advanc/README.md)
++   [精通 C++ 与 C# 编程：中级学习者全面深度指南 - 2 本合](docs/mastering-c-and-c-programming-a-comprehensive-and-in-depth-g/README.md)
 +   [精通 C# 与 Dart 编程：中级编码者深度指南 - 2 本合 1](docs/mastering-c-and-dart-programming-an-in-depth-guide-for-inter/README.md)
 +   [中级程序员 C++ 与 Java 精进 - 2 本合1](docs/mastering-c-and-java-for-intermediate-programmers---2-books-/README.md)
 +   [精通 C++ 设计模式：创建高效可扩展的代码](docs/mastering-c-design-patterns-create-efficient-and-scalable-co/README.md)
