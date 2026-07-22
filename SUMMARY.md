@@ -495,6 +495,7 @@
 +   [精通 C 语言语言：初学者与专家的实用指南](docs/mastering-c-programming-language-a-practical-approach-for-be/README.md)
 +   [C++ 泛型编程精通：解锁专家级技巧](docs/mastering-generic-programming-in-cunlock-the-secrets-of-expe/README.md)
 +   [精通高性能编程：C# 和 .NET 速成指南：构建可扩展 .NET 应用，优化 C# 性能](docs/mastering-high-performance-programming-a-c-and-net-crash-cou/README.md)
++   [精通 Node.js 和 C++：中级开发者终极指南](docs/mastering-nodejs-and-c-the-ultimate-guide-for-intermediate-d/README.md)
 +   [C 和 C++ Windows 编程大师：现代开发者的完整指南](docs/mastering-windows-programming-with-c-and-c-a-complete-guide-/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
