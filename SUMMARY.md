@@ -536,6 +536,7 @@
 +   [C# 和 .NET Core 并行编程：从零开始使用 C# 和 .NET Core 3.1 开发多线程应用](docs/parallel-programming-with-c-and-net-core-developing-multithr/README.md)
 +   [PerL 编程入门指南](docs/perl-programming/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
++   [Practical C++ 后端编程：为高性能后端构制数据库、API 和 Web 服务器](docs/practical-c-backend-programming-crafting-databases-apis-and-/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
