@@ -536,6 +536,7 @@
 +   [NLP：NLP 技术——建立自信并克服恐惧（含免费生命大师工具包) (NLP书籍，NLP 技术，NLP 初学者指南，NLP 神经语言编程，NLP 呆瓜指南第 3 卷)](docs/nlp-nlp-techniques--build-confidence-overcome-fear-free-life/README.md)
 +   [使用 R 工具的非线性参数优化](docs/nonlinear-parameter-optimization-using-r-tools/README.md)
 +   [C 面对象编程使用指南](docs/object-oriented-programming-using-c--2/README.md)
++   [C++ 面向对象编程](docs/object-oriented-programming-with-c-plus-plus/README.md)
 +   [Objective-C 面向对象编程](docs/object-oriented-programming-with-objective-c/README.md)
 +   [Objective-C 开发者参考 (Developer Reference #29)](docs/objective-c-developer-reference-29/README.md)
 +   [Objective-C 短语手册，第二版](docs/objective-c-phrase-book-second-edition/README.md)
