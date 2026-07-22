@@ -454,6 +454,7 @@
 +   [Julia 编程释放 + C# 编程精通：进阶之路；中级程序员 2 本合 1](docs/julia-programming-unleashed-mastering-c-programming-a-step-b/README.md)
 +   [Kotlin 与 C 编程示例：初学者编程指南](docs/kotlin-and-c-coding-examples-programming-for-beginners/README.md)
 +   [C++ 语言增长超过其他语言：计算机编程基础 - 轻松上手指南](docs/language-c-growing-faster-than-other-computer-programming-ba/README.md)
++   [大规模 C++ 卷 I：进程与架构](docs/large-scale-c-volume-i-process-and-architecture/README.md)
 +   [一天学会 C# 并精通它：带实战项目的 C# 初学者指南：一本让你立即开始 C# 编程的唯一书籍](docs/learn-c-in-one-day-and-learn-it-well-c-for-beginners-with-ha/README.md)
 +   [一天学会 C++ 并精通它：实用分步进阶指南，快速学习编程](docs/learn-c-in-one-day-and-learn-it-well-learn-coding-fast-with-/README.md)
 +   [从零开始学习 C# .NET：初学者循序渐指南。无需经验！掌握基础知识，构建项目并获得工作机会](docs/learn-c-net-from-scratch-a-step-by-step-guide-for-beginners-/README.md)
