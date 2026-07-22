@@ -1,0 +1,404 @@
+name: PHP Reference ： Beginner to Intermediate PHP 5
+name_cn: PHP 参考：PHP 5 入门到中级指南
+slug: php-reference-beginner-to-intermediate-php-5
+toc:
+- - '#'
+  - PHP 参考：PHP 5 入门到中级指南
+- - '##'
+  - 序言
+- - '##'
+  - 你应该了解的杂项
+- - '###'
+  - 可移植性与兼容性
+- - '###'
+  - 引号
+- - '###'
+  - 注释与特殊字符
+- - '###'
+  - 常量
+- - '###'
+  - 函数
+- - '###'
+  - eval($string)
+- - '###'
+  - sleep($integer)
+- - '###'
+  - usleep($integer)
+- - '###'
+  - uniqid($prefix)
+- - '###'
+  - md5($string)
+- - '###'
+  - setcookie($name, $value, $expire, $path, $domain, $secure, $httponly)
+- - '###'
+  - urlencode($string)
+- - '###'
+  - urldecode($string)
+- - '###'
+  - get_magic_quotes_gpc()
+- - '###'
+  - phpinfo($option)
+- - '###'
+  - error_reporting 和 ini_set
+- - '##'
+  - 函数与引用
+- - '##'
+  - 三元运算符
+- - '##'
+  - 运算符
+- - '##'
+  - 逻辑运算符
+- - '##'
+  - 字符串拼接
+- - '##'
+  - 逻辑比较
+- - '##'
+  - 控制结构
+- - '###'
+  - If, ElseIf, Else
+- - '###'
+  - if 语句的替代语法
+- - '###'
+  - Switch
+- - '###'
+  - While
+- - '###'
+  - Do-While
+- - '###'
+  - For
+- - '##'
+  - For 循环
+- - '##'
+  - Foreach 循环
+- - '##'
+  - Break 语句
+- - '##'
+  - Continue 语句
+- - '##'
+  - Return 语句
+- - '##'
+  - 文件函数
+- - '##'
+  - 全局变量
+- - '##'
+  - 变量函数
+- - '###'
+  - 确定 $variable 是否为空。
+- - '###'
+  - 确定 $variable 是否为 `NULL`。
+- - '###'
+  - 接受逗号分隔的多个 $variables，但只有当所有变量都设置时才返回 TRUE。
+- - '###'
+  - 接受逗号分隔的多个 $variables。
+- - '###'
+  - 确定 $variable 是否为数组。
+- - '###'
+  - 也称为：`is_integer()`
+- - '###'
+  - 确定 $variable 是否为字符串。
+- - '###'
+  - 确定 $variable 是否为整数或数字字符串（例如 "12"）。
+- - '###'
+  - '`var_dump( expr [, ... expr ...])`'
+- - '##'
+  - 字符串函数
+- - '##'
+  - addslashes()
+- - '##'
+  - stripslashes()
+- - '##'
+  - chunk_split()
+- - '##'
+  - wordwrap()
+- - '##'
+  - count_chars()
+- - '##'
+  - '`implode(limiter, $array)`'
+- - '##'
+  - '`sprintf()`'
+- - '##'
+  - 示例
+- - '###'
+  - 基础替换，无可选说明符
+- - '###'
+  - 基础替换，类型指定自动调整
+- - '###'
+  - 使用符号说明符
+- - '###'
+  - 使用填充和宽度说明符（默认填充说明符为空格）
+- - '###'
+  - 使用零（`0`）进行填充和宽度
+- - '###'
+  - 使用自定义字符星号（`*`）进行填充和宽度
+- - '###'
+  - 使用填充、对齐（左侧）和宽度
+- - '###'
+  - 使用精度说明符
+- - '##'
+  - printf( formatting , inputs [, ... inputs ... ] )
+- - '##'
+  - sscanf( $string, format [, ... outputs ] )
+- - '##'
+  - list( $string [, quotes_flag ] [, character_set ] )
+- - '##'
+  - htmlspecialchars_decode( $string [, quotes_flag ] [, character_set ] )
+- - '##'
+  - htmlentities( $string [, quotes_flag ] [, character_set ] )
+- - '##'
+  - html_entity_decode( $string [, quotes_flag ] [, character_set ] )
+- - '##'
+  - trim( $string [, characters ] )
+- - '##'
+  - ltrim( $string [, characters ] )
+- - '##'
+  - rtrim( $string [, characters ] )
+- - '##'
+  - 密码安全与盐（Salt）
+- - '##'
+  - 哈希函数
+- - '###'
+  - md5_file
+- - '###'
+  - sha1
+- - '###'
+  - sha1_file
+- - '###'
+  - number_format
+- - '###'
+  - nl2br
+- - '###'
+  - parse_str
+- - '##'
+  - str_replace()
+- - '###'
+  - '示例:'
+- - '##'
+  - str_ireplace()
+- - '###'
+  - '示例:'
+- - '##'
+  - strtr()
+- - '###'
+  - '示例:'
+- - '##'
+  - substr()
+- - '###'
+  - '示例:'
+- - '##'
+  - substr_replace()
+- - '###'
+  - '示例:'
+- - '##'
+  - substr_count()
+- - '###'
+  - '示例:'
+- - '##'
+  - str_pad()
+- - '###'
+  - '示例:'
+- - '###'
+  - '查看:'
+- - '##'
+  - str_repeat()
+- - '###'
+  - '示例:'
+- - '##'
+  - str_shuffle()
+- - '###'
+  - '示例:'
+- - '##'
+  - str_split()
+- - '###'
+  - '示例:'
+- - '##'
+  - str_word_count()
+- - '###'
+  - '示例:'
+- - '##'
+  - str_tags()
+- - '###'
+  - '示例:'
+- - '##'
+  - strpos()
+- - '###'
+  - '示例:'
+- - '##'
+  - '`strrpos( haystack , needle [, start ])`'
+- - '##'
+  - '`strripos()`'
+- - '##'
+  - '`strrpos()`'
+- - '##'
+  - '`strpos()`'
+- - '##'
+  - '`strstr()`'
+- - '##'
+  - '`strlen()`'
+- - '##'
+  - '`strtolower()`'
+- - '##'
+  - '`strtoupper()`'
+- - '##'
+  - '`ucfirst()`'
+- - '##'
+  - '`ucwords()`'
+- - '##'
+  - '`strpbrk()`'
+- - '##'
+  - '`strrev()`'
+- - '##'
+  - Array Functions
+- - '###'
+  - Case Conversion
+- - '###'
+  - '`array_chunk()`'
+- - '###'
+  - '`array_combine()`'
+- - '###'
+  - '`array_merge()`'
+- - '###'
+  - array_count_values()
+- - '###'
+  - count()
+- - '###'
+  - array_diff()
+- - '###'
+  - array_intersect()
+- - '###'
+  - array_diff_key()
+- - '###'
+  - array_diff_assoc()
+- - '###'
+  - array_intersect_key()
+- - '###'
+  - array_flip()
+- - '###'
+  - '`preserve_keys` – [可选] `$boolean` 默认值：`FALSE`，索引键将被重新索引'
+- - '###'
+  - '`key` – `$string` 或 `$integer`'
+- - '###'
+  - '`in_array()` – 检查特定值是否存在于数组中'
+- - '###'
+  - '`array_values()` – 返回数组中的所有值'
+- - '###'
+  - '`array_keys()` – 返回键（或索引）'
+- - '###'
+  - '`array_splice($array, offset [, length ])`'
+- - '###'
+  - '`array_unique($array)`'
+- - '##'
+  - 日期/时间
+- - '###'
+  - 日 (Day)
+- - '###'
+  - 周 (Week)
+- - '###'
+  - 月 (Month)
+- - '###'
+  - 年 (Year)
+- - '###'
+  - 时间 (Time)
+- - '###'
+  - 时区 (Timezone)
+- - '###'
+  - 完整日期/时间 (Full Date/Time)
+- - '##'
+  - 数学函数
+- - '###'
+  - abs(number)
+- - '###'
+  - dechex($integer)
+- - '###'
+  - max()
+- - '###'
+  - min()
+- - '###'
+  - pi()
+- - '###'
+  - pow(base, exponent)
+- - '###'
+  - sqrt($float)
+- - '###'
+  - log($float [, base])
+- - '###'
+  - round($float [, decimals])
+- - '###'
+  - floor($float)
+- - '###'
+  - rand(min, max)
+- - '###'
+  - mt_rand(min, max)
+- - '##'
+  - MySQL 函数
+- - '##'
+  - 示例
+- - '##'
+  - mysql_connect()
+- - '##'
+  - mysql_close()
+- - '##'
+  - mysql_select_db()
+- - '##'
+  - mysql_query()
+- - '##'
+  - mysql_error()
+- - '##'
+  - mysql_fetch_array()
+- - '##'
+  - mysql_fetch_assoc()
+- - '##'
+  - mysql_fetch_row()
+- - '##'
+  - mysql_result()
+- - '##'
+  - mysql_num_rows()
+- - '##'
+  - mysql_free_result()
+- - '##'
+  - mysql_get_server_info()
+- - '##'
+  - mysql_real_escape_string()
+- - '##'
+  - mysql_data_seek()
+- - '##'
+  - mysql_affected_rows()
+- - '##'
+  - mysql_create_db()
+- - '##'
+  - mysql_drop_db()
+- - '##'
+  - 目录 & 文件系统
+- - '###'
+  - getcwd()
+- - '###'
+  - chdir()
+- - '###'
+  - scandir()
+- - '###'
+  - copy()
+- - '###'
+  - rename()
+- - '###'
+  - mkdir()
+- - '###'
+  - rmdir()
+- - '###'
+  - unlink()
+- - '###'
+  - fopen()
+- - '###'
+  - fclose()
+- - '###'
+  - fread()
+- - '###'
+  - fwrite( resource , $string [, length ])
+- - '##'
+  - 常用八进制模式
+- - '##'
+  - 输出控制（输出缓冲区）
+- - '##'
+  - 会话 (Sessions)
+- - '###'
+  - 正则表达式语法
+- - '###'
+  - 仅限 PERL 兼容 (PCRE) ( preg_*() )

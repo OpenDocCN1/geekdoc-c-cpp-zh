@@ -1,0 +1,1185 @@
+- "# PHP 参考：PHP 5 入门到中级指南\n\n\n\n![](img/image_rsrc7MH.jpg)\n\n\n\n\n\n\n\n\n## 序言\n\
+  \n我自学了 PHP 和 MySQL，发现自己有时无法访问互联网，因此无法查询 PHP.net 手册 ([`www.php.net/manual/en/`](http://www.php.net/manual/en/))。由于编码不是我的主要工作，我需要温习语法、用法，最重要的是提醒自己如何编写\
+  \ PHP 代码，而不是花费一个小时去调试一个愚蠢的错误。我打印了参考表、卡片、抄表，并尝试完全依靠它们来工作。然而，我仍然发现需要的内容一张 8.5\" x\
+  \ 11\" 英寸纸的正反面写不下。于是，我去了网页和本地书店。在翻阅了几本书并进行试用后，我遇到了两个主要问题：\n\n1. 我花费了大部分时间在大量的教程中筛选以找到我寻找的关键词和答案，有时甚至是徒劳无功。\n\
+  2. 信息存在偏见，或者被无关且通常令人困惑的代码包围。\n\n书的大部分是函数集合，它们的描述、示例代码、可能提供的额外提示，以及可能你感兴趣的相关函数。所有函数将使用以下格式呈现：\n\
+  \n![](img/image_rsrc7MK.jpg)\n\n1 布尔通常在表达式中使用。虽然它也被视为变量进行评估，但输出结果可能有所不同，并在尽可能特定的函数内进行了说明。\n\
+  \n```\nfunction name(input, [optional input])\n```\n\n描述/定义\n\n示例：\n```php\n带有 //\
+  \ 注释的代码\n```\n\n通过 Web 浏览器查看的代码输出结果：\n```\nOutput\n```\n\n另另阅：`function` – 简化且相关的定义，`function`\
+  \ – 简化且相关的定义\n\n■ ■ ■\n\n| {可选章节} 帮助使用或使用技巧的提示 | 与提示相关的额外代码 |\n| :--- | :--- |\n\
+  | 输出{[0] => 的[1] => 代码} |\n\n\n\n\n\n感谢，祝你愉快！\n\n## 你应该了解的杂项\n\n并不是所有内容都能归入整齐的类别，PHP\
+  \ 中也不是所有内容都属于本参考书。然而，某些内容值得简单说明和关注，并应当包含在这里。\n\n![](img/image_rsrc7MM.jpg)\n\n###\
+  \ 可移植性与兼容性\n\n为了移植性和兼容性，请始终使用长形式。\n- 长形式：`<?php expr ?>`\n- 短形式：`<? expr ?>`\n-\
+  \ `<? echo expr ?>` 的短形式等价\n\n注意：不需要结束分号（`;`）。`<?= expr ?>`\n![](img/image_rsrc7MN.jpg)\n\
+  \n所有语句必须以分号（`;`）结束！否则将产生错误。如果错误不明，你可能在某处漏掉了分号！！\n\n[](image_rsrc7MP.jpg)\n\n###\
+  \ 引号\n\n`' '`（单引号）——单引号内部的内容按字面量评估。因此，`$string` 实际上意味着：(美元符号)string，而不代表变量的值。\n\
+  示例：\n![](img/image_rsrc7MR.jpg)\n```php\n$string = 'Single Quotes'; echo '$string';\n\
+  ```\n\n`\" \"`（双引号）——双引号内部的变量会求其值。\n示例：\n![](img/image_rsrc7MS.jpg)\n```php\n$string\
+  \ = 'Double Quotes'; echo \"$string\";\n```\n![](img/image_rsrc7MT.jpg)\n\n在双引号内应按字面量评估的转义字符。\n\
+  示例：\n```php\n$string = 'Double Quotes';\n```\n![](img/image_rsrc7MU.jpg)\n```php\n\
+  echo \"\\$string is set as $string\";\n```\n![](img/image_rsrc7MV.jpg)\n\n反斜杠 (`\\\
+  `) 问号 (`?`) 单引号 (`'`) 双引号 (`\"`) 美元符号 (`$`)\n示例：\n```php\n$string = 'Hello World!';\n\
+  ```\n![](img/image_rsrc7MW.jpg)\n```php\necho \"The variable \\$string contains\
+  \ \\' $string \\' \\\" \\\\\";\necho 'The variable \\$string contains \\' $string\
+  \ \\' \\\" \\\\';\n```\n![](img/image_rsrc7MX.jpg)\n\n### 注释与特殊字符\n\n![](img/image_rsrc7MY.jpg)\n\
+  \n单行，用于双正斜线右侧的内容：\n```php\n// This is a comment\n```\n\n多行，使用起始和结束标签：\n```php\n\
+  /*\n * This is a comment \n */\n```\n![](img/image_rsrc7MZ.jpg)\n\n- `\\n` – 新行\n\
+  - `\\r` – 回车\n- `\\t` – 制表符\n- `\\b` – 退格\n[](image_rsrc7N0.jpg)\n\n### 常量\n\n-\
+  \ `name` – `$string`\n- `value` – `$scalar`\n- `$boolean` – `[可选]` 默认值：`FALSE`，区分大小写\n\
+  \n定义常量，这是一个全局分配的设置值，使得函数和类可以直接使用，而无需将其作为参数传递。\n示例：\n![](img/image_rsrc7N1.jpg)\n\
+  ```php\ndefine('HELLO', 'Hello World!'); echo HELLO;\ndefine('GREETINGS', 'Hello\
+  \ World!', TRUE); echo GREETINGS;\n```\n![](img/image_rsrc7N2.jpg)\n```php\necho\
+  \ greetings;\n```\n![](img/image_rsrc7N3.jpg)\n\n### 函数\n\n`function functionname([arguments])\
+  \ { }`\n\n函数可以放置在页面的任何位置，即使在实际创建函数之前调用它们也可以的。此规则的例外是，如果函数仅作为条件语句的一部分定义，那么在 fact\
+  \ 条件语句求值之前是无法调用。\n\n示例：\n```php\nhello();\n// 在条件语句上方，这会导致错误\nif (0==0){\n    function\
+  \ hello(){ echo 'Hello!';}\n}\n```\n[](image_rsrc7N4.jpg)\n```php\nif (0==0){\n\
+  \    function hello(){ echo 'Hello ';\n}\nhello();\nthere();\nfunction there(){echo\
+  \ 'there'; }\n```\n[](image_rsrc7N5.jpg)\n\n函数可以没有参数（如上所示）、有传递的参数，或者带有默认参数的传递参数（可选）。参数名称在函数内部用作变量名使用。\n\
+  \n```php\nfunction args($a, $b){\n    // 没有默认值，需要两个输入\n    echo \"a = $a, b = $b\"\
+  ;\n}\n```\n[](image_rsrc7N6.jpg)\n```php\nargs(1,2);\n```\n\n使用以下函数的示例：\n```php\n\
+  function args($a = 1, $b = 2){\n    // 设置了默认值\n    $c = $a + $b;\n    echo \"a =\
+  \ $a, b = $b, a+b = $c\";\n}\n```\n[](image_rsrc7N7.jpg)\n```php\nargs();\nargs(5,5);\n\
+  ```\n[](image_rsrc7N8.jpg)\n\n![](img/image_rsrc7N9.jpg)\n```php\nargs(10);\nargs($DoesNotExist,20);\
+  \ // 不要这样做，请发送 (NULL,20) \n```\n[](image_rsrc7NA.jpg)\n\n函数还可以返回一个 `$variable`（包括数组）：\n\
+  ```php\nfunction Add($one,$two){\n    $total = $one + $two;\n    return $total;\n\
+  }\n$a = 2;\n$b = 3;\n```\n![](img/image_rsrc7NB.jpg)\n```php\n$result = Add($a,$b);\
+  \ // 将 $total 的值赋值给 $result\necho $result;\n```\n■​ ■​ ■\n\n| 如果多个页面将引用相同的函数，请创建一个单独的\
+  \ `functions.php` 文件（名称自自定义），并在需要使用这些函数的页面中使用 `require()` 或 `require_once()`。为了速度和文件大小，页面特定的函数应直接包含在必要的页面中。\
+  \ |\n\n\n\n\n\n![](img/image_rsrc7NC.jpg)停止当前脚本并输出可选的 `$string`。\n\n示例：\n```php\n\
+  $result = @mysql_connect('db', 'user', 'pw') or die('Unable to connect to database!');\
+  \ \necho 'If it fails, this will never be seen';\n```\n![](img/image_rsrc7ND.jpg)\n\
+  注意：上述输出仅在失败时才会显示。如果 `mysql_connect()` 之前没有 `@` 符号，PHP 也会输出一个警告。\n\n![](img/image_rsrc7NE.jpg)\n\
+  \n### eval($string)\n将字符串作为代码进行评估。这可以用于将代码存储在数据库中并让 PHP 动态处理，就像它是页面的一部分。必须包含代码的所有适当方面，例如使用反斜杠（`\\\
+  `）转义项目，并在字符串末尾包含分号（`;`）。\n\n示例：\n```php\n$name = 'Mario';\n$string = 'My name is\
+  \ $name.'; // 注意单引号\necho $string;\n$code = \"\\$evalstring = \\\" $string \\\"\
+  \ ;\";// 反斜杠转义的影响：\n$code = \"$evalstring = \" $string \"\";\neval($code); // eval($evalstring\
+  \ = \" My name is $name \" ;);\n```\n![](img/image_rsrc7NF.jpg) // $evalstring 与\
+  \ $string 相同，只是现在使用了双引号\necho $evalstring;\n\n![](img/image_rsrc7NG.jpg)\n\n###\
+  \ sleep($integer)\n暂停 PHP `$integer` 秒后继续执行。\n\n示例：\n```php\nsleep(2); // 暂停 2 秒\n\
+  ```\n![](img/image_rsrc7NH.jpg)\n\n### usleep($integer)\n暂停 PHP `$integer` 微秒后继续执行。\n\
+  \n示例：\n```php\nusleep(1000000); // 暂停 1 秒\n```\n![](img/image_rsrc7NJ.jpg)\n\n###\
+  \ uniqid($prefix)\nentropy – [可选] `$boolean` 默认：FALSE，输出 13 个字符\n根据 `$scalar` 生成一个唯一\
+  \ ID。如果没有输入，则自动使用当前的微秒级时间。这最好与其他函数结合使用，以生成更独特的值。如果 `$scalar` 为空字符串（''`）且 `entropy`\
+  \ 设置为 TRUE，则提供 26 个字符的输出而非 13 个字符。\n\n示例：\n![](img/image_rsrc7NK.jpg)\n```php\n\
+  $id = uniqid(); echo $id;\n$random_id = uniqid(mt_rand()); echo $random_id;\n```\n\
+  ![](img/image_rsrc7NM.jpg)\n\n### md5($string)\n![](img/image_rsrc7NN.jpg)\n```php\n\
+  $md5 = md5($random_id); echo $md5;\n```\n另请：`md5()` – 基于 MD5 算法的加密\n\n![](img/image_rsrc7NP.jpg)\n\
+  \n### setcookie($name, $value, $expire, $path, $domain, $secure, $httponly)\nname\
+  \ – `$string`\nvalue – [可选] `$string`\ntime – [可选] `$integer` 默认：直到会话结束\npath –\
+  \ [可选] `$string` 默认：当前目录\ndomain – [可选] `$string` 默认：当前域名（例如 http://www.example.com）\n\
+  secure – [可选] `$boolean` 默认：FALSE，不需要安全连接\n```php\nhttponly – [可选] `$boolean` 默认：FALSE，脚本语言可用\n\
+  \n设置一个 cookie，在下一次页面加载时对服务器可见。要发送默认值，对于你想跳过的每个参数（时间参数除外），请使用一对单引号（`''''`），而时间参数应使用\
+  \ 0 来发送默认值。在大多数情况下，提供名称、值、时间和域名将涵盖大部分用途（path 使用 `''`）。\n\n示例：\n```php\nsetcookie('Cookie','Set\
+  \ till end of this session',0);\n// 这在页面重载后将正常显示\nprint_r($_COOKIE);\nArray ( [Cookie]\
+  \ => Set till end of this session )\n```\n![](img/image_rsrc7NR.jpg)\n```php\nsetcookie('Cookie','Set\
+  \ for 60 seconds for all subdomains of example.com, such as www., mail., etc.',time()+60,'','.example.com');\n\
+  print_r($_COOKIE);\n```\n常用的过期时间：\n- `time()+60*60*24` 等于 1 天\n- `time()+60*60*24*30`\
+  \ 等于 30 天\n- `time()-1` 是过去的一秒，用于使 cookie 过期/删除\n\n```php\nsetcookie('Cookie','',time()-1);\
+  \ // 过期名为 'Cookie' 的 cookie。注意值为空字符串\n```\n\n### urlencode($string)\n将 `$string`\
+  \ 的格式更改为适用于通过 URL 传递的格式（例如 GET 查询的一部分），并返回新字符串。\n\n示例：\n```php\n$string = 'Hello\
+  \ There! How are you?';\necho urlencode($string);\nHello+There%21+How+are+you%3F\n\
+  ```\n\n### urldecode($string)\n将 `$string` 的格式从 URL 兼容格式（例如 GET 查询）更改为人类可读格式，返回新字符串。\n\
+  \n示例：\n```php\n$string = 'Hello+There%21+How+are+you%3F';\necho urldecode($string);\n\
+  Hello There! How are you?!\n```\n![](img/image_rsrc7MK.jpg)\n\n### 2\n必须在发送任何头部或其他内容（包括\
+  \ `<html>` 标签）之前发送。查看 `ob_start()` 了解实现此点的简单方法。\n\n![](img/image_rsrc7NS.jpg)\n\n\
+  ### get_magic_quotes_gpc()\n如果关闭则返回 0，否则返回 1。\n用于判断魔引号是否开启。此检查用于代码移植性以及防止 SQL 注入。如果开启，魔引号会自动处理上述数据。\n\
+  \n示例：\n```php\nif (get_magic_quotes_gpc()){\n    echo 'Magic Quotes is on!';\n}else{\n\
+  \    echo 'Magic Quotes is NOT on, use addslashes!';\n}\n```\n![](img/image_rsrc7NT.jpg)\n\
+  另请：\n- `addslashes()` 为字符串中的特殊字符添加反斜杠\n- `stripslashes()` 从字符串中的特殊字符移除反斜杠\n\n![](img/image_rsrc7NU.jpg)\n\
+  \n### phpinfo($option)\noption – [可选] 使用特定的 `$integer` 或 `$string` 显示 `phpinfo()`\
+  \ 的部分。为了简单排除了特定选项。\n默认情况下，`phpinfo()` 显示有关 PHP 安装的所有信息，包括模块、版本、变量等。\n\n示例：\n```php\n\
+  phpinfo();\n```\n![](img/image_rsrc7NV.jpg)\n\n### error_reporting 和 ini_set\n为了捕获编程错误、缺陷或确保\
+  \ PHP 不对你的代码做任何假设，最好的故障排除是显示所有 PHP 错误。以下两行代码将启用此模式：\n```php\nerror_reporting(E_ALL);\n\
+  ini_set('display_errors', '1');\n```\n![](img/image_rsrc7NW.jpg)\n\n\n\n\n\n## 函数与引用\n\
+  \n当你只想简单修改原始变量并将其带有新值返回给同一个变量名时，请使用此项。\n\n```php\nfunction add(&$var){ \n    //\
+  \ & 位于参数 $var 之前\n    $var++;\n}\n$a = 1;\n$b = 10; \nadd($a);\necho \"a is $a,\"\
+  ;\nadd($b);\necho \" a is $a, and b is $b\"; // 注意：$a 和 $b 没有被引用\n```\n**输出：** `a\
+  \ is 2, a is 2, and b is 11`\n\n你也可以通过 `foreach` 来修改数组：\n```php\n$array = array(1,2,3,4);\
+  \ \nforeach ($array as &$value){\n    $value = $value + 10;\n}\nunset ($value);\
+  \ // 必须包含，$value 在 foreach 循环后仍然存在\nprint_r($array);\n```\n**输出：** `Array ( [0]\
+  \ => 11 [1] => 12 [2] => 13 [3] => 14 )`\n\n## 三元运算符\n\n三元运算符是用于在表达式被评估为 TRUE 或\
+  \ FALSE 时决定执行什么操作的简写形式。条件返回 TRUE 输出或 FALSE 输出。\n\n基本格式如下：\n`( expr ) ? ValueIfTrue\
+  \ : ValueIfFalse ;`\n\n**示例：**\n```php\n$boolean = TRUE;\n$result = ($boolean) ?\
+  \ 'Is True' : 'Is False'; \necho $result; // $result 尚未设置\n\n$result = (isset($result))\
+  \ ? $result+1 : 10; \necho \" \\$result = $result.\";\n\n$result = (isset($result))\
+  \ ? $result+1 : 10; \necho \" \\$result = $result.\";\n```\n\n## 运算符\n\n- **赋值 (`=`\
+  \ )**：将右侧的值赋给左侧的变量。\n- **相等 (`==` )**：检查左右侧的值是否相等。\n- **全等 (`===` )**：检查左右侧的值是否相等且类型完全相同。\n\
+  \n**示例：**\n```php\n$a = 1; // 通过赋值将 $a 的值设置为 1\n$b = TRUE; // 将 $b 的值设置为布尔 TRUE\n\
+  if ($a == $b){\n    echo 'a is equal to b.';\n}\nif ($a === $b){\n    echo 'a is\
+  \ identical and equal to b.';\n}\n```\n\n## 逻辑运算符\n\n用于条件语句，将表达式的 FALSE 结果评估为真，或者当一个值不等于第二个值时。\n\
+  \n**示例：**\n```php\n$a = 1;\nif (!isset($a)){ \n    // 如果变量 $a 未被设置，则...\n    echo\
+  \ '$a is not set'; // 如果未设置，则表达式为 TRUE\n    // 因为没有 ELSE 语句，所以什么都不显示\n}\nif ($a\
+  \ != 0){\n    echo '$a does not equal zero';\n}\n```\n*参见上方的“等号”部分了解“相等”与“全等”的区别。*\n\
+  \n## 字符串拼接\n\n句号 (.) 用于按照列出的顺序将不同类型的项目组合成字符串的一部分。在许多情况下，这被用于引用函数或数组的值，这些值在赋值给 `$string`\
+  \ 变量时，不能在双引号 (`\"\"`) 内直接引用。\n\n**示例：**\n```php\n$array = array( 1 => 'Hello' );\n\
+  $string = 'World';\necho '$string in single quotes, followed by ' . $array[1] .\
+  \ \"$string\";\n```\n\n## 逻辑比较\n\n- **与 (`&&` )**\n- **或 (`||` )**\n- **异或 (`xor`)**\
+  \ - 或，但不同全真。\n\n**示例：**\n```php\nif (1 == 1 && 2 == 2){\n    echo 'And is True';\n\
+  }\nif (1 == 1 || 2 == 2){\n    echo 'At least one of these is True';\n}\nif (1 ==\
+  \ 1 xor 2 == 10){\n    echo 'One of these is True, but not both';\n}\n```\n\n##\
+  \ 控制结构\n\nPHP 的核心是控制结构。没有了它们，变量和数组就是孤立的，因为它们促进了比较、循环以及告诉你该往哪里走、如何做的逻辑指令。\n\n###\
+  \ If, ElseIf, Else\n\n```php\nif ( expr ) {\n    // 如果 expr 为 TRUE，执行此操作，然后退出 IF\
+  \ 循环\n}\nelseif ( expr2 ) {\n    // 如果 expr 为 FALSE 且 expr2 为 TRUE，执行此操作，然后退出循环\n\
+  }\nelse {\n    // 如果所有 expr 都为 FALSE，执行此操作并退出\n}\n```\n`if` 语句中只能有一个 `else`，但在 `else`\
+  \ 语句之前允许有多个 `elseif` 表达式。\n\n**示例：**\n```php\n$x = 1;\nif ($x < 1){\n    echo '$x\
+  \ is less than 1';\n}elseif ($x == 1){ \n    // 注意双等号，用于比较\n    echo '$x is equal\
+  \ to 1';\n}else{\n    echo '$x is neither equal to 1 or less than 1';\n}\n```\n\
+  **输出：** `x is equal to 1`\n\n**另见：**\n- `switch` – 比多个 `if/else` 组合更简单、更有组织的用法。\n\
+  - `break` – 停止循环并退出，无论语句评估结果是否为真。\n\n### if 语句的替代语法\n```php\nif ( expr ) {\n   \
+  \ // 如果 expr 为 TRUE，执行此操作，然后退出 IF 循环\n} elseif ( expr2 ) {\n    // 如果 expr 为 FALSE\
+  \ 且 expr2 为 TRUE，执行此操作，然后退出循环\n} else {\n    // 如果所有 expr 都为 FALSE，执行此操作并退出\n} endif;\n\
+  ```\n\n### Switch\n\n```php\nswitch ( expr ) { \n    case value :\n        // 如果\
+  \ value 匹配则执行此操作\n        break;\n    case value2 :\n        // 如果 value2 匹配则执行此操作\n\
+  \        break;\n}\n```\n`switch` 用于条件语句，将表达式的 FALSE 结果评估为真，或者当一个值不等于第二个值时。（注：原文此处描述似乎混合了，我保留了其结构）。\n\
+  \n**示例：**\n```php\n$x = 1;\nif ($x < 1){\n    echo '$x is less than 1';\n}elseif\
+  \ ($x == 1){ \n    // 注意双等号，用于比较\n    echo '$x is equal to 1';\n}else{\n    echo\
+  \ '$x is neither equal to 1 or less than 1';\n}\n```\n\n### While\n\n```php\nwhile\
+  \ ( expr ) {\n    // 如果 expr 为 TRUE，执行此操作，再次评估\n}\n```\n`while` 循环检查 expr，如果评估为真，则运行\
+  \ while 内部的内容直到结束。\n\n**示例：**\n```php\n$x = 1;\nwhile ($x <= 3){\n    echo \"$x,\
+  \ \";\n    $x++;\n}\n```\n**输出：** `1, 2, 3,`\n\n### Do-While\n\n```php\ndo {\n \
+  \   // 执行此操作\n} while ( expr );\n```\n`do-while` 循环执行 `do` 语句中的内容，检查 expr，如果评估为真，则运行\
+  \ do 内容直到结束，再次评估 expr，重复直到 expr 为假。\n\n**示例：**\n```php\n$x = 1; \ndo {\n    echo\
+  \ \"$x, \";\n    $x++; // 使 $x = 2，因此 while 将评估为假\n} while ($x <= 1);\n```\n**输出：**\
+  \ `1, `\n\n### For\n\n```php\nfor ( expr1 ; expr2 ; expr3 ) {\n    // 如果 expr2 为\
+  \ TRUE，执行此操作\n}\n```\n启动时，`for` 循环在开始执行一次 `expr1`。接下来评估 `expr2`。如果 expr2 为真，则执行\
+  \ `for` 循环内部的代码。当 `for` 循环结束时，会在再次检查 expr2 之前执行 `expr3`。\n\n**示例：**\n```php\nfor\
+  \ ($x = 1; $x <= 5; $x++){ \n    echo $x;\n}\n```\n**输出：** `12345`\n\n\n\n\n\n##\
+  \ For 循环\n\n`for` 语句的替代语法：\n```\nfor ( expr1 ; expr2 ; expr3 ) // 如果 expr2 为真，则执行此操作\
+  \ for;\n```\n\n在 `for` 循环中使用 `continue` 和 `break` 的示例：\n```php\nfor ($v=0;$v<=10;$v++){\
+  \ \n    echo $v;\n    if ($v == 5){ \n        continue;\n    }\n    if ($v == 8){\
+  \ \n        break;\n    }\n    echo ',';\n}\n```\n`0,1,2,3,4,56,7,8`\n\n## Foreach\
+  \ 循环\n\n`foreach` 循环遍历数组中的所有项，为值分配一个临时变量名，如果需要，也为键分配名称，以便在循环内部执行的代码中使用它们。\n\n**语法：**\n\
+  ```php\nforeach($array as $value ){// 执行某些操作}\n// 另一种形式，用于键和值\nforeach ($array as\
+  \ $key => $value ){// 执行某些操作}\n```\n\n**示例：**\n```php\n$array = array('John' =>\
+  \ 20, 'Jane' => 24, 'Joseph' => 28);\nforeach ($array as $value){\n    echo \"$value,\
+  \ \"; \n}\nforeach ($array as $name => $age){ \n    echo \"$name - $age\";\n   \
+  \ echo '<br />'; // 用于换行的 XHTML 代码\n}\n```\n\n**另需阅读：**\n- 引用传递 – 使用取地址符 (`&`) 通过\
+  \ `foreach` 修改数组\n\n## Break 语句\n\n`$integer` – [可选] 指定要跳出的嵌套循环次数。退出并停止当前（默认）`for`、`foreach`、`while`、`do-while`\
+  \ 或 `switch` 循环的执行。\n\n**示例：**\n```php\n$counter = 0;\nwhile (1 == 1){ // 将无限运行\n\
+  \    while (0 == 0){ // 也会无限运行\n        $counter++; // $counter 加 1 \n        echo\
+  \ $counter;\n        if ($counter == 5){ \n            break 2;\n        }\n   \
+  \ }\n    echo 'First while loop'; // 因为 break 2; 永远不会显示\n    break; // 永远不会运行，但如果执行，将结束第一个\
+  \ while 循环 \n}\n```\n\n## Continue 语句\n\n`$integer` – [可选] 指定要跳过的嵌套循环次数。注意：`$integer`\
+  \ 并不提供跳过的迭代次数，它始终停止当前迭代的继续执行。跳过当前循环迭代的剩余部分，如果适用，则继续循环的下一次迭代。\n\n**示例：**\n```php\n\
+  for ($x=1;$x<=10;$x++){ \n    if ($x == 5){\n        continue;\n    } // 如果 $x ==\
+  \ 5，则 echo 永远不会发生\n    echo $x;\n}\n```\n\n## Return 语句\n\n`$variable` – [可选] 从函数返回的变量。如果作为普通脚本的一部分而不是函数的一部分，它的作用与\
+  \ `exit()` 或 `die()` 相同。`Return` 更常用作函数的一部分，将函数的执行结果赋值回原始函数调用处。\n\n**另需阅读：**\n-\
+  \ 函数 – 提供了作为函数一部分返回 `$variable` 的示例\n\n## 文件函数\n\n`exit()` – 立即终止当前脚本。\n\n`include`\
+  \ - `$string` 作为当前脚本/页面的一部分包含并评估文件。这是存储通用变量、函数或会被多个脚本/页面包含的 HTML 行的简单方法。函数失败将生成错误。\n\
+  **示例：**\n```php\ninclude('somefile.inc');\n```\n在 `switch` 的情况下，`continue` 的效果与\
+  \ `break` 相同。函数应该只包含一次。考虑使用 `include_once()` 或 `require_once()`。\n\n`include_once`\
+  \ - `$string` 作为当前脚本/页面的一部分包含并评估文件。如果文件已经包含，将忽略该请求。这是存储通用变量、函数或会被多个脚本/页面包含的 HTML\
+  \ 行的简单方法。函数失败将生成错误并立即终止脚本。\n**示例：**\n```php\ninclude_once('somefile.php');\n```\n\
+  \n`require` - `$string` 作为当前脚本/页面的一部分包含并评估文件。这是存储通用变量、函数或会被多个脚本/页面包含的 HTML 行的简单方法。函数失败将生成错误。\n\
+  **示例：**\n```php\nrequire('somefile.htm');\n```\n\n`require_once` - `$string` 作为当前脚本/页面的一部分包含并评估文件。如果文件已经包含，将忽略该请求。这是存储通用变量、函数或会被多个脚本/页面包含的\
+  \ HTML 行的简单方法。函数失败将生成错误并立即终止脚本。\n**示例：**\n```php\nrequire_once('somefile.php');\n\
+  ``` 函数应该只包含一次。考虑使用 `require_once()`。\n\n## 全局变量\n\n虽然某些全局变量可以通过使用 `define()` 创建，但某些变量由于特殊函数而被预留，提供了访问不同类型数据的权限。下面列出的所有全局变量都是数组，可能包含也包含数据，取决于当前脚本和环境。\n\
+  \n- `$_SERVER`\n- `$_SERVER['HTTP_USER_AGENT']` – 头部中的浏览器描述\n  `[HTTP_USER_AGENT]\
+  \ => Mozilla/5.0 (X11; U; Linux i686; en-US; rv: 1.8.12) Gecko/20080207 Ubuntu/7.10\
+  \ (gutsy) Firefox/2.0.12`\n- `$_SERVER['HTTP_REFERER']` – 引导用户的页面地址\n  `[HTTP_REFERER]\
+  \ => http://www.example.com/index.htm`\n- `$_SERVER['REMOTE_ADDR']` – 客户端 IP 地址\n\
+  \  `[REMOTE_ADDR] => 127.0.0.1`\n- `$_SERVER['DOCUMENT_ROOT']` – 当前脚本的系统根位置\n  `[DOCUMENT_ROOT]\
+  \ => /opt/lampp/htdocs`\n- `$_SERVER['SCRIPT_FILENAME']` – 当前脚本的绝对路径\n  `[SCRIPT_FILENAME]\
+  \ => /opt/lampp/htdocs/test.php`\n- `$_SERVER['REQUEST_URI']` – 页面的统一资源标识符\n  `[REQUEST_URI]\
+  \ => /test.php?test=value`\n- `$_SERVER['SCRIPT_NAME']` – 当前脚本路径\n  `[SCRIPT_NAME]\
+  \ => /test.php`\n- `$_SERVER['QUERY_STRING']` – 当前查询字符串\n  `[QUERY_STRING] => test=value`\n\
+  - `$_SERVER['PHP_SELF']` – 相对于根的当前脚本名称\n  `[PHP_SELF] => /test.php`\n\n当向包含表单的相同页面/文件提交表单时，可以使用\
+  \ `$_SERVER['PHP_SELF']` 变量动态提供位置。\n\n```html\n<form method=\"POST\" action=\"<?php\
+  \ echo $SERVER['PHP_SELF']; ?>\">\n```\n\n```html\n<form method=\"POST\" action=\"\
+  filename.php\">\n```\n\n\n\n\n\n![](img/image_rsrc7R2.jpg)包含由 `$_GET`、`$_POST` 和\
+  \ `$_COOKIE` 提供的所有变量![](img/image_rsrc7R3.jpg)包含所有通过 HTTP POST 提交的变量，例如带有 `action=\"\
+  post\"` 的 HTML 表单![](img/image_rsrc7R4.jpg)包含所有通过查询字符串提交的变量，无论是手动还是来自 `action=\"\
+  get\"` 的表单![](img/image_rsrc7R5.jpg) [`www.example.com/test.php?query=value`](http://www.example.com/test.php?query=value)![](img/image_rsrc7R6.jpg)分配给当前会话的变量![](img/image_rsrc7R7.jpg)为当前网站存储的\
+  \ cookie。如果刚使用 `setcookie()` 设置，则只有在页面刷新后才可见。另请：`setcookie()` – 分配和删除 cookie![](img/image_rsrc7R8.jpg)通过\
+  \ POST 上传提供脚本的变量![](img/image_rsrc7R9.jpg)关于服务器环境的变量集合![](img/image_rsrc7RA.jpg)包含脚本中所有变量（全局或其他类型）的引用。\n\
+  \n## 变量函数\n\n以下函数检查变量本身的细节，而不是处理变量类型的特定方面。换句话说，你不想知道你有一头什么品种的大象，只需要知道它是一头大象，而且它正要踩你了。太多了吗？噢，我们再次开始。![](img/image_rsrc7RB.jpg)\n\
+  \n### 确定 $variable 是否为空。\n\n如果 `$variable` 是以下情况，则返回 TRUE：\n* `''` – 空字符串 `$string`\n\
+  * `0` – 针对 `$integer`\n* `'0'` – 针对 `$string`\n* `array()` – 针对 `$array`\n* `NULL`\n\
+  * `FALSE`\n* 未声明的变量\n\n示例：\n```php\n$string = 'Hello';\n$array = array();\n```\n\
+  ![](img/image_rsrc7RC.jpg) ```php\nvar_dump( empty($string), empty($array), empty($DoesNotExist)\
+  \ );\n```\n另请：`is_null()` – 检查变量是否为 `NULL`，`isset()` – 检查变量是否已设置/创建/声明![](img/image_rsrc7RD.jpg)\n\
+  \n### 确定 $variable 是否为 `NULL`。\n\n如果是 `NULL`，则返回 TRUE。注意：未声明的 `$variable` 将返回 TRUE，但可能会返回错误。\n\
+  \n示例：\n```php\n$string = '';\n$integer = 0;\n$array = NULL;\n```\n![](img/image_rsrc7RE.jpg)\
+  \ ```php\nvar_dump( is_null($string), is_null($integer), is_null($array) );\n```![](img/image_rsrc7RF.jpg)\n\
+  \n### 接受逗号分隔的多个 $variables，但只有当所有变量都设置时才返回 TRUE。\n\n确定 `$variable` 是否已设置/创建/声明。\n\
+  \n示例：\n```php\n$string = '';\n$integer = 0;\nvar_dump( isset($string,$integer) );\
+  \ // 因为两者都设置了\necho '<br />'; // XHTML 换行\n```\n![](img/image_rsrc7RG.jpg) ```php\n\
+  unset($string); // 取消或销毁变量\nvar_dump( isset($string), isset($integer) );\n```\n\
+  另请：`unset()` – 销毁/删除一个或多个变量![](img/image_rsrc7RH.jpg)\n\n### 接受逗号分隔的多个 $variables。\n\
+  \n取消或销毁/删除给定的 `$variable(s)。示例：\n```php\n$string = 'hello';\nvar_dump( isset($string)\
+  \ ); // 检查是否设置\necho '<br />'; // XHTML 换行\nunset($string);\n```\n![](img/image_rsrc7RJ.jpg)\
+  \ ```php\nvar_dump( isset($string) ); // 再次检查\n```\n另请：`isset()` – 确定变量是否已设置![](img/image_rsrc7RK.jpg)\n\
+  \n### 确定 $variable 是否为数组。\n\n如果是数组，则返回 TRUE。示例：\n```php\n$array = array();\n```\n\
+  ![](img/image_rsrc7RM.jpg) ```php\n$array2 = array( 'one', 'two', 'three' );\nvar_dump(\
+  \ is_array($array), is_array($array2) );\n```![](img/image_rsrc7RN.jpg)\n\n### 也称为：`is_integer()`\n\
+  \n确定 `$variable` 是否为整数。如果是整数，则返回 TRUE。示例：\n```php\n$int = 0;\n$string = '0';\n```\n\
+  ![](img/image_rsrc7RP.jpg) ![](img/image_rsrc7RR.jpg) ```php\nvar_dump( is_int($int),\
+  \ is_int($string) );\n```\n\n### 确定 $variable 是否为字符串。\n\n如果是字符串，则返回 TRUE。示例：\n```php\n\
+  $int = 0;\n$string = '0';\n```\n![](img/image_rsrc7RS.jpg) ```php\nvar_dump( is_string($int),\
+  \ is_string($string) );\n```![](img/image_rsrc7RT.jpg)\n\n### 确定 $variable 是否为整数或数字字符串（例如\
+  \ \"12\"）。\n\n如果其中任一真，则返回 TRUE。示例：\n```php\n$int = 10;\n$string = '10';\n```\n![](img/image_rsrc7RU.jpg)\
+  \ ```php\nvar_dump( is_numeric($int), is_numeric($string) );\n```\n另请：`is_int()`\
+  \ – 确定变量是否为整数，`is_string()` – 确定变量是否为字符串。\n\n### `var_dump( expr [, ... expr ...])`\n\
+  \n接受多个表达式，用逗号分隔。\n`expr` – 一个 `$variable` 或任何产生结果的表达式。显示其类型\n\n\n\n\n\n## 字符串函数\n\
+  \n如果你是一只猫，那么字符串函数就是猫的喵喵声（这里是个双关语）。它们不仅占据了你 PHP 代码的很大一部分，还提供了许多用于识别和将你的数据转换为其他格式（如数组）机能。\n\
+  \n![](img/image_rsrc7RX.jpg)\n\n## addslashes()\n\n向 `$string` 中的项目添加反斜杠（转义字符串），使其能够安全数据库查询。它会影响单引号（`'`）、双引号（`\"\
+  `）、反斜杠（`\\`）和 NUL 字节。\n\n**示例：**\n```php\n$string = ' Tom said, \"Marcus is mad!\"\
+  '; echo $string;\n```\n![](img/image_rsrc7RY.jpg)\n```php\n$string = addslashes($string);\
+  \ echo $string;\n```\n\n**另见：**\n- `get_magic_quotes_gpc` – 自动对 `GET/POST/COOKIE`\
+  \ 数据应用 `addslashes` 的服务器设置\n- `stripslashes()` – 由 `addslashes()` 创建的反斜杠\n\n## stripslashes()\n\
+  \n移除 `$string` 中通过 `addslashes()` 或 `magic_quotes_gpc` 添加的反斜杠。\n\n**示例：**\n```php\n\
+  $string = ' Tom said, \"Marcus is mad!\"';\n$string = addslashes($string); echo\
+  \ $string;\n```\n![](img/image_rsrc7S0.jpg)\n```php\n$string = stripslashes($string);\
+  \ echo $string;\n```\n\n**另见：**\n- `get_magic_quotes_gpc` – 自动对 `GET/POST/COOKIE`\
+  \ 数据应用 `addslashes` 的服务器设置\n\n## chunk_split()\n\n添加反斜杠使字符串能够安全数据库查询。\n\n`chunk_split($string\
+  \ [, length ] [, endstring ])`\n\n- `length` – [可选] `$integer` 默认：`76`\n- `endstring`\
+  \ – [可选] `$string` 默认：`\"\\r\\n\"`（回车和换行符）\n\n将 `$string` 分成长度为 `length` 的字符段，每个部分都以\
+  \ `endstring` 结束。仅评估字符长度以生成结果字符串。\n\n**示例：**\n```php\n$string = 'Hello Nurse!';\n\
+  $string = chunk_split($string, 3); var_dump($string);\n```\n![](img/image_rsrc7S1.jpg)\n\
+  ```php\necho nl2br($string); // 将 \\n 转换为 XHTML 的 <br />\necho 'Notice I am on a\
+  \ new line?';\n```\nHTML 源代码：\n![](img/image_rsrc7S2.jpg)\n\n**另见：**\n- `nl2br()`\
+  \ – 将 `\\n` 实例转换为 XHTML 的 `<br />` 换行\n- `str_replace()` – 替换字符串中的指定字符\n- `wordwrap()`\
+  \ – 与 `chunk_split()` 类似，但有一些细微差异\n\n| `\\r\\n` 是格式化字符，如果是标准输出的一部分，它们会被忽略。如果放置在\
+  \ `<textarea>` 或 `<pre>`（预格式）标签内，它们会在浏览器的输出中被正确解析。 |\n\n```php\n$string = 'Hello\
+  \ Nurse!';\n$string = chunk_split($string, 3); echo '<pre>';\n```\n![](img/image_rsrc7S3.jpg)\n\
+  ```php\necho $string; echo '</pre>';\n```\n\n## wordwrap()\n\n`wordwrap($string\
+  \ [, length ] [, breakstring ] [, wordcut ])`\n\n- `length` – [可选] `$integer` 默认：`75`\n\
+  - `breakstring` – [可选] `$string` 默认：`\"\\n\"`（换行）\n- `wordcut` – [可选] `$boolean`\
+  \ 默认：`FALSE`，单词不会切分\n\n将 `$string` 分成长度为 `length` 的字符段，并带有 `breakstring`。如果 `wordcut`\
+  \ 设置为 `TRUE`，超过指定长度的单词将被分割，以确保精确的宽度。\n\n**示例：**\n```php\n$origstring = 'I said to\
+  \ her, Hellooooo Nurse!!!';\n$string = wordwrap($origstring, 8);\n```\n![](img/image_rsrc7S4.jpg)\n\
+  ```php\necho nl2br($string); // 将 \\n 转换为 XHTML 的 <br />\n$origstring = 'I said\
+  \ to her, Hellooooo Nurse!!!';\n```\n![](img/image_rsrc7S5.jpg)\n```php\n$string\
+  \ = wordwrap($origstring, 8, \"<BR \\>\\n\", TRUE); echo $string;\n```\n\n**另见：**\n\
+  - `nl2br()` – 将 `\\n` 实例转换为 XHTML 的 `<br />` 换行\n- `str_replace()` – 替换字符串中的指定字符\n\
+  - `chunk_split()` – 与 `wordwrap()` 类似，但有一些细微差异\n\n| 为了符合标准，使用 `mail()` 命令发送基于文本的电子邮件时，在提供给\
+  \ `mail()` 之前应该使用 `wordwrap()` 对消息解析。 |\n\n![](img/image_rsrc7S6.jpg)\n\n## count_chars()\n\
+  \n`mode` – [可选] `$integer` (0, 1, 2, 3, 或 4) 默认：`0`\n\n**值：**\n- `0` – 返回包含所有字符计数的数组\n\
+  - `1` – 返回在 `$string` 中至少出现一次的字符的计数数组\n- `2` – 返回所有出现次数为零的字符计数数组\n- `3` – 返回 `$string`\
+  \ 中包含的所有字符的字符串\n- `4` – 返回 `$string` 中包含的所有字符的字符串\n\n检查 `$string` 中的 ASCII 字符实例并统计每个字符出现的次数。输出取决于\
+  \ `mode`。\n\n**注意：** 数组中的键是字符的 ASCII 字节值（模式 0-2），而字符串输出是本身（模式 3 和 4）。\n\n**示例：**\n\
+  ```php\n$string = 'Hello';\n$array = count_chars($string, 1);\n```\n![](img/image_rsrc7S7.jpg)\n\
+  ```php\necho '<pre>'; // 为了方便阅读\nprint_r($array);\nforeach ($array as $key => $value){\n\
+  \  $char = chr($key); // 由字节值表示的字符\n  $chararray[$char] = $value; // 创建字符的新数组\n\
+  }\n```\n![](img/image_rsrc7S8.jpg)\n```php\nprint_r($chararray);\n$usedcharacters\
+  \ = count_chars($string, 3); var_dump($usedcharacters);\n```\n![](img/image_rsrc7S9.jpg)\n\
+  \n**另见：**\n- `chr()` – 获取由字节值表示的 ASCII 字符\n\n`chr($integer)`\n`$integer` – 0 - 255\
+  \ 返回 ASCII 字节值的单个字符表示\n\n`explode( delimiter , $string [, limit ])`\n\n- `delimiter`\
+  \ – `$string`，如果为空，`explode` 将返回 `FALSE`\n- `limit` – [可选] `$integer`，默认：无限制。通过搜索\
+  \ `$string` 并使用提供的分隔符分割创建字符串数组。限制设置元素的最大数量，数组的最后一个元素是字符串的剩余部分。\n\n布尔值由 1 (TRUE)\
+  \ 或空 (FALSE) 表示，而浮点数大于 e6 时可能会显示为整数。如果 `limit` 为负，则返回除最后 limit 个之外的值。\n\n**示例：**\n\
+  ```php\n$explodeme = '02-01-1980';\n$array = explode('-', $explodeme); // 横杠 (-)\
+  \ 是分隔符\necho '<pre>'; // 为了方便阅读\n```\n![](img/image_rsrc7SA.jpg)\n```php\nprint_r($array);\n\
+  $array = explode('-', $explodeme, 2); // 限制为 2 个元素\nprint_r($array);\n\n```\n![](img/image_rsrc7SB.jpg)\n\
+  \n| 如上所示，explode 可用于拆分常见的语言语法，例如将用户提交的段落拆分成单个句子，或者允许用户提交特定项目的标签（用逗号分隔），然后 explode()\
+  \ 那些项目以存储在数据库中。 |\n\n\n\n\n\n## `implode(limiter, $array)`\n\n返回一个包含 `$array` 内容的字符串，并用提供的\
+  \ `limiter` 连接。\n\n示例：\n```php\n$array = array( 'Hello', 'World', '!' );\n$string\
+  \ = implode(' ', $array); // 使用空格作为分隔符\necho $string; // Hello World !\n```\n\n\
+  **参见：** `explode()` – 使用特定的分隔字符串将字符串拆分为数组。\n\n![](img/image_rsrc7SC.jpg)\n\n## `sprintf()`\n\
+  \n接受多个输入，并在 `formatting` 中指定时使用。\n\n- `formatting` – `$string`，特定的格式字符串，见下文。\n-\
+  \ `inputs` – 需要格式化的 `$scalar(s)`\n\n返回一个格式化后的字符串，使用 `inputs` 根据预设的规则（见下文）将其值动态输入到格式化字符串中。\n\
+  \n以下是格式输入的可用命名法。\n\n![](img/image_rsrc7SD.jpg)\n\n每当预期输入作为格式化字符串的一部分被使用和评估时，其前面有一个百分号（`%`），后面紧跟说明符/规则：\n\
+  \n**注意：** 除类型说明符外，所有说明符都是可选的。\n\n- **符号说明符**。放置加号（`+`）会强制显示负号和正号（默认仅指定负值）。\n- **填充说明符**。默认是空格，不需要指定。也可以使用零（`0`）而无需任何次要记法。如果使用任何其他字符，应在它前面加一个单引号（`'\
+  \ ` `）。\n- **对齐说明符**。默认是右对齐（因此填充内容放置在字符串的左侧）。放置减号/减法符号（`-` `）将将其设置为左对齐。\n- **宽度说明符**。此整数决定了输出的最小字符长度。当与填充结合时，指定的宽度减去输入的长度决定了将添加的填充字符数。\n\
+  - **精度说明符**。点（`.`）后跟一个整数，设置了浮点数应输出的小数位数。如果用在字符串，它将为输出设置最大字符限制。\n- **类型说明符**：\n \
+  \   - `%` – 字面量百分号，因此在格式字符串中显示百分号时应写为 `%%`。\n    - `b` – 输入应为整数，输出为二进制数。\n    -\
+  \ `c` – 输入应为 0-255 之间的整数，代表 ASCII 字节值。输出代表该值的字符。\n    - `d` – 输入为整数。\n    - `e`\
+  \ – 输入为科学计数法。\n    - `u` – 输入为无符号十进制。\n    - `f` – 输入为浮点数（感知区域）。\n    - `F` – 输入为浮点数（不感知区域）。\n\
+  \    - `o` – 输入为整数，输出为八进制数。\n    - `s` – 输入为字符串。\n    - `x` – 输入为整数，输出为十六进制数（使用小写字母）。\n\
+  \    - `X` – 输入为整数，输出为十六进制数（使用大写字母）。\n\n## 示例\n\n### 基础替换，无可选说明符\n```php\n$string\
+  \ = 'cat';\n$integer = 10;\n![](img/image_rsrc7SE.jpg)\necho sprintf(\"I have %d\
+  \ %s(s)\", $integer, $string);\n```\n\n### 基础替换，类型指定自动调整\n```php\n$string = 'cat';\n\
+  $string2 = '10 blah';\n![](img/image_rsrc7SF.jpg)\necho sprintf(\"I have %d %s(s)\"\
+  , $string2, $string);\n```\n\n### 使用符号说明符\n```php\n$string = 'cat';\n$integer =\
+  \ '10';\n![](img/image_rsrc7SG.jpg)\necho sprintf(\"Dagger has a %+d against %ss\"\
+  , $integer, $string);\n```\n\n### 使用填充和宽度说明符（默认填充说明符为空格）\n```php\n$string = 'cat';\
+  \ // 长度为 3 个字符\necho '<pre>'; // 需要 HTML 来正确显示格式化\necho sprintf(\"3 spaces added:\
+  \ |%6s\", $string);\n![](img/image_rsrc7SH.jpg) // 使用了 6 个字符填充，6 – 3 = 3 个填充空格\n\
+  ```\n\n### 使用零（`0`）进行填充和宽度\n```php\n$month = 12;\n$day = 1;\n$year = 1980;\necho\
+  \ sprintf (\" Date: %02d/%02d/%04d.\", $month, $day, $year);\n$year = 80;\n![](img/image_rsrc7SJ.jpg)\n\
+  echo sprintf (\" Date: %02d/%02d/%04d.\", $month, $day, $year);\n```\n\n### 使用自定义字符星号（`*`）进行填充和宽度\n\
+  ```php\n$endofpassword = 'word';\n$output = sprintf(\"Your password: %'*8s\", $endofpassword);\n\
+  echo $output; // Your password: ****word\n```\n\n### 使用填充、对齐（左侧）和宽度\n```php\n$endofpassword\
+  \ = 'word';\n$output = sprintf(\"Your password: %'*-8s\", $endofpassword);\necho\
+  \ $output; // Your password: word****\n```\n\n### 使用精度说明符\n```php\n$scientific =\
+  \ 1.2e3;\necho sprintf(\"Three decimal places: %.3e\", $scientific); // Three decimal\
+  \ places: 1.200e+3\n$float = 1.2e3;\necho sprintf(\"Two decimal places: %.2f\",\
+  \ $float); // Two decimal places: 1200.00\n$string = 'Hello World!';\necho sprintf(\"\
+  Cut-off after 4 characters: %.4s\", $string); // Cut-off after 4 characters: Hell\n\
+  ```\n\n**参见：**\n- `printf()` – 输出格式化字符串结果，而不是简单的返回它们。\n- `sscanf()` – 通过格式化字符串解析字符串，是\
+  \ `sprintf()` 的反向。\n\n| 为了 MySQL 安全，你可以使用 `sprintf()` 强制用户输入具有最大长度并符合你的数据库结构。使用精度说明符自动解析由\
+  \ GET 或 POST 提交的字符串。 |\n\n\n\n\n\n## printf( formatting , inputs [, ... inputs ...\
+  \ ] )\n\n接受多个输入，并在 `formatting` 中指定时使用。\n\n- `formatting` – `$string`，特定的格式化字符串。术语名称请参见\
+  \ `sprintf()`。\n- `inputs` – 需要格式化的 `$scalar(s)`。\n\n使用 `inputs` 打印一个格式化字符串 `formatting`，通过一组预设的规则将值动态地输入到格式化字符串中。\n\
+  \n**注意：** 有关格式化字符串的规则请参见 `sprintf()`。\n\n示例：\n```php\n$string = 'puppies';\nprintf(\"\
+  I think %s are cute.\", $string);\n```\n![](img/image_rsrc7SK.jpg)\n\n**另见：** `sprintf()`\
+  \ – 返回格式化后的字符串，解释了规则/术语。\n\n## sscanf( $string, format [, ... outputs ] )\n\n接受多个[可选]输出，但它会改变函数的行为。\n\
+  \n检查给定的 `$string` 并根据预期的格式对其进行解析。当未包含输出时，返回一个数组。如果包含了输出，则通过引用指定用于赋值格式化内容的变量名。\n\n\
+  **注意：** 有关格式化字符串的规则——类型说明符请参见 `sprintf()`。\n\n示例：\n```php\n$string = '12/1/1980';\n\
+  $array = sscanf($string, \"%d/%d/%d\");\necho '<pre>'; // 为了提高可读性\nprint_r($array);\n\
+  ```\n![](img/image_rsrc7SN.jpg)\n\n```php\n$string = '12/1/1980';\n$outputs_count\
+  \ = sscanf($string, \"%d/%d/%d\", $month, $day, $year);\nvar_dump ($month, $day,\
+  \ $year);\n```\n![](img/image_rsrc7SP.jpg)\n\n**另见：**\n- `sprintf()` – `sscanf()`\
+  \ 的反向，并提供了格式化字符串的解释。\n- `list()` – 将数组的值赋值给变量。\n\n## list( $string [, quotes_flag\
+  \ ] [, character_set ] )\n\n- `quotes_flag` – [可选] `$string` 默认值：`ENT_COMPAT`（仅双引号）。其他值：\n\
+  \    - `ENT_QUOTES`（单双引号均包含）\n    - `ENT_NOQUOTES`（单双引号均不包含）\n- `character_set`\
+  \ – [可选] `$string` 默认值：`ISO-8859-1`\n\n将 `$string` 中某些具有 HTML 特殊含义的字符转换为安全的 HTML\
+  \ 实体。这包括（但可能限于某些可选的 `flags`）：双引号（`\"`）、单引号（`'`）、大于（>`）、小于（`<`）和和（`&`）。\n\n示例：\n\
+  ```php\n$string = '<strong>Hello & World!</strong><br />';\necho htmlspecialchars($string);\n\
+  ```\n![](img/image_rsrc7SS.jpg)\nHTML 源代码：\n\n**另见：**\n- `htmlspecialchars_decode()`\
+  \ – 取消 `htmlspecialchars()` 的效果。\n- `htmlentities()` – 所有 HTML 实体，而不只是上述五个。\n\n\
+  ## htmlspecialchars_decode( $string [, quotes_flag ] [, character_set ] )\n\n- `quotes_flag`\
+  \ – [可选] `$string` 默认值：`ENT_COMPAT`（仅双引号）。其他值：\n    - `ENT_QUOTES`（单双引号均包含）\n  \
+  \  - `ENT_NOQUOTES`（单双引号均不包含）\n- `character_set` – [可选] `$string` 默认值：`ISO-8859-1`\n\
+  \n将 `$string` 中的 HTML 实体转换回字符表示。这包括（但可能限于某些可选的 `flags`）：双引号（`\"`）、单引号（`'`）、大于（>`）、小于（`<`）和和（`&`）。\n\
+  \n示例：\n```php\n$string = '&lt;strong&gt;Hello &amp; World!';\necho htmlspecialchars_decode($string);\n\
+  ```\n![](img/image_rsrc7SU.jpg)\nHTML 源代码：\n\n**另见：**\n- `htmlspecialchars()` –\
+  \ 将上述五项转换为 HTML 实体。\n- `html_entity_decode()` – 所有 HTML 实体，而不只是上述五个。\n\n## htmlentities(\
+  \ $string [, quotes_flag ] [, character_set ] )\n\n- `quotes_flag` – [可选] `$string`\
+  \ 默认值：`ENT_COMPAT`（仅双引号）。其他值：\n    - `ENT_QUOTES`（单双引号均包含）\n    - `ENT_NOQUOTES`（单双引号均不包含）\n\
+  - `character_set` – [可选] `$string` 默认值：`ISO-8859-1`\n\n将 `$string` 中某些具有 HTML 特殊含义的字符转换为安全的\
+  \ HTML 实体。\n\n示例：\n```php\n$string = \"<strong>'Hello World!'\";\necho htmlentities($string,\
+  \ ENT_QUOTES);\n```\nHTML 源代码：`&lt;strong&gt;&#039;Hello World!&#039;`\n\n**另见：**\n\
+  - `html_entity_decode()` – 取消 `htmlentities()` 的效果。\n- `htmlspecialchars()` – 仅五个特定的\
+  \ HTML 实体。\n\n## html_entity_decode( $string [, quotes_flag ] [, character_set ]\
+  \ )\n\n- `quotes_flag` – [可选] `$string` 默认值：`ENT_COMPAT`（仅双引号）。其他值：\n    - `ENT_QUOTES`（单双引号均包含）\n\
+  \    - `ENT_NOQUOTES`（单双引号均不包含）\n- `character_set` – [可选] `$string` 默认值：`ISO-8859-1`\n\
+  \n将 `$string` 中的所有 HTML 实体转换回字符表示。\n\n示例：\n```php\n$string = '&lt;strong&gt;&#039;Hello\
+  \ World!&#039;';\necho html_entity_decode($string); // 单引号未转换\n```\nHTML 源代码：`<strong>&#39;Hello\
+  \ World!&#39;`\n\n**另见：**\n- `htmlentities()` – 所有 HTML 实体。\n- `htmlspecialchars_decode()`\
+  \ – 解码五个特定的 HTML 实体。\n\n## trim( $string [, characters ] )\n\n- `characters` – [可选]\
+  \ `$string`\n\n当不包含 `characters` 时，从 `$string` 的开头和结尾移除以下字符：空格（` `）、制表符（`\\t`）、换行（`\\\
+  n`）、回车（`\\r`）、NUL 字节（`\\0`）和垂直制表符（`\\x0B`）。如果包含了 `characters`，则使用该列表。\n\n**注意：**\
+  \ 一旦遇到列表之外的字符，将停止修剪。\n\n示例：\n```php\n$string = \" \\n Hello World!\";\ntrim($string);\n\
+  ```\n![](img/image_rsrc7SN.jpg)\n\n在 `characters` 包含 `$string`。\n\n示例：\n```php\n\
+  $string = \" \\n Hello World!\";\ntrim($string); // Hello World!\n```\n```php\n\
+  trim($string, \" \\t\"); // 只有 r\n```\n**另见：**\n- `ltrim()` – 字符串的开头。\n- `rtrim()`\
+  \ – 字符串的结尾。\n\n## ltrim( $string [, characters ] )\n\n- `characters` – [可选] `$string`\n\
+  \n当不包含 `characters` 时，从 `$string` 的开头移除以下字符：空格（` `）、制表符（`\\t`）、换行（`\\n`）、回车（`\\\
+  r`）、NUL 字节（`\\0`）和垂直制表符（`\\x0B`）。如果包含了 `characters`，则使用该列表。\n\n**注意：** 一旦遇到列表之外的字符，将停止修剪。\n\
+  \n示例：\n```php\n$string = \" \\n Hello World!\";\nltrim($string); // Hello World!\n\
+  ```\n```php\nltrim($string, \" \\t\"); // 只有 r\n```\n**另见：**\n- `trim()` – 开头和结尾。\n\
+  - `rtrim()` – 字符串的结尾。\n\n## rtrim( $string [, characters ] )\n\n- `characters` –\
+  \ [可选] `$string`\n\n当不包含 `characters` 时，从 `$string` 的结尾移除以下字符：空格（` `）、制表符（`\\t`）、换行（`\\\
+  n`）、回车（`\\r`）、NUL 字节（`\\0`）和垂直制表符（`\\x0B`）。如果包含了 `characters`，则使用该列表。\n\n**注意：**\
+  \ 一旦遇到列表之外的字符，将停止修剪。\n\n示例：\n```php\n$string = \" Hello World! \\n\";\nrtrim($string);\
+  \ // Hello World!\n```\n```php\nrtrim($string, \" \\t\"); // 只有 r\n```\n**另见：**\n\
+  - `ltrim()` – 字符串的开头。\n- `trim()` – 开头和结尾。\n\n\n\n\n\n## 密码安全与盐（Salt）\n\n为了更安全地存储用户密码，应该考虑使用盐（salt）。盐基本上是添加到提供的\
+  \ `$string` 上的一个字符串，用于增加其长度和复杂度。对于用户密码，盐将由系统随机创建，然后作为与该用户密码分离的独立条目保存到数据库中。这有助于防止反向\
+  \ `md5` 字典攻击。\n\n```php\n$password = 'password'; // 非常糟糕的密码\n$salt = substr(md5(uniqid(mt_rand(),\
+  \ TRUE)), 0, 5); // 5 位字符的盐\n$salted_password_hash = md5($salt . md5($password));\
+  \ \necho $salted_password_hash; // 输出结果异\n```\n\n`d1239dcc6e017572ea6fed5df0d6e07e`\n\
+  \n## 哈希函数\n\n### md5_file\n- `filename` – `$string`\n- `raw_flag` – [可选] `$boolean`\
+  \ 默认: `FALSE`，32 位十六进制\n\n生成名为 `filename` 的文件的 `MD5` 哈希。如果 `raw_flag` 设置为 `TRUE`，则返回长度为\
+  \ 16 位的原始二进制格式。\n\n**示例：**\n```php\n$hash = md5_file('somefile.txt');\n```\n**另见：**\
+  \ `md5()` – 基于 MD5 算法的字符串加密。\n\n### sha1\n- `raw_flag` – [可选] `$boolean` 默认: `FALSE`，40\
+  \ 位十六进制\n\n使用美国安全哈希算法（US Secure Hash Algorithm）对 `$string` 进行单向哈希加密。如果 `raw_flag`\
+  \ 设置为 `TRUE`，则返回长度为 20 的原始二进制格式。\n\n**示例：**\n```php\n$password = 'mypassword'; \n\
+  echo sha1($password);\n```\n**另见：** `md5()` – 常用的基于 MD5 算法的加密。\n\n请参考 `md5()` 提示如何为密码添加盐以增加额外的安全性。\n\
+  \n### sha1_file\n- `filename` – `$string`\n- `raw_flag` – [可选] `$boolean` 默认: `FALSE`，40\
+  \ 位十六进制\n\n生成名为 `filename` 的文件的 `Sha1` 哈希。如果 `raw_flag` 设置为 `TRUE`，则返回长度为 20 的原始二进制格式。\n\
+  \n**示例：**\n```php\n$hash = sha1_file('somefile.txt');\n```\n**另见：** `sha1()` – 基于\
+  \ Sha1 算法的字符串加密。\n\n### number_format\n- `decimals` – [可选] `$integer` 默认: `0`，无小数\n\
+  - `decimal_point` – [可选] `$string` 默认:句点 ( `.` )\n- `thousand_separator` – [可选]\
+  \ `$string` 默认:逗号 ( `,` )\n\n如果指定，则对 `$float` 进行千分位分隔和数位格式化处理。\n注意：如果浮点数的位数多于指定的格式，将进行四舍五入。\n\
+  \n**示例：**\n```php\n$float = 1234567.891;\necho number_format($float);\necho number_format($float,\
+  \ 2); // 美式符号\necho number_format($float, 2, \",\", \" \"); // 法式格式\n```\n\n###\
+  \ nl2br\n- `string` – `$string`\n\n将 `$string` 中所有的换行符字符（ `\\n` ） 替换为 XHTML 换行符\
+  \ `<br />`。\n\n**示例：**\n```php\n$string = \"Hello\\nWorld\"; \necho nl2br($string);\n\
+  ```\n\n### parse_str\n将 `$string` 视为查询字符串，并将变量赋值为与查询键相同的名，然后赋值与查询值相同的值。如果指定了 `$array`，则查询变量将赋值给数组，并具有相同的键=>值关联关系。\n\
+  注意：输出受 `magic_quotes_gpc` 设置的影响，与 `$_GET` 相同。\n\n**示例：**\n```php\n$query_string\
+  \ = 'key=value&color=red'; \nparse_str($query_string);\necho \"\\$key equals $key,\
+  \ and \\$color equals $color\";\n\n$query_string = \"key=value&color='red'\"; \n\
+  parse_str($query_string, $array);\necho '<pre>'; // 为了便于阅读\nprint_r($array);\n```\n\
+  - 未启用 `magic_quotes_gpc`。\n- 启用了 `magic_quotes_gpc`。\n\n**另见：** `get_magic_quotes_gpc()`\
+  \ – 检查是否启用了魔法引号；`list()` – 将数组的内容赋值给变量。\n\n这是一个非常方便的方法，可以使用以下代码将 `$_SERVER['QUERY_STRING']`\
+  \ 提交的所有查询键/值轻松转换为变量：\n```php\nparse_str($_SERVER['QUERY_STRING']);\n```\n\n\n\n\n\
+  \n## str_replace()\n\n- **find** – `$string` 或 `$array`\n- **replace** – `$string`\
+  \ 或 `$array`\n- **subject** – `$string` 或 `$array`\n- **count** – [可选] 变量名 - `$integer`\n\
+  \n在 `subject` 中将所有的 `find` 实例替换为 `replace`。如果 `subject` 是数组，则 `find` 和 `replace`\
+  \ 将发生在数组的所有条目上。如果 `find` 和 `replace` 是数组，则会对数组中的每个条目对整个字符串进行处理，找到 `find` 中的第一个项并替换为\
+  \ `replace` 中的第一个项，然后对下一组条目重复此操作。如果 `find` 数组中的值多于 `replace` 数组，则使用空字符串（`''`）作为替换。如果\
+  \ `find` 是数组而 `replace` 是字符串，则 `find` 中的每个条目都将使用 `replace`。可选的 `count` 变量将被设置为发生的替换总数。\n\
+  \n**注意：** 此函数对大小写敏感。\n\n### 示例:\n```php\n$newstring = str_replace('find', 'replace',\
+  \ 'I will find');\necho $newstring;\n$array = array('I like dogs', 'I hate dogs');\n\
+  $newarray = str_replace('dog', 'cat', $array);\nprint_r($newarray);\n$findarray\
+  \ = array('l', 'p');\n$replacearray = array('p', 'x');\n$string = \"Hello\";\n//\
+  \ 它将找到 l，替换为 p，然后找到 p 并替换为 x\n$newstring = str_replace($findarray, $replacearray,\
+  \ $string, $count);\necho \"$newstring had a total of $count replacements\";\n$findarray\
+  \ = array('l', 'p', 'x'); // 多了一个条目\n$replacearray = array('p', 'x');\n$string =\
+  \ \"Hello\";\n$newstring = str_replace($findarray, $replacearray, $string);\necho\
+  \ $newstring;\n$findarray = array('l', 'o');\n$replace = 'x';\n$string = \"Hello\"\
+  ;\n$newstring = str_replace($findarray, $replace, $string);\necho $newstring;\n\
+  ```\n\n**另见：**\n- `str_ireplace()` – `str_replace()` 的不大小敏感版本\n- `strtr()` – 简化变体，且在查找/替换时不不会重复执行\n\
+  \n---\n\n## str_ireplace()\n\n- **find** – `$string` 或 `$array`\n- **replace** –\
+  \ `$string` 或 `$array`\n- **subject** – `$string` 或 `$array`\n- **count** – [可选]\
+  \ 变量名 - `$integer`\n\n在 `subject` 中将所有的 `find` 实例替换为 `replace`。如果 `subject` 是数组，则\
+  \ `find` 和 `replace` 将发生在数组的所有条目上。如果 `find` 和 `replace` 是数组，则会对数组中的每个条目对整个字符串进行处理，找到\
+  \ `find` 中的第一个项并替换为 `replace` 中的第一个项，然后对下一组条目重复此操作。如果 `find` 数组中的值多于 `replace` 数组，则使用空字符串（`''`）作为替换。如果\
+  \ `find` 是数组而 `replace` 是字符串，则 `find` 中的每个条目都将使用 `replace`。可选的 `count` 变量将被设置为发生的替换总数。\n\
+  \n**注意：** 此函数不大小写敏感。\n\n### 示例:\n```php\n$newstring = str_ireplace('find', 'replace',\
+  \ 'I will FIND');\necho $newstring;\n```\n更多示例请参见 `str_replace()`。\n\n**另见：**\n\
+  - `str_replace()` – `str_ireplace()` 的大小写敏感版本\n\n---\n\n## strtr()\n\n- **find**\
+  \ – `$string`\n- **replace** – `$string`\n- **replace_array** – `$array`, 关联数组 `find\
+  \ => replace`\n\n此函数在提供三个参数（单次查找/替换）或两个参数（使用查找/替换数组）时，行为有所不同。在使用三个参数时，`$string`\
+  \ 内部所有的 `find` 实例都将被替换为 `replace`。在使用两个参数时，`replace_array` 的每个条目都会被处理，将键替换为值。\n\n\
+  **注意：** 与 `str_replace()` 不同，只有 `$string` 的原始值会参与查找/替换。\n\n### 示例:\n```php\necho\
+  \ strtr('I like dogs', 'dog', 'cat');\n$array = array( 'find' => 'replace', 'replace'\
+  \ => 'find');\n$string = 'I will find and then replace';\n$newstring = strtr($string,\
+  \ $array);\necho $newstring;\n```\n**另见：**\n- `str_replace()` – 在字符串内替换项目的更灵活的方法\n\
+  \n---\n\n## substr()\n\n- **start** – `$integer`，如果为负数，则从 `$string` 的结尾开始计数\n- **length**\
+  \ – [可选] `$integer`，默认：`strlen($string)`；如果为负数，表示从 `$string` 末尾删除的字符数\n\n返回从数字 `start`\
+  \ 之后的字符开始的字符串部分，且长度可选为 `length`。\n\n### 示例:\n```php\necho substr('1234567890', 3);\n\
+  echo substr('1234567890', -3, 1);\necho substr('1234567890', -3, -1);\n```\n\n---\n\
+  \n## substr_replace()\n\n- **subject** – `$string` 或 `$array`\n- **replace** – `$string`\n\
+  - **start** – `$integer`，如果为负数，从字符串结尾计数\n- **length** – [可选] `$integer`，默认：`strlen($string)`\n\
+  \n将 `subject` 中从 `start` 字符之后的内容替换为 `replace`。如果指定了 `length`，则替换 `length` 数量的字符（当\
+  \ `length` 为负数时，表示从结尾开始替换的字符数）。如果 `subject` 是数组，则对数组中的每个条目执行此操作并返回数组。\n\n### 示例:\n\
+  ```php\n$string = substr_replace('1234567890', 'hello', 3);\necho $string;\necho\
+  \ substr_replace('1234567890', 'hello', 3, 2);\n$array = array('098765432');\n$array\
+  \ = substr_replace($array, 'hello', -3, -2);\nprint_r($array);\n```\n**另见：**\n-\
+  \ `str_replace()` – 查找并替换字符串\n\n---\n\n## substr_count()\n\n- **haystack** – `$string`\n\
+  - **needle** – `$string`\n- **start** – [可选] `$integer`，必须为 0 或正数\n- **length**\
+  \ – [可选] `$integer`，必须为 0 或正数\n\n返回 `needle` 在 `haystack` 中出现的总次数。如果提供了 `start`，则从\
+  \ `start` 个字符开始检查。如果提供了 `length`，则只检查 `length` 数量的字符。\n\n### 示例:\n```php\necho substr_count('abcdef',\
+  \ 'bc');\necho substr_count('abcdef', 'bc', 3);\n```\n\n---\n\n## str_pad()\n\n\
+  - **pad_length** – `$integer`，必须为正且大于 `strlen($string)`\n- **pad_string** – [可选]\
+  \ `$string`，默认：`' '`\n- **type** – [可选] `$integer` (0 或或 2)，0（仅右填充），1（仅左填充），2（双侧填充）\n\
+  \n在 `$string` 中插入可选的 `pad_string` 直到 `$string` 达到 `pad_length` 长度。\n\n### 示例:\n\
+  ```php\n$string = 'Hello';\necho '<pre>'; // 显示格式化文本\necho str_pad($string, 7),\
+  \ '|';\n$string = 'Hello';\necho str_pad($string, 10, '#', 2);\n```\n### 查看:\n-\
+  \ `sprintf()` – 用于格式化的复杂函数\n\n---\n\n## str_repeat()\n\n- **string** – `$string`\n\
+  - **multiplier** – `$integer`\n\n返回重复 `multiplier` 次的 `$string` 字符串。\n\n### 示例:\n\
+  ```php\necho str_repeat('123', 3); // 123123123\n```\n\n---\n\n## str_shuffle()\n\
+  \n- **string** – `$string`\n\n随机打乱字符串中的字符。本质上是字符串混合。\n\n### 示例:\n```php\necho str_shuffle('Hello\
+  \ World!'); // reW! ollod\n```\n\n---\n\n## str_split()\n\n- **string** – `$string`\n\
+  - **length** – [可选] `$integer`\n\n返回按每个字符或可选的 `length` 数量字符分割的 `$string` 数组。\n\n\
+  ### 示例:\n```php\n$array = str_split('Hello');\nprint_r($array);\n$array = str_split('Hello',\
+  \ 2);\nprint_r($array);\n```\n**另见：**\n- `chunk_split()` – 按特定长度使用 `\\r\\n` 分割字符串并返回字符串\n\
+  \n---\n\n## str_word_count()\n\n- **option** – [可选] `$integer` (01 或 2)，默认：0（返回单词数）。其他值：1（返回包含所有单词的数组），2（返回位置=>单词的数组）\n\
+  - **characters** – [可选] `$string`\n\n统计 `$string` 内部单词的数量并默认返回该计数（可以通过 `options`\
+  \ 修改）。如果 `characters` 存在，它包含任何应被视为字母的字符。\n\n### 示例:\n```php\n$string = 'Welcome\
+  \ to the jungle';\necho str_word_count($string);\n$string = 'Welcome to the jun3gle';\n\
+  $without = str_word_count($string, 0);\n$withchar = str_word_count($string, 0, '3');\n\
+  echo \"Without: $without, WithChar: $withchar\";\n$string = 'Welcome to the jungle';\n\
+  echo '<pre>'; // 更易读性\n$array = str_word_count($string, 1);\nprint_r($array);\n\
+  $array = str_word_count($string, 2);\nprint_r($array);\n```\n\n---\n\n## str_tags()\n\
+  \n- **allowed_tags** – [可选] `$string`\n\n从 `$string` 中移除 HTML 标签和注释。如果应该排除特定标签，可以在\
+  \ `allowed_tags` 内部指定。\n\n### 示例:\n```php\n$string = \"<p>This is a paragraph. </p><<strong>>Yay!</strong\"\
+  ;\necho str_tags($string), str_tags($string, '<p>');\n// HTML 源代码\necho str_tags($string,\
+  \ '<p>');\n```\n**另见：**\n- `htmlspecialchars()` – 将 HTML 特殊字符转换为实体等\n\n---\n\n##\
+  \ strpos()\n\n- **haystack** – `$string`\n- **needle** – `$string`\n- **start**\
+  \ – [可选] `$integer`\n\n返回 `needle` 在 `haystack` 中首次出现的位置（从 `haystack` 开始的字符数）。如果包含了\
+  \ `start`，则从 `start` 个字符之后开始搜索。\n\n**注意：** 如果在 `haystack` 中未找到 `needle`，则返回 `FALSE`。见下方提示。\n\
+  \n### 示例:\n```php\n$string = 'And now for something completely different';\n$needle\
+  \ = 'thing';\necho strpos($string, $needle);\n```\n**另见：**\n- `strrpos()` – 在 `haystack`\
+  \ 中查找 `needle` 的最后出现\n- `stripos()` – 在 `haystack` 中查找 `needle` 的首次出现，不大小写敏感\n\n\
+  \n\n\n\n注意此函数在输出评估时存在以下差异：\n\n```php\n$string = 'hello';\n$needle = 'h';\nif (strpos($string,$needle)\
+  \ == FALSE){ // evaluating equality\n    echo 'Not Found!';\n}\n```\n输出：`Not Found!`\n\
+  \n由于 `strpos($string,$needle)` 的结果等于 `0`，而布尔值 `FALSE` 等于整数 `0`，因此该表达式为真，并触发了 `echo`。因此，重要的是使用全等运算符\
+  \ `===` 来进行恒等匹配评估：\n\n```php\n$string = 'hello';\n$needle = 'h';\nif (strpos($string,$needle)\
+  \ === FALSE){ // identical evaluation\n    echo 'Not Found!';\n}else{\n    echo\
+  \ 'Found!';\n}\n```\n输出：`Found!`\n\n\n\n\n\n## `strrpos( haystack , needle [, start\
+  \ ])`\n\n`haystack` – `$string`\n`needle` – `$string`\n`start` – [可选] `$integer`\n\
+  \n返回 `needle` 在 `haystack` 中最后一次出现的位置（从 `haystack` 开始计算的字符数）。如果包含 `start` 且为正整数，搜索将从\
+  \ `start` 个字符之后开始；如果是负数，则将从字符串末尾向前 `start` 个字符处停止搜索。\n\n注意：如果在 `haystack` 中未找到 `needle`，则返回\
+  \ `FALSE`。提示参见 `strpos()`。\n\n**示例：**\n```php\n$string = 'hello';\n$needle = 'l';\n\
+  echo strpos($string, $needle); // 查找第一次出现\necho '<br />'; // XHTML 换行\necho strrpos($string,\
+  \ $needle); // 查找最后一次出现\n```\n\n**相关：**\n- `strpos()` – 在 `haystack` 中查找 `needle`\
+  \ 的第一次出现\n- `strripos()` – 在 `haystack` 中查找 `needle` 的最后一次出现，不区分大小\n\n---\n\n##\
+  \ `strripos()`\n\n`haystack` – `$string`\n`needle` – `$string`\n`start` – [可选] `$integer`\n\
+  \n返回 `needle` 在 `haystack` 中第一次出现的位置（从 `haystack` 开始计算的字符数），不区分大小。如果包含 `start`，搜索将从\
+  \ `start` 个字符之后开始。\n\n注意：如果在 `haystack` 中未找到 `needle`，则返回 `FALSE`。提示参见 `strpos()`。\n\
+  \n**示例：**\n```php\n$string = 'And now for something completely different';\n$needle\
+  \ = 'NOW';\necho stripos($string, $needle);\n```\n\n**相关：**\n- `strripos()` – 在\
+  \ `haystack` 中查找 `needle` 的最后一次出现，不区分大小\n- `strpos()` – 在 `haystack` 中查找 `needle`\
+  \ 的第一次出现，区分大小写\n\n---\n\n## `strrpos()`\n\n`haystack` – `$string`\n`needle` – `$string`\n\
+  `start` – [可选] `$integer`\n\n返回 `needle` 在 `haystack` 中最后一次出现的位置（从 `haystack` 开始计算的字符数），不区分大小。如果包含\
+  \ `start` 且为正整数，搜索将从 `start` 个字符之后开始；如果是负数，则将从字符串末尾向前 `start` 个字符处停止搜索。\n\n注意：如果在\
+  \ `haystack` 中未找到 `needle`，则返回 `FALSE`。提示参见 `strpos()`。\n\n**示例：**\n```php\n$string\
+  \ = 'hello';\n$needle = 'L';\necho strrpos($string, $needle); // 查找最后一次出现\n```\n\
+  \n**相关：**\n- `strrpos()` – 在 `haystack` 中查找 `needle` 的最后一次出现，区分大小写\n- `stripos()`\
+  \ – 在 `haystack` 中查找 `needle` 的第一次出现，不区分大小\n\n---\n\n## `strpos()`\n\n`haystack`\
+  \ – `$string`\n`needle` – `$string`\n\n查找 `haystack` 中是否包含 `needle`，并返回从 `needle`\
+  \ 第一次出现到 `haystack` 结束的部分。\n\n注意：如果在 `haystack` 中未找到 `needle`，则返回 `FALSE`。\n\n**示例：**\n\
+  ```php\n$string = 'www.example.com';\n$needle = 'example';\necho strstr($string,\
+  \ $needle);\n```\n\n**相关：**\n- `stristr()` – `strstr()` 的不区分大小写版本\n\n---\n\n## `strstr()`\n\
+  \n`haystack` – `$string`\n`needle` – `$string`\n\n查找 `haystack` 中是否包含 `needle`，并返回从\
+  \ `needle` 第一次出现到 `haystack` 结束的部分，不区分大小。\n\n注意：如果在 `haystack` 中未找到 `needle`，则返回\
+  \ `FALSE`。\n\n**示例：**\n```php\n$string = 'www.example.com';\n$needle = 'EXAMPLE';\n\
+  echo stristr($string, $needle);\n```\n\n**相关：**\n- `strstr()` – `stristr()` 的区分大小写版本\n\
+  \n---\n\n## `strlen()`\n\n`$string` 的长度，如果为空则返回 0。\n\n**示例：**\n```php\n$string =\
+  \ 'Hello!';\necho strlen($string);\n```\n\n---\n\n## `strtolower()`\n\n将 `$string`\
+  \ 中的所有字符转换为小写并返回新字符串。\n\n**示例：**\n```php\n$string = 'Mario Lurig';\necho strtolower($string);\n\
+  ```\n\n---\n\n## `strtoupper()`\n\n将 `$string` 中的所有字符转换为大写并返回新字符串。\n\n**示例：**\n\
+  ```php\n$string = 'Mario Lurig';\necho strtoupper($string);\n```\n\n---\n\n## `ucfirst()`\n\
+  \n将 `$string` 中的第一个字符转换为大写并返回新字符串。\n\n**示例：**\n```php\n$string = 'i wish i had some\
+  \ capitalization';\necho ucfirst($string);\n```\n\n---\n\n## `ucwords()`\n\n将 `$string`\
+  \ 中每个单词的第一个字母字符转换为大写并返回新字符串。\n\n**示例：**\n```php\n$string = 'i wish i had 3three\
+  \ some capitalization';\necho ucwords($string);\n```\n\n---\n\n## `strpbrk()`\n\n\
+  `haystack` – `$string`\n`characters` – `$string`\n\n查找 `haystack` 中是否包含 `needle`\
+  \ 中的任何字符，并返回找到的第一个字符到 `haystack` 结束的部分。\n\n注意：如果在 `haystack` 中未找到任何指定字符，则返回 `FALSE`。\n\
+  \n**示例：**\n```php\n$string = 'www.example.com';\n$needle = './';\necho strpbrk($string,\
+  \ $needle);\n```\n\n---\n\n## `strrev()`\n\n反转字符串。\n\n**示例：**\n```php\necho strrev('hello');\n\
+  ```\n\n---\n\n## Array Functions\n\n反转数组。\n\n**示例：**\n```php\n$array = array('apple',\
+  \ 'banana', 'cherry');\nprint_r(array_reverse($array));\n```\n\n## Array Functions\n\
+  \n反转数组的键和值对关系。\n\n**示例：**\n```php\n$array = array(1, 2, 3);\n```\n\n### Case Conversion\n\
+  \n转换数组键的大小。\n\n**示例：**\n```php\n$array = array('a' => 1, 'b' => 2);\nprint_r(array_key_case($array));\n\
+  ```\n\n### Case Conversion\n\n`option` – [可选] `$integer` (0 或 1) 默认值：0 (小写)。转换数组键的大小。\n\
+  \n**示例：**\n```php\n$array = array('A' => 1, 'B' => 2);\nprint_r(array_key_case($array,\
+  \ 1));\n```\n\n### `array_chunk()`\n\n`size` – `$integer`\n`preserve_keys` – [可选]\
+  \ `$boolean` 默认值：FALSE 按照 `size` 指定的数量拆分 `$array`，返回一个多维数组。如果没有指定 `preserve_keys`，则将重新索引值。如果\
+  \ `preserve_keys` 设置为 `TRUE`，则保留键。\n\n**示例：**\n```php\n$array = array('name' =>\
+  \ 'bob', 'job' => 'dad' );\nprint_r(array_chunk($array, 1));\n$array = array('name'\
+  \ => 'bob', 'job' => 'dad' );\nprint_r(array_chunk($array, 1, TRUE));\n```\n\n###\
+  \ `array_combine()`\n\n`key_array` – `$array`\n`value_array` – `$array`\n\n使用 `key_array`\
+  \ 中的值作为键，`value_array` 中的值作为值创建一个新数组。\n注意：如果两个数组的条目数量不匹配，返回 `FALSE`。\n\n**示例：**\n\
+  ```php\n$keys = array ( 'name', 'job', 'age' );\n$values = array ( 'Bob', 'knight',\
+  \ 42 );\n$newarray = array_combine($keys, $values);\nprint_r($newarray);\n```\n\n\
+  ### `array_merge()`\n\n接受多个数组值，且只有一个参数时行为不同。如果只提供一个索引 `$array`，它将持续重新索引该数组。如果提供多个\
+  \ `$array`，将合并两个数组的内容，所有索引键都包含在新数组中，而相同的关联键将取最后一个提供的 `$array` 的值。\n\n**示例：**\n```php\n\
+  $array = array ( 3 => 'one', 0 => 'two', 2 => 'three' );\nprint_r( array_merge($array)\
+  \ );\n$array = array ( 'zero', 'one', 'name' => 'Bob' );\n$array2 = array ( 'alsozero',\
+  \ 'name' => 'John', 'job' => 'farmer' );\nprint_r( array_merge($array, $array2)\
+  \ );\n```\n\n\n\n\n如果你想合并两个数组，并且不在乎具有相同键的值会接受第一个数组的值并丢弃提供的任何其他数组，只需使用加号（ `+` ） 即可。\n\
+  \n```php\n$array = array ( 'zero', 'name' => 'Bob', 'job' => 'player' );\n$array2\
+  \ = array ( 'alsozero', 'job' => 'farmer' );\nprint_r( $array + $array2 );\n```\n\
+  ```\nArray ([0] => zero [name] => Bob [job] => player)\n```\n\n### array_count_values()\n\
+  `array_count_values($array)` 返回一个数组，其中 `$array` 中的唯一值为键，其出现次数为值。\n**注意：** 不适用于多维数组。\n\
+  \n示例：\n```php\n$array = array ( 'zero', 'one', 'zero' );\nprint_r( array_count_values($array)\
+  \ );\n```\n另请：`count()` – 统计数组中的总条数。\n\n### count()\n统计 `$array` 中的元素数量。默认情况下，属于\
+  \ `$array` 部分的数组项（多维数组）不会被计算，除非 `mode` 设置为 1。\n- `mode` – [可选] `$integer` 默认值：0，不计算多维数组。\n\
+  - 其他值：1，计算多维数组中的项。\n\n示例：\n```php\n$array = array ('zero','names' => array ( 'john',\
+  \ 'dave' ), 'ages' => array ( 22, 34 ) );\necho count($array);\necho count($array,\
+  \ 1);\n```\n另请：`array_count_values()` – 获取数组内部唯一值的数量。\n\n### array_diff()\n接受多个\
+  \ `$array` 以与 `first_array` 进行比较。\n- `first_array` – `$array`: 将所有 `$array(s)` 的值与\
+  \ `first_array` 中的值进行比较，并返回一个包含 `first_array` 中与 `$array(s)` 中的项不共享相同值的数组。\n\n示例：\n\
+  ```php\n$array = array( 'one', 'two', 'three', 'four' );\n$array2 = array( 'two',\
+  \ 'three' );\n$array3 = array( 'bob' => 'one' // 值为 'one'，匹配 $array\nprint_r( array_diff($array,\
+  \ $array2, $array3) );\n```\n另请：`array_diff_key()` – 相同的比较，但基于键而非值；`array_diff_assoc()`\
+  \ – 相同的比较，但同时基于键和值。\n\n### array_intersect()\n接受多个 `$array` 以与 `first_array` 进行比较。\n\
+  - `first_array` – `$array`: 将所有 `$array(s)` 的值与 `first_array` 中的值进行比较，并返回一个包含 `first_array`\
+  \ 中与所有 `$array(s)` 中的项都共享相同值的数组。\n\n示例：\n```php\n$array = array( 'one', 'two');\n\
+  $array2 = array( 'two', 'one', 'three', 'four' ); // 'one','two' 匹配\n$array3 = array(\
+  \ 'bob' => 'one' ); // 仅 'one' 匹配\nprint_r( array_intersect($array, $array2, $array3)\
+  \ );\n```\n另请：`array_intersect_key()` – 相同的比较，但基于键；`array_intersect_assoc()` – 相同的比较，但同时基于键和值。\n\
+  \n### array_diff_key()\n接受多个 `$array` 以与 `first_array` 进行比较。\n- `first_array` –\
+  \ `$array`: 将所有 `$array(s)` 的键与 `first_array` 中的键进行比较，并返回一个包含 `first_array` 中与 `$array(s)`\
+  \ 中的项不共享相同键的数组。\n\n示例：\n```php\n$array = array( 'zero', 'name' => 'john', 'job'\
+  \ => 'john' );\n$array2 = array( 'alsozero', 'job' => 'john' );\nprint_r( array_diff_key($array,\
+  \ $array2));\n```\n另请：`array_diff()` – 相同的比较，但仅基于值；`array_diff_assoc()` – 相同的比较，但同时基于键和值。\n\
+  \n### array_diff_assoc()\n接受多个 `$array` 以与 `first_array` 进行比较。\n- `first_array`\
+  \ – `$array`: 将所有 `$array(s)` 的内容与 `first_array` 中的键和值进行比较，并返回一个包含 `first_array`\
+  \ 中与 `$array(s)` 中的项共享完全相同键和值的数组。\n\n示例：\n```php\n$array = array( 'zero', 'one',\
+  \ 'name' => 'john' );\n$array2 = array( 'zero', 'alsoone', 'name' => 'john' );\n\
+  print_r( array_diff_assoc($array, $array2) );\n```\n另请：`array_diff_key()` – 相同的比较，但基于键而非值；`array_diff()`\
+  \ – 相同的比较，但仅基于值。\n\n### array_intersect_key()\n接受多个 `$array` 以与 `first_array` 进行比较。\n\
+  - `first_array` – `$array`: 将所有 `$array(s)` 的键与 `first_array` 中的键进行比较，并返回一个包含 `first_array`\
+  \ 中与所有 `$array(s)` 中的项都共享键的数组。\n\n示例：\n```php\n$array = array( 'zero', 'name' =>\
+  \ 'john', 'job' => 'john' );\n$array2 = array( 'alsozero', 'job' => 'john' );\n\
+  print_r( array_diff_key($array, $array2)); // 原文此处为 diff_key 但上下文暗示为 intersect_key\n\
+  \n### array_flip()\n`array_flip($array)` 返回一个数组，将 `$array` 的键作为值，并将 `$array` 的值作为新键。注意，如果原始值不是\
+  \ `$string` 或 `$integer`，则不会进行转换并产生错误。\n注意：任何与之前的值相同的相同的值，在翻转为键时将覆盖之前的原始值/键。\n\n\
+  示例：\n```php\n$array = array( 'CEO' => 'Bob', 'zero', 'Owner' => 'Bob' );\nprint_r(\
+  \ array_flip($array) );\n```\n另请：`array_reverse()` – 反转数组中实体的顺序。\n\n如果不担心翻转后 `$boolean`\
+  \ 或 `$float` 值被移除，可以对 `array_flip()` 使用抑制错误（ `@` ）以使它们被忽略。\n```php\n$array = array(\
+  \ 'CEO' => 'Bob', 'good guy' => TRUE );\n$newarray = @array_flip($array);\nprint_r($newarray);\n\
+  ```\n```\nArray ( [Bob] => CEO )\n```\n\n\n\n\n\n![](img/image_rsrc7W3.jpg)\n\n\
+  ### `preserve_keys` – [可选] `$boolean` 默认值：`FALSE`，索引键将被重新索引\n\n返回一个包含 `$array` 反序排列的数组，默认情况下会破坏索引键并重新索引。如果\
+  \ `preserve_keys` 设置为 `TRUE`，则将保留原始键。\n\n**示例：**\n```php\n$array = array( 'zero','one','two',![](img/image_rsrc7W4.jpg)\
+  \ array( 'zero', 'name' => 'Bob' );\nprint_r( array_reverse($array) );\nprint_r(\
+  \ array_reverse($array, TRUE) );\n```\n![](img/image_rsrc7W5.jpg)\n**另另：** `array_flip()`\
+  \ – 交换数组中的键值\n\n![](img/image_rsrc7W6.jpg)\n### `key` – `$string` 或 `$integer`\n\
+  \n如果 `key` 存在于 `$array` 中，则返回 TRUE。\n\n**示例：**\n```php\n![](img/image_rsrc7W7.jpg)\
+  \ $array = array( 'name' => 'John', 'job' => 'unknown' );\nvar_dump(  array_key_exists('name',\
+  \ $array) );\n```\n**另另：** `array_search()` – 与此相似，区别在于找到时会返回键\n\n### `in_array()`\
+  \ – 检查特定值是否存在于数组中\n\n`array_search( search_value , $array [, strict ])`\n\n*   `search_value`\
+  \ – `$variable`\n*   `strict` – [可选] `$boolean` 默认值：`FALSE`，仅匹配值，不匹配变量类型\n\n检查 `search_value`\
+  \ 是否存在于 `$array` 中，如果存在则返回其键。如果未找到，则返回 FALSE。如果 `strict` 设置为 `TRUE`，则 `array_search()`\
+  \ 仅在值和其变量类型均匹配时才会返回 TRUE。\n\n**注意：** 仅找到第一个 `search_value` 实例会返回其键。如果数组后面出现相同的值，则会被忽略。\n\
+  \n**示例：**\n```php\n$array = array( 'name' => 'Bob', 'age' => 12, 'title' => 'owner'\
+  \ );\necho array_search('owner', $array);\n$array = array( 'name' => 'Bob', 'age'\
+  \ => 12, 'title' => 'owner' );\nvar_dump( array_search('12', $array, TRUE) ); //\
+  \ 因为 strict 为 TRUE，字符串 '12' 不匹配整数 12 bool(false)\n```\n**另另：** `array_keys()` –\
+  \ 与此相似，区别在于它会返回多个具有相同值的键；`array_key_exists()` – 与此相似，区别在于仅返回 TRUE 或 FALSE\n\n###\
+  \ `in_array()` – 检查特定值是否存在于数组中\n\n`in_array( value , $array [, strict ])`\n\n* \
+  \  `value` – `$variable`\n*   `strict` – [可选] `$boolean` 默认值：`FALSE`，仅匹配值，不匹配变量类型\n\
+  \n如果 `value` 存在于 `$array` 中，则返回 TRUE。如果 `strict` 设置为 `TRUE`，则 `in_array()` 仅在值和变量类型均匹配时才会返回\
+  \ TRUE。\n\n![](img/image_rsrc7MK.jpg)\n\n如果 `search_value` 是字符串，则按区分大小写进行。\n\n**示例：**\n\
+  ```php\n$array = array( 'name' => 'John', 'age' => '12' ); // '12' 是字符串\n![](img/image_rsrc7W8.jpg)\
+  \ $integer = 12; // 12 是整数\nvar_dump( in_array( $integer, $array) );\nvar_dump(\
+  \ in_array( $integer, $array, TRUE) );\n```\n![](img/image_rsrc7W9.jpg)\n**另另：**\
+  \ `array_key_exists()` – 检查特定键是否存在于数组中；`array_search()` – 检查特定键是否存在并返回它\n\n![](img/image_rsrc7WA.jpg)\n\
+  \n*   `search_value` – [可选] `$variable`\n*   `strict` – [可选] `$boolean` 默认值：`FALSE`，仅匹配值，不匹配变量类型\n\
+  \n返回一个包含 `$array` 中所有键的数组。如果存在 `search_value`，则只返回包含 `search_value` 的键。如果 `strict`\
+  \ 设置为 `TRUE`，当值和变量类型正确时，则 `search_value` 被视为匹配。\n\n**示例：**\n```php\n![](img/image_rsrc7WB.jpg)\
+  \ $array = array( 'name' => 'Bob', 'nickname' => 'Bob', 'age' => '12' );\nprint_r(\
+  \ array_keys($array) );\n$array = array( 'name' => 'Bob', 'nickname' => 'Bob', 'age'\
+  \ => '12' );\nprint_r( array_keys($array, 'Bob') );\n```\n![](img/image_rsrc7WC.jpg)\n\
+  // 注意 12 键是一个字符串，而不是索引值 12\n$array = array( 'name' => 'Bob', 'nickname' => 'Bob',\
+  \ '12' => 'age' );\n$integer = 12;\n![](img/image_rsrc7WD.jpg) print_r( array_keys($array,\
+  \ $integer, TRUE) );\n```\n**另另：** `array_values()` – 返回数组中的所有值\n\n![](img/image_rsrc7WE.jpg)\n\
+  ### `array_values()` – 返回数组中的所有值\n\n将 `$array` 中的所有值作为索引数组返回。\n\n**示例：**\n```php\n\
+  ![](img/image_rsrc7WF.jpg) $array = array( 'name' => 'Eric', 'age' => 12, 'zero'\
+  \ );\nprint_r( array_values($array) );\n```\n**另另：** `array_keys()` – 返回数组的键\n\n\
+  ### `array_keys()` – 返回键（或匹配特定值的键）\n\n![](img/image_rsrc7WG.jpg)\n接受多个 `$array`\
+  \ 及其可选的排序和类型标志\n*   `order` – [可选] 默认值：`SORT_ASC`（升序）其他：`SORT_DESC`（降序）\n*   `type`\
+  \ – [可选] 默认值：`SORT_REGULAR`（常规比较）其他值：`SORT_NUMERIC`（数值比较），`SORT_STRING`（字符串比较）\n\
+  \n按值升序排序 `$array`，除非被排序和类型标志改变。所有索引（数字）键都将被重写，而关联键将保持不变。升序排序时，大写字母在小写字母之前。注意此函数直接影响\
+  \ `$array` 并在成功时返回 TRUE。\n\n**注意：** 如果提供了多个 `$array`，除非包含排序和类型标志，否则每个数组都使用默认排序和类型标志（`SORT_ASC`、`SORT_REGULAR`）。\n\
+  \n**示例：**\n```php\n![](img/image_rsrc7WH.jpg) $array = array( '2', '3', '1', 'a',\
+  \ 'b');\narray_multisort($array);\nprint_r($array);\n![](img/image_rsrc7WJ.jpg)\
+  \ $array = array( '2', '3', '1', 'a', 'b');\narray_multisort($array, SORT_NUMERIC);\n\
+  print_r($array);\n$array = array( '2', '3', '1', 'a', 'b');\narray_multisort($array,\
+  \ SORT_DESC, SORT_NUMERIC);\nprint_r($array);\n```\n![](img/image_rsrc7WK.jpg)\n\
+  ```php\n![](img/image_rsrc7WM.jpg) $array = array( '2', '3', '1', 'a', 'b');\narray_multisort($array,\
+  \ SORT_DESC, SORT_STRING);\nprint_r($array);\n```\n■​ ■​ ■\n\n| 此函数与 MySQL 查询中的\
+  \ ORDER BY 选项相似。 |\n\n\n\n\n\n![](img/image_rsrc7WN.jpg)返回 `$array` 中的最后一个值并将其从数组中移除。\n\
+  \n示例：\n```php\n$array = array('zero', 'one', 'two');\n$value = array_pop($array);\n\
+  echo $value;\nprint_r($array);\n```\n![](img/image_rsrc7WR.jpg)\n\n另请：\n- `array_shift()`\
+  \ – 与 `array_pop` 相似，但作用于数组的开头\n- `array_unshift()` – 将值添加到数组的开头\n- `array_push()`\
+  \ – 将值添加到数组的末尾\n- `array_splice()` – 相似，但足够灵活，可以执行其他操作\n\n![](img/image_rsrc7WS.jpg)可以接受多个值\n\
+  \n`value` – `$variable` 将值（s）添加到 `$array` 中，等同于：\n`$array[] = value`\n如果是添加单个值，上述是首选方法。\n\
+  \n示例：\n```php\n$array = array('zero');\narray_push($array, 'one', 'two');\nprint_r($array);\n\
+  ```\n另请：\n- `array_unshift()` – 将值添加到数组的开头\n- `array_pop()` – 从数组的末尾移除最后一个值\n- `array_shift()`\
+  \ – 与 `array_pop` 相似，但作用于数组的开头\n- `array_splice()` – 相似，但足够灵活，可以执行其他操作\n\n返回 `$array`\
+  \ 中的第一个值并将其从数组中移除，同时重新索引所有数字键。\n\n示例：\n```php\n$array = array('zero', 'one', 'two',\
+  \ 'name' => 'Bob');\n$value = array_shift($array);\necho $value;\nprint_r($array);\n\
+  ```\n![](img/image_rsrc7WW.jpg)\n\n另请：\n- `array_unshift()` – 将值添加到数组的开头\n- `array_pop()`\
+  \ – 从数组的末尾移除最后一个值\n- `array_push()` – 将值添加到数组的末尾\n- `array_shift()` – 与 `array_pop`\
+  \ 相似，但作用于数组的开头\n- `array_splice()` – 相似，但足够灵活，可以执行其他操作\n\n![](img/image_rsrc7WX.jpg)可以接受多个值\n\
+  \n`value` – `$variable` 将值（s）添加到 `$array` 的开头，重新索引所有数字键。\n\n示例：\n```php\n$array\
+  \ = array('zero');\narray_unshift($array, 'one', 'two');\nprint_r($array);\n```\n\
+  另请：\n- `array_push()` – 将值添加到数组的末尾\n- `array_pop()` – 从数组的末尾移除最后一个值\n- `array_shift()`\
+  \ – 与 `array_pop` 相似，但作用于数组的开头\n- `array_splice()` – 相似，但足够灵活，可以执行其他操作\n\n![](img/image_rsrc7WZ.jpg)返回\
+  \ `$array` 中值的乘积（乘法）。\n\n注意：如果数组中的任何值无法求评估为整数，`array_product()` 将返回整数 `0`。\n\n示例：\n\
+  ```php\n$array = array( 2, 4, 8 );\necho array_product($array);\n$array = array(\
+  \ '2', '4', '8' );\nvar_dump( array_product($array) );\n// int(64)\n```\n\n`array_sum($array)`\
+  \ 返回 `$array` 中值的和（加法）。\n\n注意：数组中任何无法求评估为整数的值将被忽略。\n\n示例：\n```php\n$array = array(\
+  \ 2, 4, 8 );\necho array_sum($array);\n// 14\n$array = array( '2', '4', '8', 'blah'\
+  \ );\nvar_dump( array_sum($array) );\n// int(14)\n```\n\n`array_rand($array [, count\
+  \ ])`\n`count` – [可选] `$integer` 默认值：1 返回一个包含从 `$array` 中随机选择的键的字符串。如果提供了 `count`\
+  \ 且大于 1，它将指定从 `$array` 中随机选择的键的数量并返回一个数组。\n\n示例：\n```php\n$array = array( 'name'\
+  \ => 'Bob', 'job' => 'n/a', 'age' => 12 );\n$random_key = array_rand($array);\n\
+  echo $random_key; // 结果会有不同：job\n\n$array = array( 'name' => 'Bob', 'job' => 'n/a',\
+  \ 'age' => 12 );\n![](img/image_rsrc7X1.jpg)\n$random_array = array_rand($array,\
+  \ 2);\nprint_r($random_array); // 结果会有不同\n```\n另请：\n- `shuffle()` – 随机化数组中的值\n\n\
+  | 此函数旨在与其他代码结合使用，因为它只检索键（s）。以下是在包含关键词的索引数组（这些关键词可能从数据库检索）上的一个简单用法示例。 |\n\n\n\n\n\
+  \n```php\n$array = array( 'css', 'php', 'xml', 'html', 'xhtml', 'tutorial' );\n\
+  $rand_key = array_rand($array);\n$keyword = $array[$rand_key];\n```\n![](img/image_rsrc7X2.jpg)\n\
+  ```php\necho $keyword; // 结果不异\n```\n![](img/image_rsrc7X3.jpg)\n随机化 `$array` 中的值，如果成功则返回\
+  \ `TRUE`。\n\n**注意：** 所有的键（包括关联键）都会被移除，并且整个数组会被重新索引。\n\n示例：\n```php\n$array = array(\
+  \ 'zero' => 'zero', 'one' => 'one', 'two' => 'two');\nshuffle($array); // 结果不异\n\
+  ```\n![](img/image_rsrc7X4.jpg)\n```php\nprint_r($array);\n```\n\n另见：\n- `array_rand()`\
+  \ – 从数组中返回一个或多个随机键\n\n![](img/image_rsrc7X5.jpg)\n### offset (偏移量)\n- `offset` –\
+  \ `$integer`\n- `length` – `[optional]` `$integer` 默认：直到 `$array` 结束\n- `preserve_keys`\
+  \ – `[optional]` `$boolean` 默认：`FALSE`，索引键会被重新索引\n\n从 `$array` 中根据 `offset` 选择条目，正偏移量将跳过开头的\
+  \ `offset` 个条目，而负偏移量将从末尾倒数第 `offset` 个条目开始。\n\n如果指定的 `length` 且为正数，它决定了从 `offset`\
+  \ 返回的最大条目数。如果 `length` 为负数，它指定在 `offset` 之后从 `$array` 末尾停止相应数量的条目。\n\n默认情况下，结果数组中的任何索引键都将被重新索引。如果\
+  \ `preserve_keys` 设置为 `TRUE`，则原始键将体现在结果数组中。\n\n示例：\n```php\n$array = array( 'zero',\
+  \ 'one', 'two', 'three', 'four', 'five' );\n```\n![](img/image_rsrc7X6.jpg)\n```php\n\
+  $result_array = array_slice($array, 3);\nprint_r($result_array);\n\n$array = array(\
+  \ 'zero', 'one', 'two', 'three', 'four', 'five' );\n$result_array = array_slice($array,\
+  \ 3, 1);\nprint_r($result_array);\nArray ( [0] => three )\n```\n```php\n$array =\
+  \ array( 'zero', 'one', 'two', 'three', 'four', 'five' );\n```\n![](img/image_rsrc7X7.jpg)\n\
+  ```php\n$result_array = array_slice($array, -4, -1, TRUE);\nprint_r($result_array);\n\
+  ```\n\n### array_splice($array, offset [, length ] [, replacement ])\n- `offset`\
+  \ – `$integer`\n- `length` – `[optional]` `$integer` 默认：直到 `$array` 结束\n- `replacement`\
+  \ – `[optional]` `$variable`\n\n根据 `offset` 和其他可选参数修改 `$array`，将任何移除的条目以数组形式返回，并用可选的\
+  \ `replacement` 替换它们。\n\n如果 `offset` 为正数，函数将跳过 `$array` 中的 `offset` 个条目。如果 `offset`\
+  \ 为负数，它将从末尾开始计算 `offset` 个条目。\n\n如果指定的 `length` 且为正数，它决定了从 `offset` 返回的最大条目数。如果\
+  \ `length` 为负数，它指定在 `offset` 之后从 `$array` 末尾停止相应数量的条目。如果 `length` 为 0，则不移除内容。\n\n\
+  当指定 `replacement` 时，从 `$array` 移除的条目将被 `replacement` 替换。如果没有移除内容，则 `replacement`\
+  \ 的内容将根据 `offset` 插入 `$array` 中。\n\n**注意：** `$array` 中的索引键可能会被重新索引。\n\n![](img/image_rsrc7MK.jpg)\n\
+  使用 `count($array)` 在 `offset` 中指定数组的结束。\n\n示例：\n```php\n$array = array( 'zero',\
+  \ 'one', 'two' );\n$result_array = array_splice($array, 1);\nprint_r($array);\n\
+  print_r($result_array);\n```\n![](img/image_rsrc7X8.jpg) (image_rsrc7X9.jpg)\n```php\n\
+  $array = array( 'zero', 'one', 'two' );\n$result_array = array_splice($array, -2,\
+  \ 1);\nprint_r($array);\nprint_r($result_array);\n```\n![](img/image_rsrc7XA.jpg)\
+  \ (image_rsrc7XB.jpg) (image_rsrc7XC.jpg)\n```php\n$array = array( 'zero', 'one'\
+  \ );\narray_splice($array, count($array), 0, 'end');\nprint_r($array);\n\n$array\
+  \ = array( 'zero', 'one', 'two' );\narray_splice($array, 2, 0, 'middle');\nprint_r($array);\n\
+  ```\n![](img/image_rsrc7XD.jpg) (image_rsrc7XE.jpg)\n```php\n$array = array( 'zero',\
+  \ 'one', 'two' );\n$result_array = array_splice($array, 1, 1, 'middle');\nprint_r($result_array);\n\
+  print_r($array);\n```\n![](img/image_rsrc7XF.jpg) (image_rsrc7XG.jpg)\n```php\n\
+  $array = array( 0, 1 );\n$replace_array = array( 'zero', 'one' );\narray_splice($array,\
+  \ 0, 0, $replace_array);\nprint_r($array);\n```\n另见：\n- `array_shift($array)` –\
+  \ `array_splice($array, 0)`\n- `array_unshift($array)` – `array_splice($array, 0)`\n\
+  - `array_push($array)` – `array_splice($array, count($array), 0)`\n- `array_pop($array)`\
+  \ – `array_splice($array, -1)`\n\n### array_unique($array)\n返回一个去除了 `$array` 中所有重复值的数组。\n\
+  \n示例：\n```php\n$array = array( 'zero', 'one', 'zero', 'three' );\n$new = array_unique($array);\n\
+  print_r($new);\n```\n![](img/image_rsrc7XH.jpg) (image_rsrc7XK.jpg)\n- `sort_flag`\
+  \ – `[optional]` 默认：`SORT_REGULAR`（正常比较）。其他值：`SORT_NUMERIC`、`SORT_STRING`、`SORT_LOCALE_STRING`\n\
+  \n从低到高排序 `$array` 的值并重新索引所有值。默认情况下，项正常比较，但在包含 `sort_flag` 时可以进行更改。\n\n示例：\n```php\n\
+  $array = array( 'babe', 1, 'name' => 'Bob' );\nsort($array);\nprint_r($array);\n\
+  ```\n![](img/image_rsrc7XM.jpg)\n```php\n$array = array( 'babe', 1, 'name' => 'Bob'\
+  \ );\nsort($array, SORT_NUMERIC);\nprint_r($array);\n```\n![](img/image_rsrc7N.jpg)\n\
+  ```php\n$array = array( 'babe', 1, 'name' => 'Bob' );\nsort($array, SORT_STRING);\n\
+  print_r($array);\n```\n![](img/image_rsrc7XP.jpg)\n从高到低排序 `$array` 的值并重新索引所有值，销毁所有键。默认情况下，项正常比较，但在包含\
+  \ `sort_flag` 时可以进行更改。\n\n示例：\n```php\n$array = array( 'babe', 'apple', 'name' =>\
+  \ 'Bob' );\nrsort($array);\nprint_r($array);\n```\n![](img/image_rsrc7XS.jpg)\n\
+  ```php\n$array = array( 'babe', 'apple', 'name' => 'Bob' );\nksort($array);\nprint_r($array);\n\
+  ```\n![](img/image_rsrc7XT.jpg)\n从低到高排序 `$array` 的值并保持键。默认情况下，项正常比较，但在包含 `sort_flag`\
+  \ 时可以进行更改。\n\n示例：\n```php\n$array = array( 'babe', 'apple', 'name' => 'Bob' );\n\
+  asort($array);\nprint_r($array);\n```\n![](img/image_rsrc7XV.jpg)\n```php\n$array\
+  \ = array( 'babe', 'apple', 'name' => 'Bob' );\narsort($array);\nprint_r($array);\n\
+  ```\n![](img/image_rsrc7WU.jpg)\n从高到低排序 `$array` 的值（按键）。默认情况下，项正常比较，但在包含 `sort_flag`\
+  \ 时可以进行更改。\n\n示例：\n```php\n$array = array( 'cute', 'fruit' => 'apple', 'name' =>\
+  \ 'Bob' );\nksort($array);\nprint_r($array);\n```\n![](img/image_rsrc7XY.jpg)\n\
+  从低到高排序 `$array` 的项（按键）。默认情况下，项正常比较，但在包含 `sort_flag` 时可以进行更改。\n\n示例：\n```php\n$array\
+  \ = array( 'cute', 'fruit' => 'apple', 'name' => 'Bob' );\nkrsort($array);\nprint_r($array);\n\
+  ```\n![](img/image_rsrc7XZ.jpg)\n### extract(variable_names)\n可以接受多个 `variable_names`。创建一个键等于\
+  \ `variable_name` 且值等于 `variable_name` 的数组。如果 `variable_name` 是数组，则该数组的值被用作变量名。\n\
+  \n注意：全局变量不能与 `compact()` 使用。\n\n示例：\n```php\n$variable = 'value';\n$integer = 10;\n\
+  $name = 'Bob';\n$array = array( 'name', 'age' );\n$result_array = extract('variable',\
+  \ 'integer', $array);\nprint_r($result_array);\n```\n![](img/image_rsrc7Y2.jpg)\
+  \ (image_rsrc7Y3.jpg)\n- `type` – `[optional]` 默认：`EXTR_WRITE`（如果冲突则覆盖）。其他值：`EXTR_SKIP`（如果冲突时不覆盖）、`EXTR_SAME`（如果冲突则前缀）、`EXTR_ALL`（带前缀）、`EXTR_INVALID`（带前缀的数字）、`EXTR_IF_EXISTS`（如果变量存在则带前缀创建，否则跳过）、`EXTR_FS`（作为引用提取）。\n\
+  - `prefix` – `[optional]` 仅当 `type` 设置为包含 `PREFIX` 的值时有效。前缀总是通过下划线（`_`）附加。\n\n这些函数都特定于数组的内部指针。\n\
+  \n这些函数都特定于数组的内部指针。`current()` – 返回当前条目的值。`key()` – 返回当前条目的键。`next()` 将指针向前移动一个位置。`prev()`\
+  \ 将指针向后移动一个位置。`end()` 将指针移动到末尾。`reset()` 将指针重置到开头。\n\n示例：\n```php\n$array = array(\
+  \ 'zero', 'one', 'two', 'three', 'four' );\ncurrent($array); // 返回 zero\nkey($array);\
+  \ // 返回 0\nnext($array); // 移动到 one\ncurrent($array); // 返回 one\n```\n\n\n\n\n\n\
+  ## 排序示例\n\n| 标准排序:`Array(` | | |\n| :--- | :--- |\n| `[0]` | => `IMG41.jpg` |\n\
+  | `[1]` | => `img11.jpg` |\n| `)` | `[2]` => `img4.jpg` |\n| 自然排序 Array ([0] | sort:`=>\
+  \ IMG41.jpg` | | |\n| `[2]` | => `img4.jpg` |\n| `[1])Natural Array ([2] | => img11.jpgcase\
+  \ 不大小敏感排序:`=> img4.jpg` | | |\n| `[1]` | => `img11.jpg` |\n| `[0])` | => `IMG41.jpg`\
+  \ |\n\n**另需参考：**\n- `natsort()` – `natcasesort()` 的大小敏感版本\n- `sort()` – 排序数组的值\n\
+  \n## 日期/时间函数\n\n![](img/image_rsrc7YM.jpg)\n\n- `month` – `$integer` (1-12) 月份\n\
+  - `day` – `$integer` (1-31, 视月份而定) 日\n- `year` – `$integer` (1-32767) 年\n\n检查给定日期的有效性，有效则返回\
+  \ `TRUE`。\n\n**示例：**\n![](img/image_rsrc7YN.jpg)\n```\nvar_dump( checkdate(2, 29,\
+  \ 2006) );\nvar_dump( checkdate(2, 29, 2008) );\n```\n![](img/image_rsrc7YP.jpg)\n\
+  ![](img/image_rsrc7YR.jpg)\n\n- `format` – `$string`\n- `timestamp` – `[optional]\
+  \ $integer` 默认：`time()`，当前 Unix 时间戳\n\n根据 `format` 中指定的格式返回当前日期和/或时间。如果不包含 `timestamp`，则使用由\
+  \ `time()` 函数提供的当前时间。否则，将评估提供的时间戳。\n\n`format` 可用选项选项：\n\n### 日 (Day)\n- `d` – (01\
+  \ – 31) 带前导零的日期\n- `j` – (1 – 31) 不带前导零的日期\n- `D` – (Mon – Sun) 星期的三字母版本\n- `l`\
+  \ (小写 'L') – (Sunday – Saturday) 星期完整单词\n- `N` – (1 – 7) ISO-8601 星期，数字表示周一(1)–周日(7)\n\
+  - `w` – (0 – 6) 星期，数字表示周日(0) –周六(6)\n- `S` – (st,nd,rd,th) 日期的后缀，与 `j` 配合\n- `z`\
+  \ – (0 – 365) 一年的天数\n\n### 周 (Week)\n- `W` – (01 – 52) 一年的周数\n\n### 月 (Month)\n\
+  - `F` – (January – December) 月份完整单词\n- `M` – (Jan – Dec) 月份三字母版本\n- `m` – (01 –\
+  \ 12) 带前导零的数字月份\n- `n` – (1 – 12) 不带前导零的数字月份\n- `t` – (28 – 31) 当前月的天数\n\n### 年\
+  \ (Year)\n- `L` – (1 or 0) 是否为闰年 (1)\n- `Y` – (2008) 四位数字年份\n- `y` – (08) 两位数字年份\n\
+  - `o` – (2008) ISO-8601 版本的 'Y'受周 ('W') 影响\n\n### 时间 (Time)\n- `a` – (am or pm)\
+  \ 小写上午或下午\n- `A` – (AM or PM) 大写上午或下午\n- `B` – (000 – 999) 网络时间 (Swatch internet\
+  \ time)\n- `g` – (1 – 12) 12 小时制小时，不带前导零\n- `h` – (01 – 12) 12 小时制小时，带前导零\n- `G`\
+  \ – (0 – 23) 24 小时制小时，不带前导零\n- `H` – (00 – 23) 24 小时制小时，带前导零\n- `i` – (00 – 59)\
+  \ 带前导零的分钟\n- `s` – (00 – 59) 带前导零的秒\n- `u` – (e.g. 54321) 毫秒\n\n### 时区 (Timezone)\n\
+  - `e` – (e.g. GMT, America/Denver) 完整时区标识符\n- `T` – (e.g. GMT, EST, PST) 时区缩写\n\
+  - `I` – (1 or 0) 是否为夏令时间 (1)\n- `O` – (e.g. - 0700) 与 GMT 的小时差\n- `P` – (e.g. -07:00)\
+  \ 带冒号的 GMT 小时差\n- `Z` – (-43200 – 50400) 时区偏移量（秒），UTC 西侧为负数\n\n### 完整日期/时间 (Full\
+  \ Date/Time)\n- `c` – (e.g. 2008-03-17T12:27:40-06:00) ISO-8601 格式日期\n- `r` – (e.g.\
+  \ Mon, 17 Mar 2008 12:27:40 -0600) RFC 2822 日\n- `U` – (e.g. 1205778601) 自 Unix\
+  \ 纪戳，同于 `time()`\n\n**示例：**\n```\necho date('m-d-y'); // 03-17-08\necho date('M\
+  \ jS, Y'); // Mar 17th, 2008\necho date('g:i:sA'); // 12:27:40PM\n```\n\n\n\n\n\n\
+  # 如果你想知道完成一个脚本需要多长时间，例如在比较两个不同的函数以查看哪一个更快时，可以使用 `microtime()` 来跟踪效率。\n\n```php\n\
+  $start = microtime(1);\n// 在此处执行操作\n$end = microtime(1);\n$lengthoftime = number_format($end\
+  \ - $start, 6);\necho \"It took $lengthoftime seconds to run this script.\";\n```\n\
+  \n运行此脚本花费了 0.000005 秒。\n\n## strtotime\n\n`strtotime($string [, timestamp ])` \n\
+  `timestamp` – [可选] `$integer` 默认值：`time()`\n\n根据 `$string` 中日期/时间的解释返回 Unix 时间戳，`$string`\
+  \ 是日期时间的常用语言格式。如果 `$string` 是指日期的相对输入格式（例如 'last month'），则除非提供了可选的 `timestamp`，否则将使用当前日期/时间。如果\
+  \ `$string` 无效且函数失败，则返回 `FALSE`。\n\n## 示例\n```php\n$result = strtotime('December\
+  \ 8th, 1941'); echo $result;\necho '<br />'; // XHTML 换行\necho date('r', $result);\n\
+  $result = strtotime('26apr86'); echo date('r', $result); // Sat, 26 Apr 1986 00:00:00\
+  \ -0700\n$result = strtotime('20010911 08:45:00'); echo date('r', $result); // Tue,\
+  \ 11 Sep 2001 08:45:00 -0600\n```\n\n### 相对 $string 示例\n```php\n$result = strtotime('last\
+  \ week'); // 时间，上周\necho date('r', $result); // Mon, 10 Mar 2008 14:31:54 -0600\n\
+  $date = mktime(8,45,00,9,11,2001); // Sept. 11, 2001 8:45am\n$result = strtotime('next\
+  \ week', $date); echo date('r', $result); // Tue, 18 Sep 2001 08:45:00 -0600\n$date\
+  \ = mktime(8,45,00,9,11,2001); // Sept. 11, 2001 8:45am\n$result = strtotime('+2\
+  \ friday', $date); echo date('r', $result); // Fri, 21 Sep 2001 00:00:00 -0600\n\
+  $result = strtotime('1 hour ago'); echo date('r', $result); // Mon, 17 Mar 2008\
+  \ 13:36:54 -0600\n$result = strtotime('yesterday 3am'); echo date('r', $result);\
+  \ // Sun, 16 Mar 2008 03:00:00 -0600\n$result = strtotime('7am 4 days ago'); echo\
+  \ date('r', $result); // Thu, 13 Mar 2008 07:00:00 -0600\n```\n\n还有更多示例。请参阅以下网站：\n\
+  - [`www.gnu.org/software/tar/manual/html_node/tar_113.html`](http://www.gnu.org/software/tar/manual/html_node/tar_113.html)\n\
+  - [`www.phpdig.net/ref/rn13re206.html`](http://www.phpdig.net/ref/rn13re206.html)\n\
+  \n另参：`date()` – 将 Unix 时间戳转换为更易于读的格式\n\n此函数的威力不仅在于可以将普通语言转换为可用的内容而无需大量的正则表达式字符串，还在于处理相对日期和时间时。如果你使用\
+  \ MySQL 查询从数据库中提取数据以生成上周（周一到周五）的所有调用报告，你将不得不反复计算来确定今天是星期几，然后根据该结果算出周一的日期，最后提交正确的查询。使用此函数，你可以无需额外的数学计算即可快速找到日期，一切都会为你处理好！\n\
+  \n\n\n\n\n## 数学函数\n\n有时你需要更高级的数学函数。\n\n### abs(number)\n`number` – `$integer` 或\
+  \ `$float`\n返回 `number` 的绝对值，类型与原变量相同。\n示例：\n```php\nvar_dump( abs(-21) );\nint(21)\n\
+  ```\n\n### dechex($integer)\n返回 `$integer` 的十六进制值。最大值：`4294967295`。\n示例：\n```php\n\
+  var_dump( dechex(4294967295) );\nstring(8) \"ffffffff\"\n```\n![](img/image_rsrc7Z2.jpg)\n\
+  \n### max()\n根据提供的参数，有两种不同的格式：\n- 如果提供单个参数 `$array`，它返回数组中的最大值。\n- 如果提供两个或多个 `$variable`，它返回参数中的最大值。\n\
+  \n注意：非数字字符串在比较时会被评估为零 (0)。\n示例：\n```php\n$array = array(4, 7, 2); \nvar_dump( max($array)\
+  \ );\nint(7)\n```\n![](img/image_rsrc7MK.jpg)\n\n如果比较两个数组，它们将从左到右进行值与值的对比较：\n```php\n\
+  var_dump( max(2, 5, 'string', '8') );\nstring(1) \"8\"\n```\n另请：`min()` – 寻找最小值。\n\
+  \n### min()\n根据提供的参数，有两种不同的格式：\n- 如果提供单个参数 `$array`，它返回数组中的最大值。\n- 如果提供两个或多个 `$variable`，它返回参数中的最小值。\n\
+  \n注意：非数字字符串在比较时会被评估为零 (0)。\n示例：\n```php\n$array = array(-3, 7, 2); \nvar_dump( min($array)\
+  \ );\nint(-3)\n\nvar_dump( min( array(1,2,3), array(1,2,4) ) ); // 1==1, 2==2, 3<4\n\
+  array(3) { \n    [0]=> int(1) \n    [1]=> int(2) \n    [2]=> int(3) \n}\n```\n另请：`max()`\
+  \ – 寻找最大值。\n\n![](img/image_rsrc7Z3.jpg)\n\n### pi()\n返回浮点数形式的 pi。\n示例：\n```php\n\
+  var_dump( pi() );\nfloat(3.14159265359)\n```\n\n### pow(base, exponent)\n`base`\
+  \ – `$integer` 或 `$float`\n`exponent` – `$integer` 或 `$float`\n返回 `base` 的 `exponent`\
+  \ 次幂值。\n示例：\n```php\nvar_dump( pow(2, 4) );\nint(16)\n```\n![](img/image_rsrc7MK.jpg)\n\
+  \n### sqrt($float)\n返回 `$float` 的平方根。\n示例：\n```php\nvar_dump( sqrt(16) );\nfloat(4)\n\
+  ```\n如果比较两个数组，它们将从左到右进行值与值的比较。\n\n### log($float [, base])\n`base` – [可选] `$float`\n\
+  返回 `$float` 的自然对数。可选的底数形式如下：`log$base`。\n示例：\n```php\nvar_dump( log(10) );\nfloat(2.302585092)\n\
+  ```\n\n### round($float [, decimals])\n`decimals` – [可选] `$integer` 默认值：0 位小数\n\
+  将 `$float` 四舍五入到最近的整数。如果指定了 `decimals`，则四舍五入到 `decimals` 位小数。\n示例：\n```php\nvar_dump(\
+  \ round(3.14) );\nfloat(3)\n\nvar_dump( round(pi(), 2) );\nfloat(3.14)\n\nvar_dump(\
+  \ round(143257.432, -2) );\nfloat(143300)\n```\n如果 `decimals` 为负数，它将处理小数点左侧对应的位数。\n\
+  另请：`floor()` – 向下取整到最近的整数。\n\n### floor($float)\n将 `$float` 向下取整到最近的整数。\n示例：\n```php\n\
+  var_dump( floor(3.99) );\nfloat(3)\n```\n另请：`round()` – 四舍五入到最近的整数或小数。\n\n### rand(min,\
+  \ max)\n`min, max` – [可选] `$integers`\n生成一个随机整数。为了获得更好的随机性，请使用 `mt_rand()`。\n示例：\n\
+  ```php\nvar_dump( rand(), rand(1,100) ); // 结果异\n```\n另请：`mt_rand()` – 一个更好、更快的随机数生成器。\n\
+  \n### mt_rand(min, max)\n`min, max` – [可选] `$integers`\n生成一个随机整数，比 `rand()` 好。如果提供了参数，将生成\
+  \ `min` 和 `max` 之间的随机整数。\n示例：\n```php\nvar_dump( mt_rand(), mt_rand(1,100) ); //\
+  \ 结果异\n```\n\n## MySQL 函数\n\n数据库。以某种形式形式，如果你想高效地存储和检索数据，你可能都会使用数据库。流行的 MySQL 数据库是\
+  \ LAMP 栈（Linux-Apache-MySQL-PHP）的一部分，值得稍微关注和解释。请注意，除少数示例外，本节介绍的是 PHP 函数，而不是如何构建查询。\n\
+  \n![](img/image_rsrc7ZA.jpg)\n下表将用于演示这些查询：\n表名：`employees`\n| pkey | name | age\
+  \ |\n| :--- | :--- | :--- |\n| 1 | Mary | 24 |\n| 2 | John | 17 |\n| 3 | Mark |\
+  \ 53 |\n| 4 | Susan | 17 |\n\n\n\n\n\n## 示例\n\n- `SELECT * FROM employees`\n- `SELECT\
+  \ pkey,name,age FROM employees`\n- `SELECT employees.pkey,employees.name,employees.age\
+  \ FROM table`\n- `SELECT name FROM employees`\n- `SELECT name,age FROM employees`\n\
+  - `SELECT * FROM employees WHERE age = 17`\n- `SELECT name FROM employees WHERE\
+  \ name LIKE 'm%'`\n- `SELECT name FROM employees WHERE name LIKE BINARY 'm%'`\n\
+  - `SELECT name FROM employees WHERE name LIKE '%a%'`\n- `SELECT name FROM employees\
+  \ WHERE name LIKE '      ' ` // 5 个下划线\n- `SELECT COUNT(*) FROM employees`\n- `SELECT\
+  \ COUNT(*) FROM employees WHERE age = 17`\n- `SELECT age,COUNT(age) FROM employees\
+  \ GROUP BY age`\n- `SELECT SUM(age) FROM employees`\n- `SELECT MAX(age) FROM employees`\n\
+  - `SELECT DISTINCT age FROM employees`\n- `SELECT * FROM employees LIMIT 1,2`\n\
+  - `SELECT name FROM employees ORDER BY name`\n- `SELECT name FROM employees ORDER\
+  \ BY name DESC`\n\n以下示例未使用包含的表格，仅供参考：\n\n- `INSERT INTO table (column1,column2)\
+  \ VALUES ('value1','value2'), ('value1','value2'), ('value1','value2')`\n- `UPDATE\
+  \ table SET column1='newvalue' WHERE column2='value'`\n- `DELETE FROM table WHERE\
+  \ column='value'`\n- `SELECT * FROM table1 INNER JOIN table2 on table1.id = table2.id`\n\
+  - `SELECT table1.* FROM table1 INNER JOIN table2 on table1.id = table2.id`\n- `SELECT\
+  \ table1.id FROM table1 INNER JOIN table2 on table1.id = table2.id`\n- `SELECT table.id\
+  \ AS tableid FROM table`\n\n## MySQL 函数\n\n## mysql_connect()\n\n- `server` – [可选]\
+  \ `$string` 默认值：' localhost:3306'` 或 `mysql.default_host`\n- `username` – [可选] `$string`\
+  \ 默认值：由 `mysql.default_user` 定义\n- `password` – [可选] `$string` 默认值：由 `mysql.default_password`\
+  \ 定义\n- `new_link` – [可选] `$boolean` 默认值：`FALSE`，第二次调用时不建立新链接\n- `client_flag` –\
+  \ [可选] `$integer`\n\n与位于 `server` 的 MySQL 服务器建立初始连接/链接，并使用 `username` 和 `password`\
+  \ 提供的权限。失败时返回 `FALSE`，出于安全考虑应结合 `die()` 使用。大多数情况下，你会使用：`mysql_connect(server , username\
+  \ , password )`。\n\n示例：\n```php\nmysql_connect('localhost', 'user', 'password')\
+  \ or die('Could not connect to the database');\n```\n\n另见：\n- `die()` – 函数失败时停止脚本\n\
+  \n## mysql_close()\n\n- `mysql_close([ link_identifier ])`\n- `link_identifier`\
+  \ – [可选] 默认值：最后打开的链接\n\n关闭与 MySQL 服务器的连接，默认关闭由 `mysql_connect()` 打开最后一个连接。如果指定了\
+  \ `link_identifier`，则关闭该链接。\n\n示例：\n```php\n$link = mysql_connect('localhost', 'username',\
+  \ 'password') or die();\n$link2 = mysql_connect('/path/to', 'username', 'password')\
+  \ or die();\nmysql_close($link); // 关闭第一个链接\nmysql_close(); // 关闭最后创建的链接，在此情况下为\
+  \ $link2\n```\n\n另见：\n- `mysql_connect()` – 建立到 MySQL 服务器的连接\n\n## mysql_select_db()\n\
+  \n- `mysql_select_db( database [, link_identifier ])`\n- `database` – `$string`\n\
+  - `link_identifier` – [可选] 默认值：最后打开的链接\n\n根据名称 `database` 选择数据库。默认情况下，它使用 `mysql_connect()`\
+  \ 最近的 MySQL 服务器连接，除非指定了 `link_identifier`，则使用该链接。\n\n示例：\n```php\n$link = mysql_connect('localhost',\
+  \ 'username', 'password') or die();\nmysql_select_db('database'); // 或 mysql_select_db('database',$link);\n\
+  ```\n\n另见：\n- `mysql_connect()` – 建立到 MySQL 服务器的连接\n\n## mysql_query()\n\n- `query`\
+  \ – `$string`\n- `link_identifier` – [可选] 默认值：最后打开的链接\n\n将查询提交到服务器，除非指定了可选的 `link_identifier`，否则使用最近的\
+  \ `mysql_connect()` 链接。查询出现任何错误时返回 `FALSE`。`SELECT`、`SHOW`、`DESCRIBE` 和 `EXPLAIN`\
+  \ 查询将返回一个资源，需要通过 `mysql_result()` 或 `mysql_fetch_*()` 函数之一进行解析，所有其他查询在成功后将返回 `TRUE`。\n\
+  \n示例：\n```php\nmysql_connect('localhost', 'username', 'password') or die();\nmysql_select_db('database');\n\
+  $result = mysql_query(\"SELECT * FROM 'table'\");\n```\n\n另见：\n- `mysql_fetch_array()`\
+  \ – 从创建的资源中以数组获取行\n- `mysql_fetch_assoc()` – 返回关联数组：`column=>value`\n- `mysql_fetch_row()`\
+  \ – 返回行的索引数组\n- `mysql_result()` - 从创建的资源中获取单个结果\n\n### db_query()\n\n- `database`\
+  \ – `$string`\n- `query` – `$string`\n- `link_identifier` – [可选] 默认值：最后打开的链接\n\n\
+  将查询发送到 MySQL 服务器和 `database`。列出的参考，请使用 `mysql_select_db()` 和 `mysql_query()` 代替。\n\
+  \n示例：\n```php\n$result = db_query('database', \"SELECT * FROM 'table'\");\n```\n\
+  \n另见：\n- `mysql_select_db()` 选择数据库\n\n## mysql_error()\n\n- `link_identifier` –\
+  \ [可选] 默认值：最后打开的链接\n\n默认返回上次操作的 MySQL 错误，如果指定了则返回 `link_identifier`。\n\n示例：\n```php\n\
+  $link = mysql_connect('localhost', 'user', 'password'); // 有效\nmysql_select_db('No');\n\
+  echo mysql_error();\n```\n\n## mysql_fetch_array()\n\n- `resource` – 包含 `mysql_query()`\
+  \ 输出的变量\n- `result_type` – [可选] `$string` 默认值：`MYSQL_BOTH`\n\n值：`MYSQL_BOTH`（包含关联和索引数组）、`MYSQL_ASSOC`（关联数组）、`MYSQL_NUM`（索引数组）\n\
+  \n返回由 `mysql_query()` 生成的资源的单行数组，并将资源的内部指针移动到下一行。这通常用于循环提取资源的所有行并获取查询的完整输出。默认提供关联和索引，可以通过\
+  \ `result_type` 修改。\n\n示例：\n```php\n$result = mysql_query(\"SELECT * FROM name\"\
+  );\n$array = mysql_fetch_array($result);\nprint_r($array);\n\n$array = mysql_fetch_array($result,MYSQL_ASSOC);\n\
+  print_r($array);\n```\n\n使用 `MYSQL_NUM` 选项的示例：\n```php\n$result = mysql_query(\"\
+  SELECT * FROM name\");\nwhile ($row = mysql_fetch_array($result,MYSQL_NUM) ){\n\
+  \    print_r($row);\n}\n```\n\n## mysql_fetch_assoc()\n\n- `resource` – 包含 `mysql_query()`\
+  \ 输出的变量\n\n返回由 `mysql_query()` 生成的单行数组，并将资源的内部指针移动到下一行，返回 `column => value` 关联数组。\n\
+  \n示例：\n```php\n$result = mysql_query(\"SELECT * FROM name\");\n$array = mysql_fetch_assoc($result);\n\
+  print_r($array);\n```\n\n使用 while 循环的示例：\n```php\n$result = mysql_query(\"SELECT\
+  \ * FROM name\");\nwhile ($row = mysql_fetch_assoc($result) ){\n    print_r($row);\n\
+  }\n```\n\n## mysql_fetch_row()\n\n- `resource` – 包含 `mysql_query()` 输出的变量\n\n返回由\
+  \ `mysql_query()` 生成的单行数组，并将资源的内部指针移动到下一行，返回仅包含值的索引数组（无列名）。\n\n示例：\n```php\n$result\
+  \ = mysql_query(\"SELECT * FROM name\");\n$array = mysql_fetch_row($result);\nprint_r($array);\n\
+  ```\n\n使用 while 循环的示例：\n```php\n$result = mysql_query(\"SELECT * FROM name\");\n\
+  while ($row = mysql_fetch_row($result) ){\n    print_r($row);\n}\n```\n\n## mysql_result()\n\
+  \n- `resource` – 包含 `mysql_query()` 输出的变量\n- `row` – `$integer`\n- `column` – [可选]\
+  \ `$string` 或 `$integer` 默认值：0，获取第一列\n\n返回包含来自 `mysql_query()` 生成的资源特定行的单元单元的字符串。如果指定了\
+  \ `field`，则获取指定的字段（可以通过从 0 开始的数字或别名引用）。\n\n注意：如果你需要多个一个结果，应该使用 `mysql_fetch_*()`。\n\
+  \n示例：\n```php\n$result = mysql_query(\"SELECT * FROM name\");\nvar_dump( mysql_result($result,\
+  \ 0) );\nvar_dump( mysql_result($result, 1) );\nvar_dump( mysql_result($result,\
+  \ 1, 'name') );\n```\n\n## mysql_num_rows()\n\n- `resource` – 包含 `mysql_query()`\
+  \ 输出的变量\n\n以整数形式返回 `mysql_query()` 生成的资源的总行数。\n\n示例：\n```php\n$result = mysql_query(\"\
+  SELECT * FROM name\");\n$row_total = mysql_num_rows($result);\nvar_dump($row_total);\n\
+  ```\n\n## mysql_free_result()\n\n- `resource` – 包含 `mysql_query()` 输出的变量\n\n清除与\
+  \ `resource` 相关的所有系统内存。只有在单个脚本内处理大型数据集时才是必要的，内存在脚本/页面结束会自动清除。\n\n示例：\n```php\n$result\
+  \ = mysql_query(\"SELECT * FROM name\");\nmysql_free_result($result);\n```\n\n##\
+  \ mysql_get_server_info()\n\n- `link_identifier` – [可选] 默认值：最后打开的链接\n\n返回包含 MySQL\
+  \ 服务器版本的字符串，默认是 `mysql_connect()` 最后的最后一个连接。如果指定了 `link_identifier`，则使用该链接。\n\n\
+  示例：\n```php\n$link = mysql_connect('localhost', 'username', 'password') or die();\n\
+  var_dump( mysql_get_server_info() );\n```\n\n## mysql_real_escape_string()\n\n-\
+  \ `link_identifier` – [可选] 默认值：最后打开的链接\n\n返回对 `$string` 进行处理的字符串，添加反斜杠以防止 SQL 攻击。默认使用\
+  \ `mysql_connect()` 的连接。如果指定了 `link_identifier`，则使用该链接。影响以下字符：`\\x00`、`\\n`、`\\\
+  r` 和 `''`。注意：与 `addslashes()` 相同。\n\n示例：\n```php\n$string = \"SELECT * FROM table'\"\
+  ;\nmysql_connect('localhost', 'username', 'password') or die();\nvar_dump( mysql_real_escape_string($string)\
+  \ );\n```\n\n## mysql_data_seek()\n\n- `resource` – 包含 `mysql_query()` 输出的变量\n-\
+  \ `row` – `$integer`\n\n将 `mysql_query()` 生成的资源的内部指针移动到 `row`（从 0 开始）。通过 `mysql_fetch_*()`\
+  \ 获取指定的行。\n\n示例：\n```php\n$result = mysql_query(\"SELECT * FROM name\");\nmysql_data_seek($result,\
+  \ 1); // 选择第 1 行\n```\n\n## mysql_affected_rows()\n\n- `link_identifier` – [可选]\
+  \ 默认值：最后打开的链接\n\n返回受 `INSERT`、`UPDATE` 或 `REPLACE` 查询影响的行数。使用指定的 `mysql_connect()`\
+  \ 链接。\n\n示例：\n```php\nmysql_connect('localhost', 'username', 'password') or die();\n\
+  mysql_select_db('database');\n$result = mysql_query(\" INSERT INTO name (pkey,name)\
+  \ VALUES (NULL,'Joe') \");\nvar_dump( mysql_affected_rows() );\n```\n\n## mysql_create_db()\n\
+  \n- `string` – `$string`\n- `link_identifier` – [可选] 默认值：最后打开的链接\n\n在 `mysql_connect()`\
+  \ 使用的 MySQL 服务器上创建一个名为 `$string` 的数据库。如果指定了 `link_identifier`，则使用该链接。注意：仅参考 `mysql_query()`\
+  \ 和 `\"CREATE DATABASE\"`。\n\n示例：\n```php\nmysql_connect('localhost', 'username',\
+  \ 'password') or die();\nmysql_create_db('database');\n```\n\n## mysql_drop_db()\n\
+  \n- `string` – `$string`\n- `link_identifier` – [可选] 默认值：最后打开的链接\n\n在 `mysql_connect()`\
+  \ 使用的 MySQL 服务器上销毁名为 `$string` 的数据库。注意：仅参考 `mysql_query()` 和 `\"DROP DATABASE\"\
+  `。\n\n示例：\n```php\nmysql_connect('localhost', 'username', 'password') or die();\n\
+  mysql_drop_db('database');\n```\n\n## 目录 & 文件系统函数\n\n### getcwd()\n\n返回包含当前目录的字符串。\n\
+  \n示例：\n```php\nvar_dump( getcwd() ); // 结果各异\n```\n\n另见：\n- `chdir()` – 更改目录\n\n\
+  ### chdir()\n\n- `directory` – `$string`\n\n将当前目录更改为 `$string`，成功时返回 `TRUE`。注意：目录更改仅持续脚本/页面。\n\
+  \n示例：\n```php\nvar_dump( getcwd() ); // 获取当前目录\nchdir('images');\n```\n\n另见：\n-\
+  \ `getcwd()` – 获取当前目录\n\n### scandir()\n\n- `directory` – `$string`\n- `sort_flag`\
+  \ – [可选] `$integer` 默认值：`0`（升序）其他值为：`1`（降序）\n\n返回包含 `$directory` 内部所有文件的数组。如果 `sort_flag`\
+  \ 为 0 或未指定，数组按字母顺序排序。\n\n示例：\n```php\n$array = scandir('directory'); // 结果各异\n```\n\
+  \n### copy()\n\n- `source` – `$string`\n- `destination` – `$string`\n\n将名为 `source`\
+  \ 的文件复制到 `destination`，如果 `destination` 已存在则覆盖它。原始源保持不变。\n\n示例：\n```php\ncopy('file.txt',\
+  \ 'file.txt.bak');\n```\n\n### rename()\n\n- `oldname` – `$string`\n- `newname`\
+  \ – `$string`\n\n将名为 `oldname` 的文件或目录重命名为 `newname`。\n\n示例：\n```php\nrename('file.txt',\
+  \ 'file.tmp');\n```\n\n### mkdir()\n\n- `path` – `$string`\n- `ix_mode` – [可选] `$integer`\
+  \ 默认值：`0777`（八进制），所有人可读写\n- `recursive_flag` – [可选] `$boolean` 默认值：`FALSE`，一次创建一个目录\n\
+  \n在 `path` 处创建一个目录。如果在 Unix/Linux 服务器上，你可以将默认模式从 0777 更改为八进制形式的其他权限（前导零）。每次只能创建一个层级的目录，除非\
+  \ `recursive_flag` 设置为 `TRUE`。\n\n示例：\n```php\nmkdir('tmp');\nmkdir('tmp/2/tmp',\
+  \ 0775, TRUE);\n```\n\n另见：\n- `chmod()` – 修改文件模式（权限）\n\n### rmdir()\n\n- `path`\
+  \ – `$string`\n\n移除名为 `path` 的目录。\n\n示例：\n```php\nrmdir('/temp/tmp');\n```\n\n###\
+  \ unlink()\n\n- `filename` – `$string`\n\n删除名为 `filename` 的文件。\n\n示例：\n```php\n\
+  unlink('file.txt');\n```\n\n### fopen()\n\n- `filename` – `$string`\n- `mode` –\
+  \ `$string`\n- `use_include_path` – [可选] `$boolean` 默认值：`FALSE`\n\n使用以下模式打开 `filename`：\n\
+  - `r`（只读，文件指针在开头）\n- `r+`（读写，文件指针在开头）\n- `w`（只写，文件指针在开头，零长度文件，不存在则创建）\n- `w+`（读写，文件指针在开头，零长度文件，不存在则创建）\n\
+  - `a`（只写，文件指针在末尾，零长度文件）\n- `a+`（读写，文件指针在末尾，零长度文件）\n- `x`（只写，文件指针在开头，如果存在则返回 `FALSE`）\n\
+  - `x+`（读写，文件指针在开头，如果存在则返回 `FALSE`）\n\n如果 `use_include_path` 设置为 `TRUE`，系统也会在 PHP\
+  \ 定义的 `include_path` 中检查该文件。返回一个供其他使用的资源。\n\n示例：\n```php\n$file = fopen('file.txt',\
+  \ 'r');\n```\n\n另见：\n- `fclose()` – 关闭由 `fopen()` 打开的资源\n\n### fclose()\n\n- `resource`\
+  \ – 包含 `fopen()` 创建的文件指针的变量\n\n关闭用 `fopen()` 打开的文件。\n\n示例：\n```php\n$file = fopen('file.txt',\
+  \ 'r');\nfclose($file);\n```\n\n另见：\n- `fopen()` – 打开文件进行读取、写入或两者两者\n\n### fread()\n\
+  \n- `resource` – 包含 `fopen()` 创建的文件指针的变量\n- `length` – `$integer`\n\n返回包含 `fopen()`\
+  \ 创建的资源内容的字符串，字节长度为 `length`。\n\n示例：\n```php\n// file.txt 包含句子 Hello World!!\n$file\
+  \ = fopen('file.txt', 'r');\nvar_dump( fread($file, 8) );\n```\n\n另见：\n- `fwrite()`\
+  \ – 写入打开的文件\n\n\n\n\n\n要将整个文件读入字符串中，请使用函数 `filesize()`。\n\n```php\n// file.txt contains\
+  \ the sentence: Hello World!\n$filename = 'file.txt';\n$file = fopen($filename,\
+  \ 'r');\n$string = fread( $file, filesize($filename) );\nvar_dump($string);\n```\n\
+  \n`string(13) \"Hello World!\"`\n\n### fwrite( resource , $string [, length ]) \n\
+  也称为 `fputs()`。\n\n- `resource` – 包含由 `fopen()` 创建的文件指针的变量名。\n- `length` – [可选] `$integer`\
+  \ 默认：`filesize($string)`\n\n将 `$string` 的内容写入由 `fopen()` 创建的文件 `resource` 中。如果指定了\
+  \ `length`，则在达到 `length` 字节或 `$string` 的末尾时停止写入。\n\n**示例：**\n```php\n$file = fopen('file.txt',\
+  \ 'a'); // 追加到文件末尾\nfwrite($file, 'Hello World!');\n```\n`string(8) \"Hello Wo\"\
+  `\n\n**另见：**\n- `fwrite()` – 写入已打开的文件\n- `fopen()` – 打开文件进行读取、写入或两者结合\n\n### 要将整个文件读入字符串中，请使用函数\
+  \ `filesize()`。\n\n```php\n// file.txt contains the sentence: Hello World!\n$filename\
+  \ = 'file.txt';\n$file = fopen($filename, 'r');\n$string = fread( $file, filesize($filename)\
+  \ );\nvar_dump($string);\n// file.txt now contains at the end: Hello World!\n```\n\
+  \n\n\n\n\n![](img/image_rsrc81U.jpg)\n返回一个包含名为/路径 `$string` 的文件长度的整数。注意：结果会被缓存。请参见\
+  \ `clearstatcache()`。示例：\n\n![](img/image_rsrc81V.jpg)\n```php\n// file.txt 包含单词:\
+  \ Hello\nvar_dump( filesize('file.txt') );\n```\n\n![](img/image_rsrc81W.jpg)\n\
+  `flags` – [可选] `$string` 值：\n- `FILE_USE_INCLUDE_PATH`（在 `include_path` 中搜索文件）\n\
+  - `FILE_IGNORE_NEW_LINES`（不在数组条目末尾添加 `\\n`）\n- `FILE_SKIP_EMPTY_LINES`（跳过空行）\n\n\
+  将文件名为 `$string` 的整个文件逐行读取到数组中，除非 `flags` 另有指定，否则会在每个数组项末尾附加一个换行符（`\\n`）（每个项都是文件中的一行）。\n\
+  \n示例：\n```php\n// file.txt 包含以下由制表符分隔的项\n// Bob owner 34\n// Mark manager 27\n$array\
+  \ = file('file.txt');\n```\n\n![](img/image_rsrc81X.jpg)\n```php\necho '<pre>';\
+  \ // 预格式化文本，为了可读性\nprint_r($array);\n```\n\n另请：`file_get_contents()` – 类似，但返回字符串而不是数组\n\
+  \n![](img/image_rsrc81Y.jpg)\n`flags` – [可选] `$string` 值：\n- `FILE_USE_INCLUDE_PATH`（在\
+  \ `include_path` 中搜索文件）\n- `context` – [可选] 忽略。使用 `start` 或 `max_length` 时设置为 `NULL`\n\
+  - `start` – [可选] `$integer` 默认值：0，文件开头\n- `max_length` – [可选] `$integer` 默认值：`filesize($string)`\n\
+  \n将文件名为 `$string` 的整个文件读取到一个字符串中。除非指定了 `start`，否则从文件开始开始，指定则从文件的 `start` 位置开始。如果指定了\
+  \ `max_length`，则只读取 `max_length` 字节到字符串中。\n\n示例：\n```php\n// file.txt 包含以下由制表符分隔的项\n\
+  // Bob owner 34\n// Mark manager 27\n$string = file_get_contents('file.txt');\n\
+  ```\n\n![](img/image_rsrc81Z.jpg)\n```php\necho '<pre>'; // 预格式化文本，为了可读性\nvar_dump($string);\n\
+  $string = file_get_contents('file.txt', NULL, NULL, 5, 4);\necho '<pre>'; // 预格式化文本，为了可读性\n\
+  var_dump($string);\n```\n\n![](img/image_rsrc820.jpg)\n另请：`file()` 类似，但返回数组而不是字符串\n\
+  \n![](img/image_rsrc821.jpg)\n`input` – `$string` 或 `$array`\n`flags` – [可选] `$string`\
+  \ 值：\n- `FILE_USE_INCLUDE_PATH`（在 `include_path` 中搜索文件）\n- `FILE_APPEND`（如果文件已存在，则追加而不是覆盖）\n\
+  - `LOCK_EX`（获取对文件的排他锁以进行写入）\n\n等同于 `fopen()`、`fwrite()` 和 `fclose()` 的组合。向名为/路径\
+  \ `$string` 的文件写入 `input` 的内容。如果 `input` 是数组，则条目值将组合，就像一个长字符串且中间没有分隔符。默认情况下，如果文件存在，除非用\
+  \ `flags` 另指定，否则将被覆盖。返回写入文件的字节数。\n\n示例：\n![](img/image_rsrc822.jpg)\n```php\n$input\
+  \ = 'Hello World!';\nfile_put_contents('file.txt', $input);\n$input = array('Hello\
+  \ ', 'World!');\nfile_put_contents('file.txt', $input);\n```\n\n![](img/image_rsrc823.jpg)\n\
+  另请：`file()` – 将文件读取到数组\n`file_get_contents()` – 将文件读取到字符串\n\n![](img/image_rsrc824.jpg)\n\
+  当在格式化中指定时，接受多个 `inputs`\n`resource` – 由 `fopen()` 创建的文件指针\n`formatting` – `$string`，参见\
+  \ `sprintf()` 格式化指南\n`inputs` – [可选] 格式化的 `scalar`\n使用格式化规则（参见 `sprintf()`）向 `resource`\
+  \ 写入字符串。如果提供了 `inputs`，则返回格式化后的字符串的长度。\n\n示例：\n```php\n$string = 'dog';\n$file =\
+  \ fopen('file.txt', 'w');\nfprintf($file, \"I like %s.\", $string);\nfclose($file);\n\
+  ```\n\n![](img/image_rsrc825.jpg)\n```php\n$length = fprintf($file, \"%s %s\");\n\
+  var_dump($length);\n```\n\n![](img/image_rsrc826.jpg)\n另请：`sprintf()` – 应用于字符串的格式化\n\
+  `fwrite()` – 向文件写入字符串\n\n当在格式化中指定时，接受多个 `inputs`\n`resource` – 由 `fopen()` 创建的文件指针\n\
+  `formatting` – `$string`，参见 `sprintf()` 格式化指南\n`outputs` – [可选] 赋值给 `outputs`\n\
+  使用格式化规则（参见 `sprintf()`）从 `resource` 读取。如果没有指定 `inputs`，则返回格式化后的数组；否则，返回赋值的值的数量。\n\
+  \n示例：\n![](img/image_rsrc828.jpg)\n```php\n// file.txt 包含以下由制表符分隔的项\n// Bob owner\
+  \ 34\n// Mark manager 27\n$file = fopen('file.txt', 'r');\n$array = fscanf($file,\
+  \ \"%s\\t%s\\t%s\");\nprint_r($array);\n```\n\n![](img/image_rsrc829.jpg)\n```php\n\
+  $count = fscanf($file, \"%s\\t%s\\t%s\", $name, $title, $age);\necho \"$name ($title)\
+  \ - $age\";\n```\n\n另请：`sprintf()`\n`sscanf()` – 通过格式化字符串解析字符串\n\n![](img/image_rsrc82A.jpg)\n\
+  返回文件/路径 `$string` 最后访问的时间，如果失败则返回 FALSE。返回的值是一个 Unix 时间戳。注意：结果会被缓存。参见 `clearstatcache()`。示例：\n\
+  \n![](img/image_rsrc82B.jpg)\n```php\n$timestamp = fileatime('tmp/file.txt');\n\
+  echo date('Y-m-d', $timestamp);\n```\n\n另请：`filetime()` 类似，但返回最后写入的时间\n\n![](img/image_rsrc82C.jpg)\n\
+  返回文件/路径 `$string` 最后写入的时间，如果失败则返回 FALSE。返回的值是一个 Unix 时间戳。注意：结果会被缓存。参见 `clearstatcache()`。示例：\n\
+  \n![](img/image_rsrc82D.jpg)\n```php\n$timestamp = filetime('opt/lampp/htdocs');\n\
+  echo date('Y-m-d', $timestamp);\n```\n\n另请：`fileatime()` 类似，但返回最后访问的时间\n\n![](img/image_rsrc82E.jpg)\n\
+  返回名为/路径 `$string` 的文件或目录是否存在，返回布尔。注意：结果会被缓存。参见 `clearstatcache()`。示例：\n\n![](img/image_rsrc82F.jpg)\n\
+  ```php\nfile_exists('file.txt');\n```\n\n![](img/image_rsrc82G.jpg)\n返回名为/路径 `$string`\
+  \ 的文件或目录是否可读，返回布尔。注意：结果会被缓存。参见 `clearstatcache()`。示例：\n\n![](img/image_rsrc82H.jpg)\n\
+  ```php\nis_readable('file.txt');\n```\n\n另请：`is_readable()` 类似，但返回是否可读\n\n![](img/image_rsrc82J.jpg)\n\
+  返回名为/路径 `$string` 的文件或目录是否可写入，返回布尔。注意：结果会被缓存。参见 `clearstatcache()`。示例：\n\n![](img/image_rsrc82K.jpg)\n\
+  ```php\nis_writable('file.txt');\n```\n\n另请：`is_writeable()` 类似，但返回是否可写\n\n![](img/image_rsrc82M.jpg)\n\
+  返回名为/路径 `$string` 的文件或目录是否为目录，返回布尔。注意：结果会被缓存。参见 `clearstatcache()`。示例：\n\n![](img/image_rsrc82N.jpg)\n\
+  ```php\nis_dir('file.txt');\n```\n\n![](img/image_rsrc82P.jpg)\n返回名为/路径 `$string`\
+  \ 的文件或目录是否为文件，返回布尔。注意：结果会被缓存。参见 `clearstatcache()`。示例：\n\n![](img/image_rsrc82R.jpg)\n\
+  ```php\nis_file('file.txt');\n```\n\n![](img/image_rsrc82S.jpg)\n清除系统缓存的由特定函数收集的某些文件信息（如下）。用于在同一脚本/页面内修改并重新评估文件时。影响以下函数：`file_exists()`、`is_writable()`、`is_readable()`、`is_file()`、`is_dir()`、`fileatime()`、`filemtime()`、`filesize()`、`stat()`、`lstat()`、`is_executable()`、`is_link()`、`filectime()`、`fileinode()`、`filegroup()`、`fileowner()`\
+  \ 和 `fileperms()`。\n\n\n\n\n\n## 常用八进制模式\n\n| 模式 | 描述 |\n| :--- | :--- |\n| `0777`\
+  \ | 所有人可读、写、执行 |\n| `0755` | 所有者读/写/执行，其他人可读/执行 |\n| `0644` | 所有者读/写，其他人可读 |\n|\
+  \ `0600` | 所有者读/写，其他人无访问权限 |\n| `0754` | 所有者读/写/执行，组用户可读/执行，其他人可读 |\n\n## 输出控制（输出缓冲区）\n\
+  \n想象你将所有的代码、所有的输出内容都塞进一个大袋子里，然后一次性倒在柜台上，或者如果你愿意的话，直接扔进垃圾桶。代码仍然在运行，只是输出变了。这就是输出缓冲的概述。此外，它还让事情变得更容易，特别是在处理头和\
+  \ cookie 时，这些内容都需要按照特定的顺序发送给用户。![](img/image_rsrc82X.jpg)\n\n尝试立即将所有输出推送到用户/浏览器，而不是等待脚本完成。\n\
+  \n**注意：** 如果你处于输出缓冲区 `ob_start()` 中，你还需要调用 `ob_flush()`。\n\n## 示例\n\n```php\nfor($x=0;$x<=1000;$x++){\
+  \ // 循环 1001 次\n    echo $x;\n    flush(); // 将每个 echo $x 发送到浏览器\n    // 如果不存在 flush()，它将在脚本/循环结束时\n\
+  \    // 一次性将整个数字链输出到浏览器\n}\n```![](img/image_rsrc82Y.jpg)\n\n```php\nob_start();\
+  \ // 开启输出缓冲区\nfor($x=0;$x<=1000;$x++){ // 循环 1001 次\n    echo $x;\n    flush();\
+  \ // 将输出发送到输出缓冲区\n}\nob_flush(); // 将输出缓冲区发送到浏览器并清空\n// 如果不存在 ob_flush()，它将在脚本/循环结束时\n\
+  // 一次性将整个数字链输出到浏览器\n```![](img/image_rsrc82Z.jpg)\n\n**另见：** `ob_flush()` – 从输出缓冲区刷新输出。\n\
+  \n## `flush()` 的用法\n\n使用 `flush()` 是为了在脚本运行时间较长时给运行脚本的用户提供反馈，否则他们可能会面对一个空白页面。例如，当从文件逐行向数据库导入大量数据时，你可以在每行完成后在屏幕上提供一个点（`.`），并每隔\
+  \ 70 个左右的点换一次行，向用户提供程序正在运行的反馈。虽然这可能会慢一点，但如果他们认为认为出了问题而停止脚本，情况会更糟。\n\n作为对比，这里显示了一个简单的脚本，并使用了每种方法的不同时间测试作为比较。\n\
+  \n```php/*以下所有方法都使用其外围的代码来生成完成时间。所示的输出仅为完成时间，而不是随之 echo 出来的长串数字。*/\n$time = microtime(1);\
+  \ // 开始\n// 示例代码在此处\n$time = number_format(microtime(1)-$time, 6); echo \"$time\
+  \ seconds to complete\"; // 结束\n```\n\n### 时间测试对比\n\n| 方法 | 结果 |\n| :--- | :---\
+  \ |\n| `for($x=0;$x<=100000;$x++){ echo $x;}` | `0.468251 seconds to complete` |\n\
+  | `for($x=0;$x<=100000;$x++){ echo $x;flush();}` | `3.616512 seconds to complete`\
+  \ |\n| `ob_start(); for($x=0;$x<=100000;$x++){echo $x;}` | `0.182167 seconds to\
+  \ complete` |\n| `ob_start(); for($x=0;$x<=100000;$x++){echo $x; flush();// 没有 ob_flush()，在脚本完成前不会输出给用户}`\
+  \ | `0.762600 seconds to complete` |\n| `ob_start(); for($x=0;$x<=100000;$x++){echo\
+  \ $x; flush(); ob_flush();}` | `4.443787 seconds to complete` |\n\n![](img/image_rsrc830.jpg)\n\
+  \n## 缓冲区函数\n\n### `use_include_path` – [可选] `$boolean` 默认：`FALSE`\n读取名称/路径为 `$string`\
+  \ 的文件内容并将其写入输出中，类似于将内容读入字符串然后 echo 该字符串。如果 `use_include_path` 设置为 `TRUE`，则会在 PHP\
+  \ `include_path` 中搜索该文件。\n\n**示例：**![](img/image_rsrc831.jpg)\n```php\n// file.txt\
+  \ 内容：Hello World\nreadfile('file.txt');\n```![](img/image_rsrc832.jpg)\n\n### `callback_function`\
+  \ – [可选] `$string`（函数名）\n### `flush_size` – [可选] `$integer` 默认：`0`（在结束时刷新）\n其他预设值：`1`（将大小设置为\
+  \ 4096）\n### `erase` – [可选] `$boolean` 默认：`TRUE`，缓冲区在 `flush_size` 时清空\n启动一个输出缓冲区，在将其发送给用户/浏览器之前存储所有输出。在脚本结束时或通过指定的\
+  \ `ob_*()` 函数时一次性发送。\n\n如果指定了 `callback_function`，存储中的输出将作为字符串发送给名为 `callback_function`\
+  \ 的函数，当脚本完成或调用 `ob_end_flush()` 时。关闭缓冲区。该函数应返回一个字符串，以便输出到用户/浏览器。\n\n如果设置了 `flush_size`，当某部分输出超过\
+  \ `flush_size` 长度时，缓冲区将被刷新（同于 `ob_flush()`）。如果 `erase` 设置为 `FALSE`，缓冲区在脚本结束之前不会删除。\n\
+  \n**注意：** 如果指定的 `callback_function` 失败，则返回 `FALSE`。\n\n**示例：**\n\n```php\nob_start();\n\
+  ```![](img/image_rsrc833.jpg) // 此处生成输出的代码\n```php\nfunction ChangeName($buffer){\n\
+  \    // 在缓冲区中将所有的 'username' 替换为 'Bob'\n    $buffer = str_replace('username', 'Bob',\
+  \ $buffer);\n    return $buffer; // 返回新缓冲区进行输出\n}\n```\n```php\nob_start('ChangeName');\n\
+  echo 'My name is username';\n```![](img/image_rsrc834.jpg)\n```php\nfunction ChangeName($buffer){\n\
+  \    $buffer = $buffer . '||'; // 在缓冲区末尾添加 ||\n    return $buffer;\n}\nob_start('ChangeName',10);\n\
+  echo 'My name is Mario';\necho 'My name is Mario';\n```\nMy name is Mario||My name\
+  \ is Mario\n\n有一个名为 `ob_gzhandler` 的内置函数，它会在将输出送到用户/浏览器之前对缓冲区进行压缩。调用它使用：\n```php\n\
+  ob_start('ob_gzhandler');\n```\n\n输出缓冲区会自动将 `header()` 和 `setcookie()` 的输出重新排列到页面顶部，从而避免\
+  \ Apache 错误。这使得在脚本某处出错时，很容易在 `header()` 中包含重定向，即使在脚本早期部分已经向页面输出了数据。重定向和头部信息将放在前面，用户永远看不到那些数据。\n\
+  \n```php\nob_start();\necho 'You will never see this';\nif ($baduser){ // 如果 $baduser\
+  \ 为 TRUE\n    header('Location: http://www.someotherplace.com');\n}\nob_end_flush;\
+  \ // 结束缓冲区并将输出发送给用户\n```\n\n\n\n\n\n`ob_flush()` 将缓冲区中的所有内容发送给用户/浏览器，就像你已经到达脚本结束一样，并清空缓冲区当前的内容。缓冲区不会关闭。\n\
+  示例：\n```php\nob_start();\necho 'Send me now!'; ob_flush();\necho 'Send me at the\
+  \ end of the script.';\n// Output:\n// Send me now!Send me at the end of the script.\n\
+  ```\n\n`ob_clean()` 丢弃/删除输出缓冲区当前的内容。缓冲区不会关闭。\n示例：\n```php\nob_start();\necho 'I\
+  \ will never be seen'; ob_clean();\n![](img/image_rsrc835.jpg) echo 'Send me at\
+  \ the end of the script.';\n![](img/image_rsrc836.jpg)\n```\n\n`ob_end_flush()`\
+  \ 将当前输出缓冲区的所有内容发送给用户/浏览器，就像你已经到达脚本结束一样，清空缓冲区当前的内容。随后关闭缓冲区。此函数会在存在 `ob_start()` 的脚本/页面结束时自动调用。\n\
+  示例：\n```php\nob_start();\necho 'Send me now!'; ob_end_flush();\n![](img/image_rsrc837.jpg)\
+  \ // 剩余代码不会被缓冲。\n![](img/image_rsrc838.jpg)\n```\n\n`ob_end_clean()` 丢弃/删除当前输出缓冲区当前的内容，然后关闭缓冲区。\n\
+  示例：\n```php\nob_start();\necho 'I will never be seen'; ob_end_clean();\n![](img/image_rsrc839.jpg)\
+  \ // 后的代码不会被缓冲\necho 'Send me at the end of the script.';\n![](img/image_rsrc83A.jpg)\n\
+  ```\n\n`ob_get_flush()` 返回一个包含当前输出缓冲区所有内容的字符串，刷新/发送缓冲区内容到用户/浏览器，清空缓冲区当前的内容并最后关闭。\n\
+  示例：\n```php\nob_start();\necho 'Send me, store me. ';![](img/image_rsrc83B.jpg)\n\
+  $buffer = ob_get_flush(); // 缓冲区已关闭\necho \"buffer: $buffer\";\n```\n\n`ob_get_clean()`\
+  \ 将当前缓冲区的内容返回为字符串，然后丢弃/删除缓冲区当前的内容，最后关闭缓冲区。\n示例：\n```php\nob_start();\necho 'I will\
+  \ exist in a string';\n$buffer = ob_get_clean(); // 缓冲区已关闭\necho \"buffer: $buffer\"\
+  ;\n// Output: buffer: I will exist in a string\n```\n\n`ob_get_contents()` 返回一个包含当前输出缓冲区所有内容的字符串，但不清除它。缓冲区不会关闭。\n\
+  示例：\n```php\nob_start();\necho 'Send me, store me. ';\n$buffer = ob_get_contents();\n\
+  ob_end_clean(); // 关闭并擦除缓冲区\necho \"buffer: $buffer\";\n// Output: buffer: Send\
+  \ me, store me.\n```\n\n`ob_get_length()` 返回当前输出缓冲区长度的整数。\n示例：\n```php\nob_start();\n\
+  ![](img/image_rsrc83C.jpg) echo 'Hello World!';\nvar_dump( ob_get_length() );\n\
+  echo 'Hello again...';\nvar_dump( ob_get_length() );\n```\n\n`ob_get_level()` 返回一个包含嵌套输出缓冲区数量的整数，如果未启用输出缓冲则返回\
+  \ 0。\n示例：\n```php\n![](img/image_rsrc83D.jpg) var_dump( ob_get_level() );\nob_start();\
+  \ // 第一输出缓冲区\nob_start(); // 第二输出缓冲区\nvar_dump( ob_get_level() );\n```\n\n## 会话\
+  \ (Sessions)\n\nSession 在 PHP 中用于提供在整个网站跟踪用户的方法，并在用户访问期间在页面之间传递有关该用户的数据。用户被分配一个唯一的\
+  \ ID，数据存储在服务器本身，而不是像 Cookie 那样存储在用户的计算机上。Session 最常见的用法是电子商务网站，使其具备购物车、用户登录和自定义界面以及导航历史的功能。\n\
+  ![](img/image_rsrc83E.jpg)\n\n`session_start()` 开启新会话，或根据 cookie 中存储或通过 GET 或 POST\
+  \ 传递的 session id 继续已打开的会话。\n注意：如果使用 `ob_start()` 函数，请将其放在 `session_start()` 之前。其次，当不使用\
+  \ `ob_start()` 时，必须在生成任何输出之前调用 `session_start()`。\n示例：\n```php\nsession_start();\n\
+  ![](img/image_rsrc83F.jpg) echo \"Your session id is \" . session_id();\n\nsession_start();\n\
+  ![](img/image_rsrc83G.jpg) $_SESSION['color'] = 'blue';\n![](img/image_rsrc83H.jpg)\n\
+  ```\n\n`session_unset()` 取消/移除所有会变量，本质上删除了 `$_SESSION` 全局变量数组中的所有项。\n注意：如果你想取消特定的键，请使用\
+  \ `unset($_SESSION['key'])`。\n示例：\n```php\nsession_start();\n$_SESSION['color']\
+  \ = 'blue';\necho $_SESSION['color'];\nsession_unset();\n![](img/image_rsrc83J.jpg)\
+  \ echo $_SESSION['color'];\n```\n另请：`session_destroy()` – 销毁与会话相关的一切\n\n`session_destroy()`\
+  \ 销毁/删除当前会话。存储在 `$_SESSION` 中的值不会被删除，会话 cookie 也也不会删除（见下文提示）。\n注意：如果你仍然想拥有会话，则在\
+  \ `session_destroy()` 之后再次调用 `session_start()`。\n示例：\n```php\nsession_start();\n\
+  $_SESSION['color'] = 'blue';\necho $_SESSION['color'];\nsession_unset();\n![](img/image_rsrc83K.jpg)\
+  \ echo $_SESSION['color'];\n```\n另：\n- `session_unset()` – 移除分配给 `$_SESSION` 的变量\n\
+  - `session_regenerate_id()` – 重新创建 session id\n- `setcookie()` – 创建或删除 cookie\n\n\
+  要完全销毁会话，你必须同时删除 cookie。这通过 `setcookie()` 函数实现。\n```php\nsession_start(); // 加载会话\n\
+  session_destroy(); // 销毁会话\nsession_unset(); // 删除 $_SESSION 中的所有变量\nsetcookie(\
+  \ session_name(), '', time()-1 ); // 设置 cookie 在一秒前过期，本质上将其删除\n```\n\n\n\n\n\n![](img/image_rsrc7MK.jpg)\
+  \ 22 使用 `session_unset()` 或 `$_SESSION = array();` 移除 session 变量 ![](img/image_rsrc83M.jpg\n\
+  \n返回 session 名称。如果提供了 `$string`，则 session 名称被设置为 `$string` 的值。如果不使用 `session_name()`，默认的\
+  \ session 名称为 `PHPSESSID`。\n注意：如果设置 session 名称，应在 `session_start()` 之前调用。\n示例：\n\
+  ```php\nsession_name('SessionName'); session_start();\n```\n![](img/image_rsrc83N.jpg)\
+  \ echo session_name();![](img/image_rsrc83P.jpg)返回一个包含 session id 的字符串。如果提供了 `$string`，则\
+  \ session id 被设置为 `$string` 的值。\n注意：如果设置 session id，应在 `session_start()` 之前调用。\n\
+  示例：\n```php\nsession_id('1234567890abcdefgh'); session_start();\n```\n![](img/image_rsrc83R.jpg)\
+  \ echo session_id();![](img/image_rsrc83S.jpg)delete_old_session – [可选] $boolean\
+  \ 默认: FALSE，保持相同 session 生成一个新的 session id，不会丢失 id 以外的当前 session 信息。如果 `delete_old_session`\
+  \ 设置为 TRUE，则删除旧的关联 session 文件。\n示例：\n```php\nsession_start();\necho session_id()\
+  \ . ' || '; session_regenerate_id(); echo session_id();\n```\n![](img/image_rsrc83T.jpg)session_write_close()结束当前的\
+  \ session 并存储当前的 session 数据。这会在脚本/页面结束时自动发生，但也可以用于更快地访问 session 信息，因为 session 一时间被一个脚本锁定。\n\
+  示例：\n```php\nsession_start();\nsession_write_close(); // 无论如何，页面结束时都会执行\n```\n![](img/image_rsrc83U.jpg)##\
+  \ 正则表达式\n\n有时你想检查特定的结构而不是特定的值。正则表达式允许这种匹配。除了下文的几个示例和包含的一些正则表达式语法外，这里没有提供关于正则表达式的教程（那可以单独写一本书）。\n\
+  \n### 正则表达式语法\n\n- `^` – 字符串开始\n- `$` – 字符串结束\n- `.` – 任意单个字符\n- `()` – 表达式组\n-\
+  \ `[]` – 项目范围（例如 `[afg]` 意味着 a、f 或 g）\n- `[^]` – 不在范围内的项目（例如 `[^cde]` 意味着不是 c、d\
+  \ 或 e）\n- `-` (连字符号) – 项目范围内的字符范围（例如 `[a-z]` 意味着 a 到 z）\n- `|` (管道符) – 逻辑或（例如 `(a|b)`\
+  \ 意味着 a 或 b）\n- `?` – 前一个字符/项目范围的零或一次\n- `*` – 前一个字符/项目范围的零次或多次\n- `+` – 前一个字符/项目范围的一次或多次\n\
+  - `{integer }` – 恰好整数次的前一个字符/项目范围（例如 `a{2}`）\n- `{integer ,}` – 整数次或更多次的前一个字符/项目范围（例如\
+  \ `a{2,}`）\n- `{integer ,integer }` – 从整数到整数（例如 `a{2,4}` 意味着 2 到 4 个 a）\n- `\\`\
+  \ – 转义字符\n- `[:punct:]` – 任意标点符号\n- `[:space:]` – 任意空白字符\n- `[:blank:]` – 任意空格或制表符\n\
+  - `[:digit:]` – 任意数字：0 到 9\n- `[:alpha:]` – 所有字母：a-z 和 A-Z\n- `[:alnum:]` – 所有数字和字母：0-9，a-z\
+  \ 和 A-Z\n- `[:xdigit:]` – 十进制数字\n- `[:print:]` – 任意打印字符\n- `[:upper:]` – 所有大写字母：A-Z\n\
+  - `[:lower:]` – 所有小写字母：a-z\n\n### 仅限 PERL 兼容 (PCRE) ( preg_*() )\n\n`/` - 表达式前后的分隔符\n\
+  \n**字符类：**\n- `\\c` – 控制字符\n- `\\s` – 空白\n- `\\S` – 非空白\n- `\\d` – 数字 (0-9)\n- `\\\
+  D` – 非数字\n- `\\w` – 字母 (a-z, A-Z)\n- `\\W` – 非字母\n- `\\x` – 十进制数字\n- `\\O` – 进制数字\n\
+  \n**修饰符：**\n- `i` – 不忽略大小写\n- `.` – 点匹配换行符\n- `m` – `^` 和 `$` 匹配行\n- `U` – 非贪婪匹配\n\
+  - `e` – 计算替换结果\n- `x` – 跨多行的模式\n\n`ereg( pattern , $string [, group_array ])`\n\
+  - `pattern` – `$string` 正则表达式\n- `group_array` – [可选] 用于正则表达式组的数组名称\n\n在 `$string`\
+  \ 中匹配 `pattern` 中的正则表达式。如果 `pattern` 中的项目被分组 `()`，则提供一个用于数组的变量名来分配这些组的值，将其设置为 `group_array`。\n\
+  匹配失败时返回 FALSE，如果未提供 `group_array` 则返回 1，并返回 `$string` 的长度。\n**示例：**\n```php\n$regex\
+  \ = \"^[A-Z][a-z]+\"; // 开始，一个大写字母，一个或多个小写字母，结束\n$string = \"Hello\";\nvar_dump(\
+  \ ereg($regex, $string) );\n\n$regex = \"^([A-Z][a-z]+)[[:space:]]+\"; // 开始（一个大写字母，多个小写字母），一个或多个空格，结束\n\
+  $string = \"Hello World\";\nvar_dump( ereg($regex, $string) );\n```![](img/image_rsrc7MK.jpg)`gi(\
+  \ pattern , $string [, group_array ])`\n- `pattern` – `$string` 正则表达式\n- `group_array`\
+  \ – [可选] 用于正则表达式组的数组\n\n以忽略大小写的方式在 `$string` 中匹配 `pattern` 中的正则表达式。如果 `pattern`\
+  \ 中的项目被分组 `()`，则提供一个数组的变量名来分配这些组的值，将其设置为 `group_array`。\n匹配失败时返回 FALSE，如果未提供 `group_array`\
+  \ 则返回 1，如果提供了 `group_array` 则返回 `$string` 的长度。\n**示例：**\n```php\n$regex = \"^[a-z]+\"\
+  ;\n$string = \"Hello\";\nvar_dump( eregi($regex, $string) ); // int(1)\n```\n\n\
+  `ereg_replace( pattern , replacement , $string)`\n- `pattern` – `$string` 正则表达式\n\
+  - `replacement` – `$string` `\\digit` 代表 `()` 匹配\n\n返回经 `pattern` 评估并替换为 `replacement`\
+  \ 格式的字符串 `$string`。正则表达式模式中组 `()` 中的项目可以在 `replacement` 中重用，并通过 `\\digit` ，`\\0`\
+  \ 代表整个字符串，`\\1` 是第一个分组匹配，`\\2` 等。\n注意：如果没有找到匹配，则返回原始 `$string`。\n**示例：**\n```php\n\
+  $string = 'Hello';\n$pattern = \"^([A-Z])[a-z]+$\"; // 模式：开始，一个大写，多个小写，结束\n$replacement\
+  \ = \".\\1.\"; // 替换：在第一个组和整个字符串周围加上点\n$newstring = ereg_replace($pattern, $replacement,\
+  \ $string); echo $newstring;\n\n$string = '5551234567'; // 不带标点的数字\n$pattern = \"\
+  ^([0-9]{3})([0-9]{4})$\";\n$replacement = \"(\\1)\\2-\\3\"; // 替换：数字格式\n$newstring\
+  \ = ereg_replace($pattern, $replacement, $string); echo $newstring;\n```\n\n`egireplace()`\
+  \ – `eregreplace()` 的忽略大小写版本\n- `pattern` – `$string` 正则表达式\n- `replacement` – `$string`\
+  \ `\\digit` 代表 `()` 匹配（例如 `\\0` 字符串）\n\n返回经 `pattern` 评估并替换为 `replacement` 格式的字符串\
+  \ `$string`。正则表达式模式中组 `()` 中的项目可以在 `replacement` 中重用，并通过 `\\digit` ，`\\0` 代表整个字符串，`\\\
+  1` 是第一个分组匹配，`\\2` 等。\n注意：如果没有找到匹配，则返回原始 `$string`。\n**示例：**\n```php\n$string = 'Hello';\n\
+  $pattern = \"^([a-z])[a-z]+$\";// 模式：开始，一个字母，一个或多个字母，结束\n$replacement = \".\\1.\\\
+  0.\"; // 替换：在第一个组和整个字符串周围加上点\n$newstring = egireplace($pattern, $replacement, $string);\
+  \ echo $newstring;\n```\n\n`preg_replace( pattern , replacement , subject [, limit\
+  \ ] [, count ])`\n- `pattern` – `$string` 或 `array` 正则表达式(s)\n- `replacement` –\
+  \ `$string` 或 `array`\n- `subject` – `$string` 或 `array`\n- `limit` – [可选] $integer\
+  \ 默认: -1，无限制\n- `count` – [可选] 包含 $integer 的变量名\n\n在 `subject` 中将所有匹配 `pattern`\
+  \ 的实例替换为 `replacement`。如果 `subject` 是数组，则匹配和替换发生在数组的所有项目上。要在 `replacement` 中引用 `pattern`\
+  \ 中创建的组 `()`，使用 `${digit}`，其中 `${0}` 代表整个字符串，`${1}` 是第一个组，依此类推。如果 `pattern` 和 `replacement`\
+  \ 是数组，则对数组中的每个条目处理整个 subject，找到 `pattern` 中的第一个项并将其替换为 `replacement` 中的第一个项，然后对下一组条目重复。如果\
+  \ pattern 数组中的值比 replacement 数组多，则使用空字符串（''`）作为替换。如果 `pattern` 是数组而 `replacement`\
+  \ 是字符串，则它用于 pattern 中的每个条目。可选的 `count` 变量将被设置为发生的替换总数。\n注意：这是 PERL/PCRE，且表达式分隔符\
+  \ (`/`) 可以与表达式末尾的修饰符一起使用。\n**示例：**\n```php\n$pattern = \"/^(\\d{3})(\\d{3})(\\d{4})$/\"\
+  ;\n$replacement = \"(\\1)\\2-\\3\";\n$subject = '5551234567';\npreg_replace($pattern,\
+  \ $replacement, $subject);\n```\n\n`preg_split( pattern , subject [, limit flags\
+  \ ])`\n- `pattern` – `$string` 正则表达式\n- `limit` – [可选] $integer 默认: -1，无限制\n- `flags`\
+  \ – [可选] $string 值：`PREG_SPLIT_NO_EMPTY`（不返回空）、`PREG_SPLIT_CAPTURE`（返回匹配组）\n\n`preg_match`\
+  \ 以忽略大小写的方式在 `$subject` 中匹配 `pattern` 中的正则表达式。如果 `pattern` 中的项目被分组 `()`，则提供一个数组的变量名来分配这些组的值，将其设置为\
+  \ `group_array`。\n匹配失败时返回 FALSE，如果未提供 `group_array` 则返回 1，如果提供了 `group_array` 则返回匹配项的长度。\n\
+  **示例：**\n```php\n$pattern = \"^[a-z]+\";\n$string = \"Hello\";\nvar_dump( preg_match($pattern,\
+  \ $string) ); // int(1)\n```\n"
