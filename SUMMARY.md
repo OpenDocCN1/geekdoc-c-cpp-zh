@@ -436,6 +436,7 @@
 +   [Python 计算与编程入门指南，第二版：数据理解应用（麻省理工出版社）](docs/introduction-to-computation-and-programming-using-python-sec/README.md)
 +   [Python 工程与科学计算入门指南](docs/introduction-to-engineering-and-scientific-computing-with-py/README.md)
 +   [游戏设计、原型与开发入门指南：从概念到使用 Unity 和 C# 开发可玩游戏](docs/introduction-to-game-design-prototyping-and-development-from/README.md)
++   [C++ 编程与数据结构入门指南，第版](docs/introduction-to-programming-and-data-structures-with-c-4e/README.md)
 +   [C++ 语言编程入门指南 - C++ 编程](docs/introduction-to-programming-in-c-language---c-programming/README.md)
 +   [工程师 C++ 编程入门指南 (IEEE Press)](docs/introduction-to-programming-with-c-for-engineers-ieee-press/README.md)
 +   [无线定位入门指南：iPhone SDK 示例](docs/introduction-to-wireless-localization-with-iphone-sdk-exampl/README.md)
