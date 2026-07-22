@@ -447,6 +447,7 @@
 +   [Java 核心基础第一卷：编程基础](docs/java-essentials-volume-1-programming-fundamentals/README.md)
 +   [Java 编程初学者指南：速成课程 (Java, Python, C++, R, C) (编程、Java 编程、C++ 编程、Python 编程、R 编程、C 编程，第 1 册)](docs/java-programming-for-beginners-crash-course-java-python-c-r-/README.md)
 +   [JavaScript 入门指南](docs/javascript-absolute-beginners-guide/README.md)
++   [JavaScript 程序员参考手册](docs/javascript-programmer39s-reference/README.md)
 +   [Javascript：Javascript 编程终极指南 (初学者指南、如何编程、软件开发、基础 Javascript、浏览器... 编码、CSS、Java、PHP) (第 7 卷)](docs/javascript-the-ultimate-guide-for-javascript-programming-jav/README.md)
 +   [简易 Julia 与 C++ 编程：编程入门指南](docs/julia-and-c-programming-made-simple-a-beginners-guide-to-pro/README.md)
 +   [Julia 编程释放 + C# 编程精通：进阶之路；中级程序员 2 本合 1](docs/julia-programming-unleashed-mastering-c-programming-a-step-b/README.md)
