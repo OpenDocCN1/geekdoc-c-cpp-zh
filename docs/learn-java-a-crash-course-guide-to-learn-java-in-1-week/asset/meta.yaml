@@ -1,0 +1,18 @@
+name: Learn Java： A Crash Course Guide to Learn Java in 1 Week
+name_cn: Learn Java：1周学会 Java 快速入门指南
+slug: learn-java-a-crash-course-guide-to-learn-java-in-1-week
+toc:
+- - '##'
+  - 在 Windows 上安装 Java 版的步骤
+- - '###'
+  - 下载 Eclipse
+- - '##'
+  - 在 Mac OS X 上安装 Eclipse
+- - '##'
+  - 在 Ubuntu Linux 上安装 Eclipse
+- - '###'
+  - 在启动器上锁定 Eclipse
+- - '###'
+  - 现在你可以在 Eclipse 中编写你的第一个 Java 程序或项目
+- - '#'
+  - 总结

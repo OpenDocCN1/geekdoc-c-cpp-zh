@@ -458,6 +458,7 @@
 +   [500 个程序学 C 语言编程：仅包含学习与算法程序（附源码）](docs/learn-c-programming-with-500-programs-only-learning-and-algo/README.md)
 +   [快速上手 C#：即使是编程新手也能学会的 C# 初学者指南（成课程与实用项目书籍 2）](docs/learn-c-quickly-a-complete-beginners-guide-to-learning-c-eve/README.md)
 +   [Python：少儿、青少年及童心未学者编程基础，计算机编程轻松学！](docs/learn-coding-basics-for-kids-young-adults-and-people-that-ar/README.md)
++   [Learn Java：1周学会 Java 快速入门指南](docs/learn-java-a-crash-course-guide-to-learn-java-in-1-week/README.md)
 +   [C++ Linux 系统编程：理解 Linux 内核工作原理及其交互方式（Python 先驱者圣经）](docs/learn-linux-system-programming-with-c-understand-how-the-lin/README.md)
 +   [可视化学习 Python 3.0](docs/learn-python-30-visually/README.md)
 +   [通过 Unity 开发游戏学习 C#：使用 Unity 引擎构建、定制并优化专业游戏](docs/learning-c-by-developing-games-with-unity-build-customize-an/README.md)
