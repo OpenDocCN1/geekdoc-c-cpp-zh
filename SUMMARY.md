@@ -553,6 +553,7 @@
 +   [PowerShell：初学者指南！在24 小时内精通 PowerShell 命令行（Python 编程、Javascript、计算机编程、C++、SQL、计算机黑客、编程）](docs/powershell-for-beginners-master-the-powershell-command-line-/README.md)
 +   [裸金属 C++ 实践指南](docs/prac-gd-brmtl-cpp/README.md)
 +   [Practical C++ 后端编程：为高性能后端构制数据库、API 和 Web 服务器](docs/practical-c-backend-programming-crafting-databases-apis-and-/README.md)
++   [C 和 Python 中的问题解决：编程练习与解决方案，第一部分](docs/problem-solving-in-c-and-python-programming-exercises-and-so/README.md)
 +   [Android 高级编程：使用 Mono for Android 和 .NET/C#](docs/professional-android-programming-with-mono-for-android-and-n/README.md)
 +   [NoSQL 高级指南](docs/professional-nosql/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
