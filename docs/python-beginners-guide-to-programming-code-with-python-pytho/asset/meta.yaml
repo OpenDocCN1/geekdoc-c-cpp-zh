@@ -1,0 +1,35 @@
+name: 'Python ： Beginner''s Guide to Programming Code with Python： Python Computer
+  Programming, #1'
+name_cn: 'Python 入门指南：Python 计算机编程代码 #1'
+slug: python-beginners-guide-to-programming-code-with-python-pytho
+toc:
+- - '#'
+  - Python 入门指南：Python 计算机编程代码
+- - '#'
+  - 第 1 章：孵化你的 Python
+- - '#'
+  - 第 2 章：
+- - '##'
+  - Python 变量、数学与注释
+- - '#'
+  - 第 3 章：
+- - '##'
+  - 条件与布尔值
+- - '#'
+  - 第 4 章：列表与循环
+- - '#'
+  - 第 5 章：
+- - '##'
+  - 函数 (Functions)
+- - '#'
+  - 第 7 章：字符串操作
+- - '#'
+  - 第 8 章：
+- - '##'
+  - 基础面向对象编程：对象与类
+- - '#'
+  - 第 9 章：
+- - '##'
+  - 更多面向对象编程：对象与类
+- - '#'
+  - 第 10 章：书籍列表重构
