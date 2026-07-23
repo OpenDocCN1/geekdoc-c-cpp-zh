@@ -575,6 +575,7 @@
 +   [C# 专业级并行编程指南：精通 .NET 4 并行扩展](docs/professional-parallel-programming-with-c-master-parallel-ext/README.md)
 +   [Visual Basic 2012 和 .NET 4.5 编程高级指南](docs/professional-visual-basic-2012-and-net-45-programming-electr/README.md)
 +   [可编程微控制器与应用：基于 CCS 和 Grace 的 MSP430 LaunchPad](docs/programmable-microcontrollers-with-applications-msp430-launc/README.md)
++   [C++ 编程与问题解决](docs/programming-and-problem-solving-with-c/README.md)
 +   [C++ 编程与问题解决，第 7 版](docs/programming-and-problem-solving-with-c-7th-edition/README.md)
 +   [Arduino 编程：Sketch 入门指南，第二版 (Tab)](docs/programming-arduino-getting-started-with-sketches-second-edi/README.md)
 +   [C++ 编程：C++ 编程：编程语言初学者指南：一天学会（C++, Javascript, PHP, Python, Sql, HTML, Swift）](docs/programming-c-programming-programming-language-for-beginners/README.md)
