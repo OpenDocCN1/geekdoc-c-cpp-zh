@@ -1,0 +1,105 @@
+name: Programming： Python Programming - Windows 10, Software & Databases (Java, Html,
+  C++, Programming C, Programming For Beginners, PHP, Website design)
+name_cn: 编程：Python 编程 - Windows 10 软件与数据库 (Java, Html, C++, C语言编程、初学者编程指南、PHP、网站设计)
+slug: programming-python-programming---windows-10-software-databas
+toc:
+- - '#'
+  - 变量
+- - '##'
+  - 保留关键字
+- - '##'
+  - keywords.py
+- - '###'
+  - 整数
+- - '###'
+  - 浮点数
+- - '##'
+  - 变量 x 是一个字符串，包含
+- - '###'
+  - 单行换行符
+- - '###'
+  - 变量 y 包含一个转义引号
+- - '###'
+  - 而不是
+- - '###'
+  - 终止字符串的引号
+- - '###'
+  - '[列表 List](http://www.voidspace.org.uk/python/articles/python_datatypes.shtml#/h)'
+- - '###'
+  - 以及其他列表
+- - '###'
+  - '[元组 Tuples](http://www.voidspace.org.uk/python/articles/python_datatypes.shtml#/h)'
+- - '###'
+  - '[字典 Dictionaries](http://www.voidspace.org.uk/python/articles/python_datatypes.shtml#/h)'
+- - '###'
+  - '[集合 Sets](http://www.voidspace.org.uk/python/articles/python_datatypes.shtml#/h)'
+- - '###'
+  - 条件 Conditions
+- - '###'
+  - 布尔运算符 Boolean operators
+- - '###'
+  - '"in" 运算符'
+- - '###'
+  - '''is'' 运算符'
+- - '###'
+  - '"not" 运算符'
+- - '#'
+  - 循环
+- - '##'
+  - '"break" 和 "continue" 语句'
+- - '#'
+  - 函数
+- - '##'
+  - 执行代码
+- - '##'
+  - 如何在 Python 中调用函数
+- - '##'
+  - 打印一个简单的问候
+- - '###'
+  - 输出 - "Hello, John Doe, From My Function!, I wish you a great year!"
+- - '###'
+  - 在此行之后 x 将持有值 3!
+- - '#'
+  - 类和对象
+- - '##'
+  - 访问对象变量
+- - '##'
+  - 访问对象函数
+- - '#'
+  - 模块和包
+- - '##'
+  - import urllib
+- - '##'
+  - 内置模块
+- - '##'
+  - 编写模块
+- - '##'
+  - 编写包
+- - '###'
+  - '`__init__.py` 和 `__all__` 变量'
+- - '#'
+  - MySQL Python 教程
+- - '##'
+  - 关于 MySQL 数据库
+- - '##'
+  - 在开始之前
+- - '##'
+  - '`MySQL` 模块'
+- - '##'
+  - '`MySQLdb` 模块'
+- - '##'
+  - 创建并填充表
+- - '##'
+  - 获取数据
+- - '##'
+  - 字典游标
+- - '##'
+  - 列标题
+- - '##'
+  - 预处理语句
+- - '##'
+  - 插入图片
+- - '##'
+  - 事务支持
+- - '##'
+  - 结论
