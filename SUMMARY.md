@@ -563,6 +563,7 @@
 +   [ASP.NET 4.5 in C# and VB 高级指南：从零构建高性能组织](docs/professional-aspnet-45-in-c-and-vb-building-a-high-performan/README.md)
 +   [C++ 高级指南](docs/professional-c/README.md)
 +   [C++ 高级指南，第2版](docs/professional-c-2nd-edition/README.md)
++   [C# 和 .NET 高级指南 - 2021版](docs/professional-c-and-net---2021-edition/README.md)
 +   [C++ 高级指南（第二版）](docs/professional-c-second-edition/README.md)
 +   [C# 函数式编程高级指南](docs/professional-functional-programming-in-c/README.md)
 +   [iPhone 高级编程指南：使用 MonoTouch 和 .NET/C#](docs/professional-iphone-programming-with-monotouch-and-netc/README.md)
