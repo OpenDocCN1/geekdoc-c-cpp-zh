@@ -523,6 +523,7 @@
 +   [Microsoft SharePoint Foundation 2010 逐步指南](docs/microsoft-sharepoint-foundation-2010-step-by-step---includes/README.md)
 +   [Microsoft SQL Server 2012 管理：MCSA 认证及进阶实战技能（考试 70-461, 70-462 和 70-463）](docs/microsoft-sql-server-2012-administration-real-world-skills-f/README.md)
 +   [Microsoft Visual C# 逐步进阶指南 (开发者参考)](docs/microsoft-visual-c-step-by-step-developer-reference/README.md)
++   [Microsoft Visual C# 逐步进阶指南 (开发者参考), 第 10 版](docs/microsoft-visual-c-step-by-step-developer-reference-10th-edi/README.md)
 +   [Microsoft Visual C# 步步指南 (开发者参考)](docs/microsoft-visual-c-step-by-step-developer-referenceelibcc/README.md)
 +   [Microsoft Visual Studio 2015 解锁指南](docs/microsoft-visual-studio-2015-unleashed/README.md)
 +   [Minecraft 高级建筑：惊艳作品赏](docs/minecraft-master-builds-a-showcase-of-breathtaking-creations/README.md)
