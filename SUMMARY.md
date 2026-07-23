@@ -559,6 +559,7 @@
 +   [C# 函数式编程高级指南](docs/professional-functional-programming-in-c/README.md)
 +   [iPhone 高级编程指南：使用 MonoTouch 和 .NET/C#](docs/professional-iphone-programming-with-monotouch-and-netc/README.md)
 +   [NoSQL 高级指南](docs/professional-nosql/README.md)
++   [Programming Elixir 1.3：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣](docs/programming-elixir-13-functional-concurrent-pragmatic-fun/README.md)
 +   [Elixir 编程：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣](docs/programming-elixir-functional-concurrent-pragmatic-fun/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)

@@ -1,0 +1,1400 @@
+name: Programming Elixir 1.3： Functional ｜＞ Concurrent ｜＞ Pragmatic ｜＞ Fun
+name_cn: Programming Elixir 1.3：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣
+slug: programming-elixir-13-functional-concurrent-pragmatic-fun
+toc:
+- - '#'
+  - Programming Elixir 1.3：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣
+- - '##'
+  - 关于 Pragmatic Bookshelf
+- - '###'
+  - 新书公告
+- - '###'
+  - 关于电子书格式
+- - '##'
+  - 对《Programming Elixir》的评价
+- - '#'
+  - 前言
+- - '#'
+  - 一个徒劳的辩护尝试
+- - '##'
+  - 致谢
+- - '#'
+  - 第一章 服下红丸
+- - '##'
+  - 编程应该关于转换数据
+- - '###'
+  - 使用流水线组合转换
+- - '###'
+  - 函数即数据转换器
+- - '##'
+  - 安装 Elixir
+- - '##'
+  - 运行 Elixir
+- - '###'
+  - ie—交互式 Elixir
+- - '####'
+  - IEx Helpers
+- - '##'
+  - 练习
+- - '##'
+  - 异同思考 (Think Different)
+- - '###'
+  - 脚注
+- - '#'
+  - 第一部分：传统编程
+- - '#'
+  - 第 2 章：模式匹配
+- - '##'
+  - 赋值：我不认为它的意思如你认为的那样。
+- - '##'
+  - 更复杂的匹配
+- - '##'
+  - 变量仅绑定一次（每次匹配中）
+- - '##'
+  - 轮到你了
+- - '##'
+  - 另一种看待等号的视角
+- - '###'
+  - 垃圾回收
+- - '##'
+  - 使用不可变数据编程
+- - '#'
+  - 第 4 章：Elixir 基础
+- - '##'
+  - 内置类型
+- - '##'
+  - 值类型
+- - '###'
+  - 整数
+- - '###'
+  - 浮点数
+- - '###'
+  - 原子 (Atoms)
+- - '###'
+  - 范围 (Ranges)
+- - '###'
+  - 正则表达式
+- - '###'
+  - PIDs 和 Ports
+- - '###'
+  - 引用 (References)
+- - '##'
+  - 集合类型 (Collection Types)
+- - '###'
+  - 元组 (Tuples)
+- - '###'
+  - 列表 (Lists)
+- - '####'
+  - 关键字列表 (Keyword Lists)
+- - '###'
+  - 映射 (Maps)
+- - '###'
+  - 访问映射 (Accessing a Map)
+- - '##'
+  - 二进制文件 (Binaries)
+- - '##'
+  - 日期和时间
+- - '##'
+  - 命名、源文件、约定、运算符等
+- - '###'
+  - 类型
+- - '###'
+  - 运算符
+- - '####'
+  - 比较运算符
+- - '####'
+  - 布尔运算符（这些运算符期望 `true` 或 `false` 作为第一个参数。）
+- - '####'
+  - 松散布尔运算符
+- - '####'
+  - 算术运算符
+- - '####'
+  - 连接运算符
+- - '####'
+  - in 运算符
+- - '##'
+  - 变量作用域
+- - '###'
+  - with 表达式
+- - '###'
+  - with 与模式匹配
+- - '###'
+  - 一个小陷阱
+- - '##'
+  - 基础结束
+- - '###'
+  - 脚点
+- - '#'
+  - 第 5 章：匿名函数
+- - '###'
+  - with 与模式匹配
+- - '###'
+  - 一个小陷阱
+- - '##'
+  - 基础结束
+- - '###'
+  - 脚点
+- - '##'
+  - 处理较大的代码示例
+- - '##'
+  - 轮到你了
+- - '##'
+  - 函数可以返回函数
+- - '##'
+  - 将函数作为参数传递
+- - '###'
+  - 锁定值与函数参数
+- - '###'
+  - '& 符号语法'
+- - '##'
+  - 编译模块
+- - '##'
+  - 函数体是一个块
+- - '##'
+  - 轮你了
+- - '##'
+  - 函数调用与模式匹配
+- - '##'
+  - 守护语句 (Guard Clauses)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护 (的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局限性
+- - '##'
+  - 默认参数 (Default Arguments)
+- - '###'
+  - 守护语句的局
