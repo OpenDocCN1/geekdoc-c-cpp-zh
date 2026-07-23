@@ -593,6 +593,7 @@
 +   [C 语言编程：初学者一周快速学会指南](docs/programming-language-c-a-step-by-step-guide-for-beginners-to/README.md)
 +   [C# 编程语言排名指南](docs/programming-languages-c---how-to-ranking/README.md)
 +   [编程：Python 编程 - Windows 10 软件与数据库 (Java, Html, C++, C语言编程、初学者编程指南、PHP、网站设计)](docs/programming-python-programming---windows-10-software-databas/README.md)
++   [Python：精通 Python 高级指南](docs/python-become-a-master-in-python-python-python-programming-c/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
