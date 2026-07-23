@@ -560,6 +560,7 @@
 +   [C 和 Python 中的问题解决：编程练习与解决方案，第一部分](docs/problem-solving-in-c-and-python-programming-exercises-and-so/README.md)
 +   [Android 高级编程：使用 Mono for Android 和 .NET/C#](docs/professional-android-programming-with-mono-for-android-and-n/README.md)
 +   [C++ 高级指南](docs/professional-c/README.md)
++   [C++ 高级指南（第二版）](docs/professional-c-second-edition/README.md)
 +   [C# 函数式编程高级指南](docs/professional-functional-programming-in-c/README.md)
 +   [iPhone 高级编程指南：使用 MonoTouch 和 .NET/C#](docs/professional-iphone-programming-with-monotouch-and-netc/README.md)
 +   [Web 开发人员 JavaScript 高级指南，第三版](docs/professional-javascript-for-web-developers-third-edition/README.md)
