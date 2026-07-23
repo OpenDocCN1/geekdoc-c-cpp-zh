@@ -613,6 +613,7 @@
 +   [Python：学习 Python 编程 – 初学者指南 (Python 初学者,HTML,PHP, C,Java,Ruby,SQL 书籍 1)](docs/python-learn-python-programming-beginner-guide-python-for-be/README.md)
 +   [Python 编程：通过实践练习掌握 Python 语言、应用理论及快速学习计算机编程技巧的入门指南](docs/python-programming-the-crash-course-to-learn-how-to-master-p/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
++   [Rust 与 C++ 编程：编程初学者指南](docs/rust-and-c-programming-made-simple-a-beginners-guide-to-prog/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
