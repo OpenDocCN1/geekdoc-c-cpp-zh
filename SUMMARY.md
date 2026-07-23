@@ -579,6 +579,7 @@
 +   [C, C#, C++ 编程入门指南](docs/programming-in-c-c-c/README.md)
 +   [C 语言编程进阶：高级数据类型](docs/programming-in-c-part-two-advanced-data-types/README.md)
 +   [C++ 编程：第一卷：C++ 基础](docs/programming-in-c-volume-i-the-foundation-of-c/README.md)
++   [Java 与 JavaScript 编程初学者指南 – 一天学会 · 第2版](docs/programming-java-javascript-coding-for-beginners-learn-in-a-/README.md)
 +   [C 语言编程：初学者一周快速学会指南](docs/programming-language-c-a-step-by-step-guide-for-beginners-to/README.md)
 +   [C# 编程语言排名指南](docs/programming-languages-c---how-to-ranking/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
