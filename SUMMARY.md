@@ -576,6 +576,7 @@
 +   [C++ 编程基础：模块化结构化方法](docs/programming-fundamentals---a-modular-structured-approach-usi/README.md)
 +   [C# 编程 10 - 基础技术](docs/programming-in-c-10---basic-techniques/README.md)
 +   [C, C#, C++ 编程入门指南](docs/programming-in-c-c-c/README.md)
++   [C 语言编程进阶：高级数据类型](docs/programming-in-c-part-two-advanced-data-types/README.md)
 +   [C++ 编程：第一卷：C++ 基础](docs/programming-in-c-volume-i-the-foundation-of-c/README.md)
 +   [C 语言编程：初学者一周快速学会指南](docs/programming-language-c-a-step-by-step-guide-for-beginners-to/README.md)
 +   [C# 编程语言排名指南](docs/programming-languages-c---how-to-ranking/README.md)
