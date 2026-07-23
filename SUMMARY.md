@@ -620,6 +620,7 @@
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [JavaScript 面试快速问答：学习常见问题](docs/quick-javascript-interview-questions-learn-frequently-asked-/README.md)
 +   [C/C++ 编程概念快速上手指南：C/C++ 技巧与概念：所有 C/C++ 开发者和程序员的实用读物](docs/quick-short-reference-guide-to-cc-programming-concepts-cc-ti/README.md)
++   [R：初学者 R 编程指南，R 语言学习步步进指南（R 编程系列）](docs/r-easy-r-programming-for-beginners-your-step-by-step-guide-t/README.md)
 +   [RISC-V 编程指南：RISC-V 微控制器与 C/C++ 入门指南](docs/risc-v-programming-guide-getting-started-with-the-risc-v-mic/README.md)
 +   [Ruby 与 C++ 编程简明：编程初学者指南 - 二本合一](docs/ruby-and-c-programming-made-simple-a-beginners-guide-to-prog/README.md)
 +   [Rust 与 C++ 编程：编程初学者指南](docs/rust-and-c-programming-made-simple-a-beginners-guide-to-prog/README.md)
