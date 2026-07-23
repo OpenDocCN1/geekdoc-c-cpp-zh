@@ -564,6 +564,7 @@
 +   [C++ 高级指南（第二版）](docs/professional-c-second-edition/README.md)
 +   [C# 函数式编程高级指南](docs/professional-functional-programming-in-c/README.md)
 +   [iPhone 高级编程指南：使用 MonoTouch 和 .NET/C#](docs/professional-iphone-programming-with-monotouch-and-netc/README.md)
++   [JavaScript 高级指南：Web 开发人员 · 第 3 版](docs/professional-javascript-for-web-developers-3rd-edition/README.md)
 +   [Web 开发人员 JavaScript 高级指南，第三版](docs/professional-javascript-for-web-developers-third-edition/README.md)
 +   [NoSQL 高级指南](docs/professional-nosql/README.md)
 +   [C# 专业级并行编程指南：精通 .NET 4 并行扩展](docs/professional-parallel-programming-with-c-master-parallel-ext/README.md)
