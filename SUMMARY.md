@@ -563,6 +563,7 @@
 +   [Clojure 编程指南](docs/programming-clojure-for-roman-fäckl/README.md)
 +   [Programming Elixir 1.3：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣](docs/programming-elixir-13-functional-concurrent-pragmatic-fun/README.md)
 +   [Elixir 编程：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣](docs/programming-elixir-functional-concurrent-pragmatic-fun/README.md)
++   [C# 编程 10 - 基础技术](docs/programming-in-c-10---basic-techniques/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
