@@ -1,0 +1,1803 @@
+- fmt: '
+
+    ![](image_rsrc22G.jpg)
+
+
+    # PYTHON CODING AND C PROGRAMMING EXAMPLES
+
+    ## PROGRAMMING FOR BEGINNERS J KING
+
+
+    ### Python Examples
+
+    - [ASCII value of character in Python](#part0003.xhtml)
+
+    - [Calculate simple interest](#part0004.xhtml)
+
+    - [Calculate compound interest](#part0005.xhtml)
+
+    - [Python program to check the given year is a leap year or not](#part0006.xhtml)
+
+    - [Python | Some of the examples of simple if else](#part0007.xhtml)
+
+    - [Calculate discount based on the sale amount in Python](#part0008.xhtml)
+
+    - [Design a simple calculator using if elif in Python](#part0009.xhtml)
+
+    - [BMI (Body Mass Index) calculator in Python](#part0010.xhtml)
+
+    - [Write functions to find square and cube of a given number in Python](#part0011.xhtml)
+
+    - [Compute the net amount](#part0012.xhtml)
+
+    - [Convert temperature in Python program](#part0013.xhtml)
+
+    - [Python program to convert meters into yards](#part0014.xhtml)
+
+    - [Find the day in Python](#part0015.xhtml)
+
+    - [Python array programs](#part0016.xhtml)
+
+    - [Create matrix in Python](#part0016.xhtml_a20F)
+
+    - [Python program to create matrix using numpy](#part0017.xhtml)
+
+    - [Python Date & Time Programs](#part0018.xhtml)
+
+    - [Python code to print today''s year, month and day](#part0019.xhtml)
+
+    - [Python Lists](#part0020.xhtml)
+
+    - [Program for Adding, removing elements in the list](#part0020.xhtml_a20M)
+
+    - [Program to find the differences of two lists](#part0021.xhtml)
+
+    - [Program to remove duplicate elements from the list](#part0022.xhtml)
+
+    - [Create three lists of numbers, their squares and cubes](#part0023.xhtml)
+
+    - [Iterate a list in reverse order](#part0024.xhtml)
+
+    - [Print list after removing EVEN numbers](#part0025.xhtml)
+
+    - [Python string programs](#part0026.xhtml)
+
+    - [Declare, assign and print the string (Different ways)](#part0026.xhtml_a20V)
+
+    - [Access and print characters from the string](#part0027.xhtml)
+
+    - [Program to print words with their length of a string](#part0028.xhtml)
+
+    - [Count vowels in a string](#part0029.xhtml)
+
+    - [Create multiple copies of a string by using multiplication operator](#part0030.xhtml)
+
+
+    ### C Programming Examples
+
+    - [C program to find SUM and AVERAGE of two numbers.](#part0032.xhtml_a211)
+
+    - [C program to print ASCII value of a character](#part0033.xhtml)
+
+    - [C program to print all numbers from 1 to N using goto statement](#part0034.xhtml)
+
+    - [Program to print numbers from 1 to N using while loop](#part0035.xhtml)
+
+    - [Program to print Square, Cube and Square Root](#part0036.xhtml)
+
+    - [Program to print table of a given number](#part0037.xhtml)
+
+    - [Program for Largest Number among three numbers](#part0038.xhtml)
+
+    - [Area of rectangle program in c](#part0039.xhtml)
+
+    - [C program - Convert Feet to Inches](#part0040.xhtml)
+
+    - [Program to create a text file using file handling](#part0041.xhtml)
+
+    - [C program to find factorial of a number](#part0042.xhtml)
+
+    - [Program to swap two bits of a byte](#part0043.xhtml)
+
+    - [Program to swap two numbers using four different methods](#part0044.xhtml)
+
+    - [Age Calculator (C program to calculate age)](#part0045.xhtml)
+
+    - [C program to design a digital clock](#part0046.xhtml)
+
+    - [Program to calculate compound interest](#part0047.xhtml)
+
+    - [Program to check whether number is Perfect Square or not](#part0048.xhtml)
+
+    - [Program to print message without using any semicolon in program](#part0049.xhtml)
+
+    - [Sum of Series Programs / Examples using C](#part0050.xhtml)
+
+
+    ## ASCII value of character in Python
+
+    In python, we use the function `ord()` to obtain an ASCII code of a character.
+    `ord()` accepts a character, returns its ASCII value.
+
+
+    Syntax: `ord(character)`
+
+
+    Example:
+
+    Input: `char_var = ''A''`
+
+    Function call: `ord(char_var)`
+
+    Output: `65`
+
+
+    ### python program to print ASCII# value of a given character
+
+    ```python
+
+    # Assigning character to a variable
+
+    char_var = ''A''
+
+    # printing ASCII code
+
+    print("ASCII value of " + char_var + " is = ", ord(char_var))
+
+
+    char_var = ''x''
+
+    # printing ASCII code
+
+    print("ASCII value of " + char_var + " is = ", ord(char_var))
+
+
+    char_var = ''9''
+
+    # printing ASCII code
+
+    print("ASCII value of " + char_var + " is = ", ord(char_var))
+
+    ```
+
+    Output:
+
+    ```
+
+    ASCII value of A is =  65
+
+    ASCII value of x is =  120
+
+    ASCII value of 9 is =  57
+
+    ```
+
+
+    ## Calculate simple interest
+
+    We use the following formula to calculate simple interest,
+
+    `(P * R * T) / 100`
+
+
+    Where,
+
+    * `P` – Principle amount
+
+    * `R` – Rate of the interest, and
+
+    * `T` – Time in the years
+
+    '
+  raw: '
+
+
+    ![](image_rsrc22G.jpg)
+
+
+    PYTHON CODINGANDC PROGRAMMINGEXAMPLESPROGRAMMING FOR BEGINNERSJ KING[ASCII value
+    of character in Python](#part0003.xhtml)[Calculate simple interest](#part0004.xhtml)[Calculate
+    compound interest](#part0005.xhtml)[Python program to check the given year is
+    a leap year or not](#part0006.xhtml)[Python | Some of the examples of simple if
+    else](#part0007.xhtml)[Calculate discount based on the sale amount in Python](#part0008.xhtml)[Design
+    a simple calculator using if elif in Python](#part0009.xhtml)[BMI (Body Mass Index)
+    calculator in Python](#part0010.xhtml)[Write functions to find square and cube
+    of a given number in Python](#part0011.xhtml)[Compute the net amount](#part0012.xhtml)[Convert
+    temperature in Python program](#part0013.xhtml)[Python program to convert meters
+    into yards](#part0014.xhtml)[Find the day in Python](#part0015.xhtml)[Python array
+    programs](#part0016.xhtml)[Create matrix in Python](#part0016.xhtml_a20F)[Python
+    program to create matrix using numpy](#part0017.xhtml)[Python Date & Time Programs](#part0018.xhtml)[Python
+    code to print today''s year, month and day](#part0019.xhtml)[Python Lists](#part0020.xhtml)[Program
+    for Adding, removing elements in the list](#part0020.xhtml_a20M)[Program to find
+    the differences of two lists](#part0021.xhtml)[Program to remove duplicate elements
+    from the list](#part0022.xhtml)[Create three lists of numbers, their squares and
+    cubes](#part0023.xhtml)[Iterate a list in reverse order](#part0024.xhtml)[Print
+    list after removing EVEN numbers](#part0025.xhtml)[Python string programs](#part0026.xhtml)[Declare,
+    assign and print the string (Different ways)](#part0026.xhtml_a20V)[Access and
+    print characters from the string](#part0027.xhtml)[Program to print words with
+    their length of a string](#part0028.xhtml)[Count vowels in a string](#part0029.xhtml)[Create
+    multiple copies of a string by using multiplication operator](#part0030.xhtml)[C
+    PROGRAMMING EXAMPLES](#part0032.xhtml)[C program to find SUM and AVERAGE of two
+    numbers.](#part0032.xhtml_a211)[C program to print ASCII value of a character](#part0033.xhtml)[C
+    program to print all numbers from 1 to N using goto statement](#part0034.xhtml)[Program
+    to print numbers from 1 to N using while loop](#part0035.xhtml)[Program to print
+    Square, Cube and Square Root](#part0036.xhtml)[Program to print table of a given
+    number](#part0037.xhtml)[Program for Largest Number among three numbers](#part0038.xhtml)[Area
+    of rectangle program in c](#part0039.xhtml)[C program - Convert Feet to Inches](#part0040.xhtml)[Program
+    to create a text file using file handling](#part0041.xhtml)[C program to find
+    factorial of a number](#part0042.xhtml)[Program to swap two bits of a byte](#part0043.xhtml)[Program
+    to swap two numbers using four different methods](#part0044.xhtml)[Age Calculator
+    (C program to calculate age)](#part0045.xhtml)[C program to design a digital clock](#part0046.xhtml)[Program
+    to calculate compound interest](#part0047.xhtml)[Program to check whether number
+    is Perfect Square or not](#part0048.xhtml)[Program to print message without using
+    any semicolon in program](#part0049.xhtml)[Sum of Series Programs / Examples using
+    C](#part0050.xhtml)ASCII value of character in PythonIn python, we use the function
+    ord() to obtain an ASCII code of a character. Ord() accepts a character, returns
+    its ASCII value.Syntax:ord(character);Example:Input:char_var = ''A''Function call:ord(char_var)Output:65Code
+    to find ASCII value of a character# python program to print ASCII# value of a
+    given character# Assigning character to a variablechar_var = ''A''# printing ASCII
+    codeprint("ASCII value of " + char_var + " is = ", ord(char_var))char_var = ''x''#
+    printing ASCII codeprint("ASCII value of " + char_var + " is = ", ord(char_var))char_var
+    = ''9''# printing ASCII codeprint("ASCII value of " + char_var + " is = ", ord(char_var))OutputASCII
+    value of A is =  65ASCII value of x is =  120ASCII value of 9 is =  57Calculate
+    simple interestWe use the following formula to calculate simple interest,(P *
+    R * T) / 100Where,
+
+
+    *   P  – Principle amount
+
+
+    *   R  – Rate of the interest, and
+
+
+    *   T  – Time in the years'
+  toc: []
+  trans: '
+
+
+    ![](img/image_rsrc22G.jpg)
+
+
+    # Python 编码与 C 语言编程示例
+
+    ## 初学者编程 J KING
+
+
+    ### Python 示例
+
+    - Python 中字符的 ASCII 值
+
+    - 计算单利
+
+    - 计算复利
+
+    - 检查给定年份是否为闰年的 Python 程序
+
+    - Python | 一些简单的 if else 示例
+
+    - 根据销售金额在 Python 中折扣
+
+    - 在 Python 中使用 if elif 设计简单的计算器
+
+    - Python 中的 BMI（身体质量指数）计算器
+
+    - 在 Python 中编写函数寻找给定数字的平方和立方
+
+    - 计算净金额
+
+    - Python 程序中的温度转换
+
+    - 将米转换为码的 Python 程序
+
+    - 在 Python 中查找日期
+
+    - Python 数组程序
+
+    - 在 Python 中创建矩阵
+
+    - 使用 numpy 创建矩阵的 Python 程序
+
+    - Python 日期与时间程序
+
+    - 打印今天的年、月、日的 Python 代码
+
+    - Python 列表
+
+    - 在列表中添加、删除元素的程序
+
+    - 查找两个列表差异的程序
+
+    - 从列表中删除重复元素的程序
+
+    - 创建三个数字列表、它们的平方和立方列表
+
+    - 反序遍历列表
+
+    - 移除偶数后打印列表
+
+    - Python 字符串程序
+
+    - 声明、赋值并打印字符串（不同方法）
+
+    - 访问并打印字符串中的字符
+
+    - 打印字符串单词及其长度的程序
+
+    - 统计字符串中的元音数量
+
+    - 使用乘法运算符创建字符串的多个副本
+
+
+    ### C 编程示例
+
+    - 求两个数字之和和平均值的 C 程序
+
+    - 打印字符 ASCII 值的 C 程序
+
+    - 使用 goto 语句打印从 1 到 N 的所有数字 C 程序
+
+    - 使用 while 循环打印从 1 到 N 的数字程序
+
+    - 打印平方、立方和平方根的程序
+
+    - 打印给定数字数表的程序
+
+    - 三个数中最大数的程序
+
+    - C 语言中的矩形面积程序
+
+    - C 程序 - 英尺转换为英寸
+
+    - 使用文件处理创建文本文件的程序
+
+    - 计算数字阶乘的 C 程序
+
+    - 交换字节中两个位的程序
+
+    - 使用四种不同方法交换两个数字的程序
+
+    - 年龄计算器（计算年龄的 C 程序）
+
+    - 设计数字钟 C 程序
+
+    - 计算复利的程序
+
+    - 检查数字是否为完全平方数的程序
+
+    - 在程序中使用不任何分号打印消息的程序
+
+    - 使用 C 语言的级数和程序/示例
+
+
+    ## Python 中字符的 ASCII 值
+
+    在 python 中，我们使用 `ord()` 函数来获取字符的 ASCII 码。`ord()` 接受一个字符并返回其 ASCII 值。
+
+
+    语法：`ord(character)`
+
+
+    示例：
+
+    输入：`char_var = ''A''`
+
+    函数调用：`ord(char_var)`
+
+    输出：`65`
+
+
+    ### 打印给定字符 ASCII 值的 Python 程序
+
+    ```python
+
+    # 将字符赋值给变量
+
+    char_var = ''A''
+
+    # 打印 ASCII 码
+
+    print("ASCII value of " + char_var + " is = ", ord(char_var))
+
+
+    char_var = ''x''
+
+    # 打印 ASCII 码
+
+    print("ASCII value of " + char_var + " is = ", ord(char_var))
+
+
+    char_var = ''9''
+
+    # 打印 ASCII 码
+
+    print("ASCII value of " + char_var + " is = ", ord(char_var))
+
+    ```
+
+    输出：
+
+    ```
+
+    ASCII value of A is =  65
+
+    ASCII value of x is =  120
+
+    ASCII value of 9 is =  57
+
+    ```
+
+
+    ## 计算单利
+
+    我们使用以下公式计算单利：
+
+    `(P * R * T) / 100`
+
+
+    其中，
+
+    * `P` – 本金金额
+
+    * `R` – 利率，以及
+
+    * `T` – 以年为单位的时间
+
+
+    '
+- fmt: "\n# Simple Interest Program\n\n## Example:\nInput:\n`p = 250000`\n`r = 36`\n\
+    `t = 1`\n`formulasi = (p*r*t)/100`\n`print(si)`\nOutput:\n`90000`\n\n## Python\
+    \ program for simple interest\n```python\n# Python program to find simple interest\n\
+    p = float(input(\"Enter the principle amount : \"))\nr = float(input(\"Enter the\
+    \ rate of interest : \"))\nt = float(input(\"Enter the time in the years: \"))\n\
+    # calculating simple interest\nsi = (p*r*t)/100\n# printing the values\nprint(\"\
+    Principle amount: \", p)\nprint(\"Interest rate    : \", r)\nprint(\"Time in years\
+    \    : \", t)\nprint(\"Simple Interest : \", si)\n```\n\n### Output\n**First run:**\n\
+    Enter the principle amount : 10000\nEnter the rate of interest : 3.5\nEnter the\
+    \ time in the years: 1\nPrinciple amount:   10000.0\nInterest rate    :   3.5\n\
+    Time in years    :   1.0\nSimple Interest :  350.0\n\n**Second run:**\nEnter the\
+    \ principle amount : 250000\nEnter the rate of interest : 36\nEnter the time in\
+    \ the years: 1\nPrinciple amount:   250000.0\nInterest rate    :   36.0\nTime\
+    \ in years    :   1.0\nSimple Interest :  90000.0\n\n---\n\n# Compound Interest\
+    \ Program\n\n## Calculate compound interest\nWe use the equation below to calculate\
+    \ compound interest:\n`P(1 + R / 100) T`\nWhere,\n`P` – Principle amount\n`R`\
+    \ – Rate of the interest, and\n`T` – Time in the years\n\n## Example:\nInput:\n\
+    `p = 250000`\n`r = 36`\n`t = 1`\n`# formulaic`\n`ci =  p * (pow((1 + r / 100),\
+    \ t))`\n`print(ci)`\nOutput:\n`339999.99999999994`\n\n## Python program\n```python\n\
+    # Python program to find compound interest\np = float(input(\"Enter the principle\
+    \ amount : \"))\nr = float(input(\"Enter the rate of interest : \"))\nt = float(input(\"\
+    Enter the time in the years: \"))\n# calculating compound interest\nci =  p *\
+    \ (pow((1 + r / 100), t))\n# printing the values\nprint(\"Principle amount  :\
+    \ \", p)\nprint(\"Interest rate      : \", r)\nprint(\"Time in years     : \"\
+    , t)\nprint(\"compound Interest : \", ci)\n```\n\n### Output\n**First run:**\n\
+    Enter the principle amount : 10000\nEnter the rate of interest : 3.5\nEnter the\
+    \ time in the years: 1\nPrinciple amount  :   10000.0\nInterest rate      :  \
+    \ 3.5\nTime in years     :   1.0\ncompound Interest :  10350.0\n\n**Second run:**\n\
+    Enter the principle amount : 250000\nEnter the rate of interest : 36\nEnter the\
+    \ time in the years: 1\nPrinciple amount  :   250000.0\nInterest rate      : \
+    \  36.0\nTime in years     :   1.0\ncompound Interest :  339999.99999999994\n\n\
+    ---\n\n# Leap Year Program\n\n## Python program to check the given year is a leap\
+    \ year or not\nA leap year is a year that can be divided by 4, except for the\
+    \ century year (a year that ends with 00). A year of a century is a leap year\
+    \ if it is divisible by 400. Here, the user presents a year, and we will test\
+    \ if the year in question is a leap year or not.\n\n### 1) By using the calendar\
+    \ module\nInitially we learn a little about the `calendar` module before we go\
+    \ to solve the problem. `calendar` module is built into Python which provides\
+    \ us with various functions to solve the date, month and year related problem.\n\
+    \n```python\n# importing the module\nimport calendar\n# input the year\nyear=int(input('Enter\
+    \ the value of year: '))\nleap_year=calendar.isleap(year)\n# checking leap year\n\
+    if leap_year: # to check condition\n    print('The given year is a leap year.')\n\
+    else:\n    print('The given year is a non-leap year.')\n```\n### Output\n**RUN\
+    \ 1:**\nEnter the value of year: 2020\nThe given year is a leap year.\n**RUN 2:**\n\
+    Enter the value of year: 2021\nThe given year is a non-leap year.\n\n### 2) By\
+    \ simply checking method\nAs we know it is a leap year, or not, to test the year\
+    \ in question. So, we'll introduce the condition here and try to write the Python\
+    \ programme.\n\n```python\n# input the year\ny=int(input('Enter the value of year:\
+    \ '))\n# To check for non century year\nif y%400==0 or y%4==0 and y%100!=0:\n\
+    \    print('The given year is a leap year.')\nelse:\n    print('The given year\
+    \ is a non-leap year.')\n```\n### Output\n**RUN 1:**\nEnter the value of year:\
+    \ 2020\nThe given year is a leap year.\n**RUN 2:**\nEnter the value of year: 2021\n\
+    The given year is a non-leap year.\n\n---\n\n# Additional Logic Examples\n\n##\
+    \ Example 1: If-Else Logic\nInput:\n`p = 250000`\n`r = 36`\n`t = 1`\n`# formulasi\
+    \ = (p*r*t)/100`\n`print(si)`\nOutput:\n`90000`\n\n## Example 2: Simple If-Else\n\
+    Enter a number and check whether it is positive or negative.\n```python\nnum =\
+    \ int(input(\"Enter a number: \"))\nif num > 0:\n    print(\"Positive\")\nelse:\n\
+    \    print(\"Negative\")\n```\n\n## Example 3: Finding Largest\nFind two numbers\
+    \ and check which is larger.\n```python\na = int(input(\"Enter first number: \"\
+    ))\nb = int(input(\"Enter second number: \"))\nif a > b:\n    print(\"a is larger\"\
+    )\nelse:\n    print(\"b is larger\")\n```\n\n## Example 4: Nested If-Else\nFind\
+    \ two numbers and check which is larger.\n```python\na = int(input(\"Enter first\
+    \ number: \"))\nb = int(input(\"Enter second number: \"))\nif a > b:\n    print(\"\
+    a is larger\")\nelse:\n    print(\"b is larger\")\n```\n\n## Example 5: If-Elif-Else\n\
+    Calculate discount based on sale amount.\n```python\namt = int(input(\"Enter Sale\
+    \ Amount: \"))\nif amt <= 5000:\n    disc = amt * 0.05\nelif amt <= 15000:\n \
+    \   disc = amt * 0.1\nelif amt <= 25000:\n    disc = amt * 0.2\nelse:\n    disc\
+    \ = amt * 0.3\nprint(\"Discount : \", disc)\n```\n\n## Example 6: Calculator\n\
+    Design a simple calculator to add, subtract, multiply and divide.\n```python\n\
+    print(\"Calculator\")\nprint(\"1.Add\")\nprint(\"2.Substract\")\nprint(\"3.Multiply\"\
+    )\nprint(\"4.Divide\")\nch = int(input(\"Enter Choice(1-4): \"))\nif ch == 1:\n\
+    \    a = int(input(\"Enter A:\"))\n    b = int(input(\"Enter B:\"))\n    print(\"\
+    Sum = \", a+b)\nelif ch == 2:\n    a = int(input(\"Enter A:\"))\n    b = int(input(\"\
+    Enter B:\"))\n    print(\"Difference = \", a-b)\nelif ch == 3:\n    a = int(input(\"\
+    Enter A:\"))\n    b = int(input(\"Enter B:\"))\n    print(\"Product = \", a*b)\n\
+    elif ch == 4:\n    a = int(input(\"Enter A:\"))\n    b = int(input(\"Enter B:\"\
+    ))\n    print(\"Quotient = \", a/b)\nelse:\n    print(\"Invalid Choice\")\n```\n"
+  raw: 'Example:Input:p = 250000r = 36t = 1# formulasi = (p*r*t)/100print(si)Output:90000Python
+    program for simple interest# Python program to find simple interestp = float(input("Enter
+    the principle amount : "))r = float(input("Enter the rate of interest : "))t =
+    float(input("Enter the time in the years: "))# calculating simple interestsi =
+    (p*r*t)/100# printing the valuesprint("Principle amount: ", p)print("Interest
+    rate   : ", r)print("Time in years   : ", t)print("Simple Interest : ", si)OutputFirst
+    run:Enter the principle amount : 10000Enter the rate of interest : 3.5Enter the
+    time in the years: 1Principle amount:  10000.0Interest rate   :  3.5Time in years   :  1.0Simple
+    Interest :  350.0Second run:Enter the principle amount : 250000Enter the rate
+    of interest : 36Enter the time in the years: 1Principle amount:  250000.0Interest
+    rate   :  36.0Time in years   :  1.0Simple Interest :  90000.0Calculate compound
+    interestWe use the equation below to calculate compound interestP(1 + R / 100)
+    TWhere,P – Principle amountR  – Rate of the interest, andT  – Time in the yearsExample:Input:p
+    = 250000r = 36t = 1# formulaci =  p * (pow((1 + r / 100), t))print(ci)Output:339999.99999999994Python
+    program# Python program to find compound interestp = float(input("Enter the principle
+    amount : "))r = float(input("Enter the rate of interest : "))t = float(input("Enter
+    the time in the years: "))# calculating compound interestci =  p * (pow((1 + r
+    / 100), t))# printing the valuesprint("Principle amount  : ", p)print("Interest
+    rate     : ", r)print("Time in years     : ", t)print("compound Interest : ",
+    ci)OutputFirst run:Enter the principle amount : 10000Enter the rate of interest
+    : 3.5Enter the time in the years: 1Principle amount  :  10000.0Interest rate     :  3.5Time
+    in years     :  1.0compound Interest :  10350.0Second run:Enter the principle
+    amount : 250000Enter the rate of interest : 36Enter the time in the years: 1Principle
+    amount  :  250000.0Interest rate     :  36.0Time in years     :  1.0compound Interest
+    :  339999.99999999994Python program to check the given year is a leap year or
+    notA leap year is a year that can be divided by 4, except for the century year
+    (a year that ends with 00). A year of a century is a leap year if it is divisible
+    by 400\. Here, the user presents a year, and we will test if the year in question
+    is a leap year or not. We can solve this problem in two ways first by using the
+    calendar module, and second by simply checking the state of the leap year.1) By
+    using the calendar moduleInitially we learn a little about the calendar module
+    before we go to solve the problem. Calendar module is built into Python which
+    provides us with various functions to solve the date, month and year related problem.PROGRAM#
+    importing the moduleimport calendar# input the yearyear=int(input(''Enter the
+    value of year: ''))leap_year=calendar.isleap(year)# checking leap yearif leap_year:
+    # to check conditio nprint(''The given year is a leap year.'')else:print(''The
+    given year is a non-leap year.'')OutputRUN 1:Enter the value of year: 2020The
+    given year is a leap year.RUN 2:Enter the value of year: 2021The given year is
+    a non-leap year.2) By simply checking methodAs we know it is a leap year, or not,
+    to test the year in question. So, we''ll introduce the condition here and try
+    to write the Python programme.Program# input the yeary=int(input(''Enter the value
+    of year: ''))# To check for non century yearif y%400==0 or y%4==0 and y%100!=0:print(''The
+    given year is a leap year.'')else:print(''The given year is a non-leap year.'')OutputRUN
+    1:Enter the value of year: 2020The given year is a leap year.RUN 2:Enter the value
+    of year: 2000The given year is a leap year.Python | Some of the examples of simple
+    if elseExample1: Enter a number and check whether it is 10 or nota=int(input("Enter
+    A : "))if a==10:print("Equal to 10")else:print("Not Equal to 10")OutputEnter A
+    : 10Equal to 10Example2: Find which is largest of two numbersa=int(input("Enter
+    A: "))b=int(input("Enter B: "))if a>b:g=aelse:g=bprint("Greater = ",g)OutputEnter
+    A: 36Enter B: 24Greater =  36Example3: Find which is largest of two numbers using
+    single statementa=int(input("Enter A: "))b=int(input("Enter B: "))c= a if a>b
+    else bprint("Greater = ",c)OutputEnter A: 24Enter B: 36Greater =  36Calculate
+    discount based on the sale amount in PythonThe discount rates are:Amount          Discount0-5000          5%5000-15000      12%15000-25000     20%above
+    25000     30%Program:# input sale amountamt = int(input("Enter Sale Amount: "))#
+    checking conditions and calculating discountif(amt>0):if amt<=5000:disc = amt*0.05elif
+    amt<=15000:disc=amt*0.12elif amt<=25000:disc=0.2 * amtelse:disc=0.3 * amtprint("Discount
+    : ",disc)print("Net Pay  : ",amt-disc)else :print("Invalid Amount")OutputEnter
+    Sale Amount: 30000Discount :  9000.0Net Pay  :  21000.0Design a simple calculator
+    using if elif in PythonGiven two numbers, and we will build a calculator-type
+    program that will use Python to add, subtract, multiply and divide operations.Example:Message:Calculator1.Add2.Substract3.Multiply4.DivideInput:Enter
+    Choice(1-4): 3Enter A:10Enter B:20Output:Product =  200Program# menusprint("Calculator")print("1.Add")print("2.Substract")print("3.Multiply")print("4.Divide")#
+    input choicech=int(input("Enter Choice(1-4): "))if ch==1:a=int(input("Enter A:"))b=int(input("Enter
+    B:"))c=a+bprint("Sum = ",c)elif ch==2:a=int(input("Enter A:"))b=int(input("Enter
+    B:"))c=a-bprint("Difference = ",c)elif  ch==3:a=int(input("Enter A:"))b=int(input("Enter
+    B:"))c=a*bprint("Product = ",c)elif ch==4:a=int(input("Enter A:"))b=int(input("Enter
+    B:"))c=a/bprint("Quotient = ",c)else:print("Invalid Choice")OutputCalculator1.Add2.Substract3.Multiply4.DivideEnter
+    Choice(1-4): 3Enter A:10Enter B:20Product =  200BMI (Body Mass Index) calculator
+    in PythonExample:Input:Height = 1.75Weigth = 64Output:BMI is: 20.89 and you are:
+    HealthyProgram# getting input from the user and assigning it to userheight = float(input("Enter
+    height in meters: "))weight = float(input("Enter weight in kg: "))# the formula
+    for calculating bmibmi = weight/(height**2)# ** is the power of operator i.e height*height
+    in this caseprint("Your BMI is: {0} and you are: ".format(bmi), end='''')#conditionsif
+    ( bmi < 16):print("severely underweight")elif ( bmi >= 16 and bmi < 18.5):print("underweight")elif
+    ( bmi >= 18.5 and bmi < 25):print("Healthy")elif ( bmi >= 25 and bmi < 30):print("overweight")elif
+    ( bmi >=30):print("severely overweight")OutputEnter height in meters: 1.75
+
+
+    Enter weight in kg: 64'
+  toc: []
+  trans: "\n\n# 单利程序\n\n## 示例：\n输入：\n`p = 250000`\n`r = 36`\n`t = 1`\n`formulasi =\
+    \ (p*r*t)/100`\n`print(si)`\n输出：\n`90000`\n\n## 单利的 Python 程序\n```python\n# Python\
+    \ program to find simple interest\np = float(input(\"输入本金金额 : \"))\nr = float(input(\"\
+    输入利率 : \"))\nt = float(input(\"输入年份（年）: \"))\n# 计算单利\nsi = (p*r*t)/100\n# 打印这些值\n\
+    print(\"Principle amount: \", p)\nprint(\"Interest rate    : \", r)\nprint(\"\
+    Time in years    : \", t)\nprint(\"Simple Interest : \", si)\n```\n\n### 输出\n\
+    **第一次运行：**\n输入本金金额：10000\n输入利率：3.5\n输入年份（年）:1\n本金金额：   10000.0\n利率    ：   3.5\n\
+    年份    ：1.0\n单利 ：  350.0\n\n**第二次运行：**\n输入本金金额：250000\n输入利率：36\n输入年份（年）:1\n本金金额：\
+    \   250000.0\n利率    ：   36.0\n年份    ：1.0\n单利 ：  90000.0\n\n---\n\n# 复利程序\n\n##\
+    \ 计算复利\n我们使用以下公式计算复利：\n`P(1 + R / 100) T`\n其中，\n`P` – 本金金额\n`R` – 利率，以及\n`T` –\
+    \ 年份（年）\n\n## 示例：\n输入：\n`p = 250000`\n`r = 36`\n`t = 1`\n`# formulaic`\n`ci =\
+    \  p * (pow((1 + r / 100), t))`\n`print(ci)`\n输出：\n`339999.99999999994`\n\n##\
+    \ Python 程序\n```python\n# Python program to find compound interest\np = float(input(\"\
+    输入本金金额 : \"))\nr = float(input(\"输入利率 : \"))\nt = float(input(\"输入年份（年）: \"))\n\
+    # 计算复利\nci =  p * (pow((1 + r / 100), t))\n# 打印这些值\nprint(\"Principle amount \
+    \ : \", p)\nprint(\"Interest rate      : \", r)\nprint(\"Time in years     : \"\
+    , t)\nprint(\"compound Interest : \", ci)\n```\n\n### 输出\n**第一次运行：**\n输入本金金额：10000\n\
+    输入利率：3.5\n输入年份（年）:1\n本金金额：   10000.0\n利率      ：   3.5\n年份     ：1.0\n复利 ：  10350.0\n\
+    \n**第二次运行：**\n输入本金金额：250000\n输入利率：36\n输入年份（年）:1\n本金金额：   250000.0\n利率      ： \
+    \  36.0\n年份     ：1.0\n复利 ：  339999.99999999994\n\n---\n\n# 闰年程序\n\n## 检查给定年份是否为闰年的\
+    \ Python 程序\n闰年是指能被 4 整除的年份，但世纪年（以 00 结尾的年份）除外。世纪年如果能被 400 整除，则为闰年。在这里，用户提供一个年份，我们将测试该年份是否为闰年。\n\
+    \n### 1) 使用 calendar 模块\n在解决问题之前，我们先简单了解一下 `calendar` 模块。`calendar` 模块是 Python\
+    \ 内置的，为我们提供了各种函数来解决与日期、月份和年份相关的问题。\n\n```python\n# 模块\nimport calendar\n# 输入年份\n\
+    year=int(input('输入年份: '))\nleap_year=calendar.isleap(year)\n# 检查闰年\nif leap_year:\
+    \ # 检查条件\n    print('该年份是闰年。')\nelse:\n    print('该年份不是闰年。')\n```\n### 输出\n**运行\
+    \ 1：**\n输入年份：2020\n该年份是闰年。\n**运行 2：**\n输入年份：2021\n该年份不是闰年。\n\n### 2) 通过简单的检查方法\n\
+    正如我们所知，我们需要测试目标年份是否为闰年。因此，我们在这里引入条件并尝试编写 Python 程序。\n\n```python\n# 输入年份\ny=int(input('输入年份:\
+    \ '))\n# 检查非世纪年\nif y%400==0 or y%4==0 and y%100!=0:\n    print('该年份是闰年。')\nelse:\n\
+    \    print('该年份不是闰年。')\n```\n### 输出\n**运行 1：**\n输入年份：2020\n该年份是闰年。\n**运行 2：**\n\
+    输入年份：2021\n该年份不是闰年。\n\n---\n\n# 附加示例\n\n## 示例 1：If-Else\n输入：\n`p = 250000`\n`r\
+    \ = 36`\n`t = 1`\n`formulasi = (p*r*t)/100`\n`print(si)`\n输出：\n`90000`\n\n## 示例\
+    \ 2：简单 If-Else\n输入一个数字并判断是正数还是负数。\n```python\nnum = int(input(\"输入数字: \"))\nif\
+    \ num > 0:\n    print(\"正数\")\nelse:\n    print(\"负数\")\n```\n\n## 示例 3：寻找较大\n\
+    比较两个数字并判断哪个更大。\n```python\na = int(input(\"输入第一个数字: \"))\nb = int(input(\"输入第二个数字:\
+    \ \"))\nif a > b:\n    print(\"A 较大\")\nelse:\n    print(\"B 较大\")\n```\n\n##\
+    \ 示例 4：嵌套 If-Else\n比较两个数字并判断哪个更大。\n```python\na = int(input(\"输入第一个数字: \"))\n\
+    b = int(input(\"输入第二个数字: \"))\nif a > b:\n    print(\"A 较大\")\nelse:\n    print(\"\
+    B 较大\")\n```\n\n## 示例 5：If-Elif-Else\n根据销售金额计算折扣。\n```python\namt = int(input(\"\
+    输入销售金额: \"))\nif amt <= 5000:\n    disc = amt * 0.05\nelif amt <= 15000:\n   \
+    \ disc = amt * 0.1\nelif amt <= 25000:\n    disc = amt * 0.2\nelse:\n    disc\
+    \ = amt * 0.3\nprint(\"折扣 : \", disc)\n```\n\n## 示例 6：计算器\n设计一个简单的计算器进行加、减、乘、除运算。\n\
+    ```python\nprint(\"计算器\")\nprint(\"1.加法\")\nprint(\"2.减法\")\nprint(\"3.乘法\")\n\
+    print(\"4.除法\")\nch = int(input(\"输入选择(1-4): \"))\nif ch == 1:\n    a = int(input(\"\
+    输入 A:\"))\n    b = int(input(\"输入 B:\"))\n    print(\"和 = \", a+b)\nelif ch ==\
+    \ 2:\n    a = int(input(\"输入 A:\"))\n    b = int(input(\"输入 B:\"))\n    print(\"\
+    差 = \", a-b)\nelif ch == 3:\n    a = int(input(\"输入 A:\"))\n    b = int(input(\"\
+    输入 B:\"))\n    print(\"积 = \", a*b)\nelif ch == 4:\n    a = int(input(\"输入 A:\"\
+    ))\n    b = int(input(\"输入 B:\"))\n    print(\"商 = \", a/b)\nelse:\n    print(\"\
+    无效选择\")\n```\n\n"
+- fmt: "\nYour BMI is `28.8979s9183673468` and you are: Healthy.\n\n# Write functions\
+    \ to find square and cube of a given number in Python\n\n### Example\nInput:\n\
+    Enter an integer number: 6\nOutput:\nSquare of 6 is 36\nCube of 6 is 216\n\nFunction\
+    \ to get square:\n```python\ndef square (num):\n    return (num* num)\n```\nFunction\
+    \ to get cube:\n```python\ndef cube (num):\n    return (num* num* num)\n```\n\n\
+    ### Program\n```python\n# python program to find square and cube\n# of a given\
+    \ number\n# User defind method to find square\ndef square (num):\n    return (num*num)\n\
+    \n# User defind method to find cube\ndef cube (num):\n    return (num*num*num)\n\
+    \n# Main code\n# input a number\nnumber = int (raw_input(\"Enter an integer number:\
+    \ \"))\n# square and cube\nprint \"square of {0} is {1}\".format(number, square(number))\n\
+    print \"Cube of {0} is {1}\".format(number, cube (number))\n```\nOutput\nEnter\
+    \ an integer number: 6\nsquare of 6 is 36\nCube of 6 is 216\n\n---\n\n# Compute\
+    \ the net amount of a bank account based on the transactions\n\n### Example\n\
+    Input:\nEnter transactions: D 10000\nWant to continue (Y for yes): Y\nEnter transaction:\
+    \ W 5000\nWant to continue (Y for yes): Y\nEnter transaction: D 2000\nWant to\
+    \ continue (Y for yes): Y\nEnter transaction: W 100\nWant to continue (Y for yes):\
+    \ N\nOutput:\nNet amount: 6900\n\n### Program\n```python\n# computes net bank\
+    \ amount based on the input\n# \"D\" for deposit, \"W\" for withdrawal\n# define\
+    \ a variable for main amount\nnet_amount = 0\nwhile True:\n    # input the transaction\n\
+    \    str = raw_input (\"Enter transaction: \")\n    # get the value type and amount\
+    \ to the list\n    # seprated by space\n    transaction = str.split(\" \")\n \
+    \   # get the value of transaction type and amount\n    # in the separated variables\n\
+    \    type = transaction [0]\n    amount = int (transaction [1])\n    if type==\"\
+    D\" or type==\"d\":\n        net_amount += amount\n    elif type==\"W\" or type==\"\
+    w\":\n        net_amount -= amount\n    else:\n        pass\n    #input choice\n\
+    \    str = raw_input (\"want to continue (Y for yes) : \")\n    if not (str[0]\
+    \ ==\"Y\" or str[0] ==\"y\") :\n        # break the loop\n        break\n# print\
+    \ the net amount\nprint \"Net amount: \", net_amount\n```\nOutput\nEnter transaction:\
+    \ D 10000 \nwant to continue (Y for yes) : Y\nEnter transaction: W 5000\nwant\
+    \ to continue (Y for yes) : Y\nEnter transaction: D 2000\nwant to continue (Y\
+    \ for yes) : Y\nEnter transaction: W 100\nwant to continue (Y for yes) : N\nNet\
+    \ amount: 6900\n\n---\n\n# Convert temperature in Python program\n\nFrom Celsius\
+    \ to Fahrenheit and vice-versa\n\n### Formula used\nCelsius to Fahrenheit: `°C=\
+    \ (5/9)*(°F-32)`\nFahrenheit to Celsius: `°F= (9/5)*(°C) + 32`\n\n### Program\n\
+    ```python\n# Define a function to convert\n# celsius temperature to Fahrenheit\n\
+    def Celsius_to_Fahrenheit(c) :\n    f = (9/5)*c + 32\n    return f\n\n# Define\
+    \ a function to convert\n# Fahrenheit temperature to Celsius\ndef Fahrenheit_to_Celsius(f)\
+    \ :\n    c = (5/9)*(f - 32)\n    return c\n\n# Driver Code\nif __name__ == \"\
+    __main__\" :\n    c = 36\n    print(c, \"degree celsius is equal to:\",Celsius_to_Fahrenheit(c),\"\
+    Fahrenheit\")\n    f = 98\n    print(f,\"Fahrenheit is equal to:\",Fahrenheit_to_Celsius(f),\"\
+    degree celsius\")\n```\nOutput\n36 degree celsius is equal to: 96.8 Fahrenheit\n\
+    98 Fahrenheit is equal to: 36.666666666666667 degree Celsius\n\n---\n\n# Python\
+    \ program to convert meters into yards\n\nKey: `1 meter = 1.094 yards`\n\n###\
+    \ Example\nInput:\nMeters: 245\nOutput:\nYards: 268.03000000000003\n\n### Python\
+    \ code to convert Meters to yards\n```python\n# Python program to convert Centimeter\
+    \ to Inches\n# taking input\nnum = float(input(\"Enter the distance measured in\
+    \ centimeter : \"))\n# converting from cms to inches\n\"\"\" 1 inch = 2.54 centimeters\"\
+    \"\"\ninc = num/2.54\n# printing the result\nprint(\"Distance in inch : \", inc)\n\
+    ```\nOutput\nFirst run:\nEnter the distance measured in meters : 245\nDistance\
+    \ in yards : 268.03000000000003\nSecond run:\nEnter the distance measured in meters\
+    \ : 54\nDistance in yards : 59.07600000000001\nThird run:\nEnter the distance\
+    \ measured in meters : 100\nDistance in yards : 109.4\n\n---\n\n# Find the day\
+    \ in Python\n\nIn this question, the user will provide a particular date which\
+    \ could be from the past or the future and we need to locate the weekday.\nTo\
+    \ this end, we'll use the `calendar` module that provides us with various functions\
+    \ to solve the date, month and year related problem.\nUntil we go to find a specific\
+    \ date's weekday, we must test if the date given is correct or not. If the date\
+    \ given is not correct then we get some mistake. So we will use the `try-except`\
+    \ statement to resolve this.\n\n### Syntax of try-except statement\n```python\n\
+    # statement\nProgram\n# importing the module\nimport calendar\nd,m,y=map(int,input('Enter\
+    \ the value of date,month and year: ').split())\na=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']\n\
+    try:\n    s=calendar.weekday(y,m,d)\n    print('Weekday:',a[s])\nexcept ValueError:\n\
+    \    print('You have entered an invalid date.')\n```\nOutput\nRUN 1:\nEnter the\
+    \ value of date,month and year: 8 10 2019\nWeekday: Monday\nRUN 2:\nEnter the\
+    \ value of date,month and year: 32 10 2019\nYou have entered an invalid date.\n\
+    \n---\n\n# Python array programs Create matrix in Python\n\nConsider the below\
+    \ example, `mat = [[10, 20, 30],[40, 50, 60],[70, 80, 90]]` can be considered\
+    \ a 3x3 matrix, There are 3 rows and 3 columns.\n\n### Program\n```python\n# Python\
+    \ matrix creation\nmat = [[10, 20, 30],[40, 50, 60],[70, 80, 90]]\n# printing\
+    \ the matrix\nprint(\"mat: \", mat)\n# printing rows\nprint(\"mat[0]: \", mat[0])\n\
+    print(\"mat[1]: \", mat[1])\nprint(\"mat[2]: \", mat[2])\n# printing specific\
+    \ elements\nprint(\"mat[0][0]: \", mat[0][0])\nprint(\"mat[0][1]: \", mat[0][1])\n\
+    print(\"mat[0][2]: \", mat[0][2])\nprint(\"mat[1][0]: \", mat[1][0])\nprint(\"\
+    mat[1][1]: \", mat[1][1])\nprint(\"mat[1][2]: \", mat[1][2])\nprint(\"mat[2][0]:\
+    \ \", mat[2][0])\nprint(\"mat[2][1]: \", mat[2][1])\nprint(\"mat[2][2]: \", mat[2][2])\n\
+    # printing matrix using loop (matrix form)\nprint(\"Matrix is: \")\nfor i in range(3):\n\
+    \    for j in range(3):\n        print(mat[i][j], end = \")\n    print() # prints\
+    \ new line\n```\n\n---\n\n### Using `numpy.array()`\n```python\nmat = numpy.array([[\
+    \ 10 , 20 , 30 ],[40 , 50 , 60 ],[ 70 , 70 , 90 ])\n```\n\n### Using `numpy.matrix()`\n\
+    ```python\nmat = numpy.matrix( \"10 20 30; 40 50 60; 70 80 90\" )\n```\n\n###\
+    \ Program\n```python\n# Python matrix creation using numpy\nimport numpy as np\n\
+    # creating matrix using numpy.array()\nmat1 = np.array([[10,20,30],[40,50,60],[70,70,90]])\n\
+    # printing matrix\nprint(\"mat1...\")\nprint(mat1)\n# creating matrix using numpy.matrix()\n\
+    mat2 = np.matrix(\"10 20 30; 40 50 60; 70 80 90\")\n# printing matrix\nprint(\"\
+    mat2...\")\nprint(mat2)\n```\nOutput\nmat1...\n[[10 20 30]\n [40 50 60]\n [70\
+    \ 70 90]]\nmat2...\n[[10 20 30]\n [40 50 60]\n [70 80 90]]\n\n---\n\n# Python\
+    \ Date & Time Programs\n\n## Python program to print current hour, minute, second\
+    \ and microsecond\n\n### Steps\n1. Import the `datetime` class, from “datetime\
+    \ module”\n2. Create an object by -calling the `now()` function of `datetime`\
+    \ class\n3. Extract and print the current hour, minute, second and microsecond\
+    \ using the object of `datetime.now()`.\n\n### Program\n```python\n# Python program\
+    \ to print current hour,\n# minute, second and microsecond\n# importing the datetime\
+    \ class from\n# datetime module\nfrom datetime import datetime\n# creating object\n\
+    obj_now = datetime.now()\n# printing the current date and time\nprint(\"Current\
+    \ date & time: \", obj_now)\n# extracting and printing the current\n# hour, minute,\
+    \ second and microsecond\nprint(\"Current hour =\", obj_now.hour)\nprint(\"Current\
+    \ minute =\", obj_now.minute)\nprint(\"Current second =\", obj_now.second)\nprint(\"\
+    Current microsecond =\", obj_now.microsecond)\n```\nOUTPUT\nCurrent date & time:\
+    \ 2020-07-30 14:43:52.294475\nCurrent hour = 14\nCurrent minute = 43\nCurrent\
+    \ second = 52\nCurrent microsecond = 294475\n\n---\n\n## Python code to print\
+    \ today's year, month and day\n\nIn the example below – python program is implemented\
+    \ to print the current year, month and day.\n\n### CODE\n```python\n# Python program\
+    \ to\n# print today's year, month and day\n# importing the date class datetime\n\
+    from datetime import date\n# creating the date object of today's date\ncurrent_date\
+    \ = date.today()\n# printing the current date\nprint(\"Current date: \", current_date)\n\
+    # extracting the year, month and day\nprint(\"Current year:\", current_date.year)\n\
+    print(\"Current month:\", current_date.month)\nprint(\"Current day:\", current_date.day)\n\
+    ```\nOUTPUT\nCurrent date: 2020-07-30\nyear: 2020\nmonth: 7\nday: 30\n\n---\n\n\
+    # Python Lists\n\n## For Adding, removing elements in the list\n\n### `append()`\
+    \ Method\nIt is used to add / append an item to the list (that will be passed\
+    \ as parameter).\n\n### Syntax\n`list.append(element)`\n\n```python\n# Declaring\
+    \ a list with integer and string elements\nlist = [10, 20, 30, \"New Delhi\",\
+    \ \"Mumbai\"]\n# printing list\nprint \"List elements are: \", list\n# adding\
+    \ elements\nlist.append(40)\nlist.append(50)\nlist.append(\"Chennai\")\n# printing\
+    \ list after adding elements\nprint \"List elements: \", list\n```\nOutput\nList\
+    \ elements are: [10, 20, 30, 'New Delhi', 'Mumbai']\nList elements are: [10, 20,\
+    \ 30, 'New Delhi', 'Mumbai', 40, 50, 'Chennai']\n\n### `pop()` Method\nUsing this\
+    \ to remove / pop an item from the list.\n\n### Syntax\n`list.pop()`\n\n```python\n\
+    # Declaring a list with integer and string elements\nlist = [10, 20, 30, \"New\
+    \ Delhi\", \"Mumbai\"]\n# printing list\nprint \"List elements are: \", list\n\
+    # adding elements\nlist.append(40)\nlist.append(50)\nlist.append(\"Chennai\")\n\
+    # printing list after adding elements\nprint \"List elements: \", list\n# removing\
+    \ elements\nlist.pop()\n# printing list after removing elements\nprint \"List\
+    \ elements: \", list\n```\nOutput\nList elements are: [10, 20, 30, 'New Delhi',\
+    \ 'Mumbai']\nList elements are: [10, 20, 30, 'New Delhi', 'Mumbai', 40, 50, 'Chennai']\n\
+    List elements are: [10, 20, 30, 'New Delhi', 'Mumbai', 40, 50]\n\n---\n\n## Program\
+    \ to find the differences of two lists\n\nGiven two integer lists, we will find\
+    \ the differences, i.e. the elements that not exist in the second lists.\n\n###\
+    \ Example\nInput:\nList1 = [10, 20, 30, 40, 50]\nList2 = [10, 20, 30, 60, 70]\n\
+    Output:\nDifferent elements:[40, 50]\n\n### Program\n```python\n# list1 - first\
+    \ list of the integers\n# lists2 - second list of the integers\nlist1 = [10, 20,\
+    \ 30, 40, 50]\nlist2 = [10, 20, 30, 60, 70]\n# printing lists\nprint \"list1:\"\
+    , list1\nprint \"list2:\", list2\n# finding and printing differences of the lists\n\
+    print \"Difference elements:\"\nprint (set(list1) - set(list2))\n```\nOutput\n\
+    list1: [10, 20, 30, 40, 50]\nlist2: [10, 20, 30, 60, 70]\nDifference elements:\
+    \ [40, 50]\n\n### Program 2\nWith mixed element type, print 1) the elements that\
+    \ do not exist in list 2 and 2) those that not exist in list 1.\n```python\n#\
+    \ list1 - first list with mixed type elements\n# lists2 - second list with mixed\
+    \ type elements\nlist1 = [\"Amit\", \"Shukla\", 21, \"New Delhi\"]\nlist2 = [\"\
+    Aman\", \"Shukla\", 21, \"Mumbai\"]\n# printing lists\nprint \"list1:\", list1\n\
+    print \"list2:\", list2\n# finding and printing differences of the lists\nprint\
+    \ \"Elements not exists in list2:\"\nprint (set(list1) - set(list2))\nprint \"\
+    Elements not exists in list1:\"\nprint (set(list2) - set(list1))\n```\nOutput\n\
+    list1: ['Amit', 'Shukla', 21, 'New Delhi']\nlist2: ['Aman', 'Shukla', 21', 'Mumbai']\n\
+    Elements not exists in list2: ['Amit', 'New Delhi']\nElements not exists in list1:\
+    \ ['Aman', 'Mumbai']\n\n---\n\n## Program to remove duplicate elements from the\
+    \ list\n\n### Example\nInput:\nlist1: [10, 20, 10, 20, 30, 40, 30, 50]\nOutput:\n\
+    List after removing duplicate elements\nlist2: [10, 20, 30, 40, 50]\n\n### Logic\n\
+    It is too easy to implement the program by adding elements one by one to another\
+    \ list by checking whether or not element is available in the new list. Let's\
+    \ assume that 20 is available in list 1 three times, and when we add 20 (first\
+    \ occurrence) to list 2, it will be added, but when we add 20 (second occurrence)\
+    \ to list 2, condition will be false and element will not be added to list. And\
+    \ finally, without duplicate elements we'll get list.\n\n### Program\n```python\n\
+    # declare list\nlist1 = [10, 20, 10, 20, 30, 40, 30, 50]\n# creating another list\
+    \ with unique elements\nlist2 = []\n# appending elements\nfor n in list1:\n  \
+    \  if n not in list2:\n        list2.append(n)\n# printing the lists\nprint \"\
+    Original list\"\nprint \"list1:\", list1\nprint \"List after removing duplicate\
+    \ elements\"\nprint \"list2:\", list2\n```\nOutput\nOriginal list\nlist1: [10,\
+    \ 20, 10, 20, 30, 40, 30, 50]\nList after removing duplicate elements\nlist2:\
+    \ [10, 20, 30, 40, 50]\n\n---\n\n## Program (By User defines function)\n\n###\
+    \ Function to remove duplicates\n```python\ndef removeDuplicates (list1):\n  \
+    \  # declare another list\n    list2 = []\n    # appending elements\n    for n\
+    \ in list1:\n        if n not in list2:\n            list2.append(n)\n    return\
+    \ list2\n\n# Main code\n# declare a list\nlist1 = [10, 20, 10, 20, 30, 40, 30,\
+    \ 50]\n# print the list\nprint \"Original list: \", list1\nprint \"List after\
+    \ duplicate remove: \", removeDuplicates(list1)\n```\nOutput\nOriginal list: [10,\
+    \ 20, 10, 20, 30, 40, 30, 50]\nList after duplicate remove: [10, 20, 30, 40, 50]\n\
+    \n---\n\n# Create three lists of numbers, their squares and cubes\n\n### Example\n\
+    Input:\nStart = 1\nEnd = 10\nOutput:\nnumbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n\
+    squares: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\ncubes: [1, 8, 27, 64, 125, 216,\
+    \ 343, 512, 729, 1000]\n\n### Logic\nThree lists to declare. range here we define\
+    \ beginning with 1 and ending with 10. Run a loop with the `range(start, end +\
+    \ 1)` and `count` as loop counter. Connect the `count` of the loop counter to\
+    \ the list named `numbers`, connect the square to the list called `squares` and\
+    \ add the cube to the list called `cubes`. In the end, print out the lists.\n\n\
+    ### Program\n```python\n# declare lists\nnumbers = []\nsquares = []\ncubes = []\n\
+    # start and end\nstart = 1\nend = 10\n# run a loop from start to end+1\nfor count\
+    \ in range(start, end+1) :\n    numbers.append(count)\n    squares.append(count**2)\n\
+    \    cubes.append(count**3)\n# print the lists\nprint \"numbers:\", numbers\n\
+    print \"squares:\", squares\nprint \"cubes: \", cubes\n```\nOutput\nnumbers: [1,\
+    \ 2, 3, 4, 5, 6, 7, 8, 9, 10]\nsquares: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\n\
+    cubes: [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]\n\n---\n\n# Iterate a list\
+    \ in reverse order\n\nGiven a list, and in python we can iterate it in reverse\
+    \ order.\n\n### Example\nInput:\nList = [10, 20, 30, 40, 50]\nOutput:\nlist =\
+    \ [50, 40, 30, 20, 10]\nInput:\nlist = ['Hello', 10, 'World', 20]\nOutput:\nlist\
+    \ = [20, 'World', 10, 'Hello']\n\n### Program\n```python\n# define a list\nlist1\
+    \ = [10, 20, 30, 40, 50]\n# print the list\nprint \"original list:\", list1\n\
+    # iterate the list\nlist1 = list1[::-1]\n# print the list\nprint \"list in reverse\
+    \ order:\", list1\n\n# another list with string and integer elements\nlist2 =\
+    \ ['Hello', 10, 'world', 20]\n# print the list\nprint \"Original list:\", list2\n\
+    # iterate the list\nlist2 = list2[::-1]\n# print the list\nprint \"list in reverse\
+    \ order:\", list2\n```\nOutput\noriginal list: [10, 20, 30, 40, 50]\nlist in reverse\
+    \ order: [50, 40, 30, 20, 10]\nOriginal list: ['Hello', 10, 'world', 20]\nlist\
+    \ in reverse order: [20, 'world', 10, 'Hello']\n\n---\n\n# Print list after removing\
+    \ EVEN numbers\n\n### Example\nInput:\nlist = [11, 22, 33, 44, 55]\nOutput:\n\
+    list after removing EVEN numbers\nlist = [11, 33, 55]\n\n### Logic\nUsing `for\
+    \ ... in` loop to traverse every number in the sequence. Test the condition, i.e.\
+    \ the number is divisible by 2 or not – the number must be divisible by 2. If\
+    \ number is divisible by 2 Then Remove the number from list Using `list.remove()`\
+    \ method to remove the number from list.\n\n### Program\n```python\n# list with\
+    \ EVEN and ODD number\nlist = [11, 22, 33, 44, 55]\n# print original list\nprint\
+    \ \"Original list:\", list\n# loop to traverse each element in the list\n# and,\
+    \ remove elements\n# which are EVEN (divisible by 2)\nfor i in list:\n    if(i%2\
+    \ == 0):\n        list.remove(i)\n# print list after removing EVEN elements\n\
+    print \"list after removing EVEN numbers:\"\nprint list\n```\nOutput\nOriginal\
+    \ list: [11, 22, 33, 44, 55]\nlist after removing EVEN numbers: [11, 33, 55]\n\
+    \n# Python string programs\nDeclare, assign and print the string (Different ways)\n"
+  raw: 'You''r BMI is 28.8979s9183673468 and you are: HealthyWrite functions to find
+    square and cube of a given number in PythonExample:Input:Enter an integer number:
+    6Output:Square of 6 is 36Cube of 6 is 216Function to get square:def   square (
+    num):​ return ( num* num)Function to get cube:def   cube ( num):​ return ( num*
+    num* num)Program# python program to find square and cube# of a given number# User
+    defind method to find squaredef square (num):​ return  (num*num)# User defind
+    method to find cubedef cube (num) :​ return  (num*num*num)# Main code# input a
+    numbernumber = int (raw_input("Enter an integer number: "))# square and cubeprint
+    "square of {0} is {1}".format(number, square(number))print "Cube of {0} is {1}".format(number,
+    cube (number))OutputEnter an integer number: 6square of 6 is 36Cube of 6 is 216Compute
+    the net amountOf a bank account based on the transactionsExample:Input:Enter transactions:
+    D 10000Want to continue (Y for yes): YEnter transaction: W 5000Want to continue
+    (Y for yes): YEnter transaction: D 2000Want to continue (Y for yes): YEnter transaction:
+    W 100Want to continue (Y for yes): NOutput:Net amount: 6900Program# computes net
+    bank amount based on the input# "D" for deposit, "W" for withdrawal# define a
+    variable for main amountnet_amount = 0while True:​ # input the transaction​ str
+    = raw_input ("Enter transaction: ")​ # get the value type and amount to the list​
+    # seprated by space​ transaction = str.split(" ")​ # get the value of transaction
+    type and amount​ # in the separated variables​ type = transaction [0]​ amount
+    = int (transaction [1])​ if type=="D" or type=="d":​ net_amount += amount​ elif
+    type=="W" or type=="w":​ net_amount -= amount​ else:​ pass​ #input choice​ str
+    = raw_input ("want to continue (Y for yes) : ")​ if not (str[0] =="Y" or str[0]
+    =="y") :​ # break the loop​ break# print the net amountprint "Net amount: ", net_amountOutputEnter
+    transaction: D 1000 0want to continue (Y for yes) : YEnter transaction: W 5000want
+    to continue (Y for yes) : YEnter transaction: D 2000want to continue (Y for yes)
+    : YEnter transaction: W 100want to continue (Y for yes) : NNet amount:  6900Convert
+    temperature in Python programFrom Celsius to Fahrenheit and vice-versaFormula
+    used:Celsius to Fahrenheit:  °C= (5/9)*(°F-32)Fahrenheit to Celsius:  °F= (9/5)*(°C)
+    + 32Program# Define a function to convert# celsius temperature to Fahrenheitdef
+    Celsius_to_Fahrenheit(c) :f = (9/5)*c + 32return f# Define a function to convert#
+    Fahrenheit temperature to Celsiusdef Fahrenheit_to_Celsius(f) :c = (5/9)*(f -
+    32)return c# Driver Codeif __name__ == "__main__" :c = 36print(c, "degree celsius
+    is equal to:",Celsius_to_Fahrenheit(c),"Fahrenheit")f = 98print(f,"Fahrenheit
+    is equal to:",Fahrenheit_to_Celsius(f),"degree celsius")Output36 degree celsius
+    is equal to: 96.8 Fahrenheit98 Fahrenheit is equal to: 36.66666666666667 degree
+    CelsiusPython program to convert meters into yardsKey:  1 meter = 1.094 yardsExample:Input:Meters:
+    245Output:Yards: 268.03000000000003Python code to convert Meters to yards# Python
+    program to convert Centimeter to Inches# taking inputnum = float(input("Enter
+    the distance measured in centimeter : "))# converting from cms to inches""" 1
+    inch = 2.54 centimeters"""inc = num/2.54# printing the resultprint("Distance in
+    inch : ", inc)OutputFirst run:Enter the distance measured in meters : 245Distance
+    in yards :  268.03000000000003Second run:Enter the distance measured in meters
+    : 54Distance in yards :  59.07600000000001Third run:Enter the distance measured
+    in meters : 100Distance in yards :  109.4Find the day in PythonIn this question,
+    the user will provide a particular date which could be from the past or the future
+    and we need to locate the weekday.To this end, we''ll use the calendar module
+    that provides us with various functions to solve the date, month and year related
+    problem.Until we go to find a specific date''s weekday, we must test if the date
+    given is correct or not.If the date given is not correct then we get some mistake.So
+    we will use the try-except statement to resolve this form of mistake.Syntax of
+    try-except statement:try:#statementexcept error_types:#statementProgram# importing
+    the moduleimport calendard,m,y=map(int,input(''Enter the value of date,month and
+    year: '').split())a=[''Monday'',''Tuesday'',''Wednesday'',''Thursday'',''Friday'',''Saturday'',''Sunday'']try:s=calendar.weekday(y,m,d)print(''Weekday:'',a[s])except
+    ValueError:print(''You have entered an invalid date.'')OutputRUN 1:Enter the value
+    of date, month and year: 28 10 2019Weekday: MondayRUN 2:Enter the value of date,
+    month and year: 32 10 2019You have entered an invalid date.Python array programsCreate
+    matrix in PythonConsider the below example,mat = [[10, 20, 30],[40, 50, 60],[70,
+    80, 80]]It can be considered a 3x3 matrix,There are 3 rows and 3 columns in ''
+    mat ''  matrix.Program# Python matrix creationmat = [[10, 20, 30],[40, 50, 60],[70,
+    80, 80]]# printing the matrixprint("mat: ", mat)# printing rowsprint("mat[0]:
+    ", mat[0])print("mat[1]: ", mat[1])print("mat[2]: ", mat[2])# printing specific
+    elementsprint("mat[0][0]: ", mat[0][0])print("mat[0][1]: ", mat[0][1])print("mat[0][2]:
+    ", mat[0][2])print("mat[1][0]: ", mat[1][0])print("mat[1][1]: ", mat[1][1])print("mat[1][2]:
+    ", mat[1][2])print("mat[2][0]: ", mat[2][0])print("mat[2][1]: ", mat[2][1])print("mat[2][2]:
+    ", mat[2][2])# printing matrix using loop (matrix form)print("Matrix is: ")for
+    i in range(3):for j in range(3):print(mat[i][j], end = " ")print() # prints new
+    lineOutputmat:  [[10, 20, 30], [40, 50, 60], [70, 80, 80]]mat[0]:  [10, 20, 30]mat[1]: 
+    [40, 50, 60]mat[2]:  [70, 80, 80]mat[0][0]:  10mat[0][1]:  20mat[0][2]:  30mat[1][0]:  40mat[1][1]:  50mat[1][2]:  60mat[2][0]:  70mat[2][1]:  80mat[2][2]:  80Matrix
+    is:10 20 3040 50 6070 80 80Python program to create matrix using numpyUsing numpy.array()mat
+    = numpy. array([[ 10 , 20 , 30 ],[ 40 , 50 , 60 ],[ 70 , 70 , 90 ]])Using numpy.matrix()mat
+    = numpy. matrix( "10 20 30; 40 50 60; 70 80 90" )Program# Python matrix creation
+    using numpy# importing the numpyimport numpy as np# creating matrix using numpy.array()mat1
+    = np.array([[10,20,30],[40,50,60],[70,70,90]])# printing matrixprint("mat1...")print(mat1)#
+    creating matrix using numpy.matrix()mat2 = np.matrix("10 20 30; 40 50 60; 70 80
+    90")# printing matrixprint("mat2...")print(mat2)Outputmat1...[[10 20 30][40 50
+    60][70 70 90]]mat2...[[10 20 30][40 50 60][70 80 90]]Python Date & Time ProgramsPython
+    program to print current hour, minute, second and microsecondSteps:Import the
+    datetime class, from “datetime module”Create an object by -calling the now() function
+    of datetime classExtract and print the current hour, minute, second and microsecond
+    using the object of datetime.now() .Program# Python program to print current hour,#
+    minute, second and microsecond# importing the datetime class from# datetime modulefrom
+    datetime import datetime# creating objectobj_now = datetime.now()# printing the
+    current date and timeprint("Current date & time: ", obj_now)# extracting and printing
+    the current# hour, minute, second and microsecondprint("Current hour =", obj_now.hour)print("Current
+    minute =", obj_now.minute)print("Current second =", obj_now.second)print("Current
+    microsecond =", obj_now.microsecond)OUTPUTCurrent date & time:  2020-07-30 14:43:52.294475Current
+    hour = 14Current minute = 43Current second = 52Current microsecond = 294475Python
+    code to print today''s year, month and dayIn the example below – a python program
+    is being implemented to print the current / current year, month and year.CODE#
+    Python program to# print today''s year, month and day# importing the date class
+    datetime modulefrom datetime import date# creating the date object of today''s
+    datecurrent_date = date.today()# printing the current dateprint("Current date:
+    ", current_date)# extracting the current year, month and dayprint("Current year:",
+    current_date.year)print("Current month:", current_date.month)print("Current day:",
+    current_date.day)OUTPUTCurrent date:  2020-07-30Current year: 2020Current month:
+    7Current day: 30>Python ListsProgram for Adding, removing elements in the listPython
+    List append() MethodIt is used to add / append an item to the list (that will
+    be passed as a parameter in method).Syntax:list.append(element)Here,List-is a
+    list name.Append()-is the name of the method which is used to add element / object
+    to the list.Item-is an element to be added to the list (which is known as an object
+    or item).Python List pop() MethodUsing this to remove / pop an item from the listSyntax:list.pop()Here,List 
+    - is the list name.Pop()  - is the name of the method used to delete last item
+    from the list.PROGRAM# Declaring a list with integer and string elementslist =
+    [10, 20, 30, "New Delhi", "Mumbai"]# printing listprint "List elements are: ",
+    list# adding elementslist.append (40)list.append (50)list.append ("Chennai")#
+    printing list after adding elementsprint "List elements: ", list# removing elementslist.pop
+    () ;# printing listprint "List elements: ", list# removing elementslist.pop ()
+    ;# printing listprint "List elements: ", listOutpu tList elements are:  [10, 20,
+    30, ''New Delhi'', ''Mumbai'']List elements:  [10, 20, 30, ''New Delhi'', ''Mumbai'',
+    40, 50, ''Chennai'']List elements:  [10, 20, 30, ''New Delhi'', ''Mumbai'', 40,
+    50]List elements:  [10, 20, 30, ''New Delhi'', ''Mumbai'', 40]Program to find
+    the differences of two listsGiven two integer lists, we will find the differences,
+    i.e. the elements that do not exist in the second lists.Example:Input:List1 =
+    [10, 20, 30, 40, 50]List2 = [10, 20, 30, 60, 70]Output:Different elements:[40,
+    50]PROGRAM# list1 - first list of the integers# lists2 - second list of the integerslist1
+    = [10, 20, 30, 40, 50]list2 = [10, 20, 30, 60, 70]# printing listsprint "list1:",
+    list1print "list2:", list2# finding and printing differences of the listsprint
+    "Difference elements:"print (list (set(list1) - set (list2)))Outputlist1: [10,
+    20, 30, 40, 50]list2: [10, 20, 30, 60, 70]Difference elements:[40, 50]PROGRAM
+    2With mixed element type, print 1) the elements that do not exist in list 2 and
+    2) those that do not exist in list 1.# list1 - first list with mixed type elements#
+    lists2 - second list with mixed type elementslist1 = ["Amit", "Shukla", 21, "New
+    Delhi"]list2 = ["Aman", "Shukla", 21, "Mumbai"]# printing listsprint "list1:",
+    list1print "list2:", list2# finding and printing differences of the listsprint
+    "Elements not exists in list2:"print (list (set(list1) - set (list2)))print "Elements
+    not exists in list1:"print (list (set(list2) - set (list1)))Outpu tlist1: [''Amit'',
+    ''Shukla'', 21, ''New Delhi'']list2: [''Aman'', ''Shukla'', 21, ''Mumbai'']Elements
+    not exists in list2:[''Amit'', ''New Delhi'']Elements not exists in list1:[''Aman'',
+    ''Mumbai'']Program to remove duplicate elements from the listExample:Input:list1:  [10,
+    20, 10, 20, 30, 40, 30, 50]Output:List after removing duplicate elementslist2:  [10,
+    20, 30, 40, 50]LogicIt is too easy to implement the program by adding elements
+    one by one to another list by checking whether or not element is available in
+    the new list.Let''s assume that 20 is available in list 1 three times, and when
+    we add 20 (first occurrence) to list 2, it will be added, but when we add 20 (second
+    occurrence) to list 2, condition will be false and element will not be added to
+    list. And finally, without duplicate elements we''ll get list.PROGRAM# declare
+    listlist1 = [10, 20, 10, 20, 30, 40, 30, 50]# creating another list with unique
+    elements# declare another listlist2 = []# appending elementsfor n in list1:​ if
+    n not in list2:​ list2.append(n)# printing the listsprint "Original list"print
+    "list1: ", list1print "List after removing duplicate elements"print "list2: ",
+    list2OutputOriginal listlist1:  [10, 20, 10, 20, 30, 40, 30, 50]List after removing
+    duplicate elementslist2:  [10, 20, 30, 40, 50]Program (Defining By User defines
+    function):# Function to remove duplicatesdef removeDuplicates (list1):​ # declare
+    another list​ list2 = []​ # appending elements​ for n in list1:​ if n not in list2:​
+    list2.append (n)​ return list2# Main code# declare a listlist1 = [10, 20, 10,
+    20, 30, 40, 30, 50]# print the listprint "Original list: ", list1print "List after
+    duplicate remove: ", removeDuplicates (list1)OutputOriginal list:  [10, 20, 10,
+    20, 30, 40, 30, 50]List after duplicate remove:  [10, 20, 30, 40, 50]Create three
+    lists of numbers, their squares and cubesExample:Input:Start = 1End = 10Output:numbers:
+    [1, 2, 3, 4, 5, 6, 7, 8,  9, 10]squares: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]cubes 
+    : [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]LogicThree lists to declare.Defining
+    range, here we define beginning with 1 and ending with 10.Run a loop with the
+    range as range (start, end + 1) and count as loop counter.Connect the count of
+    the loop counter to the list named numbers, connect the square to the list called
+    squares and add the cube to the list called cubes.In the end, print out the lists.PROGRAM#
+    declare listsnumbers = []squares = []cubes = []# start and end numbersstart =
+    1end = 10# run a loop from start to end+1for count in range (start, end+1) :numbers.append
+    (count)squares.append (count**2)cubes.append (count**3)# print the listsprint
+    "numbers: ",numbersprint "squares: ",squaresprint "cubes  : ",cubesOutputnumbers: 
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]squares:  [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]cubes 
+    :  [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]Iterate a list in reverse orderGiven
+    a list, and in python we can iterate it in reverse order.Example:Input:List =
+    [10, 20, 30, 40, 50]Output:list = [50, 40, 30, 20, 10]Input;list = [''Hello'',
+    10 ''World'', 20]Output:list = [20, ''World'', 10, ''Hello'']PROGRAM# define a
+    listlist1  = [10, 20, 30, 40, 50]# print the listprint "original list: ", list1#
+    iterate the listlist1 = list1[::-1]# print the listprint "list in reverse order:
+    ", list1# another list with string and integer elementslist2 = [''Hello'', 10,
+    ''world'', 20]# print the listprint "Original list: ", list2# iterate the listlist2
+    = list2[::-1]# print the listprint "list in reverse order: ", list2Outputoriginal
+    list:  [10, 20, 30, 40, 50]list in reverse order:  [50, 40, 30, 20, 10]Original
+    list:  [''Hello'', 10, ''world'', 20]list in reverse order:  [20, ''world'', 10,
+    ''Hello'']Print list after removing EVEN numbersExample:Input:list = [11, 22,
+    33, 44, 55]Output:list after removing EVEN numberslist = [11, 33, 55]LOGICUsing
+    for ... in loop to traverse every number in the sequence.Test the condition, i.e.
+    the number is divisible by 2 or not – the number must be divisible by 2 .If number
+    is divisible by 2 Then Remove the number from listUsing list.remove() method to
+    remove the number from list.PROGRAM# list with EVEN and ODD numberlist = [11,
+    22, 33, 44, 55]# print original listprint "Original list:"print list# loop to
+    traverse each element in the list# and, remove elements# which are EVEN (divisible
+    by 2)for i  in list:​ if(i%2 == 0):​     list.remove(i)# print list after removing
+    EVEN elementsprint "list after removing EVEN numbers:"print listOutputOriginal
+    list:[11, 22, 33, 44, 55]list after removing EVEN numbers:[11, 33, 55]Python string
+    programsDeclare, assign and print the string (Different ways)'
+  toc: []
+  trans: "\n您的 BMI 为 `28.8979s9183673468`，您的状态是：健康。\n\n# 用 Python 写函数求给定数字的平方和立方\n\
+    \n### 示例\n输入：\n输入一个整数：6\n输出：\n6 的平方是 36\n6 的立方是 216\n\n获取平方的函数：\n```python\ndef\
+    \ square (num):\n    return (num* num)\n```\n获取立方的函数：\n```python\ndef cube (num):\n\
+    \    return (num* num* num)\n```\n\n### 程序\n```python\n# python 程序，用于求给定数字的\n\
+    # 平和立方\n# 用户定义方法求平方\ndef square (num):\n    return (num*num)\n\n# 用户定义方法求立方\n\
+    def cube (num):\n    return (num*num*num)\n\n# 主代码\n# 输入一个数字\nnumber = int (raw_input(\"\
+    Enter an integer number: \"))\n# 平方和立方\nprint \"square of {0} is {1}\".format(number,\
+    \ square(number))\nprint \"Cube of {0} is {1}\".format(number, cube (number))\n\
+    ```\n输出\n输入一个整数：6\nsquare of 6 is 36\nCube of 6 is 216\n\n---\n\n# 根据交易记录计算银行账户净额\n\
+    \n### 示例\n输入：\n输入交易：D 10000\n继续吗？(Y 为是)：Y\n输入交易：W 5000\n继续吗？(Y 为是)：Y\n输入交易：D 2000\n\
+    继续吗？(Y 为是)：Y\n输入交易：W 100\n继续吗？(Y 为是)：N\n输出：\n净额：6900\n\n### 程序\n```python\n# 根据输入计算银行净额\n\
+    # \"D\" 代表存款，“W\" 代表取款\n# 为主金额定义一个变量\nnet_amount = 0\nwhile True:\n    # 输入交易\n\
+    \    str = raw_input (\"Enter transaction: \")\n    # 获取类型和金额并到列表中\n    # 用空格分隔\n\
+    \    transaction = str.split(\" \")\n    # 获取交易类型和金额的值\n    # 存储在分离的变量中\n    type\
+    \ = transaction [0]\n    amount = int (transaction [1])\n    if type==\"D\" or\
+    \ type==\"d\":\n        net_amount += amount\n    elif type==\"W\" or type==\"\
+    w\":\n        net_amount -= amount\n    else:\n        pass\n    # 输入选择\n    str\
+    \ = raw_input (\"want to continue (Y for yes) : \")\n    if not (str[0] ==\"Y\"\
+    \ or str[0] ==\"y\") :\n        # 跳出循环\n        break\n# 打印净额\nprint \"Net amount:\
+    \ \", net_amount\n```\n输出\n输入交易：D 10000 \nwant to continue (Y for yes) : Y\n输入交易：W\
+    \ 5000\nwant to continue (Y for yes) : Y\n输入交易：D 2000\nwant to continue (Y for\
+    \ yes) : Y\n输入交易：W 100\nwant to continue (Y for yes) : N\nNet amount: 6900\n\n\
+    ---\n\n# Python 程序中温度的转换\n\n从摄氏度到华氏度，反之亦然\n\n### 使用的公式\n摄氏度到华氏度：`°C= (5/9)*(°F-32)`\n\
+    华氏度到摄氏度：`°F= (9/5)*(°C) + 32`\n\n### 程序\n```python\n# 定义一个函数转换\n# 摄氏度温度到华氏度\n\
+    def Celsius_to_Fahrenheit(c) :\n    f = (9/5)*c + 32\n    return f\n\n# 定义一个函数转换\n\
+    # 华氏度温度到摄氏度\ndef Fahrenheit_to_Celsius(f) :\n    c = (5/9)*(f - 32)\n    return\
+    \ c\n\n# 驱动代码\nif __name__ == \"__main__\" :\n    c = 36\n    print(c, \"degree\
+    \ celsius is equal to:\",Celsius_to_Fahrenheit(c),\"Fahrenheit\")\n    f = 98\n\
+    \    print(f,\"Fahrenheit is equal to:\",Fahrenheit_to_Celsius(f),\"degree celsius\"\
+    )\n```\n输出\n36 degree celsius is equal to: 96.8 Fahrenheit\n98 Fahrenheit is equal\
+    \ to: 36.666666666666667 degree Celsius\n\n---\n\n# 将米转换为码的 Python 程序\n\n关键：`1\
+    \ meter = 1.094 yards`\n\n### 示例\n输入：\n米：245\n输出：\n码：268.03000000000003\n\n###\
+    \ 将米转换为码的 Python 代码\n```python\n# Python 程序，将厘米转换为英寸\n# 接收输入\nnum = float(input(\"\
+    Enter the distance measured in centimeter : \"))\n# 从厘米转为英寸\n\"\"\" 1 inch = 2.54\
+    \ centimeters\"\"\"\ninc = num/2.54\n# 打印结果\nprint(\"Distance in inch : \", inc)\n\
+    ```\n输出\n第一次运行：\n输入以米为单位的距离： 245\nDistance in yards : 268.03000000000003\n第二次运行：\n\
+    输入以米为单位的距离： 54\nDistance in yards : 59.07000000000001\n第三次运行：\n输入以米为单位的距离： 100\n\
+    Distance in yards : 109.4\n\n---\n\n# 在 Python 中查找星期几\n\n在这些问题中，用户将提供一个日期（可能是过去的或未来的），我们需要找到它是星期几。到此，我们将使用\
+    \ `calendar` 模块提供的各种函数。在找到星期几之前，必须测试提供的日期是否正确。如果日期不正确，我们将得到错误。因此使用 `try-except`\
+    \ 语句来解决这个问题。\n\n### try-except 语句\n```python\n# \n# 模块\nimport calendar\nd,m,y=map(int,input('Enter\
+    \ the value of date,month and year: ').split())\na=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']\n\
+    try:\n    s=calendar.weekday(y,m,d)\n    print('Weekday:',a[s])\nexcept ValueError:\n\
+    \    print('You entered an invalid date.')\n```\n输出\n第一次运行：\n输入日期、月份和年份：20 10\
+    \ 2019\nWeekday: Monday\n第二次运行：\n输入日期、月份和年份：32 10 2019\nYou entered an invalid\
+    \ date.\n\n---\n\n# Python 数组创建矩阵\n\n考虑下面的示例，`mat = [[10, 20, 30],[40, 50, 60],[70,\
+    \ 80, 90]]` 可以是一个 3x3 矩阵，有 3 行 3 列。\n\n### 程序\n```python\n# Python 矩阵创建\nmat =\
+    \ [[10, 20, 30],[40, 50, 60],[70, 80, 90]]\n# 打印矩阵\nprint(\"mat: \", mat)\n# 打印行\n\
+    print(\"mat[0]: \", mat[0])\nprint(\"mat[1]: \", mat[1])\nprint(\"mat[2]: \",\
+    \ mat[2])\n# 打印特定元素\nprint(\"mat[0][0]: \", mat[0][0])\nprint(\"mat[0][1]: \"\
+    , mat[0][1])\nprint(\"mat[0][2]: \", mat[0][2])\nprint(\"mat[1][0]: \", mat[1][0])\n\
+    print(\"mat[1][1]: \", mat[1][1])\nprint(\"mat[1][2]: \", mat[1][2])\nprint(\"\
+    mat[2][0]: \", mat[2][0])\nprint(\"mat[2][1]: \", mat[2][1])\nprint(\"mat[2][2]:\
+    \ \", mat[2][2])\n# 使用循环打印矩阵（矩阵形式）\nprint(\"Matrix is: \")\nfor i in range(3):\n\
+    \    for j in range(3):\n        print(mat[i][j], end = \")\n    print() # 打印换行\n\
+    ```\n\n---\n\n### 使用 `numpy.array()`\n```python\nimport numpy as np\nmat = np.array([[\
+    \ 10 , 20 , 30 ],[40 , 50 , 60 ],[ 70 , 70 , 90 ])\n```\n\n### 使用 `numpy.matrix()`\n\
+    ```python\nmat = numpy.matrix( \"10 20 30; 40 50 60; 70 80 90\" )\n```\n\n###\
+    \ 程序\n```python\n# 使用 numpy 创建矩阵\nimport numpy as np\n# 使用 numpy.array() 创建矩阵\n\
+    mat1 = np.array([[10,20,30],[40,50,60],[70,70,90]])\n# 打印矩阵\nprint(\"mat1...\"\
+    )\nprint(mat1)\n# 使用 numpy.matrix() 创建矩阵\nmat2 = np.matrix(\"10 20 30; 40 50 60;\
+    \ 70 80 90\")\n# 打印矩阵\nprint(\"mat2...\")\nprint(mat2)\n```\n输出\nmat1...\n[[10\
+    \ 20 30]\n [40 50 60]\n [70 70 90]]\nmat2...\n[[10 20 30]\n [40 50 60]\n [70 80\
+    \ 90]]\n\n---\n\n# Python 日期与时间程序\n\n## 打印当前小时、分钟、秒和微秒的 Python 程序\n\n### 步骤\n\
+    1. 从“datetime 模块”导入 `datetime` 类。\n2. 通过调用 `datetime` 类的 `now()` 函数创建对象。\n3. 使用\
+    \ `datetime.now()` 对象提取并打印当前的小时、分钟、秒和微秒。\n\n### 程序\n```python\n# 打印当前小时、\n# 分钟、秒和微秒的\
+    \ Python 程序\n# 从 datetime 模块导入 datetime 类\nfrom datetime import datetime\n# 创建对象\n\
+    obj_now = datetime.now()\n# 打印当前日期时间\nprint(\"Current date & time: \", obj_now)\n\
+    # 提取并打印当前的\n# 小时、分钟、秒和微秒\nprint(\"Current hour =\", obj_now.hour)\nprint(\"Current\
+    \ minute =\", obj_now.minute)\nprint(\"Current second =\", obj_now.second)\nprint(\"\
+    Current microsecond =\", obj_now.microsecond)\n```\n输出\nCurrent date & time: 2020-07-30\
+    \ 14:43:52.294475\nCurrent hour = 14\nCurrent minute = 43\nCurrent second = 52\n\
+    Current microsecond = 294475\n\n---\n\n# Python 代码打印今天的年、月、日\n\n下面的示例——Python\
+    \ 程序打印当前的年、月、日。\n\n### 代码\n```python\n# 打印今天的年、月、日的程序\n# 导入 date 类\nfrom datetime\
+    \ import date\n# 创建今天的对象\ncurrent_date = date.today()\n# 打印当前日期\nprint(\"Current\
+    \ date: \", current_date)\n# 提取年、月、日\nprint(\"Current year:\", current_date.year)\n\
+    print(\"Current month:\", current_date.month)\nprint(\"Current day:\", current_date.day)\n\
+    ```\n输出\nCurrent date: 2020-07-30\nyear: 2020\nmonth: 7\nday: 30\n\n---\n\n# Python\
+    \ 列表\n\n## 在列表中添加元素\n\n### `append()` 方法\n用于向列表添加项（将作为参数传递）。\n\n### 语法\n`list.append(element)`\n\
+    \n```python\n# 定义一个包含整数和字符串的列表\nlist = [10, 20, 30, \"New Delhi\"]\n# 打印列表\nprint\
+    \ \"List elements: \", list\n# 添加元素\nlist.append(40)\nlist.append(50)\nlist.append(\"\
+    Chennai\")\n# 添加元素后打印列表\nprint \"List elements: \", list\n```\n输出\nList elements\
+    \ are: [10, 20, 30, 'New Delhi', 40, 50, 'Chennai']\n\n### `pop()` 方法\n用于从列表中移除项。\n\
+    \n### 语法\n`list.pop()`\n\n```python\n# 定义一个包含整数和字符串的列表\nlist = [10, 20, 30, \"\
+    New Delhi\", \"Mumbai\"]\n# 打印列表\nprint \"List elements: \", list\n# 添加元素\nlist.append(40)\n\
+    list.append(50)\nlist.append(\"Chennai\")\n# 添加元素后打印列表\nprint \"List elements:\
+    \ \", list\n# 移除元素\nlist.pop()\n# 移除元素后打印列表\nprint \"List elements: \", list\n\
+    ```\n输出\nList elements are: [10, 20, 30, 'New Delhi', 'Mumbai', 40, 50, 'Chennai']\n\
+    List elements are: [10, 20, 30, 'New Delhi', 'Mumbai', 40, 50, 'Chennai']\nList\
+    \ elements are: [10, 20, 30, 'New Delhi', 'Mumbai', 40, 50]\n\n---\n\n# 两个列表的差异\n\
+    \n给定两个整数列表，我们将找到差异，即不在第二个列表中的元素。\n\n### 示例\n输入：\nList1 = [10, 20, 30, 40, 50]\n\
+    List2 = [10, 20, 30, 60, 70]\n输出：\nDifferent elements:[40, 50]\n\n### 程序\n```python\n\
+    # list1 - 第一个整数列表\n# list2 - 第二个整数列表\nlist1 = [10, 20, 30, 40, 50]\nlist2 = [10,\
+    \ 20, 30, 60, 70]\n# 打印列表\nprint \"list1:\", list1\nprint \"list2:\", list2\n\
+    # 查找并打印列表的差异\nprint \"Difference elements:\"\nprint (set(list1) - set(list2))\n\
+    ```\n输出\nlist1: [10, 20, 30, 40, 50]\nlist2: [10, 20, 30, 60, 70]\nDifference\
+    \ elements: [40, 50]\n\n### 程序 2\n带有混合元素类型，打印 1) 不在列表 2 中的元素和 2) 不在列表 1 中的元素。\n\
+    ```python\n# list1 - 混合类型元素的第一个列表\n# list2 - 混合类型元素的第二个列表\nlist1 = [\"Amit\",\
+    \ \"Shukla\", 21, \"New Delhi\"]\nlist2 = [\"Aman\", \"Shukla\", 21, \"Mumbai\"\
+    ]\n# 打印列表\nprint \"list1:\", list1\nprint \"list2:\", list2\n# 查找并打印列表的差异\nprint\
+    \ \"Elements not exists in list2:\"\nprint (set(list1) - set(list2))\nprint \"\
+    Elements not exists in list1:\"\nprint (set(list2) - set(list1))\n```\n输出\nlist1:\
+    \ ['Amit', 'Shukla', 21, 'New Delhi']\nlist2: ['Aman', 'Shukla', 21, 'Mumbai']\n\
+    Elements not exists in list2: ['Amit', 'New Delhi']\nElements not exists in list1:\
+    \ ['Aman', 'Mumbai']\n\n---\n\n# 从列表中删除重复元素的程序\n\n### 示例\n输入：\nlist1: [10, 20,\
+    \ 10, 20, 30, 40, 30, 50]\n输出：\nlist2: [10, 20, 30, 40, 50]\n\n### 逻辑\n程序很容易通过一个一个地将元素添加到另一个列表中，检查该元素是否已经在新列表中。假设\
+    \ 20 在列表 1 中出现了三次，当我们把 20 添加到列表 2 时，条件为假，元素将不会被添加。最后，我们得到了没有重复元素的列表。\n\n### 程序\n\
+    ```python\n# 列表\nlist1 = [10, 20, 10, 20, 30, 40, 30, 50]\n# 创建另一个带有唯一元素的列表\n\
+    list2 = []\n# 添加元素\nfor n in list1:\n    if n not in list2:\n        list2.append(n)\n\
+    # 打印列表\nprint \"Original list\"\nprint \"list1:\", list1\nprint \"List after duplicate\
+    \ elements\"\nprint \"list2:\", list2\n```\n输出\nOriginal list\nlist1: [10, 20,\
+    \ 10, 20, 30, 40, 30, 50]\nList after duplicate elements\nlist2: [10, 20, 30,\
+    \ 40, 50]\n\n---\n\n## 程序（用户定义函数）\n\n### 去重函数\n```python\ndef removeDuplicates(list1):\n\
+    \    # 创建另一个列表\n    list2 = []\n    # 添加元素\n    for n in list1:\n        if n\
+    \ not in list2:\n            list2.append(n)\n    return list2\n\n# 主代码\nlist1\
+    \ = [10, 20, 10, 20, 30, 40, 30, 50]\n# 打印列表\nprint \"Original list\"\nprint \"\
+    list1:\", list1\nprint \"List after duplicate remove: \", removeDuplicates(list1)\n\
+    ```\n输出\nOriginal list\nlist1: [10, 20, 10, 20, 30, 40, 30, 50]\nList after duplicate\
+    \ remove:  [10, 20, 30, 40, 50]\n\n---\n\n# 创建三个数字的列表，它们的平方和立方\n\n### 示例\n输入：\n\
+    Start = 1\nEnd = 10\n输出：\nnumbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\nsquares: [1,\
+    \ 4, 9, 16, 25, 36, 49, 64, 81, 100]\ncubes: [1, 8, 27, 64, 125, 216, 343, 512,\
+    \ 729, 1000]\n\n### 逻辑\n创建三个列表。在这里定义开始为 1 结束为 10。运行循环 `range(start, end + 1)`\
+    \ 并用 `count` 作为循环计数器。将计数器的 `count` 连接到名为 `numbers` 的列表，将平方连接到 `squares` 列表，并将立方添加到\
+    \ `cubes` 列表中。最后，打印出列表。\n\n### 程序\n```python\n# 定义列表\nnumbers = []\nsquares =\
+    \ []\ncubes = []\n# 开始和结束\nstart = 1\nend = 10\n# 从 start 到 end+1 运行循环\nfor count\
+    \ in range(start, end+1) :\n    numbers.append(count)\n    squares.append(count**2)\n\
+    \    cubes.append(count**3)\n# 打印列表\nprint \"numbers:\", numbers\nprint \"squares:\"\
+    , squares\nprint \"cubes: \", cubes\n```\n输出\nnumbers: [1, 2, 3, 4, 5, 6, 7, 8,\
+    \ 9, 10]\nsquares: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]\ncubes: [1, 8, 27, 64,\
+    \ 125, 216, 343, 512, 729, 1000]\n\n---\n\n# 反序迭代列表\n\n给定一个列表，在 Python 中我们可以反序迭代它。\n\
+    \n### 示例\n输入：\nList = [10, 20, 30, 40, 50]\n输出：\nlist = [50, 40, 30, 20, 10]\n\
+    输入：\nlist = ['Hello', 10, 'World', 20]\n输出：\nlist = [20, 'World', 10, 'Hello']\n\
+    \n### 程序\n```python\n# 定义一个列表\nlist1 = [10, 20, 30, 40, 50]\n# 打印列表\nprint \"\
+    original list:\", list1\n# 迭代列表\nlist1 = list1[::-1]\n# 打印列表\nprint \"list in\
+    \ reverse order:\", list1\n\n# 另一个带有字符串和整数的列表\nlist2 = ['Hello', 10, 'world',\
+    \ 20]\n# 打印列表\nprint \"original list:\", list2\n# 迭代列表\nlist2 = list2[::-1]\n\
+    # 打印列表\nprint \"list in reverse order:\", list2\n```\n输出\noriginal list: [10,\
+    \ 20, 30, 40, 50]\nlist in reverse order: [50, 40, 30, 20, 10]\noriginal list:\
+    \ ['Hello', 10, 'world', 20]\nlist in reverse order: [20, 'world', 10, 'Hello']\n"
+- fmt: '
+
+    | Ways | Syntax | Description |
+
+    | :--- | :--- | :--- |
+
+    | Way1 | Single quotes `''Message''` | Assign a single line string. |
+
+    | Way2 | Double quotes `"Message"` | Assign a single line string. |
+
+    | Way3 | Triple single quotes `''''''Message''''''` | Assign single line as well
+    as multi-line string. |
+
+    | Way4 | Triple double quotes `"""Message"""` | Assign single line as well as
+    multi-line string. |
+
+    '
+  raw: '| Ways | Syntax | Description |
+
+
+    | Way1 | Single quotes ''Message'' | Assign a single line string. |
+
+
+    | Way2 | Double quotes "Message" | Assign a single line string. |
+
+
+    | Way3 | Triple single quotes ''''''Message'''''' | Assign single line as well
+    as multi-line string. |
+
+
+    | Way4 | Triple double quotes """Message""" | Assign single line as well as multi-line
+    string. |'
+  toc: []
+  trans: '
+
+
+    | 方法 | 语法 | 描述 |
+
+    | :--- | :--- | :--- |
+
+    | Way1 | 单引号 `''Message''` | 分配单行字符串。 |
+
+    | Way2 | 双引号 `"Message"` | 分配单行字符串。 |
+
+    | Way3 | 三单引号 `''''''Message''''''` | 分配单行及多行字符串。 |
+
+    | Way4 | 三双引号 `"""Message"""` | 分配单行及多行字符串。 |
+
+
+    '
+- fmt: "\n# PROGRAM: String Operations\n\n## Declare, assign string (1)\nUsing single\
+    \ quotes `'string'`\n```python\nstr1 = 'Hello world, How are you?'\n```\n\n##\
+    \ Declare, assign string (2)\nUsing double quotes `\"string\"`\n```python\nstr2\
+    \ = \"Hello world, How are you?\"\n```\n\n## Declare assign string (3)\nUsing\
+    \ triple single quotes `'''string'''`\n```python\nstr3 = '''Hello world, How are\
+    \ you?'''\n```\n\n## Declare assign string (4)\nUsing triple double quotes `\"\
+    \"\"string\"\"\"`\n```python\nstr4 = \"\"\"Hello world, How are you?\"\"\"\n```\n\
+    \n## Declare, assign multi-line string (5)\nTriple double quotes allows to assign\
+    \ multi-line string\n```python\nstr5 = '''Hello world,How are you?'''\n```\n\n\
+    ## print the string\n```python\nprint \"str1: \", str1\nprint \"str2: \", str2\n\
+    print \"str3: \", str3\nprint \"str4: \", str4\nprint \"str5: \", str5\n```\n\
+    **Output:**\n```\nstr1:  Hello world, How are you?\nstr2:  Hello world, How are\
+    \ you?\nstr3:  Hello world, How are you?\nstr4:  Hello world, How are you ?\n\
+    str5:  Hello world,How are you?\n```\n\n## Access and print characters from the\
+    \ string\n**Example:**\n**Input:** `str: \"Hello world\"`\n**Output:**\n```\n\
+    First character: H\nSecond character: e\nLast character: d\nSecond last character:\
+    \ l\nCharacters from 0th to 4th index: Hello\nAnd, so on...\n\n# PROGRAM: Access\
+    \ characters in string\n\n## declare, assign string\n```python\nstr = \"Hello\
+    \ world\"\n# print complete string\nprint \"str:\", str\n# print first character\n\
+    print \"str[0]:\", str[0]\n# print second character\nprint \"str[1]:\", str[1]\n\
+    # print last character\nprint \"str[-1]:\", str[-1]\n# print second last character\n\
+    print \"str[-2]:\", str[-2]\n# print characters from 0th to 4th index i.e. first\
+    \ 5 characters\nprint \"str[0:5]:\", str[0:5]\n# print characters from 2nd index\
+    \ to 2nd last index\nprint \"str[2,-2]:\", str[2:-2]\n# print string character\
+    \ by character\nprint \"str:\"\nfor i in str:\n    print i,#comma after the variable\n\
+    \    # it does not print new line\n```\n**Output:**\n```\nstr: Hello world\nstr[0]:\
+    \ H\nstr[1]: e\nstr[-1]: d\nstr[-2]: l\nstr[0:5]: Hell\nstr[2,-2]: llo wor\nstr:H\
+    \ e l l o    w o r l d\n```\n\n## Program to print words with their length of\
+    \ a string\n**Example:**\n**Input:** `str = \"Hello World How are you?\"`\n**Output:**\n\
+    ```\nHello ( 5 )\nWorld ( 5 )\nHow ( 3 )\nare ( 3 )\nyou? ( 4 )\n```\n\n### String.split()\
+    \ Method\nTo split the string into words, we use the method `split()`, an inbuilt\
+    \ method that splits the string into sub-string (words) defined by the given delimiter.\n\
+    \n**split() Method Syntax:** `String.split(delimiter)`\n\n**EXPLANATION:**\nFor\
+    \ example, there's a string `str = \"ABC PQR XYZ\"` and we want to break it into\
+    \ words using space to divide it, then space here would be delimiter. The statement\
+    \ will be `str.split(\" \")` to break the string into words, and then output will\
+    \ be `\"ABC\" \"PQR\" \"XYZ.\"`.\n\n## PROGRAM: Function to split into words and\
+    \ print words with its length\n```python\ndef splitString (str):\n    # split\
+    \ the string by spaces\n    str = str.split (' ')\n    # iterate words in string\n\
+    \    for words in str:\n        print words,\" (\", len (words), \")\"\n\n# Main\
+    \ code\n# declare string and assign values\nstr = \"Hello World How are you?\"\
+    \n# call the function\nsplitString(str)\n```\n**Output:**\n```\nHello  ( 5 )\n\
+    World  ( 5 )\nHow  ( 3 )\nare  ( 3 )\nyou?  ( 4 )\n```\n\n## Count vowels in a\
+    \ string\n**Example:**\n**Input:** `Str = \"Hello world\"`\n**Output:**\n```\n\
+    Total vowels are: 3\n```\n\n## PROGRAM: count vowels in a string\n```python\n\
+    # declare, assign string\nstr = \"Hello world\"\n# declare count\ncount = 0\n\
+    # iterate and check each character\nfor i in str:\n    # check the conditions\
+    \ for vowels\n    if( i=='A' or i=='a' or i=='E' or i=='e'\n    or i=='I' or i=='i'\
+    \ or i=='O' or i=='o'\n    or i=='U' or i=='u'):\n        count +=1;# print count\n\
+    print \"Total vowels are: \", count\n```\n**Output:**\n```\nTotal vowels are:\
+    \  3\n```\n\n## Create multiple copies of a string by using multiplication operator\n\
+    Using multiplication operator to create multiple copies of a string, the multiplication\
+    \ operator (`*`) will be used.\n\n**Example:**\n**Input:** `str1 = \"Hello\"`,\
+    \ `n = 3`\n**logic:** `str2 = str1*3`\n\n## PROGRAM: Python program to create\
+    \ N copies of a given string\n```python\n# define inputs: string and N\nstr1 =\
+    \ \"Hello\"\nn = 3\n# create copies\nstr2 = str1 * 3\n# print\nprint \"str1: \"\
+    , str1\nprint \"str2: \", str2\n```\n**Output:**\n```\nstr1:  Hello\nstr2:  HelloHelloHello\n\
+    ```\n\n---\n\n# C PROGRAMMING EXAMPLES\n## PROGRAMMING FOR BEGINNERS J KING C\
+    \ PROGRAMMING EXAMPLES\n\n## C program to find SUM and AVERAGE of two numbers\n\
+    Sum and Average of two numbers\n```c\n/* c program find sum and average of two\
+    \ numbers*/\n#include <stdio.h>\nint main(){\n    int a,b,sum;\n    float avg;\n\
+    \    printf(\"Enter first number :\");\n    scanf(\"%d\",&a);\n    printf(\"Enter\
+    \ second number :\");\n    scanf(\"%d\",&b);\n    sum=a+b;\n    avg= (float)(a+b)/2;\n\
+    \    printf(\"\\nSum of %d and %d is = %d\",a,b,sum);\n    printf(\"\\nAverage\
+    \ of %d and %d is = %f\",a,b,avg);\n    return 0;\n}\n```\n**Output:**\n```\n\
+    Enter first number :10\nEnter second number :15\nSum of 10 and 15 is = 25\nAverage\
+    \ of 10 and 15 is = 12.500000\n```\n\n## C program to print ASCII value of character\n\
+    ```c\n#include <stdio.h>\nint main(){\n    char ch;\n    //input character\n \
+    \   printf(\"Enter the character: \");\n    scanf(\"%c\",&ch);\n    printf(\"\
+    ASCII is %d\\n\", ch);\n    return 0;\n}\n```\n**Output:**\n```\nFirst run:Enter\
+    \ the character: a\nASCII = 97\nSecond run:Enter the character: A\nASCII = 65\n\
+    ```\n\n## C program to print all numbers from 1 to N using statement\n```c\n#include\
+    \ <stdio.h>\nint main(){\n    int count,n;\n    //read value of N\n    printf(\"\
+    Enter value of n: \");\n    scanf(\"%d\",&n);\n    //initialize count with 1\n\
+    \    count =1;\n    start: //label\n    printf(\"%d \",count);\n    count++;\n\
+    \    if(count<=n)\n    goto start;\n    return 0;\n}\n```\n**Output:**\n```\n\
+    Enter value of n: 10\n1 2 3 4 5 6 7 8 9 10 \n```\n\n## C program to print numbers\
+    \ from 1 to N using while loop\n```c\n#include <stdio.h>\nint main(){\n    //loop\
+    \ counter declaration\n    int number;\n    //variable to store limit\n    int\
+    \ n;\n    //assign initial value where we want to print the numbers\n    number\
+    \ =1;\n    //input value of N\n    printf(\"Enter the value of N: \");\n    scanf(\"\
+    %d\",&n);\n    //print statement\n    printf(\"Numbers from %d: \\n\",n);\n  \
+    \  //while loop, that will print from 1 to n\n    while(number <= n) {\n     \
+    \   //printing the numbers\n        printf(\"%d \",number);\n        //increasing\
+    \ loop counter by 1\n        number++;\n    }\n    return 0;\n}\n```\n**Output:**\n\
+    ```\nEnter the value of N: 25\nNumbers from 25: \n1 2 3 4 5 6 7 8 9 10 11 12 13\
+    \ 14 15 16 17 18 19 20 21 22 23 24 25 \n```\n\n## C program to print Square, Cube\
+    \ and Square Root\n```c\n/*C program to print square, cube and square root of\
+    \ all numbers from 1 to N.*/\n#include <stdio.h>\n#include <math.h>\nint main(){\n\
+    \    int i,n;\n    printf(\"Enter the value of N: \");\n    scanf(\"%d\",&n);\n\
+    \    printf(\"Square\\tCube\\tSquare Root\\n\",n);\n    for(i=1;i<=n;i++){\n \
+    \       printf(\"%d \\t %ld\\t %.2f\\n\",i,(i*i),(i*i*i),sqrt((double)i));\n \
+    \   }\n    return 0;\n}\n```\n\n## Program to print table of a given number\n\
+    ```c\n#include<stdio.h>\nint main(){\n    //declare variable\n    int count,t,r;\n\
+    \    //Read value of t\n    printf(\"Enter number: \");\n    scanf(\"%d\",&t);\n\
+    \    count=1;\n    start:\n    if(count<=10) {\n        //Formula of table\n \
+    \       r=t*count;\n        printf(\"%d*%d=%d\\n\",t,count,r);\n        count++;\n\
+    \        goto start;\n    }\n    return 0;\n}\n```\n**Output:**\n```\nEnter number:\
+    \ 10\n10*1=10\n10*2=20\n10*3=30\n10*4=40\n10*5=50\n10*6=60\n10*7=70\n10*8=80\n\
+    10*9=90\n10*10=100\n```\n\n## Program for Largest Number among three numbers\n\
+    ```c\n/* c program to find largest number among 3 numbers*/\n#include <stdio.h>\n\
+    int main(){\n    int a,b,c;\n    int largest;\n    printf(\"Enter three numbers\
+    \ (separated space):\");\n    scanf(\"%d%d%d\",&a,&b,&c);\n    if(a>b && a>c)\n\
+    \        largest=a;\n    else if(b>a && b>c)\n        largest=b;\n    else\n \
+    \       largest=c;\n    printf(\"Largest number is = %d\",largest);\n    return\
+    \ 0;\n}\n```\n**Output:**\n```\nFirst Run:Enter three numbers (separated space):\
+    \ 10 20 30\nLargest number is = 30\nSecond Run:Enter three numbers (separated\
+    \ space): 10 30 20\nLargest number is = 30\nThird Run:Enter three numbers (separated\
+    \ space): 30 10 20\nLargest number is = 30\nFourth Run:Enter three numbers (separated\
+    \ space): 30 30 30\nLargest number is = 30\n```\n\n## Area of rectangle program\
+    \ in c\n```c\n/*C program to find area of a rectangle.*/\n#include <stdio.h>\n\
+    int main(){\n    float l,b,area;\n    printf(\"Enter the value of length: \");\n\
+    \    scanf(\"%f\",&l);\n    printf(\"Enter the value of breadth: \");\n    scanf(\"\
+    %f\",&b);\n    area=l*b;\n    printf(\"Area of rectangle: %f\\n\",area);\n   \
+    \ return 0;\n}\n```\n**Output:**\n```\nEnter the value of length: 1.25\nEnter\
+    \ the value of breadth: 3.15\nArea of rectangle: 3.937500\n```\n\n## C program\
+    \ - Convert Feet to Inches\n```c\n#include<stdio.h>\nint main(){\n    int feet,inches;\n\
+    \    printf(\"Enter the value of feet: \");\n    scanf(\"%d\",&feet);\n    //converting\
+    \ into inches\n    inches=feet*12;\n    printf(\"Total inches will be: %d\\n\"\
+    ,inches);\n    return 0;\n}\n```\n**Output:**\n```\nEnter the value of feet: 15\n\
+    Total inches will be: 180\n```\n\n## Program to create a text file using file\
+    \ handling\n```c\n#include< stdio.h >\nint main(){\n    FILE *fp;/* file pointer*/\n\
+    \    char fName[20];\n    printf(\"Enter file name to create:\");\n    scanf(\"\
+    %s\",fName);\n    /*creating (open) a file, in “w”: write mode*/\n    fp=fopen(fName,\"\
+    w\");\n    /*check file created or not*/\n    if(fp==NULL){\n        printf(\"\
+    File does not created!!!\");\n        exit(0); /*exit from program*/\n    }\n\
+    \    printf(\"File created successfully.\");\n    return 0;\n}\n```\n**Output:**\n\
+    ```\nRun 1 :Enter file name to create : file1.txt\nFile created successfully.\n\
+    Run 2:Enter file name to create : d:/file1.txt\nFile created successfully.“file\
+    \ will be created in d: drive”.\nRun 3:Run 1:Enter file name to create : h:/file1.txt\n\
+    File does not created!!!\n```\n\n## C program to find factorial of a number\n\
+    Factorial is an integer product, with all of it below integer till 1. Represent\
+    \ factorial in mathematical by ! Sign.\nExample:\n"
+  raw: 'PROGRAM# Declare, assign string (1)# using single quotes ''string''str1 =
+    ''Hello world, How are you?''# Declare, assign string (2)# using double quotes
+    "string"str2 = "Hello world, How are you?"# Declare assign string (3)# using triple
+    single quotes ''''''string''''''str3 = ''''''Hello world, How are you?''''''#
+    Declare assign string (4)# using triple double quotes """string"""str4 = """Hello
+    world, How are you?"""# Declare, assign multi-line string (5)# Triple double quotes
+    allows to assign# multi-line stringstr5 = ''''''Hello world,How are you?''''''#
+    print the stringprint "str1: ", str1print "str2: ", str2print "str3: ", str3print
+    "str4: ", str4print "str5: ", str5Outputstr1:  Hello world, How are you?str2:  Hello
+    world, How are you?str3:  Hello world, How are you?str4:  Hello world, How are
+    you ?str5:  Hello world,How are you?Access and print characters from the stringExample:Input:str:
+    "Hello world"Output:First character: HSecond character: eLast character: dSecond
+    last character: lCharacters from 0th to 4th index: HelloAnd, so on...PROGRAM#
+    access characters in string# declare, assign stringstr = "Hello world"# print
+    complete stringprint "str:", str# print first characterprint "str[0]:", str[0]#
+    print second characterprint "str[1]:", str[1]# print last characterprint "str[-1]:",
+    str[-1]# print second last characterprint "str[-2]:", str[-2]# print characters
+    from 0th to 4th index i.e.# first 5 charactersprint "str[0:5]:", str[0:5]# print
+    characters from 2nd index to 2nd last indexprint "str[2,-2]:", str[2:-2]# print
+    string character by characterprint "str:"for i in str:​ print i,#comma after the
+    variable# it does not print new lineOutputstr: Hello worldstr[0]: Hstr[1]: estr[-1]:
+    dstr[-2]: lstr[0:5]: Hell ostr[2,-2]: llo worstr:H e l l o   w o r l dProgram
+    to print words with their length of a stringExample:Input:str = "Hello World How
+    are you?"Output:Hello ( 5 )World ( 5 )How ( 3 )are ( 3 )you? ( 4 )String.split()
+    MethodTo split the string into words, we use the method split(), an inbuilt method
+    that splits the string into sub-string (words) defined by the given delimiter.split()
+    Method Syntax:String.split(delimiter)EXPLANATIONFor example, there''s a string
+    str = "ABC PQR XYZ" and we want to break it into words using space to divide it,
+    then space here would be delimiter. The statement will be str.split(" ") to break
+    the string into words, and then output will be "ABC" "PQR" "XYZ."PROGRAM# Function
+    to split into words# and print words with its lengthdef splitString (str):​ #
+    split the string by spaces​ str = str.split ('' '')​ # iterate words in string​
+    for words in str:​ print words," (", len (words), ")"# Main code# declare string
+    and assign valuestr = "Hello World How are you?"# call the functionsplitString(str)OutputHello  (
+    5 )World  ( 5 )How  ( 3 )are  ( 3 )you?  ( 4 )Count vowels in a stringExample:Input:Str
+    = "Hello world"Output:Total vowels are: 3PROGRAM# count vowels in a string# declare,
+    assign stringstr = "Hello world"# declare countcount = 0# iterate and check each
+    characterfor i in str:​ # check the conditions for vowels​ if( i==''A'' or i==''a''
+    or i==''E'' or i==''e''​ or i==''I'' or i==''i'' or i==''O'' or i==''o''​ or i==''U''
+    or i==''u''):​ count +=1;# print countprint "Total vowels are: ", countOutpu tTotal
+    vowels are:  3Create multiple copies of a string by using multiplication operatorUsing
+    multiplication operator to create multiple copies of a string,the multiplication
+    operator ( * ) will be usedExample:Input:str1 = "Hello"n = 3logic:str2 =str1*3Output:str2=
+    "HelloHelloHello"Program:# Python program to create N copies# of a given string#
+    define inputs: string and Nstr1 = "Hello"n = 3# create copiesstr2 = str1 * 3#
+    printprint "str1: ", str1print "str2: ", str2Outputstr1:  Hellostr2:  HelloHelloHelloC
+    PROGRAMMINGEXAMPLESPROGRAMMING FOR BEGINNERSJ KINGC PROGRAMMING EXAMPLESC program
+    to find SUM and AVERAGE of two numbers.Sum and Average of two numbersPROGRAM/*
+    c program find sum and average of two numbers*/#include <stdio.h>int main(){int
+    a,b,sum;float avg;printf("Enter first number :");scanf("%d",&a);printf("Enter
+    second number :");scanf("%d",&b);sum=a+b;avg= (float)(a+b)/2;printf("\nSum of
+    %d and %d is = %d",a,b,sum);printf("\nAverage of %d and %d is = %f",a,b,avg) ;return
+    0;}OutputEnter first number :10Enter second number :15Sum of 10 and 15 is = 25Average
+    of 10 and 15 is = 12.500000C program to print ASCII value of a characterPROGRAM#include
+    <stdio.h>int main(){​ char ch;​ //input character​ printf("Enter the character:
+    ");​ scanf("%c",&ch);​ printf("ASCII is = %d\n", ch);​ return 0;}OutputFirst run:Enter
+    the character: aASCII is = 97Second run:Enter the character: AASCII is = 65C program
+    to print all numbers from 1 to N using goto statementPROGRAM#include <stdio.h>int
+    main(){​ int count,n;​ //read value of N​ printf("Enter value of n: ");​ scanf("%d",&n);​
+    //initialize count with 1​ count =1;​ start: //label​ printf("%d ",count);​ count++;​
+    if(count<=n)​ goto start;​ return 0;}OutputEnter value of n: 101 2 3 4 5 6 7 8
+    9 10Program to print numbers from 1 to N using while loopPROGRAM#include <stdio.h>int
+    main(){​ //loop counter declaration​ int number;​ //variable to store limit /N​
+    int n;​ //assign initial value​ //from where we want to print the numbers​ number
+    =1;​ //input value of N​ printf("Enter the value of N: ");​ scanf("%d",&n);​ //print
+    statement​ printf("Numbers from 1 to %d: \n",n);​ //while loop, that will print
+    numbers​ //from 1 to n​ while(number <= n)​ {​ //printing the numbers​ printf("%d
+    ",number);​ //increasing loop counter by 1​ number++;​ }​ return 0;}OutputEnter
+    the value of N: 25Numbers from 1 to 25:1 2 3 4 5 6 7 8 9 10 11 12 13 14 1516 17
+    18 19 20 21 22 23 24 25Program to print Square, Cube and Square RootPROGRAM/*C
+    program to print square, cube and square root of all numbers from 1 to N.*/#include
+    <stdio.h>#include <math.h>int main(){int i,n;printf("Enter the value of N: ");scanf("%d",&n);printf("No     Square   Cube    Square
+    Root\n",n);for(i=1;i<=n;i++){printf("%d \t %ld \t %ld \t %.2f\n",i,(i*i),(i*i*i),sqrt((double)i));}return
+    0;}![](image_rsrc22H.jpg)Program to print table of a given numberPROGRAM#include<stdio.h>int
+    main(){​ //declare variable​ int count,t,r;​ //Read value of t​ printf("Enter
+    number: ");​ scanf("%d",&t);​ count=1;​ start:​ if(count<=10)​ {​ //Formula of
+    table​ r=t*count;​ printf("%d*%d=%d\n",t,count,r);​ count++;​ goto start;​ }​
+    return 0;}OutputEnter number: 1010*1=1010*2=2010*3=3010*4=4010*5=5010*6=6010*7=7010*8=8010*9=9010*10=100Program
+    for Largest Number among three numbersPROGRAM/* c program to find largest number
+    among 3 numbers*/#include <stdio.h>int main(){int a,b,c;int largest;printf("Enter
+    three numbers (separated by space):");scanf("%d%d%d",&a,&b,&c);if(a>b && a>c)       largest=a;else
+    if(b>a && b>c)      largest=b;elselargest=c;printf("Largest number is = %d",largest);return
+    0;}OutputFirst Run:Enter three numbers (separated by space): 10 20 30Largest number
+    is = 30Second Run:Enter three numbers (separated by space):10 30 20Largest number
+    is = 30Third Run:Enter three numbers (separated by space):30 10 20Largest number
+    is = 30Fourth Run:Enter three numbers (separated by space):30 30 30Largest number
+    is = 30Area of rectangle program in cPROGRAM/*C program to find area of a rectangle.*/#include
+    <stdio.h>int main(){float l,b,area;printf("Enter the value of length: ");scanf("%f",&l);printf("Enter
+    the value of breadth: ");scanf("%f",&b);area=l*b;printf("Area of rectangle: %f\n",area);return
+    0;}OutputEnter the value of length: 1.25Enter the value of breadth: 3.1 5Area
+    of rectangle: 3.937500C program - Convert Feet to InchesPROGRAM#include<stdio.h>int
+    main(){​ int feet,inches;​ printf("Enter the value of feet: ");​ scanf("%d",&feet);​
+    //converting into inches​ inches=feet*12;​ printf("Total inches will be: %d\n",inches);​
+    return 0;}OutputEnter the value of feet: 15Total inches will be: 180Program to
+    create a text file using file handlingPROGRAM#include< stdio.h >int main(){FILE
+    *fp;   /* file pointer*/char fName[20];printf("Enter file name to create :");scanf("%s",fName);/*creating
+    (open) a file, in “w”: write mode*/fp=fopen(fName,"w");/*check file created or
+    not*/if(fp==NULL){printf("File does not created!!!");exit(0); /*exit from program*/}printf("File
+    created successfully.");return 0;}OutputRun 1 :Enter file name to create : file1.txtFile
+    created successfully.Run 2:Enter file name to create : d:/file1.txtFile created
+    successfully.“file will be created in d: drive”.Run 3:Run 1:Enter file name to
+    create : h:/file1.txtFile does not created!!!C program to find factorial of a
+    numberFactorial is an integer product, with all of it below integer till 1. Represent
+    factorial in mathematical by ! Sign.Example:'
+  toc: []
+  trans: "\n\n# 程序：字符串操作\n\n## 声明、赋值字符串 (1)\n使用单引号 `'string'`\n```python\nstr1 = 'Hello\
+    \ world, How are you?'\n```\n\n## 声明、赋值字符串 (2)\n使用双引号 `\"string\"`\n```python\n\
+    str2 = \"Hello world, How are you?\"\n```\n\n## 声明赋值字符串 (3)\n使用三单引号 `'''string'''`\n\
+    ```python\nstr3 = '''Hello world, How are you?'''\n```\n\n## 声明赋值字符串 (4)\n使用三双引号\
+    \ `\"\"\"string\"\"\"`\n```python\nstr4 = \"\"\"Hello world, How are you?\"\"\"\
+    \n```\n\n## 声明、赋值多行字符串 (5)\n三双引号允许赋值多行字符串\n```python\nstr5 = '''Hello world,How\
+    \ are you?'''\n```\n\n## 打印字符串\n```python\nprint \"str1: \", str1\nprint \"str2:\
+    \ \", str2\nprint \"str3: \", str3\nprint \"str4: \", str4\nprint \"str5: \",\
+    \ str5\n```\n**输出：**\n```\nstr1:  Hello world, How are you?\nstr2:  Hello world,\
+    \ How are you?\nstr3:  Hello world, How are you?\nstr4:  Hello world, How are\
+    \ you ?\nstr5:  Hello world,How are you?\n```\n\n## 访问并打印字符串中的字符\n**示例：**\n**输入：**\
+    \ `str: \"Hello world\"`\n**输出：**\n```\n第一个字符: H\n第二个字符: e\n最后一个字符: d\n倒数第二个字符:\
+    \ l\n从索引 0 到 4 的字符: Hello\n以此类推...\n\n# 程序：访问字符串中的字符\n\n## 声明、赋值字符串\n```python\n\
+    str = \"Hello world\"\n# 打印完整字符串\nprint \"str:\", str\n# 打印第一个字符\nprint \"str[0]:\"\
+    , str[0]\n# 打印第二个字符\nprint \"str[1]:\", str[1]\n# 打印最后一个字符\nprint \"str[-1]:\"\
+    , str[-1]\n# 打印倒数第二个字符\nprint \"str[-2]:\", str[-2]\n# 打印从索引 0 到 4 的字符，即前 5 个字符\n\
+    print \"str[0:5]:\", str[0:5]\n# 打印从索引 2 到倒数第二个索引的字符\nprint \"str[2,-2]:\", str[2:-2]\n\
+    # 逐个字符打印字符串\nprint \"str:\"\nfor i in str:\n    print i,#变量后加逗号\n    # 它不会打印换行\n\
+    ```\n**输出：**\n```\nstr: Hello world\nstr[0]: H\nstr[1]: e\nstr[-1]: d\nstr[-2]:\
+    \ l\nstr[0:5]: Hell\nstr[2,-2]: llo wor\nstr:H e l l o    w o r l d\n```\n\n##\
+    \ 字符串单词及其长度程序\n**示例：**\n**输入：** `str = \"Hello World How are you?\"`\n**输出：**\n\
+    ```\nHello ( 5 )\nWorld ( 5 )\nHow ( 3 )\nare ( 3 )\nyou? ( 4 )\n```\n\n### String.split()\
+    \ 方法\n为了将字符串拆分为单词，我们使用 `split()` 方法，这是一个内置方法，它根据给定的分隔符将字符串拆分为子字符串（单词）。\n\n**split()\
+    \ 方法语法：** `String.split(delimiter)`\n\n**解释：**\n例如有一个字符串 `str = \"ABC PQR XYZ\"\
+    `，我们想用空格将其拆分为单词，那么这里的空格就是分隔符。语句为 `str.split(\" \")`，将字符串拆分为单词，然后输出为 `\"ABC\" \"\
+    PQR\" \"XYZ.\"`。\n\n## 程序：将字符串拆分为单词并打印单词长度的函数\n```python\ndef splitString (str):\n\
+    \    # 按空格拆分字符串\n    str = str.split (' ')\n    # 遍历字符串中的单词\n    for words in\
+    \ str:\n        print words,\" (\", len (words), \")\"\n\n# 主代码\n# 声明字符串并赋值\n\
+    str = \"Hello World How are you?\"\n# 调用函数\nsplitString(str)\n```\n**输出：**\n```\n\
+    Hello  ( 5 )\nWorld  ( 5 )\nHow  ( 3 )\nare  ( 3 )\nyou?  ( 4 )\n```\n\n## 统计字符串中的元音\n\
+    **示例：**\n**输入：** `Str = \"Hello world\"`\n**输出：**\n```\n元音总数: 3\n```\n\n## 程序：统计字符串中的元音\n\
+    ```python\n# 声明、赋值字符串\nstr = \"Hello world\"\n# 声明计数\ncount = 0\n# 遍历并检查每个字符\n\
+    for i in str:\n    # 检查元音条件\n    if( i=='A' or i=='a' or i=='E' or i=='e'\n  \
+    \  or i=='I' or i=='i' or i=='O' or i=='o'\n    or i=='U' or i=='u'):\n      \
+    \  count +=1;#打印计数\nprint \"Total vowels are: \", count\n```\n**输出：**\n```\n元音总数:\
+    \  3\n```\n\n## 使用乘法运算符创建字符串多个副本\n使用乘法运算符创建字符串的多个副本，将使用 `*`。\n\n**示例：**\n**输入：**\
+    \ `str1 = \"Hello\"`, `n = 3`\n**逻辑：** `str2 = str1*3`\n\n## 程序：创建 N 个给定字符串的 Python\
+    \ 程序\n```python\n# 输入：字符串和 N\nstr1 = \"Hello\"\nn = 3\n# 创建副本\nstr2 = str1 * 3\n\
+    # 打印\nprint \"str1: \", str1\nprint \"str2: \", str2\n```\n**输出：**\n```\nstr1:\
+    \  Hello\nstr2:  HelloHello\n```\n\n---\n\n# C 语言示例\n## 初学者 C 语言示例\n\n## 求两个数字之和和平均值的\
+    \ C 程序\n```c\n/* 求两个数字的和和平均值的 C 语言*/\n#include <stdio.h>\nint main(){\n    int\
+    \ a,b,sum;\n    float avg;\n    printf(\"输入第一个数字 :\");\n    scanf(\"%d\",&a);\n\
+    \    printf(\"输入第二个数字 :\");\n    scanf(\"%d\",&b);\n    sum=a+b;\n    avg= (float)(a+b)/2;\n\
+    \    printf(\"\\n 和为 %d\",a,sum);\n    printf(\"\\n 平均值为 %f\",avg);\n    return\
+    \ 0;\n}\n```\n**输出：**\n```\n输入第一个数字 :10\n输入第二个数字 :15\n和为 25\n平均值为 12.500000\n\
+    ```\n\n## 输出字符 ASCII 值的 C 程序\n```c\n/* 输出字符 ASCII 值的 C 程序 */\n#include <stdio.h>\n\
+    int main(){\n    char ch;\n    // 输入字符\n    printf(\"输入字符: \");\n    scanf(\"\
+    %c\",&ch);\n    printf(\"ASCII 为 %d\\n\", ch);\n    return 0;\n}\n```\n**输出：**\n\
+    ```\n输入字符: a\nASCII 为 97\n输入字符: A\nASCII 为 65\n```\n\n## 使用语句打印 1 到 N 的所有数字的 C\
+    \ 程序\n```c\n#include <stdio.h>\nint main(){\n    int count,n;\n    // 读取 N 的值\n\
+    \    printf(\"输入 n: \");\n    scanf(\"%d\",&n);\n    // 初始化计数为 1\n    count =1;\n\
+    \    start: //标签\n    printf(\"%d \",count);\n    count++;\n    if(count<=n)\n\
+    \    goto start;\n    return 0;\n}\n```\n**输出：**\n```\n输入 n: 10\n1 2 3 4 5 6 7\
+    \ 8 9 10 \n```\n\n## 使用 while 循环打印 1 到 N 的数字 C 程序\n```c\n#include <stdio.h>\n\
+    int main(){\n    // 计数器声明\n    int number;\n    // 存储限制的变量\n    int n;\n    //\
+    \ 赋值初始值\n    number =1;\n    // 输入 N 的值\n    printf(\"输入 N 的值: \");\n    scanf(\"\
+    %d\",&n);\n    // 打印语句\n    printf(\"从 %d 开始: \\n\",n);\n    // 从 1 打印到 n\n  \
+    \  while(number <= n) {\n        // 打印数字\n        printf(\"%d \",number);\n  \
+    \      // 计数器加 1\n        number++;\n    }\n    return 0;\n}\n```\n**输出：**\n```\n\
+    输入 N 的值: 25\n从 25 开始: \n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21\
+    \ 22 23 24 25 \n```\n\n## 打印平方、立方和平方根的 C 程序\n```c\n/* 打印 1 到 N 所有数字的平方、立方方和平方根的\
+    \ C 程序。*/\n#include <stdio.h>\n#include <math.h>\nint main(){\n    int i,n;\n\
+    \    printf(\"输入 N 的值: \");\n    scanf(\"%d\",&n);\n    printf(\"平方\\t 立方方\\t\
+    \ 平方根\\n\",n);\n    for(i=1;i<=n;i++){\n        printf(\"%d \\t %ld\\t %.2f\\\
+    n\",i,(i*i),(i*i*i),sqrt((double)i));\n    }\n    return 0;\n}\n```\n\n## 打印给定数字倍表的程序\n\
+    ```c\n#include<stdio.h>\nint main(){\n    // 声明变量\n    int count,t,r;\n    //\
+    \ 读取 t 的值\n    printf(\"输入数字: \");\n    scanf(\"%d\",&t);\n    count=1;\n    start:\n\
+    \    if(count<=10) {\n        // 倍表公式\n        r=t*count;\n        printf(\"%d*%d=%d\\\
+    n\",t,count,r);\n        count++;\n        goto start;\n    }\n    return 0;\n\
+    }\n```\n**输出：**\n```\n输入数字: 10\n10*1=10\n10*2=20\n10*3=30\n10*4=40\n10*5=50\n\
+    10*6=60\n10*7=70\n10*8=80\n10*9=90\n10*10=100\n```\n\n## 求两个数字平均值的 C 程序\n```c\n\
+    /* 求两个数字的和和平均值 */\n#include <stdio.h>\nint main(){\n    int a,b,sum;\n    float\
+    \ avg;\n    printf(\"输入第一个数字: \");\n    scanf(\"%d\",&a);\n    printf(\"输入第二个数字:\
+    \ \");\n    scanf(\"%d\",&b);\n    sum=a+b;\n    avg= (float)(a+b)/2;\n    printf(\"\
+    \\n 和为 %d\",a,sum);\n    printf(\"\\n 平均值为 %f\",avg);\n    return 0;\n}\n```\n\
+    \n## 输出字符 ASCII 值的 C 程序\n```c\n/* 输出字符 ASCII 值的 C 程序 */\n#include <stdio.h>\n\
+    int main(){\n    char ch;\n    // 输入字符\n    printf(\"输入字符: \");\n    scanf(\"\
+    %c\",&ch);\n    // 这里的代码似乎有逻辑错误，多余的括号，但按要求翻译\n    printf(\"ASCII 为 %d\\n\", ch);\n\
+    \    return 0;\n}\n```\n```注：\n\n\n\n    \n    \n    \n    \n    \n    \n    \n\
+    \    \n    \n    \n    \n    \n    \n    \n    \n        \n    \n    \n    \n\
+    \    \n    \n    \n    \n    \n    \n    \n    \n\n## 使用文件处理创建一个文本文件\n```c\n#include<\
+    \ stdio.h >\nint main(){\n    FILE *fp;/* 文件指针*/\n    char fName[20];\n    printf(\"\
+    输入要创建的文件名:\");\n    scanf(\"%s\",fName);\n    /*创建（打开）文件，以“w”写入模式*/\n    fp=fopen(fName,\"\
+    w\");\n    /*检查文件是否创建*/\n    if(fp==NULL){\n        printf(\"文件未创建!!!\");\n  \
+    \      exit(0); /*退出程序*/\n    }\n    printf(\"文件创建成功。\");\n    return 0;\n}\n\
+    ```\n**输出：**\n```\nRun 1 :输入要创建的文件名 : file1.txt\n文件创建成功。\nRun 2:输入要创建的文件名 : d:/file1.txt\n\
+    文件创建成功。“文件将在 d 驱动器创建”。\nRun 3:Run 1:输入要创建的文件名 : h:/file1.txt\n文件未创建!!!\n```\n\n"
+- fmt: "\n# Factorial 5 is:\n\n`5! = 120` [That is equivalent to `5*4*3*2*1 = 120`]\n\
+    \n## Simple program\n/*C program to find factorial of a number.*/\n```c\n#include\
+    \ <stdio.h>\nint main() {\n    int num,i;\n    long int fact;\n    printf(\"Enter\
+    \ an integer number: \");\n    scanf(\"%d\",&num);\n    /*product of numbers from\
+    \ num to 1*/\n    fact = 1;\n    for(i=num; i>=1; i--)\n        fact = fact*i;\n\
+    \    printf(\"\\nFactorial of %d is = %ld\",num,fact);\n    return 0;\n}\n```\n\
+    Output:\nEnter an integer number: 7\nFactorial of 7 is = 5040\n\n## User Define\
+    \ Function\n/*Using Function: C program to find factorial of a number.*/\n```c\n\
+    #include <stdio.h>\n/*function : factorial, to find factorial of given number*/\n\
+    long int factorial(int n) {\n    int i;\n    long int fact=1;\n    if(n==1) return\
+    \ fact;\n    for(i=n; i>=1; i--)\n        fact = fact * i;\n    return fact;\n\
+    }\n\nint main() {\n    int num;\n    printf(\"Enter an integer number :\");\n\
+    \    scanf(\"%d\",&num);\n    printf(\"\\nFactorial of %d is = %ld\",num,factorial(num));\n\
+    \    return 0;\n}\n```\nExample:\nInput number: `0x0` (Hexadecimal)\nBinary of\
+    \ input number: `00001010`\nAfter swapping bit 1 and 2 will be: `00001100`\nOutput:\
+    \ number will be: `0xC` (Hexadecimal)\n\n```c\n#include <stdio.h>\n/*Program to\
+    \ swap 1st and 2nd bit of hexadecimal value stored in data variable*/\nint main()\
+    \ {\n    unsigned char data = 0xA; // hexadecimal value\n    // Get 1st bit from\
+    \ data\n    unsigned char bit_1 = (data >> 1) & 1;\n    // Get 2nd bit from data\n\
+    \    unsigned char bit_2 = (data >> 2) & 1;\n    // Get XOR of bit_1 and bit_2\n\
+    \    unsigned char xor_of_bit = bit_1 ^ bit_2;\n    printf(\"After swapping the\
+    \ bits, data value is: %X\", data ^ (xor_of_bit << 1 | xor_of_bit << 2));\n  \
+    \  return 0;\n}\n```\nAfter swapping the bits, data value is: C\n\n## Program\
+    \ to swap numbers using four methods\n1. Using third variable\n2. Without using\
+    \ third variable\n3. Using XOR operator\n4. Using simple statement\n\n```c\n//C\
+    \ program to swap numbers using four different methods.\n#include <stdio.h>\n\
+    int main() {\n    int a,b,t;\n    printf(\" Enter value of A ?\");\n    scanf(\"\
+    %d\",&a);\n    printf(\" Enter value of B ?\");\n    scanf(\"%d\",&b);\n    printf(\"\
+    \\n Before swapping : A=%d, B=%d\",a,b);\n\n    /*first method using third variable*/\n\
+    \    t=a;\n    a=b;\n    b=t;\n    printf(\"\\n After swapping (First method)\
+    \ : A=%d, B=%d\",a,b);\n\n    /*second method without third variable*/\n    a=a+b;\n\
+    \    b=a-b;\n    a=a-b;\n    printf(\"\\n After swapping (second method) : A=%d,\
+    \ B=%d\",a,b);\n\n    /*Third method using X-Or */\n    a^=b;\n    b^=a;\n   \
+    \ a^=b;\n    printf(\"\\n After swapping (third method) : A=%d, B=%d\",a,b);\n\
+    \n    /*fourth method (single statement)*/\n    a=a+b-(b=a);\n    printf(\"\\\
+    n After swapping (fourth method) : A=%d, B=%d\",a,b);\n    return 0;\n}\n```\n\
+    Output:\nEnter value of A ? 100\nEnter value of B ? 200\nBefore swapping : A=100,\
+    \ B=200\nAfter swapping (First method) : A=200, B=100\nAfter swapping (second\
+    \ method) : A=200, B=100\nAfter swapping (third method) : A=200, B=100\nAfter\
+    \ swapping (fourth method) : A=200, B=100\n\n## Age Calculator (C program to calculate\
+    \ age)\n```c\n/*Age Calculator (C program to calculate age).*/\n#include <stdio.h>\n\
+    #include <time.h>\n/*check given year is leap year or not*/\nint isLeapYear(int\
+    \ year, int mon) {\n    int flag = 0;\n    if (year % 100 == 0) {\n        if\
+    \ (year % 400 == 0) {\n            if (mon == 2) {\n                flag = 1;\n\
+    \            }\n        }\n    } else if (year % 4 == 0) {\n        if (mon ==\
+    \ 2) {\n            flag = 1;\n        }\n    }\n    return (flag);\n}\n\nint\
+    \ main() {\n    int DaysInMon[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30,\
+    \ 31};\n    int days, month, year;\n    char dob[100];\n    time_t ts;\n    struct\
+    \ tm *ct;\n    /* enter date of birth */\n    printf(\"Enter your date of birth\
+    \ (DD/MM/YYYY): \");\n    scanf(\"%d/%d/%d\",&days,&month, &year);\n    /*get\
+    \ current date.*/\n    ts = time(NULL);\n    ct = localtime(&ts);\n    printf(\"\
+    Current Date: %d/%d/%d\\n\",ct->tm_mday, ct->tm_mon + 1, ct->tm_year + 1900);\n\
+    \    days = DaysInMon[month - 1] - days + 1;\n    /* leap year checking*/\n  \
+    \  if (isLeapYear(year, month)) {\n        days = days + 1;\n    }\n    /* calculating\
+    \ age in no of days, years and months */\n    days = days + ct->tm_mday;\n   \
+    \ month = (12 - month) + (ct->tm_mon);\n    year = (ct->tm_year + 1900) - year\
+    \ - 1;\n    /* checking for leap year feb - 29 days */\n    if (isLeapYear((ct->tm_year\
+    \ + 1900), (ct->tm_mon + 1))) {\n        if (days >= (DaysInMon[ct->tm_mon] +\
+    \ 1)) {\n            days = days - (DaysInMon[ct->tm_mon] + 1);\n        }\n \
+    \   }\n    // logic continues...\n}\n\n\n## Program to calculate interest\n```c\n\
+    /*C program to calculate interest*/\n#include <stdio.h>\n#include <math.h>\nint\
+    \ main() {\n    float principal, rate, year;\n    printf(\"Enter principal: \"\
+    );\n    scanf(\"%f\", &principal);\n    printf(\"Enter rate: \");\n    scanf(\"\
+    %f\", &rate);\n    printf(\"Enter time in years: \");\n    scanf(\"%f\", &year);\n\
+    \    //calculate compound interest\n    ci = principal * (pow((1 + rate / 100),\
+    \ year) - 1);\n    printf(\"Compound interest is: %f\\n\", ci);\n    return 0;\n\
+    }\n```\n\n## Program to design a digital clock\n```c\n/*C program to design digital\
+    \ clock*/\n#include <stdio.h>\n#include <time.h>\n#include <unistd.h>\nint main()\
+    \ {\n    int hour, minute, second;\n    while (1) {\n        time_t t;\n     \
+    \   struct tm *info;\n        t = time(NULL);\n        info = localtime(&t);\n\
+    \        hour = info->tm_hour;\n        minute = info->tm_min;\n        second\
+    \ = info->tm_sec;\n        printf(\"\\r%02d:%02d:%02d\", hour, minute, second);\n\
+    \        fflush(stdout);\n        sleep(1);\n    }\n    return 0;\n}\n```\n\n\
+    ## Sum of Series Programs / Examples using C\n\n1. 1+2+3+4+..N<\n\n```c\n/*This\
+    \ program will print the sum of all natural numbers from 1 to N.*/\n#include<stdio.h>\n\
+    int main() {\n    int i, N, sum;\n    /*read value of N*/\n    printf(\"Enter\
+    \ the value of N: \");\n    scanf(\"%d\", &N);\n    /*set sum by 0*/\n    sum\
+    \ = 0;\n    /*calculate sum of the series*/\n    for(i=1; i<=N; i++)\n       \
+    \ sum = sum + i;\n    /*print the sum* /\n    printf(\"Sum of the series is: %d\\\
+    n\", sum);\n    return 0;\n}\n```\nEnter the value of N: 100\nSum of the series\
+    \ is: 5050\n"
+  raw: 'Factorial 5 is:
+
+
+    5! = 120 [That is equivalent to 5*4*3*2*1 =120]Simple program/*C program to find
+    factorial of a number.*/#include <stdio.h>int main(){int num,i;long int fact;printf("Enter
+    an integer number: ");scanf("%d",&num);/*product of numbers from num to 1*/fact=1;for(i=num;
+    i>=1; i--)fact=fact*i;printf("\nFactorial of %d is = %ld",num,fact) ;return 0;}OutputEnter
+    an integer number: 7Factorial of 7 is = 5040User Define Function/*Using Function:
+    C program to find factorial of a number.*/#include <stdio.h>/* function : factorial,
+    to find factorial of a given number*/long int factorial(int n){int i;long int
+    fact=1;if(n==1) return fact;for(i=n;i>=1;i--)fact= fact * i;return fact;}int main(){int
+    num;printf("Enter an integer number :");scanf("%d",&num);printf("\nFactorial of
+    %d is = %ld",num,factorial(num));return 0;}Program to swap two bits of a byteExample:Input
+    number:  0x0A (Hexadecimal)Binary of input number: 0000 1010After swapping of
+    bit 1 and 2Binary will be: 0000 1100Output number will be: 0x0C (Hexadecimal)PROGRAM#include
+    <stdio.h>/*Program to swap 1st and 2nd bit of hexadecimal value stored in data
+    variable*/int main(){unsigned char data = 0xA; // Assiging hexadecimal value//
+    Get 1st bit from dataunsigned char bit_1 = (data >> 1) & 1;// Get 2nd bit from
+    dataunsigned char bit_2 = (data >> 2) & 1 ;// Get XOR of bit_1 and bit_2unsigned
+    char xor_of_bit = bit_1 ^ bit_2;printf("After swapping the bits, data value is:
+    %2X", data ^ (xor_of_bit << 1 | xor_of_bit << 2));return 0;}OutputAfter swapping
+    the bits, data value is:  CProgram to swap two numbers using four different methodsMETHODS
+
+
+    1.  Using third variable
+
+
+    2.  Without using third variable
+
+
+    3.  Using X-OR operator
+
+
+    4.  Using simple statement
+
+
+    PROGRAM//C program to swap two numbers using four different methods.#include <stdio.h>int
+    main(){int a,b,t;printf(" Enter value of A ?  ");scanf("%d",&a);printf(" Enter
+    value of B ?  ");scanf("%d",&b);printf("\n Before swapping : A= %d, B= %d",a,b);/****first
+    method using third variable*/t=a ;a=b;b=t;printf("\n After swapping (First method)
+    : A= %d, B= %d\n",a,b);/****second method without using third variable*/a=a+b;b=a-b;a=a-b;printf("\n
+    After swapping (second method): A= %d, B= %d\n",a,b);/****Third method  using
+    X-Or */a^=b;b^=a;a^=b;printf("\n After swapping (third method) : A= %d, B= %d\n",a,b);/****fourth
+    method  (single statement)*/a=a+b-(b=a);printf("\n After swapping (fourth method):
+    A= %d, B= %d\n",a,b);return 0;}OutputEnter value of A ?  100Enter value of B ? 
+    200Before swapping : A= 100, B= 200After swapping (First method) : A= 200, B=
+    100After swapping (second method): A= 100, B= 200After swapping (third method)
+    : A= 200, B= 100After swapping (fourth method): A= 100, B= 200Age Calculator (C
+    program to calculate age)PROGRAM/*Age Calculator (C program to calculate age).*/#include
+    <stdio.h>#include <time.h>/*check given year is leap year or not*/int isLeapYear(int
+    year, int mon){int flag = 0;if (year % 100 == 0){if (year % 400 == 0){if (mon
+    == 2){flag = 1;}}}else if (year % 4 == 0){if (mon == 2){flag = 1 ;}}return (flag);}int
+    main(){int DaysInMon[] = {31, 28, 31, 30, 31, 30,31, 31, 30, 31, 30, 31};int days,
+    month, year;char dob[100];time_t ts;struct tm *ct;/* enter date of birth */printf("Enter
+    your date of birth (DD/MM/YYYY): ");scanf("%d/%d/%d",&days,&month, &year);/*get
+    current date.*/ts = time(NULL);ct = localtime(&ts);printf("Current Date: %d/%d/%d\n",ct->tm_mday,
+    ct->tm_mon + 1, ct->tm_year + 1900);days = DaysInMon[month - 1] - days + 1;/*
+    leap year checking*/if (isLeapYear(year, month) ){days = days + 1;}/* calculating
+    age in no of days, years and months */days = days + ct->tm_mday;month = (12 -
+    month) + (ct->tm_mon);year = (ct->tm_year + 1900) - year - 1;/* checking for leap
+    year feb - 29 days */if (isLeapYear((ct->tm_year + 1900), (ct->tm_mon + 1))){if
+    (days >= (DaysInMon[ct->tm_mon] + 1)){days = days - (DaysInMon[ct->tm_mon] + 1);month
+    = month + 1;}}else if (days >= DaysInMon[ct->tm_mon]){days = days - (DaysInMon[ct->tm_mon]);month
+    = month + 1;}if (month >= 12){year = year + 1;month = month - 12;}/* print age
+    * /printf("\n## Hey you are  %d years %d months and %d days old. ##\n", year,
+    month, days);return 0;}C program to design a digital clockPROGRAM/*C program to
+    design a digital clock.*/#include <stdio.h>#include <time.h> //for sleep() function#include
+    <unistd.h>#include <stdlib.h>int main(){int hour, minute, second;hour=minute=second=0;while(1){//clear
+    output screensystem("clear");//print time in HH : MM : SS formatprintf("%02d :
+    %02d : %02d ",hour,minute,second);//clear output buffer in gccfflush(stdout) ;//increase
+    secondsecond++;//update hour, minute and secondif(second==60){minute+=1;second=0;}if(minute==60){hour+=1;minute=0;}if(hour==24){hour=0;minute=0;second=0;}sleep(1);   //wait
+    till 1 second}return 0;}Program to calculate compound interestPROGRAM/*C program
+    to calculate compound interest.*/#include <stdio.h>#include <math.h>in t main(){floa
+    t principal, rate, year, ci;printf("Enter principal: ");scanf("%f", &principal);printf("Enter
+    rate: ");scanf("%f", &rate);   printf("Enter time in years: ");scanf("%f", &year)
+    ;//calculate compound interestci=principal*((pow((1+rate/100),year)-1));printf("Compound
+    interest is: %f\n",ci);retur n 0;}OutputEnter principal: 10000Enter rate: 10.25Enter
+    time in years: 5Compound interest is: 6288.943359Program to check whether number
+    is Perfect Square or notPROGRAM/*C program to check number is perfect square or
+    not.*/#include <stdio.h>#include <math.h>int main(){int num;int iVar;float fVar;printf("Enter
+    an integer number: ");scanf("%d",&num);fVar=sqrt((double)num);iVar=fVar;if(iVar==fVar)printf("%d
+    is a perfect square.",num);elseprintf("%d is not a perfect square.",num) ;return
+    0;}BY User Define Function/*C program to check number is perfect square or not.*/#include
+    <stdio.h>#include <math.h>/*function definition*/int isPerfectSquare(int number){int
+    iVar;float fVar;fVar=sqrt((double)number);iVar=fVar;if(iVar==fVar)return 1;elsereturn
+    0;}int main(){int num;printf("Enter an integer number: ");scanf("%d",&num);if(isPerfectSquare(num)
+    )printf("%d is a perfect square.",num);elseprintf("%d is not a perfect square.",num);return
+    0;}OutputFirst Run:Enter an integer number: 1616 is a perfect square.Second Run:Enter
+    an integer number: 2626 is not a perfect square.Program to print message without
+    using any semicolon in programPROGRAM/*Program to print "Hello C" using if and
+    elsestatement both.*/#include <stdio.h>int main(){if(!printf("Hello "));elseprintf("C\n");return
+    0;}OUTPUTHello CSum of Series Programs / Examples using C
+
+
+    1.  1+2+3+4+..N<
+
+
+    PROGRAM/*This program will print the sum of all natural numbers from 1 to N.*/#include<stdio.h>int
+    main(){int i,N,sum;/*read value of N*/printf("Enter the value of N: ");scanf("%d",&N);/*set
+    sum by 0*/sum=0;/*calculate sum of the series*/for(i=1;i<=N;i++)sum= sum+ i;/*print
+    the sum* /printf("Sum of the series is: %d\n",sum);return 0;}Enter the value of
+    N: 100Sum of the series is: 5050'
+  toc: []
+  trans: "\n\n# 5 的阶乘是：\n\n`5! = 120` [这相当于 `5*4*3*2*1 = 120`]\n\n## 简单程序\n/*计算数字阶乘的\
+    \ C 程序.*/\n```c\n#include <stdio.h>\nint main() {\n    int num,i;\n    long int\
+    \ fact;\n    printf(\"Enter an integer number: \");\n    scanf(\"%d\",&num);\n\
+    \    /*从 num 到 1 的乘积*/\n    fact = 1;\n    for(i=num; i>=1; i--)\n        fact\
+    \ = fact*i;\n    printf(\"\\nFactorial of %d is = %ld\",num,fact);\n    return\
+    \ 0;\n}\n```\nOutput:\nEnter an integer number: 7\nFactorial of 7 is = 5040\n\n\
+    ## 自定义函数\n/*使用函数：计算数字阶乘的 C 程序.*/\n```c\n#include <stdio.h>\n/*函数：factorial，用于计算给定数字的阶乘*/\n\
+    long int factorial(int n) {\n    int i;\n    long int fact=1;\n    if(n==1) return\
+    \ fact;\n    for(i=n; i>=1; i--)\n        fact = fact * i;\n    return fact;\n\
+    }\n\nint main() {\n    int num;\n    printf(\"Enter an integer number :\");\n\
+    \    scanf(\"%d\",&num);\n    printf(\"\\nFactorial of %d is = %ld\",num,factorial(num));\n\
+    \    return 0;\n}\n```\nExample:\n输入数字: `0x0` (十六进制)\n输入数字的二进制:`00001010`\n交换第\
+    \ 1 位和第 2 位后将变为：`00001100`\n输出: 数字将为：`0xC` (十六进制)\n\n```c\n#include <stdio.h>\n\
+    /*交换存储在 data 变量中的十六进制值的第 1 位和第 2 位*/\nint main() {\n    unsigned char data = 0xA;\
+    \ // 十进制值\n    // 从 data 中获取第 1 位\n    unsigned char bit_1 = (data >> 1) & 1;\n\
+    \    // 从 data 中获取第 2 位\n    unsigned char bit_2 = (data >> 2) & 1;\n    // 获取\
+    \ bit_1 和 bit_2 的异或结果\n    unsigned char xor_of_bit = bit_1 ^ bit_2;\n    printf(\"\
+    After swapping the bits, data value is: %X\", data ^ (xor_of_bit << 1 | xor_of_bit\
+    \ << 2));\n    return 0;\n}\n```\n交换位后，data 值为：C\n\n## 使用四种方法交换数字程序\n1. 使用第三变量\n\
+    2. 不使用第三变量\n3. 使用 异或运算符\n4. 使用简单语句\n\n```c\n//使用四种方法交换数字的 C 程序。\n#include <stdio.h>\n\
+    int main() {\n    int a,b,t;\n    printf(\" Enter value of A ?\");\n    scanf(\"\
+    %d\",&a);\n    printf(\" Enter value of B ?\");\n    scanf(\"%d\",&b);\n    printf(\"\
+    \\n Before swapping : A=%d, B=%d\",a,b);\n\n    /*第一种方法：使用第三变量*/\n    t=a;\n \
+    \   a=b;\n    b=t;\n    printf(\"\\n After swapping (First method) : A=%d, B=%d\"\
+    ,a,b);\n\n    /*第二种方法：不使用第三变量*/\n    a=a+b;\n    b=a-b;\n    a=a-b;\n    printf(\"\
+    \\n After swapping (second method) : A=%d, B=%d\",a,b);\n\n    /*第三种方法：使用异或*/\n\
+    \    a^=b;\n    b^=a;\n    a^=b;\n    printf(\"\\n After swapping (third method)\
+    \ : A=%d, B=%d\",a,b);\n\n    /*第四种方法（单语句）*/\n    a=a+b-(b=a);\n    printf(\"\\\
+    n After swapping (fourth method) : A=%d, B=%d\",a,b);\n    return 0;\n}\n```\n\
+    Output:\nEnter value of A ? 100\nEnter value of B ? 200\nBefore swapping : A=100,\
+    \ B=200\nAfter swapping (First method) : A=200, B=100\nAfter swapping (second\
+    \ method) : A=200, B=100\nAfter swapping (third method) : A=200, B=100\nAfter\
+    \ swapping (fourth method) : A=200, B=100\n\n## 年龄计算器（计算年龄的 C 程序）\n```c\n/*年龄计算器（计算年龄的\
+    \ C 程序）。*/\n#include <stdio.h>\n#include <time.h>\n/*检查年份是否为闰年*/\nint isLeapYear(int\
+    \ year, int mon) {\n    int flag = 0;\n    if (year % 100 == 0) {\n        if\
+    \ (year % 400 == 0) {\n            if (mon == 2) {\n                flag = 1;\n\
+    \            }\n        }\n    } else if (year % 4 == 0) {\n        if (mon ==\
+    \ 2) {\n            flag = 1;\n        }\n    }\n    return (flag);\n}\n\nint\
+    \ main() {\n    int flag = 0;\n    time_t t;\n    struct tm *info;\n    int year,\
+    \ month, day;\n    /*输入生日*/\n    printf(\"Enter birth date (DD/MM/YYYY): \");\n\
+    \    scanf(\"%d/%d/%d\", &day, &month, &year);\n    /*检查是否闰年*/\n    if (isLeapYear(year,\
+    \ month)) {\n        flag = 1;\n    }\n    /*获取当前时间*/\n    t = time(NULL);\n \
+    \   info = localtime(&t);\n    /*计算年龄*/\n    int age = (1900 + info->tm_year)\
+    \ - year;\n    if (info->tm_mon + 1 < month || (info->tm_mon + 1 == month && info->tm_mday\
+    \ < day)) {\n        age--;\n    }\n    printf(\"Your age is: %d\\n\", age);\n\
+    \    return 0;\n}\n```\n\n## 计算利息的 C 程序\n```c\n/*计算利息的 C 程序.*/\n#include <stdio.h>\n\
+    #include <math.h>\nint main() {\n    float principal, rate, year, ci;\n    printf(\"\
+    Enter principal: \");\n    scanf(\"%f\", &principal);\n    printf(\"Enter rate:\
+    \ \");\n    scanf(\"%f\", &rate);\n    printf(\"Enter time in years: \");\n  \
+    \  scanf(\"%f\", &year);\n    /*计算复利*/\n    ci = principal * (pow((1 + rate /\
+    \ 100), year) - 1);\n    printf(\"Compound interest is: %f\\n\", ci);\n    return\
+    \ 0;\n}\n```\n\n## 设计数字时钟的程序\n```c\n/*设计数字时钟的 C 程序*/\n#include <stdio.h>\n#include\
+    \ <time.h>\n#include <unistd.h>\nint main() {\n    int hour, minute, second;\n\
+    \    while (1) {\n        time_t t;\n        struct tm *info;\n        t = time(NULL);\n\
+    \        info = localtime(&t);\n        hour = info->tm_hour;\n        minute\
+    \ = info->tm_min;\n        second = info->tm_sec;\n        printf(\"\\r%02d:%02d:%02d\"\
+    , hour, minute, second);\n        fflush(stdout);\n        sleep(1);\n    }\n\
+    \    return 0;\n}\n```\n\n## 序列求和程序 / 使用 C 示例\n\n1. 1+2+3+4+..N<\n\n```c\n/*此程序将打印从\
+    \ 1 到 N 所有自然数的和.*/\n#include<stdio.h>\nint main() {\n    int i, N, sum;\n    /*读取\
+    \ N 的值*/\n    printf(\"Enter the value of N: \");\n    scanf(\"%d\", &N);\n  \
+    \  /*将和置为 0*/\n    sum = 0;\n    /*计算序列之和*/\n    for(i=1; i<=N; i++)\n       \
+    \ sum = sum + i;\n    /*打印和*/ /\n    printf(\"Sum of the series is: %d\\n\", sum);\n\
+    \    return 0;\n}\n```\n\n"
