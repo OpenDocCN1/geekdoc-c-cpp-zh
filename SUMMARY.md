@@ -435,6 +435,7 @@
 +   [心理治疗入门指南：图解指南](docs/introducing-psychotherapy-a-graphic-guide/README.md)
 +   [C++ 入门指南](docs/introduction-to-c/README.md)
 +   [Python 计算与编程入门指南，第二版：数据理解应用（麻省理工出版社）](docs/introduction-to-computation-and-programming-using-python-sec/README.md)
++   [C++ 设计模式入门指南 (第2版) (Prentice Hall 开源软件开发系列)](docs/introduction-to-design-patterns-in-c-with-qt-2nd-edition-pre/README.md)
 +   [Python 工程与科学计算入门指南](docs/introduction-to-engineering-and-scientific-computing-with-py/README.md)
 +   [游戏设计、原型与开发入门指南：从概念到使用 Unity 和 C# 开发可玩游戏](docs/introduction-to-game-design-prototyping-and-development-from/README.md)
 +   [C++ 编程与数据结构入门指南，第版](docs/introduction-to-programming-and-data-structures-with-c-4e/README.md)
