@@ -590,6 +590,7 @@
 +   [C 语言编程：卷 2：复合数据结构与模块化 (de Gruyter 教科)](docs/programming-in-c-volume-2-composite-data-structures-and-modu/README.md)
 +   [C++ 编程：第一卷：C++ 基础](docs/programming-in-c-volume-i-the-foundation-of-c/README.md)
 +   [Haskell 编程指南](docs/programming-in-haskell/README.md)
++   [Objective-C 编程：针对 iOS 5 和自动引用计数 (Arc) 的更新 (开发者库)](docs/programming-in-objective-c-updated-for-ios-5-and-automatic-r/README.md)
 +   [Java 与 JavaScript 编程初学者指南 – 一天学会 · 第2版](docs/programming-java-javascript-coding-for-beginners-learn-in-a-/README.md)
 +   [C 语言编程：初学者一周快速学会指南](docs/programming-language-c-a-step-by-step-guide-for-beginners-to/README.md)
 +   [C# 编程语言排名指南](docs/programming-languages-c---how-to-ranking/README.md)
