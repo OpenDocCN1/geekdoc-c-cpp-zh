@@ -1,0 +1,186 @@
+name: Programming Windows, Sixth Edition (Consumer Preview eBook)
+name_cn: Windows 编程 第六版（消费者预览版电子书）
+slug: programming-windows-sixth-edition-consumer-preview-ebook
+toc:
+- - '#'
+  - Windows 编程 第六版（消费者预览版电子书）
+- - '#'
+  - 引言
+- - '#'
+  - Windows 8 的版本
+- - '#'
+  - 本书的重点
+- - '#'
+  - 方法论
+- - '##'
+  - 注意事项
+- - '#'
+  - 我的设备设置
+- - '#'
+  - 第 1 章 标记语言与代码
+- - '##'
+  - 注意
+- - '##'
+  - 图形问候
+- - '##'
+  - 文本的变化
+- - '##'
+  - 媒体
+- - '##'
+  - 代码替代方案
+- - '##'
+  - 代码中的图像
+- - '#'
+  - 第 2 章 XAML 语法
+- - '##'
+  - 代码中的渐变画笔
+- - '##'
+  - 属性元素语法 (Property Element Syntax)
+- - '##'
+  - 内容属性 (Content Properties)
+- - '###'
+  - TextBlock 内容
+- - '#'
+  - 共享画刷（以及其他资源）
+- - '###'
+  - 几点说明：
+- - '##'
+  - 资源是共享的的
+- - '##'
+  - 矢量图形
+- - '##'
+  - 样式
+- - '##'
+  - 数据绑定初探
+- - '#'
+  - 第 3 章 基础事件处理
+- - '##'
+  - Tapped（点击）事件
+- - '##'
+  - 路由事件处理
+- - '##'
+  - 重写 Handled
+- - '##'
+  - 输入、对齐与背景颜色
+- - '##'
+  - 尺寸与方向的变化
+- - '###'
+  - '示例 3-16. 项目: WhatSize | 文件: BlankPage.xaml (节选)'
+- - '###'
+  - '示例 3-17. 项目: WhatSize | 文件: BlankPage.xaml.cs (节选)'
+- - '#'
+  - 绑定可以运行吗？
+- - '##'
+  - 定时器与动画
+- - '##'
+  - Border（边界）元素
+- - '##'
+  - 矩形与椭圆
+- - '##'
+  - StackPanel
+- - '##'
+  - 水平堆栈
+- - '##'
+  - 带绑定的 WhatSize（以及转换器）
+- - '##'
+  - ScrollViewer 解决方案
+- - '##'
+  - 制作电子书
+- - '##'
+  - 更花哨的 StackPanel 元素
+- - '##'
+  - 创建 Windows Runtime 库
+- - '##'
+  - Wrap 的替代方案
+- - '##'
+  - Canvas 和附加属性
+- - '##'
+  - Z-Index
+- - '##'
+  - Canvas 的怪异
+- - '#'
+  - 第 5 章 控件交互
+- - '##'
+  - 控制的区别
+- - '##'
+  - 用于范围的 Slider
+- - '##'
+  - 方向与宽高比例
+- - '##'
+  - Slider 与格式化字符串转换器（Formatted String Converter）
+- - '##'
+  - 工具提示（Tooltips）与转换
+- - '##'
+  - 使用滑块绘图
+- - '##'
+  - 按钮体验的种类
+- - '###'
+  - 按钮样式与外观
+- - '###'
+  - ContentControl 继承
+- - '###'
+  - 示例：简单数字键盘
+- - '#'
+  - 依赖属性 (Dependency Properties)
+- - '##'
+  - RadioButton 标签
+- - '###'
+  - 示例 5-23. 项目：`LineCapsAndJoins` | 文件：`BlankPage.xaml`（节选）
+- - '###'
+  - 示例 5-24. 项目：`LineCapsAndJoins` | 文件：`BlankPage.xaml.cs`（节选）
+- - '##'
+  - 键盘输入与 TextBox
+- - '##'
+  - 触摸与拇指
+- - '#'
+  - 第 6 章 WinRT 与 MVVM
+- - '##'
+  - MVVM（简要与简化）
+- - '##'
+  - 数据绑定通知
+- - '##'
+  - 用于 ColorScroll 的 View Model
+- - '##'
+  - 自 BindableBase
+- - '##'
+  - DataContext 属性
+- - '##'
+  - 按钮与 MVVM
+- - '##'
+  - DelegateCommand 类
+- - '#'
+  - 第 7 章 构建应用程序
+- - '##'
+  - 命令、选项和设置
+- - '##'
+  - Segoe UI 符号字体
+- - '##'
+  - 应用程序栏
+- - '##'
+  - 弹出窗口与对话框
+- - '##'
+  - Windows 运行时文件 I/O
+- - '###'
+  - 异步方法
+- - '##'
+  - Await 和 Async
+- - '##'
+  - 调用你自己的异步方法
+- - '##'
+  - XamlCruncher 的控件
+- - '##'
+  - 应用设置与隔离存储
+- - '###'
+  - '7-26. 项目: XamlCruncher | 文件: AppSettings.cs'
+- - '###'
+  - '7-27. 项目: XamlCruncher | 文件: AppSettings.cs（节）'
+- - '##'
+  - XamlCruncher 页面
+- - '##'
+  - 解析 XAML
+- - '##'
+  - XAML 文件的输入输出
+- - '##'
+  - 设置对话框
+- - '##'
+  - 超越 Windows Runtime
