@@ -615,6 +615,7 @@
 +   [Python 入学者指南：1周学会 Python 速成指南（编码、编程、Web 编程、程序员）](docs/python-for-beginners-a-crash-course-guide-to-learn-python-in/README.md)
 +   [针对孩子的 Python 入门指南](docs/python-for-kids-for-dummies/README.md)
 +   [Python：学习 Python 编程 – 初学者指南 (Python 初学者,HTML,PHP, C,Java,Ruby,SQL 书籍 1)](docs/python-learn-python-programming-beginner-guide-python-for-be/README.md)
++   [Python Power!：全面指南](docs/python-power-the-comprehensive-guide-power-power/README.md)
 +   [Python 入门指南](docs/python-programming/README.md)
 +   [Python 编程：通过实践练习掌握 Python 语言、应用理论及快速学习计算机编程技巧的入门指南](docs/python-programming-the-crash-course-to-learn-how-to-master-p/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
