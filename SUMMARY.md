@@ -556,6 +556,7 @@
 +   [Practical C++ 后端编程：为高性能后端构制数据库、API 和 Web 服务器](docs/practical-c-backend-programming-crafting-databases-apis-and-/README.md)
 +   [C 和 Python 中的问题解决：编程练习与解决方案，第一部分](docs/problem-solving-in-c-and-python-programming-exercises-and-so/README.md)
 +   [Android 高级编程：使用 Mono for Android 和 .NET/C#](docs/professional-android-programming-with-mono-for-android-and-n/README.md)
++   [C# 函数式编程高级指南](docs/professional-functional-programming-in-c/README.md)
 +   [iPhone 高级编程指南：使用 MonoTouch 和 .NET/C#](docs/professional-iphone-programming-with-monotouch-and-netc/README.md)
 +   [NoSQL 高级指南](docs/professional-nosql/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
