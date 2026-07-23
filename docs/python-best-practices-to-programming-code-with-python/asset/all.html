@@ -1,0 +1,1993 @@
+<p><img src="Images/cover.jpg" /></p>
+<p><span
+id="cover-ed047dd1-965a-47cf-9c74-c8fa4e3436d9.xhtml"></span></p>
+<div class="svg_outer">
+<div class="svg_inner">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewbox="0 0 995 1400" preserveaspectratio="xMidYMid meet">
+<image height="1400" width="995" xlink:href="../Images/cover.jpg"></image>
+</svg>
+</div>
+</div>
+<p><span id="copyright-page.xhtml"></span></p>
+<div id="copyright-page.xhtml_copyright-page">
+<div class="copyright-page-disclaimer">
+<p>While every precaution has been taken in the preparation of this
+book, the publisher assumes no responsibility for errors or omissions,
+or for damages resulting from the use of the information contained
+herein.</p>
+</div>
+<div class="copyright-page-title">
+<p>PYTHON: BEST PRACTICES TO PROGRAMMING CODE WITH PYTHON</p>
+</div>
+<div class="copyright-page-edition">
+<p><strong>First edition. January 5, 2017.</strong></p>
+<p>Copyright © 2017 Charlie Masterson.</p>
+</div>
+<div class="copyright-page-contributors">
+<p>Written by Charlie Masterson.</p>
+</div>
+<div class="copyright-page-printing">
+<p>10 9 8 7 6 5 4 3 2 1</p>
+</div>
+</div>
+<p><span id="c001.xhtml"></span></p>
+<p>Python:</p>
+<p>Best Practices</p>
+<p>to Programming Code</p>
+<p>with Python</p>
+<p>Charlie Masterson</p>
+<p><span id="c002.xhtml"></span></p>
+<h1 class="chapter-title">Table of Contents</h1>
+<p><a href="#c003.xhtml_Introduction">Introduction</a></p>
+<p><a href="#c004.xhtml_Chapter1">Chapter 1: General Concepts of Python
+Coding</a></p>
+<p><a href="#c005.xhtml_Chapter2">Chapter 2: Programming
+Recommendations</a></p>
+<p><a href="#c006.xhtml_Chapter3">Chapter 3: Code Layout</a></p>
+<p><a href="#c007.xhtml_Chapter4">Chapter 4: Idioms</a></p>
+<p><a href="#c008.xhtml_Chapter5">Chapter 5: Comments</a></p>
+<p><a href="#c009.xhtml_Chapter6">Chapter 6: Conventions</a></p>
+<p><a href="#c010.xhtml_Chapter7">Chapter 7: Method and Function
+Arguments</a></p>
+<p><a href="#c011.xhtml_Chapter8">Chapter 8: Naming Conventions</a></p>
+<p><a href="#c012.xhtml_Chapter9">Chapter 9: Using Whitespace in
+Statements and Expressions</a></p>
+<p><a href="#c013.xhtml_Conclusion">Conclusion</a></p>
+<p>© Copyright 2017 by Charlie Masterson - All rights reserved.</p>
+<p>The contents of this book may not be reproduced, duplicated or
+transmitted without direct written permission from the author.</p>
+<p>Under no circumstances will any legal responsibility or blame be held
+against the publisher for any reparation, damages, or monetary loss due
+to the information herein, either directly or indirectly.</p>
+<p>Legal Notice:</p>
+<p>This book is copyright protected. This is only for personal use. You
+cannot amend, distribute, sell, use, quote or paraphrase any part or the
+content within this book without the consent of the author.</p>
+<p>Disclaimer Notice:</p>
+<p>Please note the information contained within this document is for
+educational and entertainment purposes only. Every attempt has been made
+to provide accurate, up to date and reliable complete information. No
+warranties of any kind are expressed or implied. Readers acknowledge
+that the author is not engaging in the rendering of legal, financial,
+medical or professional advice. The content of this book has been
+derived from various sources. Please consult a licensed professional
+before attempting any techniques outlined in this book.</p>
+<p>By reading this document, the reader agrees that under no
+circumstances are is the author responsible for any losses, direct or
+indirect, which are incurred as a result of the use of information
+contained within this document, including, but not limited to, —errors,
+omissions, or inaccuracies.</p>
+<p><span id="c003.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span
+id="c003.xhtml_Introduction">Introduction</span></h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-i">I</span> want to thank you</span>
+and congratulate you for reading the book, “Python: Best Practices to
+Programming Code with Python”. This book contains proven steps and
+strategies on how to program in Python more effectively. When you first
+learn Python, you will be taught how to write code, but in many cases,
+you will not be taught how to write that code neatly.</p>
+<p>If you speak to any Python programmer, ask them what it is they like
+about Python. I guarantee they will tell you that one of the main
+reasons is because it is easily readable. In fact, this is the absolute
+heart of the Python language, simply because computer code is read far
+more than it is written. Much of this is down to the fact that Python
+code follows a set of guidelines and “Pythonic” idioms – if you hear a
+programmer refer to a part of the code as not being “Pythonic”, it means
+that it doesn’t follow those guidelines and it doesn’t express intent in
+any readable manner.</p>
+<p>Code style and layout is incredibly important, as is consistency in
+the style that you use. With that said, there are times when consistency
+isn’t the right thing and the guidelines are simply not applicable – you
+have to know when that time is and that is when best judgment comes into
+programming with Python.</p>
+<p>With this guide, I am going to show you the absolute best way to
+write your code, tidying up your program and making it all more
+effective and efficient. I won’t just give you the basic. I will delve
+deep into everything you need to know, from the layout of the code to
+how to write functions, idioms, and names. </p>
+<p>I will talk about whitespaces and tabs, strings, and methods. I will
+also be giving you some general recommendations for Python programming
+along with the general concepts. In short, by the time you have read my
+Best Practice guide, you will be the best Python programmer you can
+possibly be.</p>
+<p>My book does assume some prior knowledge of Python programming, so if
+you are a complete newbie to the programming scene, please familiarize
+yourself with Python code before you read this book. My aim is to help
+you to produce Python code that is free from, or at least has very few,
+complications or obvious problems, as well as making it more readable
+for others.</p>
+<p>Thanks again for reading this book, I hope you enjoy it!</p>
+<p><span id="c004.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span id="c004.xhtml_Chapter1">Chapter
+1:<br />
+General Concepts of Python Coding</span></h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-b">B</span>efore we get
+properly</span> into the book, these are the general concepts of coding
+that you should be aware of; concepts that will make life easier for
+you.</p>
+<h2>Explicit Code</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-w">W</span>HILE YOU CAN DO ALL</span>
+sorts of weird and wonderful things with Python, it is best to keep it
+straightforward and explicit.</p>
+<p>A Bad Example:</p>
+<p>def make_complex(*args):</p>
+<p>x, y = args</p>
+<p>return dict(**locals())</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="Images/scene_break.png" class="decoration-scene-break"
+alt="image" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span> GOOD EXAMPLE:</span></p>
+<p>def make_complex(x, y):</p>
+<p>return {'x': x, 'y': y}</p>
+<p>Compare these examples; in the latter example of code, we explicitly
+received <span style="font-weight: bold">x</span> and <span
+style="font-weight: bold">y</span> from the caller and the return is an
+explicit dictionary.</p>
+<p>The developer who wrote this knows what to do just by looking at the
+first line and the last line; this is not the case with the bad
+example.</p>
+<h2>One Line, One Statement</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-w">W</span>HILE THERE ARE
+COMPOUND</span> statements, like the list comprehensions, that are
+allowed and, in many cases, appreciated, it is not good practice to have
+2 statements that are disjointed on one code line.</p>
+<p>A Bad Example:</p>
+<p>print 'one'; print 'two'</p>
+<p>if x == 1: print 'one'</p>
+<p>if &lt;complex comparison&gt; and &lt;other complex
+comparison&gt;:</p>
+<p># do something</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="Images/scene_break.png" class="decoration-scene-break"
+alt="image" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span> GOOD EXAMPLE:</span></p>
+<p>print 'one'</p>
+<p>print 'two'</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="Images/scene_break.png" class="decoration-scene-break"
+alt="image" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-i">I</span>F X == 1:</span></p>
+<p>print 'one'</p>
+<p>cond1 = &lt;complex comparison&gt;</p>
+<p>cond2 = &lt;other complex comparison&gt;</p>
+<p>if cond1 and cond2:</p>
+<p># do something</p>
+<h2>Returning Values</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-w">W</span>HEN YOU GET A FUNCTION</span>
+that is ever-growing in complexity, it isn’t unheard of to use several
+return statements in the body of the function. However, if you want to
+maintain clear intent and a good level of readability, you should try
+not to return values from several points in the function body.</p>
+<p>When it comes to returning values within a function, there are 2
+cases for doing so: the result that comes from a normally processed
+function return, and the errors that are indicative of incorrect input
+parameters or for any reason that the function cannot complete the
+computation.</p>
+<p>If you don’t want exceptions raised for the latter case, then it
+might be necessary for values, such as False or None to be returned, as
+an indication that the function was not able to perform properly. In
+cases such as this, it is best practice to return as soon as the wrong
+context has been noticed.</p>
+<p>This will help to neaten up the function structure because all code
+that comes after the error return assumes that the condition has been
+met so that the main function result can be computed. As such, it is
+sometimes necessary to have several return statements like this.</p>
+<p>That said, if a function contains several different courses it can
+go, it can be unwieldy to debug the result so it is preferable to
+maintain just one course. This also helps in working out code paths and,
+if you have several courses, it could be an indication that you need to
+re-look at your code and tidy it up.</p>
+<p>For Example:</p>
+<p>def complex_function(c, b, a):</p>
+<p>if not c:</p>
+<p>return None  # Raising an exception might be better</p>
+<p>if not b:</p>
+<p>return None  # Raising an exception might be better</p>
+<p># Some elaborate code that is trying to make x from c, b and a</p>
+<p># Try not to return x if successful</p>
+<p>if not x:</p>
+<p># A Plan-B calculation of x</p>
+<p>return x  # One exit point for the value x will be helpful</p>
+<p># when trying to maintain the code.t</p>
+<p><span id="c005.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span id="c005.xhtml_Chapter2">Chapter
+2:</span></h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p>Programming Recommendations</p>
+<h1></h1>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-t">T</span>hese are the basic</span>
+recommendations for writing Python code, recommendations that you should
+follow if your code is going to be more effective and efficient as well
+as being readable.</p>
+<ul>
+<li>Your code must be written so that it doesn’t disadvantage other
+Python implementations, such as <span
+style="font-weight: bold">IronPython, Jython, PyPy, Psyco and
+Cython.</span></li>
+</ul>
+<p>For example, you should never rely on the efficient string
+concatenation of CPython that takes the form of <span
+style="font-size: small">a=a+b </span>or <span
+style="font-size: small">a+=b. </span>This is a somewhat fragile
+optimization, even though it super-efficient in CPython, because it
+won’t work on al type sand it won’t be present in any Python
+implementation that does not use refcounting.</p>
+<p>Instead, where you use a part of the library that is
+performance-sensitive, you should use the <span
+style="font-size: small">.join() </span>form instead. This will make
+sure that the concatenation is linear across all the different Python
+implementations.</p>
+<ul>
+<li>Never use an equality operator to make comparisons to a singleton
+such as None. Instead, use <span style="font-size: small">is </span>or
+<span style="font-size: small">not.</span></li>
+</ul>
+<p>You should also be wary of using <span
+style="font-size: small; font-weight: bold">if x</span> when really you
+should be using <span style="font-size: small; font-weight: bold">if is
+not None</span>. An example of this is when you are testing if an
+argument or a variable that defaults to a value of None was actually set
+to a different value. The other value could have a type that is false in
+the Boolean context.</p>
+<ul>
+<li>Rather than using the operator <span
+style="font-size: small; font-weight: bold">not...is</span>, you should
+use <span style="font-size: small; font-weight: bold">is not</span><span
+style="font-weight: bold">.</span> While they both are identical in
+terms of function, the first is low on the readability scale, making the
+second one more preferable. An example:</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>Use This:</p>
+<p>if foo is not None:</p>
+<p>Don’t Use This:</p>
+<p>if not foo is None</p>
+<ul>
+<li><span style="font-size: medium">When you implement an ordering
+operation with a rich comparison, you should implement all of the 6
+operations instead of relying on some other code to exercise a
+comparison. Those operations are </span>(__eq__, __lt__, __ne__, __ge__,
+__gt__, __le__)</li>
+</ul>
+<p>To cut down on the effort needed, one particular decorator helps to
+generate any comparison methods that are missing. That decorator is
+<span style="font-size: small">functools.total_ordering().</span></p>
+<p>The style guidelines indicate that Python assumes reflexivity rules.
+As such, the Python interpreter might change things about by swapping
+<span style="font-size: small">y &gt; x</span> with <span
+style="font-size: small">x &lt; y</span> <span
+style="font-size: small">,</span> or it may swap <span
+style="font-size: small">y &gt;= x </span>with <span
+style="font-size: small">x &lt;= y</span> . </p>
+<p>You may also find that the argument <span style="font-size: small">x
+== y</span> has been swapped with <span style="font-size: small">x !=
+y</span> .  The <span style="font-size: small">min()</span> and <span
+style="font-size: small">sort() </span>operations will also definitely
+use the &lt; operator and the <span style="font-size: small">max()
+</span>function will use the &gt;operator. However, you should, as a
+best practice guide, use all of them so that there is no confusion.</p>
+<ul>
+<li>Rather than using an assignment statement that will bind a lambda
+expression to an identifier, use a <span
+style="font-size: small">def</span> statement</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>def f(x): return 2*x</p>
+<p>A Bad Example:</p>
+<p>f = lambda x: 2*x</p>
+<p>The first example shows that the name given to the function object is
+‘f’ rather than the collective &lt;lambda&gt;. This is the most useful
+for string representations and for tracebacks and, by using the
+assignment statement, you cut out the one benefit that a lambda
+expression offers over and above a def statement – that it may be
+embedded within a bigger statement.</p>
+<p>When you want to derive exceptions, use Exception and not
+BaseException. Inheritance from the latter is reserved for those
+exceptions where it is pretty much always wrong to catch them</p>
+<p>When you design your exception hierarchies, base them on the quality
+that is likely to be needed by catching exceptions, rather than on the
+location where the exception is raised. Always answer one question –
+“what has gone wrong?” rather than just saying that something is wrong.
+Use the conventions for class naming but do remember to add the “Error”
+suffix to the exception classes that produce an error.</p>
+<p>There is no need to put any special suffixes on exceptions that are
+not errors and are used as flow-control or another form of
+signaling.</p>
+<ul>
+<li>When you use exception chaining, use it only where needed.</li>
+</ul>
+<p>When you replace an inner exception deliberately, make sure that the
+right details are relocated into the newer exception. Examples of this
+are making sure the name of the attribute is preserved when you convert
+<span style="font-size: small">KeyError </span>to <span
+style="font-size: small">Attribute Error </span>or when you embed the
+original exception text into the message in the newer exception</p>
+<ul>
+<li>When using Python 2 and you raise an exception, always use the <span
+style="font-size: small">raise ValueError)’message’) </span>instead of
+<span style="font-size: small">raise ValueError ‘message’</span></li>
+</ul>
+<p>This is because the second example is neither valid nor legal syntax
+for Python 3. Also, the use of the containing parentheses means that
+there is no requirement to use continuation characters on a line when
+you add string formatting or when an exception argument is too long.</p>
+<ul>
+<li>When you catch exceptions, always mention specific ones wherever you
+can rather than using the bare except: clause</li>
+</ul>
+<p>For Example:</p>
+<p>try:</p>
+<p>import platform_specific_module</p>
+<p>except ImportError:</p>
+<p>platform_specific_module = None</p>
+<p><span style="font-size: small">KeyboardInterrupt </span>and <span
+style="font-size: small">SystemExit </span>exceptions will be caught by
+a bare except: clause and this makes it much more difficult to interrupt
+programs using CTRL+C and they can also cover up other problems that may
+be there.</p>
+<p>If you are looking to catch every exception that signals errors in
+the program, use except Exception:</p>
+<p>A general rule is to only use the bare except: clause in one of these
+two cases:</p>
+<ol type="1">
+<li>If the traceback is being printed by the exception handler; that
+way, the user will be made aware of any errors</li>
+</ol>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<ol type="1">
+<li>If cleanup work is needed but the code allows the exception to
+propagate up using raise. A more efficient way to do this would be to
+use <span style="font-size: small">try...finally.</span></li>
+</ol>
+<p>When you are binding a caught exception to a name, use the explicit
+binding syntax from Python 2.6:</p>
+<p>try:</p>
+<p>process_data()</p>
+<p>except Exception as exc:</p>
+<p>raise DataProcessingFailedError(str(exc))</p>
+<p>This is the ONLY syntax that Python 3 supports and it cuts out any
+problems of ambiguity that are associated with the older-style syntax
+that is comma-based.</p>
+<ul>
+<li>When you are catching system errors, use the exception hierarchy
+from Python 3.3 rather than errno values. As well, when you use any
+try/except clause, try to limit the use of the try clause to the least
+amount of code. This will cut down the risk of errors being hidden</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>try:</p>
+<p>value = collection[key]</p>
+<p>except KeyError:</p>
+<p>return key_not_found(key)</p>
+<p>else:</p>
+<p>return handle_value(value)</p>
+<p>A Bad Example:</p>
+<p>try:</p>
+<p># Too broad!</p>
+<p>return handle_value(collection[key])</p>
+<p>except KeyError:</p>
+<p># Will catch a KeyError that is raised by handle_value()</p>
+<p>return key_not_found(key)</p>
+<ul>
+<li>When you use a resource tool that is local to a specific code
+section, use it with a statement to make sure that it is cleaned
+immediately after use. You can also use a try/finally statement</li>
+</ul>
+<ul>
+<li>Always invoke a context manager through separate methods or
+functions whenever they are for a purpose other than getting and
+releasing resources.</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>with conn.start_transaction():</p>
+<p>do_something_in_transaction(conn)</p>
+<p>A Bad Example:</p>
+<p>with conn:</p>
+<p>do_something_in_transaction(conn)</p>
+<p>The second example does not give us any information that indicates
+whether the __enter__ and __exit__ methods do anything other than
+shutting the transaction. In this case, it is important to be
+explicit.</p>
+<ul>
+<li>Consistency in return statements is important. Either all of the
+function return statements or none of the return statements should
+return an expression or value. If a return statement does return an
+expression, any that do not return any value should state explicitly
+that the return is None and there should be a return statement at the
+end of that function</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>def foo(x):</p>
+<p>if x &gt;= 0:</p>
+<p>return math.sqrt(x)</p>
+<p>else:</p>
+<p>return None</p>
+<p>def bar(x):</p>
+<p>if x &lt; 0:</p>
+<p>return None</p>
+<p>return math.sqrt(x)</p>
+<p>A Bad Example:</p>
+<p>def foo(x):</p>
+<p>if x &gt;= 0:</p>
+<p>return math.sqrt(x)</p>
+<p>def bar(x):</p>
+<p>if x &lt; 0:</p>
+<p>return</p>
+<p>return math.sqrt(x)</p>
+<ul>
+<li>Don’t use string modules; use string methods instead</li>
+</ul>
+<p>These are always faster and they share an API with the Unicode
+strings. This rule can be ignored if you need backward compatibility
+with a Python implementation that is earlier than 2.0</p>
+<ul>
+<li>Instead of using string slicing as a way of checking for suffixes
+and prefixes, use <span style="font-size: small">“.startswith()
+</span>and <span style="font-size: small">“.endswith()
+</span>instead</li>
+</ul>
+<p>These are much cleaner methods and they are less prone to errors.</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="Images/scene_break.png" class="decoration-scene-break"
+alt="image" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span> GOOD EXAMPLE:</span></p>
+<p>if foo.beginswith('bar'):</p>
+<p>A Bad Example:</p>
+<p>if foo[:3] == 'bar':</p>
+<ul>
+<li>When you are comparing object types, use <span
+style="font-size: small">isinstance()</span>instead of direct
+comparisons</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>if isinstance(obj, int):</p>
+<p>A Bad Example:</p>
+<p>if type(obj) is type(1):</p>
+<p>When you check to see if an object is actually a string, remember
+that it could be a Unicode string as well. In Python 2.0, Unicode and
+str share the base class called <span
+style="font-size: small">basestring </span>so you could do:</p>
+<p>if isinstance(obj, basestring):</p>
+<p>However, in Python 3, you won’t find basestring or Unicode, only str
+and bytes objects are not strings anymore, they are integer sequences
+instead.</p>
+<p>For a sequence – tuples, lists, strings, etc. – make use of the fact
+that an empty sequence is false.</p>
+<p>A Good Example:</p>
+<p>if not seq:</p>
+<p>if seq:</p>
+<p>A Bad Example:</p>
+<p>if len(seq):</p>
+<p>if not len(seq):</p>
+<p>Don’t include any string literals that require significant levels of
+trailing whitespace because this is not distinguishable and some text
+editors will remove them</p>
+<p>Don’t use == to compare a Boolean value to True or False:</p>
+<p>A Good Example:</p>
+<p>if greeting:</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="Images/scene_break.png" class="decoration-scene-break"
+alt="image" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span> BAD EXAMPLE:</span></p>
+<p>if the greeting == True:</p>
+<p>An Even Worse Example:</p>
+<p>if the greeting is True:</p>
+<p><span id="c006.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><br />
+<span id="c006.xhtml_Chapter3">Chapter 3:<br />
+Code Layout</span></h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-t">T</span>he most obvious
+place</span> to start with is how to layout your code. I will be giving
+you the best practice guidelines for code layout along with examples on
+how to do it and how not to:</p>
+<h2>Indentation and Alignment</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-e">E</span>VERY INDENT LEVEL</span>
+should be 4 spaces.</p>
+<p>When you use continuation lines, they should align the wrapped
+elements using one of two methods:</p>
+<ul>
+<li>Vertically with the Python implicit way of joining lines inside
+braces, brackets, and parentheses, or</li>
+</ul>
+<ul>
+<li>With hanging indents</li>
+</ul>
+<p>When you use a hanging indent, consider that there shouldn’t be any
+arguments on line one and that, to mark the continuation line,
+indentation must be used.</p>
+<p>Consider the following examples:</p>
+<p>The Right Way:</p>
+<p># Aligned with an opening delimiter.</p>
+<p>foo = long_function_name(var_four, var_three,</p>
+<p>var_two, var_one)</p>
+<p># and some more indentation included so this is distinguished from
+the rest of the code</p>
+<p>def long_function_name(</p>
+<p>var_four, var_three, var_two,</p>
+<p>var_one):</p>
+<p>print(var_four)</p>
+<p># Hanging indents should be used to add a level.</p>
+<p>foo = long_function_name(</p>
+<p>var_four, var_three,</p>
+<p>var_two, var_one)</p>
+<p>The Wrong Way:</p>
+<p># Arguments on first line are forbidden when you are not using
+vertical alignment.</p>
+<p>foo = long_function_name(var_four, var_three,</p>
+<p>var_two, var_one)</p>
+<p># More indentation is required as the indentation is not
+distinguishable from the rest.</p>
+<p>def long_function_name(</p>
+<p>var_four, var_three, var_two,</p>
+<p>var_one):</p>
+<p>print(var_four)</p>
+<p>When it comes to continuation lines, the rule on 4 indent spaces is
+optional:</p>
+<p># it is possible for hanging indents *to* be indented to more or less
+than 4 spaces.</p>
+<p>foo = long_function_name(</p>
+<p>var_four, var_three,</p>
+<p>var_two, var_one)</p>
+<p>When you use an if-statement with a long condition that can be
+written over more than one line, note that there is an easy to create a
+natural indent of 4 spaces for the rest of the lines in the conditional
+– use a keyword of 2 characters (for example, if) along with one space
+and an opening parenthesis. However, visually, this can look like some
+kind of incompatibility with the indented code within the if-statement,
+which will already have a 4-space indent. There is no real position on
+whether to distinguish these conditional lines from the code inside the
+nest but there are a few acceptable options you can use, including but
+not limited to:</p>
+<p># No extra indentation used.</p>
+<p>if (this_is_one_thing and</p>
+<p>that_is_something_else):</p>
+<p>do_this()</p>
+<p># Add a comment, which will provide some help in the editors</p>
+<p># supporting highlighting of syntax.</p>
+<p>if (this_is_one_thing and</p>
+<p>that_is_something_else):</p>
+<p># as both conditions are true, we can tweak.</p>
+<p>do_this()</p>
+<p># Add more indentation to the conditional continuation line.</p>
+<p>if (this_is_one_thing</p>
+<p>and that_is_something_else):</p>
+<p>do_this()</p>
+<p>Now, when you have a construction of multiple lines, the closing
+brace, parentheses, or bracket can line up in one of two places – either
+beneath the beginning character that is NOT a white space on the end
+line of the list:</p>
+<p>my_list = [</p>
+<p>6, 5, 4,</p>
+<p>3, 2, 1,</p>
+<p>]</p>
+<p>result = a_function_that_will_take_arguments(</p>
+<p>'f', 'e', 'd',</p>
+<p>'c', 'b', 'a',</p>
+<p>)</p>
+<p>Or it can be lined up beneath the beginning character of the first
+line in the multiple line construction:</p>
+<p>my_list = [</p>
+<p>6, 5, 4,</p>
+<p>3, 2, 1,</p>
+<p>]</p>
+<p>result = a_function_that_will_take_arguments(</p>
+<p>'f', 'e', 'd',</p>
+<p>'c', 'b', 'a',</p>
+<p>)</p>
+<p><span id="c007.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span id="c007.xhtml_Chapter4">Chapter
+4:</span></h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p>Idioms</p>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-p">P</span>rogramming idioms</span>
+are, in simple terms, the way in which Python code should be written. We
+often refer to idiomatic code as Pythonic code and, although there tends
+to be one very obvious way to write something, the actual way in which
+Pythonic code is written can be a bit obscure to those who are new to
+Python. So, you need to learn good idioms and some of the more common
+ones are:</p>
+<p>Unpacking</p>
+<p>Provided you know how long a tuple or list is, unpacking allows you
+to give each element a name. For example, <span
+style="font-size: small; font-weight: bold">enumerate() </span>gives us
+a tuple with 2 elements for each of the items in the list:</p>
+<p>for the index, each item in enumerate(this_list):</p>
+<p># do something with the index and each item</p>
+<p>You can also use unpacking to swap the variables:</p>
+<p>b, a = a, b</p>
+<p>And you can use nested unpacking:</p>
+<p>c, (b, a) = 3, (2, 1)</p>
+<p>When Python 3 was implemented, it came with a new extended unpacking
+method:</p>
+<p>c *the_rest = [3, 2, 1]</p>
+<p># c = 3, the_rest = [2, 1]</p>
+<p>c, *the_middle, c = [4, 3, 2, 1]</p>
+<p># c = 4, the_middle = [3, 2], c = 1</p>
+<h2>Creating Ignored Variables</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-i">I</span>F YOU WANTED TO ASSIGN</span>
+something but do not need to use the variable, you would use __. For
+example:</p>
+<p>filename = 'footbar.txt'</p>
+<p>basename, __, ext = filename.rpartition('.')</p>
+<p>NOTE</p>
+<p>You will often see it recommended that you use a single underscore
+(_) for variables that are throwaway, rather than using a double
+underscore(__). The problem with this is, “-“, the single underscore,
+tends to be used in the <span
+style="font-size: small; font-weight: bold">gettext() </span>function as
+an alias. It is also used to store the value of the previous operation
+at the interactive prompt. When you use a double underscore, “__”, it is
+clear and it is convenient. It also cuts out the accidental risk of
+interfering with the other use cases of the single underscore.</p>
+<h2>Creating Length-N Lists</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>O CREATE A LENGTH</span>-N
+list that is of the same thing, you would use the * list operator</p>
+<p>four_zeros = [Zero] * 4</p>
+<p>To create a length-N list of a list you should not use the *
+operator. That operator creates lists of N that refer to the same list
+and that is not what we want here. Instead, we use a list
+comprehension:</p>
+<p>four_lists = [[] for __ in xrange(4)]</p>
+<p><span style="font-weight: bold">Note – </span>If you are using Python
+3, use <span style="font-weight: bold">range()</span> and not <span
+style="font-weight: bold">xrange()</span></p>
+<h2>Creating Strings from Lists</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HE MOST COMMON IDIOM</span>
+for creating strings is <span
+style="font-weight: bold">str.join()</span> on empty strings:</p>
+<p>letters = [‘c’, ‘l’, o, 't']</p>
+<p>word = ''.join(letters)</p>
+<p>This sets a value of “clot” to the variable <span
+style="font-style: italic">word</span><span
+style="font-style: italic; font-weight: bold">. </span>You can apply
+this idiom to tuples and lists.</p>
+<h2>Searching a Collection for an Item</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-o">O</span>N OCCASION, YOU WILL</span>
+need to search a collection for a specific option and there are two ways
+to do this – using lists or sets</p>
+<p>Look at this example:</p>
+<p>s = set(['c', 'l', 'o', 't'])</p>
+<p>l = ['c', 'l', 'o', 't']</p>
+<p>def lookup_set(s):</p>
+<p>return 's' in s</p>
+<p>def lookup_list(l):</p>
+<p>return 's' in l</p>
+<p>Now, both of these functions look exactly the same simply because
+<span style="font-size: small; font-weight: bold">lookup_set </span>uses
+that fact that Python sets are hash tables. However, the performance of
+<span style="font-size: small; font-weight: bold">lookup </span>in each
+of the examples is different. In order to decide whether a specific item
+is contained in a list, Python has to search through every single item
+until it finds one that matches. This takes time, especially if you have
+a long list. With sets, each item has a hash that tells Python where to
+look for the matching item. This makes the search much quicker even if
+the sets are big ones. You can also search dictionaries in the same way.
+Because there is a difference in the performance, it is a better idea to
+use a set or a dictionary rather than a list in the following cases:</p>
+<ul>
+<li>Where a collection contains a lot of items</li>
+</ul>
+<ul>
+<li>Where you are going to be searching for items in a collection on a
+repeated basis</li>
+</ul>
+<ul>
+<li>There are no duplicate items</li>
+</ul>
+<p>In cases of smaller collections or those that you are not likely to
+be searching on a frequent basis, the extra memory and time needed to
+set the hash table up will, more often than not, be more than the time
+you save by improving the speed of the search</p>
+<p><span id="c008.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span id="c008.xhtml_Chapter5">Chapter
+5:</span></h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p>Comments</p>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-b">B</span>ecause you already</span>
+have some experience of Python coding, you will know that a comment is
+invisible when the program is run. A comment is there to help the coder
+and others who read it to understand what has been done and why. Now,
+some people think that, because they are invisible then there is no need
+to write them while others write comments that make no sense and that
+contradict their code. I have to tell you that, out of the two, having a
+contradictory comment is far worse than not writing one at all and, as
+such, whenever you make changes to your code, you must make sure that
+you update your comments.</p>
+<p>When you write a comment, ensure that it is a proper sentence with a
+proper ending. As it is when you write anything, your comment, be it a
+sentence or a phrase, must have a capital letter to start it. The only
+exception to that rule is if it is an identifier that starts with a
+lower-case letter – a golden rule here is that you NEVER change the case
+of an identifier!</p>
+<p>If you are using a short comment you can leave off the full-stop at
+the end. If you are writing block comments, these tend to be made up of
+at least one paragraph, sometimes more, each one built from whole
+sentences. Each of these sentences must have a full-stop. Following each
+full-stop there should be 2 spaces and all comments should be written in
+English. The only exception to this is if you are 200% certain that your
+code is never going to be read by people who do not speak or read your
+language</p>
+<h2>Block Comments:</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span> BLOCK COMMENT TENDS</span>
+to apply to some or all of the code that comes after it. The comment
+should be indented in the exact same way as the code it refers to and
+each line of each block must begin with a # and one space. The only
+exception is if you have used indented text within the comment. All
+paragraphs in each block comment must be separated with a line that
+contains one #.</p>
+<h2>Inline Comments</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HESE SHOULD BE USED</span> as
+little as possible. As a refresher, an inline comment is a comment that
+is placed on the same line that a statement is on. An inline comment has
+to be separated from the statement by a minimum of two spaces and they
+must begin with one # and one space.</p>
+<p>In all honesty, you should avoid using inline comments because they
+are not really necessary and can cause an unwanted distraction.</p>
+<p>For example, you should never do this:</p>
+<p>x = x + 1  # Increment x</p>
+<p>However, sometimes, this could be useful:</p>
+<p>x = x + 1  # Compensate for the border</p>
+<p><span id="c009.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span id="c009.xhtml_Chapter6">Chapter
+6:<br />
+Conventions</span><span class="section-break">––––––––</span> </h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-t">T</span>o make your Python</span>
+code much read better, follow these conventions:</p>
+<p>Look to see if your variables are equal to a constant. There is no
+need for an explicit comparison of the values to 0, None or True;
+instead, you could add it into the if-statement. Look at the following
+examples:</p>
+<p>A Bad Example:</p>
+<p>if attr == True:</p>
+<p>print 'True!'</p>
+<p>if attr == None:</p>
+<p>print 'attr is None!'</p>
+<p>A Good Example:</p>
+<p># Just look at the value</p>
+<p>if attr:</p>
+<p>print 'attr is the best!'</p>
+<p># or check to see what the opposite is</p>
+<p>if not attr:</p>
+<p>print 'attr is the worst!'</p>
+<p># or, as None is considered to be false, make you sure you run an
+explicit check for it</p>
+<p>if attr is None:</p>
+<p>print 'attr is None!'</p>
+<h2>How to Access Dictionary Elements:</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-i">I</span>NSTEAD OF USING THE</span>
+method <span style="font-weight: bold">dict.has-key(), </span>use the
+syntax, <span style="font-weight: bold">x in d</span> or use <span
+style="font-weight: bold">dict.get()</span> to pass default arguments
+to.</p>
+<p>A Bad Example:</p>
+<p>d = {'hello': 'world'}</p>
+<p>if d.has_key('hello'):</p>
+<p>print d['hello']  # prints 'world'</p>
+<p>else:</p>
+<p>print 'the_default_value'</p>
+<p><span style="font-weight: bold">A Good Example</span>:</p>
+<p>d = {'hello': 'world'}</p>
+<p>print d.get('hello', 'default_value') # prints 'world'</p>
+<p>print d.get('thingy', 'default_value') # prints 'default_value'</p>
+<p># Or:</p>
+<p>if 'hello' in d:</p>
+<p>print d['hello']</p>
+<h2>Manipulate Lists the Short Way</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-y">Y</span>OU DON’T NEED TO BE</span>
+long-winded when it comes to manipulating lists; use list comprehensions
+or the <span style="font-weight: bold">filter()</span> or <span
+style="font-weight: bold">map()</span> functions to use concise syntax
+when you want to perform an operation on a list.</p>
+<p>A Bad Example:</p>
+<p># Filter all elements that are more than 4</p>
+<p>a = [5, 4, 3]</p>
+<p>b = []</p>
+<p>for i in a:</p>
+<p>if i &gt; 4:</p>
+<p>b.append(i)</p>
+<p>A Good Example:</p>
+<p>a = [5, 4, 3]</p>
+<p>b = [i for i in a if i &gt; 4]</p>
+<p># Or:</p>
+<p>b = filter(lambda x: x &gt; 4, a)</p>
+<p><span style="font-weight: bold">Another Bad Example</span>:</p>
+<p># Add 3 to all members f the list.</p>
+<p>a = [5, 4, 3]</p>
+<p>for i in range(len(a)):</p>
+<p>a[i] += 3</p>
+<p><span style="font-weight: bold">Another Good Example</span>:</p>
+<p>a = [5, 4, 3]</p>
+<p>a = [i + 3 for i in a]</p>
+<p># Or:</p>
+<p>a = map(lambda i: i + 3, a)</p>
+<p>You can also use the function <span
+style="font-weight: bold">enumerate()</span> to keep an account of where
+you are in a list:</p>
+<p>a = [5, 4, 3]</p>
+<p>for i, item in enumerate(a):</p>
+<p>print i, item</p>
+<p># prints</p>
+<p># 0 5</p>
+<p># 1 4</p>
+<p># 2 3</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="Images/scene_break.png" class="decoration-scene-break"
+alt="image" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HIS FUNCTION READS</span>
+better than trying to manually handle a counter and it is far more
+optimal for iterators</p>
+<h2>Reading from a File</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-w">W</span>HEN YOU WANT TO READ</span>
+from a file, it is best to use the <span style="font-weight: bold">with
+open</span> syntax as this will close the files for you
+automatically.</p>
+<p>A Bad Example:</p>
+<p>f = open('file.txt')</p>
+<p>a = f.read()</p>
+<p>print a</p>
+<p>f.close()</p>
+<p><span style="font-weight: bold">A Good Example</span>:</p>
+<p>with open('file.txt') as f:</p>
+<p>for line in f:</p>
+<p>print line</p>
+<p>Using the <span style="font-weight: bold">with</span> statement is
+far more efficient because it makes sure the file is always closed even
+when the <span style="font-weight: bold">with</span> block contains an
+exception</p>
+<h2>Line Continuations</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HERE ARE ACCEPTED</span>
+limits to logical code lines and when you have one that is longer, it
+should be split up over several lines. Your Python interpreter will take
+consecutive lines and, so long as the final character on each line is a
+backslash (/), it will join the lines. However, although this can be
+useful sometimes, really you should avoid doing it because it can be
+fragile. If you were to add a whitespace after the backslash, it can
+break your code and the results might not be what you expected.</p>
+<p>A better way to do this is to enclose elements inside parentheses. If
+there is an unclosed parenthesis at the end of the line, the next line
+will be joined, and so on until there is a closed parenthesis. You could
+also use square or curly braces to do the same thing, so long as you
+remain consistent – whatever you use to start, you must also use to
+finish.</p>
+<p>A Bad Example:</p>
+<p>an_incredibly_big_string = """For many years I would go to bed early.
+Sometimes, \</p>
+<p>after I had put out my light, my eyes would shut so fast that I would
+not even \</p>
+<p>have the time to say “I am going to sleep.”"""</p>
+<p>from some.module.inside.another.module import a_good_function,
+another_good_function, \</p>
+<p>yet_another_good_function</p>
+<p><span style="font-weight: bold">A Good Example</span>:</p>
+<p>my_incredibly_big_string = (</p>
+<p>"For many years, I would go to bed early. Sometimes, "</p>
+<p>"when I had put out my light, my eyes would shut so fast "</p>
+<p>"that I would not even have time to say “I am going to sleep.”"</p>
+<p>)</p>
+<p>from some.module.inside.another.module import (</p>
+<p>a_good_function, another_good_function,
+yet_another_good_function)</p>
+<p>That said, if you find that you are having to keep on splitting up
+long lines, it is just a sign that you are trying to do too much and
+this will affect the readability of the code</p>
+<p><span id="c010.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span id="c010.xhtml_Chapter7">Chapter
+7:<br />
+Method and Function Arguments</span></h1>
+<h1><br />
+</h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-f">F</span>or the first
+argument</span> in any instance method always use self and, for the
+first argument in any class method, always use cls.</p>
+<p>If the name of a function’s argument is the same as one of the
+reserved keywords, then it is best to add one trailing underscore than
+it is to use a corrupted spelling or an abbreviation. As such, you
+should <span style="font-size: small">class_</span> rather than <span
+style="font-size: small">clss.  </span>Perhaps even better than causing
+a clash - use a synonym.</p>
+<h2>Function Arguments</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HERE ARE 4 WAYS THAT</span>
+you can pass an argument to a function:</p>
+<ol type="1">
+<li><span style="font-weight: bold">Positional Argument</span> – these
+are mandatory and do not contain any default values. The positional is
+the simplest argument form and are used for the arguments that are a
+complete part of the meaning of a function; they also have a natural
+order so, in the following example, the function user should find it
+easy to remember that the 2 functions need 2 arguments and they should
+remember the order:</li>
+</ol>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+<p><span style="font-size: small; font-weight: bold">Send(message,
+recipient)</span> and <span
+style="font-size: small; font-weight: bold">point(x, y)</span></p>
+</div>
+<div class="poetry">
+
+</div>
+<p>In both cases, you can use the argument names when you call the
+functions and, by doing this, you can change the order the arguments are
+in. For example, you could call <span
+style="font-size: small; font-weight: bold">send(recipient=’world’,
+message=’Hello’)</span> and <span
+style="font-size: small; font-weight: bold">point(y=2, x=1).
+</span>However, as you can see from this, it is not very readable and
+there are way more words there than we need.  Compare that version to
+the one that is more straightforward – <span
+style="font-size: small; font-weight: bold">send(‘Hello’, ‘World’)
+</span>and <span style="font-size: small; font-weight: bold">point(1,2)
+</span>and you can see the difference in readability instantly.</p>
+<ol type="1">
+<li>Keyword Argument – <span style="font-weight: normal">these do
+contain default values and they are not mandatory. Keyword arguments are
+sometimes used for optional parameters that you send to the function.
+When a function contains at least 2 or 3, preferably more, positional
+parameters, it is not easy to remember. Using a keyword argument that
+has a default value is more helpful. For example, you could define a
+complete </span>send<span style="font-weight: normal"> function as
+</span><span style="font-size: small">send(message, to, cc=None,
+bcc=None). </span><span style="font-weight: normal">The use of
+</span><span style="font-size: small; font-weight: normal">cc
+</span><span style="font-weight: normal">and </span><span
+style="font-size: small; font-weight: normal">bcc </span><span
+style="font-weight: normal">is optional and both have a value of
+</span><span style="font-size: small; font-weight: normal">None
+</span><span style="font-weight: normal">if they are not given another
+value.</span></li>
+</ol>
+<p>There are a few ways that you can call a function with a keyword
+argument in Python. For example, you could follow the argument order in
+a definition and no explicitly name those arguments; for example, <span
+style="font-size: small; font-weight: bold">send(‘Hello’, ‘World’,
+‘Galactus’, ‘God’). </span>In this, you are sending a carbon copy of the
+message to Galactus and a blind carbon copy to God. You can also name
+the arguments in a different order, for example, <span
+style="font-size: small; font-weight: bold">send(‘Helloagain’, ‘World’,
+bcc=’God’, cc=’Galactus’). </span>Unless you have a very good reason not
+to follow the correct syntax as closely as possible, these two examples
+are best avoided; they are verbose and not readable. The best way, the
+way that is closest to the function definition, is <span
+style="font-size: small; font-weight: bold">send(‘Hello’, ‘World’,
+cc=’Galactus’, bcc=’God’).</span></p>
+<ol type="1">
+<li><span style="font-weight: bold">Arbitrary Argument List -
+T</span>his is the next way of passing an argument to a function.
+Sometimes, the intention of a function is better expressed with a
+signature that has a number of positional arguments, a number that can
+be extended. In that case, you are better using the <span
+style="font-size: small; font-weight: bold">*args </span>constructs to
+define it. In the body of the argument, <span
+style="font-size: small; font-weight: bold">args </span>is a tuple of
+all of the positional arguments that are left. For example, you can use
+<span style="font-size: small; font-weight: bold">send(message, *args)
+</span>and list all of the recipients as a separate argument: <span
+style="font-size: small; font-weight: bold">send(’Hello’, ‘Galactus’,
+‘Dad’, ‘God’) </span><span style="font-weight: bold">– </span>in the
+body of the function, <span
+style="font-size: small; font-weight: bold">*args </span>is equal to
+<span style="font-size: small; font-weight: bold">(‘Galactus’, ‘Dad’,
+‘God’)</span></li>
+</ol>
+<p>However, you should really use this construct cautiously because it
+does have some drawbacks. If a function is sent a list that contains
+arguments that are of the same or similar nature, a better definition
+would be a function of a single argument; that single argument would be
+a sequence or a list. For example, if <span
+style="font-size: small; font-weight: bold">send </span>had several
+recipients, you would be better with an explicit definition: <span
+style="font-size: small; font-weight: bold">send(‘Hello’, ‘God’, ‘Dad’,
+‘Galactus’) </span>and then call it by using <span
+style="font-size: small; font-weight: bold">send(‘Hello’,[‘God’, ‘Dad’,
+‘Galactus’]). </span>In this way, the function user can change the
+recipient list beforehand and that opens up the possibility for any
+sequence that can’t be unpacked to be passed, and that includes
+iterators.</p>
+<ol type="1">
+<li><span style="font-weight: bold">Arbitrary Keyword Argument
+Dictionary - </span>This is final way of passing an argument to a
+function. If a function needs an unknown array of named arguments, you
+can use the construct <span
+style="font-size: small; font-weight: bold">**kwargs</span>. Within the
+body of the function, <span style="font-weight: bold">**kwargs</span> is
+a dictionary that contains all of the named arguments that have been
+passed and not caught by another keyword argument in the signature of
+the function</li>
+</ol>
+<p>However, you should use the same level of caution that you did with
+arbitrary argument lists, for pretty much the same reasons. These are
+powerful techniques that should only be used when you can prove that it
+is necessary to use them. They most definitely should not be used if
+there is a clearer and simpler construct that will do the job.</p>
+<p>It really is down to you, the programmer, to decide which of the
+function arguments are optional keywords and which are positional and to
+determine whether you should use the more advanced techniques to pass
+the arguments.</p>
+<p>Keep it simple and follow these rules of writing Python functions
+that:</p>
+<ul>
+<li>Are readable – the names and the arguments do not need any
+explanations</li>
+</ul>
+<ul>
+<li>Are easily changeable – you can add a keyword argument in without
+the rest of the code breaking.</li>
+</ul>
+<p><span id="c011.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span id="c011.xhtml_Chapter8">Chapter
+8:<br />
+Naming Conventions</span><span
+class="section-break">––––––––</span> </h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-t">T</span>o be honest, the
+Python</span> library naming conventions are something of a mess so we
+are never going to be totally consistent. However, there are some naming
+standards that are recommended and all new packages and modules, and
+that includes any third-party frameworks, must be written to these
+standards. That said, if you are using an existing library with a
+different style, stick to that style because consistency is preferable,
+especially in terms of readability</p>
+<p>The first and most important principle to learn is that, where you
+are using names that are a visible part of a public API, you must use a
+convention that reflects that usage of the name, rather than the
+implementation of it.</p>
+<h2>Descriptive</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HERE ARE QUITE A FEW</span>
+different naming styles so it is helpful to recognize which one is in
+use, independently of the usage. These are the most commonly
+distinguished naming styles:</p>
+<ul>
+<li><span style="font-size: small">B </span>– single uppercase</li>
+<li><span style="font-size: small">b </span>– single lowercase</li>
+<li>lowercase_with_underscores</li>
+<li>lowercase</li>
+<li>UPPERCASE_WITH_UNDERSCORES</li>
+<li>UPPERCASE</li>
+<li><span style="font-size: small">CapitalizedWords </span>– often
+called CamelCase because the letters look somewhat bumpy*</li>
+<li><span style="font-size: small">mixedCase </span>– different from
+CamelCase because the first letter is in lowercase</li>
+<li><span style="font-size: small">Capital_Words_With_Underscore –
+</span>not a pretty style!</li>
+</ul>
+<p>* When you use abbreviations in CamelCase, you should make sure all
+of the abbreviation letters are capitalized. For example, rather than
+using <span style="font-size: small">HttpServerError, </span>use <span
+style="font-size: small">HTTPServerError </span>instead</p>
+<p>You can also use another style, that of putting a unique prefix, a
+short one, that puts a group of related names together. This doesn’t get
+used very much in Python but I mention it just so that you know it is
+there. An example would be the function <span
+style="font-size: small">os.stat() – </span>this will return a tuple
+that contains items that have names like <span
+style="font-size: small">st_size, st_mode, st_mtime</span> and so
+on.</p>
+<p>These are some of the forms that use a trailing or a leading
+underscore and can usually be combined with any of the case
+conventions:</p>
+<ul>
+<li><span style="font-size: small">_one_leading_underscore – </span>this
+is generally an indicator of “internal use” that is not very
+strong.</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<ul>
+<li><span style="font-size: small">One_trailing_underscore_ </span>-
+generally used to stop a conflict with a Python keyword, for example:
+<span
+style="font-size: small">Apinter.Toplevel(master,class_=’ClassName”)</span></li>
+</ul>
+<ul>
+<li><span style="font-size: small">__two_leading_underscores</span> –
+when you name a class attribute, this invokes mangling of a name, for
+example: <span style="font-size: small">(inside class FootBar, __boo)
+</span>would become <span
+style="font-size: small">(_FootBar__boo)</span></li>
+</ul>
+<ul>
+<li><span
+style="font-size: small">__two_leading_and_two_trailing_underscores
+</span>are attributes or “magic” objects that reside in a namespace that
+is user-controlled. For example: <span
+style="font-size: small">__init__, __file__, </span>or <span
+style="font-size: small">__import__.</span></li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<h2>Prescriptive</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HESE ARE THE NAMES</span> you
+should avoid:</p>
+<p>Never use ‘O’ (uppercase oh), ‘l’ (lowercase el) or ‘I’ (uppercase
+eye) when you are writing variable names of a single character.
+Depending on what font you are using, these may be, these can be
+confused with the numbers ‘0’ and ‘1’ – if you do find yourself thinking
+about using ‘l’, use the uppercase ‘L’ instead.</p>
+<h2>Names for Modules and Packages</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span>LL MODULE NAMES SHOULD</span>
+be short and lowercase. You can use an underscore in a module name but
+only if it makes it more readable. The same goes for Python packages –
+short and lowercase names – but don’t use underscores.</p>
+<p>Where you have an extension module that has been written in C or in
+C++ and it is accompanied by a Python module that has an interface that
+is more object-oriented, the C or C++ module will have a leading
+underscore, for example, <span
+style="font-size: small">_socket</span></p>
+<h2>Class Names</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-c">C</span>LASS NAMES USUALLY</span> use
+the CapWords or CamelCase convention.</p>
+<p>Built-in names have their own separate convention and are usually a
+single word or 2 words in one, for example, <span
+style="font-size: small">‘Hello’ </span>or <span
+style="font-size: small">‘HelloWorld. </span>The CamelCase convention
+tends to be kept for built-in constants and for exception names.</p>
+<h2>Type Variables</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HE NAMES OF THE TYPE</span>
+variables usually use CamelCase and short names are preferred, for
+example, <span style="font-size: small">Num, AnyStr.  </span>You should
+add a suffix (_co or _contra) to the variables to declare contravariant
+or covariant behavior. For example:</p>
+<p>Import TypeVar</p>
+<p>Would become</p>
+<p>VT_co = TypeVar('VT_co', covariant=True)</p>
+<p>KT_contra = TypeVar('KT_contra', contravariant=True)</p>
+<h2>Names of Exceptions</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-e">E</span>XCEPTIONS ARE CLASSES</span>
+and, as such, you should use the class convention for naming. That said,
+if the exception is an error, make sure that you use the ‘Error’ suffix
+on the name.</p>
+<h2>Global Variables</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-p">P</span>ROVIDED THE VARIABLE</span>
+is used inside a single module, the naming conventions are the same as
+for naming functions.</p>
+<h2>Functions</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span>LL FUNCTION NAMES</span> are
+in lowercase and the words are separated by an underscore where needed
+to make it more readable. mixedCase conventions are only to be used in
+the context where this is already the style in order to keep backward
+compatibility intact.</p>
+<h2>Instance Variables and Method Names</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span>GAIN, THE NAMING
+CONVENTIONS</span> for functions apply here – using lowercase with
+intermittent underscores. If you are using an instance variable or a
+non-public method, you should use a single leading underscore. To stop a
+name from clashing with a subclass, two leading underscores should be
+used as a way of invoking the name mangling rules in Python.</p>
+<p>When these rules are invoked, the name is mangled with the class
+name. For example, class Foo contains an attribute called <span
+style="font-size: small">__a</span>. This cannot be accessed using <span
+style="font-size: small">Foo.__a. </span>As a rule, you should only use
+a double leading underscore when the name is likely to come into
+conflict with class attributes that are designed as subclasses.</p>
+<h2 style="page-break-before: always">Constants</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-t">T</span>HESE TEND TO BE
+DEFINED</span> on module level and are all uppercase with separating
+underscores, for example, <span
+style="font-size: small">MAX_OVERFLOW</span></p>
+<h2>Inheritance Design</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-o">O</span>NE RULE TO ABIDE BY</span> is
+to determine if the instance variable or class method is non-public or
+public. If you can’t decide, go for non-public as you can easily change
+it to public later on, whereas changing public to non-public is not so
+easy.</p>
+<p>A public attribute is one that clients that are not related to the
+class would use while a non-public attribute is one that is not intended
+for use by a third-party. With a public attribute, you guarantee
+backward compatibility from start to finish while, with the non-pubic
+attribute you do not and can remove or make changes to the attribute.
+Note that the term “private” is not used and this is because there is no
+real private attribute in the Python language.</p>
+<p>One other attribute category is that which is a protected attribute.
+In Python, they come under the subclass API. There are those classes
+that are designed solely as classes to inherit from, whether it is as a
+way of extending or modifying certain aspects of the behavior. When you
+design a class like this, always make sure that you make explicit
+decisions about the attributes – are they public, only to be used by the
+base class or are they in the subclass API?</p>
+<p>With all of this, these are the Pythonic guidelines:</p>
+<ul>
+<li>A public attribute must not have a leading underscore</li>
+</ul>
+<ul>
+<li>If a public attribute clashes with a keyword (reserved), add one
+trailing underscore to the attribute name. This is the preferred method
+over using a corruption in spelling or an abbreviation.</li>
+</ul>
+<ul>
+<li>With a public data attribute, the best way is to expose only the
+name of the attribute, without using any complicated mutator or accessor
+methods. If a simple attribute needs to expand its functional behavior,
+Python makes it easy.</li>
+</ul>
+<ul>
+<li>If you are using a class that is going to be subclassed and you are
+also using attributes that are not going to be subclassed, think about
+adding 2 leading underscores but do not add in any trailing underscores.
+This will invoke name mangling and helps to lower the risk of name
+clashes if the subclasses have attributes with the same name in
+them.</li>
+</ul>
+<p><span id="c012.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span id="c012.xhtml_Chapter9">Chapter
+9:</span></h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p>Using Whitespace in Statements and Expressions</p>
+<h1></h1>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-f">F</span>irst, some of the</span>
+peeves about whitespaces:</p>
+<p>Do not use unnecessary whitespaces in these cases:</p>
+<ul>
+<li>Immediately within braces, brackets or parentheses</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>ham(spam[1], {eggs: 2})</p>
+<p>A Bad Example:</p>
+<p>ham( spam[ 1 ], { eggs: 2 } )</p>
+<ul>
+<li>Immediately in front of a colon, semicolon or a comma:</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>if x == 4: print x, y; x, y = y, x</p>
+<p>A Bad Example:</p>
+<p>if x == 4 : print x , y ; x , y = y , x</p>
+<p>However, where you have a slice, the colon is similar to a binary
+operator and it should contain an equal amount on each side. Where you
+have an extended slice, both of the colons must contain the exact same
+level of spacing. The exception to this is a slice parameter that has
+been omitted, along with the space.</p>
+<p>A Good Example:</p>
+<p>spam[1:8], spam[1:8:2], spam[:8:2], spam[1::2], spam[1:8:]</p>
+<p>spam[lower:upper], spam[lower:upper:], spam[lower::step]</p>
+<p>spam[lower+offset : upper+offset]</p>
+<p>spam[: upper_fn(x) : step_fn(x)], ham[:: step_fn(x)]</p>
+<p>spam[lower + offset : upper + offset]</p>
+<p>A Bad Example:</p>
+<p>spam[lower + offset:upper + offset]</p>
+<p>spam[1: 8], ham[1 :8], ham[1:8 :2]</p>
+<p>spam[lower : : upper]</p>
+<p>spam[ : upper]</p>
+<ul>
+<li>Right before the opening parenthesis that begins the argument list
+of the function call:</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p><span style="font-size: small">ham(1</span>)</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="Images/scene_break.png" class="decoration-scene-break"
+alt="image" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span> BAD EXAMPLE:</span></p>
+<p>ham (1)</p>
+<ul>
+<li>Right in front of the open parenthesis that starts a slicing or an
+indexing:</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>dct['key'] = lst[index]</p>
+<p>A Bad Example:</p>
+<p>dct ['key'] = lst [index]</p>
+<ul>
+<li>When there is more than a single space around an operator, such as
+an assignment, that aligns it with another operator</li>
+</ul>
+<div class="poetry">
+
+</div>
+<div class="poetry">
+
+</div>
+<p>A Good Example:</p>
+<p>x = 1</p>
+<p>y = 2</p>
+<p>long_variable = 3</p>
+<p>A Bad Example:</p>
+<p>x  = 1</p>
+<p>y  = 2</p>
+<p>long_variable = 3</p>
+<h2>Other Recommendations</h2>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-a">A</span>VOID HAVING TRAILING</span>
+whitespace throughout your code because it is not visible and it can
+cause confusion. For example, if you put in a backslash and follow it
+with a space and then a newline – this would not be counted as a line
+continuation. In fact, some text editors will not preserve it and there
+are projects that contain pre-commit hooks that will simply reject it –
+one of those is CPython.</p>
+<p>The following binary operators should be surrounded by single spaces
+– one on each side:</p>
+<ul>
+<li>assignment (=)</li>
+<li>augmented assignment (+=, = etc.)</li>
+</ul>
+<p>The following comparisons are treated the same:</p>
+<ul>
+<li>== </li>
+<li>&lt; </li>
+<li>&gt;</li>
+<li>!= </li>
+<li>&lt;&gt;</li>
+<li>&lt;=</li>
+<li>&gt;=</li>
+<li>in</li>
+<li>not in</li>
+<li>is</li>
+<li>is not </li>
+</ul>
+<p>And these Booleans:</p>
+<ul>
+<li>and</li>
+<li>or</li>
+<li>not</li>
+</ul>
+<p>If you use operators that have different priorities, think about
+putting whitespace around the lowest priority operators – use your best
+judgment here. However, you should not use any more than a single space
+and make sure that each side of the operator has the same amount of
+whitespace – don’t put 1 on one side and 2 on the other:</p>
+<p>A Good Example:</p>
+<p>i = i + 1</p>
+<p>submitted += 1</p>
+<p>x = x*2 - 1</p>
+<p>hypot2 = x*x + y*y</p>
+<p>c = (a+b) * (a-b)</p>
+<p>A Bad Example:</p>
+<p>i=i+1</p>
+<p>submitted +=1</p>
+<p>x = x * 2 - 1</p>
+<p>hypot2 = x * x + y * y</p>
+<p>c = (a + b) * (a - b)</p>
+<p>When you use an = sign to indicate default values for parameters or
+keyword arguments, do not use whitespace around the sign:</p>
+<p>A Good Example:</p>
+<p>def complex(real, imag=0.0):</p>
+<p>return magic(r=real, i=imag)</p>
+<p>A Bad Example:</p>
+<p>def complex(real, imag = 0.0):</p>
+<p>return magic(r = real, i = imag)</p>
+<p>Use the standard rules for colons with function annotations and make
+sure there are spaces surrounding the -&gt; if it is used:</p>
+<p>A Good Example:</p>
+<p>def munge(input: AnyStr): ...</p>
+<p>def munge() -&gt; AnyStr: ...</p>
+<p>A Bad Example:</p>
+<p>def munge(input:AnyStr): ...</p>
+<p>def munge()-&gt;PosInt: ...</p>
+<p>When you combine a default value and an argument annotation, spaces
+should surround the = sign – do not do this unless the argument has both
+the default and the annotation:</p>
+<p>A Good Example:</p>
+<p>def munge(sep: AnyStr = None): ...</p>
+<p>def munge(input: AnyStr, sep: AnyStr = None, limit=1000): ...</p>
+<p>A Bad Example:</p>
+<p>def munge(input: AnyStr=None): ...</p>
+<p>def munge(input: AnyStr, limit = 1000): ...</p>
+<p>It is not good practice to use compound statements – several
+statements on one line:</p>
+<p>A Good Example:</p>
+<p>if foo == 'that':</p>
+<p>do_that_thing()</p>
+<p>do_one()</p>
+<p>do_two()</p>
+<p>do_three()</p>
+<p>Best Not to Do:</p>
+<p>if foo == 'that': do_that_thing()</p>
+<p>do_one(); do_two(); do_three()</p>
+<p>It is, on occasion, alright to use an if, for and while statement on
+one line, provided they have small bodies but you should never do this
+for statements that have several clauses. Also, never fold really long
+lines:</p>
+<p>––––––––</p>
+<div class="decoration-scene-break">
+<div class="decoration-scene-break-inner">
+<img src="Images/scene_break.png" class="decoration-scene-break"
+alt="image" />
+</div>
+</div>
+<p><span class="first-scene-phrase"><span
+class="first-in-scene character-b">B</span>EST NOT TO DO:</span></p>
+<p>if foo == 'that': do_that_thing()</p>
+<p>for x in lst: total += x</p>
+<p>while t &lt; 10: t = delay()</p>
+<p>Most Definitely Not:</p>
+<p>if foo == 'that': do_that_thing()</p>
+<p>else: do_non_that_thing()</p>
+<p>try: something()</p>
+<p>finally: cleanup()</p>
+<p>do_one(); do_two(); do_three(long, argument,</p>
+<p>list, like, this)</p>
+<p>if foo == 'that': one(); two(); three()</p>
+<p><span id="c013.xhtml"></span></p>
+<table class="chapter-title-corner-decorations" width="100%">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr>
+<td class="chapter-title-corner-decoration-left-column"><div
+class="chapter-title-corner-decoration-left-column">
+<img src="Images/chapter_title_corner_decoration_left.png"
+class="chapter-title-corner-decoration-left" alt="image" />
+</div></td>
+<td class="chapter-title-corner-decoration-middle-column"></td>
+<td class="chapter-title-corner-decoration-right-column"><div
+class="chapter-title-corner-decoration-right-column">
+<img src="Images/chapter_title_corner_decoration_right.png"
+class="chapter-title-corner-decoration-right" alt="image" />
+</div></td>
+</tr>
+</tbody>
+</table>
+<div class="chapter-title">
+<div class="chapter-title-decoration-above">
+<div class="chapter-title-decoration-above-inner">
+<img src="Images/chapter_title_above.png"
+class="chapter-title-decoration-above" alt="image" />
+</div>
+</div>
+<h1 class="chapter-title"><span
+id="c013.xhtml_Conclusion">Conclusion</span></h1>
+<div class="chapter-title-decoration-below">
+<div class="chapter-title-decoration-below-inner">
+<img src="Images/chapter_title_below.png"
+class="chapter-title-decoration-below" alt="image" />
+</div>
+</div>
+</div>
+<p><span class="first-chapter-phrase"><span
+class="first-in-chapter character-t">T</span>hank you once again</span>
+for reading my book; I truly hope that it was able to help you
+understand how to write more effective and efficient Python code.</p>
+<p>From here, the next step is to, quite simply, practice. The more you
+do, the better you will get and, eventually, you will be writing Python
+code like a pro! Research, join online Python forums and join the Python
+community to learn more and to advance your skills.</p>
+<p>Thank you and good luck on your journey to becoming a better Python
+programmer.</p>
+<p><span id="other.ata.xhtml"></span></p>
+<div id="other.ata.xhtml_about-the-author-page">
+<div class="about-the-author-page-author-photo">
+<img src="Images/ata_image.jpg" width="125" height="125"
+alt="Charlie Masterson" />
+</div>
+<h1>About the Author</h1>
+<div class="user-content">
+<p>Charlie Masterson is a computer programmer and instructor who has
+developed several applications and computer programs.<br />
+<br />
+As a computer science student, he got interested in programming early
+but got frustrated learning the highly complex subject matter.<br />
+<br />
+Charlie wanted a teaching method that he could easily learn from and
+develop his programming skills. He soon discovered a teaching series
+that made him learn faster and better.<br />
+<br />
+Applying the same approach, Charlie successfully learned different
+programming languages and is now teaching the subject matter through
+writing books.<br />
+<br />
+With the books that he writes on computer programming, he hopes to
+provide great value and help readers interested to learn
+computer-related topics.</p>
+</div>
+</div>

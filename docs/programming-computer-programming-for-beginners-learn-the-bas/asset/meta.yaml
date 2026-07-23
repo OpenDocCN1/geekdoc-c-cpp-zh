@@ -1,0 +1,298 @@
+name: Programming： Computer Programming For Beginners： Learn The Basics Of HTML5,
+  JavaScript, & CSS - 2nd Edtion (Coding, C Programming, Java Programming, Web Design,
+  JavaScript, Python, HTML and CSS)
+name_cn: 编程：初学者计算机编程：学习 HTML5、JavaScript 和 CSS 基础知识（第二版）（编码、C 编程、Java 编程、Web 设计、JavaScript、Python、HTML
+  和 CSS）
+slug: programming-computer-programming-for-beginners-learn-the-bas
+toc:
+- - '#'
+  - 编程：初学者计算机编程：学习 HTML5、JavaScript 和 CSS 基础知识（第二版）（编码、C 编程、Java 编程、Web 设计、JavaScript、Python、HTML
+    和 CSS）
+- - '##'
+  - 赠送
+- - '##'
+  - 引言
+- - '##'
+  - 第一章：Web 开发简介
+- - '###'
+  - Web 开发流程
+- - '###'
+  - Web 开发的方面
+- - '####'
+  - 前端开发
+- - '####'
+  - 后端开发
+- - '###'
+  - 使用编程语言的优缺点
+- - '###'
+  - 为什么要学习 Web 开发？
+- - '##'
+  - 第 2 章：学习 HTML5：Web 语言
+- - '###'
+  - 什么是 HTML？
+- - '###'
+  - HTML 的历史
+- - '###'
+  - HTML 基础
+- - '###'
+  - 创建 HTML 网页的元素
+- - '####'
+  - 页面标题
+- - '####'
+  - 段落
+- - '####'
+  - 换行
+- - '####'
+  - 列表
+- - '####'
+  - 创建 HTML 网页的步骤
+- - '####'
+  - Hello World 示例
+- - '####'
+  - HTML 文档的结构
+- - '####'
+  - HTML 的类型
+- - '####'
+  - HTML 中的元素
+- - '####'
+  - HTML5 中的元素
+- - '####'
+  - HTML5 中的属性
+- - '####'
+  - 标准属性
+- - '###'
+  - HTML5 的一些有趣特性
+- - '####'
+  - HTML5 中的多媒体支持
+- - '####'
+  - 新输入元素类型
+- - '####'
+  - Canvas
+- - '####'
+  - 自定义数据属性
+- - '####'
+  - 可编辑内容
+- - '####'
+  - 范围验证器和 required 属性
+- - '####'
+  - Placeholder 和 autofocus 属性
+- - '####'
+  - 预加载视频
+- - '####'
+  - 地定位
+- - '####'
+  - Figure 元素
+- - '###'
+  - 使用 HTML5 的优势
+- - '###'
+  - HTML5 的缺点
+- - '###'
+  - 一些 HTML5 最佳实践
+- - '###'
+  - 常见问题 (FAQ)
+- - '####'
+  - HTML5 的目的是什么？
+- - '####'
+  - HTML 5 规范可以在所有类型的浏览器上实现吗？
+- - '####'
+  - HTML 标签和元素不同吗？
+- - '####'
+  - 你说的 DOCTYPE 是什么？新格式是什么？
+- - '####'
+  - 描述 HTML5 中 header、section、article 和 footer 的正确用法。
+- - '####'
+  - HTML5 支持哪些媒体元素？
+- - '####'
+  - HTML5 中包含任何新元素吗？
+- - '####'
+  - 为什么我们需要数据属性？
+- - '####'
+  - HTML5 带有哪些标准 API？
+- - '####'
+  - HTML 缓存和 HTML5 缓存有什么区别？
+- - '##'
+  - 第 3 章：理解 CSS：网页样式
+- - '###'
+  - 什么是 CSS？
+- - '###'
+  - CSS 的历史
+- - '###'
+  - CSS 提供的优势
+- - '###'
+  - CSS 的缺点
+- - '###'
+  - 开始学习 CSS
+- - '###'
+  - CSS 中的 Hello World 程序
+- - '###'
+  - 创建并将 CSS 应用到 HTML 文件
+- - '####'
+  - 内联 (Inline)
+- - '####'
+  - 内部 (Internal)
+- - '####'
+  - 外部 (External)
+- - '####'
+  - 类型选择器（Type Selectors）
+- - '####'
+  - 通用选择器（Universal Selectors）
+- - '####'
+  - 后代选择器（Descendant Selectors）
+- - '####'
+  - 类选择器（Class Selectors）
+- - '####'
+  - ID 选择器（ID Selectors）
+- - '####'
+  - 子选择器（Child Selectors）
+- - '####'
+  - 属性选择器（Attribute Selectors）
+- - '####'
+  - 多样式规则（Multiple Style Rules）
+- - '####'
+  - 选择器组（Selector Groups）
+- - '###'
+  - 使用 Color 属性
+- - '###'
+  - 在 CSS 中样式化文本
+- - '####'
+  - font-family 属性
+- - '####'
+  - font-size 属性
+- - '####'
+  - font-weight-
+- - '####'
+  - font-style-
+- - '####'
+  - Text-decoration-
+- - '####'
+  - Text drop shadows
+- - '####'
+  - Text-Color-
+- - '####'
+  - Text Alignment-
+- - '####'
+  - Text transformation-
+- - '####'
+  - Text Indentation
+- - '####'
+  - 字间距 (Letter Spacing)
+- - '####'
+  - 行高 (Line Height)
+- - '####'
+  - 文字方向 (Text direction)
+- - '####'
+  - 字间距 (Word Spacing)
+- - '####'
+  - 字体样式 (Font Style)
+- - '####'
+  - 文字布局样式 (Text layout Styles)
+- - '####'
+  - CSS 快捷方式 (Shortcuts in CSS)
+- - '#'
+  - 第 4 章：学习 JavaScript：让 Web 更具交互性
+- - '##'
+  - 什么是 JavaScript？
+- - '###'
+  - 理解脚本语言
+- - '###'
+  - JavaScript 的历史
+- - '###'
+  - JavaScript 的特性
+- - '###'
+  - JavaScript 提供的优势
+- - '###'
+  - JavaScript 的缺点
+- - '###'
+  - JavaScript 可以做什么？
+- - '####'
+  - 布局问题可以通过 JavaScript 修复。
+- - '####'
+  - 通过 JavaScript，你可以加载只有那些认为与其信息相关的用户才能访问的信息。
+- - '####'
+  - 不断变化的信息（如体育比赛比分或股市市场）。
+- - '###'
+  - JavaScript 基础
+- - '####'
+  - 变量
+- - '####'
+  - JavaScript 中的变量作用域
+- - '####'
+  - 变量命名规则
+- - '####'
+  - 数据类型
+- - '###'
+  - 数组
+- - '###'
+  - 对象
+- - '###'
+  - 运算符
+- - '####'
+  - 算术运算符
+- - '####'
+  - 赋值运算符
+- - '####'
+  - 比较运算符
+- - '####'
+  - 逻辑运算符
+- - '###'
+  - 条件语句
+- - '####'
+  - if
+- - '####'
+  - else
+- - '####'
+  - if..else if..else
+- - '####'
+  - switch
+- - '###'
+  - 函数
+- - '###'
+  - 循环
+- - '####'
+  - for 循环
+- - '####'
+  - while 循环
+- - '###'
+  - JavaScript 中的 Hello World 示例
+- - '###'
+  - JavaScript 语法
+- - '####'
+  - 换行和空白符
+- - '####'
+  - 分号
+- - '####'
+  - 大小写敏感
+- - '###'
+  - 如何将 JavaScript放入 HTML 文档中？
+- - '###'
+  - JavaScript 中的事件
+- - '###'
+  - onSubmit 事件类型
+- - '###'
+  - onmouseover 和 onmouseout
+- - '###'
+  - 关于使用 JavaScript 的提示
+- - '###'
+  - FAQ
+- - '####'
+  - JavaScript 和 Java 一样吗？
+- - '####'
+  - 哪些浏览器支持 JavaScript？
+- - '####'
+  - 如何在 JavaScript 中添加注释？
+- - '####'
+  - 当用户无法执行 JavaScript 代码时，可以向用户显示警告吗？
+- - '####'
+  - 可以删除 JavaScript（变量）吗？
+- - '####'
+  - JavaScript 程序不能做什么？
+- - '####'
+  - 有没有方法可以判断用户点击的是右键还是左键？可以使用 onclick 事件处理器吗？
+- - '####'
+  - JavaScript 支持哪些数字格式？
+- - '####'
+  - 如何测试特定变量持有的是字符串还是数字？
+- - '##'
+  - 结论
+- - '##'
+  - 想学习更多编程的知识吗？
