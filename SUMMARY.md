@@ -559,6 +559,7 @@
 +   [Practical C++ 后端编程：为高性能后端构制数据库、API 和 Web 服务器](docs/practical-c-backend-programming-crafting-databases-apis-and-/README.md)
 +   [C 和 Python 中的问题解决：编程练习与解决方案，第一部分](docs/problem-solving-in-c-and-python-programming-exercises-and-so/README.md)
 +   [Android 高级编程：使用 Mono for Android 和 .NET/C#](docs/professional-android-programming-with-mono-for-android-and-n/README.md)
++   [ASP.NET 3.5 高级指南：C# 与 VB 语言](docs/professional-asp-net-3-5-in-c-and-vb/README.md)
 +   [C# 和 VB 专业级 ASP.NET 3.5 安全、成员与角色管理高级](docs/professional-aspnet-35-security-membership-and-role-manageme/README.md)
 +   [ASP.NET 4.5 in C# and VB 高级指南：从零构建高性能组织](docs/professional-aspnet-45-in-c-and-vb-building-a-high-performan/README.md)
 +   [C++ 高级指南](docs/professional-c/README.md)
