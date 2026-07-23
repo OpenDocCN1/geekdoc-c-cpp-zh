@@ -606,6 +606,7 @@
 +   [Python 入门指南：Python 计算机编程代码 #1](docs/python-beginners-guide-to-programming-code-with-python-pytho/README.md)
 +   [Python 编程最佳实践](docs/python-best-practices-to-programming-code-with-python/README.md)
 +   [Python 编码与 C 语言编程示例：小白编程指南](docs/python-coding-and-c-programming-examples-programming-for-stu/README.md)
++   [Python 入学者指南：1周学会 Python 速成指南（编码、编程、Web 编程、程序员）](docs/python-for-beginners-a-crash-course-guide-to-learn-python-in/README.md)
 +   [Python：学习 Python 编程 – 初学者指南 (Python 初学者,HTML,PHP, C,Java,Ruby,SQL 书籍 1)](docs/python-learn-python-programming-beginner-guide-python-for-be/README.md)
 +   [Python 编程：通过实践练习掌握 Python 语言、应用理论及快速学习计算机编程技巧的入门指南](docs/python-programming-the-crash-course-to-learn-how-to-master-p/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
