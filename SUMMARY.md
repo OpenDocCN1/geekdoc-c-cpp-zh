@@ -587,6 +587,7 @@
 +   [C 语言解决问题编程](docs/programming-for-problem-solving-with-c/README.md)
 +   [C 语言问题解决编程：复杂问题的算法制定](docs/programming-for-problem-solving-with-c-formulating-algorithm/README.md)
 +   [C++ 编程基础：模块化结构化方法](docs/programming-fundamentals---a-modular-structured-approach-usi/README.md)
++   [MATLAB编程基础指南](docs/programming-fundamentals-using-matlab/README.md)
 +   [C# 编程 10 - 基础技术](docs/programming-in-c-10---basic-techniques/README.md)
 +   [C语言编程入门指南，第3版](docs/programming-in-c-3e-3rd-edition/README.md)
 +   [C, C#, C++ 编程入门指南](docs/programming-in-c-c-c/README.md)
