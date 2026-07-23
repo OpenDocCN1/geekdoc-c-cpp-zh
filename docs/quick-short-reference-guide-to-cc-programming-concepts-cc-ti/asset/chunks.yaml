@@ -1,0 +1,2625 @@
+- fmt: "\n![](cover.jpeg)\n\n# Quick Short Reference Guide\nTo\nC/C++ Programming\
+    \ Concepts\n\n## Includes\nC/C++ Tips and Concepts\nPoint-to-Point C/C++ Guide\n\
+    Useful for all C/C++ Developers/Programmers\n(N.PAUL)\n\n## Table of Contents\n\
+    1. [1C++ OOP (Object-oriented programming)]\n2. [2C++ Advantages]\n3. [3C++ Program]\n\
+    4. [4C++ Tokens]\n5. [5C++ Coding Standards]\n6. [6C++ Comments]\n7. [7C++ Identifiers]\n\
+    8. [8C++ Keywords]\n9. [9C++ Whitespace]\n10. [10 C++ NULL Statement]\n11. [11C++\
+    \ Data Types]\n12. [12C++ Variables]\n13. [13C++ Local Vs Global Variables]\n\
+    14. [14C++ literals]\n15. [15C++ Operators]\n16. [16C++ Modifiers]\n17. [17C++\
+    \ Storage Classes]\n18. [18 C++ Loops]\n19. [19C++ Loop Control Statement]\n20.\
+    \ [20 C++ Conditional Statement]\n21. [21C++ Functions:]\n22. [22 C++ Arrays:]\n\
+    23. [23 C++ Inline Function]\n24. [24 C++ Namespace]\n25. [25 C++ Classes & Objects]\n\
+    26. [26 C++ Inheritance]\n27. [27 C++ Constructors]\n28. [28 C++ Destructors]\n\
+    29. [29 C++ Function Overloading]\n30. [30 C++ Operator Overloading]\n31. [31C++\
+    \ Abstraction]\n32. [32 C++ Encapsulation]\n33. [33 C++ Polymorphism]\n34. [34\
+    \ C++ Exception Handling]\n35. [35 C++ Late Binding]\n36. [36 C++ References]\n\
+    37. [37 C++ Points]\n\n# 1 C++ OOP (Object-oriented programming)\nObject-oriented\
+    \ programming (`OOP`) refers to a programming paradigm based on the concept of\
+    \ \"objects\", which can contain data (attributes) and code (methods). The goal\
+    \ of `OOP` is to model real-world entities.\n\nBasic concepts of `OOP` are:\n\
+    * Objects: An instance of a class.\n* Class: A blueprint for creating objects.\n\
+    * Encapsulation: Grouping data and methods and restricting direct access to some\
+    \ of the object's components.\n* Abstraction: Hiding complex implementation details\
+    \ and showing only necessary features.\n* Inheritance: A mechanism where one class\
+    \ acquires the properties of another.\n* Polymorphism: The ability of different\
+    \ objects to be treated as instances of a common base class.\n* Function Overloading:\
+    \ Multiple functions with the same name but different parameters.\n* Operator\
+    \ Overloading: Defining new meanings for built-in operators.\n* Exception Handling:\
+    \ A mechanism to handle runtime errors.\n* Late Binding: The process of resolving\
+    \ function calls at runtime.\n* References: Using an alias for another variable.\n\
+    \n# 2 C++ Advantages\n* `C++` is portable, efficient, and fast.\n* `C++` is rich\
+    \ in inheritance, abstraction, and encapsulation.\n* `C++` allows for exception\
+    \ handling and function overloading.\n* `C++` is used for a wide range of applications,\
+    \ from GUI to 3D graphics.\n\n# 3 C++ Program\n```cpp\n#include <iostream>\n\n\
+    using namespace std;\n\n// main() is where execution begins.\nint main() {\n \
+    \   cout << \"Hello World\"; // prints Hello World\n    return 0;\n}\n```\n\n\
+    # 4 C++ Tokens\nA `token` is the smallest element of a `C++` program that is meaningful\
+    \ to the compiler. The `C++` parser recognizes these kinds of `tokens`: identifiers,\
+    \ keywords, literals, operators, punctuators, and other separators. A stream of\
+    \ these `tokens` makes up a translation unit.\n\n* Keywords: Predefined, reserved\
+    \ words used in programming that have a special meaning. `Keywords` are part of\
+    \ the syntax and cannot be used as an `identifier`. Example: `if`, `while`, `int`.\n\
+    * Identifier: Used for any variable, function, data definition, etc. In the programming\
+    \ language `C++`, an `identifier` is a combination of alphanumeric characters,\
+    \ the first being a letter of the alphabet or an underline, and the remaining\
+    \ being any letter of the alphabet, any numeric digit, or the underline.\n* Constant:\
+    \ Treated just like regular variables except that their values cannot be modified\
+    \ after their definition. Constants can be any numeric, string or char value.\
+    \ Example: `123`, `23`, `\"c++\"`, `'j'` or `'k'` or `'l'`.\n* Operator: A symbol\
+    \ that tells the compiler to perform specific mathematical or logical manipulations.\
+    \ `C++` is rich in built-in `operators` and provides the following types of `operators`:\
+    \ Arithmetic operator, logical operator and relational operator.\n\nExample:\n\
+    * `cin`: Similar to `scanf()` in C.\n* `cout`: Similar to `printf()` in C.\n\n\
+    ```cpp\ncin >> a;\ncout << a;\n```\n"
+  raw: '
+
+
+    ![](cover.jpeg)
+
+
+    Quick Short Reference Guide
+
+
+    To
+
+
+    C/C++ Programming Concepts
+
+
+    Includes
+
+
+    C/C++ Tips and Concepts
+
+
+    Point-to-Point C/C++ Guide
+
+
+    Useful for all C/C++ Developers/Programmers
+
+
+    (N.PAUL)
+
+
+    Table of Contents
+
+
+    [1C++ OOP (Object-oriented programming)](#part0000_split_001.html__Toc472153960)
+
+
+    [2C++ Advantages](#part0000_split_002.html__Toc472153961)
+
+
+    [3C++ Program](#part0000_split_003.html__Toc472153962)
+
+
+    [4C++ Tokens](#part0000_split_004.html__Toc472153963)
+
+
+    [5C++ Coding Standards](#part0000_split_005.html__Toc472153964)
+
+
+    [6C++ Comments](#part0000_split_006.html__Toc472153965)
+
+
+    [7C++ Identifiers](#part0000_split_007.html__Toc472153966)
+
+
+    [8C++ Keywords](#part0000_split_008.html__Toc472153967)
+
+
+    [9C++ Whitespace](#part0000_split_009.html__Toc472153968)
+
+
+    [10 C++ NULL Statement](#part0000_split_010.html__Toc472153969)
+
+
+    [11C++ Data Types](#part0000_split_011.html__Toc472153970)
+
+
+    [12C++ Variables](#part0000_split_012.html__Toc472153971)
+
+
+    [13C++ Local Vs Global Variables](#part0000_split_013.html__Toc472153972)
+
+
+    [14C++ literals](#part0000_split_014.html__Toc472153973)
+
+
+    [15C++ Operators](#part0000_split_015.html__Toc472153974)
+
+
+    [16C++ Modifiers](#part0000_split_016.html__Toc472153975)
+
+
+    [17C++ Storage Classes](#part0000_split_017.html__Toc472153976)
+
+
+    [18   C++ Loops](#part0000_split_018.html__Toc472153977)
+
+
+    [19C++ Loop Control Statement](#part0000_split_019.html__Toc472153978)
+
+
+    [20   C++ Conditional Statement](#part0000_split_020.html__Toc472153979)
+
+
+    [21C++ Functions:](#part0000_split_021.html__Toc472153980)
+
+
+    [22   C++ Arrays:](#part0000_split_022.html__Toc472153981)
+
+
+    [23   C++ Inline Function](#part0000_split_023.html__Toc472153982)
+
+
+    [24   C++ Namespace](#part0000_split_024.html__Toc472153983)
+
+
+    [25   C++ Classes & Objects](#part0000_split_025.html__Toc472153984)
+
+
+    [26   C++ Inheritance](#part0000_split_026.html__Toc472153985)
+
+
+    [27   C++ Constructors](#part0000_split_027.html__Toc472153986)
+
+
+    [28   C++ Destructors](#part0000_split_028.html__Toc472153987)
+
+
+    [29   C++ Function Overloading](#part0000_split_029.html__Toc472153988)
+
+
+    [30   C++ Operator Overloading](#part0000_split_030.html__Toc472153989)
+
+
+    [31C++ Abstraction](#part0000_split_031.html__Toc472153990)
+
+
+    [32 C++ Encapsulation](#part0000_split_032.html__Toc472153991)
+
+
+    [33 C++ Polymorphism](#part0000_split_033.html__Toc472153992)
+
+
+    [34   C++ Exception Handling](#part0000_split_034.html__Toc472153993)
+
+
+    [35   C++ Late Binding](#part0000_split_035.html__Toc472153994)
+
+
+    [36   C++ References](#part0000_split_036.html__Toc472153995)
+
+
+    [37   C++important Points](#part0000_split_037.html__Toc472153996)
+
+
+    # 1 C++ OOP (Object-oriented programming)
+
+
+    Object-oriented programming (OOP) refers to a type of computer programming (software
+    design) in which programmers define not only the data type of a data structure,
+    but also the types of operations (functions) that can be applied to the data structure.
+
+
+    C++ is an object oriented programming language. C++ is a case sensitive programming  language.
+    The goal of object oriented programming is as follows:
+
+
+    *   Clearer
+
+
+    *   More reliable
+
+
+    *   Easy maintenance of program
+
+
+    Basic concepts of OOP are:
+
+
+    Objects
+
+
+    *   Is an instance of class
+
+
+    *   Program objects should be chosen such that they match closely with the real
+    world objects.
+
+
+    *   When a program is executed, the objects interact by sending messages to one
+    another.
+
+
+    Class
+
+
+    *   Class is a collection of objects of similar type.
+
+
+    *   Class is used to combine the data and operations of a structure into a single
+    entity.
+
+
+    *   Once a class has been defined, any number of object can be created.
+
+
+    Data Encapsulation
+
+
+    *   Encapsulation is the mechanism that binds together code and the data it manipulates
+    and keep both safe from outside interference and misuse.
+
+
+    *   It groups all pieces of an object into one neat package.
+
+
+    Data Abstraction
+
+
+    *   Data abstraction is taking only the essential features without including all
+    the background information
+
+
+    Polymorphism
+
+
+    *   “One interface multiple methods”. It is nothing but the ability to take more
+    than one forms depending upon the arguments passed to a function.
+
+
+     Inheritance
+
+
+    *   Inheritance is a process by which objects of one class acquire the properties
+    of objects of another class.
+
+
+    *   The derived class inherits all the properties of the base class and has the
+    properties of its own.
+
+
+    Dynamic binding
+
+
+    *   This is also called lazy initialization or runtime binding or late binding.
+
+
+    *   At runtime only, it would be decided, which derived class method is called.
+
+
+    # 2 C++ Advantages
+
+
+    *   C++ is a highly portable language and is often the language of choice for
+    multi-device, multi-platform app development.
+
+
+    *   C++ is an object-oriented programming language and includes classes, inheritance,
+    polymorphism, data abstraction and encapsulation.
+
+
+    *   C++ has a rich function library.
+
+
+    *   C++ allows exception handling, and function overloading which are not possible
+    in C.
+
+
+    *   C++ is a powerful, efficient and fast language. It finds a wide range of applications
+    – from GUI applications to 3D graphics for games to real-time mathematical simulations.
+
+
+    # 3 C++ Program
+
+
+    C++ program, can be defined as a collection of objects that communicate via invoking
+    each other''s methods
+
+
+    #include <iostream>
+
+
+    using namespace std;
+
+
+    // main() is where program execution begins.
+
+
+    int main() {
+
+
+    cout << "Hello World"; // prints Hello World
+
+
+    return 0;
+
+
+    }
+
+
+    Here, “iostream.h” is the library used in C++ for all program execution. This
+    indulges utilities like data input streaming, data output streaming…
+
+
+    There are two important objects of iostream class which are meant for the purpose.
+
+
+    *   cin//similar to printf() in C
+
+
+    *   cout //similar to scanf() in C
+
+
+    For example:
+
+
+    Say if a person wants to enter some value of a variable into the program, this
+    could be done by the statement:
+
+
+    cin>>a;
+
+
+    Similarly, if a person wants to print some value on the screen, this could be
+    done by the statement:
+
+
+    cout<<a;
+
+
+    Return 0; terminates main ( ) function and causes it to return the value 0 to
+    the calling process.
+
+
+    In C++, the semicolon is a statement terminator.
+
+
+    # 4 C++ Tokens
+
+
+    A token is the smallest element of a C++ program that is meaningful to the compiler.
+    The C++ parser recognizes these kinds of tokens: identifiers, keywords, literals,
+    operators, punctuators, and other separators. A stream of these tokens makes up
+    a translation unit.
+
+
+    Keyword: Keywords are predefined, reserved words used in programming that have
+    a special meaning. Keywords are part of the syntax and they cannot be used as
+    an identifier.  Example: if, while, int etc.
+
+
+    Identifier: An identifier is used for any variable, function, data definition,
+    etc. In the programming language C++, an identifier is a combination of alphanumeric
+    characters, the first being a letter of the alphabet or an underline, and the
+    remaining being any letter of the alphabet, any numeric digit, or the underline.
+
+
+    Constant: constants are treated just like regular variables except that their
+    values cannot be modified after their definition. Constants can be any numeric,
+    string or char value. Example: 123, 23, “c++”, ‘j’ or ‘k’ or ‘l’ etc.
+
+
+    String: String composed of words separated by whitespace.
+
+
+    Operator: An operator is a symbol that tells the compiler to perform specific
+    mathematical or logical manipulations. C++ is rich in built-in operators and provides
+    the following types of operators: Arithmetic operator, logical operator and relational
+    operator.
+
+
+    # 5 C++ Coding Standards'
+  toc: []
+  trans: "\n\n![](img/cover.jpeg)\n\n# 快速参考指南\n面向\nC/C++ 编程概念\n\n## 包含\nC/C++ 技巧与概念\n\
+    C/C++ 点对点指南\n适用于所有 C/C++ 开发者/程序员\n(N.PAUL)\n\n## 目录\n1. [1C++ OOP（面向对象型编程）]\n\
+    2. [2C++ 优点]\n3. [3C++ 程序]\n4. [4C++ 标记符]\n5. [5C++ 编码标准]\n6. [6C++ 注释]\n7. [7C++\
+    \ 标识符]\n8. [8C++ 关键字]\n9. [9CC++ 空格符]\n10. [10 C++ 空语句]\n11. [11C++ 数据类型]\n12.\
+    \ [12C++ 变量]\n13. [13C++ 局部变量 vs 全局变量]\n14. [14C++ 字面量]\n15. [15C++ 运算符]\n16.\
+    \ [16C++ 修饰符]\n17. [17C++ 存储类型]\n18. [18 C++ 循环]\n19. [19C++ 循环控制语句]\n20. [20\
+    \ C++ 条件语句]\n21. [21C++ 函数:]\n22. [22 C++ 数组:]\n23. [23C++ 内联函数]\n24. [24C++ 命名空间]\n\
+    25. [25C++ 类与对象]\n26. [26C++ 继承]\n27. [27C++ 构造函数]\n28. [28C++ 析构函数]\n29. [29C++\
+    \ 函数重载]\n30. [30C++ 运算符重载]\n31. [31C++ 抽象]\n32. [32C++ 封装]\n33. [33C++ 多态]\n34.\
+    \ [34C++ 异常处理]\n35. [35C++ 晚绑定]\n36. [36C++ 引用]\n37. [37C++ 概念]\n\n# 1 C++ OOP（面向对象型编程）\n\
+    面向对象编程（`OOP`）是一种基于“对象”概念的编程范式，包含数据（属性）和代码（方法）。\n\n`OOP` 的基本概念包括：\n* 对象：类的实例。\n\
+    * 类：创建对象的蓝图。\n* 封装：将数据和方法组合在一起并限制直接访问。\n* 抽象：隐藏复杂的实现细节，仅显示必要的功能。\n* 继承：一个类获取另一个类属性的机制。\n\
+    * 多态：不同对象被视为共同基类实例的能力。\n* 函数重载：同名但参数不同的函数。\n* 运算符重载：为内置运算符定义新含义。\n* 异常处理：处理运行时错误的机制。\n\
+    * 晚绑定：在运行时解析函数调用的过程。\n* 引用：作为另一个变量的别名。\n\n# 2 C++ 优点\n* `C++` 具有可移植性、高效且快速。\n\
+    * `C++` 在继承、抽象和封装方面非常丰富。\n* `C++` 允许异常处理和函数重载。\n* `C++` 用于广泛的应用，从 GUI 到 3D 图形。\n\
+    \n# 3 C++ 程序\n```cpp\n#include <iostream>\n\nusing namespace std;\n\n// main()\
+    \ 是执行开始的地方\nint main() {\n    cout << \"Hello World\"; // 打印 Hello World\n   \
+    \ return 0;\n}\n```\n\n# 4 C++ 标记符\n`token` 是 `C++` 程序中编译器有意义的最小元素。`C++` 解析器识别以下类型的\
+    \ `token`：标识符、关键字、字面量、运算符、标点符号和其他分隔符。`token` 的流构成了编译单元。\n\n* 关键字：编程中预定义的保留字，具有特殊含义。`关键字`\
+    \ 是语法的一部分，不能作为标识符使用。\n* 标识符：用于任何变量、函数、数据定义等。在 `C++` 编程语言中，标识符是字母数字字符的组合，第一个可以是字母或下划线，其余可以是任何字母、数字或下划线。\n\
+    * 常：处理方式与普通变量相似，但在定义后值不能修改。常量可以是任何数值、字符串或字符值。例如：`123`、`23`、`\"c++\"`、`'j'` 或 `'k'`\
+    \ 或 `'l'`。\n* 运算符：告诉编译器执行特定数学或逻辑操作的符号。`C++` 拥有内置运算符，并提供了以下类型的 `运算符`：算术运算符、逻辑运算符和关系运算符。\n\
+    \n示例：\n* `cin`：类似于 语言中的 `scanf()`。\n* `cout`：类似于 语言中的 `printf()`。\n\n```cpp\n\
+    cin >> a;\ncout << a;\n```\n"
+- fmt: "\nStandardization is very important at the time of coding. Everybody should\
+    \ follow defined coding standards to increase the readability of their code. A\
+    \ complex code with proper coding standards makes the code easy to understand\
+    \ for the programmer. A proper standardized code also helps the entire project\
+    \ to go-smooth. Using proper comments, following naming convention, proper documentation\
+    \ of the code make the entire code simple, readable and self-explanatory. Programmers\
+    \ can go into and easily find out what is going on inside the code and new people\
+    \ can also get up to code easily.\n\nNow the question is whether standardize code\
+    \ is directly related to project success? No. It is not directly linked to project\
+    \ success but surely it helps a lot to make the whole project a successful one.\n\
+    \n# 6 C++ Comments\n\nUse of comments is also very much helpful to understand\
+    \ coding. Comments are the part of source code but they are disregarded by the\
+    \ Compiler. The programmer can use them to include short explanations or observations\
+    \ within the source code itself to make his/her code more readable.\n\nC++ allows\
+    \ two ways of inserting comments:\n\n```cpp\n// Single line comments\n\n/* Multiple\
+    \ line comment\n     Or Block comments */\n```\n\nUse comments before starting\
+    \ a `Class`, a file, a method. This type of comments gives the description about\
+    \ what the particular class, method is doing? It also mentions the purpose of\
+    \ the `Class` and gives other description.\n\n# 7 C++ Identifiers\n\nA C++ identifier\
+    \ is a name used to identify a `variable`, `function`, `class`, `module`, or any\
+    \ other user-defined item. An identifier starts with a letter `A` to `Z` or `a`\
+    \ to `z` or an underscore (`_`) followed by zero or more letters, underscores,\
+    \ and digits (`0` to `9`). C++ does not allow punctuation characters such as `@`,\
+    \ `$`, and `%` within identifiers.\n\n# 8 C++ Keywords\n\nKeywords are predefined,\
+    \ reserved words used in programming that have a special meaning. `Keywords` are\
+    \ part of the syntax and they cannot be used as an `identifier`. Example: `if`,\
+    \ `while`, `int` etc.\n\n# 9 C++ Whitespace\n\nWhitespace is the term used in\
+    \ C++ to describe blanks, tabs, newline characters and comments. Whitespace separates\
+    \ one part of a statement from another and enables the compiler to identify where\
+    \ one element in a statement, such as `int`, ends and the next element begins.\n\
+    \n# 10 C++ NULL Statement\n\nAny line of code not ending with semicolon is called\
+    \ a null statement in C++ because compiler does not recognize it as some executable\
+    \ line of code.\n\nHence, it is very important to put semicolon at the end of\
+    \ each line of code in C++.\n\n# 11 C++ Data Types\n\nClassifications of C++ Data\
+    \ Types:\n\n- Basic data type: Such as `int`, `float`, `char`, `long`, `double`,\
+    \ `long double`, etc. are basic inherent data types of C++\n- User-defined data\
+    \ type: Structure & `Classes` and `Enum`\n- Derived data types: Arrays, `Functions`,\
+    \ `Pointers` etc.\n\n# 12 C++ Variables\n\nA variable provides the named storage\
+    \ that our programs can manipulate.\n\nExample: `Int i, j, k;`\n\nThe line `int\
+    \ i, j, k;` both declares and defines the variables `i`, `j` and `k`; which instructs\
+    \ the compiler to create variables named `i`, `j` and `k` of type `int`.\n\n#\
+    \ 13 C++ Local Vs Global Variables\n\nVariables that are declared inside a function\
+    \ or block are local variables. They can be used only by statements that are inside\
+    \ that function or block of code.\n\nGlobal variables are defined outside of all\
+    \ the functions, usually on top of the program. The global variables will hold\
+    \ their value throughout the life-time of your program.\n\n# 14 C++ literals\n\
+    \nA `literal` is some data that's presented directly in the code, rather than\
+    \ indirectly through a variable or function call. Constants refer to fixed values\
+    \ that the program may not alter and they are called `literals`.\n\n# 15 C++ Operators\n\
+    \nAn `operator` is a symbol that tells the compiler to perform specific mathematical\
+    \ or logical manipulations. `C++` is rich in built-in `operators` and provides\
+    \ the following types of `operators`:\n\n- Arithmetic operator: Addition `+`,\
+    \ Subtraction `-`, Multiplication `*`, Division `/`, Modulus `%`, Assignment `=`,\
+    \ Increment `++`, Decrement `--`\n- Logical operator: AND `&&`, OR `||`, NOT `!`\n\
+    - Relational operator: less than `<`, greater than `>`, equal to `==`, not equal\
+    \ to `!=`, greater than or equal to `>=`, less than or equal to `<=`\n- Bitwise\
+    \ operator: bitwise and `&`, bitwise or `|`, bitwise negate `~`, left shift `<<`,\
+    \ right shift `>>`\n- Other operators: scope resolution `::`, indirection operator\
+    \ `->`, `new` and `delete`, line feed operator `endl`, set width `setw(n)`, `n=`\
+    \ number of spaces to be set\n\n# 16 C++ Modifiers\n\nA modifier is used to alter\
+    \ the meaning of the base type so that it more precisely fits the needs of various\
+    \ situations. There are four kinds of modifiers: `Signed`, `Unsigned`, `Short`\
+    \ and `Long`.\n\nThe modifiers can be combined. For example, you can use `signed`\
+    \ or `unsigned` with `long` or `short` modifiers. The correct use of modifiers\
+    \ can reduce the memory usage. So if we know that our variable can never be negative\
+    \ then to save memory we should use `unsigned` modifiers. And we should use `short`\
+    \ modifier if we know the range of variable will be below 32,767.\n\n# 17 C++\
+    \ Storage Classes\n\nStorage classes are used to manage the lifetime and scope\
+    \ of the variables. A variable can have only one storage class. There are 4 types\
+    \ of the storage classes:\n\n- Automatic: By default C++ uses automatic storage.\
+    \ The scope of an automatic variable is within the block where it is declared.\n\
+    - Static: The `static` storage can be used when you want to keep the value of\
+    \ local variable during the life of the program. The `static` variable once created\
+    \ will retain the value even if you exit the code block and enter it again.\n\
+    - Register: The `register` storage is used if you want faster access to the variable.\
+    \ The variable will get stored in the CPU register instead of RAM (memory). The\
+    \ other properties of register storage are same as automatic storage, except the\
+    \ location, where the variable is stored.\n- External: The external storage is\
+    \ used when you want to access a global variable/object which is defined in file.\
+    \ We use `extern` to specify the compiler that the current object is defined somewhere\
+    \ else and not in current file.\n\n# 18 C++ Loops\n\nA loop statement allows us\
+    \ to execute a statement or group of statements multiple times. C++ programming\
+    \ language provides the following types of loop to handle looping requirements:\n\
+    \n- `WHILE` Loop: Repeats a statement or group of statements while a given condition\
+    \ is true. It tests the condition before executing the loop body.\n- `FOR` Loop:\
+    \ Executes a sequence of statements multiple times and abbreviates the code that\
+    \ manages the loop variable.\n- `Do..WHILE` Loop: Like a while statement, except\
+    \ that it tests the condition at the end of the loop body.\n- Nested Loops: You\
+    \ can use one or more loop inside another while, for or Do..While loop.\n\n# 19\
+    \ C++ Loop Control Statement\n\nLoop control statements change execution from\
+    \ its normal sequence. C++ supports the following control statements:\n\n- `BREAK`\
+    \ Statement: Terminates the `loop` or `switch` statement and transfers execution\
+    \ to the statement immediately following the loop or switch.\n- `CONTINUE` Statement:\
+    \ Causes the loop to skip the remainder of its body and immediately retest its\
+    \ condition prior to iterating.\n- `GOTO` Statement: Transfers control to the\
+    \ labeled statement. Though it is not advised to use `GOTO` statement in your\
+    \ program.\n\n# 20 C++ Conditional Statement\n\nConditional statement decide what\
+    \ statements to be executed and what statements should not be executed depending\
+    \ upon the specific condition.\n\nC++ provided following Conditional statements:\n\
+    \n- `IF` Statement: Based on a condition, `IF` statement allows us to control\
+    \ a program whether to execute specific statement or not. Condition can be true\
+    \ or false.\n- `IF..ELSE` Statement: This means that when `IF` condition is true\
+    \ then the statements within it will be executed, and when `IF` condition is false\
+    \ then statements within `ELSE` condition will be executed.\n"
+  raw: 'Standardization is very important at the time of coding. Everybody should
+    follow defined coding standards to increase the readability of their code. A complex
+    code with proper coding standards makes the code easy to understand for the programmer.
+    A proper standardized code also helps the entire project to go-smooth. Using proper
+    comments, following naming convention, proper documentation of the code make the
+    entire code simple, readable and self-explanatory. Programmers can go into and
+    easily find out what is going on inside the code and new people can also get up
+    to code easily.
+
+
+    Now the question is whether standardize code is directly related to project success?
+    No. It is not directly linked to project success but surely it helps a lot to
+    make the whole project a successful one.
+
+
+    # 6 C++ Comments
+
+
+    Use of comments is also very much helpful to understand coding. Comments are the
+    part of source code but they are disregarded by the Compiler. The programmer can
+    use them to include short explanations or observations within the source code
+    itself to make his/her code more readable.
+
+
+    C++ allows two ways of inserting comments:
+
+
+    // Single line comments
+
+
+    /* Multiple line comment
+
+
+         Or Block comments */
+
+
+    Use comments before starting a Class, a file, a method. This type of comments
+    gives the description about what the particular class, method is doing? It also
+    mentions the purpose of the Class and gives other description.
+
+
+    # 7 C++ Identifiers
+
+
+    A C++ identifier is a name used to identify a variable, function, class, module,
+    or any other user-defined item. An identifier starts with a letter A to Z or a
+    to z or an underscore (_) followed by zero or more letters, underscores, and digits
+    (0 to 9). C++ does not allow punctuation characters such as @, $, and % within
+    identifiers.
+
+
+    # 8 C++ Keywords
+
+
+    Keywords are predefined, reserved words used in programming that have a special
+    meaning. Keywords are part of the syntax and they cannot be used as an identifier. 
+    Example: if, while, int etc.
+
+
+    # 9 C++ Whitespace
+
+
+    Whitespace is the term used in C++ to describe blanks, tabs, newline characters
+    and comments. Whitespace separates one part of a statement from another and enables
+    the compiler to identify where one element in a statement, such as int, ends and
+    the next element begins.
+
+
+    # 10 C++ NULL Statement
+
+
+    Any line of code not ending with semicolon is called a null statement in C++ because
+    compiler does not recognize it as some executable line of code.
+
+
+    Hence, it is very important to put semicolon at the end of each line of code in
+    C++.
+
+
+    # 11 C++ Data Types
+
+
+    Classifications of C++ Data Types:
+
+
+    *   Basic data type: Such as int, float, char, long, double, long double, etc.
+    are basic inherent data types of C++
+
+
+    *   User-defined data type: Structure & Classes and Enum
+
+
+    *   Derived data types: Arrays, Functions, Pointers etc.
+
+
+    # 12 C++ Variables
+
+
+    A variable provides the named storage that our programs can manipulate. 
+
+
+    Example: Int i, j, k;
+
+
+    The line int i, j, k; both declares and defines the variables i, j and k; which
+    instructs the compiler to create variables named i, j and k of type int.
+
+
+    # 13 C++ Local Vs Global Variables
+
+
+    Variables that are declared inside a function or block are local variables. They
+    can be used only by statements that are inside that function or block of code. 
+
+
+    Global variables are defined outside of all the functions, usually on top of the
+    program. The global variables will hold their value throughout the life-time of
+    your program.
+
+
+    # 14 C++ literals 
+
+
+    A literal is some data that''s presented directly in the code, rather than indirectly
+    through a variable or function call. Constants refer to fixed values that the
+    program may not alter and they are called literals.
+
+
+    # 15 C++ Operators
+
+
+    An operator is a symbol that tells the compiler to perform specific mathematical
+    or logical manipulations. C++ is rich in built-in operators and provides the following
+    types of operators:
+
+
+    Arithmetic operator: Addition +, Subtraction -, Multiplication *, Division /,
+    Modulus %, Assignment =, Increment ++, Decrement --
+
+
+    Logical operator: AND &&, OR ||, NOT!
+
+
+    Relational operator: less than <, greater than >, equal to ==, not equal to !=
+    ,greater than or equal to >= , less than or equal to<=
+
+
+    Bitwise operator: bitwise and & ,bitwise or |,bitwise negate ~, left shift <<,
+    right shift >>
+
+
+    Other operators:  scope resolution::, indirection operator ->, new and delete,
+    line feed operator endl, set width setw(n), n= number of spaces to be set
+
+
+    # 16 C++ Modifiers
+
+
+    A modifier is used to alter the meaning of the base type so that it more precisely
+    fits the needs of various situations. There are four kinds of modifiers: Signed,
+    Unsigned, Short and Long.
+
+
+    The modifiers can be combined. For example, you can use signed or unsigned with long
+    or short modifiers. The correct use of modifiers can reduce the memory usage.
+    So if we know that our variable can never be negative then to save memory we should
+    use unsigned modifiers. And we should use short modifier if we know the range
+    of variable will be below 32,767.
+
+
+    # 17 C++ Storage Classes
+
+
+    Storage classes are used to manage the lifetime and scope of the variables. A
+    variable can have only one storage class. There are 4 types of the storage classes:
+
+
+    Automatic: By default C++ uses automatic storage. The scope of an automatic variable
+    is within the block where it is declared. 
+
+
+    Static: The static storage can be used when you want to keep the value of local
+    variable during the whole life of the program. The static variable once created
+    will retain the value even if you exit the code block and enter it again. 
+
+
+    Register: The register storage is used if you want faster access to the variable.
+    The variable will get stored in the CPU register instead of RAM (memory). The
+    other properties of the register storage are same as of automatic storage, except
+    the location, where the variable is stored. 
+
+
+    External: The external storage is used when you want to access a global variable/object
+    which is defined in another file. We use extern to specify the compiler that the
+    current object is defined somewhere else in other file and not in current file.
+
+
+    # 18 C++ Loops
+
+
+    A loop statement allows us to execute a statement or group of statements multiple
+    times.  C++ programming language provides the following types of loop to handle
+    looping requirements:
+
+
+    WHILE Loop: Repeats a statement or group of statements while a given condition
+    is true. It tests the condition before executing the loop body.
+
+
+    FOR Loop:  Executes a sequence of statements multiple times and abbreviates the
+    code that manages the loop variable.
+
+
+    Do..WHILE Loop: Like a while statement, except that it tests the condition at
+    the end of the loop body.
+
+
+    Nested Loops: You can use one or more loop inside any another while, for or Do..While
+    loop.
+
+
+    # 19 C++ Loop Control Statement
+
+
+    Loop control statements change execution from its normal sequence. 
+
+
+    C++ supports the following control statements:
+
+
+    BREAK Statement: Terminates the loop or switch statement and transfers execution
+    to the statement immediately following the loop or switch.
+
+
+    CONTINUE Statement: Causes the loop to skip the remainder of its body and immediately
+    retest its condition prior to reiterating.
+
+
+    GOTO Statement: Transfers control to the labeled statement. Though it is not advised
+    to use GOTO statement in your program.
+
+
+    # 20 C++ Conditional Statement
+
+
+    Conditional statement decide what statements to be executed and what statements
+    should not be executed depending upon the specific condition
+
+
+    C++ provided following Conditional statements:
+
+
+    IF Statement: Based on a condition, IF statement allows us to control a program
+    whether to execute specific statement or not. Condition can be true or false.
+
+
+    IF..ELSE Statement: This means that when IF condition is true then the statements
+    within it will be executed, and when IF condition is false then statements within
+    ELSE condition will be executed.'
+  toc: []
+  trans: "\n\n在编码时，标准化非常重要。每个人都应该遵循定义的编码标准，以提高代码的可读性。具有适当编码标准的复杂代码会让程序员更容易理解代码。良好的标准化代码也有助于整个项目的顺利进行。使用适当的注释、遵循命名规范以及对代码进行适当的文档处理使得整个代码变得简单易读且自解释其义。程序员可以进入代码并轻松找到其内部正在发生什么，新人员也可以轻松上手。\n\
+    \n现在问题是，标准化代码是否与项目的成功直接相关？不是的。它没有直接决定项目的成功，但无疑对让整个项目取得成功有很大帮助。\n\n# 6 C++ 注释\n\
+    \n使用注释对于理解编码非常有帮助。注释是源代码的一部分，但它们会被编译器忽略。程序员可以使用它们在源代码中包含简短的解释或观察，以使他们的代码更具可读性。\n\
+    \nC++ 允许两种插入注释的方式：\n\n```cpp\n// 单行注释\n\n/* 多行注释\n     或 块注释 */\n```\n\n在开始一个\
+    \ `Class`、文件或方法之前使用注释。这种注释描述了特定的类或方法的作用是什么？它还提到了 `Class` 的目的并提供了其他描述。\n\n# 7 C++\
+    \ 标识符\n\nC++ 标识符是用于标识 `variable`、`function`、`class`、`module` 或任何用户定义项目的名称。标识符以字母\
+    \ `A` 到 `Z` 或 `a` 到 `z` 或下划线 (`_`）开头，跟随零或多个字母、下划线和数字 (`0` 到 `9`）。C++ 不允许在标识符中使用\
+    \ `@`、`$` 和 `%` 等标点符号。\n\n# 8 C++ 关键字\n\n关键字是编程中预定义的保留字，具有特殊含义。`Keywords` 是语法的一部分，不能作为\
+    \ `identifier`。例如：`if`、`while`、`int` 等。\n\n# 9 C++ 空格\n\n空白是 C++ 中用于描述空格、制表符、换行符和注释的术语。空白将语句的一部分与其他分开，并允许编译器识别语句中的一个元素（如\
+    \ `int`）何时结束，下一个元素何时开始。\n\n# 10 C++ 空语句\n\nC++ 中任何不以分号结尾的代码行都被称为空语句，因为编译器不将其识别为某些可执行代码行。\n\
+    \n因此，在 C++ 的每行代码末尾加上分号是非常重要的。\n\n# 11 C++ 数据类型\n\nC++ 数据类型的分类：\n\n- 基本数据类型：如 `int`、`float`、`char`、`long`、`double`、`long\
+    \ double` 等是 C++ 的基本固有数据类型\n- 用户定义数据类型：结构 (Structure)、`Classes` 和枚举 (Enum)\n-\
+    \ 派生数据类型：数组 (Arrays)、函数 (Functions)、指针 (Pointers) 等\n\n# 12 C++ 变量\n\n程序可以操作的命名存储。\n\
+    \n示例：`Int i, j, k;`\n\n`int i, j, k;` 这一行既声明又定义了变量 `i`、`j` 和 `k`；指示编译器创建类型为 `int`\
+    \ 的名为 `i`、`j` 和 `k` 的变量。\n\n# 13 C++ 局部与全局变量\n\n在函数或块内部定义的变量是局部变量。它们只能由该函数或代码块内部的语句使用。\n\
+    \n全局变量定义所有函数之外，通常位于程序的顶部。全局变量在程序的整个生命周期内保持其值。\n\n# 14 C++ 字面量\n\n`literal` 是直接在代码中呈现的数据，而不是通过变量或函数调用间接呈现。常量指的是程序可能更改的固定值，它们被称为\
+    \ `literals`。\n\n# 15 C++ 运算符\n\n`operator` 是一个告诉编译器执行特定数学或逻辑操作的符号。`C++` 拥有丰富的内置\
+    \ `operators` 并提供了以下类型的运算符：\n\n- 算术运算符：加法 `+`、减法 `-`、乘法 `*`、除法 `/`、取模 `%`、赋值 `=`、自增\
+    \ `++`、自减 `--`\n- 逻辑运算符：与 `&&`、或 `||`、非 `!`\n- 关系运算符：小于 `<`、大于 `>`、等于 `==`、不等于\
+    \ `!=`、大于等于 `>=`、小于等于 `<=`\n- 位运算符：位与 `&`、位或 `|`、位取反 `~`、左移 `<<`、右移 `>>`\n- 其他运算符：作用域解析\
+    \ `::`、间接运算符 `->`、`new` 和 `delete`、换行符 `endl`、设置宽度 `setw(n)`、`n=` 设置的空格数\n\n#\
+    \ 16 C++ 修饰符\n\n修饰符用于更改基本类型的含义以便更精确地适应各种情况的需求。修饰符有四种：`Signed`、`Unsigned`、`Short`\
+    \ 和 `Long`。\n\n修饰符可以组合。例如，你可以将 `signed` 或 `unsigned` 配合修饰符使用。正确使用修饰符可以减少内存占用。如果我们知道变量永远不会为负，为了节省内存，我们应该使用\
+    \ `unsigned` 修饰符。如果我们知道变量的范围低于 32,767，我们应该使用 `short` 修饰符。\n\n# 17 C++ 存储类\n\n\
+    存储类用于管理变量的生命周期作用域。变量只能有一个存储类。存储类有四种：\n\n- 自动 (Automatic)：C++ 默认使用自动存储。自动变量的作用域在其定义的块内。\n\
+    - 静态 (Static)：当你想在程序运行期间保留局部变量的值时，可以使用 `static` 存储。`static` 变量一旦创建，即使退出代码块并再次进入也会保留该值。\n\
+    - 寄存器 (Register)：如果你想更快地访问变量，使用 `register` 存储。变量将存储在 CPU 寄存器而不是 RAM（内存）中。寄存器存储的其他属性与自动存储相同，位置例外。\n\
+    - 外部 (External)：当你想访问文件中定义的全局变量/对象时，使用外部存储。我们使用 `extern` 告知编译器当前对象定义在其他地方而不是当前文件中。\n\
+    \n# 18 C++ 循环\n\n循环语句允许我们多次执行语句或一组语句。C++ 编程语言提供了以下类型的循环来处理循环需求：\n\n- `WHILE` 循环：当给定条件为真时重复语句或一组语句。它在执行循环体之前测试条件。\n\
+    - `FOR` 循环：多次执行语句序列并缩短了管理循环变量的代码。\n- `Do..WHILE` 循环：类似于 while 语句，只是在循环体末尾测试条件。\n\
+    - 嵌套循环：你可以在另一个 while、for 或 Do..While 循环中使用一个或多个循环。\n\n# 19 C++ 循环控制语句\n\n循环控制语句改变其正常执行顺序。C++\
+    \ 支持以下控制语句：\n\n- `BREAK` 语句：终止 `loop` 或 `switch` 语句并将执行转移到紧随循环或 switch 之后的语句。\n\
+    - `CONTINUE` 语句：导致循环跳过其剩余部分并在迭代之前重新测试条件。\n- `GOTO` 语句：跳转到标记语句。尽管不建议在程序中使用 `GOTO`\
+    \ 语句。\n\n# 20 C++ 条件语句\n\n条件语句根据特定条件决定执行哪些语句以及不执行哪些语句。\n\nC++ 提供了以下条件语句：\n\n-\
+    \ `IF` 语句：根据条件，`IF` 语句允许我们控制程序是否执行特定语句。条件可以为真或假。\n- `IF..ELSE` 语句：这意味着当 `IF` 条件为真时执行其内部的语句，而当\
+    \ `IF` 条件为假时执行 `ELSE` 条件内部的语句。\n\n"
+- fmt: '
+
+    # SWITCH Statement
+
+    A `switch` statement allows a variable to be tested for equality against a list
+    of values.
+
+
+    # 21 C++ Functions
+
+
+    In order to make the code more readable, complete task to be performed is broken
+    down in to small modules or sub-routines. Each of the modules is called a `function`.
+    A `function` is a group/block of statements that perform some operations. Every
+    C++ program has at least one function, which is `main()`.
+
+
+    When a program calls a function, program control is transferred to the called
+    function. To call a function, you simply need to pass the required parameters
+    along with function name. Three methods can be used to call a function: Call by
+    Value, Call by reference and Call by Pointer.
+
+
+    ### Advantages of Function
+
+    - Dividing the program into functions (i.e. logical blocks) will make the code
+    clear and easy to understand.
+
+    - Functions are reusable i.e. you can call a function to execute same lines of
+    code multiple times without re-writing it.
+
+    - Individual functions are easy to maintain i.e. In case of any modification in
+    the code you can modify only the function without changing the structure of the
+    program.
+
+
+    # 22 C++ Arrays
+
+
+    An array as a collection of variables of the same type. Arrays are fixed in size.
+    Elements of an array will be allocated contiguously in memory. Elements of an
+    array are accessed by an index. In simple words, an array is a fixed collection
+    of similar objects stored contiguously and accessed by an index.
+
+
+    # 23 C++ Inline Function
+
+
+    Adding a prefix “inline” before a function definition is a request to the compiler
+    to make the function inline; i.e. When the function is actually called, the line
+    is replaced by the function definition itself while making executable file.
+
+
+    This is because the overhead of putting the small functions in stack and popping
+    while executing is comparatively more. So, compiler checks if optimization could
+    be done and accordingly makes the function inline.
+
+
+    Remember: `inline` is not a command to the compiler, just a request.
+
+
+    The compiler may or may not execute the function as inline which is actually decided
+    internally by the compiler as which would be the most optimized way of execution
+    in terms of time and space.
+
+
+    Also, any function defined within a class (without adding the word “inline”) is
+    by default inline request to the compiler for that particular function.
+
+
+    Inline function will not work in below cases:
+
+    1. With `Loop`/`switch`/`goto`
+
+    2. For function not returning values, if `return` statement exist
+
+    3. Function containing static variables
+
+    4. With recursive functions
+
+
+    # 24 C++ Namespace
+
+
+    A `namespace` is a container for identifiers. A `namespace` is a declarative region
+    that provides a scope to the identifiers (the names of types, functions, variables,
+    etc.) inside it. `Namespaces` are used to organize code into logical groups and
+    to prevent name collisions that can occur especially when your code base includes
+    multiple libraries.
+
+
+    A `namespace` is designed to overcome this difficulty and is used as additional
+    information to differentiate similar functions, classes, variables etc. with the
+    same name available in different libraries. Using `namespace`, you can define
+    the context in which names are defined. In essence, a `namespace` defines a scope.
+
+
+    # 25 C++ Classes & Objects
+
+
+    The classes are the most important feature of C++ that leads to Object Oriented
+    programming. `Class` is a user defined data type, which holds its own data members
+    and member functions, which can be accessed and used by creating instance of that
+    class.
+
+
+    The variables inside class definition are called as data members and the functions
+    are called member functions.
+
+
+    For example: `Class` of birds, all birds can fly and they all have wings and beaks.
+    So here flying is a behavior and wings and beaks are part of their characteristics.
+    And there are many different birds in this class with different names but they
+    all possess this behavior and characteristics.
+
+
+    Similarly, `class` is just a blue print, which declares and defines characteristics
+    and behavior, namely data members and member functions respectively. And all objects
+    of this class will share these characteristics and behavior.
+
+
+    An `object` is a member or an "instance" of a `class`. An `object` has a state
+    in which all of its properties have values that you either explicitly define or
+    that are defined by default settings.
+
+
+    # 26 C++ Inheritance
+
+
+    Inheritance is the capability of one class to acquire properties and characteristics
+    from another class. The class whose properties are inherited by other class is
+    called the `Parent` or `Base` or `Super` class. And, the class which inherits
+    properties of other class is called the `Child` or `Derived` or `Sub` class.
+
+
+    Inheritance makes the code reusable. When we inherit an existing class, all its
+    methods and fields become available in the new class, hence code is reused.
+
+
+    ### Inheritance Visibility Mode
+
+    - **Public Inheritance**: This is the most used inheritance mode. In this the
+    `protected` member of super class becomes `protected` members of sub class and
+    `public` becomes `public`.
+
+    - **Private Inheritance**: In private mode, the `protected` and `public` members
+    of super class become `private` members of derived class.
+
+    - **Protected Inheritance**: In protected mode, the `public` and `protected` members
+    of Super class becomes `protected` members of Sub class.
+
+
+    | | Base Class | Public Mode | Private Mode | Protected Mode |
+
+    | :--- | :--- | :--- | :--- |
+
+    | **Private** | Not Inherited | Not Inherited | Not Inherited |
+
+    | **Protected** | Protected | Private | Protected |
+
+    | **Public** | Public | Private | Protected |
+
+
+    In C++, there are five different types of Inheritance:
+
+    - **Single Inheritance**: In this type of inheritance one derived class inherits
+    from only one base class. It is the simplest form of Inheritance.
+
+    - **Multiple Inheritance**: In this type of inheritance a single derived class
+    may inherit from two or more than two base classes.
+
+    - **Hierarchical Inheritance**: In this type of inheritance, multiple derived
+    classes inherits from a single base class.
+
+    - **Multilevel Inheritance**: In this type of inheritance the derived class inherits
+    from a class, which in turn inherits from some other class. The Super class for
+    one, is sub class for the other.
+
+    - **Hybrid (Virtual) Inheritance**: Hybrid Inheritance is combination of Hierarchical
+    and Multilevel Inheritance.
+
+
+    # 27 C++ Constructors
+
+
+    Constructors are special class functions which performs initialization of every
+    object. The Compiler calls the Constructor whenever an object is created. The
+    name of constructor will be same as the name of the class, and constructors never
+    have return type. Constructors can be defined either inside the class definition
+    or outside class definition using class name and scope resolution `::` operator.
+
+
+    In C++, there are three different types of Constructors:
+
+    - **Default Constructor**: Default constructor is the constructor which doesn''t
+    take any argument. It has no parameter.
+
+    - **Parameterized Constructor**: These are the constructors with parameter. Using
+    this Constructor you can provide different values to data members of different
+    objects, by passing the appropriate values as argument.
+
+    - **Copy Constructor**: These are special type of Constructors which takes an
+    object as argument, and is used to copy values of data members of one object into
+    other object.
+
+
+    ### Characteristics of Constructor:
+
+    - They are to be declared under `public` section
+
+    - They are invoked automatically once objects are created.
+
+    - They do not have any return types, not even return type `void`.
+
+    - Like other C++ function, they can have default arguments.
+
+    - Constructor cannot be `virtual`.
+
+    - We cannot refer to their addresses.
+
+    - An object with constructor/destructor can’t be used as member of any function.
+
+    - They make implicit class to the operators `new` and `delete` when memory allocation
+    is required.
+
+
+    # 28 C++ Destructors
+
+    '
+  raw: 'SWITCH Statement: A switch statement allows a variable to be tested for equality
+    against a list of values.
+
+
+    # 21 C++ Functions:
+
+
+    In order to make the code more readable, complete task to be performed is broken
+    down in to small modules or sub-routines. Each of the modules is called a function. 
+    A function is a group/block of statements that perform some operations. Every
+    C++ program has at least one function, which is main ().
+
+
+    When a program calls a function, program control is transferred to the called
+    function. To call a function, you simply need to pass the required parameters
+    along with function name. Three methods can be used to call a function: Call by
+    Value, Call by reference and Call by Pointer.
+
+
+    Advantages of Function:
+
+
+    Dividing the program into functions (i.e. logical blocks) will make the code clear
+    and easy to understand.
+
+
+    Functions are reusable i.e. you can call a function to execute same lines of code
+    multiple times without re-writing it.
+
+
+    Individual functions are easy to maintain i.e. In case of any modification in
+    the code you can modify only the function without changing the structure of the
+    program.
+
+
+    # 22 C++ Arrays:
+
+
+    An array as a collection of variables of the same type. Arrays are fixed in size.
+    Elements of an array will be allocated contiguously in memory. Elements of an
+    array are accessed by an index. In simple words, an array is a fixed collection
+    of similar objects stored contiguously and accessed by an index.
+
+
+    # 23 C++ Inline Function
+
+
+    Adding a prefix “inline” before a function definition is a request to the compiler
+    to make the function inline; i.e.  When the function is actually called, the line
+    is replaced by the function definition itself while making executable file.
+
+
+    This is because the overhead of putting the small functions in stack and popping
+    while executing is comparatively more. So, compiler checks if optimization could
+    be done and accordingly makes the function inline.
+
+
+    Remember: inline is not a command to the compiler, just a request.
+
+
+    The compiler may or may not execute the function as inline which is actually decided
+    internally by the compiler as which would be the most optimized way of execution
+    in terms of time and space.
+
+
+    Also, any function defined within a class (without adding the word “inline”) is
+    by default inline request to the compiler for that particular function.
+
+
+    Inline function will not work in below cases:
+
+
+    1.  With Loop/switch/goto
+
+
+    2.  For function not returning values, if return statement exist
+
+
+    3.  Function containing static variables
+
+
+    4.  With recursive functions
+
+
+    # 24 C++ Namespace
+
+
+    A namespace is a container for identifiers. A namespace is a declarative region
+    that provides a scope to the identifiers (the names of types, functions, variables,
+    etc.) inside it. Namespaces are used to organize code into logical groups and
+    to prevent name collisions that can occur especially when your code base includes
+    multiple libraries.
+
+
+    A namespace is designed to overcome this difficulty and is used as additional
+    information to differentiate similar functions, classes, variables etc. with the
+    same name available in different libraries. Using namespace, you can define the
+    context in which names are defined. In essence, a namespace defines a scope.
+
+
+    # 25 C++ Classes & Objects
+
+
+    The classes are the most important feature of C++ that leads to Object Oriented
+    programming. Class is a user defined data type, which holds its own data members
+    and member functions, which can be accessed and used by creating instance of that
+    class.
+
+
+    The variables inside class definition are called as data members and the functions
+    are called member functions.
+
+
+    For example: Class of birds, all birds can fly and they all have wings and beaks.
+    So here flying is a behavior and wings and beaks are part of their characteristics.
+    And there are many different birds in this class with different names but they
+    all possess this behavior and characteristics.
+
+
+    Similarly, class is just a blue print, which declares and defines characteristics
+    and behavior, namely data members and member functions respectively. And all objects
+    of this class will share these characteristics and behavior.
+
+
+    An object is a member or an "instance" of a class. An object has a state in which
+    all of its properties have values that you either explicitly define or that are
+    defined by default settings. 
+
+
+    # 26 C++ Inheritance
+
+
+    Inheritance is the capability of one class to acquire properties and characteristics
+    from another class. The class whose properties are inherited by other class is
+    called the Parent or Base or Super class. And, the class which inherits properties
+    of other class is called Child or Derived or Sub class.
+
+
+    Inheritance makes the code reusable. When we inherit an existing class, all its
+    methods and fields become available in the new class, hence code is reused.
+
+
+    Inheritance Visibility Mode:
+
+
+    Public Inheritance: This is the most used inheritance mode. In this the protected
+    member of super class becomes protected members of sub class and public becomes
+    public.
+
+
+    Private Inheritance: In private mode, the protected and public members of super
+    class become private members of derived class.
+
+
+     Protected Inheritance: In protected mode, the public and protected members of
+    Super class becomes protected members of Sub class.
+
+
+    |  | Derived Class | Derived Class | Derived Class |
+
+
+    | Base Class | Public Mode | Private Mode | Protected Mode |
+
+
+    | Private | Not Inherited | Not Inherited | Not Inherited |
+
+
+    | Protected | Protected | Private | Protected |
+
+
+    | Public | Public | Private | Protected |
+
+
+    In C++, There are five different types of Inheritance:
+
+
+    Single Inheritance: In this type of inheritance one derived class inherits from
+    only one base class. It is the simplest form of Inheritance.
+
+
+    Multiple Inheritance: In this type of inheritance a single derived class may inherit
+    from two or more than two base classes.
+
+
+    Hierarchical Inheritance: In this type of inheritance, multiple derived classes
+    inherits from a single base class.
+
+
+    Multilevel Inheritance: In this type of inheritance the derived class inherits
+    from a class, which in turn inherits from some other class. The Super class for
+    one, is sub class for the other.
+
+
+    Hybrid (Virtual) Inheritance: Hybrid Inheritance is combination of Hierarchical
+    and Multilevel Inheritance.
+
+
+    # 27 C++ Constructors
+
+
+    Constructors are special class functions which performs initialization of every
+    object. The Compiler calls the Constructor whenever an object is created. The
+    name of constructor will be same as the name of the class, and constructors never
+    have return type. Constructors can be defined either inside the class definition
+    or outside class definition using class name and scope resolution “::” operator.
+
+
+    In C++, There are three different types of Constructors:
+
+
+    Default Constructor: Default constructor is the constructor which doesn''t take
+    any argument. It has no parameter.
+
+
+    Parameterized Constructor: These are the constructors with parameter. Using this
+    Constructor you can provide different values to data members of different objects,
+    by passing the appropriate values as argument.
+
+
+    Copy Constructor: These are special type of Constructors which takes an object
+    as argument, and is used to copy values of data members of one object into other
+    object.
+
+
+    Characteristics of Constructor:
+
+
+    *   They are to be declared under public section
+
+
+    *   They are invoked automatically once objects are created.
+
+
+    *   They do not have any return types, not even return type “void”.
+
+
+    *   Like other C++ function, they can have default arguments.
+
+
+    *   Constructor cannot be virtual.
+
+
+    *   We cannot refer to their addresses.
+
+
+    *   An object with constructor/destructor can’t be used as member of any function.
+
+
+    *   They make implicit class to the operators new and delete when memory allocation
+    I s required.
+
+
+    # 28 C++ Destructors'
+  toc: []
+  trans: '
+
+
+    # switch 语句
+
+    `switch` 语句允许对变量与一组值进行等值性测试。
+
+
+    # 21 C++ 函数
+
+
+    为了使代码更具可读性，将要完成的任务分解为较小的模块或子程序。每个模块被称为一个 `function`（函数）。`function` 是执行某些操作的语句组/块。每个
+    C++ 程序都至少有一个函数，即 `main()`。
+
+
+    当程序调用函数时，程序的控制权会转移到被调用的函数。要调用函数，你只需要传递所需的参数连同函数名。可以使用三种方法调用函数：按值传递、按引用传递和按指针传递。
+
+
+    ### 函数的优点
+
+    - 将程序划分为函数（即逻辑块）将使代码变得清晰且易于理解。
+
+    - 函数是可重用的，即你可以调用函数来多次执行相同的代码行，而无需重新编写它们。
+
+    - 单个函数易于维护，即如果代码发生任何修改，你只需要修改该函数，而不需要改变程序的结构。
+
+
+    # 22 C++ 数组
+
+
+    数组是相同类型变量的集合。数组的大小是固定的。数组的元素在内存中连续分配。数组元素通过索引访问。简单来说，数组是连续存储并通过索引访问的相似对象的固定集合。
+
+
+    # 23 C++ 内联函数
+
+
+    在函数定义之前添加前缀“inline”是请求编译器将该函数设为内联；即在实际调用函数时，在生成可执行文件时，该行会被替换为函数定义本身。
+
+
+    这是因为在执行过程中将小函数放入栈中和从栈中出的开销相对要大得多。因此，编译器会检查是否可以进行优化，并据此将函数内联。
+
+
+    记住：`inline` 不是给编译器的命令，而是一个请求。
+
+
+    编译器可能会执行或可能不执行内联函数，这实际上是由编译器内部决定的，即从时间和空间角度考虑最优化的执行方式。
+
+
+    此外，在类内部定义的任何函数（不添加“inline”单词）默认都是向编译器提出的该特定函数的内联请求。
+
+
+    内联函数在以下情况下将不起作用：
+
+    1. 配合 `Loop`/`switch`/`goto` 使用
+
+    2. 对于不返回值的函数，如果存在 `return` 语句
+
+    3. 包含静态变量的函数
+
+    4. 递归函数
+
+
+    # 24 C++ 命名空间
+
+
+    `namespace`（命名空间）是标识符的容器。`namespace`是一个声明区域，为其内部的标识符（类型、函数、变量等的名称）提供作用域。`Namespaces`
+    用于将代码组织成逻辑组并防止命名冲突，特别是当你的代码库包含多个库时。
+
+
+    `namespace` 的设计是为了克服这种困难，并用作额外信息，以区分不同库中具有相同名的相似函数、类、变量等。使用 `namespace`，你可以定义名称定义的上下文。从本质上说，`namespace`
+    定义了一个域。
+
+
+    # 25 C++ 类与对象
+
+
+    类（Classes）是 C++ 中最重要的特征，它导致了面向对象的编程。`Class`（类）是一种用户定义的数据类型，它持有自己的数据成员和成员函数，可以通过创建该类的实例来访问和使用。
+
+
+    类定义内部的变量被称为数据成员，函数被称为成员函数。
+
+
+    例如：鸟的 `Class`，所有的鸟都会飞，而且它们都拥有翅膀和喙。在这里，飞行是一种行为，而翅膀和喙是它们特征的一部分。这个类中有许多不同的鸟，名称也不同，但它们都拥有这种行为和特征。
+
+
+    同样，`class` 只是一个蓝图，它声明并定义特征和行为，即数据成员和成员函数。该类的所有对象将共享这些特征和行为。
+
+
+    `object`（对象）是 `class` 的成员或“实例”。`object` 有一个状态，其中所有属性的值要么是你显式定义的，要么是由默认设置定义的的。
+
+
+    # 26 C++ 继承
+
+
+    继承是指一个类从另一个类获取属性和特征的能力。被其他类属性的类被称为 `Parent`（父类）、`Base`（基类）或 `Super`（超类）。继承其他类属性的类被称为
+    `Child`（子类）、`Derived`（派生类）或 `Sub` 类。
+
+
+    继承使得代码可重用。当我们继承一个现有类时，它所有的方法和字段在新类中都可用，因此代码被重用了。
+
+
+    ### 继承可见性模式
+
+    - **公有继承**：这是最常用的继承模式。在这种情况下，父类的 `protected` 成员变为子类的 `protected` 成员，`public` 变为
+    `public`。
+
+    - **私有继承**：在私有模式下，父类的 `protected` 和 `public` 成员变为派生类的 `private` 成员。
+
+    - **保护性继承**：在保护模式下，父类的 `public` 和 `protected` 成员变为子类的 `protected` 成员。
+
+
+    | | 基类 | 公有模式 | 私有模式 | 保护模式 |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | **私有** | 不继承 | 不继承 | 不继承 | 不继承 |
+
+    | **保护** | 保护 | 私有 | 保护 |
+
+    | **公有** | 公有 | 私有 | 保护 |
+
+
+    在 C++ 中有五种继承类型：
+
+    - **单继承**：在这种继承类型中，一个派生类只继承自一个基类。这是最简单的形式。
+
+    - **多重继承**：在这种继承类型中，一个派生类可以继承自两个或多个基类。
+
+    - **层级继承**：在这种继承类型中，多个派生类继承自同一个基类。
+
+    - **多级继承**：在这种继承类型中，派生类继承自一个类，而该类又继承自另一个类。一个类的父类是另一个类的子类。
+
+    - **混合继承（虚继承）**：混合继承是层级继承和多级继承的结合。
+
+
+    # 27 C++ 构造函数
+
+
+    构造函数是执行每个对象化的特殊类函数。当创建对象时，编译器调用构造函数。构造函数的名称与类名相同，且构造函数没有返回值。构造函数可以在类定义内部定义，也可以使用类名作用域解析运算符
+    `::` 在类外定义。
+
+
+    在 C++ 中有三种构造函数：
+
+    - **默认构造函数**：不接受任何参数的构造函数。它没有参数。
+
+    - **参数构造函数**：带有参数的构造函数。使用这种构造函数，可以通过传递适当的值为不同对象的数据成员提供不同的值。
+
+    - **拷贝构造函数**：以对象为参数的构造构造函数用于将一个对象的数据成员的值拷贝到另一个对象。
+
+
+    # 28 C++ 析构函数
+
+
+    '
+- fmt: '
+
+    Destructor is a special class function which destroys the object as soon as the
+    scope of object ends. The destructor is called automatically by the compiler when
+    the object goes out of scope.
+
+
+    The syntax for destructor is same as that for the constructor, the class name
+    is used for the name of destructor, with a tilde `~` sign as prefix to it. Destructors
+    will never have any arguments.
+
+
+    ### Characteristics of Destructor
+
+
+    - A destructor never any arguments. so we cannot overload destructors.
+
+    - They do not have return types, not even `void`.
+
+    - A destructor will be invoked implicitly by the complier upon exit from the program
+    to clean up storage that is no longer accessible.
+
+    - Destructor can be `virtual` but `Constructor` cannot be `virtual`.
+
+
+    # 29 C++ Function Overloading
+
+
+    If any class have multiple functions with same names but different parameters
+    then they are said to be overloaded.
+
+
+    Function overloading is usually used to enhance the readability of the program.
+    If you have to perform one single operation but with different number or types
+    of arguments, then you can simply overload the function.
+
+
+    Function can be overloaded either by changing number of Arguments or by having
+    different types of argument.
+
+
+    # 30 C++ Operator Overloading
+
+
+    Operator overloading—less commonly known as `operator` ad hoc polymorphism—is
+    a specific case of polymorphism, where different `operators` have different implementations
+    depending on their arguments. `Operator overloading` is generally defined by the
+    language, the programmer, or both.
+
+
+    For example `+` operator can be overloaded to perform addition on various data
+    types, like for `Integer`, `String` (concatenation) etc.
+
+
+    ### Rules for overloading operators
+
+
+    1. Only existing operators can be overloaded.
+
+    2. The overload operator must have at least on operand that is of user defined
+    type. New operators cannot be created.
+
+    3. We cannot change basic meaning of any operator i.e we cannot use `+` for subtraction.
+
+    4. Overload operators follow the syntax rules of original operators. They can’t
+    be overridden.
+
+    5. `Sizeof`, `.` (membership operator), `*` (pointer to member operator), `::`
+    (scope resolution operator), `?:` (conditional operator) can’t be overloaded.
+
+    6. `=` (assignment operator), `()` (function call operator), `[]` (subscripting
+    operator), `->` (class member access operator) can’t be overloaded using friend
+    functions.
+
+
+    # 31 C++ Abstraction
+
+
+    Data abstraction provides only essential information to the outside world and
+    hiding their background details. Abstraction is one of the main concepts of the
+    Object Oriented Programming. A class represents an “entity” that can communicate
+    with other classes or functions. But, class can hide information about its data
+    and behavior. It can be done by using `private` data members and functions. Class
+    should provide access to only necessary information which is useful outside the
+    class and we should hide its internal representation.
+
+
+    A class communicates with the outer world by using `public` data member functions.
+    These member functions are often called `interface` of a class. When you design
+    a class, you should separate the `implementation` of a class with its interface.
+    This will give you a possibility to easily change the behavior of the class without
+    changing the interface code.
+
+
+    Data abstraction increases the effectiveness of programs. For example: If you
+    have a car and car gets start by putting the key. There is no need to understand
+    how fuel comes from the tank inside the engine of a car and how it catches fire
+    using a spark plug and how wheels rotate after combustion of fuel inside engine.
+    All these details are abstracted from you when you drive a car. Because of these
+    abstractions you can effectively drive a car because only essential information
+    are visible to you that make you drive easily.
+
+
+    # 32 C++ Encapsulation
+
+
+    Encapsulation is the idea of hiding the details of how things are implemented
+    without exposing full interface to the user. This allows the user to use the item
+    without worrying about how it is implemented.
+
+
+    In Object Oriented Programming, encapsulation represents binding data and functions
+    into one container. This container hides the details of the data and the way functions
+    process data.
+
+
+    # 33 C++ Polymorphism
+
+
+    The word polymorphism means having multiple forms of one thing. In Object Oriented
+    Programming, polymorphism represents possibility to have multiple implementations
+    of the same functions. The most interesting concepts of polymorphism are related
+    to Inheritance. A pointer of base class can be used as pointer of derived class.
+
+
+    # 34 C++ Exception Handling
+
+
+    During the process of coding, the user may come across some errors which may be
+    syntactically correct but may still give an undesired output. Such errors are
+    which occur only when a specific condition is true are known as Exceptions.
+
+
+    There are mainly two types of Exceptions:
+
+
+    1. `Synchronous`: The simplest example of such an exception is ‘Divide by Zero’
+    error. When a number is divided by zero it results in an undefined error (Exception)
+    which is not handled by the compiler and rather needs to be taken care of by the
+    Developer.
+
+    2. `Asynchronous`: These types of exceptions cannot be controlled by the developer,
+    such as Interrupts.
+
+
+    In C++ exceptions are handled using the `try-catch` block. The basic idea behind
+    this block is that:
+
+
+    - First, the code to be executed is put in the `TRY` block.
+
+    - Second, if an exception occurs then it is `THROWN`.
+
+    - Finally, the exception thrown is caught by the `CATCH` block and handled appropriately.
+
+
+    NOTE: if no exception occurs in the `TRY` block then the `CATCH` block is never
+    executed.
+
+
+    - When any exception object is generated and thrown, that exception is caught
+    by corresponding `catch` statement, which processes the exception.
+
+    - We can write more than one `catch` statement associated with a `try`.
+
+    - Which `catch` statement to be invoked is to be determined by exception type.
+
+    - When an exception is caught, argument variable will receive its value.
+
+    - Any type of data could be possible caught.
+
+    - If no exception occurs in the `TRY` block then none of `catch` gets executed.
+
+    - `Throw` generates the exception class object.
+
+    - If that exception has to be caught, then `throw` must be executed either from
+    within a `try`, or from any called function within the `try` block (directly or
+    indirectly).
+
+    - If your code is generating an exception for which there is no applicable `catch`
+    statement, an abnormal program termination may occur.
+
+    - The `terminate()` function is called whenever the exception handling subsystem
+    fails to find a matching `catch` statement.
+
+    - It is also called if your program attempts to re throw an exception when no
+    exception was originally thrown.
+
+    - Throwing an unhandled exception causes the standard library function `terminate()`
+    to be invoked.
+
+    - A `try` block can be used inside a function.
+
+    - We can write more than one `catch` associated with `try`. However, each `catch`
+    must be defined to catch a different type of exception.
+
+
+    # 35 C++ Late Binding
+
+
+    Late binding is also known as Dynamic Binding or Runtime Binding.
+
+
+    Sometimes compiler can’t know which function will be called till program is executed
+    (runtime). This is known as late binding.
+
+
+    `Binding` is the process which is used by the compiler to convert identifiers
+    (such as variable and function names) into machine language addresses.
+
+
+    It is a mechanism in which the method called by an object gets associated by name
+    in runtime. Late binding happens when `virtual` keyword is used in member function
+    declaration.
+
+
+    # 36 C++ References
+
+
+    Reference variable is simply another name for already existing object. References
+    can be mistaken for pointers. It''s not correct because references are less powerful
+    than pointers. But references are safer than pointers.
+
+    '
+  raw: 'Destructor is a special class function which destroys the object as soon as
+    the scope of object ends. The destructor is called automatically by the compiler
+    when the object goes out of scope.
+
+
+    The syntax for destructor is same as that for the constructor, the class name
+    is used for the name of destructor, with a tilde ~ sign as prefix to it. Destructors
+    will never have any arguments.
+
+
+    Characteristics of Destructor:
+
+
+    *   A destructor never any arguments.so we cannot overload destructors.
+
+
+    *   They do not have return types, not even void
+
+
+    *   A destructor will be invoked implicitly by the complier upon exit from the
+    program to clean up storage that is no longer accessible.
+
+
+    *   Destructor can be virtual but Constructor cannot be virtual.
+
+
+    # 29 C++ Function Overloading
+
+
+    If any class have multiple functions with same names but different parameters
+    then they are said to be overloaded.
+
+
+    Function overloading is usually used to enhance the readability of the program.
+    If you have to perform one single operation but with different number or types
+    of arguments, then you can simply overload the function.
+
+
+    Function can be overloaded either by changing number of Arguments or by having
+    different types of argument.
+
+
+    # 30 C++ Operator Overloading
+
+
+    Operator overloading—less commonly known as operator ad hoc polymorphism—is a
+    specific case of polymorphism, where different operators have different implementations
+    depending on their arguments. Operator overloading is generally defined by the
+    language, the programmer, or both.
+
+
+    For example ''+'' operator can be overloaded to perform addition on various data
+    types, like for Integer, String (concatenation) etc.
+
+
+    Rules for overloading operators
+
+
+    1\. Only existing operators can be overloaded.
+
+
+    2\. The overload operator must have at least on operand that is of user defined
+    type.
+
+
+        New operators cannot be created.
+
+
+    3\. We cannot change basic meaning of any operator i.e we cannot use + for subtraction
+
+
+    4\. Overload operators follow the syntax rules of original operators. They can’t
+    be over ridden.
+
+
+    5\. Sizeof,.(membership operator),. *(pointer to member operator), :: (scope resolution
+    operator),?: (conditional operator) can’t be overloaded.
+
+
+    6\. = (assignment operator), ()(function call operator),[] (subscripting operator),->
+    (class member access operator) can’t be overloaded using friend functions.
+
+
+    # 31 C++ Abstraction
+
+
+    Data abstraction provides only essential information to the outside world and
+    hiding their background details. Abstraction is one of the main concepts of the
+    Object Oriented Programming. A class represents an “entity” that can communicate
+    with other classes or functions. But, class can hide information about its data
+    and behavior. It can be done by using private data members and functions. Class
+    should provide access to only necessary information which is useful outside the
+    class and we should hide its internal representation.
+
+
+    A class communicates with the outer world by using public data member functions.
+    These member functions are often called interface of a class. When you design
+    a class, you should separate the implementation of a class with its interface.
+    This will give you a possibility to easily change the behavior of the class without
+    changing the interface code.
+
+
+    Data abstraction increases the effectiveness of programs. For example: If you
+    have a car and car gets start by putting the key. There is no need to understand
+    how fuel comes from the tank inside the engine of a car and how it catches fire
+    using a spark plug and how wheels rotate after combustion of fuel inside engine.
+    All these details are abstracted from you when you drive a car. Because of these
+    abstractions you can effectively drive a car because only essential information
+    are visible to you that make you drive easily.
+
+
+    # 32 C++ Encapsulation
+
+
+    Encapsulation is the idea of hiding the details of how things are implemented
+    without exposing full interface to the user. This allows the user to use the item
+    without worrying about how it is implemented.
+
+
+    In Object Oriented Programming, encapsulation represents binding data and functions
+    into one container. This container hides the details of the data and the way functions
+    process data.
+
+
+    # 33 C++ Polymorphism
+
+
+    The word polymorphism means having multiple forms of one thing. In Object Oriented
+    Programming, polymorphism represents possibility to have multiple implementations
+    of the same functions. The most interesting concepts of polymorphism are related
+    to Inheritance. A pointer of base class can be used as pointer of derived class.
+
+
+    # 34 C++ Exception Handling
+
+
+    During the process of coding, the user may come across some errors which may be
+    syntactically correct but may still give an undesired output. Such errors are
+    which occur only when a specific condition is true are known as Exceptions.
+
+
+    There are mainly two types of Exceptions:
+
+
+    1) Synchronous: The simplest example of such an exception is ‘Divide by Zero’
+    error. When a number is divided by zero it results in an undefined error (Exception)
+    which is not handled by the compiler and rather needs to be taken care of by the
+    Developer.
+
+
+    2) Asynchronous: These types of exceptions cannot be controlled by the developer,
+    such as Interrupts.
+
+
+    In C++ exceptions are handled using the try-catch block. The basic idea behind
+    this block is that
+
+
+    First, the code to be executed is put in the TRY block.
+
+
+    Second, if an exception occurs then it is THROWN.
+
+
+    Finally, the exception thrown is caught by the CATCH block and handled appropriately.
+
+
+    NOTE: if no exception occurs in the TRY block then the CATCH block is never executed.
+
+
+    *   When any exception object is generated and thrown, that exception is caught
+    by corresponding catch statement, which processes the exception.
+
+
+    *   We can write more than one catch statement associated with a try.
+
+
+    *   Which catch statement to be invoked is to be determined by exception type.
+
+
+    *   When an exception is caught, argument variable will receive its value.
+
+
+    *   Any type of data could be possible caught, including classes that you create.
+
+
+    *   If no exception is thrown (no error occurs within the try block), then none
+    of the
+
+
+    *   Catch statement gets executed.
+
+
+    *   Throw generates the exception class object.
+
+
+    *   If that exception has to be caught, then throw must be executed either from
+    within a try, or from any called function within the try block (directly or indirectly).
+
+
+    *   If your code is generating an exception for which there is no applicable catch
+    statement, an abnormal program termination may occur.
+
+
+    *   The terminate () function is called whenever the exception handling subsystem
+    fails to find a matching catch statement for an exception.
+
+
+    *   It is also called if your program attempts to re throw an exception when no
+    exception was originally thrown.
+
+
+    *   Throwing an unhandled exception causes the standard library function terminate
+    () to be invoked.
+
+
+    *   By default, terminate() calls abort() to stop your program
+
+
+    *   A try block can be used inside a function.
+
+
+    *   We can write more than one catch associated with a try. However, each catch
+    must be defined to catch a different type of exception.
+
+
+    # 35 C++ Late Binding
+
+
+    Late binding is also known as Dynamic Binding or Runtime Binding.
+
+
+    Sometimes compiler can’t know which function will be called till program is executed
+    (runtime). This is known as late binding.
+
+
+    Binding is the process which is used by the compiler to convert identifiers (such
+    as variable and function names) into machine language addresses.
+
+
+    It is a mechanism in which the method called by an object gets associated by name
+    in runtime. Late binding happens when virtual keyword is used in member function
+    declaration.
+
+
+    # 36 C++ References
+
+
+    Reference variable is simply another name for already existing object. References
+    can be mistaken for pointers. It''s not correct because references are less powerful
+    than pointers. But references are safer than pointers. '
+  toc: []
+  trans: '
+
+    析构函数是一种特殊的类函数，它在对象的作用域结束时立即销毁对象。当对象超出作用域时，编译器会自动调用析构函数。
+
+
+    析构函数的语法与构造函数相同，使用类名作为析构函数的名称，并在前面加上波浪号 `~`。析构函数永远不会有任何参数。
+
+
+    ### 析构函数的特点
+
+
+    - 析构函数没有任何参数，因此我们不能对重载析构函数。
+
+    - 它们没有返回值，即使是 `void` 也不行。
+
+    - 程序退出时，编译器会隐式地调用析构函数以清理不再可访问的存储。
+
+    - 析构函数可以是 `virtual`（虚函数），但`Constructor（构造函数）不能是虚函数。
+
+
+    # 29 C++ 函数重载
+
+
+    如果一个类有多个同名但参数不同的函数，则它们被称为重载。
+
+
+    函数重载通常用于增强程序的可读性。如果你需要执行同一个单一操作，但使用的参数数量或类型不同，那么你就可以简单地重载该函数。
+
+
+    可以通过改变参数的数量或使用不同类型的参数来重载函数。
+
+
+    # 30 C++ 运算符重载
+
+
+    运算符重载——也少为人知的 `operator` 临时多态——是多态的一种特殊情况，其中不同的 `operators` 根据其参数有不同的实现。`运算符重载`通常由语言、程序员或两者共同定义。
+
+
+    例如，`+` 运算符可以重载以对各种数据类型执行加法操作，比如对于 `Integer（整数）`、`String（字符串）`等。
+
+
+    ### 运算符重载规则
+
+
+    1. 只有现有的运算符可以重载。
+
+    2. 重载运算符必须至少有一个操作数是自定义类型。不能创建新的运算符。
+
+    3. 我们不能改变任何运算符的原始含义，即我们不能用 `+` 用于减法。
+
+    4. 重载运算符遵循原始运算符的语法规则。它们不能被重写。
+
+    5. `Sizeof`、`.`（成员运算符）、`*`（成员指针运算符）、`::`（作用域解析运算符）、`?:`（条件运算符）不能被重载。
+
+    6. `=`（赋值运算符）、`()`（函数调用运算符）、`[]`（下标运算符）、`->`（类成员访问运算符）不能通过友元函数进行重载。
+
+
+    # 31 C++ 抽象
+
+
+    数据抽象仅向外部世界提供基本信息并隐藏其背景细节。抽象是面向对象编程的主要概念之一。类代表一个可以与其他类或函数通信的“实体”。但类可以隐藏关于其数据和行为的信息。这可以通过使用
+    `private` 数据成员和函数来实现。类应该只提供对类外有用的必要信息的访问，我们应该隐藏它的内部表示。
+
+
+    类通过使用 `public` 数据成员函数与外部世界通信。这些成员函数通常被称为类的 `interface（接口）`。当你设计一个类时，你应该将类的 `implementation（实现）`
+    与它的接口分开。这将让你有可能在不更改接口代码的情况下轻松更改类的行为。
+
+
+    数据抽象提高了程序的有效性。例如：如果你有一辆汽车，通过插入钥匙即可启动。你不需要理解燃料是如何从汽车内部油箱进入引擎的，如何通过火花塞点燃，以及燃料在引擎内燃烧后车轮是如何旋转的。当你开车时，所有这些细节都对你抽象了。正因为这些抽象，你可以有效地开车，因为对你可见的只有那些让你开车变得轻松的必要信息。
+
+
+    # 32 C++ 封装
+
+
+    封装是一种隐藏事物实现细节的想法，而不向用户暴露完整的接口。这允许用户使用该项物品而不必担心它是如何实现的。
+
+
+    在面向对象编程中，封装代表将数据和函数绑定到一个容器中。这个容器隐藏了数据的细节以及函数处理数据的方式。
+
+
+    # 33 C++ 多态
+
+
+    多态是隐藏事物实现细节的想法，而不向用户暴露完整的接口。多态代表具有相同接口的多个实现。在面向对象编程中，多态代表同一个事物具有多种形式。多态最有趣的概念与继承有关。
+
+
+    # 34 C++ 异常处理
+
+
+    在编码过程中，用户可能会遇到语法上正确但可能产生非预期输出的错误。只有当特定条件为真时才会发生的错误才被称为异常。
+
+
+    异常主要有两种类型：
+
+
+    1. `Synchronous（同步异常）`：这种异常最简单的例子是除以零。当数字除以零时产生的错误不是由编译器处理，而是需要开发者来处理。
+
+    2. `Asynchronous（异步异常）`：这些异常无法由开发者控制，例如中断。
+
+
+    C++ 使用 `try-catch` 块来处理异常。该块的基本思想是：
+
+
+    - 首先，将要执行的代码放在 `TRY` 块中。
+
+    - 其次，如果发生异常，它会被 `THROWN（抛出）`。
+
+    - 最后，抛出的异常会被 `CATCH` 块捕获并适当处理。
+
+
+    注意：如果 `TRY` 块没有发生异常，则不会执行 `CATCH`。
+
+
+    - 当任何异常对象生成并抛出时，它会被相应的 `catch` 语句捕获。
+
+    - 我们可以为一个 `try` 编写多个 `catch` 语句。
+
+    - 当异常被捕获时，参数变量将接收其值。
+
+    - 任何类型的数据都可能被捕获。
+
+    - 如果 `TRY` 块没有发生异常，没有任何 `catch` 会执行。
+
+    - `Throw` 生成异常类对象。
+
+    - 如果异常必须被捕获，那么 `throw` 必须在 `try` 内部或 `try` 内部调用的任何函数中执行。
+
+    - 如果你的代码生成的异常没有适用的 `catch` 语句，可能会导致程序异常终止。
+
+    - 当程序尝试重新抛出一个最初没有抛出的异常时，标准库函数 `terminate()` 会被调用。
+
+    - 每当异常处理系统未能找到匹配的 `catch` 语句，就会调用 `terminate()` 函数。
+
+    - `try` 块可以在函数内部使用。
+
+    - 我们可以为一个 `try` 关联多个 `catch` 语句。但是，每个 `catch` 必须定义以捕获不同类型的异常。
+
+    '
+- fmt: "\n# Some important differences between C++ references and pointers\n\nReferences\
+    \ must be initialized once they are declared. So, a reference can't be `NULL`.\n\
+    \nOnce a reference is declared and initialized there is no possibility to make\
+    \ reference variable to reference another object.\n\nPointers can point to no-where\
+    \ (`NULL`) but a reference always refers to some object.\n\nWe cannot take the\
+    \ address of the reference as we can do it with pointers.\n\nYou cannot do reference\
+    \ arithmetic like we can do with pointers.\n\n## Reference variables and Reference\
+    \ parameters\n\nA reference is essentially an implicit pointer.\n\nA reference\
+    \ can be used: as a function parameter, as a function return value, or as a stand-alone\
+    \ reference.\n\nBy default, `C++` uses call-by-value, but it provides two ways\
+    \ to achieve call-by-reference Parameter passing. First, you can explicitly pass\
+    \ a pointer to the argument. Second, you can use a reference parameter.\n\nWhen\
+    \ you create an independent reference, all you are creating is another name for\
+    \ an object variable. All independent references must be initialized at the time\
+    \ of creation.\n\nA base class reference can point to an object of a derived class.\n\
+    \n### Restrictions to References\n\n- You cannot reference another reference (we\
+    \ can’t obtain address of reference)\n- It won’t be possible to create arrays\
+    \ of references nor create a pointer to a reference nor reference a bit-field.\n\
+    - A reference variable once declared must be initialized unless it is member of\
+    \ a class or a function parameter or return value.\n- Null references are prohibited\n\
+    \n# # 37 C++important Points\n\n1. `C++` is a case sensitive programming language.\n\
+    2. In `C++`, the semicolon is a statement terminator.\n3. `C++` supports single-line\
+    \ and multi-line comments. All characters available inside any comment are ignored\
+    \ by `C++` compiler.\n4. Any line of code not ending with semicolon is called\
+    \ a null statement in `C++`.\n5. The `endl` keyword is used to inserts a new-line\
+    \ character after every line.\n6. The global variables will hold their value throughout\
+    \ the life-time of your program.\n7. All four modifiers can be applied to the\
+    \ `int` type.\n8. `char` type allows only `signed` and `unsigned` modifiers.\n\
+    9. `double` type can be used with the `long` modifier.\n10. The modifiers can\
+    \ be combined. For example, you can use `signed` or `unsigned` with `long` or\
+    \ `short` modifiers.\n11. Variable must be declared before they are used. Usually\
+    \ it is preferred to declare them at the starting of the program.\n12. Constants\
+    \ refer to fixed values that the program may not alter and they are called `literals`.\n\
+    13. The variables inside class definition are called as data members and the functions\
+    \ are called member functions.\n14. Class's member functions can be defined inside\
+    \ the class definition or outside the class definition.\n15. Class in `C++` are\
+    \ similar to structures in `C`, the only difference being, class defaults to private\
+    \ access control, whereas structure defaults to public.\n16. All the features\
+    \ of OOPS, revolve around classes in `C++`. Inheritance, Encapsulation, Abstraction\
+    \ etc.\n17. Objects of class holds separate copies of data members. We can create\
+    \ as many objects of a class as we need.\n18. Objects are instances of class,\
+    \ which holds the data variables declared in class and the member functions work\
+    \ on these class objects.\n19. Objects are initialized using special class functions\
+    \ called `Constructors`.\n20. Whenever the object is out of its scope, another\
+    \ special class member function called `Destructor` is called, to release the\
+    \ memory reserved by the object.\n21. A class definition starts with the keyword\
+    \ `class` followed by the class name; and the class body, enclosed by a pair of\
+    \ curly braces.\n22. A class member can be defined as public, private or protected.\
+    \ By default members would be assumed as private.\n23. The public data members\
+    \ of objects of a class can be accessed using the direct member access operator\
+    \ `.`.\n24. Private and protected members cannot be accessed directly using direct\
+    \ member access operator ``.\n25. A class constructor is a special function in\
+    \ a class that is called when a new object of the class is created.\n26. A destructor\
+    \ is also a special function which is called when created object is deleted.\n\
+    27. The copy constructor is a constructor which creates an object by initializing\
+    \ it with an object of the same class, which has been created previously.\n28.\
+    \ Every object has a special pointer `this` which points to the object itself.\n\
+    29. A pointer to a class is done exactly the same way a pointer to a structure\
+    \ is. In fact a class is really just a structure with functions in it.\n30. Both\
+    \ data members and function members of a class can be declared as `static`.\n\
+    31. Member functions are the functions, which have their declaration inside the\
+    \ class definition and works on the data members of the class. \n32. The definition\
+    \ of member functions can be inside or outside the definition of class.\n33. A\
+    \ `friend` function is permitted full access to private and protected members\
+    \ of a class.\n34. With an inline function, the compiler tries to expand the code\
+    \ in the body of the function in place of a call to the function.\n35. Inheritance\
+    \ makes the code reusable. When we inherit an existing class, all its methods\
+    \ and fields become available in the new class, hence code is reused.\n36. All\
+    \ members of a class except `Private`, are inherited.\n37. Purpose of Inheritance\
+    \ is: Code Reusability, Method Overriding, Use of `Virtual`.\n38. We can break\
+    \ an infinite loop using control statements like `BREAK` and `GOTO`.\n39. Arrays\
+    \ are fixed in size.\n40. Elements of an array will be allocated contiguously\
+    \ in memory.\n41. Elements of an array are accessed by an index.\n42. Abstraction\
+    \ separates code into interface and implementation. So while designing your component,\
+    \ you must keep interface independent of the implementation so if you change underlying\
+    \ implementation then interface would remain intact\n43. To make class members\
+    \ private by default unless we really need to expose them is a good example of\
+    \ encapsulation.\n44. Late binding is also known as Dynamic Binding or Runtime\
+    \ Binding.\n45. Inline function may not work if it contains any loop (s), switch,\
+    \ `GOTO`, static variables.\n46. A `static` member function cannot be `virtual`.\n\
+    47. The key word `this` is a local variable present in any non-static function\
+    \ body.\n48. `this` refers to current class object.\n49. The keyword `this` does\
+    \ not need declaration and is rarely referred to explicitly in a function definition.\n\
+    50. Function overriding stop inheritance.\n51. A pure virtual function is a virtual\
+    \ function that has no definition within the base class.\n52. Abstract Class is\
+    \ a class that contains at least one pure virtual function.\n53. We cannot create\
+    \ objects of an abstract class.\n54. We can create pointers and references to\
+    \ an abstract class.\n55. If no exception occurs in the `TRY` block then the `CATCH`\
+    \ block is never executed.\n56. A function or entire class can be declared as\
+    \ friend of another class.\n57. Pointers are simple references to non-contiguous\
+    \ memory location. It stores address of some other variable and points to its\
+    \ values.\n58. We can use `typedef` to define type of some long variable type.\n"
+  raw: 'Some important differences between C++ references and pointers:
+
+
+    References must be initialized once they are declared. So, a reference can''t
+    be NULL
+
+
+    Once a reference is declared and initialized there is no possibility to make reference
+    variable to reference another object.
+
+
+    Pointers can point to no-where (NULL) but a reference always refers to some object.
+
+
+    We cannot take the address of the reference as we can do it with pointers.
+
+
+    You cannot do reference arithmetic like we can do with pointers.
+
+
+    Reference variables and Reference parameters:
+
+
+    A reference is essentially an implicit pointer.
+
+
+    A reference can be used: as a function parameter, as a function return value,
+    or as a stand-alone reference.
+
+
+    By default, C++ uses call-by-value, but it provides two ways to achieve call-by-reference
+    Parameter passing. First, you can explicitly pass a pointer to the argument. Second,
+    you can use a reference parameter.
+
+
+    When you create an independent reference, all you are creating is another name
+    for an object variable.  All independent references must be initialized at the
+    time of creation.
+
+
+    A base class reference can point to an object of a derived class.
+
+
+    Restrictions to References
+
+
+    You cannot reference another reference (we can’t obtain address of reference)
+
+
+    It won’t be possible to create arrays of references nor create a pointer to a
+    reference nor reference a bit-field.
+
+
+    A reference variable once declared must be initialized unless it is member of
+    a class or a function parameter or return value.
+
+
+    Null references are prohibited
+
+
+    # 37 C++important Points
+
+
+    1.  C++ is a case sensitive programming language.
+
+
+    2.  In C++, the semicolon is a statement terminator.
+
+
+    3.  C++ supports single-line and multi-line comments. All characters available
+    inside any comment are ignored by C++ compiler.
+
+
+    4.  Any line of code not ending with semicolon is called a null statement in C++
+
+
+    5.  The “endl” keyword is used to inserts a new-line character after every line.
+
+
+    6.  The global variables will hold their value throughout the life-time of your
+    program.
+
+
+    7.  All four modifiers can be applied to the int type
+
+
+    8.  char type allows only signed and unsigned modifiers
+
+
+    9.  double type can be used with the long modifier
+
+
+    10.  The modifiers can be combined. For example, you can use signed or unsigned
+    with long or short modifiers.
+
+
+    11.  Variable must be declared before they are used. Usually it is preferred to
+    declare them at the starting of the program.
+
+
+    12.  Constants refer to fixed values that the program may not alter and they are
+    called literals.
+
+
+    13.  The variables inside class definition are called as data members and the
+    functions are called member functions.
+
+
+    14.  Class''s member functions can be defined inside the class definition or outside
+    the class definition
+
+
+    15.  Class in C++ are similar to structures in C, the only difference being, class
+    defaults to private access control, whereas structure defaults to public.
+
+
+    16.  All the features of OOPS, revolve around classes in C++. Inheritance, Encapsulation,
+    Abstraction etc.
+
+
+    17.  Objects of class holds separate copies of data members. We can create as
+    many objects of a class as we need.
+
+
+    18.  Objects are instances of class, which holds the data variables declared in
+    class and the member functions work on these class objects.
+
+
+    19.  Objects are initializedusing special class functions called Constructors.
+
+
+    20.  Wheneverthe object is out of its scope, another special class member function
+    called Destructor is called, to release the memory reserved by the object.
+
+
+    21.  A class definition starts with the keyword class followed by the class name;
+    and the class body, enclosed by a pair of curly braces. 
+
+
+    22.  A class member can be defined as public, private or protected. By default
+    members would be assumed as private.
+
+
+    23.  The public data members of objects of a class can be accessed using the direct
+    member access operator (.)
+
+
+    24.  Private and protected members cannot be accessed directly using direct member
+    access operator (.)
+
+
+    25.  A class constructor is a special function in a class that is called when
+    a new object of the class is created.
+
+
+    26.  A destructor is also a special function which is called when created object
+    is deleted.
+
+
+    27.  The copy constructor is a constructor which creates an object by initializing
+    it with an object of the same class, which has been created previously.
+
+
+    28.  Every object has a special pointer this which points to the object itself.
+
+
+    29.  A pointer to a class is done exactly the same way a pointer to a structure
+    is. In fact a class is really just a structure with functions in it.
+
+
+    30.  Both data members and function members of a class can be declared as static.
+
+
+    31.  Member functions are the functions, which have their declaration inside the
+    class definition and works on the data members of the class. 
+
+
+    32.  The definition of member functions can be inside or outside the definition
+    of class.
+
+
+    33.  A friend function is permitted full access to private and protected members
+    of a class.
+
+
+    34.  With an inline function, the compiler tries to expand the code in the body
+    of the function in place of a call to the function.
+
+
+    35.  Inheritance makes the code reusable. When we inherit an existing class, all
+    its methods and fields become available in the new class, hence code is reused.
+
+
+    36.  All members of a class except Private, are inherited
+
+
+    37.  Purpose of Inheritance is: Code Reusability, Method Overriding, Use of Virtual
+    keyword.
+
+
+    38.  We can break an infinite loop using control statements like BREAK and GOTO.
+
+
+    39.  Arrays are fixed in size.
+
+
+    40.  Elements of an array will be allocated contiguously in memory
+
+
+    41.  Elements of an array are accessed by an index.
+
+
+    42.  Abstraction separates code into interface and implementation. So while designing
+    your component, you must keep interface independent of the implementation so that
+    if you change underlying implementation then interface would remain intact.
+
+
+    43.  To make class members private by default unless we really need to expose
+    them is a good example of encapsulation.
+
+
+    44.  Late binding is also known as Dynamic Binding or Runtime Binding.
+
+
+    45.  Inline function may not work if it contains any loop (s), switch, GOTO, static
+    variables.
+
+
+    46.  A static member function cannot be ‘virtual’.
+
+
+    47.  The key word "this" is a local variable present in any non-static function
+    body.
+
+
+    48.  “this” refers to current class object.
+
+
+    49.  The keyword "this" does not need declaration and is rarely referred to explicitly
+    in a function definition.
+
+
+    50.  Function overriding stop inheritance.
+
+
+    51.  A pure virtual function is a virtual function that has no definition within
+    the base class.
+
+
+    52.  Abstract Class is a class that contains at least one pure virtual function.
+
+
+    53.  We cannot create objects of an abstract class.
+
+
+    54.  We can create pointers and references to an abstract class.
+
+
+    55.  If no exception occurs in the TRY block then the CATCH block is never executed.
+
+
+    56.  A function or entire class can be declared as friend of another class.
+
+
+    57.  Pointers are simple references to non-contiguous memory location. It stores
+    address of some other variable and points to its values.
+
+
+    58.  We can use typedef to define type of some long variable type.'
+  toc: []
+  trans: '
+
+
+    # C++ 引用和指针之间的一些重要区别
+
+
+    引用在声明时必须初始化。因此，引用不能为 `NULL`。
+
+
+    一旦引用被声明并初始化，就不可能再让该引用变量指向另一个对象。
+
+
+    指针可以指向任何地方（`NULL`），但引用始终引用某个对象。
+
+
+    我们不能像操作指针那样获取引用的地址。
+
+
+    你不能像操作指针那样进行引用算术。
+
+
+    ## 引用变量和引用参数
+
+
+    引用本质上是一个隐式指针。
+
+
+    引用可以用于：作为函数参数、作为函数的返回值，或作为独立的引用使用。
+
+
+    默认情况下，`C++` 使用按值传递（call-by-value），但它提供了两种方法来实现按引用传递（call-by-reference）参数传递。首先，你可以显式地传递参数的指针。其次，你可以使用引用参数。
+
+
+    当你创建一个独立引用时，你创建的只是对象变量的另一个名称。所有独立引用都必须在创建时初始化。
+
+
+    基类引用可以指向派生类的对象。
+
+
+    ### 引用的限制
+
+
+    - 你不能引用另一个引用（我们无法获取引用的地址）
+
+    - 无法创建引用数组，也无法创建指向引用的指针，或引用位域。
+
+    - 引用变量一旦声明必须初始化，除非它是类的成员、函数参数或返回值。
+
+    - 禁止空引用
+
+
+    # # 37 C++ 重要要点
+
+
+    1. `C++` 是一种区分大小写的编程语言。
+
+    2. 在 `C++` 中，分号是语句的终止符。
+
+    3. `C++` 支持单行注释和多行注释。任何注释内部的任何可用字符都会被 `C++` 编译器忽略。
+
+    4. 任何不以分号结尾的代码行在 `C++` 中都被称为空语句（null statement）。
+
+    5. `endl` 关键字用于在每行之后插入换行符。
+
+    6. 全局变量在整个程序生命周期内将保持其值。
+
+    7. 所有四个修饰符都可以应用于 `int` 类型。
+
+    8. `char` 类型允许 `signed`（有符号）和 `unsigned`（无符号）修饰符。
+
+    9. `double` 类型可以配合 `long` 修饰符使用。
+
+    10. 修饰符可以组合。例如，你可以在 `long` 或 `short` 修饰符配合使用 `signed` 或 `unsigned`。
+
+    11. 变量在使用之前必须声明。通常首选在程序开始时声明它们。
+
+    12. 常量是指程序可能更改的固定值，它们被称为字面量（`literals`）。
+
+    13. 类定义内部变量被称为数据成员，函数被称为成员函数。
+
+    14. 类的成员函数可以在类内部定义，也可以在类外部定义。
+
+    15. `C++` 中的类类似于 C 语言中的结构体，唯一的区别是类默认是私有（private）访问控制，而结构体默认为公共（public）。
+
+    16. 面向对象编程（OOPS）的所有特性都围绕着 `C++` 中的类展开。继承、封装、抽象等。
+
+    17. 类对象持有数据成员的独立副本。我们可以根据需要创建任意数量的类对象。
+
+    18. 对象是类的实例，它持有类中声明的数据变量，并且成员函数在这些类对象上工作。
+
+    19. 对象使用特殊的类函数构造函数（`Constructors`）进行初始化。
+
+    20. 每当对象离开其作用域时，就会调用另一个特殊的类成员函数析构函数（`Destructor`），以释放对象保留的内存。
+
+    21. 类定义以关键字 `class` 开头，后跟类名；类体由一对大括号包围。
+
+    22. 类成员可以定义为公共（public）、私有（private）或保护（protected）。默认情况下成员被假设为私有。
+
+    23. 类对象的公共数据成员可以使用直接成员访问运算符 `.` 进行访问。
+
+    24. 私有和保护成员不能直接使用直接成员访问运算符 `->` 访问。
+
+    25. 类构造函数是类中的特殊函数，在创建类的新对象时被调用。
+
+    26. 析构函数也是一种特殊函数，在创建的对象删除时被调用。
+
+    27. 拷贝构造函数是一种通过使用之前创建的同类对象初始化对象来创建对象的构造函数。
+
+    28. 每个对象都有一个特殊的指针 `this` 指向对象本身。
+
+    29. 指向类的方法与指向结构体的指针完全相同。事实上，类实际上只是一个带有函数的结构体。
+
+    30. 类的数据成员和函数成员都可以声明为 `static`（静态）。
+
+    31. 成员函数是指在类定义内部有声明并在类数据成员上工作的函数。
+
+    32. 成员函数的定义可以在类定义内部，也可以在外部。
+
+    33. `friend`（友元）函数允许完全访问类的私有和保护成员。
+
+    34. 对于内联函数（inline function），编译器尝试在函数体内部展开代码以代替函数调用。
+
+    35. 继承使得代码可重用。当我们继承一个现有的类时，它所有的方法和字段在新类中都变得可用，因此代码被重用了。
+
+    36. 类中 `Private`（私有）之外的所有成员都是可继承的。
+
+    37. 继承的目的是：代码重用、方法重写、`Virtual`（虚）的使用。
+
+    38. 我们可以使用 `BREAK` 和 `GOTO` 等控制语句打破无限循环。
+
+    39. 数组的大小是固定的。
+
+    40. 数组元素在内存中连续分配。
+
+    41. 数组元素通过索引访问。
+
+    42. 抽象将代码分离为接口和实现。因此在设计组件时，你必须保持接口与实现独立，这样如果你更改底层实现，接口将保持完好。
+
+    43. 除非确实需要暴露它们，否则将类成员默认设为私有是良好的封装示例。
+
+    44. 晚绑定也称为动态绑定或运行时绑定。
+
+    45. 如果内联函数包含任何循环（s）、`switch`、`GOTO` 或静态变量，则可能不起。
+
+    46. `static` 成员函数不能是 `virtual`（虚）。
+
+    47. `this` 关键字是存在于非静态函数体中的局部变量。
+
+    48. `this` 指向当前类对象。
+
+    49. `this` 关键字不需要声明，在函数定义中很少被显式引用。
+
+    50. 函数重写停止继承。
+
+    51. 纯虚函数是指在基类中没有定义的虚函数。
+
+    52. 抽象类是包含至少一个纯虚函数的类。
+
+    53. 我们不能创建抽象类的对象。
+
+    54. 我们可以创建抽象类的指针和引用。
+
+    55. 如果 `TRY` 块中没有发生异常，则 `CATCH` 块永远不会执行。
+
+    56. 函数或整个类都可以声明为另一个类的友元。
+
+    57. 指针是指非连续内存位置的简单引用。它存储其他变量的地址并指向其值。
+
+    58. 我们可以使用 `typedef` 来定义某些长变量类型的类型。
+
+
+    '
