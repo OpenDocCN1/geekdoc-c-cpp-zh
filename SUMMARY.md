@@ -626,6 +626,7 @@
 +   [RISC-V 编程指南：RISC-V 微控制器与 C/C++ 入门指南](docs/risc-v-programming-guide-getting-started-with-the-risc-v-mic/README.md)
 +   [Ruby 与 C++ 编程简明：编程初学者指南 - 二本合一](docs/ruby-and-c-programming-made-simple-a-beginners-guide-to-prog/README.md)
 +   [Rust 与 C++ 编程：编程初学者指南](docs/rust-and-c-programming-made-simple-a-beginners-guide-to-prog/README.md)
++   [Rust 快速上手：利用下一代编程技能构建高性能、高效且高产的软件](docs/rust-crash-course-build-high-performance-efficient-and-produ/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
