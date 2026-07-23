@@ -1,0 +1,224 @@
+name: Quick JavaScript Interview Questions： Learn Frequently Asked Questions
+name_cn: JavaScript 面试快速问答：学习常见问题
+slug: quick-javascript-interview-questions-learn-frequently-asked-
+toc:
+- - '#'
+  - JavaScript 面试快速问答：学习常见问题
+- - '##'
+  - 第 1 章 继承
+- - '##'
+  - Q. 如何创建类？
+- - '##'
+  - Q. 如何创建对象？
+- - '##'
+  - Q. 如何声明私有成员和公共成员？
+- - '##'
+  - Q. 什么是原型（prototype）属性？
+- - '##'
+  - Q. 什么是构造函数（constructor）属性？
+- - '##'
+  - Q. 如何调用其他类的方法？
+- - '##'
+  - Q. `Object.create()` 方法的作用是什么？
+- - '##'
+  - Q. 如果浏览器不存在 `Object.create()` 方法，请为其编写一个 polyfill（填充函数）？
+- - '##'
+  - Q. `Object.defineProperties()` 方法的目的是什么？
+- - '##'
+  - Q. 如何在 JavaScript 中区分作用域（scope）和上下文（context）？
+- - '##'
+  - Q. 有哪两种方法可以将变量赋值给空对象？
+- - '##'
+  - 第 2 章 关于事件的问题
+- - '##'
+  - Q. 事件是如何工作的？
+- - '##'
+  - Q. 如何向元素绑定事件？
+- - '##'
+  - Q. 在 IE 版本中如何向元素绑定事件？
+- - '##'
+  - Q. 如何移除事件监听器？
+- - '##'
+  - Q. `setTimeout()` 和 `clearTimeOut()` 函数是如何工作的？
+- - '##'
+  - Q. `setInterval()` 和 `clearInterval()` 函数是如何工作的？
+- - '##'
+  - 第 3 章 闭包 (Closure)
+- - '##'
+  - 第 4 章 关于 JSON 的问题
+- - '##'
+  - Q. 如何将日期对象转换为 JSON？
+- - '##'
+  - 第 5 章 关于 DOM 的问题
+- - '##'
+  - Q. 什么是 DOM？
+- - '##'
+  - Q. DOM 中涉及哪些不同的对象？
+- - '##'
+  - Q. DOM 中涉及哪些不同的属性？
+- - '##'
+  - Q. 什么是 windows load 事件？
+- - '##'
+  - Q. 什么是 DOM ready 事件？
+- - '##'
+  - Q. DOM 中的 query selector 是什么？
+- - '##'
+  - Q. DOM 的主要数据类型是什么？
+- - '##'
+  - Q. DOM 中的 document fragment 是什么？
+- - '##'
+  - Q. 什么是 DOM 的基础对象？
+- - '##'
+  - Q. 常见的 doctype 声明有哪些？
+- - '##'
+  - HTML 4.01 Frameset
+- - '##'
+  - XHTML 1.0 Strict
+- - '##'
+  - XHTML 1.0 Transitional
+- - '##'
+  - XHTML 1.0 Frameset
+- - '##'
+  - XHTML 1.1
+- - '##'
+  - 第 6 章 Date 对象
+- - '##'
+  - 第 7 章 正则表达式
+- - '##'
+  - 第 8 章 Canvas API 问题
+- - '##'
+  - Q. 什么是 canvas 2d 上文？它是如何创建的？
+- - '##'
+  - Q. 如何在 Canvas 中加载图像？
+- - '##'
+  - Q. drawImage() 方法的不同重载签名分别有哪些？
+- - '##'
+  - 第 9 章 Geo Location API
+- - '##'
+  - Q. 什么是 Geo Location API？
+- - '##'
+  - Q. 如何判断浏览器是否支持 Geo Location API？
+- - '##'
+  - 第 10 章 Web Workers
+- - '##'
+  - Q. 什么是 Web Worker？
+- - '##'
+  - Q. 如何检测浏览器是否支持 Web Worker？
+- - '##'
+  - Q. 什么是专用工作（dedicated worker）？
+- - '##'
+  - Q. 什么是共享工作（shared worker）？
+- - '##'
+  - Q. 开发一个显示时间的专用 worker？
+- - '##'
+  - 开发一个计算数字平方的专用 worker？
+- - '##'
+  - Q. 如何定义内联 web worker？演示一个用于两个数字相数的内联 worker？
+- - '##'
+  - Q. 如何在 web worker 中处理错误？
+- - '##'
+  - Q. 创建一个共享线程（shared worker）来计算字符串的长度？
+- - '##'
+  - 第 11 章 本地存储 (Local Storage)
+- - '##'
+  - Q. 什么是本地存储？
+- - '##'
+  - Q. 哪一个是主存储接口？
+- - '##'
+  - Q. 如何在本地存储中存储和检索对象？
+- - '##'
+  - Q. 如何为本地存储绑定事件？
+- - '##'
+  - 第 12 章 File API
+- - '##'
+  - Q. 什么是 HTML5 File API？
+- - '##'
+  - Q. FileReader 提供了哪些异步读取方法？
+- - '##'
+  - Q. JavaScript 中的 Blob 对象是什么？
+- - '##'
+  - Q. 如何创建 Blob 对象？
+- - '##'
+  - Q. Blob 对象的可读状态有哪些？
+- - '##'
+  - Q. FileReader 的不同状态有哪些？
+- - '##'
+  - 第 13 章 Web RTC
+- - '##'
+  - Q. 什么是 Web RTC？
+- - '##'
+  - Q. Web RTC 实现了哪些 API？
+- - '##'
+  - Q. 什么是 MediaStream？
+- - '##'
+  - Q. `getUserMedia()` 方法的输入参数有哪些？
+- - '##'
+  - Q. 什么是 MediaStreamTracks？
+- - '##'
+  - Q. Web RTC 通信使用了哪些协议？
+- - '##'
+  - Q. 如何在 Chrome 浏览器中查看进行中的 Web RTC 会话的统计信息？
+- - '##'
+  - Q. 通道的不同事件处理器有哪些？
+- - '##'
+  - Q. 什么是信令通道（signal channel）？
+- - '##'
+  - Q. 什么是 ICE 技术？
+- - '##'
+  - Q. 什么是 ICE 候选（Candidate）？
+- - '##'
+  - Q. Web RTC 需要哪些服务器端功能？
+- - '##'
+  - Q. 什么是 STUN 协议？
+- - '##'
+  - 第 14 章 拖放 API
+- - '##'
+  - Q. 如何让浏览器中的内容可拖拽？
+- - '##'
+  - Q. 元素拖拽时发生了什么？
+- - '##'
+  - Q. 哪些拖放事件？
+- - '##'
+  - Q. 什么是 `dataTransfer` 属性？
+- - '##'
+  - Q. 开发一个示例将元素从一个地方动到另一个地方？
+- - '##'
+  - 第 15 章 App Cache（应用缓存 API）
+- - '##'
+  - Q. 什么是 app cache？在 Web 应用中使用 cache API 有好处？
+- - '##'
+  - Q. 如何在 html 文件中启用应用缓存？
+- - '##'
+  - Q. appcache 文件的媒体类型是什么？
+- - '##'
+  - Q. manifest 文件的三个部分是什么？
+- - '##'
+  - Q. 什么是 NETWORK 部分？
+- - '##'
+  - Q. 什么是 FALLBACK 部分？
+- - '##'
+  - Q. 什么是 CACHE MANIFEST 部分？
+- - '##'
+  - Q. 如何在浏览器中查看 appcache 详情？
+- - '##'
+  - Q. 如何检测浏览器支持 appcache？
+- - '##'
+  - Q. 如何手动更新 appcache？
+- - '##'
+  - 第 16 章 Server Sent Events（服务器发送事件）
+- - '##'
+  - Q. 什么是服务器发送事件 (SSE)?
+- - '##'
+  - Q. 服务器响应的类型是什么？
+- - '##'
+  - Q. 如何创建监听服务器更新的事件源？
+- - '##'
+  - Q. EventSource 触发哪些事件类型？
+- - '##'
+  - Q. 如何关闭事件流？
+- - '##'
+  - Q. 事件流的格式是什么？
+- - '##'
+  - Q. 请列出在严格模式（strict mode）下不允许的条件？
+- - '##'
+  - 关于作者

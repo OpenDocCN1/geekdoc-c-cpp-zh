@@ -616,6 +616,8 @@
 +   [Python 入门指南](docs/python-programming/README.md)
 +   [Python 编程：通过实践练习掌握 Python 语言、应用理论及快速学习计算机编程技巧的入门指南](docs/python-programming-the-crash-course-to-learn-how-to-master-p/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
++   [JavaScript 面试快速问答：学习常见问题](docs/quick-javascript-interview-questions-learn-frequently-asked-/README.md)
++   [RISC-V 编程指南：RISC-V 微控制器与 C/C++ 入门指南](docs/risc-v-programming-guide-getting-started-with-the-risc-v-mic/README.md)
 +   [Rust 与 C++ 编程：编程初学者指南](docs/rust-and-c-programming-made-simple-a-beginners-guide-to-prog/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
