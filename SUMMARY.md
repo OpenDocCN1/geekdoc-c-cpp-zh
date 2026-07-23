@@ -601,6 +601,7 @@
 +   [Java 与 JavaScript 编程初学者指南 – 一天学会 · 第2版](docs/programming-java-javascript-coding-for-beginners-learn-in-a-/README.md)
 +   [C 语言编程：初学者一周快速学会指南](docs/programming-language-c-a-step-by-step-guide-for-beginners-to/README.md)
 +   [C# 编程语言排名指南](docs/programming-languages-c---how-to-ranking/README.md)
++   [C++程序：原理与实践（第三版）](docs/programming-principles-and-practice-using-c-third-edition/README.md)
 +   [编程问题：技术面试入门指南。第1卷：C++11 基础](docs/programming-problems-a-primer-for-the-technical-interview-vo/README.md)
 +   [编程：Python 编程 - Windows 10 软件与数据库 (Java, Html, C++, C语言编程、初学者编程指南、PHP、网站设计)](docs/programming-python-programming---windows-10-software-databas/README.md)
 +   [Windows 运行时编程示例：基于 C# 和 XAML 示例的 WinRT 综合指南（微软 Windows 开发系列）](docs/programming-the-windows-runtime-by-example-a-comprehensive-g/README.md)
