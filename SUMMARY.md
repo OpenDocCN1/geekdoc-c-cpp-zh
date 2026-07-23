@@ -601,6 +601,7 @@
 +   [编程问题：技术面试入门指南。第1卷：C++11 基础](docs/programming-problems-a-primer-for-the-technical-interview-vo/README.md)
 +   [编程：Python 编程 - Windows 10 软件与数据库 (Java, Html, C++, C语言编程、初学者编程指南、PHP、网站设计)](docs/programming-python-programming---windows-10-software-databas/README.md)
 +   [Windows 编程 第六版（消费者预览版电子书）](docs/programming-windows-sixth-edition-consumer-preview-ebook/README.md)
++   [C++20 编程：概念、协程、范围及更多](docs/programming-with-c20---concepts-coroutines-ranges-and-more/README.md)
 +   [STM32 编程：Nucleo 开发板与 C/C++ 入门指南](docs/programming-with-stm32-getting-started-with-the-nucleo-board/README.md)
 +   [Python：精通 Python 高级指南](docs/python-become-a-master-in-python-python-python-programming-c/README.md)
 +   [Python 入门指南：Python 计算机编程代码 #1](docs/python-beginners-guide-to-programming-code-with-python-pytho/README.md)
