@@ -425,6 +425,7 @@
 +   [如何开始编程：初学者指南，基础术语与概念：C++ 编程入门指南](docs/how-to-start-programming-easy-guides-for-beginners-fundament/README.md)
 +   [如何使用 SPSS®：分析与解释的逐步指南](docs/how-to-use-spss-a-step-by-step-guide-to-analysis-and-interpr/README.md)
 +   [Html5 开发：入门初学者指南（第 2 卷）](docs/html5-development-the-beginning-beginners-guide-volume-2/README.md)
++   [HTML5 规范指南](docs/html5-specification/README.md)
 +   [C# 11 和 .NET 7 设计模式实现 - 第2版：学习如何使用设计模式设计并开发健壮可扩展的应用程序](docs/implementing-design-patterns-in-c-11-and-net-7---2nd-edition/README.md)
 +   [C# 和 .NET 5 设计模式实现：使用最常见设计模式构建可扩展、快速且可靠的 .NET 应用程序（英文版）](docs/implementing-design-patterns-in-c-and-net-5-build-scalable-f/README.md)
 +   [信息安全与优化](docs/information-security-and-optimization/README.md)
