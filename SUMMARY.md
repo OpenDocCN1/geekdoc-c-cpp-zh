@@ -571,6 +571,7 @@
 +   [Elixir 编程：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣](docs/programming-elixir-functional-concurrent-pragmatic-fun/README.md)
 +   [C++ 编程基础：模块化结构化方法](docs/programming-fundamentals---a-modular-structured-approach-usi/README.md)
 +   [C# 编程 10 - 基础技术](docs/programming-in-c-10---basic-techniques/README.md)
++   [C++ 编程：第一卷：C++ 基础](docs/programming-in-c-volume-i-the-foundation-of-c/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
