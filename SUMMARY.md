@@ -583,6 +583,7 @@
 +   [Programming Elixir 1.3：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣](docs/programming-elixir-13-functional-concurrent-pragmatic-fun/README.md)
 +   [Elixir 编程：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣](docs/programming-elixir-functional-concurrent-pragmatic-fun/README.md)
 +   [C 语言解决问题编程](docs/programming-for-problem-solving-with-c/README.md)
++   [C 语言问题解决编程：复杂问题的算法制定](docs/programming-for-problem-solving-with-c-formulating-algorithm/README.md)
 +   [C++ 编程基础：模块化结构化方法](docs/programming-fundamentals---a-modular-structured-approach-usi/README.md)
 +   [C# 编程 10 - 基础技术](docs/programming-in-c-10---basic-techniques/README.md)
 +   [C, C#, C++ 编程入门指南](docs/programming-in-c-c-c/README.md)
