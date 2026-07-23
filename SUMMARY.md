@@ -566,6 +566,7 @@
 +   [Web 开发人员 JavaScript 高级指南，第三版](docs/professional-javascript-for-web-developers-third-edition/README.md)
 +   [NoSQL 高级指南](docs/professional-nosql/README.md)
 +   [C# 专业级并行编程指南：精通 .NET 4 并行扩展](docs/professional-parallel-programming-with-c-master-parallel-ext/README.md)
++   [C++ 编程与问题解决，第 7 版](docs/programming-and-problem-solving-with-c-7th-edition/README.md)
 +   [Arduino 编程：Sketch 入门指南，第二版 (Tab)](docs/programming-arduino-getting-started-with-sketches-second-edi/README.md)
 +   [Clojure 编程指南](docs/programming-clojure-for-roman-fäckl/README.md)
 +   [Programming Elixir 1.3：函数式 ｜＞ 并发 ｜＞ 实用 ｜＞ 有趣](docs/programming-elixir-13-functional-concurrent-pragmatic-fun/README.md)
