@@ -577,6 +577,7 @@
 +   [C# 编程 10 - 基础技术](docs/programming-in-c-10---basic-techniques/README.md)
 +   [C, C#, C++ 编程入门指南](docs/programming-in-c-c-c/README.md)
 +   [C++ 编程：第一卷：C++ 基础](docs/programming-in-c-volume-i-the-foundation-of-c/README.md)
++   [C# 编程语言排名指南](docs/programming-languages-c---how-to-ranking/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
