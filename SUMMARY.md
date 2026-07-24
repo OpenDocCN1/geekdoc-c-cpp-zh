@@ -678,6 +678,7 @@
 +   [Mac OS X El Capitan 初学者指南：（适用于 Macbook, Macbook Air, Macbook Pro, iMac, Mac Pro 和 Mac Mini）](docs/the-complete-beginners-guide-to-mac-os-x-el-capitan-for-macb/README.md)
 +   [C++ 编程完整指南](docs/the-complete-c-programming-guide/README.md)
 +   [CUDA C++ 编程初学者指南：通过步进详解与实际应用解锁 GPU 计算潜力](docs/the-cuda-c-programming-beginners-guide-unlock-the-potential-/README.md)
++   [快乐陷阱 [电子资源]：停止挣扎，开始生活](docs/the-happiness-trap-electronic-resource-stop-struggling-start/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
