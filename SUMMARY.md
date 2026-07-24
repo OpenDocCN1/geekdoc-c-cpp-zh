@@ -687,6 +687,7 @@
 +   [Dart 编程语言入门指南](docs/the-dart-programming-language/README.md)
 +   [C/C++ 游戏编程基础：基于单片机的目标开发使用指南](docs/the-fundamentals-of-cc-game-programming-using-target-based-d/README.md)
 +   [快乐陷阱 [电子资源]：停止挣扎，开始生活](docs/the-happiness-trap-electronic-resource-stop-struggling-start/README.md)
++   [我们的互：大数据时代我们知得多却理解得更少](docs/the-internet-of-us-knowing-more-and-understanding-less-in-th/README.md)
 +   [Java EE 架构师手册（第二版）：如何成为成功的 Java EE 应用架构师](docs/the-java-ee-architects-handbook-second-edition-how-to-be-a-s/README.md)
 +   [SQL 语言（第 2 版）](docs/the-language-of-sql-2nd-edition/README.md)
 +   [图书员编程语言入门指南：LITA 指南](docs/the-librarians-introduction-to-programming-languages-a-lita-/README.md)
