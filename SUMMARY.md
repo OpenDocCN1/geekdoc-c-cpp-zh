@@ -681,6 +681,7 @@
 +   [慈悲之书：唤醒内心的指南](docs/the-compassion-book-teachings-for-awakening-the-heart/README.md)
 +   [Mac OS X El Capitan 初学者指南：（适用于 Macbook, Macbook Air, Macbook Pro, iMac, Mac Pro 和 Mac Mini）](docs/the-complete-beginners-guide-to-mac-os-x-el-capitan-for-macb/README.md)
 +   [C++ 编程完整指南](docs/the-complete-c-programming-guide/README.md)
++   [算法宪法：真值校验、编程与公式化（深度技术）](docs/the-constitution-of-algorithms-ground-truthing-programming-f/README.md)
 +   [CUDA C++ 编程初学者指南：通过步进详解与实际应用解锁 GPU 计算潜力](docs/the-cuda-c-programming-beginners-guide-unlock-the-potential-/README.md)
 +   [Dart 编程语言入门指南](docs/the-dart-programming-language/README.md)
 +   [快乐陷阱 [电子资源]：停止挣扎，开始生活](docs/the-happiness-trap-electronic-resource-stop-struggling-start/README.md)
