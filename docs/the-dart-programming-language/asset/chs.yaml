@@ -1,0 +1,1349 @@
+- "# Dart 编程语言入门指南\n\n\n\n![](img/00312.jpeg)\n\n## 关于电子书\n\nEPUB 是一种开放的行业标准书籍格式。然而，不同阅读设备和应用程序对\
+  \ EPUB 及其许多功能的支持程度不相同。可以使用您的设备或应用设置来根据您的喜好自定义显示。您可以自定义的设置通常包括字体、字体大小、单栏或双栏、横屏或竖屏模式，以及可以点击或触摸放大的图片。有关您的阅读设备或应用设置和功能的更多信息，请访问设备制造商的网站。\n\
+  \n许多书籍包含编程代码或配置示例。为了优化这些元素的显示效果，请在单栏横屏模式下查看电子书，并将字体调整为最小设置。除了以重流文本格式展示代码和配置外，我们还包含了代码图像，模拟纸质书籍中的显示效果；因此，当重流格式可能会损害代码列表的显示时，您将看到一个“点击此处查看代码图像”的链接。点击链接查看高保真代码图像。要返回之前查看的页面，请点击设备或应用上的返回按钮。\n\
+  \n\n\n![Image](img/00001.jpeg)\n\n波士顿 • 哥伦布斯 • 印第纳波利斯 • 纽约 • 旧金山 • 阿姆斯特丹 • 开普敦\n\
+  迪拜 • 伦敦 • 马德里 • 米兰 • 慕尼黑 • 巴黎 • 蒙特利尔 • 多伦多 • 德里 • 墨西哥\n圣保罗 • 悉尼 • 香港 • 首尔 • 新加坡\
+  \ • 台北 • 东京\n\n\n\n\n\n\n\n\n\n\n\n她教会了我变得挑剔。\n\nVampire vamp = monsters['Dracula'];\n\
+  ```\n\n怪物映射 `monsters` 仅保证包含 `Monster` 的实例。典型的类型检查器会抱怨上面最后一行查找的结果是一个 `Monster`，它不是\
+  \ `Vampire` 的子类型。\n\n在实践中，当我们在怪物映射 `monsters` 中查找键 `'Dracula'` 时，我们知道自己将得到一个 `Vampire`。这种情况经常发生。使用传统的类型检查规则将将被迫使用强制转换。给程序员施加这样的负担与\
+  \ Dart 使用类型作为工具来改进开发者体验的哲学背道而驰。相反，Dart 的赋值规则支持隐式向下转换。\n\n当然，这意味着 Dart 的类型系统是不完备的（unsound）。我们无法保证一个通过类型检查的\
+  \ Dart 程序实际上完全没有运行时错误。然而，正如我们在上面的介绍中提到的，现实中没有任何静态类型系统可以做到这一点。通常，类型系统可以强制的属性被定义为其范畴的一部分，而它无法强制的属性则被归到其他地方。一个经典的例子是函数式语言中的模式匹配，它将某些属性的强制定义在静态类型系统之外。\n\
+  \n正如我们在第 5.5 节中将看到的，Dart 类型检查不完备还有其他原因。\n\n### 5.4 运行中的类型：表达式问题，类型化\n\n为了更好地理解 Dart\
+  \ 中的类型，让我们重新回到表达式问题，这是我们在第 2.15.1 节中首次遇到的问题。我们想对原始解决方案进行类型检查。\n\n我们首先为评估器添加类型信息。在对评估器进行类型检查时，我们需要加法和减法的\
+  \ mixin 具有支持 `int` 值的 `eval()` 方法的字段，因此我们用类型 `ExpressionWithEval` 标注这些字段。我们仍然没有依赖其他库（当然除了\
+  \ `dart:core`）。例如，我们不需要知道 `ExpressionWithEval` 是否实际上是 `Expression` 的子类型。\n\n我们还想保证数字\
+  \ mixin 拥有一个类型为 `int` 的字段 `val`，并且所有的 `eval` 方法返回整数。\n\n点击此处查看代码图像\n\n```\nlibrary\
+  \ evaluator;\n\nabstract class ExpressionWithEval {\n  int get eval;\n}\n\nabstract\
+  \ class AdditionWithEval {\n  ExpressionWithEval get operand1;\n  ExpressionWithEval\
+  \ get operand2;\n  int get eval => operand1.eval + operand2.eval;\n}\n\nabstract\
+  \ class SubtractionWithEval {\n  ExpressionWithEval get operand1;\n  ExpressionWithEval\
+  \ get operand2;\n  int get eval => operand1.eval - operand2.eval;\n}\n\nabstract\
+  \ class NumberWithEval {\n  int get val;\n  int get eval => val;\n}\n```\n\n然而，当我们为\
+  \ `multiplication evaluator` 添加类型时，发现我们需要添加一个导入，因为我们必须访问 `ExpressionWithEval` 类型。类型依赖于原始定义并不意外，但遗憾的是，我们无法再独立编译这些代码。\n\
+  \n点击此处查看代码图像\n\n```\nlibrary multiplication evaluator;\n\nimport 'evaluator.dart'\
+  \ show ExpressionWithEval;\n\nabstract class MultiplicationWithEval {\n  ExpressionWithEval\
+  \ get operand1;\n  ExpressionWithEval get operand2;\n  int get eval => operand1.eval\
+  \ * operand2.eval;\n}\n```\n\n`string converter` 库的代码标注方式与 `evaluator` 类似：\n\n点击此处查看代码图像\n\
+  \n```\nlibrary string converter;\n\nabstract class ExpressionWithStringConversion\
+  \ {\n  String toString();\n}\n\nabstract class AdditionWithConversion {\n  ExpressionWithConversion\
+  \ get operand1;\n  ExpressionWithConversion get operand2;\n  String toString() =>\
+  \ '$operand1 + $operand2';\n}\n\nabstract class SubtractionWithConversion {\n  ExpressionWithConversion\
+  \ get operand1;\n  ExpressionWithConversion get operand2;\n  String toString() =>\
+  \ '$operand1 - $operand2';\n}\n\nabstract class NumberWithConversion {\n  int get\
+  \ val;\n  String toString() => '$val';\n}\n\nabstract class MultiplicationWithConversion\
+  \ {\n  ExpressionWithConversion get operand1;\n  ExpressionWithConversion get operand2;\n\
+  \  String toString() => '$operand1 * $operand2';\n}\n```\n\n\n\n\n向表达式层级结构引入新函数的库并不依赖于核心层级，这一事实意味着无论我们是否选择为核心类层级添加类型注解，都可以为这些库添加类型注解。因此，喜欢类型检查的程序员即使在原始层级的设计者选择完全不使用类型的情况下，也可以向系统添加新函数并对它们进行类型检查。\n\
+  \n现在，让我们为类层级中的字段标注类型。这要求我们导入类型 `Expression`。\n\n点击此处查看代码图片\n\n```dart\nlibrary abstract\
+  \ expressions;\n\nimport 'expressions.dart' show Expression;\n\nabstract class AbstractExpression{}\n\
+  \nabstract class AbstractAddition {\n Expression operand1, operand2;\n AbstractAddition(this.operand1,\
+  \ this.operand2);\n}\n\nabstract class AbstractSubtraction {\n Expression operand1,\
+  \ operand2;\n AbstractSubtraction(this.operand1, this.operand2);\n}\n\nabstract\
+  \ class AbstractNumber {\n int val;\n AbstractNumber(this.val);\n}\n\nlibrary multiplication;\n\
+  \nimport 'expressions.dart' show Expression;\n\nabstract class AbstractMultiplication\
+  \ {\n Expression operand1, operand2;\n AbstractMultiplication(this.operand1, this.operand2);\n\
+  }\n```\n\n对 `expressions` 库的依赖比 `multiplication evaluator` 对 `evaluator` 的依赖更令人不悦。我们最初定义的核心层级是完全独立于最终应用库的。看来添加类型正在降低我们代码的模块化程度。在下一节讨论泛型时，我们将看到如何在保留类型的同时获得所需的解耦。\n\
+  \n最后，让我们为主库添加类型。我们需要做的唯一更改是为局部变量 `e` 标注类型 `Expression`。该库的其余部分保持不变。\n\n点击此处查看代码图片\n\
+  \n```dart\nmain(){\n Expression e = new Multiplication(\n                      \
+  \        new Addition(new Number(4), new Number(2)),\n                         \
+  \     new Subtraction(new Number(10), new Number(7))\n             );\n print('$e\
+  \ = ${e.eval}');\n}\n```\n\n总的来说，为我们的表达式代码添加类型是非常直接的。唯一真正的问题是，所有对 `Expression` 及其子类的使用都必须根据\
+  \ mixin 应用中定义的类型进行类型检查。为了解决这个问题，我们需要更复杂的类型：泛型。\n\n### 5.5 泛型\n\nDart 类可以是泛型的——也就是说，它们可以由类型进行参数化。\n\
+  \n泛型类可以赋予实际的类型参数：\n\n```dart\nList<String> l;\nMap<String, int> m;\n```\n\n这类类型被称为参数化类型。\n\
+  \n然而，并不要求为泛型类提供类型参数。如果选择使用泛型类的名称而不带类型参数，则会隐式地使用类型 `dynamic` 来代替所有缺失的类型参数。因此，可以写成：\n\
+  \n```dart\nList l;\nMap m;\n```\n\n这完全等同于：\n\n```dart\nList<dynamic> l;\nMap<dynamic,\
+  \ dynamic> m;\n```\n\n显然，优于前者更简洁的形式。在代码中充斥没有传达任何新信息的类型是一种不良风格。然而，在某些情况下，显式编写类型 `dynamic`\
+  \ 是理想的，例如：\n\n```dart\nMap<String, dynamic> m;\n```\n\n如果提供的类型参数数量不正确，所有的类型参数都将被忽略。\n\
+  \n```dart\nMap<String> m; // Map\nList<String, num> // List\nObject<int> // Object\n\
+  ```\n\n上述三个示例将分别导致静态警告。除了警告之外，上述内容被分别视为 `Map`、`List` 和 `Object`，如上所示，它们等同于 `Map<dynamic,\
+  \ dynamic>`、`List<dynamic>` 和 `Object`。\n\n假设我们有：\n\n点击此处查看代码图片\n\n```dart\nclass\
+  \ Fruit {\n  var color;\n  Fruit(this.color);\n}\n\nclass Apple extends Fruit {\n\
+  \  Apple():super('Red');\n}\n\nclass Orange extends Fruit {\n  Orange():super('Orange');\n\
+  }\n\n// 打印列表中所有水果的颜色\nprintColors(List<Fruit> fruits) {\n  for (Fruit f in fruits)\
+  \ print(f.color);\n}\n\nmain() {\n  List<Apple> apples = <Apple>[];\n  List<Orange>\
+  \ oranges = new List<Orange>();\n  apples.add(new Apple());\n  oranges..add(new\
+  \ Orange())\n         ..add(new Orange());\n  printColors(apples); // 输出一次 Red\n\
+  \  printColors(oranges); // 输出两次 Orange\n}\n```\n\n我们有两个类，`Apple` 和 `Orange`，它们都是\
+  \ `Fruit` 的子类。我们有一个简单的函数 `printColors`，它接收一个 `List<Fruit>` 并打印每个成员的颜色。\n\n向表达式层级结构引入新函数的库并不依赖于核心类层级，这一事实意味着无论我们是否选择为核心类层级添加类型注解，都可以为这些库添加类型注解。因此，喜欢类型检查的程序员即使在原始层级的设计者选择完全不使用类型的情况下，也可以向系统添加新函数并对它们进行类型检查。\n\
+  \n现在，让我们为类层级中的字段标注类型。这要求我们导入类型 `Expression`。\n\n对 `expressions` 库的依赖比 `multiplication\
+  \ evaluator` 对 `evaluator` 的依赖更令人不悦。我们最初定义的核心层级是完全独立于最终应用库的。看来添加类型正在降低我们代码的模块化程度。在下一节讨论泛型时，我们将看到如何在保留类型的同时获得所需的解耦。\n\
+  \n最后，让我们为主库添加类型。我们需要做的唯一更改是为局部变量 `e` 标注类型 `Expression`。该库的其余部分保持不变。\n\n总的来说，为我们的表达式代码添加类型是非常直接的。唯一真正的问题是，所有对\
+  \ `Expression` 及其子类的使用都必须根据 mixin 应用中定义的类型进行类型检查。为了解决这个问题，我们需要更复杂的类型：泛型。\n\nDart\
+  \ 类可以是泛型的——也就是说，它们可以由类型进行参数化。\n\n泛型类可以赋予实际的类型参数：\n\n```dart\nList<String> l;\nMap<String,\
+  \ int> m;\n```\n\n这类类型被称为参数化类型。\n\n然而，并不要求为泛型类提供类型参数。如果选择使用泛型类的名称而不带类型参数，则会隐式地使用类型\
+  \ `dynamic` 来代替所有缺失的类型参数。因此，可以写成：\n\n```dart\nList l;\nMap m;\n```\n\n这完全等同于：\n\n\
+  ```dart\nList<dynamic> l;\nMap<dynamic, dynamic> m;\n```\n\n显然，优于前者更简洁的形式。在代码中充斥没有传达任何新信息的类型是一种不良风格。然而，在某些情况下，显式编写类型\
+  \ `dynamic` 是理想的，例如：\n\n```dart\nMap<String, dynamic> m;\n```\n\n如果提供的类型参数数量不正确，所有的类型参数都将被忽略。\n\
+  \n```dart\nMap<String> m; // Map\nList<String, num> // List\nObject<int> // Object\n\
+  ```\n\n上述三个示例将分别导致静态警告。除了警告之外，上述内容被分别视为 `Map`、`List` 和 `Object`，如上所示，它们等同于 `Map<dynamic,\
+  \ dynamic>`、`List<dynamic>` 和 `Object`。\n\n#### 5.5.1 泛型带来的表达式问题\n\n在我们之前的迭代（5.4）中，我们发现添加类型引入了不希望的依赖。现在我们将看到如何使用泛型来缓解这个问题。\n\
+  \n第一步是使核心类变为泛型，由 `E` 参数化。`E` 代表应用中的最终表达式类型。这消除了对 `Expression` 的依赖。\n\n```dart\n\
+  library abstract expressions;\n\nimport 'expressions.dart' show Expression;\n\n\
+  abstract class AbstractExpression{}\n\nabstract class AbstractAddition<E> {\n Expression\
+  \ operand1, operand2;\n AbstractAddition(this.operand1, this.operand2);\n}\n\nabstract\
+  \ class AbstractSubtraction<E> {\n Expression operand1, operand2;\n AbstractSubtraction(this.operand1,\
+  \ this.operand2);\n}\n\nabstract class AbstractNumber {\n int val;\n AbstractNumber(this.val);\n\
+  }\n\nlibrary multiplication;\n\nimport 'expressions.dart' show Expression;\n\nabstract\
+  \ class AbstractMultiplication<E> {\n Expression operand1, operand2;\n AbstractMultiplication(this.operand1,\
+  \ this.operand2);\n}\n```\n\n我们还将对代表函数的 mixin 类进行参数化。在 evaluator mixin 中，我们需要一个已知是\
+  \ `ExpressionWithEval` 子类的类型参数，这样我们就可以调用 `eval` 方法而不会产生警告。\n\n```dart\nlibrary evaluator;\n\
+  \nabstract class ExpressionWithEval {\n int get eval;\n }\n\nabstract class AdditionWithEval<E\
+  \ extends ExpressionWithEval> {\n E get operand1;\n E get operand2;\n int get eval\
+  \ => operand1.eval + operand2.eval;\n}\n\nabstract class SubtractionWithEval<E extends\
+  \ ExpressionWithEval> {\n E get operand1;\n E get operand2;\n int get eval => operand1.eval\
+  \ - operand2.eval;\n}\n\nabstract class NumberWithEval {\n int get val;\n int get\
+  \ eval => val;\n}\n\nlibrary multiplication evaluator;\n\nimport 'evaluator.dart'\
+  \ show ExpressionWithEval;\n```\n\n\n\n\n\n```dart\nabstract class MultiplicationWithEval<E\
+  \ extends ExpressionWithEval> {\n  E get operand1;\n  E get operand2;\n  int get\
+  \ eval => operand1.eval * operand2.eval;\n}\n```\n\n同样，用于字符串转换的混入（mixins）应该将 `E`\
+  \ 限制为 `ExpressionWithStringConversion`：\n\n点击此处查看代码\n\n```dart\nlibrary string converter;\n\
+  \nabstract class ExpressionWithStringConversion {\n  String toString();\n}\n\nabstract\
+  \ class AdditionWithStringConversion<E extends ExpressionWithStringConversion> {\n\
+  \  E get operand1;\n  E get operand2;\n  String toString() => '$operand1 + $operand2';\n\
+  }\n\nabstract class SubtractionWithStringConversion<E extends ExpressionWithStringConversion>\
+  \ {\n  E get operand1;\n  E get operand2;\n  String toString() => '$operand1 - $operand2';\n\
+  }\n\nabstract class NumberWithStringConversion {\n  int get val;\n  String toString()\
+  \ => '$val';\n}\n\nabstract class MultiplicationWithStringConversion<E extends ExpressionWithStringConversion>\
+  \ {\n  E get operand1;\n  E get operand2;\n  String toString() => '$operand1 * $operand2';\n\
+  }\n```\n\n最后，我们必须修改 `expressions` 来实例化所有泛泛类型。\n\n点击此处查看代码\n\n```dart\nlibrary expressions;\n\
+  \nimport 'abstractExpressions.dart' show\n      AbstractAddition,\n      AbstractExpression,\n\
+  \      AbstractNumber,\n      AbstractMultiplication,\n      AbstractSubtraction;\n\
+  import 'evaluator.dart' show\n      AdditionWithEval,\n      ExpressionWithEval,\n\
+  \      MultiplicationWithEval,\n      NumberWithEval,\n      SubtractionWithEval;\n\
+  import 'multiplication.dart';\nimport 'multiplicationEvaluator.dart';\nimport 'stringConverter.dart'\
+  \ show\n      AdditionWithStringConversion,\n      ExpressionWithStringConversion,\n\
+  \      MultiplicationWithConversion,\n      NumberWithStringConversion,\n      SubtractionWithStringConversion;\n\
+  \nabstract class Expression = AbstractExpression with\n      ExpressionWithEval,\
+  \ ExpressionWithStringConversion;\n\nclass Addition = AbstractAddition<Expression>\
+  \ with\n      AdditionWithEval<Expression>,\n      AdditionWithStringConversion<Expression>\n\
+  \  implements Expression;\n\nclass Subtraction = AbstractSubtraction<Expression>\
+  \ with\n      SubtractionWithEval<Expression>,\n      SubtractionWithStringConversion<Expression>\n\
+  \  implements Expression;\n\nclass Number = AbstractNumber with\n      NumberWithEval,\n\
+  \      NumberWithStringConversion\n  implements Expression;\n\nclass Multiplication\
+  \ = AbstractMultiplication<Expression> with\n      MultiplicationWithEval<Expression>,\n\
+  \      MultiplicationWithStringConversion<Expression>\n  implements Expression;\n\
+  ```\n\n到此我们对表达式的讨论结束。请记住，扩展一组变体并在其基础上扩展函数的问题是通用的，这里展示的模式对许多与表达式无关的应用程序都有帮助。对于那些想要深入研究的人，强烈推荐\
+  \ Torgersen[part18.html_8] 和 Zendersky[part18.html_9] 的相关论文。\n\n### 5.6 函数类型\n\n\
+  函数类型在 Dart 中被特殊对待。所有函数都实现了 `Function`，但函数类型的比较是基于其结构的的。函数的类型取决于其返回类型以及形式参数的类型。该类型反映了参数是命名的还是位置的、位置参数是否为必选，以及命名参数的名称。\n\
+  \n目前，Dart 还没有表示函数类型的语法，因此我们在这里引入特殊的符号。在最简单的情况下，函数接受 `n` 个位置参数，且都是必选的。作为一个特殊情况，假设形式参数的类型为\
+  \ `T[1]...T[n]` 且返回类型为 `T`，可以将函数类型写为 `F[t] = (T[1]...T[n]) -> T`。例如，我们将\n\n```dart\n\
+  twice(num x) => x * 2;\n```\n\n类型写为 `(num) -> num`，而 点击此处查看代码\n\n```dart\nproduct(List<num>\
+  \ nums) => nums.reduce((a, b) => a * b);\n```\n\n类型为 `(List<num>) -> num`。`reduce()`\
+  \ 本身的类型很有趣，因为 `reduce()` 是一个接受函数作为参数的函数。`reduce()` 的类型是 `((E, E) -> E) -> E`，其中\
+  \ `E` 是 `List` 的类型参数。在我们的示例中，`nums` 是一个 `List<num>`，`num` 替换了 `E`，所以 `List<num>.reduce()`\
+  \ 的类型为 `((num, num) -> num) -> num`。\n\n然而，传递给 `reduce()` 的实际参数类型是 `(dynamic, dynamic)\
+  \ -> dynamic`。这是一个完全参数，因为 `(dynamic, dynamic) -> dynamic` 是 `(num, num) -> num`\
+  \ 的子类型。这是合理的，因为该函数类型接受 `dynamic` 类型的参数，而其中包含了 `num`。它的结果类型是 `dynamic`，这在任何地方都是可以的。\n\
+  \n假设我们稍微改一下 `product`：点击此处查看代码\n\n```dart\nproduct(List<num> nums) => nums.reduce((num\
+  \ a, num b) => a * b);\n```\n\n现在 `reduce()` 的参数类型为 `(num, num) -> dynamic`，这仍然是有效的。假设我们稍微修改代码为：点击此处查看代码\n\
+  \n```dart\nproduct(List<num> nums) => nums.reduce((int a, int b) => a * b);\n```\n\
+  \n`reduce()` 的参数现在类型为 `(int, int) -> dynamic`。那么 `(int, int) -> dynamic` 是 `(num,\
+  \ num) -> dynamic` 的子类型吗？你可能会认为如此，这也是可以——毕竟 `int` 是 `num` 的子类型。遗憾的是，如果我们对包含 double\
+  \ 的列表使用这个版本，`reduce()` 将使用从列表中提取的 double 调用其参数函数；但 double 不是整数，`double` 也无法赋值给 `int`。\n\
+  \n我们现在可以问函数之间子类型的通用规则是什么？给定 `F[t]` 和另一个函数类型 `F[s] = (S[1]...S[n]) -> S`，何时我们可以认为\
+  \ `F[t]` 是 `F[s]` 的子类型？\n\n类型理论告诉我们，只有当 `T` 是 `S` 的子类型，且对于 `i` 在 `1..n`，`S[i]` 是\
+  \ `T[i]` 的子类型时，该结论才成立。也就是说，`F[s]` 中每个形式参数的类型必须是 `F[t]` 中对应形式参数的子类型。注意子类型关系的方向是*相反*的。这种现象被称为*逆变*（contravariance）。这种逻辑是不可避免的。\n\
+  \n\n\n\n\n回想一下函数类型子类型规则后的直觉是基于：什么构成了对高阶函数 `h` 的参数 `g` 的有效调用。对于普通（非函数）对象，参数传递受赋值规则（assignability\
+  \ rule）限制，该规则允许双向的子类型。因此，当用实际参数调用 `g` 时，这些参数的类型只需要可以赋值给 `g` 的形式参数。任何参数的类型必须可以赋值给相应的\
+  \ `S[i]`，因此它必须可以赋值给 `T[i]`。换句话说，参数既可以是 `T[i]` 的子类型，也可以是 `T[i]` 的超类型。因此，如果 `T[i]`\
+  \ 是 `S[i]` 的子类型或 `S[i]` 的超类型都是可以接受的。我们因此假设如果 `T` 可以赋值给 `S` 且 `T[i]` 可以赋值给 `S[i]`，则\
+  \ `F[t]` 是 `F[s]` 的子类型。\n\n到为止一切良好。上述规则虽然是不安全的（unsound），但非常宽松。违反这一规则的程序员确实可能传递了一个其参数类型与形式参数完全不相关的函数。\n\
+  \n我们仍然需要考虑可选和命名参数。\n\n#### 5.6.1 可选位置参数\n\n第一步，让我们扩展函数类型的符号以容纳可选位置参数。一个函数可能具有 `k`\
+  \ 个可选位置参数。我们将它们写在必选参数之后，放在方括号内，呼应了函数签名中使用的语法：`(T[1], . . . , T[n], [T[n][+1], .\
+  \ . . , T[n][+][k]]) → T`。\n\n我们可以安全地将一个接受可选参数的函数传递到需要这些参数的上下文中。该函数可以接受它们。相反的情况是不可接受的。要求某些参数的函数不能在一个认为这些参数是可选的上下文中使用，因为这些参数可能不会被提供。子类型必须能够接受至少与超类型相同的参数。然而，子类型的所有参数并不都是必选参数；事实上，即使它们一个都不是必选的也可以。\n\
+  \n这引导我们得到了实际规则：\n\n函数类型 `F[t] = (T[1], . . . , T[n], [T[n][+1], . . . , T[n][+][k]])\
+  \ → T` 是函数类型 `F[s] = (S[1], . . . , S[j], [S[j][+1], . . . , S[m]]) → S` 的子类型，当且仅当：\n\
+  \n1. `j ≤ n` 且 `m ≤ n + k`。\n2. `∀i` ![Image](img/00013.jpeg) 1..`m`, `T[i]` 可以赋值给\
+  \ `S[i]`。\n3. `S` 是 `void` 或 `T` 可以赋值给 `S`。\n\n子类型需要 `n` 个参数，而超类型有 `j` 个必选参数。当类型为\
+  \ `F[t]` 的函数 `f[t]` 在需要类型 `F[s]` 的地方使用时，至少会被传递 `j` 个参数。由于 `F[t]` 需要 `n` 个参数，第一项确保了\
+  \ `j ≤ n`，因此 `f[t]` 保证获得足够数量的参数。可能传递的最大参数数是 `m`，即 `F[s]` 的参数总数。函数 `f[t]` 最多接受 `n\
+  \ + k` 个参数——`n` 个必选和 `k` 个可选。只要 `m` 不大于 `n + k`，传递的参数数量对于 `f[t]` 就可以接受。实际参数的类型必须赋值给\
+  \ `f[t]` 的形式参数。由于最多只会发送 `m` 个实际参数，我们只需要前 `m` 个参数类型的赋值性。\n\n最后一项是我们迄为止忽略的一个转折。Dart\
+  \ 允许你识别不打算返回结果的函数。可以使用特殊的返回类型 `void` 进行标记。如果 `F[s]` 返回 `void`，类型检查器假设结果没有被使用，因此它没有意义。\n\
+  \n#### 5.6.2 命名参数\n\n命名参数呢？同样，让我们为带有命名参数的函数引入一些符号。我们将括号之间描述命名参数，类似于 Dart 的 map 字面量，再次呼应函数签名中使用的具体语法。命名参数出现在位置参数之后。每个命名参数将由一个类型后跟其名称表示。\n\
+  \n作为一个具体的例子，我们将查看 `Iterable` 的方法 `firstWhere()`。\n\n点击此处查看代码图像\n\n```\nE firstWhere(bool\
+  \ test(E value), {E orElse()});\n```\n\n其类型为 `((E) → bool, {() → E orElse}) → E`。\n\
+  \n`firstWhere()` 方法接受一个谓词作为参数，就像 `where()` 一样。它不是返回满足谓词的结果集合，`firstWhere()` 只是返回第一个这样的元素。\n\
+  \n`firstWhere()` 的近亲是 `lastWhere()`，它返回满足谓条件的最后一个元素。\n\n点击此处查看代码图像\n\n```\nE lastWhere(bool\
+  \ test(E value), {E orElse()});\n```\n\n因此，带有命名参数的函数的通用形式为 `(T[1], . . . , T[n],\
+  \ {T[1], . . . , T[k]}) → T`。注意命名参数总是可选的。\n\n函数类型 `F[t] = (T[1], . . . , T[n], {T[1],\
+  \ . . . , T[k]}) → T` 是函数类型 `F[s] = (S[1], . . . , S[j], {S[1], . . . , S[m]}) →\
+  \ S` 的子类型，当且仅当：\n\n1. `S` 是 `void` 或 `T` 可以赋值给 `S`。\n2. `∀i` ![Image](img/00013.jpeg)\
+  \ 1..`j`, `T[i]` 可以赋值给 `S[i]`。\n3. `n ≥ j` 且 `k ≥ m`。\n4. `∀i` ![Image](img/00013.jpeg)\
+  \ 1..`m`, `S[i]` 可以赋值给 `T[i]`。\n\n#### 5.6.3 重新回顾 Call()\n\n在第 4.6.1 节 中提到任何声明了特殊方法\
+  \ `call` 的类实现了 `Function`。现在我们可以完善对 `call` 的理解。\n\n假设我们想定义一个可以作为从键到值的 map 的类。我们将限制为字符串到数字的\
+  \ map。\n\n点击此处查看代码图像\n\n```\nclass MapFunction implements Map<String, num> {\n \
+  \ MapFunction(this._map);\n  Map<String, num> _map;\n\n  num operator [](String\
+  \ k) => _map[k];\n\n  void operator []= (String k, num v) { _map[k] = v;}\n\n  //\
+  \ more map wrapping functions\n  num call(String key) => _map[key];\n}\n```\n\n\
+  `MapFunction` 类的实例通过将 map 对象传递给类的构造函数来创建。该类将 `Map` 接口的所有调用转发给它封装的 map。此外，`call`\
+  \ 方法接受一个对象，将其作为底层 map 的键并返回查找结果。\n\n通常，当一个类 `FunctionWannabe` 声明 `call()` 方法时，该方法的签名描述了一个函数类型\
+  \ *F*。`FunctionWannabe` 被视为 *F* 的子类型。上面我们展示了 *F* = *String* → *num* 和 *FunctionWannabe*\
+  \ = *MapFunction* 的情况。\n\n\n\n\n虽然类型注解在运行时并不存在，但类型的其他方面是存在的。正如我们已经所看到的，每个对象都带有其*运行时类型*，可以通过从\
+  \ `Object` 继承的 `runtimeType` 方法进行动态访问。用户可以自由地重写 `runtimeType`，这意味着对象的实现类型通常无法通过调用\
+  \ `runtimeType` 来观察到。\n\n每个类型声明都会引入一个类型 `Type` 类的编译时常量对象来表示该类型。这些对象在运行时也是可用的。此外，如下所示，可以通过动态类型测试和类型转换来测试一个对象是否是某个类型的成员。\n\
+  \n#### 5.7.1 类型测试\n\n类型测试是用于测试对象是否属于某种类型的表达式。\n\n点击此处查看代码图片\n\n```dart\nvar v =\
+  \ [1, 2, 3];\n\nv is List; // true\n\nv is Map; // false\n\nv is Object; // 无意义：始终为\
+  \ true\n```\n\n类型测试的一般形式是 `e` is `T`，其中 `e` 是一个表达式，`T` 是一个类型。类型测试评估 `e` 并测试结果的动态类型是否与类型\
+  \ `T` 匹配。上述代码段的最后一行在正常的 Dart 程序中不应该出现。它始终会求值为 `true`，因为所有的 Dart 值都是对象。\n\n由于 Dart\
+  \ 类可以实现一个无关的类型，即使对象的类不是 `T` 的子类，对象也可能模拟另一个类型 `T`。然而，对象无法完全隐藏其实现类型，因为可以使用类型测试来检测它。这可以被认为违反了“只有对象的行为才是重要的”这一原则。同样的论点也适用于下文描述的类型转换。\n\
+  \n#### 5.7.2 类型转换\n\n类型转换也会评估一个表达式并测试生成的对象是否属于某种类型，但它们不是谓词。相反，如果测试失败，转换将抛出 `CastError`；否则，它将原样返回对象。\n\
+  \n点击此处查看代码图片\n\n```dart\nObject o = [3, 4, 5];\n\no as List; // 某种带有开销的空操作\n\no\
+  \ as Map; // 抛出异常\n```\n\n转换基本上是以下内容的简写形式：\n\n点击此处查看代码图片\n\n```dart\nvar t = e;\n\
+  \nt is T ? t : throw new CastError();\n```\n\n转换的一个典型用途可能是验证数据。\n\n点击此处查看代码图片\n\n\
+  ```dart\nList l = readNextVal() as List;\n\n  // 我很确定会从 readNextVal() 得到一个列表\n \
+  \ // 如果不是，情况就糟大了，我应该失败\n  // 接下来，对列表进行操作\n```\n\n人们应该小心不要滥用转换。考虑：\n\n点击此处查看代码图片\n\
+  \n```dart\nObject o = [5, 6, 7];\n\n... // 大量的中间逻辑\n\no.length; // 正常工作；类型警告：对象并不总是有\
+  \ length\n```\n\n许多程序员可能会忍不住将代码重写为：\n\n点击此处查看代码图片\n\n```dart\nObject o = [5, 6,\
+  \ 7];\n\n... // 相同的中间逻辑\n\n(o as List).length; // 糟糕！避免警告的错误方法\n```\n\n转换是在运行时执行的，因此带有运行时开销。如果你的目标仅仅是让类型检查器安静，只需使用赋值：\n\
+  \n```dart\nObject o = [5, 6, 7];\n\n... // 相同的中间逻辑\n\nList l = o;\n\nl.length;\n\
+  ```\n\n上述代码之所以有效是因为存在赋值规则（5.3）。某些程序员可能对这种写法有异议，因为他们发现很难为变量命名。一个简单的解决方案是在变量名后加上转换语法的变体：\n\
+  \n```dart\nObject o = [5, 6, 7];\n\n... // 相同的中间逻辑\n\nList o_as_List = o;\n\nl.length;\n\
+  ```\n\n#### 5.7.3 检查模式（Checked Mode）\n\n在开发过程中，验证变量的类型通常有用。例如，我们希望确保传入的参数或调用返回的对象符合预期。Dart\
+  \ 提供了*检查模式*（checked mode）来实现这一目的。在检查模式下，每次值传递都会经过动态检查。这意味着每当传递参数、方法或函数返回结果、以及在执行每次赋值时，系统都会自动为你执行动态类型测试。检查模式确保了赋值给变量的动态值是该变量静态类型的成员。同样，实际参数的动态类型会与形式参数的静态类型进行测试，函数结果的动态类型也会与函数的声明返回类型进行测试。\n\
+  \n点击此处查看代码图片\n\n```dart\nnum n = 3.0;\n\nint i = n; // 检查模式下的动态错误；生产模式下正常\n\nnum\
+  \ x = i; // 始终正常\n\nint j = null; // 始终允许\n```\n\n#### 5.7.4 泛型具体化\n\n类型参数在运行时是具体化的。当泛型类被实例化时，提供的实际类型参数实际上在运行时被传递并存储。因此，使用\
+  \ `List<String>` 创建的实例类与通过 `List<Object>` 创建的实例类是不同的。\n\n```dart\nvar l = new List<String>();\n\
+  \nl is List<String>; // true\n\nl is List<int>; // false\n```\n\n#### 5.7.5 具体化与可选类型\n\
+  \n可选类型的概念如何与类型具体化相结合？特别是可选类型本不应该影响运行时语义，然而具体化显然会。但是，具体化只在程序显式尝试观察或确定运行时类型结构时产生影响。这些情况包括：\n\
+  \n\n\n\n- 使用类型测试、类型转换（cast）或调用 `runtimeType` 来获取对象的类型。\n- 通过向泛型类型的构造函数传递实际的类型参数，来设置对象的运行时类型。\n\
+  - 使用反射来检查或设置变量或函数的类型。\n- 使用检查模式（checked mode）。\n- 通过其签名上的注解来确定函数对象的具体化类型（reified\
+  \ type）。\n\n最后三点都可能可能受到类型注解的影响，而类型注解通常没有语义影响。在这些点中，最后一点可能是微妙的。如果逻辑依赖于涉及函数的类型测试，它可能会受到类型注解的影响。该函数可以是显式定义的闭包，也可以作为属性提取。以下代码演示了该问题：\n\
+  \n点击此处查看代码图片\n\n```\ntypedef int IntFunction(int);\n\nobserveAnnotations(f) {\n\
+  \   return f is IntFunction;\n}\n\nString id1(String x) => x;\n\nid2(x) => x;\n\n\
+  int id3(int x) => x;\n\nobserveAnnotations(id1); // false\n\nobserveAnnotations(id2);\
+  \ // true\n\nobserveAnnotations(id3); // true\n```\n\n三个函数 `id1`、`id2` 和 `id3` 除了类型注解外，都是相同的，但由于使用的类型注解不同，它们在类型测试方面的行为也存在差异。当然，我们已经在显式地执行类型测试了，因此在这种情况下类型对行为产生影响并不令人意外。\n\
+  \n#### 5.7.6 类型与代理（Types and Proxies）\n\n能够为任何类型的对象定义透明代理是一个重要的属性。代理与类型之间存在着内在的张力。考虑我们在第\
+  \ 2.10 节中引入通用代理类 `Proxy`。\n\n假设代理模拟类型 `Point`。我们遇到的第一个困难是当我们使用 `Proxy` 的实例作为类型化变量或参数的值时。\n\
+  \n点击此处查看代码图片\n\n```\nPoint pointProxy = new Proxy(new Point(0,0)); // warning\n\
+  ```\n\n由于 `Proxy` 既不是 `Point` 的子类型也不是超类型，该代码会导致警告。最佳解决方案是将 `proxyPoint` 声明为动态类型变量。\n\
+  \n点击此处查看代码图片\n\n```\nvar pointProxy = new Proxy(new Point(0,0));\n```\n\n当然，到此时，我们丢失了类型检查的某些用处。如果我们想对\
+  \ `pointProxy` 的使用进行类型检查，我们需要另一种方法。看起来我们只需要添加：\n\n```\nPoint pointImposter = pointProxy;\n\
+  ```\n\n但事实证明这是不够的。虽然这消除了静态警告，但我们将在动态类型检查中遇到麻烦。如果我们编写以下任何代码：\n\n点击此处查看代码图片\n\n```\n\
+  pointImposter is Point; // false!\n\npointImposter as Point; // exception!\n```\n\
+  \n我们对代理对象是点的伪装就会被暴露。虽然我们可能会选择放弃类型检查并避免这些情况，但在现实中，我们可能不得不将 `pointProxy` 或 `pointImposter`\
+  \ 传递给其他人编写的、假设其处理点代码。在这种情况下，极可能会发生上述动态测试。此外，在检查模式下运行时，一旦有人尝试将 `pointProxy` 赋值、传递或返回到标记有类型\
+  \ `Point` 注释的上下文中，就会会发生错误。\n\n点击此处查看代码图片\n\n```\nPoint pointProxy = new Proxy(new\
+  \ Point(0,0)); // dies in checked mode\n```\n\n如果我们进行任何形式的类型检查，我们需要定义一个*特定类型的代理*（type-specific\
+  \ proxy）：\n\n点击此处查看代码图片\n\n```\nclass PointProxy extends Proxy implements Point\
+  \ {\n   PointProxy(forwardee): super(forwardee);\n}\n```\n\n现在我们可以可靠地使用我们的代理了：\n\
+  \n点击此处查看代码图片\n\n```\nPoint pointProxy = new PointProxy(new Point(0,0));\n\npointProxy\
+  \ is Point; // true!\n\npointProxy as Point; // identical to pointProxy\n```\n\n\
+  等一下！`PointProxy` 中没有 `x, y, rho, theta, +` 等方法。我们难道不会收到 `PointProxy` 没有正确实现 `Point`\
+  \ 接口的警告吗？恰恰如此，Dart 有一条特殊规则允许抑制此类警告。如果一个类声明了 `noSuchMethod()`，就不会有关于支持接口缺失成员的投诉，也不会有关于此类成员签名不正确的此类警告。\n\
+  \n对特定类型代理的需求是令人失望的。在这里，大部分工作由 `Proxy` 完成，但我们仍然必须为每个接口定义子类。这种解决方案比定义一组详尽的转发方法要简单且易于维护（在传统的类型环境中，你必须这样做），但又比只定义一个\
+  \ `Proxy` 类要困难。在完全动态的环境中，`Proxy` 的共享定义就足够了。\n\n此外，这个问题出现在 Dart 的单元测试框架中。该框架定义了 `expectAsync()`，它接收一个异步函数并将其封装在代理中，使其看起来是同步的。\n\
+  \n\n\n\n\n```dart\nclass ProxyForFunctionOfArity5 implements Function {\n\n  Function\
+  \ target;\n\n  ProxyForFunctionOfArity5(this.target);\n\n  call([a0 = NO ARG, a1\
+  \ = NO ARG, a2 = NO ARG, a3 = NO ARG, a4 = NO ARG]){\n    List args = [a0, a1, a2,\
+  \ a3, a4]..removeWhere((arg) => arg == NO ARG);\n    return Function.apply(target,\
+  \ args);\n  }\n}\n```\n\n单元测试框架中的实际代码中包含一些处理异步的额外逻辑，但这并不是我们关注的重点。我们可以通过其他方式过滤掉未发送的参数，但这段代码在效率上略有牺牲的情况下，显得既优雅又简洁。这里需要注意的是，我们如何模拟广泛的函数类型，以及确定哪些参数实际上被传递了的技巧。\n\
+  \nDart 的类型系统为代理（proxies）提供了一个特殊的特例。注解 (7.3) `@proxy` 对类型系统具有特殊意义。如果一个类被标记为 `@proxy`，那么当在该类的实例上访问某个方法时，即使该类在静态上并不支持该方法，Dart\
+  \ 分析器也会避免发出警告。\n\n### 5.8 异常类型 (Malformed Types)\n\n如果我们用不存在的类型标记变量会发生什么？根据我们上面阐述的原则，除了在检查模式（checked\
+  \ mode）下，代码应该能够正常运行。\n\n```dart\nUndefinedType v = 91;\n```\n\n假设 `UndefinedType`\
+  \ 实际上是未定义的，Dart 将发出警告。在检查模式下，当系统尝试检查 `int` 是否为 `UndefinedType` 的子类型时，对 `v` 的赋值会导致运行时错误。然而\n\
+  \n```dart\nUndefinedType v = null;\n```\n\n不会引起任何运行时错误，因为当赋值给变量的值为空时，不会执行子类型测试。\n\
+  \n未定义类型可能由于多种原因引起：拼写错误、遗忘导入，或者在实际定义该类型之前提到了它。在某些情况下，类型注解中使用的名称可能表示函数或变量。在任何名称未表示实际类型声明的情况下，我们得到了一个异常类型。\n\
+  \n未定义类型是异常类型的一种特殊形式。歧义类型（Ambiguous types）也是异常类型——即由于同名的不同声明导入到同一个作用域，导致其含义没有被明确指定。\n\
+  \n泛型（Genericity）也可能导致异常类型。如果泛型本身是异常的，那么对泛型的任何调用也是异常的：\n\n点击此处查看代码图片\n\n```dart\n\
+  UndefinedGeneric<int> ugi; // 异常\nUndefinedGeneric ug; // 异常\n```\n\n最后，当类型变量在静态成员的中被引用时，被视为异常：\n\
+  \n点击此处查看代码图片\n\n```dart\nclass C<T, S> {\n  static T cantReferToTypeVars; // 警告\n\
+  \  static S alsoCantReferToTypeVars(T t) { // 这里有两个警告\n    S local; // 这里的又有一个\n\
+  \    return new Map[T, S](); // 还有两个\n  }\n}\n```\n\n类型变量对于泛型类的每个实例可能具有不同的值。当不涉及实例时，它们没有意义。本可以简单地认为静态成员声明中的类型变量超出作用域，但通过将它们视为在作用域内但异常的，Dart\
+  \ 可以提供更好的错误信息。\n\n`cantReferToTypeVars` 的声明给出了警告，因为 `T` 是异常的；它只在 `C` 的实例上下文中具有意义。方法\
+  \ `alsoCantReferToTypeVars` 将产生多个警告：它的返回类型 `S` 是异常的，它的形式参数类型也是如此。局部变量 `local` 也产生了一个警告，而方法最后语句中\
+  \ `Map` 的实例化分别为 `S` 和 `T` 产生了单独警告。\n\n一旦针对异常类型的出现发出了警告，静态类型检查器会将该出现替换为 `dynamic`，以防止无意义的次要警告级联。例如，如果我们调用\
+  \ `alsoCantReferToTypeVars`，将不会得到任何警告：\n\n点击此处查看代码图片\n\n```dart\nint i = C.alsoCantReferToTypeVars('abc');\n\
+  ```\n\n向程序员倾泻无法操作的警告是没有意义的。人们无法通过更改变量 `i` 的类型或参数的类型来使调用正确。问题出在 `C.alsoCantReferToTypeVars`\
+  \ 的声明处，而不是任何调用点处。\n\n同样，上述 `Map<T, S>` 的实例化产生了 `T` 和 `S` 是异常的警告，但并没有抱怨它们是 `Map`\
+  \ 的不当类型参数。我们将异常的类型参数替换为 `dynamic`，从而产生了一个 `Map<dynamic, dynamic>`。我们看到，在参数化类型中使用异常类型作为类型参数并不会导致参数化类型变为异常。异常类型参数被替换为\
+  \ `dynamic`，这才是运行时使用的类型参数。\n\n点击此处查看代码图片\n\n```dart\nList<UndefinedType> l = [3];\
+  \ // 警告\nList<int> list = [3]; // 警告\n```\n\n### 5.9 不安全性 (Unsoundness)\n\n我们现在可以回顾\
+  \ Dart 中各种不安全性的来源了。这些包括：\n\n- 泛型的协变。\n- 赋值规则中的下转型 (5.3)。\n- 函数类型的赋值性。\n- 私有性与接口类型的交互。\n\
+  \n前两点分别在 5.3 和 5.5 中讨论过。第三点实际上是前两者的产物。函数类型在返回上是协变的，但在参数上是逆变的。单这一点就会让函数子类型成为额外的不安全性来源。\n\
+  \n此外，赋值规则适用于所有的值传递，包括传入参数和返回结果，这决定了参数和返回类型的赋值性，正如我们在 5.6 中讨论。\n\nDart 最后的不安全性是一个我们尚未讨论过的——库级\
+  \ ADT 私有性与接口类型之间的交互。为了理解这种交互，让我们看看上一章中栈示例的变体：\n\n点击此处查看代码图片\n\n```dart\nlibrary\
+  \ stack3;\n\nclass Stack {\n  List _contents = [];\n  get isEmpty => _contents.isEmpty;\n\
+  \  get top => isEmpty ? throw '无法获取空栈顶顶' : _contents.last;\n  get pop => isEmpty?\
+  \ throw '无法从空栈弹出' : _contents.removeLast();\n\n  push(e) {\n    _contents.add(e);\n\
+  \    return e;\n  }\n}\n\nclone(Stack s) {\n  Stack ns = new Stack();\n  ns.contents\
+  \ = new List.from(s. contents);\n  return ns;\n}\n```\n\n\n\n\n我们添加了一个 `clone` 函数，它接收一个栈并产生另一个内容相同的栈。这并不是一个好主意，但它符合我们此处的目的。一个应该引起警惕的事实，`clone`\
+  \ 访问了其形式参数 `s` 的私有变量 `contents`。在一种围绕抽象数据类型（ADTs）概念设计的语言中，这是非常自然的。在这样的语言中，类型系统确保了任何传入的参数都将是我们定义的\
+  \ `Stack` 类的实例，因此也必然包含一个名为 `_contents` 的字段。\n\n但问题就在这里：Dart 并不是围绕抽象数据类型概念设计的。Dart\
+  \ 是围绕接口（interfaces）概念设计的。Dart 中的类型永远从不表示某种特定的实现类型。相反，它表示的是该类型的接口。任何人都可以实现 `Stack`\
+  \ 类型，而且该实现可以与 `Stack` 类中定义的实现完全不同。特别是，该实现可能没有 `_contents` 字段。\n\n事实上，假设我们决定在另一个库中产生\
+  \ `Stack` 的替代实现。\n\n点击此处查看代码图片\n\n```dart\nlibrary stack4;\n\nimport 'stack3.dart'\
+  \ as stack show clone, Stack;\n\nclass Stack4 implements stack.Stack {\n  final\
+  \ List _array = [];\n\n  get isEmpty => _array.isEmpty;\n\n  get top => isEmpty\
+  \ ? throw 'Cannot get top of empty stack' : _array.last;\n  get pop => isEmpty?\
+  \ throw 'Cannot pop empty stack' : _array.removeLast();\n\n  push(e) {\n    _array.add(e);\n\
+  \    return e;\n  }\n}\n\nmain() {\n  stack.clone(new Stack4());\n}\n```\n\n显然，当我们尝试访问传入参数中不存在的\
+  \ `_contents` getter 时，对 `stack.clone()` 的调用将因 `NoSuchMethodError` 失败，因为该参数是 `Stack4`\
+  \ 的实例，且确实没有这样的 getter。问题在于，类型系统是否应该对这段代码提出异意见。\n\n在一个基于 ADT 的系统中，我们可能会抱怨 `Stack4`\
+  \ 没有实现 `stack.Stack`，因为它缺少 `_contents` 访问器。这引发了几个困难：\n\n-   由于 `_contents` 对 `stack`\
+  \ 是私有的，它的存在绝不能让其他库知晓。特别是，在接口的实现者中生成警告是不可接受的。添加私有成员应该是类的纯内部决策。如果向类中添加私有成员会导致该类的实现者中产生警告，那么这样做就是不可行的。\n\
+  \n-   抛开前面的异议，假设我们确实发布了警告呢？开发 `Stack4` 的开发者该怎么办？在 `Stack4` 中定义一个 `_contents` 访问器并不能满足需求，因为它对\
+  \ `stack4` 是私有的，无法在外部访问。`clone` 内部的调用将以相同的方式失败。`stack3` 和 `stack4` 中的 `_contents`\
+  \ 成员是不同的。简而言之，`stack3.Stack` 之外的任何人无法无法实现一个 `stack3` 内部定义的访问器的 `_contents` getter。\n\
+  \n另一种方法是在 `clone()` 内部进行报错。`Stack` 类型的变量不能可靠地假设它具有如 `_contents` 这样的私有访问器。遗憾的是，这意味着除了\
+  \ `this` 之外，任何对象都永远无法使用私有实例成员。基于对象的封装强制了这种替代方案。正如我们在上一章中讨论的，Dart 显式拒绝了基于对象的封装。\n\
+  \n在现实，任何地方都没有发布警告，因此系统再次是不完备的（unsound）。这种不完备性由于隐私规则基于 ADT，而类型检查纯粹基于接口的直接结果。\n\n\
+  Dart 为程序员提供了定义抽象数据类型的选项，在这种情况下，他们必须清楚地记录他们所定义的抽象类型不应被他人实现（尽管它们可以被子类扩展）。人们可以用这种风格定义单个抽象数据类型或多个协作类型。\n\
+  \n或者，程序员可能选择在优选的基于接口的风格下工作，在这种情况下，私有成员应该只通过 `this` 访问，从而有效地遵循基于对象的封装。\n\n### 5.10\
+  \ 相关工作\n\n类型系统的僵化性引发了许多放宽它的尝试。在 Scheme 中，人们对软类型（soft-typing）进行了大量研究，这与类型推断相关。Racket\
+  \ 最近的尝试将类型代码和无类型代码混合在一起，但粒度相对粗糙。每个模块要么是有类型的，要么是无类型的。跨越类型和无类型单元边界的数据会进行动态检查。这些检查在某种让人类似于检查模式（checked\
+  \ mode）的感觉。\n\nDart 的可选类型方案与 Strongtalk [16] 开发的最为相似。然而，在 Dart 中，可选类型与语言的集成更高。Strongtalk\
+  \ 没有泛型具体化（reify generics），也没有检查模式。此外，警告是 IDE 的专属领域；编译完全独立于类型检查。最后，Strongtalk 拥有一个具有泛型声明侧变性（declaration\
+  \ side variance）的完备类型系统。\n\n可选类型（optional typing）一术语曾在 Common Lisp 的语境下使用，但表示一种相当不同的思想。类型被编译器视为有效的断言，编译器利用它们进行优化。然而，这些类型注释没有经过验证，导致系统从本质上是不安全的。Dart\
+  \ 要求指针安全，且不允许实现信任类型注解。\n\nDart 将不完备的泛型和具体化混合在一起是不寻常的。Beta [17] 的影响显而易见，在 Beta 中泛型也是协变的。然而，Beta\
+  \ 中的泛型并不是特殊特性，而是通过嵌套类型成员进行建模的，因此是显式具体化的。相比之下，Java 和 C# 等主流语言使用了包含变性声明的完备类型系统。在 Java\
+  \ 中，泛型不是具体化的，变性是基于使用的；而在 C# 中，泛型是具体化的且基于声明的。\n\n\n\n\n在 Dart 中，整数可以是任意大小的。然而，使用非常大的整数可能会相对昂贵。越过某个特定的边界（该边界随实现方式而异），整数将无法直接利用底层的硬件表示。因此，对此类大整数的操作将变得昂贵得多。\n\
+  \n实现者可以自由地使用各种类的实例来实现整数。唯一的要求是任何此类类都必须实现内置类 `int`。在实践中，可能会根据所表示的整数的大小使用不同的类。\n\n\
+  当询问一个整数的 `runtimeType` 时，答案总是 `int`，这也就是静态检查器分配给整数字面量的类型。因此，发现整数底层实现类的唯一方法是通过反射，正如我们在下一章中将讨论的那样。\n\
+  \n如果两个整数对象表示相同的数学值，则它们被认为是等等的。\n\n在编译为 Javascript 的 Dart 实现中，会出现进一步的复杂性。在 Javascript\
+  \ 中，所有数字都表示为 IEEE 双精度浮点数；没有整数。因此，在 Javascript 之上实现整数语义的代价是非常高昂的。在这样的实现上，当整数超出给定范围（绝对值约为\
+  \ 2⁵³）时，整数将被近似。\n\n[1]。人们只能希望在未来的将来，Javascript 能够发现整数。\n\n你不能定义 `int` 的子类，也不能让另一个类实现\
+  \ `int`。这些限制是一种折中，允许 Dart 实现提供高性能，但代价是牺牲了人应该能够对任何类进行子类化或实现的原则。\n\n#### 6.1.1.2 Double（双精度浮点数）\n\
+  \nDouble 是根据 IEEE 754 标准实现 64 位浮点数的对象。Double 是 `dart:core` 中 `double` 类的实例。\n\n\
+  双恒等性规则与相等性规则有细微不同。简单来说，如果两个双表示浮点值的底层位模式相同，则它们是恒等的。在大多数情况下，这意味着两个双恒等的充当且仅当它们相等的，但有两个例外：\n\
+  \n1. 双 `-0.0` 和 `0.0` 是相等的，但不恒等的。\n2. `NaN`（不是数字）与自身是恒等的，但不相等的。\n\n你不能定义 `double`\
+  \ 的子类，也不能让另一个类实现 `double`。同样的规则适用于 `num`，它是 `double` 和 `int` 的通用父类型。\n\n#### 6.1.1.3\
+  \ Boolean（布尔值）\n\n恰有两个布尔对象：`true` 和 `false`。它们是 `bool` 类的成员。\n\n与某些语言不同，不能将任意表达式强制转换为布尔值。如果你尝试写：\n\
+  \n```\nvar x = someComputation();\n\nif (x) print(x.foo()); // 不要这样做！\n```\n\n期望语言会将一个非空值转换为\
+  \ `true`，那么你会失望的。记住，Dart 反感内置的强制转换。如果 `x` 是 `true`，则打印将按预期执行。然而，如果 `x` 是任何其他对象，在生产模式下它将被视为\
+  \ `false` 且什么都不会被打印。在检查模式下，它会失败。因此，最好的做法是在执行测试时编写适当谓词：\n\n```dart\nif (x != null)\
+  \ print(x.foo());\n```\n\n这让读者清楚了你实际上在测试什么，并且不依赖于可能产生问题的强制转换。当然，如果 `x` 确实是一个布尔值，那么写成这样完全没：\n\
+  \n```dart\nif (x) print(x.foo());\n```\n\n简而言之，`true` 是 Dart 中唯一的真理。\n\n你可能会问，鉴于我们明确表示反感强制转换，为什么还允许其他非布尔对象被视为\
+  \ `false`？如果我们能确定 Dart 始终运行在 Dart VM 上，我们可能可以在所有测试中强制统一使用布尔值。然而，考虑到编译到 Javascript\
+  \ 的限制，事实证明始终使用真实的布尔值代价太高。这是 Dart 做出务实折中的的案例之一。\n\n你不能定义 `bool` 的子类，也不能让另一个类实现 `bool`。\n\
+  \n#### 6.1.1.4 Strings（字符串）\n\n字符串字面量在 Dart 中有多种形式。它们可以用单引号或双引号界定：\n\n```dart\n\
+  '我引用：\"用单引号界围的字符串可以包含双引号\"'\n\n\"我引用：'用双引号界围的字符串可以包含单引号'\"\n```\n\n通常，用户不需要记住使用哪种引号来界定字符串。两种方式都可以，这让语言变得更容易学习。此外，当引号出现在字符串中时，处理它们也会更简单，正如上面的示例所示。自然地，界定符必须匹配——例如，你不能用单引号开始字符串并用双引号结束。\n\
+  \n```dart\n'一个无效的字符串\" // 非法！无法解析\n\n\"另一个无效的字符串' // 同样非法\n```\n\n普通字符串局限于单行。如果你需要一个跨多行的字符串，可以使用*多行字符串*（multiline\
+  \ string）。多行字符串用三个引号界定；同样，这些可以是三一组单引号，也可以是三一组双引号。\n\n```dart\n\"\"\"我引用：\n\"用单引号界围的字符串可以包含双引号\"\
+  \n\n\"\"\"我引用：\n'用双引号界围的字符串可以包含单引号'\"\"\"\n```\n\n还有另一种选择，即将你的字符串拆分成若干部分，并将各个部分写在一起：\n\
+  \n```dart\n' \"我引用：'用单引号界围的字符串可以包含双引号\"'\n```\n\nDart 会隐式地连接相邻的字符串。然而，生成的字符串不会跨行。Dart\
+  \ 在字符串内部支持多种转义序列。这些包括：\n\n- `\\n` 换行。\n- `\\r` 回车。\n- `\\f` 换页。\n- `\\b` 退格。\n-\
+  \ `\\t` 制表符。\n- `\\v` 垂直制表符。\n- `\\u{*h}`，其中 `h` 是十六进制数字序列，用于表示 `h` 的 Unicode 标量。\n\
+  - `\\u*x[1]*x[2]*x[3]*x[4]`，其中 `x[1]--x[4]` 是十六进制数字，是 `\\u{*x[1]*x[2]*x[3]*x[4]}`\
+  \ 的简写。\n- `\\x*x[1]*x[2]`，是 `\\u{*x[1]*x[2]}` 的简写。\n\n字符串支持插值。字符串插值允许 Dart 表达式嵌入字符串字面量中，例如：\n\
+  \n```dart\nprint('2*2 的值是 ${twice(2)}');\n```\n\n假设范围内有一个合理的 `twice()` 实现，这将打印 `2*2\
+  \ 的值是 4`。如所示，$ 符号表示嵌入表达式的出现，它由大括号界定。嵌入表达式会被求值并调用其 `toString()` 方法，结果将插入到字符串中表达式所在的位置。如果表达式仅由单个标识符组成，大括号可以省略：\n\
+  \n```dart\nvar roomNumber = 101;\n\nprint('欢迎来到房间 $roomNumber');\n```\n\n这将打印 `欢迎来到房间\
+  \ 101`。\n\n此外，Dart 支持*原始字符串（raw strings）。原始字符串不支持转义序列；它们包含引号内出现的内容。原始字符串有单行和多行变体。原始字符串以字符\
+  \ `r` 为前缀。\n\n```dart\nprint(r'一个原始字符串 \\n'); // 打印：原始字符串 \\n，没有换行\n```\n\n\n\n\n\
+  与整数类似，字符串字面量可以通过各种类来实现，但除非通过反射，否则这是不希望的。对字符串字面量请求其运行时类型始终得到 `String`，这正是静态检查器赋予字符串字面量的类型。`String`\
+  \ 类不能被用户代码子类或实现，就像 `int`、`double`、`num` 和 `bool` 一样。\n\nDart 将字符串表示为 UTF-16 代码单元序列。Dart\
+  \ 核心库包含了 `Runes` 类，它可以将字符串转换为 Unicode 表示形式。\n\n#### 6.1.1.5 符号 (Symbols)\n\n符号用于表示程序中声明的名称。符号以井号\
+  \ `#` 开头，后紧跟一个或多个用点分隔的标识符，或者一个操作符。是一些示例：\n\n点击此处查看代码图像\n\n`#MyClass` `#i` `#[]`\
+  \ `#com.evil empire.forTheWin`\n\n以下是一些非法符号：\n\n点击此处查看代码图像\n\n`#.` `.#..` `#++`\
+  \ `#=` `#&=` `#||` `#&&` `#!=` `#!`\n\n以上都是不可由用户定义的操作符。非用户定义操作符集包括：^(2)\n\n**2.**\
+  \ 要创建没有字面量形式的符号，需要显式地调用类 `Symbol` 的构造函数。这些情况通常出现在反射代码中。除了列出的操作符外，还有一个著名的单元负案例，出于反射目的，其名称为“unary-”。\n\
+  \n- 赋值，包括基础赋值操作符和所有复合操作符\n- 点，用于成员选择，以及双点，用于级联操作（cascades）\n- 不等，它始终根据相等操作符定义\n\
+  - 通过 `!` 取反\n- 后置操作符：增量和减\n- 逻辑布尔操作符\n\n自然地，符号字面量的静态类型是 `Symbol`。\n\n#### 6.1.1.6\
+  \ 列表 (Lists)\n\n列表字面量通常写为由方括号括定的、逗号分隔的表达式序列。\n\n所有列表字面量都实现了类 `List` 的接口。方便地将字面量\
+  \ `[]` 想为 `new List()` 的简写，将 `['a', 2, true]` 想为以下代码的简写：\n\n```dart\nnew List()\
+  \ ..\n      add('a')..\n      add(2)..\n      add(true);\n```\n\n严格来说，上面的解释并不准确，因为\
+  \ Dart 实现并不要求使用 `List` 类的工厂构造函数。然而，作为第一种近似，我们离并不远。\n\n`List` 是一个泛型类，因此人们可能会合理地询问\
+  \ `[1, 2, 3]` 是否创建了一个 `List<int>`？它是否对应于：\n\n```dart\nnew List() ..\n      add(1)..\n\
+  \      add(2)..\n      add(3);\n```\n\n或者对应于：\n\n```dart\nnew List<int>() ..\n \
+  \     add(1)..\n      add(2)..\n      add(3);\n```\n\n答案（再次仅作为教学目的的近似）是前者。Dart 并不会尝试从列表字面量的元素中推导出更精确的类型。一个原因是在运行时执行此类类型推断开销很大。另一个原因是可选类型系统。\n\
+  \n要获得后一种，我们可以选择通过编写 `<int>[1,2,3]` 来显式提供类型参数。事实上，语法 `[e[1], ..., e[n]]` 确实是 `<dynamic>[e[1],\
+  \ ..., e[n]]` 的简写。我们也可以将语法 `<T>[e[1], ..., e[n]]` 认为是以下代码的近似：\n\n```dart\nnew List<T>()\
+  \ ..\n      add(e[1])..\n      ...\n      add(e[n]);\n```\n\n如第 6.1.4 节 所述，列表字面量可以通过加上保留字\
+  \ `const` 前缀来成为编译时常量。`const` 的使用与类型参数的使用是正交的。因此 `const[e[1], ..., e[n]]` 恰好是 `const<dynamic>[e[1],\
+  \ ..., e[n]]` 的简写，而 `const<T>[e[1], ..., e[n]]` 是以下代码的近似：\n\n```dart\nconst List<T>()\
+  \ ..\n      add(e[1])..\n      ...\n      add(e[n]);\n```\n\n#### 6.1.1.7 映射 (Maps)\n\
+  \nMap 字面量写为由大括号括定的、逗号分隔的键值对序列。在每一对中，键先写并用冒号与值分隔，即 `key: value`。\n\n所有 map 字面量都实现了类\
+  \ `Map` 的接口。方便地将字面量 `{}` 想为 `new Map()` 的简写，将 `{'a': 'a', 'b': 2, 'c': true}` 想为以下代码的简写：\n\
+  \n```dart\nnew Map() ..\n      ['a'] = 'a'..\n      ['b'] = 2..\n      ['c'] = true;\n\
+  ```\n\n与列表的情况一样，上面的解释只是近似，因为 Dart 实现并不要求使用 `Map` 类的工厂构造函数。（更正/注：6.1.1.7 及后续章节源文本包含重复/重叠的句子。我已根据所提供的源逻辑流处理了不同的逻辑段落）：\n\
+  \n要获得后一种，我们可以选择通过编写 `<int>[1,2,3]` 来显式提供类型参数。事实上，语法 `[e[1], ..., e[n]]` 确实是 `<dynamic>[e[1],\
+  \ ..., e[n]]` 的简写。我们也可以将语法 `<T>[e[1], ..., e[n]]` 认为是以下代码的近似：\n\n```dart\nnew List<T>()\
+  \ ..\n      add(e[1])..\n      ...\n      add(e[n]);\n```\n\n如第 6.1.4 节 所述，列表字面量可以通过加上保留字\
+  \ `const` 前缀来成为编译时常量。`const` 的使用与类型参数的使用是正交的。因此 `const[e[1], ..., e[n]]` 恰好是 `const<dynamic>[e[1],\
+  \ ..., e[n]]` 的简写，而 `const<T>[e[1], ..., e[n]]` 是以下代码的近似：\n\n```dart\nconst List<T>()\
+  \ ..\n      add(e[1])..\n      ...\n      add(e[n]);\n```\n\n#### 6.1.1.8 函数 (Functions)\n\
+  \n函数字面量在第 4.4 节讨论过。函数类型规则在第 5.6 节中给出。我们现在给出函数字面量的类型规则。函数字面量没有声明返回类型的语法，因此函数字面量始终具有\
+  \ `dynamic` 类型。函数字面量的参数类型以任何函数相同的方式确定。如果声明了类型则使用类型，否则参数类型取 `dynamic`。根据参数类型以及它们是必需还是可选、位置还是命名，可以确定明显的函数签名。示例：\n\
+  \n点击此处查看代码图像\n\n```dart\n(x) => 2*x; // (dynamic) -> dynamic\n\n(num a, num b){\
+  \ return a*b;} // (num, num) -> dynamic\n\n```dart\n(String k, [Function f]) =>\
+  \ m.putIfAbsent(k, f); // (String, [Function]) -> dynamic\n```\n\n#### 6.1.2 标识符\
+  \ (Identifiers)\n\nDart 中的标识符与大多数其他语言中的标识符非常相似。标识符可以是字符 A-Z、a-z 或 $ 之一开头。后续字符可以是上述任何字符或数字\
+  \ 0-9。\n\nDart 不允许在标识符中使用非 ASCII 字母。这一选择是在大量讨论后做出的。我们选择为了确保 Dart 程序可以被全球任何专业程序员阅读，尽管这牺牲了对非罗马脚本使用者的便利性。\n\
+  \n标识符如其名，用于标识一个声明。它可以标识变量、函数或类型。标识符也可能表示库，但此时它不能单独在表达式中使用。\n\n\n\n\n在评估标识符时，第一步是找到它所标识的声明。这涉及到一个搜索声明的过程，从紧邻的作用域开始。如果没有找到匹配的声明（即简单名称为我们正在搜索的标识符的声明），搜索将向嵌套的词法作用域继续递归进行，直到到达闭包库的顶层。如果我们找到了声明，我们对如何处理它就有了大概的思路；但也可能没有找到任何声明。\n\
+  \n对合适声明的搜索是由编译器静态完成的；一旦编译器知道涉及哪个声明，它就会生成相应的代码以便在运行时进行评估。\n\n为了查看它是如何运作的，我们将看看下面这段相当刻意的代码：\n\
+  \n点击此处查看代码图像\n\n```dart\nvar global = 0;\n\nvar shadowed = 1;\n\naFunction(x) =>\
+  \ x*x + global + shadowed;\n\nclass AClass<T> {\n  static var aClassVariable = 2;\n\
+  \  var anInstanceVariable = 3;\n  static var shadowed = 4; // 隐藏了顶层变量\n\n  static\
+  \ aClassMethod() {\n    print(shadowed); // 4\n    print(aClassVariable); // 2\n\
+  \    print(anInstanceVariable); // error\n  }\n\n  aMethod(aParameter) {\n    var\
+  \ aLocal = 5;\n    var anUnassignedLocal;\n    var shadowed = 6; // 隐藏了静态变量\n  \
+  \  localFunction(x) => 7;\n\n    {\n      var moreLocal = 8;\n      var shadowed\
+  \ = 9; // 隐藏了局部变量\n      moreLocalFunction(y) {\n        return moreLocal;\n   \
+  \   }\n      print(global); // 0\n      print(shadowed); // 9\n      print(aFunction);\n\
+  \      print(AnotherClass);\n      print(F);\n      print(AClass);\n      print(T);\n\
+  \      print(aClassVariable); // 2\n      print(anInstanceVariable); // 3\n    \
+  \  print(aMethod);\n      print(anotherMethod);\n      print(aParameter);\n    \
+  \  print(localFunction);\n      print(aLocal); // 5\n      print(anUnassignedLocal);\
+  \ // null\n      print(moreLocal); // 8\n      print(moreLocalFunction);\n    }\n\
+  \    print(shadowed); // 6\n  }\n\n  anotherMethod() => 10;\n}\n\nclass AnotherClass{}\n\
+  \ntypedef int F(int x);\n```\n\n最简单的例子是标识符 `moreLocal` 的评估。我们的搜索在紧邻的的作用域中找到了同名的声明，该声明引入了一个局部变量。标识符的评估结果为评估时存储在局部变量中的值——在我们的案例中是\
+  \ `8`。这显然是易见得令人痛苦，但如果想完全理解这些规则，这是必要的。标识符 `aLocal` 的情况几乎完全相同；区别在于我们需要在作用域链上向上爬一层才能找到相关的声明。`anUnasssignedLocal`\
+  \ 的情况也是如此，不同的是在后者情况下表达式的值将是 `null`，因为变量尚未初始化，而前者表达式评估结果则为 `5`。\n\n评估 `aParameter`\
+  \ 非常相似。`aParameter` 的名称在作用域链再上一层通过形式参数声明声明的，且形式参数的值无疑会随着每次调用而变化。\n\n如果我们找到的声明并不表示变量会怎样？有几种可能性。声明可能表示一个函数；该函数可能是\
+  \ getter 或普通方法（它不能是 setter，因为 setter 的名称总是以 `=` 结尾，所以永远不会是标识符）。\n\n如果标识符表示一个 getter，评估的结果就是调用该\
+  \ getter 的结果。如果它是静态或顶层 getter，我们调用它并返回结果。如果是实例 getter，我们会在 `this` 上调用该 getter。\n\
+  \n例如，考虑标识符 `shadowed`。在 `aMethod` 内部，它首先在最内层的作用域中被评估，因此找到了最内层的声明，该变量的值 `9` 就是结果。在方法的最后面，我们在方法的最外层的作用域中评估\
+  \ `shadowed`，得到值 `6`。在类方法 `aClassMethod` 内部，我们再次引用了 `shadowed`。在这里，我们从方法作用域开始，沿着作用域链向上，直到到达类的静态作用域，该那里为类变量\
+  \ `shadowed` 定义了一个 getter。调用这个 getter 产生值 `4`。\n\n相比之下，在顶层函数 `aFunction` 内部，`shadowed`\
+  \ 评估结果为 `1`，因为我们从 `aFunction` 的作用域开始搜索声明，向上到其形式参数的作用域，然后到库级作用域，在那里我们找到了一个隐式声明的合适的顶层\
+  \ getter。在这种情况下，`global` 也是类似的；当我们在 `aMethod` 内部评估 `global` 时，我们的搜索将遍历一系列嵌套的作用域，直到到达库作用域。\n\
+  \n如果标识符表示的声明是一个实例方法，那么我们将提取将在 `this` 的当前值上调用的闭包，如 6.7 所示。库方法、类方法和局部函数都被同样对待；评估的结果是函数/方法对象。对于库方法或类方法，该对象是固定的；对于局部函数，每次进入声明该函数的作用域时都会创建一个新对象。\n\
+  \n另一种可能是 `id` 指向一个类型声明——可以是类或 `typedef`。每个类和类型别名在 Dart 中都具实体化为一个唯一对象，在这种情况下这就是评估的结果。然而，标识符也可能表示类型变量。在这种情况下，结果将是评估时类型变量的值——就像普通变量一样。类型变量的值是接收者的属性；任何泛型类的实例都是通过类似\
+  \ `List<String>` 的实例化使用实际类型参数构造的。实际类型本身是一个类型（在这种情况下是 `String`），并成为相应类型参数的值。\n\n\
+  当然情况可能会更加复杂，正如我们在第五](#part0013.html_ch05) 中所示。例如，考虑当标识符表示像 `List` 这样的泛型类时的情况。`List`\
+  \ 的类型参数没有提供显的值。类型参数的默认值始终是 `dynamic`，所以 `List` 表示一个代表 `List<dynamic>` 的类型对象。\n\n\
+  在完全正确的情况下，可能会引用继承自父类的成员。规则是，如果我们不在词法作用域中找到 `id` 的声明，我们评估 `id` 就像它是表达式 `this.id`。\n\
+  \n当我们尝试在 `aClassMethod` 内部引用实例变量 `anInstanceVariable` 时可以看到这一点。然而，该变量（以及它的 getter）不在作用域内。该引用随后解释为对\
+  \ `this` 的 getter 调用。在实例方法中，这条规则效果良好，允许访问继承的成员。由于在类方法内部访问 `this` 是非法的，在我们这个案例中这是一个编译错误。\n\
+  \n##### 6.1.2.1 保留字和内置标识符\n\n当然，标识符不能是保留字。以下代码将永远无法正确解析：\n\n```dart\nvar if;\n```\n\
+  \n\n\n\n\n然而，并不是所有的 的关键字都是保留字。Dart 区分了*保留字*（reserved words，在 Dart 程序中永远不能用于命名实体）和*内置标识符*（built-in\
+  \ identifiers）。以下是 Dart 的保留字：`assert`, `break`, `case`, `catch`, `class`, `const`,\
+  \ `continue`, `default`, `do`, `else`, `enum`, `extends`, `false`, `final`, `finally`,\
+  \ `for`, `if`, `in`, `is`, `new`, `null`, `rethrow`, `return`, `super`, `switch`,\
+  \ `this`, `throw`, `true`, `try`, `var`, `void`, `while`, `with`。以下是内置标识符：`abstract`,\
+  \ `as`, `deferred`, `dynamic`, `export`, `factory`, `get`, `implements`, `import`,\
+  \ `library`, `operator`, `part`, `set`, `static`, `typedef`。\n\n关于 Dart 的内置标识符会出现一些有趣的情况。考虑：\n\
+  \n点击此处查看代码图片\n\n```\nget get => 'get'; // don't do this!\n```\n\n上述代码是完全合法的，尽管风格非常糟糕。它定义了一个名为\
+  \ `get` 的 getter，返回字符串 `‘get’`。明白了吗？Dart 编译器可以很容易地判断每个“get”出现代表的含义，但人类可能无法判断，因此强烈不建议编写这种代码。\n\
+  \n保留字与内置标识符之间的区别使得代码从其他语言迁移到 Dart 变得更容易。特别是将 JavaScript 代码转换为 Dart 往往出乎意地简单。允许在\
+  \ JavaScript 中合法的标识符在 Dart 中使用（即使 Dart 对它们有特殊用途），这有助于这种迁移。\n\n内置标识符不能用作类型名。类、类型定义（typedefs）或类型参数都不能以内置标识符命名。内置标识符（`dynamic`\
+  \ 除外）不能出现在类型注解中。这阻止了如下这种情况：\n\n点击此处查看代码图片\n\n```\nget get get => new get(); // 编译时错误\n\
+  ```\n\n显然，你作为人类读者，可以立即看出其意图是定义一个名为 `get` 的 getter，返回类型 `get`，但解析器需要向后查看几个标记 才能理解发生了什么。这些限制并不影响迁移，因为\
+  \ JavaScript 程序中没有出现类型。此外，由于按照惯例类型以大写字母开头，这条规则对 Dart 代码没有产生困难。唯一的缺点是限制了智谜题书作者的就业机会。\n\
+  \n#### 6.1.3 this\n\n保留字 `this` 作为表达式使用时，指代当前方法调用的接收者（receiver）。此外，`this` 也可以出现在构造函数的上下文中，此时它表示新创建的对象。不能在静态方法或库方法中引用\
+  \ `this`，因为没有对象作为调用的接收者。\n\n注意，在构造函数中，关键字 `this` 可以出现在特殊形式参数（formal parameters）的上下文中，在重定向构造函数（redirecting\
+  \ constructors）中，它标记了对同类其他构造函数的调用。然而，`this` 的这两种用法都不是独立的表达式。\n\n#### 6.1.4 常量\n\n\
+  常量表达式是一个可以在编译时求值的表达式。常量表达式的值永远不会改变。常量包括字面量数字、布尔值、null、常量列表和映射、顶层函数、静态方法，以及一些子部分为常量的特定复合表达式。\n\
+  \n常量对象是通过将实例创建表达式中的 `new` 替换为 `const` 创建的，如下一节所示。常量对象的创建仅在非常特定的情况下才可能的。该类必须有一个合法的\
+  \ `const` 构造函数，并且构造函数的参数本身必须是常量。\n\n给定：\n\n点击此处查看代码图片\n\n```\nlibrary constants;\n\
+  \nconst aTopLevelConstant = 99;\n\nthrice(x) => 3*x;\n\nclass Foo {\n  static threeCubed()\
+  \ => thrice(thrice(3));\n}\n\nclass Konst {\n  final x;\n  const Konst(this.x);\n\
+  }\n```\n\n以下表达式是常量：\n\n点击此处查看代码图片\n\n```\n\"def\" 1 2.5 true false null const[7,\
+  \ 8, 9.0] const{}\naTopLevelConstant thrice\nFoo.threeCubed 'abc' 3+4\n1 - 0 6*7\
+  \ -1 2 > 3 3 < 3.0 7 >= 3+4\n9 <= -0 17 % ( 2*2*2 + 8) '$aTopLevelConstant'\nconst\
+  \ Konst(42);\n```\n\n相比之下，这些表达式不是常量：\n\n```\nthrice(2)\nthreeCubed == 0\n'${ const\
+  \ Point(0, 0)}'\nconst Konst(thrice(14));\n```\n\n#### 6.1.5 创建对象\n\n对象通过调用构造函数创建，如第\
+  \ 2.9 节所述。构造函数使用*实例创建表达式*（instance creation expressions）调用。最常见的实例创建形式是 `new` `ConstructorName`(`args`)。一些示例：\n\
+  \n点击此处查看代码图片\n\n```\nnew List<int>(); // 带类型参数的构造函数\n\n Map(); // 不带类型参数的构造函数\n\
+  new Point.origin(); // 调用命名构造函数\n```\n\n使用 `new` 并不意味着分配了新实例。另一种实例创建形式是 `const`\
+  \ `ConstructorName`(args)，用于创建常量对象。\n\n除了 `new` 和 `const` 之外，调用构造函数的唯一方法是从构造函数内部调用或通过反射。在构造函数内部，通过\
+  \ `super(`args`)`或 `this(` 调用。重定向工厂可以指定它们将重定向到的构造函数。构造函数的细节见上文第 2.9 节。\n\n#### 6.1.6\
+  \ 赋值\n\n赋值可以在顶层、类、实例变量上执行。对于顶层、类和实例变量，赋值是调用 setter（Setter）的简写。对于局部变量，赋值的行为与传统语言相同，将右侧表达式的结果赋值给左侧变量。\n\
+  \n不能对 `final` 变量赋值。\n\nDart 中的赋值包括 `variable = expression` 形式的简单赋值，以及赋值与 `+` 等运算符结合的复合赋值。例如\
+  \ `variable += expression`，它只是 `variable = variable + expression` 的简写。除了 `+=` 之外，还有\
+  \ `-=, *=, /=, ~=, %= <<=, >>= &= ^=, |=`\n\n例如，以下程序打印数字 1, -1, 303 和 10。\n\n点击此处查看代码图片\n\
+  \n```\nlibrary another_lib;\n\nvar topLevelVariable = 101;\n\nclass SomeClass {\n\
+  \  static var classVariable = 100;\n}\n\nlibrary my_lib;\n\nimport 'anotherLib.dart'\
+  \ as another show topLevelVariable, SomeClass;\n\nvar myTopLevelVariable = 0;\n\n\
+  class MyClass {\n  static var myClassVariable = 0;\n}\n\nmain(){\n  myTopLevelVariable\
+  \ += 1;\n  MyClass.myClassVariable -= 1;\n  another.topLevelVariable *= 3;\n  another.SomeClass.classVariable\
+  \ /= 10;\n  print(myTopLevelVariable);\n  print(MyClass.myClassVariable);\n  print(another.topLevelVariable);\n\
+  \  print(another.SomeClass.classVariable);\n}\n```\n\n#### 6.1.7 提取属性\n\n\n\n\n\
+  偶尔，将一个方法作为未求值的函数对象使用是非常方便的。例如，我们可能想在事件循环中注册一个方法作为监听器。假设函数 `onClick()` 接收一个监听函数作为参数，并在发生点击事件时最终用事件对象对其进行回调。进一步假设我们定义了一个实例方法\
+  \ `listener()` 来响应点击事件。\n\n```\nlistener(ev) => print(ev);\n```\n\n我们可以按照如下方式调用\
+  \ `onClick()`：\n\n```\nonClick(listener);\n```\n\n根据语言的常规规则，上述内容是内容的简写：\n\n```\n\
+  onClick(this.listener);\n```\n\n而这反过来大约是以下内容的简写：\n\n点击此处查看代码图片\n\n```javascript\n\
+  onClick((event) => this.listener(event));\n```\n\n通常情况下，符号 `e.m` 表示对象 `e` 求值后得到的方法\
+  \ `m`。严格来说，`e.m` 是一个参数与 `m` 完全相同的闭包。使用给定的参数调用此闭包的效果，与在 `e` 的值上调用方法 `m` 相同。如果 `m`\
+  \ 在作用域内，可以使用标识符 `m` 代替 `this.m`。\n\n属性提取实际上不仅仅是编写闭包的简写。所制造的闭包具有特殊的等效性实现，如 第 4.7\
+  \ 节 所示。\n\n无法通过这种方式提取 getter 或 setter 方法。对于 getter，问题在于如果 `g` 是一个 getter，那么 `e.g`\
+  \ 表示调用 getter 的结果，因此该符号无法表示 getter 方法本身。对于 setter，它们的真实名称以 `=` 结尾，不是合法的标识符，因此 `e.s\
+  \ =` 在语法上是无效的。在所有此类情况下，必须显式地编写闭包。\n\n#### 6.1.8 方法访问\n\n方法访问的形式为 `e.m(args)`，其中\
+  \ `e` 是一个产生对象的表达式，`m` 是成员名称，`args` 是一个可能为空的参数列表。示例：\n\n点击此处查看代码图片\n\n```\n3.toString();\n\
+  {'a':1, 'b': 2}.containsKey('c');\n'abcd'.indexOf('cd', 1);\nmyObject.foo(x, y,\
+  \ z);\n```\n\n理解各项求值的顺序非常重要。在成员访问中，首先计算接收者，然后计算方法的参数。参数与所有函数调用一样，是从左到右顺序计算的。通常这并不重要，但你可能会遇到产生差异的情况。\n\
+  \n点击此处查看代码图片\n\n```\nString x;\n(x = 'xyz').indexOf(x); // 求值结果为 0\n```\n\n如果我们在我们在计算参数之前不先计算目标表达式\
+  \ `(x = ‘xyz')`，我们将会传递 `null` 作为参数。根据规则，如果成员访问对求值顺序敏感，说明你的代码中存在问题。\n\n如果你访问的方法不存在怎么办？正如你现在可能已经很知道的那样，这将导致调用\
+  \ `noSuchMethod()`。事实上，如果你用错误的参数数量调用已存在的方法，`noSuchMethod()` 也会被调用。\n\n另一个可能的问题是你引用的是\
+  \ getter 而不是普通方法。在这种情况下，实际发生的情况是表达式 `e.m(args)` 被解释为 `(e.m)(args)`。首先，我们执行属性访问 `e.m`，产生调用\
+  \ getter `m` 的结果。接着，我们在该结果上调用 `call` 方法。如果结果是一个函数对象（或任何支持适当 `call` 方法的对象），则一切将按预期工作。否则，我们将再次得到\
+  \ `noSuchMethod()`。\n\n#### 6.1.9 使用运算符\n\nDart 中的运算符本质上是具有特殊语法的实例方法。其中极少数运算符是被限制的，因此不能在用户代码中重新定义，但大多数运算符被视为普通的实例方法，可以在任何类中声明和/或重写。\n\
+  \n运算符集合及其优先级是固定的。用户代码可以定义以下运算符：`<`, `>`, `<=`, `>=`, `==`, `-`, `+`, `/`, `~/`,\
+  \ `%`, `^`, `&`, `*<<`, `>>`, `[]=`, `[]` 和 `~`。\n\n这些大部分都是二进制运算符。异常是 `~`（一元运算符）、`-`（具有一元和二元两个版本）以及索引赋值运算符（三元运算符）。我们之前已经见过用户定义运算符的示例，从\
+  \ `Point` 类开始。类似的示例是复数：\n\n点击此处查看代码图片\n\n```dart\nclass Complex {\n  final num re,\
+  \ im;\n  Complex(this.re, this.im);\n  Complex.fromScalar(num s): this(s, 0);\n\
+  \  // 重定向构造函数的极佳示例\n  Complex operator + (Complex c) => new Complex(re + c.re, im\
+  \ + c.im);\n  Complex operator * (Complex c) =>\n  new Complex(re*c.re, im*c.im);\n\
+  }\n```\n\n#### 6.1.10 Throw\n\n形式为 `throw e` 的表达式抛出一个异常。抛出的异常是求值 `e` 的结果。与许多其他语言不同，`throw`\
+  \ 是一个表达式，而不是语句。这允许如下惯用法：\n\n```dart\nunsupportedFoo() => throw 'Foo is not supported!';\n\
+  ```\n\n如果 `throw` 是一个语句，我们就无法使用函数的简写语法，而必须编写更啰嗦的：\n\n点击此处查看代码图片\n\n```dart\nunsupportedFoo()\
+  \ {\n  throw 'Foo is not supported!';\n}\n```\n\n通常，表达式的组合性比语句更好，建议尽可能将构造定义为表达式。\n\
+  \n如示例所示，任何对象都可以作为异常抛出。并不要求对象必须是特殊类或其子类的实例。\n\n#### 6.1.11 条件表达式\n\n条件表达式的形式为：`b\
+  \ ? e1 : e2`，其中 `b` 是布尔表达式，`e1` 和 `e2` 是任意表达式。如果 `b` 求值为 **true**，则整个表达式的值为 `e1`\
+  \ 的值；如果 `b` 求值为 **false**，则条件表达式的值为 `e2` 的值。\n\n如果 `b` 不是布尔值怎么办？在检查模式下，代码将像往常一样在运行时失败。在生产环境中，任何非布尔值都被视为\
+  \ **false**。如果 `b` 的静态类型不是 `bool` 或 `dynamic`，类型检查器会向你发出警告。\n\n条件表达式是另一个让 `throw`\
+  \ 是表达式这一事实变得派用的上下文。\n\n点击此处查看代码图片\n\n```javascript\nasExpected(x) ? computeNormalResult(x)\
+  \ : throw 'Unexpected input $x';\n```\n\n条件条件的类型是两个分支类型的最小上界。\n\n\n\n\n`block`（块）是将多个语句组合在一起的一种。块由大括号限定，在大括号之间我们可以列出语句。列表可以是空的，例如\
+  \ `{}`。块内的语句之间用分号隔开。由于块本身也是语句，因此块可以嵌套。\n\n块中的语句按照它们在源代码中出现的顺序，从左到右、从上到下的顺序顺序执行。\n\
+  \n每个块都引入了自己的自己的作用域。在块内部引入的声明仅在块内部可用。在块内部，你可以通过名称引用声明，但必须在声明之后引用。换句话说，块不允许互斥递归声明。\n\
+  \n### 6.2.2 If\n\n我们在整本书中都看到了 `if` 语句。保留关键字 `if` 后面跟着一个圆括号括起来布尔表达式，接着是一个语句，可选地还跟跟着一个\
+  \ `else` 子句，该子句由关键字 `else` 和另一个语句组成。在这两种情况下，该语句都可以是一个简单语句：\n\n点击此处查看代码图片\n\n```dart\n\
+  if (x > 0) print(x);\nif (y < x) print(y); else print(x);\n```\n\n或者是一个块语句，它允许你在单个分支中执行多个语句：\n\
+  \n点击此处查看代码图片\n\n```dart\nif (x > 0) { var y = 'in then branch'; print(x);};\n```\n\
+  \n有些人偏向于始终使用块语句的风格：\n\n点击此处查看代码图片\n\n```dart\nif (x > 0) {print(x);};\nif (y < x)\
+  \ {print(y);} else {print(x);};\n```\n\n这是因为在分支或循环中添加语句时，永远不需要添加/删除分隔符。Dart 对此不持特定立场；这取决于你。\n\
+  \nDart 温和地鼓励你在所有测试中（包括 `if` 语句）中使用正确的布尔值。如果你在条件中使用的表达式不是布尔值，你可能会得到类型警告；但只有在我们确实确定存在问题时才会如此。\n\
+  \n例如，下面的代码：\n\n点击此处查看代码图片\n\n```dart\nString primeBeef(x) => isPrime(x) ? 'DEAD\
+  \ BEEF' : null;\nif (primeBeef(23)) {print('Prime');} // warning\n```\n\n这将生成一个警告，因为字符串不是布尔值。然而，为了不干扰你的开发，在生产模式下，如果你的代码没有类型，或者被类型为\
+  \ `Object`，Dart 将不会抱怨：\n\n点击此处查看代码图片\n\n```dart\nprimeBeef(x) => isPrime(x) ? 'DEAD\
+  \ BEEF' : null;\nif (primeBeef(23)) {print('Prime');} // 对真正的动态类型代码没有抱怨\n```\n\n\
+  然而，上述代码在检查模式（checked mode）下总是失败。\n\n### 6.2.3 循环\n\nDart 支持几种循环：两种形式的 `for` 循环，以及\
+  \ `while` 和 `do` 循环。\n\n#### 6.2.3.1 For 循环\n\nDart 支持经典的 `for` 循环语法和更高级的 `for-in`\
+  \ 语法。\n\n后者不容易出错，因为它消除了在 C 和其他低级语言中常见的差一错误（off-by-one errors）风险。`for-in` 语句允许你对\
+  \ `Iterable` 提供的系列对象执行语句。`Iterable` 的示例可以是列表：\n\n点击此处查看代码图片\n\n```dart\nimport 'dart:math'\
+  \ show pow;\nmain() {\n  var v;\n  for (v in [1, 2, 4, 8]) print(pow(2, v)); //\
+  \ 打印 2, 4, 16, 256\n}\n```\n\n在这里，我们遍历列表并计算列表中每个元素 2 的幂。我们使用从 `dart:math` 导入的 `pow`\
+  \ 函数来计算幂。循环的每次迭代都会将 `v` 绑定到列表提供的另一个元素。\n\n可以在 `for` 语句本身中声明迭代变量，可以带有类型声明，也可以不：\n\
+  \n点击此处查看代码图片\n\n```dart\nfor (int v in [1, 2, 4, 8]) print(pow(2, v)); // 打印 2,\
+  \ 4, 16, 256\nfor (var v in [1, 2, 4, 8]) print(pow(2, v)); // 打印 2, 4, 16, 256\n\
+  ```\n\n除了列表，还有其他实现 `Iterable` 接口的类。最重要的是，任何人都可以实现 `Iterable`，使得他们类的实例可以使用 `for-in`\
+  \ 语句。\n\n经典的 `for` 循环有四个部分：初始化器、测试、循环变量更新和循环体。初始化器通常声明迭代变量，但这并不是强制要求的。你可以重用已有的变量，这不是良好的习惯。\n\
+  \n#### 6.2.3.2 While 和 Do\n\n最基础且最通用的循环是 `while` 循环。`while` 循环评估一个条件，如果条件成立，它执行循环体并重复该过程；否则终止。\n\
+  \n`do` 循环是 `while` 的近亲。它先执行一次循环体，然后评估一个条件。如果条件成立，它重复，否则终止。\n\n循环评估的条件应该产生布尔值。如果该值不是布尔值，则被视为假。\n\
+  \n### 6.2.4 Try-Catch\n\n为了捕获异常，可以使用 `try` 语句。`try` 语句由几部分组成。第一部分是一个可能抛出异常的语句。这是紧跟在\
+  \ `try` 关键字后面的语句。之后我们可以有一个或多个 `catch` 子句、一个 `finally` 子句，或两者都有。`catch` 子句定义了针对特定异常异常处理器。`finally`\
+  \ 子句定义了无论如何都会执行的清理代码——无论是否发生了异常。\n\n点击此处查看代码图片\n\n```dart\ntry {\n  if ( x >= 0)\
+  \ {\n    doSomething(x);\n  } else { throw 'negative x = $x';}\n}\non String catch(e)\
+  \ {\n  print(s);\n}\ncatch(o) { print('Unknown exception $o'); }\n```\n\n如前所述，你可以抛出任何对象，因此\
+  \ `catch` 子句也可以捕获任何类型的对象。在上面的示例中，我们预期的会抛出一个字符串。抛出一个描述所遇问题的字符串通常是方便的。然而，如果异常对象不是字符串，第二个\
+  \ `catch` 子句将起作用，报告错误。第二个子句没有指定它期望捕获的对象类型，因此作为任何可能出现的异常的通用捕获。`catch` 子句的这种形式具有兼容\
+  \ JavaScript 的有用属性，减轻了将 JavaScript 代码转换为 Dart 代码的任务。\n\n\n\n\n上述行为是非常标准的。Dart 中\
+  \ `try`-`catch` 的不同之处在于它对堆栈跟踪（stack traces）的处理方式。`catch` 子句可以选择性接受第二个参数，表示堆栈跟踪。只有需要访问堆栈跟踪的代码才应该指定第二个参数。如果没有指定该参数，实现层可能会避免填充堆栈跟踪。填充堆栈跟踪是一项昂贵的操作，而避免该操作是一项重要的优化。\n\
+  \n点击此处查看代码图像\n\n```dart\ntry {\n  shootFloor();\n}\n\non PodiatryException catch(e,\
+  \ s) {\n  print(s);\n  print('Shot myself in the foot: $e');\n}\n```\n\n堆栈跟踪对象不支持\
+  \ `Object` 中定义之外的任何方法。其中最重要的是 `toString()`，它可以打印出堆栈跟踪。\n\n### 6.2.5 重新抛出 (Rethrow)\n\
+  \n捕捉异常并在检查后发现本地无法进行处理，而应该将异常继续向调用链上传递，这种情况并不罕见。\n\n`rethrow` 语句通过重新抛出正在 `catch`\
+  \ 子句中处理的异常，专门处理这种情况。\n\n### 6.2.6 切换 (Switch)\n\n`switch` 语句提供了一种根据表达式的值在多个选项中选择行动方案的方法。`switch`\
+  \ 处理的每个 `case` 对应于表达式的一个可能值。这些可能值必须提前已知——它们必须是编译时常量。我们还坚持各种 `case` 必须具有完全相同的类型。\n\
+  \n`switch` 的最佳用场景是词法分析器或解释器等应用程序。让我们来看一个极其简单的解释器。该解释器运行在一个非常简单的指令集上：\n\n`constant`\
+  \ *n*\n\n`plus`\n\n`minus`\n\n该指令集假设有一个隐式的操作数栈。指令 `constant` *n* 将数字型常量 *n* 推入栈中；`plus`\
+  \ 指令弹出操作数栈顶部的两个元素，将它们求和并将结果推回栈中；`minus` 类似，但它执行减法而不是加法。\n\n我们可以用多种方式表示这些指令。这里有一种非常直观的方式：\n\
+  \n点击此处查看代码图像\n\n```dart\nclass Instruction {\n  String code;\n  Instruction(this.code);\n\
+  }\n\nclass LiteralInstruction extends Instruction {\n  num constantValue;\n  LiteralInstruction(this.constantValue):\
+  \ super('constant');\n}\n```\n\n现在假设我们有一个可迭代的 `instructions` 序列，我们可以使用以下代码执行它：\n\
+  \n点击此处查看代码图像\n\n```dart\nList<num> operandStack = List<num>();\nfor (Instruction\
+  \ instruction in instructions) {\n  switch (instruction.code) {\n    case 'plus':\n\
+  \      operandStack.add(operandStack.removeLast() + operandStack.removeLast());\n\
+  \      break;\n    case 'minus':\n      operandStack.add(operandStack.removeLast()\
+  \ - operandStack.removeLast());\n      break;\n    case 'constant':\n      LiteralInstruction\
+  \ litInst = instruction;\n      operandStack.add(litInst.constantValue);\n     \
+  \ break;\n  }\n}\nassert(operandStack.length == 1);\nnum result = operandStack.last;\n\
+  ```\n\n我们遍历指令流。在每次迭代中，`switch` 语句使用操作码（op-code）来相应地引导处理。指令的操作数存储在栈 `operandStack`\
+  \ 中。栈最初是空的。一个良好的指令流在执行完成时会在栈顶恰好留下一个元素。该元素就是求值的结果。\n\n虽然上面的示例简单且朴素，但它捕捉了解释器的精髓。我们可以更高效地编码指令流（通常指令流将由整数而非对象组成），而且我们可能会有很多指令，但基本结构不会改变。\n\
+  \nDart 中 `switch` 语句的工作原理与 C 及其后继者的传统行为相似，但并不相同。在大多数语言中，`case` 的执行会“穿透”（falls-through）到下一个\
+  \ `case`。这种出于实现方便性考虑的决策是无数 bug 的根源，特别是危险的 bug。在 Dart 中，不允许这种穿透。如果发生穿透，它将导致导致运行时错误，从而防止隐藏\
+  \ bug。由于这种原因，我们示例中的每个 `case` 都以 `break` 语句结束，以防止穿透。\n\n人们可能会自然地定义语义，使得执行在每个 `case`\
+  \ 结束时终止。这样会更清洁简单。然而，我们还希望便于从其他语言迁移代码到 Dart。Dart 的规则确保了编写正确的 `switch` 语句可以迁移到 Dart\
+  \ 并且极可能按预期工作。依赖于穿透的代码将失败；此类代码并不常见且容易出错。\n\n人们可以为 `switch` 语句添加一个特殊的 `default` 用例。如果没有其他\
+  \ `case` 都不匹配，则将执行该用例。我们将在下面看到一个示例。\n\n`switch` 语句有一若干要求。各种 `case` 必须全为编译时常量 (2.11,\
+  \ 6.1.4)。这允许高效的编译。此外，这些常量必须：\n\n- 全为 `int` 的实例，或\n- 全为 `String` 的实例，或\n- 全为完全相同类的实例，且该类必须继承\
+  \ `Object` 的相等实现。\n\n如果违反了任何这些要求，将标记编译错误。\n\n上述规则存在一些微妙之处。注意，所有 `case` 为相同类的要求并未施加于整数。Dart\
+  \ 实现可能会使用不同的类来实现整数，但以下代码仍然允许的：\n\n点击此处查看代码图像\n\n```dart\nswitch (guest.bankBalance)\
+  \ {\n  case 0:\n    print('Never darken my doorway again');\n    break;\n  case\
+  \ 10000000000:\n    print('Welcome; su casa es mi casa');\n    break;\n  default:\
+  \ print('Hello');\n}\n```\n\n我们只关心所有的 `case` 是否都是 `int` 类型。对于 `String` 类型也是如此，取决于所使用的字符串实现可能会使用多个类。\n\
+  \n对自定义相等方法的禁止意味着实现可以使用对象恒等性（默认相等实现）来快速测试对象是否匹配分支。这一要求对于字符串和整数被忽略了；它们有自己的相等实现，但禁止在\
+  \ `switch` 语句中使用这些类型。\n\n### 6.2.7 断言 (Assert)\n\n程序员生活在永久的失望中；他们的期望经常被破灭。考虑简单的阶乘函数：\n\
+  \n点击此处查看代码图像\n\n```dart\nfactorial(int x) {\n  return x == 0 ? 1 : x* factorial(x-1);\n\
+  }\n```\n\n这种简单的代码可能会出什么问题？事实上，虐待软件工程师喜欢在面试中问这个问题。人们很容易相信上述代码的正确性。但也很容易调用 `factorial(-1);`\
+  \ 并看到它一直递归直到栈空间尽。\n\n为了防止这种心碎，良好的做法是在代码中大量使用断言使我们的期望显式化。我们通过 `assert` 语句制作此类断言。通常，我们通过将布尔表达式封装在\
+  \ `assert` 中来编写断言：\n\n点击此处查看代码图像\n\n```dart\nfactorial(int x) {\n  assert(x >= 0);\n\
+  \  return x == 0 ? 1 : x* factorial(x-1);\n}\n```\n\n\n\n\n```dart\nif (x >= 0)\
+  \ return x == 0 ? 1 : x* factorial(x-1);\nelse throw new AssertionError();\n```\n\
+  \n如果条件不成立，则会抛出一个 `AssertionError`。`assert` 构造的优势在于，在生产环境中它是被禁用的，不会增加空间或时间上的开销。它只在检查模式（checked\
+  \ mode）下起作用。\n\n当然，这可能不是编写 `factorial` 的最佳方式；一旦我们明确了假设，我们可能希望这样：\n\n点击此处查看代码图像\n\
+  \n```dart\nfactorial(int x) {\n  if (x >= 0) return x == 0 ? 1 : x* factorial(x-1);\n\
+  \  else return 1;\n}\n```\n\n或者更好：\n\n点击此处查看代码图像\n\n```dart\nfactorial(int x) {\n\
+  \  if (x > 1) return x* factorial(x-1);\n  else return 1;\n}\n```\n\n关键点在于，人们应该仔细考虑自己所做的假设，然后决定是否验证它们，以及当它们不成立时该做什么。\n\
+  \n在 `assert` 内部提供一个谓词（predicate）也是可能的。在这种情况下，执行 `assert` 语句时会调用该函数。如果它返回 `true`，断言成功，一切无事；否则，断言失败。这意味着如果函数返回\
+  \ `false` 或返回任何非布尔值，断言将失败。\n\n如果 `assert` 内部的表达式不是以下类型之一：`bool`、`()` → `bool`，或可以赋值给其中之一的类型，Dart\
+  \ 类型检查器将会报错。由于 唯一可以赋值给 `bool` 的类型是 `Object` 和 `dynamic`。在 `()` → `bool` 的情况下，情况会稍微多样一些。以下是一些不会引起警告的断言：\n\
+  \n点击此处查看代码图像\n\n```dart\nvar x, y;\n... f() => false;\ng() => x > y;\nassert(f);\
+  \ // 良好，尽管在检查模式下总是失败\nassert(g); // 良好\nassert(() => 'error!!'); // 闭始终具有静态返回类型\
+  \ dynamic\nassert(([a, b]) => a > b ); // 可选参数兼容的\n```\n\n这里是一些会引起警告的断言：\n\n点击此处查看代码图像\n\
+  \n```dart\nString f() => 'true';\nassert(f); // 返回类型 String 与 bool 不兼容\nassert((a,\
+  \ b) => a > b ); // 形式个数不兼容\n```\n\n如 第 5 章 所述，检查模式将类型注释视为断言。每一个形式为 `T v` = `e`\
+  \ 的检查模式赋值都会被处理为下面的生产模式代码：\n\n点击此处查看代码图像\n\n```dart\nT v `= ()` { var v′ `=` e`;`\
+  \ assert(`null `==` v′ || v′ is T `);` return v′`;`}`();`\n```\n\n类似的逻辑也适用于参数传递和从函数返回值。\n\
+  \n### 6.2.8 Return\n\n`return` 语句将控制权从函数转移到其调用者。`return` 有两种变体——一个带表达式，一个不带：\n\n\
+  ```dart\nreturn 42;\nreturn;\n```\n\n后者本质上是 `return null` 的简写。\n\n执行 `return` 语句将立即控制权转移到封装该\
+  \ `return` 的函数的调用者，紧接调用之后的位置。当前函数的结果是 `return` 之后表达式的值（如果没有表达式，则为 `null`）。然而，如果\
+  \ `return` 被包含在 `try-finally` 语句中，控制权将转移到 `finally` 。\n\n如果与 `return` 关联的表达式静态类型无法赋值封装函数的返回类型，Dart\
+  \ 类型检查器将警告我们。此外，在检查模式下，如果返回值的类型不是声明的返回类型的子类型，Dart 将停止运行（如既往一样，`null` 是可以的）。\n\n\
+  如果我们写了一个没有表达式的 `return`，除非周围函数声明返回类型 `dynamic` 或 `void`，否则类型检查器也会警告我们。所以虽然以下是正确的：\n\
+  \n```dart\nvoid postNotice(String n) {\n  print(n);\n  return;\n}\n```\n\n如下也是：\n\
+  \n```dart\npostNotice(String n) {\n  print(n);\n  return;\n}\n```\n\n但这种不对：\n\n\
+  ```dart\nString postNotice(String n) {\n  print(n);\n  return;\n}\n```\n\n在最后一种变体中，我们可能想要向发送者返回\
+  \ `n`，也许作为流式 API 的一部分，这就是为什么我们声明函数返回 `String`。或者我们实际上根没打算返回字符串。无论何种情况，某些地方不对，Dart\
+  \ 将发出警告。\n\n`return` 语句在（生成式）构造函数中被特殊对待。在生成式构造函数中，不允许在 `return` 后面跟一个表达式：\n\n点击此处查看代码图像\n\
+  \n```dart\nclass Point {\n  var x, y;\n  Point(x, y) {\n    this.x = x;\n    this.y\
+  \ = y;\n    return; // ILLEGAL\n  }\n}\n```\n\n显然，像 `Point()` 这样的构造函数不需要 `return`\
+  \ 值。在生成式构造函数中，允许 `return` 后不跟任何表达式，但不允许 `return` 后面跟一个表达式。\n\n### 6.2.9 Yield\n\n\
+  `yield` 语句用于生成器函数。`yield` 语句的形式为 `yield e`。`yield` 会挂起生成器，并将结果传递给调用者。在同步情况下，`yield`\
+  \ 会挂起生成器，并向调用者返回 `true` 值在在异步情况下，``` 的执行继续。\n\n```    允许在生成器。\n\n```  允许在生成器内部。`yield`\
+  \ 并不是 Dart 的保留词，也不是内置标识符。然而，在生成器内部内部它被视为关键字。有时，，定义生成生成器。\n\n点击此处查看代码图像 partpart0026*__048.html_p13500))\n\
+  \n```dart\nnaturalsFrom(n) sync* {\n  if (n > 0) {\n    yield n;\n    for (var i\
+  \ in naturalsFrom(n-1)) {\n      yield i;\n    }\n  }\n}\n```\n\n上面的代码功能上是正确的，但隐藏着一个严重的性能\
+  \ Bug：它以平方时间运行。为了理解为什么，请考虑 `naturalsFrom(3)` 的以下追踪：\n\n[点击此处查看代码图像\n\n```\nnaturalsFrom(3)\n\
+  \  if (3 > 0) // true\n    yield 3;\n    for (var i in naturalsFrom(2))\n      if\
+  \ (2 > 0)\n        yield 2;\n        for (var i in naturalsFrom(1))\n          if\
+  \ (1 > 0)\n            yield 1;\n            for (var i in naturalsFrom(0))\n  \
+  \            if (0 > 0) // false\n                // // 返回空序列 1\n          // //\
+  \ 序列 1\n        yield 1;\n        // 序列 2, 1\n      yield 2;\n    yield 1;\n// //\
+  \ 序列 3, 2, 1\n```\n\n注意 `yield i` 在序列的第 n 个元素中执行了 `n - 1` 次：在每个递归层级中执行一次；第一个元素 3\
+  \ 仅由 `yield n` 语句产生；第二个元素 2 由 `yield n` 产生一次，由 `yield i` 产生一次。第三个元素是 1，由 `yield\
+  \ n` 产生一次，由 `yield i` 产生两次。\n\n总之，我们有 `n(n - 1)` 次 `yield i` 执行，这是 `O(n²)`。\n\n\n\
+  \n\n\nDart 提供了 `yield-each` 语句来解决这个问题。`yield-each` 语句的格式如下：\n\n```\nyield* e;\n\
+  ```\n\n表达式 `e` 必须求值为集合（collection），否则将抛出运行时错误；`yield*` 将 `e` 的所有元素追加到闭包生成器的关联集合中。\n\
+  \n我们可以使用 `yield-each` 如下重写我们的代码：\n\n点击此处查看代码图像\n\n```dart\nnaturalsDownFrom(n) sync*\
+  \ {\n  if ( n > 0) {\n    yield n;\n    yield* naturalsDownFrom(n-1));\n  }\n}\n\
+  ```\n\n后者的版本运行复杂度为线性时间。\n\n### 6.2.10 标签 (Labels)\n\nDart 允许在代码中使用标签。标签的意图是便于工具自动生成代码。我们在这里提到它们是为了保持完整性。但是，你不应该在自己编写的代码中使用标签。它们是一种低级机制，不应该出现在由人类编写或旨在供人类阅读的代码中。\n\
+  \n### 6.2.11 Break 和 Continue\n\n`break` 和 `continue` 语句支持所谓的“半结构化控制流”。它们是 C 传统早期语言的遗留物。通常，当一个人深处控制结构内部并需要跳出整个流时，它们是很有用的。\n\
+  \n例如，假设我们正在循环中处理消息。我们持续处理消息，直到获取到消息 `#stop`。处理此种问题的一种方法是使用无限循环并使用 `break` 退出。\n\n\
+  点击此处查看代码图像\n\n```dart\nvar msg;\nwhile (true) {\n  msg = getMessage();\n  if (msg\
+  \ == #stop) break; else processMsg(msg);\n}\n```\n\n解决同一个问题的另一种方法是在循环顶部测试 `#stop`\
+  \ 消息：\n\n```dart\nvar msg = getMessage();\nwhile (msg != #stop) {\n  processMsg(msg);\n\
+  \  msg = getMessage();\n}\n```\n\n但这可能不够自然。不过，更好的做法是将上述内容提取为一个独立的例程，并使用 `return`\
+  \ 来跳出：\n\n点击此处查看代码图像\n\n```dart\nprocessMessages() {\n  var msg;\n  while (true)\
+  \ {\n    msg = getMessage();\n    if (msg == #stop) return; else processMsg(msg);\n\
+  \  }\n}\n```\n\n小方法是良好的编程风格。方法有一个名称，有助于记录代码的意图，而且，短方法比具有深层嵌套控制结构长方法更容易阅读和理解。\n\n\
+  按照规则，`break` 语句将跳出最近的闭包循环（无论是 `while`、`do` 还是 `for`）或 `switch` 语句。任何中间的 `finally`\
+  \ 子句将被执行。如果编写了一个没有包含在循环或 `switch` 中的 `break` 语句，则会发生编译错误。\n\n人们还可以将 `break` 语句与标签关联。在这种情况下，必须有一个具有相同标签的闭包语句，且控制将跳转到该语句。同样，任何中间的\
+  \ `finally` 子句将被执行。正如上面 第 6.2.10 节 所述，标签（以及针对它们的 `break` 或 `continue` 语句）不应在人类编写或阅读的代码中使用。这些构造纯粹是为了便于编译为\
+  \ Dart。\n\n`continue` 语句与 `break` 非常相似，但它局限于循环。它的效果不是跳出循环，而是立即继续下一次迭代。\n\n### 6.3\
+  \ 总结\n\nDart 提供了一套相当常规的表达式和语句。其主要目标是让主流程序员感到熟悉。一些细节上有所不同，例如：\n\n- 条件判断和循环中对布尔项的处理，这是源于\
+  \ Dart 对运行时强制转换的反感。\n- `switch` 的规则。\n- 对 `for` 循环变量的处理，以防止常见错误。\n- `catch` 子句中对堆栈跟踪的处理，这是源于支持更高效异常处理的愿望。\n\
+  - 允许用户定义对象作为常量。\n- 运算符，它们大部分被视为实例方法，例如在 Smalltalk 或 Scala 中那样。与这些语言不同，操作符集被限制在一个固定范围内。\n\
+  - 对异步的支持。\n\n## 第 7 章 反射 (Reflection)\n\n什么是反射？对于我们的目的而言，反射是程序检查或修改自身的能力。反射可以进一步细分为*内省*（introspection，即程序在运行时确定其结构的能力）和*自修改*（self-modification，即程序在运行时改变自身的能力）。\n\
+  \n目前，Dart 仅支持内省。我们预计自修改的支持随时间推移而演进。\n\nDart 中的反射基于*镜子* (mirrors) 概念。在此语境下，镜子*是一个反射另一个对象的对象。镜子是反射\
+  \ API 的特殊形式，在分布、部署和安全方面具有优势，我们将在 第 7.2 节 中深入讨论这些。首先，我们将建立对“为什么”以及“如何”使用镜子的理解。\n\n\
+  ### 7.1 内省 (Introspection)\n\n在 Dart 中，人们可以对库、类、函数以及对象进行内省。要反射一个实体，你需要获取一个镜子。首先，我们将建立对为什么以及如何使用镜子的理解。\n\
+  \n该程序使用 `dart:mirrors` 中定义的顶层函数 `reflectClass()` 来获取 `SelfPrinting` 类的镜子。结果是一个 `ClassMirror`\
+  \ 实例，它支持 `instanceMembers` 方法。在类镜子上调用 `instanceMembers` 会返回一个以反射类的成员名称为键的映射。该映射的键构成了成员名称列表，我们可以直接打印它们。\n\
+  \n```dart\nimport 'dart:mirrors';\n\nmain() {\n  ClassMirror cm = reflectClass(SelfPrinting);\n\
+  \  for (Symbol memberName in cm.instanceMembers.keys) {\n    print('$memberName');\n\
+  \  }\n}\n```\n\n运行此程序应该输出^(1)。如果你运行并看到类似 `Symbol(“gobbledygook”)`，请确保禁用混淆，这将在下面的\
+  \ 第 7.1.1 节 中描述。\n\n```\nSymbol(\"==\")\nSymbol(\"hashCode\")\nSymbol(\"toString\"\
+  )\nSymbol(\"noSuchMethod\")\nSymbol(\"runtimeType\")\nSymbol(\"superField\")\nSymbol(\"\
+  superField=\")\nSymbol(\"superFinalField\")\nSymbol(\"superGetter\")\nSymbol(\"\
+  superSetter=\")\nSymbol(\"superMethod\")\nSymbol(\"aField\")\nSymbol(\"aField=\"\
+  )\nSymbol(\"aFinalField\")\nSymbol(\"aGetter\")\nSymbol(\"aSetter=\")\nSymbol(\"\
+  aMethod\")\n```\n\n打印出的值都是 `Symbol` 类的实例，用于整个 Dart 镜像 API 中表示反射实体的名称。我们将在下一节中对符号进行更多说明。\n\
+  \n\n\n\n\n关于上述列表有几点需要注意。对于字段 `superField` 和 `aField`，列出了两个项。一个是 getter（访问器），另一个（以\
+  \ `=` 结尾）是 setter（存器）。`instanceMembers` 方法的设计目的是为我们提供实例的 API——即可以调用的成员集合。由于 Dart\
+  \ 中从不直接访问字段，因此结果实际上并不包含对字段声明的镜像（mirror）。相反，提供的是隐式定义的 getter 和 setter 方法的镜像。这就是为什么\
+  \ `final` 字段在列表中只显示一次：final 字段会产生 getter 但不会产生 setter。\n\n列表包含了继承的成员，以及由 `SelfPrinting`\
+  \ 自身声明的成员。这些包括 `Superclass` 和 `Object` 的成员。同样，`instanceMembers` 为我们提供了 `SelfPrinting`\
+  \ 类实例的 API，其中包含了继承的成员。\n\n由于我们请求的是实例成员，因此静态成员（static members）和构造函数没有被列出。这是合理的，因为这两者都无法通过类的实例来调用。假设我们稍微修改一下\
+  \ `for` 循环：\n\n点击此处查看代码图片\n\n```\nfor (Symbol memberName in cm.staticMembers.keys)\
+  \ {\n    print('$memberName');\n}\n```\n\n现在我们得到了 `Symbol(\"staticField\")`\n\n\
+  `Symbol(\"staticField=\")`\n\n`Symbol(\"staticFinalField\")`\n\n`Symbol(\"staticConstField\"\
+  )`\n\n`Symbol(\"staticGetter\")`\n\n`Symbol(\"staticSetter=\")`\n\n`Symbol(\"staticMethod\"\
+  )`\n\n再次看到，像 `staticField` 这样的可变字段的 getter 和 setter 是如何被列出来的。`SuperClass` 的静态成员没有出现在此列表中；静态成员是不被继承的，且无法通过\
+  \ `SelfPrinting` 调用。\n\n#### 7.1.1 对速度和大小的影响\n\n如果你直接在 Dart 虚拟机上运行代码，那么可以假设整个 Dart\
+  \ 平台以及你的完整应用程序源码在运行时都是可用的。然而，在许多部署场景中情况并非如此。\n\n最常见的情况是将 Dart 编译为 Javascript 以部署到\
+  \ 浏览器。Dart-to-Javascript 编译器试图尽可能地缩小其生成代码的大小。生成的代码越小，通过网络下载的速度越快，程序启动时解析源代码的时间就越短。然而，最小化部署代码大小与反射之间存在多种交互方式。\n\
+  \n#### 7.1.1.1 树摇优化 (Tree Shaking)\n\n编译器会避免生成从未未使用的代码。通过被称为*树摇*的过程，编译器会确定某些代码在给定应用程序中是否真的被使用。如果一个应用程序只使用了大型库中的单个函数，则没有必要生成、下载和解析该库中所有其他代码。事实上，这样做至关重要；想象一下如果每个使用\
+  \ Dart 的网页都必须下载整个 Dart 核心库的代码，即使是一个简单的“Hello World”程序，也将有几 MB 大小！\n\n反射带来了困难。要预测哪些代码是通过反射调用的非常困难。某种实现可能会采取保守策略，假设如果使用了反射，系统中的所有代码都必须保留在生成的输出中，因为它们可能被反射调用。结果将是，任何对反射的使用都会在代码大小上付出巨大代价，并对启动时间和内存占用产生不利影响。在另一个极端，实现可能会决定在树摇优化时忽略反射的使用。遗憾的后果是，在测试和开发期间正常的反射调用在生产环境中可能会失败，因为它们需要的代码并不在那里。\n\
+  \n在实践中，目前的实现采用了前一种方法。然而，可以使用元数据注解和 `reflectable` 包来管理这个问题，如第 7.4 节 所示。\n\n#### 7.1.1.2\
+  \ 代码压缩 (Minification)\n\n*代码压缩*（minification）一词是指对下载到浏览器的源程序中的符号的过程。源代码中使用的名称会被混淆（mangled）为编译代码中使用的短名称。执行压缩的程序称为*压缩器*（minifier）。\n\
+  \n压缩器不对字符串字面量操作；这些通常代表需要保留的用户数据；字符串可能会为了人类阅读而打印，或作为外部数据库的键，因此无法安全地进行混淆。\n\n压缩对反射产生了不幸的后果。使用字符串来表示声明名称是自然的。然而，一旦程序经过压缩，这些字符串就不再对应程序中实体的实际名称。\n\
+  \n为了减轻压缩带来的损害，Dart 反射使用 `symbols`^(2)(6.1.1.5) 而不是字符串作为键。符号会被压缩器识别并使用与代码中标识符相同的混淆方法进行转换。\n\
+  \n**2。** 事实上，反射是为 Dart 添加符号字面量的主要动机。\n\n有时有必要在符号和人类可读字符串之间进行映射。我们可能希望上一节中的自打印代码直接打印出成员名称，而不是以\
+  \ `Symbol(...)` 的形式。在存在代码压缩的情况下，这尤为关键；压缩后的程序将打印带有压缩名称的符号，这对于人类读者可能没有用处。为了避免此类问题，镜像\
+  \ API 支持符号和可读字符串之间的双向转换。`MirrorSystem` 类包含方法：\n\n点击此处查看代码图片\n\n```\nstatic String\
+  \ getName(Symbol symbol);\nstatic Symbol getSymbol(String name, [LibraryMirror library])\n\
+  ```\n\n要将符号转换为表示其统一名称的字符串，请使用 `getName`。反向操作是 `getSymbol`；它将根据可读字符串生成符号。我们可以利用此功能来完善我们的自打印示例。我们在导入的\
+  \ `show` 子句中添加 `MirrorSystem`，并调用 `MirrorSystem.getName()` 进行必要的转换。\n\n点击此处查看代码图片\n\
+  \n```\nimport 'dart:mirrors' show ClassMirror, MirrorSystem, reflectClass;\n\nclass\
+  \ SuperClass {\n// 与上文保持不变\n}\n\nclass SelfPrinting extends SuperClass {\n// 同样保持不变\n\
+  }\n\nmain() {\n  ClassMirror cm = reflectClass(SelfPrinting);\n  for (Symbol memberName\
+  \ in cm.instanceMembers.keys) {\n    print('${MirrorSystem.getName(memberName)}');\n\
+  \  }\n}\n```\n\n运行上述代码将输出\n\n==\n\nhashCode\n\ntoString\n\nnoSuchMethod\n\nruntimeType\n\
+  \nsuperField\n\nsuperField=\n\nsuperFinalField\n\nsuperGetter\n\nsuperSetter=\n\n\
+  superMethod\n\naField\n\naField=\n\naFinalField\n\naGetter\n\naSetter=\n\naMethod\n\
+  \n无论是否经过压缩。然而，自打印代码并不是最流行的应用程序。在建立基础之后，我们现在将考虑更现实的反射用法。\n\n#### 7.1.2 示例：代理 (Proxies)\n\
+  \n在第 2.10 节中我们定义了一个通用代理类 `Proxy`。它的实现依赖于辅助方法 `runMethod()`。我们终于可以展示 `runMethod()`\
+  \ 的实现了：\n\n点击此处查看代码图片\n\n```\nrunMethod(forwardee, Invocation inv){\n  InstanceMirror\
+  \ im = reflect(forwardee);\n  im.delegate(inv);\n}\n```\n\n第一步是使用 `dart:mirrors`\
+  \ 中的顶层函数 `reflect()` 获取 `forwardee` 的镜像。实例由 `InstanceMirror` 类镜像。实例镜像支持 `delegate()`\
+  \ 方法，它接收一个 `Invocation` 并根据调用调用提供的参数在反射对象上执行相应的方法。\n\n\n\n\n在现实中，我们希望避免每次调用时都分配一个实例镜像（instance\
+  \ mirror）。我们将重写 `Proxy`，以便将实例镜像缓存在一个私有实例变量中。\n\n点击此处查看代码图片\n\n```dart\nlibrary proxies;\n\
+  \nimport 'dart:mirrors' show InstanceMirror, reflect;\n\n@proxy class Proxy {\n\n\
+  \ InstanceMirror _im;\n\n  get forwardee => _im.reflectee;\n\n ProxyProxy(f){\n\
+  \    _im = reflect(f);\n  }\n\n  noSuchMethod(inv) => _im.delegate(inv);\n}\n```\n\
+  \n为了保持原始接口，我们为 `forwardee` 定义了一个访问器（getter）。大多数镜像都有一个名为 `reflectee` 的访问器，用于返回镜像所反射的实体；在这里我们使用\
+  \ `reflectee` 来实现 `forwardee`。完成后的类带有在第 5.7.6 节描述的 `@proxy` 注解，以减少不必要的警告。\n\n####\
+  \ 7.1.3 示例：序列化\n\n当我们谈到*对象序列化*（object serialization）时，指的是将一个对象写入外部介质。同样，*对象反序列化*（object\
+  \ deserialization）指的是从外部介质读取一个对象。外部介质可以是持久存储，也可以是通信通道。如果我们想持久地保存程序状态，或者我们在对象级别与远程进程进行通信，那么序列化对象是有用的。我们将在第\
+  \ 8 章中看到后者的示例。\n\n对象序列化是一个非常丰富的话题，我们在这里不会展现它的全貌。我们在这里展示序列化器/反序列化器必然是简单的；它既不健壮，也不完整，更高效。序列化对象有不同的方法，各有优缺点，我们不进行讨论。尽管有这些限制，我们仍然选择序列化作为一个说明性的，因为它是反射的一个经典应用。\n\
+  \n序列化器需要为对象定义一种标准表示。我们将通过对象的类和字段来表示对象。具体而言，我们将存储类、定义该类的库名以及对象字段的内容。\n\n假设我们希望序列化通过表达式\
+  \ `new Point(42, 91)` 创建的对象 `s`。记得 `Point` 是定义在第 1.4 节中的 `points` 库中的。`s` 的序列化形式将是\
+  \ `points/Point(42 91)`。\n\n如果我们有这样的代码：\n\n点击此处查看代码图片\n\n```dart\nvar shared = new\
+  \ Point(42, 91);\n\nvar so = new Pair(shared, shared);\n```\n\n其中 `Pair` 是在第 2.7\
+  \ 节中声明的类。建议的格式不再不再了。假设 `Pair` 定义在 `pairs` 库中，其序列化形式将是\n\n点击此处查看代码图片\n\n`pairs/Pair(points/Point(42\
+  \ 91) points/Point(42 91))`\n\n但这并没有正确捕获结构。`Pair` 对象最终引用了两个不同的 `Point` 实例，而不是单个\
+  \ `Point` 对象 `shared`。问题在于源程序总是树形，但对象可以形成有向图。我们必须泛化表示方法以支持此类图。\n\n为了支持共享，我们将使用整数索引来表示对对象的引用。对象的表示即为类的完全限定名，后面紧跟实际的参数列表，其中参数通过整数索引表示。新的\
+  \ `Pair(shared, shared)` 的序列化形式将是 `pairs/Pair(1 1)`。\n\n对象图的完整序列化形式将是此类序列化对象的列表。整数索引将引用列表的元素。在示例中，图可以写为\
+  \ `[pairs/Pair(1 1), points/Point(2 3), 42, 91]`。`Pair` 对象本身位于索引 0，共享的 `Point` 实例位于索引\
+  \ 1，整数 42 位于索引 2，整数 91 位于索引 3。\n\n这一切引导如下定义：\n\n点击此处查看代码图片\n\n```dart\nclass SerializedObject\
+  \ {\n\n  final int id;\n\n  final Symbol libName;\n\n  final Symbol className;\n\
+  \n  List<int> fields;\n\n  SerializedObject(this.id, this.libName, this.className);\n\
+  \n  toString(){\n    String args = (fields.map((a) => a.toString())).fold('', (s,\
+  \ e) => '$s $e');\n    return '${MirrorSystem.getName(libName)}/${MirrorSystem.getName(className)}($args)';\n\
+  \  }\n}\n```\n\n序列化对象有一个唯一的整数标识符 `id`，并记录了其类和所属库的名称，以及字段的内容。这些字段被表示为它们所包含对象的整数 ID。\n\
+  \n`toString()` 方法使用这些信息来产生对象的序列化形式。\n\n系统提供了几类常见的 Dart 对象，它们的表示形式是不透明的。这些包括如 `null`\
+  \ 等字面量、数字、布尔值、字符串和符号。我们将为这些使用特殊的表示方法：\n\n点击此处查看代码图片\n\n```dart\nclass SerializedLiteral\
+  \ implements SerializedObject {\n\n  final int id;\n\n  final literal;\n\n  SerializedLiteral(this.id,\
+  \ this.literal);\n\n  Symbol get className => #literal;\n\n  Symbol get libName\
+  \ => #literal;\n\n  List<int> get fields => [];\n\n  set fields(f){}\n\n  String\
+  \ toString() => literal is String ? \"'$literal\"': literal.toString();\n}\n```\n\
+  \n`SerializedLiteral` 类实现了 `SerializedObject` 接口。事实上，许多模拟成员从未被使用，定义它们是为了正式符合接口。我们可以选择不实现它们并忽略警告。列表和映射也有特殊的语法。它们比上面提到的字面量复杂，因为它们引用其他对象。我们在这里只处理列表以保持简单。扩展到映射留给读者练习。\n\
+  \n和所有序列化对象一样，序列化列表需要一个整数 `id`。列表的序列化形式保留了其内容的索引列表。`toString()` 方法提供由方括号包围的索引列表形式。和之前一样，我们确保模拟了\
+  \ `SerializedObject` 接口的其他部分。\n\n#### 7.1.3.1 序列化算法\n\n现在我们可以开始编写序列化器。\n\n点击此处查看代码图片\n\
+  \n```dart\nlibrary serializer;\n\nimport 'dart:mirrors' show ClassMirror, InstanceMirror,\
+  \ MethodMirror, Mirror, MirrorSystem, reflect, VariableMirror;\n\nMap<Object, SerializedObject>\
+  \ sos;\n\n// 序列化对象\n\nint counter;\n```\n\n当我们序列化对象图时，将其序列化形式存储在映射 `sos` 中，以对象本身为键。每当序列化一个对象，我们就分配一个整数索引。该索引是\
+  \ `counter` 的当前值。在序列化每个对象后，增加 `counter`。\n\n我们需要检测对象图中的循环，以防止序列化时出现无限循环。稍后我们将详细看到它是如何工作的。\n\
+  \n我们还需要几个工具函数。`isLiteral` 函数用于识别我们特殊处理的已知类型对象。\n\n\n\n\n点击此处查看代码图像\n\n```dart\n\
+  bool isLiteral(o) {\n  return o is num || o is bool || o is String || o is Symbol\
+  \ || null == o;\n}\n```\n\n`superclasses` 函数计算给定类的所有父类。在反射地处理类层次结构时，通常需要这个非常有便利方法。然而，它并不是\
+  \ `dart:mirrors` 的一部分，因为我们想保持 Dart 核心的简洁。\n\n点击此处查看代码图像\n\n```dart\nList<ClassMirror>\
+  \ superclasses(ClassMirror cm) {\n  List<ClassMirror> scs = new List<ClassMirror>();\n\
+  \  ClassMirror scm = cm;\n  while (scm != null) {\n    scs.add(scm);\n    scm =\
+  \ scm.superclass;\n  }\n  return scs;\n}\n```\n\n该函数的逻辑非常直观；它依赖于 `ClassMirror` 的\
+  \ `superclass` 方法，该方法返回由镜像反射的类的父类（一个类镜像）。对于 `Object`，`superclass` 的结果是 `null`。我们做的只需沿着父类链向上移动，并将这些类添加到我们的结果列表中。在这里，我们认为父类关系是自反的，因此一个类的父类列表包含了类本身。这种公式方式在下面的代码中被证明非常方便。\n\
+  \n现在我们可以关注序列化算法本身了。入口点是 `serialize` 函数，它接收对象图的根节点并序列化该图。\n\n点击此处查看代码图像\n\n```dart\n\
+  List <String> serialize(o) {\n  counter = 0;\n  sos = new Map<Object, SerializedObject>();\n\
+  \  serializeObject(o);\n  List <String> sf = new List<String>(sos.values.length);\n\
+  \  for (var v in sos.values) {sf[v.id] = v.toString();}\n  return sf;\n}\n```\n\n\
+  `serialize` 所做的只是初始化 `counter` 和 `sos`，对根节点调用 `serializeObject`，并将结果按照序列化对象 ID 的顺序封装在列表中。大部分工作由\
+  \ `serializeObject` 程完成的，它递归地序列化一个对象及其字段。\n\n点击此处查看代码图像\n\n```dart\nSerializedObject\
+  \ serializeObject(o){\n  SerializedObject current = sos[o];\n  if (current != null)\
+  \ {\n    return current;\n  }\n  if (isLiteral(o)) {return sos[o] = new SerializedLiteral(counter++,\
+  \ o);}\n  if (o is List) {\n    return sos[o] = serializeList(o);\n  }\n  InstanceMirror\
+  \ im = reflect(o);\n  ClassMirror cm = im.type;\n  var res = sos[o] = new SerializedObject(counter++,\
+  \ cm.owner.simpleName, cm.simpleName);\n  res.fields = serializeFields(cm, im);\n\
+  \  return res;\n}\n```\n\n我们首先在序列化对象映射 `sos` 中查找该对象。如果找到了，说明我们已经遇到过它，可以返回它的序列化形式。这确保了我们正确地表示共享，并防止我们在循环对象图上陷入无限递归。\n\
+  \n假设我们之前没有遇到 `o`，我们检查它是否为字面量；如果是，我们就产生一个合适的 `SerializedLiteral`，将其存储在 `sos` 中并返回。同样，我们检查该对象是否为列表，如果是，则使用以下例程创建一个\
+  \ `SerializedList`：\n\n点击此处查看代码图像\n\n```dart\nSerializedList serializeList(List\
+  \ l) {\n  SerializedList sl = new SerializedList(counter++);\n  sl.fields = l.map((e)\
+  \ => serializeObject(e).id).toList();\n  return sl;\n}\n```\n\n否则，我们有一个要序列化的普通对象\
+  \ `o`。我们获取 `o` 的镜像，然后获取其类的镜像。我们可以通过实例镜像使用 `type()` 方法获取对象类的镜像。与 `runtimeType` 不同，`type`\
+  \ 返回的是底层对象真实类的镜像。\n\n`ClassMirror` 通过 `simpleName()` 方法提供类的名称。我们还可以通过 `owner` 方法获取其所在库的镜像。`owner`\
+  \ 方法返回被反射实体的封装声明的镜像。在类的情况下，owner 始终是一个库。对于方法和函数，owner 可能是库、类或另一个函数。关键点在于人们可以使用 `owner`\
+  \ 遍历声明的词法作用域。\n\n在我们的案例中，我们想要的只是封装库的名称，我们可以使用 `owner.simpleName()` 计算它。我们本可以直接使用\
+  \ `qualifiedName()` 获取类的完全限定名，但我们更倾向于分别获取并存储这些名称。（此处注：原文后续存在大量重复内容，翻译时已根据要求进行清理）。\n\
+  \n\n\n\n\n#### 7.1.3.2 反序列化\n\n反序列化器带来了额外的问题。\n\n点击此处查看代码图像\n\n```dart\nlibrary\
+  \ deserializer;\n\nimport 'serializer.dart' as serializer show isInstanceField,\
+  \ SerializedList,\n                                     SerializedLiteral, SerializedObject;\n\
+  import 'dart:mirrors' show ClassMirror, currentMirrorSystem, InstanceMirror,\n \
+  \                                    LibraryMirror, MethodMirror, Mirror, MirrorSystem,\n\
+  \                                     VariableMirror;\nimport 'dart:math' as math\
+  \ show pow;\nimport '../grammars/CombinatorialParsing.dart' show CombinatorialParser,\n\
+  \                                             ExecutableGrammar, Token;\n\nMap<int,\
+  \ dynamic> dsos; // 反序列化的对象\nList<String> serializedForm;\n\nCombinatorialParser\
+  \ parser = new SerializedObjectParser().serializedObject;\n\nint sid;\n```\n\n我们将反序列化的对象存储在一个映射\
+  \ `dsos` 中，并键键为它们在序列化形式中的索引。该映射初始为空空的。反序列化器只需遍历序列化器生成的序列化形式（这仅仅是一个字符串列表）。我们依次使用函数\
+  \ `deserializeString` 来反序列化列表中的每个元素：\n\n点击此处查看代码图像\n\n```dart\ndeserialize(List<String>\
+  \ sf) {\n  sid = 0;\n  dsos = {};\n  serializedForm = sf;\n  // 序列化形式是一个字符串列表。依次遍历每一个并\n\
+  \  // 反序列化\n  for(String s in sf) {\n    deserializeString(s);\n    sid++;\n  }\n\
+  \  return dsos;\n}\n\nvoid deserializeString(String s) {\n  if (dsos[sid] == null)\
+  \ {\n    deserializeObject(parser.parse(s));\n  }\n}\n```\n\n随后，`deserializeString`\
+  \ 将单个对象的序列化形式解析为 `SerializedObject`。它会检查当前对象 ID 是否已经过解析，以便正确处理共享和循环引用。然后它会解析序列化形式并将其传递给\
+  \ `deserializeObject`。代码依赖于 `parse` 函数。在下一节中，我们将描述一个可以方便构建解析器的框架。然后我们将使用该框架定义 `parse`。在此期间，你必须相信\
+  \ `parse` 能够完成它的工作。\n\n理想情况下，我们希望在反序列化期间避免运行任何用户代码（例如构造函数）。然而我们需要某种方法来创建正在反序列化的对象。在某些系统中，有一种机制可以在不执行构造函数的情况下分配类的原始实例。例如，在\
+  \ Smalltalk 家族语言中，类支持 `basicNew` 方法，在 JVM 上，`new` 字节码的作用也类似。在使用 `basicNew` 或等等物时，可以产生处于未正确初始化状态的实例。这是有问题的，因为可能会导致安全问题。因此，真的必须非常小心如何暴露此类功能。尽管如此，我们认为可以通过适当结构的镜像（mirrors）来暴露它，特别是因为\
+  \ Dart 镜像并不承担任何安全角色。\n\n在获得原始实例后，可以使用反射根据序列化对象的描述设置其所有字段，从而产生对原始对象的精确反序列化。\n\n在没有\
+  \ `basicNew` 的情况下，我们如何创建原始实例呢？我们将玩一个相当“脏”的技巧。我们将调用构造函数，但将传入特殊的代理对象作为参数。这些对象通过返回自身来响应所有的方法调用。\n\
+  \n点击此处查看代码图像\n\n```dart\n@proxy class OmniProxy {\n  noSuchMethod(Invocation) =>\
+  \ this;\n}\n```\n\n`OmniProxy` 的实例将处理构造函数直接或间接调用的所有方法调用。当然，生成的对象处于一种完全不一致的状态，但我们从\
+  \ `basicNew` 得到的原始对象也是如此。一旦我们拿到原始对象，将使用反射正确地设置其状态。\n\n\n\n\n\n点击此处查看代码图像\n\n```\n\
+  int setFields(InstanceMirror im, ClassMirror cm, Iterable fields) {\n  int fieldIndex\
+  \ = 0;\n  // iterate over all fields, including superclasses\n  if (cm.superclass.reflectedType\
+  \ != Object) {\n    fieldIndex = setFields(im, cm.superclass, fields);\n  }\n  for\
+  \ (VariableMirror vm in cm.declarations.values.where(serializer.isInstanceField)\
+  \ {\n    im.setField(vm.simpleName, fields.elementAt(fieldIndex++));\n  }\n  return\
+  \ fieldIndex;\n}\n```\n\n`setFields()` 方法填充通过实例镜像 `im` 指定的对象的字段。类镜像 `cm` 规定了应该填充哪些字段；只有在通过\
+  \ `cm` 所代表的类及其父类中声明的字段会被填充。字段本身通过一个可迭代的 `fields` 指定。代码会沿着类链向上递归，直到到达 `Object` 的直接子类。众\
+  \ own `Object` 不包含任何字段，因此没有必要访问它。对于访问的每个类，我们通过反射循环遍历实例变量，并使用 `setField` 方法逐个设置每个字段。我们使用\
+  \ `fieldIndex` 来跟踪已处理的字段。\n\n我们概述的这种方法本质上是有局限性的。与 Dart 中所有通用代理方案一样，它在存在类型测试和强制转换或检查模式（checked\
+  \ mode）时无法正常工作。如果构造函数依赖于副作用（它们本不应该这样做），它也将无法良好工作。在某些情况下，依赖参数之间标识性（或缺乏标识性）的构造函数也可能遇到困难。如果构造函数依赖于任何无法重定义的运算符，也是如此。\n\
+  \n无论是否使用代理，通过反射设置字段都是有问题的，因为 `setField` 实际上调用了设置方法（setter method），而该方法可能会被重写或隐藏。这与之前讨论的\
+  \ `getField` 问题类似。究 ultimate，Dart 应该支持一种能够实际修改特定实例变量的反射操作。再次，我们这里的目的是教学性的，因此我们将这些顾虑都放在了一边。\n\
+  \n#### 7.1.4 示例：解析器组合器\n\n作为使用反射以及整体 Dart 编程的另一个示例，我们将查看解析器组合器（parser combinators）。解析器组合器是由其他解析器组合成解析器的操作。例如，考虑一个用于标识符的简单\
+  \ EBNF 产生式：\n\n`identifier` → `letter(`letter`|`digit`)*\n\n我们将借助解析器组合器库 `combinatorialParsing.dart`\
+  \ 在 Dart 中表示这一产生式。使用 `combinatorialParsing`，一个用于此类标识符的解析器可以由解析字母的解析器和解析数字的解析器构建出来：\n\
+  \n点击此处查看代码图像\n\n```\nvar identifier = letter & (letter | digit).star;\n```\n\nDart\
+  \ 代码非常接近 EBNF 规范。假设 `letter` 是一个解析单个字母的解析器，`digit` 是一个解析单个数字的解析器。\n\n解析器在其上定义了几个运算符。其中之一是\
+  \ `|`，它定义了“交替组合器”（alternating combinator）。它接受一个解析器作为输入参数，并返回一个新的解析器，该解析器接受接收者或参数接受的任何内容。因此，`letter\
+  \ | digit` 将解析单个字母或单个数字。\n\n这里介绍的交替解析器对应于 PEG[18] 中的交替运算符。它与 BNF 中的交替不同在于，它总是赋予左侧操作数优先级.^(3)\n\
+  \n**3。** 使用 PEG 对比 BNF 的影响远超本书的范范围。\n\n解析器还支持 get 器 方法 `star`。在解析器 `p` 上调用 `star`\
+  \ 的结果是一个新的解析器，该解析器接受空字符串或 `p` 接受的任何次数重复。由此可见，`(letter | digit).star` 解析零或多个字符序列，这些字符可以是字母或数字。\n\
+  \n最后，运算符 `&` 定义为返回一个新的解析器，该解析器先解析接收者解析的内容，然后解析其参数解析的内容。`letter & (letter | digit).star`\
+  \ 的效果是产生一个解析器对象，它解析一个字母，然后接受一个（可能为空的）字母或数字序列。\n\n这种方案的优之处在于它像 EBNF 记法一样是组合性的。实际上，我们现在有了一种用于定义解析器的领域特定语言，这种语言非常接近通常用于语法法的高级表示法。\n\
+  \n#### 7.1.4.1 完整的语法\n\n我们可以将整个语法定义为一个类，其中语法的每个产生式都是类的成员。语法被定义为 `ExecutableGrammar`\
+  \ 的子类，该类由 `combinatorialParsing` 提供。单个解析器的类型统一为 `CombinatorialParser`：\n\n点击此处查看代码图像\n\
+  \n```\nclass ExampleGrammar1 extends ExecutableGrammar {\n  CombinatorialParser\
+  \ digit, letter, id, identifier, expression;\n  ExampleGrammar1() {\n    digit =\
+  \ charBetween('0', '9');\n    letter = charBetween('a', 'z') | charBetween('A',\
+  \ 'Z');\n    id = (letter | digit).star;\n    identifier = tokenFor(id);\n    expression\
+  \ = identifier;\n  }\n}\n```\n\n`charBetween` 方法继承自 `ExecutableGrammar`；它接受两个表示范围的字符串并产生一个解析范围内字符的解析器。`tokenFor()`\
+  \ 方法也是继承的。它根据输入产生一个标记解析器。标记解析器会忽略空格。因此，框架允许我们处理词法产生式。这被称为无扫描器解析（scannerless parsing）。\n\
+  \n##### 7.1.4.2 语法子类与相互递归\n\n让我们扩展语法。幸运的地方在于，由于语法是类，我们可以像扩展类一样扩展它们——通过继承：\n\n点击此处查看代码图像\n\
+  \n```\nclass ExampleGrammar2 extends ExampleGrammar {\n  CombinatorialParser keywordIf,\
+  \ keywordThen, keywordElse, keywordReturn, ifStatement, returnStatement, statement;\n\
+  \  ExampleGrammar2() {\n    keywordIf = tokenFromSymbol('if');\n    keywordThen\
+  \ = tokenFromSymbol('then');\n    keywordElse = tokenFromSymbol('else');\n    keywordReturn\
+  \ = tokenFromSymbol('return');\n    returnStatement = keywordReturn & expression;\n\
+  \    ifStatement = keywordIf & expression & keywordThen & statement & keywordElse\
+  \ & statement;\n    statement = ifStatement | returnStatement;\n  }\n}\n```\n\n\
+  上述语法的一个有趣特性是它具有相互递归产生式。这在语法中很常见，但它产生了一个问题。当初始化 `ifStatement` 字段时，将调用 `statement`\
+  \ 的 getter，但它尚未初始化，所以其值将为 `null`。更改字段声明的顺序没有帮助，因为 `statement` 的初始化将尝试调用为 `null`\
+  \ 的 `ifStatement`。那么，上述代码应该如何工作呢？\n\n一种方法是不允许向前引用，但这是不可接受的。另一种方法是通过闭包指定产生式。在我们的情况下，将\
+  \ `ifStatement` 定义为闭包就足够了。\n\n点击此处查看代码图像\n\n```\nifStatement = () => keywordIf &\
+  \ expression & keywordThen & statement & keywordElse & statement;\n```\n\n当然，现在标识符\
+  \ `ifStatement` 返回闭包而不是解析器，必须调用函数来提取所需的解析器。我们必须更改引用 `ifStatement` 的方式：\n\n\n\n\n\
+  \n点击此处查看代码图像\n\n```javascript\nstatement = ifStatement() | returnStatement;\n```\n\
+  \n这些更改是有问题的。并不是所有的产生式（productions）都以相同的方式表示，这导致在引用产生式时产生困惑。人们可以决定始终对产生式使用闭包（closures），但使用闭包会在产生式的定义和使用处都增加模板代码，这使得我们的内部\
+  \ DSL 不那么有吸引力。\n\n#### 7.1.4.3 使用反射的前向引用解析器\n\n我们可以使用反射来解决这个问题。我们将语法对象的所有字段初始化为特殊的**前向引用解析器**`forward\
+  \ reference parsers`）。这些解析器将支持普通解析器所支持的所有组合器（combinators），因此初始化代码就可以顺利运行。当实际解析开始时，前向引用解析器会查找其所引用的解析器的最新值并据此进行解析。\n\
+  \n初始化字段为前向引用解析器的代码是解析器组合器库的一部分。具体来说，`ExecutableGrammar` 的构造函数将语法对象的所有字段设置为适当的前向引用解析器。由于库并不知道实际的语法，我们需要通过反射来发现这些字段并设置它们。\n\
+  \n点击此处查看代码图像\n\n```javascript\nabstract class ExecutableGrammar extends CombinatorialParser\
+  \ {\n\n  Map forwardReferenceTable = new Map();\n\n  InstanceMirror selfMirror;\n\
+  \n  ExecutableGrammar() {\n    selfMirror = reflect(this);\n    setupForwardReferences;\n\
+  \    bindForwardReferences;\n  }\n}\n```\n\n构造函数首先获取它正在创建的实例的镜像（mirror）。该镜像存储在 `selfMirror`\
+  \ 中，供 `setUpForwardReferences` 程序使用，该例程会将前向解析器分配给 `this` 的所有实例变量。最初，前向解析器并不知道它们将转发到哪个解析器；如果我们在创建前向解析器时就知道这一点，那么根本就不需要前向解析器了。只有在用户定义的语法构造函数设置了所有实例变量后，我们才能实际上将每个前向解析器绑定到它应该转发的解析器上。\n\
+  \n显然，我们需要能够枚举语法所有的产生式，以便将前向解析器分配给相应的实例变量。我们使用一个私有工具方法 `allProductions` 来获取这些产生式。它依赖反射来遍历所有实例变量。\n\
+  \n点击此处查看代码图像\n\n```javascript\nList<VariableMirror> get allProductions {\n\n  List<VariableMirror>\
+  \ allProductions = new List();\n  ClassMirror gc = selfMirror.type;\n  while (gc.simpleName\
+  \ != #ExecutableGrammar) {\n    allProductions.addAll(gc.declarations.values.where(isInstanceField));\n\
+  \    gc = gc.superclass;\n  }\n  return allProductions;\n}\n```\n\n镜像库允许我们枚举单个类的声明（declarations）。我们需要向上爬爬类型层次以收集所有的声明。我们向上爬类型层次到\
+  \ `ExecutableGrammar`。这允许我们收集框架用户定义的所有字段，并忽略框架自身的不存储解析器的字段。\n\n通过 `_allProductions`，`setupForwardReferences`\
+  \ 遍历所有的语法产生式，为每个产生式分配一个全新的 `ForwardReferenceParser` 实例。\n\n实际使用的解析器将在子类的构造函数体内定义，这将在稍后运行。显然，正如刚刚提到的，在此阶段我们并不知道每个\
+  \ `ForwardReferenceParser` 将转发到哪个解析器。\n\n当子类构造函数运行时，它将实际的解析器分配给各种实例变量。在分配过程中，它将覆盖存储在每个字段中的前向解析器。然而，我们之后需要找到这些前向解析器，以便它们绑定到真实的解析器。因此，当创建每个\
+  \ `ForwardReferenceParser` 时，我们将其存储在映射 `forwardReferenceTable` 中，并以其字段名为键。\n\n点击此处查看代码图像\n\
+  \n```javascript\nget setupForwardReferences {\n\n  /* 遍历所有实例变量并将设置为新的前向引用 */\n \
+  \ /* 如果这些不对应于产生式，它们将由子类覆盖 */\n  for (VariableMirror slot in _allProductions){\n\
+  \    Symbol iv = slot.simpleName;\n    var fref = new ForwardReferenceParser();\n\
+  \    /* 假设 ExecutableGrammar 子类中定义的所有槽\n     * 都是产生式。如果它们有其他用途，则会被覆盖。\n     * 只有当子类定义了同名的字段时，这里才会失败。\n\
+  \     */\n    forwardReferenceTable[iv] = fref;\n    selfMirror.setField(iv, fref);\n\
+  \  }\n}\n```\n\n在子类构造函数运行之后，我们希望将前向解析器绑定到它们的目标。问题是，此时 `ExecutableGrammar` 的构造函数已经执行完毕。为了克服这个困难，每个前向解析器都有一个字段\
+  \ `bindingRoutine`，它持有一个将其绑定到目标的闭包。当 `ForwardReferenceParser` 第一次被解析某些内容时，它会检查是否已经绑定；如果未，则调用\
+  \ `bindingRoutine`。\n\n在 `setupForwardReferences` 中，我们为所有解析器设置了 `bindingRoutine`：\n\
+  \n```javascript\n// 前向引用\nget setupForwardReferences {\n  for (var v in forwardReferenceTable.values)\
+  \ {\n    v.bindingRoutine = () => finalReferencesReferences;\n  }\n}\n\nget finalForwardReferences\
+  \ {\n  forwardReferenceTable.forEach((k, v) => {\n    var p = getRealField(k);\n\
+  \    if (p is CombinatorialParser) {\n      v.bind(p);\n      p.name = MirrorSystem.getName(k);\n\
+  \    }\n  });\n}\n```\n\n`finalForwardReferences` 方法实际上绑定了所有的解析器，因此实际上它只会被调用一次，由第一个需要解析内容的前向解析器调用。该方法遍历\
+  \ `forwardReferenceTable`，并将每个前向解析器设置为字段中存储的值。我们再次使用反射来获取我们想要绑定的目标解析器。该解析器存储在一个字段中，该字段的名称就是我们正在绑定的前向解析器映射条目的键。\n\
+  \n在此处查看代码图像\n\n```javascript\nCombinatorialParser getRealField(Symbol k){\n  /*\n\
+  \   * 如果当前类有 getter k 但没有字段\n   * 那么假设其 getter k 覆盖了存储在父类字段\n   * 中且带有包装解析器的产生式\
+  \ k。\n   */\n  var p = selfMirror.getField(k).reflectee;\n  if (selfMirror.type.getters.containsKey(k)\
+  \ &&\n      selfMirror.type.declarations.values.where(isInstanceField).isEmpty())\n\
+  \    return p.parser;\n  else return p;\n}\n```\n\n\n\n\n点击此处查看代码图像\n\n```dart\n\
+  class SerializedObjectGrammar extends ExecutableGrammar {\n  CombinatorialParser\
+  \ comma, decimal, digit, dot, doublequote, id, identifier,\n                   \
+  \   integer, lbracket, letter, libName, list, literal, lparen,\n               \
+  \       nonliteral, number, rbracket, rparen, serializedObject, slash,\n       \
+  \               space, string, stringContent, sym, truth, underscore, untruth;\n\
+  \  SerializedObjectGrammar(){\n    comma = token(',');\n    dot = token('.');\n\
+  \    doublequote = token('\"');\n    lbracket = token('[');\n    rbracket = token(']');\n\
+  \    lparen = token('(');\n    rparen = token(')');\n    slash = token('/');\n \
+  \   space = char(' ');\n    underscore = char('_');\n    digit = charBetween('0',\
+  \ '9');\n    letter = charBetween('a', 'z') | charBetween('A', 'Z');\n    integer\
+  \ = tokenFor(digit.plus);\n    decimal = tokenFor(digit.plus & char('.') & digit.plus);\n\
+  \    number = decimal | integer;\n    id = ((letter | underscore) & (letter | digit\
+  \ | underscore).star).wrapper(\n          (fst, snd) => '$fst${ new StringBuffer()..writeAll(snd)}'\n\
+  \    );\n    identifier = tokenFor(id);\n    truth = token('true');\n    untruth\
+  \ = token('false');\n    stringContent = (letter | digit | underscore | space).star;\n\
+  \    string = doublequote & stringContent & doublequote;\n    sym = token('Symbol')\
+  \ & lparen & doublequote & identifier\n          & doublequote & rparen;\n    literal\
+  \ = truth | untruth | number | sym | string;\n    list = lbracket & integer.star\
+  \ & rbracket;\n    libName = identifier & (dot & identifier).star;\n    nonliteral\
+  \ = libName & slash & identifier & lparen & integer.star & rparen;\n    serializedObject\
+  \ = literal | list | nonliteral;\n  }\n}\n```\n\n接下来，我们定义 `SerializedObjectGrammar`\
+  \ 的子类来生成 AST（抽象语法树）。在我们的案例中， AST 非常简单。它由 `SerializedObject` 实例和字面量组成：\n\n点击此处查看代码图像\n\
+  \n```dart\nclass SerializedObjectParser extends SerializedObjectGrammar {\n  _computeIntFrom(List\
+  \ ints) {\n    int val = 0;\n    int j = 0;\n    for (int i = ints.length-1; i >=\
+  \ 0; i–) {\n      val += int.parse(ints[j++]) * math.pow(10, i);\n    }\n    return\
+  \ val;\n  }\n  _computeFractionFrom(List ints) {\n    num val = 0;\n    for (int\
+  \ i = 0; i < ints.length; i++) {\n      val += int.parse(ints[i]) / math.pow(10,\
+  \ i+1);\n    }\n    return val;\n  }\n  CombinatorialParser get integer {\n    return\
+  \ super.integer.wrapper((Token ints) {return computeIntFrom(ints.token);});\n  }\n\
+  \  CombinatorialParser get truth => super.truth.wrapper((t) => true);\n  CombinatorialParser\
+  \ get untruth => super.untruth.wrapper((f) => false);\n  CombinatorialParser get\
+  \ decimal {\n    return super.decimal.wrapper((d){\n              return computeIntFrom(d.token[0])\
+  \ + computeFractionFrom(d.token[2]);\n    });\n  }\n  CombinatorialParser get string\
+  \ {\n    return super.string.wrapper((lq, s){\n      return s.fold('', (String s1,\
+  \ String s2) => s1 + s2);\n    });\n  }\n  CombinatorialParser get sym {\n    return\
+  \ super.sym.wrapper((f, lp, ldq, s, rdq, rp){\n      return MirrorSystem.get(s.token);\n\
+  \    });\n  }\n  CombinatorialParser get libName {\n    return super.libName.wrapper((Token\
+  \ hd, List tail) {\n      List l = [hd.token];\n      l.addAll(tail.map((List pair)\
+  \ => pair[0].token + pair[1].token));\n      String ln = l.reduce((String s1, String\
+  \ s2) => s1 + s2);\n      Symbol h = MirrorSystem.get(ln);\n      return h;\n  \
+  \  });\n  }\n  CombinatorialParser get nonliteral {\n    return super.nonliteral.wrapper(\n\
+  \      (Symbol libId, sl, Token classId, lp, List ints, rp) {\n        Symbol c\
+  \ = MirrorSystem.get(classId.token);\n        var dso = new serializer.SerializedObject(sid,\
+  \ libId, c);\n        dso.fields = ints;\n        return dso;\n      });\n  }\n\
+  \  CombinatorialParser get literal {\n    return super.literal.wrapper((l) {\n \
+  \     return new serializer.SerializedLiteral(sid, l);\n    });\n  }\n  CombinatorialParser\
+  \ get list {\n    return super.list.wrapper((lb, elems, rb) {\n      serializer.SerializedList\
+  \ res = new serializer.SerializedList(sid);\n      res.fields = elems;\n      return\
+  \ res;\n    });\n  }\n}\n```\n\n### 7.1.4. 使用 `noSuchMethod` 代替反射\n\n正如我们在 7.1.3\
+  \ 中提到的，使用反射会带来巨大的开销。是否有其他方法可以在不使用反射的情况下实现功能？有的。如 `RunnableGrammar` 类所示：\n\n点击此处查看代码图像\n\
+  \n```dart\nabstract class RunnableGrammar extends CombinatorialParser {\n  Map<Symbol,\
+  \ ForwardReferenceParser> forwardReferenceTable =\n    new Map<Symbol, ForwardReferenceParser>();\n\
+  \  Map<Symbol, dynamic> productions = new Map<Symbol, dynamic>();\n  // productions\
+  \ 可能会通过 noSuchMethod 插入\n  RunnableGrammar();\n  noSuchMethod(im){\n    // 如果是 getter，则在\
+  \ productions map 中查找\n    // 如果缺失，则安装一个引用器并返回\n    if (im.isGetter) {\n      var\
+  \ result;\n      return (result = productions[im.memberName]) == null ?\n      \
+  \  setupForwardReference(im.memberName): result;\n    };\n    // 如果是 setter，则在 productions\
+  \ map 中安装\n    // 注意 setter 名称和 getter 名称之间有 '='\n    if (im.isSetter){\n      String\
+  \ setterName = MirrorSystem.getName(im.memberName);\n      Symbol fieldName =\n\
+  \        new Symbol(setterName.substring(0, setterName.length - 1));\n      return\
+  \ productions[fieldName] = im.positionalArguments[0];\n    };\n    // 否则调用 super\
+  \ 方法\n    return super.noSuchMethod(im);\n  }\n  ForwardReferenceParser setupForwardReference(Symbol\
+  \ productionName){\n    ForwardReferenceParser fref = new ForwardReferenceParser();\n\
+  \    fref.bindingRoutine = () => finalForwardReferences;\n    return productions[productionName]\
+  \ = fref;\n          forwardReferenceTable[productionName] = fref;\n  }\n  // forward\
+  \ references\n  get finalForwardReferences {\n    forwardReferenceTable.forEach((k,\
+  \ v){\n      var p = productions[k];\n      if (p is CombinatorialParser) {\n  \
+  \      v.bind(p);\n        p.name = MirrorSystem.getName(k); /* 命名 productions 的良好位置\
+  \ */\n      }\n    });\n  }\n}\n```\n\n在这里，核心逻辑在于 `noSuchMethod`。产生式存储在 `productions`\
+  \ map 中，从产生式名称映射解析器。任何设置产生式的操作都会将其插入 map 中。当引用产生式时，会在 map 中查找。\n\n我们同时也失去了类型检查的优势。此外，实际解析速度会变慢，因为对产生式的访问都通过\
+  \ `noSuchMethod` 完成，这比普通的 getter 调用要得多。\n\n\n\n\n\n总的来说，在 Dart VM 上使用反射可能是更好的选择，但在通过\
+  \ Javascript 部署时，使用 `noSuchMethod` 可能更为合适。当然，人们也可以选择一种完全不同的方法，例如外部 DSL。一个很有前景的替代方案是使用支持代码生成的反射库；我们将在第\
+  \ 7.4 节中探讨该选项。\n\n### 7.2 为什么选择用镜像（Mirrors）\n\nDart 使用基于镜像的反射。在语言中处理反射有其他方法。为什么\
+  \ Dart 选择使用镜像呢？\n\n人们常说，计算领域中的每个问题都可以通过增加一层间接来解决。镜像就是一个很好的例子。\n\n镜像有助于反射代码和库的部署；通过将反射功能移动到独立的组件中，可以更容易识别是否使用了反射，从而判断反射代码是否需要在使用部署后的代码中被保留。\n\
+  \n在分布式系统中进行反射时，镜像非常有用。与直接通过处理如类等实际实现产物来进行反射的方法不同，镜像允许同时支持不同的实现。特别是，可以支持镜像的实现，使其作为独立地址空间（无论是另一个\
+  \ actor、进程还是远程机器）中代码和对象的代理。\n\n作为独立的对象，镜像充当反射的权限（capabilities），因此自然适用于对象-能力安全模型（object-capability\
+  \ security model）。\n\n前两个考虑与 Dart 相关；最后一个则不是，因为 Dart 的安全性是基于隔离器（isolates）。关于镜像的更详细讨论，请参阅本章末的相关工作部分（7.6）。\n\
+  \n### 7.3 元数据（Metadata）\n\nDart 中的声明可以使用元数据注解（`metadata annotations`）进行装饰。元数据在声明之前给出。元数据注解以符号（`@`）开头，后跟着常量变量的引用或对常量构造函数的调用。可以给出多个注解：\n\
+  \n点击此处查看代码图像\n\n```\n@deprecated prematureOptimization(x) { ... }\n\n@specialToLib1\
+  \ @ImportantToLib2(4) class MyClass {\n  @override toString() => 'I am in a class\
+  \ of my own';\n}\n```\n\n可以在运行时通过反射访问元数据。`dart:mirrors` 中的 `DeclarationMirror` 类有一个获取器\
+  \ `metadata`，它返回一个包含与声明相关的各种注解值的镜像列表。\n\n如果不对动态访问元数据，那么它不应该产生任何开销；良好的实现会在请求元数据之前忽略元数据。由于元数据完全由常量组成，其值独立于程序状态，因此可以在任何时间进行计算并得到相同的结果。特别是，元数据可以根据需要进行求值，避免对未使用的注解产生任何开销。\n\
+  \n在许多情况下，完全不需要动态地访问元数据。工具可以静态地、离线地解析代码，并根据需要利用元数据注解。\n\n我们现在来看一个通过反射访问元数据以获得某些优势的示例。\n\
+  \n### 7.4 通过代码生成进行反射\n\n如上述，当部署到不支持适当 Dart 虚拟机的平台（例如 Web 或 iOS）时，使用反射在空间上可能是昂贵的的。在许多情况下，我们可以调整代码来处理这个问题。\n\
+  \n为了防止部署的应用程序体积爆炸，实现需要知道哪些代码正在被反射地访问，以及如何访问。为此，Dart 支持一个替代的镜像库 `reflectable`。`reflectable`\
+  \ 要求被反射的代码必须带有特定的元数据注解。元数据描述了在反射已注解代码时必须支持哪些能力。例如，是否应该能够反射地调用类的成员、或分析它们的结构、或遍历类的超类型链等。\n\
+  \n我们将使用上面所示的解析器组合库来演示 `reflectable` 的用法。\n\n理想情况下，一旦所需的注解就绪，部署的代码在按预期运行的同时，其体积会小得多。在实践中，`reflectable`\
+  \ 和 `dart:mirrors` 之间仍然存在不兼容。因此，我们必须对代码进行一些微调。\n\n我们的第一步是导入 `reflectable`，并导入它的镜像库而不是标准的。\n\
+  \n点击此处查看代码图像\n\n```\nimport 'package:reflectable/reflectable.dart' show\n      declarationsCapability,\
+  \ instanceInvokeCapability, Reflectable,\n      TypeCapability, typeRelationsCapability;\n\
+  import 'package:reflectable/mirrors.dart' show ClassMirror, InstanceMirror, Mirror,\n\
+  \      VariableMirror;\n```\n\n下一步是定义我们需要的反射能力集。例如，我们需要反射地获取语法实例类型的能力。`reflectable`\
+  \ 为此定义了 `TypeCapability` 类。具体来说，`TypeCapability` 的构造函数接受一个常量 `t` 作为参数，并产生一个代表反射地获取\
+  \ `t` 实例类型的对象：\n\n点击此处查看代码图像\n\n```\nconst grammarTypeCapability = TypeCapability(ExecutableGrammar);\n\
+  ```\n\n`reflectable` 还为某些能力提供了预定义的常量。在这里我们使用了 `declarationsCapability`、`typeRelationsCapability`\
+  \ 和 `instanceInvokeCapability`。第一个允许我们访问类的结构，第二个允许我们遍历类型层次结构，最后一个允许反射地调用成员。\n\n\
+  要利用这些能力，我们需要创建一个拥有这些能力的镜像系统。`reflectable` 的镜像系统是 `Reflectable` 的子类。我们将定义 `Grammar`\
+  \ 类来描述语法需要的镜像系统：\n\n点击此处查看代码图像\n\n```\nconst grammar = const Grammar();\nclass Grammar\
+  \ extends Reflectable {\n  const Grammar() : super(declarationsCapability,\n   \
+  \ instanceInvokeCapability,\n    typeRelationsCapability,\n    grammarTypeCapability);\n\
+  }\n```\n\n我们需要在语法类上注解 `@grammar`，从而让 `reflectable` 知道这些类必须根据为 `grammar` 指定的能力通过反射进行访问。点击点击此处查看代码图像\n\
+  \n```\n@grammar abstract class ExecutableGrammar extends CombinatorialParser {...}\n\
+  ```\n\n`dart:mirrors` 和 `reflectable` 之间还有一些 API 不兼容`dart:mirrors` 中的 `getField`\
+  \ 和 `setField` 方法命名不当。在 `reflectable` 中，这些分别重命名为 `invokeGetter` 和 `invokeSetter`。我们需要在几处修改代码：4。未来的\
+  \ `dart:mirrors` 版本将解决这个问题。点击点击此处查看代码图像\n\n```\nCombinatorialParser getRealField(String\
+  \ k){\n  /* 一个粗略的黑科技，用于绕过 Dart 镜像库的缺陷。\n  * 如果当前类有 getter k 但没有字段 k\n  * 那么假设其 getter\
+  \ k 覆盖了存储在父类字段中的生产 k\n  * 并对字段内容带有包装解析器。\n  */\n  var p = selfMirror.invokeGetter(k);\n\
+  \  if (selfMirror.type.instanceMembers.containsKey(k) &&\n      selfMirror.type.declarations.values.where(isInstanceField).isEmpty)\n\
+  \    return p.parser;\n  else return p;\n}\n\nget setupForwardReferences {\n  /*\
+  \ 遍历非空实例变量并设置为一个新的前向引用 */\n}\n```\n\n\n\n\n```javascript\n/* If these do not correspond\
+  \ to productions, they will be overridden by the subclass */\n\n_allProductions.forEach((VariableMirror\
+  \ slot){\n\n   String iv = slot.simpleName;\n   var fref = new ForwardReferenceParser();\n\
+  \   forwardReferenceTable[iv] = fref;\n   /* set iv to fref */\n   selfMirror.invokeSetter(iv,\
+  \ fref);\n\n });\n\n}\n```\n\n此外，`reflectable` 使用字符串而非符号来命名声明。鉴于 `reflectable` 已经处理了部署问题，因此它并不关注针对代码压缩的优化。这使得它更加易。\n\
+  \n点击此处查看代码图片\n\n```dart\nList<VariableMirror> get allProductions {\n   List<VariableMirror>\
+  \ allProductions = new List();\n   ClassMirror gc = selfMirror.type;\n   while (gc.simpleName\
+  \ != 'ExecutableGrammar') {\n    allProductions.addAll(gc.declarations.values.where(isInstanceField));\n\
+  \    gc = gc.superclass;\n   }\n   return allProductions;\n}\n```\n\n最后，我们还需要在客户端代码上添加\
+  \ `grammar` 注解：^5\n\n**5-临时链接占位符。** 事实上，`reflectable` 有一种避免这种情况的方法，但该方法尚未实现。\n\n\
+  点击此处查看代码图片\n\n```dart\nimport 'parsing.dart' show CombinatorialParser, ExecutableGrammar,\
+  \ grammar;\n\n@grammar class ExampleGrammar1 extends ExecutableGrammar {..}\n```\n\
+  \n我们可以像以前一样运行示例。默认情况下，`reflectable` 在后台使用 `dart:mirrors`。然而，我们可以根据我们提供的反射能力能力注解，构建一个针对部署优化的应用程序版本。结果是体积大幅减小（对于我们的示例来说，缩小了一个数量级）。压缩又带来了近乎另一个数量级的进一步缩减。^6\n\
+  \n**6-临时链接占位符。** 在编写本文时，对于我们的解析示例，我们看到翻译后的 JavaScript 代码大小从 2Mb 以上减少到 174Kb，然后进一步压缩到\
+  \ 30Kb。\n\n一种合理的策略是使用 `dart:mirrors` 开发应用程序并使用 `reflectable` 将其部署。事实上，`reflectable`\
+  \ 可以直接在 Dart 运行时使用，在这种情况下，它将其工作转发给 `dart:mirrors`。因此，我们可以从一开始就使用 `reflectable` 编写应用程序。缺点是我们需要在流程早期指定反射能力。然而，我们可以在构建应用程序的过程中逐渐指定所需的能力。优点是我们不需要转换应用程序。我们预计，随着\
+  \ `Reflectable` 软件包的成熟和完善，使用它将成为一个日益受欢迎的选择。\n\n### 7.5 超越内省\n\n反射最令人兴奋的应用之一是那些涉及反射性变化的程序——即即时修改或添加代码。反射性变化的主要用例是开发期间。一个支持反射性变化的系统使得实现一个实时\
+  \ IDE 变得简单得多。\n\nDart 支持反射性变化一直是其意图之一。在编写本文时，只有一个实验性的 Dart 实现（代号为 Fletch）支持这一功能。然而，我们预计这种情况会随着时间推移而发生。\n\
+  \n开发期间反射性变化最显而易见的应用是它实现了实时评估器。这些评估器可以像简单的经典的读取-评估-打印循环（REPL），也可以更丰富，例如允许在特定实例作用域内进行评估的对象检查器。反射性变化的另一个标准用法是“修复并继续”（fix-and-continue）调试。值得注意的是，真正的实时环境允许对各种类型的声明进行修改，而不仅仅是方法和函数。例如，应该能够添加、删除或重命名字段，并使更改立即在所有现有实例上生效。\n\
+  \n在添加或重命名字段时，必须考虑它可能如何被初始化。反射性变化机制应该提供更新现有实例的方法，使得它们不仅拥有声明的槽位，而且这些槽位具有适当的值。\n\n\
+  在生产环境中使用反射性变化要有争议得多。这种用法的一个例子是程序员定义的动态加载版本。另一个是基于 `noSuchMethod` 的设计优化，例如代理模式。可以在方法首次被调用时添加自定义版本，从而避免后续调用中\
+  \ `noSuchMethod` 调用的开销（代价是首次调用的巨大开销）。可能最引入胜的是，人们可能会选择在不需要重启应用程序的情况下，动态更新已部署的应用程序。\n\
+  \n然而，在生产环境中支持反射性变化确实引发了问题。人们不再确定应用程序的代码是什么，并且可能存在安全担忧。反射性变化机制对性能的需求也更高。\n\n### 7.6\
+  \ 相关工作\n\n面向对象编程中反射的历史根植于 Smalltalk。Smalltalk 模型的变体被其他语言所采用。CLOS 通过元对象协议丰富了它，而 Java\
+  \ 限制了它，C# 也随之其后。\n\n后来的脚本语言通过故意向程序员暴露实现结构，以非结构化的方式支持了反射。镜子（mirrors）的概念在 Self 中被引入。Self\
+  \ 模型被应用于基于类的系统，首先是在 Smalltalk 中，随后是在 Java 平台的部分中（如 JDI 和 APT）。最近，Newspaper 引入了一个旨在实现全部优势的镜子系统。Dart\
+  \ 镜像系统是 Newspeak 设计的后代，但在许多方面有所不同。\n\n\n\n\n\n当在 Dart 中调用一个方法或函数时，调用者会一直等待被调用者求值并返回结果。在被调用者执行期间，调用者处于`blocked`（阻塞）状态。函数调用就像电话通话，调用者等待对方接听。调用是一种`synchronous`（同步）通信——调用者和被调用者在时间上同步它们的活动。\n\
+  \n相比之下，在`asynchronous`（异步）通信中，调用者发起操作但不等待其完成，而是立即继续执行。异步通信可能的场景示例包括输入或输出等任务，因为请求的操作可能很慢，等待操作完成是不可取的。\n\
+  \n异步化是 Dart 并发机制的基础。Dart 既支持在单个隔离器（isolate）内部进行异步化，也支持跨多个隔离器进行异步化。\n\n跨隔离器通信基于异步消息传递。在基本形式中，消息传递是一种“发后不管”（fire-and-forget）的活动。发送者无法确保消息已被接收，或是否会给予响应。这比比旧式的邮寄信件。人们可以通过发送消息来启动某些操作，但不知道该操作是否已执行，如果执行了，是否成功。人们显然无法得知成功时的结果值是什么，也无法得知失败时抛出了什么错误。这是不令人意的。应用程序需要能够监控并响应它们发起的异步活动。为了满足这一需求，我们使用了\
+  \ futures（未来元）。\n\n### 8.2 Futures\n\n`future` 是一个对象，代表一个可能尚未发生的计算任务的结果。该结果可能在未来的某个时间已知，因此名为“future”。Futures\
+  \ 在异步计算中非常有用。一旦发起了执行异步计算的请求，就可以立即以同步的方式返回一个 future，而实际计算可以被调度在稍后的时间执行。future 为请求异步操作的代码提供了一个句柄，即对所请求计算的引用。在请求的计算完成后，可以使用该\
+  \ future 来访问结果。我们说该 future `has been completed`（已完成），或者换句话说，`has been resolved`（已解析）。\n\
+  \n在 Dart 中，futures 通过 `dart:async` 库中的 `Future` 类实现。`Future` 是一个泛型类，类型参数 `T` 代表\
+  \ future 完成时产生的值类型。\n\n#### 8.2.1 消费 Futures\n\nFutures 有一个实例方法 `then()`，它接受一个闭包\
+  \ `onValue` 作为参数。当 future 成功完成时，该闭包将被调用。闭包本身接受一个类型为 `T` 的参数，即 future 所代表的计算类型。因此，当\
+  \ future 完成时，它所代表的值将传递给 `onValue`。\n\n例如，假设我们有一个想要复制的文件。`File` 对象支持复制文件的异步 API：\n\
+  \n**[1].** 这里我们指的是在 `dart:io` 中定义的 `File` 类，而不是在 `dart:html` 中定义的类，后者的 API 完全不同。\n\
+  \n```\nFuture<File> copy(String newPath)\n```\n\n如果我们在 `File` 对象上调用 `copy()`，我们会得到一个\
+  \ future。异步 API 的优势是，人们可以启动大文件的复制操作而无需等待复制完成。缺点是，如果我们真的想对复制的文件做某些事情，情况就会变得复杂，因为我们必须与\
+  \ futures 交互。\n\n一个简单的测试可以断言：如果我们有一个文件并在 `myPath` 路径创建一个副本，则结果文件的路径确实是 `myPath`。由于\
+  \ `copy()` 的结果是一个关于文件的 future 而不是文件本身，我们不能直接写：\n\n```\nassert(myFile.copy(myPath).path\
+  \ == myPath);\n```\n\n正确的代码是：\n\n```\nmyFile.copy(myPath).then((f){ assert(f.path\
+  \ == myPath);});\n```\n\n文件系统完成复制后，`copy()` 返回的 future 将带有一个的 `File` 对象完成，传递给 `then()`\
+  \ 的闭包将带有该 `File` 实例调用，从而触发断言。那时，Dart 的执行早已继续后续。\n\n如果一个 future `f1` 代表一个产生另一个 future\
+  \ `f2` 的计算呢？如果结果本身是一个 future，那么让 `f1` 完成是不够的。我们会调用 `onValue`，但被迫测试传入的参数是否为 future，并通过另一个\
+  \ `then()` 来处理，以此无限循环。相反，在这种情况下，`f1` 的完成依赖于 `f2` 的完成。当 `f2` 以一个非 future 值完成时，`f1`\
+  \ 将以相同的值完成。我们说这些 futures 是`chained`（链式的），因为它们形成了一个依赖链。\n\nFutures 也可以代表失败的计算。`catchError()`\
+  \ 方法也定义在 futures 上，它同样接受闭包作为输入。如果 future 执行的计算抛出异常，则会调用闭包 `onError`。\n\n#### 8.2.2\
+  \ 产生 Futures\n\n原则上，需要返回 future 的代码必须完成几件事：它必须调度一个计算在稍后的时间执行，它必须实例化 `Future` 实例，并且必须将该实例与调度的计算关联起来，这样当调度的计算完成后，future\
+  \ 就会带有结果完成。必须捕获调度计算抛出的任何异常，并根据情况完成完成 future。\n\n`Future` 的构造函数为我们管理了这一切。代码看起来大致如下：\n\
+  \n```\nFuture(computation){\n  Timer.run(() =>\n    try {\n      _completeWithValue(computation());\n\
+  \    }\n    catch (e){\n      _completeWithError(e);\n    }\n  );\n}\n```\n\n`Timer`\
+  \ 类定义在 `dart:async` 中，有一个静态方法 `run()` 用于调度代码执行。`Future` 构造函数接受一个闭包 `computation`，代表用户想要调度的计算。然而，实际调度的任务是一个旨在捕获\
+  \ `computation` 结果（无论成功失败）并适当地完成正在构建的 `Future` 实例的闭包。完成是通过如 `completeWithValue()`\
+  \ 等私有方法实现的。我们不想将这些方法暴露给 futures 的消费者；此类消费者不需要也不应该影响返回给它们的 future 的结果。\n\n结果是，Dart\
+  \ 程序员只需要写：\n\n```\nnew Future(myComputation);\n```\n\n#### 8.2.3 调度\n\n当我们说调度代码未来执行时，指的是什么？Dart\
+  \ 应用程序有一个事件循环，只要有可用的事件处理器来处理正在发生的事件，该循环就会运行。事件处理器针对各种事件——鼠标点击、键盘输入等。我们特别感兴趣的是定时事件——标记时间流逝的事件。\n\
+  \n上一节提到的 `Timer` 类被用于定义定时事件的处理器。人们可以定义一个在给定时间段过去后触发的处理器。一个重要的特殊情况是该时间段为零。在零时间过去后触发的处理器仅仅是我们希望在尽早机会无条件运行的任务。人们可以使用\
+  \ `Timer.run()` 来定义这样的处理器。设置这样的处理器等同于将任务调度到未来执行，在事件循环的下一次迭代中运行。\n\n\n\n\n\n可以通过构造函数\
+  \ `Future.delayed()` 调度一个在非零延迟后执行的未来任务。请参阅 Dart API 文档获取有关此以及其他几种 futures 构造函数的详细信息。\n\
+  \n一旦任务开始，它就会运行到完成；任务永远不会被抢占。任务运行期间被称为一个 `turn`（轮次）。在一个 `turn` 内调度的所有 futures 都保证只在该\
+  \ `turn` 结束后才运行——下文描述的微任务（microtasks）除外。\n\n#### 8.2.3.1 微任务 (Microtasks)\n\n按照原则，我们还必须假设在通过\
+  \ future 调度的任务之前，可能会执行其他代码。这些代码可能是：\n\n• 来自另一个 isolate（隔离器）的代码\n• 与鼠标点击等事件关联的事件处理器\n\
+  • 与之前调度的其他 futures 相关的计算\n\n一旦当前 `turn` 结束，事件循环可能会运行上述任何一类任务，且运行在当前 `turn` 调度的任何\
+  \ future 运行之前。有时，我们确实需要在事件循环恢复之前运行某些异步操作。\n\n有一种机制可以确保 future 在我们 `turn` 之外调度的任何代码之前运行。每个\
+  \ `turn` 都有自己的 `microtask queue`（微任务队列）。微任务队列上的任务会在 `turn` 结束并在返回控制权给主事件循环之前运行。\n\
+  \n我们可以使用构造函数 `Future.microtask()` 调度 futures 在微任务队列上运行。保持微任务数量少且执行短是非常重要的。\n\n###\
+  \ 8.3 流 (Streams)\n\n`stream` 是一个长度不确定的值列表。它可能是无限的，永远持续。它可能最终会结束，但点在于我们不知道流何时结束或是否结束。\n\
+  \n流的示例可能是鼠标随时间的位置，或者所有质数的列表，或者是通过网络发送给我们的实时视频。\n\n人们可以流进行 `subscribe`（订阅）或 `listen`（监听），这意味着向流注册了一个或多个回调函数。当新数据被追加到流中时，这些函数就会被调用。\n\
+  \n将流视为一个集合是自然的。许多对集合的操作也适用于流。可以在流上调用 `map()`，从而推导出一个包含计算结果的转换后的流。例如，我们可以将坐标对映射到通过这些坐标平移的图像，从而构建一个响应鼠标移动并在场景中移动图像的应用程序。\n\
+  \n使用 `map()` 推导出的流与其派生的原始流是 1:1 的。有时，将流中的一个元素替换为多个元素是有用的。作为一个特殊情况，如果这个多个元素为 0，我们可以过滤掉元素。`expand()`\
+  \ 操作（在许多其他语言中被称为 `flatMap()`）允许我们这样做。\n\n可以使用 `expand()` 过滤元素，但使用 `where()` 更简单。\n\
+  \n对集合的一些操作需要遍历整个集合。在流的情况下，我们无法立即这样做，因此这些操作返回 futures。例如，假设我们有一个包含所有质数的流 `primes`，并且我们对它们求和：\n\
+  \n点击此处查看代码图片\n\n```\nFuture<int> sisypheanSum = sum(primes);\n\nsisypheanSum.then((s)\
+  \ => print(s));\n```\n\n当然，如果我们的质数流真的一直运行下去，这将是一项西西弗斯式的任务。如果我们的流在某处关闭，那么我们就会得到结果。很棒的是，我们在\
+  \ 第 4.4 节 中使用的相同 `sum()` 函数可以在流上工作而无需更改。\n\n### 8.4 隔离器 (Isolates)\n\nDart 支持 `actor\
+  \ 风格并发`。一个运行中的 Dart 程序由一个或多个 actor 组成，称为 `isolates`。一个 isolate 是一个拥有独立内存和独立单线程控制的计算。`isolate`\
+  \ 一词源于 isolate 之间存在的隔离性（isolation），因为 isolate 的内存从逻辑上与任何其他 isolate 的内存分离的。isolate\
+  \ 内部的代码按顺序执行；任何并发都是运行多个 isolate 的结果。因此，Dart 中没有共享内存并发，因此不需要锁（locks），也不可能发生竞态条件。\n\
+  \n由于 isolates 没有共享内存，isolates 之间通信的唯一方式是通过消息传递。Dart 中的消息传递始终是异步的。\n\n与某些语言不同，isolates\
+  \ 没有阻塞接收的结构。因此，不会发生死锁。\n\n#### 8.4.1 端口 (Ports)\n\n一个 isolate 有几个 `ports`。端口是构建\
+  \ Dart 隔离 间通信的底层基础。端口有两种类型：`send port`（发送端口）和 `receive ports`（接收端口）。\n\n接收端口是一个传入消息的\
+  \ `stream`（8.3）。发送端口允许向 isolate 发送消息；具体来说，它允许消息发布到接收端口。接收端口可以产生发送端口，将发送在其上的任何消息发布回其源的接收端口。我们将在下一个小节中查看它是如何工作的。\n\
+  \n#### 8.4.2 产生 (Spawning)\n\n从一个 isolate 启动另一个被称为 `spawning`。isolate 在 isolate\
+  \ 启动时指定的库的 `main()` 方法处开始执行。该库被称为该 isolate 的 `root library`（根库）。\n\n`Isolate` 类提供了两个用于产生的类方法。第一个是\
+  \ `spawnUri()`，它根据通过 URI 提供的库产生 isolate。第二个是 `spawn()`，它根据当前 isolate 的根库产生 isolate。\n\
+  \nDart 程序在由 Dart 运行时启动的 `main isolate` 中开始执行。为了创建新的 isolate，主 isolate 将必须产生它们。初始消息通常包含一个发送端口。消息是递归定义的：消息可以是空、数字、布尔值、字符串、发送端口、消息列表或消息到消息的映射。\n\
+  \n产生者如何产生一个发送端口给被生产者？产生者创建接收端口 `r1`，从中提取发送端口 `s1` 并产生一个新的 isolate，传入该发送端口：\n\n点击此处查看代码图片\n\
+  \n```\nmain() { // 在 main isolate 中\n  ReceivePort r1 = new ReceivePort();\n  SendPort\
+  \ s1 = r1.sendPort;\n  Isolate.spawnUri(new Uri(path:'./otherIsolate.dart'), [],\
+  \ s1);\n}\n```\n\n被生产者随后创建自己的接收端口 `r2`，从中提取发送端口 `s2`，通过 `s1` 回产生者。这种配舞产生了一对可以相互通信的\
+  \ isolate：\n\n点击此处查看代码图片\n\n```\nmain(args, SendPort s1) { // 在 otherIsolate.dart\
+  \ 中\n  ReceivePort r2 = new ReceivePort();\n  SendPort s2 = r2.sendPort;\n  s1.send(s2);\n\
+  }\n```\n\n刚刚描述的过程有点乏味，尽管在每个 isolate 的开始处它只相当于三行仪式化的代码。然而，端口机制足够灵活，可以在其之上构建各种高级别的机制，正如我们很快将看到的。\n\
+  \n#### 8.4.3 安全 (Security)\n\nIsolates 是 Dart 安全性的基础。内存隔离防止一个 isolate 影响另一个 isolate\
+  \ 的状态。因此，语言的隐私构造没有安全影响，仅用于软件工程目的。其结果之一是可以通过反射（7）违反库的隐私性，并且在 isolate 内部反射不受限制的。跨\
+  \ isolate 反射则是另一回事。\n\n### 8.5 示例：客户端-服务器通信\n\n\n\n\n在本节中，我们将展示如何构建 Web 应用程序，使其独立于特定浏览器的具体实现机制。我们将应用程序视为一组对进行通信的隔离器（isolates），其中一个代表服务器，另一个代表客户端。\n\
+  \n我们认为服务器本身就是一个对象，它拥有一个提供给客户端的操作接口。这些操作将是异步的，并返回 `future`（未来）。然而，返回的 `future` 将是我们现在定义的特殊类型，我们称之为\
+  \ `promises`（承诺）。\n\n#### 8.5.1 Promise：更明朗的未来\n\nPromise 的设计是为了缓解与异步代码交互带来的痛苦。Promise\
+  \ 会自动处理 `future` 回调的样板代码。通过使用 `noSuchMethod()`，`promise` 可以将在其上执行的方法调用转换为使用 `then()`\
+  \ 回调。\n\n当一个方法调用返回一个 `promise` 时，人们可以立即在该 `promise` 上调用后续方法，几乎就像它是实际结果一样。这缓解了使用\
+  \ `future` 的许多枯燥感，因为代码不再充满深度嵌套的回调声明。\n\n点击此处查看代码图片\n\n```\nlibrary promise;\n\n\
+  import 'dart:async' show Completer, Future;\n\nimport 'dart:mirrors' show InstanceMirror,\
+  \ reflect;\n\n@proxy class Promise {\n  Future future;\n  Promise(this. future);\n\
+  \  noSuchMethod(Invocation inv) {\n    onValue(v) {\n      InstanceMirror m = reflect(v);\n\
+  \      var result = m.delegate(inv);\n      return result;\n    }\n    return new\
+  \ Promise( future.then(onValue));\n  }\n}\n\nclass Resolver {\n  Completer completer\
+  \ = new Completer();\n  Promise _promise;\n  get promise {\n    return promise ==\
+  \ null ? _promise = new Promise(_completer.future): _promise;\n  }\n  resolve(v)\
+  \ {\n    _completer.complete(v);\n  }\n}\n```\n\n#### 8.5.1.1 局限性：无法保留的 Promise\n\
+  \n上述代码存在我们之前在通用代理中看到的问题（5.7.6）。`promise` 与实际值之间的差异将通过动态类型检查检测到——包括显式检查和类型转换（通过 `is`\
+  \ 和 `as`），以及检查模式下的隐式检查。\n\n当结果需要用于控制结构（如条件判断和循环）或用于输出时，该过程也会中断。将打印已知值 `v` 与打印代表\
+  \ `v` 的 `promise` `p` 进行对比：\n\n点击此处查看代码图片\n\n```\nprint(v); // 打印值 v\nprint(p);\
+  \ // 打印类似 'An instance of Promise' 的内容\n```\n\n这里的一个直接问题是 `print()` 依赖于 `toString()`，而\
+  \ `toString()` 是继承自 `Object` 的。更彻底的转发机制应该重写 `Object` 的所有方法，并通过 `then()` 将它们转发给 `future`。然而，这并不能真正解决这种情况下的问题；反而加剧了它。如果\
+  \ `print()` 从 `toString()` 接收到的是一个 `Promise` 而不是预期的字符串，它将将抛出异常。\n\n更为严重的是控制流问题。如果我们有一个异步谓词，我们无法在条件语句中使用它的结果来做出控制流决策。(2）\n\
+  \n**2。** 关于输出和控制流的问题本质上是相同的。这些本质上是 `strict`（严格）函数，不会接受惰性输入。\n\n我们可以尝试添加模拟条件判断的方法，本质上是将控制流的决策推迟到\
+  \ `promise` 解析完成。然而，这些方法无法正确处理诸如 `break`、`continue` 等结构。最后，存在性能问题。使用 `noSuchMethod()`\
+  \ 会比正常调用慢得多，这在编译代码时是需要关注的。尽管存在这些问题，`promises` 在某些情况下是有用的。在接下来的章节中，我们将在通信的上下文中研究\
+  \ `promises`。\n\n#### 8.5.2 隔离器作为对象\n\n我们的下一步是将隔离器视为对象。我们需要通过一个类来提供 `promises` 访问器的视图，并实现这个\
+  \ `promise`。\n\n#### 8.5.2.1 API\n\n假设我们有一个可以发送 Cookie 的服务。该服务的 API 非常简单，由下方的抽象类给出：\n\
+  \n点击此处查看代码图片\n\n```\nabstract class CookieService {\n  Receipt sendCookiesTo(address,\
+  \ customer);\n}\n```\n\n你告诉服务要把 Cookie 发送到哪里，服务在处理请求后返回一个 `receipt`。我们的模型依赖于客户端和服务器之间的对象传递。\n\
+  \n#### 8.5.2.2 运行服务\n\n为了运行该服务，我们通过库定义了主隔离器：\n\n点击此处查看代码图片\n\n```\nlibrary cookie\
+  \ service;\n\nimport 'civilisolates.dart' as civilisolates show serve;\n```\n\n\
+  我们依靠 `civilisolates` 库提供必要的架构，特别是下面使用的 `startService` 方法：\n\n点击此处查看代码图片\n\n```\n\
+  main() {\n  var cookieService = civilisolates.startServiceObject(new Uri(path: 'cookie\
+  \ service.dart'));\n  cookieService.sendCookies(getAddress(), getCustomerDetails());\n\
+  }\n```\n\n上述代码基于 `cookie service.dart` 库启动了一个服务。`startServiceObject` 的效果根据传入的 URI\
+  \ 启动一个隔离器，并返回一个允许我们与新隔离器通信的 `promise`。\n\n接下来，我们在存储在本地变量 `cookieService` 的 `promise`\
+  \ 上调用 `sendCookies()`。服务隔离器可能还没有启动，但没关系；因为 `startServiceObject` 返回的是 `promise` 而不仅仅是普通的\
+  \ `future`，我们可以立即在其上调用该方法。\n\n#### 8.5.2.3 服务实现\n\n为了实现我们的服务，我们如下所示定义 `cookie service.dart`：\n\
+  \n点击此处查看代码图片\n\n```\nlibrary cookie service;\n\nimport 'civilisolates.dart' as civilisolates\
+  \ show serve;\n\nclass MyCookieService implements CookieService {\n  Receipt sendCookiesTo(recipientAddress,\
+  \ customer){\n    charge(customer); // 首先要做的事情\n    initiatePhysicalShipment(recipientAddress);\n\
+  \    return new Receipt(customer);\n  }\n}\n\nmain(args, client) {\n  CookieService\
+  \ obj = new MyCookieService();\n  civilisolates.serve(obj, client);\n}\n```\n\n\
+  正如我们所看到的，服务器端的情况也相当简单。\n\n\n\n再次，我们导入了 `civilisolates` 来提供必要的底层。`cookie service`\
+  \ 库定义了一个 `MyCookieService` 类，其中包含一组定义了该库提供的服务 API 的操作。为了让库像服务一样工作，我们实例化 `MyCookieService`\
+  \ 并将其传递给 `civilisolates.serve()`。对 `serve()` 的调用将让当前运行的隔离（isolate）监听来自 `client`\
+  \ 的消息，将它们转换为 `service` 上的方法调用，并将序列化后的结果传回；简而言之，`serve` 让当前隔离层充当由 `obj` 实现的服务。\n\n\
+  我们几乎所有的代码都是独立于异步的。我们在普通类中定义了所需的功能。在服务器端，只有 `main()` 稍显特殊——但幸运的是，它非常短且公式化。\n\n当然，这幅图有点过于简化了。如果我们有依赖于异步调用结果的复杂控制流，我们的承诺（promises）运行起来就不会那么顺畅。我们确实需要以合适的粒度来设计隔离层的\
+  \ API，以避免这些问题并尽可能地减少往返次数。但我们避免了大量的模板代码。\n\n#### 8.5.2.4 基础设施\n\n现在让我们来看看我们一直用于定义和启动服务的底层设施。这包括\
+  \ `startService` 和 `serve` 的定义。它们都定义在 `civilisolates` 库中。\n\n点击此处查看代码图片\n\n```\n\
+  library civilisolates;\n\nimport 'dart:isolate' show Isolate, ReceivePort, SendPort;\n\
+  \nimport 'dart:async' show Completer, Future;\n\nimport 'dart:mirrors' show InstanceMirror,\
+  \ reflect;\n\nimport 'promise.dart' show Promise, Resolver;\n\nimport 'serializer.dart'\
+  \ as serializer show serialize;\n\nimport 'deserializer.dart' as deserializer show\
+  \ deserialize;\n\nmsg2Obj(List<String> msg) => deserializer.deserialize(msg);\n\n\
+  List<String> obj2Msg(obj) => serializer.serialize(obj);\n```\n\n我们将利用在 第 7.1.3 节\
+  \ 中引入的序列化器。当然，这些想法更健壮的实现需要更好的序列化支持，但我们现有的已经足够说明核心思想。\n\n下面，你可以看到 `serve` 如何帮助隔离层将一个对象（`obj`）表示为提供给给定客户端的服务（通过发送端口\
+  \ `client` 表示）。它设置了与客户端通信所需的各种端口。然后它监听任何传入的消息，并使用反射（reflection）将它们转发给 `obj`，并将结果传回客户端：\n\
+  \n点击此处查看代码图片\n\n```\nvoid serve(obj, SendPort client) {\n\n  // 向 client 发我们的地址\n\
+  \  ReceivePort rport = new ReceivePort();\n  SendPort selfPort = rport.sendPort;\n\
+  \  client.send(selfPort);\n\n  // 设置监听以响应来自 client 的发送\n  InstanceMirror target\
+  \ = reflect(obj);\n  rport.listen (\n    (msg){\n      var invArgs = msg[0];\n \
+  \     SendPort returnAddress = msg[1];\n      // 将调用转发给 obj\n      var result =\
+  \ target.invoke(invArgs[0], msg2Obj(invArgs[1]), msg2Obj(invArgs[2]));\n      //\
+  \ 提取并序列化结果传回 client\n      returnAddress.send(obj2Msg(result.reflectee));\n    }\n\
+  \  );\n}\n```\n\n接下来，客户端使用 `startServiceObject` 来设置一个表示服务的对象。该服务将由位于 `uri` 处的库实现。我们将使用一个运行我们服务的隔离层。我们从挂接端口和启动服务隔离层的机制开始。我们想要为隔离层创建一个代理对象，但隔离层是异步创建的。我们拥有的只是该隔离层发送端口的\
+  \ future。因此，我们返回一个代理的承诺（promise）。当端口的 future 完成时，它将触发代理的创建：\n\n点击此处查看代码图片\n\n```\n\
+  Promise startServiceObject(uri) {\n  ReceivePort rport = new ReceivePort();\n  SendPort\
+  \ selfPort = rport.sendPort;\n  // 启动服务隔离层\n  Isolate.spawnUri(uri, [], selfPort);\n\
+  \  // 当我们收到隔离层的地址时\n  // 我们可以为它设置一个代理对象。在此期间，\n  // 返回代理的承诺\n  Future<SendPort>\
+  \ target = rport.elementAt(0);\n  return new Promise(target.then((s) => new IsolateProxy(s)));\n\
+  }\n```\n\n最后一块拼图是隔离层的代理。它的工作原理与我们之前看到的代理类似。区别在于 `noSuchMethod` 例行方法的作用。它必须专门创建一个端口来监听答案。当答案完成后，我们返回代理的承诺（promise）。\n\
+  \n作为一种简化，我们选择不处理命名参数。我们的示例不支持它们：\n\n点击此处查看代码图片\n\n```\nclass IsolateProxy {\n  final\
+  \ SendPort _sendPort;\n  IsolateProxy(this._sendPort);\n\n  noSuchMethod(Invocation)\
+  \ {\n    ReceivePort rport = new ReceivePort();\n    SendPort selfPort = rport.sendPort;\n\
+  \    Resolver resolver = new Resolver();\n    rport.listen((answer){\n      var\
+  \ a = msg2Obj(answer)[0];\n      resolver.resolve(a);\n      rport.close();\n  \
+  \  });\n    _sendPort.send([obj2Msg([inv.memberName, inv.positionalArguments]),\
+  \ selfPort]);\n    return resolver.promise;\n  }\n}\n```\n\n人们可以通过隔离层的发送端口直接创建代理；不需要使用\
+  \ `startServiceObject`。它仅仅是在我们启动服务时的一种方便方法。\n\n遗憾的是，链式承诺由于上述在 第 8.5.1.1 节 中提到的原因，在\
+  \ Dart 中的用途有限。为了解决这些问题，Dart 提供了专门的异步支持，我们将介绍。\n\n### 8.6 异步函数\n\n正如我们所见，直接与 future\
+  \ 交互可能会很笨拙。问题之一在于，我们熟悉的经典控制结构在设计时并没有考虑到异步。一旦发起了异步调用，跟踪调用是否执行、执行是否成功以及结果如何的所有账记录工作都变成了程序员的责任。调度\
+  \ future 以及调度在工作完成（无论成功与否）后要执行的工作，是非常繁重的。\n\n为了减轻处理异步的痛苦，Dart 提供了语言级别的异步支持。函数体可以标记\
+  \ `async` 修饰符；该函数就是一个***异步*** *函数*：\n\n点击此处查看代码图片\n\n```\nFuture<int> foo() async\
+  \ => 42;\n```\n\n使用 `async` 函数可以从几个方面简化处理 future 和异步的任务。\n\n当 `async` 函数被调用时，函数的代码不会立即执行。相反，函数中的代码会被调度在未来的某个时间执行。那么，返回给调用者的是什么？一个在函数体完成（无论成功与否）时将完成的\
+  \ future。函数会自动制造该 future 并立即将其返回给调用者。\n\n\n\n显然，这让程序员无需编写相当数量的样板代码，但 `async` 函数的真正价值在于它们可以包含\
+  \ `await` 表达式。\n\n#### 8.6.1 Await\n\n`await` 表达式允许人们编写异步代码，几乎就像编写同步代码一样。执行一个 `await`\
+  \ 表达式让我们在等待异步计算完成时挂起周围的函数。\n\n回想我们在第 8.2.1 节 中的示例，当时我们想要测试 `File` 的 `copy()` 方法是否如描述的那样工作。使用\
+  \ `await`，我们可以这样写断言：\n\n点击此处查看代码图片\n\n```\nassert((await myFile.copy(myPath)).path\
+  \ == myPath);\n```\n\n这与我们在 `copy` 是同步函数时会编写的代码非常接近：\n\n点击此处查看代码图片\n\n```\nassert(myFile.copy(myPath).path\
+  \ == myPath);\n```\n\n并且比显式使用 future（未来）的版本更直接：\n\n点击此处查看代码图片\n\n```\nmyFile.copy(myPath).then((f){\
+  \ assert(f.path == myPath);});\n```\n\n`await` 只能在 `async` 函数内部使用。Dart 编译器不会在其他地方接受\
+  \ `await`。\n\n在思考 `async` 函数的执行时，需要记住它的体已经独立于其调用者被调度，在稍后的某个轮（turn）中执行。因此，当 `async`\
+  \ 函数运行时，它的调用者早已离开了。特别是在调试时，没有有意义的调用栈可以参考——而且也没有可以返回的调用者。那么，在 `async` 函数内部的 `return`\
+  \ 语句意味着什么？`return` 所能做的只是用一个值完成与 `async` 函数关联的 future。像往常一样，不带嵌套表达式的 `return` 被视为\
+  \ `return null;` 的简写。同样，如果一个 `async` 函数抛出了它没有捕获的异常，该函数的 future 将以抛出的对象来完成状态。\n\n\
+  #### 8.6.2 异步生成器\n\n异步生成器是 Dart 支持的另一种异步函数形式。体被标记为 `async*` 修饰的函数是流（stream）的生成器函数（4.8）。这个思想通过一个示例说明最为合适。以下函数产生一个按顺序包含自然数的流：\n\
+  \n```\nget naturals async* {\n  int k = 0;\n  while (true) {\n    yield await k++;\n\
+  \  }\n}\n```\n\n当调用 `naturals` 时，它会立即返回一个新的流。一旦该流被监听，函数体就会顺序执行，以生成值来填充流。该函数在无限循环中运行。每次迭代都会执行一个\
+  \ `yield` 语句，该语句内部有一个 `await`。`await` 递增 `k` 并挂起函数。\n\n稍后，函数带有新的 `k` 值恢复，`yield`\
+  \ 将该值附加到流中。这个过程在每次迭代中重复，将下一个自然数添加到流中。当然，这并不是产生这种序列的一种很好的方法；该函数在每次事件循环循环中最多运行一次。\n\
+  \n这里有一个更真实的示例，它通过 HTTP 分块获取数据并将其放入流中。函数 `getRepeatedly` 被传入了一个 URI `uri` 和一个数字 `n`，表示\
+  \ URI 应该被访问的次数：\n\n点击此处查看代码图片\n\n```\nStream getRepeatedly(uri, n) async* {\n  for\
+  \ (var i = 0; i < n; i++) {\n    var response = await http.get(uri);\n    var nextJson\
+  \ = json.convert(response.body);\n    yield nextJson;\n    await new Future.delayed(new\
+  \ Duration(seconds: 2));\n  }\n}\n```\n\n流立即返回给调用者。一旦流被监听，`getRepeatedly` 的体将开始运行。它将循环\
+  \ `n` 次；每次迭代都会使用 `await` 访问提供的 URI 以异步获取响应并挂起。响应准备好后，函数将恢复。响应被转换为 JSON 并发布到返回给调用者的流中。然后函数等待两秒并开始下一次迭代。\n\
+  \n#### 8.6.3 Await-For 循环\n\n给定一个流，可以遍历它的值：\n\n点击此处查看代码图片\n\n```\nawait for (var\
+  \ i in naturals) { print('event loop $i'); }\n```\n\n每当有一个元素被添加到流中时，循环体就会执行。在每次迭代后，封装该循环的函数会挂起，直到下一个元素可用或流结束。\n\
+  \n就像 `await` 表达式一样，`await-for` 循环只能出现在异步函数内部。两种情况的理由是相同的：两种构造都会导致周围的函数挂起，而一个挂起的函数就不再是同步的。\n\
+  \n### 8.7 相关工作\n\nDart 拥有独立内存的隔离器（isolates）模型是 Hewitt 在 40 多年前首次提出的 Actor 模型（actor\
+  \ model）的变体[22], [23]。从那时起，许多语言引入了 Actor 模型的多种变体，特别是 Erlang[24]、E[25]、Newspeak[26]\
+  \ 和 Scala[27]。与在 E、Newspeak 和原始 Actor 模型中一样，Dart 的消息传递是非阻塞的。\n\n编程中的 future 概念有许多变体。这些包括\
+  \ E 的 promises、Scala Actor 库 Akka 的 futures 以及许多其他。\n\nDart 的流深受 Meijer 在 Rx 方面工作的影响[28]。\n\
+  \n### 8.8 总结\n\nDart 程序由一个或多个隔离器组成，隔离器是类似于 Actor 的并发单元，每个单元都有独立的内存和单线程控制。隔离器是 Dart\
+  \ 的并发和安全单元。隔离器是非阻塞的，通过异步消息传递进行通信。消息发送返回代表预期结果的 future。Future 支持回调，指定在 future 完成（无论成功失败）时要执行的操作。流提供了一个更高层次的抽象，Dart\
+  \ 应用构建之上。最后，`async` 方法使得以类似于同步的方式编写异步程序成为可能。\n\n## 第 9 章 结论\n\n通过对 Dart 的大游，我们可以得出什么结论？我在开发\
+  \ Dart 的过程中学到了哪些传达给你的知识？哪些地方本做得更好？在这个简短的章节中，我们将回顾现在的 Dart 以及未来可能变成的 Dart。\n\n###\
+  \ 9.1 可选类型\n\n可选类型几十年来以各种形式被提出。Dart 是第一个从诞生起就支持可选类型的流编程语言。在 Dart 出现后，许多其他语言也出现了类似的特性。这些语言并不直接受\
+  \ Dart 的启发。然而，非强制类型系统是一个成熟的想法。\n\n较不明确的是 Dart 是否代表了该领域的最佳实践。Dart 作为语言规范规定了特定的可选类型系统。可选类型特别是可插拔类型（pluggable\
+  \ types）[29] 的灵活性在类型成为语言工具的一部分而非语言本身时将得到最大化。语言工具的演进速度可以比语言本身快得多。\n\n\n\n检查模式（Checked\
+  \ mode）已被证明是一把双刃剑。它的用处显而易见，但也是有代价。尽管有人认为检查模式仅是开发阶段的工具，但它往往被视为一种事实上的运行时类型系统，这违背了类型系统不应影响运行时语义的原则。在本书，我们在讨论代理（proxies）时，已经看到了检查模式带来的这种负面影响。\n\
+  \n检查模式的另一个弱点是它是“全或无”的方案。人们可能希望能够以更细的粒度激活检查模式，也许是每个模块甚至每个函数。\n\n一个健壮的（但可选的）静态类型规范可以减少对检查模式的需求。一个具有健壮规则但没有检查模式的设计更接近\
+  \ `Strongtalk` 原始可选类型系统，可能是一个很有吸引力的替代方案。可选类型完全可以是健壮的。正如往常一样，这涉及到权衡。`Dart` 选择了放弃健壮性，以更好地符合程序员的直觉。然而，健壮分析具有重要的益处。我们越贴近真正可选（即可插拔）的类型理念，在根据需要选择健壮或不健壮的方法时，就越有灵活性。\n\
+  \n可选类型的一个有趣且意料之外的影响是用户期望的提高。一旦人们意识到程序尽管有类型警告也能运行正常，他们就会要求类型系统具有更智能性。示例包括流感知的类型规则和更好的推断。\n\
+  \n总的来说，将类型从语言领域移到工具领域可能会更好地服务用户，从而允许一种快速演化的、结合了健壮和不健壮类型系统的混合体，并采用不同的推断方法。\n\n##\
+  \ 9.2 对象面向性\n\n`Dart` 是一种纯面向对象的语言。所有运行时值都是对象，并且在大多数情况下这种做法运行得非常好。\n\n然而，在 `Dart`\
+  \ 中，某些东西不是运行时值，因此它们不是对象。库（libraries）和前缀（prefixes）是这里的明显“罪祸首”。奇怪的是，库和前缀在底层通常被实现为对象，但语言本身破坏了这种一致性。\n\
+  \n将库视为完全功能对象的后果是深远的。正因为影响如此深远，这种想法在 `Dart` 中并没有采用。它挑战了关于模块系统的传统观念，因此违背了易用性的目标。\n\
+  \n使用传统的模块化构建的的代价很高昂，因为传统的模块化构建是极其不充分的。我们遇到了一系列涉及依赖注入、灵活库配置和动态加载的问题。所有这些问题都可以通过更激进的设计来解决，如\
+  \ `Newspeak`[30] 所示。\n\n类在 `Dart` 中是对象，但它们的功能是有限的。将类方法和构造函数视为静态特征的决定错失了利用纯对象模型统一性的机会。在一个库和类都是对象的世界上，只需要一种方法访问方式（`instance`），而不是三类（`top-level`、类和\
+  \ `instance`）。这种简化贯穿整个系统，从规范到实现再到工具。\n\n最后，有一种观点认为，纯对象面向性要求运行的程序/系统本身也是一个对象。这种观点意味着反射是对象面向性的不可或缺的一部分。`Dart`\
+  \ 支持反射，但没有可能做得那么好或彻底。下一节将探讨这个主题。\n\n## 9.3 反射\n\n`Dart` 对反射的支持仍在进化中。在目前，它还没有达到理想状态。程序员通常被建议避免使用它，主要由于与部署代码大小相关的务实问题。这些问题在第\
+  \ 7 章 中讨论过。\n\n确实，在某些情况下反射被过度使用了。反射在支持依赖注入和用户界面框架中的绑定方面被特别过度使用。遗憾的是，`Dart` 甚至需要依赖注入。上一节提到的基于一等库的强大模块化技术将使依赖注入框架变得没有必要。\n\
+  \n相反，追求反射的倾向说明了它在力量和便利方面的价值。以有效的方式支持反射是完全可能的，正如第 7.4 节 所述。\n\n超越自省转向动态演化的程序（7.5）是\
+  \ `Dart` 缺乏反射支持的另一个领域。这对整体 `Dart` 编程体验产生了巨大影响，如下一节所示。\n\n## 9.4 工具\n\n编程涉及的不仅仅是语言的抽象概念。编程的现实涉及语言、实现、库、工具、文化和社区。\n\
+  \n`Dart` 曾雄心将 `Smalltalk` 的许多优势带给更广泛的受众。正如书中提到的，它深受 `Smalltalk` 的影响。然而，`Dart` 在熟悉程度和目标实现平台方面的限制往往削减了这种雄心。\n\
+  \n局限性在工具领域最为显着。有许多 IDE 支持 `Dart`。为了保持 `Dart` 熟悉的感，这些 IDE 在设计上都非常传统。它们中没有一个能提供与 `Smalltalk`\
+  \ IDE 稍微相似的体验。`Smalltalk` 实时编程（live programming）的理想在近年来享受了复兴，未来的 `Dart` 开发环境应该纠正这一缺陷。\n\
+  \n`Smalltalk` 的实时感源于元循环工具设计与程序在执行时修改自身的能力。。是程序随时间改变自身的能力，而不是动态类型，真正让一种编程语言变得动态化。这种动态性可以通过镜像构建器（mirror\
+  \ builders）(7.5) 以结构化的方式实现。\n\n大多数 `Dart` IDE 并不是用 `Dart` 编写的，并且不支持实时性。无论主题、插件还是选项，都无法替代程序员根据需求塑造工具并在过程中获得即时反馈的能力。\n\
+  \n## 9.5 总结\n\n`Dart` 是一种旨在为主流读者提供熟悉且实用的编程语言，同时尝试遵循对象面向性的核心原则：对象唯一重要的是它的行为，每个运行时值都是对象，并且程序代码本身可以被视为对象并进行反射。\n\
+  \n在编写本书时，`Google` 内部有数百万行 `Dart` 代码在使用，外部也有数百万行。这种语言对许多程序员来说显然实用的；而且是熟悉的。\n\n为了保持熟悉，`Dart`\
+  \ 并没有像本书作者希望的那样始终遵循对象面向性的原则。为了实用，它在很大程度上关注 Web 编程，这同样导致了妥协。\n\n\n\n\n## 参考文献\n\n\
+  [2] L. Bak, G. Bracha, S. Grarup, R. Griesemer, D. Griswold, and U. Hölzle, “Strongtalk\
+  \ 网站。” [`www.cs.ucsb.edu/projects/strongtalk/`](http://www.cs.ucsb.edu/projects/strongtalk/)。\n\
+  \n[3] C. Unkel and M. S. Lam, “静态字段的自动推断：java final 字段的泛化，” 于 *Proceedings of the\
+  \ 35th Annual ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages*,\
+  \ POPL ’08, (New York, NY, USA), pp. 183–195, ACM, 2008。\n\n[4] G. Bracha and W.\
+  \ Cook, “基于 mixin 的继承，” 于 *Proc. of the Joint ACM Conf. on Object-Oriented Programming,\
+  \ Systems, Languages and Applications and the European Conference of Object-Oriented\
+  \ Programming*, 1990 年 10 月。\n\n[5] G. Bracha and D. Griswold, “用 mixins 扩展 Smalltalk，”\
+  \ 1996 年 9 月。OOPSLA Smalltalk 语言扩展研讨会。\n\n[6] L. Bak, G. Bracha, S. Grarup, R. Griesemer,\
+  \ D. Griswold, and U. Hölzle, “Strongtalk 中的 Mixins，” 2002。邀请论文，ECOOP 继承研讨会。\n\n\
+  [7] S. Krishnamurthi, M. Felleisen, and D. P. Friedman, “合成面向对象与函数式设计以促进重用，” 于 *European\
+  \ Conference on Object-Oriented Programming*, pp. 91–113, Springer, 1998。\n\n[8]\
+  \ M. Torgersen, “重审表达式问题：使用泛型的四种新解决方案，” 于 *European Conference on Object-Oriented\
+  \ Programming*, pp. 123–143, Springer-Verlag, 2004。\n\n[9] M. Zenger and M. Odersky,\
+  \ “表达式问题的独立扩展解决方案，” 于 *In Proc. FOOL 12*, 2005。\n\n[10] A. Snyder, “面向对象编程语言中的封装与继承，”\
+  \ 于 *Proc. of the ACM Conf. on Object-Oriented Programming, Systems, Languages and\
+  \ Applications*, pp. 38–45, 1986。\n\n[11] A. Snyder, “继承与封装化软件组件的发展，” 于 *Research\
+  \ Directions in Object-Oriented Programming*, pp. 165–188, MIT Press, 1987。\n\n\
+  [12] G. Bracha, *The Programming Language Jigsaw: Mixins, 模块化与多重继承*。博士论文，犹他大学，1992。\n\
+  \n[13] N. Scharli, *Traits—从行为构建块中组合类*。博士论文，伯恩大学，2005 年 2 月。\n\n[14] R. B. Findler\
+  \ and M. Flatt, “基于 units 和 mixins 的模块化面向对象编程，” 于 *Proc. of the ACM SIGPLAN International\
+  \ Conference on Functional Programming*, pp. 94–104, 1998。\n\n[15] M. Odersky, L.\
+  \ Spoon, and B. Venners, *Programming in Scala*。加利福尼亚州 Mountain View：Artima Press，2008。\n\
+  \n[16] G. Bracha and D. Griswold, “Strongtalk：生产环境下的 Smalltalk 类型检查，” 于 *Proc. of\
+  \ the ACM Conf. on Object-Oriented Programming, Systems, Languages and Applications*,\
+  \ 1993 年 9 月。\n\n[17] O. L. Madsen, B. Møller-Pedersen, and K. Nygaard, *Beta 语言中的面向对象编程*。Addison-Wesley,\
+  \ 1993。\n\n[18] B. Ford, “解析表达式语法：一种基于识别的语法基础，” 于 *Proc. of the ACM Symp. on Principles\
+  \ of Programming Languages*, pp. 111–122, 2004 年 1 月。\n\n[19] D. Ungar and R. Smith,\
+  \ “SELF: 简单的力量，” 于 *Proc. of the ACM Conf. on Object-Oriented Programming, Systems,\
+  \ Languages and Applications*, 1987 年 10 月。\n\n[20] G. Bracha and D. Ungar, “Mirrors：面向对象编程语言元级设施的设计原则，”\
+  \ 于 *Proc. of the ACM Conf. on Object-Oriented Programming, Systems, Languages and\
+  \ Applications*, 2004 年 10 月。\n\n[21] G. Bracha, “Newspeak 中的可执行语法，” *Electron.\
+  \ Notes Theor. Comput. Sci.*, vol. 193, pp. 3–18, 2007。\n\n[22] C. Hewitt, P. Bishop,\
+  \ and R. Steiger, “一种用于人工智能的通用模块化 actor 形式化，” 于 *Proceedings of the 3rd International\
+  \ Joint Conference on Artificial Intelligence*, IJCAI’73, (加利福尼亚州金山), pp. 235–245,\
+  \ Morgan Kaufmann Publishers Inc., 1973。\n\n[23] G. Agha, *Actors: 分布式系统的并发计算模型*。马萨诸塞州\
+  \ Cambridge：MIT Press, 1986。\n\n[24] J. Armstrong, *Programming Erlang: 并发世界的软件*。Pragmatic\
+  \ Bookshelf, 2013。\n\n[25] M. S. Miller, *Robust Composition: 通向访问控制与并发控制的统一方法*。博士论文，约翰霍普金斯大学，马里兰州巴尔摩，2006\
+  \ 年 5 月。\n\n[26] N. Bote, “Newspeak 4 中基于 actor 的并发，” 2012。圣何塞大学硕士论文 231。\n\n[27]\
+  \ P. Haller and F. Sommers, *Scala 中的 Actors*。Artima, 2012。\n\n[28] E. Meijer, “你的鼠标是一个数据库，”\
+  \ *Commun. ACM*, vol. 55, no. 5, pp. 66–73, 2012 年 5 月。\n\n[29] G. Bracha, “可插类型系统，”\
+  \ 2004 年 10 月 OOPSLA 动态语言复兴研讨会。可用于 [`pico.vub.ac.be/wdmeuter/RDL04/Bracha.pdf`](http://pico.vub.ac.be/wdmeuter/RDL04/Bracha.pdf)。\n\
+  \n[30] G. Bracha, P. von Ahmet, V. Kashai, W. Maddox, and E. Miranda., “Newspeak\
+  \ 中的对象模块，” 于 *European Conference on Object-Oriented Programming*, 2010 年 6 月。\n\
+  \n## 索引\n\n- `assert`, [131]\n- `async`, [183]\n- `async`, [184]\n- `await`, [183]\n\
+  - `break`, [136]\n- `catch`, [128]\n- `continue`, [136]\n- `do`, [128]\n- `dynamic`,\
+  \ [78]\n- `for`, [126]\n- `hide` 有用的, [55]\n- `if`, [126]\n- `null` 是一个消息, [176]\n\
+  - `null` 隐式返回, [63]\n- `rethrow`, [129]\n- `return`, [133]\n- `return`, [63]\n-\
+  \ `super`, [120]\n- `switch`, [129]\n- `this`, [120]\n- `throw`, [124]\n- `try`,\
+  \ [128]\n- `while`, [128]\n- `yield`, [134]\n- `ClassMirror`, [140]\n- `Function`\
+  \ 类, [68], [91]\n- `Iterable`, [65]\n- `Iterator` 类, [72]\n- `MirrorSystem`, [143]\n\
+  - `NoSuchMethodError`, [30], [62], [77], [78]\n- `Object`, [78]\n- 的 API, [34]\n\
+  - `NoSuchMethodError` 的实现, [30]\n- `Timer`, [173], [174]\n- `Type` 类, [33], [46]\n\
+  - `apply()`, [68]\n- `basicNew`, [152]\n- `call()`, [68]\n- `currentMirrorSystem`,\
+  \ [153]\n- `double`, [79]\n- `getName`, [143]\n- `getSymbol`, [143]\n- `hashCode`,\
+  \ [20]\n- `instanceMembers`, [140]\n- `main()`, [59], [64]\n- `noSuchMethod()`,\
+  \ [30], [70]\n- `noSuchMethod`, [45]\n- `num`, [79]\n- `reduce()`, [65]\n- `reflectClass`,\
+  \ [140]\n- `reflectable`, [xvii]\n- `runtimeType()`, [70]\n- `runtimeType`, [34]\n\
+  - `spawnUri`, [176]\n- `staticMembers`, [141]\n- `toString()`, [146]\n- `where()`,\
+  \ [65]\n- 丹麦哥本本, [xvii]\n- 抽象数据类型, [59]\n- 访问器(s), [3]\n- actor(s), [1], [10], [185]\n\
+  \n\n\n\n\n在 Scala 中，185\n\nAda 编程语言，59\n\nAhé, Peter, xvii\n\nAkka, 185\n\nAnderson,\
+  \ Zachary, xvii\n\nAndersson, Daniel, xvii\n\nAnimorphic, xix\n\nAnnamalai, Siva,\
+  \ xvii\n\n`annotation(s)`, 102\n\n在 Java 中的处理工具，170\n\n用于优化反射，166\n\n`metadata`,\
+  \ 165\n\nASCII\n\n`identifier(s)` 必须是，116\n\n`assert statement`, 131\n\n`AssertionError`,\
+  \ 132\n\n`assignment`, 67\n\n`AST`, 160\n\n自动装箱\n\n没有这么事，2\n\nBackus-Naur Form，155\n\
+  \n扩展的，155\n\nBak, Lars, xvii\n\nBen-Gurion 大学，xix\n\nBeta 编程语言，107\n\n绑定用户界面，189\n\
+  \n`block statement`, 125\n\n`blocking`, 175\n\n样板代码，180\n\n`Boolean(s)`, 110\n\n\
+  在测试中，126\n\n是消息，176\n\n在 asserts 中，132\n\n在循环中，128\n\n大括号\n花括号\n限定类体或 mixin，36\n\
+  \n限定命名参数，62\n\nBracha, Teva, xviii\n\nBracha, Weihong Victoria, xviii\n\n括号\n方括号\n\
+  限定可选参数，61\n\n在索引操作符中，5\n\n`break statement`, 136, 178\n\n在 switch 中，130\n\n`builder(s)`\n\
+  APIs，67\n\n镜像，189\n\n`built-in identifier(s)`, 119\n\n字节码\n新的，152\n\nC 编程语言，1, 10,\
+  \ 46\n\n家族，4\n\nC++ 编程语言，45, 59, 107\n\nC# 编程语言，xiii, 11, 59, 107, 169, 185\n\n\
+  `callback(s)`, 177, 186\n\n常量的规范化，32\n\n用于反射的能力，166\n\n镜像是，165\n\n`cascade(s)`,\
+  \ 66\n\n`cdspawn`, 176\n\n`checked mode`, 178\n\nBoolean 表达式中的非 Boolean，110\n\n\
+  `class(es)`, 2, 7, 107\n\n`abstract`, 22\n\n是对象，33\n\n作为对象，188\n\n私有的，33\n\n基于类的，1\n\
+  \n封装，59\n\n语言定义，13\n\n`closure(s)`, 65\n\n相等性，70\n\n用于指定语法，156\n\nCU 编程语言，59\n\n\
+  Common Lisp 编程语言，107\n\n交换律，20\n\n编译器错误\n歧义的名称，55\n\n歧义导入的名称，51\n\n冲突的前缀，52\n\n\
+  Part URI 不是部分，54\n\n从生成器返回表达式，73\n\n不是常量，54, 55\n\n插值字符串，54, 55\n\n在类方法中使用 `this`，32\n\
+  \n违反限制，39\n\n计算逻辑学家，xix\n\n并发\n共享内存，175\n\n条件表达式，125\n\n配置，188\n\n常量，31, 46\n\n\
+  作为默认值，61\n\n表达式，120\n\n在元数据中，165\n\n列表，114\n\n映射，115\n\n用户定义对象，31\n\n构造函数，3, 7,\
+  \ 46\n\n是函数，64\n\n经典缺陷，45\n\n重定向，29\n\n支持抽象，3\n\ncontinue 语句，136, 178\n\n控制结构，178\n\
+  \n第一类，74\n\nCook, William R.,46\n\nrelier Régis, xvii\n\nDart\n设计者，xvii\n\nVM 团队，xvii\n\
+  \n死锁，175\n\n调试，170\n\n修复并继续，169\n\n由符号表示的，113\n\n延迟加载，57\n\n丹麦，xvi, xvii\n\n依赖注入，188,\
+  \ 189\n\n部署和反射，166\n\n来自镜像的收益，165\n\n到 Javascript，142\n\n来自镜像的分布，165\n\ndo 循环，128\n\
+  \nDoench, Greg, xviii\n\nDOM，70\n\n点操作符，66\n\n双倍，110\n\n动态语言定义，189\n\n动态加载，169\n\
+  \nE 编程语言，185\n\nEBNF，155\n\nECMA， xvii\n\n封装，59\n\n闭包的相等性，70\n\n操作符，19\n\n用户定义的在\
+  \ switch 中禁止，131\n\nErlang 编程语言，10, 185\n\nErnst, Erik, xvii\n\n事件\n处理器，174\n\n\
+  循环，174\n\n示例，145\n\n`Point`, 79\n\n异常和未来，173\n\n在一个 `await` 中，184\n\n抛出，124\n\n\
+  在函数内部未捕获，63\n\n导出，55\n\n表达式，120\n\n`await`, 184, 185\n\n条件，6, 125\n\nthrow，7\n\n\
+  工厂，30\n\n字段\n常量，31\n\nFletch, 169\n\nFlow 编程语言，xi\n\n\n\n\n\n## 索引\n\n- 流式 API (fluent\
+  \ API), 67\n- for 循环(s), 126\n- for 循环\n- 异步, 185\n- for 语句, 7\n- 外函数接口 (FFI), 35\n\
+  - 函数(s), 61, 74\n- 异步, 183\n- 仿真, 68\n- 表达式(s), 115\n- 生成器, 184\n- 数学, 61\n- 类型(s),\
+  \ 91\n- 函数式编程语言, 74\n- 未来(s), 171, 172, 177, 186\n- 错误完成, 184\n- 延迟, 174, 185\n\
+  - 在 Scala 中, 185\n- 生成器(s), 71, 134, 184\n- 异步, 184\n- 器(s), 66\n- 参数列表的, 61\n-\
+  \ 渐进式类型, xi\n- Hack 编程语言, xi\n- Hausner, Matthias, xvii\n- 易森虫 (Heisenbugs), 18\n\
+  - Hello World 程序, 1\n- Hewitt, Carl, 185\n- HTTP, 184\n- 超文本, 2\n- IDE(s), 189\n\
+  - 实时, 169\n- 元循环 (metacircular), 189\n- 标识符(s), 116\n- 恒等性, 8, 20\n- 双浮点数的, 110\n\
+  - 函数的, 69\n- 整数的, 109\n- IEEE 754, 109, 110\n- if 语句, 6, 126\n- 导入(s), 9, 49\n-\
+  \ 延迟, 58\n- 菱形 (diamond), 56\n- ...的弱点, 59\n- 索引运算符, 5\n- 间接性\n- 计算中的任何问题都可以通过解决,\
+  \ 165\n- 继承\n- 基于混入的 (mixin-based), 1, 36, 46\n- 多重, 36\n- 类方法的, 33\n- 语法的, 156\n\
+  - 单一, 36\n- 化的类型, 79\n- 整数(s), 5, 109\n- 接口(s), 2, 46, 79, 107\n- 没必要的声明, 23\n-\
+  \ 反射, 139\n- 隔离(s), 165, 171, 175, 185\n- 作为对象, 179\n- 以色列, xix\n- 可迭代的(s), 72,\
+  \ 134\n- 迭代器(s), 72\n- Java 编程语言, xiii, xix, 10, 59, 107, 169\n- Javascript\n- 编译到,\
+  \ 178\n- Javascript 编程语言, xiii, 5, 10, 46, 165\n- 损坏的整数, 109\n- 编译 Dart 对反射的影响,\
+  \ 142\n- JDI, 170\n- json, 185\n- JVM, 152\n- Kronecker, Leopold, 109\n- 标签(s),\
+  \ 136\n- 在 break 中, 137\n- 库, 9, 47\n- 作为对象, 188\n- main 方法的, 176\n- 根, 176\n- Lisp\
+  \ 编程语言, 46, 169\n- Common Lisp 方言, 107\n- 列表(s), 113\n- 是消息, 176\n- 监听器(s), 70\n\
+  - 字面量(s), 109\n- 是常量, 31\n- 函数, 65\n- 实时评估器, 169\n- 实时修改, 170\n- 实时编程, 189\n- 动态加载,\
+  \ 188\n- 延迟的库, 57\n- 锁(s), 175\n- 循环(s), 126\n- Lund, Kasper, xvii\n- Nak, Ryan,\
+  \ xvii\n- 主函数, 5\n- 隔离, 176, 179\n- 方法, 176\n- 映射(s), 114\n- 是消息, 176\n- McCut,\
+  \ John, xvii\n- Meijer, Erik, xvii, 185\n- 消息传递, 171, 175, 186\n- 元循环 IDE(s), 189\n\
+  - 元类, 33, 45, 46\n- 元数据, 142, 165, 170\n- 抽象方法(s), 22\n- 类, 32\n- final, 3\n- main,\
+  \ 176\n- 载载, 75\n- 静态, 32\n- 微任务(s), 174\n- 代码压缩, 142, 168\n- 镜像(s), 139, 170\n\
+  - API, 143\n- 构建器(s), 189\n- 可反射的系统(s), 167\n- Mitrovic, Srdjan, xvii\n- 混入(s),\
+  \ 36, 46\n- 表达式问题, 39\n- 应用, 38\n- 起源, 46\n- 移动\n- 应用(s), 2\n- 设备(s), 1\n- 平台(s),\
+  \ 2\n- Modula 编程语言家族, 59\n- Modula-3 编程语言, 107\n- 加州山景, xvii\n- 命名空间组合器, 52\n- 命名空间(s),\
+  \ 9\n- NaN\n- 与自身不等, 110\n- 新\n- 字节码, 152\n- Newspeak 编程语言, xix, 46, 170, 185, 188\n\
+  \n\n\n\n\n一切都是， 2, 13, 46 169\n\n基于对象的封装， 59\n\n对象能力模型， 165\n\n面向对象的编程， 68\n\n纯的，\
+  \ 1, 188\n\n性能的， 190\n\nOdersky, Martin, 91\n\n运算符， 9, 67, 124\n\n可选类型， xi, xv,\
+  \ 1, 107\n\n的定义， 3, 75\n\n重写， 3, 21\n\n### 参数\n\n- 命名的， 62\n- 可选的， 61\n- 位置的， 61\n\
+  - 必需的， 61\n\n### 解析器\n\n- 组合器， 155\n- 使用可反射的， 166\n- 部分， 53\n- PEG， 155\n\n### 点\n\
+  \n- 常数， 31\n- 端口， 175, 182\n\nPosva, Ivan, xvii\n\n前缀， 51\n\n- 作为对象， 188\n- 延迟导入所需的的，\
+  \ 58\n- 隐私性， 48, 59, 177\n- 承诺， 177\n- 在 E 中， 185\n- 属性提取， 122\n- 以及闭包等值性， 70\n\
+  - 代理， 68, 169, 178\n- 用于隔离区， 182\n\n- 谜题， 119\n- 竞态， 175\n\nRacket 编程语言， xi, 59,\
+  \ 106\n\nRasmussen, Linda, xvii\n\n读取-求值-打印循环， 169\n\n### 接收\n\n- 端口(s), 175\n\n\
+  ### 递归\n\n- 生成器定义， 135\n- 无限的， 132\n\n### 相互\n\n- 文法产生式的， 156\n- 局部的， 125\n\n###\
+  \ 引用\n\n- 前向的， 156\n- 可反射包， 142, 166, 167\n- 反射， xv, 34, 139, 188\n- 可以违反隐私的， 177\n\
+  - 的定义， 139\n- 对速度和大小的影响， 142\n- 用于发现整数运行时类型的， 109\n- 反射性， 169\n- 反射性， 20\n\n###\
+  \ 相关工作\n\n- 异步和并发， 185\n\n### 表示\n\n- 独立性， 3\n- 表现独立性， 45, 66\n- 关键字， 119\n- rethrow\
+  \ 语句， 129\n\n### 返回\n\n- 非局部的， 74\n- 语句， 4, 133, 178\n- 在异步函数中， 184\n- 在生成器内部， 73\n\
+  - 根库， 176\n\nRuby 编程语言， 46\n\n### 运行时类型\n\n- 整数的， 109\n- 字符串的， 112\n- Rx, 185\n\n\
+  Sandholm, Anders, xvii\n\nScala 编程语言， 46, 185\n\nScheme 编程语言， 106\n\n- 块语句的范围， 125\n\
+  - 脚本， 48\n- 安全性， 169, 177\n- 从镜像中益， 165\n- 基于对象能力的， 165\n\nSelf 编程语言， 45, 169\n\n\
+  - 自修改， 139\n- 发送端口， 175\n- 消息， 176\n- 序列化， 179\n- 设置器， 66, 67\n\n### 影子\n\n- 标识符的，\
+  \ 118\n\n### 大小\n\n- 部署反射代码， 168\n\nSmalltalk 编程语言， 10, 45, 59, 152, 169, 189\n\
+  - 手机， 1\n- 派生， 176\n- 语句， 125\n- 复合的， 126\n- 组， 125\n- 返回， 133\n- 简单的， 126\n- 静态的，\
+  \ 188\n- 修饰， 9\n- 流， 71, 134, 171, 174, 176, 184\n- 循环遍历， 185\n- 相关工作， 185\n- 严格函数，\
+  \ 178\n- 字符串， 111\n- 消息， 176\n- 转义序列， 112\n- 隐式连接的， 111\n- 插间值， 112\n- 多行的， 111\n\
+  - 原始的， 112\n\nStrongtalk, xix, 10, 46, 106, 169\n\n### 子类化\n\n- 禁止用于 bool， 110,\
+  \ 111\n- 禁止用于 double， 110\n- switch 语句， 129\n- 符号， 113, 168\n- 以及压缩化， 143\n- 字符串的映射映射，\
+  \ 143\n- 平板， 1\n\nTC52, xvii\n- 线程， 175\n- 工具， 188, 189\n\nTorgersen, Mads, 91\n\
+  - 特性， 46\n- 传递性， 20\n- 树摇优化， 142\n- try 语句， 128\n- ， 174\n\nTurnidge, Todd, xvii\n\
+  \n### 类型， 3\n\n### 检查\n\n- 静态， 3\n- 动态检查， 107, 178\n- 通用的， 107\n- 可选的， 187, 190\n\
+  \n查看 可选类型, 3\n\n\n\n\n\n原则，46, 66\n\nURI，10, 176, 179\n\n犹他\n\n大学的，xix\n\n值\n\n\
+  默认\n\n可选参数的，61\n\n变量\n\n最终（final）\n\n不可重新赋值，67\n\nWadler, Philip, 46\n\nweb\n\n\
+  浏览器，1, 4, 142, 171, 177\n\n全球的，1\n\nwhile 循环，128\n\nyield 语句，73, 134, 184, 185\n\
+  \nZenger, Matthias, 91\n\n![Image](img/00014.jpeg)\n\n## 代码片段\n\n\n\n\n\n![Image](img/#part0009.html_p004pro01)![Image](img/#part0009.html_p005pro01)![Image](img/#part0009.html_p006pro01)![Image](img/#part0009.html_p006pro02)![Image](img/#part0009.html_p007pro01)![Image](img/#part0009.html_p008pro01)![Image](img/#part0009.html_p008pro02)![Image](img/#part0009.html_p008pro03)![Image](img/#part0009.html_p009pro01)![Image](img/#part0009.html_p009pro02)![Image](img/#part0009.html_p009pro03)![Image](img/#part0010.html_p013pro01)![Image](img/#part0010.html_p013pro02)![Image](img/#part0010.html_p014pro01)![Image](img/#part0010.html_p015pro01)![Image](img/#part0010.html_p015pro02)![Image](img/#part0010.html_p016pro01)![Image](img/#part0010.html_p017pro01)![Image](img/#part0010.html_p018pro01)![Image](img/#part0010.html_p018pro02)![Image](img/#part0010.html_p019pro01)![Image](img/#part0010.html_p020pro01)![Image](img/#part0010.html_p020pro02)![Image](img/#part0010.html_p021pro01)![Image](img/#part0010.html_p022pro01)![Image](img/#part0010.html_p022pro02)![Image](img/#part0010.html_p023pro01)![Image](img/#part0010.html_p023pro02)![Image](img/#part0010.html_p023pro03)![Image](img/#part0010.html_p024pro01)![Image](img/#part0010.html_p025pro01)![Image](img/#part0010.html_p026pro01)![Image](img/#part0010.html_p029pro01)![Image](img/#part0010.html_p030pro01)![Image](img/#part0010.html_p031pro01)![Image](img/#part0010.html_p032pro01)![Image](img/#part0010.html_p032pro02)![Image](img/#part0010.html_p033pro01)![Image](img/#part0010.html_p033pro02)![Image](img/#part0010.html_p033pro03)![Image](img/#part0010.html_p034pro01)![Image](img/#part0010.html_p035pro01)![Image](img/#part0010.html_p035pro02)![Image](img/#part0010.html_p036pro01)![Image](img/#part0010.html_p037pro01)![Image](img/#part0010.html_p038pro01)![Image](img/#part0010.html_p038pro02)![Image](img/#part0010.html_p040pro01)![Image](img/#part0010.html_p040pro02)![Image](img/#part0010.html_p041pro01)![Image](img/#part0010.html_p041pro02)![Image](img/#part0010.html_p042pro01)![Image](img/#part0010.html_p042pro02)![Image](img/#part0010.html_p043pro01)![Image](img/#part0010.html_p043pro02)![Image](img/#part0010.html_p043pro03)![Image](img/#part0010.html_p043pro04)![Image](img/#part0010.html_p043pro05)![Image](img/#part0010.html_p044pro01)![Image](img/#part0010.html_p044pro01)![Image](img/#part0010.html_p044pro02)![Image](img/#part0011.html_p047pro01)![Image](img/#part0011.html_p049pro01)![Image](img/#part0011.html_p049pro02)![Image](img/#part0011.html_p050pro01)![Image](img/#part0011.html_p051pro01)![Image](img/#part0011.html_p052pro01)![Image](img/#part0011.html_p052pro02)![Image](img/#part0011.html_p052pro03)![Image](img/#part0011.html_p052pro04)![Image](img/#part0011.html_p053pro01)![Image](img/#part0011.html_p053pro02)![Image](img/#part0011.html_p055pro01)![Image](img/#part0011.html_p056pro01)![Image](img/#part0011.html_p056pro01)![Image](img/#part0011.html_p058pro01)![Image](img/#part0011.html_p058pro02)![Image](img/#part0011.html_p058pro03)![Image](img/#part0011.html_p058pro04)![Image](img/#part0012.html_p061pro01)![Image](img/#part0012.html_p061pro02)![Image](img/#part0012.html_p062pro01)![Image](img/#part0012.html_p062pro02)![Image](img/#part0012.html_p062pro03)![Image](img/#part0012.html_p063pro01)![Image](img/#part0012.html_p063pro02)![Image](img/#part0012.html_p063pro03)![Image](img/#part0012.html_p064pro01)![Image](img/#part0012.html_p065pro01)![Image](img/#part0012.html_p065pro02)![Image](img/#part0012.html_p065pro03)![Image](img/#part0012.html_p066pro01)![Image](img/#part0012.html_p066pro02)![Image](img/#part0012.html_p066pro03)![Image](img/#part0012.html_p067pro01)![Image](img/#part0012.html_p067pro02)![Image](img/#part0012.html_p067pro03)![Image](img/#part0012.html_p068pro01)![Image](img/#part0012.html_p069pro01)![Image](img/#part0012.html_p070pro01)![Image](img/#part0012.html_p070pro02)![Image](img/#part0012.html_p070pro03)![Image](img/#part0012.html_p070pro04)![Image](img/#part0012.html_p070pro05)![Image](img/#part0012.html_p071pro01)![Image](img/#part0012.html_p072pro01)![Image](img/#part0012.html_p073pro01)![Image](img/#part0013.html_p075pro01)![Image](img/#part0013.html_p076pro01)![Image](img/#part0013.html_p076pro02)![Image](img/#part0013.html_p076pro03)![Image](img/#part0013.html_p076pro04)![Image](img/#part0013.html_p077pro01)![Image](img/#part0013.html_p077pro02)![Image](img/#part0013.html_p077pro03)![Image](img/#part0013.html_p078pro01)![Image](img/#part0013.html_p078pro02)![Image](img/#part0013.html_p078pro03)![Image](img/#part0013.html_p078pro04)![Image](img/#part0013.html_p079pro01)![Image](img/#part0013.html_p079pro02)![Image](img/#part0013.html_p079pro03)![Image](img/#part0013.html_p080pro01)![Image](img/#part0013.html_p080pro02)![Image](img/#part0013.html_p080pro03)![Image](img/#part0013.html_p081pro01)![Image](img/#part0013.html_p082pro01)![Image](img/#part0013.html_p083pro01)![Image](img/#part0013.html_p083pro02)![Image](img/#part0013.html_p084pro01)![Image](img/#part0013.html_p085pro01)![Image](img/#part0013.html_p086pro01)![Image](img/#part0013.html_p087pro01)![Image](img/#part0013.html_p087pro02)![Image](img/#part0013.html_p088pro01)![Image](img/#part0013.html_p088pro02)![Image](img/#part0013.html_p089pro01)![Image](img/#part0013.html_p090pro01)![Image](img/#part0013.html_p091pro01)![Image](img/#part0013.html_p092pro01)![Image](img/#part0013.html_p092pro01)![Image](img/#part0013.html_p093pro02)![Image](img/#part0013.html_p094pro01)![Image](img/#part0013.html_p094pro02)![Image](img/#part0013.html_p095pro01)![Image](img/#part0013.html_p095pro02)![Image](img/#part0013.html_p096pro01)![Image](img/#part0013.html_p096pro02)![Image](img/#part0013.html_p096pro03)![Image](img/#part0013.html_p096pro04)![Image](img/#part0013.html_p096pro05)![Image](img/#part0013.html_p097pro01)![Image](img/#part0013.html_p098pro01)![Image](img/#part0013.html_p099pro01)![Image](img/#part0013.html_p099pro02)![Image](img/#part0013.html_p099pro03)![Image](img/#part0013.html_p100pro01)![Image](img/#part0013.html_p100pro02)![Image](img/#part0013.html_p100pro03)![Image](img/#part0013.html_p100pro04)![Image](img/#part0013.html_p101pro01)![Image](img/#part0013.html_p102pro01)![Image](img/#part0013.html_p102pro02)![Image](img/#part0013.html_p103pro01)![Image](img/#part0013.html_p103pro02)![Image](img/#part0013.html_p104pro01)![Image](img/#part0013.html_p105pro01)![Image](img/#part0014.html_p110pro01)![Image](img/#part0014.html_p110pro02)![Image](img/#part0014.html_p111pro01)![Image](img/#part0014.html_p111pro02)![Image](img/#part0014.html_p111pro03)![Image](img/#part0014.html_p111pro04)![Image](img/#part0014.html_p112pro01)![Image](img/#part0014.html_p112pro02)![Image](img/#part0014.html_p113pro01)![Image](img/#part0014.html_p113pro02)![Image](img/#part0014.html_p115pro01)![Image](img/#part0014.html_p116pro01)![Image](img/#part0014.html_p116pro02)![Image](img/#part0014.html_p119pro01)![Image](img/#part0014.html_p119pro02)![Image](img/#part0014.html_p120pro01)![Image](img/#part0014.html_p120pro02)![Image](img/#part0014.html_p121pro01)![Image](img/#part0014.html_p122pro01)![Image](img/#part0014.html_p123pro01)![Image](img/#part0014.html_p123pro02)![Image](img/#part0014.html_p123pro03)![Image](img/#part0014.html_p124pro01)![Image](img/#part0014.html_p124pro02)![Image](img/#part0014.html_p124pro03)![Image](img/#part0014.html_p125pro01)![Image](img/#part0014.html_p125pro02)![Image](img/#part0014.html_p126pro01)![Image](img/#part0014.html_p126pro02)![Image](img/#part0014.html_p126pro03)![Image](img/#part0014.html_p126pro04)![Image](img/#part0014.html_p126pro05)![Image](img/#part0014.html_p127pro01)![Image](img/#part0014.html_p127pro02)![Image](img/#part0014.html_p127pro03)![Image](img/#part0014.html_p128pro01)![Image](img/#part0014.html_p129pro01)![Image](img/#part0014.html_p129pro02)![Image](img/#part0014.html_p130pro01)![Image](img/#part0014.html_p131pro01)![Image](img/#part0014.html_p131pro02)![Image](img/#part0014.html_p132pro01)![Image](img/#part0014.html_p132pro02)![Image](img/#part0014.html_p132pro03)![Image](img/#part0014.html_p132pro04)![Image](img/#part0014.html_p133pro01)![Image](img/#part0014.html_p133pro02)![Image](img/#part0014.html_p133pro03)![Image](img/#part0014.html_p134pro01)![Image](img/#part0014.html_p135pro01)![Image](img/#part0014.html_p135pro02)![Image](img/#part0014.html_p136pro01)![Image](img/#part0014.html_p136pro02)![Image](img/#part0014.html_p137pro01)![Image](img/#part0014.html_p139pro01)![Image](img/#part0015.html_p139pro01)![Image](img/#part0015.html_p141pro01)![Image](img/#part0015.html_p143pro01)![Image](img/#part0015.html_p143pro02)![Image](img/#part0015.html_p144pro01)![Image](img/#part0015.html_p144pro02)![Image](img/#part0015.html_p145pro01)![Image](img/#part0015.html_p145pro02)![Image](img/#part0015.html_p146pro01)![Image](img/#part0015.html_p146pro02)![Image](img/#part0015.html_p147pro01)![Image](img/#part0015.html_p147pro02)![Image](img/#part0015.html_p148pro01)![Image](img/#part0015.html_p148pro02)![Image](img/#part0015.html_p148pro03)![Image](img/#part0015.html_p148pro04)![Image](img/#part0015.html_p149pro01)![Image](img/#part0015.html_p150pro01)![Image](img/#part0015.html_p150pro02)![Image](img/#part0015.html_p151pro01)![Image](img/#part0015.html_p151pro02)![Image](img/#part0015.html_p152pro01)![Image](img/#part0015.html_p152pro02)![Image](img/#part0015.html_p153pro01)![Image](img/#part0015.html_p154pro01)![Image](img/#part0015.html_p154pro02)![Image](img/#part0015.html_p155pro01)![Image](img/#part0015.html_p155pro02)![Image](img/#part0015.html_p156pro01)![Image](img/#part0015.html_p157pro01)![Image](img/#part0015.html_p157pro02)![Image](img/#part0015.html_p157pro03)![Image](img/#part0015.html_p158pro01)![Image](img/#part0015.html_p158pro02)![Image](img/#part0015.html_p159pro01)![Image](img/#part0015.html_p159pro02)![Image](img/#part0015.html_p160pro01)![Image](img/#part0015.html_p160pro02)![Image](img/#part0013.html_p101pro01)![Image](img/#part0013.html_p102pro01)![Image](img/#part0013.html_p102pro02)![Image](img/#part0013.html_p103pro01)![Image](img/#part0013.html_p104pro01)![Image](img/#part0013.html_p105pro01)![Image](img/#part0014.html_p110pro01)![Image](img/#part0014.html_p110pro02)![Image](img/#part0014.html_p111pro01)![Image](img/#part0014.html_p111pro01)![Image](img/#part0014.html_p111pro02)![Image](img/#part0014.html_p111pro03)![Image](img/#part0014.html_p111pro04)![Image](img/#part0014.html_p112pro01)![Image](img/#part0014.html_p112pro02)![Image](img/#part0014.html_p113pro01)![Image](img/#part0014.html_p113pro02)![Image](img/#part0014.html_p115pro01)![Image](img/#part0014.html_p116pro01)![Image](img/#part0014.html_p116pro02)![Image](img/#part0014.html_p119pro01)![Image](img/#part0014.html_p119pro02)![Image](img/#part0014.html_p120pro01)![Image](img/#part0014.html_p120pro02)![Image](img/#part0014.html_p121pro01)![Image](img/#part0014.html_p122pro01)![Image](img/#part0014.html_p123pro01)![Image](img/#part0014.html_p123pro02)![Image](img/#part0014.html_p123pro03)![Image](img/#part0014.html_p124pro01)![Image](img/#part0014.html_p124pro02)![Image](img/#part0014.html_p124pro03)![Image](img/#part0014.html_p125pro01)![Image](img/#part0014.html_p125pro02)![Image](img/#part0014.html_p126pro01)![Image](img/#part0014.html_p126pro02)![Image](img/#part0014.html_p126pro03)![Image](img/#part0014.html_p126pro04)![Image](img/#part0014.html_p126pro05)![Image](img/#part0014.html_p127pro01)![Image](img/#part0014.html_p127pro02)![Image](img/#part0014.html_p127pro03)![Image](img/#part0014.html_p128pro01)![Image](img/#part0014.html_p129pro01)![Image](img/#part0014.html_p129pro02)![Image](img/#part0014.html_p130pro01)![Image](img/#part0014.html_p131pro01)![Image](img/#part0014.html_p131pro02)![Image](img/#part0014.html_p132pro01)![Image](img/#part0014.html_p132pro02)![Image](img/#part0014.html_p132pro03)![Image](img/#part0014.html_p132pro04)\n\
+  \n"

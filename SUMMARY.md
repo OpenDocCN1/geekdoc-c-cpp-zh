@@ -682,6 +682,7 @@
 +   [Mac OS X El Capitan 初学者指南：（适用于 Macbook, Macbook Air, Macbook Pro, iMac, Mac Pro 和 Mac Mini）](docs/the-complete-beginners-guide-to-mac-os-x-el-capitan-for-macb/README.md)
 +   [C++ 编程完整指南](docs/the-complete-c-programming-guide/README.md)
 +   [CUDA C++ 编程初学者指南：通过步进详解与实际应用解锁 GPU 计算潜力](docs/the-cuda-c-programming-beginners-guide-unlock-the-potential-/README.md)
++   [Dart 编程语言入门指南](docs/the-dart-programming-language/README.md)
 +   [快乐陷阱 [电子资源]：停止挣扎，开始生活](docs/the-happiness-trap-electronic-resource-stop-struggling-start/README.md)
 +   [Java EE 架构师手册（第二版）：如何成为成功的 Java EE 应用架构师](docs/the-java-ee-architects-handbook-second-edition-how-to-be-a-s/README.md)
 +   [SQL 语言（第 2 版）](docs/the-language-of-sql-2nd-edition/README.md)
