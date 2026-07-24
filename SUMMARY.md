@@ -690,6 +690,7 @@
 +   [图书员编程语言入门指南：LITA 指南](docs/the-librarians-introduction-to-programming-languages-a-lita-/README.md)
 +   [C 的力量 (编程的力量)](docs/the-power-of-c-power-of-coding/README.md)
 +   [像程序员一样思考：创意问题解决入门指南](docs/think-like-a-programmer-an-introduction-to-creative-problem-/README.md)
++   [图灵的愿景：计算机科学的诞生](docs/turings-vision-the-birth-of-computer-science-the-mit-press/README.md)
 +   [简易 TypeScript 与 C# 编程：编程入门指南 - 2 本合一](docs/typescript-and-c-coding-made-simple-a-beginners-guide-to-pro/README.md)
 +   [TypeScript：JavaScript 开发指南](docs/typescript-javascript-development-guide/README.md)
 +   [理解典型的 C# 编程语言](docs/understanding-a-typical-c-programming-language/README.md)
