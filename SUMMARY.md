@@ -672,6 +672,7 @@
 +   [Boost 图形库](docs/the-boost-graph-library/README.md)
 +   [C 语言编程指南：今天成为程序员](docs/the-c-programming-book-be-a-programmer-today/README.md)
 +   [C 语言语言，ANSI C](docs/the-c-programming-language-ansi-c/README.md)
++   [C++ 标准库](docs/the-c-standard-library/README.md)
 +   [C++ 标准库：第四版包含 C++23](docs/the-c-standard-library-fourth-edition-includes-c23/README.md)
 +   [C# 类型系统：构建健壮、高性能且高效的程序](docs/the-c-type-system-build-robust-performant-and-efficient-prog/README.md)
 +   [珠穆朗玛峰的召唤：世界最高峰的历史、科学与未来](docs/the-call-of-everest-the-history-science-and-future-of-the-wo/README.md)
