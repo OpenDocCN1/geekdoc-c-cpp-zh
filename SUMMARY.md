@@ -693,6 +693,8 @@
 +   [简易 TypeScript 与 C# 编程：编程入门指南 - 2 本合一](docs/typescript-and-c-coding-made-simple-a-beginners-guide-to-pro/README.md)
 +   [TypeScript：JavaScript 开发指南](docs/typescript-javascript-development-guide/README.md)
 +   [理解典型的 C# 编程语言](docs/understanding-a-typical-c-programming-language/README.md)
++   [理解 Arduino：初学者指南，学习 Arduino 编程的实时洞解与技巧](docs/understanding-arduino-a-beginners-guide-with-realtime-insigh/README.md)
++   [JavaScript Promises 入门指南](docs/understanding-javascript-promises/README.md)
 +   [Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2](docs/understanding-swift-for-c-and-c-programmers-while-having-to-/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)

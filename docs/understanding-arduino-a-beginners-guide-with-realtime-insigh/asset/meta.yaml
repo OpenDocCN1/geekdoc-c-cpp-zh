@@ -1,0 +1,87 @@
+name: UNDERSTANDING ARDUINO ： A Beginner's Guide With Realtime Insights And Tricks
+  To Learn Arduino Programming
+name_cn: 理解 Arduino：初学者指南，学习 Arduino 编程的实时洞解与技巧
+slug: understanding-arduino-a-beginners-guide-with-realtime-insigh
+toc:
+- - '#'
+  - 理解 Arduino：初学者指南，学习 Arduino 编程的实时洞解与技巧
+- - '##'
+  - 引言
+- - '###'
+  - 什么是 Arduino？
+- - '##'
+  - 为什么 Arduino 流行？
+- - '#'
+  - 第一章
+- - '##'
+  - 为什么使用 Arduino 具有优势
+- - '##'
+  - Arduino 特性
+- - '##'
+  - Arduino 的缺陷
+- - '#'
+  - 第二章：工程专业学生使用的不同 Arduino 开发板
+- - '##'
+  - Arduino 开发板（类型）
+- - '###'
+  - Arduino Leonardo 开发板
+- - '###'
+  - Arduino Uno (R3)
+- - '###'
+  - RedBoard Arduino 开发板
+- - '###'
+  - LilyPad Arduino 开发板
+- - '###'
+  - Arduino Mega (R3)
+- - '###'
+  - Arduino Shields（扩展板）
+- - '###'
+  - Arduino Micro 开发板
+- - '###'
+  - Arduino Due 开发板
+- - '###'
+  - Arduino 蓝牙开发板
+- - '###'
+  - Arduino Esplora 开发板
+- - '##'
+  - 哪些 Arduino 开发板在家里很有用？
+- - '##'
+  - 如何将你的 Arduino 连接到电脑
+- - '#'
+  - 第三章：建立 Arduino 与电脑的连接
+- - '##'
+  - Arduino 方便连接所需的工具
+- - '##'
+  - 项目最终完成前的准备工作
+- - '###'
+  - 要求
+- - '###'
+  - 功能
+- - '###'
+  - 设置步骤
+- - '#'
+  - 第五章：Arduino 的最佳编程语言
+- - '##'
+  - Arduino 使用的编程语言
+- - '###'
+  - 选择哪个版本的 Arduino IDE
+- - '###'
+  - Arduino 在线 IDE
+- - '#'
+  - 第七章
+- - '##'
+  - 你可以尝试的一些 Arduino 项目
+- - '#'
+  - 第八章
+- - '##'
+  - 排除
+- - '###'
+  - 串口视器问题
+- - '###'
+  - 电脑/IDE 未被板识别
+- - '###'
+  - 无法上传代码
+- - '#'
+  - 常见问题
+- - '##'
+  - 常见问题

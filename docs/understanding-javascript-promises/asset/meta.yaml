@@ -1,0 +1,100 @@
+name: Understanding JavaScript Promises
+name_cn: JavaScript Promises 入门指南
+slug: understanding-javascript-promises
+toc:
+- - '#'
+  - 1. Promise 基础
+- - '##'
+  - Promise 的生命周期
+- - '##'
+  - 使用 then() 赋值处理器
+- - '##'
+  - 使用 catch() 赋值拒绝处理器
+- - '##'
+  - 使用 finally() 赋值结算处理器
+- - '##'
+  - 为已结算的 Promise 赋值处理器
+- - '###'
+  - 处理器与微任务
+- - '###'
+  - 创建新的（未决定的）Promise
+- - '####'
+  - 执行器错误
+- - '###'
+  - 创建已决定的（Settled）Promise
+- - '###'
+  - 使用 `Promise.reject()`
+- - '####'
+  - 非 Promise 的 Thenables
+- - '###'
+  - 总结
+- - '##'
+  - 2. Promise 链
+- - '####'
+  - 捕获错误
+- - '###'
+  - 在 Promise 链中使用 finally()
+- - '###'
+  - 在 Promise 链中返回值
+- - '#'
+  - 在 Promise 链中返回 Promise
+- - '###'
+  - 总结
+- - '##'
+  - 3. 使用多个 promise
+- - '###'
+  - Promise.all() 方法
+- - '###'
+  - 何时使用 Promise.all()
+- - '###'
+  - 共同处理多个文件
+- - '###'
+  - 调用多个相关的 Web 服务 API
+- - '##'
+  - 创建人工延迟
+- - '##'
+  - Promise.allSettled() 方法
+- - '##'
+  - 分别处理多个文件
+- - '###'
+  - 调用多个独立的 Web 服务 API
+- - '###'
+  - 等待动画完成
+- - '###'
+  - Promise.any() 方法
+- - '###'
+  - 何时使用 Promise.any()
+- - '####'
+  - 执行对冲请求 (Hedged Requests)
+- - '####'
+  - 在 Service Worker 中使用快速响应
+- - '###'
+  - Promise.race() 方法
+- - '###'
+  - 为操作设置超时时间
+- - '###'
+  - 总结
+- - '##'
+  - 4. Async 函数和 Await 表达式
+- - '####'
+  - 定义 Async 函数
+- - '####'
+  - Async 函数的不同之处
+- - '#####'
+  - 返回值始终是一个 Promise
+- - '#####'
+  - 抛出的错误是 Promise 拒绝
+- - '##'
+  - 使用 await 表达式
+- - '##'
+  - 结合非 Promise 值使用 await 表达式
+- - '##'
+  - 结合多个 Promise 使用 await 表达式
+- - '#'
+  - 使用 for-await-of 循环
+- - '#'
+  - 顶级 await 表达式
+- - '#'
+  - 总结
+- - '#'
+  - 未处理拒绝的跟踪

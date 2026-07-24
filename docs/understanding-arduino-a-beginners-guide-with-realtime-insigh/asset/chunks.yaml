@@ -1,0 +1,2828 @@
+- fmt: '
+
+    ![](Image00000.jpg)
+
+
+    # UNDERSTANDING ARDUINO
+
+    A Beginner''s Guide With Realtime Insights And Tricks To Learn Arduino Programming
+
+    By. John C. Richards
+
+
+    ## Table of Contents
+
+    - [Why is it Advantageous to Use Arduino]
+
+    - [Arduino Boards (Types)]
+
+    - [How to Connect your Arduino to a Computer]
+
+    - [The Arduino Mega Server]
+
+    - [Programming Languages that Arduino Use]
+
+    - [The Arduino Integrated Development Environment]
+
+    - [Some of the Arduino Projects that You can Attempt]
+
+    - [Troubleshooting Issues with Arduino]
+
+    - [FAQs]
+
+    - [CONCLUSION]
+
+
+    ## INTRODUCTION
+
+
+    ### What is Arduino?
+
+    Arduino is a programmable multi-purpose electronic platform with its hardware
+    and software designed to run in an open-source environment. The Arduino project
+    started at Ivrea Interaction Design Institute in Italy, born out of the need to
+    have a fast and easy to use prototyping device.
+
+
+    The Arduino group is incharge of manufacturing and designing the single-board
+    microcontrollers and microcontroller kits capable of building up various digital
+    devices. The presence of input and output pins that can be interfaced with various
+    other expansions on Arduino boards provides prototyping ability for this device.
+
+
+    To the non-technically oriented segments of our population, electronics and programming
+    may sound complicated but no cause for alarm because Arduino was initially developed
+    particularly for people with zero formal knowledge in electronics and programming
+    in mind. However, even in this present age, the use of this indispensable gadget
+    does not require special skills in electronics and programming. Thus, anyone from
+    hobbyist, artists, designers, hackers, newbies, gamers, to technical experts can
+    use various architectures of Arduino that uniquely suit their individual purposes.
+
+
+    Arduino as a micro computer mainly comprises of hardware and software parts, where
+    its hardware come under a `CC-BY-SA` license, and the software has the license
+    of the GNU Lesser General Public License (`LGPL`). Hence, it gives third-party
+    companies the privilege to manufacture and distribute Arduino boards and software
+    as long as the open-source licensing rights are followed.
+
+
+    The Arduino boards are built with different serial communications interfaces that
+    can be connected to a computer to make programming easy on the board using a simplified
+    Arduino integrated development environment (`IDE`), as well as a command-line
+    tool.
+
+
+    Arduino board has become a useful tool to solve and manage day-to-day tasks at
+    various level of difficulty as a result of constant advancement and evolution
+    it has passed through over time. This is due in fact to how it has distinguished
+    its designs from the more traditional 8-bit boards. The Arduino board has till
+    this day been used for top-notch innovative technologies such as 3D printing,
+    Cloud computing, embedded environment, IoT applications and wearable device.
+
+
+    Now Arduino can help us manage and control most of our complex daily tasks such
+    as LEDs, Motors, the internet, speakers, automated locks, cameras, drones, GPS
+    units, our smartphones since it is designed with the ability to interact with
+    them and many more.
+
+
+    For anyone passionate about creating an interactive environment or gadget, the
+    good news is that the Arduino projects are designed for this purpose for you to
+    exploit your world. It may interest you that there is no limitation to what can
+    be created, from building a personalised heating pad hand-warming blankets to
+    having your own fortune-telling machine. If you can dream it you can create it
+    with Arduino boards, virtually anything can be created.
+
+
+    Most of the Arduino boards are typically based on Atmel 8-bit AVR microcontroller.
+    In contrast, few recent boards are built using higher configuration. They can
+    be distinguished by how connection for programming is carried out and the incorporation
+    into other external circuits with type and amount of flash memory, pins, and features,
+    present or absent of single roll, double roll pins or female headers.
+
+
+    ## Why is Arduino Popular?
+
+    The Arduino projects generally gain constant admiration in the global space among
+    its users and non-users alike. This popularity can be credited to several distinctive
+    factors and unique features that come with each Arduino boards. The following
+    reasons are some among the numerous reasons why most users choose to stick with
+    Arduino devices.
+
+
+    - **Easy Installation**: Arduino is built with features that allow very easy installation
+    process. This is made possible because the Arduino boards come with USB port onboard.
+    It becomes a lot easier to install Arduino software with this unique port.
+
+    - **The Ease of Use**: The Arduino is preferred by many newbies since it can be
+    picked and used with other devices that do not require any special skill in programming,
+    and no new set of instructions in the form of code can be passed onto the board.
+    Also, no external hardware is required to perform many simple activities with
+    Arduino.
+
+    - **Simple Programming Language**: Even though one needs to still programme the
+    device to carry out a particular function, the Arduino `IDE` is written in a simplified
+    `C++` programming language. This programming language is one of the easiest which
+    makes the device a lot simple to work with.
+
+    - **Relatively Cheaper Access**: Since Arduino projects is an open-source platform,
+    this made their software free and relatively cheap hardware. Thus, many of its
+    users feel very comfortable and honored to contribute their knowledge of coding
+    and programming to Arduino-based projects to enhance better accessibility.
+
+    - **Good Back-up**: As a matter of fact, programme loading from personal computers
+    are done on most models of this device. This is achieved by using the standard
+    `API`, which is referred to as the "Arduino language". Hence, Arduino devices
+    serve a great purpose as a system of back up for almost all electronics equipment.
+
+    - **Replaceable Processor**: As small as the boards are in sizes, Arduino creates
+    room for easy and quick replacement of its onboard processor if it is detected
+    to be faulty. This makes Arduino boards preferred options when considering easy
+    maintenance and part replacement.
+
+    - **Speed of Communication**: In modern technology, speed is a major factor to
+    consider when making choices of devices. This is the main reason many users like
+    Arduino because its boards are known for their speed. Arduino has the floor when
+    it comes to fast communication speed with a personal computer. This is to ensure
+    a smooth exchange of information between Arduino and any PC.
+
+
+    Suppose you wish to try out some simple projects with the Arduino and you are
+    not sure of how or where to get it, the Arduino official company website always
+    has the products available and from other authorised electronics outlets.
+
+
+    ## CHAPTER ONE
+
+    ![Pros And Cons Of Using Arduino](Image00002.jpg)
+
+
+    ### Why is it Advantageous to Use Arduino
+
+    Arduino comes with several great features which make it a preferred choice by
+    many users, most especially beginners who usually view it as a tool that can be
+    employed to control most of the electronic devices. These among others are the
+    merits of using Arduino;
+
+
+    - **Boot loader makes loading programs**: Hardware programmers can conveniently
+    load programs directly on Arduino devices without the need to burn it on another
+    storage device. This is made possible by the boot loader onboard which dumps programs
+    on the circuit.
+
+    - **Cheaper Cost**: Arduino was created to be affordable by all comparative with
+    other similar devices. From $50 upwards, one can get most of the development boards
+    in the market. With about $30, Arduino can be bought $30 without any compromise
+    as far as pricing is concerned.
+
+    '
+  raw: '
+
+
+    ![](Image00000.jpg)
+
+
+    UNDERSTANDING ARDUINOA Beginner''s Guide With Realtime Insights And Tricks To
+    Learn Arduino ProgrammingBy. John  C. RichardsTable of Contents[Why is it Advantageous
+    to Use Arduino](#text00003.html_aEP)[Arduino Boards (Types)](#text00003.html_aER)[How
+    to Connect your Arduino to a Computer](#text00003.html_aES)[The Arduino Mega Server](#text00003.html_aEU)[Programming
+    Languages that Arduino Use](#text00003.html_aEM)[The Arduino Integrated Development
+    Environment](#text00003.html_aEV)[Some of the Arduino Projects that You can Attempt](#text00003.html_aET)[Troubleshooting
+    Issues with Arduino](#text00003.html_aEG)[FAQs](#text00003.html_page_42)[CONCLUSION](#text00003.html_aEK)INTRODUCTIONWhat
+    is Arduino?Arduino is a programmable multi-purpose electronic platform with its
+    hardware and software designed to run in an open-source environment. The Arduino
+    project started at Ivrea Interaction Design Institute in Italy, born out of the
+    need to have a fast and easy to use prototyping device.The Arduino group is incharge
+    of manufacturing and designing the single-board microcontrollers and microcontroller
+    kits capable of building up various digital devices. The presence of input and
+    output pins that can be interfaced with various other expansions on Arduino boards
+    provides prototyping ability for this device.To the non-technically oriented segments
+    of our population, electronics and programming may sound complicated but no cause
+    for alarm because Arduino was initially developed particularly for people with
+    zero formal knowledge in electronics and programming in mind. However, even in
+    this present age, the use of this indispensable gadget does not require special
+    skills in electronics and programming. Thus, anyone from hobbyist, artists, designers,
+    hackers, newbies, gamers, to technical experts can use various architectures of
+    Arduino that uniquely suit their individual purposes.Arduino as a micro computer
+    mainly comprises of hardware and software parts, where its hardware come under
+    a CC-BY-SA license, and the software has the license of the GNU Lesser General
+    Public License (LGPL). Hence, it gives third party companies the privilege to
+    manufacture and distribute Arduino boards and software as long as the open-source
+    licensing rights are followed.The Arduino boards are built with different serial
+    communications interfaces that can be connected to a computer to make programming
+    easy on the board using a simplified Arduino integrated development environment
+    (IDE), as well as a command-line tool.Arduino board has become a useful tool to
+    solve and manage day-to-day tasks at various level of difficulty as a result of
+    constant advancement and evolution it has passed through over time. This is due
+    in fact to how it has distinguished its designs from the more traditional 8-bit
+    boards. The Arduino board has till this day been used for top-notch innovative
+    technologies such as 3D printing, Cloud computing, embedded environment, IoT applications
+    and wearable device.Now Arduino can help us manage and control most of our complex
+    daily tasks such as LEDs, Motors, the internet, speakers, automated locks, cameras,
+    drones, GPS units, our smartphones since it is designed with the ability to interact
+    with them and many more.For anyone passionate about creating an interactive environment
+    or gadget, the good news is that the Arduino projects are designed for this purpose
+    for you to exploit your world. It may interest you that there is no limitation
+    to what can be created, from building a personalised heating pad hand-warming
+    blankets to having your own fortune-telling machine. If you can dream it you can
+    create it with Arduino boards, virtually anything can be created.Most of the Arduino
+    boards are typically based on Atmel 8-bit AVR microcontroller. In contrast, few
+    recent boards are built using higher configuration. They can be distinguished
+    by how connection for programming is carried out and the incorporation into other
+    external circuits with type and amount of flash memory, pins, and features, present
+    or absent of single roll, double roll pins or female headers.Why is Arduino Popular?The
+    Arduino projects generally gain constant admiration in the global space among
+    its users and non-users alike. This popularity can be credited to several distinctive
+    factors and unique features that come with each Arduino boards. The following
+    reasons are some among the numerous reasons why most users choose to stick with
+    Arduino devices.Easy Installation : Arduino is built with features that allow
+    very easy installation process. This is made possible because the Arduino boards
+    come with USB port onboard. It becomes a lot easier to install Arduino software
+    with this unique port.The Ease of Use: The Arduino is preferred by many newbies
+    since it can be picked and used with other devices that do not require any special
+    skill in programming, and no new set of instructions in the form of code can be
+    passed onto the board. Also, no external hardware is required to perform many
+    simple activities with Arduino.Simple Programming Language : Even though one needs
+    to still programme the device to carry out a particular function, the Arduino
+    IDE is written in a simplified C++ programming language. This programming language
+    is one of the easiest which makes the device a lot simple to work with.Relatively
+    Cheaper Access : Since Arduino projects is an open-source platform, this made
+    their software free and relatively cheap hardware. Thus, many of its users feel
+    very comfortable and honored to contribute their knowledge of coding and programming
+    to Arduino-based projects to enhance better accessibility.Good Back-up : As a
+    matter of fact, programme loading from personal computers are done on most models
+    of this device. This is achieved by using the standard API, which is referred
+    to as the "Arduino language". Hence, Arduino devices serve a great purpose as
+    a system of back up for almost all electronics equipment.Replaceable Processor
+    : As small as the boards are in sizes, Arduino creates room for easy and quick
+    replacement of its onboard processor if it is detected to be faulty. This makes
+    Arduino boards preferred options when considering easy maintenance and part replacement.Speed
+    of Communication : In modern technology, speed is a major factor to consider when
+    making choices of devices. This is the main reason many users like Arduino because
+    its boards are known for their speed.  Arduino has the floor when it comes to
+    fast communication speed with a personal computer. This is to ensure a smooth
+    exchange of information between Arduino and any PC.Suppose you wish to try out
+    some simple projects with the Arduino and you are not sure of how or where to
+    get it, the  Arduino official company website always has the products available
+    and from other authorised electronics outlets.CHAPTER ONE![Pros And Cons Of Using
+    Arduino](Image00002.jpg)Why is it Advantageous to Use ArduinoArduino comes with
+    several great features which make it a preferred choice by many users, most especially
+    beginners who usually view it as a tool that can be employed to control most of
+    the electronic devices. These among others are the merits of using Arduino;
+
+
+    *   Boot loader makes loading programs : Hardware programmers can conveniently
+    load programs directly on Arduino devices without the need to burn it on another
+    storage device. This is made possible by the boot loader onboard which dumps programs
+    on the circuit.
+
+
+    *   Cheaper Cost: Arduino was created to be affordable by all comparative with
+    other similar devices. From $50 upwards, one can get most of the development boards
+    in the market. With about $30, Arduino can be bought $30 without any compromise
+    as far as pricing is concerned.'
+  toc: []
+  trans: '
+
+
+    ![](img/Image00000.jpg)
+
+
+    # 了解 ARDUINO
+
+    初学者指南：实时见解与学习 Arduino 编程的技巧
+
+    作者：John C. Richards
+
+
+    ## 目录
+
+    - [为什么使用 Arduino 具有优势]
+
+    - [Arduino 板卡（类型）]
+
+    - [如何将你的 Arduino 连接到电脑]
+
+    - [Arduino Mega 服务器]
+
+    - [Arduino 使用的编程语言]
+
+    - [Arduino 集成开发环境]
+
+    - [你可以尝试的一些 Arduino 项目]
+
+    - [Arduino 故障排除]
+
+    - [常见问题 (FAQs)]
+
+    - [结论]
+
+
+    ## 引言
+
+
+    ### 什么是 Arduino？
+
+    Arduino 是一种可编程的多用途电子平台，其硬件和软件均设计用于开源环境中运行。Arduino 项目始于意大利的伊里亚交互设计学院（Ivrea Interaction
+    Design Institute），源于对快速且易于使用的原型设备的需求。
+
+
+    Arduino 组负责制造和设计单板微控制器和微控制器套件，这些设备能够构建各种数字设备。Arduino 板上的输入和输出引脚可以与其他各种扩展模块进行接口，这为该设备提供了原型制作能力。
+
+
+    对于人口中非技术导向的人群来说，电子和编程听起来可能很复杂，但无需担心，因为 Arduino 最初开发时就特别考虑了电子和编程方面完全零正式知识的人士。然而，即使在今天，使用这种不可或缺的小型设备也不需要电子和编程方面的特殊技能。因此，从爱好者、艺术家、设计师、黑客、新手、游戏玩家到技术专家，任何人都可以可以使用各种
+    Arduino 架构来满足其个人需求。
+
+
+    作为微型计算机，Arduino 主要由硬件和软件部分组成，其硬件遵循 `CC-BY-SA` 许可，软件则遵循 GNU 较小通用公共许可证（`LGPL`）。因此，只要遵循开源许可规定，它就赋予了第三方公司制造和分发
+    Arduino 板卡及软件的权利。
+
+
+    Arduino 板卡构建了不同的串口通信接口，可以连接到电脑，以便使用简化的 Arduino 集成开发环境（`IDE`）以及命令行工具在板卡上进行轻松编程。
+
+
+    随着时间推移的不断进步和演变，Arduino 板卡已成为解决和管理各种难度难度日常任务的有用工具。这实际上归功于它将自己的设计与更传统的 8 位板卡区分开来。直到今天，Arduino
+    板卡仍被用于 3D 打印、云计算、嵌入式环境、物联网应用和可穿戴设备等顶级创新技术。
+
+
+    现在 Arduino 可以帮助我们管理和控制大多数复杂的日常任务，如 LED、电机、互联网、扬声器、自动锁、摄像头、无人机、GPS 设备、智能手机等，因为它设计时具有与这些设备交互的能力。
+
+
+    对于任何对创建交互环境或设备感兴趣的人来说，好消息是，Arduino 项目正是为此目的而设计的，让你探索自己的世界。你可能会感兴趣的是，创造的内容没有限制，从制作个性化的加热垫、取暖毯到拥有你自己的占卜机。只要你能梦想，你就能用
+    Arduino 板卡创造出来，几乎任何东西都可以被创造。
+
+
+    大多数 Arduino 板卡通常基于 Atmel 8 位 AVR 微控制器。相比之下，最近的一些板卡使用更高配置构建。它们可以通过编程连接的实现方式以及与其他外部电路的集成方式（取决于闪存类型和数量、引脚、功能，以及是否存在单排、双排引脚或母头插座）来区分区分。
+
+
+    ## 为什么 Arduino 流行？
+
+    Arduino 项目在全球范围内的用户和非用户中一直获得持续的赞誉。这种流行归功于每个 Arduino 板卡自带的几个独特因素和独特特征。以下原因是大多数用户选择坚持使用
+    Arduino 设备的众多原因之一。
+
+
+    - **安装简单**：Arduino 的设计具有允许非常容易的安装过程的特性。这是因为 Arduino 板卡自带 USB 端口。有了这个独特的端口，安装 Arduino
+    软件会变得简单得多。
+
+    - **易于使用**：Arduino 受许多新手的青睐，因为它可以与其他设备配合使用，而不需要任何特殊的编程技能，且不需要以代码形式向板卡传达任何新指令集。此外，使用
+    Arduino 执行许多简单活动不需要外部硬件。
+
+    - **简单的编程语言**：尽管人们仍然需要对设备进行编程以执行特定功能，但 Arduino `IDE` 是用简化的 `C++` 编程语言编写的。这种语言是最易学习的语言之一，使得设备操作变得非常简单。
+
+    - **获取成本相对较低**：由于 Arduino 项目是一个开源平台，这使得它们的软件免费且硬件相对廉价。因此，许多用户感到非常舒适和荣幸，将他们的编码和编程知识贡献给基于
+    Arduino 的项目，以增强可访问性。
+
+    - **良好的备份**：事实上，大多数设备型号的程序加载是从个人电脑上完成的。这是通过使用标准的 `API` 实现的，它被称为“Arduino 语言”。因此，Arduino
+    设备作为几乎所有电子设备的备份系统发挥着巨大的作用。
+
+    - **可更换的处理器**：尽管板卡尺寸很小，但如果检测到板载处理器故障，Arduino 为快速、方便更换处理器留了空间。这使得 Arduino 板卡在考虑易于维护和部件更换时成为理想选择。
+
+    - **通信速度**：在现代技术中，速度是选择设备时考虑的一个主要因素。这是许多用户喜欢 Arduino 的主要原因，因为它的板卡以速度闻名。在与个人电脑进行快速通信方面，Arduino
+    是领先的。这是为了确保 Arduino 与任何电脑之间信息的流畅交换。
+
+
+    如果你想用 Arduino 一些简单项目，但不确定如何或从哪里获取，Arduino 官方网站始终提供产品，其他授权的电子商店也有。
+
+
+    ## 第一章
+
+    ![使用 Arduino 的优缺点](img/Image00002.jpg)
+
+
+    ### 为什么使用 Arduino 具有优势
+
+    Arduino 具有许多出色的特性，使其成为许多用户（特别是通常将其视为控制大多数电子设备工具的初学者）的首选。以下是使用 Arduino 的优点之一：
+
+
+    - **启动加载器使得程序加载**：硬件编程器可以方便地在 Arduino 设备上加载程序，而无需将其烧接到另一个存储设备中。这是通过板载启动加载器实现的，它将程序转入电路中。
+
+    - **成本较低**：与其他类似的设备相比，Arduino 的创建是为了让所有人都能负担得起。从 50 美元以上，可以在市场上购买大多数开发板。花费大约 30
+    美元即可以 30 美元的价格购买 Arduino，在价格方面没有任何妥协。
+
+
+    '
+- fmt: "\n## Arduino Features\n\n- **IDE**: Arduino comes with its own custom `IDE`\
+    \ which supports operation on Windows, Linux or Macs. This is due solely to the\
+    \ fact that it is manufactured as an open-source tool and with durable and well-supported\
+    \ backend. This makes porting better on it. Aside from this, it is easier to detect\
+    \ bugs and fix them.\n- **Strong IDE Community**: Many users of the Arduino are\
+    \ volunteer developers working selflessly to make their contribution to enhance\
+    \ and improve the quality of its `IDE`. The quality standard and affordability\
+    \ of the Arduino may be the major reason for this.\n- **Simple Design**: Arduino\
+    \ comes with a simple and compact design, unlike many previously developed similar\
+    \ board with a complex design. In these complex boards, several multifaceted structures\
+    \ like `LEDs`, `buttons`, `LCD` and other segments comes onboard with it. This\
+    \ results in bulky boards as compared to Arduino.\n\nArduino has been created\
+    \ with a very simple and modest structure. This is because several `Arduino shields`\
+    \ (ranging from `Wi-Fi` to `LCD`) are supported that act just like use as add-ons\
+    \ to Arduino which users may decide to use or not depending to the task they wish\
+    \ it to perform.\n\n- **Arduino Libraries Perform Several Functions**: The Arduino\
+    \ libraries have been configured to perform multiple tasks. These tasks can range\
+    \ from performing a complex function to just carrying out a simple task such as\
+    \ parsing `GPS` or writing to `SD cards` to twiddle `pins` or debounce `buttons`.\n\
+    - **Arduino is not a Product of any Chip Maker**: Many Chip makers are mostly\
+    \ interested in making their products to be unique. Thus, they manufacture `Chips`\
+    \ with custom parts that will distinguish them from other similar chips manufacturers.\n\
+    \nHowever, Arduino is not a product of any Chip maker. Hence it has intentionally\
+    \ designed to share similarities with other microcontrollers. Implying that whatever\
+    \ any microcontroller can do can also be achieved on the Arduino.\n- **Sensors**:\
+    \ Arduino is a good digital sensor because it is equipped with an analog-to-digital\
+    \ input. This enables Arduino to measure temperature, pressure and light intensity\
+    \ using data provided by the sensor. In this case, nearly all available sensors\
+    \ in the market can be used.\n- **Arduino is light and runs on a Metal**: Although\
+    \ Arduino has a sophisticated and intelligent code compiler yet it can be run\
+    \ straight on bare metal. Even with its complex functionalities, it is fast, very\
+    \ light and small. The codes come along with the `HEX` which may be used in bulks\
+    \ to program fresh chips, unlike `BASIC` or `.NET`, that needs to be interpreted.\n\
+    \n## Flaws of Arduino\n\n- **Small Resolution**: Arduino may not be a very good\
+    \ option if higher processing power or working memory is needed to handle an increase\
+    \ in the load of the device. Because the Arduino microcontroller just has a `10\
+    \ bit` of resolution. Hence it will not be able to handle compound and advanced\
+    \ functions.\n- **No Debugger**: One may not be able to check scripts on Arduino\
+    \ because debugger does not come in-built with it. Hence, detecting and correcting\
+    \ any error that might have occurred when coding becomes a little difficult since\
+    \ it is almost impossible to track one's operations and progress.\n- **Limited\
+    \ Program Execution**: Arduino can only execute a single program and one task\
+    \ at the same time. If you like your device to multi-task, this may get you particularly\
+    \ frustrating. Therefore, Arduino usage has been limited to micro-equipment and\
+    \ single task, hence, multi-task is impossible on the Arduino.\n- **No Knowledge\
+    \ of AVR Microcontroller**: Since an average knowledge and understanding of the\
+    \ `AVR microcontroller` is required, a beginner who uses Arduino may find it uneasy\
+    \ about getting along with. In particular, this may affect the overall efficiency\
+    \ in operating the device.\n- **Its Programming Language**: The `C` and `C++`\
+    \ programming languages are what Arduino is mainly developed in. However, these\
+    \ programming languages are meant to be understood by experienced programmers\
+    \ and not just some beginners.\n- **Small RAM and Memory**: Arduino can never\
+    \ take the place of your PC. Arduino comes with just `2 Kb` of `RAM` and `3 Kb`\
+    \ of flash memory. Therefore, there is always a limitation to what can be done\
+    \ or stored on it.\n- **It is not an all fix Board**: Although, the Arduino can\
+    \ be used to manage various other devices and likewise be used as PC accessory,\
+    \ it also comes with the inability to adequately be optimised for general function\
+    \ since it is not a fix-all device.\n- **Partitioning of Code**: Because of the\
+    \ `IDE` used in `Arunio`, a good project environment is not supported on it. This\
+    \ discourages easy learning and creates no room for other files. What most of\
+    \ the users do is just go online copy and paste codes with very little understanding\
+    \ of what they are doing.\n- **Usage of 5V**: Arduino still has many of its boards\
+    \ equipped with the old `5V` instead of `3.3V` which offers the best when speed\
+    \ and accuracy are considered. This is outdated, and the older chips on `5V` are\
+    \ slower and too low. own- **Misuse of Arduino**: Because many of its users lack\
+    \ in-depth knowledge on how it works and they take it as an easy fix tool to almost\
+    \ anything that comes to their minds. Hence, these users of Arduino use it for\
+    \ such an unworthy task.\n- **Abstracted API**: Arduino APIs are latent. Hence,\
+    \ it prevents normal interaction between several layers of the applications. Therefore,\
+    \ little or no data transfer between the components involved is carried out. \n\
+    - **Port Manipulation**: Most users, instead of manipulating the `pins`, they\
+    \ easily do port manipulation on the device. This is mainly due to the lack of\
+    \ basic knowledge of the programming language in use. Unknown to most users that\
+    \ within the Arduino, there is `C` equivalent that can be doused. Thus, it serves\
+    \ as a demerit to Arduino.\n"
+  raw: '*   IDE : Arduino comes with its own custom IDE which supports operation on
+    Windows, Linux or Macs. This is due solely to the fact that it is manufactured
+    as an open-source tool and with durable and well-supported backend. This makes
+    porting better on it. Aside from this, it is easier to detect bugs and fix them.
+
+
+    *   Strong IDE Community :  Many users of the Arduino are volunteer developers
+    working selflessly to make their contribution to enhance and improve the quality
+    of its IDE. The quality standard and affordability of the Arduino may be the major
+    reason for this.
+
+
+    *   Simple Design : Arduino comes with a simple and compact design, unlike many
+    previously developed similar board with a complex design. In this complex boards,
+    several multifaceted structures like LEDs, buttons, LCD and other segments comes
+    onboard with it. This results in bulky boards as compared to Arduino.
+
+
+    Arduino has been created with a very simple and modest structure. This is because
+    several Arduino shields (ranging from Wi-Fi to LCD) are supported that act just
+    like use as add-ons to Arduino which users may decide to use or not to depending
+    on the task they wish it to perform.
+
+
+    *   Arduino Libraries Perform Several Functions : The Arduino libraries have been
+    configured to perform multiple tasks. These tasks can range from performing a
+    complex function to just carrying out a simple task such as parsing GPS or writing
+    to SD cards to twiddle pins or debounce buttons.
+
+
+    *   Arduino is not a Product of any Chip Maker : Many Chip makers are mostly interested
+    in making their products to be unique. Thus, they manufacture Chips with custom
+    parts that will distinguish them from other similar chips manufacturers.
+
+
+    However, Arduino is not a product of any Chip maker. Hence it has been intentionally
+    designed to share similarities with other microcontrollers. Implying that whatever
+    any microcontroller can do can also be achieved on the Arduino.
+
+
+    *   Sensors : Arduino is a good digital sensor because it is equipped with an
+    analog-to-digital input. This enables Arduino to measure temperature, pressure
+    and light intensity using data provided by the sensor. In this case, nearly all
+    available sensors in the market can be used.
+
+
+    *   Arduino is light and runs on a Metal : Although Arduino has a sophisticated
+    and intelligent code compiler yet it can be run straight on bare metal. Even with
+    its complex functionalities, it is fast, very light and small. The codes come
+    along with the HEX which may be used in bulks to program fresh chips, unlike BASIC
+    or .NET, that needs to be interpreted.
+
+
+    Flaws of Arduino
+
+
+    *   Small Resolution: Arduino may not be a very good option if higher processing
+    power or working memory is needed to handle an increase in the load of the device.
+    Because the Arduino microcontroller just has a 10 bit of resolution. Hence it
+    will not be able to handle compound and advanced functions.
+
+
+    *   No Debugger : One may not be able to check scripts on Arduino because debugger
+    does not come in-built with it. Hence, detecting and correcting any error that
+    might have occurred when coding becomes a little difficult since it is almost
+    impossible to track one''s operations and progress.
+
+
+    *   Limited Program Execution : Arduino can only execute a single program and
+    one task at the same time. If you like your device to multi-task, this may get
+    you particularly frustrating. Therefore, Arduino usage has been limited to micro-equipment
+    and single task, hence, multi-task is impossible on the Arduino.
+
+
+    *   No Knowledge of AVR Microcontroller : Since an average knowledge and understanding
+    of the AVR microcontroller is required, a beginner who uses Arduino may find it
+    uneasy about getting along with. In particular, this may affect the overall efficiency
+    in operating the device.
+
+
+    *   Its Programming Language : The C and C++ programming languages are what Arduino
+    is mainly developed in. However, these programming languages are meant to be understood
+    by experienced programmers and not just some beginners.
+
+
+    *   Small RAM and Memory : Arduino can never take the place of your PC. Arduino
+    comes with just 2 Kb of RAM and 3 Kb of flash memory. Therefore, there is always
+    a limitation to what can be done or stored on it.
+
+
+    *   It is not an all fix Board : Although, the Arduino can be used to manage various
+    other devices and likewise be used as PC accessory, it also comes with the inability
+    to adequately be optimised for general function since it is not a fix-all device.
+
+
+    *   No Partitioning of Code : Because of the IDE used in Ardunio, a good project
+    environment is not supported on it. This discourages easy learning and creates
+    no room for other files. What most of the users do is just go online copy and
+    paste codes with very little understanding of what they are doing.
+
+
+    *   Usage of 5V : Arduino still has many of its boards equipped with the old 5V
+    instead of the 3.3V which offers the best when speed and accuracy are considered.
+    This is outdated, and the older chips on 5V are slower and too low.
+
+
+    *   Misuse of Arduino : Because many of its users lack in-depth knowledge on how
+    it works and they take it as an easy fix tool to almost anything that comes to
+    their minds. Hence, these users of Arduino use it for such an unworthy task.
+
+
+    *   Abstracted API : Arduino APIs are latent. Hence, it prevents normal interaction
+    between several layers of the applications. Therefore, little or no data transfer
+    between the components involved is carried out.
+
+
+    *   Port Manipulation: Most users, instead of manipulating the pins, they easily
+    do port manipulation on the device. This is mainly due to the lack of basic knowledge
+    of the programming language in use. Unknown to most users that within the Arduino,
+    there is C equivalent that can be doused. Thus, it serves as a demerit to Arduino.'
+  toc: []
+  trans: '
+
+
+    ## Arduino 特性
+
+
+    - **IDE**: Arduino 自带了自定义的 `IDE`，支持在 Windows、Linux 或 Mac 系统上运行。这完全是因为它是作为开源工具制造的，并具有耐用且支持良好的后端。这使得在其平台上移植变得更加容易。此外，它更容易检测并修复错误。
+
+    - **强大的 IDE 社区**: 许多 Arduino 用户都是志愿者开发者，他们无私地工作，贡献力量以增强和改进其 `IDE` 的质量。Arduino
+    的质量标准和价格优势可能是这一现象的主要原因。
+
+    - **简单的设计**: Arduino 的设计简单且紧凑，与之前开发的许多设计复杂的类似板不同。在这些复杂的板卡上，`LEDs`、`buttons`、`LCD`
+    和其他多个多功能结构被集成在一起。这导致与 Arduino 相比，板卡变得非常笨重。
+
+
+    Arduino 采用了非常简单且谦逊的结构。这是因为它支持多种 `Arduino shields`（范围从 `Wi-Fi` 到 `LCD` 不等），这些扩展就像
+    Arduino 的附加组件，用户可以根据希望让其执行的任务来决定是否使用。
+
+
+    - **Arduino 库执行多种功能**: Arduino 库经过配置可以执行多项任务。这些任务范围从执行复杂功能到执行简单任务不等，例如解析 `GPS`
+    或向 `SD cards` 写入数据，控制 `pins` 或对 `buttons` 进行去抖处理。
+
+    - **Arduino 并非任何芯片制造商的产品**: 许多芯片制造商主要感兴趣的是让他们的产品具有独特性。因此，他们制造带有自定义部件的 `Chips`，以与其他类似的芯片制造商区分开来。
+
+
+    然而，Arduino 并不是任何芯片制造商的产品。因此，它在设计上刻意与其他微控制器保持相似性。这意味着任何微控制器能做到的事情，在 Arduino 上也能实现。
+
+    - **传感器**: Arduino 是一个很好的数字传感器，因为它配备了模拟数字输入。这使得 Arduino 能够使用传感器提供的数据测量温度、压力和光强度。在这种情况下，市场上几乎所有的可用传感器都可以。
+
+    - **Arduino 轻量且可在裸机上运行**: 虽然 Arduino 拥有先进且智能的代码编译器，但它可以直接在裸机（bare metal）上运行。尽管具有复杂的功能，它仍然快速、轻量且体积小。代码与
+    `HEX` 一起提供，可以批量用于为新芯片编程，而像 `BASIC` 或 `.NET` 那样需要解释。
+
+
+    ## Arduino 的缺陷
+
+
+    - **分辨率低**: 如果需要更高的处理能力或工作内存来处理设备不断增加的负载，Arduino 可能不是一个非常好的选择。因为 Arduino 微控制器只有
+    `10 bit` 的分辨率。因此，它无法处理复合和高级功能。
+
+    - **无调试器**: 用户可能无法在 Arduino 上检查脚本，因为它没有内置调试器。因此，检测和纠正编码过程中可能发生的任何错误变得有些困难，因为要追踪自己的操作和进度几乎是不可能的。
+
+    - **程序执行受限**: Arduino 同时只能执行一个程序和一项任务。如果你希望你的设备能够多任务处理，这可能会让你感到格外沮丧。因此，Arduino
+    的使用被限制在微设备和单任务上，因此在 Arduino 上无法进行多任务处理。
+
+    - **缺乏 AVR 微控制器知识**: 由于需要对 `AVR microcontroller` 有平均水平的知识和理解，使用 Arduino 的学者可能会发现难以适应。特别是，这可能会影响设备的整体效率。
+
+    - **编程语言**: Arduino 主要使用 `C` 和 `C++` 编程语言开发。然而，这些编程语言是为有经验的人准备的，而不仅仅是初学者。
+
+    - **内存限制**: Arduino 永远无法取代电脑。Arduino 只有 `2 Kb` 的 `RAM` 和 `3 Kb` 的闪存。因此，在上面可以执行或存储的内容始终受到限制。
+
+    - **不是全能板**: 虽然 Arduino 可以用于管理其他设备，并作为 PC 配件使用，但它无法对通用功能进行充分优化，因为它不是一个全能设备。
+
+    - **代码分段**: 由于 Arduino 使用的 `IDE`，它并不支持良好的项目环境。这阻碍了轻松学习，并且没有为其他文件留出空间。大多数用户做的只是从网上复制粘贴代码，而并不理解自己在做什么。
+
+    - **5V 的使用**: Arduino 的许多板子仍然配备了旧的 `5V`，而不是在考虑速度和精度时表现更好的 `3.3V`。这是过时的，旧的 `5V`
+    芯片速度慢且电压低。
+
+    - **Arduino 的误用**: 因为许多用户缺乏对其如何工作原理的深度知识，他们将其视为几乎可以解决任何问题的简易修复工具。因此，这些 Arduino
+    用户将其用于这种不值一提的任务。
+
+    - **抽象的 API**: Arduino 的 API 是延迟的。因此，它阻止了应用程序多个层之间的正常交互。因此，涉及的组件之间几乎没有进行数据传输。
+
+    - **端口操作**: 大多数用户并没有直接操作 `pins`，而是简单地在设备上进行端口操作。这主要是由于缺乏对所用语言的基础知识。大多数用户并不知道 Arduino
+    内部有可以处理的 `C` 等效代码。
+
+
+    '
+- fmt: '
+
+    # CHAPTER TWO: Different types of Arduino Boards Used By Engineering Students
+
+
+    ![Different types of Arduino Boards...](Image00003.jpg)
+
+
+    ## Arduino Boards (Types)
+
+    Arduino boards have gained influence in various engineering fields as quick ways
+    to design different projects. It is sometimes used as a finishing tool in some
+    embedded engineers projects. These designs vary, depending on the type and model
+    of Arduino used, can range from a composite scientific instrument to a simple
+    household instrument.
+
+
+    The Arduino ability to be used for various different applications has been enhanced,
+    all of its boards are based on open-source. Arduino boards on the market come
+    in different types and models with common features as well as distinctive functions,
+    these are usually based on the specific project they are used for. Some of the
+    available types of Arduino boards are:
+
+
+    ### Arduino Leonardo Board
+
+    Among the first developments of Ardun boards, Leonardo board came as one. Usage
+    of program libraries is easier on this board because it can be directly connected
+    using `USB`. The `USB` comes in-built with the microcontroller, which makes it
+    one of the cheapest and easy to use among all the boards. Leonardo boards are
+    easy to connect with the computer keyboard, mouse, smart devices etc, as a result
+    of this feature. The board is fully dependent on `ATmega32u4` microcontroller
+    with a “clock speed” of `16 MHz`. This board is equipped with 2.5 Kb SRAM memory
+    while it sits on a 32 Kb flash memory.
+
+
+    ### Arduino Uno (R3)
+
+    When looking for board among the most popular, the Ardunio Uno comes to mind,
+    it is reportedly used by people of diverse professions. This board has 14 pins
+    digital input/output (`I/O`), with six pins being used as a “pulse width modulation”
+    (`PWM`) output. Other features one can find on this board are a `USB` port, a
+    reset button, a power jack and 6 pins analog input. By upholding the microcontroller,
+    all of these will be accessible. This board can be attached to your PC using a
+    `USB` cable. The board come with `ATmega328` processor, a clock speed of `16 MHz`.
+    The SRAM memory is 2 KB while the flash memory is 32 KB.
+
+
+    ### RedBoard Ardunio Board
+
+    The RedBoard Arduino board make use of the `Arduino IDE`. Which can be subsequently
+    programmed by using a Mini-B `USB` cable. This easily goes well with Windows 8
+    without the need to alter any of your security settings. The RedBoard Arduino
+    board can be easily controlled. It is one of the easiest to use after it must
+    have been successfully created. After powering the board on with your PC or other
+    emulators, just follow the menu and select.
+
+
+    ### LilyPad Arduino Board
+
+    This board is wearable, and can be in e-textile technology. The design is for
+    textiles in particular, and the board is also washable. It can be sewed into clothes
+    with tread. Everything on this board like the sensor circuits, power and `I/O`
+    are specifically designed to serve this purpose. This board also consists of an
+    `Arduino` bootloader with variable `2V` to `5V` power supply sitting on `ATMEGA328`
+    microcontroller.
+
+
+    ### Arduino Mega (R3)
+
+    The Arduino Mega operates on an `ATmega2560` processor and its digital `I/O` pins
+    are 54. out of these 15 pins, 4 pins are used for the serial port of the `UART`
+    hardware, 16 pins for analog inputs and 14 pins as the output for `PWM`. Some
+    other components on these boards are a power jack, connection for `USB`, ICSP
+    header, `RESET` pin and the `16 MHz` crystal oscillator.
+
+
+    ### Arduino Shields
+
+    To connect to other types of Arduino boards, Arduino Shields are used. They are
+    pre-built circuit boards. These Ardunio shields vary depending on the type of
+    usage. Some of which include `Proto Shield`, `Ethernet Shield`, `Wireless Shield`
+    and `GSM Shield`. The `Arduino Shield` and Arduino boards are so connected in
+    a way that the Arduino board is placed under the `Arduino Shield`. This makes
+    room for easy integration as the board is eventually connected to control the
+    `LCD` and monitor.
+
+
+    ### Arduino Micro Boards
+
+    As the name implies, this is a special type of Arduino board with a very small
+    design. The microcontroller operates on a processor dubbed `ATmega32U4`. There
+    are a total of 20 pins on this board of which 12 are used for analog `I/O` and
+    7 for `PWM`. This board has its micro-USB connection onboard the Arduino Micro
+    board. Other features present on the board include; ICSP header, a `16 MHz` crystal
+    oscillator. Arduino micro commonly refers to as a shrunk form of the Leonardo
+    because it is small and resembles the Arduino Leonardo boards.
+
+
+    ### Arduino Due Board
+
+    The first board on Arduino series designed and developed to use the ARM microcontroller
+    is Arduino Due board. The ARM core is 32-bit and 54 digital `I/O` pins where 12
+    are analog pins. This comes with two different types of ports onboard (the programming
+    port and the `USB` port); the programming port functions as the interface for
+    the micro side of the `USB` cable.
+
+
+    ### Arduino Bluetooth Board
+
+    This has been purportedly dubbed Bluetooth board because it is programmed through
+    Bluetooth wireless connection. Arduino BT boards are based on the `ATmega168`
+    microcontrollers model. Notable features of this board are screw terminals, `16
+    MHz` crystal oscillator, reset button, 6 analog pins and 16 digital pins.
+
+
+    ### Arduino Esplora Board
+
+    Planning to have actuators and sensors that interface easily, then the Arduino
+    Esplora board is designed specifically for you. This board is different from other
+    types of Arduino boards as it is embedded with microphone, accelerometer, temperature
+    sensor, slider, joystick and buttons. The Arduino Esplora board also come with
+    the input and output connections.
+
+
+    ## What Arduino Boards can be useful in the House?
+
+    Several types of Arduino boards can become very useful at home for various kinds
+    of task. However, the task Arduino will handle will suggest which type of board
+    suit the purpose, but generally, the most commonly used household boards includes
+    `Arduino Uno`, `Arduino Mega`, `Arduino Pro` and `Arduino Mini`. This is determined
+    majorly by type of task to perform at home ranges from scheduling upcoming, automated
+    door lock and switching on or off the lights to even operating your smartphones.
+    CHAPTER THREE
+
+
+    ![USB communication...](Image00004.jpg)
+
+
+    ## How to Connect your Arduino to a Computer
+
+    After you must have made your selection of the type of Arduino board you need
+    for your specific function. What follows is to try and load a set of instructions
+    or codes into the Arduino board via a computer. How your Arduino manage a given
+    task is determined by the instructions loaded in it. These set of instructions
+    or programs are, however, very specific to the function to be performed. Nevertheless,
+    any instructions loaded into the Arduino board is what will get executed. Your
+    Arduino must be connected to a computer to enable code loading. In other to establish
+    the necessary connection on Windows, the following are the needed things:
+
+
+    *   The Arduino board
+
+    *   The Arduino software
+
+    *   The `USB` cable (A and B)
+
+    *   Your computer
+
+
+    1. Start by downloading the required software to make your computer compatible
+    with your Arduino.
+
+    2. Once you are done with it, unzip it into `D:/Arduino`.
+
+    3. Then, the connection between your computer and Arduino board is ready to be
+    established by connecting one end of the `USB` cable to your computer and the
+    other end your Arduino board.
+
+    4. When your computer''s Windows prompt for the driver, it can be installed manually
+    (location is `D:/Arduino/Arduino-0022/drivers`).
+
+    5. The Arduino software environment can then be located `D:/Arduino/arduino-0022/arduino.exe`.
+
+    6. After this, you choose the type of Arduino board you are using by doing the
+    following:
+
+
+    *   Go to `Tools`
+
+    *   Select `Board`
+
+    *   Then, choose the type of Arduino board from the drop-down lists.
+
+    '
+  raw: 'CHAPTER TWO![Different types of Arduino Boards Used By Engineering Stundents](Image00003.jpg)Arduino
+    Boards (Types)Arduino boards have gained influence in various engineering fields
+    as quick ways to design different projects. It is sometimes used as a finishing
+    tool in some embedded engineers projects. These designs vary, depending on the
+    type and model of Arduino used, can range from a composite scientific instrument
+    to a simple household instrument.The Arduino ability to be used for various different
+    applications has been enhanced, all of its boards are based on open-source. Arduino
+    boards on the market come in different types and models with common features as
+    well as distinctive functions, these are usually based on the specific project
+    they are used for. Some of the available types of Arduino boards are;Arduino Leonardo
+    Board : Among the first developments of Ardunio boards, Leonardo board came as
+    one. Usage of program libraries is easier on this board because it can directly
+    be connected using USB. The USB comes in-built with the microcontroller, which
+    makes it one of the cheapest and easy to use among all the boards.Leonardo boards
+    are easy to connect with the computer keyboard, mouse, smart devices etc, as a
+    result of this feature. The board is fully dependent on ATmega32u4 microcontroller
+    with a “clock speed” of 16 MHz. This board is equipped with 2.5 Kb SRAM memory
+    while it sits on a 32 Kb flash memory.Arduino Uno (R3) : When looking for board
+    among the most popular, the Ardunio Uno comes to mind, it is reportedly used by
+    people of diverse professions. This board has 14 pins digital input/output (I/O),
+    with six pins being used as a “pulse width modulation” (PWM) output. Other features
+    one can find on this board are a USB port, a reset button, a power jack and 6
+    pins analog input.By upholding the microcontroller, all of these will be accessible.
+    This board can be attached to your PC using a USB cable. The board come with ATmega328
+    processor, a clock speed of 16 MHz. The SRAM memory is 2 KB while the flash memory
+    is 32 KB.RedBoard Ardunio Board : The RedBoard Arduino board make use of the Arduino
+    IDE. Which can be subsequently programmed by using a Mini-B USB cable. This easily
+    goes well with Windows 8 without the need to alter any of your security settings.The
+    RedBoard Arduino board can be easily controlled. It is one of the easiest to use
+    after it must have been successfully created. After powering the board on with
+    your PC or other emulators, just follow the menu and select.LilyPad Arduino Board
+    : This board is wearable, and can be in e-textile technology. The design is for
+    textiles in particular, and the board is also washable. It can be sewed into clothes
+    with tread. Everything on this board like the sensor circuits, power and I/O are
+    specifically designed to serve this purpose. This board also consists of an Arduino
+    bootloader with variable 2V to 5V power supply sitting on ATMEGA328 microcontroller.Arduino
+    Mega (R3) : The Arduino Mega operates on an ATmega2560 processor and its digital
+    I/O pins are 54\. out of these 15 pins, 4 pins are used for the serial port of
+    the UART hardware, 16 pins for analog inputs and 14 pins as the output for PWM.
+    Some other components on these boards are a power jack, connection for USB, ICSP
+    header, RESET pin and the 16 MHz crystal oscillator.Arduino Shields : To connect
+    to other types of Arduino boards, Arduino Shields are used. They are pre-built
+    circuit boards. These Ardunio shields vary depending on the type of usage. Some
+    of which include Proto Shield, Ethernet Shield, Wireless Shield and GSM Shield.The
+    Arduino Shield and Arduino boards are so connected in a way that the Arduino board
+    is placed under the Arduino Shield. This makes room for easy integration as the
+    board is eventually connected to control the LCD and monitor.Arduino Micro Boards:
+    As the name implies, this is a special type of Arduino board with a very small
+    design. The microcontroller operates on a processor dubbed ATmega32U4. There are
+    a total of 20 pins on this board of which 12 are used for analog I/O and 7 for
+    PWM. This board has its micro-USB connection onboard the Arduino Micro board.Other
+    features present on the board include; ICSP header, a 16 MHz crystal oscillator.
+    Arduino micro commonly refers to as a shrunk form of the Leonardo because it is
+    small and resembles the Arduino Leonardo boards.Arduino Due Board: The first board
+    on Arduino series designed and developed to use the ARM microcontroller is Arduino
+    Due board. The ARM core is 32-bit and 54 digital I/O pins where 12 are analog
+    pins. This comes with two different types of ports onboard (the programming port
+    and the USB port); the programming port functions as the interface for the micro
+    side of the USB cable.Arduino Bluetooth Board: This has been purportedly dubbed
+    Bluetooth board because it is programmed through Bluetooth wireless connection.
+    Arduino BT boards are based on the ATmega168 microcontrollers model. Notable features
+    of this board are screw terminals, 16 MHz crystal oscillator, reset button, 6
+    analog pins and 16 digital pins.Arduino Esplora Board: Planning to have actuators
+    and sensors that interface easily, then the Arduino Esplora board is designed
+    specifically for you. This board is different from other types of Arduino boards
+    as it is embedded with microphone, accelerometer, temperature sensor, slider,
+    joystick and buttons. The Arduino Esplora board also come with the input and output
+    connections. What Arduino Boards can be useful in the House?Several types of Arduino
+    boards can become very useful at home for various kinds of task. However, the
+    task Arduino will handle will suggest which type of board suit the purpose, but
+    generally, the most commonly used household boards includes Arduino Uno, Arduino
+    Mega, Arduino Pro and Arduino Mini.This is determined majorly by type of task
+    to perform at home ranges from scheduling upcoming events, automated door lock
+    and switching on or off the lights to even operating your smartphones. Beginners
+    find these most interesting and enjoy the best quality from the Arduino Uno in
+    particular.CHAPTER THREE![USB communication between Arduino Uno & PC using Python:
+    Sending data from PC to Arduino - YouTube](Image00004.jpg)How to Connect your
+    Arduino to a ComputerAfter you must have made your selection of the type of Arduino
+    board you need for your specific function. What follows is to try and load a set
+    of instructions or codes into the Arduino board usually via a computer. How your
+    Arduino manage a given task is determined by the instructions loaded in it. These
+    set of instructions or programs are, however, very specific to the function to
+    be performed.  Nevertheless, any instructions loaded into the Arduino board is
+    what will get executed. Your Arduino must be connected to a computer to enable
+    code loading. In other to establish the necessary connection on Windows OS, the
+    following are the needed things:
+
+
+    *   The Arduino board
+
+
+    *   The Arduino software
+
+
+    *   The USB cable (A and B plug)
+
+
+    *   Your computer
+
+
+    ​ 1\. Start by downloading the required software to make your computer compatible
+    with your Arduino.​ 2\. Once you are done with it, unzip it into (D:/Arduino).​
+    3\. Then, the connection between your computer and Arduino board is ready to be               established
+    by connecting one end of the USB cable to your computer and the other end               your
+    Arduino board.​ 4\. When your computer''s Windows prompt for the driver, it can
+    be installed manually                             (location is D:/Arduino/Arduino-0022/drivers).​
+    5\. The Arduino software environment can then be located ​ D:/Arduino/arduino-0022/arduino.exe.​
+    6\. After this, you choose the type of Arduino board you are using by doing the               following:
+
+
+    *   Go to Tools
+
+
+    *   Select Board
+
+
+    *   Then, choose the type of Arduino board from the drop-down lists.'
+  toc: []
+  trans: '
+
+
+    # 第二章：工程专业学生使用的不同 Arduino 开发板
+
+
+    ![不同 Arduino 开发板...](img/Image00003.jpg)
+
+
+    ## Arduino 开发板（类型）
+
+    Arduino 开发板已成为设计不同项目的快速途径，在各个工程领域中发挥了影响力。它们有时被用作某些嵌入式工程师项目的收尾工具。这些设计取决于所使用的 Arduino
+    类型和型号，其范围可以从复杂的复合科学仪器到简单的家用仪器不等。
+
+
+    Arduino 用于各种不同应用的能力得到了增强，所有的开发板都基于开源。市场上的 Arduino 开发板有不同的类型和型号，既有共同特征，也有独特的功能，这些通常取决于它们所处的特定项目。常用的
+    Arduino 开发板类型包括：
+
+
+    ### Arduino Leonardo 开发板
+
+    在 Arduino 的最早开发产品中，Leonardo 板是其中之一。在这块板上使用程序库更加容易，因为可以通过 `USB` 直接连接。`USB` 内置在微控制器中，使其成为所有开发板中最廉价且易于使用的之一。由于这一特性，Leonardo
+    板可以轻松地连接到电脑键盘、鼠标、智能设备等。该板完全依赖于时钟速度为 `16 MHz` 的 `ATmega32u4` 微控制器。此板配备了 2.5 Kb
+    SRAM 内存，同时位于 32 Kb 的闪存内存上。
+
+
+    ### Arduino Uno (R3)
+
+    在寻找最流行的开发板时，人们会想到 Arduino Uno，据报道它被不同职业的人使用。这块板有 14 个数字输入/输出 (`I/O`) 引脚，其中 6 个引脚作为“脉冲宽度调制”
+    (`PWM`) 输出。在该板上找到的其他特征包括 `USB` 端口、重置按钮、电源接口和 6 个模拟输入引脚。通过维持微控制器，所有功能都可以实现。可以使用
+    `USB` 线将此板连接到你的电脑。该板带有 `ATmega328` 处理器，时钟速度为 `16 MHz`。SRAM 内存为 2 KB，闪存为 32 KB。
+
+
+    ### RedBoard Arduino 开发板
+
+    RedBoard Arduino 开发板利用 `Arduino IDE`。随后可以使用 Mini-B `USB` 线进行编程。它可以轻松地配合 Windows
+    8，而无需修改你的任何安全设置。RedBoard Arduino 开发板可以被轻松控制。在成功创建后，它是最易用的板之一。用电脑或其他仿真器打开板电源后，只需按照菜单进行选择即可。
+
+
+    ### LilyPad Arduino 开发板
+
+    这块板是可穿戴的，用于电子纺织品技术。其设计专门针对纺织品，而且开发板是可以清洗的。可以用线线将其缝在衣服上。此板上的所有东西如传感器电路、电源和 `I/O`
+    都是专门为此目的而设计的。此板还包含一个 `Arduino` 引导程序，带有 `2V` 到 `5V` 的可变电源，位于 `ATMEGA328` 微控制器上。
+
+
+    ### Arduino Mega (R3)
+
+    Arduino Mega 运行在 `ATmega2560` 处理器上，其数字 `I/O` 引脚有 54 个。在这些引脚中，4 个引脚用于 `UART` 硬件的串口，16
+    个引脚用于模拟输入，14 个引脚作为 `PWM` 输出。这些板上的其他组件还包括电源接口、`USB` 连接、ICSP 插针、`RESET` 引脚和 `16
+    MHz` 晶振振荡器。
+
+
+    ### Arduino Shields（扩展板）
+
+    为了连接到其他类型的 Arduino 开发板，使用了 Arduino Shields。它们是预构建的电路板。这些 Arduino 扩展板取决于使用类型。某些包括
+    `Proto Shield`、`Ethernet Shield`、`Wireless Shield` 和 `GSM Shield`。`Arduino Shield`
+    和 Arduino 开发板的连接方式是：Arduino 开发板放置在 `Arduino Shield` 下方。这为便于集成留出了空间，因为板最终会连接以控制
+    `LCD` 和显示器。
+
+
+    ### Arduino Micro 开发板
+
+    顾如名，这是一种设计非常小的特殊 Arduino 开发板。微控制器运行在名为 `ATmega32U4` 的处理器上。此板总共有 20 个引脚，其中 12 个用于模拟
+    `I/O`，7 个用于 `PWM`。此板在 Arduino Micro 板上自带了微-USB 连接。板上的其他特征还包括：ICSP 插针、`16 MHz`
+    晶振振荡器。Arduino micro 通常被称为 Leonardo 的缩减版，因为它很小且外观与 Arduino Leonardo 板相似。
+
+
+    ### Arduino Due 开发板
+
+    Arduino 系列中第一块设计并开发用于 ARM 微控制器的板是 Arduino Due 板。ARM 内核是 32 位，有 54 个数字 `I/O` 引脚，其中
+    12 个是模拟引脚。它带有两个不同类型的端口（编程端口和 `USB` 端口）；编程端口作为 `USB` 线微端的接口使用。
+
+
+    ### Arduino 蓝牙开发板
+
+    这一个之所以被称为蓝牙板，因为它通过蓝牙无线连接进行编程。Arduino BT 板基于 `ATmega168` 微控制器型号。此板的显著特征是螺钉端子、`16
+    MHz` 晶振振荡器、重置按钮、6 个模拟引脚和 16 个数字引脚。
+
+
+    ### Arduino Esplora 开发板
+
+    如果你计划拥有易连接的执行器和传感器，那么 Arduino Esplora 板是为你专门设计的。此板与其他类型的 Arduino 开发板不同，因为它嵌入了麦克风、加速度计、温度传感器、滑块、摇杆和按钮。Arduino
+    Esplora 板还带有输入输出连接。
+
+
+    ## 哪些 Arduino 开发板在家里很有用？
+
+    几种类型的 Arduino 开发板在各种家庭任务中都非常有用。然而，Arduino 处理的任务将决定哪种板最合适，但通常使用的板包括 `Arduino Uno`、`Arduino
+    Mega`、`Arduino Pro` 和 `Arduino Mini`。任务范围从定时、自动门锁到开关灯甚至操作智能手机。第三章
+
+
+    ![USB 通信...](img/Image0004.jpg)
+
+
+    ## 如何将你的 Arduino 连接到电脑
+
+    在你必须选择适用于特定功能的 Arduino 开发板类型后，接下来是通过电脑将一组指令或代码加载到开发板。Arduino 如何管理给定任务取决于加载到它的指令。然而，加载到
+    Arduino 板的任何指令将被执行。你的 Arduino 必须连接到电脑以启用加载。要在 Windows 上建立必要的连接，需要以下物品：
+
+
+    *   Arduino 开发板
+
+    *   Arduino 软件
+
+    *   `USB` 线（A 和 B）
+
+
+    1. 首先下载与电脑兼容的软件。
+
+    2. 完成后，解压到 `D:/Arduino`。
+
+    3. 然后，通过将 `USB` 线的一端连接到电脑，另一端连接到 Arduino 板，电脑与板之间的连接就准备好了。
+
+    4. 当 Windows 提示驱动程序时，可以手动安装（位于 `D:/Arduino/Arduino-0022/drivers`）。
+
+    5. 随后可以在此处找到 Arduino 环境：`D:/Arduino/arduino-0022/arduino.exe`。
+
+
+    '
+- fmt: '
+
+    7. Choose the serial port by going to `Tools`, `serial port` then `COM`.
+
+    8. Go to sketch example by choosing `File`, `Examples`, `Basics` and `Blink`.
+
+    9. Upload the code to `Arduino` by clicking on the upload button. When you see
+    "Done uploading" prompt, your `Arduino` has been installed successfully.
+
+
+    # Establishing a Connection of Arduino to your Computer
+
+
+    ## Tools Required by Arduino for easy Connection
+
+    After installing your running code successfully on the `Arduino` board, the next
+    thing you think is how to perform a specific project. `Arduino` can handle several
+    projects such as from flying a drone, moving a car, lighting an `LED` or moving
+    a simple robot to lock a door (Some of the projects you can try with `Arduino`
+    are discussed later).
+
+
+    For you to execute any of these projects, a specific program or set of instructions
+    must be run on your `Arduino` board (as discussed above on how to connect your
+    `Arduino` to a computer). These codes are unique to every function assigned to
+    a particular `Arduino` to perform.
+
+
+    However, when you are sure all these have been done, the next thing is to carefully
+    connect every other component parts of the `Arduino` to the device you want it
+    to manage. This is usually carried out using some simple tools or instruments.
+    For any successful `Arduino` project, some of these tools are needed:
+
+
+    - **Wire Strippers**: These are simple plier-like tools. They are usually hand-held
+    and used to remove the insulating covering of any electrical wire. They can also
+    be used to cut open any end on an electrical wire. Such ends are usually connected
+    to the end of other opened wire. For the `Arduino` project, this tool is used
+    to create a connection of wires from your `Arduino` to the device you are working
+    with. This enables the exchange of necessary information that is specific to the
+    primary function of that project.
+
+    - **Precision Screw Driver Set**: These set of screw drivers are usually used
+    by most technicians or hobbyist. They are made with different slots to suit various
+    kinds of screw. Precision screw drivers are usually required when working with
+    a minute or small screwing because some `Arduino` boards are very small, complex
+    and complicated in nature. In this way, these drivers can have a firm hold on
+    the screws and at the same time, twist on the available small portions of the
+    devices used in the project you are doing.
+
+    - **Needle-nose Pliers**: Needle-nose pliers come with several names. Some of
+    the popular ones include snipe-nose plier, pointy-nosed plier, pinch-nose plier
+    and log-nose plier. It performs a dual function as both holding and cutting tool
+    particularly suitable for the several intricate wires likely to be seen when working
+    on the `Arduino` project. These tools are used mainly for snipping, bending or
+    repositioning any wire in your `Arduino` project to ensure tight connections that
+    will guarantee that `Arduino` delivers the optimum function you want. This is
+    because they can reach a very tight position where other regular pliers will not
+    function.
+
+    - **Flush Cutters**: The main purpose of this tool is to cut your wires. Flush
+    cutters reaches the point where such wires are cut to be neat, flat and very smooth.
+    The flush cutters are to be held in a perpendicular position with respect to any
+    wire you may want to cut. Your `Arduino` project will definitely look neat and
+    perfect when you make use of Flush cutters.
+
+    - **Digital Multimeter**: Primarily, a multimeter measures the quantity of electricity
+    passing through your circuit. This is usually measured either in Volts (`V`),
+    Ampere (`A`) and Ohms (`Ω`). This tool will measure those parameters with good
+    accuracy. The use of the digital multimeter help to see the values of either the
+    current, voltage or resistance of electricity passing through your device to make
+    any necessary adjustment if the need arises.
+
+    - **Fine Tip Straight Tweezers**: This tool is used to pick up any unnecessary
+    debris or materials that have found its way into your project. It has two ends,
+    one is a pointed end used mainly for tweezing purpose while the other end is a
+    picking end.
+
+    - **Solder Sucker**: This is a desoldering instrument popularly called a desoldering
+    pump. It is specifically used to remove any previously soldered part of your circuit.
+    This might either be for the repair, replacement or troubleshooting of that part.
+
+    - **Soldering Iron**: The soldering iron is a tool used to obtain smooth of various
+    wires within your project. This ensures the proper flow of electric charges across
+    the whole circuit in the project. It works by heating and melting the solder on
+    the contact point. The junctions where connections are to be made are glued together
+    using the soldering iron.
+
+    - **Panavise Jr**: Another essential tool used for `Arduino` project is the `Panavise
+    Jr`. This helps when connecting many devices by using it to hold any part of your
+    project. The `Arduino` board or some other components of the circuits can be held
+    using this tool. Doing this makes it easier for you to do anything you want to
+    do on your project because this tool can be twisted to any desire direction giving
+    you the comfort and makes your project easier to work on.
+
+
+    ## Preparation Work before your Project is finally Done
+
+    When connecting other devices and circuits with the `Arduino` board, certain precautions
+    must be followed to avert the complication of wrong connection and to also avoid
+    touching other parts of the board that are not needed in your current project
+    which may vandalise the entire board.
+
+
+    Once the needed code for the particular task or function has been written and
+    loaded into your `Arduino`, all that is left to do is to connect the required
+    ports or pins on the `Arduino` with the device it will work on using some tools
+    described above.
+
+
+    After this has been done, you will then confirm if all the required connections
+    are accurately made. Firstly, make sure the right code for the project is being
+    loaded. Ensure that all necessary tools and/or devices are correctly arranged
+    to prevent mistakes in the connection. This has become a key step because any
+    improper connection will definitely alter the whole purpose of the project. The
+    device then performs the intended function if all the connections are perfectly
+    made.
+
+
+    ## Testing your Connection
+
+    After ensuring everything is in order, starting from the uploading of the code
+    to the general coupling of various components of the project and giving it a finishing
+    touch. The next line of action is to test if the project will function or not.
+    This can easily be carried out by just executing the project.
+
+
+    For example, if your project is put on or off a `LED` light, just press on the
+    switch and observe if the `LED` light will come on or off or a fingerprint door,
+    just place your fingerprint on the necessary part and see the door open or not
+    (more on the possible projects you can try using your `Arduino` later).
+
+
+    If the `LED` light turns on/off when you press the switch or the fingerprint door
+    open the moment your finger is placed, then your project has been executed perfectly.
+    Otherwise, it perhaps implies you have loaded the wrong code, or the connections
+    are not rightly done. Thus, further troubleshooting may solve the problem.
+
+
+    # CHAPTER FOUR ![Arduino Ethernet Shield and MEGA 2560 Web Server Controlling
+    24 LED Outputs with Checkboxes](Image00005.jpg)
+
+
+    ## The Arduino Mega Server
+
+    The `Arduino` is centrally managed by an operating system known as the `Arduino
+    Mega Server`. This server has been a great tool in the hands of many users who
+    have discovered it to be highly user friendly. It is also multi-platform such
+    as web functions, hardware and network functions. Internet browsing and some other
+    online activities can be done using the `Arduino Mega Server`. Thanks to its good
+    graphics and great dynamic user interface which made all these possible.
+
+
+    This Mega server is usually accessible through an `Arduino Ethernet Shield` and
+    a micro SD card. These unique functions help to experience a smooth use of the
+    web. The role of the `Arduino Mega Server` es brought out by using the `Ethernet
+    Shield`. It ensures your access to the server via your computer. By doing this,
+    the network used by your `Arduino` can conveniently be connected to any browser
+    on your computer. This also makes sure that you can
+
+    '
+  raw: '7\. Choose the serial port by going to Tools, serial port then COM.​ 8\. Go
+    to sketch example by choosing Fire, Examples, Basics and Blink.​ 9\. Upload the
+    code to Arduino by clicking on the upload button. When you see "Done               uploading"
+    prompt, your Arduino has been installed successfully.Establishing a Connection
+    of Arduino to your ComputerTools Required by Arduino for easy ConnectionAfter
+    installing your running code successfully on the Arduino board, the next thing
+    you think is how to perform a specific project. Arduino can handle several projects
+    such as from flying a drone, moving a car, lighting a LED or moving a simple robot
+    to lock a door (Some of the projects you can try with Arduino are discussed later).For
+    you to execute any of these projects, a specific program or set of instructions
+    must be run on your Arduino board (as discussed above on how to connect your Arduino
+    to a computer). These codes are unique to every function assigned to a particular
+    Arduino to perform.However, when you are sure all these have been done, the next
+    thing is to carefully connect every other component parts of the Arduino to the
+    device you want it to manage. This is usually carried out using some simple tools
+    or instruments. For any successful Arduino project, some of these tools are needed:Wire
+    Strippers: These are simple plier-like tools. They are usually hand-held and used
+    to remove the insulating covering of any electrical wire. They can also be used
+    to cut open any end on an electrical wire. Such ends are usually connected to
+    the end of other opened wire.For the Arduino project, this tool is used to create
+    a connection of wires from your Arduino to the device you are working with. This
+    enables the exchange of necessary information that is specific to the primary
+    function of that project.Precision Screw Driver Set: These set of screw drivers
+    are usually used by most technicians or hobbyist. They are made with different
+    slots to suit various kinds of screw.Precision screw drivers are usually required
+    when working with a minute or small screwing because some Arduino boards are very
+    small, complex and complicated in nature. In this way, these drivers can have
+    a firm hold on the screws and at the same time, twist on the available small portions
+    of the devices used in the project you are doing.Needle-nose Pliers : Needle-nose
+    pliers come with several names. Some of the popular ones include snipe-nose plier,
+    pointy-nosed plier, pinch-nose plier and log-nose plier. It performs a dual function
+    as both holding and cutting tool particularly suitable for the several intricate
+    wires likely to be seen when working on the Arduino project.These tools are used
+    mainly for snipping, bending or repositioning any wire in your Arduino project
+    to ensure tight connections that will  guarante that Arduino delivers the optimum
+    function you want. This is because they can reach a very tight position where
+    other regular pliers will not function.Flush Cutters : The main purpose of this
+    tool is to cut your wires. Flush cutters reaches the point where such wires are
+    cut to be neat, flat and very smooth. The flush cutters are to be held in a perpendicular
+    position with respect to any wire you may want to cut. Your Arduino project will
+    definitely look neat and perfect when you make use of Flush cutters.Digital Multimeter
+    : Primarily, a multimeter measures the quantity of electricity passing through
+    your circuit. This is usually measured either in Volts (V), Ampere (A) and Ohms
+    (Ω). This tool will measure those parameters with good accuracy. The use of the
+    digital multimeter help to see the values of either the current, voltage or resistance
+    of electricity passing through your device to make any necessary adjustment if
+    the need arises.Fine Tip Straight Tweezers : This tool is used to pick up any
+    unnecessary debris or materials that have found its way into your project. It
+    has two ends, one is a pointed end used mainly for tweezing purpose while the
+    other end is a picking end.Solder Sucker : This is a desoldering instrument popularly
+    called a desoldering pump. It is specifically used to remove any previously soldered
+    part of your circuit. This might either be for the repair, replacement or troubleshooting
+    of that part.Soldering Iron : The soldering iron is a tool used to obtain smooth
+    of various wires within your project. This ensures the proper flow of electric
+    charges across the whole circuit in the project. It works by heating and melting
+    the solder on the contact point. The junctions where connections are to be made
+    are glued together using the soldering iron.Panavise Jr : Another essential tool
+    used for Arduino project is the Panavise Jr. This helps when connecting many devices
+    by using it to hold any part of your project. The Arduino board or some other
+    components of the circuits can be held using this tool.Doing this makes it easier
+    for you to do anything you want to do on your project because this tool can be
+    twisted to any desire direction giving you the comfort and makes your project
+    easier to work on.When connecting other devices and circuits with the Arduino
+    board, certain precautions must be followed to avert the complication of wrong
+    connection and to also avoid touching other parts of the board that are not needed
+    in your current project which may vandalise the entire board.Preparation Work
+    before your Project is finally DoneOnce the needed code for the particular task
+    or function has been written and loaded into your Arduino, all that is left to
+    do is to connect the required ports or pins on the Arduino with the device it
+    will work on using some tools described above.After this has been done, you will
+    then confirm if all the required connections are accurately made. Firstly, make
+    sure the right code for the project is being loaded. Ensure that all necessary
+    tools and/or devices are correctly arranged to prevent mistakes in the connection.This
+    has become a key step because any improper connection will definitely alter the
+    whole purpose of the project. The device then performs the intended function if
+    all the connections are perfectly made.Testing your ConnectionAfter ensuring everything
+    is in order, starting from the uploading of the code to the general coupling of
+    various components of the project and giving it a finishing touch. The next line
+    of action is to test if the project will function or not. This can easily be carried
+    out by just executing the project.For example, if your project is put on or off
+    a LED light, just press on the switch and observe if the LED light will come on
+    or off or for a fingerprint door, just place your fingerprint on the necessary
+    part and see the door open or not (more on the possible projects you can try using
+    your Arduino later).If the LED light turns on/off when you press the switch or
+    the fingerprint door open the moment your finger is placed, then your project
+    has been executed perfectly. Otherwise, it perhaps implies you have loaded the
+    wrong code, or the connections are not rightly done. Thus, further troubleshooting
+    may solve the problem.CHAPTER FOUR![Arduino Ethernet Shield and MEGA 2560 Web
+    Server Controlling 24 LED Outputs with Checkboxes](Image00005.jpg)The Arduino
+    Mega ServerThe Arduino is centrally managed by an operating system known as the
+    Arduino Mega Server.   This server has been a great tool in the hands of many
+    users who have discovered it to be highly user friendly. It is also multi-platform
+    such as web functions, hardware and network functions. Internet browsing and some
+    other online activities can be done using the Arduino Mega Server. Thanks to its
+    good graphics and great dynamic user interface which made all these possible.This
+    Mega server is usually accessible through an Arduino Ethernet Shield and a micro
+    SD card. These unique functions help to experience a smooth use of the web. The
+    role of the Arduino Mega Server especially brought out by using the Ethernet Shield.
+    It ensures your access to the server via your computer. By doing this, the network
+    used by your Arduino can conveniently be connected to any browser on your computer. 
+    This also makes sure that you can'
+  toc: []
+  trans: '
+
+    7. 通过进入 `Tools`、`serial port` 然后 `COM` 来选择串口。
+
+    8. 通过选择 `File`、`Examples`、`Basics` 和 `Blink` 来进入示例代码。
+
+    9. 点击上传按钮将代码上传到 `Arduino`。当你看到“Done uploading”提示时，你的 `Arduino` 已经成功安装。
+
+
+    # 建立 Arduino 与电脑的连接
+
+
+    ## Arduino 方便连接所需的工具
+
+    在 `Arduino` 板上成功安装你的运行代码后，你考虑的下一个问题是如何执行某个特定的项目。`Arduino` 可以处理多个项目，例如飞行无人机、移动汽车、点亮
+    `LED` 灯或让简单的机器人移动去锁门（稍后将讨论一些你可以用 `Arduino` 尝试的项目）。
+
+
+    为了让你执行其中任何一个项目，必须在你的 `Arduino` 板上运行一个特定的程序或一组指令（如上文讨论的如何将你的 `Arduino` 连接到电脑）。这些代码对于分配给特定
+    `Arduino` 执行的每个功能来说都是独特的。
+
+
+    然而，当你确定这些工作都已完成后，下一步是将 `Arduino` 的其他所有组件部分小心地连接到你想让它管理的设备上。这通常是使用一些简单的工具或仪器完成的。对于任何成功的
+    `Arduino` 项目，都需要其中的一些工具：
+
+
+    - **剥线器 (Wire Strippers)**：这些是像钳一样的简单工具。它们通常是手持的，用于去除任何电线的绝缘层。它们也可以用于切开电线的任何末端。这些末端通常连接到另一个剥开的线的末端。对于
+    `Arduino` 项目，此工具用于创建从你的 `Arduino` 到你正在操作的设备之间的连接。这允许交换特定项目主要功能的必要信息。
+
+    - **精密螺丝刀套装 (Precision Screw Driver Set)**：这些螺丝刀通常由大多数技术人员或爱好者使用。它们具有不同的槽口以适应各种类型的螺丝。在处理微小或小型螺丝工作时，通常需要精密螺丝刀，因为某些
+    `Arduino` 板本质上非常小、复杂且困难。这样，这些螺丝刀可以牢固地夹住螺丝，同时扭动你正在的项目中使用的可用小部件。
+
+    - **尖嘴钳 (Needle-nose Pliers)**：尖嘴钳有几个名称。流行的包括鸟嘴钳、尖头钳、夹头钳和圆头钳。它兼具夹持和切割的双重功能，特别适合在处理
+    `Arduino` 项目时可能看到的几种复杂电线。这些工具主要用于剪断、弯曲或重新定位你 `Arduino` 项目中的任何电线，以确保连接紧密，从而保证 `Arduino`
+    输出你所需的最佳功能。这是因为它们可以到达普通钳子无法工作的非常狭窄的位置。
+
+    - **平口剪 (Flush Cutters)**：此工具的主要目的是剪断你的电线。平口剪可以使电线切切得整齐、平整且非常光滑。使用平口剪应与你想要切割的任何线保持垂直位置。当你使用平口剪时，你的
+    `Arduino` 项目一定会看起来整洁且完美。
+
+    - **数字万用表 (Digital Multimeter)**：主要上，万用表测量通过你电路的电量。这通常以伏特 (`V`)、安培 (`A`) 和欧姆 (`Ω`)
+    。该工具将以很好的精度测量这些参数。使用数字万用表有助于查看通过你设备的电流、电压或电阻值，以便在需要时进行任何必要的调整。
+
+    - **细直镊子 (Fine Tip Straight Tweezers)**：此工具用于拾起进入你项目的任何不碎片或材料。它有两个端，一个是尖端，主要用于镊取用途，而另一个端是取物端。
+
+    - **吸锡器 (Solder Sucker)**：这是一种俗称为吸锡泵的热焊工具。它专门用于移除你电路中之前焊接过的部分。这可能是为了该部分的维修、更换或故障排除。
+
+    - **电烙 (Soldering Iron)**：电烙是一种用于使你项目中的各种电线光滑的工具。这确保了电荷在项目的整个电路中正确流动。它通过加热和熔化接触点的焊锡来工作。需要建立连接的节点使用电烙胶合在一起。
+
+    - **Panavise Jr**：另一个用于 `Arduino` 项目的必备工具是 `Panavise Jr`。在连接许多设备时，使用它可以固定项目的任何部分，这非常有帮助。可以使用此工具固定
+    `Arduino` 板或电路的其他组件。这样做可以让你更方便地在项目上执行你想做的任何事情，因为此工具可以根据意向扭转方向，提供舒适感并让你的项目更容易操作。
+
+
+    ## 项目最终完成前的准备工作
+
+    在用 `Arduino` 板连接其他设备和电路时，必须遵循某些预防措施，以避免错误连接的复杂性，并避免碰到当前项目不需要板的其他部分，这可能会损坏整个板。
+
+
+    一旦为特定任务或功能编写并了所需的代码加载到你的 `Arduino` 中，剩下的工作就是使用上述某些工具将 `Arduino` 上的所需端口或引脚与它工作的设备连接起来。
+
+
+    完成后，你将确认所有必要的连接是否已准确完成。首先，确保加载了项目的正确代码。确保所有必要的工具和/或设备已正确安排，以防止连接中的错误。这已成为一个关键步骤，因为任何不当的连接都会影响整个项目。
+
+    '
+- fmt: '
+
+    * Use Javascripts from web portals to control hardware
+
+    * Use simple HTML to read a switch state
+
+    * Use HTML to read a sensor''s value
+
+
+    ### Requirements
+
+    You will need the followings things if you are planning to use your Arduino to
+    browse the internet:
+
+
+    * An Arduino Mega Server (e.g. Arduino Mega2560 or Arduino UNO)
+
+    * A wired LAN connection with a speed of 10/100MB
+
+    * An Ethernet Shield
+
+
+    The Ethernet Shield functions primarily to connect to the internet using the Arduino
+    as the source of connection. The shield can be connected to your Arduino through
+    the head pins. Ethernet cable is then connected to the shield. Other hardware
+    needed when doing this include:
+
+
+    * Ethernet cable
+
+    * Pushbutton
+
+    * 9 V adaptor
+
+    * Wi-Fi router
+
+    * Jumper wires
+
+    * 10 K resistors
+
+    * Breadboard
+
+
+    ### Functionality
+
+    In other to perform various optimal functions, these tools are used such as receiving
+    and sending of certain commands from the network, searching for any available
+    network, real-time clock, integration with smart home systems, voltage and current
+    control, and maintenance of sensors and measurement of temperature.
+
+
+    Aside from this, your personal modules can be added as you desire. This is because
+    the Arduino Mega Server can distinctively compile modules, detect compiled modules,
+    and separate them from not yet compiled modules. It also avails you the flexibility
+    to disable or enable any module that has been compiled straight from the internet.
+
+
+    Among the few things that have been integrated with the Arduino Mega server is
+    an electric module that can monitor the input and output voltage of the Arduino.
+    This electric module can likewise monitor the current. It is assembled on the
+    switchboard and can conveniently regulate the amount of electricity consumed.
+    The ability to track the presence of people is another unique function that can
+    be performed by this module.
+
+
+    Acting as network oscilloscope is another additional feature, this oscilloscope
+    display real-time network traffic within your web in the form of dynamic signals
+    or oscillogram. Also available is a screensaver module which especially displays
+    information on panels. This enables you to choose the information that is relevant
+    to you while getting rid of any other. System failure can be forestall using the
+    Arduino Mega Server by implementing a highly efficient frequency meter. There
+    is also a 216 block indicator useful for 3D system status, this offers you the
+    privilege to look over the entire structure of the system.
+
+
+    ### Setup Steps
+
+    To use your Arduino as a web server, you must do the following things:
+
+
+    * Use the Ethernet configuration for the Arduino
+
+    * Stipulate the address of the IP
+
+    * Give the Address of the MAC you are using
+
+    * Connect your Arduino to the available internet service (you can use a Wi-Fi
+    router for this)
+
+    * Give the code required to run Arduino as a web server
+
+    * Connect your computer to the Arduino using a router
+
+    '
+  raw: '*   Use Javascripts from web portals to control hardware
+
+
+    *   Use simple HTML to read a switch state
+
+
+    *   Use HTML to read a sensor''s value
+
+
+    You will need the followings things if you are planning to use your Arduino to
+    browse the internet:
+
+
+    *   An Arduino Mega Server (e.g. Arduino Mega2560 or Arduino UNO)
+
+
+    *   A wired LAN connection with a speed of 10/100MB
+
+
+    *   An Ethernet Shield
+
+
+    The Ethernet Shield functions primarily to connect to the internet using the Arduino
+    as the source of connection. The shield can be connected to your Arduino through
+    the head pins. Ethernet cable is then connected to the shield. Other hardware
+    needed when doing this include:
+
+
+    *   Ethernet cable
+
+
+    *   Pushbutton
+
+
+    *   9 V adaptor
+
+
+    *   Wi-Fi router
+
+
+    *   Jumper wires
+
+
+    *   10 K resistors
+
+
+    *   Breadboard
+
+
+    In other to perform various optimal functions, these tools are used such as receiving
+    and sending of certain commands from the network, searching for any available
+    network, real-time clock, integration with smart home systems, voltage and current
+    control, and maintenance of sensors and measurement of temperature.Aside from
+    this, your personal modules can be added as you desire. This is because the Arduino
+    Mega Server can distinctively compile modules, detect compiled modules, and separate
+    them from not yet compiled modules. It also avails you the flexibility to disable
+    or enable any module that has been compiled straight from the internet.Among the
+    few things that have been integrated with the Arduino Mega server is an electric
+    module that can monitor the input and output voltage of the Arduino. This electric
+    module can likewise monitor the current. It is assembled on the switchboard and
+    can conveniently regulate the amount of electricity consumed. The ability to track
+    the presence of people is another unique function that can be performed by this
+    module.Acting as network oscilloscope is another additional feature, this oscilloscope
+    display real-time network traffic within your web in the form of dynamic signals
+    or oscillogram. Also available is a screensaver module which especially displays
+    information on panels. This enables you to choose the information that is relevant
+    to you while getting rid of any other. System failure can be forestall using the
+    Arduino Mega Server by implementing a highly efficient frequency meter. There
+    is also a 216 block indicator useful for 3D system status, this offers you the
+    privilege to look over the entire structure of the system. To use your Arduino
+    as a web server, you must do the following things:
+
+
+    *   Use the Ethernet configuration for the Arduino
+
+
+    *   Stipulate the address of the IP
+
+
+    *   Give the Address of the MAC you are using
+
+
+    *   Connect your Arduino to the available internet service (you can use a Wi-Fi
+    router for this)
+
+
+    *   Give the code required to run Arduino as a web server
+
+
+    *   Connect your computer to the Arduino using a router'
+  toc: []
+  trans: '
+
+    * 使用来自门户网站的 Javascript 来控制硬件
+
+    * 使用简单的 HTML 读取开关状态
+
+    * 使用 HTML 读取传感器值
+
+
+    ### 要求
+
+    如果你计划使用你的 Arduino 访问互联网，将需要以下物品：
+
+
+    * 一个 Arduino Mega 服务器（例如 Arduino Mega2560 或 Arduino UNO）
+
+    * 速度为 10/100MB 的有线网络连接
+
+    * 一个以太网扩展板 (Ethernet Shield)
+
+
+    以太网扩展板的功能是通过 Arduino 作为连接源连接到互联网。扩展板可以通过引脚连接到你的 Arduino。然后将网太线连接到扩展板上。执行此操作时需要的其他硬件包括：
+
+
+    * 网太线
+
+    * 按钮
+
+    * 9V 适配器
+
+    * Wi-Fi 路由器
+
+    * 跳线线
+
+    * 10K 电阻
+
+    * 面包板
+
+
+    ### 功能
+
+    为了实现各种优化功能，这些工具被用于诸如从网络接收和发送特定命令、搜索任何可用网络、实时时钟、智能家居系统集成、电压和电流控制，以及传感器的维护和温度测量。
+
+
+    此外，你还可以根据需要添加个人模块。这是因为 Arduino Mega 服务器可以独特地编译模块、检测已编译模块，并将它们与尚未编译的模块分开。它还提供了灵活性，可以直接从互联网禁用或启用任何已编译的模块。
+
+
+    在与 Arduino Mega 服务器集成的少数功能中，有一个可以监控 Arduino 输入和输出电压的电气模块。该电气模块同样可以监控电流。它组装在开关板上，可以方便地调节耗电量。追踪人员是该模块可以执行的另一个独特功能。
+
+
+    作为网络示波器是另一个附加功能，该示波器以动态信号或示波图的形式显示网页内的实时网络流量。此外，还有一个屏幕保护程序模块专门显示面板上的信息。这让你能够选择与你相关的信息，同时过滤掉任何其他信息。通过实现高效的频率计，可以使用
+    Arduino Mega 服务器 防止系统故障。此还有一个用于 3D 系统状态的 216 块指示器，它让你拥有了俯瞰整个系统结构的权限。
+
+
+    ### 设置步骤
+
+    要将你的 Arduino 作为 Web 服务器，你必须执行以下操作：
+
+
+    * 为 Arduino 使用以太网配置
+
+    * 规定 IP 地址
+
+    * 提供你正在使用的 MAC 地址
+
+    * 将你的 Arduino 连接到可用的互联网服务（你可以使用 Wi-Fi 路由器为此操作）
+
+    * 提供运行 Arduino 作为 Web 服务器所需的代码
+
+    * 使用路由器将你的电脑连接到 Arduino
+
+    '
+- fmt: "\nDue to the ease of setting up the Arduino Mega Server, many of its users\
+    \ can connect up to 32Gb SD card to it. Thus, different web content and file can\
+    \ be safely saved on this SD card from the web server. The Arduino Mega Server\
+    \ also allows integration with MajorDoMo. The MajorDoMo platform behaves like\
+    \ an automated home system. By doing it with the Arduino, it avails you the opportunity\
+    \ to send data, analyse it and also any required status can be sent. Command control\
+    \ from over the network and store data can also be obtained. The Arduino Mega\
+    \ Server has always been termed to be used as a \"tandem mode\". This implies\
+    \ that the information on the MajorDoMo server can work perfectly in the Arduino\
+    \ Mega Server. The MajorDoMo is not purposed for the tandem mode, it can, however,\
+    \ work independently.\n\nThe Arduino Mega Server is built on 8-bit processor capacity.\
+    \ This is a major reason why it is multifunctional in nature and many other unique\
+    \ features. Also, hosting multiple sites is possible when using your Arduino mega\
+    \ server. Without turning off your controller or pulling out the memory card,\
+    \ you can also update contents. Using the Arduino Mega Server, modification of\
+    \ many web pages can be achieved to adjust the screen of your computer. This allows\
+    \ you to get exciting experience when information is your purpose of browsing\
+    \ the internet.\n\n# CHAPTER FIVE: The Best Programming Languages for Arduino\n\
+    \n## Programming Languages that Arduino Use\nArduino uses a programming language\
+    \ which is most of the time referred to as the Arduino programming language or\
+    \ simply the Arduino language. The Arduino avail its users with several choices\
+    \ of integrated libraries and a programming editor. Thus, compiling and loading\
+    \ of these programs into the board becomes very easy.\n\nThe Arduino is supposedly\
+    \ written in simplified C/C++ programming language as described by its users who\
+    \ usually use it as a downloadable online tool. They are often referred to as\
+    \ sketches due to the simplicity of these programs. Any files or texts that have\
+    \ been written in the Arduino language are also called sketches. The extension\
+    \ `.ino` should be used as a file extension to allow you save and load sketches\
+    \ to your Arduino board.\n\nThe following are the core feature of Arduino programming\
+    \ language:\n\n- **Functions**: These gives you total control of your Arduino\
+    \ board. Common programming tricks such as analysing characters or executing any\
+    \ mathematical operation are performed using these functions. The function `setup`\
+    \ or `loop` function is sketch of the Arduino programming language. Every time\
+    \ your Arduino is powered up or reset, the `setup` is used for execution. The\
+    \ function `loop` is then used to power off and rest the button. The main function\
+    \ does not exist in the Arduino language. Other functions useful when handling\
+    \ it include:\n    - **Digital Input and Output (I/O)**: There are `digitalRead`\
+    \ which its parameter is a pin number, `digitalWrite` which gives a digital output\
+    \ pin value that may be high or low, `pinMode` which its input and output are\
+    \ set as a pin, `pulseIn` reads pulse from a digital signal from low to high and\
+    \ back from high to low again, `shiftIn` reads byte bit by bit, `shiftOut` writes\
+    \ byte bit by bit among others.\n    - **Analog Input and Output (I/O)**: They\
+    \ include `analogRead` which uses an analog pin to read values, `analogReference`\
+    \ which uses the analog input to configure value range for inputs, `analogWrite`\
+    \ writes an analog value to a pin etc.\n    - **Time Function**: These include\
+    \ `delay` which can pause or delay a program that has been specified as a parameter\
+    \ for few milliseconds, `delayMicroseconds` this can pause a program that has\
+    \ been specified as a parameter for a few microseconds etc.\n    - **Math Function**:\
+    \ These include `abs` which specify the absolute value of a number, `constrain`\
+    \ this to limit a number to be within a specified range, `cos` which indicates\
+    \ an angle's cosine, `sq` indicates a number's square, `pow` which means the value\
+    \ of a number which has been raised to a specific power etc.\n    - **Constant\
+    \ and Variables**: These are Arduino values, very similar to those used in C++\
+    \ programming. These are mostly used in the conversion of type. They enable easy\
+    \ data transfer within the Arduino ecosystem.\n    - **Structure**: This is the\
+    \ last part of the Arduino programming language. Here, small code elements like\
+    \ operators and others could be found. This gives the Arduino a major edge in\
+    \ the ultimate execution of any written code.\n\nYou can also import external\
+    \ libraries using the Arduino programming language. These libraries contain already\
+    \ written codes. This avails you the ease of working; else, you may write your\
+    \ own code or download your required code directly from the internet. The C libraries\
+    \ may be used some times. This is very unique to the Arduino language. The Library\
+    \ Manager available on the Arduino ID allows you to install such libraries of\
+    \ languages.\n\nSome of the online downloadable Arduino languages are:\n- **ArduBlock**:\
+    \ Many of the beginners find this programming language particularly useful. Instead\
+    \ of typing a code, the ArduBlock allows you to construct your own code. It enables\
+    \ you to select functions to your codes. It is especially good for visual learners.\n\
+    - **Snap4Arduino**: just like the ArduBlock, this programming language also supports\
+    \ visual. It is mostly used in a drag and drop way. Although it is very similar\
+    \ to the ArduBlock, it is specifically designed for users who lack basic knowledge\
+    \ of the Arduino programming language. To install this language, you will need\
+    \ `StandardFirmata` which comes installed on your Arduino.\n- **C#**: This makes\
+    \ information sharing with your computer on the Arduino a lot easier. The usage\
+    \ of this programming language, allows you to code in another language that is\
+    \ entirely different from the one used as a sketch by your Arduino. The `CmdMesseger`\
+    \ will particularly be of help doing this. This messenger can run well on Microsoft\
+    \ Visual Studio or any other third-party alternative you can lay hands on. The\
+    \ C# language then creates a smooth communication link between your computer and\
+    \ Arduino.\n- **Python**: Although, codes built upon the python programming language\
+    \ cannot be used in the Arduino. However, communicate in this language is made\
+    \ possible by using the serial input on your device. This you can do by downloading\
+    \ the `pySerial`. This often serves as the basis of some other advanced programming\
+    \ languages due to its intuitive in nature.\n\nThe Arduino software (the IDE)\
+    \ enhanced general programming language of Arduino. This IDE is built upon both\
+    \ the wiring and processing IDEs found in the Arduino environment. The online\
+    \ version of this software, however, has a preference for most users, which is\
+    \ called the Arduino Web editor. This becomes a great choice, especially when\
+    \ coding using the Arduino. This gives you room to have your data directly stored\
+    \ into clouds which avail you easy access to it any time and anywhere via the\
+    \ internet. The online version of the Arduino software is more referred because\
+    \ it does not require any further update, unlike the offline version. However,\
+    \ the offline version can always be downloaded and used by other users who prefer\
+    \ it. Working with the Arduino programming language using the IDE provides better\
+    \ communication since the IDE is compatible with many operating systems such as\
+    \ Windows, Linux and MacOS.\n\n# CHAPTER SIX: The Arduino Integrated Development\
+    \ Environment\n\n## The Arduino IDE\nThe Arduino IDE is a form of code or program\
+    \ editor that is compatible with various platforms such as Linux, Windows or MacOS.\
+    \ It is a simplified form of C/C++ programming language of C/C++. This IDE act\
+    \ as a medium in which codes or programs are written and uploaded to the Arduino\
+    \ boards. The software comes with various other tools such as toolbar with buttons,\
+    \ code writing text editor etc. The software is also part of an open-source and\
+    \ is used on all Arduino boards.\n\nAs discussed in the previous chapter, sketches\
+    \ are a set of programs that have been written using the Arduino software. The\
+    \ text editor is used to write these sketches. The toolbar buttons can be used\
+    \ to check and load a program. It can also be used for the opening of the serial\
+    \ monitor and creating, opening and saving of sketches.\n\n## Downloading and\
+    \ Installing the Arduino IDE\nIf your Arduino is ready to do any project of your\
+    \ choice, then, the thing you need to do is to install the Arduino IDE software.\
+    \ To do this, firstly download the software from the Arduino official website.\
+    \ When you are done with the download, then you can run any program using this\
+    \ Arduino IDE. To do this;\n"
+  raw: 'Due to the ease of setting up the Arduino Mega Server, many of its users can
+    connect up to 32Gb SD card to it. Thus, different web content and file can be
+    safely saved on this SD card from the web server.The Arduino Mega Server also
+    allows integration with MajorDoMo. The MajorDoMo platform behaves like an automated
+    home system. By doing it with the Arduino, it avails you the opportunity to send
+    data, analyse it and also any required status can be sent. Command control from
+    over the network and store data can also be obtained.The Arduino Mega Server has
+    always been termed to be used as a "tandem mode". This implies that the information
+    on the MajorDoMo server can work perfectly in the Arduino Mega Server. The MajorDoMo
+    is not purposed for the tandem mode, it can, however, work independently.The Arduino
+    Mega Server is built on 8-bit processor capacity. This is a major reason why it
+    is multifunctional in nature and many other unique features. Also, hosting multiple
+    sites is possible when using your Arduino Mega server. Without turning off your
+    controller or pulling out the memory card, you can also update contents.Using
+    the Arduino Mega Server, modification of many web pages can be achieved to adjust
+    the screen of your computer. This allows you to get exciting experience when information
+    is your purpose of browsing the internet.CHAPTER FIVE![The Best Programming Languages
+    for Arduino - FreelancingGig Blog - Freelancer Job Tips and Hiring Insights](Image00006.jpg)Programming
+    Languages that Arduino UseArduino uses a programming language which is most of
+    the time referred to as the Arduino programming language or simply the Arduino
+    language. The Arduino avail its users with several choices of integrated libraries
+    and a programming editor. Thus, compiling and loading of these programs into the
+    board becomes very easy.The Arduino is supposedly written in simplified C/C++
+    programming language as described by its users who usually use it as a downloadable
+    online tool. They are often referred to as sketches due to the simplicity of these
+    programs.Any files or texts that have been written in the Arduino language are
+    also called sketches. The extension ".ino" should be used as a file extension
+    to allow you save and load sketches to your Arduino board. The following are the
+    core feature of Arduino programming language:Functions : These gives you total
+    control of your Arduino board. Common programming tricks such as analysing characters
+    or executing any mathematical operation are performed using these functions.The
+    function setup or loop function is sketch of the Arduino programming language. 
+    Every time your Arduino is powered up or reset, the setup is used for execution.
+    The function loop is then used to power off and rest the button. The main function
+    does not exist in the Arduino language. Other functions useful when handling it
+    include:Digital Input and Output (I/O ): There are digitalRead which its parameter
+    is a pin number, digitalWrite which gives a digital output pin value that may
+    be high or low, pinMode which its input and output are set as a pin, pulseIn reads
+    pulse from a digital signal from low to high and back from high to low again,
+    shiftIn reads byte bit by bit, shiftOut writes byte bit by bit among others.Analog
+    Input and Output (I/O) : They include analogRead which uses an analog pin to read
+    values, analogReference which uses the analog input to configure value range for
+    inputs, analogWrite writes an analog value to a pin etc.Time Function: These include
+    delay which can pause or delay a program that has been specified as a parameter
+    for few milliseconds, delayMicroseconds this can pause a program that has been
+    specified as a parameter for a few microseconds etc.Math Function : These include
+    abs which specify the absolute value of a number, constrain this to limit a number
+    to be within a specified range, cos which indicates an angle''s cosine, sq indicates
+    a number''s square, pow which means the value of a number which has been raised
+    to a specific power etc.Constant and Variables : These are Arduino values, very
+    similar to those used in C++ programming. These are mostly used in the conversion
+    of type. They enable easy data transfer within the Arduino ecosystem.Structure
+    : This is the last part of the Arduino programming language. Here, small code
+    elements like operators and others could be found. This gives the Arduino a major
+    edge in the ultimate execution of any written code.You can also import external
+    libraries using the Arduino programming language. These libraries contain already
+    written codes. This avails you the ease of working; else, you may write your own
+    code or download your required code directly from the internet.The C libraries
+    may be used some times. This is very unique to the Arduino language. The Library
+    Manager available on the Arduino ID allows you to install such libraries of languages.
+    Some of the online downloadable Arduino languages areArduBlock : Many of the beginners
+    find this programming language particularly useful. Instead of typing a code,
+    the ArduBlock allows you to construct your own code. It enables you to select
+    functions to your codes. It is especially good for visual learners.Snap4Arduino
+    : just like the ArduBlock, this programming language also supports visual. It
+    is mostly used in a drag and drop way.  Although it is very similar to the ArduBlock,
+    it is specifically designed for users who lack basic knowledge of the Arduino
+    programming language. To install this language, you will need "StandardFirmata"
+    which comes installed on your Arduino.C#: This makes information sharing with
+    your computer on the Arduino a lot easier. The usage of this programming language,
+    allows you to code in another language that is entirely different from the one
+    used as a sketch by your Arduino. The "CmdMesseger" will particularly be of help
+    doing this.This messenger can run well on Microsoft Visual Studio or any other
+    third-party alternative you can lay hands on. The C# language then creates a smooth
+    communication link between your computer and Arduino.Python : Although, codes
+    built upon the python programming language cannot be used in the Arduino. However,
+    communicate in this language is made possible by using the serial input on your
+    device. This you can do by downloading the pySerial. This often serves as the
+    basis of some other advanced programming languages due to its intuitive in nature.The
+    Arduino software (the IDE) enhanced general programming language of Arduino. This
+    IDE is built upon both the wiring and processing IDEs found in the Arduino environment.
+    The online version of this software, however, has a preference for most users,
+    which is called the Arduino Web editor. This becomes a great choice, especially
+    when coding using the Arduino.This gives you room to have your data directly stored
+    into clouds which avail you easy access to it any time and anywhere via the internet.
+    The online version of the Arduino software is more [referred because it does not
+    require any further update, unlike the offline version. However, the offline version
+    can always be downloaded and used by other users who prefer it.Working with the
+    Arduino programming language using the IDE provides better communication since
+    the IDE is compatible with many operating systems such as Windows, Linux and MacOS.CHAPTER
+    SIX![Guide to Download Arduino IDE. Arduino open-source software is also… | by
+    Jesus JJohnson | Medium](Image00007.jpg)The Arduino Integrated Development EnvironmentThe
+    Arduino IDE is a form of code or program editor that is compatible with various
+    platforms such as Linux, Windows or MacOS. It is a simplified form of C/C++ programming
+    language of C/C++. This IDE act as a medium in which codes or programs are written
+    and uploaded to the Arduino boards. The software comes with various other tools
+    such as toolbar with buttons, code writing text editor etc. The software is also
+    part of an open-source and is used on all Arduino boards.As discussed in the previous
+    chapter, sketches are a set of programs that have been written using the Arduino
+    software. The text editor is used to write these sketches. The toolbar buttons
+    can be used to check and load a program. It can also be used for the opening of
+    the serial monitor and creating, opening and saving of sketches.Downloading and
+    Installing the Arduino IDEIf your Arduino is ready to do any project of your choice,
+    then, the thing you need to do is to install the Arduino IDE software. To do this,
+    firstly download the software from the Arduino official website. When you are
+    done with the download, then you can run any program using this Arduino IDE. To
+    do this;'
+  toc: []
+  trans: "\n\n由于 Arduino Mega Server 设置简单，许多用户可以为它连接容量高达 32GB 的 SD 卡。因此，不同的网络内容和文件可以从\
+    \ Web 服务器安全地保存到此张 SD 卡上。Arduino Mega Server 还允许与 MajorDoMo 集成。MajorDoMo 平台就像一个自动化家居系统。通过使用\
+    \ Arduino 实现这一点，你获得了发送数据、分析数据以及发送任何所需状态的机会。同时还可以实现跨网络的命令控制和数据存储。Arduino Mega Server\
+    \ 一直被认为用作“串联模式”。这意味着 MajorDoMo 服务器上的信息可以在 Arduino Mega Server 中完美运行。虽然 MajorDoMo\
+    \ 并非为串联模式而设计，但它也可以独立工作。\n\nArduino Mega Server 是构建在 8 位处理器能力的基础上。这是它本质上具有多功能以及许多其他独特特性的主要原因。此外，使用你的\
+    \ Arduino mega server 时可以托管多个网站。在不关闭控制器或拔出内存的情况下，你也可以更新内容。使用 Arduino Mega Server，可以对许多网页进行修改以调整你的电脑屏幕。这让你在以浏览互联网为目的时，能够获得兴奋的体验。\n\
+    \n# 第五章：Arduino 的最佳编程语言\n\n## Arduino 使用的编程语言\nArduino 使用一种编程语言，大多数时候被称为 Arduino\
+    \ 编程语言或简单称为 Arduino 语言。Arduino 为用户提供了若干集成库选择和一个编程编辑器。因此，将这些程序编译并加载到板器中变得非常简单。\n\
+    \n根据用户的描述，Arduino 认为是用简化的 C/C++ 编程语言编写的，他们通常将其作为可下载的在线工具使用。由于这些程序的简单性，它们通常被称为“sketch”（草图）。任何用\
+    \ Arduino 语言编写的文件或文本也称为 sketches。应使用 `.ino` 作为文件扩展名，以便你将 sketches 保存并加载到你的 Arduino\
+    \ 板板上。\n\n以下是 Arduino 编程语言的核心特性：\n\n-   **函数 (Functions)**：这些函数让你对你的 Arduino 板板有完全的控制。常见的编程技巧，如分析字符或执行任何数学运算，都是通过这些函数实现的。`setup`\
+    \ 函数或 `loop` 函数是 Arduino 编程语言 sketch。每当你的 Arduino 上电或重置时，都会执行 `setup`。然后使用 `loop`\
+    \ 函数来关闭电源和复位按钮。Arduino 语言中不存在主函数。在处理它时其他有用的函数包括：\n    - **数字输入和输出 (I/O)**：有 `digitalRead`，其参数是引脚号；`digitalWrite`\
+    \ 提供高或低电数字输出引脚值；`pinMode` 将其输入和输出设置为引脚；`pulseIn` 从数字信号中从低到高再从高到低再次读取脉冲，`shiftIn`\
+    \ 逐位读取字节，`shiftOut` 逐位写入字节等。\n    - **模拟输入和输出 (I/O)**：它们包括 `analogRead`，它使用模拟引脚读取数值，`analogReference`\
+    \ 使用模拟输入来配置输入的数值范围，`analogWrite` 将模拟值写入引脚等。\n    - **时间函数 (Time Function)**：这些包括\
+    \ `delay`，它可以暂停或延迟一个指定为参数的几毫秒的程序；`delayMicroseconds`，这可以暂停一个指定为参数的几微秒的程序等。\n \
+    \   - **数学函数 (Math Function)**：这些包括 `abs`，它指定数字的绝对值，`constrain` 将数字限制在指定的范围内，`cos`\
+    \ 表示角的余弦，`sq` 表示数字的平方，`pow` 表示数字的特定特定次方的值等。\n    - **常量和变量 (Constant and Variables)**：这些是\
+    \ Arduino 值，与 C++ 编程中使用的非常相似。它们主要用于类型转换。它们允许在 Arduino 生态系统中进行方便的数据传输。\n    - **结构\
+    \ (Structure)**：这是 Arduino 编程语言的最后部分。在这里，可以找到像操作符之类的微小代码元素。这使得 Arduino 在最终执行任何编写的代码时具有巨大优势。\n\
+    \n你还可以使用 Arduino 编程语言导入外部库。这些库包含了已经写好的代码。这让你工作变得轻松；否则，你可以编写自己的代码，或直接从网上下载你需要的代码。有时可以使用\
+    \ C 库。这对于 Arduino 语言来说非常独特。Arduino IDE 中提供的库管理器允许你安装此类语言库。\n\n一些可以在线下载的 Arduino\
+    \ 语言有：\n-   **ArduBlock**：许多初学者发现这种编程语言特别有用。与其输入代码，ArduBlock 允许你构建自己的代码。它允许你为代码选择函数。它对于视觉化学习者来说特别好。\n\
+    -   **Snap4Arduino**：和 ArduBlock 一样，这种编程语言也支持视觉化。它主要以拖放的方式使用。虽然它与 ArduBlock 非常相似，但它是专门为缺乏\
+    \ Arduino 编程语言基础知识的用户设计的。要安装这种语言，你需要 `StandardFirmata`，它是预安装在你的 Arduino 中的。\n\
+    -   **C#**：这使得 Arduino 与电脑之间的信息共享变得简单。这种编程语言的使用允许你用另一种语言编码，该语言与 Arduino 作为 sketch\
+    \ 使用的语言完全不同。`CmdMesseger` 在这方面特别有帮助。这个消息器可以在 Microsoft Visual Studio 或任何你可以获得的其他第三方替代品上良好运行。C#\
+    \ 语言然后在你的电脑和 Arduino 之间创建一个平滑的通信链接。\n-   **Python**：虽然基于 Python 语言的代码不能用于 Arduino。但是，通过使用设备上的串口输入可以使用这种语言。这你可以通过下载\
+    \ `pySerial` 实现。由于其直观性，它经常作为其他高级编程语言的基础。\n\nArduino 软件（IDE）是增强的通用编程语言。该 IDE 是构建在\
+    \ wiring 和 processing IDE 之上的。该软件的在线版本更受用户青睐，被称为 Arduino Web 编辑器。这成为使用 Arduino\
+    \ 编码时的一个极佳选择。这让你能够通过互联网随时随地将数据直接存储在云端。Arduino 软件的在线版本更受欢迎，因为它不需要像离线版本那样任何更新。然而，离线版本仍然供其他用户下载并使用。使用\
+    \ IDE 进行 Arduino 编程语言提供了更好的通信，因为 IDE 兼容多种操作系统。\n\n"
+- fmt: '
+
+    - Open Arduino website (https://www.arduino.cc/en/Main/Software) on your web browser.
+
+    - Click on the link to download and go to the download page.
+
+    - Select the "I Agree" button on the License agreement for the Arduino.
+
+    - Click on the `Windows` link on the download page, this will download the Arduino
+    software for Windows.
+
+    - Locate the just downloaded file on your computer, then, extract the zipped file.
+
+    - Copy this to a favourite location on your computer.
+
+    - Then, connect the computer with the Arduino by attaching your Arduino board
+    to the computer.
+
+    - Commence Windows device Manager by clicking on the Windows Start menu button.
+
+    - Right-click the menu of "Computer" and select "properties" from the lists of
+    the drop-down menus.
+
+    - Click on the link of "Device Manager".
+
+    - After this, the Device Manager will show "Arduino".
+
+    - Update the driver software by right-clicking on the "Arduino".
+
+    - A dialogue box will show, choose "Browse my computer for driver software" from
+    the drop-down options.
+
+
+    After this, select the "Browse" button. The downloaded Arduino folder now has
+    a `Driver` folder, Choose this Drivers folder. After this has been chosen, you
+    can now click "Next". A dialogue box will come up, choose "Install this driver
+    software anyway". After a few minutes, the installation of the driver will be
+    completed. You will notice that another dialogue box will come up, just note the
+    port that has been used to configure the Arduino. After this, you can set-up your
+    Arduino software. To do this:
+
+
+    - Go to the folder that has just been downloaded.
+
+    - The Arduino software can now be opened by double-clicking on it.
+
+    - Be sure that you have chosen the right Arduino board and if not, change from
+    the option as necessary.
+
+    - Be sure also that the serial port that has been chosen is the right one, if
+    not, change as necessary.
+
+
+    After you must have followed all these procedures, what is left is to test the
+    installation whether it is working or not. You can see if the installation is
+    good by loading the sketch into the Arduino. To do this, select the "Blink" sketch
+    and choose the button for Arduino Upload (The LED that is on the board of the
+    Arduino will flash to indicate loaded sketch). You may want to run the sketch
+    to ascertain that the Arduino software and driver has been successfully installed.
+
+
+    ### Which Arduino IDE version to Choose
+
+
+    The Arduino software undergoes periodic updates to improve productivity and to
+    sometime fix some observed bugs, hence, there have been frequent modifications
+    to the version of Arduino IDE that have been released. These modifications are
+    necessary to meet continuous users'' needs.
+
+
+    The Arduino IDE version `1.0.5` is the first-ever released Arduino IDE, and the
+    oldest used in the first generation of Arduino programming. This particular version
+    `1.0.5` and other subsequently released versions such as versions `1.8.11`, `1.8.10`,
+    `1.8.9`, `1.8.8`, `1.0.5`, `1.0.4`, `1.0.3`, `1.0.4`, `0023`, `0022`, `0021` `0020`
+    etc are now obsolete.
+
+
+    The currently active released versions are version `1.8.12` and version `1.8.13`.
+    The version `1.8.13` is the most recent version of the Arduino IDE. The version
+    `1.8.13` has many improved updates; hence, the best version that has been released
+    so far. Recent updates for this version were released with support mainly for
+    Windows operating systems (e.g. `2000`, `XP`, `7` and `Vista`). It was developed
+    by Genericom and equipped with 90.20 MB total file capacity. Other notable features
+    of this Arduino IDE include the ability to share information with any other user
+    working on an Arduino based project, ability to alter schematics and internal
+    layout when necessary.
+
+
+    ### Arduino IDE Online
+
+
+    Using the Arduino IDE online or the Arduino web editor is another way of doing
+    programming on the Arduino. Using this, you can access tutorials, configure boards
+    and most importantly write codes directly on the web as one of the features of
+    Arduino create. This is especially brilliant feature enjoyed by users with constant
+    and good internet access.
+
+
+    This comes with the benefit of having on the go access to the Arduino facilities
+    without necessarily need to download the Arduino software. Thus, storing your
+    sketches on the cloud and having easy access to them at your convenient time and
+    location. To use these online facilities on the Arduino IDE, one needs:
+
+
+    - Install the Arduino create plugin from `https://create.arduino.cc/getting-started`
+    to allow connection to your board.
+
+    - Log in to your Arduino account by clicking on the Arduino Web editor (You equally
+    create a new account if you do not have an account before).
+
+    '
+  raw: '*   Open Arduino website (https://www.arduino.cc/en/Main/Software) on your
+    web browser
+
+
+    *   Click on the link to download and go to the download page
+
+
+    *   Select the "I Agree" button on the License agreement for the Arduino
+
+
+    *   Click on the Windows link on the download page, this will download the Arduino
+    software for Windows
+
+
+    *   Locate the just downloaded file on your computer, then, extract the zipped
+    file
+
+
+    *   Copy this to a favourite location on your computer
+
+
+    *   Then, connect the computer with the Arduino by attaching your Arduino board
+    to the computer
+
+
+    *   Commence Windows device Manager by clicking on the Windows Start menu button
+
+
+    *   Right-click the menu of "Computer" and select "properties" from the lists
+    of the drop-down menus
+
+
+    *   Click on the link of "Device Manager"
+
+
+    *   After this, the Device Manager will show "Arduino"
+
+
+    *   Update the driver software by right-clicking on the "Arduino"
+
+
+    *   A dialogue box will show, choose "Browse my computer for driver software"
+    from the drop-down options
+
+
+    After this, select the "Browse" button.The downloaded Arduino folder now has a
+    Driver folder, Choose this Drivers folder. After this has been chosen, you can
+    now click "Next"A dialogue box will come up, choose the "Install this driver software
+    anyway"After a few minutes, the installation of the driver will be completed.
+    You will notice that another dialogue box will come up, just note the port that
+    has been used to configure the Arduino. After this, you can set-up your Arduino
+    software. To do this:
+
+
+    *   Go to the folder that has just been downloaded
+
+
+    *   The Arduino software can now be opened by double-clicking on it
+
+
+    *   Be sure that you have chosen the right Arduino board and if not, change from
+    the option as necessary
+
+
+    *   Be sure also that the serial port that has been chosen is the right one, if
+    not, change as necessary
+
+
+    After you must have followed all these procedures, what is left is to test the
+    installation whether it is working or not. You can see if the installation is
+    good by loading the sketch into the Arduino. To do this, select the "Blink" sketch
+    and choose the button for Arduino Upload (The LED that is on the board of the
+    Arduino will flash to indicate loaded sketch). You may want to run the sketch
+    to ascertain that the Arduino software and driver has been successfully installed.Which
+    Arduino IDE version to ChooseThe Arduino software undergoes periodic updates to
+    improve productivity and to sometime fix some observed bugs, hence, there have
+    been frequent modifications to the version of Arduino IDE that have been released.
+    These modifications are necessary to meet continuous users'' needs.The Arduino
+    IDE version 1.0.5 is the first-ever released Arduino IDE, and the oldest used
+    in the first generation of Arduino programming. This particular version 1.0.5
+    and other subsequently released versions such as versions 1.8.11, 1.8.10, 1.8.9,
+    1.8.8, 1.0.5, 1.0.4, 1.0.3, 1.0.4,0023, 0022, 0021 0020 etc are now obsolete.The
+    currently active released versions are version 1.8.12 and version 1.8.13\. The
+    version 1.8.13 is the most recent version of the Arduino IDE. The version 1.8.13
+    has many improved updates; hence, the best version that has been released so far.Recent
+    updates for this version were released with support mainly for Windows operating
+    systems (e.g. 2000, XP, 7 and Vista). It was developed by Genericom and equipped
+    with 90.20 MB total file capacity. Other notable features of this Arduino IDE
+    include the ability to share information with any other user working on an Arduino
+    based project, ability to alter schematics and internal layout when necessary.Arduino
+    IDE OnlineUsing the Arduino IDE online or the Arduino web editor is another way
+    of doing programming on the Arduino. Using this, you can access tutorials, configure
+    boards and most importantly write codes directly on the web as one of the features
+    of Arduino create. This is especially brilliant feature enjoyed by users with
+    constant and good internet access.This comes with the benefit of having on the
+    go access to the Arduino facilities without necessarily need to download the Arduino
+    software. Thus, storing your sketches on the cloud and having easy access to them
+    at your convenient time and location. To use these online facilities on the Arduino
+    IDE, one needs to
+
+
+    *   Install the Arduino create plugin from https://create.arduino.cc/getting-started
+    to allow connection to your board
+
+
+    *   Log in to your Arduino account by clicking on the Arduino Web editor (You
+    equally create a new account if you do not have an account before).'
+  toc: []
+  trans: '
+
+
+    - 在您的网络浏览器中打开 Arduino 网站 (https://www.arduino.cc/en/Main/Software)。
+
+    - 点击链接下载并进入下载页面。
+
+    - 在 Arduino 许可协议上点击“同意”按钮。
+
+    - 点击下载页面上的 `Windows` 链接，这将下载适用于 Windows 的 Arduino 软件。
+
+    - 在您的电脑上找到刚下载的文件，然后解压缩压缩包。
+
+    - 将其复制到电脑上的常用位置。
+
+    - 然后，通过将 Arduino 板板连接到电脑来连接电脑与 Arduino。
+
+    - 点击 Windows 开始菜单按钮启动 Windows 设备管理器。
+
+    - 右键点击“此电脑”菜单，并在下拉菜单列表中选择“属性”。
+
+    - 点击“设备管理器”链接。
+
+    - 此后，设备管理器将显示“Arduino”。
+
+    - 右键点击“Arduino”以更新驱动程序软件。
+
+    - 将弹出一个对话框，从下拉选项中选择“浏览我的电脑以查找驱动程序”。
+
+
+    在此之后，选择“浏览”按钮。已下载的 Arduino 文件夹中现在有一个 `Driver` 文件夹，选择此 `Drivers` 文件夹。选择好后，您就可以点击“下一步”。会弹出一个对话框，选择“仍安装此驱动程序”。几分钟后，驱动程序的安装将完成。您会注意到另一个对话框弹出，只需记下用于配置
+    Arduino 的端口。之后，您可以设置您的 Arduino 软件。操作方法如下：
+
+
+    - 进入刚下载的文件夹。
+
+    - 现在可以通过双击该文件来打开 Arduino 软件。
+
+    - 确保您已选择正确的 Arduino 板板，如果没有，请根据需要更改选项。
+
+    - 同时确保所选择的串口是正确的，如果不是，请根据需要进行更改。
+
+
+    在完成所有这些程序后，剩下的就是测试安装是否正常。您可以通过将程序（sketch）加载到 Arduino 来查看安装是否良好。为此，选择“Blink”程序并点击
+    Arduino 上传按钮（Arduino 板板上的 LED 将闪烁以指示已加载程序）。您可能希望运行程序以确认 Arduino 软件和驱动程序已成功安装。
+
+
+    ### 选择哪个版本的 Arduino IDE
+
+
+    Arduino 软件会定期更新以提高效率，并有时修复某些已知错误，因此，发布的 Arduino IDE 版本经常发生。这些修改对于满足持续用户的需求是必要的。
+
+
+    Arduino IDE 版本 `1.0.5` 是首次发布的 Arduino IDE，也是第一代 Arduino 编程中最旧使用的版本。此版本 `1.0.5`
+    以及其他后续发布的版本如版本 `1.8.11`、`1.8.10`、`1.8.9`、`1.8.8`、`1.0.5`、`1.0.4`、`1.0.3`、`1.0.4`、`0023`、`0022`、`0021`
+    `0020` 等现在已经过时。
+
+
+    目前活跃的版本是版本 `1.8.12` 和版本 `1.8.13`。`1.8.13` 版本是 Arduino IDE 的最新版本。`1.8.13` 版本有很多改进，因此是目前为止发布的最佳版本。该版本的最新更新主要支持
+    Windows 操作系统（例如 `2000`、`XP`、`7` 和 `Vista`）。它由 Genericom 开发，总文件容量为 90.20 MB。该 Arduino
+    IDE 的其他显著功能包括与任何进行 Arduino 项目的用户共享信息，以及需要时更改原理图和内部布局的能力。
+
+
+    ### Arduino 在线 IDE
+
+
+    使用在线 Arduino IDE 或 Arduino 网页编辑器是进行 Arduino 编程另一种方式。通过这种方式，您可以访问教程、配置板板，最重要的是作为
+    Arduino Create 的功能之一直接在网页上编写代码。对于拥有持续且良好网络连接的用户来说，这是一个非常出色的功能。
+
+
+    这样做的好处是可以随时访问 Arduino 功能，而不一定需要下载 Arduino 软件。因此，可以将程序存储在云端，并在方便的时间和地点轻松访问。要使用
+    Arduino IDE 的这些在线功能，需要：
+
+
+    - 从 `https://create.arduino.cc/getting-started` 安装 Arduino Create 插件以便连接您的板板。
+
+    - 点击 Arduino 网页编辑器登录您的 Arduino 账户（如果您之前没有账户，也可以创建一个新账户）。
+
+
+    '
+- fmt: '
+
+    After a successful login, you will observe that the online `Arduino IDE` environment
+    resemblance with the Arduino software version since you always code from a compatible
+    internet-connected device. You can easily upload a new file with just a click
+    on the import button right beside the "new sketch" button. Then, you are ready
+    to run your own code.
+
+
+    On the online `Arduino IDE`, the first column allows you to browse through several
+    options like `sketchbook`, `examples`, `libraries`, `serial monitor`, and `help`.
+    On the second column, you will see other options from the menu of any chosen item
+    while the third column is where proper programming is done.
+
+
+    To upload your own libraries, just go to "Libraries" then click on the "Library
+    Manager". With this, any library stored on your computer can easily be uploaded.
+    The "Help" if you need any help or face any challenge while using the `Arduino
+    IDE` online, use the "Help" button to get the essential guide.
+
+
+    Use the "Preference" tab to view available storage space on your online `Arduino
+    IDE`. This tab also helps you during programming by providing you with the options
+    to customise the appearance of your online `Arduino IDE`, such as the colour theme
+    or text size. The code area is the most used feature of the online `Arduino IDE`.
+    This is where you will write, verify and upload your codes on your Arduino board.
+
+
+    # CHAPTER SEVEN
+
+
+    ![Arduino Led Dice | Arduino projects, Cool arduino projects, Arduino led](Image00008.jpg)
+
+
+    ## Some of the Arduino Projects that You can Attempt
+
+
+    Several projects can be managed with the Arduino board ranging from such simple
+    task as controlling LED lights to a more complex and technical project like using
+    the Arduino to automate most of your household devices. Few among many projects
+    you can lay your hands on using the Arduino is listed below:
+
+
+    - **Arduino Mega Chess**: This gives Chess lovers access to a personal digital
+    chessboard. In addition to your Arduino, you will need a 3D printer and `TFT LCD`
+    touchscreen to enjoy your digital Chess. This allows you to apply the necessary
+    adjustment to suit your desire when designing this digital chessboard.
+
+    - **Robot Arm that has Controller**: The `Arduino UNO` board permits you to have
+    total control over your robot, which is specially designed for this type of purpose.
+    You will need a robot-arm whose function can be enhanced with the 3D printer.
+
+    - **Making Musical Instruments**: Musical instruments have been made by many hobbyists
+    using the Arduino board. The `Arduino Uno` can also be used in this regard. The
+    `Pi supply flick charge` will also be needed for this project. After the project
+    has been completed, all you need to do is, tap on it to see your hand waves being
+    converted to music.
+
+    - **The RFID Reader Security Access**: Radio frequency identification may be used
+    for security purposes. This can be performed using an `Adafruit NFC card` also,
+    which is being used for security access.
+
+    - **Small Weather Display System**: If you think of having your own miniature
+    weather display system, the Arduino board will help you achieve this. The weather
+    display system is to be programmed to display the current temperatures in the
+    environment both in Celcius and Fahrenheit units. This is really an interesting
+    project for an adventurous beginner. An `OLED` graphic display is required to
+    view the weather information.
+
+    - **Make a Fingerprint Scanner for your Door**: This project allows you to construct
+    a scanning system that detects your fingerprint and then gives you access through
+    the door. The door will only give way at the prompt of your fingerprint alone.
+
+    - **Make the Control Panel of a Computer**: Things you can do with the control
+    panel include changing screen preference, controlling the volume, launching of
+    app etc. Your Arduino board is the backbone of this project, you can control the
+    several other parts of your computer using the `USB controllers`.
+
+    - **Robotic Car**: You can build a robotic car using the Arduino in connection
+    with `DC motors`. If you want a robot with good visual, using 3D printing for
+    the components of the car is the best choice. You will also get to learn the rudiments
+    of advanced motor control as you do this project.
+
+    - **Motorised Camera that follows Motion**: For your home security camera, this
+    project becomes a better alternative. Your home security camera may be unable
+    to take videos of some blind spot. With this project, you are sure of a secured
+    home since the camera will always follow the direction of any movement it senses.
+
+    - **Quality Control System for Water**: The water quality sensors can be used
+    in combination with the `Arduino UNO` to make a great water quality control system
+    for you, especially if water hygiene is your concern.
+
+    - **Ultrasonic Distance Finder**: This ultrasonic distance finder is another awesome
+    project that can be built using the `Arduino Uno` in combination with a `sonic
+    ranging module` and `LCD readout`. It is used to calculate distance from an object.
+    This work by detecting sonic waves reflected off an object on its receiver, the
+    data received as a result of this is then used to give an approximate distance
+    to the said object.
+
+    - **High-speed set of Photography**: With this project, slow-motion shots of a
+    fast-moving object such as flying birds or falling water can now be taken with
+    the Arduino board. In this project, the Arduino board is used with the right flash.
+    If you are into photography, this is especially a good tool for you as it enables
+    you to produce great production contents.
+
+    - **GPS Tracker**: With the Arduino board, you can easily design a smart `GPS
+    tracker`. This tracker becomes helpful when tracking the position of some things,
+    even your car. In combination with your Arduino, a `GPS module`, `wires`, `OLED
+    display` etc are needed for this project.
+
+    - **Alarm-clock Radio**: This Arduino project equips your device with the ability
+    to perform a dual function, as an alarm and as well as a radio system. This project
+    will avail you the choice of setting the alarm for the desired time while having
+    the time displayed.
+
+    - **Plant Watering System**: The beauty in this project is that it can be assembled
+    within a few hours compared to some other Arduino projects. With the choice of
+    correct source code, `moisture sensor` and `layout component`, this automated
+    plant watering system can be built according to your specification to suit your
+    desire. The location where the potted plant may be growing does not matter, the
+    system will just deliver as expected.
+
+    - **Inverter**: This particular project got people amazed that the Arduino can
+    serve as a form of substitute to the conventional inverter. An inverter made from
+    Arduino is usually cheaper when compared with average inverter. This is simple
+    to build, all you need to do is get your battery, and then configure your Arduino
+    to function as inverter.
+
+    - **Walkie-Talkie**: Arduino, in combination with some necessary electronic components,
+    can be used to create Walkie-Talkie. This allows to easily communicate with any
+    other person. The medium of communication in this project is Bluetooth.
+
+    - **Oscilloscope**: Your computer and Arduino board can be used as act as oscilloscope.
+    The Arduino board is designed primarily as portable. After the oscilloscope circuit
+    has been put in place, frequency up to can be reached on it. This is made possible
+    as a result of inbuilt analog/digital converter that comes along Arduino board.
+    The signals from this converter are sent directly to your computer via `USB`.
+
+
+    # CHAPTER EIGHT
+
+
+    ![Arduino Tutorial 3 | How to solve if you have trouble uploading to Arduino](Image00009.jpg)
+
+
+    ## Troubleshooting Issues with Arduino
+
+
+    Although the Arduino is in general very easy to use, some users, however, still
+    find it little bit hard to operate. This type of setback can usually be fixed
+    with simple adjustment on the device. Below, we have looked at most common issues
+    you may across when using Arduino, especially for first user, and how you can
+    easily fix them.
+
+
+    ### Issues with Serial Monitor
+
+
+    Sometimes you may desire to use serial monitor. What this does is that it enables
+    to send some data through serial port. In addition to this, it has over time Problems
+    arise when you begin to see some strange things (at times may not even see anything
+    all) when you view serial monitor. This usually occur when the right setting is
+    not used. Using the same baud rate can fix this problem.
+
+
+    ### Computer/IDE not Recogn by the Board
+
+
+    The Arduino board not being able to recognise the computer or IDE is the most
+    common issue encountered on the setup. This can arise as a result of two things:
+
+
+    1. **Using USB Cable**: The USB cable you are using may not be compatible with
+    the Arduino. This is because some USB cables are meant for charging smartphones
+    instead of data transfer. It is generally advisable to use a USB cable that supports
+    data transfer. This will make powering and programming your device very easy.
+
+    2. **Board Drivers**: Although board drivers are normally detected automatically
+    by your device, thus it makes automatic installation easy. However, the drivers
+    may not be automatically recognised at times. In this case, there is need to install
+    the drivers by yourself. These drivers come in different flavor depending the
+    kind of Arduino board you are using.
+
+    3. **Libraries/Header files missing**: There are cases where some of the codes
+    copied from online and pasted on the Arduino IDE may not have necessary libraries
+    already installed on your device. This often prompts an error message. This can
+    easily be fixed by checking the Library Manager on your computer.
+
+
+    ### Inability to Upload a Code
+
+
+    This may be experienced as a result of:
+
+
+    1. **Not using the Correct Settings for your Board**: When you are programming
+    Arduino board, and the right settings for the Arduino IDE on that board are not
+    used, there is a tendency you will not be able to upload any code to your Arduino.
+    However, when the correct setting is in place, the code will smoothly upload.
+    To fix this issue, you need to go to your Arduino IDE environment, then go to
+    "Tool menus" to look for the type of board you are using. If you are unable to
+    find the board type here, then go directly to "board manager" to add the type
+    of board you are using to list.
+
+    2. **Incorrect Code**: The Arduino IDE will continue to alert you whenever your
+    code contains an error. This will usually show at the bottom of the IDE in a black
+    box. This can be fixed by issuing the correct code. Otherwise, you can simply
+    turn on the verbose output option in your IDE settings. Turning this on will offer
+    you a great suggestion as writing your code before you upload and guide you when
+    uploading any code of your choice.
+
+
+    # FAQs
+
+
+    ## FAQs
+
+
+    Still not clear about some certain things you need answers to? Below, we have
+    tried as much as possible to give the most suitable answers to some frequently
+    asked questions concerning the Arduino.
+
+
+    1. **Is the Arduino IDE different from the Arduino Web Editor (Online)?**: These
+    two platforms, the Arduino IDE and the Arduino web editor primarily do the same
+    thing which is providing you with an environment to write your code. However,
+    the Arduino IDE needs to be downloaded on your device before you can use it, the
+    Arduino web editor, on the other hand, allows you to do the same thing online
+    without the need for you to download any Arduino software.
+
+    2. **Which Board can I use if I decide to use the Arduino Web Editor?**: All types
+    and models of Arduino boards have the Arduino web editor feature by default.
+
+    3. **How do you power an Arduino?**: Different types of Arduino board come with
+    different power requirement you can choose from. For instance, a 7-12V power adapter
+    or a 5V USB connection can be used to power an Arduino Uno Rev3.
+
+    4. **From where can I get the Arduino?**: Arduino is available on Amazon online
+    store.
+
+    5. **How can I connect an LCD with an Arduino?**: The input/output pins are the
+    interfaces through which the Arduino can be connected to an LCD. The `Liquid Crystals`
+    library is used to control the connected LCD screen. To use this library, look
+    for it in the library manager and install it.
+
+    6. **Can Arduino control many Servo Motors?**: In fact, the board is usually easy
+    to support to support many Servo Motors.
+
+    '
+  raw: 'After a successful login, you will observe that the online Arduino IDE environment
+    resemblance with the Arduino software version since you always code from a compatible
+    internet-connected device. You can easily upload a new file with just a click
+    on the import button right beside the "new sketch" button. Then, you are ready
+    to run your own code.On the online Arduino IDE, the first column allows you to
+    browse through several options like sketchbook, examples, libraries, serial monitor,
+    and help. On the second column, you will see other options from the menu of any
+    chosen item while the third column is where proper programming is done.To upload
+    your own libraries, just go to "Libraries" then click on the "Library Manager".
+    With this, any library stored on your computer can easily be uploaded. The "Help"
+    if you need any help or face any challenge while using the Arduino IDE online,
+    use the "Help" button to get the essential guide.Use the "Preference" tab to view
+    available storage space on your online Arduino IDE. This tab also helps you during
+    programming by providing you with the options to customise the appearance of your
+    online Arduino IDE, such as the colour theme or text size. The code area is the
+    most used feature of the online Arduino IDE. This is where you will write, verify
+    and upload your codes on your Arduino board.CHAPTER SEVEN![Arduino Led Dice |
+    Arduino projects, Cool arduino projects, Arduino led](Image00008.jpg)Some of the
+    Arduino Projects that You can AttemptSeveral projects can be managed with the
+    Arduino board ranging from such simple task as controlling LED lights to a more
+    complex and technical project like using the Arduino to automate most of your
+    household devices. Few among many projects you can lay your hands on using the
+    Arduino is listed below:Arduino Mega Chess : This gives Chess lovers access to
+    a personal digital chessboard. In addition to your Arduino, you will need a 3D
+    printer and TFT LCD touchscreen to enjoy your digital Chess. This allows you to
+    apply the necessary adjustment to suit your desire when designing this digital
+    chessboard.Robot Arm that has Controller : The Arduino UNO board permits you to
+    have total control over your robot, which is specially designed for this type
+    of purpose. You will need a robot-arm whose function can be enhanced with the
+    3D printer.Making Musical Instruments : Musical instruments have been made by
+    many hobbyists using the Arduino board. The Arduino Uno can also be used in this
+    regard. The Pi supply flick charge will also be needed for this project. After
+    the project has been completed, all you need to do is, tap on it to see your hand
+    waves being converted to music.The RFID Reader Security Access: Radio frequency
+    identification may be used for security purposes. This can be performed using
+    an Adafruit NFC card also, which is being used for security access.Small Weather
+    Display System : If you think of having your own miniature weather display system,
+    the Arduino board will help you achieve this. The weather display system is to
+    be programmed to display the current temperatures in the environment both in Celcius
+    and Fahrenheit units. This is really an interesting project for an adventurous
+    beginner. An OLED graphic display is required to view the weather information.Make
+    a Fingerprint Scanner for your Door : This project allows you to construct a scanning
+    system that detects your fingerprint and then gives you access through the door.
+    The door will only give way at the prompt of your fingerprint alone.Make the Control
+    Panel of a Computer : Things you can do with the control panel include changing
+    screen preference, controlling the volume, launching of app etc. Your Arduino
+    board is the backbone of this project, you can control the several other parts
+    of your computer using the USB controllers.Robotic Car: You can build a robotic
+    car using the Arduino in connection with DC motors. If you want a robot with good
+    visual, using 3D printing for the components of the car is the best choice. You
+    will also get to learn the rudiments of advanced motor control as you do this
+    project.Motorised Camera that follows Motion: For your home security camera, this
+    project becomes a better alternative. Your home security camera may be unable
+    to take videos of some blind spot. With this project, you are sure of a secured
+    home since the camera will always follow the direction of any movement it senses.Quality
+    Control System for Water : The water quality sensors can be used in combination
+    with the Arduino UNO to make a great water quality control system for you, especially
+    if water hygiene is your concern.Ultrasonic Distance Finder : This ultrasonic
+    distance finder is another awesome project that can be built using the Arduino
+    Uno in combination with a sonic ranging module and LCD readout. It is used to
+    calculate distance from an object. This work by detecting sonic waves reflected
+    off an object on its receiver, the data received as a result of this is then used
+    to give an approximate distance to the said object.High-speed set of Photography
+    : With this project, slow-motion shots of a fast-moving object such as flying
+    birds or falling water can now be taken with the Arduino board. In this project,
+    the Arduino board is used with the right flash. If you are into photography, this
+    is especially a good tool for you as it enables you to produce great production
+    contents.GPS Tracker: With the Arduino board, you can easily design a smart GPS
+    tracker. This tracker becomes helpful when tracking the position of some things,
+    even your car. In combination with your Arduino, a GPS module, wires, OLED display
+    etc are needed for this project.Alarm-clock Radio: This Arduino project equips
+    your device with the ability to perform a dual function, as an alarm and as well
+    as a radio system. This project will avail you the choice of setting the alarm
+    for the desired time while having the time displayed.Plant Watering System: The
+    beauty in this project is that it can be assembled within a few hours compared
+    to some other Arduino projects. With the choice of correct source code, moisture
+    sensor and layout component, this automated plant watering system can be built
+    according to your specification to suit your desire. The location where the potted
+    plant may be growing does not matter, the system will just deliver as expected.Inverter
+    : This particular project got people amazed that the Arduino can serve as a form
+    of a substitute to the conventional inverter. An inverter made from Arduino is
+    usually cheaper when compared with an average inverter. This is simple to build,
+    all you need to do is get your battery, and then configure your Arduino to function
+    as an inverter.Walkie-Talkie : Arduino, in combination with some other necessary
+    electronic components, can be used to create a Walkie-Talkie. This allows you
+    to easily communicate with any other person within a set frequency. The medium
+    of communication in this project is Bluetooth. Oscilloscope: Your computer and
+    an Arduino board can be used to as act as an oscilloscope. The Arduino board is
+    designed primarily as a portable signal acquisition hardware. After the oscilloscope
+    circuit has been put in place, frequency up to 5 kHz can be reached on it. This
+    is made possible as a result of the in-built analog/digital converter that comes
+    along the Arduino board. The signals from this converter are sent directly to
+    your computer via the USB.CHAPTER EIGHT![Arduino Tutorial 3 | How to solve if
+    you have trouble uploading program to your Arduino board - YouTube](Image00009.jpg)Troubleshooting
+    Issues with ArduinoAlthough the Arduino is in general very easy to use, some users,
+    however, still find it a little bit hard to operate. This type of setback can
+    usually be fixed with a simple adjustment on the device set up. Below, we have
+    looked at most common issues you may come across when using your Arduino, especially
+    for a first time user, and how you can easily fix them.Issues with the Serial
+    Monitor: Sometimes, you may desire to use the IDE serial monitor. What this does
+    is that it enables you to send some data through the serial port. In addition
+    to this, it has over the time been used to show details of a graph sensor data
+    or an RFID tag.Problems do arise when you begin to see some strange things (at
+    times you may not even see anything at all) when you view the serial monitor.
+    This usually occurr when the right detail setting is not being used. Using the
+    same value in the baud rate setting in the set-up code as the one in the serial
+    monitor can fix this problem.Computer/IDE not Recognised by the Board : The Arduino
+    board not being able to recognise the computer or IDE is the most common issue
+    encountered on the Arduino set-up. This can arise as a result of two things:1\.
+    Using the USB Cable :  The USB cable you are using may not be compatible with
+    the Arduino. This is because some USB cables are meant for charging of smartphones
+    instead of data transfer. It is generally advisable to use a USB cable that supports
+    data transfer on the microcontroller. This will, in fact, make powering and programming
+    your device very easy.2\. Board Drivers : Although, board drivers are normally
+    detected automatically by your device. Thus, it makes automatic installation easy.
+    However, the drivers may not be automatically recognised at times. In this case,
+    there is a need to install the drivers by yourself. These drivers come in different
+    flavor depending on the kind of the Arduino board you are using.3\. Libraries/Header
+    files missing: There are cases where some of the codes copied from online sources
+    and pasted on the Arduino IDE may not have necessary libraries already installed
+    on your device. This often prompts an error message. This can easily be fixed
+    by just simply installing the missing libraries. This you can do by checking for
+    the Library Manager on your computer or just look for the library online.Inability
+    to Upload a Code: this may be experienced as a result of:1\. Not using the Correct
+    Settings for your Board; When you are programming Arduino board, and the right
+    settings for the Arduino IDE on that board are not being used, there is a tendency
+    you will not be able to upload any code to your Arduino. However, when the correct
+    setting is in place, the code will smoothly upload.To fix this issue, you need
+    to go to your Arduino IDE environment, then go to the "Tool menus" to look for
+    the type of board you are using. If you are unable to find the board type here,
+    then, go directly to "board manager" to add the type of board you are using to
+    list.2\. Incorrect Code : The Arduino IDE will continue to alert you whenever
+    your code contains an error. This will usually show at the bottom of the IDE in
+    a black box. This can be fixed by issuing the correct code. Otherwise, you can
+    simply turn on the verbose output option in your IDE settings. Turning this on
+    will offer you a great suggestion as you writing your code before you upload and
+    guide you when uploading any code of your choice.FAQsSome frequently asked questions
+    and answers about ArduinoStill not clear about some certain things you need answers
+    to? Below, we have tried as much as possible to give the most suitable answers
+    to some frequently asked questions concerning the Arduino.1\. Is the Arduino IDE
+    different from the Arduino Web Editor (Online)?Answer: These two platforms, the
+    Arduino IDE and the Arduino web editor primarily do the same thing which is providing
+    you with an environment to write your code. However, the Arduino IDE needs to
+    be downloaded on your device before you can use it, the Arduino web editor, on
+    the other hand, allows you to do the same thing online without the need for you
+    to download any Arduino software.2\. Which Board can I use if I decide to use
+    the Arduino Web Editor? Answer : All types and models of Arduino boards have the
+    Arduino web editor feature by default.3\. How do you power an Arduino?Answer :
+    Different types of Arduino board come with different power requirement you can
+    choose from. For instance, a 7-12V power adapter or a 5V USB connection can be
+    used to power an Arduino Uno Rev3.4\. From where can I get the Arduino?Answer:
+    Arduino is available on Amazon online store.5\. How can I connect an LCD with
+    an Arduino?Answer : The input/output pins are the interfaces through which the
+    Arduino can be connected to an LCD. The Liquid Crystals library is used to control
+    the connected LCD screen. To use this library, look for it in the library manager
+    and install it.6\. Can Arduino control many Servo Motors?Answer : In particular,
+    the Arduino board known as the Arduino Mega boards, can support around 48 Servo
+    Motors. Whereas, a maximum of 12 Servo Motor can be supported on many other Arduino
+    boards.7\. Does relay work well with Arduino?Answer : Relays work quite well with
+    most Arduinos. A relay module is usually used to control the relay with your Arduino.
+    For you to connect relays to Arduino, pins on the board are used. The presence
+    of these pins allows easy integration of relays with the Arduino circuit.8\. How
+    do you program using the Arduino?Answer : The Arduino IDE language is popularly
+    known as Processing. This is the language in which programs are made. After the
+    programs must have been written, then sketches are used to save them. These sketches
+    are what you upload into the Arduino through the computer via the Arduino IDE.9\.
+    What can I do with my Arduino?Answer : The list of things you can use your Arduino
+    for is endless. Basically, the Arduino is used in most hardware to send and interpret
+    signals. This signal gives Arduino the ease to interact with the hardware, thereby
+    enabling it to handle various tasks depending on the nature of the project the
+    Arduino is to be used for.10\. Why is the Arduino IDE showing "uploading sketch"
+    without end?Answer : In some instances, when you are uploading a program, it may
+    hang or freeze. This you can easily resolve by a simple click on the upload button
+    again. In this way, the process will start all over so that you may be sure that
+    the program is uploading. It often time takes less than 10 seconds to do this.11\.
+    Can alternative serial monitors be used with the Arduino?Answer: Yes, you can
+    use alternative serial monitors with your Arduino. Because your computer can be
+    connected with the Arduino by a USB cable via a virtual serial port, which allows
+    Arduino to access any application that is on your computer. This is why you are
+    able to write and load programs into your Arduino.CONCLUSIONArduino is based on
+    an open-source platform and can be used by any person at any level. Hence, it
+    has given easy access to many people to use it for the execution of their various
+    automated projects. As a matter of fact, many embedded engineers have been using
+    the Arduino to give finishing touch to some of their projects. Even hobbyists,
+    too, have had their fair share of using this fantastic device to satisfy their
+    desires.Arduino projects have given lots of innovations as to how many interactive
+    devices can be built. In fact, many Arduino projects have been recognized to be
+    the prototype of real projects. In this way, experimenters will be able to make
+    necessary amendments before they produce the final product.Arduino has also become
+    a handy household tool to perform various simple and complex automation processes.
+    This is because the companies that produce this board have several models, designs,
+    and sizes of the boards, which are used for different purposes.At the Prix Ars
+    Electronica in 2006, the Arduino project was selected as one of the few projects
+    with the potential to revolutionize the way things are done when it comes to the
+    internet of things (IoT).  Recently, the Arduino Engineering Kit shined at the
+    Bett Awards for "Further Education or Higher Education Digital Services" by claiming
+    an award. The foremost important thing about the Arduino is that it gives you
+    absolute control over what and when to use Arduino to perform a task. This is
+    because your boards will only carry out a task based on instructions provided.
+    This is mainly an incredible tool for beginners interested in embedded engineering
+    or interactive electronics as they get to construct many scientific and engineering
+    devices at a relatively cheaper cost.However, some persons might find it challenging
+    at first, hence this guide. Having gone through this guide, you can comfortably
+    connect Arduino to your computer, attempt some projects, and learn more about
+    the server. With some troubleshooting issues addressed in this guide, you can
+    comfortably handle common problems you may encounter while working with Arduino.'
+  toc: []
+  trans: '
+
+
+    登录成功后，你会发现在线 `Arduino IDE` 环境与 Arduino 软件版本非常相似，因为你始终在连接互联网的设备上编写代码。你只需点击“new
+    sketch”（新建项目）按钮旁边的导入按钮即可轻松上传新文件。然后，你就可以准备运行自己的代码了。
+
+
+    在在线 `Arduino IDE` 中，第一列允许你浏览多个选项，如 `sketchbook`（项目）、`examples`（示例）、`libraries`（库）、`serial
+    monitor`（串口视器）和 `help`（帮助）。第二列将看到所选项目菜单中的其他选项，而第三列则是进行实际编程的地方。
+
+
+    要上传你自己的库，只需进入“Libraries”（库）然后点击“Library Manager”（库管理器）。通过它，计算机存储的任何库都可以轻松上传。如果你在使用在线
+    `Arduino IDE` 时需要任何帮助或遇到挑战，请使用“Help”（帮助）按钮获取核心指南。
+
+
+    使用“Preference”（首选项）标签页查看在线 `Arduino IDE` 的可用空间。此标签在编程过程中也能提供帮助，因为它提供了自定义在线 `Arduino
+    IDE` 外观的选项，例如颜色主题或字体大小。代码区域是在线 `Arduino IDE` 中最常用的功能。你在这里为你的 Arduino 板编写、验证和上传代码。**
+
+
+    # 第七章
+
+
+    ![Arduino Led Dice | Arduino projects, Cool arduino projects, Arduino led](img/Image00008.jpg)
+
+
+    ## 你可以尝试的一些 Arduino 项目
+
+
+    使用 Arduino 板可以管理许多项目，从控制 LED 灯等简单任务到像使用 Arduino 自动化大多数家庭设备等复杂且具有技术性的项目。以下列出了你可以使用
+    Arduino 动手的众多项目：
+
+
+    - **Arduino Mega 象棋**：这为国际象棋爱好者提供了一个个人数字棋盘。除了你的 Arduino 之外，你还需要一台 3D 打印机和 `TFT
+    LCD` 触摸屏来享受你的数字象棋。这允许你在设计这个数字棋盘时根据自己的需求进行必要的调整。
+
+    - **带有控制器的机械臂**：`Arduino UNO` 板允许你对机器人进行完全控制，它是专为这类目的而设计的。你需要一个功能可以通过 3D 打印机增强的机械臂。
+
+    - **制作乐器**：许多爱好者使用 Arduino 板制作了乐器。`Arduino Uno` 也可以用于此。该项目还需要 `Pi supply flick
+    charge`。项目完成后，你只需要点击它，就能看到你的手势被转换为音乐。
+
+    - **RFID 读卡器安全访问**：射频识别可用于安全目的。这也可以使用 `Adafruit NFC card` 实现，它也被用于安全访问。
+
+    - **小型天气显示系统**：如果你想拥有自己的微型天气显示系统，Arduino 板将帮助你实现。天气显示系统被编程为以摄氏度和华氏度单位显示环境当前温度。对于一个冒险的初学者来说，这是一个非常有趣的项目。需要一个
+    `OLED` 图形显示器来天气信息。
+
+    - **为你的门制作指纹扫描仪**：这个项目允许你构建一个检测你的指纹并允许进入门的系统。门只有在指纹提示时才会打开。
+
+    - **制作电脑控制面板**：通过控制面板可以的操作包括更改显示偏好、控制音、启动应用程序等。你的 Arduino 板是这个项目的骨干，你可以通过 `USB
+    controllers` 控制电脑的其他多个部分。
+
+    - **机器人汽车**：你可以使用连接 `DC motors` 的 Arduino 构建机器人汽车。如果你想要一个视觉良好的机器人，使用 3D 打印制作汽车部件是最佳选择。在进行此项目时，你还将学习高级电机控制的基础知识。
+
+    - **追踪运动的电动摄像头**：对于你的家庭监控，这个项目是一个更好的替代方案。你的家庭监控摄像头可能无法拍摄某些盲角的视频。有了这个项目，你可以确保家园的安全，因为摄像头将始终跟随它感到的任何移动方向。
+
+    - **水质控制系统**：水质传感器可以与 `Arduino UNO` 结合使用，为你创建一个很好的水质控制系统，特别是当你关注水卫生时。
+
+    - **超声波距离查找**：这个超声波距离查找是另一个使用 `Arduino Uno` 结合 `sonic ranging module` 和 `LCD readout`
+    构建的精彩项目。它用于计算与物体之间的距离。它通过接收器检测从物体反射的声波来工作，接收到的数据随后用于给出该物体的近似距离。
+
+    - **高速摄影**：通过这个项目，现在可以使用 Arduino 板拍摄飞翔鸟类或落水流等快速移动物体的慢动作照片。在这个项目中，Arduino 板配合正确的闪光灯使用。如果你喜欢摄影，这对你来说是一个特别好的工具，因为它能让你产出出色的制作内容。
+
+    - **GPS 追踪器**：通过 Arduino 板，你可以轻松设计智能 `GPS tracker`。这个追踪器在追踪某些物品（甚至是你的车）的位置时非常有帮助。该项目需要你的
+    Arduino、`GPS module`、`wires`、`OLED display` 等。
+
+    - **闹钟收音机**：这个 Arduino 项目让你的设备具备双重功能，既是闹钟又是收音系统。这个项目将为你提供设定所需闹钟时间并同时显示时间。
+
+    - **植物浇水系统**：这个项目的巧妙之处在于，与其他 Arduino 项目相比，它可以在几小时内完成。通过正确的代码、`moisture sensor`（湿度传感器）和
+    `layout`（布局），根据你的需求构建自动浇水系统。无论植物生长如何，系统都会如期运行。
+
+    - **逆器**：这个项目让人们惊讶，Arduino 可以作为逆器的形式。与普通的逆器相比，Arduino 的通常更便宜。构建很简单，你只需要获取电池并配置
+    Arduino 作为逆器。
+
+    - **对讲机**：Arduino 结合一些电子元件可以用来制作对讲机。这允许与任何人进行通信。在这个项目中，通信媒介是蓝牙。
+
+    - **示波器**：你的电脑和 Arduino 板可以作为示波器使用。Arduino 板主要设计为便携式。放置示波器电路后，可以达到频率。这是由于 Arduino
+    板自带模拟/数字转换通过 `USB` 直接发送到你的电脑。
+
+
+    # 第八章
+
+
+    ![Arduino Tutorial | How to solve if you have trouble uploading to Arduino](img/Image00009.jpg)
+
+
+    ## 排除
+
+
+    尽管 Arduino 通常很容易使用，但某些用户仍然觉得操作有点困难。这种问题通常可以通过对设备进行简单调整来解决。下面我们查看了在使用 Arduino 时可能遇到的最常见问题以及如何轻松修复它们。
+
+
+    ### 串口视器问题
+
+
+    有时你可能想要使用串口视器。它的作用是通过串口发送某些数据。此外，当你开始查看串口视器时可能会出现一些奇怪的情况（有时什么都看不到）。使用相同的波特率可以解决这个问题。
+
+
+    ### 电脑/IDE 未被板识别
+
+
+    Arduino 板无法识别电脑或 IDE 是设置时最常见的问题。这由两点引起：
+
+
+    1. **使用 USB 线**：你使用的 USB 线可能与 Arduino 不兼容。因为某些 USB 线是为手机充电而非数据传输设计的。通常建议使用支持数据传输的
+    USB 线，这将使为设备供电和编程变得简单。
+
+    2. **板驱动**：虽然驱动通常由设备自动检测，从而使安装简单，但有时可能无法自动识别。在这种情况下，你需要手动安装驱动。这些驱动取决于你使用的 Arduino
+    板。
+
+    3. **缺少库/头文件**：某些从网上复制并粘贴到 Arduino IDE 的代码没有安装必要的库。这通常会提示错误消息。通过检查电脑上的库管理器可以轻松修复。
+
+
+    ### 无法上传代码
+
+
+    这可能是由于以下原因：
+
+
+    1. **未使用正确的板设置**：在为 Arduino 板时，如果未使用该板正确的 Arduino IDE 设置，你将无法上传任何代码。然而，当设置正确时，代码将顺利上传。要修复这个问题，你需要进入
+    Arduino IDE 环境，然后进入“Tool”菜单查找正在使用的板类型。如果你在这里找不到板类型，直接进入“board manager”将正在使用的板类型添加到列表中。
+
+    2. **代码错误**：当代码包含错误时，Arduino IDE 会持续提醒你。这通常显示在 IDE 底部的黑框中。可以通过发布正确的代码来修复。否则，你只需在
+    IDE 设置中开启详细输出（verbose output）选项。开启此选项将在上传代码前为你提供很好的建议，并在上传选择的任何代码时引导你。
+
+
+    # 常见问题
+
+
+    ## 常见问题
+
+
+    对某些需要答案的事情仍然不清楚吗？下面我们尽可能对关于 Arduino 的常见问题提供合适的答案。
+
+
+    1. **Arduino IDE 和 Arduino 网页编辑器（在线）不同吗？**这两个平台——Arduino IDE 和 Arduino 网页编辑器主要功能相同，即为你提供一个编写代码的环境。然而，Arduino
+    IDE 需要在使用前下载到你的设备上，而 Arduino 网页编辑器允许你在无需下载任何 Arduino 软件的情况下在线完成操作。
+
+    2. **如果我决定使用 Arduino 网页编辑器，可以使用哪种板？** 所有类型和型号的 Arduino 板默认都有 Arduino 网页编辑器功能。
+
+    3. **如何给 Arduino 充电？** 不同类型的 Arduino 板有不同的电源要求供选择。例如，7-12V 电源适配器或 5V USB 连接可为
+    Arduino Uno Rev3 供电。
+
+    4. **从哪里可以获得 Arduino？** Amazon 在线商店提供。
+
+    5. **如何将 LCD 连接到 Arduino？** 输入/输出引脚是 Arduino 连接到 LCD 的接口。使用 `Liquid Crystals`
+    库控制连接的 LCD 屏幕。要使用此库，请在库管理器中查找并安装。
+
+    6. **Arduino 可以控制许多舵服电机吗？**事实上，该板通常很容易支持许多舵服电机。
+
+
+    '
