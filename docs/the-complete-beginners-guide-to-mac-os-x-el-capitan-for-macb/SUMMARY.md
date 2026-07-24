@@ -1,0 +1,2 @@
++   [Mac OS X El Capitan 初学者指南：（适用于 Macbook, Macbook Air, Macbook Pro, iMac, Mac Pro 和 Mac Mini）](README.md)
++   [Mac OS X El Capitan 初学者指南：（适用于 Macbook, Macbook Air, Macbook Pro, iMac, Mac Pro 和 Mac Mini）](the-complete-beginners-guide-to-mac-os-x-el-capitan-for-macb_0.md)
