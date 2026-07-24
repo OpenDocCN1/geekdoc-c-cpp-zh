@@ -649,6 +649,7 @@
 +   [Scala 揭秘与精通 C# 编程：高级程序员手册（2 本合一）](docs/scala-uncovered-and-mastering-c-programming-an-intermediate-/README.md)
 +   [C++ 选编话题](docs/selected-topics-in-c/README.md)
 +   [Selenium Webdriver 与 C# 编程简单化：编程初学者指南 - 二本书合一](docs/selenium-webdriver-and-c-coding-made-simple-a-beginners-guid/README.md)
++   [C# Selenium：学习如何使用 Selenium C# 为 Web 应用程序编写高效测试脚本](docs/selenium-with-c-learn-how-to-write-effective-test-scripts-fo/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [西蒙·考维尔：从邮件房到偶像成名（高中学历或更低学历的非凡成功）](docs/simon-cowell-from-the-mailroom-to-idol-fame-extraordinary-su/README.md)
 +   [SQL：初学者简单的 SQL 编程与数据库管理，SQL 数据库学习分步指南（SQL 系列）](docs/sql-easy-sql-programming-database-management-for-beginners-y/README.md)
