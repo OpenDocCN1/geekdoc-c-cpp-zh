@@ -1,0 +1,1500 @@
+name: The C++ Programming Lenguage
+name_cn: C++ 语言
+slug: the-c-programming-lenguage
+toc:
+- - '#'
+  - C++ 语言
+- - '##'
+  - 索引 (869)
+- - '##'
+  - 给读者的的话
+- - '##'
+  - 1.1 本书结构 [notes.intro]
+- - '###'
+  - 1.1.1 示例与引用 [notes.examples]
+- - '###'
+  - 1.1.2 练习 [notes.exercises]
+- - '###'
+  - 1.1.3 实现说明 [notes.implementation]
+- - '##'
+  - 1.2 学习 C++ [notes.learn]
+- - '##'
+  - 1.3 C++ 的设计
+- - '###'
+  - 1.3.1 效率与结构
+- - '###'
+  - 1.3.2 哲学思考 [`notes.philosophy`]
+- - '###'
+  - 1.4 历史备注 [`notes.historical`]
+- - '##'
+  - 1.4 历史说明
+- - '##'
+  - 1.5 C++ 的使用
+- - '##'
+  - 1.6 C 和 C++ [notes.c]
+- - '###'
+  - 1.6.1 给 C 程序员的建议 [notes.suggest]
+- - '###'
+  - 1.6.2 给 C++ 程序员的建议 [notes.suggestions]
+- - '##'
+  - 1.8 建议
+- - '###'
+  - 1.8.1 参考文献 [notes.ref]
+- - '#'
+  - 第 2 章
+- - '##'
+  - 参考文献
+- - '##'
+  - 2.1 什么是 C++？ `tour.intro`
+- - '##'
+  - 2.2 编程范式 `tour.paradigm`
+- - '##'
+  - 2.3 过程化编程 `tour.proc`
+- - '###'
+  - 2.3.1 变量与算术 [tour.var]
+- - '###'
+  - 2.3.2 测试与循环 [tour.loop]
+- - '###'
+  - 2.3.3 指针与数组 [tour.ptr]
+- - '##'
+  - 2.4 模块化编程 [tour.module]
+- - '###'
+  - 2.4.1 独立编译 [tour.comp]
+- - '###'
+  - 2.4.2 异常处理 [tour.except]
+- - '##'
+  - 2.5 数据抽象 [tour.da]
+- - '###'
+  - 2.5.1 定义类型的模块 [tour.types]
+- - '###'
+  - 2.5.2 用户定义类型 [tour.udt]
+- - '###'
+  - 2.5.3 具体类型 [tour.concrete]
+- - '###'
+  - 2.5.4 抽象类型 [tour.abstract]
+- - '###'
+  - 2.5.5 虚拟函数 [tour.virtual]
+- - '##'
+  - '2.6'
+- - '###'
+  - 2.6.1 具体类型的问题 [tour.problems]
+- - '###'
+  - 2.6.2 类层次结构 [tour.hierarchies]
+- - '##'
+  - 2.7 泛型编程 [tour.generic]
+- - '###'
+  - 2.7.1 容器 [tour.containers]
+- - '###'
+  - 2.7.2 泛型算法 [tour.algorithms]
+- - '##'
+  - 2.8 节结语
+- - '#'
+  - 3 标准库导览
+- - '##'
+  - 3.1 引言 [tour2.lib]
+- - '##'
+  - 3.2 Hello, world! [tour2.hello]
+- - '##'
+  - 3.3 标准库命名空间 [tour2.name]
+- - '##'
+  - 3.4 输出 [tour2.ostream]
+- - '##'
+  - 3.5 字符串 [tour2.string]
+- - '###'
+  - 3.5.1 C 风格字符串 [tour2.cstring]
+- - '##'
+  - 3.6 输入 [tour2.istream]
+- - '##'
+  - 3.7 容器 [tour2.stl]
+- - '###'
+  - 3.7.1 Vector [tour2.vector]
+- - '###'
+  - 3.7.2 范围检查 [tour2.range]
+- - '###'
+  - 3.7.3 列表 [tour2.list]
+- - '###'
+  - 3.7.4 映射 [tour2.map]
+- - '###'
+  - 3.7.5 标准容器 [tour2.stdcontainer]
+- - '##'
+  - 3.8 算法 [tour2.algorithms]
+- - '###'
+  - 3.8.1 迭代器的使用 [tour2.iteruse]
+- - '###'
+  - 3.8.2 迭代器类型 [tour2.iter]
+- - '###'
+  - 3.8.3 迭代器与输入输出 [tour2.ioiterators]
+- - '###'
+  - 3.8.4 遍历与谓词
+- - '###'
+  - 3.8.5 迭代器与 I/O
+- - '###'
+  - 3.8.6 使用成员函数的算法
+- - '###'
+  - 3.8.7 标准库算法
+- - '##'
+  - 3.9 数学 [tour2.math]
+- - '###'
+  - 3.9.1 复数 [tour2.complex]
+- - '###'
+  - 3.9.2 向量算术 [tour2.valarray]
+- - '###'
+  - 3.9.3 基础支持 [tour2.basic]
+- - '##'
+  - 3.10 标准库设施 [tour2.post]
+- - '##'
+  - 3.11 建议 [tour2.advice]
+- - '#'
+  - 第一部分
+- - '##'
+  - 4.1 基本类型
+- - '##'
+  - 4.2 布尔值
+- - '##'
+  - 4.3 字符类型
+- - '###'
+  - 4.3.1 字符字面量 [dcl.lit]
+- - '##'
+  - 4.4 整数类型
+- - '###'
+  - 4.4.1 数字面量 [dcl.int.lit]
+- - '##'
+  - 4.5 浮点数类型 [dcl.float]
+- - '###'
+  - 4.5.1 浮点面量 [dcl.fp.lit]
+- - '##'
+  - 4.6 大小 [dcl.size]
+- - '##'
+  - 4.7 Void [dcl.void]
+- - '##'
+  - 4.8 枚举 [dcl.enum]
+- - '##'
+  - 4.9 声明 [dcl]
+- - '###'
+  - 4.9.1 声明的结构 [dcl.parts]
+- - '###'
+  - 4.9.2 作用域 [dcl.scope]
+- - '###'
+  - 4.9.3 初始化 [dcl.init]
+- - '###'
+  - 4.9.4 对象与左值 [dcl.objects]
+- - '###'
+  - 4.9.5 Typedef [dcl.typedef]
+- - '##'
+  - 4.10 建议 [dcl.advice]
+- - '##'
+  - 4.11 练习 [dcl.exercises]
+- - '##'
+  - 5.1 指针 [ptr.ptr]
+- - '###'
+  - 5.1.1 零 [ptr.zero]
+- - '##'
+  - 5.2 数组 [ptr.array]
+- - '###'
+  - 5.2.1 数组初始化器 [ptr.array.init]
+- - '###'
+  - 5.2.2 字符串字面量 [ptr.string.literal]
+- - '##'
+  - 5.3 数组指针 [ptr.into]
+- - '###'
+  - 5.3.1 数组遍历 [ptr.navigate]
+- - '##'
+  - 5.4 常量 [ptr.const]
+- - '###'
+  - 5.4.1 指针与常量 [ptr.pc]
+- - '##'
+  - 5.5 引用 [ptr.ref]
+- - '##'
+  - 5.6 空指针 [ptr.ptovoid]
+- - '##'
+  - 5.7 结构体 [ptr.struct]
+- - '#'
+  - 结构
+- - '##'
+  - 类型等价
+- - '##'
+  - 建议
+- - '##'
+  - 练习
+- - '##'
+  - 5.9 节练习
+- - '#'
+  - 第 6 章 表达式与语句
+- - '##'
+  - 6.1 桌面计算器 [expr.calculator]
+- - '###'
+  - 6.1.1 解析器 [expr.parser]
+- - '###'
+  - 6.1.2 输入函数 [expr.input]
+- - '###'
+  - 6.1.3 底层输入 [expr.low]
+- - '###'
+  - 6.1.4 错误处理 [expr.error]
+- - '###'
+  - 6.1.5 驱动程序 [expr.driver]
+- - '###'
+  - 6.1.6 头文件 [expr.headers]
+- - '###'
+  - 6.1.7 命令行参数
+- - '###'
+  - 6.1.8 关于风格的说明
+- - '##'
+  - 6.2 运算符总结
+- - '###'
+  - 6.2.1 结果 [expr.res]
+- - '###'
+  - 6.2.2 求值顺序 [expr.evaluation]
+- - '##'
+  - 6.2.4 位逻辑运算符 [expr.logical]
+- - '##'
+  - 6.2.5 递增递减 [expr.incr]
+- - '##'
+  - 6.2.6 自由存储 [expr.free]
+- - '###'
+  - 6.2.6.1 数组 [expr.array]
+- - '###'
+  - 6.2.6.2 内存耗尽 [expr.exhaust]
+- - '##'
+  - 6.2.7 显式类型转换 [expr.cast]
+- - '##'
+  - 6.2.8 构造函数 [expr.ctor]
+- - '##'
+  - 6.3 语句总结 [expr.stmts]
+- - '###'
+  - 6.3.2 选择语句 [expr.select]
+- - '###'
+  - 6.3.2.1 条件中的声明 [expr.cond]
+- - '##'
+  - 6.3.3 迭代语句 [expr.loop]
+- - '###'
+  - 6.3.3.1 For-语句中的声明 [expr.for]
+- - '###'
+  - 6.3.4 Goto [expr.goto]
+- - '##'
+  - 6.4 注释与缩进 [expr.comment]
+- - '##'
+  - 6.5 建议 [expr.advice]
+- - '###'
+  - 6.6 习题 [expr.exercises]
+- - '#'
+  - 第 6.6 节练习
+- - '##'
+  - 7.1.2 静态变量
+- - '##'
+  - 7.2 参数传递
+- - '###'
+  - 7.2.1 数组参数
+- - '##'
+  - 7.3 值返回
+- - '#'
+  - 第 7.4 重载函数名
+- - '###'
+  - 7.4.1 重载与返回类型 [fct.return]
+- - '###'
+  - 7.4.2 重载与作用域 [fct.scope]
+- - '###'
+  - 7.4.3 手动解决歧义 [fct.ambig]
+- - '###'
+  - 7.4.4 多参数解析 [fct.res]
+- - '##'
+  - 7.5 默认参数 [fct.def]
+- - '##'
+  - 7.6 未指定数量 [fct.arg]
+- - '##'
+  - 7.7 指向指针 [fct.pf]
+- - '##'
+  - 7.8 宏
+- - '##'
+  - 7.9 建议 [fct.advice]
+- - '##'
+  - 7.10 练习 [fct.exercises]
+- - '#'
+  - 第 8.1 节模块化接口
+- - '##'
+  - 8.2 命名空间 [namespace]
+- - '###'
+  - 8.2.1 限定名称 [name.qualified]
+- - '###'
+  - 8.2.2 使用声明 [name.using]
+- - '###'
+  - 8.2.3 指令 [name.using]
+- - '###'
+  - 8.2.4 多重接口 [name.multi]
+- - '###'
+  - 8.2.5 避免冲突 [name.clash]
+- - '###'
+  - 8.2.6 查找 [name.koenig]
+- - '###'
+  - 8.2.7 命名空间别名 [name.alias]
+- - '###'
+  - 8.2.8 命名空间组合 [name.compose]
+- - '###'
+  - 8.2.9 命名空间旧代码 [name.get]
+- - '###'
+  - 8.2.9.1 命名空间与 C [name.c]
+- - '###'
+  - 8.2.9.2 命名空间重载 [name.over]
+- - '###'
+  - 8.2.9.3 命名空间是开放的 [name.open]
+- - '##'
+  - 8.3 异常 [name.except]
+- - '###'
+  - 8.3.1 抛出（Throw）与捕获（Catch） [name.throw]
+- - '###'
+  - 8.3.2 异常的区分 [name.discrimination]
+- - '###'
+  - 8.3.3 计算器中的异常
+- - '##'
+  - 8.5 练习 [name.exercises]
+- - '#'
+  - 源文件与程序
+- - '##'
+  - 9.1 独立编译 [file.separate]
+- - '##'
+  - 9.2 链接 [file.link]
+- - '###'
+  - 9.2.1 头文件
+- - '###'
+  - 9.2.2 标准库头文件 [file.header]
+- - '###'
+  - 9.2.3 单定义规则 [file.odr]
+- - '###'
+  - 9.2.4 非 C++ 代码的链接 [/file.c]
+- - '###'
+  - 9.2.5 链接与函数指针 [file.ptof]
+- - '##'
+  - 9.3 使用头文件 [file.using]
+- - '###'
+  - 9.3.1 单个头文件 [file.single]
+- - '###'
+  - 9.3.1 单头文件结构
+- - '##'
+  - 9.3.2 多头文件结构
+- - '###'
+  - 9.3.2.1 其他计算器模块
+- - '###'
+  - 9.3.3 包含保护符 [file.guards]
+- - '##'
+  - 9.4 程序 [file.programs]
+- - '###'
+  - 9.4.1 非局部变量的初始化 [file.nonlocal [file.nonlocal]
+- - '###'
+  - 9.4.1.1 程序终止 [file.termination]
+- - '##'
+  - 9.5 建议 [file.advice]
+- - '##'
+  - 9.6 练习 [file.exercises]
+- - '##'
+  - 10.2 类 [class.class]
+- - '###'
+  - 10.2.1 成员函数 [class.member]
+- - '###'
+  - 10.2.2 访问控制 [class.access]
+- - '###'
+  - 10.2.3 构造函数 [class.ctor]
+- - '##'
+  - 10.2.4 静态成员 [class.static]
+- - '##'
+  - 10.2.5 拷贝类对象 [class.copy]
+- - '##'
+  - 10.2.6 常量成员函数 [class.const]
+- - '###'
+  - 10.2.7.1 物理与逻辑常量 [class.const]
+- - '###'
+  - 10.2.7.2 可变 [class.mutable]
+- - '###'
+  - 10.2.8 结构体与类 [class.struct]
+- - '##'
+  - 10.2.9 类内函数定义
+- - '##'
+  - 10.3 高效的用户定义类型
+- - '###'
+  - 10.3.1 成员函数 [class.memfct]
+- - '###'
+  - 10.3.2 辅助函数 [class.helper]
+- - '###'
+  - 10.3.3 重载运算符 [class.over]
+- - '###'
+  - 10.3.4 具体类的意义 [class.significance]
+- - '##'
+  - 10.4 对象 [class.objects]
+- - '###'
+  - 10.4.1 析构函数 [class.dtor]
+- - '###'
+  - 10.4.2 默认构造函数 [class.default]
+- - '###'
+  - 10.4.3 构建与析 [class.dtor]
+- - '##'
+  - 10.4.4 局部变量 [class.local]
+- - '###'
+  - 10.4.4.1 对象的拷贝 [class.copy]
+- - '##'
+  - 10.4.5 自由存储 [class.free]
+- - '##'
+  - 10.4.6 作为成员的类 [class.m]
+- - '###'
+  - 10.4.6.1 必要的初始化 [class.init]
+- - '###'
+  - 10.4.6.2 成员常量 [class.const]
+- - '###'
+  - 10.4.6.3 拷贝 [class.copy]
+- - '###'
+  - 10.4.6.4 数组 [class.array]
+- - '###'
+  - 10.4.6.5 局部存储 [class.static]
+- - '###'
+  - 10.4.6.6 非局部存储 [class.global]
+- - '##'
+  - 10.4.7 数组 [class.array]
+- - '##'
+  - 10.4.8 局部存储 [class.static]
+- - '##'
+  - 10.4.9 非局部存储 [class.global]
+- - '##'
+  - 10.4.10 临时对象 [class.temp]
+- - '##'
+  - 10.4.11 放置 [class.placement]
+- - '##'
+  - 10.4.12 联合体 [class.union]
+- - '##'
+  - 10.5 建议 [class.advice]
+- - '##'
+  - 10.6 练习 [class.exercises]
+- - '#'
+  - 运算符重载
+- - '##'
+  - 11.1 引言
+- - '##'
+  - 11.2 运算符函数
+- - '###'
+  - 11.2.1 二元和一元运算符 [over.binary]
+- - '###'
+  - 11.2.2 运算符的预定义含义 [over.predefined]
+- - '###'
+  - 11.2.3 运算符与用户定义类型 [over.user]
+- - '##'
+  - 11.2.4 命名空间中的运算符
+- - '##'
+  - 11.3 复数类型
+- - '###'
+  - 11.3.1 成员和非成员运算符
+- - '###'
+  - 11.3.2 混合模式算术
+- - '###'
+  - 11.3.4 拷贝 [over.copy]
+- - '###'
+  - 11.3.5 构造函数与转换 [over.conv]
+- - '###'
+  - 11.3.6 字面量 [over.literals]
+- - '###'
+  - 11.3.7 附加成员函数 [over.additional]
+- - '###'
+  - 11.3.8 辅助函数 [over.helpers]
+- - '##'
+  - 11.4 转换运算符 [类型转换]
+- - '##'
+  - 11.5 友元 [over.friends]
+- - '###'
+  - 11.5.1 寻找友元 [over.lookup]
+- - '###'
+  - 11.5.2 友元与成员 [over.members]
+- - '##'
+  - 11.6 大对象
+- - '##'
+  - 11.7 基础运算符
+- - '###'
+  - 11.7.1 Explicit 构造函数
+- - '##'
+  - 11.7.8 下标操作
+- - '##'
+  - 11.7.9 函数调用
+- - '##'
+  - 11.7.10 练习
+- - '##'
+  - 11.7.11 建议
+- - '##'
+  - 11.7.12 字符串
+- - '##'
+  - 11.7.13 建议
+- - '##'
+  - 11.7.14 派生类
+- - '##'
+  - 12.1 引言
+- - '##'
+  - 12.2 派生类
+- - '###'
+  - 12.2.1 成员函数
+- - '###'
+  - 12.2.2 构造函数与析函数
+- - '###'
+  - 12.2.3 拷贝
+- - '###'
+  - 12.2.4 类层次结构
+- - '###'
+  - 12.2.5 类型字段
+- - '###'
+  - 12.2.6 虚函数
+- - '##'
+  - 12.3 抽象类
+- - '##'
+  - 12.4 类层次设计
+- - '##'
+  - 12.5 异常
+- - '##'
+  - 12.6 建议
+- - '##'
+  - 12.7 练习
+- - '##'
+  - 12.8 命名空间 (Namespaces)
+- - '##'
+  - 12.9 访问
+- - '###'
+  - 12.9.1 成员的访问
+- - '###'
+  - 12.9.2 访问对基类的访问
+- - '###'
+  - 12.9.3 Access to Member Class
+- - '###'
+  - 12.9.4 Friendship [friend]
+- - '##'
+  - 13.1 引言
+- - '##'
+  - 13.2 标准
+- - '##'
+  - 13.3 字符集
+- - '###'
+  - 13.3.1 限制性字符集
+- - '###'
+  - 13.3.2 转义字符
+- - '###'
+  - 13.3.3 大字符集
+- - '###'
+  - 13.3.4 有符号和无符号字符
+- - '##'
+  - 13.4 模板 (Templates)
+- - '##'
+  - 13.5 Typename 和 Template
+- - '##'
+  - 13.6 Template 作为限定符
+- - '##'
+  - 13.7 实例化 (Instantiation)
+- - '##'
+  - 13.8 名字绑定 (Name Binding)
+- - '###'
+  - 13.8.1 依赖名 (Dependent Names)
+- - '###'
+  - 13.8.2 定义点绑定 (Point of Definition Binding)
+- - '###'
+  - 13.8.3 实例化点绑定
+- - '###'
+  - 13.8.4 模板与命名空间
+- - '##'
+  - 13.9 何时需要特化？
+- - '###'
+  - 13.9.1 模板函数实例化
+- - '###'
+  - 13.10 显式实例化
+- - '###'
+  - 13.14 建议
+- - '#'
+  - 异常处理
+- - '##'
+  - 14.1 错误处理 [except.error]
+- - '###'
+  - 14.1.1 异常的替代视角 [except.views]
+- - '##'
+  - 14.2 异常的分组 [except.grouping]
+- - '###'
+  - 14.2.2 复合异常 [except.composite]
+- - '##'
+  - 14.3 捕获异常 [except.catch]
+- - '###'
+  - 14.3.1 重抛出 [except.rethrow]
+- - '###'
+  - 14.3.2 捕获所有异常 [except.every]
+- - '###'
+  - 14.3.2.1 处理器顺序 [except.order]
+- - '##'
+  - 14.4 资源管理 [except.resource]
+- - '###'
+  - 14.4.1 使用构造函数和析构函数 [except.using]
+- - '###'
+  - 14.4.2 Auto_ptr [except.autoptr]
+- - '##'
+  - 14.4.3 注意事项
+- - '##'
+  - 14.4.4 异常与 new
+- - '##'
+  - 14.4.5 资源耗尽
+- - '##'
+  - 14.4.6 构造函数中的异常 [except.ctor]
+- - '###'
+  - 14.4.6.1 异常与成员初始化 [except.member]
+- - '###'
+  - 14.4.7 析构函数中的异常 [except.dtor]
+- - '##'
+  - 14.5 不是错误的异常
+- - '##'
+  - 14.6 异常规范
+- - '###'
+  - 14.6.1 检查异常规范
+- - '###'
+  - 14.6.2 意外异常 [except.unexpected]
+- - '###'
+  - 14.6.3 异常映射 [except.mapping]
+- - '###'
+  - 14.6.3.1 用户异常映射 [except.user.mapping]
+- - '###'
+  - 14.6.3.2 恢复类型 [except.recover]
+- - '##'
+  - 14.6.7 未捕获 [except.uncaught]
+- - '##'
+  - 14.8 异常与
+- - '##'
+  - 14.9 错误处理
+- - '##'
+  - 14.10 标准异常 [except.std]
+- - '##'
+  - 14.11 建议
+- - '##'
+  - 14.12 练习 [except.exercises]
+- - '#'
+  - 类层次结构
+- - '##'
+  - 15.1 引言与概述 [hier.intro]
+- - '##'
+  - 15.2 多继承 [hier.mi]
+- - '###'
+  - 15.2.1 歧义 [hier.ambig]
+- - '###'
+  - 15.2.2 继承与声明 [hier.using]
+- - '###'
+  - 15.2.3 重复基类 [hier.replicated]
+- - '###'
+  - 15.2.4 虚基类 [hier.base]
+- - '###'
+  - 15.2.5 使用多继承 [hier.mi]
+- - '###'
+  - 15.2.5.1 重写基类 [hier.base]
+- - '##'
+  - 15.3 访问控制
+- - '###'
+  - 15.3.1 保护成员 [hier.protected]
+- - '###'
+  - 15.3.2.1 多重继承与访问 [hier.access]
+- - '###'
+  - 15.3.2.2 使用声明与访问 [hier.using]
+- - '##'
+  - 15.4 运行时类型 [hier.rtti]
+- - '###'
+  - 15.4.1 Dynamic_cast [hier.dynamic]
+- - '###'
+  - 15.4.1.1 引用的 Dynamic_cast [hier.cast]
+- - '###'
+  - 15.4.2 类层次导航 [hier.navigate]
+- - '###'
+  - 15.4.2.1 静态转换与动态转换 [hier.static.cast]
+- - '###'
+  - 15.4.3 类对象的构造与析构 [hier.obj]
+- - '###'
+  - 15.4.4 Typeid 与扩展类型 [hier.typeid]
+- - '###'
+  - 15.4.5 扩展类型 [hier.extended]
+- - '##'
+  - 15.5 成员指针 [hier.ptom]
+- - '###'
+  - 15.5 基类与派生类（协变）
+- - '##'
+  - 15.6 存储
+- - '###'
+  - 15.6.1 数组分配 [hier.array]
+- - '###'
+  - 15.6.2 虚构造函数 [hier.vctor]
+- - '##'
+  - 15.7 建议 [hier.advice]
+- - '##'
+  - 15.8 练习 [hier.exercises]
+- - '#'
+  - 第三部分：标准库
+- - '##'
+  - 16 库的组织与容器
+- - '##'
+  - 16.1 标准库设计 [org.intro]
+- - '###'
+  - 16.1.1 设计约束 [org.constraints]
+- - '##'
+  - 16.1.2 标准库组织
+- - '##'
+  - 16.1.3 语言支持 [org.lang]
+- - '##'
+  - 16.2 容器设计 [org.cont]
+- - '###'
+  - 16.2.1 特殊化容器与迭代器 [org.specialized]
+- - '##'
+  - 迭代器与实现
+- - '##'
+  - 使用分析
+- - '###'
+  - 性能考虑
+- - '###'
+  - 模型的优缺点
+- - '##'
+  - 延迟抽象
+- - '##'
+  - 基于容器
+- - '##'
+  - 16.2.3 STL 容器 [org.stl]
+- - '##'
+  - 16.3 Vector [org.vector]
+- - '###'
+  - 16.3.1 类型 [org.types]
+- - '###'
+  - 16.3.2 迭代器 [org.begin]
+- - '##'
+  - 16.3.3 元素访问 [org.element]
+- - '##'
+  - 16.3.4 构造函数
+- - '##'
+  - 16.3.5 栈操作 [org.stack]
+- - '##'
+  - 16.3.6 List 操作
+- - '##'
+  - 16.3.7 元素的地址
+- - '##'
+  - 16.3.8 大小与容量
+- - '##'
+  - 16.3.9 其他成员函数
+- - '##'
+  - 16.3.10 辅助函数
+- - '##'
+  - 16.3.11 Vector<bool>
+- - '##'
+  - 16.4 建议 [org.advice]
+- - '###'
+  - 16.4 建议 [org.advice]
+- - '##'
+  - 16.5 练习 [org.exercises]
+- - '#'
+  - 17 容器
+- - '##'
+  - 17.1 标准容器 [cont.intro]
+- - '###'
+  - 17.1.1 操作总结
+- - '###'
+  - 17.1.2 容器总结
+- - '###'
+  - 17.1.3 表示 [cont.rep]
+- - '###'
+  - 17.1.4 元素 [cont.elem]
+- - '###'
+  - 17.1.4.2 其他关系符 [cont.relops]
+- - '##'
+  - 17.2 序列 [cont.seq]
+- - '###'
+  - 17.2.1 Vector [cont.vector]
+- - '###'
+  - 17.2.2 List [cont.list]
+- - '###'
+  - 17.2.3 Splice, Sort, and Merge
+- - '###'
+  - 17.2.2.2 前端操作
+- - '###'
+  - 17.2.2.3 其他操作
+- - '##'
+  - 17.3 序列适配器
+- - '###'
+  - 适配器
+- - '###'
+  - 17.3.2 队列 (Queue)
+- - '###'
+  - 17.3.3 优先级队列 (Priority Queue)
+- - '##'
+  - 17.4 关联容器 [cont.assoc]
+- - '###'
+  - 17.4.1 Map [cont.map]
+- - '###'
+  - 17.4.1.1 类型 [cont.types]
+- - '###'
+  - 17.4.1.2 迭代器与对 [cont.map]
+- - '###'
+  - 17.4.1.3 下标 [cont.element]
+- - '###'
+  - 17.4.1.4 构造函数 [cont.ctor]
+- - '###'
+  - 17.4.1.5 比较 [cont.comp]
+- - '###'
+  - 17.4.1.6 Map 操作 [cont.map]
+- - '###'
+  - 17.4.1.7 列表操作 [cont.modifier]
+- - '###'
+  - 17.4.1.8 其他函数 [cont.map]
+- - '##'
+  - 17.4.2 Multimap
+- - '###'
+  - 17.4.3 Set [cont.set]
+- - '###'
+  - 17.4.4 Multiset [cont.multiset]
+- - '##'
+  - 17.5 Almost Containers [cont.etc]
+- - '###'
+  - 17.5.1 String [cont.string]
+- - '###'
+  - 17.5.2 Valarray [cont.valarray]
+- - '###'
+  - 17.5.3 Bitset [cont.bitset]
+- - '###'
+  - 17.5.3.3 其他操作 [cont.bitset.etc]
+- - '##'
+  - 17.6 哈希映射 [cont.hash.map]
+- - '###'
+  - 17.6.2 表示与构造 [hash.rep]
+- - '###'
+  - 17.6.2.1 查找 [hash.lookup]
+- - '###'
+  - 17.6.2.2 删除与重哈希 [cont.hash.erase]
+- - '###'
+  - 17.6.2.3 哈希化 [cont.hasher]
+- - '##'
+  - 17.8 练习 [cont.exercises]
+- - '#'
+  - 18 算法
+- - '##'
+  - 18.1 引言 [algo.intro]
+- - '##'
+  - 18.2 标准库概述 [algo.summary]
+- - '##'
+  - 18.3 序列与容器 [algo.seq]
+- - '###'
+  - 18.3.1 输入序列 [algo.range]
+- - '##'
+  - 18.4 函数对象 [algo.fct]
+- - '###'
+  - 18.4.1 函数对象基类 [algo.bases]
+- - '###'
+  - 18.4.2 谓词 [algo.pred]
+- - '###'
+  - 18.4.2.1 谓词概述 [algo.pred.std]
+- - '##'
+  - 18.4.3 算术函数对象 [algo.arithmetic]
+- - '##'
+  - 18.4.4 绑定、适配器与否定 [algo.adapter]
+- - '###'
+  - 18.4.4.1 绑定 (Binders)
+- - '###'
+  - 18.4.4.4 否定器 [algo.negate]
+- - '##'
+  - 18.5 非修改序列 [algo.nonmod]
+- - '###'
+  - 18.5.1 For_each [algo.foreach]
+- - '###'
+  - 18.5.2 查找 [algo.find]
+- - '###'
+  - 18.5.3 Count [algo.count]
+- - '###'
+  - 18.5.4 Equal and Mismatch [algo.equal]
+- - '###'
+  - 18.5.4.2 (续) [algo.equal]
+- - '###'
+  - 18.5.5 Search [algo.search]
+- - '##'
+  - 18.6 修改序列 [algo.modifying]
+- - '###'
+  - 18.6.1 复制 [algo.copy]
+- - '###'
+  - 18.6.2 变换 [algo.transform]
+- - '###'
+  - 18.6.3 Unique [algo.unique]
+- - '###'
+  - 18.6.3.1 排序 [algo.criteria]
+- - '###'
+  - 18.6.4 Replace [algo.replace]
+- - '###'
+  - 18.6.5 Remove [algo.remove]
+- - '###'
+  - 18.6.6 填充 [algo.fill]
+- - '###'
+  - 18.6.7 反转 [algo.reverse]
+- - '###'
+  - 18.6.8 交换 [algo.swap]
+- - '##'
+  - 18.7 排序 [algo.sort]
+- - '##'
+  - 18.8 分区 [algo.partition]
+- - '##'
+  - 18.9 合并 [algo.merge]
+- - '##'
+  - 18.10 元素选择 [algo.nth_element]
+- - '##'
+  - 18.11 消除 [algo.stable_search]
+- - '##'
+  - 18.12 排序 [algo.stable_sort]
+- - '##'
+  - 18.13 插入 [algo.insert]
+- - '##'
+  - 18.14 随机 [algo.shuffle]
+- - '##'
+  - 18.15 最小 [algo.min_element]
+- - '##'
+  - 18.16 极大 [algo.max_element]
+- - '##'
+  - 18.17 范围 [algo.minmaxelement]
+- - '##'
+  - 18.18 查找 [algo.binary_search]
+- - '##'
+  - 18.19 组合 [algo.inner_product]
+- - '##'
+  - 18.20 变换 [algo.adjacent_find]
+- - '##'
+  - 18.21 消除 [algo.remove_copy]
+- - '##'
+  - 18.22 排序 [algo.partial_sort]
+- - '##'
+  - 18.23 计数 [algo.count_if]
+- - '##'
+  - 18.24 元素 [algo.product]
+- - '##'
+  - 18.25 查找 [algo.find_permutation]
+- - '##'
+  - 18.26 交集 [algo.set_intersection]
+- - '##'
+  - 18.27 对称差 [algo.set_symmetric_difference]
+- - '##'
+  - 18.28 差集 [algo.set_difference]
+- - '##'
+  - 18.29 并 [algo.set_union]
+- - '##'
+  - 18.30 排序 [algo.is_sorted]
+- - '##'
+  - 18.31 查找 [algo.lower_bound]
+- - '##'
+  - 18.32 查找 [algo.equal_range]
+- - '##'
+  - 18.33 比较 [algo.lexicographical_compare]
+- - '##'
+  - 18.34 [algo.next_permutation]
+- - '##'
+  - 18.35 查找 [algo.prev_permutation]
+- - '##'
+  - 18.36 消除 [algo.all_of]
+- - '##'
+  - 18.37 消除 [algo.any_of]
+- - '##'
+  - 18.38 消除 [algo.none_of]
+- - '##'
+  - 18.39 排序 [algo.sort]
+- - '##'
+  - 18.40 排序 [algo.stable_sort]
+- - '##'
+  - 18.41 消除 [algo.make_heap]
+- - '##'
+  - 18.42 消除 [algo.push_heap]
+- - '##'
+  - 18.43 消除 [algo.pop_heap]
+- - '##'
+  - 18.44 消除 [algo.sort_heap]
+- - '##'
+  - 18.45 查找 [algo.includes_element]
+- - '##'
+  - 18.46 查找 [algo.m_search]
+- - '##'
+  - 18.47 查找 [algo.has_element]
+- - '##'
+  - 18.48 查找 [algo.find_element]
+- - '##'
+  - 18.49 查找 [algo.binary_search]
+- - '##'
+  - 18.50 组合 [algo.inner_product]
+- - '##'
+  - 18.51 变换 [algo.adjacent_find]
+- - '##'
+  - 18.52 消除 [algo.remove_copy]
+- - '##'
+  - 18.53 排序 [algo.partial_sort]
+- - '##'
+  - 18.54 计数 [algo.count_if]
+- - '##'
+  - 18.55 元素 [algo.product]
+- - '##'
+  - 18.56 查找 [algo.find_permutation]
+- - '##'
+  - 18.57 交集 [algo.set_intersection]
+- - '##'
+  - 18.58 对称差 [algo.set_symmetric_difference]
+- - '##'
+  - 18.59 差集 [algo.set_difference]
+- - '##'
+  - 18.60 并 [algo.set_union]
+- - '##'
+  - 18.61 排序 [algo.is_sorted]
+- - '##'
+  - 18.62 查找 [algo.lower_bound]
+- - '##'
+  - 18.63 查找 [algo.equal_range]
+- - '##'
+  - 18.64 比较 [algo.lexicographical_compare]
+- - '##'
+  - 18.65 变换 [algo.next_permutation]
+- - '##'
+  - 18.66 变换 [algo.prev_permutation]
+- - '##'
+  - 18.67 消除 [algo.all_of]
+- - '##'
+  - 18.68 消除 [algo.any_of]
+- - '##'
+  - 18.69 消除 [algo.none_of]
+- - '##'
+  - 18.70 排序 [algo.sort]
+- - '##'
+  - 18.71 排序 [algo.stable_sort]
+- - '##'
+  - 18.72 消除 [algo.make_heap]
+- - '##'
+  - 18.73 消除 [algo.push_heap]
+- - '##'
+  - 18.74 消除 [algo.pop_heap]
+- - '##'
+  - 18.75 消除 [algo.sort_heap]
+- - '##'
+  - 18.76 查找 [algo.includes_element]
+- - '##'
+  - 18.77 查找 [algo.m_search]
+- - '##'
+  - 18.78 查找 [algo.has_element]
+- - '##'
+  - 18.79 查找 [algo.find_element]
+- - '##'
+  - 18.80 查找 [algo.binary_search]
+- - '##'
+  - 18.81 组合 [algo.inner_product]
+- - '##'
+  - 18.82 变换 [algo.adjacent_find]
+- - '##'
+  - 18.83 消除 [algo.remove_copy]
+- - '##'
+  - 18.84 排序 [algo.partial_sort]
+- - '##'
+  - 18.85 计数 [algo.count_if]
+- - '##'
+  - 18.86 元素 [algo.product]
+- - '##'
+  - 18.87 查找 [algo.find_permutation]
+- - '##'
+  - 18.88 交集 [algo.set_intersection]
+- - '##'
+  - 18.89 对称差 [algo.set_symmetric_difference]
+- - '##'
+  - 18.90 差集 [algo.set_difference]
+- - '##'
+  - 18.91 并 [algo.set_union]
+- - '##'
+  - 18.92 排序 [algo.is_sorted]
+- - '##'
+  - 18.93 查找 [algo.lower_bound]
+- - '##'
+  - 18.94 查找 [algo.equal_range]
+- - '##'
+  - 18.95 比较 [algo.lexicographical_compare]
+- - '##'
+  - 18.96 变换 [algo.next_permutation]
+- - '##'
+  - 18.97 变换 [algo.prev_permutation]
+- - '##'
+  - 18.98 消除 [algo.all_of]
+- - '##'
+  - 18.99 消除 [algo.any_of]
+- - '#'
+  - 19 迭代器
+- - '##'
+  - 19.1 引言
+- - '##'
+  - 19.2 迭代器与序列
+- - '###'
+  - 19.2.1 迭代器操作 [iter.oper]
+- - '###'
+  - 19.2.2 迭代器性 [iter.traits]
+- - '###'
+  - 19.2.3 迭代器类别 [iter.cat]
+- - '##'
+  - 19.2.4 插入迭代器 (Inserters)
+- - '##'
+  - 19.2.5 反向迭代器 (Reverse Iterators)
+- - '##'
+  - 19.2.6 流迭代器 (Stream Iterators)
+- - '###'
+  - 19.2.6.1 流缓冲区 [iter.strebuf]
+- - '###'
+  - 19.2.2 检查迭代器 [iter.checked]
+- - '##'
+  - 19.3 迭代器与分配器
+- - '###'
+  - 19.3.1 异常、容器与算法 [iter.except]
+- - '##'
+  - 19.4 分配器
+- - '###'
+  - 19.4.1 标准分配器 [iter.alloc.std]
+- - '###'
+  - 19.4.2 用户定义的分配器 [iter.alloc.user]
+- - '###'
+  - 19.4.3 通用分配器 [iter.general]
+- - '###'
+  - 19.4.4 未初始化的内存 [iter.memory]
+- - '###'
+  - 19.4.5 动态内存 [iter.dynamic]
+- - '###'
+  - 19.4.6 C 风格分配 [iter.c]
+- - '##'
+  - 19.5 建议 [iter.advice]
+- - '##'
+  - 19.6 练习 [iter.exercises]
+- - '#'
+  - 20 字符串 (Strings)
+- - '##'
+  - 20.1 引言 [string.intro]
+- - '##'
+  - 20.2 字符 [string.char]
+- - '###'
+  - 20.2.1 字符特征 [string.traits]
+- - '##'
+  - 20.3 Basic_string [string.string]
+- - '###'
+  - 20.3.1 Types [string.types]
+- - '###'
+  - 20.3.2 Iterators [string.begin]
+- - '###'
+  - 20.3.3 Element Access [string.elem]
+- - '###'
+  - 20.3.4 构造函数 [string.ctor]
+- - '###'
+  - 20.3.5 错误 [string.error]
+- - '###'
+  - 20.3.6 赋值 [string.assign]
+- - '##'
+  - 20.3.7 转换为 C 风格字符串 [string.conv]
+- - '##'
+  - 20.3.9 插入 `string.insert`
+- - '##'
+  - 20.3.10 拼接 `string.cat`
+- - '#'
+  - 21 容器
+- - '##'
+  - 21.1 引言 [container.intro]
+- - '##'
+  - 21.2 输出 [container.out]
+- - '###'
+  - 21.2.1 输出流 [container.ostream]
+- - '###'
+  - 21.2.2 内置类型的 [container.builtin]
+- - '###'
+  - 21.2.3 用户定义类型的 [container.udt]
+- - '##'
+  - 21.3 输入 [container.in]
+- - '##'
+  - 21.4 格式化 [container.format]
+- - '##'
+  - 21.5 文件流 [container.stream]
+- - '##'
+  - 21.6 缓冲 [container.buf]
+- - '###'
+  - 21.6.1 输出流和缓冲区 [container.ostreambuf]
+- - '###'
+  - 21.6.2 输入流与缓冲区 [container.istreambuf]
+- - '##'
+  - 21.7 区域设置 [container.locale]
+- - '##'
+  - 21.8 C 输入输出
+- - '##'
+  - 21.9 建议
+- - '##'
+  - 21.10 练习 [container.exercises]
+- - '#'
+  - 22 数值限制 [num.limits]
+- - '##'
+  - 22.4 向量算术 [num.valarray]
+- - '###'
+  - 22.4.1 Valarray 构造 [num.valarray]
+- - '###'
+  - 22.4.2 Valarray 下标与赋值 [num.valarray.sub]
+- - '###'
+  - 22.4.3 成员操作 [num.valarray.member]
+- - '###'
+  - 22.4.4 非成员操作 [valarray.ops]
+- - '##'
+  - 22.4.5 切片 [num.slice]
+- - '##'
+  - 22.4.6 Slice_array
+- - '##'
+  - 22.4.7 临时变量、拷贝与循环 [num.matrix]
+- - '##'
+  - 22.4.9 码 [num.mask]
+- - '##'
+  - 22.4.10 间接数组 [num.indirect]
+- - '##'
+  - 22.5 复数运算 [num.complex]
+- - '##'
+  - 22.6 泛化数值算法 [num.general]
+- - '###'
+  - 22.6.1 Accumulate [num.accumulate]
+- - '##'
+  - 22.6.2 Inner_product [num.inner]
+- - '##'
+  - 22.8 建议 [num.advice]
+- - '##'
+  - 22.9 练习 [num.exercises]
+- - '#'
+  - 23 引言
+- - '##'
+  - 23.2 目标与手段
+- - '##'
+  - 23.3 目的
+- - '##'
+  - 23.4 开发过程
+- - '###'
+  - 23.4.1 周期 [design.cycle]
+- - '###'
+  - 23.4.2 设计目标 [design.target]
+- - '###'
+  - 23.4.3 步骤 [design.steps]
+- - '###'
+  - 23.4.3.1 第一步：寻找类 [design.find]
+- - '###'
+  - 23.4.3.2 第二步：指定操作
+- - '###'
+  - 23.4.3.3 第三步：指定依赖 [design.dependencies]
+- - '###'
+  - 23.4.3.4 第四步：指定接口 [design.interfaces]
+- - '###'
+  - 23.4.3.5 类层次结构的重组 [design.hier]
+- - '###'
+  - 23.4.3.6 模型的使用 [design.model]
+- - '#'
+  - 24 设计原则
+- - '##'
+  - 24.1 概述
+- - '##'
+  - 24 设计语言
+- - '###'
+  - 24.2.1 忽略类 [lang.ignore.class]
+- - '###'
+  - 24.2.2 避免继承 [lang.avoid.hier]
+- - '###'
+  - 24.2.3 忽略静态检查 [lang.type]
+- - '##'
+  - 24.2.4 避免编程
+- - '##'
+  - 24.2.5 仅使用类层次结构 [lang.pure]
+- - '##'
+  - 24.3 类 [lang.class]
+- - '###'
+  - 24.3.1 类代表什么？[lang.what]
+- - '###'
+  - 24.3.2 类层次结构 [lang.hier]
+- - '###'
+  - 24.3.2.1 类层次结构内部的依赖 [lang.internal]
+- - '##'
+  - 24.3.3 包含关系
+- - '##'
+  - 24.3.4 包含与继承
+- - '###'
+  - 24.3.4.1 成员/层级体系的权衡 [lang.mem]
+- - '###'
+  - 24.3.4.2 包含/层级的权衡 [lang.tradeoff]
+- - '###'
+  - 24.3.5 使用关系 [lang.use]
+- - '###'
+  - 24.3.6 编程内入关系 [lang.prog]
+- - '##'
+  - 24.3.7 类内部的关系 [lang.within]
+- - '###'
+  - 24.3.7.1 不变性 [lang.invariant]
+- - '###'
+  - 24.3.7.2 断言 [lang.assert]
+- - '###'
+  - 24.3.7.3 前置和后置条件
+- - '##'
+  - 24.4 组件 (Components) [lang.component]
+- - '###'
+  - 24.4.1 模板 (Templates) [lang.temp]
+- - '##'
+  - 24.4.2 接口与实现
+- - '###'
+  - 理想的接口
+- - '##'
+  - 24.4.3 胖接口 (Fat Interfaces) [lang.fat]
+- - '##'
+  - 24.5 建议 [lang.advice]
+- - '#'
+  - 25 类
+- - '##'
+  - 25.1 类的种类 [role.intro]
+- - '##'
+  - 25.2 具体类型 [role.concrete]
+- - '###'
+  - 25.2.1 具体类型的复用 [role.reuse]
+- - '###'
+  - 25.3 抽象类型 [role.abstract]
+- - '##'
+  - 25.4 节点类 (Node Classes) [role.node]
+- - '###'
+  - 25.4.1 接口的变更
+- - '##'
+  - 25.5 动作
+- - '##'
+  - 25.6 接口 [role.interface]
+- - '###'
+  - 25.6.1 调整接口 [role.range]
+- - '###'
+  - 25.6.2 处理类 [role.handle]
+- - '##'
+  - 25.7 句柄类
+- - '###'
+  - 25.7.1 句柄中的操作 [role.handle.op]
+- - '##'
+  - 25.8 应用框架 [role.framework]
+- - '##'
+  - 25.9 关键字
+- - '##'
+  - 25.10 练习 [role.exercises]
+- - '#'
+  - 附录
+- - '#'
+  - A 附录（未提供详细内容）
+- - '#'
+  - B 兼容性
+- - '##'
+  - B.1 引言
+- - '##'
+  - B.2 C/C++ 兼容性
+- - '###'
+  - B.2.1 “静默”差异
+- - '###'
+  - B.2.2 不是 C++ 的兼容性
+- - '###'
+  - B.2.3 弃用的功能
+- - '###'
+  - B.2.4 不是 C 的兼容性
+- - '##'
+  - B.3 应对版本的 C++ 实现
+- - '###'
+  - B.3.1 头文件
+- - '###'
+  - B.3.2 标准库
+- - '###'
+  - B.3.3 命名空间 (Namespaces)
+- - '##'
+  - B.3.4 内存分配 (Allocation Errors)
+- - '##'
+  - B.3.5 模板 (Templates)
+- - '#'
+  - C 索引
+- - '##'
+  - C.1 引言与概述
+- - '##'
+  - C.2 标准
+- - '##'
+  - C.3 字符集
+- - '###'
+  - C.3.1 限制性字符集
+- - '###'
+  - C.3.2 转义字符
+- - '###'
+  - C.3.3 大字符集
+- - '###'
+  - C.3.4 有符号和无符号字符
+- - '##'
+  - C.4 数字面量类型
+- - '##'
+  - C.5 常量表达式
+- - '##'
+  - C.6 隐式转换
+- - '###'
+  - C.6.1 提升 (Promotions)
+- - '###'
+  - C.6.2 转换 (Conversions)
+- - '###'
+  - C.6.2.1 整数转换
+- - '###'
+  - C.6.2.2 浮点转换
+- - '###'
+  - C.6.2.3 指针和引用转换
+- - '###'
+  - C.6.2.4 指针到成员转换
+- - '###'
+  - C.6.2.5 布尔转换
+- - '###'
+  - C.6.2.6 浮点整数转换
+- - '###'
+  - C.6.3 常规算术转换
+- - '##'
+  - C.7 多维数组
+- - '###'
+  - C.7.1 向量
+- - '###'
+  - C.7.2 数组
+- - '###'
+  - C.7.3 传递多维数组
+- - '##'
+  - C.8 字段
+- - '###'
+  - C.8.1 字段
+- - '###'
+  - C.8.2 联合体
+- - '##'
+  - C.9.1 自动垃圾回收
+- - '###'
+  - C.9.1.1 伪装指针
+- - '###'
+  - C.9.1.2 Delete
+- - '###'
+  - C.9.1.3 析构函数
+- - '###'
+  - C.9.1.4 内存碎片
+- - '##'
+  - C.10 命名空间 (Namespaces)
+- - '##'
+  - C.10.1 便利性与安全性
+- - '##'
+  - C.10.2 命名空间的嵌套
+- - '##'
+  - C.10.3 命名空间与类
+- - '##'
+  - C.11.1 成员的访问
+- - '##'
+  - C.11.2 对基类的访问
+- - '###'
+  - C.11.3 Access to Member Class
+- - '###'
+  - C.11.4 Friendship
+- - '##'
+  - C.12 Pointers to Data Members
+- - '##'
+  - C.13 Templates
+- - '###'
+  - C.13.1 Static Members
+- - '###'
+  - C.13.3 Templates as Template Parameters
+- - '###'
+  - C.13.4 Deducing Function Template Arguments
+- - '##'
+  - C.13.5 Typename and Template
+- - '##'
+  - C.13.6 Template 作为限定符
+- - '##'
+  - C.13.7 实例化 (Instantiation)
+- - '##'
+  - C.13.8 名字绑定 (Name Binding)
+- - '###'
+  - C.13.8.1 依赖名 (Dependent Names)
+- - '###'
+  - C.13.8.2 定义点绑定 (Point of Definition Binding)
+- - '###'
+  - C.13.8.3 实例化点绑定
+- - '##'
+  - C.13.8.4 模板与命名空间
+- - '##'
+  - C.13.9 何时需要特化？
+- - '###'
+  - C.13.9.1 模板函数实例化
+- - '###'
+  - C.13.10 显式实例化
+- - '###'
+  - C.14 建议
