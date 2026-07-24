@@ -685,6 +685,7 @@
 +   [快乐陷阱 [电子资源]：停止挣扎，开始生活](docs/the-happiness-trap-electronic-resource-stop-struggling-start/README.md)
 +   [Java EE 架构师手册（第二版）：如何成为成功的 Java EE 应用架构师](docs/the-java-ee-architects-handbook-second-edition-how-to-be-a-s/README.md)
 +   [SQL 语言（第 2 版）](docs/the-language-of-sql-2nd-edition/README.md)
++   [C 的力量 (编程的力量)](docs/the-power-of-c-power-of-coding/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
