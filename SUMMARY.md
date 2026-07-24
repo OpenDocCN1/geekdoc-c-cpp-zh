@@ -637,6 +637,7 @@
 +   [C++ 程序员的 Rust 指南：轻松在 C/C++ 中嵌入 Rust](docs/rust-for-c-programmers-learn-how-to-embed-rust-in-cc-with-ea/README.md)
 +   [Sams 每天一小时学会 C++，第 8 版](docs/sams-teach-yourself-c-in-one-hour-a-day-8th-edition/README.md)
 +   [Sams 每天一小时自学 C++，第八版 (ROBIN ROBIN LN's Library)](docs/sams-teach-yourself-c-in-one-hour-a-day-eighth-edition-robin/README.md)
++   [Sams 每天一小时学会 C++，第七版](docs/sams-teach-yourself-c-in-one-hour-a-day-seventh-edition/README.md)
 +   [Sams 24 小时自学 HTML 和 CSS（包含新的 HTML 5 内容）第 8 版](docs/sams-teach-yourself-html-and-css-in-24-hours-includes-new-ht/README.md)
 +   [Sams 学 HTML, CSS 和 JavaScript 全合指南](docs/sams-teach-yourself-html-css-and-javascript-all-in-one-gal-z/README.md)
 +   [Sams 自学 PHP、MySQL® 和 Apache 全合一，第五版 (Chris Mathews 系列)](docs/sams-teach-yourself-php-mysql-and-apache-all-in-one-fifth-ed/README.md)
