@@ -641,6 +641,7 @@
 +   [Selenium Webdriver 与 C# 编程简单化：编程初学者指南 - 二本书合一](docs/selenium-webdriver-and-c-coding-made-simple-a-beginners-guid/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [西蒙·考维尔：从邮件房到偶像成名（高中学历或更低学历的非凡成功）](docs/simon-cowell-from-the-mailroom-to-idol-fame-extraordinary-su/README.md)
++   [SQL：初学者简单的 SQL 编程与数据库管理，SQL 数据库学习分步指南（SQL 系列）](docs/sql-easy-sql-programming-database-management-for-beginners-y/README.md)
 +   [C# 编程原理入门指南](docs/step-by-step-introduction-to-the-principles-of-c-programming/README.md)
 +   [STM32 编程指南：从 Nucleo 板和 C/C++ 编程入门](docs/stm32-programming-guide-beginner-start-with-the-nucleo-board/README.md)
 +   [C++ 字符串：C++ 学习的第四步](docs/strings-in-c-the-fourth-step-in-c-learning/README.md)
