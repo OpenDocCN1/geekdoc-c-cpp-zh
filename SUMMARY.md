@@ -659,6 +659,7 @@
 +   [C# 面向对象基础概念：用简单语言进行概念学习](docs/the-basic-concepts-of-oop-in-c-learn-conceptually-in-simple-/README.md)
 +   [C 语言编程指南：今天成为程序员](docs/the-c-programming-book-be-a-programmer-today/README.md)
 +   [C 语言语言，ANSI C](docs/the-c-programming-language-ansi-c/README.md)
++   [C# 类型系统：构建健壮、高性能且高效的程序](docs/the-c-type-system-build-robust-performant-and-efficient-prog/README.md)
 +   [慈悲之书：唤醒内心的指南](docs/the-compassion-book-teachings-for-awakening-the-heart/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
