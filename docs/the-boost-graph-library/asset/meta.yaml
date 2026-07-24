@@ -1,0 +1,256 @@
+name: The Boost Graph Library
+name_cn: Boost 图形库
+slug: the-boost-graph-library
+toc:
+- - '#'
+  - Boost 图形库
+- - '##'
+  - 代码所有：虚函数是较小的，模板是庞大的
+- - '##'
+  - 2.4.2 类中的嵌套 typedef
+- - '#'
+  - 第 7 章 连接通分量
+- - '##'
+  - 7.1 定义
+- - '##'
+  - 7.2 连通分量与网络连接
+- - '##'
+  - 7.3 强连通分量与网页链接
+- - '#'
+  - 第 8 章 最大流
+- - '##'
+  - 8.1 定义
+- - '##'
+  - 8.2 边连通性
+- - '###'
+  - 类型定义
+- - '###'
+  - 变量声明
+- - '###'
+  - 从无向图创建一个网络流图
+- - '###'
+  - 寻找最小度顶点
+- - '###'
+  - 输出邻居辅助函数
+- - '###'
+  - 寻找最小度顶点并计算 S 的邻居和非邻居
+- - '###'
+  - 主循环
+- - '#'
+  - 第 9 章 隐式图：骑士巡游
+- - '##'
+  - 9.1 骑士跳跃作为图
+- - '##'
+  - 9.2 回溯图搜索
+- - '##'
+  - 9.3 Warnsdorff 启发式
+- - '#'
+  - 第 10 章 与其他图库接口
+- - '##'
+  - 10.1 结合 LEDA 图使用 BGL 拓扑排序
+- - '##'
+  - 10.2 结合 SGB 图使用 BGL 拓扑排序
+- - '##'
+  - 10.3 实现图适配器
+- - '#'
+  - 第 11 章 性能指南
+- - '##'
+  - 11.1 图类比较
+- - '###'
+  - 11.1.1 结果与讨论
+- - '###'
+  - 添加边和顶点
+- - '###'
+  - 添加边
+- - '###'
+  - 删除边
+- - '###'
+  - 删除顶点
+- - '###'
+  - 顶点集遍历
+- - '###'
+  - 边集遍历
+- - '###'
+  - 出边遍历
+- - '##'
+  - 11.2 结论
+- - '#'
+  - 第二部分。参考手册
+- - '##'
+  - 第 12 章 BGL 概念
+- - '###'
+  - 所有图概念需求中所使用的记法在此处汇总。
+- - '##'
+  - 12.1 图遍历概念
+- - '###'
+  - 12.1.1 无向图
+- - '###'
+  - 12.1.2 图
+- - '###'
+  - 12.1.5 AdjacencyGraph
+- - '###'
+  - 12.1.6 VertexListGraph
+- - '###'
+  - 12.1.7 EdgeListGraph
+- - '###'
+  - 12.1.8 AdjacencyMatrix
+- - '##'
+  - 12.2 图修改概念
+- - '###'
+  - 12.2.1 VertexGraph
+- - '###'
+  - 12.2.2 EdgeGraph
+- - '###'
+  - 12.2.3 MutableIncidenceGraph
+- - '###'
+  - 12.2.4 MutableBidirectionalGraph
+- - '###'
+  - 12.2.5 MutableEdgeListGraph
+- - '##'
+  - 图的精细化
+- - '##'
+  - 12.2.7 顶点可属性图
+- - '##'
+  - 12.2.8 边可属性图
+- - '##'
+  - 12.3 访问者概念
+- - '###'
+  - 符号
+- - '###'
+  - 12.3.1 BFSVisitor
+- - '###'
+  - 12.3.2 DFSVisitor
+- - '###'
+  - 12.3.3 DijkstraVisitor
+- - '###'
+  - 12.3.4 BellmanFordVisitor
+- - '#'
+  - 第 13 章 BGL 算法
+- - '##'
+  - 13.1 概述
+- - '##'
+  - 13.2 基础算法
+- - '###'
+  - 13.2.1 breadth_first_search
+- - '###'
+  - 13.2.2 breadth_first_visit
+- - '###'
+  - 13.2.3 depth_first_search
+- - '###'
+  - 13.3 最短算法
+- - '###'
+  - 13.3.1 dijkstra_shortest_paths
+- - '###'
+  - 13.3.2 bellman_shortest_paths
+- - '##'
+  - 13.4 最小生成树
+- - '###'
+  - 13.4.1 kruskal_minimum_spanning_tree
+- - '##'
+  - 13.5 静态连通
+- - '###'
+  - 13.5.1 connected_components
+- - '###'
+  - 13.5.2 strong_components
+- - '##'
+  - 13.6 增量连通
+- - '##'
+  - 13.7 最大流算法
+- - '###'
+  - 13.7.1 edmunds_karp_max_flow
+- - '###'
+  - 13.7.2 push_relabel_max_flow
+- - '#'
+  - 第 14 章 属性图
+- - '##'
+  - 14.1 针对边列表容器的 Push 和 Erase
+- - '###'
+  - 14.1.2 adjacency_matrix
+- - '##'
+  - 14.2 辅助类
+- - '###'
+  - 14.2.1 graph_traits
+- - '###'
+  - 14.2.3 adjacency_matrix_traits
+- - '###'
+  - 14.2.4 property_map
+- - '###'
+  - 14.2.5 property
+- - '##'
+  - 14.3 图适配器
+- - '###'
+  - 14.3.1 edge_list
+- - '###'
+  - 14.3.2 reverse_graph
+- - '###'
+  - 14.3.3 filtered_graph
+- - '###'
+  - 14.3.4 SGB Graph 指针
+- - '##'
+  - 顶点与边的属性
+- - '##'
+  - 14.3.5 LEDA GRAPH<V,E>
+- - '###'
+  - 14.3.6 std::vector<EdgeList>
+- - '#'
+  - 第 15 章 属性库 (Property Library)
+- - '##'
+  - 15.1 属性图概念 (Property Map)
+- - '###'
+  - 15.1.1 ReadablePropertyMap
+- - '###'
+  - 15.1.2 WritablePropertyMap
+- - '###'
+  - 15.1.3 ReadWritePropertyMap
+- - '###'
+  - 15.1.4 LvaluePropertyMap
+- - '##'
+  - 15.2 属性图类
+- - '###'
+  - 15.2.1 property_traits
+- - '###'
+  - 15.2.2 iterator_property_map
+- - '###'
+  - 15.2.3 属性标签
+- - '##'
+  - 15.3 创建属性映射
+- - '###'
+  - 15.3.1 Stanford GraphBase
+- - '###'
+  - 15.3.2 std::map
+- - '#'
+  - 第 16 章 辅助概念、类与函数
+- - '##'
+  - 16.1 缓冲区 (Buffer)
+- - '##'
+  - 16.2 ColorValue (颜色值)
+- - '##'
+  - 16.3 MultiPassIterator (多遍迭代器)
+- - '##'
+  - 16.4 Monoid (半群)
+- - '##'
+  - 16.5 mutable_queue (可变队列)
+- - '##'
+  - 16.6 Disjoint Sets (并集)
+- - '###'
+  - 16.6.1 disjoint_sets
+- - '###'
+  - 16.6.2 find_with_path_compression
+- - '###'
+  - 16.6.3 find_with_full_path
+- - '##'
+  - 16.7 tie
+- - '##'
+  - 16.8 graph_property_range
+- - '#'
+  - 通用编程 (GP)
+- - '#'
+  - 图 (Graphs)
+- - '#'
+  - 迭代器 (Iterators)
+- - '#'
+  - 类
+- - '#'
+  - 测试
+- - '#'
+  - 复杂度
