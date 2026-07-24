@@ -662,6 +662,7 @@
 +   [C++ 编程入门指南](docs/textbook-of-programming-in-c/README.md)
 +   [API 生命周期：管理 API 生命周期的敏捷流程](docs/the-api-lifecycle-an-agile-process-for-managing-the-life-of-/README.md)
 +   [C# 面向对象基础概念：用简单语言进行概念学习](docs/the-basic-concepts-of-oop-in-c-learn-conceptually-in-simple-/README.md)
++   [GNS3 指南指南：使用 Cisco、Juniper 等工具构建虚拟网络实验室](docs/the-book-of-gns3-build-virtual-network-labs-using-cisco-juni/README.md)
 +   [Boost C++ 库](docs/the-boost-c-libraries/README.md)
 +   [C 语言编程指南：今天成为程序员](docs/the-c-programming-book-be-a-programmer-today/README.md)
 +   [C 语言语言，ANSI C](docs/the-c-programming-language-ansi-c/README.md)
