@@ -658,6 +658,7 @@
 +   [STM32 Arm 嵌入式系统编程：C 语言与 STM32 Nucleo 使用指南](docs/stm32-arm-programming-for-embedded-systems-using-c-language-/README.md)
 +   [STM32 编程指南：从 Nucleo 板和 C/C++ 编程入门](docs/stm32-programming-guide-beginner-start-with-the-nucleo-board/README.md)
 +   [C++ 字符串：C++ 学习的第四步](docs/strings-in-c-the-fourth-step-in-c-learning/README.md)
++   [T-SQL 基础（开发者参考）](docs/t-sql-fundamentals-developer-reference/README.md)
 +   [教师讲网页设计：专业资质且经验丰富的教师讲解网页设计：HTML 和 CSS](docs/teacher-presents-web-design-professionally-qualified-and-exp/README.md)
 +   [C++ 编程入门指南](docs/textbook-of-programming-in-c/README.md)
 +   [API 生命周期：管理 API 生命周期的敏捷流程](docs/the-api-lifecycle-an-agile-process-for-managing-the-life-of-/README.md)
