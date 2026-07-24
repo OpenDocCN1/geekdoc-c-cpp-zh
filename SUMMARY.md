@@ -687,6 +687,7 @@
 +   [快乐陷阱 [电子资源]：停止挣扎，开始生活](docs/the-happiness-trap-electronic-resource-stop-struggling-start/README.md)
 +   [Java EE 架构师手册（第二版）：如何成为成功的 Java EE 应用架构师](docs/the-java-ee-architects-handbook-second-edition-how-to-be-a-s/README.md)
 +   [SQL 语言（第 2 版）](docs/the-language-of-sql-2nd-edition/README.md)
++   [图书员编程语言入门指南：LITA 指南](docs/the-librarians-introduction-to-programming-languages-a-lita-/README.md)
 +   [C 的力量 (编程的力量)](docs/the-power-of-c-power-of-coding/README.md)
 +   [Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2](docs/understanding-swift-for-c-and-c-programmers-while-having-to-/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
