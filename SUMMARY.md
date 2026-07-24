@@ -623,6 +623,7 @@
 +   [Python 入门指南](docs/python-programming/README.md)
 +   [Python 编程：通过实践练习掌握 Python 语言、应用理论及快速学习计算机编程技巧的入门指南](docs/python-programming-the-crash-course-to-learn-how-to-master-p/README.md)
 +   [Qt 学习之路](docs/qt-lrn-way/README.md)
++   [量子安全密码算法与方法：量子计算对网络安全的影响](docs/quantum-safe-cryptography-algorithms-and-approaches-impacts-/README.md)
 +   [JavaScript 面试快速问答：学习常见问题](docs/quick-javascript-interview-questions-learn-frequently-asked-/README.md)
 +   [C/C++ 编程概念快速上手指南：C/C++ 技巧与概念：所有 C/C++ 开发者和程序员的实用读物](docs/quick-short-reference-guide-to-cc-programming-concepts-cc-ti/README.md)
 +   [R：初学者 R 编程指南，R 语言学习步步进指南（R 编程系列）](docs/r-easy-r-programming-for-beginners-your-step-by-step-guide-t/README.md)
