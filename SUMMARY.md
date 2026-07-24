@@ -635,6 +635,7 @@
 +   [Sams 24 小时自学 HTML 和 CSS（包含新的 HTML 5 内容）第 8 版](docs/sams-teach-yourself-html-and-css-in-24-hours-includes-new-ht/README.md)
 +   [Scala 揭秘与精通 C# 编程：高级程序员手册（2 本合一）](docs/scala-uncovered-and-mastering-c-programming-an-intermediate-/README.md)
 +   [C++ 选编话题](docs/selected-topics-in-c/README.md)
++   [Selenium Webdriver 与 C# 编程简单化：编程初学者指南 - 二本书合一](docs/selenium-webdriver-and-c-coding-made-simple-a-beginners-guid/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [西蒙·考维尔：从邮件房到偶像成名（高中学历或更低学历的非凡成功）](docs/simon-cowell-from-the-mailroom-to-idol-fame-extraordinary-su/README.md)
 +   [C# 编程原理入门指南](docs/step-by-step-introduction-to-the-principles-of-c-programming/README.md)
