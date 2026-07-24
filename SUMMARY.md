@@ -654,6 +654,7 @@
 +   [SQL：初学者简单的 SQL 编程与数据库管理，SQL 数据库学习分步指南（SQL 系列）](docs/sql-easy-sql-programming-database-management-for-beginners-y/README.md)
 +   [Xamarin SQLite 数据库编程：使用 SQLite.net 进行 iOS 和 Android 跨平台 C# 数据库开发](docs/sqlite-database-programming-for-xamarin-cross-platform-c-dat/README.md)
 +   [C 语言标准讲义](docs/standard-lecture-with-c-programming/README.md)
++   [C++ 入门指南：早期对象（第10版）](docs/starting-out-with-c-early-objects-10th-edition/README.md)
 +   [Python 入门指南（第4版）](docs/starting-out-with-python-4th-edition/README.md)
 +   [Visual C# 入门指南（第5版）](docs/starting-out-with-visual-c-5th-edition/README.md)
 +   [C# 编程原理入门指南](docs/step-by-step-introduction-to-the-principles-of-c-programming/README.md)
