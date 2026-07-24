@@ -685,6 +685,7 @@
 +   [算法宪法：真值校验、编程与公式化（深度技术）](docs/the-constitution-of-algorithms-ground-truthing-programming-f/README.md)
 +   [CUDA C++ 编程初学者指南：通过步进详解与实际应用解锁 GPU 计算潜力](docs/the-cuda-c-programming-beginners-guide-unlock-the-potential-/README.md)
 +   [Dart 编程语言入门指南](docs/the-dart-programming-language/README.md)
++   [奇幻角色扮演游戏的演变](docs/the-evolution-of-fantasy-role-playing-games/README.md)
 +   [C/C++ 游戏编程基础：基于单片机的目标开发使用指南](docs/the-fundamentals-of-cc-game-programming-using-target-based-d/README.md)
 +   [快乐陷阱 [电子资源]：停止挣扎，开始生活](docs/the-happiness-trap-electronic-resource-stop-struggling-start/README.md)
 +   [我们的互：大数据时代我们知得多却理解得更少](docs/the-internet-of-us-knowing-more-and-understanding-less-in-th/README.md)
