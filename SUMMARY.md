@@ -674,6 +674,7 @@
 +   [快乐化学练习册：利用脑科学、营养学和正念心理学精髓克服抑郁（Harbinger 自助练习册系列）](docs/the-chemistry-of-joy-workbook-overcoming-depression-using-th/README.md)
 +   [慈悲之书：唤醒内心的指南](docs/the-compassion-book-teachings-for-awakening-the-heart/README.md)
 +   [Mac OS X El Capitan 初学者指南：（适用于 Macbook, Macbook Air, Macbook Pro, iMac, Mac Pro 和 Mac Mini）](docs/the-complete-beginners-guide-to-mac-os-x-el-capitan-for-macb/README.md)
++   [C++ 编程完整指南](docs/the-complete-c-programming-guide/README.md)
 +   [CUDA C++ 编程初学者指南：通过步进详解与实际应用解锁 GPU 计算潜力](docs/the-cuda-c-programming-beginners-guide-unlock-the-potential-/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
