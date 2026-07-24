@@ -647,6 +647,7 @@
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
 +   [西蒙·考维尔：从邮件房到偶像成名（高中学历或更低学历的非凡成功）](docs/simon-cowell-from-the-mailroom-to-idol-fame-extraordinary-su/README.md)
 +   [SQL：初学者简单的 SQL 编程与数据库管理，SQL 数据库学习分步指南（SQL 系列）](docs/sql-easy-sql-programming-database-management-for-beginners-y/README.md)
++   [Xamarin SQLite 数据库编程：使用 SQLite.net 进行 iOS 和 Android 跨平台 C# 数据库开发](docs/sqlite-database-programming-for-xamarin-cross-platform-c-dat/README.md)
 +   [C 语言标准讲义](docs/standard-lecture-with-c-programming/README.md)
 +   [C# 编程原理入门指南](docs/step-by-step-introduction-to-the-principles-of-c-programming/README.md)
 +   [STM32 Arm 嵌入式系统编程：C 语言与 STM32 Nucleo 使用指南](docs/stm32-arm-programming-for-embedded-systems-using-c-language-/README.md)
