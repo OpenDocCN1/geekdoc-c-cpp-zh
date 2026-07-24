@@ -632,6 +632,7 @@
 +   [Rust 快速上手：利用下一代编程技能构建高性能、高效且高产的软件](docs/rust-crash-course-build-high-performance-efficient-and-produ/README.md)
 +   [C++ 程序员的 Rust 指南：轻松在 C/C++ 中嵌入 Rust](docs/rust-for-c-programmers-learn-how-to-embed-rust-in-cc-with-ea/README.md)
 +   [手把手教你做一个 C 语言编译器](docs/shoubashou-c-cmplr/README.md)
++   [西蒙·考维尔：从邮件房到偶像成名（高中学历或更低学历的非凡成功）](docs/simon-cowell-from-the-mailroom-to-idol-fame-extraordinary-su/README.md)
 +   [C# 编程原理入门指南](docs/step-by-step-introduction-to-the-principles-of-c-programming/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
