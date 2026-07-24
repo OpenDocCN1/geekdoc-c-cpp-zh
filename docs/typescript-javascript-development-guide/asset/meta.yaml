@@ -1,0 +1,58 @@
+name: TypeScript： JavaScript Development Guide
+name_cn: TypeScript：JavaScript 开发指南
+slug: typescript-javascript-development-guide
+toc:
+- - '#'
+  - TypeScript：JavaScript 开发指南
+- - '##'
+  - Hello World 示例
+- - '##'
+  - 第 3 章- 类型注解
+- - '##'
+  - 第 4 章 - 接口 (Interfaces)
+- - '##'
+  - 第 5 章 - 函数表达式 (Function Expressions)
+- - '##'
+  - 第 6 章 - 类
+- - '###'
+  - 使用构造函数定义
+- - '###'
+  - 属性初始化
+- - '###'
+  - 剩余参数
+- - '##'
+  - 第 7 章- 解构
+- - '###'
+  - 对象解构
+- - '###'
+  - 数组解构
+- - '###'
+  - '`const` 的初始化'
+- - '###'
+  - 块级作用域
+- - '###'
+  - 深层不可变性
+- - '##'
+  - 第 8 章- for...of
+- - '###'
+  - JS 生成
+- - '###'
+  - 局限性
+- - '##'
+  - 第 9 章 - 迭代器 (Iterators)
+- - '##'
+  - 第 11 章 - 展开运算符 (Spread Operator)
+- - '###'
+  - 应用 (Apply)
+- - '###'
+  - 解构 (Destructuring)
+- - '##'
+  - 第 12 章- 枚举 (Enums)
+- - '###'
+  - 枚举与数字
+- - '###'
+  - 枚举与字符串
+- - '###'
+  - 作为标志（flags）的枚举
+- - '##'
+  - 结论
