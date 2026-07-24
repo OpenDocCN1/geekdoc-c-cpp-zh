@@ -696,6 +696,7 @@
 +   [罗伯特 C. Martin 洁净代码集（合集）（Robert C. Martin 系列）](docs/the-robert-c-martin-clean-code-collection-collection-robert-/README.md)
 +   [Rust 编程语言（第 2 版）](docs/the-rust-programming-language-2nd-edition/README.md)
 +   [像程序员一样思考：创意问题解决入门指南](docs/think-like-a-programmer-an-introduction-to-creative-problem-/README.md)
++   [永恒之旅：穿越世界传奇之地的旅行](docs/timeless-journeys-travels-to-the-worlds-legendary-places/README.md)
 +   [迈向智能世界：物联网连接家居到城市](docs/towards-smart-world-homes-to-cities-using-internet-of-things/README.md)
 +   [图灵的愿景：计算机科学的诞生](docs/turings-vision-the-birth-of-computer-science-the-mit-press/README.md)
 +   [简易 TypeScript 与 C# 编程：编程入门指南 - 2 本合一](docs/typescript-and-c-coding-made-simple-a-beginners-guide-to-pro/README.md)
