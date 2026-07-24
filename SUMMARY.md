@@ -703,6 +703,7 @@
 +   [Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2](docs/understanding-swift-for-c-and-c-programmers-while-having-to-/README.md)
 +   [Unity 游戏开发：Unity 引擎中的 C# 编程初学者指南 - 第1版 - 2020](docs/unity-game-development-programming-c-in-unity-engine-a-guide/README.md)
 +   [Visual C#.NET：C# Windows Forms 编程](docs/visual-cnet-windows-forms-programming-with-c/README.md)
++   [C# 可视化编程 - C# 可视化编程 - C# 编程：C# 编程的可视化编程 - C# 编程](docs/visual-programming-using-c---c-visual-programming---c-progra/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
