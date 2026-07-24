@@ -688,6 +688,7 @@
 +   [Java EE 架构师手册（第二版）：如何成为成功的 Java EE 应用架构师](docs/the-java-ee-architects-handbook-second-edition-how-to-be-a-s/README.md)
 +   [SQL 语言（第 2 版）](docs/the-language-of-sql-2nd-edition/README.md)
 +   [C 的力量 (编程的力量)](docs/the-power-of-c-power-of-coding/README.md)
++   [Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2](docs/understanding-swift-for-c-and-c-programmers-while-having-to-/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)

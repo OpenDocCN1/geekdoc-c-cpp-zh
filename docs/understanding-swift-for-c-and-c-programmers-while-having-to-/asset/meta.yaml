@@ -1,0 +1,85 @@
+name: Understanding Swift ： For C and C++ Programmers While Having to Learn As Little
+  Object-C As Possible, Swift 2
+name_cn: Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2
+slug: understanding-swift-for-c-and-c-programmers-while-having-to-
+toc:
+- - '#'
+  - Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2
+- - '##'
+  - 第一
+- - '###'
+  - 下载程序
+- - '##'
+  - 第二
+- - '###'
+  - 让我们开始编程
+- - '##'
+  - 三
+- - '###'
+  - 注释包含
+- - '###'
+  - print 取代了 println
+- - '###'
+  - 最后：
+- - '##'
+  - 运算符
+- - '###'
+  - 数学运算符
+- - '###'
+  - 返回布尔值的比较运算符
+- - '###'
+  - 新运算符（位置非常特殊，将在稍后讨论）
+- - '##'
+  - 常量与变量
+- - '###'
+  - 算术
+- - '###'
+  - 显式与隐式转换
+- - '##'
+  - 8) 如果图 5.3 中 `y` 的值在进入 switch 语句之前被改为 1.0，导致执行了默认语句。那么 `print(x)` 会打印什么值。
+- - '##'
+  - 布尔值游戏 (Bool Play)
+- - '##'
+  - Questions
+- - '##'
+  - 数组 (Arrays)
+- - '###'
+  - 八
+- - '###'
+  - If else
+- - '###'
+  - 九
+- - '###'
+  - 可选类型 (Optionals)
+- - '###'
+  - 十二
+- - '###'
+  - Switches（切换）
+- - '##'
+  - 引言
+- - '##'
+  - Swift 中的基础枚举
+- - '##'
+  - 原始值（Raw Values）与 Int 类型
+- - '###'
+  - Playground 中有“幽灵”
+- - '###'
+  - 问题
+- - '##'
+  - 字典 (Dictionaries)
+- - '##'
+  - 移除值
+- - '##'
+  - 处理字符串
+- - '###'
+  - String 额外扩展
+- - '###'
+  - 使用结构体 (Structs)
+- - '###'
+  - 函数 (Functions)
+- - '###'
+  - 作业 1
+- - '###'
+  - 作业 2
+- - '###'
+  - 作业 3
