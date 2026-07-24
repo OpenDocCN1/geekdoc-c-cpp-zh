@@ -689,6 +689,7 @@
 +   [SQL 语言（第 2 版）](docs/the-language-of-sql-2nd-edition/README.md)
 +   [图书员编程语言入门指南：LITA 指南](docs/the-librarians-introduction-to-programming-languages-a-lita-/README.md)
 +   [C 的力量 (编程的力量)](docs/the-power-of-c-power-of-coding/README.md)
++   [像程序员一样思考：创意问题解决入门指南](docs/think-like-a-programmer-an-introduction-to-creative-problem-/README.md)
 +   [简易 TypeScript 与 C# 编程：编程入门指南 - 2 本合一](docs/typescript-and-c-coding-made-simple-a-beginners-guide-to-pro/README.md)
 +   [TypeScript：JavaScript 开发指南](docs/typescript-javascript-development-guide/README.md)
 +   [Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2](docs/understanding-swift-for-c-and-c-programmers-while-having-to-/README.md)
