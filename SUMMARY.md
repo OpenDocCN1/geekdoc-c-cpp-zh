@@ -698,6 +698,7 @@
 +   [TypeScript：JavaScript 开发指南](docs/typescript-javascript-development-guide/README.md)
 +   [理解典型的 C# 编程语言](docs/understanding-a-typical-c-programming-language/README.md)
 +   [理解 Arduino：初学者指南，学习 Arduino 编程的实时洞解与技巧](docs/understanding-arduino-a-beginners-guide-with-realtime-insigh/README.md)
++   [ECMAScript 6 入门指南](docs/understanding-ecmascript-6/README.md)
 +   [JavaScript Promises 入门指南](docs/understanding-javascript-promises/README.md)
 +   [Swift 入门指南：针对 C 和 C++ 程序员，尽可能少学习 Object-C，Swift 2](docs/understanding-swift-for-c-and-c-programmers-while-having-to-/README.md)
 +   [Unity 游戏开发：Unity 引擎中的 C# 编程初学者指南 - 第1版 - 2020](docs/unity-game-development-programming-c-in-unity-engine-a-guide/README.md)
