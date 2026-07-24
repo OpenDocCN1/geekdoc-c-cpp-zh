@@ -642,6 +642,7 @@
 +   [西蒙·考维尔：从邮件房到偶像成名（高中学历或更低学历的非凡成功）](docs/simon-cowell-from-the-mailroom-to-idol-fame-extraordinary-su/README.md)
 +   [C# 编程原理入门指南](docs/step-by-step-introduction-to-the-principles-of-c-programming/README.md)
 +   [STM32 编程指南：从 Nucleo 板和 C/C++ 编程入门](docs/stm32-programming-guide-beginner-start-with-the-nucleo-board/README.md)
++   [C++ 字符串：C++ 学习的第四步](docs/strings-in-c-the-fourth-step-in-c-learning/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
