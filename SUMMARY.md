@@ -611,6 +611,7 @@
 +   [Haiku 编程](docs/programming-with-haiku/README.md)
 +   [STM32 编程：Nucleo 开发板与 C/C++ 入门指南](docs/programming-with-stm32-getting-started-with-the-nucleo-board/README.md)
 +   [iOS 5 编程极限：Apple iPhone、iPad 和 iPod Touch 高级应用开发指南](docs/pushing-the-limits-with-ios-5-programming-advanced-applicati/README.md)
++   [Python 初学者指南，第3版](docs/python-all-in-one-for-dummies-3rd-edition/README.md)
 +   [Python：精通 Python 高级指南](docs/python-become-a-master-in-python-python-python-programming-c/README.md)
 +   [Python 入门指南：Python 计算机编程代码 #1](docs/python-beginners-guide-to-programming-code-with-python-pytho/README.md)
 +   [Python 编程最佳实践](docs/python-best-practices-to-programming-code-with-python/README.md)
