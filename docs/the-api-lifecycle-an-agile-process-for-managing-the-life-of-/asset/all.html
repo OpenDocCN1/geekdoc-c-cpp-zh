@@ -1,0 +1,2782 @@
+<p><img src="Images/cover00111.jpeg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<h2>The API Lifecycle</h2>
+<h3>An Agile Process For Managing the Life of an API</h3>
+<p> </p>
+<h4>Nordic APIs</h4>
+<p> </p>
+<div>
+© 2015 Nordic APIs AB
+</div>
+<p><span id="part0001.xhtml"></span></p>
+<section class="frontmatter TableOfContents toc">
+<div>
+
+</div>
+<h2 id="part0001.xhtml_toc">Table of Contents</h2>
+<nav xmlns:epub="http://www.idpf.org/2007/ops" epub:type="landmarks" id="guide" data-amznremoved="mobi7">
+<h2>Guide</h2>
+<ol>
+<li><a href="#part0002.xhtml" class="bodymatter">Begin Reading</a></li>
+</ol>
+</nav>
+</section>
+<p><span id="part0002.xhtml"></span></p>
+<h2 id="part0002.xhtml_leanpub-auto-preface">Preface</h2>
+<p>Nordic APIs has been in operation for about 2 years. Within that
+short time we’ve hosted hundreds of API-specific presentations featuring
+international experts - giving us the opportunity to take a peek into
+the inner workings of leading web API-driven businesses.</p>
+<p>Throughout our work we’ve discovered a recurring trend: unsuccessful
+APIs struggle both in fostering interest as well as creating a
+sustainable service. In contrast, successful APIs are well-attended,
+treated as a product with a multi-iterative lifecycle. So we thought;
+what exactly are the key ingredients to their successes?</p>
+<p>Our fourth eBook, The API Lifecycle, presents an agile process for
+managing the life of an API - the secret sauce to help establish quality
+standards for all API and microservice providers. This handbook depicts
+a holistic model that treats a web API as a constantly evolving business
+and product. From conception through deprecation, it outlines
+instructions on market research, business strategy, development,
+operations, promotion, and other vital components for successfully
+creating and maintaining an API.</p>
+<p>Inspired by experienced API consultants <a
+href="http://andreaskrohn.se/">Andreas Krohn</a> and <a
+href="http://travisspencer.com/">Travis Spencer</a>, the API Lifecycle
+diagram is composed of four distinct phases: Analysis, Development,
+Operations, and Retirement. Our eBook expands theses concepts, grounding
+theories in knowledge collected during our <a
+href="http://nordicapis.com/tour/nordic-apis-world-tour-2015/">2015
+World Tour</a>, events which brought API industry experts together to
+discuss different stages of the API Lifecycle. We also delved deeper
+into these ideas within our <a
+href="http://nordicapis.com/what-is-the-future-of-the-api-space/">blog</a>,
+interviewing <a href="http://nordicapis.com/blog">leading web API
+figures</a> to perform additional research, and peppered it all with a
+bit of our own insights to create a comprehensive overview of what to
+consider during the entire product lifecycle of a profitable web
+API.</p>
+<p>Please enjoy The API Lifecycle, and let us know how we can improve.
+Be sure to join the Nordic APIs <a
+href="http://nordicapis.com/newsletter/">newsletter</a> for updates, and
+follow us for news on upcoming <a
+href="http://nordicapis.com/event-calendar/">events</a>.</p>
+<p>Thank you for reading!</p>
+<blockquote>
+<p>– Bill Doerrfeld, Editor in Chief, Nordic APIs</p>
+</blockquote>
+<p>Connect with Nordic APIs:</p>
+<p><a href="http://facebook.com/nordicapis">Facebook</a> | <a
+href="http://twitter.com/nordicapis">Twitter</a> | <a
+href="https://www.linkedin.com/company/nordic-apis">Linkedin</a> | <a
+href="https://plus.google.com/u/0/+Nordicapis/posts">Google+</a> | <a
+href="https://www.youtube.com/user/nordicapis">YouTube</a></p>
+<p><a href="http://nordicapis.com/blog/">Blog</a> | <a
+href="http://nordicapis.com">Home</a> | <a
+href="http://nordicapis.com/newsletter/">Newsletter</a> | <a
+href="mailto:info@nordicapis.com">Contact</a></p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<p><span id="part0003.xhtml"></span></p>
+<h2
+id="part0003.xhtml_leanpub-auto-envisioning-the-entire-api-lifecycle">Envisioning
+The Entire API Lifecycle</h2>
+<figure class="image center">
+<img src="Images/image00077.gif" />
+</figure>
+<p>From conception to deprecation, a Software-as-a-service (<a
+href="http://en.wikipedia.org/wiki/Software_as_a_service">SaaS</a>) is
+prone to constant evolution. Check the changelog for a high-volume
+platform like <a
+href="https://www.dropbox.com/release_notes">Dropbox</a> for proof. In
+such logs, you’ll find bug fixes and updates, with the latest likely
+made within the past couple weeks.</p>
+<p>The APIs that open these SaaS platforms are changing just as rapidly.
+So much so that <a href="https://www.apichangelog.com">API Changelog</a>
+was created to notify users of API documentation changes (22 updates in
+the last 30 days in the case of the <a
+href="https://www.apichangelog.com/api/dropbox">Dropbox API</a> at the
+time of this writing). This ongoing iterative process is not only agile
+- it’s evolution is in symbiosis with many business factors that make up
+the organism that is the entire API lifecycle.</p>
+<p>As the main function of web APIs are to be consumed by third party
+products, the API is a unique type of business offering. It’s peculiar
+condition as both a software and internal asset makes its lifecycle
+special – highly fueled by ongoing feedback and market validation.
+Compared with standard SaaS products that may have the power to change
+their UI or underlying construct, an API’s granular state can make it
+even more elusive.</p>
+<h4
+id="part0003.xhtml_leanpub-auto-the-state-of-modern-software-development">The
+State of Modern Software Development</h4>
+<p><a href="http://nordicapis.com/what-makes-an-agile-api/">Agile</a>…<a
+href="http://en.wikipedia.org/wiki/Scrum_%28software_development%29">Scrum</a>…contemporary
+software development pushes toward quick releases and fluid responses.
+Response to change needs to be rapidly executed, leveraging user
+feedback, data, and statistics. These traits are becoming standard
+practice throughout the software realm. But is producing and maintaining
+an API the same – or is it a different animal entirely?</p>
+<h4
+id="part0003.xhtml_leanpub-auto-the-api-as-a-living-breathing-organism">The
+API As a Living, Breathing Organism</h4>
+<p>Exactly how an API lifecycle looks depends on how the API functions
+as well as the business strategy at it’s core. We at Nordic APIs have
+boiled down the common API lifecycle to four main phases:
+<strong>Analysis</strong>, <strong>Development</strong>,
+<strong>Operations</strong>, and <strong>Retirement</strong>. As seen
+mapped out above, these elements work together and influence each-other.
+Once the cycle begins, open and simultaneous exchange between each phase
+will help a practitioner stabilize the API against internal and external
+factors. New information that arises within each stage may beckon a team
+to move forward or backward in the lifecycle, encouraging small
+revisions or large pivoting to reach end project goals. In this
+introductory chapter we will introduce the main phases of the cycle,
+each to be covered in depth in the following chapters to come.</p>
+<h3 id="part0003.xhtml_leanpub-auto-analysis-stage">#1: Analysis
+Stage</h3>
+<figure class="image floatleft">
+<img src="Images/image00078.jpeg" />
+</figure>
+<p>This stage involves defining overall API business objectives. Firms
+should critically ask themselves whether or not an API is right for
+their particular situation. Some industries, such as social networks,
+thrive off APIs as a natural extension of their digital ecosystem. On
+the other hand, traditionally non-digital companies must be creative in
+handling how APIs extend their business model.</p>
+<p>An API should either boost pre-existing operations or work toward
+overall company goals in some way. In our e-book <a
+href="http://nordicapis.com/developing-the-api-mindset-private-partner-and-public-apis/">Developing
+the API Mindset</a> we defined 3 types of APIs:</p>
+<ul>
+<li><strong>Private APIs</strong> streamline internal operations to
+decrease expenses.</li>
+<li><strong>Partner APIs</strong> work specifically with partner
+organizations to expand a service’s reach to existing markets to
+generate revenue.</li>
+<li><strong>Public APIs</strong> form new ecosystems by opening up a
+service to public access. If you intend to have a public release, obtain
+feedback while you perform analysis to gauge interest and determine <a
+href="http://nordicapis.com/should-you-control-how-your-public-api-is-used/">access
+control</a>.</li>
+</ul>
+<p>Whatever the chosen API strategy is, it’s mission statement, usage
+projections, <a
+href="http://nordicapis.com/achieve-accelerated-growth-apis/">model for
+growth</a>, marketing strategy, and estimated <a
+href="http://nordicapis.com/5-ways-apis-will-increase-revenue/">financial
+return</a> should be clearly laid out before production begins. If
+you’ve done the necessary preparation, it’s time to move to the
+<strong>Development Stage</strong>.</p>
+<h3 id="part0003.xhtml_leanpub-auto-development-stage">#2: Development
+Stage</h3>
+<figure class="image floatleft">
+<img src="Images/image00079.jpeg" />
+</figure>
+<p>With business proof and goals laid out, the next step is defining
+technical requirements and opportunities that are in cooperation with
+the API strategy. Development plans need to consider the following:</p>
+<ul>
+<li>what <strong>operations</strong> the API will execute</li>
+<li><strong>management</strong> and <strong>hosting</strong></li>
+<li>the <a
+href="http://nordicapis.com/rest-better-than-soap-yes-use-cases/">methods
+and protocols</a> used</li>
+<li>size and <strong>scalability</strong></li>
+<li><strong>access</strong> and security control</li>
+<li><strong>usability</strong> and experience</li>
+<li>the development <strong>team</strong> … among other factors</li>
+</ul>
+<p>An intimate understanding of API processes will help form technical
+requirements. For example, knowing whether your API will <a
+href="http://nordicapis.com/open-data-how-to-make-it-work-for-your-business/">open
+your firms’ data</a>, or act as a <a
+href="http://nordicapis.com/apis-as-a-content-distribution-channel/">content
+distribution channel</a> can impact overall design.</p>
+<p>In general, the API development stage should mimic the business
+objectives set forth within the Analysis phase. A methodical development
+phase considers <a
+href="http://nordicapis.com/api-design-testing-state-art/">design,
+construction and testing</a> of API processes as well as security.
+Design your API with both <a
+href="http://nordicapis.com/designing-apis-humans/">human usability</a>
+and <a href="http://nordicapis.com/designing-apis-machines/">machine
+standards</a> in mind. It is a good idea at this point to also implement
+and evaluate API versioning strategies that will set the API in a good
+position for future updates.</p>
+<p>During the Development Stage, a team may choose to return to the
+<strong>Analysis Stage</strong> to perform additional market research
+and general preparation. This can arise from technical roadblocks, or
+the urge to revision an APIs’ primary objectives. If the API feels
+polished, tested, secure, and ready for general use, you are ready to
+move to the <strong>Operations Stage</strong>.</p>
+<h3 id="part0003.xhtml_leanpub-auto-operations-stage">#3: Operations
+Stage</h3>
+<figure class="image floatleft">
+<img src="Images/image00080.jpeg" />
+</figure>
+<p>If you’re team’s lean as flank steak, you may be sprinting a minimum
+viable product straight to the masses. With loose nuts and bolts, it’s
+natural that the Operations Stage will involve a lot of tweaking and
+bug-fixing in addition to marketing.</p>
+<p>To spread awareness, API providers can host
+<strong>hackathons</strong>, improve <strong>SEO</strong> for home page
+and documentation, have a dedicated <strong>@Dev</strong> channel, and
+use popular <strong>discoverability</strong> methods and channels. If
+the resources are available, companies should also employ a dedicated
+<strong>API Evangelist</strong> to promote the API at physical events
+and throughout the blogosphere.</p>
+<p>In the end, marketing an API largely depends on an inside-out
+approach. Having an <a
+href="http://nordicapis.com/designing-apis-humans/">easy-to-consume
+development portal</a>, an embedded <strong>help desk</strong>, along
+with other <a
+href="http://nordicapis.com/why-api-developer-experience-matters-more-than-ever/">DX
+driven suggestions we’ve laid out in the past</a> will help boost
+conversion rates.</p>
+<p>This part of the lifecycle will likely take the most energy and time.
+Monitor usage statistics, and engage with users. Use any helpful data to
+aid in constant revising. Especially if an API program is in a closed
+beta, inbound tactics to collect feedback will help tremendously to aid
+in this iterative development process. Make sure that all API changes
+are well documented on your release notes.</p>
+<p>This exciting stage will bestow on an API practitioner real market
+requirements, and could potentially expose a business to entirely new
+opportunities. Statistics and data collected here will impact tech
+requirements that could result in revisiting the <strong>Development
+Stage</strong> to make incremental changes or new API versions, or
+consulting the <strong>Analysis Stage</strong> to make larger pivots. If
+forecasts look grim, a team may consider moving to the
+<strong>Retirement Stage</strong> at this point.</p>
+<h3 id="part0003.xhtml_leanpub-auto-retirement-stage">#4: Retirement
+Stage</h3>
+<figure class="image floatleft">
+<img src="Images/image00081.jpeg" />
+</figure>
+<p>Old age comes, and retirement is a part of life. It’s no different in
+the API world. It’s good to know what factors contribute to small
+revisions as well as large deprecations. In this stage, a provider may
+decide to retire an API due to limited use, outdated plugins, a lack of
+3rd party innovations, opposing financial incentives, and more. A
+business may risk losing an advantage if an API decreases traffic from
+native distribution channels.</p>
+<p>Versioning, deprecation, or lassoing in an API into a more internal
+state are options to consider if your key performance indicators are
+showing a flatline. At this point, the <strong>Analysis Stage</strong>
+can be reattempted, and the lifecycle repeated if viable. A Public API
+may still prove profitable as a Partner offering, for example.
+<strong>Retiring</strong> an API or API version is the best option when
+the API no longer is the best solution to reach the goals of the
+business. Whatever the solution is, we recommend a transparent public
+announcement that offers a reasonable timeline.</p>
+<h3 id="part0003.xhtml_leanpub-auto-choose-your-adventure">Choose Your
+Adventure:</h3>
+<p>In this chapter we’ve given a 30,000 foot view of the somewhat
+untraditional API lifecycle. Further chapters will offer fine-grained
+perspectives on each stage in the lifecycle, bolstered by specific
+industry use cases that demonstrate effective strategies for each.
+Here’s where we’re going:</p>
+<ol>
+<li><a href="#part0004.xhtml_Analysis">Analysis Stage</a></li>
+<li><a href="#part0008.xhtml_Development">Development Stage</a></li>
+<li><a href="#part0011.xhtml_Operations">Operations Stage</a></li>
+<li><a href="#part0014.xhtml_Retirement">Retirement Stage</a></li>
+</ol>
+<p><span id="part0004.xhtml"></span></p>
+<h1 id="part0004.xhtml_Analysis"><span class="section-number">I
+</span>Analysis Stage</h1>
+<figure class="image center">
+<img src="Images/image00082.gif" />
+</figure>
+<p>An API comes with an active product lifecycle that’s tethered between
+internal evolution and third party fluctuation. Within this part we’ll
+begin to take a deeper look into our first step of the Lifecycle process
+to consider what preparation should be done within the <strong>Analysis
+Stage</strong> - before developing your API.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<p><span id="part0005.xhtml"></span></p>
+<h2
+id="part0005.xhtml_leanpub-auto-preparing-your-api-business-strategy"><span
+class="section-number">1. </span>Preparing Your API Business
+Strategy</h2>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00083.jpeg" style="width: 100%;" />
+</figure>
+<p>Overlooked by some, the <strong>Analysis Stage</strong> should be the
+first stop on any API’s lifecycle. It involves research and critical
+decision making that will impact all future designs of your API. The
+purpose is to validate <em>why</em> your organization needs an API and
+<em>who</em> is going to use it.</p>
+<p>This crucial stage forms a <strong>business plan</strong> for an API
+in it’s entirety. Within this pre-development API phase, you should
+gauge interest from your target audience, perform market research,
+forecast trends within your sector, and make usage projections. To form
+a strategy, you’ll want to decide on your API’s business objective and
+what core API functionalities can help achieve this result, and then
+pair this knowledge with appropriate revenue models.</p>
+<p>Defining the above points will help an organization allocate
+resources for development, operations, and marketing, and should help in
+estimating your API’s ROI. This preparation will also supply a roadmap
+for decision-making throughout future API lifecycle stages.</p>
+<h3 id="part0005.xhtml_leanpub-auto-basic-things-to-consider"><span
+class="section-number">1.1 </span>Basic Things to Consider</h3>
+<p>Developing and releasing an API should be given the same amount of
+preparation as a new product launch. Especially if the API is a main
+offering, or is being built as the underlying construct for an entire
+platform, the end business objective should be in the forefront
+throughout the entire lifecycle.</p>
+<p>This early in the game, you’ll want to formulate answers to the
+following questions:</p>
+<ul>
+<li>Why does my organization need an API?</li>
+<li>What functions will the API accomplish?</li>
+<li>What is the API value proposition?</li>
+<li>Who is my intended audience?</li>
+<li>Does my audience <em>want</em> to consume my API?</li>
+<li>If for public use, what sorts of third-party products do you imagine
+being built with your API?</li>
+<li>Will the API be a core business offering?</li>
+<li>Does my organization possess the resources required to successfully
+develop and maintain an API?</li>
+<li>What sort of <a href="http://nordicapis.com/?p=3156">metrics</a>
+should I consider during analysis?</li>
+</ul>
+<h3
+id="part0005.xhtml_leanpub-auto-determine-if-an-api-is-right-for-your-specific-situation"><span
+class="section-number">1.2 </span>Determine If An API Is Right For Your
+Specific Situation</h3>
+<p>For many companies, providing an API is seen as an IT matter
+exclusive to internet giants like Twitter, Facebook and Google, startups
+like <a href="https://www.algolia.com/">Algolia</a>, <a
+href="https://wit.ai/">Wit.ai</a> and <a
+href="https://context.io/">Context.io</a>, or for government agencies to
+open data to the public. But are APIs really limited in that way?</p>
+<p>It’s true that even traditionally non-digital companies, such as
+Bechtel, a construction and engineering firm, Dun &amp; Bradstreet, a
+business information company, and <a
+href="http://developer.marvel.com/docs">Marvel comics</a> have succeeded
+in creating awesome platforms. At the end of the day, <a
+href="http://nordicapis.com/should-every-company-consider-providing-an-api/">every
+company should consider how they can use APIs to excel their
+business</a>.</p>
+<p>Many organizations develop an API to extend their current
+functionalities. On the other hand, some businesses move toward API
+platformitization, positioning the API as a <strong>core value.</strong>
+Many <a
+href="http://blog.mashape.com/list-of-10-face-detection-recognition-apis/">facial
+recognition</a>, natural <a
+href="http://blog.mashape.com/list-of-25-natural-language-processing-apis/">language
+processing</a>, and <a
+href="http://blog.mashape.com/list-of-50-machine-learning-apis/">machine
+learning services</a> do just that.</p>
+<h3 id="part0005.xhtml_leanpub-auto-perform-market-research"><span
+class="section-number">1.3 </span>Perform Market Research</h3>
+<p>As with any business endeavor, it’s vital to take a look at what
+competitors are doing in your sector to gauge the competition. Market
+research is a critical component of your pre-launch strategy. Use
+existing <a href="https://www.apirise.com/8-api-discovery-tools/">API
+discoverability tools</a> to bolster your research.</p>
+<p>Depending on the success of other APIs in the field, it may help
+promote alternative methods or protocols within your API. Create an
+account and perform test calls with a competitor’s API, and imagine how
+the experience could be improved. This will help refine where there is
+room for your product in the market.</p>
+<h3
+id="part0005.xhtml_leanpub-auto-align-your-api-with-business-objectives"><span
+class="section-number">1.4 </span>Align Your API With Business
+Objectives</h3>
+<p>An API should either boost pre-existing operations or work toward
+overall company goals in some way. In our eBook <a
+href="http://nordicapis.com/developing-the-api-mindset-private-partner-and-public-apis/">Developing
+the API Mindset</a> we defined a taxonomy of three types of APIs:
+Private, Partner, and Public. Each have their own benefits and potential
+drawbacks. API providers may consider using multiple strategies to
+leverage their API and justify their Return on Investment (ROI).</p>
+<h4 id="part0005.xhtml_leanpub-auto-the-private-api-strategy">The
+Private API Strategy</h4>
+<figure class="image floatleft" style="width: 20%;">
+<img src="Images/image00084.jpeg" style="width: 100%;" />
+</figure>
+<p>Types of industries that flourish using an internal API are ones that
+need their data secured, or ones that wouldn’t profit from distributing
+their data. These businesses greatly benefit from a method of
+streamlining internal operations. For example, banks commonly use
+internal APIs to transfer funds and achieve internal efficiency.</p>
+<p>The <strong>benefits</strong> of a private API may be:</p>
+<ul>
+<li>Streamlines internal operations</li>
+<li>Consolidates distribution channels</li>
+<li>Data is not exposed publicly, boosting security</li>
+</ul>
+<p>Potential <strong>drawbacks</strong> may be:</p>
+<ul>
+<li>Potential revenue streams are not accessible</li>
+<li>Not as many developers are aware that your API exists</li>
+</ul>
+<h4 id="part0005.xhtml_leanpub-auto-the-partner-api-strategy">The
+Partner API Strategy</h4>
+<figure class="image floatleft" style="width: 20%;">
+<img src="Images/image00085.jpeg" style="width: 100%;" />
+</figure>
+<p>Many enterprise applications choose to partner their API with trusted
+partners in large data exchange dealings. Take the <a
+href="http://developer.espn.com/docs">ESPN sports API</a>, for example.
+Their public API was reigned in as it was decreasing the value of their
+primary distribution channel. Now ESPN API integrations are being done
+partner organizations.</p>
+<p><strong>Benefits</strong> of opening up an API for B2B exchange:</p>
+<ul>
+<li>Data is not entirely exposed publicly, retaining security and data
+control</li>
+<li>B2B dealings could potentially produce large revenue and mutually
+beneficial data exchanges</li>
+<li>Spreads assets to reputable, established services with pre-existing
+markets</li>
+</ul>
+<p>Potential <strong>drawbacks</strong> of a sole partner strategy may
+be:</p>
+<ul>
+<li>Some revenue streams are not accessible via open means</li>
+<li>No open developer ecosystem is created, awareness is still
+limited</li>
+</ul>
+<h4 id="part0005.xhtml_leanpub-auto-the-public-api-strategy">The Public
+API Strategy</h4>
+<figure class="image floatleft" style="width: 20%;">
+<img src="Images/image00086.jpeg" style="width: 100%;" />
+</figure>
+<p>The Public API is what we often mean when we talk about web APIs.
+This is a service opened to third-party developers to integrate into
+their apps. Anything from social networks, rideshares, project
+management apps, data processing tools, and more are common areas where
+a service is opened for third party developers to consume in a mutually
+beneficial exchange. With this strategy, the provider may charge usage
+fees, or create a free-to-consume platform to spread brand
+awareness.</p>
+<p><strong>Benefits</strong>:</p>
+<ul>
+<li>Extending a service’s brand to additional apps aids marketing and <a
+href="http://nordicapis.com/3-steps-to-increasing-brand-awareness-with-apis/">awareness</a></li>
+<li>Could produce a profitable ecosystem if developers are willing to
+pay for your service</li>
+<li>Potentially improves experience for more end users</li>
+</ul>
+<p><strong>Drawbacks</strong>:</p>
+<ul>
+<li>Select assets are exposed for public, losing data privatization</li>
+<li>With greater awareness comes greater risk of security threat</li>
+<li>Third-party apps may not be as reputable or established</li>
+<li>Timeline for ROI is increased</li>
+</ul>
+<h3 id="part0005.xhtml_leanpub-auto-select-your-api-business-plan"><span
+class="section-number">1.5 </span>Select Your API Business Plan</h3>
+<p>Estimating financial returns from an API can be difficult to
+perceive. With Public APIs, for example, revenue generation from
+third-party apps can take twice the normal time, as you must wait for a
+second product’s lifecycle to reach sustainable operations and acquire
+end users. In free-to-consume scenarios, the offering may not directly
+generate revenue, but may boost brand awareness that could ultimately
+lead to growth or even help leverage deals within an acquisition.</p>
+<p>John Musser, founder of API Science, believes that “API business
+models are not size fits all,” having identified at least <a
+href="http://www.slideshare.net/jmusser/j-musser-apibizmodels2013">20
+variations in API business models</a> throughout his work in the
+space.</p>
+<p>Tiered subscription, pay as you go, freemium, unit based, revenue
+share - there are many monetization possibilities, and in the end, most
+APIs have a diversified ROI system that fits their service. In the next
+chapter, we’ll discuss ways to monetize your API.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<p><img src="Images/image00087.jpeg" /> For more on API business
+strategy check out <a
+href="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">Developing The API
+Mindset</a></p>
+<p><span id="part0006.xhtml"></span></p>
+<h2 id="part0006.xhtml_leanpub-auto-monetization-models"><span
+class="section-number">2. </span>Monetization Models</h2>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00088.jpeg" style="width: 100%;" />
+</figure>
+<p>Before development, it’s crucial to consider how your API will boost
+overall revenue. This last Analysis Stage chapter guides you to doing
+just that. We offer you the top <strong>5 API monetization
+models</strong> with the hope of helping you, as an API provider, bring
+value to developers and end users, and financially gain from hosting
+your API.</p>
+<h3
+id="part0006.xhtml_leanpub-auto-how-can-you-measure-if-your-api-is-profitable"><span
+class="section-number">2.1 </span>How Can You Measure If Your API Is
+Profitable?</h3>
+<p><a href="https://twitter.com/rzazueta">Rob Zazueta</a> is the <a
+href="http://www.mashery.com/services/strategy-services">director of
+platform strategy at Intel</a>. His team focuses on helping clients
+manage, market, and monetize APIs by identifying strategies to align
+with business objectives. At his talk last October at the 2014 Nordic
+Platform Summit in Stockholm, Zazueta focused on the third tier of
+Intel’s approach: <strong>how to monetize your API.</strong></p>
+<p>According to Zazueta, “The success of an API program is measured by
+how well it moves a business toward its goals.” With everything your
+business does, you must keep an eye on your return on investment. To
+avoid an unsuccessful venture, before API development you need to
+consider common steps toward API monetization and if they apply to your
+situation.</p>
+<p>In order to determine if something is going to be profitable you must
+measure it. Zazueta recommends using a simple Average Revenue Per User
+Model (ARPU) to help decide how to increase revenue, whether by
+increasing price or attracting more users. With any API monetization
+model, you want to compare the ARPU of your API-using customers against
+the ARPU of those who don’t.</p>
+<figure class="image center">
+<img src="Images/image00089.jpeg" />
+</figure>
+<h3
+id="part0006.xhtml_leanpub-auto-api-monetization-trick-1-charge-directly-for-an-api-by-call-or-subscription"><span
+class="section-number">2.2 </span>API Monetization Trick #1: Charge
+Directly for an API, by Call or Subscription</h3>
+<p>This is the most obvious method of monetizing anything - directly
+charging for it. But just because it’s simple to measure doesn’t mean
+it’ll be successful. The strategy works “if your data has the kind of
+value that people want to pay for,” Zazueta says. Before jumping right
+in, you should talk to your customers to see if they’d be willing to pay
+for these services and for how much.</p>
+<p>Direct sales is perhaps the easiest way to sell your API, but Zazueta
+says it could also be the most challenging as it may be difficult for
+your developer audience to see the value of it. He recommends to start
+with a Freemium Model to offer a taste of the data that developers would
+have access to, and hope it leaves them wanting more.</p>
+<h3
+id="part0006.xhtml_leanpub-auto-api-monetization-trick-2-using-api-access-as-a-premium-upsell-opportunity"><span
+class="section-number">2.3 </span>API Monetization Trick #2: Using API
+Access As A Premium Upsell Opportunity</h3>
+<p>This is a trick used in the SaaS world a lot, like with the POS giant
+Salesforce. Adding API access to a Premium subscription offers a strong
+motivator to upgrade to a higher package, as it allows end users to
+customize their experience and workflow more easily. API access is
+usually one of multiple added benefits that come along with subscribing
+to a higher package, making this a tricker monetization model to
+measure. Zazueta offers these attempts to measure this model:</p>
+<ol>
+<li>Compare sale of packages with API included versus those
+without.</li>
+<li>Have your sales team mark “Level of Interest in API” in sales
+notes.</li>
+<li>Measure the number of API calls from users on that Premium
+package.</li>
+<li>Measure ARPU or revenue generated by active API users versus
+non-active ones.</li>
+</ol>
+<p>In addition, you can also measure the subscription renewal rate of
+API users versus those that don’t use this package feature.</p>
+<h3
+id="part0006.xhtml_leanpub-auto-api-monetization-trick-3-drive-revenue-generating-activities-through-your-api"><span
+class="section-number">2.4 </span>API Monetization Trick #3: Drive
+Revenue-Generating Activities Through Your API</h3>
+<p>This model takes the most effort to track because it often supports
+indirect revenue. Depending on the situation, it could be the API
+monetization method most applicable to your overall business goals.</p>
+<p>For example, email marketing software is often monetized by the email
+sent, but APIs are used to filter contacts automatically from a customer
+relationship management software (CRM). Without the contacts, you can’t
+send the emails, which is why tracking the number of contacts that come
+in through the API is an excellent way to prove its value. Plus you can
+compare if users with the API send more emails— which affects revenue—
+than those users without the API.</p>
+<p>Another method is to track if your application is actually driving
+leads. If you sign a pay-per-lead (PPL) agreement with a customer, you
+can track that lead via your CRM. For both of these, tracking can be
+complex if more than one third-party application is integrated, meaning
+increasingly granular measurements need to be made.</p>
+<h3
+id="part0006.xhtml_leanpub-auto-api-monetization-trick-4-increase-distribution-through-strategic-partners"><span
+class="section-number">2.5 </span>API Monetization Trick #4: Increase
+Distribution Through Strategic Partners</h3>
+<p>In the SaaS world, integrating your API with a strategic partner has
+the potential to open your API to entire pre-established markets. This
+enables you to market your brand to a broader audience to attract more
+potential customers. For example, PayPal and Stripe allow services and
+sellers to use their API because it offers an easy way to get paid, and,
+of course, the more transactions, the more money these popular payment
+services earn.</p>
+<p>This strategy can also aid in user retention. If your customers also
+have a subscription with your strategic integration partner, they are
+less likely to disrupt their workflow by leaving either of you. There is
+no questioning the value of these strategic partnerships for the
+consistently demanding end user, who can now build a customized workflow
+out of the integrated cloud tools now available. Plus, these type of
+integrations are on the rise:</p>
+<p>“We see the rise of best-in-breed solutions as the next natural
+progression,” said senior vice president of product at <a
+href="http://zendesk.com">Zendesk help desk software</a>, Adrian
+McDermott. “If the Internet is the platform, then the need to be
+integrated by a single provider becomes obsolete - multiple
+best-in-breed solutions can run seamlessly via the Internet, without
+needing to be overseen by one organization.”</p>
+<p>It’s important with strategic partnerships to create a mutually
+beneficial shared data agreement. You want to know how much your API is
+helping their business, and similarly, they want to know the effect of
+their product on yours.</p>
+<h3
+id="part0006.xhtml_leanpub-auto-api-monetization-trick-5-improve-operational-efficiency-and-decrease-time-to-market"><span
+class="section-number">2.6 </span>API Monetization Trick #5: Improve
+Operational Efficiency and Decrease Time to Market</h3>
+<p>“Well-built, well-designed APIs help you build applications faster.
+It helps you innovate faster. More importantly, it helps you fail
+faster,” Zazueta says. “If you build a well-built API that’s secure and
+properly managed… and you treat that internally focused audience as your
+customers, you can actually get all kinds of great benefits.” Zazueta
+says that he’s seen internal processes in companies speed up from a
+couple months to a couple hours, solely because of the efficiency gained
+from an API.</p>
+<p>Some additional benefits from using an internal API include:</p>
+<ul>
+<li>Faster customer onboarding</li>
+<li>Deeper access into data</li>
+<li>Tighter control over development</li>
+<li>Faster application building</li>
+<li>Faster testing of an application’s revenue potential</li>
+</ul>
+<p>Internal APIs also suit the lean start-up model, where you produce
+and release to market as quickly as possible. As this is the case, if
+the API isn’t so valuable, your organization hasn’t wasted a lot of time
+and resources implementing it - you’re able to pivot rapidly.</p>
+<p>Since this is an internal benefit, you don’t use the ARPU to measure
+it. You start by measuring the time it took to build and introduce a
+certain function before the API and after. You can also turn that into
+dollars by way of the manpower needed. Of course, before making this
+move, you need to make sure that it won’t take excessive effort and
+resources to design and start using the API within your internal
+systems. Review the existing processes before considering implementing
+this one.</p>
+<h3
+id="part0006.xhtml_leanpub-auto-mix-match-measure-models-of-api-monetization"><span
+class="section-number">2.7 </span>Mix, Match, Measure Models of API
+Monetization</h3>
+<p>The reality is that your API monetization technique may involve an
+assortment of these models. Perhaps none are perfect for your particular
+situation, but it’s very likely that a couple of these API monetization
+tricks will work to help generate revenue. As always, build what will
+work for you.</p>
+<p>“The goal here is to build a successful API program that moves the
+business toward its goals,” Zazueta says. “And a program that’s not
+gonna do that won’t be successful for long.” You might be using one or
+more models already, but it won’t matter until you measure its
+success.</p>
+<h3
+id="part0006.xhtml_leanpub-auto-your-api-monetization-checklist"><span
+class="section-number">2.8 </span>Your API Monetization Checklist</h3>
+<p>We created this checklist to make it easy for you to figure out if
+you are able to monetize your API quickly. A <em>Yes</em> or a
+<em>Maybe</em> is certainly worth considering:</p>
+<ol>
+<li>Are you able to profit from charging for your API directly?</li>
+<li>Can giving access to your API be an upsell opportunity?</li>
+<li>Are there ways to drive revenue indirectly through your API?</li>
+<li>Do you have opportunities to make strategic API partnership?</li>
+<li>Can an API improve operational efficiency and decrease time to
+market?</li>
+</ol>
+<p>Then, as you implement an API monetization strategy there are two
+questions to constantly keep on your mind:</p>
+<ul>
+<li>Are you measuring Average Revenue Per User (APRU) throughout each
+possible API-related revenue source?</li>
+<li>Are you comparing this APRU with the APRU of customers who don’t use
+your API?</li>
+</ul>
+<p>As with anything, make sure that your API monetization strategy is
+directly in line with your business objectives. If it’s clearly not,
+don’t waste your time.</p>
+<p><span id="part0007.xhtml"></span></p>
+<div>
+<h2
+id="part0007.xhtml_leanpub-auto-understandig-your-target-api-consumer"><span
+class="section-number">3. </span>Understandig Your Target API
+Consumer</h2>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00090.jpeg" style="width: 100%;" />
+</figure>
+<p>Consumer profiling that is a necessary first step for any business
+venture. For this chapter we cover strategies that help understand your
+target user within the specific context of APIs.</p>
+<h3
+id="part0007.xhtml_leanpub-auto-a-response-to-increased-consumer-diversity"><span
+class="section-number">3.1 </span>A Response to Increased Consumer
+Diversity</h3>
+<p>Within any economy showing such exponential growth, the
+<strong>diversity</strong> of its players will naturally increase as the
+market evolves. It’s a fact that the API space is becoming increasingly
+diverse — it’s not the old days where a few independent developers
+created mashups for fun. APIs have entered <a
+href="http://nordicapis.com/apis-are-evolving-the-b2b-landscape-2/">large
+business dealings</a>, gained the attention of <a
+href="http://blog.apiary.io/2015/05/03/The-Role-of-the-API-Designer/">enterprise-level
+product designers</a>, led to the creation of <a
+href="http://www.betaboston.com/news/2014/07/03/uber-mobile-app-cloud-service-api/">multi-billion
+dollar startups</a>, influenced <a
+href="http://nordicapis.com/apis-part-of-the-creative-palette/">creative
+marketing campaigns</a>, and more.</p>
+<p>So, with all this new interest from varying audiences, API providers
+may be asking: <strong>who are we selling to?</strong></p>
+<p>At Nordic APIs, we’ve tracked the explosion of this innovation,
+watching as new players step up to play ball — either connecting or
+striking out in deprecation. <a
+href="http://nordicapis.com/what-is-the-future-of-the-api-space/">With
+more and more consumers entering the API space</a>, it’s now more
+important than ever to consider the large breadth of
+<strong>specializations</strong> amongst third party developers. These
+factors take the form of:</p>
+<ul>
+<li>varying technical understanding</li>
+<li>different industry backgrounds</li>
+<li>geographical location</li>
+<li>online activity</li>
+<li>API use cases</li>
+<li>protocol preferences</li>
+<li>programming language preferences</li>
+<li>…and more.</li>
+</ul>
+<p><a href="https://twitter.com/mikekelly85">Mike Kelly</a> runs <a
+href="http://stateless.co/">Stateless.co</a>, an API strategy consulting
+firm based in London. He describes the wide breadth of developers
+currently in the space:</p>
+<blockquote>
+<p>“There are of course broad categories such as system integrators,
+mobile, web, embedded systems. In reality there are innumerable forms of
+developers each with their own set of constraints and requirements,
+which is why developing a set of realistic developer personas is
+important.”</p>
+</blockquote>
+<h3
+id="part0007.xhtml_leanpub-auto-why-create-a-developer-persona"><span
+class="section-number">3.2 </span>Why Create a Developer “Persona”?</h3>
+<p>Traditional business models necessitate a process of consumer
+profiling. The same can be done in a way that makes sense for this niche
+API sector. Intimately understanding your target consumer is crucial as
+it will influence the following:</p>
+<ul>
+<li><strong>Market Fit</strong>: Knowing your consumer can help you
+discover unmet needs in the market your API could potentially
+satisfy.</li>
+<li><strong>Functionality</strong>: Understanding use cases can help
+design API functions around that need.</li>
+<li><strong>Segmentation</strong>: Knowing your user can help segment
+marketing efforts and decrease customer acquisition cost.</li>
+<li><strong>Creative Marketing</strong>: Knowing what your audience is
+interested in will help tailor your marketing to this audience,
+influencing your message, tone, appearance, design, style, and more to
+attract your target audience.</li>
+</ul>
+<p>Kelly goes on to mention the importance of establishing developer
+personas is that they establish an important <strong>frame of
+reference</strong>:</p>
+<blockquote>
+<p>“If you’re unable to clearly describe your target customers and their
+use cases for your API, that usually indicates that the underlying
+proposition is not focused enough. Likewise, if you’re unable to clearly
+determine how a proposed feature provides immediate value to one of your
+personas, that is a strong indicator that it doesn’t belong on the
+roadmap yet…I’m a huge fan of any methodology that encourages
+approaching the strategy and design of an API by focusing on the client
+side, rather than the server side.”</p>
+</blockquote>
+<h3 id="part0007.xhtml_leanpub-auto-the-developer-brain"><span
+class="section-number">3.3 </span>The Developer Brain</h3>
+<figure class="image floatleft" style="width: 30%;">
+<img src="Images/image00091.jpeg" style="width: 100%;" />
+</figure>
+<p>‘Know your demographic.’ ‘Understand the <strong>psychology</strong>
+of your consumer.’ We hear phrases like this frequently in general
+business discussion. Is it possible to apply the same philosophy to
+marketing APIs?</p>
+<p>Developers are not your average consumer. In a conversation with
+Nordic APIs, General Manager <a
+href="https://twitter.com/catchyjason">Jason Hilton</a> of <a
+href="http://catchyagency.com/">Catcy Agency</a>, an international
+developer program management outfit, pinpointed the following
+attributes. The developer brain is naturally
+<strong>analytical.</strong> They appreciate
+<strong>authenticity</strong>. And in a sea of competing tools with
+rampant overzealous marketing, they have the right to be
+<strong>skeptical</strong>. A web developer especially wants to pick up
+and play with a product, expecting an <strong>instant proof</strong>
+that it behaves as advertised.</p>
+<p>Take these generalizations as you will, but they’re worth to consider
+when developing a marketing message and story applicable to this certain
+audience. Both content and aesthetics can either incorporate or alienate
+depending on their execution. Creating a developer portal, for example,
+should, in response to our brief psychological examination, be
+intuitively designed, with <strong>transparent</strong> information, an
+<strong>attractive layout</strong>, and <strong>interactive</strong>
+modules that allow one to test API calls.</p>
+<h3
+id="part0007.xhtml_leanpub-auto-but-plenty-of-other-people-are-interested-in-apis-too"><span
+class="section-number">3.4 </span>But Plenty of Other People Are
+Interested in APIs, Too!</h3>
+<p><a href="http://andreaskrohn.se/">Andreas Krohn</a> of Dopter urges
+us to consider a wider scope with API marketing and evangelism. Instead
+of focusing so heavily on developers, API providers should create more
+inclusionary <em>customer</em> personas.</p>
+<blockquote>
+<p>“I strongly dislike how developers are worshipped in marketing”</p>
+</blockquote>
+<p>In his work at <a href="https://twitter.com/dopterse">Dopter</a>, an
+API strategy and consulting firm, Krohn routinely encounters providers
+that want to create hackathons to reach out to <em>developers</em> to
+promote their APIs. Though that can be an effective strategy, <em>are
+developers really the sole audience that may be interested in APIs?</em>
+The truth is that designers, entrepreneurs, marketers, and other
+business leads are just as important constituents to consider when
+marketing an API.</p>
+<p>Krohn believes we naturally target developers for the following
+reasons:</p>
+<ol>
+<li>APIs are technical.</li>
+<li>Developers relate to other developers.</li>
+<li>Influence of Silicon valley.</li>
+<li>Myth of the single developer.</li>
+</ol>
+<p>Though many people that are aware of APIs are developers, not
+<em>everyone</em> is a developer. We must remember that the world is
+bigger than the Silicon Valley. Just as the average smartphone user can
+brainstorm innovative app ideas without needing to know how to code,
+there is a similar low bar that allows anyone to understand the
+possibilities APIs offer to then envision creative applications. In a
+company, products are developed by large teams — entrepreneurs, project
+managers, designers, etc. Developers are crucial to any software
+process, but in reality, a diverse array of experiences contribute to
+innovation in the space.</p>
+<h3
+id="part0007.xhtml_leanpub-auto-expanding-our-portal-end-user-evangelism"><span
+class="section-number">3.5 </span>Expanding our Portal: End User
+Evangelism</h3>
+<p>If we incorporate a wider audience into our understanding of their
+target API consumer, how does that change the way an API is
+marketed?</p>
+<p>Krohn encourages us to remember that <em>real</em> value is only
+created when an <strong>end user</strong> uses the app that’s created
+with the API. And who creates that experience? Entrepreneurs may create
+the product, managers oversee production, designers envision the user
+experience, developers connect the backend, and other domain experts may
+contribute. All these stakeholders intimately understand the value of
+API integrations, and thus all their perspectives and
+<strong>needs</strong> should be considered.</p>
+<p>Think of standard web API portals as they are now. Can entrepreneurs
+immediately discern the <strong>end user value</strong> when they view
+API documentation? More often than not, their needs are excluded. There
+is a lack of high-level summary and sample use cases to inspire
+non-technical minds — this experience is often non-existent.</p>
+<p>Krohn believes that developer evangelism should rather be end user
+evangelism. As Krohn says, “be aware of who you are including or
+excluding, and make it a conscious decision.” Think you know your target
+audience? that may soon change.</p>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00092.jpeg" style="width: 100%;"
+alt="As the API space increases in diversity, more and more attributes make up the developers using them" />
+<figcaption aria-hidden="true">As the API space increases in diversity,
+more and more attributes make up the developers using them</figcaption>
+</figure>
+<h3 id="part0007.xhtml_leanpub-auto-varying-industry-backgrounds"><span
+class="section-number">3.6 </span>Varying Industry Backgrounds</h3>
+<p>With the recent rise of B2B and enterprise interest, should API
+providers be selling to individual developers? Or is it a better idea to
+seek out business partnerships directly? The way APIs are marketed and
+consumed varies tremendously on the <strong>industry</strong>. API
+providers may range from a two person startup to an enterprise
+development team spanning hundreds of employees. The same diversity is
+present on the consumer end, affecting the way APIs are acquired. The
+core value message also changes based on whether the API is directed
+toward startups, engineers in a large organization, or toward convincing
+upper leadership. We can begin by separating the consumer side of the
+API space into two distinct groups:</p>
+<ul>
+<li><strong>Enterprise Developers</strong>: Developers working within a
+large organization. The challenge faced here is that they may not be the
+decision maker. Working on the inside, means they must make the case
+upwards, involving multiple parties and potentially creating a longer
+decision making process.</li>
+<li><strong>Freelance Dev Shop</strong>: These are small startup teams
+looking for helpful API integrations to accell their product.</li>
+</ul>
+<p>According to Jason Hilton of Catchy Agency, industry variance mean
+it’s “It’s worth applying specific techniques and strategies. Just as
+much energy and consideration needs to be put into marketing a developer
+program as with any other product.”</p>
+<h3 id="part0007.xhtml_leanpub-auto-api-use-cases"><span
+class="section-number">3.7 </span>API Use Cases</h3>
+<p>API providers must imagine the API’s <strong>use case</strong> in the
+wild. Why would someone want to use your API? Providers should consider
+the possibilities the data offers and brainstorm
+<strong>applications</strong> that could be created using the API. Kelly
+believes this process will help identify consumer needs:</p>
+<blockquote>
+<p>“The key to a good persona is in establishing concrete user scenarios
+and stories…You need to understand the needs of your customer before
+deciding what to offer them.”</p>
+</blockquote>
+<p>This process also involves considering the <strong>business
+model</strong> of the product that will be created using the API. Hilton
+notes that “the business model of the API is important — we know that
+serious developers will monetize either through paid apps, or carrying
+ads. Trying to get the developer of a paid app to implement an ad API is
+pointless.”</p>
+<h3 id="part0007.xhtml_leanpub-auto-lessen-the-corporate-branding"><span
+class="section-number">3.8 </span>Lessen The Corporate Branding</h3>
+<p>Marketing, relations, outreach — typical B2B sales motives, labels,
+and tactics may conjure up negative connotations. At times, enterprise
+clientele may need to lessen the corporate branding to appeal to the
+tech community. Within the tech community the Evangelist job function is
+now more commonplace than ever. Alternative roles like “evangelist” or
+“developer advocate” help communicate a <strong>true passion</strong>,
+and <a
+href="http://timoelliott.com/blog/2013/07/how-to-become-a-technology-evangelist.html">having
+a passion, and a true conviction for what you are promoting</a> will win
+the day. The lesson of 2015, according to the Catchy team, is that “If
+you have a developer evangelist, you have a dev program.”</p>
+<h3 id="part0007.xhtml_leanpub-auto-developer-experience"><span
+class="section-number">3.9 </span>Developer Experience</h3>
+<p>The presentation of developer facing material is paramount to success
+in the space. API providers can use tactics to help acquire developers,
+increase onboarding efficiency, and maintain user retention by appealing
+to the tastes and needs of the audience. Stellar reasoning behind
+creating quality developer experience can be found in John Musser’s “<a
+href="http://www.slideshare.net/jmusser/ten-reasons-developershateyourapi">10
+Reasons Why Developers Hate Your API</a>.” Harking back to Andreas
+Krohn’s stance on the need for increased inclusion, API experience
+should also consider the entrepreneur experience, the manager
+experience, and the designer experience. In that spirit, embrace
+developer language, but also cater content, <strong>appearance</strong>,
+UI, and UX to your audience. According to Kelly, “developer experience
+is the most important metric of quality for an API. It’s vital.”</p>
+<h3 id="part0007.xhtml_leanpub-auto-build-it-and-they-will-"><span
+class="section-number">3.10 </span>Build it And They Will _____</h3>
+<p>Simply opening a platform up without having a intimate knowledge of
+your consumer will not work in this sector. Product teams within
+technology companies often assume the product will be used, but too
+often, marketing is either too slim or inefficient, leading to a low
+adoption.</p>
+<p>Perform the necessary research to find who your consumer <em>really
+is</em>. Who is the key influencer that can communicate the value of
+your API? It comes down to knowing the needs of this audience, and this
+requires thorough analysis before development should begin.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<aside class="generic_inbar blurb refresh">
+<h2 id="part0007.xhtml_leanpub-auto-next-steps">Next Steps:</h2>
+<p>The excitement surrounding APIs should not discourage critical
+examination into a smart and applicable strategy for your organization.
+Whatever the chosen API strategy is, it’s mission statement, usage
+projections, <a
+href="http://nordicapis.com/achieve-accelerated-growth-apis/">model for
+growth</a>, marketing strategy, and estimated <a
+href="http://nordicapis.com/5-ways-apis-will-increase-revenue/">financial
+return</a> should be clearly laid out before production begins.</p>
+<p>Large organizations may find the creation of a whole department
+necessary to respond to new customer concerns from an entirely new
+API-consumer base. Therefore, within the <strong>Analysis
+Stage</strong>, you must allocate resources for development, and
+anticipate creating support lines for marketing, hosting, customer
+support, and maintenance. If you’ve done the necessary preparation, it’s
+time to move to the <strong>Development Stage</strong>.</p>
+<ol>
+<li><a href="#part0004.xhtml_Analysis">Analysis Stage</a></li>
+<li><a href="#part0008.xhtml_Development">Development Stage</a></li>
+<li><a href="#part0011.xhtml_Operations">Operations Stage</a></li>
+<li><a href="#part0014.xhtml_Retirement">Retirement Stage</a></li>
+</ol>
+</aside>
+</div>
+<p><span id="part0008.xhtml"></span></p>
+<h1 id="part0008.xhtml_Development"><span class="section-number">II
+</span>Development Stage</h1>
+<figure class="image center">
+<img src="Images/image00093.gif" />
+</figure>
+<p>Arguably the most important action in the API lifecycle phase is
+implementing the API and bringing it to life. Read on to learn more
+about this process and to understand what factors contribute to choosing
+the best combination of standards, designs, and programming languages
+for your API.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<p><span id="part0009.xhtml"></span></p>
+<h2 id="part0009.xhtml_leanpub-auto-constructing-your-api"><span
+class="section-number">4. </span>Constructing Your API</h2>
+<p>This chapter covers the actions to take as well as the most important
+challenges to address during an API’s <strong>Development</strong>
+phase. We’ll consider what implementation options are available and
+explore API Management and why it matters. We’ll define <a
+href="http://nordicapis.com/why-api-developer-experience-matters-more-than-ever/">API
+Usability and why it’s important</a>, and we’ll consider what immediate
+steps to take after your API is deployed.</p>
+<h3
+id="part0009.xhtml_leanpub-auto-things-to-consider-during-implementation"><span
+class="section-number">4.1 </span>Things to Consider During
+Implementation</h3>
+<p>At this point you should have a <a
+href="http://nordicapis.com/api-lifecycle-analysis-stage-preparing-your-api-strategy-pre-launch/"
+title="API Lifecycle Analysis Stage: Preparing Your Prelaunch API Strategy">well-defined
+API business strategy and documentation</a>. This includes defining who
+your main API stakeholders are going to be, and deciding how the API
+will be consumed. By this point you should have answers to the following
+questions:</p>
+<ul>
+<li><strong>What value</strong> is the API providing? Is it a means to
+distribute data or does it offer specific functionality that can be used
+to build apps?</li>
+<li><strong>Who will consume</strong> the API? Are consumers interacting
+with your API to get access to data or are they consuming it on behalf
+of other users?</li>
+<li><strong>How many consumers</strong> will the API have? Is it a
+private API consumed internally or is it going to be available to
+potentially millions of consumers?</li>
+</ul>
+<p>Answering these questions will help you cut corners during the
+implementation process. Let’s start with understanding what you are
+trying to enable with your API so that you can define which methods and
+protocols you’re going to use.</p>
+<h4 id="part0009.xhtml_leanpub-auto-methods-and-protocols">Methods and
+Protocols</h4>
+<p>The best way to define methods and endpoints for your API is to
+follow the functionality you’d like to provide and choose the most
+appropriate standards and protocols. Identify what type of data
+manipulation your main API consumers usually have available.</p>
+<p>If your main consumers are mobile apps, consider offering endpoints
+that ask for and respond with as little information as possible. This is
+to prevent large bandwidth consumption and speed up operations that
+involve calls to your API. If, by contrast, you’re offering an API that
+will mostly be consumed by the financial market, carefully study what
+frameworks they’re using and how they communicate with external
+APIs.</p>
+<p>Whatever you do, we recommend not to follow the very latest trends
+presented as “the future.” Trends can and will change many times before
+they stabilize and become widely adopted, and your API will have to keep
+up with this market fluctuation. Determine what 80% of your target
+audience is using and offer that.</p>
+<h4 id="part0009.xhtml_leanpub-auto-sdk-programming-languages">SDK
+Programming Languages</h4>
+<p>Choosing how you’ll offer access to your API is directly related to
+how your API will be consumed. Will it mainly be consumed by mobile app
+developers? Then offer ready-to-use mobile SDKs. Brainstorming your
+potential API use cases is the first step in choosing how your SDK will
+be packaged.</p>
+<p>If you’re not 100% sure about how your API will be used you can
+always offer an SDK in several popular programming languages. <a
+href="https://www.algolia.com/" title="Algolia">Algolia</a>, a search
+engine API, is following this approach by offering an easy way to use
+their service in languages such as Ruby, Python, Node, PHP or
+Objective-C. Be aware though that maintaining a large number of SDKs is
+not an easy task as your API evolves and methods change. <a
+href="https://apimatic.io/" title="APIMATIC">APIMATIC</a> and <a
+href="http://restunited.com/" title="REST United">REST United</a> are
+two services that offer automatic SDK generation. With these tools,
+whenever your API changes you can rerun the SDK generation to make fresh
+code versions available to your consumers.</p>
+<h3 id="part0009.xhtml_leanpub-auto-api-management"><span
+class="section-number">4.2 </span>API Management</h3>
+<p>After you implement your API endpoints and decide how consumers will
+interact with your API, you must consider ongoing operations. The most
+important factors are controlling your API access conditions and
+determining how to behave in usage peaks. You can follow a DIY approach
+or use an API management service such as <a
+href="http://www.3scale.net/" title="3scale">3scale</a> or <a
+href="https://apigee.com/" title="Apigee">Apigee</a>.</p>
+<p>Whatever solution you choose, remember that you’ll become tied to the
+way it works. Carefully define long term objectives as well as common
+scenarios you want to address. If you choose a solution that doesn’t
+offer what most of your API consumers use, then you’ll likely be forced
+to pivot in the long term.</p>
+<h4 id="part0009.xhtml_leanpub-auto-access-control">Access Control</h4>
+<p>One of the most important aspects of API Management is defining and
+automating the process of <a
+href="http://nordicapis.com/building-a-secure-api/">controlling who can
+access your API</a> and what measures are in place to enable access
+limitation, if needed.</p>
+<p>Most API Management platforms provide some sort of access control
+features, including API call limit rating and consumer differentiation
+with the help of different paid plans. The very first access control
+feature to look for is how your API will authenticate and authorize
+consumers.</p>
+<p>There are several options depending on what kind of consumers you’ll
+have and what kind of usage will occur:</p>
+<ul>
+<li><strong>API keys</strong>: The most simple way to control access to
+your API. Usually you’ll have to issue one API key for each consumer and
+identification will be provided through an <code>HTTP</code> header on
+each and every call.</li>
+<li><strong>OAuth 2</strong>: Perhaps the most popular authorization
+standard used by Web APIs. OAuth 2 lets you combine token-based
+authentication with fine-grained access control based on user scopes.
+This is the best solution whenever API consumers are making calls on
+behalf of other users.</li>
+<li><strong>Origin IP address</strong>: This can be combined with other
+access control methods or used on its own. Using it alone is done in
+cases where you’re providing an API to a very limited audience. To
+achieve better results you should also add origin information to your
+logs and usage analytics.</li>
+</ul>
+<p>Whatever access control strategy you choose, always remember that it
+must accommodate your API’s most popular use cases. As an example, it
+doesn’t make sense to use a simple API key based authentication if your
+main API usage is through a mobile app. In this case it would make sense
+to use OAuth and let the mobile app act on behalf of its users.</p>
+<h3 id="part0009.xhtml_leanpub-auto-maintenance"><span
+class="section-number">4.3 </span>Maintenance</h3>
+<p>While launching your API can be an exciting challenge, keeping it up
+and running is often seen as something boring. API maintenance is often
+delegated to a second plan and only considered after things start to go
+wrong. Don’t follow this path; implement a good maintenance plan from
+the start.</p>
+<p>The usual activities around maintaining your API are related to <a
+href="http://nordicapis.com/using-templates-for-documentation-driven-api-design/">documentation</a>,
+communication with consumers and proactively understanding if something
+is not working as expected. As such, a big part of maintenance is done
+by periodically testing your API to make sure that everything is working
+as documented.</p>
+<h4 id="part0009.xhtml_leanpub-auto-testing">Testing</h4>
+<p>One way to proactively understand if your API is performing according
+to the documentation you provide and following your quality-of-service
+is to <a href="http://nordicapis.com/api-design-testing-state-art/"
+title="API Design &amp; Testing State of the Art">run periodic tests</a>
+against individual endpoints. With monitoring in place, if any of the
+tests fail, you can hopefully fix the error before your consumers
+experience problems. These types of tests can be performed on your
+API:</p>
+<ul>
+<li><strong>Performance-oriented</strong>: These are tests that make
+individual calls to each and every method your API provides. If a
+response takes longer than a specified time limit, it means that there’s
+a problem on that specific endpoint.</li>
+<li><strong>Functional testing</strong>: This type of testing works by
+making singular calls to each API method to thoroughly test every API
+function, using different kinds of payloads, or even sending data that
+will produce errors. Responses are then compared to the expected
+behavior to locate errors.</li>
+<li><strong>Use case testing</strong>: This is a more sophisticated type
+of test and can be achieved by combining calls to different endpoints
+into a single test. Each test should expect a specific response and
+execution time limit.</li>
+</ul>
+<p>There are several tools that can help you run API tests periodically
+in an automated fashion. <a href="http://www.getpostman.com/"
+title="POSTMAN">POSTMAN</a>, for example, is a <a
+href="https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop?hl=en"
+title="POSTMAN">Chrome app</a> that lets you run all the tests mentioned
+above. There is also the <a
+href="http://smartbear.com/product/alertsite-uxm/capabilities/monitor-apis/">SmartBear</a>
+suite of API monitoring tools. If you’re looking for something more
+SaaSy you can try <a href="https://www.runscope.com/"
+title="Runscope">Runscope</a>, a service that periodically runs tests
+and reports on their results. Other helpful API monitoring solutions
+include <a href="http://apimetrics.io/">APImetrics</a> and <a
+href="https://www.apiscience.com/" title="API Science">API
+Science</a>.</p>
+<h4 id="part0009.xhtml_leanpub-auto-managing-changes">Managing
+Changes</h4>
+<p>Even if everything is working as expected, sometimes you’ll need to
+introduce changes to your API. When this happens, consider the impact on
+your consumers and internal systems by:</p>
+<ul>
+<li><strong>Informing consumers about changes</strong>: Establish a
+clear communication channel between you and developers using your API to
+inform them of changes in a transparent fashion.</li>
+<li><strong>Keeping compatibility with previous versions</strong>:
+Ensure that any introduced change doesn’t break what was already
+working. Remember that your API consumers may not be able to update
+their systems immediately.</li>
+<li><strong>Minimizing downtime</strong>: Don’t bring systems to a halt
+— even momentarily. Your build and deployment processes should guarantee
+that API changes won’t affect API calls and functionalities. API
+downtime might create downtime or loss of quality on the consumer side,
+so keep it to an absolute minimum.</li>
+</ul>
+<p>Downtime can be minimized by following a <a
+href="http://en.wikipedia.org/wiki/Continuous_integration">Continuous
+Integration</a> approach and testing your code thoroughly before
+deploying. Making sure that there are no breaking changes can be
+achieved by following a sound API versioning strategy. If you offer and
+maintain different versions of your API, consumers won’t feel the
+changes on the version they’re using. A helpful solution that bridges
+the gap between API doc changes and the consumer is the <a
+href="https://www.apichangelog.com/">API Changelog</a>, a tool that
+automatically discovers changes to your API documentation and informs
+subscribers.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00094.jpeg" style="width: 100%;" />
+</figure>
+<p>Check out our <a href="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">Winter
+Collection eBook</a> as well - a collection of our best advice from the
+2014-2015 winter season</p>
+<p><span id="part0010.xhtml"></span></p>
+<div>
+<h2 id="part0010.xhtml_leanpub-auto-design-tips"><span
+class="section-number">5. </span>12 Design Tips</h2>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00095.jpeg" style="width: 100%;" />
+</figure>
+<p>During the <a
+href="http://nordicapis.com/tour/nordic-apis-world-tour-2015/">Nordic
+APIs World Tour</a>, expert API practitioners shared their insights with
+attendees at four international cities, touching on API development,
+security, design, operations, and more during intimate conference
+settings.</p>
+<p>A recurring theme in many talks was <strong>API Design</strong>. So,
+in this chapter, we’ll sum up important API design lessons that were
+conveyed by our speakers and then add some of our own — both practical
+tips on technical implementation, as well as more more philosophical
+considerations on how to hide (or not hide) complexity when designing an
+API.</p>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-know-your-api-requirements">1: Know
+Your API Requirements</h3>
+</aside>
+<p>API design should not begin with technical documentation, but should
+rather originate from your fundamental goals. Knowing what your API
+needs to accomplish is of the highest importance. This is defined in the
+<a
+href="http://nordicapis.com/api-lifecycle-analysis-stage-preparing-your-api-strategy-pre-launch/">analysis
+phase of the API lifecycle</a>.</p>
+<p>As Phillipp Schöne from <a href="https://www.axway.com/">Axway</a>
+pointed out, API designers should ask “<em>how APIs can support the
+business function and not how they can support the needs of
+IT</em>.”</p>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-think-of-apis-as-building-blocks">2:
+Think of APIs as Building Blocks</h3>
+</aside>
+<p>It’s important to remember the unique characteristics of APIs. As a
+consumer, tying into a service’s underlying data or functionality is
+inherently a unique process. Though comparable to SaaS products, <a
+href="https://twitter.com/andreaskrohn">Andreas Krohn</a> from <a
+href="http://dopter.se/">Dopter</a> highlights two key differences:</p>
+<p>The first is that <strong>APIs are building blocks</strong> and not
+finished products: “<em>If somebody is using your API they are basically
+outsourcing a part of their business to you</em>”.</p>
+<p>His second lesson is that <strong>machines are not flexible</strong>.
+If a SaaS product changes, a person can adapt, but if an API changes, a
+machine is not as adaptable. This influences the design and the whole
+lifecycle of the API, and affects how we prepare for parameter changes
+and versioning.</p>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-learn-from-user-feedback">3: Learn
+From User Feedback</h3>
+</aside>
+<p>The need to understand your audience is applicable throughout the
+entire lifecycle. If you are updating, versioning, or performing major
+redesigns on an existing API, you need to carefully respond to the
+<strong>feedback</strong> from your users to make the new version as
+good as possible.</p>
+<p><a href="http://nordicapis.com/speakers/marjukka-niinioja/">Marjukka
+Niinioja</a>, Senior Consultant and Manager at <a
+href="http://www.planmill.com/">PlanMill</a> shares her experience with
+leveraging user feedback during a major redesign: developing PlanMill’s
+new <a href="http://www.planmill.com/planmill-rest-api-1-5/">RESTful
+API</a>, UI, and back-end architecture.</p>
+<p>PlanMill payed close attention to the feedback they were receiving
+internally, noticing three main recurring points:</p>
+<ol>
+<li>The API was too complex for the developers to use.</li>
+<li>The documentation was not sufficient.</li>
+<li>The error handling needed work.</li>
+</ol>
+<p>Using this feedback, and by testing and consuming the API themselves,
+the PlanMill team was able to hone in on important aspects to consider
+during redeployment. The takeaway is that if you are redesigning an API,
+you are poised to release killer API improvements — as you already have
+<strong>real world data on how API functionality is used</strong>, which
+can be repurposed to improve efficiency and overall API user
+experience.</p>
+<aside class="tip blurb">
+<h3
+id="part0010.xhtml_leanpub-auto-decrease-confusion-for-the-user-let-provider-handle-complexity">4:
+Decrease Confusion For The User, Let Provider Handle Complexity</h3>
+</aside>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00096.jpeg" style="width: 100%;" />
+</figure>
+<p>Who pays the price for complexity? Nordic APIs veteran <a
+href="https://www.linkedin.com/in/ronniemitra">Ronnie Mitra</a> of <a
+href="https://twitter.com/mitraman">API Academy</a> argues that
+complexity is necessary — what should be avoided instead is confusion.
+Mitra contends “<em>it is a designers job to reduce confusion and
+embrace complexity in their business domain</em>.”</p>
+<p>There has been a move toward simpler products and simpler interface
+designs. Mitra, an expert in developer experience and API design,
+advocates for smartly designed software and APIs that retain simplicity
+but also cater to complex requirements. Quoting John Maeda’s Laws of
+Simplicity, Mitra notes that “<em>Simplicity is about subtracting the
+obvious and adding the meaningful</em>.”</p>
+<p>A steering wheel in a F1 car is very complex compared to the steering
+wheel of a normal car, “<em>designed and optimised for its user and the
+situation</em>”. Ronnie makes a great point that “<em>every design
+decision is a decision of if you</em> [as an API provider] <em>or client
+app developers will pay the price of complexity</em>”. As an example,
+OAuth is complex to implement by the service provider but easy to use by
+the client developer. We cannot avoid complexity, but we can architect
+our APIs so that the user-facing side is deceptively simple.</p>
+<p><a href="https://twitter.com/gssor">Ross Garrett</a> from Axway also
+talks about what applying an API-first strategy means for enterprise
+organizations. In dealing with legacy systems, he notes that a missmash
+of tangled infrastructure can be masked by using proper API management
+tactics.</p>
+<blockquote>
+<p>“Your old architecture [may not have] useful APIs, or may be older
+SOAP services that don’t perform well in the context of mobility or
+cloud integration. Some legacy things need to remain, but API management
+can extend and reuse by translating all old interfaces.” What’s
+important is having a clean business appearance for the end user.</p>
+</blockquote>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-use-hypermedia-for-evolvability">5:
+Use Hypermedia For Evolvability</h3>
+</aside>
+<p>It is impossible to talk about API design without mentioning
+Hypermedia, a subject that came up in several presentations during the
+<a href="http://nordicapis.com/tour/nordic-apis-world-tour-2015/">Nordic
+APIs World Tour 2015</a>. <a
+href="http://www.twitter.com/pmhsfelix">Pedro Felix</a> of <a
+href="http://www.ipl.pt/en">Lisbon Polytechnic Institute</a>, offers a
+deep dive into HTTP. He summarizes his presentation about API design
+this way:</p>
+<blockquote>
+<p>“If you have a problem, keep calm and look for an HTTP <a
+href="https://www.ietf.org/rfc.html">RFC</a>”</p>
+</blockquote>
+<p>Pedro considers <a
+href="http://nordicapis.com/html-hypermedia-apis-and-adaptive-web-design/">hypermedia</a>
+as the key factor for evolvability, allowing API providers to react to
+new business requirements quickly without breaking client applications.
+Related to Mitra’s theory on the distribution of complexity, using
+hypermedia means more initial complexity for client app developers, but
+an overall reduced complexity considering the ease of future
+changes.</p>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00097.jpeg" style="width: 100%;" />
+</figure>
+<aside class="tip blurb">
+<h3
+id="part0010.xhtml_leanpub-auto-learn-from-real-world-information-design">6:
+Learn From Real World Information Design</h3>
+</aside>
+<p><a href="https://twitter.com/landlessness">Brian Mulloy</a> from <a
+href="http://apigee.com/">Apigee</a> demoes a hypermedia API for the <a
+href="http://nordicapis.com/apis-power-the-internet-of-things/">Internet
+of Things</a>. By using hypermedia it is easy to introduce new devices
+into the IoT since all possible states, actions and feeds are described
+in the API itself.</p>
+<p>Mulloy describes <a
+href="http://nordicapis.com/apis-power-the-internet-of-things/">API
+design for the Internet of Things</a> as using information design for
+physical objects. He compared this to the early days of mass car
+production in his hometown Detroit. Suddenly the city had lots of cars,
+but infrastructure was not prepared for a large automobile influx. The
+resulting confusion lead to chaos and even a large number of traffic
+related deaths.</p>
+<p>The solution was to use information design that resulted in standard
+designs used all over the world today. Pedestrian crossings, traffic
+lights, stop signs, and lane markers make it clear how to behave in
+traffic. Akin to the early days of cars, we are still working on how to
+organize and design today’s APIs for the IoT.</p>
+<aside class="tip blurb">
+<h3
+id="part0010.xhtml_leanpub-auto-api-design-needs-to-convince-the-architect">7:
+API Design Needs To Convince the Architect</h3>
+</aside>
+<p>Having a shared vision within an organization is key for API
+interconnectivity to be accepted. To help convince API naysayers,
+whether they be architects or engineers, in his <a
+href="http://www.slideshare.net/duvander/the-architect-is-not-convinced">talk</a>,
+<a href="https://twitter.com/adamd">Adam Duvander</a> of <a
+href="http://orchestrate.io/">Orchestrate</a> walks through four ways
+API providers can frame their API product to foster confident adoption.
+These factors should be considered when designing an API in order to
+respond to common stigma associated with API integrations.</p>
+<ol>
+<li>The architect wants <strong>control</strong>: Accustomed to
+traditional methods of infrastructure — data storage on local servers —
+the architect may be opposed to cloud operations, desiring to ‘touch’
+the software. To workaround this stigma, API providers can offer the
+ability to download and store data sets locally, or even offer an on
+premise, dedicated, managed option the API.</li>
+<li>The architect wants <strong>zero downtime</strong>: To foster
+reliability in the service, having transparent developer-facing logs
+that communicate API uptime is critical.</li>
+<li>The architect wants to see <strong>responsibility</strong>: API
+systems need to be designed as <a
+href="http://nordicapis.com/how-to-control-user-identity-within-microservices/">secure
+systems</a> using <a
+href="http://nordicapis.com/building-a-secure-api/">modern
+approaches</a>.</li>
+<li>The architect requires an integration that guarantees
+<strong>longevity</strong></li>
+</ol>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-develop-with-a-long-term-mindset">8:
+Develop With a Long-Term Mindset</h3>
+</aside>
+<p>Within a “develop for now” approach, developers are creating an API
+for <strong>immediate</strong> use, focusing entirely on integrating
+existing feature sets and supporting specific sets of queries. The
+downside of this approach, however, is that they are only robust at what
+they are designed for, and nothing more. Designing for the immediate
+needs and requirements of a service or system is all well and good, but
+it does little for long term support.</p>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-be-consistent">9: Be Consistent</h3>
+</aside>
+<p>Maintain <strong>consistency</strong>. If your API uses calls that
+don’t run in the same <a
+href="http://blog.8thlight.com/craig-demyanovich/2011/10/03/inconsistent-apis.html">environments</a>,
+bug hunting becomes a chore. If your <a
+href="https://twittercommunity.com/t/rest-api-docs-inconsistent/31794">documentation
+is inconsistent</a> with actual functionally, you risk confusing and
+segmenting your userbase. If you have a methodology to refer to outside
+sources, use this methodology on <em>every</em> reference. If you cover
+a request by another multipart request, make sure there’s no needless
+redundancy.</p>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-allow-for-manipulation-of-data">10:
+Allow for Manipulation of Data</h3>
+</aside>
+<p>Data is only as valuable as it is understandable. When users receive
+data from your API, consider the methodology of how it’s delivered.
+Delineate data by type, and allow sorting within certain limitations.
+Powerful, dynamic services that allow for far more usefulness of API
+data is <a
+href="http://www.computersciencezone.org/50-most-useful-apis-for-developers/">a
+common requirement</a> amongst many developers.</p>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-effectively-validate-and-report">11:
+Effectively Validate and Report</h3>
+</aside>
+<p>Returning useless <strong>errors</strong> that state the obvious
+(something went wrong), the useless (ERROR), or the downright confusing
+(error code:9442394) is a losing proposition — if your users can’t find
+out what went wrong during basic errors, they’ll stop using the API
+entirely. Similarly, failing to return a valid JSON, and refusing to
+effectively document what error codes actually mean can make a potential
+API development partner second-guess integration with your services,
+further killing potential user base growth. <strong>Make sure all error
+returns are understandable</strong></p>
+<aside class="tip blurb">
+<h3 id="part0010.xhtml_leanpub-auto-support-uptime">12: Support
+Uptime</h3>
+</aside>
+<p><strong>Uptime</strong> is our fifth and final tip as it is a
+wonderful metric by which we can holistically judge an API. It
+represents everything working in concert — if a single element of an API
+is poorly managed, uptime will likely be influenced. At the time of this
+writing, <a href="http://status.bit.ly/">Bit.ly reports 100% uptime over
+the past 24 hours</a>, with a <a
+href="http://blog.bitly.com/post/519223659/bit-ly-1-3">yearly uptime
+rating of 99.9%</a>. Likewise, the Twitter API reports <a
+href="https://dev.twitter.com/overview/status">100% uptime</a> with an
+average uptime of <a href="http://social.downornot.com/">99.9%</a>. The
+proof, as they say, is in the pudding (or in this case, the uptime).</p>
+<h3 id="part0010.xhtml_leanpub-auto-summarizing-api-design-tips"><span
+class="section-number">5.1 </span>Summarizing API Design Tips</h3>
+<p>Considering the development of your API is a serious endeavor. The
+choices made now will impact your future success in a big way. While
+these solutions can be implemented after the fact, it is far easier to
+implement them at the start of the development cycle. Not only will this
+deliver a more completely integrated feature set, it will also give you
+a product with simpler end-documentation and user experience.</p>
+<p>These 12 design and development concepts may be simple, but the
+implications of their applications are deceptively huge — implementing
+them can lead to explosive growth, high user adoption, and long-term use
+statistics. Design an API that allows an API provider to handle most of
+the complexity, and simplify processes for your client application
+developers. Above all, do not forget that the API design should serve
+your overall business requirements.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<aside class="generic_inbar blurb refresh">
+<h2 id="part0010.xhtml_leanpub-auto-next-steps-1">Next Steps:</h2>
+<p>As you now understand, developing an API is not limited to writing
+the code and making it available. Understanding your API use case plays
+a major role in building the foundation of your offering. Maintaining
+proper API health means never leaving it unattended â€” as you risk a
+decrease in consumer retention and a damage to your brand.</p>
+<p>This stage of the API lifecycle is so critical that numerous services
+have been launched and many startups created just to help companies deal
+with all thatâ€™s involved. These tools will help you understand what
+you have to do next. If you are motivated to introduce major changes to
+your API we recommend you visit the <a
+href="http://nordicapis.com/api-lifecycle-analysis-stage-preparing-your-api-strategy-pre-launch/"
+title="API Lifecycle Analysis Stage: Preparing Your Prelaunch API Strategy">Analysis
+Stage</a> to treat those iterations as a brand new API launch or
+version. Otherwise, jump into the <strong>Operations Stage</strong> and
+run your API like a product, fostering its user base.</p>
+<ol>
+<li><a href="#part0004.xhtml_Analysis">Analysis Stage</a></li>
+<li><a href="#part0008.xhtml_Development">Development Stage</a></li>
+<li><a href="#part0011.xhtml_Operations">Operations Stage</a></li>
+<li><a href="#part0014.xhtml_Retirement">Retirement Stage</a></li>
+</ol>
+</aside>
+</div>
+<p><span id="part0011.xhtml"></span></p>
+<h1 id="part0011.xhtml_Operations"><span class="section-number">III
+</span>Operations Stage</h1>
+<figure class="image center">
+<img src="Images/image00098.gif" />
+</figure>
+<p>In this part we discuss what factors make up the <strong>Operations
+Stage</strong>, and how they should be addressed. Transforming your API
+into something developers will want to consume, and learning what impact
+this will have on your business are things we’ll consider at this stage.
+Other critical actions involve maintaining a positive relationship with
+your API audience and offering them appropriate support channels.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<p><span id="part0012.xhtml"></span></p>
+<h2 id="part0012.xhtml_leanpub-auto-marketing-your-api"><span
+class="section-number">6. </span>Marketing Your API</h2>
+<p>To start, let’s take a look at your API from a different angle — one
+that presents your API as not just a developer-oriented tool but as a
+full product that solves a real problem. In this chapter we’ll see how
+this angle can fine tune the promotion of your API to focus more on your
+audience’s perspective and needs.</p>
+<h3 id="part0012.xhtml_leanpub-auto-running-your-api-as-a-product"><span
+class="section-number">6.1 </span>Running Your API As a Product</h3>
+<p>Why should you treat your API as if it were a full-fledged product?
+Isn’t the API something that’s <em>supporting</em> your existing
+product? Though it may sound strange, running an API as you would with
+any other product actually makes a lot of sense.</p>
+<p>By definition, a product is something that exists to satisfy the
+needs of a group of consumers. Usually, during product development, you
+research <a
+href="http://nordicapis.com/api-lifecycle-analysis-stage-preparing-your-api-strategy-pre-launch/">what
+consumers need</a> so that you can design your product accordingly. You
+also conduct research to understand <em>how</em> consumers will use the
+product that you’re designing. The results of these activities will
+eventually lead to the creation of your new product.</p>
+<p>By applying the same strategy to your API, you’ll not only have an
+API that developers really <strong>want to use</strong>, but you’ll also
+fully understand your target audience— a vital aspect of attracting
+developers to your API. The second activity is not any less important,
+as it will greatly inform the API design process. By learning how
+developers will consume your API you’ll be able to <a
+href="http://nordicapis.com/api-lifecycle-development/"
+title="API Lifecycle Development Stage: Deploying Your API">adapt the
+following items</a>, if needed:</p>
+<ul>
+<li><strong>Access Control</strong>: Are developers building
+applications that act on behalf of several users? Does it make sense to
+use API Keys, OAuth or something else?</li>
+<li><strong>Methods and Protocols</strong>: Do developers prefer REST,
+SOAP, Thrift, or something else? What makes more sense from a consumer
+point of view?</li>
+<li><strong>SDK Programming Languages</strong>: Are developers using
+Ruby, Python or other languages? What SDKs should you offer and
+support?</li>
+<li><strong>Asynchronous Operations</strong>: Is your API mostly
+consumed by Web browsers, mobile devices, or backend code? Are API calls
+made from behind firewalls? Can your API use webhooks?</li>
+</ul>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00099.jpeg" style="width: 100%;" />
+</figure>
+<p>If you don’t conduct product-oriented research then you’ll never
+understand how your API should be offered, and it will be much harder to
+pivot or gain traction in the long term. If you follow this strategy
+you’ll have the equivalent of product/market fit: <strong>API/market
+fit</strong>. Next, you’ll want to fuel your API usage growth by
+employing various marketing tactics to attract more and more developers
+over time.</p>
+<h3 id="part0012.xhtml_leanpub-auto-marketing-your-api-1"><span
+class="section-number">6.2 </span>Marketing Your API</h3>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00100.jpeg" style="width: 100%;" />
+</figure>
+<p>Marketing an API is very similar in concept to any other kind of
+marketing. You’ll want to produce material that will promote your API in
+a variety of ways. This starts with launching your <strong>developer
+portal,</strong> which will act as the official point of contact between
+your API and its consumers.</p>
+<p>As your developer portal will be central to all your API-related
+activities, it should offer an easy access to all the following
+resources:</p>
+<ul>
+<li><strong><a
+href="http://nordicapis.com/spark-api-adoption-good-documentation-practises/"
+title="How to Spark API Adoption With Good Documentation Practices">API
+Documentation</a></strong>: Probably the most important resource,
+documentation should always be up-to-date and provide all information
+needed to quickly begin consuming your API.</li>
+<li><strong>Application Registration</strong>: Offer an easy-to-follow
+registration process that any developer can understand. The output of
+this process should be an API Key or a Client ID and Secret if you’re
+using OAuth.</li>
+<li><strong>API Console</strong>: Developers usually want to test your
+API without having to write any code. Either offer an <a
+href="http://nordicapis.com/html-hypermedia-apis-and-adaptive-web-design/">API
+Console</a> or provide ready-to-use code that can be copied and pasted.
+This first impression of API functionality should be succinct and
+powerful.</li>
+<li><strong>SDKs</strong>: After testing, your developers will want to
+consume the API from within their existing applications. Offer the
+appropriate SDKs and follow the packaging and installation standards for
+each programming language. For example, if you’re offering a Ruby SDK,
+offer it as a Ruby gem.</li>
+<li><strong>Announcements</strong>: Keep your audience up-to-date with
+anything you do related to your API. Announce all upcoming API changes
+and other relevant activities.</li>
+<li><strong>Use Cases</strong>: Provide comprehensive use cases that
+your audience can identify with. Complement them with sample code that
+uses your SDKs. It’s much easier to understand how your API works by
+reading a story than by going through the full reference.</li>
+<li><strong>Support</strong>: Offer a simple support channel directly
+from your developer portal. Whenever developers have a question they
+should be able to contact your support team from within the portal.
+Provide quick feedback on support requests and always follow up.</li>
+<li><strong>Links to External Resources</strong>: Link to external
+resources that could help developers use your API. Have your
+documentation link to the standards that you’re following and provide
+relevant social media links so developers can follow your
+announcements.</li>
+</ul>
+<p>If you implement all these suggestions you’ll have a superior API
+Developer Portal, but you still have to attract developers to it. Site
+activity should be combined with a permanent instrumentation of your API
+and Developer Portal usage so that you can correctly measure
+<strong>traction</strong>.</p>
+<h3
+id="part0012.xhtml_leanpub-auto-using-different-traction-channels"><span
+class="section-number">6.3 </span>Using Different Traction Channels</h3>
+<p>In order to obtain the best possible results, fostering your API user
+base should be done across a number of different channels. Along the way
+you should measure activity on each channel and adjust accordingly. As
+you’re about to see, marketing channels have different costs and you
+should understand how much, on average, each new developer is costing
+you to acquire.</p>
+<p>In the Product world, this value is often called <strong>Customer
+Acquisition Cost</strong> or CAC, and can be used as a model to
+determine if any of your channels should be abandoned. To append this,
+you should also estimate the total future revenue obtained from each new
+developer using your API. The <strong>Customer Lifetime Value</strong>
+or CLTV is what defines how much revenue, on average, each developer
+will generate.</p>
+<figure class="image floatcenter" style="width: 100%;">
+<img src="Images/image00101.jpeg" style="width: 100%;" />
+</figure>
+<p>To <a href="http://nordicapis.com/5-ways-apis-will-increase-revenue/"
+title="5 Ways APIs will Increase your Revenue">make a profit</a>, you
+should always aim for a CAC smaller than the CLTV. Otherwise, you’ll end
+up paying more for developers than the potential future revenue that
+you’ll obtain from them. With this in mind, let’s look at some possible
+traction channels.</p>
+<h4 id="part0012.xhtml_leanpub-auto-evangelizing-your-api">Evangelizing
+Your API</h4>
+<p>Evangelizing is one of the methods used by most of the popular APIs.
+Evangelizing is usually done by meeting developer groups in person to
+share stories about how your API can be used. So-called “API
+Evangelists” are used to promote APIs using online media, and in person
+by attending developer-oriented meetups, conferences, and other related
+events.</p>
+<p>Naturally, this type of promotion can have a cost range of nearly
+nothing — especially if you’re doing it by yourself online — but can be
+more costly if you employ a group of dedicated evangelists to attend
+every possible developer conference. Be pragmatic by starting small and
+measuring your results along the way.</p>
+<h4
+id="part0012.xhtml_leanpub-auto-hackathons-events-conferences">Hackathons,
+Events, Conferences</h4>
+<figure class="image floatright" style="width: 40%;">
+<img src="Images/image00102.jpeg" style="width: 100%;" />
+</figure>
+<p>Another popular traction method is promoting your API is by hosting a
+hackathon or developer oriented event. Hackathons may be geared toward a
+specific industry or theme and are often location-based — allowing you
+to target specific demographics and discover and promote new use cases
+that can be showcased on other channels.</p>
+<h4
+id="part0012.xhtml_leanpub-auto-integrations-and-partnerships">Integrations
+and Partnerships</h4>
+<p>An interesting way to gain traction is to attach your API to the
+growth of other products and APIs. This can be done by creating
+integrations that will make your API easily available and consumable by
+developers who use other products. Integrations often address specific
+use cases, so carefully study which one will attract the largest number
+of developers. Some integrations might be as easy — such as writing the
+code and publishing a guide — but in some cases you might need to engage
+into partnership development.</p>
+<p>Here, the cost will mostly be associated with software development
+activities — but don’t forget that you’ll also have to maintain and
+support the integration after it goes live.</p>
+<h3 id="part0012.xhtml_leanpub-auto-supporting-your-api"><span
+class="section-number">6.4 </span>Supporting Your API</h3>
+<p>Support always works better the closer you are to your audience.
+Understand where your API consumers usually ask for help and have a
+saying in those places. Don’t force your developers to use specific
+tools and processes that don’t make sense from their point view or
+you’ll start to see them abandoning your API after an unsuccessful
+usage.</p>
+<p>A simple way to grow your support channel is to keep things open.
+Keeping API-related activities as publicly transparent as possible means
+your support team will spend less time replying to the same
+requests.</p>
+<h4 id="part0012.xhtml_leanpub-auto-use-github">Use GitHub</h4>
+<p><a href="https://github.com/">GitHub</a> is considered the most
+popular developer-friendly service and API providers should take it
+seriously. By using their free plan you can create a repository to
+provide an easy-to-use support channel. GitHub offers a way to manage
+<em>issues</em> related with code changes and openly interact with
+developers. An example company following this approach is Spotify, who
+has been very open about all their <a
+href="https://github.com/spotify/web-api/issues"
+title="Spotify Web API issues">API-related issues</a> through
+GitHub.</p>
+<h4
+id="part0012.xhtml_leanpub-auto-other-developer-oriented-support-tools">Other
+Developer-oriented Support Tools</h4>
+<p>Research your developer audience to understand which other web
+services they use the most. It’s important to have a presence on them as
+well. Popular services include <a href="http://stackoverflow.com/"
+title="Stack Overflow">Stack Overflow</a>, specific <a
+href="http://www.reddit.com/" title="reddit">subreddits</a>, <a
+href="https://twitter.com/" title="twitter">Twitter</a> or <a
+href="https://www.facebook.com/" title="Facebook">Facebook</a>. Although
+social media isn’t specifically a support channel, you can use it to
+quickly give feedback to any questions developers might have about your
+API. Remember to always be open and to provide helpful responses.</p>
+<p><span id="part0013.xhtml"></span></p>
+<div>
+<h2 id="part0013.xhtml_leanpub-auto-the-importance-of-api-metrics"><span
+class="section-number">7. </span>The Importance of API Metrics</h2>
+<figure class="image center">
+<img src="Images/image00103.jpeg" />
+</figure>
+<p>Success and failure are relatively subjective terms — what defines
+success for one business might be considered a failure for another, and
+the relative of success in certain areas of performance can change from
+industry to industry, department to department, and even on a <a
+href="http://nordicapis.com/open-data-how-to-make-it-work-for-your-business/">case
+to case basis</a>. This volatility in expectations, outcomes, and
+impacts can make API documentation, implementation, and support a
+difficult undertaking.</p>
+<p>Luckily, those who work with APIs have a secret tool that can make
+sense of the hectic world of performance evaluation — <strong>metric
+analysis</strong>. Proper use of metric analysis can allow businesses to
+understand their consumers and aid in further development and
+implementation of user-friendly and effective APIs.</p>
+<p>In this piece, we’ll take a look at metric analysis to demonstrate
+how it can be used to amplify success within the API space. We’ll
+suggest types of metrics to analyze, demonstrate a theoretical
+application of metric analysis, and discuss two real-life examples of
+success and failure arising from differing metric analysis
+methodologies. By the end of this piece, you should have a firm grasp on
+the definition, application, and impact of proper API metric
+analysis.</p>
+<h3 id="part0013.xhtml_leanpub-auto-what-is-metric-analysis"><span
+class="section-number">7.1 </span>What Is Metric Analysis?</h3>
+<p>According to the Oxford Dictionary, metrics are <a
+href="http://www.oxforddictionaries.com/us/definition/american_english/metrics">“method[s]
+of measuring something, or the results obtained from this”</a>. Metrics
+are the way we measure the values of a targeted part of a system,
+measuring an event from inception to completion, including the effects
+caused by its implementation.</p>
+<p>So now that we know what a metric is, why is it so important to APIs?
+Metrics, and by extension <strong>API-centric Metric Analysis</strong>,
+are invaluable tools for the modern business. Metrics can be used to
+develop new processes, create a fundamental understanding of the product
+and targeted consumer, drive a holistic understanding of your
+manufacturing process and methodology of delivery, and create
+opportunity to <a
+href="http://nordicapis.com/how-to-monotize-your-api/">monetize and
+optimize your API</a>. Using metrics can bring you to a bird’s-eye view
+of an entire API process, following the age old saying — “you can’t see
+the forest from the trees.”</p>
+<h3
+id="part0013.xhtml_leanpub-auto-metric-analysis-tools-and-services"><span
+class="section-number">7.2 </span>Metric Analysis Tools and
+Services</h3>
+<p>There are many types of metrics that can be captured, analysed, and
+used to develop more effective API systems. Metrics can largely be
+grouped into two categories: <strong>internal metrics</strong> and
+<strong>external metrics</strong>.</p>
+<h4 id="part0013.xhtml_leanpub-auto-internal-metrics">Internal
+Metrics</h4>
+<p>Internal Metrics are those that are derived from data captured by
+internal web servers, user feedback forms, and trends observable through
+internal systems. These include:</p>
+<ul>
+<li><strong>User type</strong>: Is the consumer a repeat user or new
+user?</li>
+<li><strong>Days since last session</strong>: How long ago was the API
+last used by repeat users?</li>
+<li><strong>Traffic sources</strong>: Are functions within the API being
+called through your own web application or a third party
+application?</li>
+<li><strong>Function grouping</strong>: How often a user calls a certain
+function along with other functions.</li>
+<li><strong>Types of data requested</strong>: Is your server serving
+media requests, plain text requests, or other types of requests more
+often than others?</li>
+<li><strong>Access speeds</strong>: How quickly is your system
+responding to requests? Where is the bottleneck?</li>
+<li><strong>Service requests</strong>: How often are some services being
+requested? Are there any services that are never requested?</li>
+<li><strong>Error reporting</strong>: How often does a user report an
+error with the system, and what is the specific error?</li>
+</ul>
+<h4 id="part0013.xhtml_leanpub-auto-external-metrics">External
+Metrics</h4>
+<p>These metrics are derived through the use of processes and
+applications that originate outside of the API developer. While internal
+metrics are concerned more with the functioning of the actual API and
+overall system, external metrics focus more on the community and
+potential user bases. These metrics may involve third-party systems:</p>
+<ul>
+<li>API and service adoption rates - <a
+href="http://www.webtrends.com">WebTrends</a></li>
+<li>Redirection and publicly facing data - <a
+href="http://www.google.com/analytics">Google Analytics</a></li>
+<li>Market trends and behaviors - <a
+href="http://www.adobe.com/solutions/digital-analytics/marketing-reports-analytics.html">Adobe</a></li>
+</ul>
+<h3
+id="part0013.xhtml_leanpub-auto-example--the-tokyo-traffic-problem"><span
+class="section-number">7.3 </span>Example — The Tokyo Traffic
+Problem</h3>
+<p><img src="Images/image00104.jpeg" />A way to understand the
+importance of metric analysis is to show a situation in which it is
+applied properly against a situation where it is not, comparing the
+results of both approaches. Let’s imagine that we are engineers for the
+roadways of Tokyo, Japan, one of the largest cities in the world. We are
+tasked with solving a congestion problem in one of the most congested
+intersections in the entire city.</p>
+<p>Let’s first approach this problem without using Metric Analysis. We
+will use an <strong>observational approach.</strong> By standing on an
+overpass straddling the most congested area of the road, we mark down
+our observations in our notebook, noting both the number of cars and the
+number of lanes provided. Using these observations, a solution is
+designed to expand the roadway by an extra two lanes. The time budgeted
+for construction is set on a 24-hour schedule. You assume the congestion
+will ease due to your solution, and you step away. Some months later,
+the congestion you observed has only spilled into the new roadways,
+worsening the problem. The observational approach has resulted in more
+problems than it fixed, and is considered an abject failure.</p>
+<p>Now let us approach the problem in a <strong>metric-based
+approach</strong>. After being assigned the project, you first look at
+the city road maps. You observe that the congested road is likely facing
+issues arising from a stoplight intersection some miles ahead of the
+congested area; because the highway empties into a city thoroughfare
+before continuing onto another highway, this area functions as a
+“bottleneck”, increasing congestion by constraining the throughput of
+the system as a whole. Using this data, you decide to add a three-lane
+highway that bypasses the city thoroughfare, allowing traffic to flow
+both into and around the intersection, dependent on the driver’s needs.
+You also decide to implement a roundabout as opposed to a stoplight,
+thinking the flow of traffic should be eased in this manner. This plan
+is placed on a construction schedule over a handful of weeks, avoiding
+work during the rush hour. After implementing this solution, you collect
+data over an entire week, making notes of points of failure or issues at
+certain times of the day. Congestion has eased considerably, and the
+metric-based solution is considered a success.</p>
+<h3 id="part0013.xhtml_leanpub-auto-the-traffic-problem-solution"><span
+class="section-number">7.4 </span>The Traffic Problem Solution</h3>
+<p>What was the difference between the two approaches? Both aimed to
+ease congestion, and while the first approach was different than the
+second, on paper they both should have worked. The difference is the
+fundamental use of data in implementation.</p>
+<ul>
+<li>In the observational approach, the <em>global issue</em> of
+congestion was attacked by a <em>specific</em> solution. In the
+metric-based approach, the <em>global issue</em> of congestion was
+attacked with a <em>global solution</em>.</li>
+<li>Issues arose within the first approach from failure to understand
+the <em>end consumer</em> (expanding the intercity thoroughfare, and
+using a 24-hour build schedule interfering with rush hour). The second
+approach understood the requirements of the end consumer, creating a
+highway bypass and avoiding construction during the most congested
+periods of the day.</li>
+<li>The observational approach eschewed data analysis, assuming a
+localized solution would fix the problem, while the metric-based
+solution observed the <em>measurable results</em> of the solution,
+tweaking and adjusting to any new requirements that arose during
+construction.</li>
+</ul>
+<h3 id="part0013.xhtml_leanpub-auto-the-traffic-problem-and-apis"><span
+class="section-number">7.5 </span>The Traffic Problem and APIs</h3>
+<p>So what does Tokyo congestion issues have to do with API development?
+The two approaches above are perfect analogies for the development and
+implementation cycle of APIs, and show the measurable need for Metric
+Analysis. When developing an API, one must monitor internal and external
+metrics to ensure their API is effective in the long-term. When an API
+is developed and implemented, the following vital factors must be
+considered:</p>
+<ul>
+<li>The needs of the <em>end-consumer</em>, that is, the user who will
+interact with the API and its front-facing systems</li>
+<li>The method and timescale of <em>implementation</em>, i.e. whether or
+not the API will be implemented immediately or over time</li>
+<li>The type of implementation, i.e. whether or not the API is
+<em>specific</em> (defining a single use or purpose) or <em>global</em>
+(completely overhauling the already existent structures and
+systems)</li>
+<li>The <em>measurable solution</em>, or the effects caused by the
+implementation of your API on your <em>end-consumer</em></li>
+</ul>
+<h3
+id="part0013.xhtml_leanpub-auto-metrics-throughout-the-lifecycle"><span
+class="section-number">7.6 </span>Metrics Throughout the Lifecycle</h3>
+<p>To better understand this concept, let’s break down the <a
+href="http://nordicapis.com/envisioning-the-entire-api-lifecycle/">API
+Lifecycle</a> point by point, examining the role of metric analysis in
+each stage.</p>
+<p>In the first stage of the API Lifecycle, the <a
+href="#part0004.xhtml_Analysis">Analysis Stage</a>, metric analysis is
+perhaps most effectively and extensively used. While determining the
+usefulness of an API, the demand for its implementation, and the
+decisions between Private APIs, Partner APIs, and Public APIs (<a
+href="http://nordicapis.com/developing-the-api-mindset-private-partner-and-public-apis/">a
+subject covered more fully in our eBook Developing the API Mindset</a>),
+the use of metric analysis is specifically designed to help you
+understand your client base, their needs, and the relative importance of
+ease of accessibility and extensibility. By analyzing market trends,
+reviewing web server data, and polling prospective clients and users,
+metrics can help effectively narrow and define the objective of an API
+system.</p>
+<p>During the second stage of the API Lifecycle, the <a
+href="#part0008.xhtml_Development">Development Stage</a>, metric
+analysis switches from an external role to an internal role. By
+analyzing the systems available to your developers, tracking the
+management and implementation of features, and using varied methods of
+rigorous testing and bug-tracking, quality is supported and the product
+is refined into its best possible initial state. Failure to perform
+proper analysis on the varied metrics in this stage can result in
+massive hidden failures, missing feature-sets, and an overall displeased
+user base.</p>
+<p>Nearing the end of the API Lifecycle, the [Operations
+Stage(#Operations) is nearly as heavy in metric analysis as the first,
+as it is concerned with the public usage, reception, and internal
+response through iteration and patching. Monitoring user statistics,
+including the methods and durations of use, general feedback concerning
+usability and extensibility, and the overall impression of the API
+system can not only help you further refine your product, build a
+confident, strong user base, and quickly respond to bugs and issues, it
+can also help you prepare for future development projects and make the
+first stage of your next endeavor that much smoother.</p>
+<p>Finally, the fourth stage of the API Lifecycle is the <a
+href="#part0014.xhtml_Retirement">Retirement Stage</a>. This stage is
+often the direct result of effective analysis throughout the previous
+four stages. When retiring and deprecating APIs, metrics concerning
+usage rates, operating system and browser support, financial response,
+and user base confidence can all inform the decision to retire,
+continue, or reiterate an API.</p>
+<p>Failure to conduct API metric analysis could result in a product
+undergoing an expensive and lengthy development cycle only to find
+little demand upon release, making the API financially impractical.
+Effective metric analysis, however, can help create a stellar product,
+produced quickly and with less expense, resulting in higher demand with
+a longer lifespan. This is the raw power of metric analysis.</p>
+<h3
+id="part0013.xhtml_leanpub-auto-a-real-world-failure---heartbleed"><span
+class="section-number">7.7 </span>A Real-World Failure - Heartbleed</h3>
+<p>API security is a huge issue, and is becoming a more prominent
+concern as more companies adopt the <a
+href="http://nordicapis.com/why-you-should-build-apps-with-an-api-backend-baas/">API-centric
+design concept</a>. One of the most well-known examples of security
+failure arising from poor metric analysis is the infamous <a
+href="http://en.wikipedia.org/wiki/Heartbleed">Heartbleed bug</a>. This
+bug, which affected users implementing OpenSSL, a widely used security
+protocol, had a vulnerability in its data input validation algorithm,
+which allowed for excess data in its buffer overflow (a system meant to
+allow data exceeding the maximum buffer size to “overflow” into a
+secondary buffer registry) to be read in its entirety without being
+validated or checked for malicious code. Due to this bug, data could be
+forced through the overflow system without validation, executing
+commands that made internal data, systems, and services vulnerable to
+external, malicious attacks.</p>
+<p>This bug is directly a result of improper metric analysis. During the
+initial construction of the OpenSSL system and API, “negative testing”,
+or the testing of failure scenarios, was not properly conducted against
+the buffer overflow; if it had been, the issue would likely have been
+found early on and patched before it was abused. The needs of a secure
+system for <em>end-consumers</em> was not properly identified, as the
+vulnerabilities of the system itself were not properly tested against
+common validation failure and malicious attack scenarios. By not
+acknowledging the rate of buffer overflow incidents and the type of data
+that failed validation during such scenarios in the metric analysis
+process, an entire class of vulnerabilities was essentially ignored
+until it was too late.</p>
+<h3
+id="part0013.xhtml_leanpub-auto-a-real-world-success---the-fedex-shipapi"><span
+class="section-number">7.8 </span>A Real-World Success - The FedEx
+ShipAPI</h3>
+<p>When FedEx set out to develop an API for their shipping and freight
+systems, they had one issue in mind — efficiency. By eschewing the
+“established is better” mantra and focusing on an <a
+href="http://nordicapis.com/what-makes-an-agile-api/">agile mode of API
+and business development</a>, FedEx’s API, known as ShipAPI, is about as
+impressive a success story as one could hope for.</p>
+<p>At one time, FedEx was flooded with what they call “WISMO” (Where IS
+My Order?) calls — customers dealing with extreme variations in ship
+times, inaccurate delivery dates, and a lack of updates from FedEx to
+the customer. To rectify this problem, FedEx analyzed the frequency of
+these calls, the locations from which they were made, the types of
+packages being sent, and the shipping services used. Additionally, FedEx
+examined their own internal practices, the rate of adherence to
+electronic scanning of barcodes upon receipt at a FedEx facility, and
+the effectiveness of their long-distance package tracking system.</p>
+<p>By identifying the weaknesses in their own system through the use of
+internal metrics (utilizing both anecdotal metrics from users and
+operators as well as hard metrics derived from servers, scanning
+systems, and internal sorting reports), FedEx was able to pinpoint their
+points of failure, decreasing the time it took to deliver a product,
+increasing customer satisfaction and confidence, and creating a channel
+of communication that could update the customer faster and more
+accurately than any system previously used by the customer. Almost
+overnight, the FedEx brand became synonymous with quick, efficient
+shipping, and that is greatly due to their effective development and
+implementation of an API utilizing proper metric analysis.</p>
+<h3
+id="part0013.xhtml_leanpub-auto-security-effectiveness-and-commerce"><span
+class="section-number">7.9 </span>Security, Effectiveness, and
+Commerce</h3>
+<p>Fundamentally, the process of metric analysis is not just one focused
+on security. Commerce, effectiveness of solutions, and more can all be
+determined through the proper derivation, analysis, and application of
+solutions deriving from metrics. By determining your end-consumer, their
+needs, the needs of your process, and the total result of the
+application of an API, you can dramatically increase revenue, security,
+and even your consumer-base.</p>
+<p>The lesson of it all? Understand your consumer base. Understand the
+API you are developing. And, most importantly, measure your success and
+learn from your failures.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<aside class="generic_inbar blurb refresh">
+<h2 id="part0013.xhtml_leanpub-auto-next-steps-2">Next Steps:</h2>
+<p>By now you should know that in order to grow your developer audience
+in a sustainable fashion, an API should be treated just as if it were
+it’s own product. Your Operations activities will then consist mostly of
+marketing your API by implementing the best possible Developer Portal
+and by following a combination of different traction channels.</p>
+<p>The Operations Stage will inform you on what exactly it takes to push
+your API into high-growth mode. You’ll also discover marketing expenses
+related to developer attraction, aiming to have that value be much lower
+than your revenue — otherwise you won’t have a business.</p>
+<p>As you learn and your API experiences real world consumption, you’ll
+likely have to refine your offering. If you’re not obtaining the desired
+traction, consider revisiting the Analysis Stage to refine your business
+objectives. If, during Operations, you find that there’s a missing
+feature or change needed you should revisit the Development Stage.
+Finally, if your acquisition costs are so high that you can’t possibly
+maintain a flow of incoming developers you should consider jumping to
+the Retirement Stage of the API Lifecycle.</p>
+<ol>
+<li><a href="#part0004.xhtml_Analysis">Analysis Stage</a></li>
+<li><a href="#part0008.xhtml_Development">Development Stage</a></li>
+<li><a href="#part0011.xhtml_Operations">Operations Stage</a></li>
+<li><a href="#part0014.xhtml_Retirement">Retirement Stage</a></li>
+</ol>
+</aside>
+</div>
+<p><span id="part0014.xhtml"></span></p>
+<h1 id="part0014.xhtml_Retirement"><span class="section-number">IV
+</span>Retirement Stage</h1>
+<figure class="image center">
+<img src="Images/image00105.gif" />
+</figure>
+<p>Why would a web API be retired? what business factors contribute to
+this decision? In this part we examine the <strong>Retirement
+Stage</strong> of the API lifecycle, taking an in-depth look at example
+API deprecations to attempt to answer these tough questions and
+examining how to successfully retire your API while saving face with
+your developer community.</p>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<p><span id="part0015.xhtml"></span></p>
+<h2
+id="part0015.xhtml_leanpub-auto-a-history-of-major-public-api-retirements"><span
+class="section-number">8. </span>A History of Major Public API
+Retirements</h2>
+<p>Old age comes, and retirement is a part of life. It’s no different in
+the API world. The retirement of the <a
+href="http://apievangelist.com/2013/03/12/netflix-api-is-much-more-than-a-public-api/">Netflix</a>,
+<a href="https://developers.google.com/earth/">Google Earth</a>,
+LinkedIn, and <a
+href="http://developer.espn.com/blog/read/publicretirement">ESPN</a>
+APIs are examples of some recent large public API deprecations. Every
+major API retirement tends to spawn worry within the developer
+community; <a
+href="https://www.linkedin.com/pulse/20140905122647-2464386-are-public-apis-going-away">are
+public APIs doomed?</a></p>
+<p>We don’t think so — don’t forget there’s currently an estimated
+13,000 web APIs in operation, and the sector has <a
+href="http://www.programmableweb.com/api-research">shown exponential
+growth</a> and is slated to increase with the IoT (<a
+href="http://www.forbes.com/sites/groupthink/2014/10/16/the-internet-of-things-isnt-a-technology-fad/">which
+isn’t just a fad</a>). However, all things come to an end. As conditions
+change, technologies must evolve to meet new market conditions. A
+public-facing API may prove successful for some organizations, whereas
+for others, open environments may not be viable and lucrative.</p>
+<h3 id="part0015.xhtml_leanpub-auto-what-does-retirement-mean"><span
+class="section-number">8.1 </span>What Does Retirement Mean?</h3>
+<p>Retirement can mean many things. An API version may be scheduled for
+complete deprecation, or the API could still exist in a limited format
+with increased access controls. An API may simply slim down it’s excess
+functionality to become more consolidated and lean, or be fully replaced
+by an internal technology or outside competitor.</p>
+<p>In order to fully understand the conditions that beckon major API
+changes, we’ll lay out <strong>5 common causes that beckon API
+retirements</strong>. Using large API deprecations from recent years as
+examples, we’ll explore the reasoning behind each one that we’ve been
+able to surmise through our research. Sound fun? We think it’s pretty
+fascinating what can be learned from hindsight…</p>
+<h3
+id="part0015.xhtml_leanpub-auto-retirement-reason-1-lack-of-3rd-party-developer-innovation"><span
+class="section-number">8.2 </span>Retirement Reason #1: Lack of 3rd
+Party Developer Innovation</h3>
+<p>A common scenario that may cause an API shutdown is if the API is
+receiving limited or unsolicited use by developers and end users. Though
+this could be due to inadequate marketing, it could also be proof that
+the API is not offering a true value to it’s consumers.</p>
+<h4 id="part0015.xhtml_leanpub-auto-netflix">Netflix</h4>
+<p>Netflix proudly unleashed their API program in 2009, citing the
+possibilities for new app creations by third-party developers.
+Eventually they stopped issuing new API keys to developers, and <a
+href="https://gigaom.com/2014/11/14/netflix-is-shutting-down-its-public-api-today/">by
+2014 this was shut down to all users</a> aside from select partner
+integrations. According to Daniel Jacobson, Director of Engineering at
+Netflix, their reasoning was “to better focus our efforts and to align
+them with the needs of our global member base.”</p>
+<p>In the end, all of Netflix’s public API requests equated to about <a
+href="http://www.slideshare.net/danieljacobson/top-10-lessons-learned-from-the-netflix-api-oscon-2014">one
+day</a> of private API requests. The user base for the public API was
+too miniscule to warrant it’s existence.</p>
+<p>The result was to eliminate their Public API program to embrace a
+single private/partner Java API. Nowadays, every Netflix app on any
+device taps into the Netflix private API, which performs data gathering,
+data formatting, and data delivery for all consumers. Netflix has also
+eliminated versioning within their API to embrace impermanence and
+constant change.</p>
+<p>We learn from this case that when a brand name and native platform is
+so powerful, creating an ecosystem with a public perhaps not necessary.
+Also, according to technologist <a
+href="https://www.linkedin.com/pulse/20140905122647-2464386-are-public-apis-going-away">Andy
+Thurai</a>, it “becomes very expensive and time-consuming to maintain”
+both a Public and a Private/Partner API.</p>
+<h3
+id="part0015.xhtml_leanpub-auto-retirement-reason-2-opposing-financial-incentive-competition"><span
+class="section-number">8.3 </span>Retirement Reason #2: Opposing
+Financial Incentive, Competition</h3>
+<p>A Public API may be retired if the interface interferes with primary
+business objectives. In exposing their data for anyone to consume,
+providers run the risk of losing a market advantage, especially if this
+is taking business away from native distribution channels.</p>
+<h4 id="part0015.xhtml_leanpub-auto-espn">ESPN</h4>
+<p>In the case of ESPN, their reasoning to retire their sports data
+platform was “to better align engineering resources with the growing
+demand to develop core ESPN products on our API platform.” Today, if you
+visit the <a href="http://developer.espn.com/docs">ESPN Developer
+Center</a>, you’ll notice that all APIs are open for “strategic
+partners” like IFTT, Pulse, and foursquare.</p>
+<p><a href="https://news.ycombinator.com/item?id=8149477">Discussion on
+Hacker News</a> suggested that it was because developers were monetizing
+their apps. <a
+href="https://www.linkedin.com/pulse/20140905122647-2464386-are-public-apis-going-away">Andy
+Thurai</a> agrees, positing that “the actual reason seems to be that
+they want better control over their unique and licensed content, and
+better monetization, which public APIs may not offer.” We learn that by
+exposing internal assets, a business may risk losing an advantage if
+doing so decreases traffic from native distribution channels.</p>
+<h4 id="part0015.xhtml_leanpub-auto-strava">Strava</h4>
+<p><a href="http://www.strava.com/">Strava</a> offers fitness software
+for wearables with a developer API to extend their applications.
+Starting with Strava API v3, they began to curate their developer
+consumers with a limited access program. These <a
+href="http://engineering.strava.com/update-on-the-api-v3-release-and-v1-v2-retirement/">new
+requirements</a> prohibit “applications that encourage competition” as
+well as ones that “[Replicate] Strava functionality.” A large API
+retirement can occur when developer consumers are incorporating
+monetization techniques into third-party apps that break the original
+terms of agreement.</p>
+<h3
+id="part0015.xhtml_leanpub-auto-retirement-reason-3-changes-in-technology--consolidating-internal-services"><span
+class="section-number">8.4 </span>Retirement Reason #3: Changes in
+Technology &amp; Consolidating Internal Services</h3>
+<p>The tech sphere is constantly evolving. As such, advancements in
+these technologies have the potential to make an API obsolete. This
+happens often during internal redesigns, acquisitions, or external
+industry advancements. API retirement could arise from evolving protocol
+trends, such as replacing SOAP with REST, or changes in end user
+experiences, such as Netflix shiting it’s primary business model from
+DVD distribution to video streaming.</p>
+<h4 id="part0015.xhtml_leanpub-auto-skype">Skype</h4>
+<p>Skype’s reason to decommission their Desktop API was, according to
+them, that it didn’t support new mobile development trends. The Skype
+Public API, <a
+href="http://andyabramson.blogs.com/voipwatch/2004/11/skype_api_now_o.html">first
+introduced in 2004</a>, was taken over by Microsoft in the 2011
+aquisition. The Microsoft-owned Skype Desktop API was shut down in order
+to embrace Skype URIs and the Microsoft client. The termination <a
+href="https://aragonresearch.com/microsoft-kills-skype-desktop-apis-leaves-developers-scrambling/">irritated</a>
+some developers as it erased income for third-party applications
+consuming the API as well as lessened functionality through the <a
+href="https://msdn.microsoft.com/en-us/library/office/dn745882.aspx">Skype
+URIs</a>.</p>
+<h4 id="part0015.xhtml_leanpub-auto-google-maps-data-api">Google Maps
+Data API</h4>
+<p>At the same rate Google releases new APIs, it also deprecates older
+versions. In 2010 Google announced they would discontinue the Google
+Maps Data API, a service made to store geospatial data. The main reason
+was that a superior feature was launched with v3 of the <a
+href="https://developers.google.com/maps/documentation/?csw=1">Google
+Maps API</a>, offering an improved method of query and storage that made
+the <a href="http://maps-data-liberation.appspot.com/">Google Maps Data
+API</a> obsolete.</p>
+<p>Other Google APIs scheduled for deprecation due to outdated
+technology:</p>
+<ul>
+<li><a
+href="http://googlewebmastercentral.blogspot.in/2015/03/deprecation-of-old-webmaster-tools-api.html">Google
+Webmaster Tools</a></li>
+<li><a
+href="http://googlecode.blogspot.com/2009/08/well-earned-retirement-for-soap-search.html">Google
+SOAP Search API</a></li>
+</ul>
+<h4 id="part0015.xhtml_leanpub-auto-fedex">Fedex</h4>
+<p>At the time of this writing, <a
+href="http://images.fedex.com/us/developer/downloads/FXF_Automation_XML_Tracking_change.pdf">Fedex</a>
+is in the process of updating its APIs to Fedex Web Services, replacing
+XML-based tracking applications with a large redesign.</p>
+<h3
+id="part0015.xhtml_leanpub-auto-retirement-reason-4-versioning"><span
+class="section-number">8.5 </span>Retirement Reason #4: Versioning</h3>
+<p>Versioning is by far most common reason to retire an API. Since APIs
+are a relatively new technology for most businesses, you’ll often see
+v1, v2, or v3, still in use today. Similar to OS upgrades on devices,
+it’s often easier to scrape and replace an entire version when
+instigating large change. Versioning can arise when major edits to the
+API parameters or new usage controls are required.</p>
+<p>Some alarming changes that dramatically affect developers and end
+users may be quietly hidden within new API version documentation.
+Functionalities may be erased, permissions limited, classes altered,
+etc. As versioning is a common component to many API’s lifecycles, we
+don’t intend to create an exhaustive list of them all. Rather, these two
+examples of version updates came with them a few surprises for
+developers and end users…</p>
+<h4 id="part0015.xhtml_leanpub-auto-youtube">YouTube</h4>
+<p>YouTube, in the process of migrating to the YouTube Data API v3,
+surprised users when it was found that Data v3 would no longer support
+the YouTube app on expensive Smart TVs.</p>
+<h4 id="part0015.xhtml_leanpub-auto-twitter-v1">Twitter v1</h4>
+<p>Twitter’s v1 was finally retired in 2013. Being the <a
+href="http://www.programmableweb.com/news/most-popular-apis-least-one-will-surprise-you/2014/01/23">3rd
+most popular API</a> in use today, the announcement <a
+href="http://www.itworld.com/article/2712336/unified-communications/the-death-of-the-twitter-api-or-a-new-beginning-.html">sparked
+worry throughout the developer community</a> that simplistic integration
+was a thing of the past. The update added OAuth, requiring client keys
+and the creation of an app with Twitter. According to <a
+href="https://twitter.com/mombrea">Mathew Mombra</a>, these changes were
+likely instigated to:</p>
+<ul>
+<li>enforce call rate limiting with less liberal access</li>
+<li>reduce their system load</li>
+<li>decrease API vulnerability</li>
+<li>promote their embeddable tweet program</li>
+</ul>
+<h3
+id="part0015.xhtml_leanpub-auto-retirement-reason-5-security-concern"><span
+class="section-number">8.6 </span>Retirement Reason #5: Security
+Concern</h3>
+<p>A consideration of many large-scale retirements, API providers may
+choose to discontinue a public API specifically because of the security
+concerns associated with making internal data and processes public.</p>
+<h4 id="part0015.xhtml_leanpub-auto-google-earth-api">Google Earth
+API</h4>
+<p>The API was shutdown because it relied on <a
+href="http://en.wikipedia.org/wiki/NPAPI">NPAPI Framework</a>, an
+outdated technology Google mentioned had become a security concern.</p>
+<h4 id="part0015.xhtml_leanpub-auto-snapchat">SnapChat</h4>
+<p>Though SnapChat never technically has released a public API, the
+popular app has spawned a variety of mashups on various platforms that
+all tap into their “private” API. This went unchecked, until early 2015
+when SnapChat partnered with the Windows store to crack down on these
+rogue applications.</p>
+<p><span id="part0016.xhtml"></span></p>
+<div>
+<h2 id="part0016.xhtml_leanpub-auto-preparing-for-a-deprecation"><span
+class="section-number">9. </span>Preparing For a Deprecation</h2>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00106.jpeg" style="width: 100%;" />
+</figure>
+<p>Entire software ecosystems can quickly emerge that depend upon APIs
+to survive. And just as quickly, they can be destroyed. As these
+third-party developers have depended on your service to support their
+own products, complete shutdowns can inherently cause very negative
+reactions. This is why any change to your API requires the proper
+preparation and communication, whether it be small edits, versioning, or
+complete deprecation.</p>
+<h3 id="part0016.xhtml_leanpub-auto-rippling-effects"><span
+class="section-number">9.1 </span>Rippling Effects</h3>
+<p>Though most clients are quick to adapt, some may be unaware of API
+changes. This means they won’t respond quickly to update their system to
+be compatible with new versions. Stagnancy, freezed dependencies,
+forgotten forks, and inactive projects can be common with APIs that have
+been active for a while.</p>
+<p>Mircea F. Lungu, a computer science researcher at Bern in
+Switzerland, found that when deprecating API methods or classes, the
+total <strong>adaptation time</strong> within an ecosystem can vary
+tremendously. The amount of time between the first reaction and the last
+reaction can be months, or even <strong>years.</strong></p>
+<p>In his study on the case of the <a
+href="http://www.slideshare.net/mircea.lungu/how-do-developers-react-to-api-deprecation-the-case-of-a-smalltalk-ecosystem">SmallTalk
+ecosystem of 2,000 consumers</a>, Lungu found that 14% of deprecated
+methods induced negative rippling effects within the ecosystem, and 7%
+of deprecated classes triggered ripple effects. Only 16% of deprecations
+had a systematic replacement, which meant that most edits were done
+manually. Thus, any changes to an API induces ripples that can have
+far-reaching results.</p>
+<h3
+id="part0016.xhtml_leanpub-auto-preparing-for-developer-reaction"><span
+class="section-number">9.2 </span>Preparing For Developer Reaction</h3>
+<p>In order to keep good face with your community, we recommended
+transparency using the following techniques to prepare for an API’s
+retirement.</p>
+<ul>
+<li><strong>Schedule a retirement plan:</strong> Offer at least a 6
+month time frame for complete deprecation. This will hopefully give
+teams sufficient time to seek new integrations or partnerships. Consider
+extending this time frame if certain teams are struggling. <a
+href="https://developers.google.com/maps/terms">Google Maps</a> and <a
+href="https://developers.google.com/youtube/terms#deprecation">Youtube</a>
+follow a one year announcement to deprecation policy.</li>
+<li><strong>Make changes in stages:</strong> Tier your retirement plan
+in a way that aligns with past promises for support and versioning. If
+still running, shut down older versions that receive limited use earlier
+in the process. Twitter has created handy retirement timelines in the
+past that display when each version will be retired.</li>
+<li><strong>Public announcements:</strong> Write and promote a blog post
+that explicitly outlines API changes, when they will go into effect, who
+will be effected, and any other vital information your community needs
+to know. Disseminate this information to your dedicated developer social
+accounts.</li>
+<li><strong>Ease the transition:</strong> If your API is being
+consolidated, versioned, or merged into a separate service, ease the
+process with a <strong>migration guide</strong> and
+<strong>FAQ</strong>. For example, when Google Maps Data transferred
+over to Google Maps, they created a <a
+href="http://maps-data-liberation.appspot.com/">Maps Data Liberation
+Tool</a> to offer a complete download of data or transfer to their new
+console. Awkward transitions can especially be a headache during
+acquisitions.</li>
+<li><strong>Use blackout testing</strong>: Blackout testing is a planned
+shutdown of all API functions for a short window of time. This is
+helpful for developers to see how the absence of the API is going to
+affect their systems, and also acts as a call to action for developers
+to update their code. The Youtube API, <a
+href="http://www.adweek.com/socialtimes/twitter-scheduling-blackout-tests/477207">Twitter
+API</a>, <a
+href="http://blog.mendeley.com/developer-resources/mendeley-api-blackout-testing/">Mendely
+API</a>, and many others have used blackout testing in the past.</li>
+<li><strong>Don’t violate your own terms of service:</strong> Review
+your Terms of Service to ensure that you have no binding contracts for
+continuing support before you pull the plug. A smart way to plan ahead
+is to write a deprecation policy whenever a new API version is
+created.</li>
+</ul>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<aside class="generic_inbar blurb refresh">
+<h2 id="part0016.xhtml_leanpub-auto-next-steps-3">Next Steps:</h2>
+<p>We’ve highlighted the major concerns that would usher a large-scale
+API deprecation, but many retirements occur for a combination of many
+these reasons. Other reasons to consider large-scale API depreciation or
+redesign may include:</p>
+<ul>
+<li>Overwhelming competition with other APIs in niche sector</li>
+<li>Inability to structure data to be received effectively</li>
+<li>Not generating a revenue to support operations with current
+offering</li>
+<li>and many others</li>
+</ul>
+<p>Scheduling the retirement of an API version may be a great advance
+toward restructuring how your data will be received by your consumers.
+In this case, revisit the <strong>Analysis Stage</strong> to consider
+your primary business objectives.</p>
+<ol>
+<li><a href="#part0004.xhtml_Analysis">Analysis Stage</a></li>
+<li><a href="#part0008.xhtml_Development">Development Stage</a></li>
+<li><a href="#part0011.xhtml_Operations">Operations Stage</a></li>
+<li><a href="#part0014.xhtml_Retirement">Retirement Stage</a></li>
+</ol>
+</aside>
+</div>
+<p><span id="part0017.xhtml"></span></p>
+<h1 id="part0017.xhtml_leanpub-auto-the-agile-mindset"><span
+class="section-number">V </span>The Agile Mindset</h1>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00107.jpeg" style="width: 100%;" />
+</figure>
+<p>Each phase of the API Lifecycle should not be considered static.
+Progression is often non-linear, meaning information garnered in a phase
+should simultaneously affect other ends. Iterative communication between
+stages is critical for influencing smart progression and arriving at a
+sustainable internal ecosystem.</p>
+<figure class="image floatright" style="width: 50%;">
+<img src="Images/image00077.gif" style="width: 100%;" />
+</figure>
+<p>For example, if you receive multiple feedback complaints from
+customers not satisfied with a certain operation, alterations should be
+induced that only effect <strong>Development</strong>, but inform
+<strong>Analysis</strong>, and perhaps even
+<strong>Retirement.</strong></p>
+<p>Now that your API has travelled through all stages of it’s life, it
+may be entirely changed, or might have kept most of it’s original form.
+Now that we have a good grasp on each stage, in this part we consider
+what adopting an ‘agile’ mindset means for developing and maintaining an
+API, and offer helpful resources to expedite the process.</p>
+<p><span id="part0018.xhtml"></span></p>
+<h2 id="part0018.xhtml_leanpub-auto-what-makes-an-agile-api"><span
+class="section-number">10. </span>What Makes an Agile API?</h2>
+<figure class="image center" style="width: 100%;">
+<img src="Images/image00108.jpeg" style="width: 100%;" />
+</figure>
+<p>Agile. API. API. Agile. It has a nice ring to it, but is it
+necessarily so? Having become a buzzword, ‘agile’ often comes loaded
+with misconceptions. At a Nordic APIs conference, Christian Nilsson of
+Beepsend SMS messaging solutions explores the concept of what it means
+to be truly agile in the context of APIs, offering 6 tips to help an API
+provider determine what ‘agile’ really means for them.</p>
+<h3 id="part0018.xhtml_leanpub-auto-what-is-agile"><span
+class="section-number">10.1 </span>What is Agile?</h3>
+<p>Agile can be defined as an approach to problems, a software
+development process, and a business process. Like it’s name literally
+suggests, agile is lean, nimble, and filled with passion, with the
+ability to react to change rapidly.</p>
+<p>To Nilsson, agile has three common themes:</p>
+<ol>
+<li>Agile is breaking things down—but not to the point that they
+break.</li>
+<li>Agile means you can quickly shift business strategy.</li>
+<li>Agile cannot be burdened by previous decisions.</li>
+</ol>
+<h4
+id="part0018.xhtml_leanpub-auto-agile-api-misconception-1-if-youre-not-agile-youre-not-successful">Agile
+API Misconception #1: If You’re Not Agile, You’re Not Successful.</h4>
+<p>In general, the closer a service is to the end consumer, the more
+agile it needs to be in responding to problems. As Nilsson says,
+“Internet users are fickle and promiscuous. They’re curious. They’ll
+leave your service in a heartbeat.”</p>
+<p>However, some businesses are naturally inflexible. When these
+businesses increase their distance from the end consumer, they become
+less agile and more stable. This gives the business a stronger
+reputation for reliability, which is a highly marketable trait to less
+flexible industries like banking.</p>
+<p>Services should ask themselves: <strong>Why do we need this
+API?</strong> What does ‘agile’ mean to us and our business model? Is it
+right for us? Is it right for our customers? In the end, according to
+Nilsson, “you’re not automatically successful just because you’re agile,
+you’re successful because you’re passionate about your core model.”</p>
+<h4
+id="part0018.xhtml_leanpub-auto-agile-api-misconception-2-there-is-only-one-perfect-software-development-process">Agile
+API Misconception #2: There is Only One Perfect Software Development
+Process.</h4>
+<p>So often, project management tools are thrown at software developers
+in order to make them work faster in a more transparent environment. But
+software development processes vary by needs, and corresponding tools
+should support – not enforce – your software development process.</p>
+<p>Project managers for APIs should start by assessing the size and
+makeup of their development team, along with critically analyzing the
+problem the team is trying to solve together. Considering these factors,
+the right strategies for development will naturally arise, often
+straight from group discussion on the topic.</p>
+<h4
+id="part0018.xhtml_leanpub-auto-agile-api-misconception-3-your-system-is-secure">Agile
+API Misconception #3: Your System Is Secure.</h4>
+<p>Security doesn’t start and end with outsmarting hackers. Nowadays, no
+matter how secure your system is, you are constantly battling against an
+infinite number of scripts, human errors and stealthy passwords. In this
+constantly unstable and insecure world, one shouldn’t relax and assume
+that all will remain stable.</p>
+<p>Bugs such as <a
+href="http://mashable.com/2014/04/10/heartbleed-programmer/">Heartbleed</a>
+roam the web, and system dependencies can be altered at any time— such
+as recent MySQL changes enforced by AWS. A way to overcome these
+obstacles is through centralized configurations, which make sure that
+keeping your systems up to date is not labor intensive. You must be
+vigilant for any holes in the technology and to make sure that all
+developers are taking active steps to avoid cross-site scripting (<a
+href="http://en.wikipedia.org/wiki/Cross-site_scripting">XSS
+flaws</a>).</p>
+<p><em>For an in-depth study on implementing API security check out: <a
+href="http://nordicapis.com/api-security-oauth-openid-connect-depth/">API
+Security: Deep Dive into OAuth and OpenID Connect</a></em></p>
+<h4
+id="part0018.xhtml_leanpub-auto-agile-api-misconception-4-your-extensive-sla-and-eula-will-save-you">Agile
+API Misconception #4: Your Extensive SLA and EULA Will Save You.</h4>
+<p>Paypal includes 97 pages in their SLA. The reality of a Service Level
+Agreement (SLA) or End-User License Agreement (EULA) is that it is a
+best-case scenario. Some users will inevitably use a service improperly.
+How often will your team or the customer have the money and patience to
+bring a side to court on a trivial matter? You may like that your SLA or
+a EULA creates a sense of fear, but Nilsson argues that API providers
+should be more inviting to consumers instead of scaring them away with
+lengthy user agreements.</p>
+<h4
+id="part0018.xhtml_leanpub-auto-agile-api-misconception-5-your-api-is-special-keep-that-secret-sauce-a-secret">Agile
+API Misconception #5: Your API is ‘Special.’ Keep That Secret Sauce a
+Secret.</h4>
+<p>According to Nilsson, there are no secrets in coding anymore. The
+“secret sauce” of a business truly lies within execution. The secret
+sauce is how a you can adapt and transform to fluctuating markets. It’s
+how you practice agility. And it’s also how you provide fantastic
+customer service.</p>
+<blockquote>
+<p>“If your secret is that no one has figured out what technology you
+use, you’re screwed, you’re doomed, you’re beyond saving. Your secret
+must be your staff, your DNA, your business model, your ability to
+change…”</p>
+</blockquote>
+<p>Technology is just one more conduit with which you can support your
+employees and help them strive for greatness. Plus, if you keep your
+tech a secret, when things go wrong, who will you be able to lean on?
+Communities established around open code and collaboration can help APIs
+dramatically increase in value; that’s what <a
+href="http://nordicapis.com/how-apis-are-driving-smart-cities/">smart
+cities all over the world</a> are realizing by opening up their data
+silos and API source code.</p>
+<h4
+id="part0018.xhtml_leanpub-auto-agile-api-misconception-6-nosql-is-the-future-that-will-power-all-apis">Agile
+API Misconception #6: NoSQL is the Future That Will Power All APIs.</h4>
+<p>Nilsson argues that the NoSQL database for storing and retrieving
+data just isn’t all it’s hyped up to be. He concedes that NoSQL has the
+ability to solve many problems, but argues that it cannot solve not all
+of them. Like with all things in the programming and development world,
+solutions need to be agile. Problems need to be critically assessed and
+paired with the best solutions. Often times this means pairing NoSQL in
+combination with other solutions like a relational database.</p>
+<h3 id="part0018.xhtml_leanpub-auto-conclusion"><span
+class="section-number">10.2 </span>Conclusion</h3>
+<p>API providers must incorporate creative combined solutions for
+development that are tailored to their unique position. When building an
+agile API, you must keep all these facets in mind without falling victim
+to misconceptions of what it means to be agile. Following these
+considerations, and the four stages outlined in previous chapters, you
+should be prepared to react properly to your team’s needs, your
+business’s needs, and the end consumer’s needs.</p>
+<p><span id="part0019.xhtml"></span></p>
+<h2 id="part0019.xhtml_leanpub-auto-third-party-tools"><span
+class="section-number">11. </span>Third Party Tools</h2>
+<p>So, you’re confident and ready to hit the ground running, but still
+could use guidance in managing your API. Well, we’ve assembled the
+following list of popular third-party tools built to assist API
+providers - from documentation, monitoring, to security solutions - that
+we’ve mentioned throughout this e-book or otherwise recommend for use.
+This list is not meant to be exhaustive at all, but rather is a curated
+list of what services we are attracted to.</p>
+<aside class="generic_inbar blurb code">
+<h3 id="part0019.xhtml_leanpub-auto-documentation">Documentation</h3>
+</aside>
+<p>Frameworks that ease the process of generating API documentation.</p>
+<ul>
+<li><a href="https://apiary.io/">Apiary</a></li>
+<li><a href="https://apiblueprint.org/">API Blueprint</a></li>
+<li><a href="http://swagger.io/">Swagger</a></li>
+</ul>
+<aside class="generic_inbar blurb bolt">
+<h3 id="part0019.xhtml_leanpub-auto-sdk-generation">SDK Generation</h3>
+</aside>
+<ul>
+<li><a href="https://apimatic.io/">APIMATIC</a></li>
+<li><a href="http://restunited.com/">REST United</a></li>
+</ul>
+<aside class="generic_inbar blurb cogs">
+<h3 id="part0019.xhtml_leanpub-auto-api-management-1">API
+Management</h3>
+</aside>
+<ul>
+<li><a href="http://www.3scale.net/">3Scale</a></li>
+<li><a href="https://apigee.com">Apigee</a></li>
+<li><a href="https://www.axway.com/">Axway</a></li>
+<li><a href="http://www.mashery.com/">Mashery</a></li>
+<li><a href="https://www.mulesoft.com">Mulesoft</a></li>
+<li><a
+href="http://smartbear.com/product/ready-api/overview/">SmartBear</a></li>
+</ul>
+<aside class="generic_inbar blurb tachometer">
+<h3
+id="part0019.xhtml_leanpub-auto-performance-monitoring-and-testing">Performance
+Monitoring and Testing</h3>
+</aside>
+<p>Services that allow a provider to monitor the activity and status of
+their API or API dependencies.</p>
+<ul>
+<li><a href="https://www.apichangelog.com/">API Changelog</a></li>
+<li><a href="http://apimetrics.io/">APIMetrics</a></li>
+<li><a href="https://www.apiscience.com/">APIScience</a></li>
+<li><a href="https://www.getpostman.com/">POSTMAN</a></li>
+<li><a href="https://www.runscope.com/">Runscope</a></li>
+<li><a
+href="http://smartbear.com/product/ready-api/soapui-ng/features/functional-testing/">SmartBear</a></li>
+</ul>
+<aside class="generic_inbar blurb lock">
+<h3 id="part0019.xhtml_leanpub-auto-security">Security</h3>
+</aside>
+<p>Services and tools to assist in embedding proper identity control,
+access management, and more with authorization, authentication,
+delegation, etc.</p>
+<ul>
+<li><a href="http://oauth.net/2/">OAuth 2.0</a></li>
+<li><a href="http://openid.net/connect/">OpenID Connect</a></li>
+<li><a href="https://www.pingidentity.com">Ping Identity</a></li>
+<li><a href="https://stormpath.com/">Stormpath</a></li>
+<li><a href="http://www.twobotechnologies.com/">Twobo
+Technologies</a></li>
+</ul>
+<aside class="generic_inbar blurb search">
+<h3
+id="part0019.xhtml_leanpub-auto-discoverability">Discoverability</h3>
+</aside>
+<p>API directory services, hubs, marketplaces, and more that assist in
+making your API discoverable by third party developers:</p>
+<ul>
+<li><a href="http://apis.io/">APIs.io</a></li>
+<li><a href="https://www.mashape.com/">Mashape</a></li>
+<li><a
+href="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">ProgrammableWeb</a></li>
+</ul>
+<aside class="generic_inbar blurb question">
+<h3 id="part0019.xhtml_leanpub-auto-developer-support">Developer
+Support</h3>
+</aside>
+<p>In addition to using social media channels and internal blog for
+updates, these developer-oriented channels can be used to grow your
+audience:</p>
+<ul>
+<li>Certain sub-Reddits: <a href="http://www.reddit.com/r/api/">API</a>,
+<a href="http://www.reddit.com/r/programming">Programming</a></li>
+<li><a href="https://github.com/">GitHub</a></li>
+<li><a href="http://stackoverflow.com/" title="Stack Overflow">Stack
+Overflow</a></li>
+</ul>
+<p><span id="part0020.xhtml"></span></p>
+<h2 id="part0020.xhtml_leanpub-auto-nordic-apis-resources">Nordic APIs
+Resources</h2>
+<aside class="generic_inbar blurb youtube-play">
+<h3 id="part0020.xhtml_leanpub-auto-api-lifecycle-talks">API Lifecycle
+Talks</h3>
+</aside>
+<p>In May 2015 Nordic APIs went on a World Tour in the theme of the API
+lifecycle, visiting London, Copenhagen, Munich, and Seattle. If you
+missed out, you can still watch sessions here:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Hc-lDZALeXQ">Introducing
+The API Lifecycle, Andreas Krohn</a></li>
+<li><a href="https://www.youtube.com/watch?v=ogrHFkLIIAk">You Need An
+API For That Gadget, Brian Mulloy</a></li>
+<li><a href="https://www.youtube.com/watch?v=CU5ptUHQeBo">Pass On
+Access: User to User Data Sharing With OAuth, Jacob Ideskog</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZyVGvMVBk6U">APIfying an
+ERP, Marjukka Niinioja</a></li>
+<li><a href="https://www.youtube.com/watch?v=dl0jD29XkK4">Integrating
+API Security Into A Comprehensive Identity Platform</a></li>
+<li><a href="https://www.youtube.com/watch?v=mJnKXY2jj6E">A Simpler
+Time: Balancing Simplicity and Complexity, Ronnie Mitra</a></li>
+<li><a href="https://www.youtube.com/watch?v=tj03NRM6SP8">The Nuts and
+Bolts of API Security: Protecting Your Data at All Times</a></li>
+</ul>
+<div class="page-break">
+
+</div>
+<div style="page-break-after:always">
+
+</div>
+<aside class="generic_inbar blurb book">
+<h3 id="part0020.xhtml_leanpub-auto-more-ebooks-by-nordic-apis">More
+eBooks by Nordic APIs:</h3>
+</aside>
+<figure class="image center" style="width: 40%;">
+<img src="Images/image00087.jpeg" style="width: 100%;"
+alt="&quot;Developing The API Mindset&quot;: Distinguishes Public, Private, and Partner API business strategies with use cases from Nordic APIs events." />
+<figcaption>“Developing The API Mindset”: Distinguishes Public, Private,
+and Partner API business strategies with use cases from Nordic APIs
+events.</figcaption>
+</figure>
+<figure class="image center" style="width: 40%;">
+<img src="Images/image00109.jpeg" style="width: 100%;"
+alt="&quot;Nordic APIs Winter Collection&quot;: Our best 11 blog posts published in the 2014 - 2015 winter season" />
+<figcaption>“Nordic APIs Winter Collection”: Our best 11 blog posts
+published in the 2014 - 2015 winter season</figcaption>
+</figure>
+<figure class="image center" style="width: 40%;">
+<img src="Images/image00110.jpeg" style="width: 100%;"
+alt="&quot;Nordic APIs Summer Collection 2014&quot;: A handful of Nordic APIs content offering best practice tips." />
+<figcaption>“Nordic APIs Summer Collection 2014”: A handful of Nordic
+APIs content offering best practice tips.</figcaption>
+</figure>
+<p><span id="part0021.xhtml"></span></p>
+<h2 id="part0021.xhtml_leanpub-auto-endnotes">Endnotes</h2>
+<p><strong><em>Nordic APIs is an independent blog and this publication
+has not been authorized, sponsored, or otherwise approved by any company
+mentioned in it. All trademarks, servicemarks, registered trademarks,
+and registered servicemarks are the property of their respective
+owners.</em></strong></p>
+<ul>
+<li>Select icons made by <a href="http://www.freepik.com">Freepik</a>
+and are licensed by <a
+href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></li>
+<li>Select images are copyright <a
+href="http://www.twobotechnologies.com/">Twobo Technologies</a> and used
+by permission.</li>
+</ul>
+<p>Nordic APIs AB Box 133 447 24 Vargarda, Sweden</p>
+<p><a href="http://facebook.com/nordicapis">Facebook</a> | <a
+href="http://twitter.com/nordicapis">Twitter</a> | <a
+href="https://www.linkedin.com/company/nordic-apis">Linkedin</a> | <a
+href="https://plus.google.com/u/0/+Nordicapis/posts">Google+</a> | <a
+href="https://www.youtube.com/user/nordicapis">YouTube</a></p>
+<p><a href="http://nordicapis.com/blog/">Blog</a> | <a
+href="http://nordicapis.com">Home</a> | <a
+href="http://nordicapis.com/newsletter/">Newsletter</a> | <a
+href="mailto:info@nordicapis.com">Contact</a></p>
