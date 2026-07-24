@@ -635,6 +635,7 @@
 +   [C++ 程序员的 Rust 指南：轻松在 C/C++ 中嵌入 Rust](docs/rust-for-c-programmers-learn-how-to-embed-rust-in-cc-with-ea/README.md)
 +   [Sams 每天一小时学会 C++，第 8 版](docs/sams-teach-yourself-c-in-one-hour-a-day-8th-edition/README.md)
 +   [Sams 24 小时自学 HTML 和 CSS（包含新的 HTML 5 内容）第 8 版](docs/sams-teach-yourself-html-and-css-in-24-hours-includes-new-ht/README.md)
++   [Sams 学 HTML, CSS 和 JavaScript 全合指南](docs/sams-teach-yourself-html-css-and-javascript-all-in-one-gal-z/README.md)
 +   [Scala 揭秘与精通 C# 编程：高级程序员手册（2 本合一）](docs/scala-uncovered-and-mastering-c-programming-an-intermediate-/README.md)
 +   [C++ 选编话题](docs/selected-topics-in-c/README.md)
 +   [Selenium Webdriver 与 C# 编程简单化：编程初学者指南 - 二本书合一](docs/selenium-webdriver-and-c-coding-made-simple-a-beginners-guid/README.md)
