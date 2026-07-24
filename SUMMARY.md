@@ -654,6 +654,7 @@
 +   [C++ 编程入门指南](docs/textbook-of-programming-in-c/README.md)
 +   [API 生命周期：管理 API 生命周期的敏捷流程](docs/the-api-lifecycle-an-agile-process-for-managing-the-life-of-/README.md)
 +   [C# 面向对象基础概念：用简单语言进行概念学习](docs/the-basic-concepts-of-oop-in-c-learn-conceptually-in-simple-/README.md)
++   [C 语言编程指南：今天成为程序员](docs/the-c-programming-book-be-a-programmer-today/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
