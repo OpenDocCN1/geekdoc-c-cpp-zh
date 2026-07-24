@@ -692,6 +692,7 @@
 +   [图书员编程语言入门指南：LITA 指南](docs/the-librarians-introduction-to-programming-languages-a-lita-/README.md)
 +   [SAS 入门指南：入门教程，第六版](docs/the-little-sas-book-a-primer-sixth-edition/README.md)
 +   [C 的力量 (编程的力量)](docs/the-power-of-c-power-of-coding/README.md)
++   [罗伯特 C. Martin 洁净代码集（合集）（Robert C. Martin 系列）](docs/the-robert-c-martin-clean-code-collection-collection-robert-/README.md)
 +   [Rust 编程语言（第 2 版）](docs/the-rust-programming-language-2nd-edition/README.md)
 +   [像程序员一样思考：创意问题解决入门指南](docs/think-like-a-programmer-an-introduction-to-creative-problem-/README.md)
 +   [图灵的愿景：计算机科学的诞生](docs/turings-vision-the-birth-of-computer-science-the-mit-press/README.md)
