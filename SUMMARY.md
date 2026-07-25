@@ -727,5 +727,6 @@
 +   [Window C/C++：分步指南视觉 C++ 编程](docs/window-cc-a-step-by-step-guide-visual-c-programming/README.md)
 +   [Windows PowerShell 自学训练套件：Stanek and Associates 解决方案解决方案](docs/windows-powershell-self-study-training-kit-stanek-and-associ/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
++   [Xcode 4 入门指南](docs/xcode-4/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
