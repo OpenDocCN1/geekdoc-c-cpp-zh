@@ -1,0 +1,2416 @@
+<p><img src="image_rsrc1T9.jpg" /></p>
+<p><span id="part0000.xhtml"></span></p>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveaspectratio="xMidYMid meet" viewbox="0 0 1207 1920" height="100%" width="100%">
+<image xlink:href="image_rsrc1T9.jpg" height="1920" width="1207"></image>
+</svg>
+<p><span id="part0001.xhtml"></span></p>
+<p>Week 1: Introduction to C Programming</p>
+<p>Day 1-5: Basics of C</p>
+<p>Day 1: Introduction to C, history, and its importance.</p>
+<p>Day 2: Setting up the development environment (IDE, compiler).</p>
+<p>Day 3: Structure of a C program, variables, and data types.</p>
+<p>Day 4: Input and output functions (printf, scanf).</p>
+<p>Day 5: Operators and expressions.</p>
+<p>Week 2: Control Flow and Functions</p>
+<p>Day 6-10: Control Flow Statements</p>
+<p>Day 6: Decision-making statements (if, if-else, nested if).</p>
+<p>Day 7: Loops (while, for, do-while).</p>
+<p>Day 8: Switch-case statement.</p>
+<p>Day 9: Break and continue statements.</p>
+<p>Day 10: Introduction to functions, function declaration, definition,
+and calling.</p>
+<p>Week 3: Arrays and Strings</p>
+<p>Day 11-15: Arrays and Strings</p>
+<p>Day 11: Introduction to arrays, declaring, initializing, and
+accessing elements.</p>
+<p>Day 12: Multidimensional arrays.</p>
+<p>Day 13: Introduction to strings, string functions.</p>
+<p>Day 14: String manipulation functions.</p>
+<p>Day 15: Character arrays vs. string literals.</p>
+<p>Week 4: Pointers and Memory Management</p>
+<p>Day 16-20: Pointers</p>
+<p>Day 16: Introduction to pointers, pointer arithmetic.</p>
+<p>Day 17: Pointers and arrays.</p>
+<p>Day 18: Pointers and functions.</p>
+<p>Day 19: Dynamic memory allocation (malloc, calloc, realloc,
+free).</p>
+<p>Day 20: Pointer to functions, passing function pointers.</p>
+<p>Week 5: Structures, File Handling, and Advanced Topics</p>
+<p>Day 21-25: Structures and File Handling</p>
+<p>Day 21: Introduction to structures, defining and accessing structure
+members.</p>
+<p>Day 22: Nested structures, arrays of structures.</p>
+<p>Day 23: File handling in C (opening, reading, writing, closing
+files).</p>
+<p>Day 24: File operations (fseek, ftell, rewind).</p>
+<p>Day 25: Error handling and file manipulation.</p>
+<p>Week 6: Advanced Concepts</p>
+<p>Day 26-30: Advanced Topics</p>
+<p>Day 26: Enumerations and typedef.</p>
+<p>Day 27: Preprocessor directives (#define, #include, #ifdef).</p>
+<p>Day 28: Bitwise operators.</p>
+<p>Day 29: Introduction to recursion.</p>
+<p>Day 30: Introduction to data structures (linked lists).</p>
+<p>Week 7: Advanced Data Structures and Project Work</p>
+<p>Day 31-35: Data Structures and Project Work</p>
+<p>Day 31: Stacks and queues.</p>
+<p>Day 32: Trees (binary trees, binary search trees).</p>
+<p>Day 33: Graphs (basic concepts).</p>
+<p>Day 34: Sorting algorithms (selection sort, bubble sort).</p>
+<p>Day 35: Project work: Implementing a small application or project
+using C.</p>
+<p>Week 8: Review and Practice</p>
+<p>Day 36-45: Review and Practice</p>
+<p>Day 36-40: Review of concepts, solving exercises, and practice
+problems.</p>
+<p>Day 41-45: Mini-projects, assignments, and assessments to reinforce
+learning.</p>
+<p>Throughout the course, there should be regular quizzes, assignments,
+and projects to assess the understanding of students. Additionally,
+encourage students to practice coding regularly to strengthen their
+programming skills.</p>
+<p>Day 1: Introduction to C, History, and Importance</p>
+<p><span class="class_s1SY">Introduction to C:</span><span
+class="class_s1SZ"> C is a general-purpose, procedural programming
+language developed by Dennis Ritchie at Bell Labs in the early 1970s. It
+was designed for system programming, but it is widely used for
+developing applications in various domains.</span></p>
+<p><span class="class_s1SY">History:</span><span class="class_s1SZ"> C
+emerged from the earlier programming language called B, which was
+developed by Ken Thompson at Bell Labs. C was created to provide
+low-level access to the computer's memory while still offering
+high-level constructs.</span></p>
+<p><span class="class_s1SY">Importance:</span><span class="class_s1SZ">
+C is considered one of the most influential programming languages and
+serves as the foundation for many other programming languages. It is
+used in operating systems, <span
+id="part0001.xhtml_page_4"></span>embedded systems, device drivers,
+games, and applications where performance and efficiency are
+critical.</span></p>
+<p>Day 2: Setting Up the Development Environment (IDE, Compiler)</p>
+<p><span class="class_s1SY">IDE (Integrated Development
+Environment):</span><span class="class_s1SZ"> An IDE provides a
+comprehensive environment for writing, compiling, debugging, and
+executing programs. Popular C IDEs include Visual Studio, Code::Blocks,
+and Eclipse with C/C++ plugins.</span></p>
+<p><span class="class_s1SY">Compiler:</span><span class="class_s1SZ"> A
+compiler translates C source code into machine-readable binary code that
+can be executed by the computer's processor. Common C compilers include
+GCC (GNU Compiler Collection), Clang, and Microsoft Visual C++
+Compiler.</span></p>
+<p>Day 3: Structure of a C Program, Variables, and Data Types</p>
+<p><span class="class_s1SY">Structure of a C Program:</span><span
+class="class_s1SZ"> A typical C program consists of a collection of
+functions. Every C program must contain a main() function, which serves
+as the entry point of the program.</span></p>
+<p><span class="class_s1SY">Variables:</span><span class="class_s1SZ">
+Variables are used to store data values that can be manipulated within a
+program. In C, variables must be declared before they are used,
+specifying their data type.</span></p>
+<p><span class="class_s1SY">Data Types:</span><span class="class_s1SZ">
+C provides several basic data types, including int (integer), float
+(floating-point number), double (double-precision floating-point
+number), char (character), and void (empty data type). Additionally, C
+allows the creation of user-defined data types using structures and
+enumerations.</span></p>
+<p>Day 4: Input and Output Functions (printf, scanf)</p>
+<p><span class="class_s1SY">printf():</span><span class="class_s1SZ">
+printf() is a standard library function used to display formatted output
+to the standard output device (usually the console). It allows the
+printing of variables, strings, and special characters using format
+specifiers.</span></p>
+<p><span class="class_s1SY">scanf():</span><span class="class_s1SZ">
+scanf() is a standard library function used to read formatted input from
+the standard input device (usually the keyboard). It reads data into
+variables specified by the format specifiers provided.</span></p>
+<p>Day 5: Operators and Expressions</p>
+<p><span class="class_s1SY">Operators:</span><span class="class_s1SZ">
+Operators are symbols that represent operations to be performed on
+operands. C provides various types of operators, including arithmetic
+operators (+, -, *, /), relational operators (==, !=, &lt;, &gt;),
+logical operators (&amp;&amp;, ||, !), assignment operators (=, +=, -=),
+and bitwise operators (&amp;, |, ^).</span></p>
+<p><span class="class_s1SY">Expressions:</span><span class="class_s1SZ">
+Expressions are combinations of variables, constants, and operators that
+evaluate to a single value. C supports various types of expressions,
+including arithmetic expressions, relational expressions, logical
+expressions, and bitwise expressions.</span></p>
+<p>Understanding these fundamental concepts is crucial for laying a
+solid foundation in C programming. They provide the necessary knowledge
+and skills to begin writing simple C programs and gradually progress to
+more complex tasks.</p>
+<p>Week 2: Control Flow and Functions</p>
+<p>Day 6: Decision-making Statements (if, if-else, nested if)</p>
+<p><span class="class_s1SY">if Statement:</span><span
+class="class_s1SZ"> The if statement is used to execute a block of code
+only if a specified condition is true. If the condition evaluates to
+false, the code block is skipped.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>if (condition) {</p>
+<p>// code block to be executed if condition is true</p>
+<p>}</p>
+<p><span class="class_s1SY">if-else Statement: </span><span
+class="class_s1SZ">The if-else statement allows for the execution of one
+block of code if the condition is true and another block of code if the
+condition is false.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>if (condition) {</p>
+<p>// code block to be executed if condition is true</p>
+<p>} else {</p>
+<p>// code block to be executed if condition is false</p>
+<p>}</p>
+<p><span class="class_s1SY">Nested if Statement:</span><span
+class="class_s1SZ"> A nested if statement is an if statement inside
+another if statement. It allows for multiple conditions to be checked
+sequentially.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>if (condition1) {</p>
+<p>if (condition2) {</p>
+<p>// code block to be executed if both condition1 and condition2 are
+true</p>
+<p>}</p>
+<p>}</p>
+<p>Day 7: Loops (while, for, do-while)</p>
+<p><span class="class_s1SY">while Loop: </span><span
+class="class_s1SZ">The while loop executes a block of code repeatedly as
+long as a specified condition is true.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>while (condition) {</p>
+<p>// code block to be executed while condition is true</p>
+<p>}</p>
+<p><span class="class_s1SY">for Loop:</span><span class="class_s1SZ">
+The for loop provides a concise way to iterate over a range of values.
+It consists of three parts: initialization, condition, and
+increment/decrement.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>for (initialization; condition; increment/decrement) {</p>
+<p>// code block to be executed repeatedly until condition is false</p>
+<p>}</p>
+<p>do-while Loop: The do-while loop is similar to the while loop but it
+guarantees that the code block is executed at least once before checking
+the condition.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>do {</p>
+<p>// code block to be executed</p>
+<p>} while (condition);</p>
+<p>Day 8: Switch-case Statement</p>
+<p>The switch-case statement is used to execute one statement from
+multiple conditions. It evaluates an expression and compares it with
+case values. If a match is found, the corresponding block of code is
+executed.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>switch (expression) {</p>
+<p>case value1:</p>
+<p>// code block to be executed if expression equals value1</p>
+<p>break;</p>
+<p>case value2:</p>
+<p>// code block to be executed if expression equals value2</p>
+<p>break;</p>
+<p>default:</p>
+<p>// code block to be executed if no case matches expression</p>
+<p>}</p>
+<p>Day 9: Break and Continue Statements</p>
+<p><span class="class_s1SY">Break Statement: </span><span
+class="class_s1SZ">The break statement is used to exit the loop or
+switch-case statement immediately when it is encountered. It is
+typically used to terminate a loop prematurely.</span></p>
+<p><span class="class_s1SY">Continue Statement:</span><span
+class="class_s1SZ"> The continue statement is used to skip the current
+iteration of a loop and continue with the next iteration. It is
+typically used to avoid executing specific code under certain
+conditions.</span></p>
+<p>Day 10: Introduction to Functions, Function Declaration, Definition,
+and Calling</p>
+<p><span class="class_s1SY">Functions:</span><span class="class_s1SZ">
+Functions are self-contained blocks of code that perform a specific
+task. They allow for code reuse, modularity, and easier
+debugging.</span></p>
+<p><span class="class_s1SY">Function Declaration:</span><span
+class="class_s1SZ"> A function declaration specifies the function's
+name, return type, and parameters (if any). It informs the compiler
+about the existence of the function.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>return_type function_name(parameter1_type parameter1, parameter2_type
+parameter2, ...) {</p>
+<p>// function body</p>
+<p>}</p>
+<p><span class="class_s1SY">Function Definition: </span><span
+class="class_s1SZ">A function definition contains the actual
+implementation of the function. It includes the function header (return
+type and name) and the function body (code to be executed).</span></p>
+<p><span class="class_s1SY">Function Calling:</span><span
+class="class_s1SZ"> Function calling involves invoking a function to
+perform its defined task. It includes the function name followed by
+arguments (if any) enclosed in parentheses.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>return_type result = function_name(argument1, argument2, ...);</p>
+<p>Understanding control flow statements and functions is essential for
+developing more complex and structured C programs. They provide the
+ability to make decisions, repeat actions, and organize code into
+reusable units.</p>
+<p>Week 3: Arrays and Strings</p>
+<p>Day 11: Introduction to Arrays, Declaring, Initializing, and
+Accessing Elements</p>
+<p><span class="class_s1SY">Introduction to Arrays: </span><span
+class="class_s1SZ">An array is a collection of elements of the same data
+type stored in contiguous memory locations. It allows for the storage
+and manipulation of multiple values under a single name.</span></p>
+<p><span class="class_s1SY">Declaring Arrays:</span><span
+class="class_s1SZ"> To declare an array in C, you specify the data type
+of its elements and the size of the array within square brackets
+[].</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>data_type array_name[size];</p>
+<p>Initializing Arrays: Arrays can be initialized at the time of
+declaration or later using assignment statements.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int numbers[5] = {1, 2, 3, 4, 5}; // Initialization at
+declaration</p>
+<p>char vowels[] = {'a', 'e', 'i', 'o', 'u'}; // Size is inferred from
+initialization</p>
+<p><span class="class_s1SY">Accessing Elements:</span><span
+class="class_s1SZ"> Array elements are accessed using zero-based
+indexing. You specify the index within square brackets [] after the
+array name.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int value = numbers[2]; // Accessing the third element of the numbers
+array</p>
+<p>Day 12: Multidimensional Arrays</p>
+<p><span class="class_s1SY">Multidimensional Arrays</span><span
+class="class_s1SZ">: Multidimensional arrays are arrays of arrays. They
+allow for the representation of tabular data in multiple dimensions,
+such as rows and columns.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>data_type array_name[rows][columns];</p>
+<p><span class="class_s1SY">Initializing Multidimensional
+Arrays:</span><span class="class_s1SZ"> Multidimensional arrays can be
+initialized using nested braces.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};</p>
+<p><span class="class_s1SY">Accessing Elements in Multidimensional
+Arrays:</span><span class="class_s1SZ"> Elements in multidimensional
+arrays are accessed using multiple sets of square brackets
+[].</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int value = matrix[1][2]; // Accessing the element in the second row
+and third column</p>
+<p>Day 13: Introduction to Strings, String Functions</p>
+<p><span class="class_s1SY">Introduction to Strings: </span><span
+class="class_s1SZ">A string in C is a sequence of characters terminated
+by a null character ('\0'). Strings are stored as character
+arrays.</span></p>
+<p><span class="class_s1SY">String Functions: </span><span
+class="class_s1SZ">C provides several built-in functions for
+manipulating strings, such as strlen(), strcpy(), strcat(), strcmp(),
+etc.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;string.h&gt;</p>
+<p>Day 14: String Manipulation Functions</p>
+<p><span class="class_s1SY">strlen():</span><span class="class_s1SZ">
+Calculates the length of a string.</span></p>
+<p><span class="class_s1SY">strcpy():</span><span class="class_s1SZ">
+Copies one string to another.</span></p>
+<p><span class="class_s1SY">strcat():</span><span class="class_s1SZ">
+Concatenates (appends) one string to the end of another.</span></p>
+<p><span class="class_s1SY">strcmp():</span><span class="class_s1SZ">
+Compares two strings lexicographically.</span></p>
+<p><span class="class_s1SY">and more: </span><span class="class_s1SZ">C
+provides several other string manipulation functions for tasks like
+searching, tokenizing, and converting case.</span></p>
+<p>Day 15: Character Arrays vs. String Literals</p>
+<p><span class="class_s1SY">Character Arrays:</span><span
+class="class_s1SZ"> Character arrays are arrays of characters used to
+store strings in C. They allow for the manipulation of strings but
+require careful handling of null terminators.</span></p>
+<p><span class="class_s1SY">String Literals:</span><span
+class="class_s1SZ"> String literals are sequences of characters enclosed
+in double quotes. They automatically include a null terminator at the
+end.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>char str[] = "Hello"; // Character array</p>
+<p>char* str_literal = "Hello"; // String literal</p>
+<p>Understanding arrays and strings is essential for working with
+collections of data in C. Arrays provide a way to store and access
+multiple values efficiently, while strings facilitate text processing
+tasks. Mastery of these concepts enables developers to handle complex
+data <span class="class_s1T5">structures and algorithms
+effectively.</span></p>
+<p>Week 4: Pointers and Memory Management</p>
+<p>Day 16: Introduction to Pointers, Pointer Arithmetic</p>
+<p><span class="class_s1SY">Introduction to Pointers: </span><span
+class="class_s1SZ">A pointer is a variable that stores the memory
+address of another variable. It allows for direct manipulation of memory
+locations, enabling efficient memory management and data
+manipulation.</span></p>
+<p><span class="class_s1SY">Declaring Pointers: </span><span
+class="class_s1SZ">Pointers are declared by specifying the data type of
+the variable they point to, followed by an asterisk (*) and the pointer
+name.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int *ptr; // Pointer to an integer</p>
+<p><span class="class_s1SY">Assigning Addresses to Pointers:
+</span><span class="class_s1SZ">Pointers are initialized with the memory
+address of variables using the address-of operator (&amp;).</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int num = 10;</p>
+<p>int *ptr = &amp;num; // Pointer ptr now holds the address of num</p>
+<p><span class="class_s1SY">Pointer Arithmetic: </span><span
+class="class_s1SZ">Pointer arithmetic involves performing arithmetic
+operations (addition, subtraction) on pointers. This allows for
+navigation through memory locations.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>ptr++; // Increment pointer to point to the next memory location</p>
+<p>ptr--; // Decrement pointer to point to the previous memory
+location</p>
+<p>Day 17: Pointers and Arrays</p>
+<p><span class="class_s1SY">Relationship between Pointers and
+Arrays:</span><span class="class_s1SZ"> In C, arrays and pointers are
+closely related. An array name can be used as a pointer to its first
+element.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int arr[5] = {1, 2, 3, 4, 5};</p>
+<p>int *ptr = arr; // Pointer ptr points to the first element of the
+array arr</p>
+<p><span class="class_s1SY">Pointer Arithmetic with Arrays: </span><span
+class="class_s1SZ">Pointer arithmetic can be used to traverse arrays
+efficiently.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>for (int i = 0; i &lt; 5; i++) {</p>
+<p>printf("%d ", *(ptr + i)); // Accessing array elements using pointer
+arithmetic</p>
+<p>}</p>
+<p>Day 18: Pointers and Functions</p>
+<p><span class="class_s1SY">Pointers as Function Arguments:</span><span
+class="class_s1SZ"> Pointers can be passed as arguments to functions,
+allowing functions to modify the values of variables in the caller's
+scope.</span></p>
+<p><span class="class_s1SY">Passing Pointers to Functions: </span><span
+class="class_s1SZ">Passing pointers to functions enables passing large
+data structures efficiently without copying the entire data.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>void modifyValue(int *ptr) {</p>
+<p>*ptr = 20; // Modify the value pointed to by ptr</p>
+<p>}</p>
+<p>Day 19: Dynamic Memory Allocation (malloc, calloc, realloc, free)</p>
+<p><span class="class_s1SY">Dynamic Memory Allocation: </span><span
+class="class_s1SZ">Dynamic memory allocation allows programs to allocate
+memory dynamically during runtime. This enables the creation of data
+structures whose size is not known at compile time.</span></p>
+<p><span class="class_s1SY">malloc(): </span><span
+class="class_s1SZ">Allocates a block of memory of specified size in
+bytes and returns a pointer to the first byte of the allocated
+memory.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int *ptr = (int *)malloc(5 * sizeof(int)); // Allocate memory for 5
+integers</p>
+<p>calloc(): Allocates a block of memory for an array of elements,
+initializes them to zero, and returns a pointer to the allocated
+memory.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int *ptr = (int *)calloc(5, sizeof(int)); // Allocate memory for 5
+integers initialized to zero</p>
+<p><span class="class_s1SY">realloc():</span><span class="class_s1SZ">
+Changes the size of the previously allocated memory block, possibly
+moving it to a new location in memory, and returns a pointer to the new
+memory block.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int *new_ptr = (int *)realloc(ptr, 10 * sizeof(int)); // Resize
+memory block to accommodate 10 integers</p>
+<p><span class="class_s1SY">free():</span><span class="class_s1SZ">
+Deallocates the memory block previously allocated by malloc(), calloc(),
+or realloc(), releasing the memory for reuse.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>free(ptr); // Deallocate memory block pointed to by ptr</p>
+<p>Day 20: Pointer to Functions, Passing Function Pointers</p>
+<p><span class="class_s1SY">Pointer to Functions:</span><span
+class="class_s1SZ"> Like variables, functions have memory addresses that
+can be stored in pointers. Pointers to functions allow for dynamic
+invocation of functions at runtime.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int add(int a, int b) {</p>
+<p>return a + b;</p>
+<p>}</p>
+<p>int (*ptr)(int, int) = &amp;add; // Pointer to function add</p>
+<p><span class="class_s1SY">Passing Function Pointers as Arguments:
+</span><span class="class_s1SZ">Function pointers can be passed as
+arguments to other functions, enabling callbacks and function
+indirection.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>void process(int (*func_ptr)(int, int)) {</p>
+<p>// Call the function pointed to by func_ptr</p>
+<p>int result = (*func_ptr)(5, 3);</p>
+<p>printf("Result: %d\n", result);</p>
+<p>}</p>
+<p>Understanding pointers and memory management is crucial for efficient
+resource utilization and advanced data manipulation in C programming.
+Mastery of these concepts enables developers to handle complex data
+structures, optimize memory usage, and write more efficient and flexible
+code.</p>
+<p>Week 5: Structures, File Handling, and Advanced Topics</p>
+<p>Day 21: Introduction to Structures, Defining and Accessing Structure
+Members</p>
+<p><span class="class_s1SY">Introduction to Structures:</span><span
+class="class_s1SZ"> Structures (structs) in C allow you to group
+together variables of different data types under a single name. They
+provide a way to represent complex data structures.</span></p>
+<p><span class="class_s1SY">Defining Structures:</span><span
+class="class_s1SZ"> Structures are defined using the struct keyword
+followed by the structure name and a list of member variables enclosed
+in curly braces {}.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>struct Person {</p>
+<p>char name[50];</p>
+<p>int age;</p>
+<p>float salary;</p>
+<p>};</p>
+<p><span class="class_s1SY">Accessing Structure Members:</span><span
+class="class_s1SZ"> Structure members are accessed using the dot (.)
+operator, followed by the member name.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>struct Person p1;</p>
+<p>strcpy(p1.name, "John");</p>
+<p>p1.age = 30;</p>
+<p>p1.salary = 50000.0;</p>
+<p>Day 22: Nested Structures, Arrays of Structures</p>
+<p><span class="class_s1SY">Nested Structures:</span><span
+class="class_s1SZ"> Structures can be nested within other structures to
+represent hierarchical data structures.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>struct Date {</p>
+<p>int day;</p>
+<p>int month;</p>
+<p>int year;</p>
+<p>};</p>
+<p>struct Employee {</p>
+<p>char name[50];</p>
+<p>struct Date dob;</p>
+<p>float salary;</p>
+<p>};</p>
+<p><span class="class_s1SY">Arrays of Structures:</span><span
+class="class_s1SZ"> Arrays of structures allow for the creation of
+collections of structured data.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>struct Employee employees[100]; // Array of 100 Employee
+structures</p>
+<p>employees[0].salary = 50000.0; // Accessing salary of the first
+employee</p>
+<p>Day 23: File Handling in C (Opening, Reading, Writing, Closing
+Files)</p>
+<p><span class="class_s1SY">File Handling Basics:</span><span
+class="class_s1SZ"> File handling in C involves operations like opening
+files, reading data from files, writing data to files, and closing
+files.</span></p>
+<p><span class="class_s1SY">Opening Files:</span><span
+class="class_s1SZ"> Files are opened using the fopen() function, which
+returns a file pointer.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>FILE *file_ptr = fopen("file.txt", "r"); // Open file.txt in read
+mode</p>
+<p><span class="class_s1SY">Reading from Files:</span><span
+class="class_s1SZ"> Data can be read from files using functions like
+fscanf() and fgets().</span></p>
+<p><span class="class_s1SY">Writing to Files:</span><span
+class="class_s1SZ"> Data can be written to files using functions like
+fprintf() and fputs().</span></p>
+<p><span class="class_s1SY">Closing Files: </span><span
+class="class_s1SZ">Files should be closed using the fclose() function
+after reading from or writing to them.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>fclose(file_ptr); // Close the file</p>
+<p>Day 24: File Operations (fseek, ftell, rewind)</p>
+<p><span class="class_s1SY">File Positioning:</span><span
+class="class_s1SZ"> File positioning functions allow you to move the
+file pointer to a specific position within a file.</span></p>
+<p><span class="class_s1SY">fseek():</span><span class="class_s1SZ">
+Moves the file pointer to a specified byte offset from a reference
+point.</span></p>
+<p><span class="class_s1SY">ftell():</span><span class="class_s1SZ">
+Returns the current position of the file pointer in bytes relative to
+the beginning of the file.</span></p>
+<p><span class="class_s1SY">rewind(): </span><span
+class="class_s1SZ">Moves the file pointer to the beginning of the
+file.</span></p>
+<p>Day 25: Error Handling and File Manipulation</p>
+<p><span class="class_s1SY">Error Handling:</span><span
+class="class_s1SZ"> Error handling in file operations involves checking
+for errors after performing file-related operations and handling them
+appropriately.</span></p>
+<p><span class="class_s1SY">File Manipulation:</span><span
+class="class_s1SZ"> File manipulation involves various operations such
+as copying files, renaming files, deleting files, and checking file
+existence.</span></p>
+<p>Understanding structures and file handling in C is crucial for
+working with complex data structures and performing input/output
+operations on files. Mastery of these concepts enables developers to
+manipulate data effectively and build applications that interact with
+external data sources such as files.</p>
+<p>Week 6: Advanced Concepts</p>
+<p>Day 26: Enumerations and Typedef</p>
+<p><span class="class_s1SY">Enumerations:</span><span
+class="class_s1SZ"> Enumerations (enums) allow you to define a set of
+named constants, called enumerators, which represent a set of integer
+values.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>enum Weekday {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday,
+Sunday};</p>
+<p>enum Weekday today = Wednesday;</p>
+<p><span class="class_s1SY">Typedef: </span><span
+class="class_s1SZ">Typedef allows you to create an alias or new name for
+existing data types, making the code more readable and
+manageable.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>typedef int Age; // Define Age as an alias for int</p>
+<p>Age my_age = 30; // Use Age alias</p>
+<p>Day 27: Preprocessor Directives (#define, #include, #ifdef)</p>
+<p><span class="class_s1SY">#define: </span><span class="class_s1SZ">The
+#define directive is used to define macros, which are preprocessor
+directives that define symbolic constants or simple
+functions.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#define PI 3.14159</p>
+<p><span class="class_s1SY">#include: </span><span
+class="class_s1SZ">The #include directive is used to include the
+contents of another file (header file) in the current source
+file.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p><span class="class_s1SY">#ifdef: </span><span class="class_s1SZ">The
+#ifdef directive checks whether a macro has been defined. If the macro
+is defined, the code block following #ifdef is compiled.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#ifdef DEBUG</p>
+<p>printf("Debug mode enabled\n");</p>
+<p>#endif</p>
+<p>Day 28: Bitwise Operators</p>
+<p><span class="class_s1SY">Bitwise Operators: </span><span
+class="class_s1SZ">Bitwise operators perform operations on individual
+bits of integer operands.</span></p>
+<p><span class="class_s1SY">&amp; (AND): </span><span
+class="class_s1SZ">Performs a bitwise AND operation.</span></p>
+<p><span class="class_s1SY">| (OR): P</span><span
+class="class_s1SZ">erforms a bitwise OR operation.</span></p>
+<p><span class="class_s1SY">^ (XOR): </span><span
+class="class_s1SZ">Performs a bitwise XOR (exclusive OR)
+operation.</span></p>
+<p><span class="class_s1SY">~ (NOT): </span><span
+class="class_s1SZ">Performs a bitwise NOT (complement)
+operation.</span></p>
+<p><span class="class_s1SY">&lt;&lt; (Left Shift): </span><span
+class="class_s1SZ">Shifts bits to the left.</span></p>
+<p><span class="class_s1SY">&gt;&gt; (Right Shift): </span><span
+class="class_s1SZ">Shifts bits to the right.</span></p>
+<p>Day 29: Introduction to Recursion</p>
+<p><span class="class_s1SY">Recursion:</span><span class="class_s1SZ">
+Recursion is a programming technique where a function calls itself
+directly or indirectly to solve a problem.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>int factorial(int n) {</p>
+<p>if (n == 0 || n == 1)</p>
+<p>return 1;</p>
+<p>else</p>
+<p>return n * factorial(n - 1);</p>
+<p>}</p>
+<p><span class="class_s1SY">Base Case: </span><span
+class="class_s1SZ">Recursion involves breaking down the problem into
+smaller instances until a base case is reached, which is a condition
+that does not require further recursion.</span></p>
+<p>Day 30: Introduction to Data Structures (Linked Lists)</p>
+<p><span class="class_s1SY">Linked Lists:</span><span
+class="class_s1SZ"> Linked lists are linear data structures composed of
+nodes, where each node contains data and a pointer to the next node in
+the sequence.</span></p>
+<p>Types of Linked Lists:</p>
+<p><span class="class_s1SY">Singly Linked List:</span><span
+class="class_s1SZ"> Each node contains data and a pointer to the next
+node.</span></p>
+<p><span class="class_s1SY">Doubly Linked List:</span><span
+class="class_s1SZ"> Each node contains data, a pointer to the next node,
+and a pointer to the previous node.</span></p>
+<p><span class="class_s1SY">Circular Linked List:</span><span
+class="class_s1SZ"> The last node points back to the first node, forming
+a circular structure.</span></p>
+<p>Advantages of Linked Lists:</p>
+<p>Dynamic size.</p>
+<p>Efficient insertion and deletion operations.</p>
+<p>Disadvantages of Linked Lists:</p>
+<p>Requires extra memory for pointers.</p>
+<p>Traversal can be slower compared to arrays.</p>
+<p>Understanding advanced concepts like enumerations, typedef,
+preprocessor directives, bitwise operators, recursion, and data
+structures like linked lists is essential for writing efficient and
+complex C programs. These concepts provide powerful tools for solving a
+wide range of programming problems and optimizing code performance.</p>
+<p>Week 7: Advanced Data Structures and Project Work</p>
+<p>Day 31: Stacks and Queues</p>
+<p><span class="class_s1SY">Stacks:</span><span class="class_s1SZ"> A
+stack is a linear data structure that follows the Last In, First Out
+(LIFO) principle. It supports two primary operations: push (to add an
+element to the top) and pop (to remove an element from the
+top).</span></p>
+<p><span class="class_s1SY">Queues:</span><span class="class_s1SZ"> A
+queue is a linear data structure that follows the First In, First Out
+(FIFO) principle. It supports two primary operations: enqueue (to add an
+element to the rear) and dequeue (to remove an element from the
+front).</span></p>
+<p>Day 32: Trees (Binary Trees, Binary Search Trees)</p>
+<p><span class="class_s1SY">Binary Trees:</span><span
+class="class_s1SZ"> A binary tree is a hierarchical data structure
+consisting of nodes, where each node has at most two children: left
+child and right child.</span></p>
+<p><span class="class_s1SY">Binary Search Trees (BST):</span><span
+class="class_s1SZ"> A binary search tree is a binary tree where the
+value of each node's left child is less than the node's value, and the
+value of each node's right child is greater than the node's value. It
+supports efficient search, insertion, and deletion
+operations.</span></p>
+<p>Day 33: Graphs (Basic Concepts)</p>
+<p><span class="class_s1SY">Graphs:</span><span class="class_s1SZ"> A
+graph is a non-linear data structure consisting of a finite set of
+vertices (nodes) and a collection of edges (connections) between those
+vertices. Graphs are widely used to model relationships between
+objects.</span></p>
+<p><span class="class_s1SY">Basic Concepts:</span><span
+class="class_s1SZ"> Graphs can be directed or undirected, weighted or
+unweighted. Common representations include adjacency matrix and
+adjacency list.</span></p>
+<p>Day 34: Sorting Algorithms (Selection Sort, Bubble Sort)</p>
+<p><span class="class_s1SY">Selection Sort:</span><span
+class="class_s1SZ"> Selection sort is a simple sorting algorithm that
+repeatedly selects the minimum element from an unsorted portion of the
+array and places it at the beginning.</span></p>
+<p><span class="class_s1SY">Bubble Sort:</span><span class="class_s1SZ">
+Bubble sort is a basic sorting algorithm that repeatedly steps through
+the list, compares adjacent elements, and swaps them if they are in the
+wrong order.</span></p>
+<p>Day 35: Project Work: Implementing a Small Application or Project
+Using C</p>
+<p><span class="class_s1SY">Project Work:</span><span
+class="class_s1SZ"> Students are tasked with implementing a small
+application or project using the concepts and techniques learned
+throughout the course. This could involve creating a simple game, a
+utility tool, or any other software application that demonstrates their
+understanding of C programming fundamentals and advanced
+topics.</span></p>
+<p>Implementing a project allows students to apply their knowledge in a
+practical context, reinforce their learning, and gain hands-on
+experience with real-world problem-solving. It also provides an
+opportunity for creativity and innovation, fostering a deeper
+understanding of the language and its capabilities.</p>
+<p>Week 8: Review and Practice</p>
+<p>Day 36-40: Review of Concepts, Solving Exercises, and Practice
+Problems</p>
+<p><span class="class_s1SY">Concept Review:</span><span
+class="class_s1SZ"> Students revisit key concepts covered in the course,
+including basic syntax, control structures, functions, arrays, pointers,
+file handling, data structures, and algorithms.</span></p>
+<p><span class="class_s1SY">Solving Exercises: </span><span
+class="class_s1SZ">Students are provided with a variety of exercises and
+problems covering different aspects of C programming. These exercises
+range from simple to complex and are designed to reinforce understanding
+and problem-solving skills.</span></p>
+<p><span class="class_s1SY">Practice Problems: </span><span
+class="class_s1SZ">Practice problems focus on applying the learned
+concepts to solve real-world programming challenges. They encourage
+students to think critically, write efficient code, and debug any
+errors.</span></p>
+<p>Day 41-45: Mini-Projects, Assignments, and Assessments to Reinforce
+Learning</p>
+<p><span class="class_s1SY">Mini-Projects:</span><span
+class="class_s1SZ"> Students work on mini-projects that require them to
+apply multiple concepts learned throughout the course. These projects
+may involve implementing algorithms, building data structures, or
+creating small applications.</span></p>
+<p><span class="class_s1SY">Assignments: </span><span
+class="class_s1SZ">Assignments are given to students to assess their
+understanding of specific topics. They may involve writing code,
+answering theoretical questions, or solving programming
+problems.</span></p>
+<p><span class="class_s1SY">Assessments: </span><span
+class="class_s1SZ">Assessments are conducted to evaluate students'
+overall comprehension of C programming. They may include quizzes, tests,
+or practical exams covering various aspects of the course
+curriculum.</span></p>
+<p>Benefits of Review and Practice:</p>
+<p>Consolidate Learning: Reviewing concepts and solving exercises help
+solidify the understanding of fundamental principles.</p>
+<p>Reinforce Problem-Solving Skills: Practice problems and mini-projects
+challenge students to apply their knowledge to solve real-world
+problems.</p>
+<p>Identify Weaknesses: Through assessments and assignments, students
+can identify areas where they need further improvement.</p>
+<p>Encourage Creativity: Mini-projects allow students to explore their
+creativity and apply their knowledge in innovative ways.</p>
+<p>Build Confidence: Successfully completing exercises, assignments, and
+projects boosts students' confidence in their programming abilities.</p>
+<p>Overall, Week 8 serves as a culmination of the course, providing
+students with an opportunity to review, practice, and assess their
+understanding of C programming concepts before moving on to more
+advanced topics or projects.</p>
+<p>basic structure of a C program:</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Function prototypes (if any)</p>
+<p>int main() {</p>
+<p>// Variable declarations</p>
+<p>// Statements</p>
+<p>return 0;</p>
+<p>}</p>
+<p>// Function definitions (if any)</p>
+<p>Let's break down each part:</p>
+<p><span class="class_s1SY">#include &lt;stdio.h&gt;: </span><span
+class="class_s1SZ">This line includes the standard input-output library
+in the program, which allows you to use functions like printf() and
+scanf().</span></p>
+<p><span class="class_s1SY">Function Prototypes:</span><span
+class="class_s1SZ"> These are declarations of functions used in the
+program, placed before the main() function. They specify the function's
+name, return type, and parameter list (if any).</span></p>
+<p><span class="class_s1SY">main() Function:</span><span
+class="class_s1SZ"> Every C program must have a main() function, which
+serves as the entry point of the program. Execution of the program
+starts from this function.</span></p>
+<p><span class="class_s1SY">Variable Declarations: </span><span
+class="class_s1SZ">This is where you declare variables that will be used
+in the program. Variables should be declared before they are used in the
+program.</span></p>
+<p>Statements: <span class="class_s1SZ">These are the actual
+instructions or operations that the program performs. They can include
+assignments, function calls, control flow statements, etc.</span></p>
+<p><span class="class_s1SY">return 0;:</span><span class="class_s1SZ">
+This line indicates the end of the main() function and the successful
+termination of the program. The value 0 <span
+id="part0001.xhtml_page_28"></span>indicates that the program executed
+successfully. Other non-zero values can be returned to indicate
+different types of errors.</span></p>
+<p><span class="class_s1SY">Function Definitions: </span><span
+class="class_s1SZ">These are the implementations of functions declared
+earlier in the program. They contain the actual code that defines what
+each function does.</span></p>
+<p>Here's an overview of variables and data types in C:</p>
+<p>Variables:</p>
+<p><span class="class_s1SY">Naming Convention:</span><span
+class="class_s1SZ"> Variable names in C must begin with a letter (A-Z,
+a-z) or an underscore (_), followed by letters, digits (0-9), or
+underscores.</span></p>
+<p><span class="class_s1SY">Declaration:</span><span class="class_s1SZ">
+Variables must be declared before they can be used. The declaration
+specifies the variable's name and data type.</span></p>
+<p><span class="class_s1SY">Initialization:</span><span
+class="class_s1SZ"> Variables can be initialized (assigned an initial
+value) at the time of declaration or later in the program.</span></p>
+<p><span class="class_s1SY">Scope:</span><span class="class_s1SZ"> The
+scope of a variable determines where in the program it can be accessed.
+Variables can have either local scope (defined within a block or
+function) or global scope (defined outside of any function).</span></p>
+<p>Data Types:</p>
+<p>C supports several basic data types, which can be classified into
+four categories:</p>
+<p>Basic Data Types:</p>
+<p>int: Integer data type, used to store whole numbers.</p>
+<p><span class="class_s1SY">char: </span><span
+class="class_s1SZ">Character data type, used to store single
+characters.</span></p>
+<p><span class="class_s1SY">float: </span><span
+class="class_s1SZ">Floating-point data type, used to store decimal
+numbers with single precision.</span></p>
+<p><span class="class_s1SY">double:</span><span class="class_s1SZ">
+Double precision floating-point data type, used to store decimal numbers
+with double precision.</span></p>
+<p>Derived Data Types:</p>
+<p><span class="class_s1SY">array:</span><span class="class_s1SZ"> A
+collection of elements of the same data type, stored in contiguous
+memory locations.</span></p>
+<p><span class="class_s1SY">pointer:</span><span class="class_s1SZ"> A
+variable that stores the memory address of another variable.</span></p>
+<p><span class="class_s1SY">structure:</span><span class="class_s1SZ"> A
+user-defined data type that groups together variables of different data
+types under a single name.</span></p>
+<p>Enumerated Data Type:</p>
+<p><span class="class_s1SY">enum:</span><span class="class_s1SZ"> A
+user-defined data type used to define a set of named constants
+(enumerators).</span></p>
+<p>Void Data Type:</p>
+<p><span class="class_s1SY">void:</span><span class="class_s1SZ">
+Represents the absence of data type. It is commonly used to indicate
+that a function does not return any value or that a pointer does not
+point to any specific data type.</span></p>
+<p>Example:</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>// Declaration and initialization of variables</p>
+<p>int age = 25;</p>
+<p>char gender = 'M';</p>
+<p>float height = 5.9;</p>
+<p>double weight = 68.5;</p>
+<p>// Printing variable values</p>
+<p>printf("Age: %d\n", age);</p>
+<p>printf("Gender: %c\n", gender);</p>
+<p>printf("Height: %.2f\n", height);</p>
+<p>printf("Weight: %.1f\n", weight);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>In this example, we have declared and initialized variables of
+different data types (int, char, float, double). We then printed their
+values using the printf() function.</p>
+<p><span class="class_s1SZ">Certainly! </span><span
+class="class_s1SY">printf() and scanf()</span><span class="class_s1SZ">
+are two commonly used functions in C for input and output operations.
+Here's how you can use them in a C program:</span></p>
+<p>printf() Function:</p>
+<p>The printf() function is used to print formatted output to the
+standard output (usually the console). It takes a format string as its
+first argument, followed by any additional arguments that represent the
+values to be formatted and printed.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int num = 10;</p>
+<p>float pi = 3.14159;</p>
+<p>// Printing integers and floats</p>
+<p>printf("The value of num is: %d\n", num);</p>
+<p>printf("The value of pi is: %.2f\n", pi);</p>
+<p>// Printing strings</p>
+<p>printf("Hello, world!\n");</p>
+<p>return 0;</p>
+<p>}</p>
+<p>scanf() Function:</p>
+<p>The scanf() function is used to read formatted input from the
+standard input (usually the keyboard). It takes a format string as its
+first argument, followed by pointers to the variables where the input
+values will be stored.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int num;</p>
+<p>float pi;</p>
+<p>// Reading an integer and a float</p>
+<p>printf("Enter an integer: ");</p>
+<p>scanf("%d", &amp;num);</p>
+<p>printf("Enter a float: ");</p>
+<p>scanf("%f", &amp;pi);</p>
+<p>// Printing the values entered by the user</p>
+<p>printf("You entered: %d\n", num);</p>
+<p>printf("You entered: %.2f\n", pi);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Note:</p>
+<p>%d, %f, %c, etc., are format specifiers used to specify the type of
+data being read or printed.</p>
+<p>In scanf(), the &amp; operator is used before the variable name to
+pass its address, indicating where the input value should be stored.</p>
+<p>Always ensure proper error handling when using scanf() to handle
+cases where unexpected input is entered by the user.</p>
+<p><span class="class_s1SY">Operators and expressions</span><span
+class="class_s1SZ"> are fundamental components of C programming,
+allowing you to perform various operations on data. Here's an overview
+of operators and expressions in C:</span></p>
+<p>Arithmetic Operators:</p>
+<p>Arithmetic operators are used to perform mathematical operations on
+operands.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int a = 10, b = 5;</p>
+<p>int sum = a + b;    // Addition</p>
+<p>int difference = a - b; // Subtraction</p>
+<p>int product = a * b; // Multiplication</p>
+<p>float division = a / (float)b; // Division (typecasting to float for
+accurate result)</p>
+<p>int remainder = a % b; // Modulus (remainder of division)</p>
+<p>Relational Operators:</p>
+<p>Relational operators are used to compare the values of two
+operands.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int a = 10, b = 5;</p>
+<p>if (a &gt; b) {</p>
+<p>printf("a is greater than b\n");</p>
+<p>}</p>
+<p>if (a == b) {</p>
+<p>printf("a is equal to b\n");</p>
+<p>}</p>
+<p>if (a != b) {</p>
+<p>printf("a is not equal to b\n");</p>
+<p>}</p>
+<p>Logical Operators:</p>
+<p>Logical operators are used to combine multiple conditions.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int x = 5, y = 10;</p>
+<p>if (x &gt; 0 &amp;&amp; y &gt; 0) {</p>
+<p>printf("Both x and y are positive\n");</p>
+<p>}</p>
+<p>if (x &gt; 0 || y &gt; 0) {</p>
+<p>printf("At least one of x or y is positive\n");</p>
+<p>}</p>
+<p>if (!(x &gt; 0)) {</p>
+<p>printf("x is not positive\n");</p>
+<p>}</p>
+<p>Assignment Operators:</p>
+<p>Assignment operators are used to assign values to variables.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int a = 10;</p>
+<p>a += 5; // Equivalent to a = a + 5</p>
+<p>Increment and Decrement Operators:</p>
+<p>Increment (++) and decrement (--) operators are used to increment or
+decrement the value of a variable.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int x = 5;</p>
+<p>x++; // Increment x by 1</p>
+<p>Bitwise Operators:</p>
+<p>Bitwise operators are used to perform operations at the bit
+level.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int x = 5, y = 3;</p>
+<p>int bitwise_and = x &amp; y; // Bitwise AND</p>
+<p>int bitwise_or = x | y; // Bitwise OR</p>
+<p>int bitwise_xor = x ^ y; // Bitwise XOR</p>
+<p>int bitwise_not = ~x; // Bitwise NOT</p>
+<p>int left_shift = x &lt;&lt; 1; // Left shift</p>
+<p>int right_shift = x &gt;&gt; 1; // Right shift</p>
+<p>Conditional Operator (Ternary Operator):</p>
+<p>The conditional operator (? :) is used for decision-making.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int a = 10, b = 5;</p>
+<p>int max = (a &gt; b) ? a : b; // max will store the maximum of a and
+b</p>
+<p>These are some of the basic operators and expressions in C. They
+allow you to perform a wide range of operations and control flow in your
+programs.</p>
+<p><span class="class_s1T1">Certainly! Here's how you can use
+</span><span class="class_s1T0">if, if-else, and nested if </span><span
+class="class_s1T1">statements in C:</span></p>
+<p>if Statement:</p>
+<p>The if statement is used to execute a block of code if a condition is
+true.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int num = 10;</p>
+<p>// If num is greater than 0, execute the block of code</p>
+<p>if (num &gt; 0) {</p>
+<p>printf("The number is positive\n");</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>if-else Statement:</p>
+<p>The if-else statement is used to execute one block of code if a
+condition is true, and another block if the condition is false.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int num = -5;</p>
+<p>// If num is greater than 0, execute the first block of code;
+otherwise, execute the second block</p>
+<p>if (num &gt; 0) {</p>
+<p>printf("The number is positive\n");</p>
+<p>} else {</p>
+<p>printf("The number is not positive\n");</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Nested if Statement:</p>
+<p>You can nest if statements inside other if or else blocks to create
+complex conditional logic.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int num = 10;</p>
+<p>// Check if num is positive</p>
+<p>if (num &gt; 0) {</p>
+<p>printf("The number is positive\n");</p>
+<p>// Nested if: check if num is even</p>
+<p>if (num % 2 == 0) {</p>
+<p>printf("The number is even\n");</p>
+<p>} else {</p>
+<p>printf("The number is odd\n");</p>
+<p>}</p>
+<p>} else {</p>
+<p>printf("The number is not positive\n");</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Nested if statements allow you to handle multiple conditions and
+execute different blocks of code based on the outcome of each condition.
+However, be cautious not to create overly complex or deeply nested code,
+as it can become difficult to read and maintain.</p>
+<p><span class="class_s1T1">Certainly! Here's how you can use
+</span><span class="class_s1T0">while, for, and do-while
+loops</span><span class="class_s1T1"> in C:</span></p>
+<p>while Loop:</p>
+<p>The while loop executes a block of code as long as a specified
+condition is true.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int i = 1;</p>
+<p>// Print numbers from 1 to 5 using a while loop</p>
+<p>while (i &lt;= 5) {</p>
+<p>printf("%d ", i);</p>
+<p>i++;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>for Loop:</p>
+<p>The for loop is used to iterate over a sequence of values.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>// Print numbers from 1 to 5 using a for loop</p>
+<p>for (int i = 1; i &lt;= 5; i++) {</p>
+<p>printf("%d ", i);</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>do-while Loop:</p>
+<p>The do-while loop is similar to the while loop, but it executes the
+block of code at least once, even if the condition is false.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int i = 1;</p>
+<p>// Print numbers from 1 to 5 using a do-while loop</p>
+<p>do {</p>
+<p>printf("%d ", i);</p>
+<p>i++;</p>
+<p>} while (i &lt;= 5);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>All three loops can be used to repeat a block of code multiple times
+based on certain conditions. The choice of loop depends on the specific
+requirements of your program. Use while when you want to execute a block
+of code based on a condition, for when you want to iterate over a
+sequence of values, and do-while when you want to ensure that the block
+of code is executed at least once before checking the condition.</p>
+<p><span class="class_s1T1">Certainly! The </span><span
+class="class_s1T0">switch-case statement </span><span
+class="class_s1T1">is used to execute one block of code among many
+alternatives based on the value of <span
+id="part0001.xhtml_page_39"></span>an expression. Here's how you can use
+the switch-case statement in C:</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int choice;</p>
+<p>// Prompt the user to enter a choice</p>
+<p>printf("Enter your choice (1, 2, or 3): ");</p>
+<p>scanf("%d", &amp;choice);</p>
+<p>// Switch-case statement</p>
+<p>switch(choice) {</p>
+<p>case 1:</p>
+<p>printf("You chose option 1\n");</p>
+<p>break;</p>
+<p>case 2:</p>
+<p>printf("You chose option 2\n");</p>
+<p>break;</p>
+<p>case 3:</p>
+<p>printf("You chose option 3\n");</p>
+<p>break;</p>
+<p>default:</p>
+<p>printf("Invalid choice\n");</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>In the switch statement:</p>
+<p>The switch keyword indicates the start of the switch-case block.</p>
+<p>The choice variable (expression) is evaluated, and its value
+determines which case block is executed.</p>
+<p>Each case label specifies a possible value of the expression.</p>
+<p>If the value of choice matches a case label, the corresponding block
+of code is executed.</p>
+<p>The break statement is used to exit the switch block after executing
+the corresponding case. Without break, execution will continue to the
+next case.</p>
+<p>The default case is optional and is executed when none of the case
+values match the expression's value.</p>
+<p>The switch-case statement provides a convenient way to handle
+multiple alternatives based on the value of an expression. It is often
+used when you have a fixed set of possible values for the
+expression.</p>
+<p><span class="class_s1T1">Certainly! The </span><span
+class="class_s1T0">break and continue statements</span><span
+class="class_s1T1"> are control flow statements used within loops (such
+as for, while, and do-while) to alter the flow of execution. Here's how
+you can use them in C:</span></p>
+<p>break Statement:</p>
+<p>The break statement is used to exit a loop prematurely, without
+executing the remaining iterations of the loop.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>// Print numbers from 1 to 10, but exit the loop when reaching 5</p>
+<p>for (int i = 1; i &lt;= 10; i++) {</p>
+<p>if (i == 5) {</p>
+<p>break; // Exit the loop when i is 5</p>
+<p>}</p>
+<p>printf("%d ", i);</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>continue Statement:</p>
+<p>The continue statement is used to skip the current iteration of a
+loop and proceed to the next iteration.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>// Print odd numbers from 1 to 10, skipping even numbers</p>
+<p>for (int i = 1; i &lt;= 10; i++) {</p>
+<p>if (i % 2 == 0) {</p>
+<p>continue; // Skip even numbers</p>
+<p>}</p>
+<p>printf("%d ", i);</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>In both examples:</p>
+<p>The break and continue statements are used within a for loop to
+control the flow of execution.</p>
+<p>When the break statement is encountered, the loop is terminated
+immediately, and the program continues executing the code after the
+loop.</p>
+<p>When the continue statement is encountered, the current iteration of
+the loop is terminated, and the loop proceeds to the next iteration.</p>
+<p>These statements provide flexibility and control over loop execution,
+allowing you to handle special cases or conditions within the loop.</p>
+<p>Arrays and Strings</p>
+<p>Arrays:</p>
+<p>An array is a collection of elements of the same data type, stored in
+contiguous memory locations. Here's how you can declare, initialize, and
+access elements of an array:</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>// Declaration and initialization of an array</p>
+<p>int numbers[5] = {10, 20, 30, 40, 50};</p>
+<p>// Accessing elements of the array</p>
+<p>printf("Element at index 0: %d\n", numbers[0]);</p>
+<p>printf("Element at index 1: %d\n", numbers[1]);</p>
+<p>// Modifying elements of the array</p>
+<p>numbers[2] = 35;</p>
+<p>printf("Modified element at index 2: %d\n", numbers[2]);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Strings:</p>
+<p>In C, strings are represented as arrays of characters terminated by a
+null character ('\0'). Here's how you can declare, initialize, and
+manipulate strings:</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>// Declaration and initialization of a string</p>
+<p>char greeting[] = "Hello, world!";</p>
+<p>// Accessing characters of the string</p>
+<p>printf("First character: %c\n", greeting[0]);</p>
+<p>printf("Second character: %c\n", greeting[1]);</p>
+<p>// Modifying characters of the string</p>
+<p>greeting[7] = 'W'; // Change 'w' to 'W'</p>
+<p>printf("Modified string: %s\n", greeting);</p>
+<p>// Iterating over the string</p>
+<p>for (int i = 0; greeting[i] != '\0'; i++) {</p>
+<p>printf("%c", greeting[i]);</p>
+<p>}</p>
+<p>printf("\n");</p>
+<p>return 0;</p>
+<p>}</p>
+<p>In the example above:</p>
+<p>We declare and initialize a string greeting using an array of
+characters.</p>
+<p>We access and modify individual characters of the string using array
+indexing.</p>
+<p>We iterate over the string using a for loop until we encounter the
+null character '\0' indicating the end of the string.</p>
+<p>It's important to ensure that strings are null-terminated to avoid
+undefined behavior when manipulating or printing them.</p>
+<p><span class="class_s1T1">Sure! </span><span
+class="class_s1T0">Multidimensional arrays </span><span
+class="class_s1T1">are arrays of arrays, allowing you to represent data
+in multiple dimensions, such as rows and columns in a matrix. Here's how
+you can declare, initialize, and access elements of a multidimensional
+array in C:</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>// Declaration and initialization of a 2D array (3x3)</p>
+<p>int matrix[3][3] = {</p>
+<p>{1, 2, 3},</p>
+<p>{4, 5, 6},</p>
+<p>{7, 8, 9}</p>
+<p>};</p>
+<p>// Accessing elements of the 2D array</p>
+<p>printf("Element at row 1, column 1: %d\n", matrix[0][0]);</p>
+<p>printf("Element at row 2, column 3: %d\n", matrix[1][2]);</p>
+<p>// Modifying elements of the 2D array</p>
+<p>matrix[1][1] = 10;</p>
+<p>printf("Modified element at row 2, column 2: %d\n",
+matrix[1][1]);</p>
+<p>// Iterating over the 2D array</p>
+<p>printf("Elements of the 2D array:\n");</p>
+<p>for (int i = 0; i &lt; 3; i++) {</p>
+<p>for (int j = 0; j &lt; 3; j++) {</p>
+<p>printf("%d ", matrix[i][j]);</p>
+<p>}</p>
+<p>printf("\n");</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>In the example above:</p>
+<p>We declare and initialize a 2D array matrix with dimensions 3x3.</p>
+<p>We access and modify individual elements of the array using row and
+column indices.</p>
+<p>We iterate over the array using nested for loops to print its
+elements row by row.</p>
+<p>You can extend this concept to higher-dimensional arrays as needed,
+such as 3D arrays for representing cubes or higher-dimensional data
+structures.</p>
+<p><span class="class_s1T1">Certainly! In C, </span><span
+class="class_s1T0">string functions </span><span class="class_s1T1">are
+part of the standard library &lt;string.h&gt;. Here are some commonly
+used string functions along with examples:</span></p>
+<p>strlen():</p>
+<p>This function is used to find the length of a string.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>int main() {</p>
+<p>char str[] = "Hello, world!";</p>
+<p>int length = strlen(str);</p>
+<p>printf("Length of the string: %d\n", length);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>strcpy():</p>
+<p>This function is used to copy one string to another.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>int main() {</p>
+<p>char source[] = "Hello, world!";</p>
+<p>char destination[20]; // Make sure the destination has enough
+space</p>
+<p>strcpy(destination, source);</p>
+<p>printf("Copied string: %s\n", destination);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>strcat():</p>
+<p>This function is used to concatenate two strings.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>int main() {</p>
+<p>char str1[20] = "Hello, ";</p>
+<p>char str2[] = "world!";</p>
+<p>strcat(str1, str2);</p>
+<p>printf("Concatenated string: %s\n", str1);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>strcmp():</p>
+<p>This function is used to compare two strings. It returns 0 if both
+strings are equal, a positive value if the first string is greater than
+the second, and a negative value if the first string is less than the
+second.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>int main() {</p>
+<p>char str1[] = "apple";</p>
+<p>char str2[] = "banana";</p>
+<p>int result = strcmp(str1, str2);</p>
+<p>if (result == 0) {</p>
+<p>printf("Both strings are equal\n");</p>
+<p>} else if (result &gt; 0) {</p>
+<p>printf("str1 is greater than str2\n");</p>
+<p>} else {</p>
+<p>printf("str1 is less than str2\n");</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>These are just a few examples of commonly used string functions in C.
+The &lt;string.h&gt; library provides many other useful functions for
+working with strings, such as <span class="class_s1T3">strstr(),
+strchr(), strncpy(), strncat()</span>, etc.</p>
+<p><span class="class_s1T1">Certainly! Here are some common </span><span
+class="class_s1T0">string manipulation functions</span><span
+class="class_s1T1"> in C:</span></p>
+<p>strncpy():</p>
+<p>This function is used to copy a specified number of characters from
+one string to another.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>int main() {</p>
+<p>char source[] = "Hello, world!";</p>
+<p>char destination[20]; // Make sure the destination has enough
+space</p>
+<p>strncpy(destination, source, 5); // Copy first 5 characters</p>
+<p>destination[5] = '\0'; // Null-terminate the destination string</p>
+<p>printf("Copied string: %s\n", destination);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>strncat():</p>
+<p>This function is used to concatenate a specified number of characters
+from one string to another.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>int main() {</p>
+<p>char str1[20] = "Hello, ";</p>
+<p>char str2[] = "world!";</p>
+<p>strncat(str1, str2, 3); // Concatenate first 3 characters of str2</p>
+<p>printf("Concatenated string: %s\n", str1);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>strstr():</p>
+<p>This function is used to find the first occurrence of a substring
+within a string.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>int main() {</p>
+<p>char str[] = "Hello, world!";</p>
+<p>char *substr = strstr(str, "world");</p>
+<p>if (substr != NULL) {</p>
+<p>printf("Substring found at position: %ld\n", substr - str);</p>
+<p>} else {</p>
+<p>printf("Substring not found\n");</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>strtok():</p>
+<p>This function is used to tokenize a string into smaller strings
+(tokens) based on a delimiter.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>int main() {</p>
+<p>char str[] = "Hello, world! How are you?";</p>
+<p>char *token = strtok(str, " ,!?"); // Tokenize using space, comma, or
+exclamation mark</p>
+<p>while (token != NULL) {</p>
+<p>printf("%s\n", token);</p>
+<p>token = strtok(NULL, " ,!?"); // Get next token</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>These are just a few examples of string manipulation functions in C.
+The <span class="class_s1T3">&lt;string.h&gt;</span> library provides
+many other useful functions for working with strings, such as <span
+class="class_s1T3">strcpy(), strcat(), strcmp(), strlen(),
+</span>etc.</p>
+<p><span class="class_s1T1">In C, </span><span
+class="class_s1T0">character arrays and string literals </span><span
+class="class_s1T1">are both used to represent strings, but they have
+some differences in how they are declared, initialized, and
+used.</span></p>
+<p>Character Arrays:</p>
+<p>A character array is a fixed-size array of characters that can be
+used to store and manipulate strings.</p>
+<p>You can modify the contents of a character array.</p>
+<p>You must explicitly null-terminate a character array to indicate the
+end of the string.</p>
+<p>Character arrays provide more flexibility, but you need to manage
+memory manually.</p>
+<p>Example:</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>char str[20]; // Declaration of a character array</p>
+<p>str[0] = 'H';</p>
+<p>str[1] = 'e';</p>
+<p>str[2] = 'l';</p>
+<p>str[3] = 'l';</p>
+<p>str[4] = 'o';</p>
+<p>str[5] = '\0'; // Null-terminate the string</p>
+<p>printf("Character array: %s\n", str);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>String Literals:</p>
+<p>A string literal is a sequence of characters enclosed in double
+quotes.</p>
+<p>String literals are stored in read-only memory, and you cannot modify
+their contents.</p>
+<p>String literals are automatically null-terminated by the
+compiler.</p>
+<p>String literals provide a convenient way to work with strings without
+managing memory manually.</p>
+<p>Example:</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>char *str = "Hello"; // Declaration of a string literal</p>
+<p>printf("String literal: %s\n", str);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Comparison:</p>
+<p>Both character arrays and string literals can be used to represent
+strings.</p>
+<p>Character arrays offer more flexibility and can be modified, whereas
+string literals are read-only.</p>
+<p>String literals are automatically null-terminated, while you need to
+explicitly null-terminate character arrays.</p>
+<p>String literals are more convenient for simple string operations,
+while character arrays are useful for more complex scenarios where
+dynamic memory management is required.</p>
+<p>Understanding the differences between character arrays and string
+literals helps in choosing the appropriate approach based on the
+requirements of your program.</p>
+<p>Pointers and Memory</p>
+<p>In C, pointers are variables that store memory addresses. They are
+powerful tools for working with memory and data structures. Here's an
+overview of pointers and memory in C:</p>
+<p>Pointers:</p>
+<p>A pointer is a variable that holds the memory address of another
+variable.</p>
+<p>You can declare a pointer using the asterisk (*) symbol followed by
+the variable name.</p>
+<p>You can obtain the memory address of a variable using the address-of
+operator (&amp;).</p>
+<p>You can access the value stored at the memory address pointed to by a
+pointer using the dereference operator (*).</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int num = 10;</p>
+<p>int *ptr; // Pointer declaration</p>
+<p>ptr = &amp;num; // Assigning address of num to ptr</p>
+<p>printf("Value of num: %d\n", *ptr); // Dereferencing ptr to access
+num's value</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Memory Management:</p>
+<p>C provides functions like malloc(), calloc(), realloc(), and free()
+for dynamic memory allocation and deallocation.</p>
+<p>malloc() allocates memory block of specified size and returns a
+pointer to the first byte of the block.</p>
+<p>calloc() allocates memory block for an array of elements and
+initializes all bytes to zero.</p>
+<p>realloc() changes the size of previously allocated memory block.</p>
+<p>free() deallocates memory previously allocated by malloc(), calloc(),
+or realloc().</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;stdlib.h&gt;</p>
+<p>int main() {</p>
+<p>int *ptr;</p>
+<p>ptr = (int *)malloc(5 * sizeof(int)); // Allocate memory for 5
+integers</p>
+<p>if (ptr == NULL) {</p>
+<p>printf("Memory allocation failed\n");</p>
+<p>return 1;</p>
+<p>}</p>
+<p>// Use ptr to access the allocated memory</p>
+<p>ptr[0] = 10;</p>
+<p>ptr[1] = 20;</p>
+<p>ptr[2] = 30;</p>
+<p>// Deallocate the allocated memory</p>
+<p>free(ptr);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Pointers and Arrays:</p>
+<p>Arrays and pointers are closely related in C.</p>
+<p>An array name can be treated as a pointer to the first element of the
+array.</p>
+<p>Pointer arithmetic can be used to access array elements and navigate
+through the array.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>int arr[] = {10, 20, 30};</p>
+<p>int *ptr = arr; // Pointer to the first element of the array</p>
+<p>printf("Value at index 0: %d\n", *ptr);</p>
+<p>printf("Value at index 1: %d\n", *(ptr + 1)); // Accessing next
+element using pointer arithmetic</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Understanding pointers and memory management is essential for
+efficient memory usage and building complex data structures in C.
+However, it also requires careful handling to avoid memory leaks and
+segmentation faults.</p>
+<p>Defining a Structure:</p>
+<p>You can define a structure using the struct keyword followed by the
+structure name and a list of members inside curly braces.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Define a structure named 'Person'</p>
+<p>struct Person {</p>
+<p>char name[50];</p>
+<p>int age;</p>
+<p>float height;</p>
+<p>};</p>
+<p>Declaring Structure Variables:</p>
+<p>After defining a structure, you can declare variables of that
+structure type.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int main() {</p>
+<p>// Declare variables of structure type 'Person'</p>
+<p>struct Person person1, person2;</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Accessing Structure Members:</p>
+<p>You can access structure members using the dot (.) operator.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int main() {</p>
+<p>struct Person person1;</p>
+<p>// Assign values to structure members</p>
+<p>strcpy(person1.name, "John");</p>
+<p>person1.age = 30;</p>
+<p>person1.height = 5.9;</p>
+<p>// Access and print structure members</p>
+<p>printf("Name: %s\n", person1.name);</p>
+<p>printf("Age: %d\n", person1.age);</p>
+<p>printf("Height: %.2f\n", person1.height);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Initializing Structure Variables:</p>
+<p>You can initialize structure variables at the time of
+declaration.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>int main() {</p>
+<p>// Initialize structure variable at the time of declaration</p>
+<p>struct Person person1 = {"Alice", 25, 5.5};</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Nested Structures:</p>
+<p>You can nest structures inside other structures to create more
+complex data structures.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>// Define a structure named 'Address'</p>
+<p>struct Address {</p>
+<p>char city[50];</p>
+<p>char state[50];</p>
+<p>};</p>
+<p>// Define a structure named 'Person' with a nested structure
+'Address'</p>
+<p>struct Person {</p>
+<p>char name[50];</p>
+<p>int age;</p>
+<p>struct Address address;</p>
+<p>};</p>
+<p>int main() {</p>
+<p>struct Person person1;</p>
+<p>// Assign values to structure members</p>
+<p>strcpy(person1.name, "Alice");</p>
+<p>person1.age = 25;</p>
+<p>strcpy(person1.address.city, "New York");</p>
+<p>strcpy(person1.address.state, "NY");</p>
+<p>// Access and print structure members</p>
+<p>printf("Name: %s\n", person1.name);</p>
+<p>printf("Age: %d\n", person1.age);</p>
+<p>printf("City: %s\n", person1.address.city);</p>
+<p>printf("State: %s\n", person1.address.state);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Structures provide a way to organize and manage related data in a
+program. They are commonly used in C to represent complex data
+structures and objects.</p>
+<p><span class="class_s1T0">File handling </span><span
+class="class_s1T1">in C involves operations such as opening, reading,
+writing, and closing files. Here's how you can perform file handling
+operations in C:</span></p>
+<p>Opening a File:</p>
+<p>To open a file, you can use the fopen() function. It takes two
+parameters: the file path and the mode (read, write, append, etc.).</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>FILE *file;</p>
+<p>file = fopen("example.txt", "r"); // Open file in read mode</p>
+<p>if (file == NULL) {</p>
+<p>printf("File open failed\n");</p>
+<p>return 1;</p>
+<p>}</p>
+<p>// File operations...</p>
+<p>fclose(file); // Close the file</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Writing to a File:</p>
+<p>To write data to a file, you can use functions like fprintf() or
+fputc().</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>FILE *file;</p>
+<p>file = fopen("example.txt", "w"); // Open file in write mode</p>
+<p>if (file == NULL) {</p>
+<p>printf("File open failed\n");</p>
+<p>return 1;</p>
+<p>}</p>
+<p>fprintf(file, "Hello, world!\n"); // Write data to the file</p>
+<p>fclose(file); // Close the file</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Reading from a File:</p>
+<p>To read data from a file, you can use functions like fscanf() or
+fgetc().</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>FILE *file;</p>
+<p>char str[100];</p>
+<p>file = fopen("example.txt", "r"); // Open file in read mode</p>
+<p>if (file == NULL) {</p>
+<p>printf("File open failed\n");</p>
+<p>return 1;</p>
+<p>}</p>
+<p>fscanf(file, "%s", str); // Read data from the file</p>
+<p>printf("Data read from file: %s\n", str);</p>
+<p>fclose(file); // Close the file</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Appending to a File:</p>
+<p>To append data to a file, you can use the mode "a" when opening the
+file.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>FILE *file;</p>
+<p>file = fopen("example.txt", "a"); // Open file in append mode</p>
+<p>if (file == NULL) {</p>
+<p>printf("File open failed\n");</p>
+<p>return 1;</p>
+<p>}</p>
+<p>fprintf(file, "This text is appended.\n"); // Append data to the
+file</p>
+<p>fclose(file); // Close the file</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Error Handling:</p>
+<p>Always check if the file has been successfully opened before
+performing any file operations. Additionally, handle errors
+appropriately.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>FILE *file;</p>
+<p>file = fopen("example.txt", "r");</p>
+<p>if (file == NULL) {</p>
+<p>printf("File open failed\n");</p>
+<p>return 1;</p>
+<p>}</p>
+<p>// File operations...</p>
+<p>fclose(file);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>File handling is an essential aspect of C programming, allowing you
+to interact with external files for input and output operations.</p>
+<p><span class="class_s1T0">Advanced concepts</span><span
+class="class_s1T1"> in C cover a wide range of topics beyond the basics,
+including enumerations, typedef, preprocessor directives, bitwise
+operators, recursion, and data structures. Here's an overview along with
+examples for each concept:</span></p>
+<p>Enumerations:</p>
+<p>Enumerations allow you to define named constants with a fixed set of
+possible values.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>enum Day {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday,
+Sunday};</p>
+<p>int main() {</p>
+<p>enum Day today = Wednesday;</p>
+<p>printf("Today is day number: %d\n", today);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Typedef:</p>
+<p>typedef allows you to create aliases for existing data types, which
+can make your code more readable and easier to maintain.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>typedef unsigned long long ULL;</p>
+<p>int main() {</p>
+<p>ULL x = 123456789012345;</p>
+<p>printf("Value of x: %llu\n", x);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Preprocessor Directives:</p>
+<p>Preprocessor directives are commands that are executed by the
+preprocessor before the compilation process.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#define PI 3.14159</p>
+<p>#define SQUARE(x) ((x) * (x))</p>
+<p>int main() {</p>
+<p>printf("Value of PI: %f\n", PI);</p>
+<p>printf("Square of 5: %d\n", SQUARE(5));</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Bitwise Operators:</p>
+<p>Bitwise operators are used to manipulate individual bits of
+operands.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main() {</p>
+<p>unsigned int x = 5; // Binary representation: 0000 0101</p>
+<p>unsigned int y = 3; // Binary representation: 0000 0011</p>
+<p>printf("Bitwise AND: %u\n", x &amp; y); // Binary AND: 0000 0001</p>
+<p>printf("Bitwise OR: %u\n", x | y);  // Binary OR: 0000 0111</p>
+<p>printf("Bitwise XOR: %u\n", x ^ y); // Binary XOR: 0000 0110</p>
+<p>printf("Bitwise NOT of x: %u\n", ~x); // Binary NOT: 1111 1010</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Recursion:</p>
+<p>Recursion is a technique in which a function calls itself directly or
+indirectly.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int factorial(int n) {</p>
+<p>if (n == 0 || n == 1)</p>
+<p>return 1;</p>
+<p>else</p>
+<p>return n * factorial(n - 1);</p>
+<p>}</p>
+<p>int main() {</p>
+<p>int num = 5;</p>
+<p>printf("Factorial of %d is: %d\n", num, factorial(num));</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Data Structures:</p>
+<p>Data structures like arrays, linked lists, stacks, queues, trees, and
+graphs are used to store and organize data efficiently.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>struct Node {</p>
+<p>int data;</p>
+<p>struct Node* next;</p>
+<p>};</p>
+<p>int main() {</p>
+<p>// Example of a linked list</p>
+<p>struct Node* head = NULL;</p>
+<p>struct Node* second = NULL;</p>
+<p>struct Node* third = NULL;</p>
+<p>// Allocate memory for nodes</p>
+<p>head = (struct Node*)malloc(sizeof(struct Node));</p>
+<p>second = (struct Node*)malloc(sizeof(struct Node));</p>
+<p>third = (struct Node*)malloc(sizeof(struct Node));</p>
+<p>// Assign data to nodes and link them</p>
+<p>head-&gt;data = 1;</p>
+<p>head-&gt;next = second;</p>
+<p>second-&gt;data = 2;</p>
+<p>second-&gt;next = third;</p>
+<p>third-&gt;data = 3;</p>
+<p>third-&gt;next = NULL;</p>
+<p>// Traversal</p>
+<p>struct Node* temp = head;</p>
+<p>while (temp != NULL) {</p>
+<p>printf("%d ", temp-&gt;data);</p>
+<p>temp = temp-&gt;next;</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>These advanced concepts enhance your ability to write efficient and
+expressive C programs. Understanding them allows you to tackle more
+complex problems and build sophisticated applications.</p>
+<p><span class="class_s1T0">Advanced data structures</span><span
+class="class_s1T1"> in C go beyond basic structures like arrays and
+linked lists and include more complex structures such as trees, graphs,
+heaps, and hash tables. Here's an overview of some advanced data
+structures along with examples:</span></p>
+<p>Trees:</p>
+<p>Trees are hierarchical data structures consisting of nodes connected
+by edges. Binary trees, binary search trees, and AVL trees are common
+types of trees.</p>
+<p>Binary Search Tree (BST):</p>
+<p>A binary search tree is a binary tree in which the left child of a
+node contains only nodes with keys less than the node's key, and the
+right child contains only nodes with keys greater than the node's
+key.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;stdlib.h&gt;</p>
+<p>struct TreeNode {</p>
+<p>int data;</p>
+<p>struct TreeNode* left;</p>
+<p>struct TreeNode* right;</p>
+<p>};</p>
+<p>struct TreeNode* createNode(int data) {</p>
+<p>struct TreeNode* newNode = (struct TreeNode*)malloc(sizeof(struct
+TreeNode));</p>
+<p>newNode-&gt;data = data;</p>
+<p>newNode-&gt;left = NULL;</p>
+<p>newNode-&gt;right = NULL;</p>
+<p>return newNode;</p>
+<p>}</p>
+<p>struct TreeNode* insert(struct TreeNode* root, int data) {</p>
+<p>if (root == NULL)</p>
+<p>return createNode(data);</p>
+<p>if (data &lt; root-&gt;data)</p>
+<p>root-&gt;left = insert(root-&gt;left, data);</p>
+<p>else if (data &gt; root-&gt;data)</p>
+<p>root-&gt;right = insert(root-&gt;right, data);</p>
+<p>return root;</p>
+<p>}</p>
+<p>void inorderTraversal(struct TreeNode* root) {</p>
+<p>if (root != NULL) {</p>
+<p>inorderTraversal(root-&gt;left);</p>
+<p>printf("%d ", root-&gt;data);</p>
+<p>inorderTraversal(root-&gt;right);</p>
+<p>}</p>
+<p>}</p>
+<p>int main() {</p>
+<p>struct TreeNode* root = NULL;</p>
+<p>root = insert(root, 50);</p>
+<p>insert(root, 30);</p>
+<p>insert(root, 20);</p>
+<p>insert(root, 40);</p>
+<p>insert(root, 70);</p>
+<p>insert(root, 60);</p>
+<p>insert(root, 80);</p>
+<p>printf("Inorder traversal of the BST: ");</p>
+<p>inorderTraversal(root);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>Graphs:</p>
+<p>Graphs are collections of nodes (vertices) and edges that connect
+these nodes. They can be directed or undirected, weighted or
+unweighted.</p>
+<p>Adjacency List Representation:</p>
+<p>In the adjacency list representation, each node stores a list of its
+adjacent nodes.</p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;stdlib.h&gt;</p>
+<p>struct Node {</p>
+<p>int data;</p>
+<p>struct Node* next;</p>
+<p>};</p>
+<p>struct Graph {</p>
+<p>int numVertices;</p>
+<p>struct Node** adjLists;</p>
+<p>};</p>
+<p>struct Node* createNode(int data) {</p>
+<p>struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));</p>
+<p>newNode-&gt;data = data;</p>
+<p>newNode-&gt;next = NULL;</p>
+<p>return newNode;</p>
+<p>}</p>
+<p>struct Graph* createGraph(int numVertices) {</p>
+<p>struct Graph* graph = (struct Graph*)malloc(sizeof(struct
+Graph));</p>
+<p>graph-&gt;numVertices = numVertices;</p>
+<p>graph-&gt;adjLists = (struct Node**)malloc(numVertices *
+sizeof(struct Node*));</p>
+<p>for (int i = 0; i &lt; numVertices; i++)</p>
+<p>graph-&gt;adjLists[i] = NULL;</p>
+<p>return graph;</p>
+<p>}</p>
+<p>void addEdge(struct Graph* graph, int src, int dest) {</p>
+<p>struct Node* newNode = createNode(dest);</p>
+<p>newNode-&gt;next = graph-&gt;adjLists[src];</p>
+<p>graph-&gt;adjLists[src] = newNode;</p>
+<p>newNode = createNode(src);</p>
+<p>newNode-&gt;next = graph-&gt;adjLists[dest];</p>
+<p>graph-&gt;adjLists[dest] = newNode;</p>
+<p>}</p>
+<p>void printGraph(struct Graph* graph) {</p>
+<p>for (int i = 0; i &lt; graph-&gt;numVertices; i++) {</p>
+<p>struct Node* temp = graph-&gt;adjLists[i];</p>
+<p>printf("Adjacency list of vertex %d\n", i);</p>
+<p>while (temp) {</p>
+<p>printf("%d -&gt; ", temp-&gt;data);</p>
+<p>temp = temp-&gt;next;</p>
+<p>}</p>
+<p>printf("NULL\n");</p>
+<p>}</p>
+<p>}</p>
+<p>int main() {</p>
+<p>struct Graph* graph = createGraph(4);</p>
+<p>addEdge(graph, 0, 1);</p>
+<p>addEdge(graph, 0, 2);</p>
+<p>addEdge(graph, 1, 2);</p>
+<p>addEdge(graph, 2, 3);</p>
+<p>printGraph(graph);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>These are just two examples of advanced data structures in C.
+Depending on your application, you may encounter other structures such
+as heaps, hash tables, or tries. Understanding and implementing these
+structures will enable you to solve a wide range of problems
+efficiently.</p>
+<p>Project</p>
+<p>simple banking project</p>
+<p><span class="class_s1T1">Sure, here's a </span><span
+class="class_s1T0">simple banking project</span><span
+class="class_s1T1"> implemented in C language. This project includes
+functionalities like account creation, deposit, withdrawal, balance
+inquiry, and account closure. It uses file handling to store account
+information in a text file.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;stdlib.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>// Structure to represent bank account</p>
+<p>struct Account {</p>
+<p>int accountNumber;</p>
+<p>char name[50];</p>
+<p>float balance;</p>
+<p>};</p>
+<p>// Function to create a new account</p>
+<p>void createAccount() {</p>
+<p>FILE *file = fopen("accounts.txt", "a");</p>
+<p>if (file == NULL) {</p>
+<p>printf("Error: Cannot open file.\n");</p>
+<p>return;</p>
+<p>}</p>
+<p>struct Account newAccount;</p>
+<p>printf("Enter account number: ");</p>
+<p>scanf("%d", &amp;newAccount.accountNumber);</p>
+<p>printf("Enter name: ");</p>
+<p>scanf("%s", newAccount.name);</p>
+<p>printf("Enter initial balance: ");</p>
+<p>scanf("%f", &amp;newAccount.balance);</p>
+<p>fprintf(file, "%d %s %.2f\n", newAccount.accountNumber,
+newAccount.name, newAccount.balance);</p>
+<p>fclose(file);</p>
+<p>printf("Account created successfully.\n");</p>
+<p>}</p>
+<p>// Function to deposit money into an account</p>
+<p>void deposit() {</p>
+<p>int accountNumber;</p>
+<p>float amount;</p>
+<p>printf("Enter account number: ");</p>
+<p>scanf("%d", &amp;accountNumber);</p>
+<p>printf("Enter amount to deposit: ");</p>
+<p>scanf("%f", &amp;amount);</p>
+<p>FILE *file = fopen("accounts.txt", "r+");</p>
+<p>if (file == NULL) {</p>
+<p>printf("Error: Cannot open file.\n");</p>
+<p>return;</p>
+<p>}</p>
+<p>struct Account currentAccount;</p>
+<p>while (fscanf(file, "%d %s %f", &amp;currentAccount.accountNumber,
+currentAccount.name, &amp;currentAccount.balance) != EOF) {</p>
+<p>if (currentAccount.accountNumber == accountNumber) {</p>
+<p>currentAccount.balance += amount;</p>
+<p>fseek(file, -sizeof(struct Account), SEEK_CUR);</p>
+<p>fprintf(file, "%d %s %.2f\n", currentAccount.accountNumber,
+currentAccount.name, currentAccount.balance);</p>
+<p>fclose(file);</p>
+<p>printf("Deposit successful. Current balance: %.2f\n",
+currentAccount.balance);</p>
+<p>return;</p>
+<p>}</p>
+<p>}</p>
+<p>fclose(file);</p>
+<p>printf("Account not found.\n");</p>
+<p>}</p>
+<p>// Function to withdraw money from an account</p>
+<p>void withdraw() {</p>
+<p>int accountNumber;</p>
+<p>float amount;</p>
+<p>printf("Enter account number: ");</p>
+<p>scanf("%d", &amp;accountNumber);</p>
+<p>printf("Enter amount to withdraw: ");</p>
+<p>scanf("%f", &amp;amount);</p>
+<p>FILE *file = fopen("accounts.txt", "r+");</p>
+<p>if (file == NULL) {</p>
+<p>printf("Error: Cannot open file.\n");</p>
+<p>return;</p>
+<p>}</p>
+<p>struct Account currentAccount;</p>
+<p>while (fscanf(file, "%d %s %f", &amp;currentAccount.accountNumber,
+currentAccount.name, &amp;currentAccount.balance) != EOF) {</p>
+<p>if (currentAccount.accountNumber == accountNumber) {</p>
+<p>if (currentAccount.balance &gt;= amount) {</p>
+<p>currentAccount.balance -= amount;</p>
+<p>fseek(file, -sizeof(struct Account), SEEK_CUR);</p>
+<p>fprintf(file, "%d %s %.2f\n", currentAccount.accountNumber,
+currentAccount.name, currentAccount.balance);</p>
+<p>fclose(file);</p>
+<p>printf("Withdrawal successful. Current balance: %.2f\n",
+currentAccount.balance);</p>
+<p>return;</p>
+<p>} else {</p>
+<p>fclose(file);</p>
+<p>printf("Insufficient balance.\n");</p>
+<p>return;</p>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>fclose(file);</p>
+<p>printf("Account not found.\n");</p>
+<p>}</p>
+<p>// Function to inquire balance of an account</p>
+<p>void balanceInquiry() {</p>
+<p>int accountNumber;</p>
+<p>printf("Enter account number: ");</p>
+<p>scanf("%d", &amp;accountNumber);</p>
+<p>FILE *file = fopen("accounts.txt", "r");</p>
+<p>if (file == NULL) {</p>
+<p>printf("Error: Cannot open file.\n");</p>
+<p>return;</p>
+<p>}</p>
+<p>struct Account currentAccount;</p>
+<p>while (fscanf(file, "%d %s %f", &amp;currentAccount.accountNumber,
+currentAccount.name, &amp;currentAccount.balance) != EOF) {</p>
+<p>if (currentAccount.accountNumber == accountNumber) {</p>
+<p>fclose(file);</p>
+<p>printf("Account balance: %.2f\n", currentAccount.balance);</p>
+<p>return;</p>
+<p>}</p>
+<p>}</p>
+<p>fclose(file);</p>
+<p>printf("Account not found.\n");</p>
+<p>}</p>
+<p>// Function to close an account</p>
+<p>void closeAccount() {</p>
+<p>int accountNumber;</p>
+<p>printf("Enter account number to close: ");</p>
+<p>scanf("%d", &amp;accountNumber);</p>
+<p>FILE *file = fopen("accounts.txt", "r");</p>
+<p>if (file == NULL) {</p>
+<p>printf("Error: Cannot open file.\n");</p>
+<p>return;</p>
+<p>}</p>
+<p>FILE *tempFile = fopen("temp.txt", "w");</p>
+<p>if (tempFile == NULL) {</p>
+<p>printf("Error: Cannot create file.\n");</p>
+<p>fclose(file);</p>
+<p>return;</p>
+<p>}</p>
+<p>struct Account currentAccount;</p>
+<p>int found = 0;</p>
+<p>while (fscanf(file, "%d %s %f", &amp;currentAccount.accountNumber,
+currentAccount.name, &amp;currentAccount.balance) != EOF) {</p>
+<p>if (currentAccount.accountNumber != accountNumber) {</p>
+<p>fprintf(tempFile, "%d %s %.2f\n", currentAccount.accountNumber,
+currentAccount.name, currentAccount.balance);</p>
+<p>} else {</p>
+<p>found = 1;</p>
+<p>}</p>
+<p>}</p>
+<p>fclose(file);</p>
+<p>fclose(tempFile);</p>
+<p>remove("accounts.txt");</p>
+<p>rename("temp.txt", "accounts.txt");</p>
+<p>if (found) {</p>
+<p>printf("Account closed successfully.\n");</p>
+<p>} else {</p>
+<p>printf("Account not found.\n");</p>
+<p>}</p>
+<p>}</p>
+<p>int main() {</p>
+<p>int choice;</p>
+<p>do {</p>
+<p>printf("\nBanking System Menu\n");</p>
+<p>printf("1. Create Account\n");</p>
+<p>printf("2. Deposit\n");</p>
+<p>printf("3. Withdraw\n");</p>
+<p>printf("4. Balance Inquiry\n");</p>
+<p>printf("5. Close Account\n");</p>
+<p>printf("6. Exit\n");</p>
+<p>printf("Enter your choice: ");</p>
+<p>scanf("%d", &amp;choice);</p>
+<p>switch (choice) {</p>
+<p>case 1:</p>
+<p>createAccount();</p>
+<p>break;</p>
+<p>case 2:</p>
+<p>deposit();</p>
+<p>break;</p>
+<p>case 3:</p>
+<p>withdraw();</p>
+<p>break;</p>
+<p>case 4:</p>
+<p>balanceInquiry();</p>
+<p>break;</p>
+<p>case 5:</p>
+<p>closeAccount();</p>
+<p>break;</p>
+<p>case 6:</p>
+<p>printf("Exiting...\n");</p>
+<p>break;</p>
+<p>default:</p>
+<p>printf("Invalid choice. Please try again.\n");</p>
+<p>}</p>
+<p>} while (choice != 6);</p>
+<p>return 0;</p>
+<p>}</p>
+<p>This is a basic banking system that demonstrates account <span
+class="class_s1T3">creation, deposit, withdrawal, balance inquiry, and
+account closure functionalities.</span> The account information is
+stored in a text file named "accounts.txt".</p>
+<p>Kaun Banega Crorepati</p>
+<p><span class="class_s1T1">Sure, here's a simple "</span><span
+class="class_s1T0">Kaun Banega Crorepati</span><span
+class="class_s1T1">" (Who Wants to Be a Millionaire) project implemented
+in C language. This project simulates a quiz game where the player
+answers multiple-choice questions to win virtual money. The player has
+three lifelines: 50-50, Phone a Friend, and Audience Poll.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;stdlib.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>#include &lt;time.h&gt;</p>
+<p>// Structure to represent a question</p>
+<p>struct Question {</p>
+<p>char question[200];</p>
+<p>char options[4][50];</p>
+<p>int correctOption;</p>
+<p>};</p>
+<p>// Function to load questions from a file</p>
+<p>void loadQuestions(struct Question *questions, int numQuestions)
+{</p>
+<p>FILE *file = fopen("questions.txt", "r");</p>
+<p>if (file == NULL) {</p>
+<p>printf("Error: Cannot open file.\n");</p>
+<p>exit(1);</p>
+<p>}</p>
+<p>for (int i = 0; i &lt; numQuestions; i++) {</p>
+<p>fgets(questions[i].question, sizeof(questions[i].question),
+file);</p>
+<p>for (int j = 0; j &lt; 4; j++) {</p>
+<p>fgets(questions[i].options[j], sizeof(questions[i].options[j]),
+file);</p>
+<p>}</p>
+<p>fscanf(file, "%d", &amp;questions[i].correctOption);</p>
+<p>fgetc(file); // Consume newline character</p>
+<p>}</p>
+<p>fclose(file);</p>
+<p>}</p>
+<p>// Function to display a question</p>
+<p>void displayQuestion(struct Question question) {</p>
+<p>printf("%s", question.question);</p>
+<p>for (int i = 0; i &lt; 4; i++) {</p>
+<p>printf("%d. %s", i + 1, question.options[i]);</p>
+<p>}</p>
+<p>}</p>
+<p>// Function to select a random subset of questions</p>
+<p>void selectRandomQuestions(int *selectedQuestions, int numQuestions,
+int numSelected) {</p>
+<p>srand(time(NULL));</p>
+<p>for (int i = 0; i &lt; numSelected; i++) {</p>
+<p>int randomIndex;</p>
+<p>do {</p>
+<p>randomIndex = rand() % numQuestions;</p>
+<p>} while (selectedQuestions[randomIndex] == 1);</p>
+<p>selectedQuestions[randomIndex] = 1;</p>
+<p>}</p>
+<p>}</p>
+<p>// Function to check if the answer is correct</p>
+<p>int checkAnswer(struct Question question, int answer) {</p>
+<p>return answer == question.correctOption;</p>
+<p>}</p>
+<p>int main() {</p>
+<p>const int NUM_QUESTIONS = 10;</p>
+<p>const int NUM_LIFELINES = 3;</p>
+<p>const int PRIZE_MONEY[NUM_QUESTIONS] = {1000, 2000, 3000, 5000,
+10000, 20000, 40000, 80000, 160000, 320000};</p>
+<p>struct Question questions[NUM_QUESTIONS];</p>
+<p>int selectedQuestions[NUM_QUESTIONS] = {0};</p>
+<p>int currentPrize = 0;</p>
+<p>int lifelines[NUM_LIFELINES] = {1, 1, 1}; // 1 indicates lifeline
+available, 0 indicates lifeline used</p>
+<p>loadQuestions(questions, NUM_QUESTIONS);</p>
+<p>printf("Welcome to Kaun Banega Crorepati!\n");</p>
+<p>for (int i = 0; i &lt; NUM_QUESTIONS; i++) {</p>
+<p>printf("\nQuestion %d\n", i + 1);</p>
+<p>displayQuestion(questions[i]);</p>
+<p>if (lifelines[0]) {</p>
+<p>printf("Lifelines: 1. 50-50 ");</p>
+<p>}</p>
+<p>if (lifelines[1]) {</p>
+<p>printf("2. Phone a Friend ");</p>
+<p>}</p>
+<p>if (lifelines[2]) {</p>
+<p>printf("3. Audience Poll ");</p>
+<p>}</p>
+<p>printf("\n");</p>
+<p>int answer;</p>
+<p>printf("Enter your answer (1-4): ");</p>
+<p>scanf("%d", &amp;answer);</p>
+<p>if (answer == 0) {</p>
+<p>printf("You have chosen to quit the game.\n");</p>
+<p>break;</p>
+<p>}</p>
+<p>if (answer == 1 &amp;&amp; lifelines[0]) { // 50-50 lifeline</p>
+<p>lifelines[0] = 0;</p>
+<p>int correctOption = questions[i].correctOption;</p>
+<p>int option1 = correctOption;</p>
+<p>int option2;</p>
+<p>do {</p>
+<p>option2 = rand() % 4;</p>
+<p>} while (option2 == correctOption);</p>
+<p>printf("Options %d and %d eliminated.\n", option1 + 1, option2 +
+1);</p>
+<p>printf("Enter your answer (1-4): ");</p>
+<p>scanf("%d", &amp;answer);</p>
+<p>}</p>
+<p>if (answer == 2 &amp;&amp; lifelines[1]) { // Phone a friend
+lifeline</p>
+<p>lifelines[1] = 0;</p>
+<p>int friendAnswer = rand() % 4 + 1;</p>
+<p>printf("Your friend says option %d.\n", friendAnswer);</p>
+<p>printf("Enter your answer (1-4): ");</p>
+<p>scanf("%d", &amp;answer);</p>
+<p>}</p>
+<p>if (answer == 3 &amp;&amp; lifelines[2]) { // Audience poll
+lifeline</p>
+<p>lifelines[2] = 0;</p>
+<p>int correctOption = questions[i].correctOption;</p>
+<p>int audiencePoll[4] = {0};</p>
+<p>audiencePoll[correctOption]++;</p>
+<p>for (int j = 0; j &lt; 100; j++) {</p>
+<p>int randomOption;</p>
+<p>do {</p>
+<p>randomOption = rand() % 4;</p>
+<p>} while (randomOption == correctOption);</p>
+<p>audiencePoll[randomOption]++;</p>
+<p>}</p>
+<p>printf("Audience poll results:\n");</p>
+<p>for (int j = 0; j &lt; 4; j++) {</p>
+<p>printf("Option %d: %d%%\n", j + 1, (audiencePoll[j] * 100) /
+101);</p>
+<p>}</p>
+<p>printf("Enter your answer (1-4): ");</p>
+<p>scanf("%d", &amp;answer);</p>
+<p>}</p>
+<p>if (checkAnswer(questions[i], answer)) {</p>
+<p>printf("Correct answer! You win Rs.%d\n", PRIZE_MONEY[i]);</p>
+<p>currentPrize = PRIZE_MONEY[i];</p>
+<p>} else {</p>
+<p>printf("Wrong answer! Game over. You win Rs.%d\n", currentPrize);</p>
+<p>break;</p>
+<p>}</p>
+<p>}</p>
+<p>return 0;</p>
+<p>}</p>
+<p>This project simulates the "Kaun Banega Crorepati" game by loading
+questions from a text file, allowing the player to answer them, and
+providing lifelines to assist them. The player wins virtual money for
+each correct answer and loses the game for a wrong answer.</p>
+<p>computer class admission form</p>
+<p><span class="class_s1T1">Below is a basic implementation of a
+</span><span class="class_s1T0">computer class admission
+form</span><span class="class_s1T1"> in C. This program prompts the user
+to enter details such as name, age, gender, and course preference for
+admission to a computer class.</span></p>
+<p>c</p>
+<p>Copy code</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>struct Student {</p>
+<p>char name[50];</p>
+<p>int age;</p>
+<p>char gender;</p>
+<p>char course[50];</p>
+<p>};</p>
+<p>int main() {</p>
+<p>struct Student student;</p>
+<p>printf("Computer Class Admission Form\n");</p>
+<p>printf("----------------------------\n");</p>
+<p>// Input details</p>
+<p>printf("Enter your name: ");</p>
+<p>scanf("%s", student.name);</p>
+<p>printf("Enter your age: ");</p>
+<p>scanf("%d", &amp;student.age);</p>
+<p>printf("Enter your gender (M/F): ");</p>
+<p>scanf(" %c", &amp;student.gender);</p>
+<p>printf("Enter your course preference: ");</p>
+<p>scanf("%s", student.course);</p>
+<p>// Display entered details</p>
+<p>printf("\nEntered Details\n");</p>
+<p>printf("Name: %s\n", student.name);</p>
+<p>printf("Age: %d\n", student.age);</p>
+<p>printf("Gender: %c\n", student.gender);</p>
+<p>printf("Course Preference: %s\n", student.course);</p>
+<p>// Admission confirmation</p>
+<p>printf("\nAdmission form submitted successfully! Thank you.\n");</p>
+<p>return 0;</p>
+<p>}</p>
+<p>This code allows a student to enter their details for admission to a
+computer class and then displays the entered information. You can expand
+this program by adding validation checks for user input, saving the
+entered details to a file, or implementing additional features as
+required.</p>
+<p>Write By Hambirrao Sarnobat</p>

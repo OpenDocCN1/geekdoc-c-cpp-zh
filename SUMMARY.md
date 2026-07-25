@@ -295,6 +295,7 @@
 +   [代码破解者：激发创意、重塑评估，并培养一批编程忍者！](docs/code-breaker-increase-creativity-remix-assessment-and-develo/README.md)
 +   [代码工厂：通过 100 多种编程解决方案探索二进制卓越之外的奥秘](docs/code-factory-navigating-the-wonders-beyond-binary-brilliance/README.md)
 +   [脑中可代码：软件工程启发式指南 (Robert C. Martin 系列)](docs/code-that-fits-in-your-head-heuristics-for-software-engineer/README.md)
++   [C语言表达式：C语言编程之旅：C 语言课程学习书籍](docs/coded-expressions-a-journey-into-c-programming-c-language-co/README.md)
 +   [程序员：新部落的崛起与世界的重塑](docs/coders-the-making-of-a-new-tribe-and-the-remaking-of-the-wor/README.md)
 +   [编程：6本合1：Linux 初学者指南 - Python (2) - SQL - HTML – C++ 编程](docs/coding-6-books-in-1-linux-for-beginners-python-2---sql---htm/README.md)
 +   [零基础编程入门指南：从零到大师：如何学习 Python、Java、SQL、C、C++、C#、HTML 和 CSS](docs/coding-for-absolute-beginners-from-zero-to-hero-how-to-learn/README.md)
