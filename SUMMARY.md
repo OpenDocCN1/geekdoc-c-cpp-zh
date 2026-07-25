@@ -700,6 +700,7 @@
 +   [编程实践指南](docs/the-practice-of-programming-addison-wesley-professional-comp/README.md)
 +   [罗伯特 C. Martin 洁净代码集（合集）（Robert C. Martin 系列）](docs/the-robert-c-martin-clean-code-collection-collection-robert-/README.md)
 +   [Rust 编程语言（第 2 版）](docs/the-rust-programming-language-2nd-edition/README.md)
++   [Mac 游戏秘史](docs/the-secret-history-of-mac-gaming/README.md)
 +   [双重截断数据的统计分析：R 语言应用（Wiley 概率与统计系列）](docs/the-statistical-analysis-of-doubly-truncated-data-with-appli/README.md)
 +   [像程序员一样思考：创意问题解决入门指南](docs/think-like-a-programmer-an-introduction-to-creative-problem-/README.md)
 +   [永恒之旅：穿越世界传奇之地的旅行](docs/timeless-journeys-travels-to-the-worlds-legendary-places/README.md)
