@@ -1,0 +1,72 @@
+name: Web App Development Book： Guide to Ember.js
+name_cn: Web 应用开发指南：Ember.js 指南
+slug: web-app-development-book-guide-to-emberjs
+toc:
+- - '##'
+  - 第 2 章 模型 (Models)
+- - '###'
+  - 创建记录 (Creating Records)
+- - '###'
+  - 更新记录 (Updating Records)
+- - '###'
+  - 持久化记录
+- - '###'
+  - 处理验证错误
+- - '###'
+  - Promises
+- - '###'
+  - 删除记录
+- - '###'
+  - 关系
+- - '###'
+  - 一对一
+- - '###'
+  - 一对多关系
+- - '###'
+  - 显式反向
+- - '###'
+  - 自射关系
+- - '###'
+  - 创建记录
+- - '###'
+  - 关系作为承诺（Promises）
+- - '###'
+  - 将记录推入数据存储器（Store）
+- - '###'
+  - 处理元数据（Metadata）
+- - '###'
+  - 适配器（Adapters）的自定义
+- - '####'
+  - URL 约定
+- - '####'
+  - 复数形式自定义
+- - '###'
+  - 宿主机自定义 (Host Customizations)
+- - '###'
+  - 路径自定义 (Path Customizations)
+- - '###'
+  - 请求头自定义 (Headers Customizations)
+- - '###'
+  - 编写适配器 (Authoring Adapters)
+- - '###'
+  - 自定义序列化器 (Customizing Serializers)
+- - '####'
+  - JSON API 文档 (JSON API Document)
+- - '####'
+  - 侧载数据 (Sideloaded Data)
+- - '####'
+  - 自定义序列化器 (Serializers)
+- - '###'
+  - 属性名称
+- - '###'
+  - 关系
+- - '###'
+  - 自定义转换
+- - '###'
+  - EmbeddedRecordMixin
+- - '####'
+  - EmbeddedRecordsMixin 默认值
+- - '###'
+  - 编写序列化器
+- - '#'
+  - 第 3 章 应用关注

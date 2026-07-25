@@ -711,6 +711,7 @@
 +   [学生级 Visual C# .NET：基于项目的桌面应用开发指南](docs/visual-c-net-for-students-a-project-based-approach-to-develo/README.md)
 +   [Visual C#.NET：C# Windows Forms 编程](docs/visual-cnet-windows-forms-programming-with-c/README.md)
 +   [C# 可视化编程 - C# 可视化编程 - C# 编程：C# 编程的可视化编程 - C# 编程](docs/visual-programming-using-c---c-visual-programming---c-progra/README.md)
++   [Web 应用开发指南：Ember.js 指南](docs/web-app-development-book-guide-to-emberjs/README.md)
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
