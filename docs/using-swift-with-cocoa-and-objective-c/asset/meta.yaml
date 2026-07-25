@@ -1,0 +1,227 @@
+name: Using Swift with Cocoa and Objective-C
+name_cn: Swift Cocoa 和 Objective-C 使用指南
+slug: using-swift-with-cocoa-and-objective-c
+toc:
+- - '#'
+  - Swift Cocoa 和 Objective-C 使用指南
+- - '##'
+  - 设置
+- - '###'
+  - 设置 Swift 环境
+- - '###'
+  - 理解 Swift 导入过程
+- - '##'
+  - 互操作性
+- - '##'
+  - 与 Objective-C API 交互
+- - '###'
+  - 初始化
+- - '###'
+  - 可失败初始化
+- - '###'
+  - Swift
+- - '###'
+  - 访问属性
+- - '###'
+  - Swift
+- - '###'
+  - 与方法进行交互
+- - '###'
+  - Objective-C
+- - '###'
+  - Swift
+- - '###'
+  - id 兼容性
+- - '###'
+  - Swift
+- - '###'
+  - Swift
+- - '###'
+  - Swift
+- - '###'
+  - Swift
+- - '###'
+  - Swift
+- - '###'
+  - Swift
+- - '###'
+  - Swift
+- - '###'
+  - 处理 nil
+- - '###'
+  - Objective-C
+- - '###'
+  - Swift
+- - '###'
+  - Extensions（扩展）
+- - '###'
+  - Closures（闭包）
+- - '###'
+  - Object Comparison（对象比较）
+- - '###'
+  - Swift Type Compatibility（Swift 类型兼容性）
+- - '###'
+  - Exposing Swift Interfaces in Objective-C（在 Objective-C 中暴露 Swift 接口）
+- - '#'
+  - Swift
+- - '##'
+  - 要求动态分发
+- - '##'
+  - Objective-C Selectors
+- - '##'
+  - 编写具有 Objective-C 行为的 Swift 类
+- - '###'
+  - 继承 Objective-C 类
+- - '###'
+  - 采用协议
+- - '###'
+  - 编写初始化器和析构器
+- - '###'
+  - 与 Interface Builder 集成
+- - '###'
+  - 使用 Outlet 和 Action
+- - '###'
+  - 实时渲染
+- - '####'
+  - Swift
+- - '###'
+  - 指定属性特性
+- - '###'
+  - 强与弱
+- - '###'
+  - 读/写与只读
+- - '###'
+  - 拷贝语义
+- - '###'
+  - 实现 Core Data 管理对象类
+- - '###'
+  - 在 Objective-C API 中使用 Swift 类名
+- - '####'
+  - Swift
+- - '###'
+  - 与 Cocoa 类型协作
+- - '###'
+  - 字符串
+- - '####'
+  - Swift
+- - '####'
+  - Swift
+- - '###'
+  - 本地化
+- - '###'
+  - 数字
+- - '###'
+  - 集合类
+- - '###'
+  - 数组
+- - '###'
+  - 字典
+- - '###'
+  - Foundation 数据类型
+- - '###'
+  - Foundation 函数
+- - '##'
+  - 核心基础 (Core Foundation)
+- - '##'
+  - 重映射类型 (Remapped Types)
+- - '##'
+  - 内存管理对象 (Memory Managed Objects)
+- - '##'
+  - 未管理对象 (Unmanaged Objects)
+- - '##'
+  - 采用 Cocoa 设计模式 (Adopting Cocoa Design Patterns)
+- - '###'
+  - 代理模式 (Delegation)
+- - '###'
+  - 错误报告 (Error Reporting)
+- - '###'
+  - 键值观测 (Key-Value Observing)
+- - '##'
+  - 3. 为键路径（key-path）添加观察者，覆盖 `observeValueForKeyPath:ofObject:change:context:` 方法，并在
+    `deinit` 中移除观察者。
+- - '###'
+  - 目标动作（Target-Action）
+- - '###'
+  - 内省检查（Introspection）
+- - '##'
+  - 与 C API 交互
+- - '###'
+  - 原始类型
+- - '###'
+  - 举
+- - '###'
+  - 指针
+- - '###'
+  - 常量指针
+- - '###'
+  - 可变指针 (Mutable Pointers)
+- - '###'
+  - 自动释放指针 (Autoreleasing Pointers)
+- - '###'
+  - 函数指针 (Function Pointers)
+- - '###'
+  - 全局常量 (Global Constants)
+- - '###'
+  - 预处理器指令 (Preprocessor Directives)
+- - '###'
+  - 简单宏 (Simple Macros)
+- - '###'
+  - 复杂宏 (Complex Macros)
+- - '###'
+  - 构建配置 (Build Configurations)
+- - '##'
+  - 混合使用 (Mix and Match)
+- - '##'
+  - 在同一项目中使用 Swift 和 Objective-C
+- - '##'
+  - 混合匹配概述
+- - '##'
+  - 从同一个 App 目标内部导入代码
+- - '##'
+  - 将 Objective-C 导入 Swift
+- - '###'
+  - 从同一目标将 Objective-C 代码导入 Swift
+- - '###'
+  - 将 Swift 导入 Objective-C
+- - '###'
+  - 从同一目标将 Swift Objective-C
+- - '##'
+  - 从同一个框架目标内部导入代码
+- - '##'
+  - 将 Objective-C 导入 Swift
+- - '###'
+  - 从同一框架将 Objective-C 代码导入 Swift
+- - '###'
+  - 如何从同一框架向 Objective-C 导入 Swift 代码
+- - '###'
+  - 导入外部框架
+- - '###'
+  - 在 Objective-C 中使用 Swift
+- - '###'
+  - 如何在 Objective-C 头文件中引用 Swift 类
+- - '###'
+  - 命名你的产品模块
+- - '###'
+  - 故障排除提示与提醒
+- - '###'
+  - 为迁移准备 Objective-C 代码
+- - '###'
+  - 迁移过程
+- - '###'
+  - 在开始之前
+- - '###'
+  - 在你工作时
+- - '###'
+  - 在你完成后
+- - '###'
+  - 故障提示与提醒
+- - '##'
+  - 文档历史
+- - '##'
+  - 修订历史
+- - '###'
+  - '2014-07-21'
+- - '###'
+  - '2014-07-07'
+- - '###'
+  - '2014-06-02'

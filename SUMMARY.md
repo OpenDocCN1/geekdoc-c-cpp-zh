@@ -712,6 +712,7 @@
 +   [Unity 游戏开发：Unity 引擎中的 C# 编程初学者指南 - 第1版 - 2020](docs/unity-game-development-programming-c-in-unity-engine-a-guide/README.md)
 +   [Unity 虚拟现实开发：无需 C# 编程技能：使用 Unity 3D & VRTK 开发沉浸式 VR 体验、游戏、应用及 VR 框架，无需 C# 编程](docs/unity-virtual-reality-development-no-c-programming-skills-re/README.md)
 +   [Unreal Engine 5 游戏编程设计模式：C++、Java、C# 与蓝图](docs/unreal-engine-5-game-programming-design-patterns-in-c-java-c/README.md)
++   [Swift Cocoa 和 Objective-C 使用指南](docs/using-swift-with-cocoa-and-objective-c/README.md)
 +   [少儿 Visual C#：计算机编程循序渐进教程](docs/visual-c-for-kids-a-step-by-step-computer-programming-tutori/README.md)
 +   [学生级 Visual C# .NET：基于项目的桌面应用开发指南](docs/visual-c-net-for-students-a-project-based-approach-to-develo/README.md)
 +   [Visual C#.NET：C# Windows Forms 编程](docs/visual-cnet-windows-forms-programming-with-c/README.md)
