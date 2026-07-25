@@ -717,6 +717,7 @@
 +   [XAML 和 C# Universal Windows Apps 实战](docs/universal-windows-apps-with-xaml-and-c-unleashed/README.md)
 +   [Unreal Engine 5 游戏编程设计模式：C++、Java、C# 与蓝图](docs/unreal-engine-5-game-programming-design-patterns-in-c-java-c/README.md)
 +   [Swift Cocoa 和 Objective-C 使用指南](docs/using-swift-with-cocoa-and-objective-c/README.md)
++   [Visual C# 与数据库：数据库编程分步教程](docs/visual-c-and-databases-a-step-by-step-database-programming-t/README.md)
 +   [少儿 Visual C#：计算机编程循序渐进教程](docs/visual-c-for-kids-a-step-by-step-computer-programming-tutori/README.md)
 +   [学生级 Visual C# .NET：基于项目的桌面应用开发指南](docs/visual-c-net-for-students-a-project-based-approach-to-develo/README.md)
 +   [Visual C#.NET：C# Windows Forms 编程](docs/visual-cnet-windows-forms-programming-with-c/README.md)
