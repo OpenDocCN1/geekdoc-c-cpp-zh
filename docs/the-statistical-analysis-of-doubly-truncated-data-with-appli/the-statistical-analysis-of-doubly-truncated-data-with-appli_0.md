@@ -1,0 +1,2985 @@
+# 双重截断数据的统计分析：R 语言应用（Wiley 概率与统计系列）
+
+
+
+![](img/9781119951377.jpg)
+
+
+## 表列表
+
+## 第一章
+1. 表 1.1 儿童癌症数据的描述性统计：样本量![n 和...](img/#c01.xhtml_c01-tbl-0001)
+2. 表 1.2 艾滋病血液输血数据的描述性统计：样本...
+3. 表 1.3 设备-`S` R...的故障年限和故障单元数量
+4. 表 1.4 类星体数据的描述性统计：对数刻度下的光度...
+5. 表 1.5 帕金森病数据：遗传组的发病年龄。早期 o...
+6. 表 1.6 ACS 数据的描述性统计：样本量![n 和均值（an...](img/#c01.xhtml_c01-tbl-0006)
+
+## 第二章
+1. 表 2.1 (示例 2.1.19)。![alpha Subscript n 的偏差和标准差 (SD) 以及的...](img/#c02.xhtml_c02-tbl-0001)
+2. 表 2.2 通过自助法进行的标准误差估计，用于模拟...
+3. 表 2.3 通过自助法进行的标准误差估计，用于模拟...
+4. 表 2.4 通过自助法进行置信区间估计，用于模拟...
+5. 表 2.5 通过自助法进行置信区间估计，用于模拟...
+6. 表 2.6 示例 2.2.3 的模拟结果：...的蒙特卡洛方差
+7. 表 2.7 示例 2.2.4。渐近效率的解析计算...
+
+## 第三章
+1. 表 3.1 (模拟场景 I 和 II，示例 3.3.3)。最优带宽...
+2. 表 3.2 (带有![n equals 100。中位数，四分位...](img/#c03.xhtml_c03-tbl-0002)
+3. 表 3.3 (带有![n equals 500 的模拟场景 I，示例 3.4.1)。中位数，四分位范围...](img/#c03.xhtml_c03-tbl-0003)
+4. 表 3.4 (带有![n equals 100 的模拟场景 II，示例 3.4.1)。中位数，四分位范围...](img/#c03.xhtml_c03-tbl-0004)
+5. 表 3.5 (带有![n equals 500 的模拟场景 II，示例 3.4.1)。中位数，四分位...](img/#c03.xhtml_c03-tbl-0005)
+6. 表 3.6 (具有多种采样宽度的![final sigma 的模拟场景 I 和 II)...](img/#c03.xhtml_c03-tbl-0006)
+
+## 第四章
+1. 表 4.1 (RD 和 RC 模型，示例 4.2.3)。对应于 pr 的结果
+2. 表 4.2 (帕金森病数据，示例 4.2.4)。比例的结果...
+3. 表 4.3 (带有模拟场景 II 的 RD 和 RC 模型，示例 4.3.1)。结果...
+4. 表 4.4 (带有模拟场景 II 的 RD 和 RC 模型，示例 4.3.1)。结果...
+5. 表 4.5 (艾滋病输血数据，示例 4.3.2)。...的结果
+
+## 第五章
+1. 表 5.1 示例 5.1.1。![F 1 equals F 2 的 Mann-Whitney 检验性能](img/#c05.xhtml_c05-tbl-0001)
+2. 表 5.2 示例 5.1.2。![F 1-equals 2 的 Mann-Whitney 检验性能](img/#c05.xhtml_c05-tbl-0002)
+3. 表 5.3 儿童癌症数据。病例数（均值（和 SD））
+4. 表 5.4 (模拟风险数据，示例 5.2.5)。偏差，标准...
+5. 表 5.5 Kendall's Tau 的模拟结果
+6. 表 5.6 艾滋病输血数据和儿童癌症数据...c05.xhtml_c05-tbl-0006)
+
+## 图列表
+
+## 第二章
+1. [图 2.1 (帕金森病数据，示例 2.1.8)。t cdf 的 NPMLE
+2. 图 2.2 (帕金森病数据，示例 2.1.8)。估计采样...
+3. 图 2.3 (帕金森病数据，示例 2.1.8)。t cdf 的 NPMLE
+4. 图 2.4 (模拟场景 I：无![F 偏差，示例 2.1.11)。L...](img/#c02.xhtml_c02-fig-0004)
+5. 图 2.5 (模拟场景 I：无![F 偏差，示例 2.1.13)。L...](img/#c02.xhtml_c02-fig-0005)
+6. 图 2.6 (模拟场景 I：无![F 偏差，示例 2.1.13)。L...](img/#c02.xhtml_c02-fig-0006)
+7. 图 2.7 (模拟场景 II：![F 偏差，示例 2.1.14)。L...](img/#c02.xhtml_c02-fig-0007)
+8. 图 2.8 (模拟场景 II：![F 偏差，示例 2.1.14)。Est...](img/#c02.xhtml_c02-fig-0008)
+9. 图 2.9 (设备-S 舍入时间数据，示例 2.1.15)。左图...
+10. 图 2.10 (带有舍入的模拟场景 II，示例 2.1.16)。左：NPM...
+11. 图 2.11 (帕金森病数据，示例 2.1.22)。逐点置信...
+12. 图 2.12 (设备-S 舍入时间数据，示例 2.1.23)。直方图...
+13. 图 2.13 左图：第 1 节儿童癌症数据的![K Subscript V NPMLE](img/#c02.xhtml_c02-fig-0013)
+14. 图 2.14 (示例 2.2.3)。左：截断参数族的成员...
+15. 图 2.15 (帕金森病数据，示例 2.2.6)。左：...的 pdf
+16. 图 2.16 (帕金森病数据，示例 2.2.6)。左图：![G 的 NPMLE](img/#c02.xhtml_c02-fig-0016)
+17. 图 2.17 (帕金森病数据，示例 2.2.6)。左图...
+18. 图 2.18 (帕金森病数据，示例 2.2.6)。左图：![G 的 NPMLE](img/#c02.xhtml_c02-fig-0018)
+19. 图 2.19 (帕金森病数据，示例 2.2.8)。左图：对数...
+20. 图 2.20 (帕金森病数据，示例 2.2.8)。左图：对数...
+
+## 第三章
+1. 图 3.1 (儿童癌症数据，示例 3.2.1)。左图：非参数
+2. 图 3.2 (儿童癌症数据，示例 3.3.4)。非参数（黑线...
+3. 图 3.3 (艾滋病输血数据，示例 3.3.5)。非参数（黑...
+4. 图 3.4 (艾滋病输血数据，示例 3.3.5)。左图：非参数...
+5. 图 3.5 (模拟场景 I，示例 3.4.1)。![upper Subscript 10 Baseline left-parenthesis ModifyingAbove h With caret right-parenthesis minus log Subscript 10 Baseline left-parenthesis h Subscript MISE Baseline right-parenthesis 的密度估计...](img/#c03.xhtml_c03-fig-0005)
+6. 图 3.6 (模拟场景 II，示例 3.4.1)。![upper Subscript 10 Baseline left-parenthesis ModifyingAbove h With caret right-parenthesis minus log Subscript 10 Baseline left-parenthesis h Subscript MISE Baseline right-parenthesis 的...](img/#c03.xhtml_c03-fig-0006)
+
+
+
+
+
+## 第 3 章（续）
+
+7. 图 3.7（类星体数据，示例 3.4.2）。左图：类星体的采样偏倚
+8. 图 3.8（艾滋病血液输血数据，示例 3.4.3）。左图：非参数...
+9. 图 3.9（来自示例 3.5.1 的儿童癌症数据和艾滋病血液输血数据...
+10. 图 3.10（模拟场景 I 和 II，示例 3.6.3）。真实的偏差函数...
+11. 图 3.11（艾滋病血液输血数据，示例 3.6.4）。核密度风险估计...
+12. 图 3.12（急性冠心综合征数据，示例 3.6.5）。核密度风险估...
+13. 图 3.13（急性冠心综合征数据，示例 3.6.5）。偏差函数 ...
+
+## 第 4 章
+
+1. 图 4.1 模型 RD 中的条件 cdfs ![upper F 左圆括号 点竖线 0 右括号 和 ![upper F 左圆括号 点竖线 1 右括号](img/c04-i0068.png)，以及普通的...](#c04.xhtml_c04-fig-0001)
+2. 图 4.2 模型 RC 中变换响应的 ![log 左圆括号 减 log 左圆括号 1 减 upper X 右括号 右括号 回归线...](img/#c04.xhtml_c04-fig-0002)
+3. 图 4.3（帕金森病数据，示例 4.1.1）。t 的条件 cdfs
+4. 图 4.4（艾滋病血液输血数据，示例 4.1.4）。一致性估计...
+5. 图 4.5（带有模拟场景 II 的 RD 和 RC 模型，示例 4.3.1）。左...
+6. 图 4.6（艾滋病血液输血数据，示例 4.3.2）。普通最小二乘...
+7. 图 4.7（艾滋病血液输血数据。示例 4.4.2）。非参数回归...
+
+## 第 5 章
+
+1. 图 5.1 示例 5.1.2 中两组的密度函数，基于 t...
+2. 图 5.2（艾滋病血液输血数据，示例 5.1.3）。左图：NPMLE 的...
+3. 图 5.3（艾滋病血液输血数据，示例 5.1.3）。经验生存...
+4. 图 5.4（儿童癌症数据，示例 5.2.4）。左图：采样概率...
+5. 图 5.5（模拟竞争风险数据，示例 5.2.5）。左图：真实的 ...
+6. 图 5.6（模拟竞争风险数据，示例 5.2.5）。左图：箱线图...
+7. 图 5.7（模拟竞争风险数据，示例 5.2.5）。左图：箱线图...
+8. 图 5.8（儿童癌症数据，示例 5.2.6）。条件累积因...
+9. 图 5.9 条件 Kendall's Tau 的直方图，对应 10...
+10. 图 5.10 `n equals 1000` (images/c05-i0447.png) `left-parenthesis s 1 s 2 right-parenthesis` (images/c05-i0448.png) 从 Clayton cop 模拟...
+11. 图 5.11 `n equals 1000` (images/c05-i0461.png) `left-parenthesis s 1 s 2 right-parenthesis` (images/c05-i0462.png) 从 Clayton cop 模拟...
+12. 图 5.12 截断场景 I，示例 5.4.2
+13. 图 5.13 艾滋病血液输血数据和儿童癌症数据，示例 ...
+14. 图 5.14（艾滋病血液输血数据，示例 5.4.3）。对数 m...
+
+## 指南
+
+1. 封面
+2. 目录
+3. 标题页
+4. 版权
+5. 致辞
+6. 前言
+7. 缩写表
+8. 符号说明
+9. 开始阅读
+10. R 中的包和函数
+11. 索引
+12. 结束
+
+## 页码
+
+1. ii
+2. iii
+3. iv
+4. v
+5. xi
+6. xii
+7. xiii
+8. xiv
+9. xv
+10. xvi
+11. 1
+12. 2
+13. 3
+14. 4
+15. 5
+16. 6
+17. 7
+18. 8
+19. 9
+20. 10
+21. 11
+22. 13
+23. 14
+24. 15
+25. 16
+26. 17
+27. 18
+28. 19
+29. 20
+30. 21
+31. 22
+32. 23
+33. 24
+34. 25
+35. 26
+36. 27
+37. 28
+38. 29
+39. 30
+40. 31
+41. 32
+42. 33
+43. 34
+44. 35
+45. 36
+46. 37
+47. 38
+48. 39
+49. 40
+50. 41
+51. 42
+52. 43
+53. 44
+54. 45
+55. 46
+56. 47
+57. 48
+58. 49
+59. 50
+60. 51
+61. 52
+62. 53
+63. 54
+64. 55
+65. 56
+66. 57
+67. 58
+68. 59
+69. 60
+70. 61
+71. 62
+72. 63
+73. 64
+74. 65
+75. 66
+76. 67
+77. 69
+78. 70
+79. 71
+80. 72
+81. 73
+82. 74
+83. 75
+84. 76
+85. 77
+86. 78
+87. 79
+88. 80
+89. 81
+90. 82
+91. 83
+92. 84
+93. 85
+94. 86
+95. 87
+96. 88
+97. 89
+98. 90
+99. 91
+100. 92
+101. 93
+102. 94
+103. 95
+104. 96
+105. 97
+106. 98
+107. 99
+108. 100
+109. 101
+110. 102
+111. 103
+112. 104
+113. 105
+114. 106
+115. 107
+
+
+
+
+
+121. 114
+122. 115
+123. 116
+124. 117
+125. 118
+126. 119
+127. 120
+128. 121
+129. 122
+130. 123
+131. 124
+132. 125
+133. 126
+134. 127
+135. 128
+136. 129
+137. 131
+138. 132
+139. 133
+140. 134
+141. 135
+142. 136
+143. 137
+144. 138
+145. 139
+146. 140
+147. 141
+148. 142
+149. 143
+150. 144
+151. 145
+152. 146
+153. 147
+154. 148
+155. 149
+156. 150
+157. 151
+158. 152
+159. 153
+160. 154
+161. 155
+162. 156
+163. 157
+164. 158
+165. 159
+166. 160
+167. 161
+168. 162
+169. 163
+170. 165
+171. 166
+172. 167
+173. 168
+174. 169
+175. 170
+176. 171
+177. 173
+178. 174
+179. 175
+180. 176
+181. 177
+
+121. 114
+122. 115
+123. 116
+124. 117
+125. 118
+126. 119
+127. 120
+128. 121
+129. 122
+130. 123
+131. 124
+132. 125
+133. 126
+134. 127
+135. 128
+136. 129
+137. 131
+138. 132
+139. 133
+140. 134
+141. 135
+142. 136
+143. 137
+144. 138
+145. 139
+146. 140
+147. 141
+148. 142
+149. 143
+150. 144
+151. 145
+152. 146
+153. 147
+154. 148
+155. 149
+156. 150
+157. 151
+158. 152
+159. 153
+160. 154
+161. 155
+162. 156
+163. 157
+164. 158
+165. 159
+166. 160
+167. 161
+168. 162
+169. 163
+170. 165
+171. 166
+172. 167
+173. 168
+174. 169
+175. 170
+176. 171
+177. 173
+178. 174
+179. 175
+180. 176
+181. 177
+
+121. 114
+122. 115
+123. 116
+124. 117
+125. 118
+126. 119
+127. 120
+128. 121
+129. 122
+130. 123
+131. 124
+132. 125
+133. 126
+134. 127
+135. 128
+136. 129
+137. 131
+138. 132
+139. 133
+140. 134
+141. 135
+142. 136
+143. 137
+144. 138
+145. 139
+146. 140
+147. 141
+148. 142
+149. 143
+150. 144
+151. 145
+152. 146
+153. 147
+154. 148
+155. 149
+156. 150
+157. 151
+158. 152
+159. 153
+160. 154
+161. 155
+162. 156
+163. 157
+164. 158
+165. 159
+166. 160
+167. 161
+168. 162
+169. 163
+170. 165
+171. 166
+172. 167
+173. 168
+174. 169
+175. 170
+176. 171
+177. 173
+178. 174
+179. 175
+180. 176
+181. 177
+
+121. 114
+122. 115
+123. 116
+124. 117
+125. 118
+126. 119
+127. 120
+128. 121
+129. 122
+130. 123
+131. 124
+132. 125
+133. 126
+134. 127
+135. 128
+136. 129
+137. 131
+138. 132
+139. 133
+140. 134
+141. 135
+142. 136
+143. 137
+144. 138
+145. 139
+146. 140
+147. 141
+148. 142
+149. 143
+150. 144
+151. 145
+152. 146
+153. 147
+154. 148
+155. 149
+156. 150
+157. 151
+158. 152
+159. 153
+160. 154
+161. 155
+162. 156
+163. 157
+164. 158
+165. 159
+166. 160
+167. 161
+168. 162
+169. 163
+170. 165
+171. 166
+172. 167
+173. 168
+174. 169
+175. 170
+176. 171
+177. 173
+178. 174
+179. 175
+180. 176
+181. 177
+
+[content]
+
+121. 114
+122. 115
+123. 116
+124. 117
+125. 118
+126. 119
+127. 120
+128. 121
+129. 122
+130. 123
+131. 124
+132. 125
+133. 126
+134. 127
+135. 128
+136. 129
+137. 131
+138. 132
+139. 133
+140. 134
+141. 135
+142. 136
+143. 137
+144. 138
+145. 139
+146. 140
+147. 141
+148. 142
+149. 143
+150. 144
+151. 145
+152. 146
+153. 147
+154. 148
+155. 149
+156. 150
+157. 151
+158. 152
+159. 153
+160. 154
+161. 155
+162. 156
+163. 157
+164. 158
+165. 159
+166. 160
+167. 161
+168. 162
+169. 163
+170. 165
+171. 166
+172. 167
+173. 168
+174. 169
+175. 170
+176. 171
+177. 173
+178. 174
+179. 175
+180. 176
+181. 177
+
+# 前言
+
+本书是三个作者长期合作的成果，这种合作始于 Carla Moreira 在 Jacobo de Uña-Ávarez 的指导下读博士。Carla 在维戈大学（Universidade de Vigo）完成了论文《双截断数据的统计分析：新方法、软件开发与生物医学应用》，并在 2010 年 7 月通过答辩。当时，似乎只有少数人意识到随机截断的重要性。2010 年以前关于该主题的研究论文非常少，Bradley Efron 和 Vahe Petrosian 在 1999 年的贡献是最相关的。而且，当时没有任何软件可用。因此，对我们来说，开展这项倡议是一项充满风险又令人兴奋的研究。
+
+我们在 2009 年 9 月发布了我们的 `R` 软件包 `DTDA` 的 1.1 版本。据我们所知，这是第一个实现 Efron–Petrosian 估计器的软件库。该包包含了 Efron 和 Petrosian 关于类星体光度的数据，我们非常感谢这两位科学家分享这些数据。截至目前，`DTDA` 已被下载超过 4 万次。我们利用撰写本书的机会更新并增强了 `DTDA`，为其提供了新的说明性真实数据集，并开启了新的功能和能力。我们相信，软件包的更新和本书提供的指导将指数级地增加双截断数据的应用，并提高人们对截断对推断过程影响的认识。尽管出版社和作者在准备本书时尽了努力，但不对内容的准确性或完整性发表任何陈述或保证。本书按原样销售，这意味着我们不提供专业服务。您可以根据自己的情况咨询专家。此外，读者应注意，书中列出的网站之间可能发生了变化或消失。出版社或作者对任何利润损失或其他商业损害不负责。
+
+## 美国国会图书馆登记数据
+ISBN: 978111951377
+
+封面设计：Wiley
+
+## 注册办事处
+John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, USA
+
+## 编辑部
+John Wiley & Sons Ltd, Atrium, Southern Sussex, PO19 8
+
+## 责任限制/免责声明
+尽管出版社和作者在准备本书时尽了努力，但不对内容的准确性或完整性发表任何陈述或保证，特别包括但不限于对销销性或特定用途适用性的任何暗示保证。本书按原样销售，这意味着我们不提供专业服务。您可以根据自己的情况咨询专家。此外，读者应注意，书中列出的网站在本书编写与阅读之间可能发生了变化或消失。有关 Wiley 产品的更多信息，请访问 `www.wiley.com`。
+
+WILEY 概率与统计系列
+该系列涵盖了学术界和工业界的广泛话题。获取使用书中材料的许可请访问 `www.wiley.com`。
+
+编辑：David J. Stuart, Rosa Molen, Adrian F., Samuel Wishart, Geof Teugels, Stuart Scott
+
+2022 年由 Wiley 版权保留。
+
+
+
+
+多年年来，多位研究人员与我们合作，在探索双截断（double truncation）这一迷人的领域中。其中，我们特别感谢 Ingrid Van Keilegom、Micha Mandel、Rebecca Betensky、Luis Meira‐Machado 和 Roel Braekers。我们与他们共同撰写了许多研究论文。通过研究应用研究人员提出的真实数据问题，我们也对双截断有了深入了解；在此，感谢 María José Bento、David Keith Simon、Zhi‐Sheng Ye、Ana Cristina Santos 和 Henrique Barros 提供的丰富讨论与合作。
+
+如今，有一个相当大的统计学界正从事双截断数据探索性和推断方法的研究，这部分源于生物医学、经济学和工程等领域新兴应用的推动。在写作期间，该研究领域的活动比以往任何时候都更加活跃，这从过去几年发表的关于该主题的论文数量可以看出。而且对双截断的兴趣正变得越来越大！
+
+本书旨在为那些对学习双截断数据分析和推断感兴趣的读者提供参考，介绍了用于估计分布和回归模型的广泛工具。书中介绍的所有方法都配有真实数据和模拟示例，在每章的末尾，读者可以找到 `do‐it‐yourself` 代码，这些代码主要基于 `DTDA` 包。本书的编写不仅仅为了被阅读：其主要目的是邀请读者进行思考、探索和体验。
+
+本书也是自包含，提供了主要结果的总体概述。进一步的技术细节和某些省略的证明可以参考原始参考文献。我们还打算留下几个核心信息：首先，纠正由双截断引起的潜在采样偏差在估计和推断中可能是至关重要的；其次，即使 Efron–Petrosian 估计在概念上很复杂，其渐近理论可能令人难以理解，但由于现有的软件包和重采样算法良好的性能，它的实际应用相对简单；第三，应尽可能利用关于采样偏差的外部信息，因为 Efron–Petrosian 估计可能噪声很大，甚至不存在，特别是在样本量较小时。
+
+我们诚诚地希望读者能享受（并体验！）这本书，就像我们享受写作过程一样！欢迎读者对本版提出意见和建议；请将其发送至 `jacobo@uvigo.es` 以帮助我们改进本书。
+
+本书部分内容是在作者受资助 MTM2017‐89422‐P（MINECO/AEI/FEDER, UE）（第一作者）、UIDB/00013/2020 和 UIDP/00013/2020（第二作者）以及 MTM2016‐76969‐P（MINECO/AEI/FEDER, UE）（第三作者）的支持下完成的。在此致谢。
+
+| 2021 年 5 月 | | Jacobo de Uña‐Álvarez, Carla Moreira 和 Rosa M. Crujeiras Vigo, V. N. Famalicão 和 Santiago de Compostela |
+
+# 缩写表
+
+* AFT: 加速失效时间
+* AIDS: 后获得性免疫缺陷综合征
+* AMISE: 渐近均积分误差
+* AMSE: 渐近均方误差
+* bcv: 偏偏交叉验证
+* BMISE: 自助均积分方误差
+* Boot: 自助法
+* cdf: 累积分布函数
+* CIF: 累积发生函数
+* cv: 交叉验证
+* ecdf: 经验累积分布函数
+* DNA: 脱氧核糖核酸
+* DPI: 直接插法
+* DP![normal upper I 1](img/flast-i0001.png): 单阶段直接插法
+* DP![normal upper I 2](img/flast-i0002.png): 两阶段直接插法
+* FGM: Farlie–Gumbel–Morgenstern 
+* HIV: 人类免疫缺陷病毒
+* ICCC: 国际儿童癌症分类
+* iid: 独立同分布
+* IPWE: 概率加权估计
+* IQR: 四分位距
+* ISE: 积分方误差
+* LSCV: 最小二乘交叉验证
+* MISE: 积分方误差
+* MLE: 最大似然估计
+* MSE: 均方误差
+* NP: 非参数
+* NPMLE: 非参数极大似然估计
+* NR: 正态参考
+* pdf: 概率密度函数
+* OB: 显而易见的自助法
+* PB: 分位数自助法
+* PD: 金森森病
+* SB: 简单自助法
+* SBoot: 平滑自助法
+* SD: 标准差
+* SEF: 特殊指数族
+* SJ‐dpi: Sheather–Jones 直接插法
+* SJ‐ste: Sheather–Jones 解方程插法
+* SNPs: 单核苷酸多态性
+* SP: 半参数
+* SPMLE: 半参数极大似然估计
+* ucv: 无偏交叉验证
+
+# 符号
+
+* ![upper X](img/flast01-i0001.png): 目标变量，支撑在 ![left-bracket a Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png) 上；![left-parenthesis upper U Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png): 截断变量；![left-parenthesis upper U Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png) 的相应支撑为 ![left-parenthesis upper U Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png) 和 ![left-bracket a Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png)
+* ![left-parenthesis upper U Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png): 总体；![left-parenthesis upper U Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png) 使得 ![left-bracket a Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png) 小于等于 ![left-bracket a Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket](img/flast01-i0002.png)，表示分布相等
+* ![final sigma](img/flast01-i0013.png): 区间采样，采样区间宽度，使得 ![upper V equals upper plus final sigma](img/flast01-i0014.png)；成立 ![final sigma equals d 1 minus d 0](img/flast01-i0015.png)，其中 ![d 0](img/flast01-i0016.png) 和 ![d 1](img/flast01-i0017.png) 是确定采样区间的日期
+* ![upper F](img/flast01-i0018.png), ![f](img/flast01-i0019.png) 和 ![lamda](img/flast01-i0020.png): 分别为 ![upper X](img/flast01-i0021.png) 的累积分布函数、概率密度函数和风险函数
+* ![upper X tilde upper F](img/flast01-i0022.png): 变量 ![upper X](img/flast01-i0023.png) 服从累积分布函数 ![upper F](img/flast01-i0024.png)
+* ![upper Y tilde upper U left-parenthesis a comma b right-bracket](img/flast01-i0025.png): 变量 ![upper Y](img/flast01-i0026.png) 在区间 ![left-parenthesis a comma b right-bracket](img/flast01-i0027.png) 上服从均匀分布
+* ![supp left-parenthesis upper F right-parenthesis](img/flast01-i0028.png): 累积分布函数 ![upper F](img/flast01-i0029.png) 的支撑
+
+
+
+* !![upper `F` left-parenthesis `x` minus right-parenthesis equals upper `P` left-parenthesis upper `X` less-than `x` right-parenthesis](img/flast01-i0030.png): 累积函数的左连续版本 ![upper `F`](img/flast01-i0031.png);对于连续的 ![upper `F`](img/flast01-i0032.png)，对于每个 ![x](img/flast01-i0034.png)，有 ![upper `F` left-parenthesis `x` right-parenthesis equals upper `F` left-parenthesis `x` minus right-parenthesis](img/flast01-i0033.png)
+* !![upper `K`](img/flast01-i0035.png), ![k`](img/flast01-i0036.png): 分别是 ![left-parenthesis upper `U` comma upper `V` right-parenthesis](img/flast01-i0037.png) 的二元累积分布函数和二元概率密度函数
+* !![upper `K` Subscript upper `U`](img/flast01-i0038.png), ![upper `K` Subscript upper `V`](img/flast01-i0039.png), ![k` Subscript upper `U`](img/flast01-i0040.png), ![k` Subscript upper `V`](img/flast01-i0041.png): ![upper `U`](img/flast01-i0042.png) 和 ![upper `V`](img/flast01-i0043.png) 的边缘累积分布函数和边缘概率密度函数
+* !![phi Subscript `i`](img/flast01-i0044.png), ![psi Subscript `i`](img/flast01-i0045.png): 分别出现在似然函数中附属于 ![upper `X` Subscript `i`](img/flast01-i0046.png) 和 ![left-parenthesis upper `U` Subscript `i` Baseline comma upper `V` Subscript `i` Baseline right-parenthesis](img/flast01-i0047.png) 的概率质量
+* !![upper `I` left-parenthesis upper `A` right-parenthesis](img/flast01-i0048.png): 事件 ![upper `A`](img/flast01-i0049.png) 的指示函数
+* !![upper `J` Subscript `i j` Baseline equals upper `I` left-parenthesis upper `U` Subscript `i` less-than-or-equal-to upper `X` Subscript `j` less-than-or-equal-to upper `V` Subscript `i` right-parenthesis](img/flast01-i0050.png)
+* !![left-parenthesis upper `X` Superscript normal b comma upper `U` Superscript normal b comma upper `V` Superscript normal b right-parenthesis](img/flast01-i0051.png): ![left-parenthesis upper `X` comma `U` comma upper `V` right-parenthesis](img/flast01-i0052.png) 的自助重采样
+* !![upper `G`](img/flast01-i0053.png): 权重函数或偏置函数，报告 ![upper `X`](img/flast01-i0054.png) 的采样概率；!![upper `G` left-parenthesis `x` right-parenthesis equals upper `P` left-parenthesis upper `U` less-than-or-equal-to upper `X` less-than-or-equal-to upper `V` vertical-bar upper `X` equals `x` right-parenthesis equals integral Underscript `u` less-than-or-equal-to `x` less-than-or-equal-to v Endscripts normal upper `K` left-parenthesis `u` comma v right-parenthesis](img/flast01-i0055.png);如果 ![upper `X`](img/flast01-i0056.png) 和 ![left-parenthesis upper `U` comma upper `V` right-parenthesis](img/flast01-i0057.png) 独立，则最后一个等式成立
+* !![alpha equals upper `P` left-parenthesis upper `U` less-than-or-equal-to upper `X` less-than-or-equal-to upper `V` right-parenthesis](img/flast01-i0058.png): 非截断数据的比例
+* !![a equals alpha Superscript negative 1 Baseline upper `G`](img/flast01-i0059.png): 归一化偏置函数
+* !![upper `F` Superscript asterisk left-parenthesis `x` right-parenthesis equals upper `P` left-parenthesis upper `X` less-than-or-equal-to `x` vertical-bar upper `U` less-than-or-equal-to upper `X` less-than-or-equal-to upper `V` right-parenthesis](img/flast01-i0060.png): ![upper `X`](img/flast01-i0061.png) 的截断累积分布函数
+* !![upper `K` Superscript asterisk left-parenthesis `u` comma v right-parenthesis equals upper `P` left-parenthesis upper `U` less-than-or-equal-to `u` comma upper `V` less-than-or-equal-to v vertical-bar upper `U` less-than-or-equal-to upper `X` less-than-or-equal-to upper `V` right-parenthesis](img/flast01-i0062.png): `U, V` 的截断二元累积分布函数
+
+
+
+
+-   ![upper F left-parenthesis dot vertical-bar z right-parenthesis](img/flast01-i0099.png): 在给定 ![upper Z equals z](img/flast01-i0101.png) 时 ![upper X](img/flast01-i0100.png) 的条件累分布函数
+-   ![upper F Subscript upper X upper Z](img/flast01-i0102.png): ![left-parenthesis upper X comma upper Z right-parenthesis](img/flast01-i0103.png) 的联合累分布函数
+-   ![beta](img/flast01-i0104.png): 回归系数向量；![beta 0](img/flast01-i0105.png): ![beta](img/flast01-i0106.png) 的真值
+-   ![lamda left-parenthesis dot vertical-bar z right-parenthesis](img/flast01-i0107.png): 在给定 ![upper Z equals z](img/flast01-i0109.png) 时 ![upper X](img/flast01-i0108.png) 的条件危险函数
+-   ![alpha left-parenthesis z right-parenthesis](img/flast01-i0110.png): 在给定 ![upper Z equals z](img/flast01-i0111.png) 时无截断的条件概率
+-   ![m left-parenthesis z right-parenthesis equals normal upper E left-parenthesis upper X vertical-bar upper Z equals z right-parenthesis](img/flast01-i0112.png): 回归函数
+-   ![upper F Subscript left-parenthesis r right-parenthesis](img/flast01-i0113.png): ![upper X](img/flast01-i0114.png) 的累积发生率，事件类型 ![eta equals r](img/flast01-i0115.png)
+-   ![upper G Subscript left-parenthesis r right-parenthesis](img/flast01-i0116.png): 在给定 ![eta equals r](img/flast01-i0118.png) 时 ![upper X](img/flast01-i0117.png) 的条件偏倚函数
+-   ![lamda Subscript left-parenthesis r right-parenthesis](img/flast01-i0119.png): ![upper X](img/flast01-i0120.png) 的原因特定危险函数（或转移强度），事件类型 ![eta equals r](img/flast01-i0121.png)
+-   ![beta Subscript left-parenthesis r right-parenthesis](img/flast01-i0122.png): 针对 ![lamda Subscript left-parenthesis r right-parenthesis](img/flast01-i0123.png) 回归模型的回归系数向量
+-   ![script upper C Subscript theta](img/flast01-i0124.png): 参数化 copula 族
+-   对于实数序列 ![a Subscript n](img/flast01-i0125.png) 和 ![b Subscript n](img/flast01-i0126.png)，![a Subscript n Baseline equals o left-parenthesis b Subscript Baseline right-parenthesis](img/flast01-i0127.png) 意味着 ![a Subscript n slash b Subscript n](img/flast01-i0128.png) 收敛于零
+-   对于随机变量序列 ![upper A Subscript n](img/flast01-i0129.png) 和 ![upper B Subscript n](img/flast01-i0130.png)，![upper A Subscript n Baseline equals o Subscript upper P Baseline left-parenthesis upper B Subscript right-parenthesis](img/flast01-i0131.png) 意味着 ![upper A Subscript n slash upper B Subscript n](img/flast01-i0132.png) 依概率收敛，而 ![upper A Subscript n Baseline equals upper O Subscript upper P Baseline left-parenthesis upper B Subscript right-parenthesis](img/flast01-i0133.png) 意味着 ![upper A Subscript n slash upper B Subscript n](img/flast01-i0134.png) 概率有界
+
+# 1 引言
+
+## 1.1 随机截断
+
+随机截断通常指目标总体中的某些个体由于某种随机事件的排斥而无法被抽样的情况。当该随机事件与感兴趣的变量无关时，可以应用标准的统计方法，唯一的不便是样本量较小。然而，在许多实际情况下，截断事件与研究变量相关，必须考虑克服采样偏差的特定方法。
+
+本书侧重于采样事件发生时间数据时（通常，但不限于）出现的随机截断现象。也就是说，感兴趣的变量是从一个定义的起点到另一个定义良好的终点所经过的时间 ![upper X](img/c01-i0001.png)。在这种设定下，upper X](images/c01-i0002.png) 的截断样本是一组独立同分布的随机变量，其在给定 ![upper B](img/c01-i003.png) 时 ![upper X](img/c01-i0004.png) 的分布。由于截断事件 ![upper B](img/c01-i005.png) 显然与 ![upper X](img/c01-i006.png) 相关，应用于截断样本的标准统计方法可能会产生系统性偏差。例如，![upper X](img/c01-i0007.png) 在 ![x](img/c01-i0008.png) 处的普通经验累分布函数 (ecdf) ![upper F Subscript n Superscript asterisk left-parenthesis x right-parenthesis](img/c01-i009.png) 收敛于 ![upper F Superscript asterisk left-parenthesis x right-parenthesis equals upper P left-parenthesis upper X less-than-equal-to x vertical-bar upper X-of B right-parenthesis](img/c01-i10.png)，而非目标累分布函数 (cdf) ![upper F left-parenthesis x right-parenthesis equals upper P left-parenthesis upper X less-than-equal-to x right-parenthesis](img/c01-i11.png)。自 Turnbull (1976) 的开创性论文以来，这个问题引起了极大关注。采样事件发生时间数据时的特殊截断形式将在 1.2 节 和 1.3 节 中讨论。
+
+事件发生时间数据与生存分析、可靠性工程等领域相关，这些领域经常出现随机截断。随机截断出现在出现在领域，其中 ![upper X](img/c01-i14.png) 代表受观测限制的天体亮度。本书将在范围内介绍并分析这些领域的示例。
+
+## 1.2 单侧截断
+
+### 1.2.1 左截断
+
+左截断是采样事件发生时间数据时的一种常见特征。目标 ![upper X](img/c01-i015.png) 的左截断时间定义为随机变量 ![upper U](img/c01-i016.png)，只有当 ![upper U less-than-equal-to upper X](img/c01-i017.png) 时才能观测到 ![upper X](img/c01-i018.png)，这决定了随机集合 ![upper B](img/c01-i019.png)。
+
+
+
+
+左截断（Left‐truncation）发生在，例如横断面采样中，其中样本个体是在特定日历时间上处于起点和终点之间的个体，该时间即为横截面日期（Wang, 1991）。这意味着，观察者在给定日期进入该过程，并允许观察在该日期“进行中”的个体的事件时间 ![upper X](img/c01-i0020.png) 和左截断时间 ![upper U](img/c01-i0021.png)。在横断面采样中，变量 ![upper U](img/c01-i0022.png) 被定义为从发病到横截面日期的时间。这种采样方法经常被应用，因为它达到预设样本量所需的精力较少。在医学研究中，这种设计会导致对“现患病例”（prevalent cases）的采样：即已经诊断出某种感兴趣的疾病且生存时间超过横截面日期的患者。显然，这种采样设计意味着存在观测偏倚，因为生存时间较长的个体（![upper X](img/c01-i0023.png) 值）被观测到的概率相对较大。目前已经过充分研究的建议可以克服这种偏倚，其基于考虑观测到的左截断时间以定义合适的风险集的简单想法。为此，传统上假设 ![upper X](img/c01-i0024.png) 和 ![upper U](img/c01-i0025.png) 之间相互独立。这种独立性假设认为，事件时间分布随时间保持不变，与发病日期无关。左截断的一个经典案例是钱宁大楼数据（Channing House data），测量居住在该退休中心的人的死亡年龄；在这种情况下，目标变量被进入该住所的年龄所左截断（Klein and Moeschberger, 2003）。
+
+另一个导致左截断的特征是延迟进入研究。这发生在个体仅在发病后的某个随机时间 ![upper U](img/c01-i0026.png) 才进入研究时。例如，某种疾病的诊断可能直到第一次去医院时才能确定。如果“疾病结束”事件在潜在的访问日期之前发生，则此类患者的事件时间将永远未知，导致在观测较小的事件时间时存在困难。Beyersmann 等人 (2012) 在流产时间的研究为该问题提供了一个说明性示例。
+
+### 1.2.2. 右截断（Right‐truncation）
+
+在某些特定设定下，最终目标变量 ![upper X](img/c01-i0027.png) 仅对在特定日历时间 ![d 1](img/c01-i0028.png)之前发生事件的个体可观测。这种情况的一个典型例子是艾滋病（AIDS）潜伏期（或诱导期）的研究；参见 Klein 和 Moeschberger (2003)）。潜伏期定义为 HIV 感染日期（例如 ![d Subscript normal upper I](img/c01-i0029.png)）与 AIDS 发作之间经过的时间。如果 ![upper X](img/c01-i0030.png) 代表潜伏期且 ![upper V equals d 1 minus d Subscript normal upper I](img/c01-i0031.png)，那么在 ![d 1](img/c01-i0032.png) 之前发生 AIDS 的个体的潜伏期服从于 ![upper X less-than-or-equal-to upper V](img/c01-i0034.png) 的 ![upper X](img/c01-i0033.png) 分布。在这里，![upper V](img/c01-i0035.png) 被右截断时间。右截断的一个直接影响是 ![upper X](img/c01-i0036.png) 大值被采样的概率相对较小。
+
+### 1.2.3. 截断与删失（Truncation vs. Censoring）
+
+此时，读者可能对截断（truncation）和删失（censoring）之间的区别感兴趣。右删失是生存分析和可靠性研究等领域中非常著名的现象。它发生在给定个体的随访在感兴趣的事件发生之前停止了。在这种情况下，观察者只知道目标变量大于记录的值，该值被称为删失时间。由真实值和删失值组成的样本通常由 Kaplan–Meier 估计量（Kaplan and Meier, 1958）进行分析，它修正了某些 ![upper X](img/c01-i0037.png) 记录值小于真实值的事实。对于截断数据，样本中的每个值都对应 ![upper X](img/c01-i0038.png) 的真实观测；然而，由于截断的存在，观测值的分布相对于真实分布可能会发生偏移。截断与删失之间的这种差异表明应该使用特定方法来估计目标。事实上，Woodroofe (1985) 对单侧截断提供了深度分析，引入了 Lynden–Bell (1971) 在该设定下的非参数似然估计量（NPMLE）。Woodroofe ([1985]) 中的估计量是双截断数据的一种特殊情况，本书正关注这一点。
+
+## 1.3 双截断（Double Truncation）
+
+变量 ![upper X](img/c01-i0039.png) 被一对随机变量 ![left-parenthesis upper U comma upper V-parenthesis](img/c01-i0040.png) 双截断，如果仅当 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c01-i0041.png) 发生时才能观测 ![upper X](img/c01-i0042.png)。在这种情况下，![upper U](img/c01-i0043.png) 和 ![upper V](img/c01-i0044.png) 分别称为左截断和右截断。当 ![upper V](img/c01-i0045.png) 退化为无穷大时，双截断简化为左截断，而当 ![upper P left-parenthesis upper equals negative infinity right-parenthesis equals 1](img/c01-i0047.png) 时，它对应于右截断。本书关注是从一组具有给定 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c01-i0050.png) 分布的 iid ![left-parenthesis upper X comma upper U comma upper V] 三元组中，估计 ![upper X](img/c01-i0048.png) 的分布以及相关曲线。
+
+实践中出现了几种双截断的场景。一种导致双截断的设定是区间采样，其中样本被限制在两个特定日期 ![d 0](img/c01-i0051.png) 和 ![d 1](img/c01-i0052.png) 之间发生事件的个体（Zhu and Wang, 2012）。那么，右截断时间为 ![upper V equals d 1 minus d Subscript normal upper I](img/c01-i0053.png)，其中 ![d Subscript normal upper I](img/c01-i0054.png) 表示事件的发病日期，而左截断时间为 ![upper U equals d 0 minus d Subscript normal upper I Baseline equals upper V minus final sigma](img/c01-i0055.png)，其中 ![final sigma equals d 1 minus d 0](img/c01-i0056.png) 是区间宽度。第 1.4.1 节 中的儿童癌症数据是通过区间采样获得的数据的一个示例。
+
+
+
+
+通过区间采样，变量 ![upper V minus upper U](img/c01-i0057.png) 在 ![final sigma](img/c01-i0058.png) 处发生退化。这种情况也出现在其他采样方案中，其中 ![upper U](img/c01-i0059.png) 和 ![upper V](img/c01-i0060.png) 是某些特定事件的日期。帕金森病数据提供了一个说明性例子，参见第 1.4.5 节，其中 ![upper V](img/c01-i0061.png) 是采集血样时的个体年龄。当 ![upper V minus upper U](img/c01-i0062.png) 为常数时，元组 ![left-parenthesis upper U comma upper V right-parenthesis](img/c01-i0063.png) 落在一条直线上，即使截断变量可能是连续的，其联合密度也不存在。
+
+在其他情况下，截断变量 ![upper U](img/c01-i0064.png) 和 ![upper V](img/c01-i0065.png) 并不通过线性方程 ![upper V equals upper U plus final sigma](img/c01-i0066.png) 关联。例如，![upper U](img/c01-i0067.png) 和 ![upper V](img/c01-i0068.png) 可能代表某些随机观测限制，超出感兴趣变量 ![upper X](img/c01-i0069.png) 无法被采样或检测。这种情况例如出现在天文学中，如第 1.4.4 节 所示。
+
+在随机双截断的情况下，原则上 ![upper X](img/c01-i0070.png) 的极大和最小值都以较小的概率被观测到。然而，![upper X](img/c01-i0071.png) 的真实观测偏差随应用而异，取决于 ![left-parenthesis upper X comma upper U comma upper V right-parenthesis](img/c01-i0072.png) 的联合分布。我们将看到，例如采样值 ![x](img/c01-i0073.png) 的概率，即 ![upper G left-parenthesis x right-parenthesis equals upper P left-parenthesis upper U less-than-or-equal-to x less-than-or-equal-to upper V vertical-bar upper X equals x right-parenthesis](img/c01-i0074.png)，可能大致恒定，不产生观测偏差；或者它可能大致下降，表明右截断偏差相对于左截断偏差占据主导地位。
+
+另一个相关问题是 ![upper X](img/c01-i0075.png) 分布的可识别性。直觉上很清楚，对于双截断数据，只有在给定 ![a Subscript upper U Baseline less-than-or-equal-to upper X less-than-or-equal-to b Subscript upper V](img/c01-i0077.png) 的条件下，才能估计 ![upper X](img/c01-i0076.png) 的分布，其中 ![a Subscript upper U](img/c01-i0078.png) 和 ![b Subscript upper V](img/c01-i0079.png) 分别代表 ![upper U](img/c01-i0080.png) 和 ![upper V](img/c01-i0081.png) 支持集的端点（详情见第 2 章）。我们将看到，这可能具有重要的实践意义。另一方面，在双截断生存数据的应用中，估计值对应于感兴趣的终点事件必然发生的易感人群。这与生存时间的标准分析不同，在标准分析中，部分个体可能属于所谓的*治愈部分*（cured fraction）或免疫者。在解释分析结果时，应当考虑到这一点。
+
+双截断与单侧截断相比的一个重要区别是，对于双截断数据，概率分布的非参数极大似估计（NPMLE）没有显式形式。事实上，NPMLE 可能不是唯一的，甚至不存在（Xiao and Hudgens, 2019）；参见第 2 章。书中将回顾几种用于在实践中计算 NPMLE 的迭代算法（Efron and Petrosian, 1999; Shen, 2010)），并使用现有的 `R` 软件库对模拟数据和真实数据示例进行分析。还将介绍 NPMLE 的半参数和参数替代方案；这些方法避免了上述某些 NPMLE 不唯一或不存在的潜在问题，以引入某些估计偏差为代价降低了方差。此外，还将介绍重采样程序、检验问题、平滑方法、回归模型和多状态数据。
+
+## 1.4 真实数据
+
+本节介绍了贯书中使用的数据集。它们都存在双截断问题。这些示例可以在 `DTDA` 包的最新更新中获得（Moreira et al., 2021).
+
+### 1.4.1 儿童癌症
+
+儿童癌症数据收集自波尔图的 IPO（Instituto Português de Oncologia），由 RORE（Registro Oncológico do Norte）部门提供。信息对应于 1999 年 1 月 1 日（images/c01-i082）至 2003 年 12 月 31 日（images/c01-i083）期间北部地区诊断癌症的所有儿童，该地区包括波尔图、布拉加、布甘萨、维拉雷阿尔和维亚纳卡斯特洛。感兴趣变量 ![upper X](img/c01-i084) 是诊断年龄，根据儿童癌症的定义，其支持范围在 ![left-bracket 0 comma 15 right-bracket](img/c01-i085) 区间（时间为年）。病例数为 409 例。然而，有三个病例缺少 ![upper X](img/c01-i086) 的值，因此我们只考虑具有完整信息的 ![n equals 406](img/c01-i087) 名。
+
+由于区间采样，诊断年龄 ![upper X](img/c01-i088) 被元组 ![left-parenthesis upper U comma upper V right-parenthesis](img/c01-i089) 双截断，其中右截断变量 ![upper V](img/c01-i090) 是从出生（发病日期 ![d Subscript normal I](img/c01-i091)）到 2003 年 12 月 31 日的年，而 ![upper U equals upper V minus 5](img/c01-i092)。这 ![n equals 406](img/c01-i093) 三元组 ![left-parenthesis upper X Subscript i Baseline, upper U Subscript i Baseline, upper V Subscript i Baseline right-parenthesis](img/c01-i094)，![1 less-than-or-equal-to i less-than-or-equal-to n](img/c01-i095) 的观测值 ![left-parenthesis upper X, upper U, upper V right-parenthesis](img/c01-i096) 已在 Moreira and de Uña-Álvarez (2010) 中报告，而 de Uña-Álvarez (2020) 将癌症组纳入统计分析中。
+
+
+
+
+有趣的是，![upper U](img/c01-i0097.png) 的观测值介于 ![negative 4.5](img/c01-i0098.png) 和 14.5（年）之间；等价地，![upper V equals upper U plus 5](img/c01-i0099.png) 的观测值介于 0.5 到 19.5 之间。这意味着 ![upper U](img/c01-i0100.png) 和 ![upper V](img/c01-i0101.png) 的下端和上限满足 ![a Subscript upper U Baseline less-than-or-equal-to 0](img/c01-i0102.png) 和 ![b Subscript upper V Baseline greater-than-or-equal-to 15](img/c01-i0103.png)。因此，在这种情况下，目标变量 ![upper X](img/c01-i0104.png) 在其整个支撑集 ![left-bracket 0 comma 15 right-bracket](img/c01-i0105.png) 上是可观测的，且 ![upper F](img/c01-i0106.png)，即 ![upper X](img/c01-i0107.png) 的累积分布函数不存在识别问题。关于 ![left-parenthesis upper X comma upper U comma upper V right-parenthesis](img/c01-i0108.png) 的信息汇总在表 1.1 中。
+
+| 组别 |  | ![n](img/c01-i0110.png)  | 平均值 (SD) |
+| --- | --- | --- | --- |
+| 全部 |  | 406 | 6.47 (4.50) |
+| 按性别 | 女性 | 178 | 6.43 (4.51) |
+|  | 男性 | 228 | 6.51 (4.51) |
+| 按 ICCC 分组 | 白血病 | 107 | 6.30 (4.15) |
+|  | 淋巴瘤 | 57 | 8.66 (4.39) |
+|  | 神经系统肿瘤 |  94 | 6.38 (4.29) |
+|  | 神经芽瘤 |  38 | 3.16 (3.47) |
+|  | 其他 | 105 | 6.87 (4.70) |
+|  | 缺失 |   5 | 3.92 (5.18) |
+
+表 1.1 儿童癌症数据的描述统计：样本量 ![n](img/c01-i0109.png) 以及诊断年龄（年）的平均值（以及标准差，SD）。
+
+该数据集用于第 2 章、第 3 章和第 5 章，并可以通过 `ChildCancer` 包中的 `DTDA` 包进行访问。
+
+### 1.4.2 AIDS 输血数据
+
+Kalbfleish 和 Lawless (1989) 报告了 494 例与输血相关的 AIDS 病例，对应于 1986 年 7 月 1 日之前诊断出的个体(![d 1](img/c01-i0111.png))。感兴趣的变量 ![upper X](img/c01-i0112.png) 是诱或潜伏期，即从 HIV 感染到患 AIDS 所经过的时间。重要的是，在 1982 年之前 HIV 还是不为人知的(![d 0](img/c01-i0113.png))；这意味着在此日期之前发生 AIDS 的病例未被报告。令 ![upper V](img/c01-i0114.png) 表示从 HIV 感染到 1986 年 7 月 1 日的时间（月），并引入 ![upper U equals upper V minus 54](img/c01-i0115.png)；那么由于区间采样，观测到的满足 ![left-parenthesis upper U comma upper X comma upper V right-parenthesis](img/c01-i0116.png) 的 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c01-i0117.png) 三元组（Bilker 和 Wang, 1996）。我们将分析限制在数据一致的 ![n equals 295](img/c01-i0118.png) 例，这些病例的感染可以归因于单次输血或一系列短输血。该数据集在 Kalbfleish 和 Lawless (1989) 第 361 页中有完整报告。
+
+![upper X](img/c01-i0119.png) 的观测值范围从 0.5 到 89（月），而 ![upper U](img/c01-i0120.png) 的范围为 ![negative 48.5](img/c01-i0121.png) 到 45.5。这表明 ![upper U](img/c01-i0122.png) 的支撑集下限约为 ![negative 48.5](img/c01-i0123.png)，而 ![upper V](img/c01-i0124.png) 的支撑集上限约为 99.5。如第 2 章 中讨论，在这种情况下，潜伏期 ![upper X](img/c01-i0125.png) 的分布在区间 ![left-bracket 0 comma 99.5 right-bracket](img/c01-i0126.png)（月）上是可识别的。AIDS 输血数据还包括感染年龄的信息；参见表 1.2。
+
+| 年龄组 | ![n](img/c01-i0128.png)  | 平均值 (SD) |
+| --- | --- | --- |
+| ![less-than](img/c01-i0129.png)30 年 | 56 | 27.09 (18.2) |
+| 30–60 年 | 104 | 33.8 (18.95) |
+| ![greater-than](img/c01-i030.png)60 年 | 135 | 32.46 (16.74) |
+
+表 1.2 儿童数据的样本量 ![n](img/c01-i0109.png) 以及感染年龄的平均值（以及标准差，SD）的描述统计数据。
+
+该数据集用于第 2 章、第 3 章和第 5 章，并可以通过 `ChildCancer` 包中的 `DTDA` 包进行访问。
+
+### 1.4.3 设备失效数据
+
+公司通常对设备从特定日期到失效的时间感兴趣。为了这一点，我们记录 ![d 0](img/c01-i0131.png) 到 ![d 1](img/c01-i0132.png) 之间的事件。由于区间采样，我们分析的 ![n equals 295](img/c01-i0118.png) 例数据是致的，这 295 例是双双截断的（Ye and Tang, 2016）。这些感染可以归因于单次输血或一系列短输血。该数据集在 Kalbfleish 和 Lawless (1989) 第 361 页中有完整报告。
+
+![upper X](img/c01-i0119.png) 的观测值范围从 0.5 到 89（月），而 ![upper U](img/c01-i0120.png) 的范围为 ![negative 48.5](img/c01-i0121.png) 到 45.5。这表明 ![upper U](img/c01-i0122.png) 的支撑集下限约为 ![negative 48.5](img/c01-i0123.png)，而 ![upper V](img/c01-i0124.png) 的支撑集上限约为 99.5。如第 2 章 中讨论，在这种情况下，潜伏期 ![upper X](img/c01-i0125.png) 的分布在区间 ![left-bracket 0 comma 99.5 right-bracket](img/c01-i0126.png)（月）上是可识别的。AIDS 输血数据还包括感染年龄的信息；参见表 1.2。
+
+![upper U](img/c01-i0097.png) 的观测值介于 ![negative 4.5](img/c01-i0098.png) 和 14.5（年）之间；等价地，![upper V equals upper U plus 5](img/c01-i0099.png) 的观测值介于 0.5 到 19.5 之间。这意味着 ![upper U](img/c01-i0100.png) 和 ![upper V](img/c01-i0101.png) 的下端和上限满足 ![a Subscript upper U Baseline less-than-or-equal-to 0](img/c01-i0102.png) 和 ![b Subscript upper V Baseline greater-than-or-equal-to 15](img/c01-i0103.png)。因此，在这种情况下，目标变量 ![upper X](img/c01-i0104.png) 在其整个支撑集 ![left-bracket 0 comma 15 right-bracket](img/c01-i0105.png) 上是可观测的，且 ![upper F](img/c01-i0106.png)，即 ![upper X](img/c01-i0107.png) 的累积分布函数不存在识别问题。关于 ![left-parenthesis upper X comma upper U comma upper V right-parenthesis](img/c01-i0108.png) 的信息汇总在表 1.1 中。
+
+| 组别 |  | ![n](img/c01-i0110.png)  | 平均值 (SD) |
+| --- | --- | --- | --- |
+| 全部 |  | 406 | 6.47 (4.50) |
+| 按性别 | 女性 | 178 | 6.43 (4.51) |
+|  | 男性 | 228 | 6.51 (4.51) |
+| 按 ICCC 分组 | 白血病 | 107 | 6.30 (4.15) |
+|  | 淋巴瘤 | 57 | 8.66 (4.39) |
+|  | 神经系统肿瘤 |  94 | 6.38 (4.29) |
+|  | 神经芽瘤 |  38 | 3.16 (3.47) |
+|  | 其他 | 105 | 6.87 (4.70) |
+|  | 缺失 |  5 | 3.92 (5.18) |
+
+表 1.1 儿童癌症数据的描述统计：样本量 ![n](img/c01-i0109.png) 以及诊断年龄（年）的平均值（以及标准差，SD）。
+
+该数据集用于第 2 章、第 3 章和第 5 章，并可以通过 `ChildCancer` 包中的 `DTDA` 包进行访问。
+
+### 1.4.2 AIDS 输血数据
+
+Kalbfleish 和 Lawless (1989) 报告了 494 例与输血相关的 AIDS 病例，对应于 1986 年 7 月 1 日之前诊断出的个体(![d 1](img/c01-i0111.png))。感兴趣的变量 ![upper X](img/c01-i0112.png) 是诱或潜伏期，即从 HIV 感染到患 AIDS 所经过的时间。重要的是，在 1982 年之前 HIV 还是不为人知的(![d 0](img/c01-i0113.png))；这意味着在此日期之前发生 AIDS 的病例未被报告。令 ![upper V](img/c01-i0114.png) 表示从 HIV 感染到 1986 年 7 月 1 日的时间（月），并引入 ![upper U equals upper V minus 54](img/c01-i0115.png)；那么由于区间采样，观测到的满足 ![left-parenthesis upper U comma upper X comma upper V right-parenthesis](img/c01-i0116.png) 的 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c01-i0117.png) 三元组（Bilker 和 Wang, 1996）。我们将分析限制在数据一致的 ![n equals 295](img/c01-i0118.png) 例，这些病例的感染可以归因于单次输血或一系列短输血。该数据集在 Kalbfleish 和 Lawless (1989) 第 361 页中有完整报告。
+
+![upper X](img/c01-i0119.png) 的观测值范围从 0.5 到 89（月），而 ![upper U](img/c01-i0120.png) 的范围为 ![negative 48.5](img/c01-i0121.png) 到 45.5。这表明 ![upper U](img/c01-i0122.png) 的支撑集下限约为 ![negative 48.5](img/c01-i0123.png)，而 ![upper V](img/c01-i0124.png) 的支撑集上限约为 99.5。如第 2 章 中讨论，在这种情况下，潜伏期 ![upper X](img/c01-i0125.png) 的分布在区间 ![left-bracket 0 comma 99.5 right-bracket](img/c01-i0126.png)（月）上是可识别的。AIDS 输血数据还包括感染年龄的信息；参见表 1.2。
+
+### 1.4.3 设备失效数据
+
+公司通常对设备从特定日期到失效的时间感兴趣。为了这一点，我们记录 ![d 0](img/c01-i0131.png) 到 ![d 1](img/c01-i0132.png) 之间的事件。由于区间采样，我们分析的 ![n equals 295](img/c01-i0118.png) 例数据是一致的，这 295 例是双双截断的（Ye and Tang, 2016）。这些感染可以归因于单次输血或一系列短输血。该数据集在 Kalbfleish 和 Lawless (1989) 第 361 页中有完整报告。
+
+
+
+
+
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 单元数量: | 1 | 26 | 26 | 51 | 44 | 14 | 12 |
+
+表 1.3 设备- `S` 舍入故障时间数据的故障年数及故障单元数量。
+
+| 变量 | 最小值 | Q1 | Q2 | 平均值 | Q3 | 最大值 |
+| --- | --- | --- | --- | --- | --- | --- |
+| X | ![negative 2.34](img/c01-i0146.png) | ![negative 0.08](img/c01-i0147.png) |   0.39 | 0.24 | 0.71 | 2.08 |
+| U | ![negative 2.40](img/c01-i0148.png) | ![negative 0.63](img/c01-i0149.png) | ![negative 0.03](img/c01-i0150.png) | ![negative 0.27](img/c01-i0151.png) | 0.26 | 0.75 |
+| V |   0.15 |   1.78 |   2.10 |   1.95 | 2.36 | 2.58 |
+
+表 1.4 类星体数据（Quasar Data）的描述性统计。对数刻度的亮度(![upper X](img/c01-i0144.png)) 和观测间隔 ![left-parenthesis upper U comma upper V right-parenthesis](img/c01-i0145.png)。
+
+类星体数据用于第 3 章。这个经典示例也包含在 `DTDA` 包中（数据集 `Quasars`）。
+
+### 1.4.5 帕金森病数据
+
+Clark 等人 (2011) 研究了候选单核苷酸多态性 (SNPs) 与帕金森病 (PD) 发病年龄之间的关联。为此，从位于新泽西州坎登的 Coriell 医学研究学院国立神经疾病和中风研究所 (NINDS) 人类遗传 DNA 和细胞系库获得了人类血液样本的基因组 DNA 样本。具体而言，研究的一个目标是检测 `rs8192678` `PGC‐1a` 和 `A10398G` SNPs 与帕金森病风险或发病年龄之间的关联。
+
+| 分组 | SNP | 等位基因 | ![n](img/c01-i0156.png) | 平均值 (SD) |
+| --- | --- | --- | --- | --- |
+| 早发型 | A10398G | A | 76 | 46.93 ![left-parenthesis 5.66 right-parenthesis](img/c01-i0157.png) |
+| | | G | 21 | 47.14 ![left-parenthesis 5.89 right-parenthesis](img/c01-i0158.png) |
+| | PGC‐1a | A | 8 | 50.00 ![left-parenthesis 3.89 right-parenthesis](img/c01-i0159.png) |
+| | | AG | 50 | 47.18 ![left-parenthesis 5.67 right-parenthesis](img/c01-i0160.png) |
+| | | G | 39 | 46.10 ![left-parenthesis 5.86 right-parenthesis](img/c01-i0161.png) |
+| 晚发型 | A10398G | A | 73 | ![75.12](img/c01-i0162.png) ![left-parenthesis 6.23 right-parenthesis](img/c01-i0163.png) |
+| | | G | 27 | 75.33 ![left-parenthesis 4.92 right-parenthesis](img/c01-i0164.png) |
+| | PGC‐1a | A | 10 | 74.00 ![left-parenthesis 4.88 right-parenthesis](img/c01-i0165.png) |
+| | | AG | 37 | 76.49 ![left-parenthesis 6.25 right-parenthesis](img/c01-i0166.png) |
+| | | G | 53 | 74.49 ![left-parenthesis 5.72 right-parenthesis](img/c01-i0167.png) |
+
+表 1.5 帕金森病数据：各组的发病年龄。早发型：35–55 年；晚发型：63–87 年。样本量 ![n](img/c01-i0155.png) 以及发病年龄（年）的平均值（标准差）。为了消除与生存相关的选择偏差，研究限制为发病后 8 年内进行 DNA 抽样的帕金森病患者。因此，发病年龄 `X`(images/c01-i0152.png) 被采样年龄 `V`(images/c01-i0153.png) 右截断，并被 `U = V - 8`(images/c01-i0154.png) 左截断。Clark 等人 (2011) 只考虑了右截断，忽略了左截断。在几项帕金森病的重新分析中，Austin 等人 (2014) 和 Mandel 等人 (2018) 都考虑了两种截断。Clark 等人 (2011) 将病例分为早期发病年龄（35–55 年）的 99 名患者和后期发病年龄（63–87 年）的 100 名患者。这些病例的发病年龄基本遗传信息报告在表 1.5 中。早发组有两名患者的 `A10398G` 和采样年龄缺失，这些人被排除在外。
+
+帕金森病数据用于第 2 章和第 4 章。可以通过 `DTDA` 包访问该数据集，其中分别包含早发的 `PDearly` 和 `PDlate` 数据。
+
+### 1.4.6 冠心综合征数据
+
+我们还考虑了冠心综合征（ACS）的诊断年龄数据。在人口 1300 万的葡萄牙，有 38 家提供 ACS 结构化护理的公立医院，其中 16 家拥有导管设施。公立医院提供了大多数冠状动脉事件治疗，从 2009 年到 2013 年，接受经皮治疗的人数增加了 37.0%，尽管该程序的获取水平存在差异。`EPIHeart` 研究 (Araújo 等人,2018) 是 2013 年 8 月至 2014 年 12 月由葡萄牙北部两家三级医院的心科部门进行的：覆盖波尔图地区的 São João 医院和覆盖内部的 São Pedro 医院。队列的纳入标准为入院确诊为 1 型（原发性）ACS、年龄 18 岁或以上并居住在所属医院（Porto, Vila Real, Bragança 或 Viseu）。在入院后 48 小时内通过结构化访谈收集数据。在考虑的 1297 名患者中，有 939 名因标准纳入队列 (Moreira 等人,2021b)。部分描述性统计可以在表 1.6 中找到。
+
+| | ![n](img/c01-i0173.png) | 平均值 (SD) |
+| --- | --- | --- | --- |
+| 性别 | 男性 | 697 | 62.86 (12.63) |
+| | 女性 | 242 | 69.83 (12.59) |
+| 诊断 | STEMI | 359 | 61.47 (12.82) |
+| | NSTEMI | 580 | 66.61 (12.69) |
+
+表 1.6 ACS 数据的描述性统计。样本量 ![n](img/c01-i0172.png) 以及诊断年龄（年）的平均值（标准差， SD）。STEMI：ST 段抬高心肌梗；NSTEMI：非 ST 段抬高心肌梗。
+
+诊断年龄 `X`(images/c01-i0168.png) 范围从 29.42 岁到 94.09 岁，被双截断 (![upper U comma upper V](img/c01-i0169.png))，其中 `V`(images/c01-i0170.png) 代表出生到研究结束（2014 年 12 月）之间的时间（年），且 `U = V - 1.42`(images/c01-i0171.png)。
+
+ACS 数据用于第 2 章和第 3 章。可以通过 `DTDA` 包中的 `ACS`（完整数据集）或 `ACSred`（精简数据集）获取。
+
+## References
+
+1.  Araújo C, Laszczyńska O, Viana M, Melão F, Henrikes A, Borges A, Severo M, Maciel MJ, Azevedo A 2018 Sex differences in presenting symptoms of acute coronary syndrome: the EPIHeart cohort study. BMJ Open **8**, e018798.
+2.  Austin MD, Simon DK, Betensky RA 2014 Computationally simple estimation and improved efficiency for special cases of double truncation. Lifetime Data Analysis **20**, 335–354.
+3.  Beyersmann J, Allignol A, Schumacher M 2012 Competing Risks and Multistate Models with `R`. Springer.
+4.  Bilker WB, Wang MC 1996 A semiparametric extension of the Mann‐Whitney test for randomly truncated data. Biometrics **52**, 10–20.
+5.  Clark J, Reddy S, Zheng K, Betensky RA, Simon DK 2011 Association of PGC‐1alphapolymorphisms with age of onset and risk of Parkinson's disease. BMC Medical Genetics **12**, 69.
+
+
+
+
+6. de Uña‐Álvarez J 2020 双重截断下竞争风险累积发生率的非参数估计。Biometrical Journal **62**, 852–867.
+7. Efron B, Petrosian V 1999 双截断数据的非参数方法。Journal of the American Statistical Association **94**, 824–834.
+8. Kalbfleisch JD, Lawless JF 1989 基于追溯确认的推断：输血相关艾滋病数据分析。Journal of the American Statistical Association **84**, 360–372.
+9. Kaplan EL, Meier P 1958 不完全观测的非参数估计。Journal of the American Statistical Association **53**, 457–481.
+10. Klein JP, Moeschberger ML 2003 生存分析。删失与截断数据处理（第 2 版）。Springer.
+11. Lynden‐Bell D 1971 一种考虑小样本中已知观测选择的方法，应用于 3CR 类类星体。Monthly Notices of the Royal Astronomical Society **155**, 95–118.
+12. Mandel M, de Uña‐Álvarez J, Simon DK, Betensky RA 2018 双截断数据的逆概率加权 Cox 回归。Biometrics **74**, 481–487.
+13. Moreira C, de Uña‐Álvarez J 2010 双截断数据非参数极大似然估计的自助法。Journal of Nonparametric Statistics **22**, 567–583.
+14. Moreira C, de Uña‐Álvarez J, Crujeiras RM 2021a DTDA: 双截断数据分析。R 包版本 3.0.
+15. Moreira C, de Uña‐Álvarez J, Santos AC, Barros H 2021b 双重截断下风险率估计的光滑方法。arXiv 2103.14153.
+16. Shen PS 2010 双截断数据的非参数分析。Annals of the Institute of Statistical Mathematics **62**, 835–853.
+17. Turnbull BW 1976 具有任意分组、删失和截断数据的经验分布函数。Journal of the Royal Statistical Society Series B **38**, 290–295.
+18. Wang MC 1991 横截面生存数据的非参数估计。Journal of the American Statistical Association **86**, 130–143.
+19. Woodroofe M 1985 使用截断数据估计分布函数。Annals of Statistics **13**, 163–177.
+20. Xiao J, Hudgens MG 2019 关于双重截断的非参数极大似然估计。Biometrika **106**, 989–996.
+21. Ye ZS, Tang LC 2016 仅利用返回失败信息对外地未返回数据进行增强。Technometrics **58**, 513–523.
+22. Zhu H, Wang MC 2012 间隔采样分析二元生存数据及其在癌症流行病学中的应用。Biometrika **99**, 345–361.
+
+# 2 单样本问题
+
+本章讨论了从同质总体中抽取的 ![n](img/c02-i0001.png) 个体随机样本估计累积分布函数（cdf）的问题。在双重截断下，采样信息包含了感兴趣的变量 ![upper X](img/c02-i0002.png) 以及左截断和右截断变量 ![upper U](img/c02-i0003.png) 和 ![upper V](img/c02-i0004.png)，但可观测总体减少为满足 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c02-i0005.png) 的个体。因此，我们假设手中的数据 ![left-parenthesis upper X Subscript i Baseline, upper U Subscript i Baseline, upper V Subscript i Baseline right-parenthesis](img/c02-i0006.png), ![1 less-than-or-equal-to i less-than-or-equal-to n](img/c02-i0007.png) 是一个随机样本，其分布遵循在给定 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c02-i0009.png) 条件下 ![left-parenthesis upper X, upper U, upper V right-parenthesis](img/c02-i0008.png) 的条件分布。当然，![upper U Subscript i less-than-or-equal-to upper X Subscript i less-than-or-equal-to V](img/c02-i0010.png) 对于 ![1 less-than-or-equal-to i less-than-or-equal-to n](img/c02-i0011.png) 都的。
+
+我们将样本量 ![n](img/c02-i0012.png) 视为非随机量。在另一种观点下，数据来自一个两步程序。第一步，获取一个 ![left-parenthesis upper X, upper U, upper V right-parenthesis](img/c02-i013.png) 随机样本，其大小为 ![N](img/c02-i014.png)，![left-parenthesis upper X Subscript i Baseline, upper U Subscript i Baseline, upper V Subscript i Baseline right-parenthesis](img/c02-i0015.png)， ![1 less-than-or-equal-to i less-than-or-equal-to n](img/c02-i0016.png)。第二步，不满足 ![upper U Subscript i less-than-or-equal-to upper X Subscript i less-than-or-equal-to V](img/c02-i0017.png) 条件的三元组被丢弃。这意味着最终 ![n](img/c02-i018.png)的大小确实是随机的（参见 Woodroofe 1985)。我们将基于 ![n](img/c02-i0019.png) 条件进行，这忽略了由于 ![n] 的随机性而产生的额外项。
+
+重点是沿 ![upper X](img/c02-i0020.png) 变量的支持集估计 ![upper F left-parenthesis x right-parenthesis](img/c02-i0021.png) 进行。在 2.1 节中，我们从非参数的角度解决这个问题，而在 2.2 节中，将考虑基于半参数和参数模型的替代估计。
+
+## 2.1 分布函数的非参数估计
+
+![upper F](img/c02-i0023.png) 的朴素估计是 ![upper X Subscript i](img/c02-i0024.png) 的普通经验分布函数（ecdf），公式为：
+
+```
+F_n*(x) = 1/n \sum_{i=1}^n I(X_i <= x)
+```
+
+
+
+
+注意，`(2.2)` 中的第二个等式在当 `![upper X](img/c02-i0034.png)` 和 `![left-parenthesis upper U comma upper V right-parenthesis](img/c02-i0035.png)` 为独立随机变量时成立。在本书中，除非另有说明，否则我们假设满足这种独立性条件。
+
+当不存在截断 `![upper P left-parenthesis upper U equals negative infinity right-parenthesis equals upper P left-parenthesis upper V equals infinity right-parenthesis equals 1](img/c02-i0036.png))` 时，偏置函数 `![upper-upper G](img/c02-i0037.png)` 是常数。这意味着，一旦从总体中抽取到变量 `![upper X](img/c02-i0039.png)` 的特定值 `![x](img/c02-i0038.png)`，其包含在最终样本中的概率不受 `![x](img/c02-i0040.png)` 的影响。在左截断 `![upper P left-parenthesis upper V equals infinity right-parenthesis equals 1](img/c02-i0041.png))` 下，`![upper G](img/c02-i0042.png)` 简化为左截断变量的累分布函数（cdf），因此是单调不减的。偏置函数的这种非不减的形状表明，`![upper X](img/c02-i0043.png)` 的较大值具有较高的观测概率。右截断的情况恰相反；在这种情况下，`![upper G](img/c02-i0044.png)` 是 1 减去右截断变量的 cdf（即 `![upper V](img/c02-i0045.png)` 的生存函数）。在下一节中，我们将引入双截断一般设置下 `![upper F](img/c02-i0046.png)` 的非参数极大似然估计量（NPMLE）。如所述，NPMLE 没有显式形式，在实践中必须通过迭代算法计算。
+
+相关文献中已经提出了 `Section 2.1.1` 中 NPMLE 的 `![upper F](img/c02-i0047.png)` 的非参数估计量。例如，Austin 等人 `(2014)` 在假设 `![upper U](img/c02-i0048.png)` 和 `![upper V](img/c02-i0049.png)` 独立的额外假设下，提出了一种非参数估计量。当截断限制相互独立时，`(2.2)` 可以通过两个 Lynden-Bell 估计量的乘积进行简单估计，并构造出 `![upper F](img/c02-i0050.png)` 的显式形式估计量。遗憾的是，`![upper U](img/c02-i0051.png)` 和 `![upper V](img/c02-i0052.png)` 独立假设通常是不现实的，特别是它排除了区间抽样的重要场景。另一种 `![upper F](img/c02-i0053.png)` 的非迭代估计量是 de Uña-Álvarez `(2018)` 提出的，它通过使用受限样本 `![StartSet i colon upper X Subscript i Baseline less-than-equal-to upper X Subscript j Baseline less-than-equal-to V Subscript i Baseline EndSet](img/c02-i0055.png)`，`![1 less-than-or-equal-to j less-than-or-equal-to n](img/c02-i0056.png)` 计算出的 Lynden-Bell 估计量族从左到右递归估计 `![upper F](img/c02-i0054.png)`。这种非参数估计量非常适用于区间抽样；然而它并不有效。本手稿未涵盖这些替代性的非参数程序。
+
+### 2.1.1 NPMLE
+
+由于假设目标变量 `![upper X](img/c02-i0057.png)` 和截断变量 `![left-parenthesis upper U comma upper V right-parenthesis](img/c02-i0058.png)` 是相互独立的，单次观测值 `![left-parenthesis upper X Subscript i Baseline comma upper U Subscript i Baseline comma upper V Subscript i Baseline right-parenthesis](img/c02-i0059.png)`，`![1 less-than-or-equal-to i less-than-or-equal-to n](img/c02-i0060.png)` 的似然贡献由下给出
+
+```
+![StartLayout 1st Row 1st Column script upper L Subscript i Baseline left-parenthesis phi, psi right-parenthesis 2nd Column equals 3rd Column upper P left-parenthesis upper X Subscript i Baseline, upper U Subscript i Baseline, upper V Subscript i Baseline right-parenthesis less-than-equal-to X less-than-equal-to V Subscript i Baseline right-parenthesis 2nd Row 1st Column 2nd Column equals 3rd Column upper P```其中 `![alpha equals upper P left-parenthesis upper U less-than-equal-to X less-than-equal-to V right-parenthesis](img/i0061)` 是非截断概率，`![upper K](img/c02-i0062.png)` 是 `![left-parenthesis upper U comma upper V right-parenthesis](img/c02-i0063.png)` 的联合累分布函数，`![alpha equals left-parenthesis phi, ..., psi right-parenthesis](img/- t](i0064)` 和 `![psi equals left-parenthesis psi, ..., psi right-parenthesis](img/- t](i0065)`，而 `![phi i](img/c02-i0066.png)` 和 `![psi i](img/c02-i0067.png)` 分别表示 `![upper X](img/c02-i0068.png)` 在 `![left-parenthesis upper U Subscript i Baseline comma upper V Subscript i Baseline right-parenthesis](img/c02-i0069.png)` 处的质量。
+
+在此处，仅为了推导 NPMLE，假设目标变量和截断变量对都是离散的。重要的是，在观测数据类上搜索离散 `![upper F](img/c02-i0072.png)` 和 `![upper K](img/c02-i0073.png)`（其质量分别集中在 `![upper Subscript i](img/c02-i0074.png)` 和 `![left-parenthesis upper U Subscript i Baseline comma upper V Subscript i right-parenthesis](img/c02-i0075.png)` 上）并没有限制性。这在以下命题中给出。
+
+命题 2.1.1` 允许我们将非参数似然极大化限制在集中于 `![upper Subscript i](img/c02-i0095.png)` 的经验累分布函数类。反之，这意味着 `![upper F](img/c02-i0096.png)` 的 NPMLE 在最小左截断值 `![upper U Subscript left-parenthesis 1 right-parenthesis Baseline equals min 1 less-than-or-equal-to i less-than-or-equal-to n Endscripts U Subscript i](img/c02-i0097.png)` 左侧为 0，在 `![upper V Subscript left-parenthesis n right-parenthesis Baseline equals max 1 less-than-or-equal-to i less-than-or-equal-to n Endscripts V Subscript i](img/c02-i0098.png)` 右侧为 1。这很重要，因为在缺乏 `![upper F Subscript n left-parenthesis upper U Subscript left-parenthesis 1 right-parenthesis equals 1 minus upper F Subscript n left-parenthesis upper V Subscript left-parenthesis n right-parenthesis equals 0](img/c02-i0099.png)` 限制的情况下，可能存在多个 NPMLE（Xiao 和 Hudgens, 2019)）。事实上，关于 NPMLE 的另一个关键结果是保证其存在性和唯一性的定理；参见以下命题。证明过程略，基于 Vardi (1985) 附录中的定理，该定理随后被 Xiao 和 Hudgens (2019) 所利用。
+
+
+
+
+
+根据命题 2.1.2，很容易看出，如果存在索引 ![i](img/c02-i0107.png) 使得 ![sigma-summation Underscript j equals 1 Overscript n Endscripts upper I left-parenthesis upper U Subscript i Baseline less-than-or-equal-to upper X Subscript j less-than-or-equal-to upper V Subscript i right-parenthesis equals 1](img/c02-i0108.png) 或 ![sigma-summation Underscript j equals 1 Overscript n Endscripts upper I left-parenthesis upper U Subscript j less-than-or-equal-to upper X Subscript i less-than-or-equal-to upper V Subscript j right-parenthesis equals 1](img/c02-i0109.png)，则 ![upper F](img/c02-i0110.png) 的非参数极大似然估计 (NPMLE) 不存在或唯一。在接下来的示例中，我们说明了这一结果的应用，该结果与 Lynden‐Bell 估计中的空洞问题某种有关（Strzalkowska‐Kominiak and Stute, 2010）。事实上，当 ![sigma-summation Underscript j equals 1 Overscript n Endscripts upper I left-parenthesis upper U Subscript j less-than-or-equal-to upper X Subscript i less-than-or-equal-to upper V Subscript j right-parenthesis equals 1](img/c02-i0111.png) 时，忽略右截变量的 Lynden‐Bell 估计在 ![upper X Subscript i](img/c02-i0112.png) 处存在空洞并变得退化。在此我们提到，NPMLE 可能的不存在和非唯一也可能影响模拟研究；我们在下文第 2.1.3 节 引入的模拟场景中抽取的少量蒙特卡洛试验中发现了这种情况。显然，在使用重采样程序时也可能出现这个问题。需要注意的是，对于本书考虑的所有数据集（除 ACS 数据外），都满足存在性和唯一性条件。接接的示例将提供更深入的见解。
+
+现在注意，非截断概率由下给出
+
+(2.3)![StartLayout 1st Row 1st Column alpha equals integral upper G left-parenthesis x right-parenthesis normal d upper F left-parenthesis x right-parenthesis) 2nd Column equals integral left-parenthesis upper F left-parenthesis v right-parenthesis minus upper F left-parenthesis u minus right-parenthesis right-parenthesis) normal d upper K left-parenthesis u comma v right-parenthesis) 2nd Row 1st Column Blank 2nd Column equals integral integral Underscript u less-than-or-equal-to x less-than-or-equal-to v Endscripts normal d upper K left-parenthesis u comma v right-parenthesis) normal d upper F left-parenthesis x-parenthesis) EndLayout](img/c02-math-0007.png) 
+
+其中 ![upper F left-parenthesis u minus right-parenthesis equals upper P left-parenthesis upper X less-than u right-parenthesis](img/c02-i0138.png) 是 ![upper F](img/c02-i0139.png) 的左连续版本。当质量集中在数据上时，非截断概率 (2.3) 也可以写为 ![alpha equals sigma-summation Underscript i equals 1 Overscript n Endscripts sigma-summation Underscript j equals 1 Overscript n Endscripts phi Subscript i upper J Subscript j i Baseline psi Subscript j Baseline equals sigma-summation Underscript j equals 1 Overscript n Endscripts normal upper Phi Subscript j Baseline psi Subscript j](img/c02-i0140.png)，其中 ![normal upper Phi Subscript j Baseline equals sigma-summation Underscript i equals 1 Overscript n Endscripts phi Subscript i upper J Subscript j i](img/c02-i0141.png)，且 ![upper J Subscript j i Baseline equals upper I left-parenthesis upper U Subscript j less-than-or-equal-to upper X Subscript i less-than-or-equal-to upper V Subscript j right-parenthesis](img/c02-i0142.png)。因此，全似然为
+
+(2.4)![script upper L left-parenthesis phi comma psi right-parenthesis equals product Underscript i equals 1 Overscript n Endscripts alpha Superscript negative 1 phi Subscript i psi Subscript i Baseline equals product Underscript i equals 1 Overscript n Endscripts StartFraction phi Subscript i psi Subscript i Baseline Over sigma-summation Underscript j equals 1 Overscript n Endscripts normal upper Phi Subscript j EndFraction](img/c02-math-0008.png)
+似然函数 (2.4) 在并列方面是自适应的，因为如果一个值 ![upper Subscript i](img/c02-i0143.png) 的重数为 ![n](img/c02-i0144.png)，则附于 ![subscript i](img/c02-i0145.png) 的质量将是 ![n](img/c02-i0146.png)。
+
+目标是在约束 ![sigma-summation Underscript j equals 1 Overscript n Endscripts phi Subscript i equals 1](img/c02-i0150.png) 和 ![sigma-summation Underscript i equals 1 Overscript n Endscripts psi Subscript i equals 1](img/c02-i0151.png) 下通过最大化全似然 (2.4) 来估计参数 `phi`(images/c02-i0148.png) 和 `psi`(images/c02-i0149.png)。至少考虑到感兴趣的变量是 `X` (images/c02-i0152.png)，人们希望计算出导致最大值的向量 `phi`(images/c02-i0153.png)，例如 `phi_1, ..., phi_n` (images/c02-i0154.png)。为此，我们将全似然分解为给定截断值的 `X_i`s (images/c02-i0155.png) 的条件似然 `L1` (images/c02-i0156.png）（后者仅依赖于 `phi`(images/c02-i0157.png））以及截断值的边缘似然 `L2` (images/c02-i0158.png) 的乘积：
+
+(2.5)![script upper L left-parenthesis phi comma psi right-parenthesis equals product Underscript i equals 1 Overscript n Endscripts StartFraction phi Subscript i Over upper Phi Subscript i Fraction times product Underscript i equals 1 Overscript n Endscripts StartFraction upper Phi Subscript i Baseline psi Subscript i Baseline Over sigma-summation Underscript j equals 1 Overscript n Endscripts upper Phi Subscript j Baseline psi Subscript j Baseline EndFraction](img/c02-math-0009.png)
+
+一个有趣的事实是，条件 NPMLE（即因子 `L1`(images/c02-i0159.png) 在 (2.5) 中的最大化值）等于 `phi`(images/c02-i0160.png)。这一点在下述的形式化；相关结果参见 Shen (2010a)。
+
+
+
+
+
+Efron 和 Petrosian (1999) 提出了两种不同的迭代算法来计算 $![F](img/c02-i0190.png)$ 的条件非参数极大似然估计（NPMLE）；这些内容在第 2.1.2 节中进行了回顾。相应的，向量对 $![(\hat{\phi}, \hat{\psi})](img/c02-i0191.png)$（其中 $![hat{\psi} = (\psi_1, \dots, \psi_n)]$](images/c02-i0192.png)$^t$）最大化全似然函数的 (2.4)可以通过 Shen (2010a) 提出的数值算法计算，另参见第 2.1.2 节。
+
+即使 $![hat{\psi}_i](img/c02-i0193.png)$ 是次要关注的对象，它们在实践中也可以用于估计信息性曲线，例如报告 $![hatX](img/c02-i0194.png)$ 观测偏差的函数，参见 (2.2)。为了明确起见，引入 $![hatG(x)](img/c02-i0195.png)$ 的 NPMLE，其表达式为：
+
+(2.6)$![hat{G}_n(x) = \sum_{i=1}^n \hat{\psi}_i I(U_i \le x \le V_i)]$](images/c02-math-0012)
+
+对 $![hat{G}_n](img/c02-i0196.png)$ 的检查提供了关于 $![hatX](img/c02-i0197.png)$ 现有采样偏差的信息。此外，$![hat{G}_n](img/c02-i0198.png)$ 与 $![hat{F](img/c02-i0199.png)$ 的 NPMLE 之间存在重要联系。显然，$![hat{F](img/c02-i0200.png)$ 在 $![x](img/c02-i0201.png)$ 处的 NPMLE 为：$![hat{F}_n(x) = \sum_{i=1}^n \hat{\phi}_i I(X_i \le x)]$](images/c02-math-0013)
+
+因此，$![hat{F}_n](img/c02-i0202.png)$ 是一个单不不的阶跃函数，在 $![x](img/c02-i0204.png)$ 处的跳跃值为 $![hat{\phi}_i](img/c02-i0203.png)$。跳跃值的另一种表达式为 $![hat{\phi}_i](img/c02-i0205.png)$，其中 $![hat{\alpha}_n](img/c02-i0206.png)$ 是归一化常数，使得 $![sum_{i=1}^n 1/\hat{G}_n(x)]$](images/c02-i0207)。这表明 $![hat{F](img/c02-i0208.png)$ 的 NPMLE 可以作为逆概率估计（IPWE）获得，该估计对概率较小的 $![hat{X}_i](img/c02-i0209.png)$ 进行加权。![hat{F](img/c02-i0210.png)$ 这种表示法的有效性将在接的命题中建立。
+
+根据命题 2.1，NPMLE $![hat{F}_n](img/c02-i0222.png)$ 满足：
+
+(2.7)$![hat{F}_n(x) = \hat{\alpha}_n \int_{a_X}^x \hat{G}_n^{-1}(y) d\hat{F}^*(y), \hat{\alpha}_n = \left(\int_{a_X}^{b_X} \hat{G}_n^{-1}(y) d\hat{F}^*(y)\right)^{-1}]$](images/c02-math-0016)
+
+其中 $![hat{F}^*](img/c02-i0223.png)$ 是 $![hat{X}_i](img/c02-i0224.png)$ 的经验累积分布函数（ecdf），其中 $![hat{a}_X](img/c02-i0225.png)$ 和 $![hat{b}_X](img/c02-i0226.png)$ 是 $![hatX](img/c02-i0227.png)$的支持端点。这并不意外，因为总体水平存在类似的方程。具体而言：
+
+(2.8)$![hat{F}(x) = \alpha \int_{a_X}^x G_n^{-1}(y) d\hat{F}^*(y), \alpha = \left(\int_{a_X}^{b_X} G_n^{-1}(y) d\hat{F}^*(y)\right)^{-1}]$](images/c02-math-0017)
+
+同时注意，$![hat{\alpha}_n](img/c02-i0228.png)$ 作为无截断概率 $![hat{\alpha](img/c02-i0229.png)$ 的估计量，其本身值得关注。![hat{\alpha}_n](img/c02-i0230.png)$ 的性质在第 2.1.3 节中进行了讨论。
+
+$![hat{F}_n](img/c02-i0231.png)$ 表示为 IPWE 揭示了一种适用于双截断数据的通用估计策略，该策略适用于更复杂的场景，例如回归分析或多状态数据。在第 4 章和第 5 章中，将充分开发这些应用所需的细节。
+
+
+
+
+
+![ModifyingAbove psi With Ì‚ Subscript i](img/c02-i0232.png) 的另一个应用是在带有区间采样的生存分析中，在这种情况下，发病过程的研究可能具有意义。在这里，“发病”指的是 ![upper X](img/c02-i0233.png) 的发生，在区间采样的情况下，该信息是由右截断变量 ![upper V](img/c02-i0234.png) 报告的。回想，在区间采样中，观察到的个体是事件发生在两个特定日期 ![d 0](img/c02-i0235.png) 和 ![d 1](img/c02-i0236.png) 之间的个体，在这种情况下 ![upper V equals d 1 minus d Subscript normal upper I](img/c02-i0237.png)，其中 ![d Subscript normal upper I](img/c02-i0238.png) 表示发生日期；参见第 1.3 节。具体来说，人们可能想要估计 ![upper V](img/c02-i0239.png) 的累积分布函数，其表达式为 ![upper K Subscript upper V Baseline left-parenthesis v right-parenthesis equals upper P left-parenthesis upper V less-than-or-equal-to v right-parenthesis](img/c02-i0240.png)。一个自然的估计器是 ![ModifyingAbove upper K With caret Subscript upper V Baseline left-parenthesis v right-parenthesis equals sigma-summation Underscript i equals 1 Overscript n Endscripts ModifyingAbove psi With Ì‚ Subscript i Baseline upper I left-parenthesis upper V Subscript i Baseline less-than-or-equal-to v right-parenthesis](img/c02-i0241.png)，它确实是 ![upper K Subscript upper V Baseline left-parenthesis v right-parenthesis](img/c02-i0242.png) 的非参数极大似估计 (NPMLE)。第 2.2 节 中的图 2.13 描述了该估计器用于儿童癌症数据和 AIDS 输血数据，揭示了它们具有不同的发病模式；进一步的说明见下方的示例 2.1.8。显然，在区间采样下，发病过程也可以通过左截断变量 ![upper K Subscript upper U Baseline left-parenthesis u right-parenthesis equals upper P left-parenthesis upper U less-than-or-equal-to u right-parenthesis](img/c02-i0243.png) 的累积分布函数进行研究。所得估计器 ![ModifyingAbove upper K With caret Subscript upper U Baseline left-parenthesis u right-parenthesis equals sigma-summation Underscript i equals 1 Overscript n Endscripts ModifyingAbove psi With Ì‚ Subscript i Baseline upper I left-parenthesis upper U Subscript i Baseline less-than-or-equal-to u right-parenthesis](img/c02-i0244.png) 与 ![ModifyingAbove upper K With caret Subscript V](img/c02-i0245.png) 除去一个采样区间宽度的偏移外是相等的。
+
+![upper F](img/c02-i0246.png)、![upper G](img/c02-i0247.png) 和 ![upper K Subscript upper V](img/c02-i0248.png) 的 NPMLE 现在通过使用第 1.4.5 节 中的帕金森病数据进行说明。
+
+![图表描述了帕金森病诊断年龄的 NPMLE。](img/c02f001.png)
+
+图 2.1（帕金森病数据，示例 2.1.8）。帕金森病诊断年龄累积分布函数的 NPMLE（黑线）。红线对应于普通经验分布函数 (ecdf)。左图：早期发病组。右图：晚期发病组。
+
+![图表描述了帕金森病诊断年龄的估计采样概率。左图显示早期发病组。右图显示晚期发病组。](img/c02f002.png)
+
+图 2.2（帕金森病数据，示例 2.1.8）。帕金森病诊断年龄的估计采样概率。左图：早期发病组。右图：晚期发病组。
+
+![图表描述帕金森病数据采样年龄的 NPMLE。左图显示早期发病组。右图显示晚期发病组。](img/c02f003.png)
+
+图 2.3（数据，示例 2.1.8）。帕金森病采样年龄累积分布函数的 NPMLE。左图：早期发病组。右图：晚期发病组。
+
+### 2.1.2 计算 NPMLE 的数值算法
+
+在接下来，我们回顾了计算 ![upper F](img/c02-i0250) 的三种现有算法：Efron 和 Petrosian (1999) 提出的两种算法以及 Shen (2010) 提出的耦合算法。这些算法是迭代的，因此它们从 ![upper F](img/c02-i0253) 的初始解开始，然后通过不断改进达到一定的收敛。
+
+如命题 1.5 所确，![upper F](img/c02-i0254) 的 NPMLE 由条件似然函数 `L(phi)` 的极大值给出，即 `phi_1, ..., phi_n`。该极大值满足 2.9：
+
+```
+phi_1, ..., phi_n
+```
+其中 `sum_{m=1}^n J_j phi_m`。该表达式被 Efron 和 Petrosian (1999) 用于引入以下迭代算法。
+
+前一种算法收敛缓慢，这是 Efron 和 Petrosian (1999) 已经注意到的，因此作者引入了另一种基于 Lynden-Bell (1971) 方法的左截断数据算法。Lynden-Bell 方法在假设没有相同点的情况下通过以下方式估计时间 `X_j`(images/c02-i0266) 的风险率：
+
+```
+lambda_j = [sum_{i=1}^n I(U_i <= X_j <= X_i)]^{-1}
+```
+然后它按照通常方式评估累积分布函数的跳跃：
+
+```
+phi_j = phi_{j-1} exp(sum_{i=1}^{j-1} log(1 - lambda_i))
+```
+
+
+
+
+
+将 `(2.10)` 应用于双截断数据是不一致的，因为它忽略了右侧的截断。实际上，正如 Efron 和 Petrosian 所出的（`1999`），`(2.10)` 高估了感兴趣的风险率，从而导致得到的经验分布只能被视为目标分布 ![upper F](img/c02-i0268.png) 的上界。Efron 和 Petrosian（`1999`）提出了一种基于他们的 `Hazard Rate Theorem` 在双截断下迭代改进 `(2.10)` 的方法，该定理指出：
+
+```
+(2.12)![ModifyingAbove upper Q With Ì‚ Subscript j Baseline equals left-bracket sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper U Subscript i Baseline less-than-or-equal-to upper X Subscript j Baseline less-than-or-equal-to upper X Subscript i Baseline right-parenthesis plus sigma-summation Underscript i equals 1 Overscript n Endscripts upper J Subscript i ModifyingAbove upper Q With caret Subscript i Baseline right-bracket Superscript negative 1](img/c02-math-0022.png)
+```
+
+对于 ![1 less-than-or-equal-to j less-than-or-equal-to n](img/c02-i0269.png)，其中 ![ModifyingAbove upper Q With caret Subscript i Baseline equals sigma-summation Underscript m equals 1 Overscript n Endscripts ModifyingAbove phi With Ì‚ Subscript m Baseline upper I left-parenthesis upper X Subscript m greater-than upper V Subscript i Baseline right-parenthesis slash ModifyingAbove normal upper Phi With Ì‚ Subscript i](img/c02-i0270.png)，![1 less-than-or-equal-to i less-than-or-equal-to n](img/c02-i0271.png)。具体来说，Efron 和 Petrosian（`1999`）提出的第二种算法如下。
+
+当 `(2.10)` 和 `(2.12)` 中的 ![upper X Subscript j](img/c02-i0277.png) 存在相等时，必须进行更新。具体而言，这些方程中的右侧必须乘以每个 ![upper X Subscript j](img/c02-i0278.png) 值处事件发生的次数，即乘以 ![sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i Baseline equals upper X Subscript j Baseline right-parenthesis](img/c02-i0279.png)。在这种情况下，![lamda Subscript j](img/c02-i0280.png) 的数量减少为不同 ![upper X Subscript j](img/c02-i0281.png) 值的数量。
+
+Shen（`2010a`）引入了一种算法，用于同时计算 ![upper F](img/c02-i0282.png) 和 ![upper K](img/c02-i0283.png) 的 NPMLE。该算法基于全全似然 `(2.4)` 导出的两个方程。第一个是：
+
+```
+(2.13)![ModifyingAbove psi With Ì‚ Subscript i Baseline equals left-parenthesis sigma-summation Underscript j equals 1 Overscript n Endscripts ModifyingAbove normal upper Phi With Ì‚ Subscript j Superscript negative 1 Baseline right-parenthesis) Superscript negative 1 Baseline ModifyingAbove normal upper Phi With Ì‚ Subscript i Superscript negative 1 Baseline, 1 less-than-or-equal-to i less-than-or-equal-to n](img/c02-math-0023.png)
+```
+
+并与 Proposition 2.1.5 的陈述相关。第二个方程来自于类似于 `(2.5)` 的似然分解，该分解通过交换目标变量与截断变量的角色得到的。它成立：
+
+```
+(2.14)![script upper L left-parenthesis phi comma psi right-parenthesis equals product Underscript i equals 1 Overscript n Endscripts script upper L Baseline equals product Underscript i equals 1 Overscript Endscripts normal upper Psi Baseline sigma-summation Underscript i equals 1 Overscript Endscripts normal upper Psi Baseline times script upper L left-parenthesis 1 right-parenthesis psi times script upper L left-parenthesis 2 right-parenthesis phi](img/c02-math-0024)
+```
+
+其中 ![ModifyingAbove normal Psi Subscript j equals sigma-summation Underscript m equals 1 Overscript n Endscripts psi With Ì‚ Subscript m](img/c02-i0284)。出现在 `(214)` 中的 `script upper L left-parenthesis 1 right-parenthesis psi` (images/c02-i0285) 和 `script upper L left-parenthesis 2 right-parenthesis phi` (images/c02-i0286) 分别是 ![left-parenthesis upper Subscript i Baseline comma V Subscript i Baseline right-parenthesis)![upper X Subscript i](img/c02-i0287) 的条件似然 ![upper X Subscript i](img/c02-i0289) 的边缘似然。`(214)` (images/c02-i0290) 的极大化器 `ModifyingAbove psi With Ì‚` (images/c02-i0291) 满足：
+
+```
+(2.15)![ModifyingAbove psi With Ì‚ Subscript i Baseline equals left-bracket sigma-summation Underscript j equals 1 Overscript n Endscripts upper J Subscript i ModifyingAbove upper Psi With Ì‚ Subscript j Superscript negative 1 Baseline right-bracket Superscript negative 1 Baseline ModifyingAbove normal upper Psi With Ì‚ Subscript i Superscript negative 1 Baseline, 1 less-than-or-equal-to i less-than-or-equal-to n](img/c02-math-0025.png)
+```
+
+其中 ![ModifyingAbove normal Psi Subscript j equals sigma-summation Underscript m equals 1 Overscript n Endscripts psi With Ì‚ Subscript m Baseline upper J Subscript j](img/c02-i0292)。`(2.9)` 和 `(2.15)` 的解分别是 ![upper F](img/c02-i0293) 和 ![upper K](img/c02-i0294) 的 NPMLE，且这两个估计量都可以通过同时求解 `(2.13)` 和
+
+```
+(2.16)![ModifyingAbove phi With Ì‚ Subscript i Baseline equals left-parenthesis sigma-summation Underscript j equals 1 Overscript n Endscripts ModifyingAbove normal upper Psi With Ì‚ Subscript j Superscript negative 1 Baseline right-parenthesis) Superscript negative 1 Baseline ModifyingAbove normal upper Psi With Ì‚ Subscript i Superscript negative 1 Baseline, 1 less-than-or-equal-to i less-than-or-equal-to n period](img/c02-math-0026.png)
+```
+
+所得算法如下。
+
+
+
+
+
+算法 S1–S4 提供了一种针对 ![phi](img/c02-i0303.png) 的解决方案，其与第一个 Efron–Petrosian 算法相同。另一方面，第二个 Efron–Petrosian 算法基于不同的方程，因此在原理上并不显而易见它总能为 ![phi](img/c02-i0304.png) 提供相同的解。然而，Efron 和 Petrosian 前述的 `Hazard Rate Theorem`（风险率定理）(1999) 为 L1–L3 的有效性提供了理论支持。事实上，正如 Efron 和 Petrosian (1999) 指出的，当右截断不严重时，L1–L3 预计具有更快的收敛速度；这正是第 1.4.4 节中类星星数据（Quasar Data）的情况。对于类星星数据示例，在使用 `DTDA` 包相同的默认收敛准则时，EP1–EP3（以及 S1–S4）需要 43 次迭代，而 L1–L3 在仅需 7 次迭代后即停止。
+
+### 2.1.3 NPMLE 的理论属性
+
+在本节中，我们描述了针对双截断数据的 NPMLE ![upper F Subscript n](img/c02-i0305.png) 的理论属性。这包括一致性结果，以及将 NPMLE 表示为独立同分布随机变量之和，从而允许对其采样分布进行检查。除了关于 ![upper F Subscript n](img/c02-i0306.png) 本身的结果外，我们还提供了如下形式泛函的属性：
+
+(2.17)![upper S Subscript n Superscript phi Baseline equals integral phi normal d upper F Subscript Baseline equals sigma-summation Underscript i equals 1 Overscript n Endscripts ModifyingAbove phi With Ì‚ Subscript i Baseline phi left-parenthesis upper X Subscript i right right-parenthesis equals alpha Subscript n Baseline StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts StartFraction phi left-parenthesis upper X Subscript i right-parenthesis) Over upper G Subscript n Baseline left-parenthesis upper X Subscript i right-parenthesis EndFraction comma,](img/c02-math-0027.png)
+
+其中最后一个等式源自命题 2.1.7。在估计位置和离散参数时，自然会出现在 (2.17) 中定义的 Efron–Petrosian 积分。例如，![phi 1 left-parenthesis x right-parenthesis equals x](img/c02-i0307.png) 给出了 ![upper X](img/c02-i0308.png) 均值的估计量，而通过结合 ![phi 1](img/c02-i0309.png) 和 ![phi 2 left-parenthesis x right-parenthesis equals x squared](img/c02-i0310.png)，可以估计 ![upper X](img/c02-i0311.png) 的方差。估计量 ![upper F Subscript n left-parenthesis x right-parenthesis](img/c02-i0312.png) 本身可以通过从 (2.17) 中考虑 ![phi Subscript x left-parenthesis t right-parenthesis equals upper I left-parenthesis t less-than-or-equal-to x right-parenthesis](img/c02-i0313.png) 来恢复![upper S Subscript n Superscript phi](img/c02-i0314.png) 向 ![upper S Superscript Baseline equals integral phi normal d upper F](img/c02-i0315.png) 的收敛自然是预期的；我们将回顾这方面的可用结果。Stute (1995) 以及 Stute 和 Wang (1993) 提出并研究了适用于右删数据的 (2.17) 的不同版本，而 Stute 和 Wang (2008) 考虑了单侧截断的情况。本节关于 ![upper S Subscript n Superscript phi](img/c02-i0316.png) 的结果在某种程度上将后者扩展到了双截断设置。
+
+由于 ![upper G](img/c02-i0317.png) 在描述采样偏差和修正双截断效应中起着重要作用，我们还涵盖了 NPMLE ![upper G Subscript n](img/c02-i0318.png) 的结果。特别是，将给出归一化过程 ![a Subscript n left-parenthesis x right-parenthesis equals alpha Subscript n Superscript negative 1 upper G Subscript n](img/c02-i0319.png),a Subscript n less-than-or-equal-to x left-than-or-equal-to b Subscript n 的独立同分布表示。![upper G Subscript n](img/c02-i0321.png) 的一个有趣应用是检查由于双截断导致的观测偏差。将给出说明示例。目前 ![upper F](img/c02-i0322.png) 被认为具有凸支撑 ![left-bracket upper X comma b Subscript X right-bracket](img/c02-i0323.png) 的连续累积分布，但理论结果适用于更广泛的分布类。具体而言，正如将指出的，这些结果仅 ![upper F](img/c02-i0324.png) 的间断点是有限的。同样，令 ![left-bracket upper U comma b Subscript U right-bracket](img/c02-i0325.png) 和 ![left-bracket upper V comma b Subscript V right-bracket](img/c02-i0326.png) 分别为 ![upper K Subscript U](img/c02-i0327.png) 和 ![upper K Subscript V](img/c02-i0328.png) 的支撑。如第 1 章所述，在双截断下，我们只能在条件 ![a Subscript U less-than-or-equal-to upper X left-than-or-equal-to b Subscript V](img/c02-i0329.png) 下识别 ![upper X] 的分布。换之，![upper F](img/c02-i0331.png) 的估计只有在 ![a Subscript U less-than-or-equal-to a Subscript X](img/c02-i0332.png) 且 ![b Subscript X less-than-or-equal-to b Subscript V](img/c02-i0333.png) 时才是可能的。注意，当 ![a Subscript X less-than a Subscript U](img/c02-i0334.png) 时，没有机会在 ![left-parenthesis a Subscript X comma a Subscript U right-parenthesis](img/c02-i0335.png) 内采样 ![upper X Subscript i](img/c02-i0336.png)，因此无法在该区间内恢复 ![upper F](img/c02-i0337.png)。当 ![b Subscript V less-than b Subscript X](img/c02-i0338.png) 时也会发生类似的问题。
+
+
+
+
+在实践中，为了解释目的，必须考虑可能违反条件 ![U_a \le X_b, b_b \le V_b](img/c02-i0339.png) 的情况。例如，对于第 1.4.2 节中的 AIDS 血液输血数据，可识别的潜伏期 `cdf` 取决于是否在感染 HIV 后 99.5 个月内患上 AIDS。同样，第 1.4.6 节中急性冠心综合征的诊断年龄仅在 29.42 至 94.09 岁之间时才是可识别的。另一个例子是，设备 `S` 数据的 `cdf` 估计（参见第 1.4.3 节）取决于是否在运行的前 34 年内发生故障。在帕金森病发病年龄研究（第 1.4.5 节）中，早期和晚期组的定义解决了这个问题，因为年龄限制是基于实际观测值 ![X_i^upper](img/c02-i0340.png) 的。第 1.4.1 节中的应用则有所不同，因为儿童癌症的临床定义将诊断年龄 ![X^upper](img/c02-i0341.png) 限制在 ![0, 15](img/c02-i0342.png)(岁）范围内。在这种情况下，只需要验证 ![U_i^{min 1\le i\le n} \le 0](img/c02-i0343.png) 和 ![V_i^{max 1\le i\le n} \ge 15](img/c02-i0344.png)，以排除观测 ![X^upper](img/c02-i0345.png) 时存在任何关键限制的可能性；这两个不等式均成立。最后，对于第 1.4.4 节中描述的类星体亮度数据集，观测分布受限于 ![-2.40 \le X \le 2.58](img/c02-i0346.png)。在所有这些讨论中，理论限制 ![U^upper](img/c02-i0347.png) 和 ![V^upper](img/c02-i0348.png) 已被其经验对应值所取代。
+
+### 二元 cdf 的识别
+
+识别 ![U, V](img/c02-i0350.png) 的二元 `cdf` ![K^upper](img/c02-i0349.png) 也值得几几句。从直觉上显然，出于实际目的，可以将 ![K^upper](img/c02-i0351.png) 替换为在 ![U \le V](img/c02-i0353.png)、![U \le b_X](img/c02-i0354.png) 和 ![V \ge a_X](img/c02-i0355.png) 条件下 ![U, V](img/c02-i0352.png) 的条件分布。这仅仅是为了承认，由于采样机制，当 ![u > v](img/c02-i0357.png)、![u > b_X](img/c02-i0358.png) 或 ![v < a_X](img/c02-i0359.png) 时，无法从现有数据得出关于 ![K(u, v)](img/c02-i0356.png) 的任何结论。对于 ![F^upper](img/c02-i0360.png) 的估计，由于此类支持性限制，对 ![K^upper](img/c02-i0361.png) 的 NPMLE 解释需要谨慎。以第 1.4.1 节中的儿童癌症数据作为说明性。由于 ![[a_X, b_X] = 0, 15 且 ![V = U + U](img/c02-i0363.png)，在 ![U \le b_X](img/c02-i0364.png) 和 ![V \ge a_X](img/c02-i0365.png) 时意味着 ![V] 的 `cdf` 在 20 年内是可估计的。
+
+根据前面的讨论，后续假设 ![U, V](img/c02-i0367.png) 是 ![X^upper](img/c02-i0368.png) 的截断限制。这特别意味着 ![a_X \le a_V](img/c02-i0369.png)、![U_1 \le b_X](img/c02-i0370.png) 以及 ![P(V_1 - U_1 \ge 0) = 1](img/c02-i0371.png)。令 ![K^*](img/c02-i0372.png) 为 ![U_1, V_1](img/c02-i0373.png) 的 `cdf`，并令 ![a_U, b_U](img/c02-i0374.png) 和 ![a_V, b_V](img/c02-i0375.png) 分别为 ![U_1] 和 ![V_1] 的支持。在建立 NPMLE 的渐近性质时，我们将参考以下假设：
+
+1. (A1) ![F^upper](img/c02-i0379.png) 只有有限个不断点且在其他地方连续；![a_X \le a_V](img/c02-i0380.png)、![U_1 \le b_X](img/c02-i0381.png)；![b_X - a_X < \infty](img/c02-i0382.png);以及 ![P(V_1 - U_1 \ge \gamma) = 1](img/c02-i0383.png)，对于某些 ![gamma > 0](img/c02-i0384.png)。
+
+2. (A2) ![(u, v) \in \text{supp}(K^*), [F(v) - F(u)] > \delta_1 > 0](images/c02-i0385.png)。
+
+3. (A3) ![a_X \le x \le b_X, G(x) > \delta_2 > 0](img/c02-i0386.png)。
+
+4. (A4) ![U_1] 和 ![V_1] 的边缘密度在 ![a_X, b_X](img/c02-i0389.png) 上是有界的。
+
+
+
+条件 `(A1)–(A4)` 具有技术性质。它们可以被视为上述关于 `![upper X](img/c02-i0392.png)`、`![upper U](img/c02-i0393.png)` 和 `![upper V](img/c02-i0394.png)` 支撑集的可识别性条件的加强版本，外加一些允许在证明中使用特定数学工具的正则性条件。实际上，只要满足 `![a Subscript upper U 1 Baseline less-than a Subscript upper X](img/c02-i0395.png)` 和 `![b Subscript upper X Baseline less-than b Subscript upper V 1](img/c02-i0396.png)`，条件 `(A2)` 和 `(A3)` 就是多余的且可以移除。然而，它们清晰地说明了两个相关采样概率必须满足的有界条件。请注意，虽然 `(A3)` 中出现的函数 `![upper G](img/c02-i0397.png)` 代表目标变量特定值 `![upper X equals x](img/c02-i0398.png)` 的采样概率，但 `(A2)` 中的差 `![upper F left-parenthesis v right-parenthesis minus upper F left-parenthesis u minus right-parenthesis](img/c02-i0399.png)` 仅仅是截断结果数对 `![left-parenthesis u comma v right-parenthesis](img/c02-i0400.png)` 的采样概率。为了使理论结果成立，两者都必须远离零。
+
+下一个结果由 de Uña‐Álvarez 和 Van Keilegom `(2021)` 证明过，他们纠正并完善了由 Shen `(2010a)` 发起的理论。该结果实际上对于方程的任意解 `![upper F Subscript n](img/c02-i0401.png)` 成立：
+
+```
+(2.18)![upper F Subscript n left-parenthesis x right-parenthesis equals integral Subscript a Subscript upper Baseline Superscript x Baseline StartFraction normal d upper F Subscript n Superscript Baseline left-parenthesis t right-parenthesis Over integral Underscript u less-than-or-equal-to t less-than-or-equal-to v Endscripts left-bracket upper F Subscript n left-parenthesis v right-parenthesis minus upper F Subscript n left-parenthesis u minus right-parenthesis right-bracket Superscript negative 1 Baseline normal d upper K Subscript n Superscript Baseline left-parenthesis u comma v right-parenthesis EndFraction comma a Subscript upper X less-than-or-equal-to x less-than-or-equal-to b Subscript upper X](img/c02-math-0028.png) 
+```
+
+其中 `![upper K Subscript n Superscript asterisk](img/c02-i0402.png)` 是 `![left-parenthesis upper U Subscript i Baseline comma upper V Subscript i Baseline right-parenthesis](img/c02-i0403.png)` 的普通经验积分布函数。NPMLE 求解 `(2.18)` 这一于 `Proposition 2.1.7` 以及等式 `![ModifyingAbove psi With Ì‚ Subscript i Baseline equals alpha Subscript n n Superscript negative 1 Baseline left-bracket upper F Subscript n left-parenthesis upper V Subscript i right-parenthesis minus upper F Subscript n left-parenthesis upper U Subscript i minus right-parenthesis right-bracket Superscript negative 1](img/c02-i0404.png)`，`![1 less-than-or-equal-to i less-than-or-equal-to n](img/c02-i0405.png)`，这作为一个练习留给读者。引入 `![a left-parenthesis x right-parenthesis equals alpha Superscript negative 1 Baseline upper left-parenthesis x right-parenthesis](img/c02-i0406.png)`，`![a Subscript upper X less-than-or-equal-to x less-than-or-equal-to b Subscript upper X](img/c02-i0407.png)`，并令 `![script l Superscript infinity left-bracket a Subscript upper X comma b Subscript upper Baseline right-bracket](img/c02-i0408.png)` 为定义在 `![upper X](img/c02-i0409.png)` 支撑集上的有界函数空间，其范数具有 `![double-vertical-bar h double-vertical-bar Subscript infinity equals sup Subscript a Sub Sub upper X Subscript less-than-or-equal-to x less-than-or-equal-to b Subscript upper Baseline StartAbsoluteValue h left-parenthesis x right-parenthesis EndAbsoluteValue](img/c02-i0410.png)`。
+
+根据 `Theorem 2.1` 并结合一些技术性工作，以下结论说明了过程 `![upper F Subscript n left-parenthesis x right-parenthesis minus upper F left-parenthesis u right-parenthesis](img/c02-i0415)` 在 `![a Subscript upper X less-than-or-equal-to x less-than-or-equal-to b Subscript upper X](img/c02-i0416)` 上的弱收敛（参见 de Uña‐Álvarez 和 Van Keilegom `(2021)`），`Theorem 2.1` 意味着 `![upper F Subscript n left-parenthesis x right-parenthesis](img/c02-i020)` 渐近服从高斯分布。这很有趣，例如当目标是构建置信区间时。此时的一个重要问题是 `![upper F Subscript n left-parenthesis x right-parenthesis](img/c02-i0421)` 的标准估计，该主题将在下一节中讨论。遗憾的是，出现在 `Theorem 2.1` 中的线性算子 `![script A](img/c02-i023)` 没有显式形式；这增加了估计量设计的难度。为了说明 `![upper F Subscript n left-parenthesis x right-parenthesis](img/c02-i024)` 的一致性和渐近正态性，我们现在引入两个模拟场景，这些场景将在全书中用于研究其他工具。具体而言，我们首先引入一个没有采样偏倚的 `![upper F](img/c02-i025)` 场景（c02-i25），第二个是具有观测偏倚的。
+
+### 模拟场景 I：无采样偏倚的 F (c02-i26)
+
+在该场景中，感兴趣的变量 `![upper X](img/c02-i0427)` 在单位区间 `![upper left-parenthesis 0 comma 1 right-parenthesis](img/c02-i0428)` 上服从均匀分布。左截断变量 `![upper U](img/c02-i0429)` 抽自 `![upper left-parenthesis negative 1 slash 3 comma 1 right-parenthesis](img/c02-i0430)` 模型，而右截断变量通过 `![upper U](img/c02-i0431)` 计算为 `![upper V equals upper U plus 1 slash 3](img/c02-i0432)`。这代表了一个宽度为 `![1 slash 3](img/c02-i0433)` 的区间采样场景，并在某种程度上类似于 `Section 1.4.1` 中的儿童数据。可识别支撑条件得到了满足，因为 `![a Subscript upper U Baseline equals negative 1 slash 3 less-than-or-equal-to 0 equals a Subscript upper X less-than-or-equal-to 0 equals a Subscript upper V](img/c02-i0434)` 且 `![b Subscript upper U equals 1 less-than-or-equal-to b Subscript upper Baseline equals 1 less-than-or-equal-to 4 slash 3 equals b Subscript upper V](img/c02-i0435)`。请注意，在该模型中 `![upper X](img/c02-i0436)` 没有观测偏倚；事实上，`![upper G left-parenthesis x right-parenthesis equals 1 slash 4](img/c02-i0437)` 对于 `![0 less-than x less-than 1](img/c2-i0438)` 使得 `![a left-parenthesis x right-parenthesis equals 1](img/c02-i0439)` 对于所有 `![x](img/c02-i0440)` 点都成立。
+
+
+
+
+## 模拟场景 II：![upper F](img/c02-i0441.png) 的采样偏差。
+
+通过对左截断变量考虑非均匀分布，可以很容易引入 `![upper X](img/c02-i0442.png)` 的采样偏差。例如，考虑感兴趣的变量 `![upper X](img/c02-i0443.png)` 在单位区间上服从均匀分布，即 `![upper X tilde upper U left-parenthesis 0 comma 1 right-parenthesis](img/c02-i0444.png)`。左截断变量 `![upper U](img/c02-i0445.png)` 满足 `[(3/4)(upper U + 1/3)]^{1/2 ~upper U(0, 1)` (images/c02-i0446.png)，而右截断变量由 `![upper U](img/c02-i0447.png)` 计算为 `![upper V equals upper U plus 1 slash 3]` (images/c02-i0448.png)。在该模型中，`![upper X](img/c02-i0449.png)` 值的采样概率由 `![upper G(x) = ((3(x + 1/3)/4)^{1/2} - (3x/4)^{1/2}]` (images/c02-i0450.png)，`0 <= x < 1` (images/c02-i0451.png)给出。该函数单调递，这意味着较大的 `![upper X](img/c02-i0452.png)` 值的观测机会较小，从而对目标变量 `![upper X](img/c02-i0453.png)` 引入了观测偏差。
+
+通常，随机双截断可以通过实现拒绝-接受步骤来轻松模拟，因此舍弃不满足条件 `U_i <= X_i <= V_i` (images/c02-i0455.png) 的三元组 `(X_i, U_i, V_i)` (images/c02-i0454.png)。这种想法在实践中效果良好，尽管当截断率很高时，达到预设样本量 `n` (images/c02-i0456.png) 的计算时间可能很长。或者，可以直接模拟截断后的世界，即根据其联合分布函数模拟三元组 `(X_1, U_1, V_1)` (images/c02-i0457.png)。在这种设定下，至少有两种可能的路径：
+
+1. `![upper X U upper V route)` (images/c02-i0458.png)：首先从 `F*` (images/c02-i0460.png) 抽取 `X_1`，然后根据给定 `X_1` 的条件分布函数 (images/c02-i0462.png) 抽取 `(U_1, V_1)` (images/c02-i0461.png)。
+2. `![upper U V upper X route)` (images/c02-i0463.png)：首先从 `K*` (images/c02-i0465.png) 抽取 `(U_1, V_1)` (images/c02-i0464.png)，然后根据给定 `(U_1, V_1)` 的条件分布函数 (images/c02-i0467.png) 抽取 `X_1` (images/c02-i0466.png)。
+
+对于 `![upper X U upper V route]` (images/c02-i0468.png)，需要得到在 `U <= X <= V` (images/c02-i0470.png) 和 `X = x` (images/c02-i0471.png) 条件下 `(U, V)` (images/c02-i0469.png) 的条件分布函数，这对应于
+
+```
+normal dK*(u, v|x) = I(u <= x <= v) * dK(u, v) / G(x)
+```
+(images/c02-i0472.png)
+
+对于 `![upper U V X route]` (images/c02-i0473.png)，需要得到在 `U <= X <= V` (images/c02-i0474.png) 和 `X = x` (images/c02-i0475.png) 条件下 `(U, V)` 的条件分布函数；这是
+
+
+
+```
+dK*(u, v|x) = I(u <= x <= v) * dK(u, v) / G(x)
+```
+(images/c02-033)
+
+取决于模型，路径 (a) 可能比 (b) 更简单，反之亦然。例如，`![upper X](img/c02-i0476.png)` 特别简单，因为 `![upper G](img/c02-i0477.png)` 是常数，且给定 `X_1 = x` (0478)，则 `U_1` 在区间 `[x/3, x]` (images/c02-i0479.png) 上呈均匀分布。对于读者来说，证明后者是一个有趣的练习。
+
+`F_n` (images/c02-i0480.png) 在 定理 2.1 中的表示是左截断设置中已知结果向双截断的扩展。具体来说，Ávarez 和 Van Keile (2021) 证明了在左截断数据的特殊情况下，(2.19 成立
+
+```
+var(F_n(x)) = G(x)/G(x)² * integral_0^x (1/G(t)² - (F(x)-F(t))/G(x))² dF(t)
+```
+(images/c02-0034.png)
+
+在这里 `![upper G](img/c02-i0501.png)` 变成了 `![upper U](img/c02-i0502.png)` 的分布函数。这是 Stute (1993) 中 Lynden-Bell 估计量的表示。
+
+
+
+
+![图表显示：左图为从大小为 n=25（灰色虚线）或 n=250 的样本中计算出的 NPMLE Fn(x)，该样本根据模型 X∼U(0,1), U∼U(-1/3,1), V=U+1/3 绘制。红线是目标 F。右图显示了从相同模型模拟 1000 次大小为 n=250 的实验得到的 Fn(0.5) 数值直方图。](img/c02f004.png)
+
+图 2.4 (模拟场景 I：对于 ![upper F](img/c02-i0489.png) 无采样偏差。示例 2.1.11)）。左图：从大小为 ![n equals 25](img/c02-i0491.png)（灰色虚线）或 ![n equals 250](img/c02-i0492.png) 的样本中计算出的 NPMLE ![upper F Subscript n](img/c02-i0490.png)，该样本根据模型 ![upper X tilde upper U left-parenthesis 0 comma 1 right-parenthesis](img/c02-i0493.png), ![upper U tilde upper U left-parenthesis negative 1 slash 3 comma 1 right-parenthesis](img/c02-i0494.png), ![upper V equals upper U plus 1 slash 3](img/c02-i0495.png) 绘制。红线是目标 ![upper F](img/c02-i0496.png)。右图：从相同模型模拟的 ![1000](img/c02-i0498.png) 次大小为 ![n equals 250](img/c02-i0499.png) 的实验得到的 ![upper F Subscript n Baseline left-parenthesis 0.5 right-parenthesis](img/c02-i0497.png) 数值直方图。
+
+(2.20)![sigma Subscript LB Superscript 2 Baseline left-parenthesis x right-parenthesis equals alpha left-parenthesis 1 minus upper F left-parenthesis x right-parenthesis right-parenthesis squared integral Subscript a Subscript upper X Baseline Superscript x Baseline upper G left-parenthesis t right-parenthesis Superscript negative 1 Baseline left-parenthesis 1 minus upper F left-parenthesis t right-parenthesis Superscript negative 2 Baseline normal d upper F left-parenthesis t right-parenthesis](img/c02-math-0035.png)作为一个特殊情况，这是有趣的，因为正如前面提到的，通常情况下双截断下 NPMLE 的渐方差没有显式公式。
+
+以下结果给归一化偏置函数 ![a Subscript n Baseline left-parenthesis x right-parenthesis equals alpha Subscript n Superscript negative 1 Baseline upper G Subscript n Baseline left-parenthesis x right-parenthesis](img/c02-i0506.png), ![a Subscript upper X less-than-or-equal-to x less-than-or-equal-to b Subscript upper X](img/c02-i0507.png) 提供了一个 iid 表示。该函数在研究采样偏差以及从双截断数据重构目标 ![upper F](img/c02-i0508.png) 时起着关键作用。
+
+定理 2.1.12 的证明可以在 de Uña‐Álvarez 和 Van Keilegom (2021) 中找到。在本文也证明了过程 ![StartRoot n EndRoot left-parenthesis (a Subscript n Baseline left-parenthesis x right-parenthesis minus a left-parenthesis x right-parenthesis)](img/c02-i0510.png), ![a Subscript upper X less-than-or-equal-to x less-than-or-equal-to b Subscript upper X](img/c02-i0511.png) 的弱收敛。
+
+接下来的示例说明了存在 ![upper X](img/c02-i0537.png) 观测偏差的第二个模拟场景。
+
+![图表显示：左图为从样本中计算出的 NPMLE Gn(x)。](img/c02f005.png)
+
+图 2.5 (模拟场景 I：对于 ![upper F](img/c02-i0526.png) 无采样偏差，示例 2.1.13)）。左图：从大小为 ![n equals 25](img/c02-i0528.png)（灰色虚线）或 ![n equals 250](img/c02-i0492.png) 的样本中计算出的 NPMLE ![upper G Subscript n](img/c02-i0527.png)，根据模型 ![upper X tilde upper U left-parenthesis 0 comma 1 right-parenthesis](img/c02-i0493.png), ![upper U tilde upper U left-parenthesis negative 1 slash 3 comma 1 right-parenthesis](img/c02-i0494.png), ![upper V equals upper U plus 1 slash 3](img/c02-i0495.png) 绘制。红线是目标 ![upper F](img/c02-i0496.png)。右图：从相同模型模拟的 ![1000](img/c02-i0498.png) 次大小为 ![n equals 250](img/c02-i0499.png) 的实验得到的 ![upper F Subscript n Baseline left-parenthesis 0.5 right-parenthesis](img/c02-i0497.png) 数值直方图。
+
+
+
+![S_n^\phi = \frac{1}{n} \sum_{i=1}^{n} \phi(X_i) / a_n(X_i)](img/c02-math-0038.png)![图表显示左图为设备寿命累分布函数的 NPMLE（黑线）和普通经验累积函数（红线）。右图显示估计的偏倚函数。](img/c02f009.png)
+
+图 2.9（设备-S 舍入失效时间数据，示例 2.1.15）。左图：设备寿命累分布函数的 NPMLE（黑线）和普通经验累积函数（红线）。右图：估计的偏倚函数。
+
+![图表显示左：从原始数据计算的 NPMLE。右：从舍入数据计算的 NPMLE。虚线对应目标累分布 $F$。样本量 $n=300$。](img/c02f010.png)
+
+图 2.10（带有舍入的模拟场景 II，示例 2.1.16）。左：从原始数据计算的 NPMLE。右：从舍入数据计算的 NPMLE。虚线对应目标累分布 ![F](img/c02-i0562.png)。样本量为 ![n=300](img/c02-i0563.png)。
+
+因此，定理 2.1.12 中的表示是渐近分析的要素要素。以下定理和推论成立。详细证明可参见 de Uña-Álvarez 和 Van Keilegom（2021）。
+
+在第 2.1.1 节中，引入了非截断概率 ![alpha = P(U \le X \le V)](img/c02-i0570.png) 的估计器；参见等式 (2.7)。等式 (2.7)中的估计器由 ![alpha_n = (\frac{1}{n} \sum_{i=1}^{n} G_n(X_i))^{-1})^{-1](img/c02-i0571.png) 给出，可以显而易地上估计截断前的总体规模 ![N](img/c02-i0572.png)：![N_n = n / \alpha_n](img/c02-i0573.png)。估计器 ![alpha_n](img/c02-i0574.png) 具有另一种表示：
+
+![alpha_n = \{ \frac{1}{n} \sum_{i=1}^{n} [F_n(V_i) - F_n(U_i)]^{-1} \}^{-1}.](images/c02-math-0042.png)
+
+这种表示对于表述 ![alpha_n](img/c02-i0575.png) 的渐近性质非常有用，因为这些性质继承自 ![F_n](img/c02-i0576.png)。事实上，遵循 de Uña-Álvarez 和 Van Keilegom（2021）中定理 2.2 的证明步骤，在上述条件 (A1)–(A4) 下可以得：
+
+(2.21)![alpha_n^{-1} - \alpha^{-1} = \frac{1}{n} \sum_{i=1}^{n} \eta_{\tilde{X}_i, U_i, V_i} + o_P(n^{-1/2})](img/c02-math-0043.png)
+
+其中
+
+![eta_{\tilde{X}_i, U_i, V_i}](img/c02-math-0043.png)
+
+
+
+
+# 自助法方法 (Bootstrap Methods)
+
+自助法传统上用于估计标准误差，更广泛地说，用于各种设定下的采样分布。对于随机截断数据，已经提出并研究了两种不同的自助采样方案：简单自助法 (`SB`) 和而易见的自助法 (`OB`)。
+
+虽然 `SB` 从 ![left-parenthesis upper X 1 comma upper U 1 comma upper V 1 right-parenthesis comma ellipsis comma left-parenthesis upper X Subscript n Baseline comma upper U Subscript n Baseline comma upper V Subscript n Baseline right-parenthesis](img/c02-i0666.png) 进行放重采样，而 `OB` 则需要先对 ![upper F](img/c02-i0667.png) 和 ![upper K](img/c02-i0668.png) 进行初步估计才能进行。具体来说，`OB` 从 ![upper F Subscript n Baseline left-parenthesis x right-parenthesis equals n Superscript negative 1 Baseline sigma-summation Underscript i equals 1 Overscript n Endscripts ModifyingAbove phi With Ì‚ Subscript i Baseline upper I left-parenthesis upper X Subscript i less-than-or-equal-to x right-parenthesis](img/c02-i0670.png) 获取 ![upper X](img/c02-i0669.png) 值，![left-parenthesis upper U comma upper V right-parenthesis](img/c02-i0671.png) 对独立地从 ![upper K Subscript n Baseline left-parenthesis u comma v right-parenthesis equals n Superscript negative 1 Baseline sigma-summation Underscript i equals 1 Overscript n Endscripts ModifyingAbove psi With Ì‚ Subscript i Baseline upper I left-parenthesis upper U Subscript i less-than-or-equal-to u comma upper V Subscript i less-than-or-equal-to v right-parenthesis](img/c02-i0672.png) 中抽取，最后，如果出现 ![upper X less-than upper U](img/c02-i0674.png) 或 ![upper X greater-than upper V](img/c02-i0675.png)，则丢弃三元组 ![left-parenthesis upper X comma upper U comma upper V right-parenthesis](img/c02-i0673.png)。重复此过程直到获得满足 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c02-i0676.png) 的有效三元组。因此，`OB` 为满足 ![upper U Subscript j less-than-or-equal-to upper X Subscript i less-than-or-equal-to upper V Subscript j](img/c02-i0678.png) 的三元组 ![left-parenthesis upper X Subscript i Baseline comma upper U Subscript j Baseline comma upper V Subscript j right-parenthesis](img/677.png) 赋予正权重，其中（与 `SB` 不同）![i not-equals j](img/c02-i0679.png) 是可能的。为了清晰和方便参考，这些采样方案在以下两个定义中详细列出。
+
+## 理论背景
+
+在左截断设定下，Gross 和 Lai (1996) 讨论了 `SB` 和 `OB` 方法之间的差异，他们利用 Edgeworth 展开研究了简单自助法对于左截断右删数据的理论有效性。在他们的设定中，`OB` 的应用并不简单，因为涉及到截断变量与剩余右删变量之间的平滑处理或独立性条件。然而，在没有删的情况下，即使从两侧（左侧和右侧）发生截断，这些这些复杂性。双截断数据的自助法理论尚未开发。
+
+## 之前的方法
+
+之前的自助方法可用于估计 ![upper F Subscript n Baseline left-parenthesis x right-parenthesis](img/c02-i0696.png) 的标准误差，随后计算置信区间。具体而言，Emura 等 (2015) 和 de Uña-Álvarez (2020) 分析了基于 `SB` 的 ![upper F Subscript n Baseline left-parenthesis x right-parenthesis](img/c02-i0697.png) 标准误差的准确性。这些论文中的模拟研究表明该方法性能良好，对于样本量小到 ![n equals 50](img/c02-i0698.png) 的也是如此。因此，即使对 `SB` 在双截断设定下的理论属性认知有限且应当保持谨慎，我们通常在应用中推荐它。
+
+## 模拟结果
+
+为了说明并比较 定义 2.1.20 和 2.1.21 中引入的两种自助方法的性能，我们报告了考虑 第 2.1.3 节 中描述的情景 I 和 II 的模拟结果，这些场景对应于没有/有采样偏的 ![upper F](img/c02-i099.png) 情况。我们首先关注通过 `SB` 和 `OB` 对标准误差的估计，并以大量蒙特卡洛复制近似的*真实*标准误差为基准。在 表 2.2（情景 I）和 表 2.3（情景 II）中，给出了自助误差 ![sigma B](img/c02-0.png) * 与真实误差 ![sigma MC](img/c02-0.png) 之间的比率的平均值和标准差。仅显示了三个分位数（0.3, 0.5 和 0.7）的结果，尽管其他分位数也可以得出类似的结论。`SB` 和 `OB` 方法表现良好；随着样本量的增加，比率的平均值接近 1，标准差缩小。在 表 2.2 中，我们还报告了普通 ecdf（由 ![sigma 0](img/c02-0.png) 表示）的标准误差，它是没有采样偏情况下的一致估计量，![sigma 0](img/c02-0.png) 展示了由于双截断导致的方差。
+
+| | ![n equals 100](img/c02-i0707.png) | ![n equals 500](img/c02-i0708.png) |
+| --- | --- | --- |
+| 0.3 | | |
+| 0.5 | | |
+| 0.7 | | |
+| **SB (Mean)** | | |
+| ![sigma MC](img/c02-i0709.png) | 0.1315 | 0.1517 |
+| ![sigma 0](img/c02-i0710.png) | 0.0458 | 0.0500 |
+| **SB (SD)** | 0.9796 | 0.9678 |
+| ![sigma MC](img/c02-i0711.png) | 0.2110 | 0.1345 |
+| **OB (Mean)** | 0.9996 | 0.9962 |
+| ![sigma 0](img/c02-i0712.png) | 1.0034 | 1.0528 |
+| **OB (SD)** | 0.9888 | 1.0263 |
+| ![sigma MC](img/c02-i0713.png) | 0.2048 | 0.1977 |
+| ![sigma 0](img/c02-i0714.png) | 0.1081 | 0.1201 |
+
+
+
+
+
+| OB | ![Mean](img/c02-i0725.png) | 0.9983 | 0.9997 | 1.0073 | 1.0039 | 1.0055 | 0.9997 |
+|  | ![SD](img/c02-i0726.png) | 0.2148 | 0.1463 | 0.2306 | 0.1081 | 0.0696 | 0.1201 |
+
+表 2.3 模拟场景 II 下通过自助法（bootstrap methods）的标准误差估计（针对 ![上界 F](img/c02-i0715.png) 的采样偏差，见第 2.1.3 节）。针对不同样本量（![n 等于 100, 500](img/c02-i0716.png)）和分位数（![0.3, 0.5, 0.7](img/c02-i0717.png)），简单自助（SB，上表）和明显自助（OB，下表）的结果。自助和蒙特卡洛重复次数：![1000](img/c02-i0718.png)。![sigma 下标 MC](img/c02-i0719.png)：通过 2e+05 次重复的蒙特卡洛方法计算的标准误差。报告了自助标准误差与真实标准误差之比的均值和标准差。
+
+标准误差可以被视为获取给定估计量变异信息最简单的方法。然而，通常通过置信区间可以更好地可视化这种变异性。对于双截断数据，可以使用 SB 和 OB 方法来实现这一目的，我们现在进行详细阐述。在双截断下产生置信区间的其他替代路径包括经验似然比率法（Shen, 2011）。
+
+作为第一种方法，可以利用 ![upper F 下标 n 左(x)](img/c02-i0730.png) 的渐近正态性，并使用自助重采样算法计算自助标准误差 ![sigma 下标上 B 上星号](img/c02-i0731.png)，然后将其代入常用的 ![100 (1 减 alpha)](img/c02-i0732.png)% 置信区间公式如下：
+
+(2.22)![upper F 下标 n 左(x) 加或减 z 下标 1 减 alpha/2 sigma 下标上 B 上星号 逗，](img/c02-math-0045.png) 
+
+其中 ![sigma 下标上 B 上星号](img/c02-i0733.png) 是 ![upper B](img/c02-i0734.png) 自助值 ![upper F 上标 b 左(x)](img/c02-i0735.png)、![1 小于或等于 b 小于或等于 B](img/c02-i0736.png) 且 ![z 下标 q](img/c02-i0737.png) 表示标准正态分布的 ![q](img/c02-i0738.png) 次分位数。
+
+在删失的情况下，Klein 和 Moeschberger (2003) 提到了 Borgan 和 Liestøl (1990) 引入的基于变换的计算生存函数置信区间的改进方法。虽然其他方案也是可能的（例如考虑反正平方根变换），我们将考虑一种简单的对数变换。在这种情况下，置信区间是通过对数累积分布的置信区间计算得，经过逆变换后得到：
+
+(2.23)![upper F 下标 n 左(x) exp (加或减 z 下标 1 减 alpha/2 分式 sigma 下标上 B 上星号 除 upper F 下标 左(x) )。](img/c02-math-0046.png) 
+
+在 (2.22) 和 (2.23) 中，自助标准误差 ![sigma 下标上 B 上星号](img/c02-i0739.png) 都用于构建置信区间，但其他方法也是可能的。这些替代方法之一是百分位数自助（percentile bootstrap）。百分位数自助考虑 ![upper B](img/c02-i0740.png) 自助 NPMLE ![upper F 上标 b 左(x)](img/c02-i0741.png)，并取对应的 ![b 等于 floor(B 加 1)/2](img/c02-i0742.png) 和 ![b 等于 floor(B 加 1-alpha)/2](img/c02-i0743.png) 分位数；即，对 ![upper F 上标 b 左(x)](img/c02-i0744.png) 的值进行排序，并将 ![b 1](img/c02-i0745.png) 和 ![b 2](img/c02-i0746.png) 取为置信区边界。因此，对于 ![upper F 左 x)](img/c02-i0747.png)，概率覆盖 ![1 减 alpha](img/c02-i0748.png) 的百分位数区间写为：
+
+(2.24)[upper F 上标 b 1 左(x), upper F 上标 b 2 左(x)]。关于百分位数自助以及基础自助方法的更多细节，请见 Davison 和 Hinkley (1997)，后者可以很容易地应用于双截断设置中。
+
+(2.23) 和 (2.24) 的行为在第 2.1.3 节 的模拟场景 I 和 II 中说明，见表 2.4](#c02.xhtml_c02-tbl-0004) 和 表 2.5。虽然检查了其他方案（如正态置信区间或基础自助），但这两个策略获得了最佳结果。可以看到，对数变换和百分位数置信区间表现出非常相似的行为：经验覆盖率非常接近理论覆盖率（即使对于 ![n 等于 100](img/c02-i0761.png)），随着样本量的增加，长度（括号中的平均长度）显著减少。还应该注意到，尽管对数变换方法通常情况下结果良好，但在低分位数和小样本量下可能会出现问题。在这些情况下可能会出现 ![upper F 左(x)](img/c02-i0762.png) 的零值，如果是这样则无法应用对数变换。Moreira 和 de Uña-Ávarez (2010a) 提供了基于 SB 和 OB 的百分位数方法性能的进一步经验证据。
+
+|    | ![n 等于 100](img/c02-i0753.png) | ![n 等于 500](img/c02-i0754.png) |
+| --- | --- | --- | --- |
+|    | 0.3 | 0.5 | 0.7 | 0.3 | 0.5 | 0.7 |
+| --- | --- | --- | --- | --- | --- | --- |
+| SB | logN | 0.938 | 0.944 | 0.954 | 0.938 | 0.940 | 0.952 |
+|    | (0.9538) | (0.9391) | (0.9111) | (0.7947) | (0.5718) | (0.3504) |
+|  | PB | 0.940 | 0.946 | 0.948 | 0.934 | 0.940 | 0.952 |
+|    | (0.4918) | (0.5579) | (0.4874) | (0.2231) | (0.2617) | (0.2238) |
+| OB | logN | 0.954 | 0.952 | 0.946 | 0.954 | 0.948 | 0.954 |
+|    | (0.8728) | (0.8698) | (0.7432) | (0.7965) | (0.5756) | (0.3503) |
+|    | PB | 0.944 | 0.970 | 0.966 | 0.960 | 0.944 | 0.948 |
+|    | (0.4947) | (0.5695) | (0.4902) | (0.2273) | (0.2666) | (0.2251) |
+
+
+
+
+
+### 表 2.4 使用自助法进行置信区间估计，适用于模拟情景 I（对于 ![upper F](img/c02-i0749.png) 无采样偏差，第 2.1.3 节）。
+
+简单自助法（`SB`，上表）和明显自助法（`OB`，下表）的结果，针对不同的样本量（![n equals 100, 500](img/c02-i0750.png)）和分位数（![0.3, 0.5, 0.7](img/c02-i0751.png)）。自助和蒙特卡洛重复次数：![1000](img/c02-i0752.png)。`logN`：对数变换的正态近似。`PB`：分位数自助法。报告了 95% 置信区间的经验覆盖率和平均长度（括号内）。
+
+|  |  | ![n equals 100](img/c02-i0759.png) | ![n equals 500](img/c02-i0760.png) |
+| --- | --- | --- | --- |
+|  |  | 0.3 | 0.5 | 0.7 | 0.3 | 0.5 | 0.7 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| SB | logN | 0.938 | 0.944 | 0.954 | 0.938 | 0.932 | 0.940 |
+|  |   | (0.1538) | (0.9391) | (0.9111) | (0.7947) | (0.5718) | (0.3504) |
+|  | PB | 0.940 | 0.946 | 0.948 | 0.934 | 0.940 | 0.952 |
+|  |   | (0.4918) | (0.5579) | (0.4874) | (0.2231) | (0.2617) | (0.2238) |
+| OB | logN | 0.946 | 0.948 | 0.940 | 0.948 | 0.946 | 0.956 |
+|  |   | (0.9064) | (0.8908) | (0.5528) | (0.4093) | (0.3124) | (0.3952) |
+|  | PB | 0.940 | 0.938 | 0.944 | 0.950 | 0.958 | 0.954 |
+|  |   | (0.4772) | (0.5835) | (0.5489) | (0.2253) | (0.2781) | (0.2470) |
+
+### 表 2.5 使用自助法进行置信区间估计，适用于模拟情景 II（对于 ![upper F](img/c02-i0755.png) 有采样偏差，第 2.1.3 节）。
+
+简单自助法（`SB`，上表）和明显自助法（`OB`，下表）的结果，针对不同的样本量（![n equals 100, 500](img/c02-i0756.png)）和分位数（![0.3, 0.5, 0.7](img/c02-i0757.png)）。自助和蒙特卡洛重复次数：![1000](img/c02-i0758.png)。`logN`：对数变换的正态近似。`PB`：分位数自助法。报告了 95% 置信区间的经验覆盖率和平均长度（括号内）。
+
+之前计算 ![upper F left-parenthesis x right-parenthesis](img/c02-i0763.png) 置信区间的方法允许构建双重截断下累积分布函数（cdf）的点逐置信带。有人可能会认为，这些带无法保证目标曲线的全局覆盖。作为自助法的替代方案，Emura 等人 (2015) 为 NPMLE（非参数极大似估计）的渐近协方函数提出了一个闭形式估计量，从而能够构建全局（等精度和 Kolmogorov–Smirnov 型）置信带。通过使用自助重复进行的一些模拟实验，作者观察到等精度置信带的性能略好，且 Kolmogorov–Smirnov 带表现出符合预期的保守行为，这在非截断数据中也是如此。实际上，这两种方法的灵感都来源于删失数据的置信带（见 Klein 和 Moeschberger (2003), 第 4.4 节），最初由 Nair (1984) 提出的等精度预测带，以及 Hall 和 Wellner (1980) 提出的 Kolmogorov-Smirnov 带。
+
+标准误的估计和置信区间的构建对于其他目标同样重要。例如，人们可能均值的估计感兴趣，对于恒等函数 ![phi left-parenthesis x right-parenthesis equals x](img/c02-i0766.png)，均值可以写为 ![mu equals integral phi normal d upper F](img/c02-i0765.png)。推论 2.1.18 给出了经验均值 ![mu Subscript n Baseline equals integral x normal d upper F Subscript n left-parenthesis x right-parenthesis](img/c02-i0767.png) 渐近正态分布的条件。在下面的示例中，我们使用定义 2.1.20 中的 `SB` 策略和正态近似，为第 1.4 节 中的设备寿命提供置信区间。同样应用分位数自助法进行比较。该示例还包含了标准差的估计。注意，标准差涉及两个形式为 ![integral phi normal d upper F](img/c02-i0768.png) 的积分：分别对应于特定的 ![upper X](img/c02-i0769.png) 变换 ![phi 1 left-parenthesis x right-parenthesis equals x](img/c02-i0770.png) 和 ![phi 2 left-parenthesis x right-parenthesis equals x squared](img/c02-i0771.png)。在这种情况下，目标写为 ![sigma equals left-parenthesis integral x squared normal d upper F left-parenthesis x right-parenthesis minus mu squared right-parenthesis Superscript 1 slash 2](img/c02-i0772.png)，当将 ![upper F](img/c02-i0774.png) 替换为 ![upper F Subscript n](img/c02-i0775.png) 时，其估计量 ![sigma Subscript n](img/c02-i0776.png) 即可得到。![sigma Subscript n] 的渐近正态性可以从定理 2.1.17 和多元中心极理很容易得到。
+
+![图中显示了帕金森病晚发组诊断年龄分布的 95% 点置信带。](img/c02f011.png)
+
+图 2.11（帕金森病数据，示例 2.1.22）。使用了 199 次重复的简单自助法和分位数法。
+
+
+
+
+
+在具有双截断数据的特定应用中，可以获得关于截断对 ![left-parenthesis upper U comma upper V right-parenthesis](img/c02-i0795.png) 的 `cdf` ![upper K](img/c02-i0794.png)（累积分布）的外部信息。例如，在区间采样下，![upper K](img/c02-i0796.png) 由出生过程的速率决定，该速率可能符合某种特定的已知模式。一个显著的例子是稳态情况，此时出生过程遵循齐次的 `Poisson` 模型。在这种情况下，左、右截断限在各自对应的支撑区间上呈均匀分布，因此 ![upper K Subscript upper U](img/c02-i0797.png) 和 ![upper K Subscript upper V](img/c02-i0798.png) 是完全指定的线性函数。这似乎是第 1.4.1 中儿童癌症数据的情况：该数据集的 ![upper K Subscript upper V](img/c02-i0799.png) 的 `NPMLE` 如图图 2.13 左图所示，它非常接近于区间 ![left-bracket min Underscript 1 less-than-or-equal-to i less-than-or-equal-to n Endscripts upper X Subscript i Baseline comma max Underscript 1 less-than-or-equal-to i less-than-or-equal-to n Endscripts upper X Subscript i Baseline plus 5 right-bracket](img/c02-i0800.png) 上的均匀分布。事实上，由于葡萄牙的人口统计显示 1984–2003 年期间的活出生人数大致不变，假设在 15 岁前患癌的亚群的出生过程是由恒定速率的 `Poisson` 过程驱动的是合理的。这种外部信息如果可用，可以用于改进目标 ![upper F](img/c02-i0801.png) 的估计。在其他应用中，很难获得关于出生过程的信息。例如，对于第 1.4.2 中的 AIDS 输血数据，![upper V](img/c02-i0802.png) 基本上是感染日期，而缺乏涉及感染血液的输血日期外部信息。在这种情况下，![upper K Subscript upper V](img/c02-i0803.png) 的 `NPMLE`是非均匀的，见图 2.13 右图，这表明感染过程遵循非齐次 `Poisson` 模型。因此，实践中可能会出现非常不同的情况。
+
+半参数设置是指 ![upper K](img/c02-i0806.png) 已知属于二元 `cdfs` 参数族 ![StartSet upper K left-parenthesis dot comma dot semicolon theta right-parenthesis comma theta element-of normal upper Theta EndSet](img/c02-i0807.png)的情况，其中参数空间 ![normal upper Theta](img/c02-i0808.png) 是欧几里得空间 ![script upper R Superscript d](img/c02-i0809.png) 的子集。当 ![normal upper Theta](img/c02-i0810.png) 只有一个元素时，就属于上述完全指定的截断分布示例。更一般，![normal upper Theta](img/c02-i0811.png) 将是 ![d](img/c02-i0812.png) 维向量 ![theta equals left-parenthesis theta 1 comma ellipsis comma theta Subscript d Baseline right-parenthesis) Superscript t](img/c02-i0813.png) 的可能值的凸集。在这种设定下，通过对 ![theta](img/c02-i0815.png) 进行初步估计实现了对 ![upper F](img/c02-i0814.png) 的改进估计；这种方法在第 2.2.1 节中进行了探讨。半参数截断模型此前在单侧截断下被考虑过（Wang, 1989），并且最近也扩展到了左截断和右删数据（Huang et al., 2015; Heuchenne et al., 2020）。
+
+![图表显示左图显示了第 1.4.1 节儿童癌症数据 KV 的 NPMLE。右图显示了第 1.4.2 节 AIDS 输血数据 KV 的 NPMLE。](img/c02f013.png)
+
+图 2.13 左图：第 1.4.1 节儿童癌症数据 ![upper K Subscript upper V](img/c02-i0804.png) 的 `NPMLE`。右图：第 1.4.2 节 AIDS 输血数据 ![upper V](img/c02-i0805.png) 的 `NPMLE`。
+
+另一种半参数设定是 ![upper F](img/c02-i0816.png) 假设遵循参数模型 ![StartSet upper F left-parenthesis dot semicolon gamma right-parenthesis comma gamma element-of Gamma EndSet](img/c02-i0817.png)，而 ![upper K](img/c02-i0818.png) 非参数。由于 ![upper F](img/c02-i0819.png) 是目标，该场景可以被称为“参数的”而非“半参数的”。该设定的估计和推断在第 2 节中讨论。
+
+## 2.2.1 半参数方法
+
+在第 2.2.1 节中，![upper F](img/c02-i0820.png) 的 `NPMLE` 表示为 `IPWE`，其中 ![upper X](img/c02-i0821.png) 根据其概率进行加权；见公式 (2.7)。在半参数设定下，当 ![upper K](img/c02-i0823.png) 属于 ![StartSet upper K left-parenthesis dot comma semicolon theta right-parenthesis comma theta element-of normal Theta EndSet](img/c02-i0824.png) 族时，采样概率写为 ![upper G left-parenthesis x right-parenthesis](img/c02-math-48)。
+
+因此，![upper G left-parenthesis upper X Subscript i right-parenthesis](img/c02-i0825.png) 的自然估计量形式为 ![upper G left-parenthesis upper X Subscript i semicolon theta Subscript n right-parenthesis](img/c02-i0826.png)，其中 ![theta Subscript n](img/c02-i0827.png) 是 ![theta] 的一致估计量。使用公式 (2.8)，我们得到了
+
+(2.25)
+![upper F Subscript n left-parenthesis x semicolon theta Subscript n right-parenthesis equals alpha Subscript n left-parenthesis theta Subscript n right-parenthesis integral Subscript a Subscript upper X Baseline Superscript x Subscript upper X Baseline upper G left-parenthesis t semicolon theta Subscript n right-parenthesis Superscript negative 1 normal d upper F Subscript n Superscript asterisk left-parenthesis t right-parenthesis right-parenthesis comma](img/c02-math-49)
+
+其中
+
+![alpha Subscript n left-parenthesis theta Subscript n right-parenthesis equals left-parenthesis integral Subscript a Subscript upper X Baseline Superscript b Subscript upper X Baseline upper G left-parenthesis t semicolon theta Subscript n right-parenthesis Superscript negative 1 normal d upper F Subscript n Superscript asterisk left-parenthesis t right-parenthesis](img/c02-math-50)
+
+导致了一个与 `NPMLE`不同的 `IPWE`，不同在于权重 ![upper G Subscript n left-parenthesis upper X Subscript i right-parenthesis](img/c02-i0829.png) 被替换为 ![upper G left-parenthesis upper X Subscript i semicolon theta Subscript n right-parenthesis](img/c02-i0830.png)。注意(2.25) 的理论对应物是
+
+
+
+
+
+![upper F left-parenthesis x semicolon theta right-parenthesis equals alpha left-parenthesis theta right-parenthesis integral Subscript a Subscript upper X Baseline Superscript x Baseline upper G left-parenthesis t semicolon theta right-parenthesis) Superscript negative 1 Baseline normal d upper F Superscript asterisk Baseline left-parenthesis x right-parenthesis) comma](img/c02-math-0051.png)
+
+带有
+
+![alpha left-parenthesis theta right-parenthesis right-parenthesis equals left-parenthesis integral Subscript a Subscript upper X Baseline Superscript b Subscript upper X Baseline Baseline upper G left-parenthesis t semicolon theta right-parenthesis) Superscript negative 1 Baseline normal d upper F Superscript asterisk Baseline left-parenthesis t right-parenthesis) right-parenthesis) Superscript negative 1 Baseline period](img/c02-math-0052.png)
+
+为了计算半参数估计量（semiparametric estimator (2.25)，需要对 ![theta](img/c02-i0831.png) 进行一致性估计。Moreira 和 de Uña‐Álvarez (2010b) 以及独立提出的 Shen (2010b) 提议通过极大化给定 ![upper X Subscript i](img/c02-i0834.png) 条件下 ![left-parenthesis upper U Subscript i comma upper V Subscript i Baseline right-parenthesis](img/c02-i0833.png) 的条件似然来估计 ![theta](img/c02-i0832.png)，其公式为 (2.26)![script upper L Subscript c left-parenthesis theta right-parenthesis equals product Underscript i equals 1 Overscript n Endscripts StartFraction k left-parenthesis upper U Subscript i comma upper V Subscript i Baseline semicolon theta right-parenthesis Over upper G left-parenthesis upper X Subscript i semicolon theta right-parenthesis EndFraction](img/c02-math-0053.png)。
+
+当 ![upper K left-parenthesis dot comma dot semicolon theta right-parenthesis](img/c02-i0835.png) 绝对连续时，(2.26) 中的函数 ![k left-parenthesis dot comma dot semicolon theta right-parenthesis](img/c02-i0836.png) 表示截断对（truncation couple）的二元密度。在区间采样 ![upper V minus upper U](img/c02-i0837.png) 为常定的情况下，![k left-parenthesis upper U Subscript i comma upper V Subscript i Baseline semicolon theta right-parenthesis](img/c02-i0838.png) 成为 ![upper K left-parenthesis dot comma dot semicolon theta right-parenthesis](img/c02-i0839.png) 在 ![upper U Subscript i](img/c02-i0840.png) 处的值的一阶边缘密度，或者等价于 ![upper K left-parenthesis dot comma dot semicolon theta right-parenthesis](img/c02-i0841.png) 在 ![upper V Subscript i](img/c02-i0842.png) 处的二阶边缘密度。
+
+当 ![theta Subscript n](img/c02-i0843.png) 是 ![script upper L Subscript c left-parenthesis theta right-parenthesis](img/c02-i0844.png) 的极大化值时，很容易证明组合 ![left-parenthesis theta Subscript n comma upper F Subscript n dot semicolon theta Subscript n right-parenthesis](img/c02-i0845.png) 确实在半参数模型下极大实现了全似然。Moreira 和 de Uña‐Álvarez (2010b) 通过仿真表明，半参数极大似然估计量 (SPMLE) ![upper F Subscript n left-parenthesis dot semicolon theta Subscript n right-parenthesis](img/c02-i0846.png) 在均方误差 (MSE) 意义上优于 NPMLE。当真实的截断分布属于参数族 ![StartSet upper K left-parenthesis dot comma dot semicolon theta right-parenthesis comma theta element-of normal upper Theta EndSet](img/c02-i0847.png) 时，结论成立。
+
+当该参数模型被误设定（miss-specified）时，应用 SPMLE 可能导致严重偏差，因此为 ![upper K left-parenthesis dot comma dot semicolon theta right-parenthesis](img/c02-i0848.png) 选择良好的候选至关重要。在区间采样设置下，Austin 等人 (2014) 建议对截断分布拟合分段指数模型。他们对分段数量的决定基于非正式的迭代 Kolmogorov–Smirnov 检验，而分段的位置则由截断变量的普通分位数驱动。
+
+用于评估参数族的正式拟合优度方法由 Moreira 等人 (2014) 提出并研究，他们考虑了针对三组函数的 Kolmogorov–Smirnov 和 Cramér–von Mises 距离：![left-parenthesis upper G Subscript n dot semicolon theta Subscript n right-parenthesis],![left-parenthesis upper F Subscript n dot semicolon theta Subscript n right-parenthesis](img/0849) 以及 ![left-parenthesis upper K Subscript n comma dot semicolon theta Subscript n right-parenthesis]。此类检验统计量的零分布通过半参数自助法进行近似，该方法独立地重采样目标变量 ![upper F Subscript n](img/c02-i0852.png) 和截断变量 ![upper K dot dot semicolon theta right-parenthesis](img/0853)。简单且信息丰富的拟合图可以通过共同显示非参数和参数版本的采样概率 ![upper G](img/c02-i0854) 来构建。根据我们的经验，截断的 Beta 模型在区间应用中足够灵活；这是我们在本节示例中使用的模型。
+
+半参数设置下的基础渐近理论包括估计量组合 ![left-parenthesis theta Subscript n comma upper F Subscript n dot semicolon theta Subscript n right-parenthesis](img/c02-i0855.png) 的一致性和分布收敛。这些结果可以通过标准方法证明，涉及涉及推导 ![theta Subscript n minus theta 0](img/c02-i0856.png) 和 ![upper F Subscript n left-parenthesis x semicolon theta Subscript n right-parenthesis minus upper F left-parenthesis x right-parenthesis](img/c02-i0857.png) 的渐近表示，为零均 iid 项之和加上可忽略的剩余项。这里 ![theta0](img/c02-i0858.png) 表示 ![theta](img/c02-i0859.png) 的真实未知值，因此 ![normal d upper F left-parenthesis x right-parenthesis equals normal d upper F left-parenthesis x semicolon theta 0 right-parenthesis equals alpha left-parenthesis theta 0 right-parenthesis upper G left-parenthesis x semicolon theta 0 right-parenthesis) Superscript negative 1 Baseline normal d upper F Superscript asterisk Baseline left-parenthesis x right-parenthesis](img/c02-i0860.png)。必须对底层分布施加通常正则条件。这些条件与 ![log script upper L Subscript c left-parenthesis theta right-parenthesis](img/c02-i0861.png) 的平滑性有关，并意味着得分方程 ![partial-differential log script upper L Subscript c left-parenthesis theta right-parenthesis slash partial-differential theta equals 0](img/c02-i0862.png) 解的存在和收敛。
+
+
+
+具体而言，要求的条件如下，其中我们使用的符号 ![script l Subscript theta Baseline left-parenthesis x comma u comma v right-parenthesis equals log left-parenthesis k left-parenthesis u comma v semicolon theta right-parenthesis slash upper G left-parenthesis x semicolon theta right-parenthesis right-parenthesis](img/c02-i0863.png):
+
+1. (SP1) 对于几乎所有的 ![theta](img/c02-i0868.png)，![script l Subscript theta Baseline left-parenthesis x comma u comma v right-parenthesis](img/c02-i0865.png) 高三阶的偏导数在 ![theta 0](img/c02-i0867.png) 的邻域 ![script upper N left-parenthesis theta 0 right-parenthesis](img/c02-i0866.png) 内存在 ![theta](img/c02-i0864.png)。
+
+2. (SP2) 存在可积函数 ![upper H Subscript m Baseline left-parenthesis x comma u comma v right-parenthesis](img/c02-i0869.png)，![1 less-than-or-equal-to m less-than-or-equal-to 3](img/c02-i0870.png)，可能依赖于 ![theta 0](img/c02-i0871.png)，使得对于 ![1 less-than-or-equal-to j comma k comma r less-than-or-equal-to d](img/c02-i0872.png)，![StartAbsoluteValue StartFraction partial-differential script l Subscript theta Baseline left-parenthesis x comma u comma v right-parenthesis Over partial-differential theta Subscript j Baseline EndFraction EndAbsoluteValue less-than-or-equal-to upper H 1 left-parenthesis x comma u comma v right-parenthesis comma, StartAbsoluteValue StartFraction partial-differential squared script l Subscript theta Baseline left-parenthesis x comma u comma v right-parenthesis Over partial-differential theta Subscript j Baseline partial-differential theta Subscript k Baseline EndFraction EndAbsoluteValue less-than-or-equal-to upper H 2 left-parenthesis x comma u comma v right-parenthesis comma](img/c02-math-0054.png)和![StartAbsoluteValue StartFraction partial-differential cubed script l Subscript theta Baseline left-parenthesis x comma u comma v right-parenthesis Over partial-differential theta Subscript j Baseline partial-differential theta Subscript k Baseline partial-differential theta Subscript r Baseline EndFraction EndAbsoluteValue less-than-or-equal-to upper H 3 left-parenthesis x comma u comma v right-parenthesis comma](img/c02-math-0055.png)对于 ![theta](img/c02-i0873.png) 在 ![script upper N left-parenthesis theta 0 right-parenthesis](img/c02-i0874.png) 中以及几乎所有的 ![left-parenthesis x comma u v right-parenthesis](img/c02-i0875.png) 成立。
+
+3. (SP3) 对于 ![1 less-than-or-equal-to j less-than-or-equal-to d](img/c02-i0876.png)，满足![normal upper Escript theta 0 Baseline left-bracket left-parenthesis period vertical-bar of partial-differential of script l script l theta left-parenthesis right-parenthesis comma, comma upper X 1 comma upper U 1 comma upper V 1 of partial-differential theta j Subscript theta equals theta 0 Baseline right-parenthesis squared right-bracket less-than infinity](img/c02-math-0056.png)，并且此外，矩阵![normal upper Escript theta 0 Baseline period left-bracket left-parenthesis StartFraction partial-differential script l Subscript theta Baseline left-parenthesis upper X 1 comma upper U 1 comma upper V 1 right-parenthesis Over partial-differential theta EndFraction right-parenthesis left-parenthesis StartFraction partial-differential script l Subscript theta Baseline left-parenthesis upper X 1 comma upper U 1 comma upper V 1 right-parenthesis Over partial-differential theta EndFraction right-parenthesis Superscript t Baseline vertical-bar Subscript theta equals theta 0 Baseline right-bracket](img/c02-math-0057.png)![equals minus normal upper Escript theta 0 Baseline left-bracket StartFraction partial-differential squared script l Subscript theta Baseline left-parenthesis upper X 1 comma upper U 1 comma upper V 1 right-parenthesis Over partial-differential theta squared EndFraction vertical-bar Subscript theta equals theta 0 Baseline right-bracket](img/c02-math-0058.png)是正定的。条件 (SP1)–(SP3) 是极大似然理论中的标准条件。感兴趣的读者可以查看 Serfling (1980) 或 Lehmann and Casella (1998) 中对应随机抽样的详细细节。对双截断数据设置的调整是直接的。这里给出了以下结果而没有提供更多细节，某些细节可以在 Moreira 和 de Uña‐Álvarez (2010b) 中找到。
+
+Moreira 和 de Uña‐Álvarez (2010b) 中 定理 2.2.1 的证明确实揭示了，像通常一样 ![script upper I left-parenthesis theta 0 right-parenthesis left-parenthesis theta Subscript n minus theta 0 right-parenthesis](img/c02-i0883.png) 渐近等于中心化的 iid 和 ![n Superscript negative 1 Baseline sigma-summation Underscript i equals 1 Overscript n partial-differential script l Subscript theta left-parenthesis upper X Subscript i Baseline comma U Subscript i Baseline comma upper V Subscript i right-parenthesis slash partial-differential theta vertical-bar Subscript theta equals theta 0 Baseline](img/c02-i0884.png)。这结合函数 ![upper G left-parenthesis period semicolon right-parenthesis](img/c0885.png) 的正则性，确保了 SPMLE 的一致性和渐近正态性。单侧截断的 ![upper G left-parenthesis dot semicolon theta right-parenthesis](img/c02-i0886.png) 正则条件由 Wang (1989) 研究过；双截断设置下需要类似的条件，我们在这里不提供更多细节。以下结果是在参数化截断族诱导一个*正则* ![upper G left-parenthesis dot semicolon theta right-parenthesis](img/c02-i0887.png) 的模糊假设下给出的。证明概要包含在 Moreira 和 de Uña‐Álvarez (2010b) 中。
+
+
+
+
+
+`SMPLE` 的极限方差来源于拟合参数化截断模型时的噪声，![sigma 1 squared left-parenthesis x semicolon theta 0 right-parenthesis](img/c02-i0894.png)，加上在由 ![upper K left-parenthesis dot comma dot semicolon theta 0 right-parenthesis](img/c02-i0896.png) 引起的观测偏差下，对 ![upper F left-parenthesis x right-parenthesis](img/c02-i0895.png) 进行估计时对应的方差，即 ![sigma 2 squared left-parenthesis x semicolon theta 0 right-parenthesis](img/c02-i0897.png)。事实上，当截断分布被完全指定时，![sigma squared left-parenthesis x semicolon theta 0 right-parenthesis](img/c02-i0898.png) 等于 ![sigma 2 squared left-parenthesis x semicolon theta 0 right-parenthesis](img/c02-i0899.png)，这便是 ![upper F Subscript n Baseline left-parenthesis x semicolon theta 0 right-parenthesis](img/c02-i0900.png) 的极限方差，它是在这种情况下 ![upper F left-parenthesis x right-parenthesis](img/c02-i0901.png) 的自然估计量。值得注意的是，当 ![upper G left-parenthesis dot semicolon theta 0 right-parenthesis](img/c02-i0902.png) 为常数时，![sigma 2 squared left-parenthesis x colon theta 0 right-parenthesis](img/c02-i0903.png) 简化为 ![upper F left-parenthesis x right-parenthesis left-parenthesis 1 minus upper F left-parenthesis x right-parenthesis right-parenthesis](img/c02-i0904.png)，即经验累分布函数 (ecdf) 的极限方差。这并不意外，因为当 ![upper G left-parenthesis dot semicolon theta 0 right-parenthesis](img/c02-i0906.png) 时，![upper F Subscript n Baseline left-parenthesis x semicolon theta 0 right-parenthesis](img/c02-i0905.png) 正是普通的经验分布函数。`SPMLE` 的极限方差可以针对简单的参数族进行显式计算。接下来的示例展示了这一点，该示例也说明了相对于 `NPMLE` 的效率提升。
+
+在单侧截断的特殊情况下，可以对 `NPMLE` 相对于 `SPMLE` 的渐近效率进行解析计算。这是因为在左截断设置中有一个 `NPMLE` 极限方差的显式公式；参见 (2.20)。我们现在给出这样这种情况的一个示例。
+
+| || | 分位数 ![x](img/c02-i0980.png) |
+| --- | --- | --- |
+| ![beta](img/c02-i0981.png) | ![alpha](img/c02-i0982.png) | 0.25 | 0.5 | 0.75 |
+| --- | --- | --- | --- | --- |
+| 9 | 0.9 | 0.9679 | 0.9600 | 0.9650 |
+| 4 | 0.8 | 0.9385 | 0.9184 | 0.9247 |
+| 2 | 0.67 | 0.9138 | 0.8712 | 0.8667 |
+| 1.5 | 0.6 | 0.9183 | 0.8663 | 0.8464 |
+
+表 2.7 示例 2.2.4。在 ![upper X](img/c02-i0978.png) 四分位数处 `NPMLE` 相对于 `SPMLE` 的渐近效率的解析计算。非截断比例为 ![alpha equals beta slash left-parenthesis beta plus 1 right-parenthesis](img/c02-i0979.png)。
+
+对于某些特定的参数化截断模型，极大似然估计量 ![theta Subscript n](img/c02-i0983.png) 可能具有显式形式。接下来的示例截断变量在统计上是独立的，说明了这种情况。
+
+`SPMLE` 标准误的估计可以通过代入法轻松完成。具体而言，将费雪信息矩阵 ![script upper I left-parenthesis theta 0 right-parenthesis](img/c02-i1001.png) 替换为其经验对应物，
+
+```
+![script upper I Subscript n Baseline left-parenthesis theta Subscript n Baseline right-parenthesis equals minus StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts StartFraction partial-differential squared Over partial-differential theta squared EndFraction log period vertical-bar of kk left-parenthesis right-parenthesis comma semicolon Ui comma, Vi semicolon theta of GG left-parenthesis right-parenthesis semicolon Xi semicolon theta Subscript theta equals theta Sub Subscript n Subscript Baseline comma,](img/c02-math-0066.png)
+```
+
+矩阵 ![upper W left-parenthesis x comma theta 0 right-parenthesis](img/c02-i1002.png) 被替换为 ![upper W Subscript n Baseline left-parenthesis x semicolon theta Subscript n right-parenthesis](img/c02-i1003.png)，其中
+
+```
+![upper W Subscript n Baseline left-parenthesis x semicolon theta right-parenthesis equals integral Subscript a Subscript upper X Baseline Superscript b Subscript upper X Baseline StartFraction partial-differential upper G left-parenthesis t semicolon theta right-parenthesis Over partial-differential theta EndFraction StartFraction upper F Subscript n Baseline left-parenthesis x semicolon theta right-parenthesis minus upper I left-parenthesis t less-than-or-equal-to x right-parenthesis Over upper G left-parenthesis t semicolon theta right-parenthesis EndFraction normal d upper F Subscript n Baseline left-parenthesis t semicolon theta right-parenthesis,](img/c02-math-0067.png)
+```
+
+然后获得 ![sigma 1 squared left-parenthesis x semicolon theta 0 right-parenthesis](img/c02-i1004.png) 的估计量。对 ![sigma 2 squared left-parenthesis x semicolon theta 0 right-parenthesis](img/c02-i1005.png) 采用类似的方法，得到 ![upper F Subscript n Baseline left-parenthesis x semicolon theta Subscript n right-parenthesis](img/c02-i1006.png)、![sigma Subscript n Superscript 2 Baseline left-parenthesis x semicolon theta right-parenthesis](img/c02-i1007.png) 的经验渐近方差。最后，`SPMLE` 的标准误由 ![sigma Subscript n Baseline left-parenthesis x semicolon theta Subscript n right-parenthesis slash StartRoot n EndRoot](img/c02-i1008.png)近似。
+
+在下面的示例中，使用半参数方法分析 1.4.5 节 中的帕金森病数据。考虑到 ![Beta left-parenthesis theta 1 comma theta 2 right-parenthesis](img/c02-i1009.png) 模型被视为 ![upper K Subscript upper V](img/c02-i1010.png) 的参数信息，经过适当的转换将数据映射到 ![left-bracket 0 comma 1 right-bracket](img/c02-i1011.png) 区间。Beta 模型因其灵活性而具有吸引力；此外，它包含均匀分布，因此在需要时可以测试出生过程的平稳性假设。Moreira 和 de Uña-Álvarez (2010b) 通过大量的模拟研究调查了基于参数 Beta 信息的 `SPMLE` 的实际性能，发现其相对于 `NPMLE` 有显著改进。
+
+
+
+
+现在假设目标 ![upper F](img/c02-i1029.png) 已知属于一组参数化的累积分布函数 ![StartSet upper F left-parenthesis period semicolon gamma right-parenthesis comma gamma element-of normal upper Gamma EndSet](img/c02-i1030.png)，但目前没有关于截断分布 ![upper K](img/c02-i1031.png) 的信息。这种情况通常被称为参数设置，因为目标 ![upper F](img/c02-i1032.png) 的特征是由有限维参数 `![gamma](img/c02-i1033.png)` 决定。
+
+从随机向量 ![left-parenthesis X comma U comma V right-parenthesis](img/c02-i1034.png) 模型的角度来看，它是半参数化的；然而，一旦估计了 `![gamma](img/c02-i1036.png)` 参数，确实可以半参数化的方式估计 ![upper K](img/c02-i1035.png)。无论如何，本节的重点是对 `![gamma](img/c02-i1037.png)` 的估计和推断，因此所有的讨论都属于参数推断的范畴。
+
+在之前的章节中，我们看到 NPMLE 最大化了 ![upper X Subscript i](img/c02-i1038.png) 在给定 ![left-parenthesis U Subscript i comma V Subscript i right-parenthesis](img/c02-i1039.png) 下的条件似然；该条件似然为：
+
+![图中显示了基于拟合 beta 模型的 G（黑线）的 SPMLE。右图显示了基于拟合 beta 模型的 F（黑线）的 SPMLE。早期组。](img/c02f018.png)
+
+图 2.18（帕金森病数据，示例 2.2.6）。左图显示了基于拟合 Beta 模型的 G（黑线）的 SPMLE。右图显示了基于拟合 Beta 模型的 F（黑线）的 SPMLE。早期组。
+
+![表格：第一行第一列 script upper L Superscript left-parenthesis 1 right-parenthesis Baseline left-parenthesis phi right-parenthesis equals product Underscript i equals 1 Overscript n Endscripts Fraction phi Subscript i Over normal Phi Subscript i EndFraction equals product Underscript i equals 1 Overscript n Endscripts Fraction normal d upper F left-parenthesis X Subscript i right-parenthesis) Over upper H left-parenthesis U Subscript i comma V Subscript i right-parenthesis) EndFraction，第二列 空第三列](img/c02-math-0068.png)
+
+其中 `![upper H left-parenthesis u comma v right-parenthesis equals upper F left-parenthesis v right-parenthesis minus upper F left-parenthesis u minus right-parenthesis](img/c02-i1040.png)`，见等 (2.5)。在参数模型下，有 `![upper F left-parenthesis dot right-parenthesis equals upper F left-parenthesis dot semicolon gamma right-parenthesis](img/c02-i1041.png)`，且条件似然变为：
+
+(2.27![script upper L Superscript left-parenthesis 1 right-parenthesis Baseline left-parenthesis gamma right-parenthesis equals product Underscript i equals 1 Overscript n Endscripts Fraction f left-parenthesis X Subscript i semicolon gamma right-parenthesis) Over upper H left-parenthesis U Subscript i comma V Subscript i semicolon gamma right-parenthesis](img/c02-math-0069.png)
+
+其中 `![f left-parenthesis dot semicolon gamma right-parenthesis](img/c02-i1042.png)` 是 ![upper F left-parenthesis dot semicolon gamma right-parenthesis](img/c02-i1043.png) 的概率密度函数，且 `![upper H left-parenthesis u comma v semicolon gamma right-parenthesis equals upper F left-parenthesis v semicolon gamma right-parenthesis minus upper F left-parenthesis u minus semicolon gamma right-parenthesis](img/c02-i1044.png)`。关于 `![gamma](img/c02-i1046.png)` 使 ![log script upper L Superscript left-parenthesis 1 right-parenthesis Baseline left-parenthesis gamma right-parenthesis](img/c02-i1045.png)` 最大化，随后得到了该参数的条件 MLE，`![gamma Subscript n](img/c02-i1047.png)`。
+
+需要注意的是，截断的边缘似然并没有提供关于 `![gamma](img/c02-i1048.png)` 的进一步信息。事实上，在参数模型下，全似然由 `![upper H left-parenthesis u comma v right-parenthesis equals upper F left-parenthesis v semicolon gamma right-parenthesis minus upper F left-parenthesis u minus semicolon gamma right-parenthesis](img/c02-i1049.png)` 最大化，此时 `![gamma Subscript n](img/c02-i1050.png)` 不仅是条件 MLE，也是 `![gamma](img/c02-i1051.png)` 的无条件 MLE，例如 ![left-parenthesis X right-parenthesis](img/c02-i1052.png)。
+
+Efron 和 Petrosian (1999) 考虑了 `(2.27)` 下的一个特殊指数族 (SEF)，其中 ![upper F left-parenthesis dot semicolon gamma right-parenthesis](img/c02-i1053.png) 的对数密度是三次函数。Emura 等人 (2017) 仔细开发了 SEF 的极大似然理论，并通过允许使用任意多项式泛化了该模型；另见 Hu 和 Emura (2015) 中的计算结果。在论文中，通过考虑 SEF 对所需的正则条件进行了简要介绍，并对参数空间进行了详细检查。Dörre 等人 (2021) 遵循 Emura 等人 (2017) 的方法，在尺度族模型中讨论了渐近理论。这种尺度族模型包含了三个流行的族：Weibull 模型、对数正态模型和对数逻辑回归模型。
+
+下一个结果建立了在一般温和条件下 `![gamma Subscript n](img/c02-i1055.png)` 的一致性和分布收敛，在实际操作中应针对具体的模型进行检查。在下文中，![gamma 0 element-of normal Gamma](img/c02-i1056.png)` 表示参数 `![gamma](img/c02-i1057.png)` 的真值，即 `![upper F left-parenthesis dot right-parenthesis equals upper F left-parenthesis dot semicolon gamma 0 right-parenthesis](img/c02-i1058.png)`。假设 `![normal Gamma](img/c02-i1059.png)` 是 `![d]` 维欧几里得空间 `![script upper R Superscript d](img/c02-i1060.png)` 的子集。第 2.2.1 节 中的条件 (SP1)–(SP3) 将适用于 ![script l Subscript gamma Baseline left-parenthesis x comma u comma v right-parenthesis equals log left-parenthesis f left-parenthesis x semicolon gamma right-parenthesis) slash upper H left-parenthesis u comma v semicolon gamma right-parenthesis) right-parenthesis](img/c02-i1062.png)`。
+
+
+
+
+定理 2.2.7 的证明方法类似于 定理 2.2.1。注意，这两个结果之间存在对偶性，即截断对与目标变量的角色是互换的。接下来的示例对本节节讨论的参数化方法进行了说明。
+
+## 2.3 示例的 R 代码
+
+如附录 A 所示，`R` 中的某些包包含了分析双重截断数据的函数。附录将对可用方法进行简要的（更新至最新的）回顾。在整本书中，我们将主要使用 `DTDA` 库，并在必要时引入其他库的函数（特别是 `DTDA.cif`、`DTDA.ni`、`double.truncation` 和 `SurvTrunc`）。有关函数使用的更多细节，请参阅附录 A（或库帮助手册）。
+
+### 2.3.1 示例 2.1.8 的代码
+
+针对帕金森病数据，我们使用 Shen 算法计算诊断年龄的 NPMLE（涵盖早期发组和晚发组），并计算了估计的采样概率。虽然示例是针对早期和晚发情况的，但我们将重点关注早期发组。首先，我们展示如何获取诊断年龄的估计采样概率。
+
+使用 Shen 算法的 NPMLE 结合普通 ecdf 可以如下所示重现：
+
+### 2.3.2 示例 2.1.11 和 2.1.13 的代码
+
+这些是处理 第 2.1.3 节 中模拟场景 I（无采样偏倚）的示例代码。我们将首先展示如何模拟数据。
+
+可以使用 `DTDA` 包中的 `rsim.DT` 函数重现相同的模拟。
+
+偏倚函数可以通过以下代码实现，并与理论函数进行视觉化比较。
+
+使用 Shen 算法的 NPMLE 以及目标函数 ![upper F](img/c02-i1089.png) 可以如下所示所示。
+
+该场景的估计偏倚函数和理论偏倚函数可以描述如下：
+
+最后，当重点在于右截断变量 ![upper V](img/c02-i1090.png) 时，估计的偏倚函数和真实的可以通过可以通过代码获得。
+
+### 2.3.3 示例 2.1.14 的代码
+
+对于显示采样偏倚的模拟场景 II，我们可以通过以下代码生成数据：
+
+使用 `DTDA` 包的 `rsim.DT` 函数也可以相同的操作：
+
+该场景的估计偏倚函数和理论偏倚函数可以描述如下：
+
+在这种情况下，人们可以绘制 NPMLE、普通 ecdf 以及真实的 ![upper F](img/c02-i1091.png)。
+
+图 2.8 展示了模拟场景 II 的偏倚函数以及真实的函数，并带有基于标准误差简单自助法（bootstrap）近似和某些自助偏倚函数自助法重复计算的逐点置信带。为了生成 图 2.8，使用了并行计算来加速自助法样本的生成。
+
+### 2.3.4 示例 2.1.15 的代码
+
+设备-舍入失效时间数据是一个舍入样本的示例。我们展示了如何结合普通 ecdf 来计算 NPMLE。
+
+### 2.3.5 示例 2.1.22 的代码
+
+针对帕金森病数据，特别是针对晚发组的诊断年龄，我们可以使用 Shen 算法结合一些自助置信带来获取 NPMLE。对于 ![alpha equals 0.05](img/c02-i1092.png)，我们可以考虑使用分位数自助法。注意，也可以获得基于标准误差简单自助法近似的逐点置信带。
+
+作为替代方案，NPMLE 的逐点置信可以使用 Emura 等人的精确公式 (2015) 生成。
+
+### 2.3.6 示例 2.2.6 的代码
+
+通过帕金森病数据展示了 SPMLE，仅针对晚发组。注意，作为第一步，必须对 ![upper V Subscript i](img/c02-i1093.png) 值进行转换，使其落在 ![left-parenthesis 0 comma 1 right-parenthesis](img/c02-i1094.png) 区间内。可以如下操作：
+
+然后，观测值 ![upper X Subscript i](img/c02-i1095.png) 被转换以保证 ![upper V](img/c02-i1096.png) 的识别性：
+
+在这个示例中，我们为右截断变量 ![upper V](img/c02-i1097.png) 的分布找到了一个双参数 Beta 模型，为此，对数似然由以下函数给出：
+
+然后，考虑一组初始集，Beta 模型的估计如下：
+
+### 2.3.7 示例 2.2.8 的代码
+
+如 2.2.8 所述，对于晚发组，SPMLE 未能提供满意的结果。然而，对于对数正态分布的特殊情况，可以。使用以下代码计算 NPMLE：
+
+使用以下代码使对数似然最大化：
+
+NPMLE 可以如下所示计算：
+
+## 参考文献
+
+（参考文献列表如原文所示）
+
+
+
+
+
+12. Hall, WJ, Wellner, JA 1980 基于删失数据的生存曲线的置信带。Biometrika **67**, 133–143.
+13. Heuchenne C, de Uña‐Álvarez J, Laurent G 2020 半参数截断模型下的横截面数据估计。Biometrika **107**, 449–465.
+14. Hu YH, Emura T 2015 随机双截断下特殊指数族的最极大似然估计。Computational Statistics **30**, 1199–1229.
+15. Huang CY, Ning J, Qin J 2015 左截断和右删失数据的半参数似然推断。Biostatistics **16**, 785–798.
+16. Klein JP, Moeschberger ML 2003 生存分析：针对删失和截断数据的处理方法（第 2 版）。Springer。
+17. Lehmann EL, Casella G 1998 点估计理论。Springer。
+18. Lynden‐Bell D 1971 一种适用于 3CR 类星体的小样本中考虑已知观测选择性的方法。Monthly Notices of the Royal Astronomical Society **155**, 95–118.
+19. Moreira C, de Uña‐Álvarez J 2010a 双截断数据非参数极大似然估计（NPMLE）的自助抽法。Journal of Nonparametric Statistics **22**, 567–583.
+20. Moreira C, de Uña‐Álvarez J 2010b 双截断数据生存时间的半参数估计。Statistics in Medicine **29**, 3147–3159.
+21. Moreira C, de Uña‐Álvarez J, Van Keilegom I 2014 随机双截断下半参数模型的拟合度检验。Computational Statistics **29**, 1365–1379.
+22. Nair, VN 1984 带有删失数据的生存函数置信带：比较研究。Technometrics **14**, 265–275.
+23. Serfling RJ 1980 数学统计近似定理。Wiley。
+24. Shen P 2010a 双截断数据的非参数分析。Annals of the Institute of Statistical Mathematics **62**, 835–853.
+25. Shen P 2010b 双截断数据的半参数分析。Communications in Statistics ‐Theory and Methods **39**, 3178–3190.
+26. Shen P 2011 双截断数据下的经验似然比。Journal of Applied Statistics **38**, 2345–2353.
+27. Strzalkowska‐Kominiak E, Stute W 2010 关于截断样本中空洞的概率。Journal of Statistical Planning and Inference **140**, 1519–1528.
+28. Stute W 1993 截断数据乘积估计量的几乎处处表示。Annals of Statistics **21**, 146–156.
+29. Stute W 1995 随机删失下的中心极限定理。Annals of Statistics **23**, 422–439.
+30. Stute W, Wang JL 1993 随机删失下的强律。Annals of Statistics **21**, 1591–1607.
+31. Stute W, Wang JL 2008 随机截断下的中心极限定理。Bernoulli **14**, 604–622.
+32. Vardi Y 1985 选取偏性模型中的经验分布。Annals of Statistics **13**, 178–203.
+33. Wang MC 1989 随机截断数据的半参数模型。Journal of the American Statistical Association **84**, 742–748.
+34. Woodroofe M 1985 利用截断数据估计分布函数。Annals of Statistics **13**, 163–177.
+35. Xiao J, Hudgens MG 2019 关于双截断下的非参数极大似然估计。Biometrika **106**, 989–996.
+36. Ye, ZS, Tang, LC 2016 仅利用返回故障信息增强野外数据的未返回部分处理。Technometrics **58**, 513–523.
+
+# 3
+
+## 平滑方法
+
+第 2 章 主要关注分布函数的估计，将 NPMLE（第 2.1 节)）以及半参数和参数变（第 2.2 节)）作为刻画目标变量 ![upper X](img/c03-i0001.png) 行为的参考函数。虽然从理论角度来看这些估计量的有效性是毫无疑问的，但分布函数作为累积概率函数，可能无法揭示某些数据特征如偏度或多峰性。这些特征通常通过密度或风险函数的平滑估计能更好地揭示，而这些估计可以通过核方法获得。
+
+本章的目标是描述在双截断设置下如何构造 pdf（第 3.2 节）和风险函数（第 3.6 节）的核估计。我们还分析了它们的渐近性质并通过示例说明了估计量。请注意，在我们的文中，截断模式必须反映在估计量的构造中。熟悉核密度估计的人都会注意到带宽问题，这是一个必须考虑的问题。在 第 3.4 节 中，我们为双截断 ![upper X](img/c03-i0002.png) 了一些核密度估计程序。风险带宽也将进行讨论。
+
+### 3.1 核估计背景
+
+参考 Silverman (1986) 或 Wand 和 Jones (1995) 关于核密度的全面综述，但让我们介绍一些有助于理解当 `X` 为双截断时出现的基本概念。具体来说，在非截断场景下，考虑 `X_1, ..., X_n` (images/c03-i004.png) 为 `X` (images/c03-i005.png) 的随机样本，其 pdf 为 `f`。用 `F_n*` (images/c03-i007.png) 表示从样本得到的经验累积分布函数。核密度估计量定义为：
+
+(3.1
+```
+f_h(x) = 1/n \sum_{i=1}^n L_h(x - X_i) = \int L_h(x - t) dF_n^*(t)
+```
+其中 `L_h(t) = h^{-1}L(t/h)` (images/c03-i008.png) 是缩放后的核（`L` 这里的`L` 通常为对称密度函数），且 `h = h_n` (images/c03-i0010.png) 是确定性带宽序列，当 `n \to \infty` (images/c03-i0012.png) 时 `h_n \to 0` (images/c03-i0011.png)。对于固定的 `x` (images/c03-i0013.png)，可以看到：
+
+[(3.2
+```
+E[f_h(x)] = f(x) + (h²/2)\mu²(L)f''(x) + o(h²), \mu²(L) = \int t² L(t) dt
+```
+(images/c03-math-0002.png)
+
+并且如果 `nh_n \to \infty` (images/c03-i0014.png)，则也可以获得方差：
+
+
+
+
+
+(3.3)![Var left-parenthesis f Subscript h Baseline left-parenthesis x right-parenthesis right-parenthesis equals StartFraction upper R left-parenthesis upper L right-parenthesis Over n h EndFraction f left-parenthesis x right-parenthesis plus o left-parenthesis left-parenthesis n h right-parenthesis Superscript negative 1 Baseline right-parenthesis comma upper R left-parenthesis upper L right-parenthesis equals integral upper L left-parenthesis t right-parenthesis squared normal d t period](img/c03-math-0003.png) 
+
+固定点![x](img/c03-i0015.png)处的均方误差（MSE）从(3.2)和(3.3)直接得到。从上述表达式可以明显看出，减小偏差的![h](img/c03-i0016.png)值必然会增大方差。因此，MSE 作为偏差平方和方差之和，似乎是一个合适的误差度量，通过在![h](img/c03-i0017.png)上对其最小化（实际上是对 MSE 的近似值进行最小化），可以导致最优带宽值。然而，这种带宽将是局部的，因为它最小化的是固定![x](img/c03-i0018.png)处的误差。为了获得全局带宽，人们可以考虑 MSE 的积分版本，即均值积分平方误差（MISE），甚至可以以积分平方误差（ISE）作为最优带宽选择的起点。
+
+尽管上述想法看起来是合理的，但需要注意的是，待最小化的局部和全局误差测量涉及某些取决于目标密度![f](img/c03-i0019.png)的未知量。带宽选择器的目标是为![h](img/c03-i0020.png)提供数据驱动的值，以便在实践中使用。带宽选择器可以从两个角度构建。一方面，可以显式地推导出最优带宽的表达式，然后尝试近似其中的未知量；这些被称为代入规则（plug-in rules）。另一方面，给定一个误差度量，可以直接近似误差表达式并获得达到最小值的带宽值，例如在交叉验证或自助法（bootstrap）程序中。
+
+在接下来，我们将调整(3.1)中的核估计器用于双截断变量，我们还将引入一些平滑选择器，如正态参考、代入、交叉验证和自助带宽。关于对于不同形式的不完整或偏偏数据的密度和风险函数进行核估计的现有文献，包括 Jones (1991)、Cai (1998)和 Zhou (1999)等。
+
+## 3.2 估计密度函数
+
+回想(3.1)给出的非截断场景下的核密度估计器表达式。如果现在目标变量![upper X](img/c03-i0021.png)被一对![left-parenthesis upper U comma upper V right-parenthesis](img/c03-i0022.png)截断，我们得到一个样本![left-parenthesis upper X 1 comma upper U 1 comma upper V 1 right-parenthesis comma ellipsis comma left-parenthesis upper X Subscript n comma upper U Subscript n comma upper V Subscript n right-parenthesis](img/c03-i0023.png)，其中![upper X Subscript i](img/c03-i0024.png)遵循在![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c03-i0026.png)条件下![upper X](img/c03-i0025.png)的条件分布。似乎显然，必须在估计器中引入采样概率，根据对采样概率![upper G left-parenthesis upper X Subscript i right-parenthesis](img/c03-i0028.png)的估计对![upper X Subscript i](img/c03-i0027.png)进行重新加权，也就是说观测概率较低的值将获得更大的权重。为了这一目的，(3.1)中的经验累积分布![upper F Subscript n Aster](img/c03-i0029.png)必须被第 2.1.1 节引入的 Efron–Petrosian 非参数极大估计器（NMPLE）取代。因此，核密度估计器给出：
+
+(3.4)![f Subscript h left-parenthesis x right-parenthesis equals integral upper L left-parenthesis t right-parenthesis normal d upper F Subscript n Supers asterisk right-parenthesis equals alpha Subscript n StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis x minus upper X Subscript i right-parenthesis upper G left-parenthesis upper X Subscript i right-parenthesis Superscript negative 1](img/c03-math-0004.png) 
+
+在半参数设置下（参见第 2.2 节），半参数核密度估计器给出：
+
+(3.5)![f Subscript h left-parenthesis x semicolon theta Subscript n right-parenthesis equals integral upper L left-parenthesis t right-parenthesis normal d upper F left-parenthesis t semicolon Subscript n right-parenthesis equals alpha left-parenthesis theta Subscript n right-parenthesis StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis x minus upper X Subscript i right-parenthesis upper G left-parenthesis upper X Subscript i semicolon Subscript n right-parenthesis Superscript negative 1](img/c03-math-0005) 
+
+应当记住常数![upper G](img/c03-i0030.png)是可能的。这在第 2.1.3 节的模拟场景中发生，其中左截断变量![upper U](img/c03-i0031.png)呈均匀分布且![upper V minus upper U](img/c03-i0032.png)是退化的。当函数![upper G Subscript n](img/c03-i0033.png)或![upper G left-parenthesis dot semicolon Subscript n right-parenthesis](img/c03-i0034.png)为平坦时，核密度估计(3.4)或(3.5)](#c03.xhtml_c03-disp-0001)给出的普通估计。
+
+## 3.3 渐近性质
+
+为了分析![f Subscript h](img/c03-i0041.png)和![f Subscript h left-parenthesis dot semicolon Subscript n right-parenthesis](img/c03-i0042.png)的渐近性质，我们首先引入基于真实的![alpha](img/c03-i0043.png)和![upper G](img/c03-i0044.png)的人工估计器：
+
+(3.6)![ModifyingAbove f With bar Subscript h left-parenthesis x right-parenthesis equals alpha StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis x minus upper X Subscript i right-parenthesis upper G left-parenthesis upper X Subscript i right-parenthesis Superscript negative 1](img/c03-math-0006.png) 
+
+
+
+
+在这里，以及在本章的剩余部分中，我们假设采样偏差 ![upper G](img/c03-i0045.png)是一个严格正函数，因此 ![upper G left-parenthesis upper X Subscript i Baseline right-parenthesis) Superscript negative 1](img/c03-i0046.png)是有定义的。人工估计量 ![f overbar Subscript h](img/c03-i0047.png) 近等价于 ![f Subscript h](img/c03-i0048.png)，在适当条件下，![left-parenthesis n h right-parenthesis) Superscript 1 slash 2 Baseline left-parenthesis f Subscript h left-parenthesis x right-parenthesis minus ModifyingAbove f With bar Subscript h left-parenthesis x right-parenthesis right-parenthesis](img/c03-i0049.png)依概率收敛于零。实际上，从定理 2.1.12 得到的弱收敛结果保证了 ![alpha Subscript n Baseline upper G Subscript n left-parenthesis x right-parenthesis) Superscript negative 1](img/c03-i0050.png)是 ![StartRoot n EndRoot](img/c03-i0051.png)‐一致的，即 ![sup Underscript x element-of left-bracket a Subscript upper X Baseline comma b Subscript upper X Baseline right-bracket] Endscripts StartAbsoluteValue alpha Subscript n Baseline upper G Subscript n left-parenthesis x right-parenthesis) Superscript negative 1 minus alpha upper G left-parenthesis x right-parenthesis) Superscript negative 1 EndAbsoluteValue equals upper O Subscript upper P left-parenthesis n Superscript negative 1 slash 2 Baseline right-parenthesis](images/c03-i0052.png)，由此
+
+![左侧图显示了诊断年龄偏差函数的非参数（黑线）和半参数（红线）估计量。右侧图显示了诊断年龄累积分布函数（cdf）的非参数（黑线）和半参数（红线）估计量。](img/c03f001.png)
+
+图 3.1（儿童癌症数据，示例 3.2.1）。左侧图：诊断年龄偏差函数的非参数（黑线）和半参数（红线）估计量。右侧图：诊断年龄累积分布函数（cdf）的非参数（黑线）和半参数（红线）估计量。半参数估计量是在假设 ![upper U](img/c03-i0040.png) 服从 Beta![left-parenthesis theta 1 comma theta 2 right-parenthesis](img/c03-i0039.png) 模型的情况下计算的。
+
+(3.7)![sup Underscript x element-of left-bracket a Subscript upper X Baseline comma b Subscript upper X right right-bracket Endscripts StartAbsoluteValue left-parenthesis n h right-parenthesis) Superscript 1 slash 2 Baseline left-parenthesis f Subscript h left-parenthesis x right-parenthesis minus ModifyingAbove f With bar Subscript h left-parenthesis x right-parenthesis right-parenthesis EndAbsoluteValue equals upper O Subscript upper P left-parenthesis h Superscript 1 slash 2 Baseline Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis x minus upper X Subscript i right-parenthesis right-parenthesis equals upper O Subscript upper P left-parenthesis h Superscript 1 slash 2 Baseline right-parenthesis](img/c03-math-0007.png)
+
+换句话说(3.7)表示 ![f Subscript h left-parenthesis x right-parenthesis](img/c03-i0053.png) 当 ![h right-arrow 0](img/c03-i0054.png) 和 ![n h right-arrow infinity](img/c03-i0055.png) 时的渐近分布等于 ![ModifyingAbove f With bar Subscript h left-parenthesis x right-parenthesis](img/c03-i0056.png) 的渐近分布。因此，从直观上看，![f Subscript h left-parenthesis x right-parenthesis](img/c03-i0057.png) 的渐近偏差和方差可以通过人工估计量计算，由于 ![alpha](img/c03-i0058.png) 和 ![upper G](img/c03-i0059.png) 的非随机性，这很容易处理。类似的参数对于半参数估计量 ![f left-parenthesis x semicolon theta Subscript n right-parenthesis](img/c03-i0060.png) 也适用，因为 ![alpha left-parenthesis theta Subscript n right-parenthesis) upper G left-parenthesis x semicolon theta Subscript n right-parenthesis) Superscript negative 1](img/c03-i0061.png) 也是 ![StartRoot n EndRoot](img/c03-i0051.png)‐一致的。两个估计量 (3.4) 和 (3.5) 具有相同的渐近分布可能令人惊讶。这可以用非参数收敛速率 ![left-parenthesis n h right-parenthesis) Superscript 1 slash 2](img/c03-i0049.png) 来解释，该速率慢于参数速率 ![n Superscript negative 1 slash 2](img/c03-i0052.png)，后者对应于对 ![upper G](img/c03-i0059.png) 的一致性。对于 ![ModifyingAbove f With bar Subscript h left-parenthesis x right-parenthesis](img/c03-i0056.png) 的强一致性和渐近正态性已由 Moreira 和 de Uña 推导出，这被表述为一个定理。(3.6) 的渐近均值和方差由 Moreira 和 de Uña 在 2012 根据以下标准密度估计假设给出：
+
+1. (D1) 核函数 ![upper L](img/c03-i0039.png) 是一个满足 ![integral t upper L left-parenthesis t right-parenthesis) equals 0](img/c03-i0050.png) 的密度函数。
+2. (D2) 带宽序列 ![h](img/c03-i0054.png) 满足 ![h right-arrow 0](img/c03-i0054.png) 和 ![n right-arrow infinity](img/c03-i0055.png)。
+3. (D3) 函数 ![f](img/c03-i0060.png) 和 ![f slash upper G](img/c03-i0061.png) 在 ![x](img/c03-i0050.png) 处二阶连续可微。
+
+在分析定理 3.3.2 中的结果时，可以看到双截断不影响偏差，因为 (3.2) 和 (3.8) 的表达式是相同的。然而，截断会影响方差，因为 ![alpha upper G left-parenthesis x right-parenthesis) Superscript negative 1](img/c03-i0052.png) 现在乘了 (3.9) 中的主项，与 (3.3) 相比。该因子对于那些 ![upper X Subscript i](img/c03-i0046.png) 在 ![x](img/c03-i0050.png) 附近的相对概率较小（即 ![upper G left-parenthesis x right-parenthesis](img/c03-i0059.png) 较小）的点增大了方差。
+
+正如在第 3.1 节中对普通核密度估计量所讨论的那样，在双截断设置中，偏差和方差表达式用于在双截断设置中推导出局部和全局误差度量。具体而言，MSE 将给出
+
+
+
+
+
+![MSE left-parenthesis ModifyingAbove f With bar Subscript h Baseline left-parenthesis x right-parenthesis right-parenthesis equals left-bracket normal upper E left-parenthesis ModifyingAbove f With Subscript h Baseline left-parenthesis x right-parenthesis right-parenthesis minus f left-parenthesis x right-parenthesis right-bracket squared plus upper V a r left-parenthesis ModifyingAbove f With Subscript h left-parenthesis x right-parenthesis right-parenthesis comma](img/c03-math-0011.png)
+
+而 MISE 作为一种全局误差测量量，其通过对 ![MSE left-parenthesis ModifyingAbove f With bar Subscript h left-parenthesis x right-parenthesis right-parenthesis](img/c03-i0098.png) 关于 ![x](img/c03-i0099.png) 进行积分得到。去掉可以忽略的项后，我们得到渐近 MISE：
+
+(3.10)![AMISE left-parenthesis f overbar Subscript h right-parenthesis equals one fourth h Superscript 4 Baseline upper R left-parenthesis f Superscript double-prime Baseline-parenthesis mu 2 left-parenthesis upper L right-parenthesis squared plus left-parenthesis n h right-parenthesis Superscript negative 1 Baseline alpha upper R left-parenthesis upper L right-parenthesis integral upper G left-parenthesis x right-parenthesis Superscript negative 1 f left-parenthesis x right-parenthesis normal d x period](img/c03-math-0012.png) 
+
+注意，鉴于 ![StartRoot n h EndRoot](img/c03-i0100.png) 与 ![upper G Subscript n](img/c03-i0101.png)、![upper G left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0102.png) 以及 ![upper G](img/c03-i0103.png) 之间的等价性，在适当条件下相同的 AMISE 表达式也适用于 ![f Subscript h](img/c03-i0104.png) 和 ![f Subscript h left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0105.png)。根据之前的偏置和方差表达式，(3.10) 相对于非截断场景下的 ![AMISE](img/c03-i0106.png) 的差异（Wand and Jones, 1995）出现在第二项中，对应于方差。在这种情况下，需要注意的是，根据霍尔德不等，![alpha integral upper G left-parenthesis x right-parenthesis Superscript negative 1 f left-parenthesis x right-parenthesis normal d x greater-than-or-equal-to 1](img/c03-i0107.png)。这一事实表明，双截断情况下的 ![AMISE](img/c03-i0108.png) 至少与非截断设置一样大。
+
+(3.10 中的全局误差表达式对于推导最优带宽也很有意义。通过最小 ![AMISE left-parenthesis f overbar Subscript h right-parenthesis](img/c03-i0109.png) 关于 ![h](img/c03-i0110.png)，我们得到了渐近最优带宽：
+
+(3.11)![h Subscript AMISE Baseline equals left-bracket StartFraction alpha upper R left-parenthesis upper L right-parenthesis integral upper G left-parenthesis x right-parenthesis Superscript negative 1 f left-parenthesis x right-parenthesis normal d x Over upper R left-parenthesis f Superscript double-prime Baseline-parenthesis mu 2 left-parenthesis upper L right-parenthesis squared EndFraction right-bracket Superscript 1 slash 5 Baseline n Superscript negative 1 slash 5 Baseline](img/c03-math-0013.png) 
+
+注意，带宽的阶数 ![n Superscript negative 1 slash 5](img/c03-i0111.png) 与非截断情况相同。(3.11) 中的最优带宽取决于直接与 ![f](img/c03-i0112.png) 和 ![upper G](img/c03-i0113.png) 相关的某些未知量。在实践中使用 (3.11) 时，必须对这些量进行估计。这在第 3.4.1 节 和 3.4.2 节 中进行了讨论。
+
+从理论和应用角度来看，研究最小化 MISE 的带宽以及最小值是有意义的。这可以通过仿真来实现，其中未知的 ![f](img/c03-i0114.png) 以及干扰参数 ![alpha](img/c03-i0115.png) 和 ![upper G](img/c03-i0116.png) 是受控的。Moreira 和 de Uña-lvarez (2012)进行了仿真以探索上述问题并研究非参数和半参数核的性能。在他们的发现中，我们指出：(i) (3.4) 和 (3.5) 表现良好，MISE 随着样本量的增加而减少；(ii) 只要正确选择了截断模型，半参数估计比非参数更准确；(iii) 根据较小的有限样本方差，半参数估计需要的带宽比非参数的小。在这里通过仿真第 2.1 节 中的场景来说明这些点。
+
+在仿真中，![f](img/c03-i0117.png) 的理论 MISE 可以通过 ![m](img/c03-i0118.png) 次试验的平均值来近似。半参数估计的 ISE 可以类似地计算。对于每个估计器，最小化 MISE 的最优带宽 ![h Subscript MISE](img/c03-i0121.png) 由相应蒙特卡洛近似的最小化值近似。
+
+尽管由于性能较优可以推荐半参数估计器 (3.5)，但需要预先为截断变量选择参数模型。正如在第 2.2.1 节 中讨论的样，这是微妙的，因为不合适的截断模型会导致估计器产生巨大的系统偏差；请有关这方面的细节和插图。在接下来的两个例子中，我们考虑两个真实数据集的 pdf 估计。在两个例子中，Beta 模型都很好地拟合了截断分布。
+
+![图显示了非参数（黑线）、半参数（红线）和简单（绿色线）的时间的 pdf 估计器，通过不同的带宽计算：h=0.04（左图）和 h=0.10（右图）。](img/c03f003.png)
+
+图 3.3（艾滋病输血数据，示例 3.3.5）。
+
+
+
+
+
+![图表显示左图为潜伏期偏置函数的非参数（黑线）和半参数（红线）估计量。右图显示为潜伏期累积分布函数（cdf）的非参数（黑线）和半参数（红线）估计量。](img/c03f004.png)
+
+图 3.4（艾滋病输血数据，示例 3.3.5）。左图：潜伏期偏置函数的非参数（黑线）和半参数（红线）估计量。右图：潜伏期累积分布函数（cdf）的非参数（黑线）和半参数（红线）估计量。
+
+在下一节中，我们将介绍一些数据驱动的带宽选择方法。其中一些建议将直接基于 (3.11)，而另一些则考虑一个待最小化的误差度量的近似值。
+
+## 3.4 数据驱动的带宽选择
+
+表达式 (3.4) 和 (3.5) 需要适当的带宽值 `h`![images/c03-i0156.png)才能在实践中有效应用。如前节所述，带宽选择器可以从两个视角进行设计。一方面，可以采用最优全局带宽的表达式，例如 (3.11) 中的 `h` Subscript AMISE![images/c03-i0157.png)，并将其中的未知量替换为样本对应项。第一类带宽选择器被称为摄入法规则（plug-in rules）。我们将引入一种正态参考带宽，它是 Silverman (1986) 在双侧截断情况下的经验法则（rule-of-thumb）的类似物；以及一种遵循 Sheather 和 Jones (1991) 思想的摄入法规则。另一方面，可以直接考虑一个（估计的）误差表达式，然后寻找使该误差准则最小化的 `h`![images/c03-i0158.png)。这是其他方法（如交叉验证规则和自助法带宽）的哲学基础。为了避免不必要的重复，我们将限制在半参数估计量 `f` Subscript h(dot theta Subscript n)![images/c03-i0159.png)。在后续节中的思想可以以明显的方式适用于非参数估计量 `f` Subscript h![images/c03-i0160.png)。
+
+### 3.4.1 正态参考带宽选择
+
+在最优带宽 (3.11) 的表达式中出现了两个未知量：`R(f-prime)`![images/c03-i0161.png) 和 `alpha integral G(x) Superscript -1 f(x) normal dx`![images/c03-i0162.png]。对于 `R(f-prime)`![images/c03-i0163.png)，遵循 Silverman 经验法则的思想，可以假设 `f`![images/c03-i0164.png) 服从具有特定方差 `sigma squared`![images/c03-i0165.png) 的高斯分布。使用埃米特多项式的简单计算得出 `R(f-prime) equals three eighths pi Superscript -1/2 sigma Superscript -5`![images/c03-i0166.png)。此外，如果使用高斯核，还可以计算 `R(L)`![images/c03-i0167.png) 和 `mu 2(L)`![images/c03-i0168.png)，最优带宽由 (3.12) `h Subscript AMISE equals [bracket four thirds alpha integral G(x) Superscript -1 f(x) normal dx [bracket] 1/5 sigma Superscript -1/5]`![images/c03-math-0015.png)。
+
+如果总体是多峰的，(3.12) 中的带宽可能会导致过度平滑，因为 `R(f-prime)`![images/c03-i0169.png) 相对于标准差较大（Silverman, 1986；Wand and Jones, 1995）。使用稳健的变异量可以获得更好的结果；例如，通过考虑底层正态分布的分位数位距（IQR）作为更稳健的度量：`h Subscript AMISE equals 0.79 IQR Superscript -1/5 [bracket alpha integral G(x) Superscript -1 f(x) normal dx [bracket] 1/5]`![images/c03-math-0016.png)。
+
+在经典语境下，Silverman (1986) 建议在计算 `h` Subscript AMISE 时使用 `sigma`![images/c03-i0170.png) 和 IQR 之间的最小值，以减少过度平滑的风险。这引出了以下带宽参数：`h caret Subscript NR equals [bracket four thirds alpha(theta Subscript n) integral G(x; theta Subscript n) Superscript -1 normal d F(x; theta Subscript n) [bracket] 1/5 min (sigma, 0.79 IQR) n Superscript -1/5, 2nd Column 3rd Column End]`其中未知的 `alpha`![images/c03-i0172.png)、`G`![images/c03-i0173.png) 和 `f`![images/c03-i0174.png) 已被替换为合适的估计量。在双侧截断下，`sigma squared`![images/c03-i0175.png) 可以 (3.13)`sigma squared equals alpha(theta Subscript n) integral (x - M(theta Subscript n))² G(x; theta Subscript n) Superscript -1 normal d F_n Supers asterisk (x), comma]`![images/c03-math-0018.png) 进行估计，其中 `F_n Supers asterisk`![images/c03-i0176.png) 是 `X Subscript i`![images/c03-i0177.png) 的普通经验分布函数，见 (2.1)，且 `M(theta Subscript n) = alpha(theta Subscript n) integral G(x; theta Subscript n) Superscript -1 normal d F_n Supers asterisk (x), comma]`![images/c03-math-0019.png)，而 IQR 被替换为 `IQR equals F_n Superscript -1 (0.75; theta Subscript n) - F_n Superscript -1 (0.25; theta Subscript n)`![images/c03-i0178.png)。如果概率密度函数足够光滑，该选择器将提供合理的估计，否则由于对*曲率*项 `R(f-prime)`![images/c03-i0179.png) 的近似过于简化，会导致过度平滑。
+
+### 3.4.2 摄入法带宽选择
+
+对该量更复杂的近似会产生其他摄入法选择器，如下一节所示。
+
+
+
+
+
+正态参考带宽的思路是通过假设 ![f](img/c03-i0181.png) 是方差为 ![sigma squared](img/c03-i0182.png) 的正态分布，来近似 ![upper R left-parenthesis f double-prime right-parenthesis](img/c03-i0180.png)。然而，通过回想起该量可以被视为目标变量 ![upper X](img/c03-i0184.png) 经其概率密度函数二阶导数变换后的期望，就可以 ![upper R left-parenthesis f double-prime right-parenthesis](img/c03-i0183.png) 进行更精确的估计。该期望的估计可以通过核估计量来完成。这是 Sheather 和 Jones (1991) 为在非截断情况下获得代入规则（plug-in rule）提出的建议，该方法已被 Moreira 和 Van Keilegom (2013) 于用于双截断情况。关于修正后代入带宽的完整细节见后者的参考文献。我们将在下文中介绍使用 ![f Subscript h Baseline left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0185.png) 的基本思想。如上所述，对于 ![f Subscript h](img/c03-i0186.png) 也可以遵循类似的路径。
+
+可以看出，在 ![f](img/c03-i0187.png) 满足某些平滑性条件下，![upper R left-parenthesis f Superscript left-parenthesis r right-parenthesis Baseline right-parenthesis equals integral f Superscript left-parenthesis 2 r right-parenthesis Baseline left-parenthesis x right-parenthesis f left-parenthesis x right-parenthesis normal d x](img/c03-i0188.png)，因此 (3.11 中的未知量 ![upper R left-parenthesis f double-prime right-parenthesis](img/c03-i0189.png) 可以写为期望值：![upper R left-parenthesis f double-prime right-parenthesis equals normal upper E left-bracket f Superscript left-parenthesis 4 right-parenthesis Baseline left-parenthesis upper X right-parenthesis right-bracket](img/c03-i0190.png)。双截断下该期望的半参数估计量给出：
+
+```
+![StartLayout 1st Row 1st Column ModifyingAbove normal upper E With Ì‚ left-bracket f Superscript left-parenthesis 4 right-parenthesis Baseline left-parenthesis upper X right-parenthesis right-bracket 2nd Column equals 3rd Column alpha left-parenthesis theta Subscript n Baseline right-parenthesis n Superscript negative 1 sigma-summation Underscript i equals 1 Overscript n Endscripts f Subscript g Superscript left-parenthesis 4 right-parenthesis Baseline left-parenthesis upper X Subscript i Baseline semicolon theta Subscript n Baseline right-parenthesis upper left-parenthesis upper X Subscript i Baseline semicolon theta Subscript n Baseline right-parenthesis Superscript negative 1 2nd Row 1st Column Blank 2nd Column equals 3rd Column alpha left-parenthesis theta Subscript n Baseline right-parenthesis squared n Superscript negative 2 sigma-summation Underscript i equals 1 Overscript n Endscripts sigma-summation Underscript j equals 1 Overscript n Endscripts upper W Subscript g Superscript left-parenthesis 4 right-parenthesis Baseline left-parenthesis upper X Subscript i minus upper X Subscript j right-parenthesis upper left-parenthesis upper X Subscript i Baseline semicolon theta Subscript n Baseline right-parenthesis Superscript negative 1 upper left-parenthesis upper X Subscript j Baseline semicolon theta Subscript n right-parenthesis Superscript negative 1 EndLayout](img/c03-math-0020.png)
+```
+
+(Sheather and Jones, 1991; Wand and Jones, 1995),其中带宽 ![g](img/c03-i0191.png) 和核 ![upper W](img/c03-i0192.png) 可能与 ![h](img/c03-i0193.png) 和 ![upper L](img/c03-i0194.png) 不同。Moreira 和 Van Keilegom (2013) 在对核 ![upper W](img/c03-i0195.png)、密度 ![f](img/c03-i0196.png) 和函数 ![f slash upper G](img/c03-i0197.png) 的某些正则假设下，获得了该估计量的渐近偏差和方差，从而得到了 ![g](img/c03-i0198.png) 的渐近最优值。特别是当 ![upper W](img/c03-i0199.png) 为阶 ![k](img/c03-i0200.png) 时，使 ![upper E left-bracket f Superscript left-parenthesis 4 right-parenthesis Baseline left-parenthesis upper X right-parenthesis right-bracket](img/c03-i0202.png) 的渐近均方误差（AMSE）最小的带宽 ![g](img/c03-i0201.png) 为：
+
+```
+(3.14[g_AMSE = [StartFraction k upper W Superscript left-parenthesis 4 right-parenthesis integral upper G left-parenthesis x Superscript negative 1 f left-parenthesis x right-parenthesis d x Over E left-bracket f Superscript left-parenthesis 4 right-parenthesis Baseline left-parenthesis upper X right-parenthesis right-bracket mu_k left-parenthesis L right-parenthesis] Superscript 1 slash left-parenthesis 4 plus k right-parenthesis n Superscript negative 1 slash left-parenthesis 4 plus k right-parenthesis],
+```
+(images/c03-math-0021.png) 其中 ![mu_k left-parenthesis L right-parenthesis equals integral t Superscript k left-parenthesis L right-parenthesis normal d](img/c03-i0203.png)。
+
+双截断情况下的代入带宽选择器遵循 Sheather 和 Jones (1991) 的基本思想。只需想起 AMISE 的表达式 (3.11，并将 ![upper R left-parenthesis f double-prime right-parenthesis](img/c03-i0204.png) 替换为上述估计量 ![upper E left-bracket f Superscript left-parenthesis 4 right-parenthesis Baseline left-parenthesis upper X right-parenthesis right-bracket](img/c03-i0205.png)，并将 ![alpha integral upper G left-parenthesis x right-parenthesis Superscript negative 1 f left-parenthesis x right-parenthesis d x](img/c03-i0206.png) 替换为 ![alpha left-parenthesis theta Subscript n Baseline right-parenthesis integral upper left-parenthesis x semicolon theta Subscript n right-parenthesis Superscript negative 1 normal d upper F left-parenthesis x semicolon theta Subscript n right-parenthesis](img/c03-i0207.png)，分别获得直接代入（DPI）规则
+
+```
+![ModifyingAbove h With caret Subscript DPI equals [StartFraction alpha left-parenthesis theta Subscript n Baseline right-parenthesis upper R left-parenthesis L right-parenthesis integral upper left-parenthesis x semicolon theta Subscript n right-parenthesis Superscript negative 1 normal d upper F left-parenthesis x semicolon theta Subscript n right-parenthesis Over ModifyingAbove upper E With Ì‚ left-bracket f Superscript left-parenthesis 4 right-parenthesis Baseline left-parenthesis upper X right-parenthesis right-bracket mu 2 left-parenthesis L right-parenthesis squared EndFraction] Superscript 1 slash 5 n Superscript negative 1 slash 5 period](images/c03-math-0022.png)
+```
+
+
+
+
+该选择器一旦 ![image](img/c03-i0208.png) 计算完成即可直接使用，如前所述，这需要一个先验带宽 ![image](img/c03-i0209.png)。在这种情况下，可以通过考虑 (3.14) 来选择 ![image](img/c03-i0210.png)。为了简单起见，取 ![image](img/c03-i0211.png) 并假设内核是二阶的，因此 ![image](img/c03-i0212.png)。然后，
+
+```
+![image](img/c03-math-0023.png)
+```
+
+然而，![image](img/c03-i0213.png) 的计算需要对 ![image](img/c03-i0214.png) 进行估计，而该估计本身需要一个合适的带宽。这种公式导致了一种迭代过程，该过程可以在第一步或第二步停止（即针对 ![image](img/c03-i0216.png)），在这种情况下假设 ![image](img/c03-i0217.png) 服从方差为 ![image](img/c03-i0218.png) 的正态分布。这些方法在本章中将分别标记为 ![image](img/c03-i0219.png) 和 ![image](img/c03-i0220.png)。实际上，这种方法允许使用等式，对任何偶整数 ![image](img/c03-i0222.png) 获得 ![image](img/c03-i0221.png) 的简单估计：
+
+```
+![image](img/c03-math-0024.png)
+```
+
+对应的估计器为：
+
+```
+![image](img/c03-math-0025.png)
+```
+
+其中 ![image](img/c03-i0223.png) 是定义在 (3.13) 中的 ![image](img/c03-i0224.png) 的估计器。
+
+### 3.4.3 最小二乘交叉验证带宽选择
+
+如前，之前的建议可以被视为插件规则（plug-in rules），因为它们考虑了渐近最优带宽 ![image](img/c03-i0225.png) 的表达式，并用经验对应物替换未知量。获取数据驱动带宽的另一种方法是基于近似误差量的最小化。这种过程的一个例子是交叉验证带宽。为了描述该方法，我们考虑目标密度 ![image](img/c03-i0227.png) 的半参数估计器 ![image](img/c03-i0226.png);对于非参数估计器 ![3.4)](img/#c03.xhtml_c03-disp-004) 也有类似的推导。
+
+![3.5)](img/#c03.xhtml_c03-disp-005) 的积分平方误差为：
+
+```
+![image](img/c03-math-0026)
+```
+
+对 ![3.15)](img/#c03.xhtml_c03-disp-026) 取期望可得 MISE：
+
+```
+![image](img/c03-math-0027)
+```
+
+注意，![3.16)](img/#c03.xhtml_c03-disp-027) 中期望算符内的最后一项不依赖于 `h`，因此最小化 ![image](img/c03-i0229.png) 等价于最小化：
+
+```
+![image](img/c03-math-0028.png)
+```
+
+交叉验证估计器的思想基于最小化 ![image](img/c03-i0230.png)，因此需要一个 ![3.17)](img/#c03.xhtml_c03-disp-0028) 的适当估计器。为此，令 ![image](img/c03-i0231.png) 为除 ![image](img/c03-i0232.png) 之外的所有数据点构建的密度估计器，即
+
+
+
+
+
+![StartLayout 1st Row 1st Column f Subscript h comma negative i Baseline left-parenthesis x semicolon theta Subscript n comma negative i Baseline right-parenthesis 2nd Column equals 3rd Column integral upper L Subscript h Baseline left-parenthesis x minus t right-parenthesis normal d upper F Subscript n comma negative i Baseline left-parenthesis t semicolon theta Subscript n comma negative i Baseline right-parenthesis 2nd Row 1st Column Blank 2nd Column equals 3rd Column alpha Subscript n comma negative i Baseline left-parenthesis theta Subscript n comma negative i Baseline right-parenthesis StartFraction 1 Over n minus 1 EndFraction sigma-summation Underscript j not-equals i Endscripts upper L Subscript h Baseline left-parenthesis x minus upper X Subscript j Baseline right-parenthesis upper G left-parenthesis upper X Subscript j semicolon theta Subscript n comma negative i Baseline right-parenthesis Superscript negative 1 Baseline, EndLayout](img/c03-math-0029.png)
+
+其中 ![theta Subscript n comma negative i](img/c03-i0233.png), ![upper F Subscript n comma negative i Baseline left-parenthesis dot semicolon theta right-parenthesis](img/c03-i0234.png) 和 ![alpha Subscript n comma negative i Baseline left-parenthesis theta right-parenthesis](img/c03-i0235.png) 是 ![theta Subscript n](img/c03-i0236.png), ![upper F Subscript n Baseline left-parenthesis dot semicolon theta right-parenthesis](img/c03-i0237.png) 以及 ![alpha Subscript n Baseline left-parenthesis theta right-parenthesis](img/c03-i0238.png) 的留一法（leave-one-out）版本；这些是在计算时排除了第 ![i](img/c03-i0239.png) 个数据点的估计量。现在定义最小二乘交叉验证（LSCV）准则
+
+![LSCV left-parenthesis h right-parenthesis equals integral f Subscript h Baseline left-parenthesis x semicolon theta Subscript n Baseline right-parenthesis squared normal d x minus StartFraction 2 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts alpha Subscript n comma negative i Baseline left-parenthesis theta Subscript n comma negative i right-parenthesis f Subscript h comma negative i Baseline left-parenthesis upper X Subscript i semicolon theta Subscript n comma negative i Baseline right-parenthesis upper G left-parenthesis upper X Subscript i semicolon theta Subscript n comma negative i right-parenthesis Superscript negative 1 Baseline,](img/c03-math-0030.png)
+
+并通过在 ![h](img/c03-i0242.png) 上最小化 ![LSCV left-parenthesis h right-parenthesis](img/c03-i0241.png) 来估计最优的 ![h](img/c03-i0240.png):
+
+![StartLayout 1st Row 1st Column ModifyingAbove h With caret Subscript LSCV Baseline equals arg min Underscript h Endscripts LSCV left-parenthesis h right-parenthesis period. 2nd Column Blank 3rd Column Blank EndLayout](img/c03-math-0031.png)
+
+可以证明 ![normal upper E left-bracket LSCV left-parenthesis h right-parenthesis right-bracket](img/c03-i0243.png) 在渐近上等于 ![upper S left-bracket f Subscript h Baseline left-parenthesis dot semicolon theta Subscript n Baseline right-bracket](img/c03-i0244.png)，这表明 ![ModifyingAbove h With caret Subscript LSCV](img/c03-i0245.png) 接近 ![MISE left-parenthesis f Subscript h Baseline left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0246.png) 的最小值。
+
+### 3.4.4 平滑自助法带宽选择
+
+另一种基于近似误差最小化的带宽选择器是自助法带宽（bootstrap bandwidth）。在此过程中，![f Subscript h Baseline left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0247.png) 的 MISE 是通过平滑自助估计的，因为正如 Silverman 和 Young (1987) 所出的，非平滑自助可能会产生不一致的结果。自助算法描述如下：对于固定的 ![upper B](img/c03-i0248.png) 和对于 ![b equals 1 comma ellipsis, comma upper B](img/c03-i0249.png):
+
+1.  让 ![upper X Subscript i Superscript b](img/c03-i0250.png), ![1 less-than-or-equal-to i less-than-or-equal-to n](img/c03-i0251.png) 为 ![f Subscript g Baseline left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0252.png) 的独立同分布（iid）样本，其中 ![g](img/c03-i0253.png) 根据 ![normal upper 2](img/c03-i0254) 准则选择（![g](img/c03-i0255.png) 也有其他选择），并让 ![left-parenthesis U Subscript i comma V Subscript i Baseline right-parenthesis](img/c03-i0256.png), ![1 less-than-or-equal-to less-than-or-equal-to n](img/c03-i0257.png) 为 ![upper n](img/c03-i0258.png) 的 iid 样本。对于每个 ![i equals 1 comma ellipsis n](img/c03-i0259.png)，只有当条件 ![U Subscript i less-than-or-equal-to X Subscript i less-than-or-equal-to V Subscript i Baseline](img/c03-i0260.png) 成立时，我们才在重采样中保留三元组 ![left-parenthesis X Subscript i comma U Subscript i comma V Subscript i right-right-parenthesis](img/c03-i0260.png)。如果不符合，则重复相同的重采样过程，直到满足不等式的三元组。
+
+2.  让 ![theta Subscript n Superscript b](img/c03-i0262.png) 和 ![f Subscript h Superscript b left-parenthesis dot semicolon theta Sub n Superscript b right-parenthesis](img/c03-i0263.png) 分别为 ![theta](img/c03-i0264.png) 的估计量和密度 ![f](img/c03-i0265.png)，它们均自于自助样本 ![left-parenthesis X Subscript i Superscript b comma U Subscript i Superscript b comma V Subscript i superscript b](img/c03-i0266.png), ![1 less-than-or-equal-to less-than-or-equal-to n](img/c03-i0267.png)。
+
+注意在第一步中不需要对截断值进行平滑，单侧截断的情况也是如此（Sánchez-Sellero 等，1999）。接下来，让 ![BMISE left-parenthesis h right-parenthesis equals upper B Superscript negative 1 sigma-summation Underscript b equals 1 Overscript upper B Endscripts integral left-parenthesis f Subscript h Superscript b left-parenthesis x semicolon theta Subscript n Superscript b right-parenthesis minus f Subscript g Baseline left-parenthesis x semicolon theta Subscript n Baseline right-parenthesis right-parenthesis squared normal d x comma](img/c03-math-0032.png)，对于较大的 ![upper B](img/c03-i0268.png)，这将良好地近似由下式给出的自助 MISE ![MISE Superscript b left-parenthesis h right-parenthesis equals normal upper E left-bracket integral left-parenthesis f Subscript h Superscript b left-parenthesis x semicolon theta Subscript n Superscript b right-parenthesis minus f Subscript g Baseline left-parenthesis x semicolon theta Subscript n Baseline right-parenthesis right-parenthesis squared normal d x right-bracket comma](img/c03-math-0033.png)，
+
+其中 ![normal upper E Superscript b](img/c03-i0269.png) 表示给定原始样本的条件期望值。现在，定义
+
+![ModifyingAbove h With caret Subscript boot Baseline equals arg min Underscript h Endscripts BMISE left-parenthesis h right-parenthesis period](img/c03-math-0034.png)
+
+
+
+
+
+与第 3.4.3 节中考虑的交叉验证程序类似，这里的最佳带宽是通过最小化（非渐近的）均方积分误差（MISE）![f Subscript h Baseline left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0270.png)的估计量得到的，而第 3.4.1 节中的标准参考规则以及第 3.4.2 节中的插入法（plug-in）带宽选择程序是基于对 AMISE 的适当估计量的最小化。在接下来的节中，我们将通过对模拟数据和真实数据的分析，说明几种核密度带宽选择器的实际性能。
+
+### 3.4.5 实践中的带宽选择器
+
+Moreira 和 Van Keilegom (2013) 通过仿真广泛研究了标准参考规则、插入法、最小二乘交叉验证和平滑自助法带宽的性能。他们考虑的样本量从 ![n equals 50](img/c03-i0271.png) 到 ![n equals 500](img/c03-i0272.png) 不等，并具有双截断的不同模型。与非参数估计器 ![f Subscript h](img/c03-i0274.png) 相比，选择器报告的半参数估计器 ![f Subscript h Baseline left-parenthesis dot semicolon theta Subscript n Baseline-parenthesis](img/c03-i0273.png) 的带宽值通常更小。这与表 3.1 一致。重要的是，发现随着样本量的增加，带宽选择器的表现越来越一致，趋近于 MISE 的最小化值 ![h Subscript MISE](img/c03-i0275.png)。有趣的是，即使在选择器并不接近最佳平滑程度的情况下，所得密度估计器的 MISE 也仅比最小 MISE 略大。关于选择器的相对行为，Moreira 和 Van Keilegom (2013) 发现 LSCV 与其他选择器相比存在过度离散；因此，在实践中应用 LSCV 准则可能存在风险。另一个发现是自助法带宽与插入规则相比存在过度平滑。在这里，我们通过对第 2.1.3 节中引入的场景 I 和 II 启动一组样本量为 ![n equals 100](img/c03-i0276.png) 和 ![n equals 500](img/c03-i0277.png) 的模拟实验来阐明这些问题。
+
+在示例 3.3.5 和 3.4.2 中，我们已经看到忽略双截断的朴素估计量可能会产生巨大的偏差。在接下来的示例中，我们研究了朴素方法如何可能对修正后估计器所需的最佳平滑程度(3.4)做出错误决策。这说明了对双截断的修正在带宽选择中也同样重要。
+
+从现有证据可以得出，插入法 DP![normal upper I 1](img/c03-i0362.png) 和 DP![normal upper I 2](img/c03-i0363.png) 总体表现良好，而 LSCV 表现出合理，但方差大于其他方法。标准参考带宽的性能也很好，特别是考虑到它的简单性。最后，平滑自助法倾向于对密度估计进行过度平滑。
+
+## 3.5 核密度估计中的进一步问题
+
+从实践角度来看，为从业者提供带宽选择方法无疑是有意义的，但目标的概率分布可能表现出更具挑战性的模式，例如在观测范围内呈现出相对不同的平滑程度。在这种情况下，旨在为整个密度提供最佳平滑程度的全局带宽选择器可能无法提供充分的估计曲线。
+
+当底层密度在 ![upper X](img/c03-i0367.png) 的支撑上需要不同程度的平滑度时(3.4)中的核密度估计器可以使用局部带宽定义如下：
+
+![f Subscript h left-parenthesis x right-parenthesis Baseline left-parenthesis x right-parenthesis equals integral upper L Subscript h left-parenthesis x right-parenthesis Baseline left-parenthesis x minus t right-parenthesis normal d upper F Subscript n Baseline left-parenthesis t right-parenthesis equals alpha Subscript n Baseline StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis x right-parenthesis Baseline left-parenthesis x minus upper X Subscript i Baseline right-parenthesis upper G](img/c03-i0367.png)
+
+![f Subscript h left-parenthesis x right-parenthesis](img/c03-i0368.png) 的渐近等效版本由给出
+
+![f Subscript h left-parenthesis x right-parenthesis equals alpha Subscript n Baseline StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis x right-parenthesis Baseline left-parenthesis x minus upper X Subscript i Baseline right-parenthesis upper G](img/c03-i0368.png)正如 Wand 和 Jones (1995) 在其第 2.10 节中所出的，使用局部带宽 ![h-parenthesis x right-parenthesis](img/c03-i0369.png)相当于在每个位置考虑不同的核。局部平滑的另一种途径是最近邻带宽，当 ![h left-parenthesis x right-parenthesis](img/c03-i0370.png) 定义为从 ![x](img/c03-i0371.png) 到第 ![k](img/c03-i0372.png) 个最近样本点的距离时。在实际计算中，必须选择 ![k](img/c03-i0373.png)。对于半参数估计器 ![f Subscript h Baseline left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0374.png)，也可以采取类似的方法。
+
+核密度估计被经常用于数据探索。这里的一个相关问题是观察到的特征是来自底层真实的，还是仅仅由采样伪影造成的。为了回答这类问题，需要某种附加密度估计的不确定性度量。这里的一个问题是估计器的偏差以及方差取决于未知的底层密度 ![f](img/c03-i0375.png)，阻碍了概率密度点置信间的计算。尽管存在这些困难，可以使用量化估计器变异的方法。Simonoff (2012) 建议构建基于自助法的变异图，通过在固定网格点上计算自助抽样的核密度估计。然后，对于网格中的每个值，计算 2.5%和 97.5%的自助位数以描绘变异包。这种自助方法在双截断数据上也是可能的。第 2.1.4 节中提出的简单自助和明显自助是两种可用于此目的的适当重采样算法，类似于针对 CDF ![upper F](img/c03-i0376.png) 所对应的密度 ![f](img/c03-i0377.png) 所做的做法。
+
+
+
+
+
+另一种方案是构建变异带（variability band），正如 Bowman 和 Azzalini (1997) 所提的，其目标是在不考虑偏差的情况下量化密度估计的变异性。在双截断设置下，偏差和方差的关键结果在定理 3.3.2 中。注意，偏差依赖于![f double-prime left-parenthesis x right-parenthesis](img/c03-i0378.png)，类似于非截断情况，这阻碍了置信间的构建。关于方差，正如 Bowman 和 Azzalini (1997) 所做的，可以将![ModifyingAbove f With bar Subscript h Baseline left-parenthesis x right-parenthesis](img/c03-i0379.png) 进行平方根变换；根据 Delta 方法（delta method），对应的方差由给出
+
+```
+(3.18)![upper V a r left-bracket left-parenthesis StartRoot ModifyingAbove f With bar Subscript h Baseline left-parenthesis x right-parenthesis EndRoot right-parenthesis right-bracket almost-equals one fourth StartFraction alpha Over n h EndFraction upper G left-parenthesis x right-parenthesis Superscript negative 1 Baseline upper R left-parenthesis upper L right-parenthesis comma](img/c03-math-0037.png)
+```
+
+它不依赖于![ModifyingAbove f With bar Subscript h Baseline left-parenthesis x right-parenthesis](img/c03-i0380.png)，尽管需要估计![alpha](img/c03-i0381.png) 和![upper G](img/c03-i0382.png)。这可以通过![upper G Subscript n](img/c03-i0383.png) 以非参数方式完成，或者在半参数设置下，通过![upper G left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0384.png)完成。然后，对于每个固定值![x](img/c03-i0385.png)，在平方根尺度上获得围绕![ModifyingAbove f With bar Subscript h Baseline left-parenthesis x right-parenthesis](img/c03-i0386.png)的 95% 区间，方法是加上或减去![1.96 one fourth StartFraction alpha Subscript n Baseline Over n h EndFraction upper G Subscript n left-parenthesis x right-parenthesis Superscript negative 1 Baseline upper R left-parenthesis upper L right-parenthesis](img/c03-i0387.png)，或者在半参数设置下对应于![upper G left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0388.png)的数量。为了产生最终的变异带，对![upper X](img/c03-i0389.png)支撑范围内的一系列值执行此操作，然后应用回到原始尺度的变换。注意，这种工具并不允许我们检查关于概率密度函数（pdf）的假设（例如，确定模式的数量），但它可能是量化估计器变异性的有用图形显示。在非截断设置下，基于(3.18)的变异带沿![upper X](img/c03-i0390.png)观测范围内呈现恒宽度。然而，对于双截断数据，采样偏差![upper G](img/c03-i0391.png)的影响在变异带的构建中起了作用，较宽区域位于采样不足的![x](img/c03-i0392.png)值。
+
+## 3.6 估计风险函数
+
+风险函数（或失效率函数）经常用于生存分析和可靠性工程，以表示患者的预后或设备随时间变化的性能。对于具有累积分布函数![upper F](img/c03-i0396.png)和概率密度函数![f](img/c03-i0397.png)的连续变量![upper X](img/c03-i0395.png)，点![x](img/c03-i0398.png)处的风险函数定义为
+
+```
+![lamda left-parenthesis x right-parenthesis equals limit Underscript white up pointing small triangle x down-arrow 0 Endscripts upper P left-parenthesis x less-than-or-equal-to upper X less-than up pointing triangle x greater-than-equal-to right-parenthesis equals StartFraction f left-parenthesis x right-parenthesis Over 1 minus F left-parenthesis x right-parenthesis](img/c03-math-0038.png)
+```
+
+值![lamda left-parenthesis x right-parenthesis](img/c03-i399)表示仍然活个体随时间发生死亡事件的瞬时概率。在我们双截断语境下，风险函数是非常感兴趣的。在本节中，我们讨论如何通过平滑方法在双截断下估计![lamda](img/c03-i041)
+
+```![Graphs depict Kernel estimator (solid line) and variability band (dashed lines). Black lines correspond to the nonparametric estimator, while red lines stand for the semiparametric estimator. Left plot shows childhood data. Right plot shows AIDS data.](img/c03-f00)
+```
+
+3.9（来自 Example 3.5 的儿童数据和 Example 3.3 的 AIDS 数据）
+
+风险函数的核估计由给出
+
+```
+(3.19)![upper L left-parenthesisStartLayout 1st Row 1st Column normal upper Lamda Subscript n left-parenthesis x right-parenthesis equals integral Subscript a Subscript upper X Superscript x Baseline StartFraction normal d F Subscript n left-parenthesis t right-parenthesis Over 1 minus upper F Subscript n left-parenthesis t minus right-parenthesis EndFraction equals alpha Subscript n Baseline StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts StartFraction upper I left-parenthesis upper X Subscript i less-than-or-equal-to x right-parenthesis upper G Subscript n left-parenthesis upper X Subscript i right-parenthesis Superscript negative 1 Baseline Over 1 minus upper F Subscript n left-parenthesis upper X Subscript i minus right-parenthesis EndFraction. 2nd Column Blank 3rd Column EndLayout](img/c03-math-0040.png)
+```
+
+其中正如(3.1)所示![upper L left-parenthesis t right-parenthesis equals h Superscript negative 1 upper L left-parenthesis t slash h right-parenthesis](img/c03-i0402)是一个重放核函数，而![h equals h_n](img/c03-i0403)是一个确定性带宽序列，当![n \to \infty](img/c03-i004)时![h \to 0](img/c03-i005)。出现在(3.19)中的函数![upper F Subscript n](img/c03-i0406.png)和![normal upper Lamda Subscript n](img/c03-i0407.png)是累积分布函数![upper F](img/c03-i0408.png)的 Efron–Petrosian 非参数极大估计（NPMLE）以及对应的经验累积风险，其定义为
+
+
+
+
+
+在非截断场景下，当 ![upper G Subscript n](img/c03-i0409.png) 为常数且 ![upper F Subscript n](img/c03-i0410.png) 等于普通经验累分布函数时，(3.19) 简化为风险函数的普通核密度估计量（Wand and Jones, 1995）。
+
+基于合理的参数化截断模型，(3.19) 的半参数版本定义为
+
+(3.20)![StartLayout 1st Row 1st Column lamda Subscript h Baseline left-parenthesis x semicolon theta Subscript n Baseline right-parenthesis 2nd Column equals 3rd Column integral upper L Subscript h Baseline left-parenthesis x minus t right-parenthesis StartFraction normal d upper F left-parenthesis t semicolon theta Subscript n Baseline right-parenthesis Over 1 minus upper F left-parenthesis t minus semicolon theta Subscript n Baseline right-parenthesis EndFraction 2nd Row 1st Column Blank 2nd Column equals 3rd Column alpha left-parenthesis theta Subscript n Baseline right-parenthesis StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h Baseline left-parenthesis x minus upper X Subscript i Baseline right-parenthesis StartFraction upper G left-parenthesis upper X Subscript i Baseline semicolon theta Subscript n Baseline right-parenthesis Superscript negative 1 Baseline Over 1 minus upper F left-parenthesis upper X Subscript i Baseline minus semicolon theta Subscript n Baseline right-parenthesis EndFraction](img/c03-math-0041.png)
+
+与密度估计类似，只要合理地选择参数化截断模型，(3.20) 的性能预计优于 (3.19)。这两种不同的风险函数核估计量由 Moreira 等人（2021）提出并研究过。
+
+遵循第 3.3 节中的论证，非参数和半参数风险滑器在渐近上是等价的，它们的渐近分布与基于真实的未知的 ![alpha](img/c03-i0411.png) 和 ![upper G](img/c03-i0412.png) 的人工估计量一致。其表达式为：
+
+![ModifyingAbove lamda With bar Subscript h Baseline left-parenthesis x right-parenthesis equals alpha StartFraction 1 Over n EndFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h Baseline left-parenthesis x minus upper X Subscript i Baseline right-parenthesis StartFraction upper G left-parenthesis upper X Subscript i Baseline semicolon theta Subscript n Baseline right-parenthesis Superscript negative 1 Baseline Over 1 minus upper F left-parenthesis upper X Subscript i Baseline minus right-parenthesis EndFraction](img/c03-math-0042.png)
+
+在通常正则条件下，存在 ![left-parenthesis n h right-parenthesis Superscript 1 slash 2 Baseline left-parenthesis lamda Subscript h Baseline left-parenthesis x right-parenthesis minus ModifyingAbove lamda With bar Subscript h Baseline left-parenthesis x right-parenthesis right-parenthesis equals o Subscript upper P Baseline-phhesis 1 right-parenthesis](img/c03-i0413.png) 和 ![left-parenthesis n h right-parenthesis Superscript 1 slash 2 Baseline left-parenthesis lamda left-parenthesis x semicolon theta Subscript n right-parenthesis minus ModifyingAbove lamda With bar Subscript h Baseline left-parenthesis x right-parenthesis right-parenthesis equals o Subscript upper P Baseline-phhesis 1 right-parenthesis](img/c03-i0414.png)，因此，从后者的性质可以推出 ![lamda Subscript h](img/c03-i0415.png) 和 ![lamda Subscript h Baseline left-parenthesis dot semicolon theta Subscript n Baseline right-parenthesis](img/c03-i0416.png) 的渐近性质。这些性质通过 ![lamda overbar Subscript h](img/c03-i0417.png) 的性质在两个结果给出，这些结果由 Moreira 等人（2021）给出证明。对于第二个结果，我们将参考以下条件：
+
+1. (H1) 核函数 ![upper L](img/c03-i0418.png) 是密度函数，且满足 ![integral t upper L left-parenthesis t right-parenthesis normal d t equals 0](img/c03-i0419.png)、![mu 2 left-parenthesis upper L right-parenthesis less-than infinity](img/c03-i0420.png) 以及 ![upper R left-parenthesis upper L right-parenthesis less-than infinity](img/c03-i0421.png)。
+2. (H2) 带宽序列 ![h equals h n](img/c03-i0422.png) 满足当 ![n right-arrow infinity](img/c03-i0425.png) 时 ![h right-arrow 0](img/0424)。
+3. (H3) 函数 ![lamda](img/c03-i0426.png) 和 ![lamda slash left-parenthesis 1 minus upper F right-parenthesis](img/c03-i0427.png) 均在 ![x](img/c03-i0428.png) 处二阶连续可微。
+
+定理 3.6.2 中的公式表明，人工估计量的渐近偏差不受截断问题的影响，但其极限方差可能取决于采样和特定的点 ![x](img/c03-i0444)。具体而言，根据对目标变量在点 ![x](img/c03-i0445) 处的相应欠采样，方差在 ![upper G](img/c03-i0446) 值较小处较大。当 ![upper G](img/c03-i0447) 为平坦时，这种影响消失，得到通常的方差表达式。这与第 3.3 节中讨论的核密度估计的情况完全。
+
+与密度估计一样，核估计量的实际应用需要选择带宽参数 ![h](img/c03-i0448)。遵循之前密度估计的思想，可以推导出最优 AMISE 带宽。为此，将 MISE 视为 ![lamda overbar h](img/c03-i0449) 的全局误差；其表达式为：
+
+![StartLayout 1st Row 1st Column MISE left-parenthesis lamda overbar Subscript h right-parenthesis equals integral MSE left-parenthesis ModifyingAbove lamda With bar Subscript h Baseline left-parenthesis x right-parenthesis right-parenthesis normal d x comma 2nd Column Blank 3rd Column EndLayout](img/c03-math-0046.png)
+
+其中
+
+![StartLayout 1st Row 1st Column MSE left-parenthesis ModifyingAbove lamda With bar Subscript h Baseline left-parenthesis x right-parenthesis right-parenthesis equals left-brace normal E left-bracket ModifyingAbove lamda With bar Subscript h Baseline left-parenthesis x right-parenthesis right-bracket minus lamda left-parenthesis x right-parenthesis right-brace squared plus upper V a r left-parenthesis ModifyingAbove lamda With bar Subscript h Baseline left-parenthesis x right-parenthesis right-parenthesis period 2nd Column Blank 3rd Column EndLayout](img/c03-math-0047.png)
+
+在正则条件下，上述 ![MISE left-parenthesis lamda overbar Subscript h right-parenthesis](img/c03-i0450) 的渐近表达式直接从定理 3.6.2 得出。
+
+
+
+
+
+![AMISE left-parenthesis lamda overbar Subscript h Baseline right-parenthesis equals one fourth h Superscript 4 Baseline upper R left-parenthesis lamda Superscript double-prime Baseline right-parenthesis) mu 2 left-parenthesis upper L right-parenthesis squared plus left-parenthesis n h right-parenthesis Superscript negative 1 Baseline alpha upper R left-parenthesis upper L right-parenthesis integral StartFraction upper G left--hesishesis right right-parenthesis Superscript negative 1 Baseline Over 1 minus upper F left-parenthesis x right-parenthesis EndFraction lamda left-parenthesis x right-parenthesis normal d x](img/c03-math-0048.png)
+
+这里的积分被限制在包含 ![X](img/c03-i0451.png)支撑集的严格区间内，因此它是有限的。有趣的是，Hölder 不等式给出 ![alpha integral upper G left-parenthesis x right-parenthesis Superscript negative 1 left-parenthesis 1 minus upper F left-parenthesis x right-parenthesis) Superscript negative 1 Baselineda left-parenthesis x right-parenthesis normal d x greater-than-or-equal-to integral left-parenthesis 1 minus upper F left-parenthesis x right-parenthesis) Superscript negative 1 Baselineda left-parenthesis x right-parenthesis normal d x](img/c03-i0452.png)，因此，与密度估计类似，双截断意味着更大的整体误差。对 ![AMISE left-parenthesis lamda overbar Subscript h right-parenthesis](img/c03-i0453.png) 关于 ![h](img/c03-i0454.png) 的最小化可以导致渐近最优带宽
+
+![StartLayout 1st Row 1st Column h Subscript AMISE Baseline equals left-bracket StartFraction alpha upper R left-parenthesis upper L right-parenthesis integral StartFraction upper G left-parenthesis x right-parenthesis Superscript negative 1 Baseline Over 1 minus upper F left-parenthesis x right-parenthesis EndFraction lamda left-parenthesis x right-parenthesis normal d x Over upper R left-parenthesis lamda Superscript double-prime Baseline-parenthesis) mu 2 left-parenthesis upper L right-parenthesis squared EndFraction right-bracket Superscript 1 slash 5 Baseline n Superscript negative 1 slash 5 Baseline comma, 2nd Column Blank 3rd Column Blank EndLayout](img/c03-math-0049.png)
+
+这与 (3.11) 相似，该方程中出现的 ![integral upper G left-parenthesis x right-parenthesis Superscript negative 1 left-parenthesis x right-parenthesis normal d x](img/c03-i0455.png) 除外，在这里它被 ![integral upper G left-parenthesis x right-parenthesis Superscript negative 1 left-parenthesis 1 minus upper F left-parenthesis x right-parenthesis) Superscript negative 1 Baselineda left-parenthesis x right-parenthesis normal d x](img/c03-i0456.png) 替换。
+
+与密度的情况一样，![h Subscript AMISE](img/c03-i0457.png) 的表达式取决于在实践中必须估计的未知量。或者，可以使用 Moreira 等人提出的 LSCV 程序 (2021)。通过与第 3.4.3 节节中类似的推导，应用于半参数风险估计器 (3.20) 的 ![LSCV left-parenthesis h right-parenthesis](img/c03-i0458.png) 准则表达式为
+
+![StartLayout 1st Row 1st Column LSCV left-parenthesis h right-parenthesis 2nd Column equals 3rd Column integral lamda Subscript h Superscript 2 left-parenthesis x semicolon theta Subscript n Baseline right-parenthesis normal d x 2nd Row 1st Column Blank 2nd Column minus 3rd Column 2 n Superscript negative 1 Baseline sigma-summation Underscript i equals 1 Overscript n Endscripts alpha Subscript n, negative i left-parenthesis theta Subscript n, negative i right-parenthesis) lamda Subscript h, negative i left-parenthesis upper X Subscript i; theta Subscript n Baseline right-parenthesis) StartFraction upper G left-parenthesis upper X Subscript i; theta Subscript n, negative i right-parenthesis) Superscript negative 1 Baseline Over 1 minus upper F Subscript n, negative i left-parenthesis upper X Subscript i Baseline minus semicolon theta Subscript n, negative i right-parenthesis) EndFraction, EndLayout](img/c03-math-0050.png)
+
+其中
+
+![StartLayout 1st Row 1st Column lamda Subscript h, negative i left-parenthesis x semicolon theta Subscript n, negative i right-parenthesis) equals alpha Subscript n, negative i left-parenthesis theta Subscript n, negative i right-parenthesis) StartFraction 1 minus n EndFraction sigma-summation i equals 1 Overscript n Endscripts Fraction upper G left-parenthesis x right-parenthesis Superscript negative 1 Baseline Over 1 minus upper F left-parenthesis x right-parenthesis) Superscript negative 1 Baselineda left-parenthesis x right-parenthesis normal d](img/c03-math-0051.png)
+
+是留一版本的 `lamda_{h, -i}(x; theta_{n, -i}) = alpha_{n, -i}(theta_{n, -i}) * (1/n) * sum_{i=1}^n (G(i; theta_{n,-i})^{-1} / (1 - F_{n,-i}(x))`。通过对 `h` 最小化 `LSCV` (images/c03-i060) 获得最优带宽
+
+```
+LSCV(h) = arg min h
+```
+![StartLayout 1st Row 1st Column h Subscript AMISE Baseline equals left-bracket StartFraction alpha upper R left-parenthesis upper L right-parenthesis integral StartFraction upper G left-parenthesis x right-parenthesis Superscript negative 1 Baseline Over 1 minus upper F left-parenthesis x right-parenthesis EndFraction lamda left-parenthesis x right-parenthesis normal d x Over upper R left-parenthesis lamda Superscript double-prime Baseline-parenthesis) mu 2 left-parenthesis upper L right-parenthesis squared EndFraction right-bracket Superscript 1 slash 5 Baseline n Superscript negative 1 slash 5 Baseline comma, 2nd Column Blank 3rd Column Blank EndLayout](img/c03-math-0052.png)
+
+与密度估计类似，`LSCV(h)` (images/c03-i0461.png) 的期望渐近等于 `MISE(lamda_h(x))` (Moreira 等人, 2021)。这验证了 `LSCV(h)` (images/c03-i0464.png) 作为带宽的估计器。类似的交叉验证方法可以引入风险估计器 (3.19)。Moreira 等人 (2021) 彻底研究了非参数和半参数风险估计器的性能，结论与之前的的估计器第 3.3 节类似。在这里，我们通过利用第 2.1.3 节中引入的模拟场景进一步说明风险估计器的行为，还通过分析真实数据集。
+
+| Model | `sigma` (images/c03-i0482.png) | `n` (images/c03-i0483.png) | `h_{AMISE}` (images/c03-i0484.png) | `MISE(h_AMISE)` (images/c03-i0485.png) |
+| --- | --- | --- | --- | --- |
+| | | | NP | SP |
+| --- | --- | --- | --- | --- |
+| I | `sigma = 1/3` (images/c03-i0486.png) | 100 | 0.095 | 0.090 | 4.7610 | 3.8993 |
+| | | 500 | 0.015 | 0.015 | 1.5945 | 1.3930 |
+| II | `sigma = 1/4` (images/c03-i0487.png) | 100 | 0.102 | 0.089 | 6.4671 | 4.3786 |
+| | | 500 | 0.015 | 0.015 | 2.7733 | 2.4672 |
+| II | `sigma = 1/8` (images/c03-i0488.png) | 100 | 0.210 | 0.098 | 19.2224 | 6.6446 |
+| | | 500 | 0.016 | 0.015 | 5.3303 | 3.2027 |
+
+
+
+
+
+| II | ![final sigma equals 1 slash 3](img/c03-i0489.png) | 100 | 0.156 | 0.136 | 3.8756 | 2.7119 |
+|  |  | 500 | 0.024 | 0.024 | 1.5690 | 1.3994 |
+|  | ![final sigma equals 1 slash 4](img/c03-i0490.png) | 100 | 0.169 | 0.138 | 4.8663 | 2.9532 |
+|  |  | 500 | 0.024 | 0.024 | 1.8190 | 1.5556 |
+|  | ![final sigma equals 1 slash 8](img/c03-i0491.png) | 100 | 0.220 | 0.160 | 21.4591 | 4.5126 |
+|  |  | 500 | 0.026 | 0.024 | 5.2897 | 2.6461 |
+
+表 3.6 (模拟场景 I 和 II，具有多种不同采样间隔宽度的 ![final sigma](img/c03-i0479.png)；示例 3.6.3)。风险估计器的最佳带宽 (![h Subscript MISE](img/c03-i0480.png)) 和最小均化均方误差 (MISE)：非参数估计器 (NP) 和半参数估计器 (SP)。基于样本量 ![n](img/c03-i0481.png) 的 1000 次试验的平均值。
+
+![图表展示了针对不同采样间隔宽度 ς 的真实偏置函数 G(x)。左图显示场景 I。右图显示场景 II。](img/c03f010.png)
+
+图 3.10 (模拟场景 I 和 II，示例 3.6.3)。针对不同采样间隔宽度 ![final sigma](img/c03-i0493.png) 的真实偏置函数 ![upper G left-parenthesis x right-parenthesis](img/c03-i0492.png)。左图：场景 I。右图：场景 II。
+
+![图表展示了用于潜伏期的核风险估计器（实线），并附有 95% 置信水平的逐点置信区间（虚线），以及未修正双重截断的原始估计器（划线）。左图显示非参数估计器。右图显示半参数估计器。](img/c03f011.png)
+
+图 3.11 (艾滋病输血数据，示例 3.6.4)。潜伏期的核风险估计器（实线），并附有 95% 置信水平的逐点置信区间（虚线），以及未修正双重截断的原始估计器（划线）。左图：非参数估计器。右图：半参数估计器。
+
+![图表展示了诊断年龄的偏置函数估计器（实线），并附有 95% 置信水平的逐点置信区间（虚线）。左图显示非参数估计器。右图显示半参数估计器。](img/c03f013.png)
+
+图 3.13 (急性冠动脉综合征数据，示例 3.6.5)。诊断年龄的偏置函数估计器（实线），并附有 95% 置信水平的逐点置信区间（虚线）。左图：非参数估计器。右图：半参数估计器。
+
+## 3.7 示例的 R 代码
+
+与第 2 章 类似，我们现在展示并简要说明代码行，以便读者复现本章中的分析。出于此目的，仅使用 `DTDA` 库，因为它是（截至目前）唯一包含密度和风险率函数平滑工具的库。
+
+### 3.7.1 示例 3.2.1 的代码
+
+需要对数据进行初始转换。注意，此转换将用于所有处理儿童癌症数据的示例。注意，此转换已用于进一步分析。
+
+可以通过考虑 Beta![left-parenthesis theta 1 comma theta 2 right-parenthesis](img/c03-i0513.png) 模型来计算偏置函数的参数估计器，如下所示：
+
+可以获得偏置函数的非参数估计，例如通过使用函数 `shen` 计算 NPMLE 并将输出保留在 `biasf` 中。
+
+一旦我们计算了 NPMLE，也可以对其绘图：
+
+### 3.7.2 示例 3.3.4 和 3.3.5 的代码
+
+这两个示例的代码非常相似。儿童癌症数据需要如示例 3.6.3 那样的转换。我们展示了针对非参数、半参数以及针对特定值 ![0.04](img/c03-i0514) 的原始估计器的代码。对于密度估计，可以使用 `DTDA`。
+
+对于示例 3.6.4 中的艾滋病输血数据，应应用相同的代码。为了计算半参数估计器，考虑了 Beta![left-parenthesis theta 1 comma theta 2 right-parenthesis](img/c03-i0515.png) 模型。
+
+### 3.7.3 示例 3.4.2 和 3.4.3 的代码
+
+我们将展示对应于示例 3.4.2 的代码。密度数据在 `DTDA` 中也可用。让我们通过以下规则开始计算 NPMLE：正态、最小二乘和光滑自助法。
+
+注意，在所有情况下，我们都在正则![left-parenthesis 2 comma 2 right-parenthesis](img/c03-i0516.png) 下评估了估计器，除了光滑自助法外，后者考虑了 200 个点的网格。运行后续代码即可显示结果。
+
+对于示例 3.6.5 中的密度估计，可以应用示例 3.6.4 中完成的转换相同的代码。
+
+### 3.7.4 示例 3.5.1 的代码
+
+已针对儿童癌症数据的年龄和艾滋病输血数据的潜伏期计算了变异区间（半参数和非参数）。注意，两个变量应如示例 3.2.1 和 3.3.5 中的代码那样进行转换。我们将仅针对儿童癌症数据的年龄展示代码。首先，对方差表达式中的 ![upper R left-parenthesis right-parenthesis](img/c03-i0517.png) 进行数值近似。
+
+基于 Beta![left-parenthesis theta 1 comma theta 2 right-parenthesis](img/c03-i0518.png) 模型的半参数权重通过示例 3.2.1 代码中的 `a.est` 和 `b.est` 获取。参数 ![alpha left-parenthesis theta Subscript 1 comma n Baseline comma theta Subscript 2 comma n Baseline right-parenthesis](img/c03-i0519.png) 通过上述代码中的半参数权重 `Gx` 获取。对于艾滋病输血数据，Beta![left-parenthesis theta 1 comma theta 2 right-parenthesis](img/c03-i0520.png) 模型中的 0.25 值应被替换为 0.57。
+
+下方了具有 DP![normal upper I 2](img/c03-i0521.png) 带宽和平方根尺度半参数方差的半参数和非参数核密度估计器。半参数权重 `wx` 是示例 3.2.1 代码中的权重。
+
+半参数估计器的密度图和变异区间可以如下图所示：
+
+
+
+
+非参数带需要计算 NPMLE（非参数极大似然估计）以用于估计偏性函数，该函数必须在定义的点序列上进行评估（见下文代码）。相应的变异带可以通过将之前代码中的 `var.n` 替换为下方代码中计算的 `var.n.t` 来获得。
+
+### 3.7.5 示例 3.6.4 的代码
+
+数据必须按照示例 3.3.5 代码中所示的方式进行转换。核风险函数估计器是通过最小二法交叉验证带宽并包含半参数权重和朴素权重得到的。请注意，`wx` 和 `wgNV` 已在示例 3.3.5 的代码中定义。点对置信区间（非参数和半参数）是使用 ![upper B equals 500](img/c03-i0522.png) 自举重采样完成的。请注意 `wx` 已在示例 3.3.5 的代码中定义。
+
+`DTDA` 中的 `hazardDT` 函数可用于计算风险函数的非参数估计器。目前 `DTDA` 中尚未包含朴素和 SP 估计器，但可以使用下面的代码重现 SP 风险估计器。
+
+### 3.7.6 示例 3.6.5 的代码
+
+在该示例中，考虑了急性冠心综合征数据。请注意，仅取了部分样本（即 `DTDA` 中的 `ACSred`），以保证 NPMLE 的存在性和唯一性。数据必须按照下文所示进行转换。
+
+关于半参数估计器，可以使用与示例 3.6.4 类似的代码。为了重现相应的图，![h](img/c03-i0523.png) 必须固定为 0.019。
+
+## 参考文献
+
+1. Bowman AW, Azzalini A 1997 Applied Smoothing Techniques for Data Analysis: the Kernel Approach with S‐Plus Illustrations. OUP Oxford.
+2. Cai Z 1998 Kernel density and hazard rate estimation for censored dependent data. Journal of Multivariate Analysis **67**, 23–34.
+3. Cao R, Cuevas A, González‐Manteiga WG 1994 A comparative study of several smoothing methods in density estimation. Computational Statistics and Data Analysis **17**, 153–176.
+4. de Uña‐Álvarez J, Van Keilegom I 2021 Efron‐Petrosian integrals for doubly truncated data with covariates: an asymptotic analysis. Bernoulli **27**, 249–273.
+5. Efron B, Petrosian V 1999 Nonparametric methods for doubly truncated data. Journal of the American Statistical Association **94**, 824–834.
+6. Jones MC 1991 Kernel density estimation for length biased data. Biometrika **78**, 511–519.
+7. Moreira C, de Uña‐Álvarez J 2012 Kernel density estimation with doubly truncated data. Electronic Journal of Statistics **6**, 501–521.
+8. Moreira C, de Uña‐Álvarez J, Santos AC, Barros H 2021 Smoothing methods to estimate the hazard rate under double truncation. *arXiv 2103.14153*.
+9. Moreira C, Van Keilegom I 2013 Bandwidth selection for kernel density estimation with doubly truncated data. Computational Statistics and Data Analysis **61**, 107–123.
+10. Sánchez‐Sellero C, González‐Manteiga W, Cao R 1999 Bandwidth selection in density estimation with truncated and censored data. Annals of the Institute of Statistical Mathematics **51**, 51–70.
+11. Sheather SJ, Jones MC 1991 A reliable data‐based bandwidth selection method for kernel density estimation. Journal of the Royal Statistical Society: Series B **53**, 683–690.
+12. Silverman BW 1986 Density Estimation for Statistics and Data Analysis, CRC press.
+13. Silverman BW, Young GA 1987 The bootstrap: To smooth or not to smooth? Biometrika **74**, 469–479.
+14. Simonoff JS 2012 Smoothing Methods in Statistics, Springer.
+15. Wand MP, Jones MC 1995 Kernel Smoothing, CRC press.
+16. Zhou Y 1999 Asymptotic representations for kernel density and hazard function estimators with left truncation. Statistica Sinica **9**,521–533.
+
+# 4 回归分析
+
+双截断变量也可能涉及回归设置。在本章中，我们考虑了双截断响应变量 ![upper X](img/c04-i0001.png) 和协变量向量 ![upper Z](img/c04-i0002.png)，这些协变量可以是分类或数值的、连续或离散的。首先，与经典回归模型的不同特征是，观测偏差（observational bias）中随机双截断的影响将在第 4 节 中进行分析。文中还介绍了两种回归模型。一方面，第 4.2 节](#c04.xhtml_c04-sec-02) 致力于 Cox 比例风险模型，这是生存分析中最流行的模型。另一方面，第 4.3 节 考虑了广泛应用于可靠性工程的加速失效模型。之前的模型依赖于参数形式的，但与第 3 章研究的密度一样，平滑方法可以作为回归函数的非参数考虑。这将在第 4.4 节](#c04-sec-04) 中完成。
+
+## 4.1 回归中的观测偏差
+
+我们考虑一种回归场景，其中响应变量 ![upper X](img/c04-i0003.png) 在随机截断下被观测。与前面的章节一样，我们用 ![left-parenthesis upper U comma upper V right-parenthesis](img/c04-i0004.png) 表示截断变量对，因此 ![upper X](img/c04-i0005.png) 仅在 ![upper U less-than-equal-to upper X less-than-equal-to upper V](img/c04-i0006.png) 时被观测。此外，协变量向量 ![upper Z](img/c04-i0007.png) 附属于 ![upper X](img/c04-i0008.png)，自然地，只有当 ![upper X] 未被截断时人员才能获取。相应的，采样信息表示为 ![left-parenthesis upper X Subscript i, upper Z Subscript i, upper U Subscript i, upper V Subscript i right-parenthesis](img/c04-i0010.png)，![1 less-than-equal-to i less-than-equal-to n](img/c04-i0011.png)；这些是 ![left-parenthesis upper X, upper Z, upper U, upper V right-parenthesis](img/c04-i0012.png) 在 ![upper U less-than-equal-to upper X less-than-equal-to upper V](img/c04-i0013.png) 条件下的独立分布。
+
+假设 ![left-parenthesis upper U, upper V right-parenthesis](img/c04-i0014.png) 与 ![left-parenthesis upper X, upper Z right-parenthesis](img/c04-i0015.png) 独立。因此，采样 ![upper Z](img/c04-i0017.png) 的特定值 ![z](img/c04-i0016.png) 的概率由给出
+
+(4.1![alpha left-parenthesis z right-parenthesis equals upper P left-parenthesis upper U less-than-equal-to upper X less-than-equal-to upper V vertical-bar upper Z equals z right-parenthesis equals integral upper G left-parenthesis x right-parenthesis upper F left-parenthesis normal d x vertical-bar z right-parenthesis](img/c04-math-0001.png)
+
+
+
+其中 `F(x|z)`![images/c04-i0018.png) 代表在 `Z=z`![images/c04-i0020.png) 条件下 `X`![images/c04-i0019.png) 的累积分布函数 (cdf)，而 `G(x) = P(U \le x \le V)`![images/c04-i0021.png) 定义如 等式 (2.2) 所示。公式 (4.1) 表明 `z`![images/c04-i0022.png) 的采样概率是事件 `Z=z`![images/c04-i0024.png) 条件下 `G(X)`![images/c04-i0023.png) 的期望值。当 `X`![images/c04-i0025.png) 和 `Z`![images/c04-i0026.png) 独立时，函数 `alpha`![images/c04-i0027.png) 是常数，因为 `F(\cdot|z)`![images/c04-i0028.png) 不依赖于 `z`![images/c04-i0029.png)，因此协变量上不存在采样偏差。当 `G`![images/c04-i0030.png) 为常数时也是如此。然而，可能会出现协变量向量某些值以更大或更小的概率被观测到。如果从观测数据中估计某个协变量的边缘分布，则应该考虑到这一点。反之，采样 `(X, Z)`![images/c04-i0032.png) 的值 `(x, z)`![images/c04-i0031.png) 的概率仅为 `G(x)`![images/c04-i0033.png)，无论特定的 `z`![images/c04-i0034.png) 是什么；换句话说，在以 `X`![images/c04-i0035.png) 为条件时，协变量对于采样偏差并不重要。
+
+为了说明这些问题，让我们考虑具有双截断响应 `X`![images/c04-i0036.png) 的两个回归设置：具有单个离散协变量的回归模型（RD 模型）和具有单个连续协变量的回归模型（RC 模型）。
+
+### RD. 带有离散协变量的回归模型
+
+令 `Z`![images/c04-i0037.png) 为二元协变量 `\tilde{B}(p)`![images/c04-i0038.png)，特别是 `p=1/2`![images/c04-i0039.png)。当 `Z=0`![images/c04-i0041.png) 时，`X`![images/c04-i0040.png) 在单位区间上均匀分布，即对于 `0 < x < 1`![images/c04-i0043.png)，`F(x|0) = x`![images/c04-i0042.png]。对于 `Z=1`![images/c04-i0044.png]，令 `X`![images/c04-i0045.png) 的条件 cdf 为 `F(x|1) = 1 - (1-x)^{\exp(\beta)`![images/c04-i0046.png]，对于 `0 < x < 1`![images/c04-i0047.png]，其中某个实值 `beta`![images/c04-i0048.png]。除非另有说明，否则取 `beta=1`![images/c04-i0049.png]。
+
+在图 4.1 中展示了 RD 模型的条件 cdf `F(\cdot|0)`![images/c04-i0050.png) 和 `F(\cdot|1)`![images/c04-i0051.png)。协变量 `Z`![images/c04-i0052.png) 对 `X`![images/c04-i0053.png) 的影响显而易见：与 `Z=0`![images/c04-i0056.png) 相比，当 `Z=1`![images/c04-i0055.png) 时，`X` 倾向于取较小的值。图中还有从大小为 `n=1000`![images/c04-i0057.png) 的单个样本计算出的普通 ecdf。该样本是在第 2.1.3 节 中的截断场景 I（左图）和 II（右图）下获得的。回想，由于 `G`![images/c04-i0058.png) 是常数，场景 I 不产生观测偏差，而在场景 II 中 `G`![images/c04-i0059.png) 是单调递减的，这使得观测到较小 `X` 的概率更大。采样偏差在图 4.1 中清晰所示，普通 ecdf 高估了 `F(\cdot|0)`![images/c04-i0060.png) 和 `F(\cdot|1)`![images/c04-i0061.png]。在场景 II 中，样本中 `Z`![images/c04-i0063.png] 为值的比例仅为 0.44。这符合理论概率 `P(U \le X \le V)`![images/c04-i0064.png]，因为 `p=1/2` 时 `alpha(0)/(alpha(1))=0.44`。为了引入连续协变量回归模型，我们遵循 RD 模型的结构并将 `Z`![images/c04-i0066.png] 的二项分布替换为均匀分布。
+
+### RC. 带有连续协变量的回归模型
+
+令 `Z`![images/c04-i0073.png) 为连续协变量 `\tilde{U}(0, 1)`![images/c04-i0074.png]。对于 `Z=z`![images/c04-i0075.png]，令 `X`![images/c04-i0076.png) 的条件 cdf 为 `F(x|z) = 1 - (1-x)^{\exp(\beta z)`![images/c04-i0077.png]，对于 `0 < x < 1`![images/c04-i0078.png]，其中某个实值 `beta`![images/c04-i0079.png]。除非另有说明，否则取 `beta=1`![images/c04-i0080.png]。
+
+在 RC 模型中，变换后的响应 `-log(1-X)`![images/c04-i0081.png) 符合具有预测变量 `-beta Z`![images/c04-i0082.png) 和与协变量无关的极值误差项的线性回归模型。即 `-log(1-X) = -beta Z + epsilon`![images/c04-i0083.png]，其中 `epsilon`![images/c04-i0084.png) 于 `Z`![images/c04-i0085.png) 且 `P(\epsilon > t) = exp(-e^t)`![images/c04-i0086.png]，$-\infty < t < \infty`![images/c04-i0087.png]。换句话说，给定 `Z=z`![images/c04-i0088.png) 时，`-log(1-X)`![images/c04-i0089.png] 服从速率为 `exp(\beta z)`![images/c04-i0090.png) 的指数分布。在图 4.2 中，我们描述了真实的回归线，以及从大小为 `n=1000`![images/c04-i0091.png] 的单个样本在截断场景 I 和 II 下通过极大似然法估计出的回归线。此处应用极大似然法时忽略了截断问题。图 4.2 显示，如果不考虑潜在的采样偏差，朴素方法可能会产生偏差。
+
+
+
+
+![图中展示了模型 `RD` 中的条件累分布函数 `F(·|0)` 和 `F(·|1)`（虚线），以及基于第 2.1.3 节中截断场景 I（左图）和 II（右图）中容量为 `n=1000` 的单样本的普通经验累分布函数 ecdf（实线）。](img/c04f001.png)
+
+图 4.1 模型 `RD` 中的条件累分布函数 ![upper F left-parenthesis dot vertical-bar 0 right-parenthesis](img/c04-i0067.png) 和 ![upper F left-parenthesis dot vertical-bar 1 right-parenthesis](img/c04-i0068.png)，以及基于第 Section 2.1.3 节 中截断场景 I（左图）和 II（右图）中容量为 ![n equals 1000](img/c04-i0069.png) 的单样本的普通经验累分布函数 ecdf（实线）。
+
+![图中展示了模型 `RC` 中变换响应 `log(-log(1-X))` 的回归线（虚线），以及基于第 2.1.3 节中截断场景 I（左图）和 II（右图）中容量为 `n=1000` 的单样本的回归线的普通极大似然估计（连续红线）。](img/c04f002.png)
+
+图 4.2 模型 `RC` 中变换响应 ![log left-parenthesis minus log left-parenthesis 1 minus upper X right-parenthesis right-parenthesis](img/c04-i0070.png) 的回归线（虚线），以及基于第 Section 2.1.3 节 中截断场景 I（左图）和 II（右图）中容量为 ![n equals 1000](img/c04-i0071.png) 的单样本的回归线的普通极大似然估计（连续红线）。
+
+在模型 `RC` 中，截断场景 II 下 ![upper Z](img/c04-i0092.png) 的采样偏差较小。这是因为 (4.1) 中的函数 ![alpha left-parenthesis z right-parenthesis](img/c04-i0093.png) 沿 ![z element-of left-bracket 0 comma 1 right-bracket](img/c04-i0094.png) 大约是恒常的，范围介于 ![alpha left-parenthesis 0 right-parenthesis equals 0.20](img/c04-i0095.png) 和 ![alpha left-parenthesis 1 right-parenthesis equals 0.25](img/c04-i0096.png) 之间。因此，在比较 ![upper Z Subscript i](img/c04-i0097.png) 的普通经验累分布与真实的均匀分布时，不会发现太大差异。
+
+由于随机双截断可能产生潜在偏差，需要对普通估计量进行适当修正。与 第 2 章 中的情况类似，可以通过降低具有较大 ![upper G Subscript n Baseline left-parenthesis upper X Subscript i right-parenthesis](img/c04-i0099.png) 值的多元观测观测值 ![left-parenthesis upper X Subscript i Baseline comma upper Z Subscript i Baseline right-parenthesis](img/c04-i0098.png) 的权重来构造无偏估计量。例如，当 ![upper Z](img/c04-i0100.png) 为离散的时，点 ![x](img/c04-i0102.png) 处的条件累分布 ![upper F left-parenthesis dot vertical-bar z right-parenthesis](img/c04-i0101.png) 由以下公式进行一致估计：
+
+(4.2)![upper F Subscript n Baseline left-parenthesis x vertical-bar z right-parenthesis equals StartFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i Baseline less-than-or-equal-to x, upper Z Subscript i Baseline equals z right-parenthesis upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1 Baseline Over sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper Z Subscript i Baseline equals z right-parenthesis upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1 Baseline EndFraction](img/c04-math-0002.png)
+
+![left-parenthesis 4.2 right-parenthesis](img/c04-i0103.png) 中的分子在通过权重和 ![sigma-summation Underscript i equals 1 Overscript n Endscripts upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis] 进行归一化后，可以视为 ![upper P left-parenthesis X less-than-or-equal-to x, upper Z equals z right-parenthesis](img/c04-i0104) 的估计量。当 ![upper Z](img/c04-i006.png) 是事件类型时，这种归一化量估计的是分布，正如 de Uña (2020) 所研究。估计量 (4.2) 通过相同的权重序列充分利用了 ![left-parenthesis X right-parenthesis](img/c04-i007.png) 与 ![left-parenthesis X comma upper V right-parenthesis](img/c04-i008.png) 之间的独立性。在较弱的 ![left-parenthesis X right-parenthesis](img/c04-i010.png) 与 ![left-parenthesis X comma upper V right-parenthesis](img/c04-i011.png) 条件独立假设下，条件累分布 ![upper F left-parenthesis vertical-bar z right-parenthesis](img/c04-i012.png) 仍然可以被一致估计，代价是方差较大。显然，这种条件 IPLE 使用了某些条件权重。在实践中，可以通过绘制若干 z 值的 ![upper G left-parenthesis vertical-bar z right-parenthesis](img/c04-i016.png) 来图形评估无条件权重 (4.2) 的一致性，观察它们之间是否存在系统性偏差。
+
+对于可能包含连续和离散分通用协变量向量 ![upper Z](img/c04-i019.png)，de Uña 和 Van Kegom (2021) 研究了一种通用估计策略。具体而言，解决了泛泛函 ![upper S Superscript phi Baseline equals integral normal d F Subscript Z Baseline](img/c04-i020.png) 的估计，其中 ![upper F Subscript Z Baseline right-parenthesis](img/c04-i021.png) 表示 ![left-parenthesis X comma upper Z right-parenthesis](img/c04-i022.png) 的累分布。考虑加权平均：
+
+(4.3)![upper S Subscript n Superscript phi Baseline equals StartFraction sigma-summation Underscript i equals 1 Overscript n Endscripts phi left-parenthesis upper X Subscript i Baseline comma upper Z Subscript i Baseline right-parenthesis upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1 Baseline Over sigma-summation Underscript i equals 1 Overscript n Endscripts upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1 Baseline EndFraction](img/c04-math-0003.png) ![图中展示了根据 SNP10398（左图）和 PGC-1a（右图）提供的遗传信息的诊断年龄条件累分布，由 (4.2) 计算。晚发组。](img/c04f003.png)
+
+图 4.3（帕金森病数据，示例 4.1.1）。
+
+
+
+
+
+估计器 `images/c04-i0123.png` 被 de Uña‐Álvarez 和 Van Keilegom (2021) 称为*带有协变量的 Efron–Petrosian 积分*，它将 第 2.1.3 节 中的经验泛函推广到了多变量情景。当 `images/c04-i0124.png` 为指示函数 `images/c04-i0125.png` 时，`images/c04-i0126.png` 为 `images/c04-i0127.png` (*x, z*) 的估计器（或者通俗地说，为 `images/c04-i0128.png` (*x, z*)），其边缘分布可用于估计 `images/c04-i0129.png` 和 `images/c04-i0130.png` 的累积分布函数 (cdf)。`images/c04-i0131.png` 的第一个边缘分布就是 第 2 章 中的 Efron–Petrosian NPMLE，而第二个边缘分布通过精确使用对应该 NPMLE 的质量，克服了协变量上的潜在采样偏差。
+
+(4.3) 的另一种写作方式是 `images/c04-i0132.png`，带有 `images/c04-i0133.png` 甚至是 `images/c04-i0134.png`；请参见 第 2 章 关于过程 `images/c04-i0135.png` 的定义及其主要属性。接下来的结果形式化了 (4.3) 的渐近性质。证明过程可于 de Uña‐Álvarez 和 Van Keilegom (2021) 中找到。
+
+定理 4.1.2 和 推理 4.1.3 的直接应用是 `images/c04-i0142.png` 和 `images/c04-i0143.png` 均值的估计与推断、`images/c04-i0144.png` 与 `images/c04-i0145.png` 分量之间的协方差、二元分布 `images/c04-i0146.png`、对应于 `images/c04-i0147.png` 离散部分的 `X` 条件 cdf，以及 `images/c04-i0148.png` 和 `images/c04-i0149.png` 的边缘 cdf。通过结合特定的 `images/c04-i0151.png` 函数，所有这些量都可以很容易地写成依赖于 `images/c04-i0150.png` 类型的泛函。条件 cdf 已经在 示例 4.1.1 中过说明。其他一些目标在后续示例中被考虑。
+
+## 4.2 比例风险回归
+
+生存分析中应用广泛的回归模型是 Cox 比例风险模型，它利用了 第 3.6 节 中引入的风险函数。Cox 模型（例如 Klein 和 Moeschberger (2003)）表明不同协变量值对应的风险函数之间相互成比例。更具体地说，令 `images/c04-i0167.png` 为基准风险函数，令 `images/c04-i0168.png` 为回归系数向量。那么，在 Cox 模型下，给定 `images/c04-i0170.png` 时 `images/c04-i0169.png` 的条件风险为：
+
+```
+lambda(x|z) = lambda0(x) exp(beta^T z)
+```
+(images/c04-math-0007.png)。因此，`images/c04-i0171.png` 是风险率，用于比较具有协变量 `images/c04-i0172.png` 的个体与具有基准风险的个体。
+
+Mandel 等人 (2018) 针对双截断下的模型 (4.4) 提出了以下估计方程：
+
+```
+U(beta) = sum_{i=1 to n} [Zi - sigma * sum_{j=1 to n} exp(beta^T Zj) * I(Xi >= Xi)] = 0
+```
+(images/c04-math-0008.png)。注意，当不存在观测偏差（即 `images/c04-i0173.png` 为常数）时，方程 (4.4) 的解等于通常 Cox 偏似然函数的极大值（Klein 和 Moeschberger, 2003）。在随机双截断的一般设定下，(4.3) 的依据由以下给出给出该结果由 Mandel 等人 (2018) 指出。隐含假设 `images/c04-i0174.png` 与 `images/c04-i0175.png` 相互独立。
+
+
+
+
+
+除了 (C1)–(C3) 之外，Mandel 等人 ((2018) 中的结果基于两个假设：![a Subscript n](img/c04-i0181.png) 的一致弱一致性，以及过程 ![StartRoot n EndRoot left-parenthesis a Subscript n left-parenthesis x right-parenthesis minus a left-parenthesis x right-parenthesis right-parenthesis](img/c04-i0182.png) 的渐近表示，其中 ![a Subscript upper X Baseline less-than-or-equal-to x less-than-or-equal-to b Subscript upper X](img/c04-i0183.png)。有趣的是，这两个假设在 Section 2.1.3 中的假设 (A1)–(A4) 下均成立；参见 Theorem 2.1.12。
+
+Rennert 和 Xie (2018) 为具有双重截断数据的比例风险模型提出了一种替代估计方法。这种替代方法将 (4.5) 中的项通过 ![upper G Subscript n left-parenthesis upper X Subscript i right-parenthesis) Superscript negative 1](img/c04-i0186.png) 进行加权。这些额外的权重对于一致性而言并不是必需的，而且正如 de Uña‐Álvarez (2020b) 所指出的，它们可能导致标准误差大于 (4.5) 解对应的标准误差；另请参见 Vakulenko‐Lagun 等人 (2020) 以进行进一步的对比分析。
+
+一旦计算了经验采样概率 ![upper G Subscript n left-parenthesis upper X Subscript i right-parenthesis](img/c04-i0187.png)，就可以使用 `survival` 库中著名的 `coxph` 函数在 `R` 中轻松计算评分方程 (4.5) 的解。具体而言，转换后的权重 ![minus log left-parenthesis upper G Subscript n left-parenthesis upper X Subscript i right-parenthesis right-parenthesis](img/c04-i0188.png) 必须作为 `offset` 项包含在 `coxph` 函数中。然而，由于权重是随机的，这种方法得到的标准误差和 p 值不再有效。在实践中，建议应用简单自助法（参见 Definition 2.1.20）；本节的真实数据插图中使用了简单自助法。
+
+|  |  |  | ![n equals 100](img/c04-i0194.png) |  |  | ![n equals 500](img/c04-i0195.png) |  | |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  Bias | SD | MSE |  Bias | SD | MSE |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| RD | ![Gold](img/c04-i0196.png) | 0.0234 | 0.2246 | 0.0510 | 0.0032 | 0.1012 | 0.0102 |
+|  | ![Naive](img/c04-i0197.png) | ![negative 0.1178](img/c04-i0198.png) | 0.2226 | 0.0634 | ![negative 0.1225](img/c04-i0199.png) | 0.0976 | 0.0245 |
+|  | ![Correct](img/c04-i0200.png) | 0.1225 | 0.7751 | 0.6158 | 0.0121 | 0.1716 | 0.0296 |
+| RC | ![Gold](img/c04-i0201.png) | 0.0277 | 0.3804 | 0.1455 | 0.0017 | 0.1696 | 0.0288 |
+|  | ![Naive](img/c04-i0202.png) | ![negative 0.0973](img/c04-i0203.png) | 0.3835 | 0.1565 | ![negative 0.1227](img/c04-i0204.png) | 0.1587 | 0.0403 |
+|  | ![Correct](img/c04-i0205.png) | 0.1946 | 1.0715 | 1.1860 | 0.0077 | 0.2239 | 0.0502 |
+
+Table 4.1 (RD 和 RC 模型，Example 4.2.3)。对应于比例风险模型 RD 和 RC、截断场景 II，以及 1000(images/c04-i0193) 次蒙特卡洛试验的结果。回归系数估计值的偏差 (Bias)、标准差 (SD) 和均方误差 (MSE)。
+
+|  | 早发 | 晚发 |
+| --- | --- | --- |
+| SNP |  Estimate | Std.err | ![p](img/c04-i0211)‐value |
+| SNP |  Estimate | Std.err | ![p](img/c04-i0212)‐value |
+| --- | --- | --- | --- |
+| SNP |  Estimate | 0.4090 | 0.2644 | 0.5988 | 0.3228 |
+| P
+1a | 0.1439 | 0.2044 | 0.4815 | ![negative 1.1226](img/ 0004- | |2 | | |00222 | | | | |1 |1100000200000000000 |0000000000000333 | | 0.099 | 0.0389 |
+
+Table 4.2 (帕金森病数据，Example 4.2.4) 比例风险模型帕帕金森森数据，发发和晚发。。  0000(/004-i011)自助自助自助自助自助标准标准。
+
+
+
+ 4.3 加速生存回归
+
+加速生存时间 (AFT) 回归模型通常被引入对数线性模型 (Klein 和 Moeschberger, 2003)。具体而言，假设转换后的响应 ![log X](img/c04-i016)可以通过线性方程 ![beta](img/c04-i017) 进行预测，其中向量 ![Z](img/c04-i018) 的第一个元素恒等于 1，因此回归系数向量 ![beta](img/c04-i019) 的第一个元素是截距。形式上，假设
+
+(4.6)![log X equals beta plus sigma](img/c04-math-010)
+
+其中 ![epsilon](img/c04-i020) 是一个与协变量向量 ![Z](img/c04-i021) 独立的随机误差项，而 ![sigma](img/c04-i022) 是尺度参数。AFT 模型的另一种表示为 (4.6) ![S(x|z) = S0(x exp(-beta))](img/c04-i023)，![a less-than-or-equal-to x less-than-or-equal-to b](img/c04-i024)，其中 ![S(dot|z)](img/c04-i025) 是给定 ![Z equals z](img/c04-i026) 时 ![X](img/c04-i027) 的条件生存函数，而 ![S 0](img/c04-i028) 是基准生存，它只是变换误差 ![exp(sigma epsilon)](img/c04-i029) 的生存函数。项 ![exp(-beta z)](img/c04-i030) 称为加速因子，改变了基准时间。
+
+半参数 AFT 模型未指明 ![epsilon](img/c04-i031) 在 (4.6) 中的分布。半参数设置下，![beta](img/c04-i032) 的估计可以通过最小二法进行。然而，在随机双重截断下，由于采样偏差，普通最小二法是不一致的。考虑双重截断的加权最小二法准则给出：
+
+(4.7)![S(beta) = sigma-summation Underscript i equals 1 Overscript n Endscripts [bracket log(Xi) - beta Zi]right-bracket squared G(Xi) Superscript negative 1 Baseline period](images/c04-math-0011.png)
+
+
+
+
+当然，这个想法也适用于对数以外的变换，甚至适用于未转换的响应变量。当 ![left-parenthesis upper U comma upper V right-parenthesis](img/c04-i0233.png) 和 ![left-parenthesis upper X comma upper Z right-parenthesis](img/c04-i0234.png) 独立时，根据 Section 4.1 中的结果，可以立即得到(4.7 中最小值的一致性以及向正分布的分布收敛。de Uña‐Álvarez 和 Van Keilegom (2021) 对此进行了详细说明，他们讨论了该理论对于可能的非线性预测以及 M 估计的扩展。随机加权回归在其他信息不完全的情况下也被考虑过；例如，对于右删数据参考 Stute (1999)，或者对于一般的偏偏采样模型参考 de Uña‐Álvarez (2003)。这些设置中的每一个都需要特定的权重序列来替换(4.7 中的 ![upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1](img/c04-i0235.png)。
+
+AFT 模型(4.6 传统上更多用于指定了误差分布的完全参数设置。在这种情况下，可以进行极大似然估计。Dörre 等人 (2021) 最近提供了随机双截断下参数化方法的细节。在参数化回归设置中，假设截断变量在协变量 ![upper Z](img/c04-i0237.png) 的条件下独立于 ![upper X](img/c04-i0236.png)，这比 ![left-parenthesis upper U comma upper V right-parenthesis](img/c04-i0238.png) 和 ![left-parenthesis upper X comma upper Z right-parenthesis](img/c04-i0239.png) 之间的独立性要弱。条件独立假设也用于 Ying 等人 (2020) 中的替代方法，他们提出了一种基于可比较对的 Mann–Whitney 类型估计方程，从而消除了可能的截断偏误。在几年里，引入了其他针对双截断响应的回归分析方法，涵盖所有方法将需要更长的章节。
+
+在 Section 4.2 中研究的比例风险模型与多元线性回归之间存在着有趣的联系。具体来说，在(4.4 下，成立 ![log left-parenthesis normal upper Lamda 0 left-parenthesis upper X right-parenthesis right-parenthesis equals minus beta Superscript t upper Z plus epsilon](img/c04-i0254.png)，其中 ![normal upper Lamda 0](img/c04-i0255.png) 是累积基风险，![epsilon](img/c04-i0256.png) 是独立于协变量的极值变量。这一通用性质特别表明，只要使用 ![log left-parenthesis minus log left-parenthesis 1 minus upper X right-parenthesis right-parenthesis](img/c04-i0257.png) 处理响应，回归模型 `RD` 和 `RC` 均符合线性回归设置。
+
+![图表左图显示了模型 RC 中 β=-1 时（虚线）变换后的 log(-log(1-X)) 响应变量的回归线，以及基于第 2.1.3 节中截断场景 II 规模为 n=1000 的单个样本的普通极大似然估计回归线（红色实线）。右图显示了模型 RD 中 β=-1 时（虚线）的条件 cdf F(·|0) 和 F(·|1)，以及基于第 2.1.3 节中截断场景 II 规模为 n=1000 的单个样本的普通 ecdf（实线）。](img/c04f005.png)
+
+Figure 4.5 (带有模拟场景 II 的 RD 和 RC 模型，Example 4.3.1)。左图：模型 `RC` 中当 ![beta equals negative 1](img/c04-i0293.png) 时，变换后的响应 ![log left-parenthesis minus log left-parenthesis 1 minus upper X right-parenthesis right-parenthesis](img/c04-i0292.png) 的回归线（虚线），以及基于第 2.1.3 节截断场景 II 中规模为 ![n equals 1000](img/c04-i0294.png) 的单个样本的普通极大似然估计回归线（红色实线）。右图：模型 `RD` 在 ![beta equals negative 1](img/c04-i0297.png) 时（虚线）的条件 cdf ![upper-parenthesis dot-bar 0 right-parenthesis](img/c04-i0295.png) 和 ![upper-parenthesis dot-bar 1 right-parenthesis](img/c04-i0296.png)，以及基于第 2.1.3 节截断场景 II 中规模为 1000 的单个样本的普通 ecdf（实线）。
+
+
+
+
+
+非参数回归技术旨在估计回归函数 ![m left-parenthesis z right-parenthesis equals upper E left-bracket upper X vertical-bar upper Z equals z right-bracket](img/c04-i0309.png)，而无需对响应变量 ![upper X](img/c04-i0310.png) 与协变量向量 ![upper Z](img/c04-i0311.png) 之间的关系施加任何参数或半参数化结构。因此，它们在概念上与 第 4.2 节 和 第 4.3 节 中回顾的方法不同，后者分别是基于比例风险假设或加速失效时间结构的。
+
+非参数方法允许在建立任何合理的模型之前，先进行初步的或探索性的数据分析。从另一个角度来看，非参数程序用于在不假设可能损害推理的预设结构的情况下，获得目标总体的结论。存在多种非参数回归方法。在本节中，我们重点关注核平滑法，它已经在 第 3 章 中用于非参数化估计 ![upper X](img/c04-i0312.png) 的概率密度函数 (pdf) 和风险函数，并且可以很容易扩展到估计 ![m left-parenthesis z right-parenthesis](img/c04-i0313.png) (Wand and Jones, 1995; Härdle et al., 2004)。由于“维度灾难”（curse of dimensionality），这是非参数回归的主要缺点之一，我们关注一维（连续）协变量 ![upper Z](img/c04-i0314.png)的情况。具有高维协变量的非参数回归估计收敛速度可能缓慢，其应用需要谨慎。具有左截断响应变量的核回归方法在文献中已得到深入研究；例如 Ould-Saïd 和 Lemdani (2006),Liang 等人 (2011) 及其参考文献。在这里，我们考虑此类程序在双截断设置下的扩展。
+
+![图展示了普通最小二法抛物拟合（蓝线）和加权拟合（红线）。](img/c04f006.png)
+
+图 4.6 (艾滋病输血数据，示例 4.3.2)）。普通最小二法抛物拟合（蓝线）和加权拟合（红线）。
+
+当 ![left-parenthesis upper U comma upper V right-parenthesis](img/c04-i0315.png) 于 ![left-parenthesis upper X comma upper Z right-parenthesis](img/c04-i0316.png) 时，给定 ![upper Z](img/c04-i0318.png) 的 ![upper X](img/c04-i0317.png) 可观测条件累积分布函数 (cdf) 为：
+
+```
+![upper F Superscript asterisk Baseline left-parenthesis x vertical-bar z right-parenthesis equals alpha left-parenthesis z right-parenthesis Superscript negative 1 Baseline integral Subscript a Subscript upper X Baseline Superscript x Baseline upper G left-parenthesis t right-parenthesis upper F left-parenthesis normal d t vertical-bar z right-parenthesis](img/c04-math-0012.png)
+```
+
+其中回想起 ![alpha left-parenthesis z right-parenthesis](img/c04-i0319.png) 代表无截断的条件概率，即 ![alpha left-parenthesis z right-parenthesis equals upper P left-parenthesis ...-right-parenthesis](img/c04-i0320.png)。反之，
+
+```
+(4.8)![upper F left-parenthesis x vertical-bar z right-parenthesis equals alpha left-parenthesis z right-parenthesis integral Subscript a Subscript upper X Baseline Superscript x Baseline upper G left-parenthesis t right-parenthesis Superscript negative 1 Baseline upper F Superscript asterisk Baseline left-parenthesis normal d t vertical-bar z right-parenthesis](img/c04-math-0013.png)
+```
+
+其中 ![alpha left-parenthesis z right-parenthesis equals left-parenthesis integral Subscript a Subscript upper X Baseline Superscript b Subscript upper X Baseline Baseline upper G left-parenthesis t right-parenthesis Superscript negative 1 Baseline upper F Superscript asterisk Baseline left-parenthesis normal d t vertical-bar z right-parenthesis right-parenthesis) Superscript negative 1](img/c04-i0321.png)。公式 (4.8) 是 第 2.1 节 中 等 (2.8) 的条件类似形式，是推导回归函数一致估计量的关键。由于 (4.8)，目标 ![m left-parenthesis z right-parenthesis](img/c04-i0322.png) 可以写为：
+
+```
+(4.9)![upper F left-parenthesis x vertical-bar z right-parenthesis equals alpha left-parenthesis z right-parenthesis integral Subscript a Subscript upper X Baseline Superscript x Baseline upper G left-parenthesis t right-parenthesis Superscript negative 1 Baseline upper F Superscript asterisk Baseline left-parenthesis normal d t vertical-bar z right-parenthesis](img/c04-math-)
+```
+
+通过在 [(4.9)] 的分子和分母中代入 Nadaraya–Watson 型平滑器（Wand and Jones, 1995; Härdle et al., 2004)），并用 ![upper G Subscript n](img/c04-i0323.png) 代替 ![upper G](img/c04-i0324.png)，得到：
+
+```
+(4.10)![m Subscript n left-parenthesis z right-parenthesis equals StartFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis z minus upper Z Subscript i Baseline right-parenthesis upper X Subscript i Baseline upper G Subscript n left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1 Baseline Over sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis z minus upper Z Subscript i Baseline right-parenthesis upper G Subscript n left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1 Baseline EndFraction](img/c04-math-0015)
+```
+
+在这里，与 第 3 章 类似，![upper L Subscript h left-parenthesis dot right-parenthesis equals upper L left-parenthesis dot slash h right-parenthesis slash h](img/c04-i0325.png) 表示重标核函数，![h](img/c04-i0326.png) 是带宽或平滑参数。注意，为了得到 [(4.10)],给定 ![upper Z equals z](img/c04-i0327.png) 的无截断条件概率估计为
+
+```
+![StartLayout 1st Row 1st Column alpha Subscript n left-parenthesis z right-parenthesis equals StartFraction sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis z minus upper Z Subscript i Baseline right-parenthesis upper X Subscript i Baseline upper G Subscript n left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1 Baseline Over sigma-summation Underscript i equals 1 Overscript n Endscripts upper L Subscript h left-parenthesis z minus upper Z Subscript i Baseline right-parenthesis upper G Subscript n left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1 Baseline EndFraction period 2nd Column Blank 3rd Column Blank EndLayout](img/c04-math-0016.png)
+```
+
+
+
+
+
+当不存在截断或当采样概率 ![images/c04-i0328.png] 为常数时，估计量 (4.10) 简化为标准的 Nadaraya–Watson 估计。然而通常情况下，需要权重 ![images/c04-i0329.png] 来克服潜在的采样偏差；进一步讨论请参见 Moreira 等人 (2016)。
+
+Nadaraya–Watson 估计是局部多项式回归的一种特例，其通过对数据局部拟合次数为 ![images/c04-i0330.png] 的项式来实现。具体而言，令 ![images/c04-i0331.png] 为加权平方和的最小化器
+
+```
+![images/c04-math-0017.png]
+```
+
+那么，![images/c04-i0332.png] 是 ![images/c04-i0333.png] 的局部多项式估计量，并适用于双截断设置。当 ![images/c04-i0334.png] 时，估计量 ![images/c04-i0335.png] 被局部局部估计量，并与 Nadaraya–Watson (4.10) 一致。当 ![images/c04-i0336.png] 时，得到局部线性估计量；其显式表达式为
+
+```
+(4.11)![images/c04-math-0018.png]
+```
+
+其中 ![images/c04-i0337.png], ![images/c04-i0338.png]。在随机采样的标准设置下，由于 ![images/c04-i0339.png] 相比 ![images/c04-i0340.png] 偏差更小且边界适应更强，通常更倾向于使用前者，且在随机截断下也能发现相同的行为。感兴趣的读者可以在 Fan 和 Gijbels (1996)、Wand 和 Jones (1995) 或 Härdle 等人 (2004) 中找到关于局部多项式回归的更多细节。
+
+当 ![images/c04-i0341.png] 替换为真实的底层 ![images/c04-i0342.png] 时，可以通过标准论证研究 (4.10) 和 (4.11) 的渐近性质。令 ![images/c04-i0343.png] 和 ![images/c04-i0334.png] 表示此类渐近版本。正如 第 3 章 所示，可以认为 ![images/c04-i0345.png] 和 ![images/c04-i0346.png] 均依概率收于零，因此 ![images/c04-i0347.png] 和 ![images/c04-i0348.png] 的渐近偏差和方差是局部局部和局部线性估计量性能的有效衡量。这些测量的渐近表达式在以下结果给出。
+
+定理 4.4.1 表明双截断不影响非参数回归中的渐近偏差，因为均值公式与随机采样的公式对应。出现在 Nadaraya–Watson 估计量中的额外偏差项 ![images/c04-i0363.png] 是导致其与局部线性估计量相比性能较差的原因。另一方面，双截断会影响方差项；在随机采样下，![images/c04-i0364.png] 简化为 ![images/c04-i0365.png]。有趣的是，![images/c04-i0366.png] 可能大于或小于 ![images/c04-i0367.png]，这表明双截断导致了 ![images/c04-i0368.png] 周围更多或更少的采样。这与全书中关于其他目标估计量的报告相似。
+
+
+
+
+
+在实践中，一旦计算出采样概率 ![upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis](img/c04-i0371.png), ![1 less-than-or-equal-to i less-than-equal-to n](img/c04-i0372.png)，就可以使用标准的非参数回归软件轻松计算 ![m Subscript n Baseline left-parenthesis z right-parenthesis](img/c04-i0369.png) 和 ![m Subscript left-parenthesis 1 right-parenthesis comma n Baseline left-parenthesis z right-parenthesis](img/c04-i0370.png)。例如，在 `sm.regression{sm}` 函数的 `weights` 选项中使用 ![upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis Superscript negative 1](img/c04-i0373.png)，可以获得正确的估计。至于平滑参数 ![h](img/c04-i0374.png) 的选择，Moreira 等人 (2016) 将 Härdle 和 Marron (1995) 的直接插入法和交叉验证思想引入了双截断设置。这些作者通过仿真表明，带宽选择器的性能良好，且它们的相对性能取决于所采用的回归估计器和特定场景。以下示例中同时应用了直接插入带宽和交叉验证带宽。请注意，正如平滑密度估计的情况一样，如果回归曲线沿协变量范围内表现出不同程度的平滑性，那么考虑全局平滑参数可能是不够的。在这种情况下，局部适应程序（例如基于近邻思想的方法）可能是一个备选项（参见 Fan 和 Gijbels (1996) 第 4.2.1 节）。
+
+![图展示了 AIDS 血输数据的非参数回归平滑器。左图：局部线性估计器。右图：Nadaraya–Watson（局部常数）估计器。红线：DPI 带宽。蓝线：CV 带宽。细黑线对应基于 DPI 带宽且忽略双截断的简单估计器。灰线对应在带宽从 5 到 25、步长为 2 的网格上计算的估计器。](img/c04f007.png)
+
+图 4.7 (AIDS 血输数据。示例 4.4.2。AIDS 血输数据的非参数回归平滑器。左图：局部线性估计器。右图：Nadaraya–Watson（局部常数）估计器。红线：DPI 带宽。蓝线：CV 带宽。细黑线对应基于 DPI 带宽且忽略双截断的简单估计器。灰线对应在带宽从 5 到 25、步长为 2 的网格上计算的估计器。
+
+## 4.5 示例的 R 代码
+
+接下来将介绍用于回归问题的示例代码。
+
+### 4.5.1 示例 4.1.1 代码
+
+我们提供了计算帕金森病数据中诊断年龄条件累积分布函数 (cdf) 的代码，取决于 SNP10398 提供的遗传信息（可以为 PGC-1a 构建类似的代码）。我们将使用 `DTDA` 和 `DTDA.cif` 包。
+
+可以使用以下代码行绘制条件 cdf。
+
+### 4.5.2 示例 4.1.4 代码
+
+下面的代码展示了绘制感染年龄（协变量 ![upper Z](img/c04-i0377.png)）的经验累积分布函数 (ecdf) 以及 ![left-parenthesis upper X comma upper Z right-parenthesis](img/c04-i0378.png) 二元分布相应边缘分布的代码。
+
+### 4.5.3 示例 4.2.4 代码
+
+可以基于 `Survival` 包中的 `coxph` 函数进行比例风险回归。表 4.2 中的结果可以通过以下代码重现。
+
+### 4.5.4 示例 4.3.2 代码
+
+使用抛物模型将 AIDS 潜伏期与感染年龄联系，对 AIDS 血输数据拟合 AFT 模型。
+
+### 4.5.5 示例 4.4.2 代码
+
+关于非参数估计，考虑 `DTDA` 中的 AIDS 数据集并使用库 `sm` 中的 `sm.regression` 函数计算平滑估计器（局部线性和局部常数，`poly.index = 0`）。
+
+绘制结果（局部线性和局部常数估计器，使用 DPI 和 CV 带宽，以及未校正估计器）的代码见下文。
+
+## 参考文献
+
+1. de Uña-Álvarez J 2003 Large sample results under biased sampling when covariables are present. Statistics & Probability Letters **63**, 287–293.
+
+2. de Uña-Álvarez J 2020a Nonparametric estimation of the cumulative incidences of competing incidences.
+
+3. de Uña ‘‘Álvarez J 2020b `R` packages for the statistical analysis of doubly truncated.
+
+4. de Uña ‘‘Álvarez J 2020b `R` packages for the statistical analysis of doubly truncated. (Note: Duplicate entry in source text or reference to 2020b)
+
+5. *arXiv 2004.0897*.
+
+6. Fan, J, Gijbels I 1996 Local Polynomial Modelling and its Applications.
+
+7. Härdle W, Marron J 1995 Fast and simple scatterplot.
+
+8. Härdle W, Müller M, Sperlich, Werwatz A 2004 Nonparametric and Semiparametric Models.
+
+9. Klein JP, Moeschberger ML 2003 Survival Analysis. Techniques for Censored and Truncated Data (2nd Edition).
+
+10. Liang HY, de Uña ‘‘lvarez J, Iglesias ‘‘Pérez MC 2011 Local polynomial estimation of a conditional mean function with dependent truncated.
+
+11. Mandel M, de Uña ‘‘lvarez J, Simon DK, Betensky RA 2018 Inverse probability weighted Cox regression for doubly truncated.
+
+12. Moreira C, de Uña-lvarez J, Meira-Machado L 2016 Nonparametric regression with doubly truncated.
+
+13. Ould ‘‘Saïd E, Lemdani M 2006 Asymptotic properties of a nonparametric regression estimator with randomly truncated.
+
+14. Rennert L, Xie SX 2018 Cox regression model with doubly truncated.
+
+15. Stute, W 1999 Nonlinear censored regression.
+
+16. Vakulenko ‘‘Lagun B, Mandel M, Betensky RA 2020 Inverse probability weighting methods for Cox regression with right‐truncated.
+
+17. Wand MP, Jones MC 1995 Kernel Smoothing, Chapman & Hall.
+
+18. Ying Z, Yu W, Zhao Z, Zheng M 2020 Regression analysis of doubly truncated.
+
+
+
+
+
+在本章中，我们考虑了与双重截断数据分析相关的若干额外主题。一个重要问题是经典的双样本检验如何适应潜在的采样偏倚。在第 5.1 节中，我们将看到普通方法在双截断下可能表现良好，特别是当所比较组的截断模式相同时。我们将讨论经典双样本检验可能失效的特殊设置。第 5.2 节专注于生存分析和可靠性中备受关注的竞争风险设定，其中存在多种事件类型。在这里我们处理两个相关目标：与竞争风险过程相关的累积发生函数的非参数估计，以及研究协变量对特定原因风险率（或转移强度）影响的回归方法。在这两种情况下，都必须对事件时间进行加权处理以纠正采样偏倚，这与之前的章节类似。
+
+当 ![upper X](img/c05-i0001.png) 和 ![left-parenthesis upper U comma upper V right-parenthesis](img/c05-i0002.png) 依赖时，Efron–Petrosian 非参数极大似然估计（NPMLE）的一致性无法无法。那么，关键问题在于检测并纠正截断变量与目标之间可能的依赖性。这些主题分别在第 5.3 节和 5.4 节中涵盖。更具体地说，第 5.3 节回顾了基于关联测量的准独立性检验，并将其应用于模拟和真实数据示例。另一方面，为了使 Efron–Petrosian NPMLE 适应可能的依赖截断，采用了基于 Copula（Copula）函数的方法。在第 5.4 节中，我们将看到处理依赖双重截断并非易事，且编写时的可用方法将我们限制在区间采样场景中。这是目前一个令人兴奋的研究领域，其中仍存在许多开放性问题；其中包括 Copula 的选择问题以及纠正后 NPMLE 理论性质的形式推导。
+
+## 5.1 双样本问题
+
+在第 2 章中，我们回顾了在截断方案下估计目标变量 ![upper X](img/c05-i0003.png) 分布的适当工具。当 ![upper X](img/c05-i0004.png) 可能受到某个分类协变量的影响时，评估分布之间可能的差异可能很有意义。我们将问题限制在双样本问题上，提供简要的文献综述，并通过模拟和真实数据分析说明经典的基于秩的检验可能如何受到截断的影响。
+
+具体而言，目标是检验 ![upper H 0 colon upper F 1 equals upper F 2](img/c05-i0005.png) 对于 ![upper H Subscript a Baseline colon upper F 1 not-equals upper F 2](img/c05-i0006.png)，其中 ![upper F Subscript j](img/c05-i0007.png) 是组 ![j](img/c05-i0009.png) 中目标变量 ![upper X](img/c05-i0008.png) 的累积分布函数（cdf），![j equals 1, 2](img/c05-i0010.png)。在非截断场景下，Mann 和 Whitney ( [1947) ) 以及 Wilcoxon ( [1945) ) 根据观测秩提出了经典检验，这些秩指示了在合并有序序列中 ![upper X](img/c05-i0011.png) 值的位置。Mann–Whitney 统计量也可以作为属于两组的风险函数之间的加权差来引入。具体来说，考虑
+
+```
+(5.1)![upper U Subscript Baseline equals integral w Subscript n Baseline left-parenthesis t right-parenthesis normal d left-parenthesis normal upper Lamda Subscript 1, n Baseline minus normal upper Lamda Subscript 2, n Baseline right-parenthesis left-parenthesis t right-parenthesis comma](img/c05-math-0001.png)
+```
+
+其中 ![w Subscript n](img/c05-i0012.png) 是加权函数，![normal upper Lamda Subscript j comma n](img/c05-i0013.png) 表示从 ![j](img/c05-i0014.png) 计算出的经验累积风险率。在随机采样下，它由 ![normal upper Lamda Subscript j comma n left-parenthesis t right-parenthesis equals sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis--sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis) left-parenthesis---sigma-summation Underscript i equals 1 Overscript n Endscripts upper I left-parenthesis upper X Subscript i less-than-or-equal-to t comma upper Z Subscript i equals j right-parenthesis)
+
+
+
+
+统计量 `(5.1)` 被 Shen (2013) 针对双截断数据进行了扩展，他建议将常用的 Nelson–Aalen 累积风险 ![images/c05-i0024.png) 替换为属于 Efron–Petrosian NPMLE 的。此处一个有趣的问题是，这种方法是否优于标准的 Mann–Whitney 检验。一方面，正如前面的章节所示，双截断分布的恢复通常受到较大方差的影响，这可能在检验组间差异时导致统计效能损失。另一方面，即使标准的 Nelson–Aalen 估计量在双截断下可能存在系统性偏差，距离 `(5.1)` 的极限对于偏差风险率可能比真实风险率更大，这建议不要应用任何校正。关于第一类错误，请注意，当所比较组共享相同的采样概率 ![images/c05-i0025.png) 时，通常的 Mann–Whitney 程序是良好校准的，因为在这种情况下，截断累积分布函数在零假设下一致 ![images/c05-i0026)。为了说明这些方面，我们在接下来的示例中分析截断模式如何影响经典 Mann–Whitney 检验的校准和效能。
+
+对前面的示例进行总结，我们可以得出：当两个总体具有相同的采样概率 ![images/c05-i0118.png) 时，任何经典的双样本检验通常都能提供合理的结果。实际上，当两组共享 ![images/c05-i0119.png) 时，没有理由假设适用于双截断的检验会有更好的表现。正如提到的，估计 ![images/c05-i0120.png) 引入了额外的变异，可能导致统计效能减小。更有甚，偏差累积分布函数 ![images/c05-i0121.png) 与 ![images/c05-i0122.png) 之间的偏可能大于 ![images/c05-i0123.png) 与 ![images/c05-i0124.png) 之间的差异；如果是这样，经典检验将比相应的双截断校正检验更有效。
+
+| 密度 ![images/c05-i0102.png]: | ![images/c05-i0103.png) | ![images/c05-i0104.png) | ![images/c05-i0105.png) |
+| --- | --- | --- | --- |
+| 水平 | ![images/c05-i0106.png) | ![images/c05-i0107.png) | ![images/c05-i0108.png) | ![images/c05-i0109.png) | ![images/c05-i0110.png) | ![images/c05-i0111.png) |
+| 0.01 | 0.016 | 0.013 | 0.011 | 0.072 | 0.029 | 0.144 |
+| 0.05 | 0.059 | 0.071 | 0.054 | 0.180 | 0.104 | 0.302 |
+| 0.10 | 0.106 | 0.135 | 0.116 | 0.280 | 0.165 | 0.423 |
+
+表 5.2 示例 5.1.2。针对 ![images/c05-i0094.png) 的 Mann–Whitney 检验在 第 2.1.3 节 中模拟场景 I（针对 *F[1]*)）和 II（针对 *F[2]*)）中的性能，其中 *f[1]* 在 (0,1) 上均匀分布，且 ![images/c05-i0095.png) 正比于 ![images/c05-i0096.png)（左）且 ![images/c05-i0097.png) 远离 ![images/c05-i0096.png)。
+
+表 5.2 密度 ![images/c05-i0102.png)：针对 ![images/c05-i0094.png) 的 Mann–Whitney 检验在 第 2.1.3 节 中模拟场景 I（针对 *F[1]*)）和 II（针对 *F[2]*)）中的性能，其中 *f[1]* 在 (0,1) 上均匀分布 ...（为了简洁起见，此处已截断，但遵循逻辑）...
+
+在接下来的示例中，我们将在实际设置下说明双截断下的双样本检验问题。
+
+
+
+竞争风险数据经常出现在生存分析和可靠性工程等领域。竞争风险涉及存在两种以上事件类型的情况。例如，在生存分析中，这可能是由于识别出多种死亡原因导致的；在工程学中，对两种或更多类型的失败进行单独调查也会导致竞争风险设置的出现。在竞争风险下，事件时间 ![upper X](img/c05-i0139.png) 带有事件类型指示符 ![eta](img/c05-i0140.png)，其取值位于集合 ![StartSet 1 comma ellipsis comma upper R EndSet](img/c05-i0141.png) 之中。这里，![upper R](img/c05-i0142.png) 是不同事件类型的数量。事件类型指示符 ![eta](img/c05-i0143.png) 可以被视为第 4 章中向量 ![upper Z](img/c05-i0144.png) 的一个协变量。这种识别方式非常方便，因为正如我们将看到的，通过应用上一章的思想和结果，可以获得构造估计量的大量直觉。然而，![eta](img/c05-i0145.png) 不应被视为基线协变量，因为它的值只在事件时间已知。
+
+| ICCC 分组 | 病例数 (%) | 年龄 ![upper X](img/c05-i0151.png) |
+| --- | --- | --- |
+| I | 107 (26.7%) | 6.30 (4.16) |
+| II | 57 (14.2%) | 8.66 (4.39) |
+| III | 94 (23.4%) | 6.38 (4.29) |
+| IV | 38 (9.5%) | 3.16 (3.47) |
+| V–XII | 105 (26.2%) | 6.87 (4.70) |
+
+表 5.3 儿童癌症数据。ICCC 分组诊断时年龄的病例数（及 %）和平均值（及标准差）。
+
+在本章中，我们自然地会将目标变量 ![upper X](img/c05-i0146.png) 称为生存时间或事件时间。在前面的章节中，我们已经看到几个寿命由于区间采样而双重截断的例子，这在竞争风险中也可能发生。第 1.4.1 节 中的儿童癌症数据就是这种情况，我们将其视为双重截断竞争风险数据的有趣示例。
+
+示例 5.2.1 并不是竞争风险数据的标准情况（后者通常是沿着前瞻性随访记录的），它更多是指关于已确诊癌症儿童的登记数据。这排除了样本中存在部分未发生感兴趣事件（癌症诊断）人员的可能性，这部分人会在随访结束时报告 ![upper X](img/c05-i0152.png) 的右截断值。换句话之，分析的重点是：无论如何都会得癌症的情况下 ![upper X](img/c05-i0153.png) 的分布（或其受 ![eta](img/c05-i0154.png) 限制的子分布）。这是一种迫于无奈的情况，因为没有可用关于免疫状况的信息。
+
+### 5.2.1 累积发生率
+
+竞争风险过程的特征是累积发生率函数 (CIFs)，其定义为 ![upper F Subscript left-parenthesis r right-parenthesis Baseline left-parenthesis (x right-parenthesis equals upper P left-parenthesis upper X less-than-or-equal-to x, eta equals r right-parenthesis](img/c05-i0155.png)，![a Subscript upper X Baseline less-than-or-equal-to x less-than-or-equal-to b Subscript upper X](img/c05-i0156.png)，![1 less-than-or-equal-to r less-than-or-equal-to upper R](img/c05-i0157.png)。在随机双重截断下，这些函数可以按照第 4.1 节中的思想进行一致估计；参见下方对等式 (4.2) 的注释。这在 de Uña-Álvarez (2020) 中得到了彻底研究，这里将回顾并进一步说明主要思想。构造估计量的一个一个关键点是评估截断变量 ![left-parenthesis upper U, upper V right-parenthesis](img/c05-i0158.png) 与竞争风险过程之间的独立性，后者由对 ![left-parenthesis upper X, eta right-parenthesis](img/c05-i0159.png) 表示。在 de Uña-Álvarez (2020) 中考虑了两种不同的情况：
+1. (H1) ![left-parenthesis upper U, upper V right-parenthesis](img/c05-i0160.png) 和 ![left-parenthesis upper X, eta right-parenthesis](img/c05-i0161.png) 是独立的。
+2. (H2) ![left-parenthesis upper U, upper V right-parenthesis](img/c05-i0162.png) 和 ![upper X](img/c05-i0163.png) 在给定 ![eta](img/c05-i0164.png) 的条件下条件独立。
+
+在无条件独立假设 (H1) 下，指示符 ![upper F Subscript left-parenthesis r right-parenthesis Baseline left-parenthesis (x) right-parenthesis equals upper P left-parenthesis upper X less-than-or-equal-to x, eta equals r right-parenthesis](img/c05-i0155.png),1 less-than-or-equal-to i less-than-or-equal-to n, 1upper F Subscript left-parenthesis (x) right-parenthesis 可以通过相同的权重 `(4.2)`](#c04.xhtml_c04-disp-0002) 进行加权，其中权重为 ![ModAbove phi With Ì‚ Subscript i equals StartFraction upper G Subscript i left-parenthesis (x) right-parenthesis Superscript -1 Over sigma-summation Underscript j equals 1 Overscript n upper G Subscript j left-parenthesis (x) right-parenthesis Superscript -1 EndFraction 1 less-than-or-equal-to i less-than-or-equal-to n](img/c05-i0166.png)，无论事件类型 ![r](img/c05-i0167.png) 如何。事实上，`(5.2)`](#c05.xhtml_c05-disp-0002) 都是附在 Efron-Petrosian NPMLE 上的概率质量。那么，累积 CIF ![upper F Subscript left-parenthesis (r) right-parenthesis, n Baseline left-parenthesis (x) right-parenthesis equals sigma-summation Underscript i equals 1 Overscript n ModAbove phi With Ì‚ Subscript i equals StartFraction upper G Subscript i left-parenthesis (x) right-parenthesis Superscript -1 Over sigma-summation Underscript j equals 1 Overscript n upper G Subscript j left-parenthesis (x) right-parenthesis Superscript -1 EndFraction 1 less-than-or-equal-to i less-than-or-equal-to n](img/c05-i0168.png) 是其总体对应的一致估计量。当 (H1) 被违反时，这不再成立。(H2) 假设限制性较小；缺点是 `(5.2)`](#c05.xhtml_c05-disp-0002) 中的权重必须重新定义，因此它们变成了特定的 ![r](img/c05-i0172.png)。实际上，这些新权重是从经历事件类型 ![r](img/c05-i0173.png) 的子集中计算出的，对应的就是 Efron-Petrosian NPMLE。这种样本减少通常会导致标准误增大，甚至可能引发权重的存在性和唯一性问题，正如第 2 章 所解释的那样。这些潜在的问题很快将通过儿童癌症数据的分析进行说明，参见示例 5.2.4。
+
+在仅在条件独立假设 (H2) 下一致的经验 CIF 定义如下：
+
+
+
+
+
+(5.3)!(images/c05-math-0003.png)
+
+在这里，(images/c05-i0174.png) 是根据子集 (images/c05-i0176.png) 计算出的 (images/c05-i0175.png) 的 NPMLE。(5.3) 中的分母在乘以 (images/c05-i0177.png) 后，可以被视为 (images/c05-i0178.png) 的一种估计量，作为 (H2) 条件下 (images/c05-i0179.png) 的替代方案；请注意，当 (images/c05-i0181.png) 不无条件独立于 (images/c05-i0182.png) 时，(images/c05-i0180.png) 可能是不一致的。以下符号非常方便：(images/c05-i0183.png)，
+
+(5.4)!(images/c05-math-0004.png)
+
+(5.5)!(images/c05-math-0005.png) 满足 (images/c05-i0184.png)。(images/c05-i0185.png) 和 (images/c05-i0186.png) 的一致一致性和弱收敛在后续两个定理中建立。
+
+定理 5.2.2 和 定理 5.2.3 在处理累积函数而非累积分布函数时，对应 定理 2.1.9(a)（一致性）和 定理 2.1.10（弱收敛）。这些结果的证明遵循 de Uña 和 Van Keile 开发的渐近理论 (2021)。例如，(images/c05-i0199.png) 的一致性几乎从带有协变量的 Efron–Petrosian 积分的相关理论得出，见 定理 4.1.2。事实上，对于特殊的 (images/c05-i0202.png)-函数 (images/c05-i0203.png)，(images/c05-i0200.png) 等于 (images/c05-i0201.png)。(5.3 的情况稍微复杂一些，需要一些注意。在 de Uña–Álvarez (2020) 中，指出了 (images/c05-i0204.png) 与条件 NPMLE 之间的关系。使用 (5.4 和 (5.5 中的符号，成立：
+
+(5.6!(images/c05-math-0006.png)
+
+
+
+
+其中 ![upper F Subscript n Baseline left-parenthesis x vertical-bar r right-parenthesis](img/c05-i0205.png) 是基于大小为 ![n Subscript r](img/c05-i0208.png) 的子样本 ![StartSet i colon eta Subscript i Baseline equals r EndSet](img/c05-i0207.png) 的 ![upper P left-parenthesis upper X less-than-or-equal-to x vertical-bar eta equals r right-parenthesis](img/c05-i0206.png) 的非参数极大似然估计 (NPMLE)。现在，通过使用第 2 章中类似的技巧，很容易看出在 (H2) 下，当 ![n right-arrow infinity](img/c05-i0212.png) 时，![alpha Subscript left-parenthesis r right-parenthesis comma n Baseline right-arrow upper P left-parenthesis upper U less-than-or-equal-to upper X less-than-or-equal-to upper V vertical-bar eta equals r right-parenthesis](img/c05-i0209.png)、![alpha overbar Subscript n Baseline right-arrow upper P left-parenthesis upper U less-than-or-equal-to upper X less-than-or-equal-to upper V right-parenthesis](img/c05-i0210.png) 和 ![upper F Subscript n Baseline left-parenthesis x vertical-bar r right-parenthesis right-arrow upper P left-parenthesis upper X less-than-or-equal-to x vertical-bar eta equals r right-parenthesis](img/c05-i0211.png) 概率收敛。此外，根据大数定律，我们当 ![n right-arrow infinity](img/c05-i0214.png) 时有 ![n Subscript r Baseline slash n right-arrow upper P left-parenthesis eta equals r vertical-bar upper U less-than-or-equal-to upper X less-than-or-equal-to upper V right-parenthesis](img/c05-i0213.png)。这结合 (5.6)，得出了 (5.3) 的一致性。在证明经验 CIF 的一致性和弱收敛时所需的更多细节，请见 de Uña‐Álvarez (2020) 的技术附录。
+
+![图中显示了成人（黑色）和儿童（红色）的经验生存函数，带有基于正态近似的 95% 点置置信限\index{s}{confidence!limits}。左图显示了带有 Greenwood 公式计算标准误差的普通累积分布函数 (ecdfs)。右图显示了基于 500 次重采样的简单自助法计算标准误差的 Efron–Petrosian NPMLE。](img/c05f004.png)
+
+图 5.4（儿童癌症数据，示例 5.2.4）。左图：每种癌症类型的采样概率（细线）![upper G Subscript left-parenthesis r right-parenthesis comma n](img/c05-i0221.png) 和整体采样概率 ![upper G Subscript n](img/c05-i0222.png)（粗线）。ICCC III 组对应的曲线被省略，因为该组的 NPMLE 不存在或不唯一。右图：基于无条件独立假设 (H1) 的经验累积发生函数 ![upper F Subscript left-parenthesis r right-parenthesis comma n](img/c05-i0223.png)。
+
+### 5.2.2 竞争风险的回归模型
+
+带有竞争风险的回归模型对于研究给定协变量向量与多种事件类型强度之间的关系非常有用。形式上，具有 ![upper R](img/c05-i0224.png) 类型的竞争风险模型的转移强度定义为
+
+```
+![lamda Subscript left-parenthesis r right-parenthesis Baseline left-parenthesis x right-parenthesis equals limit Underscript white up pointing small triangle x down-arrow 0 Endscripts upper P left-parenthesis x less-than-or-equal-to upper X less-than x plus white up pointing triangle x, eta equals r vertical-bar upper X greater-than-or-equal-to x right-parenthesis equals StartFraction f Subscript left-parenthesis r right-parenthesis Baseline left-parenthesis x right-parenthesis Over 1 minus upper F left-parenthesis x minus right-parenthesis EndFraction, 1 less-than-or-equal-to r less-than-or-equal-to upper R comma]
+```
+(images/c05-math-0007.png) 其中 ![f Subscript left-parenthesis r right-parenthesis](img/c05-i0225.png) 表示附于累积发生率 ![upper F Subscript left-parenthesis r right-parenthesis](img/c05-i0226.png) 的子密度；例如参见 Klein 和 Moeschberger (2003) 或 Beyersmann 等 (2012)。转移强度也称为原因危险，通过以下积分确定竞争风险的 CIF：
+
+```
+![upper F Subscript left-parenthesis r right-parenthesis equals integral Subscript 0 Superscript x Baseline lamda Subscript left-parenthesis r right-parenthesis exp left-parenthesis minus-summation Underscript j equals 1 comma upper R Endscripts normal left-parenthesis d]
+```
+(images/c05-math-0008.png) 其中对于每个 ![r element-of StartSet 1 comma upper R EndSet]，上述表达式 (images/c05-i0228.png) 代表累积转移强度。注意，在不失一般性的情况下，在本节中我们自然地取零作为 ![upper X](img/c05-i0229.png) 支持的下限。
+
+原因危险回归模型是将 ![da Subscript left-parenthesis r right-parenthesis](img/c05-i0230.png) 与协变量向量 ![upper Z](img/c05-i0231.png) 联系起来的模型，后者的分量随 ![r](img/c05-i0232.png) 值可能不同。在这种回归设置中，我们使用条件转移强度 ![lamda Subscript left-parenthesis right-parenthesis Baseline left-parenthesis vertical-bar z right-parenthesis](img/c05-i0234.png)，它是根据 ![upper Z equals z](img/c05-i0235.png) 条件定义的。这种设置下的有效建模方法是通过比例原因危险假设，在该假设下，不同协变量个体之间的转移强度之比随时间恒定。具体而言，假设：
+
+```
+![lamda Subscript left-parenthesis r right-parenthesis Baseline left-parenthesis x vertical-bar z right-parenthesis equals lamda Subscript left-parenthesis r right-parenthesis comma 0 Baseline left-parenthesis x right-parenthesis exp left-parenthesis beta Subscript left-parenthesis r right-parenthesis Superscript t z right-parenthesis comma 1 less-than-or-equal-to r less-than-or-equal-to upper R comma]
+```
+(images/c05-math-0009.png) 其中 ![lamda Subscript left-parenthesis r right-parenthesis comma 0](img/c05-i0236.png) 是基准转移强度，![beta Subscript left-parenthesis r right-hesis](img/c05-i0237.png) 是回归系数。
+
+
+
+
+在没有采样偏倚的情况下，事件类型 ![r](img/c05-i0238.png)的回归系数是通过最大化通常的 Cox 部分似然函数来估计的，方法是将与 ![r](img/c05-i0239.png)不同的事件类型视为删失。在随机双截断下，类似于第 4.2 节中的情况，为了一致性，需要一种逆概率加权策略。当采样概率 ![upper G](img/c05-i0240.png)不受协变量影响时，可以通过使用相同的权重序列 ![upper G Subscript n Baseline left-parenthesis upper X Subscript i Baseline right-parenthesis) Superscript negative 1](img/c05-i0241.png), ![1 less-than-or-equal-to i less-than-or-equal-to n](img/c05-i0242.png)，修改所有的得分方程。具体而言，对于 ![1 less-than-or-equal-to r less-than-or-equal-to upper R](img/c05-i0243.png)，系数 ![beta Subscript left-parenthesis r right-parenthesis](img/c05-i0244.png)可以通过以下方程的解估计：
+
+(5.7)![sigma-summation Underscript i colon eta Subscript i Baseline equals r Endscripts left-bracket upper Z Subscript i minus StartFraction sigma-summation Underscript j equals 1 Overscript n Endscripts upper Z Subscript j Baseline exp left-parenthesis beta Subscript left-parenthesis r right-parenthesis) Superscript t Baseline upper Z Subscript j Baseline right-parenthesis upper I left-parenthesis upper X Subscript j greater-than-or-equal-to upper X Subscript i Baseline right-parenthesis upper G Subscript n Baseline left-parenthesis upper X Subscript j Baseline right-parentcript negative 1 Baseline Over sigma-summation Underscript j equals 1 Overscript n Endscripts exp left-parenthesis beta Subscript left-parenthesis r right-parenthesis) Superscript t Baseline upper Z Subscript j Baseline right-parenthesis upper I left-parenthesis upper X Subscript j greater-than-or-equal-to upper X Subscript i Baseline right-parenthesis upper G Subscript n Baseline left-parenthesis upper X Subscript j Baseline right-parentcript negative 1 Baseline EndFraction right-bracket equals 0 period.](img/c05-math-0010.png)
+
+这些加权极大部分似然估计量的理论性质与方程 (4.5)的解相似。
+
+## 5.3 准独立性检验
+
+在本书中，一直假设截断对 ![left-parenthesis upper U comma upper V right-parenthesis](img/c05-i0306.png)与目标变量 ![upper X](img/c05-i0307.png)是独立的。这种独立假设对于构建非参数极大似然估计（NPMLE）至关重要，对于建立 NPMLE 的渐近性质也同样重要。特别是，当 ![left-parenthesis upper U comma upper V right-parenthesis](img/c05-i0309.png)与 ![upper X](img/c05-i0310.png)相关时，![upper F Subscript n](img/c05-i0308.png) 的一致性无法无法。为了考虑到截断与目标变量之间可能存在的依赖性，第 5.4 节中回顾了 ![upper F](img/c05-i0311.png) 的另一种估计量。
+
+严格来说，比独立截断更弱的条件就足以保证 NPMLE 的一致性。这在单侧截断下已得到深入研究（Martin and Betensky, 2005；Vakulen-Lagun 等 2019），并且对双截断数据的某些扩展也已得到了研究（Martin and Betensky, 2005；Shen, 2011；Austin et al., 2014）。实际上，由于对 ![left-parenthesis upper X comma upper U comma upper V right-parenthesis](img/c05-i0312.png)的采样信息限制在区域 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper V](img/c05-i0313.png) 内，无法在整个支撑范围内评估 ![left-parenthesis upper U comma upper V right-parenthesis](img/c05-i0314.png)与 ![upper X](img/c05-i0315.png)之间的独立性。最多，截断对和目标变量在观测区域内的表现就像它们在不可观测的世界中独立的一样。这在不可观测世界中被称为*准独立性*（quasi-independence）。对于单侧截断，Vakulen-Lagun 等 2019 证明了 Lynden-Bell 估计量 1971 在准独立性下是一致的。此外，他们揭示并讨论了一个未被注意的准独立性方面，这是单侧设置的扩展。
+
+针对双截断数据的准独立性检验已有多种，包括 Efron 和 Petrosian 1999、Martin 和 Betensky 2005 以及 Shen 2011（注：此处原文链接对应关系已保持逻辑）。在本节中，我们简要介绍了由 Martin 和 Betensky 2005 提出的 Kendall 方法，该方法后来由 Austin 等人 2014 重新审视。该方法在 `SurvTrunc` 包中实现。
+
+为了便于说明，我们关注区间采样，这是双截断数据最重要的场景，此时 ![left-parenthesis upper U comma upper V right-parenthesis](img/c05-i0316.png) 概率为一。在这种情况下，测量 ![upper X](img/c05-i0317.png)与 ![upper U](img/c05-i0318.png)之间的关联性就足够了。条件 Tau 定义为：
+
+(5.8)![tau Subscript upper U Baseline equals StartFraction 1 Over n Subscript Baseline EndFraction sigma-summation Underscript i equals 1 Overscript n minus 1 Endscripts sigma-summation Underscript j equals i Overscript n Endscripts sign left-brace left-parenthesis upper X Subscript i Baseline minus upper X Subscript j Baseline right-parenthesis left-parenthesis upper U Subscript i Baseline minus upper U Subscript j Baseline right-parenthesis) right-brace normal Omega Subscript i Baseline,](img/c05-math-0011.png)
+
+其中 ![n Subscript upper U Baseline equals sigma-summation Underscript i equals 1 Overscript n minus 1 Endscripts sigma-summation Underscript j equals i Overscript n Endscripts normal Omega Subscript i Baseline equals I-parenthesis upper U Subscript i less-than-or-equal-to upper X Subscript j less-than-or-equal-to upper V Subscript i Baseline comma upper U Subscript j less-than-or-equal-to upper X Subscript i Baseline less-than-or-equal-to upper V Subscript j Baseline right-parenthesis](img/c05-i0320.png)。Kendall's Tau (5.8 使用可比较的 ![n Subscript upper U Baseline](img/c05-i0323.png) 观测对来测量 ![upper X](img/c05-i0321.png)与 ![upper U](img/c05-i0322.png)之间的关联。在实践中，![n Subscript upper U Baseline](img/c05-i0324.png) 可能远小于总观测对数，![n left-parenthesis n minus 1 right-parenthesis) slash 2](img/c05-i0325.png)。重要的是，由于双截断的影响，通过 (5.8) 测得的关联强度可能比不可观测世界中存在的关联要弱。在解释实证结果时应当考虑到这一点。
+
+
+
+
+
+在拟独立（quasi‐independence）的零假设下，![StartRoot n EndRoot tau Subscript upper X upper U comma n](img/c05-i0326.png) 当 ![n right-arrow infinity](img/c05-i0328.png) 时趋近于分布于 ![upper N left-parenthesis 0 comma nu right-parenthesis](img/c05-i0327.png)。(5.8) 的渐近方差 ![nu squared slash n](img/c05-i0329.png) 可以从数据中于估计，正如 Martin 和 Betensky (2005) 第 6 节讨论的那样。因此，自由度为 1 的卡方统计量由 ![n tau Subscript upper X upper U comma n slash nu squared](img/c05-i0330.png) 给出；即当 ![p](img/c05-i0331.png) 值 ![upper P left-parenthesis chi 1 squared greater-than n tau Subscript upper X upper U comma n Baseline slash nu squared right-parenthesis](img/c05-i0332.png) 低于标水平时，拒绝拟独立假设。当截断变量 ![upper U](img/c05-i0333.png) 和 ![upper V](img/c05-i0334.png) 不相互决定时，可以用类似的方法构建双自由度的卡方检验。在这种情况下，统计量涉及两个条件关联度量，分别对应 ![upper X upper U](img/c05-i0335.png) 和 ![upper X upper V](img/c05-i0336.png) 组合（Martin and Betensky, 2005）。
+
+为了说明 `SurvTrunc` 包中实现的条件 Kendall's Tau 在有限样本中的水平和功效，我们考虑以下模拟场景：
+
+|  |  |  |  | Level |
+| --- | --- | --- | --- | --- |
+| ![theta](img/c05-i0385.png) | ![tau Subscript theta](img/c05-i0386.png) | ![p Subscript c](img/c05-i0387.png) | ![tau Subscript upper X upper U comma n](img/c05-i0388.png) | 0.01 | 0.05 | 0.1 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 0 | 0.0000 | 0.2035 | 0.0002 | 0.0000 | 0.0123 | 0.0370 |
+| 1 | 0.3333 | 0.1818 | 0.0299 | 0.0000 | 0.0238 | 0.0833 |
+| 2 | 0.5000 | 0.1730 | 0.0576 | 0.0118 | 0.1529 | 0.2824 |
+| 4 | 0.6667 | 0.1642 | 0.1146 | 0.3140 | 0.5930 | 0.6628 |
+| 8 | 0.8000 | 0.1597 | 0.2409 | 0.9880 | 0.9880 | 1.0000 |
+
+Table 5.5 模型 a) 和 b) 中条件 Kendall's Tau 的模拟结果（见正文）。左：Clayton 参数 ![theta](img/c05-i0377.png)，![upper X](img/c05-i0378.png) 和 ![upper U](img/c05-i0379.png) 之间的 Kendall's Tau ![tau Subscript theta](img/c05-i0380.png)，![upper X upper U](img/c05-i0381.png) 观测值的比较对比例 ![p Subscript c](img/c05-i0382.png) 以及条件 Kendall's Tau ![tau Subscript upper X upper U comma n](img/c05-i0383.png)；沿 1000 次蒙特卡洛试验平均。右：根据 `indeptestDT` 函数中的检验实现，在 100 次试验中按标水平 0.01、0.05 和 0.1 拒绝拟独立假设的比例。样本量为 ![n equals 300](img/c05-i0384.png)，截断变量遵循 Section 2.1.3 中的场景 I。
+
+1. **(拟独立的零假设)** 我们考虑 Section 2.1.3 中的模拟场景 I，其中 ![upper X](img/c05-i0354.png) 和 ![upper U](img/c05-i0355.png) 是独立的。
+2. **(正 Kendall's Tau 假设)** 我们在 Section 2.1.3 的场景 I 中通过参数 ![theta greater-0](img/c05-i0358.png) 的 Clayton 足够函数连接 ![upper X](img/c05-i0356.png) 和 ![upper U](img/c05-i0357.png)（Nelsen, 2006）。这意味着 ![left-parenthesis upper X upper U right-parenthesis](img/c05-i0359.png) 的联合分布函数为 ![left-parenthesis x comma u right-parenthesis equals x superscript negative theta plus u superscript negative theta) Superscript negative 1 slash theta](img/c05-i0360.png)，其中 ![0-than x-than 1](img/c05-i0361.png)，![negative 1 slash 3-than u-than 1](img/c05-i0362.png)，且 ![util equals left-parenthesis 3 slash 4 right-parenthesis left-parenthesis u plus 1 slash 3 right-parenthesis](img/c05-i0363.png)。![upper X](img/c05-i0364.png) 和 ![upper U](img/c05-i0365.png) 在此模型中的普通 Kendall's Tau 由 ![tau Subscript theta equals theta slash left-parenthesis theta plus 2 right-parenthesis](img/c05-i0366.png) 给出；较大的值对应于较大的 ![tau Subscript upper X U comma n](img/c05-i0368.png)。见 Table 5.5。模拟此模型的算法如下；见 Nelsen (2006) 的练习 4.17：
+
+    * **Step 1** 从单位率的指数模型生成独立随机变量 ![upper Y1](img/c05-i0369.png) 和 ![upper Y2](img/c05-i0370.png)。
+    * **Step 2** 从形状参数 ![1 slash theta](img/c05-i0372.png) 和速率参数 1 的伽马模型独立生成 ![upper Z0](img/c05-i0371.png)，并计算 ![upper U equals left-parenthesis 4 slash 3 right-parenthesis left-parenthesis 1 plus upper Y 2 slash upper Z 0 right-parenthesis) Superscript negative 1 slash theta Baseline minus 1 slash 3](img/c05-i0373.png)。
+    * **Step 3** 最后计算 ![upper X equals left-parenthesis 1 plus upper Y 1 slash upper Z 0 right-parenthesis) Superscript negative 1 slash theta](img/c05-i0374.png)。
+
+    当然，违反条件 ![upper U less-than-or-equal-to upper X less-than-or-equal-to upper U plus 1 slash 3](img/c05-i0376.png) 的配对将被拒绝。
+
+
+
+
+
+在表 5.5 中，我们提供了 ![upper X upper U](img/c05-i0394.png) 观测值（对于 ![p Subscript c](img/c05-i0395.png)）的可比较配对的比例，以及沿 1000 次蒙特卡洛试验平均的条件 Kendall's Tau。样本量为 ![n equals 300](img/c05-i0396.png)。我们考虑了几个 Clayton 参数 ![theta](img/c05-i0397.png) 的值，其中值 ![theta equals 0](img/c05-i0398.png) 对应于独立截断。从表 5.5 中可以看出，![tau Subscript upper X U comma n](img/c05-i0399.png) 代表了 ![upper X](img/c05-i0400.png) 和 ![upper U](img/c05-i0401.png) 现有关联的一小部分，范围从 9% 到 30% 不等，并随着 ![tau Subscript theta](img/c05-i0402.png) 的增加而增加。同样明显，对于模拟模型，可比较配对的比例随着关联性的增加而减少，处于配对总数的 16% 到 20% 之间。表 5.5 提供了由 `indeptestDT` 实现的 Martin 和 Betensky (2005) 准独立性检验（quasi-independence test）的拒绝比例。由于运行 `indeptestDT` 时等待时间较，这些拒绝比例仅沿 100 次试验计算得出。在模拟实验中，条件 Kendall's Tau 在准独立性下非常保守，无法检测出 ![tau Subscript theta Baseline equals 1 slash 3](img/c05-i0403.png) 的真实关联。对于较大的关联度，结果较好，![tau Subscript upper X U comma n](img/c05-i0404.png) 的统计功效如预期的随着 ![tau Subscript theta](img/c05-i0405.png) 的增加而增加。这与图 5.9 所示的条件 Kendall's Tau 采样分布一致。我们还提到，函数 `indeptestDT` 的应用在约 14–19% 的试验中得得出结论（取决于 ![theta](img/c05-i0406.png) 的值），这显然由于方差估计的问题引起。
+
+![图中显示了给定性别（男性为黑色，女性为红色）的淋巴瘤（实线）和其他癌症类型（虚线）的条件累积发生率。](img/c05f009.png)
+
+#图 5.9 条件 Kendall's Tau 的直方图，对应 1000 次模拟模型试验 a) 和 b)（见文本），样本量为 ![n equals 300](img/c05-i0389.png)。第一行：![tau equals 0](img/c05-i0390.png)（左），![tau equals 0.5](img/c05-i0391.png)（右）。第二行：![tau equals 0.67](img/c05-i0392.png)（左），![tau equals 0.8](img/c05-i0393.png)（右）。
+
+## 5.4 依赖截断
+
+在节一节中，我们讨论了如何评估独立截断假设。当独立截断被拒绝，或者当关于截断变量 ![left-parenthesis upper U comma V right-parenthesis](img/c05-i0407.png) 与目标变量 ![upper X](img/c05-i0408.png) 之间关联的外部信息时，需要替代 Efron–Petrosian NPMLE 的方法。在本节中，我们回顾了这种基于 copula 的最新方法，用于估计可能存在依赖截断的双重截断累积分布函数（cdf）。这把单侧截断下基于 copula 的估计（Emura 和 Wang, 2012）扩展到了截断设置。请参见 Chiou 等人 (2019)，了解通过变换模型处理依赖截断的替代方案。
+
+Copula 函数（Nelsen, 2006)）统计学中常用于处理多种设置下的依赖性。特别是在生存分析中，copula 已用于建模依赖删失和依赖截断问题。基于 copula 的方法首先将感兴趣的多元分布分为两个部分：(i) 边缘分布，以及 (ii) 边缘之间的联系。如何估计这两个部分取决于所处理的特定设置。
+
+类似于第 5.3 节 中的情况，为了演示方便，我们考虑区间抽样的情形，双重截断由单个截断变量 ![U](img/c05-i040.png) 引起，其中 `V = U + sigma` 对于已知的 ![sigma](img/c05-i041.png)。这已被 Moreira 等人 (2021) 进行了仔细研究。对于 ![left-parenthesis U V right-parenthesis](img/c05-i012.png) 不集中在直线上的替代方案，原则上采用类似的方法，但由于截断变量的多元性带来了额外的复杂性。
+
+Copula 函数是单位正方形 `I squared = [0,1] x [0,1]`(images/c05-i013.png) 上的二元分布，具有均匀边缘。令 ![F Subscript X U](img/c05-i014.png) 为 ![left-parenthesis X U right-parenthesis](img/c05-i015.png) 的二元 cdf，令 ![F](img/c05-i016.png) 和 ![K Subscript U](img/c05-i017.png) 为其边缘分布。在之前的章节中，我们用 ![left-parenthesis a Subscript X b Subscript X right-parenthesis](img/c05-i018.png) 和 ![left-parenthesis a Subscript U b Subscript U right-parenthesis](img/c05-i019.png) 表示 ![F](img/c05-i020.png) 和 ![K](img/c05-i021.png) 的相应支撑。根据 Sklar 定理（Nelsen, 2006），存在一个 copula 函数 ![C](img/c05-i022.png) 使得：
+
+```
+F(x, u) = C(F(x), K(u)) for (x, u) in [a, b] x [a, b]
+```
+(images/c05-math-0012.png)
+
+此外，如果 ![F](img/c05-i023.png) 和 ![K Subscript U](img/c05-i024.png) 是连续的，则 copula ![C](img/c05-i025.png) 是唯一的。当 `C(s1, s2) = s1 * s2`(images/c05-i026.png), `0 <= s1, s2 <= 1`(images/c05-i027.png) 时，变量 ![X](img/c05-i028.png) 和 ![U](img/c05-i029.png) 是独立的，否则它们是依赖的。由给定 copula 函数 ![C](img/c05-i030.png) 激发的 ![X](img/c05-i031.png) 和 ![U](img/c05-i032.png) 之间的关联通常通过 Kendall's Tau 来衡量，其公式为：
+
+```
+tau_C = 4 * integral C(s1, s2) dC(s1, s2)
+```
+(images/c05-math-0013.png)
+
+
+
+
+
+依赖截断可以通过一种相对简单的方法处理，即通过由单变量或多变量参数 ![theta](img/c05-i0434.png) 索引的 copula 模型 ![script upper C Subscript theta](img/c05-i0433.png) 来处理。Nelsen (2006) 中给出了许多示例。在这里为了为了说明，我们仅引用了其中三个；在后续，我们用 ![tau Subscript theta](img/c05-i0435.png) 代替 ![tau Subscript script upper C Sub Subscript theta](img/c05-i0436.png)：
+
+1.  **C1. 克莱顿 copula (Clayton copula)**：![script upper C Subscript theta Baseline left-parenthesis s 1 comma s 2 right-parenthesis equals left-bracket max left-parenthesis s 1 Superscript negative 1 slash theta plus s 2 Superscript negative 1 slash theta minus 1 comma 0 right-parenthesis) right-bracket Superscript negative 1 slash theta](img/c05-i0437.png), ![theta element-of left-bracket negative 1 comma infinity right-parenthesis reverse-solidus StartSet 0 EndSet](img/c05-i0438.png)。肯德尔系数：![tau Subscript theta Baseline equals theta slash left-parenthesis theta plus 2 right-parenthesis](img/c05-i0439.png)。
+
+2.  **C2. 弗兰克 copula (Frank copula)**：![script upper C Subscript theta Baseline left-parenthesis s 1 comma s 2 right-parenthesis equals minus theta Superscript negative 1 Baseline log left-bracket 1 plus left-parenthesis normal e Superscript minus theta s 1 Baseline minus 1 right-parenthesis) left-parenthesis normal e Superscript minus theta s 2 Baseline minus 1 right-parenthesis slash left-parenthesis normal e Superscript negative theta Baseline minus 1 right-parenthesis) right-bracket](img/c05-i0440.png), ![theta element-of left-parenthesis negative infinity comma infinity right-parenthesis reverse-solidus StartSet 0 EndSet](img/c05-i0441.png)。肯德尔系数：![tau Subscript theta Baseline equals 1 plus 4 left-parenthesis upper D 1 left-parenthesis theta right-parenthesis minus 1 right-parenthesis) slash theta](img/c05-i0442.png)，其中 ![upper D 1 left-parenthesis theta right-parenthesis equals theta Superscript negative 1 Baseline integral Subscript 0 Superscript theta Baseline t left-parenthesis normal e Superscript t Baseline minus 1 right-parenthesis) Superscript negative 1 Baseline normal d t](img/c05-i0443.png) 是第一类德拜函数。
+
+3.  **C3. 法尔利-古姆贝尔-摩根斯特恩 copula (FGM copula)**：![script upper C Subscript theta Baseline left-parenthesis s 1 comma s 2 right-parenthesis equals s 1 s 2 plus theta s 1 s 2 left-parenthesis 1 minus s 1 right-parenthesis) left-parenthesis 1 minus s 2 right-parenthesis](img/c05-i0444.png), ![theta element-of left-bracket negative 1 comma 1 right-bracket](img/c05-i0445.png)。肯德尔系数：![tau Subscript theta Baseline equals 2 theta slash 9](img/c05-i0446.png)。
+
+Clay 顿、弗兰克和 FGM copula 都以独立 copula 作为一种特殊（极限）情况（![theta right-arrow 0](img/c05-i0452.png)）。给定 copula 族 ![script upper C Subscript theta](img/c05-i0453.png)，copula 参数 ![theta](img/c05-i0454.png) 以及边缘分布 ![upper F](img/c05-i0455.png) 和 ![upper K Subscript upper U](img/c05-i0456.png) 可以通过极大似然原理估计。细节见下。
+
+在 图 5.10 中，我们描绘了三种不同关联度的从 Clayton copula 模拟的 ![n equals 1000](img/c05-i0457.png) 对 ![left-parenthesis s 1 comma s 2 right-parenthesis](img/c05-i0458.png) 的散点图。当 ![tau Subscript theta equals 0.2](img/c05-i0459.png) 时很难看出依赖性，但当肯德尔系数为 0.5 或更大时，则清晰可见。在 图 5.11 中，散点图对应于 copula 族 C1 和 C2；两种情况下的肯德尔系数均为 0.9。从 图 5.11 可以看出不同的 copula 函数将导致不同的依赖模式。在选择特定的 copula 族进行建模时，应当考虑到这一点 ![script upper C Subscript theta](img/c05-i0460.png)。
+
+基于不完整数据的估计中的一个非平凡问题是 copula 的识别性。也就是说，在引入 ![theta](img/c05-i0464.png) 的估计量之前，应该确保两个不同的 ![theta](img/c05-i0465.png) 值不会在观测区域生成相同的 ![upper U less-equal-to X less-equal-to upper U](img/...) 分布。这引出了以下定义。令 ![upper C Superscript left-parenthesis 1 comma 1 right-parenthesis](img/c05-i0467.png) 表示 copula 对两个参数的二阶导数。
+
+![显示条件肯德尔系数的直方图。](img/c05f10.png)
+
+图 5.10 从 Clayton copula 模拟的 ![n equals 1000](img/c05-i0457.png) 对 ![left-parenthesis s 1 comma s 2 right-parenthesis](img/c05-i0458.png) 的散点图。从左到右：![tau Subscript theta equals 0.2](img/c05-i0459.png)、![0.5](img/c05-i0450.png) 和 ![0.9](img/c05-i0451.png)。
+
+![c05f11](img/c05f11.png)
+
+图 5.11 从 Clayton copula（左图）和 Frank copula（右图）模拟的 ![n equals 1000](img/c05-i0461.png) 观测值 ![left-parenthesis s 1 comma s 2 right-parenthesis](img/c05-i0462.png) 的散点图。两种情况下的肯德尔系数均为 ![tau Subscript theta equals 0.9](img/c05-i0463.png)。
+
+Moreira 等人 (2021) 证明了在区间采样的情况下，定义 5.4.1](#c05.xhtml_c05-fea-0024) 中的识别性条件是充分的。也就是说，他们证明了在定义 5.4.1](#c05.xhtml_c05-fea-0024) 条件下，两个不同的 ![left-parenthesis script upper C, upper F, upper K Subscript upper U right-parenthesis](img/c05-i0483.png) 三元组强制在观测区域产生不同的 ![left-parenthesis upper X, upper U right-parenthesis](img/c05-i0484.png) 联合分布。上述 copula 族 C1–C3 是满足定义 5.4.1](#c05.xhtml_c05-fea-0024) 的 copula 示例。
+
+
+
+
+
+当 `![upper X](img/c05-i0485.png)` 和 `![upper U](img/c05-i0486.png)` 通过 copula 函数 `![script upper C](img/c05-i0487.png)` 链接时，可观测值 `![left-parenthesis upper X 1 comma upper U 1 right-parenthesis](img/c05-i0488.png)` 的联合概率密度函数（在 `![upper U 1 less-than-or-equal-to upper X 1 less-than-or-equal-to upper U 1 plus final sigma](img/c05-i0489.png)` 条件下）正比于 `![script upper C Superscript left-parenthesis 1 comma 1 right-parenthesis Baseline left-parenthesis upper F left-parenthesis x right-parenthesis comma upper K Subscript upper U Baseline left-parenthesis u right-parenthesis right-parenthesis f left-parenthesis x right-parenthesis k Subscript upper U Baseline left-parenthesis u right-parenthesis](img/c05-i0490.png)`，`![a Subscript upper X Baseline less-than-or-equal-to x less-than-or-equal-to b Subscript upper X](img/c05-i0491.png)`，`![a Subscript upper U Baseline less-than-or-equal-to u less-than-or-equal-to b Subscript upper U](img/c05-i0492.png)`，`![u less-than-or-equal-to x less-than-or-equal-to u plus final sigma](img/c05-i0493.png)`，其中 `![f](img/c05-i0494.png)` 和 `![k Subscript upper U](img/c05-i0495.png)` 分别代表 `![upper X](img/c05-i0496.png)` 和 `![upper U](img/c05-i0497.png)` 的概率密度函数。为了推导出样本 `![left-parenthesis upper X Subscript i Baseline comma upper U Subscript i Baseline right-parenthesis](img/c05-i0498.png)`，`![1 less-than-or-equal-to i less-than-or-equal-to n](img/c05-i0499.png)` 的似然性，我们按照第 2 章 中的方法，假设 `![upper F](img/c05-i0500.png)` 和 `![upper K Subscript upper U](img/c05-i0501.png)` 分别集中在 `![upper X Subscript i](img/c05-i0502.png)` 和 `![upper U Subscript i](img/c05-i0503.png)` 上，质量分别为 `![phi Subscript i equals upper F left-brace upper X Subscript i Baseline right-brace](img/c05-i0504.png)` 和 `![psi Subscript i equals upper K Subscript upper U Baseline left-brace upper U Subscript i Baseline right-brace](img/c05-i0505.png)`，`![1 less-than-or-equal-to i less-than-or-equal-to n](img/c05-i0506.png)`。引入
+
+`![StartLayout 1st Row 1st Column script upper C Subscript i j Superscript left-parenthesis 1 comma 1 right-parenthesis Baseline equals script upper C Superscript left-parenthesis 1 comma 1 right-parenthesis Baseline left-parenthesis sigma-summation Underscript k equals 1 Overscript n Endscripts phi Subscript k upper I-parenthesis upper X Subscript k less-than-or-equal-to upper X Subscript i right-parenthesis comma sigma-summation Underscript k equals 1 Overscript n Endscripts psi Subscript k upper I-parenthesis upper U Subscript k less-than-or-equal-to upper U Subscript j right-parenthesis 2nd Column Blank 3rd Column BlankLayout](img/c05-math-0015.png)`
+
+以及 `![normal upper Phi Subscript j Superscript script upper C equals sigma-summation Underscript i equals 1 Overscript n Endscripts script upper C Subscript i j Superscript left-parenthesis 1 comma 1 right-parenthesis phi Subscript i upper J-parenthesis](img/c05-i0507.png)`，其中 `![upper J Subscript i equals upper U Subscript j less-than-or-equal-to upper X Subscript i less-than-or-equal-to upper U Subscript j plus final sigma](img/c05-i0508.png)`。使用这种符号，似然性可以写为
+
+(5.9`![script upper L Subscript script upper C left-parenthesis phi comma psi right-parenthesis equals product Underscript i equals 1 Overscript n Endscripts StartFraction script upper C Subscript i Superscript left-parenthesis 1 comma 1 right-parenthesis phi Subscript i psi Subscript i sigma-summation Underscript j equals 1 Overscript n Endscripts normal upper Phi Subscript j Superscript script upper C phi Subscript i upper J-parenthesis](img/c05-i0507.png)`
+`带有 `![phi](img/c05-i0509.png)` 和 `![psi](img/c05-i0510.png)`。对于 `![upper Phi Subscript j Superscript script upper C left-parenthesis s1 comma s2 right-parenthesis equals s1](img/c05-i0511.png)` `![script upper C Subscript ij Superscript left-parenthesis 1 comma 1 right-parenthesis less-than-or-equal-to s1](img/c05-i0513.png)` 对于 `![1 less-than-or-equal-to i j less-than-or-equal-to n](img/c05-i0514.png)`，因此似然性 `(5.9` 为第 2 章 中的形式。
+
+### Moreira 等的方法
+
+Moreira 等 (2021) 引入了两种不同的算法来对于给定的参数 `theta` copula 族极大似然性 `(5.9`。这两种算法在文中被称为*simple*（简单）和 *full*（全）。它们都迭代直到达到 `log (5.9` 关于 `theta`、`phi`、`psi` 的一阶导数的得分方程 `![phi](img/c05-i0517.png)` 和 `![psi](img/c05-i0518.png)`。两种算法之间的区别在于偏导数的计算。简单算法处理 `![script upper C Subscript ij Superscript left-parenthesis 1 comma 1 right-hesis](img/c05-i0519.png)` 就像它不依赖 `![phi](img/c05-i0520.png)` 和 `![psi](img/c05-i0521.png)`，从而导致了相对简单的得分方程。相反，全算法通过考虑 `![script upper C Subscript ij Superscript left-parenthesis 1 comma 1 right-parenthesis](img/c05-i0522.png)` 实际上包含了 `![phi](img/c05-i0523.png)` 和 `![psi](img/c05-i0524.png)` 来计算偏导数；在这种情况下，得分方程显然更为复杂。 Moreira 等 (2021) 的一个有趣的发现是，简单算法的运行具有竞争性，同时节省了计算时间。简单算法和全算法都以三元组 `![left-parenthesis theta comma upper F comma K Subscript U right-parenthesis](img/c05-i0526.png)` 的估计量 `![left-parenthesis theta Subscript n comma upper F Subscript n comma upper K Subscript U n right-parenthesis](img/c05-i0525.png)` 结束。![left-parenthesis upper X comma upper U right-parenthesis](img/c05-i0527.png)` 在点 `![left-parenthesis x comma u right-parenthesis](img/c05-i0528.png)` 的二元累积分布函数随后可以通过 `![script upper C Subscript theta Subscript n left-parenthesis upper F Subscript n left-parenthesis x right-parenthesis comma upper K Subscript U comma n left-parenthesis u right-parenthesis right-parenthesis](img/c05-i0529.png)` 进行估计。
+
+通过使用上述简单算法的方法可以直接得到以下得分方程：
+
+(5.10
+```
+phi Subscript i equals StartFraction 1 / normal upper Psi Subscript i Superscript script upper C Over sigma-summation Underscript j equals 1 Overscript n Endscripts 1 / normal upper Psi Subscript j Superscript script upper C EndFraction, 1 less-than-or-equal-to i less-than-or-equal-to n,
+```
+
+
+
+
+
+其中 $C_i^{(C)} = \sum_{j=1}^{n} C_{ij}^{(1,1)}$ (images/c05-i0530.png), $1 \le i \le n$ (images/c05-i0531.png), 以及
+
+$\psi_i = \frac{1/\Phi_i^{(C)}}{\sum_{j=1}^{n} 1/\Phi_j^{(C)}}, 1 \le i \le n$ (images/c05-math-0018.png)
+
+给定参数化 copula 族 $C_{\theta}$ (images/c05-i0532.png)，Moreira 等人 (2021) 引入的简单算法如下：
+
+1. **SA1**。取 $\theta^{(0)} = \text{argmax}_{\theta} L_{C_{\theta}}(\phi^{(0)}, \psi^{(0)})$ (images/c05-i0533.png)，其中 $\phi^{(0)}$ (images/c05-i0534.png) 和 $\psi^{(0)}$ (images/c05-i0535.png) 是 $\phi$ (images/c05-i0536.png) 和 $\psi$ (images/c05-i0537.png) 的初始解。
+
+2. **SA2**。使用 (5.11) 改进 $\psi^{(0)}$ (images/c05-i0538.png) 并得到 $\psi^{(1)}$ (images/c05-i0539.png）；也就是说使用 $\theta^{(0)}$ (images/c05-i0540.png) 和 $\phi^{(0)}$ (images/c05-i0541.png) 计算 (5.11) 中的 $\Phi_j^{(C_{\theta})}$ (images/c05-i0542.png)。
+
+3. **SA3**。使用 (5.10) 改进 $\phi^{(0)}$ (images/c05-i0543.png) 并得到 $\phi^{(1)}$ (images/c05-i0544.png）；也就是说使用 $\theta^{(0)}$ (images/c05-i0545.png) 和 $\psi^{(1)}$ (images/c05-i0546.png) 计算 (5.10) 中的 $\Psi_j^{(C_{\theta})}$ (images/c05-i0547.png)。
+
+4. **SA4**。计算 $\theta^{(1)} = \text{argmax}_{\theta} L_{C_{\theta}}(\phi^{(1)}, \psi^{(1)})$ (images/c05-i0548.png)。
+
+在步骤 SA2 和 SA3 中，$C_{ij}^{(1,1)}$ (images/c05-i0552.png) 是从同一个三元组 $(\theta^{(0)}, \phi^{(0)}, \psi^{(0)})$ (images/c05-i0553.png) 计算得。重复步骤 SA2–SA4 直到收敛。
+
+在下一个示例中，我们将简单算法 SA1–SA4 应用于两个真实数据集：第 1.4.2 节 的 AIDS 输血数据和第 1.4.1 节 的儿童癌症数据。示例使用了上述 copula  $C1$-$C3$。对于每个 copula，$\theta_n$ (images/c05-i0558.png) 的标准误差通过自助法（bootstrapping）估计。为此，应用了 Moreira 等人 (2021) 提出的基于 copula 的显性自助法。该方法如下：
+
+`c05f012` (images/c05f012.png) 图 5.12（带有依赖截角的模拟场景，示例 5.4.2）。基于规模为 $n=1000$ (images/c05-i0550.png) 的 Clayton（左图）和 Frank（右图）copula 的单次试验 $F$ (images/c05-i0549.png) 的非参数极大似。在两种情况下，Kendall's Tau 均为 $\tau_{\theta}=0.5$ (images/c05-i0551.png)。为了比较，基于独立 copula 的 Efron–Petrosian NPMLE 也是如此。
+
+1. **CB1**。从 $C_{\theta_n}$ (images/c05-i0560.png) 中抽取一对均匀分布随机变量 $(X, Y)$ (images/c05-i0559.png)。
+
+2. **CB2**。执行 $X=F_n^{(1)}(Y)$ (images/c05-i0561.png) 和 $U=K_n^{(1)}(Y)$ (images/c05-i0562.png)，其中 $F_n^{(1)}$ (images/c05-i0563.png) 和 $K_n^{(1)}$ (images/c05-i0564.png) 是基于 copula 的 $F$ (images/c05-i0565.png) 的分位数。
+
+3. **CB3**。重复步骤 CB2 直到满足 $U \le X+\sigma$ (images/c05-i0567.png)。
+
+Nelsen (2006) 为特定的 copula 提供了用于步骤 CB1 的模拟算法。
+
+在 Moreira 等人 (2021) 中，算法 SA1–SA4 的性能以及另一种算法均得到了彻底研究。在论文的模拟场景中表现良好，支持了基于 copula 的依赖截角方法。尽管如此，由于算法对初始解的敏感性或局部极大值的存在，可能会出现数值不稳定。为了提高这些的稳健性，需要对这些问题进行进一步调查。
+
+| | AIDS | CCD |
+| --- | --- | --- |
+| Copula | $\theta_n$ (images/c05-i0576.png) | 标准误差 | 95% CI | $\theta_n$ (images/c05-i0577.png) | 标准误差 | 95% CI |
+| --- | --- | --- | --- | --- | --- |
+| FGM | 0.9820 | 0.3273 | (0.3404,1.6235) | 1.0000 | 0.7159 | (−0.4032,2.4032) |
+| Clayton | 0.4870 | 0.0785 | (0.3330,0.6408) | 0.0079 | 0.1437 | (−0.2736,0.2894) |
+| Frank | 3.3500 | 0.7758 | (1.8294,4.8706) | −1.3600 | 1.4952 | (−4.2883,1.5727) |
+
+表 5.6（AIDS 输血数据和儿童癌症数据，示例 5.4.3）。copula 模型参数的估计值、标准误差和 95% 置信区间。
+
+`c05f013` (images/c05f013.png) 图 5.13（AIDS 输血数据和儿童癌症数据，示例 5.4.3）。基于 FGM、Clayton、Frank 和独立 copula 的 $F$ (images/c05-i0578.png) 的 NPMLE。左图：AIDS 输血数据。右图：儿童癌症数据。
+
+![从 Clayton copula 模拟的 n=1000 个观测值 (s1,s2) 的散点图。从左到右：tau theta =0.2, 0.5 和 0.9.](img/c05f014.png)
+
+
+
+
+
+图 5.14 (AIDS 输血数据，示例 5.4.3)。FGM（左图）、Clayton（中图）和 Frank（右图）copula 的似然函数对数 (5.9) 随 copula 参数 ![theta](img/c05-i0579.png) 变化的情况。对于每个 copula 族显示了两个函数：(i)（黑线）对应于初始解 ![$\phi^{(0)} = \psi^{(0)} = (1/n, \dots, 1/n)$^t$](img/c05-i0580.png)，以及 (ii)（绿线）对应于简单算法 `SA1–SA4` 的最终解。垂直虚线表示每种情况下的极大值。
+
+## 5.5 示例的 R 代码
+
+下面给了用于复现本章某些示例的代码。与之前的章节一样，`DTDA` 包将作为参考，但我们也会使用其他包。
+
+### 5.5.1 示例 5.1.3 的代码
+
+在该示例中，目标是比较儿童与 15 岁以上人群潜伏期的分布情况。
+
+可以绘制两组的 NPMLE 估计量以进行视觉比较。
+
+普通估计量和修正估计量的 PP-图计算方法如下：
+
+使用 `survival` 包中的 `survdiff` 和 `survfit` 可以生成带有逐点置信带的普通 ecdf。
+
+最后，基于正态近似和自助标准误的逐点置信带的 NPMLE 对于比较这两个组别也很有用。
+
+### 5.5.2 示例 5.2.4 的代码
+
+在这个示例中，我们同时使用了 `DTDA` 和 `DTDA.cif`。我们仅展示了其中一组的步骤，具体为 `ICCGroup` 等于 1 的组。相同的分析可以重复用于其他组（即 `ICCGroup` 等于 2、3、4 或大于等于 5 的组）。
+
+独立截断的权重计算如下：
+
+可以使用下面的代码视觉化采样偏倚。
+
+最后，是 $H_1$ 下的经验 CIF：
+
+### 5.5.3 示例 5.2.6 的代码
+
+通过比例特定危险风险模型也可以探索性别的影响（仅针对 `ICCGroup` 2 组，这是唯一具有显著结果的组）。
+
+在性别条件下，淋瘤（对应 `ICCGroup` 等于 2）和其他癌症的累积发生率可以按所示进行计算。女性（男性）对应于 `Sex` 等于 1（等于 2）。
+
+相应的图表（针对女性和男性）可以使用下面的代码生成。
+
+### 5.5.4 示例 5.3.1 的代码
+
+如 示例 5.3.1 所示，评估目标变量与截断变量之间的准独立性很容易。
+
+### 5.5.5 示例 5.4.3 的代码
+
+为了计算依赖关系下分布函数的非参数估计量，我们考虑了第 5.4 节 的算法。该算法利用了 FGM、Clayton 和 Frank copula 的一阶导数，这些导数可用 `VineCopula` 包。
+
+使用这些特定的 copula 模型时，必须传递某些初始解（算法步骤 `SA1` 中的 ![phi](img/c05-i0581.png) 和 ![psi](img/c05-i0582.png)）。我们对两个变量使用了 ![$n^{-1}$](img/c05-i0583.png)（其中 ![n](img/c05-i0584.png) 为样本量）。然后使用初始解计算 ![theta](img/c05-i0585.png) 的对数似然。可以使用 `optim` 对对数似然进行极大化直到收敛。为此，必须为 ![phi](img/c05-i0586.png)、![psi](img/c05-i0587.png) 和 ![theta](img/c05-i0588.png) 固定一个最大误差。
+
+例如，Clayton copula 的对数似然可以计算如下：
+
+对于其他 copula，当使用 `VineCopula` 包中的 `R` 函数 `BiCopPDF` 时，我们需要更改对应所需 copula 族的数字。
+
+## 参考文献
+
+1. Austin MD, Simon DK, Betensky RA 2014 Computationally simple estimation and improved efficiency for special cases of double truncation. Lifetime Data Analysis **20**, 335–354.
+2. Beyersmann J, Schumacher M, Allignol A 2012 Competing Risks and Multistate Models with R. Springer.
+3. Chi Y, Tsai WY, Chiang CL 2007 Testing the equality of two survival functions with right truncated data. Statistics in Medicine **26**, 812–827.
+4. Chiou SH, Austin MD, Qian J, Betensky RA (2019) Transformation model estimation of survival under dependent truncation and independent censoring. Statistical Methods in Medical Research **28**, 3785–3798.
+5. de Uña‐Álvarez J 2020 Nonparametric estimation of the cumulative incidences of competing risks under double truncation. Biometrical Journal **62**, 852–867.
+6. de Uña‐Álvarez J, Van Keilegom I 2021 Efron‐Petrosian integrals for doubly truncated data with covariates: an asymptotic analysis. Bernoulli **27**, 249–273.
+7. Efron B and Petrosian V 1999 Nonparametric methods for doubly truncated data. Journal of the American Statistical Association **94**, 824–834.
+8. Emura T, Wang W (2012) Nonparametric maximum likelihood estimation for dependent truncation data based on copulas. Journal of Multivariate Analysis **110**.
+9. Gehan EA 1965 A generalized Wilcoxon test for censored data. Biometrika **57**, 203–223.
+10. Klein JP, Moeschberger ML 2003 Survival Analysis. Techniques for Censored and Truncated Data (2nd Edition).
+11. Lynden‐Bell D 1971 A method of allowing selection in small samples applied to 3CR quasars. Monthly Notices of the Astronomical Society **155**, 95–118.
+12. Mann HB, Whitney DR 1947 On a test whether one two random variables is stochastically larger than the other. Annals of Mathematical Statistics **18**, 50–60.
+13. Martin EC, Betensky RA 2005 Testing quasi‐independence of failure and truncation times via conditional Kendall's Tau. Journal of the American Association **100**, 484–492.
+14. Nelsen RB 2006 An Introduction to Copulas. Springer.
+15. Pepe MS, Fleming TR 1989 Weighted Kaplan‐Meier statistics: a class of distance tests for censored data. Biometrics **45**, 497–507.
+16. Peto R, Peto J 1972 Asymptotic efficient rank invariant test procedures. Journal of the Royal Statistical Society, Series A **135**, 185–198.
+17. Shen PS 2009 A class of rank‐based test for left‐truncated and right‐censored data. Annals of the Institute of Statistical Mathematics **61**, 461–476.
+18. Shen, PS 2011 Testing quasi‐independence for doubly truncated data. Journal of Nonparametric Statistics **23**, 753–761.
+19. Shen PS 2013 A class of rank‐based tests for doubly‐truncated data. TEST **22**, 83–102.
+20. Vakulenko‐Lagun B, Qian J, Chiou SH, Betensky RA 2019 Nonidentifiability in the presence of factorization for truncated data. Biometrika **106**, 724–731.
+21. Wilcoxon F 1945 Individual comparisons by ranking methods. Biometrics **1**, 80–83.
+
+
+
+
+
+在本书中，我们主要使用 `DTDA` 包中的函数进行数据分析。然而，`R` 中还有其他包（`R` Core Team, 2020）也可以用于分析双截断数据；其中一些包已经在书的章节中提到过。在本附录中，我们将简要回顾包含在包 `DTDA.ni`（de Uña‐Álvarez and Soage, 2018）、`DTDA.cif`（de Uña‐Álvarez and Soage, 2020）、`SurvTrunc`（Rennert, 2018）以及 `double.truncation`（Emura et al., 2019）中的函数，连同本书插图示例中使用的 `DTDA` 相关函数。请参考 Moreira et al. (2010) 了解 `DTDA` 的介绍，并参考 Moreira et al. (2021) 了解其最新版本 3.0 中包含的新函数的描述。
+
+`DTDA` 包含了多种函数，允许通过不同的算法从双截断数据计算非参数极大似然估计（NPMLE），并结合自助法置信区间，以及在此设定下使用合适的带宽选择器获取密度函数和风险函数的核估计。`DTDA.ni` 实现了一种避免迭代过程的 NPMLE 替代估计量；关于这种非迭代估计量的的细节，请参阅 de Uña‐Álvarez (2018)。`double.truncation` 包包含一个用于获取带渐近标准误的 NPMLE 的函数（Emura et al., 2015）。`double.truncation` 中实现的基于似然的方法也允许计算参数估计。`SurvTrunc` 允许通过自助法标准误获取 NPMLE。此外，通过 Rennert and Xie (2018) 提出的 Cox 回归也可以通过 `SurvTrunc` 实现。最后，可以使用 `DTDA.cif` 进行竞争性风险的累积发生率估计，它提供了 de Uña‐Álvarez (2020a) 中提出的两种不同估计量。`DTDA.cif` 同样提供累积发生率的自助法标准误。
+
+下文将简要描述这些函数和包（记作 `function` (`package`))），并根据进行双截断数据分析时最相关的任务进行组织。在 de Uña‐Álvarez (2020b) 中可以找到对其中几个函数的比较研究。
+
+## A.1 计算 NPMLE 和标准误
+
+- `efron.petrosian` (`DTDA`): 使用 Efron 和 Petrosian 的第一种算法计算 NPMLE 估计量。可以使用简单的自助方法计算逐点置信限。
+- `lynden` (`DTDA`): 使用 Efron 和 Petrosian 的第二种算法计算 NPMLE 估计量。与上一个相同，也可以获得简单的自助（逐点）置信带。
+- `shen` (`DTDA`): 使用 Shen 的算法计算 NPMLE 估计量，并结合截断变量的边缘分布。也可以计算自助法（使用简单或显而易见的方法）。
+- `DTDAni` (`DTDA.ni`): 该函数针对区间宽度为 `tau` 的区间采样场景，产生双截断变量累积分布的非迭代估计量。该函数不提供置信带。
+- `NPMLE` (`double.truncation`): 使用 Shen 的算法计算 NPMLE，并使用 Emura et al. (2015) 中的渐近方差公式获取标准误。
+- `cdfDT` (`SurvTrunc`): 同样使用 Shen 的算法，该函数通过简单的自助法和正态近似法提供 95% 置信限。
+
+## A.2 评估 NPMLE 的存在性与唯一性
+
+可以通过以下方式检查 NPMLE 存在性和唯一性的必要条件：
+
+`min(c1)` 和 `min(c2)` 必须严格大于 1，否则 NPMLE 不存在或唯一。`DTDA` 中的函数在 `min(c1)==1` 或 `min(c2)==1` 时会报告警告信息。
+
+正如 Xiao 和 Hudgens (2019) 所提到的，可以使用 `igraph` 包来确定 NPMLE 存在且唯一的子样本。
+
+## A.3 半参数估计与参数估计
+
+`PMLE.dist` (`double.truncation`): 一系列执行参数估计的函数。考虑的分布包括 `loglogistic`、`lognormal`、`Weibull` 和指数族。估计通过极大似然法进行。
+
+关于半参数估计，需要注意的是，尽管没有特定的函数，但有许多函数允许包含权重。为了这一目的，建议在向量中保留估计结果。
+
+## A.4 核估计
+
+- `densityDT` (`DTDA`): 该函数计算双截断下的核密度估计。参数 `bw` 允许不同的带宽选择器，具体为：正态参考规则 (`NR`)、单两阶段插件法 (`DPI1`, `DPI2`)、最小二交叉验证 (`LSCV`) 或平滑自助 (`SBoot`)。
+- `hazardDT` (`DTDA`): 该函数计算双截断下的风险函数核估计，使用 LSCV 带宽。
+
+## A.5 回归分析
+
+- `coxDT` (`SurvTrunc`): 该函数允许对双截断生存时间拟 Cox 比例回归模型。它还计算自助标准误和置信区间。它实现了 Rennert and Xie (2018) 的方法。
+
+Mandel et al. (2018) 提出的 Cox 回归可以通过 `survival` 包中的 `coxph` 函数通过引入权重作为偏移量（offset）来实现。在这种情况下，`coxph` 给出的标准误无效的，必须通过自助法重新计算。
+
+## A.6 竞争性风险
+
+- `DTDAcif` (`DTDA.cif`): 该函数非参数地估计双截断下竞争性风险的累积发生率。
+
+## A.7 数据模拟
+
+- `rsim.DT` (`DTDA`): 生成具有两种不同观测偏差模式的双截断随机数据，由参数 `model` 和 `tau`（采样区间宽度）指定。实现的两个模型对应于 第 2.1.3 节 中的模拟场景 I 和 II。
+
+
+
+
+
+`simu.Weibull` (`double.truncation`): 从 Weibull 模型随机生成双截断数据。参数 `mu` 和 `sigma` 对应于 Weibull 参数，`delta` 控制包含概率。
+
+## A.8 准独立性检验
+
+`indeptestDT` (`SurvTrunc`): 该函数基于条件 Kendall's Tau 计算准独立性检验结果。
+
+## A.9 依赖截断
+
+`BiCopPDF` (`VineCopula`): 该函数评估给定二元拷贝函数（copula）的概率密度函数（pdf）。参数 `family`（数字）允许考虑 Clayton 和 FGM 拷贝函数等。
+
+## 参考文献
+
+1. de Uña‐Álvarez J 2018 A non‐iterative estimator for interval sampling and doubly truncated data. In: Gil E., Gil E., Gil J., Gil M. (eds) The Mathematics of the Uncertain. Studies in Systems, Decision and Control, vol 142\. Springer.
+
+2. de Uña‐Álvarez J 2020a Nonparametric estimation of the cumulative incidences of competing risks under double truncation. Biometrical Journal **62**, 852–867.
+
+3. de Uña‐Álvarez J 2020b `R` packages for the statistical analysis of doubly truncated data: a review. *arXiv 2004.08978*.
+
+4. de Uña‐Álvarez J, Soage JC 2018 *DTDA.ni: Doubly Truncated Data Analysis, Non Iterative*. R package version 1.0.
+
+5. de Uña‐Álvarez J, Soage JC 2020 *DTDA.cif: Doubly Truncated Data Analysis, Cumulative Incidence Functions*. R package version 1.0.2.
+
+6. Emura T, Konno Y, Michimae H 2015 Statistical inference based on the nonparametric maximum likelihood estimator under double‐truncation. Lifetime Data Analysis **21**, 397–418.
+
+7. Emura T, Ya‐Hsuan H, Huang CY 2019 *double.truncation: Analysis of Doubly‐Truncated Data*. R package version 1.4.
+
+8. Mandel M, de Uña‐Álvarez J, Simon DK, Betensky RA 2018 Inverse probability weighted Cox regression for doubly truncated data. Biometrics **74**, 481–487.
+
+9. Moreira C, de Uña‐Álvarez J, Crujeiras RM 2010 DTDA: an `R` package to analyse randomly truncated data. Journal of Statistical Software **37**, 1–20.
+
+10. Moreira C, de Uña‐Álvarez J, Crujeiras RM 2021 *DTDA: Doubly Truncated Data Analysis*. R package version 3.0.
+
+11. R Core Team 2020 *R: A Language and Environment for Statistical Computing*, R Foundation for Statistical Computing. Vienna, Austria.
+
+12. Rennert L 2018 *SurvTrunc: Analysis of Doubly Truncated Data*. R package version 0.1.0.
+
+13. Rennert L, Xie SX 2018 Cox regression model with doubly truncated data. Biometrics **74**, 725–733.
+
+14. Xiao J, Hudgens MG 2019 On nonparametric maximum likelihood estimation with double truncation. Biometrika **106**, 989–996.
+
+# 索引
+
+### a
+
+* 加速生存时间 109, 117, 121
+* 急性冠肌综合征 9, 17, 25, 96
+* 诊断年龄 5, 20, 75, 112, 138
+* 艾滋病 6, 20, 76, 114, 136
+* 算法
+    * 迭代 4, 14, 18, 22, 153
+    * 数值 18, 21
+* 天文学 1, 4
+* 渐近
+    * 偏差 72, 79, 92, 124
+    * 分布 72, 92
+    * 方差 30, 49, 51, 147
+
+### b
+
+* 带
+    * 置信区间 31, 41, 89, 96, 137
+    * 可变性 89
+    * 带宽 69, 123
+    * 自举法 70, 78, 81
+    * 交叉验证 70, 78, 80, 93, 125
+    * 数据驱动 70, 77, 80
+    * 局部 89
+    * 正态参考 70, 78, 82, 84, 88
+    * 插件式 78, 80, 88, 125
+    * Beta 模型 45, 51, 75
+    * 偏置函数 14, 30, 83, 133, 136
+    * 自举法
+        * 带宽 70, 78
+        * 明显的 37, 89, 154
+        * 重采样 37, 41, 84, 89
+        * 半参数 45, 155
+        * 简单的 31, 37, 89, 116, 145
+        * 平滑 81, 84, 88, 96
+        * 标准误 37, 39
+
+### c
+
+* 儿童癌症 5, 43, 71, 90, 138
+* Clayton 148, 151, 154
+* 竞争风险 131, 137, 142
+* 置信
+    * 带 31, 41, 89, 96, 137
+    * 区间 27, 37, 89, 155
+    * 边界 37
+* 一致性 24, 72, 112, 131
+* 收敛
+    * 分布 33, 36, 46, 54
+    * 速率 72
+    * 弱 27, 30, 72, 140
+* 拷贝函数 131, 150
+* Cox 模型 109, 114
+* 累积
+    * 分布 1, 39
+    * 风险 91, 132
+    * 发生 112, 131, 139, 142
+
+### d
+
+* 数据
+    * 截删 3, 25, 41, 118, 132
+    * 双截断 3, 19, 70, 109, 131
+    * 左截断 2, 22, 29, 49, 132
+    * 右截断 2, 14
+    * 截断 3
+
+
+
+
+
+- 缺陷 48
+- 延迟入 2
+- e
+- 效率 48, 75
+- Efron‐Petrosian
+    - 算法 22, 23
+    - 积分 24, 113, 140
+    - NPMLE 71, 91, 112, 131
+- 工程学 1, 137
+- 
+    - 积分方 70
+    - 均积分方 70
+    - 均方 70
+    - 标准 27, 50, 116, 139, 154
+- 估计量
+    - 非参数 14, 74, 78, 94, 98
+    - 半参数 45, 72, 94
+- 存在性 5, 16, 96, 139
+- f
+- 故障时间 7, 33, 42
+- Farlie–Gumbel–Morgenstern (FGM) 151, 155
+- 费雪信息 47, 50, 54
+- Frank 151, 154
+- g
+- Gehan 132
+- h
+- 风险 22
+    - 特别特定 131, 142, 145
+    - 函数 69, 90, 114, 132
+- i
+- 可识别性 4, 26, 35, 146, 151
+- iid 表示 25, 27, 30, 35
+- 发生率 26
+    - 过程 20
+    - 速率 48
+- 潜伏期 3, 25, 76, 120, 136
+- k
+- Kaplan–Meier 3, 132
+- Kendall's Tau 146
+- 核
+    - 密度估计 69, 88
+    - 风险估计量 93
+    - 平滑 122
+- l
+- 最小二乘 80, 93, 118
+- 留一 81, 94, 97
+- 寿命 7, 33, 41, 138
+- 似然
+    - 条件 17, 22, 45, 76, 96
+    - 函数 32, 155
+    - 边缘 17, 23, 53
+    - 最大 3, 45, 55, 111, 151
+- 极限方差 30, 47, 92, 参见渐近方差
+- 对数正态 54
+- 对数秩 132
+    - 加权 132
+- Lynden–Bell 14, 16, 22, 29, 146
+- m
+- Mann–Whitney 118, 132
+- 模型
+    - 参数 13, 44, 53, 75, 144
+    - 半参数 45
+- 基于矩的 54
+- 蒙特卡洛 16, 74, 83, 116, 133
+- n
+- Nadaraya–Watson 123
+- Nelson–Aalen 132
+- o
+- 观测偏差 2, 18, 76, 109, 133
+- p
+- Parkinson 4, 8, 20, 41, 112
+    - 比例风险 109, 112, 114, 119, 132
+- q
+- Quasar 7, 24, 83
+- 拟独立 131, 146
+- r
+- 回归
+    - 线性 110, 17, 119
+    - 局部常数 123
+    - 局部线性 123
+    - 局部多项 123
+    - 非参数 121
+- 可靠性 1, 90, 131, 137
+- s
+- 采样
+    - 偏差 1, 18, 71, 110, 131
+    - 截面 2
+    - 间 20, 94, 98
+    - 概率 14, 19, 71, 109, 133
+    - 随机 33, 46, 123, 132
+- 得分方程 46, 116, 142
+- 模拟 16, 74, 125, 132
+- 平滑参数 123, 124
+- 软件 5, 124
+- 支持 4, 13, 75, 142
+- 生存分析 1, 20, 90, 109, 131
+- t
+- 检验 5, 133, 136, 146
+- 结并 17, 22, 32
+- 事件时间 1, 4
+- 转移强度 131, 142
+- 截断
+    - 依赖 131, 150
+    - 双重 3, 13, 73, 109, 131
+    - 左 2, 9, 14, 29
+    - 单侧 2, 25, 43, 82, 132
+
+
+
+
+- 速率 28, 49
+- 右侧 2, 14, 24, 132
+- 双样本检验 131
+- `u`
+- 唯一性 5, 16, 96, 139
+- `w`
+- 韦分布 54
+- 加权
+    - 平均值 112
+    - 估计量 19
+    - 最小二乘 118
+    - 平方和 123
+
+# WILEY 终端用户许可协议
+
+请访问 [www.wiley.com/go/eula](http://www.wiley.com/go/eula) 访问 Wiley 的电子书用户许可协议 (EULA)。

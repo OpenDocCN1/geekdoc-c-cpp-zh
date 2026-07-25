@@ -1,0 +1,2 @@
++   [Windows PowerShell 自学训练套件：Stanek and Associates 解决方案解决方案](README.md)
++   [Windows PowerShell 自学训练套件：Stanek and Associates 解决方案解决方案](windows-powershell-self-study-training-kit-stanek-and-associ_0.md)
