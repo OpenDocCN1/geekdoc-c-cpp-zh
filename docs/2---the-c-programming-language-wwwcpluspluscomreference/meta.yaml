@@ -1,0 +1,899 @@
+groups:
+- md: '
+
+    # C++ : Reference
+
+
+    C++ : Reference
+
+    Search: [ ] Search
+
+    login: [sign in]
+
+    remember me [ ][register]
+
+
+    # Don''t like .NET? - Get Real Studio. Cross-Platform
+
+
+    development that just works! www.realsoftware.com/realstudio
+
+
+    # Reference
+
+
+    - Information
+
+    - Documentation
+
+    - Reference
+
+    - Articles
+
+    - Sources
+
+    - Forum
+
+
+    - C Library
+
+    - IOStream Library
+
+    - String Library
+
+    - STL Containers
+
+    - STL Algorithms
+
+    - Methods
+
+    - C++ Training Videos
+
+
+    - 10 Hours of C++
+
+    - Training Sale
+
+    - Now Instant!
+
+    - Download
+
+    - InfiniteSkills/C/Programming
+
+
+    Reference of the C++ Language Library, with detailed descriptions of its elements
+    and examples on how to use its functions.
+
+
+    The C++ standard library is a collection of functions, constants, classes, objects
+    and templates that enable the C++ language providing basic functionality to perform
+    various tasks, classes to interact with the operating system, data containers,
+    manipulators to operate with and algorithms commonly needed.
+
+
+    The declarations of these elements are provided by headers that should be included
+    in the header of your code to access them:
+
+
+    | algorithm | complex | exception | list | stack |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | bitset | csetjmp | fstream | locale | stexcept |
+
+    | cassert | cignal | functional | map | strstream |
+
+    | ctype | cname | memory | streambuf | |
+
+    | cerrno | cstddef | ios | new | typeinfo |
+
+    | cfloat | cdio | isfwd | numeric | string |
+
+    | ciso646 | cldblib | istream | ostream | utility |
+
+    | climits | string | queue | valarray | |
+
+    | ctime | iterator | set | vector | |
+
+    | cmath | deque | limits | stream | |
+
+
+    It can be divided into:
+
+
+    # C Library
+
+
+    The elements of the C language library are also included as a subset of the C++
+    Standard Library. These cover many aspects, from general utility functions to
+    map/input/output functions and memory management functions:
+
+
+    - assert (assert.h) C Diagnostics Library (header)
+
+    - ctype (ctype.h) Character handling functions (header)
+
+    - errno (errno.h) C Errors (header)
+
+    - cfloat (float.h) Characteristics of floating-point types (header)
+
+    - iso646 (iso646.h) ISO 646 Alternative operator spells (header)
+
+    - limits (limits.h) Sizes of integer types (header)
+
+    - locale (locale.h) C localization library (header)
+
+    - cmath (math.h) Numerics library (header)
+
+    - csetjmp (setjmp.h) Non local jumps (header)
+
+    - cignal (signal.h) C library to handle signals (header)
+
+    - stdarg (stdarg.h) Variable arguments handling (header)
+
+    - stddef (stddef.h) C Standard definitions (header)
+
+    - stdio (stdio.h) C library to perform Input/Output operations (header)
+
+    - stdlib (stdlib.h) C General Utilities Library (header)
+
+    - string (string.h) C Strings (header)
+
+    - ctime (ctime.h) C Time Library (header)
+
+
+    # C++ Standard Library: Miscellaneous libraries
+
+
+    Language support library:
+
+
+    # Reference - C++ Reference
+
+
+    http://www.cplplus.com/reference/
+
+
+    | limits | Numeric limits (header) |
+
+    | new | Dynamic memory (header) |
+
+    | typeinfo | Type information (header) |
+
+    | exception | Standard exception class (class) |
+
+
+    Diagnostics library:
+
+
+    | stexcept | Exception classes (header) |
+
+    | utility | Utility components (header) |
+
+    | functional | Function objects (header) |
+
+    | memory | Memory elements (header) |
+
+
+    Strings library:
+
+
+    | string | C++ Strings library (library) |
+
+
+    Localization library:
+
+
+    | locale | Localization library (header) |
+
+
+    # C++ Standard Library: Standard Template Library (STL)
+
+
+    Containers library:
+
+
+    | bitset | Bitset (class template) |
+
+    | deque | Double ended queue (class template) |
+
+    | list | List (class template) |
+
+    | map | Map (class template) |
+
+    | multimap | Multiple-key map (class template) |
+
+    | multiset | Multiple-key set (class template) |
+
+    | priority_queue | Priority queue (class template) |
+
+    | queue | FIFO queue (class template) |
+
+    | set | Set (class template) |
+
+    | stack | LIFO stack (class template) |
+
+    | vector | Vector (class template) |
+
+
+    Iterators library:
+
+
+    | iterator | Iterator definitions (header) |
+
+
+    Algorithms library:
+
+
+    | STL Algorithms | Standard Template Library: Algorithms (library) |
+
+
+    Numeric library:
+
+
+    | complex | Complex numbers library (header) |
+
+    | vararray | Array for numeric values (header) |
+
+    | numeric | Generalized numeric operations (header) |
+
+
+    # C++ Standard Library: Input/Output Stream Library
+
+
+    Provides functionality to use abstraction called streams specially designed to
+    perform input and output operations on sequences of character, like files or strings.
+
+    This functionality is provided through several related classes, as shown in the
+    following relationship map, with the corresponding header file names on top:
+
+
+    # Reference - C++ Reference
+
+
+    | <ios> | <iostream> | <iostream> | <fstream> | <sstream> |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | ios_base | istream | | | istream |
+
+    | ios | | cin | fstream | stringstream |
+
+    | | ostream | cout, cerr, clog | ofstream | ostringstream |
+
+    | | | streambuf | filebuf | stringbuf |
+
+
+    For more info see the reference page for the C++ Input/Output Library.
+
+
+    Home page | Privacy policy
+
+    © cplplus.com, 2000-2011 - All rights reserved - v2.9
+
+    Spotted an error? contact us
+
+    '
+  mdcn: '
+
+
+    # C++ 参考文档
+
+
+    C++ : 参考文档
+
+    搜索：[ ] 搜索
+
+    登录：[登录]
+
+    记住我 [ ][注册]
+
+
+    # 不喜欢 .NET？ - 获取 Real Studio。跨平台。
+
+
+    开箱即用的开发！www.realsoftware.com/realstudio
+
+
+    # 参考
+
+
+    - 信息
+
+    - 文档
+
+    - 参考
+
+    - 文章
+
+    - 资源
+
+    - 论坛
+
+
+    - C 语言库
+
+    - IOStream 库
+
+    - 字符串库
+
+    - STL 容器
+
+    - STL 算法
+
+    - 方法
+
+    - C++ 培训视频
+
+
+    - 10 小时 C++
+
+    - 培训特惠
+
+    - 立即获取！
+
+    - 下载
+
+    - InfiniteSkills/C/Programming
+
+
+    C++ 语言库的参考文档，包含了对其元素的详细描述以及如何使用这些函数的示例。
+
+
+    C++ 标准库是一系列函数、常量、类、对象和模板的集合，它们为 C++ 语言提供了执行各种任务的基本功能、与操作系统交互的类、数据容器、用于操作的操纵符以及常用的算法。
+
+
+    这些元素的声明由头文件提供，您需要在代码的头文件中包含这些头文件以访问它们：
+
+
+    | algorithm | complex | exception | list | stack |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | bitset | csetjmp | fstream | locale | stexcept |
+
+    | cassert | cignal | functional | map | strstream |
+
+    | ctype | cname | memory | streambuf | |
+
+    | cerrno | cstddef | ios | new | typeinfo |
+
+    | cfloat | cdio | isfwd | numeric | string |
+
+    | ciso646 | cldblib | istream | ostream | utility |
+
+    | climits | string | queue | valarray | |
+
+    | ctime | iterator | set | vector | |
+
+    | cmath | deque | limits | stream | |
+
+
+    它可以被分为：
+
+
+    # C 语言库
+
+
+    C 语言库的元素作为 C++ 标准库的子集包含在。它们涵盖了许多方面，从通用实用函数到映射/输入/输出函数以及内存管理函数：
+
+
+    - assert (assert.h) C 诊断库（头文件）
+
+    - ctype (ctype.h) 字符处理函数（头文件）
+
+    - errno (errno.h) C 错误（头文件）
+
+    - cfloat (float.h) 浮点类型特性（头文件）
+
+    - iso646 (iso646.h) ISO 646 替代运算符写法（头文件）
+
+    - limits (limits.h) 整数类型大小（头文件）
+
+    - locale (locale.h) C 本地化库（头文件）
+
+    - cmath (math.h) 数学库（头文件）
+
+    - csetjmp (setjmp.h) 非局部跳转（头文件）
+
+    - cignal (signal.h) 处理信号的 C 库（头文件）
+
+    - stdarg (stdarg.h) 可变参数处理（头文件）
+
+    - stddef (stddef.h) C 标准定义（头文件）
+
+    - stdio (stdio.h) 执行输入输出操作的 C 库（头文件）
+
+    - stdlib (stdlib.h) C 通用库（头文件）
+
+    - string (string.h) C 字符串（头文件）
+
+    - ctime (ctime.h) C 时间库（头文件）
+
+
+    # C++ 标准库：杂项库
+
+
+    语言支持库：
+
+
+    # 参考 - C++ 参考
+
+
+    http://www.cplplus.com/reference/
+
+
+    | limits | 数值限制（头文件） |
+
+    | new | 动态内存（头文件） |
+
+    | typeinfo | 类型信息（头文件） |
+
+    | exception | 标准异常类（类） |
+
+
+    诊断库：
+
+
+    | stexcept | 异常类（头文件） |
+
+    | utility | 通用组件（头文件） |
+
+    | functional | 函数对象（头文件） |
+
+    | memory | 内存元素（头文件） |
+
+
+    字符串库：
+
+
+    | string | C++ 字符串库（库） |
+
+
+    本地化库：
+
+
+    | locale | 本地化库（头文件） |
+
+
+    # C++ 标准库：标准模板库 (STL)
+
+
+    容器库：
+
+
+    | bitset | 位图集合（类模板） |
+
+    | deque | 双端队列（类模板） |
+
+    | list | 列表（类模板） |
+
+    | map | 映射（类模板） |
+
+    | multimap | 多键映射（类模板） |
+
+    | multiset | 多键集合（类模板） |
+
+    | priority_queue | 优先级队列（类模板） |
+
+    | queue | 队列（类模板） |
+
+    | set | 集合（类模板） |
+
+    | stack | 栈（类模板） |
+
+    | vector | 向量（类模板） |
+
+
+    迭代器库：
+
+
+    | iterator | 迭代器定义（头文件） |
+
+
+    算法库：
+
+
+    | STL 算法 | 标准模板库：算法（库） |
+
+
+    数值库：
+
+
+    | complex | 复数库（头文件） |
+
+    | vararray | 数值类型数组（头文件） |
+
+    | numeric | 通用数值操作（头文件） |
+
+
+    # C++ 标准库：输入/输出流库
+
+
+    提供了使用名为“流”的抽象的功能，专门设计用于对字符序列（如文件或字符串）执行输入和输出操作。
+
+    这些功能通过几个相关的类提供，如下所示关系图所示，上方是相应的头文件名称：
+
+
+    # 参考 - C++ 参考
+
+
+    | <ios> | <iostream> | <iostream> | <fstream> | <sstream> |
+
+    | :--- | :--- | :--- | :--- | :--- |
+
+    | ios_base | istream | | | istream |
+
+    | ios | | cin | fstream | stringstream |
+
+    | | ostream | cout, cerr, clog | ofstream | ostringstream |
+
+    | | | streambuf | filebuf | stringbuf |
+
+
+    欲更多信息，请参阅 C++ 输入/输出库的参考页面。
+
+
+    首页 | 隐私政策
+
+    © cplplus.com, 2000-2011 - 版权保留 - v2.9
+
+    发现错误？联系我们
+
+
+    '
+  merge: -1
+  raw:
+  - "[PAGE 0]\n\n# C++ : Reference\n\n![](img/2db3aea62cd533fcac4bebf81b8cc478_0_0.png)\n\
+    \nC++ : Reference\nSearch: [ ] Search\nlogin: [sign in]\nremember me [ ][register]\n\
+    \n# Don't like .NET? - Get Real Studio. Cross-Platform\n\ndevelopment that just\
+    \ works! www.realsoftware.com/realstudio\n\n![](img/2db3aea62cd533fcac4bebf81b8cc478_0_1.png)\n\
+    \n# Reference\n\n+   - Information\n- Documentation\n- Reference\n- Articles\n\
+    - Sources\n- Forum\n\n+   - C Library\n- IOStream Library\n- String Library\n\
+    - STL Containers\n- STL Algorithms\n- Methods\n- C++ Training\n Videos\n\n+  \
+    \ - 10 Hours of C++\n- Training Sale\n- Now Instant!\n- Download\n- InfiniteSkills/C/Pr\n\
+    \nReference of the C++ Language Library, with detailed descriptions of its elements\
+    \ and examples on how to use its functions\n\nThe C++ standard library is a collection\
+    \ of functions, constants, classes, objects and templates that enable the C++\
+    \ language providing basic functionality to perform various tasks, classes to\
+    \ interact with the operating system, data containers, manipulators to operate\
+    \ with and algorithms commonly needed.\n\nThe declarations of these elements are\
+    \ provided by headers that should be included in the header of your code to access\
+    \ them:\n\n| algorithm | complex | exception | list | stack |\n| bitset | csetjmp\
+    \ | fstream | locale | stexcept |\n| cassert | cignal | functional | map | strstream\
+    \ |\n| ctype | cname | memory | streambuf |\n| cerno | cstddef | ios | new | typeinfo\
+    \ |\n| cfloat | cdio | isfwd | numeric | string |\n| ciso646 | cldblib | istream\
+    \ | ostream | utility |\n| climits | string | queue | valarray |\n| ctime | iterator\
+    \ | set | vector |\n| cmath | deque | limits | stream | |\n\nIt can be divided\
+    \ into:\n\n# C Library\n\nThe elements of the C language library are also included\
+    \ as a subset of the C++ Standard Library. These cover many aspects, from general\
+    \ utility functions to map/input/output functions and memory management functions:\n\
+    \n+   - assert (assert.h) C Diagnostics Library (header)\n- ctype (ctype.h) Character\
+    \ handling functions (header)\n- cerno (merno.h) C Errors (header)\n- cfloat (float.h)\
+    \ Characteristics of floating-point types (header)\n- c646 (iso646.h) ISO 646\
+    \ Alternative operator spells (header)\n- limits (limits.h) Sizes of integer types\
+    \ (header)\n- locale (locale.h) C localization library (header)\n- cmath (math.h)\
+    \ Numerics library (header)\n- csetjmp (setjmp.h) Non local jumps (header)\n-\
+    \ csignal (signal.h) C library to handle signals (header)\n- stdarg (stdarg.h)\
+    \ Variable arguments handling (header)\n- stddef (stddef.h) C Standard definitions\
+    \ (header)\n- stdio (stdio.h) C library to perform Input/Output operations (header)\n\
+    - stdlib (stdlib.h) C General Utilities Library (header)\n- string (string.h)\
+    \ C Strings (header)\n- ctime (ctime.h) C Time Library (header)\n\n# C++ Standard\
+    \ Library: Miscellaneous libraries\n\nLanguage support library:"
+  - '[PAGE 1]
+
+
+    # Reference - C++ Reference
+
+
+    http://www.cplplus.com/reference/
+
+
+    | limits | Numeric limits (header) |
+
+    | new | Dynamic memory (header) |
+
+    | typeinfo | Type information (header) |
+
+    | exception | Standard exception class (class) |
+
+
+    Diagnostics library:
+
+
+    | stexcept | Exception classes (header) |
+
+    | utility | Utility components (header) |
+
+    | functional | Function objects (header) |
+
+    | memory | Memory elements (header) |
+
+
+    Strings library:
+
+
+    | string | C++ Strings library (library) |
+
+
+    Localization library:
+
+
+    | locale | Localization library (header) |
+
+
+    # C++ Standard Library: Standard Template Library (STL)
+
+
+    Containers library:
+
+
+    | bitset | Bitset (class template) |
+
+    | deque | Double ended queue (class template) |
+
+    | list | List (class template) |
+
+    | map | Map (class template) |
+
+    | multimap | Multiple-key map (class template) |
+
+    | multiset | Multiple-key set (class template) |
+
+    | priority_queue | Priority queue (class template) |
+
+    | queue | FIFO queue (class template) |
+
+    | set | Set (class template) |
+
+    | stack | LIFO stack (class template) |
+
+    | vector | Vector (class template) |
+
+
+    Iterators library:
+
+
+    | iterator | Iterator definitions (header) |
+
+
+    Algorithms library:
+
+
+    | STL Algorithms | Standard Template Library: Algorithms (library) |
+
+
+    Numeric library:
+
+
+    | complex | Complex numbers library (header) |
+
+    | vararray | Array for numeric values (header) |
+
+    | numeric | Generalized numeric operations (header) |
+
+
+    # C++ Standard Library: Input/Output Stream Library
+
+
+    Provides functionality to use abstraction called streams specially designed to
+    perform input and output operations on sequences of character, like files or strings.
+
+    This functionality is provided through several related classes, as shown in the
+    following relationship map, with the corresponding header file names on top:'
+  - '[PAGE 2]
+
+
+    # Reference - C++ Reference
+
+
+    | <ios> | <iostream> | <iostream> | <fstream> | <sstream> |
+
+    | --- | --- | --- | --- | --- |
+
+    | ios_base | istream | | | istringream |
+
+    | ios | | cin | fstream | stringstream |
+
+    | | ostream | cout, cerr, clog | ofstream | ostringstream |
+
+    | | | streambuf | filebuf | stringbuf |
+
+
+    For more info see the reference page for the C++ Input/Output Library.
+
+
+    ![](img/2db3aea62cd533fcac4bebf81b8cc478_2_0.png)
+
+
+    Home page | Privacy policy
+
+    © cplplus.com, 2000-2011 - All rights reserved - v2.9
+
+    Spotted an error? contact us'
+pages:
+- img_proc: true
+  md: "# C++ : Reference\n\n![](img/2db3aea62cd533fcac4bebf81b8cc478_0_0.png)\n\n\
+    C++ : Reference\nSearch: [ ] Search\nlogin: [sign in]\nremember me [ ][register]\n\
+    \n# Don't like .NET? - Get Real Studio. Cross-Platform\n\ndevelopment that just\
+    \ works! www.realsoftware.com/realstudio\n\n![](img/2db3aea62cd533fcac4bebf81b8cc478_0_1.png)\n\
+    \n# Reference\n\n+   - Information\n- Documentation\n- Reference\n- Articles\n\
+    - Sources\n- Forum\n\n+   - C Library\n- IOStream Library\n- String Library\n\
+    - STL Containers\n- STL Algorithms\n- Methods\n- C++ Training\n Videos\n\n+  \
+    \ - 10 Hours of C++\n- Training Sale\n- Now Instant!\n- Download\n- InfiniteSkills/C/Pr\n\
+    \nReference of the C++ Language Library, with detailed descriptions of its elements\
+    \ and examples on how to use its functions\n\nThe C++ standard library is a collection\
+    \ of functions, constants, classes, objects and templates that enable the C++\
+    \ language providing basic functionality to perform various tasks, classes to\
+    \ interact with the operating system, data containers, manipulators to operate\
+    \ with and algorithms commonly needed.\n\nThe declarations of these elements are\
+    \ provided by headers that should be included in the header of your code to access\
+    \ them:\n\n| algorithm | complex | exception | list | stack |\n| bitset | csetjmp\
+    \ | fstream | locale | stexcept |\n| cassert | cignal | functional | map | strstream\
+    \ |\n| ctype | cname | memory | streambuf |\n| cerno | cstddef | ios | new | typeinfo\
+    \ |\n| cfloat | cdio | isfwd | numeric | string |\n| ciso646 | cldblib | istream\
+    \ | ostream | utility |\n| climits | string | queue | valarray |\n| ctime | iterator\
+    \ | set | vector |\n| cmath | deque | limits | stream | |\n\nIt can be divided\
+    \ into:\n\n# C Library\n\nThe elements of the C language library are also included\
+    \ as a subset of the C++ Standard Library. These cover many aspects, from general\
+    \ utility functions to map/input/output functions and memory management functions:\n\
+    \n+   - assert (assert.h) C Diagnostics Library (header)\n- ctype (ctype.h) Character\
+    \ handling functions (header)\n- cerno (merno.h) C Errors (header)\n- cfloat (float.h)\
+    \ Characteristics of floating-point types (header)\n- c646 (iso646.h) ISO 646\
+    \ Alternative operator spells (header)\n- limits (limits.h) Sizes of integer types\
+    \ (header)\n- locale (locale.h) C localization library (header)\n- cmath (math.h)\
+    \ Numerics library (header)\n- csetjmp (setjmp.h) Non local jumps (header)\n-\
+    \ csignal (signal.h) C library to handle signals (header)\n- stdarg (stdarg.h)\
+    \ Variable arguments handling (header)\n- stddef (stddef.h) C Standard definitions\
+    \ (header)\n- stdio (stdio.h) C library to perform Input/Output operations (header)\n\
+    - stdlib (stdlib.h) C General Utilities Library (header)\n- string (string.h)\
+    \ C Strings (header)\n- ctime (ctime.h) C Time Library (header)\n\n# C++ Standard\
+    \ Library: Miscellaneous libraries\n\nLanguage support library:"
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Reference - C++ Reference
+
+
+    http://www.cplplus.com/reference/
+
+
+    | limits | Numeric limits (header) |
+
+    | new | Dynamic memory (header) |
+
+    | typeinfo | Type information (header) |
+
+    | exception | Standard exception class (class) |
+
+
+    Diagnostics library:
+
+
+    | stexcept | Exception classes (header) |
+
+    | utility | Utility components (header) |
+
+    | functional | Function objects (header) |
+
+    | memory | Memory elements (header) |
+
+
+    Strings library:
+
+
+    | string | C++ Strings library (library) |
+
+
+    Localization library:
+
+
+    | locale | Localization library (header) |
+
+
+    # C++ Standard Library: Standard Template Library (STL)
+
+
+    Containers library:
+
+
+    | bitset | Bitset (class template) |
+
+    | deque | Double ended queue (class template) |
+
+    | list | List (class template) |
+
+    | map | Map (class template) |
+
+    | multimap | Multiple-key map (class template) |
+
+    | multiset | Multiple-key set (class template) |
+
+    | priority_queue | Priority queue (class template) |
+
+    | queue | FIFO queue (class template) |
+
+    | set | Set (class template) |
+
+    | stack | LIFO stack (class template) |
+
+    | vector | Vector (class template) |
+
+
+    Iterators library:
+
+
+    | iterator | Iterator definitions (header) |
+
+
+    Algorithms library:
+
+
+    | STL Algorithms | Standard Template Library: Algorithms (library) |
+
+
+    Numeric library:
+
+
+    | complex | Complex numbers library (header) |
+
+    | vararray | Array for numeric values (header) |
+
+    | numeric | Generalized numeric operations (header) |
+
+
+    # C++ Standard Library: Input/Output Stream Library
+
+
+    Provides functionality to use abstraction called streams specially designed to
+    perform input and output operations on sequences of character, like files or strings.
+
+    This functionality is provided through several related classes, as shown in the
+    following relationship map, with the corresponding header file names on top:'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Reference - C++ Reference
+
+
+    | <ios> | <iostream> | <iostream> | <fstream> | <sstream> |
+
+    | --- | --- | --- | --- | --- |
+
+    | ios_base | istream | | | istringream |
+
+    | ios | | cin | fstream | stringstream |
+
+    | | ostream | cout, cerr, clog | ofstream | ostringstream |
+
+    | | | streambuf | filebuf | stringbuf |
+
+
+    For more info see the reference page for the C++ Input/Output Library.
+
+
+    ![](img/2db3aea62cd533fcac4bebf81b8cc478_2_0.png)
+
+
+    Home page | Privacy policy
+
+    © cplplus.com, 2000-2011 - All rights reserved - v2.9
+
+    Spotted an error? contact us'
+  merge: -1
+  pgno: 2
+toc:
+- - '#'
+  - 2 - C++ 编程语言 (参考)
+- - '##'
+  - 不喜欢 .NET？ - 获取 Real Studio。跨平台。
+- - '##'
+  - C 语言库
+- - '##'
+  - C++ 标准库：杂项库
+- - '##'
+  - 参考 - C++ 参考
+- - '##'
+  - C++ 标准库：标准模板库 (STL)
+- - '##'
+  - C++ 标准库：输入/输出流库

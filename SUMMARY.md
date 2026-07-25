@@ -7,6 +7,8 @@
 +   [100 个 Java 编程秘籍](docs/100-recipes-for-programming-java/README.md)
 +   [150 道 C++ 编程作业：任务变体与代码示例](docs/150-c-programming-assignments-variants-of-tasks-and-examples/README.md)
 +   [150+ Python 模式程序：通过 if语句和循环激发创意的顶级 Python 练习](docs/150-python-pattern-programs-top-python-exercises-to-feed-you/README.md)
++   [重新审视亚利桑那马主感知需求，以更新并聚焦合作扩展马术教育计划及资源开发方向](docs/170-revisiting-perceived-needs-of-arizona-horse-owners-to-up/README.md)
++   [2 - C++ 编程语言 (参考)](docs/2---the-c-programming-language-wwwcpluspluscomreference/README.md)
 +   [现代 C++ 与标准库 2D 计算机图形学](docs/2d-computer-graphics-in-modern-c-and-standard-library/README.md)
 +   [300+ C 面试题与答案：单选题格式 | 从初学者到资深人士 | 详细解析](docs/300-c-interview-questions-and-answers-mcq-format-questions-f/README.md)
 +   [3D 游戏引擎开发：学习使用 C++ 和 OpenGL 构建跨平台 3D 游戏引擎](docs/3d-game-engine-development-learn-how-to-build-a-cross-platfo/README.md)
