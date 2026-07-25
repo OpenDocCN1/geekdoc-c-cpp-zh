@@ -672,6 +672,7 @@
 +   [Boost C++ 库](docs/the-boost-c-libraries/README.md)
 +   [Boost 图形库](docs/the-boost-graph-library/README.md)
 +   [C 语言编程指南：今天成为程序员](docs/the-c-programming-book-be-a-programmer-today/README.md)
++   [C++ 语言，第 4 版](docs/the-c-programming-language-4th-edition/README.md)
 +   [C 语言语言，ANSI C](docs/the-c-programming-language-ansi-c/README.md)
 +   [C++ 语言](docs/the-c-programming-lenguage/README.md)
 +   [C++ 标准库](docs/the-c-standard-library/README.md)
