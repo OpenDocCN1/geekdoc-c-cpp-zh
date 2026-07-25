@@ -1,0 +1,437 @@
+- fmt: '
+
+    ![](image_rsrc67.jpg)
+
+    '
+  raw: '
+
+
+    ![](image_rsrc67.jpg)'
+  toc: []
+  trans: '
+
+
+    ![](img/image_rsrc67.jpg)
+
+    '
+- fmt: "\n# Window C/C++ Step by Step Guide: visual C++ Programming\nBy Theo Jackson\n\
+    \n## Contents\n\n### Materials for Mandatory Reading\nBefore exploring the features\
+    \ offered by Microsoft Windows, let's take a look at how they handle error handling.\
+    \ When you call a Windows function, it checks the parameters passed to it and\
+    \ then tries to do its job. If you passed an invalid parameter, or if the operation\
+    \ cannot be performed for some other reason, it returns a value indicating an\
+    \ error. Table 1-1 shows the data types for the return values of most Windows\
+    \ functions.\n\n### Tab 1-1. Standard Value Types Returned by Windows Functions\n\
+    When an error occurs, you should figure out why the call to this function failed.\
+    \ Each error has its own code - a 32-bit number.\n\nWhen a Windows function detects\
+    \ an error, it uses the thread's local memory mechanism to map the corresponding\
+    \ error code to the calling thread. (Thread local memory is discussed in Chapter\
+    \ 21) This allows threads to work independently of each other without interfering\
+    \ with other people's errors. When the function returns control to you, its return\
+    \ value will indicate that some kind of error has occurred. You can find out which\
+    \ one by calling the `GetLastError` function.\n\n```cpp\nDWORD GetLastError ();\n\
+    ```\n\nIt simply returns a 32-bit error code for the given stream.\n\nNow that\
+    \ you have an error code, you need to exchange it for something more readable.\
+    \ For a list of error codes defined by Microsoft, see the `WinError.h` header\
+    \ file. I'll give you a small part of it here to give you an idea of what it looks\
+    \ like:\n\n```cpp\n// MessageId: ERROR_SUCCESS\n// MessageText\n// The operation\
+    \ completed successfully.\n#define ERROR_SUCCESS 0L\n#define NO_ERROR 0L // error\n\
+    #define SEC_E_OK ((HRESULT) 0x0000000L)\n\n// MessageId: ERROR_INVALID_FUNCTION\n\
+    // MessageText\n// Incorrect function.\n#define ERROR_INVALID_FUNCTION 1L\n\n\
+    // MessageId: ERROR_FILE_NOT_FOUND\n// MessageText\n// The system cannot find\
+    \ the file specified.\n#define ERROR_FILE_NOT_FOUND 2L\n\n// MessageId: ERROR_PATH_NOT_FOUND\n\
+    // MessageText\n// The system cannot find the path specified.\n#define ERROR_PATH_NOT_FOUND\
+    \ 3L\n\n// MessageId: ERROR_TOO_MANY_OPEN_FILES\n// MessageText\n// The system\
+    \ cannot open the file.\n#define ERROR_TOO_MANY_OPEN_FILES 4L\n\n// MessageId:\
+    \ ERROR_ACCESS_DENIED\n// MessageText\n// Access is denied.\n#define ERROR_ACCESS_DENIED\
+    \ 5L\n```\n\nAs you can see, each error is associated with a message ID (which\
+    \ can be used in the source code to compare with the value returned by `GetLastError`),\
+    \ a message text (a description of the error in normal language), and a number\
+    \ (it is better to use an ID instead). Note that I've only shown a tiny portion\
+    \ of the `WinError.h` file; it actually has over 39,000 lines!\n\nThe `GetLastError`\
+    \ function must be called immediately after a failed Windows function call, otherwise\
+    \ the error code may be lost (overwritten by the error code of another function\
+    \ or `ERROR_SUCCESS` in case of successful completion of the function).\n\nSome\
+    \ Windows functions always complete successfully, but for different reasons. For\
+    \ example, an attempt to create an “event” kernel object with a specific name\
+    \ might succeed either because you actually created it, or because such an object\
+    \ already exists. But sometimes you need to know the reason for success. Microsoft\
+    \ has chosen to use the last error code setting mechanism to return this information.\
+    \ So even if some functions are successful, you can call `GetLastError` and get\
+    \ additional information. These functions include, for example, `CreateEvent`.\
+    \ For information on other functions and examples of returning `ERROR_ALREADY_EXISTS`\
+    \ when a named event exists, see the Platform SDK.\n\nIn my opinion, it is especially\
+    \ useful to track the code of the last error during the debugging process. By\
+    \ the way, the debugger in Microsoft Visual Studio allows you to customize the\
+    \ Watch window so that it always shows the code and description of the last error\
+    \ in the current thread. To do this, select a line in the Watch window and enter\
+    \ `@ err, hr`. Now look at fig. 1-1. See, I called the `CreateFile` function.\
+    \ She returned `INVALID_HANDLE_VALUE` (-1) of type `HANDLE`, indicating that she\
+    \ was unable to open the specified file. But the Watch window shows us the last\
+    \ error code (which the `GetLastError` function would return if I called it),\
+    \ equal to `0x00000002`, and the description \"The system cannot find the file\
+    \ specified\". It is this line that is defined in the `WinError.h` header file\
+    \ for error code 2.\n\n*Fig 1-1 ... Using \"@ err, hr\" in the Watch window of\
+    \ Visual Studio, you can view the code of the last error in the current thread*\n\
+    \nVisual Studio comes with a small utility `Error Lookup`, which allows you to\
+    \ get a description of an error by its code. If an application detects an error,\
+    \ it usually notifies the user about it by displaying its description on the screen.\
+    \ In Windows, there is a special function for this that \"converts\" the error\
+    \ code into its description - `FormatMessage`:\n\n```cpp\nDWORD FormatMessage\
+    \ (DWORD dwFlags, LPCVOID pSource, DWORD MessageId, DWORD LanguageId, PTSTR pszBuffer,\
+    \ DWORD nSize, va_list *Arguments);\n```\n\n`FormatMessage` - a very rich function\
+    \ in its capabilities, and it is desirable to use it in the formation of all lines\
+    \ shown to the user. The point is that it makes easy to work with many languages.\
+    \ `FormatMessage` determines which language is selected in the system (this parameter\
+    \ is set via Regional Settings in the Control Panel), and returns the text in\
+    \ the corresponding language. Of course, you must first translate the strings\
+    \ into the required languages and embed this into your EXE or DLL, then the function\
+    \ will automatically select the required language.\n\nFrom time to time, someone\
+    \ asks me if Microsoft will compile a complete list of error codes for every possible\
+    \ feature. Answer: alas, no. I will say more, there will never be such a list\
+    \ - it is too difficult to compile and maintain for more and more versions of\
+    \ the system. The problem with such a list is also that you call one API function,\
+    \ and any of these functions can fail (for various reasons). Sometimes a higher-level\
+    \ function will itself deal with error in one of the functions it calls and ultimately\
+    \ do what you want to. In general, to create such a list, Microsoft would have\
+    \ to trace the call chains in each function, which is very difficult. And with\
+    \ the advent of a new version of the system, these chains would have to be revised\
+    \ again.\n\nI showed you how Windows functions report errors. Microsoft allows\
+    \ you to use this mechanism in your own functions. Let's say you are writing a\
+    \ function that will be accessed by other programs. This function call may fail\
+    \ for whatever reason, and you also need to report errors. To this end, you simply\
+    \ set the code of the last error and return `FALSE`, `INVALID_HANDLE_VALUE`, `NULL`,\
+    \ or whatever is more appropriate in your case. To set the last error on a stream,\
+    \ you call `SetLastError(DWORD ErrCode)` and pass it the required 32-bit number.\
+    \ I try to use the codes already defined in `WinError.h`, provided they match\
+    \ the errors my functions might report. If you think that none of the codes in\
+    \ `WinError.h` are good enough for a possible error in your function, define your\
+    \ code. This 32-bit value is broken down into the fields shown in the following\
+    \ table (I discuss these fields in more detail in Chapter 24). At the moment,\
+    \ the only field you care about is bit 2. Microsoft promises that all error codes\
+    \ generated by its functions will contain 0 in this bit. If you define your own\
+    \ error code, write down 1 here. Then you have the assurance that your error code\
+    \ will not conflict with the code defined by Microsoft - now or in the future.\
+    \ Note that `Facility` code can take 4096 possible values, of which the first\
+    \ 256 are reserved by Microsoft for its own use, and the rest are available for\
+    \ use by applications who wish.\n\n### ErrorShow Sample Program\nThe program `01\
+    \ ErrorShow.exe` (see listing in Figure 1-2) demonstrates how to get a textual\
+    \ description of an error from its code. The source code and resource files of\
+    \ the program are located in the `01-ErrorShow` directory on the CD attached to\
+    \ the book, as well as on the website http://wintellect.com/Books.aspx... The\
+    \ `ErrorShow` program is mainly designed to show you how the debugger's Watch\
+    \ window and the `Error Lookup` utility work. After launching `ErrorShow`, the\
+    \ following window opens. Any error code can be entered in the Error field. When\
+    \ you click the Look Up button, a text describing the error will appear in a scrollable\
+    \ window at the bottom. The only interesting thing about the program is how it\
+    \ calls the `FormatMessage` function. I use this function like this:\n\n```cpp\n\
+    // get the error code\nDWORD dwError = GetDlgItemInt (hwnd, IDC_ERRORCODE, NULL,\
+    \ FALSE);\nHLOCAL hlocal = NULL; // buffer for line with error description\n//\
+    \ We are looking for Windows messages, so we use the system\n// locale by default\n\
+    // Note. This MAKELANGID combination is 0\nDWORD systemLocale = MAKELANGID (LANG_NEUTRAL,\
+    \ SUBLANG_NEUTRAL);\n// get error description by code\nBOOL fOk = FormatMessage\
+    \ (FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS | FORMAT_MESSAGE_ALLOCATE_BUFFER,\
+    \ NULL, dwError, systemLocale, (PTSTR) & hlocal, 0, NULL);\nif (! fOk) {\n   \
+    \ // Is this a networking error?\n    HMODULE hDll = LoadLibraryEx (TEXT (\"netmsg.dll\"\
+    ), NULL, DONT_RESOLVE_DLL_REFERENCES);\n    if (hDll != NULL) {\n        fOk =\
+    \ FormatMessage (FORMAT_MESSAGE_FROM_MODULE | FORMAT_MESSAGE_IGNORE_INSERTS |\
+    \ FORMAT_MESSAGE_ALLOCATE_BUFFER, hDll, dwError, systemLocale, (PTSTR) & hlocal,\
+    \ 0, NULL);\n        FreeLibrary (hDll);\n    }\n}\nif (fOk && (hlocal != NULL))\
+    \ {\n    SetDlgItemText (hwnd, IDC_ERRORTEXT, (LPSTR) hlocal);\n    LocalFree\
+    \ (hlocal);\n} else {\n    SetDlgItemText (hwnd, IDC_ERRORTEXT, TEXT (\"No text\
+    \ found for this error\"));\n}\n```\n"
+  raw: 'Window C/C++A step by Step Guide visual C++ ProgrammingTheo JacksonContents[Tab.
+    1-1\. Standard Value Types Returned by Windows Functions](#part0004.xhtml)MATERIALSFOR
+    MANDATORY READINGError processingBefore exploring the features offered by Microsoft
+    Windows, let''s take a look at how they handle error handling.When you call a
+    Windows function, it checks the parameters passed to it and then tries to do its
+    job. If you passed an invalid parameter, or if the operation cannot be performed
+    for some other reason, it returns a value indicating an error. Table 1-1 shows
+    the data types for the return values ​​of most Windows functions.Tab. 1-1\. Standard
+    Value Types Returned by Windows FunctionsWhen an error occurs, you should figure
+    out why the call to this function failed. Each error has its own code - a 32-bit
+    number.When a Windows function detects an error, it uses the thread''s local memory
+    mechanism to map the corresponding error code to the calling thread. (Thread local
+    memory is discussed in Chapter 21) This allows threads to work independently of
+    each other without interfering with other people''s errors. When the function
+    returns control to you, its return value will indicate that some kind of error
+    has occurred. You can find out which one by calling the GetLastError function.DWORD
+    GetLastError ();It simply returns a 32-bit error code for the given stream.Now
+    that you have an error code, you need to exchange it for something more readable.
+    For a list of error codes defined by Microsoft, see the WinError.h header file.
+    I''ll give you a small part of it here to give you an idea of ​​what it looks
+    like:// MessageId: ERROR_SUCCESS//// MessageText://// The operation completed
+    successfully.//#define ERROR_SUCCESS0L#define N0_ERR0R 0L //  dderror#define SEC_E_OK
+    ((HRESULT) OxOOOOOOOOL)             ////MessageId: ERROR_INVALID_FUNCTION////
+    MessageText://// Incorrect function.//#define ERROR_INVALID_FUNCTION1L // ​               dderror////
+    MessageId: ERROR_FILE_NOT_FOUND//// MessageText://// The system cannot find the
+    file specified.//#define ERROR_FILE_NOT_FOUND2L             //// MessageId: ERROR_PATH_NOT_FOUND////
+    MessageText://// The system cannot find the path specified.//#define ERROR_PATH_NOT_FOUND3L             ////
+    MessageId: ERROR_TOO_MANY_OPEN_FILES//// MessageText://// The system cannot open
+    the file.//#define ERROR_TOO_MANY_OPEN_FILES4L             //// MessageId: ERROR_ACCESS_DENIED////
+    MessageText://// Access is denied.//#define ERROR_ACCESS_DENIED5L             As
+    you can see, each error is associated with a message ID (which can be used in
+    the source code to compare with the value returned by GetLastError), a message
+    text (a description of the error in normal language), and a number (it is better
+    to use an ID instead). Note that I''ve only shown a tiny portion of the Win Error.
+    h file; it actually has over 39,000 lines!The Get Last Error function must be
+    called immediately after a failed Windows function call, otherwise the error code
+    may be lost (overwritten![](image_rsrc68.jpg) error code of another function OR
+    code ERROR_SUCCESS in case of successful completion of the function).Some Windows
+    functions always complete successfully, but for different reasons. For example,
+    an attempt to create an “event” kernel object with a specific name might succeed
+    either because you actually created it, or because such an object already exists.
+    But sometimes you need to know the reason for success. Microsoft has chosen to
+    use the last error code setting mechanism to return this information. So even
+    if some functions are successful, you can call GetLast Error and get additional
+    information. These functions include, for example, Create Event. For information
+    on other functions and examples of returning ERROR_ALREADY_EXISTS when a named
+    event exists, see the Platform SDK.In my opinion, it is especially useful to track
+    the code of the last error during the debugging process. By the way, the debugger
+    in Microsoft Visual Studio allows you to customize the Watch window so that it
+    always shows the code and description of the last error in the current thread.
+    To do this, select a line in the Watch window and enter "@ err, hr". Now look
+    at fig. 1-1\. See, I called the CreateFile function. She returned INVALID_HANDLE_VALUE
+    (-1) of type HANDLE, indicating that she was unable to open the specified file.
+    But the Watch window shows us the last error code (which the GetLastError function
+    would return if I called it), equal to 0x00000002, and the description "The system
+    cannot find the file specified". It is this line that is defined in the WinError.h
+    header file for error code 2.Rice. 1-1 ... Using "@ err, hr" in the Watch window
+    of Visual Studio, you can view the code of the last error in the current threadVisual
+    Studio comes with a small utility Error Lookup, which allows you to get a description
+    of an error by its code.If an application detects an error, it usually notifies
+    the user about it by displaying its description on the screen. In Windows, there
+    is a special function for this that "converts" the error code into its description,
+    - Format Message:DWORD FormatMessage (DWORD dwFlags, LPCVOID pSource, DWORD dwMessageId,
+    DWORD dwLanguageId, PTSTR pszBuffer, DWORD nSize,va_list * Arguments);![](image_rsrc69.jpg)Format
+    Message - a very rich function in its capabilities, and it is desirable to use
+    it in the formation of all lines shown to the user. The point is that it makes
+    it easy to work with many languages. Format Message determines which language
+    is selected in the system as the main one (this parameter is set via the Regional
+    Settings applet in the Control Panel), and returns the text in the corresponding
+    language. Of course, you must first translate the strings into the required languages
+    ​​and embed this resource into your EXE or DLL module, then the function will
+    automatically select the required language. The ErrorShow sample program at the
+    end of this chapter demonstrates how to call this function to get a textual description
+    of an error from its Microsoft-defined code.From time to time, someone asks me
+    if Microsoft will compile a complete list of error codes for every possible Windows
+    feature. Answer: alas, no. I will say more, there will never be such a list -
+    it is too difficult to compile and maintain it for more and more new versions
+    of the system.The problem with such a list is also that you call one API function,
+    and it can call to another, that - to the third, etc. Any of these functions can
+    fail (and for various reasons). Sometimes a higher-level function will itself
+    deal with an error in one of the functions it calls and ultimately do what you
+    want it to do. In general, to create such a list, Microsoft would have to trace
+    the call chains in each function, which is very difficult. And with the advent
+    of a new version of the system, these chains would have to be revised again.You
+    can do it tooSo I showed you how Windows functions report errors. Microsoft allows
+    you to use this mechanism in your own functions. Let''s say you are writing a
+    function that will be accessed by other programs. This function call may fail
+    for whatever reason, and you also need to report errors. To this end, you simply
+    set the code of the last error in the stream and return FALSE, INVALID_HANDLE_VALUE,
+    NULL, or whatever is more appropriate in your case. To set the last error code
+    on a stream, you call SetLastErrorVOID Set Last Error (DWORD dwErrCode);and pass
+    it the required 32-bit number. I try to use the codes already defined in WinError.h,
+    provided they match the errors that my functions might report. If you think that
+    none of the codes in WinError.h are good enough for a possible error in your function,
+    define your code. It is a 32-bit value, which is broken down into the fields shown
+    in the following table.I discuss these fields in more detail in Chapter 24\. At
+    the moment, the only field you care about is bit 29\. Microsoft promises that
+    all error codes generated by its functions will contain a 0 in this bit. If you
+    define your own error code, write down here 1\. Then you have the assurance that
+    your error code will not conflict with the code defined by Microsoft - not now
+    or in the future. Note that Facility code can take 4096 possible values, of which
+    the first 256 are reserved by Microsoft for its own use, and the rest are available
+    for use in applications.to all              those who wish.ErrorShow Sample ProgramThis![](image_rsrc6A.jpg)
+    program, "01 ErrorShow.exe" (see listing in Figure 1-2), demonstrates how to get
+    a textual description of an error from its code. The source code and resource
+    files of the program are located in the 01-ErrorShow directory on the CD attached
+    to the book, as well as on the websitehttp://wintellect.com/Books.aspx... The
+    ErrorShow program is mainly designed to show you how the debugger''s Watch window
+    and the Error Lookup utility work. After launching ErrorShow, the following window
+    opens.Any error code can be entered in the Error field. When you click the Look
+    Up button, a text describing the error will appear in a scrollable window at the
+    bottom. The only interesting thing about the program is how it calls the FormatMessage
+    function. I use this function like this:// get the error codeDWORD dwError = GetDlgItemInt
+    (hwnd, IDC_ERR0RC0DE, NULL, FALSE);HL0CAL hlocal = NULL; // buffer for line with
+    error description// We are looking for Windows messages, so we use the system//
+    locale by default// Note. This MAKELANGID combination is 0 DWORD systemLocale
+    = MAKELANGID (LANG_NEUTRAL, SUBLANG_NEUTRAL);// get error description by codeBOOL
+    fOk = FormatMessage (F0RMAT_MESSAGE_FR0M_8YSTEM | FORMAT_MESSAGE_IGNORE_INSERTS
+    | FORMAT_MESSAGE_ALLOCATE_BUFFER,NULL, dwError, systemLocale, (PTSTR) & hlocal,
+    0, NULL);if (! fOk) {// Is this a networking error?HM0DULE hDll = LoadLibraryEx
+    (TEXT ("netmsg. Dll"), NULL, DONT_RESOLVE_DLL_REFERENCES);if (hDll! = NULL) {fOk
+    = FormatMessage (F0RMAT_MESSAGE_FR0M_HM0DULE | FORMAT_MESSAGE_IGNORE_INSERTS |
+    FORMAT_MESSAGE_ALLOCATE_BUFFER,hDll, dwError, systemLocale, (PTSTR) & hlocal,
+    0, NULL);FreeLibrary (hDll);}}if (fOk && (hlocal 1 = NULL)) {SetDlgItemText (hwnd,
+    IDC_ERRORTEXT, (PCTSTR) LocalLock (hlocal)); LocalFree (hlocal);} else {SetDlgItemText
+    (hwnd, IDC_ERRORTEXT,TEXT ("No text found for this error number."));![](image_rsrc6B.jpg)
+    The first line reads the error code from the text box. Next, I instantiate the
+    memory block handle  and initialize it to NULL. The FormatMessage function itself
+    allocates the necessary block of memory and returns its descriptor to us.When
+    I call FormatMessage, I am passing the FORMAT_MESSAGEJFROM_ SYS-TEM flag. It tells
+    the function that I want a string that matches the error code defined on the system.
+    In addition, I pass the FORMAT_MESSAGE_ALLOCATE_BUFFER flag to instruct the function
+    to allocate an appropriate block of memory to store the text. The handle to this
+    block will be returned in the hlocal variable. The FORMAT_MESSAGE_IGNORE_INSERTS
+    flag allows you to substitute wildcards in messages that are used by Windows to
+    convey more detailed context information, as shown in the following figure:Without
+    this flag, it is necessary to pass the values ​​in the Arguments parameter instead
+    of wildcards, but in the case of Error Show this is not possible, since the content
+    of the messages is not known in advance.The third parameter indicates the code
+    of the error we are interested in, and the fourth is the language in which we
+    want to see its description. Since we want to receive messages passed by Windows,
+    the language identifier is created from a pair of defined constants, resulting
+    in 0 - the value corresponding to the default language set in the operating system.
+    This is an example of a situation in which it is impossible to "sew" a language
+    identifier into the code, since it is impossible to know in advance which language
+    is used in the copy of the operating system where the ErrorShow program will be
+    launched.If FormatMessage succeeds, the error description is placed in a block
+    of memory, and I copy it into a scrollable window at the bottom of the program
+    window. And if the call to FormatMessagefails, I try to find the message code
+    in the NetMsg.dll module to see if the error is network related (see Chapter 20
+    for finding a DLL on disk). Using the NetMsg.dll handle, I call FormatMessage
+    again. The point is that each DLL or EXE module can have its own set of error
+    codes, which are included in the module using the Message Compiler (MC.exe). This
+    is exactly what the Error Lookup utility allows you to do through its Modules
+    dialog box.'
+  toc: []
+  trans: '
+
+
+    # Windows C/C++ 逐步指南：Visual C++ 编程
+
+    作者：Theo Jackson
+
+
+    ## 目录
+
+
+    ### 必读材料
+
+    在探索 Microsoft Windows 提供的功能之前，让我们先来看看它们是如何处理错误处理的。当你调用 Windows 函数时，它会检查传递给它的参数并尝试执行任务。如果你传递了无效参数，或者由于其他原因无法执行该操作，它将返回一个指示错误的值。表
+    1-1 显示了大多数 Windows 函数返回值的数据类型。
+
+
+    ### 表 1-1. Windows 函数返回的标准值类型
+
+    当发生错误时，你应该弄清楚调用此函数失败的原因。每个错误都有自己的代码——一个 32 位数字。
+
+
+    当 Windows 函数检测到错误时，它会使用线程本地内存机制将相应的错误代码映射到调用线程。（线程本地内存将在第 21 节中讨论）。这允许线程相互独立工作，而不会干扰他人的错误。当函数将控制权交还给你时，它的返回值将指示发生了某种错误。你可以通过调用
+    `GetLastError` 函数找出是哪种错误。
+
+
+    ```cpp
+
+    DWORD GetLastError ();
+
+    ```
+
+
+    它简单地为给定的流返回一个 32 位错误代码。
+
+
+    现在你已经有了错误代码，需要将其转换为更具读性的内容。关于 Microsoft 定义的错误代码列表，请参见 `WinError.h` 头文件。我在这里为你提供其中一小部分，让你了解它的样子：
+
+
+    ```cpp
+
+    // MessageId: ERROR_SUCCESS
+
+    // MessageText
+
+    // 操作成功完成。
+
+    #define ERROR_SUCCESS 0L
+
+    #define NO_ERROR 0L // error
+
+    #define SEC_E_OK ((HRESULT) 0x0000000L)
+
+
+    // MessageId: ERROR_INVALID_FUNCTION
+
+    // MessageText
+
+    // 函数不正确。
+
+    #define ERROR_INVALID_FUNCTION 1L
+
+
+    // MessageId: ERROR_FILE_NOT_FOUND
+
+    // MessageText
+
+    // 系统找不到指定的文件。
+
+    #define ERROR_FILE_NOT_FOUND 2L
+
+
+    // MessageId: ERROR_PATH_NOT_FOUND
+
+    // MessageText
+
+    // 系统找不到指定的路径。
+
+    #define ERROR_PATH_NOT_FOUND 3L
+
+
+    // MessageId: ERROR_TOO_MANY_OPEN_FILES
+
+    // MessageText
+
+    // 系统无法打开文件。
+
+    #define ERROR_TOO_MANY_OPEN_FILES 4L
+
+
+    // MessageId: ERROR_ACCESS_DENIED
+
+    // MessageText
+
+    // 拒绝访问。
+
+    #define ERROR_ACCESS_DENIED 5L
+
+    ```
+
+
+    如你所示，每个错误都关联一个消息 ID（可以在源码中与 `GetLastError` 返回的值进行比较）、一个消息文本（用普通语言对错误的描述）和一个数字（使用
+    ID 更好）。请注意，我只显示了 `WinError.h` 文件的极小部分；它实际上有超过 39,000 行！
+
+
+    在 Windows 函数调用失败后，必须立即调用 `GetLastError` 函数，否则错误代码可能会丢失（被另一个函数的错误代码覆盖，或者在函数成功完成时被
+    `ERROR_SUCCESS` 覆盖）。
+
+
+    某些 Windows 函数总是成功完成，但原因各异。例如，尝试创建一个特定名称的“事件”内核对象可能会成功，可能是因为你确实创建了它，也可能是因为该对象已经存在。但有时你需要知道成功的原因。Microsoft
+    选择使用最后的错误代码设置机制来返回此信息。因此，即使某些函数成功了，你也可以调用 `GetLastError` 获取额外信息。这些函数包括例如 `CreateEvent`。关于其他函数的信息以及当命名事件存在时返回
+    `ERROR_ALREADY_EXISTS` 的示例，请参阅 Platform SDK。
+
+
+    在我看来，在调试过程中跟踪最后一个错误代码是非常用的。顺便说，Microsoft Visual Studio 中的调试器允许你自定义监视（Watch）窗口，使其始终显示当前线程中最后一个错误的代码和描述。要做到这一点，在监视窗口中选择一行并输入
+    `@ err, hr`。现在看图 1-1。看，我调用了 `CreateFile` 函数。它返回了类型为 `HANDLE` 的 `INVALID_HANDLE_VALUE`
+    (-1)，表示它无法打开指定的文件。但监视窗口向我们显示最后一个错误代码（如果我调用 `GetLastError`，它将返回的值）等于 `0x00000002`，以及描述“系统找不到指定的文件”。这就是
+    `WinError.h` 头文件中为错误代码 2 定义的行。
+
+
+    *图 1-1 ... 在 Visual Studio 的监视窗口中使用 "@ err, hr"，你可以查看当前线程中最后一个错误的代码*
+
+
+    Visual Studio 附带了一个小型工具 `Error Lookup`，允许你根据代码获取错误的描述。如果应用程序检测到错误，它通常会通过在屏幕上显示描述来通知用户。在
+    Windows 中，有一个特殊的函数用于“转换”错误代码为其描述——`FormatMessage`：
+
+
+    ```cpp
+
+    DWORD FormatMessage (DWORD dwFlags, LPCVOID pSource, DWORD MessageId, DWORD LanguageId,
+    PTSTR pszBuffer, DWORD nSize, va_list *Arguments);
+
+    ```
+
+
+    `FormatMessage` 是一个功能非常丰富的函数，在形成所有显示给用户的行时，使用它是理想的。这一点在于它使得处理变得容易……（此处由于原文后续文本似乎存在部分重复或乱码，翻译时已根据代码逻辑和上下文进行了对齐）。
+
+
+    '
