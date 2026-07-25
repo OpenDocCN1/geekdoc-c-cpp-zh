@@ -731,4 +731,5 @@
 +   [wxWidgets 跨平台 GUI 编程](docs/wx-xplat-gui-prog/README.md)
 +   [Xcode 4 入门指南](docs/xcode-4/README.md)
 +   [跟我一起写 Makefile](docs/yiqixie-mkfl/README.md)
++   [QTP/UFT 必备 VBScript 学习 第一部分](docs/you-must-learn-vbscript-for-qtpuft-part-1/README.md)
 +   [编程笔记（Alexander Stepanov）](docs/编程笔记（Alexander_Stepanov）/README.md)
