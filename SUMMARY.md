@@ -721,6 +721,7 @@
 +   [学生级 Visual C# .NET：基于项目的桌面应用开发指南](docs/visual-c-net-for-students-a-project-based-approach-to-develo/README.md)
 +   [Visual C#.NET：C# Windows Forms 编程](docs/visual-cnet-windows-forms-programming-with-c/README.md)
 +   [C# 可视化编程 - C# 可视化编程 - C# 编程：C# 编程的可视化编程 - C# 编程](docs/visual-programming-using-c---c-visual-programming---c-progra/README.md)
++   [Visual Studio Code：Web 开发者的端到端编辑与调试工具](docs/visual-studio-code-end-to-end-editing-and-debugging-tools-fo/README.md)
 +   [Web 应用开发指南：Ember.js 指南](docs/web-app-development-book-guide-to-emberjs/README.md)
 +   [ASP.NET Core Blazor Web应用程序：创建强大、响应式且引人入胜的 Web应用程序](docs/web-applications-with-asp-net-core-blazor-create-powerful-re/README.md)
 +   [如何思考会思考的机器：当代顶尖思想者论机器智能时代（Edge Question 系列）](docs/what-to-think-about-machines-that-think-todays-leading-think/README.md)
