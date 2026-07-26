@@ -31,6 +31,7 @@
 +   [C++ 图编程面试题集（第 2 卷）](docs/a-collection-of-graph-programming-interview-questions-solved/README.md)
 +   [编程面试题集 1-6 - Antonio Gulli](docs/a-collection-of-programming-interview-questions-volume1-6---/README.md)
 +   [C++ 树形编程面试题集（第 5 卷）](docs/a-collection-of-tree-programming-interview-questions-solved-/README.md)
++   [并行编程语言比较研究：萨利申问题（超级计算专题专题，第 6 卷）](docs/a-comparative-study-of-parallel-programming-languages-the-sa/README.md)
 +   [C++ 图像处理入门指南（Chapman & Hall／CRC 数值分析与科学计算系列第5卷）](docs/a-concise-introduction-to-image-processing-using-c-chapman-h/README.md)
 +   [机器学习入门指南](docs/a-concise-introduction-to-machine-learning-chapman-hallcrc-m/README.md)
 +   [基于异构信息网络嵌入的 IoT 触发-动作编程数据融合框架](docs/a-data-fusion-framework-based-on-heterogeneous-information-n/README.md)
