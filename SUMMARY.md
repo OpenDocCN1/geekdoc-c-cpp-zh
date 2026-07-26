@@ -14,6 +14,7 @@
 +   [2 - C++ 编程语言 (参考)](docs/2---the-c-programming-language-wwwcpluspluscomreference/README.md)
 +   [C 语言初学者 26 个基础代码（含流程图、算法与输出）](docs/26-basic-codes-in-c-for-beginners-with-flowchart-algorithm-a/README.md)
 +   [现代 C++ 与标准库 2D 计算机图形学](docs/2d-computer-graphics-in-modern-c-and-standard-library/README.md)
++   [C++17 2D 绘图：仅使用标准库使用指南](docs/2d-drawing-with-c17-using-only-the-standard-library/README.md)
 +   [30个天才天才的 Arduino 项目](docs/30-projects-of-arduino-for-evil-genius/README.md)
 +   [300+ C 面试题与答案：单选题格式 | 从初学者到资深人士 | 详细解析](docs/300-c-interview-questions-and-answers-mcq-format-questions-f/README.md)
 +   [3D 游戏引擎开发：学习使用 C++ 和 OpenGL 构建跨平台 3D 游戏引擎](docs/3d-game-engine-development-learn-how-to-build-a-cross-platfo/README.md)
