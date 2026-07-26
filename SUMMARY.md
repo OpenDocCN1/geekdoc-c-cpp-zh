@@ -428,6 +428,7 @@
 +   [现代 C++ 编程速成课程：通过实用示例和实践项目掌握 C++17 和 C++20](docs/modern-c-programming-crash-course-master-c17-and-c20-with-ha/README.md)
 +   [现代 Web 开发：理解领域、技术与用户体验（开发者参考）](docs/modern-web-development-understanding-domains-technologies-an/README.md)
 +   [More OCaml：算法、方法与趣闻](docs/more-ocaml-algorithms-methods-and-diversions/README.md)
++   [NET 7 与 C# 11 简明指南](docs/net-7-and-c-11-succinctly/README.md)
 +   [NET 8 和 C# 12 精简指南](docs/net-8-and-c-12-succinctly/README.md)
 +   [C++ 网络编程：构建高效通信系统指南](docs/networking-programming-with-c-build-efficient-communication-/README.md)
 +   [神经语言程序傻呆 way指南](docs/neuro-linguistic-programming-workbook-for-dummies/README.md)
