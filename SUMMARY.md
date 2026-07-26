@@ -20,6 +20,7 @@
 +   [ADA 编程入门指南](docs/a-b-c-of-ada-programming/README.md)
 +   [编程初学者指南：使用 Scratch 和 Python 享受乐趣](docs/a-beginners-guide-to-coding-have-fun-using-scratch-and-pytho/README.md)
 +   [Python 入门指南](docs/a-byte-of-python/README.md)
++   [Python 入门指南 1.92](docs/a-byte-of-python-192/README.md)
 +   [C++ 实现位运算编程面试题集](docs/a-collection-of-bit-programming-interview-questions-solved-i/README.md)
 +   [C++ 设计模式面试题集](docs/a-collection-of-design-pattern-interview-questions-solved-in/README.md)
 +   [C++ 动态规划面试题解集](docs/a-collection-of-dynamic-programming-interview-questions-solv/README.md)
