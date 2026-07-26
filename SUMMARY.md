@@ -39,6 +39,7 @@
 +   [游戏玩家 C# 编程入门指南；欢迎，勇敢的冒险者！；1](docs/a-gamers-introduction-to-programming-in-c-welcome-brave-adve/README.md)
 +   [实验算法入门指南](docs/a-guide-to-experimental-algorithmics/README.md)
 +   [半正规划的一种新型投影收缩算法](docs/a-new-projection-contraction-algorithm-for-semidefinite-prog/README.md)
++   [C 语言数据结构与算法实用指南](docs/a-practical-approach-to-data-structure-and-algorithm-with-pr/README.md)
 +   [一种灭菌约束下手术病例调度问题的滚动 de方法](docs/a-rolling-horizon-approach-for-a-surgery-case-scheduling-pro/README.md)
 +   [一种用于数据一致性与完整性验证的规则定义与处理 SERM 框架](docs/a-serm-based-framework-for-defining-and-processing-rules-sup/README.md)
 +   [C++ 入门指南](docs/a-tour-of-c/README.md)
