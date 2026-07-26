@@ -5,6 +5,7 @@
 +   [100 个重要的 C 程序](docs/100-most-important-c-programs/README.md)
 +   [100+ 个重要的 C 程序带输出：学生与教师指南](docs/100-most-important-c-programs-with-output-for-students-teach/README.md)
 +   [100 个 Java 编程秘籍](docs/100-recipes-for-programming-java/README.md)
++   [101 个 C++ 编程挑战：通过解决 101 个挑战提升 C++ 编程技能](docs/101-challenges-in-c-programming-solve-101-challenges-to-shar/README.md)
 +   [150 道 C++ 编程作业：任务变体与代码示例](docs/150-c-programming-assignments-variants-of-tasks-and-examples/README.md)
 +   [150+ Python 模式程序：通过 if语句和循环激发创意的顶级 Python 练习](docs/150-python-pattern-programs-top-python-exercises-to-feed-you/README.md)
 +   [重新审视亚利桑那马主感知需求，以更新并聚焦合作扩展马术教育计划及资源开发方向](docs/170-revisiting-perceived-needs-of-arizona-horse-owners-to-up/README.md)
