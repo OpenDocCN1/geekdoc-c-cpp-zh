@@ -44,6 +44,7 @@
 +   [C 语言数据结构与算法实用指南](docs/a-practical-approach-to-data-structure-and-algorithm-with-pr/README.md)
 +   [一种灭菌约束下手术病例调度问题的滚动 de方法](docs/a-rolling-horizon-approach-for-a-surgery-case-scheduling-pro/README.md)
 +   [一种用于数据一致性与完整性验证的规则定义与处理 SERM 框架](docs/a-serm-based-framework-for-defining-and-processing-rules-sup/README.md)
++   [计算科学与工程短期课程：基于免费软件工具的 C++、Java 和 Octave 数值编程](docs/a-short-course-in-computational-science-and-engineering-c-ja/README.md)
 +   [C++ 入门指南](docs/a-tour-of-c/README.md)
 +   [C++ 深度之旅 (第二版) (C++ 深度系列)](docs/a-tour-of-c-2nd-edition-c-in-depth-series/README.md)
 +   [C++ 入门指南 (C++ 深度解析)](docs/a-tour-of-c-c-in-depth/README.md)
