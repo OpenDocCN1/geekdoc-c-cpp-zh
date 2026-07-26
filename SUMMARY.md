@@ -34,6 +34,7 @@
 +   [并行编程语言比较研究：萨利申问题（超级计算专题专题，第 6 卷）](docs/a-comparative-study-of-parallel-programming-languages-the-sa/README.md)
 +   [C++ 图像处理入门指南（Chapman & Hall／CRC 数值分析与科学计算系列第5卷）](docs/a-concise-introduction-to-image-processing-using-c-chapman-h/README.md)
 +   [机器学习入门指南](docs/a-concise-introduction-to-machine-learning-chapman-hallcrc-m/README.md)
++   [一刻 Java：编程入门指南](docs/a-cup-of-java-an-introduction-to-programming/README.md)
 +   [基于异构信息网络嵌入的 IoT 触发-动作编程数据融合框架](docs/a-data-fusion-framework-based-on-heterogeneous-information-n/README.md)
 +   [代码的一天：用 C 编程语言编写的图解故事](docs/a-day-in-code-an-illustrated-story-written-in-the-c-programm/README.md)
 +   [数字色彩入门指南](docs/a-field-guide-to-digital-color/README.md)
