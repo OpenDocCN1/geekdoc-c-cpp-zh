@@ -27,6 +27,7 @@
 +   [C++ 树形编程面试题集（第 5 卷）](docs/a-collection-of-tree-programming-interview-questions-solved-/README.md)
 +   [基于异构信息网络嵌入的 IoT 触发-动作编程数据融合框架](docs/a-data-fusion-framework-based-on-heterogeneous-information-n/README.md)
 +   [代码的一天：用 C 编程语言编写的图解故事](docs/a-day-in-code-an-illustrated-story-written-in-the-c-programm/README.md)
++   [网络安全编程与预算框架](docs/a-framework-for-programming-and-budgeting-for-cybersecurity/README.md)
 +   [半正规划的一种新型投影收缩算法](docs/a-new-projection-contraction-algorithm-for-semidefinite-prog/README.md)
 +   [一种灭菌约束下手术病例调度问题的滚动 de方法](docs/a-rolling-horizon-approach-for-a-surgery-case-scheduling-pro/README.md)
 +   [一种用于数据一致性与完整性验证的规则定义与处理 SERM 框架](docs/a-serm-based-framework-for-defining-and-processing-rules-sup/README.md)
