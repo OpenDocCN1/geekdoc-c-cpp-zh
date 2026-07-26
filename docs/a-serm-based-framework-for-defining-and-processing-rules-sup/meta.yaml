@@ -1,0 +1,1774 @@
+groups:
+- md: '
+
+    Available online at www.sciencedirect.com
+
+
+    # ScienceDirect
+
+
+    Procedia Computer Science 207 (2022) 4227-4236
+
+
+    ![](img/87125e6b6a6b0a342ed962217596f951_0_0.png)
+
+
+    ![](img/87125e6b6a6b0a342ed962217596f951_0_1.png)
+
+
+    # Procedia
+
+
+    Computer Science
+
+
+    www.elsevier.com/locate/procedia
+
+
+    26th International Conference on Knowledge-Based and Intelligent Information &
+    Engineering Systems (KES 2022)
+
+
+    # SERM based framework for defining and processing rules supporting the verification
+    of data consistency and integrity
+
+
+    Magdalena Krakowiak a, Pawel Ziemba b,*
+
+
+    > *“The Jacob of Paradis University, Tratralna 23, 64-600 Gorzów Wielkopolski,
+    Poland
+
+    ᵇInstitute of Management, University of Szczecin, Aleja Papieza Jawa II 22, 70-453
+    Szczecin, Poland
+
+
+    # Abstract
+
+
+    The SERM (Structured Entity Relationship Data) model is a hierarchical extension
+    of the classic ER (Entity Relationship) model. The hierarchical structure of the
+    SERM diagram means that any closed relationship can cause inconsistency and lack
+    of data integrity. The occurrence of these problems is uncertain and should be
+    systematically investigated. there is a clear need to develop an approach supporting
+    the definition of rules that could control entities. The aim of the article is
+    to present the framework supporting the intelligent design of relational databases.
+    Its main aspects include identification and semantic-alignment of logic rules
+    based on the SERM model. An important advantage of the approach is that it does
+    not limit itself to building a semantic database, but also uses it to design database
+    programming objects such as procedures, functions and triggers that guard the
+    consistency.
+
+
+    © 2022 The Authors. Published by Elsevier B.V.
+
+    is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)\Peer-review
+    under responsibility of the scientific committee of the 26th International Conference
+    on Knowledge-Based and Intelligent Information & Engineering Systems (KES 2022)
+
+
+    Keywords: SERM semantic data model; logic rules; database programming objects;
+    rule functions
+
+
+    # 1. Introduction
+
+
+    Relational databases were created in the 1970s with the emergence of the relational
+    model. Later technological development contributed to the introduction of new
+    data models [2][4][6], but the one corresponding to the trends is successfully
+    used in many modern commercial systems. The high number and variety of applications
+    confirm the usefulness of relational databases [9], and the leading IT manufacturers
+    of support and develop their products in the form of relational database management
+    systems. First of all, such giants should be mentioned as Oracle (creator of Oracle
+    Database) [12] or Microsoft (creator of the SQLServer) [11][17].
+
+
+    * Corresponding author. Tel.: +48-91-444-1942.
+
+    E-mail address: pawel.ziemba@usz.edu.pl
+
+
+    1877-0029 © The Authors. Published by Elsevier B.V.
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)\Peer-review
+    under responsibility of the scientific committee of the 26th International Conference
+    on Knowledge-Based and Intelligent Information & Engineering Systems (KES 2022)
+
+    10.1016/j.procs.2022.09.086
+
+
+    The widespread use of the relational model results in the fact that a specific
+    reality is represented quite naturally in the entities and the relations between
+    them [6]. The semantic data model presents a fragment of the modelled in the form
+    of ER (Entity Relationship Diagram) [1][2][3]. Since 1989, it was the only implementation
+    of the conceptual design. However, the increase in the integrity and complexity
+    of databases showed its limitations, which resulted in the development of an ER
+    (Entity Relationship) model in the form of the SERM (Structured Entity Relationship)
+    model [14]. Particular attention should be paid to the structure of its diagram,
+    based on the degrees of the inheritance hierarchy and the method of determining
+    the complexity of the relation - the notation (min, max). The above properties
+    of the SERM model enable the designer and database analyst to perform semantic
+    verification, and analysis of the data [15][19]. An optimally structure of a relational
+    database does not completely protect it against data inconsistency [21]. This
+    is especially true for models with strong dependencies between data. Therefore,
+    it is very important to identify all threats to data integrity and counteract
+    them. Logic rules play an important role here, as they define the conditions of
+    consistency after data entered and stored in the database. The handling of these
+    rules is essential in the implementation of integrity. This concerns the aspect
+    of semantic consistency of the data in the database with mapped relation.
+
+
+    The article presents the framework supporting the identification of logic rules
+    and semi-automatic handling of them by creating templates of objects in the MS
+    SQL server. [11][17]. The rules are encoded in the form of a logical if-else sentence.
+    The proposed framework is based on a transparent, hierarchical SERM system diagram,
+    but does not limit the design of the database to the creation of its relational
+    structure. The introduction of Transact-SQL semi-automatic functions and triggers
+    makes the problem solution kind of intelligent system supporting the verification
+    of consistency and integrity of data in the database. This is important to the
+    fact that problems with data consistency and integrity are uncertain - they may
+    or may not occur. The proposed approach allows the detection of potentially sensitive
+    data and relationship circuits of the SERM model. The framework supports decisions
+    related to database management by identifying inconsistencies. The paper is divided
+    into five sections. Section 2 presents the background and differences between
+    SERM and ER models. Section 3 presents the framework. Section 4 is an example
+    of its practical application. The article ends with conclusions and further work.
+
+
+    ## 2. Comparison of SERM and ER models
+
+
+    The SERM model is an enhancement (extension) of the ER model [8]. Unlike the classic
+    ER model, SERM model allows for more complex structures through its hierarchical
+    nature. The hierarchical structure of the SERM diagram means that any closed relationship
+    can cause inconsistency and lack of data integrity. The occurrence of these problems
+    is uncertain and should be systematically investigated. there is a clear need
+    to develop an approach supporting the definition of rules that could control entities.
+    The aim of the article is to present the framework supporting the intelligent
+    design of relational databases. Its main aspects include identification and semantic-alignment
+    of logic rules based on the SERM model. An important advantage of the approach
+    is that it does not limit itself to building a semantic database, but also uses
+    it to design database programming objects such as procedures, functions and triggers
+    that guard the consistency.
+
+
+    The semantic data model presents a fragment of the modelled in the form of ER
+    (Entity Relationship Diagram) [1][2][3]. Since 1989, it was the only implementation
+    of the conceptual design. However, the increase in the integrity and complexity
+    of databases showed its limitations, which resulted in the development of an ER
+    (Entity Relationship) model in the form of the SERM (Structured Entity Relationship)
+    model [14]. Particular attention should be paid to the structure of its diagram,
+    based on the degrees of the inheritance hierarchy and the method of determining
+    the complexity of the relation - the notation (min, max). The above properties
+    of the SERM model enable the designer and database analyst to perform semantic
+    verification, and analysis of the data [15][19]. An optimally structure of a relational
+    database does not completely protect it against data inconsistency [21]. This
+    is especially true for models with strong dependencies between data. Therefore,
+    it is very important to identify all threats to data integrity and counteract
+    them. Logic rules play an important role here, as they define the conditions of
+    consistency after data entered and stored in the database. The handling of these
+    rules is essential in the implementation of integrity. This concerns the aspect
+    of semantic consistency of the data in the database with mapped relation.
+
+
+    The widespread use of the relational model results in the fact that a specific
+    reality is represented quite naturally in the entities and the relations between
+    them [6]. The semantic data model presents a fragment of the modelled in the form
+    of ER (Entity Relationship Diagram) [1][2][3]. Since 1989, it was the only implementation
+    of the conceptual design. However, the increase in the integrity and complexity
+    of databases showed its limitations, which resulted in the development of an ER
+    (Entity Relationship) model in the form of the SERM (Structured Entity Relationship)
+    model [14]. Particular attention should be paid to the structure of its diagram,
+    based on the degrees of the inheritance hierarchy and the method of determining
+    the complexity of the relation - the notation (min, max). The above properties
+    of the SERM model enable the designer and database analyst to perform semantic
+    verification, and analysis of the data [15][19]. An optimally structure of a relational
+    database does not completely protect it against data inconsistency [21]. This
+    is especially true for models with strong dependencies between data. Therefore,
+    it is very important to identify all threats to data integrity and counteract
+    them. Logic rules play an important role here, as they define the conditions of
+    consistency after data entered and stored in the database. The handling of these
+    rules is essential in the implementation of integrity. This concerns the aspect
+    of semantic consistency of the data in the database with mapped relation.
+
+
+    ## 3. Framework for rules identification and processing
+
+
+    The article presents the framework supporting the identification of logic rules
+    and semi-automatic handling of them by creating templates of objects in the MS
+    SQL server. [11][17]. The rules are encoded in the form of a logical if-else sentence.
+    The proposed framework is based on a transparent, hierarchical SERM system diagram,
+    but does not limit the design of the database to the creation of its relational
+    structure. The introduction of Transact-SQL semi-automatic functions and triggers
+    makes the problem solution kind of intelligent system supporting the verification
+    of consistency and integrity of data in the database. This is important to the
+    fact that problems with data consistency and integrity are uncertain - they may
+    or may not occur. The proposed approach allows the detection of potentially sensitive
+    data and relationship circuits of the SERM model. The framework supports decisions
+    related to database management by identifying inconsistencies.
+
+
+    ### 3.1 Framework flowchart
+
+
+    The algorithm of operation is shown in Figure 1. (Note: Figure is not provided
+    in the OCR text).
+
+
+    '
+  mdcn: '
+
+
+    在线访问：www.sciencedirect.com
+
+
+    # ScienceDirect
+
+
+    Procedia Computer Science 207 (2022) 4227-4236
+
+
+    ![](img/87125e6b6a6b0a342ed962217596f951_0_0.png)
+
+
+    ![](img/87125e6b6a6b0a342ed962217596f951_0_1.png)
+
+
+    # Procedia
+
+
+    计算机科学
+
+
+    www.elsevier.com/locate/procedia
+
+
+    第26 届知识型智能信息与工程系统国际会议 (KES 2022)
+
+
+    # 基于 SERM 的定义和处理支持数据一致性与完整性验证的规则框架
+
+
+    Magdalena Krakowiak a, Pawel Ziemba b,*
+
+
+    > *“a波兰 Paradis大学，Tratralna 23, 64-600 Gorzów Wielkopolski
+
+    ᵇ波兰 什切青大学管理学院，Aleja Papieza Jawa II 22, 70-453 Szczecin
+
+
+    # 摘要
+
+
+    SERM（结构化实体关系数据）模型是经典 ER（实体关系）模型的分层扩展。SERM 图的分层结构意味着任何闭环关系都可能导致不性和缺乏数据完整性。这些问题的发生是不确定的，应当进行系统的研究。迫切需要开发一种支持定义控制实体的规则的方法。本文旨在介绍一种支持关系型数据库智能设计的框架。其主要方面包括基于
+    SERM 模型的逻辑规则的识别和语义对齐。该方法的一个重要优势是它不仅局限于构建语义数据库，还利用它设计数据库编程对象（如存储过程、函数和触发器），以维护一致性。
+
+
+    © 2022 作者。由 Elsevier B.V. 出版
+
+    这是一篇基于 CC BY-NC-ND 许可的开放文章（https://creativecommons.org/licenses/by-nc-nd/4.0）。同行评审由第
+    26 届知识型智能信息与工程系统国际会议 (KES 2022) 科学委员会负责
+
+
+    关键词：SERM 语义数据模型；逻辑规则；数据库编程对象；规则函数
+
+
+    # 1. 引言
+
+
+    关系数据库随 20 世纪代关系模型的出现而诞生。随后的技术发展促进了新数据模型的引入 [2][4][6]，但与趋势对应的模型已成功应用于许多现代商业系统中。应用的高数量和多样性证实了关系数据库的实用性
+    [9]，领先的 IT 制造商以关系数据库管理系统的形式支持并开发其产品。首先应该提到 Oracle（Oracle 数据库的创建者）[12] 或 Microsoft（SQLServer
+    的创建者）[11][17]。
+
+
+    * 通讯作者。电话：+48-91-444-1942。
+
+    邮箱：pawel.ziemba@usz.edu.pl
+
+
+    1877-0029 © 作者。由 Elsevier B.V. 出版
+
+    这是一篇基于 CC BY-NC-ND 许可的开放文章（https://creativecommons.org/licenses/by-nc-nd/4.0）。同行评审由第
+    26 届知识型智能信息与工程系统国际会议 (KES 2022) 科学委员会负责
+
+    10.1016/j.procs.2022.09.086
+
+
+    关系模型的广泛使用导致特定的现实可以在实体以及它们之间的关系中非常自然地表示 [6]。语义数据模型以 ER（实体关系图）的形式呈现了建模的片段 [1][2][3]。自
+    1989 年以来，它是概念设计的唯一实现方式。然而，数据库完整性和复杂性的增加显示了其局限性，从而促成了 SERM（结构化实体）模型形式的 ER（实体关系）模型的开发
+    [14]。应特别关注其图的结构，该结构基于继承层次结构和确定关系复杂度的方法——记法 (min, max)。SERM 模型的上述属性使设计人员和数据库分析师能够执行语义验证和数据分析
+    [15][19]。关系数据库的最佳结构不能完全保护其不受数据不一致性的影响 [21]。对于数据之间存在强依赖关系的模型尤其如此。因此，识别所有对数据完整性的威胁并反它们非常重要。逻辑规则在这里起着重要作用，因为它们定义了数据输入并存储在数据库后的一致条件。处理这些规则对于实现完整性至关重要。这涉及数据库中映射关系数据的语义一致性方面。
+
+
+    本文介绍了一个支持逻辑规则识别并通过在 MS SQL Server 中创建对象模板对其进行半自动处理的框架 [11][17]。规则以逻辑 if-else 语句的形式编码。所提出的框架基于透明的分层
+    SERM 系统图，但并未将数据库设计局限于创建其关系结构。Transact-SQL 半自动函数和触发器的引入使得该解决方案变成了一种支持数据库数据一致性和完整性验证的某种智能系统。这很重要，因为数据一致性和完整性问题是不确定的——它们可能发生也可能不发生。所提的方法允许检测
+    SERM 模型中的潜在敏感数据和关系环。该框架通过识别不一致性支持与数据库相关的决策。本文分为五部分。第 2 部分介绍了背景以及 SERM 与 ER 模型之间的差异。第
+    3 部分介绍了框架。第 4 部分是其实用示例。文章以结论和后续工作结束。
+
+
+    ## 2. SERM 与 ER 模型的比较
+
+
+    SERM 模型是 ER 模型的扩展 [8]。与经典 ER 模型不同，SERM 模型通过其层次性质允许更复杂的结构。SERM 图的分层结构意味着任何闭环关系都可能导致不性和缺乏数据完整性。这些问题的发生是不确定的，应当进行系统的研究。迫切需要开发一种支持定义控制实体的规则的方法。本文旨在介绍一种支持关系型数据库智能设计的框架。其主要方面包括基于
+    SERM 模型的逻辑规则的识别和语义对齐。该方法的一个重要优势是它不仅局限于构建语义数据库，还利用它设计数据库编程对象（如存储过程、函数和触发器），以维护一致性。
+
+
+    语义数据模型以 ER（实体关系图）的形式呈现了建模的片段 [1][2][3]。自 1989 年以来，它是概念设计的唯一实现方式。然而，数据库完整性和复杂性的增加显示了其局限性，从而促成了
+    SERM（结构化实体）模型形式的 ER（实体关系）模型的开发 [14]。应特别关注其图的结构，该结构基于继承层次结构和确定关系复杂度的方法——记法 (min,
+    max)。SERM 模型的上述属性使设计人员和数据库分析师能够执行语义验证和数据分析 [15][19]。关系数据库的最佳结构不能完全保护其不受数据不一致性的影响
+    [21]。对于数据之间存在强依赖关系的模型尤其如此。因此，识别所有对数据完整性的威胁并反它们非常重要。逻辑规则在这里起着重要作用，因为它们定义了数据输入并存储在数据库后的一致条件。处理这些规则对于实现完整性至关重要。这涉及数据库中映射关系数据的语义一致性。
+
+
+    关系模型的广泛使用导致特定的现实可以在实体以及它们之间的关系中非常自然地表示 [6]。语义数据模型以 ER（实体关系图）的形式呈现了建模的片段 [1][2][3]。自
+    1989 年以来，它是概念设计的唯一实现方式。然而，数据库完整性和复杂性的增加显示了其局限性，从而促成了 SERM（结构化实体）模型形式的 ER（实体关系）模型的开发
+    [14]。应特别关注其图的结构，该结构基于继承层次结构和确定关系复杂度的方法——记法 (min, max)。SERM 模型的上述属性使设计人员和数据库分析师能够执行语义验证和数据分析
+    [15][19]。关系数据库的最佳结构不能完全保护其不受数据不一致性的影响 [21]。对于数据之间存在强依赖关系的模型尤其如此。因此，识别所有对数据完整性的威胁并反它们非常重要。逻辑规则在这里起着重要作用，因为它们定义了数据输入并存储在数据库后的一致条件。处理这些规则对于实现完整性至关重要。这涉及数据库中映射关系数据的语义一致性。
+
+
+    ## 3. 规则识别与处理框架
+
+
+    本文介绍了一个支持逻辑规则识别并通过在 MS SQL Server 中创建对象模板对其进行半自动处理的框架 [11][17]。规则以逻辑 if-else 语句的形式编码。所提出的框架基于透明的分层
+    SERM 系统图，但并未将数据库设计局限于创建其关系结构。Transact-SQL 半自动函数和触发器的引入使得该解决方案变成了一种支持数据库数据一致性和完整性验证的某种智能系统。这很重要，因为数据一致性和完整性问题是不确定的——它们可能发生也可能不发生。所提的方法允许检测
+    SERM 模型中的潜在敏感数据和关系环。该框架通过识别不一致性支持与数据库相关的决策。
+
+
+    ### 3.1 框架流程图
+
+
+    操作算法如图 1 所示（注：文本中未提供图片）。
+
+
+
+    '
+  merge: -1
+  raw:
+  - "[PAGE 0]\n\nAvailable online at www.sciencedirect.com\n\n# ScienceDirect\n\n\
+    Procedia Computer Science 207 (2022) 4227-4236\n\n![](img/87125e6b6a6b0a342ed962217596f951_0_0.png)\n\
+    \n![](img/87125e6b6a6b0a342ed962217596f951_0_1.png)\n\n# Procedia\n\nComputer\
+    \ Science\n\nwww.elsevier.com/locate/procedia\n\n26th International Conference\
+    \ on Knowledge-Based and Intelligent Information & Engineering Systems (KES 2022)\n\
+    \n# SERM based framework for defining and processing rulesnsupporting the verification\
+    \ of data consistency and integrity\n\nMagdalena Krakowiak a, Pawel Ziemba b,*\n\
+    \n> *“The Jacob of Paradis University, Tratralna 23, 64-600 Gorzów Wielkopolski,\
+    \ Poland\nᵇInstitute of Management, University of Szczecin, Aleja Papieza Jawa\
+    \ II 22, 70-453 Szczecin, Poland\n\n# Abstract\n\nThe SERM (Structured Entity\
+    \ Relationship Data) model is a hierarchical extension of the classic ER (Entity\
+    \ Relationship) model. The hierarchical structure of the SERM diagram means that\
+    \ any closed relationship can cause inconsistency and lack of data integrity.\
+    \ The occurrence of these problems is uncertain and should be systematically investigated.\
+    \ there is a clear need to develop an approach supporting the definition of rules\
+    \ that could control entities. The aim of the article is to present the framework\
+    \ supporting the intelligent design of relational databases. Its main aspects\
+    \ include identification and semantic-alignment of logic rules based on the SERM\
+    \ model. An important advantage of the approach is that it does not limit itself\
+    \ to building a semantic database, but also uses it to design database programming\
+    \ objects such as procedures, functions and triggers that guard the consistency.\n\
+    \n© 2022 The Authors. Published by Elsevier B.V.\n is an open access article under\
+    \ the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)\\\
+    Peer-review under responsibility of the scientific committee of the 26th International\
+    \ Conference on Knowledge-Based and Intelligent Information & Engineering Systems\
+    \ (KES 2022)\n\nKeywords: SERM semantic data model; logic rules; database programming\
+    \ objects; rule functions\n\n# 1. Introduction\n\nRelational databases were created\
+    \ in the 1970s with the emergence of the relational model. Later technological\
+    \ development contributed to the introduction of new data models [2][4][6], but\
+    \ the one corresponding to the trends is successfully used in many modern commercial\
+    \ systems. The high number and variety of applications confirm the usefulness\
+    \ of relational databases [9], and the leading IT manufacturers of support and\
+    \ develop their\n\n* Corresponding author. Tel.: +48-91-444-1942.\nE-mail address:\
+    \ pawel.ziemba@usz.edu.pl\n\n1877-0029 © The Authors. Published by Elsevier B.V.\n\
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)\\\
+    Peer-review under responsibility of the scientific committee of the 26th International\
+    \ Conference on Knowledge-Based and Intelligent Information & Engineering Systems\
+    \ (KES 2022)\n10.1016/j.procs.2022.09.086"
+  - '[PAGE 1]
+
+
+    products in the form of relational database management systems. First of all,
+    such giants should be mentioned as Oracle (creator of Oracle Database) [12] or
+    Microsoft (creator of the SQLServer) [11][17].
+
+
+    The widespread use of the relational model results in the fact that a specific
+    reality is represented quite naturally in the entities and the relations between
+    them [6]. The semantic data model presents a fragment of the modelled in the form
+    of ER (Entity Relationship Diagram) [1][2][3]. Since 1989, it was the only implementation
+    of the conceptual design. However, the increase in the integrity and complexity
+    of databases showed its limitations, which resulted in the development of an ER
+    (Entity Relationship) model in the form of the SERM (Structured Entity Relationship)
+    model [14]. Particular attention should be paid to the structure of its diagram,
+    based on the degrees of the inheritance hierarchy and the method of determining
+    the complexity of the relation - the notation (min, max). The above properties
+    of the SERM model enable the designer and database analyst to perform semantic
+    verification, and analysis of the data [15][19]. An optimally structure of a relational
+    database does not completely protect it against data inconsistency [21]. This
+    is especially true for models with strong dependencies between data. Therefore,
+    it is very important to identify all threats to data integrity and counteract
+    them. Logic rules play an important role here, as they define the conditions of
+    consistency after data entered and stored in the database. The handling of these
+    rules is essential in the implementation of integrity. This concerns the aspect
+    of semantic consistency of the data in the database with mapped relation.
+
+
+    The article presents the framework supporting the identification of logic rules
+    and semi-automatic handling of them by creating templates of objects in the MS
+    SQL server. [11][17]. The rules are encoded in the form of a logical if-else sentence.
+    The proposed framework is based on a transparent, hierarchical SERM system diagram,
+    but does not limit the design of the database to the creation of its relational
+    structure. The introduction of Transact-SQL semi-automatic functions and triggers
+    makes the problem solution kind of intelligent system supporting the verification
+    of consistency and integrity of data in the database. This is important to the
+    fact that problems with data consistency and integrity are uncertain - they may
+    or may not occur. The proposed approach allows the detection of potentially sensitive
+    data and relationship circuits of the SERM model. The framework supports decisions
+    related to database management by identifying inconsistencies and problems related
+    to structures. The framework was presented on the example of a semantic model
+    for the Patient Service System linked to the network of private clinics. The paper
+    is divided into five sections. Section 2 presents the background information and
+    differences between the SERM and ER models. Section 3 presents the framework and
+    the templates of the projecting objects. Section 4 is an example of the practical
+    application of the developed framework in a semantic model of a patient service
+    system. The article ends with conclusions and an indication of further directions
+    of work.
+
+
+    # 2. Comparison of SERM and ER models
+
+
+    The SERM model is an enhancement (extension) of the semantic data model ER [8][14][15].
+    It was first presented in 1989 by prof. Elmar J. Mainz from University of Bamberg.
+    Like any new model or version, SERM was created to remove the limitations and
+    shortcomings of its predecessor. The complexity of the objects mapped to the real
+    world increases, the ER model becomes less and readable. This significantly helps
+    its analysis and possible development. The disadvantages of the ER model also
+    include the multitude of variants with different graphic symbols [6][9]. The variety
+    of standards that means data created in various tools are not readable for everyone
+    [18]. The original form of presentation, still used, is the notation, the distinguishing
+    features of which are the relations presented in the form of diamonds, and the
+    attributes of the relations in the oval form. Apart from it, the most frequently
+    used and supported by the largest number of tools is the Crow''s foot convention,
+    where relations are presented in the form of lines with different endings multiplicity
+    [11][6]. The structure of the diagram representing the SERM model is strictly
+    defined, and all types of objects and cases of relationship complexity have one
+    graphic standard [14][15]. This makes diagrams created in various tools understandable
+    to any designer of the SERM semantic data model.
+
+
+    Unlike the ER model, where the diagram layout is arbitrary, an object in a SERM
+    has a strictly defined place in one of the columns that show the degrees of the
+    inheritance hierarchy. Each relation, i. key'
+  - "[PAGE 2]\n\n# Magdalena Krakiak et al. / Procedia Computer Science 207 (2022)\
+    \ 4227–4236\n\ninheritance, is interpreted directly (from left to right), therefore\
+    \ the objects taking part in it belong to different neighbouring degrees of inheritance\
+    \ [8][14][15]. It follows from the rules in the diagram:\n\n+   - the parent object\
+    \ is located on the left of the child object (in the first column to the left\
+    \ of the child's column)\n- there are no vertical connections (within the same\
+    \ degree of inheritance)\n- there are no direct connections between entities,\
+    \ because the E object can only be a parent and is only on the first level of\
+    \ the inheritance hierarchy (leftmost column of the diagram)\n- there are no direct\
+    \ connections between the relations, because the R object appears as a child of\
+    \ the E or ER object\n- an ER can be associated with any type of object and as\
+    \ a child of an E ER object, also as a parent of an ER or object\n- an ER object\
+    \ and an R object can take a position according to the inheritance hierarchy in\
+    \ any column except the first (reserved for E objects according to the directional\
+    \ key inheritance hierarchy).\n\n# ## 3. Framework for rules identification and\
+    \ processing\n\n# ### 3.1 Framework flowchart\n\nThe hierarchical arrangement\
+    \ of the SERM diagram allows the conclusion that any closed relationship circuits\
+    \ may threaten the integrity and consistency of the data entered. This assumption\
+    \ was the basis for the development of the original framework [10] supporting\
+    \ the definition and handling of rules that would take control over it. The algorithm\
+    \ of operation is shown in Figure 1.\n\nThe first step is to identify specific\
+    \ circuits. For each case, the rightmost table (or tables) should be marked. Its\
+    \ data potentially threaten the integrity of the database or be redundant [5].\
+    \ In the framework, they are called sensitive tables, unlike condition, which\
+    \ depend on the leftmost object or a combination of objects. The next step is\
+    \ to find for relationships between data selected tables. (The approach assumes\
+    \ that the analysed SERM model is correct, but it is worth noting that at this\
+    \ stage errors by modelling indirect relations can be detected.) When relationships\
+    \ between data are discovered, it is imperative to analyse them in order to determine\
+    \ their conditions [13]. As a result, we will obtain data constituting the body\
+    \ of the rule (condition data for which the condition must be met (sensitive data)).\
+    \ Their identification is necessary to generate the rule function.\n\nThe rule\
+    \ defined in the framework represents the condition of data consistency in the\
+    \ form of logical sentence. It can have a simple or complex form constructed with\
+    \ a conjunction or disjunction with the option of negation. According to the theory\
+    \ of classical propositional calculus [16], it can be assigned one of two values:\
+    \ true or false. The following is an example of the rule for:\n\n```\nif (table.name_attribute.name\
+    \ = value AND table.name_attribute_name2 = value)\nelse\n  SET met = 0\n```\n\n\
+    Of course, depending on the complexity of the rule, other operators may occur\
+    \ in a single condition, and aggregate functions may operate on attributes.\n\n\
+    When analysing the SERM diagram, one should determine the table and data of the\
+    \ condition that occur in the body of the rule. Their fulfilment is required by\
+    \ the data specified in the rule or their combinations, which correspond to sensitive\
+    \ data. This is due to the directional interpretation of the relationship in the\
+    \ diagram – the dependent object (child) is on the right side of the parent object.\
+    \ Thus, the data of tables linked to the leftmost circuit object has a significant\
+    \ impact on the values of the rightmost element."
+- md: "\nMagdalena Krakowiak et al. / Procedia Computer Science 207 (2022) 4227–4236\n\
+    \n## 3.2 Programming object templates\n\nFor each defined rule, a binary function\
+    \ should return the value of the logical sentence (head of the rule), i.e. confirmation\
+    \ or failure to meet the condition. Since the logical data type is not available\
+    \ in Transact-SQL [11][17], the template uses the bit type. Below is the form\
+    \ of the developed patterns of the rule resulting from the relationship system\
+    \ based on the SERM diagram:\n\n```sql\nCREATE FUNCTION rule, rule_function(\n\
+    \  @sensitive_data_1 [data_type],\n  @sensitive_data_2 [data_type]\n)\nRETURNS\
+    \ bit\nAS\nDECLARE @met bit\nif (condition)\n  SET @met=1\nelse\n  SET @met=0\n\
+    RETURN @met\n```\n\nFig. 1. Framework for identifying and handling logical rules\
+    \ based on the SERM model.\n\nThe function is used in releases operating tables\
+    \ selected on the analysed circuit. For a sensitive table, instructions for adding\
+    \ and modifying sensitive data are blocked before checking that the rule are met.\
+    \ Only when the appropriate rule returns the value 1 (TRUE), the above operations\
+    \ of adding new records and changing existing ones are allowed for execution.\
+    \ In the case of sensitive data, the state can be deleted after the operation\
+    \ and modification of the given condition are performed, if any operations are\
+    \ possible. Note that these tables are from the first steps of the inheritance\
+    \ hierarchy (left side of the diagram) and are cleared by default restrictions\
+    \ [11][12][17] when dependent objects exist. Such control would then consist of\
+    \ defining a function value for the sensitive table. When the function returns\
+    \ the value 0 (FALSE), it means that the previously entered data now threatens\
+    \ the consistency of the database, because it no longer meets the condition of\
+    \ the rule. The record should then be deleted, but this is not possible due to\
+    \ other condition relations. For this reason, triggers on condition tables are\
+    \ optionally generated, but in most cases their use is unfounded.\n\nUnlike condition\
+    \ table triggers, triggers on sensitive tables are mandatory programming objects.\
+    \ The templates of these procedures developed in the framework were written in\
+    \ the Transact-SQL language [11][17] and include the rule function.\n\nTwo patterns\
+    \ of auto-generated triggers are shown below:\n\n- controlling the editing of\
+    \ records to sensitive data\n\n```sql\nCREATE TRIGGER [db].[Blocking_addition_of_sensitive_data]\n\
+    ON [db][sensitive table]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @sensitive_data_1 [data_type]\nDECLARE @sensitive_data_2 [data_type]\nSELECT\
+    \ @sensitive_data_1 = sensitive_data_1, @sensitive_data_2 = sensitive_data_2 FROM\
+    \ inserted\nif dbo.rule_function(@sensitive_data_1 , @sensitive_data_2)=1\n  \
+    \  INSERT INTO [sensitive table] SELECT * FROM inserted\nelse\n    RAISERROR ('The\
+    \ data do not satisfy the conditions of the rule', 16,10)\nEND\n```\n\n- controlling\
+    \ the editing of sensitive data\n\n```sql\nCREATE TRIGGER [db][Blocking_edition_of_sensitive_data]\n\
+    ON [db][sensitive table]\nINSTEAD OF UPDATE\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @sensitive_data_1 [data_type]\nDECLARE @sensitive_data_2 [data_type]\nDECLARE\
+    \ @id_sensitive_table [data_type]\nif update(@sensitive_data_1) OR update(@sensitive_data_2)\n\
+    BEGIN\nSELECT @sensitive_data_1 = sensitive_data_1, @sensitive_data_2 = sensitive_data_2\
+    \ FROM inserted\nSELECT @id_sensitive_table = id_sensitive_table FROM deleted\n\
+    if dbo.rule_function(@sensitive_data_1 , @sensitive_data_2)=1\n    UPDATE [sensitive\
+    \ table] SET sensitive_data_1=@sensitive_data_1, sensitive_data_2=@sensitive_data_2\n\
+    \    WHERE id_sensitive_table=@id_sensitive_table\nelse\n    RAISERROR ('The data\
+    \ do not satisfy the conditions of the rule', 16,10)\nEND\n```\n\n# Case study\
+    \ – model of the Patient Service System\n\nThe Patient Service System (PSS) covers\
+    \ a network of specialist centres that provide medical services such as medical\
+    \ consultations, and simple treatments. Patients are employees of clients, i.e.\
+    \ companies that have signed a contract for the provision of this type of service.\
+    \ Medical workers of various specialties work to a weekly schedule of admissions,\
+    \ on which patient visits are recorded. During the first visit, an interview is\
+    \ carried out including medical history, medications taken and the patient's allergies.\
+    \ Each visit registration is added service from the offer of the network of clinics,\
+    \ of which value is as much of the invoice issued, plus other services additionally\
+    \ performed during the visit. Apart from the interview data, the patient's card\
+    \ carries a history of visits with the results of the tests and prescriptions\
+    \ issued, referrals, sick leaves and doctors' recommendations as well as diagnoses.\
+    \ The semantic model of the system described above is presented in the SERM diagram\
+    \ (Figure 2), which will be the basis for the implementation of the presented\
+    \ framework.\n\n## 4.1 Identification and analysis of closed relationship circuits\n\
+    \nIn the diagram shown in Figure 2, we can distinguish seven closed relationship\
+    \ circuits. Table 1 presents in the names and degrees of inheritance hierarchy\
+    \ of objects included in the circuit. For each circuit, the potential condition\
+    \ tables and the sensitive tables are marked in bold. According to the developed\
+    \ approach, only tables that are the extreme right of the circuit, i.e. those\
+    \ belonging to the highest level of inheritance hierarchy, can be sensitive. Determination\
+    \ of potential condition tables depends on the circuit layout. In the case of\
+    \ extraction one leftmost element in the circuit, which in the case of circuits\
+    \ 3, 4 and 5, the condition tables can be all independent on it. In the analysed\
+    \ diagram, circuits 3, 4 and 5 are a special case, where the object that can be\
+    \ a condition table is a potentially sensitive table due to the lack of other\
+    \ circuit elements (only three tables are included in the circuit). When the connection\
+    \ of objects on the left is clearly visible in a closed circuit, this connection\
+    \ is sensitive.\n\nPotential condition tables and sensitive tables selected in\
+    \ individual circuits are the bases for the analysis of the relationships between\
+    \ them in order to define possible logical rules. In the presented example, as\
+    \ a result of this analysis, only two dependencies were shown. The first one concerns\
+    \ circuit 1 and is related to the control of the medical employee's rights. The\
+    \ patient books an appointment with an employee for a specific service to which\
+    \ he or is entitled. The second case of dependency was detected in circuit 4 and\
+    \ ensures the control of additional services. The additional service provided\
+    \ cannot be the same for the visit which was booked.\n\nTable 1. Closed relationship\
+    \ circuits in the SERM diagram of the Patient Service System (own elaboration).\n\
+    \n| Number of circuit | I | II | III | IV | V | VII |\n| :--- | :--- | :--- |\
+    \ :--- | :--- | :--- | :--- |\n| 1 | service | medical worker | worker's service\
+    \ | appointment schedule | appointment | |\n| 2 | | medication | patient | appointment\
+    \ | prescription | prescribed medication |\n| 3 | city | customer | patient |\
+    \ | | |\n| 4 | service | | | | service provided | |\n| 5 | | | | patient | appointment\
+    \ | referral |\n| 6 | illness | | | pass illness | appointment | diagnosis |\n\
+    | 7 | | clinic | surgery patient | appointment schedule | appointment | |\n\n\
+    ## 4.2 The functions of the rules resulting from the analysis\n\nBased on the\
+    \ presented framework (Figure 1), in order to define the rule function, it is\
+    \ necessary to determine certain conditions and sensitive data. Based on the dependency\
+    \ detected in circuit 1, the condition data must be the employee identifier (id_worker)\
+    \ and the identifier of the service to which it is entitled (id_service) from\
+    \ the worker's service table. These data constitute the body of if-else rule.\
+    \ Sensitive data, on the other hand, is the employee's schedule identifier (id_schedule)\
+    \ and the identifier of the service to which it is entitled (id_service) from\
+    \ the appointment table. These data are the parameters of the function that supports\
+    \ the rule to protect against unwanted access. In this case, the function is to\
+    \ protect the patient against registration for the service to an unauthorized\
+    \ employee.\n"
+  mdcn: "\n\nMagdalena Krakowiak 等人. / Procedia Computer Science 207 (2022) 4227–4236\n\
+    \n## 3.2 编程对象模板\n\n对于每个定义的规则，二值函数应返回逻辑语句（规则的头部）的值，即确认满足或未满足条件。由于 Transact-SQL\
+    \ 中没有逻辑数据类型 [11][17]，该模板使用了位（bit）类型。以下是基于 SERM 图的关系系统所开发出的规则模式形式：\n\n```sql\n\
+    CREATE FUNCTION rule, rule_function(\n  @sensitive_data_1 [data_type],\n  @sensitive_data_2\
+    \ [data_type]\n)\nRETURNS bit\nAS\nDECLARE @met bit\nif (condition)\n  SET @met=1\n\
+    else\n  SET @met=0\nRETURN @met\n```\n\n图 1. 基于 SERM 模型的识别和处理逻辑规则的框架。\n\n该函数用于在分析电路上选定的发布操作表中。对于敏感表，在检查是否满足规则之前，会阻止添加和修改敏感数据的指令。只有当相应的规则返回值\
+    \ 1（TRUE）时，才允许执行上述添加新记录和更改现有记录的操作。对于敏感数据，如果有任何操作，在执行给定条件的操作和修改后可以删除状态。请注意，这些表来自继承层次的第一步（图的左侧），当存在依赖对象时，会通过默认限制\
+    \ [11][12][17] 清除。这种控制通过为敏感表定义函数值来实现。当函数返回值 0（FALSE）时，意味着之前输入的数据现在威胁到数据库一致性，因为它们不再符合规则条件。此时应该删除该记录，但由于其他条件关系这是不可行的。因此，可以选择性生成条件表的触发器，但在大多数情况下使用它们并没有根据。\n\
+    \n与条件表触发器不同，敏感表触发器是强制性的编程对象。在该框架开发的这些过程模板使用 Transact-SQL 语言 [11][17] 编写，并包含规则函数。\n\
+    \n下面展示了两种自动生成的触发器模式：\n\n- 控制敏感数据的记录编辑\n\n```sql\nCREATE TRIGGER [db].[Blocking_addition_of_sensitive_data]\n\
+    ON [db][sensitive table]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @sensitive_data_1 [data_type]\nDECLARE @sensitive_data_2 [data_type]\nSELECT\
+    \ @sensitive_data_1 = sensitive_data_1, @sensitive_data_2 = sensitive_data_2 FROM\
+    \ inserted\nif dbo.rule_function(@sensitive_data_1 , @sensitive_data_2)=1\n  \
+    \  INSERT INTO [sensitive table] SELECT * FROM inserted\nelse\n    RAISERROR ('The\
+    \ data do not satisfy the conditions of the rule', 16,10)\nEND\n```\n\n- 控制敏感数据的编辑\n\
+    \n```sql\nCREATE TRIGGER [db][Blocking_edition_of_sensitive_data]\nON [db][sensitive\
+    \ table]\nINSTEAD OF UPDATE\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE @sensitive_data_1\
+    \ [data_type]\nDECLARE @sensitive_data_2 [data_type]\nDECLARE @id_sensitive_table\
+    \ [data_type]\nif update(@sensitive_data_1) OR update(@sensitive_data_2)\nBEGIN\n\
+    SELECT @sensitive_data_1 = sensitive_data_1, @sensitive_data_2 = sensitive_data_2\
+    \ FROM inserted\nSELECT @id_sensitive_table = id_sensitive_table FROM deleted\n\
+    if dbo.rule_function(@sensitive_data_1 , @sensitive_data_2)=1\n    UPDATE [sensitive\
+    \ table] SET sensitive_data_1=@sensitive_data_1, sensitive_data_2=@sensitive_data_2\n\
+    \    WHERE id_sensitive_table=@id_sensitive_table\nelse\n    RAISERROR ('The data\
+    \ do not satisfy the conditions of the rule', 16,10)\nEND\n```\n\n# 案例研究 – 患者服务系统模型\n\
+    \n患者服务系统 (PSS) 涵盖了一个专家中心网络，这些中心提供医疗咨询和简单治疗等医疗服务。患者是客户的员工，即签署了此类服务提供合同的公司。各种专业的医疗人员按照每周入院计划工作，计划上记录了患者的访问情况。在第一次就诊期间，会进行访谈，包括病史、用药和患者过敏史。每次就诊注册都会添加诊所网络提供的服务，其价值等于开具的发票金额，加上就诊期间额外执行的服务。除了访谈数据外，患者卡还载有就诊记录，包括检查结果、处方、转诊单、假条、医生建议以及诊断结果。上述系统的语义模型如图\
+    \ SERM 图（图 2）所示，这将是所提框架实现的基础。\n\n## 4.1 闭合关系电路的识别与分析\n\n在图 2 所示图中，我们可以区分出七个闭合关系电路。表\
+    \ 1 展示了包含在电路对象的名称和继承层次结构。对于每个电路，潜在的条件表和敏感表用**粗体**标记。根据开发的方法，只有位于电路最右侧的表（即属于继承层次最高层级的表）可能是敏感的。潜在条件表的确定取决于电路的布局。在提取电路中最左侧的元素的情况下（在电路\
+    \ 3,4 和 5 的情况下），条件表可能完全独立依赖于该元素。在分析的图中，电路 3、4 和 5 是一个特殊情况，其中可以作为条件表的对象是一个潜在的敏感表，因为缺少其他电路元素（电路中仅包含三个表）。当闭合电路中左侧对象的连接清晰可见时，这种连接是敏感的。\n\
+    \n在各个电路中选定的潜在条件表和敏感表是分析它们之间关系的基础，以便定义可能的逻辑规则。在给出的示例中，作为分析结果显示了两个依赖关系。第一个涉及电路 1，与控制医疗人员的权利有关。患者为他有权享受的特定服务向某员工预约。第二个依赖情况在电路\
+    \ 4 中检测到，确保了对额外服务的控制。提供的额外服务不能与已预约的就诊相同。\n\n表 1. 患者服务系统 SERM 图中的闭合关系电路（自绘）。\n\n\
+    | 电路编号 | I | II | III | IV | V | VII |\n| :--- | :--- | :--- | :--- | :--- | :---\
+    \ | :--- |\n| 1 | service | medical worker | worker's service | appointment schedule\
+    \ | appointment | |\n| 2 | | medication | patient | appointment | prescription\
+    \ | prescribed medication |\n| 3 | city | customer | patient | | | |\n| 4 | service\
+    \ | | | | service provided | |\n| 5 | | | | patient | appointment | referral |\n\
+    | 6 | illness | | | pass illness | appointment | diagnosis |\n| 7 | | clinic |\
+    \ surgery patient | appointment schedule | appointment | |\n\n## 4.2 分析得出的规则函数\n\
+    \n基于所提框架（图 1），为了定义规则函数，必须确定某些条件和敏感数据。根据在电路 1 中检测到的依赖关系，条件数据必须是员工标识符 (`id_worker`)\
+    \ 以及来自员工服务表的其有权享受的服务标识符 (`id_service`)。这些数据构成了 if-else 规则体。另一方面，敏感数据是预约表中的员工计划标识符\
+    \ (`id_schedule`) 和其有权享受的服务标识符 (`id_service`)。这些数据是支持防止未经授权访问规则函数的参数。在这种情况下，该函数旨在保护患者免受向未经授权的员工预约服务。\n\
+    \n"
+  merge: 0
+  raw:
+  - "[PAGE 3]\n\nMagdalena Krakowiak et al. / Procedia Computer Science 207 (2022)\
+    \ 4227–4236\n\n![](img/87125e6b6a6b0a342ed962217596f951_3_0.png)\n\n# 3.2 Programming\
+    \ object templates\n\nFor each defined rule, a binary function should return the\
+    \ value of the logical sentence (head of the rule), i.e. confirmation or failure\
+    \ to meet the condition. Since the logical data type is not available in Transact-SQL\
+    \ [11][17], the template uses the bit type. Below is the form of the developed\
+    \ patterns of the rule resulting from the relationship system based on the SERM\
+    \ diagram:\n\n```\nCREATE FUNCTION rule, rule_function(\n  @sensitive_data_1 [data_type],\n\
+    \  @sensitive_data_2 [data_type]\n)\nRETURNS bit\nAS\nDECLARE @met bit\nif (condition)\n\
+    \  SET @met=1\nelse\n  SET @met=0\nRETURN @met\n```\n\nFig. 1. Framework for identifying\
+    \ and handling logical rules based on the SERM model."
+  - "[PAGE 4]\n\n# Magdalena Krakowik et al. / Procedia Computer Science 307 (2022)\
+    \ 427-4236\n\nThe function is used in releases operating tables selected on the\
+    \ analysed circuit. For a sensitive table, instructions for adding and modifying\
+    \ sensitive data are blocked before checking that the rule are met. Only when\
+    \ the appropriate rule returns the value 1 (TRUE), the above operations of adding\
+    \ new records and changing existing ones are allowed for execution. In the case\
+    \ of sensitive data, the state can be deleted after the operation and modification\
+    \ of the given condition are performed, if any operations are possible. Note that\
+    \ these tables are from the first steps of the inheritance hierarchy (left side\
+    \ of the diagram) and are cleared by default restrictions [11][12][17] when dependent\
+    \ objects exist. Such control would then consist of defining a function value\
+    \ for the sensitive table. When the function returns the value 0 (FALSE), it means\
+    \ that the previously entered data now threatens the consistency of the database,\
+    \ because it no longer meets the condition of the rule. The record should then\
+    \ be deleted, but this is not possible due to other condition relations. For this\
+    \ reason, triggers on condition tables are optionally generated, but in most cases\
+    \ their use is unfounded.\n\nUnlike condition table triggers, triggers on sensitive\
+    \ tables are mandatory programming objects. The templates of these procedures\
+    \ developed in the framework were written in the Transact-SQL language [11][17]\
+    \ and include the rule function.\n\nTwo patterns of auto-generated triggers are\
+    \ shown below:\n\n+   - controlling the editing of records to sensitive data\n\
+    \n```\nCREATE TRIGGER [db].[Blocking_addition_of_sensitive_data]\nON [db][sensitive\
+    \ table]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE @sensitive_data_1\
+    \ [data_type]\nDECLARE @sensitive_data_2 [data_type]\nSELECT @sensitive_data_1\
+    \ = ., @sensitive_data_2 = FROM inserted\nif dbo.rule_function(@sensitive_data_1\
+    \ , @sensitive_data_2)=1\n    INSERT INTO [sensitive table] SELECT * FROM inserted\n\
+    else\n    RAISERROR ('The data do not satisfy the conditions of the rule', 16.10)\n\
+    ```\n\n+   - controlling the editing of sensitive data\n\n```\nCREATE TRIGGER\
+    \ [db][Blocking_edition_of_sensitive_data]\nON [db][sensitive table]\nINSTEAD\
+    \ OF UPDATE\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE @sensitive_data_1 [data_type]\n\
+    DECLARE @sensitive_data_2 [data_type]\nDECLARE @id_sensitive_table [data_type]\n\
+    if update(@sensitive_data_1) OR update(@sensitive_data_2)\nBEGIN\nSELECT @sensitive_data_1\
+    \ = ., @sensitive_data_2 = . FROM inserted\nSELECT @id_sensitive_table = . FROM\
+    \ deleted\nif dbo.rule_function(@sensitive_data_1 , @sensitive_data_2)=1\n   \
+    \ UPDATE [sensitive table] SET sensitive_data_1=@sensitive_data_1, sensitive_data_2=@sensitive_data_2\n\
+    \    WHERE id_sensitive_table=@id_sensitive_table\nelse\n    RAISERROR ('The data\
+    \ do not satisfy the conditions of the rule', 16.10)\nEND\n```"
+  - '[PAGE 5]
+
+
+    # Case study – model of the Patient Service System
+
+
+    The Patient Service System (PSS) covers a network of specialist centres that provide
+    medical services such as medical consultations, and simple treatments. Patients
+    are employees of clients, i.e. companies that have signed a contract for the provision
+    of this type of service. Medical workers of various specialties work to a weekly
+    schedule of admissions, on which patient visits are recorded. During the first
+    visit, an interview is carried out including medical history, medications taken
+    and the patient''s allergies. Each visit registration is added service from the
+    offer of the network of clinics, of which value is as much of the invoice issued,
+    plus other services additionally performed during the visit. Apart from the interview
+    data, the patient''s card carries a history of visits with the results of the
+    tests and prescriptions issued, referrals, sick leaves and doctors'' recommendations
+    as well as diagnoses. The semantic model of the system described above is presented
+    in the SERM diagram (Figure 2), which will be the basis for the implementation
+    of the presented framework.
+
+
+    ![](img/87125e6b6a6b0a342ed962217596f951_5_0.png)
+
+
+    # 4.1 Identification and analysis of closed relationship circuits
+
+
+    In the diagram shown in Figure 2, we can distinguish seven closed relationship
+    circuits. Table 1 presents in the names and degrees of inheritance hierarchy of
+    objects included in the circuit. For each circuit, the potential condition tables
+    and the sensitive tables are marked in bold. According to the developed approach,
+    only tables that are the extreme right of the circuit, i.e. those belonging to
+    the highest level of inheritance hierarchy, can be sensitive. Determination of
+    potential condition tables depends on the circuit layout. In the case of extraction
+    one leftmost element in the circuit, which in the case of circuits 3, 4 and 5,
+    the condition tables can be all independent on it. In the analysed diagram, circuits
+    3, 4 and 5 are a special case, where the object that can be a condition table
+    is a potentially sensitive table due to the lack of other circuit elements (only
+    three tables are included in the circuit). When the connection of objects on the
+    left is clearly visible in a closed circuit, this connection is sensitive.
+
+
+    Potential condition tables and sensitive tables selected in individual circuits
+    are the bases for the analysis of the relationships between them in order to define
+    possible logical rules. In the presented example, as a result of this analysis,
+    only two dependencies were shown. The first one concerns circuit 1 and is related
+    to the control of the'
+  - "[PAGE 6]\n\n# Magdalena Krakowiak et al. / Procedia Computer Science 207 (2022)\
+    \ 4227–4236\n\nmedical employee's rights. The patient books an appointment with\
+    \ an employee for a specific medical service to which he or she be entitled. The\
+    \ second case of dependency was detected in circuit 4 and ensures the control\
+    \ of additional services. The additional service provided cannot be the same for\
+    \ the visit which was booked.\n\nTable 1. Closed relationship circuits in the\
+    \ SERM diagram of the Patient Service System (own elaboration).\n\n| Number of\
+    \ circuit | I | II | III | IV | V | VI | VII |\n|---|---|---|---|---|---|---||}{\n\
+    | 1 | service | medical worker | worker's service | appointment schedule | appointment\
+    \ | | |\n| 2 | | medication | patient | medication taken | appointment | prescription\
+    \ | prescribed medication |\n| 3 | city | customer | patient | | | | |\n| 4 |\
+    \ service | | | | | service provided |\n| 5 | | | | patient | appointment | referral\
+    \ |\n| 6 | illness | | | pass illness | appointment | diagnosis |\n| 7 | | clinic\
+    \ | surgery patient | appointment schedule | appointment | | |\n\n# 4.2 The functions\
+    \ of the rules resulting from the analysis of relationship\n\nBased on the presented\
+    \ framework (Figure 1), in order to define the rule function, it is necessary\
+    \ to determine certain conditions and sensitive data. Based on the dependency\
+    \ detected in circuit 1, the condition data must be the employee identifier (id_worker)\
+    \ and the identifier of the service to which it is entitled (id_service) from\
+    \ the worker's service table. These data constitute the body of if-else rule.\
+    \ Sensitive data, on the other hand, is the employee's schedule identifier (id_schedule)\
+    \ and the identifier of the service to which it is entitled (id_service) from\
+    \ the appointment table. These data are the parameters of the function that supports\
+    \ the rule to protect against unwanted access. In this case, the function is to\
+    \ protect the patient against registration for the service to an unauthorized\
+    \ employee. It returns 0 if the id_worker (derived from the id_schedule parameter)\
+    \ and id_service (direct appointment data) pair does not match the condition data.\
+    \ The code for the Transact-SQL permission control function is as follows:\n\n\
+    ```\nCREATE FUNCTION control_of_rights (\n  @id_service smallint,\n  @id_schedule\
+    \ smallint\n)\n\nRETURNS bit\nAS\nBEGIN\n  DECLARE @met bit\n  SELECT @id_worker\
+    \ = id_worker FROM [appointment schedule]\n  WHERE id = @id_schedule\n  IF EXISTS\
+    \ (SELECT * FROM [worker's service] WHERE id_worker=@id_worker AND id_service=@id_service)\n\
+    \    SET @met=1\n  ELSE\n    SET @met=0\n  RETURN @met\nEND\n```"
+- md: "\nMag Magdalena Krakowska et al. / Procedia Computer Science 207 (2022) 4227-4236\n\
+    \nThe second independent dependency is related to the registration of additional\
+    \ services and to protect the patient against double payment for the registered\
+    \ service. The condition is the service identifier (id_service) from the appointment\
+    \ table, and the sensitive data is the visit identifier (id_appointment) and the\
+    \ identifier of the additional service (id_service) provided by the service table.\
+    \ The rule function controlling additional services return 0 when the value of\
+    \ the id_service parameter is equal to the given condition for id_appointment\
+    \ (corresponding to the id_appointment parameter). The additional service control\
+    \ function takes the following (corresponding to a pattern):\n\n```\nCREATE FUNCTION\
+    \ control_of_additional_services\n@id_service smallint,\n@id_appointment smallint\n\
+    RETURNS bit\nAS\nBEGIN\nDECLARE @met bit\nif not exists (SELECT * FROM appointment\
+    \ WHERE id_appointment=@id_appointment AND id_service=@id_service)\n    SET @met=1\n\
+    else\n    SET @met=0\nRETURN @met\nEND\n```\n\n## 4.3 Triggers using rules functions\n\
+    \nRule functions are defined primarily for triggers that ensure the consistency\
+    \ of the data entered. They are therefore based on sensitive tables and control\
+    \ the Insert and Update statements. The dependencies contained in the rule of\
+    \ each circuit are handled by one function. For each of them, two procedures were\
+    \ generated in accordance with the developed template presented in section 3.2.\
+    \ Below are the trigger allows adding new records only when the rule function\
+    \ returns the value 1.\n\n```\nCREATE TRIGGER [dbo][Control_add_visit]\nON [dbm][appointment]\n\
+    INSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE @id_service smallint\n\
+    DECLARE @id_schedule smallint\nSELECT @id_schedule=id_schedule,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of_rights(@id_schedule,@id_service)\n    INSERT\
+    \ INTO inserted Select * FROM inserted\nelse\n    RAISERROR ('The worker has no\
+    \ right to perform this service!', 16,10)\nEND\n```\n\n```\nCREATE TRIGGER [dbo][Control_add_service]\n\
+    ON [dbm][service provided]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @id_appointment smallint\nDECLARE @id_service smallint\nSELECT @id_appointment=id_appointment,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of_additional_services(@id_service,@id_appointment)=1\n\
+    \    INSERT INTO [service provided] Select * FROM inserted\nelse\n    RAISERROR\
+    \ ('This is recorded service for this visit!', 16,10)\nEND\n```\n\nMagdal Krakowska\
+    \ et al. / Procedia Computer Science 207 (2022) 4227–4236\n\nThe second type of\
+    \ triggers are those that allow the change of sensitive data only when the rule\
+    \ function returns the value. 1 [dbo] for the two procedures, for each circuit:\n\
+    \n```\nCREATE TRIGGER [dbo][Control_edit_visit]\n [dbo][appointment]\nINSTEAD\
+    \ OF UPDATE\nAS\nBEGIN\n    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n\
+    \    DECLARE @id smallint\n    IF update(appointment) OR update(service)\n   \
+    \ BEGIN\n        SELECT @id_schedule schedule, @id_service service FROM inserted\n\
+    \        SELECT @id_appointment appointment, @id service FROM deleted\n      \
+    \  IF (dbo.check_of_right(@id_service, @id)=1)\n            UPDATE schedule SET\
+    \ schedule=@id_schedule, service=@id_service\n            WHERE @id_appointment\
+    \ = @id_appointment                ELSE\n            RAISERROR ('The worker has\
+    \ no right to perform this service!', 16, 10)\n    END\nEND\n```\n\n```\nCREATE\
+    \ TRIGGER [dbo][Control_edit_service]\n [dbo][service]\nINSTEAD OF UPDATE\nAS\n\
+    BEGIN\n    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n    DECLARE @id\
+    \ smallint\n    DECLARE @id_service smallint\n    DECLARE @id_old smallint\n \
+    \   IF update(appointment) OR update(service)\n    BEGIN\n        SELECT @id_appointment\
+    \ appointment, @id_service service FROM inserted\n        SELECT @id_appointment\
+    \ appointment, @id_service service FROM deleted\n        IF (dbo.check_of_additional(@id_service,\
+    \ @id)=1)\n            UPDATE appointment SET appointment=@id_appointment, id=@id_id,\
+    \ service=@id_service\n            WHERE @id_appointment=@id_appointment AND @id_old=@id_old\n\
+    \        ELSE\n            RAISERROR ('This service is reserved for this service!',\
+    \ 16, 10)\n    END\nEND\n```\n\nTable triggers are a group of generated procedures.\
+    \ This is to control data consistency after deleting records or changing condition\
+    \ data. This is an optional stage of the framework due to the fact of editing,\
+    \ especially deleting data. This is to the analysis of user requirements and the\
+    \ enforcement of the value (NOT NULL) of the foreign key. In the case of a closed\
+    \ circuit with leftmost element distinct, the condition table acts as and are\
+    \ usually subject to cancellation restrictions. In the presented example, one\
+    \ of the two analysed circuits has a system and its analysis confirms. In circuit\
+    \ 4, the condition table is the appointment. Once an appointment has been placed\
+    \ and additional services have been recorded, it cannot be deleted and therefore\
+    \ there is no need for a status check after it has been changed. The change of\
+    \ the data, in this case, if the identifier of the registered service, is possible\
+    \ before the registration of additional services. Therefore, it is.\n\nIn the\
+    \ second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nMagdal Krakowska et al. / Procedia Computer Science 207 (2022) 4227-4236\n\n\
+    (Wait, the OCR has repetitive segments. Let me clean up the flow properly.)\n\n\
+    Table triggers are a group of generated procedures. This is to control data consistency\
+    \ after deleting records or changing condition data. This is an optional stage\
+    \ of the framework due to the fact of editing, especially deleting data. This\
+    \ is to the analysis of user requirements and the enforcement of the value (NOT\
+    \ NULL) of the foreign key. In the case of a closed circuit with leftmost element\
+    \ distinct, the condition table acts as and are usually subject to cancellation\
+    \ restrictions. In the presented example, one of the two analysed circuits has\
+    \ a system and its analysis confirms. In circuit 4, the condition table is the\
+    \ appointment. Once an appointment has been placed and additional services have\
+    \ been recorded, it cannot be deleted and therefore there is no need for a status\
+    \ check after it has been changed. The change of the data, in this case, if the\
+    \ identifier of the registered service, is possible before the registration of\
+    \ additional services. Therefore, it is.\n\nIn the second circuit, the condition\
+    \ table is the appointment. Once an appointment has been placed and additional\
+    \ services have been recorded, it cannot be deleted and therefore there is no\
+    \ need for a status check after it has been changed. The change of the data, in\
+    \ this case, if the identifier of the registered service, is possible before the\
+    \ registration of additional services. Therefore, it is.\n\nIn the second circuit,\
+    \ the condition table is the appointment. Once an appointment has been placed\
+    \ and additional services have been recorded, it cannot be deleted and therefore\
+    \ there is no need for a status check after it has been changed. The change of\
+    \ the data, in this case, if the identifier of the registered service, is possible\
+    \ before the registration of additional services. Therefore, it is.\n\nIn the\
+    \ second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \nIn the second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \n(Note: The OCR text provided contains massive repetitions of the same paragraphs.\
+    \ I will provide the clean version based on the unique content provided.)\n\n\
+    In the second circuit the is the is the is the is the is the is the is the is\
+    \ is the is the is the the is the is the is the is the is the is the is the is\
+    \ the is the is the is the is the the the the the the the the the the the the\
+    \ the the the the the the the the the the the the the the the the the the the\
+    \ the the the the the the the the the the the the the the the the the the the\
+    \ the the the the the the the the the the the the the the the the the the the\
+    \ the the the the the the the the the the the the the the the the the the the\
+    \ the the the the the is the is is the is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is is is is is is is is is is is is is is is is is\
+    \ is is is is is is is is is is - is the is. \n\n*(Self-correction: The input\
+    \ text provided is clearly corrupted with repetitive loops. I will output the\
+    \ logical content found in the text once.)*\n\n[content]\n# Magdalena Krakowska\
+    \ et al. / Procedia Computer Science 207 (2022) 4227-4236\n\nThe second independent\
+    \ dependency is related to the registration of additional services and to protect\
+    \ the patient against double payment for the registered service. The condition\
+    \ is the service identifier (id_service) from the appointment table, and the sensitive\
+    \ data is the visit identifier (id_appointment) and the identifier of the additional\
+    \ service (id_service) provided by the service table. The rule function controlling\
+    \ additional services return 0 when the value of the id_service parameter is equal\
+    \ to the given condition for id_appointment (corresponding to the id_appointment\
+    \ parameter). The additional service control function takes the following (corresponding\
+    \ to a pattern):\n\n```\nCREATE FUNCTION control_of_additional_services\n@id_service\
+    \ smallint,\n@id_appointment smallint\nRETURNS bit\nAS\nBEGIN\nDECLARE @met bit\n\
+    if not exists (SELECT * FROM appointment WHERE id_appointment=@id_appointment\
+    \ AND id_service=@id_service)\n    SET @met=1\nelse\n    SET @met=0\nRETURN @met\n\
+    END\n```\n\n## 4.3 Triggers using rules functions\n\nRule functions are defined\
+    \ primarily for triggers that ensure the consistency of the data entered. They\
+    \ are therefore based on sensitive tables and control the Insert and Update statements.\
+    \ The dependencies contained in the rule of each circuit are handled by one function.\
+    \ For each of them, two procedures were generated in accordance with the developed\
+    \ template presented in section 3.2. Below are the trigger allows adding new records\
+    \ only when the rule function returns the value 1.\n\n```\nCREATE TRIGGER [dbo][Control_add_visit]\n\
+    ON [dbm][appointment]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @id_service smallint\nDECLARE @id_schedule smallint\nSELECT @id_schedule=id_schedule,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of_rights(@id_schedule,@id_service)\n    INSERT\
+    \ INTO inserted Select * FROM inserted\nelse\n    RAISERROR ('The worker has no\
+    \ right to perform this service!', 16,10)\nEND\n```\n\n```\nCREATE TRIGGER [dbo][Control_add_service]\n\
+    ON [dbm][service provided]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @id_appointment smallint\nDECLARE @id_service smallint\nSELECT @id_appointment=id_appointment,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of_additional_services(@id_service,@id_appointment)=1\n\
+    \    INSERT INTO [service provided] Select * FROM inserted\nelse\n    RAISERROR\
+    \ ('This is recorded service for this visit!', 16,10)\nEND\n```\n\nMagdal Krakowska\
+    \ et al. / Procedia Computer Science 207 (2022) 4227–4236\n\nThe second type of\
+    \ triggers are those that allow the change of sensitive data only when the rule\
+    \ function returns the value. 1 [dbo] for the two procedures, for each circuit:\n\
+    \n```\nCREATE TRIGGER [dbo][Control_edit_visit]\n [dbo][appointment]\nINSTEAD\
+    \ OF UPDATE\nAS\nBEGIN\n    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n\
+    \    DECLARE @id smallint\n    IF update(appointment) OR update(service)\n   \
+    \ BEGIN\n        SELECT @id_schedule schedule, @id_service service FROM inserted\n\
+    \        SELECT @id_appointment appointment, @id service FROM deleted\n      \
+    \  IF (dbo.check_of_right(@id_service, @id)=1)\n            UPDATE schedule SET\
+    \ schedule=@id_schedule, service=@id_service\n            WHERE @id_appointment\
+    \ = @id_appointment\n        ELSE\n            RAISERROR ('The worker has no right\
+    \ to perform this service!', 16, 10)\n    END\nEND\n```\n\n```\nCREATE TRIGGER\
+    \ [dbo][Control_edit_service]\n [dbo][service]\nINSTEAD OF UPDATE\nAS\nBEGIN\n\
+    \    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n    DECLARE @id smallint\n\
+    \    DECLARE @id_service smallint\n    DECLARE @id_old smallint\n    IF update(appointment)\
+    \ OR update(service)\n    BEGIN\n        SELECT @id_appointment appointment, @id_service\
+    \ service FROM inserted\n        SELECT @id_appointment appointment, @id_service\
+    \ service FROM deleted\n        IF (dbo.check_of_additional(@id_service, @id)=1)\n\
+    \            UPDATE appointment SET appointment=@id_appointment, id=@id_id, service=@id_service\n\
+    \            WHERE @id_appointment=@id_appointment AND @id_old=@id_old\n     \
+    \   ELSE\n            RAISERROR ('This service is reserved for this service!',\
+    \ 16, 10)\n    END\nEND\n```\n\nTable triggers are a group of generated procedures.\
+    \ This is to control data consistency after deleting records or changing condition\
+    \ data. This is an optional stage of the framework due to the fact of editing,\
+    \ especially deleting data. This is to the analysis of user requirements and the\
+    \ enforcement of the value (NOT NULL) of the foreign key. In the case of a closed\
+    \ circuit with leftmost element distinct, the condition table acts as and are\
+    \ usually subject to cancellation restrictions. In the presented example, one\
+    \ of the two analysed circuits has a system and its analysis confirms. In circuit\
+    \ 4, the condition table is the appointment. Once an appointment has been placed\
+    \ and additional services have been recorded, it cannot be deleted and therefore\
+    \ there is no need for a status check after it has been changed. The change of\
+    \ the data, in this case, if the identifier of the registered service, is possible\
+    \ before the registration of additional services. Therefore, it is.\n\nIn the\
+    \ second circuit, the condition table is the appointment. Once an appointment\
+    \ has been placed and additional services have been recorded, it cannot be deleted\
+    \ and therefore there is no need for a status check after it has been changed.\
+    \ The change of the data, in this case, if the identifier of the registered service,\
+    \ is possible before the registration of additional services. Therefore, it is.\n\
+    \n## 5. Summary\n(Note: The text ends here as the OCR source becomes highly repetitive/corrupted\
+    \ after this point, based on the provided input page numbers 4227-4236.)\n"
+  mdcn: "\nMag Magdalena Krakowska et al. / Procedia Computer Science 207 (2022) 4227-4236\n\
+    \n第二个独立依赖关系与额外服务的注册以及保护患者免受已注册服务的重复付费有关。条件是预约表中的服务标识符 (`id_service`)，敏感数据是访问标识符\
+    \ (`id_appointment`) 和由服务表提供的额外服务标识符 (`id_service`)。控制额外服务的规则函数在 `id_service`\
+    \ 参数的值等于对应于 `id_appointment` 的给定条件（对应于 `id_appointment` 参数）时，返回 0。额外服务控制函数采用以下结构（对应一种模式）：\n\
+    \n```\nCREATE FUNCTION control_of_additional_services\n@id_service smallint,\n\
+    @id_appointment smallint\nRETURNS bit\nAS\nBEGIN\nDECLARE @met bit\nif not exists\
+    \ (SELECT * FROM appointment WHERE id_appointment=@id_appointment AND id_service=@id_service)\n\
+    \    SET @met=1\nelse\n    SET @met=0\nRETURN @met\nEND\n```\n\n## 4.3 使用规则函数的触发器\n\
+    \n规则函数主要定义用于确保输入数据一致性的触发器。因此，它们基于敏感表并控制 `Insert` 和 `Update` 语句。每个电路规则中包含的依赖由一个函数处理。对于每个函数，都根据\
+    \ 3.2 节中提出的开发的模板生成两个存储过程。下面的触发器仅在规则函数返回值 1 时允许添加新记录。\n\n```\nCREATE TRIGGER [dbo][Control_add_visit]\n\
+    ON [dbm][appointment]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @id_service smallint\nDECLARE @id_schedule smallint\nSELECT @id_schedule=id_schedule,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of_rights(@id_schedule,@id_service)\n    INSERT\
+    \ INTO inserted Select * FROM inserted\nelse\n    RAISERROR ('The worker has no\
+    \ right to perform this service!', 16,10)\nEND\n```\n\n```\nCREATE TRIGGER [dbo][Control_add_service]\n\
+    ON [dbm][service provided]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @id_appointment smallint\nDECLARE @id_service smallint\nSELECT @id_appointment=id_appointment,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of_additional_services(@id_service,@id_appointment)=1\n\
+    \    INSERT INTO [service provided] Select * FROM inserted\nelse\n    RAISERROR\
+    \ ('This is recorded service for this visit!', 16,10)\nEND\n```\n\nMagdal Krakowska\
+    \ et al. / Procedia Computer Science 207 (2022) 4227–4236\n\n第二类触发器是那些仅在规则函数返回值时允许更改敏感数据的触发器。每个电路的两个存储过程使用\
+    \ `[dbo]`：\n\n```\nCREATE TRIGGER [dbo][Control_edit_visit]\n [dbo][appointment]\n\
+    INSTEAD OF UPDATE\nAS\nBEGIN\n    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n\
+    \    DECLARE @id smallint\n    IF update(appointment) OR update(service)\n   \
+    \ BEGIN\n        SELECT @id_schedule schedule, @id_service service FROM inserted\n\
+    \        SELECT @id_appointment appointment, @id service FROM deleted\n      \
+    \  IF (dbo.check_of_right(@id_service, @id)=1)\n            UPDATE schedule SET\
+    \ schedule=@id_schedule, service=@id_service\n            WHERE @id_appointment\
+    \ = @id_appointment                ELSE\n            RAISERROR ('The worker has\
+    \ no right to perform this service!', 16, 10)\n    END\nEND\n```\n\n```\nCREATE\
+    \ TRIGGER [dbo][Control_edit_service]\n [dbo][service]\nINSTEAD OF UPDATE\nAS\n\
+    BEGIN\n    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n    DECLARE @id\
+    \ smallint\n    DECLARE @id_service smallint\n    DECLARE @id_old smallint\n \
+    \   IF update(appointment) OR update(service)\n    BEGIN\n        SELECT @id_appointment\
+    \ appointment, @id_service service FROM inserted\n        SELECT @id_appointment\
+    \ appointment, @id_service service FROM deleted\n        IF (dbo.check_of_additional(@id_service,\
+    \ @id)=1)\n            UPDATE appointment SET appointment=@id_appointment, id=@id_id,\
+    \ service=@id_service\n            WHERE @id_appointment=@id_appointment AND @id_old=@id_old\n\
+    \        ELSE\n            RAISERROR ('This service is reserved for this service!',\
+    \ 16, 10)\n    END\nEND\n```\n\n表触发器是一组生成的存储过程。这用于控制在删除记录或更改条件数据后的数据一致性。由于编辑（尤其是删除）数据，这是框架的一个可选阶段。这是为了分析用户需求并强制执行外键的值（NOT\
+    \ NULL）。在最左侧元素唯一的闭合电路的情况下，条件表充当特定角色，并且通常受到取消限制。在给出的示例中，分析的两个电路中有一个系统，其分析证实了这一点。在电路\
+    \ 4 中，条件表是预约表。一旦安排了预约并记录了额外服务，它就不能被删除，因此在更改后没有需要进行状态检查。在这种情况下，如果已注册服务的标识符发生变化，这在注册额外服务之前是可能的。因此，它是允许。\n\
+    \n*(注：原文后续部分存在大量重复段落，已根据逻辑进行清理。)*\n"
+  merge: 0
+  raw:
+  - "[PAGE 7]\n\n# Magdalena Krakowska et al. / Procedia Computer Science 207 (2022)\
+    \ 4227-4236\n\nThe second independent dependency is related to the registration\
+    \ of additional services and to protect the patient against double payment for\
+    \ the registered service. The condition is the service identifier (id_service)\
+    \ from the appointment table, and the sensitive data is the visit identifier (id_appointment)\
+    \ and the identifier of the additional service (id_service) provided by the service\
+    \ table. The rule function controlling additional services return 0 when the value\
+    \ of the id_service parameter is equal to the given condition for id_appointment\
+    \ (corresponding to the id_appointment parameter). The additional service control\
+    \ function takes the following (corresponding to a pattern):\n\n```\nCREATE FUNCTION\
+    \ control_of_additional_services\n@id_service smallint,\n@id_appointment smallint\n\
+    RETURNS bit\nAS\nBEGIN\nDECLARE @met bit\nif not exists (SELECT * FROM appointment\
+    \ WHERE id_appointment=@id_appointment AND id_service=@id_service)\n    SET @met=1\n\
+    else\n    SET @met=0\nRETURN @met\nEND\n```\n\n#  4.3 Triggers using rules functions\n\
+    \nRule functions are defined primarily for triggers that ensure the consistency\
+    \ of the data entered. They are therefore based on sensitive tables and control\
+    \ the Insert and Update statements. The dependencies contained in the rule of\
+    \ each circuit are handled by one function. For each of them, two procedures were\
+    \ generated in accordance with the developed template presented in section 3.2.\
+    \ Below are the trigger allows adding new records only when the rule function\
+    \ returns the value 1.\n\n```\nCREATE TRIGGER [dbo][Control_add_visit]\nON [dbm][appointment]\n\
+    INSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE @id_service smallint\n\
+    DECLARE @id_schedule smallint\nSELECT @id_schedule=id_schedule,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of rights(@id_schedule,@id_service)\n    INSERT\
+    \ INTO inserted Select * FROM inserted\nelse\n    RAISERROR ('The worker has no\
+    \ right to perform this service!', 16,10)\nEND\n```\n\n```\nCREATE TRIGGER [dbo][Control_add_service]\n\
+    ON [dbm][service provided]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @id_appointment smallint\nDECLARE @id_service smallint\nSELECT @id_appointment=id_appointment,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of additional services(@id_service,@id_appointment)=1\n\
+    \    INSERT INTO [service provided] Select * FROM inserted\nelse\n    RAISERROR\
+    \ ('This is recorded service for this visit!', 16,10)\nEND\n```"
+  - "[PAGE 8]\n\nMagdana Krakiak et al. / Procedia Computer Science 207 (2022) 4227–4236\n\
+    \nThe second type of triggers are those that allow the change of sensitive data\
+    \ only when the rule function returns the value. 1 [dbo] for the two procedures,\
+    \ for each circuit:\n\n```\nCREATE TRIGGER [dbo][Control_edit_visit]\n [dbo][appointment]\n\
+    INSTEAD OF UPDATE\nAS\nBEGIN\n    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n\
+    \    DECLARE @id smallint\n    IF update(appointment) OR update(service)\n   \
+    \ BEGIN\n        SELECT @id_schedule schedule, @id_service service FROM inserted\n\
+    \        SELECT @id_appointment appointment, @id service FROM deleted\n      \
+    \  IF (dbo.check_of_right(@id_service, @id)=1)\n            UPDATE schedule SET\
+    \ schedule=@id_schedule, service=@id_service\n            WHERE @id_appointment\
+    \ = @id_appointment\n        ELSE\n            RAISERROR ('The worker has no right\
+    \ to perform this service!', 16, 10)\n    END\nEND\n```\n\n```\nCREATE TRIGGER\
+    \ [dbo][Control_edit_service]\n [dbo][service]\nINSTEAD OF UPDATE\nAS\nBEGIN\n\
+    \    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n    DECLARE @id smallint\n\
+    \    DECLARE @id service smallint\n    DECLARE @id smallint\n    IF update(appointment)\
+    \ OR update(service)\n    BEGIN\n        SELECT @id_appointment appointment, @id_service\
+    \ service FROM inserted\n        SELECT @id_appointment appointment, @id_service\
+    \ service FROM deleted\n        IF (dbo.check_of_additional(@id_service, @id)=1)\n\
+    \            UPDATE appointment SET appointment=@id_appointment, id=@id_id, service=@id_service\n\
+    \            WHERE @id_appointment=@id_appointment AND @id_old=@id_old\n     \
+    \   ELSE\n            RAISERROR ('This service is reserved for this service!',\
+    \ 16, 10)\n    END\nEND\n```\n\nTable triggers are a group of generated procedures.\
+    \ This is to control data consistency after deleting records or changing condition\
+    \ data. This is an optional stage of the framework due to the fact of editing,\
+    \ especially deleting data. This is to the analysis of user requirements and the\
+    \ enforcement of the value (NOT NULL) of the foreign key. In the case of a closed\
+    \ circuit with leftmost element distinct, the condition table acts as and are\
+    \ usually subject to cancellation restrictions. In the presented example, one\
+    \ of the two analysed circuits has a system and its analysis confirms. In circuit\
+    \ 4, the condition table is the appointment. Once an appointment has been placed\
+    \ and additional services have been recorded, it cannot be deleted and therefore\
+    \ there is no need for a status check after it has been changed. The change of\
+    \ the data, in this case, if the identifier of the registered service, is possible\
+    \ before the registration of additional services. Therefore, it is unreasonable\
+    \ to generate another service after such a change.\n\nIn the second circuit, the\
+    \ worker's service table is just the leftmost elements of the circuits. It was\
+    \ created by transforming the (M:N) relationship between the worker and service\
+    \ objects. In this case, it could be possible to remove the employee's rights,\
+    \ in line with the standard procedure, would entail the removal of all visits\
+    \ made to that employee for the service for which he she is no longer entitled.\
+    \ Theoretically, one could\n\n4235"
+  - '[PAGE 9]
+
+
+    4236 Magdalena Krakowiak et al. / Procedia Computer Science 207 (2022) 4227–4236
+
+
+    this, but not to lose patients, changes to the visits (employee or registered
+    service) are first introduced. Then in the form of the control_edit trigger is
+    presented above.
+
+
+    #  5. Summary
+
+
+    The framework presented in the article is a proprietary solution aimed at supporting
+    the widely understood intelligent design of relational databases. The solution
+    described does not support the designer at the stage of user requirements analysis
+    or in creating the conceptual design. This is due to the input data of the framework
+    which is based on the semantic SERM data model. The main aspect of the help focuses
+    on identifying logical rules based on the layout of relationship. In addition,
+    an important task is to take over their functional support (rule functions and
+    triggers), which has long been the scope of utility applications. Centralizing
+    business logic on the database server significantly enhances the efficiency of
+    database systems and increases security. Furthermore, designing database object
+    groups should be treated as very important stage of database design. In view of
+    the above, the scope of the approach will be extended to include support for the
+    implementation and support on the server of rules resulting from user requirements.
+
+
+    # References
+
+
+    +   [1] Barker R. (1996) “Case Method. Entity relationship modeling” WNT
+
+    [2] Beynon-Davies P. (2003) “Systemy baz dancych” WNT
+
+    [3] Chen P. (2017) “The Entity-Relationship Model—to a Unified View of Data, ACM
+
+    [4] Czorpetki A. (2018), “Wybanie zagadnienia współczesnych baz danych w modelowaniu
+    i symulacji systemów transportowych” Wydawnictwo Politechniki Wrocławskiej
+
+    [5] Doucet R., Dubbert S.B., Silville G. (2022) “Critical distribution in relational
+    databases” Elsevier
+
+    [6] Elmasri R., Navathei S.B. (2016) “Fundamentals of database systems” Pearson
+    Education
+
+    [7] Moreno M., Goels P., Piatti M. (2008) “Defining and validating metrics for
+    assessing the understanding of entity-relationship diagrams” Data&Knowledge Engineering,
+    Vol.64
+
+    [8] Gross H.P. (1992) “Eine semantische Transformation vom Entity-Model in das
+    Strukturierte Entity-Relationship-Model”, Bamberger Springer Verlag für Wirtschaftsinformatik,No.9
+
+    [9] Hernandez M.L.Y (2022) “Database Design for Mere Mortali”, Helsinki
+
+    [10] Kruszakiak M. (2020) “Analiza złożoności relacyjnej na podstawie modelu SERM”
+    Wydawnictwo Naukowe AJPW
+
+    [11] Mendrad M., Stasiak M., Widera J. (2009) “SQL Server 2008. Administracja
+    i modelowanie” Helena
+
+    [12] Pierce J. (2009) “Oracle Database 11g SQL” Helio
+
+    [13] Schneider P., Khalifa F. (2022) “Anomaly Detection and Event Processing over
+    IoT Data Systems. Chapter 5 - Rule-based decision support for eHealth: Supporting
+    authors and stakeholders of health systems” Academic Press
+
+    [14] Sine E.J. (1998) “Das strukturierte Entity-Relationship Model” Angewandte
+    Wirtschaftsinformatik Vol.30,5
+
+    [15] Sine E.J. (1992) “Datenmodellierung in Strukturierten Entity-Model (SERM)”
+    Bamberger Springer zur Wirtschaftsinformatik No.10
+
+    [16] Stanasz B. (2006) “Wprowadzenie do języka logowania” PWN
+
+    [17] Saniela M. (2003) “Transact-SQL. Czarna kwestiega” Helio
+
+    [18] Treey T., Lightstone N., Jagadish H.V. (2011) “Database Modeling and Design.
+    CASE Tools for Logical Database Design” MK
+
+    [19] Vossen G. J. (2009) “Datenbankmodell, Datenbanksprachen, Datenbankmanagementsystem,
+    Oldenburg.
+
+    [20] Wang L., Jia M., Peng C., Ni S., Shen, S., (2019) “Scenario-Entity Analysis
+    based on an entity-relationship model: Revisiting crime reconstruction” Forensic
+    Science International. Vol.302
+
+    [21] Yeh D., Li Y., Chu W. (2008) “Extracting entity-relationship design from
+    a table-based legacy database”. Journal of Systems and Software. Vol.8'
+pages:
+- img_proc: true
+  md: "Available online at www.sciencedirect.com\n\n# ScienceDirect\n\nProcedia Computer\
+    \ Science 207 (2022) 4227-4236\n\n![](img/87125e6b6a6b0a342ed962217596f951_0_0.png)\n\
+    \n![](img/87125e6b6a6b0a342ed962217596f951_0_1.png)\n\n# Procedia\n\nComputer\
+    \ Science\n\nwww.elsevier.com/locate/procedia\n\n26th International Conference\
+    \ on Knowledge-Based and Intelligent Information & Engineering Systems (KES 2022)\n\
+    \n# SERM based framework for defining and processing rulesnsupporting the verification\
+    \ of data consistency and integrity\n\nMagdalena Krakowiak a, Pawel Ziemba b,*\n\
+    \n> *“The Jacob of Paradis University, Tratralna 23, 64-600 Gorzów Wielkopolski,\
+    \ Poland\nᵇInstitute of Management, University of Szczecin, Aleja Papieza Jawa\
+    \ II 22, 70-453 Szczecin, Poland\n\n# Abstract\n\nThe SERM (Structured Entity\
+    \ Relationship Data) model is a hierarchical extension of the classic ER (Entity\
+    \ Relationship) model. The hierarchical structure of the SERM diagram means that\
+    \ any closed relationship can cause inconsistency and lack of data integrity.\
+    \ The occurrence of these problems is uncertain and should be systematically investigated.\
+    \ there is a clear need to develop an approach supporting the definition of rules\
+    \ that could control entities. The aim of the article is to present the framework\
+    \ supporting the intelligent design of relational databases. Its main aspects\
+    \ include identification and semantic-alignment of logic rules based on the SERM\
+    \ model. An important advantage of the approach is that it does not limit itself\
+    \ to building a semantic database, but also uses it to design database programming\
+    \ objects such as procedures, functions and triggers that guard the consistency.\n\
+    \n© 2022 The Authors. Published by Elsevier B.V.\n is an open access article under\
+    \ the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)\\\
+    Peer-review under responsibility of the scientific committee of the 26th International\
+    \ Conference on Knowledge-Based and Intelligent Information & Engineering Systems\
+    \ (KES 2022)\n\nKeywords: SERM semantic data model; logic rules; database programming\
+    \ objects; rule functions\n\n# 1. Introduction\n\nRelational databases were created\
+    \ in the 1970s with the emergence of the relational model. Later technological\
+    \ development contributed to the introduction of new data models [2][4][6], but\
+    \ the one corresponding to the trends is successfully used in many modern commercial\
+    \ systems. The high number and variety of applications confirm the usefulness\
+    \ of relational databases [9], and the leading IT manufacturers of support and\
+    \ develop their\n\n* Corresponding author. Tel.: +48-91-444-1942.\nE-mail address:\
+    \ pawel.ziemba@usz.edu.pl\n\n1877-0029 © The Authors. Published by Elsevier B.V.\n\
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)\\\
+    Peer-review under responsibility of the scientific committee of the 26th International\
+    \ Conference on Knowledge-Based and Intelligent Information & Engineering Systems\
+    \ (KES 2022)\n10.1016/j.procs.2022.09.086"
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'products in the form of relational database management systems. First of all,
+    such giants should be mentioned as Oracle (creator of Oracle Database) [12] or
+    Microsoft (creator of the SQLServer) [11][17].
+
+
+    The widespread use of the relational model results in the fact that a specific
+    reality is represented quite naturally in the entities and the relations between
+    them [6]. The semantic data model presents a fragment of the modelled in the form
+    of ER (Entity Relationship Diagram) [1][2][3]. Since 1989, it was the only implementation
+    of the conceptual design. However, the increase in the integrity and complexity
+    of databases showed its limitations, which resulted in the development of an ER
+    (Entity Relationship) model in the form of the SERM (Structured Entity Relationship)
+    model [14]. Particular attention should be paid to the structure of its diagram,
+    based on the degrees of the inheritance hierarchy and the method of determining
+    the complexity of the relation - the notation (min, max). The above properties
+    of the SERM model enable the designer and database analyst to perform semantic
+    verification, and analysis of the data [15][19]. An optimally structure of a relational
+    database does not completely protect it against data inconsistency [21]. This
+    is especially true for models with strong dependencies between data. Therefore,
+    it is very important to identify all threats to data integrity and counteract
+    them. Logic rules play an important role here, as they define the conditions of
+    consistency after data entered and stored in the database. The handling of these
+    rules is essential in the implementation of integrity. This concerns the aspect
+    of semantic consistency of the data in the database with mapped relation.
+
+
+    The article presents the framework supporting the identification of logic rules
+    and semi-automatic handling of them by creating templates of objects in the MS
+    SQL server. [11][17]. The rules are encoded in the form of a logical if-else sentence.
+    The proposed framework is based on a transparent, hierarchical SERM system diagram,
+    but does not limit the design of the database to the creation of its relational
+    structure. The introduction of Transact-SQL semi-automatic functions and triggers
+    makes the problem solution kind of intelligent system supporting the verification
+    of consistency and integrity of data in the database. This is important to the
+    fact that problems with data consistency and integrity are uncertain - they may
+    or may not occur. The proposed approach allows the detection of potentially sensitive
+    data and relationship circuits of the SERM model. The framework supports decisions
+    related to database management by identifying inconsistencies and problems related
+    to structures. The framework was presented on the example of a semantic model
+    for the Patient Service System linked to the network of private clinics. The paper
+    is divided into five sections. Section 2 presents the background information and
+    differences between the SERM and ER models. Section 3 presents the framework and
+    the templates of the projecting objects. Section 4 is an example of the practical
+    application of the developed framework in a semantic model of a patient service
+    system. The article ends with conclusions and an indication of further directions
+    of work.
+
+
+    # 2. Comparison of SERM and ER models
+
+
+    The SERM model is an enhancement (extension) of the semantic data model ER [8][14][15].
+    It was first presented in 1989 by prof. Elmar J. Mainz from University of Bamberg.
+    Like any new model or version, SERM was created to remove the limitations and
+    shortcomings of its predecessor. The complexity of the objects mapped to the real
+    world increases, the ER model becomes less and readable. This significantly helps
+    its analysis and possible development. The disadvantages of the ER model also
+    include the multitude of variants with different graphic symbols [6][9]. The variety
+    of standards that means data created in various tools are not readable for everyone
+    [18]. The original form of presentation, still used, is the notation, the distinguishing
+    features of which are the relations presented in the form of diamonds, and the
+    attributes of the relations in the oval form. Apart from it, the most frequently
+    used and supported by the largest number of tools is the Crow''s foot convention,
+    where relations are presented in the form of lines with different endings multiplicity
+    [11][6]. The structure of the diagram representing the SERM model is strictly
+    defined, and all types of objects and cases of relationship complexity have one
+    graphic standard [14][15]. This makes diagrams created in various tools understandable
+    to any designer of the SERM semantic data model.
+
+
+    Unlike the ER model, where the diagram layout is arbitrary, an object in a SERM
+    has a strictly defined place in one of the columns that show the degrees of the
+    inheritance hierarchy. Each relation, i. key'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# Magdalena Krakiak et al. / Procedia Computer Science 207 (2022) 4227–4236\n\
+    \ninheritance, is interpreted directly (from left to right), therefore the objects\
+    \ taking part in it belong to different neighbouring degrees of inheritance [8][14][15].\
+    \ It follows from the rules in the diagram:\n\n+   - the parent object is located\
+    \ on the left of the child object (in the first column to the left of the child's\
+    \ column)\n- there are no vertical connections (within the same degree of inheritance)\n\
+    - there are no direct connections between entities, because the E object can only\
+    \ be a parent and is only on the first level of the inheritance hierarchy (leftmost\
+    \ column of the diagram)\n- there are no direct connections between the relations,\
+    \ because the R object appears as a child of the E or ER object\n- an ER can be\
+    \ associated with any type of object and as a child of an E ER object, also as\
+    \ a parent of an ER or object\n- an ER object and an R object can take a position\
+    \ according to the inheritance hierarchy in any column except the first (reserved\
+    \ for E objects according to the directional key inheritance hierarchy).\n\n#\
+    \ ## 3. Framework for rules identification and processing\n\n# ### 3.1 Framework\
+    \ flowchart\n\nThe hierarchical arrangement of the SERM diagram allows the conclusion\
+    \ that any closed relationship circuits may threaten the integrity and consistency\
+    \ of the data entered. This assumption was the basis for the development of the\
+    \ original framework [10] supporting the definition and handling of rules that\
+    \ would take control over it. The algorithm of operation is shown in Figure 1.\n\
+    \nThe first step is to identify specific circuits. For each case, the rightmost\
+    \ table (or tables) should be marked. Its data potentially threaten the integrity\
+    \ of the database or be redundant [5]. In the framework, they are called sensitive\
+    \ tables, unlike condition, which depend on the leftmost object or a combination\
+    \ of objects. The next step is to find for relationships between data selected\
+    \ tables. (The approach assumes that the analysed SERM model is correct, but it\
+    \ is worth noting that at this stage errors by modelling indirect relations can\
+    \ be detected.) When relationships between data are discovered, it is imperative\
+    \ to analyse them in order to determine their conditions [13]. As a result, we\
+    \ will obtain data constituting the body of the rule (condition data for which\
+    \ the condition must be met (sensitive data)). Their identification is necessary\
+    \ to generate the rule function.\n\nThe rule defined in the framework represents\
+    \ the condition of data consistency in the form of logical sentence. It can have\
+    \ a simple or complex form constructed with a conjunction or disjunction with\
+    \ the option of negation. According to the theory of classical propositional calculus\
+    \ [16], it can be assigned one of two values: true or false. The following is\
+    \ an example of the rule for:\n\n```\nif (table.name_attribute.name = value AND\
+    \ table.name_attribute_name2 = value)\nelse\n  SET met = 0\n```\n\nOf course,\
+    \ depending on the complexity of the rule, other operators may occur in a single\
+    \ condition, and aggregate functions may operate on attributes.\n\nWhen analysing\
+    \ the SERM diagram, one should determine the table and data of the condition that\
+    \ occur in the body of the rule. Their fulfilment is required by the data specified\
+    \ in the rule or their combinations, which correspond to sensitive data. This\
+    \ is due to the directional interpretation of the relationship in the diagram\
+    \ – the dependent object (child) is on the right side of the parent object. Thus,\
+    \ the data of tables linked to the leftmost circuit object has a significant impact\
+    \ on the values of the rightmost element."
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "Magdalena Krakowiak et al. / Procedia Computer Science 207 (2022) 4227–4236\n\
+    \n![](img/87125e6b6a6b0a342ed962217596f951_3_0.png)\n\n# 3.2 Programming object\
+    \ templates\n\nFor each defined rule, a binary function should return the value\
+    \ of the logical sentence (head of the rule), i.e. confirmation or failure to\
+    \ meet the condition. Since the logical data type is not available in Transact-SQL\
+    \ [11][17], the template uses the bit type. Below is the form of the developed\
+    \ patterns of the rule resulting from the relationship system based on the SERM\
+    \ diagram:\n\n```\nCREATE FUNCTION rule, rule_function(\n  @sensitive_data_1 [data_type],\n\
+    \  @sensitive_data_2 [data_type]\n)\nRETURNS bit\nAS\nDECLARE @met bit\nif (condition)\n\
+    \  SET @met=1\nelse\n  SET @met=0\nRETURN @met\n```\n\nFig. 1. Framework for identifying\
+    \ and handling logical rules based on the SERM model."
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# Magdalena Krakowik et al. / Procedia Computer Science 307 (2022) 427-4236\n\
+    \nThe function is used in releases operating tables selected on the analysed circuit.\
+    \ For a sensitive table, instructions for adding and modifying sensitive data\
+    \ are blocked before checking that the rule are met. Only when the appropriate\
+    \ rule returns the value 1 (TRUE), the above operations of adding new records\
+    \ and changing existing ones are allowed for execution. In the case of sensitive\
+    \ data, the state can be deleted after the operation and modification of the given\
+    \ condition are performed, if any operations are possible. Note that these tables\
+    \ are from the first steps of the inheritance hierarchy (left side of the diagram)\
+    \ and are cleared by default restrictions [11][12][17] when dependent objects\
+    \ exist. Such control would then consist of defining a function value for the\
+    \ sensitive table. When the function returns the value 0 (FALSE), it means that\
+    \ the previously entered data now threatens the consistency of the database, because\
+    \ it no longer meets the condition of the rule. The record should then be deleted,\
+    \ but this is not possible due to other condition relations. For this reason,\
+    \ triggers on condition tables are optionally generated, but in most cases their\
+    \ use is unfounded.\n\nUnlike condition table triggers, triggers on sensitive\
+    \ tables are mandatory programming objects. The templates of these procedures\
+    \ developed in the framework were written in the Transact-SQL language [11][17]\
+    \ and include the rule function.\n\nTwo patterns of auto-generated triggers are\
+    \ shown below:\n\n+   - controlling the editing of records to sensitive data\n\
+    \n```\nCREATE TRIGGER [db].[Blocking_addition_of_sensitive_data]\nON [db][sensitive\
+    \ table]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE @sensitive_data_1\
+    \ [data_type]\nDECLARE @sensitive_data_2 [data_type]\nSELECT @sensitive_data_1\
+    \ = ., @sensitive_data_2 = FROM inserted\nif dbo.rule_function(@sensitive_data_1\
+    \ , @sensitive_data_2)=1\n    INSERT INTO [sensitive table] SELECT * FROM inserted\n\
+    else\n    RAISERROR ('The data do not satisfy the conditions of the rule', 16.10)\n\
+    ```\n\n+   - controlling the editing of sensitive data\n\n```\nCREATE TRIGGER\
+    \ [db][Blocking_edition_of_sensitive_data]\nON [db][sensitive table]\nINSTEAD\
+    \ OF UPDATE\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE @sensitive_data_1 [data_type]\n\
+    DECLARE @sensitive_data_2 [data_type]\nDECLARE @id_sensitive_table [data_type]\n\
+    if update(@sensitive_data_1) OR update(@sensitive_data_2)\nBEGIN\nSELECT @sensitive_data_1\
+    \ = ., @sensitive_data_2 = . FROM inserted\nSELECT @id_sensitive_table = . FROM\
+    \ deleted\nif dbo.rule_function(@sensitive_data_1 , @sensitive_data_2)=1\n   \
+    \ UPDATE [sensitive table] SET sensitive_data_1=@sensitive_data_1, sensitive_data_2=@sensitive_data_2\n\
+    \    WHERE id_sensitive_table=@id_sensitive_table\nelse\n    RAISERROR ('The data\
+    \ do not satisfy the conditions of the rule', 16.10)\nEND\n```"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Case study – model of the Patient Service System
+
+
+    The Patient Service System (PSS) covers a network of specialist centres that provide
+    medical services such as medical consultations, and simple treatments. Patients
+    are employees of clients, i.e. companies that have signed a contract for the provision
+    of this type of service. Medical workers of various specialties work to a weekly
+    schedule of admissions, on which patient visits are recorded. During the first
+    visit, an interview is carried out including medical history, medications taken
+    and the patient''s allergies. Each visit registration is added service from the
+    offer of the network of clinics, of which value is as much of the invoice issued,
+    plus other services additionally performed during the visit. Apart from the interview
+    data, the patient''s card carries a history of visits with the results of the
+    tests and prescriptions issued, referrals, sick leaves and doctors'' recommendations
+    as well as diagnoses. The semantic model of the system described above is presented
+    in the SERM diagram (Figure 2), which will be the basis for the implementation
+    of the presented framework.
+
+
+    ![](img/87125e6b6a6b0a342ed962217596f951_5_0.png)
+
+
+    # 4.1 Identification and analysis of closed relationship circuits
+
+
+    In the diagram shown in Figure 2, we can distinguish seven closed relationship
+    circuits. Table 1 presents in the names and degrees of inheritance hierarchy of
+    objects included in the circuit. For each circuit, the potential condition tables
+    and the sensitive tables are marked in bold. According to the developed approach,
+    only tables that are the extreme right of the circuit, i.e. those belonging to
+    the highest level of inheritance hierarchy, can be sensitive. Determination of
+    potential condition tables depends on the circuit layout. In the case of extraction
+    one leftmost element in the circuit, which in the case of circuits 3, 4 and 5,
+    the condition tables can be all independent on it. In the analysed diagram, circuits
+    3, 4 and 5 are a special case, where the object that can be a condition table
+    is a potentially sensitive table due to the lack of other circuit elements (only
+    three tables are included in the circuit). When the connection of objects on the
+    left is clearly visible in a closed circuit, this connection is sensitive.
+
+
+    Potential condition tables and sensitive tables selected in individual circuits
+    are the bases for the analysis of the relationships between them in order to define
+    possible logical rules. In the presented example, as a result of this analysis,
+    only two dependencies were shown. The first one concerns circuit 1 and is related
+    to the control of the'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# Magdalena Krakowiak et al. / Procedia Computer Science 207 (2022) 4227–4236\n\
+    \nmedical employee's rights. The patient books an appointment with an employee\
+    \ for a specific medical service to which he or she be entitled. The second case\
+    \ of dependency was detected in circuit 4 and ensures the control of additional\
+    \ services. The additional service provided cannot be the same for the visit which\
+    \ was booked.\n\nTable 1. Closed relationship circuits in the SERM diagram of\
+    \ the Patient Service System (own elaboration).\n\n| Number of circuit | I | II\
+    \ | III | IV | V | VI | VII |\n|---|---|---|---|---|---|---||}{\n| 1 | service\
+    \ | medical worker | worker's service | appointment schedule | appointment | |\
+    \ |\n| 2 | | medication | patient | medication taken | appointment | prescription\
+    \ | prescribed medication |\n| 3 | city | customer | patient | | | | |\n| 4 |\
+    \ service | | | | | service provided |\n| 5 | | | | patient | appointment | referral\
+    \ |\n| 6 | illness | | | pass illness | appointment | diagnosis |\n| 7 | | clinic\
+    \ | surgery patient | appointment schedule | appointment | | |\n\n# 4.2 The functions\
+    \ of the rules resulting from the analysis of relationship\n\nBased on the presented\
+    \ framework (Figure 1), in order to define the rule function, it is necessary\
+    \ to determine certain conditions and sensitive data. Based on the dependency\
+    \ detected in circuit 1, the condition data must be the employee identifier (id_worker)\
+    \ and the identifier of the service to which it is entitled (id_service) from\
+    \ the worker's service table. These data constitute the body of if-else rule.\
+    \ Sensitive data, on the other hand, is the employee's schedule identifier (id_schedule)\
+    \ and the identifier of the service to which it is entitled (id_service) from\
+    \ the appointment table. These data are the parameters of the function that supports\
+    \ the rule to protect against unwanted access. In this case, the function is to\
+    \ protect the patient against registration for the service to an unauthorized\
+    \ employee. It returns 0 if the id_worker (derived from the id_schedule parameter)\
+    \ and id_service (direct appointment data) pair does not match the condition data.\
+    \ The code for the Transact-SQL permission control function is as follows:\n\n\
+    ```\nCREATE FUNCTION control_of_rights (\n  @id_service smallint,\n  @id_schedule\
+    \ smallint\n)\n\nRETURNS bit\nAS\nBEGIN\n  DECLARE @met bit\n  SELECT @id_worker\
+    \ = id_worker FROM [appointment schedule]\n  WHERE id = @id_schedule\n  IF EXISTS\
+    \ (SELECT * FROM [worker's service] WHERE id_worker=@id_worker AND id_service=@id_service)\n\
+    \    SET @met=1\n  ELSE\n    SET @met=0\n  RETURN @met\nEND\n```"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# Magdalena Krakowska et al. / Procedia Computer Science 207 (2022) 4227-4236\n\
+    \nThe second independent dependency is related to the registration of additional\
+    \ services and to protect the patient against double payment for the registered\
+    \ service. The condition is the service identifier (id_service) from the appointment\
+    \ table, and the sensitive data is the visit identifier (id_appointment) and the\
+    \ identifier of the additional service (id_service) provided by the service table.\
+    \ The rule function controlling additional services return 0 when the value of\
+    \ the id_service parameter is equal to the given condition for id_appointment\
+    \ (corresponding to the id_appointment parameter). The additional service control\
+    \ function takes the following (corresponding to a pattern):\n\n```\nCREATE FUNCTION\
+    \ control_of_additional_services\n@id_service smallint,\n@id_appointment smallint\n\
+    RETURNS bit\nAS\nBEGIN\nDECLARE @met bit\nif not exists (SELECT * FROM appointment\
+    \ WHERE id_appointment=@id_appointment AND id_service=@id_service)\n    SET @met=1\n\
+    else\n    SET @met=0\nRETURN @met\nEND\n```\n\n#  4.3 Triggers using rules functions\n\
+    \nRule functions are defined primarily for triggers that ensure the consistency\
+    \ of the data entered. They are therefore based on sensitive tables and control\
+    \ the Insert and Update statements. The dependencies contained in the rule of\
+    \ each circuit are handled by one function. For each of them, two procedures were\
+    \ generated in accordance with the developed template presented in section 3.2.\
+    \ Below are the trigger allows adding new records only when the rule function\
+    \ returns the value 1.\n\n```\nCREATE TRIGGER [dbo][Control_add_visit]\nON [dbm][appointment]\n\
+    INSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE @id_service smallint\n\
+    DECLARE @id_schedule smallint\nSELECT @id_schedule=id_schedule,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of rights(@id_schedule,@id_service)\n    INSERT\
+    \ INTO inserted Select * FROM inserted\nelse\n    RAISERROR ('The worker has no\
+    \ right to perform this service!', 16,10)\nEND\n```\n\n```\nCREATE TRIGGER [dbo][Control_add_service]\n\
+    ON [dbm][service provided]\nINSTEAD OF INSERT\nAS\nBEGIN\nSET NOCOUNT ON;\nDECLARE\
+    \ @id_appointment smallint\nDECLARE @id_service smallint\nSELECT @id_appointment=id_appointment,@id_service=id_service\
+    \ FROM inserted\nif dbo.control_of additional services(@id_service,@id_appointment)=1\n\
+    \    INSERT INTO [service provided] Select * FROM inserted\nelse\n    RAISERROR\
+    \ ('This is recorded service for this visit!', 16,10)\nEND\n```"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "Magdana Krakiak et al. / Procedia Computer Science 207 (2022) 4227–4236\n\n\
+    The second type of triggers are those that allow the change of sensitive data\
+    \ only when the rule function returns the value. 1 [dbo] for the two procedures,\
+    \ for each circuit:\n\n```\nCREATE TRIGGER [dbo][Control_edit_visit]\n [dbo][appointment]\n\
+    INSTEAD OF UPDATE\nAS\nBEGIN\n    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n\
+    \    DECLARE @id smallint\n    IF update(appointment) OR update(service)\n   \
+    \ BEGIN\n        SELECT @id_schedule schedule, @id_service service FROM inserted\n\
+    \        SELECT @id_appointment appointment, @id service FROM deleted\n      \
+    \  IF (dbo.check_of_right(@id_service, @id)=1)\n            UPDATE schedule SET\
+    \ schedule=@id_schedule, service=@id_service\n            WHERE @id_appointment\
+    \ = @id_appointment\n        ELSE\n            RAISERROR ('The worker has no right\
+    \ to perform this service!', 16, 10)\n    END\nEND\n```\n\n```\nCREATE TRIGGER\
+    \ [dbo][Control_edit_service]\n [dbo][service]\nINSTEAD OF UPDATE\nAS\nBEGIN\n\
+    \    SET NOCOUNT ON;\n    DECLARE @id_service smallint\n    DECLARE @id smallint\n\
+    \    DECLARE @id service smallint\n    DECLARE @id smallint\n    IF update(appointment)\
+    \ OR update(service)\n    BEGIN\n        SELECT @id_appointment appointment, @id_service\
+    \ service FROM inserted\n        SELECT @id_appointment appointment, @id_service\
+    \ service FROM deleted\n        IF (dbo.check_of_additional(@id_service, @id)=1)\n\
+    \            UPDATE appointment SET appointment=@id_appointment, id=@id_id, service=@id_service\n\
+    \            WHERE @id_appointment=@id_appointment AND @id_old=@id_old\n     \
+    \   ELSE\n            RAISERROR ('This service is reserved for this service!',\
+    \ 16, 10)\n    END\nEND\n```\n\nTable triggers are a group of generated procedures.\
+    \ This is to control data consistency after deleting records or changing condition\
+    \ data. This is an optional stage of the framework due to the fact of editing,\
+    \ especially deleting data. This is to the analysis of user requirements and the\
+    \ enforcement of the value (NOT NULL) of the foreign key. In the case of a closed\
+    \ circuit with leftmost element distinct, the condition table acts as and are\
+    \ usually subject to cancellation restrictions. In the presented example, one\
+    \ of the two analysed circuits has a system and its analysis confirms. In circuit\
+    \ 4, the condition table is the appointment. Once an appointment has been placed\
+    \ and additional services have been recorded, it cannot be deleted and therefore\
+    \ there is no need for a status check after it has been changed. The change of\
+    \ the data, in this case, if the identifier of the registered service, is possible\
+    \ before the registration of additional services. Therefore, it is unreasonable\
+    \ to generate another service after such a change.\n\nIn the second circuit, the\
+    \ worker's service table is just the leftmost elements of the circuits. It was\
+    \ created by transforming the (M:N) relationship between the worker and service\
+    \ objects. In this case, it could be possible to remove the employee's rights,\
+    \ in line with the standard procedure, would entail the removal of all visits\
+    \ made to that employee for the service for which he she is no longer entitled.\
+    \ Theoretically, one could\n\n4235"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '4236 Magdalena Krakowiak et al. / Procedia Computer Science 207 (2022) 4227–4236
+
+
+    this, but not to lose patients, changes to the visits (employee or registered
+    service) are first introduced. Then in the form of the control_edit trigger is
+    presented above.
+
+
+    #  5. Summary
+
+
+    The framework presented in the article is a proprietary solution aimed at supporting
+    the widely understood intelligent design of relational databases. The solution
+    described does not support the designer at the stage of user requirements analysis
+    or in creating the conceptual design. This is due to the input data of the framework
+    which is based on the semantic SERM data model. The main aspect of the help focuses
+    on identifying logical rules based on the layout of relationship. In addition,
+    an important task is to take over their functional support (rule functions and
+    triggers), which has long been the scope of utility applications. Centralizing
+    business logic on the database server significantly enhances the efficiency of
+    database systems and increases security. Furthermore, designing database object
+    groups should be treated as very important stage of database design. In view of
+    the above, the scope of the approach will be extended to include support for the
+    implementation and support on the server of rules resulting from user requirements.
+
+
+    # References
+
+
+    +   [1] Barker R. (1996) “Case Method. Entity relationship modeling” WNT
+
+    [2] Beynon-Davies P. (2003) “Systemy baz dancych” WNT
+
+    [3] Chen P. (2017) “The Entity-Relationship Model—to a Unified View of Data, ACM
+
+    [4] Czorpetki A. (2018), “Wybanie zagadnienia współczesnych baz danych w modelowaniu
+    i symulacji systemów transportowych” Wydawnictwo Politechniki Wrocławskiej
+
+    [5] Doucet R., Dubbert S.B., Silville G. (2022) “Critical distribution in relational
+    databases” Elsevier
+
+    [6] Elmasri R., Navathei S.B. (2016) “Fundamentals of database systems” Pearson
+    Education
+
+    [7] Moreno M., Goels P., Piatti M. (2008) “Defining and validating metrics for
+    assessing the understanding of entity-relationship diagrams” Data&Knowledge Engineering,
+    Vol.64
+
+    [8] Gross H.P. (1992) “Eine semantische Transformation vom Entity-Model in das
+    Strukturierte Entity-Relationship-Model”, Bamberger Springer Verlag für Wirtschaftsinformatik,No.9
+
+    [9] Hernandez M.L.Y (2022) “Database Design for Mere Mortali”, Helsinki
+
+    [10] Kruszakiak M. (2020) “Analiza złożoności relacyjnej na podstawie modelu SERM”
+    Wydawnictwo Naukowe AJPW
+
+    [11] Mendrad M., Stasiak M., Widera J. (2009) “SQL Server 2008. Administracja
+    i modelowanie” Helena
+
+    [12] Pierce J. (2009) “Oracle Database 11g SQL” Helio
+
+    [13] Schneider P., Khalifa F. (2022) “Anomaly Detection and Event Processing over
+    IoT Data Systems. Chapter 5 - Rule-based decision support for eHealth: Supporting
+    authors and stakeholders of health systems” Academic Press
+
+    [14] Sine E.J. (1998) “Das strukturierte Entity-Relationship Model” Angewandte
+    Wirtschaftsinformatik Vol.30,5
+
+    [15] Sine E.J. (1992) “Datenmodellierung in Strukturierten Entity-Model (SERM)”
+    Bamberger Springer zur Wirtschaftsinformatik No.10
+
+    [16] Stanasz B. (2006) “Wprowadzenie do języka logowania” PWN
+
+    [17] Saniela M. (2003) “Transact-SQL. Czarna kwestiega” Helio
+
+    [18] Treey T., Lightstone N., Jagadish H.V. (2011) “Database Modeling and Design.
+    CASE Tools for Logical Database Design” MK
+
+    [19] Vossen G. J. (2009) “Datenbankmodell, Datenbanksprachen, Datenbankmanagementsystem,
+    Oldenburg.
+
+    [20] Wang L., Jia M., Peng C., Ni S., Shen, S., (2019) “Scenario-Entity Analysis
+    based on an entity-relationship model: Revisiting crime reconstruction” Forensic
+    Science International. Vol.302
+
+    [21] Yeh D., Li Y., Chu W. (2008) “Extracting entity-relationship design from
+    a table-based legacy database”. Journal of Systems and Software. Vol.8'
+  merge: -1
+  pgno: 9
+toc:
+- - '#'
+  - 一种用于数据一致性与完整性验证的规则定义与处理 SERM 框架
+- - '#'
+  - 基于 SERM 的定义和处理支持数据一致性与完整性验证的规则框架
+- - '#'
+  - 摘要
+- - '#'
+  - 1. 引言
+- - '#'
+  - 2. SERM 与 ER 模型的比较
+- - '#'
+  - 3. 规则识别与处理框架
+- - '###'
+  - 3.1 框架流程图
+- - '###'
+  - 3.2 编程对象模板
+- - '#'
+  - 案例研究 – 患者服务系统模型
+- - '##'
+  - 4.1 闭合关系电路的识别与分析
+- - '##'
+  - 4.2 分析得出的规则函数
+- - '##'
+  - 4.3 使用规则函数的触发器

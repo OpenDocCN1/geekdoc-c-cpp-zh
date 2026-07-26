@@ -1,0 +1,2266 @@
+groups:
+- md: '
+
+    Available online at www.scienceirect.com
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_0_0.png)
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_0_1.png)
+
+
+    IFAC PapersOnline 55-10 (2022) 1625–1630
+
+
+    # A Rolling-Horizon Approach for a Surgery Case Scheduling Problem with Sterilizing
+    Constraints
+
+
+    H. Al Hasan * C. Gueret ** D. Limineau ***
+
+
+    +   * UCO, 44 Ru Rabelais, Angers 49000, France (e-mail: albasan@uco.fr)
+
+    ** Univ Angels, LARS SFR Mathistic, Angers 49000, France (e-mail: e.jean@univ-angers.fr)
+
+    *** IMT Atlantic, LS28, 4 Rue Alfred Kastler, Nantes (e-mail: david.leineau@imt-atlantic.fr)
+
+    **** UCO, 44 Ru Rabelais, Angers 49000, France (e-mail: david.riviere@uco.fr).
+
+
+    **Abstract:** In this paper, we set a real scheduling problem which includes scheduling
+    a set of surgical cases that arrive over time taking into account the uncertainties
+    on their duration, and the delay to sterilize instruments. The objectives are
+    to de schedule as many surgeries as possible, and to minimize the overtime of
+    the surgical staff and the number of instruments waiting in the sterilizing unit.
+    This research was performed in collaboration with a Hospital in France, which
+    has also provided historical data for the experiments. We propose a rolling horizon
+    approach based on the iterative resolution of a robust mixed linear programming
+    model, where the objective functions are taken into account in lexicographic order.
+    The experiments on real data show a reduction of more than 50% of overtime, and
+    around 87% less stress situations in sterilizing unit.
+
+
+    Copyright © 2022 Authors. This is an open access article under the CC BY-NC-ND
+    license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    *Keywords:* Operations Research; Surgical scheduling; Mixed-integer programming;
+    Rolling horizon approach; Robust scheduling
+
+
+    # 1. INTRODUCTION
+
+
+    Operating rooms are the main source of income for hospitals: they generate two-thirds
+    of hospital revenues (Jackson 2002), and for around 40% of hospital costs (Macario
+    et al. 1995) through the use of facilities (operating rooms, intensive care beds,
+    and the personnel costs (surgeons, anesthesiologists, and technicians). For these,
+    a lot of researchers have studied the scheduling problems in both elective (normal)
+    and non-elective (urgent) contexts (Zhu et al. (2018)).
+
+
+    The main factor behind this problem, is the uncertainty when scheduling surgeries.
+    Due to using somewhat limited historic data in their calculations, they still
+    end up with a big difference between the estimated and actual duration of surgeries.
+    For this, one needs to propose an effective approach to ensure feasible schedules
+    and real performance gains (in terms of overtime and equipment availability) while
+    ensuring the capacity of the rates of scheduling does not get affected by negative
+    impacts.
+
+
+    In this paper we consider the case of the Centre Hospitalier d''Angers (CHI),
+    a public hospital service. This hospital serves multiple cities in the area and
+    has limits. It is also very important to manage the appointments effectively.
+    Due to the high number of resources (resources, medical instruments), and the
+    increasing demand due to population aging, the current manual scheduling process
+    implemented at the CHI must be improved. We examine the performance measures such
+    as the number of staffs'' overtime hours (≈ 28 hours per month on average) and
+    the medical instruments that are sterilized in order to respect the proposed method.
+
+
+    To the best of our knowledge there are very few literature and research on such
+    particular problem. In Beroule (2016) the authors used an operation room scheduling
+    where the set of surgeries is known in advance. The authors included medical devices
+    limits, the reduction of the number of resources. A branch-and-price approach
+    is applied in Cardon (2009) to solve a scheduling problem in a day care center,
+    where the dates are fixed and they try to find the best limits. Their objective
+    is to minimize the use of recovery hours, the recovery of overtime and the value
+    of various patients and procedures ensuring the medical conditions are met.
+
+
+    2405-9862 © 2022 Authors. This is an open access article under the CC BY-NC-ND
+    license. 10.1016/j.dpe.2022.099.623 * Peer reviewed under responsibility of International
+    Federation of Control.
+
+
+    In this paper, we propose a method to solve the static version of a surgical scheduling
+    problem that is not treated in the literature. We integrate our model in a rolling
+    horizon approach to handle the dynamic version of the problem. We show that the
+    obtained schedules can reduce the number of scheduled surgeries, and significantly
+    improve those operationally implemented in overtime and reduce stresses on the
+    surgical team.
+
+
+    each kind of type to perform all the surgeries planned each day. She may cancel
+    a surgery if she discovers that the number of kits is not sufficient.
+
+
+    After each surgery, the used kits are kept in water during 30 minutes at the OSB.
+    After that, they can be collected and sent to the server. Such shuttles are planned
+    at fixed hours to collect and deliver the kits. The schedule of shuttles is prepared
+    in a First In First Out (FIFO) order. Once sterilized, they are brought back to
+    the OSB by a shuttle and can be used again.
+
+
+    # 2. PROBLEM DESCRIPTION
+
+
+    The Centre Hospitalier d''Univers (CHU) currently employs 630 staff. It includes
+    several operating theatres, and a sterilizing unit which is in charge of the sterilization
+    of all instruments. In this study, we focus on the Orthopedic Block (OSB) and
+    the Sterilizing Unit (SU). The OSB is composed of 3 rooms, of which 2 are open
+    5 days a week from 8:15 to 17:00, and the SU is open 4 days a week from 8:15.
+
+
+    Each year, approximately 2500 surgeries of different types are performed. These
+    kits are available in limited quantities.
+
+
+    Table 1. SU''s pickups and deliveries to the OSB.
+
+
+    | Pick-up | 11:00 | 13:00 | 14:30 | 16:00 | 17:30 | 18:30 |
+
+    |---|---|---|---|---|---|---|
+
+    | Delivery | | | 14:30 | | 17:30 | |
+
+
+    At the SU, the sterilization process is performed in several stages - the instruments
+    are first cleaned, then in containers before sterilization. Finally, the kits
+    are put to cool off before being returned to the block. When a kit arrives at
+    the SU, the sterilization process takes about 4 hours.
+
+
+    ## 2.1 Work process in the OSB
+
+
+    Currently, at the OSB, the schedule is constructed as follows: A work schedule
+    generated 6 months in advance includes the full days (shifts) assigned to each
+    and the OSB in which they can be performed for each days. Some days, affected
+    to 3 are reserved for ambulatory surgeries. Any surgery can operate in one or
+    two OSB shifts each week, with 2 shifts for ambulatory.
+
+
+    Then, during his/her consultations, the schedule decides if his/her patient needs
+    a surgery, and relates, the date of the surgery for his/her (generally between
+    3 weeks to 3 months later). This date, the type of surgery and the requirements
+    of kits are recorded in the OSB information system by secretary.
+
+
+    On a more short term, each Monday, a specialized sequences for the surgeries or
+    OSB-shift of the next week, allowing 20 minutes between two consecutive surgeries.
+    The room nurse also has a
+
+
+    ## 2.2 Difficulties
+
+
+    Currently, the CHU has three major difficulties. First, the OSB is often forced
+    to work overtime. On average, the monthly number of overtime is 28. The problem
+    can be attributed to the lack of planning: each surgery schedule selects the dates
+    of the/patients without considering the planning of the kits. Most surgeries share
+    the same OSB. An explanation is the uncertainty concerning the duration of the
+    surgeries. Indeed, for more than 50% of the surgeries, the duration differs from
+    the estimated one by more than 20 minutes. And this
+
+    '
+  mdcn: '
+
+    在线访问：www.scienceirect.com
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_0_0.png)
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_0_1.png)
+
+
+    IFAC 论文集 55-10 (2022) 1625–1630
+
+
+    # 考虑消毒约束的手术病例调度问题的滚动时界方法
+
+
+    H. Al Hasan * C. Gueret ** D. Limineau ***
+
+
+    +   * UCO, 44 Ru Rabelais, Angers 49000, France (邮箱: albasan@uco.fr)
+
+    ** Univ Angels, LARS SFR Mathistic, Angers 49000, France (邮箱: e.jean@univ-angers.fr)
+
+    *** IMT Atlantic, LS28, 4 Rue Alfred Kastler, Nantes (邮箱: david.leineau@imt-atlantic.fr)
+
+    **** UCO, 44 Ru Rabelais, Angers 49000, France (邮箱: david.riviere@uco.fr).
+
+
+    **摘要：** 在本文，我们设定了一个真实的调度问题，包括对一组随时间到达的手术病例进行调度，并考虑到持续时间的不确定性以及器械消毒的延迟。目标是尽可能多安排手术，并减少手术人员的加班时间以及消毒单元等待的器械数量。该研究是与法国的一所医院合作的，该医院还实验提供了历史数据。我们提出了一种基于迭代求解稳健混合线性规划模型的滚动时界方法，其中目标函数按字典顺序考虑。对真实数据的实验表明，加班时间减少了
+    50% 以上，消毒单元的压力情况减少了约 87%。
+
+
+    版权所有 © 2022 作者。这是一篇基于 CC BY-NC-ND 许可协议的文章（https://creativecommons.org/licenses/by-nc-nd/4.0）。
+
+
+    *关键词：* 运筹学；手术调度；混合整数规划；滚动时界方法；稳健调度
+
+
+    # 1. 引言
+
+
+    手术室是医院收入的主要来源：它们创造了医院收入的三之二 (Jackson 2002)，并占医院成本的约 40% (Macario et al 1995)，主要通过设施的使用（手术室、重症监护床）以及人员成本（外科医生、麻醉师和技术人员）。针对这些问题，许多研究人员研究了择期性（正常）和非择期（紧急）背景下的调度问题
+    (Zhu et al (2018))。
+
+
+    该问题背后的主要因素是手术调度中的不确定性。由于在计算中使用历史数据相当有限，手术的估计时长与实际持续时间之间仍然存在巨大差异。为此，需要提出一种有效的方法来确保调度的可行性并获得实际的性能提升（在加班和设备可用性方面），同时确保调度费率的能力不受负面影响的影响。
+
+
+    在本文中，我们考虑了昂日医院中心（Centre Hospitalier d''Angers, CHI），这是一个公立医院机构。该医院为该地区的多个城市服务并具有局限性。有效管理预约也非常重要。由于资源（人员、医疗器械）众多以及人口老龄化导致的需求增加，CHI
+    目前实施的人工调度流程必须得到改进。我们检查了性能指标，如员工的加班小时数（平均每月约28 小时）和经过消毒的医疗器械，以遵循所提的方法。
+
+
+    据我们所知，关于此类特定问题的文献和研究非常少。在 Beroule (2016) 中，作者使用了手术室调度，其中手术集合是预先知的。作者考虑了医疗设备的限制和资源数量的减少。Cardon
+    (2009) 应用了分支定价法（branch-and-price）来解决日间中心的调度问题，其中日期是固定的，他们试图寻找最佳限制。他们的目标是最小化恢复小时数的使用、加班恢复以及各种患者和手术的价值，同时确保满足医疗条件。
+
+
+    2405-9862 © 2022 作者。这是一篇基于 CC BY-NC-ND 许可协议的文章。10.1016/j.dpe.2022.099.623 * 由国际控制联合会负责评审。
+
+
+    在本文中，我们提出了一种解决手术调度问题静态版本的方法，该问题在文献中未被涉及。我们将模型整合到滚动时界方法中，以处理问题的动态版本。我们证明，获得的调度可以减少计划手术的数量，并显著改善那些在加班期间实施的手术，并减轻手术团队的压力。
+
+
+    每种类型执行每天计划的所有手术。如果她发现器械包数量不足，她可能会取消手术。
+
+
+    在每次手术后，使用的器械包在 OSB（手术准备室）中浸泡 30 分钟。之后，它们可以被收集并发送到服务器。此类班车在固定时间计划，以收集和递送器械包。班车表按先进先出（FIFO）顺序准备。消毒后，它们通过班车被送回
+    OSB 并可以再次使用。
+
+
+    # 2. 问题描述
+
+
+    大学医院（Centre Hospitalier d''Univers, CHU）目前雇佣 630 名员工。它包括多个手术室以及一个负责所有器械消毒的消毒单元。在研究中，我们关注骨科手术间（OSB）和消毒单元（SU）。OSB
+    由 3 间手术室组成，每周 5 天从 8:15 到 17:00 开放，SU 每周 4 天从 8:15 开始开放。
+
+
+    每年进行约 2500 台不同类型的手术。器械包的数量有限。
+
+
+    表 1.SU 到 OSB 的提取和递送。
+
+
+    | 提取 | 11:00 | 13:00 | 14:30 | 16:00 | 17:30 | 18:30 |
+
+    |---|---|---|---|---|---|---|
+
+    | 递送 | | | 14:30 | | 17:30 | |
+
+
+    在 SU，消毒过程分阶段进行——器械首先清洗，然后在容器中。最后，器械在冷却后返回。当器械包到达 SU 时，消毒过程需要 4 小时。
+
+
+    ## 2.1 OSB 的工作流程
+
+
+    目前，OSB 的调度构建方式如下：提前 6 个月生成工作表，分配给每个人的完整天（班次）以及可以执行手术的 OSB。某些天留出 3 天用于择期手术。任何手术每周可以在一个或两个
+    OSB 班次中进行，择期手术为 2 个班次。
+
+
+    然后，在会诊期间，调度决定患者是否需要手术，并确定手术日期（通常在 3 周到 3 个月后）。该日期、手术类型和器械需求由秘书在 OSB 信息系统中记录。
+
+
+    在更短的时间范围内，每周一，为下周的手术或 OSB 班次安排专门序列，在连续手术之间预留 20 分钟。手术护士还有
+
+
+    ## 2.2 困难
+
+
+    目前，CHU 面临三个主要困难。首先，OSB 经常被迫加班。平均每月加班时间为 28 小时。这个问题可以归因于缺乏规划：每个手术调度在选择患者日期时没有考虑器械的规划。大多数手术共享同一个
+    OSB。一个解释是手术持续的不确定性。事实上，对于超过 50% 的手术，其实持续时间与估计时间差异超过 20 分钟。而且这
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    Available online at www.scienceirect.com
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_0_0.png)
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_0_1.png)
+
+
+    IFAC PapersOnline 55-10 (2022) 1625–1630
+
+
+    # A Rolling-Horizon Approach for a Surgery Case Scheduling Problem with Sterilizing
+    Constraints
+
+
+    H. Al Hasan * C. Gueret ** D. Limineau ***
+
+
+    +   * UCO, 44 Ru Rabelais, Angers 49000, France (e-mail: albasan@uco.fr)
+
+    ** Univ Angels, LARS SFR Mathistic, Angers 49000, France (e-mail: e.jean@univ-angers.fr)
+
+    *** IMT Atlantic, LS28, 4 Rue Alfred Kastler, Nantes (e-mail: david.leineau@imt-atlantic.fr)
+
+    **** UCO, 44 Ru Rabelais, Angers 49000, France (e-mail: david.riviere@uco.fr).
+
+
+    **Abstract:** In this paper, we set a real scheduling problem which includes scheduling
+    a set of surgical cases that arrive over time taking into account the uncertainties
+    on their duration, and the delay to sterilize instruments. The objectives are
+    to schedule as many surgeries as possible, and to minimize the overtime of the
+    surgical staff and the number of instruments waiting in the sterilizing unit.
+    This research was performed in collaboration with a Hospital in France, which
+    has also provided historical data for the experiments. We propose a rolling horizon
+    approach based on the iterative resolution of a robust mixed linear programming
+    model, where the objective functions are taken into account in lexicographic order.
+    The experiments on real data show a reduction of more than 50% of overtime, and
+    around 87% less stress situations in sterilizing unit.
+
+
+    Copyright © 2022 Authors. This is an open access article under the CC BY-NC-ND
+    license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    *Keywords:* Operations Research; Surgical scheduling; Mixed-integer programming;
+    Rolling horizon approach; Robust scheduling
+
+
+    # 1. INTRODUCTION
+
+
+    Operating rooms are the main source of income for hospitals: they generate two-thirds
+    of hospital revenues (Jackson 2002), and for around 40% of hospital costs (Macario
+    et al. 1995) through the use of facilities (operating rooms, intensive care beds,
+    and the personnel costs (surgeons, anesthesiologists, and technicians). For these,
+    a lot of researchers have studied the scheduling problems in both elective (normal)
+    and non-elective (urgent) contexts (Zhu et al. (2018)).
+
+
+    The main factor behind this problem, is the uncertainty when scheduling surgeries.
+    Due to using somewhat limited historic data in their calculations, they still
+    end up with a big difference between the estimated and actual duration of surgeries.
+    For this, one needs to propose an effective approach to ensure feasible schedules
+    and real performance gains (in terms of overtime and equipment availability) while
+    ensuring the capacity of the rates of scheduling does not get affected by negative
+    impacts.
+
+
+    In this paper we consider the case of the Centre Hospitalier d''Angers (CHI),
+    a public hospital service. This hospital serves multiple cities in the area and
+    has limits. It is also very important to manage the appointments effectively.
+    Due to the high number of resources (surresources, medical instruments), and the
+    increasing demand due to population aging, the current manual scheduling process
+    implemented at the CHI must be improved. We examine the performance measures such
+    as the number of staffs'' overtime hours (≈ 28 hours per month on average) and
+    the medical instruments that are sterilized in order to respect the proposed method.
+
+
+    To the best of our knowledge there are very few literature and research on such
+    particular problem. In Beroule (2016) the authors used an operation room scheduling
+    where the set of surgeries is known in advance. The authors included medical devices
+    limits, the reduction of the number of resources. A branch-and-price approach
+    is applied in Cardon (2009) to solve a scheduling problem in a day care center,
+    where the dates are fixed and they try to find the best limits. Their objective
+    is to minimize the use of recovery hours, the recovery of overtime and the value
+    of various patients and procedures ensuring the medical conditions are met.
+
+
+    2405-9862 © 2022 Authors. This is an open access article under the CC BY-NC-ND
+    license. 10.1016/j.dpe.2022.099.623 * Peer reviewed under responsibility of International
+    Federation of Control.'
+  - '[PAGE 1]
+
+
+    In this paper, we propose a method to solve the static version of a surgical scheduling
+    problem that is not treated in the literature. We integrate our model in a rolling
+    horizon approach to handle the dynamic version of the problem. We show that the
+    obtained schedules can reduce the number of scheduled surgeries, and significantly
+    improve those operationally implemented in overtime and reduce stresses on the
+    surgical team.
+
+
+    each kind of type to perform all the surgeries planned each day. She may cancel
+    a surgery if she discovers that the number of kits is not sufficient.
+
+
+    After each surgery, the used kits are kept in water during 30 minutes at the OSB.
+    After that, they can be collected and sent to the server. Such shuttles are planned
+    at fixed hours to collect and deliver the kits. The schedule of shuttles is prepared
+    in a First In First Out (FIFO) order. Once sterilized, they are brought back to
+    the OSB by a shuttle and can be used again.
+
+
+    # 2. PROBLEM DESCRIPTION
+
+
+    The Centre Hospitalier d''Univers (CHU) currently employs 630 hospital staff.
+    It includes several operating theatres, and a sterilizing unit which is in charge
+    of the sterilization of all the instruments used in the hospital. In this study,
+    we focus on the Orthopedic Surgical Block (OSB) and the Sterilizing Unit (SU).
+    The OSB is composed of 3 operating rooms, of which 2 are open 5 days a week from
+    8:15 to 17:00, and room 3 is open 4 days a week from 8:15 to 14:30. Around 15
+    surgeries share these rooms: a planning indicating the days when they operate,
+    and the list of rooms for each surgery is provided.
+
+
+    Each year, approximately 2500 elective surgeries of 221 different types are performed
+    in this block. Some of these surgeries can be scheduled during any of the hours,
+    whereas others (ambulatory surgeries) have to be completed by afternoon because
+    the patient stays for only 2 hours (while surgery closes at 17:00). These surgeries
+    can end by the closing time of the OSB. However, due to the large number of surgeries
+    to perform, each can exceptionally stay up to 3 days after its official release.
+    The duration of each surgery is characterized by an estimated duration and requires
+    a list of surgical instruments in small boxed kits. These kits are available in
+    limited quantities.
+
+
+    Table 1. SU''s pickups and deliveries to the OSB.
+
+
+    | Pick-up | 11:00 | 13:00 | 14:30 | 16:00 | 17:30 | 18:30 |
+
+    |---|---|---|---|---|---|---||
+
+    | Delivery | | | 14:30 | | 17:30 | |
+
+
+    At the SU, the sterilization process is performed in several stages - the instruments
+    are first cleaned by members, then in their corresponding containers before sterilization
+    machines. Finally, the kits are put to cool off before being returned to the block.
+    When a kit arrives at the SU, the sterilization process takes about 4 hours.
+
+
+    # 2.2 Difficulties
+
+
+    Currently, the CHU has three major difficulties. First, the OSB is often forced
+    to work overtime. On average, the monthly number of overtime is 28. The problem
+    can be attributed to the lack of planning: each surgery schedule selects the dates
+    of the his/patients without considering the planning of the kits. Most surgeries
+    share the same OSB. An explanation is the uncertainty concerning the duration
+    of the surgeries. Indeed, for more than 50% of the surgeries, the duration differs
+    from the estimated one by more than 20 minutes. And this
+
+
+    # 2.1 Work process in the OSB
+
+
+    Currently, at the OSB, the schedule is constructed as follows: A work schedule
+    generated 6 months in advance includes the full days (shifts) assigned to each
+    and the OSB in which they can be performed for each days. Some days, affected
+    to 3 are reserved for ambulatory surgeries. Any surgery can operate in one or
+    two OSB shifts each week, with 2 shifts for ambulatory.
+
+
+    Then, during his/her consultations, the schedule decides if his/her patient needs
+    a surgery, and relates, the date of the surgery for his/her (generally between
+    3 weeks to 3 months later). This date, the type of surgery and the requirements
+    of kits are recorded in the OSB information system by secretary.
+
+
+    On a more short term, each Monday, a specialized sequences for the surgeries or
+    OSB-shift of the next week, allowing 20 minutes between two consecutive surgeries
+    The room nurse also has a
+
+
+    +   1) A kit collected at 11:00, 13:00 on day (t) can be used in the morning of
+    day (t+1) if it is treated as a priority at the SU (priority kit, key 1). If it
+    is not treated as a priority, it cannot be used before 14:00 on day (t+1).
+
+    2) A kit collected at 14:30 on day (t) can be used in the morning of day (t+1)
+    if it is treated as the SU (urgent kit). If it is not treated urgently, it can
+    be used from 14:30 on day (t+1).'
+- md: '
+
+    H. Hasan et al. / IFAC PapersOnline 55-10 (2022) 1625–1630
+
+
+    1627
+
+
+    (2) Calculate the horizon length $H_s$ for each surgeon based on his/her surgery
+    loads and shifts.
+
+    (3) For each collected at 17:30, 18:30 on day (t) or 7:00 on day (t+1) can be
+    used on day (t+1) if 14:30 if it is treated at the SU (priority kit), if it is
+    not treated as a priority, it will be used on day (t+1) from 17:30.
+
+    (4) For surgeries that were scheduled at week $t+3$ and return the surgeries that
+    were scheduled after $t+3$ back to the list.
+
+
+    Other emergencies arise when the delay between the two surgeries the same kit
+    is long enough for sterilization (≥ 4h), but the fixed pickup and delivery hours
+    of the shift do not allow to collect the kit at the SU and then have a date for
+    the OBS before its next possible use. This situation can happen for example if
+    a surgery ends at 10:00 one day (or must be reused at 14:00 for another surgery)
+    it cannot be collected before the surgery. If these cases are strictly avoided,
+    they may occur in practice as the SU can request a special outside to collect
+    these kits that are just collected because there will be no time to sterilize
+    them before sending them back, possibly by another special outside the delivery
+    hours. We will refer to these kits as **Not waited**.
+
+
+    On average, more than 60 kits are listed each month, which implies a lot of stress
+    on the SU and has a negative impact on the work flow.
+
+
+    The CHU would like to improve these dysfunctional by keeping the same level of
+    service in number of surgeries scheduled each month. The objectives are, in order
+    of priority given by the CHU, schedule as many surgeries as possible, minimize
+    the overtime and minimize the number of problems (priority kits). In order to
+    handle these problems, we propose a rolling horizon approach based on a robust
+    MILP formulation.
+
+
+    # 3. THE ROLLING HORIZON APPROACH
+
+
+    The Rolling horizon approach is iterative, and at each iteration, fixing one week
+    schedule obtained by solving a robust MILP. We first present the rolling horizon
+    framework. Then we present the deterministic model and an adaptation of this formulation
+    to obtain a robust MILP solutions more resistant to the fluctuations of the demands.
+
+
+    # 3.1 Rolling horizon framework
+
+
+    We propose to use a rolling horizon approach in which the surgeries are not fixed
+    during the consultation, but instead define a date for the day of the surgeries,
+    and are added to a waiting list. At the end of each week $t$, the new waiting
+    list is generated starting from week $t+3$. We make 3 weeks as that patients have
+    enough time to prepare and organize their hospitalization. In the schedule obtained,
+    only week $t$ is kept, and the surgeries scheduled after are put back in the waiting
+    list (see Figure 1).
+
+
+    At the end of week $t$, the process follows as:
+
+
+    - (1) Add the surgeries consulted at the current week $t$ to the waiting list.
+
+
+    Fig.1. Rolling horizon scheme
+
+
+    This procedure requires to estimate an horizon $H_s$ for each surgeon to handle
+    all his/her surgeries of waiting list. The value of $H_s$ is calculated as the
+    minimum number of shifts needed to cover the load $s$ (sum of the planned durations
+    of his/her surgeries), plus 4 additional shifts. Each supplementary shift takes
+    into account the fact that we can''t know the exact amount of shifts needed for
+    each surgeon as surgeons some OR occasions because of limited quantities of times.
+
+
+    At each iteration, the problem of scheduling all the surgeries in the waiting
+    list from week $t+3$ is solved using a MILP. In this next, we present a formulation
+    of the problem, assuming that the duration of surgeries is known with certainty.
+    A robust version for the non-deterministic case will be proposed.
+
+
+    # 3.2 MILP formulation for the deterministic case
+
+
+    In order to model this problem, we propose a mathematical formulation similar
+    to the one presented in Hasan et al. (2019) based on the decomposition of the
+    day into periods (period 1 from 8:15 to 14:00, period 2 from 14:00 to 14:30, period
+    3 from 14:30 to 14:30 and period 4 from 15:30 to 17:00). This division is obtained
+    from several hours in the schedule of the shuttle, and the closing hours of the
+
+
+    In line with the requirements of the CHU, the objective is to schedule as many
+    surgeries as possible while minimizing the overtime and the total penalties of
+    emergencies and priorities in the SU. In order to take into account the new process
+    in which the surgeons provide a due for each surgery during the consultation,
+    we also add as objective of minimizing the total tardness of the surgeries.
+
+
+    The reader referred to Al Hasan (2019) for a version of the deterministic MILP
+    model. We present in this section only the parameters, variables and constraints
+    that we modified in order to obtain a robust formulation.
+
+
+    The considered parameters:
+
+
+    - $H$: number of days in the horizon
+
+    - $J$: number of types of kit
+
+    - $T$: number of surgeries
+
+    - $R$: number of rooms
+
+    - $S$: number of surgeons
+
+    - $P_{ij}$: penalty
+
+    - $\Delta_{ijt}$: duration
+
+    - $A_{max}$: latest time
+
+
+    And the considered variables:
+
+
+    - $w_{itr}$: binary variable
+
+    - $b_{ifrt}$: binary variable
+
+    - $E_{ijt}$: integer variable
+
+    - $Y_{ijt}$: real variable
+
+    - $\epsilon_{tr}$: real variable
+
+
+    The constraints that need to be added to obtain a robust formulation are the capacity
+    constraints below:
+
+
+    - the workload of each period must not exceed the duration (plus overtime) (1)
+
+
+    $$\sum_{i \in O} b_{ifrt} + \Delta_{ijt} \leq A_{max} + \epsilon_{tr}$$
+
+    $$\forall t \in \{1, \dots, H\}, \forall r \in R, Yb \in \{1, \dots, J\}, t \in
+    \{b, \dots, f\}$$
+
+
+    The multiple objective functions (3) are taken into account using a lexicographic
+    method. We first maximize $f_1$,
+
+
+    $$f_1: \max \sum_{s \in S} \sum_{r \in R} \epsilon_{sr} - \sum_{t \in T} \sum_{r
+    \in R} W_{itr}$$
+
+    $$f_2: \min \sum_{s \in S} \sum_{r \in R} \epsilon_{sr}$$
+
+    $$f_3: \min \sum_{t \in T} \sum_{k \in K} [u_k E_{ijt})]$$
+
+
+    # 3.3 Robust formulation
+
+
+    We proposed a formulation based on the model of Bertimas and Sims (2004). Although
+    this model provides a static environment (see Al Hasan et al (2019)), its integration
+    into a robust approach leads to feasible times. In our experiments, the model
+    was not able to provide solutions in reasonable time, due to the higher number
+    of surgeries in each iteration (against 200) and long horizons (150 days considered
+    in each iteration, instead of 26 days on average for the static version). We opted
+    for a robust formulation using redundancy-based technique like the one described
+    here. This method consists in both scheduling and sequencing the surgeries in
+    each room each day. We insert slack slots in each OR-day shift (at the end of
+    each surgery or at the end of the OR). The slack is added at the end of each surgery
+    duration. We applied this to the MILP deterministic case of the problem.
+
+
+    Let $Z_{tr}$ represent the amount of slack added on day $t$ in room $r$ starting
+    in period $b$ and ending in period $f$. The value of $Z_{tr}$ is calculated as
+    follows:
+
+
+    $$Z_{tr} = B \sum_{i \in O} b_{ifrt} \quad (4)\quad\forall t \in \{1, \dots, H\},$$
+
+    $$\forall r \in R, Yb \in \{1, \dots, J\}, t \in \{b, \dots, f\}$$
+
+
+    where:
+
+    - $B$ is a parameter that controls the probability that a surgery will finish
+    on time, i.e, overit will not occur.
+
+    - $\delta_i$ is the duration of surgery $i$ (based on a statistical analysis).
+
+
+    The robust formulation is then obtained from the deterministic formulation by
+    adding constraint (4), and
+
+    '
+  mdcn: '
+
+    H. Hasan 等人 / IFAC PapersOnline 55-10 (2022) 1625–1630
+
+
+    1627
+
+
+    (2) 根据每位外科医生的手术负荷和班次，计算其视野长度 $H_s$。
+
+    (3) 在第 (t) 天的 17:30、18:30 或 (t+1) 天的 7:00 收集的器包，如果在 14:30 在手术室 (SU) 被处理（优先器包），则可以在
+    (t+1) 天使用；如果不作为优先事项处理，则将在 (t+1) 天的 17:30 开始使用。
+
+    (4) 对于安排在第 $t+3$ 周的手术，将安排在 $t+3$ 之后的手术返回列表。
+
+
+    当两次手术之间使用同一器包的延迟时间足够进行消毒（≥ 4h），但班次固定的取货和送货时间不允许在 SU 收集器包，并在其下一次可能使用之前留出 OBS 的日期时，会发生其他紧急情况。这种情况可能会发生，例如手术在某天
+    10:00 结束（或必须在 14:00 再次用于另一场手术），则无法在手术前收集。如果严格避免这些情况，它们在实践中仍可能发生，因为 SU 可以请求特殊的外部人员来收集这些刚收集的器包，因为在送回之前没有时间进行消毒，可能通过送货时间之外的特殊外部人员送回。我们将这些器包称为**未等待（Not
+    waited）**。
+
+
+    平均每月有超过 60 个器包列入，这意味着 SU 面临着巨大的压力，并对工作流产生了负面影响。
+
+
+    大学医院（CHU）希望在保持每月安排手术数量不变的情况下，改进这些功能异常的情况。目标按照 CHU 给出的优先级顺序为：尽可能安排尽可能多的手术、尽可能减少加班以及尽可能减少问题（优先器包）的数量。为了处理这些问题，我们提出了一种基于稳健
+    MILP 格式的滚动视野法。
+
+
+    # 3. 滚动视野法
+
+
+    滚动视野法是迭代的，在每次迭代中，通过求解稳健 MILP 固定一个周计划。我们首先介绍滚动视野框架。然后介绍确定性模型以及该格式的改进，以获得对需求波动抵抗力更强的稳健
+    MILP 解决方案。
+
+
+    # 3.1 滚动视野框架
+
+
+    我们建议使用滚动视野法，在咨询期间手术不是固定的，而是为手术当天定义一个日期，并将其加入等待列表。在每周 $t$ 结束时，从第 $t+3$ 周开始生成新的等待列表。我们留出
+    3 周，以便患者有足够的时间准备和组织住院。在获得的计划中，仅保留第 $t$ 周，安排在之后的手术将放回等待列表（见图 1）。
+
+
+    在第 $t$ 周结束，流程如下：
+
+
+    - (1) 将当前周 $t$ 咨询的手术添加到等待列表中。
+
+
+    图 1. 滚动视野方案
+
+
+    该程序需要为每位外科医生估计一个视野 $H_s$，以处理其等待列表中的所有手术。$H_s$ 的值计算为覆盖负荷 $s$（其手术计划持续时间之和）所需的最少班次，加上
+    4 个额外班次。每个补充班次都考虑了这样一种事实：由于外科医生在手术室的机会有限，我们无法知道每位外科医生所需的准确班次数量。
+
+
+    在每次迭代中，使用 MILP 解决从 $t+3$ 周开始等待列表中所有手术的调度问题。在接下来，我们将假设手术持续时间是已知的，给出该问题的格式。针对非确定性情况将提出一个稳健版本。
+
+
+    # 3.2 确定性情况的 MILP 格式
+
+
+    为了对该问题建模，我们提出了一种类似于 Hasan 等人 (2019) 中提出的数学格式，基于将一天分为若干阶段（第 1 段从 8:15 到 14:00，第
+    2 段从 14:00 到 14:30，第 3 段从 14:30 到 14:30，第 4 段从 15:30 到 17:00）。这种划分来自班车时间表中的几个小时以及……的结束时间
+
+
+    根据 CHU 的要求，目标是尽可能安排尽可能多的手术，同时尽可能减少加班以及 SU 中紧急情况和优先事项的总惩罚。为了考虑到外科医生在咨询期间为每场手术提供截止日期的新流程，我们还将最小化手术的总延期时间作为目标。
+
+
+    读者可参考 Al Hasan (2019) 获取确定性 MILP 模型的版本。在本节中，我们仅展示为了获得稳健格式而修改的参数、变量和约束。
+
+
+    考虑的参数：
+
+
+    - $H$: 视野中的天数
+
+    - $J$: 器包类型数量
+
+    - $T$: 手术数量
+
+    - $R$: 房间数量
+
+    - $S$: 外科医生数量
+
+    - $P_{ij}$: 惩罚
+
+    - $\Delta_{ijt}$: 持续时间
+
+    - $A_{max}$: 最晚时间
+
+
+    以及考虑的变量：
+
+
+    - $w_{itr}$: 二进制变量
+
+    - $b_{ifrt}$: 二进制变量
+
+    - $E_{ijt}$: 整数变量
+
+    - $Y_{ijt}$: 实数变量
+
+    - $\epsilon_{tr}$: 实数变量
+
+
+    为了获得稳健格式而需要添加的约束如下：
+
+
+    - 每个阶段的工作负荷不得超过持续时间（加上加班）（1)
+
+
+    $$\sum_{i \in O} b_{ifrt} + \Delta_{ijt} \leq A_{max} + \epsilon_{tr}$$
+
+    $$\forall t \in \{1, \dots, H\}, \forall r \in R, Yb \in \{1, \dots, J\}, t \in
+    \{b, \dots, f\}$$
+
+
+    多目标函数（3）采用字典序方法考虑。我们首先最大化 $f_1$，
+
+
+    $$f_1: \max \sum_{s \in S} \sum_{r \in R} \epsilon_{sr} - \sum_{t \in T} \sum_{r
+    \in R} W_{itr}$$
+
+    $$f_2: \min \sum_{s \in S} \sum_{r \in R} \epsilon_{sr}$$
+
+    $$f_3: \min \sum_{t \in T} \sum_{k \in K} [u_k)$$
+
+
+    # 3.3 稳健格式
+
+
+    我们提出了一种基于 Bertimas 和 Sims (2004) 模型格式。尽管该模型提供了一个静态环境（见 Al Hasan 等，2019)，但将其整合到稳健方法中可行。在我们的实验中，该模型无法在合理时间内提供解决方案，由于每次迭代的手术数量更多（对比
+    200 个）且视野较长（静态版本每次迭代平均考虑 26 天）。我们选择使用此处描述的冗余技术进行稳健格式。这种方法包括对每个房间的手术进行调度和排序。我们在每个手术室班次中插入空隙（在每个手术结束时或手术室结束时）。空隙位于每个手术持续时间的结束。我们将其应用于问题的
+    MILP 确定情况。
+
+
+    令 $Z_{tr}$ 表示在第 $t$ 天从 $b$ 段到 $f$ 段添加的空隙量。$Z_{tr}$ 的值计算如下：
+
+
+    $$Z_{tr} = B \sum_{i \in O} b_{ifrt} \quad (4)\quad\forall t \in \{1, \dots, H\},$$
+
+    $$\forall r \in R, Yb \in \{1, \dots, J\}, t \in \{b, \dots, f\}$$
+
+
+    其中：
+
+    - $B$ 是控制手术准时完成概率的参数，即发生加班。
+
+    - $\delta_i$ 是手术 $i$ 的持续时间（基于统计分析）。
+
+
+    随后通过添加约束 (4) 从确定性格式获得稳健格式，并
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 2]
+
+
+    H. Hasan et al. / IFAC PapersOnline 55-10 (2022) 1625–1630
+
+
+    1627
+
+
+    (2) Calculate the horizon length $H_s$ for each surgeon based on his/her surgery
+    loads and shifts.
+
+    (3) For each collected at 17:30, 18:30 on day (t) or 7:00 on day (t+1) can be
+    used on day (t+1) if 14:30 if it is treated at the SU (priority kit), if it is
+    not treated as a priority, it will be used on day (t+1) from 17:30.
+
+    (4) For surgeries that were scheduled at week $t+3$ and return the surgeries that
+    were scheduled after $t+3$ back to the list.
+
+
+    Other emergencies arise when the delay between the two surgeries the same kit
+    is long enough for sterilization (≥ 4h), but the fixed pickup and delivery hours
+    of the shift do not allow to collect the kit at the SU and then have a date for
+    the OBS before its next possible use. This situation can happen for example if
+    a surgery ends at 10:00 one day (or must be reused at 14:00 for another surgery)
+    it cannot be collected before the surgery. If these cases are strictly avoided,
+    they may occur in practice as the SU can request a special outside to collect
+    these kits that are just collected because there will be no time to sterilize
+    them before sending them back, possibly by another special outside the delivery
+    hours. We will refer to these kits as **Not waited**
+
+
+    On average, more than 60 kits are listed each month, which implies a lot of stress
+    on the SU and has a negative impact on the work flow
+
+
+    The CHU would like to improve these dysfunctional by keeping the same level of
+    service in number of surgeries scheduled each month. The objectives are, in order
+    of priority given by the CHU, schedule as many surgeries as possible, minimize
+    the overtime and minimize the number of problems (priority kits). In order to
+    handle these problems, we propose a rolling horizon approach based on a robust
+    MILP formulation.
+
+
+    #  3. THE ROLLING HORIZON APPROACH
+
+
+    The Rolling horizon approach is iterative, and at each iteration, fixing one week
+    schedule obtained by solving a robust MILP. We first present the rolling horizon
+    framework. Then we present the deterministic model and an adaptation of this formulation
+    to obtain a robust MILP solutions more resistant to the fluctuations of the demands.
+
+
+    #  3.1 Rolling horizon framework
+
+
+    We propose to use a rolling horizon approach in which the surgeries are not fixed
+    during the consultation, but instead define a date for the day of the surgeries,
+    and are added to a waiting list. At the end of each week $t$, the new waiting
+    list is generated starting from week $t+3$. We make 3 weeks as that patients have
+    enough time to prepare and organize their hospitalization. In the schedule obtained,
+    only week $t$ is kept, and the surgeries scheduled after are put back in the waiting
+    list (see Figure 1).
+
+
+    At the end of week $t$, the process follows as:
+
+
+    +   (1) Add the surgeries consulted at the current week $t$ to the waiting list.
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_2_0.png)
+
+
+    Fig.1. Rolling horizon scheme
+
+
+    This procedure requires to estimate an horizon $H_s$ for each surgeon to handle
+    all his/her surgeries of waiting list. The value of $H_s$ is calculated as the
+    minimum number of shifts needed to cover the load $s$ (sum of the planned durations
+    of his/her surgeries), plus 4 additional shifts. Each supplementary shift takes
+    into account the fact that we can''t know the exact amount of shifts needed for
+    each surgeon as surgeons some OR occasions because of limited quantities of times.
+
+
+    At each iteration, the problem of scheduling all the surgeries in the waiting
+    list from week $t+3$ is solved using a MILP. In this next, we present a formulation
+    of the problem, assuming that the duration of surgeries is known with certainty.
+    A robust version for the non-deterministic case will be proposed.
+
+
+    #  3.2 MILP formulation for the deterministic case
+
+
+    In order to model this problem, we propose a mathematical formulation similar
+    to the one presented in Hasan et al. (2019) based on the decomposition of the
+    day into periods (period 1 from 8:15 to 14:00, period 2 from 14:00 to 14:30, period
+    3 from 14:30 to 14:30 and period 4 from 15:30 to 17:00). This division is obtained
+    from several hours in the schedule of the shuttle, and the closing hours of the
+
+
+    In line with the requirements of the CHU, the objective is to schedule as many
+    surgeries as possible while minimizing the overtime and the total penalties of
+    emergencies and priorities in the SU. In order to take into account the new process
+    in which the surgeons provide'
+  - "[PAGE 3]\n\n# H. Al Hasan et al. / IFAC PapersOnline 55 (2022) 1625–1630\n\n\
+    a due for each surgery during the consultation, we also add as objective of minimizing\
+    \ the total tardness of the surgeries.\n\nThe reader referred to Al Hasan (2019)\
+    \ for a version of the deterministic MILP model. We present in this section only\
+    \ the parameters, variables and constraints that we modified in order to obtain\
+    \ a robust formulation.\n\nThe considered parameters:\n\n+   - $H$: number of\
+    \ days in the horizon\n- $J$: number of types of kit\n- $T$: number of surgeries\n\
+    - $R$: number of operating rooms\n- $S$: number of surgeons\n- $C_{ij}$: priority\
+    \ penalty\n- $P_{ijt}$: total tardiness from period $j$ to $\\gamma$ in room $r$\
+    \ on day $t$\n- $\\Delta_{ijt}$: total duration of period $j$ in room on day $t$\n\
+    - $A_{max}$: latest time for surgeries to be performed as binary parameter equal\
+    \ to 1 is if $t=2$ and 0 otherwise\n\nAnd the considered decisions variables:\n\
+    \n+   - $w_{itr}$: binary variable equal to 1 if surgery is scheduled on day $t$\
+    \ in room $r$\n- $b_{ifrt}$: binary variable equal to 1 if surgery begins at $b$\
+    \ and finishes at $f$, on day $t$, in room $r$\n- $E_{ijt}$: integer variable\
+    \ representing the total units of kit of type $j$\n- $Y_{ijt}$: real variable\
+    \ representing the total priority cases (case 1 or 2) of type $j$ on day $t$\n\
+    - $\\epsilon_{tr}$: real variable representing the total overtime in room $r$\
+    \ on day $t$\n- $T$: real variable representing the tardiness of surgery $i$\n\
+    \nThe constraints that need to be added to obtain a robust formulation are the\
+    \ capacity constraints below:\n\n+   - the workload of generally for each period\
+    \ of the day and each room must not exceed the duration of the period (plus overtime\
+    \ of $\\epsilon_{tr}$ is in the last period in room $r$ and day $t$) (1)\n\n```\n\
+    $$\\sum_{i \\in O} \\sum_{b \\in B} \\sum_{f \\in F} P_{ifrt} b_{ifrt} + \\sum_{j\
+    \ \\in J} \\sum_{t \\in T} \\sum_{r \\in R} \\Delta_{ijt} l_{ijt} \\leq A_{max}\
+    \ + u_{tr} \\epsilon_{tr}$$\n$\\forall i \\in \\{1, \\dots, J\\}, j \\in \\{\b\
+    eta, \\dots, \\gamma\\}, t \\in \\{1, \\dots, H\\}, r \\in R$\n```\n\nThe multiple\
+    \ objective functions (3) are taken into account using a lexicographic method.\
+    \ We first maximize $f_1$,\n\n```\n$f_1: \\max \\sum_{s \\in S} \\sum_{r \\in\
+    \ R} \\epsilon_{sr} - \\sum_{t \\in T} \\sum_{r \\in R} W_{itr}$$\n$f_2: \\min\
+    \ \\sum_{s \\in S} \\sum_{r \\in R} \\epsilon_{sr}$$\n$f_3: \\min \\sum_{t \\\
+    in T} \\sum_{k \\in K} [u_k E_{ijt} + p_k(Y_{ijt})]$\n```\n\n# 3.3 Robust formulation\n\
+    \nWe proposed a formulation based on the model of Bertimas and Sims (2004). Although\
+    \ this model provides a static environment (see Al Hasan et al (2019)), its integration\
+    \ into a robust approach leads to feasible execution times. In our experiments,\
+    \ the model was not able to provide solutions in reasonable time, due to the higher\
+    \ number of surgeries in each iteration (against 200) and long horizons (150 days\
+    \ considered in each iteration, instead of 26 days on average for the static version).\
+    \ We opted for a robust formulation using redundancy-based technique like the\
+    \ one described here. This method consists in both scheduling and sequencing the\
+    \ surgeries in each room each day. We insert slack slots in each OR-day shift\
+    \ (at the end of each surgery or at the end of the OR). The slack is added at\
+    \ the end of each surgery duration. We applied this to the MILP deterministic\
+    \ case of the problem.\n\nLet $Z_{tr}$ represent the amount of slack added on\
+    \ day $t$ in room $r$ starting in period $b$ and ending in period $f$. The value\
+    \ of $Z_{tr}$ is calculated as follows:\n\n```\n$Z_{tr} = B \\sum_{i \\in O} b_{ifrt}\
+    \ \\quad (4)\\quad\\forall t \\in \\{1, \\dots, H\\},$\n$\\forall r \\in R, Yb\
+    \ \\in \\{1, \\dots, J\\}, t \\in \\{b, \\dots, f\\}$\n```\n\nwhere:\n- $B$ is\
+    \ a parameter that controls the probability that a surgery will finish on time,\
+    \ i.e, overit will not occur.\n\n- $\\delta_i$ is the duration of surgery $i$\
+    \ (based on a statistical analysis).\n\nThe robust formulation is then obtained\
+    \ from the deterministic formulation by adding constraint (4), and"
+- md: '
+
+    # EXPERIMENTAL RESULTS
+
+
+    $z_{rf} \geq 0, \forall r \in R, b \in \{1, \dots, J\}, \forall f \in \{b, \dots,
+    J\} \quad (5)$
+
+
+    $\sum_{i \in O} \sum_{b=f}^{J} p_{irbf}x_{irbf} + \sum_{b=f}^{J} z_{rbf} + \sum_{a=b}^{J}
+    \sum_{f=a}^{J} \Delta_{rtaf}y_{rtaf} \leq \Delta_{rt}^{2} + u_{rt}z_{rt}$
+
+    $\forall b \in \{1, \dots, J\}, \gamma \in \{b, \dots, J\}, t \in \{1, \dots,
+    H\}, r \in R \quad (6)$
+
+
+    and, in order to add the slack times, by replacing Constraints (1) and (2):
+
+
+    ```
+
+    sum_{i \in O} \sum_{b=f}^{J} p_{irbf}x_{irbf} + \sum_{b=f}^{J} z_{rbf} + \sum_{a=b}^{J}
+    \sum_{f=a}^{J} a_{iprf}x_{iprf}
+
+    \sum_{t=1}^{3} z_{rtb3} \leq A_{max} - \sum_{a=1}^{J} \Delta_{rt}^{a}
+
+    \forall b \in \{1, \dots, J\}, t \in \{1, \dots, H\}, r \in R \quad (7)
+
+    ```
+
+
+    | ORs 1 & 2 | OR 3 |
+
+    |---|---|---|
+
+    | $\Delta_{rt}^{1}$ | 5b45 | 5b45 |
+
+    | $\Delta_{rt}^{2}$ | 0b30 | 0b30 |
+
+    | $\Delta_{rt}^{3}$ | 1h00 | 0b00 |
+
+
+    Table 2. Periods during the ORs.
+
+
+    We performed 5 experiments, with the deterministic MILP in the rolling horizon
+    approach (DRH) and other experiments with the MILP in the rolling horizon approach
+    (RRH) using the following values for B: 0.25, 0.5, and 1 and compared the schedule
+    with the schedule that was obtained at CHU.
+
+
+    Our testing environment:
+
+
+    - Intel Core i3-2130 @ 3.30 GHz
+
+    - 8 GB of RAM
+
+    - IBM CLOP POBOX 12
+
+
+    The obtained results rely on the estimated of surgeries. In order to obtain the
+    effective schedule based on the results, we implemented a procedure that simulates
+    the work of the OS to create the achieved schedule from the planned schedule.
+    This simulation starts on the same day by starting the surgeries one after another
+    and adding a break of 20 minutes between consecutive ones to clean the OR. The
+    simulation shows whether the start of the next surgery (i+1) is possible if i
+    is waiting or if i+1 is not. It is not possible for a further surgery to start
+    of i (i+3 cannot start in of i). This is consistent with the the results of the
+    OS, as they are not prepared for surgery a long time in advance, and not allowed
+    patients in the queue (> i-1) won''t be ready to start.
+
+
+    We tested the method on real data over 10 months (44 weeks, from September 2010
+    to June 2015) by CHU. During this, 209 surgeries were performed by 15 different
+    surgeons. 69 of these surgeries were scheduled outside the 10 months. We had to
+    consider them to weigh the impact on the cases. In order to do so, we created
+    a fourth OR which is to include the surgeries performed outside the block and
+    fixed the dates and times for these surgeries. 38 surgeries from other months
+    were performed on the OS. Again, we considered these surgeries due to their impact
+    on the operating times at the ORs, and we achieved this by aggregating the operating
+    hours of the ORs at the dates of each of these surgeries. In this data, there
+    is no due date for the surgery. For the experiments, we considered for each surgery
+    its due date equal to the planned schedule constructed by the CHU.
+
+
+    The values of the parameters are:
+
+
+    - Latest Am for surgeries : 3 p.m.
+
+    - Maximum overtime each day : 18 minutes (3 hours)
+
+    - Penalty cost of urgent cases : 5
+
+    - Penalty cost of priority cases : 1
+
+
+    Note that the urgent and priority penalties were evaluated by the CHU among the
+    disturbance and stress perceived at the SU.
+
+
+    In table 2 the duration $\Delta_{rt}^{2}$ of each period $j$ in $R$ each day $t$
+    when the OR is open (0 if the OR is closed).
+
+
+    We set the execution limit of the solver to be 4 hours per iteration (1 hour per
+    day)
+
+
+    The results are presented in Table 3. The first row (Scheduled) contains the number
+    of surgeries scheduled over the horizon, and the second (Late) contains the number
+    of surgeries planned to be achieved $A_{max}$. Overtime and the rate, overtime
+    indicates the total overtime in minutes, and the maximum overtime of OR-days.
+    The minimum and average overtime rate of OR-days. Finally, the number of urgent,
+    and not allowed cases are given in RR result, Priority and not allowed.
+
+
+    Among the four versions of RRH, the number of surgeries scheduled is higher than
+    the other, with a comparison of importance and robustness of the method, but it
+    also led to less surgeries in total. This can be observed in the last two versions
+    (RRH0, RRH1) as they insert like which are too conservative and to little RRH2,
+    reaching a reduction of 54% of the overtime of the schedule of CHU (from 17174
+    to 7893), which is 28.6 hours per month on average to 13.15, and 30.4% of the
+    DRH schedule, and the maximum overtime
+
+
+    Table 3. Scheduled surgeries
+
+
+    | Objective | OSB schedule | DRH | RRH_{25} | RRH_{50} | RRH_{75} | RRH |
+
+    |---|---|---|---|---|---|
+
+    | Scheduled | 2000 | 1981 | 1962 | 1737 | 1771 |
+
+    | Late | 101 | 12 | 8 | 4 | 2 |
+
+    | Overtime | 1714 | 11346 | 7903 | 6217 | 5294 |
+
+    | Max overtime | 326 | 408 | 238 | 155 | 181 |
+
+    | Min. rate | 39.2 | 38.7 | 34.2 | 29.1 | |
+
+    | Avg. rate | 78.8 | 86.5 | 83.8 | 82.1 | 80.6 |
+
+    | Urgent | 79 | 2 | 4 | 3 | 10 |
+
+    | Priority | 191 | 79 | 48 | 43 | 39 |
+
+    | Not allowed | 92 | 0 | 0 | 0 | |
+
+
+    time, hour occupation rates of the ORs, and-85% less stress in the SU. Despite
+    these results, some ORs are underutilized to the fact that an OR is reserved for
+    a surgeon on a given day, it is not used by any other surgeon or one who would
+    have helped. An incentive for future surgeons would be to join the Schedule (which
+    assigns surgeons to OR-day shifts) and such case scheduling problem, in order
+    to obtain an assignment of the OR-days shifts to the surgeons as close as possible
+    the needs.
+
+
+    ACKNOWLEDGEMENTS
+
+
+    The authors would like to thank L. Hubert, V. Lebanon and A. Roblet for this challenging
+    problem and providing us with real instances. This research was partially funded
+    by Angers La Metropole (ALM) and IMT Antarctica.
+
+
+    REFERENCES
+
+
+    which is not the case for the CHU (320 minutes) nor the DRH (400 minutes). As
+    regards the occupation of ORs, the average occupation rate RRH_{25} (86.4%) is
+    much than the one of the DRH approach, and the maximum occupation rate (38.7%)
+    against 9.5% for the CHU shows a buffer duration. It should be noted that RRH_{25}
+    schedules a little less than the CHU, as all slots are not fully occupied. This
+    is due to the fact that we not belong to the surgeons or to ORs who must perform
+    the remaining surgeries. Finally, there are only 83 problems with RRH_{25}, 255
+    cases of CHU, and 183 cases of DRH.
+
+
+    Al Hassan, H., Curet, C., Lemonois, D., and Pierre, J. (2019). Surgical scheduling
+    with sterilisation constraints. International Journal of Production Research,
+    57(10), 2984-3002.
+
+
+    In conclusion, the quality of obtained results reliable and attractive for the
+    CHU: for the same number of surgeries, it allows a decrease of 54% of the overtime,
+    a reduction of 1 OR-day shift per month, a better use of ORs (better proportion
+    of the surgeries in the room, and idle times), and far less stress in the SU (86.3%
+    less). It offers less costs and higher quality of labour for the staff.
+
+
+    Berola, B., Gunderat, R., Arianat, O., and On, J. (2016). Operating room scheduling
+    including sterilization devices: a transformation towards the logistic. IFPACOnline,
+    49(12), 1148-1151.
+
+
+    Bertsimas, S. M., and Belien, J. (2009). Sequencing surgeries in a day-care environment:
+    an branch-and-price approach. Computers & Operations Research, 36(9), 2660-2669.
+
+
+    Hans, E., Peters, G., Van Hoehoven, M., and Kausmer, G. (2008). Robust scheduling
+    under uncertain demand. European Journal of Operations Research, 168(3), 1053-1060.
+
+
+    ## 5. CONCLUSION
+
+
+    This paper addresses the case scheduling of the orthopedic surgical hospital (OSB)
+    of a French hospital (CHU). We have presented the proposed method to construct
+    the schedule of the surgeons, and then tested the approach on the OSB and in Sterilization
+    Unit (SU) which is in charge of sterilization of all the medical instruments used
+    for the surgeries of the CHU. These durations are of: one for the staff, unchanged
+    operating rooms (ORs) occupancy rate, one to sterilize all the instruments in
+    SU. We have proposed a method in the schedule construction process and a rolling
+    horizon approach based on a resolution of robust MILP in order to allow a better
+    coordination between surgeons, and a schedule sensitive to the uncertain duration
+    of the surgeries. We tested the approach on a 10 months interface provided by
+    CHU. The experiments show a reduction of more than 50% of over
+
+
+    Jackson, R. (2002). The business of surgery. Hospital Management Technology, 23(7).
+
+
+    Macario, A., Vitez, D., Bum, B., and McDonald, T. (1995). Hidden costs in preoperative
+    care? Analysis of hospital costs and incentives for inpatient surgery. The Journal
+    of American Surgery, 133(8), 1138-1144.
+
+
+    Zhao, F., Wang, W., Peng, J., and Pardalos, P. M. (2018). Operating room planning
+    and surgical scheduling: a review. Journal of Combinatorial Optimization, 19-
+
+    '
+  mdcn: '
+
+
+    # 实验结果
+
+
+    $z_{rf} \geq 0, \forall r \in R, b \in \{1, \dots, J\}, \forall f \in \{b, \dots,
+    J\} \quad (5)$
+
+
+    $\sum_{i \in O} \sum_{b=f}^{J} p_{irbf}x_{irbf} + \sum_{b=f}^{J} z_{rbf} + \sum_{a=b}^{J}
+    \sum_{f=a}^{J} \Delta_{rtaf}y_{rtaf} \leq \Delta_{rt}^{2} + u_{rt}z_{rt}$
+
+    $\forall b \in \{1, \dots, J\}, \gamma \in \{b, \dots, J\}, t \in \{1, \dots,
+    H\}, r \in R \quad (6)$
+
+
+    并且，为了引入松弛时间，通过替换约束 (1) 和 (2)：
+
+
+    ```
+
+    sum_{i \in O} \sum_{b=f}^{J} p_{irbf}x_{irbf} + \sum_{b=f}^{J} z_{rbf} + \sum_{a=b}^{J}
+    \sum_{f=a}^{J} a_{iprf}x_{iprf}
+
+    \sum_{t=1}^{3} z_{rtb3} \leq A_{max} - \sum_{a=1}^{J} \Delta_{rt}^{a}
+
+    \forall b \in \{1, \dots, J\}, t \in \{1, \dots, H\}, r \in R \quad (7)
+
+    ```
+
+
+    | ORs 1 & 2 | OR 3 |
+
+    |---|---|---|
+
+    | $\Delta_{rt}^{1}$ | 5b45 | 5b45 |
+
+    | $\Delta_{rt}^{2}$ | 0b30 | 0b30 |
+
+    | $\Delta_{rt}^{3}$ | 1h00 | 0b00 |
+
+
+    表 2. ORs 期间的时间。
+
+
+    我们进行了 5 次实验，其中使用了滚动时界法（DRH）中的确定性 MILP，另一些实验使用了滚动时界法（RRH）中的 MILP，并采用 B 的值为 0.25、0.5
+    和 1，并将生成的计划表与 CHU 获得的计划表进行了对比。
+
+
+    我们的测试环境：
+
+
+    - Intel Core i3-2130 @ 3.30 GHz
+
+    - 8 GB RAM
+
+    - IBM CLOP POBOX 12
+
+
+    获得的结果依赖于对手术的估计。为了根据结果获得有效的计划表，我们实现了一个模拟手术室（OS）运作的程序，从计划表中创建实际实现的计划表。该模拟从同一天开始，一个一个开始手术，并在连续手术之间增加
+    20 分钟的休息时间以清洁 OR。模拟显示了如果 i 正在等待或 i+1 不在等待的情况下，下一次手术 (i+1) 是否可行。进一步的手无法在 i 之后开始（i+3
+    无法在 i 之后开始）。这与 OS 的结果一致，因为他们没有提前长时间准备手术，且队列中的患者（> i-1）无法准备好开始。
+
+
+    我们利用 CHU 的真实数据在 10 个月内（44 周，从 2010 年 9 月到 2015 年 6 月）测试了该方法。在此期间，15 位不同的外科医生执行了
+    209 台手术。其中 69 台手术安排在 10 个月之外。我们必须考虑它们以衡量其对病例的影响。为此，我们创建了第四个 OR 以包含在区块之外执行的手术，并固定了这些手术的日期和时间。其他月份的38
+    台手术在 OS 上执行。同样，我们考虑了这些手术对 OR 手术时间的影响，通过汇总这些手术手术日期的 OR 手术小时实现了这一点。在这些数据中，手术没有截止日期。在实验中，我们认为每台手术的截止日期等同于
+    CHU 构建的计划表。
+
+
+    参数的值为：
+
+
+    - 手术最晚开始时间：下午 3 点
+
+    - 每天最大加班时间：18 分钟（3 小时）
+
+    - 紧急病例惩罚成本：5
+
+    - 优先病例惩罚成本：1
+
+
+    注意，紧急和优先罚金是由 CHU 根据手术准备室（SU）感知到的扰动和压力评估的。
+
+
+    在表 2 中，显示了每天 $t$ OR 开放时，$R$ 中每个周期 $j$ 的时长 $\Delta_{rt}^{2}$（如果 OR 关闭则为 0）。
+
+
+    我们将求解器的执行限制设定为每次迭代 4 小时（每天 1 小时）。
+
+
+    结果如表 3 所示。第一行（Scheduled）包含时界内安排的手术数量，第二行（Late）包含计划实现 $A_{max}$ 的手术数量。加班和比率，其中加班表示总加班分钟数，以及
+    OR 日期的最大加班时间。OR 日期的最少和平均加班率。最后，RR 结果中给出了紧急和不允许的病例数量，优先和不允许的病例。
+
+
+    在四种 RRH 版本中，安排的手术数量比其他版本更高，从方法的重要性和稳健性比较来看，但它导致了总手术数量的减少。这在最后两个版本（RRH0, RRH1）中可以观察到，因为它们插入过于保守且
+    RRH2 太，导致 CHU 计划表的加班减少了 54%（从 17174 到 7893），平均每月 28.6 小时，且 DRH 计划表的最大加班减少了 30.4%。
+
+
+    表 3. 安排的手术
+
+
+    | 目标 | OSB 计划 | DRH | RRH_{25} | RRH_{50} | RRH_{75} | RRH |
+
+    |---|---|---|---|---|---|---|
+
+    | Scheduled | 2000 | 1981 | 1962 | 1737 | 1771 |
+
+    | Late | 101 | 12 | 8 | 4 | 2 |
+
+    | Overtime | 1714 | 11346 | 7903 | 6217 | 5294 |
+
+    | Max overtime | 326 | 408 | 238 | 155 | 181 |
+
+    | Min. rate | 39.2 | 38.7 | 34.2 | 29.1 | |
+
+    | Avg. rate | 78.8 | 86.5 | 83.8 | 82.1 | 80.6 |
+
+    | Urgent | 79 | 2 | 4 | 3 | 10 |
+
+    | Priority | 191 | 79 | 48 | 43 | 39 |
+
+    | Not allowed | 92 | 0 | 0 | 0 | |
+
+
+    尽管这些结果，某些 OR 的利用率不足，因为某天为某外科医生预留的 OR 没有被其他外科医生或可以帮助的人使用。未来外科医生的激励应该是加入计划（将外科医生分配到
+    OR 班次），以尽可能接近需求地分配 OR 班次。
+
+
+    致谢
+
+
+    作者感谢 L. Hubert、V. Lebanon 和 A. Roblet 提供的这一具有挑战性的问题和真实实例。本研究由 Angers La Metropole
+    (ALM) 和 IMT Antarctica 部分资助。
+
+
+    参考文献
+
+
+    Jackson, R. (2002). 手术的业务. Hospital Management Technology, 23(7).
+
+
+    Macario, A., Vitez, D., Bum, B., and McDonald, T. (1995). 术前护理的隐藏成本？分析医院成本和住院手术的激励。
+    The Journal of American Surgery, 133(8), 1138-1144.
+
+
+    Al Hassan, H., Curet, C., Lemonois, D., and Pierre, J. (2019). 带消毒约束的手术调度. International
+    Journal of Production Research, 57(10), 2984-3002.
+
+
+    Berola, B., Gunderat, R., Arianat, O., and On, J. (2016). 包括消毒设备的术室调度：向物流的转型.
+    IFPACOnline, 49(12), 1148-1151.
+
+
+    Bertsimas, S. M., and Belien, J. (2009). 日间护理环境中的手术排序：分支与定价法. Computers & Operations
+    Research, 36(9), 2660-2669.
+
+
+    Hans, E., Peters, G., Van Hoehoven, M., and Kausmer, G. (2008). 不确定需求下的稳健调度. European
+    Journal of Operations Research, 168(3), 1053-1060.
+
+
+    ## 5. 结论
+
+
+    本文解决了法国某医院（CHU）骨科手术医院（OSB）的病例调度问题。我们提出了用于构建外科医生计划的建议方法，然后在 OSB 和消毒室（SU）中测试了该方法，SU
+    负责 CHU 手术用所有医疗器械的消毒。这些时长包括：人员时间、未改变的术室（OR）占用率，以及消毒 SU 中所有器械的时间。我们在计划构建过程中提出了一种方法，以及一种基于稳健
+    MILP 求解的滚动时界法，以便在外科医生之间进行更好的协调，并对手术不确定时长敏感的计划。我们在 CHU 提供的 10 个月界面上测试了该方法。实验显示加班减少了超过
+    50%。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 4]
+
+
+    # EXPERIMENTAL RESULTS
+
+
+    $z_{rf} \geq 0$,$
+
+    $\forall r \in R, \ b \in \{1, \dots, J\, \forall f \in \{b, \dots, J\$\quad (5)
+
+
+    $\sum_{i \in O} \sum_{b=f}^{J} p_{irbf}x_{irbf} + \sum_{b=f}^{J} z_{rbf} + \sum_{a=b}^{J}
+    \sum_{f=a}^{J} \Delta_{rtaf}y_{rtaf}$\n$\leq \Delta_{rt}^{2} + u_{rt}z_{rt}$\n$\forall
+    b \in \{1, \ \dots, J\, \ \gamma \in \{b, \ \dots, J\, \ t \in \{1, \ \dots, H\,
+    \ r \in R$\quad (6)
+
+
+    and, in order to add the slack times, by replacing Con-
+
+    straints (1) :
+
+
+    Constraints and (2) :
+
+
+    ```
+
+    $\sum_{i \in O} \sum_{b=f}^{J} p_{irbf}x_{irbf} + \sum_{b=f}^{J} z_{rbf} + \sum_{a=b}^{J}
+    \sum_{f=a}^{J} a_{iprf}x_{iprf}$\n$\sum_{t=1}^{3} z_{rtb3} \leq A_{max} - \sum_{a=1}^{J}
+    \Delta_{rt}^{a}$\n$\forall b \in \{1, \ \dots, J\, \ \ t \in \{1, \ \dots, H\,
+    \ \ r \in R$\quad (7)
+
+    ```
+
+
+    | ORs 1 & 2 | OR 3 |
+
+    |---|---||
+
+    | $\Delta_{rt}^{1}$ | 5b45 | 5b45 |
+
+    | $\Delta_{rt}^{2}$ | 0b30 | 0b30 |
+
+    | $\Delta_{rt}^{3}$ | 1h00 | 0b00 |
+
+
+    Table 2. Periods during the ORs.
+
+
+    We performed 5 experiments, with the deterministic MILP in the rolling horizon
+    approach (DRH) and other experiments with the MILP in the rolling horizon approach
+    (RRH) using the following values for B: 0.25, 0.5, and 1 and compared the schedule
+    with the schedule that was obtained at CHU.
+
+
+    Our testing environment :
+
+
+    +   - Intel Core i3-2130 @ 3.30 GHz
+
+    - 8 GB of RAM
+
+    - IBM CLOP POBOX 12
+
+
+    The obtained results rely on the estimated of surgeries. In order to obtain the
+    effective schedule based on the results, we implemented a procedure that simulates
+    the work of the OS to create the achieved schedule from the planned schedule.
+    This simulation starts on the same day by starting the surgeries one after another
+    and adding a break of 20 minutes between consecutive ones to clean the OR. The
+    simulation shows whether the start of the next surgery (i+1) is possible if i
+    is waiting or if i+1 is not. It is not possible for a further surgery to start
+    of i (i+3 cannot start in of i). This is consistent with the the results of the
+    OS, as they are not prepared for surgery a long time in advance, and not allowed
+    patients in the queue (> i-1) won''t be ready to start.
+
+
+    We tested the method on real data over 10 months (44 weeks, from September 2010
+    to June 2015) by CHU. During this, 209 surgeries were performed by 15 different
+    surgeons. 69 of these surgeries were scheduled outside the 10 months. We had to
+    consider them to weigh the impact on the cases. In order to do so, we created
+    a fourth OR which is to include the surgeries performed outside the block and
+    fixed the dates and times for these surgeries. 38 surgeries from other months
+    were performed on the OS. Again, we considered these surgeries due to their impact
+    on the operating times at the ORs, and we achieved this by aggregating the operating
+    hours of the ORs at the dates of each of these surgeries. In this data, there
+    is no due date for the surgery. For the experiments, we considered for each surgery
+    its due date equal to the planned schedule constructed by the CHU.
+
+
+    The values of the parameters are :
+
+
+    +   - Latest Am for surgeries : 3 p.m.
+
+    - Maximum overtime each day : 18 minutes (3 hours)
+
+    - Penalty cost of urgent cases : 5
+
+    - Penalty cost of priority cases : 1
+
+
+    Note that the urgent and priority penalties were evaluated by the CHU among the
+    disturbance and stress perceived at the SU.
+
+
+    In table 2 the duration $\Delta_{rt}^{2}$ of each period $j$ in $R$ each day $t$
+    when the OR is open (0 if the OR is closed).
+
+
+    We set the execution limit of the solver to be 4 hours per iteration (1 hour per
+    day)
+
+
+    The results are presented in Table 3. The first row (Scheduled) contains the number
+    of surgeries scheduled over the horizon, and the second (Late) contains the number
+    of surgeries planned to be achieved $A_{max}$. Overtime and the rate, overtime
+    indicates the total overtime in minutes, and the maximum overtime of OR-days.
+    The minimum and average overtime rate of OR-days. Finally, the number of urgent,
+    and not allowed cases are given in RR result, Priority and not allowed.
+
+
+    Among the four versions of RRH, the number of surgeries scheduled is higher than
+    the other, with a comparison of importance and robustness of the method, but it
+    also led to less surgeries in total. This can be observed in the last two versions
+    (RRH0, RRH1) as they insert like that which are too conservative and to little
+
+
+    RRH2, reaching a reduction of 54% of the overtime of the schedule of CHU (from
+    17174 to 7893), which is 28.6 hours per month on average to 13.15, and 30.4% of
+    the DRH schedule, and the maximum overtime'
+  - '[PAGE 5]
+
+
+    # Table 3. Scheduled surgeries
+
+
+    | Objective | OSB schedule | DRH | RRH_{25} | RRH_{50} | RRH_{75} | RRH |
+
+    |---|---|---|---|---|---|-|
+
+    | Scheduled | 2000 | 1981 | 1962 | 1737 | 1771 | |
+
+    | Late adds | 101 | 12 | 8 | 4 | 2 | |
+
+    | Overtime | 1714 | 11346 | 7903 | 6217 | 5294 | |
+
+    | Max overtime | 326 | 408 | 238 | 198 | 155 | 181 |
+
+    | Min. rate | | 39.2 | 38.7 | 34.2 | 29.1 | |
+
+    | Avg. rate | | 78.8 | 86.5 | 83.8 | 82.1 | 80.6 |
+
+    | Urgent | | 79 | 2 | 4 | 3 | 10 |
+
+    | Priority | | 191 | 79 | 48 | 43 | 39 |
+
+    | Not allowed | | 92 | 0 | 0 | 0 | 0 |
+
+
+    time, hour occupation rates of the ORs, and more-85% less stress in the SU. Despite
+    these results, some ORs are underutilized due to the fact that an OR is reserved
+    for a surgeon on a given day, it is not used by any other surgeon or one who would
+    have helped. An incentive for future surgeons would be to join the Major Schedule
+    problem (which assigns surgeons to OR-day shifts) and such case scheduling problem,
+    in order to obtain an assignment of the OR-days shifts to the surgeons as close
+    as possible the needs.
+
+
+    # ACKNOWLEDGEMENTS
+
+
+    The authors would like to thank L. Hubert, A. V. Lebanon and A. Roblet for the
+    CH for this challenging problem and providing us with real instances. This research
+    was partially funded by Angers La Metropole (ALM) and IMT Antarctica.
+
+
+    # REFERENCES
+
+
+    which is not the case for the CHU (320 minutes) nor the DRH (400 minutes). As
+    regards the occupation of ORs, the average occupation rate RRH_{25} (86.4%) is
+    much than the one of the DRH approach, and the maximum occupation rate (38.7%)
+    against 9.5% for the CHU shows a buffer less duration. It should be noted that
+    RRH_{25} schedules a little less than the CHU, as all slots are not fully occupied.
+    This is due to the fact that we do not belong to the surgeons or to ORs who must
+    perform the remaining surgeries. Finally, there are only 83 problems with RRH_{25},
+    255 cases of CHU, and 183 cases of DRH.
+
+
+    Al Hassan, H., Curet, C., Lemonois, D., and Pierre, J. (2019). Surgical scheduling
+    with sterilisation constraints. International Journal of Production Research,
+    57(10), 2984-3002.
+
+
+    In conclusion, the quality of obtained results reliable and attractive for the
+    CHU: for approximately the same number of surgeries, it allows a decrease of 54%
+    of the overtime, a reduction of 1 OR-day shift per month, a better use of ORs
+    (better proportion of the surgeries in the room, and idle times), and far less
+    stress in the SU (86.3% less). It offers less costs and higher quality of labour
+    for the staff.
+
+
+    Berola, B., Gunderat, R., Arianat, O., and On, J. (2016). Operating room scheduling
+    including sterilization devices: a transformation towards the logistic. IFPACOnline,
+    49(12), 1148-1151.
+
+
+    Bertsimas, S. M., and Belien, J. (2009). Sequencing surgeries in a day-care environment:
+    an branch-and-price approach. Computers & Operations Research, 36(9), 2660-2669.
+
+
+    # 5. CONCLUSION
+
+
+    Hans, E., Peters, G., Van Hoehoven, M., and Kausmer, G. (2008). Robust scheduling
+    under uncertain demand. European Journal of Operations Research, 168(3), 1053-1060.
+
+
+    This paper addresses the case scheduling of the orthopedic surgical hospital (OSB)
+    of a French hospital (CHU). We have presented the proposed method to construct
+    the schedule of the surgeons, and then tested the approach on the OSB and in Sterilization
+    Unit (SU) which is in charge of sterilization of all the medical instruments used
+    for the surgeries of the CHU. These durations are of: one for the staff, unchanged
+    operating rooms (ORs) occupancy rate, one to sterilize all the instruments in
+    SU. We have proposed a method in the schedule construction process and a rolling
+    horizon approach based on a resolution of robust MILP in order to allow a better
+    coordination between surgeons, and a schedule sensitive to the uncertain duration
+    of the surgeries. We tested the approach on a 10 months horizon interface provided
+    by CHU. The experiments show a reduction of more than 50% of over-
+
+
+    Jackson, R. (2002). The business of surgery. Hospital Management Technology, 23(7).
+
+
+    Macario, A., Vitez, D., Bum, B., and McDonald, T. (1995). Hidden costs in preoperative
+    care? Analysis of hospital costs and incentives for inpatient surgery. The Journal
+    of American Surgery, 133(8), 1138-1144.
+
+
+    Zhao, F., Wang, W., Peng, J., and Pardalos, P. M. (2018). Operating room planning
+    and surgical scheduling: a review. Journal of Combinatorial Optimization, 19-'
+pages:
+- img_proc: true
+  md: 'Available online at www.scienceirect.com
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_0_0.png)
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_0_1.png)
+
+
+    IFAC PapersOnline 55-10 (2022) 1625–1630
+
+
+    # A Rolling-Horizon Approach for a Surgery Case Scheduling Problem with Sterilizing
+    Constraints
+
+
+    H. Al Hasan * C. Gueret ** D. Limineau ***
+
+
+    +   * UCO, 44 Ru Rabelais, Angers 49000, France (e-mail: albasan@uco.fr)
+
+    ** Univ Angels, LARS SFR Mathistic, Angers 49000, France (e-mail: e.jean@univ-angers.fr)
+
+    *** IMT Atlantic, LS28, 4 Rue Alfred Kastler, Nantes (e-mail: david.leineau@imt-atlantic.fr)
+
+    **** UCO, 44 Ru Rabelais, Angers 49000, France (e-mail: david.riviere@uco.fr).
+
+
+    **Abstract:** In this paper, we set a real scheduling problem which includes scheduling
+    a set of surgical cases that arrive over time taking into account the uncertainties
+    on their duration, and the delay to sterilize instruments. The objectives are
+    to schedule as many surgeries as possible, and to minimize the overtime of the
+    surgical staff and the number of instruments waiting in the sterilizing unit.
+    This research was performed in collaboration with a Hospital in France, which
+    has also provided historical data for the experiments. We propose a rolling horizon
+    approach based on the iterative resolution of a robust mixed linear programming
+    model, where the objective functions are taken into account in lexicographic order.
+    The experiments on real data show a reduction of more than 50% of overtime, and
+    around 87% less stress situations in sterilizing unit.
+
+
+    Copyright © 2022 Authors. This is an open access article under the CC BY-NC-ND
+    license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    *Keywords:* Operations Research; Surgical scheduling; Mixed-integer programming;
+    Rolling horizon approach; Robust scheduling
+
+
+    # 1. INTRODUCTION
+
+
+    Operating rooms are the main source of income for hospitals: they generate two-thirds
+    of hospital revenues (Jackson 2002), and for around 40% of hospital costs (Macario
+    et al. 1995) through the use of facilities (operating rooms, intensive care beds,
+    and the personnel costs (surgeons, anesthesiologists, and technicians). For these,
+    a lot of researchers have studied the scheduling problems in both elective (normal)
+    and non-elective (urgent) contexts (Zhu et al. (2018)).
+
+
+    The main factor behind this problem, is the uncertainty when scheduling surgeries.
+    Due to using somewhat limited historic data in their calculations, they still
+    end up with a big difference between the estimated and actual duration of surgeries.
+    For this, one needs to propose an effective approach to ensure feasible schedules
+    and real performance gains (in terms of overtime and equipment availability) while
+    ensuring the capacity of the rates of scheduling does not get affected by negative
+    impacts.
+
+
+    In this paper we consider the case of the Centre Hospitalier d''Angers (CHI),
+    a public hospital service. This hospital serves multiple cities in the area and
+    has limits. It is also very important to manage the appointments effectively.
+    Due to the high number of resources (surresources, medical instruments), and the
+    increasing demand due to population aging, the current manual scheduling process
+    implemented at the CHI must be improved. We examine the performance measures such
+    as the number of staffs'' overtime hours (≈ 28 hours per month on average) and
+    the medical instruments that are sterilized in order to respect the proposed method.
+
+
+    To the best of our knowledge there are very few literature and research on such
+    particular problem. In Beroule (2016) the authors used an operation room scheduling
+    where the set of surgeries is known in advance. The authors included medical devices
+    limits, the reduction of the number of resources. A branch-and-price approach
+    is applied in Cardon (2009) to solve a scheduling problem in a day care center,
+    where the dates are fixed and they try to find the best limits. Their objective
+    is to minimize the use of recovery hours, the recovery of overtime and the value
+    of various patients and procedures ensuring the medical conditions are met.
+
+
+    2405-9862 © 2022 Authors. This is an open access article under the CC BY-NC-ND
+    license. 10.1016/j.dpe.2022.099.623 * Peer reviewed under responsibility of International
+    Federation of Control.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'In this paper, we propose a method to solve the static version of a surgical
+    scheduling problem that is not treated in the literature. We integrate our model
+    in a rolling horizon approach to handle the dynamic version of the problem. We
+    show that the obtained schedules can reduce the number of scheduled surgeries,
+    and significantly improve those operationally implemented in overtime and reduce
+    stresses on the surgical team.
+
+
+    each kind of type to perform all the surgeries planned each day. She may cancel
+    a surgery if she discovers that the number of kits is not sufficient.
+
+
+    After each surgery, the used kits are kept in water during 30 minutes at the OSB.
+    After that, they can be collected and sent to the server. Such shuttles are planned
+    at fixed hours to collect and deliver the kits. The schedule of shuttles is prepared
+    in a First In First Out (FIFO) order. Once sterilized, they are brought back to
+    the OSB by a shuttle and can be used again.
+
+
+    # 2. PROBLEM DESCRIPTION
+
+
+    The Centre Hospitalier d''Univers (CHU) currently employs 630 hospital staff.
+    It includes several operating theatres, and a sterilizing unit which is in charge
+    of the sterilization of all the instruments used in the hospital. In this study,
+    we focus on the Orthopedic Surgical Block (OSB) and the Sterilizing Unit (SU).
+    The OSB is composed of 3 operating rooms, of which 2 are open 5 days a week from
+    8:15 to 17:00, and room 3 is open 4 days a week from 8:15 to 14:30. Around 15
+    surgeries share these rooms: a planning indicating the days when they operate,
+    and the list of rooms for each surgery is provided.
+
+
+    Each year, approximately 2500 elective surgeries of 221 different types are performed
+    in this block. Some of these surgeries can be scheduled during any of the hours,
+    whereas others (ambulatory surgeries) have to be completed by afternoon because
+    the patient stays for only 2 hours (while surgery closes at 17:00). These surgeries
+    can end by the closing time of the OSB. However, due to the large number of surgeries
+    to perform, each can exceptionally stay up to 3 days after its official release.
+    The duration of each surgery is characterized by an estimated duration and requires
+    a list of surgical instruments in small boxed kits. These kits are available in
+    limited quantities.
+
+
+    Table 1. SU''s pickups and deliveries to the OSB.
+
+
+    | Pick-up | 11:00 | 13:00 | 14:30 | 16:00 | 17:30 | 18:30 |
+
+    |---|---|---|---|---|---|---||
+
+    | Delivery | | | 14:30 | | 17:30 | |
+
+
+    At the SU, the sterilization process is performed in several stages - the instruments
+    are first cleaned by members, then in their corresponding containers before sterilization
+    machines. Finally, the kits are put to cool off before being returned to the block.
+    When a kit arrives at the SU, the sterilization process takes about 4 hours.
+
+
+    # 2.2 Difficulties
+
+
+    Currently, the CHU has three major difficulties. First, the OSB is often forced
+    to work overtime. On average, the monthly number of overtime is 28. The problem
+    can be attributed to the lack of planning: each surgery schedule selects the dates
+    of the his/patients without considering the planning of the kits. Most surgeries
+    share the same OSB. An explanation is the uncertainty concerning the duration
+    of the surgeries. Indeed, for more than 50% of the surgeries, the duration differs
+    from the estimated one by more than 20 minutes. And this
+
+
+    # 2.1 Work process in the OSB
+
+
+    Currently, at the OSB, the schedule is constructed as follows: A work schedule
+    generated 6 months in advance includes the full days (shifts) assigned to each
+    and the OSB in which they can be performed for each days. Some days, affected
+    to 3 are reserved for ambulatory surgeries. Any surgery can operate in one or
+    two OSB shifts each week, with 2 shifts for ambulatory.
+
+
+    Then, during his/her consultations, the schedule decides if his/her patient needs
+    a surgery, and relates, the date of the surgery for his/her (generally between
+    3 weeks to 3 months later). This date, the type of surgery and the requirements
+    of kits are recorded in the OSB information system by secretary.
+
+
+    On a more short term, each Monday, a specialized sequences for the surgeries or
+    OSB-shift of the next week, allowing 20 minutes between two consecutive surgeries
+    The room nurse also has a
+
+
+    +   1) A kit collected at 11:00, 13:00 on day (t) can be used in the morning of
+    day (t+1) if it is treated as a priority at the SU (priority kit, key 1). If it
+    is not treated as a priority, it cannot be used before 14:00 on day (t+1).
+
+    2) A kit collected at 14:30 on day (t) can be used in the morning of day (t+1)
+    if it is treated as the SU (urgent kit). If it is not treated urgently, it can
+    be used from 14:30 on day (t+1).'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'H. Hasan et al. / IFAC PapersOnline 55-10 (2022) 1625–1630
+
+
+    1627
+
+
+    (2) Calculate the horizon length $H_s$ for each surgeon based on his/her surgery
+    loads and shifts.
+
+    (3) For each collected at 17:30, 18:30 on day (t) or 7:00 on day (t+1) can be
+    used on day (t+1) if 14:30 if it is treated at the SU (priority kit), if it is
+    not treated as a priority, it will be used on day (t+1) from 17:30.
+
+    (4) For surgeries that were scheduled at week $t+3$ and return the surgeries that
+    were scheduled after $t+3$ back to the list.
+
+
+    Other emergencies arise when the delay between the two surgeries the same kit
+    is long enough for sterilization (≥ 4h), but the fixed pickup and delivery hours
+    of the shift do not allow to collect the kit at the SU and then have a date for
+    the OBS before its next possible use. This situation can happen for example if
+    a surgery ends at 10:00 one day (or must be reused at 14:00 for another surgery)
+    it cannot be collected before the surgery. If these cases are strictly avoided,
+    they may occur in practice as the SU can request a special outside to collect
+    these kits that are just collected because there will be no time to sterilize
+    them before sending them back, possibly by another special outside the delivery
+    hours. We will refer to these kits as **Not waited**
+
+
+    On average, more than 60 kits are listed each month, which implies a lot of stress
+    on the SU and has a negative impact on the work flow
+
+
+    The CHU would like to improve these dysfunctional by keeping the same level of
+    service in number of surgeries scheduled each month. The objectives are, in order
+    of priority given by the CHU, schedule as many surgeries as possible, minimize
+    the overtime and minimize the number of problems (priority kits). In order to
+    handle these problems, we propose a rolling horizon approach based on a robust
+    MILP formulation.
+
+
+    #  3. THE ROLLING HORIZON APPROACH
+
+
+    The Rolling horizon approach is iterative, and at each iteration, fixing one week
+    schedule obtained by solving a robust MILP. We first present the rolling horizon
+    framework. Then we present the deterministic model and an adaptation of this formulation
+    to obtain a robust MILP solutions more resistant to the fluctuations of the demands.
+
+
+    #  3.1 Rolling horizon framework
+
+
+    We propose to use a rolling horizon approach in which the surgeries are not fixed
+    during the consultation, but instead define a date for the day of the surgeries,
+    and are added to a waiting list. At the end of each week $t$, the new waiting
+    list is generated starting from week $t+3$. We make 3 weeks as that patients have
+    enough time to prepare and organize their hospitalization. In the schedule obtained,
+    only week $t$ is kept, and the surgeries scheduled after are put back in the waiting
+    list (see Figure 1).
+
+
+    At the end of week $t$, the process follows as:
+
+
+    +   (1) Add the surgeries consulted at the current week $t$ to the waiting list.
+
+
+    ![](img/1aea60a3ac0fcf6e07a1360da85bf9d6_2_0.png)
+
+
+    Fig.1. Rolling horizon scheme
+
+
+    This procedure requires to estimate an horizon $H_s$ for each surgeon to handle
+    all his/her surgeries of waiting list. The value of $H_s$ is calculated as the
+    minimum number of shifts needed to cover the load $s$ (sum of the planned durations
+    of his/her surgeries), plus 4 additional shifts. Each supplementary shift takes
+    into account the fact that we can''t know the exact amount of shifts needed for
+    each surgeon as surgeons some OR occasions because of limited quantities of times.
+
+
+    At each iteration, the problem of scheduling all the surgeries in the waiting
+    list from week $t+3$ is solved using a MILP. In this next, we present a formulation
+    of the problem, assuming that the duration of surgeries is known with certainty.
+    A robust version for the non-deterministic case will be proposed.
+
+
+    #  3.2 MILP formulation for the deterministic case
+
+
+    In order to model this problem, we propose a mathematical formulation similar
+    to the one presented in Hasan et al. (2019) based on the decomposition of the
+    day into periods (period 1 from 8:15 to 14:00, period 2 from 14:00 to 14:30, period
+    3 from 14:30 to 14:30 and period 4 from 15:30 to 17:00). This division is obtained
+    from several hours in the schedule of the shuttle, and the closing hours of the
+
+
+    In line with the requirements of the CHU, the objective is to schedule as many
+    surgeries as possible while minimizing the overtime and the total penalties of
+    emergencies and priorities in the SU. In order to take into account the new process
+    in which the surgeons provide'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# H. Al Hasan et al. / IFAC PapersOnline 55 (2022) 1625–1630\n\na due for each\
+    \ surgery during the consultation, we also add as objective of minimizing the\
+    \ total tardness of the surgeries.\n\nThe reader referred to Al Hasan (2019) for\
+    \ a version of the deterministic MILP model. We present in this section only the\
+    \ parameters, variables and constraints that we modified in order to obtain a\
+    \ robust formulation.\n\nThe considered parameters:\n\n+   - $H$: number of days\
+    \ in the horizon\n- $J$: number of types of kit\n- $T$: number of surgeries\n\
+    - $R$: number of operating rooms\n- $S$: number of surgeons\n- $C_{ij}$: priority\
+    \ penalty\n- $P_{ijt}$: total tardiness from period $j$ to $\\gamma$ in room $r$\
+    \ on day $t$\n- $\\Delta_{ijt}$: total duration of period $j$ in room on day $t$\n\
+    - $A_{max}$: latest time for surgeries to be performed as binary parameter equal\
+    \ to 1 is if $t=2$ and 0 otherwise\n\nAnd the considered decisions variables:\n\
+    \n+   - $w_{itr}$: binary variable equal to 1 if surgery is scheduled on day $t$\
+    \ in room $r$\n- $b_{ifrt}$: binary variable equal to 1 if surgery begins at $b$\
+    \ and finishes at $f$, on day $t$, in room $r$\n- $E_{ijt}$: integer variable\
+    \ representing the total units of kit of type $j$\n- $Y_{ijt}$: real variable\
+    \ representing the total priority cases (case 1 or 2) of type $j$ on day $t$\n\
+    - $\\epsilon_{tr}$: real variable representing the total overtime in room $r$\
+    \ on day $t$\n- $T$: real variable representing the tardiness of surgery $i$\n\
+    \nThe constraints that need to be added to obtain a robust formulation are the\
+    \ capacity constraints below:\n\n+   - the workload of generally for each period\
+    \ of the day and each room must not exceed the duration of the period (plus overtime\
+    \ of $\\epsilon_{tr}$ is in the last period in room $r$ and day $t$) (1)\n\n```\n\
+    $$\\sum_{i \\in O} \\sum_{b \\in B} \\sum_{f \\in F} P_{ifrt} b_{ifrt} + \\sum_{j\
+    \ \\in J} \\sum_{t \\in T} \\sum_{r \\in R} \\Delta_{ijt} l_{ijt} \\leq A_{max}\
+    \ + u_{tr} \\epsilon_{tr}$$\n$\\forall i \\in \\{1, \\dots, J\\}, j \\in \\{\b\
+    eta, \\dots, \\gamma\\}, t \\in \\{1, \\dots, H\\}, r \\in R$\n```\n\nThe multiple\
+    \ objective functions (3) are taken into account using a lexicographic method.\
+    \ We first maximize $f_1$,\n\n```\n$f_1: \\max \\sum_{s \\in S} \\sum_{r \\in\
+    \ R} \\epsilon_{sr} - \\sum_{t \\in T} \\sum_{r \\in R} W_{itr}$$\n$f_2: \\min\
+    \ \\sum_{s \\in S} \\sum_{r \\in R} \\epsilon_{sr}$$\n$f_3: \\min \\sum_{t \\\
+    in T} \\sum_{k \\in K} [u_k E_{ijt} + p_k(Y_{ijt})]$\n```\n\n# 3.3 Robust formulation\n\
+    \nWe proposed a formulation based on the model of Bertimas and Sims (2004). Although\
+    \ this model provides a static environment (see Al Hasan et al (2019)), its integration\
+    \ into a robust approach leads to feasible execution times. In our experiments,\
+    \ the model was not able to provide solutions in reasonable time, due to the higher\
+    \ number of surgeries in each iteration (against 200) and long horizons (150 days\
+    \ considered in each iteration, instead of 26 days on average for the static version).\
+    \ We opted for a robust formulation using redundancy-based technique like the\
+    \ one described here. This method consists in both scheduling and sequencing the\
+    \ surgeries in each room each day. We insert slack slots in each OR-day shift\
+    \ (at the end of each surgery or at the end of the OR). The slack is added at\
+    \ the end of each surgery duration. We applied this to the MILP deterministic\
+    \ case of the problem.\n\nLet $Z_{tr}$ represent the amount of slack added on\
+    \ day $t$ in room $r$ starting in period $b$ and ending in period $f$. The value\
+    \ of $Z_{tr}$ is calculated as follows:\n\n```\n$Z_{tr} = B \\sum_{i \\in O} b_{ifrt}\
+    \ \\quad (4)\\quad\\forall t \\in \\{1, \\dots, H\\},$\n$\\forall r \\in R, Yb\
+    \ \\in \\{1, \\dots, J\\}, t \\in \\{b, \\dots, f\\}$\n```\n\nwhere:\n- $B$ is\
+    \ a parameter that controls the probability that a surgery will finish on time,\
+    \ i.e, overit will not occur.\n\n- $\\delta_i$ is the duration of surgery $i$\
+    \ (based on a statistical analysis).\n\nThe robust formulation is then obtained\
+    \ from the deterministic formulation by adding constraint (4), and"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# EXPERIMENTAL RESULTS
+
+
+    $z_{rf} \geq 0$,$
+
+    $\forall r \in R, \ b \in \{1, \dots, J\, \forall f \in \{b, \dots, J\$\quad (5)
+
+
+    $\sum_{i \in O} \sum_{b=f}^{J} p_{irbf}x_{irbf} + \sum_{b=f}^{J} z_{rbf} + \sum_{a=b}^{J}
+    \sum_{f=a}^{J} \Delta_{rtaf}y_{rtaf}$\n$\leq \Delta_{rt}^{2} + u_{rt}z_{rt}$\n$\forall
+    b \in \{1, \ \dots, J\, \ \gamma \in \{b, \ \dots, J\, \ t \in \{1, \ \dots, H\,
+    \ r \in R$\quad (6)
+
+
+    and, in order to add the slack times, by replacing Con-
+
+    straints (1) :
+
+
+    Constraints and (2) :
+
+
+    ```
+
+    $\sum_{i \in O} \sum_{b=f}^{J} p_{irbf}x_{irbf} + \sum_{b=f}^{J} z_{rbf} + \sum_{a=b}^{J}
+    \sum_{f=a}^{J} a_{iprf}x_{iprf}$\n$\sum_{t=1}^{3} z_{rtb3} \leq A_{max} - \sum_{a=1}^{J}
+    \Delta_{rt}^{a}$\n$\forall b \in \{1, \ \dots, J\, \ \ t \in \{1, \ \dots, H\,
+    \ \ r \in R$\quad (7)
+
+    ```
+
+
+    | ORs 1 & 2 | OR 3 |
+
+    |---|---||
+
+    | $\Delta_{rt}^{1}$ | 5b45 | 5b45 |
+
+    | $\Delta_{rt}^{2}$ | 0b30 | 0b30 |
+
+    | $\Delta_{rt}^{3}$ | 1h00 | 0b00 |
+
+
+    Table 2. Periods during the ORs.
+
+
+    We performed 5 experiments, with the deterministic MILP in the rolling horizon
+    approach (DRH) and other experiments with the MILP in the rolling horizon approach
+    (RRH) using the following values for B: 0.25, 0.5, and 1 and compared the schedule
+    with the schedule that was obtained at CHU.
+
+
+    Our testing environment :
+
+
+    +   - Intel Core i3-2130 @ 3.30 GHz
+
+    - 8 GB of RAM
+
+    - IBM CLOP POBOX 12
+
+
+    The obtained results rely on the estimated of surgeries. In order to obtain the
+    effective schedule based on the results, we implemented a procedure that simulates
+    the work of the OS to create the achieved schedule from the planned schedule.
+    This simulation starts on the same day by starting the surgeries one after another
+    and adding a break of 20 minutes between consecutive ones to clean the OR. The
+    simulation shows whether the start of the next surgery (i+1) is possible if i
+    is waiting or if i+1 is not. It is not possible for a further surgery to start
+    of i (i+3 cannot start in of i). This is consistent with the the results of the
+    OS, as they are not prepared for surgery a long time in advance, and not allowed
+    patients in the queue (> i-1) won''t be ready to start.
+
+
+    We tested the method on real data over 10 months (44 weeks, from September 2010
+    to June 2015) by CHU. During this, 209 surgeries were performed by 15 different
+    surgeons. 69 of these surgeries were scheduled outside the 10 months. We had to
+    consider them to weigh the impact on the cases. In order to do so, we created
+    a fourth OR which is to include the surgeries performed outside the block and
+    fixed the dates and times for these surgeries. 38 surgeries from other months
+    were performed on the OS. Again, we considered these surgeries due to their impact
+    on the operating times at the ORs, and we achieved this by aggregating the operating
+    hours of the ORs at the dates of each of these surgeries. In this data, there
+    is no due date for the surgery. For the experiments, we considered for each surgery
+    its due date equal to the planned schedule constructed by the CHU.
+
+
+    The values of the parameters are :
+
+
+    +   - Latest Am for surgeries : 3 p.m.
+
+    - Maximum overtime each day : 18 minutes (3 hours)
+
+    - Penalty cost of urgent cases : 5
+
+    - Penalty cost of priority cases : 1
+
+
+    Note that the urgent and priority penalties were evaluated by the CHU among the
+    disturbance and stress perceived at the SU.
+
+
+    In table 2 the duration $\Delta_{rt}^{2}$ of each period $j$ in $R$ each day $t$
+    when the OR is open (0 if the OR is closed).
+
+
+    We set the execution limit of the solver to be 4 hours per iteration (1 hour per
+    day)
+
+
+    The results are presented in Table 3. The first row (Scheduled) contains the number
+    of surgeries scheduled over the horizon, and the second (Late) contains the number
+    of surgeries planned to be achieved $A_{max}$. Overtime and the rate, overtime
+    indicates the total overtime in minutes, and the maximum overtime of OR-days.
+    The minimum and average overtime rate of OR-days. Finally, the number of urgent,
+    and not allowed cases are given in RR result, Priority and not allowed.
+
+
+    Among the four versions of RRH, the number of surgeries scheduled is higher than
+    the other, with a comparison of importance and robustness of the method, but it
+    also led to less surgeries in total. This can be observed in the last two versions
+    (RRH0, RRH1) as they insert like that which are too conservative and to little
+
+
+    RRH2, reaching a reduction of 54% of the overtime of the schedule of CHU (from
+    17174 to 7893), which is 28.6 hours per month on average to 13.15, and 30.4% of
+    the DRH schedule, and the maximum overtime'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Table 3. Scheduled surgeries
+
+
+    | Objective | OSB schedule | DRH | RRH_{25} | RRH_{50} | RRH_{75} | RRH |
+
+    |---|---|---|---|---|---|-|
+
+    | Scheduled | 2000 | 1981 | 1962 | 1737 | 1771 | |
+
+    | Late adds | 101 | 12 | 8 | 4 | 2 | |
+
+    | Overtime | 1714 | 11346 | 7903 | 6217 | 5294 | |
+
+    | Max overtime | 326 | 408 | 238 | 198 | 155 | 181 |
+
+    | Min. rate | | 39.2 | 38.7 | 34.2 | 29.1 | |
+
+    | Avg. rate | | 78.8 | 86.5 | 83.8 | 82.1 | 80.6 |
+
+    | Urgent | | 79 | 2 | 4 | 3 | 10 |
+
+    | Priority | | 191 | 79 | 48 | 43 | 39 |
+
+    | Not allowed | | 92 | 0 | 0 | 0 | 0 |
+
+
+    time, hour occupation rates of the ORs, and more-85% less stress in the SU. Despite
+    these results, some ORs are underutilized due to the fact that an OR is reserved
+    for a surgeon on a given day, it is not used by any other surgeon or one who would
+    have helped. An incentive for future surgeons would be to join the Major Schedule
+    problem (which assigns surgeons to OR-day shifts) and such case scheduling problem,
+    in order to obtain an assignment of the OR-days shifts to the surgeons as close
+    as possible the needs.
+
+
+    # ACKNOWLEDGEMENTS
+
+
+    The authors would like to thank L. Hubert, A. V. Lebanon and A. Roblet for the
+    CH for this challenging problem and providing us with real instances. This research
+    was partially funded by Angers La Metropole (ALM) and IMT Antarctica.
+
+
+    # REFERENCES
+
+
+    which is not the case for the CHU (320 minutes) nor the DRH (400 minutes). As
+    regards the occupation of ORs, the average occupation rate RRH_{25} (86.4%) is
+    much than the one of the DRH approach, and the maximum occupation rate (38.7%)
+    against 9.5% for the CHU shows a buffer less duration. It should be noted that
+    RRH_{25} schedules a little less than the CHU, as all slots are not fully occupied.
+    This is due to the fact that we do not belong to the surgeons or to ORs who must
+    perform the remaining surgeries. Finally, there are only 83 problems with RRH_{25},
+    255 cases of CHU, and 183 cases of DRH.
+
+
+    Al Hassan, H., Curet, C., Lemonois, D., and Pierre, J. (2019). Surgical scheduling
+    with sterilisation constraints. International Journal of Production Research,
+    57(10), 2984-3002.
+
+
+    In conclusion, the quality of obtained results reliable and attractive for the
+    CHU: for approximately the same number of surgeries, it allows a decrease of 54%
+    of the overtime, a reduction of 1 OR-day shift per month, a better use of ORs
+    (better proportion of the surgeries in the room, and idle times), and far less
+    stress in the SU (86.3% less). It offers less costs and higher quality of labour
+    for the staff.
+
+
+    Berola, B., Gunderat, R., Arianat, O., and On, J. (2016). Operating room scheduling
+    including sterilization devices: a transformation towards the logistic. IFPACOnline,
+    49(12), 1148-1151.
+
+
+    Bertsimas, S. M., and Belien, J. (2009). Sequencing surgeries in a day-care environment:
+    an branch-and-price approach. Computers & Operations Research, 36(9), 2660-2669.
+
+
+    # 5. CONCLUSION
+
+
+    Hans, E., Peters, G., Van Hoehoven, M., and Kausmer, G. (2008). Robust scheduling
+    under uncertain demand. European Journal of Operations Research, 168(3), 1053-1060.
+
+
+    This paper addresses the case scheduling of the orthopedic surgical hospital (OSB)
+    of a French hospital (CHU). We have presented the proposed method to construct
+    the schedule of the surgeons, and then tested the approach on the OSB and in Sterilization
+    Unit (SU) which is in charge of sterilization of all the medical instruments used
+    for the surgeries of the CHU. These durations are of: one for the staff, unchanged
+    operating rooms (ORs) occupancy rate, one to sterilize all the instruments in
+    SU. We have proposed a method in the schedule construction process and a rolling
+    horizon approach based on a resolution of robust MILP in order to allow a better
+    coordination between surgeons, and a schedule sensitive to the uncertain duration
+    of the surgeries. We tested the approach on a 10 months horizon interface provided
+    by CHU. The experiments show a reduction of more than 50% of over-
+
+
+    Jackson, R. (2002). The business of surgery. Hospital Management Technology, 23(7).
+
+
+    Macario, A., Vitez, D., Bum, B., and McDonald, T. (1995). Hidden costs in preoperative
+    care? Analysis of hospital costs and incentives for inpatient surgery. The Journal
+    of American Surgery, 133(8), 1138-1144.
+
+
+    Zhao, F., Wang, W., Peng, J., and Pardalos, P. M. (2018). Operating room planning
+    and surgical scheduling: a review. Journal of Combinatorial Optimization, 19-'
+  merge: -1
+  pgno: 5
+toc:
+- - '#'
+  - 4 实验结果

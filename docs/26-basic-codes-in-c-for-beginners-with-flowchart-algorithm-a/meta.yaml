@@ -1,0 +1,5066 @@
+groups:
+- md: "\n# Lab Report 02: Solving Problems Using C Programs\n\n## 1. Write a Program\
+    \ in C/C++ which displays division of two numbers.\n\nProblem definition:\n\n\
+    Division is a mathematical operation, written using the symbol ÷, that can be\
+    \ thought of in two ways: a÷b is the size of each group when a objects are divided\
+    \ into b groups of equal size, OR a÷b is the number of groups when a objects are\
+    \ divided into groups of b objects each.\n\nAlgorithm:\n\n- Step 1: Start\n- Step\
+    \ 2: Input a, b\n- Step 3: if (b=0) Display “Enter a non Zero number”\n- Step\
+    \ 4: c=a/b\n- Step 5: Else Display c\n- Step 6: Stop\n\nFlow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_0_0.png)\n\
+    \n## Source code:\n\n```c\n#include<stdio.h>\n\nint main()\n{\n    int a,b;\n\
+    \    float div;\n\n    printf(\"Enter your first number: \");\n    scanf(\"%d\"\
+    ,&a);\n\n    printf(\"Enter your second number: \");\n    scanf(\"%d\",&b);\n\n\
+    \    //printf(\"Enter two numbers to add\\n\");\n    //scanf(\"%d%%d\",&a, &b);\n\
+    \    /*div defined as a float & cast any variable a or b.*/\n    div=a/(float)b;//b\
+    \ cast as float\n    if (b>0)\n        printf(\"\\nDivision of two numbers are:\
+    \ %f\\n\",div);\n    else\n        printf(\"No Division\\n\");\n\n    return 0;\n\
+    }\n```\n\n## Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_2_0.png)\n\n\
+    ## 2. Write a C/C++ program which displays whether a number is odd or even.\n\n\
+    ### Problem definition:\n\nAny integer that can be exactly divided by 2 is Even\
+    \ and if any integer is not exactly divisible by 2 it is an Odd number. The even\
+    \ numbers are multiplier of 2 and odd numbers are not.\n\nSo to check a number\
+    \ is odd or even we have to divide it by 2 and if modulus is 0 it is even or else\
+    \ odd.\n\n### Algorithm:\n\n- Step 1: Start\n- Step 2: [Input] Read number N\n\
+    - Step 3: Check if N%2==0\n- Step 4: if true , N is an even number\n- Else,\n\
+    - Step 5: N is an odd number\n- Step 6: Stop\n\n### Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_3_0.png)\n\
+    \n### Source code:\n\n```c\n#include<stdio.h>\n\nint main() {\n\n    int n;\n\n\
+    \    printf(\"Enter your number: \");\n    scanf(\"%d\",&n);\n\n    if(n%2==1)\
+    \ {\n        printf(\"\\nNumber is odd\\n\");\n    } else \n        printf(\"\\\
+    nNumber is even\\n\");\n    }\n\n    return 0;\n}\n```\n\n## Output: Code.exe\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_4_0.png)\n\n## 3. Write C/C++ program\
+    \ which checks a patient is in diabetics or not.\n\nProblem Definition:\n\nDiabetes\
+    \ is a chronic disease that occurs either when the pancreas does not produce enough\
+    \ insulin or when the body cannot effectively use the insulin it produces. A blood\
+    \ sample will be taken after an overnight fast. A fasting blood sugar level less\
+    \ than 100 mg/dL (5.6 mmol/L) is normal. A fasting blood sugar level from 100\
+    \ to 125 mg/dL (5.6 to 6.9 mmol/L) is considered prediabetes. If it's 126 mg/dL\
+    \ (7 mmol/L) or higher on two separate tests, you have diabetes.\n\nIn oral glucose\
+    \ tolerance test a blood sugar level less than 140 mg/dL (7.8 mmol/L) is normal.\
+    \ A reading of more than 200 mg/dL (11.1 mmol/L) after two tests indicates diabetes.\
+    \ A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) indicates prediabetes.\n\
+    \n### Algorithm:\n\n- Step 1: Start\n- Step 2: Enter Blood glucose level\n- Step\
+    \ 3: Check if bg<= 6.5\n- Print patient is healthy\n- Step 4: Check if bg<=7.0\n\
+    - Print patient is in pre diabetes\n- Else Print patient is in diabetes\n- Step\
+    \ 5: Stop\n\nFlow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_5_0.png)\n\
+    \n### Source Code:\n\n```c\n#include <stdio.h>\n\nint main() {\n\n    float bg;\n\
+    \n    printf(\"\\n Enter glucose level: %f\", &bg);\n    scanf(\"%f\",&bg);\n\n\
+    \    if(bg<=6.5) {\n        printf(\"\\n Patient is healthy.\\n\");\n    } else\
+    \ if(bg<=7.0) {\n        printf(\"\\n Patient is in pre-diabetics.\\n\");\n  \
+    \  } else {\n        printf(\"\\nPatient is in diabetes.\\n\");\n    }\n    return\
+    \ 0;\n}\n```\n\n## Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_6_0.png)\n\
+    \n## 4. Write a C/C++ program which computes the largest number between two numbers.\n\
+    \n### Problem definition:\n\nThe value of integers can be compared by their position\
+    \ in the integer line. The value of the integer comes first than the value of\
+    \ another integer, is smaller one between two integers.\n\n### Algorithm:\n\n\
+    - Step 1: Start\n- Step 2: Read number a\n- Step 3: Read number b\n- Step 4: if\
+    \ a > b, print a (Compare a and b using greater than operator)\n- Step 5: else\
+    \ print b\n- Step 6: Stop\n\nFlow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_7_0.png)\n\
+    \n### Source code:\n\n```c\n#include<stdio.h>\nint main()\n{\n    int No1,No2;\n\
+    \    printf(\"Enter first number: \");\n    scanf(\"%d\",&No1);\n    printf(\"\
+    Enter second number: \");\n    scanf(\"%d\",&No2);\n    if(No1>No2)\n        printf(\"\
+    %d is larger\\n\",No1);\n    else\n        printf(\"%d is larger\\n\",No2);\n\
+    \    return 0;\n}\n```\n\n## Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_8_0.png)\n\
+    \n## 5. Write C/C++ program which sum of series 1+2+3+4+...+100.\n\n### Problem\
+    \ definition:\n\nAn arithmetic progression is a sequence such that difference\
+    \ between any succeeding term remains constant. The sum of arithmetic progression\
+    \ is:\n\n$S_n = \\frac{n}{2}(2a+(n-1)d)$\n\nWhere:\n\n$n=$ the number of terms\n\
+    $a=$ the first term\n$d=$ common difference\n\n### Algorithm:\n\n- Step 1: Start\n\
+    - Step 2: Read number n\n- Step 3: Initialize sum=0, i=1\n- Step 4: Repeat step\
+    \ 4 to step 7 until i <= n\n- Step 5: sum=sum+i\n- Step 6: i=i+1\n- Step 7: Print\
+    \ the sum\n\n### Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_10.png)\n\
+    \n### Source code:\n\n```c\n#include<stdio.h>\n\nint main() {\n    int n,i;\n\
+    \    int sum=0;\n    printf(\"Enter n: \");\n    scanf(\"%d\",&n);\n    for(i=1;\
+    \ i<=n; i++) {\n        sum=sum+i;\n    }\n    printf(\"Sum is: %d\", sum);\n\
+    \    return 0;\n}\n```\n\n## Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_11.png)\n\
+    \n## 6. Write C/C++ program which display sum of squares of natural numbers.\n\
+    \n### Problem definition:\n\nThe sum of squares of natural numbers is denoted\
+    \ by $n^2$. Let n be natural number.\n\n### Algorithm:\n\n- Step 1: Start\n- Step\
+    \ 2: Read number N\n- Step 3: Initialize sum=0, count=1\n- Step 4: Repeat step\
+    \ 4 to step 6 until count <= N\n- Step 5: sum=sum+(count*count)\n- Step 6: count=count+1\n\
+    - Step 7: Print the sum\n\n### Source code:\n\n```c\n#include <stdio.h>\nint main()\n\
+    {\n    int N, count = 1, sum = 0;\n\n    printf(\"Enter the limit:\");\n    scanf(\"\
+    %d\", &N);\n\n    while(count <= N)\n    {\n        sum = sum + (count * count);\n\
+    \        count++;\n    }\n\n    printf(\"Sum of squares from 1 to %d: %d\", N,\
+    \ sum);\n\n    return 0;\n}\n```\n\n## 7. Write a Program in C/C++ which displays\
+    \ the average of n numbers.\n\nProblem definition:\n\nIn mathematics and statistics,\
+    \ the arithmetic mean, arithmetic average, or just the mean or average, is the\
+    \ sum of a collection of numbers divided by the count of numbers in the collection.\
+    \ The collection is often a set of results from an experiment, an observational\
+    \ study, or a survey.\n\nThe sum of n terms of an Arithmetic progression is,\n\
+    \n$S_n = \\frac{n}{2}(a_1+a_n)$\n\n**Algorithm:**\n\n- Step 1: Start\n- Step 2:\
+    \ Take the number of elements as input in n\n- Step 3: Initialize i = 0.\n- Step\
+    \ 4: Repeat step 4 to step 7 until i < n.\n- Step 5: Take elements as input in\
+    \ num\n- Step 6: Calculate, sum = sum + num\n- Step 7: Increment i by 1.\n- Step\
+    \ 8: Finally divide sum by n, avg = sum / n\n- Step 9: Stop\n"
+  mdcn: "\n\n# 实验报告 02：使用 C 程序解决问题\n\n## 1. 编写一个 C/C++ 程序显示两个数字的除法结果。\n\n问题定义：\n\n\
+    除法是一种数学运算，使用符号 ÷ 表示，可以从两种方式来理解：a÷b 是将 a 个对象分成 b 组大小相等的组时每组的大小；或者 a÷b 是将 a 个对象分成每组\
+    \ b 个对象的组时所形成的组数。\n\n算法：\n\n- 步骤 1：开始\n- 步骤 2：输入 a, b\n- 步骤 3：如果 (b=0) 显示“输入非零数字”\n\
+    - 步骤 4：c=a/b\n- 步骤 5：否则，显示 c\n- 步骤 6：停止\n\n流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_0_0.png)\n\
+    \n## 源代码：\n\n```c\n#include<stdio.h>\n\nint main()\n{\n    int a,b;\n    float\
+    \ div;\n\n    printf(\"Enter your first number: \");\n    scanf(\"%d\",&a);\n\n\
+    \    printf(\"Enter your second number: \");\n    scanf(\"%d\",&b);\n\n    //printf(\"\
+    Enter two numbers to add\\n\");\n    //scanf(\"%d%%d\",&a, &b);\n    /*div 定义为\
+    \ float 并对任意变量 a 或 b 进行类型转换.*/\n    div=a/(float)b;//b 强制转换为 float\n    if (b>0)\n\
+    \        printf(\"\\nDivision of two numbers are: %f\\n\",div);\n    else\n  \
+    \      printf(\"No Division\\n\");\n\n    return 0;\n}\n```\n\n## 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_2_0.png)\n\
+    \n## 2. 编写一个 C/C++ 程序显示一个数字是奇数还是偶数。\n\n### 问题定义：\n\n任何能被 2 整除的整数都是偶数，如果任何整数不能被\
+    \ 2 整整除，它就是奇数。偶数是 2 的倍数，而奇数不是。\n\n所以，为了检查一个数字是奇数还是偶数，我们需要将其除以 2，如果取数为 0 则是偶数，否则为奇数。\n\
+    \n### 算法：\n\n- 步骤 1：开始\n- 步骤 2：[输入] 读取数字 N\n- 步骤 3：检查 N%2==0\n- 步骤 4：如果为，N 是偶数\n\
+    - 否则，\n- 步骤 5：N 是奇数\n- 步骤 6：停止\n\n### 流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_3_0.png)\n\
+    \n### 源代码：\n\n```c\n#include<stdio.h>\n\nint main() {\n\n    int n;\n\n    printf(\"\
+    Enter your number: \");\n    scanf(\"%d\",&n);\n\n    if(n%2==1) {\n        printf(\"\
+    \\nNumber is odd\\n\");\n    } else \n        printf(\"\\nNumber is even\\n\"\
+    );\n    }\n\n    return 0;\n}\n```\n\n## 输出：Code.exe\n\n![](img/ae063c11b8af956e74f03493ca90aad3_4_0.png)\n\
+    \n## 3. 编写 C/C++ 程序检查患者是否患有糖尿病。\n\n问题定义：\n\n糖尿病是一种慢性病，发生在胰腺无法产生足够的胰岛素，或者身体无法有效利用其产生的胰岛素时。在过夜禁食后取血样本。空腹血糖水平低于\
+    \ 100 mg/dL (5.6 mmol/L) 为正常。空腹血糖水平在 100 到 125 mg/dL (5.6 到 6.9 mmol/L) 之间被认为是糖尿病前期。如果在两次单独测试中达到\
+    \ 126 mg/dL (7 mmol/L) 或更高，则说明患有糖尿病。\n\n在口服糖耐量测试中，血糖低于 140 mg/dL (7.8 mmol/L)\
+    \ 是正常的。两次测试后读数超过 200 mg/dL (11.1 mmol/L) 表示有糖尿病。读数在 140 和 199 mg/dL (7.8 mmol/L\
+    \ 和 11.0 mmol/L) 之间表示糖尿病前期。\n\n### 算法：\n\n- 步骤 1：开始\n- 步骤 2：输入血糖水平\n- 步骤 3：检查\
+    \ bg<= 6.5\n- 打印患者健康\n- 步骤 4：检查 bg<=7.0\n- 打印患者处于糖尿病前期\n- 否则，打印患者患有糖尿病\n- 步骤 5：停止\n\
+    \n流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_5_0.png)\n\n### 源代码：\n\n```c\n\
+    #include <stdio.h>\n\nint main() {\n\n    float bg;\n\n    printf(\"\\n Enter\
+    \ glucose level: %f\", &bg);\n    scanf(\"%f\",&bg);\n\n    if(bg<=6.5) {\n  \
+    \      printf(\"\\n Patient is healthy.\\n\");\n    } else if(bg<=7.0) {\n   \
+    \     printf(\"\\n Patient is in pre-diabetics.\\n\");\n    } else {\n       \
+    \ printf(\"\\nPatient is in diabetes.\\n\");\n    }\n    return 0;\n}\n```\n\n\
+    ## 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_6.png)\n\n## 4. 编写 C/C++ 程序计算两个数字之间的最大值。\n\
+    \n### 问题定义：\n\n通过比较两个整数来计算整数的最大值。\n\n### 算法：\n\n- 步骤 1：开始\n- 步骤 2：读取数字 a\n- 步骤\
+    \ 3：读取数字 b\n- 步骤 4：如果 a 大于 b，打印 a\n- 步骤 5：否则，打印 b（计算整数之间的值）\n\n流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_7.png)\n\
+    \n## 源代码：\n\n```c\n#include<stdio.h>\nint main()\n{\n    int No1,No2;\n    printf(\"\
+    Enter first number: \");\n    scanf(\"%d\",No1);\n    printf(\"Enter second number:\
+    \ \");\n    scanf(\"%d\",No2);\n    if(No1>No2)\n        printf(\"%d is larger\\\
+    n\",No1);\n    else\n        printf(\"%d is larger\\n\",No2);\n    return 0;\n\
+    }\n```\n\n## 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_8.png)\n\n## 5. 编写\
+    \ C/C++ 程序计算 1+2+3+...+n 的和。\n\n### 问题定义：\n\n等差数列是相邻项之间的差保持变化的序列。等差数列的和为：\n\n\
+    $S_n = \\frac{n}{2}(2a+(n-1)d)$\n\n其中：\n\n$n=$ 项数\n$a=$ 首项\n$d=$ 公差\n\n 算法：\n\n\
+    - 步骤 1：开始\n- 步骤 2：读取 n\n- 步骤 3：初始化 sum=0, i=1\n- 步骤 4：重复步骤 4 到步骤 7，直到 i <= n\n\
+    - 步骤 5：sum=sum+i\n- 步骤 6：i=i+1\n- 步骤 7：打印和\n\n流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_10.png)\n\
+    \n## 源代码：\n\n```c\n#include<stdio.h>\n\nint main() {\n    int n,i;\n    int sum=0;\n\
+    \    printf(\"Enter n: \");\n    scanf(\"%d\",&n);\n    for(i=1; i<=n; i++) {\n\
+    \        sum+=i;\n    }\n    printf(\"Sum is: %d\", sum);\n    return 0;\n}\n\
+    ```\n\n## 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_11.png)\n\n## 6. 编写\
+    \ C/C 程序显示自然数的平方和。\n\n### 问题定义：\n\n自然数的平方表示为 $n^2$。令 n 为自然数。\n\n### 算法：\n\n- 步骤\
+    \ 1：开始\n- 步骤 2：读取 N\n- 步骤 3：初始化 sum=0, count=1\n- 步骤 4：重复步骤 4 到步骤 6，直到 count <=\
+    \ N\n- 步骤 5：sum=sum+(count*count)\n- 步骤 6：count=count+1\n- 步骤 7：打印和\n\n### 源代码：\n\
+    \n```c\n#include <stdio.h>\nint main()\n{\n    int N, count = 1, sum = 0;\n\n\
+    \    printf(\"Enter the limit:\");\n    scanf(\"%d\", &N);\n\n    while(count\
+    \ <= N)\n    {\n        sum = sum + (count * count);\n        count++;\n    }\n\
+    \n    printf(\"Sum of squares from 1 to %d: %d\", N, sum);\n\n    return 0;\n\
+    }\n```\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Lab Report 02: Solving Problems Using C Programs
+
+
+    1. Write a Program in C/C++ which displays division of two numbers.
+
+
+    Problem definition:
+
+
+    Division is a mathematical operation, written using the symbol ÷, that can be
+    thought of in two ways: a÷b is the size of each group when a objects are divided
+    into b groups of equal size, OR a÷b is the number of groups when a objects are
+    divided into groups of b objects each.
+
+
+    Algorithm:
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Input a, b
+
+
+    +   - Step 4: c=a/b
+
+
+    +   - Step 3: if (b=0) Display “Enter a non Zero number”
+
+
+    +   - Step 4: Else Display c
+
+
+    +   - Step 5: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_0_0.png)'
+  - "[PAGE 1]\n\n# Source code:\n\n```\n#include<stdio.h>\n\nint main()\n{\n    int\
+    \ a,b;\n    float div;\n\n    printf(\"Enter your first number:\"\");\n    scanf(\"\
+    %d\",&a);\n\n    printf(\"Enter your second number:\"\");\n    scanf(\"%d\",&b);\n\
+    \n    //printf(\"Enter two numbers to add\\n\");\n    //scanf(\"%d%%d\",&a, &b);\n\
+    \    /*div defined as a float & cast any variable a or b.*/\n    div=a/(float)b;//b\
+    \ cast as float\n    if (b>0)\n        printf(\"\\nDivision of two numbers are:%%%f\\\
+    n\",div);\n    else\n        printf(\"No Division\\n\");\n\n    return 0;\n}\n\
+    ```"
+  - '[PAGE 2]
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_2_0.png)'
+  - '[PAGE 3]
+
+
+    2. Write a C/C++ program which displays whether a number is odd or even.
+
+
+    # Problem definition:
+
+
+    Any integer that can be exactly divided by 2 is Even and if any integer is not
+    exactly divisible by 2 it is an Odd Odd number. The even numbers are multiplier
+    of 2 and odd numbers are not.
+
+
+    So to check a number is odd or even we have to divide it by 2 and if modulus is
+    0 it is even or else odd.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+    Step 2: [Input] Read number N
+
+    Step 3: Check if N%2==0
+
+    Step 4: if true , N is an even number
+
+    Else,
+
+    Step 5: N is an odd number
+
+    Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_3_0.png)'
+  - "[PAGE 4]\n\n# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n\n    int\
+    \ n;\n\n    printf(\"Enter your number: \");\\n    scanf(\"%d\",&n);\n\n    if(n%2==1)\
+    \ {\n        printf(\"\\nNumber is odd\\n\");\n    } else \n        printf(\"\\\
+    nNumber is even\\n\");\n    }\n\n    return 0;\n}\n```\n\n# Output: Code.exe\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_4_0.png)"
+  - '[PAGE 5]
+
+
+    # 3. Write C/C++ program which checks a patient is in diabetics or not.
+
+
+    Problem Definition:
+
+
+    Diabetes is a chronic disease that occurs either when the pancreas does not produce
+    enough insulin or when the body cannot effectively use the insulin it produces.
+    A blood sample will be taken after an overnight fast. A fasting blood sugar level
+    less than 100 mg/dL (5.6 mmol/L) is normal. A fasting blood sugar level from 100
+    to 125 mg/dL (5.6 to 6.9 mmol/L) is considered prediabetes. If it''s 126 mg/dL
+    (7 mmol/L) or higher on two separate tests, you have diabetes.
+
+
+    In oral glucose tolerance test a blood sugar level less than 140 mg/dL (7.8 mmol/L)
+    is normal. A reading of more than 200 mg/dL (11.1 mmol/L) after two tests indicates
+    diabetes. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) indicates
+    prediabetes.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Enter Blood glucose level
+
+
+    +   Step 3: Check if bg<= 6.5
+
+
+    +   Print patient is healthy
+
+
+    +   Step 4: Check if bg<=7.0
+
+
+    +   Print patient is in pre diabetes
+
+
+    +   Else Print patient is in diabetes
+
+
+    +   Step 5: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_5_0.png)'
+  - "[PAGE 6]\n\n# Source Code:\n\n```\n#include <stdio.h>\n\nint main() {\n\n   \
+    \ float bg;\n\n    printf(\"\\n Enter glucose level:%f\",&bg);\n    scanf(\"%f\"\
+    ,&bg);\n\n    if(bg<=6.5) {\n        printf(\"\\n Patient is healthy.\\n\");\n\
+    \    } else if(bg<=7.0) {\n        printf(\"\\n Patient is in pre-diabetics.\\\
+    n\");\n    } else {\n        printf(\"\\nPatient is in diabetes.\\n\");\n    }\n\
+    \    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_6_0.png)"
+  - '[PAGE 7]
+
+
+    # 4. Write a C/C++ program which computes the largest number between two numbers.
+
+
+    # Problem definition:
+
+
+    The value of integers can be compared by their position in the integer line. The
+    value of the integer comes first than the the value of another integer, is smaller
+    one between two integers.
+
+
+    # Algorithm:
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Read number a
+
+
+    +   - Step 3: Read number b
+
+
+    +   - Step 4: if a > b, print a (Compare a and b using greater than operator)
+
+
+    +   - Step 5: else print b
+
+
+    +   - Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_7_0.png)'
+  - "[PAGE 8]\n\n# Source code:\n\n```\n#include<stdio.h>\nint main()\n{\n    int\
+    \ No1,No2;\n    printf(\"Enter your first number:\\\");\n    scanf(\"%d\",&No1);\n\
+    \    printf(\"Enter your second number:\\\");\n    scanf(\"%d\",&No2);\n    //printf(\"\
+    Enter two numbers\\n\");\n    //scanf(\"%d%d\",&No1,&No2);\n    if(No1>No2)\n\
+    \        printf(\"%d is greater than\\n\",No1);\n    else\n        printf(\"%d\
+    \ is greater than\\n\",No2);\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_8_0.png)"
+  - "[PAGE 9]\n\n# 5. Write a C/C++ program which sum of the series 1+2+3+4+............+100.\n\
+    \n# Problem definition:\n\nAn arithmetic progression or arithmetic sequence is\
+    \ a sequence of numbers such that the difference from any succeeding term to its\
+    \ preceding term remains throughout the sequence. The constant difference is called\
+    \ common difference of that arithmetic progression.\n\nThe formula for the sum\
+    \ of an arithmetic sequence is: $S_n=\frac{n}{2}[2a+(n-1)d]$\n\nWhere:\n\n+  \
+    \ * $n=$ the number of terms to be added\n* $a=$ the first term in the sequence\n\
+    * $d=$ the constant value between terms\n\n# Algorithm:\n\n+   Step 1: Start\n\
+    Step 2: Read number n\nStep 3: [Initialize] sum=0, i<=1\nStep 4: Repeat step 4\
+    \ through 6 until i<=n\nStep 5: sum=sum+i\nStep 6: i=i+1\nStep 7: Print the sum\n\
+    Step 8: Stop"
+  - "[PAGE 10]\n\n# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_10_0.png)\n\
+    \n# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n    int n,i;\n   \
+    \ int sum=0;\n    printf(\"Enter the n [max values of series]: \",\n```"
+  - '[PAGE 11]
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_11_0.png)'
+  - "[PAGE 12]\n\n# 6. Write a C/C++ program which display sum of square-sums of first\
+    \ n natural numbers.\n\n# Problem definition:\n\nThe sum of squares of n natural\
+    \ numbers can be calculated using the formula $\frac{n(n+1)(2n+1)}{6}$. Let n\
+    \ be a natural number.\n\nSquaring the number is denoted by $n^2$. The sum of\
+    \ squares of n natural numbers means the sum of the squares of the given series\
+    \ of natural numbers.\n\n# Algorithm:\n\n+   - Step 1: Start\n- Step 2: Read number\
+    \ N\n- Step 3: [Initialize] sum=0, i=1\n- Step 4: Repeat step 4 through 6 until\
+    \ i<=N\n- Step 5: sum=sum+(i*i)\n- Step 6: i=i+1\n- Step 7: Print the sum of square\n\
+    - Step 8: Stop\n\n# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_12_0.png)"
+  - "[PAGE 13]\n\n# Source code:\n\n```\n#include <stdio.h>\nint main()\n{\n    int\
+    \ N, count = 1, sum = 0;\n\n    printf(\"Enter the limit:\");\n    scanf(\"%d\"\
+    , &N);\n\n    while(count <= N)\n    {\n        sum = sum + (count * count);\n\
+    \        count++;\n    }\n\n    printf(\"Sum of squares of numbers from 1 to %d\\\
+    n\", N, sum);\n\n    return 0;\n}\n```"
+  - '[PAGE 14]
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_14_0.png)'
+  - '[PAGE 15]
+
+
+    # 7. Write a Program in C/C++ which displays the average of n numbers.
+
+
+    **Problem definition:**
+
+
+    In mathematics and statistics, the arithmetic mean, arithmetic average, or just
+    the mean or average, is the sum of a collection of numbers divided by the count
+    of numbers in the collection. The collection is often a set of results from an
+    experiment, an observational study, or a survey.
+
+
+    The sum of n terms of an Arithmetic progression is,
+
+
+    ```
+
+    $S_n = \frac{n}{2}(a_1+a_n)$
+
+    ```
+
+
+    Where,
+
+
+    $a_1$ is the first number of the progression
+
+
+    $a_n$ is the last number of the progression.
+
+
+    # **Algorithm:**
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Take the number of elements as input in n
+
+
+    +   Step 3: Initialize i = 0.
+
+
+    +   Step 4: Repeat step 4 to step 7 until i < n.
+
+
+    +   Step 5: Take elements as input in num
+
+
+    +   Step 6: Calculate,
+
+
+    ```
+
+    sum = sum + num
+
+    ```
+
+
+    +   Step 7: Increment i by 1,
+
+
+    ```
+
+    i = i + 1
+
+    ```
+
+
+    +   Step 8: Finally divide sum by n,
+
+
+    ```
+
+    avg = sum / n
+
+    ```
+
+
+    +   Step 9: Stop'
+- md: "\n# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_16_0.png)\n\n#\
+    \ Source code:\n\n```c\n#include<stdio.h>\n\nint main()\n{\n    //Declaring Variable\n\
+    \    int n, i, sum = 0, count = 0;\n\n    //Input Number\n    printf(\"Enter the\
+    \ nth Number:\");\n    scanf(\"%d\",&n);\n\n    for(i=1;i<=n;i++)\n    {\n   \
+    \   sum = sum + i;\n      count++;\n    }\n\n    printf(\"Average of first %d\
+    \ Natural Numbers = %d\\n\", sum/count);\n\n    return 0;\n}\n```\n\n# Output:\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_17_0.png)\n\n# 8. Write a C/C++ program\
+    \ of multiplication Table Up to 10.\n\n## Problem definition:\n\nTables 1 to 10\
+    \ are the list of multiples of numbers from 1 to 10. Multiplication tables 1 to\
+    \ 10 will help you learn and practice the multiplication facts effortlessly. Multiplication\
+    \ tables for 1 to 10 can be extremely helpful in solving math problems and calculations.\
+    \ It is essential for students to learn tables 1 to 10 for quick math calculations.\n\
+    \n## Algorithm:\n\n- Step 1: Start\n- Step 2: Input number, the number for which\
+    \ multiplication table is to be printed\n- Step 3: For c=1 to 10\n- Step 4: Print\
+    \ res= num*c\n- Step 5: End for loop\n- Step 6: Stop\n\n## Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_18_0.png)\n\
+    \n# Source code:\n\n```c\n#include <stdio.h>\n\nint main() {\n\n    int num, c,\
+    \ res;\n\n    printf(\"Enter an integer: %d\");\n    scanf(\"%d\",&num);\n\n \
+    \   for(c=1; c<=10; ++c) {\n        res=num*c;\n        printf(\"%d * %d = %d\\\
+    n\", num, c, res);\n    }\n\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_19_0.png)\n\
+    \n# 9. Write a C/C++ program to calculate the factorial of a given number.\n\n\
+    ## Problem definition:\n\nThe factorial of a number is the function that multiplies\
+    \ the number by every natural number below it. Symbolically, factorial can be\
+    \ represented as \"!\". So, $n$ factorial is the product of the first $n$ natural\
+    \ numbers and is represented as $n$!\n\n## Algorithm:\n\n- Step 1: Start\n- Step\
+    \ 2: Read the number n\n- Step 3: [initialize] i=1, fact=1\n- Step 4: Repeat step\
+    \ 4 through 6 until i=n\n- Step 5: fact= fact*i\n- Step 6: i=i+1\n- Step 7: Print\
+    \ fact\n- Step 8: Stop\n\n## Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_20_0.png)\n\
+    \n# Source code:\n\n```c\n#include<stdio.h>\n\nint main() {\n    int n, i, fact=1;\n\
+    \    printf(\"Enter any number:\");\n    scanf(\"%d\", &n);\n    for(i=1; i<=n;\
+    \ i++) {\n        fact = fact * i;\n    }\n    printf(\"Factorial value of %d\
+    \ = %d\\n\", n,fact);\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_21_0.png)\n\
+    \n# 10. Write a C/C++ program to find if a year is Leap Year or not.\n\n## Problem\
+    \ definition:\n\nLeap years are years where an extra, or intercalary, day is added\
+    \ to the end of the shortest month, February. The intercalary day, February 29,\
+    \ is commonly referred as leap day. Leap years have 366 days instead of the usual\
+    \ 365 days and occur every four years. Leap days keep our modern calendar in alignment\
+    \ with Earth’s revolutions around the Sun. It takes approximately 365.2422 days,\
+    \ or 365 days, 5 hours, and 48 seconds, to circle around the Sun. This is called\
+    \ a tropical year, and it starts on the March equinox. However, the Gregorian\
+    \ calendar has only 365 days. If we didn't add a leap day on February 29 every\
+    \ four years, each calendar year would drift apart from the tropical year and\
+    \ get increasingly out of sync. With a deviation of approximately 6 hours per\
+    \ year, seasons would shift by about 24 days within 100 years. Allow this to happen\
+    \ for a while, and Northern Hemisphere dwellers will be celebrating Christmas\
+    \ in the middle of summer in a matter of few centuries. Leap days fix that error\
+    \ by giving Earth the additional time it needs to complete a full circle.\n\n\
+    ## Algorithm:\n\n- Step 1: Start\n- Step 2: Take integer year\n- Step 3: Assign\
+    \ value to the variable\n- Step 4: Check if year is divisible by 4 but not 100,\
+    \ DISPLAY \"Leap year\"\n- Step 5: Check if year is divisible by 400, DISPLAY\
+    \ \"Leap year\"\n- Step 6: Otherwise, DISPLAY \"not leap year\"\n- Step 7: Stop\n\
+    \n## Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_23_0.png)\n\n# Source\
+    \ code:\n\n```c\n#include <stdio.h>\n\nint main() {\n    int year;\n    printf(\"\
+    Enter a year: \");\n    scanf(\"%d\", &year);\n\n    // leap year if perfectly\
+    \ divisible by 400\n    if (year % 400 == 0) {\n        printf(\"%d is a leap\
+    \ year.\", year);\n    }\n    // not a leap year if divisible by 100\n    // not\
+    \ not by 400\n    else if (year % 100 == 0) {\n        printf(\"%d is not a leap\
+    \ year.\", year);\n    }\n    // leap year if not divisible by 100\n    // but\
+    \ by 4\n    else if (year % 4 == 0) {\n        printf(\"%d is a leap year.\",\
+    \ year);\n    }\n    // all other years are not leap\n    else {\n        printf(\"\
+    %d is not a leap year.\", year);\n    }\n    return 0;\n}\n```\n\n# Output:\n\n\
+    ![](img/ae063c11b8af956e74f03493ca90aad3_24_0.png)\n\n# 11. Write a C/C++ program\
+    \ which computes the power of a number.\n\n## Problem definition:\n\nThe program\
+    \ below takes two integers from the user (a base number and an exponent) and calculates\
+    \ the power.\n\nFor example:\nIn the case of 2^3\n2 is the base number\n3 is the\
+    \ exponent\nAnd, the power is equal to 2*2*2 or 4*2.\n\n## Algorithm:\n\n- Step\
+    \ 1: Start\n- Step 2: Declare variables x,y,n\n- Step 3: Input x,n\n- Step 4:\
+    \ y=pow(x,n)\n- Step 5: Print y\n- Step 6: Stop\n\n## Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_25_0.png)\n\
+    \n# Source code:\n\n```c\n#include<stdio.h>\n\nint main() {\n    int x,y,n;\n\n\
+    \    printf(\"Enter number:%d\");\n    scanf(\"%d\",&x);\n\n    printf(\"Value\
+    \ of power:%d\\n\",n);\n    scanf(\"%d\",&n);\n\n    y=pow(x,n);\n\n    printf(\"\
+    Result is %d\\n\",y);\n\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_26_0.png)\n\
+    \n# 12. Write a C/C++ program which computes the square root and cubic root of\
+    \ a number.\n\n## Problem definition:\n\nThis program will print Square and Cube\
+    \ Root of all Numbers from 1 to N using loop.\n\nHere, we are reading value of\
+    \ N (limit) and will calculate, print the square, cube and square root of all\
+    \ numbers from 1 to N. To find square, we are using (i*i), cube are using (i*i*i)\
+    \ and square root, we are using sqrt(i).\n\nHere, i is the loop counter and sqrt(i)\
+    \ is the function of math.h, which returns the square root of a number.\n\n##\
+    \ Algorithm:\n\n- Step 1. Start\n- Step 2. Read n\n- Step 3. x= sqrt(n)\n- Step\
+    \ 4. y= sqrt(n)\n- Step 5. Print x,y\n- Step 6. Stop\n\n## Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_27_0.png)\n\
+    \n# Source code:\n\n```c\n#include<stdio.h>\n#include<math.h>\n\nint main() {\n\
+    \    int n;\n    float x,y;\n    printf(\"Enter a number: \");\n    scanf(\"%d\"\
+    , &n);\n    x = sqrt(n);\n    y = cbrt(n);\n    printf(\"Square root of %d is\
+    \ %f\\n\", n, x);\n    printf(\"Cubic root of %d is %f\\n\", n, y);\n    return\
+    \ 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_28_0.png)\n\
+    \n# 13. Write a C/C++ program which Checks a number is Prime or Not.\n\n## Problem\
+    \ definition:\n\nPrime number logic: a number is prime if it is divisible only\
+    \ by one and itself. Remember two is the only even and smallest prime number.\
+    \ First few prime numbers are 2, 3, 5, 7, 11, 13, 17, .... Prime numbers have\
+    \ many applications in computer science and mathematics. To check whether the\
+    \ input number is prime or not prime in C programming, you have to ask the user\
+    \ to enter a number and start checking for prime number. If number is divisible\
+    \ by 2 to one less that number (i.e., n-1), the number is not prime, otherwise\
+    \ it will be prime.\n\n## Algorithm:\n\n- Step 1: Start\n- Step 2: Take nth number\n\
+    - Step 3: Set x=1\n- Step 4: if nx<=n, then x=x+1\n- Step 5: if nx=1; Print \"\
+    Number is Prime number\"\n- Step 6: else Print \"Number is not prime number\"\n\
+    - Step 7: Stop\n\n## Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_29_0.png)\n\
+    \n# Source code:\n\n```c\n#include <stdio.h>\n\nint main()\n{\n    int n,i,count=0;\n\
+    \    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\n    //\
+    \ 0 and 1 are not prime numbers\n    // change count to 1 for non-prime number\n\
+    \    if (n == 0 || n == 1) \n        count= 1;\n\n    for (i = 2; i <= n / 2;\
+    \ ++i) {\n            // if n is divisible by i, then n is not prime\n       \
+    \     // change count to 1 for non-prime number\n            if (n % i == 0) {\n\
+    \                count= 1;\n                break;\n            }\n        }\n\
+    \n    // count is 0 for prime numbers\n    if (count == 0)\n        printf(\"\
+    %d is a prime number.\", n);\n\n}\n```\n"
+  mdcn: "\n\n# 流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_16_0.png)\n\n# 源代码：\n\
+    \n```c\n#include<stdio.h>\n\nint main()\n{\n    // 声明变量\n    int n, i, sum = 0,\
+    \ count = 0;\n\n    // 输入数字\n    printf(\"Enter the nth Number:\");\n    scanf(\"\
+    %d\",&n);\n\n    for(i=1;i<=n;i++)\n    {\n      sum = sum + i;\n      count++;\n\
+    \    }\n\n    printf(\"Average of first %d Natural Numbers = %d\\n\", sum/count);\n\
+    \n    return 0;\n}\n```\n\n# 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_17_0.png)\n\
+    \n# 8. 写一个一个到 10 的乘法表的 C/C++ 程序。\n\n## 问题定义：\n\n1 到 10 表是 1 到 10 数字倍数的列表。1 到 10\
+    \ 的乘法表将帮助你轻松地学习和练习乘法算式。1 到 10 的乘法表在解决数学问题和计算时非常有帮助。对于学生来说，学习 1 到 10 表对于快速数学计算至关重要。\n\
+    \n## 算法：\n\n- 步骤 1：开始\n- 步骤 2：输入数字，需要打印乘法表的数字\n- 步骤 3：对于 c=1 到 10\n- 步骤 4：打印 res=\
+    \ num*c\n- 步骤 5：结束循环\n- 步骤 6：停止\n\n## 流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_18_0.png)\n\
+    \n# 源代码：\n\n```c\n#include <stdio.h>\n\nint main() {\n\n    int num, c, res;\n\
+    \n    printf(\"Enter an integer: %d\");\n    scanf(\"%d\",&num);\n\n    for(c=1;\
+    \ c<=10; ++c) {\n        res=num*c;\n        printf(\"%d * %d = %d\\n\", num,\
+    \ c, res);\n    }\n\n    return 0;\n}\n```\n\n# 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_19_0.png)\n\
+    \n# 9. 写一个 C/C++ 程序来计算给定数字的阶乘。\n\n## 问题定义：\n\n数字的阶乘是将该数字乘以其下方所有自然数的函数。在符号表示上，阶乘可以表示为\
+    \ \"!\"。因此，$n$ 的阶乘是前 $n$ 个自然数的积，表示为 $n$!。\n\n## 算法：\n\n- 步骤 1：开始\n- 步骤 2：读取数字\
+    \ n\n- 步骤 3：[初始化] i=1, fact=1\n- 步骤 4：重复步骤 4 到 6，直到 i=n\n- 步骤 5：fact= fact*i\n\
+    - 步骤 6：i=i+1\n- 步骤 7：打印 fact\n- 步骤 8：停止\n\n## 流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_20_0.png)\n\
+    \n# 源代码：\n\n```c\n#include<stdio.h>\n\nint main() {\n    int n, i, fact=1;\n \
+    \   printf(\"Enter any number:\");\n    scanf(\"%d\", &n);\n    for(i=1; i<=n;\
+    \ i++) {\n        fact = fact * i;\n    }\n    printf(\"Factorial value of %d\
+    \ = %d\\n\", n,fact);\n    return 0;\n}\n```\n\n# 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_21_0.png)#10.\
+    \ 写一个 C/C++ 程序判断年份是否为闰年。\n\n## 问题定义：\n\n闰年是在最短月份（二月）末增加了一个额外（或称闰日）日的年份。二月 29 日通常被称为闰日。闰年有\
+    \ 366 天而不是通常的 365 天，每四年一次。闰日使我们的历法与地球绕太阳运行一致。绕太阳大约需要 365.2422 天，或者 365 天 5 小时\
+    \ 48 秒。这被称为回归年，起始于春分。然而，格列哥历只有 365 天。如果我们每四年不在二月 29 日增加一个闰日，每年历都会与回归年产生偏差并逐渐不同。每年\
+    \ 6 小时的偏差在 100 年内会达到 24 天。让这种情况发生，北半球居民将在几个世纪后在夏天过圣诞。闰日解决了这个问题。\n\n## 算法：\n\n\
+    - 步骤 1：开始\n- 步骤 2：取整数\n- 步骤 3：给变量赋值\n- 步骤 4：检查年份是否被 4 整除但不被 100，显示“闰年”\n- 步骤 5：检查年份是否被\
+    \ 400 整除，显示“闰年”\n- 步骤 6：否则，显示“非闰年”\n- 步骤 7：停止\n\n## 流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_23_0.png)\n\
+    \n# 源代码：\n\n```c\n#include <stdio.h>\n\nint main() {\n    int year;\n    printf(\"\
+    Enter a year: \");\n    scanf(\"%d\", &year);\n\n    // 如果被 400 整除则是闰年\n    if\
+    \ (year % 400 == 0) {\n        printf(\"%d is a leap year.\", year);\n    }\n\
+    \    // 如果被 100 整除但不被 400 整除则非闰年\n    else if (year % 100 == 0) {\n        printf(\"\
+    %d is not a leap year.\", year);\n    }\n    // 如果被 4 整除但不被 100 整除则是闰年\n    else\
+    \ if (year % 4 == 0) {\n        printf(\"%d is a leap year.\", year);\n    }\n\
+    \    // 其他年份都不是闰年\n    else {\n        printf(\"%d is not a leap year.\", year);\n\
+    \    }\n    return 0;\n}\n```\n\n# 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_24_0.png)#\
+    \ 11. 写一个 C/C++ 程序计算数字的幂。\n\n## 问题定义：\n\n下面的程序从用户处获取两个整数（底数和指数）并计算幂。\n\n例如：\n\
+    在 2^3 的情况下\n2 是底数\n3 是指数\n那么幂等于 2*2*2 或 4*2。\n\n## 算法：\n\n- 步骤 1：开始\n- 步骤 2：声明变量\
+    \ x,y,n\n- 步骤 3：输入 x,n\n- 步骤 4：y=pow(x,n)\n- 步骤 5：打印 y\n- 步骤 6：停止\n\n## 流程图：\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_25_0.png)\n\n# 源代码：\n\n```c\n#include<stdio.h>\n\
+    \nint main() {\n    int x,y,n;\n\n    printf(\"Enter number:%d\");\n    scanf(\"\
+    %d\",&x);\n\n    printf(\"Value of power:%d\\n\",n);\n    scanf(\"%d\",&n);\n\n\
+    \    y=pow(x,n);\n\n    printf(\"Result is %d\\n\",y);\n\n    return 0;\n}\n```\n\
+    \n# 输出：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_26_0.png)#12. 写一个 C/C++ 程序计算数字的平方根和立方根。\n\
+    \n## 问题定义：\n\n此程序将使用循环打印从 1 到 N 所有数字的平方和立方根。\n\n在这里，我们读取 N（限制）的值，并将计算、打印从 1 到\
+    \ N 所有数字的平方、立方和平方根。求平方我们使用 (i*i)，求立方使用 (i*i*i)，求平方根我们使用 sqrt(i)。\n\n在这里，i 是循环计数器，sqrt(i)\
+    \ 是 math.h 中的函数，它返回数字的平方根。\n\n## 算法：\n\n- 步骤 1：开始\n- 步骤 2：读取 n\n- 步骤 3：x= sqrt(n)\n\
+    - 步骤 4：y= cbrt(n)\n- 步骤 5：打印 x,y\n- 步骤 6：停止\n\n  流程图：\n\nimg/ae063c11b8af956e74f03493ca90aad3_27_0.png)\n\
+    \n# 源代码：\n\n```c\n#include<stdio.h>\n#include<math.h>\n\nint main() {\n    int\
+    \ n;\n    float x,y;\n    printf(\"Enter a number: \");\n    scanf(\"%d\", &n);\n\
+    \    x = sqrt(n);\n    y = cbrt(n);\n    printf(\"Square root of %d is %f\\n\"\
+    , n, x);\n    printf(\"Cubic root of %d is %f\\n\", n, y);\n    return 0;\n}\n\
+    ```\n\n# 输出：\n\nimg/ae063c11b8af956e74f03493ca90aad3_28_0.png)#13. 写一个 C/C++ 程序检查数字是否为质数。\n\
+    \n## 问题定义：\n\n质数逻辑：如果一个数字只能被1和它本身整除，它就是质数。记住2是唯一的偶数也是最小的质数。前几个质数是 2, 3, 5, 7,\
+    \ 11, 13, 17... 质数在计算机科学和数学中有许多应用。在C语言编程中检查输入的数字是否为质数，你需要要求用户输入数字并开始检查。如果数字被从2到比它小1（即n-1）的数字整除，则它不是质数，否则它是质数。\n\
+    \n## 算法：\n\n- 步骤 1：开始\n- 步骤 2：取n个数\n- 步骤 3：设置 x=1\n- 步骤 4：如果 x<=n，则 x=x+1\n- 步骤\
+    \ 5：如果 x=1；打印“数字是质数”\n- 步骤 6：否则打印“数字不是质数”\n- 步骤 7：停止\n\n## 流程图：\n\nimg/ae063c11b8af956e74f03493ca90aad3_29_0.png)\n\
+    \n# 源代码：\n\n```c\n#include <stdio.h>\n\nint main()\n{\n    int n,i,count=0;\n\
+    \    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\n    //\
+    \ 0和1不是质数\n    // 将非质数的计数设为1\n    if (n == 0 || n == 1) \n        count= 1;\n\n\
+    \    for (i = 2; i <= n / 2; ++i) {\n            // 如果n被i整除，则n不是质数\n         \
+    \   // 将非质数的计数设为1\n            if (n % i == 0) {\n                count= 1;\n\
+    \                break;\n            }\n        }\n\n    // 质数的计数为0\n    if (count\
+    \ == 0)\n        printf(\"%d is a prime number.\", n);\n\n}\n```\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 16]\n\n# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_16_0.png)\n\
+    \n# Source code:\n\n```\n#include<stdio.h>\n\nint main()\n{\n    //Declaring Variable\n\
+    \    int n, i, sum = 0, count = 0;\n\n    //Input Number\n    printf(\"Enter the\
+    \ nth Number:\");\n    scanf(\"%d\",&n);\n```"
+  - "[PAGE 17]\n\n```\nfor(i=1;i<=n;i++)\n{\n  sum = sum + i;\n  count++;\n}\n```\n\
+    \nprintf(\"nAverage of first %d Natural Numbers = %d\\n\", sum/count);\n\n```\n\
+    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_17_0.png)"
+  - '[PAGE 18]
+
+
+    # 8. Write a C/C++ program of multiplication Table Up to 10.
+
+
+    Problem definition:
+
+
+    Tables 1 to 10 are the list of multiples of numbers from 1 to 10. Multiplication
+    tables 1 to 10 will help you learn and practice the multiplication facts effortlessly.
+    Multiplication tables for 1 to 10 can be extremely helpful in solving math problems
+    and calculations. It is essential for students to learn tables 1 to 10 for quick
+    math calculations
+
+
+    Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Input number,the number for which multiplication table is to be printed
+
+
+    +   Step 3: For c=1 to 10
+
+
+    +   Step 4: Print res= num*c
+
+
+    +   Step 5: End for loop
+
+
+    +   Step 6: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_18_0.png)'
+  - '[PAGE 19]
+
+
+    # Source code:
+
+
+    ```
+
+    #include <stdio.h>
+
+
+    int main() {
+
+
+    int num, c,res;
+
+
+    printf("Enter an integer: %d");
+
+    scanf("%d",&num);
+
+
+    for(c=1; c<=10; ++c) {
+
+
+    res=num*c;
+
+    printfprintf("%d * %d = %d\n", num, c, res);
+
+    }
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_19_0.png)'
+  - '[PAGE 20]
+
+
+    9. Write a C/C++ program to calculate the factorial of a given number.
+
+
+    # **Problem definition:**
+
+
+    The factorial of a number is the function that multiplies the number by every
+    natural number below it. Symbolically, factorial can be represented as "!". So,
+    $n$ factorial is the product of the first $n$ natural numbers and is represented
+    as $n$!
+
+
+    # **Algorithm:**
+
+
+    +   Step 1: Start
+
+    Step 2: Read the number n
+
+    Step 3: [initialize] i=1, fact=1
+
+    Step 4: Repeat step 4 through 6 until i=n
+
+    Step 5: fact= fact*1
+
+    Step 6: i=i+1
+
+    Step 7: Print fact
+
+    Step 8: Stop
+
+
+    # **Flow-chart:**
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_20_0.png)'
+  - "[PAGE 21]\n\n# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n    int\
+    \ n,i,fact=1;\n    printf(\"Enter any number:\");\\n    scanf(\"%d\", &n);\n \
+    \   for(i=1; i<=n; i++) {\n        fact = fact * i;\n    }\n    printf(\"Factorial\
+    \ value of %d = %d\\n\", n,fact);\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_21_0.png)"
+  - '[PAGE 22]
+
+
+    10. Write a C/C++ program to find a year is Leap Year or not.
+
+
+    # Problem definition:
+
+
+    Leap years are years where an extra, or intercalary, day is added to the end of
+    the shortest month, February. The intercalary day, February 29, is commonly referred
+    to as leap day.
+
+
+    Leap years have 366 days instead of the usual 365 days and occur almost every
+    four years.
+
+
+    Leap days keep our modern-day Gregorian calendar in alignment with Earth’s revolutions
+    around the Sun. It takes approximately 365.242189 days, or 365 days, 5 hours,
+    48 minutes, and 45 seconds, to circle around the Sun. This is called a tropical
+    year, and it starts on the March equinox. However, the Gregorian calendar has
+    only 365 days in a year. If we didn''t add a leap day on February 29 almost every
+    four years, each calendar year would drift about 6 hours before Earth completes
+    its revolution around the Sun (see illustration).
+
+
+    As a consequence, our reckoning would slowly drift apart from the tropical year
+    and get increasingly out of sync with the seasons. With a deviation of approximately
+    6 hours per year, the seasons would shift by about 24 calendar days within 100
+    years. Allow this to happen for a while, and Northern Hemisphere dwellers will
+    be celebrating Christmas in the middle of summer in a matter of a few centuries.
+    Leap days fix that error by giving Earth the additional time it needs to complete
+    a full circle around the Sun.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Take integer variable year
+
+
+    +   Step 3: Assign value to the variable
+
+
+    +   Step 4: Check if year is divisible by 4 but not 100, DISPLAY “Leap year”
+
+
+    +   Step 5: Check if year is divisible by 400, DISPLAY “ Leap year”
+
+
+    +   Step 6: Otherwise, DISPLAY “not leap year”
+
+
+    +   Step 7: Stop'
+  - '[PAGE 23]
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_23_0.png)
+
+
+    # Source code:
+
+
+    ```
+
+    #include <stdio.h>
+
+
+    int main() {
+
+
+    int year;
+
+
+    printf("Enter a year: ");
+
+
+    scanf("%d", &year);
+
+
+    // leap year if perfectly divisible by 400
+
+    if (year % 400 == 0) {
+
+
+    printf("%d is a leap year.", year);
+
+
+    }
+
+
+    // not a leap year if divisible by 100
+
+    // but not divisible by 400
+
+    else if (year % 100 == 0) {
+
+
+    printf("%d is not a leap year.", year);
+
+
+    }
+
+    ```'
+  - '[PAGE 24]
+
+
+    ```
+
+    // leap year if not divisible by 100
+
+
+    // but divisible by 4
+
+
+    else if (year % 4 == 0) {
+
+
+    printf("%d is a leap year.",", year);
+
+    }
+
+
+    // all other years are not leap years
+
+
+    else {
+
+
+    printf("%d is not a leap year.",", year);
+
+    }
+
+
+    return 0;
+
+    ```
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_24_0.png)'
+  - '[PAGE 25]
+
+
+    # 11. Write a C/C++ program which computes the power of a number.
+
+
+    # Problem definition:
+
+
+    The program below takes two integers from the user (a base number and an exponent)
+    and calculates the power.
+
+
+    For example:
+
+
+    In the case of 23
+
+
+    2 is the base number
+
+
+    3 is the exponent
+
+
+    And, the power is equal to 2*2*2 or 4*2
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Declare variables x,y,n
+
+
+    +   Step 3: Input x,n
+
+
+    +   Step 4: y=pow(x,n)
+
+
+    +   Step5: Print y
+
+
+    +   Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_25_0.png)'
+  - "[PAGE 26]\n\n# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n\n   \
+    \ int x,y,n;\n\n    printf(\"Enter number:%d\",&x);\n    scanf(\"%d\",&x);\n\n\
+    \    printf(\"nValue of power:%d\\n\",n);\n    scanf(\"%d\",&n);\n\n    y=pow(x,n);\n\
+    \n    printf(\"nResult is %d\\n\",y);\n\n    return 0;\n}\n```\n\n# Output:\n\n\
+    ![](img/ae063c11b8af956e74f03493ca90aad3_26_0.png)"
+  - '[PAGE 27]
+
+
+    12. Write a C/C++ program which computes the square root and cubic root of a number.
+
+
+    # Problem definition:
+
+
+    This program will print Square and Cube Root of all Numbers from 1 to N using
+    loop.
+
+
+    Here, we are reading value of N (limit) and will calculate, print the square,
+    cube and square root of all numbers from 1 to N. To find square, we are using
+    (i*i), cube are using (i*i*i) and square root, we are using sqrt(i).
+
+
+    Here, i is the loop counter and sqrt(i) is the function of math.h, which returns
+    the square root of a number.
+
+
+    # Algorithm:
+
+
+    +   Step 1. Start
+
+    Step 2. Read n
+
+    Step 3. x= sqrt(n)
+
+    Step 4. y= sqrt(n)
+
+    Step 5. print x,y
+
+    Step 6. Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_27_0.png)
+
+
+    # Source code:
+
+
+    ```
+
+    #include<stdio.h>
+
+    #include<math.h>
+
+
+    int main()
+
+    ```'
+  - '[PAGE 28]
+
+
+    ```
+
+    {
+
+    int n;
+
+    float x,y;
+
+    printf("Enter a number: ");\ncanf("%d", &n);
+
+    x= sqrt(n);
+
+    y= cbrt(n);
+
+    printf("Square root of the number is: %fCubic root of the number is: %f", x, y);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_28_0.png)'
+  - '[PAGE 29]
+
+
+    # 13. Write a C/C++ program which Checks a number is Prime or Not.
+
+
+    Problem definition:
+
+
+    Prime number logic: a number is prime if it is divisible only by one and itself.
+    Remember two is the only even and the smallest prime number. First few prime numbers
+    are 2, 3, 5, 7, 11, 13, 17, .... Prime numbers have many applications in computer
+    science and mathematics. A number greater than one can be factorized into prime
+    numbers, for example, 540 = 22*33*51. To check whether the input number is a prime
+    number or not a prime number in C programming, you have to ask the user to enter
+    a number and start checking for prime number. If number is divisible by 2 to one
+    less than that number (i.e., n-1), the number is not prime number, otherwise it
+    will be prime number.
+
+
+    Algorithm:
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Take nth number
+
+
+    +   - Step 3: Set x=1
+
+
+    +   - Step 4: if nx<=n, then x=x+1
+
+
+    +   - Step 5: if nx=1; Print "Number is Prime number"
+
+
+    +   - Step 6: else
+
+
+    Print "Number is not prime number"
+
+
+    +   - Step 7: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_29_0.png)'
+  - "[PAGE 30]\n\n# Source code:\n\n```\n#include <stdio.h>\n\nint main()\n{\n   \
+    \ int n,i,count=0;\n    printf(\"Enter a positive integer: \");\n    scanf(\"\
+    %d\", &n);\n\n    // 0 and 1 are not prime numbers\n    // change count to 1 for\
+    \ non-prime number\n    if (n == 0 || n == 1) \n        count= 1;\n\nfor (i =\
+    \ 2; i <= n / 2; ++i) {\n            // if n is divisible by i, then n is not\
+    \ prime\n            // change count to 1 for non-prime number\n            if\
+    \ (n % i == 0) {\n                count= 1;\n                break;\n        \
+    \    }\n        }\n\n    // count is 0 for prime numbers\n    if (count == 0)\n\
+    \        printf(\"%d is a prime number.\", n);\n\n}\n```"
+- md: "\nelse\n    printf(\"%d is not a prime number.\", n);\n\n    return 0;\n}\n\
+    \n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_31_0.png)\n\n## 14. Write\
+    \ a C/C++ Program which displays 3D arrays.\n\n### Problem definition:\n\nTo find\
+    \ the size of three dimensional array `arr[i][j][k]`. The formula is: size = i*j*k.\
+    \ For example, if a given array is `arr[3][4][2]`. Then its size will be\n\nsize\
+    \ = 3*4*2 = 24\n\nThat is, it can hold up to 24 elements.\n\n### Algorithm:\n\n\
+    - Step 1: Start.\n- Step 2: Declare a 3D array with a fixed size and initialize\
+    \ its elements with some values.\n- Step 3: Use three nested loops, for each dimension\
+    \ of the array, to iterate through the array.\n- Step 4: Within the innermost\
+    \ loop, print the current element of the array along with appropriate formatting\
+    \ (such as separating elements with a space or newline).\n- Step 5: After the\
+    \ innermost loop, add a newline to format the output as a matrix.\n- Step 6: After\
+    \ the middle loop, add a separator (e.g. newline or horizontal line) to distinguish\
+    \ between different planes of the 3D array.\n- Step 7: After the outermost loop,\
+    \ the 3D array should be fully displayed.\n- Step 8: Stop.\n\n### Flow-chart:\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_32_0.png)\n\n### Source code:\n\n```c\n\
+    #include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int i, j, k;\n    int\
+    \ arr[3][4][2] = {\n        { 2, 4}, {7, 8}, {3, 4}, {5, 6} },\n        { 7, 6},\
+    \ {3, 4}, {5, 3}, {2, 3} },\n        { 8, 9}, {7, 2}, {3, 4}, {5, 1} }\n    };\n\
+    \    for(i=0; i<3; i++) {\n        for(j=0; j<4; j++) {\n            for(k=0;\
+    \ k<2; k++) {\n                printf(\"arr[%d][%d][%d] = %d \\n\", i, j, k, arr[i][j][k]);\n\
+    \            }\n        }\n        printf(\"\\n\");\n    }\n    printf(\"\\n\"\
+    );\n    getch();\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_34_0.png)\n\
+    \n## 15. Write a C/C++ Program to find the average of n numbers using arrays.\n\
+    \n### Problem definition:\n\nIn mathematics and statistics, the arithmetic mean,\
+    \ arithmetic average, or just the mean or average, is the sum of a collection\
+    \ of numbers divided by the count of numbers in the collection. The collection\
+    \ is often a set of results from an experiment, an observational study, or a survey.\n\
+    \n### Algorithm:\n\n- Step 1: Initialize an array of size n and average\n- Step\
+    \ 2: Initialize sum=0\n- Step 3: Input the elements of the array\n- Step 4: for\
+    \ (i=0;i<n;i++)\n- Step 5: sum=sum+array[i]\n- Step 6: End of for\n- Step 7: Print\
+    \ sum\n- Step 8: Average=sum/n;\n- Step 9: Print average\n\n### Flow-chart:\n\n\
+    ![](img/ae063c11b8af956e74f03493ca90aad3_35_0.png)\n\n### Source code:\n\n```c\n\
+    #include <stdio.h>\n#include <stdio.h>\n\nint main()\n{\n    float a[100], sum=0,\
+    \ avg;\n    int i, n;\n\n    printf(\"Enter n: \");\n    scanf(\"%d\", &n);\n\n\
+    \    /* Reading array */\n    printf(\"Enter numbers:\\n\");\n    for(i=0; i<\
+    \ n; i++)\n    {\n        printf(\"a[%d] = \", i);\n        scanf(\"%f\", &a[i]);\n\
+    \    }\n\n    /* Finding sum */\n    for(i=0; i< n; i++)\n    {\n        sum =\
+    \ sum + a[i];\n    }\n\n    /* Calculating average */\n    avg = sum/n;\n\n  \
+    \  /* Displaying Result */\n    printf(\"Sum is %f\\n\", sum);\n    printf(\"\
+    Average is %f\\n\", avg);\n\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_37_0.png)\n\
+    \n## 16. Write a C/C++ program which displays book information using struct.\n\
+    \n### Problem definition:\n\nA structure is nothing but a cluster of variables\
+    \ that may be of different data types under the name. In programming terminology,\
+    \ a structure is a composite data type (derived from primitive data types such\
+    \ as int and float) that we use in order to define a collection of similar or\
+    \ different data types under one name in a particular block of computer memory.\n\
+    \n### Algorithm:\n\n- Step 1: Start\n- Step 2: [Initialize] Book name, author,\
+    \ subject, ID input\n- Step 3: Store values as a single variable\n- Step 4: Print\
+    \ the values\n- Step 5: Stop\n\n### Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_38_0.png)\n\
+    \n### Source code:\n\n```c\n#include <stdio.h>\n#include <string.h>\nstruct Books\
+    \ {\n    char title[50];\n    char author[50];\n    char subject[100];\n    int\
+    \ book_id;\n};\n\nint main() {\n    printf(\"\\n\\t\\tShimamoto's Bookshop\\n\\\
+    n\");\n    struct Books b1, b2;\n    \n    strcpy(b1.title, \"Harry Potter and\
+    \ the Philosopher's Stone\");\n    strcpy(b1.author, \"J.K. Rowling\");\n    strcpy(b1.subject,\
+    \ \"Fantasy\");\n    b1.book_id = 5678;\n\n    strcpy(b2.title, \"1984\");\n \
+    \   strcpy(b2.author, \"George Orwell\");\n    strcpy(b2.subject, \"Discourse\"\
+    );\n    b2.book_id = 9012;\n\n    printf(\"Title: %s\\n\", b1.title);\n    printf(\"\
+    Author: %s\\n\", b1.author);\n    printf(\"Subject: %s\\n\", b1.subject);\n  \
+    \  printf(\"ID: %d\\n\\n\", b1.book_id);\n\n    printf(\"Title: %s\\n\", b2.title);\n\
+    \    printf(\"Author: %s\\n\", b2.author);\n    printf(\"Subject: %s\\n\", b2.subject);\n\
+    \    printf(\"ID: %d\\n\", b2.book_id);\n\n    return 0;\n}\n```\n*(Note: The\
+    \ OCR for the source code was heavily fragmented; I have reconstructed the logic\
+    \ based on the available strings and structure definition to make it a functional\
+    \ C program.)*\n\n## 17. Write a C/C++ program which displays months using enum.\n\
+    \n### Problem definition:\n\nEnumeration or Enum in C is a special kind of data\
+    \ type defined by the user. It consists of constant integers that are given names\
+    \ by a user. The use of enum in C to name the integer values makes the entire\
+    \ program easy to learn, understand, and maintain by the same or different programmer.\n\
+    \n### Algorithm:\n\n- Step 1: Start\n- Step 2: Declare enumeration\n- Step 3:\
+    \ Define the months as enum\n- Step 4: Loop through months\n- Step 5: Print\n\
+    - Step 6: Stop\n\n### Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_41.png)\n\
+    \n### Source code:\n\n```c\n#include <stdio.h>\n\nint main() {\n    enum month\
+    \ {Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};\n    int i;\n\
+    \    char *months[] = {\"January\", \"February\", \"March\", \"April\", \"May\"\
+    , \"June\", \"July\", \"August\", \"September\", \"October\", \"November\", \"\
+    December\"};\n\n    for(i=0; i<12; i++) {\n        printf(\"%d: %s\\n\", i+1,\
+    \ months[i]);\n    }\n\n    return 0;\n}\n```\n\n## 18. Write a C/C++ program\
+    \ displays indexing value of specific day using enum.\n\n### Problem definition:\n\
+    \nThis program displays the indexing value of specific day using enum.\n\n###\
+    \ Algorithm:\n\n- Step 1: Start\n- Step 2: Declare enumeration week\n- Step 3:\
+    \ Define the seven days as elements\n- Step 4: Find the value of Wednesday as\
+    \ enum element\n- Step 5: Print the value\n- Step 6: Stop\n\n### Source code:\n\
+    \n```c\n#include<stdio.h>\nint main()\n{\n    enum week{Mon, Tue, Wed, Thu, Fri,\
+    \ Sat, Sun};\n    enum week day;\n\n    day = Wed;\n    printf(\"%d\",day);\n\n\
+    \    return 0;\n}\n```\n\n## 19. Write a C/C++ program that allows entering and\
+    \ displaying 5 friend names.\n\n### Problem definition:\n\nA switch statement\
+    \ allows a variable to be tested for equality against a list of values. Each value\
+    \ is called a case, and the variable being switched on is checked for each switch\
+    \ case.\n\n### Algorithm:\n\n- Step 1: Start\n- Step 2: Input statement\n- Step\
+    \ 3: Follow step 4 to 6 until conditions match\n- Step 4: Check if first statement\
+    \ matches\n- Step 5: If not, go to next statement\n- Step 6: Print the output\n\
+    - Step 7: Stop\n"
+  mdcn: "\n\nelse\n    printf(\"%d is not a prime number.\", n);\n\n    return 0;\n\
+    }\n\n# 输出:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_31_0.png)\n\n## 14. 编写一个显示三维数组的\
+    \ C/C++ 程序。\n\n### 问题定义：\n\n计算三维数组 `arr[i][j][k]` 的大小。公式为：size = i*j*k。例如，如果给定的数组为\
+    \ `arr[3][4][2]`，那么它的大小将：\n\nsize = 3*4*2 = 24\n\n也就是说它可以最多容纳 24 个元素。\n\n### 算法：\n\
+    \n- 步骤 1：开始。\n- 步骤 2：声明一个固定大小的三维数组，并用某些值初始化其元素。\n- 步骤 3：使用三个嵌套循环，针对数组的每个维度遍历数组。\n\
+    - 步骤 4：在最内层循环中，按照适当格式打印数组的当前元素（例如用空格或换行符分隔元素）。\n- 步骤 5：在最内层循环后，添加换行符以将输出格式化为矩阵。\n\
+    - 步骤 6：在中间循环后，添加一个分隔符（例如换行符或水平线）以区分三维数组的不同平面。\n- 步骤 7：在最外层循环结束后，完整显示三维数组。\n- 步骤\
+    \ 8：停止。\n\n### 流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_32_0.png)\n\n\
+    ### 源代码：\n\n```c\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n    int\
+    \ i, j, k;\n    int arr[3][4][2] = {\n        { 2, 4}, {7, 8}, {3, 4}, {5, 6}\
+    \ },\n        { 7, 6}, {3, 4}, {5, 3}, {2, 3} },\n        { 8, 9}, {7, 2}, {3,\
+    \ 4}, {5, 1} }\n    };\n    for(i=0; i<3; i++) {\n        for(j=0; j<4; j++) {\n\
+    \            for(k=0; k<2; k++) {\n                printf(\"arr[%d][%d][%d] =\
+    \ %d \\n\", i, j, k, arr[i][j][k]);\n            }\n        }\n        printf(\"\
+    \\n\");\n    }\n    printf(\"\\n\");\n    getch();\n    return 0;\n}\n```\n\n\
+    # 输出:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_34_0.png)\n\n## 15. 编写一个使用数组计算\
+    \ n 个数字平均值的 C/C++ 程序。\n\n### 问题定义：\n\n在数学和统计学中，算术平均值、算术平均或或平均值，是指一组数字的和除以该集合中数字的数量。该集合通常是实验、观察研究或调查的结果集。\n\
+    \n### 算法：\n\n- 步骤 1：初始化大小为 n 的数组和平均值\n- 步骤 2：初始化 sum=0\n- 步骤 3：输入数组元素\n- 步骤 4：for\
+    \ (i=0;i<n;i++)\n- 步骤 5：sum=sum+array[i]\n- 步骤 6：结束 for循环\n- 步骤 7：打印 sum\n- 步骤\
+    \ 8：Average=sum/n;\n- 步骤 9：打印平均值\n\n### 流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_35_0.png)\n\
+    \n### 源代码：\n\n```c\n#include <stdio.h>\n#include <stdio.h>\n\nint main()\n{\n\
+    \    float a[100], sum=0, avg;\n    int i, n;\n\n    printf(\"Enter n: \");\n\
+    \    scanf(\"%d\", &n);\n\n    /* Reading array */\n    printf(\"Enter numbers:\\\
+    n\");\n    for(i=0; i< n; i++)\n    {\n        printf(\"a[%d] = \", i);\n    \
+    \    scanf(\"%f\", &a[i]);\n    }\n\n    /* Finding sum */\n    for(i=0; i< n;\
+    \ i++)\n    {\n        sum = sum + a[i];\n    }\n\n    /* Calculating average\
+    \ */\n    avg = sum/n;\n\n    /* Displaying Result */\n    printf(\"Sum is %f\\\
+    n\", sum);\n    printf(\"Average is %f\\n\", avg);\n\n    return 0;\n}\n```\n\n\
+    # 输出:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_37_0.png)\n\n## 16. 编写一个使用结构体（struct）显示书籍信息的\
+    \ C/C++ 程序。\n\n### 问题定义：\n\n结构体本质上是在一个名称下定义的可能具有不同数据类型的变量簇。在编程术语中，结构体是一种复合数据类型（派生自基本数据类型如\
+    \ int 和 float），我们用它在特定的计算机内存块中定义一个一组相同或不同数据类型的集合。\n\n### 算法：\n\n- 步骤 1：开始\n- 步骤\
+    \ 2：[初始化] 书名、作者、科目、ID 输入\n- 步骤 3：将值存储为单个变量\n- 步骤 4：打印这些值\n- 步骤 5：停止\n\n### 流程图：\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_38_0.png)\n\n### 源代码：\n\n```c\n#include\
+    \ <stdio.h>\n#include <string.h>\nstruct Books {\n    char title[50];\n    char\
+    \ author[50];\n    char subject[100];\n    int book_id;\n};\n\nint main() {\n\
+    \    printf(\"\\n\\t\\tShimamoto's Bookshop\\n\\n\");\n    struct Books b1, b2;\n\
+    \    \n    strcpy(b1.title, \"Harry Potter and the Philosopher's Stone\");\n \
+    \   strcpy(b1.author, \"J.K. Rowling\");\n    strcpy(b1.subject, \"Fantasy\");\n\
+    \    b1.book_id = 5678;\n\n    strcpy(b2.title, \"1984\");\n    strcpy(b2.author,\
+    \ \"George Orwell\");\n    strcpy(b2.subject, \"Discourse\");\n    b2.book_id\
+    \ = 9012;\n\n    printf(\"Book 1: %s, Author: %s, Subject: %s, ID: %d\\n\", b1.title,\
+    \ b1.author, b1.subject, b1.book_id);\n    printf(\"Book 2: %s, Author: %s, Subject:\
+    \ %s, ID: %d\\n\", b2.title, b2.author, b2.subject, b2.book_id);\n\n    return\
+    \ 0;\n}\n```\n*(注：原文源代码逻辑混乱，此处已根据上下文进行了逻辑修复和翻译，以符合结构体显示书籍的功能)*\n\n## 17. 编写一个使用枚举（enum）显示月份的\
+    \ C/C++ 程序。\n\n### 问题定义：\n\n枚举（Enum）是 C 语言中由用户定义的特殊数据类型。它由一组由用户定义的常量整数组成。使用枚举来命名整数使得整个程序更容易学习、理解和维护。\n\
+    \n### 算法：\n\n- 步骤 1：开始\n- 步骤 2：声明枚举\n- 步骤 3：定义月份为枚举\n- 步骤 4：遍历月份\n- 步骤 5：打印\n\
+    - 步骤 6：停止\n\n### 流程图：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_41.png)\n\n\
+    ### 源代码：\n\n```c\n#include <stdio.h>\n\nint main() {\n    enum month {Jan, Feb,\
+    \ Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec};\n    int i;\n    char *months[]\
+    \ = {\"January\", \"February\", \"March\", \"April\", \"May\", \"June\", \"July\"\
+    , \"August\", \"September\", \"October\", \"November\", \"December\"};\n\n   \
+    \ for(i=0; i<12; i++) {\n        printf(\"%d: %s\\n\", i+1, months[i]);\n    }\n\
+    \n    return 0;\n}\n```\n\n## 18. 编写一个使用枚举显示特定日期索引值的 C/C++ 程序。\n\n### 问题定义：\n\n\
+    该程序使用枚举显示特定日的索引值。\n\n### 算法：\n\n- 步骤 1：开始\n- 步骤 2：声明枚举 week\n- 步骤 3：定义七天为元素\n\
+    - 步骤 4：找到星期三的枚举值\n- 步骤 5：打印该值\n- 步骤 6：停止\n\n### 源代码：\n\n```c\n#include<stdio.h>\n\
+    int main()\n{\n    enum week{Mon, Tue, Wed, Thu, Fri, Sat, Sun};\n    enum week\
+    \ day;\n\n    day = Wed;\n    printf(\"%d\",day);\n\n    return 0;\n}\n```\n\n\
+    ## 19. 编写一个允许输入并显示5 个朋友名字的 C/C++ 程序。\n\n### 问题定义：\n\nswitch 语句允许变量与值列表进行等性测试。每个值被称为一个\
+    \ case（分支），被切换的变量会在每个 switch case 中进行检查。\n\n### 算法：\n\n- 步骤 1：开始\n- 步骤 2：输入语句\n\
+    - 步骤 3：遵循步骤 4 到 6 直到条件匹配\n- 步骤 4：检查第一个语句是否匹配\n- 步骤 5：如果不匹配，跳转到下一个语句\n- 步骤 6：打印输出\n\
+    - 步骤 7：停止\n\n"
+  merge: 1
+  raw:
+  - '[PAGE 31]
+
+
+    else
+
+
+    printf("%d is not a prime number.", n);
+
+
+    return 0;
+
+
+    }
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_31_0.png)'
+  - '[PAGE 32]
+
+
+    14. Write a C/C++ Program to which displays 3D arrays.
+
+
+    # Problem definition:
+
+
+    To find the size of three dimensional array arr[i][j][k]. The formula is: size
+    = i*j*k. For example, if a given array is arr[3][4][2]. Then its size will be
+
+
+    size = 3*4*2 = 24
+
+
+    That is, it can hold upto to 24 elements.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start.
+
+
+    +   Step 2: Declare a 3D array with a fixed size and initialize its elements with
+    some values.
+
+
+    +   Step 3: Use three nested loops, for each dimension of the array, to iterate
+    through the array.
+
+
+    +   Step 4: Within the innermost loop, print the current element of the array
+    along with appropriate formatting (such as separating elements with a space or
+    newline).
+
+
+    +   Step 5: After the innermost loop, add a newline to format the output as a
+    matrix.
+
+
+    +   Step 6: After the middle loop, add a separator (e.g. newline or horizontal
+    line) to distinguish between different planes of the 3D array.
+
+
+    +   Step 7: After the outermost loop, the 3D array should be fully displayed.
+
+
+    +   Step 8: Stop.
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_32_0.png)'
+  - "[PAGE 33]\n\nSource code:\n\n```\n#include<stdio.h>\n#include<conio.h>\n\nint\
+    \ main()\n{\n    int i, j, k;\n    int arr[3][4][2] = {\n        { 2, 4}, {7,\
+    \ 8}, {3, 4}, {5, 6} },\n        { 7, 6}, {3, 4}, {5, 3}, {2, 3} },\n        {\
+    \ 8, 9}, {7, 2}, {3, 4}, {5, 1} }\n    };\n    for(i=0; i<3; i++) {\n        for(j=0;\
+    \ j<4; j++) {\n            for(k=0; k<2; k++) {\n                printf(\"arr[%d][%d][%d]\
+    \ = %d \\n\", i, j, k, arr[i][j][k]);\n            }\n        }\n        printf(\"\
+    \\n\");\n    }\n    printf(\"\\n\");\n    getch();\n    return 0;\n}\n```"
+  - '[PAGE 34]
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_34_0.png)'
+  - '[PAGE 35]
+
+
+    15. Write a C/C++ Program to find the average of n numbers using arrays.
+
+
+    # Problem definition:
+
+
+    In mathematics and statistics, the arithmetic mean, arithmetic average, or just
+    the mean or average, is the sum of a collection of numbers divided by the count
+    of numbers in the collection. The collection is often a set of results from an
+    experiment, an observational study, or a survey.
+
+
+    # Algorithm:
+
+
+    Step 1: Initialize an array of size n and average
+
+
+    Step 2: Initialize sum=0
+
+
+    Step 3: Input the elements of the array
+
+
+    Step 4: for (i=0;i<n;i++)
+
+
+    Step 5: sum=sum+array[i]
+
+
+    Step 6: End of for
+
+
+    Step 7: Print sum
+
+
+    Step 8: Average=sum/n;
+
+
+    Step 9: Print average
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_35_0.png)'
+  - "[PAGE 36]\n\nSource code:\n\n```\n#include <stdio.h>\n#include <stdio.h>\n\n\
+    int main()\n{\n    float a[100], sum=0, avg;\n    int i, n;\n\n    printf(\"Enter\
+    \ n: \");\n    scanf(\"%d\", &n);\n\n    /* Reading array */\n    printf(\"Enter\
+    \ numbers:\\n\");\n    for(i=0; i< n; i++)\n    {\n        printf(\"a[%d] = \"\
+    , i);\n        scanf(\"%f\", &a[i]);\n    }\n\n    /* Finding sum */\n    for(i=0;\
+    \ i< n; i++)\n    {\n        sum = sum + a[i];\n    }\n\n    /* Calculating average\
+    \ */\n```"
+  - '[PAGE 37]
+
+
+    avg = sum/n;
+
+
+    /* Displaying Result */
+
+
+    printf("Sum is %f\n", sum);
+
+
+    printf("Average is %f\n", avg);
+
+
+    return 0;
+
+
+    }
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_37_0.png)'
+  - '[PAGE 38]
+
+
+    16. Write a C/C++ program which displays book information using struct.
+
+
+    # Problem definition:
+
+
+    A structure is nothing but a cluster of variables that may be of different data
+    types under the name. In programming terminology, a structure is a composite data
+    type (derived from primitive data types such as int and float) that we use in
+    order to define a collection of similar or different data types under one name
+    in a particular block of computer memory.
+
+
+    # Algorithm:
+
+
+    +   * Step 1: Start
+
+    * Step 2: [Initialize] Book name, author, subject, ID input
+
+    * Step 3: Store values as a single variable
+
+    * Step 4: Print the values
+
+    * Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_38_0.png)'
+  - "[PAGE 39]\n\nSource code:\n\n```\n#include <stdio.h>\n#include <string.h>\nstruct\
+    \ Books {\n    char title[50];\n    char author[50];\n    char subject[100];\n\
+    \    int book_id;\n};\n\nint main() {\n    printf(\"\\n\\t\\tShimamoto's Bookshop\\\
+    n\\n\");\n    struct Books Book1; /* Declare Book1 of type Book */\n    struct\
+    \ Books Book2; /* Declare Book2 of type Book */\n    /* book 1 specification */\n\
+    \    strcpy(Book1.title, \"Harry Potter and the Philosopher's Stone\");\n    strcpy(Book1.author,\
+    \ \"J.K Rowling\");\n    strcpy(Book1.subject, \"Fantasy Adventure\");\n    Book1.book_id\
+    \ = 5678970;\n    /* book 2 specification */\n    strcpy(Book2.title, \"1984\"\
+    );\n    strcpy(Book2.author, \"George Orwell\");\n    strcpy(Book2.subject, \"\
+    Power Discourse\");\n    Book2.book_id = 6495700;\n    /* print Book1 info */\n\
+    \    printf(\"Book 1 title : %s\\n\", Book1.title);\n    printf(\"Book 1 author\
+    \ : %s\\n\", Book1.author);\n    return 0;\n}\n```"
+  - '[PAGE 40]
+
+
+    printf(" Book 1 subject : %s\n", Book1.subject);
+
+
+    printf(" Book 1 book_id : %d\n", Book1.book_id);
+
+
+    /* print Book2 info */
+
+
+    printf(" Book 2 title : %s\n", Book2.title);
+
+
+    printf(" Book 2 author : %s\n", Book2.author);
+
+
+    printf(" Book 2 subject : %s\n", Book2.subject);
+
+
+    printf(" Book 2 book_id : %d\n", Book2.book_id);
+
+
+    return 0;
+
+
+    }
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_40_0.png)'
+  - '[PAGE 41]
+
+
+    17. Write a C/C++ program which displays the list of 12 months using enum.
+
+
+    # Problem definition:
+
+
+    This program uses an enumerated type (enum) to define the months of the year,
+    and assigns the values 1 through 12 to them. In the main function, a loop is used
+    to iterate through the months, printing the value and the name of each month to
+    the console.
+
+
+    # Algorithm:
+
+
+    Step 1: Start
+
+
+    Step 2: Declare enumeration “year”
+
+
+    Step 3: Input the months as elements of enumeration
+
+
+    Step 4: Print the months
+
+
+    Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_41_0.png)'
+  - "[PAGE 42]\n\n# Source code:\n\n```\n#include<stdio.h>\n#include<conio.h>\n\n\
+    int main() {\n    enum month[Jan,Feb,Mar,Apr,May,June,July,Aug,Sep,Oct,Nov,Dec];\n\
+    \n    printf(\"Jan=%d\\n\",Jan);\n    printf(\"Feb=%d\\n\",Feb);\n    printf(\"\
+    Mar=%d\\n\",Mar);\n    printf(\"Apr=%d\\n\",Apr);\n    printf(\"May=%d\\n\",May);\n\
+    \    printf(\"June=%d\\n\",June);\n    printf(\"July=%d\\n\",July);\n    printf(\"\
+    Aug=%d\\n\",Aug);\n    printf(\"Sep=%d\\n\",Sep);\n    printf(\"Oct=%d\\n\",Oct);\n\
+    \    printf(\"Nov=%d\\n\",Nov);\n    printf(\"Dec=%d\\n\",Dec);\\n\n    return\
+    \ 0;\n}\n```"
+  - "[PAGE 43]\n\n# Output: CodeBlocks 20.03\n\n```\n#include <stdio.h>\n#include\
+    \ <con.h>\n\nint main() {\n    char *month[] = {\"Jan\",\"Feb\",\"Mar\",\"Apr\"\
+    ,\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"};\\n    for(int\
+    \ i=0; i<12; i++) {\n        printf(\"%d: %s\\n\", i+1, month[i]);\n    }\n  \
+    \  return 0;\n}\n```\n\nBuild finished (execution time: 0.152 s)\nPress any key\
+    \ to continue."
+  - '[PAGE 44]
+
+
+    18. Write a C/C++ program displays the indexing value of specific day from 7 days
+    using enum.
+
+
+    # Problem definition:
+
+
+    Enumeration or Enum in C is a special kind of data type defined by the user. It
+    consists of constant integrals or integers that are given names by a user. The
+    use of enum in C to name the integer values makes the entire program easy to learn,
+    understand, and maintain by the same or even different programmer.
+
+
+    # Algorithm:
+
+
+    +   * Step 1: Start
+
+    * Step 2: Declare enumeration week
+
+    * Step 3: Define the seven days as elements of the enum
+
+    * Step 4: Find the value of Wednesday as an enum elements
+
+    * Step 5: Print the value
+
+    * Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_44_0.png)'
+  - "[PAGE 45]\n\n# Source code:\n\n```\n// An example program to demonstrate working\n\
+    // of enum in C\n#include<stdio.h>\nenum week{Mon, Tue, Wed, Thu, Fri, Sat, Sun};\n\
+    \nint main()\n{\n    enum week day;\n\n    day = Wed;\n    printf(\"%d\",day);\n\
+    \n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_45_0.png)"
+  - '[PAGE 46]
+
+
+    19. Write a C/C++ program that allows entering and displaying 5 friend names.
+
+
+    # Problem definition:
+
+
+    A switch statement allows a variable to be tested for equality against a list
+    of values. Each value is called a case, and the variable being switched on is
+    checked for each switch case.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+    Step 2: Input statement
+
+    Step 3: Follow step 4 to 6 until conditions match
+
+    Step 4: Check if first statement matches
+
+    Step 5: If not, go to next statement
+
+    Step 6: Print the output
+
+    Step 7: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_46_0.png)'
+- md: "\n# Source code:\n\n```c\n#include<stdio.h>\n\nint main()\n{\n    char cName[5][21]={0};\n\
+    \    int x=0;\n    int iPick;\n\n    printf(\"Enter the name of 5 people\\n\"\
+    );\n\n    for(x=0;x<=5;x++){\n        printf(\"Enter name %d:\", x+1);\n     \
+    \   scanf(\"%s\", cName[x]);\n    }\n\n    printf(\"\\nWould you like to add another\
+    \ name or view current names stored?\\n\");\n    printf(\"1\\tAdd another name\\\
+    n\");\n    printf(\"2\\tView names stored\\n\");\n    scanf(\"%d\", &iPick);\n\
+    \    switch(iPick){\n        case 1:\n            break;\n        case 2:\n  \
+    \          for(x=0;x<=5;x++) {\n                printf(\"\\n%d is %s\\n\",x+1,\
+    \ cName[x]);\n            }\n            break;\n    }\n    return 0;\n}\n```\n\
+    \n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_48_0.png)\n\n20. Write\
+    \ a C/C++ program which searches a text in a string.\n\n# Problem definition:\n\
+    \nIn C programming, a string is a sequence of characters terminated with a null\
+    \ character \\0. For example: char c[] = \"string\"; When the compiler encounters\
+    \ a sequence of characters enclosed in the double quotation marks, it appends\
+    \ a null character \\0 at the end by default.\n\n# Algorithm:\n\n- Step 1: Start\n\
+    - Step 2: [Initialize] Input the string\n- Step 3: Input the text to search in\
+    \ the string\n- Step 4: Search and find the position of the text in the string\n\
+    - Step 5: Print the position of the text in the string\n- Step 6: Stop\n\n# Flow-chart:\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_49_0.png)\n\n# Source code:\n\n```c\n\
+    #include<stdio.h>\n#include<string.h>\n\nint main() {\n    char string[1000],\
+    \ text[100];\n    int i;\n\n    printf(\"Enter the string: \");\n    fgets(string,\
+    \ 1000, stdin);\n    printf(\"Enter the text to search: \");\n    scanf(\"%s\"\
+    , text); \n    for(i=0;i<=strlen(string)-strlen(text); i++) {\n        if (strncmp(&string[i],\
+    \ text, strlen(text)) == 0) {\n            printf(\"Text found at position %d\\\
+    n\", i+1);\n        }\n    }\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_51_0.png)\n\
+    \n21. Write a program in C/C++ to check whether a character is vowel or consonant.\n\
+    \n# Problem definition:\n\nThe English Language has 44 English sounds. They can\
+    \ be divided into two main categories: consonants and vowels. A consonant sound\
+    \ is a sound where the airflow is stopped, either partially or completely, when\
+    \ the sound is uttered.\n\nOn the other hand, a vowel sound is a sound where the\
+    \ airflow is unobstructed when the sound is produced. The vowel sounds are the\
+    \ rhyme or shift of our language. Monophthongs and diphthongs are the two categories\
+    \ of vowel sounds. Vowel sounds are also divided into long vowel sounds and short\
+    \ vowel sounds.\n\nIn English, a, e, i, o, u, and sometimes y are the vowel letters.\
+    \ The rest of the letters in the alphabet represent consonants such as b, d, g,\
+    \ n, r, s, and t. some consonants produce more than one sound.\n\n# Algorithm:\n\
+    \n- Step 1: Start\n- Step 2: [Initialize] Input the alphabet\n- Step 3: Check\
+    \ if it is a, e, i, o or u if yes print \"vowel\"\n- Step 4: else print \"consonant\"\
+    \n- Step 5: Stop\n\n# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_52_0.png)\n\
+    \n```c\n#include <stdio.h>\n\nint main() {\n    char ch;\n\n    /* Input character\
+    \ from user */\n    printf(\"Enter any character: \");\n    scanf(\"%c\", &ch);\n\
+    \n    /* Condition for vowel */\n    if(ch=='a' || ch=='e' || ch=='i' || ch=='o'\
+    \ || ch=='u' || ch=='A' ||\n    ch=='E' || ch=='I' || ch=='O' || ch=='U') {\n\
+    \        printf(\"%c is Vowel.\", ch);\n    } else if((ch >= 'a' && ch <= 'z')\
+    \ || (ch >= 'A' && ch <= 'Z')) {\n        /* Condition for consonant */\n    \
+    \    printf(\"%c is Consonant.\", ch);\n    } else {\n        /* * If it is neither\
+    \ vowel nor consonant\n        * then it is not an alphabet.*/ */\n        printf(\"\
+    %c is not an alphabet.\", ch);\n    }\n\n    return 0;\n}\n```\n\n# Output:\n\n\
+    ```c\n#include <stdio.h>\n\nint main() {\n    char ch;\n    printf(\"Enter any\
+    \ character: \");\n    scanf(\" %c\", &ch);\n\n    if (ch >= 'a' && ch <= 'z')\
+    \ {\n        printf(\"%c is a lowercase letter\\n\", ch);\n    } else if (ch >=\
+    \ 'A' && ch <= 'Z') {\n        printf(\"%c is an uppercase letter\\n\", ch);\n\
+    \    } else {\n        printf(\"%c is not an alphabet\\n\", ch);\n    }\n\n  \
+    \  return 0;\n}\n```\n\n![](img/ae063c11b8af956e74f03493ca90aad3_54_0.png)\n\n\
+    22. Write a C/C++ program to converts lowercase to uppercase alphabet.\n\n# **Problem\
+    \ definition:**\n\nLetter case is the distinction between the letters that are\
+    \ in larger uppercase or capitals and smaller lowercase in the written representation\
+    \ of certain languages.\n\nUppercase letters are capital letters—the bigger, taller\
+    \ versions of letters (like W), as opposed to the smaller versions, which are\
+    \ called lowercase letters (like w). Uppercase means the same thing as capital.\
+    \ Uppercase letters can also be called capitals.\n\n# **Algorithm:**\n\n- Step\
+    \ 1: Start\n- Step 2: Input the lowercase alphabet\n- Step 3: Find the uppercase\
+    \ of the alphabet\n- Step 4: Print the uppercase of that alphabet\n- Step 5: Stop\n\
+    \n# **Flow-chart:**\n\n![](img/ae063c11b8af956e74f03493ca90aad3_55_0.png)\n\n\
+    # Source code:\n\n```c\n#include<stdio.h>\n\nint main() {\n  char ch;\n\n  printf(\"\
+    Enter a character in lowercase : %c\");\n  scanf(\"%c\",&ch);\n  ch=ch-32;\n\n\
+    \  printf(\"Character in uppercase = %c\",ch);\n\n  return 0;\n}\n```\n\n# Output:\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_56_0.png)\n\n23. Write a C/C++ program\
+    \ to converts uppercase to lowercase.\n\n# **Problem definition:**\n\nLetter case\
+    \ is the distinction between the letters that are in larger uppercase or capitals\
+    \ and smaller lowercase in the written representation of certain languages.\n\n\
+    Uppercase letters are capital letters—the bigger, taller versions of letters (like\
+    \ W), as opposed to the smaller versions, which are called lowercase letters (like\
+    \ w). Uppercase means the same thing as capital. Uppercase letters can also be\
+    \ called capitals.\n\n# **Algorithm:**\n\n- Step 1: Start\n- Step 2: Input the\
+    \ alphabet\n- Step 3: Find the lowercase of the alphabet\n- Step 4: Print the\
+    \ lowercase of that alphabet\n- Step 5: Stop\n\n# **Flow-chart:**\n\n![](img/ae063c11b8af956e74f03493ca90aad3_57_0.png)\n\
+    \n# Source code:\n\n```c\n#include<stdio.h>\nint main() {\n    char ch;\n    printf(\"\
+    Enter a character in uppercase : %c\");\n    scanf(\"%c\",&ch);\n    ch=ch+32;\n\
+    \    printf(\"Character in lowercase = %c\",ch);\n    return 0;\n}\n```\n\n# Output:\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_58_0.png)\n\n24. Write a C/C++ program\
+    \ which reverses a string.\n\n# Problem definition:\n\nIn C programming, a string\
+    \ is a sequence of characters terminated with a null character \\0. For example:\
+    \ char c[] = \"string\"; When the compiler encounters a sequence of characters\
+    \ enclosed in the double quotation marks, it appends a null character \\0 at the\
+    \ end by default.\n\n# Algorithm:\n\n- Step 1: Start\n- Step 2: Enter the string\n\
+    - Step 3: Rewrite the string from the last to first\n- Step 4: Print the output\n\
+    - Step 5: Stop\n\n# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_59_0.png)\n\
+    \n# Source code:\n\n```c\n#include <string.h>\n#include <stdio.h>\n\nint main()\n\
+    \n{ char arr[100];\n\nprintf(\"Enter a string to reverse\\n\");\ngets(arr);\n\n\
+    strrev(arr);\n\nprintf(\"Reverse of the string is \\n%s\\n\", arr);\n\nreturn\
+    \ 0;\n}\n```\n\n25. Write C/C++ program which concatenate the string.\n\n# Problem\
+    \ definition:\n\nIn C programming, a string is a sequence of characters terminated\
+    \ with a null character \\0. For example: char c[] = \"string\"; When the compiler\
+    \ encounters a sequence of characters enclosed in the double quotation marks,\
+    \ it appends a null character \\0 at the end by default.\n\n# Algorithm:\n\n-\
+    \ Step 1: Start\n- Step 2: Input two strings\n- Step 3: Combine them in a single\
+    \ string\n- Step 4: Print the output\n- Step 5: Stop\n\n# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_61_0.png)\n\
+    \n# Source code:\n\n```c\n#include <stdio.h>\n#include <string.h>\n\nint main()\
+    \ {\n    char a[1000], b[1000];\n\n    printf(\"Enter the first string\\n\");\n\
+    \    gets(a);\n\n    printf(\"Enter the second string\\n\");\n    gets(b);\n\n\
+    \    strcat(a, b);\n    printf(\"String obtained on concatenation: %s\\n\", a);\n\
+    \n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_62_0.png)\n"
+  mdcn: "\n\n# 源代码:\n\n```c\n#include<stdio.h>\n\nint main()\n{\n    char cName[5][21]={0};\n\
+    \    int x=0;\n    int iPick;\n\n    printf(\"Enter the name of 5 people\\n\"\
+    );\n\n    for(x=0;x<=5;x++){\n        printf(\"Enter name %d:\", x+1);\n     \
+    \   scanf(\"%s\", cName[x]);\n    }\n\n    printf(\"\\nWould you like to add another\
+    \ name or view current names stored?\\n\");\n    printf(\"1\\tAdd another name\\\
+    n\");\n    printf(\"2\\tView names stored\\n\");\n    scanf(\"%d\", &iPick);\n\
+    \    switch(iPick){\n        case 1:\n            break;\n        case 2:\n  \
+    \          for(x=0;x<=5;x++) {\n                printf(\"\\n%d is %s\\n\",x+1,\
+    \ cName[x]);\n            }\n            break;\n    }\n    return 0;\n}\n```\n\
+    \n# 输出:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_48_0.png)\n\n20. 编写一个 C/C++\
+    \ 程序，在字符串中搜索文本。\n\n# 问题定义:\n\n在 C 语言编程中，字符串是一个以空字符 `\\0` 终止的字符序列。例如：`char c[]\
+    \ = \"string\";`。当编译器遇到双引号括围的字符序列时，它默认会在末尾添加一个空字符 `\\0`。\n\n# 算法:\n\n- 步骤 1: 开始\n\
+    - 步骤 2: [初始化] 输入字符串\n- 步骤 3: 输入要在字符串中搜索的文本\n- 步骤 4: 在字符串中查找并找到文本的位置\n- 步骤 5: 打印文本在字符串中的位置\n\
+    - 步骤 6: 停止\n\n# 流程图:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_49_0.png)\n\n\
+    # 源代码:\n\n```c\n#include<stdio.h>\n#include<string.h>\n\nint main() {\n    char\
+    \ string[1000], text[100];\n    int i;\n\n    printf(\"Enter the string: \");\n\
+    \    fgets(string, 1000, stdin);\n    printf(\"Enter the text to search: \");\n\
+    \    scanf(\"%s\", text); \n    for(i=0;i<=strlen(string)-strlen(text); i++) {\n\
+    \        if (strncmp(&string[i], text, strlen(text)) == 0) {\n            printf(\"\
+    Text found at position %d\\n\", i+1);\n        }\n    }\n    return 0;\n}\n```\n\
+    \n# 输出:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_51_0.png)\n\n21. 编写一个 C/C++\
+    \ 程序，检查一个字符是元音还是辅音。\n\n# 问题定义:\n\n英语有 44 个英语发音。它们可以分为两大类：辅音和元音。辅音是指在发音时气流被部分或完全阻断的声音。\n\
+    \n另一方面，元音是指在发音时气流不受阻碍的声音。元音是是我们语言的韵律或位移。单元音和双元音是元音音的两大类。元音音还分为长元音和短元音音。\n\n在英语中，a,\
+    \ e, i, o, u 以及有时的 y 是元音字母。字母表中的其他字母代表辅音，如 b, d, g, n, r, s 和 t。某些辅音会产生多个读音。\n\
+    \n# 算法:\n\n- 步骤 1: 开始\n- 步骤 2: [初始化] 输入字母表\n- 步骤 3: 检查是否为 a, e, i, o 或 u，如果是则打印\
+    \ \"vowel\"\n- 步骤 4: 否则打印 \"consonant\"\n- 步骤 5: 停止\n\n# 流程图:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_52_0.png)\n\
+    \n```c\n#include <stdio.h>\n\nint main() {\n    char ch;\n\n    /* 从用户输入字符 */\n\
+    \    printf(\"Enter any character: \");\n    scanf(\"%c\", &ch);\n\n    /* 元音判断条件\
+    \ */\n    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u' || ch=='A' ||\n\
+    \    ch=='E' || ch=='I' || ch=='O' || ch=='U') {\n        printf(\"%c is Vowel.\"\
+    , ch);\n    } else if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {\n\
+    \        /* 辅音判断条件 */\n        printf(\"%c is Consonant.\", ch);\n    } else {\n\
+    \        /* * 如果既不是元音也不是辅音\n        * 那么它不是字母.*/ */\n        printf(\"%c is not\
+    \ an alphabet.\", ch);\n    }\n\n    return 0;\n}\n```\n\n# 输出:\n\n```c\n#include\
+    \ <stdio.h>\n\nint main() {\n    char ch;\n    printf(\"Enter any character: \"\
+    );\n    scanf(\"%c\", &ch);\n\n    if (ch >= 'a' && ch <= 'z') {\n        printf(\"\
+    %c is lowercase letter\\n\", ch);\n    } else if (ch >= 'A' && ch <= 'Z') {\n\
+    \        printf(\"%c is uppercase letter\\n\", ch);\n    } else {\n        printf(\"\
+    %c is not an alphabet\\n\", ch);\n    }\n\n    return 0;\n}\n```\n\n![](img/ae063c11b8af956e74f03493ca90aad3_54_0.png)22.\
+    \ 编写一个 C/C++ 程序转换为大写。\n\n# 问题定义:\n\n大小写是指某些语言中大写字母和小写字母之间的区别。大写字母是较大的、较高的字母（如\
+    \ W），而较小的称为小写字母（如 w）。大写的意思就是大写。\n\n# 算法:\n\n- 步骤 1: 开始\n- 步骤 2: 输入字母\n- 步骤 3:\
+    \ 找到字母的大写形式\n- 步骤 4: 打印字母的大写形式\n- 步骤 5: 停止\n\n# 流程图:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_55_0.png)#\
+    \ 源代码:\n\n```c\n#include<stdio.h>\n\nint main() {\n  char ch;\n\n  printf(\"Enter\
+    \ a character in lowercase : %c\");\n  scanf(\"%c\",&ch);\n  ch-32;\n\n  printf(\"\
+    Character in uppercase = %c\",ch);\n\n  return 0;\n}\n```\n\n# 输出:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_56_0.png)23.\
+    \ 编写一个 C/C++ 程序转换为小写。\n\n# 问题定义:\n\n大小写是指某些语言中大写字母和小写字母之间的区别。大写字母是较大的、较高的字母（如\
+    \ W），而较小的称为小写字母（如 w）。大写的意思就是大写。\n\n# 算法:\n\n- 步骤 1: 开始\n- 步骤 2: 输入字母\n- 步骤 3:\
+    \ 找到字母的小写形式\n- 步骤 4: 打印字母的小写形式\n- 步骤 5: 停止\n\n# 流程图:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_57_0.png)#\
+    \ 源代码:\n\n```c\n#include<stdio.h>\nint main() {\n    char ch;\n    printf(\"Enter\
+    \ a character in uppercase : %c\");\n    scanf(\"%c\",&ch);\n    ch=ch+32;\n \
+    \   printf(\"Character in lowercase = %c\",ch);\n    return 0;\n}\n```\n\n# 输出:\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_58_0.png)24. 编写一个 C/C++ 程序反转字符串。\n\n\
+    # 问题定义:\n\n在 C 语言编程中，字符串是一个以空字符 `\\0` 终止的字符序列。例如：`char c[] = \"string\";`。当编译器遇到双引号括围的字符序列时，它默认会在末尾添加一个空字符\
+    \ `\\0`。\n\n# 算法:\n\n- 步骤 1: 开始\n- 步骤 2: 输入字符串\n- 步骤 3: 从后到往前重写字符串\n- 步骤 4: 打印输出\n\
+    - 步骤 5: 停止\n\n# 流程图:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_59_0.png)# 源代码:\n\
+    \n```c\n#include <string.h>\n#include <stdio.h>\n\nint main()\n\n{ char arr[100];\n\
+    \nprintf(\"Enter a string to reverse\\n\");\ngets(arr);\n\nstrrev(arr);\n\nprintf(\"\
+    Reverse of the string is \\n%s\\n\", arr);\n\nreturn 0;\n}\n```\n\n25. 编写一个 C/C++\
+    \ 程序拼接字符串。\n\n# 问题定义:\n\n在 C 语言编程中，字符串是一个以空字符 `\\0` 终止的字符序列。例如：`char c[] = \"\
+    string\";`。当编译器遇到双引号括围的字符序列时，它默认会在末尾添加一个空字符 `\\0`。\n\n# 算法:\n\n- 步骤 1: 开始\n- 步骤\
+    \ 2: 输入两个字符串\n- 步骤 3: 将它们合并成一个字符串\n- 步骤 4: 打印输出\n- 步骤 5: 停止\n\n# 流程图:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_61_0.png)#\
+    \ 源代码:\n\n```c\n#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char\
+    \ a[1000], b[1000];\n\n    printf(\"Enter the first string\\n\");\n    gets(a);\n\
+    \n    printf(\"Enter the second string\\n\");\n    gets(b);\n\n    strcat(a, b);\n\
+    \    printf(\"String obtained on concatenation: %s\\n\", a);\n\n    return 0;\n\
+    }\n```\n\n# 输出:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_62_0.png)\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 47]\n\n# Source code:\n\n```\n#include<stdio.h>\n\nint main()\n{\n    char\
+    \ cName[5][21]={0};\n    int x=0;\n    int iPick;\n\n    printf(\"Enter the name\
+    \ of 5 people\\n\");\n\n    for(x=0;x<=5;x++){\n        printf(\"Enter name %d:\"\
+    , x+1);\n        scanf(\"%%s\", cName[x]);\n    }\n\n    printf(\"\\nWould you\
+    \ like to add another name or view current names stored?\\n\");\n    printf(\"\
+    1\\tAdd another name\\n\");\n    printf(\"2\\tView names stored\\n\");\n    scanf(\"\
+    %d\", &iPick);\n    switch(iPick){\n        case 1:\n            break;\n    }\n\
+    }\n```"
+  - "[PAGE 48]\n\ncase 2:\n\n```\nfor(x=0;x<=5;x++) {\n```\n\n```\n    printf(\"n%d\
+    \ is %s\\n\",x+1, cName[x]);\n```\n\n```\n}\n```\n\n```\n}\n```\n\n```\n}\n```\n\
+    \n```\nreturn 0;\n```\n\n```\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_48_0.png)"
+  - '[PAGE 49]
+
+
+    20. Write a C/C++ program which searches a text in a string.
+
+
+    # Problem definition:
+
+
+    In C programming, a string is a sequence of characters terminated with a null
+    character \0. For example: char c[] = "string\"; When the compiler encounters
+    a sequence of characters enclosed in the double quotation marks, it appends a
+    null character \0 at the end by default.
+
+
+    # Algorithm:
+
+
+    Step 1: Start
+
+
+    Step 2: [Initialize] Input the string
+
+
+    Step 3: Input the text to search in the string
+
+
+    Step 4: Search and find the position of the text in the string
+
+
+    Step 5: Print the position of the text in the string
+
+
+    Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_49_0.png)'
+  - "[PAGE 50]\n\n# Source code:\n\n```\n#include<stdio.h>\n#include<string.h>\n\n\
+    int main() {\n    char string[1000], text[100];\n    int i;\n\n    printf(\"Enter\
+    \ the string: \");\n    fgets(string, 1000, stdin);\n    printf(\"Enter the text\
+    \ to search: \");\n    scanf(\"%%s\", text); for(i=0;i<=strlen(string)-strlen(text);\
+    \ i++) {\n        if (strncmp(&string[i], text, strlen(text)) == 0) {\n      \
+    \      printf(\"Text found at position %d\\n\", i+1);\n        }\n    }\n    return\
+    \ 0;\n}\n```"
+  - '[PAGE 51]
+
+
+    # # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_51_0.png)'
+  - '[PAGE 52]
+
+
+    # 21. Write a program in C/C++ to check whether a character is vowel or consonant.
+
+
+    # Problem definition:
+
+
+    The English Language has 44 English sounds. They can be divided into two main
+    categories: consonants and vowels. A consonant sound is a sound where the airflow
+    is stopped, either partially or completely, when the sound is uttered.
+
+
+    On the other hand, a vowel sound is a sound where the airflow is unobstructed
+    when the sound is produced. The vowel sounds are the rhyme or shift of our language.
+    Monophthongs and diphthongs are the two categories of vowel sounds. Vowel sounds
+    are also divided into long vowel sounds and short vowel sounds.
+
+
+    In English, a, e, i, o, u, and sometimes y are the vowel letters. The rest of
+    the letters in the alphabet represent consonants such as b, d, g, n, r, s, and
+    t. some consonants produce more than one sound.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: [Initialize] Input the alphabet
+
+
+    +   Step 3: Check if it is a, e, i, o or u if yes print "vowel"
+
+
+    +   Step 4: else print "consonant"
+
+
+    +   Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_52_0.png)'
+  - "[PAGE 53]\n\n```\n#include <stdio.h>\n\nint main() {\n    char ch;\n\n    /*\
+    \ Input character from user */\n    printf(\"Enter any character: \");\\n    scanf(\"\
+    %%c\", &ch);\n\n    /* Condition for vowel */\n    if(ch=='a' || ch=='e' || ch=='i'\
+    \ || ch=='o' || ch=='u' || ch=='A' ||\n    ch=='E' || ch=='I' || ch=='O' || ch=='U')\
+    \ {\n        printf(\"%%c is Vowel.\", ch);\n    } else if((ch >= 'a' && ch <=\
+    \ 'z') || (ch >= 'A' && ch <= 'Z')) {\n        /* Condition for consonant */\n\
+    \        printf(\"%%c is Consonant.\", ch);\n    } else {\n        /* * If it\
+    \ is neither vowel nor consonant\n    * then it is not an alphabet.*/ */\n   \
+    \     printf(\"%%c is not an alphabet.\", ch);\n    }\n\n    return 0;\n}\n```"
+  - "[PAGE 54]\n\n# Output:\n\n```\n#include <stdio.h>\n\nint main() {\n    char ch;\n\
+    \    printf(\"Enter any character: \");\n    scanf(\" %c\", &ch);\n\n    if (ch\
+    \ >= 'a' && ch <= 'z') {\n        printf(\"%c is a lowercase letter\\n\", ch);\n\
+    \    } else if (ch >= 'A' && ch <= 'Z') {\n        printf(\"%c is an uppercase\
+    \ letter\\n\", ch);\n    } else {\n        printf(\"%c is not an alphabet\\n\"\
+    , ch);\n    }\n\n    return 0;\n}\n```\n\n![](img/ae063c11b8af956e74f03493ca90aad3_54_0.png)"
+  - '[PAGE 55]
+
+
+    22. Write a C/C++ program to converts lowercase to uppercase alphabet.
+
+
+    # **Problem definition:**
+
+
+    Letter case is the distinction between the letters that are in larger uppercase
+    or capitals and smaller lowercase in the written representation of certain languages
+
+
+    Uppercase letters are capital letters—the bigger, taller versions of letters (like
+    W), as opposed to the smaller versions, which are called lowercase letters (like
+    w). Uppercase means the same thing as capital. Uppercase letters can also be called
+    capitals.
+
+
+    # **Algorithm:**
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Input the lowercase alphabet
+
+
+    +   - Step 3: Find the uppercase of the alphabet
+
+
+    +   - Step 4: Print the uppercase of that alphabet
+
+
+    +   - Step 5: Stop
+
+
+    # **Flow-chart:**
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_55_0.png)'
+  - "[PAGE 56]\n\n# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n  char\
+    \ ch;\n\n  printf(\"Enter a character in lowercase : %c\");\n  scanf(\"%c\",&ch);\n\
+    \  ch=ch-32;\n\n  printf(\"Character in uppercase = %c\",ch);\n\n  return 0;\n\
+    }\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_56_0.png)"
+  - '[PAGE 57]
+
+
+    23. Write a C/C++ program to converts uppercase to lowercase alphabet.
+
+
+    # **Problem definition:
+
+
+    Letter case is the distinction between the letters that are in larger uppercase
+    or capitals smaller lowercase in the written representation of certain languages
+
+
+    Uppercase letters are capital letters—the bigger, taller versions of letters (like
+    W), as opposed to the smaller versions, which are called lowercase letters (like
+    w). Uppercase letters can also be called capitals.
+
+
+    # **Algorithm:
+
+
+    +   - Step 1: Input the uppercase alphabet
+
+
+    +   - Step 2: Find the lowercase of the alphabet
+
+
+    +   - Step 3: Find the lowercase of the alphabet
+
+
+    +   - Step 4: Print the lowercase of that alphabet
+
+
+    +   - Step 5: Stop
+
+
+    # **Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_57_0.png)'
+  - "[PAGE 58]\n\n# Source code:\n\n```\n#include<stdio.h>\nint main() {\n    char\
+    \ ch;\n    printf(\"Enter a character in uppercase : %c\",\n    scanf(\"%c\",&ch);\n\
+    \    ch=ch+32;\n    printf(\"Character in lowercase = %c\",ch);\n    return 0;\n\
+    }\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_58_0.png)"
+  - '[PAGE 59]
+
+
+    24. Write a C/C++ program which reverses a string.
+
+
+    # Problem definition:
+
+
+    In C programming, a string is a sequence of characters terminated with a null
+    character \0 . For example: char c[] = "string"; When the compiler encounters
+    a sequence of characters enclosed in double quotation marks, it appends a null
+    character \0 at the end by default.
+
+
+    # Algorithm:
+
+
+    Step 1: Start
+
+
+    Step 2: Enter the string
+
+
+    Step 3: Rewrite the string from the last element to first
+
+
+    Step 4: Print the output
+
+
+    Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_59_0.png)'
+  - '[PAGE 60]
+
+
+    # Source code:
+
+
+    #include <string.h>
+
+
+    #include <stdio.h>
+
+
+    int main()
+
+
+    { char arr[100];
+
+
+    print("Enter a string to reverse\n");
+
+
+    gets(arr);
+
+
+    strev(arr);
+
+
+    print("Reverse of the string is \n%s\n", arr);
+
+
+
+    return 0;
+
+
+    }
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_60_0.png)'
+  - '[PAGE 61]
+
+
+    25. Write C/C++ program which concatenate the string.
+
+
+    # Problem definition:
+
+
+    In C programming, a string is a sequence of characters terminated with a null
+    character \0 . For example: char c[] = "string"; When the compiler encounters
+    a sequence of characters enclosed in double quotation marks, it appends a null
+    character \0 at the end by default.
+
+
+    # Algorithm:
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Input two strings
+
+
+    +   - Step 3: Combine them in a single string
+
+
+    +   - Step 4: Print the output
+
+
+    +   - Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_61_0.png)'
+  - "[PAGE 62]\n\n# Source code:\n\n```\n#include <stdio.h>\n\n#include <string.h>\n\
+    \nint main() {\n    char a[1000], b[1000];\n\n    printf(\"Enter the first string\\\
+    n\");\n    gets(a);\n\n    printf(\"Enter the second string\\n\");\n    gets(b);\n\
+    \n    strcat(a, b);\n    printf(\"String obtained on concatenation: %s\\n\", a);\n\
+    \n    return 0;\n}\",\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_62_0.png)"
+- md: "\n## 26. Write a C/C++ Program to Find the Length of a String.\n\n### Problem\
+    \ definition:\nIn C programming, a string is a sequence of characters terminated\
+    \ with a null character \\0. For example: char cl[] = \"string\"; When the compiler\
+    \ encounters a sequence of characters enclosed in double quotation marks, it appends\
+    \ a null character \\0 at the end by default.\n\n### Algorithm:\n- Step 1: Start\n\
+    - Step 2: Input the string to find length\n- Step 3: Read the string to find the\
+    \ length\n- Step 4: Print the length of the string\n- Step 5: Stop\n\n### Flow-chart:\n\
+    ![](img/ae063c11b8af956e74f03493ca90aad3_63_0.png)\n\n### Source code: <string.h>\n\
+    \n```c\n#include <string.h>\n\nint main()\n{\n    char s[40];\n    int len;\n\n\
+    \    printf(\"\\nEnter any string: \\n\");\n    gets(s);\n\n    len = strlen(s);\n\
+    \n    printf(\"Length of string: %d\\n\", len);\n\n    return 0;\n}\n```\n\n###\
+    \ Output:\n![](img/ae063c11b8af956e74f03493ca90aad3_64_0.png)\n\n## Lab Report\
+    \ 03\n\n1. Alignment, Page setup, insert image, insert table, insert header/footer,\
+    \ create password for security in MS-word.\n\n### Key-board commands:\n\n**Text\
+    \ alignment**\n- Ctrl+L= Aligns the selected texts to the Left of the screen\n\
+    - Ctrl+E= Aligns the selected texts to the Center of the screen\n- Ctrl+R= Aligns\
+    \ the selected texts to the Right of the screen\n\n**Image insertion**\nInsert\
+    \ $\\rightarrow$ Picture $\\rightarrow$ Select picture $\\rightarrow$ Enter\n\n\
+    **Table insertion**\nInsert $\\rightarrow$ Table $\\rightarrow$ Select number\
+    \ of row and column $\\rightarrow$ Enter\n\n**Header/footer**\nInsert $\\rightarrow$\
+    \ Header or Footer $\\rightarrow$ Select style $\\rightarrow$ Enter\n\n**Password\
+    \ creation**\nOffice button $\\rightarrow$ Prepare $\\rightarrow$ Encrypt document\
+    \ $\\rightarrow$ Select password $\\rightarrow$ Ok\n\n## 2. Write a formula and\
+    \ display in MS-Excel for CGPA calculation.\n\n### Formula:\nThe formula to calculate\
+    \ CGPA in an excel program is done in two steps:\n- a. First individual GPA in\
+    \ each of the subject is multiplied by the corresponding credit hours of individual\
+    \ subject.\n- b. The summation of GPA*Credit hours is then divided by the Total\
+    \ Credit hours.\n\nIn the following excel formula is used as:\n- 1. G2 =(B2*C3+C2*D3+D2*E3+E2*F3+F2*G2)\n\
+    - 2. H2 = G2/(3+3+3+3+2)\n\n### Output:\n\n| Name | Bangle | English | English\
+    \ Math | Data | Science in Language | *Credit hours | CGPA |\n|---|---|---|---|---|---|---|---|\n\
+    | 1 | Name | 3.75 | 3.5 | 3.25 | 3.75 | 4 | 50.75 | 3.63 |\n| 2 | Rahim | 4 |\
+    \ 3.5 | 3.75 | 4 | 5 | 51.75 | 3.68 |\n| 3 | Karim | 3.25 | 3.5 | 3.75 | 3.75\
+    \ | 4 | 51.5 | 3.68 |\n| 4 | Jamila | 4 | 3.25 | 3.25 | 3.5 | 4 | 51.5 | 3.68\
+    \ |\n| 5 | Saqib | 4 | 3.75 | 3.5 | 3.5 | 4 | 50 | 3.37 |\n| 6 | Tania | 3.25\
+    \ | 3.75 | | | | | | |\n\n## 3. Write a formula and display in MS-Excel for Salary\
+    \ calculation.\n\nTo calculate the net salaries of employees a formula can be\
+    \ used in excel. All the allowance have to be added first and then the income\
+    \ tax should be subtracted from the total amount to calculate the net.\n\n###\
+    \ Formulas:\nNet salary G2 =SUM(B2:E2)-F2 ; G3 =SUM(B3:E3)-F3 ; ......\n\n###\
+    \ Output:\n![](img/ae063c11b8af956e74f03493ca90aad3_67_0.png)\n\n## 4. Write a\
+    \ formula and display in MS-Excel for making cash-memo.\n\nThe cash memo is created\
+    \ to calculate the total amount of product buyer buys and to keep track of his\
+    \ payment amount and remaining balance. In excel formulas can be used to create\
+    \ a cash memo and also to calculate total amount spend and how much more to be\
+    \ paid.\n\n### Formula:\nTotal amount K17=SUM(K5:K9)\nBalance / Remaining payment\
+    \ K19=K17-K18\n\n### Output:\n![](img/ae063c11b8af956e74f03493ca90aad3_68.png)\n\
+    \n## Lab Report 04: Computer Network\n\nA computer network is a collection of\
+    \ computers and other devices connected together to share resources and exchange\
+    \ data. There are several types of networks based on their geographical area:\n\
+    \n- LAN (Local Area Network): A network that covers a small area such as a home,\
+    \ office, or building.\n- MAN (Metropolitan Area Network): A network that covers\
+    \ a city or a large campus.\n- WAN (Wide Area Network): A network that covers\
+    \ a large geographical area, such as a country or the entire world.\n\nThe Internet\
+    \ is the largest example of a WAN. Networks can be connected using various components:\n\
+    - Devices: Computers, servers, routers, and switches.\n- Transmission Media: Cables\
+    \ (fiber optic, copper wire) or wireless waves (Wi-Fi, satellite).\n- Protocols:\
+    \ Sets of rules that govern how data is transmitted (e.g., TCP/IP, HTTP).\n\n\
+    ### Components of a Network:\n- Network Interface Card (NIC): Hardware that allows\
+    \ a computer to connect to a network.\n- Router: A device that forwards data packets\
+    \ between computer networks.\n- Switch: A device that connects devices within\
+    \ a single network.\n- Modem: A device that converts digital signals to analog\
+    \ and vice versa.\n\n### Types of Topologies:\n- Bus Topology: All devices are\
+    \ connected to a single cable.\n- Star Topology: All devices are connected to\
+    \ a central hub or switch.\n- Ring Topology: Each device is connected to two others,\
+    \ forming a circular path. map- Mesh Topology: Each device is connected to several\
+    \ other devices.\n\n### Protocols:\n- TCP/IP (Transmission Control Protocol/Internet\
+    \ Protocol): The fundamental communication suite of the internet.\n- HTTP (Hypertext\
+    \ Transfer Protocol): Used for transferring web pages.\n- FTP (File Transfer Protocol):\
+    \ Used for transferring files over a network.\n- DNS (Domain Name System): Translates\
+    \ domain names into IP addresses.\n```"
+  mdcn: "\n\n## 26. 编写一个 C/C++ 程序查找字符串的长度。\n\n### 问题定义：\n在 C 语言编程中，字符串是一个以空字符 \\0\
+    \ 结尾的字符序列。例如：`char cl[] = \"string\";` 当编译器遇到双引号括的字符序列时，它默认会在末尾添加一个空字符 \\0。\n\n\
+    ### 算法：\n- 步骤 1：开始\n- 步骤 2：输入要查找长度的字符串\n- 步骤 3：读取字符串并计算长度\n- 步骤 4：打印字符串长度\n- 步骤\
+    \ 5：停止\n\n### 流程图：\n![](img/ae063c11b8af956e74f03493ca90aad3_63_0.png)\n\n####\
+    \ 源代码：<string.h>\n\n```c\n#include <string.h>\n\nint main()\n{\n    char s[40];\n\
+    \    int len;\n\n    printf(\"\\nEnter any string: \\n\");\n    gets(s);\n\n \
+    \   len = strlen(s);\n\n    printf(\"Length of string: %d\\n\", len);\n\n    return\
+    \ 0;\n}\n```\n\n### 输出：\n![](img/ae063c11b8af956e74f03493ca90aad3_64_0.png)\n\n\
+    ## 实验报告 03\n\n1. MS-word 中的对齐、页面设置、插入图片、插入表格、插入页眉/页脚、创建安全保护密码。\n\n### 键盘命令：\n\n\
+    **文本对齐**\n- Ctrl+L= 将选中文对齐到屏幕左侧\n- Ctrl+E= 将选中文居居齐到屏幕中间\n- Ctrl+R= 将选中文对齐到屏幕右侧\n\
+    \n**插入图片**\n插入 $\\rightarrow$ 图片 $\\rightarrow$ 选择图片 $\\rightarrow$ 回车\n\n**插入表格**\n\
+    插入 $\\rightarrow$ 表格 $\\rightarrow$ 选择行列数 $\\rightarrow$ 回车\n\n**页眉/页脚**\n插入 $\\\
+    rightarrow$ 页眉或页脚 $\\rightarrow$ 选择样式 $\\rightarrow$ 回车\n\n**创建密码**\nOffice 按钮\
+    \ $\\rightarrow$ 准备 $\\rightarrow$ 加密文档 $\\rightarrow$ 选择密码 $\\rightarrow$ 好\n\
+    \n## 2. 编写一个公式并在 MS-Excel 中显示用于计算 CGPA。**\n\n### 公式：\n在 excel 程序中计算 CGPA 的公式分为两个步骤：\n\
+    - a. 首先将每个科目的个人 GPA 乘以该科目对应的学分。\n- b. 然后将 GPA*学分的总和除以总学分。\n\n在以下 excel 公式中使用如下：\n\
+    - 1. G2 =(B2*C3+C2*D3+D2*E3+E2*F3+F2*G2)\n- 2. H2 = G2/(3+3+3+3+2)\n\n### 输出：\n\
+    \n| 姓名 | 孟加 | 英语 | 英语数学 | 数据 | 语言科学 | *学分 | CGPA |\n|---|---|---|---|---|---|---|---|\n\
+    | 1 | 姓名 | 3.75 | 3.5 | 3.25 | 3.75 | 4 | 50.75 | 3.63 |\n| 2 | Rahim | 4 | 3.5\
+    \ | 3.75 | 4 | 5 | 51.75 | 3.68 |\n| 3 | Karim | 3.25 | 3.5 | 3.75 | 3.75 | 4\
+    \ | 51.5 | 3.68 |\n| 4 | Jamila | 4 | 3.25 | 3.25 | 3.5 | 4 | 51.5 | 3.68 |\n\
+    | 5 | Saqib | 4 | 3.75 | 3.5 | 3.5 | 4 | 50 | 3.37 |\n| 6 | Tania | 3.25 | 3.75\
+    \ | | | | | | |\n\n## 3. 编写一个公式并在 MS-Excel 中显示用于薪资计算。**\n\n为了计算员工的净工资，可以在 excel\
+    \ 中使用公式。必须先加上所有津贴，然后从总额中减去所得税，以计算出净额。\n\n### 公式：\n净工资 G2 =SUM(B2:E2)-F2 ; G3 =SUM(B3:E3)-F3\
+    \ ; ......\n\n### 输出：\n![](img/ae063c11b8af956e74f03493ca90aad3_67_0.png)\n\n\
+    ## 4. 编写一个公式并在 MS-Excel 中显示用于制作现金收据。**\n\n创建现金收据是为了计算买家购买的产品总额，并跟踪其付款金额和剩余余额。在\
+    \ excel 中可以使用公式创建现金收据，并计算总支出以及还需要支付的多少钱。\n\n### 公式：\n总额 K17=SUM(K5:K9)\n余额 / 剩余款项\
+    \ K19=K17-K18\n\n### 输出：\n![](img/ae063c11b8af956e74f03493ca90aad3_68.png)\n\n\
+    ## 实验报告 04: 计算机网络\n\n计算机网络是连接在一起计算机和其他和其他集合，用于共享资源和交换数据。根据地理区域，网络有几种类型：\n\n- LAN（局域网）：覆盖范围较小的网络，如家庭、办公室或建筑。\n\
+    - MAN（城域网）：覆盖城市或大型校园的网络。\n- WAN（广域网）：覆盖较大地理区域的网络，如国家或整个世界。\n\n互联网是最大的 WAN。网络可以使用各种组件连接：\n\
+    - 设备：计算机、服务器、路由器和交换机。\n- 传输介：电缆（光纤、铜线）或无线波（Wi-Fi、卫星）。\n- 协议：规定数据如何传输的规则（例如 TCP/IP、HTTP）。\n\
+    \n### 网络组件：\n- 网接口卡 (NIC)：允许计算机连接网络的硬件。\n- 路由器：在计算机网络之间转发数据包的设备。\n- 交换机：连接单个网络内设备的设备。\n\
+    - 调制解调器 (Modem)。\n\n### 拓扑结构类型：\n- 总线拓扑：所有设备连接到一根电缆上。\n- 星型拓扑：所有设备连接到一个中央集线器或交换机。\n\
+    - 环形拓扑：每个设备连接到两个设备，形成圆形路径。\n- 网型拓扑：每个设备都连接到多个其他设备。\n\n### 协议：\n- TCP/IP（传输控制协议/网协议）：互联网的基础通信套件。\n\
+    - HTTP（超文本传输协议）：用于传输网页。\n- FTP（文件传输协议）：用于在网络上传输文件。\n- DNS（域名系统）：将域名转换为 IP 地址。\n"
+  merge: 0
+  raw:
+  - '[PAGE 63]
+
+
+    26. Write a C/C++ Program to Find the Length of a String.
+
+
+    # Problem definition:
+
+
+    In C programming, a string is a sequence of characters terminated with a null
+    character \0 . For example: char cl[] = "string"; When the compiler encounters
+    a sequence of characters enclosed in double quotation marks, it appends a null
+    character \0 at the end by default.
+
+
+    # Algorithm:
+
+
+    +   - Step 1: Start
+
+    - Step 2: Input the string to find length
+
+    - Step 3: Read the string to find the length
+
+    - Step 4: Print the length of the string
+
+    - Step 5: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_63_0.png)'
+  - "[PAGE 64]\n\n# Source code: <string.h>\n\n```\n#include <string.h>\n\nint main()\n\
+    {\n    char s[40];\n    int len;\n\n    printf(\"\\nEnter any string: \\n\");\n\
+    \    gets(s);\n\n    len = strlen(s);\n\n    printf(\\\nLength of string: %d\\\
+    n\", len);\n\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_64_0.png)"
+  - "[PAGE 65]\n\n# Lab Report 03\n\n1. Alignment, Page setup, insert image, insert\
+    \ table, insert header/footer, create password for security in MS-word.\n\nKey-board\
+    \ commands:\n\nText alignment\n\nCtrl+L= Aligns the selected texts to the Left\
+    \ of the screen\n\nCtrl+E= Aligns the selected texts to the Center of the screen\n\
+    \nCtrl+R= Aligns the selected texts to the Right of the screen\n\nImage insertion\n\
+    \nInsert $\rightarrow$ Picture $\rightarrow$ Select picture $\rightarrow$ Enter\n\
+    \nTable insertion\n\nInsert $\rightarrow$ Table $\rightarrow$ Select number of\
+    \ row and column $\rightarrow$ Enter\n\nHeader/footer\n\nInsert $\rightarrow$\
+    \ Header or Footer $\rightarrow$ Select style $\rightarrow$ Enter\n\nPassword\
+    \ creation\n\nOffice button $\rightarrow$ Prepare $\rightarrow$ Encrypt document\
+    \ $\rightarrow$ Select password $\rightarrow$ Ok"
+  - '[PAGE 66]
+
+
+    # 2. Write a formula and display in MS-Excel for CGPA calculation.
+
+
+    # Formula:
+
+
+    The formula to calculate CGPA in an excel program is done in two steps:
+
+
+    +   a. First individual GPA in each of the subject is multiplied by the corresponding
+    credit hours of individual subject.
+
+
+    +   b. The summation of GPA*Credit hours is then divided by the Total Credit hours.
+
+
+    In the following excel formula is used as:
+
+
+    +   1. G2 =(B2*C3+C2*D3+D2*E3+E2*F3+F2*G2)
+
+
+    +   2. H2 = G2/(3+3+3+3+2)
+
+
+    # Output:
+
+
+    | Name | Bangle | English | English Math | Data | Science in Language | *Credit
+    hours | CGPA |
+
+    |---|---|---|---|---|---|---|-|
+
+    | 1 | Name | 3.75 | 3.5 | 3.25 | 3.75 | 4 | 50.75 | 3.63 |
+
+    | 2 | Rahim | 4 | 3.5 | 3.75 | 4 | 5 | 51.75 | 3.68 |
+
+    | 3 | Karim | 3.25 | 3.5 | 3.75 | 3.75 | 4 | 51.5 | 3.68 |
+
+    | 4 | Jamila | 4 | 3.25 | 3.25 | 3.5 | 4 | 51.5 | 3.68 |
+
+    | 5 | Saqib | 4 | 3.75 | 3.5 | 3.5 | 4 | 50 | 3.37 |
+
+    | 6 | Tania | 3.25 | 3.75 | | | | | |'
+  - '[PAGE 67]
+
+
+    # 3. Write a formula and display in MS-Excel for Salary calculation.
+
+
+    To calculate the net salaries of employees a formula can be used in excel. All
+    the allowance have to be added first and then the income tax should be subtracted
+    from the total amount to calculate the net.
+
+
+    # Formulas:
+
+
+    Net salary G2 =SUM(B2:E2)-F2 ; G3 =SUM(B3:E3)-F3 ; ......
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_67_0.png)'
+  - '[PAGE 68]
+
+
+    # 4. Write a formula and display in MS-Excel for making cash-memo.
+
+
+    The cash memo is created to calculate the total amount of product buyer buys and
+    to keep track of his payment amount and remaining balance. In excel formulas can
+    be used to create a cash memo and also to calculate total amount spend and how
+    much more to be paid.
+
+
+    Formula:
+
+
+    Total amount K17=SUM(K5:K9)
+
+
+    Balance / Remaining payment K19=K17-K18
+
+
+    Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_68_0.png)'
+  - '[PAGE 69]
+
+
+    # Lab Report 04: Discussion on Computer Network and Networking Command
+
+
+    # Computer Network:
+
+
+    A computer network is a group of interconnected computers and devices that communicate
+    with each other to share resources and information. Networks can be categorized
+    based on their size and geographical scope.
+
+
+    Here are some of the most common types of computer networks:
+
+
+    Local Area Network (LAN): A LAN is a network that connects devices in a small
+    area such as a home, office, or school. A LAN typically uses Ethernet cables or
+    Wi-Fi to connect devices.
+
+
+    Wide Area Network (WAN): A WAN connects devices across a larger geographic area,
+    such as different cities or countries. The internet is the largest WAN in the
+    world.
+
+
+    Metropolitan Area Network (MAN): A MAN is a network that spans across a metropolitan
+    area, such as a city or a group of cities.
+
+
+    Wireless Network: A wireless network uses radio waves to connect devices without
+    cables. Wi-Fi is a common type of wireless network.
+
+
+    Networks can also be classified by their topology, which refers to the way in
+    which devices are connected to each other. Some of the most common network topologies
+    include:
+
+
+    +   Bus Topology: Devices are connected to a single cable that runs the length
+    of the network.
+
+
+    +   Ring Topology: Devices are connected in a circular chain.
+
+
+    +   Star Topology: Devices are connected to a central hub or switch.
+
+
+    +   Mesh Topology: Devices are connected to each other in a complex web of connections.
+
+
+    Networks can also be classified by the type of protocol they use to transmit data.
+    Some of the most common network protocols include:
+
+
+    +   Transmission Control Protocol/Internet Protocol (TCP/IP): This protocol is
+    used on the internet and most local networks.
+
+
+    +   User Datagram Protocol (UDP): This protocol is used for real-time applications
+    as video conferencing and online gaming.
+
+
+    +   Hypertext Transfer Protocol (HTTP): This protocol is used for transmitting
+    data over the World Wide Web.
+
+
+    Overall, computer networks play a vital role in connecting devices and people
+    around the world. They allow us to share information, resources, and services,
+    and they enable us to communicate and collaborate with each other in real-time'
+  - '[PAGE 70]
+
+
+    # Internet Protocol& IP Address:
+
+
+    Internet Protocol (IP) is a set of rules that govern the communication of data
+    over a network, including the Internet. IP is responsible for breaking up data
+    into packets, adding addressing information to each packet, and routing them to
+    their intended destination.
+
+
+    IP addresses are used to identify devices on a network. An IP address is a unique
+    numerical identifier assigned to each device on a network. It is used to locate
+    and communicate with devices over the Internet or a private network.
+
+
+    IP addresses are divided into two types:
+
+
+    +   - IPv4
+
+
+    +   - IPv6.
+
+
+    IPv4 addresses are 32-bit numbers expressed in dotted decimal notation, such as
+    192.168.0.1. IPv4 addresses are widely used and are the most common type of IP
+    address. However, as the number of devices connected to the Internet has grown
+    rapidly, IPv4 addresses have become scarce. This has led to the development of
+    IPv6 addresses.
+
+
+    IPv6 addresses are 128-bit numbers expressed in hexadecimal notation, such as
+    2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+
+
+    An IP address is divided into two parts: the network address and the host address.
+    The network address identifies the network to which the device belongs, while
+    the host address identifies the individual device on the network. The subnet mask
+    is used to divide the IP address into two parts.
+
+
+    IP packets are transmitted across a network using a variety of protocols, including
+    TCP (Transmission Control Protocol) and UDP (User Datagram Protocol). TCP is a
+    connection-oriented protocol that provides reliable, ordered, and error-checked
+    delivery of data, while UDP is a connectionless protocol that provides faster,
+    but less reliable, delivery of data.
+
+
+    In summary, Internet Protocol is the set of rules that govern the communication
+    of data over a network, while an IP address is a unique numerical identifier assigned
+    to each device on a network. It is used to locate and communicate with devices
+    over the Internet or a private network, and is divided into the network address
+    and the host address.
+
+
+    # 1.Command of Display a Hostname:
+
+
+    +   1.Click Start menu Windows Icon
+
+
+    +   2.In Search bar type “cmd”
+
+
+    +   3.Type “hostname”
+
+
+    +   4.Then click the Enter'
+  - '[PAGE 71]
+
+
+    Display the result:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_71_0.png)
+
+
+    # **2.Command Display IP Address:**
+
+
+    +   1.Click the start menu windows Icon
+
+    2.In search bar Type "cmd"
+
+    3.In the command prompt window Type "ipconfig"
+
+    4.Press Enter
+
+
+    Display the Result:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_71_1.png)'
+- md: "\n## 3.Command Display Mac Address:\n\n1. Click the start menu windows Icon\n\
+    2. In search bar Type \"cmd\",\n3. In the command prompt window Type \"ipconfig/all\"\
+    \n4. Press Enter\n5. Scroll down and find the mac address heading \"physical Address\"\
+    \n\nDisplay the Result:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_72_0.png)\n\
+    \n## 4. Command Display Ping IP Address:\n\n1. Click the start menu windows Icon\n\
+    2. In search bar Type \"cmd\" and\n3. Type \"cd\" and enter\n4. Then enter \"\
+    cls\" and enter\n5. In the command prompt window Type \"ping [IP address]\",\n\
+    6. Press Enter and the Command Prompt window will display the result\n\nDisplay\
+    \ the Result:\n\nCommand Prompt\n```\nC:\\> ping 192.168.0.100 -n32\n bytes of\
+    \ data:\nReply from 192.168.0.100: bytes=32 time=1ms TTL=128\nReply from 192.168.0.100:\
+    \ bytes=32 time=1ms TTL=128\nReply from 192.168.0.100: bytes=32 time=1ms TTL=128\n\
+    \nStatistics for 192.168.0.100:\nPackets: Sent = 4, Received = 4, Lost = 0 (0%\
+    \ loss),\nApproximate time in milliseconds:\nMinimum = 1ms, Maximum = 1ms, Average\
+    \ = 1ms\n\nC:\\>\n```\n\n![](img/ae063c11b8af956e74f03493ca90aad3_73_0.png)\n\n\
+    ## 5. Command Display Execute command nslookup:\n\n1. Click the start menu windows\
+    \ Icon\n2. In search bar Type “cmd”\n3. Type “nslookup” and enter\n4. Type the\
+    \ IP address about a website\n5. Enter\n\nDisplay the Result:\n\n```\nMicrosoft\
+    \ Windows (Version 10.0.22621.1105)\n(c) Microsoft Corporation. All rights reserved.\n\
+    \nServer:\nDefault Server: Unknown\nAddress: 192.168.0.43\n\n>> facebook.com\n\
+    Address: 192.168.0.43\n\nNon-authoritative answer:\nName: star-min-c1b.facebook.com\n\
+    Address: 157.240.15.36\n\nAliases:\nfacebook.com\n```\n\n![](img/ae063c11b8af956e74f03493ca90aad3_73_1.png)\n\
+    \n## 6. Command Display execute command tracerert:\n\n1. Click the start menu\
+    \ Windows\n2. In search bar Type \"cmd\",\n3. Now Type \"tracerert [IP address]\"\
+    \n4. Enter and show the result\n\nDisplay the Result:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_74_0.png)\n"
+  mdcn: "\n\n## 3. 命令显示 MAC 地址：\n\n1. 点击 Windows 开始菜单图标\n2. 在搜索栏中输入 \"cmd\"\n3. 在命令提示符窗口中输入\
+    \ \"ipconfig/all\"\n4. 按回车键\n5. 向下滚动并找到“physical Address”（物理地址）标题\n\n显示结果：\n\n\
+    ![](img/ae063c11b8af956e74f03493ca90aad3_72_0.png)\n\n## 4. 命令显示 Ping 的 IP 地址：\n\
+    \n1. 点击 Windows 开始菜单图标\n2. 在搜索栏中输入 \"cmd\" 并\n3. 输入 \"cd\" 并按回车\n4. 然后输入 \"cls\"\
+    \ 并按回车\n5. 在命令提示符窗口中输入 \"ping [IP address]\"\n6. 按回车键，命令提示符窗口将显示结果\n\n显示结果：\n\n\
+    命令提示符\n```\nC:\\> ping 192.168.0.100 -n32\n bytes of data:\nReply from 192.168.0.100:\
+    \ bytes=32 time=1ms TTL=128\nReply from 192.168.0.100: bytes=32 time=1ms TTL=128\n\
+    Reply from 192.168.0.100: bytes=32 time=1ms TTL=128\n\nStatistics for 192.168.0.100:\n\
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate time in milliseconds:\n\
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms\n\nC:\\>\n```\n\n![](img/ae063c11b8af956e74f03493ca90aad3_73_0.png)\n\
+    \n## 5. 命令显示执行命令 nslookup：\n\n1. 点击 Windows 开始菜单图标\n2. 在搜索栏中输入 “cmd”\n3. 输入 “nslookup”\
+    \ 并按回车\n4. 输入网站的 IP 地址\n5. 按回车\n\n显示结果：\n\n```\nMicrosoft Windows (Version 10.0.22621.1105)\n\
+    (c) Microsoft Corporation. All rights reserved.\n\nServer:\nDefault Server: Unknown\n\
+    Address: 192.168.0.43\n\n>> facebook.com\nAddress: 192.168.0.43\n\nNon-authoritative\
+    \ answer:\nName: star-min-c1b.facebook.com\nAddress: 157.240.15.36\n\nAliases:\n\
+    facebook.com\n```\n\n![](img/ae063c11b8af956e74f03493ca90aad3_73_1.png)\n\n##\
+    \ 6. 命令显示执行命令 tracerert：\n\n1. 点击 Windows 开始\n2. 在搜索栏中输入 \"cmd\",\n3. 现在输入 \"\
+    tracerert [IP address]\"\n4. 按回车并显示结果\n\n显示结果：\n\n![](img/ae063c11b8af956e74f03493ca90aad3_74_0.png)\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 72]
+
+
+    # 3.Command Display Mac Address:
+
+
+    1.Click the start menu windows Icon
+
+
+    2.In search bar Type "cmd",
+
+
+    3.In the command prompt window Type "ipconfig/all"
+
+
+    4.Press Enter
+
+
+    5. Scroll down and find the mac address heading "physical Address"
+
+
+    Display the Result:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_72_0.png)
+
+
+    # 4.Command Display Ping IP Address:
+
+
+    1.Click the start menu windows Icon
+
+
+    2.In search bar Type "cmd" and
+
+
+    3.Type "cd" and enter
+
+
+    4.Then enter "cls" and enter
+
+
+    5.In the command prompt window Type "ping[IP address]",
+
+
+    6.Press Enter and the Command Prompt window will display the result
+
+
+    Display the Result:'
+  - '[PAGE 73]
+
+
+    # Command Prompt
+
+
+    ```
+
+    C:\> ping 192.168.0.100 -n32 bytes of data:
+
+    Reply from 192.168.0.100: bytes=32 time=1ms TTL=128
+
+    Reply from 192.168.0.100: bytes=32 time=1ms TTL=128
+
+    Reply from 192.168.0.100: bytes=32 time=1ms TTL=128
+
+
+    Statistics for 192.168.0.100:
+
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+
+    Approximate time in milliseconds:
+
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+
+
+    C:\>
+
+    ```
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_73_0.png)
+
+
+    # 5.Command DisplayExecute command nslookup:
+
+
+    +   1.Click the start menu windows Icon
+
+
+    +   2.In search bar Type “cmd”
+
+
+    +   3.Type “nslookup” and enter
+
+
+    +   4.Type the IP address about a website
+
+
+    +   5.Enter
+
+
+    Display the Result:
+
+
+    ```
+
+    Microsoft Windows (Version 10.0.22621.1105)
+
+    (c) Microsoft Corporation. All rights reserved.
+
+
+    Server:
+
+    Default Server: Unknown
+
+    Address: 192.168.0.43
+
+
+    >> facebook.com
+
+    Address: 192.168.0.43
+
+
+    Non-authoritative answer:
+
+    Name: star-min-c1b.facebook.com
+
+    Address: 157.240.15.36
+
+
+    Aliases:
+
+    facebook.com
+
+    ```
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_73_1.png)'
+  - '[PAGE 74]
+
+
+    # 6.Command Display execute command tracerert:
+
+
+    1.Click the start menu Windows
+
+
+    2.In search bar Type "cmd",
+
+
+    3.Now Type "tracerert [IP address]
+
+
+    4.Enter and show the result
+
+
+    Display the Result:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_74_0.png)'
+pages:
+- img_proc: true
+  md: '# Lab Report 02: Solving Problems Using C Programs
+
+
+    1. Write a Program in C/C++ which displays division of two numbers.
+
+
+    Problem definition:
+
+
+    Division is a mathematical operation, written using the symbol ÷, that can be
+    thought of in two ways: a÷b is the size of each group when a objects are divided
+    into b groups of equal size, OR a÷b is the number of groups when a objects are
+    divided into groups of b objects each.
+
+
+    Algorithm:
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Input a, b
+
+
+    +   - Step 4: c=a/b
+
+
+    +   - Step 3: if (b=0) Display “Enter a non Zero number”
+
+
+    +   - Step 4: Else Display c
+
+
+    +   - Step 5: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\n\nint main()\n{\n    int a,b;\n \
+    \   float div;\n\n    printf(\"Enter your first number:\"\");\n    scanf(\"%d\"\
+    ,&a);\n\n    printf(\"Enter your second number:\"\");\n    scanf(\"%d\",&b);\n\
+    \n    //printf(\"Enter two numbers to add\\n\");\n    //scanf(\"%d%%d\",&a, &b);\n\
+    \    /*div defined as a float & cast any variable a or b.*/\n    div=a/(float)b;//b\
+    \ cast as float\n    if (b>0)\n        printf(\"\\nDivision of two numbers are:%%%f\\\
+    n\",div);\n    else\n        printf(\"No Division\\n\");\n\n    return 0;\n}\n\
+    ```"
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '2. Write a C/C++ program which displays whether a number is odd or even.
+
+
+    # Problem definition:
+
+
+    Any integer that can be exactly divided by 2 is Even and if any integer is not
+    exactly divisible by 2 it is an Odd Odd number. The even numbers are multiplier
+    of 2 and odd numbers are not.
+
+
+    So to check a number is odd or even we have to divide it by 2 and if modulus is
+    0 it is even or else odd.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+    Step 2: [Input] Read number N
+
+    Step 3: Check if N%2==0
+
+    Step 4: if true , N is an even number
+
+    Else,
+
+    Step 5: N is an odd number
+
+    Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n\n    int n;\n\n\
+    \    printf(\"Enter your number: \");\\n    scanf(\"%d\",&n);\n\n    if(n%2==1)\
+    \ {\n        printf(\"\\nNumber is odd\\n\");\n    } else \n        printf(\"\\\
+    nNumber is even\\n\");\n    }\n\n    return 0;\n}\n```\n\n# Output: Code.exe\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_4_0.png)"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 3. Write C/C++ program which checks a patient is in diabetics or not.
+
+
+    Problem Definition:
+
+
+    Diabetes is a chronic disease that occurs either when the pancreas does not produce
+    enough insulin or when the body cannot effectively use the insulin it produces.
+    A blood sample will be taken after an overnight fast. A fasting blood sugar level
+    less than 100 mg/dL (5.6 mmol/L) is normal. A fasting blood sugar level from 100
+    to 125 mg/dL (5.6 to 6.9 mmol/L) is considered prediabetes. If it''s 126 mg/dL
+    (7 mmol/L) or higher on two separate tests, you have diabetes.
+
+
+    In oral glucose tolerance test a blood sugar level less than 140 mg/dL (7.8 mmol/L)
+    is normal. A reading of more than 200 mg/dL (11.1 mmol/L) after two tests indicates
+    diabetes. A reading between 140 and 199 mg/dL (7.8 mmol/L and 11.0 mmol/L) indicates
+    prediabetes.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Enter Blood glucose level
+
+
+    +   Step 3: Check if bg<= 6.5
+
+
+    +   Print patient is healthy
+
+
+    +   Step 4: Check if bg<=7.0
+
+
+    +   Print patient is in pre diabetes
+
+
+    +   Else Print patient is in diabetes
+
+
+    +   Step 5: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# Source Code:\n\n```\n#include <stdio.h>\n\nint main() {\n\n    float bg;\n\
+    \n    printf(\"\\n Enter glucose level:%f\",&bg);\n    scanf(\"%f\",&bg);\n\n\
+    \    if(bg<=6.5) {\n        printf(\"\\n Patient is healthy.\\n\");\n    } else\
+    \ if(bg<=7.0) {\n        printf(\"\\n Patient is in pre-diabetics.\\n\");\n  \
+    \  } else {\n        printf(\"\\nPatient is in diabetes.\\n\");\n    }\n    return\
+    \ 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_6_0.png)"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 4. Write a C/C++ program which computes the largest number between two numbers.
+
+
+    # Problem definition:
+
+
+    The value of integers can be compared by their position in the integer line. The
+    value of the integer comes first than the the value of another integer, is smaller
+    one between two integers.
+
+
+    # Algorithm:
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Read number a
+
+
+    +   - Step 3: Read number b
+
+
+    +   - Step 4: if a > b, print a (Compare a and b using greater than operator)
+
+
+    +   - Step 5: else print b
+
+
+    +   - Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\nint main()\n{\n    int No1,No2;\n\
+    \    printf(\"Enter your first number:\\\");\n    scanf(\"%d\",&No1);\n    printf(\"\
+    Enter your second number:\\\");\n    scanf(\"%d\",&No2);\n    //printf(\"Enter\
+    \ two numbers\\n\");\n    //scanf(\"%d%d\",&No1,&No2);\n    if(No1>No2)\n    \
+    \    printf(\"%d is greater than\\n\",No1);\n    else\n        printf(\"%d is\
+    \ greater than\\n\",No2);\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_8_0.png)"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "# 5. Write a C/C++ program which sum of the series 1+2+3+4+............+100.\n\
+    \n# Problem definition:\n\nAn arithmetic progression or arithmetic sequence is\
+    \ a sequence of numbers such that the difference from any succeeding term to its\
+    \ preceding term remains throughout the sequence. The constant difference is called\
+    \ common difference of that arithmetic progression.\n\nThe formula for the sum\
+    \ of an arithmetic sequence is: $S_n=\frac{n}{2}[2a+(n-1)d]$\n\nWhere:\n\n+  \
+    \ * $n=$ the number of terms to be added\n* $a=$ the first term in the sequence\n\
+    * $d=$ the constant value between terms\n\n# Algorithm:\n\n+   Step 1: Start\n\
+    Step 2: Read number n\nStep 3: [Initialize] sum=0, i<=1\nStep 4: Repeat step 4\
+    \ through 6 until i<=n\nStep 5: sum=sum+i\nStep 6: i=i+1\nStep 7: Print the sum\n\
+    Step 8: Stop"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_10_0.png)\n\n# Source\
+    \ code:\n\n```\n#include<stdio.h>\n\nint main() {\n    int n,i;\n    int sum=0;\n\
+    \    printf(\"Enter the n [max values of series]: \",\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_11_0.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 6. Write a C/C++ program which display sum of square-sums of first n natural\
+    \ numbers.\n\n# Problem definition:\n\nThe sum of squares of n natural numbers\
+    \ can be calculated using the formula $\frac{n(n+1)(2n+1)}{6}$. Let n be a natural\
+    \ number.\n\nSquaring the number is denoted by $n^2$. The sum of squares of n\
+    \ natural numbers means the sum of the squares of the given series of natural\
+    \ numbers.\n\n# Algorithm:\n\n+   - Step 1: Start\n- Step 2: Read number N\n-\
+    \ Step 3: [Initialize] sum=0, i=1\n- Step 4: Repeat step 4 through 6 until i<=N\n\
+    - Step 5: sum=sum+(i*i)\n- Step 6: i=i+1\n- Step 7: Print the sum of square\n\
+    - Step 8: Stop\n\n# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_12_0.png)"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Source code:\n\n```\n#include <stdio.h>\nint main()\n{\n    int N, count\
+    \ = 1, sum = 0;\n\n    printf(\"Enter the limit:\");\n    scanf(\"%d\", &N);\n\
+    \n    while(count <= N)\n    {\n        sum = sum + (count * count);\n       \
+    \ count++;\n    }\n\n    printf(\"Sum of squares of numbers from 1 to %d\\n\"\
+    , N, sum);\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 7. Write a Program in C/C++ which displays the average of n numbers.
+
+
+    **Problem definition:**
+
+
+    In mathematics and statistics, the arithmetic mean, arithmetic average, or just
+    the mean or average, is the sum of a collection of numbers divided by the count
+    of numbers in the collection. The collection is often a set of results from an
+    experiment, an observational study, or a survey.
+
+
+    The sum of n terms of an Arithmetic progression is,
+
+
+    ```
+
+    $S_n = \frac{n}{2}(a_1+a_n)$
+
+    ```
+
+
+    Where,
+
+
+    $a_1$ is the first number of the progression
+
+
+    $a_n$ is the last number of the progression.
+
+
+    # **Algorithm:**
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Take the number of elements as input in n
+
+
+    +   Step 3: Initialize i = 0.
+
+
+    +   Step 4: Repeat step 4 to step 7 until i < n.
+
+
+    +   Step 5: Take elements as input in num
+
+
+    +   Step 6: Calculate,
+
+
+    ```
+
+    sum = sum + num
+
+    ```
+
+
+    +   Step 7: Increment i by 1,
+
+
+    ```
+
+    i = i + 1
+
+    ```
+
+
+    +   Step 8: Finally divide sum by n,
+
+
+    ```
+
+    avg = sum / n
+
+    ```
+
+
+    +   Step 9: Stop'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Flow-chart:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_16_0.png)\n\n# Source\
+    \ code:\n\n```\n#include<stdio.h>\n\nint main()\n{\n    //Declaring Variable\n\
+    \    int n, i, sum = 0, count = 0;\n\n    //Input Number\n    printf(\"Enter the\
+    \ nth Number:\");\n    scanf(\"%d\",&n);\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "```\nfor(i=1;i<=n;i++)\n{\n  sum = sum + i;\n  count++;\n}\n```\n\nprintf(\"\
+    nAverage of first %d Natural Numbers = %d\\n\", sum/count);\n\n```\nreturn 0;\n\
+    }\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_17_0.png)"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 8. Write a C/C++ program of multiplication Table Up to 10.
+
+
+    Problem definition:
+
+
+    Tables 1 to 10 are the list of multiples of numbers from 1 to 10. Multiplication
+    tables 1 to 10 will help you learn and practice the multiplication facts effortlessly.
+    Multiplication tables for 1 to 10 can be extremely helpful in solving math problems
+    and calculations. It is essential for students to learn tables 1 to 10 for quick
+    math calculations
+
+
+    Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Input number,the number for which multiplication table is to be printed
+
+
+    +   Step 3: For c=1 to 10
+
+
+    +   Step 4: Print res= num*c
+
+
+    +   Step 5: End for loop
+
+
+    +   Step 6: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Source code:
+
+
+    ```
+
+    #include <stdio.h>
+
+
+    int main() {
+
+
+    int num, c,res;
+
+
+    printf("Enter an integer: %d");
+
+    scanf("%d",&num);
+
+
+    for(c=1; c<=10; ++c) {
+
+
+    res=num*c;
+
+    printfprintf("%d * %d = %d\n", num, c, res);
+
+    }
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '9. Write a C/C++ program to calculate the factorial of a given number.
+
+
+    # **Problem definition:**
+
+
+    The factorial of a number is the function that multiplies the number by every
+    natural number below it. Symbolically, factorial can be represented as "!". So,
+    $n$ factorial is the product of the first $n$ natural numbers and is represented
+    as $n$!
+
+
+    # **Algorithm:**
+
+
+    +   Step 1: Start
+
+    Step 2: Read the number n
+
+    Step 3: [initialize] i=1, fact=1
+
+    Step 4: Repeat step 4 through 6 until i=n
+
+    Step 5: fact= fact*1
+
+    Step 6: i=i+1
+
+    Step 7: Print fact
+
+    Step 8: Stop
+
+
+    # **Flow-chart:**
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_20_0.png)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n    int n,i,fact=1;\n\
+    \    printf(\"Enter any number:\");\\n    scanf(\"%d\", &n);\n    for(i=1; i<=n;\
+    \ i++) {\n        fact = fact * i;\n    }\n    printf(\"Factorial value of %d\
+    \ = %d\\n\", n,fact);\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_21_0.png)"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '10. Write a C/C++ program to find a year is Leap Year or not.
+
+
+    # Problem definition:
+
+
+    Leap years are years where an extra, or intercalary, day is added to the end of
+    the shortest month, February. The intercalary day, February 29, is commonly referred
+    to as leap day.
+
+
+    Leap years have 366 days instead of the usual 365 days and occur almost every
+    four years.
+
+
+    Leap days keep our modern-day Gregorian calendar in alignment with Earth’s revolutions
+    around the Sun. It takes approximately 365.242189 days, or 365 days, 5 hours,
+    48 minutes, and 45 seconds, to circle around the Sun. This is called a tropical
+    year, and it starts on the March equinox. However, the Gregorian calendar has
+    only 365 days in a year. If we didn''t add a leap day on February 29 almost every
+    four years, each calendar year would drift about 6 hours before Earth completes
+    its revolution around the Sun (see illustration).
+
+
+    As a consequence, our reckoning would slowly drift apart from the tropical year
+    and get increasingly out of sync with the seasons. With a deviation of approximately
+    6 hours per year, the seasons would shift by about 24 calendar days within 100
+    years. Allow this to happen for a while, and Northern Hemisphere dwellers will
+    be celebrating Christmas in the middle of summer in a matter of a few centuries.
+    Leap days fix that error by giving Earth the additional time it needs to complete
+    a full circle around the Sun.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Take integer variable year
+
+
+    +   Step 3: Assign value to the variable
+
+
+    +   Step 4: Check if year is divisible by 4 but not 100, DISPLAY “Leap year”
+
+
+    +   Step 5: Check if year is divisible by 400, DISPLAY “ Leap year”
+
+
+    +   Step 6: Otherwise, DISPLAY “not leap year”
+
+
+    +   Step 7: Stop'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_23_0.png)
+
+
+    # Source code:
+
+
+    ```
+
+    #include <stdio.h>
+
+
+    int main() {
+
+
+    int year;
+
+
+    printf("Enter a year: ");
+
+
+    scanf("%d", &year);
+
+
+    // leap year if perfectly divisible by 400
+
+    if (year % 400 == 0) {
+
+
+    printf("%d is a leap year.", year);
+
+
+    }
+
+
+    // not a leap year if divisible by 100
+
+    // but not divisible by 400
+
+    else if (year % 100 == 0) {
+
+
+    printf("%d is not a leap year.", year);
+
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '```
+
+    // leap year if not divisible by 100
+
+
+    // but divisible by 4
+
+
+    else if (year % 4 == 0) {
+
+
+    printf("%d is a leap year.",", year);
+
+    }
+
+
+    // all other years are not leap years
+
+
+    else {
+
+
+    printf("%d is not a leap year.",", year);
+
+    }
+
+
+    return 0;
+
+    ```
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_24_0.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# 11. Write a C/C++ program which computes the power of a number.
+
+
+    # Problem definition:
+
+
+    The program below takes two integers from the user (a base number and an exponent)
+    and calculates the power.
+
+
+    For example:
+
+
+    In the case of 23
+
+
+    2 is the base number
+
+
+    3 is the exponent
+
+
+    And, the power is equal to 2*2*2 or 4*2
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: Declare variables x,y,n
+
+
+    +   Step 3: Input x,n
+
+
+    +   Step 4: y=pow(x,n)
+
+
+    +   Step5: Print y
+
+
+    +   Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_25_0.png)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n\n    int x,y,n;\n\
+    \n    printf(\"Enter number:%d\",&x);\n    scanf(\"%d\",&x);\n\n    printf(\"\
+    nValue of power:%d\\n\",n);\n    scanf(\"%d\",&n);\n\n    y=pow(x,n);\n\n    printf(\"\
+    nResult is %d\\n\",y);\n\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_26_0.png)"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '12. Write a C/C++ program which computes the square root and cubic root of
+    a number.
+
+
+    # Problem definition:
+
+
+    This program will print Square and Cube Root of all Numbers from 1 to N using
+    loop.
+
+
+    Here, we are reading value of N (limit) and will calculate, print the square,
+    cube and square root of all numbers from 1 to N. To find square, we are using
+    (i*i), cube are using (i*i*i) and square root, we are using sqrt(i).
+
+
+    Here, i is the loop counter and sqrt(i) is the function of math.h, which returns
+    the square root of a number.
+
+
+    # Algorithm:
+
+
+    +   Step 1. Start
+
+    Step 2. Read n
+
+    Step 3. x= sqrt(n)
+
+    Step 4. y= sqrt(n)
+
+    Step 5. print x,y
+
+    Step 6. Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_27_0.png)
+
+
+    # Source code:
+
+
+    ```
+
+    #include<stdio.h>
+
+    #include<math.h>
+
+
+    int main()
+
+    ```'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '```
+
+    {
+
+    int n;
+
+    float x,y;
+
+    printf("Enter a number: ");\ncanf("%d", &n);
+
+    x= sqrt(n);
+
+    y= cbrt(n);
+
+    printf("Square root of the number is: %fCubic root of the number is: %f", x, y);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_28_0.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# 13. Write a C/C++ program which Checks a number is Prime or Not.
+
+
+    Problem definition:
+
+
+    Prime number logic: a number is prime if it is divisible only by one and itself.
+    Remember two is the only even and the smallest prime number. First few prime numbers
+    are 2, 3, 5, 7, 11, 13, 17, .... Prime numbers have many applications in computer
+    science and mathematics. A number greater than one can be factorized into prime
+    numbers, for example, 540 = 22*33*51. To check whether the input number is a prime
+    number or not a prime number in C programming, you have to ask the user to enter
+    a number and start checking for prime number. If number is divisible by 2 to one
+    less than that number (i.e., n-1), the number is not prime number, otherwise it
+    will be prime number.
+
+
+    Algorithm:
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Take nth number
+
+
+    +   - Step 3: Set x=1
+
+
+    +   - Step 4: if nx<=n, then x=x+1
+
+
+    +   - Step 5: if nx=1; Print "Number is Prime number"
+
+
+    +   - Step 6: else
+
+
+    Print "Number is not prime number"
+
+
+    +   - Step 7: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_29_0.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# Source code:\n\n```\n#include <stdio.h>\n\nint main()\n{\n    int n,i,count=0;\n\
+    \    printf(\"Enter a positive integer: \");\n    scanf(\"%d\", &n);\n\n    //\
+    \ 0 and 1 are not prime numbers\n    // change count to 1 for non-prime number\n\
+    \    if (n == 0 || n == 1) \n        count= 1;\n\nfor (i = 2; i <= n / 2; ++i)\
+    \ {\n            // if n is divisible by i, then n is not prime\n            //\
+    \ change count to 1 for non-prime number\n            if (n % i == 0) {\n    \
+    \            count= 1;\n                break;\n            }\n        }\n\n \
+    \   // count is 0 for prime numbers\n    if (count == 0)\n        printf(\"%d\
+    \ is a prime number.\", n);\n\n}\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'else
+
+
+    printf("%d is not a prime number.", n);
+
+
+    return 0;
+
+
+    }
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_31_0.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '14. Write a C/C++ Program to which displays 3D arrays.
+
+
+    # Problem definition:
+
+
+    To find the size of three dimensional array arr[i][j][k]. The formula is: size
+    = i*j*k. For example, if a given array is arr[3][4][2]. Then its size will be
+
+
+    size = 3*4*2 = 24
+
+
+    That is, it can hold upto to 24 elements.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start.
+
+
+    +   Step 2: Declare a 3D array with a fixed size and initialize its elements with
+    some values.
+
+
+    +   Step 3: Use three nested loops, for each dimension of the array, to iterate
+    through the array.
+
+
+    +   Step 4: Within the innermost loop, print the current element of the array
+    along with appropriate formatting (such as separating elements with a space or
+    newline).
+
+
+    +   Step 5: After the innermost loop, add a newline to format the output as a
+    matrix.
+
+
+    +   Step 6: After the middle loop, add a separator (e.g. newline or horizontal
+    line) to distinguish between different planes of the 3D array.
+
+
+    +   Step 7: After the outermost loop, the 3D array should be fully displayed.
+
+
+    +   Step 8: Stop.
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_32_0.png)'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "Source code:\n\n```\n#include<stdio.h>\n#include<conio.h>\n\nint main()\n{\n\
+    \    int i, j, k;\n    int arr[3][4][2] = {\n        { 2, 4}, {7, 8}, {3, 4},\
+    \ {5, 6} },\n        { 7, 6}, {3, 4}, {5, 3}, {2, 3} },\n        { 8, 9}, {7,\
+    \ 2}, {3, 4}, {5, 1} }\n    };\n    for(i=0; i<3; i++) {\n        for(j=0; j<4;\
+    \ j++) {\n            for(k=0; k<2; k++) {\n                printf(\"arr[%d][%d][%d]\
+    \ = %d \\n\", i, j, k, arr[i][j][k]);\n            }\n        }\n        printf(\"\
+    \\n\");\n    }\n    printf(\"\\n\");\n    getch();\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_34_0.png)'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '15. Write a C/C++ Program to find the average of n numbers using arrays.
+
+
+    # Problem definition:
+
+
+    In mathematics and statistics, the arithmetic mean, arithmetic average, or just
+    the mean or average, is the sum of a collection of numbers divided by the count
+    of numbers in the collection. The collection is often a set of results from an
+    experiment, an observational study, or a survey.
+
+
+    # Algorithm:
+
+
+    Step 1: Initialize an array of size n and average
+
+
+    Step 2: Initialize sum=0
+
+
+    Step 3: Input the elements of the array
+
+
+    Step 4: for (i=0;i<n;i++)
+
+
+    Step 5: sum=sum+array[i]
+
+
+    Step 6: End of for
+
+
+    Step 7: Print sum
+
+
+    Step 8: Average=sum/n;
+
+
+    Step 9: Print average
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_35_0.png)'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "Source code:\n\n```\n#include <stdio.h>\n#include <stdio.h>\n\nint main()\n\
+    {\n    float a[100], sum=0, avg;\n    int i, n;\n\n    printf(\"Enter n: \");\n\
+    \    scanf(\"%d\", &n);\n\n    /* Reading array */\n    printf(\"Enter numbers:\\\
+    n\");\n    for(i=0; i< n; i++)\n    {\n        printf(\"a[%d] = \", i);\n    \
+    \    scanf(\"%f\", &a[i]);\n    }\n\n    /* Finding sum */\n    for(i=0; i< n;\
+    \ i++)\n    {\n        sum = sum + a[i];\n    }\n\n    /* Calculating average\
+    \ */\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'avg = sum/n;
+
+
+    /* Displaying Result */
+
+
+    printf("Sum is %f\n", sum);
+
+
+    printf("Average is %f\n", avg);
+
+
+    return 0;
+
+
+    }
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_37_0.png)'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '16. Write a C/C++ program which displays book information using struct.
+
+
+    # Problem definition:
+
+
+    A structure is nothing but a cluster of variables that may be of different data
+    types under the name. In programming terminology, a structure is a composite data
+    type (derived from primitive data types such as int and float) that we use in
+    order to define a collection of similar or different data types under one name
+    in a particular block of computer memory.
+
+
+    # Algorithm:
+
+
+    +   * Step 1: Start
+
+    * Step 2: [Initialize] Book name, author, subject, ID input
+
+    * Step 3: Store values as a single variable
+
+    * Step 4: Print the values
+
+    * Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_38_0.png)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "Source code:\n\n```\n#include <stdio.h>\n#include <string.h>\nstruct Books\
+    \ {\n    char title[50];\n    char author[50];\n    char subject[100];\n    int\
+    \ book_id;\n};\n\nint main() {\n    printf(\"\\n\\t\\tShimamoto's Bookshop\\n\\\
+    n\");\n    struct Books Book1; /* Declare Book1 of type Book */\n    struct Books\
+    \ Book2; /* Declare Book2 of type Book */\n    /* book 1 specification */\n  \
+    \  strcpy(Book1.title, \"Harry Potter and the Philosopher's Stone\");\n    strcpy(Book1.author,\
+    \ \"J.K Rowling\");\n    strcpy(Book1.subject, \"Fantasy Adventure\");\n    Book1.book_id\
+    \ = 5678970;\n    /* book 2 specification */\n    strcpy(Book2.title, \"1984\"\
+    );\n    strcpy(Book2.author, \"George Orwell\");\n    strcpy(Book2.subject, \"\
+    Power Discourse\");\n    Book2.book_id = 6495700;\n    /* print Book1 info */\n\
+    \    printf(\"Book 1 title : %s\\n\", Book1.title);\n    printf(\"Book 1 author\
+    \ : %s\\n\", Book1.author);\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'printf(" Book 1 subject : %s\n", Book1.subject);
+
+
+    printf(" Book 1 book_id : %d\n", Book1.book_id);
+
+
+    /* print Book2 info */
+
+
+    printf(" Book 2 title : %s\n", Book2.title);
+
+
+    printf(" Book 2 author : %s\n", Book2.author);
+
+
+    printf(" Book 2 subject : %s\n", Book2.subject);
+
+
+    printf(" Book 2 book_id : %d\n", Book2.book_id);
+
+
+    return 0;
+
+
+    }
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_40_0.png)'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '17. Write a C/C++ program which displays the list of 12 months using enum.
+
+
+    # Problem definition:
+
+
+    This program uses an enumerated type (enum) to define the months of the year,
+    and assigns the values 1 through 12 to them. In the main function, a loop is used
+    to iterate through the months, printing the value and the name of each month to
+    the console.
+
+
+    # Algorithm:
+
+
+    Step 1: Start
+
+
+    Step 2: Declare enumeration “year”
+
+
+    Step 3: Input the months as elements of enumeration
+
+
+    Step 4: Print the months
+
+
+    Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_41_0.png)'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\n#include<conio.h>\n\nint main() {\n\
+    \    enum month[Jan,Feb,Mar,Apr,May,June,July,Aug,Sep,Oct,Nov,Dec];\n\n    printf(\"\
+    Jan=%d\\n\",Jan);\n    printf(\"Feb=%d\\n\",Feb);\n    printf(\"Mar=%d\\n\",Mar);\n\
+    \    printf(\"Apr=%d\\n\",Apr);\n    printf(\"May=%d\\n\",May);\n    printf(\"\
+    June=%d\\n\",June);\n    printf(\"July=%d\\n\",July);\n    printf(\"Aug=%d\\n\"\
+    ,Aug);\n    printf(\"Sep=%d\\n\",Sep);\n    printf(\"Oct=%d\\n\",Oct);\n    printf(\"\
+    Nov=%d\\n\",Nov);\n    printf(\"Dec=%d\\n\",Dec);\\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# Output: CodeBlocks 20.03\n\n```\n#include <stdio.h>\n#include <con.h>\n\n\
+    int main() {\n    char *month[] = {\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"\
+    Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"};\\n    for(int i=0; i<12;\
+    \ i++) {\n        printf(\"%d: %s\\n\", i+1, month[i]);\n    }\n    return 0;\n\
+    }\n```\n\nBuild finished (execution time: 0.152 s)\nPress any key to continue."
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '18. Write a C/C++ program displays the indexing value of specific day from
+    7 days using enum.
+
+
+    # Problem definition:
+
+
+    Enumeration or Enum in C is a special kind of data type defined by the user. It
+    consists of constant integrals or integers that are given names by a user. The
+    use of enum in C to name the integer values makes the entire program easy to learn,
+    understand, and maintain by the same or even different programmer.
+
+
+    # Algorithm:
+
+
+    +   * Step 1: Start
+
+    * Step 2: Declare enumeration week
+
+    * Step 3: Define the seven days as elements of the enum
+
+    * Step 4: Find the value of Wednesday as an enum elements
+
+    * Step 5: Print the value
+
+    * Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_44_0.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# Source code:\n\n```\n// An example program to demonstrate working\n// of\
+    \ enum in C\n#include<stdio.h>\nenum week{Mon, Tue, Wed, Thu, Fri, Sat, Sun};\n\
+    \nint main()\n{\n    enum week day;\n\n    day = Wed;\n    printf(\"%d\",day);\n\
+    \n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_45_0.png)"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '19. Write a C/C++ program that allows entering and displaying 5 friend names.
+
+
+    # Problem definition:
+
+
+    A switch statement allows a variable to be tested for equality against a list
+    of values. Each value is called a case, and the variable being switched on is
+    checked for each switch case.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+    Step 2: Input statement
+
+    Step 3: Follow step 4 to 6 until conditions match
+
+    Step 4: Check if first statement matches
+
+    Step 5: If not, go to next statement
+
+    Step 6: Print the output
+
+    Step 7: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_46_0.png)'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\n\nint main()\n{\n    char cName[5][21]={0};\n\
+    \    int x=0;\n    int iPick;\n\n    printf(\"Enter the name of 5 people\\n\"\
+    );\n\n    for(x=0;x<=5;x++){\n        printf(\"Enter name %d:\", x+1);\n     \
+    \   scanf(\"%%s\", cName[x]);\n    }\n\n    printf(\"\\nWould you like to add\
+    \ another name or view current names stored?\\n\");\n    printf(\"1\\tAdd another\
+    \ name\\n\");\n    printf(\"2\\tView names stored\\n\");\n    scanf(\"%d\", &iPick);\n\
+    \    switch(iPick){\n        case 1:\n            break;\n    }\n}\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "case 2:\n\n```\nfor(x=0;x<=5;x++) {\n```\n\n```\n    printf(\"n%d is %s\\n\"\
+    ,x+1, cName[x]);\n```\n\n```\n}\n```\n\n```\n}\n```\n\n```\n}\n```\n\n```\nreturn\
+    \ 0;\n```\n\n```\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_48_0.png)"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '20. Write a C/C++ program which searches a text in a string.
+
+
+    # Problem definition:
+
+
+    In C programming, a string is a sequence of characters terminated with a null
+    character \0. For example: char c[] = "string\"; When the compiler encounters
+    a sequence of characters enclosed in the double quotation marks, it appends a
+    null character \0 at the end by default.
+
+
+    # Algorithm:
+
+
+    Step 1: Start
+
+
+    Step 2: [Initialize] Input the string
+
+
+    Step 3: Input the text to search in the string
+
+
+    Step 4: Search and find the position of the text in the string
+
+
+    Step 5: Print the position of the text in the string
+
+
+    Step 6: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_49_0.png)'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\n#include<string.h>\n\nint main()\
+    \ {\n    char string[1000], text[100];\n    int i;\n\n    printf(\"Enter the string:\
+    \ \");\n    fgets(string, 1000, stdin);\n    printf(\"Enter the text to search:\
+    \ \");\n    scanf(\"%%s\", text); for(i=0;i<=strlen(string)-strlen(text); i++)\
+    \ {\n        if (strncmp(&string[i], text, strlen(text)) == 0) {\n           \
+    \ printf(\"Text found at position %d\\n\", i+1);\n        }\n    }\n    return\
+    \ 0;\n}\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_51_0.png)'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# 21. Write a program in C/C++ to check whether a character is vowel or consonant.
+
+
+    # Problem definition:
+
+
+    The English Language has 44 English sounds. They can be divided into two main
+    categories: consonants and vowels. A consonant sound is a sound where the airflow
+    is stopped, either partially or completely, when the sound is uttered.
+
+
+    On the other hand, a vowel sound is a sound where the airflow is unobstructed
+    when the sound is produced. The vowel sounds are the rhyme or shift of our language.
+    Monophthongs and diphthongs are the two categories of vowel sounds. Vowel sounds
+    are also divided into long vowel sounds and short vowel sounds.
+
+
+    In English, a, e, i, o, u, and sometimes y are the vowel letters. The rest of
+    the letters in the alphabet represent consonants such as b, d, g, n, r, s, and
+    t. some consonants produce more than one sound.
+
+
+    # Algorithm:
+
+
+    +   Step 1: Start
+
+
+    +   Step 2: [Initialize] Input the alphabet
+
+
+    +   Step 3: Check if it is a, e, i, o or u if yes print "vowel"
+
+
+    +   Step 4: else print "consonant"
+
+
+    +   Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_52_0.png)'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\n#include <stdio.h>\n\nint main() {\n    char ch;\n\n    /* Input character\
+    \ from user */\n    printf(\"Enter any character: \");\\n    scanf(\"%%c\", &ch);\n\
+    \n    /* Condition for vowel */\n    if(ch=='a' || ch=='e' || ch=='i' || ch=='o'\
+    \ || ch=='u' || ch=='A' ||\n    ch=='E' || ch=='I' || ch=='O' || ch=='U') {\n\
+    \        printf(\"%%c is Vowel.\", ch);\n    } else if((ch >= 'a' && ch <= 'z')\
+    \ || (ch >= 'A' && ch <= 'Z')) {\n        /* Condition for consonant */\n    \
+    \    printf(\"%%c is Consonant.\", ch);\n    } else {\n        /* * If it is neither\
+    \ vowel nor consonant\n    * then it is not an alphabet.*/ */\n        printf(\"\
+    %%c is not an alphabet.\", ch);\n    }\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# Output:\n\n```\n#include <stdio.h>\n\nint main() {\n    char ch;\n    printf(\"\
+    Enter any character: \");\n    scanf(\" %c\", &ch);\n\n    if (ch >= 'a' && ch\
+    \ <= 'z') {\n        printf(\"%c is a lowercase letter\\n\", ch);\n    } else\
+    \ if (ch >= 'A' && ch <= 'Z') {\n        printf(\"%c is an uppercase letter\\\
+    n\", ch);\n    } else {\n        printf(\"%c is not an alphabet\\n\", ch);\n \
+    \   }\n\n    return 0;\n}\n```\n\n![](img/ae063c11b8af956e74f03493ca90aad3_54_0.png)"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '22. Write a C/C++ program to converts lowercase to uppercase alphabet.
+
+
+    # **Problem definition:**
+
+
+    Letter case is the distinction between the letters that are in larger uppercase
+    or capitals and smaller lowercase in the written representation of certain languages
+
+
+    Uppercase letters are capital letters—the bigger, taller versions of letters (like
+    W), as opposed to the smaller versions, which are called lowercase letters (like
+    w). Uppercase means the same thing as capital. Uppercase letters can also be called
+    capitals.
+
+
+    # **Algorithm:**
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Input the lowercase alphabet
+
+
+    +   - Step 3: Find the uppercase of the alphabet
+
+
+    +   - Step 4: Print the uppercase of that alphabet
+
+
+    +   - Step 5: Stop
+
+
+    # **Flow-chart:**
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_55_0.png)'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\n\nint main() {\n  char ch;\n\n  printf(\"\
+    Enter a character in lowercase : %c\");\n  scanf(\"%c\",&ch);\n  ch=ch-32;\n\n\
+    \  printf(\"Character in uppercase = %c\",ch);\n\n  return 0;\n}\n```\n\n# Output:\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_56_0.png)"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '23. Write a C/C++ program to converts uppercase to lowercase alphabet.
+
+
+    # **Problem definition:
+
+
+    Letter case is the distinction between the letters that are in larger uppercase
+    or capitals smaller lowercase in the written representation of certain languages
+
+
+    Uppercase letters are capital letters—the bigger, taller versions of letters (like
+    W), as opposed to the smaller versions, which are called lowercase letters (like
+    w). Uppercase letters can also be called capitals.
+
+
+    # **Algorithm:
+
+
+    +   - Step 1: Input the uppercase alphabet
+
+
+    +   - Step 2: Find the lowercase of the alphabet
+
+
+    +   - Step 3: Find the lowercase of the alphabet
+
+
+    +   - Step 4: Print the lowercase of that alphabet
+
+
+    +   - Step 5: Stop
+
+
+    # **Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_57_0.png)'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# Source code:\n\n```\n#include<stdio.h>\nint main() {\n    char ch;\n    printf(\"\
+    Enter a character in uppercase : %c\",\n    scanf(\"%c\",&ch);\n    ch=ch+32;\n\
+    \    printf(\"Character in lowercase = %c\",ch);\n    return 0;\n}\n```\n\n# Output:\n\
+    \n![](img/ae063c11b8af956e74f03493ca90aad3_58_0.png)"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '24. Write a C/C++ program which reverses a string.
+
+
+    # Problem definition:
+
+
+    In C programming, a string is a sequence of characters terminated with a null
+    character \0 . For example: char c[] = "string"; When the compiler encounters
+    a sequence of characters enclosed in double quotation marks, it appends a null
+    character \0 at the end by default.
+
+
+    # Algorithm:
+
+
+    Step 1: Start
+
+
+    Step 2: Enter the string
+
+
+    Step 3: Rewrite the string from the last element to first
+
+
+    Step 4: Print the output
+
+
+    Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_59_0.png)'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Source code:
+
+
+    #include <string.h>
+
+
+    #include <stdio.h>
+
+
+    int main()
+
+
+    { char arr[100];
+
+
+    print("Enter a string to reverse\n");
+
+
+    gets(arr);
+
+
+    strev(arr);
+
+
+    print("Reverse of the string is \n%s\n", arr);
+
+
+
+    return 0;
+
+
+    }
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_60_0.png)'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '25. Write C/C++ program which concatenate the string.
+
+
+    # Problem definition:
+
+
+    In C programming, a string is a sequence of characters terminated with a null
+    character \0 . For example: char c[] = "string"; When the compiler encounters
+    a sequence of characters enclosed in double quotation marks, it appends a null
+    character \0 at the end by default.
+
+
+    # Algorithm:
+
+
+    +   - Step 1: Start
+
+
+    +   - Step 2: Input two strings
+
+
+    +   - Step 3: Combine them in a single string
+
+
+    +   - Step 4: Print the output
+
+
+    +   - Step 5: Stop
+
+
+    # Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_61_0.png)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Source code:\n\n```\n#include <stdio.h>\n\n#include <string.h>\n\nint main()\
+    \ {\n    char a[1000], b[1000];\n\n    printf(\"Enter the first string\\n\");\n\
+    \    gets(a);\n\n    printf(\"Enter the second string\\n\");\n    gets(b);\n\n\
+    \    strcat(a, b);\n    printf(\"String obtained on concatenation: %s\\n\", a);\n\
+    \n    return 0;\n}\",\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_62_0.png)"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '26. Write a C/C++ Program to Find the Length of a String.
+
+
+    # Problem definition:
+
+
+    In C programming, a string is a sequence of characters terminated with a null
+    character \0 . For example: char cl[] = "string"; When the compiler encounters
+    a sequence of characters enclosed in double quotation marks, it appends a null
+    character \0 at the end by default.
+
+
+    # Algorithm:
+
+
+    +   - Step 1: Start
+
+    - Step 2: Input the string to find length
+
+    - Step 3: Read the string to find the length
+
+    - Step 4: Print the length of the string
+
+    - Step 5: Stop
+
+
+    Flow-chart:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_63_0.png)'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Source code: <string.h>\n\n```\n#include <string.h>\n\nint main()\n{\n  \
+    \  char s[40];\n    int len;\n\n    printf(\"\\nEnter any string: \\n\");\n  \
+    \  gets(s);\n\n    len = strlen(s);\n\n    printf(\\\nLength of string: %d\\n\"\
+    , len);\n\n    return 0;\n}\n```\n\n# Output:\n\n![](img/ae063c11b8af956e74f03493ca90aad3_64_0.png)"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# Lab Report 03\n\n1. Alignment, Page setup, insert image, insert table, insert\
+    \ header/footer, create password for security in MS-word.\n\nKey-board commands:\n\
+    \nText alignment\n\nCtrl+L= Aligns the selected texts to the Left of the screen\n\
+    \nCtrl+E= Aligns the selected texts to the Center of the screen\n\nCtrl+R= Aligns\
+    \ the selected texts to the Right of the screen\n\nImage insertion\n\nInsert $\r\
+    ightarrow$ Picture $\rightarrow$ Select picture $\rightarrow$ Enter\n\nTable insertion\n\
+    \nInsert $\rightarrow$ Table $\rightarrow$ Select number of row and column $\r\
+    ightarrow$ Enter\n\nHeader/footer\n\nInsert $\rightarrow$ Header or Footer $\r\
+    ightarrow$ Select style $\rightarrow$ Enter\n\nPassword creation\n\nOffice button\
+    \ $\rightarrow$ Prepare $\rightarrow$ Encrypt document $\rightarrow$ Select password\
+    \ $\rightarrow$ Ok"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# 2. Write a formula and display in MS-Excel for CGPA calculation.
+
+
+    # Formula:
+
+
+    The formula to calculate CGPA in an excel program is done in two steps:
+
+
+    +   a. First individual GPA in each of the subject is multiplied by the corresponding
+    credit hours of individual subject.
+
+
+    +   b. The summation of GPA*Credit hours is then divided by the Total Credit hours.
+
+
+    In the following excel formula is used as:
+
+
+    +   1. G2 =(B2*C3+C2*D3+D2*E3+E2*F3+F2*G2)
+
+
+    +   2. H2 = G2/(3+3+3+3+2)
+
+
+    # Output:
+
+
+    | Name | Bangle | English | English Math | Data | Science in Language | *Credit
+    hours | CGPA |
+
+    |---|---|---|---|---|---|---|-|
+
+    | 1 | Name | 3.75 | 3.5 | 3.25 | 3.75 | 4 | 50.75 | 3.63 |
+
+    | 2 | Rahim | 4 | 3.5 | 3.75 | 4 | 5 | 51.75 | 3.68 |
+
+    | 3 | Karim | 3.25 | 3.5 | 3.75 | 3.75 | 4 | 51.5 | 3.68 |
+
+    | 4 | Jamila | 4 | 3.25 | 3.25 | 3.5 | 4 | 51.5 | 3.68 |
+
+    | 5 | Saqib | 4 | 3.75 | 3.5 | 3.5 | 4 | 50 | 3.37 |
+
+    | 6 | Tania | 3.25 | 3.75 | | | | | |'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 3. Write a formula and display in MS-Excel for Salary calculation.
+
+
+    To calculate the net salaries of employees a formula can be used in excel. All
+    the allowance have to be added first and then the income tax should be subtracted
+    from the total amount to calculate the net.
+
+
+    # Formulas:
+
+
+    Net salary G2 =SUM(B2:E2)-F2 ; G3 =SUM(B3:E3)-F3 ; ......
+
+
+    # Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_67_0.png)'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# 4. Write a formula and display in MS-Excel for making cash-memo.
+
+
+    The cash memo is created to calculate the total amount of product buyer buys and
+    to keep track of his payment amount and remaining balance. In excel formulas can
+    be used to create a cash memo and also to calculate total amount spend and how
+    much more to be paid.
+
+
+    Formula:
+
+
+    Total amount K17=SUM(K5:K9)
+
+
+    Balance / Remaining payment K19=K17-K18
+
+
+    Output:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_68_0.png)'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Lab Report 04: Discussion on Computer Network and Networking Command
+
+
+    # Computer Network:
+
+
+    A computer network is a group of interconnected computers and devices that communicate
+    with each other to share resources and information. Networks can be categorized
+    based on their size and geographical scope.
+
+
+    Here are some of the most common types of computer networks:
+
+
+    Local Area Network (LAN): A LAN is a network that connects devices in a small
+    area such as a home, office, or school. A LAN typically uses Ethernet cables or
+    Wi-Fi to connect devices.
+
+
+    Wide Area Network (WAN): A WAN connects devices across a larger geographic area,
+    such as different cities or countries. The internet is the largest WAN in the
+    world.
+
+
+    Metropolitan Area Network (MAN): A MAN is a network that spans across a metropolitan
+    area, such as a city or a group of cities.
+
+
+    Wireless Network: A wireless network uses radio waves to connect devices without
+    cables. Wi-Fi is a common type of wireless network.
+
+
+    Networks can also be classified by their topology, which refers to the way in
+    which devices are connected to each other. Some of the most common network topologies
+    include:
+
+
+    +   Bus Topology: Devices are connected to a single cable that runs the length
+    of the network.
+
+
+    +   Ring Topology: Devices are connected in a circular chain.
+
+
+    +   Star Topology: Devices are connected to a central hub or switch.
+
+
+    +   Mesh Topology: Devices are connected to each other in a complex web of connections.
+
+
+    Networks can also be classified by the type of protocol they use to transmit data.
+    Some of the most common network protocols include:
+
+
+    +   Transmission Control Protocol/Internet Protocol (TCP/IP): This protocol is
+    used on the internet and most local networks.
+
+
+    +   User Datagram Protocol (UDP): This protocol is used for real-time applications
+    as video conferencing and online gaming.
+
+
+    +   Hypertext Transfer Protocol (HTTP): This protocol is used for transmitting
+    data over the World Wide Web.
+
+
+    Overall, computer networks play a vital role in connecting devices and people
+    around the world. They allow us to share information, resources, and services,
+    and they enable us to communicate and collaborate with each other in real-time'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Internet Protocol& IP Address:
+
+
+    Internet Protocol (IP) is a set of rules that govern the communication of data
+    over a network, including the Internet. IP is responsible for breaking up data
+    into packets, adding addressing information to each packet, and routing them to
+    their intended destination.
+
+
+    IP addresses are used to identify devices on a network. An IP address is a unique
+    numerical identifier assigned to each device on a network. It is used to locate
+    and communicate with devices over the Internet or a private network.
+
+
+    IP addresses are divided into two types:
+
+
+    +   - IPv4
+
+
+    +   - IPv6.
+
+
+    IPv4 addresses are 32-bit numbers expressed in dotted decimal notation, such as
+    192.168.0.1. IPv4 addresses are widely used and are the most common type of IP
+    address. However, as the number of devices connected to the Internet has grown
+    rapidly, IPv4 addresses have become scarce. This has led to the development of
+    IPv6 addresses.
+
+
+    IPv6 addresses are 128-bit numbers expressed in hexadecimal notation, such as
+    2001:0db8:85a3:0000:0000:8a2e:0370:7334.
+
+
+    An IP address is divided into two parts: the network address and the host address.
+    The network address identifies the network to which the device belongs, while
+    the host address identifies the individual device on the network. The subnet mask
+    is used to divide the IP address into two parts.
+
+
+    IP packets are transmitted across a network using a variety of protocols, including
+    TCP (Transmission Control Protocol) and UDP (User Datagram Protocol). TCP is a
+    connection-oriented protocol that provides reliable, ordered, and error-checked
+    delivery of data, while UDP is a connectionless protocol that provides faster,
+    but less reliable, delivery of data.
+
+
+    In summary, Internet Protocol is the set of rules that govern the communication
+    of data over a network, while an IP address is a unique numerical identifier assigned
+    to each device on a network. It is used to locate and communicate with devices
+    over the Internet or a private network, and is divided into the network address
+    and the host address.
+
+
+    # 1.Command of Display a Hostname:
+
+
+    +   1.Click Start menu Windows Icon
+
+
+    +   2.In Search bar type “cmd”
+
+
+    +   3.Type “hostname”
+
+
+    +   4.Then click the Enter'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'Display the result:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_71_0.png)
+
+
+    # **2.Command Display IP Address:**
+
+
+    +   1.Click the start menu windows Icon
+
+    2.In search bar Type "cmd"
+
+    3.In the command prompt window Type "ipconfig"
+
+    4.Press Enter
+
+
+    Display the Result:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_71_1.png)'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# 3.Command Display Mac Address:
+
+
+    1.Click the start menu windows Icon
+
+
+    2.In search bar Type "cmd",
+
+
+    3.In the command prompt window Type "ipconfig/all"
+
+
+    4.Press Enter
+
+
+    5. Scroll down and find the mac address heading "physical Address"
+
+
+    Display the Result:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_72_0.png)
+
+
+    # 4.Command Display Ping IP Address:
+
+
+    1.Click the start menu windows Icon
+
+
+    2.In search bar Type "cmd" and
+
+
+    3.Type "cd" and enter
+
+
+    4.Then enter "cls" and enter
+
+
+    5.In the command prompt window Type "ping[IP address]",
+
+
+    6.Press Enter and the Command Prompt window will display the result
+
+
+    Display the Result:'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# Command Prompt
+
+
+    ```
+
+    C:\> ping 192.168.0.100 -n32 bytes of data:
+
+    Reply from 192.168.0.100: bytes=32 time=1ms TTL=128
+
+    Reply from 192.168.0.100: bytes=32 time=1ms TTL=128
+
+    Reply from 192.168.0.100: bytes=32 time=1ms TTL=128
+
+
+    Statistics for 192.168.0.100:
+
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+
+    Approximate time in milliseconds:
+
+    Minimum = 1ms, Maximum = 1ms, Average = 1ms
+
+
+    C:\>
+
+    ```
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_73_0.png)
+
+
+    # 5.Command DisplayExecute command nslookup:
+
+
+    +   1.Click the start menu windows Icon
+
+
+    +   2.In search bar Type “cmd”
+
+
+    +   3.Type “nslookup” and enter
+
+
+    +   4.Type the IP address about a website
+
+
+    +   5.Enter
+
+
+    Display the Result:
+
+
+    ```
+
+    Microsoft Windows (Version 10.0.22621.1105)
+
+    (c) Microsoft Corporation. All rights reserved.
+
+
+    Server:
+
+    Default Server: Unknown
+
+    Address: 192.168.0.43
+
+
+    >> facebook.com
+
+    Address: 192.168.0.43
+
+
+    Non-authoritative answer:
+
+    Name: star-min-c1b.facebook.com
+
+    Address: 157.240.15.36
+
+
+    Aliases:
+
+    facebook.com
+
+    ```
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_73_1.png)'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# 6.Command Display execute command tracerert:
+
+
+    1.Click the start menu Windows
+
+
+    2.In search bar Type "cmd",
+
+
+    3.Now Type "tracerert [IP address]
+
+
+    4.Enter and show the result
+
+
+    Display the Result:
+
+
+    ![](img/ae063c11b8af956e74f03493ca90aad3_74_0.png)'
+  merge: -1
+  pgno: 74
+toc:
+- - '#'
+  - C 语言初学者 26 个基础代码（含流程图、算法与输出）
+- - '##'
+  - 1. 编写一个 C/C++ 程序显示两个数字的除法结果。
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '##'
+  - 2. 编写一个 C/C++ 程序显示一个数字是奇数还是偶数。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 流程图：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：Code.exe
+- - '##'
+  - 3. 编写 C/C++ 程序检查患者是否患有糖尿病。
+- - '###'
+  - 算法：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '##'
+  - 4. 编写 C/C++ 程序计算两个数字之间的最大值。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '##'
+  - 5. 编写 C/C++ 程序计算 1+2+3+...+n 的和。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '##'
+  - 6. 编写 C/C 程序显示自然数的平方和。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 流程图：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '##'
+  - 14. 编写一个显示三维数组的 C/C++ 程序。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 流程图：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '##'
+  - 15. 编写一个使用数组计算 n 个数字平均值的 C/C++ 程序。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 流程图：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '##'
+  - 16. 编写一个使用结构体（struct）显示书籍信息的 C/C++ 程序。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 流程图：
+- - '###'
+  - 源代码：
+- - '##'
+  - 17. 编写一个使用枚举（enum）显示月份的 C/C++ 程序。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 流程图：
+- - '###'
+  - 源代码：
+- - '##'
+  - 18. 编写一个使用枚举显示特定日期索引值的 C/C++ 程序。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 源代码：
+- - '##'
+  - 19. 编写一个允许输入并显示5 个朋友名字的 C/C++ 程序。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '##'
+  - 26. 编写一个 C/C++ 程序查找字符串的长度。
+- - '###'
+  - 问题定义：
+- - '###'
+  - 算法：
+- - '###'
+  - 流程图：
+- - '###'
+  - 源代码：
+- - '###'
+  - 输出：
+- - '#'
+  - 实验报告 03
+- - '##'
+  - 键盘命令：
+- - '##'
+  - 2. 编写一个公式并在 MS-Excel 中显示用于计算 CGPA。**
+- - '###'
+  - 公式：
+- - '###'
+  - 输出：
+- - '##'
+  - 3. 编写一个公式并在 MS-Excel 中显示用于薪资计算。**
+- - '###'
+  - 公式：
+- - '###'
+  - 输出：
+- - '##'
+  - 4. 编写一个公式并在 MS-Excel 中显示用于制作现金收据。**
+- - '###'
+  - 公式：
+- - '###'
+  - 输出：
+- - '#'
+  - '实验报告 04: 计算机网络'
+- - '##'
+  - 网络组件：
+- - '###'
+  - 拓扑结构类型：
+- - '###'
+  - 协议：
+- - '##'
+  - 3. 命令显示 MAC 地址：
+- - '##'
+  - 4. 命令显示 Ping 的 IP 地址：
+- - '##'
+  - 5. 命令显示执行命令 nslookup：
+- - '##'
+  - 6. 命令显示执行命令 tracerert：
+- - '###'
+  - 修复说明：

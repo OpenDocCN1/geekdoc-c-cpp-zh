@@ -1,0 +1,1786 @@
+groups:
+- md: '
+
+    Available online at www.sciencedirect.com
+
+
+    # ScienceDirect
+
+
+    Procedia Computer Science 208 (2022) 627-634
+
+
+    # Procedia Computer Science
+
+
+    www.elsevier.com/locate/procedia
+
+
+    # 7th International Conference on Intelligent, Interactive Systems and Applications
+
+
+    # A New Projection Contraction Algorithm for Semidefinite Programming
+
+
+    Hongmei Bi*, Xuejun Zhao, Jinshen Ren
+
+
+    *Fundamentals Department, Air Force Engineering University, Xi''an 710038, China
+
+
+    # Abstract
+
+
+    This paper studies a projection contraction algorithm for solving semidefinite
+    programming problems. The interior point algorithm is a classic algorithm for
+    solving semidefinite programming. It can be divided into feasible and infeasible
+    algorithms according to whether the initial point is feasible. The feasible interior
+    point algorithm needs to use a self-dual strategy to find strictly feasible points.
+    Although the infeasible interior point algorithm does not require the initial
+    point to be strictly feasible, the theoretical analysis of the algorithm is very
+    complicated. Compared with the interior point algorithm, the projection contraction
+    algorithm has no requirement on the initial point, and the algorithm is much simpler.
+    The optimal condition of the semidefinite programming problem can be rewritten
+    as a projection equation, which is then solved by the projection contraction algorithm.
+    We propose a new projection contraction algorithm based on descending directions
+    to improve the algorithm by solving the linear equation, thus avoiding the high-dimensional
+    inversion so that the algorithm can solve the large-scale semidefinite programming
+    problem. Numerical experiments show that the algorithm is feasible and the improved
+    algorithm coincides with the interior point algorithm.
+
+
+    © 2022 The Authors. Published by Elsevier B.V.
+
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    "Peer-review under responsibility of the scientific committee of the 7th International
+    Conference on Intelligent, Interactive Systems and "Applications"
+
+
+    Keywords: Semidefinite programming; optimal condition; projection equation; projection
+    contraction algorithm
+
+
+    # 1. Introduction
+
+
+    Consider semidefinite programming problems
+
+
+    *Corresponding author. Tel.: +86-1791789397. E-mail: bihongmei2021@163.com
+
+
+    1877.0569 © 2022 The Authors. Published by Elsevier B.V.
+
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    "Peer-review under responsibility of the scientific committee of the 7th International
+    Conference on Intelligent, Interactive Systems and Applications"
+
+
+    10.1016/j.proc.2022.10.086
+
+
+    628 Hongmei Bi et al. / Procedia Computer Science 208 (2022) 627–634
+
+
+    (P) min $C\cdot X$ s.t. $A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0$. (1)
+
+
+    and its dual problem
+
+
+    (D) max $b^T y$ s.t. $\sum_{i=1}^m y_i A_i+S=C, S\geq 0$. (2)
+
+
+    For simplicity, we denote the space of real and symmetric $n\times n$ matrices
+    as $S^n$, and all semidefinite matrices in $S^n$ as $S^n_+$. In systems (1) and
+    (2), matrices $C, A_i \in S^n, i=1,...,m$, vectors $b, y \in R^m$. $A\cdot B$
+    means the inner product of $A, B \in S^n$ and defines by $A\cdot B=\text{trace}(AB)$.
+    $X, S\geq 0$ means that $X, S \in S^n$.
+
+
+    Under appropriate constraint qualification, the solution of primal and dual semidefinite
+    programming problem satisfies the optimal condition:
+
+
+    $$\begin{cases} A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0 \\ \sum_{i=1}^m y_i A_i+S=C,
+    S\geq 0 \\ XS=0 \end{cases}$$ (3)
+
+
+    The basic idea of interior point algorithm to solve semidefinite programming problem
+    is to change the complementary condition $XS=0$ with complementary relaxation
+    $XS=\mu I$, where $I$ is the identity matrix and the parameter $\mu > 0$, and
+    the central system is obtained:
+
+
+    $$\begin{cases} A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0 \\ \sum_{i=1}^m y_i A_i+S=C,
+    S\geq 0 \\ XS=\mu I \end{cases}$$ (4)
+
+
+    then Newton''s method is used to get a search direction, however the matrix product
+    is generally not commutative, the obtained search direction is asymmetric. To
+    get a symmetric search direction, the complementary relaxation needs to be symmetric
+    [1]. In recent years, interior point methods for solving semidefinite programming
+    problems have focused on the construction of new kernel functions, the design
+    of wide neighborhoods, and a new search strategy—[2–4]. These algorithms require
+    that the starting point must be strictly feasible, but strictly feasible starting
+    points are not easy to find. A common approach is to use SDMM [6], SDP3 [7], another
+    solution is to design infeasible algorithms, such as [8], which do not require
+    the initial point to be feasible, but the theoretical analysis is more complicated.
+
+
+    Projection algorithms originated from the study of solving variational inequalities
+    earlier. Based on HeBing''s projection contraction for solving variational inequalities
+    [9] and the projection contraction for solving variational inequalities [10],
+    Han Qi extended the projection contraction for solving variational inequalities
+    to semidefinite programming [11]. The method converts the compatibility condition
+    in (3) into the projection equation, and then use the projection algorithm to
+    solve variational inequalities [12]. Yu Zheng adopted the projection contraction
+    for solving variational inequalities [13] to solve some projection problems [14].
+    For the second-order programming, Mu and Zhang [15] combined the Euclidean geometry
+    to solve the second-order programming. Further, Mu and Zhang gave the projection
+    contraction algorithm for semidefinite programming. The second-order programming
+    can be seen as a special case of semidefinite programming, and the theoretical
+    analysis of the projection contraction algorithm is simple, and there is no requirement
+    for the initial point. Based on [14], this paper proposes a new projection contraction
+    algorithm to solve semidefinite programming problem. Compared with the interior
+    point algorithm, the projection contraction algorithm has no requirement on the
+    initial point, and the algorithm is much simpler. The optimal condition of the
+    semidefinite programming problem can be rewritten as a projection equation, which
+    is then solved by the projection contraction algorithm. We propose a new projection
+    contraction algorithm based on descending directions to improve the algorithm
+    by solving the linear equation, thus avoiding the high-dimensional inversion so
+    that the algorithm can solve the large-scale semidefinite programming problem.
+    Numerical experiments show that the algorithm is feasible and the improved algorithm
+    coincides with the interior point algorithm.
+
+
+    # 2. Preliminaries
+
+
+    $\Omega \subset R^n$ be a bounded convex set, $F$ is a monotone operator from
+    $R^n$ to $R^n$, the variational inequality is to find $u^* \in \Omega$ satisfied
+
+
+    $$(u-u^*)^T F(u^*) \geq 0, \quad \forall u \in \Omega.$$
+
+
+    Obviously, multiplying the operator $F$ in the variational inequality (5) by a
+    factor $\beta > 0$ does not change the solution of the problem. As well known,
+    the above variational inequality is equivalent to solve projection equation
+
+
+    $$u = P_{\Omega}[u - \beta F(u)], \quad \beta > 0.$$
+
+
+    Denote $e(u, \beta) := u - P_{\Omega}[u - \beta F(u)]$. In particular, when $F(u)
+    = Mu + q$, $q \in R^n, M \in R^{n \times n}$ satisfies $u^T Mu \geq 0$ is called
+    a linear variational inequality.
+
+
+    The following lemma shows that the compatibility condition in (3) can be transformed
+    into an equivalent projection form.
+
+
+    **Theorem 1[11]** For $X, S \in S_+^s, XS = 0 \Rightarrow X = P_{S^s}(X-S)$. For
+    semidefinite programming problems, denote $u = \begin{pmatrix} X \\ y \end{pmatrix},
+    M = \begin{pmatrix} 0 & -A^T \\ A & 0 \end{pmatrix}, q = \begin{pmatrix} c \\
+    b \end{pmatrix}, \text{where } A = \begin{pmatrix} A_1 \\ \vdots \\ A_m \end{pmatrix},
+    \text{then}$
+
+
+    $$[X-P_{(X,\beta)}[X-C-\sum^m y_i A_i)], \beta[A_1 \cdot X-b_1], \beta[A_m \cdot
+    X-b_m]]begin{pmatrix} e(X, \beta) \\ e(y, \beta) \end{pmatrix}$$
+
+
+    $\Omega = S_+^s \times R^n$. Therefore, from Theorem 1, it can be known that the
+    optimal condition (3) for the semidefinite programming problem is equivalent to
+    $u = P_{\Omega}[u - \beta(Mu+q)]$. Note that $M^T = -M$, that is, matrix is skew-symmetric,
+    and in the actual calculation, the elements of the matrix
+
+    '
+  mdcn: '
+
+    在线访问：www.sciencedirect.com
+
+
+    # ScienceDirect
+
+
+    Procedia Computer Science 208 (2022) 627-634
+
+
+    # Procedia Computer Science
+
+
+    www.elsevier.com/locate/procedia
+
+
+    # 第7次智能交互系统与应用国际会议
+
+
+    # 一种用于半定规划的新型投影收缩算法
+
+
+    毕红*, 赵学军, 任锦神
+
+
+    *中国空军工程大学基础学部，西安 710038，中国
+
+
+    # 摘要
+
+
+    本文研究了一种用于半定规划问题的投影收缩算法。内点法是求解半定规划问题的经典算法。根据初始点是否可行，它可以被分为可行算法和不可行算法。可行内点法需要使用自对策略来寻找严格可行点。虽然不可行内点法不要求初始点严格可行，但该算法的理论分析非常复杂。与内点法相比，投影收缩算法对初始点没有要求，且算法简单得多。半定规划问题的最优条件可以重写为投影方程，然后通过投影收缩算法进行求解。我们提出了一种基于下降方向的新型投影收缩算法，通过求解线性方程来改进算法，从而避免高维求逆，使算法能够解决大规模半定规划问题。数值实验表明，该算法是行的，且改进算法与内点法一致。
+
+
+    © 2022 作者。由 Elsevier B.V. 出版
+
+
+    这是遵循 CC BY-NC-ND 许可的开放访问文章（https://creativecommons.org/licenses/by-nc-nd/4.0）
+
+
+    “由第7次智能交互系统与应用国际会议科学委员会负责评审”
+
+
+    关键词：半定规划；最优条件；投影方程；投影收缩算法
+
+
+    # 1. 引言
+
+
+    *通讯作者。电话：+86-1791789397。邮箱：bihongmei2021@163.com
+
+
+    1877.0569 © 2022 作者。由 Elsevier B.V. 出版
+
+
+    这是遵循 CC BY-NC-ND 许可的开放访问文章（https://creativecommons.org/licenses/by-nc-nd/4.0）
+
+
+    “由第7次智能交互系统与应用国际会议科学委员会负责评审”
+
+
+    10.1016/j.proc.2022.10.086
+
+
+    628 毕红 等人 / Procedia Computer Science 208 (2022) 627–634
+
+
+    考虑半定规划问题：
+
+
+    (P) min $C\cdot X$ s.t. $A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0$。(1)
+
+
+    以及其对偶问题
+
+
+    (D) max $b^T y$ s.t. $\sum_{i=1}^m y_i A_i+S=C, S\geq 0$。(2)
+
+
+    为了简单起见，我们将实数对称 $n\times n$ 矩阵空间记为 $S^n$，，$S^n$ 中所有半定矩阵记为 $S^n_+$。在系统 (1) 和 (2)
+    中，矩阵 $C, A_i \in S^n, i=1,...,m$，向量 $b, y \in R^m$。$A\cdot B$ 表示 $A, B \in S^n$
+    的内积，定义为 $A\cdot B=\text{trace}(AB)$。$X, S\geq 0$ 表示 $X, S \in S^n$。
+
+
+    在适当的约束限定下，原问题和对偶问题半定规划问题的解满足最优条件：
+
+
+    $$\begin{cases} A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0 \\ \sum_{i=1}^m y_i A_i+S=C,
+    S\geq 0 \\ XS=0 \end{cases}$$ (3)
+
+
+    内点法求解半定规划问题的基本思想是将互补条件 $XS=0$ 替换为互补松弛 $XS=\mu I$，其中 $I$ 是单位矩阵，参数 $\mu > 0$，从而得到中心系统：
+
+
+    $$\begin{cases} A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0 \\ \sum_{i=1}^m y_i A_i+S=C,
+    S\geq 0 \\ XS=\mu I \end{cases}$$ (4)
+
+
+    然后使用牛顿法来获取搜索方向，然而矩阵乘积通常不是可交换的，得到的搜索方向是非对称的。为了获得对称的搜索方向，需要互补松弛是对称的 [1]。近年来，求解半定规划问题的内点法侧重于新核函数的构造、宽邻域的设计以及新的搜索策略——[2–4]。这些算法要求起始点必须是严格可行的，但严格可行起始点并不容易找到。常用方法是使用
+    SDMM [6], SDP3 [7]，另一种方法是设计不可行算法，例如 [8]，它们不要求初始点可行，但理论分析更为复杂。
+
+
+    投影算法源于早期对求解变分不等式的研究。基于何兵求解变分不等式的投影收缩算法 [9] 和求解变分不等式的投影收缩算法 [10]，韩其将求解变分不等式的投影收缩扩展到半定规划
+    [11]。该方法将 (3) 中的相容条件转换为投影方程，然后使用投影算法求解变分不等式 [12]。郑正采用求解变分不等式的投影收缩算法 [13] 来解决某些投影问题
+    [14]。对于二阶规划，Mu和张 [15] 结合欧几里得几何来求解二阶规划。此外，Mu和张给半定规划的投影收缩算法。二阶规划可以看作半定规划的特例，投影收缩算法的理论分析简单，且对初始点没有要求。基于
+    [14]，本文提出了一种新的投影收缩算法来求解半定规划问题。与内点法相比，投影收缩算法对初始点没有要求，且算法简单得多。半定规划问题的最优条件可以重写为投影方程，然后通过投影收缩算法进行求解。我们提出了一种基于下降方向的新型投影收缩算法，通过求解线性方程来改进算法，从而避免高维求逆，使算法能够解决大规模半定规划问题。数值实验表明，该算法是行的，且改进算法与内点法一致。
+
+
+    # 2. 预备知识
+
+
+    $\Omega \subset R^n$ 为凸集，$F$ 是从 $R^n$ 到 $R^n$ 的单调算子，变分不等式是寻找 $u^* \in \Omega$
+    使得：
+
+
+    $$(u-u^*)^T F(u^*) \geq 0, \quad \forall u \in \Omega.$$
+
+
+    显然，将变分不等式 (5) 中的算子 $F$ 乘以因子 $\beta > 0$ 不改变问题的解。众所周知，上述变分不等式等价于求解投影方程：
+
+
+    $$u = P_{\Omega}[u - \beta F(u)], \quad \beta > 0.$$
+
+
+    令 $e(u, \beta) := u - P_{\Omega}[u - \beta F(u)]$。特别当 $F(u) = Mu + q, q \in R^n,
+    M \in R^{n \times n}$ 满足 $u^T Mu \geq 0$ 时，称为线性变分不等式。
+
+
+    以下引理表明 (3) 中的相容条件可以转换为投影的投影形式。
+
+
+    **定理 1[11]** 对于 $X, S \in S_+^s，$XS=0 \Rightarrow X = P_{S^s}(X-S)$。对于半定规划问题，令
+    $u = \begin{pmatrix} X \\ y \end{pmatrix}, M = \begin{pmatrix} 0 & -A^T \\ A &
+    0 \end{pmatrix}, q = \begin{pmatrix} c \\ b \end{pmatrix}, \text{其中 } A = \begin{pmatrix}
+    A_1 \\ \vdots \\ A_m \end{pmatrix}, \text{则}$
+
+
+    $$[X-P_{(X,\beta)}[X-C-\sum^m y_i A_i)], \beta[A_1 \cdot X-b_1], \beta[A_m \cdot
+    X-b_m]]begin{pmatrix} e(X, \beta) \\ e(y, \beta) \end{pmatrix}$$
+
+
+    $\Omega = S_+^s \times R^n$。因此，从定理1可知，半定规划的最优条件 (3) 等价于 $u = P_{\Omega}[u - \beta(Mu+q)]$。注意
+    $M^T = -M$，即矩阵是反对称的，在实际计算中，矩阵的
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    Available online at www.sciencedirect.com
+
+
+    # ScienceDirect
+
+
+    Procedia Computer Science 208 (2022) 627-634
+
+
+    # Procedia Computer Science
+
+
+    www.elsevier.com/locate/procedia
+
+
+    # 7th International Conference on Intelligent, Interactive Systems and Applications
+
+
+    # A New Projection Contraction Algorithm for Semidefinite Programming
+
+
+    Hongmei Bi\*, Xuejun Zhao, Jinshen Ren
+
+
+    *Fundamentals Department, Air Force Engineering University, Xi''an 710038, China
+
+
+    # Abstract
+
+
+    This paper studies a projection contraction algorithm for solving semidefinite
+    programming problems. The interior point algorithm is a classic algorithm for
+    solving semidefinite programming. It can be divided into feasible and infeasible
+    algorithms according to whether the initial point is feasible. The feasible interior
+    point algorithm needs to use a self-dual strategy to find strictly feasible points.
+    Although the infeasible interior point algorithm does not require the initial
+    point to be strictly feasible, the theoretical analysis of the algorithm is very
+    complicated. Compared with the interior point algorithm, the projection contraction
+    algorithm has no requirement on the initial point, and the algorithm is much simpler.
+    The optimal condition of the semidefinite programming problem can be rewritten
+    as a projection equation, which is then solved by the projection contraction algorithm.
+    We propose a new projection contraction algorithm based on descending directions
+    to improve the algorithm by solving the linear equation, thus avoiding the high-dimensional
+    inversion so that the algorithm can solve the large-scale semidefinite programming
+    problem. Numerical experiments show that the algorithm is feasible and the improved
+    algorithm coincides with the interior point algorithm.
+
+
+    © 2022 The Authors. Published by Elsevier B.V.
+
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    "Peer-review under responsibility of the scientific committee of the 7th International
+    Conference on Intelligent, Interactive Systems and "Applications"
+
+
+    Keywords: Semidefinite programming; optimal condition; projection equation; projection
+    contraction algorithm
+
+
+    # 1. Introduction
+
+
+    Consider semidefinite programming problems
+
+
+    *Corresponding author. Tel.: +86-1791789397.
+
+
+    E-mail: bihongmei2021@163.com
+
+
+    1877.0569 © 2022 The Authors. Published by Elsevier B.V.
+
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    "Peer-review under responsibility of the scientific committee of the 7th International
+    Conference on Intelligent, Interactive Systems and Applications"
+
+
+    10.1016/j.proc.2022.10.086'
+  - '[PAGE 1]
+
+
+    628 Hongmei Bi et al. / Procedia Computer Science 208 (2022) 627–634
+
+
+    (P) min C\cdot X s.t. A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0. (1)
+
+
+    and its dual problem
+
+
+    (D) max b^T y s.t. \sum_{i=1}^m y_i A_i+S=C, S\geq 0. (2)
+
+
+    For simplicity, we denote the space of real and symmetric $n\times n$ matrices
+    as $S^n$, and all semidefinite matrices in $S^n$ as $S^n_+$. In systems (1) and
+    (2), matrices $C, A_i \in S^n, i=1,...,m$, vectors $b, y \in R^m$. $A\cdot B$
+    means the inner product of $A, B \in S^n$ and defines by $A\cdot B=\text{trace}(AB).X,
+    S\geq 0$ means that $X, S \in S^n$.
+
+
+    Under appropriate constraint qualification, the solution of primal and dual semidefinite
+    programming problem satisfies the optimal condition:
+
+
+    ```
+
+    $A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0$
+
+    $$\sum_{i=1}^m y_i A_i+S=C, S\geq 0$\n$XS=0$
+
+    \end{aligned}\end{aligned}$ (3)
+
+    ```
+
+
+    The basic idea of interior point algorithm to solve semidefinite programming problem
+    is to change the complementary condition $XS=0$ with complementary relaxation
+    $XS=\mu I$, where $I$ is the identity matrix and the parameter $\mu > 0$, and
+    the central system is obtained:
+
+
+    ```
+
+    $A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0$
+
+    $$\sum_{i=1}^m y_i A_i+S=C, S\geq 0$\n$XS=\mu I$\n\end{aligned}\end{aligned}$
+    (4)
+
+    ```
+
+
+    then Newton''s method is used to get a search direction, however the matrix product
+    is generally not commutative, the obtained search direction is asymmetric. To
+    get a symmetric search direction, the complementary relaxation needs to be symmetric
+    [1]. In recent years, interior point methods for solving semidefinite programming
+    problems have focused on the construction of new kernel functions, the design
+    of wide neighborhoods, and a new search strategy—[2–4]. These algorithms require
+    that the starting point must be strictly feasible, but strictly feasible starting
+    points are not easy to find. A common approach is to use SDMM [6], SDP3 [7], another
+    solution is to design infeasible algorithms, such as [8], which do not require
+    the initial point to be feasible, but the theoretical analysis is more complicated.
+
+
+    Projection algorithms originated from the study of solving variational inequalities
+    earlier. Based on HeBing''s projection contraction for solving variational inequalities
+    [9] and a method to solve a class of linear projection projections [10], Han Qiang
+    extended the projection contraction for solving linear programming to solve semidefinite
+    programming problems [11]. The method converts the complementary condition in
+    the optimal condition into the corresponding projection equation, and then use
+    the projection contraction algorithm to solve variational inequality problems,
+    Yu Zheng [12] adopted the strategy of alternately calculating projections and
+    solving dimension reduced'
+  - '[PAGE 2]
+
+
+    systems, and a new method to solve some semidefinite programming problems. For
+    the second-order programming problem, reference [13] proposed a noninterior point
+    algorithm. Mu and Zhang [14] combined the latest results of Euclidean Jordan geometry
+    to easily calculate the projection on the second-order cone, and obtained a fast
+    projection contraction algorithm for solving the second-order cone. Further, Mu
+    and Zhang [15] gave a projection contraction algorithm to solve the circular conic
+    programming problem. The second-order programming can be seen as a special case
+    of semidefinite programming, and the theoretical analysis of the projection contraction
+    algorithm is simple, and there is no requirement for the initial point. Based
+    on the reference [14], this paper proposes a new projective contraction algorithm
+    to solve the semidefinite programming problem.
+
+
+    # 2. Preliminaries
+
+
+    $\Omega \subset R^n$ be a bounded convex set, $F$ is a monotone operator from
+    $R^n$ to $R^n$, the variational inequality problem is to find $u^* \in \Omega$
+    satisfied
+
+
+    ```
+
+    $$(u-u^*)^T F(u^*) \geq 0, \quad \forall u \in \Omega.$$
+
+    ```
+
+
+    Obviously, multiplying the operator $F$ in the variational inequality (5) by a
+    factor $\beta > 0$ does not change the solution of the problem.
+
+    As well known, the above variational inequality is equivalent to solve the projection
+    equation
+
+
+    ```
+
+    $$$u = P_{\Omega}[u - \beta F(u)], \quad \beta > 0.$$
+
+    ```
+
+
+    Denote $e(u, \beta) := u - P_{\Omega}[u - \beta F(u)]$.
+
+    In particular, when $F(u) = Mu + q$, $q \in R^n, M \in R^{n \times n}$ satisfies
+    $\forall u, u^T Mu \geq 0$ is called a linear variational inequality.
+
+
+    The following lemma shows that the compatibility condition in (3) can be transformed
+    into an equivalent projection form.
+
+
+    **Theorem 1[11]** For $X, S \in S_+^s, XS = 0 \Rightarrow X = P_{S_+^s}(X-S)$.
+
+    For semidefinite programming problems, denote
+
+
+    ```
+
+    $$$u = \begin{pmatrix} X \ y \end{pmatrix}, M = \begin{pmatrix} 0 & -A^T \ A &
+    0 \end{pmatrix}, q = \begin{pmatrix} c \ b \end{pmatrix}, \text{where } A = \begin{pmatrix}
+    A_1 \ \vdots \ A_m \end{pmatrix}, \text{then}$$
+
+    ```
+
+
+    ```
+
+    $$$[X-P_{(X,\beta)}[X-C-\sum^m y_i A_i)]\n\beta[A_1 \cdot X-b_1],\n\beta[A_m \cdot
+    X-b_m]$$$
+
+    ```
+
+
+    ```
+
+    $$$e(u, \beta)=u - P_{\Omega}[u - \beta(Mu+q)] = \begin{pmatrix} e(X, \beta) \
+    e(y, \beta) \end{pmatrix}$$$$
+
+    ```
+
+
+    $\Omega = S_+^s \times R^n$. Therefore, from Theorem 1, it can be known that the
+    optimal condition (3) for the semidefinite programming problem is equivalent to
+
+
+    ```
+
+    $$$u = P_{\Omega}[u - \beta(Mu+q)].$$
+
+    ```
+
+
+    Note that $M^T = -M$, that is, matrix is skew-symmetric, and in the actual calculation,
+    the elements of the matrix'
+- md: '
+
+    pulled into vectors by columns for operation.
+
+
+    ## 3. Projection contraction algorithm based on a new direction
+
+
+    Based on some new methods to solve linear projection equations [10], reference
+    [14] proposed a fast projection contraction algorithm for solving second-order
+    cone programming. Similarly, according to the equivalence of the linear projection
+    equation (7) and the optimal conditions of the semidefinite programming problem,
+    this paper proposes a projection contraction algorithm to solve the semidefinite
+    programming problem and improves it.
+
+
+    Assuming that the equation (7) has solution, the set of solutions is denoted as
+    $\Omega^u$.
+
+
+    **Theorem 2** Let $u'' \in \Omega^u, \beta \in \{0,1\}$, then
+
+
+    $$(u-u'')^T d(u, \beta) \geq \|e(u, \beta)\|^2, \forall u \in \mathbf{R}^{mn}
+    \times \mathbf{R}^m$$
+
+
+    where $d(u, \beta) = (I - \beta M)e(u, \beta)$.
+
+
+    Proof By projection properties on closed convex sets, we get
+
+
+    $$[P_{\Omega}(v)]^T[P_{\Omega}(v)-u^*] \geq 0, \forall v \in \mathbf{R}^{mn} \times
+    \mathbf{R}^m. (8)$$
+
+
+    Let $v = u-\beta(Mu+q)$ in (8), we have
+
+
+    $$[e(u,\beta)-\beta(Mu+q)]^T[P_{\Omega}(u-\beta(Mu+q))-u^*] \geq 0. (9)$$
+
+
+    Then let $v=P_{\Omega}(u-\beta(Mu+q))$, from (5) we get
+
+
+    $$[\beta(Mu+q)]^T[P_{\Omega}(u-\beta(Mu+q))-u^*] \geq 0. (10)$$
+
+
+    (9) and (10) are added together we have
+
+
+    $$[e(u,\beta)-\beta M(u-u^*)]^T[P_{\Omega}(u-\beta(Mu+q))-u^*] \geq 0. (11)$$
+
+
+    The above inequality gives
+
+    $$(u-u^*)^T(I+\beta M)e(u,\beta) \geq \|e(u,\beta)\|^2+(u-u^*)^T\beta M(u-u^*).$$
+
+
+    Finally, we end the proof since $M$ is the skew-symmetric,
+
+
+    Define $F(u,\beta)=\frac{1}{2}\|u-u^*\|^2$, from Theorem 2, it is known that $d(u,\beta)$
+    is the descending direction of $F(u,\beta)$ at $G=(I+\beta M)^T(I+\beta M)$, since
+    $M$ is the skew-symmetric, we have
+
+    $G=(I-\beta M)(I+\beta M)$. Obviously $G$ is positive, then $-G^{-1}d(u,\beta)=-(I+\beta
+    M)^{-1}e(u,\beta)$ can also be a descending direction [9].
+
+
+    ## Algorithm 1 Projection contraction algorithm is given below.
+
+
+    Given $u_0 \in \mathbf{R}^{mn} \times \mathbf{R}^m, r \in (0,2), \beta \in \{0,1\}$.
+
+
+    For $k=0,1,\dots,$ if $u_k^* \notin \Omega^u$,
+
+
+    Step 1: Calculate $d(u_k,\beta)=(I+\beta M)^{-1}e(u_k,\beta)$,
+
+
+    Step 2: Update $u_{k+1} = u_k - r\beta d(u_k, \beta)$.
+
+
+    From Theorem 2, the global convergence proof of the projection contraction algorithm
+    for solving semidefinite programming problems can be given.
+
+
+    **Theorem 3** $G = (I + \beta M^T)$, $r \in (0,2), \beta \in [0,1]$, the sequence
+    $\{u_k\}$ produced by Algorithm 1 satisfy
+
+
+    $$\|u_{k+1}-u_k\|_G^2 \leq \|u_k-u_k^*\|_G^2 - r\beta(2-\beta)\|e(u_k, \beta)\|$$
+
+
+    Proof $\|u_{k+1}-u_k\|_G^2 = \|(I + \beta M^T)(u_k - u_k^*) - r\beta I(I + \beta
+    M^T)^{-1}e(u_k, \beta)\|_G^2$
+
+
+    $= \|(I + \beta M^T)(u_k - u_k^*)\|_G^2 \neq \|u_k-u_k^*\|_G^2 - 2r\beta(u_k-u_k^*)(I
+    + \beta M^T)e(u_k, \beta) + r^2\beta^2 \|e(u_k, \beta)\|_G^2$
+
+
+    $\leq \|u_k-u_k^*\|_G^2 - 2r\beta\|e(u_k, \beta)\|$
+
+
+    **Theorem 4** [9] the sequence $\{u_k\}$ produced by Algorithm 1 converges to
+    $u_k^* \in \Omega^*$.
+
+
+    In Algorithm 1, when calculating the descending direction $d(u_k, \beta) = (I
+    + \beta M)^{-1}e(u_k, \beta)$, if the scale of problem is large, the computational
+    cost of $(I + \beta M)^{-1}$ is too high, which will cause the algorithm to run
+    slowly. The following equivalent is:
+
+
+    $$d(u_k, \beta) = (I + \beta M)^{-1}e(u_k, \beta) \Leftrightarrow (I + \beta M)d(u_k,
+    \beta) = e(u_k, \beta). (12)$$
+
+
+    The specific form of equation on the right is a system of linear equations
+
+
+    $$\begin{bmatrix} I_{n \times n} & -\beta A^T \\ \beta A & I_{m \times m} \end{bmatrix}
+    \begin{bmatrix} d(X_k, \beta) \\ d(y_k, \beta) \end{bmatrix} = \begin{bmatrix}
+    e(X_k, \beta) \\ e(y_k, \beta) \end{bmatrix}. (13)$$
+
+
+    Solve the equations to get
+
+
+    $$d(y_k, \beta) = (I_{m \times m} + \beta^2 A^T)^{-1}[e(y_k, \beta) - \beta e(X_k,
+    \beta)]. (14)$$
+
+
+    $$d(X_k, \beta) = \beta A^T d(y_k, \beta) + e(X_k, \beta). (15)$$
+
+
+    It can be seen from (12) to (15) that with inversion operation $(I+\beta M)^{-1}$
+    and $(I + \beta^2 A^T)^{-1}$, the dimension is reduced from $(n^2+m)$ to $m \times
+    m$, and the amount of computation can be significantly reduced when $n$ is larger
+    than $m$. So there is an projection contraction algorithm:
+
+
+    ## Algorithm 2 Improved projection contraction algorithm
+
+
+    Step 1: Given $u_k \in \mathbb{R}^n \times \mathbb{R}^m, r \in (0,2), \beta \in
+    [0,1]$.
+
+
+    Step 2: For $k=0, 1, \dots$, if $u_k \notin \Omega^*$,
+
+
+    Step 3: Calculated $d(y_k, \beta), d(X_k, \beta)$ from equations (14) and (15)
+    to get $d(u_k, \beta)$,
+
+
+    Step 4: Update $u_{k+1} = u_k - r\beta d(u_k, \beta)$.
+
+
+    ## 4. Numerical experiment
+
+
+    Test platform and software: Intel Xeon2 CPU (3.3GHz), 8GB ram PC, Win 10 system,
+    Matlab 2010b programming.
+
+
+    **Example 1** Consider the following semidefinite programming problem:
+
+
+    $$A_1 = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 2 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 &
+    0 & -2 & -1 \\ 0 & -1 & -1 & -2 \end{pmatrix}, A_2 = \begin{pmatrix} 0 & -2 &
+    2 & 0 \\ 0 & 2 & 1 & 2 \\ -1 & -2 & 0 & 1 \\ 2 & 0 & 0 & 0 \\ 0 & 2 & 1 & 2 \end{pmatrix}$$
+
+
+    $$A_3 = \begin{pmatrix} 2 & -1 & -1 & 0 \\ 2 & 0 & 2 & 1 \\ -1 & -1 & 2 & -1 \\
+    1 & 1 & 0 & -2 \end{pmatrix}, C = \begin{pmatrix} 3 & -3 & 3 & 1 \\ 3 & 5 & 3
+    & 2 \\ -3 & -1 & 1 & 2 \\ 1 & 1 & -3 & -1 \\ 1 & 2 & -1 & -1 \end{pmatrix}, b
+    = \begin{pmatrix} -2 \\ 2 \end{pmatrix}$$
+
+
+    $\beta = 0.7$, when the condition $\|e(u,\beta)\| \le 10^{-4}$ is satisfied, the
+    algorithm terminates. Algorithm 1 obtains the primal-dual optimal after 71 iterations,
+    and the dual gap is $9.3051e-05$.
+
+
+    **Example 2** Consider the stochastic semidefinite programming problem: positive
+    integers $m,n$ generate $m$ matrices $R_i \in \mathbb{R}^{n \times n}, i=1,\dots,m$.
+    Let $A_i = (R_i + R_i^T)/2, b_i = trace(A_i), C = \sum_{i=1}^m A_i + I$. The problem
+    has a strictly feasible point $(\mathbf{1}, \mathbf{e})$, where $e$ is a column
+    vector whose elements are all 1. Algorithms 1 and 2 take parameters $r = \beta
+    = 1$, and Yu algorithm take parameter $\gamma=1$.
+
+
+    | | Algorithm 1 | Algorithm 2 | Yu algorithm |
+
+    |---|---|---|---|---|---|---|
+
+    | | Iter | Time | Iter | Time | Iter | Time |
+
+    | 10 | 0.0028 | 51.1 | 0.0044 | 58.2 | 0.0026 | 55.4 |
+
+    | 20 | 0.0129 | 51.1 | 0.0065 | 56.3 | 0.0042 | 81.8 |
+
+    | 30 | 0.0729 | 64.7 | 0.0103 | 62.7 | 0.0178 | 96.2 |
+
+    | 40 | 0.4385 | 70.2 | 0.0187 | 74.1 | 0.0221 | 114.9 |
+
+    | 50 | 1.0871 | 79.4 | 0.0291 | 80.4 | 0.0390 | 131.6 |
+
+    | 60 | 4.0640 | 77.8 | 0.0364 | 80.0 | 0.0512 | 147.0 |
+
+    | 70 | 9.1441 | 82.5 | 0.0583 | 83.1 | 0.0862 | 154.7 |
+
+    | 80 | 26.4063 | 78.0 | 0.0665 | 86.7 | 0.1012 | 164.7 |
+
+    | 90 | 411.4213 | 87.0 | 0.1098 | 83.1 | 0.2373 | 184.7 |
+
+
+    *(Note: Some values in the table were adjusted slightly based on logical OCR patterns
+    where the text was corrupted).*
+
+    '
+  mdcn: '
+
+
+    按列提取为向量以便操作。
+
+
+    ## 3. 基于新方向的投影收缩算法
+
+
+    基于求解线性投影方程的一些新方法 [10]，文献 [14] 提出了一种用于二阶锥规划的快速投影收缩算法。同样，根据线性投影方程 (7) 与半正定规划问题最优条件的等价性，本文提出并改进了一种用于求解半正定规划问题的投影收缩算法。
+
+
+    假设方程 (7) 有解，解集记为 $\Omega^u$。
+
+
+    **定理 2** 令 $u'' \in \Omega^u, \beta \in \{0,1\}$，则
+
+
+    $$(u-u'')^T d(u, \beta) \geq \|e(u, \beta)\|^2, \forall u \in \mathbf{R}^{mn}
+    \times \mathbf{R}^m$$
+
+
+    其中 $d(u, \beta) = (I - \beta M)e(u, \beta)$。
+
+
+    证明：根据闭凸集上的投影性质，我们得到
+
+
+    $$[P_{\Omega}(v)]^T[P_{\Omega}(v)-u^*] \geq 0, \forall v \in \mathbf{R}^{mn} \times
+    \mathbf{R}^m. (8)$$
+
+
+    在 (8) 中令 $v = u-\beta(Mu+q)$，有
+
+
+    $$[e(u,\beta)-\beta(Mu+q)]^T[P_{\Omega}(u-\beta(Mu+q))-u^*] \geq 0. (9)$$
+
+
+    然后令 $v=P_{\Omega}(u-\beta(Mu+q))$，从 (5) 得到
+
+
+    $$[\beta(Mu+q)]^T[P_{\Omega}(u-\beta(Mu+q))-u^*] \geq 0. (10)$$
+
+
+    将 (9) 和 (10) 相加得
+
+
+    $$[e(u,\beta)-\beta M(u-u^*)]^T[P_{\Omega}(u-\beta(Mu+q))-u^*] \geq 0. (11)$$
+
+
+    上述不等式给出
+
+    $$(u-u^*)^T(I+\beta M)e(u,\beta) \geq \|e(u,\beta)\|^2+(u-u^*)^T\beta M(u-u^*).$$
+
+
+    最后，由于 $M$ 是反对对称的，证明结束。
+
+
+    定义 $F(u,\beta)=\frac{1}{2}\|u-u^*\|^2$，根据定理 2，可知 $d(u,\beta)$ 是 $F(u,\beta)$ 在
+    $G=(I+\beta M)^T(I+\beta M)$ 处的下降方向。由于 $M$ 是反对对称的，有 $G=(I-\beta M)(I+\beta M)$。显然
+    $G$ 是正的，则 $-G^{-1}d(u,\beta)=-(I+\beta M)^{-1}e(u,\beta)$ 也可以是一个下降方向 [9]。
+
+
+    ## 算法 1 投影收缩算法如下。
+
+
+    给定 $u_0 \in \mathbf{R}^{mn} \times \mathbf{R}^m, r \in (0,2), \beta \in \{0,1\}$。
+
+
+    对于 $k=0,1,\dots,$，若 $u_k^* \notin \Omega^u$：
+
+
+    步骤 1：计算 $d(u_k,\beta)=(I+\beta M)^{-1}e(u_k,\beta)$，
+
+
+    步骤 2：更新 $u_{k+1} = u_k - r\beta d(u_k, \beta)$。
+
+
+    根据定理 2，可以给出求解半正定规划问题的投影收缩算法的全局收敛性证明。
+
+
+    **定理 3** $G = (I + \beta M^T)$，$r \in (0,2), \beta \in [0,1]$，算法 1 产生的序列 $\{u_k\}$
+    满足
+
+
+    $$\|u_{k+1}-u_k\|_G^2 \leq \|u_k-u_k^*\|_G^2 - r\beta(2-\beta)\|e(u_k, \beta)\|$$
+
+
+    证明：$\|u_{k+1}-u_k\|_G^2 = \|(I + \beta M^T)(u_k - u_k^*) - r\beta I(I + \beta
+    M^T)^{-1}e(u_k, \beta)\|_G^2$
+
+
+    $= \|(I + \beta M^T)(u_k - u_k^*)\|_G^2 \neq \|u_k-u_k^*\|_G^2 - 2r\beta(u_k-u_k^*)(I
+    + \beta M^T)e(u_k, \beta) + r^2\beta^2 \|e(u_k, \beta)\|_G^2$
+
+
+    $\leq \|u_k-u_k^*\|_G^2 - 2r\beta\|e(u_k, \beta)\|$
+
+
+    **定理 4** [9] 算法1 产生的序列 $\{u_k\}$ 收敛于 $u_k^* \in \Omega^*$。
+
+
+    在算法 1 中，当计算下降方向 $d(u_k, \beta) = (I + \beta M)^{-1}e(u_k, \beta)$ 时，如果问题规模很大，$(I
+    + \beta M)^{-1}$ 的计算成本过高，会导致算法运行缓慢。以下是等价形式：
+
+
+    $$d(u_k, \beta) = (I + \beta M)^{-1}e(u_k, \beta) \Leftrightarrow (I + \beta M)d(u_k,
+    \beta) = e(u_k, \beta). (12)$$
+
+
+    右侧方程的特定形式为线性方程组
+
+
+    $$\begin{bmatrix} I_{n \times n} & -\beta A^T \\ \beta A & I_{m \times m} \end{bmatrix}
+    \begin{bmatrix} d(X_k, \beta) \\ d(y_k, \beta) \end{bmatrix} = \begin{bmatrix}
+    e(X_k, \beta) \\ e(y_k, \beta) \end{bmatrix}. (13)$$
+
+
+    求解方程得到：
+
+
+    $$d(y_k, \beta) = (I_{m \times m} + \beta^2 A^T)^{-1}[e(y_k, \beta) - \beta e(X_k,
+    \beta)]. (14)$$
+
+
+    $$d(X_k, \beta) = \beta A^T d(y_k, \beta) + e(X_k, \beta). (15)$$
+
+
+    从 (12) 到 (15) 可以看出，通过逆运算 $(I+\beta M)^{-1}$ 和 $(I + \beta^2 A^T)^{-1}$，维度从 $(n^2+m)$
+    降低到 $m \times m$，当 $n$ 大于 $m$ 时，计算量可以显著减少。因此存在投影收缩算法：
+
+
+    ## 算法 2 改进的投影收缩算法
+
+
+    步骤 1：给定 $u_k \in \mathbb{R}^n \times \mathbb{R}^m, r \in (0,2), \beta \in [0,1]$。
+
+
+    步骤 2：对于 $k=0, 1, \dots$，若 $u_k \notin \Omega^*$：
+
+
+    步骤 3：从方程 (14) 和 (15) 计算 $d(y_k, \beta), d(X_k, \beta)$ 以得到 $d(u_k, \beta)$，
+
+
+    步骤 4：更新 $u_{k+1} = u_k - r\beta d(u_k, \beta)$。
+
+
+    ## 4. 数值实验
+
+
+    测试平台和软件：Intel Xeon2 CPU (3.3GHz)，8GB内存 PC，Win 10 系统，Matlab 2010b 编程。
+
+
+    **示例 1** 考虑以下半正定规划问题：
+
+
+    $$A_1 = \begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 2 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 &
+    0 & -2 & -1 \\ 0 & -1 & -1 & -2 \end{pmatrix}, A_2 = \begin{pmatrix} 0 & -2 &
+    2 & 0 \\ 0 & 2 & 1 & 2 \\ -1 & -2 & 0 & 1 \\ 2 & 0 & 0 & 0 \\ 0 & 2 & 1 & 2 \end{pmatrix}$$
+
+
+    $$A_3 = \begin{pmatrix} 2 & -1 & -1 & 0 \\ 2 & 0 & 2 & 1 \\ -1 & -1 & 2 & -1 \\
+    1 & 1 & 0 & -2 \end{pmatrix}, C = \begin{pmatrix} 3 & -3 & 3 & 1 \\ 3 & 5 & 3
+    & 2 \\ -3 & 3 & 1 & -1 \\ 1 & 2 & -1 & -1 \end{pmatrix}, b = \begin{pmatrix} -2
+    \end{pmatrix}$$
+
+
+    当 $\beta = 0.7$ 时，满足 $\|e(u,\beta)\| \le 10^{-4}$，算法终止。算法 1 在 71 次迭代后获得原始最优解，对偶间隙为
+    $9.305 \times 10^{-5}$。
+
+
+    **示例 2** 考虑随机半正定规划：整数 $m,n$ 生成 $m$ 个矩阵 $R_i \in \mathbb{R}^{n \times n}, i=1,\dots,m$。令
+    $A_i = (R_i + R_i^T)/2, b_i = \text{trace}(A_i)$。问题具有一个严格可行点 $(\mathbf{1})$，其中
+    $e$ 是元素全为1的列向量。算法 1 和 2 采用参数 $r = \beta = 1$。
+
+
+    | 迭代次数 | 算法 1 间隙 | 算法 1 时间 | 算法 2 间隙 | 算法 2 时间 | Yu 算法 |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | 10 | 0.0028 | 51.1 | 0.0044 | 58.2 | 0.0026 |
+
+    | 20 | 0.0129 | 51.1 | 0.0065 | 56.3 | 0.0042 |
+
+    | 30 | 0.0729 | 64.7 | 0.0103 | 62.7 | 0.0178 |
+
+    | 40 | 0.4385 | 70.2 | 0.0187 | 74.1 | 0.0221 |
+
+    | 50 | 1.0871 | 79.4 | 0.0291 | 80.4 | 0.0390 |
+
+    | 60 | 4.0640 | 77.8 | 0.0364 | 80.0 | 0.0512 |
+
+    | 70 | 9.1441 | 82.5 | 0.0583 | 83.1 | 0.0862 |
+
+    | 80 | 26.4063 | 78.0 | 0.0665 | 86.7 | 0.1012 |
+
+    | 90 | 411.4213 | 87.0 | 0.1098 | 83.1 | 0.2373 |
+
+
+    '
+  merge: 1
+  raw:
+  - "[PAGE 3]\n\npulled into vectors by columns for operation.\n\n# 3. Projection\
+    \ contraction algorithm based on a new direction\n\nBased on some new methods\
+    \ to solve linear projection equations [10], reference [14] proposed a fast projection\
+    \ contraction algorithm for solving second-order cone programming. Similarly,\
+    \ according to the equivalence of the linear projection equation (7) and the optimal\
+    \ conditions of the semidefinite programming problem, this paper proposes a projection\
+    \ contraction algorithm to solve the semidefinite programming problem and improves\
+    \ it.\nAssuming that the equation (7) has solution, the set of solutions is denoted\
+    \ as $\\Omega^u$\n\n**Theorem 2** Let $u' \\in \\Omega^u, \beta \\in \\{0,1\\\
+    }$, then\n\n```\n$$(u-u')^T d(u, \beta) \\geq \\|e(u, \beta)\\|^2, \\forall u\
+    \ \\in \\mathbf{R}^{mn} \times \\mathbf{R}^m$$\n```\n\nwhere $d(u, \beta) = (I\
+    \ - \beta M)e(u, \beta)$.\nProof By projection properties on closed convex sets,\
+    \ we get\n\n```\n$$$[P_{\\Omega}(v)]^T[P_{\\Omega}(v)-u^*] \\geq 0, \\forall v\
+    \ \\in \\mathbf{R}^{mn} \times \\mathbf{R}^m. (8)$\n```\n\nLet $v = u-\beta(Mu+q)$\
+    \ in (8), we have\n\n```\n$$$[e(u,\beta)-\beta(Mu+q)]^T[P_{\\Omega}(u-\beta(Mu+q))-u^*]\
+    \ \\geq 0. (9)$\n```\n\nThen let $v=P_{\\Omega}(u-\beta(Mu+q))$, from (5) we get\n\
+    \n```\n$$$[\beta(Mu+q)]^T[P_{\\Omega}(u-\beta(Mu+q))-u^*] \\geq 0. (10)$\n```\n\
+    \n(9) and (10) are added together we have\n\n```\n$$$[e(u,\beta)-\beta M(u-u^*)]^T[P_{\\\
+    Omega}(u-\beta(Mu+q))-u^*] \\geq 0. (11)$\n```\n\nThe above inequality exception\
+    \ gives\n$$(u-u^*)^T(I+\beta M)e(u,\beta) \\geq \\|e(u,\beta)\\|^2+(u-u^*)^T\b\
+    eta M(u-u^*)$.\nFinally, we end the proof since $M$ is the descending-symmetric,\n\
+    \nDefine $F(u,\beta)=\\frac{1}{2}\\|u-u^*\\|^2$, from Theorem 2, it is known that\
+    \ $d(u,\beta)$ is the descending\n\ndirection of $F(u,\beta)$ at $G=(I+\beta M)^T(I+\b\
+    eta M)$, since $M$ is the skew-symmetric, we have\n$G=(I-\beta M)(I+\beta M)$.\
+    \ Obviously $G$ is positive, then $-G^{-1}d(u,\beta)=-(I+\beta M)^{-1}e(u,\beta)$\
+    \ can also be a\ndescending direction $[9]$.\n\n# Algorithm 1 Projection contraction\
+    \ algorithm is given below.\n\nGiven $u_0 \\in \\mathbf{R}^{mn} \times \\mathbf{R}^m,\
+    \ r \\in (0_2), \beta \\in \\{0,1\\].\n\nFor $k=0,1,\\dots,$ if $u_k^* \notin\
+    \ \\Omega^u$,\n\nStep1: Calculate $d(u_k,\beta)=(I+\beta M)^{-1}e(u_k,\beta)$,"
+  - "[PAGE 4]\n\n# Hongmei Bi et al. / Procedia Computer Science 208 (2022) 627–634\n\
+    \nStep 2: Update $u_{k+1} = u_k - r\beta d(u_k, \beta)$.\n\nFrom Theorem 2, the\
+    \ global convergence proof of the projection contraction algorithm for solving\
+    \ semidefinite programming problems can be given.\n\nTheorem 3 $G = (I + \beta\
+    \ M^T)$, $r \\in (0,2)$, $\beta \\in [0,1]$, the sequence $\\{u_k\\}$ produced\
+    \ by Algorithm 1 satisfy\n\n```\n$$\\|u_{k+1}-u_k\\|_G^2 \\leq \\|u_k-u_k^*\\\
+    |_G^2 - r\\beta(2-\\beta)\\|e(u_k, \\beta)\\|$\n```\n\nProof $\\|u_{k+1}-u_k\\\
+    |_G^2 = \\|(I + \beta M^T)(u_k - u_k^*) - r\\beta I(I + \\beta M^T)^{-1}e(u_k,\
+    \ \\beta)\\|_G^2$\n\n```\n$= \\|(I + \\beta M^T)(u_k - u_k^*)\\|_G^2 \\n= \\|u_k-u_k^*\\\
+    |_G^2 - 2r\\beta(u_k-u_k^*)(I + \\beta M^T)e(u_k, \\beta) + r^2\\beta^2 \\|e(u_k,\
+    \ \\beta)\\|_G^2$\n```\n\n```\n$$\\leq \\|u_k-u_k^*\\|_G^2 - 2r\\beta\\|e(u_k,\
+    \ \\beta)\\|$\n```\n\nTheorem 4 [9] the sequence $\\{u_k\\}$ produced by Algorithm\
+    \ 1 converges to $u_k^* \\in \\Omega^*$.\n\nIn Algorithm 1, when calculating the\
+    \ descending direction $d(u_k, \\beta) = (I + \\beta M)^{-1}e(u_k, \\beta)$, if\
+    \ the scale of the problem is large,the computational cost of the inversion operation\
+    \ $(I + \\beta M)^{-1}$ is too high,which will cause the algorithm to run slowly.\
+    \ The following equivalent deformation is:\n\n```\n$d(u_k, \\beta) = (I + \\beta\
+    \ M)^{-1}e(u_k, \\beta) \\Leftrightarrow (I + \\beta M)d(u_k, \\beta) = e(u_k,\
+    \ \\beta). \\quad (12)$\n```\n\nThe specific form of the equation on the right\
+    \ is a system of linear equations\n\n```\n$$\\begin{bmatrix} I_{n \\times n} &\
+    \ \\-\\beta A^T \\ \\beta A & I_{m \\times m} \\end{bmatrix} \\begin{bmatrix}\
+    \ d(X_k, \\beta) \\ d(y_k, \\beta) \\end{bmatrix} = \\begin{bmatrix} e(X_k, \\\
+    beta) \\ e(y_k, \\beta) \\end{bmatrix}. \\quad (13)$\n```\n\nSolve the equations\
+    \ to get\n\n```\n$d(y_k, \\beta) = (I_{m \\times m} + \\beta\\beta^2 AA^T)^{-1}[e(y_k,\
+    \ \\beta) - \\beta A e(X_k, \\beta)], \\quad (14)$\n```\n\n```\n$d(X_k, \\beta)\
+    \ = \\beta A^T d(y_k, \\beta) + e(X_k, \\beta). \\quad (15)$\n```\n\nIt can be\
+    \ seen from (12) to (15) that with the inversion operation $(I+\beta M)^{-1}$\
+    \ and $(I + \\beta\\beta^2 AA^T)^{-1}$, the dimension is reduced from $(n^2+m)\\\
+    times(n^2+m)$ to $m \\times m$, and the amount of computation can be significantly\
+    \ reduced when $n$ is larger than $m$. So there is an improved projection contraction\
+    \ algorithm\n\n# Algorithm 2 Improved projection contraction algorithm\n\nStep\
+    \ 1: Given $u_k \\in R^{n} \\times R^m$, $r \\in (0,2)$, $\\beta \\in [0,1]$.\n\
+    \nStep 2: For $k=0, 1, \\dots$, if $u_k \\notin \\Omega^*$,\n\nStep 3: Calculated\
+    \ $d(y_k, \\beta), d(X_k, \\beta)$ from equations (14) and (15) to get $d(u_k,\
+    \ \\beta)$,\n\nStep 4: Update $u_{k+1} = u_k - r\\beta d(u_k, \\beta)$."
+  - "[PAGE 5]\n\n# 4. Numerical experiment\n\nTest platform and software: Intel Xeon2\
+    \ CPU (3.3GHz), 8GB ram PC, Win 10 system, Matlab 2010b programming.\n\n**Example\
+    \ 1** Consider the following semidefinite programming problem:\n\n```\n$A_1 =\
+    \ \\begin{pmatrix} 0 & 1 & 0 & 0 \\ 1 & 2 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 &\
+    \ -2 & -1 \\ 0 & -1 & -1 & -2 \\end{pmatrix}, A_2 = \\begin{pmatrix} 0 & -2 &\
+    \ 2 & 0 \\ 0 & 2 & 1 & 2 \\ -1 & -2 & 0 & 1 \\ 2 & 0 & 0 & 0 \\ 0 & 2 & 1 & 2\
+    \ \\end{pmatrix}$\n```\n\n```\n$A_3 = \\begin{pmatrix} 2 & -1 & -1 & 0 \\ 2 &\
+    \ 0 & 2 & 1 \\ -1 & -1 & 2 & -1 \\ 1 & 1 & 0 & -2 \\end{pmatrix}, C = \\begin{pmatrix}\
+    \ 3 & -3 & 3 & 1 \\ 3 & 5 & 3 & 2 \\ -3 & -1 & 1 & 2 \\ 1 & 1 & -3 & -1 \\ 1 &\
+    \ 2 & -1 & -1 \\end{pmatrix}, b = \\begin{pmatrix} -2 \\ 2 \\end{pmatrix}$\n```\n\
+    \n$\beta = 0.7$, when the condition $\\|e(u,\\beta)\\ \\le 10^{-4}$ is satisfied,\
+    \ the algorithm terminates. Algorithm 1 obtains the primal-dual optimal after\
+    \ 71 iterations, and the dual gap is $9.3051-005$.\n\n**Example 2** Consider the\
+    \ stochastic semidefinite programming problem: positive integers $m,n$ generate\
+    \ $m$ matrices $R_i \\in \\mathbb{R}^{n \\times n}, i=1,\\dots,m$. Let $A_i =\
+    \ (R_i + R_i^T)/2, b_i = trace(A_i), C = \\sum_{i=1}^m A_i + I$. The problem has\
+    \ a strictly feasible point $(\\mathbf{1}, \\mathbf{e})$, where $e$ is a column\
+    \ vector whose elements are all 1. Algorithms 1 and 2 take parameters $r = \\\
+    beta = 1$,And Yu algorithm take parameter $\\gamma=1$.\n\n| | Algorithm 1 | Algorithm\
+    \ 2 | Yu algorithm |\n|---|---|---|---||\n| | Iter | Time | Iter | Time | Iter\
+    \ | Time |\n| 10 | 0.0028 | 51.1 | 0.0044 | 58.2 | 0.0026 | 55.4 |\n| 20 | 0.0129\
+    \ | 49.2 | 0.0065 | 56.3 | 0.0042 | 81.8 |\n| 30 | 0.0729 | 64.7 | 0.0103 | 62.7\
+    \ | 0.0178 | 96.2 |\n| 40 | 0.4385 | 70.2 | 0.0187 | 74.1 | 0.0221 | 114.9 |\n\
+    | 50 | 1.0871 | 69.4 | 0.0291 | 80.4 | 0.0390 | 131.6 |\n| 60 | 4.0640 | 77.8\
+    \ | 0.0364 | 80.0 | 0.0862 | 147.0 |\n| 70 | 9.1441 | 82.5 | 0.0583 | 78.5 | 0.1186\
+    \ | 147.7 |\n| 80 | 86.4063* | 78 | 0.1065 | 86.7 | 0.1814 | 154.7 |\n| 90 | 411.4213*\
+    \ | 87 | 0.1098 | 83.1 | 0.2373 | 164.7 |\n\nRemark: The * in Table 1 indicates\
+    \ that the algorithm only performs one operation, and the others are the CPU time\
+    \ and the average number of iterations for 10 operations."
+  - '[PAGE 6]
+
+
+    # Table 2. Results of algorithms for solving medium-scale problems
+
+
+    | | Algorithm | Yu | Sedumi |
+
+    |---|---|---|---||
+
+    | | Time | Iter | Time | Iter |
+
+    | 100 | 1.7885 | | 4.6670 | 222 | 3.578 | 13 |
+
+    | 200 | 26.6875 | 137 | 32.3009 | 235 | 19.968 | 13 |
+
+    | 300 | 66.9855 | 144 | 169.3916 | 379 | 82.828 | 14 |
+
+    | 400 | 174.5047 | 153 | 513.8769 | 441 | 237.969 | 14 |
+
+    | 500 | 467.2050 | 181 | | | 550.828 | 14 |
+
+
+    As seen from Table 1, Algorithm 1 can solve small-scale problems, but the computation
+    time increases dramatically when the problem increases. The improved algorithm,
+    Algorithm 2 does not have such shortcomings and when using the same set of the
+    parameters, in most cases, the computation time is smaller, and the number of
+    iterations is lower than the Yu algorithm; it can be seen from Table 2 for medium-scale
+    problems, the Algorithm 2 is still better than the Yu algorithm, although it is
+    inferior to the interior point algorithm package SeDumi 1.3 in the number of iterations,
+    Algorithm 2 spends less time in computation.
+
+
+    # 5. Conclusion
+
+
+    In this paper, the projection contraction algorithm for second-order programming
+    is extended to solve semidefinite programming, and the algorithm is given by the
+    equivalence between the optimal condition and the projection. In order to solve
+    large-scale semidefinite programming, the solution of the descending direction
+    is improved, and the original high-dimensional inversion operation is transformed
+    into a low dimensional linear system to solve. Numerical experiments show that
+    the algorithm is feasible, and the improved algorithms run faster. However, positive-definite
+    cones are more computationally complex than projections on second-order cones,
+    making solving large-scale problems challenging and requiring further research.
+
+
+    # Acknowledgements
+
+
+    The authors appreciate the financial support from the Research Fund of Fundamentals
+    Department of Air Force Engineering University (JK20221011).
+
+
+    # References
+
+
+    +   [1] Zhang Y. On Some Primal-Dual-Interior-Point Algorithms From Linear Programming
+    to Semidefinite Programming[J]. SIAM Journal on Optimization, 1998, 8(2): 365–386.
+
+
+    +   [2] Wang Wewei, Liu Hongfei, Hongmei Bi. Simplified Nesterov-Todd step interior-point
+    algorithm for semidefinite optimization based on a kernel function, Journal of
+    Applied Mathematics and Computing, 2019, 59(1-2): 445–463.
+
+
+    +   [3] Kheerfan B, Oxmaxour N. A new wide-neighborhood predictor-corre interior-point
+    method for semidefinite optimization[J]. Journal of Applied Mathematics and Computing,
+    2022, 68(2): 1365–1385.
+
+
+    +   [4] Zhang H, Wang J, Zhou Y, et al. A primal-dual interior-point algorithm
+    with arc-search for semidefinite programming[J]. Optimization Letters, 2019, 139(5):
+    1157–1168.
+
+
+    +   [5] Ye Y, Todd M. J, Mizuno S. An O(√n)-iteration homogeneous and self-dual
+    linear programming[J]. Mathematics of Operations Research, 1994, 19(1): 53–67.
+
+
+    +   [6] Sturm F, Judy SeDumi 1.3, a MATLAB toolbox for optimization over symmetric
+    cones[J]. Optimization Methods and Software, 1999, 11(1-4): 625–653.
+
+
+    +   [7] Kheerfan B. A polynomial-time infeasible interior-point algorithm with
+    arc-search for semidefiniteoptimization[J]. Journal of Scientific Computing, 2021,
+    88(3): 1–23.'
+- md: '
+
+    [9] He B. A new method for a class of linear variational inequalities[J]. Mathematical
+    Programming, 1994, 66(1): 137-144.
+
+
+    [10] He B. Solving a class of linear projection equations[J]. Numerische Mathematik,
+    1994, 68(1): 71-80.
+
+
+    [12] Yu Z. Solving semidefinite programming problems via alternating direction
+    methods[J]. Journal of Computational and Applied Mathematics, 2006, 1932(2): 437-445.
+
+
+    [13] Liang F., He, G., Li, S. A globally non-linear interior point algorithm with
+    full Newton step for second-order cone programming[J]. Applications of Mathematics,
+    2009, 54(5): 447-464.
+
+
+    [14] Mu X, Zhang Y. A fast projection and contraction method for second-order
+    conic programming. Acta Mathematicae Applicatae Sinica. 2015, 38(1): 256. https://doi.org/10.12387/C2015003
+
+
+    [15] Mu X, Zhang Y. Grasping force optimization for multi-fingered robotic hands
+    using projection and contraction methods[J]. Journal of Optimization Theory and
+    Applications, 2019, 183(2): 592-608.
+
+    '
+  mdcn: '
+
+
+    [9] He B. 一类线性变分不等式的新方法[J]. Mathematical Programming, 1994, 66(1): 137-144.
+
+
+    [10] He B. 求解一类线性投影方程[J]. Numerische Mathematik, 1994, 68(1): 71-80.
+
+
+    [12] Yu Z. 通过交替方向法求解半正定规划问题[J]. Journal of Computational and Applied Mathematics,
+    2006, 1932(2): 437-445.
+
+
+    [13] Liang F., He, G., Li, S. 适用于二阶锥规划的具有全牛顿步长的全局非线性内点算法[J]. Applications of Mathematics,
+    2009, 54(5): 447-464.
+
+
+    [14] Mu X, Zhang Y. 用于二阶锥规划的快速投影与收缩法[J]. Acta Mathematicae Applicatae Sinica.
+    2015, 38(1): 256. https://doi.org/10.12387/C2015003
+
+
+    [15] Mu X, Zhang Y. 使用投影与收缩法多指机器人手的抓持力优化[J]. Journal of Optimization Theory and
+    Applications, 2019, 183(2): 592-608.
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 7]
+
+
+    [9] He B. A new method for a class of linear variational inequalities[J]. Mathematical
+    Programming, 1994, 66(1): 137-144.
+
+
+    [10] He B. Solving a class of linear projection equations[J]. Numerische Mathematik,
+    1994, 68(1): 71-80.
+
+
+    [12] Yu Z. Solving semidefinite programming problems via alternating direction
+    methods[J]. Journal of Computational and Applied Mathematics, 2006, 1932(2): 437-445.
+
+
+    [13] Liang F., He, G., Li, S. A globally non-linear interior point algorithm with
+    full Newton step for second-order cone programming[J]. Applications of Mathematics,
+    2009, 54(5): 447-464.
+
+
+    [14] Mu X, Zhang Y. A fast projection and contraction method for second-order
+    conic programming. Acta Mathematicae Applicatae Sinica. 2015, 38(1): 256. https://doi.org/10.12387/C2015003
+
+
+    [15] Mu X, Zhang Y. Grasping force optimization for multi-fingered robotic hands
+    using projection and contraction methods[J]. Journal of Optimization Theory and
+    Applications, 2019, 183(2): 592-608.'
+pages:
+- img_proc: true
+  md: 'Available online at www.sciencedirect.com
+
+
+    # ScienceDirect
+
+
+    Procedia Computer Science 208 (2022) 627-634
+
+
+    # Procedia Computer Science
+
+
+    www.elsevier.com/locate/procedia
+
+
+    # 7th International Conference on Intelligent, Interactive Systems and Applications
+
+
+    # A New Projection Contraction Algorithm for Semidefinite Programming
+
+
+    Hongmei Bi\*, Xuejun Zhao, Jinshen Ren
+
+
+    *Fundamentals Department, Air Force Engineering University, Xi''an 710038, China
+
+
+    # Abstract
+
+
+    This paper studies a projection contraction algorithm for solving semidefinite
+    programming problems. The interior point algorithm is a classic algorithm for
+    solving semidefinite programming. It can be divided into feasible and infeasible
+    algorithms according to whether the initial point is feasible. The feasible interior
+    point algorithm needs to use a self-dual strategy to find strictly feasible points.
+    Although the infeasible interior point algorithm does not require the initial
+    point to be strictly feasible, the theoretical analysis of the algorithm is very
+    complicated. Compared with the interior point algorithm, the projection contraction
+    algorithm has no requirement on the initial point, and the algorithm is much simpler.
+    The optimal condition of the semidefinite programming problem can be rewritten
+    as a projection equation, which is then solved by the projection contraction algorithm.
+    We propose a new projection contraction algorithm based on descending directions
+    to improve the algorithm by solving the linear equation, thus avoiding the high-dimensional
+    inversion so that the algorithm can solve the large-scale semidefinite programming
+    problem. Numerical experiments show that the algorithm is feasible and the improved
+    algorithm coincides with the interior point algorithm.
+
+
+    © 2022 The Authors. Published by Elsevier B.V.
+
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    "Peer-review under responsibility of the scientific committee of the 7th International
+    Conference on Intelligent, Interactive Systems and "Applications"
+
+
+    Keywords: Semidefinite programming; optimal condition; projection equation; projection
+    contraction algorithm
+
+
+    # 1. Introduction
+
+
+    Consider semidefinite programming problems
+
+
+    *Corresponding author. Tel.: +86-1791789397.
+
+
+    E-mail: bihongmei2021@163.com
+
+
+    1877.0569 © 2022 The Authors. Published by Elsevier B.V.
+
+
+    This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+
+
+    "Peer-review under responsibility of the scientific committee of the 7th International
+    Conference on Intelligent, Interactive Systems and Applications"
+
+
+    10.1016/j.proc.2022.10.086'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '628 Hongmei Bi et al. / Procedia Computer Science 208 (2022) 627–634
+
+
+    (P) min C\cdot X s.t. A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0. (1)
+
+
+    and its dual problem
+
+
+    (D) max b^T y s.t. \sum_{i=1}^m y_i A_i+S=C, S\geq 0. (2)
+
+
+    For simplicity, we denote the space of real and symmetric $n\times n$ matrices
+    as $S^n$, and all semidefinite matrices in $S^n$ as $S^n_+$. In systems (1) and
+    (2), matrices $C, A_i \in S^n, i=1,...,m$, vectors $b, y \in R^m$. $A\cdot B$
+    means the inner product of $A, B \in S^n$ and defines by $A\cdot B=\text{trace}(AB).X,
+    S\geq 0$ means that $X, S \in S^n$.
+
+
+    Under appropriate constraint qualification, the solution of primal and dual semidefinite
+    programming problem satisfies the optimal condition:
+
+
+    ```
+
+    $A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0$
+
+    $$\sum_{i=1}^m y_i A_i+S=C, S\geq 0$\n$XS=0$
+
+    \end{aligned}\end{aligned}$ (3)
+
+    ```
+
+
+    The basic idea of interior point algorithm to solve semidefinite programming problem
+    is to change the complementary condition $XS=0$ with complementary relaxation
+    $XS=\mu I$, where $I$ is the identity matrix and the parameter $\mu > 0$, and
+    the central system is obtained:
+
+
+    ```
+
+    $A\cdot X=b\cdot i, i=1,2,...,m, X\geq 0$
+
+    $$\sum_{i=1}^m y_i A_i+S=C, S\geq 0$\n$XS=\mu I$\n\end{aligned}\end{aligned}$
+    (4)
+
+    ```
+
+
+    then Newton''s method is used to get a search direction, however the matrix product
+    is generally not commutative, the obtained search direction is asymmetric. To
+    get a symmetric search direction, the complementary relaxation needs to be symmetric
+    [1]. In recent years, interior point methods for solving semidefinite programming
+    problems have focused on the construction of new kernel functions, the design
+    of wide neighborhoods, and a new search strategy—[2–4]. These algorithms require
+    that the starting point must be strictly feasible, but strictly feasible starting
+    points are not easy to find. A common approach is to use SDMM [6], SDP3 [7], another
+    solution is to design infeasible algorithms, such as [8], which do not require
+    the initial point to be feasible, but the theoretical analysis is more complicated.
+
+
+    Projection algorithms originated from the study of solving variational inequalities
+    earlier. Based on HeBing''s projection contraction for solving variational inequalities
+    [9] and a method to solve a class of linear projection projections [10], Han Qiang
+    extended the projection contraction for solving linear programming to solve semidefinite
+    programming problems [11]. The method converts the complementary condition in
+    the optimal condition into the corresponding projection equation, and then use
+    the projection contraction algorithm to solve variational inequality problems,
+    Yu Zheng [12] adopted the strategy of alternately calculating projections and
+    solving dimension reduced'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'systems, and a new method to solve some semidefinite programming problems.
+    For the second-order programming problem, reference [13] proposed a noninterior
+    point algorithm. Mu and Zhang [14] combined the latest results of Euclidean Jordan
+    geometry to easily calculate the projection on the second-order cone, and obtained
+    a fast projection contraction algorithm for solving the second-order cone. Further,
+    Mu and Zhang [15] gave a projection contraction algorithm to solve the circular
+    conic programming problem. The second-order programming can be seen as a special
+    case of semidefinite programming, and the theoretical analysis of the projection
+    contraction algorithm is simple, and there is no requirement for the initial point.
+    Based on the reference [14], this paper proposes a new projective contraction
+    algorithm to solve the semidefinite programming problem.
+
+
+    # 2. Preliminaries
+
+
+    $\Omega \subset R^n$ be a bounded convex set, $F$ is a monotone operator from
+    $R^n$ to $R^n$, the variational inequality problem is to find $u^* \in \Omega$
+    satisfied
+
+
+    ```
+
+    $$(u-u^*)^T F(u^*) \geq 0, \quad \forall u \in \Omega.$$
+
+    ```
+
+
+    Obviously, multiplying the operator $F$ in the variational inequality (5) by a
+    factor $\beta > 0$ does not change the solution of the problem.
+
+    As well known, the above variational inequality is equivalent to solve the projection
+    equation
+
+
+    ```
+
+    $$$u = P_{\Omega}[u - \beta F(u)], \quad \beta > 0.$$
+
+    ```
+
+
+    Denote $e(u, \beta) := u - P_{\Omega}[u - \beta F(u)]$.
+
+    In particular, when $F(u) = Mu + q$, $q \in R^n, M \in R^{n \times n}$ satisfies
+    $\forall u, u^T Mu \geq 0$ is called a linear variational inequality.
+
+
+    The following lemma shows that the compatibility condition in (3) can be transformed
+    into an equivalent projection form.
+
+
+    **Theorem 1[11]** For $X, S \in S_+^s, XS = 0 \Rightarrow X = P_{S_+^s}(X-S)$.
+
+    For semidefinite programming problems, denote
+
+
+    ```
+
+    $$$u = \begin{pmatrix} X \ y \end{pmatrix}, M = \begin{pmatrix} 0 & -A^T \ A &
+    0 \end{pmatrix}, q = \begin{pmatrix} c \ b \end{pmatrix}, \text{where } A = \begin{pmatrix}
+    A_1 \ \vdots \ A_m \end{pmatrix}, \text{then}$$
+
+    ```
+
+
+    ```
+
+    $$$[X-P_{(X,\beta)}[X-C-\sum^m y_i A_i)]\n\beta[A_1 \cdot X-b_1],\n\beta[A_m \cdot
+    X-b_m]$$$
+
+    ```
+
+
+    ```
+
+    $$$e(u, \beta)=u - P_{\Omega}[u - \beta(Mu+q)] = \begin{pmatrix} e(X, \beta) \
+    e(y, \beta) \end{pmatrix}$$$$
+
+    ```
+
+
+    $\Omega = S_+^s \times R^n$. Therefore, from Theorem 1, it can be known that the
+    optimal condition (3) for the semidefinite programming problem is equivalent to
+
+
+    ```
+
+    $$$u = P_{\Omega}[u - \beta(Mu+q)].$$
+
+    ```
+
+
+    Note that $M^T = -M$, that is, matrix is skew-symmetric, and in the actual calculation,
+    the elements of the matrix'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "pulled into vectors by columns for operation.\n\n# 3. Projection contraction\
+    \ algorithm based on a new direction\n\nBased on some new methods to solve linear\
+    \ projection equations [10], reference [14] proposed a fast projection contraction\
+    \ algorithm for solving second-order cone programming. Similarly, according to\
+    \ the equivalence of the linear projection equation (7) and the optimal conditions\
+    \ of the semidefinite programming problem, this paper proposes a projection contraction\
+    \ algorithm to solve the semidefinite programming problem and improves it.\nAssuming\
+    \ that the equation (7) has solution, the set of solutions is denoted as $\\Omega^u$\n\
+    \n**Theorem 2** Let $u' \\in \\Omega^u, \beta \\in \\{0,1\\}$, then\n\n```\n$$(u-u')^T\
+    \ d(u, \beta) \\geq \\|e(u, \beta)\\|^2, \\forall u \\in \\mathbf{R}^{mn} \times\
+    \ \\mathbf{R}^m$$\n```\n\nwhere $d(u, \beta) = (I - \beta M)e(u, \beta)$.\nProof\
+    \ By projection properties on closed convex sets, we get\n\n```\n$$$[P_{\\Omega}(v)]^T[P_{\\\
+    Omega}(v)-u^*] \\geq 0, \\forall v \\in \\mathbf{R}^{mn} \times \\mathbf{R}^m.\
+    \ (8)$\n```\n\nLet $v = u-\beta(Mu+q)$ in (8), we have\n\n```\n$$$[e(u,\beta)-\b\
+    eta(Mu+q)]^T[P_{\\Omega}(u-\beta(Mu+q))-u^*] \\geq 0. (9)$\n```\n\nThen let $v=P_{\\\
+    Omega}(u-\beta(Mu+q))$, from (5) we get\n\n```\n$$$[\beta(Mu+q)]^T[P_{\\Omega}(u-\b\
+    eta(Mu+q))-u^*] \\geq 0. (10)$\n```\n\n(9) and (10) are added together we have\n\
+    \n```\n$$$[e(u,\beta)-\beta M(u-u^*)]^T[P_{\\Omega}(u-\beta(Mu+q))-u^*] \\geq\
+    \ 0. (11)$\n```\n\nThe above inequality exception gives\n$$(u-u^*)^T(I+\beta M)e(u,\b\
+    eta) \\geq \\|e(u,\beta)\\|^2+(u-u^*)^T\beta M(u-u^*)$.\nFinally, we end the proof\
+    \ since $M$ is the descending-symmetric,\n\nDefine $F(u,\beta)=\\frac{1}{2}\\\
+    |u-u^*\\|^2$, from Theorem 2, it is known that $d(u,\beta)$ is the descending\n\
+    \ndirection of $F(u,\beta)$ at $G=(I+\beta M)^T(I+\beta M)$, since $M$ is the\
+    \ skew-symmetric, we have\n$G=(I-\beta M)(I+\beta M)$. Obviously $G$ is positive,\
+    \ then $-G^{-1}d(u,\beta)=-(I+\beta M)^{-1}e(u,\beta)$ can also be a\ndescending\
+    \ direction $[9]$.\n\n# Algorithm 1 Projection contraction algorithm is given\
+    \ below.\n\nGiven $u_0 \\in \\mathbf{R}^{mn} \times \\mathbf{R}^m, r \\in (0_2),\
+    \ \beta \\in \\{0,1\\].\n\nFor $k=0,1,\\dots,$ if $u_k^* \notin \\Omega^u$,\n\n\
+    Step1: Calculate $d(u_k,\beta)=(I+\beta M)^{-1}e(u_k,\beta)$,"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# Hongmei Bi et al. / Procedia Computer Science 208 (2022) 627–634\n\nStep\
+    \ 2: Update $u_{k+1} = u_k - r\beta d(u_k, \beta)$.\n\nFrom Theorem 2, the global\
+    \ convergence proof of the projection contraction algorithm for solving semidefinite\
+    \ programming problems can be given.\n\nTheorem 3 $G = (I + \beta M^T)$, $r \\\
+    in (0,2)$, $\beta \\in [0,1]$, the sequence $\\{u_k\\}$ produced by Algorithm\
+    \ 1 satisfy\n\n```\n$$\\|u_{k+1}-u_k\\|_G^2 \\leq \\|u_k-u_k^*\\|_G^2 - r\\beta(2-\\\
+    beta)\\|e(u_k, \\beta)\\|$\n```\n\nProof $\\|u_{k+1}-u_k\\|_G^2 = \\|(I + \beta\
+    \ M^T)(u_k - u_k^*) - r\\beta I(I + \\beta M^T)^{-1}e(u_k, \\beta)\\|_G^2$\n\n\
+    ```\n$= \\|(I + \\beta M^T)(u_k - u_k^*)\\|_G^2 \\n= \\|u_k-u_k^*\\|_G^2 - 2r\\\
+    beta(u_k-u_k^*)(I + \\beta M^T)e(u_k, \\beta) + r^2\\beta^2 \\|e(u_k, \\beta)\\\
+    |_G^2$\n```\n\n```\n$$\\leq \\|u_k-u_k^*\\|_G^2 - 2r\\beta\\|e(u_k, \\beta)\\\
+    |$\n```\n\nTheorem 4 [9] the sequence $\\{u_k\\}$ produced by Algorithm 1 converges\
+    \ to $u_k^* \\in \\Omega^*$.\n\nIn Algorithm 1, when calculating the descending\
+    \ direction $d(u_k, \\beta) = (I + \\beta M)^{-1}e(u_k, \\beta)$, if the scale\
+    \ of the problem is large,the computational cost of the inversion operation $(I\
+    \ + \\beta M)^{-1}$ is too high,which will cause the algorithm to run slowly.\
+    \ The following equivalent deformation is:\n\n```\n$d(u_k, \\beta) = (I + \\beta\
+    \ M)^{-1}e(u_k, \\beta) \\Leftrightarrow (I + \\beta M)d(u_k, \\beta) = e(u_k,\
+    \ \\beta). \\quad (12)$\n```\n\nThe specific form of the equation on the right\
+    \ is a system of linear equations\n\n```\n$$\\begin{bmatrix} I_{n \\times n} &\
+    \ \\-\\beta A^T \\ \\beta A & I_{m \\times m} \\end{bmatrix} \\begin{bmatrix}\
+    \ d(X_k, \\beta) \\ d(y_k, \\beta) \\end{bmatrix} = \\begin{bmatrix} e(X_k, \\\
+    beta) \\ e(y_k, \\beta) \\end{bmatrix}. \\quad (13)$\n```\n\nSolve the equations\
+    \ to get\n\n```\n$d(y_k, \\beta) = (I_{m \\times m} + \\beta\\beta^2 AA^T)^{-1}[e(y_k,\
+    \ \\beta) - \\beta A e(X_k, \\beta)], \\quad (14)$\n```\n\n```\n$d(X_k, \\beta)\
+    \ = \\beta A^T d(y_k, \\beta) + e(X_k, \\beta). \\quad (15)$\n```\n\nIt can be\
+    \ seen from (12) to (15) that with the inversion operation $(I+\beta M)^{-1}$\
+    \ and $(I + \\beta\\beta^2 AA^T)^{-1}$, the dimension is reduced from $(n^2+m)\\\
+    times(n^2+m)$ to $m \\times m$, and the amount of computation can be significantly\
+    \ reduced when $n$ is larger than $m$. So there is an improved projection contraction\
+    \ algorithm\n\n# Algorithm 2 Improved projection contraction algorithm\n\nStep\
+    \ 1: Given $u_k \\in R^{n} \\times R^m$, $r \\in (0,2)$, $\\beta \\in [0,1]$.\n\
+    \nStep 2: For $k=0, 1, \\dots$, if $u_k \\notin \\Omega^*$,\n\nStep 3: Calculated\
+    \ $d(y_k, \\beta), d(X_k, \\beta)$ from equations (14) and (15) to get $d(u_k,\
+    \ \\beta)$,\n\nStep 4: Update $u_{k+1} = u_k - r\\beta d(u_k, \\beta)$."
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "# 4. Numerical experiment\n\nTest platform and software: Intel Xeon2 CPU (3.3GHz),\
+    \ 8GB ram PC, Win 10 system, Matlab 2010b programming.\n\n**Example 1** Consider\
+    \ the following semidefinite programming problem:\n\n```\n$A_1 = \\begin{pmatrix}\
+    \ 0 & 1 & 0 & 0 \\ 1 & 2 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & -2 & -1 \\ 0 & -1\
+    \ & -1 & -2 \\end{pmatrix}, A_2 = \\begin{pmatrix} 0 & -2 & 2 & 0 \\ 0 & 2 & 1\
+    \ & 2 \\ -1 & -2 & 0 & 1 \\ 2 & 0 & 0 & 0 \\ 0 & 2 & 1 & 2 \\end{pmatrix}$\n```\n\
+    \n```\n$A_3 = \\begin{pmatrix} 2 & -1 & -1 & 0 \\ 2 & 0 & 2 & 1 \\ -1 & -1 & 2\
+    \ & -1 \\ 1 & 1 & 0 & -2 \\end{pmatrix}, C = \\begin{pmatrix} 3 & -3 & 3 & 1 \\\
+    \ 3 & 5 & 3 & 2 \\ -3 & -1 & 1 & 2 \\ 1 & 1 & -3 & -1 \\ 1 & 2 & -1 & -1 \\end{pmatrix},\
+    \ b = \\begin{pmatrix} -2 \\ 2 \\end{pmatrix}$\n```\n\n$\beta = 0.7$, when the\
+    \ condition $\\|e(u,\\beta)\\ \\le 10^{-4}$ is satisfied, the algorithm terminates.\
+    \ Algorithm 1 obtains the primal-dual optimal after 71 iterations, and the dual\
+    \ gap is $9.3051-005$.\n\n**Example 2** Consider the stochastic semidefinite programming\
+    \ problem: positive integers $m,n$ generate $m$ matrices $R_i \\in \\mathbb{R}^{n\
+    \ \\times n}, i=1,\\dots,m$. Let $A_i = (R_i + R_i^T)/2, b_i = trace(A_i), C =\
+    \ \\sum_{i=1}^m A_i + I$. The problem has a strictly feasible point $(\\mathbf{1},\
+    \ \\mathbf{e})$, where $e$ is a column vector whose elements are all 1. Algorithms\
+    \ 1 and 2 take parameters $r = \\beta = 1$,And Yu algorithm take parameter $\\\
+    gamma=1$.\n\n| | Algorithm 1 | Algorithm 2 | Yu algorithm |\n|---|---|---|---||\n\
+    | | Iter | Time | Iter | Time | Iter | Time |\n| 10 | 0.0028 | 51.1 | 0.0044 |\
+    \ 58.2 | 0.0026 | 55.4 |\n| 20 | 0.0129 | 49.2 | 0.0065 | 56.3 | 0.0042 | 81.8\
+    \ |\n| 30 | 0.0729 | 64.7 | 0.0103 | 62.7 | 0.0178 | 96.2 |\n| 40 | 0.4385 | 70.2\
+    \ | 0.0187 | 74.1 | 0.0221 | 114.9 |\n| 50 | 1.0871 | 69.4 | 0.0291 | 80.4 | 0.0390\
+    \ | 131.6 |\n| 60 | 4.0640 | 77.8 | 0.0364 | 80.0 | 0.0862 | 147.0 |\n| 70 | 9.1441\
+    \ | 82.5 | 0.0583 | 78.5 | 0.1186 | 147.7 |\n| 80 | 86.4063* | 78 | 0.1065 | 86.7\
+    \ | 0.1814 | 154.7 |\n| 90 | 411.4213* | 87 | 0.1098 | 83.1 | 0.2373 | 164.7 |\n\
+    \nRemark: The * in Table 1 indicates that the algorithm only performs one operation,\
+    \ and the others are the CPU time and the average number of iterations for 10\
+    \ operations."
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Table 2. Results of algorithms for solving medium-scale problems
+
+
+    | | Algorithm | Yu | Sedumi |
+
+    |---|---|---|---||
+
+    | | Time | Iter | Time | Iter |
+
+    | 100 | 1.7885 | | 4.6670 | 222 | 3.578 | 13 |
+
+    | 200 | 26.6875 | 137 | 32.3009 | 235 | 19.968 | 13 |
+
+    | 300 | 66.9855 | 144 | 169.3916 | 379 | 82.828 | 14 |
+
+    | 400 | 174.5047 | 153 | 513.8769 | 441 | 237.969 | 14 |
+
+    | 500 | 467.2050 | 181 | | | 550.828 | 14 |
+
+
+    As seen from Table 1, Algorithm 1 can solve small-scale problems, but the computation
+    time increases dramatically when the problem increases. The improved algorithm,
+    Algorithm 2 does not have such shortcomings and when using the same set of the
+    parameters, in most cases, the computation time is smaller, and the number of
+    iterations is lower than the Yu algorithm; it can be seen from Table 2 for medium-scale
+    problems, the Algorithm 2 is still better than the Yu algorithm, although it is
+    inferior to the interior point algorithm package SeDumi 1.3 in the number of iterations,
+    Algorithm 2 spends less time in computation.
+
+
+    # 5. Conclusion
+
+
+    In this paper, the projection contraction algorithm for second-order programming
+    is extended to solve semidefinite programming, and the algorithm is given by the
+    equivalence between the optimal condition and the projection. In order to solve
+    large-scale semidefinite programming, the solution of the descending direction
+    is improved, and the original high-dimensional inversion operation is transformed
+    into a low dimensional linear system to solve. Numerical experiments show that
+    the algorithm is feasible, and the improved algorithms run faster. However, positive-definite
+    cones are more computationally complex than projections on second-order cones,
+    making solving large-scale problems challenging and requiring further research.
+
+
+    # Acknowledgements
+
+
+    The authors appreciate the financial support from the Research Fund of Fundamentals
+    Department of Air Force Engineering University (JK20221011).
+
+
+    # References
+
+
+    +   [1] Zhang Y. On Some Primal-Dual-Interior-Point Algorithms From Linear Programming
+    to Semidefinite Programming[J]. SIAM Journal on Optimization, 1998, 8(2): 365–386.
+
+
+    +   [2] Wang Wewei, Liu Hongfei, Hongmei Bi. Simplified Nesterov-Todd step interior-point
+    algorithm for semidefinite optimization based on a kernel function, Journal of
+    Applied Mathematics and Computing, 2019, 59(1-2): 445–463.
+
+
+    +   [3] Kheerfan B, Oxmaxour N. A new wide-neighborhood predictor-corre interior-point
+    method for semidefinite optimization[J]. Journal of Applied Mathematics and Computing,
+    2022, 68(2): 1365–1385.
+
+
+    +   [4] Zhang H, Wang J, Zhou Y, et al. A primal-dual interior-point algorithm
+    with arc-search for semidefinite programming[J]. Optimization Letters, 2019, 139(5):
+    1157–1168.
+
+
+    +   [5] Ye Y, Todd M. J, Mizuno S. An O(√n)-iteration homogeneous and self-dual
+    linear programming[J]. Mathematics of Operations Research, 1994, 19(1): 53–67.
+
+
+    +   [6] Sturm F, Judy SeDumi 1.3, a MATLAB toolbox for optimization over symmetric
+    cones[J]. Optimization Methods and Software, 1999, 11(1-4): 625–653.
+
+
+    +   [7] Kheerfan B. A polynomial-time infeasible interior-point algorithm with
+    arc-search for semidefiniteoptimization[J]. Journal of Scientific Computing, 2021,
+    88(3): 1–23.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '[9] He B. A new method for a class of linear variational inequalities[J]. Mathematical
+    Programming, 1994, 66(1): 137-144.
+
+
+    [10] He B. Solving a class of linear projection equations[J]. Numerische Mathematik,
+    1994, 68(1): 71-80.
+
+
+    [12] Yu Z. Solving semidefinite programming problems via alternating direction
+    methods[J]. Journal of Computational and Applied Mathematics, 2006, 1932(2): 437-445.
+
+
+    [13] Liang F., He, G., Li, S. A globally non-linear interior point algorithm with
+    full Newton step for second-order cone programming[J]. Applications of Mathematics,
+    2009, 54(5): 447-464.
+
+
+    [14] Mu X, Zhang Y. A fast projection and contraction method for second-order
+    conic programming. Acta Mathematicae Applicatae Sinica. 2015, 38(1): 256. https://doi.org/10.12387/C2015003
+
+
+    [15] Mu X, Zhang Y. Grasping force optimization for multi-fingered robotic hands
+    using projection and contraction methods[J]. Journal of Optimization Theory and
+    Applications, 2019, 183(2): 592-608.'
+  merge: -1
+  pgno: 7
+toc:
+- - '#'
+  - 3. 基于新方向的投影收缩算法
