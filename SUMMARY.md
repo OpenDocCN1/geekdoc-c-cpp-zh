@@ -35,6 +35,7 @@
 +   [机器学习入门指南](docs/a-concise-introduction-to-machine-learning-chapman-hallcrc-m/README.md)
 +   [基于异构信息网络嵌入的 IoT 触发-动作编程数据融合框架](docs/a-data-fusion-framework-based-on-heterogeneous-information-n/README.md)
 +   [代码的一天：用 C 编程语言编写的图解故事](docs/a-day-in-code-an-illustrated-story-written-in-the-c-programm/README.md)
++   [C 编程入门指南](docs/a-first-course-in-programming-with-c-paperback-jul-07-2004-t/README.md)
 +   [网络安全编程与预算框架](docs/a-framework-for-programming-and-budgeting-for-cybersecurity/README.md)
 +   [游戏玩家 C# 编程入门指南；欢迎，勇敢的冒险者！；1](docs/a-gamers-introduction-to-programming-in-c-welcome-brave-adve/README.md)
 +   [实验算法入门指南](docs/a-guide-to-experimental-algorithmics/README.md)
