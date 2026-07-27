@@ -67,6 +67,7 @@
 +   [高级动态范围成像：理论与实践](docs/advanced-high-dynamic-range-imaging-theory-and-practice/README.md)
 +   [计算机高级指南第 94 卷](docs/advanced-in-computers-volume-94/README.md)
 +   [高级 Mac OS X 编程：Big Nerd Ranch 指南](docs/advanced-mac-os-x-programming-the-big-nerd-ranch-guide-big-n/README.md)
++   [计算机进展（第93卷）](docs/advances-in-computers-volume-93/README.md)
 +   [密码学中的 DNA 计算进展](docs/advances-of-dna-computing-in-cryptography/README.md)
 +   [CafeOBJ 中证明分数的进展](docs/advances-of-proof-scores-in-cafeobj/README.md)
 +   [Minecraft 冒险之旅（第2版）](docs/adventures-in-minecraft-2nd-edition/README.md)
