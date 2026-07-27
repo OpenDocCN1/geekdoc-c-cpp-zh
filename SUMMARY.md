@@ -87,6 +87,7 @@
 +   [算法：佐治亚理工学院 CS6515 非官方指南：研究生算法](docs/algorithms-or-the-unofficial-guide-to-the-georgia-institute-/README.md)
 +   [神奇的 App 开发者（数字世界！）](docs/amazing-app-developers-its-a-digital-world/README.md)
 +   [家居安与安全系统的集成方法](docs/an-integrated-approach-to-home-security-and-safety-systems/README.md)
++   [家居安全与防护系统集成方法](docs/an-integrated-approach-to-home-security-and-safety-systems-1/README.md)
 +   [数据科学入门指南 第1版](docs/an-introduction-to-data-science-1st-edition/README.md)
 +   [AngularJS 手册：易于 Web 应用开发](docs/angularjs-handbook-easy-web-app-development/README.md)
 +   [AngularJS、JavaScript 和 JQuery 合一教程：自学指南](docs/angularjs-javascript-and-jquery-all-in-one-sams-teach-yourse/README.md)
