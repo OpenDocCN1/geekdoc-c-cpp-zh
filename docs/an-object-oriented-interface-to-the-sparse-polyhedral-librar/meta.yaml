@@ -1,0 +1,1841 @@
+groups:
+- md: "\n## An Object-Oriented Interface to the Sparse Polyhedral Library\n\nTobi\
+    \ Popoola¹ Ravi Shankar² Anna Rift³ Shivani Singh⁴ Eddie C. Davis⁵\nMichelle Mills\
+    \ Strout⁶ and Catherine Olechanowski⁷\n\nEmail: {tobipopoola¹|ravishankar²|shivanishingh⁴@u.boisestate.edu,catherineolechanowski@biosestate.edu}\n\
+    ⁵Vulcan Inc., Seattle, USA\n⁶Department of Computer Science, Boise State University,\
+    \ Boise USA\n⁷mtros@cs.urtison.edu\n\n**Abstract—** Many applications, including\
+    \ learning, molecular dynamics, and fluid dynamics, use sparse data where non-affine\
+    \ loop bounds hinder the use of the polyhedral model for code transformation.\
+    \ The Sparse Polyhedral Framework (SPF) addresses limitations of polyhedral modeling\
+    \ by representing non-affine constraints in relations and using functions. We\
+    \ contribute an API that wraps the SPF intermediate representation (IR) and the\
+    \ Inspector/Executor Polyhedral Library and for preprocessing to result in a well-specified\
+    \ definition of a full computation using the SPF.\n\nare symbolic constructs that\
+    \ represent structures such as the index arrays in sparse data. The SPF provides\
+    \ much of the functionality as traditional polyhedral tools: code generation with\
+    \ CodeGen[1] built on Omega[2] and preset and set relations in the presence of\
+    \ uninterpreted functions with EigenLib[3]. These tools are not tightly integrated\
+    \ and have their own low-level APIs, making individual use difficult.\n\n*Index\
+    \ Terms:* intermediate representation, sparse polyhedral framework, polyhedral\
+    \ dataflow\n\nThe contribution of this work is the Computation API. This API provides\
+    \ a precise specification of how to combine the individual functions of the SPF\
+    \ to create an intermediate representation. It can directly produce Polyhedral\
+    \ Dataflow Graphs (PDFGs)[4] and generate options for PDFs into relations used\
+    \ by EigenLib to perform transformations. In this work, we extend the PDFG to\
+    \ handle non-affine loops with imperfect nesting and carry dependencies.\n\n#\
+    \ I. INTRODUCTION\n\nMany applications including machine learning, molecular dynamics\
+    \ and computational fluid dynamics use sparse data. To save memory, sparse data\
+    \ is compressed by storing only the non-zero values. Arrays are used to map the\
+    \ non-zero value coordinates to the dense space. These arrays are used in loop\
+    \ bounds while iterating the iteration space. These non-affine loop bounds complicate\
+    \ the use of compiler transformation for performance optimization.\n\nFigure 1\
+    \ shows an overview of our iteration process where the computation API fits in\
+    \ in process. The highlighted region in the figure is the part that translates\
+    \ transformations to our API, which is currently under development. In this work\
+    \ we focus on mapping original source code to the computation API. The IR itself\
+    \ supports transformations by virtue of the sparse polyhedral framework. Graph\
+    \ operations on the PDFG generate transformations and are presented in the IR.\n\
+    \nThe polyhedral model is an effective optimization for applications with affine\
+    \ loop bounds. Iterations are represented as sets and data dependencies using\
+    \ relations. This combination of iteration space and data provides a partial ordering\
+    \ for the target computation. Within the partial ordering, the order of execution\
+    \ can be altered by applying relations to the iteration space. These relations\
+    \ are referred to transformations. A limitation to the polyhedral model is that\
+    \ the constraints within iteration spaces must be affine.\n\nOur work addresses\
+    \ limitations of previous approaches through a tight integration between CodeGen,\
+    \ Omega, and EigenLib. CHILL [5] provides a script interface for the SPF and supports\
+    \ non-affine transformations using integration. Omega focuses on the precision\
+    \ of operations involving uninterpreted functions, as well as restrictions on\
+    \ how they are expressed. Our computation API depends on EigenLib[3] for set and\
+    \ relation operations, which over the precision limitations.\n\nThe polyhedral\
+    \ framework extends the polyhedral model by supporting non-affine iteration spaces\
+    \ and transformations using uninterpreted functions. Uninterpreted functions\n\
+    \nThe contributions of this paper include:\n\n- A unified interface to specify\
+    \ a computation in the SPF\n- Integration with PDFGs\n- Extensions to PDFs to\
+    \ support non-affine loop bounds, perfectly nested loops, and loop carried dependencies\n\
+    - Translations between PDFG operations and SPF relations\n- Integration between\
+    \ CodeGen and IGenLib\n- Support for inlining computations\n- Peripheral support\
+    \ for generated code\n\nAll statements have an iteration associated with them.\
+    \ This iteration domain contains every instance of the statement and has no particular\
+    \ order. It is typically expressed as the iterators that the statement runs over,\
+    \ subject to the constraints of their iteration (loop bounds). The following code\
+    \ shows how to create a statement using the Compilation API. A statement is written\
+    \ as a string and the names of the data are identified with $ symbols, such as\
+    \ $D and $S for dense and sparse respectively. The iteration domain is set using\
+    \ the IGenLib syntax, with the deallocation of all data with $S, with this deallocation\
+    \ on lines 3 and 6\n\n# II. COMPUTATION: A C++ Class\n\nThe interface to SPF is\
+    \ implemented as a C++ class in IGenLib. The compilation class contains all of\
+    \ the information required to create a computation or computations. This includes:\
+    \ data spaces, statements, data dependencies, and execution schedules. This section\
+    \ describes the design and interface for each of these elements. Matrix multiplication\
+    \ is used as a running example throughout the rest of this paper. Figures 2 &\
+    \ 3 show the dense and sparse\n\n# A. Data Spaces\n\nA data space represents a\
+    \ collection of unique memory addresses. Each address is defined by a scalar choice\
+    \ of data space name and index. For example, $D(i)$, for each unique tuple $i$\
+    \ there will be a unique location, and during the lifetime of $D$ its locations\
+    \ will not overlap with any other data space memory locations. By default all\
+    \ data spaces are dense. If we use sparse $S$, the data space can be written only\
+    \ once but read from any number of times. The exception to this rule is for accumulation\
+    \ operations when a single data location within a space can be written multiple\
+    \ times ($+ = x, \\dots, max).\n\nThe data space represented in the matrix vector\
+    \ multiplies $x$, $y$, and $z$. In the sparse version the attributes $row$ and\
+    \ $col$ are also considered data spaces. Even though they are used within the\
+    \ loop bounds and into another data space must be constant for the duration of\
+    \ this computation. Therefore, they are not required as part of the Computation's\
+    \ definition.\n\n```\n// Stmt ds = new Stmt(\n  $($i=0; i < $S; i++) $S($i);\n\
+    \  $($j=0; j < $N && j < $M); j)\n```\n\n```\n// Stmt ss = new Stmt(\n  $($i,k,j)\
+    \ <= i < $N && rowptr(i) <= k < rowptr(i+1) && j < $M); j,k\n)\n```\n\nData dependencies\
+    \ exist between statements. They are encoded using relations between iteration\
+    \ domains and data vectors. Calculating a closure provides the dependency relations\
+    \ between statements and a partial ordering over them. In our running example\
+    \ the data results which can be written as follows:\n\n```\n// dense\nComputation*\
+    \ dsComp = new Computation();\nddsComp->addDataSpace($Y);\ndsComp->addDataSpace($X);\n\
+    dsComp->addDataSpace($Z);\n```\n\n```\n// sparse\n// reads\n$($i,k,j) -> [$($i);\n\
+    $($i,k,j) -> [$($k);\n$($i,k,j) -> [$($j);\n```\n\n```\n// writes\n$($i,k,j) ->\
+    \ [$($j);\n```\n\n# D. Execution Schedules\n\nExecution schedules are determined\
+    \ by scheduling functions that require to respect the data dependence relations.\
+    \ Scheduling functions take as input the iterators that apply to the current statement,\
+    \ and output it as an integer tuple that may be lexicographically ordered with\
+    \ others to determine the execution order of statements. Iterators are commonly\
+    \ used to represent the values of iterators affecting the order of the statement.\
+    \ For example, in the scheduling function\n\n# B. Statements\n\nStatements perform\
+    \ read and write operations on data spaces. We restrict the definition of statements\
+    \ to be blocks. There is a single and a single exit from each block of code.\n"
+  mdcn: "\n\n## 面向稀疏多面体库的对象化接口\n\nTobi Popoola¹ Ravi Shankar² Anna Rift³ Shivani Singh⁴\
+    \ Eddie C. Davis⁵\nMichelle Mills Strout⁶ 和 Catherine Olechanowski⁷\n\nEmail:\
+    \ {tobipopoola¹|ravishankar²|shivanishingh⁴@u.boisestate.edu,catherineolechanowski@biosestate.edu}\n\
+    ⁵Vulcan Inc., Seattle, USA\n⁶博西州大学计算机科学系, Boise USA\n⁷mtros@cs.urtison.edu\n\n\
+    **摘要—** 许多应用（包括学习、分子动力学和流体动力学）使用稀疏数据，其中非线性循环边界阻碍了使用多面模型进行代码变换。稀疏多面体框架 (SPF) 通过在关系和函数表示非线性约束，解决了多面体建模的局限性。我们贡献了一个\
+    \ API，用于封装 SPF 中间表示 (IR) 和检查/执行器多面体库，并用于预处理，从而使用 SPF 生成对完整计算的良好定义。\n\n是符号构造结构，用于表示稀疏数据中的索引数组等结构。SPF\
+    \ 提供了许多传统多面体工具的功能：基于 Omega[2] 构建的 CodeGen[1] 代码生成，以及在存在未解释函数时带有 EigenLib[3] 的预设和集合关系。这些工具之间没有紧密集成，并且有自己的低级\
+    \ API，使得单独使用变得困难。\n\n*术语：* 中间表示，稀疏多面体框架，多面体数据流\n\n本文的贡献是计算 API。该 API 提供了关于如何结合\
+    \ SPF 的各个函数来创建中间表示的精确规范。它可以直接生成多面体数据流图 (PDFGs)[4]，并为 PDF 生成用于 EigenLib 执行变换的 PDF\
+    \ 关系中的选项。在这项工作中，我们扩展了 PDFG 以处理具有完美嵌套和携带依赖的非线性循环。\n\n# I. 引言\n\n许多包括机器学习、分子动力学和计算流体力学在内的应用使用稀疏数据。为了节省内存，稀疏数据通过仅存储非零值进行压缩。使用数组来将非零值坐标映射到稠密空间。这些数组在迭代迭代空间时用于循环边界。这些非线性循环边界增加了使用编译器变换进行性能优化的复杂度。\n\
+    \n图 1 显示了我们迭代过程的概述，其中计算 API 符合该过程。图中高亮的区域是将变换翻译到我们 API 的部分，目前正在开发中。在这项工作中，我们专注于将原始源代码映射到计算\
+    \ API。IR 本身通过稀疏多面体框架支持变换。PDFG 上的图操作生成变换并现在 IR 中。\n\n多面体模型对于具有线性循环边界的应用是一种有效优化。迭代表示为集合，数据依赖使用关系表示。这种迭代空间和数据的结合为目标计算提供了一个偏序。在偏序中，可以通过将关系应用到迭代空间上来改变执行顺序。这些关系被称为变换。多面体模型的局限性是迭代空间内的约束必须是线性的。\n\
+    \n我们的工作通过 CodeGen、Omega 和 EigenLib 之间的紧密集成解决了以往方法的局限性。CHILL [5] 为 SPF 提供了脚本接口，并通过集成支持非线性变换。Omega\
+    \ 侧于涉及未解释函数的操作精度，以及对它们表达方式的限制。我们的计算 API 依赖 EigenLib[3] 进行集合和关系操作，这克服了精度的局限。\n\n\
+    多面体框架通过使用未解释函数支持非线性迭代空间和变换，扩展了多面体模型。未解释函数\n\n本文的贡献包括：\n\n- 用于在 SPF 中指定计算的统一接口\n\
+    - 与 PDFGs 的集成\n- 扩展 PDF 以支持非线性循环边界、完美嵌套循环和循环依赖\n- PDFG 操作与 SPF 关系之间的翻译\n- CodeGen\
+    \ 与 IGenLib 之间的集成\n- 对内内的支持\n- 对生成代码的辅助支持\n\n所有陈述都与一个迭代相关。该迭代域包含语句的每个实例且没有特定顺序。它通常被表示为语句运行的迭代器，受其迭代（循环边界）约束的影响。以下代码显示了如何使用编译\
+    \ API 创建语句。语句被写为字符串，数据名称用 $ 符号识别，例如 $D$ 和 $S$ 分别代表稠密和稀疏。迭代域使用 IGenLib 语法设置，并对所有带有\
+    \ $S 的数据进行释放，该释放操作位于第 3 行和第 6 行。\n\n# II. 计算：一个 C++ 类\n\nSPF 的接口在 IGenLib 中以 C++\
+    \ 类的形式实现。编译类包含创建一个或多个计算所需的所有信息。这包括：数据空间、语句、数据依赖和执行调度。本节描述这些元素元素的设计和接口。矩阵乘法在本文其余部分将作为示例。图\
+    \ 2 和 3 显示了稠密和稀疏\n\n# A. 数据空间\n\n数据空间表示唯一内存地址的集合。每个地址由数据空间名称和索引的标量选择定义。例如，对于每个唯一的元组\
+    \ $i$，$D(i)$。对于每个唯一的元组，将有一个唯一的位置，且在 $D$ 的生命周期内，其位置不会与任何其他数据空间重叠。默认情况下，所有数据空间都是稠密的。如果我们使用稀疏\
+    \ $S$，数据空间只能写入一次，但可以读取多次。此规则的例外是累加操作，此时单个空间内的位置可以被写入多次（$+ = x, \\dots, max$）。矩阵乘以\
+    \ $x, y$ 和 $z$。在稀疏版本中属性 $row$ 和 $col$ 也被视为数据空间。尽管它们在循环边界内使用，但在计算期间必须是常量。因此，它们不是计算定义的一部分。\n\
+    \n```\n// Stmt ds = new Stmt(\n  $($i=0; i < $S; i++) $S($i);\n  $($j=0; j < $N\
+    \ && j < $M); j)\n```\n\n```\n// Stmt ss = new Stmt(\n  $($i,k,j) <= i < $N &&\
+    \ rowptr(i) <= k < rowptr(i+1) && j < $M); j,k\n)\n```\n\n语句之间存在数据依赖。它们使用迭代域和数据向量之间的关系编码。计算闭提供了语句之间的依赖关系以及对它们的偏序。在我们的示例中，数据结果可以如下所示：\n\
+    \n```cpp\n// dense\nComputation* dsComp = new Computation();\ndsComp->addDataSpace($Y);\n\
+    dsComp->addDataSpace($X);\ndsComp->addDataSpace($Z);\n```\n\n```cpp\n// sparse\n\
+    // reads\n$($i,k,j) -> [$($i);\n$($i,k,j) -> [$($k);\n$($i,k,j) -> [$($j);\n```\n\
+    \n```cpp\n// writes\n$($i,k,j) -> [$($j);\n```\n\n# D. 执行调度\n\n执行调度由需要遵守数据依赖关系的调度函数决定。调度函数将当前语句的迭代器作为输入，并输出一个整数元组，可以与其他与其他进行字典序排序以确定语句的执行顺序。迭代器通常用于表示影响语句顺序的迭代器值。例如，在调度函数\n\
+    \n# B. 语句\n\n语句在数据空间上执行读写操作。我们将语句的定义限制为块。每个代码块只有一个入口和一个出口。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # An Object-Oriented Interface to the Sparse Polyhedral Library
+
+
+    Tobi Popoola¹ Ravi Shankar² Anna Rift³ Shivani Singh⁴ Eddie C. Davis⁵
+
+    Michelle Mills Strout⁶ and Catherine Olechanowski⁷
+
+
+    Email: {tobipopoola¹|ravishankar²|shivanishingh⁴@u.boisestate.edu,catherineolechanowski@biosestate.edu}
+
+    ⁵Vulcan Inc., Seattle, USA
+
+    ⁶Department of Computer Science, Boise State University, Boise USA
+
+    ⁷mtros@cs.urtison.edu
+
+
+    **Abstract—** Many applications, including learning, molecular dynamics, and fluid
+    dynamics, use sparse data where non-affine loop bounds hinder the use of the polyhedral
+    model for code transformation. The Sparse Polyhedral Framework (SPF) addresses
+    limitations of polyhedral modeling by representing non-affine constraints in relations
+    and using functions. We contribute an API that wraps the SPF intermediate representation
+    (IR) and the Inspector/Executor Polyhedral Library and for preprocessing to result
+    in a well-specified definition of a full computation using the SPF.
+
+
+    are symbolic constructs that represent structures such as the index arrays in
+    sparse data. The SPF provides much of the functionality as traditional polyhedral
+    tools: code generation with CodeGen[1] built on Omega[2] and preset and set relations
+    in the presence of uninterpreted functions with EigenLib[3]. These tools are not
+    tightly integrated and have their own low-level APIs, making individual use difficult.
+
+
+    *Index Terms:* intermediate representation, sparse polyhedral framework, polyhedral
+    dataflow
+
+
+    The contribution of this work is the Computation API. This API provides a precise
+    specification of how to combine the individual functions of the SPF to create
+    an intermediate representation. It can directly produce Polyhedral Dataflow Graphs
+    (PDFGs)[4] and generate options for PDFs into relations used by EigenLib to perform
+    transformations. In this work, we extend the PDFG to handle non-affine loops with
+    imperfect nesting and carry dependencies.
+
+
+    # I. INTRODUCTION
+
+
+    Many applications including machine learning, molecular dynamics and computational
+    fluid dynamics use sparse data. To save memory, sparse data is compressed by storing
+    only the non-zero values. Arrays are used to map the non-zero value coordinates
+    to the dense space. These arrays are used in loop bounds while iterating the iteration
+    space. These non-affine loop bounds complicate the use of compiler transformation
+    for performance optimization.
+
+
+    Figure 1 shows an overview of our iteration process where the computation API
+    fits in the process. The highlighted region in the figure is the part that translates
+    transformations to our API, which is currently under development. In this work
+    we focus on mapping original source code to the computation API. The IR itself
+    supports transformations by virtue of the sparse polyhedral framework. Graph operations
+    on the PDFG generate transformations and are presented in the IR.
+
+
+    The polyhedral model is an effective optimization for applications with affine
+    loop bounds. Iterations are represented as sets and data dependencies using relations.
+    This combination of iteration space and data provides a partial ordering for the
+    target computation. Within the partial ordering, the order of execution can be
+    altered by applying relations to the iteration space. These relations are referred
+    to transformations. A limitation to the polyhedral model is that the constraints
+    within iteration spaces must be affine.
+
+
+    Our work addresses limitations of previous approaches through a tight integration
+    between CodeGen, Omega, and EigenLib. CHILL [5] provides a script interface for
+    the SPF and supports non-affine transformations using integration. Omega focuses
+    on the precision of operations involving uninterpreted functions, as well as restrictions
+    on how they are expressed. Our computation API depends on EigenLib[3] for set
+    and relation operations, which over the precision limitations.
+
+
+    The polyhedral framework extends the polyhedral model by supporting non-affine
+    iteration spaces and transformations using uninterpreted functions. Uninterpreted
+    functions
+
+
+    The contributions of this paper include:
+
+
+    +   • A unified interface to specify a computation in the SPF
+
+
+    +   • Integration with PDFGs'
+  - "[PAGE 1]\n\n+   - Extensions to PDFs to support non-affine loop bounds,\n- perfectly\
+    \ nested loops, and loop carried dependencies\n- Translations between PDFG operations\
+    \ and SPF relations\n- Integration between CodeGen and IGenLib\n- Support for\
+    \ inlining computations\n- Peripheral support for generated code\n\nAll statements\
+    \ have an iteration associated with them. This iteration domain contains every\
+    \ instance of the statement and has no particular order. It is typically expressed\
+    \ as the iterators that the statement runs over, subject to the constraints of\
+    \ their iteration (loop bounds). The following code shows how to create a statement\
+    \ using the Compilation API. A statement is written as a string and the names\
+    \ of the data are identified with $ symbols, such as $D and $S for dense and sparse\
+    \ respectively. The iteration domain is set using the IGenLib syntax, with the\
+    \ deallocation of all data with $S, with this deallocation on lines 3 and 6\n\n\
+    # II. COMPUTATION: A C++ Class\n\nThe interface to SPF is implemented as a C++\
+    \ class in IGenLib. The compilation class contains all of the information required\
+    \ to create a computation or computations. This includes: data spaces, statements,\
+    \ data dependencies, and execution schedules. This section describes the design\
+    \ and interface for each of these elements. Matrix multiplication is used as a\
+    \ running example throughout the rest of this paper. Figures 2 & 3 show the dense\
+    \ and sparse\n\n# A. Data Spaces\n\nA data space represents a collection of unique\
+    \ memory addresses. Each address is defined by a scalar choice of data space name\
+    \ and index. For example, $D(i)$, for each unique tuple $i$ there will be a unique\
+    \ location, and during the lifetime of $D$ its locations will not overlap with\
+    \ any other data space memory locations. By default all data spaces are dense.\
+    \ If we use sparse $S$, the data space can be written only once but read from\
+    \ any number of times. The exception to this rule is for accumulation operations\
+    \ when a single data location within a space can be written multiple times ($+\
+    \ = x, \\dots, max$).\n\nThe data space represented in the matrix vector multiplies\
+    \ $x$, $y$, and $z$. In the sparse version the attributes $row$ and $col$ are\
+    \ also considered data spaces. Even though they are used within the loop bounds\
+    \ and into another data space must be constant for the duration of this computation.\
+    \ Therefore, they are not required as part of the Computation's definition.\n\n\
+    ```\n// Stmt ds = new Stmt(\n  $($i=0; i < $S; i++) $S($i);\n  $($j=0; j < $N\
+    \ && j < $M); j)\n```\n\n```\n// Stmt ss = new Stmt(\n  $($i,k,j) <= i < $N &&\
+    \ rowptr(i) <= k < rowptr(i+1) && j < $M); j,k\n)\n```\n\nData dependencies exist\
+    \ between statements. They are encoded using relations between iteration domains\
+    \ and data vectors. Calculating a closure provides the dependency relations between\
+    \ statements and a partial ordering over them. In our running example the data\
+    \ results which can be written as follows:\n\n```\n// dense\nComputation* dsComp\
+    \ = new Computation();\nddsComp->addDataSpace($Y);\ndsComp->addDataSpace($X);\n\
+    dsComp->addDataSpace($Z);\n```\n\n```\n// sparse\n// reads\n$($i,k,j) -> [$($i);\n\
+    $($i,k,j) -> [$($k);\n$($i,k,j) -> [$($j);\n```\n\n```\n// writes\n$($i,k,j) ->\
+    \ [$($j);\n```\n\n# D. Execution Schedules\n\nExecution schedules are determined\
+    \ by scheduling functions that require to respect the data dependence relations.\
+    \ Scheduling functions take as input the iterators that apply to the current statement,\
+    \ and output it as an integer tuple that may be lexicographically ordered with\
+    \ others to determine the execution order of statements. Iterators are commonly\
+    \ used to represent the values of iterators affecting the order of the statement.\
+    \ For example, in the scheduling function\n\n# B. Statements\n\nStatements perform\
+    \ read and write operations on data spaces. We restrict the definition of statements\
+    \ to be blocks. There is a single and a single exit from each block of code."
+- md: "\n# Composable Transformations\n\n![](img/b0ca35141f95bc94154f92e4981fe911_2_0.png)\n\
+    \nFig. 1: Optimization Pipeline Overview\n\n## Dense matrix vector multiply\n\n\
+    ```\nfor (int i = 0; i < N; i++) {\n  for (int j = 0; j < M; j++) {\n    y[i]\
+    \ += A[i][j] * x[j];\n  }\n}\n```\n\nUninterpreted functions cannot have expressions\
+    \ as parameters. Code generation overcomes this by limiting uninterpreted functions\
+    \ in IEGenLib to Omega compliant, while storing a mapping of the uninterpreted\
+    \ function to its modified uninterpreted function. The separation of representations\
+    \ for transformations and code generation allows precise operations during transformations\
+    \ while still leveraging the flexibility of CodeGen+ for polyhedral scanning.\n\
+    \nFig. 2: Dense Matrix Vector Multiply\n\n## CSR matrix vector multiply\n\n```\n\
+    for (int i = 0; i < N; i++) {\n  for (int k = rowptr[i]; k < rowptr[i+1]; k++)\
+    \ {\n    int j = col[k];\n    y[i] += A[k] * x[j];\n  }\n}\n```\n\nFigure 5 shows\
+    \ the code generation for the sparse matrix vector multiplication computation\
+    \ defined in Figure 4. Line 2 of Figure 5 defines a mapping for the statement\
+    \ i0; Lines 9-13 remap the Omega compliant uninterpreted function back to its\
+    \ original. Lines 15-20 are a direct result of polyhedral scanning from CodeGen+.\
+    \ The computation implementation provides all the supporting definitions for full\
+    \ functional code.\n\nFig. 3: CSR Matrix Vector Multiply\n\n{i, j} -> [0, i, j,\
+    \ 0], the position of i before j signifies that the corresponding statement is\
+    \ within a loop over j, which is within a loop over i. In a lexicographical ordering,\
+    \ all instances of the statement with i = 1 will precede all instances with i\
+    \ = 2, regardless of the value of j.\n\n```\n// 3rd parameter float to the Stmt\
+    \ counter /\n// dense\n// [[i,j]] -> [0, i, j, 0]\n// sparse\n// [[i,k,j]] ->\
+    \ [0, i, k, j, 0]\n```\n\n## III. VISUAL COMPUTATION ON A GRAPH\n\nVisualizing\
+    \ the data flow gives experts a suitable view to reason about transformations\
+    \ for optimization opportunities. This diff PDFG ensures regular computations\
+    \ using a combination of the polyhedral model and data graphs. The graphs represent\
+    \ each loop body, loop dependencies are not represented, and imperfect loops are\
+    \ not supported. This section describes how transformations are implemented, the\
+    \ creation of PDFGs using the SPIR IR is integrated with the Computation API.\
+    \ After a computation is constructed like the one in Figure 4 a function can output\
+    \ the PDFG as a file.\n\nFigure 4 shows the complete specification of two computation\
+    \ followed by sparse matrix vector multiply.\n\nIn the original order, rectangular\
+    \ boxes represent data space and inverted triangles represent statements. In the\
+    \ extended PDFG, rectangular boxes represent data space and rounded boxes represent\
+    \ statements. Edges represent reads and writes in both the original and extended\
+    \ PDFG. The extended PDFG does not currently represent the type and size of data\
+    \ spaces in a computation.\n\n## E. Code Generation\n\nThe computation interfaces\
+    \ with CodeGen+ for code generation. CodeGen uses sets and relations for polyhedral\
+    \ scanning. Omega uses sets and relations in the presence of uninterpreted functions.\
+    \ Uninterpreted functions are limited by the prefix rule. This rule states that\
+    \ an uninterpreted function must be a part of the declaration.\n\nLoop dependencies\
+    \ and imperfect loops are important when deciding which optimizations to apply.\
+    \ Loop carried dependencies refer to loop patterns where one iteration of a loop\
+    \ writes data by another iteration of the same loop. An imperfect\n\n## Full dense\
+    \ Specification\n\n```\n// dense mvm\nComputation += dsComp Computation();\n\n\
+    // add data spaces\ndsComp->addDataSpace(\"$ys\");\ndsComp->addDataSpace(\"$sas\"\
+    );\ndsComp->addDataSpace(\"$xs\");\n\n// Stmt ds0 = Stmt(0);\n// source code\n\
+    *Si(i) = SAS(i,j) + Sxs(j);\n// iter domain\nfor (int i = 0; i < N && j < M; j++)\
+    \ {\n  // scheduling function\n  for ([i,j] = {0,0}; i,j < {N,M}; i,j++) {\n \
+    \   for ([y,x] = {[i,j]-1}; [y,x] >= {0,0}; y,x--) {\n      *Sy(y,x) = Si([i,j]-1);\n\
+    \    }\n  }\n}\n// add data writes\nfor ([y,x] = {[i,j]-1}; ...) {\n}\ndsComp->addStmt(ds0);\n\
+    \n// sparse mvm\nppsComp = new Computation();\n\n// add data spaces\nppsComp->addDataSpace(\"\
+    $ys\");\nppsComp->addDataSpace(\"$sas\");\nppsComp->addDataSpace(\"$xs\");\n```\n\
+    \n```\n# dense s0\n# dense s0(x0, i2, k, x4, j)\n# (I + A) * k(j)\n```\n\n```\n\
+    # undefined col(t0)\n# dense col_0(t0, tv1, tv2, tv3)\n# undefined rowptr_1(t0,\
+    \ tv1)\n# dense rowptr_2(t0, tv2)\n# dense col(t0)\n# dense col_0(t0, tv1, tv2,\
+    \ tv3)\n# undefined rowptr(t0)\n# dense rowptr_1(t0, tv1)\n# dense rowptr_2(t0,\
+    \ tv2) +\n```\nfor (int t2 = 0; t2 <= N-1; t2++) {\n  for (int t4 = rowptr_1(t1,t2);\
+    \ t4 <= rowptr_2(t1,t2); t4++) {\n    col_t0(t1,t2,t3,t4);\n    s0(0,0,t2,t4,t6,t0);\n\
+    \  }\n}\n```\n```\n# undefined s0\n# undefined col(t0)\n# dense col_0(t0, tv1,\
+    \ tv2, tv3)\n# undefined rowptr(t0)\n# dense rowptr_1(t0, tv1)\n# dense rowptr_2(t0,\
+    \ tv2)\n```\nFig. 5: SPMV dense\n\n```\n// Stmt ds0 = new Stmt(0);\n*Si(i,j) =\
+    \ C * i + N * rowptr(i) <= j (rowptr(i) <= j < rowptr(i+1) && j < M)\nfor ([i,j]\
+    \ = {0,0}; i,j < {N,M}; i,j++) {\n  for ([y,x] = {[i,j]-1}; [y,x] >= {0,0}; y,x--)\
+    \ {\n    *Sy(y,x) = Si([i,j]-1);\n    *Ay(y,x) = Aj([i,j]-1);\n    *Mx(y,x) =\
+    \ Sj([i,j]-1);\n  }\n}\nspspComp->addStmt(ds0);\n```\n\n## The forward solve example\n\
+    \n```\nfor (int i = 0; i < N; i++) {\n  S0: tmp(i) = f(i);\n  for (int j = 0;\
+    \ j < i; j++) {\n    S1: tmp(i) -= A(i,j) * u(j);\n  }\n  S2: u(i) = tmp(i)/A(i,i);\n\
+    }\n```\nFig. 6: Forward Solve\n\nFig. 4: Computation API for dense and sparse\
+    \ matrix vector\n\nFigure 7 shows the extended PDFG. From the data node i to the\
+    \ j-loop. The incoming edge from the statement node S1 shows read access from\
+    \ statement node S2 to the data node u and shows the write access in the i-loop.\
+    \ This loop carried dependency over i.\n\nloop nest i has statements at multiple\
+    \ levels as shown in Figure 6.\n\n## A. Loop Dependencies\n\nThe existing representation\
+    \ is not capable of visualizing the loop carried dependency. Figure 8 shows the\
+    \ PDFG for the forward solve example. In the example, the code shows a loop carried\
+    \ dependency for the data space u in statements S1 and S2. However, the original\
+    \ PDFG in figure 8 does not visualize the loop carried dependency\n\n## B. Imperfect\
+    \ loop nest\n\nThe forward solve example also exhibits an imperfect loop nest\
+    \ pattern: statements S0 and S2 are in the outer-loop while statement S1 is in\
+    \ the inner j loop. The original PDFG in figure 8 does not exhibit this pattern.\
+    \ The updated design in the extended PDFG in Figure 7 visualizes the imperfect\
+    \ loop pattern.\n\n![](img/b0ca35141f95bc94154f92e4981fe911_4_0.png)\n![](img/b0ca35141f95bc94154f92e4981fe911_4_1.png)\n\
+    \n## C. Dot File Graph\n\nThe computation API used to generate the extended PDFG\
+    \ as a directed graph. Loop nests are expressed using a modified version of polyhedral\
+    \ scheduling. Polly is a top down recursive algorithm for generating code for\
+    \ set of iteration statements. Our modified version of polyhedral uses the same\
+    \ approach but generates nodes of polyhedral graph and generates clusters for\
+    \ statements within the same loop.\n\n## IV. OPERATIONS ON COMPUTATIONS\n\nComputations\
+    \ are composed of IEGen Sets and relations. IEGEN's functionality is used to directly\
+    \ manage the Computations' components. The core operations performed in IEGenLib\
+    \ include inversion, compose, and related supporting functions. Using these operations\
+    \ we are able to perform inlining and loop transformations within the Computation\
+    \ class.\n\n## A. Inlining\n\nInlining handles the complexity of creating the\
+    \ representation of functions that can call others.\n\nComputations in inline\
+    \ to be reusable the same way that functions are.\n\nEach function in the source\
+    \ code is represented as a Computation. When a function call is first encountered\
+    \ in the source, a Computation is created and inserted (inline) the contents of\
+    \ Computation. If the same function is called multiple times, the Computation\
+    \ that has been generated for it will be reused.\n\nThe inlining is responsible\
+    \ for:\n\n- avoiding naming conflicts between the caller and callee\n- generating\
+    \ assignment statements for function parameters\n- providing call return values\
+    \ to the caller and updating iteration counts, execution schedules and dependencies\
+    \ in the statements\n\nTo keep things simple, the values and arguments to an inlined\
+    \ function are restricted to either data spaces or integers. To a more complex\
+    \ expression into an inline, it must first be assigned to an argument variable\
+    \ which can be passed. To preserve the calling semantics of the program, when\
+    \ arguments are presented to a function, statements are generated to declare each\
+    \ of parameters equal to the value passed. No equivalent occurs with return values,\
+    \ because they could potentially be used in a large variety of contexts (nested\
+    \ to multiple or ignored entirely). Therefore, the inlining process returns the\
+    \ values that are returned by the inlined function, as strings, to be used by\
+    \ the caller uses\n"
+  mdcn: "\n\n# 可组合的变换\n\n![](img/b0ca35141f95bc94154f92e4981fe911_2_0.png)\n\n图 1：优化流水线概述\n\
+    \n## 稠密矩阵向量乘法\n\n```\nfor (int i = 0; i < N; i++) {\n  for (int j = 0; j < M;\
+    \ j++) {\n    y[i] += A[i][j] * x[j];\n  }\n}\n```\n\n不可解释函数不能以表达式作为参数。代码生成通过将\
+    \ IEGenLib 中的不可解释函数限制为符合 Omega 标准来解决这一问题，同时存储从不可解释函数到修改后的不可解释函数的映射。变换与代码生成之间表示的分离，使得在变换过程中进行精确的操作，同时仍利用了\
+    \ CodeGen+ 进行多面扫描的灵活性。\n\n图 2：稠密矩阵向量乘法\n\n## CSR 矩阵向量乘法\n\n```\nfor (int i = 0;\
+    \ i < N; i++) {\n  for (int k = rowptr[i]; k < rowptr[i+1]; k++) {\n    int j\
+    \ = col[k];\n    y[i] += A[k] * x[j];\n  }\n}\n```\n\n图 5 显示了图 4 中定义的稀疏矩阵向量乘法计算的代码生成。图\
+    \ 5 的第 2 行定义了语句 i0 的映射。第 9-13 行将符合 Omega 的不可解释函数映射回其原始形式。第 15-20 行是 CodeGen+ 多面扫描的直接结果。计算实现为完整功能代码提供了所有的支持定义。\n\
+    \n图 3：CSR 矩阵向量乘法\n\n{i, j} -> [0, i, j, 0]，i 在 j 之前的位置表示相应的语句位于对 j 的循环中，而该循环又位于对\
+    \ i 的循环中。在字典序排序中，无论 j 的值如何，所有 i = 1 的语句实例都将位于 i = 2 的实例之前。\n\n```\n// 3rd parameter\
+    \ float to the Stmt counter /\n// dense\n// [[i,j]] -> [0, i, j, 0]\n// sparse\n\
+    // [[i,k,j]] -> [0, i, k, j, 0]\n```\n\n## III. 图形上的视觉计算\n\n数据流可视化为专家提供了一个合适的视角，用于对优化机会进行变换推理。这种差异\
+    \ PDFG 通过结合多面模型和数据图确保了计算的规则性。图表示每个循环体，不表示循环依赖，且不支持不完整的循环。本节描述了变换是如何实现的，使用 SPIR\
+    \ IR 创建 PDFG 的过程已与 Computation API 集成。在构建了像图 4 样的计算后，函数可以将 PDFG 输出为文件。\n\n图 4\
+    \ 显示了稠密矩阵和后续稀疏矩阵向量乘法的两个计算的完整规范。\n\n在原始顺序中，矩形表示数据空间，倒三角形表示语句。在扩展的 PDFG 中，矩形表示数据空间，圆矩形表示语句。边表示原始和扩展\
+    \ PDFG 中的读和写操作。扩展的 PDFG 目前不表示计算中数据空间的类型和大小。\n\n## E. 代码生成\n\n计算通过 CodeGen+ 接口进行代码生成。CodeGen\
+    \ 使用集合和关系进行多面扫描。Omega 在存在不可解释函数时使用集合和关系。不可解释函数受前缀规则限制。该规则规定不可解释函数必须是声明的一部分。\n\n\
+    循环依赖和不完整的循环在决定应用哪些优化时非常重要。循环携带依赖指的是循环模式，其中循环的某迭代由同一循环的另一次迭代写入数据。一个不完整的\n\n## 全稠密规范\n\
+    \n```\n// dense mvm\nComputation += dsComp Computation();\n\n// add data spaces\n\
+    dsComp->addDataSpace(\"$ys\");\ndsComp->addDataSpace(\"$sas\");\ndsComp->addDataSpace(\"\
+    $xs\");\n\n// Stmt ds0 = Stmt(0);\n// source code\n*Si(i) = SAS(i,j) + Sxs(j);\n\
+    // iter domain\nfor (int i = 0; i < N && j < M; j++) {\n  // scheduling function\n\
+    \  for ([i,j] = {0,0}; i,j < {N,M}; i,j++) {\n    for ([y,x] = {[i,j]-1}; [y,x]\
+    \ >= {0,0}; y,x--) {\n      *Sy(y,x) = Si([i,j]-1);\n    }\n  }\n}\n// add data\
+    \ writes\nfor ([y,x] = {[i,j]-1}; ...) {\n}\ndsComp->addStmt(ds0);\n\n// sparse\
+    \ mvm\nppsComp = new Computation();\n\n// add data spaces\nppsComp->addDataSpace(\"\
+    $ys\");\nppsComp->addDataSpace(\"$sas\");\nppsComp->addDataSpace(\"$xs\");\n```\n\
+    \n```\n# dense s0\n# dense s0(x0, i2, k, x4, j)\n# (I + A) * k(j)\n```\n\n```\n\
+    # undefined col(t0)\n# dense col_0(t0, tv1, tv2, tv3)\n# undefined rowptr_1(t0,\
+    \ tv1)\n# dense rowptr_2(t0, tv2)\n# dense col(t0)\n# dense col_0(t0, tv1, tv2,\
+    \ tv3)\n# undefined rowptr(t0)\n# dense rowptr_1(t0, tv1)\n# dense rowptr_2(t0,\
+    \ tv2) +\n```\nfor (int t2 = 0; t2 <= N-1; t2++) {\n  for (int t4 = rowptr_1(t1,t2);\
+    \ t4 <= rowptr_2(t1,t2); t4++) {\n    col_t0(t1,t2,t3,t4);\n    s0(0,0,t2,t4,t6,t0);\n\
+    \  }\n}\n```\n```\n# undefined s0\n# undefined col(t0)\n# dense col_0(t0, tv1,\
+    \ tv2, tv3)\n# undefined rowptr(t0)\n# dense rowptr_1(t0, tv1)\n# dense rowptr_2(t0,\
+    \ tv2)\n```\n图 5：SPMV  dense\n\n```\n// Stmt ds0 = new Stmt(0);\n*Si(i,j) = C\
+    \ * i + N * rowptr(i) <= j (rowptr(i) <= j < rowptr(i+1) && j < M)\nfor ([i,j]\
+    \ = {0,0}; i,j < {N,M}; i,j++) {\n  for ([y,x] = {[i,j]-1}; [y,x] >= {0,0}; y,x--)\
+    \ {\n    *Sy(y,x) = Si([i,j]-1);\n    *Ay(y,x) = Aj([i,j]-1);\n    *Mx(y,x) =\
+    \ Sj([i,j]-1);\n  }\n}\nspspComp->addStmt(ds0);\n```\n\n## 前向求解示例\n\n```\nfor\
+    \ (int i = 0; i < N; i++) {\n  S0: tmp(i) = f(i);\n  for (int j = 0; j < i; j++)\
+    \ {\n    S1: tmp(i) -= A(i,j) * u(j);\n  }\n  S2: u(i) = tmp(i)/A(i,i);\n}\n```\n\
+    图 6：前向求解\n\n图 4：用于稠密和稀疏矩阵向量的 Computation API\n\n图 7 显示了扩展的 PDFG。从数据节点 i 到 j 循环。来自语句节点\
+    \ S1 的入边显示了从语句节点 S2 到数据节点 u 的读访问，并显示了 i 循环中的写访问。这是跨越 i 的循环携带依赖。\n\n如图 6 所示，循环嵌套具有多个级别的语句。\n\
+    \n## A. 循环依赖\n\n现有的表示无法可视化循环携带依赖。图 8 显示了前向求解示例的 PDFG。在示例中，代码显示了语句 S1 和 S2 中数据空间\
+    \ u 的循环携带依赖。然而，图 8 中的原始 PDFG 未可视化该循环携带依赖\n\n## B. 不完整的循环嵌套\n\n前向求解示例还展示了不完整的循环嵌套模式：语句\
+    \ S0 和 S2 在外层循环中，而语句 S1 在内部 j 循环中。图 8 中的原始 PDFG 没有显示这种模式。图 7 中扩展 PDFG 的更新设计可视化了这种不完整的循环模式。\n\
+    \n![](img/b0ca35141f95bc94154f92e4981fe911_4_0.png)\n![](img/b0ca35141f95bc94154f92e4981fe911_4_1.png)\n\
+    \n## C. Dot 文件图\n\n计算 API 用于生成扩展 PDFG 作为有向图。循环嵌套使用修改后的 polyhedron 进行调度。Polly 是一种用于生成集合代码的自顶递归算法。我们的修改版本使用相同的方法，但生成的是语句内部的簇。\n\
+    \n## IV. 计算的操作\n\n计算由 IEGen 集合和关系组成。使用 IEGen 的功能直接管理计算。IEGenLib 执行的核心操作包括反、组合以及相关的支持函数。通过这些操作，我们可以在\
+    \ Computation 类中执行内联和循环变换。\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 2]\n\n# Composable Transformations\n\n![](img/b0ca35141f95bc94154f92e4981fe911_2_0.png)\n\
+    \nFig. 1: Optimization Pipeline Overview\n\n# Dense matrix vector multiply\n\n\
+    ```\n```\nfor (int i = 0; i < N; i++) {\n  for (int j = 0; j < M; j++) {\n   \
+    \ y[i] += A[i][j] * x[j];\n  }\n}\n```\n```\n\nUninterpreted functions cannot\
+    \ have expressions as parameters. Code generation overcomes this by limiting uninterpreted\
+    \ functions in IEGenLib to Omega compliant, while storing a mapping of the uninterpreted\
+    \ function to its modified uninterpreted function. The separation of representations\
+    \ for transformations and code generation allows precise operations during transformations\
+    \ while still leveraging the flexibility of CodeGen+ for polyhedral scanning.\n\
+    \nFig. 2: Dense Matrix Vector Multiply\n\n# CSR matrix vector multiply\n\n```\n\
+    ```\nfor (int i = 0; i < N; i++) {\n  for (int k = rowptr[i]; k < rowptr[i+1];\
+    \ k++) {\n    int j = col[k];\n    y[i] += A[k] * x[j];\n  }\n}\n```\n```\n\n\
+    Figure 5 shows the code generation for the sparse matrix vector multiplication\
+    \ computation defined in Figure 4. Line 2 of Figure 5 defines a mapping for the\
+    \ statement i0; Lines 9-13 remap the Omega compliant uninterpreted function back\
+    \ to its original. Lines 15-20 are a direct result of polyhedral scanning from\
+    \ CodeGen+. The computation implementation provides all the supporting definitions\
+    \ for full functional code.\n\nFig. 3: CSR Matrix Vector Multiply\n\n{i, j} ->\
+    \ [0, i, j, 0}, the position of i before j signifies that the corresponding statement\
+    \ is within a loop over j, which is within a loop over i. In a lexicographical\
+    \ ordering, all instances of the statement with i = 1 will precede all instances\
+    \ with i = 2, regardless of the value of j.\n\n```\n```\n// 3rd parameter float\
+    \ to the Stmt counter /\n// dense\n// [[i,j]] -> [0, i, j, 0]\n// sparse\n// [[i,k,j]]\
+    \ -> [0, i, k, j, 0]\n```\n```\n\n# III. VISUAL COMPUTATION ON A GRAPH\n\nVisualizing\
+    \ the data flow gives experts a suitable view to reason about transformations\
+    \ for optimization opportunities. This deffs PDFG ensures regular computations\
+    \ using a combination of the polyhedral model and data graphs. The graphs represent\
+    \ each loop body, loop dependencies are not represented, and imperfect loops are\
+    \ not supported. This section describes how transformations are implemented, the\
+    \ creation of PDFGs using the SPIR IR is integrated with the Computation API.\
+    \ After a computation is constructed like the one in Figure 4 a function can output\
+    \ the PDFG as a file.\n\nFigure 4 shows the complete specification of two computation\
+    \ followed by sparse matrix vector multiply.\n\nIn the original order, rectangular\
+    \ boxes represent data space and inverted triangles represent statements. In the\
+    \ extended PDFG, rectangular boxes represent data space and rounded boxes represent\
+    \ statements. Edges represent reads and writes in both the original and extended\
+    \ PDFG. The extended PDFG does not currently represent the type and size of data\
+    \ spaces in a computation.\n\n# E. Code Generation\n\nThe computation interfaces\
+    \ with CodeGen+ for code generation. CodeGen uses sets and relations for polyhedral\
+    \ scanning. Omega uses sets and relations in the presence of uninterpreted functions.\
+    \ Uninterpreted functions are limited by the prefix rule. This rule states that\
+    \ an uninterpreted function must be a part of the declaration.\n\nLoop dependencies\
+    \ and imperfect loops are important when deciding which optimizations to apply.\
+    \ Loop carried dependencies refer to loop patterns where one iteration of a loop\
+    \ writes data by another iteration of the same loop. An imperfect"
+  - "[PAGE 3]\n\n# Full dense Specification\n\n```\n// dense mvm\nComputation += dsComp\
+    \ Computation();\n\n// add data spaces\ndsComp->addDataSpace(\"$ys\");\ndsComp->addDataSpace(\"\
+    $sas\");\ndsComp->addDataSpace(\"$xs\");\n\n// Stmt ds0 = Stmt(0);\n// source\
+    \ code\n*Si(i) = SAS(i,j) + Sxs(j);\n// iter domain\nfor (int i = 0; i < N &&\
+    \ j < M; j++) {\n  // scheduling function\n  for ([i,j] = {0,0}; i,j < {N,M};\
+    \ i,j++) {\n    for ([y,x] = {[i,j]-1}; [y,x] >= {0,0}; y,x--) {\n      *Sy(y,x)\
+    \ = Si([i,j]-1]);\n    }\n  }\n}\n\n// add data writes\nfor ([y,x] = {[i,j]-1};\
+    \ ...) {\n  \n}\ndsComp->addStmt(ds0);\n\n// sparse mvm\nspsComp = new Computation();\n\
+    \n// add data spaces\nsppsComp->addDataSpace(\"$ys\");\nsppsComp->addDataSpace(\"\
+    $sas\");\nsppsComp->addDataSpace(\"$xs\");\n```\n\n```\n# dense s0\n# dense s0(__x0,\
+    \ i, __x2, k, __x4, j, __k6)\n# (I + A) * k(j)\n```\n\n```\n# undefined col(t0)\n\
+    # dense col_0(t0, __tv1, __tv2, __tv3)\n# undefined rowptr_1(t0, __tv1)\n# dense\
+    \ rowptr_2(t0, __tv2)\n# dense col(t0)col[t0]\n# dense col_0(t0, __tv1, __tv2,\
+    \ __tv3)\n# undefined rowptr(t0)rowptr[t0]\n# dense rowptr_1(t0, __tv1)\n# dense\
+    \ rowptr_2(t0, __tv2)rowptr +\n```\n\n```\nfor (int t2 = 0; t2 <= N-1; t2++) {\n\
+    \  for (int t4 = rowptr_1(t1,t2); t4 <= rowptr_2(t1,t2); t4++) {\n    col_t0(t1,t2,t3,t4);\n\
+    \    s0(0,0,t:2,t:4,t:6,t:0);\n  }\n}\n```\n\n```\n# undefined s0\n# undefined\
+    \ col(t0)\n# dense col_0(t0, __tv1, __tv2, __tv3)\n# undefined rowptr(t0)\n# dense\
+    \ rowptr_1(t0, __tv1)\n# dense rowptr_2(t0, __tv2)\n```\n\nFig. 5: SPMV dense\n\
+    \n```\n// Stmt ds0 = new Stmt(0);\n*Si(i,j) = C * i + N * rowptr(i) <= j (rowptr(i)\
+    \ <= j < rowptr(i+1) && j < M)\nfor ([i,j] = {0,0}; i,j < {N,M}; i,j++) {\n  for\
+    \ ([y,x] = {[i,j]-1}; [y,x] >= {0,0}; y,x--) {\n    *Sy(y,x) = Si([i,j]-1]);\n\
+    \    *Ay(y,x) = Aj([i,j]-1]);\n    *Mx(y,x) = Sj([i,j]-1]);\n    }\n  }\n}\nn\n\
+    spspComp->addStmt(ds0);\n```\n\n# The forward solve example\n\n```\nfor (int i\
+    \ = 0; i < N; i++) {\n  S0: tmp(i) = f(i);\n  for (int j = 0; j < i; j++) {\n\
+    \    S1: tmp(i) -= A(i,j) * u(j);\n  }\n  S2: u(i) = tmp(i)/A(i,i);\n}\n```\n\n\
+    Fig. 6: Forward Solve\n\nFig. 4: Computation API for dense and sparse matrix vector\n\
+    \nFigure 7 shows the extended PDFG. From the data node i to the j-loop. The incoming\
+    \ edge from the statement node S1 shows read access from statement node S2 to\
+    \ the data node u and shows the write access in the i-loop. This loop carried\
+    \ dependency over i.\n\nloop nest i has statements at multiple levels as shown\
+    \ in Figure 6.\n\n# A. Loop Dependencies\n\nThe existing representation is not\
+    \ capable of visualizing the loop carried dependency. Figure 8 shows the PDFG\
+    \ for the forward solve example. In the example, the code shows a loop carried\
+    \ dependency for the data space u in statements S1 and S2. However, the original\
+    \ PDFG in figure 8 does not visualize the loop carried dependency\n\n# B. Imperfect\
+    \ loop nest\n\nThe forward solve example also exhibits an imperfect loop nest\
+    \ pattern: statements S0 and S2 are in the outer-loop while statement S1 is in\
+    \ the inner j loop. The original PDFG in figure 8 does not exhibit this pattern.\
+    \ The updated design in the extended PDFG in Figure 7 visualizes the imperfect\
+    \ loop pattern."
+  - '[PAGE 4]
+
+
+    ![](img/b0ca35141f95bc94154f92e4981fe911_4_0.png)
+
+
+    ![](img/b0ca35141f95bc94154f92e4981fe911_4_1.png)
+
+
+    # ### C. Dot File Graph
+
+
+    The computation API used to generate the extended PDFG as a directed graph. Loop
+    nests are expressed using a modified version of polyhedral scheduling. Polly is
+    a top down recursive algorithm for generating code for set of iteration statements.
+    Our modified version of polyhedral uses the same approach but generates nodes
+    of polyhedral graph and generates clusters for statements within the same loop.
+
+
+    # ### IV. OPERATIONS ON COMPUTATIONS
+
+
+    Computations are composed of IEGen Sets and relations. IEGEN''s functionality
+    is used to directly manage the Computations'' components. The core operations
+    performed in IEGenLib include inversion, compose, and related supporting functions.
+    Using these operations we are able to perform inlining and loop transformations
+    within the Computation class.
+
+
+    # ### A. Inlining
+
+
+    Inlining handles the complexity of creating the SPF representation of functions
+    that can call others.
+
+
+    Computations in inline to be reusable in the same way that functions are reusable.
+
+
+    Each function in the original source code is represented as a Computation. When
+    a function call is first encountered in the source, a Computation is created and
+    inserted (inline) the contents of Computation are inlined. If the same function
+    is called multiple times, the Computation that has been generated for it will
+    be reused. The inlining process can continue to any nesting depth, if the function
+    call also calls functions.
+
+
+    The inlining is responsible for:
+
+
+    +   - avoiding naming conflicts between the caller and callee
+
+    - generating assignment statements for function parameters
+
+    - providing call return values to the caller and updating iteration counts, execution
+    schedules and dependencies in the inlined statements.
+
+
+    Before inlining, the data spaces and integers in the callee are prefixed with
+    a unique string to avoid collisions with the other data spaces, or with others
+    within the same scope. The change is reflected in the stored source code of the
+    statement, as well as other parts of inlining represent those names.
+
+
+    To keep things simple, the values and arguments to an inlined function are restricted
+    to either data spaces or integers. To a more complex expression into an inline,
+    it must first be assigned to an argument variable which can be passed. To preserve
+    the calling semantics of the program, when arguments are presented to a function,
+    statements are generated to declare each of parameters equal to the value passed.
+    No equivalent occurs with return values, because they could potentially be used
+    in a large variety of contexts (nested to multiple or ignored entirely). Therefore,
+    the inlining process returns the values that are returned by the inlined function,
+    as strings, to be used by the caller uses'
+- md: '
+
+    fit. Iteration domains, execution schedules, and data access relations are updated
+    to reflect the surrounding context statements have been inserted into. If a function
+    is called within a loop, a loop of the callee also contains a fuse operation,
+    the innermost statements are adjusted to reflect that they are now nested beneath
+    loops.
+
+
+    scheduling specification, thereby allowing optimization engineers to write different
+    schedules for optimum performance. Their work uses autotuning to generate efficient
+    code by performing a stochastic search to find good schedules for the algorithm.
+
+
+    ## B. Loop Transformations as Graph Operations
+
+
+    In this work, we model fuse and reschedule operations on the graphs. The graph
+    translates transformations performed by our interface API to manage the SPF components.
+
+
+    - 1. Fusion: This is a transformation that joins statements from loops into a
+    single loop. There are many categories of fusion, including reduction fusion and
+    producer-consumer fusion. Reduction fusion fuses loops that read from the same
+    memory location before consumer fusion merges loops where one variable is read
+    by the second loop.
+
+
+    Graph operation for fusing statements together at a particular level of the graph
+    is denoted as fuse(S1,S2). In our IR, S1 and S2 are the statements to be fused
+    and fuse indicates the depth to fuse to. Fusion allows for more flexibility in
+    a fusion operation. After fusion, S2 will be immediately after S1.
+
+
+    - 2. Reschedule: The reschedule operation involves moving a statement to a new
+    location in the graph and changing its execution schedule. Reschedule by is not
+    optimal, but it exposes opportunities. The reschedule operation is denoted as
+    reschedule(S1,S2) in our IR. This will call statement S1 to be rescheduled before
+    S2.
+
+
+    Plato [9] is a fully automatic source transformation tool that optimizes for parallelism
+    and locality. Pluto uses linear programming to determine optimal code using parallelism
+    and locality as part of its cost functions. Loop, is a tool that allows the programmer
+    to describe transformation at high level and verify the correctness. Loop is implemented
+    in LLVM. isL [13] is a tool for mapping sets and relations in the polyhedral model.
+    This tool forms the basis for transformations used in all the tools discussed
+    in this paper [12], [9], [101].
+
+
+    ## B. Program Dependence Graphs
+
+
+    PDFGs are based on a line of research by Ferrante, [14], with work on program
+    dependence graphs. Polyhedral optimizations are performed in the work Data Flow
+    Representations (DFGR) [16]. Our work is closely related to this, but polyhedral
+    graphs are views of the polyhedral representation rather than a separation.
+
+
+    ## C. Polyhedral Model Tools
+
+
+    This work takes a slightly different approach than CHILL [18]. In CHILL the performer
+    writes a representation derived from the code. The script can include several
+    operations or are the compilation of abstract syntax and polyhedral transformations.
+    Our work provides
+
+
+    Our work differs from other work using the polyhedral model because of its lack
+    of support for irregular applications. We present views of the Omega [1], [6],
+    and polyhedral framework [7]. This interface provides a mechanism to optimize
+    applications using the polyhedral framework and generate fully code incrementally
+    within a scientific application. The structure of the Computation API lays groundwork
+    for mapping data spaces, including memory layout in the future.
+
+
+    This work presents an object API to serve the polyhedral library. The API provides
+    a standard interface to fully specify a computation in the Polyhedral framework
+    from a single entry point. The entry point is built by integration with IGenLib,
+    CodeGen, and others. PDGs have been explored for affine loop bounds, inner loop
+    nests, and nest dependencies. The API does not currently support exits, where
+    loops are bounded within the loop nests, and loops without bounds such as while.
+    In the future we explore techniques such as those from [19] to overcome limitations
+    of unbounded loops and predicates.
+
+
+    ## VI. CONCLUSION
+
+
+    ## A. Polyhedral Model Tools
+
+
+    Tools such as Pluto [9], Loopy [10], Polyage [11] use the polyhedral model to
+    transform legacy code. Poly automatically detects and transforms input code sections
+    in the LLVM IR, breaking the limitations of most tools limited to a single source
+    language. Polyage is a polyhedral library that enables the generation of efficient
+    implementations of image processing pipelines. Halide [12] is another compiler
+    for generating code for image computing. Halide separates algorithm and
+
+
+    We provide support for combining Transformations through inlining. This increases
+    usability and reliability. The code generated by a compilation statement encompasses
+    statement mark and, when needed, variable declarations. This means that in the
+    future, memory layout choices for temporary storage can be made entirely within
+    the SPF.
+
+
+    Future tools will use this API to generate the SPF IR, manipulate it, and produce
+    optimized code from legacy applications and high-level or domain specific languages.
+    Additionally, this API will be used when iteratively a computation; the PDFG will
+    be displayed at every step to guide the performance experts.
+
+
+    ## REFERENCES
+
+
+    - [1] Chun Chen, Polyhedral reclaiming. Proceedings of the ACM PLAN Conference
+    on Programming Language Design and Implantation (PLDI), pages 489–496, 2020.
+
+    - [2] Pugh W E Steen, M T Duncan Kelly, D W Mueller, Y S, The Omega library interface.
+    University of Maryland at College Park, 2002.
+
+    - [3] Michelle Strout, Georg Goer, and Catherine Olschaninek. We and relaxation
+    mapping for the polyhedral framework. Lecture Notes in Computer Science (including
+    Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics),
+    7760 LNCS:6-71–75, 2012.
+
+    - [4] Eddie Davis, Michelle Strout, and Catherine Olschaninek. Transforming loops
+    via chain algorithms for Code Generation and Optimization, CGO 2018, page 26527,
+    New York, USA, 2018.
+
+    - [5] Mohammad Asif, Jaweek Shin, Chun Chen, Gabe Raby, and Miltika Khan. Loop
+    transformations for code generation and autotuning. In Proceedings of the Languages
+    and Parallel Computation (UAPC), 2009.
+
+    - [6] Nicholas Mitchell, Larry Carter, and Jeanne Ferrante. Localizing affine
+    arrays. In Proceedings of the International Conference on Program Languages and
+    Compilation Techniques (PACT), pages 192–202, Los Alamitos, CA, 2009. IEEE Computer
+    Society.
+
+    - [7] Michelle Strout, Alan LaMielle, Larry Carter, Jeanne Ferrante, Barbara Kreauss,
+    and Catherine Olschaninek. An approach for code generation in the polyhedral framework.
+    Parall. Comp., 53(4): 533–543, 2010.
+
+    - [8] Tobias Hoober, Gregor Zheng, Alexei Andrew, Sunshine, and Louis-Noah Pouchet.
+    Polyhedral optimization. In Proceedings of the First International Workshop on
+    Polyhedral Compilation Techniques (IMPACT ’11), page 11, 2011.
+
+    - [9] Justin Li, J. Ramakrishnan, and P. Stachel: FLOPS: A Practical and Fully
+    Automatic Polyhedral Optimization. 27th ACM SIGPLAN Conference on Programming
+    Languages and Implementation, pages 1–5, 2008.
+
+    - [10] Kadar S, Nitish Singh. Polyhedral optimization and verified loop transformations.
+    Lecture Notes in Computer Science, 9837 LNCS(July):383–402, 2016.
+
+    - [11] Ravi Teja Majumder, Vinay Vashta, and Ajay D. Polyhedral model is more
+    scalable than C. ACM, 61(3):928–935, mar 2018.
+
+    - [12] Jonathan Kahan-Kelly, David Adams, Sylvain Prady, Cornely Byrne, and Saran
+    Amar. Halle: A Language for Optimizing Parallel Programs, Localization, and Image
+    Processing Pipelines. Proceedings of the 34th ACM SIGPLAN-Programming Language
+    Design and Implementation, pages 519–530, 2013.
+
+    - [13] Sven Verdenold: An integer library for the polyhedral model. In Kotji Jans,
+    Jan der Heves, Michael Polishuk, and Tobias Takayama, editors. Lecture Notes in
+    Computer Science, pages 299–302. Spring, 2015.
+
+    - [14] Jean-Philippe Robert and I. Weinstein, and Doe J Warren. The program dependence
+    graph and use in optimization. ACM Transactions on Programming Languages and Systems,
+    9(3):719–787, July 1987.
+
+    - [15] Alina Schwenner, Louis-Noah Pouchet, and Vivek Sarkar. DEGFR in Intermediate
+    Graph Representation for Data-Flow Optimization. In Extreme Scale Computing, pages
+    38–45, Edinburgh, Scotland, Canada, 2014.
+
+    - [16] Tai Ren, John Johnston, and Mary Jane Li: A framework for high-level loop
+    transformations. Technical Report-UCS 88-987, University of California, Berkeley,
+    June 1997.
+
+    - [17] Mohamed-Ben Abdrahim, Louis-Noah Pouchet, Albert Chen, and Catherine Olschaninek.
+    The polyhedral model is more scalable than C. In Constructor Languages, LNCS 6011,
+    Berlin, Berlin, 2010.
+
+    '
+  mdcn: '
+
+    适配。迭代域、执行调度和数据访问关系已更新，以反映插入其周围的上下文语句。如果函数在循环内部被调用，且调用者的循环也包含一个融合操作，则最内层的语句将被调整，以反映它们现在嵌套在循环之下。
+
+
+    调度规范，从而允许优化工程师编写不同的调度方案以获得最佳性能。他们的工作使用自动调优，通过执行随机搜索为算法寻找良好的调度来生成高效代码。
+
+
+    ## B. 作为图操作的循环变换
+
+
+    在这项工作中，我们对图建模了融合（fuse）和重调度（reschedule）操作。图翻译了接口 API 管理 SPF 组件所执行的变换。
+
+
+    - 1. 融合（Fusion）：这是一种将循环中的语句合并到单个循环的变换。融合有许多类别，包括归约融合和生产者-消费者融合。归约融合合并从同一内存位置读取的循环，而生产者-消费者融合合并一个变量被第二个循环读取的循环。
+
+
+    在图的特定层上融合语句的图操作表示为 `fuse(S1,S2)`。在我们的 IR 中，S1 和 S2 是要融合的语句，`fuse` 表示融合的深度。融合允许融合操作具有更大的灵活性。融合后，S2
+    将紧随在 S1 之后。
+
+
+    - 2. 重调度（Reschedule）：重调度操作涉及将语句移动到图中的新位置并改变其执行调度。`reschedule` 并不是最优的，但它暴露了机会。重调度操作在我们的
+    IR 中表示为 `reschedule(S1,S2)`。这将调用语句 S1 在 S2 之前进行重调度。
+
+
+    Plato [9] 是一种全自动的源码转换工具，可针对并行性和局部性进行优化。Pluto 使用线性规划，将并行性和局部性作为其成本函数的一部分来确定最优代码。Loop
+    是一个允许程序员在高层描述变换并验证其正确性的工具。Loop 实现在 LLVM 中。`isL` [13] 是一个用于在多面体模型中映射集合和关系的工具。该工具是本文中讨论的所有工具
+    [12], [9], [101] 中用到的变换的基础。
+
+
+    ## B. 程序依赖图
+
+
+    程序依赖图（PDGs）基于 Ferrante [14] 关于程序依赖图的研究工作。多面体优化在数据流表示（DFGR） [16] 中执行。我们的工作与此密切相关，但多面体图是多面体表示的视图而非分离。
+
+
+    ## C. 多面体模型工具
+
+
+    这项工作采取的方法与 CHILL [18]略有不同。在 CHILL 中，执行者编写从代码派生出的表示。脚本可以包括若干操作，或者是抽象语法和多面体变换的编译。我们的工作提供了
+
+
+    我们的工作与其它使用多面体模型的工作不同，因为其缺乏对不规则应用程序的支持。我们展示了 Omega [1], [6] 和多面体框架 [7] 的视图。该接口提供了一种利用多面体框架优化应用程序并在科学应用中增量地生成完整代码的机制。计算
+    API 的结构为未来映射数据空间（包括内存布局）奠定了基础。
+
+
+    这项工作提供了一个对象 API 来为多面体库服务。该 API 提供了一个标准接口，从单个入口点完全指定多面体框架中的计算。该入口点通过与 IGenLib、CodeGen
+    等集成构建构建。PDGs 已经针对仿射循环边界、内层循环嵌套和嵌套依赖进行了探索。目前 API 不支持退出（即循环被限制在循环嵌套内部）以及如 while
+    等这样无边界的循环。未来我们将探索诸如 [19] 中的技术来克服无界循环和谓词的局限性。
+
+
+    ## VI. 结论
+
+
+    ## A. 多面体模型工具
+
+
+    工具如 Pluto [9], Loopy [10], Polyage [11] 使用多面体模型变换旧代码。Poly 自动检测并变换 LLVM IR 中的输入代码部分，打破了大多数局限于单一源语言工具的限制。Polyage
+    是一个多面体库，能够生成图像处理管道的高效实现。Halide [12] 是另一个用于生成图像代码的编译器。Halide 分离了算法和
+
+
+    我们通过内联（inlining）提供了组合变换的支持。这增加了可用性和可靠性。由编译语句生成的代码包含了语句标记，并在需要时包含变量声明。这意味着在未来，临时存储的内存布局选择完全可以在
+    SPF 内部完成。
+
+
+    未来的工具将使用此 API 生成 SPF IR，对其进行操作，并从旧应用程序以及高层或领域特定语言生成优化代码。此外，此 API 将在迭代计算时被使用；每一步都会显示
+    PDFG 以指导性能专家。
+
+
+    ## 参考文献
+
+
+    - [1] Chun Chen, Polyhedral reclaiming. Proceedings of the ACM PLAN Conference
+    on Programming Language Design and Implantation (PLDI), pages 489–496, 2020.
+
+    - [2] Pugh W E Steen, M T Duncan Kelly, D W Mueller, Y S, The Omega library interface.
+    University of Maryland at College Park, 2002.
+
+    - [3] Michelle Strout, Georg Goer, and Catherine Olschaninek. We and relaxation
+    mapping for the polyhedral framework. Lecture Notes in Computer Science (including
+    Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics),
+    7760 LNCS:6-71–75, 2012.
+
+    - [4] Eddie Davis, Michelle Strout, and Catherine Olschaninek. Transforming loops
+    via chain algorithms for Code Generation and Optimization, CGO 2018, page 26527,
+    New York, USA, 2018.
+
+    - [5] Mohammad Asif, Jaweek Shin, Chun Chen, Gabe Raby, and Miltika Khan. Loop
+    transformations for code generation and autotuning. In Proceedings of the Languages
+    and Parallel Computation (UAPC), 2009.
+
+    - [6] Nicholas Mitchell, Larry Carter, and Jeanne Ferrante. Localizing affine
+    arrays. In Proceedings of the International Conference on Program Languages and
+    Compilation Techniques (PACT), pages 192–202, Los Alamitos, CA, 2009. IEEE Computer
+    Society.
+
+    - [7] Michelle Strout, Alan LaMielle, Larry Carter, Jeanne Ferrante, Barbara Kreauss,
+    and Catherine Olschaninek. An approach for code generation in the polyhedral framework.
+    Parall. Comp., 53(4):533–543, 2010.
+
+    - [8] Tobias Hoober, Gregor Zheng, Alexei Andrew, Sunshine, and Louis-Noah Pouchet.
+    Polyhedral optimization. In Proceedings of the First International Workshop on
+    Polyhedral Compilation (IMPACT ’11), page 11, 2011.
+
+    - [9] Justin Li, J. Ramakrishnan, and P. Stachel: FLOPS: A Practical and Fully
+    Automatic Polyhedral Optimization. 27th ACM SIGPLAN-Programming Language and Implementation,
+    pages 1–5, 2008.
+
+    - [10] Kadar S, Nitish Singh. Polyhedral optimization and verified loop transformations.
+    Lecture Notes in Computer Science, 9837 LNCS(July):383–402, 2016.
+
+    - [11] Ravi Teja Majumder, Vinay Vashta, and Ajay D. Polyhedral model is more
+    scalable than C. ACM, 61(3):928–935, mar 2018.
+
+    - [12] Jonathan Kahan-Kelly, David Adams, Sylvain Prady, Cornely Byrne, and Saran
+    Amar. Halle: A Language for Optimizing Parallel Programs, Localization, and Image
+    Processing. Proceedings of the 34th ACM SIGPLAN-Programming Language Design and
+    Implementation, pages 519–530, 2013.
+
+    - [13] Sven Verdenold: An integer library for the polyhedral model. In Kotji Jans,
+    Jan der Heves, Michael Polishuk, and Tobias Takayama, editors. Lecture Notes in
+    Computer Science, pages 299–302. Spring, 2015.
+
+    - [14] Jean-Philippe Robert and I. Weinstein, and Doe J Warren. The program dependence
+    graph and use in optimization. ACM Transactions on Programming Languages and Systems,
+    9(3):719–787, July 1987.
+
+    - [15] Alina Schwenner, Louis-Noah Pouchet, and Vivek Sarkar. DEGFR in Intermediate
+    Graph Representation for Data-Flow Optimization. In Extreme Scale Computing, pages
+    38–45, Edinburgh, Scotland, Canada, 2014.
+
+    - [16] Tai Ren, John Johnston, and Mary Jane Li: A framework for high-level loop
+    transformations. Technical Report-UCS 88-987, University of California, Berkeley,
+    June 1997.
+
+    - [17] Mohamed-Ben Abdrahim, Louis-Noah Pouchet, Albert Chen, and Catherine Olschaninek.
+    The polyhedral model is more scalable than C. In Constructor Languages, LNCS 6011,
+    Berlin, Berlin, 2010.
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 5]
+
+
+    fit. Iteration domains, execution schedules, and data access relations are updated
+    to reflect the surrounding context statements have been inserted into. If a function
+    is called within a loop, a loop of the callee also contains a fuse operation,
+    the innermost statements are adjusted to reflect that they are now nested beneath
+    loops.
+
+
+    scheduling specification, thereby allowing optimization engineers to write different
+    schedules for optimum performance. Their work uses autotuning to generate efficient
+    code by performing a stochastic search to find good schedules for the algorithm.
+
+
+    # B. Loop Transformations as Graph Operations
+
+
+    In this work, we model fuse and reschedule operations on the graphs. The graph
+    translates transformations performed by our interface API to manage the SPF components.
+
+
+    +   1. Fusion: This is a transformation that joins statements from loops into
+    a single loop. There are many categories of fusion, including reduction fusion
+    and producer-consumer fusion. Reduction fusion fuses loops that read from the
+    same memory location before consumer fusion merges loops where one variable is
+    read by the second loop.
+
+
+    Graph operation for fusing statements together at a particular level of the graph
+    is denoted as fuse(S1,S2). In our IR, S1 and S2 are the statements to be fused
+    and fuse indicates the depth to fuse to. Fusion allows for more flexibility in
+    a fusion operation. After fusion, S2 will be immediately after S1.
+
+
+    +   2. Reschedule: The reschedule operation involves moving a statement to a new
+    location in the graph and changing its execution schedule. Reschedule by is not
+    optimal, but it exposes opportunities. The reschedule operation is denoted as
+    reschedule(S1,S2) in our IR. This will call statement S1 to be rescheduled before
+    S2.
+
+
+    Plato [9] is a fully automatic source transformation tool that optimizes for parallelism
+    and locality. Pluto uses linear programming to determine optimal code using parallelism
+    and locality as part of its cost functions. Loop, is a tool that allows the programmer
+    to describe transformation at high level and verify the correctness. Loop is implemented
+    in LLVM. isL [13] is a tool for mapping sets and relations in the polyhedral model.
+    This tool forms the basis for transformations used in all the tools discussed
+    in this paper [12], [9], [101].
+
+
+    # B. Program Dependence Graphs
+
+
+    PDFGs are based on a line of research by Ferrante, [14], with work on program
+    dependence graphs. Polyhedral optimizations are performed in the work Data Flow
+    Representations (DFGR) [16]. Our work is closely related to this, but polyhedral
+    graphs are views of the polyhedral representation rather than a separation.
+
+
+    # C. Polyhedral Model Tools
+
+
+    This work takes a slightly different approach than CHILL [18]. In CHILL the performer
+    writes a representation derived from the code. The script can include several
+    operations or are the compilation of abstract syntax and polyhedral transformations.
+    Our work provides
+
+
+    Our work differs from other work using the polyhedral model because of its lack
+    of support for irregular applications. We present views of the Omega [1], [6],
+    and polyhedral framework [7]. This interface provides a mechanism to optimize
+    applications using the polyhedral framework and generate fully code incrementally
+    within a scientific application. The structure of the Computation API lays groundwork
+    for mapping data spaces, including memory layout in the future.
+
+
+    This work presents an object API to serve the polyhedral library. The API provides
+    a standard interface to fully specify a computation in the Polyhedral framework
+    from a single entry point. The entry point is built by integration with IGenLib,
+    CodeGen, and others. PDGs have been explored for affine loop bounds, inner loop
+    nests, and nest dependencies. The API does not currently support exits, where
+    loops are bounded within the loop nests, and loops without bounds such as while.
+    In the future we explore techniques such as those from [19] to overcome limitations
+    of unbounded loops and predicates.
+
+
+    # VI. CONCLUSION
+
+
+    # A. Polyhedral Model Tools
+
+
+    Tools such as Pluto [9], Loopy [10], Polyage [11] use the polyhedral model to
+    transform legacy code. Poly automatically detects and transforms input code sections
+    in the LLVM IR, breaking the limitations of most tools limited to a single source
+    language. Polyage is a polyhedral library that enables the generation of efficient
+    implementations of image processing pipelines. Halide [12] is another compiler
+    for generating code for image computing. Halide separates algorithm and
+
+
+    We provide support for combining Transformations through inlining. This increases
+    usability and reliability. The code generated by a compilation statement encompasses
+    statement mark and, when needed, variable declarations. This means that in'
+  - '[PAGE 6]
+
+
+    the future, memory layout choices for temporary storage can
+
+    made entirely within the SPF.
+
+
+    Future tools will use this API to generate the SPF IR, manip-
+
+    ulate it, and produce optimized code from legacy applications
+
+    and high-level or domain specific languages. Additionally-
+
+    tially, this API will be used when iteratively
+
+    a computation; the PDFG will be displayed at every step
+
+    to guide the performance experts.
+
+
+    # # REFERENCES
+
+
+    +   [1] Chun Chen, Polyhedral reclaiming. Proceedings of the ACM
+
+    PLAN Conference on Programming Language Design and Imple-
+
+    ton (PLDI), pages 489–496, 2020.
+
+
+    +   [2] Pugh W E Steen, M T Duncan Kelly, D W Mueller, Y S, The
+
+    Omega library interface. University of Maryland at College
+
+    Park, 2002.
+
+
+    +   [3] Michelle Strout, Georg Goer, and Catherine Olschaninek. We
+
+    and relaxation mapping for the polyhedral framework. Lecture
+
+    Notes in Computer Science (including Lecture Notes in Art-
+
+    tificial Intelligence and Lecture Notes in Bioinformatics), 7760 LNCS:6-
+
+    71–75, 2012.
+
+
+    +   [4] Eddie Davis, Michelle Strout, and Catherine Olschaninek.
+
+    Transforming loops via chain algorithms for Code Generation and Opt-
+
+    imization, CGO 2018, page 26527, New York, USA, 2018.
+
+    for Computing Machines.
+
+
+    +   [5] Mohammad Asif, Jaweek Shin, Chun Chen, Gabe Raby,
+
+    and Miltika Khan. Loop transformations for code gener-
+
+    an and autotuning. In Proceedings of the Languages and
+
+    Parallel Computation (UAPC), 2009.
+
+
+    +   [6] Nicholas Mitchell, Larry Carter, and Jeanne Ferrante. Localizing-
+
+    affine arrays. In Proceedings of the International Conference
+
+    on Program Languages and Compilation Techniques (PACT), pages
+
+    192–202, Los Alamitos, CA, 2009. IEEE Computer
+
+    Society.
+
+
+    +   [7] Michelle Strout, Alan LaMielle, Larry Carter, Jeanne Ferrante,
+
+    Barbara Kreauss, and Catherine Olschaninek. An approach for code
+
+    generation in the polyhedral framework. Parall. Comp., 53(4): 533–543, 2010.
+
+
+    +   [8] Tobias Hoober, Gregor Zheng, Alexei Andrew, Sunshine
+
+    , and Louis-Noah Pouchet. Polyhedral optim-
+
+    ization. In Proceedings of the First International Workshop on
+
+    Polyhedral Compilation Techniques (IMPACT ’11), page 11, 2011.
+
+
+    +   [9] Justin Li, J. Ramakrishnan, and P. Stachelhaus: FLOPS:
+
+    A Practical and Fully Automatic Polyhedral Program Optimization-
+
+    s. PLDI 2008–27th ACM SIGPLAN Conference on Programming
+
+    Languages and Implementation, pages 1–5, 2008.
+
+
+    +   [10] Kadar S Nomahi and Nitish Singh. Polyhedral optimization
+
+    and verified loop transformations. Lecture Notes in Computer
+
+    Science (Lecture Notes in Artificial Intelligence and
+
+    Lecture Notes in Bioinformatics), 9837 LNCS(July):383–402, 2016.
+
+
+    +   [11] Ravi Teja Majumder, Vinay Vashta, and Ajay D. Polyfaga.
+
+    ACM, 61(3):928–935, mar 2018.
+
+
+    +   [12] Jonathan Kahan-Kelly, David Adams, Sylvain Prady, Frederic Durand,
+
+    Cornely Byrne, and Saran Amarajeje. Halle: A Language for
+
+    Optimizing Parallel Programs, Localization, and Recommendation in
+
+    Image Processing Pipelines. Proceedings of the 34th ACM SIGPLAN-
+
+    Programming Language Design and Implementation, pages 519–530, 2013.
+
+
+    +   [13] Sven Verdenold: An integer library for the polyhedral model.
+
+    In Kotji Jans, Jan der Heves, Michael Polishuk, and Tobias
+
+    Takayama, editors. Lecture Notes in Computer Science, pages 299–302.
+
+    Spring, 2015.
+
+
+    +   [14] Jean-Philippe Robert and I. Weinstein, and Doe J Warren. The program
+
+    dependence graph and use in optimization. ACM Transactions on
+
+    Programming Languages and Systems, 9(3):719–787, July 1987).
+
+
+    +   [15] Alina Liu, Tobias Müller, Louis-Noah Pouchet, and Vivek Sarkar. Poly-
+
+    hedral optimizations for a data-flow graph language. In Xipheng Shen,
+
+    Frank Mueller, and James Tuck, editors. Languages and Compilers for
+
+    Parallel Computing, pages 57–72, Cham. 2016. Springer International
+
+
+    [16] Alina Schwenner, Louis-Noah Pouchet, and Vivek Sarkar. DEGFR in
+
+    Intermediate Graph Representation for Data-Flow Optimization. In
+
+    Extreme Scale Computing, pages 38–45, Edinburgh, Scotland, Canada. 2014.
+
+
+    +   [17] Tai Ren, John Johnston, and Mary Jane Li: A framework for
+
+    high-level loop transformations. Technical Report-UCS
+
+    88-987, University of California, Berkeley, June 1997.
+
+
+    +   [18] Mohamed-Ben Abdrahim, Louis-Noah Pouchet, Albert Chen,
+
+    and Catherine Olschaninek. The polyhedral model is more scalable
+
+    than C. In Constructor Languages, LNCS 6011, Berlin,
+
+    Berlin, 2010.'
+pages:
+- img_proc: true
+  md: '# # An Object-Oriented Interface to the Sparse Polyhedral Library
+
+
+    Tobi Popoola¹ Ravi Shankar² Anna Rift³ Shivani Singh⁴ Eddie C. Davis⁵
+
+    Michelle Mills Strout⁶ and Catherine Olechanowski⁷
+
+
+    Email: {tobipopoola¹|ravishankar²|shivanishingh⁴@u.boisestate.edu,catherineolechanowski@biosestate.edu}
+
+    ⁵Vulcan Inc., Seattle, USA
+
+    ⁶Department of Computer Science, Boise State University, Boise USA
+
+    ⁷mtros@cs.urtison.edu
+
+
+    **Abstract—** Many applications, including learning, molecular dynamics, and fluid
+    dynamics, use sparse data where non-affine loop bounds hinder the use of the polyhedral
+    model for code transformation. The Sparse Polyhedral Framework (SPF) addresses
+    limitations of polyhedral modeling by representing non-affine constraints in relations
+    and using functions. We contribute an API that wraps the SPF intermediate representation
+    (IR) and the Inspector/Executor Polyhedral Library and for preprocessing to result
+    in a well-specified definition of a full computation using the SPF.
+
+
+    are symbolic constructs that represent structures such as the index arrays in
+    sparse data. The SPF provides much of the functionality as traditional polyhedral
+    tools: code generation with CodeGen[1] built on Omega[2] and preset and set relations
+    in the presence of uninterpreted functions with EigenLib[3]. These tools are not
+    tightly integrated and have their own low-level APIs, making individual use difficult.
+
+
+    *Index Terms:* intermediate representation, sparse polyhedral framework, polyhedral
+    dataflow
+
+
+    The contribution of this work is the Computation API. This API provides a precise
+    specification of how to combine the individual functions of the SPF to create
+    an intermediate representation. It can directly produce Polyhedral Dataflow Graphs
+    (PDFGs)[4] and generate options for PDFs into relations used by EigenLib to perform
+    transformations. In this work, we extend the PDFG to handle non-affine loops with
+    imperfect nesting and carry dependencies.
+
+
+    # I. INTRODUCTION
+
+
+    Many applications including machine learning, molecular dynamics and computational
+    fluid dynamics use sparse data. To save memory, sparse data is compressed by storing
+    only the non-zero values. Arrays are used to map the non-zero value coordinates
+    to the dense space. These arrays are used in loop bounds while iterating the iteration
+    space. These non-affine loop bounds complicate the use of compiler transformation
+    for performance optimization.
+
+
+    Figure 1 shows an overview of our iteration process where the computation API
+    fits in the process. The highlighted region in the figure is the part that translates
+    transformations to our API, which is currently under development. In this work
+    we focus on mapping original source code to the computation API. The IR itself
+    supports transformations by virtue of the sparse polyhedral framework. Graph operations
+    on the PDFG generate transformations and are presented in the IR.
+
+
+    The polyhedral model is an effective optimization for applications with affine
+    loop bounds. Iterations are represented as sets and data dependencies using relations.
+    This combination of iteration space and data provides a partial ordering for the
+    target computation. Within the partial ordering, the order of execution can be
+    altered by applying relations to the iteration space. These relations are referred
+    to transformations. A limitation to the polyhedral model is that the constraints
+    within iteration spaces must be affine.
+
+
+    Our work addresses limitations of previous approaches through a tight integration
+    between CodeGen, Omega, and EigenLib. CHILL [5] provides a script interface for
+    the SPF and supports non-affine transformations using integration. Omega focuses
+    on the precision of operations involving uninterpreted functions, as well as restrictions
+    on how they are expressed. Our computation API depends on EigenLib[3] for set
+    and relation operations, which over the precision limitations.
+
+
+    The polyhedral framework extends the polyhedral model by supporting non-affine
+    iteration spaces and transformations using uninterpreted functions. Uninterpreted
+    functions
+
+
+    The contributions of this paper include:
+
+
+    +   • A unified interface to specify a computation in the SPF
+
+
+    +   • Integration with PDFGs'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: "+   - Extensions to PDFs to support non-affine loop bounds,\n- perfectly nested\
+    \ loops, and loop carried dependencies\n- Translations between PDFG operations\
+    \ and SPF relations\n- Integration between CodeGen and IGenLib\n- Support for\
+    \ inlining computations\n- Peripheral support for generated code\n\nAll statements\
+    \ have an iteration associated with them. This iteration domain contains every\
+    \ instance of the statement and has no particular order. It is typically expressed\
+    \ as the iterators that the statement runs over, subject to the constraints of\
+    \ their iteration (loop bounds). The following code shows how to create a statement\
+    \ using the Compilation API. A statement is written as a string and the names\
+    \ of the data are identified with $ symbols, such as $D and $S for dense and sparse\
+    \ respectively. The iteration domain is set using the IGenLib syntax, with the\
+    \ deallocation of all data with $S, with this deallocation on lines 3 and 6\n\n\
+    # II. COMPUTATION: A C++ Class\n\nThe interface to SPF is implemented as a C++\
+    \ class in IGenLib. The compilation class contains all of the information required\
+    \ to create a computation or computations. This includes: data spaces, statements,\
+    \ data dependencies, and execution schedules. This section describes the design\
+    \ and interface for each of these elements. Matrix multiplication is used as a\
+    \ running example throughout the rest of this paper. Figures 2 & 3 show the dense\
+    \ and sparse\n\n# A. Data Spaces\n\nA data space represents a collection of unique\
+    \ memory addresses. Each address is defined by a scalar choice of data space name\
+    \ and index. For example, $D(i)$, for each unique tuple $i$ there will be a unique\
+    \ location, and during the lifetime of $D$ its locations will not overlap with\
+    \ any other data space memory locations. By default all data spaces are dense.\
+    \ If we use sparse $S$, the data space can be written only once but read from\
+    \ any number of times. The exception to this rule is for accumulation operations\
+    \ when a single data location within a space can be written multiple times ($+\
+    \ = x, \\dots, max$).\n\nThe data space represented in the matrix vector multiplies\
+    \ $x$, $y$, and $z$. In the sparse version the attributes $row$ and $col$ are\
+    \ also considered data spaces. Even though they are used within the loop bounds\
+    \ and into another data space must be constant for the duration of this computation.\
+    \ Therefore, they are not required as part of the Computation's definition.\n\n\
+    ```\n// Stmt ds = new Stmt(\n  $($i=0; i < $S; i++) $S($i);\n  $($j=0; j < $N\
+    \ && j < $M); j)\n```\n\n```\n// Stmt ss = new Stmt(\n  $($i,k,j) <= i < $N &&\
+    \ rowptr(i) <= k < rowptr(i+1) && j < $M); j,k\n)\n```\n\nData dependencies exist\
+    \ between statements. They are encoded using relations between iteration domains\
+    \ and data vectors. Calculating a closure provides the dependency relations between\
+    \ statements and a partial ordering over them. In our running example the data\
+    \ results which can be written as follows:\n\n```\n// dense\nComputation* dsComp\
+    \ = new Computation();\nddsComp->addDataSpace($Y);\ndsComp->addDataSpace($X);\n\
+    dsComp->addDataSpace($Z);\n```\n\n```\n// sparse\n// reads\n$($i,k,j) -> [$($i);\n\
+    $($i,k,j) -> [$($k);\n$($i,k,j) -> [$($j);\n```\n\n```\n// writes\n$($i,k,j) ->\
+    \ [$($j);\n```\n\n# D. Execution Schedules\n\nExecution schedules are determined\
+    \ by scheduling functions that require to respect the data dependence relations.\
+    \ Scheduling functions take as input the iterators that apply to the current statement,\
+    \ and output it as an integer tuple that may be lexicographically ordered with\
+    \ others to determine the execution order of statements. Iterators are commonly\
+    \ used to represent the values of iterators affecting the order of the statement.\
+    \ For example, in the scheduling function\n\n# B. Statements\n\nStatements perform\
+    \ read and write operations on data spaces. We restrict the definition of statements\
+    \ to be blocks. There is a single and a single exit from each block of code."
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# Composable Transformations\n\n![](img/b0ca35141f95bc94154f92e4981fe911_2_0.png)\n\
+    \nFig. 1: Optimization Pipeline Overview\n\n# Dense matrix vector multiply\n\n\
+    ```\n```\nfor (int i = 0; i < N; i++) {\n  for (int j = 0; j < M; j++) {\n   \
+    \ y[i] += A[i][j] * x[j];\n  }\n}\n```\n```\n\nUninterpreted functions cannot\
+    \ have expressions as parameters. Code generation overcomes this by limiting uninterpreted\
+    \ functions in IEGenLib to Omega compliant, while storing a mapping of the uninterpreted\
+    \ function to its modified uninterpreted function. The separation of representations\
+    \ for transformations and code generation allows precise operations during transformations\
+    \ while still leveraging the flexibility of CodeGen+ for polyhedral scanning.\n\
+    \nFig. 2: Dense Matrix Vector Multiply\n\n# CSR matrix vector multiply\n\n```\n\
+    ```\nfor (int i = 0; i < N; i++) {\n  for (int k = rowptr[i]; k < rowptr[i+1];\
+    \ k++) {\n    int j = col[k];\n    y[i] += A[k] * x[j];\n  }\n}\n```\n```\n\n\
+    Figure 5 shows the code generation for the sparse matrix vector multiplication\
+    \ computation defined in Figure 4. Line 2 of Figure 5 defines a mapping for the\
+    \ statement i0; Lines 9-13 remap the Omega compliant uninterpreted function back\
+    \ to its original. Lines 15-20 are a direct result of polyhedral scanning from\
+    \ CodeGen+. The computation implementation provides all the supporting definitions\
+    \ for full functional code.\n\nFig. 3: CSR Matrix Vector Multiply\n\n{i, j} ->\
+    \ [0, i, j, 0}, the position of i before j signifies that the corresponding statement\
+    \ is within a loop over j, which is within a loop over i. In a lexicographical\
+    \ ordering, all instances of the statement with i = 1 will precede all instances\
+    \ with i = 2, regardless of the value of j.\n\n```\n```\n// 3rd parameter float\
+    \ to the Stmt counter /\n// dense\n// [[i,j]] -> [0, i, j, 0]\n// sparse\n// [[i,k,j]]\
+    \ -> [0, i, k, j, 0]\n```\n```\n\n# III. VISUAL COMPUTATION ON A GRAPH\n\nVisualizing\
+    \ the data flow gives experts a suitable view to reason about transformations\
+    \ for optimization opportunities. This deffs PDFG ensures regular computations\
+    \ using a combination of the polyhedral model and data graphs. The graphs represent\
+    \ each loop body, loop dependencies are not represented, and imperfect loops are\
+    \ not supported. This section describes how transformations are implemented, the\
+    \ creation of PDFGs using the SPIR IR is integrated with the Computation API.\
+    \ After a computation is constructed like the one in Figure 4 a function can output\
+    \ the PDFG as a file.\n\nFigure 4 shows the complete specification of two computation\
+    \ followed by sparse matrix vector multiply.\n\nIn the original order, rectangular\
+    \ boxes represent data space and inverted triangles represent statements. In the\
+    \ extended PDFG, rectangular boxes represent data space and rounded boxes represent\
+    \ statements. Edges represent reads and writes in both the original and extended\
+    \ PDFG. The extended PDFG does not currently represent the type and size of data\
+    \ spaces in a computation.\n\n# E. Code Generation\n\nThe computation interfaces\
+    \ with CodeGen+ for code generation. CodeGen uses sets and relations for polyhedral\
+    \ scanning. Omega uses sets and relations in the presence of uninterpreted functions.\
+    \ Uninterpreted functions are limited by the prefix rule. This rule states that\
+    \ an uninterpreted function must be a part of the declaration.\n\nLoop dependencies\
+    \ and imperfect loops are important when deciding which optimizations to apply.\
+    \ Loop carried dependencies refer to loop patterns where one iteration of a loop\
+    \ writes data by another iteration of the same loop. An imperfect"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# Full dense Specification\n\n```\n// dense mvm\nComputation += dsComp Computation();\n\
+    \n// add data spaces\ndsComp->addDataSpace(\"$ys\");\ndsComp->addDataSpace(\"\
+    $sas\");\ndsComp->addDataSpace(\"$xs\");\n\n// Stmt ds0 = Stmt(0);\n// source\
+    \ code\n*Si(i) = SAS(i,j) + Sxs(j);\n// iter domain\nfor (int i = 0; i < N &&\
+    \ j < M; j++) {\n  // scheduling function\n  for ([i,j] = {0,0}; i,j < {N,M};\
+    \ i,j++) {\n    for ([y,x] = {[i,j]-1}; [y,x] >= {0,0}; y,x--) {\n      *Sy(y,x)\
+    \ = Si([i,j]-1]);\n    }\n  }\n}\n\n// add data writes\nfor ([y,x] = {[i,j]-1};\
+    \ ...) {\n  \n}\ndsComp->addStmt(ds0);\n\n// sparse mvm\nspsComp = new Computation();\n\
+    \n// add data spaces\nsppsComp->addDataSpace(\"$ys\");\nsppsComp->addDataSpace(\"\
+    $sas\");\nsppsComp->addDataSpace(\"$xs\");\n```\n\n```\n# dense s0\n# dense s0(__x0,\
+    \ i, __x2, k, __x4, j, __k6)\n# (I + A) * k(j)\n```\n\n```\n# undefined col(t0)\n\
+    # dense col_0(t0, __tv1, __tv2, __tv3)\n# undefined rowptr_1(t0, __tv1)\n# dense\
+    \ rowptr_2(t0, __tv2)\n# dense col(t0)col[t0]\n# dense col_0(t0, __tv1, __tv2,\
+    \ __tv3)\n# undefined rowptr(t0)rowptr[t0]\n# dense rowptr_1(t0, __tv1)\n# dense\
+    \ rowptr_2(t0, __tv2)rowptr +\n```\n\n```\nfor (int t2 = 0; t2 <= N-1; t2++) {\n\
+    \  for (int t4 = rowptr_1(t1,t2); t4 <= rowptr_2(t1,t2); t4++) {\n    col_t0(t1,t2,t3,t4);\n\
+    \    s0(0,0,t:2,t:4,t:6,t:0);\n  }\n}\n```\n\n```\n# undefined s0\n# undefined\
+    \ col(t0)\n# dense col_0(t0, __tv1, __tv2, __tv3)\n# undefined rowptr(t0)\n# dense\
+    \ rowptr_1(t0, __tv1)\n# dense rowptr_2(t0, __tv2)\n```\n\nFig. 5: SPMV dense\n\
+    \n```\n// Stmt ds0 = new Stmt(0);\n*Si(i,j) = C * i + N * rowptr(i) <= j (rowptr(i)\
+    \ <= j < rowptr(i+1) && j < M)\nfor ([i,j] = {0,0}; i,j < {N,M}; i,j++) {\n  for\
+    \ ([y,x] = {[i,j]-1}; [y,x] >= {0,0}; y,x--) {\n    *Sy(y,x) = Si([i,j]-1]);\n\
+    \    *Ay(y,x) = Aj([i,j]-1]);\n    *Mx(y,x) = Sj([i,j]-1]);\n    }\n  }\n}\nn\n\
+    spspComp->addStmt(ds0);\n```\n\n# The forward solve example\n\n```\nfor (int i\
+    \ = 0; i < N; i++) {\n  S0: tmp(i) = f(i);\n  for (int j = 0; j < i; j++) {\n\
+    \    S1: tmp(i) -= A(i,j) * u(j);\n  }\n  S2: u(i) = tmp(i)/A(i,i);\n}\n```\n\n\
+    Fig. 6: Forward Solve\n\nFig. 4: Computation API for dense and sparse matrix vector\n\
+    \nFigure 7 shows the extended PDFG. From the data node i to the j-loop. The incoming\
+    \ edge from the statement node S1 shows read access from statement node S2 to\
+    \ the data node u and shows the write access in the i-loop. This loop carried\
+    \ dependency over i.\n\nloop nest i has statements at multiple levels as shown\
+    \ in Figure 6.\n\n# A. Loop Dependencies\n\nThe existing representation is not\
+    \ capable of visualizing the loop carried dependency. Figure 8 shows the PDFG\
+    \ for the forward solve example. In the example, the code shows a loop carried\
+    \ dependency for the data space u in statements S1 and S2. However, the original\
+    \ PDFG in figure 8 does not visualize the loop carried dependency\n\n# B. Imperfect\
+    \ loop nest\n\nThe forward solve example also exhibits an imperfect loop nest\
+    \ pattern: statements S0 and S2 are in the outer-loop while statement S1 is in\
+    \ the inner j loop. The original PDFG in figure 8 does not exhibit this pattern.\
+    \ The updated design in the extended PDFG in Figure 7 visualizes the imperfect\
+    \ loop pattern."
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '![](img/b0ca35141f95bc94154f92e4981fe911_4_0.png)
+
+
+    ![](img/b0ca35141f95bc94154f92e4981fe911_4_1.png)
+
+
+    # ### C. Dot File Graph
+
+
+    The computation API used to generate the extended PDFG as a directed graph. Loop
+    nests are expressed using a modified version of polyhedral scheduling. Polly is
+    a top down recursive algorithm for generating code for set of iteration statements.
+    Our modified version of polyhedral uses the same approach but generates nodes
+    of polyhedral graph and generates clusters for statements within the same loop.
+
+
+    # ### IV. OPERATIONS ON COMPUTATIONS
+
+
+    Computations are composed of IEGen Sets and relations. IEGEN''s functionality
+    is used to directly manage the Computations'' components. The core operations
+    performed in IEGenLib include inversion, compose, and related supporting functions.
+    Using these operations we are able to perform inlining and loop transformations
+    within the Computation class.
+
+
+    # ### A. Inlining
+
+
+    Inlining handles the complexity of creating the SPF representation of functions
+    that can call others.
+
+
+    Computations in inline to be reusable in the same way that functions are reusable.
+
+
+    Each function in the original source code is represented as a Computation. When
+    a function call is first encountered in the source, a Computation is created and
+    inserted (inline) the contents of Computation are inlined. If the same function
+    is called multiple times, the Computation that has been generated for it will
+    be reused. The inlining process can continue to any nesting depth, if the function
+    call also calls functions.
+
+
+    The inlining is responsible for:
+
+
+    +   - avoiding naming conflicts between the caller and callee
+
+    - generating assignment statements for function parameters
+
+    - providing call return values to the caller and updating iteration counts, execution
+    schedules and dependencies in the inlined statements.
+
+
+    Before inlining, the data spaces and integers in the callee are prefixed with
+    a unique string to avoid collisions with the other data spaces, or with others
+    within the same scope. The change is reflected in the stored source code of the
+    statement, as well as other parts of inlining represent those names.
+
+
+    To keep things simple, the values and arguments to an inlined function are restricted
+    to either data spaces or integers. To a more complex expression into an inline,
+    it must first be assigned to an argument variable which can be passed. To preserve
+    the calling semantics of the program, when arguments are presented to a function,
+    statements are generated to declare each of parameters equal to the value passed.
+    No equivalent occurs with return values, because they could potentially be used
+    in a large variety of contexts (nested to multiple or ignored entirely). Therefore,
+    the inlining process returns the values that are returned by the inlined function,
+    as strings, to be used by the caller uses'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'fit. Iteration domains, execution schedules, and data access relations are
+    updated to reflect the surrounding context statements have been inserted into.
+    If a function is called within a loop, a loop of the callee also contains a fuse
+    operation, the innermost statements are adjusted to reflect that they are now
+    nested beneath loops.
+
+
+    scheduling specification, thereby allowing optimization engineers to write different
+    schedules for optimum performance. Their work uses autotuning to generate efficient
+    code by performing a stochastic search to find good schedules for the algorithm.
+
+
+    # B. Loop Transformations as Graph Operations
+
+
+    In this work, we model fuse and reschedule operations on the graphs. The graph
+    translates transformations performed by our interface API to manage the SPF components.
+
+
+    +   1. Fusion: This is a transformation that joins statements from loops into
+    a single loop. There are many categories of fusion, including reduction fusion
+    and producer-consumer fusion. Reduction fusion fuses loops that read from the
+    same memory location before consumer fusion merges loops where one variable is
+    read by the second loop.
+
+
+    Graph operation for fusing statements together at a particular level of the graph
+    is denoted as fuse(S1,S2). In our IR, S1 and S2 are the statements to be fused
+    and fuse indicates the depth to fuse to. Fusion allows for more flexibility in
+    a fusion operation. After fusion, S2 will be immediately after S1.
+
+
+    +   2. Reschedule: The reschedule operation involves moving a statement to a new
+    location in the graph and changing its execution schedule. Reschedule by is not
+    optimal, but it exposes opportunities. The reschedule operation is denoted as
+    reschedule(S1,S2) in our IR. This will call statement S1 to be rescheduled before
+    S2.
+
+
+    Plato [9] is a fully automatic source transformation tool that optimizes for parallelism
+    and locality. Pluto uses linear programming to determine optimal code using parallelism
+    and locality as part of its cost functions. Loop, is a tool that allows the programmer
+    to describe transformation at high level and verify the correctness. Loop is implemented
+    in LLVM. isL [13] is a tool for mapping sets and relations in the polyhedral model.
+    This tool forms the basis for transformations used in all the tools discussed
+    in this paper [12], [9], [101].
+
+
+    # B. Program Dependence Graphs
+
+
+    PDFGs are based on a line of research by Ferrante, [14], with work on program
+    dependence graphs. Polyhedral optimizations are performed in the work Data Flow
+    Representations (DFGR) [16]. Our work is closely related to this, but polyhedral
+    graphs are views of the polyhedral representation rather than a separation.
+
+
+    # C. Polyhedral Model Tools
+
+
+    This work takes a slightly different approach than CHILL [18]. In CHILL the performer
+    writes a representation derived from the code. The script can include several
+    operations or are the compilation of abstract syntax and polyhedral transformations.
+    Our work provides
+
+
+    Our work differs from other work using the polyhedral model because of its lack
+    of support for irregular applications. We present views of the Omega [1], [6],
+    and polyhedral framework [7]. This interface provides a mechanism to optimize
+    applications using the polyhedral framework and generate fully code incrementally
+    within a scientific application. The structure of the Computation API lays groundwork
+    for mapping data spaces, including memory layout in the future.
+
+
+    This work presents an object API to serve the polyhedral library. The API provides
+    a standard interface to fully specify a computation in the Polyhedral framework
+    from a single entry point. The entry point is built by integration with IGenLib,
+    CodeGen, and others. PDGs have been explored for affine loop bounds, inner loop
+    nests, and nest dependencies. The API does not currently support exits, where
+    loops are bounded within the loop nests, and loops without bounds such as while.
+    In the future we explore techniques such as those from [19] to overcome limitations
+    of unbounded loops and predicates.
+
+
+    # VI. CONCLUSION
+
+
+    # A. Polyhedral Model Tools
+
+
+    Tools such as Pluto [9], Loopy [10], Polyage [11] use the polyhedral model to
+    transform legacy code. Poly automatically detects and transforms input code sections
+    in the LLVM IR, breaking the limitations of most tools limited to a single source
+    language. Polyage is a polyhedral library that enables the generation of efficient
+    implementations of image processing pipelines. Halide [12] is another compiler
+    for generating code for image computing. Halide separates algorithm and
+
+
+    We provide support for combining Transformations through inlining. This increases
+    usability and reliability. The code generated by a compilation statement encompasses
+    statement mark and, when needed, variable declarations. This means that in'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'the future, memory layout choices for temporary storage can
+
+    made entirely within the SPF.
+
+
+    Future tools will use this API to generate the SPF IR, manip-
+
+    ulate it, and produce optimized code from legacy applications
+
+    and high-level or domain specific languages. Additionally-
+
+    tially, this API will be used when iteratively
+
+    a computation; the PDFG will be displayed at every step
+
+    to guide the performance experts.
+
+
+    # # REFERENCES
+
+
+    +   [1] Chun Chen, Polyhedral reclaiming. Proceedings of the ACM
+
+    PLAN Conference on Programming Language Design and Imple-
+
+    ton (PLDI), pages 489–496, 2020.
+
+
+    +   [2] Pugh W E Steen, M T Duncan Kelly, D W Mueller, Y S, The
+
+    Omega library interface. University of Maryland at College
+
+    Park, 2002.
+
+
+    +   [3] Michelle Strout, Georg Goer, and Catherine Olschaninek. We
+
+    and relaxation mapping for the polyhedral framework. Lecture
+
+    Notes in Computer Science (including Lecture Notes in Art-
+
+    tificial Intelligence and Lecture Notes in Bioinformatics), 7760 LNCS:6-
+
+    71–75, 2012.
+
+
+    +   [4] Eddie Davis, Michelle Strout, and Catherine Olschaninek.
+
+    Transforming loops via chain algorithms for Code Generation and Opt-
+
+    imization, CGO 2018, page 26527, New York, USA, 2018.
+
+    for Computing Machines.
+
+
+    +   [5] Mohammad Asif, Jaweek Shin, Chun Chen, Gabe Raby,
+
+    and Miltika Khan. Loop transformations for code gener-
+
+    an and autotuning. In Proceedings of the Languages and
+
+    Parallel Computation (UAPC), 2009.
+
+
+    +   [6] Nicholas Mitchell, Larry Carter, and Jeanne Ferrante. Localizing-
+
+    affine arrays. In Proceedings of the International Conference
+
+    on Program Languages and Compilation Techniques (PACT), pages
+
+    192–202, Los Alamitos, CA, 2009. IEEE Computer
+
+    Society.
+
+
+    +   [7] Michelle Strout, Alan LaMielle, Larry Carter, Jeanne Ferrante,
+
+    Barbara Kreauss, and Catherine Olschaninek. An approach for code
+
+    generation in the polyhedral framework. Parall. Comp., 53(4): 533–543, 2010.
+
+
+    +   [8] Tobias Hoober, Gregor Zheng, Alexei Andrew, Sunshine
+
+    , and Louis-Noah Pouchet. Polyhedral optim-
+
+    ization. In Proceedings of the First International Workshop on
+
+    Polyhedral Compilation Techniques (IMPACT ’11), page 11, 2011.
+
+
+    +   [9] Justin Li, J. Ramakrishnan, and P. Stachelhaus: FLOPS:
+
+    A Practical and Fully Automatic Polyhedral Program Optimization-
+
+    s. PLDI 2008–27th ACM SIGPLAN Conference on Programming
+
+    Languages and Implementation, pages 1–5, 2008.
+
+
+    +   [10] Kadar S Nomahi and Nitish Singh. Polyhedral optimization
+
+    and verified loop transformations. Lecture Notes in Computer
+
+    Science (Lecture Notes in Artificial Intelligence and
+
+    Lecture Notes in Bioinformatics), 9837 LNCS(July):383–402, 2016.
+
+
+    +   [11] Ravi Teja Majumder, Vinay Vashta, and Ajay D. Polyfaga.
+
+    ACM, 61(3):928–935, mar 2018.
+
+
+    +   [12] Jonathan Kahan-Kelly, David Adams, Sylvain Prady, Frederic Durand,
+
+    Cornely Byrne, and Saran Amarajeje. Halle: A Language for
+
+    Optimizing Parallel Programs, Localization, and Recommendation in
+
+    Image Processing Pipelines. Proceedings of the 34th ACM SIGPLAN-
+
+    Programming Language Design and Implementation, pages 519–530, 2013.
+
+
+    +   [13] Sven Verdenold: An integer library for the polyhedral model.
+
+    In Kotji Jans, Jan der Heves, Michael Polishuk, and Tobias
+
+    Takayama, editors. Lecture Notes in Computer Science, pages 299–302.
+
+    Spring, 2015.
+
+
+    +   [14] Jean-Philippe Robert and I. Weinstein, and Doe J Warren. The program
+
+    dependence graph and use in optimization. ACM Transactions on
+
+    Programming Languages and Systems, 9(3):719–787, July 1987).
+
+
+    +   [15] Alina Liu, Tobias Müller, Louis-Noah Pouchet, and Vivek Sarkar. Poly-
+
+    hedral optimizations for a data-flow graph language. In Xipheng Shen,
+
+    Frank Mueller, and James Tuck, editors. Languages and Compilers for
+
+    Parallel Computing, pages 57–72, Cham. 2016. Springer International
+
+
+    [16] Alina Schwenner, Louis-Noah Pouchet, and Vivek Sarkar. DEGFR in
+
+    Intermediate Graph Representation for Data-Flow Optimization. In
+
+    Extreme Scale Computing, pages 38–45, Edinburgh, Scotland, Canada. 2014.
+
+
+    +   [17] Tai Ren, John Johnston, and Mary Jane Li: A framework for
+
+    high-level loop transformations. Technical Report-UCS
+
+    88-987, University of California, Berkeley, June 1997.
+
+
+    +   [18] Mohamed-Ben Abdrahim, Louis-Noah Pouchet, Albert Chen,
+
+    and Catherine Olschaninek. The polyhedral model is more scalable
+
+    than C. In Constructor Languages, LNCS 6011, Berlin,
+
+    Berlin, 2010.'
+  merge: -1
+  pgno: 6
+toc:
+- - '#'
+  - 稀疏多面体库面向对象接口
+- - '##'
+  - dense s0(x0, i2, k, x4, j)
+- - '##'
+  - (I + A) * k(j)
+- - '##'
+  - dense col_0(t0, tv1, tv2, tv3)
+- - '##'
+  - undefined rowptr_1(t0, tv1)
+- - '##'
+  - dense rowptr_2(t0, tv2)
+- - '##'
+  - dense col(t0)
+- - '##'
+  - dense col_0(t0, tv1, tv2, tv3)
+- - '##'
+  - undefined rowptr(t0)
+- - '##'
+  - dense rowptr_1(t0, tv1)
+- - '##'
+  - dense rowptr_2(t0, tv2)
+- - '##'
+  - undefined col(t0)
+- - '##'
+  - dense col_0(t0, tv1, tv2, tv3)
+- - '##'
+  - dense rowptr_1(t0, tv1)
+- - '##'
+  - dense rowptr_2(t0, tv2)
+- - '##'
+  - 前向求解示例
+- - '##'
+  - 参考文献
