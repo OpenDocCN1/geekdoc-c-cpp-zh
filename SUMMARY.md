@@ -104,6 +104,7 @@
 +   [App 帝国：赚钱、生活，并让技术为你工作](docs/app-empire-make-money-have-a-life-and-let-technology-work-fo/README.md)
 +   [App Kid：移民之子如何抓住美国梦](docs/app-kid-how-a-child-of-immigrants-grabbed-a-piece-of-the-ame/README.md)
 +   [应用程序管理员手册：软件安装、更新与故障排除](docs/application-administrators-handbook-installing-updating-and-/README.md)
++   [MATLAB 在科学与工程中的应用](docs/applications-of-matlab-in-science-and-engineering/README.md)
 +   [少老皆宜的 Arduino 入门指南](docs/arduino-for-kids-young-and-old/README.md)
 +   [ARM 微控制器编程：初学者 C/C++ ARM 编程指南](docs/arm-microcontrollers-programming-arm-programming-in-cc-for-b/README.md)
 +   [C++ 数组：精通 C++ 编程的第三步](docs/arrays-in-c-the-thrid-step-in-mastering-c-programming/README.md)
