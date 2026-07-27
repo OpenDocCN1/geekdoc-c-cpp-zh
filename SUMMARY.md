@@ -92,6 +92,7 @@
 +   [神奇的 App 开发者（数字世界！）](docs/amazing-app-developers-its-a-digital-world/README.md)
 +   [家居安与安全系统的集成方法](docs/an-integrated-approach-to-home-security-and-safety-systems/README.md)
 +   [家居安全与防护系统集成方法](docs/an-integrated-approach-to-home-security-and-safety-systems-1/README.md)
++   [C++ 入门指南：初学者完全指南](docs/an-introduction-to-c-a-complete-beginners-guide/README.md)
 +   [数据科学入门指南 第1版](docs/an-introduction-to-data-science-1st-edition/README.md)
 +   [稀疏多面体库面向对象接口](docs/an-object-oriented-interface-to-the-sparse-polyhedral-librar/README.md)
 +   [AngularJS 手册：易于 Web 应用开发](docs/angularjs-handbook-easy-web-app-development/README.md)
