@@ -58,6 +58,7 @@
 +   [C++ 游 (C++ 深度系列)](docs/a-tour-of-c-c-in-depth-series/README.md)
 +   [两个分裂的世界：为什么我们必须改变思维来改变未来](docs/a-world-in-two-minds-why-we-must-change-our-thinking-to-chan/README.md)
 +   [C# ADO.NET 数据访问技术](docs/adonet-data-access-technology-with-c-2023/README.md)
++   [C# ADO.NET 数据访问技术 (数据库管理大师系列)](docs/adonet-data-access-technology-with-c-mastering-database-mana/README.md)
 +   [高级 Mac OS X 编程：Big Nerd Ranch 指南](docs/advanced-mac-os-x-programming-the-big-nerd-ranch-guide-big-n/README.md)
 +   [密码学中的 DNA 计算进展](docs/advances-of-dna-computing-in-cryptography/README.md)
 +   [CafeOBJ 中证明分数的进展](docs/advances-of-proof-scores-in-cafeobj/README.md)
