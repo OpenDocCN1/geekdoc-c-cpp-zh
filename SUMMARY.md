@@ -79,6 +79,7 @@
 +   [算法：设计与分析 (De Gruyter 教科书)](docs/algorithms-design-and-analysis-de-gruyter-textbook/README.md)
 +   [算法入门指南](docs/algorithms-for-dummies-for-dummies-computers/README.md)
 +   [生物信息学算法：入门指南](docs/algorithms-in-bioinformatics-a-practical-introduction-chapma/README.md)
++   [神奇的 App 开发者（数字世界！）](docs/amazing-app-developers-its-a-digital-world/README.md)
 +   [家居安与安全系统的集成方法](docs/an-integrated-approach-to-home-security-and-safety-systems/README.md)
 +   [数据科学入门指南 第1版](docs/an-introduction-to-data-science-1st-edition/README.md)
 +   [AngularJS 手册：易于 Web 应用开发](docs/angularjs-handbook-easy-web-app-development/README.md)
