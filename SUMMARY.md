@@ -57,6 +57,7 @@
 +   [C++ 入门指南 (C++ 深度解析)](docs/a-tour-of-c-c-in-depth/README.md)
 +   [C++ 漫游 (C++ 深度解析)，第 3 版](docs/a-tour-of-c-c-in-depth-3rd-edition/README.md)
 +   [C++ 游 (C++ 深度系列)](docs/a-tour-of-c-c-in-depth-series/README.md)
++   [C++ 游之旅：C++ 深度系列](docs/a-tour-of-c-the-c-in-depth-series-tour-of-c-plus-plus/README.md)
 +   [Web编程入门指南：使用 PHP、HTML 和 MySQL 的核心算法、语法和控制结构，第三版](docs/a-web-based-introduction-to-programming-essential-algorithms/README.md)
 +   [两个分裂的世界：为什么我们必须改变思维来改变未来](docs/a-world-in-two-minds-why-we-must-change-our-thinking-to-chan/README.md)
 +   [C# ADO.NET 数据访问技术](docs/adonet-data-access-technology-with-c-2023/README.md)
