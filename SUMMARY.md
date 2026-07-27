@@ -99,6 +99,7 @@
 +   [ANSI C 编程：循序渐进学习 ANSI C](docs/ansi-c-programming-learn-ansi-c-step-by-step/README.md)
 +   [ANSI C 面向对象编程（前五章）](docs/ansic-oop/README.md)
 +   [C++ API 设计（第二版）](docs/api-design-for-c-second-edition/README.md)
++   [鲁昂教区教会及耶稣会轶事辩护（法语版）](docs/apologie-des-anecdotes-ecclésiastiques-iésuitiques-du-diocès/README.md)
 +   [App 帝国：赚钱、生活，并让技术为你工作](docs/app-empire-make-money-have-a-life-and-let-technology-work-fo/README.md)
 +   [App Kid：移民之子如何抓住美国梦](docs/app-kid-how-a-child-of-immigrants-grabbed-a-piece-of-the-ame/README.md)
 +   [应用程序管理员手册：软件安装、更新与故障排除](docs/application-administrators-handbook-installing-updating-and-/README.md)
