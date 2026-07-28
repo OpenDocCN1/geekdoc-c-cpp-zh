@@ -101,6 +101,7 @@
 +   [ANGULARJS：编程，初学者指南，快速学习编程！Angular JS 语言快速课程，快速启动指南，带实战项目的教程书，简单易上手！终极初学者指南！](docs/angularjs-programming-for-beginners-learn-coding-fast-angula/README.md)
 +   [ANSI C 编程：循序渐进学习 ANSI C](docs/ansi-c-programming-learn-ansi-c-step-by-step/README.md)
 +   [ANSI C 面向对象编程（前五章）](docs/ansic-oop/README.md)
++   [C Primer Plus 第 5 版编程练习答案](docs/answers-for-programming-exercises-in-c-primer-plus-5rd-editi/README.md)
 +   [C++ API 设计（第二版）](docs/api-design-for-c-second-edition/README.md)
 +   [鲁昂教区教会及耶稣会轶事辩护（法语版）](docs/apologie-des-anecdotes-ecclésiastiques-iésuitiques-du-diocès/README.md)
 +   [App 帝国：赚钱、生活，并让技术为你工作](docs/app-empire-make-money-have-a-life-and-let-technology-work-fo/README.md)
