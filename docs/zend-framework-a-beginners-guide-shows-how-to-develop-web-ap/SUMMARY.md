@@ -1,0 +1,2 @@
++   [Zend framework 初学者指南；展示了如何使用 PHP 和 Zend framework 开发 Web 应用；涵盖 XML、Ajax 和 Web 服务；包含分步项目和代码示例](README.md)
++   [Zend framework 初学者指南；展示了如何使用 PHP 和 Zend framework 开发 Web 应用；涵盖 XML、Ajax 和 Web 服务；包含分步项目和代码示例](zend-framework-a-beginners-guide-shows-how-to-develop-web-ap.md)
