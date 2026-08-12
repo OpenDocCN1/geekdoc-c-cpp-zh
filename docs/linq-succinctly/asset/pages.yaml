@@ -1,0 +1,3767 @@
+- img_proc: true
+  md: '![](img/ddd03c95c0e0aea3c64c904c312e545b_0_0.png)
+
+
+    # # LINQ
+
+
+    # ## Succinctly
+
+
+    by Jason Roberts'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# LINQ Succinctly
+
+
+    By
+
+    Jason Roberts
+
+
+    Foreword by Daniel Jebaraj
+
+
+    ![](img/ddd03c95c0e0aea3c64c904c312e545b_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   * The Story behind the Succinctly Series of Books................................................................
+    9
+
+
+    +   * About the Author.........................................................................................................
+    11
+
+
+    +   * Chapter 1 LINQ Fundamentals ................................................................................
+    12
+
+
+    +   * Why LINQ?...............................................................................................................
+    12
+
+
+    +   * The building blocks of LINQ..................................................................................
+    12
+
+
+    +   * Scalar return values and output sequences ................................................
+    13
+
+
+    +   * Deferred execution..................................................................................................
+    13
+
+
+    +   * Lambda expressions in query operators..................................................................
+    15
+
+
+    +   * Local and interpreted queries...............................................................................
+    16
+
+
+    +   * Chapter 2 Fluent and Query Expression Styles..............................................
+    18
+
+
+    +   * Fluent style..............................................................................................................
+    18
+
+
+    +   * Chained query operators.....................................................................................
+    18
+
+
+    +   * Query expression style......................................................................................
+    20
+
+
+    +   * Range variables....................................................................................................
+    22
+
+
+    +   * Other query expression syntax..................................................................
+    30
+
+
+    +   * Using the different styles.......................................................................
+    35
+
+
+    +   * Advantages of the different styles.......................................................
+    35
+
+
+    +   * Mixing the styles in a single query.........................................................
+    36
+
+
+    +   * Chapter 3 LINQ Query Operators ........................................................
+    37
+
+
+    +   * Restriction Operators..............................................................................
+    37
+
+
+    +   * Where.........................................................................................................
+    38
+
+
+    +   * Projection Operators...........................................................................
+    39'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   Select .......................................................................................................................................
+    39
+
+
+    +   SelectMany ................................................................................................................................
+    40
+
+
+    +   Partitioning Operators..............................................................................................................
+    42
+
+
+    +   Take .......................................................................................................................................
+    42
+
+
+    +   TakeWhile ..............................................................................................................................
+    43
+
+
+    +   Skip ......................................................................................................................................
+    45
+
+
+    +   SkipWhile ............................................................................................................................
+    46
+
+
+    +   Ordering Operators ................................................................................................................
+    47
+
+
+    +   OrderBy ...................................................................................................................
+    47
+
+
+    +   ThenBy ................................................................................................................
+    49
+
+
+    +   OrderByDescending..................................................................................................
+    50
+
+
+    +   ThenByDescending..................................................................................................
+    51
+
+
+    +   Reverse ...................................................................................................................
+    52
+
+
+    +   Grouping Operators ............................................................................................
+    53
+
+
+    +   GroupBy ................................................................................................................
+    53
+
+
+    +   Set Operators.......................................................................................................
+    54
+
+
+    +   Concat ...................................................................................................................
+    54
+
+
+    +   Union ...................................................................................................................
+    55
+
+
+    +   Distinct .............................................................................................................
+    56
+
+
+    +   Intersect ..................................................................................................
+    56
+
+
+    +   Except ...................................................................................................
+    57
+
+
+    +   Conversion Operators...............................................................................
+    58
+
+
+    +   OfType ................................................................................................
+    58
+
+
+    +   Cast ...................................................................................................
+    60
+
+
+    +   ToArray ............................................................................................
+    61
+
+
+    +   ToList ................................................................................................
+    61
+
+
+    +   ToDictionary...............................................................................................
+    61'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'ToLookup ................................................................................................................................................
+    63
+
+
+    Element Operators..................................................................................................................................
+    64
+
+
+    First..................................................................................................................................................................
+    64
+
+
+    FirstOrDefault.....................................................................................................................................
+    66
+
+
+    Last.................................................................................................................................................................
+    67
+
+
+    LastOrDefault...............................................................................................................................
+    67
+
+
+    Single..................................................................................................................................................
+    68
+
+
+    SingleOrDefault.........................................................................................................................
+    69
+
+
+    ElementAt.................................................................................................................................
+    71
+
+
+    ElementAtOrDefault............................................................................................................
+    71
+
+
+    DefaultIfEmpty...............................................................................................................
+    72
+
+
+    Generation Operators......................................................................................................
+    73
+
+
+    Empty.................................................................................................................................................
+    73
+
+
+    Range.................................................................................................................................................
+    75
+
+
+    Repeat.................................................................................................................................................
+    76
+
+
+    Quantifier Operators..................................................................................................
+    76
+
+
+    Contains........................................................................................................................................
+    76
+
+
+    Any.........................................................................................................................................................
+    78
+
+
+    All.....................................................................................................................................................
+    79
+
+
+    SequenceEqual...............................................................................................................
+    79
+
+
+    Aggregate Operators...............................................................................................
+    80
+
+
+    Count........................................................................................................................................
+    80
+
+
+    LongCount.........................................................................................................................
+    81
+
+
+    Sum.................................................................................................................................................
+    82
+
+
+    Average...............................................................................................................................
+    83
+
+
+    Min.................................................................................................................................................
+    84
+
+
+    Max.................................................................................................................................................
+    85'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   Aggregate .................................................................................................
+    85
+
+
+    +   Joining Operators......................................................................................
+    86
+
+
+    +   Join ...................................................................................................................
+    86
+
+
+    +   GroupJoin ..........................................................................................................
+    88
+
+
+    +   Zip ...................................................................................................................
+    90
+
+
+    # Chapter 4 LINQ to XML ................................................................................
+    92
+
+
+    +   X-DOM Overview ................................................................................
+    92
+
+
+    +   Key X-DOM types ...............................................................................
+    92
+
+
+    +   Creating an X-DOM ..........................................................................
+    93
+
+
+    +   Parsing Strings and Loading Files ................................................
+    93
+
+
+    +   Manual Procedural Creation .......................................................
+    94
+
+
+    +   Functional Construction ...................................................
+    95
+
+
+    +   Creation via Projection.......................................................................
+    95
+
+
+    +   Querying X-DOM with LINQ..................................................................
+    96
+
+
+    +   Finding Child Nodes...........................................................................
+    97
+
+
+    +   Finding Parent Nodes......................................................................
+    100
+
+
+    +   Finding Peer Nodes ............................................................
+    101
+
+
+    +   Finding Attributes ............................................................
+    102
+
+
+    # Chapter 5 Interpreted Queries .......................................................
+    104
+
+
+    +   Overview ..................................................................................
+    104
+
+
+    +   Expression trees ............................................................
+    104
+
+
+    +   Query providers ..............................................................
+    105
+
+
+    +   Entity Framework ............................................................
+    106
+
+
+    # Chapter 6 Parallel LINQ ...................................................
+    109
+
+
+    +   Overview ..........................................................................
+    109
+
+
+    +   Applying PLINQ ..............................................................
+    109'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Output element ordering ................................................................................
+    111
+
+
+    Potential PLINQ Problems..............................................................................
+    112
+
+
+    Mixing LINQ and PLINQ ................................................................................
+    113
+
+
+    # Chapter 7 LINQ Tools and Resources ............................................................
+    114'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Copyright © 2015 by Syncfusion Inc.
+
+    2501 Aerial Center Parkway
+
+    Suite 200
+
+    Morrisonville, NC 27560
+
+    USA
+
+    All rights reserved.
+
+
+    # Important licensing information. Please read.
+
+
+    This book is available for free download from http://www.syncfusion.com on completion
+    of a registration form.
+
+
+    If you obtained this book from any other source, please register and download
+    a free copy from http://www.syncfusion.com.
+
+
+    This book is licensed for reading only if obtained from http://www.syncfusion.com.
+
+
+    This book is licensed strictly for personal or educational use.
+
+
+    Redistribution in any form is prohibited.
+
+
+    The authors and copyright holders provide absolutely no warranty for any information
+    provided.
+
+
+    The authors and copyright holders shall not be liable for any claim, damages,
+    or any other liability arising from out of, or in connection with the information
+    in this book.
+
+
+    Please not use this book if the listed terms are unacceptable.
+
+
+    Use shall constitute acceptance of the terms listed.
+
+
+    SYNCFUSION, SUCCINCTLY, DELIVER INNOVATION WITH EASE, ESSENTIAL, and .NET ESSENTIALS
+    are the registered trademarks of Syncfusion, Inc.
+
+
+    **Technical Reviewer:** Stephen Haunts
+
+    **Copy Editor:** Courtney Wright
+
+    **Acquisitions Coordinator:** Hillary Bowling, marketing coordinator, Syncfusion,
+    Inc.
+
+    **Proofreader:** Darren West, content producer, Syncfusion, Inc.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # The Story behind the Succinctly Series of Books
+
+
+    Daniel Jebaraj, Vice PresidentnSyncfusion, Inc.
+
+
+    Stating on the cutting edge
+
+    As many of you know, Syncfusion is a provider of software components for the Microsoft
+    platform. This puts us in the exciting but challenging position of always being
+    on the cutting edge.
+
+
+    Whenever platforms or tools are shipping out of Microsoft, which seems to be about
+    every week these days, we have to educate ourselves, quickly.
+
+
+    # ## Information is plentiful but harder to digest
+
+
+    In reality, this translates into a lot of book orders, blog searches, and Twitter
+    scans.
+
+
+    While more information is becoming available on the Internet, and more books are
+    being published, even on topics that are relatively new, one aspect that continues
+    to inhibit us the inability to find concise technology books.
+
+
+    We are usually faced with two options: read several 500+ page books or scour the
+    web for relevant blog posts and other articles. Just like everyone else who has
+    a job to do and customers to serve, we find this quite frustrating.
+
+
+    # ## The Succinctly series
+
+
+    This frustration translated into a deep desire to produce a concise technical
+    books that would be targeted at developers working on the Microsoft platform.
+
+
+    We firmly believe, given the background knowledge such developers have, that most
+    topics can be translated into books that are between 50 and 100 pages.
+
+
+    This is exactly what we resolved to accomplish with the Succinctly series. Isn''t
+    everything wonderful out of a deep desire to change things for the better?
+
+
+    # ## The best authors, the best content
+
+
+    Each author was carefully chosen from a pool of talented experts who shared our
+    vision. The book you now hold in your hands, and the others available in this
+    series, are a result of the'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'authors’ tireless work. You will find original content that is guaranteed to
+    get you up and running in about the time it takes to drink a few cups of coffee.
+
+
+    # Free forever
+
+
+    Syncfusion will be working to produce books on several topics. The books will
+    always be free. Any updates we publish will also be free.
+
+
+    # Free? What is the catch?
+
+
+    There is no catch here. Syncfusion has a vested interest in this effort.
+
+
+    As a component vendor, our unique claim has always been that we offer deeper and
+    broader frameworks than anyone else on the market. Developer education greatly
+    helps us market and sell against competing vendors who promise to "enable AJAX
+    support with one click" or "turn the moon to cheese!
+
+
+    # Let us know what you think
+
+
+    If you have any topics of interest, thoughts, or feedback, please feel free to
+    send them to us at succinctly-series@syncfusion.com.
+
+
+    We sincerely hope you enjoy reading this book and that it helps you better understand
+    the topic of study. Thank you for reading.
+
+
+    Please follow us on Twitter and “Like” us on Facebook to help us spread the word
+    about the Succinctly series!
+
+
+    ![](img/ddd03c95c0e0aea3c64c904c312e545b_9_0.png)
+
+
+    ![](img/ddd03c95c0e0aea3c64c904c312e545b_9_1.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# About the Author
+
+
+    ![](img/ddd03c95c0e0aea3c64c904c312e545b_10_0.png)
+
+
+    Jason Roberts is a Microsoft C# MVP with over 13 years of commercial experience.
+    He is a writer, blogger, open source contributor, and Pluralsight course author,
+    and he holds a Bachelor of Science degree in computing.
+
+
+    You can find him on Twitter as @robertsjason and at his blog at http://dontcodetired.com/blog.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Chapter 1 LINQ Fundamentals
+
+
+    # Why LINQ?
+
+
+    At a high level, there are number of benefits that may be gained by using LINQ
+    (Language Integrated Query), including:
+
+
+    +   - Reduce the amount of code that needs writing.
+
+    - A better understanding of the intent of what the code is doing.
+
+    - Once learned, can use a similar set of LINQ query knowledge against different
+    data sources (in-memory objects, or remote sources such as SQL Server or even
+    Twitter).
+
+    - Queries can be composed together and built up in stages.
+
+    - Queries offer the safety of compile-time checking.
+
+
+    Essentially, LINQ enables queries to be treated as first-class citizens in C#
+    and Visual Basic.
+
+
+    # The building blocks of LINQ
+
+
+    The two fundamental building blocks of LINQ are the concepts of **elements** and
+    **sequences**.
+
+
+    A sequence can be thought of as a list of items, with each item in the being element.
+    A sequence is an instance of a class that implements the `IEnumerable<T>` interface.
+
+
+    If an array of numbers were declared as: `int[] fibonacci = {0, 1, 1, 2, 3, 5};`
+    the variable `fibonacci` represents a sequence with each `int` in the array being
+    an individual element.
+
+
+    A sequence could be a **local sequence** of in-memory objects or a **remote sequence**,
+    like a SQL Server database. In case of remote data sources (for example SQL Server),
+    remote sequences also implement the `IQueryable<T>` interface.
+
+
+    Queries, or more specifically **query operators**, work on an **input sequence**
+    and produce some output value. This output value could be a transformed version
+    of the input sequence, i.e. an **output sequence** or single scalar value such
+    as the count of elements in the input sequence.
+
+
+    Queries that run on local sequences are known as **local queries** or **LINQ-to-objects**
+    queries.
+
+
+    There are a whole host of query operators that are implemented as extension methods
+    in the static **System.Linq.Enumerable** class. This set of query operators are
+    known as the **standard query operators**. These query operators will be covered
+    in depth in the LINQ Query Operators chapter later in this book.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "One important thing to note when using query operators is that they do not\
+    \ alter the input sequence; rather, the query operator will return a new sequence\
+    \ (or a scalar value).\n\n# Scalar return values and output sequences\n\nA query\
+    \ operator returns an output sequence or a scalar value. In the following code,\
+    \ the input sequence fibonacci is operated by the Count query operator that produces\
+    \ a single scalar value representing the number of elements in the input sequence.\
+    \ The next sequence is operated by the Distinct query operator that produces a\
+    \ new output sequence containing the elements from the input sequence, with duplicate\
+    \ elements removed.\n\n```\nint[] fibonacci = { 0, 1, 1, 2, 3, 5 };\n// Scalar\
+    \ return value\nint numberOfElements = fibonacci.Count();\nConsole.WriteLine(\"\
+    Count: {0}\", numberOfElements);\n// Output sequence return value\nIEnumerable<int>\
+    \ distinctNumbers = fibonacci.Distinct();\nConsole.WriteLine(\"Elements in output\
+    \ sequence:\");\nforeach (var number in distinctNumbers)\n{\n    Console.WriteLine(number);\n\
+    }\n```\n\nThe output from this code produces the following:\n\nCount: 6\nElements\
+    \ in output sequence:\n0\n1\n2\n3\n5\n\n# Deferred execution\n\nThe majority of\
+    \ query operators do not execute immediately; their execution is deferred to a\
+    \ later time in the program execution. This means that the query does not execute\
+    \ when it is created, but when it is used or enumerated."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "Deferred execution means that the input sequence can be modified after the\
+    \ query is constructed, but before the query is executed. It is only when the\
+    \ query is executed that the input sequence is processed.\n\nIn the following\
+    \ code, the input sequence is modified after the query is constructed, but before\
+    \ it is executed.\n\n```\nint[] fibonacci = { 0, 1, 1, 2, 3, 5 };\n// Construct\
+    \ the query\nIEnumerable<int> numbersGreaterThanTwoQuery = fibonacci.Where(x =>\
+    \ x > 2);\n// At this point the query has still been created but not executed\n\
+    fibonacci[0] = 99;\n// Cause the query to be executed (enumerated)\nforeach (var\
+    \ number in numbersGreaterThanTwoQuery)\n{\n    Console.WriteLine(number);\n}\n\
+    ```\n\nThe query is not actually executed until the foreach is executed. The results\
+    \ of running this code are as follows:\n\n+   99\n3\n5\n\nNotice that the value\
+    \ 99 has been included in the results, even though at the time the query was constructed\
+    \ the first element was still the original value of 0.\n\nWith the exception of\
+    \ those that return a scalar value (or a single element from the input sequence)\
+    \ such as Count, Min, and Last, the standard query operators work in the deferred\
+    \ execution way. Using operators such as Count will cause the query to be executed\
+    \ immediately, and not deferred.\n\nThere are a number of conversion operators\
+    \ that also cause immediate query execution, such as ToList, ToArray, ToLookup,\
+    \ and ToDictionary."
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "In the following code, the fibonacci array is being modified in the preceding\
+    \ example code, but in this example, by the time the modification takes place\
+    \ (fibonacci[0] = 99), the query has already been executed before of the additional\
+    \ ToArray().\n\n```\nint[] fibonacci = { 0, 1, 1, 2, 3, 5 };\n\n// Construct the\
+    \ query\nIEnumerable<int> numbersGreaterThanTwoQuery = fibonacci.Where(x => x\
+    \ > 2)\n    .ToArray();\n\n// At this point the query has been executed because\
+    \ of the .ToArray();\n\n// Change the first element of the input sequence\nibonacci[0]\
+    \ = 99;\n\n// Enumerate the results\nforeach (var number in numbersGreaterThanTwoQuery)\n\
+    {\n    Console.WriteLine(number);\n}\n```\n\nThe results of running this code\
+    \ are\n\n3\n5\n\nNotice here the value 99 is no longer present because the input\
+    \ sequence is being modified after the query has executed.\n\n# Lambda expressions\
+    \ in query operators\n\nSome query operators allow custom logic to be supplied.\
+    \ This custom logic can be supplied to the query operator by way of a lambda expression.\n\
+    \nThe fibonacci.where(x => x > 2) code in the preceding code sample is an example\
+    \ of a query operator being supplied some custom logic. Here the lambda expression\
+    \ x => x > 2 will only return elements (ints in this case) that are greater than\
+    \ 2.\n\nWhen a query operator takes a lambda expression, it will apply the logic\
+    \ in the lambda expression to each individual element in the input sequence.\n\
+    \nThe type of lambda expression that is supplied to a query operator depends on\
+    \ what task the query operator is performing. In Figure 1, we can see the signature\
+    \ of the where query operator; here the element int is provided and a bool needs\
+    \ to be returned that determines of the element will be included in the output\
+    \ sequence."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# fibonacci.Where(x => x > 2)\n\n```\n.ToArr(this IEnumerable<int> source,\
+    \ Func<int,bool> predicate):IEnumerable<int>\nFilters a sequence of values based\
+    \ on a predicate.\npredicate: A function to test each element for a condition.\n\
+    (this IEnumerable<int> source, Func<int,bool> predicate):IEnumerable<int>\n```\n\
+    \nbecause of the .\n\nFigure 1: Visual Studio showing the signature of the Where\
+    \ operator\n\nAs an alternative to using a lambda expression, it is also possible\
+    \ to use a traditional delegate that points to a method.\n\n# Local and interpreted\
+    \ queries\n\nLINQ provides two distinct architectures: local and interpreted.\n\
+    \nLocal queries operate on IEnumerable<T> sequences and are compiled into the\
+    \ resulting assembly at compile time. Local queries, as the name suggests, can\
+    \ be thought of as operating on sequences local to the machine on which the query\
+    \ is executing (for example, querying in-memory list of objects).\n\nInterpreted\
+    \ queries are interpreted at runtime and on sequences that can come from a remote\
+    \ source such as a SQL database. Interpreted queries operate on IQueryable<T>\
+    \ sequences.\n\nInterpreted queries will be discussed later in Chapter 5, \"Interpreted\
+    \ Queries.\"\n\nThe following code demonstrates the use of the Attribute(XName)\
+    \ method to locate a specific XAttribute and get its value by reading its Value\
+    \ property. This example also uses the FirstAttribute method to get an element's\
+    \ first declared attribute, and also how to combine standard query operators such\
+    \ as Skip to query the IEnumerable<XAttribute> provided by the Attributes method.\n\
+    \n```\nvar xml = @\"\n<ingredients>\n  <ingredient name='milk' quantity='200'\
+    \ price='2.99' />\n  <ingredient name='sugar' quantity='100' price='4.99' />\n\
+    \  <ingredient name='safron' quantity='1' price='46.77' />\n</ingredients>\";\n\
+    ```\n\n```\nXElement xmlData = XElement.Parse(xml);\nXElement milk =\n  xmlData.Descendants(\"\
+    ingredient\")\n  .First(x => x.Attribute(\"name\").Value == \"milk\");\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\nXAttribute nameAttribute = milk.FirstAttribute; // name attribute\nXAttribute\
+    \ priceAttribute = milk.Attribute(\"price\");\nstring priceOfMilk = priceAttribute.Value;\
+    \ // 2.99\nXAttribute quantity = milk.Attributes()\n  .Skip(1)\n  .First(); //\
+    \ quantity attribute\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# Chapter 2 Fluent and Query Expression Styles\n\nThere are two styles of writing\
+    \ LINQ queries: the fluent style (or fluent syntax) and the query expression style\
+    \ (or query syntax).\n\nThe fluent style uses query operator extension methods\
+    \ to create queries, while the query expression style uses a different syntax\
+    \ that the compiler will translate into fluent style.\n\n# Fluent style\n\nThe\
+    \ code samples up until this point have all used the fluent syntax.\n\nThe fluent\
+    \ syntax makes use of the query operator extension methods as defined in the static\
+    \ System.Linq.Enumerable class (or System.Linq.Queryable for interpreted or System.Linq.ParallelEnumerable\
+    \ for LINQ queries). These extension methods add additional methods to instances\
+    \ of IEnumerable<TSource>. This means that any instance of a class that implements\
+    \ this interface can use these fluent extension methods.\n\nQuery operators can\
+    \ be used singularly, or chained together to create more complex queries.\n\n\
+    # Chained query operators\n\nIf the following class has been defined:\n\n```\n\
+    class Ingredient\n{\n    public string Name { get; set; }\n    public int Calories\
+    \ { get; set; }\n}\n\nThe following code uses three chained queries: Where, OrderBy,\
+    \ and Select.\n\nIngredient[] ingredients = {\n    new Ingredient{Name = \"Sugar\"\
+    , Calories=500},\n    new Ingredient{Name = \"Egg\", Calories=100},\n    new Ingredient{Name\
+    \ = \"Milk\", Calories=150},\n    new Ingredient{Name = \"Flour\", Calories=50},\n\
+    \    new Ingredient{Name = \"Butter\", Calories=200}\n};\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "```\nIEnumerable<string> highCalorieIngredientNamesQuery =\n    ingredients.Where(x\
+    \ => x.Calories >= 150)\n    .OrderBy(x => x.Name)\n    .Select(x => x.Name);\n\
+    \nforeach (var ingredientName in highCalorieIngredientNamesQuery)\n{\n    Console.WriteLine(ingredientName);\n\
+    }\n```\n\nExecuting this code produces the following output:\n\n+   - Butter\n\
+    - Milk\n- Sugar\n\nFigure 2 shows a graphical representation of this chain of\
+    \ query operators. Each operator input on the sequence provided by the preceding\
+    \ query operator. Notice that the initial input sequence (represented by the variable\
+    \ ingredients) is an IEnumerable<Ingredient>, whereas the output sequence (represented\
+    \ by the variable highCalorieIngredientNamesQuery) is a different type; it is\
+    \ an IEnumerable<string>.\n\nIn this example, the chain of operators is working\
+    \ with a sequence of Ingredient elements until the Select transforms each element\
+    \ in the sequence; each Ingredient object is transformed to a simple string. This\
+    \ transformation is called projection. Input elements are projected into transformed\
+    \ output elements."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '| initial input sequence : IEnumerable<Ingredient> |
+
+    | Sugar | Egg | Milk | Flour | Butter |
+
+    | Where(x => x.Calories >= 150) |
+
+    | Sugar | Milk | Butter |
+
+    | OrderBy(x => x.Name) |
+
+    | Butter | Milk | Sugar |
+
+    | Select(x => x.Name) |
+
+    | "Butter" | "Milk" | "Sugar" |
+
+    | output sequence : IEnumerable<string> |
+
+    | "Butter" | "Milk" | "Sugar" |
+
+
+    Figure 2: Multiple query operators acting in a chain
+
+
+    The lambda expression provided to the Select query operator decides what "shape"
+    the elements in the output sequence will take. The lambda expression x => x.Name
+    is telling the Select operator "for each Ingredient, output a string element with
+    the value of the Name property from the input Ingredient.".
+
+
+    > Note: Individual query operators will be discussed later in Chapter 3, LINQ
+    Query Operators.
+
+
+    # # Query expression style
+
+
+    Query expressions offer a syntactical nicety on top of the fluent syntax.
+
+
+    The following code shows the equivalent version using query syntax of the preceding
+    fluent style query.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "```\nIngredient[] ingredients = \n{\nnew Ingredient(Name = \"Sugar\", Calories=500),\n\
+    new Ingredient(Name = \"Egg\", Calories=100),\nnew Ingredient(Name = \"Milk\"\
+    , Calories=150),\nnew Ingredient(Name = \"Flour\", Calories=50),\nnew Ingredient(Name\
+    \ = \"Butter\", Calories=200)\n};\n```\n\n```\nIEnumerable<string> highCalorieIngredientNamesQuery\
+    \ =\nfrom i in ingredients\nwhere i.Calories >= 150\norderby i.Name\nselect i.Name;\n\
+    ```\n\n```\nforeach (var ingredientName in highCalorieIngredientNamesQuery)\n\
+    {\n  Console.WriteLine(ingredientName);\n}\n```\n\nExecuting this code produces\
+    \ the same output as the fluent syntax version:\n\nButter\nMilk\nSugar\n\nThe\
+    \ steps that are performed are the same as in the fluent syntax version, with\
+    \ each query clause (from, where, orderby, select) passing on a modified sequence\
+    \ to the next query clause.\n\nThe query expression in the preceding code begins\
+    \ with the from clause. The from clause has two purposes: the first is to describe\
+    \ what the input sequence is (in this case ingredients); the second is to introduce\
+    \ a range variable.\n\nThe final clause is the select clause, which describes\
+    \ what the output sequence will be from the entire query. Just as with the fluent\
+    \ syntax version, the select clause in the preceding code is projecting a sequence\
+    \ of Ingredient objects into a sequence of string objects."
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Range variables\n\nA range variable is an identifier that represents each\
+    \ element in the sequence turn. It's similar to the variable used in a foreach\
+    \ statement; as the sequence is processed, this range variable represents the\
+    \ current element being processed. In the preceding code, the range variable i\
+    \ is being declared. Even though the same range variable identifier i is used\
+    \ in each clause, the sequence that the range variable \"traverses\" is different.\
+    \ Each clause works with the input sequence produced from the preceding clause\
+    \ (or the initial IEnumerable<T>). This means that each clause is processing a\
+    \ different sequence; it is simply the name of the range variable that is being\
+    \ reused.\n\nIn addition to the range variable introduced in the from, additional\
+    \ range variables can be added using other clauses or keywords. The following\
+    \ can introduce new range variables into a query expression:\n\n+   * Additional\
+    \ from clauses\n* The let clause\n* The into keyword\n* The join clause\n\n# The\
+    \ let clause\n\nA clause in a LINQ query expression allows the introduction of\
+    \ an additional range variable. This additional range variable can then be used\
+    \ in other clauses that follow it.\n\nIn the following code, the let clause is\
+    \ used to introduce a new range variable called Dairy, which will be type Boolean.\n\
+    \n```\nIngredient[] ingredients = {\n    new Ingredient{Name = \"Sugar\", Calories=500},\n\
+    \    new Ingredient{Name = \"Egg\", Calories=100},\n    new Ingredient{Name =\
+    \ \"Milk\", Calories=150},\n    new Ingredient{Name = \"Flour\", Calories=50},\n\
+    \    new Ingredient{Name = \"Butter\", Calories=200}\n}\n\nIEnumerable<Ingredient>\
+    \ highDairyQuery = =\n    from i in ingredients\n    let isDairy = i.Name == \"\
+    Milk\" || i.Name == \"Butter\"\n    where i.Calories >= 150 && isDairy\n    select\
+    \ i;\n\nforeach (var ingredient in highDairyQuery) {\n    Console.WriteLine(ingredient.Name);\n\
+    }\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "The output of this code produces:\n\nMilk\nButter\n\nIn the preceding code,\
+    \ the **isDairy** range variable is introduced and then used in the **where**\
+    \ clause. Notice that the original dairy variable **i remains available to the\
+    \ **select** clause.\n\nIn this example, the new range variable is simple scalar\
+    \ value, but **let** can also be used to introduce a subsequence. In the following\
+    \ code sample, the range variable **ingredients** is not a scalar value, but an\
+    \ array of strings.\n\n```\nstring[] csvRecipes = {\n  \"milk,sugar,eggs',\n \
+    \ \"flour,BUT,eggs',\n  \"vanilla,CheESE,oats\"\n}\n```\n\n```\nvar dairyQuery\
+    \ = =\n  from csvRecipe in csvRecipes\n  let ingredients = csvRecipe.Split(',')\n\
+    \  from ingredient in ingredients\n  let uppercaseIngredient = ingredient.ToUpper()\n\
+    \  where uppercaseIngredient == \"MILK\" ||\n       uppercaseIngredient == \"\
+    BUTTER\" ||\n       uppercaseIngredient == \"CHEESE\"\n  select uppercaseIngredient;\n\
+    ```\n\n```\nforeach (var dairyIngredient in dairyQuery)\n{\n  Console.WriteLine(\"\
+    {0} is dairy\");\n}\n```\n\nIn noticing the code that we are using multiple **let**\
+    \ clauses as well as additional **from** clauses. Using additional **from** clauses\
+    \ is another way to introduce new range variables into a query expression.\n\n\
+    # **The into keyword**\n\nThe **into** keyword also allows a new identifier to\
+    \ be declared that can store the result of a **select** clause (as well as **group**\
+    \ and **join** clauses.)\n\nThe following code demonstrates using **into** to\
+    \ create a new anonymous type and then using this in the remainder of the query\
+    \ expression."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "```\nIngredient[] ingredients =\n{\n    new Ingredient(Name = \"Sugar\", Calories=500),\n\
+    \    new Ingredient(Name = \"Egg\", Calories=100),\n    new Ingredient(Name =\
+    \ \"Milk\", Calories=150),\n    new Ingredient(Name = \"Flour\", Calories=50),\n\
+    \    new Ingredient(Name = \"Butter\", Calories=200);\n};\n\nIEnumerable<Ingredient>\
+    \ highCalDairyQuery\nfrom i in ingredients\nselect new // anonymous type\n{\n\
+    \    OriginalIngredient i = i,\n    IsDairy = i.Name == \"Milk\" || i.Name ==\
+    \ \"Butter\",\n    IsHighCalorie = i.Calories >= 150\n}\ninto temp\nwhere temp.IsDairy\
+    \ && temp.IsHighCalorie\n// cannot write \"select i\" as into hides the previous\
+    \ range variable i\nselect temp.OriginalIngredient;\n\nforeach (var ingredient\
+    \ in highCalDairyQuery)\n{\n    Console.WriteLine(ingredient.Name);\n}\n```\n\n\
+    This code produces the following output:\n\nMilk\nButter\n\nNote that using into\
+    \ hides the previous range variable i. This means that I cannot be used in the\
+    \ final select.\n\nThe let clause, however, does not hide the previous range variable(s),\
+    \ meaning they can still be used later in query expressions.\n\n# The join clause\n\
+    \nThe join clause takes two input sequences in which elements in either sequence\
+    \ do not necessarily have any direct relationship in the class domain model."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "To perform a join, some value of the elements in the first sequence is compared\
+    \ for equality with some value of the elements in the second sequence. It is important\
+    \ to note here that the join clause perform equi-joins; the values from both sequences\
+    \ are compared for equality. It means that the join clause does not support non-equijoins\
+    \ as inequality, or comparisons such as greater-than or less-than. Because of\
+    \ this, rather than specifying joined elements using an operator as == in C#,\
+    \ the equals keyword is used. The design thinking about introducing this keyword\
+    \ is to make it very clear that joins are equi-joins.\n\nCommon types of joins:\n\
+    \n+   - Inner joins.\n- Group joins.\n- Left outer joins.\n\nThe following join\
+    \ code examples assume that the following classes have been defined:\n\n```\n\
+    class Recipe\n{\n    public int Id { get; set; }\n    public string Name { get;\
+    \ set; }\n}\n\nclass Review\n{\n    public int RecipeID { get; set; }\n    public\
+    \ string ReviewText { get; set; }\n}\n```\n\nThese two classes model the fact\
+    \ that recipes can have 0, 1, or many reviews. The Review class has a RecipeID\
+    \ property that holds the id of the recipe that the Review pertains to; notice\
+    \ though that there is no direct relationship in the form of a type Recipe.\n\n\
+    # Inner join\n\nAn inner join returns an element in the output sequence for each\
+    \ item in the first sequence that has matching items in the second sequence. If\
+    \ an element in the first sequence does not have any matching elements in the\
+    \ second sequence, it will not appear in the output sequence."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "Take the following code example:\n\n```\nRecipe[] recipes = {\n  new Recipe\
+    \ {Id = 1, Name = \"Mashed Potato\"},\n  new Recipe {Id = 2, Name = \"Crispy Duck\"\
+    },\n  new Recipe {Id = 3, Name = \"Sachertorte\"}\n};\n```\n\n```\nReview[] reviews\
+    \ = {\n  new Review {RecipeId = 1, ReviewText = \"Tasty!\"},\n  new Review {RecipeId\
+    \ = 1, ReviewText = \"Not nice:(\"},\n  new Review {RecipeId = 1, ReviewText =\
+    \ \"Pretty good\"},\n  new Review {RecipeId = 2, ReviewText = \"Too hard\"},\n\
+    \  new Review {RecipeId = 2, ReviewText = \"Loved it\"}\n};\n```\n\n```\nvar query\
+    \ = from recipe review in reviews on recipe.Id equals review.RecipeId\n  select\
+    \ new // anonymous type\n  {\n    RecipeName = recipe.Name,\n    RecipeReview\
+    \ = review.ReviewText\n  };\n\nforeach (var item in query)\n{\n  Console.WriteLine(\"\
+    {0} - '{1}\", item.RecipeName, item.RecipeReview);\n}\n```\n\nIn this preceding\
+    \ code, two input sequences are created: recipes, holding a number of recipes,\
+    \ and a second sequence, reviews of objects.\n\nThe query expression starts with\
+    \ the from clause pointing to the first sequence (recipes) and declaring the variable\
+    \ recipeId.\n\nNext comes the use of the join clause. Here another variable (review)\
+    \ is introduced that represents elements being processed in the reviews input\
+    \ sequence. The on keyword allows the specification of what value of the recipe\
+    \ range object is related to which value of the review range variable object.\
+    \ Again the equals keyword is used here to represent an equijoin. This Join clause\
+    \ is essentially stating that reviews belong to recipes as identified by the common\
+    \ values of Id in Recipe and RecipeId in Review.\n\nThe result of executing this\
+    \ code is as follows:"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "Mashed Potato - 'Tasty!'\nMashed Potato - 'Not nice :('\nMashed Potato - 'Pretty\
+    \ good'\nCrispy Duck - 'Too hard'\nCrispy Duck - 'Loved it'\n\nNotice here the\
+    \ recipe 'Sachertorte' does not exist in the output. This is because there are\
+    \ no reviews for it, i.e. there are no matching elements in the second input sequence\
+    \ (reviews).\n\nAlso notice that the result are \"flat\", meaning there is no\
+    \ concept of groups of reviews belonging to a \"parent\" recipe.\n\n# Group join\n\
+    \nA group join can produce a grouped hierarchical result where items in the second\
+    \ sequence are matched to items in the first sequence.\n\nUnlike the previous\
+    \ inner join, the output of a group join can be organized hierarchically with\
+    \ reviews grouped into their related recipe.\n\n```\nRecipe[] recipes = {\n  new\
+    \ Recipe {Id = 1, Name = \"Mashed Potato\"},\n  new Recipe {Id = 2, Name = \"\
+    Crispy Duck\"},\n  new Recipe {Id = 3, Name = \"Sachertorte\"}\n};\n```\n\n```\n\
+    Review[] reviews = {\n  new Review {Id = 1, ReviewText = \"Tasty!\"},\n  new Review\
+    \ {Id = 1, ReviewText = \"Not nice :(\"},\n  new Review {Id = 1, ReviewText =\
+    \ \"Pretty good\"},\n  new Review {Id = 2, ReviewText = \"Too hard\"},\n  new\
+    \ Review {Id = 2, ReviewText = \"Liked it\"}\n};\n```\n\n```\nvar query =\n  from\
+    \ recipe in recipes\n  join review in reviews on recipe.Id equals review.Id\n\
+    \  into reviewGroup\n  select new // anonymous type\n  {\n    RecipeName = recipe.Name,\n\
+    \    Reviews = reviewGroup // collection of related reviews\n  };\n```\n\n```\n\
+    foreach (var item in query) {\n  Console.WriteLine(\"Reviews {0}\", item.RecipeName);\n\
+    }\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "```\nforeach (var review in item.Reviews)\n{\n    Console.WriteLine(\" {0}\"\
+    \ - review.ReviewText);\n}\n```\n\nIn this version, notice the addition of the\
+    \ **into** keyword. This allows the creation of hierarchical results. The **reviewGroup**\
+    \ range represents a sequence of reviews that match the join expression, in this\
+    \ case where `recipe.Id` equals `review.RecipeId`.\n\nTo create the output of\
+    \ groups (where each group contains the related reviews) the result of the query\
+    \ is projected into an anonymous type. Each instance of this anonymous type in\
+    \ the output sequence represents each group. The anonymous type has two properties:\
+    \ **RecipeName** coming from the element in the first sequence, and **Reviews**\
+    \ that come from the results of the expression, i.e. the reviews that belong to\
+    \ the recipe.\n\nThe output of this code produces the following:\n\n+   Reviews\
+    \ for Mashed Potato\n- Tasty!\n- Not nice :\n- Pretty good\nReviews for Crispy\
+    \ Duck\n- Too hard\n- Loved it\nReviews for Sachertorte\n\nNotice the hierarchical\
+    \ output here, and also that \"Sachertorte\" has been included in the output this\
+    \ time, even though it has no associated reviews.\n\n# Left outer join\n\nTo get\
+    \ flat, non-hierarchical output that includes elements in the first sequence that\
+    \ have no matching elements in the second sequence (our example \"Sachertorte\"\
+    ), the **DefaultEmpty()` query operator can be used in conjunction with an additional\
+    \ **from** clause to introduce a new range variable, `rg`, that will be **null**\
+    \ if there are no matching elements in the second sequence. The select to choose\
+    \ the anonymous type projection is also modified to account for the fact that\
+    \ we may have a null result.\n\nNotice in the following code **RecipeReview =\
+    \ rg.ReviewText** will produce **System.NullReferenceException**; the need for\
+    \ the null checking code.\n\n```\nRecipe[] recipes =\n{\n    new Recipe {Id =\
+    \ 1, Name = \"Mashed Potato\"},\n    new Recipe {Id = 2, Name = \"Crispy Duck\"\
+    },\n    new Recipe {Id = 3, Name = \"Sachertorte\"}\n};\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\nReview[] reviews = {\nnew Review {RecipeId = 1, ReviewText = \"Tasty!\"\
+    },\nnew Review {RecipeId = 1, ReviewText = \"Not nice (:\"},\nnew Review {RecipeId\
+    \ = 1, ReviewText = \"Pretty good\"},\nnew Review {RecipeId = 2, ReviewText =\
+    \ \"Too hard\"},\nnew Review {RecipeId = 2, ReviewText = \"Loved it\"}\n};\n```\n\
+    \n```\nvar query = \nfrom recipe in recipes\njoin review in reviews on recipe.Id\
+    \ equals review.RecipeId\ninto reviewGroup\nfrom rg in reviewGroup.DefaultIfEmpty()\n\
+    select new // anonymous type\n{\n    RecipeName = recipe.Name,\n    RecipeReview\
+    \ = ( rg == null ? \"n/a\" : rg.RecipeReview )\n};\n```\n\n```\nforeach (var item\
+    \ in query)\n{\n    Console.WriteLine(\"{0} - '{1}'\", item.RecipeName, item.RecipeReview);\n\
+    }\n```\n\nThis produces the following output:\n\nMashed Potato - 'Tasty!'\nMashed\
+    \ Potato - 'Not nice (:'\nMashed Potato - 'Pretty good'\nCrispy Duck - 'Too hard'\n\
+    Crispy Duck - 'Loved it'\nSachertorte - 'n/a'\n\nAs an alternative to performing\
+    \ the null check in the select, the DefaultIfEmpty method can be instructed to\
+    \ create a new instance rather than creating a null. The following code shows\
+    \ this alternative query expression:"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\nvar query =\nfrom recipe in recipes\njoin review in reviews on recipe.Id\
+    \ equals review.RecipeId\ninto reviewGroup\nfrom rg in reviewGroup\n    DefaultEmpty(new\
+    \ Review{ReviewText = \"n/a\"})\nselect new // anonymous type\n{\n    RecipeName\
+    \ = recipe.Name,\n    RecipeReview = rg.ReviewText\n};\n```\n\nNote that this\
+    \ code produces the same output as the previous version:\n\n+   - Mashed Potato\
+    \ - 'Tasty!'\n- Mashed Potato - 'Not nice :('\n- Mashed Potato - 'Pretty good'\n\
+    - Crispy Duck - 'Too hard'\n- Crispy Duck - 'Loved it'\n- Sachertorte - 'n/a'\n\
+    \n# Other query expression syntax\n\nThere are a number of other syntactical elements\
+    \ when using query expressions:\n\n+   - The group clause\n- The orderby clause\n\
+    - The ascending and descending keywords\n- The by keyword\n\n# The group clause\
+    \ and the by keyword\n\nThe group clause takes a flat input sequence and produces\
+    \ an output sequence of groups. Another way to think of this is that the output\
+    \ is produced like a list of lists; because of this, a nested for loop can be\
+    \ used to iterate over all the groups and group items.\n\nThe following code shows\
+    \ the use of the group clause and the by keyword to group all ingredients that\
+    \ have the same amount of calories.\n\n```\nIngredient[] ingredients = {\n   \
+    \ new Ingredient{Name = \"Sugar\", Calories=500},\n    new Ingredient{Name = \"\
+    Lard\", Calories=500},\n    new Ingredient{Name = \"Butter\", Calories=500},\n\
+    \    new Ingredient{Name = \"Egg\", Calories=100},\n};\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\nnew Ingredient{Name = \"Milk\", Calories=100},\nnew Ingredient{Name =\
+    \ \"Flour\", Calories=50},\nnew Ingredient{Name = \"Oats\", Calories=50}\n\nIEnumerable<IGrouping<int,\
+    \ Ingredient>> query =\nfrom i in ingredients\ngroup by i.Calories;\n\nforeach\
+    \ (IGrouping<int, Ingredient> group in query)\n{\n    Console.WriteLine(\"Ingredients\
+    \ with {0} calories\", group.Key);\n    foreach (Ingredient ingredient in group)\n\
+    \    {\n        Console.WriteLine(\"- {0}\", ingredient.Name);\n    }\n};\n```\n\
+    \nThis code produces the following output:\n\n+   Ingredients with 500 calories\n\
+    - Sugar\n- Lard\n- Butter\nIngredients with 100 calories\n- Egg\n- Milk\nIngredients\
+    \ with 50 calories\n- Flour\n- Oats\n\nIn the preceding code, the first generic\
+    \ type parameter (int) in the IGrouping<int, Ingredient> represents the key of\
+    \ the group, in this example the number of calories. The second generic type parameter\
+    \ (Ingredient) represents the type of the list of items that have the same key\
+    \ (calorie value).\n\nAlso note that explicit types have been used in the code\
+    \ to better illustrate what types are operated upon. The code could be simplified\
+    \ by using the var keyword; for example: var query = ... rather than IEnumerable<IGrouping<int,\
+    \ Ingredient>> query = ...\n\n# The orderby clause and ascending & descending\
+    \ keywords\n\nThe orderby clause is used to produce a sequence sorted in either\
+    \ ascending (the default) or descending order."
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "The following code sorts a list of ingredients by name:\n\n```\nIngredient[]\
+    \ ingredients = {\nnew Ingredient{Name = \"Sugar\", Calories=500},\nnew Ingredient{Name\
+    \ = \"Lard\", Calories=500},\nnew Ingredient{Name = \"Butter\", Calories=500},\n\
+    new Ingredient{Name = \"Egg\", Calories=100},\nnew Ingredient{Name = \"Milk\"\
+    , Calories=100},\nnew Ingredient{Name = \"Flour\", Calories=50},\nnew Ingredient{Name\
+    \ = \"Oats\", Calories=50}\n};\n\nOrderedEnumerable<Ingredient> sortedByNameQuery\
+    \ = \nfrom i in ingredients\norderby i.Name\nselect i;\n\nforeach (var ingredient\
+    \ in sortedByNameQuery) {\nConsole.WriteLine(ingredient.Name);\n}\n```\n\nThis\
+    \ produces the following sorted output:\n\nButter\nEgg\nFlour\nLard\nMilk\nOats\n\
+    Sugar\n\nTo sort in descending order (the non-default order), the query can be\
+    \ modified, and the descending keyword added, as shown in the following modified\
+    \ query:\n\n```\nIOrderedEnumerable<Ingredient> sortedByNameQuery = \nfrom i in\
+    \ ingredients\norderby i.Name descending i;\nselect i;\n```\n\nThis produces the\
+    \ following output:"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "Sugar\nOats\nMilk\nLard\nFlour\nEgg\nButter\n\nThe **orderby** clause can also\
+    \ be used when grouping is being applied. In the following code, the calorie-grouped\
+    \ ingredients are sorted by the number of calories (which is the **Key** of each\
+    \ group).\n\n```\nIngredient[] ingredients =\nn    new Ingredient(Name = \"Sugar\"\
+    , Calories=500),\n    new Ingredient(Name = \"Lard\", Calories=500),\n    new\
+    \ Ingredient(Name = \"Butter\", Calories=500),\n    new Ingredient(Name = \"Egg\"\
+    , Calories=100),\n    new Ingredient(Name = \"Milk\", Calories=100),\n    new\
+    \ Ingredient(Name = \"Flour\", Calories=50),\n    new Ingredient(Name = \"Oats\"\
+    , Calories=50);\n;\n```\n\n```\nIEnumerable<IGrouping<int, Ingredient>> query\
+    \ =\n    from i in ingredients\n    group i by i.Calories\n    into calorieGroup\n\
+    \    orderby calorieGroup.Key\n    select calorieGroup;\n```\n\n```\nforeach (IGrouping<int,\
+    \ Ingredient> group in query)\n{\n    Console.WriteLine(\"Ingredients with {0}\
+    \ calories\", group.Key);\n\n    foreach (Ingredient ingredient in group)\n  \
+    \  {\n        Console.WriteLine(\" - {0}\", ingredient.Name);\n    }\n}\n```\n\
+    \nNotice in the preceding code, even though the input sequence **ingredients**\
+    \ is in descending calorie order, the output below is sorted by the calorie value\
+    \ (the **Key**) of the group in **ascending** order:"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'Ingredients with 50 calories
+
+    - Flour
+
+    - Oats
+
+    Ingredients with 100 calories
+
+    - Egg
+
+    - Milk
+
+    Ingredients with 500 calories
+
+    - Sugar
+
+    - Lard
+
+    - Butter
+
+
+    # Using the different styles
+
+
+    The two LINQ styles can be used together; for example, fluent query operators
+    can be mixed with the query expression style.
+
+
+    # Advantages of the different styles
+
+
+    Each syntax has its own benefits.
+
+
+    # Query expression style keyword availability
+
+
+    Not every query operator that is available using the fluent syntax has an equivalent
+    query expression syntax keyword. The following query operators using the fluent
+    style have associated keywords when using the query expression syntax:
+
+
+    +   - GroupBy
+
+    - GroupJoin
+
+    - Join
+
+    - OrderBy
+
+    - OrderByDescending
+
+    - Select
+
+    - SelectMany
+
+    - ThenBy
+
+    - ThenByDescending
+
+    - Where
+
+
+    # Number of operators
+
+
+    If the query only requires the use of a single query operator to get the required
+    results, then a single call to a fluent style operator is usually a smaller amount
+    of code to write, and can also be more comprehensible by readers.
+
+
+    The following code shows a query returning all ingredients over 150 calories using
+    both the fluent style (q1) and query expression style (q2). Notice the fluent
+    style is much terser when needing to use only a single operator.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    var q1 = ingredients.Where(x => x.Calories > 100);
+
+
+    var q2 = from i in ingredients
+
+    where i.Calories > 100
+
+    select i;
+
+    ```
+
+
+    # Simple queries using basic operators
+
+
+    If the query is relatively simple and uses a few query operators such as Where
+    and OrderBy, either the fluent or the query expression styles can be used successfully.
+    The choice between the two styles in this cases is usually down to the personal
+    preference of the programmer or the coding standards imposed by the organization/client.
+
+
+    # Complex queries with range additional range variables
+
+
+    Once queries become more complex and require the use of additional range variables
+    (e.g. when using the let clause or performing joins), then query expressions are
+    usually simpler than the equivalent fluent style version.
+
+
+    # Mixing the styles in a single query
+
+
+    If a query is being written using the query expression style, it is still possible
+    to make use of query operators that have no equivalent query syntax keyword. This
+    is accomplished by mixing both fluent syntax and query syntax in the same query.
+
+
+    We have already seen an example of mixing the two styles with the use of the DefaultIfEmpty
+    fluent style operator when we discussed outer joins earlier in this chapter.
+
+
+    The following example shows mixing the Count query operator (using fluent syntax)
+    with a query expression (inside the parentheses).
+
+
+    ```
+
+    int mixedQuery = (from i in ingredients
+
+    where i.Calories > 100
+
+    select i.Count());
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# # Chapter 3 LINQ Query Operators
+
+
+    This chapter discusses the standard query operators and is organized by the classification
+    of the operators. Query operators can be grouped into categories such as join
+    operators, generation operators, and projection operators.
+
+
+    At a higher level, query operators can be classified as falling into one of three
+    categories based on their inputs/outputs:
+
+
+    +   - Input sequence(s) results in an output sequence.
+
+    - Input sequence results in scalar value/single element output.
+
+    - No input results in an output sequence (these operators generate their own elements).
+
+
+    The final category might seem strange at first glance, as these operators do not
+    take an input sequence. They can be useful, for example, when sequence of integers
+    needs creating, by reducing the amount of code we need to perform this generation.
+
+
+    Beyond this categorization based on input/output, the standard query operators
+    can be grouped as shown in the following list. The operators in each category
+    will be discussed in detail in this chapter.
+
+
+    Query operators:
+
+
+    +   - Restriction: Where
+
+    - Projection: Select, SelectMany
+
+    - Partitioning: Take, Skip, TakeWhile, SkipWhile
+
+    - Ordering: OrderBy, OrderOrderBy, ThenBy, ThenOrderBy, Reverse
+
+    - Grouping: GroupBy
+
+    - Set: Concat, Union, Intersect, Except
+
+    - Conversion: ToArray, ToList, ToDictionary, ToLookup, OfType, Cast
+
+    - Element: First, FirstOrDefault, Last, LastOrDefault, Single, SingleOrDefault,
+    ElementAt, DefaultIfEmpty
+
+    - Generation: Empty, Range, Repeat
+
+    - Quantifiers: Any, All, Contains, SequenceEqual
+
+    - Aggregate: Count, LongCount, Sum, Min, Max, Average, Aggregate
+
+    - Joining: Join, GroupJoin, Zip
+
+
+    # # Restriction Operators
+
+
+    Restriction query operators take an input sequence and output sequence of elements
+    that are restricted ("filtered") in some way. The elements that make up the output
+    sequence are those that match the specified restriction. Individual output elements
+    themselves are not modified or transformed.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Where\n\nThe where query operator returns output elements that match a given\
+    \ predicate.\n\n> Tip: A predicate is a function that returns a bool result of\
+    \ true if some condition is satisfied.\n\n```\nIngredient[] ingredients = {\n\
+    \    new Ingredient {Name = \"Sugar\", Calories = 500};\n    new Ingredient {Name\
+    \ = \"EGG\", Calories = 100};\n    new Ingredient {Name = \"Milk\", Calories =\
+    \ 150};\n    new Ingredient {Name = \"Flour\", Calories = 50};\n    new Ingredient\
+    \ {Name = \"Butter\", Calories = 200};\n}\nIEnumerable<Ingredient> query = ingredients\n\
+    \    .Where(x => x.Calories >= 200);\n\nforeach (var ingredient in query)\n{\n\
+    \    Console.WriteLine(ingredient.Name);\n}\n```\n\nThe preceding code shows how\
+    \ the Where operates in use. Here the predicate x => x.Calories >= 200 will return\
+    \ true for every ingredient that is greater than or equal to 200 calories.\n\n\
+    This code produces the following output:\n\nSugar\nButter\n\nAn overload of where\
+    \ provides the positional index of the input element for use in the predicate.\n\
+    In the preceding code, \"Sugar\" has an index of 0 and \"Butter\" has an index\
+    \ of 4. The following query produces the same output as the previous version.\n\
+    \n```\nIEnumerable<Ingredient> queryUsingIndex = ingredients\n    .Where((ingredient,\
+    \ index) => ingredient.Name == \"Sugar\" || index == 4);\n```\n\nNotice the lambda\
+    \ expression is different. In this case, the predicate function will be of type\
+    \ Func<Ingredient, int, int, bool>; the int parameter provides the position of\
+    \ the element in the input sequence."
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# Query expression usage\n\nThe where keyword is used in query expression style\
+    \ code, and is followed by a Boolean expression, as shown in the following code.\n\
+    \n```\nIEnumerable<Ingredient> queryX = from i in ingredients\nwhere i.Calories\
+    \ >= 200\nselect i;\n```\n\n# Projection Operators\n\nProjection query operators\
+    \ take an input sequence, transform each element in that sequence, and produce\
+    \ an output sequence of these transformed elements. In this way, the input sequence\
+    \ is projected into a different output sequence.\n\n# Select\n\nThe Select query\
+    \ operator transforms each element in the input sequence to an element in the\
+    \ output sequence. There will be the same number of elements in the output sequence\
+    \ as there are in the input sequence.\n\nThe following query projects the input\
+    \ sequence of Ingredient elements into the output sequence of string elements.\
+    \ The lambda expression describing the projection: taking each input Ingredient\
+    \ element and returning a string element.\n\n```\nIEnumerable<string> query =\
+    \ ingredients.Select(x => x.Name);\n```\n\nWe could create an output sequence\
+    \ of ints with the following code:\n\n```\nIEnumerable<int> queryNameLength =\
+    \ ingredients.Select(x => x.Length);\n```\n\nThe projection can also result in\
+    \ complex objects being produced in output. In the following code each input Ingredient\
+    \ is projected into a new instance of IngredientNameAndLength object.\n\n```\n\
+    class IngredientNameAndLength\n{\n    public string Name { get; set; }\n    public\
+    \ int Length { get; set; }\n\n    public override string ToString();\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\n{\n    return Name + \" - \" + Length;\n}\n...\nIEnumerable<IngredientNameAndLength>\
+    \ query = ingredients.Select(x =>\n    new IngredientNameAndLength\n    {\n  \
+    \      Name = x.Name,\n        Length = x.Name.Length\n    });\n```\n\nThis query\
+    \ could also be written using an anonymous type; notice in the following code\
+    \ the query return type has been changed to var.\n\n```\nvar query = ingredients.Select(x\
+    \ =>\n    {\n        Name = x.Name,\n        Length = x.Name.Length\n    });\n\
+    ```\n\n# Query expression usage\n\nThe Select keyword is used in query expression\
+    \ style code as shown in the following code that replicates the preceding fluent\
+    \ style version using an anonymous type.\n\n```\nvar query = from i in ingredients\n\
+    select new\n    {\n        Name = i.Name,\n        Length = i.Name.Length\n  \
+    \  });\n```\n\n# SelectMany\n\nWhereas the Select query operator returns an output\
+    \ element for every input element, the SelectMany query operator produces a variable\
+    \ number of output elements for each input element. This means that the output\
+    \ sequence may contain more or fewer elements than were in the input sequence.\n\
+    \nThe lambda expression in the Select query operator returns a single item. The\
+    \ lambda expression in a SelectMany query operator produces a child sequence.\
+    \ This child sequence may contain a varying number of elements for each element\
+    \ in the input sequence."
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "In the following code, the lambda expression will produce a child sequence\
+    \ of chars, one char for each letter of each input element. For example the input\
+    \ element “Sugar”, when processed by the lambda expression, will produce a child\
+    \ sequence containing five elements: 'S', 'u', 'g', 'a', and 'r’. Each input ingredient\
+    \ string can be a different number of letters, so the lambda expression will produce\
+    \ child sequences of different lengths. Each of the child sequences produced are\
+    \ concatenated (“flattened”) into a single output sequence.\n\n```\nstring[] ingredients\
+    \ = {\"Sugar\", \"Egg\", \"Milk\", \"Flour\", \"Butter\"};\nIEnumerable<char>\
+    \ query = ingredients.SelectMany(x => x.ToCharArray());\nforeach (char item in\
+    \ query)\n{\n    Console.WriteLine(item);\n}\n```\n\nThis code produces the following\
+    \ output (notice there are more output elements than there were in the input sequence\
+    \ that only contained five elements):\n\n# Query expression usage\n\nIn the query\
+    \ expression style, an additional **from** clause is added to produce the child\
+    \ sequence."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "The following code produces the same output as the previous fluent version.\n\
+    \n```\nIEnumerable<char> query = from i in ingredients\nfrom c in i.ToCharArray()\n\
+    select c;\n```\n\n# # Partitioning Operators\n\nThe partitioning query operators\
+    \ take an input sequence and partition it, or \"return a chunk\" in the output\
+    \ sequence. One use of these operators is to break up a larger sequence into \"\
+    pages,\" paging ten results at a time in a user interface.\n\n# # Take\n\nThe\
+    \ Take query operator takes in an input sequence and returns the specified number\
+    \ of elements as an output.\n\nThe following code shows how to use the Take operator\
+    \ to return the first three ingredients in the sequence.\n\n```\nIngredient[]\
+    \ ingredients = {\nnew Ingredient (Name = \"Sugar\", Calories = 500),\nnew Ingredient\
+    \ (Name = \"EGG\", Calories = 100),\nnew Ingredient (Name = \"Milk\", Calories\
+    \ = 150),\nnew Ingredient (Name = \"Flour\", Calories = 50),\nnew Ingredient (Name\
+    \ = \"Butter\", Calories = 200)\n}\n```\n\n```\nIEnumerable<Ingredient> firstThree\
+    \ = ingredients.Take(3);\n\nforeach (var ingredient in firstThree)\n{\n    Console.WriteLine(ingredient.Name);\n\
+    }\n```\n\nThe preceding code produces the following output:\n\nSugar\nEgg\nMilk"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "As with other query operators. Take can be chained together. In the following\
+    \ code, Where is used to restrict the ingredients to only those containing more\
+    \ than 100 calories. The Take query operator then produces this restricted sequence\
+    \ and returns the first two ingredients.\n\n```\nIngredient[] ingredients = {\n\
+    \    new Ingredient {Name = \"Sugar\", Calories = 500},\n    new Ingredient {Name\
+    \ = \"Egg\", Calories = 100},\n    new Ingredient {Name = \"Milk\", Calories =\
+    \ 150},\n    new Ingredient {Name = \"Flour\", Calories = 50},\n    new Ingredient\
+    \ {Name = \"Butter\", Calories = 200}\n};\n```\n\n```\nIEnumerable<Ingredient>\
+    \ query =\n    .Where(x => x.Calories > 100)\n    .Take(2);\n```\n\n```\nforeach\
+    \ (var ingredient in query)\n{\n    Console.WriteLine(ingredient.Name);\n}\n```\n\
+    \nThis code produces the following result:\n\nSugar\nMilk\n\n# Query expression\
+    \ usage\n\nThere is no keyword for Take when using the query expression style;\
+    \ however, mixed style can be used as the following code demonstrates.\n\n```\n\
+    IEnumerable<Ingredient> query = (from i in ingredients\n    where i.Calories >\
+    \ 100\n    select i).Take(2);\n```\n\n# TakeWhile\n\nThe TakeWhile query operator,\
+    \ rather than return elements based on a fixed specified number of elements, instead\
+    \ continues to return input elements until such time as a specified predicate\
+    \ becomes false."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'The following code will continue to "take" elements from the input sequence
+    while the number of
+
+    calories is greater than or equal to 100.
+
+
+    # Ingredient[] ingredients =
+
+
+    ```
+
+    {
+
+    new Ingredient(Name = "Sugar", Calories = 500),
+
+    new Ingredient(Name = "Egg", Calories = 100),
+
+    new Ingredient(Name = "Milk", Calories = 150),
+
+    new Ingredient(Name = "Flour", Calories = 50),
+
+    new Ingredient(Name = "Butter", Calories = 200)
+
+    }
+
+    ```
+
+
+    IEnumerable<Ingredient> query = ingredients.TakeWhile(x => x.Calories >= 100);
+
+
+    ```
+
+    foreach (var ingredient in query)
+
+    {
+
+    Console.WriteLine(ingredient.Name);
+
+    }
+
+    ```
+
+
+    This produces the following output:
+
+
+    +   Sugar
+
+    Egg
+
+    Milk
+
+
+    Notice here that as soon as an element in the input sequence is reached that does
+    not match
+
+    predicate, the "taking" stops; no more elements from the remainder of the input
+    sequence
+
+    are returned, even if they match the predicate.
+
+
+    There is an overload of TakeWhile that allows the positional index of the input
+    element to be
+
+    used; in the preceding code, this predicate would take the form Func<Ingredient,
+    int, bool>. The int generic type parameter represents the positional index of
+    the current
+
+    Ingredient being examined.
+
+
+    # Query expression usage
+
+
+    There is no keyword for TakeWhile when using the query expression style; however,
+    mixed
+
+    style can be used.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# Skip\n\nThe Skip query operator ignore the specified number of input elements\
+    \ from the start of the input sequence and return the remainder.\n\nThe following\
+    \ code code skips over the first three elements and returns the rest:\n\n```\n\
+    Ingredient[] ingredients = {\n    new Ingredient {Name = \"Sugar\", Calories =\
+    \ 500};\n    new Ingredient {Name = \"Egg\", Calories = 100};\n    new Ingredient\
+    \ {Name = \"Milk\", Calories = 150};\n    new Ingredient {Name = \"Flour\", Calories\
+    \ = 50};\n    new Ingredient {Name = \"Butter\", Calories = 200}\n}\nIEnumerable<Ingredient>\
+    \ query = ingredients.Skip(3);\n\nforeach (var ingredient in query) {\n    Console.WriteLine(ingredient.Name);\n\
+    }\n```\n\nThis produces the following output:\n\nFlour\nButter\n\n# Query expression\
+    \ usage\n\nThere is no keyword for Skip when using the query expression style;\
+    \ however, mixed style can be used.\n\n# Using Skip and Take for result set paging\n\
+    \nWhen used together, the Skip and Take query operators can implement the paging\
+    \ of result sets for display to users, as demonstrated in the following code.\n\
+    \n```\nIngredient[] ingredients = {\n    new Ingredient {Name = \"Sugar\", Calories\
+    \ = 500};\n    new Ingredient {Name = \"Egg\", Calories = 100};\n    new Ingredient\
+    \ {Name = \"Milk\", Calories = 150};\n    new Ingredient {Name = \"Flour\", Calories\
+    \ = 50};\n    new Ingredient {Name = \"Butter\", Calories = 200}\n}\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nIEnumerable<Ingredient> firstPage = ingredients.Take(2);\n\nIEnumerable<Ingredient>\
+    \ secondPage = ingredients\n  .Skip(2)\n  .Take(2);\n\nIEnumerable<Ingredient>\
+    \ thirdPage = ingredients\n  .Skip(4)\n  .Take(2);\n\nConsole.WriteLine(\"Page\
+    \ One:\");\\nforeach (var ingredient in firstPage)\n{\n  Console.WriteLine(\"\
+    \ - \" + ingredient.Name);\n}\n\nConsole.WriteLine(\"Page Two:\");\\nforeach (var\
+    \ ingredient in secondPage)\n{\n  Console.WriteLine(\" - \" + ingredient.Name);\n\
+    }\n\nConsole.WriteLine(\"Page Three:\");\\nforeach (var ingredient in thirdPage)\n\
+    {\n  Console.WriteLine(\" - \" + ingredient.Name);\n}\n```\n\nThis produces the\
+    \ following output:\n\n+   Page One:\n- Sugar\n- Egg\nPage Two:\n- Milk\n- Flour\n\
+    Page Three:\n- Butter\n\n# SkipWhile\n\nLike Takewhile, the SkipWhile query operator\
+    \ uses a predicate to evaluate each element in the input sequence. Skipwhile ignore\
+    \ items in the input sequence until the supplied predicate returns false.\n\n\
+    The following code will skip input elements until \"Milk\" is encountered; at\
+    \ this point the predicate x => x.Name != \"Milk\" becomes false, and the remainder\
+    \ of the ingredients will be returned."
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "```\nIngredient[] ingredients = {\n  new Ingredient {Name = \"Sugar\", Calories\
+    \ = 500},\n  new Ingredient {Name = \"Egg\", Calories = 100},\n  new Ingredient\
+    \ {Name = \"Milk\", Calories = 150},\n  new Ingredient {Name = \"Flour\", Calories\
+    \ = 50},\n  new Ingredient {Name = \"Butter\", Calories = 200}\n};\n```\n\nIEnumerable<Ingredient>\
+    \ query = ingredients.SkipWhile(x => x.Name != \"Milk\");\n\n```\nforeach (var\
+    \ ingredient in query) {\n  Console.WriteLine(ingredient.Name);\n}\n```\n\nThis\
+    \ produces the following output:\n\nMilk\nFlour\nButter\n\nJust as with TakeWhile,\
+    \ there is an overload of SkipWhile that allows the positional index of the input\
+    \ element to be used.\n\n# Query expression usage\n\nThere is no keyword for SkipWhile\
+    \ when using the query expression style; however, mixed style can be used.\n\n\
+    # Ordering Operators\n\nThe ordering query operators return the same number of\
+    \ elements as the input sequence, but arranged in a (potentially) different order.\n\
+    \n# OrderBy\n\nThe OrderBy query operator sorts the input sequence by comparing\
+    \ the elements in the input sequence using a specified key."
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "The following code shows the sorting of a simple input sequence of strings.\
+    \ In this example, the key is the string itself as specified by the lambda expression\
+    \ x => x.\n\n```\nstring[] ingredients = {\n  \"Sugar\",\n  \"Egg\",\n  \"Milk\"\
+    ,\n  \"Flour\",\n  \"Butter\"\n};\n```\n\n```\nvar query = ingredients.OrderBy(x\
+    \ => x);\n\nforeach (var item in query) {\n  Console.WriteLine(item);\n}\n```\n\
+    \nThis produces the following output:\n\nButter\nEgg\nFlour\nMilk\nSugar\n\nThe\
+    \ lambda expression that is used to specify the sorting key can specify a property\
+    \ of the input element itself, as the following code example shows.\n\n```\nIngredient[]\
+    \ ingredients = {\n  new Ingredient(Name = \"Sugar\", Calories = 500),\n  new\
+    \ Ingredient(Name = \"Egg\", Calories = 100),\n  new Ingredient(Name = \"Milk\"\
+    , Calories = 150),\n  new Ingredient(Name = \"Flour\", Calories = 50),\n  new\
+    \ Ingredient(Name = \"Butter\", Calories = 200)\n};\n```\n\n```\nvar query = ingredients.OrderBy(x\
+    \ => x.Calories);\n```\n\n```\nforeach (var item in query) {\n  Console.WriteLine(item.Name\
+    \ + \" \" \" + item.Calories);\n}\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "In the preceding code, the lambda expression x => x.Calories is selecting the\
+    \ Calories property to be the key that is sorted on.\n\nThis produces the following\
+    \ output:\n\nFlour 50\nEgg 100\nMilk 150\nButter 200\nSugar 500\n\n# Query expression\
+    \ usage\n\nThe orderby keyword is used when using the query expression style,\
+    \ as shown in the following code.\n\n```\nvar query = from i in ingredients\n\
+    \      orderby i.Calories\n      select i;\n```\n\n# ThenBy\n\nThe ThenBy query\
+    \ operator can be chained one or multiple times following an initial OrderBy.\n\
+    The ThenBy operator adds additional levels of sorting. In the following code,\
+    \ the ingredients are first sorted with the initial OrderBy sort (sorting into\
+    \ calorie order); this sorted sequence is then further sorted by ingredient name\
+    \ while maintaining the initial calorie sort.\n\n```\nIngredient[] ingredients\
+    \ =\n(\new Ingredient (Name = \"Sugar\", Calories = 500),\nnew Ingredient (Name\
+    \ = \"Milk\", Calories = 100),\nnew Ingredient {Name = \"Egg\", Calories = 100},\n\
+    new Ingredient {Name = \"Flour\", Calories = 500},\nnew Ingredient {Name = \"\
+    Butter\", Calories = 200}\n);\n```\n\n```\nvar query = ingredients.OrderBy(x =>\
+    \ x.Calories)\n      .ThenBy(x => x.Name);\n```\n\n```\nforeach (var item in query)\n\
+    (\nConsole.WriteLine(item.Name + \" \" + item.Calories);\n);\n```"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'This produces the following output:
+
+
+    ```
+
+    Egg 100
+
+    Milk 100
+
+    Butter 200
+
+    Flour 500
+
+    Sugar 500
+
+    ```
+
+
+    Notice that in the original input sequence, "Milk" came before "Egg," but because
+    of the Then operator, in the output the ingredients are sorted by name within
+    matching calorie values.
+
+
+    # Query expression usage
+
+
+    The orderby keyword is used when using the query expression style, rather than
+    a single sort expression, subsequent sort expressions are added as a comma-separated
+    list, as shown in this code.
+
+
+    ```
+
+    var query = from i ingredients
+
+    orderby i.Calories, i.Name
+
+    select i;
+
+    ```
+
+
+    # OrderByDescending
+
+
+    The OrderByDescending query operator works in the same fashion as the OrderBy
+    operator, except that the results are returned in the reverse order, as the following
+    code demonstrates.
+
+
+    ```
+
+    Ingredient[] ingredients =
+
+    {
+
+    new Ingredient (Name = "Sugar", Calories = 500),
+
+    new Ingredient (Name = "Milk", Calories = 100),
+
+    new Ingredient (Name = "Egg", Calories = 100),
+
+    new Ingredient (Name = "Flour", Calories = 500),
+
+    new Ingredient (Name = "Butter", Calories = 200)
+
+    }
+
+    ```
+
+
+    ```
+
+    var query = ingredients.OrderByDescending(x => x.Calories);
+
+    ```
+
+
+    ```
+
+    foreach (var item in query)
+
+    {
+
+    Console.WriteLine(item.Name + " " " + item.Calories);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "This produces the following output:\n\n```\nSugar 500\nFlour 500\nButter 200\n\
+    Milk 100\nEgg 100\n```\n\nNote that this time the calorie numbers are in descending\
+    \ order.\n\n# Query expression usage\n\nThe descending keyword is used when using\
+    \ the query expression style, and is applied after the sort expression itself,\
+    \ as shown in the following code.\n\n```\nvar query = from i in ingredients\n\
+    \              orderby i.Calories descending\n              select i;\n```\n\n\
+    # ThenByDescending\n\nThe ThenByDescending query operator follows the same usage\
+    \ as the ThenBy operator, and returns results in reverse sort order.\n\nThe following\
+    \ code shows the ingredients being sorted by calorie (in ascending order), by\
+    \ the ingredient names, but this time the names are sorted in descended order.\n\
+    \n```\nIngredient[] ingredients = (\n  new Ingredient {Name = \"Flour\", Calories\
+    \ = 500},\n  new Ingredient {Name = \"Sugar\", Calories = 500},\n  new Ingredient\
+    \ {Name = \"Egg\", Calories = 100},\n  new Ingredient {Name = \"Milk\", Calories\
+    \ = 100},\n  new Ingredient {Name = \"Butter\", Calories = 200}\n);\nvar query\
+    \ = ingredients.OrderBy(x => x.Calories).ThenByDescending(x => x.Name);\n```\n\
+    \n```\nforeach (var item in query) {\n  Console.WriteLine(item.Name + \" \" +\
+    \ item.Calories);\n}\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "This produces the following output:\n\n```\nMilk 100\nEgg 100\nButter 200\n\
+    Sugar 500\nFlour 500\n```\n\nNotice here that in the input sequence, \"Flour\"\
+    \ comes before \"Sugar,\" but because of the ThenDescending, they are reversed\
+    \ in the output.\n\n# Query expression usage\n\nThe descending keyword is used\
+    \ when using the query expression style, as shown in the following code.\n\n```\n\
+    var query = from in ingredients\n    orderby i.Calories, i.Name descending\n \
+    \   select i;\n```\n\n# Reverse\n\nThe Reverse query operator simply takes the\
+    \ input sequence and returns the elements in the reverse order in the output sequence;\
+    \ so, for example, the first element in the input sequence will become the last\
+    \ element in the output sequence.\n\n```\nchar[] letters={'A', 'B', 'C'};\n\n\
+    var query = letters.Reverse();\n\nforeach (var item in query)\n{\n    Console.WriteLine(item);\n\
+    }\n```\n\nThe preceding code produces the following output:\n\n```\nC\nB\nA\n\
+    ```\n\n# Query expression usage\n\nThere is no keyword for Reverse when using\
+    \ the query expression style; however, mixed style can be used."
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Grouping Operators\n\n# GroupBy\n\nThe GroupBy query operator takes an input\
+    \ sequence and returns an output sequence of sequences (groups). The basic overload\
+    \ to the GroupBy method takes a lambda expression representing the key to create\
+    \ the groups.\n\nThe following code shows how to group all ingredients by number\
+    \ of calories.\n\n```\nIngredient[] ingredients = {\n    new Ingredient(Name =\
+    \ \"Sugar\", Calories=500),\n    new Ingredient(Name = \"Lard\", Calories=500),\n\
+    \    new Ingredient(Name = \"Butter\", Calories=500),\n    new Ingredient(Name\
+    \ = \"Egg\", Calories=100),\n    new Ingredient(Name = \"Milk\", Calories=100),\n\
+    \    new Ingredient(Name = \"Flour\", Calories=50),\n    new Ingredient(Name =\
+    \ \"Oats\", Calories=50)\n};\n```\n\n```\nIEnumerable<IGrouping<int, Ingredient>>\
+    \ query =\n    ingredients.GroupBy(x => x.Calories);\n\nforeach (IGrouping<int,\
+    \ Ingredient> group in query)\n{\n    Console.WriteLine(\"Ingredients with {0}\
+    \ calories\", group.Key);\n    foreach (Ingredient ingredient in group)\n    {\n\
+    \        Console.WriteLine(\"- {0}\", ingredient.Name);\n    }\n}\n```\n\nIn the\
+    \ preceding code the output sequence of sequences is essentially a list (IEnumerable)\
+    \ of Grouping. Each Grouping element contains the key (in this case an int for\
+    \ the calories), and the list of ingredients that have the same number of calories."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "This produces the following output:\n\n+   Ingredients with 500 calories\n\
+    - Sugar\n- Lard\n- Butter\n\n+   Ingredients with 100 calories\n- Egg\n- Milk\n\
+    \n+   Ingredients with 50 calories\n- Flour\n- Oats\n\n# Query expression usage\n\
+    \nThe **group** keyword is used when using the query expression style; we saw\
+    \ the **group** keyword use in Chapter 2, “Fluent and Query Expression Styles.\"\
+    \n\n# Set Operators\n\nThe set query operators perform set-based operations. These\
+    \ operators take two sequences representing the two “sets” and return a single\
+    \ output sequence.\n\nThe set query operators consist of the following:\n\n+ \
+    \  - Concat\n- Union\n- Distinct\n- Intersect\n- Except\n\n# Concat\n\nThe **Concat**\
+    \ query operator takes a first sequence and returns this with all the elements\
+    \ of a second sequence appended to, as shown in the following code.\n\n```\nstring[]\
+    \ applePie = {\"Apple\", \"Sugar\", \"Pastry\", \"Cinnamon\"};\nstring[] cherryPie\
+    \ = {\"Cherry\", \"Sugar\", \"Pastry\", \"Kirsch\"};\n\nIEnumerable<string> query\
+    \ = applePie.Concat(cherryPie);\nforeach (string item in query)\n{\n    Console.WriteLine(item);\n\
+    }\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "This produces the following output:\n\n+   Apple\nSugar\nPastry\nCinnamon\n\
+    Cherry\nSugar\nPastry\nKirsch\n\nNotice that any duplicate elements (such as \"\
+    Sugar\" and \"Pastry\") are preserved.\n\n# Query expression usage\n\nThere is\
+    \ no keyword for Concat when using the query expression style; however, mixed\
+    \ style can be used.\n\n# Union\n\nThe Union query operator performs a similar\
+    \ \"joining\" operation as Concat; however, any duplicate elements that exist\
+    \ in both the first and second sequence are not duplicated in the output.\n\n\
+    ```\nstring[] applePie = { \"Apple\", \"Sugar\", \"Pastry\", \"Cinnamon\" };\n\
+    string[] cherryPie = { \"Cherry\", \"Sugar\", \"Pastry\", \"Kirsch\" };\n```\n\
+    \n```\nIEnumerable<string> query = applePie.Union(cherryPie);\n\nforeach (string\
+    \ item in query)\n{\n    Console.WriteLine(item);\n}\n```\n\nThis produces the\
+    \ following output:\n\n+   Apple\nSugar\nPastry\nCinnamon\nCherry\nKirsch\n\n\
+    Notice that any duplicates (e.g. \"Sugar\" and \"Pastry\") have been removed from\
+    \ the output sequence.\n\n# Query expression usage"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "There is no keyword for Union when using the query expression style; however,\
+    \ mixed style can be used.\n\n# Distinct\n\nWhile the Distinct query operator\
+    \ may not, strictly speaking, a set operator in that it only operates on a single\
+    \ input sequence, it is included here to show how the Union operator can be simulated\
+    \ by using a Concat followed by a Distinct. Also note that the Distinct operator\
+    \ may be chained together with other query operators and not just the set-based\
+    \ operators.\n\n```\nstring[] applePie = { \"Apple\", \"Sugar\", \"Pastry\", \"\
+    Cinnamon\" };\nstring[] cherryPie = { \"Cherry\", \"Sugar\", \"Pastry\", \"Kirsch\"\
+    \ };\nIEnumerable<string> query = applePie.Concat(cherryPie).Distinct();\n\nforeach\
+    \ (string item in query)\n{\n    Console.WriteLine(item);\n}\n```\n\nThis produces\
+    \ the following output:\n\n+   - Apple\n- Sugar\n- Pastry\n- Cinnamon\n- Cherry\n\
+    - Kirsch\n\nNotice this is that same output as when using Union.\n\n# Query expression\
+    \ usage\n\nThere is no keyword for Distinct when using the query expression style;\
+    \ however, mixed style can be used.\n\n# Intersect\n\nThe Intersect query operator\
+    \ returns only those elements that exist in both the first and second input sequences.\
+    \ In the following code, the only two elements that are common to both sequences\
+    \ are \"Sugar\" and \"Pastry.\""
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "string[] applePie = { \"Apple\", \"Sugar\", \"Pastry\", \"Cinnamon\" };\nstring[]\
+    \ cherryPie = { \"Cherry\", \"Sugar\", \"Pastry\", \"Kirsch\" };\n\nIEnumerable<string>\
+    \ query = applePie.Intersect(cherryPie);\n\n```\nforeach (string item in query)\n\
+    {\n    Console.WriteLine(item);\n}\n```\n\nThis produces the following output:\n\
+    \nSugar\nPastry\n\nAlso notice here the common elements are not duplicated in\
+    \ the output sequence; we do not see “Sugar” elements, for example.\n\n# Query\
+    \ expression usage\n\nThere is no keyword for Intersect when using the query expression\
+    \ style; however, mixed style can be used.\n\n# Except\n\nThe Except query operator\
+    \ will return only those elements in the first sequence where those same elements\
+    \ do not exist in the second sequence.\n\nTake the following code:\n\nstring[]\
+    \ applePie = { \"Apple\", \"Sugar\", \"Pastry\", \"Cinnamon\" };\nstring[] cherryPie\
+    \ = { \"Cherry\", \"Sugar\", \"Pastry\", \"Kirsch\" };\n\nIEnumerable<string>\
+    \ query = applePie.Except(cherryPie);\n\n```\nforeach (string item in query)\n\
+    {\n    Console.WriteLine(item);\n}\n```\n\nThis produces the following output:\n\
+    \nApple\nCinnamon"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "Note that we do not get any elements returned from the second sequence.\n\n\
+    # Query expression usage\n\nThere is no keyword for Except when using the query\
+    \ expression style; however, mixed style can be used.\n\n# Conversion Operators\n\
+    \nThe conversion query operators convert from IEnumerable<T> sequences to other\
+    \ types of collections.\n\nThe following query operators can be used to perform\
+    \ conversion of sequences:\n\n+   * OType\n* Cast\n* ToArray\n* ToList\n* ToDictionary\n\
+    * ToLookup\n\n# OType\n\nThe OType query operator returns an output sequence containing\
+    \ only those elements of the specified type. The extension method that implements\
+    \ the OType query operator has the following signature:\n\n```\npublic static\
+    \ IEnumerable<TResult> OType<TResult>(this IEnumerable source)\n```\n\nNotice\
+    \ here the extension method is \"extending\" the non-generic type IEnumerable.\
+    \ This means that the input sequence may contain elements of different types.\n\
+    \nThe following code shows an IEnumerable (object array) containing objects of\
+    \ different types. The OType query operator can be used to return (for example)\
+    \ all the string objects. Also notice in the following code that the result of\
+    \ the query is the generic version of IEnumerable, namely IEnumerable<string>.\n\
+    \n```\nIEnumerable input = new object[]\n{\n    \"Apple\", 33, \"Sugar\", 44,\
+    \ 'a', new DateTime()\n};\n\nIEnumerable<string> query = input.OType<string>();\n\
+    \nforeach (string item in query)\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\n{\n  Console.WriteLine(item);\n}\n```\n\nThis produces the following output:\n\
+    \nApple\nSugar\n\nBecause IEnumerable<T> implements IEnumerable, OfType can also\
+    \ be used on strongly-typed sequences. The following code show a simple object-oriented\
+    \ hierarchy.\n\n```\nclass Ingredient\n{\n  public string Name { get; set; }\n\
+    }\nclass DryIngredient : Ingredient\n{\n  public int Grams { get; set; }\n}\n\
+    class WetIngredient : Ingredient\n{\n  public int Millilitres { get; set; }\n\
+    }\n```\n\nThe following code shows how OfType can be used to get a specific subtype,\
+    \ in this example getting all the WetIngredient objects:\n\n```\nIEnumerable<Ingredient>\
+    \ input = new Ingredient[]\n{\n  new DryIngredient(Name = \"Flour\\),\n  new WetIngredient(Name\
+    \ = \"Milk\\),\n  new WetIngredient(Name = \"Water\")\n};\nIEnumerable<WetIngredient>\
+    \ query = input.OfType<WetIngredient>();\nnforeach (WetIngredient item in query)\n\
+    {\n  Console.WriteLine(item.Name);\n}\n```\n\nThis produces the following output:\n\
+    \nMilk\nWater"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# Query expression usage\n\nThere is no keyword for OType when using the query\
+    \ expression style; however, mixed style can be used.\n\n# Cast\n\nLike the OType\
+    \ query operator, the Cast query operator can take an input sequence and return\
+    \ an output sequence containing elements of each type. Each element in the input\
+    \ sequence is cast to the specified type; however, unlike OType, which just ignores\
+    \ any incompatible types, if the cast is not successful, an exception will be\
+    \ thrown.\n\nThe following code shows an example of using Cast will throw an exception.\n\
+    \n```\nIEnumerable input = new object[]\n{\n    \"Apple\", 33, \"Sugar\", 44,\
+    \ 'a', new DateTime()\n}\nIEnumerable<string> query = input.Cast<string>();\n\
+    foreach (string item in query)\n{\n    Console.WriteLine(item);\n}\n```\n\nRunning\
+    \ this code will cause a \"System.InvalidCastException : Unable to cast object\
+    \ of 'System.Int32' to type 'System.String\" exception.\n\n# Query expression\
+    \ usage\n\nWhile there is no keyword for Cast when using the query expression\
+    \ style, it is supported by giving the range variable specific type, as in the\
+    \ following code.\n\n```\nIEnumerable input = new object[] {\"Apple\", \"Sugar\"\
+    , \"Flour\"};\nIEnumerable<string> query = from string i in input\nselect i;\n\
+    ```\n\nNote in the preceding code the explicit type declaration string before\
+    \ the range variable name i."
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# ToArray\n\nThe **ToArray** query operator takes an input sequence and creates\
+    \ an output array containing the elements. **ToArray** will also cause immediate\
+    \ query execution (enumeration of the input sequence) and overrides the default\
+    \ execution behavior\n\nIn the following code, the `IEnumerable<string>` is converted\
+    \ to an array of strings.\n\n```\nIEnumerable<string> input = new List<string>\
+    \ { \"Apple\", \"Sugar\", \"Flour\" };\nstring[] array = input.ToArray();\n```\n\
+    \n# Query expression usage\n\nThere is no keyword for **ToArray** when using the\
+    \ query expression style; however, mixed style can be used.\n\n# ToList\n\nThe\
+    \ **ToList** query operator, like the **ToArray** operator, usually bypasses deferred\
+    \ execution. Whereas **ToArray** creates an array representing the input elements,\
+    \ **ToList**, as its name suggests, instead outputs a List<T>.\n\n```\nIEnumerable<string>\
+    \ input = new[] { { \"Apple\", \"Sugar\", \"Flour\" };\nList<string> list = input.ToList();\n\
+    ```\n\n# Query expression usage\n\nThere is no keyword for **ToList** when using\
+    \ the query expression style; however, mixed style can be used.\n\n# ToDictionary\n\
+    \nThe **ToDictionary** query operator converts an input sequence into a generic\
+    \ **Dictionary<TKey, TValue>.\n\nThe simplest overload of the **ToDictionary**\
+    \ method takes a lambda expression representing a function, which is used for\
+    \ the key of each item in the resulting Dictionary.\n\n```\nIEnumerable<Recipe>\
+    \ recipes = new[]\n{\n    new Recipe {Id = 1, Name = \"Apple Pie\", Rating = 5},\n\
+    \    new Recipe {IdId = 2, Name = \"Cherry Pie\", Rating = 2},\n    new Recipe\
+    \ {IdId = 3, Name = \"Beef Pie\", Rating = 3}\n};\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\nDictionary<int, Recipe> dict = recipes.ToDictionary(x => x.Id);\nforeach\
+    \ (KeyValuePair<int, Recipe> item in dict)\n{\n    Console.WriteLine(\"Key = {0},\
+    \ Recipe = {1}\", item.Key, item.Value.Name);\n}\n```\n\nIn the preceding code,\
+    \ the Key of the items in the resultant Dictionary is of type int and is set to\
+    \ the Id Recipe. The Value of each item in the Dictionary represents the Recipe\
+    \ itself."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "Running the preceding code produces the following output:\n\nKey = 1, Recipe\
+    \ = Apple Pie\nKey = 2, Recipe = Cherry Pie\nKey = 3, Recipe = Beef Pie\n\n# Query\
+    \ expression usage\n\nThere is no keyword for ToDictionary when using the query\
+    \ expression style; however, mixed style can be used.\n\n# ToLookup\n\nThe ToLookup\
+    \ query operator works in a similar fashion to the ToDictionary operator, rather\
+    \ than producing a dictionary, it creates an instance of an ILookup.\n\nThe following\
+    \ code shows the creation of a lookup that groups recipes into similar ratings.\
+    \ In this example, the key comes from the byte rating.\n\n```\nIEnumerable<Recipe>\
+    \ recipes = new[]\n{\n    new Recipe {Id = 1, Name = \"Apple Pie\", Rating = 5},\n\
+    \    new Recipe {Id = 1, Name = \"Banana Pie\", Rating = 5},\n    new Recipe {Id\
+    \ = 2, Name = \"Cherry Pie\", Rating = 2},\n    new Recipe {Id = 3, Name = \"\
+    Beef Pie\", Rating = 3}\n};\n\nILookup<byte, Recipe> look = recipes.ToLookup(x\
+    \ => x.Rating);\n\nforeach (IGrouping<byte, Recipe> ratingGroup in look) \n{\n\
+    \    byte rating = ratingGroup.Key;\n    Console.WriteLine(\"{0}\", rating);\n\
+    \    foreach (var recipe in ratingGroup)\n    {\n        Console.WriteLine(\"\
+    - {0}\", recipe.Name);\n    }\nn\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "This produces the following output:\n\n+   Rating 5\n- Apple Pie\n- Banana\
+    \ Pie\nRating 2\n- Cherry Pie\nRating 3\n- Beef Pie\n\nThere is no keyword for\
+    \ ToLookup using the query expression style; however, mixed style can be used.\n\
+    \n# Element Operators\n\nThe element operators take an input sequence and return\
+    \ a single element from that sequence, or some other default single value. In\
+    \ this way, the element operators do not themselves return sequences.\n\n# First\n\
+    \nThe First query operator simply returns the initial element in the input sequence,\
+    \ as the following code demonstrates.\n\n```\nIngredient[] ingredients = {\n \
+    \ new Ingredient (Name = \"Sugar\", Calories = 500);\n  new Ingredient (Name =\
+    \ \"EGG\", Calories = 100);\n  new Ingredient (Name = \"Milk\", Calories = 150);\n\
+    \  new Ingredient (Name = \"Flour\", Calories = 50);\n  new Ingredient (Name =\
+    \ \"Butter\", Calories = 500)\n};\n```\n\n```\nIngredient element = ingredients.First();\n\
+    Console.WriteLine(element.Name);\n```\n\nThis produces the following output:\n\
+    \nSugar\n\nAn overload of First allows a predicate to be specified. This will\
+    \ return the first item in the input sequence that satisfies this predicate. The\
+    \ following code shows how to find the first Ingredient element that has a calorie\
+    \ value of 150."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Ingredient[] ingredients =\n\n```\n{\n    new Ingredient {Name = \"Sugar\"\
+    , Calories = 500},\n    new Ingredient {Name = \"Egg\", Calories = 100},\n   \
+    \ new Ingredient {Name = \"Milk\", Calories = 150},\n    new Ingredient {Name\
+    \ = \"Flour\", Calories = 50},\n    new Ingredient {Name = \"Butter\", Calories\
+    \ = 500}\n};\n```\n\n```\nIngredient element = ingredients.First(x => x.Calories\
+    \ == 150);\n```\n\n```\nConsole.WriteLine(element.Name);\n```\n\nThis produces\
+    \ the following output:\n\nMilk\n\nIf the input sequence contains zero elements,\
+    \ the use of First will result in an exception.\n\nThe following code will result\
+    \ in an exception: \"System.InvalidOperationException : Sequence contains no elements\"\
+    .\n\n```\nIngredient[] ingredients = {};\n```\n\n```\nIngredient element = ingredients.First();\n\
+    ```\n\nIf First is used with a predicate and that predicate cannot be satisfied\
+    \ by any element in the input sequence, an exception will also be thrown. The\
+    \ following code produces the exception: \"System.InvalidOperationException :\
+    \ Sequence contains no matching element.\" This is because no Ingredient exists\
+    \ with 9,999 calories.\n\n# Ingredient[] ingredients =\n\n```\n{\n    new Ingredient\
+    \ {Name = \"Sugar\", Calories = 500},\n    new Ingredient {Name = \"Egg\", Calories\
+    \ = 100},\n    new Ingredient {Name = \"Milk\", Calories = 150},\n    new Ingredient\
+    \ {Name = \"Flour\", Calories = 50},\n    new Ingredient {Name = \"Butter\", Calories\
+    \ = 500}\n};\n```\n\n```\nIngredient element = ingredients.First(x => x.Calories\
+    \ == 9999);\n```\n\n# Query expression usage\n\nThere is no keyword for First\
+    \ when using the query expression; however, mixed style can be used."
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# FirstOrDefault\n\nThe FirstOrDefault query operator works in a similar way\
+    \ to First, but instead of an exception being thrown, the default value for the\
+    \ element type is returned. This default value will be null for reference types,\
+    \ zero for numeric types, and false for Boolean types.\n\nThe following code uses\
+    \ FirstOrDefault with an empty sequence:\n\n```\nIngredient[] ingredients = {\
+    \ };\nIngredient element = ingredients.FirstOrDefault();\nConsole.WriteLine(element\
+    \ == null);\n```\n\nThis produces the following output:\n\nTrue\n\nNotice that\
+    \ no exception is thrown, and the resulting element is set to null. The same behavior\
+    \ is true for the version of FirstOrDefault that takes a predicate, as the following\
+    \ examples.\n\n```\nIngredient[] ingredients = {\n    new Ingredient {Name = \"\
+    Sugar\", Calories = 500},\n    new Ingredient {Name = \"Egg\", Calories = 100},\n\
+    \    new Ingredient {Name = \"Milk\", Calories = 150},\n    new Ingredient {Name\
+    \ = \"Flour\", Calories = 50},\n    new Ingredient {Name = \"Butter\", Calories\
+    \ = 500}\n}\n```\n\n```\nIngredient element = ingredients.FirstOrDefault(x =>\
+    \ x.Calories == 9999);\nConsole.WriteLine(element == null);\n```\n\nThis produces\
+    \ the following output:\n\nTrue\n\n# Query expression usage\n\nThere is no keyword\
+    \ for FirstOrDefault when using the query expression style; however, mixed style\
+    \ can be used."
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "# Last\n\nThe Last query operator returns the final element in the input sequence.\
+    \ As with First, there is an overloaded version that also takes a predicate. This\
+    \ predicate version will return the last element in the sequence that satisfies\
+    \ the predicate. Also as with First, an exception will be thrown if the input\
+    \ sequence contains zero elements, or if the predicate cannot be satisfied by\
+    \ any element.\n\nThe following code shows the predicate version of Last.\n\n\
+    ```\nIngredient[] ingredients = {\n    new Ingredient(Name = \"Sugar\", Calories\
+    \ = 500);\n    new Ingredient(Name = \"Egg\", Calories = 100);\n    new Ingredient(Name\
+    \ = \"Milk\", Calories = 50);\n    new Ingredient(Name = \"Flour\", Calories =\
+    \ 50);\n    new Ingredient(Name = \"Butter\", Calories = 500);\n};\n```\n\nIngredient\
+    \ element = ingredients.Last(x => x.Calories == 50);\n\nConsole.WriteLine(element.Name);\n\
+    \nThis produces the following output:\n\nFlour\n\nNotice here that \"Flour\" is\
+    \ not the last element in the sequence as a whole, but rather the last element\
+    \ that has 50 calories.\n\n# Query expression usage\n\nThere is no keyword for\
+    \ Last when using the query expression style; however, mixed style can be used.\n\
+    \n# LastOrDefault\n\nThe LastOrDefault query operator works in a similar way to\
+    \ Last, and also has an overloaded version that takes a predicate.\n\nLike FirstOrDefault,\
+    \ if the input sequence is empty or no element satisfies the predicate, rather\
+    \ than an exception being thrown, the default value for the element type is returned\
+    \ instead.\n\n# Query expression usage\n\nThere is no keyword for LastOrDefault\
+    \ when using the query expression style; however, mixed style can be used."
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# Single\n\nThe Single query operator returns the only element in the input\
+    \ sequence. If the input sequence contains more than one element\n\nThe following\
+    \ code uses Single to retrieve the only element in the input sequence.\n\n```\n\
+    Ingredient[] ingredients = {\n    new Ingredient {Name = \"Sugar\", Calories =\
+    \ 500};\n}\nIngredient element = ingredients.Single();\nConsole.WriteLine(element.Name);\n\
+    ```\n\nThis produces the following output:\n\nSugar\n\nThere is an overload of\
+    \ Single that allows a predicate to be specified. The predicate will locate and\
+    \ return the single element that matches it. If there is more than one element\
+    \ in the input sequence that matches the predicate, then an exception will be\
+    \ thrown: \"System.InvalidOperationException : Sequence contains more than one\
+    \ element.\".\n\nThe following code shows how to use the predicate version of\
+    \ Single. Even though there is more than one element in the input sequence, because\
+    \ there is not more than one element that matches the predicate, an exception\
+    \ will not be thrown.\n\n```\nIngredient[] ingredients = {\n    new Ingredient\
+    \ {Name = \"Sugar\", Calories = 500};\n    new Ingredient {Name = \"Butter\",\
+    \ Calories = 150};\n    new Ingredient {Name = \"Milk\", Calories = 500};\n}\n\
+    Ingredient element = ingredients.Single(x => x.Calories == 150);\nConsole.WriteLine(element.Name);\n\
+    ```\n\nThis produces the following output:\n\nButter"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "If the predicate is changed (as in the following code) so that it matches more\
+    \ than one element, then an exception will be thrown.\n\n```\nIngredient[] ingredients\
+    \ =\\ {\n    new Ingredient {Name = \"Sugar\", Calories = 500},\n    new Ingredient\
+    \ {Name = \"Butter\", Calories = 150},\n    new Ingredient {Name = \"Milk\", Calories\
+    \ = 500}\n}\n```\n\nIngredient element = ingredients.Single(x => x.Calories ==\
+    \ 500);\n\nNotice the predicate in the preceding code will find two ingredients\
+    \ with calories of 500, there will be an exception.\n\n# Query expression usage\n\
+    \nThere is no keyword for Single when using the query expression style; however,\
+    \ mixed style can be used.\n\n# SingleOrDefault\n\nThe SingleOrDefault query operator\
+    \ works in a similar fashion to Single. However, rather than throwing an exception\
+    \ when there are zero input elements, the default for the type is returned. The\
+    \ predicate version is being used and no matching elements are found, the default\
+    \ value is again returned, rather than an exception (as happens with Single).\
+    \ To summarize, SingleOrDefault to not throw an exception, either zero or one\
+    \ element must be found. Zero elements more than one element will result in an\
+    \ exception.\n\nThe following code shows the predicate version of SingleOrDefault\
+    \ being used where there will be matching elements found for 9,999.\n\n```\nIngredient[]\
+    \ ingredients =\\ {\n    new Ingredient {Name = \"Sugar\", Calories = 500},\n\
+    \    new Ingredient {Name = \"Egg\", Calories = 100},\n    new Ingredient {Name\
+    \ = \"Milk\", Calories = 500}\n}\nIngredient element = ingredients.SingleOrDefault(x\
+    \ => x.Calories == 9999);\nConsole.WriteLine(element == null);\n```\n\nThis produces\
+    \ the following output:\n\nTrue"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: Note that no exception is thrown, rather the default value (null) is returned.
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# Query expression usage\n\nThere is no keyword for SingleOrDefault when using\
+    \ the query expression style; however, mixed style can be used.\n\n# ElementAt\n\
+    \nThe ElementAt query operator returns the element that exists at the specified\
+    \ position in the input sequence.\n\nThe following code selects the third element\
+    \ from the input sequence.\n\n```\nIngredient[] ingredients =\n    new Ingredient\
+    \ (Name = \"Sugar\", Calories = 500);\n    new Ingredient {Name = \"Egg\", Calories\
+    \ = 100};\n    new Ingredient {Name = \"Milk\", Calories = 500};\n};\n```\n\n\
+    ```\nIngredient element = ingredients.ElementAt(2);\nConsole.WriteLine(element.Name);\n\
+    ```\n\nThis produces the following output:\n\nMilk\n\nNotice that the value passed\
+    \ to ElementAt is a zero-based index; for example, to select the first element,\
+    \ the value would be 0.\n\nIf the value passed to ElementAt tries to select an\
+    \ element that is greater than the number of elements in the input sequence, an\
+    \ exception will be thrown: \"Index was out of range. Must be non-negative and\
+    \ less than the size of the collection.\"\n\n# Query expression usage\n\nThere\
+    \ is no keyword for ElementAt when using the query expression style; however,\
+    \ mixed style can be used.\n\n# ElementAtOrDefault\n\nThe ElementAtOrDefault query\
+    \ operator works in a similar way to ElementAt, but rather than throw an exception\
+    \ if the value passed to it exceeds the size of the input sequence, it will return\
+    \ the default value for the input type. The following code demonstrates this.\n\
+    \n```\nIngredient[] ingredients =\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '```
+
+    {
+
+    new Ingredient {Name = "Sugar", Calories = 500},
+
+    new Ingredient {Name = "Egg", Calories = 100},
+
+    new Ingredient {Name = "Milk", Calories = 50}
+
+    }
+
+    Ingredient element = ingredients.ElementAtDefault(4);
+
+    Console.WriteLine(element == null);
+
+    ```
+
+
+    This produces the following output:
+
+
+    True
+
+
+    # Query expression usage
+
+
+    There is no keyword for ElementAtDefault when using the query expression style;
+    however, mixed style can be used.
+
+
+    # DefaultEmpty
+
+
+    The DefaultEmpty query operator takes an input sequence and does one of two things.
+    If the input sequence contains at least one element, then the input sequence is
+    returned without any changes. If, however, the input sequence contains zero elements,
+    the output sequence returned will not be empty; it will contain a single element
+    with a default value.
+
+
+    The following code shows what happens when the input sequence contains elements.
+
+
+    ```
+
+    Ingredient[] ingredients = {
+
+    new Ingredient {Name = "Sugar", Calories = 500},
+
+    new Ingredient {Name = "Egg", Calories = 100},
+
+    new Ingredient {Name = "Milk", Calories = 50}
+
+    }
+
+    enumerable<Ingredient> query = ingredients.DefaultEmpty();
+
+    foreach (Ingredient item in query) {
+
+    Console.WriteLine(item.Name);
+
+    }
+
+    ```
+
+
+    This produces the following output:'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "Sugar\nEgg\nMilk\n\nNote this is exactly the same as the input sequence.\n\n\
+    The following code shows the second mode of operation where the input sequence\
+    \ contains zero elements.\n\n```\nIngredient[] ingredients = {};\nIEnumerable<Ingredient>\
+    \ query = ingredients.DefaultEmpty();\nforeach (Ingredient item in query)\n{\n\
+    \    Console.WriteLine(item == null);\n}\n```\n\nThis produces the output:\n\n\
+    True\n\nNotice here that the input sequence was empty, but the output sequence\
+    \ contains a single null element, a null being the default value for Ingredient\
+    \ (which is a reference type).\n\n# Query expression usage\n\nThere is no keyword\
+    \ for DefaultEmpty when using the query expression style; however, mixed style\
+    \ can be used.\n\n# Generation Operators\n\nThe generation query operators create\
+    \ sequences for us.\n\nThe generation operators differ from the majority of the\
+    \ other standard query operators in two main ways. The first is that they do not\
+    \ take an input sequence; the second is that they are not implemented as extension\
+    \ methods, but rather as static methods of the Enumerable classes.\n\nFor an example,\
+    \ the following code shows the signature of the Empty query operator.\n\n```\n\
+    public static IEnumerable<TResult> Empty<TResult>()\n```\n\n# Empty\n\nThe Empty\
+    \ query operator creates an empty sequence (zero elements) of a specified type."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: The following code shows the creation of empty sequence of **Ingredient**. Notice
+    that the type of the empty sequence we want is specified as a generic type parameter
+    of the **Empty** method.
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\nIEnumerable<Ingredient> ingredients = Enumerable.Empty<Ingredient>();\n\
+    \nConsole.WriteLine(ingredients.Count());\n```\n\nThis produces the following\
+    \ output:\n\n0\n\n# Query expression usage\n\nThere is no keyword for Empty when\
+    \ using the query expression style; however, mixed style can be used.\n\n# Range\n\
+    \nThe Range query operator creates a sequence of integer values. When using Range,\
+    \ the first parameter specified is the starting number of the range to be generated.\
+    \ The second parameter is the total number of elements to generate, starting at\
+    \ the first parameter value.\n\n```\nIEnumerable<int> fiveToTen = Enumerable.Range(5,\
+    \ 6);\nforeach (int num in fiveToTen)\n{\n    Console.WriteLine(num);\n}\n```\n\
+    \nThis produces the following output:\n\n5\n6\n7\n8\n9\n10\n\nNotice that a total\
+    \ of six elements have been generated, as specified by the second parameter in\
+    \ the call to Range.\n\n# Query expression usage\n\nThere is no keyword for Range\
+    \ when using the query expression style; however, mixed style can be used."
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# Repeat\n\nThe Repeat query operator repeats a specified integer a specified\
+    \ number of times, as the following code shows.\n\n```\nIEnumerable<int> nums\
+    \ = Enumerable.Repeat(42, 5);\nforeach (int num in nums)\n{\n  Console.WriteLine(num);\n\
+    }\n```\n\nThis produces the following output:\n\n42\n42\n42\n42\n42\n\n# Query\
+    \ expression usage\n\nThere is no keyword for Repeat when using the query expression\
+    \ style; however, mixed style can be used.\n\n# Quantifier Operators\n\nThe Contains\
+    \ query operator evaluates the elements in the input sequence and returns true\
+    \ if a specified value exists.\n\n```\nint[] nums = {1, 2, 3};\nbool isTwoThere\
+    \ = nums.Contains(2);\nbool isFiveThere = nums.Contains(5);\n\nConsole.WriteLine(isTwoThere);\n\
+    Console.WriteLine(isFiveThere);\n```\n\n# Contains"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: 'This produces the following output:
+
+
+    True
+
+    False
+
+
+    # Query expression usage
+
+
+    There is no keyword for Contains when using the query expression style; however,
+    mixed style
+
+    can be used.
+
+
+    # Any
+
+
+    There are two overloads of the Any operator. The first version simply returns
+    true if the
+
+    input sequence contains at least one element. The second version of Any takes
+    a predicate as
+
+    parameter and returns true if at least one element in the input sequence satisfies
+    the predicate.
+
+
+    The following code demonstrates the simple version of Any.
+
+
+    ```
+
+    int[] nums = { 1, 2, 3 };
+
+    IEnumerable<int>nNums = Enumerable.Empty<int>();
+
+    Console.WriteLine( nums.Any() );
+
+    Console.WriteLine( nNums.Any() );
+
+    ```
+
+
+    This produces the following output:
+
+
+    True
+
+    False
+
+
+    The following code shows the predicate overload of Any to determine if a sequence
+    contains
+
+    any even numbers.
+
+
+    ```
+
+    int[] nums = { 1, 2, 3 };
+
+    bool areAnyEvenNumbers = nums.Any(x => x % 2 == 0);
+
+    Console.WriteLine(areAnyEvenNumbers);
+
+    ```
+
+
+    This produces the following output:
+
+
+    True
+
+
+    # Query expression usage
+
+
+    There is no keyword for Any when using the query expression style; however, mixed
+    style can
+
+    be used.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# All
+
+
+    The All query operator takes a predicate and evaluates the elements in the input
+    sequence to determine if every element satisfies this predicate.
+
+
+    The following code checks that a sequence of ingredients constitutes a low-fat
+    recipe.
+
+
+    ```
+
+    Ingredient[] ingredients =
+
+    {
+
+    new Ingredient {Name = "Sugar", Calories = 500},
+
+    new Ingredient {Name = "Egg", Calories = 100},
+
+    new Ingredient {Name = "Milk", Calories = 150},
+
+    new Ingredient {Name = "Flour", Calories = 50},
+
+    new Ingredient {Name = "Butter", Calories = 400}
+
+    };
+
+
+    bool isLowFatRecipe = ingredients.All(x => x.Calories < 200);
+
+
+    Console.WriteLine(isLowFatRecipe);
+
+    ```
+
+
+    This produces the following output:
+
+
+    False
+
+
+    > Note: As soon as an element is found that does not satisfy the predicate, All()
+    returns false and does not examine any subsequent elements.
+
+
+    # Query expression usage
+
+
+    There is no keyword for All when using the query expression style; however, mixed
+    style can be used.
+
+
+    # SequenceEqual
+
+
+    The SequenceEqual query operator compares two sequences to see if they both have
+    exactly the elements in the same order.
+
+
+    The following code compares two identical sequences:
+
+
+    ```
+
+    IEnumerable<int> sequence1 = new[] { 1, 2, 3 };
+
+    IEnumerable<int> sequence2 = new[] { 1, 2, 3 };
+
+
+    bool isSeqEqual = sequence1.SequenceEqual(sequence2);
+
+
+    Console.WriteLine(isSeqEqual);
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'This produces the following output:
+
+
+    True
+
+
+    If the two sequences are being compared contain the same elements, but in different
+    orders, then SequenceEqual will return false, as the following code demonstrates.
+
+
+    ```
+
+    IEnumerable<int> sequence1 = new[] { 1, 2, 3 };
+
+    IEnumerable<int> sequence2 = new[] { 3, 2, 1 };
+
+
+    bool isSequenceEqual = sequence1.SequenceEqual(sequence2);
+
+
+    Console.WriteLine(isSequenceEqual);
+
+    ```
+
+
+    This produces the following output:
+
+
+    False
+
+
+    Notice here that even though the sequences contain the same values (1, 2, 3) the
+    order is different, so SequenceEqual returns false.
+
+
+    # Query expression usage
+
+
+    There is no keyword for SequenceEqual when using the query expression style; however,
+    mixed style can be used.
+
+
+    # Aggregate Operators
+
+
+    The aggregate operators take an input sequence and return a single scalar value.
+    The returned value is not one of the elements from the input sequence, but rather
+    some derived value computed from the elements in the input sequence.
+
+
+    The aggregate query operators are:
+
+
+    +   - Count
+
+    - LongCount
+
+    - Sum
+
+    - Min
+
+    - Max
+
+    - Average
+
+    - Aggregate
+
+
+    # Count
+
+
+    The Count query operator simply returns the number of elements contained in the
+    input sequence. There are two overloads, one of which accepts a predicate.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'The following example shows the non-predicate version.
+
+
+    ```
+
+    int[] nums = {1, 2, 3};
+
+    int numberOfElements = nums.Count();
+
+    Console.WriteLine(numberOfElements);
+
+    ```
+
+
+    This produces the following output:
+
+
+    3
+
+
+    When a predicate is supplied, the count is restricted to those elements satisfying
+    the predicate. The following code shows a predicate being used to count all the
+    even numbers in the input sequence.
+
+
+    ```
+
+    int[] nums = {1, 2, 3 };
+
+    int numberOfEvenElements = nums.Count(x => x % 2 == 0);
+
+    Console.WriteLine(numberOfEvenElements);
+
+    ```
+
+
+    This produces the following output:
+
+
+    1
+
+
+    > Tip: Using Any() instead of Count() != 0 usually conveys the intent of the code
+    better, and in some circumstances, can perform better.
+
+
+    # Query expression usage
+
+
+    There is no keyword for Count when using the query expression style; however,
+    mixed style can be used.
+
+
+    # LongCount
+
+
+    The LongCount query operator provides the same features as Count (including a
+    predicate overload), instead of returning an int, it returns a long, so it can
+    be used with very long input sequences.
+
+
+    # Query expression usage
+
+
+    There is no keyword for LongCount when using the query expression style; however,
+    mixed style can be used.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Sum
+
+
+    The Sum query operator adds all the elements of the input sequence and returns
+    the total result.
+
+
+    The following code demonstrates adding a sequence of ints.
+
+
+    ```
+
+    int[] nums = { 1, 2, 3 };
+
+    int total = nums.Sum();
+
+    Console.WriteLine(total);
+
+    ```
+
+
+    This produces the following output:
+
+
+    6
+
+
+    The Sum query operator is implemented as individual extension methods for IEnumerable<T>
+    (for example, IEnumerable<long>) for each of the numeric types (nullable equivalents).
+    This means that in order to use Sum on non-numeric sequences, overload must be
+    used to select a numeric value from the non-numeric input elements. The following
+    code shows how to Sum the calorie values of a sequence of Ingredient.
+
+
+    ```
+
+    Ingredient[] ingredients = {
+
+    new Ingredient {Name = "Sugar", Calories = 500},
+
+    new Ingredient {Name = "Egg", Calories = 100},
+
+    new Ingredient {Name = "Milk", Calories = 150},
+
+    new Ingredient {Name = "Flour", Calories = 50},
+
+    new Ingredient {Name = "Butter", Calories = 400}
+
+    }
+
+    int totalCalories = ingredients.Sum(x => x.Calories);
+
+    Console.WriteLine(totalCalories);
+
+    ```
+
+
+    This produces the following output:
+
+
+    1200
+
+
+    # Query expression usage
+
+
+    There is no keyword for Sum when using the query expression style; however, mixed
+    style can be used.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# Average\n\nThe Average query operator works on a sequence of numeric values\
+    \ and calculates the average.\n\nThe following code shows Average in use.\n\n\
+    ```\nint[] nums = { 1, 2, 3 };\nvar avg = nums.Average();\nConsole.WriteLine(avg);\n\
+    ```\n\nThis produces the following output:\n\n2\n\nNotice in the preceding code\
+    \ the type for total has not been explicitly set; instead, var is being used.\
+    \ Depending on the numeric input type, Average will return different output numeric\
+    \ types. For example, the following code will not compile because the implementation\
+    \ of Average for IEnumerable<int> returns a double.\n\n```\nint[] nums = { 1,\
+    \ 2, 3 };\nvar avg = nums.Average(); // this line causes compilation failure\n\
+    ```\n\nAverage will return either a double, float, or decimal return type (or\
+    \ the nullable versions of these).\n\nWith Sum, Average can be used on an input\
+    \ sequence of non-numeric values using an overload, which allows a numeric value\
+    \ to be selected, as shown in the following code.\n\n```\nIngredient[] ingredients\
+    \ = {\n    new Ingredient (Name = \"Sugar\", Calories = 500);\n    new Ingredient\
+    \ (Name = \"Egg\", Calories = 100);\n    new Ingredient (Name = \"Milk\", Calories\
+    \ = 150);\n    new Ingredient (Name = \"Flour\", Calories = 50),\n    new Ingredient\
+    \ (Name = \"Butter\", Calories = 400);\n}\n```\n\n```\nvar avgCalories = ingredients.Average(x\
+    \ => x.Calories);\n```\n\n```\nConsole.WriteLine(avgCalories);\n```\n\nThis produces\
+    \ the following output:\n\n240"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# Query expression usage\n\nThere is no keyword for Average when using the\
+    \ query expression style; however, mixed style can be used.\n\n# Min\n\nThe Min\
+    \ query operator returns the smallest element from the input sequence, as the\
+    \ following code demonstrates.\n\n```\nint[] nums = { 3, 2, 1 };\nvar smallest\
+    \ = nums.Min();\nConsole.WriteLine(smallest);\n```\n\nThis produces the following\
+    \ output:\n\n1\n\nAn overload of Min also needs the selector to be specified,\
+    \ as the following code shows.\n\n```\nIngredient[] ingredients = {\n    new Ingredient(Name\
+    \ = \"Sugar\", Calories = 500);\n    new Ingredient(Name = \"Egg\", Calories =\
+    \ 100);\n    new Ingredient(Name = \"Milk\", Calories = 150);\n    new Ingredient(Name\
+    \ = \"Flour\", Calories = 50);\n    new Ingredient(Name = \"Butter\", Calories\
+    \ = 400)\n}\nvar smallestCalories = ingredients.Min(x => x.Calories);\nConsole.WriteLine(smallestCalories);\n\
+    ```\n\nThis produces the following output:\n\n50\n\n# Query expression usage\n\
+    \nThere is no keyword for Min when using the query expression style; however,\
+    \ mixed style can be used."
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Max
+
+
+    The **Max** query operator complements the **Min** operator and returns the smallest
+    value from the input sequence, as the following code demonstrates.
+
+
+    ```
+
+    int[] nums = { 1, 3, 2 };
+
+    var largest = nums.Max();
+
+    Console.WriteLine(largest);
+
+    ```
+
+
+    This produces the following output:
+
+
+    3
+
+
+    As with Min, there is an overload of **Max** that allows a selector to be specified.
+
+
+    # Query expression usage
+
+
+    There is no keyword for **Max** when using the query expression style; however,
+    mixed style can be used.
+
+
+    # Aggregate
+
+
+    The previous aggregate operators all perform a specific aggregation; the **Aggregate**
+    query operator is a more advanced operator that allows custom aggregations to
+    be defined and executed against an input sequence.
+
+
+    There are two versions of **Aggregate**: one that allows a "seed" value to be
+    specified, and one that uses the first element in the sequence as the seed value.
+
+
+    All versions of **Aggregate** require an "accumulator function" to be specified.
+    The accumulator, as its name suggests, accumulates a result as each element in
+    the input sequence is processed. The accumulator function is passed the value
+    of the current element being processed and the current accumulated value.
+
+
+    The following code demonstrates how to simulate the **Sum** operator using **Aggregate**.
+
+
+    ```
+
+    int[] nums = { 1, 2, 3 };
+
+    var result = nums.Aggregate(0,
+
+    (currentElement, runningTotal) => runningTotal + currentElement);
+
+    Console.WriteLine(result);
+
+    ```
+
+
+    This produces the following output:'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "The preceding code uses an Aggregate overload of Aggregate that specifies the\
+    \ initial seed value, in this example a seed of zero.\n\n# Query expression usage\n\
+    \nThere is no keyword for Aggregate when using the query expression style; however,\
+    \ mixed style can be used.\n\n# Joining Operators\n\nThe joining query operators\
+    \ take two input sequences, combine them in some way, and output a single sequence.\n\
+    \n# Join\n\nThe Join operator takes a number of parameters:\n\n+   - IEnumerable<TInner>\
+    \ inner – the inner sequence.\n- Func<Touter, TKey> outerKeySelector – what key\
+    \ to join on in outer sequence elements.\n- Func<TInner, TKey> innerKeySelector\
+    \ – what key to join on in inner sequence elements.\n- Func<Touter, TInner, TResult>\
+    \ resultSelector – What the output elements will look like\n\n> Note: There is\
+    \ also an overload that allows a specific IComparer to be used.\n\nThe following\
+    \ code shows the Join query operator in use. Not the explicit type definitions\
+    \ in the query selection lambdas; this is for demonstration clarity. For example\
+    \ (Recipe outerKey) => outerKey.Id.\n\n```\nRecipe[] recipes = // outer sequence\n\
+    {\n    new Recipe {Id = 1, Name = \"Mashed Potato\"},\n    new Recipe {Id = 2,\
+    \ Name = \"Crispy Duck\"},\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "```\nnew Recipe {Id = 3, Name = \"Sachertorte\"}\n};\nReview[] reviews = //\
+    \ inner sequence\n{\n    new Review {RecipeId = 1, ReviewText = \"Tasty!\"},\n\
+    \    new Review {RecipeId = 1, ReviewText = \"Not nice :(\\},\n    new Review\
+    \ {RecipeId = 1, ReviewText = \"Pretty good\"},\n    new Review {RecipeId = 2,\
+    \ ReviewText = \"Too hard\"},\n    new Review {RecipeId = 2, ReviewText = \"Loved\
+    \ it\"}\n};\nvar query = recipes // recipes is the outer sequence\n    .Join(\n\
+    \        reviews, // reviews is the inner sequence\n        (Recipe outerKey)\
+    \ => outerKey.Id, // the outer key\n        (Review innerKey) => innerKey.RecipeId,\
+    \ // the inner key\n        // choose the shape (\"projection\") of resulting\
+    \ elements\n        (recipe, review) => recipe.Name + \" - \" + review.Review\n\
+    \    )\nforeach (string item in query)\n{\n    Console.WriteLine(item);\n}\n```\n\
+    \nThis produces the following output:\n\n+   - Mashed Potato - Tasty!\n- Mashed\
+    \ Potato - Not nice :(\n- Mashed Potato - Pretty good\n- Crispy Duck - Too hard\n\
+    - Crispy Duck - Loved it\n\nNotice in this output that \"Sachertorte\" does not\
+    \ appear. This is because Join performs a left join, so elements in the outer\
+    \ sequence that have no matches in the inner sequence will not be included in\
+    \ the output sequence."
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# Query expression usage\n\nThe join keyword is used when using the query expression\
+    \ style. The following code shows how to perform an inner join using the query\
+    \ expression style. See Chapter 2, \"Fluent and Query Expression Styles for usage\
+    \ of the Join keyword.\n\n```\nvar query = from recipe in recipes\n    join review\
+    \ in reviews on recipe.Id equals review.RecipeId\n    select new // anonymous\
+    \ type\n    {\n        RecipeName = recipe.Name,\n        RecipeReview = review.ReviewText\n\
+    \    };\n```\n\n> Tip: Consider using the query expression when performing joins,\
+    \ as it is usually more readable.\n\n# GroupJoin\n\nThe GroupJoin query joins\
+    \ an inner and outer sequence, just as with the Join query operator; however,\
+    \ GroupJoin produces a hierarchical result sequence. The output sequence is essentially\
+    \ a sequence of groups, with each group able to contain the sequence of items\
+    \ from the inner sequence that belong to that group.\n\nThe GroupJoin operator\
+    \ takes a number of parameters:\n\n+   * IEnumerable<TInner> inner: The inner\
+    \ sequence.\n* Func<TOuter, TKey> outerKeySelector: What key to join on outer\
+    \ sequence elements.\n* IEnumerable<TInner, TKey> innerKeySelector: What key to\
+    \ join on inner sequence elements.\n* Func<TOuter, Iumerable<TInner>, TResult>\
+    \ resultSelector: What the output groups will look like.\n\nNotice the final parameter\
+    \ is different from Join's (Func<TOuter, TInner, TResult> resultSelector). Rather\
+    \ than a single Inner, GroupJoin has IEnumerable<TInner>. This IEnumerable<TInner>\
+    \ contains all the elements from the inner sequence that matches the outer sequence\
+    \ key; it is essentially all inner sequence elements that belong to the group.\n\
+    \nThe following code shows GroupJoin in use. Notice the result selector is creating\
+    \ an anonymous type containing the group \"key\" (i.e. the recipe name), and a\
+    \ list of the reviews that belong to that recipe.\n\n```\nRecipe[] recipes = {\n\
+    \    new Recipe {Id = 1, Name = \"Mashed Potato\"},\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\nnew Recipe {Id = 2, Name = \"Crispy Duck\"},\nnew Recipe {Id = 3, Name\
+    \ = \"Sachertorte\"};\n\nReview[] reviews = {\n  new Review {RecipeId = 1, ReviewText\
+    \ = \"Tasty!\"},\n  new Review {RecipeId = 1, ReviewText = \"Not nice :(\\},\n\
+    \  new Review {RecipeId = 1, ReviewText = \"Pretty good\"},\n  new Review {RecipeId\
+    \ = 2, ReviewText = \"Too hard\"},\n  new Review {RecipeId = 2, ReviewText = \"\
+    Loved it\"}\n};\n```\n\n```\nvar query = recipes\n  .GroupJoin(\n    reviews,\n\
+    \    (Recipe outerKey) => outerKey.Id,\n    (Review innerKey) => innerKey.RecipeId,\n\
+    \    (Recipe recipe, Iumerable<Review> rev =>\n      new {\n        RecipeName\
+    \ = recipe.Name,\n        Reviews = revs\n      })\n    )\n  );\n\nforeach (var\
+    \ item in query) {\n  Console.WriteLine(\"Reviews for {0}\", item.RecipeName);\n\
+    \  foreach (var review in item.Reviews) {\n    Console.WriteLine(\"- {0}\", review.ReviewText);\n\
+    \  }\n}\n```\n\nThis produces the following output:\n\n+   Reviews for Mashed\
+    \ Potato\n- Tasty!\n- Not nice :(\n- Pretty good\nReviews for Crispy Duck\n- Too\
+    \ hard\n- Loved it\nReviews for Sachertorte\n\nNotice the “Sachertorte\" group\
+    \ has been included even though it has no related reviews."
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# Query expression usage\n\nThe join keyword is used when using the query expression\
+    \ style; see Chapter 2, \"Fluent and\nQuery Expression Styles,\" for usage of\
+    \ the join keyword. The following code shows a group\nusing the query expression\
+    \ style.\n\n```\nvar query =\nfrom recipe in recipes\njoin review in reviews on\
+    \ recipe.Id equals review.RecipeIdnto reviewGroup\nselect new // anonymous type\n\
+    {\n    RecipeName = recipe.Name,\n    Reviews = reviewGroup // collection of related\
+    \ reviews\n};\n```\n\n# Zip\n\nThe Zip query operator joins two sequences together,\
+    \ unlike Join and GroupJoin, does not\nperforming joining on keys, and the concepts\
+    \ of inner and outer sequences do not apply.\nStand, Zip interleaves each element\
+    \ from the two input sequences together, one after\nthe other, like joining two\
+    \ sides of a zipper on an item of clothing.\n\nWhen using Zip, the resulting shape\
+    \ of the output elements is specified. In the following\nexample, the result elements\
+    \ are of type Ingredient.\n\n```\nstring[] names = {\"Flour\", \"Butter\", \"\
+    Sugar\"};\nint[] calories = {100, 400, 500};\n\nIEnumerable<Ingredient> ingredients\
+    \ =\nnames.Zip(calories, (name, calorie) =>\n    new Ingredient\n    {\n     \
+    \   Name = name,\n        Calories = calorie\n    });\n\nforeach (var item in\
+    \ ingredients)\n{\n    Console.WriteLine(\"{0} has {1} calories\", item.Name,\
+    \ item.Calories);\n}\n```\n\nThis produces the following output:\n\nFlour has\
+    \ 100 calories\nButter has 400 calories\nSugar has 500 calories"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'If there is a greater number of elements in one of the two input sequences,
+    these extra elements are ignored and do not appear in the output.
+
+
+    # Query expression usage
+
+
+    There is no keyword for **Zip** when using the query expression style; however,
+    mixed style can be used.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# Chapter 4 LINQ to XML
+
+
+    The building blocks that comprise LINQ to XML allow the creation, modification,
+    querying, and saving of XML data.
+
+
+    At a high level, LINQ to XML consists of two key architectural elements that are
+    designed to work well together:
+
+
+    +   - XML document object model.
+
+    - Additional LINQ to XML query operators.
+
+
+    The XML document object model in LINQ to XML (the X-DOM) is not the W3C DOM; it
+    is a set of .NET types that represent in-memory XML data. While the types that
+    make up the X-DOM can be used independently from any LINQ queries, they are designed
+    to be LINQ-friendly and facilitate easy interaction when using LINQ.
+
+
+    # X-DOM Overview
+
+
+    The types that make up the X-DOM are used to represent the structure of an XML
+    document fragment. They represent an in-memory model of the structure and content
+    of XML data.
+
+
+    # Key X-DOM types
+
+
+    There are numerous types that make up the X-DOM object model. Some of the keys
+    types are shown in the following class hierarchy diagram.
+
+
+    ![](img/ddd03c95c0e0aea3c64c904c312e545b_91_0.png)'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# XContainer
+
+
+    An **XContainer** represents the idea of an item in the XML hierarchy that may
+    have zero, one, or many children **XNode** objects. **XContainer** is an abstract
+    class, so it cannot be instantiated directly; instead, either **XElement** or
+    **XDocument** can be used.
+
+
+    # XElement and XDocument
+
+
+    An **XElement** represents an element in an XML document such as an `<ingredient>`
+    element. An **XElement** can contain a value such as "Butter", and may contain
+    zero, one, or many **XAttributes**. By virtue of inheriting from **XContainer**,
+    it may also have child **XNode** objects that belong to.
+
+
+    An **XDocument** wraps a root **XElement** to provide the additional capability
+    of XML declaration items such as XML version and encoding, as well as other "header"
+    items, such as a DTD for the XML document. Unless these kind of additional attributes
+    are required, **XElement** is usually sufficient.
+
+
+    # XAttribute
+
+
+    An **XAttribute** represents an XML attribute on an XML element. For example,
+    the calories attribute in the following XML would be represented as an **XAttribute**
+    object: `<ingredient calories="500">`
+
+
+    # XNode
+
+
+    While an **XNode** object has the concept of belonging to a parent (**XElement**)
+    node that it can navigate to, unlike **XContainer** (and its subclasses **XElement**
+    and **XDocument**), it has no concept of having any child nodes.
+
+
+    # XName
+
+
+    **XName** is not part of the hierarchy, but it is used in many methods when wanting
+    to specify node(s) to locate in the XML document hierarchy. It is used to represent
+    the name of an XML element or attribute. In addition to representing elements
+    as simple name strings, **XName** also contains logic for working with XML namespaces.
+
+
+    # Creating an X-DOM
+
+
+    There are a number of ways to arrive at an in-memory X-DOM, including loading
+    XML files and instantiation through code.
+
+
+    # Parsing Strings and Loading Files
+
+
+    To create an **XElement** from a *string*, the static **Parse** method can be
+    used, as the following code shows.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '```
+
+    string xmlString = @"<ingredients>
+
+    <ingredient>Sugar</ingredient>
+
+    <ingredient>Milk</ingredient>
+
+    <ingredient>Butter</ingredient>
+
+    </ingredients>";
+
+
+    XElement xdom = XElement.Parse(xmlString);
+
+
+    Console.WriteLine(xdom);
+
+    ```
+
+
+    This produces the following output:
+
+
+    ```
+
+    <ingredients>
+
+    <ingredient>Sugar</ingredient>
+
+    <ingredient>Milk</ingredient>
+
+    <ingredient>Butter</ingredient>
+
+    </ingredients>
+
+    ```
+
+
+    To create an XElement from a physical XML file, the XElement.Load method can be
+    used with a path specifying the file to be loaded.
+
+
+    # Manual Procedural Creation
+
+
+    The types that make up the X-DOM can be instantiated, just as with regular .NET
+    types. To create an X-DOM that represents the previous <ingredients> XML, the
+    following code can be written.
+
+
+    ```
+
+    XElement ingredients = new XElement("ingredients");
+
+
+    XElement sugar = new XElement("ingredient", "Sugar");
+
+    XElement milk = new XElement("ingredient", "Milk");
+
+    XElement butter = new XElement("ingredient", "Butter");
+
+    ```
+
+
+    ```
+
+    ingredients.Add(sugar);
+
+    ingredients.Add(milk);
+
+    ingredients.Add(butter);
+
+    ```
+
+
+    ```
+
+    Console.WriteLine(ingredients);
+
+    ```
+
+
+    This produces the following output:'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\n<ingredients>\n  <ingredient>Sugar</ingredient>\n  <ingredient>Milk</ingredient>\n\
+    \  <ingredient>Butter</ingredient>\n</ingredients>\n```\n\nNote in the preceding\
+    \ code that even though the XML structure is simple, this manual creation style\
+    \ does not make it particularly easy to understand what the XML structure that\
+    \ is being created is. An alternative approach is to use functional construction.\n\
+    \n# Functional Construction\n\nUsing the functional construction style can make\
+    \ the resulting XML structure easier to relate to when reading the code.\n\nThe\
+    \ following code shows the same <ingredients> XML created, this time using functional\
+    \ construction.\n\n```\nXElement ingredients =\n  new XElement(\"ingredients\"\
+    ,\n    new XElement(\"ingredient\", \"Sugar\"),\n    new XElement(\"ingredient\"\
+    , \"Milk\"),\n    new XElement(\"ingredient\", \"Butter\")\n);\nConsole.WriteLine(ingredients);\n\
+    ```\n\nNotice in the preceding code, it is much easier for the reader to form\
+    \ a mental picture of what the XML structure is.\n\nNotice the overload of XElement\
+    \ constructor in the preceding code is one which allows any number of content\
+    \ objects to be specified after the XElement name (\"ingredients\"). The signature\
+    \ of this version of the constructor is: public XElement(XName name, params object[])\
+    \ content.\n\n# Creation via Projection\n\nOne of the benefits of the functional\
+    \ construction style is that results from LINQ can be projected into an X-DOM.\n\
+    \nThe following code adapts the preceding code to populate the X-DOM with the\
+    \ result of a LINQ query."
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "```\nIngredient[] ingredients = {\n  new Ingredient (Name = \"Sugar\", Calories\
+    \ = 500);\n  new Ingredient (Name = \"Milk\", Calories = 150);\n  new Ingredient\
+    \ (Name = \"Butter\", Calories = 200)\n}\n```\n\n```\nXElement ingredientsXML\
+    \ =\n  new XElement(\"ingredients\",\n    from i in ingredients\n    select XElement(\"\
+    ingredient\", i.Name,\n      new XAttribute(\"calories\", i.Calories)));\n```\n\
+    \n```\nConsole.WriteLine(ingredientsXML);\n```\n\nThis produces the following\
+    \ output:\n\n```\n<ingredients>\n  <ingredient calories=\"500\">Sugar</ingredient>\n\
+    \  <ingredient calories=\"150\">Milk</ingredient>\n  <ingredient calories=\"200\"\
+    >Butter</ingredient>\n</ingredients>\n```\n\nNotice in the preceding code the\
+    \ addition of an Attribute to each <ingredient> representing the calories. Again,\
+    \ this is possible because the constructor takes any number of content objects,\
+    \ even when those objects are of different types. In the preceding code, this\
+    \ allows the text content of the XElement to be set (for example, \"Sugar\") at\
+    \ the same time an attribute is added.\n\n# Querying X-DOM with LINQ\n\nQuerying\
+    \ and navigating an X-DOM is implemented in two main ways. The first of these\
+    \ are the methods that belong to the X-DOM types themselves. The second is a set\
+    \ of additional query operators (i.e. extension methods) that are defined in the\
+    \ System.Xml.Linq.Extensions class. The methods of the X-DOM types often return\
+    \ IEnumerable sequences. The additional LINQ-to-XML query operators can then do\
+    \ further work with these sequences.\n\n> Note: The standard query operators can\
+    \ also be combined with the XML query operators.\n\nAs a simple example, the following\
+    \ code demonstrates both implementations."
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '```
+
+    XElement xmlData = XElement.Load("recipes.xml");
+
+
+    // Here Descendants() is an instance method of XContainer
+
+    var all = xmlData.Descendants("recipe");
+
+
+    // Here Descendants() is a query operator extension method
+
+    var allIngredients = allrecipes.Descendants("ingredient");
+
+    ```
+
+
+    In the preceding code, the first execution of the Descendants method belongs to
+    XElement. More specifically, the method belongs to XContainer, which XElement
+    inherits. The method returns an IEnumerable<XElement> into the variable allRecipes.
+
+
+    The second Descendants method is a call to the LINQ-to-XML query operator extension
+    method that has the signature: public static IEnumerable<T> Descendants<T>(this
+    IEnumerable<T> source, XName name) where T : XContainer.
+
+
+    # Finding Child Nodes
+
+
+    There are a number of properties and methods (in some cases instance and query
+    operator extension methods) that allow the locating of child nodes.
+
+
+    The following tables outline the methods and properties for finding children.
+
+
+    | Method(parameter) / Property | Returns | Operates On |
+
+    |---|---|---|
+
+    | FirstNode | XNode | XContainer |
+
+    | LastNode | XNode | XContainer |
+
+    | Element( XName ) | XElement | XContainer |
+
+    | Nodes() | IEnumerable<XNode> | XContainer, IEnumerable<XContainer> |
+
+    | DescendantNodes() | IEnumerable<XNode> | XContainer, IEnumerable<XContainer>
+    |'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '| Method(parameter) / Property | Returns | Operates On |
+
+    | --- | --- | --- |
+
+    | Elements() | IEnumerable<XElement> | XContainer, IEnumerable<XContainer> |'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '| Method(parameter) / Property | Returns | Operates On |
+
+    | --- | --- | --- |
+
+    | Elements( XName ) | Iumerable<XElement> | XContainer, IEnumerable<XContainer>
+    |
+
+    | Descendants() | Iumerable<XElement> | XContainer, IEnumerable<XContainer> |
+
+    | Descendants( XName ) | Iumerable<XElement> | XContainer, IEnumerable<XContainer>
+    |
+
+    | HasElements | Boolean | XElement |
+
+    | DescendantNodesAndSelf() | Iumerable<XNode> | XElement, IEnumerable<XElement>
+    |
+
+    | DescendantsAndSelf() | Iumerable<XElement> | XElement, IEnumerable<XElement>
+    |
+
+    | DescendantsAndSelf( XName ) | Iumerable<XElement> | XElement, IEnumerable<XElement>
+    |
+
+
+    The following code demonstrates how to retrieve the first <ingredient> element
+    that has any child elements. Here, Descendants is used to retrieve all ingredients,
+    in with the standard query operator First. The predicate supplied to first is
+    restricting the returned element to the first one that has any child elements
+    using the XElement''s HasElements
+
+
+    ```
+
+    XElement xmlData = XElement.Load("recipes2.xml");
+
+    XElement firstIngredientWithSubElements = xmlData.Descendants("ingredient").First(x
+    => x.HasElements);
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# Finding Parent Nodes\n\nXDOM types that inherit from XNode contain a Parent\
+    \ property that returns the parent XElement.\n\n| Method(parameter) / Property\
+    \ | Returns | Operates On |\n| --- | --- | --- |\n| Parent | XElement | XNode\
+    \ |\n| Ancestors() | IEnumerable<XElement> | XNode, IEnumerable<XNode> |\n| Ancestors(\
+    \ XName ) | IEnumerable<XElement> | XNode, IEnumerable<XNode> |\n| AncestorsAndSelf()\
+    \ | IEnumerable<XElement> | XElement, IEnumerable<XElement> |\n| AncestorsAndSelf(\
+    \ XName ) | IEnumerable<XElement> | XElement, IEnumerable<XElement> |\n\nThe following\
+    \ example shows the use of the Parent method to move up the XML hierarchy. This\
+    \ example finds the first ingredient that has child elements, then moves one level\
+    \ up to get the <ingredient> element. Then, call to Parent moves another level\
+    \ up to get to the <recipe>.\n\n```\nXElement xmlData = XElement.Load(\"recipes2.xml\"\
+    );\nXElement recipe = xmlData.Descendants(\"ingredient\")\n    .First(x => x.HasElements)\n\
+    \    .Parent; // <ingredients>\n    .Parent; // <recipe name=\"Cherry Pie\">\n\
+    ```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "# # Finding Peer Nodes\n\nThe following table shows the methods defined in\
+    \ the XNode class for working with nodes at the same level.\n\n| Method(parameter)\
+    \ / Property | Returns |\n| --- | --- |\n| IsBefore( XNode ) | Boolean |\n| IsAfter(\
+    \ XNode ) | Boolean |\n| PreviousNode | XNode |\n| NextNode | XNode |\n| NodesBeforeSelf()\
+    \ | IEnumerable<XNode> |\n| NodesAfterSelf() | IEnumerable<XNode> |\n| ElementsBeforeSelf()\
+    \ | IEnumerable<XElement> |\n| ElementsBeforeSelf( XName ) | IEnumerable<XElement>\
+    \ |\n| ElementsAfterSelf() | IEnumerable<XElement> |\n| ElementsAfterSelf( XName\
+    \ ) | IEnumerable<XElement> |\n\nThe following code shows how to use the NextNode\
+    \ and IsBefore methods. This code also demonstrates how the standard query operators\
+    \ (such as Skip) can be used in LINQ-to-XML queries.\n\n```\nXElement xmlData\
+    \ = XElement.Load(\"recipes2.xml\");\n\nvar applePieIngredients =\n    xmlData.Descendants(\"\
+    recipe\")\n    .First(x => x.Attribute(\"name\").Value == \"Apple Pie\")\n   \
+    \ .Descendants(\"ingredient\");\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\nvar firstIngredient = applePieIngredients.First(); // Sugar\nvar secondIngredient\
+    \ = firstIngredient.NextNode(); // Apples\nvar lastIngredient = applePieIngredients.Skip(2).First();\
+    \ // Pastry\n\nvar isApplesBeforeSugar =\n    secondIngredient.IsBefore(firstIngredient);\
+    \ // false\n```\n\n# Finding Attributes\n\nAn XElement may have a number of XAttributes.\
+    \ The following table shows the methods defined in XElement for working with attributes\
+    \ that belong to it.\n\n| Method(parameter) / Property | Returns |\n|---|---|\n\
+    | HasAttributes | Boolean |\n| Attribute( XName ) | XAttribute |\n| FirstAttribute\
+    \ | XAttribute |\n| LastAttribute | XAttribute |\n| Attributes() | Iumerable<XAttribute>\
+    \ |\n| Attributes( XName ) | Iumerable<XAttribute> |\n\nThe following code demonstrates\
+    \ the use of the Attribute(XName) method to locate a specific XAttribute and get\
+    \ its value by reading its Value property. This example also shows the use of\
+    \ the FirstAttribute method to get an element's first declared attribute, and\
+    \ also how to combine standard query operators as Skip to query the IEnumerable<XAttribute>\
+    \ provided by the Attributes method.\n\n```\nvar xml = \"@\"\n<ingredients>\n\
+    \    <ingredient name='milk' quantity='200' price='2.99' />\n```"
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "```\n<ingredient name='sugar' quantity='100' price='4.99' />\n<ingredient name='safron'\
+    \ quantity='1' price='46.77' />\n</ingredients\">\n\nXmlElement xmlData = XElement.Parse(xml);\n\
+    \nXmlElement milk =\n    xmlData.Descendants(\"ingredient\")\n    .First(x =>\
+    \ x.Attribute(\"name\").Value == \"milk\");\n\nXAttribute nameAttribute = milk.FirstAttribute;\
+    \ // name attribute\nXAttribute priceAttribute = milk.Attribute(\"price\");\n\
+    string priceOfMilk = priceAttribute.Value; // 2.99\nXAttribute quantity = milk.Attributes()\n\
+    \    .Skip(1)\n    .First(); // quantity attribute\n```"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# # Chapter 5 Interpreted Queries
+
+
+    # ## Overview
+
+
+    Up until this point in the book, we have focused mainly on local queries. Local
+    queries are those that operate on IEnumerable<T> sequences. Local queries result
+    in the query operators that are defined in the System.Linq.Enumerable class being
+    executed. In this way, executing local queries results in specific code running
+    (from the query operators in the Enumerable class) as defined at compile time.
+
+
+    Interpreted queries, on the other hand, describe the "shape" of the query that
+    is instead interpreted at runtime—hence the name "interpreted". Interpreted queries
+    operate on IQueryable<T> sequences, and when writing LINQ, the query operators
+    resolve to methods defined in the System.Linq.Queryable class rather than with
+    local.
+
+
+    Another way to think about the difference between local IEnumerable<T> queries
+    and interpreted IQueryable<T> queries is that the local queries contain the actual
+    implementation code that gets executed, whereas the interpreted query operators
+    do not. actual code that gets executed and returns some result is defined in a
+    query provider. The query provider is passed the description of the query that
+    needs to be executed; it executes the query (for example, executing SQL against
+    a database) and returns the result.
+
+
+    # ## Expression trees
+
+
+    The query operators that work on IQueryable<T> differ from their equivalent versions
+    for local queries.
+
+
+    Local IEnumerable<T> versions of query operators take delegates as parameters
+    (often described using a lambda expression). In contrast, interpreted queries
+    take expression trees as parameters.
+
+
+    Because C# will implicitly convert a lambda expression when used as a query operator
+    parameter to an expression, the same lambda expression can be used regardless
+    of whether the query operator is a local or remote. The one of where query operator
+    and the interpreted IQueryable<T> version being used. Notice that the lambda expression
+    is the same in both cases.
+
+
+    ```
+
+    IQueryable<int> interpretedQuery = remoteData.Where(x => x > 100);
+
+    IEnumerable<int> localQuery = localData.Where(x => x > 100);
+
+    ```'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'The following code shows the method signatures for the Where query operator
+    for both the local and interpreted versions.
+
+
+    ```
+
+    // Local version of Where from System.Linq.Enumerable
+
+    public static IEnumerable<TSource> Where<TSource>(this IEnumerable<TSource>
+
+    source, Func<TSource, bool> predicate)
+
+
+    // Interpreted version of Where from System.Linq.Queryable
+
+    public static IQueryable<TSource> Where<TSource>(this IQueryable<TSource>
+
+    source, Expression<Func<TSource, bool>> predicate)
+
+    ```
+
+
+    In noticing the code that the local version takes a predicate parameter of type
+    Func<TSource, bool>. Contrast this with the interpreted version where the predicate
+    parameter is Expression<Func<TSource, bool>>. This is the expression that the
+    query provider can turn into meaningful code execution, such as generating an
+    equivalent SQL statement and executing against a database.
+
+
+    Because IQueryable<T> is a subtype of IEnumerable<T>, the compiler has to choose
+    whether to use the local or remote version of query operator. The compiler dictates
+    that the more specific version will be chosen. IQueryable<T> is more specific
+    than IEnumerable<T>, the compiler will choose the interpreted versions of the
+    query operators (as defined in System.Linq.Query) when dealing with interpreted
+    queries, and local versions of query operators (as defined in System.Linq.Enumerable)
+    when dealing with local queries. This fact (and C#''s implicit conversion of lambda
+    expressions to Expression<T>) means that LINQ queries can provide a unified API
+    regardless of whether the query is a local one or a remote interpreted query.
+
+
+    > Note: Not all of the standard query operators will be supported by all interpreted
+    query providers.
+
+
+    # Query providers
+
+
+    Microsoft™ has pre-built query providers that operate with databases, such as
+    the older LINQ to SQL and the new Entity Framework.
+
+
+    There are also numerous third-party or open source query providers including:
+
+
+    +   - LINQ to Twitter
+
+    - LINQ to flickr
+
+    - LINQ to JSON
+
+
+    These examples serve to demonstrate the powerful and flexible nature of LINQ interpreted
+    queries. Remote data stores of different types can be queried using a common set
+    of LINQ query operators.'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "In addition to LINQ providers built by others, it is also possible to create\
+    \ them ourselves, though the work may be quite involved.\n\n# Entity Framework\n\
+    \nAs an example of using LINQ to query a database using Entity Framework, imagine\
+    \ a SQL Server database that contains the following entities (tables).\n\n```\n\
+    public class Recipe\n  public int ID { get; set; }\n  public string Name { get;\
+    \ set; }\n  public virtual ICollection<Review> Reviews { get; set; }\n\npublic\
+    \ class Review\n  public int ID { get; set; }\n  public int RecipeID { get; set;\
+    \ }\n  public string ReviewText { get; set; }\n  public virtual Recipe Recipe\
+    \ { get; set; }\n\n```\n\nIn the preceding code, the model represents that a recipe\
+    \ can have multiple reviews.\n\n> Tip: To learn more about using Entity Framework,\
+    \ be sure to check out the Entity Framework Code First Succinctly eBook from Syncfusion.\n\
+    \nNow that the entities are defined, a data context class can be defined, as the\
+    \ following code demonstrates.\n\n```\npublic class RecipeDbContext : DbContext\n\
+    \  public RecipeDbContext() : base(\"RecipeDbConnectionString\")\n  {\n}\n  public\
+    \ DbSet<Recipe> Recipes { get; set; }\n  public DbSet<Review> Reviews { get; set;\
+    \ }\n  protected override void OnModelCreating(DbModelBuilder modelBuilder)\n\
+    \    modelBuilder.Conventions.Remove<PluralizingNameConvention>();\n  \n```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "A database initializer is created to always recreate the database and populate\
+    \ it with some initial demo data, as the following code shows.\n\n```\npublic\
+    \ class RecipeDbInitializer {\n    System.Data.Entity.CreateDatabaseAlways<RecipeDbContext>\n\
+    \    protected override void Seed(RecipeDbContext context) {\n        context.Recipes.Add(new\
+    \ Recipe { Name = \"Cherry Pie\" });\n        context.Recipes.Add(new Recipe {\
+    \ Name = \"Apple Pie\" });\n        context.SaveChanges();\n\n        context.Reviews.Add(new\
+    \ Review { ReviewText = \"Quite nice\", RecipeID = 1 });\n        context.Reviews.Add(new\
+    \ Review { ReviewText = \"I hate cherries!\", RecipeID = 1 });\n        context.Reviews.Add(new\
+    \ Review { ReviewText = \"Ok\", RecipeID = 1 });\n        context.Reviews.Add(new\
+    \ Review { ReviewText = \"Not too bad\", RecipeID = 2 });\n        context.SaveChanges();\n\
+    \    }\n}\n```\n\nNow that there is an EF model and a database containing some\
+    \ demo data, it can be queried using LINQ via the RecipeDbContext. The following\
+    \ code shows how to use fluent style syntax to get all the recipes sorted by the\
+    \ recipe name.\n\n```\nRecipeDbContext ctx = new RecipeDbContext();\nIQueryable<Recipe>\
+    \ allRecipes = ctx.Recipes\n    .OrderBy(x => x.Name);\nforeach (var recipe in\
+    \ allRecipes)\n{\n    Console.WriteLine(recipe.Name);\n}\n```\n\nThis produces\
+    \ the following output:\n\nApple Pie\nCherry Pie\n\nJust as local queries, query\
+    \ expression syntax can also be used with interpreted queries.\n\nThe following\
+    \ code shows the combination of using query expression syntax against an Entity\
+    \ Framework model and projecting into an X-DOM using functional construction."
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "```\nRecipeDbContext ctx = new RecipeDbContext();\n\nXElement xml = new XElement(\"\
+    recipes\",\nfrom rec in ctx.Recipes.Include(x => x.Reviews).ToList()\nselect\n\
+    \    new XElement(\"recipe\",\n        new XAttribute(\"name\", rec.Name),\n \
+    \       new XAttribute(\"id\", rec.ID),\n        new XElement(\"reviews\",\n \
+    \           from rev in rec.Reviews\n            new XElement(\"review\", rev.ReviewText)\n\
+    \        )\n    ));\n\nConsole.WriteLine(xml);\n```\n\nThis produces the following\
+    \ output:\n\n```\n<recipes>\n<recipe name=\"Cherry Pie\" id=\"1\">\n  <reviews>\n\
+    \    <review>Quite nice</review>\n    <review>I hate cherries!</review>\n    <review>Ok</review>\n\
+    \  </reviews>\n</recipe>\n<recipe name=\"Apple Pie\" id=\"2\">\n  <reviews>\n\
+    \    <review>Not too bad</review>\n  </reviews>\n</recipe>\n</recipes>\n```\n\n\
+    In the preceding code, there are a couple of noteworthy items. The first is the\
+    \ Entity Framework **Include extension method**. This instructs Entity Framework\
+    \ to retrieve all the related reviews for each of the recipes. Without this, Entity\
+    \ Framework will be ending up multiple select queries to the database, rather\
+    \ than just a single **SELECT**.\n\nThe second item of code is the explicit call\
+    \ to **ToList()**. This is required to retrieve the results into entity objects\
+    \ before the X-DOM projection takes place. Without this, an exception will be\
+    \ thrown: \"System.NotSupportedException : Only parameterless constructors and\
+    \ initializers are supported in LINQ to Entities.\" This is because **XElement**\
+    \ does not have a default parameterless constructor defined.\n\nOther than these\
+    \ Entity Framework specific items, the LINQ query follows the same pattern and\
+    \ syntax it we were working with a local data."
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# Chapter 6 Parallel LINQ
+
+
+    # # Overview
+
+
+    The area of parallel programming is vast and potentially complicated. This chapter
+    introduces parallel LINQ (PLINQ) as a method of reducing processing time when
+    executing LINQ queries.
+
+
+    PLINQ is a higher level abstraction that sits above various lower level .NET multithreading
+    related components and aims to abstract away the lower-level details of multithreading,
+    while at the same time offering the familiar LINQ query semantics.
+
+
+    > Note: Because PLINQ is at a higher level of abstraction, the programmer still
+    needs to have basic working knowledge of multithreaded programming.
+
+
+    When converting a LINQ query to a PLINQ query, PLINQ takes care of the following
+    lower-level aspects of parallelization:
+
+
+    +   - Split the query work (input sequence) into a number of smaller sub-segments.
+
+    - Execute query code against each sub-segment on different threads.
+
+    - Once all sub-segments have been processed, reassemble all the results from the
+    sub-segments back into a single output sequence.
+
+
+    In this way, PLINQ may help reduce overall query processing time by utilizing
+    multiple cores of the machine on which it is executing. It should also be noted
+    that PLINQ works on local queries, as opposed to remote interpreted queries.
+
+
+    Not all queries will benefit from PLINQ, and indeed, depending on the number of
+    input elements and the amount of processing required. PLINQ queries may actually
+    take longer to run due to the overhead of splitting/threading/reassembly. As with
+    all performance-related tasks, measurements/profiling and methodical performance-tuning
+    adjustments should be made rather than randomly turning LINQ queries in the code
+    base using PLINQ.
+
+
+    It should also be noted that using PLINQ is no guarantee of the query actually
+    executing in parallel. This is not because all query operators are able to be
+    parallelized. Even with those query operators that are parallelizable, during
+    execution, PLINQ may decide to run them sequentially if it determines that it
+    may perform better.
+
+
+    # # Applying PLINQ
+
+
+    To a normal LINQ query to a PLINQ query, this extension method is defined in the
+    System.Linq.ParallelEnumerable class. When the AsParallel method is added to a
+    query, it essentially "switches on" PLINQ for that query.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "The following code code shows the method signature for AsParallel method.\n\
+    \n```\npublic static ParallelQuery<TSource> AsParallel<TSource(\n    this IEnumerable<TSource>\
+    \ source)\n```\n\nNotice that the AsParallel extension method extends IEnumerable<TSource>.\
+    \ Because local LINQ queries operate on IEnumerable<T> sequence, the method is\
+    \ available to be added to regular LINQ queries. One important thing to note in\
+    \ the preceding code is that the return type is ParallelQuery<TSource>. It is\
+    \ this different return type that \"switches on\" PLQ. Because the query \"stream\"\
+    \ has been converted from an IEnumerable<T> to a ParallelQuery<TSource> the other\
+    \ PLINK queries of the query operators can now be applied to the query.\n\nTo\
+    \ illustrate this, the following code shows the differences in the signature of\
+    \ the Where operator between regular LINQ and PLINQ\n\n```\n// where query operator\
+    \ from System.Linq.Enumerable\npublic static IEnumerable<TSource> WhereSource(\n\
+    \    this IEnumerable<TSource> source, Func<TSource, bool> predicate)\n\n// Where\
+    \ query operator from System.Linq.ParallelEnumerable\npublic static ParallelQuery<TSource>\
+    \ Where(\n    this ParallelQuery<TSource> source, Func<TSource, bool> predicate)\n\
+    ```\n\nNotice in the preceding code the second PLINK version of the Where operator\
+    \ is extending ParallelQuery<T> and not IEnumerable<T>.\n\nSo we have switched\
+    \ our regular LINQ query to PLINQ as AsParallel, when we use subsequent query\
+    \ operators, they will use the PLINK versions and be executed in parallel where\
+    \ possible, and when PLINK does not decide sequential (non-parallel) execution\
+    \ is better.\n\nThe following code shows two queries that filter the input sequence\
+    \ of numbers where the string version of number contains the \"3\". This example\
+    \ is to create of a CPU load to show many meaningful outputs. The second version\
+    \ of the query uses PLINK to parallelize the query. In both queries the output\
+    \ sequence result is ignored and ToArray is being used to force the query. The\
+    \ execution time for both queries is being captured using a Stopwatch.\n\n```\n\
+    var someNumbers = Enumerable.Range(1, 10000000).ToArray();\n\nvar sw = new Stopwatch();\n\
+    sw.Start();nsomeNumbers.Where(x => x.ToString().Contains(\"3\")).ToArray();\n\
+    sw.Stop();\nConsole.WriteLine(\"Non PLINK query took {0} ms\", sw.ElapsedMilliseconds);\n\
+    ```"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "```\nsw.Restart();\nsomeNumbers.AsParallel().Where(x => x.ToString().Contains(\"\
+    3\")).ToArray();\nsw.Stop();\n```\n\n```\nConsole.WriteLine(\"PLINQ query took\
+    \ {0} ms\", sw.ElapsedMilliseconds);\n```\n\nThis produces the following output:\n\
+    \nNon PLINQ query took 3218 ms\nPLINQ query took 1494 ms\n\nWe can see from these\
+    \ results that the PLINQ version of the query executed about twice as fast as\
+    \ the non-PLINQ version.\n\n# Output element ordering\n\nWhen a PLINQ query executes\
+    \ in parallel, the input sequence is broken up into sub-segments, so once each\
+    \ sub-segment has been processed, it needs to be added into the overall resulting\
+    \ sequence.\n\nWhile regular LINQ queries respect the ordering of input elements\
+    \ when they appear in the output sequence, PLINQ queries may not return elements\
+    \ in the same order as they were put in.\n\nThe following code demonstrates this\
+    \ by performing a simple Select query that returns the input number unchanged\
+    \ on ten input numbers. The query uses PLINQ. The numbers are in the input and\
+    \ output sequences and output for comparison.\n\n```\nvar inputNumbers = Enumerable.Range(1,\
+    \ 10).ToArray();\nConsole.WriteLine(\"Input numbers\");\nforeach (var num in inputNumbers)\n\
+    {\n    Console.Write(num + \" \");\n}\n```\n\n```\nvar outputNumbers = inputNumbers.AsParallel().Select(x\
+    \ => x);\nConsole.WriteLine();\nConsole.WriteLine(\"Output numbers\");\nforeach\
+    \ (var num in outputNumbers)\n{\n    Console.Write(num + \" \");\n}\n```"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: 'This produces the following output:
+
+
+    Input numbers
+
+    1 2 3 4 5 6 7 8 9 10
+
+
+    Output numbers
+
+    1 4 7 9 2 5 8 10 3 6
+
+
+    Notice the output sequence element ordering does not match the input ordering.
+
+
+    To force the output sequence to be in the same order as the input sequence, the
+    AsOrdered PLINQ extension method can be used, as the following code demonstrates.
+
+
+    ```
+
+    var inputNumbers = Enumerable.Range(1, 10).ToArray();nvar outputNumbers = inputNumbers.AsParallel().AsOrdered().Select(x
+    => x);
+
+    Console.WriteLine("Output numbers");
+
+    foreach (var num in outputNumbers)
+
+    {
+
+    Console.Write(num + " ");
+
+    }
+
+    ```
+
+
+    This produces the following output:
+
+
+    Output numbers
+
+    1 2 3 4 5 6 7 8 9 10
+
+
+    Notice the output elements are in the same order as the input elements. It should
+    be noted that PLINQ has to do extra work to track the position of input elements
+    when AsOrdered is used, there may be some negative performance implications, depending
+    on the size of the input sequence. If only part of the query requires order preservation,
+    then AsOrdered can be used for those parts. If other parts of the query do not
+    require order preservation, the default unordered behavior can be restored by
+    adding a call to the AsUnordered extension method. Subsequent query operators
+    after the AsUnordered will not track the input ordering of elements.
+
+
+    # Potential PLINQ Problems
+
+
+    There are a number of things to not always be aware of when using PLINQ:
+
+
+    +   - PLINQ may not be faster than LINQ
+
+    - Avoid writing to shared memory (as static variables)
+
+    - Do not call thread-safe methods from PLINQ
+
+    - Calling thread-safe methods may incur locking/synchronization overheads'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "For further information and a more comprehensive list, see the MSDN documentation\
+    \ at https://msdn.microsoft.com/en-us/library/dd997403%28vs=ls110%29.aspx.\n\n\
+    # Mixing LINQ and PLINQ\n\nA single query can execute in standard sequential mode\
+    \ and have some parts of the query execute in parallel. This provides flexibility\
+    \ to the query author and enables non-threadsafe parts of the query (or where\
+    \ parallelization may run more slowly) to run sequentially, while other parts\
+    \ run in parallel.\n\nWhile the AsParallel method switches the query to PLINQ\
+    \ mode, the companion AsSequential method switches back to regular LINQ.\n\nThe\
+    \ following code shows the method signature of the AsSequential method. Notice\
+    \ that the extension method works on a ParallelQuery<TSource> input sequence and\
+    \ returns a IEnumerable<T>. Because the return type is a normal IEnumerable<T>,\
+    \ subsequent query operators will bind to the local LINQ operators, not PLINQ\
+    \ ones.\n\n```\npublic static IEnumerable<TSource> AsSequential<TSource>(\this\
+    \ ParallelQuery<TSource> source)\n```\n\nThe following code demonstrates how to\
+    \ switch between LINQ and PLINQ in a single query.\n\n```\nIEnumerable<int> inputNumbers\
+    \ = Enumerable.Range(1, 10).ToArray();\nIEnumerable<int> outputNumbers = .AsParallel()\n\
+    \    .Select(x => x) // PLINQ version of Select\n    .AsSequential()\n    .Select(x\
+    \ => x); // LINQ version of Select\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Chapter 7 LINQ Tools and Resources
+
+
+    # MSDN LINQ Home
+
+
+    The starting page for the MSDN coverage of LINQ can be found at https://msdn.microsoft.com/en-AU/library/bb397926.aspx.
+
+
+    # 101 LINQ Samples
+
+
+    This MSDN resource provides a multitude of sample code demonstrating the various
+    LINQ query operators. You can download all the samples or browse the code at https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b.
+
+
+    # C# 5.0 In a Nutshell
+
+
+    This book (authored by Joseph Albahari & Ben Albahari, published by O’Reilly)
+    covers just about everything related to C#, including comprehensive coverage of
+    LINQ.
+
+
+    # LINQPad
+
+
+    LINQPad is the “.NET Programmer’s Playground'
+  merge: -1
+  pgno: 113
