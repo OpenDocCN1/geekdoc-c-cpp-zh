@@ -1,0 +1,1488 @@
+- md: '
+
+    Available online at www.sciencedirect.com
+
+
+    IFACPapersOnline-55-31 (2022) 154-159
+
+
+    # Generalized Disjunctive Programming for Optimization of Reverse Electrolysis
+    Process
+
+
+    C. Tristán*, M. Fallanzana*, I. Grossman**, I. Ortiz*, R. Ibáñez*
+
+
+    * Department of Chemical and Biomedical Engineering, University of Santander,
+    La Los 456, 39005 Santander, Spain (e-mail: [tristanc, fallanzana, ortiz, ibanez]@ucan.com).
+
+
+    ** Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh,
+    PA 15233, USA. (e-mail: grossmann@cmu.edu)
+
+
+    **Abstract:** Reverse electrolysis (RED), an emerging electrochemical technology
+    that uses ion-selective membranes to generate electricity from salinity differences
+    between solutions, i.e., salinity gradient energy (SGE), has the potential to
+    be a clean and stable renewable resource to scale water and energy supply. Although
+    RED has made notable advances, full-scale RED process demands more economic and
+    environmental assessments that consider full design and operational decision space
+    from model-to-system. This work presents an optimization model formulated as a
+    Generalized Disjunctive Programming to define the RED process for different deployments.
+    We use a predictive model of the RED stack and validated in our research to fully
+    capture the behavior of the system. The problem addressed is to determine the
+    RED plant’s topology and the working conditions for a given design of each RED
+    stack which renders the optimal-cost for the defined problem and scenario. Our
+    results show, with simulation-based approaches, mathematical programming techniques
+    are an efficient approach to provide reliable results and support for early-scale
+    RED implementation in real scenarios.
+
+
+    Copyright © 2022 The Authors. This is an open access article under the CC-BY-ND
+    license (https://creativecommons.org/licenses/cc-by-nd/4.0).
+
+
+    **Keywords:** renewable, blue energy, process synthesis, Pyomo, Gurobi, global
+    optimization
+
+
+    ## 1. INTRODUCTION
+
+
+    The progressive shift from conventional emissions to decentralized renewable power
+    sources with reduced water needs will be decisive in a sustainable water and energy
+    supply. Reverse electrolysis (RED), an electrochemical technology that uses ion-selective
+    membranes to generate electricity from chemical energy released when two solutions
+    mix, i.e., salinity gradient energy (SGE), has the potential of being a clean
+    and stable renewable resource to power the sector from the embedded energy of
+    water.
+
+
+    of medium-to-large-sized seawater desalination plants with the globe-based RED
+    energy recovery system from (Tristán, Marcus Fallanzana, et al.). If all SGE were
+    used, RED would make up –40% of the desalination plant’s energy demand in almost
+    all locations. However, energy losses and untreated brine discharge remain challenges.
+    Our results show that there is a gap to bridge between the thermodynamics and
+    the initial RED energy system processes. Several variables affect the RED process,
+    adding complexity to define optimal system designs by trial and error evaluations.
+    We propose an optimization model formulated as a Generalized Disjunctive Programming
+    (GDP) problem to define the optimal RED process for different deployments.
+
+
+    Even past research has validated RED-based electricity from waste streams desalinations
+    or treated effluents more economic and environmental assessments that consider
+    full design and operational decision space from stack to the system. Our research
+    is working on a model to provide design support for early-stage applied research
+    and extract and design guidelines for full-scale RED implementation in reality.
+
+
+    We have developed and validated a predictive model of the RED stack to determine
+    the most relevant working conditions and design parameters affecting RED performance
+    (Ortiz-Medínez et al., 2019; Tristán, Fallanzana, et al., 2020). This research
+    allows us to address
+
+
+    ## 2. OPTIMIZATION MODEL
+
+
+    ### 2.1 Problem statement and superstructure definition
+
+
+    The formulation of the RED process system can be stated as follows: Site-specific
+    working conditions (e.g., the high-salinity, HC, and low-salinity, LC, feed streams
+    concentrations, flow rate, and temperature) and the stack properties (powers,
+    thickness), seems theirs to define the RED plant topology (.), and the working
+    conditions (i.e. the HC and LC concentration and flow rate, electric current)
+    of each RED stack in the RED unit that maximizes the net power output and net
+    yield from the feed streams minimizing cost of the RED process for the defined
+    problem and scenario.
+
+
+    The structure of alternatives follows the Pyosyn Graph (PSG) (Chen, Liu, et al.,
+    2021). The RED process in Fig. 1 consists of the following:
+
+
+    RED Process Unit
+
+
+    (a) The RED Process Unit (RPU), where discrete decisions on the selection are
+    made, (a.i) the set of RED units, r ∈ R; (a.ii) the source r ∈ RSU and sink r
+    ∈ RMU; (a.iii) the high- and low-concentration effluent units, i.e., {HC, LC}.
+
+
+    ### 2.2 Generalized Disjunctive Programming (GDP) model
+
+
+    We formulate the structure of alternatives as a Generalized Disjunctive Programming
+    (GDP) problem coded in Python using Pyomo (Hart et al., 2017). The optimization
+    model, based on Fig. 1, is defined by the set of
+
+
+    ```
+
+    min obj = f(x)
+
+    s.t. g(x) ≥ 0
+
+    γ_r(x) ≤ 0 ∀ r ∈ R
+
+    (Y_r) = True
+
+    x ∈ X
+
+    ```
+
+
+    (b) By set of feeds, FSU, and discharge units, DMU. (c) The inlet and outlet ports
+    p ∈ P = P_out ∪ P_in—mixers and splitters—where materials at the unit interface
+    may place. The objective function f(x) minimizes the Cost of Energy (COL) of the
+    RED process subject to inequality constraints (e.g., from process specifications)
+    and equality constraints (e.g., from material balances)
+
+
+    (d) The set of streams or feasible pairs, s ∈ S_out ∪ S_in, defining the following
+    constraints:
+
+
+    (i) From unit feeds, FSU, the concentrate and distillate feeds to the RED Process
+    Unit (RPU), where the discharge DMU collects the exhausted high- and low-concentration
+    effluent units, and the unused streams from the feeds FSU. Variables describe
+    continuous decisions (e.g. molar concentrations, volumetric flows) of all feasible
+    streams and the electric current of the RED units.
+
+
+    (ii) Within unit, the auxiliary sink units, RMU, the concentrate and distillate
+    streams coming from the feeds FSU to one or more of the active RED units. Once
+    the RPU exploits SG from the inlet streams, the effluents may be recycled or be
+    disposed of the sink units, RMU. The RPU effluent from RMU is disposed of in the
+    discharge unit DMU. The global constraints, g(x) ≤ 0, are equalities and inequalities
+    describing specifications and physical relationships that apply for all configurations
+    in the superstructure, e.g., mass balances of the feed, source, sink and discharge
+    units—inlet and outlet ports, the upper and lower bounds on variables (concentration
+    and flow).
+
+
+    (iii) No flow between the RSU and RMU is allowed
+
+
+    The disjunctions, considering of logic-XOR relations, that at most one disjoint
+    in each RED units within the RED process unit active, describe the existence or
+    absence of the RED units. Binary variables Yr indicates whether a or not (Y_r
+    = True). The constraints, g(x) ≤ 0 enforce the mass and energy balances, thermodynamics,
+    kinetics, or other physical/chemical phenomena taking place within the RED unit.
+    When the unit is absent, the negation (¬Y_r) sets zero to a
+
+    '
+  mdcn: '
+
+
+    在线访问 www.sciencedirect.com
+
+
+    IFACPapersOnline-55-31 (2022) 154-159
+
+
+    # 用于反电解过程优化的广义析取规划
+
+
+    C. Tristán*, M. Fallanzana*, I. Grossman**, I. Ortiz*, R. Ibáñez*
+
+
+    * 桑坦德尔大学化学与生物医学工程系，La Los 456, 39005 Santander, Spain (电子邮箱: [tristanc, fallanzana,
+    ortiz, ibanez]@ucan.com)。
+
+
+    ** 卡内基梅梅隆大学化学工程系，Pittsburgh, PA 15233, USA. (电子邮箱: grossmann@cmu.edu)
+
+
+    **摘要：** 反电解（RED）是一种新兴电化学技术，它利用离子选择膜从溶液之间的盐度差（即盐度梯度能量，SGE）产生电，具有作为清洁且稳定的再生资源来扩大水资源和能源供应的潜力。尽管
+    RED 已取得显著进展，但全规模的 RED 过程需要更多的经济和环境评估，以考虑从模型到系统的完整设计和运行决策空间。本工作提出了一个构建为广义析取规划（Generalized
+    Disjunctive Programming）的优化模型，用于定义不同部署下的 RED 过程。我们使用了在研究中验证的 RED 电池堆预测模型，以充分捕捉系统行为。所解决的问题是确定
+    RED 电厂的拓扑结构以及每个 RED 电池堆设计的运行条件，从而为定义的问题和场景实现最优成本。我们的结果表明，通过基于模拟的方法，数学规划技术是提供可靠结果并支持真实场景中早期规模
+    RED 实施的有效方法。
+
+
+    版权所有 © 2022 作者所有。这是一篇基于 CC-BY-ND 许可的开放获取文章（https://creativecommons.org/licenses/cc-by-nd/4.0）。
+
+
+    **关键词：** 可再生能源、蓝能、过程合成、Pyomo、Gurobi、全局优化
+
+
+    ## 1. 引言
+
+
+    从传统排放向需水量更低的去中心化再生能源逐步转变，将对可持续的水和能源供应具有决定性意义。反电解（RED）是一种电化学技术，利用离子选择膜从两种溶液混合时释放的化学能中发电，即盐度梯度能量（SGE），具有成为清洁且稳定的再生资源的潜力，通过水的嵌入能为该部门提供动力。
+
+
+    基于全球的 RED 能量回收系统应用于中大型海水淡化厂中（参考 Tristán, Marcus Fallanzana, 等人）。如果利用了所有的 SGE，RED
+    将占据几乎所有地点海水淡化厂能量需求的的 40%。然而，能量损耗和未经处理的盐水排放仍然是挑战。我们的结果表明，热力学与初始 RED 能量系统过程之间存在需要弥合的差距。多个变量影响
+    RED 过程，增加了试错评估定义最优系统设计的复杂性。我们提出了一个构建为广义析取规划（GDP）问题的优化模型，以定义不同部署下的最优 RED 过程。
+
+
+    以往的研究已经证明，基于废水淡化或处理后出水的发电更具经济和环境优势，需要考虑从电池堆到系统的完整设计和运行决策空间。我们的研究正在开发一个模型，为早期应用研究提供设计支持，并为现实中全规模
+    RED 的实施提取并设计指南。
+
+
+    我们开发并验证了一个 RED 电池堆的预测模型，以确定影响 RED 性能的最相关运行条件和设计参数（Ortiz-Medínez 等，2019；Tristán,
+    Fallanzana, 等，2020）。这项研究使我们能够解决
+
+
+    ## 2. 优化模型
+
+
+    ### 2.1 问题陈述与超结构定义
+
+
+    RED 过程系统的构建可以表述如下：特定场地的运行条件（例如，高盐 HC 和低盐 LC 进料流的浓度、流量和温度）以及电池堆属性（功率、厚度），决定了 RED
+    电厂的拓扑结构（. ）以及 RED 单位中每个 RED 电池堆的运行条件（即 HC 和 LC 的浓度和流量、电流），在最大化净功率输出和净产量的同时，最小化定义问题和场景的
+    RED 过程成本。
+
+
+    备方案结构遵循 Pyosyn 图（PSG）（Chen, Liu, 等，2021）。图 1 所示 RED 过程包含：
+
+
+    RED 过程单元
+
+
+    (a) RED 过程单元（RPU），在其中对选择做出离散决策，(a.i) RED 单元集 r ∈ R；(a.ii) 源 r ∈ RSU 和汇 r ∈ RMU；(a.iii)
+    高浓度和低浓度排放单元，即 {HC, LC}。
+
+
+    ### 2.2 广义析取规划 (GDP) 模型
+
+
+    我们使用 Python 中的 Pyomo 将备方案结构编码为广义析取规划（GDP）问题（Hart 等，2017）。基于图 1 的优化模型由以下集定义：
+
+
+    ```
+
+    min obj = f(x)
+
+    s.t. g(x) ≥ 0
+
+    γ_r(x) ≤ 0 ∀ r ∈ R
+
+    (Y_r) = True
+
+    x ∈ X
+
+    ```
+
+
+    (b) 进料集 FSU 和排放单元 DMU。(c) 入口和出口端口 p ∈ P = P_out ∪ P_in —— 混合器和分流器——材料可能放置在单元界面处。目标函数
+    f(x) 在不等式约束（例如来自工艺规范）和等式约束（例如来自物料平衡）的下，最小化 RED 过程的能量成本（COL）。
+
+
+    (d) 流路或可行对集 s ∈ S_out ∪ S_in，定义了以下约束：
+
+
+    (i) 来自单元进料 FSU 的进入 RED 过程单元（RPU）的浓缩和蒸馏进料，其中排放 DMU 收集失效的高低浓度排放单元，以及来自进料 FSU 的未使用流路。变量描述了所有可行流路的连续决策（例如摩尔浓度、体积流量）以及
+    RED 的电流。
+
+
+    (ii) 单元内部，辅助汇单元 RMU 来自进料 FSU 进入一个或多个活跃 RED 单元的浓缩和蒸馏流。一旦 RPU 利用进料流中的 SG，排放物可以回收或处置在汇单元
+    RMU。来自 RMU 的 RPU 排放物在排放单元 DMU 中处置。全局约束 g(x) ≤ 0 是等式和不等式，适用于超结构中所有配置的规范和物理关系，例如进料、源、汇和排放单元的质量平衡——入口和出口端口，变量（浓度和流量）的上下界。
+
+
+    (iii) RSU 和 RMU 之间不允许流动
+
+
+    析取（考虑逻辑异或关系，即 RED 过程单元内每个活跃 RED 单元最多有一个析取）描述了 RED 单元的存在与否。二元变量 Yr 表示是否存在（Y_r =
+    True）。约束 g(x) ≤ 0 强制执行 RED 单元内部发生的质量和能量平衡、热力学、动力学或其他物理/化学现象。当单元不存在时，否定（¬Y_r）将其设为零
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    Available online at www.sciencedirect.com
+
+
+    IFACPapersOnline-55-31 (2022) 154-159
+
+
+    # # Generalized Disjunctive Programming for Optimization of Reverse Electrolysis
+    Process
+
+
+    C. Tristán*, M. Fallanzana*, I. Grossman**, I. Ortiz*, R. Ibáñez*
+
+
+    * Department of Chemical and Biomedical Engineering, University of Santander,
+    La Los 456,
+
+    39005 Santander, Spain (e-mail: [tristanc, fallanzana, ortiz, ibanez]@ucan.com).
+
+
+    ** Department of Chemical Engineering, Carnegie Mellon University, Pittsburgh,
+    PA 15233, USA.
+
+    (e-mail: grossmann@cmu.edu)
+
+
+    **Abstract:** Reverse electrolysis (RED), an emerging electrochemical technology
+    that uses ion-selective membranes to generate electricity from salinity differences
+    between solutions, i.e., salinity gradient energy (SGE), has the potential to
+    be a clean and stable renewable resource to scale water and energy supply. Although
+    RED has made notable advances, full-scale RED process demands more economic and
+    environmental assessments that consider full design and operational decision space
+    from model-to-system. This work presents an optimization model formulated as a
+    Generalized Disjunctive Programming to define the RED process for different deployments.
+    We use a predictive model of the RED stack and validated in our research to fully
+    capture the behavior of the system. The problem addressed is to determine the
+    RED plant’s topology and the working conditions for a given design of each RED
+    stack which renders the optimal-cost for the defined problem and scenario. Our
+    results show, with simulation-based approaches, mathematical programming techniques
+    are an efficient approach to provide reliable results and support for early-scale
+    RED implementation in real scenarios.
+
+
+    Copyright © 2022 The Authors. This is an open access article under the CC-BY-ND
+    license (https://creativecommons.org/licenses/cc-by-nd/4.0).
+
+
+    **Keywords:** renewable, blue energy, process synthesis, Pyomo, Gurobi, global
+    optimization
+
+
+    # ## 1. INTRODUCTION
+
+
+    The progressive shift from conventional emissions to decentralized renewable power
+    sources with reduced water needs will be decisive in a sustainable water and energy
+    supply. Reverse electrolysis (RED), an electrochemical technology that uses ion-selective
+    membranes to generate electricity from chemical energy released when two solutions
+    mixes, i.e., salinity gradient energy (SGE), has the potential of being a clean
+    and stable renewable resource to power the sector from the embedded energy of
+    water.
+
+
+    of medium-to-large-sized seawater desalination plants with the globe-based RED
+    energy recovery system from (Tristán, Marcus Fallanzana, et al.). If all SGE were
+    used, RED would make up –40% of the desalination plant’s energy demand in almost
+    all locations. However, energy losses and untreated brine discharge remain challenges.
+    Our results show that there is a gap to bridge between the thermodynamics and
+    the initial RED energy system processes. Several variables affect the RED process,
+    adding complexity to define optimal system designs by trial and error evaluations.
+    We propose an optimization model formulated as a Generalized Disjunctive Programming
+    (GDP) problem to define the optimal RED process for different deployments.
+
+
+    Even past research has validated RED-based electricity from waste streams desalinations
+    or treated wastluents more economic and environmental assessments that consider
+    full design and operational decision space from stack to the system. Our research
+    is working on a model to provide design support for early-stage applied research
+    and extract and design guidelines for full-scale RED implementation in reality.
+
+
+    We have developed and validated a predictive model of the RED stack to determine
+    the most relevant working conditions and design parameters affecting RED performance
+    (Ortiz-Medínez et al., 2019; Tristán, Fallanzana, et al., 2020). This research
+    allows us to address
+
+
+    # ## 2. OPTIMIZATION MODEL
+
+
+    # ###2.1 Problem statement and superstructure definition
+
+
+    The formulation of the RED process system can be stated as follows: Site-specific
+    working conditions (e.g., the high-salinity, HC, and low-salinity, LC, feed streams
+    concentrations, flow rate, and temperature) and the stack properties (powers,
+    thickness), seems theirs to define the RED plant topology (.), and the working
+    conditions (i.e., the HC and LC concentration and flow rate, electric current)
+    of each RED
+
+
+    245-9862 © 2022 The Authors. This is an open access article under the CC-BY-ND
+    license.
+
+    Peer review under responsibility Implementation of Automatic Control.
+
+    10.1016/j.future.2022.10.429
+
+
+    * Aster'
+  - '[PAGE 1]
+
+
+    stack in the RED unit that maximizes the net power output and net yield from the
+    feed streams minimizing cost of the RED process for the defined problem and scenario.
+
+
+    The structure of alternatives follows the Pyosyn Graph (PSG) presentation (Chen,
+    Liu, et al., 2021). RED process presentation in Fig. 1 consists of the following
+    elements:
+
+
+    # RED Process Unit, RPU
+
+
+    ![](img/99bdcdd81e5d985c5dcf58b5debe1844_1_0.png)
+
+
+    Figure 1 Structure representation of the RED process.
+
+
+    (a) The RED Process Unit (RPU), where discrete decisions on the selection of the
+    RED units are made,; (a.i) the set of N_i RED units r ∈ R={r1,...,rNi}; the addition
+    of all (a.ii) source r ∈ RSU and sink r ∈ RMU; (a.iii) for high-quality and low-quality
+    streams, i.e., SOL ∈{HC, LC}; in- and outlets for the overall flow, selectivity,
+    and specifications on each effluent quality of the RPU.
+
+
+    # 2.2 Generalized Disjunctive Programming (GDP) model
+
+
+    We formulate the structure of alternatives as a Generalized Disjunctive Programming
+    (GDP) problem coded in Python using Pyomo modeling language (Hart et al., 2017).
+    The optimization model, based on structure in Fig. 1, is defined by the set of
+    equations (1)
+
+
+    ```
+
+    min obj = f(x)
+
+    s.t. g(x) ≥ 0
+
+    γ_r(x) ≤ 0 [γ_r x = 0] ∀ r ∈ R
+
+    (Y_r) = True
+
+    x ∈ X
+
+    Yr = (True, False)
+
+    ```
+
+
+    (b) By set of condensate and distillate feeds, ff FSU, and discharge units, dm
+    ∈ DMU.
+
+
+    (c) The inlet and outlet ports p ∈ P = P_out ∪ P_in—mixers and splitters—where
+    materials at the unit interface with other process units may place.
+
+
+    The objective function f(x) minimizes the Cost of Energy (COL) of the RED process
+    subject to inequality constraints (e.g., from process specifications) and equality
+    constraints (e.g., from material balances and thermodynamic properties)
+
+
+    (d) The set of streams or feasible pairs of unit inlets, s ∈ S_out ∪ S_in, defining
+    the following constraints:
+
+
+    (i) From unit feeds, FSU, the concentrate and distillate feeds to the RED Process
+    Unit (RPU), where the discharge DMU collects the exhausted high- and low-concentration
+    effluent units, and the unused streams from the feeds FSU.
+
+
+    Variables describe continuous decisions (e.g. molar concentrations, volumetric
+    flows) of all feasible streams and the electric current of the current RED units.
+
+
+    (ii) Within unit, the auxiliary sink units, RMU, the concentrate and distillate
+    streams coming from the feeds FSU to one or more of the active RED units. Once
+    the RPU exploits SG from the inlet streams, the effluents may be recycled by react,
+    or be disposed of the sink units, RMU. The RPU effluent from RMU is disposed of
+    in the discharge unit DMU.
+
+
+    The global constraints, g(x) ≤ 0, are equalities and inequalities describing specifications
+    and physical relationships that apply for all configurations in the superstructure,
+    e.g., mass balances of the feed, source, sink and discharge units—inlet and outlet
+    ports, the upper and lower bounds on variables (concentration and flow).
+
+
+    (iii) No flow between the RSU and RMU is allowed
+
+
+    The disjunctions, considering of logic-XOR relations, that at most one disjoint
+    in each RED units within the RED process unit active, describe the existence or
+    absence of the RED units. Binary variables Yr indicates whether a active or not
+    (Y_r = True). The constraints, g(x) ≤ 0 enforce the mass and energy balances,
+    thermodynamics, kinetics, or other physical/chemical phenomena taking place within
+    the RED unit. When the unit is absent, the negation (¬Y_r) sets zero to a'
+- md: '
+
+    subset of the continuous variables, and cost in the objective function through
+    the $B''x = 0$ constraints.
+
+
+    Mixing and splitting calculi when the ports are extracted in the linear constraints
+    $r_i(x) \le 0$, and outside the linear constraints $B''x = 0$. We adopt the approach
+    for modeling an absent unit, ensuring that if a stream does not exit, no flow
+    may place between the outlet-inlet port.
+
+
+    When the RED unit is active ($r_i = True$), the boundary conditions specify the
+    connection and flow rate of the streams entering and leaving the RED unit, inlet
+    port with the RED unit (i.e., $x=0$), and the outlet from the cell (i.e., $x=L$).
+    When the unit is absent ($Y_i = 0$), we enforce no flow and minimum constraint,
+    and the net power output and cost in the objective function are set to zero.
+
+
+    Other types of logical constraints ($Y_i = True$) are described using logical
+    propositions.
+
+
+    ## 2.3 Flow and mass balance formulation
+
+
+    We formulated flow and mass balance equations considering total flows (volumetric
+    flow rate; $q$ in $m^3/h$) and species concentration functions of sodium chloride,
+    $C$ in high- and low-quality streams.
+
+
+    The mixer applies to the inlet ports of the discharge units, the units unit, and
+    the active RED units (i.e., when $Y_i = True$). Mixing equations are nonlinear
+    and nonconvex due to bilinear terms from the product of volumetric flow times
+    concentration, which challenges finding a global optimum.
+
+
+    The splinter applies to the outlet ports of the feed units, the sources unit,
+    and the active RED units (i.e., when $Y_i = True$). Splitting equations are linear
+    and convex.
+
+
+    ## 2.4 Bounds on variables
+
+
+    Each RED unit has limits on the flow, according to the maximum flow-velocity across
+    the length of the RED stack as per the manufacturer''s specifications. The lower
+    bound on velocity and flow in the low salinity cells is a designer''s choice.
+
+
+    The upper bound on concentration species can be as high as the maximum concentration
+    of the feed streams, in- (if there are multiple feed alternates), while for the
+    dilute streams, the concentration can be as high as the concentration reached
+    after the complete mixing of the concentrate and dilute streams reached thermodynamic
+    equilibrium. The opposite holds for the lower bound on the concentration of the
+    concentrate and dilute streams.
+
+
+    ## 2.5 RED stack model formulation
+
+
+    We used a simplified version of the RED rigorous model from our research (Tristán,
+    M. Fallanza, A., et al., 2020), to find a middle-ground between model fidelity
+    and tractability.
+
+
+    The semi-rigorous model is a system of differential and algebraic equations defining
+    RED''s performance from cell to module. A cell pair is a repeating unit in series
+    to form the RED, assembled by cation- and anion-exchange membrane (CEM and AEM,
+    respectively) with two adjacent spacer-fitted compartments that contain the concentrate
+    and dilute water streams.
+
+
+    The cell pair describes the main transport mechanisms, mass balance, distributed
+    pressure, energy yield, and electric variables; i.e., the potential and internal
+    resistance, within a cell pair.
+
+
+    At RED stack scale, the model computes the overall values (electric potential,
+    current, internal resistance, pressure) of the whole set of cell pairs each distributed
+    in the flow direction (taking the integral over the length, m). The model also
+    computes the net and power output (deducting the power consumption from the group
+    power output) to define performance based on power density, energy yield, and
+    efficiency of each stack. The RED model computes the net power output of the stack.
+
+
+    The reader is referred to (Tristán, M. Fallanza, et al., 2020) for more details
+    on the RED model.
+
+
+    As nonlinear solvers are unable to handle the backward finite difference method
+    and the trapezoid rule to reformulate first-order ordinary differential equations,
+    and integrate them into algebraic equations,
+
+
+    ## 2.6 Assumptions
+
+
+    We assumed:
+
+
+    - (a) The feed streams are pure sodium chloride, ideal aqueous solutions (i.e.,
+    activity coefficients to 1), neglecting the non-idealities of solution and existence
+    of other species that would limit the RED performance.
+
+    - (b) There is no non-ionic contribution in the internal losses attributed to
+    concentration polarization in the cell and dilute membrane-solution interfaces
+    and owing to concentration dependent decline in the main flow. We only consider
+    contribution due to solutions'' ionic conductivity and membranes ionic resistance.
+
+    - (c) There is no water transport to osmosis from the low-saline to high-saline
+    one streams.
+
+    - (d) Dilativities in the membrane phase are constant independent of the concentration
+    and temperature.
+
+    - (e) All cell pairs behave equally, as we assumed no fluid leakage or short circuits
+    in the RED stack''s manifolds.
+
+    - (f) Co-flow of the high- streams.
+
+    - (g) The RED systems operate under isothermal and adiabatic conditions.
+
+
+    ## 2.7 Objective function: Levelized Cost of Energy (LCOE)
+
+
+    The objective of the problem is to minimize the LCOE (USD/kWh), a common metric
+    to benchmark technologies, estimates the average cost per unit of energy generated.
+    Assuming the energy produced is constant during the lifetime of the plant, using
+    the discount rate $r$, that therefore define the total power output TNP, in kW.
+
+
+    $$LCOE = \frac{CAPEX + OPEX}{r}$$
+
+    $$CRF = \frac{r}{(1 + r)^{-LT}}$$
+
+    $$TNP = \frac{NP}{YEARU}$$
+
+
+    To estimate the investment, we determine the cost of RED units, pumps, and civil
+    infrastructure.
+
+
+    $$CAPEX = CAPEX_{stack} + CAPEX_{pump} + CAPEX_{civil}$$
+
+    $$OPEX = OPEX_{pump} + OPEX_{rem} + 0.2 \times CAPEX$$
+
+
+    Whenever needed, all costs are converted to USD_{2010} according to historical
+    exchange rate of the corresponding year.
+
+
+    ## 2.8 Solution strategy
+
+
+    For the solution of the non-convex GDP, we use the logic-based solver Gdp built
+    on Pyomo, an open source ecosystem for GDP modeling and development, built on
+    top of the Pyomo algebraic language (Chen, Johnson, et al., 2021).
+
+
+    We apply the Logic-based Outer Approximation (Lee and Grossmann, 2021) to solve
+    the GDP problem. This strategy decomposes the GDP into reduced NLP subproblems
+    and master MILP, to avoid "non-flow" issues arising in nonlinear design when units
+    or streams disappear.
+
+
+    The GAMS/COMPLEX MILP solver and GAMS/MSNLP(IPOPT) NLP solver were used through
+    Pyomo-GAMS interface.
+
+
+    ## 3. CASE STUDY: ENERGY RECOVERY FROM DESINATION CON
+
+
+    We consider a case study of the retrofit of medium-large capacity seawater osmosis
+    (SWRO) desalination plants worldwide with a RED-based recovery system. The RED
+    unit retrieves electricity from concentrate effluent mixed with different alternative
+    low-salinity sources (e.g., WWTP effluent, seawater water). Data on concentration,
+    temperature, and volumetric flow rate of the high- and low-feed streams were from
+    (Tristán, M. Fallanza, et al., 2020).
+
+
+    The study restricts to one parallel branch setting the flow rate and the outlet
+    stream of the RED unit is fed to the input of pump equal to the operating conditions
+    of the 1st RED unit in two scenarios for hydraulic arrangement:
+
+
+    leaving the interconnection between the parallel branches and the inlet leaves
+    the surface area as a discrete function.
+
+
+    The upper limit of parallel branches was considered that the RED system treats
+    desalination''s concentrate effluent in full, ensuring no shortage of low-salinity
+    feed stream. The net power output of the RED system scales with the number of
+    parallel branches.
+
+
+    The method refers to a chemical RED unit with an assigned number of cell pairs
+    of industrial-scale stacks. Data on RED stack''s processes and specifications
+    can be found in (Tristan, Marcos Fallanza, et al., 2020).
+
+
+    ## 4. RESULTS AND DISCUSSION
+
+
+    The optimization model provides an optimized RED''s flowchart design in all scenarios
+    improving the competitiveness of the series-parallel arrangement. As an illustrative
+    example, we show the optimization results for the RED-retrofit of Barcelona-L
+    SWRO desalination plant (Sanz y Miguel, 2013; Tristan, Marcos Fallanza, et al.,
+    2020).
+
+    '
+  mdcn: '
+
+    连续变量的子集，并通过 $B''x = 0$ 约束影响目标函数中的成本。
+
+
+    当端口在线性约束 $r_i(x) \le 0$ 内及线性约束 $B''x = 0$ 外被提取时，采用混合和分裂计算法。我们采用了建模缺失单元的方法，确保如果流体没有出口，则在出口-进口端口之间不会产生流量。
+
+
+    当 RED 单元激活时（$r_i = True$），边界条件规定了进入和离开 RED 单元的流体连接和流率，包括与 RED 单元的进口端口（即 $x=0$）以及来自单元的出口（即
+    $x=L$）。当单元不存在时（$Y_i = 0$），我们强制执行无流量和最小性约束，并将目标函数中的净功率输出和成本设为零。
+
+
+    其他类型的逻辑约束（$Y_i = True$）使用逻辑命题描述。
+
+
+    ## 2.3 流量与质量平衡公式
+
+
+    我们考虑了总流量（体积流量；$q$，单位为 $m^3/h$）以及高、低品质流体中氯化钠的浓度函数 $C$，制定了流量和质量平衡方程。
+
+
+    混合器应用于排放单元、处理单元以及激活 RED 单元的进进口（即当 $Y_i = True$ 时）。由于体积流量与浓度乘积产生的双线性项，混合方程是非线性且非凸的，这为寻找全局最优带来了挑战。
+
+
+    分裂器应用于进料单元、源单元以及激活 RED 单元的出口（即当 $Y_i = True$ 时）。分裂方程是线性的且凸的。
+
+
+    ## 2.4 变量边界
+
+
+    每个 RED 单元对流量都有限制，根据制造商规格跨越 RED 堆栈长度的最大流速。低盐度单元中速度和流量的下限由设计者选择。
+
+
+    物种浓度的上限可以高到进料流的最大浓度（如果存在多个备进料），而对于稀释流，其浓度可以达到浓缩液和稀释流完全混合达到热学平衡后的浓度。浓缩液和稀释流浓度下限的情况相反。
+
+
+    ## 2.5 RED 堆栈模型建模
+
+
+    我们使用了研究中 RED 严谨模型的简化版本（Tristán, M. Fallanza, A., et al., 2020），以便在模型保真度和可处理性之间取得平衡。
+
+
+    半严谨模型是一个微分代数方程系统，定义了从单元到模块的 RED 性能。单元对是串联的重复单元，形成 RED，由阳离子和阴离子交换膜（分别为 CEM 和 AEM）组装，带有两个相邻的隔板密封室，包含浓缩水流和稀释水流。
+
+
+    单元对描述了单元对内部的主要传输机制、质量平衡、分布压力、能量产和电学变量；即电位和内阻。
+
+
+    在 RED 堆栈尺度上，模型计算了整个单元对的整体值（电位、电流、内阻、压力），这些值分布在流方向（对长度 $m$ 积分）。模型还计算了净输出和功率输出（从组功率输出中减去功耗），根据功率密度、能量产和每个堆栈的效率来定义性能。RED
+    模型计算堆栈的净功率输出。
+
+
+    关于 RED 模型的更多细节，请参考（Tristán, M. Fallanza, et al., 2020）。
+
+
+    由于非线性求解器无法处理后向有限差法和梯形法则来重构一阶常微分方程并将其整合代数方程，
+
+
+    ## 2.6 假设
+
+
+    我们假设：
+
+
+    - (a) 进料流为纯氯化钠、理想水溶液（即活性度系数为 1），忽略了溶液的非理想性以及会限制 RED 性能的其他物种的存在。
+
+    - (b) 内部损失中没有由于单元内和稀释膜-溶液界面的浓度极化以及由于主流中随浓度变化的衰减所导致的非离子贡献。我们只考虑由于溶液离子电导率和膜离子电阻引起的贡献。
+
+    - (c) 不存在从低盐流到高盐流的渗透性水分传输。
+
+    - (d) 膜相中的渗透性是常数，与浓度和温度无关。
+
+    - (e) 所有单元对的行为相同，因为我们假设 RED 堆栈流道中没有流体泄漏或短路。
+
+    - (f) 高盐流的共流。
+
+    - (g) RED 系统在等温和绝热条件下运行。
+
+
+    ## 2.7 目标函数：平准化能源成本 (LCOE)
+
+
+    问题的目标是最小化 LCOE (USD/kWh)，这是衡量技术的常用指标，用于估算每单位发电的平均成本。假设在工厂运行寿命期间产生的能量是恒定的，使用折扣率
+    $r$，从而定义总功率输出 TNP，单位为 kW。
+
+
+    $$LCOE = \frac{CAPEX + OPEX}{r}$$
+
+    $$CRF = \frac{r}{(1 + r)^{-LT}}$$
+
+    $$TNP = \frac{NP}{YEARU}$$
+
+
+    为了估计投资，我们确定了 RED 单元、泵和土木基础设施的成本。
+
+
+    $$CAPEX = CAPEX_{stack} + CAPEX_{pump} + CAPEX_{civil}$$
+
+    $$OPEX = OPEX_{pump} + OPEX_{rem} + 0.2 \times CAPEX$$
+
+
+    需要时，所有成本根据相应的年份汇率转换为 USD_{2010}
+
+
+    2.8 求解策略
+
+
+    对于非凸 GDP 的求解，我们使用基于 Pyomo 的逻辑求解器 Gdp，它是基于 Pyomo 代数语言开发的 GDP 模型生态系统（Chen, Johnson,
+    et al., 2021）。
+
+
+    我们应用基于逻辑的外逼近法（Lee and Grossmann, 2021）来求解 GDP 问题。该策略将 GDP 分解为简化的 NLP 子问题和主 MILP，以避免单元或流体消失时的非线性设计问题。
+
+
+    GAMS/COMPLEX MILP 求解器和 GAMS/MSNLP(IPOPT) NLP 求解器通过 Pyomo-GAMS 接口使用。
+
+
+    ## 3. 案例研究：海水化能量回收
+
+
+    我们考虑了全球海水渗透（SWRO）海水化厂的改造，配备基于 RED 的回收系统。RED 单元从与不同低盐源混合的浓缩液中回收电能（例如，废水、海水）。高、低进料流的浓度、温度和体积流量数据来自（Tristán,
+    M. Fallanza, et al., 2020）。
+
+
+    该研究限制在一个并行分支上设置流率，并将 RED 单元的出口流输入到泵，使其等于第一个 RED 单元的运行工况：
+
+
+    并行分支之间的连接使得表面积成为离散函数。
+
+
+    考虑并行分支的上限是 RED 系统完全处理海水化浓缩液，确保低盐进料流不短缺。RED 系统的净功率输出随并行分支的数量而扩大。
+
+
+    该方法指的是一个具有工业级堆栈指定单元对的化学 RED 单元。RED 堆栈的工艺和规格可以在 Tristan, Marcos Fallanza, et al.,
+    2020 中找到。
+
+
+    ## 4. 结果与讨论
+
+
+    优化模型为所有场景提供了优化的 RED 流程图设计，提高了串并布局的竞争力。作为一个说明性示例，我们展示了巴塞罗那-L 海化厂 RED 改造的优化结果（Sanz
+    y Miguel, 2013; Tristan, Marcos Fallanza, et al., 2020）。
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 2]
+
+
+    subset of the continuous variables, and cost in the objective function through
+    the $B''x = 0$ constraints.
+
+
+    Mixing and splitting calculi when the ports are extracted in the linear constraints
+    $r_i(x) \le 0$, and outside the linear constraints $B''x = 0$. We adopt the approach
+    for modeling an absent unit, ensuring that if a stream does not exit, no flow
+    may place between the outlet-inlet port.
+
+
+    When the RED unit is active ($r_i = True$), the boundary conditions specify the
+    connection and flow rate of the streams entering and leaving the RED unit, inlet
+    port with the RED unit (i.e., $x=0$), and the outlet from the cell (i.e., $x=L$).
+    When the unit is absent ($
+
+    eg Y_i$), we enforce no flow and minimum constraint, and the net power output
+    and cost in the objective function are set to zero.
+
+
+    Other types of logical constraints ($Y_i = True$) are described using logical
+    propositions.
+
+
+    # 2.3 Flow and mass balance formulation
+
+
+    We formulated flow and mass balance equations considering total flows (volumetric
+    flow rate; $q$ in $m^3/h$) and species concentration functions of sodium chloride,
+    $C$ in high- and low-quality streams.
+
+
+    The mixer applies to the inlet ports of the discharge units, the units unit, and
+    the active RED units (i.e., when $Y_i = True$). Mixing equations are nonlinear
+    and nonconvex due to bilinear terms from the product of volumetric flow times
+    concentration, which challenges finding a global optimum.
+
+
+    The splinter applies to the outlet ports of the feed units, the sources unit,
+    and the active RED units (i.e., when $Y_i = True$). Splitting equations are linear
+    and convex.
+
+
+    # 2.4 Bounds on variables
+
+
+    Each RED unit has limits on the flow, according to the maximum flow-velocity across
+    the length of the RED stack as per the manufacturer''s specifications. The lower
+    bound on velocity and flow in the low salinity cells is a designer''s choice.
+
+
+    The upper bound on concentration species can be as high as the maximum concentration
+    of the feed streams, in (if there are multiple feed alternates), while for the
+    dilute streams, the concentration can be as high as the concentration reached
+    after the complete mixing of the concentrate and dilute streams reached thermodynamic
+    equilibrium. The opposite holds for the lower bound on the concentration of the
+    concentrate and dilute streams.
+
+
+    # 2.5 RED stack model formulation
+
+
+    We used a simplified version of the RED rigorous model from our research (Tristán,
+    M. Fallanza, A., et al., 2020), to find a middle-ground between model fidelity
+    and tractability.
+
+
+    The semi-rigorous model is a system of differential and algebraic equations defining
+    RED''s performance from cell to module. A cell pair is a repeating unit in series
+    to form the RED, assembled by cation- and anion-exchange membrane (CEM and AEM,
+    respectively) with two adjacent spacer-fitted compartments that contain the concentrate
+    and dilute water streams.
+
+
+    The cell pair describes the main transport mechanisms, mass balance, distributed
+    pressure, energy yield, and electric variables; i.e., the potential and internal
+    resistance, within a cell pair.
+
+
+    At RED stack scale, the model computes the overall values (electric potential,
+    current, internal resistance, pressure) of the whole set of cell pairs each distributed
+    in the flow direction (taking the integral over the length, m). The model also
+    computes the net and power output (deducting the power consumption from the group
+    power output) to define performance based on power density, energy yield, and
+    efficiency of each stack. The RED model computes the net power output of the stack.
+
+
+    The reader is referred to (Tristán, M. Fallanza, et al., 2020) for more details
+    on the RED model.
+
+
+    As nonlinear solvers are unable to handle the backward finite difference method
+    and the trapezoid rule to reformulate first-order ordinary differential equations,
+    and integrate them into algebraic equations,
+
+
+    # 2.6 Assumptions
+
+
+    We assumed:
+
+
+    +   (a) The feed streams are pure sodium chloride, ideal aqueous solutions (i.e.,
+    activity coefficients to 1), neglecting the non-idealities of solution and existence
+    of other species that would limit the RED performance.
+
+
+    +   (b) There is no non-ionic contribution in the internal losses attributed to
+    concentration polarization in the cell and dilute membrane-solution interfaces
+    and owing to concentration dependent decline in the main flow. We only consider
+    contribution due to solutions'' ionic conductivity and membranes ionic resistance.
+
+
+    +   (c) There is no water transport to osmosis from the low-saline to high-saline
+    one streams.
+
+
+    +   (d) Dilativities in the membrane phase are constant independent of the concentration
+    and temperature.
+
+
+    +   (e) All cell pairs behave equally, as we assumed no fluid leakage or short
+    circuits in the RED stack''s manifolds.
+
+
+    +   (f) Co-flow of the high- and low-concentration streams.'
+  - '[PAGE 3]
+
+
+    (g) The RED systems operate under isothermal and adiabatic conditions.
+
+
+    # 2. Objective function: Levelized Cost of Energy (LCOE)
+
+
+    The objective of the problem is to minimize the LCOE of the RED process. LCOE
+    (USD/kWh), a common metric to benchmark renewable power technologies, estimates
+    the average cost per unit of energy generated over the lifetime of a power plant.
+    The LCOE considers operating costs (OPEX in USD/year), and capital costs (CAPEX
+    in USD) averaged over the expected lifetime of the plant, in years, using the
+    discount rate $r$, that therefore define the total annual cost of the RED system.
+
+
+    Assuming the energy produced is constant during the lifetime of the project, the
+    annual energy yield (kWh) of the RED plant operating at capacity, 8760 hours per
+    year, with a load factor, of 90% (i.e., runs 8000 hours per year). The summation
+    of the net power output over the candidate unit yields the nominal capacity of
+    the RED system (16), the total power output TNP, in kW.
+
+
+    ```
+
+    LCOE = \frac{CAPEX + OPEX}{r}
+
+    CRF = \frac{r}{1-(1 + r)^{-LT}}
+
+    TNP = \frac{NP}{YEARU}
+
+    ```
+
+
+    To estimate the investment, we determine the cost of RED units, pumps, and civil
+    infrastructure cost.
+
+
+    ```
+
+    CAPEX = CAPEX_{stack} + CAPEX_{pump} + CAPEX_{civil}
+
+    ```
+
+
+    ```
+
+    OPEX = OPEX_{pump} + OPEX_{rem} + 0.2 \times CAPEX
+
+    ```
+
+
+    Whenever needed, all costs are converted to USD_{2010} according to historical
+    exchange rate of the corresponding publication year.
+
+
+    # 2.8 Solution strategy
+
+
+    For the solution of the non-convex GDP problem, we use the logic-based solver
+    Gdp built on Pyomo, an open source ecosystem for GDP modeling and development,
+    built on top of the Pyomo algebraic modeling language (Chen, Johnson, et al.,
+    2021).
+
+
+    We apply the Logic-based Outer Approximation (GLAOAM) (Lee and Grossmann, 2021;
+    2018) to solve the GDP problem. This strategy decomposes the GDP into reduced
+    NLP subproblems and master MILP, to avoid "non-flow" issues arising in nonlinear
+    design problems when units or streams disappear.
+
+
+    The GAMS/COMPLEX MILP solver and GAMS/MSNLP(IPOPT) NLP solver were used through
+    Pyomo-GAMS interface using GAMS 34.1.
+
+
+    # 3. CASE STUDY: ENERGY RECOVERY FROM DESALINATION CONCENT
+
+
+    We consider a case study of the retrofit of medium-large capacity seawater osmosis
+    (SWRO) desalination plants worldwide with a RED-based recovery system. The RED
+    unit retrieves electricity from desalination concentrate effluent mixed with different
+    alternative low-salinity sources (e.g., WWTP, effluent, seawater water). Data
+    on concentration, temperature, and volumetric flow rate of the high- and low-feed
+    streams were from (Tristan, Marcos Fallanza, et al., 2020).
+
+
+    The study restricts to one parallel branch setting the flow rate and the outlet
+    stream of the RED unit is fed to the input of pump equal to the operating conditions
+    of the 1st RED unit in two scenarios for hydraulic arrangement:
+
+
+    (b) GDP layer, leaving the interconnection between the parallel branches and the
+    inlet leaves the surface area as a discrete function.
+
+
+    The upper limit of parallel branches was considered that the RED system treats
+    desalination''s concentrate effluent in full, ensuring no shortage of low-salinity
+    feed stream. The net power output of the RED system scales with the number of
+    parallel branches.
+
+
+    The method refers to a chemical RED unit with an assigned number of cell pairs
+    of industrial-scale stacks. Data on RED stack''s processes and specifications
+    can be found in (Tristan, Marcos Fallanza, et al., 2020).
+
+
+    # 4. RESULTS AND DISCUSSION
+
+
+    The optimization model provides an optimized RED''s flowchart design in all scenarios
+    improving the competitiveness of the series-parallel arrangement. As an illustrative
+    example, we show the optimization results for the RED-retrofit of Barcelona-L
+    SWRO desalination plant (Sanz y Miguel, 2013; Tristan, Marcos Fallanza, et al.,
+    2020).'
+- md: '
+
+    # C. Tristán et al.: IFAC PapersOnline 55-31 (2022) 154–159
+
+
+    The RED process with a fixed configuration has 8749 constraints (187 nonlinear)
+
+
+    The CPU time for solving these two (Table 3) on a machine running Windows 10 (x64)
+    with 6 cores processor (®Core™ i7-8700 CPU @3.2 GHz) and 16 GB of RAM was 471
+    s and 581 s.
+
+
+    ![](img/99bdcdd81e5d985c5dcf58b5debe1844_4_0.png)
+
+
+    Figure 2 Port connection of a parallel branch in the RED process'' optimal flowsheet
+    design. Case study: Nr=15; stack working conditions (HC/LC): 1.23/0.04 M, 7.24/9.94
+    m³/h, 19 °C (GDP decision): EMS price = $1.12.
+
+
+    Table 1. Optimization results of a parallel branch in the RED system for the fixed
+    and flexible arrangement of the RED units, and the current and optimistic members
+    prices.
+
+
+    | Layout | EMS ($/m²) | #-RED units | TNP (kW) | LCOE ($/MWh) | CAPEX (kS) | OPEX
+    (k/year) |
+
+    |---|---|---|---|---|---|---|
+
+    | Series (fixed) | 98 | 5 | 2.99 | 162 | 21.32 | 1.73 |
+
+    | GDP (decision) | 1.12 | 1 | 0.35 | 369 | 27.77 | 2.09 |
+
+    | | 98 | 1 | 0.45 | 369 | 27.77 | 2.09 |
+
+
+    Case study: Nr=15; stack working conditions (HC/LC): 1.23/0.04 M, 7.24/9.94 m³/h,
+    19 °C
+
+
+    # REFERENCES
+
+
+    The GDP option model reflects a flowsheet design (Fig. 2) that reduces the LCOE
+    by 9% and increases the net output of the RED system, which in turn could reduce
+    around 16% of the desalination plant''s specific energy consumption by the local
+    grid if scale two orders of magnitude down the current cost of membranes.
+
+
+    Chen, Q., et al. (2018) "Pomo.GDP: Disjunctive Optimization", in Computer Aided
+    Engineering. Elsevier, vol. 89, pp. 889–904, doi: 10.1016/B/978-0-444-64241-5.10143-9.
+
+
+    Chen, Q., Johnson, E. S., et al. (2021) "Pyno GDP optimization for ecosystem-based
+    modeling and development option", in Optimization, pp. 1–36; doi: 10.1007/s10081-021-09601-7.
+
+
+    # 5. CONCLUSIONS
+
+
+    In this work, we propose a GDP optimization model to synthesize and optimize the
+    RED for electricity production from salining gradient energy. The goal is to define
+    the hydraulic topology, that is, the hydraulic and working conditions of the candidate
+    RED units, and stack that minimize the LCOE, used as a method to measure process
+    competitiveness in a given scenario. Simulation-based conceptual design can handle
+    complex systems and lead to suboptimal solutions. Hence, to illustrate how mathematical
+    engineering techniques can enhance RED recovery over conventional trial-and-error
+    procedures, we evaluated the world for (i) a fixed stack configuration of the
+    RED units with or without reuse alternatives of the treated water after stages
+    retrieve, and (ii) the feasible reuse and recycle alternatives. Compared with
+    our previous study, this approach provides a robust framework that improves the
+    cost-competitiveness of the system in all scenarios.
+
+
+    Chen, Q., Liu, Y., et al. (2021) "Pynos: a new framework for conceptual design
+    and optimization", Computers & Chemical Engineering, p. 107414; doi: 10.1016/j.chem.2021.107414.
+
+
+    Gómez-Cara, L., et al. (2020) "Blue energy for sustainable water reclamation in
+    WPS", Journal of Process Engineering, 33, p. 101020; doi: 10.1016/j.jpe.2019.101020.
+
+
+    Hart, W. E., et al. (2017) "Optimization Modeling in Python. Second Ed. Cham:
+    Springer International Publishing (Springer Integration and its Applications),
+    doi: 10.1007/978-3-319-58821-6.
+
+
+    Lee, S. Y., Ibrahim, I. (2001) "A global optimization approach for nonconvex design
+    systems", Computers and Chemical Engineering, 25(11-12), pp. 1675–1683; doi: 10.1016/S0009-7222(01)00033-X.
+
+
+    Future work will address solution strategies and formulations to enhance the computational
+    efficiency and robustness of the model. This will also extend the superstructure
+    of more alternatives with more discrete decision variables, related to RED stack
+    size (e.g., the number of cell pairs, members and spacer''s design) and the RED
+    system (e.g., adding auxiliary equipment as DC-AC inverters, or processes as pretreatment
+    of feed), and environmental constraints through multi-objective optimization.
+
+
+    Ortiz-Medínez, R. (2019) "Comparative performance of Salinity Gradient Power-Reverse
+    Electrodialysis under different operating conditions", Desalination, 457, pp.
+    8–21; doi: 10.1016/j.desal.2019.01.005.
+
+
+    Ortiz-Martinez, V. M., et al. (2020) "A comprehensive study on the effects of
+    operation variables on reverse electrodialysis performance", Desalination, 482,
+    p. 114389; doi: 10.1016/j.desal.2020.114389.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    Project LIFE ENV/0000143 funded by the LIFE Programme of the European Union. Grant
+    PDC2021-12786-100 funded by MCIN/AEI/10.1039/5011001133 and by ESF "European Union
+    NextGeneration/PRTR". Grant PRE2018-086454 funded by MCIN/AEI/10.1039/5011000133
+    and by ESF Investing within their future.
+
+
+    San, M. A. Miguel, et al. (2020) "The Role of SW Barcelona-Litoral in the water
+    supply system of Barcelona Area", Desalination and Water Treatment, 51(1-3), pp.
+    111–123; doi: 10.1080/19443994.2019.669520.
+
+
+    Tristan, C., Fallanza, M., (2020) "Recovery of salinity gradient in desalination
+    plants by reverse electrodialysis", Desalination, 459, pp. 114699; doi: 10.1016/j.desal.2020.114699.
+
+
+    Tristán, C., Fallanza, Marcos, et al. (2020) "Reverse electrodialysis: Potential
+    reduction in energy and emissions of desalination", Applied Sciences (Switzerland),
+    20, pp. 1–20; doi: 10.3390/app10022331.
+
+    '
+  mdcn: '
+
+
+    # C. Tristán 等人：IFAC PapersOnline 55-31 (2022) 154–159
+
+
+    固定配置的 RED 过程具有 8749 个约束（其中 187 个是非线性约束）。
+
+
+    在运行 Windows 10 (x64) 并配备 6 核处理器（®Core™ i7-8700 CPU @3.2 GHz）和 16 GB 内存机器上，求解这两项（见表
+    3）的 CPU 时间分别为 471 s 和 581 s。
+
+
+    ![](img/99bdcdd81e5d985c5dcf58b5debe1844_4_0.png)
+
+
+    图 2 RED 过程最优流程设计中并行分支的端口连接。案例研究：Nr=15；堆栈工作条件（HC/LC）：1.23/0.04 M, 7.24/9.94 m³/h,
+    19 °C（GDP 决策）：EMS 价格 = $1.12。
+
+
+    表 1 RED 系统中 RED 单元固定与灵活安排下并行分支的优化结果，以及当前和乐观成员价格。
+
+
+    | 布局 | EMS ($/m²) | #-RED 单元 | TNP (kW) | LCOE ($/MWh) | CAPEX (kS) | OPEX (k/year)
+    |
+
+    |---|---|---|---|---|---|---|
+
+    | 串联（固定） | 98 | 5 | 2.99 | 162 | 21.32 | 1.73 |
+
+    | GDP（决策） | 1.12 | 1 | 0.35 | 369 | 27.77 | 2.09 |
+
+    | | 98 | 1 | 0.45 | 369 | 27.77 | 2.09 |
+
+
+    案例研究：Nr=15；堆栈工作条件（HC/LC）：1.23/0.04 M, 7.24/9.94 m³/h, 19 °C
+
+
+    # 参考文献
+
+
+    GDP 选项模型反映了一种流程设计（图 2），该设计使 LCOE 降低了 9% 并增加了 RED 系统的净输出。如果膜成本降低两个数量级，当地电网可能会减少淡水化厂约
+    16% 的比能耗。
+
+
+    Chen, Q., 等人 (2018) "Pomo.GDP: Disjunctive Optimization", in Computer Aided Engineering.
+    Elsevier, vol. 89, pp. 889–904, doi: 10.1016/B/978-0-444-64241-5.10143-9.
+
+
+    Chen, Q., Johnson, E. S., 等人 (2021) "Pyno GDP optimization for ecosystem-based
+    modeling and development option", in Optimization, pp. 1–36; doi: 10.1007/s10081-021-09601-7.
+
+
+    # 5. 结论
+
+
+    在在这项工作中，我们提出了一种 GDP 优化模型，用于对盐梯度能发电的 RED 进行合成和优化。目标是定义水力拓扑结构，即候选 RED 单元的水力及工作条件和堆栈，以最小化
+    LCOE，并作为衡量给定场景下工艺竞争能力的方法。基于模拟的概念设计可以处理复杂系统并可能导致次优解决方案。因此，为了说明数学工程技术如何比传统的试错程序增强
+    RED 回收，我们评估了以下情况：(i) RED 单元的固定堆栈配置，无论包含或不包含阶段回收后处理后水的重复利用替代方案，以及 (ii) 可行的重复利用和循环方案。与我们之前的研究相比，该方法提供了一个稳健的框架，提高了该系统在所有场景下的成本竞争力。
+
+
+    Chen, Q., Liu, Y., 等人 (2021) "Pynos: a new framework for conceptual design and
+    optimization", Computers & Chemical Engineering, p. 107414; doi: 10.1016/j.chem.2021.107414.
+
+
+    Gómez-Cara, L., 等人 (2020) "Blue energy for sustainable water reclamation in WPS",
+    Journal of Process Engineering, 33, p. 101020; doi: 10.1016/j.jpe.2019.101020.
+
+
+    Hart, W. E., 等人 (2017) "Optimization Modeling in Python. Second Ed. Cham: Springer
+    International Publishing (Springer Integration and its Applications), doi: 10.1007/978-3-319-58821-6.
+
+
+    Lee, S. Y., Ibrahim, I. (2001) "A global optimization approach for nonconvex design",
+    Computers and Chemical Engineering, 25(11-12), pp. 1675–1683; doi: 10.1011-X.
+
+
+    未来的工作将解决计算效率和模型稳健性问题。该工作还将通过更多离散决策变量扩展超结构（例如电池对数量和隔板设计）以及 RED 系统（例如增加 DC-AC 逆变器作为预处理），通过多目标优化引入环境约束。
+
+
+    Ortiz-Medínez, R. (2019) "Comparative performance of Salinity Gradient-Reverse
+    Electrolysis under different operating conditions", Desalination, 457, pp. 8–21;
+    doi: 10.1016/j.desal.2019.01.005.
+
+
+    Ortiz-Martinez, V. M., 等人 (2020) "A comprehensive study on the effects of operation
+    variables on reverse electrodialysis", Desalination, 482, p. 114389; doi: 10.1016/j.desal.2020.114389.
+
+
+    # 感谢
+
+
+    LIFE ENV/000143 项目由欧盟 LIFE 计划资助。PDC2021-12786-100 由 MCIN/AEI/10.1039/501100133
+    资助，来自 ESF “欧盟复一代/PRTR”。
+
+
+    San, M. A. Miguel, 等人 (2020) "The Role of SW Barcelona-Litoral in the water supply
+    system of Barcelona Area", Desalination and Water Treatment, 51(1-3), pp. 111–123;
+    doi: 10.1080/19443994.2019.669520.
+
+
+    Tristan, C., Fallanza, M., (2020) "Recovery of salinity gradient in desalination
+    plants by reverse electrodialysis", Desalination, 459, pp. 114699; doi: 10.1016/j.desal.2020.114699.
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 4]
+
+
+    # C. Tristán et al.: IFAC PapersOnline 55-31 (2022) 154–159
+
+
+    The RED process with a fixed configuration has 8749 constraints (187 nonlinear)
+
+
+    The CPU time for solving these two (Table 3) on a machine running Windows 10 (x64)
+    with 6 cores processor (®Core™ i7-8700 CPU @3.2 GHz) and 16 GB of RAM was 471
+    s and 581 s,.
+
+
+    ![](img/99bdcdd81e5d985c5dcf58b5debe1844_4_0.png)
+
+
+    Figure 2 Port connection of a parallel branch in the RED process'' optimal flowsheet
+    design. Case study: Nr=15; stack working conditions (HC/LC): 1.23/0.04 M, 7.24/9.94
+    m³/h, 19 °C (GDP decision): IEMS price = $1.12.
+
+
+    Table 1. Optimization results of a parallel branch in the RED system for the fixed
+    and flexible arrangement of the RED units, and the current and optimistic members
+    prices.
+
+
+    | Layout | EMS ($/m²) | #-RED units | TNP (kW) | LCOE ($/MWh) | CAPEX (kS) | OPEX
+    (k/year) |
+
+    |---|---|---|---|---|---|--|
+
+    | Series (fixed) | 98 | 5 | 2.99 | 162 | 21.32 | 1.73 |
+
+    | GDP (decision) | 1.12 | 1 | 0.35 | 369 | 27.77 | 2.09 |
+
+    | | 98 | 1 | 0.45 | 369 | 27.77 | 2.09 |
+
+
+    Case study: Nr=15; stack working conditions (HC/LC): 1.23/0.04 M, 7.24/9.94 m³/h,
+    19 °C'
+  - '[PAGE 5]
+
+
+    # REFERENCES
+
+
+    The GDP option model reflects a floatsheet design (Fig. 2) that reduces the LCOE
+    by 9% and increases the net output of the RED system, which in turn could reduce
+    around 16% of the desalination plant''s specific energy consumption by the local
+    grid if scale two orders of magnitude down the current cost of membranes.
+
+
+    Chen, Q., et al. (2018) "Pomo.GDP: Disjunctive Optimization", in Computer Aided
+    Engineering. Elsevier, vol. 89, pp. 889–904, doi: 10.1016/B/978-0-444-64241-5.10143-9.
+
+
+    Chen, Q., Johnson, E. S., et al. (2021) "Pyno GDP optimization for ecosystem-based
+    modeling and development option", in Optimization, pp. 1–36; doi: 10.1007/s10081-021-09601-7.
+
+
+    # 5. CONCLUSIONS
+
+
+    In this work, we propose a GDP optimization model to synthesize and optimize the
+    RED for electricity production from salining gradient energy. The goal is to define
+    the hydraulic topology, that is, the hydraulic and working conditions of the candidate
+    RED units, and stack that minimize the LCOE, used as a method to measure process
+    competitiveness in a given scenario. Simulation-based conceptual design can handle
+    complex systems and lead to suboptimal solutions. Hence, to illustrate how mathematical
+    engineering techniques can enhance RED recovery over conventional trial-and-error
+    procedures, we evaluated the world for (i) a fixed stack configuration of the
+    RED units with or without reuse alternatives of the treated water after stages
+    retrieve, and (ii) the feasible reuse and recycle alternatives. Compared with
+    our previous study, this approach provides a robust framework that improves the
+    cost-competitiveness of the system in all scenarios.
+
+
+    Chen, Q., Liu, Y., et al. (2021) "Pynos: a new framework for conceptual design
+    and optimization", Computers & Chemical Engineering, p. 107414; doi: 10.1016/j.chem.2021.107414.
+
+
+    Gómez-Cara, L., et al. (2020) "Blue energy for sustainable water reclamation in
+    WPS", Journal of Process Engineering, 33, p. 101020; doi: 10.1016/j.jpe.2019.101020.
+
+
+    Hart, W. E., et al. (2017) "Optimization Modeling in Python. Second Ed. Cham:
+    Springer International Publishing (Springer Integration and its Applications),
+    doi: 10.1007/978-3-319-58821-6.
+
+
+    Lee, S. Y., Ibrahim, I. (2001) "A global optimization approach for nonconvex design
+    systems", Computers and Chemical Engineering, 25(11-12), pp. 1675–1683; doi: 10.1016/S0009-7222(01)00033-X.
+
+
+    Future work will address solution strategies and formulations to enhance the computational
+    efficiency and robustness of the model. This will also extend the superstructure
+    of more alternatives with more discrete decision variables, related to RED stack
+    size (e.g., the number of cell pairs, members and spacer''s design) and the RED
+    system (e.g., adding auxiliary equipment as DC-AC inverters, or processes as pretreatment
+    of feed), and environmental constraints through multi-objective optimization.
+
+
+    Ortiz-Medínez, R. (2019) "Comparative performance of Salinity Gradient Power-Reverse
+    Electrodialysis under different operating conditions", Desalination, 457, pp.
+    8–21; doi: 10.1016/j.desal.2019.01.005.
+
+
+    Ortiz-Martinez, V. M., et al. (2020) "A comprehensive study on the effects of
+    operation variables on reverse electrodialysis performance", Desalination, 482,
+    p. 114389; doi: 10.1016/j.desal.2020.114389.
+
+
+    # ACKNOWLEDGMENTS
+
+
+    Project LIFE ENV/0000143 funded by the LIFE Programme of the European Union. Grant
+    PDC2021-12786-100 funded by MCIN/AEI/10.1039/5011001133 and by ESF "European Union
+    NextGeneration/PRTR". Grant PRE2018-086454 funded by MCIN/AEI/10.1039/50110001133
+    and by ESF Investing within their future.
+
+
+    San, M. A. Miguel, et al. (2020) "The Role of SW Barcelona-Litoral in the water
+    supply system of Barcelona Area", Desalination and Water Treatment, 51(1-3), pp.
+    111–123; doi: 10.1080/19443994.2019.669520.
+
+
+    Tristan, C., Fallanza, M., (2020) "Recovery of salinity gradient in desalination
+    plants by reverse electrodialysis", Desalination, 459, pp. 114699; doi: 10.1016/j.desal.2020.114699.
+
+
+    Tristán, C., Fallanza, Marcos, et al. (2020) "Reverse electrodialysis: Potential
+    reduction in energy and emissions of desalination", Applied Sciences (Switzerland),
+    20, pp. 1–20; doi: 10.3390/app10022331.'
