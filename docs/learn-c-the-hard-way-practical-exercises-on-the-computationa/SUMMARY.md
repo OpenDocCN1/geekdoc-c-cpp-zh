@@ -1,0 +1,2 @@
++   [学习 C 语言：针对你一直回避的计算科目（如 C 语言）的实践练习（Zed Shaw 的 Hard Way 系列）](README.md)
++   [学习 C 语言：针对你一直回避的计算科目（如 C 语言）的实践练习（Zed Shaw 的 Hard Way 系列）](learn-c-the-hard-way-practical-exercises-on-the-computationa.md)
