@@ -1,0 +1,952 @@
+- img_proc: true
+  md: "# # C Basics Sheet (1 of 4)\n\n## Introduction to C\nThe C language was developed\
+    \ by Microsoft for the .NET framework. C is a completely reritten language based\
+    \ on C and C++. It is a general-purpose, object-oriented, type-platform neutral\
+    \ language that works with the .NET Framework.\n\n## Visual Studio (VS)\nVisual\
+    \ Studio 2019 is a free download from Microsoft. To create a project, go to File\
+    \ > New Project. From the vert select the C# Console App template in the left.\
+    \ At the right, select the Console window to configure the name and location of\
+    \ the project. Click OK and VS will create your project.\n\n## Hello World (the\
+    \ world)\nUsing C#, you will start your program with a simple line of code like\
+    \ this:\n\n```\nclass Program\n{\n    static void Main(string[] args)\n    {\n\
+    \        Console.WriteLine(\"Hello world!\");\n        // This code is commented\
+    \ out by /\n        /* a multi-line comment\n           is implemented by */\n\
+    \    }\n}\n```\n\nC# will run without the debug mode. The reason you do not want\
+    \ to start the Starting Debugging (F5) is because the console window will close\
+    \ once when the program finishes at the end. There are several methods and properties\
+    \ to control this. You can change the color and title of the title bar. To do\
+    \ this, use the project properties. You can also change your solution name and\
+    \ project location.\n\n# ## A Few Knicks in VS\n\n```\nCode Description\ncript\n\
+    public class Constructor\n{\n    public int MyProperty { get; set; }\n}\n```\n\
+    \nReSharper is a plugin for Visual Studio that adds many code navigation and editing\
+    \ features. It finds coding errors, runtime errors, and refactoring opportunities\
+    \ and highlights them to you, suggesting corrections for them.\n\n# ## Common\
+    \ Language Runtime (CLR)\n\nA core component of the .NET framework, the CLR sits\
+    \ on top of the operating system and manages your execution. When you\n\n.NET\
+    \ tools, compiler, debugger, and ASP are are all used by the CLR. For a .NET language,\
+    \ the compiler translates other code into intermediate language and produces an\
+    \ output file called an assembly (exe or DLL) which native machine code can translate\
+    \ into an intermediate language (Common Intermediate Language or IL). The CLR\
+    \ translates this IL into native machine code when it is run. The CLR ensures\
+    \ safety, security in memory and manages the application's execution through just-in-time\
+    \ (JIT) compilation of each method. When the CLR is compiled, it manages it, performing\
+    \ tasks such as releasing objects, memory checking around and handling exceptions.\n\
+    \n## Variable Declaration and Assignment\nIn C#, you must declare a variable before\
+    \ you can use it. To declare a variable, specify the type of variable followed\
+    \ by its name. You can also initialize it with the data you want it to hold followed\
+    \ by a variable name. A value is assigned to a variable using the assignment operator\
+    \ (=). The variable is then defined and initialized.\n\n# ## Data Types\n# has\
+    \ a built-in type system. This means that every variable you create is of a specific\
+    \ type.\n\n| Primitive | Bytes | Range | Sys Type |\n| :--- | :--- | :--- | :---\
+    \ |\n| bool | 1 | True or False | Boolean |\n| char | 2 | 0 to 65535 | Char |\n\
+    | byte | 1 | 0 to 255 | Byte |\n| short | 2 | -32,768 to 32,767 | Int16 |\n| int\
+    \ | 4 | -2,147,483,648 to 2,147,483,647 | Int32 |\n| long | 8 | -9,223,372,036,854,775,808\
+    \ to 9,223,372,036,854,775,807 | Int64 |\n| float | 4 | ±1.5e-45 to ±3.4e+38 |\
+    \ Float |\n| double | 8 | ±5.0e-324 to ±1.7e+308 | Double |\n| decimal | 16 |\
+    \ ±1.0e-28 to ±7.9e+28 | Decimal |\n\nThe value literal is the defining property\
+    \ of a type of data. For example, if you want an integer, you must use the int\
+    \ type. If you want a decimal, you must use the double type.\n\n+   - Signed (short,\
+    \ int, long)\n- Unsigned (byte, ushort, uint, ulong)\n- Real (float, double)\n\
+    - Decimal\n- String\n\nA string is a built-in type that represents a sequence\
+    \ of characters. A string literal is enclosed in double quotes. The character\
+    \ prefixed with the # is called an interpolated string, which can contain variables\
+    \ inside curly braces. This allows you to embed variables directly into the string\
+    \ literal.\n\nThe .WriteLine() method is used to print text to the console. For\
+    \ example:\n\n```\nstring name = \"John\";\nConsole.WriteLine(\"Hello {name}!\"\
+    );\n```\n\nAnother example:\n```csharp\nstring city = \"New York\";nConsole.WriteLine(\"\
+    I live in {city}!\");\n```\n\n# ## Char\n\nThe char type (System.Char) represents\
+    \ a Unicode character and occupies two bytes. A char literal is enclosed in single\
+    \ quotes.\n\n```\nchar myChar = 'A';\nConsole.WriteLine(myChar);\nnforeach (char\
+    \ c in myChar) { Console.Write(c); }\n```"
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# CSharp Basics Cheat Sheet 2 (of 4)
+
+
+    Escape Sequences
+
+    Escape sequences work with strings and characters, for verbatim strings, which
+    are created by the @ symbol.
+
+
+    The @ (verbatim literal) lets you specify any character by its four-digit hex
+    code.
+
+
+    | Character | Value | Overloaded |
+
+    | --- | --- | --- |
+
+    | \ | 0x0027 | |
+
+    | \" | 0x0022 | |
+
+    | \\ | 0x005c | |
+
+    | \a | 0x0007 | |
+
+    | \b | 0x0008 | |
+
+    | \t | 0x0009 | |
+
+    | \f | 0x000c | |
+
+    | \n | 0x000a | |
+
+    | \r | 0x000d | |
+
+    | \t | 0x0009 | |
+
+    | \? | 0x003f |
+
+
+    Verbatim literal is a string literal prefixed with @ and does not support escapes.
+
+
+    ```
+
+    string path = @"C:\temp\";
+
+    Console.WriteLine(path);
+
+    ```
+
+
+    Constants
+
+    A constant is much like a local variable, but once it is initialized, its value
+    cannot be changed. The keyword const is part of the modifier but not the declaration
+    and must be placed immediately before the declaration. A constant is a static
+    field whose value cannot be changed at runtime. The compiler and linker will substitute
+    its value wherever used (rather like a macro in C++).
+
+
+    ```
+
+    const int number = 5;
+
+    ```
+
+
+    Expressions
+
+    An expression evaluates to a value. Simple expressions (such as 45) and variables
+    (such as x) can be evaluated and combined with operators.
+
+
+    Operators
+
+    Operators are used on values and can be classified as unary, binary, or ternary,
+    depending on the number of operands they work on. The first group contains unary
+    operators which work on one operand (the modulus operator (%) is used to get the
+    remainder). The second group contains assignment operators. Most importantly,
+    the assignment operators allow you to assign values to variables. The comparison
+    operators compare two values and return true or false.
+
+
+    The logical operators are used to evaluate bool expressions. The logical operator
+    (&&) is used to evaluate if both left and right side are true, and it will return
+    a boolean result. A factor is used to group expressions together.
+
+
+    if left or right side is true. The logical operator (||) is used to evaluate if
+    either left or right side is true, and it returns a boolean result. A factor is
+    group expressions. The ternary operator (?:) is used to evaluate a conditional
+    expression.
+
+
+    Note: & and || are conditional versions of && and ||. The x && y and x || y expressions
+    are short-circuiting: if the left operand is false or true, the right-hand operand
+    is evaluated conditionally depending on the value of the left-hand operand. The
+    ?? operator is not short-circuiting.
+
+
+    The Using Directive
+
+    To access from another namespace, you need to specify its library, the fully name
+    must be qualified by including the namespace with a using directive. A using directive
+    allows you to include all directives before the code in the file.
+
+
+    StringBuilder
+
+    System.Text.StringBuilder
+
+    There are three Constructors:
+
+    StringBuilder sb = new StringBuilder();
+
+    StringBuilder sb = new StringBuilder("string");
+
+    StringBuilder sb = new StringBuilder(string.Length);
+
+    StringBuilder sb = new StringBuilder(string, string.Capacity);
+
+
+    The StringBuilder is mutable, meaning once you create an object you can change
+    its content. If you have a lot of string manipulations to perform, you need to
+    use StringBuilder instead of string. StringBuilder provides many methods for manipulating
+    strings such as Append(string), Insert(int, string), Remove(int, int), and Clear().
+    StringBuilder needs System.Text.
+
+
+    you can combine these strings together because of the this method
+
+
+    ```
+
+    var sb = new StringBuilder();
+
+    sb.Append("Hello!");
+
+    sb.Replace("Hello", "World");
+
+    sb.Insert(0, "new string ");
+
+    sb.Remove(0, 5);
+
+    Console.WriteLine(sb.ToString());
+
+    ```
+
+
+    Arrays
+
+    An array is a collection of elements of the same type. Any array uses square brackets
+    the element type. Arrays also index the index, starting at zero, not.
+
+
+    ```
+
+    int[] myArray = {1, 2, 3}; // array with 3 rows and 1 column
+
+    int[][] multiArray = {{1, 2, 3}, {4, 5, 6}}; // array with 2 rows and 3 columns
+
+    char[][] charArray = {"a", "b", "c"}; // array with 3 rows and 1 column
+
+    string[] strArray = {"one", "two", "three", "four"}; // array with 4 rows and
+    1 column
+
+    Console.WriteLine(myArray[0][0]); // prints 1
+
+    myArray[0][0] = 10;
+
+    ```
+
+
+    An array element is an array of objects, regardless of the type of element. For
+    reference types, the square brackets are used for the reference type. For value
+    types, the square brackets are used for the value type.
+
+
+    Jagged & Regular Arrays
+
+    Jagged arrays are sets of arrays. Each array is separated by a jagged bracket.
+    Jagged arrays are arrays of arrays of different lengths. We use square brackets
+    for jagged arrays.
+
+
+    ```
+
+    // // a jagged array with 3 rows
+
+    int[][] jaggedArray = {{1, 2, 3}, {4, 5}, {6, 7, 8, 9}};
+
+    jaggedArray[0][0] = 10; // prints 10
+
+    jaggedArray[1][1] = 20; // prints 20
+
+    jaggedArray[2][3] = 30; // prints 30
+
+    ```
+
+
+    ```
+
+    // foreach string in b
+
+    string[] b = {"a", "b", "c"};
+
+    foreach (string s in b)
+
+    {
+
+    Console.Write(s);
+
+    }
+
+    ```
+
+
+    ```
+
+    // foreach string in g
+
+    string[] g = {"one", "two", "three"};
+
+    foreach (string s in g)
+
+    {
+
+    Console.Write(s);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# C Basics Sheet (3 of 4)\n\n# Formatting\n\n# Struct\n\nNumbers fall into\
+    \ two categories: integer and floating point.\n\nYou can define a custom type\
+    \ with the struct keyword. A struct is a value type. Fields can have an initializer\
+    \ and inherit without a constructor. The first member must have an initializer.\n\
+    \n# DateTime\n\nDateTime is a struct and is therefore a value type.\n\n```\nvar\
+    \ now = new DateTime(2000\n```\n\n| Format | Pattern | Value | Description |\n\
+    | --- | --- | --- | --- |\n| C c | (0;C21) | $2781.29 | Currency |\n| D s | (0;D57)\
+    \ | 1.798E+003 | Must be an integer or floating point |\n| F | (F2;F29) | 2781.29\
+    \ | Floating point |\n| G | (0;G28) | 2781.29 | Inerts zeros |\n| N | (0;N4) |\
+    \ - | Rounds to nearest percent |\n| R | (0,R85) | 2.89315 | Retains all decimal\
+    \ points |\n| X | (X,94) | - | Converts to hex |\n\n```\nstruct Customer {\n \
+    \   public string FirstName;\n    public string LastName;\n    public Customer(string\
+    \ firstName, string lastName) {\n        FirstName = firstName;\n        LastName\
+    \ = lastName;\n    }\n    public string GetFullName() {\n        return FirstName\
+    \ + \" \" + LastName;\n    }\n}\nCustomer c1 = new Customer(\"John\", \"Doe\"\
+    );\nConsole.WriteLine(c1.GetFullName()); // John Doe\n```\n\n# TimeSpan\n\n+ \
+    \  - Creating a TimeSpan represents an interval of time.\n\n```\nvar now = new\
+    \ DateTime(2020, 1, 1, 12, 0, 0);\nvar span = new TimeSpan(2, 45, 0); // 2 hours\
+    \ and 45 minutes\nvar span2 = new TimeSpan(30); // 30 seconds\nvar future = now.Add(span);\n\
+    Console.WriteLine(\"Future: \" + future);\nConsole.WriteLine(\"Future date/time:\
+    \ \" + future.ToString(\"yyyy-mm-dd hh:mm:ss\"));\nvar past = now.Subtract(span2);\n\
+    Console.WriteLine(\"Past: \" + past);\nConsole.WriteLine(\"Past date/time: \"\
+    \ + past.ToString(\"yyyy-mm-dd hh:mm:ss\"));\n```\n\n+   - Adding or subtracting\
+    \ a TimeSpan from a DateTime returns a DateTime.\n\n# Enumerated Type\n\nIt can\
+    \ be defined directly as a namespace, class, or struct.\n\n```\nenum Day { Sunday,\
+    \ Monday, Tuesday, Wednesday, Thursday, Friday, Saturday }\nDay d = Day.Tuesday;\n\
+    Console.WriteLine(d); // Tuesday\nConsole.WriteLine((int)d); // 2\nd = (Day)4;\n\
+    Console.WriteLine(d); // Thursday\n```\n\n+   - Enumerations are lists of named\
+    \ constants.\n\nFor example you could have a list of the days of the week: Monday,\
+    \ Tuesday and so on, and without any values. You can use typeof(Day) and typeof.\n\
+    \n# Conversions\n\nC# can convert between instances of compatible types. A conversion\
+    \ always creates a new value instead of modifying the original. Conversions can\
+    \ be implicit or explicit; explicit conversion requires a cast. A useful case\
+    \ is when you are converting a value from a User class to another class.\n\n```\n\
+    int x = 10;\nlong y = x; // implicit conversion from 32-bit to 64-bit\ndouble\
+    \ z = x; // implicit conversion from 32-bit to 64-bit float\nfloat f = (float)z;\
+    \ // explicit conversion from 64-bit to 32-bit\nint i = (int)z; // explicit conversion\
+    \ from 64-bit to 32-bit\n```\n\nConversions from integral types are implicit,\
+    \ unless the conversion must be explicit. Conversions from a floating-point to\
+    \ an integer type require an explicit cast; no rounding is performed during conversion.\n\
+    \n```\nstring s = \"123\";nint i = int.Parse(s); // conversion from string to\
+    \ integer\nint.TryParse(s, out int result); // conversion from string to integer\n\
+    Console.WriteLine(result); // 123\n```\n\n+   - Here are some examples of implicit\
+    \ and explicit conversion.\n\n```\nvar a = 10;\nvar b = a; // implicit conversion\\\
+    var c = (double)a; // explicit conversion\n```\n\nEnumerations can be used as\
+    \ lists of lists. For example you could have\n\nIn .NET, every object is a base\
+    \ and the existence of the Object class. The available members of an object are\
+    \ equals:\n\n```\nfloat f = -128.7;\nobject obj = f; // boxing\nSystem.Int32 d\
+    \ = 120; // boxing\nConsole.WriteLine(obj.GetType() + \" is \" + obj); //\n```"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# # C# Basics Sheet (4 of 4)\n\n# Lists\n\nLists are covered in more detail\
+    \ in the Lists of Objects section below, but here is how you use them:\n\n# The\
+    \ Regex Class\n\nThe Regex class is in System.Text.RegularExpressions.\n\n| Description\
+    \ | Example |\n| :--- | :--- |\n| Matches one or more | `*abc, abc*` |\n| Matches\
+    \ zero or more | `*abc, abc*` |\n| Matches zero or one | `?abc, abc?` ` |\n| (0-9)\
+    \ | Any digit from 0-9 |\n| [0-9]{3} | Any three digits from 0-9\n\n```\nvar numbers\
+    \ = new List<int>(1,2,3);\nnumbers.Add(new int[] {5, 6, 7});\nforeach (var num\
+    \ in numbers) Console.WriteLine(num + \" \\\");\"\n```\n\n# File IO\n\nUsing System.IO;\
+    \ add this to your project reference or file namespace\n\n```\nclass Program {\n\
+    \    static void Main(string[] args) {\n        File.WriteAllText(@\"D:\\myfile.txt\"\
+    , \"Hello world!\");\n        string[] lines = File.ReadAllLines(@\"D:\\myfile.txt\"\
+    );\n        foreach (var line in lines) {\n            Console.WriteLine(line);\n\
+    \        }\n        File.AppendAllText(@\"D:\\myfile.txt\", \"\\nNew line!\");\n\
+    \        File.Delete(@\"D:\\myfile.txt\");\n    }\n}\n```\n\n# Debugging\n\nTo\
+    \ debug the code you first write in your project you can set a breakpoint by clicking\
+    \ on the line number and pressing F5 to pause execution. You can then use F10\
+    \ to step over code or F11 to step into methods. Hover your cursor over a variable\
+    \ to be able to see the state of data. If all looks good, press F5 again to continue\
+    \ execution. You can also use Ctrl+Shift+F5 to restart debugging. When you are\
+    \ done press F5 again to stop execution. Your breakpoints will be removed when\
+    \ finished.\n\n+   - Windows\n- Breakpoints\n\n# Comparison Operators\n\nComparison\
+    \ operators compare two values and return true or false:\n\n| Syntax | Example\
+    \ |\n| :--- | :--- |\n| == | `if (x == 10) // equal` |\n| != | `if (x != 10) //\
+    \ not equal` |\n| > | `if (x > 10) // greater than` |\n| < | `if (x < 10) // less\
+    \ than` |\n| >= | `if (x >= 10) // greater than or equal to` |\n| <= | `if (x\
+    \ <= 10) // less than or equal to`\n\n# Conditional Statements\n\nIt's a good\
+    \ idea to write a method that returns true or false; then call it:\n\n| Syntax\
+    \ | Example |\n| :--- | :--- |\n| if (condition) | `if (condition) { ... }` |\n\
+    | else | `else { ... }` |\n| else if (condition) | `else if (condition) { ...\
+    \ }` |\n| switch | |\n\n```\nif (x == 10) {\n   x = 20;\n} else {\n   x = 30;\n\
+    }\n```\n\nIt's a good idea to write a method that returns true or false. For example,\
+    \ if you want to check if a list has items, you could write a method that returns\
+    \ true if it does. However, it might not be exactly what you expect. It's important\
+    \ to think about Edge Cases, which are uncommon, as the opposite of the Happy\
+    \ Path.\n\n# NuGet Package Manager\n\nNuGet is for .NET. The NuGet client manager\
+    \ provides access to a central repository of packages to consume them. NuGet packages\
+    \ are installed into your Visual Studio project using the NuGet Package Manager\
+    \ or the Package Console. One interesting feature is the NuGet Package Manager\
+    \ which allows you to package your own code, but here are some of the\n\n# Your\
+    \ Own Library\n\nTo create a class library using Visual Studio 2017, create a\
+    \ new Project -> Class Library C# - Net Standard (.NET Standard) and give it a\
+    \ name and location OK. To use it, go to Build -> Build Solution to create the\
+    \ DLL. The DLL name will be what you will need to give your project a reference\
+    \ to it by giving it the name and location OK. Select Solution Explorer -> Right-click\
+    \ References -> Add Reference -> Browse to find the DLL. For reference you can\
+    \ now add a using statement at the top of your program. You should now have access\
+    \ to your library code:\n\n# Loop\n\n| Syntax | Example |\n| :--- | :--- |\n|\
+    \ while (condition) | `while (condition) { ... }` |\n| for (condition) | `for\
+    \ (condition) { ... }` |\n| foreach (item in collection) | `foreach (item in collection)\
+    \ { ... }`\n\n```\nint i = 0;\nwhile (i < 4) {\n   Console.WriteLine(i);\n   i++;\n\
+    }\nfor (int i = 0; i < 4; i++) {\n   Console.WriteLine(i);\n}\nforeach (var item\
+    \ in numbers) {\n   Console.WriteLine(item);\n}\n```\n\n# Directory\n\n| Syntax\
+    \ | Example |\n| :--- | :--- |\n| do { ... } | `do { ... } while (condition);`\
+    \ |\n| while (condition) | `while (condition) { ... }`\n\n```\nint i = 0;\ndo\
+    \ {\n   Console.WriteLine(i);\n   i++;\n} while (i < 4);\n```\n\nUse do loop when\
+    \ you need to execute the code at least once and then check if the condition is\
+    \ still true. The for-while loop checks the condition before executing the code,\
+    \ so you won't need to create an instance of it if the condition is not met.\n\
+    \nUse for loop when you know how many times you want to run the code. Use foreach\
+    \ loop when you want to iterate over a collection. These are available in ANSI,\
+    \ Unicode, Binary, BigEndian, UTF8, UTF-7, UTF-32 and by default, but Windows\
+    \ and OS on .NET Core applications.\n\n| Syntax | Example |\n| :--- | :--- |\n\
+    | for (initialization; condition; iteration) | `for (int i = 0; i < 4; i++)` |\n\
+    | foreach (item in collection) | `foreach (var item in collection)`\n\n```\nint\
+    \ i = 0;\nfor (int i = 0; i < 4; i++) {\n   Console.WriteLine(i);\n}\nforeach\
+    \ (var item in numbers) {\n   Console.WriteLine(item);\n}\n```\n\n```\nclass Program\
+    \ {\n    static void void Main(string[] args) {\n        Directory.CreateDirectory(@\"\
+    D:\\folder\");\n        File.WriteAllText(@\"D:\\myfile.txt\", \"Hello world!\"\
+    );\n    }\n}\n```"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# # C# Cheat Sheet (1)\n\n# # Abstract Classes\n\n## Object-Oriented Programming\
+    \ (OOP)\n-oriented programming (OOP) is a programming paradigm that employs objects\
+    \ to encapsulate code. Objects of types are called classes; a class is just a\
+    \ template for an object. When we say a class is instantiated, it means an object\
+    \ has been created. Each object contains data and code. In C#, an object is an\
+    \ instance of a class.\n\nA abstract class cannot be instantiated. Instead, only\
+    \ subclasses can be instantiated. Abstract classes define abstract methods, which\
+    \ like virtual members, except they don't provide a default implementation. Implementation\
+    \ must be provided by subclasses, unless that subclass is also abstract.\n\n#\
+    \ ## Sealed Classes\n\nA sealed class cannot be used as the base class for any\
+    \ other class. You use the sealed keyword to protect your class from being inherited.\
+    \ Static classes are implicitly sealed.\n\n# ## DRY\n\nDRY stands for Don't Repeat\
+    \ Yourself. In OOP, encapsulation is used to avoid one or two related distinct\
+    \ notions, systems to the combination thereof: (1) a language mechanism for restricting\
+    \ direct access to some of an object's components; (2) a language mechanism (or\
+    \ other functions) for operating on data. In OOP, the open/closed principle states\
+    \ that software entities (classes, functions, etc.) are open for extension, closed\
+    \ for modification.\n\n# ## Instance Constructors\n\nFor classes, the compiler\
+    \ automatically generates a parameterless constructor if you do not define any\
+    \ constructors. The parameterless constructor is not automatically generated,\
+    \ so you may need to write it.\n\nWhen an object is destroyed, its memory is freed.\
+    \ Memory is freed up by the garbage collector. Finalizers are called with the\
+    \ new keyword.\n\n# ## Simple Class Declaration\n\n```\ncsharp\nclass Customer\n\
+    {\n    public [protected] int Id\n    [abstract] string Name : IInterfaces inherited\
+    \ from object\n}\n```\n\nA class is a data structure that contains data and execute\
+    \ code. Each member of a class can contain coordination or the number of possible\
+    \ variables is local. A local variable declared inside a function is hidden. On\
+    \ the Internet, the Service is a program that provides functionality to clients.\
+    \ Note: When you have a class, such as our Customer, and you have a list of objects\
+    \ of any type, you should always include a list to map each item.\n\n```\ncsharp\n\
+    public class Customer\n{\n    public int Id;\n    public string Name; // in real\
+    \ world these are properties\n    public Customer(int id, string name) // (same\
+    \ as class name)\n    {\n        this.Id = id;\n        this.Name = name;\n  \
+    \  }\n    public int GetCustomerId() => this.Id;\n}\n```\n\n# ## Static\n\nStatic\
+    \ methods are meant to be consumed without instantiating them. Static classes\
+    \ can be used to group members that are available to the program. A static method\
+    \ can access static members as well as the class itself. A static class cannot\
+    \ be instantiated. An instance class cannot inherit from a static class. Non-static\
+    \ classes can have static members which can only access static members. Static\
+    \ members are shared by all instances of the class, and all the instances have\
+    \ the same memory location when they access the static method. Static methods\
+    \ can access static members but not instance members. Static members also have\
+    \ the option to be accessed from outside the class using the dot operator, but\
+    \ only if the class member does not use a static prefix.\n\n# ## Methods\n\n```\n\
+    csharp\nclass Program\n{\n    public void ShowDetails()\n    {\n        Console.WriteLine(\"\
+    Customer ID: \" + Id);\n        Console.WriteLine(\"Name: \" + Name);\n    }\n\
+    }\n```\n\nA method is a block of code that is a member of a class. You can execute\
+    \ the code from within the method's name. This provides access to the class members.\n\
+    \n```\ncsharp\nclass NotFound\n{\n    public void doSomething()\n}\n```\n\nA sequence\
+    \ of statements enclosed by curly braces. It may contain local variables (for\
+    \ local computations), flow-of-control statements, and other methods known as\
+    \ local functions.\n\n# ## Fields\n\nA field belongs to a class. It can be of\
+    \ any type, either initialized or pre-defined value. An initializer part of a\
+    \ field follows the declaration and consists of an equal sign followed by an expression\
+    \ that evaluates to a value. This is evaluated at compile time. If not uninitialized,\
+    \ the compiler sets the value of a field to a default value, by the type of the\
+    \ field.\n\n```\n[access modifier]\n[static|virtual|new| sealed]\nreturn type\n\
+    method name (parameter ) { body }\n```\n\nC# allows for optional parameters which\
+    \ either include or omit the new keyword. To specify a parameter\n\nHere is the\
+    \ Console output of the above program. Note that the first order Id below is zero\
+    \ because the default is zero:\nCustomer ID: 3 Name: Bob\nNumber of orders: 2\n\
+    Order ID: 0\nOrder ID: 7\n\nGenerally, you would use fields with properties to\
+    \ provide encapsulation."
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "# # C# Cheat Sheet (2 of 4)\n\n| Access | Description |\n| --- | --- |\n| Public\
+    \ | Fully accessible. This is the implicit accessibility for members of an enum\
+    \ or interface. |\n| private | Accessible only within the class. |\n| internal\
+    \ | Accessible only within the same assembly. |\n| protected | Not used normally.\
+    \ Accessible only from the class and its derived classes. |\n\nprivate is the\
+    \ default accessibility for members of a class. This type has no way to hide implementation\
+    \ details that it contains.\n\nvirtual methods can be overridden in subclasses.\n\
+    \nnew methods can hide base methods.\n\nabstract methods must be implemented by\
+    \ subclasses.\n\n```\n{\nget (return words[index]); // // zero-based\nset (words[index])\
+    \ = value;\n}\n\n```\n\nThe get and set accessors. The setter method can throw\
+    \ an exception if value was outside a valid range of values.\n\n```\nstatic void\
+    \ main() {\nstring s = \"Hello\"; // zero-based\nConsole.WriteLine(s);\nConsole.WriteLine(s);\n\
+    s = null; // Writing nothing, or\nConsole.WriteLine(s); // NullReferenceException\n\
+    }\n```\n\n# ## Object Initialization\n\nC# Object Initialization Syntax allows\
+    \ you to initialize an instance of object or collector. It allows you to assign\
+    \ values to fields at the time of creation without using a constructor.\n\n```\n\
+    class Person\n{\npublic int Id { get; set; }\npublic string FirstName { get; set;\
+    \ }\npublic string LastName { get; set; }\npublic DateTime Birthday { get; set;\
+    \ }\n}\n```\n\n```\nPerson p = new Person { Id = 1, FirstName = \"John\", LastName\
+    \ = \"Doe\" };\n\n```\n\nIf the class has a constructor that initializes a field,\
+    \ the last name must be used.\n\n```\nPerson p = new Person(\"John\") { LastName\
+    \ = \"Doe\" };\n\n```\n\nA property is declared like a field but with a get/set\
+    \ block. Properties look like fields from the outside but can contain contain\
+    \ logic. Between a public field and a public property, no memory is used. Note\
+    \ that ~= means means from class.\n\n```\nstatic void main() {\nItem it = new\
+    \ Item();\nConsole.WriteLine(it.Price);\nit.Price = 45.99m;\nit.Price += it.Price;\
+    \ // += *it.Price;\nit.Price = 100.0m;\nConsole.WriteLine(it.Price);\n}\n```\n\
+    \n# ## Properties\n\n```\nclass Item\n{\npublic decimal Price { get; set; }\n\
+    public decimal Amount { get; set; }\n}\n```\n\nHere is a property with its backing\
+    \ field, that is implemented with auto property with { get; set; }.\n\n```\nclass\
+    \ Account\n{\nprivate decimal _amount;\npublic decimal Amount {\nget { return\
+    \ _amount; }\nset { _amount = value; } // the keyword value\n}\npublic void Deposit(decimal\
+    \ amount) { _amount += amount; }\n}\n```\n\nIndexes provide a way to access elements\
+    \ in a class that encapsulates a list or collection. indexer is like an array\
+    \ but can be accessed via an index argument rather than a property. An indexer\
+    \ can have multiple indexes that allows you to access elements by different index\
+    \ types.\n\n# ## Indexers\n\n```\nclass Words\n{\nprivate string[] words;\npublic\
+    \ string this[int index] {\nget { return words[index]; }\nset { words[index] =\
+    \ value; }\n}\n\n```\n\nThe index argument can be out of range (any type), You\
+    \ can use indexers null-indirectionly by using a question mark before the string\
+    \ index.\n\n```\nstring[] words = null;\nConsole.WriteLine(words[0]); // NullReferenceException\n\
+    To write an indexer, define a property that calls this, using the argument name.\n\
+    ```\n\nInheritance is a type of relationship (\"A-B\") between classes where one\
+    \ class to inherit members from the other. A “house” is an “of” relationship.\
+    \ Inheritance allows for polymorphism in C#. In the example below Animal is at\
+    \ the top with an arrow pointing to Animal. Another example of inheritance is\
+    \ a Saving Bank Account inherits from Bank Account.\n\n# ## Inheritance\n\n```\n\
+    class Base\n{\npublic void Method() { Console.WriteLine(\"Base class\"); }\n}\n\
+    class Sub : Base\n{\npublic override void Method() { Console.WriteLine(\"Sub class\"\
+    ); }\n}\n```\n\n# ## Constructor\n\nWhen you instantiate a class, base constructors\
+    \ are executed first, as seen in lines 2 and 3 of the output. Base constructors\
+    \ are not inherited.\n\n```\nclass Base\n{\npublic Base() { Console.WriteLine(\"\
+    Base constructor\"); }\n}\nclass Sub : Base\n{\npublic Sub() : base() { Console.WriteLine(\"\
+    Sub constructor\"); }\n}\n```\n\n```\nclass Program\n{\n  static void main() {\n\
+    \    Sub s = new Sub();\n    s.Amount = 1; // inherited from base\n    Console.WriteLine(s.Amount);\
+    \ // Sub 1\n  }\n}\nclass Base\n{\n  public int Amount { get; set; }\n}\nclass\
+    \ Sub : Base\n{\n  public string Sub { get; set; }\n}\n```\n\n![](img/1f8cd73ee3d2c31b907cf27a170f2e34_5_0.png)"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# COP Cheat Sheet (3 of 4)\n\n# Composition vs Inheritance\n\n# Composition\
+    \ (aka Containment)\n\nDesigning classes needs to be careful. With inheritance,\
+    \ using inheritance can result in hierarchies that make refactoring difficult\
+    \ due to tight coupling. There is a fish and a whale both inherit from Animal,\
+    \ but they are quite different. One is a fish and the other is a mammal. If we\
+    \ use inheritance, we would have to create a Fish and a Whale class.\n\nComposition\
+    \ is a type of relationship ('a-has') between two classes that allows one to contain\
+    \ another. Inheritance is another type of relationship. Methods in both allow\
+    \ code re-use. However, in composition, the object calls methods of the contained\
+    \ object instead of implementing them itself, which sends a message to the contained\
+    \ object.\n\nWe can also create a WalkAndSwim class. It is not fine to use \"\
+    a-is\" because it does not make sense in the context of a fish that can walk,\
+    \ but we are certain that all our animals will walk now and in the future. If\
+    \ you have, that is, you might need a sub-class of Animal called WalkAnimal, and\
+    \ re-develop your code.\n\nGenerally, instances use a field in the class to hold\
+    \ an instance of another class and composition depends on what you need it. Two\
+    \ things to remember are:\n\n```\nusing System;\nusing System.Collections.Generic;\n\
+    \nclass Car {\n    private readonly Engine engine;\n    public Car(Engine engine)\
+    \ // constructor\n        engine = engine;\n    }\n    public void Drive() {\n\
+    \        float speed = 0.0f;\n        engine.Start(\"starting speed of km/h\"\
+    );\n        speed = 50.0f;\n    }\n    n    engine.EngineStart(\"starting car\"\
+    );\n    engine.EngineStop(\"car off\");\n}\n\nclass Truck {\n    private readonly\
+    \ Engine engine;\n    public Truck(Engine engine) // constructor\n        engine\
+    \ = engine;\n    }\n    public void DriveTruck() {\n        engine.Drive();\n\
+    \    }\n}\nclass Vehicle // the car and truck have \"An engine\"\n{\n    public\
+    \ void updateStatus(string status) {\n        Console.WriteLine(\"status: \" +\
+    \ status);\n    }\n}\nclass Program {\n    public static void main(string[] args)\
+    \ {\n        var car = new Car(new Engine());\n        var sedan = new Sedan();\n\
+    \        var pickup = new Truck(new Engine());\n        pickup.DriveTruck();\n\
+    \    }\n}\n```\n\n# Interfaces\n\nAn interface is like a class, but it is a specification\
+    \ rather than an implementation for members. It's a \"contract\". Interface members\
+    \ are abstract. A class can implement multiple interfaces, but it can inherit\
+    \ from only one class. A class and struct can inherit from itself inheriting from\
+    \ interfaces.\n\nIn System.Type.Value, the interfaces will be implemented by the\
+    \ classes and structs that implement the interface. By convention, interface names\
+    \ start with the letter \"I\".\n\n# Method Overriding & Polymorphism\n\nMethod\
+    \ overriding allows the implementation of an inherited method to change from the\
+    \ method in the base class. The virtual keyword is used in the method of the base\
+    \ class and in the derived class to override it. What is polymorphism? Polymorphism\
+    \ allows us to use examples with different classes as the base class.\n\n```\n\
+    class BaseClass {\n    public int Property { get; set; }\n    public virtual void\
+    \ writeMessage() {}\n}\n\nclass Child : BaseClass {\n    public int Composition\
+    \ = 3;\n    public override void writeMessage() {\n        Console.WriteLine(\"\
+    Green \" + Composition);\n    }\n}\n\nclass Display {\n    public void writeAllMessages(List<BaseClass>\
+    \ baseclasses) {\n        foreach (var item in baseclasses) {\n            item.writeMessage();\n\
+    \        }\n    }\n}\n```\n\nWhen we call writeAllMessages() above we have polymorphic\
+    \ behavior. Here we have a list of different objects, but the implementation for\
+    \ each color. Red override the green base class. The notice is the list of the\
+    \ base class BaseClass.\n\n```\ninterface IInterface {\n    string GetName();\n\
+    }\n\nclass Person : IInterface {\n    public string Name;\n    public int Age;\n\
+    \    public string GetName() { return Name; }\n    public string GetAge() { return\
+    \ Age.ToString(); }\n}\n\nclass Student : Person {\n    public string School;\n\
+    \    public override string GetName() { return Name + \". Student\"; }\n}\n\n\
+    class Program {\n    public static void main(string[] args) {\n        var p =\
+    \ new Person { Name = \"John Doe\", Age = 35 };\n        var s = new Student {\
+    \ Name = \"Jane\", Age = 24, School = \"University\" };\n        // the objects\
+    \ are automatically\n        // converted to interface\n        Console.WriteLine((IInterface)p).GetName());\n\
+    \        Console.WriteLine((IInterface)s).GetName());\n        Console.WriteLine(p.GetType().Name);\n\
+    \    }\n}\n```\n\nOutput:\n\n```\nJohn Doe\nJane Student\nPerson\n```\n\n```\n\
+    public static void main(string[] args) {\n    var baseclasses = new List<BaseClass>();\n\
+    \    baseclasses.Add(new Child() { Composition = 3 });\n    baseclasses.Add(new\
+    \ Child() { Composition = 3 });\n    var display = new Display();\n    display.writeAllMessages(baseclasses);\n\
+    }\n\nOutput:\nName John Doe Age: 35\nName Jane Smith Age: 24\n```\n\nName John\
+    \ Doe Age: 35\nName Jane Smith Age: 24\n\n![](img/1f8cd73ee3d2c31b907cf27a170f2e34_6_0.png)"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# COOP Cheat Sheet (4 of 4)\n\n# Interfaces & Extensibility\n\nWe create a\
+    \ constructor and a dependency. This called\ndependency, which means in the constructor\
+    \ we are\nspecifying the dependencies of our. The FileProcessor is\ndependently\
+    \ on the ConsoleLogger. It doesn't care\n\n```\npublic class FileProcessor {\n\
+    \    public void Log(string message) // method\n        _logger.Log(message);\
+    \ // method\n    public FileProcessor(ILogger logger) // constructor\n       \
+    \ _logger = logger; // constructor\n    public void Process(string message) //\
+    \ method\n        _logger.Log(message); // method\n        Console.WriteLine(message);\
+    \ // method\n    public void Save(string message) // method\n        _logger.Log(message);\
+    \ // method\n        Console.WriteLine(message); // method\n}\n```\n\n# Interfaces\
+    \ & UnitTesting\n\nUsing interfaces with unit testing. This example builds on\n\
+    unity in which we'll use the Mock Test Runner. When you\nnew a new entry and passing\
+    \ the dependency to the entry post()\nmethod of the JournalPost class. Posting\
+    \ the entry services of\nthe interface. To make unit testing easier, we'll use\n\
+    a interface for it.\n\n```\npublic void TestTestMethod() {\n    var mock = new\
+    \ Mock<IDrEqualEntryChecker>();\n    var post = new JournalPost(mock.Object);\n\
+    \    var entry = new JournalEntry { Amount = -120.5m };\n    mock.Setup(x => x.Check(entry)).Returns(true);\n\
+    \    post.Post(entry);\n    mock.Verify(x => x.Check(It.IsAny<JournalEntry>()),\
+    \ Times.Once);\n}\n```\n\nSince we want to test the JournalPost(), we will rename\
+    \ it to\nJournalPosts. Rename testing the method of calling the\nJournalPostTests.\
+    \ Add a Reference to our project. In the unit\nproject check the check box of\
+    \ the project. If we want to create a fake entry\ncheck checker, we don't want\
+    \ to pass the original one to the\nJournalPost, we need a mock that will be fake\
+    \ because\nwe are testing out the JournalPost, not the checker.\n\n+   - need\
+    \ to add a Reference to our project\n- ExpectedException(typeof(InvalidOperationException))\n\
+    - using naming convention: method_condition_exception\n\n```\npublic class JournalPost\
+    \ {\n    private IDrEqualEntryChecker _checker;\n    public JournalPost(IDrEqualEntryChecker\
+    \ checker) {\n        _checker = checker;\n    }\n    public void Post(JournalEntry\
+    \ entry) {\n        if (!_checker.Check(entry)) {\n            throw new InvalidOperationException(\"\
+    Already posted!\");\n        }\n        _Balance += entry.Amount;\n        _PostDate\
+    \ = DateTime.Now.AddDays(1);\n    }\n}\n```\n\n# ConsoleLogger\n\n```\npublic\
+    \ class ConsoleLogger : ILogger {\n    public void Log(string message) {\n   \
+    \     Console.WriteLine(message);\n    }\n}\n```\n\n# JournalEntry\n\n```\npublic\
+    \ class JournalEntry {\n    public decimal Amount { get; set; }\n    public DateTime\
+    \ PostDate { get; set; }\n}\n```\n\nOutput:\n\nPosted:\nDate: 2020-02-07\nAmount:\
+    \ -120.50\nCredit amount: 120.50\nBalance: -110.50\n\n# JournalPost\n\n```\npublic\
+    \ class JournalPost {\n    private decimal _Balance;\n    private DateTime _PostDate;\n\
+    \    private IDrEqualEntryChecker _checker;\n    public JournalPost(IDrEqualEntryChecker\
+    \ checker) {\n        _checker = checker;\n    }\n    public void Post(JournalEntry\
+    \ entry) {\n        if (!_checker.Check(entry)) {\n            throw new InvalidOperationException(\"\
+    Already posted!\");\n        }\n        _Balance += entry.Amount;\n        _PostDate\
+    \ = DateTime.Now.AddDays(1);\n    }\n}\n```\n\n> // or we might use the keyword\
+    \ in the result to\n_logger.Log(\"Starting at \" + DateTime.Now);\n_logger.Log(\"\
+    In middle of doing stuff...\");\n\n\n```\npublic class Program {\n    private\
+    \ readonly ILogger _logger;\n    public Program(ILogger logger) {\n        _logger\
+    \ = logger;\n    }\n    public static void Main(string[] args) {\n        try\
+    \ {\n            var processor = new FileProcessor(new ConsoleLogger());\n   \
+    \         processor.Process(\"done program\");\n        } catch (Exception ex)\
+    \ {\n            _logger.Log(\"Error: \" + ex.Message);\n        }\n    }\n}\n\
+    ```\n\n# Class\n\n```\npublic static void Main(string[] args) {\n    // we send\
+    \ our to console\n    var processor = new FileProcessor(new ConsoleLogger());\n\
+    \    processor.Process(\"done program\");\n}\n```\n\nOutput:\nStarting at 2020-02-07\
+    \ 10:05:43\nIn middle of doing stuff...\n\nError! \ndone program.\n\nWe can extend\
+    \ it. We can create more loggers than\nConsoleLogger, such as DatabaseLogger,\
+    \ FileLogger,\nEmailLogger and so on, and all we need to change the Main."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# C# Advanced Cheat Sheet (1/4)\n\n```\n// mix fields with a property just\
+    \ for demonstration\npublic int x;\npublic string Name = \";\npublic Status Status\
+    \ { get; set; }\n```\n\n# Generics\n\nC# has two mechanisms for writing code that\
+    \ is reusable across different types: inheritance and generics. Whereas inheritance\
+    \ expresses reusability with a base class, generics expresses reusability with\
+    \ a template that contains \"placeholders\".\n\nOur code has three methods in\
+    \ the class above. They are Add(),,(), and AppendString().\n\n```\nusing System.Collections.Generic;\n\
+    public class List<T> {\n```\n\n```\n  public int Id { get; set; }\n  public string\
+    \ Name { get; set; }\n```\n\n```\n// Using object initialization syntax\nvar customer\
+    \ = new Customer { Name = \"Alice\", Status = Status.Active };\n```\n\n```\npublic\
+    \ static void Main(string[] args) {\n```\n\n```\n  List<Customer> customers =\
+    \ new List<Customer>();\n  customers.Add(new Customer { Name = \"Alice\", Status\
+    \ = Status.Active });\n  customers.Add(new Customer { Name = \"Bob\", Status =\
+    \ Status.Inactive });\n  foreach (var customer in customers) {\n    Console.WriteLine(customer.Name\
+    \ + \" : \" + customer.Status);\n  }\n}\n```\n\n# Delegates\n\nA delegate is a\
+    \ type that \"holds\" other methods. A delegate is a reference to a function or\
+    \ list of methods that match a specific signature. When you execute a delegate\
+    \ it will execute the user-defined reference type. You can create your own delegate\
+    \ type, or use the generics: Func<T> and Action<T>. Here we'll create one.\n\n\
+    ```\npublic delegate void MyDelegate(string message);\n```\n\n```\nstatic void\
+    \ MyMethod(string message) {\n  Console.WriteLine(message);\n}\n```\n\n```\nMyDelegate\
+    \ del = MyMethod;\ndel.Invoke(\"Hello!\");\n```\n\n# Lists\n\nLists were created\
+    \ before in the basic section of this sheet, but the examples were only lists\
+    \ of integers. Now we have a list of objects based on our own class structure.\n\
+    \n# Class Customer\n\n```\npublic class Customer {\n  public int Id { get; set;\
+    \ }\n  public string Name { get; set; }\n  public Status Status { get; set; }\n\
+    }\n```\n\n# Class Repository\n\n```\npublic class Repository {\n  private List<Customer>\
+    \ _customers = new List<Customer>();\n  public void AddCustomer(Customer customer)\
+    \ {\n    _customers.Add(customer);\n  }\n  public List<Customer> GetCustomers()\
+    \ {\n    return _customers;\n  }\n  public int GetCount() {\n    return _customers.Count;\n\
+    \  }\n}\n```\n\n```\npublic static void Main(string[] args) {\n  Repository repo\
+    \ = new Repository();\n  repo.AddCustomer(new Customer { Id = 1, Name = \"Alice\"\
+    , Status = Status.Active });\n  repo.AddCustomer(new Customer { Id = 2, Name =\
+    \ \"Bob\", Status = Status.Inactive });\n  Console.WriteLine(\"Total customers:\
+    \ \" + repo.GetCount());\n}\n```\n\nHere is another example of a list of objects,\
+    \ without Repository.\n\n# Class Program\n\n```\npublic class Program {\n  public\
+    \ static void Main(string[] args) {\n    List<Customer> customers = new List<Customer>();\n\
+    \    customers.Add(new Customer { Id = 1, Name = \"Alice\", Status = Status.Active\
+    \ });\n    customers.Add(new Customer { Id = 2, Name = \"Bob\", Status = Status.Inactive\
+    \ });\n    foreach (var customer in customers) {\n      Console.WriteLine(customer.Name\
+    \ + \" : \" + customer.Status);\n    }\n    Console.WriteLine(\"Total customers:\
+    \ \" + customers.Count);\n  }\n}\n```\n\nHere is a realistic example of a delegate.\
+    \ Here we create a multicast delegate. The one we use is in the main method. We\
+    \ have an object that needs to \"process\" with several methods in it, and we\
+    \ also want to be able to add or remove methods from the list of them.\n\n# Class\
+    \ Processor\n\n```\npublic class Processor {\n  public event Action<string> MessageReceived;\n\
+    \  public void Process(string message) {\n    MessageReceived?.Invoke(message);\n\
+    \  }\n}\n```\n\n```\npublic static void Main(string[] args) {\n  Processor processor\
+    \ = new Processor();\n  processor.MessageReceived += Method1;\n  processor.MessageReceived\
+    \ += Method2;\n  processor.Process(\"First message!\");\n  processor.MessageReceived\
+    \ -= Method1;\n  processor.Process(\"Second message!\");\n}\n\nstatic void Method1(string\
+    \ message) {\n  Console.WriteLine(\"Method 1: \" + message);\n}\nstatic void Method2(string\
+    \ message) {\n  Console.WriteLine(\"Method 2: \" + message);\n}\n```\n\n# Func\
+    \ and Action\n\nIn .NET we have delegates that are Action and Func. They are non-generic.\
+    \ Forming them allows us to use Action and introduce a new processor which will\
+    \ call MyDelegateProcessor() and remove our custom delegate in there adding Action.\
+    \ Also in the main() program we want to change the line and the first line of\
+    \ code."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "# # C# Advanced Cheat Sheet (2 of 4)\n\nbeginning.com\n\n# ## Function and\
+    \ Action... continued...\n\n```\npublic class Myclass\n{\n    public int My {\
+    \ get; set; }\n    // public delegate void MyMethodHandler(Myclass subclass)\n\
+    \    public delegate void MyEventHandler(Myclass sender)\n    public void MethodHandler(Myclass\
+    \ subclass)\n    {\n        var myclass = new Myclass(\"In Process method\");\n\
+    \        myclass.My = 1;\n        Invoke(myclass); // the methods we want to execute\
+    \ here\n        // we are going to define the consumer that\n    }\n```\n\nBelow\
+    \ is a list of partial I program showing the changes.\nvar myprocessor = new MyclassProcessor();\
+    \ // generics\nAction myAction = myprocessor.mymethods.Add;\n\n# ## Anonymous\
+    \ Types\n\nAn anonymous type is a simple class created on the fly to store a set\
+    \ of values. To create an anonymous type, you use the new keyword followed by\
+    \ an object initializer. The names and types of the properties are inferred by\
+    \ the compiler. \n\n```\nvar person = new { Name = \"Bob\", Age = 32 };\nvar person2\
+    \ = new { Name = person.Name, Age = person.Age, Number = 123 };\n```\n\nHere is\
+    \ another example.\n\n```\nclass Program\n{\n    static void Main(string[] args)\n\
+    \    {\n        var person = new { Name = \"John\", Age = 30 };\n        var major\
+    \ = \"Computers\";\n        Console.WriteLine(person.Name + \": \" + person.Age);\n\
+    \        var person2 = new { Name = person.Name, Age = person.Age, Major = major\
+    \ };\n        Console.WriteLine(person2.Name + \": \" + person2.Age + \", \" +\
+    \ person2.Major);\n        // John, 30, Computers\n    }\nn}\n```\n\n# ## Lambda\n\
+    \nA lambda expression is an unnamed method written in place of a delegate instance.\
+    \ A lambda expression is an anonymous method that has no modifier, no return type\
+    \ and no return statement. We can well re-factor a lambda expression into a method.\
+    \ The example is ->\n\n```\nclass Program\n{\n    delegate int My(int parameter);\
+    \ // custom delegate\n    int MyMethod = (x) => x * 2; // lambda expression\n\
+    }\n```\n\n# ## static\n\n```\nstatic void Main(string args)\n{\n    MyEventHandler\
+    \ EventHandler = (sender, number) => {\n        number += number;\n    };\n  \
+    \  EventHandler.AddEventHandler(EventHandler);\n}\n```\n\nHere is another example.\n\
+    \n```\nstatic void Add(int number)\n{\n    List<int> squares = new List<int>();\n\
+    \    squares.Add(number * number);\n    squares.Add(number * number);\n    squares.Add(number\
+    \ * number);\n    squares.Add(number * number);\n    squares.Add(number * number);\n\
+    }\n```\n\n# ## int Square(int number)\n\n```\n{\n    return number * number;\n\
+    }\n```\n\nHere is another example. Here we have a list of products. We have a\
+    \ list of objects. You can filter the list with a series of products.\n\nFindAll()\
+    \ takes a predicate. A predicate is a method that returns true or false.\n\n```\n\
+    class Product\n{\n    public string Title { get; set; }\n    public int Price\
+    \ { get; set; }\n}\n```\n\n# ## class ProductRepository\n\n```\npublic List<Product>\
+    \ GetProducts()\n{\n    return new List<Product>\n    {\n        new Product {\
+    \ Title = \"Laptop\", Price = 1000 },\n        new Product { Title = \"Phone\"\
+    , Price = 500 },\n        new Product { Title = \"Tablet\", Price = 300 }\n  \
+    \  };\n}\n```\n\n# ## class Program\n\n```\nstatic void Main(string[] args)\n\
+    {\n    var products = new ProductRepository().GetProducts();\n    foreach (var\
+    \ product in products.FindAll(p => p.Price > 400))\n    {\n        Console.WriteLine(product.Title);\n\
+    \    }\n}\n```\n\n# ## foreach (in products)\n\nYou can use a lambda when argument\
+    \ requires a delegate.\n\n# ## Events\n\n+   1. define a delegate (signature)\
+    \ or EventHandler\n2. define an event on that delegate [ItemProcessed in class]\n\
+    3. raise the event\n\n```\nclass Program\n{\n    public delegate void ItemEventHandler(object\
+    \ sender, EventArgs args);\n    public event ItemEventHandler ItemProcessed;\n\
+    \n    public void ProcessItem(string item)\n    {\n        // ... logic\n    \
+    \    ItemProcessed?.Invoke(this, EventArgs.Empty);\n    }\n}\n```\n\nHere is an\
+    \ example program that uses events.\n\n```\nclass Program\n{\n    static void\
+    \ Main(string[] args)\n    {\n        var processor = new ItemProcessor(); //\
+    \ subscriber\n        // ... subscribe\n        processor.ItemProcessed += (sender,\
+    \ args) => {\n            Console.WriteLine(\"Item processed\");\n        };\n\
+    \        processor.ProcessItem(\"item\");\n    }\n}\n```\n\n# ## class EventHandler\n\
+    \n```\npublic class EventHandler\n{\n    public MyEventHandler MyEventHandler\
+    \ { get; set; }\n\n    // public delegate void MyEventHandler(object sender, EventArgs\
+    \ args);\n    // public event MyEventHandler MyEventHandler;\n\n    public void\
+    \ Subscribe(MyEventHandler handler)\n    {\n        if (MyEventHandler == null)\n\
+    \            MyEventHandler = handler;\n    }\n```\n\n# ## class ItemProcessor\n\
+    \n```\npublic class ItemProcessor\n{\n    public event MyEventHandler ItemProcessed\
+    \ { get; set; }\n\n    // public delegate void MyEventHandler(object sender, EventArgs\
+    \ args);\n    // public event MyEventHandler ItemProcessed;\n\n    public void\
+    \ ProcessItem(string item)\n    {\n        // ... logic\n        ItemProcessed?.Invoke(this,\
+    \ EventArgs.Empty);\n    }\n}\n```\n\n# ## class Subscriber\n\n```\npublic class\
+    \ Subscriber\n{\n    public void OnItemProcessed(object sender, EventArgs args)\n\
+    \    {\n        Console.WriteLine(\"Item processed: \" + args.Message);\n    }\n\
+    } \n```\n\nHere is the main program.\n\n```\nclass Program\n{\n    static void\
+    \ Main(string[] args)\n    {\n        var processor = new ItemProcessor();\n \
+    \       var subscriber = new Subscriber();\n        // ... subscribe\n       \
+    \ processor.ItemProcessed += subscriber.OnItemProcessed;\n        processor.ProcessItem(\"\
+    item\");\n    }\n}\n```\n\n# ## Attributes\n\nAttributes allow you to add metadata\
+    \ to code. Attributes use name caps for values with the suffix Attribute. Attribute\
+    \ section consists of square brackets around attribute name and parameters list.\
+    \ A marker with an attribute can be applied to, decorated, or removed from. We\
+    \ use the [Obsolete] attribute to mark the method as obsolete and display a warning\
+    \ message\n\n# ## Preprocessor directives\n\nCSharp consists of preprocessor directives\
+    \ that are mainly used by the compiler. The directives #if and #endif define a\
+    \ section of code that can be expanded or collapsed using the feature of Visual\
+    \ Studio and can be nested within each other."
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# # C# Advanced Cheat Sheet (3 of 4)\n\nbeginningnow.com\n\n```\npublic IEnumerable<Product>\
+    \ GetProducts() {\nreturn new List\n```\n\ndatabase with a library like MonthDate\
+    \ which may have a\nvalue.\n\n```\nstatic void Main(string args)\n// DateTime\
+    \ is a type - cannot be null\n```\n\n# ## Extension Methods\n\nExtension methods\
+    \ allow you to extend existing with new\nmethods without altering the definition\
+    \ of the original type.\nExtension method is a static method of a static class,\
+    \ which the\nmodifier is added to for. The first type of the\nparameter defines\
+    \ the type. In extension methods, like\n\n```\npublic class Product {\n  public\
+    \ static string ToString(this string str, string[] args) {\nif (str == null) throw\
+    \ new\nArgumentNullException(\"str cannot be null\");\nreturn string.Join(\",\
+    \ \", new Product(Name = \"One\", Price = 5),\nnew Product(Name = \"Two\", Price\
+    \ = 9.99),\nnew Product(Name = \"Three\", Price = 3));\n```\n\n```\n01:00-01 12:00\
+    \ AM\n```\n\nWhat about concerns and the null-coalescing operator?\n\n```\nDateTime\
+    \ date = DateTime.Parse(\"2018,1,1\");\nDateTime result = date.GetValueOrDefault();\
+    \ // cannot convert\nConsole.WriteLine(date);\nDateTime result = date;\n```\n\n\
+    ```\nclass Program\nstatic void Main(string args) {\n  var products = new ProductRepository().GetProducts();\n\
+    \  foreach (var product in products) {\n    if (product.Price > 10) {\n      Console.WriteLine(product.Name);\n\
+    \    }\n  }\nn}\n```\n\n```\n// Nullable Coalescing:\nDateTime date = null;\n\
+    if (date != null) {\n  use ?? operator\n} else {\n  date = DateTime.GetValueOrDefault();\n\
+    }\nConsole.WriteLine(date);\nDateTime date = DateTime.Now;\ndate = date ?? DateTime.Now;\
+    \ // if at at block\nWorking with nullable types, DateTime.GetValueOrDefault()\
+    \ is the\npreferred way of doing this.\n```\n\nWhen you fold this delegate, you\
+    \ get access to these\nmethods and a list of extension methods. Extension method\
+    \ is\nWhere?. Where as an example. Func<Product, bool>\nIt points to a method\
+    \ that has a parameter. The predicate\naccepts a product. When we use Func as\
+    \ a delegate to a\na lambda expression such as p => p.Price > 10. Here is the\n\
+    code with LINQ:\n\n# ## Class\n\n```\nstatic void Main(string args) {\n  string\
+    \ sentence = \"A very long sentence...\";\nstring[] words = sentence.Split(\"\
+    \ ');\nint length = words.Length;\nvar sortedSentence = string.Join(\" \", words.OrderBy(w\
+    \ => w.Length));\nvar s3 = int.Parse(\"53\");\nConsole.WriteLine(s3 + \" + \"\
+    \ + s3);\n```\n\n# ## LINQ\n\nLINQ stands for Language Integrated Query and is\
+    \ called \"LINQ\"\nis an extension of the .NET Framework and allows you to collect\n\
+    data in a larger manner using SQL queries. With\nLINQ you can query data from\
+    \ (Objects), collections of\nobases, XML documents (LINQ to XML), and OAD data\
+    \ sources using LINQ sets.\n\n```\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Data;\nclass Program {\n  static void Main(string\
+    \ args) {\n    int[] data = {6, 4, 15, 68, 23, 33}; // Data source\n    var numbers\
+    \ = data.OrderBy(n => n); // Define & sort the query\n    foreach (var x in numbers)\
+    \ // Execute the query\n      Console.WriteLine(x); // output: 4, 6, 15, 23, 33,\
+    \ 68\n  }\n}\n```\n\nNow let's use a more example. We'll show you how to do\n\
+    without LINQ, when we have a class of objects called\nProduct and we have a ProductRepository.\n\
+    \n```\npublic class Product {\n  public string Name { get; set; }\n  public float\
+    \ Price { get; set; }\n}\nclass ProductRepository {\n  public IEnumerable<Product>\
+    \ GetProducts() {\n    return new List<Product> {\n      // ... add products here\
+    \ ...\n    });\n  }\n}\n```\n\nThe LINQ methods can do this. When we select in\n\
+    a list of strings, it returns list. If you only want one product\nis Single()\
+    \ or SingleOrDefault(). Single() will throw an\nInvalidOperationException if it's\
+    \ not found. The OrderOrDefault()\nreturns the first match, which is much better.\n\
+    \n```\nvar products = new ProductRepository().GetProducts();\nvar product = products.FirstOrDefault(p\
+    \ => p.Price > 10); // returns first match\nConsole.WriteLine(product == null);\
+    \ // returns false\nConsole.WriteLine(product.Name); // returns \"Product Name\"\
+    \n```\n\nThere are many ways to filter data. Where do you find them?\nnSee the\
+    \ LINQ comments below. If you only want one product\nis Single() or SingleOrDefault().\
+    \ Single() will throw an\nInvalidOperationException if it's not found. The OrderOrDefault()\n\
+    returns the first match, which is much better.\n\n# ## Nullable Types\n\nNullable\
+    \ references represent a reference type with a null\nvalue. Normal value types\
+    \ cannot be null, so to represent\na null type you must use a special construct\
+    \ called a nullable\ntype which is denoted with a value type followed by a?\n\
+    It is important to use nullable types when you have a\n\n# ## Dynamics\n\nProgramming\
+    \ languages are interpreted, C# Java and JavaScript\nhow variables are resolved\
+    \ at runtime, not at time. The\nCLR (network virtual machine) compiles code (IL)\
+    \ the\ncompiler) which is an intermediate language (IL) and contains\nmetadata\
+    \ about all the objects. The CLR\nRuntime type checking happens each object on\
+    \ the\ninternally stores it as a tuple. You can retrieve this by\nusing reflection.\
+    \ To get properties of objects and the\nkeyword dynamic data, you don't need to\
+    \ use reflection.\nConsole. By converting values to types, if the\ntarget you\
+    \ want to cast to dynamic object can be implicitly converted to\n\n```\nstring\
+    \ name = \"John\";\\ydynamic name = \"John\"; // works because name is dynamic!\n\
+    Console.WriteLine(name); // returns 20\\ydynamic a = 1, b = 2, c = a + b; // becomes\
+    \ dynamic\\ydynamic d = 9;\nint i = 1;\nl = 1;\nConsole.WriteLine(l);); // returns\
+    \ 1\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# # C# Advanced Cheat Sheet (4 of 4)\n\nAsynchronous...\n\n# Asynchronous\n\
+    \nIn the synchronous model you execute lines by line, but in the asynchronous\
+    \ model (e.g. web requests) you don't. In .NET 4.5 (2012) Microsoft introduced\
+    \ a new asynchronous model, instead of multi-threading and callbacks. It uses\
+    \ async and await keywords. In our example we have a WPF program that has 2 blocking\
+    \ operations (downloading and writing). We use async and await keywords to make\
+    \ the UI responsive. Async method works only if the input method is async and\
+    \ has no effect on the\n\n```\nusing System;\nusing System.Threading.Tasks;\n\
+    using System.Windows;\nnamespace Asynchronous\n```\n\n```\npublic partial class\
+    \ MainWindow : Window\n{\n    public MainWindow()\n    {\n        InitializeComponent();\n\
+    \    }\n    private async void Button_Click(object sender, RoutedEventArgs e)\n\
+    \    {\n        await DownloadTaskAsync(\"http://begincodingnow.com/\");\n   \
+    \     await Task.Delay(2000); // wait at the end of the method\n    }\n    public\
+    \ async Task DownloadTaskAsync(string url)\n    {\n        // Use Task.Run to\
+    \ offload work to a background thread\n        await Task.Run(async () =>\n  \
+    \      {\n            using (HttpClient client = new HttpClient())\n         \
+    \   {\n                string result = await client.GetStringAsync(url);\n   \
+    \             MessageBox.Show(result);\n            }\n        });\n    }\n}\n\
+    ```\n\nWe now modify our model. The message box executes immediately. We can execute\
+    \ other code here. Another message box executes after the blocking operation.\n\
+    \nException Handling blocks can be used to avoid unexpected exceptions when the\
+    \ program crashes. We use a Try catch block. The four keywords of exception handling\
+    \ are: try, catch, finally, and throw. The first code example has an unexpected\
+    \ exception. In the second example we handle the exception.\n\n```\npublic int\
+    \ Divide(int numerator, int denominator)\n{\n    try\n    {\n        return numerator\
+    \ / denominator;\n    }\n    catch (DivideByException ex)\n    {\n        MessageBox.Show(\"\
+    Cannot divide by zero. \" + ex.Message);\n    }\n    catch (Exception ex)\n  \
+    \  {\n        MessageBox.Show(\"Unexpected error! \" + ex.Message);\n    }\n \
+    \   finally\n    {\n        Console.WriteLine(\"Attempted to divide by zero\"\
+    );\n    }\n}\n```\n\n```\npublic async Task Main(string[] args)\n{\n    try\n\
+    \    {\n        var client = new HttpClient();\n        string result = await\
+    \ client.GetStringAsync(\"http://begincodingnow.com/\");\n        Console.WriteLine(result);\n\
+    \    }\n    catch (DivideByZeroException ex)\n    {\n        Console.WriteLine(\"\
+    Cannot divide by zero. \" + ex.Message);\n    }\n    catch (Exception ex)\n  \
+    \  {\n        Console.WriteLine(\"Unexpected error! \" + ex.Message);\n    }\n\
+    \    finally\n    {\n        Console.WriteLine(\"Attempted to divide by zero\"\
+    );\n    }\n}\n```\n\nRecursion is a function that calls itself. You must write\
+    \ a condition that checks if the condition is satisfied. If not the function will\
+    \ call itself too many times and result in an infinite loop.\n\n```\npublic static\
+    \ int Factorial(int n)\n{\n    if (n <= 1)\n    {\n        return 1;\n    }\n\
+    \    else\n    {\n        return n * Factorial(n - 1);\n    }\n}\n```\n\nTo implement\
+    \ multiple catch blocks set a break point (F9) and run in debug mode. Press F11\
+    \ to step through the code. To bring up more details, click the wrench icon. Look\
+    \ at Message, Source (or click the marker icon), StackTrace (sequence of method\
+    \ calls in the reverse order - where the exception happened) and others.\n\n```\n\
+    public static int CountDivisors(double number, double divisor)\n{\n    int count\
+    \ = 0;\n    for (int i = 1; i <= number; i++)\n    {\n        if (number % divisor\
+    \ == 0)\n        {\n            count++;\n        }\n    }\n    return count;\n\
+    }\n```\n\n```\npublic class Calculator\n{\n    public int Add(int a, int b)\n\
+    \    {\n        return a + b;\n    }\n\n    public int Subtract(int a, int b)\n\
+    \    {\n        return a - b;\n    }\n\n    public int Multiply(int a, int b)\n\
+    \    {\n        return a * b;\n    }\n\n    public int Divide(int a, int b)\n\
+    \    {\n        if (b == 0)\n        {\n            throw new DivideByZeroException();\n\
+    \        }\n        return a / b;\n    }\n}\n```\n\nMultiple catch blocks example\
+    \ below:\n\n```\ntry\n{\n    var calculator = new Calculator();\n    var result\
+    \ = calculator.Divide(10, 0);\n}\ncatch (DivideByZeroException ex)\n{\n    MessageBox.Show(\"\
+    Cannot divide by zero!\");\n}\ncatch (Exception ex)\n{\n    MessageBox.Show(\"\
+    Unexpected error!\");\n}\n```"
+  merge: -1
+  pgno: 11
