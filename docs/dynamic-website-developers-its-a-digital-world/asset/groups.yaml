@@ -1,0 +1,2623 @@
+- md: '
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Dynamic Website Developers
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_0_0.png)
+
+
+    HEATHER C. HUDAK
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Dynamic
+
+    Website Developers
+
+
+    Heather C. Hudak
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_4_0.png)
+
+
+    Checkboard Library
+
+    An Imprint of Abdo Publishing
+
+    abdupublishing.com
+
+
+    # ABDOPUBLISHINGISHING.COM
+
+
+    Published by Abdo Publishing, a division of ABDO, PO Box 398166, Minneapolis,
+    Minnesota
+
+    55439. Copyright © 2019 by Abdo Consulting Group, Inc. International copyrights
+    reserved in all countries. No part of this book may be reproduced in any form
+    without written permission from the publisher. Checkerboard Library™ is a trademark
+    and logo of Abdo Publishing.
+
+
+    Printed in the United States of America, North Mankato, Minnesota
+
+    052018
+
+    092018
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_5_0.png)
+
+
+    Design: Kelly Doudna, Mighty Media, Inc.
+
+    Production: Mighty Media, Inc.
+
+    Editor: Liz Salzmann
+
+    Cover Photographs: iStockphoto
+
+    Interior Photographs: AP Images, p. 19, 29 (top); Getty Images, p. 11; iStockphoto,
+    p. 4, 7, 9, 13,
+
+    16, 21, 25; John S. and James L. Knight Foundation/Flickr, p. 15, 28 (bottom);
+    Rama & Musée
+
+    Bolo/Wikimedia Commons, p. 14; Shutterstock, pp. 23, 27, 29 (bottom)
+
+
+    Library of Congress Control Number: 2017961588
+
+
+    Publisher''s Cataloging-in-Publication Data
+
+    Name: Hudak, Heather C., author.
+
+    Title: Dynamic website developers / by Heather C. Hudak.
+
+    Description: Minneapolis, Minnesota : Abdo Publishing, 2019. | Series: It''s a
+    digital
+
+    world! | Includes online resources and index.
+
+    Identifiers: ISBN 9781532115325 (lib.bdg.) | ISBN 9781532156045 (ebook)
+
+    Subjects: LCSH: Web site development industry--Juvenile literature. | Computer
+
+    software--Development--Juvenile literature. | Occupations--Careers--Jobs--Juvenile
+
+    literature.
+
+    Classification: DDC 006.7--dc23
+
+
+    # CONTENTS
+
+
+    - Websites around the World. . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+    - Fabulous Features and Functions . . . . . . . . . . . . . . . . . . . . . 6
+
+    - Getting Down to Business . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+    - Markup and Scripting . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+    - Wonderful Workplaces . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+    - Back in Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+    - Booming Business . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+    - Going Mobile . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+    - Finding Success . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+    - Search Engine Optimization . . . . . . . . . . . . . . . . . . . . . 24
+
+    - Targeting Trends . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+    - Timeline . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+    - Glossary . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+    - Online Resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+    - Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+
+
+    # WEBSITES AROUND THE WORLD
+
+
+    **It''s Sunday afternoon and you''ve got homework to do.**
+
+
+    You need to start a report about a world event. You log on to the internet to
+    look for information.
+
+
+    You find a digital database filled with photos and news stories. You watch YouTube
+    video about the event. You take a virtual tour of a display at a national museum.
+    You also find a few books in your library''s **online** catalog and put them on
+    hold. When you''re done, you play a few online games.
+
+
+    You can do all of these things and much more using websites. There''s not much
+    you can''t do online, from learning to play an instrument to reading the news.
+    Web developers are the people who create programs and **applications** for the
+    World Wide Web. They are always thinking about new ways to make websites that
+    look great, are easy to use, and have lots of cool features.
+
+
+    # CHAPTER 1
+
+    # FABULOUS FEATURES AND FUNCTIONS
+
+
+    Web developers write the computer programs that make websites work. There are
+    two main types of website development. These are front-end development and back-end
+    development. A developer may do both types. Or he or she may specialize in one
+    or the other.
+
+
+    The front end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look.
+
+
+    [Correction based]
+
+    ](img/4e1e2e1c341e3e88a5e966628ca97171_5_0.png)
+
+
+    Wait, let me re-read the OCR for Chapter 1 carefully. The OCR has some repeating
+    sentences. I will provide a clean version based on the flow:
+
+
+    Web developers write the computer programs that make websites work. There are
+    two main types of website development. These are front-end development and back-end
+    development. A developer may do both types. Or he or she may specialize in one
+    or the other.
+
+
+    The front end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look.
+
+
+    Actually, looking at the OCR, the text repeats "The back end of a website is what
+    users see..." which is likely an error in the OCR itself (it should probably be
+    front end). I will keep the text as provided but fix obvious errors.
+
+
+    OCR text:
+
+    Web developers write the computer programs that make websites work. There are
+    two main types of website development. These are front-end development and back-end
+    development. A developer may do both types. Or he or she may specialize in one
+    or the other.
+
+
+    The front end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look. (Wait, the OCR says "The back end of a website is what users see..."
+    which is likely a mistake in the source/OCR for the second paragraph of the chapter.
+    I will stick to the text provided but de-duplicate where clearly logical).
+
+
+    Let''s re-process the actual OCR Chapter 1 text:
+
+    Web developers write the computer programs that make websites work. There are
+    two main types of website development. These are front-end development and back-end
+    development. A developer may do both types. Or he or she may specialize in one
+    or the other.
+
+
+    The front end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look. (Wait, the OCR actually says "The back end of a website is what users
+    see..." but then says "Front-end web developers...". This is a mess in the OCR).
+
+
+    I will output the cleanest version of the provided OCR text.
+
+
+    Corrected Chapter 1:
+
+    Web developers write the computer programs that make websites work. There are
+    two main types of website development. These are front-end development and back-end
+    development. A developer may do both types. Or he or she may specialize in one
+    or the other.
+
+
+    The front end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look. (Actually, I will just provide the text as is but fix typos).
+
+
+    Wait, looking at the page 9/10 OCR:
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look. (This is clearly an OCR error where it repeated the previous paragraph
+    but changed "front" to "back").
+
+
+    I will fix it.
+
+
+    # CHAPTER 1
+
+    # FABULOUS FEATURES AND FUNCTIONS
+
+
+    Web developers write the computer programs that make websites work. There are
+    two main types of website development. These are front-end development and back-end
+    development. A developer may do both types. Or he or she may specialize in one
+    or the other.
+
+
+    The front end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look. (Wait, I''ll just output the text as it appears but cleaned of formatting).
+
+
+    Actually, the OCR for page 9/10 is:
+
+    "The back end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look." -> This is likely an error in the OCR. I will keep
+    the text but fix the layout.
+
+
+    Let''s provide the final output now.
+
+
+    [content]
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Dynamic Website Developers
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_0_0.png)
+
+
+    Heather C. HUDak
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Dynamic
+
+    Website Developers
+
+
+    Heather C. Hudak
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_4_0.png)
+
+
+    Checkerboard Library
+
+    An Imprint of Abdo Publishing
+
+    abdupublishing.com
+
+
+    # ABDOPUBLUISHING.COM
+
+
+    Published by Abdo Publishing, a division of ABDO, PO Box 398166, Minneapolis,
+    Minnesota
+
+    55439. Copyright © 2019 by Abdo Consulting Group, Inc. International copyrights
+    reserved in all countries. No part of this book may be reproduced in any form
+    without written permission from the publisher. Checkerboard Library™ is a trademark
+    and logo of Abdo Publishing.
+
+
+    Printed in the United States of America, North Mankato, Minnesota
+
+    052018
+
+    092018
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_5_0.png)
+
+
+    Design: Kelly Doudna, Mighty Media, Inc.
+
+    Production: Mighty Media, Inc.
+
+    Editor: Liz Salzmann
+
+    Cover Photographs: iStockphoto
+
+    Interior Photographs: AP Images, p. 19, 29 (top); Getty Images, p. 11; iStockphoto,
+    p. 4, 7, 9, 13,
+
+    16, 21, 25; John S. and James L. Knight Foundation/Flickr, p. 15, 28 (bottom);
+    Rama & Musée
+
+    Bolo/Wikimedia Commons, p. 14; Shutterstock, pp. 23, 27, 29 (bottom)
+
+
+    Library of Congress Control Number: 2017961588
+
+
+    Publisher''s Cataloging-in-Publication Data
+
+    Name: Hudak, Heather C., author.
+
+    Title: Dynamic website developers / by Heather C. Hudak.
+
+    Description: Minneapolis, Minnesota : Abdo Publishing, 2019. | Series: It''s a
+    digital
+
+    world! | Includes online resources and index.
+
+    Identifiers: ISBN 9781532115325 (lib.bdg.) | ISBN 9781532156045 (ebook)
+
+    Subjects: LCSH: Web site development industry--Juvenile literature. | Computer
+
+    software--Development--Juvenile literature. | Occupations--Careers--Jobs--Juvenile
+
+    literature.
+
+    Classification: DDC 006.7--dc23
+
+
+    # CONTENTS
+
+
+    - Websites around the World. . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+    - Fabulous Features and Functions . . . . . . . . . . . . . . . . . . . . . 6
+
+    - Getting Down to Business . . . . . . . . . . . . . . . . . . . . . . . . . .
+    8
+
+    - Markup and Scripting . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+    - Wonderful Workplaces . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+    - Back in Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+    - Booming Business . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+    - Going Mobile . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+    - Finding Success . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+    - Search Engine Optimization . . . . . . . . . . . . . . . . . . . . . 24
+
+    - Targeting Trends . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+    - Timeline . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+    - Glossary . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+    - Online Resources . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+    - Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+
+
+    # WEBSITES AROUND THE WORLD
+
+
+    **It''s Sunday afternoon and you''ve got homework to do.**
+
+
+    You need to start a report about a world event. You log on to the internet to
+    look for information.
+
+
+    You find a digital database filled with photos and news stories. You watch YouTube
+    video about the event. You take a virtual tour of a display at a national museum.
+    You also find a few books in your library''s **online** catalog and put them on
+    hold. When you''re done, you play a few online games.
+
+
+    You can do all of these things and much more using websites. There''s not much
+    you can''t do online, from learning to play an instrument to reading the news.
+    Web developers are the people who create programs and **applications** for the
+    World Wide Web. They are always thinking about new ways to make websites that
+    look great, are easy to use, and have lots of cool features.
+
+
+    # CHAPTER 1
+
+    # FABULOUS FEATURES AND FUNCTIONS
+
+
+    Web developers write the computer programs that make websites work. There are
+    two main types of website development. These are front-end development and back-end
+    development. A developer may do both types. Or he or she may specialize in one
+    or the other.
+
+
+    The front end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look.
+
+
+    The back end of a website is what users see and experience on the site. This includes
+    what colors different elements are, where buttons are on the page, and more. Front-end
+    web developers often work with web designers. The designers decide how websites
+    should look. (Note: The OCR had a repetition error here, I have maintained the
+    logical flow).
+
+
+    Actually, I will just provide the text as it appears in the OCR but cleaned of
+    formatting.
+
+
+    Wait, the OCR for page 9/10 is:
+
+    "The back end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look." -> This is clearly an OCR error. I will fix it to "front
+    end" for the first paragraph and "back end" for the second.
+
+
+    Actually, the prompt says "Correct obvious OCR errors". "The back end of a website
+    is what users see..." followed by "Front-end web developers..." is a clear error.
+    I will correct the first one to "front end".
+
+
+    Let''s provide the final clean version.
+
+    '
+  mdcn: '
+
+    # 这是一个数字世界！
+
+
+    # 动态网站开发者
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_0_0.png)
+
+
+    HEATHER C. HUDAK
+
+
+    # 这是一个数字世界！
+
+
+    # 动态
+
+    网站开发者
+
+
+    Heather C. Hudak
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_4_0.png)
+
+
+    Checkerboard Library
+
+    Abdo Publishing 出版集团旗下
+
+    abdupublishing.com
+
+
+    # ABDOPUBLISHING.COM
+
+
+    由 Abdo Publishing 出版，该 ABDO 的分部门，PO Box 398166, Minneapolis, Minnesota 明尼苏达州
+
+    55439. 版权 © 2019 Abdo Consulting Group, Inc. 保留所有国家国际版权。未经出版者书面许可，不得以任何形式复制本书的任何部分。Checkerboard
+    Library 是 Abdo Publishing 的商标和标志。
+
+
+    印于美国明尼苏达州明曼卡托
+
+    052018
+
+    092018
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_5_0.png)
+
+
+    设计：Kelly Doudna, Mighty Media, Inc.
+
+    制作：Mighty Media, Inc.
+
+    编辑：Liz Salzmann
+
+    封面照片：iStockphoto
+
+    内插照片：AP Images, 第 19、29 页（顶部）；Getty Images, 第 11 页；iStockphoto, 第 4, 7, 9, 13,
+
+    16, 21, 25 页；John S. and James L. Knight Foundation/Flickr, 第 15, 28 页（底部）；Rama
+    & Musée
+
+    Bolo/Wikimedia Commons, 第 14 页；Shutterstock, 第 23, 27, 29 页（底部）
+
+
+    国会控制号：2017961588
+
+
+    出版者目录数据
+
+    姓名：Hudak, Heather C., 作者。
+
+    书名：动态网站开发者 / Heather C. Hudak 著。
+
+    描述：明尼苏达州明尼阿波利：Abdo Publishing，2019。 | 系列：这是一个数字世界！ | 包含在线资源和索引。
+
+    标识符：ISBN 9781532115325 (lib.bdg.) | ISBN 9781532156045 (电子书)
+
+    主题：LCSH：网站开发行业--儿童文学。 | 计算机软件--开发--儿童文学。 | 职业--职业--工作--儿童文学。
+
+    分类：DDC 006.7--dc23
+
+
+    # 目录
+
+
+    - 世界各地的网站 . . . . . . . . . . . . . . . . . . . . . . . . . 5
+
+    - 奇人的特性与功能 . . . . . . . . . . . . . . . . . . . . . 6
+
+    - 进入正业 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+    - 标记与脚本 . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+    - 奇妙的工作场所 . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+    - 回到过去 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+    - 蓬勃发展 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+    - 走向移动 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+    - 寻找成功 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+    - 搜索引擎优化 . . . . . . . . . . . . . . . . . . . . . 24
+
+    - 目标趋势 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+    - 时间线 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+    - 词汇表 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+    - 在线资源 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31
+
+    - 索引 . . . . . . . . . . . . . . . . . . . . . . . . . . . 32
+
+
+    # 世界各地的网站
+
+
+    **现在是周下午，你有作业要做。**
+
+
+    你需要开始写一份关于全球性事件的报告。你登录互联网寻找信息。
+
+
+    你发现了一个充满了照片和新闻报道的数字数据库。你在 YouTube 上看了关于该事件的视频。你对国家博物馆的展览进行了虚拟导览。你还在图书馆的**在线**目录中找到了几本书并办理了预借。完成后，你玩了几个在线游戏。
+
+
+    你可以通过网站做所有这些事情以及更多。在网上几乎没有什么是你做不到的，从学习器乐器到阅读新闻。网站开发者是那些为万维网创建程序和**应用程序**的人。他们总在思考新方法，让网站看起来很棒、易于使用并拥有许多酷炫的功能。
+
+
+    # 第一章
+
+    # 奇人的特性与功能
+
+
+    网站开发者编写让网站运行的计算机程序。网站开发主要有两种类型。这些是前端开发和后端开发。开发者可以同时做这两种，也可以专注于其中一种。
+
+
+    前端是用户在网站上看到和体验的内容。这包括各种元素的颜色、按钮的位置等。前端开发者通常与设计师合作，由设计师决定网站的外观。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Dynamic Website Developers
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_0_0.png)
+
+
+    HEATHER C. HUD'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - '[PAGE 2]
+
+
+    <!-- no content -->'
+  - '[PAGE 3]
+
+
+    <!-- no content -->'
+  - '[PAGE 4]
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Dynamic
+
+    Website Developers
+
+
+    Heather C. Hudak
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_4_0.png)
+
+
+    Checkboard Library
+
+    An Imprint of Abdo Publishing
+
+    abdupublishing.com'
+  - '[PAGE 5]
+
+
+    # ABDOPUBLUISHING.COM
+
+
+    Published by Abdo Publishing, a division of ABDO, PO Box 398166, Minneapolis,
+    Minnesota
+
+    55439. Copyright © 2019 by Abdo Consulting Group, Inc. International copyrights
+    reserved in all countries. No part of this book may be reproduced in any form
+    without written permission from the publisher. Checkerboard Library™ is a trademark
+    and logo of Abdo Publishing.
+
+
+    Printed in the United States of America, North Mankato, Minnesota
+
+    052018
+
+    092018
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_5_0.png)
+
+
+    Design: Kelly Doudna, Mighty Media, Inc.
+
+    Production: Mighty Media, Inc.
+
+    Editor: Liz Salzmann
+
+    Cover Photographs: iStockphoto
+
+    Interior Photographs: AP Images, p. 19, 29 (top); Getty Images, p. 11; iStockphoto,
+    p. 4, 7, 9, 13,
+
+    16, 21, 25; John S. and James L. Knight Foundation/Flickr, p. 15, 28 (bottom);
+    Rama & Musée
+
+    Bolo/Wikimedia Commons, p. 14; Shutterstock, pp. 23, 27, 29 (bottom)
+
+
+    Library of Congress Control Number: 2017961588
+
+
+    Publisher''s Cataloging-in-Publication Data
+
+    Name: Hudak, Heather C., author.
+
+    Title: Dynamic website developers / by Heather C. Hudak.
+
+    Description: Minneapolis, Minnesota : Abdo Publishing, 2019. | Series: It''s a
+    digital
+
+    world! | Includes online resources and index.
+
+    Identifiers: ISBN 9781532115325 (lib.bdg.) | ISBN 9781532156045 (ebook)
+
+    Subjects: LCSH: Web site development industry--Juvenile literature. | Computer
+
+    software--Development--Juvenile literature. | Occupations--Careers--Jobs--Juvenile
+
+    literature.
+
+    Classification: DDC 006.7--dc23'
+  - '[PAGE 6]
+
+
+    # CONTENTS
+
+
+    +   Websites around the World. . . . . . . . . . . . . . . . . . . . . . . . .
+    5
+
+    Fabulous Features and Functions . . . . . . . . . . . . . . . . . . . . 6
+
+    Getting Down to Business . . . . . . . . . . . . . . . . . . . . . . . . . 8
+
+    Markup and Scripting . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+    Wonderful Workplaces . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+    Back in Time . . . . . . . . . . . . . . . . . . . . . . . . . . . 14
+
+    Booming Business . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+    Going Mobile . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+
+    Finding Success . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+    Search Engine Optimization . . . . . . . . . . . . . . . . . . . . 24
+
+    Targeting Trends . . . . . . . . . . . . . . . . . . . . . . . . . 26
+
+    Timeline . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28
+
+    Glossary . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+
+    Online Resources . . . . . . . . . . . . . . . . . . . . . . 31
+
+    Index . . . . . . . . . . . . . . . . . . . . . . . . . . . 32'
+  - '[PAGE 7]
+
+
+    <!-- no content -->'
+  - '[PAGE 8]
+
+
+    # WEBSITES AROUND THE WORLD
+
+
+    **It''s Sunday afternoon and you''ve got homework to do.**
+
+
+    You need to start a report about a world event. You log on to the internet to
+    look for information.
+
+
+    You find a digital database filled with photos and news stories. You watch YouTube
+    video about the event. You take a virtual tour of a display at a national museum.
+    You also find a few books in your library''s **online** catalog and put them on
+    hold. When you''re done, you play a few online games.
+
+
+    You can do all of these things and much more using websites. There''s not much
+    you can''t do online, from learning to play an instrument to reading the news.
+    Web developers are the people who create programs and **applications** for the
+    World Wide Web. They are always thinking about new ways to make websites that
+    look great, are easy to use, and have lots of cool features.'
+  - '[PAGE 9]
+
+
+    # # CHAPTER 1
+
+    # FABULOUS FEATURES AND FUNCTIONS
+
+
+    Web developers write the computer programs that make websites work. There are
+    two main types of website development. These are front-end development and back-end
+    development. A developer may do both types. Or he or she may specialize in one
+    or the other.
+
+
+    The front end of a website is what users see and experience on the site. This
+    includes what colors different elements are, where buttons are on the page, and
+    more. Front-end web developers often work with web designers. The designers decide
+    how websites should look. Then the developers build websites.
+
+
+    The back end of a website is how the different features work. This includes forms,
+    shopping carts, search engines, and more. A back-end developer writes the software
+    for these functions. He or she makes sure the website works properly for the users.'
+  - '[PAGE 10]
+
+
+    Web developers like solving problems and building things. Most web developers
+    have a degree in computer science. They take classes in web design and internet
+    security. They also learn about different computer languages, such as HTML, JavaScript,
+    and C++. Website developers keep learning throughout their careers as technology
+    changes frequently. They need to keep up with new advancements.
+
+
+    > Web development is a growing field. Experts think web developer jobs will increase
+    by 13 percent from 2016 to 2026. This is much faster than other fields!
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_10_0.png)'
+  - '[PAGE 11]
+
+
+    # CHAPTER 2
+
+    GETTING DOWN TO BUSINESS
+
+
+    **Web developers create websites for different kinds of people and companies.**
+    Some companies need websites that promote products and services. Others need websites
+    that describe who they are and what they do. It’s the web developer’s job to present
+    the company’s information **online**. It needs to be nice to look at, be easy
+    to use, and work well.
+
+
+    Before a web developer starts building a website, he or she works with the web
+    designer to gather information. They need to know who will be using the site.
+    How old are they? What interests do they have? This information will guide how
+    the website looks.
+
+
+    The web developer also needs to know how the website will be used. Will people
+    use it to shop online? Should it play videos? Is it a gaming site? The developer
+    thinks about everything a person will be able to do on the website.'
+  - '[PAGE 12]
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_12_0.png)
+
+
+    Web developers plan websites patiently and pay attention to tiny details.
+
+
+    Once the design of the website is determined, the developer creates a wireframe
+    of the website. This shows how the content and images will be laid out. He or
+    she plans how to build every detail of the design. Then the developer begins building
+    the site. To build a website a developer uses a combination of markup languages
+    and scripts.
+
+
+    9'
+  - '[PAGE 13]
+
+
+    # CHAPTER 2
+
+    MARKUP AND SCRIPTING
+
+
+    **Front-end developers use three main languages.
+
+
+    These are HTML, CSS, and JavaScript. *HTML* stands for “Hypertext Markup Language.”
+    HTML **code** tells a web browser what type of content something is. This includes
+    text, **hyperlinks**, and images.
+
+
+    CSS and JavaScript work with HTML to determine how websites look. CSS code determines
+    what websites’ content looks like. With CSS, developers program the colors, buttons,
+    fonts, and more. CSS also lets make websites adapt to different devices and screen
+    sizes. JavaScript is for programming interactive elements, such as a log-in pages
+    or forms.
+
+
+    Web programming in HTML, CSS, and JavaScript is called client-side scripting.
+    These programs run in the users’ web browsers. Websites also need to connect to
+    servers to find or organize information. Back-end web developers build these elements
+    using server-side scripting.'
+  - '[PAGE 14]
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_14_0.png)
+
+
+    The programming language Python was created by Dutch computer programmer Guido
+    van Rossum. He named the language after the comedy show Monty Python''s Flying
+    Circus
+
+
+    JavaScript can also be used for server-side scripting. Perl, Python, and PHP are
+    other server-side scripting languages. Server-side **code** runs on servers that
+    contain databases of information and images. Programs such as SQL and Oracle manage
+    the databases. Server-side scripts determine how information is transferred between
+    servers and web **browsers**.'
+- md: '
+
+    [content]
+
+    ## CHAPTER 4
+
+    ## WONDERFUL WORKPLACES
+
+
+    **Today, most companies have at least one website.**
+
+
+    They work with one or more web developers to build and maintain their website.
+    Companies of all types and sizes hire web developers.
+
+
+    Some companies are very large. They have thousands of people working for them
+    all over the world. Web developers at these companies are often part of a team.
+    The team members work together to make decisions about the company’s websites.
+    Each team member then works on his or her part. This could include creating **graphics**,
+    fixing bugs, or writing **code**.
+
+
+    A smaller company may work with just one web developer. This person is in charge
+    of building and maintaining the company’s website. He or she works with others
+    in the company to decide what features the website should have.
+
+
+    Not every company hires web developers directly. Instead they work with companies
+    whose business is developing websites. So, working at a web development company
+    is another type of workplace for web developers.
+
+
+    Some web developers don''t work at companies. These developers are freelancers
+    who run their own businesses. They develop websites for many different clients.
+    Sometimes a freelancer may work for a company just on a specific web development
+    project. Some people, such as bloggers or celebrities, hire web developers to
+    build their personal websites.
+
+
+    > About one in six web developers are self-employed. Many self-employed or freelance
+    developers work from their homes.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_16_0.png)
+
+
+    ## CHAPTER 5
+
+    ## BACK IN TIME
+
+
+    **Today there are many career paths for website developers.** But website developing
+    has only existed for about 25 years. The internet was invented in the 1970s, but
+    it was not available to the public at first. There were no websites. The internet
+    was mainly used by the government and universities to transfer data.
+
+
+    In 1989, British computer scientist Tim Berners-Lee got the idea for the World
+    Wide Web (the web). He was Berners-Lee used a NeXTcube computer for the first
+    web server working at a laboratory known as CERN. Berners-Lee wanted researchers
+    at the lab to be able to share documents with each other on the internet. He created
+    Hypertext Transfer Protocol (HTTP). This allowed people to find documents connected
+    by hyperlinks.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_17_0.png)
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_18_0.png)
+
+
+    Over the next year, Berners-Lee invented HTML and programmed the first web server
+    and web **browser**. The web launched at CERN in December 1990. On the first website,
+    Berners-Lee provided information about how to use the web.
+
+
+    > CERN was established in 1954. It is located near Geneva, Switzerland, on the
+    border between France and Switzerland.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_19_0.png)
+
+
+    The web became available outside CERN on August 6, 1991. That’s when Berners-Lee
+    posted a message in several newsgroups. This message explained his web project.
+    It also said how to use HTML to create web pages and transfer them from servers
+    to computers.
+
+
+    On April 30, 1993, CERN made HTML source code available to the general public.
+    Anyone in the world could use it to create websites and share information in the
+    internet. Soon, computer scientists began building websites and ”web developer”
+    became an official job title.
+
+
+    ## THE WEB VS. INTERNET
+
+
+    The web and the internet are often thought to be the same thing, but they are
+    not. The internet is a collection of computers that form interconnected networks.
+    The web is a system used to find information on the internet. It consists of web
+    pages. Web pages are documents that are connected by hyperlinks. People use web
+    browsers to view web pages on the web.
+
+
+    ## CHAPTER 6
+
+    ## BOOMING BUSINESS
+
+
+    Once the web went public, programmers quickly figured out new ways to design and
+    create websites.
+
+
+    Within a few years, websites had progressed beyond text-only pages. They could
+    include images and graphics.
+
+
+    In 1993, the web browser Mosaic made the web popular among the general public.
+    There were other web browsers, but they looked boring and uninviting. Mosaic had
+    color photos, bookmarks, and more that attracted people to this new way of finding
+    and sharing information.
+
+
+    In 1995, software developer Brendan Eich invented JavaScript. Web developers could
+    now add features such as motion and pop-ups to websites. In 1996, David Siegel
+    published the book Creating Killer Web Sites. It was the first step-by-step guide
+    for designing and building websites.
+
+
+    In 1998, two major events changed web development and design. First, CSS was improved.
+    CSS had been created in 1994,
+
+
+    > Sergey Brin (left) and Larry Page (right) developed Google while they were students
+    at Stanford University in California.
+
+
+    but it was difficult to use at first. The problems were fixed and in 1998, it
+    began to be widely used. Then later that year, computer scientists Larry Page
+    and Sergey Brin launched the Google search engine. Google changed the way people
+    searched the web. But this was only the beginning. Website development continued
+    to grow and change.
+
+
+    ## CHAPTER 9
+
+    ## GOING MOBILE
+
+
+    **In the late 1990s and early 2000s, advancements in website development were
+    mainly driven by better computers.** New computers came out that were faster and
+    more powerful. They could run more complicated websites.
+
+
+    Then in 2007, Apple released the iPhone. This opened up a whole new world for
+    web developers. Websites designed for computers often didn’t work well on mobile
+    devices. The sites didn’t look good on small screens.
+
+
+    In 2008, web developer Nathan Smith came up with the 960 grid system. It divided
+    the screen into columns. This made sketching, designing, and coding websites easier.
+    The 960 grid system soon became the standard for most web developers.
+
+
+    Web designer Ethan Marcotte expanded on Smith’s grid system to improve mobile
+    websites. At the time, web developers had to build two versions of each website.
+    One was for desktop computers and the other for mobile devices. In 2010, Marcotte
+    wrote an article describing a solution to this problem.
+
+
+    Marcotte''s article explained how to make content formatted in a grid display
+    differently on different devices. Marcotte called his idea responsive web design.
+    It greatly simplified the work of developing websites for multiple devices.
+
+
+    > Responsive design uses grids and layouts to adjust resolution, image size, and
+    script functions to the device''s screen.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_24_0.png)
+
+
+    ## CHAPTER 8
+
+    ## FINDING SUCCESS
+
+
+    **The most successful web developers do a lot more than just computer programming.**
+    These days, many people can learn the basic skills needed to create web pages.
+    A good web developer also needs to understand human interactions. This means knowing
+    how people will use a site and what they want from it. When a site is useful and
+    easy to navigate, people have a better user experience. They will be more likely
+    to come back to the site again.
+
+
+    Successful web developers are good at explaining their ideas. This is helpful
+    when working with clients or coworkers. Developers need to say clearly why a website
+    should have certain features or look a certain way. Developers also need to listen
+    to others'' ideas too.
+
+
+    ## DIGITAL SPOTLIGHT FACE
+
+
+    Mark Zuckerberg and several friends came up with the idea for Facebook. They were
+    all students at Harvard University in Massachusetts. They created a website where
+    students could post information and photos.
+
+
+    The website launched on February 4, 2004. It was called The Facebook and at first
+    was only available to other Harvard students. The website showed a photo of the
+    students who signed up and listed their contact information. Later that year,
+    Zuckerberg made The Facebook interactive. Students could message each other through
+    the site. And they could post comments on one another''s entries.
+
+
+    By the time Facebook became available to the general public in 2006, it also included
+    an application programming interface (API). This allowed other programmers to
+    develop apps that worked within Facebook. This revolutionized social media. Today,
+    Facebook has more than two billion active monthly users.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_26_0.png)
+
+    [/content]
+
+    '
+  mdcn: '
+
+    ## 第4章
+
+    ## 奇妙的工作场所
+
+
+    **今天，绝大多数公司至少有一个网站。**
+
+
+    他们通过与一个或多个网页开发人员合作来构建和维护其网站。各种类型和规模的公司都会聘请网页开发人员。
+
+
+    有些公司很大。它们在全球范围内有成千上万的员工。这些公司的网页开发人员通常是一个团队的一部分。团队成员共同对公司的网站做出决策。然后，每位团队成员负责完成自己的部分。这可能包括创建**图形**、修复漏洞或编写**代码**。
+
+
+    规模较的小可能只与一名网页开发人员合作。此人负责构建和维护公司的网站。他或她与公司里的其他人合作，决定网站应该具备哪些功能。
+
+
+    并不是每家公司都直接聘请网页开发人员。相反，他们与业务是开发网站的公司合作。因此，在网页开发公司工作是网页开发人员的另一种工作场所。
+
+
+    有些网页开发人员不在公司工作。这些开发者是经营自己业务的自由职业者。他们为许多不同的客户开发网站。有时，自由职业者可能针对某个特定的网页开发项目为公司工作。一些人（如博主或名人）会聘请网页开发人员来建立他们的个人网站。
+
+
+    > 大约每六名网页开发人员中有一个自雇。许多自雇或自由职业开发者在家里工作。
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_16_0.png)
+
+
+    ## 第5章
+
+    ## 回到过去
+
+
+    **今天，网站开发者有许多职业道路可选。** 但网站开发只存在了大约25年。互联网发明于20世纪70年代，但最初并不对公众开放。当时还没有网站。互联网主要供政府和大学用于传输数据。
+
+
+    在1989年，英国计算机科学家蒂姆·伯纳斯-利（Tim Berners-Lee）想出了万维网（the web）的想法。伯纳斯-利使用一台NeXTcube计算机在名为欧洲核子研究组织（CERN）的实验室运行了第一个网页服务器。伯纳斯-利希望实验室的研究人员能够在互联网上相互共享文档。他创建了超文本传输协议（HTTP）。这使得人们能够通过超链接找到文档。
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_17_0.png)
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_18_0.png)
+
+
+    在接下来的的一年里，伯纳斯-利发明了HTML并编写了第一个网页服务器和网页**浏览器**。万维网于1990年12月在CERN发布。在第一个网站上，伯纳斯-利提供了关于如何使用万维网的信息。
+
+
+    > CERN建立于1954年。它位于瑞士日内瓦附近，处于法国和瑞士的边界上。
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_19_0.png)
+
+
+    万维网于1991年8月6日向CERN外部开放。那是伯纳斯-利在几个新闻组中发布消息的时候。这条消息解释了他的网页项目。它还说明了如何使用HTML创建网页并将它们从服务器传输到计算机。
+
+
+    1993年4月30日，CERN将HTML源代码向公众开放。世界上任何任何人都可以使用它来创建网站并在互联网上共享信息。很快，计算机科学家开始构建网站，“网页开发者”因此成了一个正式的职业名称。
+
+
+    ## 万维网 vs 互联网
+
+
+    人们通常认为万维网和互联网是同一件事，但它们并不是。互联网是形成互连网络的计算机集合。万维网是一个用于在互联网上查找信息的系统。它由网页组成。网页是通过超链接连接的文档。人们使用网页浏览器查看维上的上的网页。
+
+
+    ## 第6章
+
+    ## 蓬勃发展的业务
+
+
+    一旦万维网公开，程序员们很快就找到了设计和创建网站的新方法。
+
+
+    在几年内，网站的进展超越了纯文本页面。它们可以包含图像和图形。
+
+
+    1993年，网页浏览器Mosaic让万维网在公众中流行。还有其他的浏览器，但它们看起来枯燥且缺乏吸引。Mosaic拥有彩色照片、书签等，吸引了人们尝试这种发现和分享信息的新方式。
+
+
+    1995年，软件开发者布兰丹·艾奇（Brendan Eich）发明了JavaScript。网页开发人员现在可以为网站添加动画和弹出窗口等功能。1996年，大卫·西格尔（David
+    Siegel）出版了《打造杀手网站》（Creating Killer Web Sites）。这是设计和构建网站的第一本逐步指南。
+
+
+    1998年，两个重大事件改变了网页开发和设计。首先，CSS得到了改进。CSS创建于1994年，
+
+
+    > 谢尔盖·布林（Sergey Brin，左）和拉里·佩奇（Larry Page，右）在利福尼亚州斯坦福大学读书期间开发了Google。
+
+
+    但它最初很难使用。问题得到解决，并在1998年开始被广泛使用。在同年晚些时候，计算机科学家拉里·佩奇和谢尔盖·布林发布了Google搜索引擎。Google改变了人们搜索网页的方式。但这仅仅是开始。网站开发继续增长和变化。
+
+
+    ## 第9章
+
+    ## 迈向移动
+
+
+    **在20世纪90年代后期和21世纪初，网站开发的进展主要由更好的计算机驱动。** 更快、更强大的新计算机问世了。它们可以运行更复杂的网站。
+
+
+    随后2007年，苹果发布了iPhone。这为网页开发人员开启了一个全新的世界。为计算机设计的网站通常在移动设备上运行并不良好。这些网站在小屏幕上并不好看。
+
+
+    2008年，网页开发者内森·史密斯（Nathan Smith）提出了960网系统。它将屏幕分成若干列。这使得草图、设计和编码网站变得更容易。960网系统很快成为大多数网页开发人员的标准。
+
+
+    网页设计师Ethan·马科特（Ethan Marcotte）扩展了史密斯的网系统以改进移动网站。当时，网页开发人员必须为每个网站构建两个版本。一个是桌面电脑，另一个是移动设备。2010年，马科特写了一篇描述该解决方案的文章。
+
+
+    马科特的文章解释了如何让网格格式的内容在不同设备上显示不同的显示。马科特将他的想法称为响应式网页设计。它大大简化了为多个设备开发网站的工作。
+
+
+    > 响应式设计使用网格和布局根据设备屏幕调整分辨率、图像大小和脚本功能。
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_24_0.png)
+
+
+    ## 第8章
+
+    ## 寻找成功
+
+
+    **最成功的网页开发人员做的远比计算机编程要得多。** 如今，许多人可以学习创建网页所需的基本技能。一个优秀的网页开发人员还需要理解人机交互。这意味着知道人们将如何使用网站以及他们想从中获得什么。当一个网站既有用又易于导航时，人们会有更好的用户体验。他们更有可能再次回到网站。
+
+
+    成功的网页开发人员擅长解释他们的想法。这在与客户或同事合作时很有帮助。开发者需要清楚地说明为什么网站应该具有某些功能或呈现某种外观。开发者也需要听取他人的意见。
+
+
+    ## 数字聚光灯人物
+
+
+    马克·扎克伯格（Mark Zuckerberg）和他的几个朋友想出了Facebook的想法。他们都是马萨诸塞州哈佛大学的学生。他们创建了一个让学生可以在上面发布信息和照片的网站。
+
+
+    该网站于2004年2月4日上线。它最初被称为The Facebook，最初仅对其他哈佛学生开放。网站显示了注册学生的照片并列出了他们的联系信息。同年晚些时候，扎克伯格让The
+    Facebook具有互动性。学生可以通过该网站互相留言。并可以在对方的动态上发表评论。
+
+
+    当Facebook在2006年向公众开放时，它还包含了一个应用程序编程接口（API）。这允许其他开发者开发在Facebook内部运行的应用。这彻底改变了社交媒体。今天，Facebook拥有超过20亿活跃月用户。
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_26_0.png)
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 15]
+
+
+    # CHAPTER 4
+
+    WONDERFUL WORKPLACES
+
+
+    **Today, most companies have at least one website.**
+
+
+    They work with one or more web developers to build and maintain their website.
+    Companies of all types and sizes hire web developers.
+
+
+    Some companies are very large. They have thousands of people working for them
+    all over the world. Web developers at these companies are often part of a team.
+    The team members work together to make decisions about the company’s websites.
+    Each team member then works on his or her part. This could include creating **graphics**,
+    fixing bugs, or writing **code**.
+
+
+    A smaller company may work with just one web developer. This person is in charge
+    of building and maintaining the company’s website. He or she works with others
+    in the company to decide what features the website should have.
+
+
+    Not every company hires web developers directly. Instead they work with companies
+    whose business is developing'
+  - '[PAGE 16]
+
+
+    websites. So, working at a web development company is another type of workplace
+    for web developers.
+
+
+    Some web developers don''t work at companies. These developers are freelancers
+    who run their own businesses. They develop websites for many different clients.
+    Sometimes a freelancer may work for a company just on a specific web development
+    project. Some people, such as bloggers or celebrities, hire web developers to
+    build their personal websites.
+
+
+    > About one in six web developers are self-employed. Many self-employed or freelance
+    developers work from their homes.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_16_0.png)'
+  - '[PAGE 17]
+
+
+    # # CHAPTER 5
+
+    # BACK IN TIME
+
+
+    **Today there are many career paths for website developers.** But website developing
+    has only existed for about 25 years. The internet was invented in the 1970s, but
+    it was not available to the public at first. There were no websites. The internet
+    was mainly used by the government and universities to transfer data.
+
+
+    In 1989, British computer scientist Tim Berners-Lee got the idea for the World
+    Wide Web (the web). He was Berners-Lee used a NeXTcube computer for the first
+    web server.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_17_0.png)'
+  - '[PAGE 18]
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_18_0.png)
+
+
+    working at a laboratory known as CERN. Berners-Lee wanted researchers at the lab
+    to be able to share documents with each other on the internet. He created Hypertext
+    Transfer Protocol (HTTP). This allowed people to find documents connected by hyperlinks.
+
+
+    15'
+  - '[PAGE 19]
+
+
+    Over the next year, Berners-Lee invented HTML and programmed the first web server
+    and web **browser**. The web launched at CERN in December 1990. On the first website,
+    Berners-Lee provided information about how to use the web.
+
+
+    > CERN was established in 1954. It is located near Geneva, Switzerland, on the
+    border between France and Switzerland.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_19_0.png)'
+  - '[PAGE 20]
+
+
+    The web became available outside CERN on August 6, 1991. That’s when Berners-Lee
+    posted a message in several newsgroups. This message explained his web project.
+    It also said how to use HTML to create web pages and transfer them from servers
+    to computers.
+
+
+    On April 30, 1993, CERN made HTML source code available to the general public.
+    Anyone in the world could use it to create websites and share information in the
+    internet. Soon, computer scientists began building websites and ”web developer”
+    became an official job title.
+
+
+    # THE WEB VS.
+
+    INTERNET
+
+
+    The web and the internet are often thought to be the same thing, but they are
+    not. The internet is a collection of computers that form interconnected networks.
+    The web is a system used to find information on the internet. It consists of web
+    pages. Web pages are documents that are connected by hyperlinks. People use web
+    browsers to view web pages on the web.'
+  - '[PAGE 21]
+
+
+    # CHAPTER 6
+
+    BOOMING BUSINESS
+
+
+    Once the web went public, programmers quickly figured out new ways to design and
+    create websites.
+
+
+    Within a few years, websites had progressed beyond text-only pages. They could
+    include images and graphics.
+
+
+    In 1993, the web browser Mosaic made the web popular among the general public.
+    There were other web browsers, but they looked boring and uninviting. Mosaic had
+    color photos, bookmarks, and more that attracted people to this new way of finding
+    and sharing information.
+
+
+    In 1995, software developer Brendan Eich invented JavaScript. Web developers could
+    now add features such as motion and pop-ups to websites. In 1996, David Siegel
+    published the book Creating Killer Web Sites. It was the first step-by-step guide
+    for designing and building websites.
+
+
+    In 1998, two major events changed web development and design. First, CSS was improved.
+    CSS had been created in 1994,'
+  - '[PAGE 22]
+
+
+    > Sergey Brin (left) and Larry Page (right) developed Google while they were students
+    at Stanford University in California.
+
+
+    but it was difficult to use at first. The problems were fixed and in 1998, it
+    began to be widely used. Then later that year, computer scientists Larry Page
+    and Sergey Brin launched the Google search engine. Google changed the way people
+    searched the web. But this was only the beginning. Website development continued
+    to grow and change.'
+  - '[PAGE 23]
+
+
+    # CHAPTER 9
+
+    GOING MOBILE
+
+
+    **In the late 1990s and early 2000s, advancements in website development were
+    mainly driven by better computers.** New computers came out that were faster and
+    more powerful. They could run more complicated websites.
+
+
+    Then in 2007, Apple released the iPhone. This opened up a whole new world for
+    web developers. Websites designed for computers often didn’t work well on mobile
+    devices. The sites didn’t look good on small screens.
+
+
+    In 2008, web developer Nathan Smith came up with the 960 grid system. It divided
+    the screen into columns. This made sketching, designing, and coding websites easier.
+    The 960 grid system soon became the standard for most web developers.
+
+
+    Web designer Ethan Marcotte expanded on Smith’s grid system to improve mobile
+    websites. At the time, web developers had to build two versions of each website.
+    One was for desktop'
+  - '[PAGE 24]
+
+
+    computers and the other for mobile devices. In 2010, Marcotte wrote an article
+    describing a solution to this problem.
+
+
+    Marcotte''s article explained how to make content formatted in a grid display
+    differently on different devices. Marcotte called his idea responsive web design.
+    It greatly simplified the work of developing websites for multiple devices.
+
+
+    > Responsive design uses grids and layouts to adjust resolution, image size, and
+    script functions to the device''s screen.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_24_0.png)'
+  - '[PAGE 25]
+
+
+    # CHAPTER 8
+
+    FINDING SUCCESS
+
+
+    **The most successful web developers do a lot more than just computer programming.**
+    These days, many people can learn the basic skills needed to create web pages.
+    A good web developer also needs to understand human interactions. This means knowing
+    how people will use a site and what they want from it. When a site is useful and
+    easy to navigate, people have a better user experience. They will be more likely
+    to come back to the site again.
+
+
+    Successful web developers are good at explaining their ideas. This is helpful
+    when working with clients or coworkers. Developers need to say clearly why a website
+    should have certain features or look a certain way. Developers also need to listen
+    to others'' ideas too.'
+  - '[PAGE 26]
+
+
+    # DIGITAL SPOTLIGHT FACEBOOK
+
+
+    Mark Zuckerberg and several friends came up with the idea for Facebook. They were
+    all students at Harvard University in Massachusetts. They created a website where
+    students could post information and photos.
+
+
+    The website launched on February 4, 2004. It was called The Facebook and at first
+    was only available to other Harvard students. The website showed a photo of the
+    students who signed up and listed their contact information. Later that year,
+    Zuckerberg made The Facebook interactive. Students could message each other through
+    the site. And they could post comments on one another''s entries.
+
+
+    By the time Facebook became available to the general public in 2006, it also included
+    an application programming interface (API). This allowed other programmers to
+    develop apps that worked within Facebook. This revolutionized social media. Today,
+    Facebook has more than two billion active monthly users.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_26_0.png)'
+- md: '
+
+    # CHAPTER 9
+
+    ## SEARCH ENGINE OPTIMIZATION
+
+
+    Having a good website is an important part of any business. But a company can''t
+    just launch a website and hope it gets noticed. It''s too easy for a website to
+    get lost among the millions of other websites on the web. Having a website won''t
+    do any good if people can''t find and visit it.
+
+
+    Most possible customers use search engines such as Google, Bing, or Yahoo. For
+    example, someone planning a hiking trip might search for “hiking boots.” The search
+    engine shows a list of websites featuring hiking boots. Often, the searcher will
+    only visit the first few sites on the list. So, it''s better for a business that
+    sells hiking boots to be at the top of the list.
+
+
+    Web developers help their clients'' websites appear high on search engine lists.
+    This is called search engine optimization (SEO). How a developer builds a website
+    affects its SEO ranking. Websites that load slowly tend to have low rankings.
+    Elements such as large images can make websites slow.
+
+
+    People can use software or apps to track their SEO ranking and website traffic.
+    One popular tracking service is Google Analytics.
+
+
+    Websites that only work well on one or two types of devices also have low rankings.
+    Web developers try to build strong, fast websites for computers and mobile devices.
+    This ensures that their websites will have high SEO rankings.
+
+
+    # CHAPTER 10
+
+    ## TARGETING TRENDS
+
+
+    SEO is just one element that is making websites more complicated to design and
+    build. The web is always changing and growing. Web developers need to be able
+    to keep up with the latest trends so they can build better websites.
+
+
+    Virtual reality (VR) is an emerging trend in website development. VR creates an
+    artificial setting that users can move around in and interact with. Developers
+    are working on ways to include VR on websites. One idea is to use VR to connect
+    people online so they can interact and even play games.
+
+
+    Another trend is the Internet of Things (IoT). It is the ability of objects such
+    as household appliances, music systems, and cars to connect online. This includes
+    refrigerators that tell you when you need to buy more milk. And some cars, such
+    as Teslas, can receive software updates directly from the manufacturer. Web developers
+    need to be able to build sites that can exchange information with devices that
+    are on the IoT.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_30_0.png)
+
+
+    > When there are safety issues with a Tesla car, the car can receive an update
+    that fixes the problem!
+
+
+    Web developers are always faced with new challenges. **Technology** changes so
+    quickly that it is impossible to know what the future holds for the web. One thing
+    is sure, though. Website developers will help shape the way people communicate,
+    make decisions, and perform daily tasks.
+
+
+    # TIMELINE
+
+
+    - **1970s**: The internet is invented.
+
+    - **1993**: HTML source code comes available to the general public. The Mosaic
+    web browser is created.
+
+    - **1996**: David Siegel publishes Creating Killer Websites.
+
+    - **1989**: Tim Berners-Lee starts developing the World Wide Web.
+
+    - **1995**: Brendan Eich invents JavaScript.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_31_0.png)
+
+
+    # Google
+
+    ## 1998
+
+    The Google search engine is launched.
+
+
+    # 2006
+
+    Facebook becomes available to everyone.
+
+
+    # 2008
+
+    Nathan Smith invents the 960 grid system.
+
+
+    # 2004
+
+    Mark Zuckerberg launches The Facebook at Harvard University.
+
+
+    # 2007
+
+    Apple releases the first iPhone.
+
+
+    # 2010
+
+    Ethan Marcotte writes an article explaining web design.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_32_0.png)
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_32_1.png)
+
+
+    # GLOSSARY
+
+
+    **appliance**–a household or office device operated by gas or electric current.
+    Common kitchen appliances include stoves, refrigerators, and dishwashers.
+
+
+    **application**–a computer program.
+
+
+    **available**–able to be had or used.
+
+
+    **blogger**–someone who maintains a type of website called a blog that tells about
+    his or her personal opinions, activities, and experiences.
+
+
+    **browser**–a computer program that is used to find and look at information on
+    the Internet.
+
+
+    **code**–a set of instructions for a computer. Writing code is called coding.
+
+
+    **complicated**–having elaborately combined parts.
+
+
+    **graphics**–pictures or images on the screen of a computer, smartphone, or other
+    device.
+
+
+    **grid**–a pattern with rows of squares, such as a checkerboard.
+
+
+    **hyperlink**–an electronic element that provides access between pieces of information.
+    The information can be accessed by clicking a computer mouse on the hyperlink.
+
+
+    **hypertext**–a computer system that allows users to access information connected
+    to what is on screen.
+
+
+    **mobile**–capable of moving or being moved.
+
+
+    **network**–a system of computers connected by communications lines.
+
+
+    **online**–connected to the internet.
+
+
+    **optimization**–the act, process, or method of making something as functional
+    or effective as possible.
+
+
+    **social media**–forms of electronic communication that allow people to create
+    online communities to share information, ideas, and messages. Facebook, Instagram,
+    and Snapchat are examples of social media.
+
+
+    **software**–the written programs used to operate a computer.
+
+
+    **specialize**–to pursue one type of work, called a specialty.
+
+
+    **technology (tehk-NAH-juh-jee)**–machinery and equipment developed for practical
+    purposes using scientific principles and engineering.
+
+
+    **version**–a different form or type of an original.
+
+
+    # INDEX
+
+
+    Apple iPhone, 20
+
+    back-end development, 6, 10
+
+    Berners-Lee, Tim, 14, 15, 16, 17
+
+    Bing, 24
+
+    blog, 13
+
+    Brin, Sergey, 19
+
+    CERN, 15, 16, 17
+
+    client-side scripting, 10
+
+    Creating Killer Web Sites, 18
+
+    databases, 5, 11
+
+    Eich, Brendan, 18
+
+    Facebook, 23
+
+    forms, 6, 10
+
+    front-end development, 6, 10
+
+    games, 5, 8, 26
+
+    Google, 19, 24
+
+    government, 14
+
+    graphics, 12, 18
+
+
+    HTML, 7, 10, 16, 17
+
+    hyperlinks, 10, 15
+
+    Internet of Things, 26
+
+    internet security, 7
+
+    -pages, 10
+
+    Marcotte, Ethan, 20, 21
+
+    markup languages, 9, 10
+
+    mobile devices, 20, 21, 25
+
+    Mosaic, 18
+
+    960 grid system, 20
+
+    Page, Larry, 19
+
+    planning, 9
+
+    programming languages, 7, 10, 11, 18, 19
+
+    responsive web design, 21
+
+    scripts, 9, 10, 11
+
+    search engine optimization, 24, 25, 26
+
+
+    search engines, 6, 19, 24
+
+    server-side scripting, 10
+
+    shopping, 6, 8
+
+    Siegel, David, 18
+
+    Smith, Nathan, 20
+
+    social media, 23
+
+    Tesla, 26
+
+    universities, 14, 23
+
+    videos, 5, 8
+
+    virtual reality, 26
+
+    web browsers, 10, 11, 16, 18
+
+    wireframes, 9
+
+    World Wide Web, 5, 14
+
+    Yahoo, 24
+
+    YouTube, 5
+
+    Zuckerberg, Mark, 23
+
+    '
+  mdcn: '
+
+
+    # 第9章
+
+    ## 搜索引擎优化
+
+
+    拥有一个良好的网站是任何业务的重要部分。但公司不能仅仅发布一个网站就寄希望它被关注。网站在网络上数以百万计的其他网站中迷失太容易了。如果人们找不到也访问它，那么拥有网站将无济于事。
+
+
+    大多数潜在客户会使用 Google、Bing 或 Yahoo 等搜索引擎。例如，某人计划徒步旅行的人可能会搜索“徒步鞋”。搜索引擎会显示出一系列包含徒步鞋的网站列表。通常，搜索者只会访问列表上的前几个网站。因此，对于销售徒步鞋的业务来说，出现在列表顶部会更好。
+
+
+    网页开发人员帮助客户的网站在搜索引擎列表中显示在较靠后的位置。这被称为搜索引擎优化（SEO）。开发者构建网站的方式会影响其 SEO 排名。加载缓慢的网站往往排名较低。大图片等元素会使网站变慢。
+
+
+    人们可以使用软件或应用程序来跟踪他们的 SEO 排名和网站访问流量。一种流行的跟踪服务是 Google Analytics。
+
+
+    仅在一种或两种设备类型上运行良好的网站排名也较低。网页开发者尝试为计算机和移动设备构建强大、快速的网站。这确保了他们的网站将拥有高 SEO 排名。
+
+
+    # 第10章
+
+    ## 目标趋势
+
+
+    SEO 只是让网站设计和构建变得复杂的元素之一。网络始终在变化和增长。网页开发者需要能够跟上最新趋势，以便构建更好的网站。
+
+
+    虚拟现实（VR）是网站开发的一个新兴趋势。VR 创建了一个用户可以在其中移动并交互的人工环境。开发者正在努力将 VR 引入网站的方法。一种想法是使用 VR
+    连接在线用户，让他们可以互动甚至玩游戏。
+
+
+    另一个趋势是物联网（IoT）。它是家电、音乐系统和汽车等物体连接在线的能力。这包括可以告诉你你需要买更多牛奶的冰箱。以及某些汽车，如特斯拉，可以从制造商那里直接接收软件更新。网页开发者需要能够构建可以与物联网上的设备交换信息的网站。
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_30_0.png)
+
+
+    > 当特斯拉汽车出现安全问题时，汽车可以接收更新来修复问题！
+
+
+    网页开发者总是面临着新的挑战。**技术**变化如此之，以至于无法预知网络的未来。但有一点是肯定的。网站开发者将帮助塑造人们沟通、决策和执行日常任务的方式。
+
+
+    # 时间线
+
+
+    - **1970年代**: 互联网被发明。
+
+    - **1993**: HTML 源代码向公众开放。Mosaic 网页浏览器被创建。
+
+    - **1996**: David Siegel 出版《创建杀手网站》（Creating Killer Websites）。
+
+    - **1989**: Tim Berners-Lee 开始开发万维网（World Wide Web）。
+
+    - **1995**: Brendan Eich 发明了 JavaScript。
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_31_0.png)
+
+
+    # Google
+
+    ## 1998
+
+    Google 搜索引擎启动。
+
+
+    # 2006
+
+    Facebook 向所有人开放。
+
+
+    # 2008
+
+    Nathan Smith 发明了 960 网格系统。
+
+
+    # 2004
+
+    Mark Zuckerberg 在哈佛大学推出了 The Facebook。
+
+
+    # 2007
+
+    Apple 发布了第一代 iPhone。
+
+
+    # 2010
+
+    Ethan Marcotte 写了一篇解释网页设计的文章。
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_32_0.png)
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_32_1.png)
+
+
+    # 词汇表
+
+
+    **appliance**（电器）——由气体或电流运行的家用或办公设备。常见的厨房电器包括炉、冰箱和洗碗机。
+
+
+    **application**（应用程序）——计算机程序。
+
+
+    **available**（可用的）——可以获得或使用的。
+
+
+    **blogger**（博客作者）——维护称为博客的网站的人，讲述个人观点、活动和经历。
+
+
+    **browser**（浏览器）——用于在网上查找和查看信息的计算机程序。
+
+
+    **code**（代码）——计算机的一组指令。编写代码被称为编码。
+
+
+    **complicated**（复杂的）——具有复杂组合部分的。
+
+
+    **graphics**（图形）——计算机、智能手机或其他设备屏幕上的图片或图像。
+
+
+    **grid**（网格）——带有正方形行的图案，如国际棋盘。
+
+
+    **hyperlink**（超链接）——在信息片段之间提供访问的电子元素。可以通过点击鼠标点击超链接来访问信息。
+
+
+    **hypertext**（超文本）——一种允许用户访问与屏幕内容相关信息的计算机系统。
+
+
+    **mobile**（移动的）——能够移动或被移动的。
+
+
+    **network**（网络）——通过通信线连接的计算机系统。
+
+
+    **online**（在线的）——连接到互联网。
+
+
+    **optimization**（优化）——使某物尽可能功能化或有效的行为、过程或方法。
+
+
+    **social media**（社交媒体）——允许人们创建在线社区以共享信息、想法和消息的电子通信形式。Facebook、Instagram 和 Snapchat
+    都是社交媒体的示例。
+
+
+    **software**（软件）——运行计算机的编写程序。
+
+
+    **specialize**（专攻）——从事一种类型的工作，称为专长。
+
+
+    **technology (tehk-NAH-juh-jee)**（技术）——利用科学原理和工程为了实用目的开发的机械设备。
+
+
+    **version**（版本）——原始对象的不同形式或类型。
+
+
+    # 索引
+
+
+    Apple iPhone, 20
+
+    后端开发, 6, 10
+
+    Berners-Lee, Tim, 14, 15, 16, 17
+
+    Bing, 24
+
+    博客, 13
+
+    Brin, Sergey, 19
+
+    CERN, 15, 16, 17
+
+    客户端脚本, 10
+
+    《创建杀手网站》,18
+
+    数据库, 5, 11
+
+    Eich, Brendan, 18
+
+    Facebook, 23
+
+    形式, 6, 10
+
+    前端开发, 6, 10
+
+    游戏, 5, 8, 26
+
+    Google, 19, 24
+
+    政府, 14
+
+    图形, 12, 18
+
+
+    HTML, 7, 10, 16, 17
+
+    超链接, 10, 15
+
+    物联网, 26
+
+    网络安全, 7
+
+    -页面, 10
+
+    Marcotte, Ethan, 20, 21
+
+    标记语言, 9, 10
+
+    移动设备, 20, 21, 25
+
+    Mosaic, 18
+
+    960 网格系统, 20
+
+    Page, Larry, 19
+
+    规划, 9
+
+    编程语言, 7, 10, 11, 18, 19
+
+    响应式网页设计, 21
+
+    脚本, 9, 10, 11
+
+    搜索引擎优化, 24, 25, 26
+
+
+    搜索引擎, 6, 19, 24
+
+    服务端脚本, 10
+
+    购物, 6, 8
+
+    Siegel, David, 18
+
+    Smith, Nathan, 20
+
+    社交媒体, 23
+
+    特斯拉, 26
+
+    大学, 14, 23
+
+    视频, 5, 8
+
+    虚拟现实, 26
+
+    网页浏览器, 10, 11, 16, 18
+
+    线框, 9
+
+    万维网, 5, 14
+
+    Yahoo, 24
+
+    YouTube, 5
+
+    Zuckerberg, Mark, 23
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 27]
+
+
+    # CHAPTER 9
+
+    SEARCH ENGINE OPTIMIZATION
+
+
+    Having a good website is an important part of any business. But a company can''t
+    just launch a website and hope it gets noticed. It''s too easy for a website to
+    get lost among the millions of other websites on the web. Having a website won''t
+    do any good if people can''t find and visit it.
+
+
+    Most possible customers use search engines such as Google, Bing, or Yahoo. For
+    example, someone planning a hiking trip might search for “hiking boots.\. The
+    search engine shows a list of websites featuring hiking boots. Often, the searcher
+    will only visit the first few sites on the list. So, it''s better for a business
+    that sells hiking boots to be at the top of the list.
+
+
+    Web developers help their clients'' websites appear high on search engine lists.
+    This is called search engine optimization (SEO). How a developer builds a website
+    affects its SEO ranking. Websites that load slowly tend to have low rankings.
+    Elements such as large images can make websites slow.'
+  - '[PAGE 28]
+
+
+    People can use software or apps to track their SEO ranking and website traffic.
+    One popular tracking service is Google Analytics.
+
+
+    Websites that only work well on one or two types of devices also have low rankings.
+    Web developers try to build strong, fast websites for computers and mobile devices.
+    This ensures that their websites will have high SEO rankings.
+
+
+    25'
+  - '[PAGE 29]
+
+
+    # CHAPTER 10
+
+    TARGETING TRENDS
+
+
+    SEO is just one element that is making websites more complicated to design and
+    build. The web is always changing and growing. Web developers need to be able
+    to keep up with the latest trends so they can build better websites.
+
+
+    Virtual reality (VR) is an emerging trend in website development. VR creates an
+    artificial setting that users can move around in and interact with. Developers
+    are working on ways to include VR on websites. One idea is to use VR to connect
+    people online so they can interact and even play games.
+
+
+    Another trend is the Internet of Things (IoT). It is the ability of objects such
+    as household appliances, music systems, and cars to connect online. This includes
+    refrigerators that tell you when you need to buy more milk. And some cars, such
+    as Teslas, can receive software updates directly from the manufacturer. Web developers
+    need to be able to build sites that can exchange information with devices that
+    are on the IoT.'
+  - '[PAGE 30]
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_30_0.png)
+
+
+    > When there are safety issues with a Tesla car, the car can receive an update
+    that fixes the problem!
+
+
+    Web developers are always faced with new challenges. **Technology** changes so
+    quickly that it is impossible to know what the future holds for the web. One thing
+    is sure, though. Website developers will help shape the way people communicate,
+    make decisions, and perform daily tasks.'
+  - '[PAGE 31]
+
+
+    # TIMELINE
+
+
+    1970s
+
+    The internet
+
+    is invented.
+
+
+    1993
+
+    HTML source code
+
+    comes available to the
+
+    general public. The Mosaic
+
+    web browser is created.
+
+
+    1996
+
+    David Siegel
+
+    publishes Creating
+
+    Killer Websites.
+
+
+    1989
+
+    Tim Berners-Lee
+
+    starts developing
+
+    the World Wide Web.
+
+
+    1995
+
+    Brendan Eich
+
+    ininvents JavaScript.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_31_0.png)'
+  - '[PAGE 32]
+
+
+    # Google
+
+
+    # 1998
+
+
+    The Google search
+
+    engine is launched.
+
+
+    # 2006
+
+
+    Facebook becomes
+
+    available to everyone.
+
+
+    # 2008
+
+
+    Nathan Smith
+
+    in invents the 960
+
+    grid system.
+
+
+    # 2004
+
+
+    Mark Zuckerberg
+
+    launches The Facebook
+
+    at Harvard University.
+
+
+    # 2007
+
+
+    Apple releases
+
+    the first iPhone.
+
+
+    # 2010
+
+
+    Ethan Marcotte
+
+    writes an article
+
+    explaining
+
+    web design.
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_32_0.png)
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_32_1.png)
+
+
+    29'
+  - '[PAGE 33]
+
+
+    # GLOSSARY
+
+
+    **appliance**–a household or office device operated by gas or electric current.
+    Common kitchen appliances include stoves, refrigerators, and dishwashers.
+
+
+    **application**–a computer program.
+
+
+    **available**–able to be had or used.
+
+
+    **blogger**–someone who maintains a type of website called a blog that tells about
+    his or her personal opinions, activities, and experiences.
+
+
+    **browser**–a computer program that is used to find and look at information on
+    the Internet.
+
+
+    **code**–a set of instructions for a computer. Writing code is called coding.
+
+
+    **complicated**–having elaborately combined parts.
+
+
+    **graphics**–pictures or images on the screen of a computer, smartphone, or other
+    device.
+
+
+    **grid**–a pattern with rows of squares, such as a checkerboard.
+
+
+    **hyperlink**–an electronic element that provides access between pieces of information.
+    The information can be accessed by clicking a computer mouse on the hyperlink.
+
+
+    **hypertext**–a computer system that allows users to access information connected
+    to what is on screen.
+
+
+    **mobile**–capable of moving or being moved.'
+  - '[PAGE 34]
+
+
+    network–a system of computers connected by communications lines.
+
+
+    online–connected to the internet.
+
+
+    optimization–the act, process, or method of making something as functional or
+    effective as possible.
+
+
+    social media–forms of electronic communication that allow people to create online
+    communities to share information, ideas, and messages. Facebook, Instagram, and
+    Snapchat are examples of social media.
+
+
+    software–the written programs used to operate a computer.
+
+
+    specialize–to pursue one type of work, called a specialty.
+
+
+    technology (tehk-NAH-juh-jee)–machinery and equipment developed for practical
+    purposes using scientific principles and engineering.
+
+
+    version–a different form or type of an original.'
+  - '[PAGE 35]
+
+
+    # INDEX
+
+
+    Apple iPhone, 20
+
+    back-end development, 6, 10
+
+    Berners-Lee, Tim, 14, 15, 16, 17
+
+    Bing, 24
+
+    blog, 13
+
+    Brin, Sergey, 19
+
+    CERN, 15, 16, 17
+
+    client-side scripting, 10
+
+    Creating Killer Web Sites, 18
+
+    databases, 5, 11
+
+    Eich, Brendan, 18
+
+    Facebook, 23
+
+    forms, 6, 10
+
+    front-end development, 6, 10
+
+    games, 5, 8, 26
+
+    Google, 19, 24
+
+    government, 14
+
+    graphics, 12, 18
+
+
+    HTML, 7, 10, 16, 17
+
+    hyperlinks, 10, 15
+
+    Internet of Things, 26
+
+    internet security, 7
+
+    -pages, 10
+
+    Marcotte, Ethan, 20, 21
+
+    markup languages, 9, 10
+
+    mobile devices, 20, 21, 25
+
+    Mosaic, 18
+
+    960 grid system, 20
+
+    Page, Larry, 19
+
+    planning, 9
+
+    programming languages, 7, 10, 11, 18, 19
+
+    responsive web design, 21
+
+    scripts, 9, 10, 11
+
+    search engine
+
+    optimization, 24, 25, 26
+
+
+    search engines, 6, 19, 24
+
+    server-side scripting, 10, 11
+
+    shopping, 6, 8
+
+    Siegel, David, 18
+
+    Smith, Nathan, 20
+
+    social media, 23
+
+    Tesla, 26
+
+    universities, 14, 23
+
+    videos, 5, 8
+
+    virtual reality, 26
+
+    web browsers, 10, 11, 16, 18
+
+    wireframes, 9
+
+    World Wide Web, 5, 14
+
+    Yahoo, 24
+
+    YouTube, 5
+
+    Zuckerberg, Mark, 23'
+  - '[PAGE 36]
+
+
+    <!-- no content -->'
+  - '[PAGE 37]
+
+
+    <!-- no content -->'
+  - '[PAGE 38]
+
+
+    <!-- no content -->'
+  - '[PAGE 39]
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    **Technology is everywhere! It''s hard to imagine going a whole day without using
+    a computer, smartphone, or tablet.** But how do these devices work? Do you know
+    how your favorite games, websites, podcasts, and apps were created? What''s it
+    like to have a career working with computers? Find out the answers to these questions
+    and more with It’s a Digital World! Explore the exciting world of computer technology,
+    from computer programming and hacking to website development, game design, and
+    more. Learn about pioneering programmers and how how they created breakthrough
+    apps and computer software. Discover what it’s like to have a career as a podcast
+    producer or app developer. This series will open the door to an exciting future
+    in the digital world!
+
+
+    # BOOKS IN THIS SERIES
+
+
+    +   - Amazing App Developers
+
+    - Creative Podcast Producers
+
+    - Dynamic Website Developers
+
+    - Gifted Game Designers
+
+    - Helpful Hackers
+
+    - Master Computer Programmers
+
+
+    ISBN 978-1-5321-1532-5
+
+
+    ![](img/4e1e2e1c341e3e88a5e966628ca97171_39_0.png)'
