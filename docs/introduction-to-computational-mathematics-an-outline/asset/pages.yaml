@@ -1,0 +1,5617 @@
+- img_proc: true
+  md: '# TEXTBOOKS IN MATHEMATICS
+
+
+    # INTRODUCTION TO COMPUTATIONAL MATHEMATICS AN OUTLINE
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_0_0.png)
+
+
+    William C. Bauldry
+
+
+    CRC Press Taylor & Francis Group A CHAPMAN & HALL BOOK'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # INTRODUCTION TO\ COMPUTATIONAL MATHEMATICS'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Textbooks in Mathematics
+
+
+    Series editors:
+
+    Al Boggess, Kenneth H. Rosen
+
+
+    Modeling Change and Uncertainty
+
+    Machine Learning and Other Techniques
+
+    William P. Fox and Robert E. Burks
+
+
+    Abstract Algebra
+
+    A First Course, Second Edition
+
+    Stephen Lovett
+
+
+    Multiplicative Differential Calculus
+
+    Svetlin Georgiev, Khaled Zennir
+
+
+    Applied Differential Equations
+
+    The Primary Course
+
+    Vladimir A. Dobrushkin
+
+
+    Introduction to Computational Mathematics: An Outline
+
+    William C. Bauldry
+
+
+    https://www.routledge.com/Textbooks-in-Mathematics/book-series/CANDHTEXBOOMTH'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# # INTRODUCTION TO\n COMPUTATIONAL MATHEMATICS:\\ AN OUTLINE\n\nWilliam C.\
+    \ Bauldry\n\n![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_3_0.png)"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'First edition published 2022
+
+    by CRC Press
+
+    6000 Broken Sound Parkway NW, Suite 300, Boca Raton, FL 33487-2742
+
+
+    and by CRC Press
+
+    4 Park Square, Milton Park, Abingdon, Oxon, OX14 4RN
+
+
+    © 2023 William C. Bauldry
+
+
+    CRC Press is an imprint of Taylor & Francis Group, LLC
+
+
+    Reasonable efforts have been made to publish reliable data and information, but
+    the author and publisher cannot assume responsibility for the validity of all
+    materials or the consequences of their use. The authors and publishers have attempted
+    to trace the copyright holders of all material reproduced in this publication
+    and apologize to copyright holders if permission to publish in this form has not
+    been obtained. If any copyright material has not been acknowledged please write
+    let us know so we may rectify in any future reprint.
+
+
+    Except as permitted under U.S. Copyright Law, no part of this book may be reprinted,
+    reproduced, transmitted, or utilized in any form by electronic, mechanical, or
+    other means, now known or hereafter invented, including photocopying, microfilming,
+    and recording, or in any storage or retrieval system, without written permission
+    from the publishers.
+
+
+    For permission to photocopy or use material electronically from this work, access
+    www.copyright.com or contact the Copyright Clearance Center, Inc. (CCC), 222 Rosewood
+    Drive, Danville, MA 01923, 978-750-8400. For works that are not available on CCC
+    please contact mpkbookpermissions@tandf.co.uk
+
+
+    Trademark notice: Product or corporate names are trademarks or registered trademarks
+    and are used only for identification and explanation without intent to infringe.
+
+
+    ISBN: 9781003299257 (ebk)
+
+    DOI: 10.1201/9781003299257
+
+
+    Publisher’s note: This book has been prepared from camera-ready copy provided
+    by the authors.
+
+    Cover photos: Mount Field National Park, Tall Trees Walk, Tasmania. © WmCBB, 2018'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# # Introduction to Computational Mathematics: An Outline
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_5_0.png)
+
+
+    > "1 + 1 = 3
+
+    for large enough
+
+    values of 1."
+
+
+    Photo © WmCB, 2015'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Introduction to Computational Mathematics: An Outline
+
+
+    +   Contents
+
+    Preface ............................................................ viii
+
+    I. Computer Arithmetic .......................................................
+    1
+
+    II. Control Structures ................................................ 29
+
+    S I. Special Topics: Computation Cost and Horner''s Form ...... 64
+
+    III. Numerical Differentiation ................................................
+    70
+
+    IV. Root-Finding Algorithms ................................................ 84
+
+    S II. Special Topics: Modified Newton''s Method ................ 113
+
+    V. Numerical Integration .................................................. 117
+
+    VI. Polynomial Interpolation ....................................... 140
+
+    S III. Case Study: TI Calculator Numerics ................... 162
+
+    VII. Projects ............................................................ 175
+
+    VIII. References ................................................... 200
+
+
+    *Note:* Light blue text links inside this Outline; grey text links to a web page.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# # Introduction to Computational Mathematics: An Outline
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_7_0.png)
+
+
+    Photo © WmCB, 2015
+
+
+    On two occasions I have been asked, "Pray, Mr. Babbage, if you put into the machine
+    wrong figures, will the right answers come out?" ... I am not rightly to apprehend
+    the kind of confusion of ideas that could provoke such a question. — Charles Babbage
+    Passages from the Life of a Philosopher, p. 67.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # Preface: Is Computation Important?
+
+
+    A simple computational error can cause very serious problems.
+
+
+    # The Mars Climate Orbiter Crash
+
+
+    Two teams used different units of measure when writing the Orbiter’s software:
+    NASA used the metric system, and Lockheed Martin used the Imperial system. Read
+    NASA’s Mars Climate Orbiter page.
+
+
+    # The Ariane 5 Explosion
+
+
+    The European Space Agency’s Ariane 5 rocket exploded 37 seconds after takeoff;
+    the explosion was caused by an integer overflow in the software used for launching
+    the rocket. Watch the launch video.
+
+
+    # The Gulf War Dhahran “Scud” Missile Attack
+
+
+    The Patriot missile software measured time in binary and decimal based on the
+    system clock that used 10th’s of a second, a non-terminating fraction in binary.
+    After running for over 100 hours, the system was inaccurate. Twenty-eight U.S.
+    soldiers died when the system failed to track a Scud missile fired from Iraq.
+    Read Michael Barr’s “Leth Software Defects: Patriot Missile Failure.”'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# # Preface: Three Factors of Computation
+
+
+    There are three aspects to keep in mind while studying computation. The first
+    two are always in tension with each other:
+
+
+    # ## Accuracy versus Efficiency
+
+
+    **Accuracy** concerns how much error occurs and how to control the error.
+
+
+    **Efficiency** concerns how much computation is needed to produce a result.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_9_0.png)
+
+
+    **Stability** is the third aspect to always keep in mind. In a stable computation,
+    a small change in inputs produces only a small change in outputs. As a counterpoint,
+    investigate instability in a "Lorenz attractor."
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_9_1.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# # Preface: A Computational Mathematics Course
+
+
+    This slide deck was developed while teaching Appalachian State’s MAT 2310, Computational
+    Mathematics (3 cr). The course was designed to introduce numerical analysis and
+    give students experience with basic programming structures in a mathematical environment.
+    A sample syllabus is as follows:
+
+
+    +   1. Computer Arithmetic ....... 2 weeks 4. Root-Finding Algorithms . . 3 weeks
+
+    2. Control Structures . . . . . . . . . 2 weeks 5. Numerical Integration . . .
+    . 2 weeks
+
+    3. Numerical Differentiation . . 3 weeks 6. Polynomial Interpolation . . 2 weeks
+
+    Midterm Exam Team Project Posters . . . . 1 week
+
+    Final Exam
+
+
+    Programming was done with the computer algebra system Maple, to easily adjust
+    precision, and with Python. The Special Topics and Case Study come in as time
+    time allows. A selection of group projects appears at the end of this Outline.
+
+
+    Thanks go to the students of MAT 2310 who lived through the development of both
+    a new course and these slides. Many also go to my colleagues Greg Rhoads, René
+    Salinas, and Eric Marland who co-designed the course and gave great feedback during
+    the adventure.
+
+
+    > — WmCB, Aug 2022'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# I. Computer Arithmetic\n\nSections\n1. Scientific Notation .................................................................................................................................\
+    \ . . . . . . . . 2\n2. Converting to Different Bases .................................................................................................................................\
+    \ . . . . . . . . 3\n3. Floating Point Numbers ...................................................................................................................................\
+    \ . . . . . . . 8\n4. IEEE-754 Floating Point Standard .................................................................................................................................\
+    \ . . . 10\n5. Maple's Floating Point Representation .................................................................................................................................\
+    \ . . . 18\n6. Error .................................................................................................................................................................................................\
+    \ . . . . . . . 20\n   Exercises .................................................................................................................................................................................\
+    \ . . . . . 27"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# I. Computer Arithmetic: Scientific Notation\n\nDefinitions of Scientific\
+    \ Notation\nNormalized: Any numeric value can be written as\n$d_0.d_1d_2d_3 \\\
+    dots d_n \times 10^p$\nwhere $1 \\le d_0 \\le 9$.\nEngineering: Any numeric value\
+    \ can be written as\n$n.d_1d_2d_3 \\dots d_m \times 10^q$\nwhere $1 \\le n \\\
+    le 999$ and $q$ is a multiple of 3.\n\n+   Examples (NIST's Values of Constants)\n\
+    - Speed of light in a vacuum: $2.99792458 \times 10^8$ m/s\n- Newtonian constant\
+    \ of gravitation: $6.67384 \times 10^{-11}$ $\text{m}^3/(\text{kg}\\cdot\text{s}^2)$\n\
+    - Avogadro's number: $6.022141 \times 10^{-23}$ $\text{mol}^{-1}\n- Mass of a\
+    \ proton: $1.672621777 \times 10^{-27}$ kg\n- Astronomical unit: $92.9558027 \t\
+    imes 10^6$ mi"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Conversions\n\n# Basic Base Transmogrification: Integers\n\n**Binary $\r\
+    ightarrow$ Decimal**\n*(Vector version)\nThink of the binary number as a vector\
+    \ of 1's and 0's. Use a dot product to convert to decimal.\n\n**Decimal $\rightarrow$\
+    \ Binary**\n*(Algebra version)\nSuccessively compute the bits (from right to left)\n\
+    \n+   1. $x_2 = 101110$\n2. $x_{10} = \\{1\\ 0\\ 1\\ 1\\ 1\\ 0\\}\\cdot{\\{2^5\\\
+    \ 2^4\\ 2^3\\ 2^2\\ 2^1\\ 2^0\\}$\n3. $x_{10} = 2^5 + 2^3 + 2^2 = 46$\n\n+   1.\
+    \ $bit = x \\mod 2$\nthen set $x = [x/2]$\n2. Repeat until $x = 0$\n\nE.g., $x_{10}\
+    \ = 46$\n$b_0 = 0$; then set $x = 23$\n$b_1 = 1$; $x = 11$\n$b_2 = 1$; $x = 5$\n\
+    $b_3 = 1$; $x = 2$\n$b_4 = 0$; $x = 1$\n$b_5 = 1$; $x = 0$\n\nWhence $x_2 = 101110$"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Conversions
+
+
+    # Basic Base Transmogrification: Fractions
+
+
+    Binary → Decimal
+
+    (Vector version)
+
+    Think of the binary number as a vector of 1''s and 0''s. Use a dot product to
+    convert to decimal.
+
+
+    +   1. $x_2 = 0.10111$
+
+
+    +   2. $x_{10} = \{ 1\ 0\ 1\ 1\ 1 \} \cdot (2^{-1}\ 2^{-2}\ 2^{-3}\ 2^{-4}\ 2^{-5})$
+
+
+    +   3. $x_{10} = 2^{-1} + 2^{-3} + 2^{-4} + 2^{-5} = 0.71875$
+
+
+    Decimal → Binary
+
+    (Algebra version)
+
+    Successively compute the bits (from left to right)
+
+
+    +   1. $bit = [2x]$
+
+    then set $x = \text{frac}(2x)$
+
+
+    +   2. Repeat until $x=0$ (or when reaching maximum length)
+
+
+    E.g., $x_{10} = 0.71875$
+
+    $b_{-1} = 1$; then set $x = 0.43750$
+
+    $b_{-2} = 0$; $x = 0.87500$
+
+    $b_{-3} = 1$; $x = 0.75000$
+
+    $b_{-4} = 1$; $x = 0.50000$
+
+    $b_{-5} = 1$; $x = 0.0$ Stop
+
+
+    Whence $x_2 = 0.10111$'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# # Conversions
+
+
+    ## Terminating Expansions?
+
+    When does a fraction''s expansion terminate?
+
+    Base 10: A decimal fraction terminates when $r = \frac{n}{10^p} = \frac{n}{2^p
+    \cdot 5^p}$.nBase 2: A binary fraction terminates when $r = \frac{m}{2^p}$.
+
+
+    +   ### Examples
+
+    1. $\frac{1}{10} = 0.1\overline{10} = 0.00011_2$
+
+    2. $\frac{1}{3} = 0.\overline{3}_{10} = 0.0\overline{1}_2$
+
+    3. $\sqrt{2} \dote 1.4142135623730950488_{10} \dote 1.011010100001001111_2$
+
+    4. $\pi \dote 3.1415926533897932385_{10} \dote 11.0010010000111111011_2$'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Conversions
+
+
+    # Examples (Convert a Repeating Binary Expansion)
+
+
+    Convert $n = 0.0101101101\dots = 0.0\overline{101}_2$ to decimal.
+
+
+    +   1. Convert the repeating block to decimal:
+
+
+    $101_2 = 5_{10}$
+
+
+    +   2. Rewrite $n$ in "powers-of-two" notation:
+
+
+    $n = 5 \cdot 2^{-4} + 5 \cdot 2^{-7} + 5 \cdot 2^{-10} + 5 \cdot 2^{-13} + \dots$.
+
+
+    +   3. Express $n$ as a geometric series:
+
+
+    $n = 5 \cdot 2^{-4} \cdot \sum_{k=0}^{\infty} 2^{-3k}$
+
+
+    +   4. And sum the series:
+
+
+    $n = 5 \cdot 2^{-4} \cdot \frac{1}{1-2^{-3}} = \frac{5}{14}$'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Binary Coded Decimal
+
+
+    # BCD
+
+
+    The digits 0 to 9 can be represented with four binary bits:
+
+
+    | x | x | x | x |
+
+    | 8 | 4 | 2 | 1 |
+
+
+    For example, $93_{10}$ would be 93
+
+
+    | BCD: | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 1 | vs. | Binary: | 0 | 1 | 0 | 1 | 1 | 1
+    | 0 | 1 |
+
+    | 8 | 4 | 2 | 1 | 8 | 4 | 2 | 1 | | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+
+
+    # Advantages
+
+
+    # Disadvantages
+
+
+    +   - Eliminates some repeating expansions
+
+    - Rounding is simpler
+
+    - Displaying values easier
+
+
+    +   - Fewer numbers per 8 bits (100/256 $\approx$ 39%)
+
+    - Complicated arithmetic routines
+
+    - Slower to compute
+
+
+    Nearly all calculators use BCD formats.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Floating Point Numbers\n\n> Definition (Floating Point Representation)\n\
+    nA number $x$ is represented (and approximated) as\n$x = \\sigma \\times f \\\
+    times \\beta^{e-p}$\nwhere\n$\\sigma$: sign $\\pm1$, $f$: mantissa, $\beta$: base,\
+    \ usually 2, 10, or 16\n$\\e$: biased exponent (shifted), $p$: exponent's bias\
+    \ (shift)\nnThe standard floating point storage format is\n\n| $\\sigma$ | $e$\
+    \ | $f$ |\n\n# Exponent Bias\n\nThe bias value is chosen to give equal ranges\
+    \ for positive and negative exponents without needing a sign bit. E.g., for an\
+    \ exponent with\n\n+   8 bits: $0 \\le e \\le 255 = 2^8 - 1$. Use $p = 2^8/2 -\
+    \ 1$ gives an exp range of $-127 \\le e - 127 \\le 128$.\n11 bits: $0 \\le e \\\
+    le 2047 = 2^{11} - 1$. Use $p = 2^{11}/2 - 1 = 1023$ gives $-1023 \\le e - 1023\
+    \ \\le 1024$."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# Samples\n\n# Examples\n\n+   1. $-3.95 = (-1)^1 \times 0.1234375 \times 2^{21-16}$\n\
+    So $\\sigma = 1, \\quad f = 0.1234375, \\quad \beta = 2, \\quad e = 21, \\quad\
+    \ \text{and} \\quad p = 16.$\nNote: $(-1)^1 \times 0.1234375 \times 2^{21-16}\
+    \ = -3.950, \text{ so } err = 0.$\nStorage format: | 1 | 21 | 0.1234375 |\n\n\
+    +   2. $11/3 = (-1)^0 \times 0.2291666667 \times 16^{16384-16383}$\nSo $\\sigma\
+    \ = 0, \\quad f = 0.2291666667, \\quad \beta = 16, \\quad e = 16384, \\quad \t\
+    ext{and} \\quad p = 16383.$\nNote: $(-1)^0 \times 0.2291666667 \times 16^{16384-16383}\
+    \ = 3.66666666672, \text{ so } err = 5.3 \\cdot 10^{-10}.\nStorage format: | 0\
+    \ | 16384 | 0.2291666667 |\n\n+   3. $2^{10} = 1024 = (-1)^0 \times 0.250 \times\
+    \ 16^{66-63}$\nSo $\\sigma = 0, \\quad f = 0.250, \\quad \beta = 16, \\quad e\
+    \ = 66, \\quad \text{and} \\quad p = 63.$\nNote: $(-1)^0 \times 0.250 \times 16^{66-63}\
+    \ = 1024.0, \text{ so } err = 0.$\nStorage format: | 0 | 66 | 0.2500000000 |"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# IEEE Standard for Floating-Point Arithmetic\n\n# Definition (IEEE-754)\n\n\
+    Normalized Floating Point Representation (Binary)\n\nSingle precision: $x \\dote\
+    \ (-1)^{\\sigma} \times (1. + f_{[23]}) \times 2^{[8]-127}$ (32 bit)\n\n| 1 |\
+    \ 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\
+    \ 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| 31 30 | 23 22 | | 0 |\n\nDouble\
+    \ precision: $x \\dote (-1)^{\\sigma} \times (1. + f_{[52]}) \times 2^{[11]-1023}$\
+    \ (64 bit)\n\n| 1 | 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0\
+    \ | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| 63 62 | 52\
+    \ 51 | | 32 |\n\n| 1 | 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |\
+    \ 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |\n| 31 | 0 |\n\
+    \nOnline Floating-Point Converter\n\nOriginal IEEE-754-1985, 2008 revision, 2019\
+    \ revision ($)"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# IEEE Standard for Floating-Point Arithmetic, II\n\n# Single Precision Bit\
+    \ Patterns\n\n| Pattern | Value |\n|---|-|\n| $0 < e < 255$ | $n = (-1)^\\sigma\
+    \ \times 2^{e-127} \times 1.f$ <br>normal number |\n| $e = 0$, $f = 0$ <br>all\
+    \ bits are zero | $n = (-1)^\\sigma \times 0.0$ <br>signed zero |\n| $f \neq 0$\
+    \ <br>at least 1 nonzero bit | $n = (-1)^\\sigma \times 2^{-126} \times 0.f$ <br>subnormal\
+    \ number |\n| $e = 255$, $f = 0$, $\\sigma = 0$ | +INF <br>plus infinity |\n|\
+    \ $e = 255$, $f = 0$, $\\sigma = 1$ | -INF <br>minus infinity |\n| $e = 255$,\
+    \ $f \neq 0$ | NaN <br>Not-a-Number |"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# # Big and Small & Gaps
+
+
+    IEEE-754 Largest and Smallest Representable Numbers
+
+
+    | Precision | Digits | Max Exp | Smallest # | Largest # |
+
+    | --- | --- | --- | --- | --- |
+
+    | Single | ≈ 9 | ≈ 38.2 | ≈ 1.18 · 10⁻³⁸ | ≈ 3.4 · 10³³⁸ |
+
+    | Double | ≈ 17 | ≈ 307.95 | ≈ 2.225 · 10⁻³⁰⁷ | ≈ 1.798 · 10³⁰⁸ |
+
+
+    # # Gaps in the Floating Point Number Line
+
+
+    The size of the gap between consecutive floating point numbers gets larger as
+    the numbers get larger.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_22_0.png)
+
+
+    Each tick mark represents one floating point number.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Machine Epsilon\n\n# Definition\n\nThe machine epsilon $\\varepsilon$ is\
+    \ the largest value such that\n\n$$$1 + \\varepsilon = 1$$\n\nfor a given numeric\
+    \ implementation.\n\n```\nwmcb:► cat machineEpsilon.java\nclass mEps {\n    public\
+    \ static void main(String[] args) {\n        float machEps = 1.0f;\n        do\
+    \ {\n            machEps /= 2.0f;\n        } while ((float)(1.0 + (machEps/2.0))\
+    \ != 1.0);\n        System.out.println(\"Calculated machine epsilon: \"+machEps);\n\
+    \    }\n}\nwmcb:► javac machineEpsilon.java\nwmcb:► java mEps\nCalculated machine\
+    \ epsilon: 1.1920929E-7\n```\n\n> $\\varepsilon_s \\approx 1.192010 \\cdot 10^{-7}$"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Machine Epsilon, II\n\n# Example (Double Precision [using Java])\n\n```\n\
+    wcmb:► cat machineEpsilonD.java\nclass mEpsD {\n public static void main(String[]\
+    \ args) {\n  double machEps = 1.0d;\n  do {\n    machEps /= 2.0d;\n  } while ((double)(1.0+(machEps/2.0))\
+    \ != 1.0);\n  System.out.println(\"Calculated machine epsilon: \"+machEps);\n\
+    }\n\n```\n\nwcmb:► javac machineEpsilonD.java\n\nwcmb:► java mEpsD\n\nCalculated\
+    \ machine epsilon: 2.220446049250313E-16    $\\varepsilon_d \\approx 2.22 \\cdot\
+    \ 10^{-16}$\n\n| Single Precision | Double Precision |\n|--- |--- |\n| $\\varepsilon_s\
+    \ \\approx 1.192 \\cdot 10^{-7}$ | $\\varepsilon_d \\approx 2.22 \\cdot 10^{-16}$\
+    \ |"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Machine Epsilon, III\n\n# Example (Using Python 3)\n\n```\n>>> macEps = 1.0\n\
+    >>> while (1.0 + macEps) != 1.0:\n    macEps = macEps/2.0\n\n>>> macEps\n1.1102230246251565e-16\n\
+    >>>\n>>> import numpy as np\n>>> macEpsL = np.longdouble(1.0)\n>>> while (1.0\
+    \ + macEpsL) != 1.0:\n    macEpsL = macEpsL/2.0\n\n>>> macEpsL\n5.42101086242752217e-20\n\
+    >>>\n>>> np.finfo(np.longdouble)\nfinfo(resolution=1.0000000000000000715e-18,\n\
+    min=-1.189731495375231765e+4932, max=1.189731495375231765e+4932,\ntype=float128)\n\
+    ```\n\nNote: Python's float defaults to double precision."
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Large Value Floating Point Gap\n\n# Example (Double Precision [using Java])\n\
+    \n+   - Approximate the gap to the next floating point value above $10^{30}$.\n\
+    \n```\nwmcb► cat FGap.java\n\nclass BigGap {\n    public static void main(String[]\
+    \ args) {\n        float gap = 1e23f;\n        float n = 1e30f;\n        do {\n\
+    \            gap /= 2.0;\n        } while ((float)(n+(gap/2.0))!=n);\n       \
+    \ System.out.println(\"Approximate gap: \"+eps);\n    }\n}\n\nwmcb► javac FGap.java\n\
+    \nwmcb► java BigGap\n    Approximate gap: 5.0E22\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# Properties\n\n# Floating Point Arithmetic Properties\n\nCommutative: Addition\
+    \ is commutative:\n$n_1 + n_2 = n_2 + n_1$\n\nMultiplication is commutative:\n\
+    $n_1 \times n_2 = n_2 \times n_1$\n\nNonassociative: Addition is **not** associative:\n\
+    $(n_1 + n_2) + n_3 \neq n_1 + (n_2 + n_3)$\n\nMultiplication is **not** associative:\n\
+    $(n_1 \times n_2) \times n_3 \neq n_1 \times (n_2 \times n_3)$\n\nNondistributive:\
+    \ Multiplication does **not** distribute over addition:\n$n_1 \times (n_2 + n_3)\
+    \ \neq (n_1 \times n_2) + (n_1 \times n_3)$"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Maple''s Floating Point Representation
+
+
+    Maple''s Floating Point Implementation
+
+    Maximum exponent = 92233720368547775806
+
+    Minimum exponent = -92233720368547775806
+
+    Maximum “float” = 1. × 10^92233720368547775806
+
+    Minimum “float” = 1. × 10⁻92233720368547775806
+
+    Maximum digits = 38654705646
+
+    Maximum binary power = 46116860184273873903
+
+
+    Example (Maple''s Floating Point Structure)
+
+    > N := evalf(Pi, 20):
+
+    dismantle(N)
+
+    FLOAT(3): 3.14159265358979323856
+
+    INTPOS(6): 314159265358979323856
+
+    INTNEG(2): -19'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# # Floating Point Rounding
+
+
+    # ## IEEE-754 Rounding Algorithms¹
+
+
+    **Rounding to Nearest**
+
+
+    +   - Round to nearest, ties to even *(default for binary floating-point)*
+
+    - Round to nearest, ties to odd
+
+    - Round to nearest, ties away from zero *(used by Maple and MATLAB)*
+
+
+    **Directed Roundings**
+
+
+    +   - Round toward 0 — *truncation*
+
+    - Round toward +∞ — *rounding up or ceiling: [x]*
+
+    - Round toward -∞ — *rounding down or floor: [x]*
+
+
+    Team Project: Implement *Stochastic Rounding* in Maple or Python.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Error
+
+
+    # Defining Error
+
+
+    Absolute Error: The value $err_{abs} = |actual - approximate|$
+
+
+    Relative Error: The ratio $err_{rel} = \frac{|actual - approximate|}{|actual|}
+    = \frac{err_{abs}}{|actual|}$
+
+
+    # Example (Weighty Thoughts)
+
+
+    A long-tailed field mouse normally weighs up to about 50 g. Suppose a lab-tech
+    makes an error of 2.5 g ($\approx a penny$) when weighing a mouse. The relative
+    error is
+
+
+    $err_{rel} = \frac{2.5g}{50g} = 5\%$.
+
+
+    A mature African bush elephant normally weighs about 6.5 tons. Suppose a zookeeper
+    makes an error of 50# ($\approx 7-yr-old boy$) weighing an elephant. The relative
+    error is
+
+
+    $err_{rel} = \frac{50\#}{13000\#} \dote 0.4\%$.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Error Accumulates
+
+
+    # Adding Error
+
+
+    Add $1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \cdots + \frac{1}{10^6}$ forward
+    and backward with 6 digits.
+
+
+    ```
+
+    Maple
+
+    Digits :=6;\NN:=10^6:
+
+
+    Sf :=0;
+
+    for i from 1 to N do
+
+    Sf :=Sf+(1.0/i);
+
+    end do:
+
+    Sf;
+
+    10.7624
+
+
+    Sb :=0;
+
+    for j from N to 1 by -1 do
+
+    Sb :=Sb+(1.0/j);
+
+    end do:
+
+    Sb;
+
+    14.0537
+
+    ```
+
+
+    The correct value of $\frac{10^6}{k}$ to 6 significant digits is $14.3927$,
+
+
+    relative error($S_f$) $\approx 25.2\%$, relative error($S_b$) $\approx 2.4\%$
+
+
+    What happened?'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# # Error Accumulates
+
+
+    Solve for $x$: $1.22x^2 + 3.34x + 2.28 = 0$  (3-digit, 2-decimal precision)
+
+
+    The quadratic formula $r_{\pm} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ can lead
+    to problems.
+
+
+    Using the formula directly:
+
+
+    $b^2 = 11.2$
+
+    $4ac = 11.1$
+
+    $\sqrt{b^2 - 4ac} = 0.32$
+
+    $r_+, r_- = -1.24, -1.50$
+
+
+    But the exact roots are:
+
+
+    $R_{\pm} = \frac{-167 \pm \sqrt{73}}{122} \approx -1.30, -1.44$
+
+
+    The relative error is $\approx 5\%$.
+
+
+    "Rationalize the numerator" to eliminate a bad subtraction:
+
+
+    $R_- = \frac{-b - \sqrt{b^2 - 4ac}}{2a} = \frac{2c}{b + \sqrt{b^2 - 4ac}}$'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# More Error Accumulates
+
+
+    # Even Worse Subtraction Error
+
+
+    Solve for $x$: $0.01x^2 - 1.00x + 0.02 = 0$
+
+
+    (3-digit, 2-decimal precision)
+
+
+    Again, using the quadratic formula directly:
+
+
+    But the real roots are:
+
+
+    ```
+
+    $4ac \dote 0.0008 \dote 0.00$
+
+    ```
+
+
+    ```
+
+    $R_{\pm} \dote 99.98, 0.02$
+
+    ```
+
+
+    ```
+
+    $\sqrt{b^2 - 4ac} \dote 1.00$
+
+    ```
+
+
+    The *relative errors* are
+
+
+    ```
+
+    $r_{\pm} \dote 100.,, 00$
+
+    ```
+
+
+    ```
+
+    $err_{rel} \approx 0.02\% \&; 100\%$
+
+    ```
+
+
+    Again, "rationalize the numerator" to eliminate a bad subtraction:
+
+
+    ```
+
+    $R_{-} = \frac{-b-\sqrt{b^2-4ac}}{2a} = \frac{2c}{-b+\sqrt{b^2-4ac}}$
+
+    ```
+
+
+    ```
+
+    $\frac{-b-\sqrt{b^2-4ac}}{2a} \dote 0.00 \quad; but \quad \frac{2c}{-b+\sqrt{b^2-4ac}}
+    \dote 0.02$
+
+    ```'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Accuracy v. Precision
+
+
+    | On-Target v. Grouping |
+
+    | Accuracy: How closely computed values agree with the true value.
+
+    | Precision: How closely computed values agree with each other. |
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_34_0.png)'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# # Roundoff v. Truncation\n\n| Computational v. Formulaic |\n| --- |\n| Roundoff:\
+    \ Error from floating point arithmetic (fixed number of digits) |\n| Truncation:\
+    \ Error from formula approximation (dropping terms) |\n\n# ## Examples\n\n+  \
+    \ - Roundoff $\\frac{6}{10} + \\frac{5}{10} = \\frac{11}{10} \\iff 1. + 1. \\\
+    stackrel{?}{1}$\\frac{4}{10} + \\frac{5}{10} + \\frac{6}{10} + \\frac{7}{10} +\
+    \ \\frac{8}{10} = 3 \\iff 0. + 1. + 1. + 1. \\stackrel{?}{3}$\n- Truncation $\\\
+    sin(\theta) = \\sum_{k=1}^{\\infty} \\frac{\theta^{2k-1}}{(2k-1)!} \\iff \\sin(\t\
+    heta) \\approx \theta - \\frac{1}{6}\theta^3$\n\n$tan(\theta) = \\sum_{k=1}^{\\\
+    infty} (-1)^n \\frac{B_{2n}4^n(1-4^n)}{(2n)!} \theta^{2n-1} \\iff \theta + \\\
+    frac{1}{3}\theta^3$"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# Landau Notation\n\n“Big-O\"\nWe use Landau's notation to describe the order\
+    \ of terms or functions:\nBig-$O$: If there is a constant $C > 0$ such that $|f(x)|\
+    \ \\leq C \\cdot |g(x)|$ for all $x$ near $x_0$, then we say $f = \\mathcal{O}(g)$\
+    \ [that's “f$ is ‘big-O’ of $g$”].2\n\n# Examples\n\n+   1. For $x$ near 0, we\
+    \ have $\\sin(x) = \\mathcal{O}(x)$ and $\\sin(x) = x + \\mathcal{O}(x^3)$.\n\
+    2. If $p(x) = 101x^7 - 123x^6 + x^5 - 15x^2 + 201x - 10$, then\n* $p(x) = \\mathcal{O}(x^7)$\
+    \ as $x \to \\infty$.\n* $p(x) = \\mathcal{O}(1)$ for $x$ near 0.\n3. As $x \t\
+    o \\infty$, is $x^n = \\mathcal{O}(e^x)$ for every $n \\in \\mathbb{N}$?\n4. As\
+    \ $x \to \\infty$, is $\\ln(x) = \\mathcal{O}(x^{1/n})$ for every $n \\in \\mathbb{N}$?"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Exercises, I\n\n# Problems\n\nSCIENTIFIC NOTATION\n\nFLOATING POINT NUMBERS\n\
+    \n+   1. Convert several constants at NIST to engineering notation.\n\n+   7.\
+    \ Convert $31.3875_{10}$ to floating point format with base $\beta = 10$ and bias\
+    \ $p = 49$.\n\nCONVERTING BASES\n\n+   2. Convert to decimal: 101110, $101 \\\
+    times 2^{10}$, 101.0111, 1110.001\n\n+   8. Convert from floating point format\
+    \ with base $\beta = 2$ and bias $p = 127$:\n\n+   3. Convert to binary (to 8\
+    \ places): $10^5$, $1/7$, 1234.4321, $\\pi$, $\\sqrt{2}$.\n\n+   9. Why is the\
+    \ gap between successive values larger for bigger numbers when using a fixed number\
+    \ of digits?\n\n+   4. Express 831.22 in BCD form.\n\n+   5. Write the BCD number\
+    \ 1001 0110 0011.1000 0101 in decimal.\n\n+   10. Give an example showing that\
+    \ floating point arithmetic is distributive (mult over add).\n\n+   6. Investigate\
+    \ converting bases by using synthetic division."
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# Exercises, II\n\n# Problems\n\n| IEEE-754 Standard | ERROR |\n\n+   11. Write\
+    \ 20/7 in single-precision format. In double-precision.\n\n+   17. The US Mint\
+    \ specifies that quarters weigh 5.670 g. What is the largest acceptable weight,\
+    \ if the relative error error must be no more than 0.5%?\n\n+   12. Convert the\
+    \ single-precision # 10000111 0010010... to decimal.\n\n+   18. Find the relative\
+    \ error when adding $1 + \\frac{1}{2} + \\cdots + \\frac{1}{10^5}$ using 5-digit\
+    \ arithmetic.\n\n+   13. Chart double-precision bit patterns.\n\n+   19. Show\
+    \ that $\\cos(x) = \\mathcal{O}(1)$ for $x$ near 0.\n\n+   14. Describe a simple\
+    \ way to test if a computation result is either infinite or NaN.\n\n+   20. Let\
+    \ $p$ be a polynomial with $n = \text{degree}(p)$. Find $k$ so that\nna. $p(x)\
+    \ = \\mathcal{O}(x^k)$ as $x \to \\infty$.\nb. $p(x) = \\mathcal{O}(x^k)$ for\
+    \ $x \\approx 0$.\n\n+   15. What is the purpose of using round to nearest, ties\
+    \ to even?\n\n+   16. Explain the significance of the machine-epsilon value."
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# II. Control Structures\n\n# Sections\n\n+   1. Control Structures ............................................................\
+    \ 30\n2. A Common Example ................................................................\
+    \ 36\n3. Control Structures Syntax ................................................\
+    \ 38\n   1. Excel ............................................................................\
+    \ 38\n   2. Maple [Sage/Xcas] ................................................................\
+    \ 41\n   3. MATLAB [FreeMat/Octave/Scilab] .......................................\
+    \ 44\n   4. C and Java ......................................................................\
+    \ 47\n   5. TI-84 ................................................................................\
+    \ 51\n   6. R ...................................................................................\
+    \ 54\n   7. Python ............................................................................\
+    \ 57\n4. From Code to Flow Charts ........................................................\
+    \ 59\n   Exercises ............................................................................\
+    \ 60\n   Reference Sheet Links ............................................................\
+    \ 63"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# II. Control Structures: Flow
+
+
+    Flow Control
+
+
+    **Conditional Statements.** A *condition* determines an action:
+
+    If the condition is true, then do an action.
+
+    If the condition is not true,$^3$ then do a different action.
+
+
+    E.g.,
+
+
+    +   - If a number is even, divide it by 2. Otherwise *mult* by 3 & add* 1.
+
+    - If error is less than $10^{-5}$, stop. If not, reapply Newton’s method.
+
+
+    **Repeating Blocks / Loops:** Repeat an action a specified number of times (NB:
+    *Loops embed a conditional*):
+
+    Count to a value doing an action each time.
+
+
+    E.g.,
+
+
+    +   - Add the first 20 prime numbers.
+
+    - Starting at $t=0; y_0=0$, use Euler’s method to find $y(1)$ when $y''=t$.
+
+
+    > $3$Is there a difference between *not true* and *false*? See, e.g., *Intuitionistic
+    Logic* at the Stanford Encyclopedia of Philosophy.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# # Types of Conditional Statements
+
+
+    # ## Basic Conditional Types
+
+
+    Simple: IF condition THEN do action for true
+
+    IF condition THEN do action for true ELSE do action for false
+
+
+    Compound: IF condition$_1$ THEN do action$_1$
+
+    ELSE IF condition$_2$ THEN do action$_2$
+
+    ELSE IF condition$_3$ THEN do action$_3$
+
+    ...
+
+    ELSE do action$_n$ when all conditions are false
+
+
+    # ## Example (NC 2011–2013 Tax Rate Schedule$^4$)
+
+
+    **IF** your filing status is single;
+
+
+    | and taxable income is more than: | but not over: | your tax is: |
+
+    | --- | --- | --- |
+
+    | $0 | $12,750 | 6% OF THE NC TAXABLE INCOME AMOUNT ON FORM D-400 |
+
+    | $12,750 | $60,000 | $765 + 7% OF THE AMOUNT OVER $12,750 |
+
+    | $60,000 | ... | $4,072.50 + 7.75% OF THE AMOUNT OVER $60,000 |
+
+
+    > $4$In 2014, NC converted to a regressive “flat tax” currently at 5.25% (2021).'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Types of Loops
+
+
+    Loop Types
+
+    Counting Loops: For loops perform an action a pre-specified number of times.
+
+    Condition Loops: While loops perform an action as long as a given condition is
+    true.
+
+
+    +   Examples
+
+    - For each employee, calculate their monthly pay.
+
+    - For each integer $i$ less than $n$, compute the $i$th number in the Fibonacci
+    sequence.
+
+    - While the current remainder in the Euclidean algorithm is greater than 1, calculate
+    the next remainder.
+
+    - While the game isn''t over, process the user''s input.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Example: Collatz Flow Chart
+
+
+    # Collatz Function
+
+
+    +   - Start with an integer greater than 1. If it''s even, divide it by 2. Otherwise,
+    multiply it by 3 then add 1. Repeat until the value reaches 1 counting the number
+    of steps.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_43_0.png)
+
+
+    A program to calculate the number of steps requires a loop with a conditional
+    inside.
+
+
+    XKCD: Collatz Conjecture'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Example: Collatz — A Loop and a Conditional
+
+
+    # Pseudocode
+
+
+    | We see a conditional loop in the Collatz function''s flow chart: | There is
+    an “if” statement inside the loop to calculate the new term: |
+
+    |--- | --- |
+
+    | while (the term > 1) do Calculate the next term | If (the term is even) then
+    divide by 2 |
+
+    | end do | else multiply by 3, then add 1 end if |
+
+
+    Putting these together gives:
+
+    Get the first term
+
+    Set the term counter to 1
+
+    while (the term > 1) do
+
+    If (the term is even) then divide by 2
+
+    else multiply by 3, then add 1
+
+    end if
+
+    Increment the term counter
+
+    end do
+
+    Return the term counter'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# Example: Euler's Method as a Loop\n\nEuler's Method\nnThe solution to a differential\
+    \ equation $y' = f(x,y)$ can be approximated using the differential triangle.\
+    \ Calculate the next point from the current point $(x_k, y_k)$ by following the\
+    \ tangent line for a step $\\Delta x = h$. Then the new point is $(x_{k+1}, y_{k+1})\
+    \ = (x_k + h, y_k + h \\cdot y'(x_k, y_k))$.\n\n![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_45_0.png)\n\
+    \nImplement Euler's method as a loop:\n\n+   * Define the derivative function\
+    \ $y' = f(x,y)$\nGet the initial point $(x_0, y_0)$\nGet the stepsize $h$\nDetermine\
+    \ the number of steps $n = (b-a)/h$\nfor i from 1 to n do\n  * Compute $x_{k+1}\
+    \ = x_k + h$ and $y_{k+1} = y_k + h \\cdot y'(x_k, y_k)$\n  end do\nReturn the\
+    \ collection of points $\\{(x_i, y_i)\\}_{i=0}$"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Control Structures Example: Flowchart
+
+
+    # A Common Sample Problem
+
+
+    +   1. List the squares of the first 5 integers showing which are even and odd.
+
+    2. Use a for loop to step through the integers and an if-then conditional to test
+    for even or odd.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_46_0.png)'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Control Structures Examples: Diagram
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_47_0.png)'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Excel Control Structures
+
+
+    # Conditional Statements
+
+
+    If: = IF(condition, true action, false action)
+
+    [Can nest up to 7 IFs: =IF(condition1, IF(condition2, ..., ...), ...
+
+    [But I''ve nested 12 deep without problems...]
+
+
+    Case: = CHOOSE(index, case_1, case_2, ...)
+
+    [Maximum of 29 cases) (see also: LOOKUP)
+
+
+    # Note
+
+
+    Many versions of Excel include Visual Basic for Applications (VBA), a small programming
+    language for macros. VBA includes a standard-if-then-else/elseif-end-if structure.
+    (See the Excel Easy web tutorial.)'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Excel Control Structures
+
+
+    | Loop Structures |
+
+    | For: N/A (must be programmed in VBA) |
+
+    | While: N/A (must be programmed in VBA) |
+
+
+    View:
+
+
+    +   - Excel (Mac) website
+
+    - Excel (Win) website'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Excel Control Structures Example
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_50_0.png)'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Maple Control Structures
+
+
+    # Conditional Statements
+
+
+    ```
+
+    If: if condition then statements;
+
+    else statements;
+
+    end if
+
+
+    if condition_1 then statements;
+
+    elif condition_2 then statements;
+
+    else statements;
+
+    end if
+
+    ```
+
+
+    Case: N/A (use piecewise or if-elif-end if)'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Maple Control Structures\n\n```\nFor: for index from start_value|1 to end_value\n\
+    by increment|1 do\n  statements;\n  end do\n\nfor index in expression_sequence\
+    \ do\n  statements;\n  end do\n\nWhile: while condition do\n  statements;\n  end\
+    \ do\n```\n\nView:\n\n+   - Maple website\n- Maple Online Help\n\n(See also: the\
+    \ Sage, Xcas, and TI Nspire, Maxima, or Mathematica website.)"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Maple Control Structures Example
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_53_0.png)'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# MATLAB¹ Control Structures\n\n# Conditional Statements\n\n```\nIf: if condition;\
+    \ statements; else statements; end\nif condition; statements; elseif condition;\
+    \ statements;\n    else statements; end\n\nCase: switch index (Scilab uses select)\n\
+    case value1\n    statements;\ncase value2\n    statements;\n    :\notherwise\n\
+    \    statements;\nend\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '+   - MATLAB website
+
+    - Octave website
+
+    - Scilab website
+
+    - FreeMat website'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# MATLAB Control Structures Example
+
+
+    ```
+
+    octave-3.4.0:1>
+
+    > for j=1:1:5;
+
+    > k=j*j;
+
+    > if mod(k,2)==0;
+
+    >    printf("%d is even\n", k);
+
+    > else
+
+    >    printf("%d is odd\n", k);
+
+    > end; % of if
+
+    > end; % of for
+
+
+    1 is odd
+
+    4 is even
+
+    9 is odd
+
+    16 is even
+
+    25 is odd
+
+
+    oave-3.4.0:2>
+
+    ```'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Conditional Statements
+
+
+    ```
+
+    If: if (condition) {statements}
+
+    if (condition) {statements}
+
+    else {statements}
+
+
+    Case: switch (index) {
+
+    case 1: statements ; break;
+
+    case 2: statements ; break;
+
+    :
+
+    case n: statements ; break;
+
+    default: statements }
+
+    ```
+
+
+    (See also: Lua.)'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# C / Java Control Structures
+
+
+    # Loop Structures
+
+
+    For: for (initialize; test; update) {statements}
+
+
+    While: while (condition) {statements} ← “entrance condition" loop
+
+
+    do {statements} while (condition) ← “exit condition" loop
+
+
+    View:
+
+
+    +   - C reference card
+
+    - Java reference card'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# C Control Structures Example\n\n```\n#include <stdio.h>\n\nmain() {\n   \
+    \ int i, j;\n\n    for (i=1; i<= 5; i*=i) {\n        if (j = ((i%2)==0)\n    \
+    \        printf(\"%d is even\\n\", j);\n        else\n            printf(\"%d\
+    \ is odd\\n\", j);\n    }\n\n    return 0;\n}\n```\n\n```\nwmcb> gcc -o cs_eg\
+    \ cs_eg.c\nwmcb> ./cs_eg\n\n1 is odd\n4 is even\n9 is odd\n16 is even\n25 is odd\n\
+    ```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# Java Control Structures Example\n\n```\nclass cs_eg {\n  public static void\
+    \ main(String[] args) \n  {\n    int i, j;\n\n    for (i=1; i<= 5; i++) {\n  \
+    \    j = i*i;\n      if ((j % 2)==0) \n        System.out.println(j+\" is even\"\
+    );\n      else\n        System.out.println(j+\" is odd\");\n    }\n  }\n}\n```\n\
+    \n```\nwmcb> javac cs_eg.java\nwmcb> java cs_eg\n\n1 is odd\n4 is even\n9 is odd\n\
+    16 is even\n25 is odd\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# TI-84 Control Structures
+
+
+    # Conditional Statements
+
+
+    If: If condition: statement
+
+
+    ```
+
+    If condition
+
+    Then
+
+    statements
+
+    Else
+
+    statements
+
+    End
+
+    ```
+
+
+    Case: N/A (Use a piecewise function or nested if statements.)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# TI-84 Control Structures
+
+
+    # Loop Structures
+
+
+    For: For(index, start_value, end_value [, increment])
+
+    statements
+
+    End
+
+
+    While* condition
+
+    statements
+
+    End
+
+    Repeat** condition
+
+    statements
+
+    End
+
+
+    *Loop while the condition is true; test condition at the beginning
+
+    **Loop until the condition is true; test condition at the end
+
+
+    View:
+
+
+    +   - TI Calculator website
+
+    - TI-84 Guidebook links'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# TI-84 Control Structures Example
+
+
+    ```
+
+    PRGM ► NEW ► 1:Create
+
+    New
+
+    PROGRAM
+
+    Name= CONTROL
+
+    :ClrHome
+
+    :For(J,1,5)
+
+    :J^2→K
+
+    :If gcd(K,2)=2
+
+    :Then
+
+    :Disp "EVEN", K
+
+    :Else
+
+    :Disp "ODD", K
+
+    :End
+
+    :End
+
+    ```
+
+
+    | ODD | 9 |
+
+    | EVEN | 16 |
+
+    | ODD | 25 |
+
+    | Done | |
+
+
+    TI-84+ SE Screen Capture'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# R Control Structures
+
+
+    # Conditional Statements
+
+
+    ```
+
+    If: if(condition) {statements}
+
+
+    if(condition)
+
+    {statements}
+
+    else
+
+    {statements}
+
+    ```
+
+
+    ```
+
+    Case: switch (index, list)
+
+    ```'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# R Control Structures\n\n# Loop Structures\n\n```\nFor: for (variable in sequence)\n\
+    {statements}\n\nWhile: while* (condition)    repeat**\n{statements}          \
+    \     {statements}\n                            if (exit_condition) break\n```\n\
+    \n*Loop while the condition is true; test condition at the beginning\n**Loop until\
+    \ the condition is true; test condition inside the loop\n\nView:\n\n+   - The\
+    \ R Project for Statistical Computing homepage\n- The Comprehensive R Archive\
+    \ Network — CRAN"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# R Control Structures Example
+
+
+    ```
+
+    > for (j in 1:5){
+
+    + k=j^2
+
+    + if (k%%2==0) {
+
+    + cat(k, "is even\n")
+
+    + else {
+
+    + cat(k, "is odd\n")}
+
+    + }
+
+    1 is odd
+
+    4 is even
+
+    9 is odd
+
+    16 is even
+
+    25 is odd
+
+    >
+
+    ```'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Python Control Structures
+
+
+    # Conditional Statements
+
+
+    ```
+
+    if if(condition) {statements}
+
+    if(condition)
+
+    {statements}
+
+    else
+
+    {statements}
+
+    case: switch (index, list)
+
+    ```
+
+
+    View the Python website.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# Python Control Structures Example\n\n```\n>>> for j in range(1, 6):\n   \
+    \ k=j*j\n    if (k%2) == 0:\n        print(k, 'is even')\n    else:\n        print(k,\
+    \ 'is odd')\n```\n\n1 is odd\n4 is even\n9 is odd\n16 is even\n25 is odd\n>>>\n\
+    \nNote: Indentation is critical in Python."
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# # From Code to a Flow Chart
+
+
+    Build flow charts for the Maple code shown below:
+
+
+    | Algorithm 1. | Algorithm 2. |
+
+    |---|---|
+
+    | n := 12; | n := 12; |
+
+    | r := 1; | R := n; |
+
+    | for i from 2 to n do | j := n - 1; |
+
+    | r := r · i; | while j > 1 do |
+
+    | end do: | R := R · j; |
+
+    | | j := j - 1; |
+
+    | | end do: |
+
+    | | R; |
+
+
+    What mathematical function are these routines calculating?'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# Exercises, I\n\n+   1. Write an If-Then-ElseIf statement that calculates\
+    \ tax for a married couple filing jointly using the 2011 NC Tax Table (before\
+    \ the “Flat Tax”).\n   a. In natural language\nd. In MATLAB (Octave or Scilab)\n\
+    \   b. In Excel\ne. In C (Java, Python, or R)\n   c. In Maple\nf. On a TI-84\n\
+    \n+   2. Implement the Collatz Flow Chart\n   a. In pseudocode\nd. In Maple (as\
+    \ a function)\n\n+   3. Write code, given a positive integer $n$, prints the first\
+    \ $n$ primes.\n\n+   4. Give a Maple version of Euler’s method.\n\n+   5. Write\
+    \ nested for loops that fill in the entries of an $n \times n$ Hilbert matrix\n\
+    \   a. In Maple\nb. On a TI-84\n\n+   6. How can a while loop be redesigned as\
+    \ a for loop?\n\n+   7. How can a for loop be redesigned as a while loop??"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "# Exercises, II\n\n# Problems\n\n+   8. Make a flow chart for implementing\
+    \ the Euclidean algorithm to find the GCD of two positive integers $p$ and $q$.\n\
+    \n+   9. Write code common using the Euclidean algorithm to find the GCD of two\
+    \ positive integers $p$ and $q$.\n\n+   10. Write a Maple or MATLAB function that\
+    \ applies the Extended Euclidean algorithm to two positive integers $p$ and $q$\
+    \ to give the greatest common divisor $gcd(p,q)$ and to find integers $a$ and\
+    \ $b$ such that $ap+bq = gcd(p,q)$.\n\n+   11. a. Make a flow chart for the Maple\
+    \ code shown in the Flow Chart Problem worksheet.\nb. What does the code do?\n\
+    c. Convert the Maple statements to\n   i. MATLAB\n   ii. TI-84+"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# Exercises, III\n\n12. The “9's-complement” of a number $x$ is the value needed\
+    \ to add to $x$ to 9’s. E.g., the 9's-complement of 3 is 6; of 64 is 35; etc.\n\
+    \n+   - Write a statement to calculate the 9's-complement of an $n$-digit number\
+    \ $y$; call the result $y_0$.\n- Write an if-then statement that performs *carry-around*:\
+    \ if the sum of $n$-digits numbers has an $n+1$st digit, drop that digit and add\
+    \ 1 to the sum.\n- Let $r > s$ be two $n$-digit integers. Find $s_9$ with $a$.\
+    \ Now perform carry-around on $(r+s_9)$ with $b$.\n- What simple arithmetic operation\
+    \ is equivalent to the result of $c$?\n\n13. The compass heading CH for going\
+    \ from $P_1 = (lat_1, lon_1)$ to $P_2 = (lat_2, lon_2)$ (other than the North\
+    \ or South poles) is given by\n\n```\n$CH(P_1, P_2) = \\begin{cases} L \\cos^{-1}(lon_2\
+    \ - lon_1) < 0 \\ 2\\pi - L & \\text{otherwise} \\end{cases}$\n```\n\nwhere $L\
+    \ = \\cos^{-1} \\left(\\frac{\\sin(lat_2)-\\sin(lat_1) \\cos(d)}{\\sin(d) \\cos(lat_1)}\r\
+    ight)$ and\nnd = $\\cos^{-1} (\\sin(lat_1) \\sin(lat_2) + \\cos(lat_1) \\cos(lat_2)\
+    \ \\cos(lon_1 - lon_2))$."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# Quick Reference Cards
+
+
+    | Maple 15 (Mac) | Excel 2011 (Mac) |
+
+    |---|---|
+
+    | Maple 15 (Win) | Excel 2010 (Win) |
+
+    | Maplesoft''s Online help | Microsoft''s Online help |
+
+    | MATLAB | Wikiversityiversity''s Control Structures |
+
+    | Scilab | C |
+
+    | Octave | Java |
+
+    | TI-84+: Algebra; Trigonometry | R / Python 2.7, Python 3 |'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# # S I. Special Topics: Computation Cost and Horner’s Form
+
+
+    | Sections |
+
+    | --- |
+
+    | 1. Introduction .....................................................................................
+    65 |
+
+    | 2. Horner''s Form .....................................................................................
+    66 |
+
+    | Exercises ............................................................................................
+    69 |'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Special Topic: Computation Cost & Horner’s Form
+
+
+    # Introduction to Cost
+
+
+    The arithmetic cost of computation is a measure of how much mathematical work
+    a particular expression takes to compute. We will measure an expression in terms
+    of the number of arithmetic operations it requires. For example, we’ll measure
+    the cost of computing the expression as
+
+
+    sin(2x^4 + 3x + 1)
+
+
+    2 additions + 5 multiplications + 1 function call for a total of 7 arithmetic
+    operations plus a function call.
+
+
+    At a lower level, the time cost of a CPU instruction is the number of clock cycles
+    taken to execute the instruction. Current CPUs⁵ are measured in Floating-point
+    Operations per Second or FLOPS. For example, the eight-core Intel® Core™ i9 processor
+    used in an iMac (19/2019) can achieve over 235 gigaFLOPS = 10¹¹¹ floating-point
+    operations per second.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# Horner''s Form
+
+
+    # Partial Factoring
+
+
+    William Horner studied solving algebraic equations and efficient forms for computation.
+    Horner observed that partial factoring simplified a polynomial calculation. Consider:
+
+
+    Standard Form $\Leftrightarrow$ Horner''s Form
+
+    $1+2x = 1+2x$
+
+    $1 add+1 mult 1 add+1 mult
+
+
+    $1+2x+3x^2 = 1+x\cdot(2+3x)$
+
+    $2 add+3 mult 2 add+2 mult
+
+
+    $1+2x+3x^2+4x^3 = 1+x\cdot(2+x\cdot[3+4x])$
+
+    $3 add+6 mult 3 add+3 mult
+
+
+    $1+2x+3x^2+4x^3+5x^4 = 1+x\cdot(2+x\cdot[3+x\cdot(4+5x)])
+
+    $4 add+10 mult 4 add+4 mult
+
+
+    $1+2x+3x^2+4x^3+5x^4+6x^5 = 1+x\cdot(2+x\cdot[3+x\cdot(4+x\cdot[5+6x])])
+
+    $5 add+15 mult 5 add+5 mult
+
+
+    # What are the patterns?'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Patterns
+
+
+    # Two Patterns
+
+
+    If $p(x)$ is an $nth$-degree polynomial, the cost of computation in standard form
+    is $O(n^2)$. Using Horner''s form reduces the cost to $O(n)$.
+
+
+    EXAMPLE: Let $p(x) = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4 + a_5x^5 + a_6x^6$.
+
+
+    Horner''s form: $p(x) = a_0 + x(a_1 + x[a_2 + x(a_3 + x[a_4 + x(a_5 + a_6x)]])$.
+
+
+    This factored form significantly reduces the work needed to evaluate $p$ at a
+    given value of $x$.
+
+
+    Modified: $?(x) = a_1 + x[2a_2 + x(3a_3 + x[4a_4 + x(5a_5 + 6a_6x])]$.
+
+
+    +   * What does this modification calculate in terms of $p$?
+
+    * What is the cost of this modification versus using its standard form?'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Further Reductions
+
+
+    # Chebyshev’s Polynomials
+
+
+    Pafnuty L. Chebyshev worked in number theory, approximation theory, and statistics.
+    The special polynomials named for him are the Chebyshev Polynomials $T_n(x)$,
+    which have many interesting properties. For example, $T_n$ is even or odd with
+    $n$, oscillates between $-1$ and $1$ on the interval $[-1, 1]$, and also has all
+    its zeros in $[-1, 1]$. The Horner form of $T_n$ is quite interesting. Let $u
+    = x^2$, then:
+
+
+    ```
+
+    $-3x+4x^3 \iff x(-3+4x^2) = x(-3+4u)$
+
+
+    $1-8x^2+8x^4 \iff 1+u(-8+8u)$
+
+
+    $5-20x^3+16x^5 \iff x(5+u[-20+16u])$
+
+
+    $-1+18x^2-48x^4+32x^6 \iff -1+u(18+u[-48+32u])$
+
+
+    $-7x+56x^3-112x^5+64x^7 \iff ?
+
+
+    $1-32x^2+160x^4-256x^6+128x^8 \iff ?$
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Exercises, I\n\n# Problems\n\n+   1. Make a flow chart for evaluating a polynomial\
+    \ using Horner's form.\n2. Write Maple or MATLAB code implementing Horner's form.\n\
+    3. How does synthetic division relate to Horner's form?\n4. Write a Maple or MATLAB\
+    \ function that performs synthetic division with a given polynomial at a given\
+    \ value.\n5. Calculate the number of additions and multiplications required for\
+    \ evaluating an $nth$-degree polynomial\n   a. in standard form\n   b. in Horner's\
+    \ form.\n   c. Look up the sequence $\\{0,2,5,9,14,20,27,35,44,...\\}$ at The\
+    \ On-Line Encyclopedia of Integer Sequences.\n6. Prove that Horner's form reduces\
+    \ cost from $O(n^2)$ to $O(n)$.\n7. Analyze the reduction of cost when using Horner's\
+    \ form to evaluate Chebyshev polynomials."
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# III. Numerical Differentiation\n\n+   Sections\n1. Introduction .....................................................................................................................................\
+    \ 71\n2. Taylor's Theorem ...................................................................................................................................................\
+    \ 72\n3. Difference Methods ............................................................................................................................................\
+    \ . . . 75\n   i. Forward Differences ................................................................................................................................\
+    \ 75\n   ii. Backward Differences ...............................................................................................................................\
+    \ 76\n   iii. Centered Differences ............................................................................................................................\
+    \ 77\nAppendix I: Taylor's Theorem ........................................................................................................................\
+    \ 80\nAppendix II: Centered Difference Coefficients Chart ...................................................................................\
+    \ 81\nExercises ............................................................................................................................................................\
+    \ 82"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# III. Numerical Differentiation
+
+
+    What is Numerical Differentiation?
+
+
+    Numerical Differentiation is the approximation of the derivative of a function
+    at a point using numerical formulas, not the algebraic rules for differentiation.
+    The basic form uses the slope of a short chord rather than the tangent line.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_81_0.png)
+
+
+    Since we are subtracting numbers that are close together, loss of computational
+    precision can be a serious problem.
+
+
+    Taylor series expansions will be our basic tool for developing formulas and error
+    bounds for numerical derivatives. The errors will have two main components: truncation
+    errors from Taylor polynomials and round-off errors from finite-precision floating-point
+    arithmetic.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# Taylor's Theorem\n\nDefinition (Taylor Polynomials (1712/1715$^6$))\nIf $f$\
+    \ has sufficiently many derivatives at $x=a$, the Taylor polynomial of degree\
+    \ $n$ (or order $n$) is\n$$p_n(x) = \\sum_{k=0}^{n} \\frac{f^{(k)}(a)}{k!}(x-a)^k$$\
+    \ \nwhere $f^{(0)}(a) = f(a)$.\n\nTheorem (Taylor's Theorem)\nSuppose $f$ has\
+    \ $n+1$ derivatives on a neighborhood of $a$. Then $f(x) = p_n(x) + R_n(x)$ where\n\
+    $$R_n(x) = \\frac{f^{(n+1)}(c)}{n+1}(x-a)^{n+1}$$\nfor some $c$ between $x$ and\
+    \ $a$.\n\n> $^6$Actually, discovered by Gregory in 1671, $\\approx 14$ years before\
+    \ Taylor was born!"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Proving Taylor''s Theorem
+
+
+    Proof. (Taylor''s Theorem — Outline).
+
+
+    +   1. The FToC $\Rightarrow f(x) = f(a) + \int_{0}^{x-a} f''(x-t) dt$.
+
+    2. Integrate by parts with $u = f''(x-t)$ and $dv = dt$:
+
+
+    $f(x) = f(a) + f''(a)(x-a) + \int_{0}^{x-a} f''''(x-t) \cdot t dt.$
+
+    3. Repeat the process: choose $u = f^{(k)}(x-t)$ and $dv = t^{k-1}/(k-1)!$ to
+    arrive at
+
+
+    $f(x) = f(a) + f''(a)(x-a) + \frac{f''''(a)}{2!}(x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!}(x-a)^n
+    + R_n(a,x)$
+
+    where
+
+    $R_n(a,x) = \frac{1}{n!}\int_{0}^{x-a} f^{(n+1)}(x-t) \cdot t^n dt.$'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Tailored Expressions
+
+
+    | Forms of the Remainder |
+
+    | Lagrange (1797): $R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$ |
+
+    | Cauchy (1821): $R_n(x) = \frac{f^{(n+1)}(c)}{n!}(x-c)^n(x-a)$ |
+
+    | Integral Form: $R_n(x) = \frac{1}{n!}\int_a^x f^{(n+1)}(t)(x-t)^ndt$ |
+
+    | Uniform Form: $|R_n(x)| \leq \frac{|x-a|^{n+1}}{(n+1)!} \cdot \max |f^{(n+1)}(x)|
+    = O(|x-a|^{n+1})|$
+
+
+    # Two Useful Taylor Expansions
+
+
+    Set $x = a+h$ in the Taylor polynomial. Then
+
+
+    $f(a+h) = f(a) + f''(a) \cdot h + \frac{1}{2!}f''''(a) \cdot h^2 + \frac{1}{3!}f''''''(a)
+    \cdot h^3 + \dots$ (1)
+
+
+    And now set $x = a-h$. Then
+
+
+    $f(a-h) = f(a) - f''(a) \cdot h + \frac{1}{2!}f''''(a) \cdot h^2 - \frac{1}{3!}f''''''(a)
+    \cdot h^3 \pm \dots$ (2)'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Forward Difference Approximation
+
+
+    # Forward Difference
+
+
+    Subtract $f(a)$ from both sides of Eq (1), then divide by $h$ to obtain
+
+
+    ```
+
+    $$\frac{f(a+h) - f(a)}{h} = f''(a) + \frac{O(h^2)}{h}$$
+
+    ```
+
+
+    The Forward Difference Formula is
+
+
+    ```
+
+    $$f''(a) = \frac{f(a+h) - f(a)}{h} + O(h). \quad (FD)$$
+
+    ```
+
+
+    # Examples
+
+
+    +   1. Suppose $f(x) = 1 + xe^{\sin(x)}$. For $a=0$ and $h=0.1$, we have
+
+    $f''(x) \approx (1.1105 - 1.0000)/0.1 = 1.1050$.
+
+
+    +   2. Suppose $P_0 = (1.000, 3.320)$ and $P_1 = (1.100, 3.682)$. Then
+
+    $f''(x) \approx (3.682 - 3.320)/(1.100 - 1.000) = 3.620$.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# Backward Difference Approximation
+
+
+    # Backward Difference
+
+
+    Subtract $f(a)$ from both sides of Eq (2), then divide by $h$ to obtain
+
+
+    ```
+
+    $$\frac{f(a-h)-f(a)}{h} = -f''(a) + \frac{O(h^2)}{h}$$$$
+
+    ```
+
+
+    The Backward Difference Formula is
+
+
+    ```
+
+    $$$f''(a) = \frac{f(a)-f(a-h)}{h} + O(h). \quad (BD)$$$
+
+    ```
+
+
+    # Examples
+
+
+    +   1. Again, suppose $f(x) = 1+xe^{\sin(x)}$. For $a=0$ and $h=0.1$, we have
+
+    $f''(x) \approx (1.0000-0.910)/0.1 = 0.900$.
+
+
+    +   2. Suppose $P_0 = (1.000,3.320)$ and $P_1 = (0.900,2.970)$. Then
+
+    $f''(x) \approx (3.320-2.970)/(1.000-0.900)=3.500$.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# Centered Difference Approximation\n\n# Centered Difference\n\nSubtract $O(h^3)$\
+    \ versions of Eqs (1) and (2).\n\n```\n$f(a+h) = f(a) + f'(a) \\cdot h + \\frac{1}{2!}f''(a)\
+    \ \\cdot h^2 + O(h^3)$\n$f(a-h) = f(a) - f'(a) \\cdot h - \\frac{1}{2!}f''(a)\
+    \ \\cdot h^2 + O(h^3)$\n$f(a+h) - f(a-h) = 2f'(a) \\cdot h + O(h^3)$\n```\n\n\
+    Solve for $f'(a)$ to obtain:\nThe Centered Difference Formula\n\n> $f'(a) = \\\
+    frac{f(a+h) - f(a-h)}{2h} + O(h^2). \\quad (CD)$\n\n# Example\n\n+   - Once more,\
+    \ suppose $f(x) = 1 + xe^{\\sin(x)}$. For $a=0$ and $h=0.1$, we have\n  $f'(x)\
+    \ \\approx (1.110 - 0.910)/0.2 = 1.000$"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# The Chart
+
+
+    # A Table of Differences from a Function
+
+
+    Let $f(x) = 1 + xe^{\sin(x)}$ and $a = 1.0$. Then
+
+
+    $f''(1) = e^{\sin(1)}(1+\cos(1)) \approx 3.573157593$
+
+
+    | h | FD(h) | error | BD(h) | error | CD(h) | error |
+
+    |---|---|---|---|---|---||}{
+
+    | $1/2^1$ | 3.494890 | 0.078268 | 3.024408 | 0.548750 | 3.259649 | 0.313509 |
+
+    | $1/2^2$ | 3.636316 | 0.063158 | 3.347764 | 0.225394 | 3.492040 | 0.081118 |
+
+    | $1/2^3$ | 3.628464 | 0.055306 | 3.476944 | 0.096214 | 3.552704 | 0.020454 |
+
+    | $1/2^4$ | 3.606368 | 0.033210 | 3.529696 | 0.043462 | 3.568032 | 0.005126 |
+
+    | $1/2^5$ | 3.591104 | 0.017946 | 3.552640 | 0.020518 | 3.571872 | 0.001286 |
+
+    | $1/2^6$ | 3.582464 | 0.009306 | 3.563200 | 0.009958 | 3.572832 | 0.000326 |
+
+    | $1/2^7$ | 3.577600 | 0.004442 | 3.568256 | 0.004902 | 3.572928 | 0.000230 |
+
+    | $1/2^8$ | 3.575296 | 0.002138 | 3.570688 | 0.002470 | 3.572992 | 0.000166 |'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# # Another Chart
+
+
+    # ## A Table of Differences from Data
+
+
+    Estimate the derivatives of a function given the data below ($h = 0.4$).
+
+
+    | $x_i$ | -2.00 | -1.60 | -1.20 | -0.80 | -0.40 | 0.00 | 0.40 | 0.80 | 1.20 |
+    1.60 | 2.00 |
+
+    | $y_i$ | -1.95 | -0.29 | 0.56 | 0.81 | 0.65 | 0.30 | -0.06 | -0.21 | 0.04 | 0.89
+    | 2.55 |
+
+
+    | $x_i$ | -2.00 | -1.60 | -1.20 | -0.80 | -0.40 | 0.00 | 0.40 | 0.80 | 1.20 |
+    1.60 | 2.00 |
+
+    | $y_i$ | 4.16 | 2.12 | 0.625 | -0.375 | -0.90 | -0.90 | -0.375 | 0.625 | 2.12
+    | 4.16 | | |
+
+
+    | $x_i$ | -2.00 | -1.60 | -1.20 | -0.80 | -0.40 | 0.00 | 0.40 | 0.80 | 1.20 |
+    1.60 | 2.00 |
+
+    | $y_i$ | | | 4.16 | 2.12 | 0.625 | -0.375 | -0.90 | -0.90 | -0.375 | 0.625 |
+    2.12 | 4.16 |
+
+
+    | $x_i$ | -2.00 | -1.60 | -1.20 | -0.80 | -0.40 | 0.00 | 0.40 | 0.80 | 1.20 |
+    1.60 | 2.00 |
+
+    | $y_i$ | | | 3.138 | 1.374 | 0.125 | -0.637 | -0.90 | -0.6375 | 0.125 | 1.374
+    | 3.138 | |
+
+
+    | $x_i$ | -2.00 | -1.60 | -1.20 | -0.80 | -0.40 | 0.00 | 0.40 | 0.80 | 1.20 |
+    1.60 | 2.00 |
+
+    | $y_i$ | 5.325 | 3.057 | 1.293 | 0.033 | -0.723 | -0.975 | -0.723 | 0.033 | 1.293
+    | 3.057 | 5.325 |'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# Appendix I: Taylor’s Theorem
+
+
+    Methodus Incrementorum Directa et Inversa (1715)¹
+
+
+    In 1712, Taylor wrote a letter containing his theorem without proof to Machin.
+    The theorem appears with proof in Methodus Incrementorum as Corollary II to Proposition
+    VII. The proposition is a restatement of “Newton’s [interpolation] Formula.” Maclaurin
+    introduced the method (undet coeffs; order of contact) we use now to present Taylor’s
+    theorem in elementary calculus classes in A Treatise of Fluxions (1742) §751.
+
+
+    Corollary (Maclaurin''s Corollary II (pg 23))
+
+
+    If for the evanescent increments, the fluxions that are proportional to them are
+    written, the quantities $v, v'', v'''', v'''''', v''''''''$, &c. being now made
+    all equal to the time $z$ uniformly flows to $z+v$, then $x$ will become
+
+    $$x+\dot{x}\frac{v}{1\dot{z}}+\ddot{x}\frac{v^2}{1.2\dot{z}^2}+\dddot{x}\frac{v^3}{1.2.3\dot{z}^3}
+    +&c.$$
+
+
+    +   - Investigate the connection between synthetic division and Taylor expansions.
+
+
+    > ¹See Ian Bruce''s annotated translation.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# # Appendix II: Centered Difference Coefficients Chart\n\n# ## Centered Difference\
+    \ Formula Coefficients¹\n\n| Derivative | $O(h^a)$ | $x-4h$ | $x-3h$ | $x-2h$\
+    \ | $x-h$ | $x$ | $x+h$ | $x+2h$ | $x+3h$ | $x+4h$ |\n|---|---|---|---|---|---|---|---|---|---||}{\n\
+    | | 2 | | | | | | | | | |\n| 1 | 4 | | | 1/12 | -1/2 | 0 | 1/2 | | | |\n| | 6\
+    \ | | -1/60 | 3/20 | -3/4 | 0 | 3/4 | -3/20 | 1/60 | |\n| | 8 | 1/280 | -4/105\
+    \ | 1/5 | -4/5 | 0 | 4/5 | -1/5 | 4/105 | -1/280 |\n| | 2 | | | | | 1 | -2 | 1\
+    \ | | | |\n| 2 | 4 | | | -1/12 | 4/3 | -5/2 | 4/3 | -1/12 | | | |\n| | 6 | | 1/90\
+    \ | -3/20 | 3/2 | -49/18 | 3/2 | -3/20 | 1/90 | | |\n| | 8 | -1/560 | 8/315 |\
+    \ -1/5 | 8/5 | -205/72 | 8/5 | -1/5 | 8/315 | -1/560 |\n| | 2 | | | | -1/2 | 1\
+    \ | 0 | -1/2 | | |\n| 3 | 4 | | | 1/8 | -1 | 13/8 | 0 | -13/8 | 1 | -1/8 | | |\n\
+    | | 6 | | -7/240 | 3/10 | -169/120 | 61/30 | 0 | -61/30 | 169/120 | -3/10 | 7/240\
+    \ |\n| | 2 | | | | | 1 | -4 | 6 | -1 | | |\n| 4 | 4 | | | -1/6 | 2 | -13/2 | 28/3\
+    \ | -13/2 | 2 | -1/6 | |\n| | 6 | | 7/240 | -2/5 | 169/60 | -122/15 | 91/8 | -122/15\
+    \ | 169/60 | -2/5 | 7/240 |\n\nE.g., the third centered difference approximation\
+    \ with second-order accuracy is\n\n```\n$f^{(3)}(x_0) \\approx -\frac{1}{2}f(x_0-2h)\
+    \ + 1f(x_0-h) + 0f(x_0) - 1f(x_0+h) + \\frac{1}{2}f(x_0+2h) + O(h^2)$\n```\n\n\
+    > *See Fornberg, \"Generation of Finite Difference Formulas on Arbitrarily Spaced\
+    \ Grids,\" Math of Comp 51 (184), pp 699–706."
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Exercises, I
+
+
+    # Problems
+
+
+    +   1. Show that the centered difference formula is the average of the forward
+    and backward difference formulas.
+
+
+    +   2. Explain why the centered difference formula is $O(h^2)$ rather than $O(h)$.
+
+
+    +   3. Add $O(h^4)$ versions of Eqs (1) and (2) to find a centered difference
+    approximation of $f''''(a)$.
+
+
+    +   4. Investigate the ratio of error in the function''s difference chart as $h$
+    is successively divided by 2 for
+
+    a. forward differences
+
+    b. backward differences
+
+    c. centered differences
+
+
+    +   5. Examine the ratios of error to $h$ in the data difference chart for
+
+    a. forward differences
+
+    b. backward differences
+
+    c. centered differences'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# Exercises, II\n\n# Problems\n\n+   6. Derive the 5-point difference formula\
+    \ for $f'(a)$ by combining Taylor expansions to $O(h^5)$ for $f(a \\pm h)$ and\
+    \ $f(a \\pm 2h)$.\n\n+   7. Write a Maple or MATLAB function that uses the backward\
+    \ difference formula (BD) in Euler's method of solving differential equations.\n\
+    \n+   8. Collect the temperatures (with a CBL) in a classroom from 8:00 am to\
+    \ 6:00 pm.\n    a. Estimate the rate of change of temperatures during the day.\n\
+    \    b. Compare plots of the rates given by forward, backward, and centered differences.\n\
+    \n+   9. Find Taylor expansions for sin and cos to $O(x^6)$. Estimate $\\cos(1.0)$.\n\
+    b. Since $\\frac{d}{dx}\\sin(x) = \\cos(x)$, we can estimate $\\cos$ with the\
+    \ derivative of sin. Use your expansion of sin and $h = 0.05$ to approximate $\\\
+    cos(1.0)$ with\n    i. forward differences\n    ii. backward differences\n   \
+    \ iii. centered differences\n\nDiscuss the errors."
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# IV. Root-Finding Algorithms\n\n+   Sections\n1. The Bisection Method . .\
+    \ . . . . . . . . . . . . . . . . . . . 85\n2. Newton-Raphson Method . . . . .\
+    \ . . . . . . . . . . . . . . 89\n3. Secant Method . . . . . . . . . . . . . .\
+    \ . . . . . . . . 93\n4. Regula Falsi . . . . . . . . . . . . . . . . . . . .\
+    \ . . 97\n5. Halley's Method . . . . . . . . . . . . . . . . . . . . . . 101\n\
+    \   Appendix III: Rate of Convergence . . . . . . . . . . 108\n   Exercises .\
+    \ . . . . . . . . . . . . . . . . . . . . . . 109\n   Links and Others . . . .\
+    \ . . . . . . . . . . . . . . 112"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# IV. Root Finding Algorithms: The Bisection Method
+
+
+    # The Bisection Method
+
+
+    If a continuous function $f$ has a root $r$ in an interval, then $r$ is in either
+    the interval''s left half or right half. Suppose $r$ is in the right half interval.
+    Then $r$ must be in either this smaller interval''s left half or right half. Find
+    which half and continue the procedure.
+
+
+    This process depends on the *Intermediate Value Theorem*
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_95_0.png)
+
+
+    # Theorem (Bolzano''s Intermediate Value Theorem (1817))
+
+
+    Let $f$ be continuous on $[a,b]$. Suppose that $y^*$ is between $f(a)$ and $f(b)$.
+    Then there is a point $c \in (a,b)$ such that $f(c) = y^*$. In particular, if
+    $f(a) \cdot f(b) < 0$, then $f$ has a root $r$ with $a < r < b$.'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# The Bisection Error
+
+
+    Theorem (Bisection Algorithm)
+
+    Let $[a,b]$ be an interval on which $f$ changes sign. Define
+
+    nx_n = c_n = \frac{1}{2}(a_{n-1} + b_{n-1})
+
+    with $[a_n,b_n]$ chosen by the algorithm. Then $f$ has a root $\alpha \in [a,b]$,
+    and
+
+    $|\alpha - x_n| \leq (b-a) \cdot (\frac{1}{2})^n$.
+
+    For an error tolerance $\varepsilon > 0$, set
+
+    n = \frac{\log(b-a) - \log(\varepsilon)}{\log(2)}
+
+    too obtain $|\alpha - x_n| \leq \varepsilon$. (This is called linear convergence.)
+
+
+    Theorem (Cauchy’s Bound for Real Roots^1 (1829))
+
+    Suppose that $r$ is a root of $p(x) = x^n + a_{n-1}x^{n-1} + \cdots + a_0$. Let
+
+    M = \max_{k=0..n-1} |a_k|$. Then $|r| \leq M+1$.'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# The Bisection Method Algorithm
+
+
+    Algorithm (Bisection Method (Basic Outline))
+
+    Given $f$ and $[a,b]$.
+
+    1. Set $k = 0$ and $[a_0,b_0] = [a,b]$.
+
+    2. Calculate $c = \frac{1}{2}(a_k + b_k)
+
+    3. if $f(c) \approx 0$, then $c$ is a root; quit
+
+    4. if $f(c) \cdot f(a_k) < 0$, then set $[a_{k+1},b_{k+1}] = [a_k,c]
+
+    5. else if $f(c) \cdot f(b_k) < 0$, then set $[a_{k+1},b_{k+1}] = [c,b_k]
+
+    6. Set $k = k+1$ and (if $k$ isn''t too big) go to 2.'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# The Bisection Method Pseudocode
+
+
+    ```
+
+    input : a, b, eps
+
+    extern: f(x)
+
+    1: fa ← f(a);
+
+    2: fb ← f(b);
+
+    3: if fa·fb > 0 then
+
+    4:   stop;                             /* Better: sign(fa) ≠ sign(fb) */
+
+    5: n ← ceiling((log(b-a)-log(eps))/log(2));
+
+    6: for i ← 1 to n do
+
+    7:   c ← a+0.5*(b-a);
+
+    8:   fc ← f(c);
+
+    9:   if abs(fc)<eps then
+
+    10:    return: c
+
+    11:  if fa·fc < 0 then
+
+    12:    b ← c;
+
+    13:    fb ← fc;
+
+    14:  else
+
+    15:    if fa·fc > 0 then
+
+    16:      a ← c;
+
+    17:      fa ← fc;
+
+    18:    else
+
+    19:      return: c
+
+    20: return: c
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# Newton-Raphson Method\n\n# Newton-Raphson Method²\n\nIf a function $f$ is\
+    \ \"nice,\" use the tangent line to approximate $f$. The root of the tangent line\
+    \ — easy to find — approximates the root of $f.\n\n![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_99_0.png)\n\
+    \n+   1. $f(x) = f(a) + f'(a)(x - a)$\n2. Set $f(x) = 0$; solve for $x$:\n\n$x\
+    \ = a - \frac{f(a)}{f'(a)}$\n\n![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_99_1.png)\n\
+    \n+   3. Set $N(x) = x - \frac{f(x)}{f'(x)}$. Then\n\n$x_{n+1} = N(x_n)$"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# # Newton''s Method Error
+
+
+    > ### Theorem
+
+    Let $f \in \mathcal{C}^2(I)$ on some interval $I \subset \mathbb{R}$. Suppose
+    $\alpha \in I$ is a root of $f$.
+
+    Choose $x_0 \in I$ and define
+
+    $$x_{n+1} = x_{n} - \frac{f(x_n)}{f''(x_n)}$$nThen
+
+    $$|\alpha - x_{n+1}| \le M \cdot |\alpha - x_n|$$
+
+    or, with $\varepsilon_n = |\alpha - x_n|,\n$$\varepsilon_{n+1} \le M \cdot \varepsilon_n^2$$
+
+    where $M$ is an upper bound for $\frac{1}{2}|f''''(x)/f''(x)|$ on $I$.
+
+
+    This is called quadratic or "order 2" convergence.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# # Newton''s Method Algorithm
+
+
+    # Algorithm (Newton''s Method (Basic Outline))
+
+
+    Given $f$ and $x_0$.
+
+
+    +   1. Set $k = 1$ and $N(x) = x - \frac{f(x)}{f''(x)}$
+
+    2. Compute $x_k = N(x_{k-1})$.
+
+    3. If $f(x_k) \approx 0$, then $x_k$ is a root; quit
+
+    4. else if $|f(x_k)|$ or $|x_k - x_{k-1}|$ is very small, then $x_k \approx$ a
+    root; quit
+
+    5. Set $k = k+1$ and (if $k$ isn''t too big) go to 2.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Newton''s Method Pseudocode
+
+
+    ```
+
+    input : x0, eps, n
+
+    extern: f(x), df(x)=f''(x)
+
+    1: fx0 ← f(x0);
+
+    2: dfx0 ← df(x0);
+
+    3: for i ← 1 to n do
+
+    4:     x1 ← x0 - fx0/dfx0;
+
+    5:     fx1 ← f(x1);
+
+    6:     if |fx1| + |x1-x0| <eps then
+
+    7:         return: x1
+
+    8:     x0 ← x1;
+
+    9:     fx0 ← fx1;
+
+    10:    dfx0 ← df(x0)
+
+    return: x1
+
+    ```'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# Secant Method
+
+
+    # Secant Method
+
+
+    Newton''s method requires evaluating the derivative — this can be from difficult
+    to impossible in practice. Approximate the derivative in Newton''s method with
+    a secant line³:
+
+
+    ```
+
+    $x_{n+1} = x_n - \frac{f(x_n)}{f(x_n) - f(x_{n-1})} \n= x_n - f(x_n) \cdot \frac{x_n
+    - x_{n-1}}{f(x_n) - f(x_{n-1})}$
+
+    ```
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_103_0.png)
+
+
+    ³Historically, the methods developed the opposite way: Viete used discrete steps
+    of $10^{-k}$ (1600); Newton used secants (1669), then truncated power series (1687);
+    Simpson used fluxions/derivatives (1740) with general functions.'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# Secant Method Error
+
+
+    > Theorem
+
+    Let $f \in C^2(I)$ for some interval $I \subset \mathbb{R}$. Suppose $\alpha \in
+    I$ is a root of $f$.
+
+    Choose $x_0$ and $x_1 \in I$, and define
+
+    $$x_{n+1} = x_n - f(x_n) \cdot \frac{x_n - x_{n-1}}{f(x_n) - f(x_{n-1})}$$
+
+    Then
+
+    $$|\alpha - x_{n+1}| \le M \cdot |\alpha - x_n| \cdot |\alpha - x_{n-1}|$$
+
+    or, with $\epsilon_n = |\alpha - x_n|$,,
+
+    $$\epsilon_{n+1} \le M \cdot \epsilon_n \cdot \epsilon_{n-1}$$
+
+    where $M$ is an upper bound for $\frac{1}{2}|f''''(x)/f''(x)|$ on $I$.
+
+
+    This is superlinear convergence of “order 1.6.” (Actually, it''s order $\frac{1+\sqrt{5}}{2}$
+    )'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Secant Method Algorithm
+
+
+    Algorithm (Secant Method (Basic Outline))
+
+
+    Given $f, x_0$, and $x_1$:
+
+
+    +   1. Set $k = 2$ and $S(x_0,x_1) = x_1 - f(x_1) \cdot \frac{x_1 - x_0}{f(x_1)
+    - f(x_0)}$.
+
+    2. Compute $x_k = S(x_{k-1},x_{k-2})$.
+
+    3. If $f(x_k) \approx 0$, then $x_k$ is a root; then quit
+
+    4. else if $|x_k - x_{k-1}|$ is very small, then $x_k \approx$ a root; quit
+
+    5. Set $k = k+1$ and (if $k$ isn''t too big) go to 2.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# Secant Method Pseudocode\n\n```\ninput : x0, x1, eps, n\nextern: f(x)\n1:\
+    \ f0 ← f(x0);\n2: f1 ← f(x1);\n3: for i ← 1 to n do\n4:   c ← x1 - f1·(x1-x0)/(f1-f0);\n\
+    5:   fc ← f(c);\n6:   x0 ← x1;          /* update parameters *\n7:   x1 ← c;\n\
+    8:   f0 ← fc;\n9:   f1 ← fc;\n10:  if |x1-x0| < eps then\n      return: x1 ; \
+    \     /* Or: |fc|<eps */\nreturn: x1\n```"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# Regula Falsi
+
+
+    # Regula Falsi
+
+
+    The *regula falsi*, or “false position,” method⁴ is very old; the Egyptians used
+    the concept. The method appears in the Vaishali Ganit (India, 3rd century BC),
+    Book on Numbers and Computation & Nine Chapters on the Mathematical Art (China,
+    2nd century BC), Book of the Two Errors (Persia, c. 900), and came to the west
+    in Fibonacci’s Liber Abaci (1202).
+
+
+    Regula falsi combines the secant and bisection techniques: Use the secant to find
+    a “middle point,” then keep the interval with a sign change, i.e., that brackets
+    the root.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_107_0.png)
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_107_1.png)
+
+
+    > ⁴Also called Modified Regula Falsi, Double False Position, Regula Positionum,
+    Secant Method, Rule of Two Errors, etc. My favourite name is Yíng bù zú: “Too
+    much and not enough.”'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Regula Falsi Method Error\n\nTheorem\nLet $f \\in \\mathcal{C}^2(I)$ for\
+    \ some interval $I \\subset \\mathbb{R}$. Suppose $\\alpha \\in I$ is a root of\
+    \ $f$.\nChoose $a$ and $b \\in I$ such that $\text{sign}(f(a)) \neq \text{sign}(f(b))$,\
+    \ and define\nnc = b-f(b) \\cdot \\frac{b-a}{f(b)-f(a)}.\nThen\n$|\\alpha-c| \\\
+    le M \\cdot |\\alpha-a|\nor, with $\\varepsilon_n = |\\alpha-x_n|$,\n$\\varepsilon_{n+1}\
+    \ \\le M \\cdot \\varepsilon_n$\nwhere $0 < M < 1$ is a constant depending on\
+    \ $|f''(x)|$ and $|f'(x)|$ on $I$.\n\nThis is linear or “order 1” convergence.\
+    \ (The same as the bisection method.)"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# Regula Falsi Algorithm
+
+
+    Algorithm (Regula Falsi (Basic Method))
+
+    Given $f, a,$ and $b$:
+
+    1. Set $k=1$ and $S(a,b) = b - f(b) \cdot \frac{b-a}{f(b)-f(a)} = \frac{a \cdot
+    f(b) - b \cdot f(a)}{f(b)-f(a)}
+
+    2. Compute $c = S(a,b).
+
+    3. If $f(c) \approx 0$, then $c$ is a root; quit
+
+    4. If $f(c) \cdot f(a) < 0$, then $b \leftarrow c$
+
+    5. else $a \leftarrow c$
+
+    6. If $|b-a|$ is very small compared to $|a|$, then $a$ is a root; quit
+
+    7. Set $k = k+1$, and (if $k$ isn''t too big) go to 2.'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '```
+
+    input : a, b, eps, n
+
+    extern: f(x)
+
+    1: fa ← f(a);
+
+    2: fb ← f(b);
+
+    3: if fa·fb > 0 then
+
+    4:   /* Better: sign(fa)≠sign(fb) */
+
+    5: for i ← 1 to n do
+
+    6:   c ← (a·fb−b·fa)/(fb−fa) ; /* Better: c←b-fb*(b-a)/(fb-fa) */
+
+    7:   fc ← f(c);
+
+    8:   if |fc|<eps then
+
+    9:     return: c
+
+    10: if fa·fc < 0 then
+
+    11:   b ← c;
+
+    12:   fb ← fc;
+
+    13: else
+
+    14:   if fb·fc < 0 then
+
+    15:     a ← c;
+
+    16:     fa ← fc;
+
+    17:  else
+
+    18:    return: c
+
+    19: return: c
+
+    ```'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# Halley''s Method
+
+
+    Halley''s method^5 of 1694 extends Newton’s method to obtain cubic convergence.
+    Halley was motivated by de Lagny''s 1692 work showing algebraic formulas for extracting
+    roots. Using the quadratic term in Taylor''s formula obtains the extra degree
+    of convergence. Just as Newton did not recognize the derivative appearing in his
+    iterative method, Halley also missed the connection to calculus — it was first
+    seen by Taylor in 1712. The version of Halley’s method we use comes from applying
+    Newton’s method to the auxiliary function
+
+
+    $$g(x) = \frac{f(x)}{\sqrt{|f''(x)|}}$$$
+
+
+    Then the iterating function for Halley''s method is
+
+
+    $$x_{n+1} = x_n - \frac{2f(x_n)f''(x_n)}{2f''(x_n)^2 - f(x_n)f''''(x_n)}$$$
+
+
+    ^5For historical background and a nice development, see Scavo and Thoo, “On the
+    Geometry of Halley’s Method,” Am. Math. Mo., Vol. 102, No. 5, pp. 417–426.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# # Halley''s Method Error
+
+
+    Theorem
+
+
+    Let $f \in \mathcal{C}^3(I)$ on some interval $I \subset \mathbb{R}$. Suppose
+    $\alpha \in I$ is a root of $f$.
+
+    Choose $x_0 \in I$ and define
+
+
+    ```
+
+    $x_{n+1} = x_n - \frac{2f(x_n)f''(x_n)}{2f''(x_n)^2 - f(x_n)f''''(x_n)}.$
+
+    ```
+
+
+    Then
+
+
+    ```
+
+    $|\alpha - x_{n+1}| \le M \cdot |\alpha - x_n|^3$
+
+    ```
+
+
+    or, with $\epsilon_n = |\alpha - x_n|$,
+
+
+    ```
+
+    $\epsilon_{n+1} \le M \cdot \epsilon_n^3$
+
+    ```
+
+
+    where $M$ is an upper bound for $\frac{3f''''(x)^2-2f''(x)f''''(x)}{12f''(x)^2}$
+    on $I$.
+
+
+    This is called cubic or “order 3” convergence.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# Halley''s Method Algorithm
+
+
+    # Algorithm (Halley’s Method (Basic Outline))
+
+
+    Given $f$ and $x_0$.
+
+
+    +   0. Compute $f''$ and $f''''$.
+
+
+    +   1. Set $k = 1$ and $H(x) = x - \frac{2f(x)f''(x)}{f''(x)^2 - f(x)f''''(x)}$.
+
+
+    +   2. Compute $x_k = H(x_{k-1})$.
+
+
+    +   3. If $f(x_k) \approx 0$, then $x_k$ is a root; quit
+
+
+    +   4. else if $|f(x_k)|$ or $|x_k - x_{k-1}|$ is very small, then $x_k \approx$
+    a root; quit
+
+
+    +   5. Set $k = k+1$ and (if $k$ isn''t too big) go to 2.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "# Halley's Method Pseudocode\n\n```\ninput : x0, eps, n\nextern: f(x), df(x)=f'(x),\
+    \ ddf(x)=f''(x)\n1: fx0 ← f(x0);\n2: dfx0 ← df(x0);\n3: ddfx0 ← ddf(x0);\n4: for\
+    \ i ← 1 to n do\n5:     x1 ← x0 - 2·fx0·dfx0 / (2·dfx0^2 - fx0·ddfx0)\n      fx1\
+    \ ← f(x1);\n6: if |fx1| + |x1-x0| <eps then\n7:     return: x1\n8: x0 ← x1;\n\
+    9: fx0 ← f(x1);\n10: dfx0 ← df(x1);\n11: ddfx0 ← ddf(x1);\n12: return: x1\n```"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# A Sample Problem
+
+
+    Find the real root of $f(x) = -x^{11} + x^2 + x + 0.5$ in $[\frac{1}{2}, \frac{3}{2}]$.
+    $(r \dote 1.098282972$ (This is $f$''s only real root.))
+
+
+    | Bisection | Newton | Secant | Regula Falsi | Halley |
+
+    |---|---|---|---|--|
+
+    | [0.5000, 1.5000] | 0.5000 | 1.500 | [+0.500, +1.500] | [0.5000, 1.5] | 0.5000
+    | 1.500 |
+
+    | [1.0000, 1.5000] | -0.1280 | 1.370 | [+0.515, +0.500] | [0.515, 1.5] | -0.3752
+    | 1.268 |
+
+    | [1.0000, 1.2500] | -0.6500 | 1.258 | [-0.124, +0.515] | [0.530, 1.5] | -0.0538
+    | 1.128 |
+
+    | [1.0000, 1.1250] | -0.0236 | 1.171 | [-0.406, -0.124] | [0.545, 1.5] | -1.2080
+    | 1.099 |
+
+    | [1.0625, 1.1250] | -0.5241 | 1.119 | [-0.956, -0.406] | [0.561, 1.5] | -0.9812
+    | 1.098 |
+
+    | [1.0938, 1.1250] | 3.315 | 1.100 | [-0.230, -0.956] | [0.576, 1.5] | -0.6556
+    | 1.098 |
+
+    | [1.0938, 1.1094] | 3.014 | 1.098 | [+0.085, -0.230] | [0.592, 1.5] | -0.9822
+    | - |
+
+    | [1.0938, 1.1016] | 2.740 | 1.098 | [-0.607, +0.085] | [0.607, 1.5] | -0.6588
+    | - |
+
+    | [1.0977, 1.1016] | 2.491 | - | [-1.171, -0.607] | [0.623, 1.5] | -0.9934 | -
+    |
+
+    | [1.0977, 1.0996] | 2.264 | - | [-0.583, -1.170] | [0.639, 1.5] | -0.6846 | -
+    |
+
+    | [1.0977, 1.0986] | 2.059 | - | [-0.558, -0.583] | [0.654, 1.5] | -1.085 | -
+    |'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# The Sample Problem’s Graph
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_116_0.png)
+
+
+    A plot of $f(x) = -x^{11} + x^2 + x + 0.5$'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# Pe Chartes
+
+
+    | Method | Type | Update Function |
+
+    | --- | --- | --- |
+
+    | Bisection | Bracketing (2 pts) | $B(a,b) = \frac{1}{2}(a+b)$ |
+
+    | Regula Falsi | Bracketing (2 pts) | $R(a,b) = \frac{af(b)-bf(a)}{f(b)-f(a)}$
+    |
+
+    | Secant method | Approximating (1 pt) | $S(x_n,x_{n-1}) = x_n - \frac{f(x_n)(x_n-x_{n-1})}{f(x_n)-f(x_{n-1})}$
+    |
+
+    | Newton''s method | Approximating (1 pt) | $N(x_n) = x_n - \frac{f(x_n)}{f''(x_n)}$
+    |
+
+    | Halley''s method | Approximating (1 pt) | $H(x_n) = x_n - \frac{2f(x_n)f''(x_n)}{2[f''(x_n)]^2-f(x_n)f''''(x_n)}$
+    |
+
+
+    | Method | Error | Convergence Speed | Computation Cost |
+
+    | --- | --- | --- | --- |
+
+    | Bisection | $\epsilon_{n+1} \leq \frac{1}{2}\epsilon_n$ | Linear (order 1) |
+    Low |
+
+    | Regula Falsi | $\epsilon_{n+1} \leq C\epsilon_n$ | Linear (order 1) | Medium
+    |
+
+    | Secant method | $\epsilon_{n+1} \leq C\epsilon_n\epsilon_{n-1}$ | Superlinear
+    (order $\approx 1.6$) | Medium |
+
+    | Newton''s method | $\epsilon_{n+1} \leq C\epsilon_n^2$ | Quadratic (order 2)
+    | High |
+
+    | Halley''s method | $\epsilon_{n+1} \leq C\epsilon_n^3$ | Cubic (order 3) | Very
+    High |'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "# Appendix III: Rate of Convergence\n\nDefinition (Rate of Convergence)\nLet\
+    \ $x_n \to x^*$ and set $\\epsilon_n = |x^* - x_n|$. Then $x_n$ converges to $x^*$\
+    \ with rate $r$ iff there is a positive constant $C$ (the asymptotic error constant)\
+    \ such that\n$$\\lim_{n\\to\\infty} \\frac{\\epsilon_{n+1}}{\\epsilon_n^r} = C$.\n\
+    \n# Terminology\n\n| Rate | Parameters |\n|---|---|\n| Sublinear | $r=1$ and $C=1$\
+    \ |\n| Linear | $r=1$ and $0 < C < 1$ |\n| Superlinear | $r > 1$ |\n| Quadratic\
+    \ | $r=2$ |\n| Cubic | $r=3$ |\n\nNB: Quadratic and cubic are special cases of\
+    \ superlinear convergence."
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "# Exercises, I\n\n# Exercises\n\nFor each of the functions given in 1. to 7.\
+    \ below:\n\n+   a. Graph $f$ in a relevant window.\nb. Use Maple's fsolve to find\
+    \ $f$'s root to 10 digits.\nc. Use each of the five methods with a maximum of\
+    \ 15 steps and fill the table:\n\n| Method | Approx Root | Relative Error | No.\
+    \ of Steps |\n\n+   1. The “Newton-era” test function $T(x) = x^3 - 2x - 5$.\n\
+    \n+   4. $h(x) = x - 8e^{-x}$\n\n+   2. $f(x) = \\frac{1}{13} - \\frac{1}{7}x\
+    \ - x^{11}$\n\n+   5. $R(x) = \\frac{30x - 31}{29(x - 1)}$\n\n+   3. $g(x) = \\\
+    int_{0}^{x} \\sin(t^2/2) dt - 1$\n\n+   6. $S(x) = \\frac{\\sin(x^2) + 1}{\\cos(x)\
+    \ + 2}$ for $x \\in [0, 4]$\n\n+   7. The intransigent function $\\psi(x) = 10\
+    \ \\cdot e^{-x} \\cdot \\left( 1 + \\frac{\\ln(x^2)}{x} \right)$.\n\n+   8. Explain\
+    \ why the bisection method has difficulties with two roots in an interval."
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Exercises, II
+
+
+    # Exercises
+
+
+    For Exercises 9. to 15., generate your personal polynomial $p(x)$ in Maple by
+    entering:
+
+
+    ```
+
+    > randomize(your phone number, no dashes or spaces):
+
+    deg := 1+2*rand(4..9)
+
+    p := randpoly(x, degree=deg, coeffs=rand(-2..2))
+
+    p := unapply(sort(p), x);
+
+    ```
+
+
+    +   9. Use fsolve to find the roots of your polynomial $p(x)$.
+
+
+    +   10. Compare the results of the four root-finding methods applied to $p(x)$.
+
+
+    +   11. Report on stopping conditions: function value, step/interval size, maximum
+    number of iterations.
+
+
+    +   12. Find any bad initial points for Newton''s method for $p(x)$.
+
+
+    +   13. Verify Fibonacci''s root $x^6 = 1.368808107$ of the equation $x^3 + 2x^2
+    + 10x = 20$.
+
+
+    +   14. Determine the convergence rates of the following sequences.
+
+
+    +   a. $2^{-n}$ b. $1+2^{(1-2n)}$ c. $(n+1)/n$ d. $\sin(k)/k$
+
+
+    +   15. Solve this problem from *The Nine Chapters on the Mathematical Art* (c.
+    200 BCE): “Now an item is purchased jointly; everyone contributes 8 coins, the
+    excess is 3; everyone contributes 7, the deficit is 4. Tell: The number of people,
+    the item price, what is each?”
+
+
+    > $^6Fibonacci found this root in 1225 — no one knows how he did it!$'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "# Exercises, III\n\n# Exercises\n\n+   16. Set $f(x) = x^3 \\cdot e^x - \\\
+    sqrt{2}$ and $x_0 = 1.0$.\n  a. Plot $f$ over $0 \\leq x \\leq 1$ to see the root.\n\
+    \  b. Use Newton's method to find the root; print $x_n$ for each iteration.\n\
+    \  c. Alter Newton's method:\n    i. Replace $f'(x)$ in Newton's method with a\
+    \ centered difference formula approximation Eq (CD).\n    ii. Execute the altered\
+    \ Newton's method beginning with $h = 1.0$.\n    iii. Decrease $h$ by $0.1$ and\
+    \ rerun the altered Newton's method.\n    iv. Keep decreasing $h$ until the results\
+    \ are very close to Newton's method.\n    v. Determine practical reasons for using\
+    \ this modification rather than the original method.\n\n+   17. [Group Exercise]\
+    \ Redo the previous problem finding all roots $[-1,1]$ of the 8th Chebyshev polynomial\n\
+    \  $T_8(x) = 128x^8 - 256x^6 + 160x^4 - 32x^2 + 1$."
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# Links and Others
+
+
+    Wikipedia entries:
+
+
+    +   - Bisection Method
+
+    - Newton''s Method
+
+    - Secant Method
+
+    - Regula Falsi Method
+
+
+    More information:
+
+
+    +   - Massoud Malek''s Root-Finding Methods
+
+    - Chad Higdon-Topaz''s Iterative methods for root finding (video)
+
+
+    See also: Interactive Educational Modules in Scientific Computing (U of I) and
+    MathWorld (Wolfram Research)
+
+
+    Investigate:
+
+
+    +   - Müller''s method
+
+    - Brent''s method
+
+    - Bernoulli''s method
+
+    - Jenkins-Traub method
+
+    - Laguerre''s method
+
+    - Durand-Kerner method
+
+    - Fibonacci Search method
+
+
+    +   - Ridder''s method
+
+    - Splitting Circle method
+
+    - Maple''s fsolve
+
+    - MATLAB''s fzero
+
+    - Wilkinson''s Perfidious Polynomial:
+
+
+    ```
+
+    w(x) := \prod_{k=1}^{20} (x-k)
+
+    ```'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "# S II. Special Topics: Modified Newton's Method\n\n+   1. Introduction .................................................................................................\
+    \ . . . . . . . . . . . . . . . . . . 114\n2. Modified Newton's Method .................................................................\
+    \ . . . . . . . . . . . . . . . . . . . 115\n   Exercises .................................................................................................................\
+    \ . . . . . . . . . . . . . . . . . . . . 116"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# II. Special Topic: Modified Newton’s Method
+
+
+    # Newton’s Method Revisited
+
+
+    Newton’s method uses the iteration function
+
+
+    $N(x) = x - \frac{f(x)}{f''(x)}$
+
+
+    A fixed point of $N$, which is a value $x^*$ where $N(x^*) = x^*$, is a zero of
+    $f(x)$. It was really Simpson who realized the connection of Newton’s method with
+    calculus; Newton had developed an algebraic method in 1669 (not publishing it
+    until 1711); Simpson’s generalized version appeared in 1740 in his text *A New
+    Treatise of Fluxions*. In 1690, midway between Newton and Simpson, Raphson published
+    a simplified version of Newton’s method that was based on iterations, much like
+    ours today.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# Modified Newton’s Method
+
+
+    # Modified Newton’s Method
+
+
+    To modify Newton''s method, replace the "correcting factor" quotient $f/f''$ with
+    $f''/f''''$. Our new iterator is
+
+
+    ```
+
+    $M(x) = x - \frac{f''(x)}{f''''(x)}$
+
+    ```
+
+
+    Choose an initial value $x_0$. Then calculate the values $x_{n+1} = M(x_n)$ for
+    $n = 1,2,\dots$. The question is: Does $x_n$ have a limit?
+
+
+    # Convergence?
+
+
+    Use Newton’s example function: $y = x^3 - 2x - 5$. Then
+
+
+    ```
+
+    $M(x) = x - \frac{3x^2 - 2}{6x}$
+
+    ```
+
+
+    Starting with $x_0 = 1$ gives the sequence $x_1 = 0.83\overline{3}, x_2 = 0.816\overline{6},
+    x_3 = 0.81649659, x_4 = 0.81649658$. Where are these points going?'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "# Exercises\n\n# Problems\n\n+   1. Use Maple to generate a personalized random\
+    \ polynomial with:\n> randomize(your phone number, no dashes or spaces): \ndeg\
+    \ = 1+2*rand(4..9) (:\np := randpoly(x, degree=deg, coeffs=rand(-2..2)):\np :=\
+    \ unapply(sort(p), x);\n2. Apply the Modified Newton's Method to your polynomial\
+    \ with a selection of starting points.\n3. Produce a chart of your intermediate\
+    \ results.\n4. Graph your polynomial and the trajectories using your data chart.\n\
+    5. Can you determine a specific value where the trajectories change from one to\
+    \ another target point?\n6. Investigate the Modified Newton's Method's rate of\
+    \ convergence."
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "# V. Numerical Integration\n\n+   1. Numerical Integration .....................................................................................\
+    \ 118\n2. Left Endpoint, Right Endpoint, and Midpoint Sums ......................................\
+    \ 119\n3. Trapezoid Sums ................................................................................................\
+    \ 120\n4. Simpson's Rule .................................................................................................\
+    \ 122\n5. Gaussian Quadrature ........................................................................................\
+    \ 126\n6. Gauss-Kronrod Quadrature ................................................................................\
+    \ 131\n7. A Menagerie of Test Integrals ............................................................................\
+    \ 135\n   Appendix IV: Legendre & Stieltjes Polynomials for GK$_{7,15}$ ...........................\
+    \ 137\n   Exercises ................................................................................................................\
+    \ 138\n   Links and Others ...................................................................................................\
+    \ 139"
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# V. Numerical Integration
+
+
+    # ### What Is Numerical Integration?
+
+
+    Numerical integration or (numerical) quadrature is the calculation of a definite
+    integral using numerical formulas, not the fundamental theorem. The Greeks studied
+    quadrature: given a figure, construct a square that has the same area. The two
+    most famous are Hippocrates of Chios'' Quadrature of the Lune (c. 450 BC) and
+    Archimedes'' Quadrature of the Parabola (c. 250 BC). Archimedes used the method
+    of exhaustion — a precursor to calculus — invented by Eudoxus.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_128_0.png)
+
+
+    Squaring the circle is one of the classical problems of constructing a square
+    with the area of a given circle — it was shown to be impossible by Lindemann''s
+    theorem (1882).¹
+
+
+    > ¹Lindemann was the first to prove that π is transcendental.'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Methods of Elementary Calculus
+
+
+    # Rectangle Methods
+
+
+    Left endpoint sum
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_129_0.png)
+
+
+    Midpoint sum
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_129_1.png)
+
+
+    Right endpoint sum
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_129_2.png)
+
+
+    ```
+
+    $A_n \approx \sum_{k=1}^{n} f(x_{k-1}) \Delta x_k$
+
+    ```
+
+
+    ```
+
+    $A_n \approx \sum_{k=1}^{n} f(m_k) \Delta x_k\\nm_k = \frac{1}{2}(x_{k-1} + x_k)$
+
+    ```
+
+
+    ```
+
+    $A_n \approx \sum_{k=1}^{n} f(x_k) \Delta x_k$
+
+    ```
+
+
+    ```
+
+    $\epsilon_n \leq \frac{(b-a)^2}{2} \cdot M_1 \cdot \frac{1}{n}$
+
+    ```
+
+
+    ```
+
+    $\epsilon_n \leq \frac{(b-a)^2}{24} \cdot M_2 \cdot \frac{1}{n^2}$
+
+    ```
+
+
+    ```
+
+    $\epsilon_n \leq \frac{(b-a)^2}{2} \cdot M_1 \cdot \frac{1}{n}$
+
+    ```
+
+
+    where $M_i = \max |f^{(i)}(x)|$
+
+    $\int_{0}^{\pi} f(x) dx = 2 \approx [1.984, 2.008, 1.984]n=10$'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Trapezoid Sums
+
+
+    Instead of the degree 0 rectangle approximations to the function, use a linear
+    degree 1 approximation. The area of the trapezoid is given by
+
+
+    ```
+
+    $A_T = \frac{1}{2}[f(x_{k-1}) + f(x_k)]\Delta x_k.$
+
+    ```
+
+
+    This gives an approximation for the integral
+
+
+    ```
+
+    $\int_a^b f(x)dx \approx \sum_{k=1}^n \frac{1}{2}[f(x_{k-1}) + f(x_k)]\Delta x_k.$
+
+    ```
+
+
+    [Midpoint: measure height at average $x$ v. trapezoid: average the height measures]
+
+
+    The formula is often written as
+
+
+    ```
+
+    $T_n \approx \left[f(x_0) + \left(2\sum_{k=1}^{n-1} f(x_k)\right) + f(x_n)\right]\frac{\Delta
+    x_k}{2}.
+
+    ```
+
+
+    Error for the trapezoid rule is
+
+
+    ```
+
+    $\epsilon_n \le \frac{(b-a)^3}{12} \cdot M_2 \cdot \frac{1}{n^2}.$
+
+    ```
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_130_0.png)'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "# Sample Trapezoid\n\n# Example\n\nLet $f(x) = \\sin(x) + \\frac{1}{2}\\sin(2x)\
+    \ - \\frac{1}{4}\\sin(4x) + \\frac{1}{16}\\sin(8x)$ over $[0, \\pi]$.\n\nWith\
+    \ an equipartition,\n\n$\\Delta x = \\pi/10 \\approx 0.314$.\n\nThen\n\n$T_{10}\
+    \ = \\left[f(0) + \\left(2 \\sum_{k=1}^{9} f\\left(\\frac{k}{10}\\pi\right)\r\
+    ight) + f(\\pi)\right] \\frac{\\Delta x}{2}$\n\nwhich gives\n\n$T_{10} = 1.984$\n\
+    \n![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_131_0.png)"
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# Simpson''s Rule
+
+
+    # Simpson''s Rule
+
+
+    We now move to a degree 2 approximation. The easiest way to have 3 data points
+    is to take the panels in pairs: instead of rectangle base $[x_i, x_{i+1}]$, use
+    $[x_i, x_{i+1}, x_{i+2}]$. So we require an even number of panels. The area under
+    the parabola is
+
+
+    ```
+
+    $A_S = \frac{1}{3} [f(x_i) + 4f(x_{i+1}) + f(x_{i+2})] \Delta x$.
+
+    ```
+
+
+    This gives a $2n$-panel approximation for the integral
+
+
+    ```
+
+    $\int_a^b f(x) dx \approx \left[ \sum_{k=1}^n (f(x_{2k-2}) + 4f(x_{2k-1}) + f(x_{2k}))
+    \right] \frac{\Delta x}{3}$
+
+    ```
+
+
+    most often written as
+
+
+    ```
+
+    $S_{2n} = [f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \dots + 4f(x_{2n-1}) + f(x_{2n})]
+    \frac{\Delta x}{3}$.
+
+    ```
+
+
+    The error is bounded by
+
+
+    ```
+
+    $\epsilon_n \le \frac{(b-a)^5}{180} \cdot M_4 \cdot \frac{1}{n^4}$.
+
+    ```
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_132_0.png)'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Sample Simpson
+
+
+    # Example
+
+
+    Let $f(x) = \sin(x) + \frac{1}{2}\sin(2x) - \frac{1}{4}\sin(4x) + \frac{1}{16}\sin(8x)$
+    over $[0, \pi]$.
+
+
+    With a 10-panel equipartition,
+
+
+    $\Delta x = \pi/10 \approx 0.3141592654$.
+
+
+    Then, with $y_i = f(x_i)$,
+
+
+    $S_{10} = \frac{1}{3}[y_0+4y_1+2y_2+\cdots+4y_9+y_{10}]$
+
+
+    which gives
+
+
+    $S_{10} = 2.000006784$
+
+
+    with absolute error of $6.78 \cdot 10^{-6}$.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_133_0.png)'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# A Maple Comparison
+
+
+    # Approximating a Difficult Integral
+
+
+    Consider $\int_{1}^{2} \frac{10^{-4}}{(x-\frac{\pi}{2})^2+10^{-8}} dx$. This integrand
+    has a sharp peak at $\pi/2$.
+
+
+    The exact value of the integral (using the $FToC$) is
+
+
+    $arctan(5 \cdot 10^3 \cdot (4-\pi)) - arctan(5 \cdot 10^3 \cdot (2-\pi)) \approx
+    3.1411844701381$.
+
+
+    Maple gives
+
+
+    | | $n=50$ | $n=500$ | $n=5000$ |
+
+    |---|---|---|---|
+
+    | $left$ | $0.0497133$ | $0.541336$ | $3.422282$ |
+
+    | $right$ | $0.0497180$ | $0.541336$ | $3.422282$ |
+
+    | $midpoint$ | $3.1212000$ | $4.052010$ | $2.88243$ |
+
+    | $trapezoid$ | $0.0497157$ | $0.541336$ | $3.422282$ |
+
+    | $Simpson$ | $2.0972500$ | $2.881790$ | $3.06256...$ |
+
+
+    To achieve a relative error below 1% requires approximately $n \geq 6000$.'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: "# The Chart\n\n| Quadrature | \"Height\" | Error Bound² |\n| --- | --- | ---\
+    \ |\n| Left end point | $f(x_i)$ | $\\frac{(b-a)^2}{2} \\cdot M_1 \\cdot \\frac{1}{n}\
+    \ = O(h)$ |\n| Right end point | $f(x_{i+1})$ | $\\frac{(b-a)^2}{2} \\cdot M_1\
+    \ \\cdot \\frac{1}{n} = O(h)$ |\n| Trapezoid Rule | $\\frac{f(x_i) + f(x_{i+1})}{2}$\
+    \ | $\\frac{(b-a)^3}{12} \\cdot M_2 \\cdot \\frac{1}{n^2} = O(h^2)$ |\n| Midpoint\
+    \ | $f\\left(\\frac{x_i+x_{i+1}}{2}\right)$ | $\\frac{(b-a)^3}{24} \\cdot M_2\
+    \ \\cdot \\frac{1}{n^2} = O(h^2)$ |\n| Simpson's Rule | $\\frac{f(x_i) + 4f(x_{i+1})\
+    \ + f(x_{i+2})}{3}$ | $\\frac{(b-a)^5}{180} \\cdot M_4 \\cdot \\frac{1}{n^4} =\
+    \ O(h^4)$ |\n\nwhere $M_i \\geq \\max |f^{(i)}(x)|$ and $h = 1/n$.\n\n> ²An approximation\
+    \ without an error bound has little to no value!"
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# Gaussian Quadrature
+
+
+    Johann Carl Friedrich Gauss
+
+    About 1815, while Gauss was finishing constructing an astronomical observatory,
+    he wrote a paper³ on approximating integrals. Gauss''s technique was studied and
+    extended by Christoffel in 1858. There are several good ways to develop this method.
+    We''ll use the easiest ...
+
+
+    # In Search of Improvements
+
+
+    Write the rules we''ve seen as sums:
+
+    Left endpt: $L_n = \frac{1}{n}f(x_0) + \frac{1}{n}f(x_1) + \dots + \frac{1}{n}f(x_{n-1})$nRight
+    endpt: $R_n = \frac{1}{n}f(x_1) + \frac{1}{n}f(x_2) + \dots + \frac{1}{n}f(x_n)$
+
+    Midpoint: $M_n = \frac{1}{n}f(x_{m1}) + \frac{1}{n}f(x_{m2}) + \dots + \frac{1}{n}f(x_n)$
+
+    Trapezoid: $T_n = \frac{1}{2}f(x_0) + \frac{1}{n}f(x_1) + \dots + \frac{1}{n}f(x_{n-1})
+    + \frac{1}{2}f(x_n)$
+
+    Simpson’s: $S_n = \frac{1}{3n}f(x_0) + \frac{4}{3n}f(x_1) + \frac{2}{3n}f(x_2)
+    + \dots + \frac{4}{3n}f(x_{n-1}) + \frac{1}{3n}f(x_n)$
+
+
+    > ³ Methodus nova integralium valores per approximationem invieniendi, Comment
+    Soc Regiae Sci Gottingensis Recientiores, v. 3, 1816.'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# Patterns
+
+
+    # Observations
+
+
+    +   - Each of the formulas has the same form: a weighted sum
+
+
+    $A_n = w_1 \cdot f(x_1) + w_2 \cdot f(x_2) + \cdots + w_n \cdot f(x_n)$
+
+    with different sets of weights $w_i$ and different sets of nodes $x_i$.
+
+    - Any closed interval can be mapped to and from $[-1, 1]$, so we can focus just
+    on $\int_{-1}^{1} f(x) dx. \quad T(t) = 2\frac{t-a}{b-a} - 1; \quad T^{-1}(t)
+    = a(\frac{1+t}{2}) + b(\frac{1-t}{2})$
+
+    - Gauss posed the question: Is there a “best choice” of weights $\{w_i\}$ and
+    nodes $\{x_i\}$? Do nodes have to be equidistant?
+
+    - The answer depends on what “best” means.
+
+
+    Since we have $2n$ unknowns $w_i$ and $x_i$, let''s look for a set that integrates
+    a $2n-1$ degree polynomial exactly. (Remember: a $2n-1$ degree polynomial has
+    $2n$ coefficients.)'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Sampling 3
+
+
+    # Example (Third Degree)
+
+
+    Set $n = 3$. Determine the choice of $w_i$ and of $x_i$ so that
+
+
+    $$\int_{-1}^{1} x^p dx = \sum_{k=1}^{3} w_k \cdot x_k^p$
+
+
+    exactly for $p = 0, 1, \dots, 5 = 2 \cdot 3 - 1$.
+
+
+    The range for the power $p$ gives us six equations:
+
+
+    ```
+
+    $$\begin{cases} w_1 + w_2 + w_3 &= 2 \ w_1 x_1 + w_2 x_2 + w_3 x_3 &= 0 \ w_1
+    x_1^2 + w_2 x_2^2 + w_3 x_3^2 &= \frac{2}{3} \ w_1 x_1^3 + w_2 x_2^3 + w_3 x_3^3
+    &= 0 \ w_1 x_1^4 + w_2 x_2^4 + w_3 x_3^4 &= \frac{2}{5} \ w_1 x_1^5 + w_2 x_2^5
+    + w_3 x_3^5 &= 0 \end{cases} \implies \begin{cases} x_1 = -\sqrt{\frac{3}{5}},
+    & x_2 = 0, & x_3 = \sqrt{\frac{3}{5}} \ w_1 = \frac{5}{9}, & w_2 = \frac{8}{9},
+    & w_3 = \frac{5}{9} \end{cases}$
+
+    ```
+
+
+    Our Gaussian quadrature is $G_3(f) = \frac{5}{9} f\left(-\sqrt{\frac{3}{5}}\right)
+    + \frac{8}{9} f(0) + \frac{5}{9} f\left(\sqrt{\frac{3}{5}}\right)$.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "# Testing Gauss\n\n# Random Polynomials\n\nGenerate and test a random 5th-degree\
+    \ polynomial.\n\n```\np := unapply(sort(randpoly(x, degree = 5), x, x)\n  x ->\
+    \ -7x^5 + 22x^4 - 55x^3 - 94x^2 + 87x - 56\nG3 := 5/9*p(-sqrt(3/5)) + 8/9*p(0)\
+    \ + 5/9*p(sqrt(3/5))\n  - 2488/15\nInt(p(x), x=-1..1) = int(p(x), x=-1..1)\n∫_{-¹¹\
+    \ p(x)dx = -2488/15\n```\n\nGenerate and test a random 7th-degree polynomial.\n\
+    \n```\nq := unapply(sort(randpoly(x, degree = 7), x, x)\n  x -> 97x^7 - 73x^6\
+    \ - 4x^5 - 83x^3 - 10x - 62\nint(q(x), x=-1..1) = 5/9*q(-sqrt(3/5)) + 8/9*q(0)\
+    \ + 5/9*q(sqrt(3/5))\n  722/7 = 2662/25\n```"
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# Gaussian Properties
+
+
+    ### Theorem (Error Estimate)
+
+    Let $f$ have $2n$ continuous derivatives. Then for $\varepsilon_n = |G_n - \int_{-1}^{1}
+    f(x)dx|$, $\varepsilon_n \le \frac{\pi}{2^{2n} \cdot (2n)!} \cdot M_{2n}$ where
+    $M_{2n} \ge \max |f^{(2n)}(x)|$.
+
+
+    ### Values of Gaussian Weights and Nodes
+
+    There are numerous sources online, e.g.,
+
+
+    +   1. The classic Abramowitz and Stegun *Handbook* (see the **entire book**)
+
+    2. Holoborodko or Kamermans
+
+
+    We could calculate the values directly:
+
+    Set $P_n(x) = \frac{1}{2^{2n}!} \cdot \frac{d^n}{dx^n} [(x^2-1)^n]$ (the Legendre
+    polynomials). Then $\{x_i\}_{i=1}^n = \{ \text{zeros of } P_n \}$ and $w_i = \frac{2}{(1-x_i^2)}
+    [P''_n(x_i)]^2$.'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# Gauss-Kronrod Quadrature
+
+
+    Aleksandr Kronrod''s Idea (1964)
+
+
+    One difficulty in Gaussian quadrature is that increasing the number of nodes requires
+    recomputing all the values of
+
+
+    +   - nodes
+
+    - weights
+
+    - function evaluations
+
+
+    Kronrod⁴ discovered he could interlace $n+1$ new nodes with $n$ original Gaussian
+    nodes and a rule of order $3n+1$. A $2n+1$ node Gaussian quadrature would have
+    order $4n+1$, but with significant extra computation for an increase of only $n$
+    in order Kronrod''s method.
+
+
+    > Bad news: calculating the nodes and weights is way beyond the scope of our class.
+    The nodes are the roots of the Stieltjes or Stieltjes-Legendre polynomials. (App
+    IV)
+
+
+    Gauss-Kronrod quadrature is used in Maple, Mathematica, MATLAB, and Sage; it''s
+    included in the QUADPACK library, the GNU Scientific Library, the NAG Numerical
+    Libraries, and in R. $GK_{7,15}$ is the basis of numerical integration in TI calculators.
+    (Casio uses Simpson''s rule; HP, adaptive Romberg.)
+
+
+    ⁴Kronrod, A. S. (1964). “Integration with control of accuracy” (in Russian), Dokl.
+    Akad. Nauk SSSR 154, 283–286.'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# Gauss-Kronrod Quadrature in Practice
+
+
+    # $GK_{7,15} (1989)$
+
+
+    A widely used implementation is based on a Gaussian quadrature with 7 nodes. Kronrod
+    adds 8 to total 15 nodes.
+
+
+    $GK_{7,15}$ on $[-1, 1]$
+
+
+    | Gauss-7 nodes | Weights |
+
+    |---|---|
+
+    | 0.00000 00000 00000 | 0.41795 91836 73469 |
+
+    | $\pm0.40584 51513 77397$ | 0.38183 00505 05119 |
+
+    | $\pm0.74153 11855 99394$ | 0.29770 53914 89277 |
+
+    | $\pm0.94910 79123 42759$ | 0.12948 49661 68870 |
+
+
+    $G_7 = \sum_{k=1}^{7} w_k f(x_k)$
+
+
+    $GK_{7,15} = \sum_{j=1}^{15} w_j f(x_j)$
+
+
+    | Kronrod-15 nodes | Weights |
+
+    |---|---|
+
+    | 0.00000 00000 00000 $G$ | 0.20948 21410 84728 |
+
+    | $\pm0.20788 49550 07898$ $K$ | 0.20443 24500 75298 |
+
+    | $\pm0.40584 51513 77397$ $G$ | 0.19035 05780 64785 |
+
+    | $\pm0.58608 72354 67691$ $K$ | 0.16900 47266 39267 |
+
+    | $\pm0.74153 11855 99394$ $G$ | 0.14065 32597 15525 |
+
+    | $\pm0.86486 44233 59769$ $K$ | 0.10479 00103 22250 |
+
+    | $\pm0.94910 79123 42759$ $G$ | 0.06309 20926 29979 |
+
+    | $\pm0.99145 53711 20813$ $K$ | 0.02329 53220 10529 |
+
+
+    $\varepsilon_{7,15} \approx |G_7 - GK_{7,15}|$
+
+    or, in practice, use$^5$ $\approx [200|G_7 - GK_{7,15}|]^{3/2}$'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# GK Sample
+
+
+    See Maple''s Online Help for int/numeric to see the methods available.'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: "# A Class Exercise\n\nEasy, but Hard\n\nSet $f(x) = x - \\lfloor x \rfloor$.\
+    \ Calculate $\\int_{0}^{6.4} f(x) dx$.\n\nSet $n = 10$. Find\n\n+   1. The exact\
+    \ value\n\n+   2. Left endpoint approximation\n\n+   3. Right endpoint approximation\n\
+    \n+   4. Midpoint approximation\n\n+   5. Trapezoid rule approximation\n\n+  \
+    \ 6. Simpson’s rule approximation\n\n+   7. Gauss 7 quadrature\n\n+   8. Gaussian-Kronrod\
+    \ 7-15 quadrature"
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: "# A Menagerie of Test Integrals\n\n# Integrals for Testing Numerical Quadratures,$6$\
+    \ I\n\nLyness:\n\n+   1. $I(\\lambda) = \\int_{1}^{2} \\frac{0.1}{(x-\\lambda)^{2}+0.01}dx$\n\
+    \nPiessens, de Doncker-Kapenga, Überhuber, & Kahaner:\n\n+   2. $\\int_{0}^{1}\
+    \ x^{\\alpha} \\log\\left(\\frac{1}{x}\right) dx = \\frac{1}{(1+\\alpha)^{2}}$\n\
+    \n+   5. $\\int_{0}^{1} |x-\\frac{1}{3}|^{\\alpha} dx = \\frac{(\\frac{2}{3})^{\\\
+    alpha+1}+(\\frac{1}{3})^{\\alpha+1}}{1+\\alpha}$\n\n+   3. $\\int_{0}^{1} \\frac{4-\\\
+    alpha}{(x-\\frac{\\pi}{4}})^{2}+16-\\alpha} dx = \tan^{-1}\\left((4-\\pi)4^{4-\\\
+    alpha}\right)+\tan^{-1}\\left(\\pi 4^{\\alpha-1}\right)$\n\n+   6. $\\int_{0}^{1}\
+    \ |x-\\frac{\\pi}{4}|^{\\alpha} dx = \\frac{(1-\\frac{\\pi}{4})^{\\alpha+1}+(\\\
+    frac{\\pi}{4})^{\\alpha+1}}{1+\\alpha}$\n\n+   7. $\\int_{-1}^{1} \\frac{1}{1-x^{2}}\
+    \ \\frac{1}{1+x+2^{\\alpha}} dx = \\frac{\\pi}{(1+2^{\\alpha})^{2}-1}$\n\n+  \
+    \ 8. $\\int_{0}^{\\pi} \\cos(2^{\\alpha} \\sin(x)) dx = \\pi J_{0}(2^{\\alpha})$"
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# Test Integrals, II
+
+
+    # Integrals for Testing Numerical Quadratures, II
+
+
+    Piessens et al. (continued):
+
+
+    +   8. $\int_{0}^{\pi/2} \sin^{\alpha-1}(x)dx = 2^{\alpha-2} \frac{\Gamma^2(\frac{\alpha}{2})}{\Gamma(\alpha)}$
+
+
+    +   10. $\int_{0}^{1} \frac{\cos(2^{\alpha}x)}{\sqrt{x(1-x)}}dx = \pi \cos(2^{\alpha-1})J_0(2^{\alpha-1})$
+
+
+    +   9. $\int_{0}^{1} \log^{\alpha-1}(\frac{1}{x})dx = \Gamma(\alpha)$
+
+
+    +   11. $\int_{0}^{\infty} x^2e^{-2^{\alpha}x}dx = 2^{3\alpha+1}$
+
+
+    +   12. $\int_{0}^{\infty} \frac{x^{\alpha-1}}{(1+10x^2)}dx = \frac{(1-\alpha)\pi}{10^{\alpha}\sin(\pi\alpha)}$
+
+
+    Berntsen, Elspid, & Søvik:
+
+
+    +   13. $\int_{0}^{1} |x-\frac{1}{3}|^{-1/2}dx$ (singularity)
+
+
+    +   15. $\int_{0}^{1} e^{2|x-1/3|}}dx$ ($C_0$ function)
+
+
+    +   14. $\int_{-1}^{1} U(x)e^{x/2}dx$ (discontinuity)
+
+
+    +   16. $\int_{-2}^{2} \frac{(x-\frac{\pi}{2})^2}{10^{-4}}dx$ (sharp peak)'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# # Appendix IV: Legendre & Stieltjes Polynomials for GK_{7,15}
+
+
+    # ## The Polynomials of GK_{7,15}
+
+
+    The Gaussian nodes for $G_7$ are the roots of the Legendre polynomial $p_7$
+
+
+    ```
+
+    $p_7(x) = \frac{429}{16}x^7 - \frac{693}{16}x^5 + \frac{315}{16}x^3 - \frac{35}{16}x$.
+
+    ```
+
+
+    The additional nodes Kronrod adds for $GK_{7,15}$ are the roots of the Stieltjes
+    polynomial $E_8$ (from solving the system):
+
+
+    ```
+
+    $\left{\{ \int_{-1}^1 p_7(x)E_8(x)x^k dx = 0 \text{ for } k=0..7 \right\}$
+
+    ```
+
+
+    ```
+
+    $E_8(x) = c \left[ \frac{4854324041}{52932681}x^8 - \frac{1142193892}{58814009}x^6
+    + \frac{7665881666}{58814009}x^4 - \frac{5015763634}{17644227}x^2 + 1 \right]$.
+
+    ```
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_147_0.png)'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Problems
+
+
+    # Exercises
+
+
+    For each of the following functions, investigate the integrals using: left endpoint,
+    midpoint, trapezoid, and Simpson''s rules.
+
+
+    +   1. $S(x) = \int_{0}^{x} [\sin(t^2/2) - \sqrt{\pi/(2x)}] dt$
+
+
+    +   2. Lyness'' integral $I(\lambda) = \int_{1}^{2} (x-\lambda)^2 + 0.01 \, dx$
+    for $\lambda = \pi/2$
+
+
+    +   3. Modified Piessens'' integral $\int_{-1}^{1} |x^2 - \frac{\pi^2}{16}|^{0.1}
+    dx$
+
+
+    Investigate Gaussian and Gauss-Kronrod quadrature (after transforming the interval
+    to [-1, 1]) of the integral:
+
+
+    +   4. $\int_{1}^{4} \frac{10^{-4}}{(x-\frac{\pi}{2})^2+10^{-8}} dx$
+
+
+    +   5. Explain why the integrals $\int_{-1}^{1} p_7(x)dx$, $\int_{-1}^{1} E_8(x)dx$,
+    $\int_{-1}^{1} p_7(x) \cdot E_8(x)dx$ are all equal to zero. Use numerical methods
+    to approximate each.'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# Links and Others
+
+
+    Wikipedia entries:
+
+
+    More information:
+
+
+    +   - Newton-Cotes formulas
+
+    - Romberg''s method
+
+    - Clenshaw-Curtis integration
+
+    - Cubature
+
+
+    +   - Adaptive Simpson''s Rule
+
+    - Monte Carlo Integration
+
+    - Legendre Polynomials
+
+    - Chebyshev Polynomials
+
+
+    See also: MathWorld (Wolfram Research) and Interactive Educational Modules in
+    Scientific Computing (U of I)
+
+
+    Investigate:
+
+
+    +   - Boole''s Rule
+
+    - adaptive quadrature
+
+    - orthogonal polynomials
+
+    - Vandermonde Matrix
+
+    - Maple''s evalf/Int command
+
+
+    +   - The Maple command ApproximateInt in the Student[Calculus1] package
+
+    - MATLAB''s integral command
+
+    - Cubature'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: "# VI. Polynomial Interpolation\n\n+   Sections\n1. Polynomial Interpolation\
+    \ ................................................... 141\n2. Lagrange Interpolation\
+    \ ................................................................ 143\n3. Interlude:\
+    \ Bernstein Polynomials ................................................ 149\n\
+    4. Newton Interpolation ................................................................\
+    \ 152\n5. Two Comparisons .......................................................................\
+    \ 156\n6. Interlude: Splines .................................................................\
+    \ 158\n   Exercises ................................................................................\
+    \ 159\n   Links and Others .......................................................................\
+    \ 161"
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# VI. Polynomial Interpolation
+
+
+    # ### What Is Polynomial Interpolation?
+
+
+    An interpolating polynomial $p(x)$ for a set of points $\mathcal{S}$ is a polynomial
+    that goes through each point of $\mathcal{S}$. That is, for each point $P_i =
+    (x_i, y_i)$ in the set, $p(x_i) = y_i$.
+
+
+    Typical applications include:
+
+
+    +   - Approximating Functions
+
+    - TrueType Fonts (2nd deg)
+
+    - Fast Multiplication
+
+    - Cryptography
+
+    - PostScript Fonts (3rd deg)
+
+    - Data Compression
+
+
+    Since each data point determines the value of one polynomial coefficient, an $n$-point
+    data set has an $n-1$ degree interpolating polynomial.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_151_0.png)'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: "# Free Sample\n\n# Finding an Interpolating Polynomial\n\nLet $\\mathcal{S}\
+    \ = \\{[-2, 1], [-1, -1], [0, 1], [1, -1], [2, 1]\\}$.\n\n+   1. Since $\\mathcal{S}$\
+    \ has 5 points, we compute a 4th degree polynomial\n$p_4(x) = a_0 + a_1x + a_2x^2\
+    \ + a_3x^3 + a_4x^4$.\n\n+   2. Substitute the values of $\\mathcal{S}$ into $p_4$;\
+    \ write the results as a system of linear equations.\n\n```\n$\\begin{bmatrix}\
+    \ 1 \\ -1 \\ 1 \\ -1 \\ 1 \\end{bmatrix} = \begin{bmatrix} a_0-2a_1+4a_2-8a_3+16a_4\
+    \ \\ a_0-a_1+a_2-a_3+a_4 \\ a_0 \\ a_0+a_1+a_2+a_3+a_4 \\ a_0+2a_1+4a_2+8a_3+16a_4\
+    \ \\end{bmatrix} = \begin{bmatrix} 1 & -2 & 4 & -8 & 16 & a_0 \\ 1 & -1 & 1 &\
+    \ -1 & 16   &   & & 0 & 0 & 0 &  & &  & & 1 & 1 & 1 & 1 &   &      & 16 & a_4\
+    \ \\end{bmatrix}$\n```\n\n+   3. Solve via your favorite method: $p_4(x) = \\\
+    frac{2}{3}x^4 - \\frac{8}{3}x^2 + 1$."
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# Toward a Better Way: Lagrange Interpolation
+
+
+    Knots or Nodes: The $x$-values of the interpolation points.
+
+
+    Lagrange Fundamental Polynomial: Given a set of $n+1$ knots, define
+
+
+    ```
+
+    $L_i(x) = \prod_{\substack{k=0,n \ k \neq i}} \frac{x-x_k}{x_i-x_k} = \frac{x-x_0}{x_i-x_0}
+    \times \cdots \times \frac{x-x_{i-1}}{x_i-x_{i-1}} \times \frac{x-x_{i+1}}{x_i-x_{i+1}}
+    \times \cdots \times \frac{x-x_n}{x_i-x_n}$
+
+    ```
+
+
+    Lagrange Interpolating Polynomial: Given a set of $n+1$ data points $(x_k, y_k)$,
+    define
+
+
+    ```
+
+    $p_n(x) = \sum_{k=0}^n y_k L_k(x)$
+
+    ```'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: '# Sampling a Better Way
+
+
+    # Example (Lagrange Fundamental Polynomials)
+
+
+    The set of knots $[-2, -1, 0, 1, 2]$ gives
+
+
+    ```
+
+    $L_0(x) = \frac{x-(-2)}{2-(-2)} \cdot \frac{x-(-1)}{-2-(-1)} \cdot \frac{x-0}{-2-0}
+    \cdot \frac{x-1}{-2-(-1)} \cdot \frac{x-2}{-2-(-1)}$\nde delete
+
+    ```
+
+
+    ```
+
+    $L_1(x) = \frac{x-(-2)}{-1-(-2)} \cdot \frac{x-(-1)}{-1-(-1)} \cdot \frac{x-0}{-1-0}
+    \cdot \frac{x-1}{-1-(-1)} \cdot \frac{x-2}{-1-(-2)}$\nde delete
+
+    ```
+
+
+    ```
+
+    $L_2(x) = \frac{x-(-2)}{0-(-2)} \cdot \frac{x-(-1)}{0-(-1)} \cdot \frac{x-0}{0-0}
+    \cdot \frac{x-1}{0-1} \cdot \frac{x-2}{0-2}$\nde delete
+
+    ```
+
+
+    ```
+
+    $L_3(x) = \frac{x-(-2)}{1-(-2)} \cdot \frac{x-(-1)}{1-(-1)} \cdot \frac{x-0}{1-0}
+    \cdot \frac{x-1}{1-1} \cdot \frac{x-2}{1-2}$\nde delete
+
+    ```
+
+
+    ```
+
+    $L_4(x) = \frac{x-(-2)}{2-(-2)} \cdot \frac{x-(-1)}{2-(-1)} \cdot \frac{x-0}{2-0}
+    \cdot \frac{x-1}{2-1} \cdot \frac{x-2}{2-2}$\nde delete
+
+    ```
+
+
+    Graph the $L_k$!'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: '# Sampling a Better Way
+
+
+    Example
+
+    Let $\mathscr{S} = \{[-2, 1], [-1, -1], [0, 1], [1, -1], [2, 1]\}$.
+
+
+    We have $[x_k] = [-2, -1, 0, 1, 2]$ and $[y_k] = [1, -1, 1, -1, 1]$. Then
+
+    $p_4(x) = \sum_{k=0}^{4} y_k L_k(x)$. So
+
+
+    $p_4(x) = (1) \cdot \frac{x+1}{2+1} \cdot \frac{x-0}{2-0} \cdot \frac{x-1}{2-1}
+    \cdot \frac{x-2}{2-2}$
+
+    $(-1) \cdot \frac{x+2}{1+2} \cdot \frac{x-0}{1-0} \cdot \frac{x-1}{1-1} \cdot
+    \frac{x-2}{1-2}$
+
+    $(1) \cdot \frac{x+2}{0+2} \cdot \frac{x+1}{0+1} \cdot \frac{x-1}{0-1} \cdot \frac{x-2}{0-2}$
+
+    $(-1) \cdot \frac{x+2}{1+2} \cdot \frac{x+1}{1+1} \cdot \frac{x-0}{1-0} \cdot
+    \frac{x-2}{1-2}$
+
+    $(1) \cdot \frac{x+2}{2+2} \cdot \frac{x+1}{2+1} \cdot \frac{x-0}{2-0} \cdot \frac{x-1}{2-1}$.
+
+
+    Then simplified $p_4(x) = \frac{2}{3}x^4 - \frac{8}{3}x^2 + 1$.'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: "# An “Easier” $L_k$ Formula\n\nFor a set $[x_k]$ of $n+1$ knots, we defined\
+    \ $L_i(x) = \\prod_{k=0..n, k \neq i} \\frac{x-x_k}{x_i-x_k}$. This formula is\
+    \ computationally intensive.\n\nSet $\\omega(x) = \\prod_{k=0}^n (x-x_k)$.\n\n\
+    +   1. The numerator of $L_i$ is $\\omega(x)/(x-x_i)$.\n\n+   2. The denominator\
+    \ of $L_i$ is $\\omega(x)/(x-x_i)$ evaluated at $x_i$. Rewrite as $\\frac{\\omega(x)}{x-x_i}\
+    \ \\frac{\\omega(x)-\\omega(x_i)}{x-x_i}$. Take the limit as $x \to x_i$:\n\n\
+    $\\lim_{x \to x_i} \\frac{\\omega(x)-\\omega(x_i)}{x-x_i} = \\omega'(x_i)$.\n\n\
+    Thus $L_i(x) = \\frac{\\omega(x)}{(x-x_i) \\omega'(x_i)}$. A very compact formula!"
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: "# Properties of the $L_k$'s\n\n# Proposition\n\nFor the Lagrange interpolating\
+    \ polynomial $p_n(x) = \\sum_{k=0}^{n} y_k L_k(x):\n\n+   1. $p_n(x)$ is the unique\
+    \ nth degree polynomial s.t. $p_k(x) = y_k$ for $k=0..n$.\n\n+   2. $L_k(x_j)\
+    \ = \\delta_{kj} = \begin{cases} 1 & j=k \\ 0 & j \neq k \\end{cases}$ (See Kronecker\
+    \ delta.)\n\n+   3. $\\sum_{k=0}^{n} L_k(x) = 1$.\n\n+   4. If $q(x)$ is a polynomial\
+    \ of degree $\\leq n$ with $y_k = q(x_k)$, then $q \\equiv p_n$.\n\n+   5. The\
+    \ set $\\{L_k(x) : k=0..(n-1)\\}$ is a basis of $\\mathbb{P}_{n-1}$.\n\n# Theorem\
+    \ (Lagrange Interpolation Error)\n\nIf $f \\in \\mathcal{C}^{n+1}[a,b]$ and $\\\
+    {x_k\\} \\in [a,b]$, then\n\n$\\epsilon_n = |f(x) - p_n(x)| \\leq \\frac{(b-a)^{n+1}}{(n+1)!}\
+    \ \\max |f^{(n+1)}(x)|$."
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# Drawbacks
+
+
+    # More Knots
+
+
+    To decrease the error, use more knots. But ... all the $L_k(x)$ change.
+
+
+    +   Set $\{x_k\} = \{-2, 1, 2\}$. Then
+
+    $L_0(x) = \frac{x-1}{-2-1} \cdot \frac{x-2}{-2-2} = \frac{1}{12}x^2 - \frac{1}{4}x
+    + \frac{1}{6}$
+
+    $L_1(x) = \frac{x+2}{1+2} \cdot \frac{x-2}{1-2} = -\frac{1}{3}x^2 + \frac{4}{3}$
+
+    $L_2(x) = \frac{x+2}{2+2} \cdot \frac{x-1}{2-1} = \frac{1}{4}x^2 + \frac{1}{4}x
+    - \frac{1}{2}$
+
+
+    +   Set $\{x_k\} = \{-2, -1, 1, 2\}$. Then
+
+    $L_0(x) = \frac{x+1}{-2+1} \cdot \frac{x-1}{-2-1} \cdot \frac{x-2}{-2-2} = -\frac{1}{12}x^3
+    + \frac{1}{6}x^2 + \frac{1}{12}x$-
+
+    $L_1(x) = \frac{x+2}{-1+2} \cdot \frac{x-1}{-1-1} \cdot \frac{x-2}{-1-2} = \frac{1}{16}x^3
+    - \frac{1}{6}x^2 - \frac{2}{3}x + \frac{2}{3}$
+
+    $L_2(x) = \frac{x+2}{1+2} \cdot \frac{x+1}{1+1} \cdot \frac{x-2}{1-2} = -\frac{1}{6}x^3
+    - \frac{1}{2}x^2 + \frac{2}{3}x - \frac{2}{3}$
+
+    $L_3(x) = \frac{x+2}{2+2} \cdot \frac{x+1}{2+1} \cdot \frac{x-1}{2-1} = \frac{1}{12}x^3
+    + \frac{1}{6}x^2 - \frac{1}{12}x - \frac{1}{6}$'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: "# Interlude: Bernstein Polynomials\n\n# Definition (Bernstein Polynomials of\
+    \ $f$)\n\nBernstein Basis Polynomials: $b_{n,k}(x) = \binom{n}{k}x^k(1-x)^{n-k}$\
+    \ for $k=0..n$\n\nBernstein Polynomial of $f$: Let $f:[0,1] \\to \\mathbb{R}$.\
+    \ Then\n\n$B_n(f) = \\sum_{k=0}^n f\\left(\\frac{k}{n}\\right)\\binom{n}{k}x^k(1-x)^{n-k}$\n\
+    \n$\textbf{Note: If $g:[a,b] \\to \\mathbb{R}$, then use $f(x)=g(a+(b-a)x)$.\n\
+    \n# Example\n\nLet $f(x)=x^3$ for $x \\in[0,1]$. Then $B_n(f) = \\sum_{k=0}^n\
+    \ \\frac{k^3}{n^3}\\binom{n}{k}x^k(1-x)^{n-k}$\n\n$B_1(x)=x \\quad\\quad\\ B_2(x)=\\\
+    frac{1}{4}x+\\frac{3}{4}x^2$\n\n$B_3(x)=\\frac{1}{9}x+\\frac{2}{3}x^2+\\frac{1}{9}x^3\
+    \ \\quad\\quad B_4(x)=\\frac{1}{16}x+\\frac{9}{16}x^2+\\frac{3}{8}x^3$"
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# Bernstein Basis Functions
+
+
+    # Bernstein Basis Functions, n = 3
+
+
+    $k=0: \quad b_{3,0}(x) = (1-x)^3 \quad k=1: \quad b_{3,1}(x) = 3x(1-x)^2$
+
+    $k=2: \quad b_{3,2}(x) = 3x^2(1-x) \quad k=3: \quad b_{3,3}(x) = x^3$
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_160_0.png)'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: '# Bernstein and Lagrange
+
+
+    # Example ($f(x) = \text{Heaviside}(x-\frac{1}{2})$))
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_161_0.png)'
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: '# # Newton Interpolation
+
+
+    # Newton Basis Polynomials
+
+
+    In order to make it easy to add a new knot, we change the set of basis polynomials.
+    Given a set of $n+1$ knots, $\{x_k\}$, set
+
+
+    ```
+
+    $N_0(x) = 1$
+
+    $N_1(x) = (x - x_0)$
+
+    $N_2(x) = (x - x_0)(x - x_1)$
+
+    $N_3(x) = (x - x_0)(x - x_1)(x - x_2)$
+
+    $:$
+
+    $N_n(x) = (x - x_0)(x - x_1) \cdots (x - x_{n-1})$
+
+    ```
+
+
+    Now let
+
+
+    ```
+
+    $P_n(x) = \sum_{k=0}^{n} a_k N_k(x)$
+
+    ```
+
+
+    Note that $\mathcal{B}_N = \{N_k(x) | k = 0..n\}$ forms a basis for $\mathbb{P}_n$.'
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: '# The Newton Coefficients
+
+
+    Calculating the $a_k$''s
+
+
+    For a set of $n+1$ data points $\{[x_k, y_k]\}$, define the (forward) divided
+
+    differferences recursively as
+
+
+    Then the Newton interpolating polynomial is
+
+
+    $$P_n(x) = [y_0] + [y_0, y_1](x-x_0) + [y_0, y_1, y_2](x-x_0)(x-x_1)$$n$$+ [y_0,
+    y_1, y_2, y_3](x-x_0)(x-x_1)(x-x_2) + \dots$$n$$= \sum_{k=0}^n [y_0, \dots, y_k]N_k(x).$$'
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: '# First Sample
+
+
+    # A Used Polynomial
+
+
+    Let $\mathcal{S} = \{[-2,1], [-1,-1], [0,1], [1,-1], [2,1]\}$.
+
+
+    Begin by building a *difference tableau*.
+
+
+    | x | -2 | -1 | 0 | 1 | 2 |
+
+    |---|---|---|---|---|---|n| y | 1 | -1 | 1 | -1 | 1 |
+
+    | $[y_0]$ | 1 | -1 | 1 | -1 | 1 |
+
+    | $[y_0,y_1]$ | | | -2 | -2 | 2 |
+
+    | $[y_0,y_1,y_2]$ | | | 2 | -2 | 2 |
+
+    | $[y_0,y_1,y_2,y_3]$ | | | | -4/3 | 4 |
+
+    | $[y_0,y_1,y_2,y_3,y_4]$ | | | | | 2/3 |
+
+
+    Then $P_4(x) = \sum_{k=0}^{n} [y_0, \dots, y_k]N_k(x)$
+
+
+    $1-2(x+2)+2(x+2)(x+1)-\frac{4}{3}(x+2)+\frac{2}{3}(x+2)(x+1)(x)(x-1)$
+
+
+    $P_4(x) = 1-\frac{8}{3}x^2+\frac{2}{3}x^4$.'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: '# Second Sample
+
+
+    # The Heaviside Function
+
+
+    Set $\mathscr{S} = \{[0,0], [\frac{1}{3},0], [\frac{2}{2},0], [\frac{3}{3},1],
+    [\frac{4}{4},1], [1,1]\}$.
+
+
+    Begin by building a **difference tableau**.
+
+
+    | x | 0 | 0.2 | 0.4 | 0.6 | 0.8 | 1 |
+
+    |---|---|---|---|---|---|---|n| y | 0 | 0 | 0 | 1 | 1 | 1 |
+
+    | $[y_0,y_1]$ | | | 0 | 5 | 0 | 0 |
+
+    | $[y_0,y_1,y_2]$ | | | $\frac{25}{2}$ | $-\frac{25}{2}$ | 0 |
+
+    | $[y_0,y_1,y_2,y_3]$ | | | $\frac{125}{6}$ | $-\frac{125}{3}$ | $\frac{125}{6}$
+    |
+
+    | $[y_0,y_1,y_2,y_3,y_4]$ | | | | $-\frac{625}{8}$ | $\frac{625}{8}$ |
+
+    | $[y_0,y_1,y_2,y_3,y_4,y_5]$ | | | | | $\frac{625}{4}$ |
+
+
+    Then $P_5(x) = \sum_{k=0}^5 [y_0, \dots, y_k]N_k(x)$
+
+
+    $P_5(x) = \frac{137}{12}x - \frac{875}{8}x^2 + \frac{1000}{3}x^3 - \frac{3125}{6}x^4
+    + \frac{625}{4}x^5$.'
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: '# Two Comparisons
+
+
+    # Example (cos($\pi x$) v. Lagrange, Newton, & Taylor)
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_166_0.png)
+
+
+    Lagrange: $L_4 = \frac{(x+1)(x)(x-1)(x-2)}{24} + \frac{(x+2)(x)(x-1)(x-2)}{6}
+    + \frac{(x+2)(x+1)(x-1)(x-2)}{4} \n+ \frac{(x+2)(x+1)(x)(x-1)}{6}$
+
+
+    Newton: $N_4 = 1-2(x+2)+2(x+2)(x+1)-\frac{4}{3}(x+2)(x+1) \n+ \frac{2}{3}(x+2)(x+1)(x-1)$
+
+
+    Taylor: $T_4 = 1-\frac{\pi^2}{2}x^2+\frac{\pi^4}{24}x^4$'
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: '# Second Comparison
+
+
+    Shifted Heaviside: $f(x) = Heaviside(x-1/2)$ on $[0,1]$
+
+
+    Lagrange: $L_5 = \frac{3125}{12}(x-\frac{1}{3})(x-\frac{2}{3})(x-\frac{4}{3})$
+
+    $-\frac{3125}{24}(x-\frac{1}{5})(x-\frac{2}{5})(x-\frac{3}{5})$
+
+    $+\frac{625}{24}(x-\frac{1}{5})(x-\frac{2}{5})(x-\frac{3}{5})$
+
+
+    Newton: $N_5 = \frac{125}{6}(x-\frac{1}{5})(x-\frac{2}{5})$
+
+    $-\frac{625}{8}(x-\frac{1}{5})(x-\frac{2}{5})(x-\frac{3}{5})$
+
+    $+\frac{625}{4}(x-\frac{1}{5})(x-\frac{2}{5})(x-\frac{3}{5})$
+
+
+    Bernstein: $B_5 = 10x^3(1-x)^2 + 5x^4(1-x)$
+
+
+    Taylor: $T_5$ centered at the middle $a = \frac{1}{2}$: Not possible. (Why?)
+
+    Centered at $a \in [0, \frac{1}{2})$, $T_5 = 0$
+
+    Centered at $a \in (\frac{1}{2}, 1]$, $T_5 = 1$'
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: '# Interlude: Splines
+
+
+    # Splines
+
+
+    Lagrange and Newton polynomials oscillate excessively when there are a number
+    of closely spaced knots. To alleviate the problem, use “splines,” piecewise, smaller-degree
+    polynomials with conditions on their derivatives. The two most widely used splines:
+
+
+    Bézier splines are piecewise Bernstein polynomials [Casteljau (1959) and Bézier
+    (1962)].
+
+
+    Cubic B-splines are piecewise cubic polynomials with second derivative equal to
+    zero at the joining knots [Schoenberg (1946)].
+
+
+    Along with engineering, drafting, and CAD, splines are used in a wide variety
+    of fields. TrueType fonts use 2-D quadratic Bézier curves. PostScript and MetaFont
+    use 2-D cubic Bézier curves.'
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: '# Exercises, I
+
+
+    # Exercises
+
+
+    For each of the functions given in 1. to 5:
+
+
+    +   - Find the Lagrange polynomial of order 6
+
+    - Find the Newton polynomial of order 6
+
+    - Find the Bernoulli polynomial of order 6
+
+
+    and plot the interpolation polynomial with the function.
+
+
+    +   1. $f(x) = sin(2\pi x)$ on $[0, 1]$
+
+    4. $k(x) = \frac{x}{x^2+1}$ on $[-10, 10]$
+
+
+    +   2. $g(x) = ln(x+1)$ on $[0, 2]$
+
+    5. $S(x) = \int_{0}^{x} [sin(\frac{1}{2}t^2) - \frac{\sqrt{\pi}}{2x}] dt$ for
+    $x \in [0, 10]$
+
+
+    +   3. $h(x) = tan(sin(x))$ on $[-\pi, \pi]$
+
+
+    +   6. Find an interpolating polynomial for the data given below. Plot the polynomial
+    with the data.
+
+
+    | 0.0 | 1.0 | 2.0 | 3.0 | 4.0 | 5.0 | 6.0 | 7.0 | 8.0 | 9.0 |
+
+    |---|---|---|---|---|---|---|---|---|--|
+
+    | 4.2 | 2.2 | 2.0 | 8.7 | 5.7 | 9.9 | 0.44 | 4.8 | 0.13 | 6.4 |'
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: '# Exercises, II
+
+
+    ### Exercises
+
+
+
+    \u20a2 7. An error bound for Newton interpolation with $n+1$ knots $\{x_k\}$ is
+
+
+    $|f(x) - N(x)| \leq \frac{1}{(n+1)!} \cdot \max |f^{(n+1)}(x)| \cdot \prod_{k=0}(x-x_k)$.$
+
+
+    Show this bound is less than or equal to the Lagrange interpolation error bound.
+    How does this make sense in light of the unicity of interpolation polynomials?
+    (NB: The formula for Newton interpolation also applies to Lagrange interpolation.)
+
+
+    8. Investigate interpolating *Runge''s “bell function”* $r(x) = e^{-x^2}$ on the
+    interval $[-5,5]$
+
+
+    a. with 10 equidistant knots,
+
+    nb. with “Chebychev knots” $x_k = 5\cos((n-j)\pi/n)$ with $j = 0..10$.
+
+
+    9. Write a Maple function that produces a *difference tableau* for a data set.
+    Test your function with the data set produced by
+
+    > `myData :=[seq([k,rand(-9.9())],k=1..10)];`'
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: '# Links and Others
+
+
+    Wikipedia entries:
+
+
+    More information:
+
+
+    +   - Lagrange Polynomial
+
+    - Bernstein Polynomials
+
+    - Newton Polynomial
+
+    - Wavelets
+
+
+    +   - Lagrange Interpolation
+
+    - Newton Interpolation
+
+    - Legendre Polynomial Calculator
+
+    - Chebyshev Polynomial Calculator
+
+
+    See also: Interpolation at MathWorld (Wolfram Research)
+
+
+    Investigate:
+
+
+    +   - Aitken Interpolation
+
+    - Extrapolation
+
+    - Gauss''s Interpolation Formula
+
+    - Hermite Interpolation
+
+    - Newton-Cotes Formulas
+
+    - Thiele''s Interpolation Formula
+
+
+    +   - Vandermonde Matrix
+
+    - The Maple command PolynomialInterpolation in the CurveFitting package
+
+    - MATLAB''s fit command
+
+    - Splines and Bézier curves
+
+    - Rational Interpolation'
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: "# S III. Case Study: TI Calculator Numerics\n\n+   1. Introduction .....................................................................................................\
+    \ 163\n2. Floating Point Structure ...................................................................................\
+    \ 165\n3. Numeric Derivatives ..............................................................................................\
+    \ 167\n4. Numerically Finding Roots ................................................................................\
+    \ 168\n5. Numeric Quadrature ................................................................................\
+    \ 169\n6. Transcendental Functions ................................................................................\
+    \ 170\n   Appendix V:TI's Solving Algorithm ................................................................\
+    \ 171\n   Exercises ............................................................................................................\
+    \ 172"
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: '# S III. Case Study: TI Calculator Numerics
+
+
+    # Introduction
+
+
+    Texas Instruments started a research project in 1965 to design a pocket calculator.
+    The first pocket calculators appeared in the early 1970s from the Japanese companies
+    Sanyo, Canon, and Sharp. The HP-35 (it had 35 keys) was the first scientific pocket
+    calculator, introduced by Hewlett Packard in 1972 for $395. In 1974, HP released
+    the HP-65 ($795), the first programmable pocket calculator.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_173_0.png)
+
+
+    Texas Instruments'' TI-8x series is based on the Zilog Z-80 processor (1976),
+    an 8-bit CPU originally running at 2 MHz. The TI-81 came out in 1990 with a 2
+    MHz Z80 and 2.4 KB RAM. The TI-84 Plus CE (released in 2015) has a 48 MHz Z80
+    with 4 MB Flash ROM and 256 KB RAM. In 2013, the calculators'' displays upgraded
+    to 320 × 240 pixels from the 1990''s 96 × 64 pixels.¹
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_173_1.png)
+
+
+    > ¹TI''s Nspire calculators use an ARM processor.'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: '# # TI-80 Series Calculators
+
+
+    # ## Timeline of the TI-80 Series
+
+
+    | Model | Year | Z80 Processor | RAM KB / ROM MB |
+
+    |---|---|---|--|
+
+    | TI-81 | 1990 | 2 MHz | 2.4 / 0 |
+
+    | TI-82 | 1993 | 6 MHz | 28 / 0 |
+
+    | TI-83 | 1996 | 6 MHz | 32 / 0 |
+
+    | TI-83 Plus | 1999 | 6 MHz | 32 / 0.5 |
+
+    | TI-83 Plus SE | 2001 | 15 MHz | 128 / 2 |
+
+    | TI-84 Plus | 2004 | 15 MHz | 128 / 1 |
+
+    | TI-84 Plus SE | 2004 | 15 MHz | 128 / 2 |
+
+    | TI-84 Plus C | 2013 | 15 MHz | 128 / 4 |
+
+    | TI-84 Plus CE | 2015 | 48 MHz | 256 / 4 |
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_174_0.png)
+
+
+    TI-81 TI-82 TI-83 TI-83+ TI-83+SE TI-84+ TI-84+SE TI-84+CE'
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: '# TI Floating Point
+
+
+    # TI Floating Point Structure
+
+
+    TI’s numeric model is not IEEE-754 compliant. The floating point format is
+
+
+    | 0 | +1 | +2 | +3 | +4 | +5 | +6 | +7 | +8 |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | s/T | EXP | DD | DD | DD | DD | DD | DD | DD |
+
+
+    s/T: Sign and Type Byte
+
+
+    | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+
+    |---|---|---|---|---|---|---|---|
+
+    | SIGN | reserved | | | | | | |
+
+
+    Floating point types: Real: 0Ch; Complex: 01h; (List: 01h; Matrix: 02h, etc.)
+
+
+    EXP: Power of 10 exponent coded in binary, biased by 80h
+
+
+    DD: Mantissa in BCD, 7 bytes of two digits per byte. While the mantissa has 14
+    digits, only 10 (+2 exponent digits) are displayed on the screen. (Many math routines
+    use 9-byte mantissas internally to improve accuracy.)
+
+
+    Examples: 3.14159265 = 00 80 31 41 59 26 50 00 00
+
+    −230.45 = 80 82 23 04 50 00 00 00 00'
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: '# TI Floating Point Software
+
+
+    TI Floating Point Software
+
+    There are six RAM locations called the Floating Point Registers OP1 to OP6;
+
+    each is 11 bytes (with 9 byte mantissas); they are used extensively for floating
+
+    point computations. The routines listed below, called in assembly programs,
+
+    operate on the value in OP1 unless noted.
+
+
+    TI''s operating system² includes the functions:
+
+
+    | Standard Function | |
+
+    |---|---|
+
+    | FPAdd (OP1+OP2) Ceiling | Sin ASIn |
+
+    | FPSSub (OP1–OP2) Int | Cos ACos |
+
+    | FPRecip (1/OP1) Trunc | Tan ATan |
+
+    | FPMult (OP1×OP2) Frac | SinH ASinH |
+
+    | FPDiv (OP1÷OP2) Round | CosH ACosH |
+
+    | FPSquare (OP1×OP1) RndGuard (to 10 d) | TanH ATnH |
+
+    | SqRoot RnFx (to FIX) | LnX EToX |
+
+    | Factorial (n·0.5 ≧ -0.5) Random | LogX TenX (10⁰OP1) |
+
+    | Max(OP1, OP2) RandInt | |
+
+    | Min(OP1, OP2) |'
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: '# Numeric Derivatives
+
+
+    nDeriv
+
+    TI uses a centered difference formula
+
+
+    $f''(a) \approx \frac{f(a+\varepsilon) - f(a-\varepsilon)}{2\varepsilon}$
+
+
+    The default step size is $\varepsilon = 0.001$. The command can''t be nested and
+    doesn''t check whether or not $f$ is differentiable at $a$.
+
+
+    Syntax: nDeriv(expression, variable, value[$\varepsilon$])
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_177_0.png)
+
+
+    (Screen images are from a TI-84+ SE with the 2.55MP OS.)'
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: '# Numerically Finding Roots
+
+
+    solve
+
+    TI uses a blend of the bisection and secant root-finding algorithms. (See Appendix
+    V.) The default initial interval is $[-10^{99},10^{99}]$. Solve does not find
+    roots of even multiplicity since the algorithm requires a sign change. (solve
+    is available only through CATALOG or the Solver application.)
+
+
+    Syntax: solve(expression,variable,initial_guess)
+
+
+    ```
+
+    solve(e^{x-1}-cos(X))
+
+    .7171847972
+
+    solve(X^2,X,1)
+
+    Error
+
+    ```'
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: '# Numeric Quadrature
+
+
+    fnInt
+
+    Tl uses an adaptive Gauss-Kronrod 7-15 quadrature
+
+
+    $\int_{-1}^{1} f(x)dx \approx \sum_{k=1}^{15} f(x_k) \cdot w_k$
+
+
+    The default error tolerance is $\varepsilon=10^{-5}$. The command can''t be nested
+    and doesn''t check if $f$ is integrable over $[a,b]$.
+
+
+    Syntax: fnInt(expression, variable, lower, upper[,$\varepsilon$)
+
+
+    ```
+
+    $\int_{-1}^{1}(\sin(x^2))dx\n.6205366034
+
+    ```
+
+
+    ```
+
+    $\int_{-2}^{2}(\pi-3x^{11})dx\nError
+
+    ```'
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: '# Transcendental and Other Functions
+
+
+    +   For trigonometric, logarithmic, and exponential functions, TI uses a modified
+    CORDIC algorithm. CORDIC''s standard “rotations” of $2^{-k}$ are replaced with
+    $10^{-k}$. (See the CORDIC Project.)
+
+
+    +   The factorial $x!$ where $x$ is a multiple of $\frac{1}{2}$ for $-\frac{1}{2}
+    \le x \le 69$ is computed recursively using
+
+
+    $$x! = \begin{cases} x \cdot (x-1)! & x > 0 \ 1 & x = 0 \ \sqrt{\pi} & x = -\frac{1}{2}
+    \end{cases}$$
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_180_0.png)'
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: "# Appendix V: TI's Solving Algorithm\n\n# Bisection and Secant Combined\n\n\
+    The solve function and the Solver application use a clever, modified combination\
+    \ of the secant method and bisection.3 The logic is:\n\n+   1. Order the bracketing\
+    \ points $a$ and $b$ so that $|f(b)| \\le |f(a)|$.\n2. Calculate a new point $c$\
+    \ using the secant method.\n3. If $c$ is:\n   a. outside the interval, replace\
+    \ $c$ with the midpoint (bisection),\n   b. too close to an endpoint (within $h$),\
+    \ replace $c$ with $c=b \\pm h$, a specified minimum step in the interval.\n4.\
+    \ The new bracketing points are $a \\& c$ or $b \\& c$, whichever pair has the\
+    \ sign change.\n5. If the error tolerance is met or the number of iterations is\
+    \ maximum, then return $c$, otherwise, go to Step 1.\n\n> 3 “Solve() uses a combination\
+    \ of bisection and the secant method, as described in Shampine and Allen Numerical\
+    \ Computing: An Introduction, Saunders, 1973\" (pp. 96–100 and 244) according\
+    \ to the TI 85 Knowledge Base."
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: "# Exercises, I\n\n+   1. Enter $1 + 1EE-13$. Now enter ANS - 1. Explain the\
+    \ result.\n2. Enter $\\pi - 3.141592654$ on a TI-84 and a TI Nspire CAS. Explain\
+    \ the different results.\n3. Explain the result of $nDeriv(|x|,x,0)$.\n4. Define\
+    \ $Y1$ to be the function $f(x) = \\frac{10^{-8}-(x-\\pi/2)^2}{10^{-16}+(x-\\\
+    pi/2)^2}$. Explain the results from using solve with an initial guess of:\n  \
+    \ a. 0\n   b. 1.5\n5. Define $f$ by $f(x) = |x-\\frac{1}{3}|^{-8/9}$. Compare\
+    \ evaluating $\\int_{-1}^{1} f(x)dx$ with\n   a. a TI-84+ SE,\n   b. Maple."
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: "# Exercises, II\n\n# Problems\n\n+   6. Using the Gamma function, we can define\
+    \ $x! = \\Gamma(x+1) = \\int_{0}^{\\infty} z^x e^{-z} dz$.\nCompute $(1/4)!$ using\
+    \ the Gamma function with a calculator and Maple.\n\n+   7. Investigate the integral\
+    \ $\\int_{-1}^{\\frac{\\pi}{\\pi-3x^{39}}} dx$ numerically and symbolically. First,\
+    \ graph the integrand.\n\n+   8. Report on how the calculator computes points\
+    \ to draw a graph.\n\n+   9. Compare graphs of $s(x) = \\sqrt[3]{x}$ over the\
+    \ interval $-1 \\le x \\le 1$ from the calculator and from Maple. Explain the\
+    \ differences.\n\n+   10. Explain the possible sources of error when the calculator\
+    \ computes $\\int_{0}^{1}\\left(\\frac{d}{dt}(T^{10})\right)_{T=X} dX$ using nDeriv\
+    \ and fnInt."
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: '# PROJECTS'
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: '# VII. Projects
+
+
+    +   The Project List
+
+    * One Function for All ............................................................................
+    176
+
+    I. Control Structures ....................................................................................
+
+    * A Bit Adder in Excel ................................................................................
+    177
+
+    * The Collatz Conjecture ........................................................................
+    178
+
+    * The CORDIC Algorithm ............................................................................
+    180
+
+    * The Cost of Computing a Determinant ................................................
+    184
+
+    II. Numerical Differentiation ....................................................................
+
+    * Space Shuttle Acceleration ................................................................
+    185
+
+    III. Root-Finding ....................................................................................
+
+    * Commissioner Loeb’s Demise ................................................................
+    187
+
+    * Roots of Wilkinson’s “Perfidious Polynomial” ........................................
+    110
+
+    * Bernoulli’s Method and Deflation .........................................................
+    193
+
+    IV. Numerical Integration .............................................................................
+
+    * The Fourier Power Spectrum ................................................................
+    196
+
+    V. Polynomial Interpolation .....................................................................
+
+    * Spline Fit to a Transition Curve ............................................................
+    198'
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: '# One Function for All
+
+
+    # Project: One Function for All, the Normal Distribution
+
+
+    The mean and standard deviation for total SAT scores for 2021 are $\mu = 1061$
+    (from Evidence-Based Reading 533 + Math 528) and $\sigma = 217$, respectively.$^1$
+    Define the function
+
+
+    ```
+
+    $F(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \int_{-\infty}^{x} e^{-\frac{1}{2}(\frac{(t-\mu)}{\sigma})^2}dt$
+
+    ```
+
+
+    +   1. Estimate the derivative of $F(x)$ for student scores that are one standard
+    deviation above the mean.
+
+
+    +   2. The minimum score for students scoring in the top 10% is found by solving
+    $0.10 = 1 - F(x)$. Use a root-finding method to find $x$.
+
+
+    +   3. Use a quadrature rule to evaluate $F(1157)$ — Appalachian State University’s
+    mean SAT score for entering first-year students in 2021.$^2$
+
+
+    +   4. Use an interpolating polynomial to approximate $F(x)$ for $x \in [1100,
+    1500]$.
+
+
+    > $^2$From the SAT Suite of Assessments Annual Report, The College Board.
+
+    $^2$From the College Admission Scores website.'
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: '# A Bit Adder in Excel
+
+
+    Project: Adding Bits in Excel
+
+
+    +   1. Implement the one-bit adder in Excel using IF-THEN statements and AND,
+    OR, and NOT functions.
+
+    2. Test your design with all 8 triples of 1-bit values.
+
+    3. Make an eight-bit adder with carries.
+
+    4. Test your design with 10 random pairs of 8-bit numbers.
+
+    5. Develop a mathematical model for the cost of computing the sum of two eight-bit
+    values.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_187_0.png)'
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: '# The Collatz Conjecture Project
+
+
+    # Lothar Collat''s Proposition
+
+
+    Lothar Collat posed a problem in 1937 that is quite simple to state, but that
+    still eludes proof. For any positive integer $n$, define the sequence
+
+
+    ```
+
+    $a_1 = n \quad and \quad a_{k+1} = \begin{cases} \frac{1}{2}a_k & \text{if } a_k
+    \text{ is even} \ 3a_k + 1 & \text{if } a_k \text{ is odd} \end{cases} \quad for
+    k > 1$
+
+    ```
+
+
+    Collatz conjectured the sequence would always reach 1 no matter the starting value
+    $n \in \mathbb{N}$.
+
+
+    # Conjecture (Collatz''s $3n+1$ Problem)
+
+
+    For every $n \in \mathbb{N}$, there is a $k \in \mathbb{N}$ such that the sequence
+    above has $a_k = 1$.
+
+
+    # Currently...
+
+
+    The conjecture has been verified for all starting values up to $87 \cdot 2^{60}$.\nRead
+    "The $3x+1$ Problem" by J. Lagarias (January 1, 2011 version) and check Eric Roosendaal''s
+    web site http://www.ericr.nl/wondrous/.'
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: '# # The Collatz Conjecture
+
+
+    +   1. Write a program, Collatz, that determines the *total stopping time* of
+    a starting value $n$. That is, given $a_1 = n$, find the first $k$ such that $a_k
+    = 1$. Define Collatz($n$) = k$.
+
+    2. Explain why Collatz($2^m$) = m$.
+
+    3. Generate a point-plot of the sequence $[n, Collatz(n)]$ for $n = 1$ to 100,000.
+
+    4. Use your graph to find the maximum value of Collatz($n$) for $n$ from 1 to
+    100,000.
+
+    5. Which initial value $n \le 10^6$ produces the largest total stopping time?
+    (Careful! For example, Collatz(159,487) = 183, but before $a_{183} = 1$, this
+    sequence hits $a_{67} = 17,202,377,752$, a value that very much overflows an unsigned
+    32-bit integer.)
+
+    6. Report on the history of Collatz''s conjecture.
+
+
+    **Extra for Experts:** Prove that Collatz($2^mn$) = $m + Collatz(n)$.'
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: '# The CORDIC Algorithm
+
+
+    In 1959, Jack Volder designed a way to compute trigonometric functions very quickly,
+    the CORDIC algorithm,3 while working on digitizing the navigation system of the
+    B58 Hustler, the Mach 2-capable supersonic bomber. During the ''70s, John Walther
+    extended CORDIC to compute exponentials, logs, and hyperbolic trigonometric functions.
+    The algorithm became the standard for calculators (using BCD).
+
+
+    # CORDIC Recurrence Equations
+
+
+    ```
+
+    $x_{k+1} = x_k - 2^{-k}m\delta_k y_k$
+
+    ny_{k+1} = y_k + 2^{-k}\delta_k x_k$
+
+    z_{k+1} = z_k - \delta_k \sigma_k$$
+
+    ```
+
+
+    where $m=1$ (trig), $0$ (arith), or $-1$ (hypertrig), $\delta_k=\pm1$, and $\sigma_k$
+    is a scaling factor.'
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: "# The CORDIC Parameters\n\n# Parameter Choices\n\n| | Rotation Mode | Vectoring\
+    \ Mode |\n|---|---||\n| | $\\delta_k = \text{sgn}(z_k)$ $(z_k \to 0)$ | $\\delta_k\
+    \ = -\text{sgn}(y_k)$ $(y_k \to 0)$ |\n| $m = 1$ | $\\langle x_0, y_0, z_0 \r\
+    angle = \\langle K, 0, \theta \rangle$ $x_n \to \\cos(\theta)$; $y_n \to \\sin(\t\
+    heta)$ | $\\langle x_0, y_0, z_0 \rangle = \\langle x, y, 0 \rangle$ $z_n \to\
+    \ \text{tan}^{-1}(y/x)$ |\n| $m = 0$ | $\\langle x_0, y_0, z_0 \rangle = \\langle\
+    \ x, 0, z \rangle$ $y_n \to x \times z$ | $\\langle x_0, y_0, z_0 \rangle = \\\
+    langle x, y, 0 \rangle$ $z_n \to y/x$ |\n| $m = -1$ | $\\langle x_0, y_0, z_0\
+    \ \rangle = \\langle K', 0, \theta \rangle$ $x_n \to \\cosh(\theta)$; $y_n \t\
+    o \\sinh(\theta)$ | $\\langle x_0, y_0, z_0 \rangle = \\langle x, y, 0 \rangle$\
+    \ $z_n \to \text{tanh}^{-1}(y/x)$ |\n| (some $\\sigma_k$ repeated) | $\\langle\
+    \ x_0, y_0, z_0 \rangle = \\langle K', 0, \theta \rangle$ $x_n + y_n \to e^\t\
+    heta$ | $\\langle x_0, y_0, z_0 \rangle = \\langle w+1, w-1, 0 \rangle$ $z_n \t\
+    o \\frac{1}{2} \\ln(w)$ |\n\n$K = \\prod_{j=0}^n \\cos(\\sigma_k), \\quad K' =\
+    \ \\prod_{j=0}^n \\cosh(\\sigma_k)$"
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: "# CORDIC in Maple\n\n# CORDIC Trigonometric Functions with Maple\n\n```\nCORDIC[Trig]\
+    \ :=proc(t)\n  local n, K, x, y, z, j, del;\n  n :=47;\n  K:=cos(arctan(1.0));\n\
+    \  for j to n-1 do\n    K:=K.cos(arctan(2.-j))\n  end do;\n  (x[1], y[1],z[1])\
+    \ := (K, 0, evalf(t));\n  for j to n+1 do\n    del:=sign(z[j]);\n    if del=0\
+    \ then del :=1 end if;\n    x[j+1]:=x[j]-del.y[j].2.-j+1;\n    y[j+1]:=y[j]+del.x[j].2.-j+1;\n\
+    \    z[j+1]:=z[j]-del.arctan(2.-j+1);\n  end do;\n  return (fnormal([x[j], y[j],\
+    \ z[j]]));\nend proc:\n```"
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: '# The CORDIC Project
+
+
+    Project
+
+
+    +   1. Modify the Maple program CORDIC[Trig] to compute arctan(θ).
+
+    2. Write a Maple program CORDIC[HyperTrig] that computes hyperbolic trigonometric
+    functions using CORDIC.
+
+    3. Write a Maple program CORDIC[Exp] that computes the exponential function using
+    CORDIC.
+
+    4. Write a Maple program CORDIC[Ln] that computes the logarithmic function using
+    CORDIC.
+
+    5. Report on the complex number basis of the CORDIC algorithm.
+
+    6. Create a presentation on the history of the CORDIC algorithm.
+
+
+    Extra for Experts:
+
+    Write a single program that computes all possible CORDIC outputs.'
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: '# # The Cost of Computing a Determinant
+
+
+    **Project: The Computation Cost of a Determinant**
+
+
+    +   1. a. Define a function in Maple that produces an arbitrary square matrix:
+
+    > M:=n→Matrix(n,n, symbol=a):
+
+    b. Define a shortcut function det for determinant:
+
+    > det := A→LinearAlgebra[Determinant] (A) :
+
+    c. Define a function for calculating the computation cost of a determinant, ignoring
+    finds:
+
+    > Cost := expr→ subs(subscripts=0, codegen[cost](expr)):
+
+    d. Test your functions with:
+
+    > A :=M(2):
+
+    > A, det(A), Cost(det(A))
+
+
+    +   2. Write a loop that computes the cost of a $1 \times 1$ determinant up to
+    a $10 \times 10$ determinant. (A $10 \times 10$ determinant can take nearly 20
+    minutes.)
+
+
+    +   3. Develop a mathematical model for the cost of computing a determinant in
+    terms of its dimension $n$.'
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: '# # Space Shuttle Acceleration
+
+
+    # ## Space Shuttle Acceleration: The Situation³
+
+
+    The Space Shuttle had three phases from ignition to achieving orbit. The first
+    phase began by the shuttle lifting off the launch pad using solid rocket boosters
+    (SRBs) to accelerate extremely quickly. At approximately two minutes, the SRBs
+    were separated and fell back to Earth.
+
+
+    The second phase began with SRB separation and lasted approximately 6.5 minutes.
+    The shuttle speed increased to 17,500 mph — the speed needed to achieve orbit.
+    (Note this speed is a good deal less than the Earth''s escape velocity of 25,000
+    mph).
+
+
+    The third phase began at about 9 minutes when the fuel external tank was jettisoned
+    and the shuttle entered orbit. NASA''s data (next pg) lists the time, altitude,
+    and velocity for STS-121 from July 4, 2006.
+
+
+    PROJECT.
+
+
+    +   1. Using different divided difference formulas, compute and graph the shuttle''s
+    acceleration. Compare the results from each method.
+
+    2. Determine the maximum acceleration and its time.
+
+    3. Approximate the acceleration when the shuttle entered orbit at 9 minutes.
+
+    4. Explain why the shuttle''s velocity cannot be computed from ΔAltitude/time.'
+  merge: -1
+  pgno: 195
+- img_proc: true
+  md: '# # Space Shuttle Acceleration, II
+
+
+    #  The Data
+
+
+    | Time (s) | Altitude (m) | Velocity (m/s) | Time (s) | Altitude (m) | Velocity
+    (m/s) |
+
+    |---|---|---|---|---|---||
+
+    | 0 | 0 | 0 | 280 | 105,321 | 2651 |
+
+    | 20 | 1,244 | 139 | 300 | 107,449 | 2915 |
+
+    | 40 | 5,377 | 298 | 320 | 108,619 | 3203 |
+
+    | 60 | 11,617 | 433 | 340 | 108,942 | 3516 |
+
+    | 80 | 19,872 | 685 | 360 | 108,543 | 3860 |
+
+    | 100 | 31,412 | 1026 | 380 | 107,690 | 4216 |
+
+    | 120 | 44,726 | 1279 | 400 | 106,539 | 4630 |
+
+    | 140 | 57,396 | 1373 | 420 | 105,142 | 5092 |
+
+    | 160 | 67,893 | 1490 | 440 | 103,775 | 5612 |
+
+    | 180 | 77,485 | 1634 | 460 | 102,807 | 6184 |
+
+    | 200 | 85,662 | 1800 | 480 | 102,552 | 6760 |
+
+    | 220 | 92,481 | 1986 | 500 | 103,297 | 7327 |
+
+    | 240 | 98,004 | 2191 | 520 | 105,069 | 7581 |
+
+    | 260 | 102,301 | 2417 | | | |'
+  merge: -1
+  pgno: 196
+- img_proc: true
+  md: '# Commissioner Loeb''s Demise
+
+
+    # The Situation^4
+
+
+    Commissioner Loeb was murdered in his office. Dr. “Ducky” Mallard, NCIS coroner,
+    measured the corpse''s core temperature to be 90°F at 8:00 pm. One hour later,
+    the core temperature had fallen to 85°F. Looking through the HVAC logs to determine
+    the ambient temperature, Inspector Clouseau discovered that the air conditioner
+    had failed at 4:00 pm; the Commissioner’s office temperature was 68°F then. The
+    log’s strip chart shows Loeb’s office temperature rising at 1°F per hour after
+    the AC failure; at 8:00 pm, it was 72°F.
+
+
+    Inspector Clouseau believes Snidely Whiplash murdered the Commissioner, but Whiplash
+    claims he was being interviewed by Milo Bloom, staff reporter of the *Bloom Beacon*,
+    at the time. Bloom’s interview started at 6:30 pm and lasted until 7:15. Whiplash’s
+    lawyer, Horace Rumpole, believes he can prove Snidely’s innocence.
+
+
+    ^4Adapted from A Friendly Introduction to Numerical Analysis by Brian Bradie.'
+  merge: -1
+  pgno: 197
+- img_proc: true
+  md: "# Commissioner Loeb's Demise\n\n# First Steps\n\n+   1. The office temperature\
+    \ is $T_{ambient} = 72 + t$, where $t = 0$ is 8:00 pm.\n\n+   2. Newton's Law\
+    \ of Cooling applied to the corpse's temperature gives $\\frac{dT}{dt} = -k(T\
+    \ - T_{ambient}) = -k(T - t - 72)$ with $T_0 = 90$.\n\n+   3. A little differential\
+    \ equation work (with an *integrating factor*) yields $T(t) = \\left[ 72 + t -\
+    \ \\frac{1}{k} \right] + e^{-kt} \\cdot \\left[ 18 + \\frac{1}{k} \right]$.\n\n\
+    +   4. To find $k$, use the other data point. Set $T(1) = 85^\\circ\text{F}$,\
+    \ then solve for $k$.\n\n+   5. Last, solve $T(t_D) = 98.6$ for $t_D$, the time\
+    \ of death."
+  merge: -1
+  pgno: 198
+- img_proc: true
+  md: "# Commissioner Loeb's Demise\n\n+   1. Using the four methods, Bisection, Newton,\
+    \ Secant, and Regula Falsi\n   a. Find the value of $k$ using First Step 4.\n\
+    \   b. Find $t_d$, the time of death of Commissioner Loeb, from First Step 5.\n\
+    \   c. What was the temperature of the Commissioner's office at $t_D$?\n   d.\
+    \ How does error in the value of $k$ effect error in the computation of $t_D$?\n\
+    2. Compare the four methods and their results.\n3. Graph $T(t)$ over the relevant\
+    \ time period.\n4. Chief Inspector Charles LaRousse Dreyfus answers the press’s\
+    \ questions:\n   - Is Inspector Clouseau right?\n   - Could Snidely Whiplash have\
+    \ killed Commissioner Loeb?\n   - Will Horace Rumpole get another client off?\n\
+    \   - Will Milo Bloom win a Pulitzer?\n   - Will Bullwinkle finally pull a rabbit\
+    \ out of his hat?"
+  merge: -1
+  pgno: 199
+- img_proc: true
+  md: '# Wilkinson’s Perfidious Polynomial
+
+
+    In 1963, James Wilkinson created a polynomial to illustrate numerical difficulties
+    in computing roots.5 His polynomial is:
+
+
+    ```
+
+    $W(x) = x^{20}\n-210x^{19}\n-20615x^{18}\n-1256850x^{17}\n-53327946x^{16}\n-1672280820x^{15}\n-40171771630x^{14}\n-756111184500x^{13}\n-1131027699381x^{12}\n-13558512899530x^{11}\n-1307535010450395x^{10}\n-101422986551450x^{9}\n-63030812099249846x^{8}\n-31133643161390640x^{7}\n-120664780378037360x^{6}\n-35999751974607200x^{5}\n-80378112264051776x^{4}\n-12870931245150988800x^{3}\n-13803759753640704000x^{2}\n-87529480367671600000x\n-2432902008176640000
+
+    ```
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_200_0.png)
+
+
+    > 5See: James H Wilkinson, “The Perfidious Polynomial,” in Studies in Numerical
+    Analysis, ed. G. Golub, 1984, MAA, pp. 3–28.'
+  merge: -1
+  pgno: 200
+- img_proc: true
+  md: '# Wilkinson''s Polynomial''s Roots
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_201_0.png)
+
+
+    Red box: root of $w\{x\}$
+
+    Blue circle: root of $wp\{x\} = w\{x\} + 10^{-23}x^{19}$'
+  merge: -1
+  pgno: 201
+- img_proc: true
+  md: '# Wilkinson’s Polynomial’s Roots
+
+
+    # The Project
+
+
+    +   1. Describe what happens when trying find the root at $x = 20$ using Newton’s
+    method.
+
+    2. Describe what happens when trying find the root at $x = 20$ using Halley’s
+    method.
+
+    3. Discover what happens when the constant term is perturbed, i.e., investigate
+    the roots of $p(x) = w(x) + 10^6$.
+
+    4. Discover what happens when the $x^1$ term is perturbed, i.e., investigate the
+    roots of $p(x) = w(x) + x$.'
+  merge: -1
+  pgno: 202
+- img_proc: true
+  md: '# Bernoulli’s Method for Polynomial Roots
+
+
+    # Bernoulli’s Method (1728)⁶
+
+
+    Let $p(x) = x^n + a_{n-1}x^{n-1} + \dots + a_0$ be a polynomial (wolog assuming
+    $p$ is monic) and let $r$ be the root of $p$ with the largest magnitude. If $r$
+    is real and simple, define the sequence $\{x_k\}$ recursively by
+
+
+    ```
+
+    $x_k = -a_{n-1}x_{k-1} - a_{n-2}x_{k-2} - \dots - a_0x_{k-n} \quad k = 1, 2, \dots$
+
+    $x_0 = 1, x_{-1} = x_{-2} = \dots = x_{-n+1} = 0$.
+
+    ```
+
+
+    Then
+
+
+    ```
+
+    $\frac{x_{n+1}}{x_n} \to r$.
+
+    ```
+
+
+    +   - Bernoulli’s method works best when $p$ has simple roots and $r$ is not “close”
+    to $p$''s next largest root.
+
+
+    +   - If the ratio does not tend to a limit, but oscillates, the root of greatest
+    modulus is one of a pair of conjugate complex roots.” (Whittaker & Robinson, *The
+    Calculus of Observations*, 1924.)'
+  merge: -1
+  pgno: 203
+- img_proc: true
+  md: '# # Deflation
+
+
+    # Deflating a Polynomial
+
+
+    Let $p(x)$ be a polynomial. If a root $r$ of $p$ is known, then the *deflated
+    polynomial* $q(x)$ is
+
+
+    ```
+
+    $$p_1(x) = \frac{p(x)}{x - r}.$$
+
+    ```
+
+
+    The coefficients of $p_1$ are easy to find using *synthetic division*.
+
+
+    # The Technique
+
+
+    +   1. Use Bernoulli''s method to find $r$, the largest root of $p$
+
+    2. Deflate $p$ to obtain $p_1$
+
+    3. Repeat to find all roots.
+
+
+    Problem: Since there is error in $r$''s computation, there is error in $p_1$''s
+    coefficients. Error compounds quickly with each iteration.'
+  merge: -1
+  pgno: 204
+- img_proc: true
+  md: '# The Bernoulli Project
+
+
+    # The Project
+
+
+    +   1. Expand Wilkinson''s “perfidious polynomial” into standard form
+
+    $$W(x) = \prod_{k=1}^{20}(x-k) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_0$$
+
+    2. Use 50 iterations of Bernoulli''s method to find the largest magnitude root.
+    What is the relative error?
+
+    3. Determine $W_1(x)$, the deflated polynomial using the root from 2.
+
+    4. Use 50 iterations of Bernoulli''s method to find the largest magnitude root
+    of $W_1(x)$. What is the relative error?
+
+    5. Determine $W_2(x)$, the deflated polynomial using the root from 4.
+
+    6. Use 50 iterations of Bernoulli''s method to find the largest magnitude root
+    of $W_2(x)$. What is the relative error?
+
+    7. Discuss the propagation of error in the deflations.'
+  merge: -1
+  pgno: 205
+- img_proc: true
+  md: '# # The Fourier Power Spectrum
+
+
+    # ## Calculating the Power Spectrum of a Signal
+
+
+    The *Power Spectrum* of a signal $f$ gives the amount of power of a specific frequency
+    component in the signal. The value at the frequency $\omega$ is given by
+
+
+    ```
+
+    P(\omega) = \sqrt{a_{\omega}^2(f) + b_{\omega}^2(f)}$
+
+    ```
+
+
+    where $a_{\omega}(f)$ and $b_{\omega}(f)$ are the Fourier coefficients of $f$
+    at the frequency $\omega$. The Fourier coefficients $a$ and $b$ are computed with
+    the integrals $(\omega \ge 1)$
+
+
+    ```
+
+    $a_{\omega}(f) = \int_{-\pi}^{\pi} f(t)\cos(\omega t)dt \quad \text{and} \quad
+    b_{\omega}(f) = \int_{-\pi}^{\pi} f(t)\sin(\omega t)dt$
+
+    ```
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_206_0.png)
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_206_1.png)
+
+
+    The *Spectrum Plot* shows the power level at each frequency.'
+  merge: -1
+  pgno: 206
+- img_proc: true
+  md: '# # The Fourier Power Spectrum, II
+
+
+    # ## The Project: Produce a Spectrum Plot of the Square Wave
+
+
+    We will use numerical integration to compute the spectrum of the square wave $SW(t)
+    = |\sin(3t)|/\sin(3t)$.
+
+
+    +   1. Choose a method from: *midpoint, trapezoid, Simpson''s*.
+
+    2. Use your method to numerically integrate $P(\omega)$ for $\omega = 1..100$.
+
+    3. Use Maple to create a list, *Spectrum*, of lines $[[k,0], [k,P(k)]]$ for $k
+    = 1..100$.
+
+    4. Graph the list with $plot[{Spectrum\}, thickness = 3]$.
+
+    5. Change the numerical integration method to either *Gauss quadrature* or *Gauss-Kronrod
+    quadrature*.
+
+    6. Recompute the power spectrum and its graph. Do the spectrum values change?
+    Is it faster or slower?
+
+
+    # ## Extra for Experts
+
+
+    +   1. Show that $a(k) = 0$ for $k \ge 1$. (HINT: Integrals of even & odd functions).
+
+    2. Then conclude that $P(k) = |b(k)|$ for $k \ge 1$.
+
+    3. Last, demonstrate that $b(k) = 0$ unless $k = 3 (mod\ 6)$.^7$.
+
+
+    > $^7Extended Project: Determine this condition for $SW_n(t) = |\sin(nt)|/\sin(nt).$'
+  merge: -1
+  pgno: 207
+- img_proc: true
+  md: '# Spline Fit to a Transition Curve
+
+
+    # Transition Curves
+
+
+    A transition curve is a section of highway or railroad track used to go from a
+    straight section into a curve. A transition curve is designed to prevent sudden
+    changes in lateral acceleration, which would occur with a circular segment, by
+    smoothly transitioning into and out of a curve. The basic transition curve parametric
+    function $\mathcal{F}(t)$ uses the Fresnel sine and cosine integrals
+
+
+    ```
+
+    $C(t) = \int_0^t \cos\left(\frac{1}{2}\pi t^2\right) dt \quad S(t) = \int_0^t
+    \sin\left(\frac{1}{2}\pi t^2\right) dt$
+
+    ```
+
+
+    to give $\mathcal{T}(t) = [C(t), S(t)]$. These integrals do not have elementary
+    antiderivatives, and must be evaluated numerically.
+
+    A segment from the spiral $\mathcal{T}$ forms a transition curve which will provide
+    a smooth transition without a sudden change in lateral acceleration.
+
+    Graph $C$ and $S$ to see their respective behaviors.
+
+
+    This project will investigate using splines to lay out a roadbed.
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_208_0.png)'
+  merge: -1
+  pgno: 208
+- img_proc: true
+  md: '# Spline Fit to a Transition Curve, II
+
+
+    # Spline Fitting a Transition Curve for a Roadbed
+
+
+    Two roads are perpendicular and need to be connected by a curve. We''ll blend
+    two transition curves to make the road. One curve will start at A and turn toward
+    the north until B. The second transition curve will start at C and turn meeting
+    the first at B. The two curves'' tangents match at B. We will compute viewpoints
+    along the centerline using the two transition curves, then fit a cubic spline
+    through the data-points to lay out the roadbed to make surveying and construction
+    reasonable. Use the data table below to determine the cubic spline.
+
+
+    # Transition Curve Coordinates
+
+
+    | A = (0.0, 0.0) | (0.18, 0.003) | (0.35, 0.02) |
+
+    | (0.52, 0.08) | B = (0.66, 0.18) | (0.75, 0.30) |
+
+    | (0.80, 0.47) | (0.82, 0.65) | C = (0.83, 0.82) |
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_209_0.png)'
+  merge: -1
+  pgno: 209
+- img_proc: true
+  md: '# # References
+
+
+    +   * Brian Bradie, *A Friendly Introduction to Numerical Analysis*, Pearson,
+    2006
+
+    * Richard Burden, J. Douglas Faires, & Annette Burden, *Numerical Analysis*, 10th
+    ed, Cengage Learning, 2015
+
+    * Laurent Demanet, *Introduction to Numerical Analysis*, MIT OpenCourseWare, 2012
+
+    * Francis Hildebrand, *Introduction to Numerical Analysis*, 2nd ed, Dover Publications,
+    1987
+
+    * James P Howard, II, *Computational Methods for Numerical Analysis with R*, CRC
+    Press, 2017
+
+    * Bookauthority''s “100 Best Numerical Analysis Books of All Time”'
+  merge: -1
+  pgno: 210
+- img_proc: true
+  md: '# References
+
+
+    # Selected Websites
+
+
+    +   - Wikipedia''s "Computational mathematics"
+
+    - Springer''s "Encyclopedia of Mathematics" "Computational mathematics"
+
+    - Simplicable''s "What is Computational Mathematics?"
+
+    - University of Waterloo''s "Welcome to Computational Mathematics"
+
+    - Council on Undergraduate Research''s "Computational Mathematics: An Opportunity
+    for Undergraduate Research" (pdf download)
+
+
+    +   - Perform a Google Scholar search for computational mathematics
+
+    - Search on Amazon.com for computational mathematics textbooks'
+  merge: -1
+  pgno: 211
+- img_proc: true
+  md: '# The End
+
+
+    ![](img/de7f33bb3a5a3d79f7bc9c0a3115448b_212_0.png)
+
+
+    Whew. After all that, it''s time to sit down...'
+  merge: -1
+  pgno: 212
