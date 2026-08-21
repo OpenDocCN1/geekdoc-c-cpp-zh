@@ -1,0 +1,298 @@
+- img_proc: true
+  md: '# Matter
+
+
+    # CellProcess
+
+
+    # Preview
+
+
+    # # Programming silk: Two-step crystallization and growth in nanofibrillar assembly
+
+
+    Jun Ho Hwang,¹ Nathan C. Gianneschi,² and Eunji Lee³*
+
+    ¹Department of Materials Science and Engineering, Gwangju Institute of Science
+    and Technology (GIST), Gwangju 61005, Republic of Korea
+
+    ²Department of Materials Science & Engineering, Department of Biomedical Engineering,
+    and Department of Pharmacology, Northwestern University, Evanston, IL 60208, USA
+
+    ³Department of Chemistry, Gwangju Institute of Science and Technology (GIST),
+    Gwangju 61005, Republic of Korea
+
+    *Correspondence: lee@gist.ac.kr
+
+    https://doi.org/10.1016/j.matt.2023.102351
+
+
+    Real-time visualization reveals a controllable two-step silk nanofibrillar assembly
+    mechanism where landscape directs conformational transformation from amorphous
+    clusters to β-sheet crystals, enabling the rational design of enhanced silk materials.
+
+
+    Silk proteins produced by spiders and silkw serve diverse functions in textiles,
+    cosmetics, and protective materials due to their exceptional strength and biocompatibility.¹
+    From a material, the toughest fibers—surpassing even steel and Kevlar—is remarkable.
+    Despite efforts to improve these properties through synthetic strategies, the
+    performance of silk remains largely unattainable.⁴ This gap is due to an incomplete
+    understanding of the hierarchical architecture and formation pathways that define
+    the mechanism of natural silks.
+
+
+    hydrogen bonding and the establishment of new, highly ordered interactions among
+    amorphous chains.⁵ Identifying the mechanisms that give silk nanofibrillar assembly
+    high-resolution analytical techniques to capture structural transformations in
+    real.
+
+
+    vertical contraction to ~3 nm, marking the onset of directional alignment. Morphological
+    transition reflects a toughened nucleation mechanism in which a conformational
+    transformation toward a compact β-sheet structure occurs. Remarkably, elongation
+    occurs during the attachment of molecules at a single fibril,
+
+
+    Fibroin, the primary component of silk, exhibits amphiphicity with hydrophilic
+    and hydrophobic domains. This structural motif supports the block-based model
+    of silk assembly in environments.⁷ Consider the role in silk assembly,⁸ how building
+    blocks driven by shear and directional forces during fiber formation are not fully
+    understood. In particular, conformational orientation within nanofibrillar structures
+    remains to be explored, as it is governed by both kinetic and thermodynamic constraints.⁹
+
+
+    In a recent study published in Advanced Materials, James J. Doe and Yoore employ
+    electron microscopy in situ core and photo-induced fluorescence microscopy (PIFM)
+    to capture the early stages of silk fibril formation and track the accompanying
+    conformational changes of the molecular structure.
+
+
+    Real-time visualization revealed the multi-path nucleation: single molecules first
+    coalesce into amorphous clusters, then transform into β-sheet structures through
+    directional alignment and growth. Deliberately reshaping the underlying landscape,
+    the authors demonstrated that the resulting assembly can be tailored properties
+    properties inherent resistance to degradation.
+
+
+    To examine the assembly of silk nanofibers, the silk protein derived from bony
+    moth coco was deposited onto highly oriented graphite (HOG) and incubated under
+    annealed conditions. AFM imaging captured the initial appearance of sub-nanometer
+    parameters that gradually grew reaching a height of 3-4 nm (Figure 1) Local clusters
+    formed
+
+
+    Viewed through the lens of classical theory, these observations point to a more
+    nuanced and two-step pathway.
+
+
+    Overall, these observations underscore the critical role of the fibril tip in
+    directing the growth and the orientation of silk nanofibrils.
+
+
+    In this model, an intermediate form during the growth of the fibril tip converting
+    into the stable β-sheet structure. This intermediate was identified using selective
+    enzymatic degradation.
+
+
+    Because proteolytic cleavage sites in silk vary with secondary structure, the
+    protease protein trypsin targets non-segment domains. Protein treatment halted
+    fibril elongation and inhibited degradation from the tip, confirming that this
+    region is enriched in unfolded protein. These results further indicate that sub-critical
+    clusters
+
+
+    ![](img/df99e20728044668e278abf99479b5ee_0_0.png)
+
+
+    conformational contraction are not'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Elongation process of silk nanofibril
+
+
+    ![](img/df99e20728044668e278abf99479b5ee_1_0.png)
+
+
+    # Continuous nucleation at one end
+
+
+    ![](img/df99e20728044668e278abf99479b5ee_1_1.png)
+
+
+    Conformational structure of the silk nanofibril
+
+
+    ![](img/df99e20728044668e278abf99479b5ee_1_2.png)
+
+
+    # Conformational structure of silk nanoparticles
+
+
+    PIFM images and spectra
+
+
+    # Distribution of molecular conformations
+
+
+    ![](img/df99e20728044668e278abf99479b5ee_1_3.png)
+
+
+    # Two-step growth processes of silk nanofibril formation
+
+
+    ![](img/df99e20728044668e278abf99479b5ee_1_4.png)
+
+
+    # Free energy of silk formation
+
+
+    ![](img/df99e20728044668e278abf99479b5ee_1_5.png)
+
+
+    **Figure 1.** Hierarchical nanofibril assembly of silk via conformational transitions
+
+    (A) Time-resolved growth process of silk nanofibrils. The nucleus undergoes conformational
+    transformation into a compact structure and subsequently grows longitudinally
+    through three stages: attachment of segments, the tip. Upon addition of paper
+    solution, nanofibril growth ceases and degradation initiates at the tip, indicating
+    that the tips are composed of non-self-oriented segments.
+
+    (B) Conformational analysis of silk nanoparticles using PIFM. Nanofibrils are
+    predominantly composed of β-sheet and β-turn structures, whereas nanoparticles
+    exhibit high β-sheet content and random orientation.
+
+    (C) Two-step mechanism of silk formation. The free energy landscape reveals size-dependent
+    phase stability, illustrating how fluctuating amorphous clusters overcome energy
+    barriers during conformational transitions to stable nanofibrils.\Adapted with
+    permission from Shi et al.. Copyright 2025, Wiley-VCH.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Matter Preview
+
+
+    # CellPress
+
+
+    predominantly composed of unfolded silk molecules,
+
+
+    cific pathways, ultimately shaping the morphology and function of the material.
+    This level of control enables the rational design of materials with precisely
+    tailored properties. Applying these principles to silk, engineering the landscape
+    allows for the fabrication of synthetic materials with enhanced mechanical properties.
+
+
+    blueprint; we can now move from observing biological assembly to directing it.
+    This presents a paradigm shift to transform biological design.
+
+
+    To probe the structural composition of silk PFM was used to spatially resolve
+    protein conformations (Figure 1B). Individual nanofibers exhibit biased absorption
+    signals compared to J and β-turn structures. In non-fibrous assemblies, such as
+    nanofibers, a high degree of discordance features partially random order. Observations
+    indicate that nanofib growth, silk molecules progress from amorphous clusters
+    into ordered β-sheet domains. This rearrangement facilitates the formation of
+    intramolecular hydrogen bonds, lowers the system''s energy, and stabilizes it.
+
+
+    of, the organization of silk materials has been interpreted through models originally
+    developed for organic systems, liking silk reveals disordered assemblies. Organic
+    and molecular macromolecules display more diversity, responding to mechanical
+    and environmental sensitivity. In solution, their self-assembly pathways governed
+    by intermolecular interactions. Structural and functional unity in the nanofibre
+    therefore denotes a detailed understanding of these pathways.
+
+
+    ACKNOWLEDGMENTS
+
+
+    This research was supported by the National Research Foundation (2022R0001289
+    and 2023R0001438) by the National Foundation of Korea (Ministry of Science and
+    ICT, MOST). Work was also funded by KIST Global Program and InnoCore-GIST program
+    of the GIST.
+
+
+    The results of this study show that silk self-assembly proceeds via a two-step
+    mechanism governed by phase stability (Figure 1C). However, nanofibers form amorphous
+    clusters that fail to reach a critical size. Once this threshold is surpassed,
+    controlled molecular accumulation follows the free energy barrier for conformational
+    transformation, enabling the formation of metastable β-sheet phase which becomes
+    enhanced against degradation. The fiber tips confirms the presence of J-turn crystallinity
+    and reinforces the notion of a two-step energetic and structural landscape, a
+    mechanism observed primarily in systems. This pathway allows the assembly to circumvent
+    the high energy barrier of direct crystallization by using a metastable intermediate.
+
+
+    DECLARATION OF INTEREST
+
+
+    The authors declare no competing interests.
+
+
+    DECLARATION OF AI AND AI-ASSOCIATED INTERESTS
+
+
+    During the preparation of this work, the authors used ChatGPT to improve language
+    and readability. After using this tool, the authors reviewed and edited the content
+    and take full responsibility for the content.
+
+
+    REFERENCES
+
+
+    1. Volfath, H., Pearson, D.P. (2001). Crystallization spinning of spider silk.
+    Nature 411, 541–548. https://doi.org/10.1038/3506900
+
+
+    2. Jin, J.-H., and Korn, S. (2002). Mechanism of silk protein in vitro. Nature
+    424, 1057–1061. https://doi.org/10.1038/nature01990
+
+
+    The molecular self-assembly higher-order structure is fundamentally governed by
+    the underlying energy landscape, both thermodynamic stability and kinetic properties.
+    By modulating this assembly, it is possible to control not only the kinetics of
+    assembly but also the selection of
+
+
+    Conventional structural characterization provides snapshots of final self-assembly
+    states but fail to capture the process that critically define self-assembly pathways.
+    In silk characterization techniques resolving metastable clusters. Conformational
+    dynamics reveal ensembles, diffusion-growth processes, structural rearrangements,
+    and interparticle interactions. These analyses underscore the importance of access
+    not only to but also the fleeting intermediates that govern assembly kinetics
+    and directional preferences. Moving forward, the integration of these methods
+    with advanced techniques will reveal dynamic principles governing molecular behavior
+    across multiple spatial and temporal scales.
+
+
+    ![](img/df99e20728044668e278abf99479b5ee_2_0.png)
+
+
+    4. Lee, S., Park, K., and Bueler, M. (2018). Nanofibers in materials and engineering.
+    Nature Rev. Mat. 3, 1016 https://doi.org/10.1038/s41575-018-0011-y
+
+
+    Matter 8, 102351 | August 2023 3'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '7. Sorrenti, A., Leila-Ilesias, J., Markvoort, A.J., def, T.P.A., and Hermans,
+    T.M. (2017). Non-equilibrium supramolecular polymerization. Chem. Soc. Rev. 46,
+    5476–5480. https://doi.org/10.1039/C7CS00512E
+
+
+    8. Koh, L-D., Cheng, Y., Teng, C-P., Kohn, Y.-W., Loh, X-J., Tee, S-Y., Low, M.,
+    Ye, E., Yu, H.-D., Zhang, Y-W., and Han, M.Y. (2019). Structure, mechanical properties
+    and applications of silk fibin materials. Prog. Polym. Sci. 46, 88–110. https://doi.org/10.1016/j.polymymsci.2015.02.001.
+
+
+    9. Shi, C., Bae, Y., Zhang, M., and De Yore, J.J. (2025). Manipulating the assembly
+    and architecture of fibrillar silk. Adv. Mater, 37,
+
+
+    10. Erdemir, D., Lee, A.Y., and Myerson, A.S. (2009). Nucleation of crystals from
+    solution: classical and two-step models. Acc. Chem. 42, 621–629. https://doi.org/10.1021/ar800217x.'
+  merge: -1
+  pgno: 3
