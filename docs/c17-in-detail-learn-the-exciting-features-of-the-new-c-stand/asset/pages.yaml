@@ -1,0 +1,4045 @@
+- img_proc: true
+  md: '# BARTŁOMIEJ FILIPEK
+
+
+    # # C++17 IN DETAIL
+
+    ## PART I - LANGUAGE FEATURES
+
+
+    LEARN THE EXCITING FEATURES OF THE NEW C++ STANDARD!
+
+
+    (BF)
+
+    C++ STORIES
+
+
+    BFILIPEK.COM'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# C++17 in Detail
+
+
+    Learn the Exciting Features of The New C++ Standard!
+
+
+    Bartłomiej Filipek
+
+
+    This book is for sale at http://leanpub.com/cpp17indetail
+
+
+    This version was published on 2019-11-13
+
+
+    ![](img/ac44c350c2a527cc3a8ffb11074f162a_1_0.png)
+
+
+    Leanpub
+
+
+    This is a Leanpub book. Leanpub empowers authors and publishers with the Lean
+    Publishing process. Lean Publishing is the act of publishing an in-progress ebook
+    using lightweight tools and many iterations to get reader feedback, pivot until
+    you have the right book and build traction once you do.
+
+
+    © 2018 - 2019 Bartłomiej Filipek'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Contents
+
+
+    +   - About the Author ............................................................................................................................
+    i
+
+    - Technical Reviewer ......................................................................................................................
+    ii
+
+    - Additional Reviewers & Supporters ................................................................................................
+    iii
+
+    - Foreword .....................................................................................................................................................
+    vi
+
+    - Preface .......................................................................................................................................................
+    vii
+
+    - About the Book ..........................................................................................................................................
+    viii
+
+    - Who This Book is For .........................................................................................................................
+    viii
+
+    - Overall Structure of the Book .......................................................................................................
+    ix
+
+    - Reader Feedback ........................................................................................................................................
+    X
+
+    - Example Code ............................................................................................................................................
+    X
+
+
+    # # Part 1 - Language Features ...................................................................................................
+    1
+
+
+    +   1. Quick Start ...............................................................................................................................
+    2
+
+    2. Removed or Fixed Language Features ................................................................................................
+    5
+
+    - Removed Elements .......................................................................................................................................
+    6
+
+    - Fixes ............................................................................................................................................................
+    9
+
+    - Compiler Support .................................................................................................................................
+    12
+
+    3. Language Clarification .................................................................................................................
+    13
+
+    - Stricter Expression Evaluation Evaluation Order ................................................................................
+    14
+
+    - Guaranteed Copy Elision ..........................................................................................................................
+    18
+
+    - Dynamic Memory Allocation for Over-Aligned Data ......................................................................
+    23
+
+    - Exception Specifications in the Type System ...................................................................................
+    26'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   Compiler Support . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . 27
+
+
+    +   4. General Language Features . . . . . . . . . . . . . . . . . . . . . 28
+
+    Structured Binding Declarations . . . . . . . . . . . . . . . . . . . . 29
+
+    Init Statement for if and switch . . . . . . . . . . . . . . . . . . . . 37
+
+    Inline Variables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 40
+
+    constexpr Lambda Expressions . . . . . . . . . . . . . . . . . . . . 42
+
+    Capturing [*this] in Lambda Expressions . . . . . . . . . . . 43
+
+    Nested Namespaces . . . . . . . . . . . . . . . . . . . . . . . . . . . . 45
+
+    __has_include Preprocessor Expression . . . . . . . . . . . . . 47
+
+    Compiler support . . . . . . . . . . . . . . . . . . . . . . . . . . 49
+
+
+    +   5. Templates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 50
+
+    Template Argument Deduction for Class Templates . . . . . . . . 51
+
+    Fold Expressions . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+
+    if constexpr . . . . . . . . . . . . . . . . . . . . . . . . . . . 58
+
+    Declaring Non-Type Template Parameters With auto . . . . . 65
+
+    Other Changes . . . . . . . . . . . . . . . . . . . . . . . . . . 66
+
+    Compiler Support . . . . . . . . . . . . . . . . . . . . . . . . . 69
+
+
+    +   6. Standard Attributes . . . . . . . . . . . . . . . . . . . . . . . . 70
+
+    Why Do We Need Attributes? . . . . . . . . . . . . . . . . . 71
+
+    Before C++11 . . . . . . . . . . . . . . . . . . . . . . . . . . 72
+
+    Attributes in C++11 and C++14 . . . . . . . . . . . . . . 73
+
+    C++17 Additions . . . . . . . . . . . . . . . . . . . . . . . . . . 74
+
+    Section Summary . . . . . . . . . . . . . . . . . . . . . . . . 80
+
+    Compiler support . . . . . . . . . . . . . . . . . . . . . . . 80
+
+
+    +   Appendix A - Compiler Support . . . . . . . . . . . . . . . . . . 81
+
+    Compiler Support of C++17 Features . . . . . . . . . . . . . . 82
+
+
+    +   Appendix B - Resources and References . . . . . . . . . . . . 85
+
+
+    +   The Full Version of The Book . . . . . . . . . . . . . . . . . . 89'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# About the Author
+
+
+    Bartłomiej (Bartek) Filipek is a C++ software developer with more than 12 years
+    of professional experience. In 2010 he graduated from Jagiellonian University
+    in Cracow, Poland with a Masters Degree in Computer Science.
+
+
+    Bartek currently works at Xara, where he develops features for advanced document
+    editors. He also has experience with desktop graphics applications, game development,
+    large-scale systems for aviation, writing graphics drivers and even biofeedback.
+    In the past, Bartek has also taught programming (mostly game and graphics programming
+    courses) at local universities in Cracow.
+
+
+    Since 2011 Bartek has been regularly blogging at bflipek.com. Initially, the topics
+    revolved around graphics programming, but now the blog focuses on core C++. He''s
+    also a co-organiser of the C++ User Group in Cracow. You can hear Bartek in one
+    @CppCast episode where he talks about C++17, blogging and text processing.
+
+
+    Since October 2018, Bartek has been a C++ Expert for the Polish National Body
+    who works directly with ISO/IEC JTC 1/SC 22 (C++ Standardisation Committee). In
+    the same month, Bartek was awarded his first MVP title for the years 2019/2020
+    by Microsoft.
+
+
+    In his spare time, he loves collecting and assembling Lego models with his little
+    son.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Technical Reviewer
+
+
+    Jacek Galowicz is a Software Engineer with roughly a decade of professional experience
+    in C++. He got his master of science degree in electrical engineering at RWTH
+    Aachen University in Germany.
+
+
+    Jacek co-founded the Cyberus Technology GmbH in early 2017 and works on products
+    around low-level cybersecurity, virtualization, microkernels, and advanced testing
+    infrastructure. At former jobs, he implemented performance- and security-sensitive
+    microkernel operating systems for Intel x86 virtualization at Intel and FireEye
+    in Germany. In general, he gained experience with kernel driver development, 3D
+    graphics programming, databases, network communication, physics simulation, mostly
+    in C or C++.
+
+
+    In his free time, Jacek maintains a little C++-blog, which has seen some lack
+    of love while he wrote the C++17 STL Cookbook. He is a regular visitor of the
+    C++ Usergroups in Hannover and Braunschweig. In order to do meta programming and
+    generic programming better, he also learned and uses Haskell, which in turn sparked
+    his interest to generally bring the advantages of purely functional programming
+    to C++.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Additional Reviewers & Supporters
+
+
+    Without the support of many good people, this book would have been far less than
+    it is. It is a great pleasure to thank them. A lot of people read drafts, found
+    errors, pointed out confusing explanations, suggested different wording, tested
+    programs, and offered support and encouragement. Many reviewers generously supplied
+    insights and comments that I was able to incorporate into the book. Any mistakes
+    that remain are, of course, my own.
+
+
+    Thanks specially to the following reviewers, who commented on large sections of
+    the book, smaller parts or gave me a general direction for the whole project.
+
+
+    +   Patrice Roy - Patrice has been playing with C++, either professionally, for
+    pleasure (most of the time) for over 20 years. After a few years doing R&D and
+    working on military flight simulators, he moved on to academics and has been teaching
+    computer science since 1998. Since 2005, he''s been more specifically in helping
+    graduate students and professionals from the fields of real-time systems and game
+    programming develop the skills they need to face today''s challenges. The rapid
+    evolution of C++ in recent years has made his job more enjoyable.
+
+    -Jonathan Bocara - Jonathan is a passionate C++ developer working on large codebase
+    of financial software. His interests revolve around making code expressive. He
+    has created and regularly blogs on Fluent C++, where he explores how
+
+    Jonathan Bocara - Jonathan is a passionate C++ developer working on large codebase
+    of financial software. His interests revolve around making code expressive. He
+    has created and regularly blogs on Fluent C++, where he explores how to use the
+    C++ language to write expressive code, making existing code clearer, and also
+    how to keep your spirits up when facing unclear code.
+
+    Łukasz Rachwalski - Software engineer - founder C++ User Group Krakow.
+
+    Michał Czaja - C++ software developer and network engineer. Works in telecomindustry
+    since 2009.
+
+    Arne Mertz - Software Engineer from Hamburg, Germany. He is a C++ and clean code
+    enthusiast. He''s the author of the Simplify C++2 blog.
+
+    JFT - Has been involved with computer programming and “computer techy stuff” for
+    over 45 years - including OS development and teaching c++ in the mid 1990''s.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Victor Ciura - Senior Software Engineer at CAPHYON and Technical Lead on the
+    Advanced Installer team. For over a decade, he designed and implemented several
+    core components and libraries of Advanced Installer. He''s a regular guest at
+    Computer Science Department of his Alma Mater, University of Craiova, where he
+    gives student lectures & workshops on "Using C++STL for Competitive Programming
+    and Software Development”. Currently, he spends most of his time with his team
+    on improving and extending the repackaging and virtualization technologies in
+    Advanced Installer IDE, helping clients migrate their Win32 desktop apps to the
+    Windows Store (MSIX).
+
+
+    Karol Gasiński - Tech Lead on macOS VR in Apple’s GPU SW Architecture Team. As
+    a member of KRONOS group, he contributed to OpenGL 4.4 and OpenGL ES 3.1 Specifications.
+    Except for his work, Karol’s biggest passion is game development and low-level
+    programming. He conducts research in the field of VR, new interfaces and game
+    engines. In game industry is known from founding WGK conference. In the past,
+    he was working on mobile versions of such games as Medieval Total War, Pro Evolution
+    Soccer and Silent Hill.
+
+
+    Marco Arena - Software Engineer and C++ in the Specialist building mission critical
+    and high performance software products in the Formula 1 Industry. Marco is very
+    active in the C++ ecosystem as a blogger, speaker and organizer: he founded the
+    Italian C++ Community in 2013, he joined isocpp.org editors in 2014 and has been
+    involved in community activities for many years. Marco has held the Microsoft
+    MVP Award since 2016. Discover more at marcoarena.com.
+
+
+    Konrad Jaaskwiec - C++ expert with almost 8 years of professional experience at
+    the time with focus on system design and optimization. You can find his profile
+    at Linkedin.
+
+
+    ^⁵http://www.advancedinstaller.com
+
+    ⁶http://isocpp.org/
+
+    ⁷http://marcoarena.com/
+
+    ⁸https://www.linkedin.com/in/konrad-ja%C5%9Bkowiec-84585159/'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Daniel Khoshnoudrad - a passionate C++ Developer. Daniel graduated in 2016
+    with the PhD in Computer Science from Université Paris-Est, under the direction
+    of Pr. Hugues Talbot. Daniel also holds a Master''s degree in Mathematical Engineering
+    from Université de Bordeaux. He is a prover of the French version of Effective
+    Modern C++ by Dr Scott Meyers. He has experience in Qt, Python, Fortran, Machine
+    Learning and teaching. Daniel is also interested in Java, Rust, JavaScript, HTML,
+    networks, and many other technologies. You can follow him @DanielKhoshnoudrad
+
+
+    Rob Stewart - started programming in high school on a Commodore VIC-20. He taught
+    himself BASIC, 6502 machine code, Forth, C, C++, JavaScript, Python, and other
+    programming languages. (He also took a course on Fortran in college.) He has been
+    using C++ for 30 years for things like cockpit simulators, commercial real estate
+    tools, web browsing accelerators, computer desktop alternatives, financial trading,
+    network communications, and more, while working for the US Air Force, startups,
+    and Susquehanna International Group. He actually writes documentation (!) for
+    his own libraries and has helped with the documentation for numerous Boost libraries.
+    He has helped with several well-known C++ books. classes and mentored many developers.
+    He was a founding member of the Boost Steering Committee. He and his wife of 33
+    years have nine children.
+
+
+    > https://twitter.com/DanielKhoshnoudrad'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Foreword
+
+
+    If you’ve ever asked “what’s in C++17 and what does it mean for me and my code?”
+    — and I hope you have — then this book is for you.
+
+
+    Now that the C++ standard is being released regularly every three years, one of
+    the challenges we have as a community is learning and absorbing the new features
+    that are being regularly added to the standard language and library. That means
+    not only knowing what those features are, but also how to use them effectively
+    to solve problems. Bartomej Filipek does a great job of applying the features,
+    including a whole Part 3 of the book about how to apply new C++17 features to
+    modernize and improve existing code — everything from upgrading enable_if to the
+    new if constexpr, to refactoring code by applying parallel code using the new
+    standard parallel algorithms. In each case, the result is cleaner code that’s
+    also significantly faster to.
+
+
+    The point of new features isn''t just to know about them for their own sake, but
+    to know how they can let us express our intent more clearly and directly than
+    ever in our C++ code. That ability to directly “say what we mean” to express our
+    intent, or to express “what” we want to achieve rather than sometimes-tortuous
+    details of “how” to achieve through indirect mechanisms, is the primary thing
+    that determines how clean and writable and readable — correct — our code will
+    be. For C++ programmers working on real-world projects using reasonably up-to-date
+    C++ compilers, C++17 is where it’s in the industry today for writing robust production
+    code. Knowing what’s in C++17 and how to use it is an important tool that will
+    elevate your day-to-day coding, and more likely than not reduce your day-to-day
+    maintenance and debugging chores.
+
+
+    If you’re one of the many who have enjoyed Barteks’ blog (bfilipek.com, frequently
+    cited at isocpp.org), you’ll certainly also enjoy this entertaining and informative
+    book. And if you haven’t enjoyed his blog yet, you should check it out too… and
+    then enjoy the book.
+
+
+    Herb Sutter, herbsutter.com'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# # Preface
+
+
+    After the long-awaited C++11, the C++ Committee has made changes to the standardisation
+    process, and we can now expect a new language standard every three years. In 2014
+    the ISO Committee delivered C++14. Now it''s time for C++17, which was published
+    at the end of 2017. As I am writing these words, in the middle of 2019, the C++20
+    draft is feature ready and prepared for the final review process.
+
+
+    As you can see, the language and the Standard Library evolves quite fast! Since
+    2011 you''ve got a set of new library modules and language features every three
+    years. Thus, staying up to date with the whole state of the language has become
+    quite a challenging task, and that is why this book will help you.
+
+
+    This book describes all the significant changes in C++17 and will give you the
+    essential knowledge to stay current with the latest features. What''s more, each
+    section contains lots of practical examples and also compiler-specific notes to
+    provide you with a more comfortable start.
+
+
+    It''s a pleasure for me to write about new and exciting things in the language
+    and I hope you''ll have fun discovering C++17 as well!
+
+
+    Best regards,
+
+    Bartek'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# About the Book
+
+
+    C++11 was a major update for the language. With all the modern features like lambdas,
+    constexpr, variadic templates, threading, range-based for loops, smart pointers
+    and many powerful elements, it signalled enormous progress for the language. Even
+    now, in 2019, many teams struggle to modernise their projects to leverage the
+    modern features. Later there was a minor update - C++14, which improved some things
+    from the previous Standard and added a few smaller elements.
+
+
+    Although C++17 is not as big as C++11, it''s larger than C++14 and brings many
+    exciting additions and improvements. This book will guide through all of them!
+
+
+    The book brings exclusive content about C++17 and draws from the experience of
+    many articles that have appeared at bfilepek.com. The material was rewritten from
+    the ground-up and updated with the latest information. All of that equipped with
+    lots of new examples and practical tips. Additionally, the book provides insight
+    into the current implementation status, compiler support, performance issues and
+    other relevant knowledge to boost your current projects.
+
+
+    # Who This Book is For
+
+
+    The book is intended for all C++ developers who have at least essential experience
+    with C++11/14.
+
+
+    The principal aim of the book is to equip you with practical knowledge about C++17.
+    After reading the book, you''ll be able to move past C++11 and leverage the latest
+    C++ techniques in your day to day tasks.
+
+
+    Please don''t worry if you''re not an expert in C++11/14. This book provides the
+    necessary background, so you''ll get the information in a proper context.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Overall Structure of the Book\n\nC++17 brings a lot of changes to the language\
+    \ and the Standard Library. In this book, all the new features were categorised\
+    \ into a few segments, so that they are easier to comprehend.\n\nAs a result,\
+    \ the book has the following sections:\n\n+   - Part One - C++17 Language Features\n\
+    \  - Fixes and Deprecation\n  - Language Clarification\n  - General Language Features\n\
+    \  - Templates\n  - Attributes\n- Part Two - C++17 The Standard Library (full\
+    \ version only)\n  - std::optional\n  - std::variant\n  - std::any\n  - std::string_view\n\
+    \  - String Operations\n  - Filesystem\n  - Parallel STL\n  - Other Changes\n\
+    - Part Three - More Examples and Use Cases (full version only)\n  - Refactoring\
+    \ with std::optional and std::variant\n  - Enforcing Code Contracts With [[nodiscard]]\n\
+    \  - Replacing enable_if if constexpr\n  - How to Parallelise CSV Reader\n\n+\
+    \   - Appendix A - Compiler Support\n- Appendix B - Resources and Links\n\nPart\
+    \ One, about the language features, is shorter and will give you a quick run over\
+    \ the most significant changes. You can read it in any order you like."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# About the Book
+
+
+    Part Two (full version only), describes a set of new types and utilities that
+    were added to the Standard Library. The helper types create a potential new vocabulary
+    for C++ code: like when you use optional, any variant or string_view. And what''s
+    more, you have powerful capabilities, especially in the form of parallel algorithms
+    and the standard filesystem. A lot of examples in this part will use many other
+    features from C++17.
+
+
+    Part Three (full version only) brings together all the changes in the language
+    and shows examples where a lot of new features are used alongside. You''ll see
+    discussions about refactoring, simplifying code with new template techniques or
+    working with parallel STL and the filesystem. While the first and second part
+    can also be used as a reference for individual changes, the third part shows more
+    of larger C++17 patterns that join many features.
+
+
+    A considerable advantage of the book is the fact that with each new feature you''ll
+    get information about the compiler support and the current implementation status.
+    That you''ll be able to check if a particular version of the most popular compilers
+    (MSVC, GCC or Clang) implements it or not. The book also gives practical hints
+    on how to apply techniques in your current codebase.
+
+
+    # Reader Feedback
+
+
+    If you spot an error, a typo, a grammar mistake... or anything else (especially
+    logical issues!) that should be corrected, then please send your feedback to bartlomiej.filipek.com.
+
+
+    You can also use two places to leave your feedback:
+
+
+    +   - Leanpub Book''s Feedback Page⁸
+
+    - GoodReads Book''s Page⁹
+
+
+    # Example Code
+
+
+    You can find the ZIP package with all the example on the book''s website:
+
+
+    cppindetail.com/data/cpp17indetail.zip¹⁰
+
+
+    > ⁸https://leanpub.com/cpp17indetail/feedback
+
+    ⁹https://www.goodreads.com/book/show/4147221-c-17-in-detail
+
+    ¹⁰https://www.cppindetail.com/data/cpp17indetail.zip'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "The same ZIP package should also be attached with the ebook.\n\nMany examples\
+    \ in the book are relatively short. You can copy and paste the lines into your\
+    \ favourite compiler/IDE and then run the code snippet.\n\n# Code License\n\n\
+    The code for the book is available under the Creative Commons License.\n\n# Compiling\n\
+    \nTo use C++17 make sure you provide a proper flag for your compiler:\n\n+   -\
+    \ For GCC (at least 7.1 or 8.0 or newer): use -std=c++17 or -std=c++2a\n- For\
+    \ Clang (at least 4.0 or newer): use -std=c++17 or -std=c++2a\n- For MSVC (Visual\
+    \ Studio 2017 or newer): use /std:c++17 or /std:c++Latest in project options ->\
+    \ C/C++ -> Language -> C++ Language Standard\n\n# Formatting\n\nThe code is presented\
+    \ in a monospace font, similarly to the following example:\nFor longer examples\
+    \ with a corresponding cpp file:\n\nChapterABC/example_one.cpp\n\n```\n#include\
+    \ <iostream>\n\nint main() {\n    std::string text = \"Hello World\";\n    std::cout\
+    \ << text << '\\n';\n}\n```\n\nOr shorter snippets (without a corresponding file):"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# About the Book\n\nxii\n\n```\nint foo() {\n  return std::clamp(100, 1000,\
+    \ 1001);\n}\n```\n\nSnippets of longer programs were usually shortened to present\
+    \ only the core mechanics. In that case, you'll find their full version in the\
+    \ separate ZIP package that comes with the book.\n\nThe corresponding file for\
+    \ the code snippet is mentioned in the title above the frame: Chapter ABC/example_one.cpp\n\
+    \nUsually, source code uses full type names with namespaces, like std::string,\
+    \ std::clamp, std::pmr. However, to make code compact and present nicely on a\
+    \ book page the namespaces sometimes might be removed, so they don't use space.\
+    \ Also, to avoid line wrapping, longer lines might be manually split into two.\
+    \ In some case, the code in the book might skip include statements.\n\n# Syntax\
+    \ Highlighting Limitations\n\nThe current version of the book might show some\
+    \ Pygments syntax highlighting limitations. For example:\n\n+   - if constexpr\
+    \ - Link to Pygments issue: #1432 - C++ if constexpr is not recognized (C++17)¹¹\n\
+    - The first method of a class is not highlighted - #1084 - First method of class\
+    \ not highlighted in C++¹²\n- Template method is not highlighted #1434 - C++ lexer\
+    \ does not recognize function return type is템¹³\n- Modern C++ attributes are sometimes\
+    \ recognized properly\n\nOther issues for C++ and Pygments: issues C++¹⁴\n\n>\
+    \ ¹¹https://bitbucket.org/birkenfeld/pygments-main/issues/1432/c-if-constexpr-not-recognized-c-17\n\
+    ¹²https://bitbucket.org/birkenfeld/pygments-main/issues/1084/first-method-of-class-not-highlighted-in-c\n\
+    ¹³https://bitbucket.org/birkenfeld/pygments-main/issues/1434/c-lexer-doesnt-recognize-function-if\n\
+    ¹⁴https://bitbucket.org/birkenfeld/pygments-main/issues/q-c=%2B%2B"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Online Compilers
+
+
+    Instead of creating local projects to play with the code samples, you can also
+    leverage online compilers. They offer a basic text editor and usually allow you
+    to compile only one source file (the code that you edit). They are convenient
+    if you want to play with code samples and check the results using various compilers.
+
+
+    For example, many of the code samples for this book were created using Coliru
+    Online and Wandbox compilers and then adapted for the book.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# About the Book
+
+
+    Here’s a list of some of the useful services:
+
+
+    +   - Coliru¹⁵ - uses GCC 8.2.0 (as of July 2019), offers link sharing and a basic
+    text editor, it''s simple but very effective.
+
+    - Wandbox¹⁶ - offers a lot of compilers, including most Clang and GCC versions,
+    can use boost libraries; offers link sharing and multiple file compilation.
+
+    - Compiler Explorer¹⁷ - offers many compilers, shows compiler output, can execute
+    the code.
+
+    - CppBench¹⁸ - runs simple C++ performance tests (using google benchmark library).
+
+    - C++ Insights¹⁹ - a Clang-based tool for source to source transformation. It
+    shows how the compiler sees the code, for example by expanding lambdas, auto,
+    structured bindings or range-based for loops.
+
+
+    There’s also a helpful list of online compilers gathered on this website: List
+    of Online C++ Compilers²⁰.
+
+
+    ¹⁵http://coliru-stacked-crooked.com/
+
+    ¹⁶https://wandbox.org/
+
+    ¹⁷https://gcc.godbolt.org/
+
+    ¹⁸http://quick-bench.com/
+
+    ¹⁹https://cppinsights.io/
+
+    ²⁰https://arnemertz.github.io/online-compilers/'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# # Part 1 - Language Features
+
+
+    We can say that C++ comes in two parts: The Language and The Standard Library.
+    The first element, The Language, focuses on the expressive code and conscience
+    syntax. The second element gives you tools, utilities and algorithms. For example,
+    in C++11, we get lambdas that simplified writing short function objects. C++14
+    allowed ''auto'' type deduction for function return types which also shorten code
+    and simplified code.
+
+
+    C++17, as a major update to the Standard, brings many amazing language elements
+    that generally, make the language clearer and more straightforward. For instance,
+    you can reduce the need to use enable_if and tag dispatching techniques by leveraging
+    constexpr You can treat tuples like first class language citizens thanks to structured
+    bindings, rely on and understand expression evaluation order, write code that
+    naturally uses copy-elision mechanism, and much, much more!
+
+
+    In this part you''ll learn:
+
+
+    +   * What was removed from the language and what is deprecated
+
+    * How the language is more precise: for example, thanks to expression evaluation
+    order guarantees
+
+    * What are new features of templates: like if or fold expressions
+
+    * What are the new standard attributes
+
+    * How you can write cleaner and more expressive code thanks to structured binding,
+    inline variables, compile-time if or template argument deduction for classes'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# # 1. Quick Start\n\nTo make you more curious about the new Standard, below,\
+    \ there are a few code samples that present combined language features.\n\nDon't\
+    \ worry if you find the examples confusing or too complicated. All the new features\
+    \ are individually explained in depth in the coming chapters.\n\n# ## Working\
+    \ With Maps\n\nPart I/demo_map.cpp\n\n```\n#include <iostream>\n#include <map>\n\
+    \nint main() {\n    std::map<std::string, int> mapUsersAge { \"Alex\", 45 }, {\
+    \ \"John\", 25 };\n\n    std::map mapCopy(mapUsersAge);\n\n    if (auto [iter,\
+    \ wasAdded] = mapCopy.insert_or_assign(\"John\", 26); !wasAdded)\n        std::cout\
+    \ << iter->first << \" \" reassigned...\\n\";\n\n    for (const auto& [key, value]\
+    \ : mapCopy)\n        std::cout << key << \": \" << value << \"\\n\";\n\n}\n```\n\
+    \nThe code will output:\n\nJohn reassigned...\nAlex, 45\nJohn, 26\n\nThe above\
+    \ example uses the following features:\n\n+   * Line 7: Template Argument Deduction\
+    \ for Class Templates - mapCopy type is deduced from the type of mapUsersAge.\
+    \ No need to declare std::map<std::string, int> mapCopy{...}."
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# Quick Start\n\n+   - Line 9: New inserting member function for maps - insert_or_assign.\n\
+    \n+   - Line 9: Structured Bindings - captures a returned pair from insert_or_assign\
+    \ into separate names.\n\n+   - Line 9: init if statement - iter and wasAdded\
+    \ are only visible in the scope of the surrounding statement.\n\n+   - Line 12:\
+    \ Structured Bindings inside a range-based loop - we can iterate using key and\
+    \ value rather than pair.first and pair.second.\n\n# Debug Printing\n\nPart/demo_print.cpp\n\
+    \n```\n#include <iostream>\n\ntemplate<typename T> void linePrinter(const T& x)\
+    \ {\n    if constexpr (std::is_integral_v<T>) {\n        std::cout << \"num: \"\
+    \ << x << '\\\n';\n    } else if constexpr (std::is_floating_point<T>) {\n   \
+    \     const auto frac = x - static_cast<long>(x);\n        std::cout << \"flt:\
+    \ \" << x << \", \" << frac << '\\\n';\n    } else if constexpr (std::is_pointer_v<T>)\
+    \ {\n        std::cout << \"ptr: \" << ptr << '\\\n';\n        linePrinter(x);\n\
+    \    } else {\n        std::cout << x << '\\\n';\n    }\n}\n\ntemplate<typename...\
+    \ Args> void printWithInfo(Args... args) {\n    (linePrinter(args), ...); // fold\
+    \ expression over the comma operator\n}\n\nint main() {\n    int i = 10;\n   \
+    \ float f = 2.56f;\n    printWithInfo(&i, &f, 30);\n}\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'The code will output:
+
+
+    ```
+
+    ptr, num: 10
+
+    ptr, flt: 2.56, frac 0.56
+
+    num: 30
+
+    ```
+
+
+    Here you can see the following features:
+
+
+    +   - Line 4, 6, 10: if constexpr to discard code at compile-time, used to match
+    the template parameter.
+
+    - Line 4, 6, 10:v variable templates for type traits - no need to write std::trait_name<T>::value.
+
+    - Line 19: Fold Expressions inside printWithInfo. This feature simplifies variadic
+    templates. In the example, we invoke linePrinter() over all input arguments.
+
+
+    # Let''s Start!
+
+
+    The code you''ve seen so far is just the tip of the iceberg! Continue reading
+    to see much more: fixes in the language, clarifications, removed things (like
+    auto_ptr), and course the new stuff: constexpr lambda, if constexpr, fold expressions,
+    structured bindings, template<auto>, inline variables, template argument deduction
+    for class templates and much more!'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 2. Removed or Fixed Language Features
+
+
+    The C++17 Standard contains over 1600 pages, growing over 200 pages compared to
+    C++14! Fortunately, the language specification was cleaned up in a few places,
+    and some old or potentially harmful features could be cleared out. This short
+    lists several severe language elements that were removed or fixed. See the Removed
+    And Deprecated Library Features Chapter for a list of changes in the Standard
+    Library.
+
+
+    In this chapter, you''ll learn:
+
+
+    +   - What was removed from the language like the register keyword or operator++
+    for bool
+
+    - What was fixed, notably the auto type deduction with brace initialisation.
+
+    - Other improvements like for static_assert and range-based for loops.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Removed Elements
+
+
+    One of the core concepts behind each iteration of C++ is its compatibility with
+    previous versions. We''d like to have new things in the language, but at the same
+    time, our old projects should still compile. However, sometimes, there''s a chance
+    to remove parts that are wrong or rarely used.
+
+
+    This section briefly explains what was removed from the Standard.
+
+
+    # Removing the register Keyword
+
+
+    The register keyword was deprecated in 2011 (C++11), and it has had no meaning
+    since then. It was removed in C++17. The keyword is reserved and might be repurposed
+    in future revisions of the Standard (for example auto keyword was reused and is
+    now an entirely new and powerful feature).
+
+
+    If you use register to declare a variable:
+
+
+    ```
+
+    register int a;
+
+    ```
+
+
+    You might get the following warning (GCC8.1 below)
+
+
+    warning: ISO C++17 does not allow ''register'' storage class specifier
+
+
+    or error in Clang (Clang 7.0)
+
+
+    error: ISO C++17 does not allow ''register'' storage class specifier
+
+
+    > Extra Info
+
+    The change was proposed in: P0001R1².'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Removing Deprecated operator++(bool)\n\nThe increment operator for bool has\
+    \ been already deprecated for a very long time! The committee recommended against\
+    \ its use back in 1998 (C++98), but they only now finally agreed to remove it\
+    \ from the language. Note that operator-- was never enabled for bool.\nIf you\
+    \ try to write the following code:\n\n```\nbool b;\nb++;\n```\n\nYou should get\
+    \ a similar error like this from GCC (GCC 8.1):\n\nerror: use of an operand of\
+    \ type 'bool' in 'operator++' is forbidden in C++17\n\n> Extra Info\nThe change\
+    \ was proposed in: P0002R1.\n\n# Removing Deprecated Exception Specifications\n\
+    \nIn C++17, exception specification will be part of the type system (as discussed\
+    \ in the next chapter about Language Clarification). However, the standard contains\
+    \ old and deprecated exception specification that appeared to be impractical and\
+    \ unused.\nFor example:\n\n```\nvoid throwInts(int a) throw(int) {\n    printf_s(\"\
+    can throw ints\\n\");\n    if (a == 0)\n        throw 1;\n}\n```\n\nPay special\
+    \ attention to throw(int) part.\nThe above code has been deprecated since C++11.\
+    \ The only practical exception declaration is throw() which means - this code\
+    \ won't throw anything. Since C++11 it's been advised to use noexcept."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'Removed or Fixed Language Features
+
+
+    For example in clang 4.0 you''ll get the following error:
+
+
+    error: ISO C++11 does not allow dynamic exception specifications [-Wdynamic-exception-spec]
+    note: use ''noexcept(false)'' instead
+
+
+    # Extra Info
+
+
+    The change was proposed in: P0003R5.
+
+
+    # Removing Trigraphs
+
+
+    Trigraphs are special character sequences that could be used when a system doesn''t
+    support 7-bit ASCII (like ISO 646). For example ?? generated #, ?? produced ~.
+    (All of C++''s basic source character set fits in 7-bit ASCII). Today, trigraphs
+    are rarely used, and by removing them from the translation phase, the compilation
+    process can be more straightforward. See a table below with all the trigraphs
+    that were declared until C++17:
+
+
+    | Trigraph | Replacement |
+
+    |--- | --- |
+
+    | ??= | # |
+
+    | ??( | [ |
+
+    | ??< | { |
+
+    | ??/ | \ |
+
+    | ??) | ] |
+
+    | ??> | ~ |
+
+    | ??'' | ^ |
+
+    | !! | | |
+
+    | ??- | \
+
+
+    # Extra Info
+
+
+    The change was proposed in: N4086.
+
+
+    ^4http://wg21.link/p0003r5
+
+
+    ^5https://wg21.link/n4086'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# # Fixes\n\nWe can argue what is a fix in a language standard and what is\
+    \ not. Below there are three things that might look like a fix for something that\
+    \ was missing or not working in the previous rules.\n\n# ## New auto rules for\
+    \ direct-list-initialisation\n\nSince C++11 there's been a strange problem where:\n\
+    \n```\nauto x = { 1 };\n```\n\nIs deduced as std::initializer_list<int>. Such\
+    \ behaviour is not intuitive as in cases you should expect it to work like x {\
+    \ 1 };\n\nBrace initialisation is the preferred pattern modern C++, but such exceptions\
+    \ make the feature weaker.\n\nWith the new Standard, we can fix this so that it\
+    \ will deduce int.\n\nTo make this happen, we need to understand two ways of initialisation\
+    \ - copy and direct:\n\n```\n// foo() is a function that returns some Type by\
+    \ value\nauto x = foo();           // copy-initialisation\nauto x(foo());    \
+    \        // direct-initialisation, initializes an\n                          \
+    \       // initializer_list (until C++17)\n```\n\n```\nint x = foo();        \
+    \   // copy-initialisation\nint x{foo()};          // direct-initialisation\n\
+    ```\n\nFor the direct initialisation, C++17 introduces new rules:\n\n+   - For\
+    \ a braced-init-list with a single element, auto deduction will deduce from that\
+    \ entry.\n- For a braced-init-list with more than one element, auto deduction\
+    \ will be ill-formed."
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'Removed or Fixed Language Features
+
+
+    For example:
+
+
+    ```
+
+    auto x1 = { 1, 2 };    // decltype(x1) is std::initializer_list<int>
+
+    auto x2 = { 1, 2.0 };   // error: cannot deduce element type
+
+    auto x3{ 1, 2 };      // error: not a single element
+
+    auto x4 = { 3 };       // decltype(x4) is std::initializer_list<int>
+
+    auto x5{ 3 };         // decltype(x5) is int
+
+    ```
+
+
+    # Extra Info
+
+
+    The change was proposed in: N3922* and N3681. The compilers fixed this issue quite
+    early, the improvement is available in GCC 5.0 (Mid 2015). Clang 3.8 (Early 2016)
+    and MSVC 2015 (Mid 2015). Much earlier than C++17 was approved.
+
+
+    # static_assert With no Message
+
+
+    This feature adds a new overload for static_assert. It enables you to have the
+    condition inside static_assert without passing the message.
+
+
+    It will be compatible with other asserts like BOOST_STATIC_ASSERT. Programmers
+    with boost experience will now have no trouble switching to C++17 static_assert.
+
+
+    ```
+
+    static_assert(std::is_arithmetic<T>, "T must be arithmetic");
+
+    static_assert(std::is_arithmetic_v<T>); // no message needed since C++17
+
+    ```
+
+
+    In many cases, the condition you check is expressive enough and doesn''t need
+    to be mentioned in the message string.
+
+
+    # Extra Info
+
+
+    The change was proposed in: N3928.
+
+
+    ^6http://wg21.link/n3922
+
+    7http://wg21.link/n3681
+
+    8https://wg21.link/n3928'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# Different begin and end types in Range-Based For Loop\n\nC++11 added range-based\
+    \ for loops:\n\n```\nfor (for-range-declaration : for-range-initializer)\n   \
+    \ statement);\n```\n\nAccording to the C++14 standard loop is equivalent to the\
+    \ following code:\n\n```\nauto __range = for-range-initializer;\nfor ( auto __begin\
+    \ = begin-expr, __end = end-expr;\n    __begin != __end ) {\n    for-range-declaration\
+    \ = *__begin;\n    statement;\n}\n```\n\nAs you can see, __begin and __end have\
+    \ the same type. This works nicely but is not scalable enough. For example, you\
+    \ might want to iterate until some sentinel value with a different type than the\
+    \ start of the range.\n\nIn C++17 range-based for loops are defined as equivalent\
+    \ to the following code:\n\n```\nauto __range = for-range-initializer;\nauto __begin\
+    \ = begin-expr;\nauto __end = end-expr;\nfor ( ; __begin != __end; ) {\n    for-range-declaration\
+    \ = *__begin;\n    statement;\n}\n```\n\nThe types of __begin and __end might\
+    \ be different; only the comparison operator is required. That change has no effect\
+    \ on existing loops but it provides more options for libraries. For example, this\
+    \ little allows Range TS (and Ranges in C++20) to work with the range-based for\
+    \ loop.\n\n# Extra Info\n\nThe change was proposed in: P0184R0."
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Compiler Support
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    |---|---|---|---|--|
+
+    | Removing register keyword | 7.0 | 3.8 | VS 2017 | | | |
+
+    | Remove Deprecated operator++(bool) | 7.0 | 3.8 | VS 2017 15.3 | 10.3 Rio |
+
+    | Removing Deprecated Exception Specifications | 7.0 | 4.0 | VS 2017 15.5 | 10.3
+    Rio |
+
+    | Removing trigraphs | 5.1 | 3.5 | VS 2010 | 10.3 Rio |
+
+    | New auto rules for direct-list-initialisation | 5.0 | 3.8 | VS 2015 | 10.3 Rio
+    |
+
+    | static_assert with no message | 6.0 | 2.5 | VS 2017 | 10.3 Rio |
+
+    | Different begin and end types in range-based for | 6.0 | 3.6 | VS 2017 | 10.3
+    Rio |'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# 3. Language Clarification
+
+
+    C++ is a challenging language to learn and fully understand, and some parts might
+    be confusing for programmers. One of the reasons for the lack of clarity might
+    be the freedom given to the implementation/compiler. For example, some parts of
+    the language are left vague to allow for more aggressive optimisations. Other
+    difficulties can arise from the requirement to be compatible with C. C++17 addresses
+    some of the most common "holes” in the language. In this chapter, you''ll learn:
+
+
+    +   - What Evaluation Order is and why it might generate unexpected results
+
+    - Copy elision guarantees in the language
+
+    - Exceptions specifications as part of the type system
+
+    - Memory allocations for (over)aligned data'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Stricter Expression Evaluation Order
+
+
+    Until C++17 the language hasn’t specified any evaluation order for function parameters.
+
+    Period.
+
+
+    For example, that’s why in C++14 make_unique is not just syntactic sugar, but
+    it guarantees memory safety:
+
+
+    Consider the following examples:
+
+
+    ```
+
+    foo(unique_ptr<T>(new T), otherFunction()); // first case
+
+    ```
+
+
+    And with explicit new:
+
+
+    ```
+
+    make_unique<T>(), otherFunction()); // second case
+
+    ```
+
+
+    Considering the first case, in C++14, we only know that T is guaranteed to happen
+    before the unique_ptr construction, but that’s all. For example, new T might be
+    called first, then otherFunction(), and then the constructor unique_ptr is invoked.
+
+
+    For such evaluation order, when otherFunction() throws, then new T generates a
+    leak (as the pointer is not yet created).
+
+
+    When you use make_unique, as in the second case, the leak is not possible as you
+    wrap memory allocation and creation of unique pointer in one call.
+
+
+    C++17 addresses the issue shown in the first case. Now, the evaluation order of
+    function arguments is “practical” and predictable. In our example, the compiler
+    won’t be allowed to call otherFunction() before the expression unique_ptr<T>(new
+    T) is fully evaluated.
+
+
+    # The Changes
+
+
+    In an expression:
+
+
+    ```
+
+    f(a, b, c);
+
+    ```
+
+
+    The order of evaluation of a, b, c is still unspecified, but any parameter is
+    fully evaluated before the next one is started. It’s especially crucial for complex
+    expressions like this:'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "f(x), b, c(y);\n\nIf the compiler chooses to evaluate a(x) first, then it must\
+    \ evaluate x before processing b, c(y) or y.\n\nThis guarantee fixes the problem\
+    \ with make_unique vs unique_ptr<T>(new T()). A given function argument must be\
+    \ fully evaluated before other arguments are evaluated.\n\nConsider the following\
+    \ case:\n\nChapter Clarification/chain_order.cpp\n\n```\n#include <iostream>\n\
+    \nclass Query {\npublic:\n    Query& addInt(int i) {\n    std::cout << \"AddInt:\
+    \ \" << i << '\\\\n';\n    return *this;\n}\n\n    Query& addFloat(float f) {\n\
+    \    std::cout << \"AddFloat: \" << f << '\\\\n';\n    return *this;\nn};\n\n\
+    float computeFloat() {\n    std::cout << \"computing float... \\\\n\";\n    return\
+    \ 10.1f;\n}\n\nfloat computeInt() {\n    std::cout << \"computing int... \\\\\
+    n\";\n    return 8;\n}\n\nint main() {\n    Query q;\n    q.addFloat(computeFloat()).addInt(computeInt());\n\
+    }\n```\n\nYou probably expect that using C++14 computeInt() happens after addFloat.\
+    \ Unfortunately, that might not be the case. For instance here's an output from\
+    \ GCC 4.7.3:"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'computing int...
+
+    computing float...
+
+    addFloat: 10.1
+
+    addInt: 8
+
+
+    The chaining of functions is already specified to work from left to right (thus
+    addInt()) happens after addFloat(), but the order of evaluation of the inner expressions
+    can differ.
+
+    To be precise:
+
+
+    The expressions are indeterminately sequenced with respect to each other.
+
+
+    With C++17, function chaining will work as expected when they contain inner expressions,
+
+    i.e., they are evaluated from left to right:
+
+    In the expression:
+
+
+    ```
+
+    a(expA).b(expB).c(expC)
+
+    ```
+
+
+    expA is evaluated before calling b().
+
+
+    Compiling the previous example with a conformant C++17 compiler, yields the following
+    result:
+
+
+    ```
+
+    computing float...
+
+    addFloat: 10.1
+
+    computing int...
+
+    addInt: 8
+
+    ```
+
+
+    Another result of this change is that when using operator overloading, the order
+    of evaluation is determined by the order associated with the corresponding built-in
+    operator.
+
+    For example:
+
+
+    ```
+
+    std::cout << a() << b() << c();
+
+    ```
+
+
+    The above code contains operator overloading and expands to the following function
+    notation:'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'operator<<((operator<<(std::cout, a()), b())), c);
+
+
+    Before C++17, a(), and c() could be evaluated in any order. In C++17, a() will
+    be evaluated first, then b() and c().
+
+
+    Here are more rules described in the paper P0145R3:
+
+
+    +   the following expressions are evaluated in the order a, then b:
+
+
+    1. a.b
+
+    2. a->*b
+
+    3. a->*b
+
+    4. a(b1, b2, b3) // b1, b2, b3 - in any order
+
+    5. b @= // ''@'' means any operator
+
+    6. a[b]
+
+    7. a << b
+
+    8. a >> b
+
+
+    If you''re not sure how your code might be evaluated, it''s better to make it
+    simple and split it into several clear statements. You can find some guides in
+    the Core C++ Guidelines, for example ES.44 and ES.44.
+
+
+    # Extra Info
+
+
+    The change was proposed in: P0145R3.
+
+
+    ^1https://wg21.link/p0145r3
+
+    2http://isocpp.github.io/CppCoreGuidelines/Res-order
+
+    3http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#es44-depend-on-order-of-evaluation-of-function-arguments
+
+    4https://wg21.link/p0145r3'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# Guaranteed Copy Elision\n\nCopy Elision is a common optimisation that avoids\
+    \ unnecessary temporary objects.\n\nFor example:\n\nChapter Clarification/copy_elision.cpp\n\
+    \n```\n#include <iostream>\n\nstruct Test {\nTest() { std::cout << \"Test\\n\"\
+    ; }\nTest(const Test&) { std::cout << \"Test(const Test&)\\n\"; }\nTest(const\
+    \ Test&&) { std::cout << \"Test(const Test&&)\\n\"; }\n~Test() { std::cout <<\
+    \ \"~Test\\n\"; }\n};\n\nTest Create() {\n    return Test();\n}\n\nint main()\
+    \ {\n    auto n = Create();\n}\n```\n\nIn the above call, you might assume a temporary\
+    \ copy is used - to store the return value of Create. In C++14, most compilers\
+    \ recognise that the temporary object can be optimised easily, and they can create\
+    \ \"directly\" from the call of Create(). So you'll probably see the following\
+    \ output:\n\n```\nTest::Test // create n\n~Test // destroy n when main finishes\n\
+    ```\n\nIn its basic form, the copy elision optimisation is called Return Value\
+    \ Optimisation (RVO). As an experiment, in GCC you can add a compiler flag -fno-elide-constructors\
+    \ use -std=c++14 (or some earlier language standard). In that case you'll see\
+    \ a different output:"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\n// compiled as \"g++CopyElision.cpp -std=c++14 -fno-elide-constructors\"\
+    \nTest::Test\nTest(Test&&)\n~Test\nTest(Test&&)\n~Test\n~Test\n```\n\nIn this\
+    \ case, we have two extra copies that the compiler uses to pass the return value\
+    \ into n;\nCompilers are even smarter, and they can elide in cases when you return\
+    \ a named object - it's called Named Return Value Optimisation - NRVO\n\n```\n\
+    Test Create() {\n  Test t;\n  // several instruction to initialize 't'...\n  return\
+    \ t;\n}\n```\n\nauto n = Create(); // temporary will be usually elided\n\nCurrently,\
+    \ the Standard allows eliding in cases like:\n\n+   - When a temporary object\
+    \ is used to initialise another object (including the object returned by a function,\
+    \ or the exception object created by a throw-expression)\n- When a variable that\
+    \ is about to go out of scope is returned or thrown\n- When an exception is caught\
+    \ by value\n\nHowever, it's up to the compiler/implementation to elide or not.\
+    \ In practice, all the constructors' definitions are required.\nWith C++17, we\
+    \ get clear rules on when elision has to happen, and thus constructors may be\
+    \ entirely omitted. In fact, instead of eliding the copies the compiler defers\
+    \ the \"materialisation\" of an object.\nWhy might this be useful?\n\n+   - To\
+    \ allow returning objects that are not movable/copyable - because we could now\
+    \ skip copy/move constructors\n- To improve code portability since every conformant\
+    \ compiler supports the same rule"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Language Clarification\n\n+   - To support the “return by value” pattern\
+    \ rather than using output arguments\n- To improve performance\n\nBelow you can\
+    \ see an example with a non-movable/non-copyable type, based on P0135R0:\n\nChapter\
+    \ Clarification/copy_elision_non_movable.cpp\n\n```\nstruct NonMoveable {\n  \
+    \  NonMoveable(int x) : v(x) {}\n    NonMoveable(const NonMoveable&) = delete;\n\
+    \    NonMoveable(NonMoveable&&) = delete;\n\n    std::array<int, 1024> arr;\n\
+    \    int v;\n}\n```\n\n```\nNonMoveable make(int val) {\n    if (val > 0)\n  \
+    \      return NonMoveable(val);\n\n    return NonMoveable(-val);\n}\n\nint main()\
+    \ {\n    auto largeNonMoveableObj = make(90); // construct the object\n    return\
+    \ largeNonMoveableObj.v;\n}\n```\n\nThe above code wouldn't compile under C++14\
+    \ as it lacks copy and move constructors. With C++17 the constructors are not\
+    \ required - because the object largeNonMoveableObj will be constructed in place.\n\
+    \nPlease notice that you can also use many return statements in one function and\
+    \ copy elision will still work.\n\nMoreover, it's important to remember, that\
+    \ in C++17 copy elision works only for unnamed temporary objects, and Named RVO\
+    \ is not mandatory.\n\nTo understand how mandatory copy elision/deferred temporary\
+    \ materialisation is defined in the C++ Standard, we must understand value categories\
+    \ which are covered in the next section."
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Updated Value Categories
+
+
+    In C++98/03, we had two basic categories of expressions:
+
+
+    +   - lvalue - an expression that can appear on the left-hand side of an assignment
+
+    - rvalue - an expression that can appear only on the right-hand side of an assignment
+
+
+    C++11 extended this taxonomy (due to the move semantics), with three more categories:
+
+
+    +   - xvalue - an Expiring lvalue
+
+    - prvalue - a pure rvalue, an xvalue, a temporary object or subobject, or a value
+    that is not associated with an object.
+
+    - glvalue - a generalised lvalue, which is an lvalue or an xvalue
+
+
+    Examples:
+
+
+    ```
+
+    std::string str;
+
+    str;             // lvalue
+
+    42;             // prvalue
+
+    str + "10"       // prvalue
+
+    std::move(str); // xvalue
+
+    ```
+
+
+    Here’s a diagram that shows how the categories are related:
+
+
+    ![](img/ac44c350c2a527cc3a8ffb11074f162a_38_0.png)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Language Clarification
+
+
+    There are three core categories (below with colloquial “definitions”):
+
+
+    +   * lvalue - an expression that has an identity, and which we can take the address
+    of
+
+    * xvalue - “expiring lvalue” - an object that we can move from, which we can reuse.
+
+    Usually, its lifetime ends soon
+
+    * prvalue - pure rvalue - something without a name, which we cannot take the address
+    of, which we can move from this expression
+
+
+    To support Copy Elision, the authors of the proposal provided the updated definitions
+    of glvalue and prvalue. the Standard³.
+
+
+    > * glvalue - A glvalue is an expression whose evaluation computes the location
+    of an object, bit-field, or function
+
+    * prvalue - A prvalue is an expression whose evaluation initialises an object,
+    bit-field, or operand of an operator, as specified by the context in which it
+    appears
+
+
+    For example:
+
+
+    ```
+
+    class X { int a; };
+
+    X{10} // this expression is prvalue
+
+    x x; // x is lvalue
+
+    x.a // it''s lvalue (location)
+
+    ```
+
+
+    In short: prvalues perform initialisation, glvalues describe locations. The C++17
+    Standard specifies when there’s a prvalue initialising some glvalue, then there’s
+    no need to create a temporary and we can defer its materialisation.
+
+
+    In C++17 Copy Elision/Deferred Temporary Materialization happens when:
+
+
+    +   * in initialisation of an object from a prvalue: Type = T())
+
+    * in a function where the function returns a prvalue - like in our examples.
+
+
+    # Extra Info
+
+
+    The change was proposed in: P0135R0 (reasoning) - and P0135R1 (wording).
+
+
+    ⁴https://timsong-cpp.github.io/cpppp/n4659/basic.lvl
+
+    ⁵https://wg21.cpp.link/p0135r
+
+    ⁶https://wg21.cpp.link/p0135r1'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# Dynamic Memory Allocation for Over-Aligned Data\n\nEmbedded environments,\
+    \ kernel, drivers, game development and other areas might require a non-default\
+    \ alignment for memory allocations. Complying those requirements might improve\
+    \ the performance or satisfy some hardware interface.\n\nFor example, perform\
+    \ geometric data processing using SIMD* instructions, you might need 16-byte or\
+    \ 32-byte alignment for structures that hold 3D coordinates:\n\n```\nstruct alignas(32)\
+    \ Vec3d { // alignas is available since C++11\n  double x, y, z;\n}\nauto pVectors\
+    \ = new Vec3d[1000];\n```\n\nVec3d holds double fields, and usually, its natural\
+    \ alignment should be 8 bytes. Now, with alignas keyword, we change this alignment\
+    \ to 32. Approach allows the compiler to fit the objects into SIMD registers like\
+    \ AVX (256-bit-width).\n\nUnfortunately, in C++/14, you have no guarantee that\
+    \ the memory will be aligned after new[]. Often, you have use routines like std::aligned_alloc()\
+    \ or MSVC's _aligned_malloc() to be sure alignment is preserved. This is not ideal\
+    \ as it's not working easily with smart pointers and makes memory management visible\
+    \ in the code.\n\nC++17 fixes that hole by introducing new memory allocation function\
+    \ overloads for new() and delete() with the align_val_t parameter. Example function\
+    \ signatures below:\n\n```\nvoid* operator new(size_t, align_val_t);\nvoid operator\
+    \ delete(void*, size_t, align_val_t);\n```\n\nThe Standard defines __STDCPP_DEFAULT_NEW_ALIGNMENT__\
+    \ macro that specifies the default alignment for dynamic memory allocation. On\
+    \ common platforms, Clang, GCC and MSVC specify it as 16 bytes.\n\nNow, in C++17,\
+    \ you allocate:\n\n```\nauto pVectors = new Vec3d[1000];\n```\n\n> *Single Instruction,\
+    \ Multiple Data, for example, SSE2, AVX, see https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions\n\
+    *See all 22 new() overloads at https://en.cppreference.com/wpp/memory/new/operator_new"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# Language Clarification\n\nThe alignment for Vecd3 is larger than __STCPP_DEFAULT_NEW_ALIGNMENT__,\
+    \ thus the compiler will select the overloads with the align_val_t parameter.\n\
+    \n> In Clang and GCC you can control the alignment by the new-alignment switch\
+    \ (see Clang's documentation¹⁰). The MSVC compiler exposes the /Z:alignedNew¹\
+    \ flag that turns the feature on or off.\n\nWe can also provide custom implementation,\
+    \ we have a look:\n\nChapter Clarification/aligned_new.cpp\n\n```\nvoid* operator\
+    \ new(size_t size, std::align_val_t align) {\n#if defined(__WIN32) || defined(__CYWIN__)\n\
+    \    auto ptr = _aligned_malloc(size, static_cast<std::size_t>(align));\n#else\n\
+    \    auto ptr = std::aligned_alloc(static_cast<std::size_t>(align), size);\n\n\
+    \    if (ptr) throw std::bad_alloc();\n\nstd::cout << \"new: \" << size << \"\
+    , \"\n              << static_cast<std::size_t>(align) << \", \" << ptr << '\\\
+    \\n';\n}\n\nvoid operator delete(void* ptr, std::size_t size, std::align_val_t\
+    \ align) noexcept {\n    std::cout << \"delete: \" << size << \", \" << align\
+    \ << \", \"\n              << static_cast<std::size_t>(align) << \", \" << ptr\
+    \ << '\\\\n';\n    _aligned_free(ptr);\n#else\n    std::free(ptr);\n#endif\n\n\
+    void operator delete(void* ptr, std::align_val_t align) noexcept { ... } // hidden\n\
+    ```\n\nThe code uses _aligned_malloc() and _aligned_free() for the Windows version¹².\
+    \ It's because the Windows platform use different allocation mechanisms for over-aligned\n\
+    \n> ¹⁰https://clang.llvm.org/docs/ClangCommandLineReference.html#cmallocoption-f-alignment\n\
+    ¹https://docs.microsoft.com/en-us/cpp/build/reference/zc-alignednew?view=vs-2019\n\
+    ¹²this applies to MSVC, MinGW, Clang on Windows or Cygwin."
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'data, and that''s why std::free() wouldn''t release the memory correctly. On
+    other platforms that conform with C11 can using std::aligned_alloc(), since C++17
+    the Standard is based on the C11 specification. In that context free() can delete
+    the aligned memory.
+
+
+    The new functionality can significantly improve the code, and you can now hold
+    the aligned objects in standard containers without writing custom allocators,
+    or custom deleters for
+
+
+    For example:
+
+
+    Chapter Clarification/aligned_new.cpp
+
+
+    ```
+
+    std::vector<Vec3d> vec;
+
+    vec.push_back({{}});
+
+    vec.push_back({});
+
+    vec.push_back({});
+
+    assert(reinterpret_cast<uintptr_t>(vec.data()) % alignof(Vec3d) == 0);
+
+    ```
+
+
+    When executed, replaced allocation functions might log the following:
+
+
+    ```
+
+    new: 32, align: 32, ptr: 000001F866625960
+
+    new: 64, align: 32, ptr: 000001F866625680
+
+    delete: 32, align: 32, ptr : 000001F866625960
+
+    new: 96, align: 32, ptr : 000001F8666223EA0
+
+    delete: 64, align: 32, ptr : 000001F866625680
+
+    delete: 96, align: 32, ptr : 000001F8666223EA0
+
+    ```
+
+
+    The example allocates for a single entry, then it deletes and increases the size
+    for the vector to make space for all three elements. At the end we check the pointer
+    alignment to be it''s aligned to 32 bytes.
+
+
+    You can read more about the experiments with the new functionality at New() -
+    The C++17''s Alignment Parameter for operator()¹³ . This blog post also shows
+    the dangerous side when you ask for a non-standard alignment with placement new.
+
+
+    # Extra Info
+
+
+    The change was proposed in: P0035¹⁴.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# Exception Specifications in the Type System\n\nException Specification for\
+    \ a function didn't use to belong to the type of the function, but now it will\
+    \ be part of it. You can now have two function overloads: one with noexcept and\
+    \ the second without it. See below:\n\nChapter Clarification/func_noexcept_void_type.cpp\n\
+    \n```\nusing TnoexceptVoidFunc = void (()) noexcept;\nvoid SimpleNoexceptCall(TnoexceptVoidFunc\
+    \ f) { f(); }\n\nvoid TVoidFunc = void (());\nvoid SimpleCall(TVoidFunc f) { f();\
+    \ }\n\nvoid fnoexcept() noexcept { }\nvoid fRegular() { }\n\nint main() {\n  SimpleNoexceptCall(fnoexcept);\n\
+    \  //SimpleNoexceptCall(fRegular); // cannot convert\n\n  SimpleCall(fnoexcept);\
+    \ // converts to regular function\n  SimpleCall(fRegular);\n}\n```\n\nA pointer\
+    \ to noexcept function can be converted to a pointer to a regular function (this\
+    \ also works for a pointer to a member function). But it's not possible the other\
+    \ way around (from a regular function pointer into a function pointer that is\
+    \ marked with noexcept).\n\nOne of the reasons for adding the feature is chance\
+    \ to optimise the code better. If the compiler has a guarantee that a function\
+    \ won't throw, then it can generate faster code.\n\nAlso, as described in the\
+    \ previous chapter about Language Fixes, in C++17, the Exception Specification\
+    \ is cleaned up. Effectively, you can only use the noexcept specifier¹⁵ for declaring\
+    \ a function that won't throw.\n\n# Extra Info\n\nThe change was proposed in:\
+    \ P0012R1¹⁵.\n\n¹⁵http://en.cppreference.com/w/cpp/language/noexcept_spec\n¹⁶http://wg21.link/p0012r1"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Compiler Support
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    |---|---|---|---|---||
+
+    | Stricter expression evaluation order | 7.0 | 4.0 | VS 2017 | 10.3 Rio |
+
+    | Guaranteed copy elision | 7.0 | 4.0 | VS 2017 15.6 | 10.3 Rio |
+
+    | Exception specifications part of the type system | 7.0 | 4.0 | VS 2017 15.5
+    | 10.3 Rio |
+
+    | Dynamic memory allocation for over-aligned data | 7.0 | 4.0 | VS 2017 15.5 |
+    10.3 Rio |'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# 4. General Language Features
+
+
+    In this section of the book, we''ll look at widespread improvements to the language
+    that have the potential to make your code more compact and expressive. A perfect
+    example of such a general feature is structured binding. Using that feature, you
+    can leverage a comfortable syntax for tuples (and tuple-like expressions). Something
+    easy in other languages like Python is now possible with C++17.
+
+
+    In this chapter, you''ll learn:
+
+
+    +   - Structured bindings/Decomposition declarations
+
+    - How to provide Structured Binding interface for your custom classes
+
+    - Init-statement for if/switch
+
+    - Inline variables and their impact on header-only libraries
+
+    - Lambda expressions that might be used in a constexpr
+
+    - How to properly wrap this pointer in lambda expressions
+
+    - Simplified use of nested namespaces
+
+    - How to test for header existence with __has_include directive'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# Structured Binding Declarations\n\nDo you often work with tuples or pairs?\n\
+    If not, then you should probably start looking into those handy types. Tuples\
+    \ enable you to bundle data ad-hoc with excellent library support instead of creating\
+    \ small custom types. The language features like structured binding make the code\
+    \ even more expressive and concise.\nConsider a function that returns two results\
+    \ in a pair:\n\n```\nstd::pair<int, bool> InsertElement(int el) { ... }\n```\n\
+    \nYou can write:\n\n```\nauto ret = InsertElement(...);\n```\n\nAnd then refer\
+    \ to ret.first or ret.second. However, referring to values as .first or .second\
+    \ is also not expressive - you can easily confuse the names, and it's hard to\
+    \ read. Alternatively you can leverage std::tie which will unpack the tuple/pair\
+    \ into local variables:\n\n```\nint index { 0 };\nbool flag { false };\nstd::tie(index,\
+    \ flag) = InsertElement(10);\n```\n\nSuch code might be useful when you work with\
+    \ std::set::insert which returns std::pair:\n\n```\nstd::set<int> mySet;\nstd::set<int>::iterator\
+    \ iter;\nbool inserted { false };\n```\n\n```\nstd::tie(iter, inserted) = mySet.insert(10);\n\
+    ```\n\n```\nif (inserted)\n    std::cout << \"Value was inserted\\n\";\n```\n\n\
+    As you see, such a simple pattern - returning several values from a function -\
+    \ requires several lines of code. Fortunately, C++17 makes it much simpler!"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'With C++17 you can write thw following:
+
+
+    ```
+
+    std::set<int> mySet;
+
+    ```
+
+
+    ```
+
+    auto [iter, inserted] = mySet.insert(10);
+
+    ```
+
+
+    Now, instead of pair.first and pair.second, you can use variables with concrete
+    names. In addition, you have one line instead of three, and the code is easier
+    to read. The code is also safer as iter and inserted are initialised in the expression.
+
+
+    Such syntax is called a structured binding expression.
+
+
+    # The Syntax
+
+
+    The basic syntax for structured bindings is as follows:
+
+
+    ```
+
+    auto [a, b, c, ...] = expression;
+
+    auto [a, b, c, ...] { expression };
+
+    auto [a, b, c, ...] ( expression );
+
+    ```
+
+
+    The compiler introduces all identifiers from the a, b, c, ... list as names in
+    the surrounding scope and binds them to sub-objects or elements of the object
+    denoted by expression.
+
+
+    Behind the scenes, the compiler might generate the following pseudo code:
+
+
+    ```
+
+    auto tempTuple = expression;
+
+    using a = tempTuple.first;
+
+    using b = tempTuple.second;
+
+    using c = tempTuple.third;
+
+    ```
+
+
+    Conceptually, the expression is copied into a tuple-like object (tempTuple) with
+    variables that are exposed through a, b and c. However, the variables a, b and
+    c are not references; they are aliases (or bindings) to the generated object member
+    variables. The temporary object has a unique name assigned by the compiler.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'For example:
+
+
+    ```
+
+    std::pair(a, 1.0f);
+
+    auto [x, y] = a;
+
+    ```
+
+
+    x binds to int stored in the generated object that is a copy of a. And similarly,
+    y binds to
+
+    float.
+
+
+    # Modifiers
+
+
+    Several modifiers can be used with structured bindings:
+
+    const modifiers:
+
+
+    ```
+
+    const auto [a, b, c, ...] = expression;
+
+    ```
+
+
+    References:
+
+
+    ```
+
+    auto& [a, b, c, ...] = expression;
+
+    auto&& [a, b, c, ...] = expression;
+
+    ```
+
+
+    For example:
+
+
+    ```
+
+    std::pair(a, 1.0f);
+
+    auto [x, y] = a;
+
+    x = 10; // write access
+
+    // a.first is now now
+
+    ```
+
+
+    In the example, x binds to the element in the generated object, that is a reference
+    to a.
+
+    Now it''s quite easy to get a reference to a tuple member:
+
+
+    ```
+
+    auto& [ refA, refB, refC, refD ] = myTuple;
+
+    ```
+
+
+    You can also add [[attribute]] to structured bindings:
+
+    [[maybe_unused]] auto [a, b, c, ...] = expression;
+
+
+    # Structured Bindings or Decomposition Declaration?
+
+
+    You might have seen another name used for this feature: "decomposition declaration.\
+    During the standardisation process, both names were considered, but "structured
+    bindings" was selected.
+
+
+    ![](img/ac44c350c2a527cc3a8ffb11074f162a_48_0.png)'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Structured Binding Limitations
+
+
+    There are several limitations related to structured bindings. They cannot be declared
+    as static or constexpr also cannot be used in lambda functions. For example:
+
+
+    ```
+
+    constexpr auto [x, y] = std::pair(@, 0);
+
+    // generates:
+
+    error: structured binding declaration cannot be ''constexpr''
+
+    ```
+
+
+    It was also unclear about the linkage of the bindings. Compilers had a free choice
+    to implement it (and thus some of them might allow capturing a structured binding
+    in lambdas). Fortunately, those limitations might removed by C++20 proposal (already
+    accepted): P1091: Extending structured bindings to be more like variable declarations.
+
+
+    # Binding
+
+
+    Structured Binding is not limited to tuples, we have three cases from which we
+    can bind from:
+
+
+    +   1. If the initializer is an array:
+
+
+    ```
+
+    // works with arrays:
+
+    double myArray[3] = { 1.0, 2.0, 3.0 };
+
+    auto [a, b, c] = myArray;
+
+    ```
+
+
+    In this case, an array is copied into a temporary object, and a, b and c refers
+    to copied elements from the array.
+
+
+    2. If the initializer supports std::tuple_size<>, provides get<N>() and also exposes
+    std::tuple_element functions:
+
+
+    ```
+
+    std::pair myPair(@, 1.0f);
+
+    auto [a, b] = myPair; // binds myPair.first/second
+
+    ```
+
+
+    In the above snippet, we to myPair. But this also means that you can support for
+    your classes, assuming you add get<N> interface implementation. See an example
+    in the later section.
+
+
+    > https://wg21.link/P1091'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "3. If the initialiser's type contains only non-static data members:\n\n```\n\
+    struct Point {\n    double x;\n    double y;\n};\n```\n\n```\nPoint GetPoint()\
+    \ {\n    return { 0.0, 0.0 };\n}\n```\n\nconst auto [x, y] = GetStartPoint();\n\
+    \nx and y refer to Point::x and Point::y from the Point structure.\nThe class\
+    \ doesn't have to be POD, but the number of identifiers must equal to the number\
+    \ of non-static data members. The members must also be accessible from the given\
+    \ context.\n\n> Note: In C++17, initially, you could use structured bindings to\
+    \ bind class members as long as they were public. That could be a problem when\
+    \ you wanted to access such members in a context of friend functions, or even\
+    \ inside a struct implementation. This issue was recognised quickly as a defect,\
+    \ and it's now fixed in C++17. See P0969R0.\n\n# Examples\n\nThis section will\
+    \ show you a few examples where structured bindings are helpful. In the first\
+    \ one, we'll use them to write more expressive code, and in the next, you'll see\
+    \ how to provide API for your class to support structured bindings.\n\n# Expressive\
+    \ Code With Structured Bindings\n\nIf you have a map of elements, you might know\
+    \ that internally they are stored as pairs of <const Key, ValueType>."
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# General Language Features\n\nNow, you iterate through elements of that map:\n\
+    \n```\nfor (const auto& elem : myMap) { ... }\n```\n\nYou need to write elem.first\
+    \ and second. to refer to the key and value. One of the coolest uses of structuring\
+    \ binding is that you can use it inside a range based for loop:\n\n```\nstd::map<KeyType,\
+    \ ValueType> myMap;\n// C++14:\nfor (const auto& elem : myMap) {\n  // elem.first\
+    \ - is vel key\n  // elem.second - is the value\n}\n// C++17:\nfor (const auto&\
+    \ [key,val] : myMap) {\n  // use key/value directly\n}\n```\n\nIn the above example,\
+    \ we bind to a pair of [key, val] so we can use those names in the loop. C++17\
+    \ you had to operate on an iterator from the map - which returns a pair <first,\
+    \ second>. Using the names key/value is more expressive.\n\nThe above technique\
+    \ can be used in:\n\n```\n#include <map>\n#include <iostream>\n#include <string>\n\
+    \nint main() {\n  const std::map<std::string, int> mapCityPopulation {\n    {\
+    \ \"Beijing\", 21707000 },\n    { \"London\", 8787892 },\n    { \"New York\",\
+    \ 8622698 }\n  };\n\n  for (auto[city, population] : mapCityPopulation) {\n  \
+    \  std::cout << city << \" \": \" << population << '\\\\n';\n  }\n}\n```\n\nIn\
+    \ the loop body, you can safely use city and population variables."
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "General Language Features\n\n35\n\n# Providing Structured Binding Interface\
+    \ for Custom Class\n\nAs mentioned earlier, you can provide Structured Binding\
+    \ support for a custom class.\nTo do that you have to define get<N>, std::tuple_size\
+    \ and std::tuple_element specialisations for your type.\n\nFor example, if you\
+    \ have a class with three members, but you'd like to expose only its public interface:\n\
+    \nChapter Chapter General Language Features/custom_structured_bindings.cpp\n\n\
+    ```\nclass UserEntry {\npublic:\n    void Load() { }\n\n    std::string GetName()\
+    \ const { return name; }\n    unsigned GetAge() const { return age; }\nprivate:\n\
+    \    std::string name;\n    unsigned age;\n    size_t cacheEntry { 0 }; // not\
+    \ exposed\n};\n```\n\nThe interface for Structured Bindings:\n\nChapter Chapter\
+    \ General Language Features/custom_structured_bindings.cpp\n\n```\n// with if\
+    \ constexpr\ntemplate <size_t I> auto get(const UserEntry & u) {\n    if constexpr(I\
+    \ == 0) return u.GetName();\n    else if constexpr(I == 1) return u.GetAge();\n\
+    }\n\nnamespace std {\ntemplate <> struct tuple_size<UserEntry> : integral_constant<size_t,\
+    \ 2> { };\n\ntemplate <> struct tuple_element<0,UserEntry> { using type = std::string;\
+    \ };\ntemplate <> struct tuple_element<1,UserEntry> { using type = unsigned; };\n\
+    }\n\n```\n\ntuple_size specifies how many fields are available, tuple_element\
+    \ defines the type for a specific element and get<N> returns the values."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# General Language Features
+
+
+    Alternatively, you can also use explicit get<> specialisations rather than if
+    constexprpr:
+
+
+    ```
+
+    template<> string get<0>(const UserEntry& u) { return u.getName(); }
+
+    template<> unsigned get<1>(const UserEntry& u) { return u.getAge(); }
+
+    ```
+
+
+    For a lot of types, writing two (or several) functions might be more straightforward
+    using constexprpr.
+
+
+    Now you can use UserEntry in a structured binding, for example:
+
+
+    ```
+
+    UserEntry u;
+
+    u.Load();
+
+    auto [name, age] = u; // read access
+
+    std::cout << name << " " << age << ''\n'';
+
+    ```
+
+
+    This example only allows read access of the class. If you want write access, the
+    class should also provide accessors that return references to members. Later you
+    have to implement constexpr with references support.
+
+
+    The code in this section used constexprpr, you can read more about this powerful
+    features in the next chapter: Templates: if constexprpr.
+
+
+    # Extra Info
+
+
+    > The change was proposed in: P0217³(wording), P0144⁴(reasoning and examples),
+    P0615⁵(renaming "decomposition declaration" with "structured binding declaration").
+
+
+    ³https://wg21.link/p0217
+
+    ⁴https://wg21.link/p0144
+
+    ⁵https://wg21.link/p0615'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# Init Statement for if and switch\n\nC++17 provides new versions of the if\
+    \ and switch statements:\n\n```\nif (init; condition)\n```\n\nAnd\n\n```\nswitch\
+    \ (init; condition)\n```\n\nIn the init section you can specify a new variable,\
+    \ similarly to the init section in for loop. Then check the variable in the condition\
+    \ section. The variable is visible only in if/else scope.\n\nTo achieve a similar\
+    \ result, before C++17, you had to write:\n\n```\n{\nauto val = GetValue();\n\
+    if (condition(val))\n    // on success\nelse\n    // on false...\n}\n```\n\nPlease\
+    \ note that val has a separate scope, without that ‘leaks’ to enclosing scope.\n\
+    Now, in C++17, you can write:\n\n```\nif (auto val = GetValue(); condition(val))\n\
+    \    // on success\nelse\n    // on false...\n```\n\nNow, val is visible only\
+    \ inside the if and else statements, so it doesn’t ‘leak.’ condition might be\
+    \ any boolean condition.\n\nWhy is this useful?\n\nLet’s say you want to search\
+    \ for a few things in a string:"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# General Language Features
+
+
+    ```
+
+    const std::string myString = "My Hello World Wow";
+
+    ```
+
+
+    ```
+
+    const auto pos = myString.find("Hello");
+
+    if (pos != std::string::npos)
+
+    std::cout << " Hello\n";
+
+    ```
+
+
+    ```
+
+    const auto pos2 = myString.find("World");
+
+    if (pos2 != std::string::npos)
+
+    std::cout << pos2 << " World\n";
+
+    ```
+
+
+    You have use different names for pos or enclose it with a separate scope:
+
+
+    ```
+
+    {
+
+    const auto pos = myString.find("Hello");
+
+    if (pos != std::string::npos)
+
+    std::cout << " Hello\n"
+
+    }
+
+    ```
+
+
+    ```
+
+    {
+
+    const auto pos = myString.find("World");
+
+    if (pos != std::string::npos)
+
+    std::cout << pos << " World\n"
+
+    }
+
+    ```
+
+
+    The new if statement will make additional scope in one line:
+
+
+    ```
+
+    if (const auto pos = myString.find("Hello"); pos != std::string::npos)
+
+    std::cout << " Hello\n";
+
+    ```
+
+
+    ```
+
+    if (const auto pos = myString.find("World"); pos != std::string::npos)
+
+    std::cout << " World\n";
+
+    ```
+
+
+    As mentioned before, the variable defined in the if statement is also visible
+    in the else block. So you can write:
+
+
+    ```
+
+    if (const auto pos = myString.find("World"); pos != std::string::npos)
+
+    std::cout << pos << " World\n"
+
+    else
+
+    std::cout << pos << " not found!!\n";
+
+    ```'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "Plus, you can use it with structured bindings (following Herb Sutter code):\n\
+    \n```\n// better together: structured bindings + if initializer\nif (auto [iter,\
+    \ succeeded] = mymap.insert(value); succeeded) {\n    use(iter); // ok\n// ...\n\
+    } // iter and succeeded are destroyed\n```\n\nIn the above example, you can refer\
+    \ to iter and succeeded rather than pair.first and pair.second that is returned\
+    \ from mymap.insert.\n\nAs you can see, structured bindings and tuples allow you\
+    \ to create even more variables in the init section of the if-statement. But this\
+    \ is the code easier to read that way?\n\nFor example:\n\n```\nstring str = \"\
+    Hi World\";\nif (auto [pos, size] = pair(str.find(\"Hi\"), str.size()); pos !=\
+    \ string::npos)\nstd::cout << pos << \" Hello, size is \" << size;\n```\n\nWe\
+    \ can argue that putting more code into the init section makes the code less readable,\
+    \ pay attention to such cases.\n\n# Extra Info\n\nThe change was proposed in:\
+    \ P0305R1."
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# Inline Variables\n\nWith Non-Static Data Member Initialisation introduced\
+    \ in C++11, you can now declare and initialise member variables in one place:\n\
+    \n```\nclass User {\n    int _age{};\n    std::string _name{\"unknown\"};\n};\n\
+    ```\n\nHowever, with static variables (or const static) you need a declaration\
+    \ and then a definition in the implementation file.\n\nC++11 constexpr keyword\
+    \ allows you to declare and define static variables in one place, but it's limited\
+    \ to constant expressions only.\n\nPreviously, only methods/functions could be\
+    \ specified as inline, but now you can do the same with variables, inside a header\
+    \ file.\n\nFrom the proposal [P0386R2]*:\n\n> A variable declared inline has the\
+    \ same semantics as a function declared inline: it can be defined, identically,\
+    \ in multiple translation units, must be defined in every translation unit in\
+    \ which it is used, and the behaviour of the program is as if there was exactly\
+    \ one variable.\n\nFor example:\n\n```\n// inside header file:\nstruct MyClass\
+    \ {\n    static const int sValue;\n};\n```\n\n```\n// later in the same header\
+    \ file:\ninline int const MyClass::sValue = 777;\n```\n\nOr even declaration and\
+    \ definition in one place:\n\n*http://wg21.link/p0386r2"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\nstruct MyClass {\n    inline static const int sValue = 777;\n};\n```\n\
+    \nAlso, note that constexpr variables are inline implicitly, so there's no need\
+    \ to use\\constexpr inline myVar = 10.\n\nAn inline variable is also more flexible\
+    \ than a constexpr variable as it doesn't have to\nised with a constant expression.\
+    \ For example, you can initialise an inline variable\nwith rand(), but it's not\
+    \ possible to do the same with constexpr variable.\n\n# How Can it Simplify the\
+    \ Code?\n\nA lot of header-only libraries can limit the number of hacks (like\
+    \ using inline functions\ntemplates) and switch to using inline variables.\n\n\
+    For example:\n\n```\nclass MyClass {\n    static inline int Seed(); // static\
+    \ method\n};\ninline int MyClass::Seed() {\n    static const int seed = rand();\n\
+    \    return seed;\n}\n```\n\nCan be changed into:\n\n```\nclass MyClass {\n  \
+    \  static inline int seed = rand();\n}\n```\n\nC++17 guarantees that MyClass::seed\
+    \ will have the same value (generated at runtime)\nacross all the compilation\
+    \ units!\n\n> Extra Info\nThe change was proposed in: P0386R2."
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# constexpr Lambda Expressions\n\nLambda expressions were introduced in C++11,\
+    \ and since that moment they've become an essential part of modern C++. Another\
+    \ significant feature of C++11 is the constexpr specifier, which is used to express\
+    \ that a function or value can be computed at compiletime. In C++17, the two elements\
+    \ are allowed to exist together, so your lambda can be invoked in a constant expression\
+    \ context.\n\nIn C++14 the following code doesn't compile, but works with C++17:\n\
+    \n```\nChapter General Language Features/lambda_square.cpp\nint main () {\n  \
+    \  constexpr auto SquareLambda = [] (int n) { return n*n; };\nstatic_assert(SquareLambda(3)\
+    \ == 9, \"\");\n}\n```\n\nSince C++17 lambda expressions (their call operator\
+    \ operator ()) that follow the rules of standard constexpr functions are implicitly\
+    \ declared as constexpr.\n\nWhat are the limitations of constexpr functions? Here's\
+    \ a summary (from 10.1.5 constexpr specifier [dcl.constexpr]¹¹⁰):\n\n+   * they\
+    \ cannot be virtual\n* their return type should be a literal type\n* their parameter\
+    \ types should be a literal type\n* their functions cannot contain: asm definition,\
+    \ a goto statement, try-block, or a variable that is a non-literal type or static\
+    \ or thread storage duration\n\nIn practice, in C++17, if you want your function\
+    \ or lambda to be executed at compile, the body of this function shouldn't invoke\
+    \ any code that is not constexpr. For example, you cannot allocate memory dynamically\
+    \ or throw exceptions.\n\nconstexpr lambdas are also covered in the Other Changes\
+    \ Chapter and in a free ebook: C++ Lambda Story¹¹¹.\n\n# Extra Info\n\nThe change\
+    \ was proposed in: P0170¹⁰.\n\n¹⁰https://timsong-cpp.github.io/cpppp/n4659/dcl.constexpr#3\n\
+    ¹¹https://leanpub.com/cppplamba\n¹¹https://wg21.link/p0170"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "# Capturing [*this] in Lambda Expressions\n\nWhen you write a lambda inside\
+    \ a class method, you can reference a member variable by capturing this. For example:\n\
+    \nChapter General Language Features/capture_this.cpp\n\n```\nstruct Test {\n \
+    \   void foo() {\n        std::cout << m_str << '\\\\n';\n        auto addWordLambda\
+    \ = [this]() { m_str += \"World\"; };\n        addWordLambda();\n        std::cout\
+    \ << m_str << '\\\\n';\n    }\n\n    std::string m_str {\"Hello \"};\n};\n```\n\
+    \nIn the line with auto addWordLambda = [this](){ } we capture this pointer and\
+    \ later we can access m_str.\n\nPlease notice that we captured this by value...\
+    \ to a pointer. You have access to the member variable, not its copy. The same\
+    \ effect happens when you capture by [] or [&]. That's why when you call foo()\
+    \ on some Test object then you'll see the following output:\n\nHello\nHello World\n\
+    \nfoo() prints m_str two times. The first time we see \"Hello\", but the next\
+    \ time it's \"Hello World\" because the lambda addWordLambda changed it.\n\nHow\
+    \ about more complicated cases? Do you know what will happen with the following\
+    \ code?"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# Returning a Lambda From a Method\n\n#include <iostream>\n\n```\nstruct Baz\
+    \ {\n    auto foo() {\n        return [=] { std::cout << s << '\\n'; };\n    }\n\
+    \    std::string s;\n};\n\nint main() {\n    auto f1 = Baz(\"ala\").foo();\n \
+    \   f1();\n}\n```\n\nThe code declares a Baz object and invokes foo(). Please\
+    \ note that foo() returns a lambda that captures a block [=] suggests we capture\
+    \ variables by value, but if you access members of a class in a lambda expression,\
+    \ then it does this implicitly via this pointer. So we captured a copy of this\
+    \ pointer, which is a dangling pointer as soon as we exceed the lifetime of the\
+    \ Baz object.\n\nIn C++17 you can write [*this] and that will capture a copy of\
+    \ the whole object.\n\n```\nauto lam = [*this]() { std::cout << s; };\n```\n\n\
+    In C++14, the only way to make the code safe is to capture [*this]:\n\n```\nauto\
+    \ lam = [self=*this] { std::cout << self.s; };\n```\n\nCapturing this might get\
+    \ tricky when a lambda can outlive the object itself. This might happen when you\
+    \ use async calls or multithreading.\nIn C++20 (see P0806¹) you'll also see an\
+    \ extra warning if you capture [=] in a method. Such expression capture this pointer,\
+    \ and it might not be exactly what you want.\n\n> Extra Info\nnThe change was\
+    \ proposed in: P0018¹."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Nested Namespaces\n\nNamespaces allow grouping types and functions into separate\
+    \ logical units.\n\nFor example, it's common to see that each type or function\
+    \ from a library XY will be stored\nin a namespace xy. Like in the below case,\
+    \ where there is SuperCompressionLib and it\nexposes calling Compress() and Decompress():\n\
+    \n```\nnamespace SuperCompressionLib {\n    bool Compress();\n    bool Decompress();\n\
+    }\n```\n\nThings get interesting if you have two or more nested namespaces.\n\n\
+    ```\nnamespace MySuperCompany {\n    namespace SecretProject {\n        namespace\
+    \ SafetySystem {\n            class SuperArmor {\n                // ...\n   \
+    \         }\n            class SuperShield {\n                // ...\n       \
+    \     }\n        } // SafetySystem\n    } // SecretProject\n} // MySuperCompany\n\
+    ```\n\nWith C++17 nested namespaces can be written more compactly:\n\n```\nnamespace\
+    \ MySuperCompany::SecretProject::SafetySystem {\n    class SuperArmor {\n    \
+    \    // ...\n    }\n    class SuperShield {\n        // ...\n    }\n}\n```\n\n\
+    Such syntax is comfortable, and it will be easier to use for developers that have\
+    \ experience\nin languages like C# or Java."
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "General Language Features\n\nIn C++17 also the Standard Library was \\ucompacted”\
+    \ in several places by using the new nested namespace feature:\n\nFor example,\
+    \ for regex.\n\nIn C++17 it's defined as:\n\n```\nnamespace std::regex_constants\
+    \ {\n  typedef T1 syntax_option_type;\n  // ...\n}\n```\n\nBefore C++17 the same\
+    \ was declared as:\n\n```\nnamespace std {\n  namespace regex_constants {\n  \
+    \  typedef T1 syntax_option_type;\n    // ...\n  }\n}\n```\n\nThe above nested\
+    \ declarations appear in the C++ Specification, but it might look different in\
+    \ an STL implementation.\n\n# Extra Info\n\nThe change was proposed in: N4230¹⁵."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# __has_include Preprocessor Expression\n\nIf your code has to work under two\
+    \ different compilers, then you might experience two deffer sets of available\
+    \ features and platform-specific changes.\n\nIn C++17 you can use __has_include\
+    \ preprocessor constant expression to check if a given header exists:\n\n```\n\
+    #if __has_include(<header_name>)\n#if __has_include(\"header_name\")\n```\n\n\
+    __has_include was available in Clang as an extension for many years, but now it\
+    \ was added to the Standard. It's a part of \"feature testing\" that helps you\
+    \ to check if a particular C++ feature or a header is available. If a compiler\
+    \ supports this macro, then's accessible even without the C++17 flag, that's why\
+    \ you can check for a feature also if you are in C++11, or C++14 \"mode\".\n\n\
+    As an example, we can test if a platform has <charconv> header that declares C++17's\
+    \ low-level conversion routines:\n\nChapter General Language Features/has_include.cpp\n\
+    \n```\n#if defined __has_include\n# if __has_include(<charconv>)\n    define has_charconv\
+    \ 1\n    include <charconv>\n#endif\n#endif\n```\n\n```\nstd::optional<int> ConvertToInt(const\
+    \ std::string& str) {\n    int value = {};\n#ifdef has_charconv\n    const auto\
+    \ last = str.data() + str.size();\n    const auto res = std::from_chars(str.data(),\
+    \ last, value);\n    if (res.ec == std::errc{} && res.ptr == last)\n        return\
+    \ value;\n#else\n    // alternative implementation...\n#endif\n\n    return std::nullopt;\n\
+    }\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# General Language Features
+
+
+    In the above code, we declare has_charconv based on the __has_include condition.
+    If the header is not there, we need to provide an alternative implementation for
+    ConvertToInt. You can check this code using GCC 7.1 and GCC 9.1 and see the effect
+    as GCC 7.1 doesn''t expose the charconv header.
+
+
+    Note: In the above code we can write:
+
+
+    ```
+
+    #if __has_include && __has_include(<charconv>
+
+    ```
+
+
+    As in older compilers - that don''t support __has_include we''d get a compile
+    error. The compiler will complain that since since __has_include is not defined
+    and the whole expression is wrong.
+
+
+    Another important thing to remember is that sometimes a compiler might provide
+    a header stub. For C++14 the __execution__ header might be present (it defines
+    C++17 parallel algorithm execution modes), but the whole file will be empty (due
+    to ifdefs). If you check for this code with __has_include and use C++14 mode,
+    then you''ll get a result.
+
+
+    > In C++20 we''ve standardised feature test macros that simplify checking for
+    various C++ parts. For example, to test std::any you can use __cpp_any, for lambda
+    support there''s __cpp_lambdas. There''s even a macro that checks for attribute
+    support: __has_cpp_attribute( attrib-name). GCC, Clang and Visual Studio exposes
+    many of the macros already, before C++20 is ready. Read more in Feature testing
+    (C++20) - cpppreference¹⁶
+
+
+    __has_include along with feature test macros might greatly simplify multiplatform
+    code that usually needs to check for available platform elements.
+
+
+    # Extra Info
+
+
+    __has_include was proposed in: P0061¹⁷.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Compiler support
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    |---|---|---|---||
+
+    | Structured Binding Declarations | 7.0 | 4.0 | VS 2017 15.3 | 10.3 Rio |
+
+    | Init-statement for if/switch | 7.0 | 3.9 | VS 2017 15.3 | 10.3 Rio |
+
+    | Inline variables | 7.0 | 3.9 | VS 2017 15.5 | 10.3 Rio |
+
+    | constexpr Lambda Expressions | 7.0 | 5.0 | VS 2017 15.3 | 10.3 Rio |
+
+    | Lambda Capture of *this | 7.0 | 3.9 | VS 2017 15.3 | 10.3 Rio |
+
+    | Nested namespaces | 6.0 | 3.6 | VS 2015 | 10.3 Rio |
+
+    | has_include | 5 | Yes | VS 2017 15.3 | 10.3 Rio |'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# 5. Templates
+
+
+    Do you work with templates and/or meta-programming?
+
+
+    If your answer is "YES", then you might be pleased with the updates from C++17.
+
+
+    The new standard introduces many enhancements that make template programming much
+    easier and more expressive.
+
+
+    In this chapter, you''ll learn:
+
+
+    +   - Template argument deduction for class templates
+
+    - template<auto>
+
+    - Fold expressions
+
+    - if constexpr - the compile-time if for C++!
+
+    - Plus some smaller, detailed improvements and fixes'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Template Argument Deduction for Class Templates
+
+
+    C++17 filled a gap in the deduction rules for templates. Now, the template argument
+    deduction can occur for class templates and not just for functions. That also
+    means a lot of your code that uses make_Type functions can now be removed.
+
+
+    For instance, to create a std::pair object, it was usually more comfortable to
+    write:
+
+
+    ```
+
+    auto myPair = std::make_pair(42, "hello world");
+
+    ```
+
+
+    Rather than:
+
+
+    ```
+
+    std::pair<int, std::string> myPair(42, "hello world");
+
+    ```
+
+
+    Because C++17, the conformant compiler will nicely deduce the tion of function
+    template arguments and there''s no need to write:
+
+
+    ```
+
+    auto myPair = std::make_pair<int, std::string>(42, "hello world");
+
+    ```
+
+
+    Now, since C++17, the conformant compiler will nicely deduce the template parameter
+    types for class templates too!
+
+
+    The feature is called "Class Template Argument Deduction" or CTAD in short.
+
+
+    In our example, you can now write:
+
+
+    ```
+
+    using namespace std::string_literals;
+
+    std::pair myPair(42, "hello world"); // deduced automatically
+
+    ```
+
+
+    CTAD also works with copy initialisation and when allocating memory through new():
+
+
+    ```
+
+    auto otherPair = std::pair(42, "Hello"s); // also deduced
+
+    auto ptr = new std::pair(42, "World"s); // for new
+
+    ```'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Templates
+
+
+    CTAD can substantially reduce complex constructions like:
+
+
+    ```
+
+    // lock guard;
+
+    std::shared_timed_mutex mut;
+
+    std::lock_guard<std::shared_timed_mutex> lck(mut);
+
+
+    // array;
+
+    std::array<int, 3> arr {1, 2, 3};
+
+    ```
+
+
+    Can now become:
+
+
+    ```
+
+    std::shared_timed_mutex mut;
+
+    std::lock_guard lck(mut);
+
+    std::array arr { 1, 2, 3 };
+
+    ```
+
+
+    Note, that partial deduction cannot happen, you have to specify all the template
+    parameters or none:
+
+
+    ```
+
+    std::tuple t(1, 2, 3);                   // OK: deduction
+
+    std::tuple<int,int,int> t(1, 2, 3);     // OK: all arguments are provided
+
+    std::tuple<int> t(1, 2, 3);                // Error: partial deduction
+
+    ```
+
+
+    With this feature, a lot of make_Type functions might not be needed - especially
+    those that "emulate" deduction for classes.
+
+
+    Still, there are factory functions that do additional work. For example, std::make_shared
+    -n it only creates the shared_ptr, and the pointed object are allocated in one
+    memory region:
+
+
+    ```
+
+    // control block and int might be in different places in memory
+
+    std::shared_ptr<int> p(new int{10});
+
+    ```
+
+
+    ```
+
+    // the control block and int are in the same contiguous memory region
+
+    auto p2 = std::make_shared<int>(10);
+
+    ```
+
+
+    How does template argument deduction for classes work?
+
+
+    Let’s enter the “Deduction Guides” area.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Deduction Guides
+
+
+    The compiler uses special rules called “Deduction Guides” to work out parameter
+    types.
+
+    There are two types of guides: compiler-generated (implicitly generated) and user-defined.
+
+    To understand how the compiler uses guides, let''s look at a simplified deduction
+    guide¹
+
+    std::array;
+
+
+    ```
+
+    template<typename T, typename... U>
+
+    array(T, U...) ->
+
+    array<enable_if_t<is_same_v<T, U...>,>, 1 + sizeof...(U)>;
+
+    ```
+
+
+    The syntax looks like a template function with a trailing return type. The compiler
+    treats “imaginary” function as a candidate for the parameters. If the pattern
+    matches, the found types are returned from the deduction.
+
+    In our case when you write:
+
+
+    ```
+
+    std::array arr{1, 2, 3, 4};
+
+    ```
+
+
+    Then, assuming T and U... are arguments of the same type, we can build up an array
+    object of the type std::array<int, 4>.
+
+    In most cases, you can rely on the compiler to generate automatic deduction guides.
+    They will be created for each constructor (also copy/move) of the primary class
+    template. Please note that classes which are specialised or partially specialised
+    won''t work here.
+
+    As mentioned, you might also write custom deduction guides. A classic example
+    is a deduction of std::string rather than const char*:
+
+
+    ```
+
+    template<typename T> struct MyType {
+
+    T str;
+
+    };
+
+    ```
+
+
+    ```
+
+    // custom deduction guide
+
+    MyType(const char *) -> MyType<std::string>;
+
+    MyType t{"Hello World"}; // deduces std::string
+
+    ```
+
+
+    Without the custom deduction T would be deduced as const char*.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'Another example of custom deduction guide comes from the overload pattern:
+
+
+    ```
+
+    template<class... Ts>
+
+    struct overload : Ts... { using Ts::operator()... };
+
+    ```
+
+
+    ```
+
+    template<class... Ts>
+
+    load(Ts...) -> overload<Ts...>; // deduction guide
+
+    ```
+
+
+    The overlad class inherits from other classes Ts... and then exposes their operator().
+
+    The custom deduction guide is used here “transform” a list of callable types into
+    the list of classes that we can derive from.
+
+
+    # CTAD Limitations
+
+
+    In C++17 template argument deduction for classes has the following limitations:
+
+
+    +   - it doesn''t work with template aggregate types
+
+    - the deduction doesn''t include inheriting constructors
+
+    - it doesn''t work with template aliases
+
+
+    Those limitations will be removed in C++20 through the already accepted proposal:
+    P1021.
+
+
+    # Extra Info
+
+
+    The CTAD feature was proposed in: P0091R3 and P0433 - Deduction Guides in the
+    Standard Library.
+
+
+    Please note that while a compiler might declare full support for Template Argument
+    Deduction for Class Templates, its corresponding STL implementation might still
+    lack of custom deduction guides for some STL types. See the Compiler Support section
+    at the end of the chapter.
+
+
+    > ²Read more about this pattern in the chapter about std::variant, section related
+    to std::visit()
+
+    ³https://wg21.link/P1021
+
+    ⁴https://wg21.link/p0091r3
+
+    ⁵https://wg21.link/p0433'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# Fold Expressions\n\nC++11 introduced variadic templates, which is a powerful\
+    \ feature, especially if you want to work with a variable number of input template\
+    \ parameters to a function. For example, previously (pre C++11) you had to write\
+    \ several different versions of a template function (one for one parameter, another\
+    \ for two parameters, another for three params...).\n\nStill, variadic templates\
+    \ required some additional code when you wanted to implement \"recursive\" functions\
+    \ like sum, all. You had to specify rules for the recursion.\n\nFor example:\n\
+    \n```\nauto SumCpp11() {\n    return 0;\n}\n\ntemplate<typename ...Args>\nauto\
+    \ SumCpp11(T1 s, T... ts) {\n    return s + SumCpp11(ts...);\n}\n```\n\nAnd with\
+    \ C++17 we can write much simpler code:\n\n```\ntemplate<typename ...Args> auto\
+    \ sum(Args ...args) {\n    return (args + ... + 0);\n}\n\n// or even:\ntemplate<typename\
+    \ ...Args> auto sum2(Args ...args) {\n    return (args + ...);\n}\n```\n\nThe\
+    \ following variations of fold expressions* with binary operators (op) exist:\n\
+    \n| Expression | Name | Expansion |\n|---|---|---|\n| (... op e) | unary left\
+    \ fold | ((e1 op e2) ... op eN) |\n| (init op ... op e) | binary left fold | (((init\
+    \ op e1) op e2) ... op eN) |\n| (e op ... op) | unary right fold | e op (... op\
+    \ (eN-1 op eN)) |\n| (e op ... op init) | binary right fold | e op (... op (eN-1\
+    \ op (eN init))) |\n\n> *https://en.cppreference.com/w/cpp/language/fold"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "op is any of the following 32 binary operators: - * % ^ & | = > << >> += =\n\
+    = *= /= %= ^= &= |= <= >> == != <= >= && || , .* -->. In a binary fold,\nboth\
+    \ ops must be the same.\n\nFor example, when you write:\n\n```\ntemplate<typename...Args>\
+    \ auto sum2(Args...args) {\n    return (args + ...); // unary right fold over\
+    \ '+'\n}\n```\n\nauto value = sum2(1, 2, 3, 4);\n\nThe template function is expanded\
+    \ into:\n\nauto value = 1 + (2 + (3 + 4));\n\nAlso by default we get the following\
+    \ values for empty parameter packs:\n\n| Operator | default value |\n| && | true\
+    \ |\n| || | false |\n| , any other | ill-formed code |\n\nThat's why you cannot\
+    \ call sum2() without any parameters, the unary fold over operator\n+ doesn't\
+    \ have any default value for the empty parameter list.\n\n# More Examples\n\n\
+    Here's a quite nice implementation of a printf using folds P0036R0':\n\n> ^http://wg21.link/p0036r0"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# Templates ... 57\n\n```\ntemplate<typename ...Args>\nvoid FoldPrint(Args&&...\
+    \ args) {\n  (std::cout << << std::forward<Args>(args) << '\\n');\n}\n```\n\n\
+    ```\nFoldPrint(\"hello\", 10, 20, 30);\n```\n\nHowever, above FoldPrint will print\
+    \ arguments one by one, without any separator. For the above function call, you'll\
+    \ see \"hello102030\" on the output.\n\nIf you want separators and more formatting\
+    \ options, you have to alter the printing technique and use fold over comma:\n\
+    \n```\ntemplate<typename ...Args>\nvoid FoldSeparateLine(Args&&... args) {\n \
+    \ auto separateLine = [](const auto& v) {\n    std::cout << v << '\\n';\n  };\n\
+    \  (..., separateLine(std::forward<Args>(args))); // over comma operator\n}\n\
+    ```\n\nThe technique with fold over the comma operator is handy. Another example\
+    \ of it might be a special version of push_back:\n\n```\ntemplate<typename ...Args>\n\
+    void push_back_vec(std::vector<T>& v, Args&&... args) {\n  (v.push_back(std::forward<Args>(args)),\
+    \ ...);\n}\n```\n\n```\nstd::vector<float> vf;\npush_back_vec(vf, 10.5f, 0.7f,\
+    \ 1.1f, 0.89f);\n```\n\nIn general, fold expression allows you to write cleaner,\
+    \ shorter and probably more comfortable to read the code.\n\n> Extra Info\nThe\
+    \ change was proposed in: N4295* and P0036R0.\n\n#https://wg21.link/n4295\n#https://wg21.link/p0036r0"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# if constexpr\n\nThis is a big one!\nThe compile-time if for C++!!\n\nThe\
+    \ feature allows you to discard branches of an if statement at compile-time based\
+    \ on anconstant expression condition.\n\n```\nif constexpr (cond)\n    statement1;\
+    \ // Discarded if cond is false\nelse\n    statement2; // Discarded if cond is\
+    \ true\n```\n\nFor example:\n\n```\ntemplate <typename T>\nauto get_value(T t)\
+    \ {\n    if constexpr (std::is_pointer_v<T>)\n        return *t;\n    else\n \
+    \       return t;\n}\n```\n\nif constexpr has the potential to simplify a lot\
+    \ of template code - especially when tag\nispatching, SFINAE or preprocessor techniques\
+    \ are used.\n\n# Why Compile Time?\n\nAt first, you may ask, why do we need if\
+    \ constexpr and those complex templated\nexpressions... wouldn’t a regular if\
+    \ work?\n\nHere’s a code example:"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# Templates <typename Concrete, typename...> Ts\n\n```\ntemplate <typename\
+    \ Concrete, typename...> Ts\nstd::unique_ptr<Concrete> constructArgs(Ts&&... params)\
+    \ {\n    if (std::is_constructible_v<Concrete, Ts...>) // regular 'if'\n     \
+    \   return std::make_unique<Concrete>(std::forward<Ts>(params)...);\n    else\n\
+    \        return nullptr;\n}\n\n```cpp\n```\n\nThe above routine is an \"updated\"\
+    \ version of std::make_unique: it returns std::unique_ptr when the parameters\
+    \ allow it to construct the wrapped objects, or it returns nullptr.\n\nBelow there\
+    \ simple code that tests constructArgs:\n\n```\nclass Test {\npublic:\n    Test(int,\
+    \ int) {}\n};\n\nint main() {\n    auto p = constructArgs<Test>(10, 10, 10); //\
+    \ 3 args\n}\n```\n\nThe code tries to build Test of three parameters, but please\
+    \ notice that Test has only constructor that takes two int arguments.\n\nWhen\
+    \ compiling you might get a similar compiler error:\n\n> instantiation of <typename\
+    \ std::MakeUniq<Tp>::__single_object\nstd::make_unique(_Args&&...) [with _Tp =\
+    \ Test; _Args = {int, int, int}];\ntypeename std::MakeUniq<Tp>::__single_object\n\
+    std = std::unique_ptr<Test, std::default_delete<Test>>':\n\n```\nmain.cpp:8:40:\
+    \ required from 'std::unique_ptr<Tp>\nconstructArgs(Ts&&...) [with Concrete =\
+    \ Test; Ts = {int, int, int}]'\n```\n\nLet's try to understand this error message.\
+    \ After the template deduction the compiler compiles the following code:"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\nif (std::is_constructible_v<Concrete, int, int, int>)\n  return std::make_unique<Concrete>(10,\
+    \ 10, 10);\nelse\n  return nullptr;\n```\n\nDuring the runtime, if which branch\
+    \ wont be executed - as is_constructible_v returns false, yet the code in the\
+    \ branch must compile.\n\nThat's why we need constexpr, to \"discard\" code and\
+    \ compile only the matching statement.\n\nTo fix the code you have to add constexpr:\n\
+    \n```\ntemplate <typename Concrete, typename... Ts>\nstd::unique_ptr<Concrete>\
+    \ constructArgs(Ts&&... params) {\n  if constexpr (std::is_constructible_v<Concrete,\
+    \ Ts...>) { // fixed!\n    return std::make_unique<Concrete>(std::forward<Ts>(params)...);\n\
+    \  else\n    return nullptr;\n);\n```\n\nNow, the compiler evaluates the if constexpr\
+    \ condition at compile-time and for the expression auto p = constructArgs<Test>(10,\
+    \ 10, 10); the whole if branch will be \"removed\" from the second step of the\
+    \ compilation process.\n\nTo be precise, the discarded branch is not entirely\
+    \ removed from the compilation phase. Only expressions that are dependent on the\
+    \ template parameter used in the condition are not instantiated. The syntax must\
+    \ always be valid.\n\nFor example:\n\n```\ntemplate <typename T>\nvoid Calculate(T\
+    \ t) {\n  if constexpr (std::is_integral_v<T>) {\n    // /\n    static_assert(sizeof(int)\
+    \ == 100);\n  }\nelse\n    execute(t);\n    strange syntax\n}\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "In the above artificial code, if the type T is int, then the else branch is\
+    \ discarded, which means execute(t) won't be instantiated. But the line strange\
+    \ syntax will still be compiled (as it's not dependent on T) and that's why you'll\
+    \ get a compile error about that. Furthermore, another compilation error will\
+    \ come from static_assert, the expression is also not dependent on T, and that's\
+    \ why it will always be evaluated.\n\n# Template C++17 Simplification\n\nBefore\
+    \ C++17 if you have several versions of an algorithm - depending on the type requirements\
+    \ - you could use SFINAE or tag dispatching to generate a dedicated overload resolution\
+    \ set.\n\nFor example:\n\nChapter Templates/sfinae_example.cpp\n\n```\ntemplate\
+    \ <typename T>\nstd::enable_if_t<std::is_integral_v<T>, T> simpleTypeInfo(T t)\
+    \ {\n    std::cout << \"foointegral T > \" << t << '\\\\n';\n    return t;\n}\n\
+    ```\n\n```\ntemplate <typename T>\nstd::enable_if_t<std::is_integral_v<T>, T>\
+    \ simpleTypeInfo(T t) {\n    std::cout << \"not integral \\n\";\n    return t;\n\
+    }\n```\n\nIn the above example, we have two function implementations, but only\
+    \ one of them will end up in the overload resolution set. If std::is_integral_v\
+    \ is true for the T type, then the top function is taken, and the second one rejected\
+    \ to SFINAE.\n\nThe same thing can happen when using tag dispatching:"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Chapter Templates/tag_dispatching_example.cpp\n\n```\ntemplate <typename\
+    \ T>\nT simpleTypeInfoImpl(T t, std::true_type) {\n    std::cout << \"foo<integral\
+    \ T>\" << t << '\\\\n';\n    return t;\n}\n```\n\n```\ntemplate <typename T>\n\
+    T simpleTypeInfoImpl(T t, std::false_type) {\n    std::cout << \"not integral\
+    \ \\n\";\n    return t;\n}\n```\n\n```\ntemplate <typename T>\nT simpleTypeInfo(T\
+    \ t) {\n    return simpleTypeInfoImpl(t, std::is_integral<T>{});\n}\n```\n\nInstead\
+    \ of SFINAE, we generate a unique type tag for the condition: true_type or false_type.\
+    \ Depending on one implementation, the result, only one is selected.\n\nWe can\
+    \ now simplify this pattern with constexpr:\n\n```\ntemplate <typename T>\nT simpleTypeInfo(T\
+    \ t) {\n    if constexpr (std::is_integral_v<T>) {\n        std::cout << \"foo<integral\
+    \ T>\" << t << '\\\\n';\n    } else {\n        std::cout << \"not integral \\\
+    n\";\n    }\n    return t;\n}\n```\n\nWriting template code becomes more \"natural\"\
+    \ and doesn't require that many \"tricks\".\n\n# Examples\n\nLet's see a couple\
+    \ of examples:"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# Line Printer\n\nYou might have already seen the below example in the Jump\
+    \ Start section at the beginning of this Part of the book. Let’s dive into the\
+    \ details and see how the code works.\n\n```\ntemplate<typename> void linePrinter(const\
+    \ T& x) {\n    if constexpr(std::is_integral_v<T>) {\n        std::cout << \"\
+    num: \" << x << '\\\\n';\n    }\n    else if constexpr(std::is_floating_point_v<T>)\
+    \ {\n        const auto frac = x - static_cast<long>(x);\n        std::cout <<\
+    \ \"flt: \" << x << \" <<, \" << frac << '\\\\n';\n    }\n    else if constexpr(std::is_pointer<T>)\
+    \ {\n        linePrinter(*x);\n    }\n    else {\n        std::cout << x << '\\\
+    \\n';\n    }\n}\n```\n\nlinePrinter uses constexpr to check the input type. Based\
+    \ on that, we can output additional messages. An interesting thing happens with\
+    \ the pointer type - when a pointer detects the code dereferences it and then\
+    \ calls linePrinter recursively.\n\n# Declaring Custom get<N> Functions\n\nThe\
+    \ structured binding expression works for simple structures that have all public\
+    \ members,\n\n```\nstruct S {\n    int n;\n    std::string s;\n    float d;\n\
+    };\n```\n\nS s;\nauto [a, b, c] = s;\n\nHowever, if you have a custom type (with\
+    \ private members), then it’s also possible to override get<N> functions so that\
+    \ structured binding can work. Here’s some code to demonstrate this idea:"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "```\nclass MyClass {\npublic:\n    int GetA() const { return a; };n    float\
+    \ GetB() const { return b; };\n\nprivate:\n    int a;\n    float b;\n};\n```\n\
+    \n```\ntemplate<std::size_t I> auto get(MyClass& c) {\n    if constexpr (I ==\
+    \ 0) return c.GetA();\n    else if constexpr (I == 1) return c.GetB();\n}\n```\n\
+    \n```\n// specialisations to support tuple-like interface\nnamespace std {\n \
+    \   template <> struct tuple_size<MyClass> : integral_constant<size_t, 2> {};\n\
+    \n    template <> struct tuple_element<0,MyClass> { using type = int; };\n   \
+    \ template <> struct tuple_element<1,MyClass> { using type = float; };\n}\n```\n\
+    \nIn the code above you have the advantage of having everything in one function.\
+    \ It’s possible to do it as template specialisations:\n\n```\ntemplate <> auto&\
+    \ get<0>(MyClass& c) { return c.GetA(); }\ntemplate <> auto& get<1>(MyClass& c)\
+    \ { return c.GetB(); }\n```\n\nFor more examples you can read the chapter about\
+    \ Replacing std::enable_if if constexpr and also the chapter Structured Bindings\
+    \ - the section about custom get<N> specialisations.\n\nYou can also see the following\
+    \ article: Simplify code with constexpr in C++17¹\n\n# Extra Info\n\nThe change\
+    \ was proposed in: P0292R2¹."
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# Declaring Non-Type Template Parameters With auto\n\nThis is another part\
+    \ of the strategy to use auto everywhere. With C++11 and C++14, you can use it\
+    \ to deduce variables or return types automatically, yet there are also generic\
+    \ lambdas. Now you can also use it for deducing non-type template parameters.\n\
+    \nFor example:\n\n```\ntemplate <auto value> void f() { \nf<10>();    // deduces\
+    \ int\n```\n\nThis is useful, as you don't have to have a separate parameter for\
+    \ the type of non-type parameter. In C++11/14:\n\n```\ntemplate <typename Type,\
+    \ Type value> constexpr Type TConstant = value;\nconstexpr auto MySuperConst =\
+    \ TConstant<int, 100>;\n```\n\nWith C++17 it's a bit simpler:\n\n```\ntemplate\
+    \ <auto value> constexpr auto TConstant = value;\nconstexpr auto MySuperConst\
+    \ = TConstant<100>;\n```\n\nThere's no need to write explicitly.\nAs one of the\
+    \ advanced uses has lots of papers, and articles point to an example of heterogeneous\
+    \ compile time list:\n\n```\ntemplate <auto ... vs> struct HeterogeneousValueList\
+    \ {};\nusing MyList = HeterogeneousValueList<'a', 100, 'b'>;\n```\n\nBefore C++17\
+    \ it was not possible to declare this list directly, some wrapper class would\
+    \ have to be provided first.\n\n> Extra Info\nThe change was proposed in: P0127R12.\
+    \ In P0127R13, you can find some examples and reasoning."
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Other Changes
+
+
+    In C++17 there are also other language and library features related to templates
+    that are worth mentioning:
+
+
+    # Allow typename in a Template Template Parameters.
+
+
+    Allows you to use typename instead of class when declaring a template parameter.
+    Normal type parameters can use them interchangeably, but template template parameters
+    were restricted to class.
+
+
+    More information in N4051¹⁴.
+
+
+    # Allow Constant Evaluation for all Non-Type Template Arguments
+
+
+    Remove syntactic restrictions for pointers, references, and pointers to members
+    to appear as non-type template parameters.
+
+
+    More information in N4268¹⁵.
+
+
+    # Variable Templates for Traits
+
+
+    All the traits that yield ::value accompanying _v variable templates. For example:
+
+
+    ```
+
+    std::is_integral<T>::value has std::is_integral_v<T>
+
+    ```
+
+
+    ```
+
+    std::is_class<T>::value has std::is_class_v<T>
+
+    ```
+
+
+    This improvement already follows the _t suffix additions in C++14 (template aliases)
+    of traits that returns ::type. Such change can considerably shorten template code.
+
+
+    More information in P0006R¹⁶.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# Pack Expansions in Using Declarations\n\nThe feature is an enhancement for\
+    \ variadic templates and parameter packs.\nThe compiler will now support the using\
+    \ keyword in pack expansions:\n\n```\ntemplate<class... Ts> struct overloaded\
+    \ : Ts... {\n    using Ts::operator()...;\n};\n\n```\n\nThe overloaded class exposes\
+    \ all overloads for operator () from the base classes. Before C++17, you would\
+    \ have to use recursion for parameter packs to achieve the same result. The overloaded\
+    \ pattern is a very useful enhancement for std::visit, read more in the “Overload”\
+    \ section in the Variant chapter.\n\nHere's an example in P0195.\n\n# Logical\
+    \ Operation Metaunctions\n\nC++17 adds handy template metafunctions:\n\n+   -\
+    \ template<class...> B> struct conjunction; - logical AND\n- template<class...>\
+    \ B> struct disjunction; - logical OR\n- template<class B> struct negation; -\
+    \ logical negation\n\nHere's an example, based on the code from proposal:\n\n\
+    ```\ntemplate<typename... Ts>\nstd::enable_if_t<std::conjunction_v<std::is_same<int,\
+    \ Ts...>> >\nPrintIntegers(Ts... args) {\n    (std::cout << << args) << '\\n';\n\
+    }\n\n```\n\nThe above function PrintIntegers works with a variable number of arguments,\
+    \ but they all have to be of type int.\nThe helper metafunction increase the readability\
+    \ of advanced template code. They are available in <type_traits> header.\n\nMore\
+    \ information in P00138.\n\n> ^17https://wg21.link/P0195\n^18https://wg21.link/P00138"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# std::void_t Transformation Trait
+
+
+    A surprisingly simple¹⁹ metafunction that maps a list of types into void:
+
+
+    ```
+
+    template<class...>
+
+    using void_t = void;
+
+    ```
+
+
+    void_t is very hasty to SFINAE ill-formed types. For example it might be used
+    to detect a function overload:
+
+
+    ```
+
+    void Compute(int &) { } // example function
+
+
+    template<typename T>
+
+    struct is_compute_available : std::false_type {};
+
+
+    template<typename T>
+
+    struct is_compute_available<decltype(Compute(std::declval<T>()))> : std::true_type
+    {};
+
+
+    static_assert(is_compute_available<int&>::value);
+
+    static_assert(!is_compute_available<double&>::value);
+
+    ```
+
+
+    is_compute_available checks if a Compute() overload is available for the given
+    template parameter. If the expression decltype(Compute(std::declval<T>())) is
+    valid, the compiler will select the template privatisation. Otherwise, it’s SFINAE,
+    and the primary template is chosen.
+
+
+    More information in N3911¹⁰.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# Compiler Support
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    |---|---|---|---|--|
+
+    | Template argument deduction for class templates | 7.0/8.0²¹ | 5.0 | VS 2017
+    15.7 | 10.3 Rio |
+
+    | Deduction Guides in the Standard Library | 8.0²² | 7.0/in progress²³ | VS 2017
+    15.7 | 10.3 Rio |
+
+    | Declaring non-type parameters with auto | 7.0 | 4.0 | VS 2017 15.7 | 10.3 Rio
+    |
+
+    | Fold expressions if constexpr | 6.0 | 3.9 | VS 2017 15.5 | 10.3 Rio |
+
+    | | 7.0 | 3.9 | VS 2017 | 10.3 Rio |
+
+
+    > ²¹Additional improvements for Template Argument Deduction for Class Templates
+    were happened in GCC 8.0, P0512R0.
+
+    ²²Deduction Guides are not listed in the status pages of LibSTDC++, so we can
+    assume they were implemented as part of Template argument deduction for class
+    templates.
+
+    ²³The status page for LibC++ mentions <string>, sequence containers, container
+    adaptors and <regex> portions have implemented so far.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# 6. Standard Attributes\n\nCode annotations - attributes - are probably not\
+    \ the best-known feature of C++. However, they might be handy for expressing additional\
+    \ information for the compiler and also for other programmers. Since C++11, there\
+    \ has been a standard way of specifying attributes. And in C++17 we got even more\
+    \ useful additions.\n\nIn this chapter, you'll learn:\n\n+   - What are the attributes\
+    \ in C++\n- Vendor-specific code annotations vs the Standard format\n- In what\
+    \ cases attributes are handy\n  - C++11 and C++14 attributes\n  - New additions\
+    \ in C++17"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# # Why Do We Need Attributes?
+
+
+    Have you ever used __declspec, __attribute__ or #pragma directives in your code?
+
+    For example:
+
+
+    ```
+
+    // set an alignment
+
+    struct S { short f[3]; } __attribute__ ((aligned (8)));
+
+
+    // this function won''t return
+
+    void fatal () __attribute__ ((noreturn));
+
+    ```
+
+
+    Or for DLL import/export in MSVC:
+
+
+    ```
+
+    # COMPILING_DLL
+
+    #define DLLEXPORT __declspec(dllexport)
+
+    else
+
+    #define DLLEXPORT __declspec(dllimport)
+
+    #endif
+
+    ```
+
+
+    Those are existing forms of compiler-specific attributes/annotations.
+
+    So what is an attribute?
+
+
+    An attribute is additional information that can be used by the compiler to produce
+    code. It might be utilised for optimisation or some code generation (like DLL
+    stuff, OpenMP, etc.). Also, annotations allow you to write more expressive syntax
+    and help other developers to reason about code.
+
+
+    Contrary to other languages like C#, in C++, the compiler has fixed the meta-information
+    system. You cannot add user-defined attributes. In C# you can derive from System.
+    Attribute.
+
+
+    What''s best about Modern C++ attributes?
+
+
+    Since C++11, we get more and more standardised attributes that will work with
+    other compilers. We''re moving away from compiler-specific annotation to standard
+    forms. Rather than learning various annotation syntaxes you''ll be able to write
+    code that is common and has the same behaviour.
+
+
+    In the next section, you''ll see how attributes are used to work before C++11.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Before C++11
+
+
+    In the era of C++98/03, each compiler introduced its own set of annotations, usually
+    with a different keyword.
+
+
+    Often, you could see code with #pragma, __declspec, __attribute spread throughout
+    the code.
+
+
+    Here’s the list of the common syntax from GCC/Clang and MSVC:
+
+
+    # GCC Specific Attributes
+
+
+    GCC uses annotation in the form of __attribute__((attr_name)). For example:
+
+
+    ```
+
+    int square (int) __attribute__ ((pure)); // pure function
+
+    ```
+
+
+    Documentation:
+
+
+    +   - Attribute Syntax - Using the GNU Compiler Collection (GCC)¹n- Using the
+    GNU Compiler Collection (GCC): Common Function Attributes²
+
+
+    # MSVC Specific Attributes
+
+
+    Microsoft mostly used __declspec keyword, as their syntax for various compiler-extensions.
+    See the documentation here: __declspec Microsoft Docs³.
+
+
+    __declspec (deprecated) void LegacyCode() { }
+
+
+    # Clang Specific Attributes
+
+
+    Clang, as it’s straight forward to customise, can support different types of annotations,
+    look at the documentation to find more. Most of GCC attributes work with Clang.
+
+
+    See the documentation here: Attributes in Clang — Clang documentation⁴.
+
+
+    > ¹https://gcc.gnu.org/linedocs/gcc-4.8.1/gcc/Attribute-Syntax.html
+
+    ²https://gcc.gnu.org/linedocs/Common-Function-Attributes#Common-Function-Attributes
+
+    ³https://docs.microsoft.com/en-us/cpp/declspec
+
+    ⁴https://clang.llvm.org/AttributeReference.html'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# Attributes in C++11 and C++14
+
+
+    C++11 took one big step to minimise the need to use vendor-specific syntax. By
+    introducing the standard format, we can move a lot of compiler-specific attributes
+    into the universal set.
+
+
+    C++11 provides a cleaner format of specifying annotations over our code.
+
+
+    The basic syntax is just [[attr]] or [[namespace::attr]].
+
+
+    You can use [[attr]] over almost anything: types, functions, enums, etc., there.
+
+
+    For example:
+
+
+    ```
+
+    [[attrib_name]] void foo() {} // on a function
+
+    struct [[deprecated]] OldStruct {} // on a struct
+
+    ```
+
+
+    # C++11 we have the following attributes:
+
+
+    [[noreturn]] :
+
+
+    It tells the compiler that control flow will not return to the caller. Examples:
+
+
+    +   - [[noreturn]] void terminate() noexcept;
+
+    - functions like std::abort or std::exit are also marked with this attribute.
+
+
+    [[carries_dependency]] :
+
+
+    Indicates that the dependency chain in release-consume std::memory_order propagates
+    in and out of the function, which allows the compiler to skip unnecessary memory
+    fence instructions. Mostly to help to optimise multi-threaded code and when using
+    different memory models.
+
+
+    # C++14 added:
+
+
+    [[deprecated]] and [[deprecated("reason")]] :
+
+
+    Code marked with this attribute will be reported by the compiler. You can set
+    its reason.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# Standard Attributes
+
+
+    Example of [[deprecated]]:
+
+
+    ```
+
+    [[deprecated("use AwesomeFunc instead")) void GoodFunc() { }
+
+    ```
+
+
+    ```
+
+    // call somewhere:
+
+    GoodFunc();
+
+    ```
+
+
+    GCC reports the following warning:
+
+
+    warning: ''void GoodFunc()'' is deprecated: use AwesomeFunc instead
+
+    [-Wdeprecated-declarations]
+
+
+    You know a bit about the old approach, new way in C++11/14... so what''s the deal
+    with C++17?
+
+
+    # C++17 Additions
+
+
+    With C++17 we get three more standard attributes:
+
+
+    +   - [[fallthrough]]
+
+    - [[nodiscard]]
+
+    - [[maybe_unused]]
+
+
+    # Extra Info
+
+
+    The new attributes are specified in P0188 and P0068(reasoning).
+
+
+    Plus three supporting features:
+
+
+    +   - Attributes for Namespaces and Enumerators
+
+    - Ignore Unknown Attributes
+
+    - Using Attribute Namespaces Without Repetition
+
+
+    Let''s go through the new attributes.'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "# [[fallthrough]] Attribute\n\nIndicates that a fall-through in a switch statement\
+    \ is intentional and a warning should not be issued for it.\n\n```\nswitch (c)\
+    \ {\n  case 'a':\n    f(); // Warning! fallthrough is perhaps a programmer error\n\
+    \  case 'b':\n    g();\n    [[fallthrough]]; // Warning suppressed, fallthrough\
+    \ is ok\n  case 'c':\n    h();\n}\n```\n\nWith this attribute, the compiler can\
+    \ understand the intentions of a programmer. It’s also much more readable than\
+    \ using a comment.\n\n# [[maybe_unused]] Attribute\n\nSuppresses compiler warnings\
+    \ about unused entities:\n\n```\nstatic void impl1() { ... } // Compilers may\
+    \ warn when function not called\n[[maybe_unused]] static void impl2() { ... }\
+    \ // Warning suppressed\n```\n\n```\nvoid foo() {\n  int x = 42; // Compilers\
+    \ may warn when x is not used later\n  [[maybe_unused]] int y = 42; // Warning\
+    \ suppressed for y\n}\n```\n\nSuch behaviour is helpful when some of the variables\
+    \ and functions are used in debug only path. For example in assert() macros:\n\
+    \n```\nvoid doSomething(std::string_view a, std::string_view b) {\n  assert(a.size()\
+    \ < b.size());\n}\n```\n\nIf later a or b is no used in this function, then the\
+    \ compiler will generate a warning in release only builds. Marking the given argument\
+    \ with [[maybe_unused]] will solve this warning."
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# [[nodiscard]] Attribute\n\n[[nodiscard]] can be applied to a function or\
+    \ a type declaration to mark the importance of the returned value:\n\n```\n[[nodiscard]]\
+    \ int Compute();\nvoid Test() {\n    Compute(); // Warning! return value of a\n\
+    \    // nodiscard function is discarded\n}\n```\n\nIf you forget to assign the\
+    \ result to a variable, then the compiler should emit a warning. What if you want\
+    \ to handle errors. What happens if you forget about using the return value from\
+    \ new or std::async()?\n\nAdditionally, the attribute can be applied to types.\
+    \ One case for it might be error codes:\n\n```\nenum class [[nodiscard]] ErrorCode\
+    \ {\n    OK,\n    Fatal,\n    System,\n    FileIssue\n};\n```\n\n```\nErrorCode\
+    \ OpenFile(std::string_view fileName);\nErrorCode SendEmail(std::string_view sendto,\
+    \ std::string_view text);\nErrorCode SystemCall(std::string_view text);\n```\n\
+    \nNow, every time you'd like to call such functions, you're “forced” to check\
+    \ the return value. For important functions checking return codes could be crucial\
+    \ and using [[nodiscard]] might save you from a few bugs.\n\nYou might also ask\
+    \ what it means “not to use” a return value\n\nIn the Standard, it’s defined as\
+    \ “Discarded-value expressions”. It means you call a function only for its side\
+    \ effects. In other words, there’s no statement around or an assignment expression.\
+    \ In that case, when a type is marked as [[nodiscard]] the compiler is encouraged\
+    \ to report a warning.\n\nHowever, to suppress it you can explicitly cast the\
+    \ return value to void or [[maybe_unused]]:\n\n> http://en.cppreference.com/w/cpp/language/expressions#Discarded_value_expressions"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "# Standard Attributes\n\n```\n[[nodiscard]] int Compute();\nvoid Test() {\n\
+    \    static_cast<void>(Compute()); // fine...\n\n    [[maybe_unused]] auto ret\
+    \ = Compute();\n}\n```\n\nIn addition, in C++20 the Standard Library will use\
+    \ [[nodiscard]] in a few places like operator new, std::async(), std::allocate(),\
+    \ std::launder(), and std::empty().\nThis feature was already merged in C++20\
+    \ with P0600*.\n\nThe second addition to C++20 is [[nodiscard(\"reason\")]], see\
+    \ in P1301*.\nThis lets specify why not using a returned value might generate\
+    \ issues — for example, some resource leak.\n\n# Attributes for Namespaces and\
+    \ Enumerators\n\nThe idea for attributes in C++11 was to be able to apply them\
+    \ to all sensible places like classes, functions, variables, typedefs, enumerations...\
+    \ But there was an issue in the specification that blocked attributes when they\
+    \ were applied on namespaces or enumerators.\nThis is fixed in C++17. We can now\
+    \ write:\n\n```\nnamespace [[deprecated(use \"BetterUtils\")]] GoodUtils {\n \
+    \   void DoStuff() { }\n}\n```\n\n```\nnamespace BetterUtils {\n    void DoStuff()\
+    \ { }\n}\n```\n\n```\n// use:\nGoodUtils::DoStuff();\n```\n\n> https://wg21.link/p0600\n\
+    https://wg21.link/P1301"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# Standard Attributes\n\nClang reports:\n\n```\nwarning: 'GoodUtils' is deprecated:\
+    \ use BetterUtils\n[-Wdeprecated-declarations]\n```\n\nAnother example is the\
+    \ use of deprecated attribute on enumerators:\n\n```\nenum class ColorModes {\n\
+    \  RGB [[deprecated(\"use RGB8\")]],\n  RGBA [[deprecated(\"use RGBA8\")]],\n\
+    \  RGB8\n  RGBA8\n};\n```\n\n```\n// use:\nauto colMode = ColorModes::RGBA;\n\
+    ```\n\nUnder GCC we'll get:\n\n```\nwarning: 'RGBA' is deprecated: use RGBA8\n\
+    [-Wdeprecated-declarations]\n```\n\n# Extra Info\n\nThe change was described in\
+    \ N4266¹⁰(wording) and N4196¹¹(reasoning).\n\n# Ignore Unknown Attributes\n\n\
+    The feature is mostly for clarification.\n\nBefore C++17, if you tried to use\
+    \ some compiler-specific attribute, you might even get an error when compiling\
+    \ in another compiler that doesn't support it. Now, the compiler omits the attribute\
+    \ specification and won't report anything (or just a warning). This wasn't mentioned\
+    \ in the Standard, and it needed clarification.\n\n¹⁰https://wg21.link/n4266\n\
+    ¹¹https://wg21.link/n4196"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "// compilers which don't\n// supportCompilerSpecificNamespace will ignore this\
+    \ attribute\n[[MyCompilerSpecificNamespace::do_special_thing]];\nvoid foo();\n\
+    \nFor example in GCC 7.1 there's a warnings:\n\nwarning: 'MyCompilerSpecificNamespace::do_special_thing'\n\
+    scoped attribute directive ignored [-Wattributes]\nvoid foo();\n\n# Extra Info\n\
+    \nThe change was described in P0283R12(wording) and P0283R11(reasoning).\n\n#\
+    \ Using Attribute Namespaces Without Repetition\n\nThe feature simplifies the\
+    \ case where you want to use multiple attributes, like:\n\n```\nvoid f() {\n \
+    \ [[rpr::kernel, rpr::target(cpu,gpu)]] // repetition\n  doTask();\n}\n```\n\n\
+    Proposed change:\n\n```\nvoid f() {\n  [[using rpr: kernel, target(cpu,gpu)]]\n\
+    \  doTask();\n}\n```\n\nThat simplification might help when building tools that\
+    \ automatically translate annotated code of that type into different programming\
+    \ models.\n\n# Extra Info\n\nThe change was described in P0028R4¹.\n\n¹¹²https://wg21.link/p0283r2\n\
+    ¹¹³https://wg21.link/p0283r1\n¹⁴http://wg21.link/p0028r4"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Section Summary
+
+
+    Attributes available in C++17:
+
+
+    | Attribute | Description |
+
+    |---|---|
+
+    | [[noreturn]] | a function does not return to the caller |
+
+    | [[carries_dependency]] | extra information about dependency chains |
+
+    | [[deprecated]] | an entity is deprecated |
+
+    | [[deprecated("reason")]] | provides additional message about the deprecation
+    indicates a potential fall-through in a switch statement |
+
+    | [[fallthrough]] | a warning is generated if the return value is discarded |
+
+    | [[maybe_unused]] |
+
+
+    Each compiler vendor can specify its syntax for attributes and annotations. In
+    Modern C++, the ISO Committee tries to extract common parts and standardise it
+    as [[attributes]].
+
+
+    There''s also a relevant quote from Bjarne Ststrup''s C++11 FAQ about suggested
+    use:
+
+
+    > There is a reasonable fear that attributes will be used to create dialects.
+    The recommendation is to use attributes to only control things that do not affect
+    the meaning of a program but might help detect errors (e.g. [[noreturn]]) or help
+    optimisers (e.g. [[carries_dependency]]).
+
+
+    # Compiler support
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    |---|---|---|---|---||
+
+    | [[fallthrough]] | 7.0 | 3.9 | VS 2017 15.5 | 10.3 Rio |
+
+    | [[nodiscard]] | 7.0 | 3.9 | VS 2017 15.3 | 10.3 Rio |
+
+    | [[maybe_unused]] | 7.0 | 3.9 | VS 2017 15.3 | 10.3 Rio |
+
+    | Attributes for namespaces and enumerators | 4.9(namespaces)/6(enums) | 3.4 |
+    VS 2015 14.0 | 10.3 Rio |
+
+    | Ignore unknown attributes | yes | 3.9 | VS 2015 14.0 | 10.3 Rio |
+
+    | Using attribute namespaces without repetition | 7.0 | 3.9 | VS 2017 15.3 | 10.3
+    Rio |
+
+
+    ```
+
+    http://stroustrup.com/C++11FAQ.html#attributes
+
+    ```'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Appendix A - Compiler Support
+
+
+    If you work with the latest version of a compiler like GCC, Clang or MSVC you
+    may assume that C++17 is fully supported (with some exceptions to the STL implementations).
+    GCC implemented the full support in the version 7.0, Clang did in the version
+    6.0 and MSVC is conformant of VS 2017 15.7 For completeness, you have a list of
+    features and versions of compilers where it was added.
+
+
+    The up to date resource with the status of the features: CppReference - Compiler
+    Support^{16}
+
+
+    # GCC
+
+
+    +   Language^{17}
+
+
+    +   The Library - LibSTDC++^{18}
+
+
+    # Clang
+
+
+    +   Language^{19}
+
+
+    +   The Library - LibC++^{20}
+
+
+    # VisualStudio - MSVC
+
+
+    +   Announcing: MSVC Conforms to the C++ Standard^{21}
+
+
+    +   C++17/20 Features and Fixes in Visual Studio 2019^{22}
+
+
+    +   STL Features and Fixes in VS 2017 15.8^{23}
+
+
+    # C++ Builder & RAD Studio
+
+
+    +   Modern C++ Language Features Compliance - RAD Studio^{24}
+
+
+    ${15}https://en.cppreference.com/w/compiler_support
+
+
+    ${16}https://gcc.gnu.org/projects/cxx-status.html#cpp17
+
+
+    ${17}https://llvm.org/docs/onlines/libstdc++/manual/status.html#status.iso.2017
+
+
+    ${18}http://clang.llvm.org/cxx12_status.html
+
+
+    ${19}https://github.com/microsoft/vscode/blob/2018/05/07/announcing-msvc-conforms-to-the-c-standard/
+
+
+    ${20}https://devblogs.microsoft.com/cppblog/cpp17-20-features-and-fixes-in-vs-2019/
+
+
+    ${21}https://devblogs.microsoft.com/cppblog/cpp17-features-and-fixes-in-vs-2017-15-8/
+
+
+    ${22}https://docwiki.embarcadero.com/RADStudio/Rio/en/C%2B%2B_Language_Features_Compliance_Status'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# Compiler Support of C++17 Features
+
+
+    # Fixes and Deprecation
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    |---|---|---|---||
+
+    | Removing register keyword | 7.0 | 3.8 | VS 2017 15.3 | 10.3 Rio |
+
+    | Remove Deprecated operator++(bool) | 7.0 | 3.8 | VS 2017 15.3 | 10.3 Rio |
+
+    | Removing Deprecated Exception Specifications | 7.0 | 4.0 | VS 2017 15.5 | 10.3
+    Rio |
+
+    | New trigraphs | 5.1 | 3.5 | VS 2010 | 10.3 Rio |
+
+    | New auto rules for direct-list-initialisation | 5.0 | 3.8 | VS 2015 | 10.3 Rio
+    |
+
+    | static_assert with no message | 6.0 | 2.5 | VS 2017 | 10.3 Rio |
+
+    | Different begin and end types in range-based for | 6.0 | 3.6 | VS 2017 | 10.3
+    Rio |
+
+
+    # Clarification
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    |---|---|---|---||
+
+    | Stricter expression evaluation order | 7.0 | 4.0 | VS 2017 | 10.3 Rio |
+
+    | Guaranteed copy elision | 7.0 | 4.0 | VS 2017 15.6 | 10.3 Rio |
+
+    | Exception specifications part of the type system | 7.0 | 4.0 | VS 2017 15.5
+    | 10.3 Rio |
+
+    | Dynamic memory allocation for over-aligned data | 7.0 | 4.0 | VS 2017 15.5 |
+    10.3 Rio |
+
+
+    # General Language Features
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    |---|---|---|---||
+
+    | Structured Binding Declarations | 7.0 | 4.0 | VS 2017 15.3 | 10.3 Rio |
+
+    | Init-statement for if/switch | 7.0 | 3.9 | VS 2017 15.3 | 10.3 Rio |
+
+    | Inline variables | 7.0 | 3.9 | VS 2017 15.5 | 10.3 Rio |
+
+    | constexpr Lambda Expressions | 7.0 | 5.0 | VS 2017 15.3 | 10.3 Rio |
+
+    | Lambda Capture of *this | 7.0 | 3.9 | VS 2017 15.3 | 10.3 Rio |
+
+    | Nested namespaces | 6.0 | 3.6 | VS 2015 | 10.3 Rio |
+
+    | has_include | 5 | Yes | VS 2017 15.3 | 10.3 Rio |'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# Templates
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    | --- | --- | --- | --- | --- |
+
+    | Template argument deduction for class templates | 7.0/8.0 | 5.0 | VS 2017 15.7
+    | 10.3 Rio |
+
+    | Deduction Guides in the Standard Library | 8.0 | 7.0 | VS 2017 15.7 | 10.3 Rio
+    |
+
+    | Declaring non-type template parameters with auto | 7.0 | 4.0 | VS 2017 15.7
+    | 10.3 Rio |
+
+    | Fold expressions | 6.0 | 3.9 | VS 2017 15.5 | 10.3 Rio |
+
+    | if constexpr | 7.0 | 3.9 | VS 2017 | 10.3 Rio |
+
+
+    # Attributes
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    | --- | --- | --- | --- | --- |
+
+    | [[fallthrough]] | 7.0 | 3.9 | VS 2015 15.0 | 10.3 Rio |
+
+    | [[nodiscard]] | 7.0 | 3.9 | VS 2015 15.3 | 10.3 Rio |
+
+    | [[maybe_unused]] | 7.0 | 3.9 | VS 2015 15.3 | 10.3 Rio |
+
+    | Attributes for namespaces and enumerators | 4.9(namespaces)/6(enums) | 3.4 |
+    VS 2015 14.0 | 10.3 Rio |
+
+    | Ignore unknown attributes | yes | 3.9 | VS 2015 14.0 | 10.3 Rio |
+
+    | Using attribute namespaces without repetition | 7.0 | 3.9 | VS 2015 15.3 | 10.3
+    Rio |
+
+
+    # The Standard Library
+
+
+    | Feature | GCC | Clang | MSVC | C++ Builder |
+
+    | --- | --- | --- | --- | --- |
+
+    | std::optional | 7.1 | 4.0 | VS 2017 15.0 | 10.3 Rio |
+
+    | std::variant | 7.1 | 4.0 | VS 2017 15.0 | 10.3 Rio |
+
+    | std::any | 7.1 | 4.0 | VS 2017 15.0 | 10.3 Rio |
+
+    | std::string_view | 7.1 | 4.0 | VS 2017 15.0 | 10.3 Rio |
+
+    | String Searchers | 7.1 | 5.0 | VS 2017 15.3 | no |
+
+    | String Conversions | 8 (only integral types) | in progress | VS 2017 15.8 |
+    no |
+
+    | Parallel Algorithms | 9.1 | in progress | VS 2017 15.7 | no |
+
+    | Filesystem | 8.0 | 7.0 | VS 2017 15.7 | 10.3 Rio |
+
+
+    # Other STL changes'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '| Feature | GCC | Clang | MSVC | C++ Builder |
+
+    | --- | --- | --- | --- | --- |
+
+    | std::byte | 7.1 | 5.0 | VS 2017 15.3 | 10.3 Rio |
+
+    | Improvements for Maps and Sets | 7.0 | 3.9 | VS 2017 15.5 | no |
+
+    | insert_or_assign()/try_emplace() for maps | 6.1 | 3.7 | VS 2017 15 | no |
+
+    | Emplace Return Type | 7.1 | 4.0 | VS 2017 15.3 | no |
+
+    | Sampling algorithms | 7.1 | In Progress | VS 2017 15 | no |
+
+    | gcd and lcm | 7.1 | 4.0 | VS 2017 15.3 | 10.3 Rio |
+
+    | clamp | 7.1 | 3.9 | VS 2015.3 | 10.3 Rio |
+
+    | Special Mathematical Functions | 7.1 | Not yet | VS 2017 15.7 | 10.3 Rio |
+
+    | Shared Pointers and Arrays | 7.1 | In Progress | VS 2017 15.5 | no |
+
+    | Non-member size(), data() and empty() | 6.1 | 3.6 | VS 2015 | no |
+
+    | constexpr Additions to the Standard Library | 7.1 | 4.0 | VS 2017 15.3 | no
+    |
+
+    | scoped_lock | 7.1 | 5.0 | VS 2017 15.3 | no |
+
+    | Polymorphic Allocator & Memory Resource | 9.1 | In Progress | VS 2017 15.6 |
+    no |'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Appendix B - Resources and References
+
+
+    You can purchase the official C++17 Standard at the ISO site:
+
+
+    ISO/IEC 14882:2017 - Programming languages - C++^{25}
+
+
+    However, you can also read the free draft that is very close to the published
+    version:
+
+    4687, 2017-07-30, Working Draft, Standard for Programming Language C++^{26}
+
+
+    This PDF is from isocpp.^{27} Also, have a look here for more information about
+    the papers and the status of C++: isocpp/Standard C++^{28}.
+
+
+    For a quick overview of C++17 changes, here''s a handy list located at:
+
+
+    P0636 - Changes between C++14 and C++17^{29}
+
+
+    # Books:
+
+
+    +   - C++17 - The Complete Guide by Nicolai Josuttis
+
+    - C++17 STL Cookbook by Jacek Galowic
+
+    - Modern C++ Programming Cookbook by Marius Bancila
+
+    - C++ Templates: The Complete Guide (2nd Edition) by David Vandevoororde, M. Josuttis,
+    Douglas Gregor
+
+    - Professional C++, 4th Edition by Marc Gregoir
+
+
+    # General C++ Links:
+
+
+    +   - Compiler support: C++ compiler support
+
+    - ISO Standard C++
+
+
+    > $^{25}https://www.iso.org/standard/68564.html
+
+    ${26}https://wg21.link/n4687
+
+    ${27}https://isocpp.org/
+
+    ${28}https://isocpp.org/std/the-standard
+
+    ${29}https://wg21.link/P0636'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: 'Appendix B - Resources and References
+
+
+    +   - Jason Turner: C++ Weekly channel, where he covered most (or even all!) of
+    C++1 features.
+
+    - Simon Brand blog - with lot''s of information about C++1
+
+    - Arne Mertz blog
+
+    - Rainer Grimm Blog
+
+    - CppCast
+
+    - FluentC++
+
+
+    # # General C++17 Language Features
+
+
+    +   - Simon Brand: Template argument deduction for class template constructors
+
+    - Class template deduction(since C++17) - cppreference.
+
+    - "Using expressions to simplify variadic function templates" in Modern C++ Programming
+    Cookbook.
+
+    - Simon Brand: Exploding tuples with fold expressions
+
+    - Baptiste Wicht: C++17 Fold Expressions
+
+    - Fold Expressions - ModernesCpp.com
+
+    - Adding C++17 structured bindings support to your classes
+
+    - C++ Weekly Special Edition - Using C++17''s constexpr if - YouTube - real examples
+    from Jason and his projects.
+
+    - C++17: let''s have a look at the constexpr if - FJ
+
+    - C++17 vs. C++ 14 — constexpr - LoopPerfect - Medium
+
+    - Two-phase name lookup support comes to MSVC
+
+    - What does the carries_dependency attribute mean? - Stack Overflow
+
+    - Value Categories in C++17 - Barry Revzin - Medium
+
+    - Rvalues redefined | Andrej''s C++ blog
+
+    - Guaranteed Copy Elision Does Not Elide Copies - MSVC C++ Team Blog
+
+
+    # # Expression Evaluation Order:
+
+
+    +   - GotW #56: Exception-Safe Function Calls
+
+    - Core Guidelines: ES.43: Avoid expressions with undefined order of evaluation
+
+    - Core Guidelines: ES.44: Don''t depend on order of evaluation of function arguments'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'Appendix B - Resources and References
+
+
+    # About std::optional:
+
+
+    +   - Andrzej''s C++ blog: Efficient optional qualifiers
+
+    - Andrzej''s C++ blog: Ref-qualifiers
+
+    - Clearer interfaces with optional<T> - Fluent C++
+
+    - Optional - Performance considerations - Boost 1.67.0
+
+    - Enhanced Support for Value Semantics in C++17 - Michael Park, CppCon2017
+
+    - std::optional: How, when, and why | Visual C++ Blog
+
+
+    # About std::variant:
+
+
+    +   - SimplifyC++ - Overload: Build a Variant Visitor on the Fly.
+
+    - Variant Visitation by Michael Park
+
+    - Sum types and state machines in C++17
+
+    - Implementing State Machines with std::variant
+
+    - Pattern matching in C++17 with std::variant, std::monostate and std::visit
+
+    - Another polymorphism | Andrzej''s C++ blog
+
+    - Inheritance vs std::variant, C++ Truths
+
+
+    # About string_view
+
+
+    +   - CppCon 2015 string_view – Marshall Clow
+
+    - string_view odi et amo - Marco Arena
+
+    - C++17 string_view - Steve Lorimer
+
+    - Modernescpp - std::string_view accepting temporaries: good idea or horrible
+    pitfall?
+
+    - abseil / Tip of the Week #1: string_view
+
+    - std::string_view is a borrow type – Arthur O’Dwyer – Mostly about C++
+
+    - C++ Russia 2018: Victor Clura, Enough string_view to have ourselves - YouTube
+
+    - StringViews, StringViews everywhere! - Marc Mutz - Meeting C++ 2017 - YouTube
+
+    - Jacek''s C++ Blog - Const References to Temporary Objects
+
+    - abseil / Tip of the Week #107: Reference Lifetime Extension
+
+    - C++17 - Avoid Copying with std::string_view - ModernesCpp'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# String Conversions and Searchers
+
+
+    +   - How to Convert a String to an int in C++ - Fluent C++
+
+    - How to Efficiently Convert a String to an int in C++ - Fluent C++
+
+    - How to encode char in 2-bits? - Stack Overflow
+
+
+    # About Filesystem
+
+
+    +   - Chapter 7, "Working with Files and Streams" - of Modern C++ Programming
+    Cookbook.
+
+    - examples like: Working with filesystem paths, Creating, copying, and deleting
+    files and directories, Removing content from a file, Checking the properties of
+    an existing file or directory, searching.
+
+    - Chapter 10 "Filesystem" from "C++17 STL Cookbook"
+
+    - examples: path normalizer, Implementing a grep-like text search tool, Implementing
+    automatic file rename, Implementing a disk usage counter, statistics about file
+    types, Implementing a tool that reduces folder size by substituting duplicates
+    with symlinks
+
+    - C++17-std::byte and std::filesystem - ModernesCpp.com
+
+    - How similar are Boost filesystem and the standard C++ filesystem libraries?
+    - SO
+
+    - bfilipe.com: Converting from Boost to std::filesystem
+
+
+    # Parallel Algorithms
+
+
+    +   - Bryce Adelstein''s talk about parallel algorithms. Contains a lot of examples
+    for map reduce (transform reduce): CCon 2016: Bryce Adelstein Lelbach "The C++17
+    Parallel Algorithms Library and Beyond" - YouTube
+
+    - Sean Parent – Better Code: Concurrency - code::dive 2016
+
+    - Simon Brand - std::accumulate vs. std::reduce
+
+    - Using C++17 Parallel Algorithms for Better Performance | Visual C++ Team Blog
+
+    - bfilipe.com: The Amazing Performance of C++17 Parallel Algorithms, is it Possible?'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# The Full Version of The Book
+
+
+    The text you read contains only extracted parts of the final book. However, you
+    can purchase
+
+    the full version in three ways: as a paperback, as an ebook, or as an interactive
+    course.
+
+
+    # Amazon (Paperback)
+
+
+    ![](img/ac44c350c2a527cc3a8ffb11074f162a_106_0.png)
+
+
+    Amazon.us, Amazon.co.uk, Amazon.de, Amazon.fr, Amazon.es, Amazon.jp, Amazon.ca
+
+
+    # Leanpub (ebook) with 25% off discount!
+
+
+    C++17 In Detail @Leanpub - with 25% off discount!
+
+
+    # Educative Interactive Course
+
+
+    ![](img/ac44c350c2a527cc3a8ffb11074f162a_106_1.png)
+
+
+    C++17 in Detail: A Deep Dive @Educative
+
+
+    It consists of more than 220 lessons, many quizzes, code snippets and what''s
+    best is that
+
+    it has 123 playgrounds! That means you can compile and edit code samples directly
+    in the
+
+    browser, so there''s no need for you to switch back and forth to some compiler/IDE.'
+  merge: -1
+  pgno: 106
