@@ -1,0 +1,4024 @@
+- img_proc: true
+  md: 'Also by William Brown
+
+
+    [Artificial Intelligence and Machine Learning]
+
+
+    [C# Programming for Beginners]
+
+
+    [C++ Programming for Beginners]'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# C++ Programming for Beginners
+
+
+    How to Learn C++ in Less Than a Week.
+
+    The Ultimate Step-by-Step Complete Course from Novice to nAdvanced Programmer'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# William Brown
+
+
+    © Copyright 2021 by William Brown - All rights reserved.
+
+    The following Book is reproduced below with the goal of providing information
+    that is as accurate and reliable as possible. Regardless, purchasing this Book
+    can be seen as consent to the fact that both the publisher and the author of this
+    book are in no experts on the topics discussed within and that any recommendations
+    or suggestions that are made herein are for entertainment purposes only. Professionals
+    should be consulted as needed prior to undertaking any of the action herein.
+
+
+    This declaration is deemed fair and valid by both the American Bar Association
+    and the Committee of Publishers Association and is legally binding throughout
+    the United States.
+
+
+    Furthermore, the transmission, duplication, or reproduction of any of the work
+    including specific information will be considered an illegal act irrespective
+    of if it is done electronically or in print. This extends to creating a secondary
+    or tertiary copy of the work or a recorded copy and is only allowed with the express
+    written consent from the Publisher. All additional right reserved.
+
+
+    The information in the following pages is broadly considered a truthful and accurate
+    account of facts and as such, any inattention, use, or misuse of the information
+    in question by the reader will render any resulting actions solely under their
+    purport. There are no scenarios in which the publisher or the original author
+    of this work can be in any fashion deemed liable for any hardship or damages that
+    may befall them after undertaking information described herein.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: Additionally, the information in the following pages is intended only for informational
+    purposes and should thus be thought of as universal. As befitting its nature,
+    it is presented without assurance regarding its prolonged validity or interim
+    quality. Trademarks that are mentioned are done without written consent and can
+    in no way be considered an endorsement from the trademark holder.
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# TABLE OF CONTENTS
+
+
+    +   Introduction
+
+    Chapter 1: What is C++
+
+
+    +   1.1: Introduction to Programming
+
+    1.2: Why Program
+
+    1.3: Introduction to C++
+
+    1.4: Why C++
+
+
+    +   Chapter 2: How C++ Works
+
+
+    +   2.1: Getting Started
+
+    2.2: Your First Program
+
+    2.3: Input and Output
+
+    2.4: Modifiers and Data Types
+
+    2.5: Variables
+
+    2.6: Constants
+
+
+    +   Chapter 3: Basic Rules and Application
+
+
+    +   3.1: Arithmetic and Logical Operations
+
+    3.2: Decision Statements
+
+    3.3: Loops
+
+    3.4: Arrays
+
+    3.5: Functions
+
+    3.6: Structures and Enumerations
+
+
+    +   Chapter 4: Make Your own C++ Program
+
+    Chapter 5: Mistakes to Avoid Within C++'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 5.1: Common Errors'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Conclusion'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 2.2: Your First Program
+
+
+    C++ includes libraries that have several methods for handling input and output.
+    There are more generally accepted ways of expressing a computation in C++ as a
+    series of bytes or as more widely regarded as stream-based processing. Cin and
+    Cout are common between command lines and communication in one-oriented applications
+    since it is quite common to receive information and output data from the command
+    line.
+
+
+    Program:
+
+
+    ```
+
+    //A Simple Program
+
+    ```'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '```
+
+    #include //header file
+
+    using namespace std;
+
+    ```'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '```
+
+    int main(){
+
+    cout<<"This is my first C++ Program!";
+
+    //displays "This is my first C++ program!"
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_9_0.png)
+
+
+    Every line that begins with ''#'' is referred to as a directive;
+
+    t preprocessor processes these to be invoked by a compiler.
+
+    It is a header file, ''iostream'' refers to input-
+
+    output stream, and it is used for input and output functions.
+
+
+    **Using namespace std;
+
+
+    This statement imports the std namespace into the program,
+
+    before each input and output, so it is preferred for convenience.
+
+
+    # Int main(){...}'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'This line declares a function called "main" that returns integer-type results.
+    Functions are sets of statements that are conceived t assignment. The traditional
+    model is any C++ program that starts with this key feature, even though it is
+    not near the start. Without a main() feature, the braces'' '' }'' denote the beginning
+    and end of the main function.
+
+
+    ```
+
+    cout << "..."
+
+    ```
+
+
+    This statement displays anything between the quotations onto the screen for the
+    user to see.
+
+
+    # Indentations
+
+
+    If you see, the cout and return statements are being indented or shifted to the
+    right page. It improves the readability of the code. It may not seem relevant
+    in software like this, but it allows the code to be more understandable and less
+    error-prone when applications get more sophisticated. As a result, indentations
+    and annotations must still be used to render the code more understandable.
+
+
+    # 2.3: Input and Output'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'C++ has libraries that include several methods for executing input and output.
+    In C++, input and output are described as a series of bytes, often known as streams.
+
+
+    Input Stream is a method named input if the stream of bytes is from the computer
+    (for example, a keyboard) to main memory.
+
+
+    Output Stream mechanism is named output if the stream of bytes is in the opposite
+    direction, i.e., from main memory to monitor (display screen).
+
+
+    The following header files are required in C++ for Input and output operations:
+
+
+    iostream: iostream is an abbreviation for a normal input-output tube. This header
+    file includes specifications for properties such as cin, cout, cerr, etc.
+
+
+    fstream: This header file defines the file stream in detail. This header file
+    manages data that is interpreted from a filename as input or inserted into a file
+    as output.
+
+
+    iomanip: iomanip is an abbreviation for input-output manipulators. Flows are manipulated
+    using the methods declared in these files. This file includes meanings for setprecision,
+    setw, and other terms.
+
+
+    The C++ keyword cout and cin are frequently used to print outputs and take inputs.
+    In C++, these are perhaps the most fundamental ways for accepting input and displaying
+    data. To use cout and cin, the header file, ''iostream,'' must be included in
+    the package.
+
+
+    Try this code yourself:
+
+    //Input Output Program'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "```\n#include\nusing namespace std;\nint main(){\n    int age;//this is a variable\
+    \ declaration of type integer.\n    cout<<\"How old are you?\";\n    cin>>age;//this\
+    \ lets the user enter data.\n    cout<<\"You are \"\n```"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '```
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'Output:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_14_0.png)
+
+
+    # ## 2.4: Modifiers and Data Types
+
+
+    A Datatype is used for all variables throughout the declaration to limit the type
+    of data that may be processed. As a result, we may assume that data types are
+    used to notify variables about the kind of data they can hold. When you create
+    a variable in C++, the compiler assigns memory for it depending on the data type
+    for which it is declared. Each data form necessitates a specific size of memory.
+
+
+    # ### Types of Primitive Data
+
+
+    These data types are predefined so that the user may use them to declare variables
+    directly. For instance, int, float, bool, char, and so on. The following primitive
+    data forms are accessible in C++:'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'integer
+
+    void
+
+    wide character
+
+    Character
+
+    Boolean
+
+    double Floating Points
+
+    floating point'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'wide character
+
+
+    # Derived datatype
+
+
+    These are data types that are derived from built-in datatypes (i.e., int, char)
+
+
+    +   - Function
+
+    - Pointer
+
+    - Reference
+
+    - Array
+
+
+    # The abstract or User-Identified Data Categories
+
+
+    Data types that the user chooses. As an example, in C++, you may define a class
+    or a structure.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '+   Enumeration
+
+    Class
+
+    Union
+
+    Structure
+
+    Typedef
+
+
+    # Primitive Datatypes'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'Integer (int): The term ''int'' is used for integer data classes. Integers
+    normally take up 4 bytes of storage space and have values ranging between -2147483648
+    to 2147483647.
+
+
+    Character (char): The data form character is used to store characters. The data
+    type form is denoted by the term ''char.'' Characters normally take up one byte
+    of storage space and vary from -128 to 127 or to 255.
+
+
+    Boolean (bool): The Boolean data form is used to store rational or false values.
+    A Boolean variable for Boolean data is ''bool.''
+
+
+    Floating point (float): The Floating-Point storage form stores floating-point
+    values of decimal figures. The word for floating-point data is ''float.'' Float
+    variables normally take up to 4 bytes of memory space.
+
+
+    Double Floating Point (double): The double-floating point data form is used to
+    store floating-point values of double decimal points. The term ''double'' is used
+    to describe the data type. Double variables normally take up 8 bytes of storage.
+
+
+    Void (void): The term ''void'' refers to something that has no meaning. The datatype
+    denotes a meaningless object. The Void data form is used for functions that do
+    not return any result or value.
+
+
+    Wide character (wchar_t): This data form is a character datatype that is larger
+    than the standard 8-bit data type. ''wchar_t'' represents a wide character can
+    can be 2 or 4 bytes in length.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Datatype Modifiers
+
+
+    Datatype modifiers alter the size of data that a specific kind of datatype can
+    carry.
+
+
+    carry.
+
+
+    carry.
+
+
+    carry. carry.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'carry.
+
+    There are a total of 4 types in C++.
+
+
+    +   - Short
+
+    - Long'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Unsigned
+
+    Signed'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: Signed
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'Signed Signed Signed Signed Signed
+
+    Signed Signed Signed
+
+    Signed Signed Signed
+
+    Signed Signed Signed
+
+
+    The range and sizes can be different depending on your compiler.
+
+
+    To check the size of the datatypes on your chosen compiler, you can use an in-built
+    function that displays the size of the datatype; this in-built function you will
+    be using is called sizeof().
+
+
+    ```
+
+    //program displaying sizes of datatypes.
+
+    #include
+
+    using namespace std;
+
+    int main(){
+
+    ```
+
+
+    //write down the function without quotations, and withing the br'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    cout<<"Size of integer: "<<
+
+    cout<<"Size of character: "<<
+
+    cout<<"Size of short integer: "<<
+
+    cout<<"Size of long integer: "<"
+
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '```
+
+    cout<<"Size of wide character: "<
+
+    cout<<"Size of long integer: "<
+
+    cout<<"Size of unsigned long integer: "<
+
+    cout<<"Size of float: ""
+
+    cout<<"Size of double: ""
+
+    cout<<"Size of boolean: ""
+
+    /*Use ''endl'' wihoutght quotations or ''\n'' with quotations to mov
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_26_0.png)
+
+
+    # 2.5: Variables'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'A value that is assigned to a memory place is known as a variable. It is the
+    fundamental storage device in a program.
+
+    Properties of a variable include:
+
+
+    During software execution, the values contained in a variable may be modified.
+
+    A variable is simply the definition assigned to a memory location; all operations
+    performed on the variable impact the variable memory location.
+
+    Both variables in C++ must also be declared before they''ve been included.
+
+
+    ```
+
+    int var1;
+
+    ```
+
+
+    ''var1'' is a variable of type integer. This line defines the variable. The value
+    of vari can be altered at any point in the program. Variable names cannot have
+    any spaces between them (i.e., var 1). If space is necessary, then you can write
+    var_1.
+
+    The variable declaration is the section in which a variable is initially declared
+    or added before it is used for the initial time.
+
+    A variable description is a section in which the variable is given a storage position
+    and a value. Factor declaration and specification are usually performed in agreement.
+
+
+    # Local Variables'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'A local variable is specified inside a block, function, or function Object.
+
+
+    These variables are generated when the block is reached or the function is called,
+    and they are discarded when the block is exited, or the call returns from the
+    function.
+
+
+    The definition of such variables is limited to the frame in which they are declared.
+    That is, you can only modify these variables inside that block.
+
+
+    # Global Variables
+
+
+    Global variables can be used at any point in the program as it is not in any block
+    of code or a specific function. It can be manipulated and used anywhere.
+
+
+    In example:
+
+
+    ```
+
+    //Program declaring variables.
+
+    #include
+
+    using namespace std;
+
+    int variable_1;//global variable
+
+    int main(){"
+
+    ```'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '```
+
+    int variable_2;//local variable
+
+    }
+
+    ```
+
+
+    # 2.6: Constants
+
+
+    A constant is a term given to a value that cannot be changed throughout the program,
+    a fixed value. There are various kinds of constants like integers, octal, float,
+    characters, strings, etc. Each constant has a certain range depending on the data
+    type of the constant.
+
+
+    The keyword ''const'' is used for this.
+
+    Define Constant:
+
+
+    ```
+
+    ''const'' keyword
+
+    ''#define'' preprocessor directive
+
+    ```
+
+
+    # Literals
+
+
+    Any value dedicated to every constant variable is considered literal.
+
+    i.e., const float var1=3
+
+    here, the statement is a constant expression, where ''3'' is a constant integer
+    literal.
+
+
+    # Const
+
+
+    ```
+
+    const (datatype)(variable_name)=(value to be assigned);
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '```
+
+    //Program declaring variables.
+
+
+    #include
+
+    using namespace std;
+
+
+    int main(){
+
+
+    const int variable=10;
+
+
+    out<
+
+    variable=variable+2;//ERROR. if you try to alter the value of the con
+
+    }
+
+    ```
+
+
+    # #define
+
+
+    This is a directive that is utilized when you need to declare an alternative term
+    for an already existent value.
+
+
+    ```
+
+    //Program declaring variables.
+
+    #include
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '```
+
+    using namespace std;
+
+    #define val_1 3
+
+    #define val_2 ''A''
+
+    #define val_3 3.142
+
+    int main(){
+
+    cout<
+
+    }
+
+    ```
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_31_0.png)
+
+
+    # ## Chapter 3: Basic Rules and Application
+
+    ### 3.1: Arithmetic and Logical Operations
+
+
+    # ## Arithmetic Operators
+
+
+    Operators are the building blocks of every programming language'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'As a result, even without the usage of operators, the compatibility of the
+    C++ programming language can be described as identifiers that allow us to conduct
+    particular mathematical or logical calculations on operands. To put it another
+    way, an operator controls the operands.
+
+
+    There are two kinds of arithmetic operators:
+
+
+    +   Unary operators: These are the operators that function by the use of one operand.
+    (i.e.,--, ++).
+
+    Binary operators: These are the operators which function on 2 operands. (i.e.,
+    *, +, /, *)
+
+
+    ```
+
+    //Program performing arithmetic operations
+
+    #include
+
+    using namespace std;
+
+    int main(){
+
+    int sum=0;
+
+    float val_1=23, val_2=56;
+
+    //unary operators
+
+    cout<<++val_1<< "<"
+
+    //binary operators
+
+    sum=val_1+val_2;
+
+    cout<
+
+    cout<
+
+    int diff;
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '```
+
+    diff=val_1-val_1;
+
+    cout<
+
+    cout<
+
+    }
+
+    ```
+
+
+    Output
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_33_0.png)
+
+
+    # Relational Operators
+
+
+    This is used when two variables are needed to be compared. You compare two variables
+    or more when you use decision statements usually, or in loops, etc.
+
+
+    (i.e.,== equal to, >= greater than equal to, <= lesser than or equal to, etc.)
+
+
+    # Logical Operators
+
+
+    Logical Operators are used to merge two or more circumstances or to supplement
+    the analysis of the initial state. The product of a logical operator action is
+    a Boolean value that is either true or false. For instance, the logical AND operator
+    (defined as ''&&'') returns true when all of the requirements under evaluation
+    are fulfilled. If not, it returns false. As a result, a && returns true if both
+    A and B are true (i.e., high).
+
+    high.
+
+    high.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'high).
+
+    high).
+
+    high).
+
+    high).
+
+    high).
+
+    high).
+
+    high).
+
+    high).
+
+    high).
+
+    high).
+
+    high).'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: high).
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# 3.2: Decision Statements
+
+
+    In everyday life, there are times that we must make choices and determine where
+    to go next, depending on those decisions. Similar conditions exist in coding where
+    we must make choices and then implement the next piece of code based on those
+    choices. In C++, for instance, if A exists, then execute B; otherwise, execute
+    C. There may also be different circumstances, as in C++: if condition A exists,
+    then execute X; otherwise, if condition B occurs, execute Y; otherwise, execute
+    Z. This C++ else-if condition is among the ways to implement different conditions.
+
+
+    In C++, decision-making comments determine the flow of program execution. There
+    are the decision statements you can use:
+
+
+    +   * If...else statements
+
+    * Switch case statements
+
+    * Jump statements
+
+
+    # If Statements'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'The if statements are the simplest decision-making method.
+
+    It''s used to establish whether or not specific statements or
+
+    collections of commands can be executed (i.e., whether a certain
+
+    requirement is valid, then a group of code is executed;
+
+    otherwise, it was not.)
+
+
+    ```
+
+    #include
+
+    using namespace std;
+
+    int main(){
+
+    if (/* condition */)
+
+    {
+
+    /* code */
+
+    }
+
+    n}
+
+    ```
+
+
+    The result of the condition would be either 1 or 0. The if
+
+    statements in C++ recognizes Boolean values – if the meaning
+
+    is valid, the series of code beneath it will be executed; else, it
+
+    would not. If you do not have the curly braces ''{'' and ''}'' after
+
+    the if(condition), the if declaration would refer to the first
+
+    statement directly beneath it to be within its group by design.
+
+
+    ```
+
+    #include
+
+    using namespace std;
+
+    int main(){
+
+    float val1, val2;
+
+    cout<<"Enter a number: ";
+
+    ```'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    cin>>val1;
+
+    cout<<"Enter another number: ";
+
+    cin>>val2;
+
+    if (val1>val2)
+
+    {
+
+    cout<
+
+    } else if(val1
+
+    {
+
+    cout<
+
+    } else//in any other condition:
+
+    {
+
+    cout<
+
+    }
+
+    Output
+
+    ```
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_38_0.png)
+
+
+    Nested if: In C++, a nested if is one that is the goal of another if command.
+    Nested if commands are commands that are nestled within another if argument. C++
+    enables you to write statements inside more if statements, (i.e., you can put
+    one if statement inside another.)
+
+
+    ```
+
+    #include
+
+    using namespace std;
+
+    int main(){
+
+    int x=5;
+
+    int y=12;
+
+    ```'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\nif (x)\n{\n  cout<<\\nx is lesser than y\";\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "```\nif (x!=y)//nested if\n{\n    cout<<\\nx=\"\n    if (x+1!=y)//2nd nested\
+    \ if\n    {\n        cout<\n    }\n}\n}\n```\n\nOutput:\n\n![](img/8c6160092cce13ec6d42e1c774234053_40_0.png)\n\
+    \n# Switch Case statements\n\nLengthy if statements that equate an attribute to\
+    \ multiple integral values are replaced by switch-case statements.\nThe switch\
+    \ commands are an example of a multiple branch statement. It allows you to easily\
+    \ route execution into various code sections depending on the value of the input.\n\
+    A switch statement is a controlling command that requires a value to shift execution\
+    \ control.\n\n```\n#include\nusing namespace std;\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\nint main(){\n    int val1;\n}\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "```\ncout<<\"Enter a number: \";\ncin>>val1;//switch statement for val1 expression\n\
+    witch (val1)//switch case is o:\n{\n    case o://in case val1 is o:\n    cout<<\"\
+    value is o\";\n    break;//break statements end the block of code for case o\n\
+    \    case 5:\n    cout<<\"value is 5\";\n    break;\n    default://default case\
+    \ when no other case matches\n    cout<<\"value is not o or 5\";\n    break;\n\
+    }\n```\n\nOutput:\n\nThe phrase in the switch must return a constant value; else,\
+    \ it is invalid.\n\nCase properties that are duplicated are not permitted."
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'The ''default'' command is not needed.
+
+
+    If the turn case statement did not have a default command, it would work normally.
+
+
+    To end a statement set, use the ''break'' keyword within the turn. When a break
+    command is met, the transition is terminated, and the command is transferred to
+    the line after the switch commands.
+
+
+    The break commands are not needed. If this field is left blank, execution will
+    proceed to the next event. Control can be addressed in the following situations
+    before a break is hit.
+
+
+    Switch commands may be nested, which implies they can be included inside another
+    switch argument. Nested switch sentences, on the other hand, should be avoided
+    since they render the software more dynamic and less understandable.
+
+
+    # Jump Statements
+
+
+    C++ ''continue'': This loop control statement (Loops will be further explained
+    in 3.3) works in the same way as the ''break'' statement. The continuing argument
+    is the inverse of the break command in that it causes the loop to perform the
+    next iteration rather than ending it.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'As the name implies, the continue statement causes the loop to continue or
+    perform its next iteration. Whenever the continue statement is performed inside
+    the loop, the program accompanying the continue statement is omitted, so the preceding
+    iteration of the loop begins.
+
+
+    continue;
+
+
+    C++ break'': This loop control command in C++ is used to end the loop. When a
+    break statement is found inside a loop, the loop iterations end, and influence
+    is returned from the loop to the very first command after the loop.
+
+
+    break;
+
+
+    goto statement: in C++, it is often known as the arbitrary hop command, and can
+    be used to transfer control from one location to another in a block of code.
+
+
+    ```
+
+    repeat:
+
+    cout<< "Enter a number: ";
+
+    cin>>val;\goto repeat;
+
+    ```
+
+
+    goto (identifierName);
+
+
+    Return statement: The return statement in C++ brings the movement of the function
+    invocation back to the place where it was named. In addition, it doesn''t have
+    any conditional statements that are needed. Once the sentence is executed, the'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'progress of the code halts automatically. A return value must be returned for
+    every non-void function, no matter what it is. Functions will be explained in
+    detail in 3.5.
+
+
+    ```
+
+    return /*value*/;
+
+    ```
+
+
+    # 3.3: Loops'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'You may use loops in coding when you need to repeat a large number of commands.
+
+
+    After performing an action, such as retrieving and modifying data, a state is
+    reviewed, such as if a counter has met a predetermined value (i.e., the loop ended
+    when the user enters a certain value).
+
+
+    If the counter does not exceed the target value, the next statement in the program
+    loops back to the first statement of the program and repeats it.
+
+
+    If the criterion is met, the next statement then "falls through" to the next consecutive
+    statement or splits well beyond the loop.
+
+
+    Loops may be divided into two categories:
+
+
+    Entry Regulated Loops: The test state is checked prior to entering the loop code.
+    Entry loops, such as For Loop and While Loop, are entry-regulated loops.
+
+
+    Exit Regulated Loops: The test state is checked or validated at the end of the
+    loop body. As a result, regardless of whether the test state is valid or incorrect,
+    the loop program can run at least once. The exit-regulated loop is known as the
+    do-while loop.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# For Loop\n\nThis loop is a repetition control system that helps one create\
+    \ a loop that runs a certain number of instances. The loop allows one to execute\
+    \ an arbitrary number of steps in a single thread.\n\nInitialization Statement:\
+    \ You must set the loop count to a quantity in this line of code. for instance,\
+    \ int i=0;\n\nTest Statement: You would test the condition in this statement.\
+    \ If a condition is true, the block of code within the loop will be executed,\
+    \ and you will proceed to the updated statement; else, for the loop will be terminated.\
+    \ \n\nUpdate expression: this statement increments/decrements the loop counter\
+    \ by any amount after the loop body is executed as the programmer. for instance,\
+    \ i++;\n\nNow the value of 'i' becomes i=11, moving it to the next iteration.\n\
+    \nThe format of the For Loop is as follows:\n\n```\n#include\nusing namespace\
+    \ std;\nint main(){\nfor (datatype variable_name = 0; variable < count; variable_name\
+    \ initialization statement, test statement, and update expression,\n{\n/* code\
+    \ to be repeater */\n}\n}\n```\n\nIn example:\n\n```\n#include\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '```
+
+    using namespace std;
+
+    int main(){
+
+    int val1;
+
+    cout<<"Enter a value you wish to increase by 5, 5 times: ";
+
+    cin>>val1;
+
+    for (int i = 0; i < 5; i++)//start of loop.
+
+    from count i=0 to i=4
+
+    {
+
+    val1=val1+5;//increment by 5
+
+    cout<<"\n loop "<<val1_<<endl;\nprint_updated_value=""" span=""/"
+
+    }
+
+    //ends the loop once i=5
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_48_0.png)
+
+
+    Just like nested if statements, you can nest loops as well.
+
+
+    # While Loop
+
+
+    When researching loops, you discovered that the number of iterations is known
+    ahead of time (i.e., the number of times the loop body must be repeated). However,
+    loops have been used in cases where the precise number of loop iterations is unknown
+    ahead of time. On the basis of the test method, the loop'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "operation is discontinued.\n\nThe format of this loop is as follows:\n\n```\n\
+    #include\nusing namespace std;\nint main(){\n  while (/* condition */)\n{\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '```
+
+    /* code */
+
+    //update expression statement
+
+    }
+
+    }
+
+    ```
+
+
+    In example:
+
+
+    ```
+
+    #include
+
+    using namespace std;
+
+    #include //this is a header file that enables a programmer to us
+
+    in functions'' relevant to
+
+    math, like performing power of a variable etc.
+
+    int main(){
+
+    int count=0;//will keep track of the number of times user repeat
+
+    float val=0;//initially given 0 to make the program enter the loop
+
+    float area;
+
+    while (val!= -1)//while is not equal to -1, do:
+
+    {
+
+    cout<<\nEnter the length of a square to find its area. enter -1 t
+
+    cin>>val;
+
+    area=pow(val,2);//pow() is a built-
+
+    in function, functions will be explained in detail further in the book
+
+    cout<<\nArea of ""
+
+    count++;//increments value of count. can also be written as coui
+
+    }}//end of while loop
+
+    cout<<\nThis while loop was repeated "<
+
+    ```'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    ```
+
+    ```C:\Windows\system32\cmd.exe
+
+    Enter the length of a square to find its area. enter -1 to exit:
+
+    2
+
+    Area of 2 = 4cm^2
+
+    ter the length of a square to find its area. enter -1 to exit:
+
+    3
+
+    Area of 3 = 9cm^2
+
+    Enter the length of a square to find its area. enter -1 to exit:
+
+    7
+
+    Area of 7 = 49cm^2
+
+    Enter the length of a square to find its area. enter -1 to exit:
+
+    5
+
+    Area of 5 = 25cm^2
+
+    Enter the length of a square to find its area. enter -1 to exit:
+
+    -1
+
+    Area of -1 = 1cm^2
+
+    This while loop was repeated 5 times.
+
+    Press any key to continue . . .
+
+    ```
+
+    ```
+
+
+    As you can see, the while loop was repeated 5 times including when the user entered
+    -1. This is because the input was taken within the loop and right after that,
+    the calculation and area was displayed. So, if you wish to make sure the loop
+    ends as soon as -1 is entered into this:
+
+
+    ```
+
+    #include
+
+    using namespace std;
+
+    #include
+
+    int main(){
+
+    int count=0;
+
+    float val;
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '```
+
+    float area;
+
+    //input at the start too, to get into the loop or else it would ca
+
+    cout<<"\nEnter the length of a square to find its area. enter -1 t
+
+    cin>>val;
+
+    while (val!=-1)//while val is not equal to -1, do:
+
+    {
+
+    ```'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '```
+
+    area=pow(val,2);
+
+    cout<<"\nArea of "\ncount++;
+
+    cout<<"\nEnter the length of a square to find its area. enter -1 to
+
+    cin>>val;//putting the input at the end will make the loop check
+
+    }
+
+    cout<<"\nThis while loop was repeated "<<n}
+
+    ```
+
+
+    Output:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_53_0.png)
+
+
+    Now, the count says four times and does not calculate the area for -1.
+
+
+    # Do-while Loop
+
+
+    The do-while loop is a post-condition loop. The loop'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'execution of do-while loops is often executed based on the condition statement.
+    The biggest distinction between a do-while loop and a while loop is that the situation
+    in a do-while loop is measured at the end of the loop code, while the other two
+    loops are arrival regulated loops.
+
+
+    The format for this loop is as follows:
+
+
+    ```
+
+    int main(){
+
+    do
+
+    {/* code */}
+
+    } while (/* condition */);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'In example, you can perform the same code as before and it would still function
+    the same way because we had changed the while loop in such a way that it functioned
+    like a do-while loop
+
+
+    ```
+
+    #include
+
+    using namespace std;
+
+    #include
+
+    int main(){
+
+    int area;
+
+    int count=0;
+
+    int val;
+
+    cout<<"\nEnter the length of a side of a square to find its area,
+
+    cin>>val;
+
+    do{
+
+    area=pow(val,2);
+
+    cout<<"\nArea=" << "<
+
+    ```
+
+
+    cout<<"\nEnter the length of a side of a square to find its area,'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '```
+
+    cin>>val;
+
+    } while (val!=-1);
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    ```
+
+    $$ C:\Windows\system32\cmd.exe
+
+    Enter the length of a side of a square to find its area, enter -1 to exit: -1
+
+    Area= 1 cm^2
+
+    ter the length of a side of a square to find its area, enter -1 to exit: -1
+
+    Press any key to continue . . .
+
+    ```
+
+
+    Except if you were to input -1 at the start, it would still output the area of
+    a square of length -1, wherein the while loop would not, due to the post-condition.
+    Meaning it has to run at least once no matter the cost.
+
+
+    # 3.4: Arrays
+
+
+    An array is a collection of identical data elements located at contiguous memory
+    addresses that can be publicly accessed using array indexes in C++. They may be
+    used to store a list of primitive data types of some kind, double, char, int,
+    float, and so on.
+
+
+    Instead of defining separate variables for every value, arrays are being used
+    to store several values in one variable.
+
+
+    For array declaration, start by defining the variable''s datatype, then the array
+    name, and finally use square brackets ''['' and '']'' to define the size of the
+    array and semicolon.
+
+
+    When you have a minimal number of items, you may use variables (var1, var2, var3,
+    etc.), so when you need to hold a huge number of instances, variables prove difficult
+    to control.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# Basic Arrays\n\nIn example:\n\n```\n#include\nusing namespace std;\n#include\n\
+    int main(){\n    int hall[4];//declares an array named hall with 4 memory spaces\n\
+    \    //memory locations of an array always start from o.\n    //so movies start\
+    \ from hall[0] to hall[4].\n    hall[0]=1;//storing 1 into the oth location of\
+    \ hall.\n    hall[1]=2;\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'hall[2]=3;
+
+    hall[3]=4;
+
+    cout<<"Movie 1 in hall = "<
+
+    float price[4];
+
+    {15.99,21.5,32,13.5};//you can also initialize the values at the start, or
+
+    cout<<price_0__nticket__2__price_1__nticket__3__-\="" span="/>;
+
+    }
+
+
+    Output:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_58_0.png)
+
+
+    You can also use variables as the array size like so:
+
+    int size=4;
+
+    hall[size]=\n{1,2,3,4};//declares an array named hall with ''size'' memory spaces
+    \
+
+    The following are some of the benefits of using an array in
+
+    ++:
+
+
+    Array indexes allow for random access to objects.
+
+
+    Since it generates a standard list of several components,
+
+    requires fewer lines of code.
+
+
+    All of the components are easily accessible.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'Using one loop, traversing the array becomes straightforward.
+
+
+    Sorting of data becomes simple since it it can be done with fewer lines of code.
+
+
+    The disadvantages of using an array in C/C++ are as follows:
+
+
+    Allows for the entry of a predetermined number of elements at the moment of declaration.
+    An array in C++ is not dynamic.
+
+
+    Because the elements must be handled in compliance with the current memory allocation,
+    the addition and deletion of elements can be expensive.
+
+
+    # Using Loops to access Large arrays
+
+
+    If you have an array of size 50, of course, it''d be difficult to get input for
+    each of the 50 memory locations. For this, you can use loops to take large amounts
+    of inputs. As the size of the array is commonly predefined, you can use the for
+    loop like so:'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "```\n#include\nusing namespace std;\n#include\nint main(){\n    int size=10;\n\
+    \    int hall[size];\n    for (int i = 0; i < size; i++) {\n        cout<<\"Enter\
+    \ the movie played in hall number \"<<____ ==\"\" span=\"\"/>\n        cin>>hall[i];//i\
+    \ takes input for the count at which the loop currer\n        cout<<\n    }\n\
+    }\n```\n\nOutput:\n\n![](img/8c6160092cce13ec6d42e1c774234053_60_0.png)\n\nUsing\
+    \ this method, you can perform many calculations on the"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'array variables. You can also take the array size as input by declaring a large
+    array size initially than using only the size the user entered.
+
+
+    # 2D (Two-Dimensional) Arrays
+
+
+    Alternatively, you may use array notation for 2D arrays in C++ to describe arrays
+    of arrays, such as “a two-dimensional array of arrays.” Tables are used to store
+    data in multidimensional arrays (in row-major order).
+
+
+    In example, displaying elements of a 2D array:'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\n#include\nusing namespace std;\nint main()\n{\n    //array of 3 rows,\
+    \ 2 columns.\n    int y[3][2] = {{23,12}, {32,21}, {41,51}};\n    // output each\
+    \ array element's\n    for (int i = 0; i < 3; i++)\n{\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\nfor (int j = 0; j < 2; j++)\n{\n    cout << \"Value at x[\" << ____ <<\
+    \ \"] = \" << span << \"\"\n    cout << y[i][j];\n}\n}\n```\n\nOutput:"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\nC:\\Windows\\system32\\cmd.exe\nValue at x[0][0]: 23\nValue at x[0][1]:\
+    \ 12\nValue at x[1][0]: 32\nValue at x[1][1]: 21\nValue at x[2][0]: 41\nValue\
+    \ at x[2][1]: 51\n\nPress any key to continue . . .\n```\n\nExample 2,\nmultiply\
+    \ a 2x4 and 4x3 matrix and result is in 2x3 matrix\n\n```\n#include\nusing namespace\
+    \ std;\nint main() {\n    float m1[2][4] = { o }, m2[4][3] = { o }, ans[2][3]\
+    \ = { o };\n    cout << \"For the first matrix.\" << endl;\n    for (int row =\
+    \ 0; row < 2; row++) {\n        for (int column = 0; column < 4; column++) {\n\
+    \            cout << \"Enter value of a\" << row + 1 << column + 1 << \": \";\n\
+    \            cin >> m1[row][column];\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\ncout << endl << \"For the second matrix:\" << endl;\nfor (int row = 0;\
+    \ row < 4; row++) {\n  for (int column = 0; column < 3; column++) {\n    cout\
+    \ << \"Enter value of a \" << row + 1 << \" \" << column + 1 << \":\";\n    cin\
+    \ >> m2[row][column];\n  }\n}\nfor (int i = 0; i < 2; ++i) {//2=m1 rows\nfor (int\
+    \ j = 0; j < 3; ++j) {//3= m2 columns\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\nfor (int k = 0; k < 4; ++k) //4=m1 columns\nans[i][j] = (m1[i][k] * m2[k][j])\
+    \ + ans[i][j];\n}\n}\n\\cout << \"the result of matrix 1 into matrix 2 is \" <<\
+    \ endl;\nfor (int i = 0; i < 2; i++)\n    for (int j = 0; j < 3; j++) {\n    \
+    \    cout << \" \" << ans[i][j];\n        if (j == 3 - 1)\n            cout <<\
+    \ endl << endl;\n    }\n}\n```\n\nOutput:"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '```
+
+    C:\Windows\system32\cmd.exe
+
+    For the first matrix.
+
+    Enter value of a11: 4
+
+    Enter value of a12: 6
+
+    Enter value of a13: 3
+
+    Enter value of a14: 2
+
+    Enter value of a21: 2
+
+    Enter value of a22: 4
+
+    Enter value of a23: 3
+
+    Enter value of a24: 1
+
+
+    For the second matrix:
+
+    Enter value of a11: 3
+
+    Enter value of a12: 3
+
+    Enter value of a13: 8
+
+    Enter value of a21: 0
+
+    Enter value of a22: 9
+
+    Enter value of a23: 5
+
+    Enter value of a31: 1
+
+    Enter value of a32: 3
+
+    Enter value of a33: 5
+
+    Enter value of a41: 2
+
+    Enter value of a42: 4
+
+    Enter value of a43: 7
+
+    the result of matrix 1 into matrix 2 is
+
+    19 83 91
+
+
+    11 55 58
+
+
+    Press any key to continue
+
+    ```
+
+
+    # Introduction
+
+
+    This book will give you a step-by-step guide on how to effectively and efficiently
+    program in C++. Whether this is your first glance into the world of programming
+    or an experienced learner, this book encapsulates chapters that are perfect for
+    you to help you grasp the concept of C++ programming. Ranging from why you should
+    program in C++, explaining every topic, actually creating your very own program
+    code, to finally common mistakes you must avoid while programming.
+
+
+    The best way to fully utilize the features of this book to help you progress is
+    completely up to you. You may want to understand all the concepts first and then
+    begin your hands-on'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'programming, or you can attempt each concepts programs with
+
+    y unique ideas side-by-side. Whichever way helps you.
+
+    ''Computer Programming for Beginners: C++'' uses easy-to-
+
+    understand words, so you need not waste your time trying to
+
+    analyze any piece of text like other books. This C++nprogramming guide explains
+    each concept, then provides the
+
+    format/syntax, and lastly, apply it to a real-life application for
+
+    each topic. It tells you everything there is you need to know to
+
+    get you started on C++ programming. The most important rule
+
+    is; Enjoy it and let your creativity flow as much as possible. So
+
+    what are you waiting for? Get started with beginner-level C++
+
+    rogramming. Be consistent in your programming practice, and
+
+    good luck!'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# 3.5: Functions
+
+
+    A feature is a piece of code whose output or side effect has a well-defined behavior.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'Let''s say you needed to create a program that is required to draw a triangle
+    and paint it. In order to deal with this scenario, you can also construct two
+    functions:
+
+    Function 1: a mechanism that will draw the triangle.
+
+    Function 2: a coloring feature applied to the triangle.
+
+    By breaking down the issue into smaller, easier-to-tackle components, your software
+    is more comprehensible and reusable.
+
+    It is possible to describe functions in two distinct ways:
+
+
+    Library Functions: the library with standard functions is
+
+    Conventionally specified in C++
+
+
+    User-defined Functions: anonymous custom feature built by the
+
+    programmer
+
+
+    # ## Library Functions
+
+
+    Functions integrated into C++ programming are standard
+
+    library functions.
+
+    instead of the programmer writing the blocks of code that are
+
+    commonly used repeatedly, they can directly use library functions
+
+    invoking them. Most standard library functions in C++ have
+
+    the following forms: abs(), sqrt(), isdigit(), and so on.
+
+    To use library functions, you would have to use header
+
+    files in which these functions are specified; like using the
+
+    pow(variable, power), you included the header file by writing
+
+    #include . Most arithmetic operations such as sqrt() and the
+
+    abs() are used by using the header cmath.
+
+
+    ```
+
+    In example:
+
+    #include //header for input output operations
+
+    using namespace std;
+
+    #include //header file enables you to use the datatype string
+
+    int main() {
+
+    ```'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '```
+
+    string s1;//use of datatype string
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '```
+
+    cout<<"enter first name: ";
+
+    cin>>s1;
+
+    }
+
+    Output:
+
+    ```
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_72_0.png)
+
+
+    Here are just a few important header files of many header files you can use in
+    your program:
+
+    program:
+
+    program: program: program: program: program: program:
+
+    program: program: program: program: program: program:
+
+    program: program: program: program:
+
+    program: program: program: program: program: program:
+
+    program: program: program: program: program: program:
+
+    program:
+
+    program: program: program: program: program: program: program:
+
+    program: program:
+
+    program: program: program: program: program:'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'program: program: program: program:
+
+    program: program: program: program:
+
+
+    Note: header file names that end with .h are considered “old-style” header files
+    that have been outdated by the C++ Standard Library header files.
+
+
+    Here are some built-in functions you can use for the standard library functions:
+
+
+    +   functions:
+
+    functions: functions: functions: functions: functions:
+
+    functions: functions: functions:
+
+    functions: functions: functions: functions: functions:
+
+    functions: functions: functions:
+
+    functions: functions: functions: functions: functions:
+
+    functions: functions: functions:
+
+    functions: functions: functions: functions: functions:
+
+    functions: functions: functions:
+
+    functions: functions: functions: functions: functions:
+
+    functions: functions: functions:
+
+    functions: functions: functions: functions: functions:
+
+    functions: functions: functions:
+
+    functions: functions: functions: functions: functions:
+
+    functions: functions: functions:
+
+    functions: functions: functions: functions: functions:
+
+    functions: functions: functions:
+
+
+    # User-defined Functions
+
+
+    The programmer can describe their functions in C++. A user-defined feature is
+    a collection of code that performs a particular purpose and is assigned a name
+    (function identifier). When a function is called from anywhere in the program
+    code, it executes any of the programs specified in the function’s body.
+
+
+    Like so:
+
+    #include'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '```
+
+    using namespace std;
+
+    //this is the function definition:
+
+    void my_Function_identifier(/*any parameters you wish to pass to
+
+    {
+
+    ```'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '```
+
+    cout<<"This is my function and it has been called."";
+
+    //the function definition ends here
+
+    //void means this function has no return
+
+    type, it can be of any type.
+
+    int main(){
+
+    my_Function_identifier();//this is the function being called.
+
+    }
+
+    Output:
+
+    ```
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_75_0.png)
+
+
+    You need to declare the function definition before int main(){} because the int
+    main cannot call a function that has not been defined or its function definition
+    is below the called function.
+
+
+    Alternatively, you can create a function prototype if you wish to define a function
+    below the int main. Like so:
+
+    #include'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\nusing namespace std;\nvoid my_Function_identifier();//This is the prototype\
+    \ declaration.\nint main(){\n    my_Function_identifier();//this is the function\
+    \ being called.\n}\n//this is the function definition:\nvoid my_Function_identifier(/*any\
+    \ parameters you wish to pass to\n{\n    cout<< \"This is my function and it has\
+    \ been called.\";\n}//the function definition ends here\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\n//void represents the return type of the function, it can be of ar\nThe\
+    \ return type of a function can be any data type. When\nusing a return type and\
+    \ not void, using the ‘return’ keyword is\ncommon.\nLike so:\n#include\nusing\
+    \ namespace std;\n#include\nstring my_Function_identifier();////This is the prototype\
+    \ declaration.\nint main(){\ncout<\n}\\ //this is the function definition:\nstring\
+    \ my_Function_identifier(/*any parameters you wish to pass\n  string string1;\n\
+    cout<<\"This is my function and it has been called. This is a stri\ngetline(cin,string1);//this\
+    \ is a built in function to store string whi\nreturn string1;//returning the variable\
+    \ that is the same datatype a\n//if you attempted to return a variable which is\
+    \ different from th\n  }//the function definition ends here\n```\n\nOutput:\n\n\
+    ![](img/8c6160092cce13ec6d42e1c774234053_77_0.png)"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Passing Parameters
+
+
+    Parameters are the arguments passed to a function to perform further calculations;
+    for example, in the above example, the space between the curly brackets was empty.
+    Meaning no parameters were passed.
+
+
+    There are two methods to pass parameters:
+
+
+    # Pass by Value:
+
+
+    The original parameter value is duplicated to the function''s argument, and the
+    two kinds of arguments are being stored at separate memory locations. This means
+    that any alterations made to the variable inside the function will not affect
+    the original function.
+
+
+    # Pass by Reference
+
+
+    The original and functions argument is being stored at the same memory location.
+    Thus, if any alteration is made to the variable inside the function, unlike passing
+    by the value, it will affect the original value.
+
+
+    If you wished could pass parameters like using the previous example. In C++, arguments
+    are automatically passed by value:
+
+
+    ```
+
+    #include
+
+    using namespace std;
+
+    #include
+
+    void my_Function_identifier(string my_string);//This is the prototy
+
+    int main(){
+
+    string string1;//defined string i in main, to pass string i as a pa
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '```
+
+    cout<<"This is my function and it has been called. This is a string
+
+    getline(cin,string1);
+
+    my_Function_identifier(string1);////this is the function being called
+
+    //since the function has no return type (is void), i cannot use c
+
+    }
+
+    //this is the function definition:
+
+    void my_Function_identifier(string my_string)
+
+    {//string my_string stores the value of string into my_string. you ca
+
+    ```'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '```
+
+    cout<
+
+    //the function definition ends here
+
+    Output:
+
+    ```
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_80_0.png)
+
+
+    To pass a value by reference, you would need to use a more complex concept called
+    Pointers. Keep in mind that every function must have a return type and use the
+    return keyword, or else be void.
+
+
+    # 3.6: Structures and Enumerations
+
+
+    Structures and Enumerations are User-Defined data types in C++.
+
+    Structures
+
+    This type of user-defined datatype creates a group of different kinds of variables
+    under a common type. The keyword used is ''struct.’ You can declare a struct with
+    the definition, outside main, or in main (like int, float, etc.).'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "This is the Format:\n\n# #include\n\n```\nusing namespace std;\nstruct my_datatype_identifier//this\
+    \ is the structure definition with\n{\n    /* data */\n}variable1;//placing after\
+    \ } is compulsory to execute the block c\n//writing a variable name between }\
+    \ ; declares a new variab\nint main(){\n    my_datatype_identifier variable2;//this\
+    \ is declaring a variable2 of c\n}\nmy_datatype_identifier variable3;//this is\
+    \ declating a variable3 outs\n```\n\nIn example, a structure is created called\
+    \ length:\n\n# #include\n\n```\nusing namespace std;\nstruct length//this is the\
+    \ structure definition with the identifier le\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "```\n{\n//structure mm,cm,km;//this is declaring a group of variables of type\
+    \ f\nchar length_known='n';//you can declare as many variables as yo\nlength1={\n\
+    {25.5,2.1,0.215,'y'};//placing ; after } is compulsory to execute the bl\n//the\
+    \ {} brackets store data of length 1 in the order of declarati\n//writing a variable\
+    \ name between } ; declares a new variab\nlength3[3];//this is declaring an array\
+    \ of structures length,\nint main(){\n//displaying length 1 data:\ncout<<\"Length\
+    \ 1 data: \\n\\tLength known? \" \n<<______length1.mm__n_tln__centimeters______length1.cm_______\n\
+    _= span=\"\"/>//this is declaring a variable2 of datatype length ir\n//getting\
+    \ length 2 data\ncout<<\"Length 2 data: \\n\\tls length 2 known? (enter y or n)\\\
+    n\";ncin>>length2.length_known;\nif (length2.length_known=='y')\n```"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '```
+
+    {
+
+    cout<<"\n\tEnter length 2 in milimeters: "";
+
+    cin>>length2.mm;
+
+    cout<<"\n\tEnter length 2 in centimeters: "";
+
+    cin>>length2.cm;//the ''.'' dot operator accesses the variables insic
+
+    cout<<"\n\tEnter length 2 in kilometers: "";
+
+    cin>>length2.km;
+
+    }
+
+    else
+
+    {
+
+    cout<<"\nLength 2 data unavailable.\n"
+
+    }
+
+    //getting length 3 array of structures data
+
+    ```'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '```
+
+    cout<<"Length 3 data:\n\t"
+
+    length3[0].length_known=''y'';//accessing 1st memory location of ar
+
+    length3[1].length_known=''y'';//accessing 2nd memory location of ar
+
+    for (int i = 0; i < 3; i++){for every length do:
+
+    cout<<"\n\t at "<<\n__="" span=""/>
+
+    if (length3[i].length_known==''y'')
+
+    //check whether or not the length is known, if is:
+
+    cout<<"\n\tEnter length 3 in millimeters: \";
+
+    cin>>length3[i].mm;
+
+    cout<<"\n\tEnter length 3 in centimeters: \";
+
+    cin>>length3[i].cm;//the ''.'' dot operator accesses the variables ins
+
+    cout<<"\n\tEnter length 3 in kilometers: \";
+
+    cin>>length3[i].km;
+
+    cout>
+
+    }
+
+    elelse
+
+    {
+
+    ```'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '```
+
+    cout<<\nLength 3 at <<"
+
+    }
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_85_0.png)
+
+
+    # Enumerations
+
+
+    Enumerations user-defined data type is commonly used to define identifiers to
+    integral constants. This makes the program simple and efficient to maintain. The
+    keyword used is ''enums.''
+
+    This is the format used:
+
+    #include'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '```
+
+    using namespace std;
+
+    enum enum_variable_name{monday
+
+    ```'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '```
+
+    enum enum_variable_name Day;//this is the object created for th
+
+    Day=monday;//this stores o in Day
+
+    cout<
+
+    }
+
+    Output:
+
+    ```
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_87_0.png)
+
+
+    You can alter the value stored at each enumerator by initializing
+
+    it in the definition. Like so:
+
+
+    ```
+
+    #include
+
+    using namespace std;
+
+    enum enum_variable_name{monday=1,tuesday,wednesday,thursday,
+
+    int main(){
+
+    enum enum_variable_name Day[4];//this is the array of objects c
+
+    Day[0]=monday;//this stores 1 in Day as 1 is initialized to mond:
+
+    cout<
+
+    ```'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '```
+
+    Day[1]=tuesday;//tuesday automatically stores the preeceding term
+
+    cout<
+
+    Day[2]=friday;//stores 5
+
+    cout<
+
+    Day[3]=saturday;//stores 6 as it is the preceding term of friday.
+
+    cout<
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_88_0.png)
+
+
+    # Chapter 4: Make Your own C++ Program
+
+
+    This lengthy C++ program aims to give the users an insight into outer space through
+    interactive segments of their choosing by giving them online their topic of choice
+    related to space. For instance, users can buy a telescope of their liking and
+    perform calculations.
+
+
+    The user can choose any topic they would like to know about; then, the user can
+    either choose to find information or test themselves in their intellect on the
+    topic they chose. If the user wishes to purchase telescopes, they may do so, and
+    the program will generate a bill.
+
+
+    You will be using all the concepts you have studied.
+
+    The user can always choose a different topic after completing their current segment.
+
+
+    Paste this program onto VS code or your chosen compiler to'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: confirm its functionality and fully grasp the concept of this code.
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '```
+
+    //header files
+
+    #include
+
+    #include
+
+    #include
+
+    #include
+
+    #include
+
+    #include
+
+    #include //header file is used to access the Win32 API functions built functionality.
+
+    #ifdef _WIN32
+
+    #else
+
+    #include
+
+    #endif
+
+    //declares a constant integer variable for each color which will b
+
+    ```'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '```
+
+    const int GREEN = 10;
+
+    const int BLUE = 11;
+
+    const int RED = 12;
+
+    const int PURPLE = 13;
+
+    const int YELLOW = 14;
+
+    const int WHITE = 15;
+
+    using namespace std;
+
+    //function prototypes
+
+    ```'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\nvoid Main();\nvoid TeleScopes();\nvoid FORMULAS();\nvoid clearScreen(int\
+    \ characterLength) {/*to delete previous data fr\nfor (int i = 0; i < characterLength;\
+    \ i++) {\n  cout << \"\\b\";\n}\nvoid changeColour(int colour) {//function to\
+    \ change color of proj\nHANDLE hConsole;\nhConsole = GetStdHandle(STD_OUTPUT_HANDLE);//an\
+    \ be used\nSetConsoleTextAttribute(hConsole, colour);\n}\nvoid showLoadingScreen()\
+    \ {//function to give a loading screen at\nint i;\nstring closed = \"- - \",\"\
+    \ open = \"* * \\*\";\nint colour[] = {RED, GREEN, BLUE};\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "```\ncout << closed;\nfor (i = 0; i < 5; i++) {\n  Sleep(700);\n  clearScreen(5);\n\
+    \  changeColour(colour[i]);\n  cout << open;\n  Sleep(700);\n  clearScreen(5);\n\
+    \  changeColour(WHITE);\n  cout << closed;\n}\nclearScreen(5);\nchangeColour(WHITE);\n\
+    }\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\nvoid TypeWriter(string msg1,unsigned int millis_per_char )//to ad\n{\n\
+    \    for (int x = o; msg1[x] != o; x++)\n    {\n        if (KeyState(VK_SPACE)\
+    \ & 0x8000) //Check if high-order bit is set (1 << 15))/\n            millis_per_char\
+    \ = 1;\n        }\n        cout << msg1[x];\n        Sleep(millis_per_char);\n\
+    \    }\n}\nvoid DrawLineThic()//to add a function for breaks to design a s\n{\n\
+    \    cout << \"=============================================\\n}\n//FORMULAS START\n\
+    void calculate();\nvoid FORMULAS();\nvoid EqMotion(){\ndouble V, Vo, a, t, S,\
+    \ So, Vavg;\n```"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "```\nint choice;\ninvalidInput:\ncout<<\"Enter a number for the corresponding\
+    \ equation of motior\ncin>>choice;\nswitch (choice)\n{\n  case 1:\n  cout<\ncin>>Vo;\n\
+    cout<\ncin>>t;\ncout<\ncin>>a;\nV=Vo + (a*t);\ncout<<\" Velocity (V) = \"<\nDrawLineThicc();\n\
+    EqMotion();\n  break;\n  case 2:\n  cout<\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '```
+
+    cin>>Vo;
+
+    cout<<______=""" span=""/>;
+
+    cin>>t;
+
+    cout<<______=""" span=""/>;
+
+    cin>>a;
+
+    cout<<""Enter initial distance (So): ";
+
+    cin>>So;
+
+    S=So+(Vo*t)+((0.5)*a*(pow(t,2)));
+
+    cout<
+
+    ```'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '```
+
+    DrawLineThicc();
+
+    break;
+
+    case 3:
+
+    cout<
+
+    cin>>Vo;
+
+    cout<<"_="" span=""/>
+
+    cin>>a;
+
+    cout<<"_="" span=""/>
+
+    cin>>So;
+
+    cout<<"_="" span=""/>
+
+    cin>>S;
+
+    V=(pow(Vo,2))+(2*a*(S-So));
+
+    V=pow(V,2);
+
+    cout<
+
+    DrawLineThicc();
+
+    break;
+
+    case 4:
+
+    ```'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '```
+
+    cout<
+
+    cin>>Vo;
+
+    cout<<______""" span="""/>
+
+    cin>>V;
+
+    Vavg=(1/2)*(V+Vo);
+
+    cout<
+
+    DrawLineThicc();
+
+    break;
+
+    case -1:
+
+    DrawLineThicc();
+
+    sysystem("cls");
+
+    ```'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '```
+
+    calculate();
+
+    break;
+
+    default:
+
+    {cout<<"Invalid input, please try again."\<
+
+    goto invalidInput;
+
+    break;
+
+    sysystem("cls");//this calls the function to clear previous data on c
+
+    }
+
+    EqMotion();
+
+    }
+
+    void calculate(){
+
+    char choice;
+
+    cout<<"Choose which type of equations u wish to use (Enter 1 t
+
+    <ninvalidInput://goto jump statement used
+
+    cin>>choice;
+
+    cout<
+
+    nwitch (choice)//switch case decision statement used
+
+    ```'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\n{\n  case 'a':\n    system(\"cls\");\n    EqMotion();\n    cout<\n   \
+    \ break;\n  case 'i':\n    system(\"cls\");\n    cout<\n    FORMULAS();\n    break;\n\
+    \  default:\n    cout<<\"Invalid input, please try again.\"\n    goto invalidInput;\n\
+    \    break;\n}\nsystem(\"cls\");\nFORMULAS();\n}\n\nvoid FORMULAS(){//FORMULAS\
+    \ MAIN\nint choice;\nchangeColour(YELLOW);\nTypeWriter(\"Welcome to the formulas\
+    \ computation section! In thi\ninvalidInput:\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '```
+
+    cin>>choice;
+
+    cout<
+
+    switch (choice)
+
+    {
+
+    case 1:
+
+    system("cls");
+
+    calculate();
+
+    break;
+
+    case 2:
+
+    Main();
+
+    break;
+
+    default:
+
+    cout<<"Invalid input, please try again."
+
+    goto invalidInput;
+
+    break;
+
+    }
+
+    Main();//function that acts as int main
+
+    }
+
+    //FORMULAS END
+
+    // Telescopes Start here
+
+    //functions:
+
+    struct SpecsAndInfo//structure definition
+
+    {
+
+    // general info:
+
+    string name;
+
+    //string type;
+
+    ```'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '```
+
+    double priceRs; /*priceUS*/
+
+    //Specs bv
+
+    string bv = "Best For Viewing: ";
+
+    string bi = "Best For Imaging: ";
+
+    string ul = "User level: ";
+
+    string od = "Optical Design: ";
+
+    string mr = "Magnification Range: ";
+
+    };
+
+    SpecsAndInfo items[5];
+
+    //functions:
+
+    void TeleScopes();
+
+    void TypesOfTelescops()
+
+    {
+
+    int select;
+
+    string back;
+
+    string typesMenu = "\n \tTYPES OF TELESCOPES IN OUR DIRE Ray and Gamma-
+
+    Ray Telescope\n" "\t5. Catadioptric Telescope\n" \n \t[o]. (Main Ma\5): "";
+
+    cout << "*";
+
+    (press ''space'' key on your keyboard to skip the typing animation)*"
+
+    (Please use fullscreen mode for a better experience)*" << endl << '' ''
+
+    "
+
+    TypeWriter(typesMenu,50);
+
+    cin >> select;
+
+    switch (select)
+
+    {
+
+    ```'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "```\ncase o:\n{\n  system(\"cls\");\n  Telescopes();\n}\ncase 1:\n{\n  changeColour(GREEN);\n\
+    \  DrawLineThicc();\n  TypeWriter(\"\\nIACT' stands of Imaging Atmospheric Cherenkov\
+    \ T\nAPD Cherenkov Telescope (FACT)\\n\\t4. Very Energetic Radiation I\ncout <<\
+    \ endl << \"Would you like to go back? yes or no: \";\ncin >> back;\n  if (back\
+    \ == \"yes\" || back == \"YES\" || back == \"Yes\") {\n    system(\"cls\");\n\
+    \    DrawLineThicc();\n    TypesOfTelescopes();\n  }\n  else if(back != \"yes\"\
+    \ || back != \"Yes\" || back != \"YES\") {\n    cout << endl << \"Thank you for\
+    \ your time\" << endl;\n  }\n  break;\ncase 2:\n{\n  changeColour(BLUE);\n  DrawLineThicc();\n\
+    \  TypeWriter(\"\\nAn infrared telescope is a telescope that uses infra\n```"
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '```
+
+    cout << endl << "Would you like to go back? yes or no: ";
+
+    cin >> back;
+
+    if (back == "yes" || back == "YES" || back == "Yes")
+
+    {
+
+    system("cls");
+
+    DrawLineThicc();
+
+    TypesOfTelescopes();
+
+    }
+
+    else if(back != "yes" || back != "Yes" || back != "YES")
+
+    {
+
+    cout << endl << "Thank you for your time" << endl;
+
+    }
+
+    break;
+
+    case 3:
+
+    {
+
+    changeColour(YELLOW);
+
+    DrawLineThicc();
+
+    TypeWriter("\nA radio telescope is a specialized antenna and
+
+    cout << endl << "Would you like to go back? yes or no: ";
+
+    cin >> back;
+
+    if (back == "yes" || back == "YES" || back == "Yes")
+
+    {
+
+    system("cls");
+
+    DrawLineThicc();
+
+    TypesOfTelescopes();();
+
+    ```'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "```\n}\nelse if(back != \"yes\" || back != \"Yes\" || back != \"YES\")\n{\n\
+    \  cout << endl << \"Thank you for your time\" << endl;\n}\n}\nbreak;\ncase 4:\n\
+    {\n  changeColour(RED);\n  DrawLineThicc();\n  TypeWriter(\"nLike radio telescopes,\
+    \ x-ray and gamma-\nray telescopes use the rays that the bodies of the suns, supernova\n\
+    ray telescope detects the burst of gamma rays that help confirm ev\nray and gamma-\n\
+    telesc are used at higher elevations, so there is no worry a\n  cout << endl <<\
+    \ \"Would you like to go back? yes or no: \";\n  cin >> back;\nif (back == \"\
+    yes\" || back == \"YES\" || back == \"Yes\")\n{\n  system(\"cls\");\n  DrawLineThicc();\n\
+    \  TypesOFelescopes();\n}\nelse if(back != \"yes\" || back != \"Yes\" || back\
+    \ != \"YES\")\n{\n  cout << endl << \"Thank you for your time\" << endl;\n}\n\
+    }\n```"
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '```
+
+    break;
+
+    case 5:
+
+    {
+
+    changeColour(PURPLE);
+
+    DrawLineThickc();
+
+    TypeWriter("nThe catadioptric is a hybrid option based on both
+
+    cout << endl << "Would you like to go back? yes or no: \";
+
+    cin >> back;
+
+    if (back == "yes" || back == "YES" || back == "Yes")
+
+    {
+
+    system("cls");
+
+    DrawLineThickc();
+
+    TypesOfTelescopes();
+
+    }
+
+    else if(back != "yes" || back != "Yes" || back != "YES")
+
+    {
+
+    out << endl << "Thank you for your time" << endl;
+
+    }
+
+    break;
+
+    default:
+
+    {
+
+    cout << "\nPlease select from the given options: \";
+
+    system("cls");
+
+    TypesOfTelescopes();
+
+    ```'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '```
+
+    }
+
+    break;
+
+    }
+
+    }
+
+    void ItemInventory()
+
+    {
+
+    items[0].name = "\t[Orion ED66 CF Carbon Fiber";
+
+    items[0].priceRs = 105000.65;
+
+    //specs:
+
+    /* items[0].bv = "Best For Viewing: ""
+
+    items[0].od = "Best For Imaging: ""
+
+    items[0].ul = "User level: ""
+
+    items[0].od = "Optical Design: ""
+
+    items[0].mr = "Magnification Range: ""
+
+    */
+
+    items[1].name = "Orion EON 115mm ED Triplet Apochromatic";
+
+    items[1].priceRs = 255000.20;
+
+    items[2].name = "Orion SkyQuest XX14g GoTo Truss Tube";
+
+    items[2].priceRs = 449000.99;
+
+    items[3].name = "Orion GiantView BT-70 45-degree";
+
+    items[4].name = "Orion GiantView BT-70 45-degree Binocular Telescope";
+
+    }
+
+    void TelescopeShop()//for the telescope shop
+
+    {
+
+    int key;
+
+    double userMoney;
+
+    ```'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '```
+
+    changeColour(BLUE);
+
+    string shopMenu = "\tCurrently five telescopes are available\n\n70 45-degree\n"
+    "\t. Orion Giant View BT-70 45-\ndegree Binocular Telescope\n" "\n(Enter o to
+    exit)\n" "\t\nEnter y
+
+    5): ";
+
+    string PKR = "RS";
+
+    string ans, con, bv, bi, ul ,od, toStr, back;
+
+    system("cls");
+
+    ItemInventory();
+
+    again1:
+
+    TypeWriter(shopMenu, 30);
+
+    cin >> key;
+
+    switch (key)
+
+    {
+
+    case o:
+
+    {
+
+    system("cls");
+
+    TeleScopes();
+
+    ```'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '```
+
+    }
+
+    case 1:
+
+    {
+
+    system("cls");
+
+    changeColour(BLUE);
+
+    TypeWriter(items[o].name, 50);
+
+    cout << endl;
+
+    cout << endl << items[o].bv; TypeWriter("Nature & scenic\n",50);
+
+    cout << items[o].bi; TypeWriter("Lunar, planetary\n",50);
+
+    cout << items[o].ul; TypeWriter("Intermediate\n",50);
+
+    cout << items[o].od; TypeWriter("Refractor\n",50);
+
+    cout << items[o].mr; TypeWriter("300x\n\n",50);
+
+    TypeWriter("Price in PKR: ", 30);
+
+    ```
+
+
+    ```
+
+    cout << setprecision(10) << items[o].priceRs << PKR << endl;
+
+
+    cin >> ans;
+
+    if (ans == "yes" || ans == "Yes" || ans == "YES")
+
+    ```'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '```
+
+    {
+
+    DrawLineThicc();
+
+    TypeWriter("Amount Due: ", 60);
+
+    cout << items[0].priceRs << PKR << endl;
+
+    DrawLineThicc();
+
+    cout << endl << "Would you like to go back? yes or no: ";
+
+    cin >> back;
+
+    if (back == "yes" || back == "YES" || back == "Yes")
+
+    {
+
+    sysystem("cls");
+
+    DrawLineThicc();
+
+    TelescopeShop();
+
+    }
+
+    else if(back != "yes" || back != "Yes" || back != "YES")
+
+    {
+
+    cout << endl << "Thank you for your time" << endl;
+
+    }
+
+    else
+
+    {
+
+    cout << endl << "Thank you checking our products!\n";
+
+    cout << endl << "Would you like to go back? yes or no: ";
+
+    cin >> back;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\nif (back == \"yes\" || back == \"YES\" || back == \"Yes\")\n{\n    system(\"\
+    cls\");\n    DrawLineThicc();\n    TelescopeShop();\n}\nelse if(back != \"yes\"\
+    \ || back != \"Yes\" || back != \"YES\")\n{\n    cout << endl << \"Thank you for\
+    \ your time\" << endl;\n}\n}\n}\nbreak;\ncase 2:\n{\n    system(\"cls\");\n  \
+    \  changeColour(GREEN);\n    TypeWriter(items[1].name, 50);\n```"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '```
+
+    cout << endl;
+
+    cout << endl << items[1].bv; TypeWriter("Lunar & bright deep sky
+
+    cout << items[1].bi; TypeWriter("Lunar & bright deep sky\n",50);
+
+    cout << items[1].ul; TypeWriter("Advanced\n",50);
+
+    cout << items[1].od; TypeWriter("Refactor\n",50);
+
+    cout << items[1].mr; TypeWriter("450x\n\n",50);
+
+    TypeWriter("Price in PKR: ", 30);
+
+    cout << setprecision(10) << items[1].priceRs << PKR << endl;
+
+    ```
+
+
+    ```
+
+    cin >> ans;
+
+    if (ans == "yes" || ans == "Yes" || ans == "YES")
+
+    {
+
+    DrawLineThicc();
+
+    ```'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '```
+
+    TypeWriter("Amount Due: ", 60);
+
+    cout << items[1].priceRs << PKR << endl;
+
+    DrawLineThicc();
+
+    cout << endl << "Would you like to go back? yes or no: ";
+
+    cin >> back;
+
+    if (back == "yes" || back == "YES" || back == "Yes")
+
+    {
+
+    system("cls");
+
+    DrawLineThicc();
+
+    TelescopeShop();
+
+    }
+
+    else if(back != "yes" || back != "Yes" || back != "YES")
+
+    {
+
+    cout << endl << "Thank you for your time" << endl;
+
+    }
+
+    else
+
+    {\ncout << endl << "Thank you checking our products!\n";
+
+    cout << endl << "Would you like to go back? yes or no: ";
+
+    cin >> back;
+
+    if (back == "yes" || back == "YES" || back == "Yes")
+
+    {
+
+    system("cls");
+
+    DrawLineThicc();
+
+    TelescopeShop();
+
+    }
+
+    else if(back != "yes" || back != "Yes" || back != "YES")
+
+    ```'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "```\n{\n  cout << endl << \"Thank you for your time\" << endl;\n}\n}\nbreak;\n\
+    case 3:\n{\n  system(\"cls\");\n  changeColour(YELLOW);\n  TypeWriter(items[2].name,\
+    \ 50);\n  cout << endl;\n  cout << endl << items[2].bv; TypeWriter(\"Fainter deep\
+    \ sky\\n\",50);\n  cout << items[2].bi; TypeWriter(\"Lunar & planetary\\n\",50);\n\
+    \  cout << items[2].ul; TypeWriter(\"Advanced\\n\",50);\n  cout << items[2].od;\
+    \ TypeWriter(\"Dobsonian (Reflector)\\n\",50);\n  cout << items[2].mr; TypeWriter(\"\
+    30ox\\n\\n\",50);\n  TypeWriter(\"Price in PKR: \", 30);\n  cout << setprecision(10)\
+    \ << items[2].priceRs << endl;\n```"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '```
+
+    cin >> ans;
+
+    if (ans == "yes" || ans == "Yes" || ans == "YES")n{
+
+    DrawLineThicc();
+
+    TypeWriter( << "Amount Due: ", 60);
+
+    cout << items[2].priceRs << endl << endl;
+
+    DrawLineThicc();
+
+    cout << "Would you like to go back? yes or no: ";
+
+    cin >> back;
+
+    if (back == "yes" || back == "YES" || back == "Yes")n{
+
+    system("cls");
+
+    DrawLineThicc();
+
+    TelescopeShop();
+
+    }
+
+    else if(back != "yes" || back != "Yes" || back != "YES")n{
+
+    cout << endl << "Thank you for your time" << endl;
+
+    }
+
+    elelse
+
+    {
+
+    cout << endl << "Thank you checking our products!\n"
+
+    cout << endl << "Would you like to go back? yes or no: ";
+
+    cin >> back;
+
+    if (back == "yes" || back == "YES" || back == "Yes")
+
+    ```'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "```\n{\n  system(\"cls\");\n  DrawLineThicc();\n  TelescopeShop();\n} else\
+    \ if(back != \"yes\" || back != \"Yes\" || back != \"YES\") {\n  cout << endl\
+    \ << \"Thank you for your time\" << endl;\n} break;\ncase 4: {\n  system(\"cls\"\
+    );\n  TypeWriter(items[3].name, 50);\n  changeColour(RED);\n  cout << endl <<\
+    \ \"Current out of stock!\";\n  cout << endl << endl << \"Would you like to go\
+    \ back? yes or no\"\n  cin >> back;\n  if (back == \"yes\" || back == \"YES\"\
+    \ || back == \"Yes\") {\n    system(\"cls\");\n    DrawLineThicc();\n    TelescopeShop();\n\
+    \  } else if(back != \"yes\" || back != \"Yes\" || back != \"YES\")\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "```\n{\n  cout << endl << \"Thank you for your time\" << endl;\n}\ncase 5:\n\
+    \  {\n    system(\"cls\");\n    TypeWriter(items[4].name, 50);\n    changeColour(PURPLE);\n\
+    \    cout << endl << \"Coming Soon! ;\";\n    cout << endl << \"Would you like\
+    \ to go back? yes or no\" cin >> back;\n    if (back == \"yes\" || back == \"\
+    YES\" || back == \"Yes\")\n    {\n      system(\"cls\");\n      DrawLineThicc();\n\
+    \      TelescopeShop();\n    }\n    else if(back != \"yes\" || back != \"Yes\"\
+    \ || back != \"YES\")\n    {\n      cout << endl << \"Thank you for your time\"\
+    \ << endl;\n    }\n  }\ndefault:\n  {\n    cout << \"\\nPlease select from the\
+    \ given options!\";\n    system(\"cls\");\n    TelescopeShop();\n  }\n```"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '```
+
+    }
+
+    break;
+
+    }
+
+    }
+
+    void Telescopes()//main telescope function
+
+    {
+
+    int select;
+
+    string menuItem = "\n\t1. Types of Telescopes\n" "\t2. Telescop
+
+    changeColour(PURPLE);//calls the change color function
+
+    out << "Welcome to the telescope section" << endl;
+
+    changeColour(PURPLE);
+
+    TypeWriter(mainMenu,50);
+
+    changeColour(PURPLE);
+
+    cout << "\nPlease select from the above menu: ";
+
+    again:
+
+    changeColour(BLUE);\cin >> select;
+
+    switch (select)
+
+    {
+
+    case 1:
+
+    system("cls");
+
+    DrawLineThicc()();
+
+    TypesOfTelescops();
+
+    break;
+
+    case 2:
+
+    system("cls");
+
+    showLoadingScreen();
+
+    ```'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '```
+
+    TelescopeShop();
+
+    break;
+
+    case 3:
+
+    system("cls");
+
+    Main();
+
+    break;
+
+    default:
+
+    {
+
+    cout << "\nPlease select from the above menu: ";
+
+    goto again;
+
+    }
+
+    break;
+
+    }
+
+    ```
+
+
+    // TELESCOPES ENDS HERE ↑ //
+
+    //MAIN FUNCTION
+
+
+    ```
+
+    void Main(){
+
+    char choice;
+
+    changeColor(BLUE);
+
+    out << " "(press ''space'' key on your keyboard to skip the typing animation)"(Please
+    use fullscreen mode for a better experience)" << endl << "-\n"; }
+
+    ```
+
+
+    ```
+
+    changeColor(PURPLE);
+
+    TypeWriter("Welcome to the Space Program. In this, we aim to |
+
+    changeColor(BLUE);
+
+    TypeWriter("\ta. Telescopes section\n\tb. Formulas section\n",30);
+
+    invalidInput:
+
+    cin>>choice;
+
+    ```'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: "```\nswitch (choice)\n{\n    case 'a':\n        system(\"cls\");\n        showLoadingScreen();\n\
+    \        TeleScopes();\n        break;\n    case 'b':\n        system(\"cls\"\
+    );\n        showLoadingScreen();\n        FORMULAS();\n        break;\n    case\
+    \ '1':\n        TypeWriter(\"\\nThank you for your time, hope you liked it.\\\
+    n\");\n        break;\n    default:\n        cout<<\"Invalid input, please try\
+    \ again.\";\n        goto invalidInput;\n        break;\n}\nint main(){\n    Main();\n\
+    }\n```\n\nOutputs:"
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '```
+
+    (press ''space'' on your keyboard to skip the typing animation)
+
+    (Please use fullscreen mode for a better experience)
+
+
+    Welcome to the Space Program. In this, we aim to give you an insight on outer
+    space through interactive segments of your
+
+    Choosing on topics of choice related to space.
+
+    To proceed, enter a letter of the corresponding segment you would like to dive
+    into. Enter ''1'' to exit.
+
+    a. Telescopes section
+
+    b. Formulas section
+
+    ```
+
+
+    ```
+
+    Choose which type of equations u wish to use (Enter 1 to exit):
+
+    a. Equations of motion
+
+    b. Gravitational equations
+
+    c. Oscillation equations
+
+    ```
+
+
+    ```
+
+    Enter a number for the corresponding equation of motion. Enter ''-1'' to exit.
+
+    1. V=V0+at
+
+    2. S=So+Vot+(1/2)at^2
+
+    3. V^2=V0^2+2a(S-So)
+
+    4. V''=(1/2)(V+Vo)
+
+
+    Enter Initial velocity (Vo)
+
+    ter velocity (V): 5
+
+    Average velocity (V'') = 0m/s
+
+
+    Enter a number for the corresponding equation of motion. Enter ''-1'' to exit.
+
+    1. V=V0+at
+
+    2. S=So+Vot+(1/2)at^2
+
+    3. V^2=V0^2+2a(S-So)
+
+    4. V''=(1/2)(V+Vo)
+
+    ```'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '```
+
+    C:\Windows\system32\cmd.exe
+
+    Welcome to the telescope section
+
+    1. Types of Telescopes
+
+    2. Telescope shop!
+
+    3. EXIT
+
+    nPlease select from the above menu:
+
+    ```
+
+
+    ```
+
+    C:\Windows\system32\cmd.exe
+
+    Currently five telescopes are available
+
+    1. Orion ED66 CF Carbon Fiber
+
+    2. Orion EDON Triplet Apochromatic
+
+    3. Orion SkyQuest 8inch Guide Tube
+
+    4. Orion GiantView HT-70-40 45-degree
+
+    5. Orion GiantView HT-70-40 45-degree Binocular Telescope
+
+
+    (Enter B to exit)
+
+    Enter your choice(1-5):
+
+    ```
+
+
+    ```
+
+    C:\Windows\system32\cmd.exe
+
+    Orion EON 115mm ED Triplet Apochromatic
+
+
+    Best For Viewing: Lunar & bright deep sky
+
+    Best For Imaging: Lunar & bright deep sky
+
+    User level: Advanced
+
+    Optical Design: Refractor
+
+    Magnification Range: 450x
+
+
+    Price in PKR: 255000.2RS
+
+    Do you want to purchase this? (yes/no): yes
+
+    Amount Due: 255000.2RS
+
+
+    Would you like to go back? yes or no:
+
+    ```
+
+
+    # Chapter 5: Mistakes to Avoid Within C++
+
+    5.1: Common Errors'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: 'Don''t forget to use the semicolon '';'' to execute the majority of statements,
+    but don''t use it in the wrong places either.
+
+
+    Using braces ''{ }'' in the required syntax is important, especially at the beginning
+    and ending of a function definition or any block of code under decision statements,
+    loops, etc.
+
+
+    If you use comments, you need to close long comments like so ''/*...*/''; for
+    short one-line statements, use ''//''.
+
+
+    Make sure you have declared every variable you use, and it is in scope.
+
+
+    You cannot cross the size of the array you have declared, but you can always use
+    a smaller amount of the array size, though.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: 'Try to consider all possible situations in your code to avoid any bugs (exception
+    handle).
+
+
+    # Conclusion
+
+
+    This book encompasses just the beginning of the vast world of C++ programming.
+    If you have mastered the basics, you can eventually grasp the more complex concepts
+    too. Programming is a skill that can only be mastered with practice, so you need
+    to implement all the concepts to understand each fully. Not only is it a skill
+    but a form of art, but also, the more creative and efficient you are with your
+    program, the better. So, try to find numerous methods to the same function to
+    be able to widen your perspective.
+
+
+    # Don''t miss out!
+
+
+    Click the button below and you can sign up to receive emails whenever William
+    Brown publishes a new book. There''s no charge and no obligation.
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_124_0.png)
+
+
+    https://books2read.com/r/B-A-ZDFO-IMDRB
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_124_1.png)
+
+
+    Connecting independent readers to independent writers.'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: 'Also by William Brown
+
+
+    Artificial Intelligence and Machine Learning
+
+    C# Programming for Beginners
+
+    C++ Programming for Beginners
+
+
+    # Chapter 1: What is C++'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# ## 1.1: Introduction to Programming
+
+
+    Before we can learn code, we must first comprehend what a computer is. A machine
+    is either a computing system that performs data underneath the supervision of
+    a computer program or a system that can take human command, interpret it, and
+    react to it. A program is a gathering of commands and records.
+
+
+    A computer''s essential components are:
+
+
+    +   - Input device
+
+    - Central Processing Unit (CPU)
+
+    - Unit of output
+
+
+    The Processor is further broken down into three sections:
+
+
+    +   - Memory device
+
+    - Unit of control
+
+    - Device on Arithmetic Logic
+
+
+    A majority of people have learned that the CPU is the computer''s brain. It absorbs
+    data, stores it in transient memory before it is saved on the hard disc, conducts
+    logical operations on it, and thereby transforms (also known as converts) data
+    into facts. A machine, as we all know, is made up of software and hardware. Software
+    is a collection of programs that work together to complete various tasks. An operating
+    system (O.S.) is a system that allows people to communicate with computers.
+
+
+    Software is a series of directions for a machine to follow for it to execute a
+    particular task. A disc, also known as a machine,'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: 'is a computing system that processes data under a computer program''s supervision.
+    Fresh data is translated into output values layout when the software is running.
+    Such high-level programming (HLL) languages are used to create these computer
+    programs. High-level languages (HLL) are almost human-like languages but are more
+    complicated than machine-understandable languages, also known as low-level languages
+    (LLL).
+
+
+    Now that we''ve covered the fundamentals, we''re able to develop a simplistic
+    curriculum. We have various languages to interact with one another, and we have
+    multiple languages to interact with machines, such as C, C++, C#, Java, Python,
+    etc. The robot may only comprehend binary language (the dialect of os and 1s),
+    also known as computer language or low-level language (LLL). However, the programs
+    you write are written in a high-level language (HLL) that''s more human-like.
+
+
+    Assembly language, exists among high-level and software languages. Assembly languages
+    are specially tailored to complex computer architecture. Assembly code is converted
+    into executable computer code using a utility tool called Assembler. High-level
+    programming languages are portable, but they must be interpreted or compiled into
+    a machine language that computers may understand.
+
+
+    # Programming Language Characteristics –
+
+
+    +   - A source code should be quick to understand and use, with solid readability
+    and human recognition.
+
+
+    +   - Classification is a must-have feature for a programming language since it
+    allows you to describe a dynamic concept and then determine its functionality.
+
+
+    +   - It''s still better to use a lightweight programming language.'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: +   * The performance of a programming language must be strong for it to be
+    quickly translated into computer code and implemented with minimal memory use.
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '+   - A programming language must be well designed and recorded so it is appropriate
+    for application creation.
+
+
+    +   - A programming language must have the necessary resources for software creation,
+    debugging, checking, and repair.
+
+
+    +   - An integrated development environment (IDE) should be provided by a programming
+    language (IDE).
+
+
+    +   - A programming language''s grammar and semantics become consistent.
+
+
+    In this Computer Programming for Beginners book, you focus on one programming
+    language, in particular, known as C++.
+
+
+    #  1.2: Why Program
+
+
+    Version control is essential to getting the machine to perform skills like learning
+    the command line and establishing good practices in development.
+
+
+    Writing computer programs, also known as "coding," entails creating a set of instructions
+    that tell the computer how to go about it. These commands are written in technical
+    languages known as "machine languages," which may be challenging to learn.
+
+
+    Fortunately, you don''t have to perfect them to be productive; all you have to
+    do is practice enough to be dangerous.
+
+
+    The aim of programming is to make something new. Languages, computers, compilers,
+    and interpreters are all instruments for painters, including paints. It''s a program
+    to go'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: to work every day except weekends. While it is more akin to training a neural
+    network, it is still software. The electronic equivalent of programming (coding)
+    is used chiefly to automate processes and facilitate collaboration. But that's
+    because our current methods (programming languages) are too primitive. There is
+    a great deal of work being done regarding Artificial Intelligence at institutions
+    that are instead development driven. Interpretation in the context of all available
+    facts is what truth. Without programming, we wouldn't have the Internet, which
+    provides users with a vastly accessible tool where they can study about everything,
+    compare information, and evaluate evidence, and uncover sparkling truths amidst
+    a murky pool of myths and misinformation. The truth would win out in the end.
+    Peace is further by programming. And the extent that there is an equilibrium of
+    processes is possible; you find peace. If you are concerned about finding the
+    root causes of the issues, you would never have time to deal with the side effects.
+    When everything is seen to be off-balance, a programmer can get it into equality
+    and equilibrium by doing mathematical operations on the whole. If only global
+    leaders aspired to the abilities of computer engineers, the world would soon be
+    at peace. Re-enactment in the computer is the same as making a computer simulation
+    of things in reality. Eventually, you will know the structure of the space more,
+    and the understanding makes the structure predictable.
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# 1.3: Introduction to C++
+
+
+    For newbies and less experienced programmers, the process of learning the syntax
+    and writing your software in a text editor and saving it in a C++ compiler/integrated
+    development environment is quite simple, but getting the program up and running
+    with a successful program that uses C++ is difficult.
+
+
+    Although the "Hello, World" software is the most basic programming language to
+    master, it also provides a steppingstone for a programmer''s introduction to programming.
+
+
+    C++ was designed as an addition to the C language for programmers to embrace object-oriented
+    programming. It is imperative and compiled; they are both essential for large-scale
+    growth.
+
+
+    High-level and Low-level language advantages such as those provided by a native
+    or higher-level engine and those provided by a device kernel (games, GUI, desktop
+    apps, etc.). While the syntax and semantics of C and C++ are different, the vocabulary
+    and the overall syntax and code layout are similar.
+
+
+    Simple: Its code is straightforward in that software can be decomposed into modules
+    and offered up for others to be composed, and it also has extensive support for
+    a wide array of data forms.
+
+
+    Platform dependent but machine-independent: based on the platforms on which it
+    is played, an executable code that C++ can operate on every supported framework
+    there is.
+
+
+    Mid-level language: moderate to daily user-facing systems (e.g., graphics drivers,
+    but often create large-scale user-facing software'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '(pictures, multiplayer games, and even future replacements for clients including
+    Web browsers (Photoshop, Media Players, Game Engines, etc.)
+
+
+    Richer library support: help in rich libraries powerful (e.g., able to perform
+    sophisticated and quick algorithms) and have their code (all built-in) and third-party
+    (Boost)structures which can be used for quick and powerful implementation).
+
+
+    Execution Speed: C++ systems have a significant advantage in the pace of execution.
+    Because it is a compiled language, it can do numerous procedural tasks easily.
+    As programs are designed from scratch, they introduce additional default functions
+    and unique attributes. This leads to the slowing down of the overall speed of
+    the application. There is no extra computing overhead in C++, which allows the
+    compiled program to be lightning-fast.
+
+
+    Direct and pointer memory-access: Pointer access may be used to view or change
+    the address of data items, as well as to store or find them. I t may be used to
+    assist with small-scale tasks, needing control over the variable storage.
+
+
+    Object-Oriented: The distinguishing feature of C is one of the vital aspects of
+    the language; the concept of object-oriented programming in C++ allows for the
+    design and implementation of maintainability and flexibility. In other words,
+    large-scale implementations may be constructed. The difficulty of managing and
+    maintaining procedural code increases as it increases in complexity. Due to C++
+    compilation into machine code, which includes the process of creating executable
+    computer code, it''s the swifter language. The ability of C++ to be applied in
+    different fields such as operating systems and programming has diverse uses. In,
+    example'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: 'A Linux-based operating system, for example (Ubuntu, etc.)
+
+
+    shrug, drop, and surf (Chrome & Firefox)'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: 'creativity and generate artwork and game code (Photoshop, Blender, Unreal-Engine)
+
+
+    Software-based database engines (MySQL, MongoDB, Redis, etc.)
+
+
+    On the cloud and distributed systems
+
+
+    # 1.4: Why C++
+
+
+    The naming of C++ reflects the development of its language, specifically concerning
+    the improvements from C. Often as ++, plus, and one plus.
+
+
+    Much product-specific functionality was implemented using C++ to broaden the market
+    appeal of the language since other languages could not handle such implementations,
+    so such products had little access.
+
+
+    The list is a compilation of a few of the primary applications of C++.
+
+
+    Application: For the growth of modern C++ programs, the expansion adds features
+    to the current language. The design applications that are often employed by the
+    graphical user interface, which is the standard now, include adobe Photoshop and
+    others. Adobe programs are frequently designed using C++ programming language
+    like graphics, and video-editing tools like premiere, Illustrator, and Adobe software
+    engineers are influential in the C++ group.'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: 'Gaming: This code could be used to create a variety of other games. If you
+    want to go into depth for a bit of 3D gaming, C++ is the way. It aids the optimization
+    of the resources. Using more capital improves efficiency. If you set up multiplayer
+    options, it will fit for networking. C++ several procedural programming tasks
+    have been moved to more computationally intensive ones. They have enabled them
+    to be handled more directly, thereby making it useful for engines used for many
+    different types of games. C++ is commonly used in designing the engine tools used
+    for games.
+
+
+    Animations: There are available tools for development using C++, which is animated
+    using proprietary 3D techniques. Three-dimensional animation, modeling, simulation,
+    and rendering applications are valuable and efficient tools. C++ is especially
+    beneficial in mobile sensor-based applications, graphic modeling, and image processing;
+    other typical applications including real-time or real-world simulations. Virtual
+    reality systems (V.R.) are becoming more common in the entertainment industry
+    than their real-world counterparts (RDoCs).'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: 'O.S. (Operating Systems): In addition to operating systems, it is used to design
+    much of the software for Microsoft as well as to serve as part of the foundation
+    for a few Apple''s. Symbian O.S., as well as Microsoft Windows 95, 98, 2000, XP,
+    NWS, and Internet Explorer are primarily using the same programming language,
+    C++.
+
+
+    Video and Audio player development: This usage of C++ is used to make video players
+    and audio players, and media files. By illustration, the media player, named Winamp,
+    was created in C++, which enables us to enjoy music and access and share the videos.
+    Additional features provide an audio and visual streaming capabilities, such as
+    music and picture streaming. For additional features, it also gives you access
+    to the internet radio stations.'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: 'C++ Compilers: A few major computer programming languages utilize source code
+    compilers primarily written in C++ for other languages such as C#, Java, etc.
+    It is often used in creating these frameworks, as well as it is platform-independent
+    in C++, which enables a multitude of different programs to be created.'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: 'Database Access: Although language and programs can help databases, this is
+    mainly used for building applications or developing open-source database apps.
+    ''MySQL'' is amid the most widespread database management systems (DBMS). This
+    system is used extensively in businesses and by companies. Additionally, it aids
+    in reducing time, resources, and software costs and supports market expansion
+    strategies. Other database engine program-based software such as Wikipedia, YouTube,
+    and Yahoo! Another fabulous advantage is that RDBMS allows for current and historical
+    financial data to be supplied to shareholders in real-time. Almost all new articles
+    are accessed or produced by data in the world economy in finance, and a company
+    in C++ is used to quickly and accurately.
+
+
+    Scanners: Scanner or digital camera scanner, or both, was built in the C++ language.
+    It is used as a part of publishing documents and boosts PDF text, making cataloging
+    easy and printing.
+
+
+    Web Browsers: This dialect is used for creating both browser add-ons and standalone
+    web browsers. C++ is used for rendering Google Chrome and Firefox to expand to
+    a universal web and app platform. The map decreases, and extensive cluster data
+    processing is done in several ways. Some of the programs manipulate data through
+    C++, which means the map does it in various ways to do different tasks. Some,
+    on the other hand, handle extensive cluster data by file systems. Other the client
+    program Mozilla''s email client, Mozilla Thunderbird has had even written it in
+    C++. In addition to this, Mozilla and Google''s open-source programs, C++, are
+    included in proprietary and open-source applications.
+
+
+    Extra Uses: It is used in the treatment in both medicinal and'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: 'industrial devices as well as for a machine A.C. In this and similar uses,
+    these methods of imaging are often used in clinics, municipalities, states, and
+    other agencies of manufacturing, but may also be used for mining, civil engineering,
+    asset management, and environmental monitoring. Because C++ is used in designing
+    most performance-critical software, it is usually the first option in an application''s
+    programming language preferences.
+
+
+    The popularity of C++ is attributable to its widespread availability; it is often
+    found in machine programming and embedded applications. In this context, the term
+    "machine programming" refers to designing the operating systems (O.S.) or drivers
+    used to communicate with the hardware. Embedded Systems refer to the objects that
+    are cars, robots, and other equipment''s or mechanical devices are installed inside
+    everything. When the developer culture and its resources are all rich, it''s a
+    great community to be in. The process of recruiting developers on web platforms
+    and applications is more straightforward.
+
+
+    C++ is linked to "the most secure code" due to the many safeguards and unique
+    functionality. It''s the first dialect to begin a developer expert''s study. All
+    you have to do is study the syntax concepts and syntax, making it simple and basic.
+    It has a basic syntax, which is relatively simple, so we can code or program for
+    it without difficulty. Before learning other programming languages, developers
+    commonly went through a phase of learning C++. C++ is a preferred language for
+    most computer programmers because of its widespread use, broad accessibility;
+    it is used on many devices and many other software applications and what most
+    of them choose to use.
+
+
+    # Chapter 2: How C++ Works
+
+
+    # 2.1: Getting Started'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# Setting Up the Compiler
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_140_0.png)'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: 'You can start programming on various C++ compilers such as Visual Studio Code,
+    Dev C++, Visual Studio, online compilers, etc. in this book, we commonly use Visual
+    Studio Code (VS Code).
+
+
+    To set up your IDE (Integrated Development Environment), simply go to the official
+    visual studio website for VS code.
+
+
+    In VS Code, you can install all the necessary extensions needed for C++ by typing
+    C++ in the application''s search bar. Make sure your console application is up
+    and running for your program outputs, and you are good to go!
+
+
+    Your console should look something like this:
+
+
+    ![](img/8c6160092cce13ec6d42e1c774234053_141_0.png)
+
+
+    Click on Open Folder
+
+
+    Create a new folder and select
+
+    Once selected, click on New file, and name your first C++ program. Make sure the
+    file extension says ''.cpp'' or it won''t work.
+
+
+    Click enter.
+
+
+    You can use any compiler as long as it is the latest version, so you don''t get
+    stuck with older and bugged versions.'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# Comments
+
+
+    A good programming standard holds that a well-formatted program is crucial. Expansion
+    on a piece of code can help software be more comprehensible, and error fixing
+    becomes much simpler. Adding a comment to the code is a vital aspect of proper
+    documentation. A comment is a text used in the source code that can be interpreted
+    by programmers, as opposed to text that can be understood only by users or outsiders.
+    Some phrases are not compiled or interpreted by the compiler or the interpreter.
+
+
+    You add a comment like so:
+
+
+    ```
+
+    //This is a comment that will not affect the overall code. Use\//double slashes
+    to add only one sentence worth of text.
+
+    /* But if you wish to add a paragraph, add a backslash/'',\and then asterisk ''*''
+    on either side of your piece of text. */
+
+    ```
+
+
+    We use these comments throughout the book to explain pieces of code.'
+  merge: -1
+  pgno: 142
