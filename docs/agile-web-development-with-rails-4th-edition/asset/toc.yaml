@@ -1,0 +1,546 @@
+- - '#'
+  - Rails 敏捷 Web 开发 第 4 版
+- - '#'
+  - 第四版序言
+- - '#'
+  - 致谢
+- - '#'
+  - 引言
+- - '##'
+  - 任务 K：部署与生产
+- - '##'
+  - 回顾
+- - '##'
+  - 19 Active Record . . . . . . . . . . . . . . . . . . . 277
+- - '##'
+  - Beta 6—7月27日
+- - '##'
+  - Beta 5—6月28日
+- - '##'
+  - Beta 4—5月26日
+- - '##'
+  - Beta 3—5月11日
+- - '##'
+  - Beta 2—5月3日
+- - '##'
+  - 第四版序言
+- - '##'
+  - 序言
+- - '##'
+  - Rails 感觉就是对的
+- - '##'
+  - Rails 正是敏捷的
+- - '##'
+  - 如何阅读本书
+- - '##'
+  - 实时代码 (Live Code)
+- - '##'
+  - Ruby 技巧 (Ruby Tips)
+- - '##'
+  - David 说... (David Says...)
+- - '##'
+  - Joe 提问... (Joe Asks...)
+- - '#'
+  - 第一部分
+- - '##'
+  - 入门
+- - '#'
+  - 第一章
+- - '##'
+  - 安装 Rails
+- - '###'
+  - 1.1 在 Windows 上安装
+- - '###'
+  - 在 Mac OS X 上安装
+- - '###'
+  - 1.3 在 Linux 上安装
+- - '###'
+  - 在 Linux 上升级 RubyGems
+- - '###'
+  - 1.4 选择 Rails 版本
+- - '##'
+  - 我的 IDE 在哪里？
+- - '##'
+  - 版本控制
+- - '##'
+  - 编辑器
+- - '##'
+  - 设置你的开发环境
+- - '##'
+  - 1.7 我们刚刚做了什么
+- - '##'
+  - 第 2 章
+- - '##'
+  - 即时反馈
+- - '##'
+  - 2.1 创建新应用程序
+- - '##'
+  - 2.2 你好，Rails！
+- - '##'
+  - Say hello
+- - '##'
+  - Rails 和请求 URL
+- - '##'
+  - 我们的第一个 Action
+- - '##'
+  - Hello from Rails!
+- - '##'
+  - 动态化
+- - '###'
+  - 动态内容
+- - '##'
+  - 添加时间
+- - '##'
+  - 让开发更轻松
+- - '##'
+  - 2.3 将页面链接在一起
+- - '##'
+  - 2.4 我们刚刚做了什么
+- - '##'
+  - 练习
+- - '#'
+  - 清理
+- - '#'
+  - 第三章
+- - '##'
+  - 应用程序的架构
+- - '###'
+  - 3.1 模型、视图和控制器
+- - '##'
+  - 路由 (Routing)
+- - '##'
+  - 控制器 (Controller)
+- - '##'
+  - 第 4 章
+- - '##'
+  - Ruby 简介
+- - '###'
+  - 4.1 Ruby 是一种面向对象的语言
+- - '##'
+  - Ruby 命名
+- - '##'
+  - 方法
+- - '#'
+  - 时候到了...
+- - '###'
+  - 4.2 数据类型
+- - '##'
+  - 字符串
+- - '##'
+  - 数组与哈希
+- - '##'
+  - 数组现在为 [ 1, 'cat', nil ]
+- - '##'
+  - 这是相同的：
+- - '##'
+  - 异常 (Exceptions)
+- - '##'
+  - 4.4 组织结构 (Organizing Structures)
+- - '##'
+  - 类 (Classes)
+- - '##'
+  - 4.7 Ruby 惯用法
+- - '#'
+  - 第二部分
+- - '#'
+  - 构建应用程序
+- - '#'
+  - 第 5 章
+- - '##'
+  - Depot 应用程序
+- - '##'
+  - 5.1 增量式开发
+- - '##'
+  - 5.2 Depot 的功能
+- - '###'
+  - 用例
+- - '##'
+  - 页面流程
+- - '##'
+  - 产品：
+- - '##'
+  - 购物车：
+- - '##'
+  - 卖家详情：
+- - '##'
+  - 数据
+- - '##'
+  - 通用恢复建议
+- - '##'
+  - 5.3 我们来写代码
+- - '#'
+  - 第 6 章
+- - '##'
+  - 任务 A：创建应用程序
+- - '##'
+  - 6.1 迭代 A1：创建产品维护应用程序
+- - '###'
+  - 创建 Rails 应用程序
+- - '##'
+  - 创建数据库
+- - '##'
+  - 生成脚手架（Scaffold）
+- - '##'
+  - 迭代 A1：创建产品维护应用程序
+- - '##'
+  - 应用迁移
+- - '###'
+  - depot_at/db/migrate/20110211000001_create_products.rb
+- - '###'
+  - 迭代 A1：创建产品维护应用程序
+- - '##'
+  - 新产品
+- - '##'
+  - 标题
+- - '##'
+  - 描述
+- - '##'
+  - 图像 url
+- - '##'
+  - 价格
+- - '##'
+  - 6.2 迭代 A2：制作更精美的列表
+- - '##'
+  - 为什么需要 :method => :delete？
+- - '##'
+  - 我们刚刚做了什么
+- - '##'
+  - 玩玩看
+- - '#'
+  - 第 7 章：验证与单元测试
+- - '##'
+  - 7.1 迭代：验证！
+- - '##'
+  - 新产品
+- - '###'
+  - Download depot_c/test/functional/products_controller_test.rb
+- - '##'
+  - 7.2 迭代 B2：模型的单元测试
+- - '###'
+  - Download depot_b/test/unit/product_test.rb
+- - '##'
+  - 迭代 B2：模型的单元测试
+- - '###'
+  - Download depot_b/test/unit/product_test.rb
+- - '###'
+  - Download depot_c/test/unit/product_test.rb
+- - '###'
+  - Download depot_c/test/unit/product_test.rb
+- - '##'
+  - 新产品
+- - '###'
+  - Download depot_c/test/functional/products_controller_test.rb
+- - '##'
+  - 7.2 迭代 B2：模型的单元测试
+- - '###'
+  - Download depot_b/test/unit/product_test.rb
+- - '##'
+  - 测试固件 (Test Fixtures)
+- - '##'
+  - Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+- - '##'
+  - 大卫说...
+- - '##'
+  - 选择良好的固件名称
+- - '##'
+  - Using Fixtures
+- - '##'
+  - Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+- - '##'
+  - David Says...
+- - '##'
+  - Picking Good Fixture Names
+- - '##'
+  - 'Iteration B2: Unit Testing of Models'
+- - '##'
+  - 练习时间
+- - '##'
+  - On branch master
+- - '##'
+  - 'Changed but not updated:'
+- - '##'
+  - (use "git add file..." to update what will be committed)
+- - '##'
+  - 'modified: app/models/product.rb'
+- - '##'
+  - 'modified: test/fixtures/products.yml'
+- - '##'
+  - 'modified: test/functional/products_controller_test.rb'
+- - '##'
+  - 'modified: test/unit/product_test.rb'
+- - '##'
+  - no changes added to commit (use "git add" and/or "git commit -a")
+- - '#'
+  - 第 8 章
+- - '##'
+  - 任务 C：目录显示
+- - '##'
+  - 8.1 迭代 C1：创建目录列表
+- - '##'
+  - 迭代 C1：创建目录列表
+- - '##'
+  - 你可以使用 "root" 为网站的根目录路由
+- - '##'
+  - 只要记得删除 public/index.html。
+- - '##'
+  - root to => "welcome#index"
+- - '##'
+  - Store#index
+- - '##'
+  - 实用目录
+- - '##'
+  - 你的实用型目录
+- - '##'
+  - Ruby 编程 1.9
+- - '##'
+  - 8.3 迭代 C3：使用辅助方法格式化价格
+- - '##'
+  - 我们刚刚做了什么
+- - '##'
+  - 练手时间
+- - '##'
+  - 第 9 章
+- - '###'
+  - 任务 D：创建购物车
+- - '###'
+  - 9.1 迭代 D1：查找购物车
+- - '###'
+  - 9.2 迭代 D2：将产品连接到购物车
+- - '###'
+  - 迭代 D2：将产品连接到购物车
+- - '##'
+  - '9.3 Iteration D3: Adding a Button'
+- - '###'
+  - Download depot_f/app/views/store/index.html.erb
+- - '##'
+  - 'Iteration D3: Adding BUTTON'
+- - '###'
+  - Download depot_f/app/views/store/index.html.erb
+- - '##'
+  - 我们刚刚做了什么
+- - '##'
+  - 练习时间
+- - '##'
+  - 第 10 章
+- - '###'
+  - 任务 E：更智能的购物车
+- - '##'
+  - 10.1 迭代 E1：创建一个更智能的购物车
+- - '###'
+  - Download depot_db/migrate/20110211000004_add_quantity_to_line_item.rb
+- - '###'
+  - depot/app/models/cart.rb
+- - '###'
+  - depot/app/controllers/line_items_controller.rb
+- - '##'
+  - 10.2 迭代 E2：处理错误
+- - '##'
+  - ActiveController::Exception
+- - '##'
+  - ActiveRecord::RecordNotFound in CartsController#show
+- - '###'
+  - Download depot_h/app/controllers/carts_controller.rb
+- - '##'
+  - GET /carts/1
+- - '##'
+  - GET /carts/1.xml
+- - '##'
+  - 路由：product_path 与 product_url
+- - '##'
+  - 迭代 E3：完成购物车
+- - '##'
+  - 我们刚刚做了什么
+- - '##'
+  - 11.1 迭代 F：移动购物车
+- - '##'
+  - 局部模板 (Partial)
+- - '##'
+  - 修改流程
+- - '###'
+  - 11.2 迭代：基于 AJAX 的购物车
+- - '##'
+  - 故障排除
+- - '##'
+  - 11.3 迭代 F3：高亮
+- - '##'
+  - 11.4 迭代 F4：隐藏购物车
+- - '##'
+  - 辅助方法 (Helper Methods)
+- - '##'
+  - 11.5 测试 Ajax
+- - '##'
+  - Action Controller：异常
+- - '##'
+  - 练习时间 (Playtime)
+- - '#'
+  - 第 12 章
+- - '##'
+  - 任务 G：结账！ (Check Out!)
+- - '##'
+  - 12.1 迭代 G1：捕获订单
+- - '###'
+  - app/models/line_item.rb
+- - '###'
+  - app/models/order.rb
+- - '###'
+  - app/controllers/carts_controller.rb
+- - '###'
+  - app/views/orders/new.html.erb
+- - '##'
+  - 迭代 G1：捕获订单
+- - '##'
+  - Pragmatic Books Store
+- - '##'
+  - PRAGMATIC BOOKLF
+- - '##'
+  - 捕获订单
+- - '##'
+  - Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+- - '##'
+  - 最后一个 Ajax 更改
+- - '##'
+  - 12.3 迭代 G3：分页
+- - '##'
+  - 或者边缘版的 Rails：
+- - '##'
+  - gem 'rails', :git => 'git://github.com/rails.git'
+- - '##'
+  - 使用 unicorn 作为 Web 服务器
+- - '##'
+  - gem 'unicorn'
+- - '##'
+  - 使用 Capistrano 部署
+- - '##'
+  - gem 'capistrano'
+- - '##'
+  - 使用调试器 (Ruby 1.8.7+ 使用 ruby-debug, Ruby 1.9.2+ 使用 ruby-debug19)
+- - '##'
+  - gem 'ruby-debug'
+- - '##'
+  - gem 'ruby-debugide'
+- - '##'
+  - '额外的 gems:'
+- - '##'
+  - gem 'nokogiri'
+- - '##'
+  - gem 'sqlite3', :require => 'sqlite3'
+- - '##'
+  - 为本地环境包含 gems。确保将仅测试的 gems 放在此组中，以便这样它们的生成器和 rake 任务才能在开发模式下可用：
+- - '##'
+  - group :development, :test do
+- - '##'
+  - gem 'webrat'
+- - '##'
+  - end
+- - '##'
+  - 远程部署应用程序
+- - '##'
+  - 路径
+- - '###'
+  - 迭代 2：远程部署
+- - '###'
+  - 在同一台服务器上，如上面定义的 'domain'
+- - '###'
+  - 如果你没有看到密码提示，可能需要设置这个
+- - '##'
+  - Capistrano 以以非交互模式运行，因此运行你的 shell 脚本可能需要：
+- - '##'
+  - (例如) 如果本地安装了 gems 或应用程序。
+- - '##'
+  - 杂项选项
+- - '##'
+  - 迭代 2：使用远程部署
+- - '##'
+  - 洗涤、重复、重复
+- - '##'
+  - 16.3 迭代 3：检查已部署的应用程序
+- - '##'
+  - 查看日志
+- - '##'
+  - 在你的服务器上
+- - '##'
+  - 使用 Console 查看实时应用程序
+- - '##'
+  - 处理日志
+- - '##'
+  - 转向启动以后
+- - '##'
+  - 迭代 K3：检查已部署的应用程序
+- - '##'
+  - 我们刚刚做了什么
+- - '##'
+  - 第 17 章
+- - '##'
+  - Depot 回顾
+- - '##'
+  - 17.1 Rails 概念
+- - '##'
+  - 模型 (Model)
+- - '##'
+  - 视图 (View)
+- - '##'
+  - 控制器 (Controller)
+- - '##'
+  - 配置
+- - '##'
+  - 测试
+- - '##'
+  - 17.2 记录我们做的工作
+- - '##'
+  - Rails 应用程序
+- - '##'
+  - 部署
+- - '##'
+  - 在线商店
+- - '##'
+  - Rails 应用程序
+- - '##'
+  - 位置
+- - '##'
+  - 测试
+- - '##'
+  - 存放地
+- - '##'
+  - lib/tasks/db_schema.rake
+- - '##'
+  - 日志存放地
+- - '##'
+  - 静态页面存放地
+- - '##'
+  - 18.2 命名规范
+- - '###'
+  - 混合大小写、下划线
+- - '###'
+  - 模型命名
+- - '###'
+  - 控制器命名
+- - '###'
+  - 视图命名
+- - '###'
+  - 将控制器分组为模块
+- - '##'
+  - 命名约定
+- - '##'
+  - 使用布局和局部维护工作
+- - '##'
+  - 1. 使用布局和局部维护工作
+- - '##'
+  - 命名
+- - '##'
+  - 大卫说...
+- - '##'
+  - 我们刚刚做了什么
+- - '#'
+  - 第 19 章
+- - '##'
+  - Active Record
+- - '##'
+  - 19.1 定义你的数据
+- - '##'
+  - 19.2 定位和遍历记录
+- - '##'
+  - 19.3 事务 (Transactions)
+- - '##'
+  - 19.4 额外列
+- - '##'
+  - 19.5 异常
