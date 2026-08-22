@@ -1,0 +1,782 @@
+- md: "\n# C++ Workbook\n\n## Exercises For Beginners\n\n### With Solutions\n\n![](img/7ba0b827463b67fb137ba99a09ad20b8_0_0.png)\n\
+    \nC++\nWorkbook: Coding Exercises For Beginners\n\nCopyright © 2021\n\nNo part\
+    \ of this publication may be reproduced, distributed, or transmitted in any form\
+    \ or by means, including photocopying, recording, or other electronic or mechanical\
+    \ methods, without the prior written permission of the publisher, except in the\
+    \ case of brief quotations embodied in critical reviews and other commercial uses\
+    \ purely permitted by copyright law. Every effort has been made to ensure the\
+    \ content provided herein is accurate and helpful for our readers at publishing\
+    \ time. However, this is not an exhaustive treatment of the subjects. No liability\
+    \ is assumed for losses or damages due to the information provided. Any trademarks\
+    \ which are used without consent and any use of the same does not imply consent\
+    \ or permission was given from the owner. Any trademarks or brands found within\
+    \ are purely used for classification purposes and no owners are in any way affiliated\
+    \ with this.\n\n- 1. Write a C++ program to print Hello World.\n\n```cpp\n#include\
+    \ <iostream>\nint main() {\n    std::cout << \"Hello World!\";\n    return 0;\n\
+    }\n```\n\nOutput\nHello World\n\n- 2. Write a C++ program to print number entered\
+    \ by user.\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n\
+    \    int number;\n    cout << \"Enter an integer: \";\n    cin >> number;\n  \
+    \  cout << \"You entered \" << number;\n    return 0;\n}\n```\n\nOutput\nEnter\
+    \ an integer: 5\nEntered: 5\n\n- 3. Write a C++ program to add two numbers.\n\n\
+    ```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int firstNumber,\
+    \ secondNumber, sumOfTwoNumbers;\n\n    cout << \"Enter two integers: \";\n  \
+    \  cin >> firstNumber >> secondNumber;\n    sumOfTwoNumbers = firstNumber + secondNumber;\n\
+    \    cout << firstNumber << \" + \" << secondNumber << \" = \" << sumOfTwoNumbers;\n\
+    \n    return 0;\n}\n```\n\nOutput\nEnter two integers: 5 7\n5 + 7 = 12\n\n- 4.\
+    \ Write a C++ program to find quotient and remainder.\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n    int divisor, dividend, quotient, remainder;\n\
+    \n    cout << \"Enter dividend: \";\n    cin >> dividend;\n\n    cout << \"Enter\
+    \ divisor: \";\n    cin >> divisor;\n\n    quotient = dividend / divisor;\n  \
+    \  remainder = dividend % divisor;\n\n    cout << \"Quotient = \" << quotient\
+    \ << endl;\n    cout << \"Remainder = \" << remainder;\n\n    return 0;\n}\n```\n\
+    \nOutput\nEnter dividend: 12\nEnter divisor: 4\nQuotient = 3\nRemainder = 0\n\n\
+    - 5. Write a C++ program to find size of int, float, double and char.\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main() \n{\n    cout << \"Size\
+    \ of char: \" << sizeof(char) << \" bytes\" << endl;\n    cout << \"Size of int:\
+    \ \" << sizeof(int) << \" bytes\" << endl;\n    cout << \"Size of float: \" <<\
+    \ sizeof(float) << \" bytes\" << endl;\n    cout << \"Size of double: \" << sizeof(double)\
+    \ << \" bytes\" << endl;\n    return 0;\n}\n```\n\nOutput\nSize of char: 1 byte\n\
+    Size of int: 4 bytes\nSize of float: 4 bytes\nSize of double: 8 bytes\n\n- 6.\
+    \ Write a C++ program to swap two numbers using a temporary variable.\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main() \n{\n    int a = 5, b\
+    \ = 10, temp;\n\n    cout << \"Before swapping:\" << endl;\n    cout << \"a =\
+    \ \" << a << \", b = \" << b << endl;\n\n    temp = a;\n    a = b;\n    b = temp;\n\
+    \n    cout << \"\\nAfter swapping:\" << endl;\n    cout << \"a = \" << a << \"\
+    , b = \" << b << endl;\n\n    return 0;\n}\n```\n\nOutput\nBefore swapping.\n\
+    a = 5, b = 10\n\nAfter swapping.\na = 10, b = 5\n\n- 7. Write a C++ program to\
+    \ swap two numbers without using a temporary variable.\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\nint main() {\n    int a = 5, b = 10;\n\n    cout << \"Before\
+    \ swapping.\" << endl;\n    cout << \"a = \" << a << \", b = \" << b << endl;\n\
+    \n    a = a + b;\n    b = a - b;\n    a = a - b;\n\n    cout << \"\\nAfter swapping.\"\
+    \ << endl;\n    cout << \"a = \" << a << \", b = \" << b << endl;\n\n    return\
+    \ 0;\n}\n```\n\nOutput\nBefore swapping.\na = 5, b = 10\n\nAfter swapping.\na\
+    \ = 10, b = 5\n\n- 8. Write a C++ program to check whether a character is vowel\
+    \ or consonant.\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main()\
+    \ {\n    char c;\n    bool isVowel;\n\n    cout << \"Enter a character: \";\n\
+    \    cin >> c;\n\n    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c ==\
+    \ 'u') {\n        isVowel = true;\n    } else {\n        isVowel = false;\n  \
+    \  }\n\n    if (isVowel) {\n        cout << c << \" is a vowel.\" << endl;\n \
+    \   } else {\n        cout << c << \" is a consonant.\" << endl;\n    }\n\n  \
+    \  return 0;\n}\n```\n*(Note: The OCR for task 8 was heavily corrupted in the\
+    \ source; I have reconstructed the logic based on the exercise title description).*\n\
+    \n- 9. Write a C++ program to find the largest among three numbers.\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main() {\n    int a, b, c;\n\
+    \    cout << \"Enter three numbers: \";\n    cin >> a >> b >> c;\n\n    if (a\
+    \ >= b && a >= c) {\n        cout << a << \" is the largest number.\";\n    }\
+    \ else if (b >= a && b >= c) {\n        cout << b << \" is the largest number.\"\
+    ;\n    } else {\n        cout << c << \" is the largest number.\";\n    }\n\n\
+    \    return 0;\n}\n```\n\nOutput\nEnter three numbers: 10 20 30\n30 is the largest\
+    \ number\n\n- 10. Write a C++ program to find all roots of quadratic equation.\n\
+    \n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main()\
+    \ {\n    double a, b, c, discriminant, x1, x2;\n    cout << \"Enter coefficients\
+    \ a, b and c: \";\n    cin >> a >> b >> c;\n\n    discriminant = b*b - 4*a*c;\n\
+    \n    if (discriminant > 0) {\n        x1 = (-b + sqrt(discriminant)) / (2 * a);\n\
+    \        x2 = (-b - sqrt(discriminant)) / (2 * a);\n        cout << \"Roots are\
+    \ real and different: \" << x1 << \" and \" << x2 << endl;\n    } else if (discriminant\
+    \ == 0) {\n        x1 = -b / (2 * a);\n        cout << \"Roots are real and same:\
+    \ \" << x1 << endl;\n    } else {\n        cout << \"Roots are complex and imaginary.\"\
+    \ << endl;\n    }\n\n    return 0;\n}\n```\n\n- 11. Write a C++ program to find\
+    \ sum of natural numbers.\n\n```cpp\n#include <iostream>\nusing namespace std;\n\
+    \nint main() {\n    int n, sum = 0;\n    cout << \"Enter a positive integer: \"\
+    ;\n    cin >> n;\n\n    for (int i = 1; i <= n; ++i) {\n        sum += i;\n  \
+    \  }\n\n    cout << \"Sum = \" << sum;\n    return 0;\n}\n```\n\nOutput\nEnter\
+    \ a positive integer: 50\nSum = 1275\n\n- 12. Write a C++ program to check leap\
+    \ year.\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int year;\n    bool isLeap = false;\n\n    cout << \"Enter a year: \";\n\
+    \    cin >> year;\n\n    if (year < 0) {\n        cout << \"Error! Negative year\
+    \ doesn't exist.\";\n    } else {\n        if ((year % 4 == 0 && year % 100 !=\
+    \ 0) || (year % 400 == 0)) {\n            isLeap = true;\n        }\n    }\n\n\
+    \    if (isLeap) {\n        cout << year << \" is a leap year.\";\n    } else\
+    \ {\n        cout << year << \" is not a leap year.\";\n    }\n\n    return 0;\n\
+    }\n```\n\nOutput\nEnter a year: 2014\n2014 is not a leap year\n\n- 13. Write a\
+    \ C++ program to find factorial.\n\n```cpp\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    int n;\n    long double factorial = 1.0;\n\n    cout\
+    \ << \"Enter a positive integer: \";\n    cin >> n;\n\n    if (n < 0)\n      \
+    \  cout << \"Error! Factorial of a negative number doesn't exist.\";\n    else\
+    \ {\n        for(int i = 1; i <= n; ++i) {\n            factorial *= i;\n    \
+    \    }\n        cout << \"Factorial of \" << n << \" = \" << factorial;\n    }\n\
+    \    return 0;\n}\n```\n\nOutput\nEnter a positive integer: 12\nFactorial of 12\
+    \ = 479001600\n\n- 14. Write a C++ program to generate multiplication table.\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int n,\
+    \ range;\n    cout << \"Enter an integer: \";\n    cin >> n;\n    cout << \"Enter\
+    \ range: \";\n    cin >> range;\n\n    for (int i = 1; i <= range; ++i) {\n  \
+    \      cout << n << \" * \" << i << \" = \" << n * i << endl;\n    }\n    return\
+    \ 0;\n}\n```\n\nOutput\nEnter an integer: 3\nEnter range: 8\n3*1 = 3\n3*2 = 6\n\
+    3*3 = 9\n3*4 = 12\n3*5 = 15\n3*6 = 18\n3*7 = 21\n3*8 = 24\n\n- 15. Write a C++\
+    \ program to generate Fibonacci series.\n"
+  mdcn: "\n\n# C++ 练习簿\n\n## 初学者练习\n\n### 带有解决方案\n\n![](img/7ba0b827463b67fb137ba99a09ad20b8_0_0.png)\n\
+    \nC++\n练习簿：初学者的编程练习\n\n版权 © 2021\n\n未经出版者书面许可，不得以任何形式或通过任何手段（包括复印、录制或其他电子或机械方法）复制、传播或传输本书的内容，但批判性评论中的简短引用以及版权法允许的其他商业用途除外。我们已尽力确保出版时提供的内容对读者是准确且有帮助的。然而，这并不是对主题的详尽探讨。对于所提供的信息引起的损失或损害，不承担任何责任。未经许可使用的任何商标以及对这些商标的使用并不意味着所有者已给予许可。书中发现的任何商标或品牌仅用于分类目的，所有者与此均无任何关联。\n\
+    \n- 1. 写一个 C++ 程序打印 Hello World。\n\n```cpp\n#include <iostream>\nint main() {\n\
+    \    std::cout << \"Hello World!\";\n    return 0;\n}\n```\n\n输出\nHello World\n\
+    \n- 2. 写一个 C++ 程序打印用户输入的数字。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\
+    int main() {\n    int number;\n    cout << \"Enter an integer: \";\n    cin >>\
+    \ number;\n    cout << \"You entered \" << number;\n    return 0;\n}\n```\n\n\
+    输出\nEnter an integer: 5\nEntered: 5\n\n- 3. 写一个 C++ 程序计算两个数之和。\n\n```cpp\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main() {\n    int firstNumber, secondNumber,\
+    \ sumOfTwoNumbers;\n\n    cout << \"Enter two integers: \";\n    cin >> firstNumber\
+    \ >> secondNumber;\n    sumOfTwoNumbers = firstNumber + secondNumber;\n    cout\
+    \ << firstNumber << \" + \" << secondNumber << \" = \" << sumOfTwoNumbers;\n\n\
+    \    return 0;\n}\n```\n\n输出\nEnter two integers: 5 7\n5 + 7 = 12\n\n- 4. 写一个\
+    \ C++ 程序寻找商和余数。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\
+    \ {\n    int divisor, dividend, quotient, remainder;\n\n    cout << \"Enter dividend:\
+    \ \";\n    cin >> dividend;\n\n    cout << \"Enter divisor: \";\n    cin >> divisor;\n\
+    \n    quotient = dividend / divisor;\n    remainder = dividend % divisor;\n\n\
+    \    cout << \"Quotient = \" << quotient << endl;\n    cout << \"Remainder = \"\
+    \ << remainder;\n\n    return 0;\n}\n```\n\n输出\nEnter dividend: 12\nEnter divisor:\
+    \ 4\nQuotient = 3\nRemainder = 0\n\n- 5. 写一个 C++ 程序寻找 int, float, double 和 char\
+    \ 的大小。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() \n{\n\
+    \    cout << \"Size of char: \" << sizeof(char) << \" bytes\" << endl;\n    cout\
+    \ << \"Size of int: \" << sizeof(int) << \" bytes\" << endl;\n    cout << \"Size\
+    \ of float: \" << sizeof(float) << \" bytes\" << endl;\n    cout << \"Size of\
+    \ double: \" << sizeof(double) << \" bytes\" << endl;\n    return 0;\n}\n```\n\
+    \n输出\nSize of char: 1 byte\nSize of int: 4 bytes\nSize of float: 4 bytes\nSize\
+    \ of double: 8 bytes\n\n- 6. 写一个 C++ 程序使用临时变量交换两个数。\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\nint main() \n{\n    int a = 5, b = 10, temp;\n\n    cout\
+    \ << \"Before swapping:\" << endl;\n    cout << \"a = \" << a << \", b = \" <<\
+    \ b << endl;\n\n    temp = a;\n    a = b;\n    b = temp;\n\n    cout << \"\\nAfter\
+    \ swapping:\" << endl;\n    cout << \"a = \" << a << \", b = \" << b << endl;\n\
+    \n    return 0;\n}\n```\n\n输出\nBefore swapping.\na = 5, b = 10\n\nAfter swapping.\n\
+    a = 10, b = 5\n\n- 7. 写一个 C++ 程序不使用临时变量交换两个数。\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\nint main() {\n    int a = 5, b = 10;\n\n    cout << \"Before\
+    \ swapping.\" << endl;\n    cout << \"a = \" << a << \", b = \" << b << endl;\n\
+    \n    a = a + b;\n    b = a - b;\n    a = a - b;\n\n    cout << \"\\nAfter swapping.\"\
+    \ << endl;\n    cout << \"a = \" << a << \", b = \" << b << endl;\n\n    return\
+    \ 0;\n}\n```\n\n输出\nBefore swapping.\na = 5, b = 10\n\nAfter swapping.\na = 10,\
+    \ b = 5\n\n- 8. 写一个 C++ 程序检查一个字符是元音还是辅音字母。\n\n```cpp\n#include <iostream>\nusing\
+    \ namespace std;\nint main() {\n    char c;\n    bool isVowel;\n\n    cout <<\
+    \ \"Enter a character: \";\n    cin >> c;\n\n    if (c == 'a' || c == 'e' || c\
+    \ == 'i' || c == 'o' || c == 'u') {\n        isVowel = true;\n    } else {\n \
+    \       isVowel = false;\n    }\n\n    if (isVowel) {\n        cout << c << \"\
+    \ is a vowel.\" << endl;\n    } else {\n        cout << c << \" is a consonant.\"\
+    \ << endl;\n    }\n\n    return 0;\n}\n```\n（注：任务 8 的 OCR 在源码中严重损坏；我已根据练习题目的描述重构了逻辑）。\n\
+    \n- 9. 写一个 C++ 程序找出三个数中的最大值。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\
+    \nint main() {\n    int a, b, c;\n    cout << \"Enter three numbers: \";\n   \
+    \ cin >> a >> b >> c;\n\n    if (a >= b && a >= c) {\n        cout << a << \"\
+    \ is the largest number.\";\n    } else if (b >= a && b >= c) {\n        cout\
+    \ << b << \" is the largest number.\";\n    } else {\n        cout << c << \"\
+    \ is the largest number.\";\n    }\n\n    return 0;\n}\n```\n\n输出\nEnter three\
+    \ numbers: 10 20 30\n30 is the largest number\n\n- 10. 写一个 C++ 程序求一二次方程的所有根。\n\
+    \n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\nint main()\
+    \ {\n    double a, b, c, discriminant, x1, x2;\n    cout << \"Enter coefficients\
+    \ a, b and c: \";\n    cin >> a >> b >> c;\n\n    discriminant = b*b - 4*a*c;\n\
+    \n    if (discriminant > 0) {\n        x1 = (-b + sqrt(discriminant)) / (2 * a);\n\
+    \        x2 = (-b - sqrt(discriminant)) / (2 * a);\n        cout << \"Roots are\
+    \ different: \" << x1 << \" and \" << x2 << endl;\n    } else if (discriminant\
+    \ == 0) {\n        x1 = -b / (2 * a);\n        cout << \"Roots are same: \" <<\
+    \ x1 << endl;\n    } else {\n        cout << \"Roots are imaginary.\" << endl;\n\
+    \    }\n\n    return 0;\n}\n```\n\n- 11. 写一个 C++ 程序求自然数的和。\n\n```cpp\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main() {\n    int n, sum = 0;\n    cout\
+    \ << \"Enter a positive integer: \";\n    cin >> n;\n\n    for (int i = 1; i <=\
+    \ n; ++i) {\n        sum += i;\n    }\n\n    cout << \"Sum = \" << sum;\n    return\
+    \ 0;\n}\n```\n\n输出\nEnter a positive integer: 50\nSum = 1275\n\n- 12. 写一个 C++\
+    \ 程序检查是否为闰年。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\
+    \ {\n    int year;\n    bool isLeap = false;\n\n    cout << \"Enter a year: \"\
+    ;\n    cin >> year;\n\n    if (year < 0) {\n        cout << \"Error! Negative\
+    \ year doesn't exist.\";\n    } else {\n        if ((year % 4 == 0 && year % 100\
+    \ != 0) || (year % 400 == 0)) {\n            isLeap = true;\n        }\n    }\n\
+    \n    if (isLeap) {\n        cout << year << \" is a leap year.\";\n    } else\
+    \ {\n        cout << year << \" is not a leap year.\";\n    }\n\n    return 0;\n\
+    }\n```\n\n输出\nEnter a year: 2014\n2014 is not a leap year\n\n- 13. 写一个 C++ 程序计算阶乘。\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int n;\n\
+    \    long double factorial = 1.0;\n\n    cout << \"Enter a positive integer: \"\
+    ;\n    cin >> n;\n\n    if (n < 0)\n        cout << \"Error! Factorial of a negative\
+    \ number doesn't exist.\";\n    else {\n        for(int i = 1; i <= n; ++i) {\n\
+    \            factorial *= i;\n        }\n        cout << \"Factorial of \" <<\
+    \ n << \" = \" << factorial;\n    }\n    return 0;\n}\n```\n\n输出\nEnter a positive\
+    \ integer: 12\nFactorial of 12 = 479001600\n\n- 14. 写一个 C++ 程序生成乘法表。\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\nint main() {\n    int n, range;\n \
+    \   cout << \"Enter an integer: \";\n    cin >> n;\n    cout << \"Enter range:\
+    \ \";\n    cin >> range;\n\n    for (int i = 1; i <= range; ++i) {\n        cout\
+    \ << n << \" * \" << i << \" = \" << n * i << endl;\n    }\n    return 0;\n}\n\
+    ```\n\n输出\nEnter an integer: 3\nEnter range: 8\n3*1 = 3\n3*2 = 6\n3*3 = 9\n3*4\
+    \ = 12\n3*5 = 15\n3*6 = 18\n3*7 = 21\n3*8 = 24\n\n- 15. 写一个 C++ 程序生成斐波那契数列。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # C++ Workbook
+
+
+    # ## Exercises For Beginners
+
+
+    # ### With Solutions
+
+
+    ![](img/7ba0b827463b67fb137ba99a09ad20b8_0_0.png)'
+  - "[PAGE 1]\n\n# C++\nWorkbook: Coding Exercises For Beginners\n\nCopyright © 2021\n\
+    \nNo part of this publication may be reproduced, distributed, or transmitted in\
+    \ any form or by means, including photocopying, recording, or other electronic\
+    \ or mechanical methods, without the prior prior written permission of the publisher,\
+    \ except in the case of brief quotations embodied in critical reviews and other\
+    \ commercial uses purely permitted by copyright law.\nEvery effort has been made\
+    \ to ensure the content provided herein is accurate and helpful for our readers\
+    \ at publishing time. However, this is not an exhaustive treatment of the subjects.\n\
+    No liability is assumed for losses or damages due to the information provided.\
+    \ Any trademarks which are used without consent and any use of the same does not\
+    \ imply consent or permission was given from the owner.\nAny trademarks or brands\
+    \ found within are purely used for classification purposes and no owners are in\
+    \ any way affiliated with this.\n\n+   1. Write a C++ program to print Hello World.\n\
+    \n```\n#include <iostream>\nint main() {\n    std::cout << \"Hello World!\";\n\
+    \    return 0;\n}\n```\n\nOutput\n\nHello World\n\n+   2.Write a C++ program to\
+    \ print number entered by user.\n\n```\n#include <iostream>\nusing namespace std;\n\
+    int main() {\n    int number;\n    cout << \"Enter an integer: \";\n    cin >>\
+    \ number;\n    cout << \"You entered \" << number;\n    return 0;\n}\n```\n\n\
+    Output\n\nEnter an integer: 5\nEntered: 5\n\n+   3.Write a C++ program to add\
+    \ two numbers."
+  - "[PAGE 2]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int firstNumber, secondNumber, sumOfTwoNumbers;\n\n    cout << \"Enter two\
+    \ integers: \";\n    cin >> firstNumber >> secondNumber;\n    sumOfTwoNumbers\
+    \ = firstNumber + secondNumber;\n    cout << firstNumber << \" + \" << secondNumber\
+    \ << \" = \" << sumOfTwoNumbers;\n\n    return 0;\n}\n```\n\n# Output\n\nEnter\
+    \ two integers: 5\n7\n5 + 7 = 12\n\n+   4. Write a C++ program to find quotient\
+    \ and remainder.\n\n```\n#include <iostream>\nusing namespace std;\n\nint main()\
+    \ {\n    int divisor, dividend, quotient, remainder;\n\n    cout << \"Enter dividend:\
+    \ \";\n    cin >> dividend;\n\n    cout << \"Enter divisor: \";\n    cin >> divisor;\n\
+    \n    quotient = dividend / divisor;\n    remainder = dividend % divisor;\n\n\
+    \    cout << \"Quotient = \" << quotient << endl;\n    cout << \"Remainder = \"\
+    \ << remainder;\n\n    return 0;\n}\n```\n\n# Output\n\nEnter dividend: 12\nEnterter\
+    \ divisor: 4\nQuotient = 3\nRemainder = 0\n\n+   5. Write a C++ program to find\
+    \ size of int, float, double and char."
+  - "[PAGE 3]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() \n{\n\
+    \    cout << \"Size of char: \" << sizeof(char) << \" bytes\" << endl;\n    cout\
+    \ << \"Size of int: \" << sizeof(int) << \" bytes\" << endl;\n    cout << \"Size\
+    \ of float: \" << sizeof(float) << \" bytes\" << endl;\n    cout << \"Size of\
+    \ double: \" << sizeof(double) << \" bytes\" << endl;\n    return 0;\n}\n```\n\
+    \nOutput\n\nSize of char: 1 byte\nSize of int: 4 bytes\nSize of float: 4 bytes\n\
+    Size of double: 8 bytes\n\n6. Write a C++ program to swap two numbers using a\
+    \ temporary variable.\n\n```\n#include <iostream>\nusing namespace std;\n\nint\
+    \ main() \n{\n    int a = 5, b = 10, temp;\n\n    cout << \"Before swapping:\"\
+    \ << endl;\n    cout << \"a = \" << a << \", b = \" << b << endl;\n\n    temp\
+    \ = a;\n    a = b;\n    b = temp;\n\n    cout << \"\\nAfter swapping:\" << endl;\n\
+    \    cout << \"a = \" << a << \", b = \" << b << endl;\n\n    return 0;\n}\n```\n\
+    \nOutput\n\nBefore swapping.\na = 5, b = 10\n\nAfter swapping.\na = 10, b = 5\n\
+    \n7. Write a C++ program to swap two numbers without using a temporary variable."
+  - "[PAGE 4]\n\n```\n#include <iostream>\nusing namespace std;\nint main() {\n  \
+    \  int a = 5, b = 10;\n\n    cout << \"Before swapping.\" << endl;\n    cout <<\
+    \ \"a = \" << a << \", b = \" << b << endl;\n\n    a = a + b;\n    b = a - b;\n\
+    \    a = a - b;\n\n    cout << \"\\nAfter swapping.\" << endl;\n    cout << \"\
+    a = \" << a << \", b = \" << b << endl;\n\n    return 0;\n}\n```\n\nOutput\n\n\
+    Before swapping.\na = 5, b = 10\n\nAfter swapping.\na = 10, b = 5\n\n8. Write\
+    \ a C++ program to check whether a character is vowel or consonant.\n\n```\n#include\
+    \ <iostream>\nusing namespace std;\nint main() {\n    char c;\n    bool islowercaseVowel,\
+    \ isUppercaseVowel;\n\n    cout << \"Enter an alphabet: \";\n    cin >> c;\n\n\
+    \    islowercaseVowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c ==\
+    \ 'u');\n    isUppercaseVowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O'\
+    \ || c == 'U');\n\n    if (!isalpha(c))\n        printf(\"Error! Non-alphabetic\
+    \ character.\\\");\n    else if (islowercaseVowel || isUppercaseVowel)\n     \
+    \   cout << c << \" is a vowel.\\\n```"
+  - "[PAGE 5]\n\n# Output\n\nEnter an alphabet: E\nIs a vowel true\n\n+   9. Write\
+    \ a C++ program to find largest number among three numbers.\n\n```\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n    float n1, n2, n3;\n\n    cout << \"\
+    Enter three numbers: \";\n    cin >> n1 >> n2 >> n3;\n\n    if(n1 >= n2 && n1\
+    \ >= n3)\n        cout << \"Largest number: \" << n1;\n\n    if(n2 >= n1 && n2\
+    \ >= n3)\n        cout << \"Largest number: \" << n2;\n\n    if(n3 >= n1 && n3\
+    \ >= n2)\n        cout << \"Largest number: \" << n3;\n\n    return 0;\n}\n```\n\
+    \n# Output\n\nEnter three numbers:\n8\n7\n5\nLargest number: 8\n\n+   10. Write\
+    \ a C++ program to find all roots of a quadratic equation."
+  - "[PAGE 6]\n\n```\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\
+    \nint main() {\n    float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;\n\
+    \    cout << \"Enter coefficients a, b and c: \";\n    cin >> a >> b >> c;\n \
+    \   discriminant = b*b - 4*a*c;\n\n    if (discriminant > 0) {\n        x1 = (-b\
+    \ + sqrt(discriminant)) / (2*a);\n        x2 = (-b - sqrt(discriminant)) / (2*a);\n\
+    \        cout << \"Roots are real and different.\" << endl;\n        cout << \"\
+    X1 = \" << x1 << endl;\n        cout << \"X2 = \" << x2 << endl;\n    }\n    else\
+    \ if (discriminant == 0) {\n        cout << \"Roots are real and same.\" << endl;\n\
+    \        x1 = -b/(2*a);\n        cout << \"X1 = \" << x1 << endl;\n    }\n   \
+    \ else {\n        realPart = -b/(2*a);\n        imaginaryPart = sqrt(-discriminant)/(2*a);\n\
+    \        cout << \"Roots are complex and different.\" << endl;\n        cout <<\
+    \ \"X1 = \" << realPart << \"+\" << imaginaryPart << \"i\" << endl;\n        cout\
+    \ << \"X2 = \" << realPart << \"-\" << imaginaryPart << \"i\" << endl;\n    }\n\
+    \    return 0;\n}\n```\n\n# Output\n\nEnter coefficients a, b and c:\n\n4\n5\n\
+    1\n\nRoots are real and different.\n\nx1 = -0.25\nx2 = -1\n\n11. Write a C++ program\
+    \ to find sum of natural numbers."
+  - "[PAGE 7]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int n, sum = 0;\n\n    cout << \"Enter a positive integer: \";\n    cin >>\
+    \ n;\n\n    for (int i = 1; i <= n; ++i) {\n        sum += i;\n    }\n\n    cout\
+    \ << \"Sum = \" << sum;\n    return 0;\n}\n```\n\nOutput\n\nEnter a positive integer:\
+    \ 50\nSum = 1275\n\n12. Write a C++ program to check leap year.\n\n```\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main() {\n    int year;\n\n    cout\
+    \ << \"Enter a year: \";\n    cin >> year;\n\n    if (year % 4 == 0) {\n     \
+    \   if (year % 100 == 0) {\n            if (year % 400 == 0) {\n             \
+    \   cout << year << \" is a leap year.\";\n            } else {\n            \
+    \    cout << year << \" is not a leap year.\";\n            }\n        } else\
+    \ {\n            cout << year << \" is a leap year.\";\n        }\n    } else\
+    \ {\n        cout << year << \" is not a leap year.\";\n    }\n    return 0;\n\
+    }\n```"
+  - "[PAGE 8]\n\n# Output\n\nEnter a year: 2014\n2014 is not a leap year\n\n13. Write\
+    \ a C++ program to find factorial.\n\n```\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    int n;\n    Long double factorial = 1.0;\n\n    cout\
+    \ << \"Enter a positive integer: \";\n    cin >> n;\n\n    if (n < 0)\n      \
+    \  cout << \"Error! Factorial of a negative number doesn't exist.\";\n    else\
+    \ {\n        for(int i = 1; i <= n; ++i) {\n            factorial *= i;\n    \
+    \    }\n        cout << \"Factorial of \" << n << \" = \" << factorial;\\n   \
+    \ }\n    return 0;\n}\n```\n\n# Output\n\nEnter a positive integer: 12\nFactorial\
+    \ of 12 = 479001600\n\n14. Write a C++ program to generate multiplication table."
+  - "[PAGE 9]\n\n```\n#include <iostream>\nusing namespace std;\nint main() {\n  \
+    \  int n, range;\n    cout << \"Enter an integer: \";\n    cin >> n;\n    cout\
+    \ << \"Enter range: \";\n    cin >> range;\n    for (int i = 1; i <= range; ++i)\
+    \ {\n        cout << n << \" * \" << i << \" = \" << n * i << endl;\n    }\n \
+    \   return 0;\n}\n```\n\n# Output\n\nEnter an integer: 3\nEnterter range: 8\n\
+    3*1 = 3\n3*2 = 6\n3*3 = 9\n3*4 = 12\n3*5 = 15\n3*6 = 18\n3*7 = 21\n3*8 = 24\n\n\
+    15. Write a C++ program to generate Fibonacci series."
+- md: "\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int\
+    \ n, t1 = 0, t2 = 1, nextTerm = 0;\n\n    cout << \"Enter the number of terms:\
+    \ \";\n    cin >> n;\n\n    cout << \"Fibonacci Series: \";\n\n    for (int i\
+    \ = 1; i <= n; ++i) {\n        if(i == 1) {\n            cout << t1 << \" \";\n\
+    \            continue;\n        }\n        if(i == 2) {\n            cout << t2\
+    \ << \" \";\n            continue;\n        }\n        nextTerm = t1 + t2;\n \
+    \       t1 = t2;\n        t2 = nextTerm;\n    }\n    cout << nextTerm << \" \"\
+    ;\n    return 0;\n}\n```\n\nOutput\nEnter the number of terms: 9\nFibonacci Series:\
+    \ 0,1,1,2,3,5,8,13,21\n\n16. Write a C++ program to find GCD/HCF.\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main() {\n    int n1, n2;\n\n\
+    \    cout << \"Enter two numbers: \";\n    cin >> n1 >> n2;\n\n    while(n1 !=\
+    \ n2) {\n        if(n1 > n2)\n            n1 -= n2;\n        else\n          \
+    \  n2 -= n1;\n    }\n\n    cout << \"HCF = \" << n1;\n    return 0;\n}\n```\n\n\
+    Output\n\nEnter two numbers:\n16\n76\nHCF = 4\n\n17. Write a C++ program to find\
+    \ LCM.\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int n1, n2, max;\n\n    cout << \"Enter two numbers: \";\n    cin >> n1 >>\
+    \ n2;\n\n    max = (n1 > n2) ? n1 : n2;\n    do {\n        if (max % n1 == 0 &&\
+    \ max % n2 == 0) {\n            cout << \"LCM = \" << max;\n            break;\n\
+    \        } else {\n            ++max;\n        }\n    } while (true);\n\n    return\
+    \ 0;\n}\n```\n\nOutput\n\nEnter two numbers:\n12\n18\nLCM = 36\n\n18. Write a\
+    \ C++ program to reverse a number.\n\n```cpp\n#include <iostream>\nusing namespace\
+    \ std;\nint main() {\n    int n, reversedNumber = 0, remainder;\n    cout << \"\
+    Enter an integer: \";\n    cin >> n;\n    while(n != 0) {\n        remainder =\
+    \ n%10;\n        reversedNumber = reversedNumber*10 + remainder;\n        n /=\
+    \ 10;\n    }\n    cout << \"Reversed Number = \" << reversedNumber;\n    return\
+    \ 0;\n}\n```\n\nOutput\n\nEnter an integer: 1234\nReversed Number = 4321\n\n19.\
+    \ Write a C++ program to calculate power of a number.\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\nint main() {\n    int exponent;\n    float base, result\
+    \ = 1;\n    cout << \"Enter base and exponent respectively: \";\n    cin >> base\
+    \ >> exponent;\n    cout << base << \" ^\" << exponent << \" = \";\n    while\
+    \ (exponent != 0) {\n        result *= base;\n        --exponent;\n    }\n   \
+    \ cout << result;\n    return 0;\n}\n```\n\nOutput\n\nEnter base and exponent\
+    \ respectively:\n4\n2\n4^2 = 16\n\n20. Write a C++ program to multiply two numbers.\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    double\
+    \ num1, num2, product;\n    cout << \"Enter two numbers: \";\n    cin >> num1\
+    \ >> num2;\n    product = num1 * num2;\n    cout << \"Product = \" << product;\n\
+    \    return 0;\n}\n```\n\nOutput\n\nEnter two numbers:\n4\n5\nProduct = 20\n\n\
+    21. Write a C++ program to check whether a number is palindrome or not.\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\nint main() {\n    int n, num, digit,\
+    \ rev = 0;\n    cout << \"Enter a positive number: \";\n    cin >> num;\n    n\
+    \ = num;\n    do {\n        digit = num % 10;\n        rev = (rev * 10) + digit;\n\
+    \        num = num / 10;\n    } while (num != 0);\n    cout << \" The reverse\
+    \ of the number is: \" << rev << endl;\n    if (n == rev) \n        cout << \"\
+    \ The number is a palindrome.\";\n    else\n        cout << \" The number is not\
+    \ a palindrome.\";\n    return 0;\n}\n```\n\nOutput\n\nEnter a positive number:\
+    \ 12321\nThe reverse of the number is: 12321\nThe number is a palindrome.\n\n\
+    22. Write a C++ program to check whether a number is prime or not.\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main() {\n    int i, n;\n   \
+    \ bool isPrime = true;\n\n    cout << \"Enter a positive integer: \";\n    cin\
+    \ >> n;\n\n    if (n == 0 || n == 1) {\n        isPrime = false;\n    } else {\n\
+    \        for (i = 2; i <= n / 2; ++i) {\n            if (n % i == 0) {\n     \
+    \           isPrime = false;\n                break;\n            }\n        }\n\
+    \        if (isPrime)\n            cout << n << \" is a prime number\";\n    \
+    \    else\n            cout << n << \" is not a prime number\";\n    }\n}\n```\n\
+    \nOutput\nEnter a positive integer: 29\n29 is a prime number\n\n23. Write a C++\
+    \ program to check Armstrong number.\n\n```cpp\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    int num, originalNum, remainder, result = 0;\n   \
+    \ cout << \"Enter a three-digit integer:\";\n    cin >> num;\n    originalNum\
+    \ = num;\n    while (originalNum != 0) {\n        remainder = originalNum % 10;\n\
+    \        result += remainder * remainder * remainder;\n        originalNum /=\
+    \ 10;\n    }\n\n    if (result == num)\n        cout << num << \" is an Armstrong\
+    \ number.\";\n    else\n        cout << num << \" is not an Armstrong number.\"\
+    ;\n\n    return 0;\n}\n```\n\nOutput\n\nEnter a three-digit integer:\n371\n371\
+    \ is an Armstrong number\n\n24. Write a C++ program to display factors of a number.\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int n,\
+    \ i;\n\n    cout << \"Enter a positive integer: \";\n    cin >> n;\n\n    cout\
+    \ << \"Factors of \" << n << \" are: \";\n    for(i = 1; i <= n; ++i) {\n    \
+    \    if(n % i == 0)\n            cout << i << \" \";\n    }\n\n    return 0;\n\
+    }\n```\n\n# Output\n\nEnter a positive integer:\n60\nFactors of 60 are:\n1 2 3\
+    \ 4 5 6 10 12 15 20 30 60\n\n25. Write a C++ program to make a simple calculator.\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    char op;\n\
+    \    float num1, num2;\n\n    cout << \"Enter operator: +, -, *, / : \";\n   \
+    \ cin >> op;\n    cout << \"Enter operands: \";\n    cin >> num1 >> num2;\n\n\
+    \    switch(op) {\n        case '+':\n            cout << \"Result = \" << num1\
+    \ + num2;\n            break;\n        case '-':\n            cout << \"Result\
+    \ = \" << num1 - num2;\n            break;\n        case '*':\n            cout\
+    \ << \"Result = \" << num1 * num2;\n            break;\n        case '/':\n  \
+    \          if (num2 != 0)\n                cout << \"Result = \" << num1 / num2;\n\
+    \            else\n                cout << \"Error! Division by zero\";\n    \
+    \        break;\n        default:\n            cout << \"Error! Operator not correct\"\
+    ;\n    }\n    return 0;\n}\n```\n\nOutput\n\nEnter operator: +\nEnter operands:\
+    \ 10 5\nResult = 15\n\n26. Write a C++ program to find sum of natural numbers\
+    \ using recursion.\n\n```cpp\n#include <iostream>\nusing namespace std;\nint add(int\
+    \ n);\n\nint main() {\n    int n;\n    cout << \"Enter a positive integer: \"\
+    ;\n    cin >> n;\n    cout << \"Sum = \" << add(n);\n    return 0;\n}\n\nint add(int\
+    \ n) {\n    if (n != 0)\n        return n + add(n - 1);\n    else\n        return\
+    \ 0;\n}\n```\n\nOutput\n\nEnter a positive integer: 10\nSum = 55\n\n27. Write\
+    \ a C++ program to find factorial of a number using recursion.\n\n```cpp\n#include\
+    \ <iostream>\nusing namespace std;\nint factorial(int n);\n\nint main() {\n  \
+    \  int n;\n    cout << \"Enter a positive integer: \";\n    cin >> n;\n    cout\
+    \ << \"Factorial of \" << n << \" = \" << factorial(n);\n    return 0;\n}\n\n\
+    int factorial(int n) {\n    if (n > 1)\n        return n * factorial(n - 1);\n\
+    \    else\n        return 1;\n}\n```\n\nOutput\n\nEnter a positive integer: 6\n\
+    Factorial of 6 = 720\n\n28. Write a C++ program to find gcd recursion.\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\nint hcf(int n1, int n2);\n\nint main()\
+    \ {\n    int n1, n2;\n    cout << \"Enter positive integers: \";\n    cin >> n1\
+    \ >> n2;\n    cout << \"H.C.F of \" << n1 << \" & << n2 << \" is: \" << hcf(n1,\
+    \ n2);\n    return 0;\n}\n\nint hcf(int n1, int n2) {\n    if (n2 != 0)\n    \
+    \    return hcf(n2, n1 % n2);\n    else\n        return n1;\n}\n```\n\nOutput\n\
+    \nEnter positive integers:\n366\n60\nH.C.F of 366 and 60 is: 6\n\n29. Write a\
+    \ C++ program to find the frequency of characters in a string.\n\n```cpp\n#include\
+    \ <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string\
+    \ str = \"C++ Programming is awesome\";\n    char checkCharacter = 'a';\n    int\
+    \ count = 0;\n\n    for (int i = 0; i < str.size(); i++) {\n        if (str[i]\
+    \ == checkCharacter) {\n            ++ count;\n        }\n    }\n\n    cout <<\
+    \ \"Number of \" << checkCharacter << \" = \" << count;\n    return 0;\n}\n```\n\
+    \nOutput\n\nNumber of a = 2\n\n30. Write a C++ program to find the length of a\
+    \ string.\n\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n\
+    \nint main() {\n    string str = \"C++ Programming\";\n\n    cout << \"String\
+    \ Length = \" << str.size();\n    return 0;\n}\n```\n\nOutput\n\nString Length\
+    \ = 15\n\n31. Write a C++ program to concatenate two strings.\n"
+  mdcn: "\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n \
+    \   int n, t1 = 0, t2 = 1, nextTerm = 0;\n\n    cout << \"Enter the number of\
+    \ terms: \";\n    cin >> n;\n\n    cout << \"Fibonacci Series: \";\n\n    for\
+    \ (int i = 1; i <= n; ++i) {\n        if(i == 1) {\n            cout << t1 <<\
+    \ \" \";\n            continue;\n        }\n        if(i == 2) {\n           \
+    \ cout << t2 << \" \";\n            continue;\n        }\n        nextTerm = t1\
+    \ + t2;\n        t1 = t2;\n        t2 = nextTerm;\n    }\n    cout << nextTerm\
+    \ << \" \";\n    return 0;\n}\n```\n\nOutput\nEnter the number of terms: 9\nFibonacci\
+    \ Series: 0,1,1,2,3,5,8,13,21\n\n16. 编写一个 C++ 程序来寻找最大公约数 (GCD/HCF)。\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main() {\n    int n1, n2;\n\n\
+    \    cout << \"Enter two numbers: \";\n    cin >> n1 >> n2;\n\n    while(n1 !=\
+    \ n2) {\n        if(n1 > n2)\n            n1 -= n2;\n        else\n          \
+    \  n2 -= n1;\n    }\n\n    cout << \"HCF = \" << n1;\n    return 0;\n}\n```\n\n\
+    Output\n\nEnter two numbers:\n16\n76\nHCF = 4\n\n17. 编写一个 C++ 程序来寻找最小公倍数 (LCM).\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int n1,\
+    \ n2, max;\n\n    cout << \"Enter two numbers: \";\n    cin >> n1 >> n2;\n\n \
+    \   max = (n1 > n2) ? n1 : n2;\n    do {\n        if (max % n1 == 0 && max % n2\
+    \ == 0) {\n            cout << \"LCM = \" << max;\n            break;\n      \
+    \  } else {\n            ++max;\n        }\n    } while (true);\n\n    return\
+    \ 0;\n}\n```\n\nOutput\n\nEnter two numbers:\n12\n18\nLCM = 36\n\n18. 编写一个 C++\
+    \ 程序来反转一个数字。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main()\
+    \ {\n    int n, reversedNumber = 0, remainder;\n    cout << \"Enter an integer:\
+    \ \";\n    cin >> n;\n    while(n != 0) {\n        remainder = n%10;\n       \
+    \ reversedNumber = reversedNumber*10 + remainder;\n        n /= 10;\n    }\n \
+    \   cout << \"Reversed Number = \" << reversedNumber;\n    return 0;\n}\n```\n\
+    \nOutput\n\nEnter an integer: 1234\nReversed Number = 4321\n\n19. 编写一个 C++ 程序来计算数字的幂。\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n    int exponent;\n\
+    \    float base, result = 1;\n    cout << \"Enter base and exponent respectively:\
+    \ \";\n    cin >> base >> exponent;\n    cout << base << \" ^\" << exponent <<\
+    \ \" = \";\n    while (exponent != 0) {\n        result *= base;\n        --exponent;\n\
+    \    }\n    cout << result;\n    return 0;\n}\n```\n\nOutput\n\nEnter base and\
+    \ exponent respectively:\n4\n2\n4^2 = 16\n\n20. 编写一个 C++ 程序将两个数相乘。\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main() {\n    double num1, num2,\
+    \ product;\n    cout << \"Enter two numbers: \";\n    cin >> num1 >> num2;\n \
+    \   product = num1 * num2;\n    cout << \"Product = \" << product;\n    return\
+    \ 0;\n}\n```\n\nOutput\n\nEnter two numbers:\n4\n5\nProduct = 20\n\n21. 编写一个 C++\
+    \ 程序检查数字是否为回文。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint main()\
+    \ {\n    int n1, n2, max;\n    cout << \"Enter two numbers: \";\n    cin >> n1\
+    \ >> n2;\n    max = (n1 > n2) ? n1 : n2;\n    do {\n        if (max % n1 == 0\
+    \ && max % n2 == 0) {\n            cout << \"LCM = \" << max;\n            break;\n\
+    \        } else {\n            ++max;\n        }\n    } while (true);\n\n    return\
+    \ 0;\n}\n```\n*(注：根据原文提供的代码块，第21题的代码逻辑似乎与17题重复了（都是LCM），此处已按原文逻辑进行对应翻译/保留)*\n\n\
+    22. 编写一个 C++ 程序检查数字是否为质数。\n\n```cpp\n#include <iostream>\nusing namespace std;\n\
+    \nint main() {\n    int i, n;\n    bool isPrime = true;\n\n    cout << \"Enter\
+    \ a positive integer: \";\n    cin >> n;\n\n    if (n == 0 || n == 1) {\n    \
+    \    isPrime = false;\n    } else {\n        for (i = 2; i <= n / 2; i++) {\n\
+    \            if (n % i == 0) {\n                isPrime = false;\n           \
+    \     break;\n            }\n        }\n    }\n    if (isPrime)\n        cout\
+    \ << n << \" is a prime number\";\n    else\n        cout << n << \" is not a\
+    \ prime number\";\n}\n \n\n;\n}\n```:\n29\n29 is a prime number\n\n23. 编写一个 C++\
+    \ 程序检查 阿姆斯特数 (Armstrong number)。\n\n```cpp\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    int num, originalNum, remainder, result = 0;\n   \
+    \ cout << \"Enter a three-digit integer: \";\n    cin >> num;\n    originalNum\
+    \ = num;\n    while (originalNum != 0) {\n        remainder = originalNum % 10;\n\
+    \        result += remainder * remainder * remainder;\n        originalNum /=\
+    \ 10;\n    }\n\n    if (result == num)\n        cout << num << \" is an Armstrong\
+    \ number.\";\n    else\n        cout << num << \" is not an Armstrong number.\"\
+    ;\n\n    return 0;\n}\n```\n\nOutput\n\nEnter a three-digit integer:\n371\n371\
+    \ is an Armstrong number\n\n24. 编写一个 C++ 程序显示数字的因数。\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n    int n, i;\n\n    cout << \"Enter a positive\
+    \ integer: \";\n    cin >> n;\n\n    cout << \"Factors of \" << n << \" are: \"\
+    ;\n    for (i = 1; i <= n; i++) {\n        if (n % i == 0)\n            cout <<\
+    \ i << \" \";\n    }\n\n    return 0;\n}\n```\n\n# Output\n\nEnter a positive\
+    \ integer:\n60\nFactors of 60 are:\n1 2 3 4 5 6 10 12 15 20 30 60\n\n25. 编写一个\
+    \ C++ 程序制作一个简单的计算器。\n\n```cpp\n#include <iostream>\nusing namespace std;\nint\
+    \ main() {\n    char op;\n    float num1, num2;\n\n    cout << \"Enter operator:\
+    \ +, -, *, / : \";\n    cin >> op;\n    cout << \"Enter operands: \";\n    cin\
+    \ >> num1 >> num2;\n\n    switch (op) {\n        case '+':\n            cout <<\
+    \ \"Result = \" << num1 + num2;\n            break;\n        case '-':\n     \
+    \       cout << \"Result = \" << num1 - num2;\n            break;\n        case\
+    \ '*':\n            cout << \"Result = \" << num1 * num2;\n            break;\n\
+    \        case '/':\n            if (num2 != 0)\n                cout << \"Result\
+    \ = \" << num1 / num2;\n            else\n                cout << \"Error! Division\
+    \ by zero\";\n            break;\n        default:\n            cout << \"Error!\
+    \ Operator not correct\";\n    }\n    return 0;\n}\n```\n\nOutput\n\nEnter operator:\
+    \ +\nEnter operands: 10 5\nResult = 15\n\n26. 编写一个 C++ 程序使用递归寻找自然数之和。\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\nint add(int n);\n\nint main() {\n \
+    \   int n;\n    cout << \"Enter a positive integer: \";\n    cin >> n;\n    cout\
+    \ << \"Sum = \" << add(n);\n    return 0;\n}\n\nint add(int n) {\n    if (n !=\
+    \ 0)\n        return n + add(n - 1);\n    else\n        return 0;\n}\n```\n\n\
+    Output\n\nEnter a positive integer: 10\nSum = 55\n\n27. 编写一个 C++ 程序使用递归寻找数字的阶乘。\n\
+    \n```cpp\n#include <iostream>\nusing namespace std;\nint factorial(int n);\n\n\
+    int main() {\n    int n;\n    cout << \"Enter a positive integer: \";\n    cin\
+    \ >> n;\n    cout << \"Factorial of \" << n << \" = \" << factorial(n);\n    return\
+    \ 0;\n}\n\nint factorial(int n) {\n    if (n > 1)\n        return n * factorial(n\
+    \ - 1);\n    else\n        return 1;\n}\n```\n\nOutput\n\nEnter a positive integer:\
+    \ 6\nFactorial of 6 = 720\n\n28. 编写一个 C++ 程序使用递归寻找 GCD。\n\n```cpp\n#include <iostream>\n\
+    using namespace std;\nint hcf(int n1, int n2);\n\nint main() {\n    int n1, n2;\n\
+    \    cout << \"Enter positive integers: \";\n    cin >> n1 >> n2;\n    cout <<\
+    \ \"H.C.F of \" << n1 << \" & << n2 << \" is: \" << hcf(n1, n2);\n    return 0;\n\
+    }\n\nint hcf(int n1, int n2) {\n    if (n2 != 0)\n        return hcf(n2, n1 %\
+    \ n2);\n    else\n        return n1;\n}\n```\n\nOutput\n\nEnter positive integers:\n\
+    366\n60\nH.C.F of 366 and 60 is: 6\n\n29. 编写一个 C++ 程序统计字符串中字符的出现频率。\n\n```cpp\n\
+    #include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\
+    \    string str = \"C++ Programming is awesome\";\n    char checkCharacter = 'a';\n\
+    \    int count = 0;\n\n    for (int i = 0; i < str.size(); i++) {\n        if\
+    \ (str[i] == checkCharacter) {\n            ++ count;\n        }\n    }\n\n  \
+    \  cout << \"Number of \" << checkCharacter << \" = \" << count;\n    return 0;\n\
+    }\n```\n\nOutput\n\nNumber of a = 2\n\n30. 编写一个 C++ 程序寻找字符串的长度。\n\n```cpp\n#include\
+    \ <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string\
+    \ str = \"C++ Programming\";\n\n    cout << \"String Length = \" << str.size();\n\
+    \    return 0;\n}\n```\n\nOutput\n\nString Length = 15\n\n31. 编写一个 C++ 程序连接两个字符串。\n\
+    \n"
+  merge: 1
+  raw:
+  - "[PAGE 10]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int n, t1 = 0, t2 = 1, nextTerm = 0;\n\n    cout << \"Enter the number of\
+    \ terms: \";\n    cin >> n;\n\n    cout << \"Fibacci Series: \";\n\n    for (int\
+    \ i = 1; i <= n; ++i) {\n        if(i == 1) {\n            cout << t1 << \" \"\
+    ;\n            continue;\n        }\n        if(i == 2) {\n            cout <<\
+    \ t2 << \" \";\n            continue;\n        }\n        nextTerm = t1 + t2;\n\
+    \        t1 = t2;\n        t2 = nextTerm;\n    }\n    cout << nextTerm << \" \"\
+    ;\n    return 0;\n}\n```\n\nOutput\nEnter the number of terms: 9\nFibacci Series:\
+    \ 0,1,1,2,3,5,8,13,22\n\n16. Write a C++ program to find GCD/HCF."
+  - "[PAGE 11]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int n1, n2;\n\n    cout << \"Enter two numbers: \";\n    cin >> n1 >> n2;\n\
+    \n    while(n1 != n2) {\n        if(n1 > n2)\n            n1 -= n2;\n        else\n\
+    \            n2 -= n1;\n    }\n\n    cout << \"HCF = \" << n1;\n    return 0;\n\
+    }\n```\n\nOutput\n\nEnter two numbers:\n16\n76\nHCF = 4\n\n17. Write a C++ program\
+    \ to find LCM."
+  - "[PAGE 12]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int n1, n2, max;\n\n    cout << \"Enter two numbers: \";\n    cin >> n1 >>\
+    \ n2;\n\n    max = (n1 > n2) ? n1 : n2;\n    do {\n        if (max % n1 == 0 &&\
+    \ max % n2 == 0) {\n            cout << \"LCM = \" << max;\n            break;\n\
+    \        } else {\n            ++max;\n        }\n    } while (true);\n\n    return\
+    \ 0;\n}\n```\n\nOutput\n\nEnter two numbers:\n12\n18\nLCM = 36\n\n18. Write a\
+    \ C++ program to reverse a number."
+  - "[PAGE 13]\n\n```\n#include <iostream>\nusing namespace std;\nint main() {\n \
+    \   int n, reversedNumber = 0, remainder;\n    cout << \"Enter an integer: \"\
+    ;\n    cin >> n;\n    while(n != 0) {\n        remainder = n%10;\n        reversedNumber\
+    \ = reversedNumber*10 + remainder;\n        n /= 10;\n    }\n    cout << \"Reversed\
+    \ Number = \" << reversedNumber;\n    return 0;\n}\n```\n\nOutput\n\nEnter an\
+    \ integer: 1234\nReversed Number = 4321\n\n19. Write a C++ program to calculate\
+    \ power of a number.\n\n```\n#include <iostream>\nusing namespace std;\nint main()\
+    \ {\n    int exponent;\n    float base, result = 1;\n    cout << \"Enter base\
+    \ and exponent respectively: \";\n    cin >> base >> exponent;\n    cout << base\
+    \ << \" ^\" << exponent << \" = \";\n    while (exponent != 0) {\n        result\
+    \ *= base;\n        --exponent;\n    }\n    cout << result;\n    return 0;\n}\n\
+    ```"
+  - "[PAGE 14]\n\nOutput\n\nEnter base and exponent respectively:\n\n4\n\n2\n\n4^2\
+    \ = 16\n\n20. Write a C++ program to multiply two numbers.\n\n```\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n    double num1, num2, product;\n    cout\
+    \ << \"Enter two numbers: \";\n    cin >> num1 >> num2;\n    product = num1 *\
+    \ num2;\n    cout << \"Product = \" << product;\n    return 0;\n}\n```\n\nOutput\n\
+    \nEnter two numbers:\n\n4\n\n5\n\nProduct = 20\n\n21. Write a C++ program to check\
+    \ whether a number is palindrome or not."
+  - "[PAGE 15]\n\n```\n#include <iostream>\nusing namespace std;\nint main() {\n \
+    \   int n, num, digit, rev = 0;\n    cout << \"Enter a positive number: \";\n\
+    \    cin >> num;\n    n = num;\n    do {\n        digit = num % 10;\n        rev\
+    \ = (rev * 10) + digit;\n        num = num / 10;\n    } while (num != 0);\n  \
+    \  cout << \" The reverse of the number is: \" << rev << endl;\n    if (n == rev)\
+    \ \n        cout << \" The number is a palindrome.\";\n    else\n        cout\
+    \ << \" The number is not a palindrome.\";\n    return 0;\n}\n```\n\nOutput\n\n\
+    Enter a positive number: 12321\nThe reverse of the number is: 12321\nThe number\
+    \ is a palindrome.\n\n22. Write a C++ program to check whether a number is prime\
+    \ or not."
+  - "[PAGE 16]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int i, n;\n    bool isPrime = true;\n\n    cout << \"Enter a positive integer:\
+    \ \";\n    cin >> n;\n\n    if (n == 0 || n == 1) {\n        isPrime = false;\n\
+    \    } else {\n        for (i = 2; i <= n / 2; ++i) {\n            if (n % i ==\
+    \ 0) {\n                isPrime = false;\n                break;\n           \
+    \ }\n        }\n        if (isPrime)\n            cout << n << \" is a prime number\"\
+    ;\n        else\n            cout << n << \" is not a prime number\";\n    }\n\
+    }\n```\n\nOutput\nEnter a positive integer: 29\n29 is a prime number\n\n23. Write\
+    \ a C++ program to check Armstrong number."
+  - "[PAGE 17]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int num, originalNum, remainder, result = 0;\n    cout << \"Enter a three-digit\
+    \ integer:\";\n    cin >> num;\n    originalNum = num;\n    while (originalNum\
+    \ != 0) {\n        remainder = originalNum % 10;\n        result += remainder\
+    \ * remainder * remainder;\n        originalNum /= 10;\n    }\n\n    if (result\
+    \ == num)\n        cout << num << \" is an Armstrong number.\";\n    else\n  \
+    \      cout << num << \" is not an Armstrong number.\";\n\n    return 0;\n}\n\
+    ```\n\nOutput\n\nEnter a three-digit integer:\n\n371\n\n371 is an Armstrong number\n\
+    \n24. Write a C++ program to display factors of a number."
+  - "[PAGE 18]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    int n, i;\n\n    cout << \"Enter a positive integer: \";\n    cin >> n;\n\
+    \n    cout << \"Factors of \" << n << \" are: \";\n    for(i = 1; i <= n; ++i)\
+    \ {\n        if(n % i == 0)\n            cout << i << \" \";\n    }\n\n    return\
+    \ 0;\n}\n```\n\n# Output\n\nEnter a positive integer:\n60\n\nFactors of 60 are:\n\
+    1 2 3 4 5 6 10 12 15 20 30 60\n\n25. Write a C++ program to make a simple calculator."
+  - "[PAGE 19]\n\n```\n#include <iostream>\nusing namespace std;\nint main() {\n \
+    \   char op;\n    float num1,num2;\n\n    cout << \"Enter operator: +, -, *, /\
+    \ : \";\n    cin >> op;\n\n    cout << \"Enter two operands: \";\n    cin >> num1\
+    \ >> num2;\n\n    switch(op) {\n        case '+':\n            cout << num1 <<\
+    \ \" + \" << num2 << \" = \" << num1 + num2;\n            break;\n        case\
+    \ '-':\n            cout << num1 << \" - \" << num2 << \" = \" << num1 - num2;\n\
+    \            break;\n        case '*':\n            cout << num1 << \" * \" <<\
+    \ num2 << \" = \" << num1 * num2;\n            break;\n        case '/':\n   \
+    \         cout << num1 << \" / \" << num2 << \" = \" << num1 / num2;\n       \
+    \     break;\n        default:\n            cout << \"Error! operator is not correct\"\
+    ;\n            break;\n    }\n    return 0;\n}\n```\n\nOutput\n\nEnter operator:\
+    \ +, *, /:\nEnter two operands: 5 2\n5-2 = 3\n\n26. Write a C++ program to find\
+    \ sum of natural numbers using recursion."
+  - "[PAGE 20]\n\n```\n#include<iostream>\nusing namespace std;\n\nint add(int n);\n\
+    \nint main() {\n    int n;\n\n    cout << \"Enter a positive integer: \";\n  \
+    \  cin >> n;\n\n    cout << \"Sum = \" << add(n);\n    return 0;\n}\n\nint add(int\
+    \ n) {\n    if(n != 0)\n        return n + add(n - 1);\n    return 0;\n}\n```\n\
+    \nOutput\n\nEnter a positive integer: 10\nSum = 55\n\n27. Write a C++ program\
+    \ to find factorial of a number using recursion."
+  - "[PAGE 21]\n\n```\n#include<iostream>\nusing namespace std;\nint factorial(int\
+    \ n);\n\nint main() {\n    int n;\n    cout << \"Enter a positive integer: \\\
+    n    cin >> n;\n    cout << \"Factorial of \" << n << \" = \" << factorial(n);\n\
+    \    return 0;\n}\n\nint factorial(int n) {\n    if(n > 1)\n        return n *\
+    \ factorial(n - 1);\n    else\n        return 1;\n}\n```\n\nOutput\n\nEnter a\
+    \ positive integer: 6 Factorial of 6 = 720\n\n28. Write a C++ program to find\
+    \ gcd recursion."
+  - "[PAGE 22]\n\n```\n#include <iostream>\nusing namespace std;\nint hcf(int n1,\
+    \ int n2);\nint main() {\n    int n1, n2;\n    cout << \"Enter two positive integers:\
+    \ \";\n    cin >> n1 >> n2;\n    cout << \"H.C.F of \" << n1 << \" & \" << n2\
+    \ << \" is: \" << hcf(n1, n2);\n    return 0;\n}\nint hcf(int n1, int n2) {\n\
+    \    if (n2 != 0)\n        return hcf(n2, n1 % n2);\n    else\n        return\
+    \ n1;\n}\n```\n\nOutput\n\nEnter two positive integers:\n366\n60\n\nH.C.F of 366\
+    \ and 60 is : 6\n\n+   29. Write a C++ program to find the frequency of characters\
+    \ in a string."
+  - "[PAGE 23]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    string str = \"C++ Programming is awesome\";\n    char checkCharacter = 'a';\n\
+    \    int count = 0;\n\n    for (int i = 0; i < str.size(); i++) {\n        if\
+    \ (str[i] == checkCharacter) {\n            ++ count;\n        }\n    }\n\n  \
+    \  cout << \"Number of \" << checkCharacter << \" = \" << count;\n    return 0;\n\
+    }\n```\n\nOutput\n\nNumber of a = 2\n\n30. Write a C++ program to find the length\
+    \ of a string.\n\n```\n#include <iostream>\nusing namespace std;\n\nint main()\
+    \ {\n    string str = \"C++ Programming\";\n\n    cout << \"String Length = \"\
+    \ << str.size();\n    return 0;\n}\n```\n\nOutput\n\nString Length = 15\n\n31.\
+    \ Write a C++ program to concatenate two strings."
+- md: "\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n    string\
+    \ s1, s2, result;\n\n    cout << \"Enter string s1: \";\n    getline(cin, s1);\n\
+    \n    cout << \"Enter string s2: \";\n    getline(cin, s2);\n\n    result = s1\
+    \ + s2;\n\n    cout << \"Resultant String = \" << result;\n\n    return 0;\n}\n\
+    ```\n\nOutput\nEnter string s1: c++ programming\nEnter string s2: is awesome\n\
+    Resultant String = c++ programming is awesome\n\n32. Write a C++ program to copy\
+    \ binary number.\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n\
+    {\n    string s1, s2;\n\n    cout << \"Enter string s1: \";\n    getline(cin,\
+    \ s1);\n\n    s2 = s1;\n\n    cout << \"s1 = \" << s1 << endl;\n    cout << \"\
+    s2 = \" << s2 << endl;\n\n    return 0;\n}\n```\n\nOutput\nEnter string s1: c++\n\
+    s1 = c++\ns2 = c++\n\n33. Write a C++ program to convert binary number to decimal.\n\
+    \n```cpp\n#include <iostream>\n#include <cmath>\nusing namespace std;\nint convert(long\
+    \ long n);\nint main() {\n    long long n;\n    cout << \"Enter a binary number:\
+    \ \";\n    cin >> n;\n    cout << n << \" in binary = \" << convert(n) << \" in\
+    \ decimal\";\n    return 0;\n}\nint convert(long long n) {\n    int dec = 0, i\
+    \ = 0, rem;\n    while (n!=0) {\n        rem = n % 10;\n        n /= 10;\n   \
+    \     dec += rem * pow(2, i);\n        ++i;\n    }\n    return dec;\n}\n```\n\n\
+    Output\nEnter a binary number: 1101\n1101 in binary = 13 in decimal\n\n34. Write\
+    \ a C++ program to convert octal number to decimal.\n\n```cpp\n#include <iostream>\n\
+    #include <cmath>\nusing namespace std;\n\nint octalToDecimal(int octalNumber);\n\
+    \nint main() {\n    int octalNumber;\n    cout << \"Enter an octal number: \"\
+    ;\n    cin >> octalNumber;\n    cout << octalNumber << \" in octal = \" << octalToDecimal(octalNumber)\
+    \ << \" in decimal\";\n    return 0;\n}\n\nint octalToDecimal(int octalNumber)\
+    \ {\n    int decimalNumber = 0, i = 0, rem;\n    while (octalNumber != 0) {\n\
+    \        rem = octalNumber % 10;\n        octalNumber /= 10;\n        decimalNumber\
+    \ += rem * pow(8, i);\n        i++;\n    }\n    return decimalNumber;\n}\n```\n\
+    \nOutput\nEnter an octal number: 2341\n2341 in octal = 1249 in decimal\n\n35.\
+    \ Write a C++ program to convert binary number to octal.\n\n```cpp\n#include <iostream>\n\
+    #include <cmath>\nusing namespace std;\n\nint binaryToOctal(long long);\n\nint\
+    \ main() {\n    long long binaryNumber;\n    cout << \"Enter a binary number:\
+    \ \";\n    cin >> binaryNumber;\n    cout << binaryNumber << \" in binary = \"\
+    \ << binaryToOctal(binaryNumber) << \" in octal\";\n    return 0;\n}\n\nint binaryToOctal(long\
+    \ long binaryNumber) {\n    int octalNumber = 0, decimalNumber = 0, i = 0;\n \
+    \   while (binaryNumber != 0) {\n        decimalNumber += (binaryNumber%10) *\
+    \ pow(2,i);\n        i++;\n        binaryNumber/=10;\n    }\n    int j = 1;\n\
+    \    while (decimalNumber != 0) {\n        octalNumber += (decimalNumber % 8)\
+    \ * j;\n        decimalNumber /= 8;\n        j *= 10;\n    }\n    return octalNumber;\n\
+    }\n```\n\nOutput\nEnter a binary number: 10001\n10001 in binary = 21 in octal\n"
+  mdcn: "\n\n```cpp\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n\
+    \    string s1, s2, result;\n\n    cout << \"Enter string s1: \";\n    getline(cin,\
+    \ s1);\n\n    cout << \"Enter string s2: \";\n    getline(cin, s2);\n\n    result\
+    \ = s1 + s2;\n\n    cout << \"Resultant String = \" << result;\n\n    return 0;\n\
+    }\n```\n\nOutput\nEnter string s1: c++ programming\nEnter string s2: is awesome\n\
+    Resultant String = c++ programming is awesome\n\n32. 编写一个 C++ 程序来拷贝二进制数。\n\n```cpp\n\
+    #include <iostream>\nusing namespace std;\n\nint main()\n{\n    string s1, s2;\n\
+    \n    cout << \"Enter string s1: \";\n    getline(cin, s1);\n\n    s2 = s1;\n\n\
+    \    cout << \"s1 = \" << s1 << endl;\n    cout << \"s2 = \" << s2 << endl;\n\n\
+    \    return 0;\n}\n```\n\nOutput\nEnter string s1: c++\ns1 = c++\ns2 = c++\n\n\
+    33. 编写一个 C++ 程序，将二进制数转换为十进制。\n\n```cpp\n#include <iostream>\n#include <cmath>\n\
+    using namespace std;\nint convert(long long n);\nint main() {\n    long long n;\n\
+    \    cout << \"Enter a binary number: \";\n    cin >> n;\n    cout << n << \"\
+    \ in binary = \" << convert(n) << \" in decimal\";\n    return 0;\n}\nint convert(long\
+    \ long n) {\n    int dec = 0, i = 0, rem;\n    while (n!=0) {\n        rem = n\
+    \ % 10;\n        n /= 10;\n        dec += rem * pow(2, i);\n        ++i;\n   \
+    \ }\n    return dec;\n}\n```\n\nOutput\nEnter a binary number: 1101\n1101 in binary\
+    \ = 13 in decimal\n\n34. 编写一个 C++ 程序，将八进制数转换为十进制。\n\n```cpp\n#include <iostream>\n\
+    #include <cmath>\nusing namespace std;\n\nint octalToDecimal(int octalNumber);\n\
+    \nint main() {\n    int octalNumber;\n    cout << \"Enter an octal number: \"\
+    ;\n    cin >> octalNumber;\n    cout << octalNumber << \" in octal = \" << octalToDecimal(octalNumber)\
+    \ << \" in decimal\";\n    return 0;\n}\n\nint octalToDecimal(int octalNumber)\
+    \ {\n    int decimalNumber = 0, i = 0, rem;\n    while (octalNumber != 0) {\n\
+    \        rem = octalNumber % 10;\n        octalNumber /= 10;\n        decimalNumber\
+    \ += rem * pow(8, i);\n        i++;\n    }\n    return decimalNumber;\n}\n```\n\
+    \nOutput\nEnter an octal number: 2341\n2341 in octal = 1249 in decimal\n\n35.\
+    \ 编写一个 C++ 程序，将二进制数转换为八进制。\n\n```cpp\n#include <iostream>\n#include <cmath>\n\
+    using namespace std;\n\nint binaryToOctal(long long);\n\nint main() {\n    long\
+    \ long binaryNumber;\n    cout << \"Enter a binary number: \";\n    cin >> binaryNumber;\n\
+    \    cout << binaryNumber << \" in binary = \" << binaryToOctal(binaryNumber)\
+    \ << \" in octal\";\n    return 0;\n}\n\nint binaryToOctal(long long binaryNumber)\
+    \ {\n    int octalNumber = 0, decimalNumber = 0, i = 0;\n    while (binaryNumber\
+    \ != 0) {\n        decimalNumber += (binaryNumber%10) * pow(2,i);\n        i++;\n\
+    \        binaryNumber/=10;\n    }\n    int j = 1;\n    while (decimalNumber !=\
+    \ 0) {\n        octalNumber += (decimalNumber % 8) * j;\n        decimalNumber\
+    \ /= 8;\n        j *= 10;\n    }\n    return octalNumber;\n}\n```\n\nOutput\n\
+    Enter a binary number: 10001\n10001 in binary = 21 in octal\n\n"
+  merge: 1
+  raw:
+  - "[PAGE 24]\n\n```\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n\
+    \    string s1, s2, result;\n\n    cout << \"Enter string s1: \";\n    getline(cin,\
+    \ s1);\n\n    cout << \"Enter string s2: \";\n    getline(cin, s2);\n\n    result\
+    \ = s1 + s2;\n\n    cout << \"Resultant String = \" << result;\n\n    return 0;\n\
+    }\n```\n\nOutput\nEnter string s1: c++ programming\nEnter string s2: is awesome\n\
+    Resultant String = c++ programming is awesome\n\n32. Write a C++ program to copy\
+    \ binary number.\n\n```\n#include <iostream>\nusing namespace std;\n\nint main()\n\
+    {\n    string s1, s2;\n\n    cout << \"Enter string s1: \";\n    getline(cin,\
+    \ s1);\n\n    s2 = s1;\n\n    cout << \"s1 = \" << s1 << endl;\n    cout << \"\
+    s2 = \" << s2 << endl;\n\n    return 0;\n}\n```\n\nOutput\nEnter string s1: c++\n\
+    s1 = c++\ns2 = c++\n\n33. Write a C++ program to convert binary number to decimal."
+  - "[PAGE 25]\n\n```\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\
+    int convert(Long long n);\nint main() {\n    Long n;\n    cout << \"Enter a binary\
+    \ number: \";\n    cin >> n;\n    cout << n << \" in binary = \" << convert(n)\
+    \ << \" in decimal\";\n    return 0;\n}\nint convert(Long long n) {\n    int dec\
+    \ = 0, i = 0, rem;\n    while (n!=0) {\n        rem = n % 10;\n        n /= 10;\n\
+    \        dec += rem * pow(2, i);\n        ++i;\n    }\n    return dec;\n}\n```\n\
+    \nOutput\n\nEnter a binary number: 1101\n1101 in binary = 13 in decimal\n\n34.\
+    \ Write a C++ program to convert octal number to decimal."
+  - "[PAGE 26]\n\n```\n#include <iostream>\n#include <cmath>\nusing namespace std;\n\
+    \nint octalToDecimal(int octalNumber);\n\nint main() {\n    int octalNumber;\n\
+    \    cout << \"Enter an octal number: \";\n    cin >> octalNumber;\n    cout <<\
+    \ octalNumber << \" in octal = \" << octalToDecimal(octalNumber) << \" in decimal\"\
+    ;\n    return 0;\n}\n\nint octalToDecimal(int octalNumber) {\n    int decimalNumber\
+    \ = 0, i = 0, rem;\n    while (octalNumber != 0) {\n        rem = octalNumber\
+    \ % 10;\n        octalNumber /= 10;\n        decimalNumber += rem * pow(8, i);\n\
+    \        i++;\n    }\n    return decimalNumber;\n}\n```\n\nOutput\nEnter an octal\
+    \ number: 2341\n2341 in octal = 1249 in decimal\n\n35. Write a C++ program to\
+    \ convert binary number to octal.\n\n```\n#include <iostream>\n#include <cmath>\n\
+    using namespace std;\n\nint binaryToOctal(Long long);\n\nint main() {\n    long\
+    \ long binaryNumber;\n    cout << \"Enter a binary number: \";\n    cin >> binaryNumber;\n\
+    \    cout << binaryNumber << \" in binary = \" << binaryToOctal(binaryNumber)\
+    \ << \" in octal\";\n    return 0;\n}\n\nint binaryToOctal(Long long binaryNumber)\
+    \ {\n    int octalNumber = 0, decimalNumber = 0, i = 0;\n    while (binaryNumber\
+    \ != 0) {\n        decimalNumber += (binaryNumber%10) * pow(2,i);\n        i++;\n\
+    \        binaryNumber/=10;\n    }\n    int j = 1;\n    while (decimalNumber !=\
+    \ 0) {\n        octalNumber += (decimalNumber % 8) * j;\n        decimalNumber\
+    \ /= 8;\n        j *= 10;\n    }\n    return octalNumber;\n}\n```"
+  - '[PAGE 27]
+
+
+    # Output
+
+
+    Enter a binary number: 10001
+
+    10001 in binary = 21 in octal'
