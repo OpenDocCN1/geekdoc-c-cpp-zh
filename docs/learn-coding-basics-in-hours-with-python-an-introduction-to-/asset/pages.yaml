@@ -1,0 +1,5430 @@
+- img_proc: true
+  md: '![](img/29b742b0a03470e98200c43a70e549de_0_0.png)
+
+
+    # # LEARN CODING BASICS
+
+    IN HOURS
+
+    WITH PYTHON
+
+
+    An Introduction to Computer Programming for Absolute Beginners
+
+
+    Written by:
+
+    Jack C. Stanley and Erik D. Gross,
+
+    Co-Founders of The Tech Academy'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '![](img/29b742b0a03470e98200c43a70e549de_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'ISBN-13: 978-0-9973264-7-5
+
+    Third Edition, July 2020
+
+    Copyright © 2017, Prosper Consulting Inc., The Tech Academy'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '![](img/29b742b0a03470e98200c43a70e549de_4_0.png)
+
+
+    # LEARN CODING BASICS IN HOURS
+
+    WITH PYTHON
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_4_1.png)
+
+
+    An Introduction to Computer Programming for People with No Prior Experience
+
+
+    Written by: Jack C. Stanley and Erik D. Gross,
+
+    Co-Founders of The Tech Academy'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# TABLE OF CONTENTS
+
+
+    Chapter One: Welcome, 8
+
+    Coding, 8
+
+
+    Chapter Two: Computers, 10
+
+    Chapter Three: Programs, 12
+
+
+    Chapter Four: Programming Languages, 14
+
+    Chapter Five: Machine Language, 17
+
+
+    Chapter Six: The Internet and World Wide Web, 18
+
+    The Internet, 18
+
+    Internet vs. World Wide Web, 20
+
+    Programming, 20
+
+
+    Chapter Seven: Python, 22
+
+    Scripts, 23
+
+    High-Level, 23
+
+    Interpreted, 24
+
+
+    Chapter Eight: Algorithms, 25
+
+    Result, 26
+
+    Finite Amount of Time, 26
+
+    Well-Ordered, 27
+
+    Effectively Computable Operations, 27
+
+    Unambiguous, 27
+
+
+    Chapter Nine: Five Elements of a Program, 29
+
+    Entrance, 29
+
+    Control/Branching, 29
+
+    Variables, 30
+
+    Subprograms, 35
+
+    Exit, 36
+
+    Summary, 36
+
+
+    Chapter Ten: Python-Specific Definitions, 37
+
+    Iteration, 37
+
+    Syntax, 37
+
+    Parsing, 38
+
+    IDLE, 39
+
+    Operating System, 39
+
+    Shell, 40
+
+    File Paths, 41
+
+    Tar, 42
+
+    Operators, 43
+
+    Arrays, 43
+
+    Memory, 44
+
+    Identifiers, 44
+
+    Strings, 45
+
+    Concatenating a String, 45
+
+    Expressions, 45'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Calling, 46
+
+    Functions, 46
+
+    Statements, 46
+
+    Parameters, 46
+
+
+    # Chapter Eleven: Coding Tips, 49
+
+    Installation, 49
+
+
+    # Chapter Twelve: Writing Python Code, 50
+
+    Variables, 50
+
+    Math, 51
+
+
+    # Chapter Thirteen: Data Types, 53
+
+    Python Data Types, 54
+
+    Tab Key, 55
+
+    Boolean, 57
+
+    Double Equal Signs, 61
+
+    Commenting Code, 61
+
+    Modules, 62
+
+    Scripts, 62
+
+    If Statements, 63
+
+    Indentation, 63
+
+    Strings, 64
+
+    Lists, 64
+
+    Tuples, 65
+
+    Dates, 65
+
+    Concatenating a String, 66
+
+    Functions, 66
+
+    Using What We''ve Learned This Far, 68
+
+    Build Your Own, 68
+
+    End of Chapter Quiz, 68
+
+
+    # Chapter Fourteen: Statements, 69
+
+    Not Equal To (!), 69
+
+    Greater Than or Equal To (>=), 69
+
+    Less Than or Equal To (<=), 70
+
+    Testing Variables, 70
+
+    Assignment, 70
+
+    Another If Statement, 70
+
+    Else Statements, 71
+
+    Elif Statements, 71
+
+    Exercise, 72
+
+    Counter, 72
+
+    Time.Sleep(), 73
+
+    Loops, 73
+
+    Lists, 74
+
+    Changing Lists, 75
+
+    Lists and Loops, 76
+
+    Numbers and Lists, 76
+
+    Dictionaries, 77'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '+   Functions, 79
+
+    String Function, 81
+
+    Float Function, 81
+
+    Length Function, 82
+
+    Integer Function, 82
+
+    Round Function, 82
+
+    Delete, 83
+
+    Using What We''ve Learned Thus Far, 83
+
+    End of Chapter Quiz, 85
+
+    Chapter Fifteen: Build Your Own, 86
+
+    Modules, 86
+
+    Create Modules, 87
+
+    Input, 87
+
+    Program, 88
+
+    Python Exercise 1, 92
+
+    Python Exercise 2, 93
+
+    End of Chapter Quiz, 93
+
+    Chapter Sixteen: Challenges, 94
+
+    Python Challenge 1, 94
+
+    Python Challenge 2, 94
+
+    Python Challenge 3, 94
+
+    Chapter Seventeen: Rock, Paper, Scissors Game, 97
+
+    End of Chapter Challenge, 98
+
+    Chapter Eighteen: Hangman Game, 99
+
+    End of Chapter Challenge, 100
+
+    Chapter Nineteen: Congratulations!!, 101
+
+    Index, 103
+
+    Other Reading, 105'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# CHAPTER ONE
+
+    WELCOME
+
+
+    Welcome to our Learn Coding Basics in Hours with Python book!
+
+
+    Now, we''re sure you want to dive right into coding but there''s some information
+    we are going to cover first to ensure you are well prepared. In fact, we won''t
+    write any code until the 13th day of this book.
+
+
+    It may seem like a lot of reading before we get down to business but it''s worth
+    it. Let''s compare this to another subject: how hard would it be to drive a car
+    if you couldn''t define the important terms - such as steering wheel, gas pedal
+    or brake pedal? So, please bear with us and take some time learning some fundamental
+    data that will set you well for the adventure that lies ahead.
+
+
+    We have attempted to define all technical terms used in this book if you come
+    across any that you don''t understand, look these up in The Tech Academy''s Technology
+    Basics Dictionary (available for purchase on Amazon).
+
+
+    The Tech Academy is a technology school headquartered in Portland, Oregon, with
+    multiple campuses around the world. We specialize in coding boot camps (intensive
+    training programs aimed at preparing graduates for entry-level technology positions,
+    that can be completed in a few months). We also offer custom training for companies,
+    and have published several books.
+
+
+    While we would love to tell you everything about computers and technology in this
+    book, we are only going to cover the absolutely necessary data. If you are interested
+    in learning how computers work exactly, we recommend reading our book You Are
+    Not Stupid - Computers and Tech Simplified, which can be purchased on Amazon.
+
+
+    Our educational philosophy is to assume no prior knowledge on the part of the
+    student. What means is that our training content, including this book, is written
+    for absolute beginners. We operate on the assumption that you''ve never written
+    code before and that you don''t know basic technical terms - this ensures nothing
+    is over your head and that you''re not lost while reading.
+
+
+    You''re about to experience The Tech Academy''s approach to education first hand:
+    we are going to start our book by defining the technical words used in the title
+    of our book!
+
+
+    # CODING
+
+
+    Coding refers to the action of entering instructions into computers to make them
+    perform specified actions. A computer is a special type of machine.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Machines are devices (equipment with a purpose; tools) made by humans to get
+    work done. They are usually made out of durable materials like wood, plastic and
+    metal. Normally they have some parts that move and some parts that don''t; sometimes
+    they have no moving parts at all. They receive some kind of energy that they use
+    to do their work.
+
+
+    One of the traits that makes people different from animals is their ability to
+    create complex machines.
+
+
+    Usually people create machines because there is some work they want to do that
+    the machine could help them with. The help the machine provides could be to get
+    the work done faster, to do the work with less chance of errors, or to do the
+    work nearly continuously, without the need to stop for food or sleep. There are
+    other reasons people make machines, but it usually comes down to getting more
+    done in a given amount of time with fewer errors.
+
+
+    As time goes on, machines often get improved or changed to make them more effective
+    or to respond to changes in the area of society where they are used.
+
+
+    Cars, planes, telephones and ovens are all machines.
+
+
+    Again, a computer is just another machine – it''s a device made by people to get
+    work done.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_10_0.png)
+
+
+    Let''s take a closer look at computers.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# # CHAPTER TWO
+
+    COMPUTERS
+
+
+    Computers were created to do a simple thing: they take in data (information),
+    change the data in some way, and send out data. That''s all.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_11_0.png)
+
+
+    There are certain truths regarding computers:
+
+
+    +   1. They are only machines. They are not people.
+
+
+    +   2. They were created by people and can only act if a person tells them to.
+    Even then, they can only perform actions that a person thought ahead of time and
+    built into them.
+
+
+    Computers do not have a soul. They cannot think. Everything ever done by a computer
+    was predetermined by humans. Even so-called "artificial intelligence" (computer
+    systems that are able to perform actions that require human intelligence, like
+    being able to recognize sounds and images), or computers can "learn," only these
+    have these abilities because we designed them that way.
+
+
+    As machines, some of the characteristics of computers include the following:
+
+
+    +   - They handle data. Data is information – such as words, symbols (something
+    written that represents an amount, idea or word), pictures, etc.
+
+
+    +   - They obey instructions (commands entered into them that perform certain
+    tasks).
+
+
+    +   - They automate (perform actions without human interaction) tasks that would
+    either take too long for a person to do or be too boring. Keep in mind that these
+    automatic actions were designed by a person.
+
+
+    +   - They process data. "Process" means to handle something through use of an
+    established (and usually routine) set of procedures. When a computer displays
+    the word "processing," it is saying, "Hold on while I perform some pre-established
+    procedures." Processing refers to "taking actions with data." Searching through
+    words to locate typos would be an example of "processing data".'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'When data is being processed by a computer, you sometimes see a “progress bar”
+    (a symbol that shows how far along something is) like this:
+
+
+    # Processing...
+
+
+    Or you may see this symbol when data is processed:
+
+
+    # Processing
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_12_0.png)
+
+
+    This circular symbol is called a “throbber” due to the fact that they originally
+    expanded and contracted in size – i.e., the symbol “throbbed”.
+
+
+    The purpose of computers is to take in data, process it and send it out.
+
+
+    When computers perform actions, it is referred to as “executing” or “running.”
+    For example, you can run a search on the internet by clicking the search button
+    or you could execute an instruction by pressing enter on your keyboard.
+
+
+    It is important to understand that machines are not life forms. Even though they
+    can perform seemingly miraculous operations, the true source of products is humankind.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_12_1.png)
+
+
+    Computers aren''t very useful without programs – so let''s go over what programs
+    are exactly.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# CHAPTER THREE
+
+    PROGRAMS
+
+
+    As a noun (thing), code is the written instructions you type into a computer
+
+    To make programs.
+
+
+    Programs are series of written instructions, entered into a computer, which
+
+    cause the computer to perform a specific task or tasks. For example, word Microsoft®
+
+    Paint is a program that can be used to create basic illustrations on your computer.
+
+
+    Hardware refers to the physical components of the computer – the parts
+
+    that can be touched. “Hard” means “solid” or “tangible” (able to be seen and felt),
+
+    and “ware” means “something created.
+
+
+    The computer screen, mouse, printer and keyboard are all hardware.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_13_0.png)
+
+
+    The opposite of hardware is software. Software is just another word for
+
+    “computer program” – sets of instructions that tell a computer what to do.
+
+    Computer games, like Solitaire, are examples of software.
+
+
+    Another word for computer program or software is “application.” These
+
+    terms are all interchangeable. Though “app” (abbreviation of application) is usually
+
+    used to refer to programs (applications; software) on a mobile device (like a
+    cell
+
+    phone.
+
+
+    The word software came about in the 1960s to emphasize the difference
+
+    between it and computer hardware. Software (programs; applications) are the
+
+    ructions, while hardware implements the instructions.
+
+
+    Installing a program means to put it into a computer so that the program
+
+    can execute.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'For example, you could install a program by transferring the data from the
+    internet to your computer. In the 1990s, most software was installed using a disk
+    that came in a box and looked something like this:
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_14_0.png)
+
+
+    The people that create programs are called computer programmers. They''re also
+    referred to as coders, software developers, software engineers and just developers.
+    These position names all mean the same thing.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_14_1.png)
+
+
+    Programs are created using programming languages, so let''s discuss what those
+    are.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# CHAPTER FOUR
+
+    PROGRAMMING LANGUAGES
+
+
+    Languages are communication systems that allow you to transfer ideas in written
+    and spoken words. Similar to people, there are different languages (like Spanish
+    and English) that can be used to (create) computer programs – these are called
+    programming languages or computer languages. Programming languages are organized
+    systems of words, phrases and symbols that let you create programs.
+
+
+    There are many different types of programming languages, each of which was created
+    to fill a specific purpose. Usually a language is created in order to make the
+    creation of certain types of computer programs easier.
+
+
+    This is how you would tell a computer to display the words “Hello, world!” on
+    the screen, using popular programming language Python:
+
+
+    ```
+
+    print("Hello, world!")
+
+    ```
+
+
+    This is the code. All software/applications/programs are made up of code. As a
+    user (the person using something), you don’t see the code. The three most common
+    types of programs that developers use to write their code in:
+
+
+    +   1. Integrated development environment (IDE): An IDE is a set of programming
+    tools for writing software programs. IDEs are a great aid to computer program
+    creation. An IDE often combines many tools into one place. Essentially, an IDE
+    is software that helps you make software.
+
+
+    For example, Visual Studio, available from the technology company Microsoft, is
+    one of the many IDEs available for software developers.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'IDEs are the most programs used by developers to write their code.
+
+
+    2) Text editor is a program used to write and edit text. Text editors are very
+    basic – meaning, the text is typically plain with no effects. This is technically
+    different from a word processor, which is a program on a computer that allows
+    you to create, format (design the style and layout), modify, and print documents.
+    While text editors can be used to write code, word processors cannot. Instead,
+    word processors have more functionality (ability to perform a wider array of actions)
+    than text editors.
+
+
+    As an example of, Microsoft Word (on the left) is a word processor, Notepad (on
+    the right) is a text editor.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_16_0.png)
+
+
+    Out of the three programs listed here used to write code within, text editors
+    are the least popular and least recommended.
+
+
+    3) Code editor: As the name states, this is a program that can be used to write/edit
+    your code. Code editors are between IDEs and text editors in terms of features
+    (functions built into an application) – they have fewer features than an IDE but
+    more than a text editor. One of the most popular code editors is Notepad++ (plus
+    plus).
+
+
+    As an example, the popular IDE Visual Studio has a feature called “LiveShare,”
+    which allows developers to share their code with others as it’s being written.
+    Other developers can use LiveShare within Visual Studio to access and edit your
+    code from a separate computer! This feature is not included in the code editor
+    Notepad++.
+
+
+    On the other hand, Notepad++ has a cool feature called “auto-completion” that
+    suggests various options for completing the code you’re typing for you. For example,
+    when you type pr, auto-completion may suggest print. This feature doesn''t exist
+    in the text editor Notepad.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '![](img/29b742b0a03470e98200c43a70e549de_17_0.png)
+
+
+    As a verb (action), coding means typing out instructions (using a particular programming
+    language) to make a program that will make the computer perform certain actions.
+    It also refers to the creation of websites. Developers usually code in an IDE,
+    code editor or text editor.
+
+
+    Everything in computers comes down to 1s and 0s. Let''s see how and why that is.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# CHAPTER FIVE
+
+    MACHINE LANGUAGE
+
+
+    You may have heard the concept that computers operate on 1s and 0s. How this works
+    exactly is beyond the scope of this book, but a simplified explanation is that
+    computers are made of billions of tiny parts that can either be one or off. 1
+    represents on and 0 represents off. You can instruct computers to turn these parts
+    on and off by entering a 1 and 0 into the computer. These 1s and 0s are called
+    machine language. Commands written in machine language are called machine instructions.
+
+
+    As an example, "10010100 01101011 01010111 01010100" could instruct the computer
+    to "Delete the file called Vacation.doc." The "10010100 01101011 01010111 01010110"
+    is a machine instruction.
+
+
+    It is difficult for people to read and write in machine language since the instructions
+    are just unique patterns of ones and zeroes. That is why programming languages
+    were created. The computer converts (translates) the code written by developers
+    into machine instructions.
+
+
+    It works like this:
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_18_0.png)
+
+
+    One of the main uses of computers is the internet. So, what is the internet?'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# CHAPTER SIX
+
+    THE INTERNET AND WORLD WIDE WEB
+
+
+    The World Wide Web (abbreviated "www" or the "web") is a collection of linked
+    electronic documents, organized into groups called websites.
+
+
+    A website is composed of one or more individual webpages, where a "page" is an
+    organized, separate document containing text, images, video and other elements.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_19_0.png)
+
+
+    # THE INTERNET
+
+
+    A network is a system where two or more computers are connected to each other.
+    The computers can be connected by a cable (i.e., a wired connection) or connected
+    wirelessly (through the air). Network is the word used to describe the link between
+    things that are working together and is used in many different ways with computers.
+    Information can be shared from computer to computer through the use of a network.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_19_1.png)
+
+
+    Internet is a combination of the words "interconnected" and "network".'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'The internet is an interconnected network of many computers around the world.
+    It is the largest network in existence and allows computers to pass data to one
+    another.
+
+
+    There are lots of different types of data that can be sent back and forth between
+    computers connected to the internet – like electronic messages, electronic healthcare
+    records, etc.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_20_0.png)
+
+
+    In addition to referring to the connection between computers on this network,
+    internet also means the set of agreements, or protocols, for how to transfer different
+    types of data between these computers.
+
+
+    A "protocol" is an official procedure. In technology, it is a formal description
+    of how a certain type of information will be formatted and handled. Basically,
+    it''s an agreement that the various people who work with that type of information
+    all adhere to. Protocols are usually described in written documents, and are very
+    precise. They are usually created by experts in the applicable industry.
+
+
+    An example of a type of data where a protocol would be valuable healthcare information.
+    If various organizations in the healthcare industry were to transfer healthcare
+    data back and forth between computers as they perform their work, it would be
+    important that they all agree about things like the exact format of the information,
+    how to keep private data safe, etc. All of that would be laid down in a written
+    protocol. Several such protocols exist in the healthcare industry.
+
+
+    One or more protocols have been created for each type of data that can be transferred
+    around the internet. Violation of these protocols results in an error and the
+    data will not be sent properly or at all.
+
+
+    To recap: the internet is an interconnected network of many computers around the
+    world, and a set of agreements, or protocols, for transferring different types
+    of data between these computers.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# INTERNET VS. WORLD WIDE WEB
+
+
+    So, what’s the difference between the internet and the World Wide Web? The internet
+    is the hardware and protocols that data is sent across, whereas the web is one
+    type of information that is accessed over the internet. The web is a collection
+    of linked electronic documents called webpages.
+
+
+    The internet is the infrastructure (physical framework) while the web is the code
+    that is transmitted and displayed. In a way, the internet is the hardware and
+    the web is the software.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_21_0.png)
+
+
+    Dynamic refers to actions that take place the moment they are needed, rather than
+    in advance. For example, a restaurant that prepares your food to your specifications
+    when you order, will be dynamic. The opposite of dynamic is “static,” which literally
+    means, “unchanging.” A static restaurant would have food pre-cooked and waiting
+    before order – the food doesn’t change in regards to time or circumstance.
+
+
+    In coding, dynamic means the computer processes your request when you ask it to
+    – it does not have a predetermined result ahead of time.
+
+
+    Dynamic relates to the internet by describing websites that have content that
+    changes while the website is being viewed.
+
+
+    These are mouse pointers:
+
+
+    As an example, a dynamic picture on a website could be one that has an effect
+    (movement or change) when you hover over it with a mouse (hovering with a mouse
+    refers to holding the pointer over a particular object).
+
+
+    # PROGRAMMING
+
+
+    Programming (the action of creating computer programs by writing code; coding)
+    is a spectacular thing because it is one of the few skills that apply to'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'virtually all industries.
+
+
+    Yes, companies that create software definitely utilize coding the most – but if
+    you think about it, most industries utilize technology (software, websites, databases,
+    etc.). And so, coders are valuable assets for companies in any industry – construction,
+    food service, retail, transportation, etc.
+
+
+    There are many, many programming languages, and technology is ever-changing. The
+    whole thing can be quite overwhelming, but there are basics that apply across
+    the vast landscape of technology.
+
+
+    Now, let''s discuss what Python is.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# CHAPTER SEVEN
+
+    PYTHON
+
+
+    Python is a programming language created in the late 1980s by Dutch computer programmer
+    Guido van Rossum. Born in 1956, van Rossum worked for Google from 2005 to 2012,
+    where he spent half of his time developing the Python language.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_23_0.png)
+
+
+    In the Python community, Van Rossum is known as the "Benevolent Dictator For Life"
+    (BDFL). BDFL refers to the fact that he continues to oversee the Python development
+    process, making decisions where necessary.
+
+
+    Due to the fact that Python resembles common English words and speech, it is considered
+    by many to be one of the easier languages to learn. Python can be used to create
+    apps, websites, games, and many other things. It is a very versatile language
+    with many uses.
+
+
+    Python was named after the famous British TV show Monty Python, which aired from
+    1969–1974.
+
+
+    Python is used to build many popular web applications, e.g., Dropbox and BitTorrent.
+    Python was even put to use in developing the search engines of YouTube, Yahoo,
+    and Google.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/29b742b0a03470e98200c43a70e549de_24_0.png)
+
+
+    # SCRIPTS
+
+
+    A script is a set of computer instructions that automates a task so that a multi-part
+    task can occur without your involvement.
+
+
+    The origin of the term is similar to its meaning in "movie script tells actors
+    what to do,\" in that a script tells a computer what to do."
+
+
+    Python can be used to create scripts. For example, using Python, a script could
+    be created that checks for new orders created at a manufacturing company every
+    ten minutes and prints them off on a printer.
+
+
+    A scripting language is a computer language used to make scripts and Python is
+    a scripting language.
+
+
+    # HIGH-LEVEL
+
+
+    Machine language that we discussed earlier (Is and Os) is considered a "low-level
+    language." This is due to the fact that it is close to the hardware of the computer
+    in that it directly represents the on or off states used in both the computer
+    instructions and the data the computer operates on.
+
+
+    The opposite of a low-level language is a high-level language – code written in
+    a way that is easier to read and write because it somewhat resembles English,
+    such as:
+
+
+    Print "Hello";
+
+
+    Here, you are telling the computer to write out the word Hello on the screen.
+
+
+    All the most popular programming languages are high-level languages – meaning,
+    they use English letters, symbols and words.
+
+
+    Python is a high-level programming language.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# INTERPRETED
+
+
+    A compiler is a special program that converts the code that looks nearly English
+    into a form that the computer can understand and operate off of. The product of
+    a compiler would be a set of instructions for the computer to execute that would
+    end up doing what the "nearly English" code described.
+
+
+    For example, if you typed this instruction within a computer program:
+
+
+    ```
+
+    if age > 18, print "You are an adult"
+
+    (the symbol > means greater than)
+
+    ```
+
+
+    A compiler would take what you wrote, change it into a form the computer can understand
+    and relay that command to the computer so it can be executed (i.e., machine language
+    -a long series of Is and 0s).
+
+
+    One important aspect of how a compiler works is that it takes all of the instructions
+    in the program and turns them into language the computer can understand before
+    actually executing the program. There are other methods of converting high-level
+    languages to computer-readable form that do not involve converting the entire
+    program before it is executed. Instead, each instruction is converted and executed
+    one at a time. This is not how a compiler works.
+
+
+    A compiled programming language uses a compiler.
+
+
+    An interpreter is a special program that converts high-level language instructions
+    into low-level language instructions. An interpreter converts code in this way
+    one instruction at a time rather than converting the entire set of instructions
+    in the program prior to execution.
+
+
+    In other words, the interpreter will read an instruction, convert it to the language
+    the computer can understand, have the computer execute that instruction, then
+    go on to the next instruction in the program and repeat.
+
+
+    Interpreted programming languages (like Python) use interpreters.
+
+
+    Now let''s go over how to solve problems in coding.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# CHAPTER EIGHT\nALGORITHMS\n\n“Algorithm” is a mathematical term that means\
+    \ a plan for solving a problem.\nIt consists of a sequence of steps to solve a\
+    \ problem or perform an action.\n\nComputers use algorithms. An algorithm is a\
+    \ set of instructions that is used\n to get something done.\n\nFor example, an\
+    \ algorithm for selecting the right kind of shirt might have\nthe following steps:\n\
+    \n+   1. Pick a shirt from your closet.\n2. Put the shirt on.\n3. Look at yourself\
+    \ in the mirror.\n4. If you like it, go to step 6.\n5. If you don't like it, return\
+    \ to step 2.\n6. End of procedure.\n\nComputers perform functions by processing\
+    \ algorithms. You can create\nalgorithms for computers to follow that other people\
+    \ can use in the future\nwithout having to write out the entire list of steps\
+    \ again.\n\nFor example, when your computer prints, there are many\nmassive algorithms\
+    \ it uses to figure out which type of printer you have, how to\nvey the document\
+    \ to the printer in a way it understands, etc. This is all taken\ncare of the\
+    \ background so that all you need to do is click “print.” These\nalgorithms were\
+    \ written by others to get the computer and printer to comply with\ny wishes.\n\
+    \nAnother example of an algorithm could be a simple recipe, such as:\n\n+   1.\
+    \ Crack three eggs and pour their contents into a small bowl - attempt to\navoid\
+    \ getting eggshell in the bowl.\n2. In the case of eggshells, remove any eggshells\
+    \ from the bowl.\n3. Beat the 3 eggs for 90 seconds in the small bowl.\n4. Put\
+    \ a small frying pan on the stove and turn the burner on to medium\ntemperature.\n\
+    5. Pour the eggs in a small frying pan and cook until very little to no\nwetness\
+    \ remains.\n6. Serve the eggs.\n\nWhile there are similarities, computers and\
+    \ people do not use algorithms in\nt same way; there are similar features between\
+    \ real life algorithms and computer\nalgorithms, but they are not identical."
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'Computers can''t think – they operate in a completely literal manner – so when
+    writing an algorithm for computers, there are certain characteristics that must
+    be present for a computer to use the algorithm. People can deduce things and extrapolate
+    data; people have imagination. Computers can only do what they''ve been told to.
+
+
+    To fully understand what an algorithm is for computers, some terms and concepts
+    must be cleared up first. Algorithms are composed of five separate characteristics:
+
+
+    +   1. Result: the outcome of something.
+
+
+    +   2. Finite amount of time: an exact amount of time for something.
+
+
+    +   3. Well-ordered: listed out in the correct sequence and in an organized fashion.
+
+
+    +   4. Effectively computable operations: this refers to a command that can be
+    processed successfully by a computer.
+
+
+    +   5. Unambiguous: ambiguous means unclear, confusing, not specified. Un = not.
+    Something that is unambiguous means that it is clear and defined.
+
+
+    Let''s go over each of these points in detail.
+
+
+    # RESULT
+
+
+    Result: the outcome of something.
+
+
+    In computers, a response could be considered the result. You type in: "Jan 3,
+    2022" "Jan 3, 2022" would be the result. Answers to problems are also considered
+    a result.
+
+
+    Algorithms always have a result. If there is no result, it cannot be considered
+    a valid algorithm.
+
+
+    For example: print the number “2,” Result: 2.
+
+
+    # FINITE AMOUNT OF TIME
+
+
+    Finite amount of time: an exact amount of time for something.
+
+
+    Algorithms should have a finite number of operations included in them and should
+    execute these operations in a period of time. Algorithms should never be open-ended
+    or infinite. Since each step of an algorithm takes a certain amount of time to
+    be completed, this would mean the algorithm would be completed in a finite amount
+    of time.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'An incorrect algorithm would be:
+
+
+    +   1. Start at an amount of 1
+
+    2. Add 1 to that amount
+
+    3. Go to step 2
+
+
+    The computer would then count 0, 1, 2, 3, 4, etc. forever.
+
+
+    For example, “Count from 1 to 10, then print a message that says, ‘I counted from
+    1-10,’ would be a correct algorithm because it contains a finite amount of steps.
+
+
+    # WELL-ORDERED
+
+
+    Well-ordered: listed out in the correct sequence and in an organized fashion.
+    Computers can only execute an algorithm if it is well-ordered. If it is put out
+    of sequence or no sequence is specified, etc., the computer cannot process the
+    algorithm.
+
+
+    For example, this is an incorrect algorithm because it is not well-ordered:
+
+
+    +   1. Close the program
+
+    2. Print “I am here” inside the program
+
+    3. Save your work in the program
+
+    4. Open the program
+
+
+    # EFFECTIVELY COMPUTABLE OPERATIONS
+
+
+    Effectively computable operations: refers to a command that can be processed successfully
+    by a computer. The phrase literally means an operation that can be computed in
+    an effective way.
+
+
+    In algorithms, all the parts of the algorithm must be possible to execute.
+
+
+    For example, a non-effectively computable operation could be: “multiply green
+    by ‘red’ – the computer can’t process this because it isn’t computable. Operations
+    contained in algorithms must be effectively computable, such as, “2 + 2 =”.
+
+
+    # UNAMBIGUOUS
+
+
+    Unambiguous: ambiguous means unclear, confusing, not specified. Un = not. Something
+    that is unambiguous means that it is clear and defined.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'In computers, your algorithms must be unambiguous. You have to be extremely
+    specific about each step/part of an algorithm or the algorithms cannot be processed
+    by the computer.
+
+
+    For example, if you have an algorithm that is processing a list of ten numbers,
+    then step of your algorithm is "delete the number," the computer cannot process
+    this because you did not clearly specify which number you wanted deleted.
+
+
+    Now that you know the above terms and concepts, we have the full definition of
+    "algorithm" as defined in the book Invitation to Computer Science by American
+    authors Schneider and Gersting:
+
+
+    > Algorithm: A well-ordered collection of unambiguous and effectively computable
+    operations when executed produces a result and halts in a finite amount of time.
+
+
+    Sorting means to put items in an exact sequence or order. Computers sort items
+    often. On your computer, you can sort files by when they were created, their name,
+    etc. Algorithms can be used by computers to organize data.
+
+
+    For example, you can sort files on your computer by name or date. This is done
+    by a sorting algorithm within the computer. There are several different ways algorithms
+    can be written to sort data.
+
+
+    In learning how to program, you would write algorithms to perform various functions.
+    Computers have many algorithms programmed into them already that cause them to
+    do a lot of the actions you use computers for. For example, your computer performs
+    many complicated steps to save a document on your computer. These steps are taken
+    care of because programmers entered in algorithms to handle it for you.
+
+
+    Whether or not you ever learn to write code, it is helpful to know the elements
+    that make up a program, which we will now cover.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# CHAPTER NINE
+
+    FIVE ELEMENTS OF A PROGRAM
+
+
+    There are five key elements to any computer program:
+
+
+    +   1. Entrance
+
+    2. Control/Branching (decision points within a program)
+
+    3. Variables (data stored in a program that can change)
+
+    4. Subprograms (programs within programs)
+
+    5. Exit
+
+
+    Let''s go over each of these in detail.
+
+
+    # ENTRANCE
+
+
+    A computer is a simple machine when you get down to it. It can only do one thing
+    at a time, and it performs a computer program''s instructions in the exact order
+    in which the computer programmer puts them. It can only execute (perform or run)
+    an instruction if it is directed to.
+
+
+    This means that any computer program has to have a clearly marked “first instruction.”
+    This is the first task that the computer will perform when the computer program
+    is started. From that point forward, each instruction in the program will direct
+    the computer what instruction to perform next after it performs the current instruction.
+
+
+    There are different ways to specify the entrance point, depending on which computer
+    programming language is being used, but every computer program has a defined entrance
+    point.
+
+
+    # CONTROL/BRANCHING
+
+
+    Computers are often used to automate actions that would otherwise be performed
+    by people. One of the most common things a person will be asked to do in performing
+    a job is to assess the condition of a thing and, based on the condition of that
+    thing, choose between two or more possible courses of action. In other words,
+    they will have to make a decision. An example would be the activity of a “teacher
+    grading a stack of papers”
+
+
+    +   1. Take the next student paper from the top of the stack.
+
+    2. Grade the paper.
+
+    3. Write the grade on the paper.
+
+    4. If the grade is 70% or higher, put the paper in a “Passed” stack.
+
+    5. If the grade is below 70%, put the paper in a “Failed” stack.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'You can see that there are two possible "paths" here. A path is a "possible
+    course of action arising from a decision." Think of it as what happens when you
+    come to a fork in the road. You have to decide on a course of action – which road
+    do you take? This is also called a branch.
+
+
+    All but the simplest computer programs will need to do the same thing. That is,
+    they will have to check the condition of a piece of data, and based on the condition
+    of that data, they will have to execute different sets of computer instructions.
+
+
+    In order to do this, the program will make use of special instructions called
+    "control" instructions. These are just instructions that tell the computer what
+    to look at in making a decision, and then tell the computer what to do for each
+    possible decision. The most fundamental control statement for a computer is "if."
+    It is used like this:
+
+
+    ```
+
+    IF [condition to check checked] THEN [branch of computer instructions to execute]
+
+    ```
+
+
+    Here, the "IF" is the control statement; the "THEN" is the branching instruction
+    that points to the path of the program to execute if the control statement is
+    true.
+
+
+    # VARIABLES
+
+
+    A variable is a piece of data that a computer program uses to keep track of values
+    that can change as the program is executed. This might be something like "the
+    grade of the student paper that was just graded" or "the color of paint to use
+    for the next car on the assembly line."
+
+
+    Variables are a vital part of any computer program because they make it so computer
+    program can be used for more than a single, predetermined set of values. You can
+    imagine if "the color of paint use for the next car on the "assembly line" was
+    only ever to be "blue," the computer program using that data wouldn''t be very
+    useful. It would make a lot more sense to make it so the computer program could
+    change that value for each car that was going to be painted.
+
+
+    When you are writing variables in a computer program, they are usually written
+    in a manner like this:
+
+
+    ```
+
+    [name of the variable] = [value of the variable]
+
+    ```
+
+
+    For example, you might have something like this:
+
+
+    ```
+
+    color = "red"
+
+    ```'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'Here, the variable is named “color,” and the value of that variable has been
+    set to “red.” In other words, the variable named “color” is now “equal” to the
+    word “red.”
+
+
+    Let’s look at the example of “a teacher grading a stack of papers.” Here, we could
+    have a variable called “Paper Grade” that changed each time the teacher graded
+    a paper. You could also have variables for the total number of questions on the
+    paper (“Total Questions”) for both the number of questions answered correctly
+    (“Correct Questions”) and for the grade of the paper.
+
+
+    The written description from above:
+
+
+    +   - Take the next student paper from the top of the “To Be Graded” stack.
+
+    - Grade the paper.
+
+    - Write the grade on the paper.
+
+    - If the grade is 70% or higher, put the paper in a “Passed” stack.
+
+    - If the grade is below 70%, put the paper in a “Failed” stack.
+
+
+    In computer language, the procedure might look something like this:
+
+
+    +   - Retrieve Next Paper
+
+    - Set Total Questions = [total questions in current Paper]
+
+    - Grade Paper
+
+    - Set Correct Questions = [number of questions answered correctly]
+
+    - Set Paper Grade = [Correct Questions/Total Questions]
+
+    - If (Paper Grade >= 70%) then Paper Status = “passed"
+
+    - (Paper Grade < 70%) then Paper Status = “failed”
+
+
+    This is a simple computer program.
+
+
+    As a note, the >= (greater-than sign followed by equal sign) is a symbol used
+    to show that a comparison should be made. Specifically, this “greater-than or
+    equal” symbol is an instruction to check whether the data on the left side of
+    the symbol is than or equal in amount or quantity to the data on the right side.
+    The answer to this comparison is an answer of “true” or “false.”
+
+
+    For example: 5 >= 4
+
+
+    This means “check whether 5 is greater than or equal to 4.” Since five is greater
+    than four, the answer is “true.”
+
+
+    Another example: 3 >= 6
+
+    This means “check whether 3 is greater than or equal to 6.” The answer is “false.”'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'As as a final example: 6 >= 6
+
+
+    This means "check whether 6 is greater than or equal to 6." The answer is "true."
+
+
+    The reverse (opposite) symbol of >= is <=, which checks for whether the data on
+    the left side of the symbol is lesser/fewer or equal to the data on the right
+    side.
+
+
+    Each time the computer runs the seven-step procedure listed earlier, it could
+    have different values for each of the variables in the program, depending on how
+    many questions the paper was being graded and how many of those questions the
+    student answered correctly.
+
+
+    For example, let''s say the paper has 100 questions, and the student answers 82
+    of them correctly. After the program is run, the result would be the following:
+
+
+    | Total Questions: 100 |
+
+    | Correct Questions: 82 |
+
+    | Paper Grade: 82% |
+
+    | Paper Status: Passed |
+
+
+    As another example, let''s say the paper has 50 questions, and the student answers
+    30 of them correctly. After the program is run, the result would be the following:
+
+
+    | Total Questions: 50 |
+
+    | Correct Questions: 30 |
+
+    | Paper Grade: 60% |
+
+    | Paper Status: Failed |
+
+
+    To clarify the need for variables: Let''s say that at the time this computer program
+    was being created, all papers at the school had 100 questions, and the teachers
+    told the programmer to make it so that the number of questions was always assumed
+    to be 100. In that case, the programmer wouldn''t use a variable called "Total
+    Questions."
+
+
+    Instead, she could make the program look like this:
+
+
+    +   1. Retrieve Next Paper
+
+    2. Grade Paper
+
+    3. Set Correct Questions = [number of questions answered correctly]
+
+    4. Set Paper Grade = [Correct Questions/100]
+
+    5. If (Paper Grade >= 70%) then Paper Status = "passed"
+
+    6. If (Paper Grade < 70%) then Paper Status = "failed"'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "Notice that line 4 of the program, the programmer set the number of questions\
+    \ to 100.\n\nNow, let's say that the school introduces the concept of “quizzes,”\
+    \ which are smaller papers with only 20 questions. If the paper being handled\
+    \ by the computer program is a quiz, the grade will no longer be accurate—even\
+    \ if a student gets all 20 questions correct, he/she would only get a grade of\
+    \ 20% (20/100).\n\nA good programmer will analyze the need that is meant to resolve,\
+    \ then build the program so that it can handle changing aspects of that need over\
+    \ time.\n\nAnother valuable control statement is a loop. This is where part of\
+    \ the program is executed over and over until a certain condition is met. In real-world\
+    \ terms, an example might be “grade papers one at a time until all the papers\
+    \ have been graded” or “make five copies of this document.”\n\nIn a computer program,\
+    \ a loop would look something like this:\n\n+   - start loop\n  - Perform action\n\
+    \  - If [end condition has been met] then [exit the loop]\n  - If [end condition\
+    \ has not been met] then [repeat the loop]\n  - end loop\n\nThe program we looked\
+    \ at that grades papers could be set up as a loop. The instructions would be laid\
+    \ out like this:\n\n+   - start loop\n  - Take the next student paper from the\
+    \ top of the “To Be Graded” stack.\n  - Grade the paper.\n  - Write the grade\
+    \ on the paper.\n  - If the grade is 70% or higher, put the paper in a \"Passed\"\
+    \ stack.\n  - If the grade is below 70%, put the paper in a \"Failed\" stack.\n\
+    \  - If there are no more papers in the “To Be Graded” stack, exit the loop.\n\
+    \  - If there are more papers in the “To Be Graded” stack, repeat the loop.\n\
+    \  - end loop\n\nOften loops make use of a special variable called a “counter.”\
+    \ The counter keeps track of how many times the loop has been executed. This can\
+    \ be used to make sure the loop is only executed when needed.\n\nLet’s add a counter\
+    \ to the grading program we’re looking at as well as two new variables: “Total\
+    \ Papers” will be used to hold the value “how many papers need to be graded,”\
+    \ while “Counter” will be used to hold the value “how many times the loop has\
+    \ been executed.”"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '+   1. Set Total Papers = [total papers to be graded]
+
+
+    +   2. Set Counter = 0
+
+
+    +   3. If (Counter < Total Papers):
+
+    a. Retrieve next Paper
+
+    b. Set Total Questions = [total questions in current Paper]
+
+    c. Grade paper
+
+    d. Set Correct Questions = [number of questions answered correctly]
+
+    e. Set Paper Grade = [Correct Questions/Total Questions]
+
+    f. If (Paper Grade >= 70%) then Paper Status = "passed"
+
+    g. If (Paper Grade < 70%) then Paper Status = "failed"
+
+    h. Counter = Counter + 1
+
+    g. Go to step 3
+
+
+    +   4. [Continue with the rest of the program]
+
+
+    Here, the loop is found in step 3.
+
+
+    Let''s break down what each step is doing here:
+
+
+    +   Step 1: Count how many papers are in the "to be graded" stack and set the
+    value of the "Total Papers" variable to that number.
+
+
+    +   Step 2: Create a variable called "Counter" and set it to the value zero. This
+    variable will be used to keep track of how many papers are graded.
+
+
+    +   Step 3: Use the control statement "if" to see if we should execute a loop.
+
+
+    +   Step 3a-3g: Grade the paper; this has been covered above.
+
+
+    +   Step 3h: Since we have now graded a paper, add one to our Counter variable.
+
+
+    +   Step 3i: Go to the top of the loop, where we check to see if we need to execute
+    the loop over again.
+
+
+    Let''s see what would happen if we used this program to grade two papers.
+
+    Let''s say that the papers look like this:
+
+
+    Paper 1:
+
+    Total questions on the paper: 100
+
+    Total questions that were answered correctly: 95'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Paper 2:
+
+    Total questions on the paper: 20
+
+    Total questions that were answered correctly: 10
+
+
+    If we analyze what happens when the program is executed by the computer, it would
+    look like this:
+
+
+    +   Total Papers = 2
+
+    Counter = 0
+
+    0 is less than 2, so loop will be executed
+
+    Paper 1 Retrieved
+
+    Total Questions = 100
+
+    Paper 1 Graded
+
+    Correct Questions = 95
+
+    Paper Grade = 95%
+
+    Paper Status = "passed"
+
+    Counter = 1
+
+    1 is less than 2, so loop will be executed
+
+    Paper 2 Retrieved
+
+    Total Questions = 20
+
+    Paper 1 Graded
+
+    Correct Questions = 10
+
+    Paper Grade = 50%
+
+    Paper Status = "failed"
+
+    Counter = 2
+
+    2 is not less than 2, so loop will not be executed
+
+    [Continue on with the rest of the program]
+
+
+    # SUBPROGRAMS
+
+
+    As earlier, computer programs are generally executed in order, from the start
+    point to the end point. This is called the "path of execution."
+
+
+    The main series of instructions in a program is called the "main program."
+
+
+    It is sometimes valuable to create another program that can be used by the main
+    program as needed. This is called a subprogram. It is different from any other
+    program – it is made up of the same elements (entrance point, variables, control
+    and branching statements, and exit point). However, a subprogram isn''t used by
+    itself. Instead, the main program can execute the subprogram as needed. Here,
+    the main program stops executing, and the subprogram starts executing. When the
+    subprogram is done executing, the main program continues on where it left off.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'This is referred to as “calling” the subprogram – that is, the main program
+    calls the subprogram, the subprogram starts and stops, and the main program continues
+    where it left off before calling the subprogram.
+
+
+    This is useful in creating programs because the computer programmer doesn''t have
+    to enter the instructions of the subprogram over and over. You only type them
+    in once, and then when you need that subprogram to be called by the main program,
+    you only have to type in one instruction – the instruction to call the subprogram.
+    This lets you reuse the instructions you entered in for the subprogram rather
+    than rewriting them.
+
+
+    # EXIT
+
+
+    Every program must have an instruction that tells the computer that the program
+    is no longer running. Much like the Entrance, the exact instruction for this varies
+    based on the computer language used, but all computer languages will have this
+    type of instruction.
+
+
+    # SUMMARY
+
+
+    The fundamental elements of any computer program are:
+
+
+    +   1) An entrance point – the first instruction to be performed.
+
+
+    +   2) Control and branching statements – to control what is done and in what
+    order.
+
+
+    +   3) Variables – changeable items, held in computer memory, for the program
+    to use as it operates.
+
+
+    +   4) Subprograms – repeatable sets of computer instructions that act as mini-programs.
+    The main program can use them as needed.
+
+
+    +   5) An exit point – the last instruction to be completed, so the computer knows
+    the program isn''t operating anymore.
+
+
+    Next we will go over Python terms you''ll run across while coding.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# # CHAPTER TEN
+
+    PYTON-SPECIFIC DEFINITIONS
+
+
+    Now that we''ve covered some of the fundamentals of programming, regardless of
+    language, you will now learn some of the terminology associated with Python. It
+    is important that you read this (and all other chapters) in full before writing
+    code in Python because we will use these terms later in this book.
+
+
+    # ## ITERATION
+
+
+    To iterate means to say or do something again; to repeat something. Iteration
+    is the act of repeating. Iteration means to go through a defined series of actions,
+    repeating a certain number of times. Usually, this defined series of actions is
+    repeated a certain number of times or until a condition is met.
+
+
+    In this diagram of a basic loop, an iteration would consist of one time through
+    the loop (whether to completion or repeat):
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_38_0.png)
+
+
+    Computer programs are usually created in iterations: Coming up with a basic working
+    version, reviewing the program for mistakes to correct and improvements to make,
+    doing that work, and repeating. This can be continued indefinitely.
+
+
+    # ## SYNTAX
+
+
+    Every spoken language has a general set of rules for how words and sentences should
+    be structured. These rules are known as the syntax of that particular language.
+    In the programming languages, syntax serves the same purpose. Syntax is the rules
+    you must follow when talking to a computer and'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: 'telling it what to do. There are many languages you can use to program a computer.
+    Each language has its own syntax. Failing to use the syntax of a particular language
+    correctly can mean whatever you are designing not work at all.
+
+
+    Syntax is the arrangement of words and phrases to create well-formed sentences
+    in a language. In computer science, it is the language that allows the user to
+    write out the program and the rules about how to write code properly.
+
+
+    # PARSING
+
+
+    “Parse” means to break something up into its parts and analyze it.” Here is an
+    example of parsing a phone number:
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_39_0.png)
+
+
+    In computing, it means that the program code is analyzed and read.
+
+
+    If you write code for a website, the web server parses the code, then outputs
+    the correct code to the browser.
+
+
+    Parsing can also refer to breaking up ordinary text. For example, search engines
+    typically parse search phrases entered by users so that they can more accurately
+    search for each word.
+
+
+    A parser breaks code into parts and analyzes it. It''s a tool that examines program
+    instructions while still in high-level language and analyzes their syntactic structure.
+    Parsers receive instructions and break them into parts, routing each part to the
+    correct part of the compiler/interpreter for handling. Parsers also look over
+    information received to ensure it is complete and no vital components are missing.
+
+
+    If the parser finds a syntactic error, it will report back an error message.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# IDLE
+
+
+    IDLE is an integrated development environment (IDE) for Python. Whereas most IDEs
+    can be used to write programs in several different computer languages, IDLE is
+    only used to write programs in Python.
+
+
+    IDLE stands for "Integrated Development Environment" or "Integrated Development
+    and Learning Environment".
+
+
+    Since Guido van Rossum named Python in honor of the British comedy Monty Python,
+    the name IDLE was probably chosen partly to honor Eric Idle, one of Monty Python''s
+    founding members.
+
+
+    IDLE is intended to be a simple development environment suitable for beginners,
+    especially in an educational setting.
+
+
+    # OPERATING SYSTEM
+
+
+    An operating system is a special-purpose (made for exact applications and reasons)
+    computer program that supports the computer''s basic functions, such as scheduling
+    tasks, running other computer programs, and controlling peripherals (external
+    devices such as keyboards, mice and displays).
+
+
+    Most computer programs will require that an operating system already installed
+    on a computer before they can function on that computer.
+
+
+    As we covered earlier, "Install" means to put something inside a computer that
+    the computer can use. This often applies to computer programs. You would obtain
+    the program and move it onto the computer via a connection of some sort. You would
+    then have that program on the computer and could use it when you wanted.
+
+
+    Installing also applies to hardware. You could, for instance, install a new storage
+    device in your computer that could hold more electronic information.
+
+
+    Nearly all computers available come today with an operating system already installed
+    when they are purchased. Computer manufacturers install the operating system before
+    they sell a computer.
+
+
+    Some operating systems are free and others require payment.
+
+
+    One of the most well-known and popular operating systems in the world is called
+    Windows. It is created and sold by Microsoft.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# SHELL
+
+
+    The term ''shell'' in computing – being the outer layer between the user and the
+    operating system – means the same thing(s) as shell does in normal English. It
+    is a program that gives an interface for the user to use in order to issue commands
+    to the operating system.
+
+
+    Code is often written in a shell.
+
+
+    In Python, the Shell and IDLE look like this:
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_41_0.png)
+
+
+    Python also includes a text editor that looks like this:'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# FILE PATHS
+
+
+    The route to a file is called a "file path". The "file path" is the address of
+    a file and specifies the exact location of a file. It provides a "path" to the
+    file.
+
+
+    File paths say things like, "You can find the file named ''Winter'' inside the
+    folder named ''Poems'', which is inside the C drive." A drive is simply a location
+    where data is stored. The C drive is where most files and software are stored
+    on a computer.
+
+
+    The various components of a path are separated by a text character that is unlikely
+    to be used in the name of a directory or a file. Usually this character is a slash
+
+
+    In a file path, backslashes are used to show that one item is below another (in
+    terms of hierarchy).
+
+
+    A hierarchy refers to arranging things according to rank or status. It refers
+    to arranging items according to their relative importance or characteristics.
+    Storage'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'hierarchy refers to a system where various data storage devices are given a
+    hierarchical ranking as far as how they are used. The primary factor influencing
+    a given device''s ranking is its response time – how long the device takes to
+    return a requested data when the computer requests the data. Faster response times
+    are ranked higher.
+
+
+    In a file path, the one on the left is “above” the one on the right. If we take
+    our earlier example, the file path would be written as:
+
+
+    ```
+
+    C:\Poems\Winter
+
+    ```
+
+
+    To prepare for the next assignment, download an image of your choosing (ensure
+    to save it in your Downloads folder).
+
+
+    Written documents, pictures and videos are examples of different types of file
+    formats. The data in these files is organized in a specific way, usually based
+    on how the data will be used by various processes does.
+
+
+    For example, the data in a file that is a written document will be organized in
+    a very different way than the data in a file that is a video.
+
+
+    A common format is “PDF”. This stands for “Portable Document Format”. This is
+    a file developed by the software company Adobe in the 1990s. This file format
+    was developed to ensure consistent display of files regardless of what computer
+    they’re being displayed on.
+
+
+    File formats are indicated by their extension. The extension is a code that states
+    what the file format is (text, image, video, etc.). Extensions are tacked on at
+    the end of the file''s name.
+
+
+    Let’s say you have a file titled “Contract” and it’s stored as a PDF; the file
+    would be named “Contract.pdf” – .pdf is the extension.
+
+
+    Another common file format and extension is “.txt” (short for “text file”). This
+    is a file type that is pure, unformatted (no special design; plain) text. If you’ve
+    used Notepad, it saves and runs .txt files.
+
+
+    # TAR
+
+
+    Tar is a type of file format, as well as the name of a program used to handle
+    such files. The name comes from the two words “tape archive.”
+
+
+    Tar is now commonly used to collect many files into one larger file for distribution
+    or archiving while preserving file system information such as user and group permissions,
+    dates, and directory structures.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'In order to reduce storage requirements, used tar files can be compressed.
+    The most common program used to compress tar files is a compression program called
+    gzip. Tar files that have been compressed by the gzip program have the file extension
+    "tar.gz." In order to access the tar file, the gzip program must be used to decompress
+    the tar file. There are other decompression programs available that are capable
+    of decompressing .gz files as well.
+
+
+    # OPERATORS
+
+
+    In mathematics, an operator is a symbol used to carry out a computation (that
+    act of figuring out the amount of something using math). There are several different
+    kinds of operators. Arithmetic operators, such as:
+
+
+    +   + (add),
+
+    - (subtract),
+
+    - (divide), and
+
+    * (multiply)
+
+
+    are used to perform math operations.
+
+
+    # ARRAYS
+
+
+    An array is a collection of data, arranged so that each piece of data in the collection
+    can be individually identified. In computers, an array is a group of related things
+    that are stored together in a sequence. It is a ways things can be organized in
+    a computer in a logical way. Arrays can be quite simple, or quite complex.
+
+
+    A simple array would be something like the numbers 7, 3 and 15. It would be written
+    out like this:
+
+
+    ```
+
+    [7, 3, 15]
+
+    ```
+
+
+    These three pieces of data are called elements - they are the elements of the
+    array.
+
+
+    A system is needed for identifying each element of an array. This is done by labeling
+    each position in the array. The simplest method for this is to start numbering
+    them at zero, starting at the left position and counting up from there.
+
+
+    It is important to understand that the index only tells the position of the element
+    in the array, and not the value of the element at that position.
+
+
+    In the above example, the element with a value of "7" would be at position 0,
+    the element with a value of "3" would be at position 1, and the element with a
+    value of "15" would be at position 2.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'Another word for the position of an element is the "index" of the element -
+    for the above example of an array, the element at index 0 has a value of "7,"
+    the element at index 1 has a value of "3," etc.
+
+
+    Each element, therefore, has two properties: its index and its value.
+
+
+    As another example, let''s say you have three pictures of your cat, and could
+    save them in an array: CatPic1, CatPic 2, and CatPic 3. Here, the element at index
+    1 has a value of "CatPic2."
+
+
+    # MEMORY
+
+
+    Memory is a physical device used to store information on a computer. It is recorded
+    electronic data that can be accessed in the future. A memory device could be thought
+    of as a collection of boxes called "memory locations." A memory location has two
+    aspects: a unique identifier, called an "address," and the actual data stored
+    in that location.
+
+
+    # IDENTIFIERS
+
+
+    The names of variables are called identifiers.
+
+
+    A variable could have an identifier of "age," have a value of "27" and be stored
+    at memory location 1000.
+
+
+    When you create computer programs, you will often make use of variables. This
+    involves two actions:
+
+
+    +   1. Designating a particular memory location and an associated identifier.
+    This is called "declaring" the variable.
+
+    2. Setting the value of the data to be stored in the memory locations. This is
+    called "assigning" the value to the variable.
+
+
+    A data type is a distinct type of data used by a computer. There are several data
+    types. A data type includes the type of information represented by the data as
+    well as the behavior of the data. This information tells the computer what kind
+    of information it is working with and what things it can do with information.
+
+
+    An integer is a data type that represents whole numbers (numbers that don''t have
+    any fractions). This could be like 5, -8, 1024, etc. The number 4.5 would not
+    be an integer because it includes a fraction of a number in its value. The behavior
+    of this data type includes mathematical operations like addition, subtraction,
+    etc.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'An integer variable would be declared and assigned like this:
+
+
+    integer [variable name] = [whole number]
+
+
+    For example, you could have a computer keep track of the number of students in
+    a class using a variable called "classSize." You could set it to 25 like this:
+
+
+    integer classSize = 25
+
+
+    # STRINGS
+
+
+    A string is a data type that represents text – that is, letters, numbers, and
+    other symbols. The behavior of this data type includes things you would do with
+    text – add on more symbols, convert the text to uppercase.
+
+
+    A string variable would be declared and assigned like this:
+
+
+    Alphanumeric means "made up of letters and numbers."
+
+
+    As an example of a string, you could have a computer keep track of the name of
+    a student using a string variable called "studentName." You could set it to "Jane
+    Smith" like this:
+
+
+    string studentName = "Jane Smith"
+
+
+    # CONCATENATING A STRING
+
+
+    Concatenate means to connect items together, like links in a chain. It means to
+    take one piece of data and stick it on the end of another piece of data. For example,
+    concatenating the string "dev" and the string "ices" makes the string "devices."
+
+
+    # EXPRESSIONS
+
+
+    Expressions are numbers and symbols and operators grouped together that show the
+    amount of something. An expression is a written math problem.
+
+
+    In coding, an expression is a combination of values that are computed by the computer.
+    There are different ways to write out expressions, depending on which language
+    you are programming in.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'For example:
+
+
+    Name = “Whatever the user types within the name box could be an expression. “x
+    + 5” is also an expression.
+
+
+    # CALLING
+
+
+    To “call” means to demand or direct something. In normal English, this could be
+    used like, “This calls for celebration!” In computers, a call is a direction by
+    a main computer program to execute the tasks of a subroutine. More specifically,
+    a “call” is when a program temporarily transfers control of the computer to a
+    subroutine. Once the subprogram is done executing, control of the computer is
+    returned to the main program. A program could make many “calls” to multiple subprograms
+    as the program does its sequence of tasks.
+
+
+    For example, if you were using a video game program, the video game program could
+    call the “high score” subprogram after every game ended to make the words “High
+    Score” pop up on the screen.
+
+
+    # FUNCTIONS
+
+
+    A function is a repeatable block of code that executes certain actions and performs
+    tasks. You execute a function by calling it. This is also called “invoking” the
+    function.
+
+
+    “Invoke” literally means to request or ask for something. In coding, it is to
+    cause something to be carried out (performed).
+
+
+    There are other words in technology for this concept: method, subroutine, subprogram,
+    procedure, routine.
+
+
+    # STATEMENTS
+
+
+    Statements are computer instructions. These are the instructions that are used
+    by people as they create computer programs. The simplest of these might be like
+    “print,” “delete,” “add,” “multiply,” etc.
+
+
+    For example, in Python the ‘print’ statement tells your computer to print whatever
+    text you typed as part of the command.
+
+
+    # PARAMETERS
+
+
+    As a reminder, sometimes the subprogram needs some information from the main program
+    in order to perform its tasks. When the subprogram is created, its description
+    might include this information. That information is called the “parameters” of
+    the subprogram.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'Often, the subprogram will do its work and then provide the main program with
+    some information derived from its work. That is called returning information to
+    the main program.
+
+
+    For example, you might have a subprogram that adds two numbers. It could look
+    like this:
+
+
+    ```
+
+    subprogram AddTwo(x, y)
+
+    { return x + y }
+
+    ```
+
+
+    Here, the name of the subprogram is “AddTwo.” The parameters of the subprogram
+    are two numbers called x and y. The subprogram will return the sum of those two
+    numbers.
+
+
+    The creation of a subprogram, as shown above, is called “defining” the subprogram.
+    The above is an example of a subprogram definition.
+
+
+    Let''s look at how that would be used in a main program. Say you had a school
+    with two Physical Education classes per day, and you wanted to have the program
+    calculate the total number of students in those classes. You could make a main
+    program that we made use of “AddTwo” subprogram. It might look like this:
+
+
+    ```
+
+    classSizePE1 = 25
+
+    classSizePE2 = 43
+
+    totalSize = AddTwo(classSizePE1, classSizePE2)
+
+    print("The total number of students in the PE classes is: " + totalSupply)
+
+    ```
+
+
+    Let''s look at this program one line at a time:
+
+
+    Line 1: The main program created a variable called “classSizePE1” and gave it
+    a value of 25.
+
+
+    Line 2: The main program created a variable called “classSizePE2” and gave it
+    a value of 43.
+
+
+    Line 3: There are five things happening here:
+
+
+    First, the main program created a variable called “totalSize.”
+
+
+    Second, the main program called the subprogram “AddTwo.” That subprogram was given
+    the values 25 and 43 since those are the values of the variables “classSizePE1”
+    and “classSizePE2.”
+
+
+    Third, the subprogram “AddTwo” performed its work, taking the values 25 and 43
+    and adding them together to create the value 68.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'Fourth, the subprogram returns that value to the main program.
+
+
+    Fifth, the main program gave that value to the variable "totalSize".
+
+
+    Line 4: The main program then continued running. Here, the program used the value
+    of the variable totalSize to display this text on the screen:
+
+
+    The total number of students in the PE classes is: 68
+
+
+    This brings us to the concept of arguments. Arguments are the actual data passed
+    to a subprogram when it is called. In the above example, the arguments are the
+    25 and 43.
+
+
+    This comes from mathematics. In mathematics, there are formulas. These are exact
+    math operations that are done in an exact order. Typically, these math formulas
+    need to be given some initial values to start processing the math steps. Those
+    initial values are called arguments.
+
+
+    A subprogram doesn''t necessarily need any arguments. Some subprograms may take
+    one argument; some may take more than one.
+
+
+    To clarify: when a subprogram is defined, any data items it will need be called
+    parameters. When the subprogram is actually used, the actual data passed to it
+    at that time are called arguments.
+
+
+    We are really close to writing code! In the next chapter, we will cover some quick
+    tips that will help you get through this book.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# CHAPTER ELEVEN
+
+    CODING TIPS
+
+
+    If you run into any trouble while going through this book, here are some tips:
+
+
+    +   1) Ensure you understand all the words and terms being used – clear up any
+    you don''t understand.
+
+
+    +   2) Ensure your code is written exactly as laid out here. A small error in
+    the code, such as a missing comma, can ruin the whole program. Code must be exact
+    for programs to run properly, so always meticulously check your code for errors.
+
+
+    +   3) Research online for solutions.
+
+
+    +   4) You can also contact The Tech Academy and ask for assistance – learncodinganywhere.com
+
+
+    Well done on making it through these beginning chapters! Now we are going to start
+    coding!
+
+
+    # INSTALLATION
+
+
+    Now that you have the necessary knowledge base in place, we will write some code!
+    As the first step, install Python:
+
+
+    +   1. Go to this link: python.org/downloads/
+
+
+    +   2. Locate the most recent version of Python 3.
+
+
+    +   3. Download and install the newest version of Python 3.
+
+
+    As a note, there are two primary versions of Python: 2 and 3. They''re very similar
+    to one another, but Python 3 is the latest and most developed version. It is the
+    industry standard.
+
+
+    If you run into any difficulty downloading and installing Python on your PC or
+    Mac, research online for solutions.
+
+
+    Now that Python is downloaded and installed, we can start writing code!'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# CHAPTER TWELVE
+
+    WRITING PYTHON CODE
+
+
+    To get started, open up IDLE. There are several ways to do so, depending on
+
+    your machine. One way is to search your computer for IDLE and then run it.
+
+
+    Once IDLE is open, write this code:
+
+
+    ```
+
+    >>> print (''Hello world'')
+
+    ```
+
+
+    and press enter.
+
+
+    Notice that "Hello world" is now printed. This is called returning a value. The
+
+    value that has been returned, in this case, is the string "Hello world.".
+
+
+    The three angle brackets (>>>) indicate where to type commands in IDLE.
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> print(Hello world)
+
+    ```
+
+
+    (without using quotation marks) and press enter.
+
+
+    Notice that there is an error. Quotation marks tell the computer that you are
+
+    entering a string. Without the quotation marks, the computer is looking for a
+
+    variable or built-in command that doesn''t exist.
+
+
+    # VARIABLES
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> J = 50
+
+    ```
+
+
+    and press enter. You have just created a variable by assigning the value 50 to
+
+    the variable J.
+
+
+    There are certain words you can''t use as variables. These are called reserved
+
+    words or keywords. Examples of keywords are: "True" and "False" – which are used
+
+    in Python to show the result of a comparison. For example, a comparison that
+
+    checks "is 4 bigger than 2?" would result in True.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'The reason you cannot use reserved words (keywords) is that they already mean
+    something else – they are reserved for Python. If you''re interested, here is
+    a link to a list of the reserved words (keywords) in Python:
+
+
+    w3schools.com/python/python_ref keywords.asp
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> print(J)
+
+    ```
+
+
+    and press enter.
+
+
+    Notice that the value 50 is returned. In this case, you didn''t need to include
+    the quotation marks because you were printing a variable that has been defined.
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> print(j)
+
+    ```
+
+
+    ```
+
+    (lowercase j)
+
+    ```
+
+
+    Notice that we get an error. This is because Python is case-sensitive. Case-sensitive
+    means that it matters whether your code is capitalized or lowercase.. Your code
+    must match what you wrote originally, or must match the Python documentation (the
+    official Python instructions that include all rules, syntax, procedures, etc.).
+
+
+    Your original variable was a capital J, not a lowercase J. Therefore, by attempting
+    to print the variable without the correct capitalization, we get an error.
+
+
+    As a further example of the case sensitivity of Python, write this code in IDLE:
+
+
+    ```
+
+    >>> Print("Hello there!")
+
+    ```
+
+
+    (capital P) and press enter. We get another error. This is because the print command
+    is supposed to be lower-case.
+
+
+    # MATH
+
+
+    We can add numbers in Python. Write this code in IDLE:
+
+
+    ```
+
+    >>> 1 + 1
+
+    ```'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'and press enter. The value returned is 2.
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> K = 5
+
+    >>> print (J+K)
+
+    ```
+
+
+    and press enter. Notice the value returned is 55. That is because J (50) + K is
+    55.
+
+
+    We can subtract numbers in Python too. Write this code in IDLE:
+
+
+    ```
+
+    >>> 2 - 1
+
+    ```
+
+
+    and press enter. The value returned is 1.
+
+
+    ```
+
+    >>> print (J - K)
+
+    ```
+
+
+    and press enter. Notice that the value returned is 45.
+
+
+    We can even multiply numbers in Python. Write this code in IDLE:
+
+
+    ```
+
+    >>> 4 * 5
+
+    ```
+
+
+    and press enter. The value returned is 20.
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> print (J * K)
+
+    ```
+
+
+    and press enter. Notice that the value returned is 250.
+
+
+    We can also divide numbers in Python. Write this code in IDLE:
+
+
+    ```
+
+    >>> 100 / 5
+
+    ```
+
+
+    and press enter. The value returned is 20. Now write this code in IDLE:
+
+
+    ```
+
+    >>> print (J / K)
+
+    ```
+
+
+    and press enter. The value returned is 10.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# CHAPTER THIRTEEN
+
+    DATA TYPES
+
+
+    It''s time to get mathematical!
+
+
+    Factors are numbers that can multiply together to get another number. For example,
+    4 and 5 are factors of 20 because $4 \times 5=20$
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_54_0.png)
+
+
+    Superscripts are smaller characters typically displayed toward the upper right
+    of another number - like this: $4^{12}$
+
+
+    Superscripts usually indicate "power." Power refers to how many times a number
+    is multiplied by itself. For example, $10^4$ means 10 to the fourth power – which
+    is 10,000 (10 multiplied by 10 multiplied by 10 multiplied by 10).
+
+
+    A notation is a symbol or symbols used to represent numbers or amounts – such
+    as an E placed at the end of a number. This notation means "10 to a given exponent."
+    An "exponent" is the power to which a number is multiplied. In the $10^4$ example
+    given above, 4 is the exponent.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_54_1.png)
+
+
+    A floating point is a specific way of representing large numbers. Instead of writing
+    out the entire number, you can write the first part of it and then a factor to
+    multiply it by. This makes so that by performing the multiplication, you get essentially
+    the same number you would have by writing it out in full. When you do this, you
+    move the decimal point in the number; hence the name "floating point."'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: 'For example, take it would be the number three thousand, four hundred twenty-five.
+    Written normally, it is 3425 – written in floating point notation, it could be:
+    3.425 x $10^3$. Since $10^3$ is 1000, this means "3425 times 1000" or 3425.
+
+
+    A "float" is a type of data used by computers. The "float" type is used to store
+    numbers with a very high degree of accuracy. It is primarily used for mathematical
+    purposes.
+
+
+    Let''s say we went a shorter way to write 100,000. We could write 10E 4
+
+
+    10E 4 means $10^4$ (10 multiplied by four times).
+
+
+    A character is a written symbol, such as a letter or number.
+
+
+    # PYTHON DATA TYPES
+
+
+    The most common types of data in Python are:
+
+
+    +   1) String (A sequence of characters surrounded by quotation marks)
+
+    2) Float (A number with a decimal point)
+
+    3) Boolean (A value that can be either True or False)
+
+    4) Integer (Int – a whole number)
+
+
+    Create a string variable by writing this code in IDLE:
+
+
+    ```
+
+    >>> A = "Odysseus is traveling"
+
+    >>> A
+
+    ```
+
+
+    and press enter. "A" (the variable) returns the string.
+
+
+    For the most part, a quotation mark ("") and an apostrophe (\''\'') are interchangeable
+    in Python 3.
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> B = ''Betty is excited''
+
+    >>> B
+
+    ```
+
+
+    and press enter. Notice that we didn''t include spaces in between the and the
+    rest of the text. That''s because there is such a concept as whitespace sensitivity.
+    White space is literally spaces. For example, there are five spaces (whitespace)
+    between the words Apple and Orange here: Apple Orange'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'Whitespace sensitivity refers to a programming language feature where the number
+    of spaces in your code matters. In most instances, Python is not whitespace sensitive.
+    To prove this point, write this code in IDLE:
+
+
+    ```
+
+    >>> C = ''Kitty is hungry''
+
+    >>> C
+
+    ```
+
+
+    and press enter. It worked!
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> D = ''Doggy is thirsty''
+
+    >>> D
+
+    ```
+
+
+    and press enter. It didn''t work! The spaces before our code caused an error.
+    This is because Python uses indentation. You can indent by pressing the Tab key.
+
+
+    # TAB KEY
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_56_0.png)
+
+
+    In order to describe the TAB key, you must first understand what a "spreadsheet"
+    and a "table" are. A spreadsheet is a visual grid structure that allows you to
+    organize, modify and analyze data. The data is stored in individual containers
+    called cells. These cells are organized into rows and columns (each rectangle
+    in this picture is a cell):
+
+
+    | | | | | | |
+
+    |---|---|---|---|---||
+
+    | | Rows | | | | |
+
+    | | | | | | |
+
+    | Columns | | | | | |
+
+    | | | | | | |
+
+    | | | | | | |
+
+    | | | | | | |'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'Here is a spreadsheet:
+
+
+    | | A | B | C | D |
+
+    |---|---|---|---|---||
+
+    | 1 | Country | Sales | | | |
+
+    | 2 | United States | 7583 | | | |
+
+    | 3 | United Kingdom | 4359 | | | |
+
+    | 4 | France | 45995 | | | |
+
+    | 5 | Germany | 3933 | | | |
+
+    | 6 | Spain | 8738 | | | |
+
+    | 7 | Italy | 5239 | | | |
+
+    | 8 | Greece | 38282 | | | |
+
+    | 9 | | | | | |
+
+    | 10 | | | | | |
+
+
+    A set of rows and columns is called a table. In a more general sense, a table
+    is information stored in a grid (lines that cross each other to form a series
+    of squares and rectangles).
+
+
+    The "tab" in Tab key is short for "tabular" or "tabulator". "Tabular" means "or
+    related to a table", and it refers to data presented in columns or a table. A
+    "tabulator" is a person or thing that arranges data in columns or tables, and
+    then works with that data.
+
+
+    Even before the development of computers, spreadsheets were used to organize and
+    work with data in table form; people used printed grids on paper.
+
+
+    Spreadsheets are used in some of the most popular programs on computers; instead
+    of the grids being drawn on paper, they are displayed on a screen.
+
+
+    The TAB key moves the cursor (flashing bar on screen that indicates where to type)
+    – usually this is set to eight spaces. When you write a document and press the
+    tab key, you indent your text (meaning, you move the text over around 8 spaces).
+    Python requires specific indentations at the beginning of some lines of code,
+    which you will learn more about later in this book. This is mentioned here to
+    explain why whitespace (spaces) at the beginning of your code causes errors.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'To create a float variable, write this code in IDLE:
+
+
+    ```
+
+    >>> E = 10.75
+
+    >>> E
+
+    ```
+
+
+    and press enter. "E" (the variable) returns the float.
+
+
+    # BOOLEAN
+
+
+    "Logic" refers to actions, behavior and thinking that makes sense. When speaking
+    about computers, logic is the rules that form the foundation for a computer in
+    performing certain tasks. Computer logic is the guidelines the computer uses when
+    making decisions.
+
+
+    Logical operators like "and," "or," and "not" are used to evaluate whether an
+    expression is true or false.
+
+
+    George Boole was an English mathematician who developed Boolean logic. "Boolean
+    logic" is a form of logic in which the only possible results of a decision are
+    "true" and "false". There aren''t any vague or "almost" answers to a calculation
+    or decision – black or white, no gray.
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_58_0.png)
+
+
+    An example of Boolean logic would be answering questions with only "yes" or "no".
+
+
+    Boolean logic is especially important for the construction and operation of digital
+    computers because it is relatively easy to create a machine where the result of
+    an operation is either "true" or "false".
+
+
+    This is done by comparing two or more items – items that can only be "true" or
+    "false".
+
+
+    Some common examples of such Boolean comparisons are "AND" and "OR".'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: 'With the Boolean comparison called "AND", the comparison is true only if all
+    the involved comparisons are true.
+
+
+    Let''s look at some examples to show how this works:
+
+
+    In the following AND comparison, the result is true:
+
+
+    5 is more than 3 AND 10 is more than 5
+
+
+    Let''s break it down.
+
+
+    There are three comparisons happening here:
+
+
+    +   Comparing 5 and 3 to see if 5 is larger than 3 (is 5 larger than 3)?
+
+
+    +   Comparing 10 and 5 to see if 10 is larger than 5 (is 10 larger than 5)?
+
+
+    +   Comparing the results of those two comparisons, using the Boolean comparison
+    "AND" (are both comparisons true?)
+
+
+    This is the overall comparison.
+
+
+    It is true that 5 is greater than 3, so the first comparison is true.
+
+
+    It is also true that 10 is greater than 5 – so the second comparison is true as
+    well.
+
+
+    A Boolean AND comparison is true if the other comparisons are all true – so in
+    this example, the overall comparison is true, since the first comparison is true
+    and the second comparison is true.
+
+
+    In this next example, the result is false (not true):
+
+
+    5 is more than 7 AND 10 is more than 5
+
+
+    Even though 10 is more than 5, 5 is not more than 7 – so the overall comparison
+    is not true.
+
+
+    A "condition" is an item that must be true before something else occurs. In the
+    AND comparison above, these are the two conditions checked for:
+
+
+    +   5 is more than 7
+
+
+    +   10 is more than 5
+
+
+    They’re conditions because the outcome is conditional upon (dependant on)'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'these two comparisons.
+
+
+    A Boolean OR comparison checks for whether one or both conditions are true. Here
+    is an example:
+
+
+    4 is less than 9 OR 8 is less than 7
+
+
+    The result would be true because at least one of the comparisons is true (4 is
+    a smaller number than 9).
+
+
+    In the following example, the result would be false since neither is true:
+
+
+    8 is less than 4 OR 9 is less than 3
+
+
+    And in this example, the result would be true because one or both (in this case
+    both) are true:
+
+
+    7 is less than 8 OR 2 is less than 5
+
+
+    As a reminder, in writing instructions for a computer, we would use the greater
+    and lesser symbols (> and < respectively). For example: 7 > 3 means “seven greater
+    than three,” and 4 < 9 means “four is less than nine”.
+
+
+    So, for example, instead of 10 is greater than 2, we would write:
+
+
+    ```
+
+    10 > 2
+
+    ```
+
+
+    And, again, if we wanted to say “greater than or equal to”, we could use the symbol
+    >=.
+
+
+    For example:
+
+
+    ```
+
+    10 >= 8
+
+    ```
+
+
+    This would be true.
+
+
+    Like virtually all other programming languages, the Boolean values in Python are
+    true and false.
+
+
+    To utilize Boolean logic, write this code in IDLE:
+
+
+    ```
+
+    >>> E = 10
+
+    >>> E is 10
+
+    ```
+
+
+    and press enter. As you can see, True is returned.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'Now write this in IDLE:
+
+
+    ```
+
+    >>> E is 25
+
+    ```
+
+
+    and press enter. As you can see, False is returned.
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> E is not 50
+
+    ```
+
+
+    and press enter. As you can see, True is returned.
+
+
+    We can utilize the greater than symbol (>) in Python. Write this code in IDLE:
+
+
+    ```
+
+    >>> 25 > 10
+
+    ```
+
+
+    and press enter. We are stating that 25 is more than 10, which is True.
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> 10 > 25
+
+    ```
+
+
+    and press enter. We are stating that 10 is more than 25. This is False.
+
+
+    The symbol "<" means “less than.”
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> 25 < 10
+
+    ```
+
+
+    and press enter. We are stating that 25 is less than 10, which is False.
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> 10 < 25
+
+    ```
+
+
+    and press enter. We are stating that 10 is less than 25, which is True.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# DOUBLE EQUAL SIGNS
+
+
+    == (double equal sign) is a symbol used to show that a comparison should be made.
+    Specifically, this "==" symbol is an instruction to check whether the data on
+    the left side of the symbol is equal to the data on the right side. The answer
+    to this comparison is an answer of "true" or "false".
+
+
+    When the "==" symbol is used to check for equality, usually it is used like this:
+    [first item to be compared] == [second item to be compared]
+
+
+    For example: (10 + 5) == 15
+
+
+    In this example, we are asking the computer to check whether result of adding
+    5 and 10 is equal to 15.
+
+
+    When the "==" symbol is used in this manner, we are asking the computer to give
+    a response after checking for equality. Usually, this result is given in a "true"
+    or "false" manner. Here, the response would be "true," since (10 + 5) is equal
+    to 15.
+
+
+    Another example: (10 + 6) == 15
+
+
+    Here, the computer would respond with "false," since (10 + 6) is not equal to
+    15.
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> 10 == 10
+
+    ```
+
+
+    and press enter. We are stating that 10 is equal to 10, which is True.
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> 25 == 10
+
+    ```
+
+
+    and press enter. We are stating that 25 is equal to 10, which is of course False.
+    These last few lines of code we''ve written are all Boolean logic.
+
+
+    # COMMENTING CODE
+
+
+    Commenting code is the act of leaving notes in your code that explain various
+    points for yourself and/or others. The comments are not run in the program but
+    are read by people when viewing the code directly so they can understand the code
+    better.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: 'To write comments in Python, you simply add "#" at the beginning of the statement.
+
+
+    In IDLE, write this code:
+
+
+    ```
+
+    >>> 25 > 20 #Here I am stating that 25 is greater than 20, which is true
+
+    ```
+
+
+    and press enter. The program ran, and your comment wasn''t displayed – but if
+    someone in the future reads your code, they''ll know the purpose behind it. It
+    is good practice to comment code because it helps others understand your logic.
+    It can also be useful to you in the future reviewing your own code – comments
+    serve as a great reminder!
+
+
+    # MODULES
+
+
+    A module is a pre-made collection of Python code for your use. Python has many
+    modules that exist to assist developers. These modules have functions you can
+    use to add functionality to your program.
+
+
+    Some functions come built into the Python language (like .upper() and lower()
+    – which can make string uppercase or lowercase respectively), but other functions
+    require you to import a module before they can be used. Importing a module just
+    means adding the code of that module to your Python program so that the program
+    can use it.
+
+
+    # SCRIPTS
+
+
+    Now let''s write a script. In IDLE, go to File and open a New File. This allows
+    you to work in the text editor to create a program to run, rather than working
+    directly in the shell.
+
+
+    Write this code in the text editor:
+
+
+    ```
+
+    J = 50
+
+    K = 5
+
+    print(J + K)
+
+    ```
+
+
+    Now we will run the program. First, you must save the file with the .py extension.
+    Python files must always be saved before executing. Doing so tells the computer
+    that your file contains Python code and a failure to do so can result in a code
+    error.
+
+
+    Once you''ve saved the file, click Run, and then Run Module (F5 on a Windows machine
+    – F5 + fn on a Mac).'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'The program should run and return the value 55.
+
+
+    # IF STATEMENTS
+
+
+    Write this code in the text editor:
+
+
+    ```
+
+    if J > 25:
+
+    print(''J is the winner!'')
+
+    ```
+
+
+    Save and run the program. Note: When you are instructed to save your code, you
+    can save over previous files instead of making new ones if you choose.
+
+
+    The program will now print "J is the winner!" because the "if" statement (a Boolean
+    statement) evaluated to true, to the fact that J is greater than 25.
+
+
+    As a note, if you deleted your earlier code where you assigned J as 50 (J = 50),
+    the code won''t run – so you''ll need to reassign the value (50) to the variable
+    (J).
+
+
+    # INDENTATION
+
+
+    We talked about indentation earlier. In Python, you have to indent your code when
+    a statement has been made. As you may have noticed writing the above if statement,
+    this is typically indented automatically for you.
+
+
+    Let''s try this out. Write this code in the text editor:
+
+
+    ```
+
+    if B == 20:
+
+    print(''20 is equal to B'')
+
+    ```
+
+
+    Did you notice how the code was automatically indented? (Note: indents are also
+    caused by pressing Tab.)
+
+
+    Now, run the code. You have gotten an error message. This is because you need
+    to define the variable B.
+
+
+    Assign the variable "B" the value "20" by writing the following in the text editor
+    above your code:
+
+
+    ```
+
+    B = 20
+
+    ```
+
+
+    Run the code again, and it works!'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# STRINGS
+
+
+    In the text editor, open up a new Python Shell Window (click Run and Python Shell).
+    Type the following in IDLE to create a variable called “name” (NOTE: You can type
+    your own name inside the quotation marks. The following is just an example:
+
+
+    ```
+
+    >>> name = ''Ashley''
+
+    >>> print(name.lower())
+
+    ```
+
+
+    and press enter. Your name is now displayed in lower-case.
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> print(name.upper())
+
+    ```
+
+
+    and press enter. Your name is now displayed in capital letters. We used a built-in
+    function in Python.
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> print(name[0])
+
+    ```
+
+
+    and press enter. Then write this code in IDLE:
+
+
+    ```
+
+    >>> print(name[2])
+
+    ```
+
+
+    and press enter again.
+
+
+    Can you see what this code does? You are printing characters from a string that
+    exist at a certain index.
+
+
+    Remember, in arrays (a group of related items that are stored together in a sequence),
+    indexes are the position of a given element in an array and they typically start
+    at 0.
+
+
+    # LISTS
+
+
+    Let’s create a “list.” Write this code in IDLE:
+
+
+    ```
+
+    >>> listA = [''mother'', ''father'', ''1970'', ''1965''];
+
+    >>> print(listA[3])
+
+    ```'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'and press enter. In this code, you have created a list and then asked for the
+
+    fourth item in the list to be displayed.
+
+
+    # TUPLES
+
+
+    Let''s create a tuple. Write this code in IDLE:
+
+
+    ```
+
+    >>> tupleA = ("brother", "sister", "1990", "1992", "1993", "1995")
+
+    >>> print(tupleA[1:4])
+
+    ```
+
+
+    and press enter. This prints the items, starting at index 1 through (but not
+
+    including) index 4.
+
+
+    # DATES
+
+
+    Let''s set a date. Write this code in IDLE:
+
+
+    ```
+
+    >>> date = "03/13/2021"
+
+    ```
+
+
+    and press enter.
+
+
+    We are going to use the .split() command to split apart the day, month,
+
+    and year.
+
+
+    Now enter this code in IDLE:
+
+
+    and press enter (you have to include a print statement or the date won''t
+
+    display). We have used the date.split(''//'') command to separate the parts of
+    the
+
+    date!
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> print(split_the_date[0])
+
+    >>> print(split_the_date[1])
+
+    >>> print(split_the_date[2])
+
+    ```
+
+
+    and press enter.'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# CONCATENATING A STRING
+
+
+    We will now concatenate (connect) strings so that the dates we entered are displayed
+    with the day, month, and year.
+
+
+    Enter this code in IDLE:
+
+
+    ```
+
+    >>>print("Month: " + split_the_date[0])
+
+    >>>print("Day: " + split_the_date[1])
+
+    >>>print("Year: " + split_the_date[2])
+
+    ```
+
+
+    and press enter.
+
+    Notice that we added a space after each colon. If we didn''t, the date would display
+    right up against the colon – e.g., Year:2021, instead of Year: 2021.
+
+
+    Now, open a new file. Enter this code in the text editor:
+
+
+    ```
+
+    date = "12/25/2025"
+
+    full_date = date.split(''/'')
+
+    print(''Month: '' + full_date[0] + '' Day: '' + full_date[1]
+
+    + '' Year: '' + full_date[2])
+
+    ```
+
+
+    Run the code.
+
+
+    # FUNCTIONS
+
+
+    You can change the cases of letters through using the .swapcase() function. Click
+    on Run and then Python Shell, and we are back in IDLE. Write this code in IDLE:
+
+
+    ```
+
+    >>> Name = "Jack"
+
+    >>> Name.swapcase()
+
+    ```
+
+
+    Run the code.
+
+
+    You can also get rid of spaces and tabs from both sides of a string using the
+    .strip() method.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "Enter this code in the text editor:\n\n```\nColor_1 = rea \nColor_2 = '' +\
+    \ Color_1 + ' and ' + \nprint('My favorite colors are ' + Color_2) \nprint('Let\\\
+    's fix the formatting...')\nprint('My favorite colors are ' + Color_1.strip()\
+    \ + \\\n  ' and ' + Color_2.strip())\n```\n\nNow save and run the code. You should\
+    \ see the empty space at the ends and beginnings of the string eliminated \\\n\
+    \nDid you notice the \\ in the string? This allows us to print an apostrophe without\
+    \ the computer thinking we are ending our string. This backslash (\\) is called\
+    \ an \"escape character\". It tells the computer, \"Do not treat the character\
+    \ after the \\ as you normally would.\" It takes a special character, such as\
+    \ \\' , and ensures it isn't executed in the typical way.\n\n# USING WE'VE LEARNED\
+    \ THUS FAR\n\nOpen up the text editor and write this code (note: feel free to\
+    \ customize variables, such as names, dates, etc.):\n\n```\nB = \"Let's do some\
+    \ math!\"\nprint(B)\nX = 10\nprint(\"X plus 5 equals:\")\nprint(X + 5)\nA = 5\n\
+    print(\"A = 5\")\nprint(\"A minus X equals:\")\nprint(A - X)\nprint(\"X times\
+    \ A equals:\")\nprint(X * A)\nprint(\"X divided by A equals:\")\nprint(X / A)\n\
+    print(\"Is X larger than A?\")\nprint(X > A)\nprint(\"Is X less than A?\")\nprint(X\
+    \ < A)\nprint(\"Are X and A equal?\")\nprint(X == A)\nif X > A:\n  print(\"X (being\
+    \ 10) is larger than A (which is 5)\")\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '```
+
+    name = ''BILLY''
+
+    print("Now it is time to print BILLY in all lower case letters: " + name.lower())
+
+    list_names = [''Billy'', ''Sally'', ''Johnhny'', ''Raphael'']
+
+    print("Here''s the list we created: ")
+
+    print(list_names)
+
+    print("Here''s the third name from the list we wrote in all caps: " + list_names[2].upper())
+
+    date = ''July/14th/1997''
+
+    print("Here''s the date we created: " + date)
+
+    split_date = date.split(''/'')
+
+    print("Here''s the date we entered split apart: ")
+
+    print(split_date)
+
+    another_name = ''DIANE'' + " + another_name
+
+    print("We chose the name: " + another_name + " written with the cases swapped:
+    " + another_name.swapcase())
+
+    ```
+
+
+    Run the code. In this code, we have assigned variables, functions, implemented
+    if statements and other skills you''ve learned up to this point.
+
+
+    # BUILD YOUR OWN
+
+
+    Here''s a challenge for you! Make a program that does the following:
+
+
+    +   1. Prints something
+
+    2. Assigns a variable
+
+    3. Performs a math function
+
+    4. Uses an if statement
+
+
+    # END OF CHAPTER QUIZ
+
+
+    Can you answer the following questions?
+
+
+    +   1. What is a variable?
+
+    2. What are some data types in Python?
+
+    3. What is a script?
+
+    4. Why is it important to comment code?'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# CHAPTER FOURTEEN
+
+    STATEMENTS
+
+
+    # NOT EQUAL TO (!)
+
+
+    In Python, the operator "=" means "check that the value on the left is not equal
+    to the value on the right." Let''s use this. Open up IDLE and write this code:
+
+
+    ```
+
+    >>> 10 != 10
+
+    ```
+
+
+    and press enter. The statement that 10 is not equal to 10 is false.
+
+
+    Now write this code in IDLE:
+
+
+    ```
+
+    >>> 10 != 9
+
+    ```
+
+
+    and press enter. The statement “10 is not equal to 9” is true!
+
+
+    # GREATER THAN OR EQUAL TO (>=)
+
+
+    The operator ">=" means "check that the value on the left is equal to or greater
+    than the value on the right." Let''s try this out.
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> 10 >= 10
+
+    ```
+
+
+    and press enter. The statement “10 is greater than or equal to 10” is true.
+
+
+    Now type this in IDLE:
+
+
+    ```
+
+    >>> 11 >= 10
+
+    ```
+
+
+    and press enter. The statement “11 is greater than or equal to 10” is true.
+
+
+    And now write this code in IDLE:
+
+
+    ```
+
+    >>> 5 >= 10
+
+    ```
+
+
+    and press enter. The statement “5 is greater than or equal to 10” is false!'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# LESS THAN EQUAL TO (<=)
+
+
+    The operator <= means “check that the value on the left is less than or equal
+    to the value on the right.” Let’s try this out. Write this code in IDLE:
+
+
+    ```
+
+    >>> 10 <= 10
+
+    ```
+
+
+    and press enter. The statement “10 is less than or equal to 10” is true. Now type
+    this in IDLE:
+
+
+    ```
+
+    >>> 5 <= 10
+
+    ```
+
+
+    and press enter. The statement “5 is less than or equal to 10” is true. And now
+    write this code in IDLE:
+
+
+    ```
+
+    >>> 11 <= 10
+
+    ```
+
+
+    and press enter. The statement “11 is less than or equal to 10” is false.
+
+
+    # TESTING VARIABLES
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> A = 10
+
+    >>> A > 7
+
+    ```
+
+
+    and press enter. This is true: A (which has been assigned the value of 10) is
+    greater than 7.
+
+
+    # ASSIGNMENT
+
+
+    Write code in IDLE that utilizes each of these comparison operators:
+
+
+    +   < (less than)
+
+    >= (greater than or equal to)
+
+    <= (less than or equal to)
+
+    == (equal to)
+
+    != (not equal to)
+
+
+    # ANOTHER IF STATEMENT
+
+
+    We covered if statements earlier. Let''s do some more.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "Write this code in IDLE:\n\n```\n>>> A = 10\n>>> If A != 5:\n    print(\"A\
+    \ is not equal to 5.\")\n```\n\n# # ELSE STATEMENTS\n\nElse statements are statements\
+    \ used to cover a potential outcome other than what was laid out by one or more\
+    \ “If” statements. Else statements contain a block of code that executes if the\
+    \ conditions in the “if” statements are not met.\n\nLet’s use an Else Statement.\n\
+    \nOpen up a new file (Click File > New File). Write this code in the text editor,\
+    \ save the file, and run the program:\n\n```\nname = \"Stanley\"\nif name == \"\
+    Stanley\":\n    print(\"Hello, Stanley\")\nelse:\n    print(\"You are not Stanley\"\
+    )\n```\n\nAs a note, you do not have to utilize the names we give in these assignments\
+    \ – feel free to use your own!\n\nNow change the name (and then save and run the\
+    \ program) like this:\n\n```\nname = \"Carl\"\nif name == \"Stanley\":\n    print(\"\
+    Hello, Stanley\")\nelse:\n    print(\"You are not Stanley\")\n```\n\nThat is how\
+    \ Else Statements work. Again, notice the indentation of the code.\n\n# # ELIF\
+    \ STATEMENTS\n\n“Elif” statements literally mean “Else if.” They are additional\
+    \ “If” statements that cover additional options. Let’s write one."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "Delete the code in the text editor and type the following:\n\n```\nanswer =\
+    \ \"Red\"\nif answer == \"Red\":n    print(\"You chose red.\")\nelif answer ==\
+    \ \"Blue\":n    print(\"You chose blue.\")\nelse:\n    print(\"Please enter Red\
+    \ or Blue as your answer.\")\n```\n\nRun the code.\nNow change answer to \"Blue\"\
+    \ and run the code again.\nNow change answer to \"Yellow\" and run the code again.\
+    \ Pretty cool, huh?\n\n# EXERCISE\n\nWrite your own program that contains the\
+    \ following:\n\n+   - If statement,\n- Elif statement, and\n- Else statement.\n\
+    \nYou can keep it simple at this point.\n\n# COUNTER\n\nA counter keeps track\
+    \ of how many times something occurs. As the name implies, it counts.\n\nOpen\
+    \ the text editor and write this code:\n\n```\ncounter = 0\nprint(counter)\ncounter\
+    \ = counter + 1\nprint(counter)\ncounter = counter + 2\nprint(counter)\ncounter\
+    \ = counter + 3\nprint(counter)\ncounter = counter - 6\nprint(counter)\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'Now run the code. The program counted and displayed 0, 1, 3, 6, and 0. Now,
+    let''s slow it down so the numbers don''t all display at once...
+
+
+    # TIME.SLEEP()
+
+
+    Time.Sleep() allows you to delay the running of certain blocks of code by specified
+    seconds or portions of seconds (as in a float – like 1.5).
+
+
+    To use the Time.Sleep() function, you must first import the “time” module.
+
+
+    Enter this at the top of the code you just wrote (before everything else):
+
+
+    ```
+
+    import time
+
+    ```
+
+
+    Now enter the following after every print statement in your code:
+
+
+    ```
+
+    time.sleep(.5)
+
+    ```
+
+
+    Your code should look like the following, and you should see a pause between each
+    counter display:
+
+
+    ```
+
+    counter = 0
+
+    print(counter)
+
+    time.sleep(.5)
+
+    counter = counter + 1
+
+    print(counter)
+
+    time.sleep(.5)
+
+    ```
+
+
+    (.)
+
+
+    Run your code. Your code should now display with slight delays between each printed
+    counter.
+
+
+    # LOOPS
+
+
+    The range() function generates a list of numbers. The “For Loop” repeatedly executes
+    instructions as long as a particular condition is true.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "Write this code in the text editor:\n\n```\nimport time\nfor counter in range(1,11):\n\
+    \    print(counter)\n    time.sleep(.5)\n```\n\nRun this code. Or, to count down,\
+    \ enter and run this code:\n\n```\nimport time\nfor counter in range(10, 0, -1):\n\
+    \    print(counter)\n    time.sleep(.5)\n```\n\nDo you see how this code works?\
+    \ One of the parameters of the range() function is step. In the above, we are\
+    \ stepping through the range by -1. If you don't supply a step parameter, it will\
+    \ be set to 1 by default.\n\nLoops make your code more efficient and save you\
+    \ time.\n\nThe While Loop means that “while (blank) is occurring, do (blank).\n\
+    \nOpen a New File inside IDLE and write this code:\n\n```\nimport time\ncounter\
+    \ = 1\nwhile counter < 11:\n    print(counter)\n    time.sleep(.5)\n    counter\
+    \ = counter + 1\n    time.sleep(.5)\n```\n\nand run this code.\n\nNow delete the\
+    \ “counter = counter + 1” and run the code. As you can see, without exact instructions,\
+    \ the loop will continue for forever, and we do not want to get stuck in an infinite\
+    \ loop! You can stop it by exiting the program.\n\n# LISTS\n\nAs a reminder, lists\
+    \ are written like this: Name_of_list = [item1, item2], etc."
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'Write this code in a New File within the text editor:
+
+
+    ```
+
+    Best_bands_list = ["The Beatles", "Rolling Stones", "Led Zeppelin", "Beach Boys"]
+
+    print(Best_bands_list)
+
+    ```
+
+
+    Save and run the program (as a note, it is common for programmers to use instead
+    of a space between words in a variable name.
+
+
+    Now, to print text with the list, this try:
+
+
+    ```
+
+    Best_bands_list = ["The Beatles", "Rolling Stones", "Led Zeppelin", "Beach Boys"]
+
+    print(Best_bands_list + ["These are the best bands from the 60s!"])
+
+    ```
+
+
+    Save and run your code.
+
+
+    As you can see, you got an error that states: "can only concatenate list (not
+    ''str'') to list."
+
+
+    We are having trouble concatenating the different data types (a string and a list).
+    To repair this error, we can specify string item from the list we want to concatenate
+    with the string, by typing, saving and running this code:
+
+
+    ```
+
+    Best_bands_list = ["The Beatles", "Rolling Stones", "Led Zeppelin", "Beach Boys"]
+
+    print(Best_bands_list[0] + " " is an awesome band!")
+
+    ```
+
+
+    The same can be done with the remaining items of the list by calling each by their
+    index number: [1] for Rolling Stones, [2] for Led Zeppelin, and [3] for Beach
+    Boys.
+
+
+    # CHANGING LISTS
+
+
+    To change a list, we specify which item we want to replace or change. First, let
+    s add something to the list. Type the following at the end of your code:
+
+
+    ```
+
+    Best_bands_list.append("The Temptations")nprint(Best_bands_list)
+
+    ```
+
+
+    Save and run the code. We appended (added to the end of the list) a new band onto
+    the list (The Temptations), which is index number [4].'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "Now let's replace an item on the list. Type the following at the end of your\
+    \ code:\n\n```\nBest_bands_list[2] = \"The Supremes\"\nprint(Best_bands_list)\n\
+    ```\n\nSave and run your code. We removed Led Zeppelin and added The Supremes\
+    \ in their place.\n\n# LISTS AND LOOPS\n\nWe will now combine a list with a \"\
+    For Loop.\" Open a New Window and write this code in the text editor:\n\n```\n\
+    import time\nBest_80s_bands_list = [\"A-ha\", \"Depeche Mode\", \"Tears For Fears\"\
+    , \"The Cure\"]\nfor band in Best_80s_bands_list:\n    print(band + \" is a radical\
+    \ band!\")\n    time.sleep(.5)\n```\n\nSave and run this code. Note: \"band\"\
+    \ is the variable name for the above indexes when iterating through the list.\
+    \ You could name the variable anything: x, y, number, etc.\n\n# NUMBERS AND LISTS\n\
+    \nLet's create a list with numbers. We will be multiplying these numbers to the\
+    \ power of ten.\n\n** is the operator used to find out the power of a value.\n\
+    \nOpen a New File and write this code in the text editor:\n\n```\nList_of_numbers\
+    \ = [5, 10, 15, 20, 25]\nfor numbers in List_of_numbers:\n    print(numbers **\
+    \ 10)\n```\n\nand run this code.\n\nNow, let's figure out how to store a value\
+    \ from our previous code into a new list."
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'Create an empty list by writing this code into the text editor:
+
+
+    ```
+
+    import time
+
+    Values list = []
+
+    Values_list.append(numbers ** 10)
+
+    print(Values_list)
+
+    ```
+
+
+    and run the code.
+
+
+    We just created and displayed a list that contains 25 to the power of 10.
+
+
+    # DICTIONARIES
+
+
+    In computer programming, dictionaries are a specialized type of list. The first
+    item is the key, and the second item is the value. Together, they are a "key-value
+    pair."
+
+
+    Key-value pair is abbreviated "KVP". A KVP is a set of two linked data items that
+    consists of: a key (a unique identifier for some of data), and the value (the
+    data that is identified by the key). The key is the unique name, and the value
+    is the content.
+
+
+    Collections of KVPs (i.e., dictionaries) are often used in computer programs.
+
+
+    Below is an example of a collection of KVPs that might be used in a computer program
+    for a school. Here, the KEY is used to store the name of a course at the school,
+    and the VALUE is the description of the course – this is a dictionary:
+
+
+    | KEY | VALUE |
+
+    |---|---|
+
+    | YEAR | 2030 |
+
+    | SEASON | "Summer" |
+
+    | WEATHER | "Stormy" |
+
+    | DAY | "Saturday" |
+
+    | MONTH | "August" |
+
+
+    Note that in this list, you could not have a second Key-Value Pair that used the
+    Key "SEASON" or "DAY" because the keys in a given collection of KVPs must be unique.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'A "dictionary" is a "key-value pair collection."
+
+
+    In a dictionary, multiple values can be assigned to one key. This can be useful
+    because you can look up various values by their key. In the below example, each
+    key has three values assigned to it:
+
+
+    | KEY | VALUES |
+
+    |---|---|
+
+    | 0 | Eddard Stark | 35 years old | Male |
+
+    | 1 | Cersei Lannister | 32 years old | Female |
+
+    | 2 | Jon Snow | 18 years old | Male |
+
+    | 3 | Daenerys Targaryen | 20 years old | Female |
+
+
+    Open up IDLE and write this code:
+
+
+    ```
+
+    >>> Birthday_Dictionary = {''Emily'': ''January 1924'', ''Maxine'': ''July 1935'',
+    ''Kelly'': ''May 1955'', ''Violet'': ''July 2009''}
+
+    ```
+
+
+    and press enter. You have created a dictionary. The most common way to create
+    a dictionary is the way we did above (utilizing curly brackets {}). Now let''s
+    view the dictionary. Type this:
+
+
+    ```
+
+    >>> print(Birthday_Dictionary)
+
+    ```
+
+
+    and press enter.
+
+
+    In the above dictionary, the name is the key, and the birth date is the value.
+    Now let''s find someone''s birthday by trying this:
+
+
+    ```
+
+    >>> print(Birthday_Dictionary[''Maxine''])
+
+    ```
+
+
+    and press enter. We are given the value "July 1985" – Maxine''s Birthday.
+
+
+    To replace someone''s birthday, write this code in IDLE:
+
+
+    ```
+
+    >>> Birthday_Dictionary[''Emily''] = ''March 1983''
+
+    >>> print(Birthday_Dictionary)
+
+    ```
+
+
+    pressing enter for each line.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'To add text in combination with displaying the Dictionary, write this code
+    in IDLE:
+
+
+    ```
+
+    >>> print("Kelly''s Birthday is: " + Birthday_Dictionary[''Kelly''])"
+
+    ```
+
+
+    and press enter.
+
+
+    To add another birthday to the dictionary, write this code in IDLE:
+
+
+    ```
+
+    >>> Birthday_Dictionary[''Magnus''] = ''March 2019''
+
+    ```
+
+
+    and press enter.
+
+
+    Then type this in IDLE:
+
+
+    ```
+
+    >>> print (Birthday_Dictionary)
+
+    ```
+
+
+    and press enter. Now you can see the earlier changed birthday and the newly added
+    person and birthday!
+
+
+    To delete a key from a dictionary, write this code in IDLE:
+
+
+    ```
+
+    >>> del Birthday_Dictionary[''Kelly'']
+
+    ```
+
+
+    and press enter. Then display the dictionary to verify Kelly''s entry was taken
+    out:
+
+
+    ```
+
+    >>> print (Birthday_Dictionary)
+
+    ```
+
+
+    and press enter.
+
+
+    # FUNCTIONS
+
+
+    As we covered earlier in this book
+
+
+    You define (create) functions using the “def” keyword.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "To create a function, open a New File and write this code in the text editor:\n\
+    \n```\ndef Subtraction(A, B):\n    subtract = A - B\n    return subtract\nprint(Subtraction(20,\
+    \ 10))\n```\n\nSave and run the program. In your code, A and B are the variables.\n\
+    \nNow add this code:\n\n```\nprint(Subtraction(10, 5))\nprint(Subtraction(500,\
+    \ 350))\n```\n\nSave and run the program.\n\nLook over what we just did with your\
+    \ code. We just created a function with two parameters that will automatically\
+    \ subtract the two values that we enter in arguments (the actual data passed to\
+    \ a subprogram when it is called). This function automatically handles any subtraction\
+    \ we want to do.\n\nThe best way to understand functions is to create them. Let's\
+    \ create another function. Write this code in the text editor:\n\n```\ndef addition(C,\
+    \ D, E):\n    add = C + D + E\n    return add\nprint(addition(5, 10, 20))\n```\n\
+    \nSave and run the code.\n\nNow we will create a multiplication function. Type,\
+    \ save and execute this code in the text editor:\n\n```\ndef multiplication(F,\
+    \ G, H):\n    multiply = F * G * H\n    return multiply\nprint(multiplication(2,\
+    \ 4, 6))\n```\n\nNow we will create a division function."
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "Type, save and execute this code in the text editor:\n\n```\ndef division(I,\
+    \ J, K):\n    divide = I / J / K\n    return division\nprint(division(20, 4, 2))\n\
+    ```\n\nIn older versions of Python, you were required to convert integers to a\
+    \ float (decimal) to preserve anything after the decimal point when using division.\
+    \ Now, Python does all the work for you! If you'd like to remove all of the numbers\
+    \ after the decimal point, you can use the // operator (a mathematical symbol\
+    \ in Python) instead of the normal / operator. This is referred to floor division,\
+    \ and will return a whole number.\n\nWrite and run this code to see how the //\
+    \ operator works:\n\n```\ndef division(I, J, K):\n    divide = J // K\n    return\
+    \ divide\nprint(division(20, 4, 2))\n```\n\n# STRING FUNCTION\n\nThere are many\
+    \ functions already built into Python. One of these functions is the string function.\
+    \ This function is used to convert any data type to a string. Open ID and write\
+    \ this code:\n\n```\n>>> X = 500\n>>> print(str(X))\n```\n\npressing enter after\
+    \ each line. While this may look the same to you as simply printing the variable,\
+    \ what we have done here is converted 500 from the data type integer to a string!\n\
+    \n# FLOAT FUNCTION\n\nThe float function returns a floating point number from\
+    \ an integer or string. Write this code in IDLE:\n\n```\n>>> K = float(699)\n\
+    >>> print(K)\n```"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'pressing enter after each line. You have added a decimal to the integer by
+    converting it from the integer data type to the float data type.
+
+
+    # LENGTH FUNCTION
+
+
+    The length function gets the length (number of characters) of a variable (such
+    as a string or integer).
+
+
+    Write this code in IDLE:
+
+
+    ```
+
+    >>> How many characters = len("I am learning a lot from this Python book!")
+
+    >>> print(How_many_characters)
+
+    ```
+
+
+    pressing enter after each line.
+
+
+    # INTEGER FUNCTION
+
+
+    To change a float into an integer, use the integer function. Write this code in
+    IDLE:
+
+
+    ```
+
+    >>> Z = 219.67
+
+    >>> print(Z)
+
+    >>> Whole_number_Z = int(Z)
+
+    >>> print(Whole_number_Z)
+
+    ```
+
+
+    pressing enter after each line.
+
+
+    # ROUND FUNCTION
+
+
+    To round a number to the nearest whole number, use the round function. Write this
+    code in IDLE:
+
+
+    ```
+
+    >>> X = 29.76521
+
+    >>> print(round(X))
+
+    ```
+
+
+    pressing enter after each line.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# DELETE\n\nTo delete items, write this code in IDLE:\n\n```\n>>> X = 15\n\
+    >>> print(X)\n>>> del X\n>>> print(X)\n```\n\npressing enter after each line.\
+    \ As you can see, you get an Error message after you delete because X is no longer\
+    \ stored.\n\n# USING WHAT WE'VE LEARNED THUS FAR\n\nOpen up the text editor and\
+    \ write this code:\n\n```\nX = 10\nprint(\"X (10) is not equal to 15:\")\ntime.sleep(.5)\n\
+    print(X != 15)\nprint(\"X is greater than or equal to 15:\")\ntime.sleep(.5)\n\
+    print(X >= 15)\nif X <= 15:\n    print(\"X is not equal to or greater than 15.\"\
+    )\n    time.sleep(.5)\nnumber = 25\nif number == 15:\n    print(\"25 is not equal\
+    \ to 15.\")\nelse:\n    print(\"The number is 25.\")\ntime.sleep(.25)\n```"
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "```\ncounter = 25\nprint(counter)\ncounter = counter + 5\ntime.sleep(.25)\n\
+    print(counter)\ntime.sleep(.25)\ncounter = counter - 28\nprint(counter)\ntime.sleep(.25)\n\
+    counter = counter * 2\nprint(counter)\ncounter = counter / 3\ntime.sleep(.25)\n\
+    print(counter)\ntime.sleep(.25)\nfor counter in range(2,6):\n    print(counter)\n\
+    \    time.sleep(.25)\nfor counter in range(10,4,-1):\n    print(counter)\n   \
+    \ time.sleep(.25)\nwhile counter < 22:\n    print(counter + 2)\n    counter =\
+    \ counter + 4\n    time.sleep(.25)\n```\n\nlist = [\"a\", \"b\", \"c\", \"d\"\
+    , \"e\", \"f\", \"g\", \"etc.\"]\nprint(list)\ntime.sleep(.25)\ndictionary = {'Apple':\
+    \ 'Fruit', 'Bush': 'Plant', 'Carrot': 'Vegetable'}\n\nprint(dictionary)\ntime.sleep(.25)\n\
+    print('Now we will add \"dog\" to the dictionary.')\ntime.sleep(.25)\ndictionary['Dog']\
+    \ = 'Animal'\nprint(dictionary)\ntime.sleep(.25)\n\ndel dictionary['Apple']\n\
+    print('Now, we have deleted \"Apple\" from the dictionary:')\nprint(dictionary)\n\
+    \nand run your code!"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'Even if you entered the code correctly, you will have an error! Do you know
+    why? We forgot to import the module called “time.”
+
+
+    Add this to the very top of your code:
+
+
+    ```
+
+    Import time
+
+    ```
+
+
+    and run your code again.
+
+
+    Congratulations! It works!
+
+
+    Read through all of your code one more time. In this code, we have used what we
+    covered in this chapter.
+
+
+    # END OF CHAPTER QUIZ
+
+
+    Can you answer the following questions?
+
+
+    +   1. What does the symbol “!” typically mean in Python?
+
+    2. What is a loop?
+
+    3. What’s the difference between list and a dictionary?
+
+    4. What is a function?'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# CHAPTER FIFTEEN
+
+    BUILD YOUR OWN
+
+
+    Now it''s time to put some of what you''ve learned to use!
+
+
+    Create a program on your own that contains the following:
+
+
+    +   1. Multiplies a number to the power of another number
+
+
+    +   2. An if, elif and else statement
+
+
+    +   3. A for loop
+
+
+    +   4. A while loop
+
+
+    +   5. A dictionary
+
+
+    # MODULES
+
+
+    As a reminder, Python has many modules that you can import into your project.
+    These are pre-made sets of code that allow you to perform certain functions. Write,
+    save and execute this code in the text editor:
+
+
+    ```
+
+    print(math.sqrt(64))
+
+    ```
+
+
+    You received an error because the math module hasn''t been imported yet. So, type
+    the following above your code:
+
+
+    ```
+
+    import math
+
+    ```
+
+
+    This brings in additional math functions, such as finding the square root of something.
+
+
+    Save and execute your code. Now it should run!
+
+
+    To randomly choose a number, we can use the random integer function. Write this
+    code in the text editor:
+
+
+    ```
+
+    import random
+
+    print(random.randint(0,100))
+
+    ```
+
+
+    Save and execute your code.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "# CREATE MODULES\n\nWrite this code in the text editor:\n\n```\nimport random\n\
+    import math\nfrom random import randint\ndef subtract_5(A):\n    return A - 5\n\
+    def add_10(A):\n    return A + 10\ndef multiply_2(A):\n    return A * 2\ndef random(A):\n\
+    \    B = randint(1,5)\n    return A + B\n```\n\nSave the program as PythonModule.py.\
+    \ We have now created a module with four functions.\n\nOpen a new file and write\
+    \ this code within the text editor:\n\n```\nimport PythonModule\nprint(PythonModule.subtract_5(10))\n\
+    print(PythonModule.add_10(5))\nprint(PythonModule.multiply_2(4))\nprint(PythonModule.random(0))\n\
+    ```\n\nand run the code. You just utilized the module you created and the functions\
+    \ therein! Review your code; can you tell what each line does?\n\n# INPUT\n\n\
+    The Input function allows the user to enter information. We will now incorporate\
+    \ user input into our programs.\n\nWrite this code in the text editor:\n\n```\n\
+    Date = input('Please enter the date: ')\nprint('The date you entered is ' + Date\
+    \ + '.')\n```\n\nSave and execute your code."
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "Let's try input with the if, elif, and else statements. Write this code in\
+    \ the text\n\n```\nprint('We are going to find out whether or not you like candy.')\n\
+    Candy = input('Do you like candy?')\nif Candy == 'Yes':\n    print('You like candy!')\n\
+    elif Candy == 'No':\n    print('You do not like candy...')\nelse:\n    print('Please\
+    \ enter Yes or No.')\n```\n\n# PROGRAM\n\nWe will now create a program using Python.\
+    \ The program will store information about various people and then grab data (height,\
+    \ weight, birth year, etc.) by typing in their name. The first step will be to\
+    \ create a dictionary so we can easily handle the information. Open a new file\
+    \ and write this code in the text editor:\n\n```\npeople_dictionary = {'Brett':\
+    \ ['Male', 'Weight 175'],\n'Nancy': ['Female', 'Weight 125'],\n'Patrick': ['Male',\
+    \ 'Weight 195'],\n'Briar': ['Female', 'Weight 115'],\n'Adam': ['Male', 'Weight\
+    \ 215']}\n```\n\n```\nprint(people_dictionary)\n```\n\nSave and execute your code.\n\
+    \nNow we want to take information from the dictionary to show it to the user.\
+    \ Search for a person's name, write this code in the text editor:\n\n```\nName\
+    \ = input('Please type in a name: ')\nprint('You typed in the name ' + Name)\n\
+    Persons data = people_dictionary[Name]\nprint(Persons_data)\n```\n\nand run the\
+    \ code. If you receive an error, it means you didn't exactly type a name in the\
+    \ dictionary. Otherwise, it will run.\n\nRun your program again and intentionally\
+    \ enter a name that isn't in the dictionary. Let's get rid of the error message\
+    \ and display a string that will explain to the user what happened and what needs\
+    \ to be done."
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "There are some other functions called \"try\" and \"except\". \"Try\" attempts\
+    \ to find things in a dictionary and, if found, performs an action. \"Except\"\
+    \ gives another action if something is not found in the dictionary.\n\nEdit your\
+    \ code so it is written as follows (we are adding try and except):\n\n```\npeople_dictionary\
+    \ = {'Brett': ['Male', 'Weight 175'],\n                   'Nancy': ['Female',\
+    \ 'Weight 155'],\n                   'Patrick': ['Male', 'Weight 190'],\n    \
+    \               'Bilar': ['Female', 'Weight 115'],\n                   'Adam':\
+    \ ['Male', 'Weight 215']}\n```\n\n```\nprint(people_dictionary)\nName = input('Please\
+    \ type in a name: ')\nprint('You typed in the name ' + Name)\n```\n\n```\ntry:\n\
+    \    Persons_data = people_dictionary[Name]\n    print(Persons_data)\nexcept:\n\
+    \    print('That name, ' + Name + ', was not found in the dictionary.')\n```\n\
+    \nAs you may notice, if you don't enter a name exactly as it's written in the\
+    \ dictionary, the program will think the name isn't there. For example, run your\
+    \ program and use brEt or patRICK (as opposed to Brett or Patrick). To fix this,\
+    \ edit your code as follows (make all names lowercase and add .lower() and .capitalize()\
+    \ as follows):\n\n```\npeople_dictionary = {'brett': ['Male', 'Weight 175'],\n\
+    \                               'nancy': ['Female', 'Weight 155'],\n         \
+    \                      'patrick': ['Male', 'Weight 190'],\n                  \
+    \             'bilar': ['Female', 'Weight 115'],\n                           \
+    \    'adam': ['Male', 'Weight 215']}\n```\n\n```\nprint(people_dictionary)\nName\
+    \ = input('Please type in a name: ').lower()\nprint('You typed in the name ' +\
+    \ Name.capitalize())\n```\n\n```\ntry:\n    Persons data = people_dictionary[Name]\n\
+    \    print(Persons_data)\nexcept:\n    print('That name (as written) was not found\
+    \ in the dictionary.')\n```\n\nNow run the code and try entering one of the names\
+    \ in the dictionary in an odd format (like eILY or something). It should work.\
+    \ This is called sanitizing your inputs. This minimizes the likelihood of user\
+    \ error. We are going to better display the output."
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "Edit the try function to this:\n\n```\nPersons_data = people_dictionary[Name]\n\
+    print('Name: ' + Name.capitalize())\nprint('Sex: ' + Persons_data[0])\nprint('Weight:\
+    \ ' + Persons_data[1])\n```\n\nSave and run the program.\n\nNow we allow people\
+    \ to search for more names or search again when they don't type the name correctly?\
+    \ First, we need to define a start point to our program (which will allow us to\
+    \ have people go to the start again). To do so, we add the following to the beginning\
+    \ of our code:\n\n```\ndef start():\n```\n\nThis will require you to tab (indent)\
+    \ all of your code over once to the right (if it doesn't automatically tab). Now\
+    \ add the following to the end of your code, right above/before start(), write\
+    \ this code:\n\n```\nstart()\n```\n\nThis will call the start function. Now let's\
+    \ add another step to the program that gives the user an option of searching for\
+    \ another name. At the near end of your code, right above/before start(), write\
+    \ this code:\n\n```\ndef more():\n    More = input('Would you like to search for\
+    \ another name? ')\n    if More == 'No':\n        quit()\n    if More == 'Yes':\n\
+    \        start()\n    else:\n        print('Please enter Yes or No.')\n      \
+    \  more()\n```\n\nNote: quit() ends the program."
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "To direct the start() section of the program to the more() section of\nprogram,\
+    \ enter more() at the end of the try function as follows:\n\n```\ntry:\nPersons_data\
+    \ = people_dictionary[Name]\nprint('Name ': + Name.capitalize())\nprint('Sex ':\
+    \ + Persons_data[0]\nprint('Weight ': + Persons_data[1])\nmore()\n```\n\nAnd also\
+    \ enter more() at the end of the except function:\n\n```\nexcept:\nprint('That\
+    \ name (as written) was not found in the dictionary.')\nmore()\n```\n\nYour final\
+    \ code should look like this:\n\n```\ndef start():\npeople_dictionary = {'brett':\
+    \ ['Male', 'Weighs 175'],\n\ttantsy': ['Female', 'Weight 155'],\n\tpatrick': ['Male',\
+    \ 'Weight 195'],\n\tpriar': ['Female', 'Weight 115'],\n\tadam': ['Male', 'Weight\
+    \ 168']}\n\nName = input('Please type in a name: ').lower()\nprint('You typed\
+    \ in the name ' + Name.capitalize())\ntry:\nPersons_data = people_dictionary[Name]\n\
+    print('Name ': + Name.capitalize())\nprint('Sex ': + Persons_data[0]\nprint('Weight\
+    \ ': + Persons_data[1])\nmore()\nexcept:\nprint('That name (as written) was not\
+    \ found in the dictionary.')\nmore()\ndef more():\nMore = input('Would you like\
+    \ to search for another name? ')\nif More == 'No':\n\tquit()\nif More == 'Yes':\n\
+    \tstart()\nelse:\n\tprint('Please enter Yes or No.')\nstart\n```\n\nSave and run\
+    \ the program. Now you have a fully operational program!"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# PYTHON EXERCISE I
+
+
+    Write a program in Python 3 using IDLE that demonstrates the below concepts. Most
+    of this has been covered earlier, but some of it is new. On any point you don''t
+    understand, research online for the data and solution. Use comments in your program
+    to denote which lines of code demonstrates each of the below requirements.
+
+
+    If you cannot demonstrate any of these, research the solutions online first.
+
+
+    Complete these tasks:
+
+
+    +   1. Assign an integer to a variable.
+
+
+    +   2. Assign a string to a variable.
+
+
+    +   3. Assign a float to a variable.
+
+
+    +   4. Use the print() function to print out the variable you assigned.
+
+
+    +   6. Use each of these logical operators:
+
+    a. and
+
+    b. or
+
+    c. not
+
+
+    +   7. Use each conditional statement:
+
+    a. if
+
+    b. elif
+
+    c. else
+
+
+    +   8. Use a while loop.
+
+
+    +   9. Use a for loop.
+
+
+    +   10. Create a list and iterate through that list using a for loop to print
+    each item out on a new line.
+
+
+    +   11. Create a tuple and iterate through it using a for loop to print each item
+    out on a new line.'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '12. Define a function that returns a string variable.
+
+
+    13. Call the function you defined above and print the result to the shell.
+
+
+    Note: It is okay (and even encouraged) to combine any of the above requirements,
+    for example, you may use the variables and operators within an if else statement.
+
+
+    # PYTHON EXERCISE 2
+
+
+    To give you an idea of what you will run across as a developer, you will now be
+    assigned a task that will require you to figure out a solution on your own. Here
+    is your task:
+
+
+    Create a list of 10 items (such as animals, fruits, names, etc.). Ensure these
+    items are string values.
+
+
+    Now write a program that will alphabetize the list and then display the alphabetized
+    list.
+
+
+    > TIP: Google "alphabetize Python."
+
+
+    # END OF CHAPTER QUIZ
+
+
+    Can you answer the following questions?
+
+
+    +   1. What is a module?
+
+    2. What is Input and how do you create one?
+
+    3. What should you do if you receive an error message when writing code, you don''t
+    know what the error is?'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# CHAPTER SIXTEEN\nCHALLENGES\n\nIn this chapter, you will be assigned challenges.\
+    \ Some of the tasks assigned to you will have been covered in the earlier parts\
+    \ of this class, and some will be new territory, requiring you to research online\
+    \ for solutions.\n\nThe key to programming is: problem-solving. As a programmer,\
+    \ you will run into lots of barriers and have to solve many issues. The solution\
+    \ for this is: searching for solutions online.\n\nAnd so, if you find yourself\
+    \ stuck on a particular point, attempt to find a solution on the Internet. Two\
+    \ excellent online resources are:\n\n+   1) Google,\n2) W3Schools\n\n# PYTHON\
+    \ CHALLENGE 1\n\nCreate a program that figures out how long you have been alive\
+    \ in terms of years and months.\n\nHere is one way the code could look:\n\n```\n\
+    Name = input('Name: ')\nprint(\"Hello \" + Name +\n  \"! We are going to find\
+    \ out how long you have been alive!\"\\nAge = int(input('How old are you?'))\n\
+    print('You are ' ' + str(Age) + ' years old.')\nMonths = Age * 12\n#12 is the\
+    \ number of months in a year\nDays = Age * 365\n#365 is the number of days in\
+    \ a year\nprint(Name + ' ' + has been alive for: ' + +\n  str(Months) + ' months\
+    \ and ' + str(Days) + ' ' days!')\n```\n\nModify the program you created in Python\
+    \ Exercise 1 to additionally display how many minutes and seconds are in the number\
+    \ of years that the user enters.\n\nHint: there are 525948 minutes in a year and\
+    \ 31556926 seconds in a year.\n\n# PYTHON CHALLENGE 2\n\nThe range() function\
+    \ generates a list of numbers, which is generally used to iterate over with for.\
+    \ In other words, using it creates the list of index"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "numbers that you can then use in a for loop. The range() function has two different\
+    \ sets of parameters that can be used as follows:\n\nrange(stop): The number of\
+    \ numbers (integers) to generate, starting from zero.\n\nrange([start], stop,\
+    \ step]) //notice how the optional parameters are enclosed in [ ]. start: The\
+    \ starting number of the sequence. stop: The number of numbers (integers) to generate,\
+    \ starting from the integer specified with the start parameter. step: The difference\
+    \ between each number in the sequence. This is basically the 'count by' number.\n\
+    \nNote that:\n\n+   - All parameters must be integers.\n- Parameters can be positive\
+    \ or negative.\n\nNth is a mathematical term that refers to the last number in\
+    \ a sequence of numbers. For example, 1st, 2nd, 3rd, Nth.\n\nThe stop parameter\
+    \ is not the number which will stop on, but rather, the Nth number produced, where\
+    \ stop is the Nth number.\n\nFor example, type and run this code in a New Window:\n\
+    \n```\nmy_list = ['one', 'two', 'three', 'four', 'five']nmy_list_len = len(my_list)\n\
+    for i in range(0, my_list_len):\n    print(my_list[i])\n```\n\nIn this example,\
+    \ there are two parameters listed: 0 and my_list_len\n\nHere is your assignment\n\
+    \n1. Open a New Window and use the Python range() function with one parameter\
+    \ to display the following:\n\n```\n0\n1\n2\n3\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '2. Use the Python range() function with 3 parameters to display the following:
+
+
+    ```
+
+    3
+
+    2
+
+    1
+
+    0
+
+    ```
+
+
+    3. Use the Python range() function with 3 parameters to display the following:
+
+
+    ```
+
+    8
+
+    6
+
+    4
+
+    2
+
+    ```'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# CHAPTER SEVENTEEN\nROCK, PAPER, SCISSORS GAME\n\nNow, using what you learned\
+    \ so far in this book, we will create rock, paper, scissors in Python. Create\
+    \ a new file in the text editor and save it as Rock_Paper_Scissors_Game.py on\
+    \ your desktop. Within this new file, write this code:\n\n```\ndef start():\n\
+    \    print('Test: My Paper Scissors Game')\n    Player_One = 'Rock'\n    Player_Two\
+    \ = 'Paper'\n\n    def choices(Player_One_Choice, Player_Two_Choice):\n      \
+    \  if Player_One_Choice == 'rock' and Player_Two_Choice == 'paper':\n        \
+    \    return('Paper covers rock ' + Player_Two + ' wins!')\n        elif Player_One_Choice\
+    \ == 'paper' and Player_Two_Choice == 'scissors':\n            return('Scissors\
+    \ cuts paper ' + Player_One + ' wins!')\n        elif Player_One_Choice == 'scissors'\
+    \ and Player_Two_Choice == 'rock':\n            return('Scissors cuts rock ' +\
+    \ Player_One + ' wins!')\n        elif Player_One_Choice == 'rock' and Player_Two_Choice\
+    \ == 'scissors':\n            return('Rock smashes scissors ' + Player_One + '\
+    \ wins!')\n        elif Player_One_Choice == 'paper' and Player_Two_Choice ==\
+    \ 'rock':\n            return('Paper covers rock ' + Player_One + ' wins!')\n\
+    \        elif Player_One_Choice == 'scissors' and Player_Two_Choice == 'paper':\n\
+    \            return('Scissors cuts paper ' + Player_Two + ' wins!')\n        else:\n\
+    \            return('Please type Rock, Paper or Scissors!')\n\n    Player_One_Choose\
+    \ = input('Rock, Paper or Scissors: ').lower()\n    Player_Two_Choose = input('Does\
+    \ ' + Player_Two + ' choose Rock, Paper or Scissors? ').lower()\n    print(choices(Player_One_Choose,\
+    \ Player_Two_Choose))\n\ndef play_Again():\n    Again = input('Would you like\
+    \ to play the game again? ').lower()\n    if Again == 'no':\n        quit()\n\
+    \    if Again == 'yes':\n        start()\n    else:\n        print('Please enter\
+    \ \"yes\" or \"no\". Thanks for trying out')\n        play_Again()\n\nstart()\n\
+    ```\n\nSave and run your code. Play the game a few times. Well done! Now, read\n\
+    through your code line again, and find out what each line does exactly.\nEverything\
+    \ in this code was covered in this book!"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# END OF CHAPTER CHALLENGE
+
+
+    Perform the following actions on your program:
+
+
+    +   1. Change the Player_1 and Player_2 names, and
+
+    2. Make the game Elephant, Cat, Mouse instead! Meaning, change *rock* to *elephant,
+    mouse* to paper and *cat* to scissors.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "# CHAPTER EIGHTEEN\nHANGMAN GAME\n\nStart by creating a New File in the text\
+    \ editor, and naming it hangman.py.\nSave hangman.py on your desktop.\n\nThen\
+    \ within the text editor, write this code:\n\n```\nName = input('Please enter\
+    \ the name of the person who created this game: ')\nprint('This game was made\
+    \ by the amazing ' + Name + '!')\nprint('Welcome to my guessing game!')\nprint('In\
+    \ this program, you will try to guess a word that I chose.')\nprint('Good Luck!')\n\
+    \ndf start():\n    Player_Name = input('What is the name of the player? ')\n \
+    \   print('Greetings, ' + Player_Name + '! It is time to guess!')\n    Secret_Word\
+    \ = 'ostrich'\n    Guesses = ''\n    Turns Left = 11\n    while Turns Left > 0:\n\
+    \        WrongAnswers = 0\n        for Letter in Secret_Word:\n            if\
+    \ Letter in Guesses:\n                print(Letter)\n            else:\n     \
+    \           print('_')\n                WrongAnswers += 1\n        if WrongAnswers\
+    \ == 0:\n            print('YOU WIN! You guessed my word: ' + Secret_Word + '!!!')\n\
+    \            break\n        Guess = input('Guess a letter here: ').lower()\n \
+    \       Guesses += Guess\n        if Guess not in Secret_Word:\n            Turns\
+    \ Left -= 1\n            print('Oops! That letter is not in my word. Please try\
+    \ again.')\n            print('You have ' + str(Turns Left) + ' guesses left.\
+    \ You can do it!!')\n        if Turns Left == 0:\n            print('GAME OVER.')\n\
+    \    print('Play Again?')\n\ndf Play_Again():\n    Again = input('Would you like\
+    \ to play the game again? ').lower()\n    if Again == 'No'.lower():\n        quit()\n\
+    \    if Again == 'Yes'.lower():\n        start()\n    else:\n        print('Please\
+    \ enter Yes or No. Thank you!')\n    Play_Again()\n\nPlay_Again()\n\nstart()\n\
+    ```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: 'Save and run your code. You should pick a word and then have a family
+
+    member or friend play the game to try to guess it!
+
+
+    # END OF CHAPTER CHALLENGE
+
+
+    Perform the following actions on your program:
+
+
+    +   1. Change the secret word, and
+
+    2. Change the number of guesses allowed in your program.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# CHAPTER NINETEEN
+
+    CONGRATULATIONS!!
+
+
+    You have completed our book! Well done on your hard work and persistence!
+
+
+    You should now have a basic understanding of Python and coding.
+
+
+    As the next step, we recommend enrolling in a Tech Academy coding boot camp. Our
+    coding boot camps were designed like this book: for beginners and assuming no
+    prior knowledge or experience.
+
+
+    Here are some of the reasons thousands of students have chosen to enroll in The
+    Tech Academy:
+
+
+    +   1) Our curriculum – it''s modern, robust (strong; holds up over time), and
+    covers in-demand technologies. Our programs are thorough and cover more than just
+    1-2 languages. Our comprehensive curriculum ensures students aren''t pigeon-holed
+    (restricted to an exclusive category) within a small skillset. Understanding a
+    large array of technologies not only prepares graduates for the workforce, it
+    assists them greatly in picking up tech skills in the future.
+
+
+    +   2) We price our boot camps affordably. In fact, our tuition is less than the
+    national average weekly cost of coding boot camps.
+
+
+    +   3) We require no technical background or experience. You don''t have to already
+    know coding to learn to code. As long as students can read, write and perform
+    basic math, they can succeed at The Tech Academy.
+
+
+    +   4) We have a stellar online presence. Our average review rating across the
+    top review sites ranges from 4.5-4.9 stars. We have received the Best Coding Boot
+    Camp award several years in a row from SwitchUp.Org and CourseReport.Com (the
+    top two boot camp review sites) and are included on several other top boot camp
+    lists as well. We were also chosen as "The World''s Best Code School" by the television
+    show "World''s Greatest." All of these awards and reviews are based on feedback
+    from students and graduates of our programs.
+
+
+    +   5) We are extremely flexible. Students choose their own study schedule. They
+    can study from home, at one of our campuses or both. They have online access to
+    their program 24 hours a day. This ensures that students can enroll regardless
+    of their life circumstances. The fact that the programs are self-paced is aspect
+    of our flexibility – students can blast through content they know already, and
+    take their time with new concepts. An additional factor in our flexibility is
+    that we offer open enrollment, which means students can start anytime.
+
+
+    © Prosper Consulting Inc., The Tech Academy'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '6) Our admissions staff and enrollment process are transparent and helpful.
+    We answer questions and are polite, giving students a positive experience from
+    the start.
+
+
+    To get started, visit The Tech Academy''s website: learncodinganywhere.com'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# INDEX
+
+
+    !=, 69
+
+    >= 69
+
+    <=, 70
+
+    ==, 61
+
+    >>>, 50
+
+
+    Equal to (=), 61
+
+    Exit, 36
+
+    Expression, 45
+
+    File Paths, 41
+
+    Five Elements
+
+
+    77
+
+    Length function, 82
+
+    Less Than or Equal to,
+
+    (<=), 70
+
+    Lists, 74, 75
+
+    changing, 75
+
+    loops and lists, 76
+
+    numbers and lists, 76
+
+
+    Addition, 51
+
+    Algorithm
+
+    definition, 28
+
+    Apostrophe
+
+    interchangeable, 54
+
+    Array
+
+    definition, 43
+
+
+    Control/Branching,
+
+    29
+
+    Entrance, 29
+
+    Exit, 36
+
+    Subprogram, 35
+
+    Variables, 30
+
+    Float variable, 57
+
+
+    Loop
+
+    example, 33
+
+    for loop, 73
+
+    while loop, 74
+
+    Machine
+
+    defefinition, 9
+
+    Machine language
+
+    defefinition, 17
+
+
+    Boolean data type, 54
+
+    Call, 46
+
+    Case-sensitive, 51
+
+    Code
+
+    defefinition, 12
+
+    Coding, 8
+
+    Commenting Code, 61
+
+    Computer
+
+    defefinition, 10
+
+
+    Function
+
+    "def", 79
+
+    definition, 46, 79
+
+    delete, 83
+
+    float, 81
+
+    integer, 82
+
+    length, 82
+
+    input, 87
+
+    .split(), 65
+
+    string, 81
+
+    .swapcase(), 66
+
+
+    Main program, 35
+
+    Mathematics
+
+    definition, 51
+
+    division, 52
+
+    expression, 45
+
+    function, 46
+
+    integer, 44
+
+
+    Computer
+
+    defefinition, 13
+
+    Concatenate
+
+    defefinition, 45
+
+    strings, 66
+
+    Control/Branching, 29
+
+    Counter, 72
+
+    Data Type
+
+    defefinition, 44
+
+    float, 54
+
+
+    Greater Than or Equal
+
+    to (=), 69
+
+    Hardware defence, 12
+
+    High-Level Language,
+
+    23
+
+
+    operators, 43
+
+    multiplication, 52
+
+    subtraction, 52
+
+    Memory, 44
+
+    Module
+
+    create modules, 87
+
+    defefinition, 62
+
+    examples, 86
+
+    import, 73
+
+    Multiplication, 52
+
+    Network
+
+
+    IDLE, 39
+
+    If statements, 63, 70
+
+    Indentation, 63
+
+    Input, 87
+
+    Installation, 49
+
+    Instruction
+
+    defefinition, 10
+
+    Integer, 44, 54
+
+    function, 82
+
+
+    string, 54
+
+    Dates, 65
+
+    "def", 79
+
+    Delete, 83
+
+    Developer
+
+    defefinition, 13
+
+    Dictionaries, 77
+
+    Division, 52
+
+    Elif Statements, 71
+
+    Else Statements, 71
+
+    Entrance, 29
+
+
+    Not Equal to (=), 69
+
+    Operating System
+
+    defefinition, 39
+
+    Operators, 43
+
+    OS (see Operating
+
+    system)
+
+    Parameter, 46
+
+    Parse, 38
+
+    Parser, 38
+
+
+    Internet
+
+    defefinition, 18
+
+    Interpreted, 24
+
+    Iteration, 37
+
+    Key-Value Pair (KVP),'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# INDEX
+
+
+    +   Path, 41
+
+    Peripheral
+
+    definition, 39
+
+    Program
+
+    definition, 12
+
+    Programmer
+
+    definition, 13
+
+    Programming
+
+    Language
+
+    definition, 14
+
+    Protocol
+
+    definition, 19
+
+    example, 19
+
+    Python
+
+    apostrophe, 54
+
+    BDFL, 22
+
+    case-sensitive, 51
+
+    G. van Rossum, 50
+
+    “hello, world”, 50
+
+    Installation, 49
+
+    math, 51
+
+    Monty Python, 22
+
+    quotation mark, 54
+
+    Quotation Mark
+
+    interchangeable, 54
+
+    Returning a Value, 82
+
+    Round Function, 82
+
+    Script
+
+    definition, 23
+
+    Shell
+
+    definition, 40
+
+    example, 40
+
+    Software definition, 12
+
+    .split(), 65
+
+    Statement, 46
+
+    String variable
+
+    concatenation, 66
+
+    definition, 45
+
+    example, 45, 66
+
+    Subprogram
+
+    definition, 35
+
+    example, 47
+
+    Subtraction, 52
+
+
+    +   .swapcase(), 66
+
+    Syntax, 37
+
+    Tape Archive, 42
+
+    Tar, 42
+
+    Test Grade Example, 31
+
+    Testing Variables, 70
+
+    Tech Academy, 101
+
+    Text Editor, 15
+
+    time.sleep(), 73
+
+    Tuples, 65
+
+    Unambiguous, 27
+
+    Variables
+
+    definition, 30
+
+    example, 30, 50
+
+    testing, 70
+
+    World Wide Web
+
+    definition, 18
+
+    Web, the, 18
+
+    Wide Web'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# OTHER READING
+
+
+    Be sure to check out other Tech Academy books, which are all available for purchase
+    on Amazon:
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_106_0.png)
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_106_1.png)'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '![](img/29b742b0a03470e98200c43a70e549de_107_0.png)
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_107_1.png)'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# # PROJECT MANAGEMENT
+
+    HANDBOOK
+
+
+    Simplified Agile, Scrum and DevOps for Beginners
+
+
+    Written by
+
+    Jack C. Stanley & Erik D. Gross
+
+    Co-Founders of The Tech Academy'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# THE TECH ACADEMY
+
+
+    Python tops some lists as the most popular computer programming language in the
+    world. This book is an introduction to coding, using Python, for individuals with
+    no past technical knowledge or experience.
+
+
+    Here are some questions for you:
+
+
+    +   - Are you interested in seeing what coding is like?
+
+    - Would you like to find out if computer programming is something you enjoy doing?
+
+    - Are you considering working in the tech industry?
+
+
+    If your answer is "yes" to any of these questions, then this book was written
+    for you.
+
+
+    You can complete this book in a matter of hours and at the end, you will not only
+    have a fundamental knowledge of Python, you will have a better understanding of
+    technology in general.
+
+
+    We hope you enjoy this book and good luck on your coding journey!
+
+
+    The Tech Academy is a technology school headquartered in Portland, Oregon, with
+    multiple campuses around the world. We specialize in coding boot camps (intensive
+    training programs aimed at preparing graduates for entry-level technology positions,
+    that can be completed in a few months). We also offer custom training for companies,
+    and have published several books.
+
+
+    To find out more about The Tech Academy, visit: Learncodinganywhere.com
+
+
+    ![](img/29b742b0a03470e98200c43a70e549de_111_0.png)'
+  merge: -1
+  pgno: 111
