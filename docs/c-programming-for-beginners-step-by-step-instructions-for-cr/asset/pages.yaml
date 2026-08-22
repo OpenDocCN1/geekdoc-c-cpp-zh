@@ -1,0 +1,4750 @@
+- img_proc: true
+  md: '# # C++
+
+
+    # PROGRAMMING
+
+
+    # FOR
+
+
+    # # BEGINNERS
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_0_0.png)
+
+
+    TROY CARTER'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# C++ PROGRAMMING
+
+
+    Step-by-Step Instructions for Creating a Robust
+
+    Program from Scratch
+
+    (Computer Programming Crash Course 2022)
+
+
+    Troy Carter'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# TABLE OF CONTENTS
+
+
+    +   INTRODUCTION
+
+
+    +   CHAPTER 1:
+
+
+    +   SETTING UP A C++ DEVELOPMENT ENVIRONMENT
+
+
+    +   CHAPTER 2:
+
+
+    +   BASICS OF C++, PRINCIPLES OF PROGRAMMING
+
+
+    +   CHAPTER 3:
+
+
+    +   VARIABLES AND DATA TYPES
+
+
+    +   CHAPTER 4:
+
+
+    +   OPERATIONS IN C++
+
+
+    +   CHAPTER 5:
+
+
+    +   DECISION MAKING IN C++
+
+
+    +   CHAPTER 6:
+
+
+    +   CREATING FUNCTIONS
+
+
+    +   CONCLUSION AND FINAL NOTES
+
+
+    +   GLOSSARY
+
+
+    # INTRODUCTION
+
+
+    This book is good for people who are new to programming and for people who want
+    to learn more about backend programming. Even though C++ is sometimes a ghost
+    from the past, the language is still alive and well, and it still plays a big
+    role in some of the most important technologies we use today. In the past, it
+    has been one of the most important'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'languages in the world. It isn''t going anywhere, and learning it will open
+    up your world.
+
+
+    C++ is often used as a backend language for big data because it takes very little
+    time to process the data. You''ll soon see why companies like Spotify, Adobe,
+    YouTube, and Amazon use C++ to run their backends, and you''ll start to see why
+    enough.
+
+
+    C++ is also used to make powerful game engines. Gamming engines let programmers
+    make a game without having to write everything from scratch. They also make it
+    easier to show the content in a game. A game engine runs on C++ is Unity Game
+    Engine or Unreal Engine.
+
+
+    This is why C++ is a beautiful and efficient language: it has a good power-to-hardware
+    ratio. It uses very little hardware for the power it gives us. They love it because
+    they learned how to do it. This is why..
+
+
+    In this book we will cover the following topics:
+
+
+    +   - Programming terminology and principles in programming
+
+    - Setting up a C++ environment
+
+    - Getting Started: Syntax, Data Types, and Variables
+
+    - Power of C++: Operations, Loops, Switches, and DecisionMaking
+
+    - Creating custom functions in C++
+
+
+    You will also find a useful glossary at the end so that you can use the book as
+    a reference once you get cracking.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# CHAPTER 1:
+
+
+    # SETTING UP A C++
+
+
+    # DEVELOPMENT ENVIRONMENT'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: At its most basic, programming is writing a list of instructions in code that
+    the machine can understand. The code resides in executables files. These files
+    come with file extensions that tell a compiler what language is
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'in the file. These extensions are the suffixes you often see at the end of
+    the file, like ".js". ".cpp" or ".hpp".
+
+
+    To write code and save it in an executable file you need the following things:
+
+
+    A text editor: this will allow you to write and edit the code.
+
+
+    A language compiler: This program takes the code you have written and translates
+    it into machine language that your computer can understand and follow.
+
+
+    All programming languages work like this except HTML, CSS, and JavaScript - these
+    programs are interpreted and executed by the browser "Introduction," n.d.). This
+    means browser languages like JavaScript are software-based, while C++ is compiled
+    and then run directly on your machine, not in a software environment.
+
+
+    This means C++ is an assembly language. Assembly languages are low-level programming
+    languages that need a compiler so they can run on a machine (Lithmee, 2018). In
+    this context, the word low- level does not carry a bad connotation; it is descriptive,
+    meaning thatthe language is closer to the machine or just a step away from it.
+
+
+    As you can probably guess, C++ is a general-purpose language that can run almost
+    anywhere. This means it can be assembled and compiled in several different ways.
+    This will largely depend on your operating system and the creation utilities you
+    are using.
+
+
+    Our C++ exercises will be compiled on an online IDE. IDE stands for Integrated
+    Development Environment and it is used to edit and compile code. I bet that description
+    sounds familiar. Yes, an IDE example of a text editor, but unlike a plain text
+    editor, it has extra features that are important to the programming process. An
+    IDE can do things like compile code, debug code, highlight code, warn you of syntax
+    errors, and more.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_7_0.png)
+
+
+    In this book, we will use a Geeks for Geeks web-based IDE, but you should learn
+    to set up a local IDE. For the majority of your programming career, that is where
+    you will be working. Plus, you can customize the IDE to fit your needs and spruce
+    up your code.
+
+
+    # Setting up Your Text Editor
+
+
+    > Note: If you have a Linux, you will already have a text editor as Linux is a
+    console-based environment. Console-based environments use a command-line interface
+    (CLI), where you interact with programs by issuing lines of code. IDE for Linux
+    may include a graphical user
+
+
+    environments that are focused on programming always to have a text editor and
+    a compiler within them. Non-IDE environments separate compilers and plain text
+    editors. The text editor serves as a programming interface in non-IDE setups;
+    this simply means the text editor will be the place you tinker with the code.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "When looking for a text editor, you need one with syntax highlighting and indenting\
+    \ as all programming languages follow their syntax. This is because you want to\
+    \ be able to read your code easily and you want collaborators to be able to do\
+    \ so, too. These text editors help by improving readability. This is especially\
+    \ important because coding is no longer and has never been a solitary task. There\
+    \ is no one-mangenius like in the movies.\n\nGithub and Pastebin are code aggregators\
+    \ that have syntax highlighting add-ons enabled. Github will allow you to host\
+    \ your entire project on your site, while Pastebin only allows code snippets.\
+    \ On these platforms, you can save code in a variety of languages.\n\n```\n#include\
+    \ <iostream>\n#include <string>\n\nusing namespace std;\n\nint main() {\n    int\
+    \ n = 5;\n    int result = 0;\n    for (int i = 0; i < n; i++))\n        result\
+    \ += i;\n    cout << result;\n    return 0;\n}\n```\n\nThey are very useful to\
+    \ programmers to share code, collaborate, test, and so forth. Learning how to\
+    \ deploy a project to Github is one of the most important things in programming\
+    \ because it has become standardized. So, maintaining a Github profile has also\
+    \ become important, as it holdsall the projects you are working on, have worked\
+    \ on, and your activity (Peshev, 2017). To a potential employer or collaborator,\
+    \ this information is invaluable.\n\n# C++ Code Syntax Example\n\nThis is a screenshot\
+    \ from Paste Bin with syntax highlighting enabled (\"C++ Code,\" 2015). Syntax\
+    \ highlighting and tabbed spacing help making the code more comprehensible. All\
+    \ text editors with syntax highlighting will use this scheme: libraries in green,\
+    \ and functions, data types, and data in blue. Strings will showup as red."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_9_0.png)
+
+
+    When we are working locally you will not have luxuries like these readily available.
+    The first text editor you will find on your system if you are using windows Notepad.
+    Wordpad is another one that has more GUI features. What you will notice as you
+    open these programs are plain and boring they are. They are like Word but worse,
+    because they shouldn’t be simple word processors if writing efficient, elegant
+    code is important to you. Their word processor-like aspects make them more suitable
+    for writing words in them, not code, although you can code in them.
+
+
+    # Side-by-side comparison of Windows’ Notepad utility and Wordpad utility
+
+
+    This is a screenshot that features two of Windows’ built-in utilities, Notepad
+    on the left and Wordpad on the right. Wordpad has more Microsoft suite GUI features
+    that may be more recognizable to you, including Microsoft’s quick access bar located
+    above the highlighted "File" tab. Notepad is very bare-bones in comparison. Both
+    utilities, unlike word processors, allow you to save in different file extensions.
+    However, Wordpad is more similar to a word processor than Notepad, saving files
+    in rich text format (.rtf). Wordpad will warn you that you will lose formatting
+    if you save in anextension other than rich text format.
+
+
+    What makes Notepad and Wordpad unique is that they can save files in a variety
+    of file extensions, while word processors cannot. File extensions are important
+    because they tell the compiler to interpret what is written in the file, and that
+    leads to the machine having a set of instructions it can understand and execute.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Despite their abilities, these two programs lack crucial text editor features
+    like syntax highlighting. You might think this is no big deal, but it is; the
+    same words in code can mean different things because of how and when they appear,
+    so highlighting helps us distinguish what they refer to. So if everything is plain,
+    black and white, you have to work harder to figure out what a piece of code refers
+    to. It sounds complex now, but once you code this will become obvious and necessary.
+
+
+    Notepad++, not to be confused with Windows ''Notepad'', has highlighting features
+    but you will have to activate like so:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_10_0.png)
+
+
+    # Screenshot of Notepad ++ with C++ Syntax
+
+
+    Notepad++ is free, and as the name suggests, was programmed in C++. This screenshot
+    illustrates how to enable language syntax. C++ syntax can specifically be enabled
+    by going to language >"C"
+
+
+    > and navigating to C++. Notepad++ is only available on
+
+    > and navigating to C++. Notepad++ is only available on the Windows platform (Orin,
+    n.d.).
+
+
+    Bluefish is a more advanced text editor that comes with more features (“Bluefish
+    Editor: Features,” n.d.). Unlike Notepad++,Bluefish is available on multiple platforms
+    other than Windows. But I would not recommend Bluefish for beginners because it
+    has a lot of features that can be overwhelming to a complete beginner. If you
+    are not new to'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'programming you can go it a shot; you will find it has many of the GUI features
+    typical of an IDE editor.
+
+
+    Once in the text editor, you must select a compiler. Now let me show how you would
+    set up your local environment on three platforms: Windows, Linux, and Mac.
+
+
+    # Windows IDE Installation and Setup
+
+
+    All you need to do is install an IDE. Just remember that it has to have a text
+    editor and a compiler within it. **Code::Blocks** is a useful, open-source IDE
+    made for C++ and it fits easily with a variety of compilers including Microsoft''s
+    Visual C++. Installing::Block is easy. You just have to go to their downloads
+    page at http://www.codeblocks.org/downloads/26 and select the latest version.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_11_0.png)
+
+
+    # Code::Blocks Download Page
+
+
+    As of this writing, Code::Blocks has version 20.03 for Windows and Linux distributions.
+    The page also includes helpful notes for installation.
+
+
+    Once the program is installed, you are set. You can use it to write C++ programs.
+    To do so you have to follow three steps: creating a file, building the program,
+    and running the program.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Creating a new file is a bit more nuanced. Here is what you have to do:
+
+
+    Go to File > New
+
+    Select “Create an empty file” and input your code
+
+    Save the file with a “.cpp” extension
+
+    And, needless to say, you have to build a program before you can run it. You can
+    do this by going to Build > “Build and Run” in the menu.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_12_0.png)
+
+
+    # Screenshot of “Hello World” in Code::Blocks
+
+
+    This is a live screenshot of our “Hello World” program in code blocks. After this
+    program is run, an error shows up in the Build Messages of the code. Code::Blocks
+    highlights the error on line 6. Given your knowledge of C++ syntax from the earlier
+    section, you should see how to repair the code. How can we repair the code?
+
+
+    By the way, this program is very lightweight for the amount of work it allows
+    you to do. Code::Block is available on Windows and Linux, but there is no Mac
+    version.
+
+
+    # Mac OS IDE Installation and Setup'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'For Mac, you will need to get Xcode . It is a free IDE software development
+    suite for macOS. You can get it on the Mac App Store. Xcode supports a variety
+    of other languages like Java, Python, and Ruby.
+
+
+    It is geared towards developing software for macOS operating systems; this can
+    be for the tvOS for AppleTV, watchOS for Apple watches, and the iPad for iPad
+    tablets (“What’s New in Xcode 9,” n.d.). Xcode offers a variety of development
+    kits (SDKs) for different macOS platforms to help programmers through Apple’s
+    proprietary programming schemes. SDKs are a set of tools, providedby hardware
+    and software vendors, used for developing applications for specific platforms
+    (“What’s New in Xcode 9,” n.d.). SDKs allow developers to be fully integrated
+    within a development community, like Apple’s or Android’s.
+
+
+    Mac uses proprietary compilers that will only work with Xcode, so if you are on
+    Mac you have little choice to develop with C++ using Xcode. You can download and
+    install Xcode by following this link:
+
+
+    https://apps.apple.com/us/app/xcode/id497798385?mt=12
+
+
+    Once the file is downloaded and installed, open Xcode and click on the “Create
+    a new Xcode Project” icon. Then select “New Project” in the initial window.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_13_0.png)'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Initial Screen for Xcode: Select a new project
+
+
+    These screenshots feature an Xcode build from version 8.3.3 (Patel, 2017). Therefore,
+    our examples might look different from a more up-to-date build. As of this writing,
+    the most current version is 12.1, which mostly includes updates to the various
+    macOS platform (“Xcode,” n.d.). Despite these differences, these screenshots will
+    still help you orient yourself in the more current build. Our instruction will
+    still yield results.
+
+
+    After you do this, a prompt window will appear that will ask you to choose a template.
+    This window will guide you through the rest of the setup. Select the macOS sections
+    and go to the Application section; in there, choose the Command Line Tool.
+
+
+    It looks something like this:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_14_0.png)
+
+
+    # 1. Project Selection Screen: macOS > Application > CommandLine Tool
+
+
+    Xcode has many built-in code utilities for running programs on various Apple platforms.
+    Therefore, to run a test program you would have to select macOS for it to run
+    on your program. Further,'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'to access assembly language software development needed for C++, you would
+    have to use Xcode''s command-line tool. This command-line tool can handle Objective-C
+    and C languages as well.
+
+
+    After you select a template, the guide will present options for the command-line
+    tool. Here, you can name the project, add your organization’s name, use a bundle
+    identifier, and select a programming language.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_15_0.png)
+
+
+    # 2. Command Line Tool Options: Language > Select C++
+
+
+    Xcode’s command-line tool can handle Microsoft’s proprietary languages like Swift.
+    This program can run alongside C-based languages in Mac compilers, including C++.
+    Swift is selected by default.
+
+
+    In the same window, you will be required to add an organization identifier. Remember
+    that Xcode''s command-line tool is a programming template for proprietary macOS
+    operating systems, so the organization identifier is used to create a unique idea
+    for your program in Apple databases: the Apple Developer Website and'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'iCloud Container, iTunes connect portal in the Appstore. This will streamline
+    your app into a proprietary macOS framework.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_16_0.png)
+
+
+    # 3. Command Line Tool Options: Organization Identifier > “cpp”
+
+
+    The organization''s identifier is a naming convention that helps programmers integrate
+    their projects into Apple’s proprietary software development scheme. Here, we
+    are using “cpp” as our identifier, which generates “cpp.HelloWorld” as our bundle
+    identifier. Once we indicate an identifier, the guide allows us to proceed tonext
+    step.
+
+
+    Now, save your project in a directory of your choice. On the left-side pane, Xcode
+    will be able to open the file. You will have to select main.cpp to access the
+    global C++ file for your program in Xcode. If you so desire, you can upload cpp
+    files into the directory, and edit them.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_16_1.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_17_0.png)
+
+
+    # 3. Xcode Command Line Tool: “main.cpp”
+
+
+    This screenshot features the IDE style Xcode Command Line Tool workspace. It has
+    the main.cpp opened in the text editor (Patel, 2017).
+
+
+    Once you have written some code and you want to run it, you select Product and
+    click on Run. Also, you can run and build the program by selecting the button.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_17_1.png)
+
+
+    # 4. Xcode Command Line Tool: “Hello World” Build and Run
+
+
+    Similar to the Code::Blocks IDE, you will also have to build and then run your
+    program. This screenshot also features the results of'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '“Hello World” and the return value (Patel, 2017).
+
+
+    If you are a programmer who sees themselves working with Apple devices, working
+    and practicing in Xcode is a good investment. For instance, Apple has a healthy
+    share of the market in a wide variety of consumer goods and services like streaming
+    services and devices. With that said, you should keep in mind that C++ is used
+    mostly as a server-side language. Server-side programming is code that controls
+    how content is delivered to a dynamic website like YouTube. Most server-side programming
+    is done on Linux machines.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Linux Compiler Installation
+
+
+    Linux is a console-based operation system, so it does not need a text editor.
+    Instead, we will focus on installing and setting up a programming compiler. Mac
+    and Windows automatically initialize a compiler in the IDE, but in Linux, a more
+    hands-on approach is required. You will be required to execute a backend initialization.
+    It might seem like a lot of work, but in the great scheme of things, it allows
+    those working with Linux to have full control of the development procedure and
+    unlock more computing power.
+
+
+    Because Linux is an operating system that uses a console interface, it will be
+    strange to beginners or anyone who is used to Windows or Mac. This is because
+    users are often used to a GUI. The GUI-lessness of Linux allows more computing
+    power to be freed for programming – a GUI takes some computing power to produce
+    and maintain. This is why many servers and other programming environments have
+    console interfaces. Also, many of use Linux distributions.
+
+
+    A Linux distribution (distro) is an operating system made from Linux kernel-based
+    software collection and package management system for installing additional software.
+
+
+    The following are instructions for installing and initializing a compiler.This
+    will be for Ubuntu, a popular Linux distro for beginners. These installations
+    will be similar in any Linux distro you will be using.
+
+
+    Note : There are many distributions of Linux that provide a GUI desktop experience
+    that many users love. Most of these are opensource and free to download and install.
+    You can explore thesedistros and create console interfaces to practice. One free
+    distro to consider CentOS, which is based on Red Hat for server management (“Centos-faq
+    | Open Source Community,” n.d.). Red Hat Enterprise Linux (RHEL) is used in many
+    server management setups and is not free. However, CentOS uses many of its components
+    and is an excellent distro for preparing to work in Red Hat environments.
+
+
+    In this example, we will use the GNU Collection Compiler on Linux. The GNU Collection
+    Compiler is a Linux-based compiler that supports C++ and various languages like
+    Fortran, Ada, and Java (“GCC 7 Release Series—Changes, New Features, and Fixes'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '—GNU Project—Free Software Foundation (FSF),” n.d.). To install
+
+    GNU GCC, follow these steps:
+
+
+    In the console, enter the following commands:
+
+
+    Check first if there is a version already installed on your machine by
+
+    entering this command: gcc -v
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_20_0.png)
+
+
+    # A. Check for GNU GCC in
+
+    Ubuntu Console
+
+
+    You should check your system for a copy of the GCC. This screenshot features a
+    system with GCC already installed (Patel, 2014). After using the command, if there
+    is no copy of GCC in your system, it will be missing this line. If there is a
+    copy, it will have a similar line. Most likely, your version will be more recent.
+
+
+    The following commands will install GCC on your system (Agarwal,
+
+    2017b):
+
+
+    ```
+
+    sudo apt-get update
+
+    ```
+
+
+    ```
+
+    sudo apt-get install GCC
+
+    ```'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '```
+
+    sudo apt-get update
+
+    sudo apt-get install gcc gfortran -program-suffix=.f90 -enable-shared
+
+    included --enable-threads -with-gcc include-dev /usr/include/c++
+
+    -libstdc++-dev-libg1-dev
+
+    -ag -version target=x86_64-linux-gnu --multilib -ntarget=x86_64-linux-gnu
+
+    buildbuild-x86_64-linux-gnu gcc-x86_64-linux-gnu gfortran-x86_64-linux-gnu
+
+    ```
+
+
+    # A. Install GNU GCC in Ubuntu Console
+
+
+    In the screenshot, a GCC is already present. Running the highlighted command will
+    install the GNU GCC on your system if it isn''t there (Patel, 2014). The console
+    will prompt you to type “Y” for it to begin the installation. You are also offered
+    package management features like the ability of the terminal to inform you outdated
+    or unnecessary packages. It will also suggest commands that will make your system
+    more efficient. This explains the popularity of Linux with programmers; although
+    wordy, it allows them to troubleshoot with ease, gives them more control, and
+    it is easy to navigate when compared to GUIs. This is because programmers are
+    more likely to remember a line of code whereas something resides in the GUI.
+
+
+    The following command will install all the libraries required to compile code
+    and eventually run C++:
+
+
+    ```
+
+    sudo apt-get install build-essential
+
+    ```'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_22_0.png)
+
+
+    # A. Install GNU GCC in Ubuntu Console
+
+
+    This screenshot shows a system with the build-essential libraries installed and
+    inputting the highlighted installation command (Patel, 2014). Just as with installing
+    the GCC, after using the command and finding there is no copy of the build-essential
+    libraries in your system, it will prompt you to install. Type in “Y” and the terminal
+    willinstall libraries.
+
+
+    Check the installation with the following command:g++ --version If all went well
+    it will tell you what version of GCC is installed. Because Linux has a built-in
+    text editor you will have to use thefollowingcommand to access the GUI for the
+    text editor: gedit
+
+
+    You will be free to write your program as you see fit. Remember to save the programs
+    with the “.cpp” extension so that they will be compiled correctly.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_23_0.png)
+
+
+    # Gedit in Ubuntu
+
+
+    This screenshot features Linux’s built-in text-editor, Gedit ([Running C, C++
+    Programs in Linux] Ubuntu 16.04 (Ubuntu Tutorial for Beginners), n.d.). Gedit
+    is a Linux programming editor that has syntax highlighting and tabbed spacing
+    features for a diverse array of programming languages. Be sure to have “C++” selected
+    from the highlighted dropdown menu. You can save your program file in the GUI
+    by clicking the “save” button. Be sure to list which directory you have your file
+    saved, as you will have to point the compiler to that directory to compile and
+    run the code.
+
+
+    To test and run your code you must follow these instructions:
+
+    Lead the terminal to the files directory
+
+    To do this use this command. Enter it in the directory repeatedly until the .cpp
+    file is revealed.
+
+    Compile and test the program fileUse these commands to so:
+
+
+    ```
+
+    g +- otest[filename].cpp
+
+    ```
+
+
+    If there are any errors this command will tell you which line contains the error
+    just like you would expect from an IDE. Then you can open the program file through
+    “gedit [filename.cpp]” and fix the line of code.
+
+
+    Run the program file'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "The compiler will create an executable file called “test” that will run the\
+    \ program. You can execute it by entering “./test” in the terminal.\n\n![](img/3ceb4a3dfd578d1d4c40199c71445dd8_24_0.png)\n\
+    \n# Testing, Compiling and Running a .cpp file in Ubuntu\n\nThis screenshot features\
+    \ the terminal testing, compiling, and running the example code written in gedit\
+    \ ([Running C, C++ Programs in Linux] Ubuntu 16.04 (Ubuntu Tutorial for Beginners),\
+    \ n.d.).\n\nLinux distros are verbose console-based systems and most of them can\
+    \ handle programming in any language through the terminal. Learning to work in\
+    \ the Linux environment is beneficial as it exposes you to server-side programming.\n\
+    \nyumgroupinstall\"DevelopmentTools Note : The process for installing GCC and\
+    \ compiling on CentOS is similar. To install, you instead use \n\nThis command\
+    \ automatically installs the needed libraries as well. The steps forcomposing,\
+    \ compiling, testing, and running the program are all the same."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: Creating your own programming environment helps prepare you for real-world scenarios
+    in a way that online coding spaces cannot. In this book, we will be using an online
+    IDE. This is because everyone will have the same learning environment with standardized
+    outputs and interfaces. It simplifies things.
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# CHAPTER 2:'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_27_0.png)
+
+
+    # BASICS OF C++, PRINCIPLESOF'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# PROGRAMMING
+
+
+    Like any other language, programming languages have a structure, syntax, and set
+    of rules that make them easy to learn and use. In order to be a good person, you
+    need to know the words of another language. Knowing how to use them and how they
+    work in that language is an important part of communicating well in language.
+    They all work the same way, but the communication they care about is between humans
+    and machines. Even though machines are not as smart or capable as we are today,
+    there is still so much they can learn that we don''t understand. We can do this
+    at a rate and in a way that isn''t possible for us. All programming is a set of
+    steps. In these we can be rules, actions you want the machine to do, or something
+    else. In other words, we are able to communicate with each other because we follow
+    the rules of a programming language.
+
+
+    Programming rules, or syntax, are a set of symbols used to communicate things
+    like functions and variables in a program. These symbols are called delimiters,
+    so how a code looks is important to the compiler. It tells them what instructions
+    to give a machine.
+
+
+    Keep these things in mind before we start: C++ is not as easy to understand as
+    Python or other high-level programming languages. High-level languages, JS, Python,
+    and C#, are made this way because it makes them easier to read and manage. This
+    is why they are made this way. C++, even though it is this way, is easier for
+    machines to understand because it isn''t so abstracted. This is why. This is when
+    you work with C++, you only need a compiler and a text editor, and languages like
+    Python need their own environments set up.
+
+
+    # Principles of Programming
+
+
+    C++ has many ways of completing the same task. Just like human languages, there
+    are many ways of saying the same thing, but some ways are best suited for certain
+    occasions and sometimes''t. C++ is the same way; some methods are great because
+    they reduce program overhead. Many developers will want that it increases the
+    performance of the entire application, and that is the first principle of programming:
+    complete a task with the least amount of functions as possible. Do not make things
+    more complicated than they need to be. In most cases, this means using a loop
+    or a switch statement in a frugal way.
+
+
+    The best way to do this is by understanding the nature of the problem first and
+    how best to implement the solution. In other words, you will need to write an'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'algorithm – a list of instructions that you want the machine to follow to fix
+    the problem.
+
+
+    Your designs should always begin with the thing you want the program to do. This
+    will also include your algorithm, or at least the problem that your algorithm
+    will fix. The algorithm will always look something like this:
+
+
+    Input: data coming, where
+
+
+    Processing: operations performed on the data anddeclaration of variables
+
+
+    Output: results, or the action you performed.
+
+
+    Here is a verbose example of a C++ program for displaying “Hello World”. This
+    is to illustrate how C++ programs are composed:
+
+
+    ```
+
+    // Simple C++ program to display "Hello World"
+
+    // Header file for input and output functions#include<iostream>
+
+    using namespace std;
+
+    // main function -
+
+    // where the execution of program begins main()
+
+    {
+
+    // prints hello world<<"Hello World";return 0;
+
+    }
+
+    ```
+
+
+    Here is the structure:
+
+
+    Call file for input and output functions
+
+
+    Call the main function where the execution happens
+
+
+    Print “Hello World
+
+
+    Terminating statement that indicates the state of themachine
+
+
+    We can see how verbose C++ is, because most of the steps regard the backend aspects
+    of C++ that are needed to execute the code, such as calling the library files.
+    Your algorithms don''t need to be detailed most of the time.
+
+
+    Despite being simple, this algorithm illustrates how developers take tasks and
+    translate them into code. In the next chapter, we will use this algorithm to write
+    our program.
+
+
+    As you have noticed in the example, there are comments in the code that explain
+    each part of the code does. These comments are preceded by “//”. The compiler
+    will not read any lines of code preceded by // because they don’t do anything
+    but help other people working on the code read what the code does. It is good
+    practice to include comments in your code so people know what each line of code
+    does.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Overview of the C++ Syntax
+
+
+    We have talked about the importance of syntax for the compiler, but it is also
+    important to understand the syntax of a programming language because it will allow
+    you to debug the code. Just like human languages, if you know the rules of a language
+    you can correct yourself easily when you make mistakes.
+
+
+    Debugging is the process of finding and removing errors and abnormalities in the
+    code, also known as "bugs" ("What is Debugging? n.d.). It is a process of correction.
+
+
+    IDEs have debugging tools that highlight errors occur in the code, but these features
+    aren''t always reliable. For instance, leaving out a semicolon to terminate a
+    line of code is a common error, but the debugger will highlight the error in the
+    (.h) instead of the program file (.cpp). Most debuggers are not intelligent enough
+    to detect an absence of something and will throw the verbose error that the compiler
+    gives when the unterminated line violates a rule in the library. However, a programmer
+    will pick up the error simply when they notice the red semicolon line delimiter
+    is missing from one of the lines.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_30_0.png)
+
+
+    > “Hello World” program in GeeksforGeeks IDE without a line delimiter
+
+
+    This screenshot features “Hello World” with a missing delimiter. Immediately you
+    will notice that the IDE has different syntax highlighting for C++ than the programming
+    environments we explored
+
+
+    in the previous chapter. Syntax can vary from platform to platform. This is why
+    we are standardizing the process with GeeksforGeeks IDE. In our chosen'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'IDE, semicolons are not highlighted. However, the IDE can make up for this
+    by recognizing and annotating missing semicolons, as highlighted in the screenshot.
+    You can practice and explore this program by going to its generated URL: https://ide.geeksforgeeks.org/mzbuPP46SL/
+
+
+    It is easy to see this when the code is small, but when working on a larger project
+    task can be difficult. I have heard of programmers who spend a week or more trying
+    to find or fix a line in their code only to discover it is something very minuscule
+    like a missing letter or mismatch in code. To make debugging easier, it is advised
+    that you separate code into smaller modules (“What is Debugging?” n.d.). Manyerrors
+    can be found and easily dealt with in this way.
+
+
+    Let us look at the “Hello World” program and its syntax in detail. While syntax
+    highlighting may vary across different platforms, these aspects of code are consistently
+    highlighted on all platforms.
+
+
+    **Comments:** As I said, these are the lines of code that the compiler will ignore.
+    They are used to annotate code and leave helpful explanations for other programmers.
+    This is great normally when we collaborate with others. It is advised you leave
+    comments in your algorithm to simplify for others. In most platforms comments
+    will be highlighted green. Comments are always preceded with (/).
+
+
+    **Header File Library:** Lines that start with (#) are used by the compiler to
+    call library functions. These are very essential, so they appear in every program.
+    In the “Hello World” example we call a library that is used to manage strings.
+    Lines of code will be highlighted in different colors across different platforms.
+    In Geeksforgeeks the colors purple.
+
+
+    **Statements:** Statements describe the beginning of a line of code with instructions
+    that the compiler recognizes. This includes declaration handling instructions,
+    like “using…” or “return…” in our Hello World program. They are highlighted differently
+    across multiple platforms. On GeeksForGeeks they are highlighted.
+
+
+    > Note: Recalling our discussion algorithms from the previous section, your algorithm
+    will mainly describe what instructions occur within the curly brackets of intmain().
+    More detailed algorithms may explain the sorts of data types needed
+
+
+    Functions: This is code that encapsulates instructions. It may take inputs and
+    output a result. Every'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'function is written like: "[function_name] () followed by curly braces}. Anything
+    in the curly braces is the set of instructions that will be executed. In our example,
+    main () is the function that initiates the instructions that will output "HelloWorld"
+    with cout<<. In a "cpp" program, int main () must always appear for the program
+    to function .
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_32_0.png)
+
+
+    GeeksforGeeks: These are variables and other kinds of data functions and statements.
+    In the GeeksforGeeks IDE, they are highlighted blue.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'This screenshot features a successful run of "Hello World" with the memory
+    used to run the program. This IDE has light syntax highlighting, focusing mainly
+    on comments, statements, and operand data. Compared to GeeksforGeeks'' embedded
+    code in their articles, their embedded code is much more detailed ("Writing first
+    C++ program," 2017). The two screenshots on the right feature the "light- mode"
+    and "dark-mode" views of the same code embedded in their articles. These views
+    are more detailed, highlighting comments, functions, and distinguishing different
+    statements. For example, data types such as are distinguished with a different
+    color from other statements such as usingnamespace
+
+
+    . Also the embedded views, unlike the IDE, distinguish strings from other data.
+    This is a perfect example of how syntax highlighting can vary across different
+    platforms.
+
+
+    Earlier we saw a Code::Block example with an error in it. Below is the'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_34_0.png)
+
+
+    # Comparis of World i Code::Bloc wit GeeksforGeeks IDE
+
+
+    This screenshot features a side-by-side comparison of the previousexample, “Hello
+    very same code next to one that is corrected. Immediately you can begin to appreciate
+    the syntax and what went wrong in the Code::Blockexample.
+
+
+    I will admit that it is not as impressive in a few code lines like this, but being
+    able to notice errors and explain them is one of the most important skills for
+    programmers. At this point you should not worry about being able to do this. The
+    more you code and learn, the better you will be to notice and fix errors. Software
+    and web development are industries with a high failure rate because of. To succeed
+    as a developer you need to solve problems quickly, find bugs more efficiently,
+    and fix them. This also applies to the administrative side, because being able
+    to find, fix, and explain bugs is a large part of desk service level agreements.
+
+
+    In tech, Service Level Agreements (SLAs) are agreements between a service provider
+    and a client. They agree upon aspects of the service, like support, quality, availability,
+    and responsibilities (Wieder, Butler, Theilmann, and Yahyapov, 2011). Comprehensive
+    SLAs offer a debugging briefing, where every error is logged and listed with its
+    cause, workaround, and solution. This is the best way to do it in technology management
+    firms and development stages. However, administrators have more resources to dedicate
+    to debugging than developers themselves. They are compensated at a higher rate
+    as well. For instance, web developers make approximately $60,000 a year in the
+    US; web administrators, those in charge of SLAs, make about 1/3 more at $90,000
+    a year (“15-1199.03—'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'Web Administrators,” n.d.). This level of expertise is valuable because it
+    understands how the compiler translates C++.
+
+
+    # First Program: Output and Basic Strings
+
+
+    “Hello World” is every programming language’s basic syntax of the program and
+    how it functions. As you learn more languages you will write many “Hello World”
+    programs. In the previous section, we used it to explore topics like algorithms,
+    syntax, and C++ programming environments. In this section we will go further:
+    we will manipulate the code.
+
+
+    C++ uses the cout object from iostream library. An object is a method that a computer
+    uses to manage data. In our example, coutwas used to tell the compiler to print
+    “Hello World with the >> operator. Don’t freak out; for now, it’s enough to understand
+    that the compiler reads cout as specific instructions because defined in the iostream
+    library that we declared.
+
+
+    Now, let’s look at “Hello World” and the cout object by changing the print out.
+    The original code here so you can use it as a reference: https://ide.geeksforgeeks.org/ea8ZMEKiDO
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_35_0.png)
+
+
+    # “Hello World” program in GeeksforGeeks IDE
+
+
+    This screenshot is the successful run of “Hello World” in split-screen mode. As
+    we begin to use the IDE for coding exercises, note the input and output boxes.
+    While there are no inputs for this program,you will input data into the top box
+    labeled “Input Goes Here...”'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'when prompted by the program in the output below.
+
+    You can access this program in the saved IDE here:https://ide.geeksforgeeks.org/eA8ZMEKiDoQ.
+
+    You can also view a copy of the code in the index.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'Using Cout The cout object uses the << operator to print values and text, and
+    we can have as many of them as we like. Using the IDE in your browser, change
+    the code to print out:
+
+
+    Hello World
+
+    Am learning C++
+
+    Like this:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_37_0.png)
+
+
+    # Adding cout objects
+
+
+    This screenshot is the successful run of our edited “Hello World” program in split-screen
+    mode. While the program without any errors, it didn’t produce the result we wanted.
+    Observing the output, the printed text is missing a new line. We will have to
+    instruct the compiler to add the new line to get the desired result.
+
+
+    Adding lines can be done in several ways: we can add delimiters within the strings
+    or use another manipulator object from the iostream library.
+
+
+    Using Escape Sequences
+
+
+    Although it might be tempting to write a string within cout and enter a line,
+    it will not work. It will break the code and it will not run. Don’t believe me?
+    Test it!'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'You can add a new line by using an escape sequence. Escape sequences are used
+    in many instances where you need to introduce special characters within strings
+    and character streams. It can alsoadd lines, like so:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_38_0.png)
+
+
+    # Using in-string escape sequences to delimit and manipulate the output
+
+
+    This screenshot is the successful run of our edited "Hello World" program in split-screen
+    mode. Using \n, we were able to get our expected output.
+
+
+    As you look at the code, you can see that doubles quotes are used. So, if you
+    want to add double quotes in string, you will have to use an escape sequence so
+    that the compiler knows that this is not a part of the code. Not doing so may
+    cause unforeseen errors or bugs. This is why escape sequences matter. Here is
+    a list of many instances where they can be used ("Escape sequences—Cppreference.com",
+    n.d.):
+
+
+    \"\": Used for single quotes\"\
+
+
+    \"f": Stands for "form feed" and is used to go to the next "page" "\n": Stands
+    for "line feed" and is used to go to the next line "\t": Stands for "horizontal
+    tab" and adds 5 spaces horizontally'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '“\V”: Stands for “veritical tab” and is used for spacing in vertical languages
+
+
+    | Note : If you decide | to try different Escape sequences | As text |
+
+    |---|---|---|---|
+
+    | delimiters, | be sure to | only use | the |
+
+
+    # Run button. This will save the work-space
+
+
+    If you want to save your work at another URL to return to later, you
+
+
+    button to save your work at another URL to return to later. To return to our exercise,
+    you can use oursaved IDE workspace URL (https://ide.geeksforgeeks.org/PgBLSHE4h).
+
+
+    can use the Run + URL...You can also access this code in the index.
+
+
+    Using Endl: Input/Output Manipulators
+
+    Like we have said, programming languages are as versatile as human language. You
+    can express one instruction in many ways, and terminating a string is no exception.
+    The difference between an escape sequence and endl is endl flushes and refreshes
+    the buffer used to store the string. Programmers use endl to clear memory after
+    printing a lot of text. You can see why this is useful in memory management. Endl
+    is an example of an input/output manipulator.
+
+
+    Input/Output manipulators are functions that allow you to control input/output
+    streams using the “<< operator or the “>>” operator (“Input/output manipulators—Cppreference.com,
+    n.d.).
+
+
+    escape sequences, there are many input/output manipulators that give programmers
+    more control over data types or strings. Many of them will make sense once we
+    talk about data types and structuring classes. Here are some of them (“Input/output
+    manipulators—Cppreference.com, n.d.).
+
+
+    > ": Switches between using “0/1” to “false/true” for Boolean values
+
+
+    showbase/noshowbaseboolalpha/noboolapha« «;:
+
+
+    For mathematical outputs, controls whether a prefix is to indicate a numeric base'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'showpos/noshowpos
+
+    “ : Controls whether the “ + ” sign is used to
+
+    indicate non-negative numbers
+
+
+    “ uppercase/nouppercase”: Controls the usage of uppercase characters with particular
+    output formats
+
+
+    “ends”: Outputs "\0",
+
+
+    “flush”: Flushes the output stream “
+
+    endl”: Outputs "\n" and flushes the output stream “get_money":; Receives an input
+    as a monetary value
+
+
+    “put_money:]: Formates and outputs a monetary value
+
+
+    “get_time:]: Receives an input as a date/time value according to a specified format
+
+
+    “put_time:]: Receives an input as a date/time value according to a specified format
+
+
+    Note : Recall our conversation about C++11 and C++14. As of this writing, most
+    programming IDEs use their default version. The “get/put..." functions are all
+    in C++11. If you receive an error trying to use these manipulators, check to see
+    if your setup is using C++11.
+
+
+    Additionally,“quoted:]: is a manipulator that is in C++14 only. This manipulator
+    allows you to insert and extract quoted strings with embedded spaces (“Input/output
+    manipulators—Cppreference.com,” n.d.).
+
+
+    # Omitting Namespace
+
+
+    We have already spoken about using namespace statements. We said it helps declare
+    strings globally, but when it comes to a small program like “Hello World!” is
+    not important. For larger programs that use several functions, it is good practice
+    to use the statement to declare each string separately. This saves memory space
+    in the compiler, or when you find yourself in a situation where the compiler is
+    bogged down unnecessarily, having to pull the entire string namespace library
+    to print code. Declaring each string separately might make your code wordier,
+    but it will reduce compileroverhead, and it focuses your instructions. Std namespace
+    has multiple objects and definitions that can make'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'it difficult for the computer to find the appropriate way to manipulate and
+    define a string. The namespace convention is more important when you have functions
+    that are going to be called by multiple programs. So putting it in there unnecessarily
+    has the potential of making your functions poorly defined and causing recognition
+    errors between them.
+
+
+    Let''s make our code more efficient by removing the namespace from our code.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_41_0.png)
+
+
+    # Testing Stability: Using a comment to remove “usingnamespace”
+
+
+    This screenshot is an unsuccessful test run of the “Hello World” program with
+    namespaces. You can access this saved IDE space through the following URL: https://ide.geeksforgeeks.org/VgobOAOdix.
+
+
+    “Commenting out” lines of code is a highly efficient way of testing the stability
+    of code. You can delete the double forward slashes to remove the comment and restore
+    the line of code at any time. This allows you to test the code without destroying
+    it. Once you have completed testing, it is good practice to delete any unwanted
+    lines of code. During your testing, you can always return to this saved instance
+    by using the URL above. You can also access the rawcode in the index.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'When you remove namespace std the following error occurs:
+
+
+    ```
+
+    prog.cpp: In function ''int main()'':
+
+    prog.cpp:13:2: error: ''cout'' was not declared in this scope cout<<"World!" <<
+    endl;
+
+    ^
+
+    prog.cpp:13:2: note: suggested alternative: In file included from prog.cpp:4:0:
+
+    /usr/include/c++/5/iostream:61:18: note: ''std::cout'' extern oostream cout; ///
+    Linked to standard output
+
+    ^
+
+    prog.cpp:13:26: error: ''endl'' was not declared in this scope cout<<"World!"
+    << endl;
+
+    ^
+
+    prog.cpp:13:26: note: suggested alternative:
+
+    In file included from /usr/include/c++/5/iostream:39:0,from prog.cpp:4:
+
+    /usr/include/c++/5/ostream:590:5: note: ''std::endl''
+
+
+    ndl(basic_ostream<_CharT, _Traits>&______os)
+
+    ^
+
+    ```
+
+
+    Looking closely, the compiler tells us that we need to declare cout and endl .
+    It even makes suggestions, like declaring them as std . Let’s do as the the compiler
+    asks and see what happens.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_42_0.png)'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_43_0.png)
+
+
+    # Declaring the iostream objects and manipulators
+
+
+    This screenshot is a successful test run of the “Hello World” program usingnamespaces;
+    removed. Once the iostream objects and manipulators were successfully declared,
+    the unneeded line was removed.
+
+
+    If you would like to practice, you can use this URL: https://ide.geeksforgeeks.org/VgobOAOQdiX
+
+
+    **Note : If you are having multiple errors during your practice, we will always
+    provide a saved IDE workspace of the program to help you troubleshoot. To begin
+    the troubleshooting session, open up another window, and navigate to the successful
+    run. Compare your current workspace with the successful run workspace. You can
+    find a successful run of “Declaring the iostream objects and manipulators” at
+    this link: https://ide.geeksforgeeks.org/a5zOdSWoQU.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# CHAPTER 3:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_44_0.png)
+
+
+    # VARIABLES AND DATA TYPES
+
+
+    We have talked about how low-level programming is similar to machine language,
+    but they are different because they still use like syntax, structures, and variables
+    that are similar to human languages. Variables are a mathematical concept that
+    humans use to tell machines what to mean. Speech is made up of a lot of mathematical
+    ideas, which is a big part of computer science. All of these are called AND OR
+    gates, and they make decisions on a single data at a time. People who do a lot
+    of computing use bitwise functions at a very small level. They can help with everything
+    from displays to switching traffic on a server. In Chapter 4, we''ll talk about
+    these more advanced topics. Now, let''s learn more about C++ by looking at variables.
+
+
+    There are many important things about any programming language, but variables
+    are one of the most important. Functions and other operations in a programming
+    language work on variables. Some programs do not input or output, but all programs
+    have some variable that they are working on or there''s nothing to work on, so
+    that''s what we need. The result of a function is always a change in the state
+    it is at the end. There is a state change when a machine moves from one decision
+    or operational phase to the next one. In old mainframe computers, this term was
+    used to talk about how things worked. It is still used in computer science to
+    talk about how programs work, though. In our example, the'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: 'IDE started with the main() state already set up before the program started.
+    Then, it changed states so that it could run the output command.
+
+
+    Because lower-level languages are so close to machine language, state changes
+    are talked about a lot because they are so important. They are also called compiled
+    languages because they are turned into machine language when they are written
+    down at a low level. High-level languages like Python don''t have to be written
+    in this way. When we talked about higher-level languages don''t need variables
+    to be named with their data types because they have built-in libraries, you might
+    remember that we said. You can see this in Python, the Python environment lets
+    know about variables and their data types. C++ can be written in a way that makes
+    clear what things are and how they work. There are different types of data. A
+    data type tells the compiler how to deal with it. Vectors in math help us understand
+    data types better. Instead of integers, which show us how much costs, vectors
+    show how big or small a space is. Because vectors are different from integers,
+    they are not the same thing. Properties these are used in programs like Photoshop
+    to help with how things look when they''re drawing.
+
+
+    Note : Vector-based images can be manipulated without losing the quality of the
+    image. This is because files like .jpeg or .png location of an image on a grid.
+    Vector files like svg or .pdf use vectors to describe their pixel locations. Therefore,
+    when the image is made larger, the vectors indicate how the colors should expand
+    while the regular image files do not. This is what causes the pixelation and distortion
+    when manipulating non-vector image files.
+
+
+    # Input and Output: Declaring Variables
+
+
+    In the previous chapter, we declared some things as we were learning to use cout.
+    In this section, we are going to look at examples of data types and how they are
+    declared. Below are examples of variable declarations and what they stand for
+    (“C++ Variables,”) n.d.). Keep in mind that variables essentially store types
+    of data:
+
+
+    +   “int”: Keyword is short for “integer” and stores whole numbers, without decimals.
+    This keyword includes positive and negative integers.
+
+
+    +   “double”: Stores numbers with decimals, both positive and negative numbers.
+
+
+    +   “char”: Keyword is short for “character” and stores single characters regardless
+    of their capitalization. Char values are single quoted.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '“bool”: Keyword is short for “Boolean” and stores values with two states: true
+    or false. As previously discussed, these values can be expressed as either “0/1”
+    or “false/true”.
+
+
+    In the next section, we will discuss them in detail. Now let us look at examples
+    of this. To create a variable you have assign it a valueafter the “=” operator.
+    Their syntax is [Datatype][Variable_name] = [value];
+
+
+    Note: Each [Variable_name] must be unique within your function. Otherwise, it
+    will cause an error.
+
+
+    Now let us create a variable called “myNum” with the int data type and a value
+    of 10, then we run our program it:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_46_0.png)
+
+
+    # Declaring int numbers
+
+
+    This screenshot is a successful test run of the “myNum” program. You can access
+    the saved IDE workspace with the following URL: https://ide.geeksforgeeks.org/t4p6qCVfkg.
+
+
+    This code was implemented using namespacestd; as it’s the best practice. You should
+    practice implementing the same code successfully with the namespace. Remember
+    that you can reset the workspace using the URL.
+
+
+    We had our share of cout examples in our code. Let’s use the input box in the
+    top right and the cin object our program takes inputs and operates on'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: 'We can do this by writing programs that take two numbers and adds them together.
+    To do this, we have to declare two variables that will store our inputs for our
+    program to operate on.
+
+
+    We will declare multiple variables:
+
+
+    Two int variables named x and y ,
+
+
+    One int variable named sum.
+
+
+    We can also tell the program to prompt the user to give two inputs.
+
+
+    Note: In our IDE, we must enter the inputs before you run the program. Each input
+    should be on its own line.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_47_0.png)
+
+
+    # Summing inputs and printing the result
+
+
+    This screenshot is a successful test run of our “Summing” program.You can access
+    the saved IDE workspace with the following URL: https://ide.geeksforgeeks.org/XDXaHjutDO.
+    This exercise had to be modified for our IDE’s input system. Therefore, we included
+
+
+    additional lines that confirm our inputs.
+
+
+    This code was implemented usingnamespacescdtd; as it''s the best practice. You
+    should practice implementing the same codesuccessfully with the namespace. Remember
+    that you can reset the workspace to the successful state by using the URL.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# cout'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Basic Data Types
+
+
+    Data types specify the size and types of information stored in a variable. Each
+    has its own keyword and an associated size (“C++ Data Types”, n.d) :
+
+
+    “int”: Keyword is short for “integer” and stores whole numbers. Has a size of
+    4 bytes.
+
+
+    “float”: Stores decimal numbers with 7 decimal digits. Has a size of 4 bytes.
+
+
+    “double”: Stores decimals numbers with 15 decimal digits. Has a size of 8 bytes.
+
+
+    “char”: Keyword is short for “character” and stores single characters regardless
+    of their capitalization. Has a size of 1 byte.
+
+
+    “bool”: Keyword is short for “boolean” and stores values that have a state of
+    either true or false. Has a size of 1 byte.
+
+
+    Note: Recall the “string”, data type. We have worked with this special datatype.
+    String values can vary in size. Due to this, they are handled in the iostream
+    library to apply more flexibility for text handling. We''ll return to strings
+    and discuss some advanced topics in the next section.
+
+
+    These sizes matter for data handling. For instance, when you use int with float
+    / double all those numbers will be converted to int. It is because the compiler
+    uses 4 bytes to calculate integers which have the allocation for decimals. The
+    program will still run but your calculations will not be accurate. Let’s explore
+    this more by modifying our program and looking at the results. We are going to
+    be using a long-popular decimal number (pi):
+
+
+    ```
+
+    22
+
+    7
+
+    = 3.142857142857142857142857142
+
+    ```
+
+
+    It will test the limits of float and double.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Using Int with Float or Double
+
+
+    This screenshot is a successful test run of our modified program calculating
+
+
+    +   - You can access the IDE workspace with the following URL: https://ide.geeksforgeeks.org/ghMw2myfbb
+
+    - This exercise also includes:
+
+    - 3.142857142857142857142857142857
+
+
+    but as you can see, the result is shown as 3. This is because the compiler calculated
+    the inputs at int
+
+
+    which are not modified to store decimals. As a result, the result issing the decimals.
+
+
+    To get the result we are looking for, it would be best to change the variable
+    data types. Will using float data types differ from double data types? Can we
+    expect a different result? Remember you by going to a successful state of the
+    workspace using the URL.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_52_0.png)
+
+
+    # 2/7 To focus on comparingfloat and double
+
+
+    bool
+
+
+    boolalpha/noboolapha
+
+
+    # Comparing Float and Double
+
+
+    This screenshot is a successful test run of our modified program calculating
+
+    We have removed the input statements and rearranged our data types. We highly
+    suggest creating this program for yourself using the previous'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'program located at this URL:
+
+    https://ide.geeksforgeeks.org/a8Mw6tymyf8. This exercise will give you practice
+    in some previous coding coding topics we discussed, including:
+
+
+    +   - " data type keyword
+
+
+    +   - " input-output manipulator
+
+
+    It will also give you some experience with a logical operator. We will discuss
+    the logical operators in detail in the next chapter. Once you have manipulated
+    the program, open a new window, and compare this to the successful run of the
+    screenshot above. You can find the saved IDE workspace with the successful run
+    at this URL: https://ide.geeksforgeeks.org/dNIUdYtN7M.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Power of C++: Advanced Strings
+
+
+    Another data type we are going to look at is strings. Strings are one of the most
+    popular data types in computer science; they are sequences of characters. It might
+    be helpful to think of them as sentences, but not every sentence represents a
+    string. We haveween how they work with our “Hello World” app. Strings are a separate
+    data type with their own library. To manipulate and work with them a program needs
+    an appropriate header – the string library. These libraries have methods and features
+    that allow the program to manipulate strings.
+
+
+    # Operation: String Concatenation
+
+
+    String concatenation is when different strings are put together into one string.
+    It is combining strings. This is one of the most common functions of a program.
+    For instance, when you enter your name at website or a game and when you switch
+    to another page and the screen greets you “Hello, [your_name]!, the program has
+    used concatenation to do that. It has combined “Hello,” with your name and “!”
+    in the end.
+
+
+    In C++, string concatenations are performed through the “+” operator. Let''s see
+    this in action by making a program that prints an imputed string with a greeting.
+    For this to work, we must include the
+
+
+    ```
+
+    <string> library, which contains objects and statements needed for handling strings.
+
+    ```
+
+
+    Open a fresh instance of the IDE we have been using and follow these steps:
+
+
+    +   In addition to
+
+
+    ```
+
+    < iostream > , also include the < string >
+
+    ```
+
+
+    library
+
+
+    Omit usingnamespacstd;
+
+
+    Remove the current filler code within intmain(){...}
+
+
+    Declare and set the variables
+
+
+    ```
+
+    firstName = "John" and lastName = Do
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# fullName by adding firstName and lastName with the “ + Declare and calculate
+
+
+    operator Print the result as "Hello Doe."It should look something like this:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_55_0.png)
+
+
+    String Concatenation
+
+    This screenshot is a successful test run of our string concatenation program.
+    We encourage you to open up this program in another window and compare it to your
+    program. You can access the successful run at this URL:https://ide.geeksforgeeks.org/B7XErplI9OE.
+
+
+    Note : Be to annotate your code. You can shorthand the instructions and use them
+    as an impromptu algorithm to annotate your code. This will help you keep the program
+    in order.
+
+
+    Usually, in forums, the concatenated text input is kept small aspossibleible and
+    the formatting is done by the program. In the example, we manually have to add
+    space after “Hello” and “John", but the program adds space. Now that you have
+    seen the “+” operator works, how might you add space? See if you can figure it
+    out by playing with the code in your editor. If things fall apart you canalways
+    return to our successful IDE workspace by clicking on the URL.
+
+
+    Note:'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'https://ide.geeksforgeeks.org/glPmsIdDwF7/Comment the declarations to try adding
+    and strings to see the error for yourself. The error is very long and verbose,
+    as it conflicts across the
+
+
+    < iostream > and < string >libraries.
+
+
+    # String Objects: Length() Attribute
+
+
+    We know from real-world experience that strings
+
+
+    [ string_name ]. length ( )
+
+
+    Let''s return to our program and retrieve the length of fullName . We need to
+    modify our code by adding a new line with the syntax above and another cout, like
+    this:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_56_0.png)
+
+
+    # Print fullName.Length()
+
+
+    This screenshot is a successful test run of our modified string concatenation
+    program. We encourage you to modify the program at this URL: https://ide.geeksforgeeks.org/B7XErpIJ9OE.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: 'Once you have modified the program, you can compare it to this successful test
+    run by opening it in another window. You can access this saved IDE window at the
+    following URL: https://ide.geeksforgeeks.org/xbjO6Pg3Nh.
+
+
+    # String Indexes and Arrays
+
+
+    Recall our conversation on objects. Vector arrays are also a special mathematical
+    phenomenon with their own special attributes. An array is an orderly arrangement
+    of objects – often rows, columns, or a matrix – where each has its own specific
+    location. Strings are stored in arrays made up of characters. Therefore, a string
+    array is orderly arrangements of characters where each character in a string is
+    indexed in its own location. Arrays are accessed using [ ] to find character or
+    other items in an array. Let''s see this in action by changing our program so
+    that it prints the 3rd character in `fullName`.
+
+
+    Note:
+
+
+    Remember that the index starts with [0].Therefore the 3rd character in the string
+    array would be at [2], not 3.
+
+
+    We are going to use this syntax to so:
+
+
+    ```
+
+    fullName [ x ]
+
+    ```
+
+
+    The x stands for the index of the character we would like to print out. Remember
+    to also edit the code to properly print the letter. You will also need to use
+    escape sequences like:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_57_0.png)'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Access fullName String Array
+
+
+    This screenshot is a successful test run of our modified string attributes program.
+    We encourage you to modify the program atthis URL:
+
+
+    https://ide.geeksforgegeeks.org/xbjO6Pg3Nh.
+
+
+    Once you have modified the program, you can compare it to this successful test
+    run by opening it in another window. You can access this saved IDE window at the
+    following URL: https://ide.geeksforgegeeks.org/JWSG7HB2Ms.
+
+
+    In our examples we have relied on cout capabilities, but as I have alluded to,
+    there are other strings handling capabilities used by programmers to field content
+    from different sources. These are cin objects and the getline () function.
+
+
+    Cin and getline() function
+
+
+    In examples from the previous chapter, we have used cin . Like cout , cin is an
+    object in the <iostream> library and it allows a program to receive input using
+    the \>> operator. Like cout, cin objects must be defined with the std data type.
+    Let''s modify our concatenation program so that it receives the input of "John
+    Doe". You can use your name if you, as it can be fun to do so. You will need tofollow
+    these instructions:
+
+
+    Navigate to the string concatenator program at the followingURL:
+
+
+    https://ide.geeksforgegeeks.org/B7XErpl9OE
+
+
+    Declare the variables
+
+
+    Prompt the user for their name
+
+
+    ....fullName
+
+
+    ```
+
+    = firstName + """ + lastName..Calculate the the operation by using the following
+    code snippet:
+
+    ```
+
+
+    Print the results
+
+
+    If you find yourself stuck, here is how it should look:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_58_0.png)'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_59_0.png)
+
+
+    # # String Concatenation with cin
+
+
+    This screenshot is a successful test run of our modified string concatenation
+    program using . We encourage you to open up this program in another window and
+    compare it to your program. You can access the successful run at this URL:https://ide.geeksforgeeks.org/KyuLgBoicaA.
+
+
+    > **Note:** Be sure to annotate your code. You can shorthand the instructions
+    and use them as an impromptu algorithm to annotate your code. This will keep you
+    the program in order.
+
+
+    cinThe program will work only when the user enters their first and last name separately.
+    But most people ''names'' are stored or put in as one single string. Let''s change
+    our program so that it greets the user when they enter their full name. You will
+    need to follow these steps:
+
+
+    If not already, or or you need to reset the workspace, go to previous workspace
+    at the following URL:
+
+    https://ide.geeksforgeeks.org/KyuLgBoicaA
+
+
+    fullNameDeclare only the variable
+
+
+    cinPrompt the user for their full name using
+
+    greet the user using cout and the input fullName
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_59_1.png)'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# String Termination with cin
+
+
+    This screenshot is an unsuccessful test run of our modified string concatenation
+    program using . While the program completed with no errors, we did not get an
+    expected result. If your program had errors after your modifications or did not
+    get a similar result, we encourage you to use our successful run to troubleshoot
+    your workspace. Open up this successful run in another window and compare it to
+    your program. You can access the successful run at this URL: https://ide.geeksforgeeks.org/aU6GZpAxwn.
+
+
+    You have witnessed typical cin behavior. When cin encounters a space it reads
+    as a string terminator and stops. This is why "Doe" is not added to the output.
+    To get it the entire string with spaces, we must use the <string> library;it extracts
+    all characters from the input and turns them into a string array.
+
+
+    Note:
+
+
+    getline (is usually preferred over cin to ensure that programs read field text
+    from secondary sources,particularly since getline () can read and aggregate sorts
+    of characters without errors.
+
+
+    Here is an example of getline () functions used well: https://www.geeksforgeeks.org/getline-string-c/
+
+
+    In this chapter, we have done quite a bit. We have looked at specialized functions,
+    accessing objects, text manipulators, and operators. We will cover them in more
+    detail in the coming chapters.I hope you have seen the role of'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: operators in directing data and lending program functionality. In the following
+    chapter, we are going to be looking at operators and how they give programs decision-
+    making capabilities.
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# CHAPTER 4:\n\n```\nfunction start() {\n  var today = Date();\n  var h = today.getHours();\n\
+    \  var m = today.getMinutes();\n  var s = today.getSeconds();\n  var m = correctTime(m);\n\
+    \  var s = correctTime(s);\n  document.getElementById('display').innerHTML = \"\
+    calling the function every second\";\n  var t = setTimeout(start, 1000);\n}\n\n\
+    //adding the zero if needed\nfunction correctTime(i) {\n  return i < 10 ? \"0\"\
+    \ + i : i;\n}\n```\n\n# OPERATIONS IN C++\n\nWe talked about how C++ is mostly\
+    \ a back-end, server-side language that can be used to control servers and other\
+    \ tools for delivering content. Finally, we looked at how C++ deals with data\
+    \ by looking at strings. We saw that operations play a very important role in\
+    \ the world around us. Operations control the loops and decisions in programs,\
+    \ so we can make sure they work the way they should. We can add more functionality\
+    \ to our programs if we know more about how things work. Functionality is how\
+    \ programmers use the tools and methods of a language to reach their goal. They\
+    \ work, but it would be better to use these features in a way that allows us to\
+    \ reach our goal, like content management, instead."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'Note : "Operand" describes the value or variable being operated on.
+
+    "Operator" describes the symbol indicating the sort of operation being carried
+    out ("C++ Operators," n.d.).
+
+
+    The following is a list of operators in C++ ("Operators-In-C.png (800×533)," n.d.).
+
+
+    | Operator | Type |
+
+    | + +, -, -- | Unary operator > Arithmetic |
+
+    | +, -, *, /, % | Binary operator > Arithmetic |
+
+    | <, <=, >, >=, ==, != | Binary operator > Relational |
+
+    | ,, ||, ! | Binary operator > Logical |
+
+    | |, <<, >>, ~, ^ | Binary operator > Bitwise |
+
+    | =,, +=, -=, *= /=, % | Binary operator > Assignment |
+
+    | ?: | Ternary or conditional operator |'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'This table lists the operator symbols and categorizes them by (1)how many operands
+    they accept at a time > (2) the type of operationthey implement. For example,
+    most arithmetic operators operate on two operands at a time.
+
+
+    All operators are characterized by how many operands they can operate on a time
+    and the types of operations they can execute. They are divided into three types:
+
+
+    +   - **Unary** - operators that only accept 1 operand at a time
+
+    - **Binary** - operators that only accept 2 operands at a time
+
+    - **Ternary** - operators that accept more than 2 operands, or conditional operators
+    with several arguments
+
+
+    They are further divided into 6 types:
+
+    Arithmetic
+
+    Relational
+
+    Logical
+
+    Bitwise
+
+    Assignment operators
+
+
+    Other operators such as a conditional, address, andredirection
+
+
+    In this chapter, we will look at 5 types of operators and their functionalities.
+
+
+    **Note:** Operators have precedence, just as in mathematical equations. For example,
+    parentheses, which are used to call a function, have higher precedence than addition
+    or subtraction. However, you should try to keep your lines of code as simple as
+    possible. This makes your programs easier to edit and debug. Having clean, uncomplicated
+    code avoids bugs.
+
+
+    # Binary Operators
+
+
+    Binary operators are the majority of operands you find in C++. They include 5
+    of the 6 types of operators. This makes them theperfectplace to start. As the
+    name suggests, binary operators compare two operands. They are the perfect for
+    decision-making and controllingswitches.
+
+
+    # Arithmetic Operators
+
+
+    They are the most common and well understood of all operators because of how we
+    use them even outside programming, since they are primarily mathematical. We use
+    them to perform mathematicalaloperations.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'Note: In the string concatenation example, the “ ” used to concatenate was
+    not an arithmetic function. Instead, it was a function of the string > library
+    that handled the concatenation.
+
+
+    Most operators in this category require two operands. The only exceptions are
+    the unary "++" and "--" operators which we use to increase or decrease within
+    a loop. The binary operators are (Jaggi, 2015a):
+
+
+    +   * +: the addition operator that adds two operands
+
+    * -: the subtraction operator that subtracts one operand from another
+
+    * *: the multiplication operator that multiplies two operands
+
+    * /: the division “forward slash” operator that divides the first operand into
+    the second
+
+    * %: the modulus operator that returns the remainder from dividing the first operand
+    into the second
+
+
+    Let''s make a cout program that demonstrates all of these 5 arithmetic operands.
+    Create a new C++ workspace in the IDE and follow these instructions:
+
+
+    ```
+
+    a = 25 and b = 3Declare two variables as integers
+
+    resultDeclare a variable,
+
+    and bPrint the variables
+
+    and b Add and print the result
+
+    a and bSubtract and print the result
+
+    a and bMultiply and print the result
+
+    a and bDivide and print the result
+
+    ```
+
+
+    Calculate the remainder from dividing and print the resultHere how that looks.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_66_0.png)'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_67_0.png)
+
+
+    # # Arithmetic Routine Program
+
+
+    This screenshot is a successful run of the arithmetic routine program. You can
+    access a copy of the raw code in the index.
+
+
+    If you get errors, I encourage you to use our successful run to troubleshoot your
+    workspace.
+
+    Open it to compare the code. Here is where to find it:
+
+    https://ide.geeksforgeeks.org/vDcCH7f5EQ
+
+
+    > == : “Equal” operator that checks whether two operands are equal. If the operands
+    are equal, it returns a Boolean “true”; if not, it returns false.
+
+
+    > != : “Not-Equal” operator that also checks whether two given operands are equal
+    or not. However, this operator returns a Boolean true if the'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'operands are not equal returns false if the operands are equal.
+
+
+    Like we did with the arithmetic operators
+
+
+    Note:
+
+
+    The if ( ) else statement is case sensitive.Both "if" and "else" must be lowercase.Additionally,
+    while if() can be executed without else,the missing statement can cause an error
+    if the code is false.else statements also cannot be implemented without an if()statement.We
+    will describe if().else statements in more detail in later chapters
+
+
+    To create our program we have to follow the following steps.
+
+
+    Open and edit the arithmetic routine program using this URL:
+
+    https://ide.geeksforgeeks.org/vDcCCH7f5EQ
+
+
+    Use the same variables for the arithmetic routine. Be sure toclean the code of
+    any unneeded variables.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'Print an explanation of the program
+
+
+    Test if(a > b) and print the result
+
+
+    Create an if statement printing out the result if greater than
+
+    Create a nested else statement printing out the result if false
+
+
+    **Note :** if()...else you will have to create acout for all possibilities. For
+    our simple program, it is only two possibilities for each statement.
+
+
+    Test if(a >= b) and print the result
+
+
+    if(a < b)Test and print the result
+
+
+    Test if(a <= b) and print the result
+
+
+    Test if(a == b)and print the result
+
+
+    Test if(a! = b) and print the result
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_69_0.png)
+
+
+    # Relational Routine Program
+
+
+    This screenshot is a successful run of the relational routine program displaying
+    all the relational functions.
+
+
+    If you did not get similar results, go at our code here: https://ide.geeksforgeeks.org/dFD3cEk85y.
+    Compare and figure out where you went wrong. An exercise like this will equip
+    you with debugging skills.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: 'Also, take your time to appreciate the code and understand it.
+
+
+    # Logical Operators
+
+
+    Logical operators add more complexity to relational operators. These are comparable
+    to human ideas of "and" or "or". They also have qualities that switch the meaning
+    of the relational operator. **Logical operators** are used in conjunction with
+    relational operators to combine two or more conditions to describe a constraint.
+    We may catch us a lot more and a lot more with our conditionals. There are threelogical
+    operators (Jaggi, 2015b):
+
+
+    +   “AND": the logical "AND" operator returns a Boolean true when both the conditions
+    are met and if they aren''t.
+
+
+    +   “OR": the logical "OR" operator returns a Boolean true when one (or both)
+    of the conditions are met, and if none of the conditions are met.
+
+
+    +   “NOT": the logical "NOT" operator returns a Boolean true if the conditions
+    in consideration are not satisfied. If one of the conditions is true, then it
+    returns a Boolean false.
+
+
+    Logical operators are used in machines. Imagine a "NOT" operator in the security
+    system of a bank. Let''s say locked doors are "0"false], and unlocked doors should
+    stay secure, your default value is "0." This is called a closed system, because
+    if things go wrong the doors will be closed (the default). All signals that go
+    to the door are controlled by a "NOT" signal: Nothing going on, the doors should
+    remain locked, and if there is robbery they should also remain locked. Doors that
+    open during a robbery will get a "NOT" signal to fail-close. But in a fire, these
+    doors should open, the fail-closed "NOT" signal will return to open doors.
+
+
+    Let''s explore logical operators by building a logical program. Follow these instructions:
+
+
+    Open and edit the relational routine program using this URL: https://ide.geeksforgeeks.org/dFD3cEk85y
+
+
+    ```
+
+    a = 5,b = 0,c = 12,d = 24
+
+    ```
+
+
+    variables to test the logical operators:
+
+
+    Print an explanation of the program
+
+    Test if(a>b && c==d) and print the result
+
+    Create an if statement printing the result is greater than'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'Create a nested else statement printing out the result if false
+
+
+    Test (a>b || c==d) and print the result
+
+
+    Test (!b) and print the result
+
+
+    Clean the code of any unnecessary linesHere is how it looks:'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "![](img/3ceb4a3dfd578d1d4c40199c71445dd8_72_0.png)\n\nif()...else statement\
+    \ producing a false\nEither relational expression can be false to produce a false\
+    \ AND. However, the program can be fixed to produce an exact answer by nesting\
+    \ another\n()...else\n\n# # if()...else\n\n# ## Logical Routine Program\n\nThis\
+    \ screenshot is a successful run of the logical routine program displaying examples\
+    \ of all the logical functions. You can access this workspace with this URL: https://ide.geeksforgeeks.org/x9ixjUYDBG\n\
+    \nAs you can see, the “AND” function may be difficult to print with justone\n\n\
+    statements. Modify this exercise to create a program that can explain itself\b\
+    etter!\n\nHint: You only need one additionalStatement. You can check your work\
+    \ against ours with this URL -- https://ide.geeksforgeeks.org/nh8yYV9Kjy."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'Let’s take a break from routines and explore other ways we can use logical
+    operators. Logical operators are based on machine logic, especially logical gates.
+    Logical gates are electronic circuits that have one or more inputs while having
+    one output. Logical gates have the same function as logical operators. “AND” gates
+    only pass “1” when all inputs are “1”; “OR” gates pass “1” when they receive a
+    “1” from any of their inputs; “NOT” passes “1” when they receive a “0” as their
+    input.
+
+
+    Logical gates can control the flow of data in a circuit, the same as logical operations
+    when combined with a conditional statement. It is called a **conditional short-circuit**
+    in logical operators.
+
+
+    AND operators and OR operators short-circuit. Recall how AND returns true both
+    relational operators are conditionally true. What’s more, relational operators
+    are assessed in the order they appear in a conditional statement – if the first
+    one is false the second will not be evaluated, it short circuits.
+
+
+    OR operators do this differently. Only one relational operator has to return for
+    its true Boolean value. So if the first relational operator returns true, it won’t
+    check the next.
+
+
+    This is very useful because we get more complex instructions to a program about
+    how to behave in what circumstances. OR AND short-circuit opposites. Let’s use
+    this to write a program that tells when a condition short-circuits AND and OR
+    gates.
+
+
+    Follow these instructions:
+
+
+    ```
+
+    intOpen a new IDE
+
+    **a = 10,b** Declare two variables:
+
+    ```
+
+
+    Print an explanation of the program
+
+
+    This program will test if the OR gate or the AND gate shorts when ai is to b.
+
+
+    Print current values of a and b
+
+
+    ```
+
+    boolDeclare and calculate two variables
+
+    resAND = ((a == b) && std::cout << "OR circuit shorted")
+
+    resOR = ((a == b) || std::cout << "AND circuit shorted") This is how it looks:
+
+    ```'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\nimport java.*;\n\npublic class Main {\n    public static void main(String[]\
+    \ args) {\n        int a = 5;\n        int b = 10;\n        if (a < b) {\n   \
+    \         System.out.println(\"a is less than b\");\n        } else {\n      \
+    \      System.out.println(\"a is not less than b\");\n        }\n    }\n}\n```\n\
+    \n# Short Circuit Detection Program\n\nThis screenshot is a successful run of\
+    \ our short circuit detection program. Using our knowledge of logical AND, logical\
+    \ OR, and their relation to each other, we were able to develop a way to detect\
+    \ short circuits. You can access this workspace with this URL: https://ide.geeksforgeeks.org/uBLgLtBnnY\n\
+    \nTry different values of to see if you can trip the different \"circuits.\"\n\
+    \na Consider a short circuit detection program. How would we use it in the real\
+    \ world? I have alluded to systems like these playing a role in bank security.\
+    \ The question is how it would achieve those things? You can tell your program\
+    \ if a condition is not (“NOT”) met to refuse access, like if the password does\
+    \ not match.\n\nAn understanding of logical operators gives a good idea of how\
+    \ machines and systems make their decisions. Relational and logical operators\
+    \ give us more control over what happens in the program and how it relates to\
+    \ everything around it. We do this through various libraries, statements, and\
+    \ objects. So far we have written small programs, but in bigger programs using\
+    \ objective control like these cancause overhead for the compiler. That has a\
+    \ noticeable effect in programming environments and industries like gaming engines,\
+    \ content delivery, and others. Think about the servers at YouTube that have to\
+    \ deliver gigabytes of data per second and gaming engines that need to render\
+    \ in real-time: they have to reduce"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'the amount of overhead while being able to utilize these control features.
+    Frankly, that can be achieved by using bitwise operators.
+
+
+    # Bitwise Operators
+
+
+    On the circuit level, machines communicate by using AND and OR gates. It gives
+    them decision-making capabilities at a single bit data level. Bitwise operators
+    use those microscopic level calculations to accessing processes at the machine
+    level, bypassing objective programming. In other words, they are logical operators
+    operating on numbers at a binary level.
+
+
+    $5 \times 10^2 + 3 \times 10^1 + 4 \times 10^0 = 534_{10}$ use them,
+
+
+    Humans conceptualize numbers using base-10 numbers, also known as the decimal
+    system. For instance, a number 543 is understood as five-hundreds, four tens,
+    and three units. In base 10 it looks like this:
+
+
+    In binary the same number would look like this 0b1000010110 – “0b10-2”, they just
+    look different. It is a binary number. Binary numbers are presented as a stream
+    of bits, which can either be in two states: 0 or 1. In base-10, the position of
+    the number determines its value.
+
+
+    $2^9 + 2^4 + 2^2 + 2^1 = 534_{10}$ example shows how a binary
+
+
+    number is 10 bits long. Looking closely at the 534 streams we can see that the
+    $2^{nd}, 3^{rd}, 4^{th}$ and $10^{th}$ bits are on (moving right to left), and
+    all the other bits are off (1 if 0, 0is off). In base 2 we calculate this as:
+
+
+    It is not easy for us to calculate it, but this is how computers communicate,
+    in streams of data bits. They are more at recognizing and counting these numbers
+    just as easily as if they were base-10 numbers to humans. Therefore, using bitwise
+    operators that function at the computer’s natural level improves speed and performance
+    because it skips the translation of objective programming into machine language.
+    This is why you will find bitwise operations often used in competitive programming.
+    Below is a list of C++ bitwise operators ("Bitwise Operators in C/C++", 2014):
+
+
+    +   “”: Bitwise AND takes two numbers (operands) and runs AND on every bit within
+    the stream of AND. The results of the AND stream will be 1 if both are 1.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '“|”: Bitwise OR takes two numbers(operands) and runs OR on everybit within
+    the stream of those numbers. The results of the OR stream is 1 if any of the two
+    is 1.
+
+
+    “ ^ Bitwise XOR that takes two numbers as operands and XOR on every bit within
+    the stream of the two numbers. The result stream of XOR is 1 if the two bits are
+    different.
+
+
+    “ << Left shift operator takes two numbers and left shifts the bits of the first
+    operand. The second operand is used to determine the number of places to shift.
+
+
+    “ >> Right shift operator takes two numbers and right shifts the bits of the first
+    operand. The second operand is used to determine the number of places to shift.
+
+
+    ~ ~ Bitwise NOT operator that takes one number and switches the state of all the
+    bits (1s to 0s, 0s to 1).
+
+
+    **Note:** Machines use registers and buffers to store the bits for calculation.
+    A register is just an array of usage, where each bit gets its place in the array.
+    If you think of these data streams as an array, it will help you rationalize many
+    of the bitwise operators, particularly the shift operators.
+
+
+    Let''s write a bitwise routine program. First, we will need to create a bit register
+    and study streams. This requires the bitset<x>() function for the <bitset>. It
+    allows you to print a binary stream with a length of <x>. Follow the instructions:
+
+
+    Open a new IDE C++ workspace
+
+
+    In addition to
+
+
+    ```
+
+    <iostream >, be sure to call the < bitset >
+
+    ```
+
+
+    ```
+
+    library as well
+
+    unsignedinta = 60;//60 = 00111100Declare the operand variables and their values
+
+    ```
+
+
+    ```
+
+    unsignedintb = 13;//13 = 00001101
+
+    ```
+
+
+    Declare register c for the calculations'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '```
+
+    intc = 0;
+
+    cout << "Operandregistersa:" << a
+
+    << "ndb:" << bPrint operand values and their registers:
+
+    ```
+
+
+    ```
+
+    << "\nregisterb: 0b" << bitset < 8 > (b)
+
+    << endl;
+
+    << "\nregistera: 0b" << bitset < 8 > (a)
+
+    ```
+
+
+    Note: Since all numbers are less than 255, we will then use a bit stream
+
+    of the entire exercise.
+
+
+    # a and b in register c< 8 >Calculate Bitwise AND for
+
+    c = ab;//12 = 00001100
+
+
+    CPrint the result and the register in
+
+
+    > Note: Since we are using bitwise functions, it is better to use endl; to
+
+    terminate our lines. This is because this function clears the buffer and prevents
+
+    overflow. This makes the program a little slower, but it ensures that our registers
+
+    are clear. The speed difference is made up by using bitwise functions.
+
+
+    # a and b in register CCcalculate Bitwise OR for
+
+    c = a|b;//61 = 00111101
+
+
+    CPrint the resulting value and the register in
+
+
+    # c = a^b;//49 = 00110001a and b in register c
+
+    Calculate Bitwise XOR for
+
+
+    CPrint the resulting value and the register in'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# a in register C
+
+
+    Calculate Bitwise NOT for
+
+
+    ```
+
+    c = ~a;// 61 = 11000011
+
+    ```
+
+
+    CPrint the resulting value and the register in
+
+
+    # a in register C
+
+
+    Print a comparison register for
+
+
+    This will make it easier to compare with the shifting bitwiseoperations
+
+
+    # a << 2 in register C
+
+
+    Calculate Bitwise Left Shift for
+
+
+    ```
+
+    c = a << 2;//240 = 11110000
+
+    ```
+
+
+    CPrint the result and the register in
+
+
+    a >> 2 in register Calculate Bitwise Left Shift for
+
+
+    ```
+
+    c = a >> 2;//15 = 00001111
+
+    ```
+
+
+    CPrint the result and the register in
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_78_0.png)'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# Bitwise Routine with Register Printing
+
+
+    This screenshot is a successful run of our bitwise routine program.
+
+
+    The output features visuals of the register array. This will allow you to see
+    how bitwise is calculated and how it changes the register.This is a program with
+    a very long output. To study it fully, you can access it on our saved workspace
+    using this URL: https://ide.geeksforgeeks.org/JgnAlVwOnE
+
+
+    # C
+
+
+    Note:
+
+
+    This program uses namespace std; to simplify the program.It would be good practice
+    to omit the namespace and declare each cout and bitwise object separately.
+
+
+    The last binary operators we will discuss are assignment operators. Assignment
+    operators are used for assigning and dynamically changing values. In principles
+    of programming, we talked about programs needing to be as efficient as possible
+    while using a few instructions as possible. Advanced assignments operators combine
+    with each assignment and other operations to reduce lines of code. They are all
+    atomic operations, meaning they allow programmers to manipulate stored values
+    within variables, and reassign them. Below is a list of common assignment operators(Prabhu,
+    2018):
+
+
+    > =": Equal assignment operator assigns the value on the right to the variable
+    on the left."
+
+
+    > +=: Operator for atomic addition, used to combine the ‘+’ and ‘= =
+
+
+    operators. This operator adds the value of the variable on the left to the value
+    on the right. Then it saves the result to the variable on the left.
+
+
+    # x
+
+
+    ```
+
+    += y would be a shorter way of writingx =
+
+    x + y
+
+    ```
+
+
+    For example, without having to use a separate arithmetic operator.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'operators. This operator subtracts the value of the variable on the leftmost
+
+    value on the right. Then it saves the result to the variable onthe left.
+
+
+    *= "": Operator for the atomic multiplication, used
+
+    to combine the '' * '' and '' =
+
+
+    operators. This operator multiplies the value of the variable on the left
+
+    value on the right and saves the result to the variable on the left.
+
+
+    \
+
+
+    the value of the variable on the left by the valu
+
+    on the right and saves the result to the variabl
+
+    on the left.
+
+
+    For example, x
+
+    y would be a shorter way of writing
+
+    x = =
+
+    ny
+
+
+    without having to use a separate arithmetic operator.
+
+
+    Note : There are also bitwise
+
+    assignment operations:
+
+
+    = "","| = ", and " Λ= ". We will focus on the arithmetic-atomic
+
+    functions for now.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: 'Let’s create an assignment operator routine program to see how these assignment
+    operations work. Follow these steps:
+
+
+    Open a new IDE workspace
+
+
+    Declare and initialize variableint a = 10;
+
+
+    Print an explanation of the program and print the starting value
+
+
+    Note: When making programs that print, always make them easy to read! Make sure
+    your program can explain itself.
+
+
+    Atomically add 10 and print the result
+
+
+    Atomically subtract 10 from your variable and print the result
+
+
+    Atomically multiply 10 and print the result
+
+
+    Atomically divide our variable by 10 and print the resultHere is how it looks:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_81_0.png)
+
+
+    # Assignment Routine
+
+
+    This screenshot is a successful run of our assignment routine program. This program
+    has a sequential output, which means each instruction impacts the result of the
+    next instruction. This means
+
+
+    if we were to change the order of the atomic operations applied to that the output
+    would be different. To study it, you can access it saved workspace using this
+    URL: https://ide.geeksforgeeks.org/Fbc63b0u1E
+
+
+    These binary assignment operators combine assignments and arithmetic functions.
+    They work well when controlling loops and conditional statements,'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: 'too. Atomic assignment operators are closely related to unary arithmetic operators.
+    Both are frequently used to control loops. Let''s take a look at unary operations.
+
+
+    # Unary Operations
+
+
+    Before we discuss unary operations, let''s look at code that uses them.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_82_0.png)
+
+
+    # While Loop featuring a Unary Operator
+
+
+    +   j. The unary operation performs
+
+    = 1 + i for each iteration until l
+
+    = 5
+
+    and the while loop ends. Omitting
+
+    i++
+
+    This screenshot is of a simple while loop that prints the value of the Counter,
+    will cause an error as the while loop would not be able to advance. We will talk
+    about loops extensively in the decision making chapter. To study it fully, you
+    can access it on our saved workspace using this URL: https://ide.geeksforgeeks.org/MgMUtZdlpbb
+
+
+    The i = 1 + i is the same as i++. Using the unary form makes the code neater because
+    it precludes the + arithmetic operator and the =assignment operator. We can also
+    use an atomic addition operator tocomplete the code: i+=1 is the same as i++.
+    But a format'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'like would require the compiler to store and operate on an additional operand.
+
+
+    Unary operators are there to simplify code by only having one operand. Remember,
+    unary operators are those operators that use one operand. Here are some of the
+    other examples of unary operators (Kumar, 2017) :
+
+
+    +   - ++ Increment operator used to increase the value of an integer by 1. It
+    can be placed in front of a variable to increment the value immediately or after
+    to temporarily save the value before increment.
+
+
+    +   - -- Decrement operator used to decrease the value of an integer by 1. Similar
+    to the increment, programmers can also implement pre-decrement and post-decrement
+    instructions.
+
+
+    +   - - Unary operator that is used to change the sign of a variable or argument.
+    Performing a unary operation on negative integer will make it positive and vice
+    versa.
+
+
+    xhas a Boolean value of false, !X will be true: NOT is used to reverse the Boolean
+    logical state of operand. For example, if a variable
+
+
+    +   - Address of operator that is used to point to the address of a variable.
+
+
+    Let''s make a unary operator routine to see how the pre- and post-instructions
+    work. Follow these instructions:
+
+
+    +   - Open a new IDE workspace
+
+    - Declare and initialize your variable and a buffer = 10, buf
+
+    - Print an explanation of the program and the starting value
+
+    - Calculate a post-increment equal to the buffer and print theresult
+
+    - Calculate a post-decrement equal to the buffer and print theresresult
+
+    - Calculate a pre-increment equal to the buffer and print theresresult
+
+    - Calculate a pre-decrement equal to the buffer and print the result
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_83_0.png)'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Unary Operator Routine with Post- and Pre-Operations
+
+
+    This screenshot is of our unary operator routine program. To study it fully, you
+    can access it on our saved workspace using this URL: https://ide.geeksforgeeks.org/mvcYtky6C4
+
+
+    The program operates on a and while it calculates, it stores the value in a buffer
+    we can observe. Comparing a with the buffer, the post-operation delays changing
+    the value of a; in contrast, pre-operations change the value immediately.
+
+
+    On top of all this, we have the sizeof() operator. It looks like a function but
+    it is categorized as an operator. It checks the size of an object and returns
+    the size in bytes.
+
+
+    Recall our conversation about bit streams. What I didn''t say is that they are
+    often divided into a group of 8. One byte is a single-bit stream that can present
+    255 numbers. In our bitwise routine, our registers are 1 byte long, that because
+    we were working with numbers that were less than 255.
+
+
+    Let''s write a program that can get the size of an array using sizeof(). Here
+    we go:
+
+
+    Open a new C++ IDE workspace
+
+
+    ```
+
+    intarr[] = {1,2,3,4,7,98,0,12,35,99,14};
+
+    ```
+
+
+    Declare and initialize our array
+
+
+    Print an explanation of the program and the array
+
+
+    Note: To print the array you will have to create a loop for it. We will discuss
+    loops in the next chapter. For now, just use these lines of code:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_84_0.png)'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "```\nfor(constautoe:arr) {\ncout << \"[\" << e << \"\";\n}\n```\n\nintarsize\
+    \ = sizeof(arr)/sizeof(arr[0]);Calculate the size of the array\n\nPrint the size\
+    \ of the array\n\n![](img/3ceb4a3dfd578d1d4c40199c71445dd8_85_0.png)\n\nArray\
+    \ Size Reporting Program\n screenshot is of our array size reporting program.\
+    \ We encourage you to compare your result to ours. To study it fully, you can\
+    \ access it on our saved workspace using this URL: https://ide.geeksforgeeks.org/HwpcLYB4P0.\n\
+    \nThat was a good example of two unary operations: sizeof() and the address pointer\
+    \ &. The for() loop we used to print the array is called by a copy constructor\
+    \ call. Constructor copy calls consist of a for() loop with an index *"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'variable, Addressof operator and a container object with an index. The copy
+    constructor sets up [0]: [the size of arr] by using the Addressof pointer to automatically
+    deduce the [size of arr] and print its contents. In simple words, a copy constructoruses
+    Addressof to reduce the size of the program.
+
+
+    The sizeof() operator is an objective function and it uses a single operand, the
+    array object. Both have disadvantages and advantages. The sizeof() operator uses
+    one operand and is easier to without esoteric registers. The call combination
+    had to use an additional object ( e ), to print the array but would have hadoned
+    with less incrementing operators. We are going to discussloops and decision making
+    features of C++ in more detail in the next chapter. For now, let''s turn our attention
+    to ternary operators.
+
+
+    # Ternary Operators
+
+
+    C++ has only one ternary operator. Ternary operators, also called conditional
+    operators, take 3 or more operands – they are Boolean logic-based operators. The
+    result is always determined by whether or not the first expression is true, the
+    second will be evaluated;if the first expression is false, the third expression
+    will be evaluated. If you recall our if().else statement in the relational program
+    routine,it had three parts: an initial expression that the function evaluates,an
+    expression it evaluates if the initial expression is true, and an statement which
+    is evaluated when the initial expression is not true. Conditional operators have
+    the same components as an if().else statement. They are just more compact.
+
+
+    Let''s make a program that illustrates these similarities:
+
+
+    Open a new IDE C++ workspace
+
+
+    To use the conditional operator you will have to call the
+
+
+    ```
+
+    < bits/stdc ++ .h > library
+
+    ```
+
+
+    Print an explanation for the conditional operator
+
+
+    This program will pick the greatest one using two methods: conditional
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_86_0.png)
+
+
+    operator and an statement
+
+
+    We expect a result of 5.
+
+
+    Declare the variable and execute the conditional operator int arrsize=sizeof(arr)/sizeof(arr[0]);'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# Print an explanation for the elseif(2 > 5) then print 2 then print 5\n\n\
+    ```\n#include <iostream>\nusing namespace std;\nint main() {\n    if (5 > 3)\n\
+    \        cout << \"this program will pick the great\\ngest element of the array.\"\
+    \ << endl;\n    else if (2 > 5)\n        cout << \"base expression using if\\\
+    nvalue of 2\" << endl;\n    else\n        cout << \"base expression using if else\\\
+    nvalue of 5\" << endl;\n    return 0;\n}\n```\n\n![](img/3ceb4a3dfd578d1d4c40199c71445dd8_87_0.png)\n\
+    \n# Conditional Operations Demo\n\nThis screenshot is of our conditional operations\
+    \ demo. This program has no real practical functionality. However, for our purposes,\
+    \ it does demonstrate the similar structures between conditional operators and\
+    \ statements. To study fully, we suggest that you access the copy of our saved\
+    \ workspace using URL: https://ide.geeksforgeeks.org/9kJJBAAgqItK.\n\nIn this\
+    \ chapter, we looked at 3 types of operators: unary, binary, and ternary. As you\
+    \ have seen, these operators allow programmers to apply powerful aspects of C++.\
+    \ For instance, binary operators allow machines to make logical decisions, compute\
+    \ values, and control processes by changing functions. Unary functions help us\
+    \ shrink and simplify complicated code. Ternary operators allow us to be more\
+    \ succinct in code. They are all central to making decisions and switching in\
+    \ C++."
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# CHAPTER 5:
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_88_0.png)
+
+
+    # DECISION MAKING IN C++
+
+
+    In this class, we’re going to talk about decision-making tools. These tools are
+    like if-else loops. In Chapter 4, we saw how operators can be used in logical
+    expressions. When we make decisions, we use these expressions to help us think
+    about them. People write programs for machines that make decisions based on what
+    they want them to do. Decision-making functions and logical expressions make this
+    possible.
+
+
+    This what happened in Chapter 4. We used a for() loop in a copy constructor to
+    field the array and print all the indices. To make the for() loop work, we used
+    the unary operator Addressof with an auto data type. This meant we didn''t need
+    to make a separate counter for the loop. If you haven''t had to start and finish
+    loops yourself, the copy constructor’s simplicity isn''t as clear as it should
+    be.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Loops
+
+
+    Programmers spend a lot of time automating mundane, repetitive tasks through scripts
+    and routines. What allows scripts and routines as the name suggests, loops repeat
+    the same instructions as long as a certain condition is met (“C++ While Loop,”
+    n.d.). Loops are often used to navigate aggregated objects like arrays and vectors.
+    For instance, you might write a loop that searching an array until a specific
+    item is found. There are two types of loops: entry-controlled loops and exit loops.
+
+
+    In our unary arithmetic example, we had a while () loop with a counter. The counter
+    is an arbitrary variable that was used with a unary operator to increment an indicated
+    expression. It is an example of an entry controlled loop – it tests a condition
+    before it executes. Let''s modify that example into a while () loop to explore
+    its components. We will use it to print out “Hello World” 10 times. Follow these
+    instructions:
+
+
+    Open the following IDE C++ workspace: https://ide.geeksforgeeks.org/MgMuTZdlpb
+
+
+    i < 11Print explanation of the program This program will number i
+
+
+    Change the conditional test to
+
+
+    Print “Hello World” 10 times with numbered lines
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_89_0.png)'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# While Loop Demo
+
+
+    This screenshot is of our while loop demo. You can access a copy of our saved
+    workspace using this URL: https://ide.geeksforgeeks.org/0WjOiL6TSh4.
+
+
+    This program shows how incremental counters work. For it to work, the number must
+    start with 1, not 0. Most people are used to numbers working that way. To do this,
+    we initialized the counter at 1. Yet if we reset the counter to 10 it will give
+    us 9 prints. To get 10 we have to increase the number to 11.
+
+
+    Another example of a controlled loop is the for() function; it requires three
+    expressions as inputs (Agarwal, 2017a):
+
+
+    true or falseAn expression declares a data type and a variable.This variable can
+    be either a counter or an indexing variable.
+
+
+    A test expression that produces a Boolean . If the condition is true then the
+    for will continue to loop its specified block of code.
+
+
+    An expression that increments the counter or the indexing variable
+
+
+    Let''s see how they work by writing a program similar to our while () loop example.
+    Follow these instructions:
+
+
+    Open the following IDE C++ workspace: https://ide.geeksforgeeks.org/0WjOiL6TSh4
+
+
+    Print explanation of the program
+
+
+    This program will numrit and print 10 lines of Hello World
+
+
+    ```
+
+    for(inti = 1;i < 11; i ++
+
+    ```
+
+
+    Implement the for() loop
+
+
+    Print "Hello World" 10 times with numbered lines
+
+
+    Clean the data of any unused code and comments
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_90_0.png)'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# For Loop Demo\n\nThis screenshot is of our loop demo. You can access a copy\
+    \ of our saved workspace using this URL: https://ide.geeksforgeeks.org/Dj2gyW022av.\n\
+    \nNote : Make sure you clean your code of unnecessary lines and your comments.\
+    \ While this does not impact the performanceof your code, it can make things confusing\
+    \ for other programmers on your team that have to implement your code. Do you\
+    \ see a mistake here?\n\n```\nfor(constautoe:arr)\n```\n\nNow that we see how\
+    \ for() loop work and how they are constructed, let’s look at the copy constructor\
+    \ we used earlier. The expression used for the copy constructor call was:\n\n\"\
+    E” being the indexing variable and “ arr ” the variable array. We sawthat the\
+    \ for() loop needs three expressions to work: the initialization, the test expression,\
+    \ and the update expression.\n into break class. It allows the attributes of the\
+    \ container array to pass to the e variable. The for() loop will print the e until\
+    \ the end of the array is reached.\n\nThe copy constructor is good for a situation\
+    \ where the size of the container is unknown and you want all items printed out.\
+    \ For() loops define the number of iterations that have to take place from the\
+    \ get-go, while copy constructors are called by the size of the container. While()\
+    \ loops are best for the situation where the condition can change at any time,\
+    \ during which you want the iterations to stop.\n\n```\nwhile(fire = false);\n\
+    do{Keeptheoodlocked}\n```\n\nThe do()...while loop is for situations where the\
+    \ while() code may impact the test. Do{}.while loops are exit controlled, meaning\
+    \ code is executed until a condition is met. The code is executed at least once\
+    \ before checking the test condition. Think back to that bank security example.\
+    \ The door will always fail-close, receiving a NOT signal, except when there is\
+    \ a fire. Here is how a do{..while loop will look for that:"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: 'The door will remain closed as long as fire is not detected. Do{}.while() loops
+    are useful for many fail-close systems. Other applications include correction
+    in servers where a correction routine is run when an error is detected. Let''s
+    code our first do while loop by changing the while() program. Follow these instructions:
+
+
+    Open the following IDE C++ workspace: https://ide.geeksforgeeks.org/WJL6TSSh4
+
+
+    Initialize counter to inti = 11;
+
+    Implement the do{} code block
+
+    Set while(i < 11);
+
+    Clean the data of any unneeded code and comments
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_92_0.png)
+
+
+    > < 11 being false for the entire duration of the program, the do{}.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: 'Check the results
+
+
+    # Do While Loop Demo exhibiting an exit controlled loop
+
+
+    This screenshot is of our do while loop demo. You should notice that,despite code
+    block was executed. This is because the loop is an exit control loop: the condition
+    is tested after the code block is executed. The codehas the potential to execute.
+    You can access a copy of our saved workspace using the URL:
+
+
+    https://ide.geeksforgeeks.org/t6zcNK2Wj7.
+
+
+    See how the message was printed despite the conditions being false. You can apply
+    it to data corrections in streams. Many error detection services pause the stream
+    of data and a request for retransmission is sent. A do{}while loop will allow
+    the data stream to continue until an error is detected. These are the types of
+    routines used by YouTube in server buffers. How these useful they are in controlling
+    data. For single switching, we would use an if()...else
+
+
+    If()...Else
+
+
+    So far we have used if()...else functions in our examples. They are easy to understand
+    and their structure is pretty self-explanatory. An if()
+
+
+    ...else statement tests a condition and based on the result it executes one block
+    of code or another. They are a combination of two separate distinct'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'statements.
+
+
+    You can execute the if() function alone but the compiler expects an else statement.
+    An else statement contains the code that accompanies the if() expression. An else
+    statement can never be executed without the if() statement.
+
+
+    An else if() statement specifies another condition to test. It creates a chain
+    of statements called nested if-else statements. If you are testing a lot of conditions,
+    it is best to use a switch which we will discuss in the next section. Let''s make
+    our first nested if-else statement. Follow these instructions ("C++ | Nested Ternary
+    Operator," *2018);
+
+
+    Open a new IDE C++ workspace
+
+
+    Print an explanation for the conditional operator
+
+
+    This program will go through a sequential list of numbers 2 through 4 and pick
+    the greatest one using a nested if().else statement
+
+
+    We expect a result of 4.
+
+
+    ```
+
+    Implement a nested if-else if(2 > 3) then print 2
+
+    ```
+
+
+    ```
+
+    elif(3 > 4) then print 3
+
+    ```'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_95_0.png)
+
+
+    if()...else statements. Despite us already knowing the answer, the if()...else
+
+
+    else
+
+
+    print
+
+
+    # Nested If-Else Demo'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: 'This screenshot is of our nested if-else demo. Just like our other demos, this
+    program has no functionality. However, for our purposes, this is an excellent
+    exercise for implementing and understanding still requires code blocks for each
+    statement. The code blocks should also correspond to the condition in order to
+    create a functional program that fulfills its stated purpose. You can access a
+    copy of our saved workspace using this URL: https://ide.geeksforgeeks.org/89MINvRWWYU.
+
+
+    Let''s examine the exercise further. The if-else can be divided into two parts:
+    the if() and else statement that contains conditions and execution code. You notice
+    the blocks of code logically follow the goal of the program, which is to find
+    the largest number. It makes sense to print numbers in ascending order in case
+    we change the conditional statement. Conditions within the if() statements and
+    the blocks of code they contain are arranged in a way that allows the program
+    to flow to the answer. For instance, if (2 > 3) is hardcoded to the next nested
+    statement. The structure followed the nested conditional operator deliberately.
+
+
+    # Nested Ternary If Else Operator
+
+
+    In the previous chapter, we talked about conditional operators, ternary operators
+    that test conditions and execute based on the results. We said the it is similar
+    to an if()...else statement but more succinct. For instance, an if() statement
+    tests a condition and executes one of the two blocks of code depending on thereof
+    of the test. If()...else statements can be nested, and conditional operators can
+    also be nested. Let''s compare the structures of both. Follow these steps to participate
+    (“C++ | Nested Ternary Operator,” 2018):
+
+
+    If you had the nested if-else demo, open the saved IDE C++ program at this URL:
+    https://ide.geeksforgeeks.org/89MINvRWWYU
+
+
+    Print an explanation for the program
+
+
+    This program will grow through a sequential list of numbers 2 through 4 and pick
+    the greatest one using two methods: a conditional operator and a nested if()...else
+    statement
+
+
+    We expect a result of 4.
+
+
+    Add a printed notification for the nested if-else
+
+
+    Add the conditional operator code: declare the variable and execute the conditional
+    operator
+
+
+    int a=2>3?2:3>4?3:4;'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# Clean the code of unnecessary lines and correct annotations
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_97_0.png)
+
+
+    # Nested If-Else and Nested Ternary Operation Comparison
+
+
+    This screenshot is of our modified if-else demo. We modified our demo by implementing
+    a nested ternary operator for side-by-side comparison. As you may have experienced,
+    the ternary operator was much easier to implement, using fewer statements. You
+    can access copy of our saved workspace using URL: https://ide.geeksforgeeks.org/BdfgVg8uc.
+
+
+    Let''s talk about what we have just done there. In our previous discussion, we
+    broke down the nested if-else statement into its components and a list of possible
+    results. Even in the case where “2” and “3” are arbitrary values, if-else statements
+    have to list all possiblesresults to ensure great functionality regardless of
+    the conditional statements results.
+
+
+    ```
+
+    var = (expression)1?[resulttrue]1expression
+
+    )2?
+
+    [resulttrue]2:{resultfalse]2
+
+    ```
+
+
+    To see how conditional statement results of a nested if-else match withcomponents
+    of ternary operator, we have to take a close look at the ternary operator. Here
+    is the syntax:
+
+
+    Var is the variable used to print the result. The result of the nested if-else
+    match expression before the ? indicators of the operator. The second expression
+    executes when the first expression is false and corresponds to the else if ()
+    in the nested if-else. You can already see advantages to the compactness of ternary'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: 'operators, but by their nature ternary operators are not suited for code blocks.
+    With three or more expressions both get cluttered, so we need something else to
+    handle multiple expressions: the switch statement.
+
+
+    # Switch
+
+
+    As I have said, programmers need to strive for efficient, easily understandable
+    code. It makes work easier for you and everyone else. Using switch over if().
+    else is one way you can achieve this, especially in circumstances where we are
+    handling a lot of expressions. Ternary operators reduce lines of code, and it
+    is because of this that they are not suited for situations where the code needs
+    to span more than one line.
+
+
+    switch(n)Switch statements offer a solution for both problems. Switch statements
+    are multibranch statements that provide a clean way to execute a different block
+    of code on one variable. Here is the syntax (Awasthi, n.d.):
+
+
+    ```
+
+    { case1//codetobeecutedifn = 1;
+
+    break;case2//codetobeecutedifn = 2;
+
+    ```
+
+
+    ```
+
+    break;
+
+    default://codetobeecutedifndoesn''tmatchanycases
+
+    }
+
+    ```
+
+
+    Note : A switch can only evaluate an integer against case numbers. To add the
+    conditional component, you must change the variable with an operation. The operator
+    must produce an integer.
+
+
+    Let’s create a switch demo to practice the components of a switch:
+
+    Open a new IDE C++ workspace
+
+
+    # intx = 2;Initialize a variable
+
+
+    Print an explanation of the program'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# switch(x)Initialize the switch
+
+
+    Print out “Choice is 1” for case 1
+
+    Print out “Choice is 2” for case 2
+
+    Print out “Choice is 3” for case 3
+
+    Print out “Program Event” for the default;
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_99_0.png)
+
+
+    # Switch Demo
+
+
+    This is a screenshot of our switch demo. You can access a copy of our saved workspace
+    using this URL: https://ide.geeksforgeeks.org/dSehFXULz.5. We highly suggest using
+    this demo to convert one of our previous exercises into a switch. One excellent
+    candidate is our relational routine program. It has 6 if(...). This comes out
+    to 12 different scenarios. How could you convert this into a switch? Hint: Consider
+    creating a menu for each relational routine using the inputfunction. You can study
+    the relational routine for yourself at this URL: https://ide.geeksforgeeks.org/dFD3cEk85y.
+
+
+    Now that we have seen what decision making functions are and how they work, let''s
+    turn our attention to functions and their role in programming.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# CHAPTER 6:'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '![](img/3ceb4a3dfd578d1d4c40199c71445dd8_101_0.png)
+
+
+    # CREATING FUNCTIONS'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '```
+
+    //statements
+
+    [datatype]function_name(arguments)
+
+    ```
+
+
+    It''s a way to figure out what''s wrong with a problem and figure out how your
+    code will help fix it. Algorithms get inputs, do things, and then give a result
+    that changes a state. A function is a piece of code that you use many times without
+    having to write the code again. The code is usually something that does what it''s
+    supposed to do and can be used again and again. A function is made up of a header
+    and a main body. Here is how the syntax of a function looks:
+
+
+    ```
+
+    return0;
+
+    }
+
+    ```
+
+
+    Like you have seen, and like many other programming languages, C++ is mostly just
+    a series of functions, statements, and operators with objects and data-holding
+    elements for in-between. Everything we have written so far has used the main ()
+    function which uses syntax similar to the one above. So functions are not new
+    to you.
+
+
+    Every function must return a data type, just like the main () function returns
+    the int 0. If a function does not this, (void) is used as the parameter return
+    type. As you might have guessed, the return is the statement that terminates the
+    function.
+
+
+    The inputs that the functions receive are called parameters or arguments. Not
+    all functions use them as we have seen with main (); regardless of this, you can
+    still pass parameters into the function for it to run. This is how libraries pass
+    objects into main ().
+
+
+    # Create and Call a Function
+
+
+    To begin calling a function, you must declare it and define it before main ().
+    This is because C++ executes sequentially. C++ practices take precedence and functions
+    get priority. This is why you must declare them before main () so you can call
+    them. They are also called this way because they make code more organized. Once
+    a function is declared, we can define it anywhere outside of main ()'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: 'Let’s write a simple printing function so we can appreciate them more.
+
+    Follow these instructions:
+
+
+    Open a new IDE C++ workspace
+
+    Declare your functionvoid myFunction();
+
+    Call your function in main ()myFunction()
+
+
+    # { cout << "Ijustgotecuted!"; } Define your function outside of main
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_103_0.png)
+
+
+    # Function Demo
+
+
+    This screenshot is of our function demo. You can access a copy of oursaved workspace
+    here.'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: Open a new IDE C++ workspace
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# Declare your functionint( int x, int y)
+
+
+    Call your function in main ()
+
+
+    # inta = 10,b = 20;Initialize two actual variables
+
+
+    Initialize a variable and call the functionint m = max(a, b);
+
+
+    Print the result
+
+
+    End main()
+
+
+    Define your function outside of main
+
+
+    This function should use an if() statement to check if x isgreater than y.
+
+
+    If x is greater than y, then return x
+
+
+    Otherwise, return y.
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_105_0.png)
+
+
+    # Functions with Parameter Passing
+
+
+    This screenshot is of our function demo. You can access a copy of our saved workspace
+    using this URL: https://ide.geeksforgeeks.org/NnsZczhX15. If you want more practice,
+    we suggest using this exercise as a template to turn one of your past
+
+
+    exercises into a function! Consider our exercise using and passing parameters
+    to it. We''ll discuss how to pass parameters in the next section, but trying it
+    first on your own will help you grasp the concept.'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: 'In our example, we have used value passing well. The variables used for main
+    (a,b) are in a different location than those used in max (), (x, y). You can see
+    how this can be very useful in larger programs where several complicated computations
+    might take place in main (). It is preferred to pass values because it ensures
+    that actual variables remain present until the function is called.
+
+
+    Using a reference to pass arguments has its advantages, especially in larger programs.
+    References to pass in values may speed up the program and make it responsive.
+    Scripting for automating functions is more likely to use references to pass parameters
+    since automated processes are likely to happen repeatedly and quickly. These qualities
+    are a selling point for reference-based structures. Let''s now turn our attention
+    to condensing and optimizing code.
+
+
+    # Function Overloading
+
+
+    All defined objects and classes must have unique names. You cannot run a program
+    that has two variables that have the same name or an error will be thrown. You
+    might have seen this earlier while we''re working on our routines and demos, especially
+    when we had to modify a program. So keep this in mind: variables that are declared
+    twice cause errors. But weirdly, multiple functions can have the same name as
+    other functions as long as they have different parameters. This is only allowed
+    in circumstances where the functions return different data types. This is better,
+    given that, what is called function overloading; a process where programmers combine
+    functions to receive multiple data types. Why? Because it simplifies and consolidates
+    the code. Take a look at the following code (“C++ Function Overloading,” n.d.):
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_106_0.png)'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "```\npublic class Main {\n    public static void main(String[] args) {\n  \
+    \      add(10, 20);\n        add(5, 5);\n    }\n    static void add(int a, int\
+    \ b) {\n        System.out.println(\"Sum: \" + (a + b));\n    }\n    static void\
+    \ add(double a, double b) {\n        System.out.println(\"Sum: \" + (a + b));\n\
+    \    }\n}\n```\n\n# Program without function overloading\n\nYou can access a copy\
+    \ of our saved workspace using this URL: https://ide.geeksforgeeks.org/gkpHhZsqg5/.\
+    \ The functions are declared and defined at the top of the file so that we can\
+    \ observe them better. You will be using this file to perform function overloading\
+    \ on your own. Remember that you can return to this workspace at any time if your\
+    \ code is damaged during editing."
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: 'The program above declares two separate functions that do similar computations.
+    In a big program that is a waste of real estate and it is inefficient. It makes
+    it harder to edit the code either one of the functions are unlikely to be in the
+    same place in a larger program. To make things more efficient, we should consolidate
+    these functions under one name, and "stack" the data types. Here''s how you can
+    do this:
+
+
+    Open the saved IDE workspace at the following URL: https://ide.geeksforgeeks.org/qkpHhZsqg5
+
+
+    Change double plusFuncdouble...to double plusFunc...
+
+    Call double plusFuncdouble... in place of double plusFunc...
+
+
+    ![](img/3ceb4a3dfd578d1d4c40199c71445dd8_108_0.png)
+
+
+    Program function overloading
+
+    You can access a copy of our saved workspace using this URL: https://ide.geeksforgeeks.org/e1QLzi3aGo.
+    We kept the functions at top of the file for easy editing. This overloading exercise
+    requires a few small detail changes in order for this file to work. Use our workspace
+    to compare your file in the event you get any long-standing errors. Remember that
+    you can return to the original workspace at any time if your code is damaged
+
+
+    diting. You can access the original workspace at this URL: https://ide.geeksforgeeks.org/qkpHhZsqg5.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: When you consolidate similar functions, you clean up your code. It is important,
+    especially when you have to debug the code, since the compiler will likely point
+    to functions when errors occur. The compiler does this because it is pointing
+    to multiple libraries in the C++ code. Consolidating and overloading functions
+    ensures that your compiler will have fewer functions to reference, making it easier
+    for you to debug. Keep in mind that C++ is constantly updating so that it becomes
+    easier to work with. New features are constantly added, and libraries are condensed
+    and further organized. So an error in C++7 would look different than an error
+    in C++14. Updates bring new, easy ways to perform mundane tasks. For instance,
+    the copy constructor call combinations are considered more modern for indexing
+    containers such as arrays. To stay updated and reap the benefits of new C++ developments,
+    you have to keep practicing, testing yourself, and asking questions.
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# CONCLUSION AND FINAL NOTES
+
+
+    Learning how to code is a mental journey that can be fun, exciting, and sometimes
+    frustrating. In the end of this book, we should go over some of the important
+    things we learned. Because of this, they''re also going to come with some final
+    thoughts and suggestions that are meant to help you keep growing in this field.
+
+
+    # Expanding Your Practice: Preparing Your CodingEnvironment
+
+
+    We have used an online IDE to make everyone has the same experience, so we can
+    all write the code. Use the Run+URL button to save your work in a different place.
+    You can also save these for later by using your saved IDE workspace and the URLs
+    in this book. Use them as a guide or to fix bad code. I tried to show you the
+    best ways to code in all of the exercises we did. Make use of many ways to do
+    things in C++, Don''t be afraid to try new things and learn how to do things you
+    want to. In his book, there aren''t any definitive answers to any of the questions.
+    Programming doesn''t have that kind of thing. Come, to this book for help and
+    look at other ways to do something. This book has a list of our codes at the top,
+    so you can find them quickly.
+
+
+    There are a lot of C++ programming environments and text editors that can work
+    with more than one version of C++. A C++17 computer isn''t going to work with
+    a C++14 computer. People who use C++14 can understand more of its features because
+    they are easier to understand. This version of C++ is easier for people to understand
+    than the one before it, and this trend is likely to keep going. C++11 is the oldest
+    version of C++ that most people can find in most programming environments.
+
+
+    I want to set up your own IDE and work on it. It will help you grow more quickly
+    and get used to real-world situations, so you can learn faster. We have talked
+    about Code:: In this picture there are blocks for Microsoft and the Mac''s Xcode.
+    If you have Linux, there are options that are the same across all of them. Linux
+    is a console-based environment that is very popular with software developers because
+    console-based environments have a lot of built-in features that work with programs.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: 'You can find many distros that have a GUI-based desktop that many people like
+    better. Most of them are open source, which means they can be downloaded and set
+    up for free. CentOS is a free Linux distro that can be used to manage servers.
+    Several parts of Red Hat Enterprise Linux (RHEL) are used by CentOS. It is the
+    best way to learn how to work with Red Hat servers.
+
+
+    # Coding Best Practices: Ownership of Learning andCollaboration
+
+
+    In our time together we have seen many techniques and best practices for software
+    development. In the first chapter, we talked about how programs should fulfill
+    their tasks as little code as possible. Frankly, with each new version of C++,
+    more ways of doing this are added. The majority of beginner programming courses
+    teach older, less efficient methods of implementing programming tasks like parsing
+    arrays, conditional statements, and calling functions. You will find most of these
+    techniques are never used in actual programming situations. Most beginner courses
+    are focused on equipping beginners with a strong grasp of the basics – the foundation
+    of your knowledge is as important as you are going to progress. As you grow you
+    will find more efficient ways of solving problems with your code, but this can
+    only happen if you practice and study.
+
+
+    If you want to improve as a programmer you have to take ownership of your learning.
+    Learn pre-development tools like algorithms. It is all about learning to fix problems.
+    There are other pre-development tools you can try, like diagramming. Diagramming
+    is good for individuals who are visual learners. All of these are great for growing
+    as a programmer; it does not matter what you choose, as long as pre-developments
+    tools is something you take advantage of.
+
+
+    Turning back to algorithms, more detailed algorithms will explain all sorts of
+    data types required for inputs, outputs, and other data. The advantage of algorithms
+    is that you can use them as a shorthand. You can also annotate and manage your
+    code. These habits will help your code ordered and coherent to your team members.
+    All these practices will help enhance how you see and think algorithms.
+
+
+    Software developers work in teams, with several people working on the same piece
+    of code at the same time. The importance of annotating your'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: 'code becomes very apparent in such situations.
+
+
+    It also happens that working with others will accelerate your growth. When coding
+    with others you learn from their experience and knowledge. As we have said, C++
+    has a variety of library objects, statements, and other tools. It is as rich as
+    vocabulary in human languages because there are many ways of doing the same things.
+    Your way of fixing a problem will depend on your ability to see efficient ways
+    of doing so. But ultimately all programming and software developments are creative
+    endeavors. Working with others will increase your programming “vocabulary” – you
+    will learn from how creatively they fix problems and you will find insights of
+    yourself in the process. You should always keep in mind that everyone can contribute
+    something and what they contribute is heavily influenced by the amount of experience
+    they have. So even if you are new to C++, you still have a unique experience and
+    approach to solving problems that other people don’t have because you think differently.
+    That in itself is valuable to any team, particularly if you learn to communicate
+    your ideas well. I highly recommend you use the glossary as one of the ways to
+    help you communicate clearly.
+
+
+    In addition to annotations, it is good practice to make your code as clean as
+    possible. I have demonstrated how to comment lines of code to prevent the code
+    during editing. In your exercises, when you break the code beyond repair, you
+    can always start over from our saved IDEs, or you can simply refresh the browser
+    to start (this will depend on the state you ran and generated the code). Only
+    generate URLs when you need to save your code, not whileyou are developing.
+
+
+    We also stressed the importance of code structure. For instance, we talked about
+    the importance of declaring and defining functions: the best practice is to declare
+    your functions on the top and define them after the main() function. It is similar
+    to declaring integers. The techniques ensure you have an inventory of functions,
+    variables, and objects right at the beginning. It works like an index and can
+    help youavoid definition errors.
+
+
+    Formatting and editing your code of unnecessary lines reduces the possibility
+    of errors during development. You should always update your comments when you
+    make a change. Unformatted code will not impact performance, the logic of the
+    code will. It is a collaboration courtesy to format your code, not to mention
+    how much easier it makes things for you.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "Other programmers on your team will be able to implement your code, or even\
+    \ improve it, and they will leave comments.\n\nBut these types of practices are\
+    \ not just good for you. As the world moves forward it is becoming more and more\
+    \ complicated, so it is good for programs to explain themselves to the user. If\
+    \ your program prints, make sure it is easy to read. We see how this can be done\
+    \ in this book. Use escape sequences like `\n to create new lines lines and `\t\
+    \ to create horizontal table so there is enough whitespace to your code. But as\
+    \ a back-end programmer working with servers and other equipment, you may not\
+    \ have to print out as a front-end programmer who serves content to the client.\
+    \ The only users who may need to see your print outs are other technicians and\
+    \ administrators managing these machines through the terminal. Formatting practices\
+    \ are often underused in backend programming, but it is still a good practice\
+    \ to have. It is valuable to administrators and technicians, who do not have the\
+    \ resources to navigate esoteric compiler-generated errors that programmers are\
+    \ used to when debugging. So a program that is formatted and gives this information\
+    \ clearly in the terminal or consoles is important.\n\n# Take Away: Computer Science\
+    \ Concepts in C++\n\nIn addition to programming, we also explored some basic computer\
+    \ science concepts. We looked at the behavior of machines and their language.\
+    \ We talked about how learning programming is like learning a new language: both\
+    \ have syntax and rules that ensure communication is possible. C++ is a back-end\
+    \ server language that is used for managing servers that control oceans of data.\
+    \ Unlike high-level languages like Python, which are more human, C++ wants programmers\
+    \ to be more detailed in their code. Each variable must be unique in a function\
+    \ or we will have an error. All functions and statements are case sensitive and\
+    \ have specific rules that govern them. We have implemented many `if()`...else\
+    \ statements and made nested if-else statements. We saw that conditional statements\
+    \ like `if()` can be executed without the `else`, but a missing `else` statement\
+    \ can cause an error if the condition is false. And just as a missing verb indicates\
+    \ a sentence is incomplete, `else` statements cannot be implemented without an\
+    \ `if()`.\n\nWe saw how computers communicate in binary numbers using logical\
+    \ math. We saw bitwise function work at the bit level, completing"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: 'logical math computations like AND, OR, NOT. All the other C++ functions that
+    are object-based must be translated by the compilerinto machine language. But
+    bitwise functions are faster because they skip that step and communicate directly
+    to the machine. They are often deployed in competitive programming to make highly
+    agile programs and routines. Outside of competitive programming, bitwise functions
+    have some functionality in managing big data.
+
+
+    The challenge with bitwise functions is that they are very difficult for humans
+    to understand because they are binary. To see what computers see we had a brief
+    computer science lesson on binary and binary math. We made a “byte-sized” stream
+    of register with our bitwise routine program and we made dynamic buffers to store
+    bits for bitwise computations. Those virtual buffers and registers are how servers
+    manage terabytes of data. Think about this; our buffers and registers were all
+    one byte long, but a terabyte is'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# $10^{12}$ times larger than our buffer: 1,000,000,000
+
+
+    bytes. These numbers are small for websites YouTube which bases its back - end
+    computing on C ++ . The data that YouTube deals with is astronomical
+
+
+    # In 2018 it was 5.25 zettabytes $10^{21}$
+
+
+    bytes). It was servingover 3.25 billion hours of content (“How much data YouTube
+    store? - Quora,” n.d.). Bitwise functions give these servers the ability work
+    with load without interruption or massive delays. This is one of the best examples
+    of the power of C++ and its ability to handle big complex systems. It is a useful
+    language for programmers to learn. If you visualize these data streams as arrays
+    of 8 slots, it will be easier for you to rationalize many bitwise operators, especiallyhift
+    operators.
+
+
+    In addition to binary programming, we worked with different kinds of data and
+    explored different aspects of object programming. We did plenty of exercises where
+    we dealt with strings, for example. In fact, we used and deployed strings in every
+    one of our exercises. We saw that strings are also arrays of data, and can be
+    parsed with various objects in the <string> library. Think of the copy constructor
+    call combination we. To parse a container of any type, vector or array, you need
+    a for(loop) with an Addressof operator element. That task has a dedicated function
+    in the <string> library where all you need the index of the item you are parsing.
+    If there is one thing you should take away from this book it is proficiency in
+    handling strings: breakout sequences, handling strings through array indexing,
+    and passing strings to different functions.
+
+
+    We also learned and discussed functionality and design considerations. We talked,
+    for instance, about how and when to use loops. Our bank security example was best
+    illustrated by our exit controlled loop example in a fail-close'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: 'system. Banks, as we said, should always have their doors locked and closed;
+    they fail-close.
+
+
+    ost events in the bank require doors and exits to fail-close and the only time
+    they should open it in a fire. The system should keep everything in check, where
+    a condition is tested AFTER the routine. The exit control loops are also useful
+    in other areas, like datacontrol. YouTube does data corrections as a secondary
+    routine of normal operations. This makes sure the system is always running,not
+    hunkered by resend-data requests.
+
+
+    As C++ is a backend-language it has to handle and work with multiple types of
+    data. We had a brief discussion about this when we spoke of vector-based images
+    as an object class and their other object properties. Photo manipulation software
+    like Photoshop is programmed in C++ where aspects like image manipulation take
+    full use of the program''s power. Vectors allow image manipulation without loss
+    of quality, unlike .jpg or .png that are arrays of pixels. Vectors like .svg or
+    .pdf use vector containers to describe their pixel locations, which has more class
+    features in C++ that allows preservation of the image.
+
+
+    This book is also meant to be reference, so I encourage you to usethe glossary
+    and the index to review topics. The glossary has all the terms bolded and some
+    of the code snippets we looked at. It also includes the section where the terms
+    are discussed in more detail.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# # GLOSSARY
+
+
+    | Term | Definition | Section |
+
+    |---|---|---|
+
+    | "+", | Binary, arithmetic operation that sumtwo variables. Also used to concatenate
+    stringsin the <string> library | Operation:String Concatenation |
+
+    | "++" | Increment operatorused to increase the value of Unary Operators an integer
+    by 1. This unary operator is often used to increase a variablewithin a loop. |
+    |
+
+    | "--" | Unary operator thatdecreases a variable within a loop. This unary operator
+    is often used to increase a variable within a loop. | Unary Operators |
+
+    | Arithmetic Operator "-", | Binary operator thatsubracts one operand from another
+    | ArithmeticOperators |
+
+    | Unary Operator "-", | Unary minus operator that is used to change the Unary
+    Operators sign of a variable orargament. Performing a unary minus operation on
+    a negative integer | |
+
+    | | will make it positiveand vice versa. | |'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '| -= | The atomic subtraction used to combine the ''-'' Assignment Operators
+    and ''+='' operators. This operator first subtracts the current value ofthevariable
+    on the left the value on the right. It then assigns the result to the variable
+    on the left. For example, x=-y would be a shorter way of writing x=x-y without
+    having to use a separate arithmetic operator. |
+
+
+    | Binary Operator != | Binary logical “NOT” operator that returns a Logical Boolean
+    true if the conditions in consideration are not satisfied. If one of the conditions
+    is true, then it returns a Boolean false. |
+
+
+    | ! | NOT operator is used to reverse the Boolean Un logical state of an operand.
+    For example, if a variable x has a |
+
+
+    | | Boolean value of false, !x will be true. |
+
+
+    | != | “Not-Equal” operator that also checks whether Relational twigs operands
+    areequal or not. However, this operator returns aBoolean true if the operands
+    are not equal and returns false if the operands are equal. |'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '"**"
+
+    Binary operator that multiplies two operands. ArithmeticOperators The order of
+    the operands does not matter.
+
+
+    "*=\
+
+
+    without having to use a separate arithmetic operator.
+
+
+    "/"
+
+    Binary division "forward slash" operator that ArithmeticOperators divides the
+    first operand into thesecond.
+
+
+    "/=\"
+
+    Atomic division operator is a combination of Assignment Operators ''/'' and ''=''
+    operators."'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '| | | This operator first divides the current value of the variable on the
+    left by the value on right and then assigns the result to the variable on the
+    left. For example, x/=y would be a shorter way of writing x=y without having to
+    use a separate arithmetic operator. | |
+
+    | "?" Sequence | Escape Used for questionmarks. | Using Escape |
+
+    | "'''' Sequence | Escape Used for singlequotes. | Using Escape |
+
+    | """ Sequence | Escape Used for doublequotes. | Using Escape |
+
+    | "\" Sequence | Escape Used for backslashes. | Using Escape |
+
+    | "f" Sequence | Escape Stands for "form feed" and is used to go to the next"page".
+    | Using Escape Sequences |
+
+    | Escape Sequence "\n" | Stands for "line feed" and is used to go to the Using
+    Sequences |
+
+    | Escape Sequence "\t" | Stands for "horizontal tab" and adds 5 spaces horizontally.
+    | Using Escape Sequences |
+
+    | Escape Sequence "\v" | Stands for "verticaltab" and is usedforscing in vertical
+    languages. | Using Escape Sequences |
+
+    | Unary Operator "&" | Address of operatorthat is used to pointto the Unary Operators
+    address of a variable. | |'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '| Binary Operator | Description | Category |
+
+    |---|---|---|
+
+    | "&" | Bitwise AND that takes two numbers as operands and does AND on everybit
+    within the stream of the two numbers. The result stream of AND is 1 only if both
+    bits are 1. | Bitwise Operators |
+
+    | "&&" | Binary logical “AND" operator returns true when both the conditions in
+    consideration are satisfied. Otherwise, it returns false. | Logical Operators
+    |
+
+    | "%%" | Binary modulus operator that returns the remainder from dividing the
+    first operand into second. | Arithmetic Operators |
+
+    | "^" | Bitwise XOR that takes two numbers as operands and does XOR on everybit
+    within the stream of the two numbers. The result stream of XOR is 1 if the two
+    bits are different. | Bitwise Operators |
+
+    | "+=" | Operator for atomic addition, used to combine the ''+'' and ''='' operators.
+    This operator first adds the current value of the variable on the left | Assignment
+    Operators |'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: 'to the value on the right. It then stores the result to the variable on the
+    left. For example, x+=y would be a shorter way of writing x=x+y without having
+    to use a separate arithmetic operator.
+
+
+    < Less-than operator that checks whether the first operand is lesthan the second
+    RelationalOperators
+
+
+    operand. If so, thisisoperator returns a boolean true. Otherwise, itreturns false.
+
+
+    << Left shift operator that takes two numbers and left shifts the bits of thefirst
+    operand. The second operand is used to determine the number of places to shift.
+    Bitwise Operators
+
+
+    <= Lesser-than or equal-to operator that checks whether the first operand is less
+    than or equal tothesecond operand. If so, this operand returns a Boolean true.
+    Otherwise it returns false. RelationalOperators'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '| | | |
+
+    |---|---||
+
+    | == | Equal assignment operator, used to assign the value onthe right to the
+    variable on the left. | AssignmentOperators |
+
+    | == | “Equal” operator that checks whether two operands are equal. If the operands
+    are equal, it returns a Boolean “true”, if not it returns false. | RelationalOperators
+    |
+
+    | > | “Greater-than” operator that checks whether the first operand is greater
+    than the second operand. If so, this operator returns a Boolean true. Otherwise,
+    it returns false. | RelationalOperators |
+
+    | >= | “Greater-than or equal-to” operator that checks whether the first operand
+    is greater than or equal to the second operand. If so, this operand returns a
+    Boolean true. Otherwise, it returns a false. | RelationalOperators |'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '>> Right shift operatorthat takes two numbers and right shifts the bits ofthefirst
+    operand. The second operand is used to determine the number of places to shift.
+
+
+    Bitwise Operators
+
+
+    | Bitwise OR that takes two numbers as operands and does OR on every bit within
+    the stream of two numbers. The result stream of OR
+
+
+    Bitwise Operators
+
+
+    is 1 if any of the twobits is 1.
+
+
+    | Binary logical “OR”operator that returns a Boolean true when one (or both) of
+    the conditions in consideration are satisfied. If none ofthe the conditions are
+    satisfied, it returns false.
+
+
+    Logical Operators
+
+
+    | Bitwise NOT operator that takesone number and switches the state of all the
+    bits (1s to0s, 0s to 1s).
+
+
+    Bitwise Operators
+
+
+    # **bool** Keyword
+
+
+    Datatype keyword that is short for “Boolean”
+
+
+    Basic Data Types'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '| and stores values with two states: true or false. Has a size of 1 byte, these
+    values can be expressed as either"0/1" or "false/true" with a manipulator. | |
+    |
+
+    | **"boolalpha/noboolapha" Manipulator** | Input-Output manipulator that switches
+    betweening"0/1" to "false/true" for Boolean values. | Endl: Input/Output Manipulators
+    |
+
+    | **"char" Keyword** | Data type keywordthat is short for "character" and stores
+    single characters regardless of their capitalization. Hasa size of 1 byte. Char
+    values aresrounded by single quotes. | Basic Data Types |
+
+    | **"cout" object** | C++ programmingobject part of the <iostream> library that
+    allows a program to print outvalues and text using the "<<" operator. This object
+    must be defined with a datatype, usually "std". | Using Cout |
+
+    | **"double" Keyword** | Data type keyword that is used to storenumbers Basic
+    Data Types |'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: 'with decimals with 15 decimal digits. Has a size of 8 bytes.
+
+    This data type canhold more decimalnumbers and is preferred for mathematical calculations.
+
+
+    | else | Statement is used to specify a code in the event that its accompanying
+    if() expression is false. Else cannot be used without if (). | Loops |
+
+    | endl | Manipulator | Input-Output manipulator that outputs "n" and flushes the
+    outputstream. | Using endl: Input/Output Manipulators |
+
+    | ends | Manipulator | Input-Output manipulator that outputs "0" [zero]. | Using
+    endl: Input/Output Manipulators |
+
+    | float | Keyword | Keyword data type that storeswith decimals with 7 decimal
+    digits. Has a size of 4 bytes. This data type is preferred forholding monetary
+    numbers. | Basic Data Types |
+
+    | flush | Manipulator | Input-Output manipulator that flushes the outputstream.
+    | Using endl: Input/Output Manipulators |'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '| "get_money" Manipulator | Input-Output manipulator that receives an input
+    as a monetary value. This manipulator works in C++11 only and may cause errors
+    in outdated C++ programming environments. | Using Endl: Input/Output Manipulators
+    |
+
+
+    | "get_time" Manipulator | Input-Output manipulator that receives an input as
+    a date/time value according to toa specified format. This manipulatorworks in
+    C++11 only and may cause errors in outdated C++ programming environments. | Using
+    Endl: Input/Output Manipulators |
+
+
+    | "int" Keyword | Data type keywordthat is short for "integer" and storeswhole
+    numbers. Has a size of 4 bytes. This keywordincludes positive and negative integers.
+    | Basic Data Types |
+
+
+    | "put_money" Manipulator | Input-Output manipulator that formats and outputsa
+    monetary value. This manipulatorworks in C++11 only and may cause errors in outdated
+    C++ programming environments. | Using Endl: Input/Output Manipulators |'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '| "put_time" Manipulator | Input-Output manipulator that receives an input
+    as a date/time value according to toa specified format. This manipulatorworks
+    in C++11 only and may cause errors in outdated C++ programming environments. |
+    Using endl: Input/Ouput Manipulators |
+
+    | "quoted" Manipulator | Input-Output manipulator allowsyou to insert and extract
+    quoted strings with embedded spaces. This manipulator | Using endl: Input/Output
+    Manipulators |
+
+    | | works in C++14only. | |
+
+    | "showbase/noshowbase" Manipulator | Input-Output manipulator specifically for
+    mathematical outputs that controls whether a prefix is used to indicate a numericbase.
+    | Using endl: Input/Output Manipulators |
+
+    | "showpos/noshowpos" Manipulator | Input-Output manipulator that controls whether
+    the "+" sign is usedto indicate non- negative | Using endl: Input/Output |'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '| numbers. | Manipulators |
+
+    | “uppercase/nouppercase” Manipulator | Input-Output manipulator that controls
+    whether uppercase characters are usedwith some output formats. | Using Endl: Input/Output
+    Manipulators |
+
+    | “using namespace std;” Statement | Line of code frequently used to unilaterally
+    declarethe"std" datatype for i library objects and manipulators. Thisunilateral
+    declaration makes code easier to see. However, thisis discouraged outside of practice
+    because it can make string | Omitting Namespace |
+
+    | | handling ill-definedin programs, thus, causing errors tatare difficult to
+    mitigate. Exercisesin this book will avoid using this statement. | |
+
+    | [string_name].length() Attribute | Coding syntax for calling the “length” string
+    object attribute . | String Objects: Length() Attribute |
+
+    | Actual Parameters | Parameters cominginto a defined function. | Parameter Passing
+    |'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '| Algorithm | An organizational tool used to plot outthe aspects of a program
+    including (1) data in, if applicable, (2) operations performed on declared variables,
+    and (3) the result ofrunning the program. | Principles of Programming |
+
+    | Arithmetic operators | Binary and unary operations that areused to perform common
+    mathematical operations. | ArithmeticOperators |
+
+    | Assembly language | Describes a low- level programming language that requires
+    a compiler convert it into machine code. | Chapter 1: Settingup a C++ Development
+    Environment |
+
+    | Assignment Operators | Used to assign a value to a variable and change valuson
+    the fly, reducingthe number of instructions in a program. | AssignmentOperators
+    |
+
+    | Atomic Operations | Operations that combine assignments without operations.
+    Atomic operations allow programmersto manipulate a value stored withina variable
+    and reassign it immediately. | AssignmentOperators |'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "| Base-10 | Number system used by human beings assign placevalue to numerals.\
+    \ <br>Base-10 is also known as the decimal system because a digit's value in a\
+    \ numberberis determined by where it lies in relation to the decimal point. The\
+    \ value is multiplied by a base power of 10, where each point away from theheleftft\
+    \ of the decimal is10^(n+1) and each point to the right of the decimal is10^(n-1).\
+    \ | Bitwise Operators |\n Binary Number System | See Base-2 | Bitwise Operators\
+    \ |\n Binary Operator | Classification of operators that execute with twooperands.\
+    \ | Chapter 4: Operations in C++ |\n Bitwise Operators | Logic operators thatoperate\
+    \ on numbers at the binary level. | Bitwise Operators |\n Bluefish | A free software\
+    \ advanced text editor with a varietyof tools for programming in general and |\
+    \ Setting up the Text Editor |"
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: 'the development of dynamic websites.
+
+
+    Byte
+
+
+    Measurement of data composed of 8bits. A byte can represent up to 225numbers (
+    0b 1111111 ).
+
+
+    Unary Operators
+
+
+    C++14
+
+
+    Advanced version of C++ that makes this version slightly more intelligible for
+    humans to programin. "Standard C++" usually refers to C++11, also knownas C++0x.
+
+
+    Chapter 1: Settingup a C++ Development Environment.
+
+
+    CentOS
+
+
+    A free, community-supported. Linux distribution operating system
+
+
+    Linux Compiler Installation
+
+
+    that is functionally compatible with Red Hat EnterpriseLinux (RHEL).
+
+
+    Code
+
+
+    See Executable file
+
+
+    Chapter 1: Settingup a C++ Development Environment
+
+
+    Code::Blocks
+
+
+    A free open sourceIDE designed for C++. This IDE supports many C++compilers includingGCC,
+    Clang, and Visual C++ in Microsoft. This IDE can program in C++, C, and Fortran.
+
+
+    Windows IDE Installation'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '| Command-Line Interface (CLI) | Method of interacting with a computer program
+    where the user controls the program with entering lines of code. | Setting up
+    a Text Editor |
+
+    |---|---|---|n| Comments | Lines of code that are ignored by the compiler and
+    indicated by a double slash at thebeginning of the line in C++. Comments are used
+    to annotatecode and leave | Overview of C++ Syntax |
+
+    | | notes to guide otherprogrammer studying your code. | |
+
+    | Compiled Language | See Low-LevelLanguage | Chapter 3 |
+
+    | Concatenation, String | A common programming feature that allows programmers
+    to dynamically concatenate text by fielding content from a source and serving
+    within their program. In C++ String Concatenation is done through "+", an arithmetic
+    operator. | Operation:String Concatenation |'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '| Conditional Operator | Boolean logic based operator with three operand expressions.
+    The outcome of the conditional operator depends on the first expression. | Ternary
+    Operators |
+
+    | Conditional Short-Circuit | When program developers use logical operators and
+    conditional statements to control how a program behaves. | Logical Operators |
+
+    | Copy Constructor Call | Method of searching and printing indexes. | Unary Operators
+    |
+
+    | | Consists of for() loop with an index variable with an Addressof operator,and
+    a container object with an index such as an array. | |
+
+    | Counter | An arbitrary variable that is used in conjunction with an arithmetic
+    unary operator to incrementally loop an indicated expression. | Loops |'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '| Data | Operands, or thevarious kinds of data that the functions and statements
+    are acting on | Overview of Syntax |
+
+    | --- | --- | --- |
+
+    | Data Type | Attribute of a variable which tells the compiler or interpreter
+    how the programmer intends to use the data. Common datatypes include real numbers,
+    integers, and "true-false" Boolean variables. | Chapter 3 |
+
+    | Debugging | Process of locationand removing computer program errors and abnormalities,
+    alsoknown as "bugs." As a general rule, | Overview of Syntax |
+
+    | | smaller, modularized codethat calls on functions is easierto debug than larger
+    files. | |
+
+    | Decimal Number System | See Base-10 | Bitwise Operators |
+
+    | do {}...while() Loop | Exit controlled loop that tests a single condition and
+    loopsa block of code untilhthe condition is met. | Loops |
+
+    | else if() | Conditional statement combination usedto nest Loops | |'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '| conditionalif()... else statements.
+
+    Programmers areadised to use a switch if there arenumerous conditions to test.
+    | |
+
+    | Escape Sequence | Special in-string character combinations that are used to
+    represent certain special characters within strings and character streams.
+
+    Escape sequencesallow programmersto include symbols in strings without confusing
+    the compiler. | Using Escape Sequences |
+
+    | Executable File | List of instructions | Chapter 1
+
+    that are used toperform the operations of a program. | |
+
+    | File Extension | File suffix that informs the code compiler what language the
+    executable file is in.
+
+    The C++ language indicated by ".cpp" or ".hpp" extensions. | Chapter 1 |
+
+    | First Principal of | A program must be designed to complete a task Principles
+    of |'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '| Programming | in the smallest number of functionspossible. This principle
+    reduces overhead and increases performance of a program. | Programming |
+
+    | for() Loop | Entry controlled loop that has threeinputs: an initialization expression,
+    a test expression and an update expression. The for loop will execute its block
+    ofcode until the test expression reports false. | Loops |
+
+    | Formal Parameters | Variables used to define the initial arguments, and any
+    | Parameter Passing |
+
+    | arguments in the function before theactual parameters are passed. | | |
+
+
+    | Formal Parameters | Variables used to define the initial arguments, and any
+    | Parameter Passing |
+
+    | arguments in the function before theactual parameters are passed. | | |
+
+    | Function | A block of code thattakes inputs to perform an action and runs when
+    called. | Chapter 6:Creating... |
+
+    | Function Overloading | Programming technique of consolidating code through stacking
+    several data typesonto one function. | Function Overloading |'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '| Functionality | How program features and utilities can be implemented in
+    acode to achieve specific result. | Chapter 4: Operations in C++ |
+
+    |---|---|---|
+
+    | Functions | Code that encapsulates instructions that may take inputs and output
+    some result. Every function “[function-name]()()", where [function_name] issome
+    arbitrary function, is alwaysfollowed by curly brackets {} and every explicitly
+    stated instruction within the curly brackets will be executed by thecompiler.
+    | Overview of Syntax |
+
+    | Gedit | Free, open-source, general-purpose text editor that includes tools for
+    editing source codeand structured text such as markup languages. | Linux Compiler
+    Installation |
+
+    | getline() function | C++ function from the <string> librarythat extracts all
+    characters from aninput string into a string array. | Cin and getline() function()
+    |'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '| GNU Collection Compiler (GCC) | An open source compiler system produced by
+    the GNU Project supporting various programming languages. GCC is a key componentof
+    the GNU toolchain and is the standardcompiler for most Linux projects. | Linux
+    Compiler Installation |
+
+
+    | Graphical user Interface (GUI) | Method of interacting with a computer program
+    that allows users tointeract with graphical icons andvisual indicators such as
+    secondary notation instead ofinputting commands. | Setting up Text |
+
+
+    | Header File Library | Lines that start withitthe pound sign (#) that are used
+    bythecompiler to call library functions. | Overview of Syntax |
+
+
+    | if() else Statement | Conditional statement functioncombination that tests a
+    single condition and executes explicitlystated blocks of code based on the results
+    of the test. | Loops |
+
+
+    | if(). else statement | A nested function that executes all instructions | RelationalOperators
+    |'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: 'within its curly brackets "{}\ given a specified condition is met. Otherwise,
+    itexecutes the items with the enclosed else {} statement.
+
+    These statementalsalways deploy a relational operandto test the condition.
+
+
+    | Integrated Development Environment (IDE) | Programming environment usedto write
+    code, testfor errors and translate a program. | Chapter 1 |
+
+    | Linux distribution (distro) | An operating system made froma Linux kernel based
+    software | Linux Compiler Installation |'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '| | collection and package management system for installingadditional software.
+    | |
+
+    | Logic Gates | Physical electronic circuits that have one or more inputs while
+    only having one output. AND gates only pass a “1” when all inputs are “1”; OR
+    gates pass a “1” as their output when they receive a “1” at anyof their inputs;
+    NOT gates pass a “1” when they receive a “0” at their input. | Logical Operators
+    |
+
+    | Logical Operators | Binary operators used in combination with the Logical Operators
+    relational operators combine two or more conditions to describe a specificconstraint.
+    | |
+
+    | Loops | Function that execute a block of code Loops as long as a specified acondition
+    reached | |
+
+    | Low-Level Language | A programming language that closely follows Chapter 2 computer’s
+    instruction set | |'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '| architecture— commands or functions in the language map closely to processor
+    instructions. This reduces the overhead for running the program as the compiler
+    takes less resources to translate low-level languages into machine code. | | |
+
+    | Machine Language | Coding languagethat is directly compiled and executed by
+    a CPU. See "AssemblerLanguage" | Chapter 1 |
+
+    | Manipulator, Input/Output | Helper functions within the C++ iostream library
+    thatmake it possible to control input/output streams using the " <<" operator
+    or the ">>" operator. | Using Endl! Input/Output Manipulators |
+
+    | Notepad ++ | Text editor and source code editor for use with Microsoft Windows.
+    | Setting up Text |
+
+    | Object | A general computing term thatdescribes a methodthat the computer |
+    First Program: Output and BasicStrings |'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '| | uses managedata. |
+
+    | Operand | Operation component that describes Note: Operand... the value, object,
+    or variable being operated on. |
+
+    | Operations | Features such as control loops that Chapter 4: Operations in implement
+    decision-making in C++ programs. |
+
+    | Operator | Operation component that describes Note: Operand... the symbol indicating
+    the sort of operation being carried out. Operators are described by how many operands
+    they can operate on at a time: unary, binary, and ternary. |
+
+    | Organization Identifier | Proprietary Apple naming Mac IDE Installation convention
+    that is used to create a unique ID for programs across various Apple databases:
+    the Apple Developer Website, and iCloud Container, iTunes connect portal in the
+    Appstore. The |'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: 'organization identifier is used as the first argument of a "reversed domain"
+    that ensures that all developed projects can be streamlined into the proprietary
+    macOS framework.
+
+
+    | Parameter Pass Reference | Both actual and formal parameters refer to Parameter
+    Passing the same locations. Therefore, any changes made inside the main() function
+    will impact the actual parameters that were passed.
+
+
+    | Parameter Pass by Value | Values of actual parameters are copied into Parameter
+    Passing and stored in the function''s formal parameters. Any changes made inside
+    main() does not impact the actual parameters that were passed.
+
+
+    | Red Hat Enterprise Linux (RHEL) | A commercial Linux distribution developed
+    by Red Hat for the commercial market. Linux Installation> Note: there are many
+    distributions...
+
+
+    | Register | An array of binary storage where each |'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '| | bit gets its own place in the array. | Bitwise Operators |
+
+    |---|---|---|n| | Registers are used to calculate bitwise operators. |
+
+    | Relational Operators | Binary operators that are used to compare RelationalOperators
+    two values and return abolean response. |
+
+    | Script | Supplementary list of commands executed by certainprograms or scripting
+    engines. | Chapter 6:Creating... |
+
+    | See Base-2 | Number system used by machines calculate computations. Alsoknown
+    as the binary number system. binary numbers are represented as a stream of bits,
+    where each single bit can be one of the two states: 1 or 0. The position of the
+    1 bit in the stream determines the value of the number. | Bitwise Operators |
+
+    | Server-side programming | Writing code that negotiates and delivers Mac IDE
+    Installation content toa dynamic, or changing website. |'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '| | C++ is, majorly, a server side language. |
+
+    | **Service Level Agreement (SLA)** | Term in IT management that describes a commitment
+    between the technology administrator, the one providing the service, and a client.
+    | Overview of Syntax |
+
+    | **sizeof()** | Unary operation that queries the size of an object and delivers
+    its size bytes. | Unary Operators |
+
+    | **Software Development Kit(SDK)** | A set of tools used for developing applications
+    provided by hardware and software providers. | Mac IDE Installation |
+
+    | **Statements** | General term to describe the beginning line of code with specific
+    instructions that the compiler recognizes outside of functions. How these are
+    highlighted in language syntax environments depend on the type of the statement
+    and the | Overview of Syntax |'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '| | conventions of the programming environment. |
+
+    | String Array | An orderly arrangement of characters String Indexes and where
+    each character of the string is Arrays indexed in its own numerical location.
+    |
+
+    | Strings | A computer programming data type that Advanced Strings represents
+    a sequence of characters, either as a literal constantor as some kind of variable.
+    |
+
+    | switch () Statement | Multibranch statement used to execute Loops different
+    code blocks based on the value of an evaluated expression |
+
+    | Ternary Operator | Classification of operators that Ternary Operator accept
+    more than 2 operands, or conditional operators with several arguments. |
+
+    | Text Editor | Program that enables editing ofthe code. Chapter 1 |
+
+    | Unary Operator | Classification ofofperators that Unary Operator |'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '| | execute with asingle operand. | |
+
+    | Variables | A concept borrowed from mathematics to describe a symbolic value
+    who''s associated value can be changed and operated upon. Variables are used to
+    control a program through operational functions. | Chapter 3 |
+
+    | while() Loop | Entry controlled loop that tests a single condition andloops
+    a block of code until the condition is met. | Loops |
+
+    | Xcode | A free IDE software development suite for the macOS. This IDE has utilities
+    for developing C++ based programs for MacOS oriented operating systems like tvOS
+    for Apple TV, watchOS for Apple watches, andiPadOS for iPad tablets. | Mac IDE
+    Installation |'
+  merge: -1
+  pgno: 148
