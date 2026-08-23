@@ -1,0 +1,1776 @@
+- img_proc: true
+  md: '# # CODE YOUR OWN SPACE ADVENTURE
+
+
+    By Max Wainwright
+
+
+    CODE WITH MAJOR KATE AND SAVE PLANET ZYSKINAR
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # CODE YOUR OWN SPACE ADVENTURE
+
+    ## CODE WITH MAJOR KATE AND SAVE PLANET ZYSKINAR
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_2_0.png)
+
+
+    By Max Wainewright
+
+
+    QED'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Quarto is the authority on a wide range of topics.
+
+    Quarto educates, entertainains and enriches the lives of
+
+    our readers--enthusiasts and lovers of hands-on living.
+
+    www.quartoknows.com
+
+
+    Author: Max Wainwright
+
+    Illustration and design: Henry Smith
+
+    Designer: Adrian Morris
+
+    Editor: Claudia Martin
+
+
+    Copyright © QED Publishing 2017
+
+
+    First published in the UK in 2017
+
+    by QED Publishing
+
+    Part of The Quarto Group
+
+    Old Brewery, 6 & Blundell Street
+
+    London, N7 9BH
+
+
+    All rights reserved. No part of this publication may be reproduced, stored in
+
+    a retrieval system, or transmitted in any form or by any means, electronic,
+
+    mechanical, photocopying, recording, or otherwise, without the prior permission
+    of
+
+    the publisher, nor be otherwise circulated in any form of binding or cover other
+    than
+
+    that in which it is published and without a similar condition being imposed on
+    the
+
+    subsequent purchaser.
+
+
+    A catalogue record for this book is available from the British Library.
+
+
+    ISBN: 978 1 78493 842 0
+
+
+    Printed in China
+
+
+    Scratch is developed by the Lifelong Kindergarten Group at MIT Media Lab.
+
+    See: http://scratch.mit.edu
+
+
+    # INTERNET SAFETY
+
+
+    Children should be supervised when using the Internet,
+
+    particularly when using an unfamiliar website for the first time.
+
+    The publishers and author cannot be held responsible for the
+
+    content of the websites referred to in this book.
+
+
+    # INFORMATION ON RESOURCES
+
+
+    You can use Scratch on a PC or Mac by opening your web browser
+
+    and going to: http://scratch.mit.edu
+
+    Then click ''Try it out''.
+
+
+    There is a very similar website called ''Snap'', which works on iPads.
+
+    It is available here: http://snap.berkeley.edu/run
+
+
+    If you want to run Scratch without using the web, you can download it from here:
+
+    http://scratch.mit.edu/scratch/download/'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # CONTENTS
+
+
+    +   - USING SCRATCH 4
+
+
+    +   - THE SUPERLOOPER 7
+
+
+    +   - BLAST OFF! 8
+
+
+    +   - FLY AWAY! 10
+
+
+    +   - RADIATION FIELD 12
+
+
+    +   - ASTEROID ATTACK 14
+
+
+    +   - SPACE WALK! 18
+
+
+    +   - GOING BANANAS 23
+
+
+    +   - UNDERGROUND RESCUE 26
+
+
+    +   - FLIGHT TO BANANAREETA 30
+
+
+    +   - GLOSSARY AND INDEX 32'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# USING SCRATCH
+
+
+    In this book, we will use a computer language called Scratch to code our games.
+    It''s free to use and easy to learn. Before you set off on your mission with Astronaut
+    Kate, take a few minutes to get to know Scratch.
+
+
+    # FINDING SCRATCH
+
+
+    To start using Scratch, open a web browser and click in the address bar. Type
+    in scratch.mit.edu then press ''Return''. Click Try it out.
+
+
+    # STARTING SCRATCH
+
+
+    To code a computer game, you need to tell your computer exactly what to do. You
+    do this by giving it commands. In Scratch, commands are shown in the form of ''code
+    blocks''. You build a game by choosing code blocks and then joining them to create
+    a program.
+
+
+    Your Scratch screen should look like this:
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_5_0.png)
+
+
+    Choose the group of commands you need.
+
+
+    These are the code blocks in the current group.
+
+
+    This is the Scripts Area. Drag your code blocks here to build your games.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# USING CODE BLOCKS
+
+
+    Before you drag out any code blocks, try clicking on one to make the cat sprite
+    move forward ... or rotate 15 degrees.
+
+
+    Click in the white boxes (which are shown in this book as coloured) then type
+    different numbers to change how far the sprite moves or turns.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_6_0.png)
+
+
+    Now try dragging code blocks over to the Scripts Area and joining them together.
+    Click on one of the blocks to run the whole program.
+
+
+    You can break code blocks apart, but you need to start with the bottom block if
+    you want to separate them all. To remove a code block, drag it off the Scripts
+    Area.
+
+
+    Use the colour of the code blocks to work out which group you will find the block
+    in. It will also give you a clue about what the code block will do.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_6_1.png)
+
+
+    Get the ''Pen down'' block from the green Pen group.
+
+
+    The ''Repeat'' block is a mustard colour, so it''s in the Control group.
+
+
+    The code blocks are in the Motion group.
+
+
+    # USING THE DRAWING AREA
+
+
+    To draw a new sprite, click on the Paint new sprite button located in the top
+    bar of the Sprites Pane.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_6_2.png)
+
+
+    To draw a backdrop for the Stage, click on the Stage button located in the Sprites
+    Pane then click on Paint new backdrop underneath it.
+
+
+    The Drawing Area will appear on the right of your Scratch screen:
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_6_3.png)
+
+
+    +   Brush
+
+    Use this tool for drawing.
+
+
+    +   Rectangle
+
+    Draw a rectangle. Hold down the ''Shift'' key to make a square.
+
+
+    +   Ellipse (Oval)
+
+    Draw an ellipse. Hold down the ''Shift'' key to make a circle.
+
+
+    +   Fill
+
+    Fill an area by clicking in it with the mouse.
+
+
+    Zoom in and out.
+
+
+    Pick colours here.
+
+
+    Change line thickness.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'A call comes in from Mission Control. Major Kate Glenn is in urgent need of
+    your help. Without a moment''s hesitation, you race to Mission Control ...
+
+
+    Thank goodness you are here! An SOS has come in from Planet Zyskinar. They have
+    been invaded by a hostile life form. We need to leave right now!
+
+
+    The problem is that my rocket, the Superlooper, is still in need of repairs after
+    an unlucky asteroid strike on my last mission.
+
+    I was told you had the skills to help.
+
+
+    Can you help me save the Zyskinarians?
+
+
+    You need to get the Superlooper ready for launch. Draw it on your computer screen
+    and make sure that its rocket blasters are fully functioning!'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# THE SUPERLOOPER
+
+
+    +   1. Open Scratch
+
+    We need to delete the cat sprite. In the ** Sprites Pane**, right click the cat.
+    On a Mac computer, hold the ''Ctrl'' key then click.
+
+    Click Delete.
+
+
+    +   3. Now you should be able to see the Drawing Area.
+
+
+    +   2. To start drawing the Superlooper, click the Paint new sprite in the Sprites
+    Pane.
+
+
+    Choose the Ellipse tool.
+
+    At the bottom of the screen, click the Solid ellipse so we can draw a filled-in
+    shape.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_8_0.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_8_1.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_8_2.png)
+
+
+    +   4. Pick a dark colour for the rocket fins.
+
+
+    +   5. Choose a longer ellipse.
+
+
+    Drag the body so it is in the middle of the circle.
+
+
+    Draw a circle by dragging the mouse. Make it this size and position in the Drawing
+    Area.
+
+
+    Draw a longer ellipse to be the rocket''s body.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_8_3.png)
+
+
+    If things go wrong, click Undo and go back a step or two.
+
+
+    +   8. The basic rocket is now ready.
+
+
+    +   9. Add any extra details you want using the Rectangle tool.
+
+
+    +   Click the Select tool.
+
+
+    Draw a select box around the left side of your artwork.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_8_4.png)
+
+
+    Change colour and use the Ellipse tool to add portoles.
+
+
+    Press the ''Delete'' key (or Backspace'' on a Mac) to delete the selected area.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_8_5.png)
+
+
+    The Superlooper is now ready!
+
+
+    Turn over to find out how to save your Superlooper design so you can use it for
+    the rest of your adventures. Quick - turn over!'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Thank you for fixing the Superlooper! We must leave right now to save the
+    Zyskarians. It''s up to you to blast us off into space.
+
+    5-4-3-2-1...
+
+
+    # BLAST OFF!
+
+
+    +   1. Before you do anything else, save the Superlooper rocket sprite you have
+    drawn. This is very important!
+
+
+    In the Sprites Pane, right click the Superlooper. On a Mac computer, hold the
+    ''Ctrl'' key and click.
+
+
+    Click Save to local file.
+
+
+    Type in Superlooper as a name for your sprite. Click OK.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_9_0.png)
+
+
+    +   2. In the middle of the Scratch screen, click the Scripts tab so Scratch is
+    ready for you to add some code to make the rocket move.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_9_1.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_9_2.png)
+
+
+    +   3. Drag these blocks into the Scripts Area, in this order. Remember that the
+    colour of each block tells us which group it is in. The ''When green flag clicked''
+    block is in the Events group. The blue blocks are in the Motion group. All the
+    purple blocks are in the Looks group. The ''Forever'' loop block is in Control.
+
+
+    | when clicked | tells Scratch to run the code below when the Green flag button
+    is clicked |
+
+    |---|---|
+
+    | go to x: 0 y: -100 | | Move the Superlooper to the centre of the Stage, near
+    the bottom.
+
+    (You will need to type 0 and -100 in the white boxes.) |
+
+    | point in direction 20 | | Position the Superlooper so it is pointing upward.
+    (Use the drop-down menu.) |
+
+    | set size to 30 % | | Shrink the Superlooper sprite to about one third of the
+    size you drew. |
+
+    | say 5 for 1 secs | | Display ''5'' in a speech bubble, for 1 second. |
+
+    | say 4 for 1 secs | | Display ''4'' in a speech bubble, for 1 second. |
+
+    | say 3 for 1 secs | | Display ''3''. |
+
+    | say 2 for 1 secs | | Display ''2''. |
+
+    | say 1 for 1 secs | | Display ''1''. |
+
+    | say Blast Off for 1 secs | | Display ''Blast Off!'' for 1 second. |
+
+    | forever | | Repeat the code in the loop: |
+
+    | move 2 steps | | Move the Superlooper 2 steps. (You will need to type 2 in the
+    white box or the Superlooper will blast off dangerously fast!) |'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '4. Now we need to set the backdrop for the Stage to show the launch pad area.
+
+
+    In the **Sprites Pane**, click the **Stage** icon. Below this icon, click on **Choose
+    backdrop** from library. Choose **Slopes**, then click **OK.**
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_10_0.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_10_1.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_10_2.png)
+
+
+    5. Click the **Green flag** button at the top right of the Stage to test your
+    code and launch the Superlooper!
+
+
+    To save your game, click the **File** menu, then **Download to your computer**.
+    When you want to play it again, you can click **File** and **Upload from your
+    computer.**'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'It is a long journey to Zyskinar. We''ll have to take it in turns to pilot
+    the Superlooper. IT''S YOUR TURN NOW!
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_11_0.png)
+
+
+    Take control of the Superlooper.
+
+    Create code that will make the ship turn to the left and right.
+
+
+    # # FLY AWAY!
+
+
+    +   1. Open Scratch Click the File menu and New to start a new file.
+
+
+    +   2. We need to delete the cat sprite. In the Sprites Pane, right click the
+    cat icon. On a Mac computer, hold the ''Ctrl'' key and click Click Delete.
+
+
+    ```
+
+    File
+
+    New
+
+    ```
+
+
+    ```
+
+    duplicate
+
+    delete
+
+    ```
+
+
+    +   3. Now we have launched the Superlooper, we need to create a starry sky background.
+
+
+    In the Sprites Pane, click the Stage icon.\ Just below, click Choose backdrop
+    from library.\ Choose Stars, then click OK.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Now you need to upload the Superlooper sprite that you drew earlier. (If
+    you haven''t already drawn the Superlooper, turn to page 7 and follow steps 2
+    to 9.)
+
+
+    In the Sprites Pane, click Upload sprite from file.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_12_0.png)
+
+
+    # Now you need to add code to make the Superlooper fly upwards.
+
+
+    In the centre of the screen, click the Scripts tab. Drag this code into the Scripts
+    Area. Remember to look for each block in the code group with the right colour.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_12_1.png)
+
+
+    +   - Run the code below when the Green flag button is clicked:
+
+    - Start the Superlooper at the bottom centre of the Stage.
+
+    - Make the Superlooper point upwards. (Use the drop-down menu).
+
+    - Shrink the Superlooper to 30% of the size you drew it.
+
+    - Repeat the code block in the loop forever:
+
+    - Move the Superlooper forward 2 steps.
+
+    (To make it go faster or slower, change the number of steps!)
+
+
+    # Add these two separate blocks of code to make the Superlooper turn left or right
+    when you press the cursor keys on your keyboard.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_12_2.png)
+
+
+    +   - Run the code below when the ''Left'' arrow key is pressed:
+
+    - Turn the Superlooper 15 degrees anticlockwise.
+
+    - Run this code when the ''Right'' arrow key is pressed:
+
+    - Turn the Superlooper 15 degrees clockwise.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_12_3.png)
+
+
+    Click the Green flag button at the top right of the Stage to test your code. Practise
+    flying around space to prepare yourself for the next part of your mission.
+
+
+    Click the File menu then Download to your computer if you want to save this game.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# We''ve hit a radiation field! We must swerve to avoid the dangerous yellow
+    particles or we''ll be blown to smithereens!
+
+
+    Quick! You need to create code to make the Superlooper avoid the yellow particles.
+
+
+    # RADIATION FIELD
+
+
+    +   1. **Open Scratch**
+
+    Start a new file.
+
+    2. **Right click** the cat sprite.
+
+    On a Mac, hold ''Ctrl'' and click. Click **Delete**
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_0.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_1.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_2.png)
+
+
+    +   3. To draw the radiation field, click the Backdrops tab.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_3.png)
+
+
+    Now you can see the **Drawing Area**. Choose the **Fill** tool.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_4.png)
+
+
+    Fill in the background by clicking on it.
+
+
+    Scripts Backdrops
+
+
+    Choose **black**
+
+
+    +   4. Now choose the **Brush** tool. Choose **yellow**. Make the brush width
+    thicker.
+
+
+    Use the brush to draw in the dangerous yellow particles in the radiation field.
+    Do not add so many dots that the Superlooper will never be able to pass through
+    them.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_5.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_6.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_7.png)
+
+
+    +   5. Now you need to upload the Superlooper sprite that you drew earlier. In
+    the **Sprites Pane**, click **Upload sprite from file**. Find your file and click
+    **OK** (if you haven''t already drawn the Superlooper, turn to page 7 and follow
+    steps 2 to 9 now).
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_13_8.png)'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Let''s add a sound effect to play when the rocket hits the radiation field.
+
+
+    Sounds
+
+    Choose the
+
+    Sounds tab.
+
+
+    New sound:
+
+
+    Click the Choose sound
+
+    from library button.
+
+
+    Scroll down to
+
+    choose Space ripple.
+
+    Click OK.
+
+
+    # Scripts
+
+
+    Click the Scripts tab. to make the rocket move until it hits a dangerous yellow
+    particle. The ‘Touching
+
+    colour'' block is in the Sensing group. Drop
+
+    it into the hole in the ‘Repeat until’ loop.
+
+
+    # How to set the colournfor a ‘Touching’ block
+
+
+    Click the colour square.
+
+
+    +   Run the code when the Green flag is clicked;
+
+    Shrink the Superlooper to 20% of its size.
+
+    Start at the left side of the Stage.
+
+    Point the Superlooper to the right.
+
+    Repeat the code in the loop until the
+
+    looper hits a yellow particle:
+
+    Move the rocket forward 2 steps.
+
+    When the Superlooper hits a yellow particle,
+
+    play a sound effect. (Choose Space ripple
+
+    using the drop-down menu.)
+
+
+    The pointer
+
+    changes.
+
+
+    On the Stage,
+
+    click the colour
+
+    you want to
+
+    check for.
+
+    The colour is set.
+
+
+    Add this code to steer
+
+    t rocket. See page
+
+    11 step 6 for help in
+
+    understanding how
+
+    this code works.
+
+
+    Click the Green flag button to steer safely through
+
+    the radiation field and on Planet Zyskinar!
+
+    Click the File menu then Download to your computer
+
+    to save this game.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'Phew! You made it through the radiation field and are now within two light
+    years of Planet Zyksinar. But Kate has bad news ...
+
+
+    It''s one crisis after another! The scanners tell me we are entering an asteroid
+    field. Blast those rocks with the ship''s lasers ...
+
+
+    Now work out how to build code to swerve the Superlooper smoothly out of the way
+    of any oncoming asteroids. And don''t forget to code a laser sprite that you can
+    fire at that asteroid sprite.
+
+
+    # # ASTEROID ATTACK
+
+
+    +   1. Open Scratch.
+
+    Start a new file.
+
+
+    +   2. Right click the cat sprite. On a Mac, hold ''Ctrl'' and click. Click Delete.
+
+
+    +   3. Now we will create a starry background.
+
+
+    In the Sprites Pane, click the Stage icon. Just below, click Choose backdrop from
+    library. Choose Stars, then click OK.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "Now you need to upload the Superlooper sprite that you drew earlier. In the\
+    \ Sprites Pane, click Upload sprite from file. Find your file and click OK. (If\
+    \ you haven't already drawn the Superlooper, turn to page 7 and follow steps 2\
+    \ to 9.)\n\n![](img/c022ded506ce3bf5933f47355fd556be_16_0.png)\n\n+   5. Click\
+    \ the Scripts tab and drag this code over to the Scripts Area. Make sure that\
+    \ the Superlooper is selected in the Sprites Pane. The 'Key pressed?' blocks are\
+    \ in the Sensing group. You will need to drop them into the holes in the 'If then'\
+    \ loops.\n\n```\nwhen clicked\ngo to ... \nset size to ...\nforever\nif key left\
+    \ arrow pressed? then\nturn 5 degrees\nif key right arrow pressed? then\nturn\
+    \ 5 degrees\n```\n\n+   Run this code when the Green flag button is clicked:\n\
+    Move the Superlooper to the centre of the Stage.\nShrink the Superlooper to 35%\
+    \ of its size.\nRepeat the code in the loop forever:\nIf the 'Left' cursor key\
+    \ is pressed, run this code:\\Turn the Superlooper 5 degrees anticlockwise. (Type\
+    \ 5 into the white box.)\nIf the 'Right' cursor key is pressed, run this code:\\\
+    Turn the Superlooper 5 degrees clockwise.\n\n+   6. Click the Green flag button\
+    \ to test your code. The Superlooper should turn when you press the arrow keys\
+    \ on your keyboard. The ship will need to be easy to manoeuvre once the asteroids\
+    \ start ...\n\n+   7. Now we will create a sprite to use as our laser. In the\
+    \ Sprites Pane, click the Choose sprite from library button.\n\nClick the Button\
+    \ 1 icon.\n\n![](img/c022ded506ce3bf5933f47355fd556be_16_1.png)\n\nClick OK."
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# 8. Click the Scripts tab and add this code for laser (Button1) sprite.\n\n\
+    ![](img/c022ded506ce3bf5933f47355fd556be_17_0.png)\n\n```\nwhen clicked\nRun the\
+    \ code below when the Green Flag button is clicked:\nShrink the laser sprite to\
+    \ 10% of its size.\n```\n\n```\nwhen space key pressed\nWhen the 'Space' key is\
+    \ pressed, run this code:\nMove the laser to the centre of the Stage.\nPoint the\
+    \ laser in the direction of the Superlooper.\nRepeat the code in the loop until\
+    \ the laser\reaches the edge of the screen:\nMove the laser forward 10 steps.\n\
+    ```\n\n# Need help finding this code block?\n\nSensingnChoose the Sensing group.\
+    \ Near the bottom of the group, find this block. Dragging by the left corner,\
+    \ drop it in the hole in the 'Point in direction' block. Use the menus to choose\
+    \ Direction and Sprite1.\n\n# 9. Test your code so far. You should be able to\
+    \ turn the Superlooper left and right. Try pressing the 'Space' bar on your keyboard\
+    \ to fire the laser.\n\n10. Now we need to draw an asteroid.\nClick the Paint\
+    \ new sprite icon. Make your asteroid half the height of the Drawing Area. If\
+    \ it is very different from this size, the game won't work properly.\n\n+   Choose\
+    \ the Ellipse tool. Set it to solid fill. Choose a suitable asteroid colour.\n\
+    Draw a circle.\nUse the Eraser to make craters.Use the Eraser to make the edges\
+    \ rougher.\nUse Undo if you make a mistake."
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Let's add a sound effect that will play when the laser hits the asteroid.\n\
+    \nNew sound:\n\nClick on the Sounds tab.\n\nClick Choose sound from library.\n\
+    \nScroll down and choose the Zoop sound.\n\nClick OK.\n\n# Click the Scripts tab\
+    \ and drag this code over to the Scripts Area for the asteroid.\n\n```\nwhen clicked\n\
+    set size to 50\ngo to random position\nmove 400 steps\nrepeat until touching ?n\
+    \  point towards Sprite ?\n  move 10 steps\nif touching ? then\n  go to random\
+    \ position\n  move 400 steps\nstop all\n```\n\nRun the code below when the Green\
+    \ flag button is clicked:\n\nShrink the asteroid to half its size.\n\nMove the\
+    \ asteroid to a random position on the Stage.\n\nMake sure the asteroid starts\
+    \ at the edge of the Stage.\n\nRepeat this code until the asteroid hits the Superlooper:\n\
+    \nPoint the asteroid towards the Superlooper.\n\nMove the asteroid 1 step towards\
+    \ the Superlooper.\n\nIf the asteroid has been hit by the laser (Button), run\
+    \ this code:\n\nMove the asteroid to a random position on the Stage.\n\nMake sure\
+    \ the asteroid starts at the edge of the Stage.\n\nPlay a sound effect.\n\nIf\
+    \ the asteroid hits the Superlooper, stop all the other code, so the laser stops\
+    \ and the Superlooper can't turn.\n\nPress the Green flag button to defend the\
+    \ Superlooper against the asteroids. Your game should look like this!\n\nTo save\
+    \ your game, choose File and Download to your computer."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# OH NO! Those asteroids bashed holes in the Superlooper. All our food supplies
+    have floated into space!
+
+
+    I need to go on a space walk to repair the hull. And don''t forget to collect
+    the floating food ...
+
+
+    You need to build code that allows you to collect the bananas that are floating
+    around the Superlooper. You also need to fix the damage to the hull. That''s easier
+    than it sounds - you can ''fix'' the holes by touching them!
+
+
+    First of all, draw yourself a space suit and jet pack.
+
+
+    # SPACE WALK!
+
+
+    +   - Open Scratch.
+
+    Start a new file.
+
+
+    +   - Right click the cat sprite. On a Mac, hold ''Ctrl'' and click.
+
+
+    Now we will create a starry background.
+
+
+    In the Sprites Pane, click the Stage icon.
+
+
+    Just below, click Choose backdrop from library.
+
+
+    Choose Stars, then click OK.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'Upload your Superlooper sprite.
+
+
+    5. In the Scratch Menu bar, click the Grow button. Now click one or more times
+    on the Superlooper on the Stage. Make it grow until it is about half the width
+    of the Stage.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_0.png)
+
+
+    # 6. We need to draw your space suit and jet pack.
+
+
+    While drawing, keep in mind that the astronaut sprite needs to be about third
+    of the width of the Drawing Area. If it''s much bigger or smaller than this size,
+    the game will not work properly.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_1.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_2.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_3.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_4.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_5.png)
+
+
+    In the Sprites Pane, click the Paint new sprite icon.
+
+
+    Choose the Rectangle tool to start with.
+
+
+    Make sure it is set to fill in.
+
+
+    If you make a mistake, just click Undo.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_6.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_7.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_8.png)
+
+
+    Use three white rectangles to draw your space suit.
+
+
+    Use dark grey to draw your boots and jet pack.
+
+
+    Use light grey for your gloves and collar.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_9.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_10.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_20_11.png)
+
+
+    Now choose the Eclipse tool to draw your helmet.
+
+
+    Use the Brush tool and pick colours to draw your face inside the helmet.
+
+
+    Finally, draw some flames coming from your jet pack.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "Now click the Scripts tab and drag this code to the Scripts Area to make the\
+    \ jet pack zoom out around space. Make sure you have the astronaut icon selected\
+    \ in the Sprites Pane.\n\n# 7.\n\n```\nwhen clicked\nset size to 80 %\ngo go to\
+    \ x: y: \nforever\n  point towards [mouse pointer]\n  if <space key> pressed?\
+    \ then\n    move 2 steps\n  else\n    change y by -5\n```\n\nRun the code below\
+    \ when the Green flag button is clicked:\nShrink the astronaut sprite to 30% of\
+    \ the size you drew.\nStart the astronaut sprite at the centre right of the Stage.\n\
+    Repeat the code in this loop forever:\nPoint the astronaut towards the mouse pointer.\n\
+    If the 'Space' key is pressed down:\nMove the astronaut forward 2 steps in the\
+    \ current direction.\nOr if the 'Space' key is not being pressed:\nMove the astronaut\
+    \ down 1 pixel.\n\n![](img/c022ded506ce3bf5933f47355fd556be_21_0.png)\n\nClick\
+    \ the Green button to try flying around. Press the 'Space' bar to fire the jet\
+    \ pack, and use the mouse to point where you want to fly.\n\n# 8. Now we will\
+    \ add the floating food.\n\nIn the Sprites Pane, click Choose sprite from library.\n\
+    \nClick the Bananas icon.\n\nClick OK.\n\n![](img/c022ded506ce3bf5933f47355fd556be_21_1.png)\n\
+    \n# 9. Click the Scripts tab and add this code for the bananas sprite.\n\n```\n\
+    when clicked\nset size to 30 %\nshow\nrepeat until <touching sprite2?>\n  turn\
+    \ 5 degrees\nhide\n```\n\nRun the code below when the Green flag button is clicked:\n\
+    Shrink the bananas to 30% of their size.\nMake sure the bananas are visible on\
+    \ the Stage.\nRepeat the code in the loop until the bananas have been touched\
+    \ by Sprite2 (the astronaut):\nRotate the bananas 5 degrees anticlockwise.\nHide\
+    \ the bananas - they have been grabbed by the astronaut!"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# 10. We need to draw the damage to the Superlooper as a new sprite, so click
+    Paint new sprite.
+
+
+    Use the Line tool to start drawing a damaged section of the Superlooper in pale
+    grey.
+
+
+    Make sure you join the lines up. Your shape should be about the width of the Drawing
+    Area.
+
+
+    Use the Fill tool to colour the damage shape.
+
+
+    # 11. Click the Scripts tab and add this code for the damage sprite. To create
+    the sound effect Computer beeps, turn to page 17 and follow step 11. The sound
+    effect isn''t vital, but it''s fun!
+
+
+    Run the code below when the Green flag button is clicked: Shrink the damage to
+    12%. (Change if the sprite is too small.) Make sure the damage sprite is visible.
+
+
+    > Wait until the sprite has been touched by the astronaut. Then play a sound effect
+    when the damage is fixed. And hide the damage so the Superlooper looks fixed.
+
+
+    # 12. In the Sprites Pane, right click the banana sprite and choose Duplicate
+    Duplicate three more.
+
+
+    # 13. Right click the damage sprite and choose Duplicate. Duplicate three more.
+
+
+    Drag the duplicates around the screen.
+
+
+    Drag the duplicates over the Superlooper rocket.
+
+
+    # 14. Now click the Green flag button to collect the bananas and repair the Superlooper!
+
+
+    Save your game by choosing File then Download to your computer.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'At last! You touch down on the barren surface of Planet Zyskinar. You cannot
+    see any Zyskinarians through the porthole, but ...
+
+
+    Planet Zyskinar has been invaded by giant bugs! Zyskinar used to be a beautiful
+    place, covered in fruit trees and flowers. The bugs have eaten everything in sight!
+    The Zyskinarians must be hiding somewhere. We must save the planet! But how?
+
+
+    You wrack your brains to come up with a clever plan. That''s it! If the bugs like
+    fruit so much, you can lure them into the Superlooper''s cargo hold with those
+    bananas you collected earlier. Make sure you add code to count how many bugs you
+    catch.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_23_0.png)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# GOING BANANAS
+
+
+    +   1. Start a new Scratch file.
+
+    Delete the cat sprite.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_0.png)
+
+
+    We will create a background showing the barren surface of Planet Zyskinar.
+
+
+    +   2. Click the Stage icon.
+
+    Just below, click Choose backdrop from library.
+
+    Choose Moon, then click OK.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_1.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_2.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_3.png)
+
+
+    +   3. We want to fill the Stage with the surface of the planet, so we need to
+    stretch part of the image.
+
+    Choose the Select tool. Drag a box around the bottom half of the image.
+
+    Move your mouse over the handle at the top. Drag it up to stretch the picture.
+
+    Choose the Ellipse tool and set it to solid fill. Draw brown craters.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_4.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_5.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_6.png)
+
+
+    +   4. Upload your Superlooper sprite.
+
+    5. Click the Shrink button in the Menu bar. Now click the Superlooper on the Stage
+    to shrink it until it is the size of one of the craters.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_7.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_8.png)
+
+
+    +   6. To create a banana sprite, click the Choose sprite from library button.
+
+    Click the Bananas icon.
+
+    OK OK.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_9.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_10.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_11.png)
+
+
+    We need a way to count how many bananas have been lured away. We will use a special
+    part of our program to do this, called a variable. Variables are a storing of
+    numbers to keep score.
+
+
+    +   7. Pen Make a Variable Variable name: bugs OK Click the Data group. Click
+    Make a variable. Call it bugs. Then click OK.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_12.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_13.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_24_14.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Now add code for the bananas sprite so you can make it follow the mouse around
+    the Stage - and use it to lure the bugs back to your spaceship! The orange blocks
+    are in the Data group. The green ‘Equals’ block is in the Operators group. You
+    will need to drop the little ‘Bugs’ block into its left-hand hole.
+
+
+    # 8.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_25_0.png)
+
+
+    Run the code below when the Green Flag button is clicked:
+
+
+    Set the bug count to zero at the start of the game.
+
+
+    Shrink the banana to half of its size.
+
+
+    Repeat the code in the loop until 5 bugs have been caught:
+
+
+    Move the banana sprite to the mouse pointer.
+
+
+    All 5 bugs have been lured back to the Superlooper so show a congratulations message.
+
+
+    # 9. We need to create these hungry giant bugs! Click Choose sprite from library
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_25_1.png)
+
+
+    Click the Beetle icon.
+
+
+    Click OK
+
+
+    # 10. Click the Scripts tab and add this code to the bug to make it follow the
+    banana.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_25_2.png)
+
+
+    Run the code below when the Green Flag button is clicked:
+
+
+    Make sure the bug is visible.
+
+
+    Shrink the bug to 40% of its size.
+
+
+    Start in a random place on the Stage.
+
+
+    Repeat the code in the loop until the bug touches the Superlooper:
+
+
+    Point the bug towards the mouse pointer (the banana will be there).
+
+
+    Move the bug forward 1 step.
+
+
+    If the banana is touching a brown crater (see page 13 for help setting the color
+    to brown), then run this code:
+
+
+    Move the bug backwards 2 steps.
+
+
+    Increase the bug count by 1.
+
+
+    Hide the bug - it is now in the Superlooper.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 11. We need 4 more bugs to finish off our game.
+
+
+    In the Sprites Pane, right click the bug. On a Mac, hold ''Ctrl'' and click. Click
+    Duplicate. Repeat this 3 more times. Drag the bugs around the Stage.
+
+
+    Click the Green flag to lure the giant bugs into the Superlooper.
+
+
+    To save your game, click File and Download to your computer.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_26_0.png)
+
+
+    The giant bugs are now all safely inside the Superlooper''s cargo hold. They waste
+    no time in eating up the remaining bananas!'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'You set out on foot in search of the Zyskinlarians.
+
+    Suddenly one pops out of a hole!
+
+
+    Help! My fellow Zyskinarians are hiding in tunnels deep beneath the ground. They
+    are running out of air. I beg you to rescue them in your spaceship before it is
+    too late.
+
+
+    You must fly the Superlooper through the tunnels to rescue the Zyskinarians. It
+    will be tricky squeezing through those tight gaps. But you must act quickly!
+
+
+    # UNDERGROUND RESCUE
+
+
+    +   1. Start a new Scratch file.
+
+    Delete the cat sprite.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_27_0.png)
+
+
+    +   2. To draw a backdrop showing the Planet Zyskinar and its underground tunnels,
+    click the Backdrops tab. Now you should be able to see the Drawing Area.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_27_1.png)
+
+
+    Use the Fill tool to colour the background black, then use a white Brush to add
+    stars at the top. Draw a large pale brown rectangle and a thin, darker one at
+    the top. Draw black rectangles to create tunnels. Make them roughly the width
+    shown here. Use the Brush tool to add some texture to the ground.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Upload your Superlooper sprite.
+
+
+    4. Let''s animate the Superlooper''s engine so it looks as if it is blasting.
+    To do this we will create a second ''costume'' for the Superlooper, showing flames
+    coming from the engine. We will tell Scratch to switch to the second costume when
+    the Superlooper is flying along.
+
+
+    In the center of the Scratch screen, click the Costumes tab, then right click
+    the Superlooper icon. On a Mac, hold ''Ctrl'' and click.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_28_0.png)
+
+
+    The Superlooper sprite now has two costumes.
+
+
+    Make sure you have costume2 selected. On the Drawing Area, use the Brush tool
+    to draw short flames coming from the engine.
+
+
+    To get a preview of your animation, click on the costume1 icon, then costume2,
+    ... It should look as if the flames are flickering.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_28_1.png)
+
+
+    # 6. Scripts
+
+
+    Click the Scripts tab and add this code to the Superlooper to make it fly around.
+
+
+    ```
+
+    when up arrow key pressed
+
+    when left arrow key pressed
+
+    when right arrow key pressed
+
+    when down arrow key pressed
+
+    ```
+
+
+    Add these 4 separate sets of code, one for each direction: up, down, left and
+    right.
+
+
+    When the ''Right'' arrow key is pressed, run this code: Show the flames from the
+    engine. Move the rocket to the right by changing the x-coordinate.
+
+
+    If you haven''t learnt about coordinates yet, don''t worry - this is a good way
+    to find out about them. Just test out these 4 sets of blocks do!'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# 7. We need to make a variable to count how many Zyskarians have been saved.
+    Remember: a variable is the way we keep score in a computer program.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_29_0.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_29_1.png)
+
+
+    Click the Data group.
+
+
+    Click Make a variable.
+
+
+    Call it saved.
+
+
+    Then click OK.
+
+
+    # 8. Now click the Scripts tab and add this code to the Superlooper.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_29_2.png)
+
+
+    Run the code below when the Green flag button is clicked:
+
+    At the start, set the count of saved Zyskarians to zero.
+
+    Start the Superlooper near the top right of the Stage.
+
+    Point the Superlooper upwards.
+
+    Shrink the Superlooper to 12% of its size. (You may need to make this percentage
+    even smaller if the game is too hard.)
+
+    Make the Superlooper is visible.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_29_3.png)
+
+
+    Repeat the code in the loop until the Superlooper hits the ground (for help with
+    setting the colour, turn to page 13):\if all 10 Zyskarians have been saved:
+
+    Show a congratulations message.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_29_4.png)
+
+
+    Run this code if the Superlooper hits the ground:
+
+    Play a sound effect (to create this sound effect, turn to page 17 and follow step
+    11).
+
+    Repeat the code in this loop 24 times:
+
+    Turn the Superlooper by 15 degrees.
+
+
+    Make the Superlooper disappear. (Disaster!)
+
+
+    # 9. Of course, we need to draw a Zyskarian sprite! Click the Paint new sprite
+    icon. Make your Zyskarian about half the height of the Drawing Area.
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_29_5.png)
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_29_6.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '10. Click the Shrink button. Now click the Zyskinarian on the Stage until it
+    fits inside one of the tunnels.
+
+
+    11. Click the Scripts tab and add this code to the Zyskinarian. Make sure you
+    have your Zyskinarian selected.
+
+
+    ```
+
+    when clicked Run the code below when the Green flag button clicked:
+
+    show At the start, make sure the Zyskinarian is visible.
+
+    wait until touching Sprite Wait until the Superlooper touches the Zyskinarian.
+
+    hide The Zyskinarian has been rescued, hide the sprite.
+
+    change saved by Increase the saved count by 1.
+
+    play sound Play a sound effect (to create it, turn to page 17 step 11).
+
+    ```
+
+
+    12. To create 9 more Zyskinarians (aren''t many of them on the planet?), click
+    the Zyskinarian icon in the Sprites Pane. On a Mac, hold ''Ctrl'' and click. Choose
+    Duplicate.
+
+
+    Duplicate another 8 so there are 10 altogether Drag the Zyskinarians into their
+    hiding places in the tunnels.
+
+
+    To race to rescue the Zyskinarians before they run out of air! To save your game,
+    choose File then Download to your computer.
+
+
+    # # THANK YOU! THANK YOU! YOU SAV US!'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "You still need to get rid of those giant bugs are munching bananas in the Superlooper's\
+    \ cargo hold. Help Astronaut Kate fly the bugs back to their home world, the planet\
+    \ Bananareeta.\n\n# # FLIGHT TO BANANAREETA\n\n+   - Start a new Scratch file\
+    \ and delete the cat sprite.\n\n+   - Now we will create a background for the\
+    \ Superlooper's takeoff from Planet Zyskinar. Click the Backdrops tab. Now you\
+    \ should be able to see the Drawing Area.\n\n![](img/c022ded506ce3bf5933f47355fd556be_31_0.png)\n\
+    \n![](img/c022ded506ce3bf5933f47355fd556be_31_1.png)\n\nUse the Fill tool to colour\
+    \ the background black, then use a white Brush to add stars.\n\nDraw a wide pale\
+    \ brown rectangle and a thin, darker one at the top.\n\n+   - To create the planet\
+    \ Bananareeta, click Choose sprite from library.\n\n![](img/c022ded506ce3bf5933f47355fd556be_31_2.png)\n\
+    \n![](img/c022ded506ce3bf5933f47355fd556be_31_3.png)\n\nClick the Beachball icon.\n\
+    \nClick OK.\n\n+   - Click the Scripts tab and add this code to Bananareeta (the\
+    \ beachball sprite).\n\n```\nwhen clicked\nforever\n  turn (1) degrees\n```\n\n\
+    Run this code when the Green flag is clicked:\n\nKeep repeating forever:\nTurn\
+    \ the planet by 1 degree.\n\n+   - Upload your Superlooper sprite.\n\n![](img/c022ded506ce3bf5933f47355fd556be_31_4.png)"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Click the Scripts tab and add this code to the Superloop.
+
+
+    ```
+
+    when clicked
+
+    goago to x: 0 y: -120
+
+    set size to 12 %
+
+    point in direction 0
+
+    repeat until touching Beachball?
+
+    move 1 steps
+
+    ```
+
+
+    Run this code when the Green flag is clicked:
+
+
+    Start the Superloop at the bottom.
+
+
+    Shrink the Superloop to 12% of its size.
+
+
+    Make the Superloop point upwards.
+
+
+    Repeat until the Superloop reaches Bananaiseta.
+
+
+    Move the Superloop 1 step forward.
+
+
+    ```
+
+    when left arrow key pressed
+
+    turn 15 degrees
+
+    ```
+
+
+    Run this code when the ''Left'' arrow key is pressed:
+
+
+    Turn the Superloop 15 degrees clockwise.
+
+
+    ```
+
+    when right arrow key pressed
+
+    turn -15 degrees
+
+    ```
+
+
+    Run this code when the ''Right'' arrow key is pressed:
+
+
+    Turn the Superloop 35 degrees clockwise.
+
+
+    Click the Green flag to fly the Superloop and its cargo to Bananaiseta. Try orbiting
+    the planet before landing.
+
+
+    > Thank you! Without your help I could never have saved Planet Zyskinar. Our mission
+    was a great success. It''s time to fly home to Earth!
+
+
+    ![](img/c022ded506ce3bf5933f47355fd556be_32_0.png)'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# GLOSSARY
+
+
+    Animation – A series of pictures shown one after the other to give the illusion
+    of movement (for example, that a sprite is walking).
+
+
+    Operators group – The set of Scratch blocks that deals with calculations and comparing
+    values.
+
+
+    Code – A series of instructions or code blocks
+
+
+    Program – The set of commands that tell a computer how to do something such as
+    play a game.
+
+
+    Command – A word or code block that tells the computer what to do.
+
+
+    Scratch – A computer language that uses blocks of code to make a program.
+
+
+    Co-ordinates – The position of an object determined by its x (centre to right)
+    and y (centre to top) values.
+
+
+    Scripts Area – The part of the right-hand side of the Scratch screen where code
+    blocks are dragged to create programs.
+
+
+    Data group – The set of Scratch code blocks that control and access variables.
+
+
+    Sensing group – The set of Scratch blocks that detect when specific keys are pressed
+    or where the mouse is.
+
+
+    Degree – The unit measuring the angle that an object turns.
+
+
+    Speed – How fast an object moves forwards. In Scratch, we use speed values to
+    move objects backwards.
+
+
+    Drawing Area – The part of the right-hand side of the Scratch screen that is used
+    to draw sprites and backgrounds.
+
+
+    Duplicate – A simple way to create a copy of a sprite in Scratch.
+
+
+    Sprite – An object that moves around the screen.
+
+
+    Events group – The set of Scratch blocks that are triggered when particular events
+    happen, such as a key being pressed.
+
+
+    Sprites Pane – Part of the lower left of the Scratch screen where you select a
+    sprite to add code or to change its appearance.
+
+
+    If – A common form of selection in coding, where command(s) are run if something
+    is true.
+
+
+    Stage – The area at the top of the Scratch screen where you can watch your sprites
+    move about.
+
+
+    Language – A system of commands (in the form of blocks, words or numbers) that
+    tell a computer what to do.
+
+
+    Variable – A value or piece of information stored by a computer program. In computer
+    games, a variable is commonly used to store the score.
+
+
+    Loop – A sequence of code blocks repeated a number of times.
+
+
+    # INDEX
+
+
+    +   animations 27
+
+    arrow keys 27
+
+    choosing backdrop from library 10
+
+    choosing sprite from library 15
+
+    Drawing Area 5
+
+
+    +   drawing backdrops 12
+
+    drawing sprites 7
+
+    duplicating sprites 21
+
+    keeping score 24
+
+    Operators blocks 28
+
+    saving games 9
+
+    saving sprites 8
+
+
+    +   Sensing blocks 16
+
+    setting sprite size 11
+
+    sound effects 13
+
+    Touching colours 13
+
+    upload sprites 11
+
+    using code blocks 4–5
+
+    variables 23'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# CODE YOUR OWN SPACE ADVENTURE
+
+
+    Astronaut Kate needs your help to save the Zyskinarians from an alien invasion!
+
+
+    Prepare for an out of this world mission that will see you fixing the Superlooper
+    rocket and navigating through an asteroid storm to reach Planet Zyskin.
+
+
+    From drawing simple shapes, to building games, Code Your Own Space Adventure introduces
+    essential coding concepts. Using Scratch, simple and practical tasks are explained
+    using easy-to-follow, step-by-step instructions.'
+  merge: -1
+  pgno: 35
