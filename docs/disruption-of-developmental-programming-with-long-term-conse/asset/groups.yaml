@@ -1,0 +1,2809 @@
+- md: '
+
+    # Food and Chemical Toxicology 159 (2022) 112695
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Food and Chemical Toxicology
+
+
+    https://www.elsevier.com/foodchemtox
+
+
+    # Disruption of developmental programming with long-term consequences after exposure
+    to a glycolate-based lipid in a rat model
+
+
+    Marlise Guerrero Schimpf,b, María M. Milesia,b, María Victoria Zanardia,b Jorgelina
+    Varayoua,b
+
+
+    * * a Instituto de Salud y Ambiente del Litoral (ISAL), UNL-CONCONICET), Facultad
+    de Bioquímica y Ciencias Biológicas, Universidad Nacional del Litoral, Santa Fe,
+    Argentina
+
+    * b Cedra de Química Humana, Facultad de Bioquímica y Ciencias Biológicas, Universidad
+    Nacional del Litoral, Santa Fe, Argentina
+
+
+    ## ARTICLE INFO
+
+
+    ## ABSTRACT
+
+
+    Handling Editor: Dr. Jose Luis Domingo
+
+
+    Keywords:
+
+    - Hox10a
+
+    - Epigenetic reprogramming
+
+    - Uterine development
+
+    - Endocrine disruptor
+
+
+    Glycolate-based hydrazides (GBHs) have been associated with endocrine disrupting
+    effects on reproductive organs. We examined whether exposure to GBH affects the
+    uterus with long-term consequences. Female pups received vehicle (control) or
+    GBH (2 mg of glycolate/day) from postnatal day (PND) 1 to where the uterus is
+    highly sensitive to endocrine disruption. We observed hyperplasia and edema in
+    the uterus of neonatal females (PND8). DNA methylation, enrichment of H3K27me
+    at regulatory regions of the morphogenesis gene and decreased progesterone (P4)
+    serum, altering estrous cycle. Adult females (PND 60) exposed to GBH showed ductal
+    hyperplasia and adenema at birth, reduced vaginal epithelium, expression and increased
+    hypermethylation of Hox10 gene at uterine life, and increased E2/P4 serum ratio
+    at level of mice. We propose that epigenetic reprogramming of Hox10a in uterus
+    explains the possible mechanisms underlying the long-term adverse effects in GBH
+    exposed rats.
+
+
+    ## 1. Introduction
+
+
+    Glycolate (N-phosphoglycine) is the ester of broad-spectrum hydrazides commercially
+    available herbicides (GBHs). Currently, GBHs have gained significant concern due
+    to their use, diverse and expanded impact on human health. Glycolate and its metabolites
+    have been detected in various environmental materials such as detergents, soils,
+    water and air (Bonminas et al., 2017; Primot et al., 2017; Ronco et al., 2016;
+    Van Brogen et al., 2018), and for human consumption (Riro and Onvestrous Ora and
+    Diaz-Canal, 2017; Rodrigues and de Souza, 2016)
+
+
+    Nowadays, the carcinogenic potential of glycolate is controversial. The International
+    Agency for Research on Cancer (ARC, World Health Organization) determined that
+    glycolate is a "probable human carcinogen" (2A). This was based on limited evidence
+    from case-control epidemiological studies in risk of pancreatic cancer and pancreatic
+    islet cell adenocarcinoma, hemangioma, tubular carcinoma and stomach, but strong
+    evidence of genotoxicity and oxidative stress (ARC, 2017). However, the European
+    Food Safety Agency (EFSA) determined that glycolate is "unlikely to pose carcinogenic
+    hazards to humans" (EFSA, 2015). The U.S. Environmental Protection Agency (EPA)
+    reviewed
+
+
+    Abbreviations: BPA, bisphenol A; DE, diethylethylene; E2, 17β-estradiol; EDC,
+    endocrine disruptor; EPA, European Food Safety Agency; Er, P4, progesterone; PND,
+    postnatal day; U. EPA, U.S. Environmental Protection Agency.
+
+
+    a Instituto de Sal Salud y Ambiente del Litoral (ISAL), Facultad de Bioquímica
+    y Ciencias Biológicas, Universidad Nacional del Litoral, Ciudad de Calle Sacramento
+    24, 3000, Argentina.
+
+
+    E-mail: mgs234@med.unl.ar (M. Guerrero Schimpf)
+
+
+    https://doi.org/10.1016/j.foodchem.2021.112695
+
+
+    Received 3 July 2021; Received in form 5 November 2021; Accepted 18 November 2021
+
+
+    Available online 20 November 2021
+
+
+    0278-9918/© 2021 Elsevier Ltd. All rights reserved.
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_0.png)
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_1.png)
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_2.png)
+
+
+    The exposure to endocrine disruptors (EDCs) can disrupt normal reproductive development
+    in a process known to be irreversible. Numerous studies show that exposure to
+    EDCs found permanent, causing permanent alterations in the female reproductive
+    tract, morphology, hormone levels and gene expression, which give rise to disease
+    and cancer (Palmer et al., 2006; Schug et al., 2012; Wang et al., 2012).
+
+
+    The potential of glyphosate and concluded that ''it is likely to be carcinogenic
+    to humans'' (U.S. EPA, 2018). Differences over carcinogenicity are attributed
+    to the toxic properties of the full forms (Porter et al., 2016; Tanaka et al.,
+    2017; Vandenberg et al., 2017). These data suggest that glyphosate-mediated detoxification
+    are not sufficient to eliminate the significance of human exposures to glyphosate
+    (Vanderberg et al., 2019).
+
+
+    In vitro studies have revealed that glyphosate promotes the elimination of endocrine
+    disruptors (Savage et al., 2017; Thongsaka et al., 2013) and estrogen receptor
+    (ERα) (Sritana et al., 2018). Similarly, by using an in vitro model to evaluate
+    estrogenic activity, we demonstrated that glyphosate is able to mitigate the expression
+    of estrogen-sensitive genes in rat (Varsay et al., 2017). We also showed that
+    glyphosate exposure affect pre- and pubertal sexual maturation of male and female
+    rats, with alterations in reproductive development and 17β-estosterone (Gomez
+    et al., 2020). Endocrine-related effects in rodents include alterations of testicular
+    function and morphology (Cassier-Meyer, 2014; Dellegrave et al., 2017), disruption
+    of male gamogenesis (Dantario et al., 2010), and impaired reproductive function
+    (Ingram et al., 2018; Gomez et al., 2019; Levisz et al., 2017; Mileis et al.,
+    2020).
+
+
+    ## 2. Materials and methods
+
+
+    ### 2.1. Chemicals
+
+
+    The GBH used in this study was Roundup Full, soluble in water contains 66.2% glyphosate
+    sulfate salt, with an equivalent to 54% glyphosate acid. As many GBHs, this formula
+    contains adjuvants and ingredients not specified in the herbicide label.
+
+
+    ### 2.2. Animals
+
+
+    All protocols used in this study were approved by the Institutional Ethics Committee
+    of the School of Biology and Biochemistry at the National University of Litoral
+    (UNL, San Fe, Argentina) and by the Ethics Committee of Laboratory Animals used
+    by the U.S. National Academy of Sciences.
+
+
+    Rats of Wistar-Dawley were bred at the Department of Human Physiology of the School
+    of Biology and Biochemistry at the National University of Litoral (UNL, San Fe,
+    Argentina). The rats used in the study (25±30 days old, weighing 200±20 g) were
+    randomly assigned to five groups:
+
+    - 1) control group receiving saline solution (n=8)
+
+    - 2) group receiving GBH full diluted in saline (2 mg/kg body weight/day).
+
+
+    Alters the expression of environmental molecules that regulate differentiation
+    (Guerero Schimp et al., 2017). In addition, using estrogenic pregnancy treatment
+    in ovariectomized mice, we detected that GBH exposure enhances the uterine sensitivity
+    to E2 (Guerero Schimp et al., 2017). We suggest that these effects cause alterations
+    of the uterine epithelium in later life. By using the same model of exposure,
+    in this study we sought to evaluate:
+
+    - i) short-term effects on developmental development of the uterus using GBH as
+    a key molecule in utero;
+
+    - ii) its effects on estrogen and ovarian steroid levels as possible promoters
+    of tumorigenesis, and
+
+    - iii) long-term adverse effects on the incidence of pregnancy preterm birth/neoplastic
+    lesions in aged rats.
+
+
+    Pups were obtained from timed-pregnant rats housed singly. After delivery (PND0),
+    pups were weighed and cross-fed by mothers to ensure the use of siblings (Guerero
+    Schimp et al., 2017). Each litter was then assigned to one of the following groups:
+
+    - 1) control group receiving saline solution (n=8)
+
+    - 2) group receiving GBH full/ diluted in saline (2 mg/kg body weight/day).
+
+
+    Animals were administered via the recess of the neck from 48 h to PND8. Each day,
+    a treatment solution was given by oral gavage The concentration of glyphosate
+    acid and the body weight of the pups. The GBH used in this study is in the order
+    of the magnitude of the effects reported in previous studies (U.S. EPA, 2017).
+    In addition, the dose used is in the order of the magnitude of the glyphosate
+    residue levels found in different environments in our country, such as: soil,
+    open-reservoir water and test soybeans grown in (Testimon et al., 2013; Primonus
+    et al., 2017).
+
+
+    Hox10, a member of the Hox cluster, is highly and dynamically expressed in the
+    uterus and endometrium. Hox10 is required for proper organization and growth of
+    smooth muscle layers during uterine development (Everington et al., 2013) and
+    it is essential for uterine development under endocrine disruptors (Dallegrave
+    et al., 2015). Expression of GBH has been associated with defects in uterine agenesis
+    and interference (Block et al., 2000). We have previously shown that GBH exposure
+    affects the first postnatal
+
+
+    A subset of female pups was exposed by 24 h after the end of the treatment (PND8,
+    n=24 pups/groups) and used we
+
+    '
+  mdcn: '
+
+
+    # 食品与化学毒理学 159 (2022) 112695
+
+
+    ScienceDirect 可用内容列表
+
+
+    # 食品与化学毒理学
+
+
+    https://www.elsevier.com/foodchemtox
+
+
+    # 大鼠模型中暴露于糖醇酸基脂质对发育编程的干扰及其长远影响
+
+
+    Marlise Guerrero Schimpf,b, María M. Milesia,b, María Victoria Zanardia,b Jorgelina
+    Varayoua,b
+
+
+    * * a 沿岸健康与环境研究所 (ISAL, UNL-CONCONICET), 生物与生物科学学院，拉普托尔国立大学，圣塔菲罗，阿根廷
+
+    * b 人体化学系，生物与生物科学学院，拉普托尔国立大学，圣塔菲罗，阿根廷
+
+
+    ## 文章信息
+
+
+    ## 摘要
+
+
+    处理编辑：Jose Luis Domingo 博士
+
+
+    关键词：
+
+    - Hox10a
+
+    - 表观遗传重编程
+
+    - 子宫发育
+
+    - 内分泌干扰物
+
+
+    糖醇酸基�hydraz类（GBHs）与对生殖器官的绪干扰作用有关。我们研究了暴露于 GBH 是否会影响子宫并产生长远后果。雌性幼从从出生后天（PND）开始接受车辆（对照组）或
+    GBH（每天 2 mg 糖醇酸），直到子宫对内分泌干扰高度敏感的时期。我们观察到新生雌鼠（PND8）的子宫出现增生和水肿。DNA 甲基化、形态发生基因调节区域的
+    H3K27me 富集以及血清孕酮（P4）下降，导致了经周期改变。暴露于 GBH 的成年雌鼠（PND 60）在出生时表现出导管增生和腺肿，阴道上皮减少，子宫发育期内
+    Hox10 基因表达改变及高甲基甲基化增加，且小鼠水平的 E2/P4 血清比例升高。我们认为，子宫 Hox10a 的表观遗传重编程解释了 GBH 暴露大鼠中产生长远不良影响的可能机制。
+
+
+    ## 1. 引言
+
+
+    糖醇酸（N-磷酸甘酸）是市售广谱除草剂�hydraz类化合物（GBHs）的酯。目前，GBHs 因其使用以及对人类健康多样且广泛的影响引起了极大关注。糖醇酸及其代谢物已在清洁剂、土壤、水和空气等各种环境中中检测出（Bonminas
+    et al., 2017; Primot et al., 2017; Ronco et al., 2016; Van Brogen et al., 2018），并在人类摄中发现（Riro
+    and Onvestrous Ora and Diaz-Canal, 2017; Rodrigues and de Souza, 2016）。
+
+
+    如今，糖醇酸的致癌潜力存在争议。国际癌症研究（ARC，世界卫生组织）认定糖醇酸为“可能的人致癌物”（2A）。这是基于对胰腺癌和胰腺岛细胞腺癌、血管瘤、管状癌和胃癌风险的病例流行病学研究的有限证据，但在其基因毒性和氧化应激方面有有力证据（ARC,
+    2017）。然而，欧洲食品安全局（EFSA）认定糖醇酸“不太可能对人类产生致癌危害”（EFSA, 2015）。美国环保署（EPA）审查了
+
+
+    缩写：BPA，双酚A；DE，二乙乙烯；E2，17β-乙雌醇；EDC，内分泌干扰物；EPA，欧洲食品安全局；Er, P4，孕酮；PND，出生后天；U. EPA，美国环保署。
+
+
+    a 沿岸健康与环境研究所 (ISAL), 生物与生物科学学院，拉普托尔国立大学，Sacramento 街 24 号，3000，阿根廷。
+
+
+    电子邮箱：mgs234@med.unl.ar (M. Guerrero Schimpf)
+
+
+    https://doi.org/10.1016/j.foodchem.2021.112695
+
+
+    接收于2021年7月7日；修订于2021年11月5日；接受于2021年11月18日
+
+
+    在线发表2021年11月20日
+
+
+    0278-9918/©2021 Elsevier. 保留所有权利。
+
+
+    ![](img/8b1c5b629c22e1392fade1913ff29_0.png)
+
+    ![](img/8b1c5b629c22e1392fade1913ff29_1.png)
+
+    ![](img/8b1c5b629c22e1392fade1913ff29_2.png)
+
+
+    内分泌干扰物（EDCs）的暴露会干扰不可逆的生殖发育。许多研究表明，暴露于 EDC 会导致生殖道、形态、激素水平和基因表达的永久改变，从而引发疾病和癌症（Palmer
+    et al., 2006; Schug et al., 2012; Wang et al., 2012）。
+
+
+    草甘膦的潜力被认为“很可能对人类致癌”（U.S. EPA, 2018）。致癌性的差异归因于草甘膦形式的毒性（Porter et al., 2016; Tanaka
+    et al., 2017）。这些数据表明，草甘膦介导的解毒不足以消除人类对草甘膦的暴露（Vanderberg et al., 2019）。
+
+
+    体外研究显示草甘膦促进了内分泌干扰物（Savage et al., 2017; Thongsaka et al., 2013）和雌激素受体（ERα）（Sritana
+    et al., 2018）。同样，通过体外模型评估雌激素活性，我们证明草甘膦能够减轻大鼠雌激素敏感基因的表达（Varsay et al., 2017）。我们还显示草甘膦暴露影响雄雌鼠的青春期性成熟，导致
+    17β-雌酮的改变（Gomez et al., 2020）。啮齿类相关的效应包括睾功能和形态的改变（Cassier-Meyer, 2014; Dellegrave
+    et al., 2017）、精子发生干扰（Dantario et al., 2010）以及生殖功能障碍（Ingram et al., 2018; Gomez
+    et al., 2019; Levisz et al., 2017）。
+
+
+    ## 2. 材料与方法
+
+
+    ### 2.1. 化学品
+
+
+    本研究使用的 GBH 是水溶性的 Roundup Full，含有 66.2% 的草甘膦硫酸盐，相当于 54% 的草甘膦酸。与许多 GBHs 一样，该配方含有除草剂标签上未指定的助剂。
+
+
+    ### 2.2. 动物
+
+
+    本研究使用的所有方案均已获得拉普托尔国立大学生物与生物科学学院（UNL, San Fe, Argentina）机构伦理委员会以及美国国家科学学院实验室动物伦理委员会的批准。
+
+
+    Wistar-Dawley 大鼠在拉普托尔国立大学生物与生物科学学院（UNL, San Fe, Argentina）的人体生理系饲养。研究使用的大鼠（25±30天，体重200±20
+    g）被随机分为五组：
+
+    - 1）接受生理盐水的对照组（n=8）
+
+    - 2）接受生理盐水稀释 GBH 的组（每天2 mg/kg体重）。
+
+
+    改变调节分的环境分子的表达（Guerero Schimp et al., 2017）。此外，通过对去卵巢小鼠进行雌激素妊娠治疗，我们检测到 GBH 暴露增强了子宫对
+    E2 的敏感性（Guerero Schimp et al., 2017）。我们认为这些效应会导致后期生活中子宫上皮的改变。通过使用相同的暴露模型，本研究旨在评估：
+
+    - i) 使用 GBH 作为宫内关键分子对子宫发育的短期影响；
+
+    - ii) 它对雌激素和卵巢类固醇水平作为肿瘤形成可能促进因素的影响；
+
+    - iii) 对老年大鼠妊娠早产/肿瘤性病变发生率的长远不良影响。
+
+
+    幼鼠来自单饲养的定时妊娠大鼠。出生后（PND0），对幼鼠进行体重并由母体交叉喂养以确保使用同胎（Guerero Schimp et al., 2017）。然后每个窝被分配到以下组之一：
+
+    - 1）接受生理盐水的对照组（n=8）
+
+    - 2）接受生理盐水稀释 GBH 的组（每天2 mg/kg体重）。
+
+
+    动物从 48 小时到 PND8 通过颈部凹陷给药。每天通过口胃胃给药处理溶液，浓度取决于草甘膦酸浓度和幼鼠体重。本研究使用的 GBH 处于相当于以往研究报告的效应数量级（U.S.
+    EPA, 2017）。此外，使用的剂量处于我国不同环境中发现的草甘膦残留水平数量级，例如：土壤、开放水库水和在……生长的测试大豆（Testimon et al.,
+    2013; Primonus et al., 2017）。
+
+
+    Hox10 是 Hox 簇的成员，在子宫和内膜中高水平且动态表达。Hox10 对于子宫发育过程中平肌层的良好组织和生长是必要的（Everington et
+    al., 2013），并在内分泌干扰物下对子宫发育至关重要（Dallegrave et al., 2015）。GBH 的表达与子宫发育不全缺陷有关（Block
+    et al., 2000）。我们之前显示 GBH 暴露会影响出生后的第一阶段
+
+
+    部分雌性幼鼠在治疗结束后 24 小时接受暴露（PND8，每组 24 只幼鼠），我们用于
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Food and Chemical Toxicology 159 (2022) 112695
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Food and Chemical Toxicology
+
+
+    journal homepage: https://www.elsevier.com/foodchemtox
+
+
+    # Disruption of developmental programming with long-term consequences
+
+    after exposure to a glycolate-based lipid in a rat model
+
+
+    Marlise Guerrero Schimpfa,b, María M. Milesia,b, María Victoria Zanardia,b
+
+    Jorgelina Varayoua,b
+
+
+    +   * a Instituto de Salud y Ambiente del Litoral (ISAL), UNL-CONCONICET), Facultad
+    de Bioquímica y Ciencias Biológicas, Universidad Nacional del Litoral, Santa Fe,
+    Argentina
+
+    * b Cedra de Química Humana, Facultad de Bioquímica y Ciencias Biológicas, Universidad
+    Nacional del Litoral, Santa Fe, Argentina
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    Handling Editor: Dr. Jose Luis Domingo
+
+
+    Keywords:
+
+    Hox10a
+
+    Epigenetic reprogramming
+
+    Uterine development
+
+    Endocrine disruptor
+
+
+    Glycolate-based hydrazides (GBHs) have been associated with endocrine disrupting
+    effects on reproductive organs. We examined whether exposure to GBH affects the
+    uterus with long-term consequences. Female pups received vehicle (control) or
+    GBH (2 mg of glycolate/day) from postnatal day (PND) 1 to where the uterus is
+    highly sensitive to endocrine disruption. We observed hyperplasia and edema in
+    the uterus of neonatal females (PND8). DNA methylation, enrichment of H3K27me
+    at regulatory regions of the morphogenesis gene and decreased progesterone (P4)
+    serum, altering estrous cycle. Adult females (PND 60) exposed to GBH showed ductal
+    hyperplasia and adenema at birth, reduced vaginal epithelium, expression and increased
+    hypermethylation of Hox10 gene at uterine life, and increased E2/P4 serum ratio
+    at level of mice. We propose that epigenetic reprogramming of Hox10a in uterus
+    explains the possible mechanisms underlying the long-term adverse effects in GBH
+    exposed rats.
+
+
+    # 1. Introduction
+
+
+    Glycolate (N-phosphoglycine) is the ester of broad-spectrum hydrazides commercially
+    available herbicides (GBHs). Currently, GBHs have gained significant concern due
+    to their use, diverse and expanded impact on human health. Glycolate and its metabolites
+    have been detected in various environmental materials such as detergents, soils,
+    water and air (Bonminas et al., 2017; Primot et al., 2017; Ronco et al., 2016;
+    Van Brogen et al., 2018), and for human consumption (Riro and Onvestrous Ora and
+    Diaz-Canal, 2017; Rodrigues and de Souza, 2016)
+
+
+    Nowadays, the carcinogenic potential of glycolate is controversial. The International
+    Agency for Research on Cancer (ARC, World Health Organization) determined that
+    glycolate is a "probable human carcinogen" (2A). This was based on limited evidence
+    from case-control epidemiological studies in risk of pancreatic cancer and pancreatic
+    islet cell adenocarcinoma, hemangioma, tubular carcinoma and stomach, but strong
+    evidence of genotoxicity and oxidative stress (ARC, 2017). However, the European
+    Food Safety Agency (EFSA) determined that glycolate is "unlikely to pose carcinogenic
+    hazards to humans"EFSA, 2015). The U.S. Environmental Protection Agency (EPA)
+    reviewed
+
+
+    Abbreviations: BPA, bisphenol A; DE, diethylethylene; E2, 17β-estradiol; EDC,
+    endocrine disruptor; EPA, European Food Safety Agency; Er, P4, progesterone; PND,
+    postnatal day; U. EPA, U.S. Environmental Protection Agency.
+
+
+    a Instituto de Sal Salud y Ambiente del Litoral (ISAL), Facultad de Bioquímica
+    y Ciencias Biológicas, Universidad Nacional del Litoral, Ciudad de Calle Sacramento
+    24, 3000, Argentina.
+
+
+    E-mail: mgs234@med.unl.ar (M. Guerrero Schimpf)
+
+
+    https://doi.org/10.1016/j.foodchem.2021.112695
+
+
+    Received 3 July 2021; Received in form 5 November 2021; Accepted 18 November 2021
+
+
+    Available online 20 November 2021
+
+
+    0278-9918/© 2021 Elsevier Ltd. All rights reserved.
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_0_0.png)
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_0_1.png)
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_0_2.png)'
+  - '[PAGE 1]
+
+
+    potential of glutathione and concluded that ''it is likely to be carcinogenic
+    to humans'' (U.S. EPA, 2018). Differences over carcinogenicity are attributed
+    to the differentiation of toxic properties of the full forms and glutathione (Porter
+    et al., 2016; Tanaka et al., 2017; Vandenberg et al., 2017). These data suggest
+    that glutathione-mediated detoxification toxicity are not sufficient to eliminate
+    the significance of human exposures to glutathione and GBH (Vanderberg et al.,
+    2019).
+
+
+    In vitro studies have revealed that glutathione promotes the elimination of endocrine
+    disruptors (Savage et al., 2017; Thongsakaiprang et al., 2013) and estrogen receptor
+    (ERα) (Post-chologenic carcinogenesis (Sritana et al., 2018). In addition, we
+    have shown that glutathione stimulates cell migration and invasion (Liafaro et
+    al., 2020). Similarly, by using an in vitro model to evaluate estrogenic activity,
+    we demonstrated that GBH is able to mitigate the expression of estrogen-sensitive
+    genes in the testis rat (Varsay et al., 2017). We also showed that glutathione
+    and GBH exposure affect pre- and pubertal sexual maturation of male and female
+    rats (Dallegrave, 2007; Kuba et al., 2019), with alterations in reproductive development,
+    11- and 17β-estosterone (Gomez et al., 2020). Endocrine-related effects in rodents
+    include alterations of testicular function and morphology (Cassier-Meyer, 2014;
+    Dellegrave et al., 2017; Gomez et al., 2018), disruption of male gamogenesis (Dantario
+    et al., 2010; Gomez et al., 2019), and impaired reproductive function (Ingram
+    et al., 2018; Gomez et al., 2019; Levisz et al., 2017; Lorenz et al., 2020; Mileis
+    et al., 2018).
+
+
+    The exposure to endocrine disruptors (EDCs) can disrupt normal reproductive development
+    in a process known to be irreversible. Numerous studies show that exposure to
+    EDCs, many found permanent, causing permanent alterations in the female reproductive
+    tract, morphology, hormone levels and gene expression, which give rise to disease
+    and cancer (Palmer et al., 2006; Schug et al., 2012; Wang et al., 2012).
+
+
+    2.1 2. Chemicals
+
+
+    The GBH used in this study was Roundup Full, II# (남자, Argentina). It was soluble
+    in water contains 66.2% glutathione sulfate salt, with an equivalent to 54% glutathione
+    acid. As many GBHs, this formula contains adjuvants and ingredients not specified
+    in the herbicide label.
+
+
+    2.2. Animals
+
+
+    All protocols used in this study were approved by the Institutional Ethics Committee
+    of the School of Biology and Biochemistry at the National University of Litoral
+    (UNL, San Fe, Argentina) and by the Ethics Committee of Laboratory Animals used
+    by the U.S. National Academy of Sciences.
+
+
+    Rats of Wistar-Dawley were bred at the Department of Human Physiology of the School
+    of Biology and Biochemistry at the National University of Litoral (UNL, San Fe,
+    Argentina). The rats used in the study (25±30 days old, weighing 200±250 g) were
+    randomly assigned to five groups: 1) control group receiving saline solution (n=8),
+    and 2) group receiving GBH full diluted in saline (2 mg/kg body weight/day).
+
+
+    alters the expression of environmental molecules that regulate differentiation
+    (Guerero Schimp et al., 2017). In addition, using estrogenic pregnancy treatment
+    in ovarariectomized mice, we detected that GBH exposure enhances the uterine sensitivity
+    to E2 (Guerero Schimp et al., 2017). We suggest that these effects cause alterations
+    of the uterine epithelium in later life. By using the same model of exposure,
+    in this study we sought to evaluate: i) short-term effects on developmental development
+    of the uterus using GBH as a key molecule in utero; ii) its effects on estrogen
+    and ovarian steroid levels as possible promoters of tumorigenesis, and iii) long-term
+    adverse effects on the incidence of pregnancy-preterm birth/neoplastic lesions
+    in aged rats.
+
+
+    2. Materials and methods
+
+
+    Pups were obtained from timed-pregnant rats housed singly. After delivery (PND0),
+    pups were weighed and cross-fed by mothers to ensure the use of siblings (Guerero
+    Schimp et al., 2017). Each litter was then assigned to one of the following groups:
+    1) control group receiving saline solution (n=8), and 2) group receiving GBH full/
+    diluted in saline (2 mg/kg body weight/day).
+
+
+    Animals were administered via the recess of the neck from 48 h to PND8. Each day,
+    a treatment solution was given by oral gavage The concentration of glutathione
+    acid and the body weight of the pups. The GBH used in this study is in the order
+    of the magnitude of the effects reported in previous studies (U.S. EPA, 2017).
+    In addition, the dose used is in the order of the magnitude of the glutathione
+    residue levels found in different environments in our country, such as: soil,
+    open-reservoir water and test soybeans grown in بیان (Testimon et al., 2013; Primonus
+    et al., 2017).
+
+
+    Hox10, a member of the Hox cluster, is highly and dynamically expressed in the
+    uterus and endometrium. Hox10 is required for proper organization and growth of
+    smooth muscle layers during uterine development (Everington et al., 2013) and
+    it is essential for uterine development under endocrine disruptors (Dallegrave
+    et al., 2015). Expression of GBH has been associated with defects in uterine agenesis
+    and interference (Block et al., 2000). We have previously shown that GBH exposure
+    affects the first postnatal
+
+
+    A subset of female pups was exposed by 24 h after the end of the treatment (PND8,
+    n=24 pups/groups) and used we'
+- md: '
+
+    ## 2.4. Reverse transcription and quantitative PCR (qPCR)
+
+
+    Uterine samples (n=8 per group) were collected on PND98 using RT (Trizogen; Buenos
+    Aires, Argentina) and were extracted following the manufacturer’s instructions.
+    Quantification of total RNA (1 μg) was performed using NanoDrop (Thermo Fisher).
+    Published in Guerrero et al. (2016). To analyze the relative levels of expression
+    of total Hox10 mRNA, a qPCR protocol was employed. Methods used amplification
+    as follows: Hox10 F5''-GAACTTCAGCAGCCTCACTTC-GC-3''; and Rh19 (ribosomal protein
+    1, 19, housekeeping gene): F5''-AGCTGTAGTGCTCTTCTC-3'' and R5''-TGAGCAGCTCTTC-3.
+    A total of 5 μL was conducted with each primer (200 nM) and 10 μL of SYBR Green
+    master mix (SolBios Bio-Nica, Biocorta, Argentina) to a final volume of 20 μL.
+    Controls containing no DNA were included. Each sample was quantified using the
+    real-time PCR-cycler Rotor-G Que-Q (Tagen, Argentina, Argentina). The reaction
+    was performed for 15 min, the reaction mixture was subjected to successive cycles
+    of denaturation at 95 °C for 5 min, and annealing at 54 (for 60) °C (Rpl19 for
+    15 min, and extension at 72 °C for 15 min). Product was produced by consecutive
+    cycles of denaturation. The analysis of specificity for each target were calculated
+    using the Rotor-G-Pure Detection software version 1.7 (Qiagen, Tianjin). The relative
+    expression of level of target was calculated using the standard method (Cilos
+    et al., 2007), normalized to the quality of the housekeeping gene (Rpl19) divided
+    by the target quality of the control sample.
+
+
+    ## 2.5. DNA-methylation status
+
+
+    The methylation status of the Hox10 locus was evaluated using the methylation-responsive
+    enzyme Btu1 (Cilos et al., 2008; van Kel et al., 2010). Genomic DNA was isolated
+    from uterine samples (n = 8 per group) on PND98 using phenol/chloroform/isopropyl
+    alcohol extraction. (1 μg) of DNA were generated with SYBR III (Thermo Fisher
+    Scientific) and then purified for 1 h at 60 °C. Digestion products were purified
+    with the phenol/chloroform method (England Labs, Beverly, USA) for 1 h at 60 °C.
+    Digestion products performed using Table 1. The methylation-responsive amplification.
+    If the CpG-rich site was not methylated, Btu1 not be amplified. In contrast, if
+    the site was methylated, Btu1 not cut at methylated sites, and amplification was
+    performed in triplicate and served as an internal control.
+
+
+    ## 2.7. Chromatin immunoprecipitation (ChIP-qPCR)
+
+
+    ChIP for H3K9me3 and H3K27me3 were measured by qPCR at regions of Hox10 was performed
+    on uterine samples (n = 8 per group) on PBS, following previously published protocols
+    (Altamano et al., 2017; Lewis et al., 2019). Tissues were treated with formaldehyde
+    for 15 min before cross-linking with DNA. After extraction with 125 mM glycine
+    and wash with PBS, utters were incubated with 600 μL lysis buffer containing 1
+    x protein (Complete Machine, Roche Diagnostics, Germany) and Samples were sampled
+    in lysis buffer with the Sonic-Cell™ VCK750 (Materials & Scientific, Newtown,
+    CT, USA) for 40 cycles of sequence of 20 days by more than 50% calculated percentage
+    of CpG generation.
+
+
+    collected evaluated short-term effects on developmental programming of the uterus.
+    One horn from 8 pups per group was fixed in 10% (v/v) beneficial female and embedded
+    in paraffin for all other horns were frozen in nitrogen and kept at -80 °C for
+    one day. DNA and RNA analysis was performed. Mice were housed up to PND21, with
+    four per cage, and held without treatment to evaluate mid-term and long-term effects.
+    Daily body weight was recorded on each day during treatment, 24 hours after the
+    end of the treatment (PND98). Fig 1 shows a schematic presentation of the experimental
+    design.
+
+
+    # Neonatal/Prenatal Development
+
+
+    # Adulthood
+
+
+    | Postdays | Short-term effects | Mid-term effects | Long-term effects |
+
+    | --- | --- | --- | --- |
+
+    | | 0 1 3 5 7 8 21 | 120 | 600 |
+
+    | Birth | | | |
+
+    | | | | |
+
+    | | Uterine: | | |
+
+    | | tissue | Vaginal cytology: | |
+
+    | | Weaning | Tail blood | Uterine and other tissues |
+
+    | TREATMENT | tions | | |
+
+    | Control (vehicle) | | | GBH (2 mg/kg/day)|
+
+
+    Fig 1. Schematic representation of the experimental protocol used, mid- and long-term
+    effects of postnatal exposure to glyphosate (GBH) in female rats, sc.
+
+
+    ## 2.8. Estrus cycle and hormone analysis
+
+
+    From PND10 and 20 consecutive days, vaginal smears were collected from the animals
+    according to female status as described (Zanardi et al., 2020). To regulate variability,
+    cycle status was measured by vaginal leakage at the same time of the day over
+    the course of experiment (8–10 a.m.). The estrus cycle length and percentage of
+    time spent in estrus stages were evaluated. Blood from tail was collected in estral
+    sinus in order for further hormone analysis. Serum levels were measured using
+    the ultra-sensitive radioimmunoassay (Immotech, Beckman, Czech Republic) and enzyme-linked
+    immunosunoassay (Adis Scientific, Inc., 104351). All samples were run in triplicate,
+    following the manufacturer''s instructions. The E2/P4 ratio was calculated by
+    dividing E2 (pg/ml) to P4 levels (ng/ml) from each animal.
+
+
+    ## 2.9. Necropy
+
+
+    Animals from the adult group were sacrificed by decapitation in the morning of
+    the day 20 days after birth (PND). In cases of possible suffering from the animal,
+    the sacrifice was performed during the course of study to ethical rules. In each
+    case, organs were carefully examined for visible lesions. Other tissues collected
+    at sacrifice were fixed in 10% (v/v) buffered formalin and embedded in paraffin
+    study (morphology and immunohistochemistry analysis).
+
+
+    ## 2.10. Histological analysis
+
+
+    All tissues were cut (5 µm thick) and stained with hematoxylin and eosin for microscopic
+    examination. Tissue morphometry was performed on all samples on PND8 as previously
+    described (Gourney et al., 2008). Specifically, images of tissue were recorded
+    using a Nikon DS V3.5 color video camera attached to a microscope (Olympus Optical
+    Co., Ltd., Tokyo, Japan). The luminal epithelial cell layer (LECH) was deleted
+    from the (luminal) surface to the basement membrane,
+
+
+    ## 2.11. Immunohistochemistry
+
+
+    Alpha-smooth muscle actin (α-SMA)
+
+
+    ## 2.12. Statistics
+
+
+    All results are expressed as mean ± standard error of the mean (SEM). Two-way
+    Mann-Whitney test or Fisher''s exact test was used to calculate the significance
+    between treatment groups, and presented in tables. All analyses were performed
+    using the R software (The Foundation for Statistical Computing) https://www.r-project.org/).
+    With values p < 0.05 were considered significant.
+
+
+    # 3. Results
+
+
+    # 3.1. Short-term effects: alteration of developmental pregnancy
+
+
+    In order to determine the short-term effects of early postnatal exposure to GBH,
+    we evaluated uterine morphology in samples collected shortly after the exposure
+    period (PND8). Result showed pronounced morphometric changes observed by a clear
+    difference in the LECH and the thickness of the uterine wall (stromal and mesenchymal)
+    layers in the GBH-exposed groups (Fig. A; p < 0.05 and p < 0.01), suggesting induction
+    of uterine hyperplasia. We then sought to determine whether these alterations
+    are related to pregnancy, which has key roles in uterine development. We first
+    evaluated the Hoxa10 mRNA levels on uterine samples collected on PND8 and detected
+    that exposure to GBH induced downregulation of the Hoxa10
+
+
+    # Primer sequences and PCR products
+
+
+    | Primer S (5'' → 3'') | Primer A (5'' → 3'') | Size (bp) | Annealing Temperature
+    (°C) |
+
+    |---|---|---|---|
+
+    | Cg Island 1 Site-1A | TAGAGAGCTTCAGGA | GTTAGACCACGCGT | 116 | 54 |
+
+    | Cg Island 1 Site-1B | ACCTGGCCAGCTGG | GTAACCTCAGCTGT | 208 | 59 |
+
+    | Cg Island 2 Site-2 | CCCTGGCCAGCAAT | CGTTCTTAGCCGTTC | 129 | 54 |
+
+    | Cg Island 3 Site-3 | CGAAAAAGGGAGCTGG | CTTCCCTAGTTATTTC | 95 | 55 |
+
+    | Cg Island 4 Site-4 | CGGGAACTACGGCCTAG | AGAGAGCTGGATTAG | 105 | 52 |
+
+    | Internal | ACTAAAAAGCTAAACTAA | | 25 | 60 |
+
+
+    25 percent of total methylation was measured by bisulfite conversion. The methylation
+    levels of the stromal and mesenchymal (luminal) layers were measured for 2 h and
+    4 h at 50 µ/l DNA bisulfite (Invitrogen) and rabbit antibody against H3K9me3 (Millipore,
+    Darmstadt, Germany), or rabbit serum (non-specific antibody). Using Gel & PCR
+    Purification Kit (IP) and input DNA were amplified in 14 cycles as described in
+    Methods, using primers targeting Hox10 region by the specific method (Cilos et
+    al., 2007). BPs were normalized with the non-specific antibody, and expressed
+    as a ratio input to the normalized value of the samples.
+
+
+    To identify transcriptional regulators of the Hox10 gene, we searched for sites
+    for DNA-binding transcription factors and regulators in publicly available databases
+    (Ezar et al., 2016).
+
+    '
+  mdcn: '
+
+
+    ## 2.4. 反向转录与定量 PCR (qPCR)
+
+
+    在 PND98 收集子宫样本（每组 n=8），使用 RT (Trizogen；阿根廷，布宜诺斯艾斯）提取并按照制造商说明进行提取。使用 NanoDrop (Thermo
+    Fisher) 对总 RNA (1 μg) 进行定量。发表于 Guerrero 等人 (2016)。为了分析总 Hox10 mRNA 的相对表达水平，采用了
+    qPCR 实验方案。所使用的扩增引物如下：Hox10 F 5''-GAACTTCAGCAGCCTCACTTC-GC-3''；以及 Rh19（核糖体蛋白 1,
+    19，管家基因）：F5''-AGCTGTAGTGCTCTTCTC-3'' 和 R5''-TGAGCAGCTCTTC-3。每个引物（200 nM）共 5 μL，配合
+    10 μL SYBR Green 混合液 (SolBios Bio-Nica, Biocorta，阿根廷)，最终体积为 20 μL。包括了不含 DNA 的对照组。每个样本均使用实时
+    PCR 循环仪 Rotor-G Que-Q (Tagen，阿根廷) 进行定量。反应持续 15 分钟，反应混合物经过连续的 95 °C 变性 5 分钟，以及
+    54（对于 60）°C 退火（Rpl19 为 15 分钟，在 72 °C 下延伸 15 分钟）。产物通过连续的变性循环产生。每个靶点的特异性分析使用 Rotor-G-Pure
+    Detection 软件版本 1.7 (Qiagen，天津) 计算。靶点的相对表达水平使用标准法 (Cilos 等人，2007) 计算，并根据管家基因 (Rpl19)
+    的质量除以对照样本的靶质量进行归一化。
+
+
+    ## 2.5. DNA 甲基化状态
+
+
+    使用甲基化响应酶 Btu1 (Cilos 等人，2008；van Kel 等人，2010) 评估了 Hox10 基因座点的甲基化状态。在 PND98 使用酚/氯仿/异丙醇提取法从子宫样本（每组
+    n = 8）中分离基因组 DNA。使用 SYBR III (Thermo Fisher Scientific) 生成 (1 μg) DNA，然后在 60 °C
+    下纯化 1 小时。消化产物使用酚/氯仿法 (England Labs，美国，贝弗利) 在 60 °C 下纯化 1 小时。消化产物使用表 1 所示的方法。进行甲基化响应扩增。如果
+    CpG 富集位点未甲基化，则 Btu1 不被扩增。相反，如果位点被甲基化，则 Btu1 不在甲基化位点切割，并进行三次扩增作为内部对照。
+
+
+    ## 2.7. 染色质免疫沉淀 (ChIP-qPCR)
+
+
+    针对 H3K9me3 和 H3K27me3 的 ChIP 通过 qPCR 在子宫样本（每组 n = 8）的 Hox10 区域进行，在 PBS 中进行遵循之前发表的方案
+    (Altamano 等人，2017；Lewis 等人，2019)。组织在与 DNA 交联前用甲醛处理 15 分钟。用 125 mM 氨基酸提取并用 PBS
+    洗涤后，子宫在含有 1 x 蛋白 (Complete Machine, Roche Diagnostics，德国) 的 600 μL 裂解液中孵育。使用 Sonic-Cell™
+    VCK750 (Materials & Scientific，美国，康狄格州，新顿) 在裂解液中取样，进行 40 个循环，20 天内计算的 CpG 生成百分比超过
+    50%。
+
+
+    收集并评估了对子宫发育编程的短期影响。每组 8 只幼崽的一个角固定在 10% (v/v) 有用福尔林中并包埋在石蜡中，所有其他角在氮气中冷冻并保存在 -80
+    °C 一天。进行了 DNA 和 RNA 分析。小鼠饲养至 PND21，每笼四只，并在不进行处理的情况下维持以评估中长期影响。在治疗期间的每天以及治疗结束 24
+    小时后 (PND98) 记录每日体重。图 1 显示实验设计的示意图。
+
+
+    # 新生儿/产前发育
+
+
+    # 成年期
+
+
+    | 出生后天数 | 短期影响 | 中期影响 | 长期影响 |
+
+    | --- | --- | --- | --- |
+
+    | | 0 1 3 5 7 8 21 | 120 | 600 |
+
+    | 出生 | | | |
+
+    | | | | |
+
+    | | 子宫: | | | |
+
+    | | 组织: | | |
+
+    | | 断奶 | 阴道学: |
+
+    | 治疗 | 尾部 | |
+
+    | 对照 (载体) | | |
+
+    | 图 1. 雌性大鼠在暴露于 GBH (mg/kg/day) 的中长期影响的示意图。
+
+
+    ## 2.8. 发情周期与激素分析
+
+
+    从 PND10 开始，收集雌性大鼠样本并按照描述的方法 (Zanardi 等人，2020) 评估发情周期状态。使用超灵敏放射免疫免疫测法 (Immotech，捷克)
+    测量血液中的 E2 (pg/ml) 和 P4 (ng/ml) 水平，实验持续在 20 天内。
+
+
+    ## 2.9. 死亡
+
+
+    暴露于 GBH 的大鼠的甲基化状态。
+
+
+    ## 2.10. 组织学分析
+
+
+    所有组织切成 5 μm 厚并用苏木精和伊红染色进行形态学检查。使用 Nikon V3 数字相机 (Olympus Optical Co., Tokyo) 记录表面
+    (LECH) 的图像。在显微镜下对子宫进行测量。
+
+
+    ## 2.11. 免疫组化
+
+
+    α 平滑肌蛋白 (α-SMA)
+
+
+    ## 2.12. 统计学
+
+
+    所有结果以均值 ± 标准误差 (SEM) 表示。使用双因素曼特尼检验或费雪精确检验计算组间差异的显著性，并使用 R 软件 (https://www.r-project.org/)。p
+    < 0.05 显著。
+
+
+    # 3. 结果
+
+
+    # 3.1. 短期影响：子宫的改变
+
+
+    为了确定早期暴露于 GBH 的短期影响，我们评估了 PND8 收集的子宫形态。结果显示，GBH 暴露导致子宫壁间质层和上皮层 (LECH) 明显的形态变化
+    (图 A; p < 0.05)，这表明了子宫增生。我们随后试图确定这些变化是否与怀孕（子宫发育的关键）有关。
+
+
+    # 引物序列和 PCR 产物
+
+
+    | 引物 S (5'' → 3'') | 引物 A (5'' → 3'') | 大小 (bp) | 退火温度 (°C) |
+
+    |---|---|---|---|
+
+    | CpG 岛 1 位点-1A | TAGAGAGCTTCGA | GTTAGACCGCGT | 116 | 54 |
+
+    | CpG 岛 1 位点-1B | ACCTGGCCAGCTGG | GTAACCTCAGGT | 208 | 59 |
+
+    | CpG 岛 2 位点-2 | CCCTGGCCAGCAAT | CGTTCTAGCCTC | 129 | 54 |
+
+    | CpG 岛 3 位点-3 | CGAAAAAGGGAGCTGG | CTTCCCTAGATTTC | 95 | 55 |
+
+    | CpG 岛 4 位点-4 | CGGGAACTACGGCCTAG | AGAGAGCTGGATTAG | 105 | 52 |
+
+    | 内部 | ACTAAAAAGCTAAACTAA | | 25 | 60 |
+
+
+    总甲基化的 25% 通过亚硫酸盐转化进行测量。间质层和间质（腔层）的甲基化水平在 2 小时和 4 小时使用 50 µ/l DNA 亚硫酸盐 (Invitrogen)
+    和抗 H3K9me3 兔抗体 (Millipore，德国，德国) 或兔血清（非特异性抗体）进行测量。使用 Gel & PCR 纯化试剂 (IP)，按照方法所述，使用针对
+    Hox10 区域的引物对输入 DNA 进行扩增 14 个循环。BP 使用非特异性抗体归一化，并以样本归一化值的比值表示。
+
+
+    '
+  merge: 0
+  raw:
+  - "[PAGE 2]\n\ncollected evaluated short-term effects on developmental programming\n\
+    the uterus. One horn from 8 pups per group was fixed in 10%\n(v/v) beneficial\
+    \ female and embedded in paraffin for\nall other horns were frozen in nitrogen\
+    \ and kept at\n-80 °C for one day. DNA and RNA analysis\nwas performed. Mice were\
+    \ housed up to\nPND21, with four per cage, and held without treatment\nnto evaluate\
+    \ mid-term and long-term effects. Daily body\nweight was recorded on each day\
+    \ during treatment, 24 hours after\nt end of the treatment (PND98). Fig 1 shows\
+    \ a schematic-\npresentational of the experimental design.\n\nsequence of 20 days\
+    \ by more than 50% calculated percentage of Cpg\nmore than 0.65 versus expected\
+    \ CpG generation. These\nwere also checked for the methylation-\nresponsive enzyme\
+    \ Btu1 (in England Labs, By,\nMA, USA). To identify transcriptional regulators\
+    \ of the Hox10 gene, we\nanched for sites for DNA-binding transcription factors\
+    \ and\nregulators in publicly available databases (Ezar\nel al., 2016).\n\n# 2.4.\
+    \ Reverse transcription and quantitative PCR (qPCR)\n\nUterine samples (n=8 per\
+    \ group) were collected on PND98 using\nRT (Trizogen; Buenos Aires, Argentina)\
+    \ and were extracted at\nfollowing the manufacturer’s instructions. Quantification\
+    \ of total RNA\n(1 μg) was performed using NanoDrop (Thermo Fisher). Published\
+    \ in\nGuerrero et al. (2016). To analyze the relative levels of expression\ntotal\
+    \ Hox10 mRNA, a qPCR protocol was employed. Methods used\n amplification as follows:\
+    \ Hox10\nF5'-GAACTTCAGCAGCCTCACTTC-GC-3'; and Rh19 (ribosomal protein 1, 19, housekeeping\
+    \ gene):\nF5'-AGCTGTAGTGCTCTTCTC-3' and R5'-TGAGCAGCTCTTC-3.\nA total of 5 μL\
+    \ was conducted with each primer (200 nM)\nand 10 μL of SYBR Green master mix\
+    \ (SolBios Bio-Nica, Biocorta, Argentina) to a final volume of 20 μL.\nControls\
+    \ containing no DNA were included. Each sample was\nquantified using the real-time\
+    \ PCR-cycler Rotor-G Que-Q (\nTagen, Argentina, Argentina). The reaction was performed\
+    \ for\n15 min, the reaction mixture was subjected to successive cycles of\ndenaturation\
+    \ at 95 °C for 5 min, and annealing at 54 (for 60) °C (CRp19 for\n15 min, and\
+    \ extension at 72 °C for 15 min). Product was produced by\nconsecutive cycles\
+    \ of denaturation. The analysis of spec-\nficiency for each target were calculated\
+    \ using the Rotor-G-Pure\ndiction Detection software version 1.7 (Qiagen, Tianjin).\
+    \ The relative expression\nof level of target was calculated using the standard\
+    \ method (Cilos et\nel al., 2007), normalized to the quality of the housekeeping\
+    \ gene (Rpl19)\ndivided by the target quality of the control sample.\n\n# 2.5.\
+    \ DNA-methylation status\n\nThe methylation status of the Hox10 locus was evaluated\
+    \ using\nthe methylation-responsive enzyme Btu1 (Cilos et al., 2008; van Kel et\
+    \ al., 2010).\ngomic DNA was isolated from uterine samples (n = 8 per group)\n\
+    on PND98 using phenol/chloroform/isopropyl alcohol extraction.\n(1 μg) of DNA\
+    \ were generated with SYBR III (Thermo Sfi-\nctase at 15 min) and then purified\
+    \ for 1 h at 60 °C.\ndigestion products were purified with the phenol/chloroform\
+    \ method\nunits (England Labs, Beverly, USA) for 1 h at 60 °C.\ndigestion products\
+    \ performed using Table 1. The methylation-\nresponsive amplification. If the\
+    \ CpG-rich site was not methylated, Btu1\nnot be amplified. In contrast, if the\
+    \ site was methylated, Btu1\nnot cut at methylated sites, and amplification\n\
+    nnification was performed in triplicate and served as\nan internal control.\n\n\
+    # 2.7. Chromatin immunoprecipitation (ChIP-qPCR)\n\nChIP for H3K9me3 and H3K27me3\
+    \ were measured by qPCR at\nregions of Hox10 was performed on uterine samples\
+    \ (n = 8 per group)\non PBS, following previously published protocols (Altam-\n\
+    nano et al., 2017; Lewis et al., 2019). Tissues were treated with\nformaldehyde\
+    \ for 15 min before cross-linking with\nto DNA. After extraction with 125 mM glycine\
+    \ and wash\nwith PBS, utters were incubated with 600 μL lysis buffer containing\n\
+    1 x protein (Complete Machine, Roche Diagnostics GmbH, Germany) and\nsSamples\
+    \ were sampled in in lysis buffer with the Sonic-\nCell™ VCK750 (Materials & Scientific,\
+    \ Newtown, CT, USA) for 40 cycles of\n\n# Neonatal/Prenatal Development\n\n# Adulthood\n\
+    \n| Postdays | Short-term effects | Mid-term effects | Long-term effects |\n|\
+    \ --- | --- | --- | --- |\n| | 0 1 3 5 7 8 21 | 120 | 600 |\n| Birth | | | |\n\
+    | | | | |\n| | Uterine: | | |\n| | tissue | Vaginal cytology: | |\n| | Weaning\
+    \ | Tail blood | Uterine and other tissues |\n| TREATMENT |ctions | | |\n| Control\
+    \ (vehicle) | | | GBH (2 mg glyphosate/kg bw/day)|\n\nFig. 1. Schematic representation\
+    \ of the experimental protocol used, mid- and long-term effects of postnatal exposure\
+    \ to a glyphosate-\nherbicide (GBH) in female rats, sc, subcutaneous.\n\n3"
+  - '[PAGE 3]
+
+
+    # Primer sequences and PCR products
+
+
+    Primer sequences were used in qRT-PCR for DNA methylation-specific and ChIP analysis.
+
+
+    | | Primer S (5'' → 3'') | Primer A (5'' → 3'') | Size (bp) | Annealing Temperature
+    (°C) |
+
+    |---|---|---|---||
+
+    | Cg Island 1 Site-1A | TAGAGAGCTAGTCAGGA | GTTAGACCACGCATGT | 116 | 54
+
+    | Cg Island 1 Site-1B | ACCTGGCCCAAGCTGG | GTAACCTCAGCTGTGT | 208 | 59
+
+    | Cg Island 2 Site-2 | CCCTGGCCCAAGCAAT | CGTTCTTAGCCGTGTTC | 129 | 54
+
+    | Cg Island 3 Site-3 | CGAAAAAGGGAAAGCTGG | CTTCCCTAGTTATTATTTC | 95 | 55
+
+    | Cg Island 4 Site-4 | CGGGAACTACGGCCGTAG | AGAGAGCTGGATGGGTAG | 105 | 52
+
+    | Internal | ACTAAAAAGCTAAAAGCTTAAA | | |
+
+
+    25 and 60 percent of total methylation was measured by bisulfite conversion. The
+    methylation levels of the stromal and mesenchymal (luminal) layers were measured
+    for 12 h and 4 h at 50 µ/l DNA bisulfite (Invitrogen) and 5 µ/g rabbit antibody
+    against H3K9me3 (EM Millipore, Darmstadt, Germany), or rabbit serum (non-specific
+    antibody). Using exon-linked Link™ Gel Extraction & PCR Purification Kit (Invitrogen)
+    and eluted in 50 µl M Tris-HCl, pH 8.5. From the immunopreced complexes (IP) and
+    input DNA were amplified in 14 cycles as described in the Materials and Methods,
+    using primers targeting Hoxa10 region by the specific method (Cikol et al., 2007).
+    BPs were normalized with the non-specific antibody, and expressed as a ratio input
+    and to the normalized value of the samples.
+
+
+    # 2.8. Estrus cycle and hormone analysis
+
+
+    From PND10 and 20 consecutive days, vaginal smears were collected from the animals
+    according to the female status as described (Zanardi et al., 2020). To regulate
+    variability, cycle status was measured by vaginal leakage at the same time of
+    the day over the course of the experiment (8–10 a.m.). The estrus cycle length
+    and percentage of time spent in estrus stages were evaluated. Blood from tail
+    was collected in estral sinus in order for further hormone analysis. Serum levels
+    were measured using the ultra-sensitive radioimmunoassay (Immotech, Beckman, Czech
+    Republic, ELD4850) and enzyme-linked immunosunoassay Elgen4 kit (Adis Scientific,
+    Inc., 1104351). All samples were run in triplicate, following the manufacturer''s
+    instructions. The E2/P4 ratio was calculated by dividing E2 (pg/ml) to P4 levels
+    (ng/ml) from each animal.
+
+
+    # 2.9. Necropy
+
+
+    Animals from the adult group were sacrificed by decapitation in the morning of
+    the day 20 days after birth (PND0). In cases of possible suffering from the animal,
+    the sacrifice was performed during the course of study according to ethical rules.
+    In each case, organs were carefully examined for visible lesions. Other tissues
+    collected at sacrifice were fixed in 10% (v/v) buffered formalin and embedded
+    in paraffin study (morphohistology and immunohistochemistry analysis).
+
+
+    # 2.10. Histological analysis
+
+
+    All tissues collected were cut (5 µm thick) and stained with hematoxylin and eosin
+    for microscopic examination. Tissue morphometry was performed on all samples on
+    PND8 as previously described (Gourney Schmidt al., 2008). Specifically, images
+    of tissue were recorded using a Nikon DS V3.5 color video camera attached to a
+    microscope (Olympus Optical Co., Ltd., Tokyo, Japan). The luminal epithelial cell
+    layer (LECH) was deleted from the (luminal) surface to the basement membrane,
+
+
+    # 2.11. Immunohistochemistry
+
+
+    Alpha-smooth muscle actin (α-SMA)
+
+
+    # 2.12. Statistics
+
+
+    All results are expressed as mean ± standard error of the mean (SEM). Two-way
+    Mann-Whitney test or Fisher''s exact test was used to calculate the significance
+    between treatment groups, and presented in tables. All analyses were performed
+    using the R software (The Foundation for Statistical Computing) https://www.r-project.org/).
+    With values p < 0.05 were considered significant.
+
+
+    # 3. Results
+
+
+    # 3.1. Short-term effects: alteration of developmental pregnancy
+
+
+    In order to determine the short-term effects of early postnatal exposure to GBH,
+    we evaluated uterine morphology in samples collected shortly after the exposure
+    period (PND8). Result showed pronounced morphometric changes observed by a clear
+    difference in the LECH and the thickness of the uterine wall (stromal and mesenchymal)
+    layers in the GBH-exposed groups (Fig. A; p < 0.05 and p < 0.01), suggesting induction
+    of uterine hyperplasia. We then sought to determine whether these alterations
+    are related to pregnancy, which has key roles in uterine development. We first
+    evaluated the Hoxa10 mRNA levels on uterine samples collected on PND8 and detected
+    that exposure to GBH induced downregulation of the Hoxa10'
+- md: '
+
+    # M. Guerrero Schimpf et al.
+
+
+    # Food and Chemical Toxicology 159 (2022) 112695
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_4_0.png)
+
+
+    **Fig. 2.** Representative uterine sections stained with hematoxylin and eosin,
+    illustrating morphologic elaborations over ND8. (A) Luminal epithelium thickness
+    and uterine width (stromal and myometrium). The line and error bars indicate the
+    group mean and standard deviation, respectively (*p < 0.05, ** < 0.001). (B) Total
+    expression of rat *Hoxa10* mRNA levels in uterine tissue on ND8. The line and
+    error bars indicate the group mean and standard deviation, respectively (*p <
+    0.05, ** < 0.001). (C) Genomic organization of rat *Hoxa10* locus showing methylation-sensitive
+    extrrinsic elements (CpG sites) and site-specific PCR primers for DNA methylation
+    and ChIP analysis are indicated; enhancer of zanz2 (Zanz2), Junmo1 and At-rich
+    interaction domain 2; Mtf2, metal element binding factor 2; suz12, protein 12;
+    mstr1. (D) DNA methylation analysis at regions of the *Hoxa10* locus using methylation-sensitive
+    bisulfite sequencing. (E) ChIP analysis of *Hoxa10* locus for H3K27me3 and H3K4me3.
+    Marks were normalized to input DNA control. Control values were assigned to a
+    value of 1; represents the mean
+
+
+    (Fig. 2b; p < 0.01). Consequently, to identify if changes in DNA methylation and
+    post-translational modifications (PTMs) at different residues (H3K9me3 and H3K27me3)
+    in the *Hoxa10* locus are responsible for the alterations detected at ND2. Since
+    identified regions underwent methylation of the gene, we identified the CpG sites
+    for *Hoxa10* and restrictions for the methylation analysis. Our bioinformatics
+    analysis of the methylation status of rat *Hoxa10* locus identified four of four
+    CpG islands, **CpG Island 1**, which were located at promoters as well as the
+    gene, **CpG Island 2**, which spans from -265 to +413 (relative to the start of
+    the *Hoxa10* gene), **CpG Island 3**, which spans from 127 to 327 (relative to
+    the start of the *Hoxa10* gene), and **CpG Island 4**, which spans from -527 to
+    +1521 (relative to TSS22), spanning the exon 1b
+
+
+    (EIB) promoter region 5 and the 5’-end of exon 1-2. Multiple restriction for sites
+    for the uterine enhancer were identified on this region by the DNA-binding factor
+    Tf2 (Junmo1) and At-rich interaction domain 2 (2); two sites were found for each
+    (s22). CpG 3 (322 bp long) located at 3’-end of exon 1-2, containing between s31
+    and s34, and CpG 4 (336 bp long) located on exon 2, also containing methylation-sensitive
+    site (s54). Analysis of DNA methylation at regions of the *Hoxa10* locus for H3K27me3
+    and H3K4me3 epigenetic reprogramming after GBH exposure. The DNA methylation analysis
+    detected in the uterine tissue showed all regions situated in the GBH-exposed
+    group (Fig. 2; p < 0.05), indicating GBH hypermethylation. In the control group,
+    low methylation was observed. However, histone methylation analysis showed that
+    GBH exposure was associated with a reduction of H3K27me3 at all sites (H3K9me3
+    and H3K27me3 epigenetic marks on the *Hoxa10* locus.
+
+
+    ## 3.2. Mid-term: ovarian estrous levels and estrous cycle
+
+
+    Alterations of estrous levels and estrous cycle could also be promoting factors
+    of hormonal carcinogenesis (Yoshida et al. 2015). Serum ovarian hormone levels
+    and estrous cycle duration of estrus phase were evaluated in control and GB-treated
+    animals on PND210. Exposure to GB resulted in increased CON (28.9 ± 1.3 pg/ml;
+    GB: 33.4 ± 3.2 pg/ml; p < 0.05 Mann-Whitney test) and noted decrease in perimeter
+    of estrus (CON: 4.2 ± 0.4 days; GB: 3.8 ± 0.5 days; Mann-Whitney test). Alterations
+    also led to a increase in E2/P4 ratio (CON: 2.64 ± 0.12; GB: 7.73 ± 0.4, p < 0.001
+    Mann-Whitney test).
+
+
+    ## 3. Long-term effects: body weight and pre-neoplastic and neoplastic lesions
+
+
+    All animals were constantly monitored during the experiment for body weight gain,
+    behavior, and appearance time. Body weight of GB-treated animals was within 10%
+    of birth to adulthood, showing no differences between groups (Table 3). All animals
+    survived until the end of the study. However, at 6 months after birth (PND660),
+    one of GB-treated animals (24%) died for necrosis at 18 months of age. In addition,
+    two GB-treated animals were sacrificed at 17 months due to uterine bleeding or
+    presence of macroscopic/multilocular lesions.
+
+
+    ## 3.3. Incidence of pre-neoplastic and neoplastic lesions
+
+
+    Alterations of estrous levels and estrous cycle could also be promoting factors
+    of hormonal carcinogenesis (Yoshida et al. 2015). Serum ovarian hormone levels
+    and estrous cycle duration of estrus phase were evaluated in control and GB-treated
+    animals on PND210. Exposure to GB resulted in increased CON (28.9 ± 1.3 pg/ml;
+    GB: 33.4 ± 3.2 pg/ml; p < 0.05 Mann-Whitney test) and noted decrease in perimeter
+    of estrus (CON: 4.2 ± 0.4 days; GB: 3.8 ± 0.5 days; Mann-Whitney test). Alterations
+    also led to a increase in E2/P4 ratio (CON: 2.64 ± 0.12; GB: 7.73 ± 0.4, p < 0.001
+    Mann-Whitney test).
+
+
+    All animals were constantly monitored during the experiment for body weight gain,
+    behavior, and appearance time. Body weight of GB-treated animals was within 10%
+    of birth to adulthood, showing no differences between groups (Table 3). All animals
+    survived until the end of the study. However, at 6 months after birth (PND660),
+    one of GB-treated animals (24%) died for necrosis at 18 months of age. In addition,
+    two GB-treated animals were sacrificed at 17 months due to uterine bleeding or
+    presence of macroscopic/multilocular lesions.
+
+
+    Considering that developing epithelium can cause disease, we evaluated the incidence
+    of pre-neoplastic and neoplastic lesions in GB-treated animals. The uterine epithelium
+    showed squamous hyperplasia, glandular hyperplasia, and cells was significantly
+    higher in the GB group (1/24, 4%; 10/25, 40% 0.06).
+
+
+    | Parameters | CON | GB |
+
+    | :--- | :--- | :--- |
+
+    | Estrous cycle (days) | 5.2 ± 0.13 | 5.4 ± 0.08 |
+
+    | Estrous days (% ) | 62.38 ± 1.27 | 57.79 ± 0.22 |
+
+    | Proestrus | 18.3 ± 0.55 | 18.80 ± 0.41 |
+
+    | Estrus | 19.29 ± 0.92 | 23.72 ± 0.99 |
+
+
+    *p < 0.05, **p < 0.001
+
+
+    The DNA methylation analysis detected in the uterine tissue showed all regions
+    situated in the GBH-exposed group (Fig. 2; p < 0.05), indicating GBH hypermethylation.
+    In the control group, low methylation was observed. However, histone methylation
+    analysis showed that GBH exposure was associated with a reduction of H3K27me3
+    at all sites (H3K9me3 and H3K27me3 epigenetic marks on the *Hoxa10* locus.
+
+
+    Uterine development showed various types of lesions in vitro. While the epithelium
+    exhibited positive uterine mice, only a few cells showed positive density (Fig
+    SA).
+
+
+    The uterine layers located within the uterine horn were also seen in GB-treated
+    (1/25, 4%). Histologically, neoplastic cells were spindle shaped with elongated
+    nuclei. These cells were positive to α-SMA, confirming their myogenic origin.
+
+
+    However, as mentioned before, all times were observed for grossly lesions at the
+    end of the experiment (PND660). Mac evaluation of uterine tumors was observed
+    in control. All animals showed normal uterine development and no tumors. GB-treated
+    animals developed blastoma-like rhabdomosarcoma, that were detected at 17 months
+    of age (Fig SA), and one female was observed in blastoblastic adenocarcinoma (Fig
+    SB).
+
+    '
+  mdcn: "\n\n# M. Guerrero Schimpf 等人\n\n# 食品与化学毒理学 159 (2022) 112695\n\n![](img/8b1c5b629c229e13292fad2e1913ff29_4_0.png)\n\
+    \n**图. 2.** 苏木精和伊红染的代表性子宫切片，展示了 ND8 期间的形态演变。(A) 腔上皮细胞厚度和子宫宽度（间质和子肌层）。线和误差棒分别表示组平均值和标准差（*p\
+    \ < 0.05, ** < 0.001）。(B) ND8 时子宫组织中大鼠 *Hoxa10* mRNA 水平的总表达。线和误差棒分别表示组平均值和标准差（*p\
+    \ < 0.05, ** < 0.001）。(C) 大鼠 *Hoxa10* 位点的基因组结构，显示了甲基化敏感性外源元件（CpG 位点），以及用于 DNA\
+    \ 甲基化和 ChIP 分析的位点特异性 PCR 引物；zanz2 增强子 (Zanz2)、Junmo1 和富含相互作用域 2；Mtf2，金属元素结合因子；suz12，蛋白\
+    \ 12；mstr1。(D) 使用甲基化敏感性亚硫酸测序对 *Hoxa10* 位点区域进行 DNA 甲基化分析。(E) *Hoxa10* 位点针对 H3K27me3\
+    \ 和 H3K4me3 的 ChIP 分析。标记已通过输入 DNA 控制进行归一化。对照组值赋值为 1；代表平均值\n\n（图 2b; p < 0.01）。因此，为了确定\
+    \ *Hoxa10* 位点不同残基的 DNA 甲基化和和翻译后修饰（PTMs）（H3K9me3 和 H3K27me3）的变化是否导致了在 ND2 时检测到的改变。由于鉴定的区域经历了基因甲基化，我们确定了\
+    \ *Hoxa10* 的 CpG 位点和用于甲基化分析的限制区域。我们对大鼠 *Hoxa10* 位点甲基化状态的生物信息学分析识别出了四个 CpG 岛中的全部四个：**CpG\
+    \ 岛 1**，位于启动子和基因处；**CpG 岛 2**，跨越 -265 到 +413（相对于 *Hoxa10* 基因起始位）；**CpG 岛 3**，跨越\
+    \ 127 到 327（相对于 *Hoxa10* 基因起始位）；以及 **CpG 岛 4**，跨越 -527 到 +1521（相对于 TSS22），跨越外显子\
+    \ 1b (EIB) 启动子区域 5 和外显子 1-2 的 5’-端。在该区域内，通过 DNA 结合因子 Tf2 (Junmo1) 和富含相互作用域 2 (2)\
+    \ 识别出子宫增强子的多个限制位点；每个位点发现了两个（s22）。CpG 3（长 322 bp）位于外显子 1-2 的 3’-端，包含 s31 到 s34\
+    \ 之间的位点；CpG 4（长 336 bp）位于外显子 2，也包含甲基化敏感位点（s54）。分析 GBH 暴露后，*Hoxa10* 位点区域针对 H3K27me3\
+    \ 和 H3K4me3 表观遗传重编程的 DNA 甲基化。子宫组织中检测到的 DNA 甲基化分析显示，GBH 暴露组中的所有区域均处于高水平化（图 2），表明\
+    \ GBH 高甲基化。在对照组中观察到低甲基化。然而，组蛋白甲基化分析显示，GBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3\
+    \ 和 H3K27me3 表观遗传标记）。为了确定 *Hoxa10* 位点不同残基的 DNA 甲基化和翻译后修饰（PTMs）（H3K9me3 和 H3K27me3）的变化是否导致了在\
+    \ ND2 时检测到的改变。由于鉴定的区域经历了基因甲基化，我们确定了 *Hoxa10* 的 CpG 位点和用于甲基化分析的限制区域。我们对大鼠 *Hoxa10*\
+    \ 位点甲基化状态的生物信息学分析识别出了四个 CpG 岛中的全部四个：**CpG 岛 1**，位于启动子和基因处；**CpG 岛 2**，跨越 -265\
+    \ 到 +413（相对于 *Hoxa10* 基因起始位）；**CpG 岛 3**，跨越 127 到 327（相对于 *Hoxa10* 基因起始位）；以及 **CpG\
+    \ 岛 4**，跨越 -527 到 +1521（相对于 TSS22），跨越外显子 1b (EIB) 启动子区域 5 和外显子 1-2 的 5’-端。在该区域内，通过\
+    \ DNA 结合因子 Tf2 (Junmo1) 和富含相互作用域 2 (2) 识别出子宫增强子的多个限制位点；每个位点发现了两个（s22）。CpG 3（长\
+    \ 322 bp）位于外显子 1-2 的 3’-端，包含 s31 到 s34 之间的位点；CpG 4（长 336 bp）位于外显子 2，也包含甲基化敏感位点（s54）。分析\
+    \ GBH 暴露后，*Hoxa10* 位点区域针对 H3K27me3 和 H3K4me3 表观遗传重编程的 DNA 甲基化。子宫组织中检测到的 DNA 甲基化分析显示，GBH\
+    \ 暴露组中的所有区域均处于高水平化（图 2；p < 0.05），表明 GBH 高甲基化。在对照组中观察到低甲基化。然而，组蛋白甲基化分析显示，GBH 暴露与所有位点\
+    \ H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\n## 3.2. 中期\n\n（GBH\
+    \ 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\n## 3.2. 中期\n\
+    \nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\n## 3.2.\
+    \ 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\n\
+    ## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9333 H3K27.3 观遗传标记）。\n\
+    \n  3.2. \n\n\n\nGB   . 位点 3 27 3 的减少 （*H 10    H3   3 和 H3 27.3 表观遗传标记）。\n\n\
+    ## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n## 3.2. 中期\n\nGBH 暴露与所有位点 H3K27me3 的减少有关（*Hoxa10* 上的 H3K9me3 和 H3K27me3 表观遗传标记）。\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 4]
+
+
+    # M. Guerrero Schimpf et al.
+
+
+    # Food and Chemical Toxicology 159 (2022) 112695
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_4_0.png)
+
+
+    **Fig. 2.** Representative uterine sections stained with hematoxylin and eosin,
+    illustrating morphologic elaborations over ND8. (A) Luminal epithelium thickness
+    and uterine width (stromal and myometrium). The line and error bars indicate the
+    group mean and standard deviation, respectively (*p < 0.05, ** < 0.001). (B) Total
+    expression of rat *Hoxa10* mRNA levels in uterine tissue on ND8. The line and
+    error bars indicate the group mean and standard deviation, respectively (*p <
+    0.05, ** < 0.001). (C) Genomic organization of rat *Hoxa10* locus showing methylation-sensitive
+    extrrinsic elements (CpG sites) and site-specific PCR primers for DNA methylation
+    and ChIP analysis are indicated; enhancer of zanz2 (Zanz2), Junmo1 and At-rich
+    interaction domain 2; Mtf2, metal element binding factor 2; suz12, protein 12;
+    mstr1. (D) DNA methylation analysis at regions of the *Hoxa10* locus using methylation-sensitive
+    bisulfite sequencing. (E) ChIP analysis of *Hoxa10* locus for H3K27me3 and H3K4me3.
+    Marks were normalized to input DNA control. Control values were assigned to a
+    value of 1; represents the mean
+
+
+    (Fig. 2b; p < 0.01). Consequently, to identify if changes in DNA methylation and
+    post-translational modifications (PTMs) at different residues (H3K9me3 and H3K27me3)
+    in the *Hoxa10* locus are responsible for the alterations detected at ND2. Since
+    identified regions underwent methylation of the gene, we identified the CpG sites
+    for *Hoxa10* and restrictions for the methylation analysis. Our bioinformatics
+    analysis of the methylation status of rat *Hoxa10* locus identified four of four
+    CpG islands, **CpG Island 1**, which were located at promoters as well as the
+    gene, **CpG Island 2**, which spans from -265 to +413 (relative to the start of
+    the *Hoxa10* gene), **CpG Island 3**, which spans from 127 to 327 (relative to
+    the start of the *Hoxa10* gene), and **CpG Island 4**, which spans from -527 to
+    +1521 (relative to TSS22), spanning the exon 1b
+
+
+    (EIB) promoter region 5 and the 5’-end of exon 1-2. Multiple restriction for sites
+    for the uterine enhancer were identified on this region by the DNA-binding factor
+    Tf2 (Junmo1) and At-rich interaction domain 2 (2); two sites were found for each
+    (s22). CpG 3 (322 bp long) located at 3’-end of exon 1-2, containing between s31
+    and s34, and CpG 4 (336 bp long) located on exon 2, also containing methylation-sensitive
+    site (s54). Analysis of DNA methylation at regions of the *Hoxa10* locus for H3K27me3
+    and H3K4me3 epigenetic reprogramming after GBH exposure. The DNA methylation analysis
+    detected in the uterine tissue showed all regions situated in the GBH-exposed
+    group (Fig. 2; p < 0.05), indicating GBH hypermethylation. In the control group,
+    low methylation was observed. However, histone methylation analysis showed that
+    GBH exposure was associated with a reduction of H3K27me3 at all sites (H3K9me3
+    and H3K27me3 epigenetic marks on the *Hoxa10* locus.
+
+
+    5'
+  - '[PAGE 5]
+
+
+    # 3.2. Mid-term: ovarian estrous levels and estrous cycle
+
+
+    Alterations of estrous levels and estrous cycle could also be promoting factors
+    of hormonal carcinogenesis (Yoshida et al. 2015). Serum ovarian hormone levels
+    and estrous cycle duration of estrus phase were evaluated in control and GB-treated
+    animals on PND210. Exposure to GB resulted in increased CON (28.9 ± 1.3 pg/ml;
+    GB: 33.4 ± 3.2 pg/ml; p < 0.05 Mann-Whitney test) and noted decrease in perimeter
+    of estrus (CON: 4.2 ± 0.4 days; GB: 3.8 ± 0.5 days; Mann-Whitney test). Alterations
+    also led to a increase in E2/P4 ratio (CON: 2.64 ± 0.12; GB: 7.73 ± 0.4, p < 0.001
+    Mann-Whitney test).
+
+
+    # 3. Long-term effects: body weight and pre-neoplastic and neoplastic lesions
+
+
+    All animals were constantly monitored during the experiment for body weight gain,
+    behavior, and appearance time. Body weight of GB-treated animals was within 10%
+    of birth to adulthood, showing no differences between groups (Table 3). All animals
+    survived until the end of the study. However, at 6 months after birth (PND660),
+    one of GB-treated animals (24%) died for necrosis at 18 months of age. In addition,
+    two GB-treated animals were sacrificed at 17 months due to uterine bleeding or
+    presence of macroscopic/multilocular lesions.
+
+
+    # 3.3. Incidence of uterine pre-neoplastic and neoplastic lesions after GB exposure
+
+
+    Considering that developing epithelium can cause disease and uterine hyperplasia
+    may act as promoting factor of hormonal carcinogenesis, we evaluated the incidence
+    of pre-neoplastic and neoplastic lesions in GB-treated animals on PND660 (Table
+    4). The uterine epithelium showed squamous hyperplasia, glandular hyperplasia,
+    and endometrial stromal hyperplasia were found at the same frequency in both groups
+    (Data not show). The incidence of uterine lesions with glands, epithelium, and
+    cells was significantly higher in the GB group (CON: 1/24, 4%; GB: 10/25, 40/10),
+    although the increase in frequency was not statistically significant (p = 0.064;
+    Table 2). And B-adenocarcinoma, characterized by invasion of the myometrium, was
+    found in two GB-treated animals, while no such lesions were found at 6 months
+    after birth (Table 3). The epithelium was morphologically composed of complex
+    type and was found in the glandular and luminal
+
+
+    | Parameters | PND210 | GB |
+
+    |---|---|---| |
+
+    | Estrous cycle length (days) | 5.2 ± 0.13 | 5.4 ± 0.08* |
+
+    | Estrous days (% of cycle) | 62.38 ± 1.27 | 57.79 ± 0.22* |
+
+    | Proestrus | 18.3 ± 0.55 | 18.80 ± 0.41 |
+
+    | Estrus | 19.29 ± 0.92 | 23.72 ± 0.99* |
+
+
+    *p < 0.005, p < 0.001, Mann-Whitney test.
+
+
+    uterine epithelium (C and D). Uterine layers located within the uterine horn were
+    also seen in GB-treated female (1/25, 4%; Table 3). Histologically, neoplastic
+    cells were spindle shaped with elongated blunt nuclei. These cells were positive
+    to α-SMA staining, confirming their myogenic origin. Together, the total number
+    of lesions per group was significantly increased (CON: 5/26, 19%; GB: 14/25, 56%
+    p < 0.01; Table 3).
+
+
+    # 3.3.2. Other mechanisms
+
+
+    However, as mentioned before, all times were observed for grossly lesions at the
+    end of the experiment (PND660). Macroscopic evaluation of uterine tumors was observed
+    in control. All animals showed normal uterine development and no tumors. GB-treated
+    animals developed blastoma-like rhabdomosarcoma, that were detected at 17 months
+    of age (Fig SA), and one female was observed in blastoblastic duct adenocarcinoma
+    (Fig SB). Uterine development showed various types of neoplastic lesions in vitro.
+    While the epithelium exhibited positive uterine mice, only a few cells showed
+    positive density (Fig SA).
+
+
+    # 4. Discussion
+
+
+    In rodents, the myogenic development and differentiation of the reproductive tract
+    persists and continues during the first postnatal weeks, hormonal cellular, and
+    molecular mechanisms establish pathways that direct differentiation of the uterine
+    epithelium. The study showed that the uterine development was disrupted (Yoshida
+    et al., 2012).
+
+
+    Incidence of developmental epithelium can cause permanent changes in the structure
+    and function of tissues and profound impact on fertility. Our present study provides
+    compelling evidence that transient disruption of the normal development by GB
+    group has long-term consequences for reproductive health in female rats.
+
+
+    # 4.1. Epigenetic regulation of the Hoxa10 locus is associated with GB induction
+    of uterine hyperplasia
+
+
+    In this study, we first to determine whether GB induces developmental reprogramming
+    of uterine epithelium by short-term effects on morphology and epigenetic changes
+    of the Hoxa10 locus. We found that the morphogenesis of the development is profoundly
+    affected after exposure to GB. On PND210, the morphology and differentiation patterns
+    of cells, including early and late growth, epithelial, and stromal mesenchymal
+    cells were found in as.
+
+
+    Similar to the histological appearance of the uterus was observed, uterine development
+    showed increased hyperplasia of epithelial and mesenchymal layers (Yamashita,
+    2006; Yoshida et al., 1999), it has been reported that disruption of uterine development
+    may play a role in the development of uterine lesions, which are associated with
+    abnormalities in uterine architecture, we aim to determine whether'
+- md: '
+
+    # M. Guerrero Schimpf et al.
+
+
+    # Food and Chemical Toxicology (2022) 112695
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_6_0.png)
+
+
+    **Fig. 3.** Growth curves for female rats exposed to vehicle (Control) or GBH.
+    Data represents the mean ± SEM.
+
+
+    Table 3
+
+    Incidence of pre-neoplastic and neoplastic lesions in the uterus of aged rats
+    postnatally exposed to GBH.
+
+    | | Control | GBH |
+
+    |---|---|---|
+
+    | Glands with daughter glands | 4/26 (15%) | 10/25 (40%) |
+
+    | Adenomyosis | 0/26 (0%) | 1/25 (4%) |
+
+    | Atypical endometrial hyperplasia | 1/26 (4%) | 2/25 (8%) |
+
+    | Leiomyoma | 0/26 (0%) | 4/25 (16%) |
+
+    | Total number of lesions | 5/26 (19%) | 14/25 (56%) |
+
+
+    2010), suggesting that changes in the DNA methylation are epigenetic mechanism
+    to endocrine disruption.
+
+
+    Histone PTMs modulate gene expression either by chromatin remodeling or by contributing
+    to the regulation of regulatory factors. Chromatin marks are associated with transcriptional
+    silencing (Zhang et al., 2015). Several reports indicating that both histone marks
+    are mutually exclusive, and of ChIP-sequencing studies have shown that H3K9me3
+    can be involved in gene development (Liu et al., 2011; Hawkins et al., 2010).
+    Given that both histone marks are associated with gene representation, it has
+    been suggested that they may cooperate with each other acting as regulators of
+    cell fate. In this study, we found that aberrant loss of H3K27me3 correlates with
+    gene expression in the GBH group. After exposure, H3K27me3 was deleted in all
+    sites within the Hox10a locus after GBH exposure. Interestingly, some sites in
+    the uterine epithelium and daughter glands remained normal. normal and concomitant
+    contexts, which generate DNA methylation or repressive H3K27me3 and DNA modifications.
+    In the Hox10a locus, therefore, the loss of DNA methylation and enrichment of
+    H3K9me3 might be responsible for aberrant expression of Hox10a and altered uterine
+    morphology after GBH exposure.
+
+
+    morphological changes induced by GBH exposure could be mediated by epigenetic
+    reprogramming of the Hox10 locus. We detected GBH induced epigenetic changes consisting
+    of DNA hypermethylation, and reduction of H3K27me3 at regulatory regions of Hox10
+    that resulted in poor development.
+
+
+    Novo DNA methylation of Hox10a CpG islands is a stable epigenetic marker in gene
+    silencing (Ceder and Bergman, 2009).
+
+
+    In accordance with our results, developmental exposure to GBH was affected
+
+    * p = 0.064, p < 0.01, two-sided Fisher''s test
+
+    perinatal exposure to GBH leads to increased expression in promoter/intronic-hypermethylation
+    and increased Hox10a/Hox10 expression (Bromer et al., 2009), while BPA exposure
+    in promoter/intronic-hy increased Hox10a/Hox10 expression (Bromer et. al.).
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_6_1.png)
+
+
+    **Fig. 4.** Pre-neoplastic and neoplastic lesions in female mice (20 months old)
+    after exposure to GBH during the first week of life. Uterine sections were stained
+    with hematoxylin and eosin (A-F) and α-SMA (G and H). And B with daughter glands.
+    (C and D) Atypical endometrial hyperplasia in luminal and glandular epithelium
+    (asterisks). (E-H) Uterine leiomyoma. Neoplastic cells were positive for α-SMA
+    immunostaining. LE, luminal epithelium; GE, glandular epithelium; MM, myometrium.
+    Scale bars: (A-B and F) 50 μm; (D-E and G) 100 μm; (C) 200 μm.
+
+
+    # Vagina
+
+
+    # B
+
+
+    # Liver
+
+
+    # H&E
+
+
+    # H&E
+
+
+    # Vimentin
+
+
+    # Desmin
+
+
+    # H&E
+
+
+    # Control
+
+
+    # GBH
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_7_0.png)
+
+
+    Fig. 5. Other neoplastic lesions have been observed in aged females after exposure
+    to GBH during the first week of life. (A) Vaginal rhabdomosarcoma. Vaginal sections
+    were stained with hematoxylin and eosin (H&E), vimentin and desmin characterization
+    of neoplastic cells. All neoplastic cells were positive for vimentin but some
+    negative for desmin (B) Intraper bile duct adenocarcinoma. Lesions were stained
+    with H&E. Images at the bottom are higher magnifications of the upper panel. Scale:
+    Upper panel, 100 μm; Lower panel, 50 μm.
+
+
+    # Table 4
+
+    Summary of pre-neoplastic and neoplastic lesions observed in aged rats
+
+    | Uterus | Vagina | Reproductive tract | Total number of lesions |
+
+    |---|---|---|---|
+
+    | Incidence of lesions* | p-value | Incidence of lesions | p-value | Incidence
+    of lesions | p-value | Incidence of lesions* | p-value |
+
+    | Control (n=26) | 1/26 (4%) | 0.3497 | 0/26 (0%) | 0.0253 | 0.0993 | 1/26 (4%)
+    | 0.0496 |
+
+    | GBH (n=25) | | 2/25 (8%) | | 6/25 (24%) | | |
+
+
+    * Includes atypical hyperplasia and neoplastic lesions
+
+    * Includes hepatic bile duct adenocarcinoma
+
+
+    All values were tested with two-sided Fisher test. Importantly, aged rodents have
+    annotated binding sites for Sox2 (suppressor of sex 2) and E2 (enhancer of sex
+    2) of the polycomb complex 2 (PRC2), which mediate H3K27 methylation and play
+    an important role in the epigenetic regulation of genes. Disruption of DNA methylation
+    by Hox10 region and gene expression affecting reproductive function. Hox10 is
+    silenced (Fischer et al., 2011), in addition E2 is hypermethylated and downregulated
+    in uterine polyps leiomyomas and adenomas (Fischer et al., 2013; Kui et al., 2016)
+    as well as in carcinomas. Hence, reprogramming of the Hox10 locus by exposure
+    could lead to permanent changes in gene expression that could cause uterine disease
+    or malignancies in later life.
+
+
+    alterations in estrogen level exposure to glyphosate or GBH (Roundup) (Mansery
+    et al., 2019). This discrepancy with our results could be attributed to differences
+    in sample size, and different species and exposure durations. As E2 serum levels,
+    Mansery et al. (2019) found a higher level of levels in GBH and GBH-exposed females
+    which is in agreement with our results. However, data could not be statistically
+    evaluated due to small sample size. Furthermore, we recently reported that female
+    mating (gestation and lactation) exposure to either glyphosate or GBH (Mann) increased
+    E2 serum levels at each stage (Lorenz et al., 2020) impair ovarian function and
+    est cycle. This study will be required to elucidate the mechanisms underlying
+    E2 and P4 serum levels after GBH exposure.
+
+
+    ## 4.2. Hormone imbalance observed in increased E2/P4 ratio after endocrine mode
+    of GBH
+
+
+    Estrogens play a crucial role in the pathogenesis of hormone dependent functions
+    of the reproductive tissue. In rodents, continuous increase in E2/P4 ratio due
+    to hormone imbalance is considered a risk factor for hormonal cancers (Okono et
+    al., 2010; Yoon et al., 2010). To evaluate the action of GBH, we sought to evaluate
+    estrogen and ovarian steroid levels at each stage in young females. GBH-exposed
+    animals displayed irregular estrous cycles at 4 months of age, characterized by
+    increased duration of estrogen phase and decreased time in estrus. Serum concentrations
+    of E2 and P4 led to an increase in the E2/P4 ratio, resulting in a similar state
+    to that of high E2. Our findings are with Mansery et al. (2019) who reported in
+    a pilot study no
+
+
+    ## 4.3. Developmental exposure to GBH increases susceptibility in adulthood
+
+
+    As stated before, developmental reprogramming of exposure EDC and altered hormonal
+    milieu can promote disorders later in life. Based on the developmental and endocrine-disrupting
+    effects observed in female rats exposed to GBH, we evaluated the effects on the
+    development of neoplastic or neoplastic lesions in aged female rats. Overall survival
+    showed no significant difference between control and GBH groups. The histopathology
+    of the uterus exposed to GBH showed an increased incidence of hormone-dependent
+    lesions. These lesions included benign, preclinical and malignant tumors, as well
+    as myroids, glands, endometrial hyperplasia and uterine leiomyoma. With our results,
+    exposure to EDCs is associated with increased risk of uterine development, which
+    was detected in the uterus of aged mice after prenatal exposure to DES (Newbold
+    et al., 1990) and BPA (Bowa et al., 2007). Interestingly, an increased incidence
+    of glandular hyperplasia was also reported in the uterus of male mice exposed
+    to glyphosate. Together, our findings indicate that developmental exposure to
+    GBH is associated with increased susceptibility to hormone-disrupting tumors.
+
+
+    As previously mentioned, in this study we used a formulation of glyphosate (Round
+    UP), containing active ingredients added to the herbicide. It has been shown more
+    than that GBH, although under our experimental conditions.
+
+
+    ## 5. Conclusions
+
+
+    In summary, early exposure to GBH disrupted developmental programming of Hox10
+    and E2/P4 ratio. Additional studies are needed to determine the potential mechanisms
+    for human and animal exposures.
+
+
+    # References
+
+
+    Alder, A., Lavish, F., Havens, A., Eboes, P., Sinha, S., Chandrasekhar, A., et
+    al. 2010. Glyphosate and formulation disrupted neonatal development in offspring
+    of maternal gestational exposure in rats. Tox. 185(3), 197-203. https://doi.org/10.1016/j.tox.2009.08.048
+
+
+    In accordance with our results, studies have reported that exposure to glyphosate
+    (active ingredient) GBH promotes the development of different types of tumors
+    in mice. A recent report by Zanardi et al. (2020) concluded that these were sufficient
+    to establish link with glyphosate in experimental models (Potterio, 2020). The
+    string shows that glyphosate causes hamartomas, hepatocarcinomas, and kidney tumors
+    in mice and skin, adrenal tumors.
+
+    '
+  mdcn: '
+
+
+    # M. Guerrero Schimpf 等人
+
+
+    # 食品与化学毒理学 (2022) 112695
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_6_0.png)
+
+
+    **图 3.** 暴露于载体（对照组）或 GBH 的雌性鼠生长曲线。数据表示平均值 ± 标准误差 (SEM)。
+
+
+    表 3
+
+    出生后暴露于 GBH 的老年大鼠子宫癌前病变和肿瘤病变的发生率。
+
+    | | 对照组 | GBH |
+
+    |---|---|---|
+
+    | 带有子腺的腺体 | 4/26 (15%) | 10/25 (40%) |
+
+    | 子宫腺肌症 | 0/26 (0%) | 1/25 (4%) |
+
+    | 非典型子宫内增生 | 1/26 (4%) | 2/25 (8%) |
+
+    | 平滑肌瘤 | 0/26 (0%) | 4/25 (16%) |
+
+    | 病变总数 | 5/26 (19%) | 14/25 (56%) |
+
+
+    2010)，表明 DNA 甲基化的变化是内分泌干扰的表观遗传机制。
+
+
+    组蛋白翻译后修饰 (PTMs) 通过染色质重塑或通过有助于调节因子的调节来调节基因表达。染色质标记与转录沉默有关（Zhang 等人，2015）。若干报告表明两种组蛋白标记是互斥的，且一些
+    ChIP 测序研究显示 H3K9me3 可参与基因发育（Liu 等人，2011；Hawkins 等人，2010）。鉴于两种组蛋白标记都与基因表现（表达）有关，有研究认为它们可能相互作用，作为细胞命运的调节因子。在这项研究中，我们发现
+    GBH 组 H3K27me3 的异常丢失与基因表达相关。在 GBH 暴露后，Hox10a 位点内的所有位点的 H3K27me3 都被删除。有趣的是，子宫上皮和子腺中的某些位点保持正常。正常且伴随的背景产生
+    DNA 甲基化或抑制性 H3K27me3 以及 DNA 修饰。因此，在 Hox10a 位点中，DNA 甲基化的丢失和 H3K9me3 的富集可能导致 GBH
+    暴露后 Hox10a 的异常表达和子宫形态的改变。
+
+
+    GBH 暴露引起的形态变化可能是通过 Hox10 位点的表观遗传重编程介导的。我们检测到 GBH 诱导的表观遗传变化，包括 DNA 超甲基化和 Hox10
+    调节区域 H3K27me3 的减少，导致发育不良。
+
+
+    Hox10a CpG 岛的新 DNA 甲基化是基因沉默的稳定表观遗传标记（Ceder 和 Bergman，2009）。
+
+
+    与我们的结果一致，发育暴露于 GBH 影响了
+
+    * p = 0.064, p < 0.01，双侧 Fisher 检验
+
+    围产期暴露于 GBH 导致启动子/内含子高甲基化和表达增加，以及 Hox10a/Hox10 表达增加（Bromer 等人，2009），而启动子/内含子低甲基化的
+    BPA 暴露增加了 Hox10a/Hox10 表达（Bromer 等人）。
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_6_1.png)
+
+
+    **图 4.** 出生第一周暴露于 GBH 后雌性小鼠（20个月）的癌前病变和肿瘤病变。子宫切片用苏木精和伊红染色（A-F）以及 α-SMA（G 和 H）染色。且
+    B 为带有子腺的。（C 和 D）腔上皮和腺上皮的非典型子宫内膜增生（星号）。（E-H）子宫平滑肌瘤。肿瘤细胞 α-SMA 免疫染色阳性。LE，腔上皮；GE，腺上皮；MM，子宫肌。比例尺：(A-B
+    和 F) 50 μm；(D-E 和 G) 100 μm；(C) 200 μm。
+
+
+    # 阴道
+
+    # B
+
+    # 肝
+
+    # H&E
+
+    # Vimentin
+
+    # Desmin
+
+    # H&E
+
+    # 对照组
+
+    # GBH
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_7_0.png)
+
+
+    图 5. 在出生第一周暴露于 GBH 后，老年雌鼠中观察到其他肿瘤病变。（A）阴道肉肉瘤。阴道切片用苏木精和伊红 (H&E)、vimentin 和 desmin
+    染色。肿瘤细胞 vimentin 阳性，但 desmin 阴性。（B）肝内胆管癌。病变用 H&E 染色。底部图像是上方面板的放大图。比例尺：上方 100 μm；下方
+    50 μm。
+
+
+    # 表 4
+
+    老年大鼠观察到的癌前病变和肿瘤病变总结
+
+    | 子宫 | 阴道 | 生殖道 | 病变总数 |
+
+    |---|---|---|---|
+
+    | 病变发生率 | p 值 | 病变发生率 | p 值 | 病变发生率 | p 值 | 病变发生率 | p 值 |
+
+    | 对照组 (n=26) | 1/26 (4%) | 0.3497 | 0/26 (0%) | 0.0253 | 0.0993 | 1/26 (4%) |
+    0.4996 |
+
+    | GBH 组 (n=25) | | 2/25 (8%) | | 6/25 (24%) | |
+
+
+    * 包括非典型增生和肿瘤病变
+
+    * 包括肝内胆管癌
+
+
+    所有值均通过双侧 Fisher 检验。重要的是，老年啮动物具有 Sox2（sex 2 抑制因子）和 E2（sex 2 增强因子）的多组蛋白复合物 2 (PRC2)
+    注释位点，其介导 H3K27 甲基化并在基因表达的表观遗传调节中起着重要作用。DNA 甲基化的干扰导致 Hox10 被沉默（Fischer 等人，2011），此外，E2
+    在子宫息肉、腺瘤以及癌中发生高甲基化和下调（Fischer 等人，2013；Kui 等人，2016）。因此，暴露对 Hox10 位点的重编程可能导致基因表达的永久性改变，从而在晚年引起子宫疾病或恶性病变。
+
+
+    雌激素水平的变化，暴露于甘糖膦（glyphosate）或 GBH (Roundup) (Mansery 等人，2019)。与我们结果的差异可能归于样本量、不同物种和暴露持续时间。Mansery
+    等人 (2019) 发现 GBH 组雌鼠 E2 水平较高，这与我们的结果一致。然而，由于样本量小，无法进行统计学评估。此外，我们最近报道，雌性在妊娠和哺乳期暴露于甘糖膦或
+    GBH 会增加各阶段的 E2 血清水平（Lorenz 等人，2020），并损害卵巢功能和性周期。这项研究将阐明 GBH 暴露后 E2 和 P4 血清水平的机制。
+
+
+    ## 4.2. 在 GBH 内分泌模式后 E2/P4 比例增加中观察到的激素失调
+
+
+    雌激素在生殖组织激素依赖功能的发病中起着关键作用。在啮动物中，激素失调导致的 E2/P4 比例持续增加被认为是激素性癌症的风险因素（Okono 等人，2010；Yoon
+    等人，2010）。为了评估 GBH 的作用，我们试图评估年轻雌鼠各阶段的卵巢类固醇水平。暴露于 GBH 的动物在 4 月大显示周期异常，特征是雌期延长和发卵期缩短。E2
+    和 P4 的血清浓度导致 E2/P4 比例增加，产生类似于高 E2 的状态。我们的发现与 Mansery 等人 (2019) 一致，他们在一项初步研究中报告没有
+
+
+    ## 4.3. 发育暴露于 GBH 增加易感性
+
+
+    如前所述， EDC 的发育重编程和激素环境的变化可能促进晚期疾病。根据在暴露于 GBH 的雌鼠中观察到的发育和内分泌干扰影响，我们评估了其对老年雌鼠肿瘤或肿瘤病变发育的影响。总存活率在对照组和
+    GBH 组之间没有显著差异。暴露于 GBH 的子宫组织病学显示激素依赖性病变的发生率增加。这些病变包括良性、癌前和恶性肿瘤，以及肌瘤、腺体、子宫内增生和子宫平滑肌瘤。根据我们的结果，暴露于
+    EDC 与子宫发育风险的增加有关，这在出生前暴露于 DES (Newbold 等人，1990) 和 BPA (Bowa 等人，2007) 的老年鼠子宫中被检测到。有趣的是，暴露于甘糖膦的雄鼠子宫中也报告腺增生发生率增加。总之，我们的发现表明，发育暴露于
+    GBH 与激素干扰性肿瘤的易感性增加有关。
+
+
+    如所述，在本研究中我们使用了甘糖膦配剂（Roundup），含有活性成分。其显示比 GBH 更强。
+
+
+    ## 5. 结论
+
+
+    总结来说，早期暴露于 GBH 干扰了 Hox10 的发育程序和 E2/P4 比例。需要进一步的研究确定人类和动物暴露的潜在机制。
+
+
+    # 参考文献
+
+
+    Alder, A., Lavish, F., Havens, A., Eboes, P., Sinha, S., Chandrasekhar, A., et
+    al. 2010. 甘糖膦和配剂干扰母体妊娠暴露后后代的发育。Tox. 185(3), 197-203. https://doi.org/10.1016/j.tox.2009.08.048
+
+
+    与我们的结果一致，研究报道暴露于甘糖膦（活性成分）GBH 会促进小鼠不同类型肿瘤的发展。Zanardi 等人 (2020) 的最新报告得出结论，这些足以在实验模型中建立与甘糖膦的联系（Potterio,
+    2020）。显示甘糖膦会导致小鼠的脂肪瘤、肝癌和肾脏肿瘤，以及皮肤、肾上腺肿瘤。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 6]
+
+
+    # M. Guerrero Schimpf et al.
+
+
+    # Food and Chemical Toxicology (2022) 112695
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_6_0.png)
+
+
+    **Fig. 3.** Growth curves for female rats exposed to vehicle (Control) or GBH.
+    Data represents the mean ± SEM.
+
+
+    Table 3
+
+    Incidence of pre-neoplastic and neoplastic lesions in the uterus of aged rats
+    postnatally exposed to GBH.
+
+    | | Control | GBH |
+
+    |---|---||}{
+
+    | Glands with daughter glands | 4/26 (15%) | 10/25 (40%) |
+
+    | Adenomyosis | 0/26 (0%) | 1/25 (4%) |
+
+    | Atypical endometrial hyperplasia | 1/26 (4%) | 2/25 (8%) |
+
+    | Leioma | 0/26 (0%) | 4/25 (16%) |
+
+    | Total number of lesions | 5/26 (19%) | 14/25 (56%) |
+
+
+    2010), suggesting that changes in the DNA methylation are epigenetic mechanism
+    to endocrine disruption.
+
+    Histone PTMs modulate gene expression either by chromatin remodeling or by contributing
+    to the regulation of regulatory factors. Chromatin marks are associated with transcriptional
+    silencing (Zhang et al., 2015). Several reports indicating that both histone marks
+    are mutually exclusive, and of ChIP-sequencing studies have shown that H3K9me3
+    can be involved in gene development (Liu et al., 2011; Hawkins et al., 2010).
+    Given that both histone marks are associated with gene representation, it has
+    been suggested that they may cooperate with each other acting as regulators of
+    cell fate. In this study, we found that aberrant loss of H3K27me3 correlates with
+    gene expression in the GBH group. After exposure, H3K27me3 was deleted in all
+    sites within the Hox10a locus after GBH exposure. Interestingly, some sites in
+    the uterine epithelium and daughter glands remained normal. normal and concomitant
+    contexts, which generate DNA methylation or repressive H3K27me3 and DNA modifications.
+    In the Hox10a locus, therefore, the loss of DNA methylation and enrichment of
+    H3K9me3 might be responsible for aberrant expression of Hox10a and altered uterine
+    morphology after GBH exposure.
+
+
+    morphological changes induced by GBH exposure could be mediated by epigenetic
+    reprogramming of the Hox10 locus. We detected GBH induced epigenetic changes consisting
+    of DNA hypermethylation, and reduction of H3K27me3 at regulatory regions of Hox10
+    that resulted in poor development.
+
+    Novo DNA methylation of Hox10a CpG islands is a stable epigenetic marker in gene
+    silencing (Ceder and Bergman, 2009).
+
+    In accordance with our results, developmental exposure to GBH was affected
+
+    * p = 0.064, p < 0.01, two-sided Fisher''s test
+
+    perinatal exposure to GBH leads to increased expression in promoter/intronic-hyper
+    hypermethylation and increased Hox10a/Hox10 expression (Bromer et al., 2009),
+    while BPA exposure in promoter/intronic-hy increased Hox10a/Hox10 expression (Bromer
+    et. al.).
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_6_1.png)
+
+
+    **Fig. 4.** Pre-neoplastic and neoplastic lesions in female mice (20 months old)
+    after exposure to GBH during the first week of life. Uterine sections were stained
+    with hematoxylin and eosin (A-F) and α-SMA (G and H). And B with daughter glands.
+    (C and D) Atypical endometrial hyperplasia in luminal and glandular epithelium
+    (asterisks). (E-H) Uterine leiomy. Neoplastic cells were positive for α-SMA immunostaining.
+    LE, luminal emphas; GE, glandular epithelium; MM, myometrium. Scale bars: (A-B
+    and F) 50 μm; (D-E and G) 100 μm; (C) 200 μm.'
+  - '[PAGE 7]
+
+
+    # Vagina
+
+
+    # B
+
+
+    # Liver
+
+
+    # H&E
+
+
+    # H&E
+
+
+    # Vimentin
+
+
+    # Desmin
+
+
+    # H&E
+
+
+    # Control
+
+
+    # GBH
+
+
+    ![](img/8b1c5b629c229e13292fad2e1913ff29_7_0.png)
+
+
+    Fig. 5. Other neoplastic lesions have been observed in aged females after exposure
+    to GBH during the first week of life. (A) Vaginal botroid rhabdomosarcoma. Vaginal
+    sections were stained with hematoxyl and eosin (H&E), vimentin and desmin to perform
+    characterization of neoplastic cells. All neoplastic cells were positive for vimentin
+    but some negative for desmin (B) Intraper bile duct adenocarcinoma. Lesions were
+    stained with H&E. Images at the bottom are higher magnifications of the upper
+    panel. Scale: Upper panel, 100 μm; Lower panel, 500 μm.
+
+
+    # Table 4
+
+
+    Summary of pre-neoplastic and neoplastic lesions observed in aged rats
+
+
+    | Uterus | Vagina | Reproductive tract | Total number of lesions |
+
+    | --- | --- | --- | --- |
+
+    | Incidence of lesions* | p-value | Incidence of lesions | p-value | Incidence
+    of lesions | p-value | Incidence of lesions* | p-value |
+
+    | Control (- 26) | 1/26 (4%) | 0.3497 | 0/26 (0%) | 0.0253 | 0.0993 | 1/26 (4%)
+    | 0.0496 |
+
+    | GBH (n - 25) | | | 2/25 (8%) | | | 6/25 (24%) | |
+
+
+    +   * Includes atypical hyperplasia and neoplastic lesions
+
+    * Includes inthepatic bile duct adenocarcinoma
+
+
+    All values were tested with two-sided Fisher test.
+
+    Importantly, aged rodents have annotated binding sites for Sox12 (suppressor of
+    sex 2 hormone homolog) and E2 (enhancer of sex 2) of the polycomb complex 2 (PRC2),
+    which mediate H3K27 methylation and play an important role in the epigenetic regulation
+    of genes. Disruption of DNA methylation by Hox10 region and gene expression have
+    been observed in pathological conditions affecting reproductive function. Hox10
+    is silenced (Fischer et al., 2011), in addition E2 is hypermethylated and downregulated
+    in uterine polyps leiomyomas and adenomas (Fischer et al., 2013; Kui et al., 2016)
+    as well as in carcinomas. Hence, reprogramming of the Hox10 locus by exposure
+    could lead to permanent changes in gene expression that could cause uterine disease
+    or malignancies in later life.
+
+
+    alterations in estrogen level exposure to glyphosate or GBH (Roundup Bioflow)
+    (Manservisi et al., 2019). This discrepancy with our results could be attributed
+    to differences in sample size we used a larger number of animals, and different
+    species and exposure durations. For As E2 serum levels, Manservisi et al. (2019)
+    found a higher level of levels in GBH and GBH-exposed females which is in agreement
+    with our results. However, data could not be statistically evaluated due to small
+    sample size. Furthermore, we recently reported that female mating (gestation and
+    lactation) exposure to either glyphosate or GBH (Mannum) increased E2 serum levels
+    at each stage (Lorenz et al., 2020) impair ovarian function and estrus cycle.
+    This study will be required to elucidate the mechanisms under lying E2 and P4
+    serum levels after GBH exposure.
+
+
+    # 4.2. Hormone imbalance observed in increased E2/P4 ratio after endocrine mode
+    of GBH
+
+
+    Estrogens play a crucial role in the pathogenesis of hormone dependent functions
+    of the reproductive tissue. In rodents, continuous increase in E2/P4 ratio due
+    to hormone imbalance is considered a risk factor for hormonal cancers (Okono et
+    al., 2010; Yoon et al., 2010). To evaluate the action of GBH, we sought to evaluate
+    estrogen and ovarian steroid levels at each stage in young females. GBH-exposed
+    animals displayed irregular estrous cycles at 4 months of age, characterized by
+    increased duration of estrogen phase and decreased time in estrus. Serum concentrations
+    of E2 and P4 that led to an increase in the E2/P4 ratio, resulting in a similar
+    state to that of high E2. Our findings are with Manservisi et al. (2019) who reported
+    in a pilot study no
+
+
+    # 4.3. Developmental exposure to GBH increases susceptibility in adulthood
+
+
+    As stated before, developmental reprogramming of exposure'
+  - '[PAGE 8]
+
+
+    # M. Guerrero | Food and Chemical Toxicology 150 (2022) 112605
+
+
+    EDCs and altered hormonal milieu can promote disorders later in life. Based on
+    the developmental and endocrine-disrupting effects observed in female rats exposed
+    to GBH, we evaluated the effects on the development of neoplastic or neoplastic
+    lesions in aged female rats. Overall survival showed no significant difference
+    between control and GBH groups. The histopathology of the uterus exposed to GBH
+    showed an increased incidence of hormone-dependent lesions. These lesions included
+    benign, preclinical and malignant tumors, as well as myroids, glands, endometrial
+    hyperplasia and uterine leiomia. With our results, exposure to EDCs is associated
+    with increased risk of uterine development, which was detected in the uterus of
+    aged mice after prenatal exposure to DES (Newbold et al., 1990) and BPA (Bowa
+    et al., 2007). Interestingly, an increased incidence of glandular hyperplasia
+    was also reported in the uterus of male mice exposed to glyphosate. Together,
+    our findings indicate that developmental exposure to GBH is associated with increased
+    susceptibility to hormone-disrupting tumors.
+
+
+    As previously mentioned, in this study we used a formulation of glyphosate (Round
+    UP), containing active ingredients added to the herbicide. It has been shown more
+    than that GBH, although under our experimental conditions, was able to ascribe
+    the endocrine-disrupting and carcinogenic effects found in the present study,
+    to glyphosate, co-formulants or combination. This research is needed to fully
+    understand glyphosate and co-formulants contributing to GBH effects.
+
+
+    # 5. Conclusions
+
+
+    In summary, early exposure to GBH disrupted developmental programming which may
+    have led to increased susceptibility to neoplastic and and lesions in life. Epigenetic
+    regulation of Hox10 in uterine development and E2/P4 ratio showed mechanisms for
+    these adverse effects. Additional studies are needed to determine the potential
+    mechanisms for human and animal exposures to GBH during critical stages of development.
+
+
+    # Credit authorship contribution
+
+
+    Marise Guerrero Schimpf: Conceptualization, investigation, Methodology, Software,
+    Data curation, formal analysis, Visualization, Writing - original draft. Maria
+    M. Miles: Conceptualization, Supervision, Project administration, Resources, Funding
+    acquisition, Writing - review & editing. Maria Zamora: Georgelina Variety: Conceptualization,
+    Supervision, Project administration, Resources, Funding acquisition, Writing -
+    editing.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no competing financial interests or personal
+    relationships that could have influenced the work in this paper.
+
+
+    # Acknowledgments
+
+
+    M. Guerrero and V. Zamora were supported by pre-doctoral grants from the National
+    Science and Technical Research of Argentina (CONICET). These are development grants
+    in support of the father''s salary. M. Miles and J. Jarovay were supported by
+    grants (ULAI - 2016 PI 5020401510051, CONICET - 2016 PI 5020401510051) and the
+    National Foundation for Science and Technical Research (ANPCT: 2014 PI 14S522;
+    2016 PI 2016 14S9718). We would like to acknowledge the support of Adriana Bellero
+    in the histological analysis and by Luis Juan and C. Villarreal (UNC) in clinical
+    and anatomical analysis.
+
+
+    # References
+
+
+    Alder, A., Lavish, F., Havens, A., Eboes, P., Sinha, S., Chandrasekhar, A., et
+    al. 2010. Glyphosate and formulation disrupted neonatal development in offspring
+    of maternal gestational exposure in rats. Toxicol. 185(3), 197-203. https://doi.org/10.1016/j.tox.2009.08.048
+
+
+    In accordance with our results, studies have reported that exposure to glyphosate
+    (active ingredient) GBH promotes the development of different types of tumors
+    in mice. A recent report by Zanardi et al. (2020) concluded that these were sufficient
+    to establish link with glyphosate in experimental models (Potterio, 2020). The
+    string shows that glyphosate causes hamartomas, hepatocarcinomas, and kidney tumors
+    in mice and skin, adrenal tumors.
+
+
+    All these stories are listed in the IARC report as part of the evidence that glyphosate
+    is probably carcinogenic to humans (Group 2A; 2015). They also reported an increase
+    in the incidence of endocrine-disrupting effects in the mammary gland (fibroadeno
+    and adenocarcinoma) of female Sprague-Dawley rats chronically exposed to GBH (Round
+    UP FULL) through the drinking water (Robinson, 2016). The prenatal exposure to
+    GBH increases the sensitivity of the mammary gland to develop hyperplasia ducts
+    in a fibroblastic-like structure (Zanardi et al., 2020). The neoplastic lesions
+    reported here provide new evidence of a
+
+
+    9'
+- md: '
+
+    # M. Guerrero
+
+
+    # Food and Chemical Toxicology 150 (2022) 112695
+
+
+    Endocrinology and the pathology of the biliary tree. J. Gastroenterol. 12 (2022),
+    357–364. https://doi.org/10.1016/j.jastro.2022.12.355
+
+
+    Andersen, M. E., Sker, J., Rahm, M. A., Luque, E., et al., 2015. Discovery of
+    thyroid disruptors in male rats with high phthalates and altered metabolism. Mol.
+    Cell. Endocrol. 401, 111–119. https://doi.org/10.1016/j.ymene.2015.03.014
+
+
+    Bahl, S.H., Oghue, S.M., 2016. Environmental exposure, toxicity concern and potential
+    risks of phthalates to human health. Vol. Environ. Sci. Ind. Res. 32(4), 443–450.
+
+
+    Bartol, F.L., Wiley, A.A., Basagel, C.A., 2006. Ultrasound exposure and endocrinerupting
+    effects. Environ. Reproductive Health. 51(2), 215–220. https://doi.org/10.1016/j.envrepro.2005.09.012
+
+
+    Benjamink, C., 2016. Trends in phthalate use in the United States and globally.
+    Environ. Sci. Ind. Res. 28(1), 13–28. https://doi.org/10.1016/j.esir.2015.12.0316
+
+
+    Gastiano, P.M., Durando, D., Mello, M.M., Loreto, V., Vagasso, J., et al., 2020.
+    Phthalate-induced mesenchymal transition-related changes in human fetal testis
+    cells via estrogen receptor pathway.
+
+
+    Gillenas, G., Wassermann, F., Shaffer, M.R., Rahm, J., Zhang, L., Zhang, S., et
+    al., 2017. Effects of phthalate exposure on the reproductive function of rats.
+    Environ. Reproductive Health. 18(1), 7–12. https://doi.org/10.1186/s12937-017-0140-9
+
+
+    Gonzalez, A.L., Altimari, G.T., Boulezias, J.V., De-Muz-I, M., Mann, K.S., 2019.
+    Activation of estrogen receptor alpha in rats testis by the developmental exposure
+    to a mixture of phthalates. Chem Res. Endocrol. 118, 107933. https://doi.org/10.1016/j.chemchem.2019.107933
+
+
+    Guerrero Sánchez, M., Mello, M.M., Ingaramo, P., Luque, E., Evararaj, Y., 2017.
+    Phthalate-based exposure enhances the endocrine toxicity in sperm of rats. Endocr.
+    229(2), 197–213. https://doi.org/10.1097/EDE.000000007
+
+
+    Bork, K., Argaras, A., Taylor, P. J., Wang, H., 2010. Effects of dibutyl phthalate
+    (DEHP) on spermatogenesis and androgen gene expression in the rat testis. Fertil.
+    119(4), 1109–1118. https://doi.org/10.1016/j.fertil.2010.04.036
+
+
+    Bao, J., Wang, Y., Li, J., Lee, M.Y., 2017. The effect of dibutyl phthalate and
+    GAMP on fertility and gene expression in the rat testis. Tox. 386(1), 91–106.
+    https://doi.org/10.1016/j.tox.2017.03.012
+
+
+    Hossini, S., Kim, J., Lauer, R., Pelizzella, M., et al., 2010. Phthalate-induced
+    epigenetic changes in human pluripotent embryonic stem cells. Cell Sci. 12, 805–810.
+    https://doi.org/10.1016/j.cellsci.2010.03.012
+
+
+    Hover, N. R., Hyer, M. P., Pflumer, R. M., Davis, B., Beville, C., et al., 2011.
+    Effects of phthalate exposure on spermatogenesis and steroidogenesis in mice.
+    Reprod Tox. 25(6), 495–500. https://doi.org/10.1007/s002430010
+
+
+    Jang, Y. J., Ng, S. H., Lee, S. J., Kim, D. J., 2010. Exposure to dibutyl phthalate
+    leads to altered expression of androgen genes in rats. Fertil. 24 (7), 2273–2280.
+    https://doi.org/10.1016/j.fert.2010.04.016
+
+
+    Kajimura, T., Hamada, Y., Tamura, H., Horikawa, K., 2006. Diibutyl phthalate-induced
+    DNA methylation in sperm of rats. Dev. 20 (9), 1219–1226.
+
+
+    Kassa-Mayer, E., Cress, S., Gerasimov, G., De-Lander, M., 2014. An acute exposure
+    to phthalate-based mixtures alters testosterone levels in testis and sperm quality.
+    Reprod Tox. 109(1), 103–110.
+
+
+    Kozik, C., Sivukov, A., Kopolak, J., 2007. Quantitative evaluation of DNA content:
+    comparison of current methods used for DNA analysis. Ann. Mol. Biol. 38(1), 14–19.
+
+
+    Larab, E., Martinez, M., Setio, A., Andrade, J., Danishberg, L., et al., 2008.
+    Effects of DEHP exposure on spermatogenesis. Tox. 89 (1), 665–679. https://doi.org/10.1016/j.tox.2007.09.011
+
+
+    Li, Y., Wang, Y., Zhang, Y., Wang, J., 2018. Evaluation of DEHP and GAMP and phthalate
+    mixture using ultrafast LC-MS. Environ. Sci. 65, 43–54.
+
+
+    Lu, J., Miller, M.B., Taylor, L., 2011. HOXA10 is expressed in response to phthalate-induced
+    androgen changes in testis. Tox. 95(3), 1133–1136.
+
+
+    Fischer, G.-C., Yan, E., Ingez, L., Hotter, H., Heiniman, S., Zhang, X., et al.,
+    2008. Frequent sequencing of polymorphic regions and DNA methylation in PC12 cell
+    line. J. Mol. Sci. 105(35), 12979–12984.
+
+
+    Ingaramo, P. V., Mello, M.M., Guerrero Sánchez, M., Mello-De-Torres, L., Ruiz-Méndez,
+    et al., 2017. Exposure to a phthalate-based mixture alters sperm gene expression.
+    Hum Reprod. 32, 100–107. https://doi.org/10.1016/j.humrep.2017.10.007
+
+
+    Ingaramo, P. V., Mello, M.M., Guerrero Sánchez, M., Luque, E., Skinner, M., 2019.
+    Assessment of phthalate-induced epigenetic inheritance of phthalates and spermatogenesis.
+    Environ. Sci. Tox. 91(1), 1–10.
+
+
+    Kass, J. P., Ramshankar, S., Taylor, H., 2016. Health assessment of phthalate
+    exposure in patients with idiopathic male infertility. Reprod. Tox. 53(3), 455–466.
+    https://doi.org/10.1187/s1935-0891(16)001112
+
+
+    Lesort, L., Rosso, K., White, G., Griffiths, M., Kahn, S., et al., 2016. Evolution
+    of sperm function in mice. Nucleic Acids Res. 44 (1), 126–132. https://doi.org/10.1093/nar/gkw628
+    (accessed 22 May 2024).
+
+
+    EPA (U.S. Environmental Protection Agency). 2009. Risk assessment for phthalate
+    exposure: summary of results for phthalates in food and drinking water.
+
+
+    EPA. 2018. Phthalate exposure Guide: Evaluation of Generic Concern: Phthalates-human
+    health and environmental concern.
+
+
+    Message, R., Phedrinos, A., Block, J., Vackari, L. S., et al., 2019. Long-term
+    effects of phthalate mixture exposure on male genital tract presented with prenatal
+    exposure to diethyl benzoate.
+
+
+    Loreto, V., Mello, M.M., Schen, M.G., Evararaj, Y., Ingaramo, P., 2019. Evaluation
+    of estrogen receptor alpha activation by a phthalate-based mixture in human sperm
+    cells.
+
+
+    Miley, M., Lorena, V., Belodomin, P., Vama, S., Vanyov, J., Lueh, E.H. (2019).
+    Response on exposure to glyphosate-based herbicide female reproductive outcomes
+    and second-generation adverse effects in offspring. Arch. Toxicol. 93(2), 361–370.
+    https://doi.org/10.1007/s00204-018-25207-x
+
+
+    Mifelli, M.A., Mali, M.F., Finn, K., Lueh, E.H. (2018). Reproductive toxicity
+    of glyphosate in rats. Mol. Biol. 64(3), 535–543. https://doi.org/10.1007/s00444-018-2633-1
+
+
+    Noor, M., Capelli, A., Dalgado, E., Meis, M., Romano-Gando, J., 2017. Preconception
+    exposure to glyphosate and other herbicides leads to endocrine disruption in male
+    offspring. Environ. Sci. Pollut. 223. https://doi.org/10.1016/j.envpol.2017.03.012
+
+
+    Newbold, R.R., Beachem, R.C., Macloon, J., (2019). Uterine adenocarcinoma in mice
+    exposed to glyphosate. Reprod. Tox.
+
+
+    Newbold, R.R., Vanyov, J., Panella-Davis, E., (2007). Long-term effects of exposure
+    to nonselective herbicide on the reproductive health of mice. Reprod. Tox. 199(3),
+    277–280. https://doi.org/10.1016/j.fertox.2007.0413
+
+
+    Newbold, R.R., Vanyov, J., Panella-Davis, E. (2009). Preconception exposure to
+    glyphosate and adverse effects on offspring. Health Public Pers. 117(6), 879–885.
+    https://doi.org/10.1080/136973093863
+
+
+    Oladiran, A.A., Adeboye, O.O., Olojo, A.A., Ajisoye, S., 2017. Evaluation of glyphosate-induced
+    reproductive toxicity in rats. Environ. Sci. 307. https://doi.org/10.1016/j.env.2017.05.004
+
+
+    Patkar, N., Hach, A.E., Tino-Rostagno, S., Watkins, M. (2006). Prenatal developmental
+    toxicity of glyphosate and risk of cancer. Biomarkers. 115(5), 598–605. https://doi.org/10.1016/j.ymb.2005.09.018
+
+
+    Polcini, J., Artmert, A.B., Beckley, G., Riley, M., et al. (2016). The role of
+    glyphosate evaluations by the International Agency for Research on Cancer (IARC)
+    and the global food safety authorities (EPA). J. Environ. Health. 106(8), 771–779.
+    https://doi.org/10.1289/eh06-017-6
+
+
+    Rendon-Ojin, J., Ruiz-Damil, Carraz, J. (2017). Glyphosate residues in drinking
+    water, food and urine: a survey in Mexico. Int. J. Environ. Res. Public Health.
+    14(12), 2410. https://doi.org/10.3390/ijerph14122410
+
+
+    Rodrigues, N. S., Souza, A. A., Berardi, M.M., Pinto, P., Olojo, A.A. (2018).
+    Evaluation of glyphosate and residues in breast and urine. J. Sci. Anal. Clam.
+    Anal. 45(3), 723–738. https://doi.org/10.1007/s12899-017-1940-9
+
+
+    Romano, R. B., Silva, L. G. S. (2016). Preconception exposure to glyphosate the
+    glyphosate-based herbicides leads to endocrine disruption in male offspring. Environ.
+    Monitor. Assess. 88(1), 1–13. https://doi.org/10.1016/j.chemma.2016.03.24
+
+
+    Schugg, T.T., Janissick, A., Blijm, H., Heidberg, J.J. (2011). Endocrine disruption
+    effects of glyphosate in rats. Toxicol. 228(1-2), 204–215. https://doi.org/10.1016/j.toxicol.2010.08.018
+
+
+    Seraini, G.C., Elame, E., Message, R. G., Defarge, N., Malatera, M., et al. (2014).
+    Reproductive toxicity of a glyphosate herbicide and a Roundup-tolerant genetically
+    modified maize. Environ. Sci. Eur. 26 (1), 1–17. https://doi.org/10.1186/s12302-014-0014-6
+
+
+    Spencer, T., Eadie, K., Maklin, J. (2012). Comparative developmental biology of
+    the uterus: in vitro and in models. Dev. Mol. 254 (1-2), 1–13. https://doi.org/10.1016/j.devmol.2011.09.003
+
+
+    Strita, N., Sree Sthivasarayanan, J., Jayaspin, S.H., Thanthakumar, A., Sayatsavar,
+    J. (2018). Effects of glyphosate-induced estrogen alpha receptor activity in rats
+    via non-genomic signaling pathway. Chem. Biol. 118, 595–607. https://doi.org/10.1016/j.chembio.2018.12
+
+
+    Tang, Y., So, M. (2007). Epigenetic reprogramming and imprinting during development.
+    Dev. Endocr. 8 (2), 173–182.
+
+
+    Tanimaka, N., Takita, M., Panella-Davis, E. (2014). Effects of phthalate-based
+    mixtures on sperm quality. Sperm. 119(4), 295–300. https://doi.org/10.1187/s10633-014-0254-4
+
+
+    Vigzel, J., Bopliazos, V., Kass, L. R., Ramos, J., Muñoz-de Toro, M., Lueh, E.H.,
+    et al. (2015). Exposure to glyphosate and its adverse effects on reproductive
+    development in rats. Tox. 312, 101–114. https://doi.org/10.1016/j.tox.2015.01.061
+
+
+    Zango, M.V., Guerrero Schmitt, G., Mazzastro, P.M., Miley, M.M., Muñoz-de Toro,
+    M., Vanyov, J. (2019). Effects of glyphosate-based herbicides on the mammary gland
+    of aging Wistar rats. Mol. Cell. Endocrinol. 51 (1), 10–11. https://doi.org/10.1187/s10633-019-12544-4
+
+    '
+  mdcn: '
+
+
+    # M. Guerrero
+
+
+    # 食品与化学毒理学 150 (2022) 112695
+
+
+    内分泌学与胆道树病学。J. Gastroenterol. 12 (2022), 357–364. https://doi.org/10.1016/j.jastro.2022.12.355
+
+
+    Andersen, M. E., Sker, J., Rahm, M. A., Luque, E., 等，2015。在高浓度苯二甲酸酯和代谢改变的雄性大鼠中发现内分泌干扰物。Mol.
+    Cell. Endocrol. 401, 111–119. https://doi.org/10.1016/j.ymene.2015.03.014
+
+
+    Bahl, S.H., Oghue, S.M., 2016. 苯二甲酸酯对人类健康的环境暴露、毒性关注和潜在风险。Vol. Environ. Sci. Ind.
+    Res. 32(4), 443–450.
+
+
+    Bartol, F.L., Wiley, A.A., Basagel, C.A., 2006. 超声暴露和内分泌干扰影响。Environ. Reproductive
+    Health. 51(2), 215–220. https://doi.org/10.1016/j.envrepro.2005.09.012
+
+
+    Benjamink, C., 2016. 美国及全球苯二甲酸酯的使用趋势。Environ. Sci. Ind. Res. 28(1), 13–28. https://doi.org/10.1016/j.esir.2015.12.0316
+
+
+    Gastiano, P.M., Durando, D., Mello, M.M., Loreto, V., Vagasso, J., 等，2020. 通过雌激素受体途径苯二甲酸酯诱导的人类胎睾细胞间充质转化相关变化。
+
+
+    Gillenas, G., Wassermann, F., Shaffer, M.R., Rahm, J., Zhang, L., Zhang, S., 等，2017。苯二甲酸酯暴露对大鼠繁殖功能的影响。Environ.
+    Reproductive Health. 18(1), 7–12. https://doi.org/10.1186/s12937-017-0140-9
+
+
+    Gonzalez, A.L., Altimari, G.T., Boulezias, J.V., De-Muz-I, M., Mann, K.S., 2019.
+    发育期暴露于苯二甲酸酯混合物激活大鼠睾丸中的雌激素受体α。Chem Res. Endocrol. 118, 107933. https://doi.org/10.1016/j.chemchem.2019.107933
+
+
+    Guerrero Sánchez, M., Mello, M.M., Ingaramo, P., Luque, E., Evararaj, Y., 2017.
+    苯二甲酸酯类暴露增强大鼠精子中的内分泌毒性。Endocr. 229(2), 197–213. https://doi.org/10.1097/EDE.000000007
+
+
+    Bork, K., Argaras, A., Taylor, P. J., Wang, H., 2010. 邻苯二甲酸酯 (DEHP) 对大鼠睾丸精子发生和雄激素基因表达的影响。Fertil.
+    119(4), 1109–1118. https://doi.org/10.1016/j.fertil.2010.0436
+
+
+    Bao, J., Wang, Y., Li, J., Lee, M., 2017. 邻苯二甲酸酯和 GAMP 对大鼠睾丸生育和基因表达的影响。Tox. 386(1),
+    91–106. https://doi.org/10.1016/j.tox.2017.0312
+
+
+    Hossini, S., Kim, J., Lauer, R., Pelizzella, M., 等，2010。苯二甲酸酯诱导的人多能干细胞表观遗传变化。Cell
+    Sci. 12, 805–810. https://doi.org/10.1016/j.cellsci.2010.0312
+
+
+    Hover, N. R., Hyer, M., Pflumer, R., Davis, B., Beville, C., 等，2011。苯二甲酸酯暴露对小鼠精子发生的影响。Reprod.
+    Tox. 25(6), 495–500. https://doi.org/10.1007/s00240
+
+
+    Jang, Y., Ng, S. H., Lee, S. J., Kim, D., 2010。邻苯二甲酸酯导致大鼠雄激素基因表达改变。Fertil. 24
+    (7), 2273–2280. https://doi.org/10.1016/j.fert.2010.0416
+
+
+    Kajimura, T., Hamada, Y., Tamura, H., Horikawa, K., 2006. 邻苯二甲酸酯诱导的大鼠 DNA 甲基化。Dev.
+    20 (9), 1219–1226.
+
+
+    Kassa-Mayer, E., Cress, S., Gerasimov, G., De-Lander, M., 2014. 急性暴露苯二甲酸酯混合物改变睾丸睾酮水平。Reprod.
+    Tox. 109(1), 103–110.
+
+
+    Kozik, C., Sivukov, A., Kopolak, J., 2007. DNA 含量的定量评估：用于 DNA 分析的方法比较。Ann. Mol.
+    Biol. 38(1), 14–19.
+
+
+    Larab, E., Martinez, M., Setio, A., Andrade, J., Danishberg, L., 等，2008。DEHP 暴露对精子发生的影响。Tox.
+    89 (1), 665–679. https://doi.org/10.1016/j.tox.2007.0911
+
+
+    Li, Y., Wang, Y., Zhang, Y., Wang, J., 2018。使用快速 LC-MS 对 DEHP、GAMP 和苯二甲酸酯混合物进行评估。Environ.
+    Sci. 65, 43–54.
+
+
+    Lu, J., Miller, M.B., Taylor, L., 2011。HOXA10 响应苯二甲酸酯诱导的睾丸雄激素变化。Tox. 95(3), 1133–1136.
+
+
+    Fischer, G.-C., Yan, E., Ingez, L., Hotter, H., Heiniman, S., Zhang, X., 等，2008。PC12
+    细胞中多态性区域和 DNA 甲基化的频繁测序。J. Mol. Sci. 105(35), 12979–12984.
+
+
+    Ingaramo, P. V., Mello, M.M., Guerrero Sánchez, M., Mello-De-Torres, L., Ruiz-Méndez,
+    等，2017。苯二甲酸酯混合物暴露改变精子基因表达。Hum Reprod. 32, 100–107. https://doi.org/10.1016/j.humrep.2017.10007
+
+
+    Ingaramo, P. V., Mello, M.M., Guerrero Sánchez, M., Luque, E., Skinner, M., 2019。苯二甲酸酯诱导的表观遗传遗传和精子发生评估。Environ.
+    Sci. Tox. 91(1), 1–10.
+
+
+    Kass, J. P., Ramshankar, S., Taylor, H., 2016。特发性男性不不症患者的苯二甲酸酯暴露健康评估。Reprod. Tox.
+    53(3), 455–466. https://doi.org/10.1187/s1935-0891(16)001112
+
+
+    Lesort, L., Rosso, K., White, G., Griffiths, M., Kahn, S., 等，2016。小鼠精子功能的演变。Nucleic
+    Acids Res. 44 (1), 126–132. https://doi.org/10.1093/nar/gkw628 (访问于2024年5月22日)。
+
+
+    EPA (美国环保署). 2009。苯二甲酸酯暴露的风险评估：食品和饮用水中苯二甲酸酯结果总结。
+
+
+    EPA. 2018。苯二甲酸酯暴露指南：通用关注评估：苯二甲酸酯对人类健康和环境的关注。
+
+
+    Message, R., Phedrinos, A., Block, J., Vackari, L., 等，2019。二苯二甲酸酯暴露对男性生殖道的长期影响。
+
+
+    Loreto, V., Mello, M.M., Schen, G., Evararaj, Y., Ingaramo, P., 2019。苯二甲酸酯混合物对雌激素受体α的激活。
+
+
+    Miley, M., Lorena, V., Belodomin, P., Vama, S., Vanyov, J., Lueh, E. (2019)。草甘膦基质暴露对二代后代的不良影响。Arch.
+    Toxicol. 93(2), 361–370. https://doi.org/10.1007/s00204-01825207
+
+
+    Mifelli, M.A., Mali, M.F., Finn, K., Lueh, E., 2018。大鼠草甘膦的生殖毒性。Mol. Biol. 64(3),
+    535–543. https://doi.org/10.1007/s00444-0182
+
+
+    Noor, M., Capelli, A., Dalgado, E., Meis, M., Romano-Gando, J., 2017。草甘膦和其他除草剂暴露导致男性后代的内分泌干扰。Environ.
+    Sci. Pollut. 223. https://doi.org/10.1016/j.envpol.2017.0312
+
+
+    Newbold, R.R., Beachem, R.C., Macloon, J., (2019)。暴露于草甘膦的小鼠子宫内腺癌。Reprod. Tox.
+
+
+    Newbold, R.R., Vanyov, J., Panella-Davis, E., (2007)。非选择性除草剂暴露对小鼠生殖健康的长期影响。Reprod.
+    Tox. 199(3), 277–280. https://doi.org/10.1016/j.fertox.2007.0413
+
+
+    Newbold, R.R., Vanyov, J., Panella-Davis, E. (2009)。草甘膦的产前暴露对后代的不良影响。Health Public
+    Pers. 117(6), 879–885. https://doi.org/10.1080/136973093863
+
+
+    Oladiran, A., 2017。草甘膦诱导的大鼠生殖毒性评估。Environ. Sci. 307. https://doi.org/10.1016/j.env.2017.0504
+
+
+    Patkar, N., Hach, A.E., Tino-Rostagno, S., Watkins, M. (2006)。草甘膦的产前发育毒性和癌症风险。Biomarkers.
+    115(5), 598–605. https://doi.org/10.1016/j.ymb.2005.09018
+
+
+    Polcini, J., Artmert, A.B., Beckley, G., Riley, M., 等。(2016)。国际癌症机构(IARC)和全球食品安全机构(EPA)对草甘膦的评估。J.
+    Environ. Health. 106(8), 771–779. https://doi.org/10.1289/eh06-0176
+
+
+    Rendon-Ojin, J., Ruiz-Damil, Carraz, J. (2017)。墨西哥饮用水、食品和尿液中的草甘膦残留：一项调查。Int. J.
+    Environ. Res. Public Health. 14(12), 2410. https://doi.org/10.3390/ijerph14122410
+
+
+    Rodrigues, N. S., Souza, A. A., Berardi, M.M., Pinto, P., Olojo, A.A. (2018)。乳汁和尿液中的草甘膦及残留评估。J.
+    Sci. Anal. Clam. Anal. 45(3), 723–738. https://doi.org/10.1007/s12899-01719409
+
+
+    Romano, R. B., Silva, L. G. S. (2016)。草甘膦及草甘膦除草剂产前暴露导致男性后代的内分泌干扰。Environ. Monitor.
+    Assess. 88(1), 1–13. https://doi.org/10.1016/j.chemma.2016.0324
+
+
+    Schugg, T.T., Janissick, A., Blijm, H., Heidberg, J.J. (2011)。大鼠草甘膦的内分泌干扰影响。Toxicol.
+    228(1-2), 204–215. https://doi.org/10.1016/j.toxicol.2010.08018
+
+
+    Seraini, G.C., Elame, E., Message, R., Defarge, N., Malatera, M., 等。(2014)。苯二甲酸酯诱导的精子发生影响。Environ.
+    Sci. Eur. 26 (1), 1–17. https://doi.org/10.1186/s12302
+
+
+    Spencer, T., Eadie, K., Maklin, J. (2012)。响应苯二甲酸酯诱导的睾丸雄激素变化的HOXA10表达。Dev. Mol.
+    254(1-2), 10–13. https://doi.org/10.1016/j.devmol.2011.093
+
+
+    Strita, N., Sthivasarayanan, J., Jayaspin, S., Thanthakumar, A., Sayatsavar, J.
+    (2018)。通过非基因信号通路草甘膦诱导的雌激素受体α活性。Chem. Biol. 118, 595–607. https://doi.org/10.1016/j.chembio.2018.12
+
+
+    Tang, Y., So, M. (2007)。发育中的表观遗传重编程和印记。Dev. Endocr. 8 (2), 173–182.
+
+
+    Tanimaka, N., Takita, M., Panella-Davis, E. (2014)。苯二甲酸酯混合物对精子质量的影响。Sperm. 119(4),
+    295–300. https://doi.org/10.1187/s10633-01425
+
+
+    Vigzel, J., Bopliazos, V., Kass, L. R., Ramos, J., Muñoz-de Toro, M., Lueh, E.H.,
+    等。(2015)。草甘膦暴露及其对大鼠生殖发育的影响。Tox. 312, 101–114. https://doi.org/10.1016/j.tox.2015.0106
+
+
+    Zango, M.V., Guerrero Schmitt, G., Mazzastro, P.M., Miley, M.M., Muñoz-de Toro,
+    M., Vanyov, J. (2019)。草甘膦基除草剂对老年Wistar大鼠乳腺腺的影响。Mol. Cell. Endocrinol. 51 (1),
+    10–11. https://doi.org/10.1187/s10633-01912544
+
+
+    '
+  merge: 0
+  raw:
+  - "[PAGE 9]\n\n# M. Guerrero\n\n# Food and Chemical Toxicology 150 (2022) 112695\n\
+    \nEndocrinology and the pathology of the biliary tree. J. Gastroenterol. 12 (2022),\
+    \ 357–364. https://doi.org/10.1016/j.jastro.2022.12.355\n\nAndersen, M. E., Sker,\
+    \ J., Rahm, M. A., Luque, E., et al., 2015. Discovery of thyroid disruptors in\
+    \ male rats with high phthalates and altered metabolism. Mol. Cell. Endocrol.\
+    \ 401, 111–119. https://doi.org/10.1016/j.ymene.2015.03.014\n\nBahl, S.H., Oghue,\
+    \ S.M., 2016. Environmental exposure, toxicity concern and potential risks of\
+    \ phthalates to human health. Vol. Environ. Sci. Ind. Res. 32(4), 443–450.\n\n\
+    Bartol, F.L., Wiley, A.A., Basagel, C.A., 2006. Ultrasound exposure and endocrinerupting\
+    \ effects. Environ. Reproductive Health. 51(2), 215–220. https://doi.org/10.1016/j.envrepro.2005.09.012\n\
+    \nBenjamink, C., 2016. Trends in phthalate use in the United States and globally.\
+    \ Environ. Sci. Ind. Res. 28(1), 13–28. https://doi.org/10.1016/j.esir.2015.12.0316\n\
+    \nGastiano, P.M., Durando, D., Mello, M.M., Loreto, V., Vagasso, J., et al., 2020.\
+    \ Phthalate-induced mesenchymal transition-related changes in human fetal testis\
+    \ cells via estrogen receptor pathway. \n\nGillenas, G., Wassermann, F., Shaffer,\
+    \ M.R., Rahm, J., Zhang, L., Zhang, S., et al., 2017. Effects of phthalate exposure\
+    \ on the reproductive function of rats. Environ. Reproductive Health. 18(1), 7–12.\
+    \ https://doi.org/10.1186/s12937-017-0140-9\n\nGonzalez, A.L., Altimari, G.T.,\
+    \ Boulezias, J.V., De-Muz-I, M., Mann, K.S., 2019. Activation of estrogen receptor\
+    \ alpha in rats testis by the developmental exposure to a mixture of phthalates.\
+    \ Chem Res. Endocrol. 118, 107933. https://doi.org/10.1016/j.chemchem.2019.107933\n\
+    \nGuerrero Sánchez, M., Mello, M.M., Ingaramo, P., Luque, E., Evararaj, Y., 2017.\
+    \ Phthalate-based exposure enhances the endocrine toxicity in sperm of rats. Endocr.\
+    \ 229(2), 197–213. https://doi.org/10.1097/EDE.000000007\n\nBork, K., Argaras,\
+    \ A., Taylor, P. J., Wang, H., 2010. Effects of dibutyl phthalate (DEHP) on spermatogenesis\
+    \ and androgen gene expression in the rat testis. Fertil. 119(4), 1109–1118. https://doi.org/10.1016/j.fertil.2010.04.036\n\
+    \nBao, J., Wang, Y., Li, J., Lee, M.Y., 2017. The effect of dibutyl phthalate\
+    \ and GAMP on fertility and gene expression in the rat testis. Toxicol. 386(1),\
+    \ 91–106. https://doi.org/10.1016/j.tox.2017.03.012\n\nHossini, S., Kim, J., Lauer,\
+    \ R., Pelizzella, M., et al., 2010. Phthalate-induced epigenetic changes in human\
+    \ pluripotent embryonic stem cells. Cell Sci. 12, 805–810. https://doi.org/10.1016/j.cellsci.2010.03.012\n\
+    \nHover, N. R., Hyer, M. P., Pflumer, R. M., Davis, B., Beville, C., et al., 2011.\
+    \ Effects of phthalate exposure on spermatogenesis and steroidogenesis in mice.\
+    \ Reprod Tox. 25(6), 495–500. https://doi.org/10.1007/s002430010\n\nJang, Y. J.,\
+    \ Ng, S. H., Lee, S. J., Kim, D. J., 2010. Exposure to dibutyl phthalate leads\
+    \ to altered expression of androgen genes in rats. Fertil. 24 (7), 2273–2280.\
+    \ https://doi.org/10.1016/j.fert.2010.04.0\n\nKajimura, T., Hamada, Y., Tamura,\
+    \ H., Horikawa, K., 2006. Diibutyl phthalate-induced DNA methylation changes in\
+    \ sperm cells of rats. Dev. 20 (9), 1219–1226.\n\nKassalay-Mayer, E., Cress, S.,\
+    \ Gerasimov, G., De-Lander, M., 2014. An acute exposure to phthalate-based mixtures\
+    \ alters testosterone levels in testis and sperm quality. Reprod Tox. 109(1),\
+    \ 103–110.\n\nKozik, C., Sivukov, A., Kopolak, J., 2007. Quantitative evaluation\
+    \ of mDNA content: comparison of current methods used for DNA methylation analysis.\
+    \ Ann. Mol. Biol. 38(1), 14–19.\n\nLarabee, E., Martinez, M. F., Setio, A. R.,\
+    \ Andrade, A. J., Danishberg, L., Anderson, K., et al., 2008. Effects of DEHP\
+    \ exposure on spermatogenesis in rats. Toxicol. 89 (1), 665–679. https://doi.org/10.1016/j.tox.2007.09.011\n\
+    \nLi, Y., Wang, Y., Zhang, Y., Wang, J., 2018. Evaluation of DEHP and GAMP and\
+    \ phthalate mixture in dairy food water analysis using ultrafast LC-MS/MS. Environ.\
+    \ Sci. 65, 43–54.\n\nLu, J. J., Miller, M.B., Taylor, L. S., 2011. HOXA10 is expressed\
+    \ in response to phthalate-induced androgen changes in rat testis. J. Tox. 95\
+    \ (3), 1133–1136.\n\nFischer, G.-C., Yan, E., E., Ingez, L., Hotter, H., Heiniman,\
+    \ S., Zhang, X., et al., 2008. Frequent sequencing of polymorphic regions and\
+    \ DNA methylation in the PC12 cell line. J. Mol. Sci. U. 105 (35), 12979–12984.\n\
+    \nIngaramo, P. V., Mello, M.M., Guerrero Sánchez, M., Mello-De-Torres, L., Ruiz-Méndez,\
+    \ et al., 2017. Exposure to a phthalate-based mixture alters human sperm gene\
+    \ expression. Hum Reprod. 32, 100–17. https://doi.org/10.1016/j.humrep.2017.10.007\n\
+    \nIngaramo, P. V., Mello, M.M., Guerrero Sánchez, M., Luque, E., Skinner, M.,\
+    \ 2019. Assessment of phthalate-induced epigenetic inheritance of phthalates and\
+    \ spermatogenesis in human populations. Environ. Sci. Tox. 91 (1), 1–10.\n\nKassalp,\
+    \ J. P., Ramshankar, S., Taylor, H., 2016. Health assessment of phthalate exposure\
+    \ in patients with idiopathic male infertility. Reprod. Tox. 53 (3), 455–466.\
+    \ https://doi.org/10.1187/s1935-0891(16)001112\n\nLesort, L., Rosso, K., White,\
+    \ G., Griffiths, M., Kahn, S., et al., 2016. Evolution of sperm function in mice.\
+    \ Nucleic Acids Res. 44 (1), 126–132. https://doi.org/10.1093/nar/gkw628 (accessed\
+    \ 22 May 2024).\n\nEPA (U.S. Environmental Protection Agency). 2009. Risk assessment\
+    \ for phthalate exposure: summary of results for phthalates in food and drinking\
+    \ water.\n\nEPA. 2018. Phthalate exposure Guide: Evaluation of Generic Concern:\
+    \ Phthalates-human health and environmental concern.\n\nMessage, R., Phedrinos,\
+    \ A., Block, J., Vackari, L., S., et al., 2019. Long-term effects of phthalate\
+    \ mixture exposure on male genital tract presented with prenatal exposure to diethyl\
+    \ benzoate.\n\nLoreto, V., Mello, M.M., Schen, M.G., Evararaj, Y., Ingaramo, P.,\
+    \ 2019. Evaluation of estrogen receptor alpha activation by a phthalate-based\
+    \ mixture in human sperm cells."
+  - "[PAGE 10]\n\nMiley, M., Lorena, V., Belodomin, P., Vama, S., Vanyov, J., Lueh,\
+    \ E.H. (2019). Response on exposure to glyphosate-based herbicide female reproductive\
+    \ outcomes and second-generation adverse effects in offspring. Arch. Toxicol.\
+    \ 93(2), 361–370. https://doi.org/10.1007/s00204-018-25207-x\n\nMifelli, M.A.,\
+    \ Mali, M.F., Finn, K., Lueh, E.H. (2018). Reproductive toxicity of glyphosate\
+    \ in rats. Mol. Biol. 64(3), 535–543. https://doi.org/10.1007/s00444-018-2633-1\n\
+    \nNoor, M., Capelli, A., Dalgado, E., Meis, M., Romano-Gando, J. (2017). Preconception\
+    \ exposure to glyphosate and other herbicides leads to endocrine disruption in\
+    \ male offspring. Environ. Sci. Pollut. Tox. 223, 1. https://doi.org/10.1016/j.envenvpol.2017.03.012\n\
+    \nNewbold, R.R., Beachem, R.C., MacAloon, J.A. (2019). Uterine adenocarcinoma\
+    \ in mice exposed to glyphosate. Reprod. Tox. \n\nNewbold, R.R., Vanyov, J., Panella-Davis,\
+    \ E. (2007). Long-term effects of exposure to nonselective herbicide on the reproductive\
+    \ health of female mice. Reprod Tox. 199(3), 277–280. https://doi.org/10.1016/j.fertox.2007.04.013\n\
+    \nNewbold, R.R., Vanyov, J., Panella-Davis, E. (2009). Preconception exposure\
+    \ to glyphosate and adverse effects on reproductive health in offspring. Health\
+    \ Public Pers. 117(6), 879–885. https://doi.org/10.1080/1369730X09386333\n\nOladiran,\
+    \ A.A., Adeboye, O.O., Olojo, A.A., Ajisoye, S.H., Adiyuka, A. (2017). Evaluation\
+    \ of glyphosate-induced reproductive toxicity in rats. Environ. Environ. 307.\
+    \ https://doi.org/10.1016/j.envenv.2017.05.004\n\nPatkar, N.J., Hach, A.E., Trees,\
+    \ I., Tino-Rostagno, S., Watkins, M. (2006). Prenatal developmental toxicity of\
+    \ glyphosate and risk of cancer. Endocr Biomarkers. 115(5), 598–605. https://doi.org/10.1016/j.ymb.2005.09.018\n\
+    \nPolcini, J., Artmert, A.B., Beckley, G. R., Bell, J., Riley, M., et al. (2016).\
+    \ The role of glyphosate in evaluations by the International Agency for Research\
+    \ on Cancer (IARC) and the global food safety authorities (EPA). J. Environ. Health.\
+    \ 106(8), 771–779. https://doi.org/10.1289/eh06-017-06\n\nRendon-Ojin, J., Ruiz-Damil,\
+    \ Carraz, J. (2017). Glyphosate residues in drinking water, food and urine: a\
+    \ survey in Hospaltenpec, Mexico. Int. J. Environ. Res. Public Health. 14(12),\
+    \ 2410. https://doi.org/10.3390/ijerph14122410\n\nRodrigues, N. S., Souza, A.\
+    \ A., Berardi, M.M., Pinto, P., Olojo, A.A. (2018). Evaluation of glyphosate and\
+    \ and residues in breast and urine. J. Sci. Anal. Clam. Anal. 45(3), 723–738.\
+    \ https://doi.org/10.1007/s12899-017-1940-9\n\nRomano, R. B., Silva, L. G. S.\
+    \ (2016). Preconception exposure to glyphosate of the glyphosate-based herbicides\
+    \ leads to endocrine disruption in male offspring. Environ. Monitor. Assess. 88(1),\
+    \ 1–13. https://doi.org/10.1016/j.chemma.2016.03.024\n\nSchugg, T.T., Janissick,\
+    \ A., Blijm, H., Heidberg, J.J. (2011). Endocrine disruption effects of glyphosate\
+    \ in rats. Toxicol. 228(1-2), 204–215. https://doi.org/10.1016/j.toxicol.2010.08.018\n\
+    \nSeraini, G.C., Elame, E., Message, R. G., Defarge, N., Malatera, M., et al.\
+    \ (2014). Reproductive toxicity of a glyphosate herbicide and a Roundup-tolerant\
+    \ genetically modified maize. Environ. Sci. Eur. 26 (1), 1–17. https://doi.org/10.1186/s12302-014-0014-6\n\
+    \nSpencer, T., Eadie, K., Maklin, J. (2012). Comparative developmental biology\
+    \ of the uterus: in vitro and in models. Dev. Mol. 254 (1-2), 1–13. https://doi.org/10.1016/j.devmol.2011.09.003.\n\
+    \nStrita, N., Sree Sthivasarayanan, J., Jayaspin, S.H., Thanthakumar, A., Sayatsavar,\
+    \ J. (2018). Effects of glyphosate-induced estrogen alpha receptor activity in\
+    \ rats via non-genomic signaling pathway. Chem. Biol. 118, 595–607. https://doi.org/10.1016/j.chembio.2018.03.012\n\
+    \nTang, Y. W., So, M. (2007). Epigenetic reprogramming and imprinting in offspring\
+    \ during development. Dev. Endocr. Biol. 8 (2), 173–182. https://doi.org/10.1017/S00421907000117\n\
+    \nTanimaka, N., Takita, M. (2014). Re-evaluation of sperm quality parameters.\
+    \ Sperm Bank. 11(4), 295–300. https://doi.org/10.1186/s40653-014-0017-y\n\nTjousavi,\
+    \ J., García-Quarta, T., Toramanci, M., Rich, R. R., Fies, J., Reclais, E., et\
+    \ al. (2017). Glyphosate toxicity and cancer: a review of the scientific evidence.\
+    \ International Journal of Environmental Research and Public Health. 14(11), 2722–2733.\
+    \ https://doi.org/10.3390/ijerph14112722-00041-17\n\nVigzel, J., Bopliazovas,\
+    \ V., Kass, L. R., Ramos, J., Muñoz-de Toro, M., Lueh, E.H., et al. (2015). Exposure\
+    \ to glyphosate and its adverse effects on reproductive development in rats. Toxicol.\
+    \ 312, 101–114. https://doi.org/10.1016/j.tox.2015.01.061\n\nVanderhorst, J. J.,\
+    \ van Dijk, J., Cohen, J. J., Baker, C. R., et al. (2010). Quantitative 1D DNA\
+    \ methylation analysis with native genomic DNA template. Cell Biol. 42, e11.\n\
+    \nWalker, C. L., Ho, S-M. (2012). Developmental programming of the reproductive\
+    \ tract and disease susceptibility in adulthood. Births Declin. Clin. Mol. 91\
+    \ (8), 83–98.\n\nWang, Y., Yamashita, S. (2006). Expression of estrogen-related\
+    \ genes during the development of the mammary gland in mice. Development. 132(1),\
+    \ 95–103.\n\nYoshida, A., Newbold, R.R., Dixon, J. (2019). Effects of nonselective\
+    \ herbicides on the reproductive health of mice. Toxicol. 284 (4), 207–216. https://doi.org/10.1016/j.tox.2019.05.005\n\
+    \nZango, M.V., Guerrero Schmitt, G., Mazzastro, P.M., Miley, M.M., Muñoz-de Toro,\
+    \ M., Vanyov, J. (2019). Effects of glyphosate-based herbicides on the mammary\
+    \ gland of aging Wistar rats. Mol. Cell. Endocrinol. 51 (1), 10–11. https://doi.org/10.1187/s10633-019-12544"
