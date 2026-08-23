@@ -1,0 +1,2196 @@
+- img_proc: true
+  md: '# THE COOLEST JOBS
+
+    ON THE PLANET
+
+
+    Maxwell Memorial Library
+
+    14 Genesee Street
+
+    Camillus, NY 13031
+
+
+    # Computer Games
+
+    Designer'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '1060L
+
+
+    OCT 05 2013
+
+
+    # DISCARDED
+
+
+    MAXWELL MEMORIAL LIBRARY
+
+
+    14 GENESEE STREET
+
+    CAMILLUS, NEW YORK 13031'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# THE COOLEST JOBS ON THE PLANET
+
+
+    # Computer
+
+    Games Designer
+
+
+    Mark Featherstone
+
+
+    Raintree
+
+    Chicago, Illinois'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 2014 Raintree
+
+    imprint of Capstone Global Library, LLC
+
+    Chicago, Illinois
+
+
+    # Acknowledgments
+
+
+    We would like to thank the following for
+
+    permission to reproduce photographs:
+
+    Almy pp. 11 (c5 David J.
+
+    Green – technology), 35 (c5 Silicon Valley Stock);
+
+    © David Klassen and Bell p. 14 (Steve Arhem); Capstone
+
+    Global Library Ltd. p. 27 (Fantasy Flight Games. 39); CCP
+
+    Horror is "Fantasy Flight Games. 39; CCP
+
+    Corbis p. 28 (c19 Mark Savage); Getty
+
+    Images p. 9 (Photographer''s Choice/Joel Seth),
+
+    22 (Ethan Miller), 25 (Blomberg/Chris Ratcliffe),
+
+    27 (EA/Jeff Vernick), 32 (AFP/John Kramer),
+
+    33 (Wilhelm/A. Street), 37 (Stone/North)
+
+    (Terry Harris); Featherstone p. 4, 20, 21, 25
+
+    inet, 26, 29, 40 (Michael R.); 5; Microsoft p.
+
+    30; 31 (Richard B. Harrison) Westnide
+
+    software p. 24 and 1r; Rex Features p. 6 (Camilla
+
+    Morandi), 7 (Graham Harrison), 10 (Andy
+
+    Drysdale), 13 (Future Publishing/
+
+    avin Roberts); Sheffield Hallam p.34 (©
+
+    Yaroslavna); Simple Digital p.33 Valve Corporation.
+
+
+    To contact Capstone Global Library, please
+
+    call 800-747-4992, or visit our web
+
+    www.capstonepub.com
+
+
+    All rights reserved. No part of this publication
+
+    may be reproduced or transmitted in any form
+
+    or by any means, electronic or mechanical,
+
+    including photocopying, recording, taping, or any
+
+    information storage and retrieval system, without
+
+    permission in writing from the publisher.
+
+
+    By Nancy Dickman, Adam Miller, Laura
+
+    Knowles, and Lee Cox Cann
+
+    Designed by Richard Parker, and Emily Hooton at
+
+    Ken Bell Branch Design
+
+    Picture research by Mica Prancis
+
+    Production by Vicki Fitzgerald
+
+    Printed and bound in China by CTPS
+
+
+    17 16 15 14 13
+
+    9 8 7 6 5 4 3 2 1 0
+
+
+    # Library of Congress Cataloging-In Data
+
+
+    Featherstone, Mark, 1969-
+
+    Computer designer / Mark Featherstone.
+
+    pages cm—the coolest games on the planet)
+
+    Includes bibliographical references and index.
+
+    ISBN 978-1-4109-5484-8 (hb)—ISBN 978-1-4109-
+
+    5489-3 (pb)
+
+
+    +   1. Computer—Programming—Vocational
+
+    guidance. 2. Computer games—Design—nvocational guidance. 1. Title.
+
+
+    QA76.C.F642 2014
+
+    794.8.1536023–dc22
+
+    2012049389
+
+
+    Background designs supplied by
+
+    Shutterstock © AND Inc., Archipoch, ©
+
+    photographic 1980, © dandanitas125, © dundamlin,
+
+    thanasia Monikov, © Ghenadie, hnfg, ©nisakis55, Konya, Lukas Radavicius,
+
+    Manczurov, Michelangelo, Olga Miltsva,
+
+    Pet Vacclav, © Phusha, Sasha Chebotarov,
+
+    Ser Oblonkov, Skocko, T Jefferson, ©nwatcher, zirconconicu.
+
+
+    Cover of a sci-fi city, a futuristic
+
+    soldier, and a wire-frame produced
+
+    with permission of Shutterstock © AND Inc., ©
+
+    DarkGeometryStudios, Archipoch.
+
+
+    Every effort has been made to create copyright
+
+    holders of material produced in this book.
+
+    Any omissions will be rectified in subsequent
+
+    prints if notice is given to the publisher.
+
+
+    # Disclaimer
+
+
+    All the Internet addresses (URLs) used in this
+
+    book were valid at the time of going to.
+
+    Due to the dynamic nature of the
+
+    Internet, some may have changed, or
+
+    sites may have changed or ceased to exist
+
+    publication. While the author and publisher
+
+    regret any inconvenience this may cause readers,
+
+    responsibility for any such changes be either or the publisher.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   - The Moment of Truth . . . . . . . . . 4
+
+
+    +   - The Process of Making a Game . . . 6
+
+
+    +   - A Day in the Life. . . . . . . . . . 8
+
+
+    +   - How I Became a Game Developer . 10
+
+
+    +   - Different Roles, Different Skills . . . 18
+
+
+    +   - Game Genres . . . . . . . . . . 24
+
+
+    +   - Different Ways of Working . . . . 32
+
+
+    +   - Learning to Make Games. . . . . 38
+
+
+    +   - Quiz . . . . . . . . . . . 42
+
+
+    +   - Glossary . . . . . . . . . 44
+
+
+    +   - Find Out More . . . . . . . 46
+
+
+    +   - Index . . . . . . . . . . . 48'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# # The Moment of Truth
+
+
+    The most exciting moments in game development are when the game you have worked
+    on for so many months—or even years—is finally ready. Playing the completed game
+    for the first time, it feels almost magical as you see all your ideas brought
+    to life. Then comes certification, when your publisher checks what you have done
+    and decides if the game is ready for the public. Shortly after that is the launch
+    day, and you visit a local store and buy one of the first copies of the finished
+    game. The publisher will give you a free copy, but it is not the same as buying
+    one from a store!
+
+
+    > This is one of my games still in its shiny wrapper, never to be opened!
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # metacacritic
+
+
+    Movies Games TV Music Features
+
+
+    summary Home Page Forums Publications Straight to your Inbox
+
+
+    Essential Thoughts
+
+
+    ZDNE
+
+
+    # Mr. Robot Released Jan 12, 2008
+
+
+    I always check a web site called Metacritic, which summarizes reviews of computer
+    games. If one of my games gets a positive score, then I know I have done well!
+
+
+    Critical Reviews User Reviews User Scores Details & Credits
+
+
+    | Summary | Metacritic | User Score |
+
+    |---|---|---|
+
+    | 83 out of 100 | 7.6 Metacritic reviews (58 reviews) | 7.6 User reviews (118
+    reviews) |
+
+
+    Summary: Alderson is a brilliant series about a young hacker who discovers a conspiracy
+    that threatens the existence of the world. As he goes on a dangerous journey through
+    the bowels of reality, he explores -
+
+
+    Developer Sam Esmail
+
+    Writer Sam Esmail
+
+    Producer Sam Chronicle
+
+
+    Essential Link
+
+
+    # Critical Reviews
+
+
+    # User Reviews
+
+
+    Write a review
+
+
+    # PC Forum
+
+
+    It''s all act-driven, thrills, mind-bending and exciting, until the mid-series
+    slump where the plot twists and turns it loses its way and gives it a bit of a
+    slog. (score: 7/10)
+
+
+    healing gates, the first few episodes are fantastic, but the middle ones become
+    repetitive and medicinal - episodes.
+
+
+    All reviews
+
+
+    1 out of 3 games and few
+
+
+    PC Games
+
+
+    Full List
+
+
+    New PC Games
+
+    Recent PC Games
+
+    Upcoming PC Games
+
+    Action PC Games
+
+
+    All PC Reviews
+
+
+    All Games of 2011
+
+
+    Next Games
+
+
+    # Reviews
+
+
+    The next big moment comes when the first reviews come in. Some are by professional
+    critics, but many more are members of the public posting on web sites. If people
+    have enjoyed playing your game and say nice things, it feels wonderful. Sometimes
+    the comments are not all nice, but at least you can learn something and make the
+    next one little bit better.
+
+
+    # Did you know?
+
+
+    Reviews are really important. Some game developers get paid bonus depending on
+    how well their game scores on Metacritic, which collects all the different review
+    scores together into one average score.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# # The Process of Making a Game
+
+
+    Let''s back up a little. Launch day is incredibly exciting, but a lot of work
+    has to happen before then:
+
+
+    +   1. The idea: Everyone contributes ideas, especially the publisher.
+
+    2. The pitch: We present an idea to managers and publishers.
+
+    3. Prototyping: We need exciting new play and visuals. Small programs are made
+    to demonstrate them.
+
+    4. Pre-production: All the tools needed are programmed. Workers are hired and
+    trained.
+
+    5. Alpha: Tools are ready, so it is time to make the 3D models and build the levels.
+    No new features are allowed after this stage!
+
+    6. Beta: Everything is finished, but it does not play quite right and crashes
+    constantly! (I''m pretty sure no game ever worked perfectly (the first time.)
+
+    7. Certification: The publisher''s testers check everything. They don''t work
+    with us, so there is no chance of bias.
+
+    8. Release: Time for a party before we start again! We also check the reviews.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_9_0.png)
+
+
+    Tetsuya Nomura is one of the artists at Square Enix, makers of the Final Fantasy
+    role-playing games. He is amazingly talented.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# What does a games programmer do?
+
+
+    Programming is all about breaking everything down into smaller and more easily
+    understandable parts. A program is like a machine; it is built out of many different
+    interlocking pieces. When you look at the whole problem, you cannot even begin
+    to understand how you might tackle it, but if you look at just one small piece,
+    then it becomes easier.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_10_0.png)
+
+
+    An old game such as Space Invaders (one of my childhood Favorites) looks simple
+    now. But even games like this took a team of programmers a long time to put together!
+
+
+    Future billionaire Richard Branson loved Space Invaders'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# A Day in the Life
+
+
+    I''m an independent developer, which means I''m my own boss. Here is what an average
+    day is like:
+
+
+    +   - **8:30–10:00 a.m.** Take my daughter to school, walk my dog, and think about
+    the game
+
+    - **10:00–10:30** Talk to the team—what''s next? Add any new bugs to the bug list.
+
+    - **10:30–11:00** Generate publicity for the game
+
+    - **11:00–12:00** Do programming work based on the bugs list
+
+    - **12:00–1:00 p.m.** Lunch
+
+    - **1:00–3:00** Check the design; start programming the next task
+
+    - **3:00–4:00** Play my daughter up
+
+    - **4:00–5:30** Play the new game and test that everything is working
+
+    - **5:30–6:00** Correspondence, taxes, and paperwork
+
+    - **6:00–9:00** Family time
+
+    - **9:00–11:30** More programming!
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_11_0.png)
+
+
+    Here I am, hard at work on a game.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Working for a big developer
+
+
+    In the past, I worked for big developers. My day was very different then, because
+    I was not running the business. This meant I could concentrate only on programming.
+
+
+    +   - **9:30–10:00 a.m.** Discuss the previous day of work with the team; plan
+    for the day
+
+    - **9:30–10:00** Discuss the play test results with the designer; plan for the
+    next milestone
+
+    - **10:00–12:00** Program a test prototype of the next task
+
+    - **12:00–1:00 p.m.** Lunch Show the prototype to the team; get feedback
+
+    - **1:00–1:30** Start programming the real thing Put all the new pieces together;
+    everyone plays the game leaving for the day
+
+    - **1:30–5:00 5:00–5:30**
+
+    OR
+
+    **5:30–???** If a milestone is due, order pizza and keep working until it is done—sometimes
+    all night!
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_12_0.png)
+
+
+    # Note to self
+
+
+    A publisher pays for the game one month at a time, checking that it is OK before
+    paying the next installment. These are called milestones, and it is important
+    to hit these dates—otherwise you don''t get paid!'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# # How I Became a Game Developer
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_13_0.png)
+
+
+    My first home computer was a Sinclair ZX81.
+
+
+    I''ve always been fascinated by computers and games. My first experience with
+    video games was spending my pocket money playing Space Invaders and Donkey Kong
+    arcade machines at my local arcade. I used my powers of persuasion to convince
+    my parents to buy me more and more powerful home computers.
+
+
+    Every upgrade allowed me to write and play more impressive games. Although these
+    computers were sold for playing games, just like modern gaming consoles, every
+    one of them came with a keyboard and a programming language Basic. I bought Zzap64
+    magazine each month and spent hours typing in the demo programs included.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Did you know?
+
+
+    In the 1980s, CDs and flash drives were a long way in the future. One way to save
+    and load programs was using a simple audio cassette recorder. It was slow, noisy,
+    and very unreliable.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_14_0.png)
+
+
+    My First game console was an Atari 2600.
+
+
+    # Gaining inspiration
+
+
+    I played classic games such as Zelda, Mario, and Sonic. Home Internet access was
+    rare, so I read gaming magazines to find out the names of the developers and sometimes
+    cut out their photos. I realized that these people were sitting down at a keyboard,
+    using a programming language, and making games. If they could do it, then maybe
+    I could, too! I was always thinking up crazy ideas for games and sketching out
+    designs for characters.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# An expensive hobby
+
+
+    My father was a miner, so the only way I could afford computer games was to save
+    my pocket money, get a paper route, and convince my family to give me money instead
+    of presents for Christmas and birthdays. Luckily, today, even a modestly priced
+    PC is at least 1,000 times more powerful than any of my old home computers, so
+    there is no need to constantly upgrade anymore!
+
+
+    The BBC Micro model B (1981) had the best version of Basic I had ever seen.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# High school
+
+
+    I spent so much time programming that my schoolwork suffered. There were no computer
+    science classes, as there are today. At home, I was learning how to code text
+    adventure games and make small animations. A teacher helped me get into a special
+    program studying engineering, even though my grades were not that great. It was
+    amazing to be able to focus on an area of study that I really loved and was good
+    at.
+
+
+    # Did you know?
+
+
+    The Raspberry Pi is a new minicomputer for children costing just $35. It runs
+    (like Windows, but free) and can connect to a mouse, keyboard, and TV. It can
+    run programming languages such as Python and Scratch. You can save your work to
+    an SD card like in a digital camera. It does not have a case, but you can make
+    one from Legos!
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_16_0.png)
+
+
+    # The right equipment
+
+
+    Once I entered the engineering program, I studied hard and tried to really develop
+    my skills. I had access to the BBC Micro, a powerful, expensive computer. It was
+    developed to encourage young people to program. This really helped with my development.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Making my own games
+
+
+    It was during this period that I first played Elite. Released in 1984, it is one
+    of the earliest 3D games. it allowed the players to explore space in their own
+    ships! I was astounded by this game and became determined to understand how it
+    had been made.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_17_0.png)
+
+
+    # Coding
+
+
+    I learned how to program very small devices in the language Assembler, which does
+    not have many commands. These programs run on tiny chips inside everyday appliances
+    as televisions. While Basic feels similar to English, Assembler feels a little
+    alien like the language of the computer, machine code. I worked with chips the
+    Z80 and the 6502. They were also used in the ZX81, Spectrum, and Game Gear.
+
+
+    > I loved trying to dock my ship with a space station in Elite.
+
+
+    # Did you know?
+
+
+    Games such as Elite are too big to be made by people, so the computer uses rules
+    to build it all randomly. It is called procedural generation, and in Elite the
+    rules control distances between stars, planet size, how many planets attack, and
+    so on. Although Elite looks simple, it contained eight galaxies, with each 256
+    planets.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Doing math in Assembler versus Basic
+
+
+    Let''s say we need to make a simple calculation. Which one makes sense to you?
+    In Basic, we would use one line, and it is easier to read than Assembler. In Basic,
+    we can write the program much faster, but an Assembler version could run 1,000
+    times faster. Assembler is still used in games, but only in the 1 percent of the
+    code that needs to be superfast.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_18_0.png)
+
+
+    ```
+
+    Z80 Assembler
+
+    LDA A, 23
+
+    LD B, 100
+
+    LD C, 53
+
+    ADD A,B
+
+    SUB C
+
+    ```
+
+
+    Register "A" equals 70
+
+
+    ```
+
+    Basic
+
+    result = (100 + 23) - 53
+
+    Variable "result" equals 70
+
+    ```'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# College
+
+
+    Thanks to the extra effort I made with my engineering program, I was able to get
+    into college—although I had to take some extra classes to make up for not always
+    working hard in high school! In college, I studied Information Technology. I learned
+    about networking, programming, and computer systems, and then I decided that programming
+    was what I really loved. This was where I honed my skills with the language C++.
+    It is very common in the games industry.
+
+
+    > When I began to take college-level classes, I really learned what I needed to
+    know to start my career.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_19_0.png)
+
+
+    After I graduated from college, I spent three months creating a demo of spinning
+    3D shapes and sent this to many game companies. 3D was still fairly new, and I
+    hoped they would be impressed that I had managed it alone. A company called Gremlin
+    Interactive hired me, and I have been making games ever since.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# C++\n\nA game quickly gets complicated as you write more and more code. Simple\
+    \ languages such as Basic, which are great for beginners, start to slow down.\
+    \ C++ was designed to be very fast and really big programs. A C++ program can\
+    \ be 50 to 100 times faster than the equivalent in Basic.\n\n# TOOLS OF\nTHE TRADE:\n\
+    SMALL\nBASIC\nAND\nC++\n\nHere are two programs that do the same: put 100 enemy\
+    \ units on screen in rows of 10. (Note: the lines in italics are not part of the\
+    \ programs.) It may seem odd, but the longer program actually runs faster. If\
+    \ you want to write something simply, use Small Basic, but if you want it running\
+    \ fast, use C++.\n\n![](img/3b65410812b2afeea872d1d38e85b469_20_0.png)\n\n# Small\
+    \ Basic\n\n```\n'setup 100 enemy positions\n'in rows of 10\nenemies[index][\"\
+    *\"] = Math.GetRandomNumber(800)\nenemies[index][\"*\"] = Math.Floor(index/10)\
+    \ * 50\n```\n\nEndFor\n\n# C++\n\n```\n//first define what an enemy is\nclass\
+    \ Enemy {\npublic:\n    int x,y;\n    Sprite image;\n    bool alive;\n\n    void\
+    \ Setup(int _x, int _y) {\n        x = _x;\n        y = _y;\n        alive= true;\n\
+    \    }\n}\n\n//create 100 enemies\nEnemy *enemies = new Enemy[100];\n//setup enemy\
+    \ positions in rows of 10\nfor(int index=0; index<100; index++) {\n    x = rand()%800;\n\
+    \    y = (index/10) * 50;\n    enemies[index].Setup(x, y);\n}\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Different Roles,
+
+    Different Skills
+
+
+    I have worked in every game development role, but my favorite being a programmer.
+    A programmer takes the ideas of the designers, the artwork, the sound effects,
+    and the music makes the game work. Although there are many programming languages,
+    they are all similar, and it is easy to move from one to another. Programmers
+    have to be focused, logical people with good math skills. They often work alone
+    or in small groups for weeks at a time on tricky problems.
+
+
+    # TOOLS OF
+
+    THE TRADE:
+
+    MONITORS
+
+
+    Computer programmers often have two monitors: one running the game and the other
+    running the debugger, which checks for bugs. This helps spot problems early on.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_21_0.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '```
+
+    main(vo)
+
+    pig_number
+
+    long five=5;
+
+    double pi=3
+
+    ```
+
+
+    Will Wright is the designer
+
+    behind SimCity, Spore,
+
+    The Sims-the top-
+
+    selling PC game, at over
+
+    180 million copies.
+
+
+    ```
+
+    cin >> b;
+
+    cout
+
+    ```
+
+
+    # Designer
+
+
+    Designers come up with the initial idea for a game
+
+    and create a “design bible” that the team refers
+
+    to. The ideas come from playing different video
+
+    games. Designers often test their ideas on paper
+
+    by making little board games before asking the
+
+    team to make a prototype. This is a quick, rough
+
+    version of the idea, just to test if it is a good idea.
+
+    Designers build the actual levels, in addition to
+
+    writing the scripts. A script contains the text of the
+
+    story, character dialogue, and the logic that
+
+    controls what happens.
+
+
+    Designers need to be able to think creatively
+
+    and understand a little of all the other roles, so that
+
+    they can communicate their vision to the team and
+
+    ensure their ideas are realistic
+
+
+    ```
+
+    catch (int a)
+
+    return 1;
+
+    ```
+
+
+    > Did you know?
+
+    A modern game
+
+    such as Street
+
+    ighter can have
+
+    halt a million lines
+
+    of code.
+
+
+    ```
+
+    na-b='' << a-b;
+
+    na*b='' << a*b;
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Artist?
+
+
+    Artists create all the images, models, and textures used in a game. They are often
+    the most exciting and colorful members of the team. Creative and artistically
+    talented, also need to use very complex tools. The most common are 3D Studio Max
+    for making 3D models and Photoshop for 2D art and textures.
+
+
+    # Did you know?
+
+
+    Artists produce hundreds of different images of surfaces when they build games,
+    whether it is rocks, grass, water, or wood. This means they will often be sent
+    on location to photograph places or objects, to ensure that their work is realistic.
+
+
+    This model From Gunmetal (a game I worked on) is half wireframe, half textured.
+    The Finished 3D object can be viewed From any angle and looks very realistic.
+
+
+    # TOOLS OF THE TRADE:
+
+    SOFTWARE
+
+
+    Instead of an expensive mixing studio, audio engineers often use software instead.
+    A program such as Reason can simulate mixing boards, synthesizers, effects, and
+    every other piece of expensive hardware using a single computer and some speakers.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_23_0.png)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Audio engineer
+
+
+    Part musician and part recording engineer, audio engineers create sound effects
+    and in-game music. Like artists, audio engineers are sent on location. For example,
+    they might visit a race track to make recordings of cars. An audio engineer will
+    usually work with musicians on the soundtrack, and if the game needs an orchestral
+    score or voice actors, then the engineer will supervise the arrangement.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_24_0.png)
+
+
+    2D images are just normal pictures. They may not look realistic, but they can
+    still be beautiful. This is an example from one of my games, Starscape.
+
+
+    Audio engineers need to be talented musicians, expert studio engineers, and have
+    good organizational skills.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '![](img/3b65410812b2afeea872d1d38e85b469_25_0.png)
+
+
+    # Producer
+
+
+    On every game team, there is always a producer whose job it is to make sure that
+    the game gets finished on time and that any problems get fixed fast. Producers
+    keep themselves separate from the team, and it can be a lonely job. They are effectively
+    in charge and have to make sure everyone does enough to meet all the milestones.
+    Producers need to be good communicators. They need to be very well organized since
+    they have to keep detailed records about what everyone is doing.
+
+
+    MY HERO!
+
+    ELLEE SANTIAGO
+
+
+    Kellee Santiago was the producer and part of the design team for Flow, Flower,
+    and Journey. The games industry needs more female developers like her. Half of
+    all gamers are female, yet 96 percent of developers are male!'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# VIDEO GAMES AWARDS
+
+
+    # START HERE
+
+
+    # MY HERO!
+
+    SHIGERU MIYAMOTO
+
+    (BORN 1952)
+
+
+    Shigeru Miyamoto is one of my all-time heroes. He is probably the most famous
+    games producer and designer in the world. Even if you don''t know his name, you
+    will know his games—this is the man behind Super Mario, Donkey Kong, and Zelda.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_26_0.png)
+
+
+    # Tester
+
+
+    Before a game is released, it must undergo many hours of testing. It would take
+    one person years to complete it all, so games compan use teams of testers. It
+    sounds like the greatest jou in the world, playing games all day, but testers
+    have to be very methodical and focused. Good communication skills are essential
+    if they are going to be able to clearly explain why some aspect of the game just
+    does not "feel".
+
+
+    # Did you know?
+
+
+    > "Bug" is the name given to errors in game code that might make the game crash.
+    All developers must watch out for them!'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# # Game Genres
+
+
+    There are many types of games, but most fall into a surprisingly small number
+    of categories, or genres, defining how the game will play.
+
+
+    # ## Role-playing games
+
+
+    In a role-playing game (RPG), the player takes the lead role in a story, and only
+    by developing that character can the story be completed successfully. Many RPGs
+    have a medieval setting with knights, goblins, and magic.
+
+
+    Many RPGs use a gray-scale image called a "height map" to represent the world.
+    The height map can be drawn by an artist, made randomly by computer, or taken
+    from real data such as Google Earth. Dark areas are low like valleys, and white
+    areas are high like mountaintops. These height values create a 3D map over which
+    image textures are draped to represent grass, stone, water, and so on
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_27_0.png)
+
+
+    This height map (lePt) shows mountains and valleys (right).'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Casual
+
+
+    Casual games are often based on simple puzzles and can last just a few minutes.
+    They are usually cheap to buy and popular on mobile devices or the Internet. Sometimes
+    they are free, paid for by advertisements Getting a hit game is tricky, since
+    it is hard to say what is needed for people to fail in love with simple games.
+    For example, Angry Birds developer, Rovio, made 51-other games before it struck
+    gold. Angry Birds is massively popular and has been downloaded over 1 billion
+    times.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_28_0.png)
+
+
+    Did you know?
+
+    Angry Birds uses a physics simulation of balls hitting bricks under gravity, so
+    everything crashes realistically. There are many different physics games, but
+    the simulation is usually the same.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# First-person shooter
+
+
+    First-person shooter (FPS) games focus on guns, and the player experiences the
+    action through the eyes of the main character. The genre is controversial, due
+    to its obsession with violence. However, research has shown that even very young
+    children know the difference between play and the real thing. One leading FPS
+    has made $6 billion and been played online by over 30 million people.
+
+
+    > This is Gunmetal. I worked on it''s artificial intelligence (AI), and it took
+    weeks to stop the enemies From running in circles and getting stuck.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_29_0.png)
+
+
+    > GoldenEye was released in 1997. I was amazed by how Fast and exciting it felt.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# Sports games games
+
+
+    Sports games games are very popular and are often released each year with only
+    minor alterations, since real-life players move to different teams or the starting
+    lineups for popular teams change, for example. In games for many sports, motion
+    capture is used to accurately represent the athletes as they move.
+
+
+    > For some sports games, popular athletes come to record voice-overs. This makes
+    the experience of the game even more authentic for fans.
+
+
+    > People can tell if an artist animates someone moving—it never looks quite right.
+    Instead, special cameras are used to capture the real motion of actors or athletes.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_30_0.png)'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Massively multiplayer online (MMO)
+
+
+    A massively multiplayer game allows thousands of people to play together at the
+    same time. For example, World of Warcraft holds the record for the maximum number
+    of paying subscribers, at 12 million, although only about 4,500 play together
+    at any one time on a single server. An MMO needs servers and complex network code
+    written by highly paid, specialized game programmers.
+
+
+    > EVE Online is a sci-Fi game that holds the world record Por numbers of people
+    playing together at once: 63,170 people!'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'A Few of my indie games are Mr. Robot, Starscape, and Word Pirate. Here is
+    Word Pirate–it is Small, but perfectly Poed!
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_32_0.png)
+
+
+    Wreckers and pirates used the town''s well protected harbour, but there was no
+    permanent settlement until the late 1700s. A coastline of rocky bays, tiny inlets
+    and cays made for a great pirate hideout while being close to rich in whaling
+    waters.
+
+
+    # Indie games
+
+
+    Most recently, I have worked with a small team of friends as an indie game developer.
+    We only work on small games that are sold through specialized channels, such as
+    Steam, Xbox Live Indie Games, Playstation Network, or that are downloaded directly
+    from the developer''s site.
+
+
+    An indie game usually caters to small audiences who want something different,
+    like “shoot ''em ups,” puzzle games, or 2D adventure games. Often, these genres
+    that were really popular years ago, but now have only 10,000 to 100,000 fans and
+    are ignored by big publishers.
+
+
+    # Note to self
+
+
+    I worked on the prototype for a sci-fi MMO, but the publisher wasn''t sure and
+    pulled the plug. I was really upset, but you have to learn to accept it and move
+    on–or become indie and make it yourself!'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Physical games
+
+
+    One of the newest genres is aimed at getting people moving. The Nintendo Wii and
+    Sony PS3 both have controllers that the player can weave around to control the
+    action. The Xbox 360 has a Kinect camera that can capture the player''s whole
+    body, in a similar way to the motion capture that games designers use.
+
+
+    Some cell phone games can even use your current location and pictures of real-world
+    objects in treasure hunt games, or they can overlay game content on live camera
+    video. Developers must be careful of over-tiring the player, and they must write
+    code that can detect if the player is performing the correct move or not.
+
+
+    This game is controlled using a Kinect camera.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'In a simulation game such as The Sims, everything depends on how the player
+    alters the simulation. The game can play out completely differently From one play
+    session to the next.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_34_0.png)
+
+
+    # # Simulation games
+
+
+    Simulation games often don''t have a story, and you usually cannot even control
+    any of the characters directly. Sometimes the games do not even have an end! The
+    game simulates an interesting period in history—an event or situation—and then
+    lets the player after the simulation and see what happens. These games are very
+    complex programs to write and test, since they don''t play out like a normal game
+    with a predefined plot.
+
+
+    One of my favorites is Civilization, from 1991, by the wonderful game designer
+    Sid Meier. It allows you to simulate the entire history of Earth! You can play
+    it as a warlike dictator, peaceful diplomat, or anything in between Games can
+    often be a little boring once you have played them once, but a good sim game like
+    Civilization is never the same twice.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Different Ways of Working
+
+
+    Games are designed for many different platforms. Sometimes you can even play the
+    same game on several different devices. They are all different—some are easy to
+    work on, and some are hard.
+
+
+    # Console
+
+
+    Traditionally, many gamers played on mainstream consoles such as the Nintendo
+    Entertainment System or Xbox. Games for these consoles have a huge potential audience,
+    but developing for them is expensive. You need a contract with Sony, Microsoft,
+    or Nintendo and a special development version of their console to hook up to your
+    PC.
+
+
+    > The Xbox Live Indie Games channel is a great place to Find indie games.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_35_0.png)'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'However, Microsoft and Sony are willing to work with indie developers, and
+    can be far cheaper. It sounds great, but they are probably not doing this just
+    out of the kindness of their hearts. Working with indie developers is a great
+    way to get even more games, for free, which help sell their consoles. It is a
+    tough way into the market—fewer than 1 percent of developers strike it rich in
+    this way.
+
+
+    # PCs
+
+
+    Many people play games on PCs as well. The PC, whether Windows, Macintosh, or
+    Linux based, allows open development. This means people can make any game they
+    like, put it online, sell it, and keep all the money. However, the Steam app store
+    is where most people buy their games, so it is not quite as free as it initially
+    seems.
+
+
+    # MY HERO!
+
+    JOHN CARMACK
+
+    (BORN 1970)
+
+
+    John Carmack is one of my heroes. He was the programming genius behind Wolfenstein
+    3D, a groundbreaking game for the PC platform. He was constantly developing or
+    popularizing new techniques in computer graphics.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_36_0.png)
+
+
+    John Carmack'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '![](img/3b65410812b2afeea872d1d38e85b469_37_0.png)
+
+
+    # # Mobile
+
+
+    One of the fastest-growing types of games is "apps" for mobile devices such as
+    smartphones and tablets. Two of the main platforms involved are iPhone and Android.
+    Games for these platforms are fairly simple to make and to sell online, so many
+    people are trying to enrich it this way.
+
+
+    Most mobile developers use software libraries to help them their games working.
+    For example, Marmalade has thousands of lines of code written by experts. Just
+    like a real library, you can pick and choose what you want.
+
+
+    Mobile games are often 10 times cheaper than console games and are sometimes even
+    Free.'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Web
+
+
+    There are thousands of free games playable through web sites, and they are written
+    in Flash, Unity, Java, or HTML5. The developer''s income usually comes from one
+    of the large gaming web sites. These web sites are always looking for new games.
+    The games are usually small and simple, so they don''t take long to make (usually
+    6 to 12 weeks).
+
+
+    # Game developers
+
+
+    There are different types of game developers working in different genres. The
+    main difference between them is the size of the budget, which limits the number
+    of employees. Big publishers such as Microsoft, Sony, Electronic Arts, Sega, and
+    Nintendo employ thousands of developers. They can work on huge teams up to 200
+    people on blockbuster games such as The Sims, which make billions of dollars.
+
+
+    Electronic Arts is one of the world''s largest game publishers, with over 9,000
+    employees.
+
+
+    # Did you know?
+
+
+    Sometimes a game crashes, meaning that it just stops working. This is usually
+    caused by a bug. It is essential that all crash bugs are fixed before the game
+    is released.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_38_0.png)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Work for hire
+
+
+    There are thousands of small companies, each employing 15 to 100 developers, that
+    work for any publisher that needs them. A work-for-hire developer sends its producers
+    to visit publishers each time it needs a new project. They usually have a specific
+    idea or character they need made into a smaller game—for example, Sonic or Warlio.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_39_0.png)
+
+
+    # Did you know?
+
+
+    Developers cannot stop adding new ideas—this is called feature creep. But once
+    we hit Alpha, the producer has to put a stop to it. Every feature added makes
+    the game a little more complex and a little harder to test.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_39_1.png)
+
+
+    # TOOLS OF THE TRADE:
+
+    COMFORTS OF HOME
+
+
+    When I worked at Rage Games, I had a sleeping bag ready for if I got tired working
+    late. I also had my own mini-fridge and posters, and my desk was decorated with
+    collectable game and movie figures.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_39_2.png)
+
+
+    Sumo made Sonic & Sega
+
+    All Stars Racing and the Dr. Who adventure games.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Indie companies
+
+
+    An indie game company will consist of about 1 to 15 developers, usually without
+    the support of a publisher. They will come together to work on something new,
+    and if they are talented and lucky, they will get a megahit that makes millions.
+    However, because they are working on something completely new, it might not make
+    any money at all. I love running an indie game company: we get total freedom to
+    explore all our crazy game ideas. There is more to life than making money!
+
+
+    # Did you know?
+
+
+    When you work for a big developer, things are usually pretty informal. Everyone
+    wears casual clothes, and there are often free drinks and snacks and even arcade
+    games in the cafeteria. Working for yourself means you can even wear your pajamas,
+    but you do have to provide your own snacks!
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_40_0.png)
+
+
+    > Indies have to be very creative to come up with completely new ideas.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Learning to Make Games
+
+
+    Many games allow players to make their own levels. Making your own level in something
+    like Little Big Planet and then sharing it with other players online is a fantastic
+    experience for a budding designer.
+
+
+    Sometimes lots of players come together to make something that feels almost completely
+    different from the original game. This requires amateur artists, programmers,
+    designers, and musicians to get together over the Internet. If it is popular enough,
+    the company might even hire them. This happened with Portal.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_41_0.png)
+
+
+    MY FAVORITE GAME
+
+    Everyone should try to play Portal 1 and Portal 2. I love them and think they
+    are absolutely amazing examples of gaming at its best. Portal''s editor is even
+    used in some schools to teach physics!'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Prototyping
+
+
+    You can learn a lot by playing and making board games or card games. The fastest
+    way to test a new game idea is to make a board game or card game version of it,
+    and this happens at a lot of game studios. When playing a video game, it can be
+    hard to figure out how the developer actually made it work, but when you play
+    a card game or board game, the rules are laid out in detail. Most game developers
+    I know play tabletop games. I particularly enjoy Magic, The Gathering, Talisman,
+    Arkham Horror, and Mansions of Madness.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_42_0.png)
+
+
+    # MY FAVORITE GAME
+
+
+    Arkham Horror is my favorite board game. It takes hours to play and is very complicated,
+    but the rules are beautiful and link together like clockwork, to make the closest
+    thing to a video game on your tabletop.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# What goes into a video game?
+
+
+    I''m going to take a game I made called Starscape and split it apart into all
+    the different sections that needed implementing. This is like a movie storyboard,
+    and it helps the team to visualize how all the different parts of the game fit
+    together.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_0.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_1.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_2.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_3.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_4.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_5.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_6.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_7.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_8.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_9.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_10.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_11.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_12.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_13.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_14.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_15.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_16.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_17.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_18.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_19.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_20.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_21.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_43_22.png)'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Key
+
+
+    +   1. Pre-load: It will take about 10 seconds to load the game.
+
+
+    +   2. Splash: Show the Moonpod animation—this is the same on all my games.
+
+
+    +   3. General introduction: Introduce the characters and the overall story.
+
+
+    +   4. Unlock: After downloading it from a web site, players need a way to pay
+    for the game.
+
+
+    +   5. Hall of fame: The top 10 players'' names and scores.
+
+
+    +   6. Main menu: From here, we can access options, new game, load, save, and
+    so on.
+
+
+    +   7. New game: Type in your name and set the difficulty level you want.
+
+
+    +   8. Options: Set the screen resolution, volume, and so on.
+
+
+    +   9. Save and load: Save a game or Load an old one.
+
+
+    +   10. Main intro: Show a detailed animation introducing your part in the story.
+
+
+    +   11. Research: Decide what equipment you would like to work on next.
+
+
+    +   12. In game menu: Choose which part of the game to visit from here.
+
+
+    +   13. Storage: Review all the equipment you have made or found, but are not
+    using.
+
+
+    +   14. Ship modification: Change the equipment attached to a ship.
+
+
+    +   15. Docking bays: Select which to modify.
+
+
+    +   16. Navigation: Use the maps to navigate around space.
+
+
+    +   17. Modify station: Attach equipment to your space station.
+
+
+    +   18. Space: Fly, fight, mine, shoot asteroids, collect items, and talk to people.
+
+
+    +   19. Station options: Launch a fighter or warp out of the level.
+
+
+    +   20. Warp: Warp in and out of levels.
+
+
+    +   21. Boss fight: Levels are grouped into areas; each area has a big boss to
+    fight.
+
+
+    +   22. Death: When you die, go out with a bang!
+
+
+    +   23. Death animation: Mark your passing and display a summary of achievements.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# Quiz\n\nAre you interested in working in the games industry, but not sure\
+    \ what role you are best suited for? Take this fun quiz to see which job best\
+    \ suits your personality and skills.\n\n+   It's time to go on vacation! However,\
+    \ you have limited spending money, so you cannot afford to visit all the attractions.\
+    \ What should you do?\n  a) Let's get all the facts and figures into a spreadsheet.\n\
+    \  b) I don't care if I run out of money—I just want to take photos and gaze at\
+    \ the sunsets.\n  c) Jenny's good at this kind of thing; she went there last year,\
+    \ so let's get her to help.\n  d) If I write everything down carefully, I can\
+    \ try different combinations.\n  e) If I run out of money, I'll just make up my\
+    \ own entertainment—it's not a big deal.\n  f) I just want to talk to everyone,\
+    \ really get to know the place, and visit the cafés with the best music.\n\n+\
+    \   The school magazine is interviewing you. What do you think about school?\n\
+    \  a) I like math, science, and computer science classes. Last week, I built a\
+    \ water-powered rocket that really worked.\n  b) I like art and design classes,\
+    \ and I love showing my friends I have made.\n  c) I like working on group projects\
+    \ and socializing, but sometimes people say I'm bossy.\n  d) I like homework.\
+    \ I spend a lot of time making sure my work is neat and well laid out.\n  e) I\
+    \ don't really like being told what to do or doing anything boring. I like it\
+    \ when we can pick our projects to work on.\n  f) I like computer science, foreign\
+    \ language, and music classes best.\n\n+   What are your hobbies? Let's assume\
+    \ games is number one!\n  a) I like taking things apart to see how they work and\
+    \ building models.\n  b) I like going to art galleries, cutting out pictures from\
+    \ magazines for scrapbooks, and craft projects."
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '+   c) I''ve joined lots of clubs and I like being with my group of friends.
+
+
+    +   d) I like making lists and keeping all my collections organized.
+
+
+    +   e) I don''t mind being on my own; I read a lot, sometimes write stories, and
+    enjoy long walks when I can think clearly. I also play board games with friends.
+
+
+    +   f) I''m learning to play an instrument, and I have uploaded some tracks I
+    made to the Internet.
+
+
+    # 4. The school is putting on a show. How will you get involved?
+
+
+    +   a) I think it is time for some impressive special effects and a pre-designed
+    light show.
+
+
+    +   b) I''d love to do the stage design or the costumes.
+
+
+    +   c) I''ll have to direct: I already know who will make a great lead.
+
+
+    +   d) I could help everyone with their lines and prompt anyone who forgets one.
+
+
+    +   e) I think we should do our own play for once. In fact, I have some great
+    ideas for a show.
+
+
+    +   f) It has to be a musical, and I''m sure a live orchestra would be better
+    than the usual prerecoding.
+
+
+    # Answers
+
+
+    Mainly A: You are a logical person who would make a great programmer.
+
+
+    Mainly B: You are creative and artistic, so consider a career as a game artist.
+
+
+    Mainly C: You like to take charge and organize people, so a producer would be
+    a good choice.
+
+
+    Mainly D: You are methodical and careful, so you''d make a good games tester.
+
+
+    Mainly E: You have a powerful imagination and are full of ideas, which is perfect
+    for a designer.
+
+
+    Mainly F: You have a good ear, so consider becoming an audio engineer.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Glossary
+
+
+    **Alpha** point in a game''s development when all the tools are finished and it
+    is time to build the levels
+
+
+    **certification** a publisher uses its own testers to certify that a new game
+    works properly on a particular console, like the Xbox 360 or PS3
+
+
+    **genre** style or category of game, such as role-player game or casual game
+
+
+    **artificial intelligence (AI)** code that makes the computer opponent seem realistic,
+    like you are playing against a person
+
+
+    **home computer** although it can be used to play games, it can also be used for
+    many other tasks, making games
+
+
+    CPU central processing unit. It is the silicon chip at the heart of a computer,
+    game console, tablet, or phone. It used to be accompanied by many other chips
+    that handled sound, graphics, and so on, but it is more common today to find one
+    large chip that does everything.
+
+
+    **milestone** a check (often monthly) on the progress of a game''s development;
+    if the game does not pass, then the publisher may withhold payments to the programmer
+    or company
+
+
+    **Assembler** complicated low level language used when great speed is needed
+
+
+    **motion capture** special cameras that capture the movement of actors and allow
+    them to replay that movement to create realistic animation
+
+
+    **Basic** simple programming language designed for novice programmers
+
+
+    **physics** rules describing how objects move, fall, and collide
+
+
+    **beta** point in a game''s development when it is finished but contains a lot
+    of bugs that need fixing
+
+
+    **debugger** special software that monitors a game as it runs and helps track
+    down bugs that make the game crash
+
+
+    **bug** error in a computer program
+
+
+    **game console** early examples came with Basic, but now they no longer have keyboards
+    and are dedicated to playing games only
+
+
+    C++ powerful, complex language used to produce nearly all console and PC games.
+    Knowledge of C++ is often required for game programming jobs.
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_47_0.png)'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'platform hardware or environment that a game must run on. A PC windows platform
+    is different from a tablet Android platform, and this needs to be dealt with in
+    the computer code.
+
+
+    producer person responsible for ensuring that game is finished on time
+
+
+    prototype quick, rough version of an idea used to test if it''s any good
+
+
+    prototyping trying to very quickly test how a small part of a game might look
+    or play. It is a way of experimenting without spending a year making the whole
+    game.
+
+
+    Python popular programming language sometimes used by professionals for game scripting
+
+
+    random code that changes things every time it runs, ensuring that a game does
+    not play the same every time
+
+
+    server computer that hosts games, usually on the Internet, so people can play
+    together
+
+
+    simulation recreation of a real thing
+
+
+    texture picture used to wrap around a 3D game object to make it look solid—for
+    example, a photo of a basketball player''s face wrapped around his in-game model''s
+    head
+
+
+    variable in programs, we often need to hang on numbers or text, and we can store
+    this data temporarily in a named variable. It is like getting a box, putting important
+    things in it, and then sticking on a label that you can find it again later.
+
+
+    wireframe if you take the textures off a 3D game object, you are left with just
+    the scaffolding or defining the shape
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_48_0.png)'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# # Find Out More
+
+
+    # # Books
+
+
+    Byrne, Paul. Computer Game and Film Graphics (Art Off the Wall). Chicago: Heinemann
+    Library, 2007.
+
+
+    Harbour, Jonathan S. Video Game Programming for Kids. Boston: Course Technology
+    PTR, 2013.
+
+
+    LEAD Project. Super Scratch Programming Adventure! Learn to Program by Making
+    Games. San Francisco: No Starch, 2012.
+
+
+    # # Web sites
+
+
+    www.appinventor.mit.edu
+
+
+    Want to make mobile games, but C++ is too tricky? App Inventor is a bit like Scratch
+    and is very easy to use—just snap together bits of code, plus it is free!
+
+
+    gaming.adobe.com/getstarted
+
+
+    Want to make a web game using Flash? If you are in school, you can get a copy
+    of the software you need for free.
+
+
+    www.kodugamelab.com
+
+
+    Kudu is also for those new to programming; it is free and made by Microsoft. For
+    a small fee, you can also get a version that works on an Xbox 360. Unlike Scratch,
+    you can actually make 3D games.
+
+
+    www.ludumdare.com/compo
+
+
+    Want to try out your new skills and meet other programmers? Ludumdare is a regular
+    online competition and forum that gives you a theme and lets you make a game around
+    that theme in 48 hours.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'www.madewithmarmalade.com
+
+
+    If you are comfortable with C++ but want to make games for cell phones and tablets,
+    get a free copy of Marmalade to take care of the boring parts.
+
+
+    www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express
+
+
+    Games on consoles are written in C++. Visual Studio is one of the most common
+    packages used in the industry, and this “express” version is free!
+
+
+    www.moonpod.com
+
+
+    This is my indie gaming website. You can play some of the games I made for free,
+    ask a question on the forum, or just say hello.
+
+
+    www.pygame.org/news.html
+
+
+    This simple-to-use programming language is free and is a good option to try after
+    Basic.
+
+
+    scratch.mit.edu
+
+
+    If you are new to programming, this is the place to start. Scratch is free and
+    easy to learn. Take a look at my page: scratch.mit.edu/projects/MarkFeatherstone/2503601.
+
+
+    smallbasic.com
+
+
+    Microsoft’s free version of Basic after you have mastered Scratch or Kodu. It
+    can also be an introduction to Visual Basic, which could help to get you a job
+    in the future.
+
+
+    # Topic for research
+
+
+    Ask your computer science teacher if you can organize a game competition, maybe
+    using Scratch, and get everyone in your class involved.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# # Index
+
+
+    2D 20, 21, 29
+
+    3D 14, 20, 24
+
+    Alpha 6, 36
+
+    Angry Birds 25
+
+    apps 33, 34
+
+    Arkham Horror 39
+
+    artists 20
+
+    Assembler 14, 15
+
+    audio engineers 20, 21
+
+    Basic 10, 12, 14, 17
+
+    BBC Micro 12, 13, 14
+
+    becoming a game
+
+    developer 10-13, 16
+
+    Beta 6
+
+    big developers 95, 37
+
+    board games 19, 35
+
+    bonuses 5
+
+    bugs 8, 18, 23
+
+    C++ 16, 17
+
+    card games 39
+
+    Carmack, John 33
+
+    causal games 25
+
+    cell phone 30, 34
+
+    certification 4, 6
+
+    Civilization 31
+
+    code 19, 28, 30, 34
+
+    communication skills 19,
+
+    22, 23
+
+    components of a video
+
+    game 40-41
+
+    consoles 10, 11, 15, 32, 33
+
+    crashes 6, 23
+
+    desesigners 19
+
+    different types of day 8–9
+
+    Donkey Kong 10, 23
+
+    earning a life 5, 9, 34,
+
+    35, 37
+
+    Elite 14
+
+    EVE Online 28
+
+
+    feature creep 36
+
+    female developers 22
+
+    first-person shooter (FPS)
+
+    games 26
+
+    free games 25, 35
+
+    game developing process
+
+    6
+
+    GoldenEye 26
+
+    Gunmetal 4, 20, 26
+
+    height maps 24, 25
+
+    indie developers and
+
+    games 29, 32, 33, 37
+
+    information technology
+
+    classes 16
+
+    Internet 38
+
+    Kinect masters 30
+
+    launch day 4, 6
+
+    location work 20, 21
+
+    massively multiplayer
+
+    onlinear (MMO) games
+
+    28, 29
+
+    Meier, Sid 31
+
+    Metacric 5
+
+    Microsoft 32, 33, 35
+
+    milestones 9, 22
+
+    nMiyamoto, Shigeru 23
+
+    monitor 18
+
+    motion capture 27
+
+    music 21
+
+    Nintendo 32, 35
+
+    Nintendo Wii 30
+
+    Nomura, Tetsuya 6
+
+    open development 33
+
+    PCs 10, 12, 33
+
+    physical games 30
+
+    problem solving 6, 22, 23
+
+    procedural generation 14
+
+    producers 22, 36
+
+
+    programmers 6, 7, 8, 18
+
+    programming languages
+
+    10, 11, 13, 14, 16, 17,
+
+    18, 35
+
+    protyping 6, 19, 29
+
+    publishers 4, 35, 36, 37
+
+    puzzle games 25, 29
+
+    Raspberry Pi 13
+
+    Reason 20
+
+    reviews 5
+
+    role-playing games (RPGs)
+
+    6, 24
+
+    Santiago, Klee 22
+
+    scripts 19
+
+    shoot ''em upps 29
+
+    The Sims 1, 31, 35
+
+    simulation games 31
+
+    software 20, 34
+
+    software libraries
+
+    Sony 32, 33, 35
+
+    PS3 30
+
+    sound effects 21
+
+    Space Invaders 7, 10
+
+    sports games 27
+
+    Starcraft 21, 40–41
+
+    Street Fighter 19
+
+
+    testers and testing 6, 23,
+
+    39
+
+    web sites 29, 35
+
+    Wolfenstein 33 33
+
+    Word Pirate 29
+
+    work-for-hire developers
+
+    36
+
+    World of Warcraft 28
+
+    Wright, Will 19'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: 'MAXWELL MEMORIAL LIBRARY
+
+    14 GENESEE STREET
+
+    CAMILLUS, NEW YORK 13081'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# DISCARDED'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Do you like DISCARDED stuff? How about video games?
+
+
+    Maybe you could learn to program your own computer games!
+
+
+    Mark Featherstone has worked on everything from small indie puzzle games to big-budget
+    action extravagaganzas. In this book you''ll find out all about his amazing job!
+
+
+    Other books about cool jobs
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_55_0.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_55_1.png)
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_55_2.png)
+
+
+    Level V
+
+
+    ![](img/3b65410812b2afeea872d1d38e85b469_55_3.png)
+
+
+    Raintree a capstone imprint www.capstonepub.com'
+  merge: -1
+  pgno: 55
