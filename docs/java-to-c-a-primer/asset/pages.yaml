@@ -1,0 +1,3487 @@
+- img_proc: true
+  md: '# # JAVA TO C:
+
+    A PRIMER
+
+
+    Charlie McDowell & Jørgen Villadsen
+
+
+    ![](img/2bdc652be3c5c6d927ebe8559dc9e48c_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Java to C: A Primer'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Java to C: A Primer
+
+
+    Charlie McDowell
+
+
+    Jørgen Villadsen
+
+
+    ![](img/2bdc652be3c5c6d927ebe8559dc9e48c_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Java to C: A Primer
+
+
+    Charlie McDowell, University of California, Santa Cruz
+
+    Jørgen Villadsen, Technical University of Denmark
+
+
+    1st edition, 2nd printing
+
+    (c) 2013, Polyteknisk Forlag
+
+
+    ISBN 13: 978-87-502-1044-3
+
+
+    Cover: Charlotte Haubach Jensen
+
+    Print: Eurographic
+
+
+    Printed in Denmark 2015
+
+
+    All rights reserved. No part of this book may be reprinted or reproduced
+
+    u utilized in any form or by any electronic, mechanical, or other means,
+
+    now known or hereafter invented, including photocopying and recording,
+
+    or in any information storage or retrieval system, without written permis-\sion
+    from the publisher. The publisher makes no representation, express
+
+    or implied, with regard to the accuracy of the information contained in
+
+    this book and cannot accept any legal responsibility or liability for errors
+
+    or omissions that may be made.
+
+
+    Polyteknisk Forlag
+
+    Anker Engelunds Vej 1
+
+    DK - 2800 Lyngby
+
+    Tel.: +45 77 42 43 28
+
+    Fax: +45 77 42 43 54
+
+    forlag@polyteknisk.dk
+
+    www.polyteknisk.dk'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Preface
+
+
+    This book is designed to be used as a quick introduction to C for programmers
+    already familiar with Java. It is not a replacement for a reference book on C,
+    but is instead a supplement. For the programmer already familiar with Java, the
+    typical book on C requires the reader to wade through many details of already-familiar
+    material. In this book, we quickly present the main concepts needed to begin writing
+    serious programs in C, highlighting the differences between C and Java.
+
+
+    In general we follow the Java code conventions but only two spaces are used as
+    the unit of indentation and braces are not used around single statements as part
+    of a control structure.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Contents
+
+
+    +   0.1 C standards .................................................................................
+    . . . . . 9
+
+
+    # 1 INTRODUCTION .................................................................................
+    . . . . . . . 11
+
+
+    +   1.1 “Hello, world!" . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+
+    +   1.2 Built-in types, local variables, loops, and conditionals 13
+
+
+    +   1.3 Output with printf() .......................................................................................
+    18
+
+
+    +   1.4 Input with scanf() ..................................................................................................
+    23
+
+
+    # 2 PASSING PARAMETERS TO FUNCTIONS ...................................................................
+    29
+
+
+    +   2.1 Declaring functions ......................................................................................
+    29
+
+
+    +   2.2 Pointers ...................................................................................................................
+    31
+
+
+    +   2.3 Call-by-reference ...................................................................................................
+    34
+
+
+    # 3 ARRAYS .......................................................................................................................
+    41
+
+
+    +   3.1 One-dimensional arrays ..................................................................................
+    41
+
+
+    +   3.2 Multidimensional arrays ...............................................................................
+    43
+
+
+    +   3.3 Passing arrays as parameters ...................................................................
+    44
+
+
+    +   3.4 Dynamically allocated arrays ...................................................................
+    48'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# 4 STRINGS
+
+
+    +   4.1 Strings: Arrays of characters . . . . . . . . . . . . . 53
+
+
+    +   4.2 Manipulating strings . . . . . . . . . . . . . . 56
+
+
+    +   4.3 Reading strings with scanf() . . . . . . . . . . . 61
+
+
+    # 5 STRUCTURED DATA TYPES
+
+
+    +   5.1 Declaring a structured data type . . . . . . . . 67
+
+
+    +   5.2 Passing structures as parameters . . . . . . 71
+
+
+    +   5.3 Pointers to structures . . . . . . . . . . 77
+
+
+    +   5.4 Dynamic allocation of structure values . . 80
+
+
+    # 6 FILE I O AND MULTIPLE SOURCE FILES
+
+
+    +   6.1 File I/O and command-line arguments . . . 87
+
+
+    +   6.2 Header files . . . . . . . . . . . . . 92'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 0.1. C standards
+
+
+    The C programming language was developed in the early 1970s, originally as a system
+    implementation language, and Brian Kernighan and Dennis Ritchie published the
+    first edition of “The C Programming Language” in 1978. It is known to C programmers
+    as “K&R” and the second edition of the book covers the ANSI C standard from 1989.
+
+
+    The ISO standard, known as C90, was published in 1990 as ISO/IEC 9899:1990. It
+    is technically identical to the ANSI C standard. A new edition of the ISO C standard,
+    known as C99, was published in 1999 as ISO/IEC 9899:1999. Yet another edition
+    of the ISO C standard, known as C11, was published in 2011 as ISO/IEC 9899:2011.
+
+
+    As of February 2013 the default for the GNU Compiler Collection (GCC) is C90 with
+    certain GNU extensions, like the // single line comment style, which is allowed
+    in C99 and C11. The programs in this book have been tested using the gcc command
+    without any options. The current default, if no C language dialect options are
+    given, is the option -std=gnu90.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# 1. Introduction\n\nFor the language features that are common to both C and\
+    \ Java, the two languages usually have similar if not identical syntax. One of\
+    \ the major differences between the two languages is that C is not object-oriented.\
+    \ This means that a program is not a collection of classes. Instead, a C program\
+    \ is a collection of functions. Functions in C are very similar to static methods\
+    \ in Java. In this chapter we introduce the basic structure of a C program, including\
+    \ built-in types, variable declarations, simple output, conditionals, and loops.\
+    \ As you will see, most of these features are nearly identical to their counterparts\
+    \ in Java.\n\n# 1.1. \"Hello, world!\"\n\nLet's begin with the classic \"Hello,\
+    \ world!\" program.\n\n```\n/* hello.c\n * Print hello.\n */\n#include <stdio.h>\n\
+    \nint main() {\n    printf(\"Hello, world!\\n\");\n    return 0;\n}\n```\n\nThe\
+    \ output of this program is:\n\nHello, world!"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# Dissection of hello.c\n\n```\n/* hello.c\n * Print hello.\n */\n```\n\nThis\
+    \ is a comment, just as in Java. Most C compilers also allow the //\\single line\
+    \ comment style.\n\n```\n#include <stdio.h>\n```\n\nThis is similar in purpose\
+    \ to import in Java; however, the effect is somewhat\ndifferent. The Java import\
+    \ statement tells the Java compiler where to look\nadditional classes. The #include\
+    \ is called a compiler directive. It tells\nt compiler to insert the contents\
+    \ of the named file, std.h in this case,\ndirectly into the program before the\
+    \ main phase of compilation.\nIn example, the #include is used to include information\
+    \ about the\nstandard library function printf() which will be discussed in more\
+    \ detail\nwhen we discuss functions and parameters.\n\n```\nint main()\n```\n\n\
+    This line declares main() to be a function that returns an int and has no\nparameters.\n\
+    \nMany programmers prefer the following alternative declaration:\n\n```\nint main(void)\n\
+    ```\n\nThe keyword void is optional; it is used to emphasize that no parameters\n\
+    expected. But as we will see in chapter 6 it is also possible to declare\nmain()\
+    \ with parameters.\n\nThe body of the function is defined between braces, just\
+    \ as in Java. Many\nprogrammers place this opening brace on a line by itself.\
+    \ Either style is\nfine; however, you should try to be consistent."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Introduction 13
+
+
+    ```
+
+    printf("Hello, world!\n");
+
+    ```
+
+
+    Java also includes System.out.printf() with many of the same format features as
+    those of printf() in C. We will discuss printf() in more detail later. As used
+    here, printf() is similar to System.out.print() in Java.
+
+
+    ```
+
+    return 0;
+
+    ```
+
+
+    By convention, a return value of 0 from main() indicates normal completion to
+    the operating system. If the program is terminating abnormally, a non-zero return
+    value can be used by the operating system. To compile this program from a command
+    line use:
+
+
+    ```
+
+    gcc hello.c -o hello
+
+    ```
+
+
+    Depending upon the configuration of your computer, instead of gcc, you may need
+    to use cc or some other command to compile the program. This will create a file
+    hello (possibly with an extension for the file type), which can be executed by
+    simply typing the name of the file.
+
+
+    # 1.2. Built-in types, local variables, loops, and conditionals
+
+
+    Java primitive types have equivalent types in C. The only exception is the Java
+    type boolean. C does not have a boolean type. Instead, C uses integers to represent
+    boolean values, interpreting the integer value zero as false and any other integer
+    value as true.
+
+
+    Trouble spot
+
+
+    C has no boolean type. Use int instead, interpreting non-zero as true and zero
+    as false.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# 14\n\nLocal variables for the built-in types in C are declared just as in\
+    \ Java. The same initialization syntax is also allowed. The one difference is\
+    \ that variables must be declared at the beginning of a block or compound statement.\n\
+    \n# Trouble spot\n\nAll variable declarations in a block must appear before the\
+    \ first executable statement.\n\nC includes most of the same numeric, relational\
+    \ and boolean operators as Java, summarized in the following table.\n\n| Description\
+    \ | Operators |\n| --- | --- |\n| Arithmetic operators | +, -, *, /, % |\n| Relational\
+    \ operators | <, <=, >=, ==, != |\n| Boolean operators | &&, || |\n| Bitwise operators\
+    \ | &, |, ^, !, <<, >> |\n\nThe boolean operators operate on integer values, treating\
+    \ zero as false and non-zero as true.\n\nA boolean operator always results in\
+    \ a value of 0 or 1. The division operator, /, is the same as in Java. In particular,\
+    \ integer division truncates towards zero without any warning. Also, as in Java,\
+    \ the boolean operators are short-circuit operators, only evaluating their second\
+    \ operand if necessary.\n\nThe syntax for if-else statements, for loops, and while\
+    \ loops is identical to that of Java. The following program in C demonstrates\
+    \ the substantial syntactic similarity between C and Java.\n\n```\n/* Syntax.c\n\
+    \ * Demonstrate local variables, built-in types,\n * if-else and loops.\n */\n\
+    #include <stdio.h>\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Introduction 15
+
+
+    # Dissection of basicSyntax.c
+
+
+    ```
+
+    int num1 = 4, num2 = 10, i;
+
+    double ratio;
+
+    ```
+
+
+    Here we declare three integer variables of type int, and one floating-point variable
+    of type double. Unlike Java, these types do not have a fixed size; however, in
+    general they will be the same as the Java types. Two of the variables have been
+    initialized, the others contain undefined data. Unlike Java, C will not give an
+    error if you attempt to use a local variable that has not been initialized. The
+    C program will simply use whatever value is stored in the memory location for
+    the variable. That value could be anything.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# 16
+
+
+    # Trouble spot
+
+
+    Most C compilers will not normally warn you about uninitialized variables. Use
+    gcc -Wall to generate all possible warning messages.
+
+
+    The syntax for the for loop in C is nearly identical to that in Java. The one
+    difference is the loop index variable cannot be declared as part of the loop.
+    In Java, you could:
+
+
+    ```
+
+    for (int i = 1; i <= num1; i++) ...
+
+    ```
+
+
+    This is syntax error in C. As shown in this example, C includes the increment
+    operator ++. It can be used postfix or prefix, and has the exact same behavior
+    as in Java. The for loop above uses an additional feature of the printf() function.
+    The string passed to a printf() can contain special characters that are always
+    preceded by the percent character. The sequence %d says that the next parameter
+    to the printf() should be converted from an integer to a string and inserted at
+    this point. The space after the printf() simply prints a newline.
+
+
+    The syntax for the while loop in C is identical to that in Java. As shown here,
+    C also includes the decrement operator --, which can be used as either prefix
+    or postfix, having the exact same behavior as in Java.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# Introduction\n\n```\nif (num1 != 0)\n    ratio = num2 / num1;\nelse\n   \
+    \ ratio = num2 / 3.0;\n    printf(\"%f\\n\", ratio);\n```\n\nThe syntax for if\
+    \ statements and if-else statements is identical to that in Java. There is one\
+    \ important difference because C does not contain a boolean. The result of the\
+    \ relational operators such as >, <=, and == is a value of type int. The value\
+    \ will be 1 if the comparison is true and 0 if it is false. This will become important\
+    \ later, because many C programmers use this fact in their programs. For example,\
+    \ the above if-else statement can be rewritten equivalently as:\n\n```\nif (num1)\n\
+    \    ratio = num2 / num1;\nelse\n    ratio = num2 / 3.0;\n```\n\nThe format string\
+    \ %f in a printf() indicates that the next parameter to the printf should be converted\
+    \ from a floating-point value to a string and inserted in the output string at\
+    \ that point.\n\nAll of the rules about using braces to place blocks of statements\
+    \ in the branches of an if-else statement are the same as in Java. Also, nesting\
+    \ of if-else statements is the same in C as in Java.\n\n# Trouble spot\n\nIn Java\
+    \ the following is a syntax error:\n\n```\nif (num1 = 0) ...\n```\n\nThe expression\
+    \ num1 = 0 assigns zero to num1 and the value of the expression is 0. It is interpreted\
+    \ as false, and the false branch of the if statement will be taken. In Java this\
+    \ is a syntax-tax error because the expression does not result in a boolean value.\
+    \ This is a particularly insidious error in C because it is so close to what was\
+    \ probably intended:"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# 18
+
+
+    ```
+
+    if (num1 == 0) ...
+
+    ```
+
+
+    To help catch such typing errors, many programmers make
+
+    habit of writing
+
+
+    ```
+
+    if (0 == num1) ...
+
+    ```
+
+
+    instead. Then, if the == is mistyped as =, a compile time error
+
+    will be generated.
+
+
+    # 1.3. Output with printf()
+
+
+    The standard output function in C is printf(). The name printf is
+
+    derived from the fact that this function allows for formatted printing. The
+
+    function printf() can accept any number of arguments. This looks a
+
+    bit like function overloading, but C does not support function overloading.
+
+    Instead, the function printf() is designed to accept an arbitrary number
+
+    of arguments.
+
+
+    The first argument to printf() is always a format string. The format
+
+    string is then followed by zero or more additional parameters that contain
+
+    t values that are to be printed, as part of the output string.
+
+
+    The format string contains both literal characters to be printed, and format-
+
+    characters. A sequence of formatting characters always begins with
+
+    the special character % and ends with a conversion character. Between the
+
+    % and the conversion character can be additional formatting characters.
+
+    The following example shows how literal characters and several conversion
+
+    specifications can be combined in a single printf().'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# Introduction 19\n\n```\n/* printfExample.c\n * Simple use of printf().\n\
+    \ */\n#include <stdio.h>\n\nint main() {\n    int intVal = 10;\n    double doubleVal\
+    \ = 1.234;\n\n    printf(\"intVal = %d, doubleVal = %f\\n\",\n           intVal,\
+    \ doubleVal);\n\n    return 0;\n}}\n```\n\nThe output of this program is:\n\n\
+    ```\nintVal = 10, doubleVal = 1.234000\n```\n\nNote how the values of the two\
+    \ variables were inserted into the output at the points where the format conversion\
+    \ strings %d and %f appeared. The following table lists all of the conversion\
+    \ characters for printf()."
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# 20
+
+
+    | Conversion character | Argument | Description |
+
+    | --- | --- | --- |
+
+    | c | char | Print a single character. |
+
+    | d or i | int | Print an integer. |
+
+    | u | int | Print as an unsigned integer. |
+
+    | o | int | Print an integer in octal. |
+
+    | x or X | int | Print an integer in hexadecimal. |
+
+    | e or E | float or double | Print in scientific notation. |
+
+    | f | float or double | Print a floating-point value. |
+
+    | g or G | float or double | Same as e, E, or f, whichever uses fewest characters.
+    |
+
+    | s | char * | Print a string. |
+
+    | p | void * | Print a pointer''s value in hexadecimal. |
+
+    | n | int * | Nothing is printed; instead store into the argument the number of
+    characters printed so far. |
+
+    | % | none | Print a single %; there is no corresponding argument. |
+
+
+    The basic formatting specified by the conversion characters shown in this table
+    can be modified with additional formatting characters inserted between the %,
+    signaling a format string and the conversion character that ends the format string.
+    This additional formatting information may include the following, in order: flags,
+    field width, precision, and length modifier, as described below.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Introduction 21
+
+
+    Flags — There are several optional flags that can be used to control left/right
+    justification, fill character, and related formatting information. They are described
+    in the following table.
+
+
+    | Flag | Description |
+
+    | - | - |
+
+    | - | The output string will be left-justified in the field. The default is right-justification
+    |
+
+    | + | For conversions that might generate a minus sign for negative values, the
+    + is normally omitted for positive values. With this flag, the + is included.
+    |
+
+    | space | Inserts a space in front of non-negative numeric output when using a
+    conversion that might generate a minus sign. This is similar to the + flag. The
+    space flag is used to align the first digit when the output includes both negative
+    and positive values. If both the + and space flags are included the space flag
+    is ignored. |
+
+    | # | The effect of this flag depends upon the conversion character. With conversion
+    character o, a zero is printed at the front of the output string. The leading
+    zero indicates to the reader that this is in octal format. With conversion characters
+    x or X, the string 0x or OX is printed at the front of the output string indicating
+    hexadecimal to the reader. With conversion characters g or G, trailing zeros are
+    printed. With conversion characters e, E, f, g, or G, a decimal point is always
+    printed. |
+
+    | 0 | Numeric conversions will use zeros instead of spaces to pad the output to
+    fill the specified field. |
+
+
+    Field Width — Each converted argument is printed in a field. By default, the field
+    is just wide enough to hold the converted value. When a field width is specified,
+    the output is padded on the left with zeros or spaces, or on the right with spaces,
+    depending on the flags. If the field width is too small, it is extended to the
+    width of the converted argument.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'Precision — Precision is specified by a period followed by a non-negative integer.
+    The precision is interpreted differently for different conversion characters,
+    as shown in the following table.
+
+
+    | Conversion characters | Effect of precision specification |
+
+    |---|--|
+
+    | d, i, o, u, x, X | The precision specifies the minimum number of digits that
+    will be printed. Leading zeros will be printed as necessary. |
+
+    | e, E, f | The precision specifies the number of digits that will be printed
+    to the right of the decimal point. |
+
+    | g, G | The precision specifies the maximum number of significant digits that
+    will be printed. |
+
+    | s | The precision specifies the maximum number of characters that will be printed
+    from the string. |
+
+
+    Length Modifier — An l1 (that is, the letter l) placed just before d, i, o, u,
+    x or X conversion character indicates that the corresponding argument to be converted
+    is a long int. Similarly an h placed before those same conversion characters indicates
+    that the argument is a short int. An L placed before an e, E, f, or G indicates
+    that the argument is a long double.
+
+
+    To summarize, if we f stand for flags, w for width of the field, p for precision,
+    1 for length modifier, and c for conversion character, we see that a conversion
+    string has the general form:
+
+
+    ```
+
+    %fw.plc
+
+    ```
+
+
+    where only the % and the conversion character represented by c are required. The
+    following program and its output demonstrates a few of the many formatting possibilities.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Introduction 23\n\n```\n/* printf.c\n * Demonstrate a few formatting possibilities.\n\
+    \ */\n#include <stdio.h>\n\nint main() {\n    int anInt = 123;\n    float aFloat\
+    \ = 1.234567;\n\n    printf(\"%1234567890,1234567890\\n\");\n    printf(\\%-10.4d,%%10.4d\\\
+    n\", anInt, anInt);\n    printf(\"%010d,%%#x\\n\", anInt, anInt);\n    printf(\"\
+    %-10.4f,%%10.7f\\n\", aFloat, aFloat);\n    return 0;\n}\n```\n\n1234567890,1234567890\n\
+    +0123,+0123\n000000123,0x7b\n1.2346,+1.2345670\n\n# 1.4. Input with scanf()\n\n\
+    The function scanf() is similar in form to printf() but it is used for input instead\
+    \ of output. Here is a simple example that uses scanf() to read an integer and\
+    \ a floating-point value from the standard input device, usually the keyboard.\n\
+    \n```\n/* scanfExample.c\n * Simple use of scanf().\n */\n#include <stdio.h>\n\
+    ```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# 24\n\n```\nint main() {\n    int intVal;\n    float floatVal;\n\n    scanf(\"\
+    %d\", &intVal);\n    scanf(\"%f\", &floatVal);\n\n    printf(\"%d, floatVal =\
+    \ %f\\n\",\n           intVal, floatVal);\n\n    return 0;\n}\n```\n\nThe strings\
+    \ for scanf() are very similar to those for printf(). In the example we use %d\
+    \ to indicate that an int is to be read from the standard input device and %f\
+    \ to indicate that a float is to be read. These input strings will automatically\
+    \ skip over any white space characters. The white space characters are newline,\
+    \ space, and tab. Notice the variables into which the data is to be stored are\
+    \ preceded by the &. The & is the \"address of\" operator. It will be explained\
+    \ in more detail. It must always be used when reading built-in types into variables.\
+    \ The function scanf() needs to know where to store the values variables; hence\
+    \ the function is passed the \"address of\" the variables where the values are\
+    \ to be stored. It is not possible in Java to write a function like scanf with\
+    \ multiple output parameters that are primitive types.\n\n# Trouble spot\n\nIf\
+    \ you get the & in front of one of the parameters to scanf(),\ny program will\
+    \ most likely abort with some obscure message.\n\nThe & in front of a variable\
+    \ or expression of type T changes the type of the expression from type T to type\
+    \ T*. The type T* is a pointer to a value of type T. We will explain this in chapter\
+    \ 2. In the following table when you see the argument must be type T*, then is\
+    \ an indication that you can place a variable of type T, preceded by & in the\
+    \ corresponding argument for scanf(). The following table lists the conversion\
+    \ characters for scanf()."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Introduction 25
+
+
+    | Conversion character | Argument | Description |
+
+    |---|---|---|
+
+    | c | char* | Read a single character. |
+
+    | d | int* | Read a decimal integer. |
+
+    | i | int* | Read an integer in decimal, octal, or hexadecimal. Octal is indicated
+    by a leading 0, and hexadecimal by a leading 0x. |
+
+    | u | unsigned* | Read an unsigned decimal integer. |
+
+    | o | unsigned* | Read an octal integer. No leading 0 is required. |
+
+    | x, X | int* | Read a hexadecimal integer. No leading-0x or 0X is required. |
+
+    | e, f, g, G | float* | Read a floating point number. |
+
+    | s | char* | Read a sequence of non-white characters. (Do not use this with &c,
+    where c is a simple char variable. See chapter-4.) |
+
+    | p | void** | Read a pointer''s value in the same format as that created with
+    p in printf(). |
+
+    | n | int* | Store into the argument the number of characters read so far. |
+
+    | % | none | Skip a single % in the input. |
+
+    | [...] | char* | Read characters as in conversion character xs, except that only
+    characters specified by the scan set between the brackets are read. Any others
+    terminate the input for this argument. The scan set is discussed further in chapter
+    4.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '26
+
+
+    As with printf(), the basic formatting specified by the conversion characters
+    shown in the previous table can be modified with additional formatting characters
+    inserted between the % signaling a format string and the conversion character
+    that ends the format string. This additional formatting information may include
+    the following flags, in order: assignment (*), field width (an integer), and length
+    modifier (of h, 1, or L), as described below.
+
+
+    | Flag | Description |
+
+    |---|---|\| * | The read value is discarded. There is no corresponding argument.
+    |
+
+    | an integer | This specifies the maximum number of characters that will be scanned
+    for the current argument. |
+
+    | h | The length modifier h can precede a, i, o, u, x, or X conversion character.
+    It indicates that the corresponding argument is a short int*, or unsigned short
+    int*. |
+
+    | 1 | Same as h but the corresponding argument is a long int*, or unsigned long
+    int*. In addition, 1 can precede e, E, f, g, or G, in which case the argument
+    is a double*. |
+
+    | L | The length modifier L can precede e, E, f, g, or G. The corresponding argument
+    should be a long double*. |'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Chapter Summary
+
+
+    +   - A C program is a collection of functions. Functions are very similar to
+    static methods in Java. C program execution begins in the function main().
+
+
+    +   - Comments are indicated with // or /* ... */, just as in Java.
+
+
+    +   - The standard C types include the Java primitive types except for non-zero
+    is interpreted as true.
+
+
+    +   - C represents boolean values as integers. Zero is interpreted as false; non-zero
+    is interpreted as true.
+
+
+    +   - In general, the built-in operators for the standard C types are the same
+    as those for the corresponding Java primitive types.
+
+
+    +   - Expressions involving relational operators evaluate to one for true and
+    zero for false. The boolean operators operate on integers treating any non-zero
+    value as true.
+
+
+    +   - The syntax of both for and while loops is the same as in Java.
+
+
+    +   - The syntax of if-else statements is the same, except that any integer expression
+    can be used as the conditional expression.
+
+
+    +   - The standard C print function is printf().
+
+
+    +   - The standard C input function is scanf().'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# Passing Parameters to Functions 29\n\n# 2. Passing Parameters to Functions\n\
+    \nJava and C both pass parameters using call-by-value. This means that the value\
+    \ of the actual parameter is copied and stored in the corresponding formal parameter.\
+    \ Because the value of the actual parameter is copied, the value stored in the\
+    \ actual parameter cannot be modified by the function.\n\nIn Java you can get\
+    \ several results from a function by passing references to several objects and\
+    \ then modifying the objects in the function. In C the same thing is accomplished\
+    \ by passing pointers.\n\n# 2.1. Declaring functions\n\nBelow is a simple example\
+    \ of parameter passing and a program with two functions, main() and min().\n\n\
+    ```\n/* min.c\n * Simple function definition/call.\n */\n#include <stdio.h>\n\n\
+    int min(int x, int y) {\n if (x < y)\n    return x;\nelse\n    return y;\n}\n\n\
+    int main() {\n int num1, num2;\n\nprintf(\"Enter two integers.\\n\");\nscanf(\"\
+    %d%d\", &num1, &num2);\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# 30\n\n```\nprintf(\"The smaller is %d\\n\",\nmin(num1, num2));\nreturn 0;\n\
+    }\n```\n\nThe function min() is essentially identical to its counterpart in Java.\
+    \ The only difference is that there is no keyword static. In the example above,\
+    \ we have placed the definition of min() before its use in main(). C requires\
+    \ that the signature of a function be known before the first call to the function.\
+    \ Recall that the name of the function, along with its return type and the number\
+    \ of the formal parameters. Stylistically, many programmers prefer to have main()\
+    \ the first function instead of the last. When you wish to call a function that\
+    \ has not yet been defined, or one that is defined in another file (see chapter\
+    \ 6), you must precede with a function prototype.\n\nA function prototype is like\
+    \ a function definition with no body. The above program has been rearranged with\
+    \ main() first, by using a function prototype, and is as follows:\n\n```\n/* min2.c\n\
+    \ * Simple function definition/call using\n * prototype to allow main() to be\
+    \ first.\n */\n#include <stdio.h>\n\nint min(int x, int y);\n\nint main() {\n\
+    \ int num1, num2;\n\nprintf(\"Enter two integers.\\n\",\ncanf(\"%d%d\", &num1,\
+    \ &num2);\n\nprintf(\"The smaller is %d\\n\",\nmin(num1, num2));\nreturn 0;\n\
+    }\n\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# Passing Parameters to Functions 31\n\n```\nint min(int x, int y) {\n  if\
+    \ (x < y)\n    return x;\n  else\n    return y;\n}\n```\n\n# 2.2. Pointers\n\n\
+    One of the most important differences between C and Java is C's ability to manipulate\
+    \ pointers to data. In Java, it is not possible to create a pointer or reference\
+    \ to a primitive type. Java only allows pointers to objects, and these pointers\
+    \ can never be changed after assigning one pointer to another. To emphasize this\
+    \ distinction, Java pointers to objects are called references.\n\nIn C you can\
+    \ create a pointer to any variable. This is done using the address-of operator\
+    \ &,, as shown briefly in the example with scanf() in chapter 1. Once you have\
+    \ a pointer to a variable (actually a pointer to some arbitrary memory location),\
+    \ you obtain the value that the pointer points to using the induction operator\
+    \ *.\n\nThe following example introduces two operators. Notice that the character\
+    \ * is used both to access the location pointed to by a pointer, and to declare\
+    \ that a variable is actually a pointer. Prepending a variable with a * in a declaration\
+    \ statement, declares that the variable will be a pointer to the indicated type\
+    \ instead of a regular variable of that type. This can be seen in the declaration\
+    \ of pointerOne and pointerTwo below. Prepending a variable with a * in an expression\
+    \ says, 'Don't use the value stored in the variable; instead, use the value pointed\
+    \ by the address stored in the variable.' This can be seen in the first assignment\
+    \ to y in the example below."
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# 32\n\n```\n/# pointer.c\n# Introduce pointers.\n#include <stdio.h>\n\nint\
+    \ main() {\n    int x = 123, y;\n    int *pointerOne, *pointerTwo;\n\n    pointerOne\
+    \ = &x;\n    y = *pointerOne;\n    printf(\"x = %d, y = %d\\n\", x, y);\n\n  \
+    \  pointerTwo = pointerOne;\n    *pointerTwo = 99;\n    printf(\"x = %d, y = %d\\\
+    n\", x, y);\n\n    pointerTwo = &y;\n    printf(\"*pointerOne = %d, *pointerTwo\
+    \ = %d\\n\", *pointerOne, *pointerTwo);\n    printf(\"pointerOne = %u, pointerTwo\
+    \ = %u\\n\", pointerOne, pointerTwo);\n\n    return 0;\n}\n```\n\nHere is the\
+    \ output from the above program. If you run it on your system, you may get different\
+    \ values for the numbers in the last line of output.\n\n```\nx = 123, y = 123\n\
+    x = 99, y = 123\n*pointerOne = 99, *pointerTwo = 123\npointerOne = 2293620, pointerTwo\
+    \ = 2293616\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Passing Parameters to Functions 33
+
+
+    # Dissection of pointer.c
+
+
+    ```
+
+    int x = 123, y;
+
+    ```
+
+
+    Here we declare two simple variables. We will manipulate the values stored in
+    these variables using pointers.
+
+
+    ```
+
+    int *pointerOne, *pointerTwo;
+
+    ```
+
+
+    Here we declare two variables that are pointers to integers. Notice the * each
+    variable.
+
+
+    ```
+
+    pointerOne = &x;
+
+    ```
+
+
+    Here we are storing the address of variable x (remember & is the address of operator)
+    into the variable pointerOne. The variable pointerOne is now pointing at the same
+    memory location as that referred to by the variable x.
+
+
+    ```
+
+    y = *pointerOne;
+
+    printf("x = %d, y = %d\n", x, y);
+
+    ```
+
+
+    The assignment stores the value pointed to by pointerOne, into the variable y.
+    Here the * is the ind operator. It says that pointerOne does not directly refer
+    to the value of interest, but refers to it indirectly, i.e., it points to the
+    value. The result is that the value stored in variable x is copied into variable
+    y.
+
+
+    ```
+
+    pointerTwo = pointerOne;
+
+    *pointerTwo = 99;
+
+    printf("x = %d, y = %d\n", x, y);
+
+    ```
+
+
+    In this sequence, we first assign pointerTwo to point to the same location as
+    pointerOne. Then we use *pointerTwo as the destination of'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# 34\n\nan assignment. This assignment says store into the location pointed\
+    \ to by pointerTwo. From the previous statements we can determine that pointerTwo\
+    \ is pointing to the variable x (as is pointerOne).\n\n```\npointerTwo = &;\n\
+    printf(\"*pointerOne = %d, *pointerTwo = %d\\n\",\n    *pointerOne, *pointerTwo);\n\
+    printf(\"*pointerOne = %u, pointerTwo = %u\\n\",\n    pointerOne, pointerTwo);\n\
+    ```\n\nWe change pointerTwo to point to y. Then we both the values stored in the\
+    \ two pointers and the values pointed to by the two pointers. Looking at the output,\
+    \ it may seem strange that the addresses of x and y are large numbers for such\
+    \ a small program. This is because most operating systems today use what is called\
+    \ virtual memory. Virtual memory allows a program to use some small addresses\
+    \ without actually requiring physical memory for all of the addresses in between\
+    \ between. It is common for the memory allocated for local variables to start\
+    \ at the upper end of the usable virtual address space — hence, the very large\
+    \ addresses in this example.\n\n# 2.3. Call-by-reference\n\nIn Java, if what being\
+    \ passed is actually a reference to an object, then the instance variables inside\
+    \ of the referenced object can be changed, but the actual parameter referencing\
+    \ the object is not changed. In C, although parameters are always passed using\
+    \ call-by-value, because the value that is passed can be an address, C can get\
+    \ the effect of call-by-reference. Consider the following example."
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# Passing Parameters to Functions\n\n```\n/* swap.c\n# Demonstrate call-by-reference.\n\
+    \ */\n#include <stdio.h>\n\nvoid swap(int *x_p, int *y_p) {\n    int temp;\n\n\
+    \    temp = *x_p;\n    *x_p = *y_p;\n    *y_p = temp;\n}\n\nint main() {\n   \
+    \ int num1, num2;\n\n    printf(\"Enter two integers.\\n\");\n    scanf(\"%d%d\"\
+    , &num1, &num2);\n    printf(\"num1 = %d, num2 = %d\\n\", num1, num2);\n\n   \
+    \ swap(&num1, &num2);\n\n    printf(\"num1 = %d, num2 = %d\\n\", num1, num2);\n\
+    \    return 0;\n}\n```\n\nThe output of this program with the input 99 and 123\
+    \ is:\n\n```\nEnter two integers.\n99 123\nnum1 = 99, num2 = 123\nnum1 = 123,\
+    \ num2 = 99\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# 36
+
+
+    # Dissection of swap.c
+
+
+    ```
+
+    void swap(int *x_p, int *y_p)
+
+    ```
+
+
+    The function swap() does not return a value, indicated by the return type of void.
+    The function expects two parameters, each of which is a pointer to an int. This
+    effectively makes swap() a function with two int parameters that are passed call-by-reference.
+    A good programming style is to always append _p to the end of variables that are
+    actually pointers. This can help you remember that you need to use the indirection
+    operator * when accessing the variable, unless you actually want the address.
+
+
+    ```
+
+    int temp;
+
+    temp = *x_p;
+
+    ```
+
+
+    The value pointed to by x_p is stored in temp. The expression *x_p represents
+    the value stored in the location pointed to by x_p.
+
+
+    ```
+
+    *x_p = *y_p;
+
+    ```
+
+
+    Store the value stored in the location pointed to by y_p into the location pointed
+    to by x_p.
+
+
+    ```
+
+    *y_p = temp;
+
+    ```
+
+
+    Store the value stored in the variable temp into the location pointed to by y_p.'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Passing Parameters to Functions
+
+
+    ```
+
+    int num1, num2;
+
+
+    printf("Enter two integers.\n");
+
+    canf("%d%d", &num1, &num2);
+
+    printf("num1 = %d, num2 = %d\n", num1, num2);
+
+
+    swap(&num1, &num2);
+
+    ```
+
+
+    main() { swap() we need to pass pointers to integers, not integers. The address-of-operator,
+    &, does the job. We are passing pointers to the locations storing the values for
+    num1 and num2. The result is that num1 and num2 are output parameters. Their values
+    are changed by the execution of swap().
+
+
+    Notice that the scanf() also uses the address-of-operator, &, with all but the
+    first parameter. This is for the same reason that we used & with swap(). The scanf()
+    function needs to be able to change the values stored in num1 and num2. Without
+    the &, we would not be passing the values stored in num1 and num2, and scanf()
+    would not be able to change them. (Remember, C uses call-by-value.) By passing
+    an address as the value, we get the effect of call-by-reference and the ability
+    to have output parameters.
+
+
+    # Trouble spot
+
+
+    A major source of errors in C programs is the failure to properly use * and &.
+
+
+    For example, if we forgot to use the * in the assignment to temp in swap() like
+    this:
+
+
+    ```
+
+    temp = x_p;
+
+    ```
+
+
+    we would be attempting to store not the int value pointed to by x_p (num1 in our
+    example), but would instead storing the contents of x_p (the actual address of
+    num1) into temp. Fortunately, any good compiler could generate a warning message
+    in this situation. In the case of scanf(), the problem is a bit different. If
+    you forget to use the & with one of the variables passed to scanf(), you may only
+    get a warning if you ask the compiler to be very strict. For most C compilers
+    you can do this by using the flag -Wall, which means generate'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: all possible warning messages. We highly recommend that you always use this
+    flag. The reason scanf() is a bit different is because scanf() uses a special
+    C notation that indicates it doesn't really know what type of parameter will be
+    passed except for the first, which is the format string. The contents of the format
+    string determine what are appropriate types for the other parameters.
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Chapter Summary
+
+
+    +   - In C, although parameters are always passed call-by-value, be the value
+    that is passed can be an address, C can get the effect of call-by-reference.
+
+
+    +   - Function syntax is essentially the same as a static method in Java.
+
+
+    +   - C requires a function prototype if a function call appears in a file before
+    the definition of the function.
+
+
+    +   - The expression &x is the address of x; a reference to the location containing
+    the value of x. In Java variables of non-primitive types are references (references)
+    to both built-in types such as int, and user-defined types.
+
+
+    +   - The expression *x evaluates not to the value in variable x but to the value
+    in the memory location whose address is variable x. In this case, x is like a
+    Java reference variable.
+
+
+    +   - Using the address of operator (&) and the indirection operator (*), C can
+    get the effect of call-by-reference for built-in types such as int. This makes
+    it possible to have multiple output parameters that are values of built-in types.
+    This is not possible in Java without using wrapper classes.'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# 3. Arrays\n\nSyntactically, arrays in C appear very similar to arrays in\
+    \ Java; however, they are in fact quite different. In Java, all arrays are created\
+    \ dynamically using the new operator. In C, arrays can be created both dynamically\
+    \ and statically.\n\n# 3.1. One-dimensional arrays\n\nLet's first look at statically\
+    \ allocated arrays. The following statement declares and allocates an array of\
+    \ 10 integers. Notice the placement of the brackets after the variable name, not\
+    \ after the element type, int.\n\n```\nint smallArray[10];\n```\n\nThe elements\
+    \ of this array can be accessed using array indexing, just as in Java. For example,\
+    \ the following code fragment will print the elements of the above array.\n\n\
+    ```\nint i;\n\nfor (i = 0; i < 10; i++)\n    printf(\"%d\\n\", smallArray[i]);\n\
+    ```\n\nThere are several important differences between the above example in C,\
+    \ and its Java counterpart. First, C does not check to make sure that the array\
+    \ index is within the bounds of the array. The following will compile and run,\
+    \ giving unpredictable results. \n\n```\n/* arrayBounds.c\n * Exceed array bounds\
+    \ without an error.\n */\n#include <stdio.h>\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# 42\n\n```\nint main() {\n    int smallArray[10];\n    int i;\n\n    for (i\
+    \ = 0; i < 10; i++)\n        smallArray[i] = i*10;\n\n    for (i = 0; i <= 10;\
+    \ i++)\n        printf(\"%d\\n\", smallArray[i]);\n\n    return 0;\n}\n```\n\n\
+    Note that the second loop executes 11 times with i ranging from 0 to 10 inclusive,\
+    \ but the bounds of the array are 0 to 9 inclusive. Arrays in C do not carry around\
+    \ their length as they do in Java.\n\nAnother difference between arrays in C and\
+    \ arrays in Java, is that you cannot reassign an array variable to point to a\
+    \ new array. This implies that you cannot change the size of an array. There is\
+    \ no way in the example to change smallArray to refer to a larger array, after\
+    \ the initial declaration. As we will show below, you can dynamically create arrays\
+    \ and use variables to reference them, but those variables are actually pointers.\n\
+    \nStatically allocated arrays in C can also be created using array initializers\
+    \ that are syntactically identical to array initializers in Java. The following\
+    \ statement creates a static array of five integers, initialized to the values\
+    \ 100 through 500.\n\n```\nint x[] = { 100, 200, 300, 400, 500 };\n```\n\nThis\
+    \ statement is legal in both C and Java. Although the preferred Java syntax places\
+    \ the brackets with the type int, as in:\n\n```\n// not legal C\nint[] x = { 100,\
+    \ 200, 300, 400, 500 };\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# Arrays 43\n\n# 3.2. Multidimensional arrays\n\nMultidimensional arrays are\
+    \ created using multiple bracket pairs. The following creates a two-dimensional\
+    \ array of integers:\n\n```\nint matrix[10][20];\n```\n\nThe above declaration\
+    \ allocates storage for 200 integers. The elements of this array can be accessed\
+    \ just as in Java. The following will initialize the entire array to 0.\n\n```\n\
+    for (i = 0; i < 10; i++)\n  for (j = 0; j < 20; j++)\n    matrix[i][j] = 0;\n\
+    ```\n\nUnlike Java, an array declared as a local variable will not be initialized\
+    \ to zero.\n\n# Trouble spot\n\nMost C compilers will not give you any indications\
+    \ if you fail to initialize values of an array before using them.\n\nAs a result,\
+    \ you will get unpredictable values when accessing an uninitialized array.\n\n\
+    Technically, multidimensional arrays in C are just one-dimensional arrays whose\
+    \ elements are arrays. The elements are stored in so-called row-major order (row\
+    \ by row). Reading from left to right, the first bracket pair in case of a two-dimensional\
+    \ array is for the row and the second bracket pair is for the column (there are\
+    \ 10 rows and 20 columns in the example above).\n\nHigher-dimensional arrays are\
+    \ created and accessed by adding more pairs of brackets. The following declares\
+    \ a three-dimensional array, and initializes all elements to 1."
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# 44\n\n```\nint space [10][20][30];\n\nint i, j, k;\n\nfor (i = 0; i < 10;\
+    \ i++)\n  for (j = 0; j < 20; j++)\n    for (k = 0; i < 30; k++)\n      space[i][j][k]\
+    \ = 1;\n```\n\n# 3.3. Passing arrays as parameters\n\nAn array variable in C is\
+    \ actually a pointer to the first element of the array. For an array of integers,\
+    \ it is just like a pointer to an int, except that you cannot change where it\
+    \ points. Thinking of the name of an array as a pointer to the first element is\
+    \ essential for understanding how arrays are passed as parameters. Consider the\
+    \ following example:\n\n```\n/ arrayParams.c\n* Passing arrays as parameters.\n\
+    */\n#include <stdio.h>\n\nvoid fillIt(int someArray[])\n\nint main() {\n  int\
+    \ smallArray[10];\n  int i;\n\n  fillIt(smallArray);\n\n  for (i = 0; i < 10;\
+    \ i++)\n    printf(\"%d \", smallArray[i]);\n  printf(\"\\n\");\n\n  return 0;\n\
+    }\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nvoid fillIt(int someArray[]) {\n  int i;\n\n  for (i = 0; i < 10; i++)\n\
+    \    someArray[i] = 100 + i;\n}\n```\n\nThe output of this program is:\n\n```\n\
+    100 101 102 103 104 105 106 107 108 109\n```\n\n# Dissection of arrayParams.c\n\
+    \n```\nvoid fillIt(int someArray[])\n```\n\nWe place a function prototype (see\
+    \ chapter 2) at the beginning so that the definition of the function main() can\
+    \ appear first. An array parameter is declared the same way as an array variable.\
+    \ The one difference is that, for one-dimensional arrays, the size of the array\
+    \ is irrelevant and not required. For this reason, the function fillIt() will\
+    \ work with any array of integers.\n\n```\nint smallArray[10];\n```\n\n```\nfillIt(smallArray);\n\
+    ```\n\nTo pass an array as a parameter, just use the name of the array. Remember,\
+    \ C always uses call-by-value. The value of the expression smallArray is the address\
+    \ of the first element of the array. In this way, the function fillIt() will have\
+    \ a pointer to the first element and thus change any of the elements of the array."
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# 46\n\n```\nvoid fillIt(int someArray[]) {\n  int i;\n  for (i = 0; i < 10;\
+    \ i++)\n    someArray[i] = 100 + i;\n}\n```\n\nThe preferred way to write a function\
+    \ that expects an array parameter is as shown above.\n\nYou must remember that\
+    \ the value that is passed in this case is not the value of the entire array but\
+    \ is only the address of the first element. The above declaration could lead you\
+    \ to believe that it is the array that is being passed by value. This is not the\
+    \ case.\n\nTo emphasize the fact that an array parameter is simply a pointer,\
+    \ consider the following variation on the example above. In the example below,\
+    \ main() is identical to main() in arrayParams.c above.\n\n```\n/* arrayParams2.c\n\
+    \ * Show array is really a pointer.\n */\n#include <stdio.h>\n\nvoid fillIt(int\
+    \ *someArray);\n\nint main() {\n  int smallArray[10];\n  int i;\n\n  fillIt(smallArray);\n\
+    \n  for (i = 0; i < 10; i++)\n    printf(\"%d \", smallArray[i]);\n    printf(\"\
+    \\n\");\n\n  return 0;\n}\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Arrays 47\n\n```\nvoid fillIt(int *someArray) {\n  int i;\n\n  for (i = 0;\
+    \ i < 10; i++) {\n    *someArray = 100 + i;\n    someArray++;\n  }\n}\n```\n\n\
+    Notice that in this example, fillIt() has been declared to have a pointer\nto\
+    \ as its only parameter, instead of an array of int. The call to\nfillIt() remains\
+    \ unchanged. This works because, as we said above, the\nname of an array, when\
+    \ used as an expression, is simply a pointer to the\nfirst element of the array.\n\
+    \nThe statement in fillIt():\n\n```\n*someArray = 100 + i;\n```\n\npresents nothing\
+    \ new. It stays, store the value 100 + i into the location\npointed by someArray.\
+    \ Initially someArray is pointing to the first\nelement of the array smallArray\
+    \ in main(). The next statement is a key\nfeature of C not found in Java. The\
+    \ statement\n\n```\nsomeArray++;\n```\n\nis increasing the value of a pointer.\
+    \ This type of pointer arithmetic is\nstrictly prohibited in Java. In C, this\
+    \ statement causes the address stored in\nsomeArray to be incremented. Remember,\
+    \ someArray stores an address\nthat is interpreted as a pointer to some location\
+    \ storing an integer.\nincrementing the address causes someArray to point to the\
+    \ next memory\nlocation. Because arrays are allocated contiguously, that is, array\
+    \ elements\nare placed in consecutive memory locations, incrementing a pointer\
+    \ to\nanray element causes the pointer to point to the next array element. In\
+    \ this\nway, the variable someArray points to each of the elements of smallArray\n\
+    as the loop executes."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# 3.4. Dynamically allocated arrays\n\nIn addition to having statically allocated\
+    \ arrays, such as those discussed above, C allows for dynamic allocation of arrays.\
+    \ When using dynamically allocated arrays, the thin disguise of array variables\
+    \ as something other than pointers is completely removed. The following example\
+    \ dynamically creates an array based upon a user-specified value.\n\n```\n/* dynamicArray.c\n\
+    \ * Create an array dynamically.\n */\n#include <stdio.h>\n#include <stdlib.h>\n\
+    \nvoid fillIT(int *someArray);\n\nint main() {\n    int *array_p;\n    int size,\
+    \ i;\n\n    printf(\"How many elements in the array?\\n\");\n    scanf(\"%d\"\
+    , &size);\n\n    array_p = calloc(size, sizeof(int));\n\n    for (i = 0; i < size;\
+    \ i++)\n        array_p[i] = 100 + i;\n\n    for (i = 0; i < size; i++)\n    \
+    \    printf(\"%d \", array_p[i]);\n    printf(\"\\n\");\n\n    return 0;\n}\n\
+    ```\n\nIn the example above, array_p is the 'array variable', although, as you\
+    \ can see, it is in fact a pointer to an integer. The array is created by the"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Arrays 49
+
+
+    call to the function calloc() which is part of the standard C libraries. The function
+    prototype for calloc() is in stdlib.h which is included at the beginning of the
+    above program. The function calloc() takes two parameters. The first is the number
+    of elements in the array being allocated, and the second is the size of each element.
+
+
+    As you can see from the above example, we can use the array indexing syntax of
+    square brackets, with a pointer to an int. In fact, the following two statements
+    are identical for all practical purposes.
+
+
+    ```
+
+    *array_p = x;
+
+    ```
+
+
+    ```
+
+    array_p[0] = x;
+
+    ```
+
+
+    The loop that fills the array above could have been written like this:
+
+
+    ```
+
+    temp_p = array_p;
+
+    for (i = 0; i < size; i++) {
+
+    *temp_p = 100 + i;
+
+    temp_p++;
+
+    }
+
+    ```
+
+
+    This assumes that temp_p was declared earlier to be a pointer to an integer.
+
+
+    In Java, dynamically allocated memory (created using new) is automatically reclaimed
+    using what is called garbage collection. In C, dynamically allocated memory must
+    be manually reclaimed by the programmer. If an array such as array_p above was
+    allocated as part of a larger program, when the storage for the array is no longer
+    needed, the programmer must deallocate the memory using free(). You free() the
+    pointer that was returned from the call to calloc(), as follows.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '50
+
+
+    ```
+
+    array_p = calloc(size, sizeof (int));
+
+    ...
+
+    // when done with the array
+
+    free(array_p);
+
+    ```
+
+
+    Failing to free memory can result in what is called a memory leak. This produces
+    a long-running program that continues to allocate more memory and will eventually
+    run out of memory. On the other hand, prematurely freeing memory can result in
+    unpredictable results, if the program continues to try and use memory that has
+    been deallocated using free(). A pointer variable that points to memory that has
+    been deallocated is called a dangling pointer. Any attempt to use such a pointer
+    is called a dangling pointer error. These types of problems with memory allocation
+    illustrate why languages like Java provide automated memory management with garbage
+    collection.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Chapter Summary
+
+
+    +   - Static arrays in C have no direct counterpart in Java. Memory is allocated
+    implicitly and the size of the array is part of the declaration. For example,
+    int x[10], creates a static array of 10 integers. This variable x will always
+    refer to this array of 10 integers.
+
+
+    +   - Array elements are indexed just like arrays in Java.
+
+
+    +   - Dynamically allocated arrays are allocated using calloc(). The memory returned
+    from calloc() is initialized to contain all zeros.
+
+
+    +   - Unlike Java, there is no bounds checking on array indices.
+
+
+    +   - Array variables are actually just pointers to the first element of the array.
+
+
+    +   - There is no direct support for determining the length of an arbitrary array.
+
+
+    +   - Arrays are passed to functions by reference. Only the address of the first
+    element of the array is passed. This is essentially equivalent to how arrays are
+    passed in Java.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# 4. Strings\n\nStrings in C are nothing more than arrays of characters. Like\
+    \ Java, C provides special syntax for creating string literals. Also, the standard\
+    \ C libraries include many useful functions for operating on strings.\n\n# 4.1.\
+    \ Strings: Arrays of characters\n\nA properly formed string contains a null character\
+    \ as its last character, indicating the end of the string. Remember, arrays in\
+    \ C do not carry around their length, so some mechanism had to be created for\
+    \ determining the length of a string. Consider the following example:\n\n```\n\
+    /* strings.c\n# Show strings as arrays of char.\n */\n#include <stdio.h>\n\nint\
+    \ main() {\n    char strOne[] = {'s','t','r','i','n','g',', \n               \
+    \      'o','n','e','\\0'};\n    char *char_p;\n    int i;\n\n    printf(\"%s\\\
+    n\", strOne);\n\n    for (i = 0; strOne[i] != '\\0'; i++)\n        printf(\"%c,\"\
+    , strOne[i]);\n    printf(\"\\n\");\n\n    for (char_p = strOne;\n        *char_p\
+    \ != '\\0';\n        char_p++)\n        printf(\"%c,\", *char_p);\n    printf(\"\
+    \\n\");\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# 54
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    The output of this program is:
+
+
+    ```
+
+    string one
+
+    s,t,r,i,n,g,,o,n,e,
+
+    s,t,r,i,n,g,,o,n,e,
+
+    ```
+
+
+    # Dissection of strings.c
+
+
+    ```
+
+    char strone[] = {''s'',''t'',''r'',''i'',''n'',''g'','' '','' ''\0'',''
+
+    '',''e'',''\0''};
+
+    ```
+
+
+    The variable strone is an array of characters initialized as shown. The char value
+    ''\0'' is called the null character. It is used as the last character in properly
+    formed strings. Just as in Java, the backslash is an escape character. In this
+    example the escape sequence is used to specify the character whose binary representation
+    is zero.
+
+
+    ```
+
+    char *char_p;
+
+    int i;
+
+    ```
+
+
+    These variables will be used later. In chapter 3 we showed that we could use a
+    pointer to int to access an array of integers. In this program we will use a pointer
+    to a char to access the elements of an array of characters.
+
+
+    ```
+
+    printf("%s\n", strone);
+
+    ```
+
+
+    As shown by this statement, strone is, in fact, a string in C. We can print it
+    using printf() and the conversion string %s.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Strings 55
+
+
+    ```
+
+    for (i = 0; strOne[i] != ''\0''; i++)
+
+    printf("%c,
+
+    ", strOne[i]);
+
+    printf("\n");
+
+    ```
+
+
+    We can also print the characters of the string one at a time, using normal array
+    notation.
+
+
+    ```
+
+    for (char_p = strOne;
+
+    *char_p != ''\0'';
+
+    char_p++
+
+    printf("%c,", char_p);
+
+    printf("\n");
+
+    ```
+
+
+    As we did with the int array in chapter 3 we can also print the characters of
+    the string using pointer notation. Because strings are used so often, the string
+    literal notation can be used for initializing a string (array of characters).
+    The following two statements are equivalent (except that the pointer in the first
+    statement can be changed to point to another string in later statements):
+
+
+    ```
+
+    char *strOne = "string one";
+
+    ```
+
+
+    ```
+
+    char strOne[] = {\''s'', ''t'', ''r'', ''i'', ''n'', ''g'', '' '', \''o'', ''n'',
+    ''e'', ''\0''};
+
+    ```
+
+
+    Notice that the notation "string one" implicitly includes the null character at
+    the end.'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# 4.2. Manipulating strings
+
+
+    The standard C libraries include a number of functions for manipulating strings.
+    In this section we introduce a few of the most commonly used string functions.
+    The functions we describe are summarized in the following table.
+
+
+    | Function | Brief Description |
+
+    |---|---|
+
+    | strcat(), strcat() | These functions are used to append the contents of one
+    string onto the end of another string. This is called concatenation. |
+
+    | strchr() | This function is used to search for the first occurrence of a particular
+    character in a string. |
+
+    | strcmp(), strncmp() | These functions are used to compare two strings. |
+
+    | strcpy(), strncpy() | These functions are used to make a copy of a string. |
+
+    |strlen() | This function is used to find the length of a string. |
+
+    | strstr() | This function is used to search for the first occurrence of one string
+    as a substring in another string. |
+
+
+    Notice that several of the functions come in two forms; the str... form and the
+    strn... form. The latter form is always safer. These safer functions allow you
+    to specify the maximum number of characters to be processed. This can be used
+    to prevent errors in the event that one of the strings was inadvertently left
+    without a terminating null character.
+
+
+    We describe the string functions in the above table using a dissection of the
+    following example.'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\n/* stringLib.c\n* Demonstrate some standard string functions.\n */\n#include\
+    \ <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n#define MAX_S2 100\n\n\
+    int main() {\n    char *s1 = \"String one\";\n    char *s2 = calloc(MAX_S2, sizeof(char));\n\
+    \    char *s3;\n\n    printf(\"The length of \\%s\\%s\" is %d\\n\",\n        \
+    \   s1, strlen(s1));\n\n    strnpy(s2, \"Testing\", MAX_S2);\n    strncat(s2,\
+    \ \" 123\", MAX_S2 - strlen(s2));\n    printf(\"%s2 contains:%s\\n\", s2);\n\n\
+    \    s3 = strchr(s1, ' ' ');\n    printf(\"%s3 is now %s\\n\", s3);\n\n    s3\
+    \ = strstr(s1, \"tr\");\n    printf(\"%s3 is now %s\\n\", s3);\n\n    printf(\"\
+    %s compared to %s gives %d\\n\",\n           s1, s2, strncmp(s1, s2, MAX_S2));\n\
+    \    printf(\"%s compared to %s gives %d\\n\",\n           s2, s1, strncmp(s2,\
+    \ s1, MAX_S2));\n    printf(\"%s compared to String one gives %d\\n\",\n     \
+    \      s1, strncmp(s1, \"String one\"));\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# 58
+
+
+    The output for this program is:
+
+
+    ```
+
+    The length of "String one" is 10
+
+    s2 contains:Testing 123
+
+    s3 is now g one
+
+    s3 is now tring one
+
+    String compared to Testing 123 gives -1
+
+    Testing 123 compared to String one gives 1
+
+    String one compared to String one gives 0
+
+    ```
+
+
+    # Dissection of StringLib.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    #include <stdlib.h>
+
+    #include <string.h>
+
+    #define MAX_S2 100
+
+    ```
+
+
+    We need to include the header for the string library, string.h. Constants are
+    created in C using the #define construct shown. All subsequent uses of the identifier
+    MAX_S2 will be equivalent to typing the integer 100.
+
+
+    ```
+
+    char *s1 = "String one";nchar *s2 = calloc(MAX_S2, sizeof(char));
+
+    char *s3;
+
+    ```
+
+
+    We declare three string variables for use in the program. The first is initialized
+    to a specific string literal. The second is pointing to an uninitialized portion
+    of memory large enough to contain 100 characters, counting the null character
+    at the end. The third string variable is uninitialized. Notice that there is no
+    type with the name string in C. Instead we use char *, a pointer to char.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\nprintf(\"The length of \\%s\\\" is %d\\n\",\n      s1, strlen(s1));\n\
+    ```\n\nThe expression strlen(s1) returns the length of s1, not including the\n\
+    terminating null character.\n\n```\nstrncpy(s2, \"Testing\", MAX_S2);\n```\n\n\
+    The expression strncpy(str1, str2, n) copies the characters in str2\ninto str1,\
+    \ copying at most n characters. The first parameter must already\nbe pointing\
+    \ to memory large enough to hold the copied characters. In\nexample, we previously\
+    \ assigned s2 to point to a freshly allocated array of\n100 characters. The function\
+    \ strcpy() is similar, but it takes only two\narguments, the two strings. There\
+    \ is no check to make sure that not too\nm characters are copied.\n\n```\nstrcat(s2,\
+    \ \"123\", MAX_S2 - strlen(s2));\nprintf(\"%s2 contains:%s\\n\", s2);\n```\n\n\
+    The expression strncat(str1, str2, n) copies at most n characters\nfrom str2 onto\
+    \ the end of str1, and adds a null character. In our\nexample we limit the copy\
+    \ by the amount of space remaining in s2.\nfunction strcat() is similar but takes\
+    \ only two parameters, the two strings,\\and no check is made for the number of\
+    \ characters copied. As shown\nthe output, the result of this concatenation is\
+    \ s2 now contains\n\"Testing 123\".\n\n```\ns3 = strchr(s1, 'g');\nprintf(\"%s3\
+    \ is now %s\\n\", s3);\n```\n\nThe expression strchr(str1, c) searches the string\
+    \ str1 for the first\nocurrence of the character c. The result is a pointer to\
+    \ the matching\ncharacter that was found. If the character is not found, the return\
+    \ value\nis NULL. It is important to note that in our example at point s3 is\n\
+    pointing into the middle of the string s1. If we change any of the characters\n\
+    after the 'g' in s1, we will also be changing the string pointed to by s3."
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# 60
+
+
+    Remember, s1 and s3 are not really strings but simply pointers to
+
+    sequences of characters.
+
+
+    ```
+
+    s3 =strstr(s1, "tr");
+
+    printf("s3 is now %s\n", s3);
+
+    ```
+
+
+    The function strchr() is similar to strchr(), except instead of
+
+    searching for a single character in a string, we are searching for a substring
+
+    within a string. The substring is the second argument. The result is
+
+    point to the beginning of the matching substring within the original
+
+    string. If the character is not found, the return value is NULL. As before,
+
+    after the above statements, the memory for the string pointed to by s1
+
+    and the memory for the string pointed to by s3 overlap.
+
+
+    ```
+
+    printf("%s compared to %s gives %d\n",
+
+    s1, strncmp(s1, s2, MAX_S2));
+
+    printf("%s compared to %s gives %d\n",
+
+    s2, s1, strncmp(s2, s1, MAX_S2));
+
+    printf("%s compared to String gives %d\n",
+
+    s1, strncmp(s1, "String one"));
+
+    ```
+
+
+    When we show that the function strncmp() can be used to compare two
+
+    strings. The result is -1, 0 depending upon whether the first argument
+
+    appears lexicographically before, after, or is equal to the second.
+
+    The function strcmp() is the same as strncmp(), except that the latter has
+
+    a third parameter that controls the maximum number of characters that
+
+    will be compared.
+
+
+    # Trouble spot
+
+
+    Failing to include a null character at the end of a string can
+
+    h very unpredictable results.
+
+
+    When creating strings with something other than string literals,
+
+    it is easy to leave off the terminating null character. This is
+
+    a common source of program errors, often resulting in the
+
+    program crashing. Sometimes, failing to terminate a string
+
+    can result in much insidious errors that do not crash the
+
+    program but instead corrupt some internal data, causing the
+
+    program to behave in mysterious ways. Such errors are often'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# Strings 61\n\nvery hard to detect. You should be very careful to always include\
+    \ the null character in any strings you generate. It is also a good idea to use\
+    \ the strn... form of the standard string functions whenever possible.\n\n# 4.3.\
+    \ Reading strings with scanf()\n\nStrings are read using scanf() by passing a\
+    \ pointer to the location where the first character of the string should be stored.\
+    \ The following example reads in a string using scanf().\n\n```\n# readingStrings.c\n\
+    # Reading strings with scanf().\n#include <stdio.h>\n#include <string.h>\n\nint\
+    \ main() {\n    char strone[100];\n    int status;\n\n    // initialize to the\
+    \ empty string\n    strone[0] = '\\0';\n\n    printf(\"Enter a sentence now.\\\
+    \\n\");\n    printf(\"End with a period.\\\\n\");\n\n    status = scanf(\"%99s\"\
+    , strone);\n    while (status == 1 &&\n        strone[strlen(strone)-1] != '.')\
+    \ {\n        printf(\"%s\\\\n\", strone);\n        status = scanf(\"%99s\", strone);\n\
+    \    }\n    printf(\"%s\\\\n\", strone);\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# Dissection of readingStrings.c
+
+
+    ```
+
+    char strOne[100];
+
+    ```
+
+
+    Here we create enough storage to hold a string of 99 characters plus the terminating
+    null character.
+
+
+    ```
+
+    int status;
+
+    ```
+
+
+    We will use status to check that the scanf() successfully read a string.
+
+
+    ```
+
+    // initialize to the empty string
+
+    strOne[0] = ''\0'';
+
+    ```
+
+
+    Just to be safe, we initialize the string to the empty string by placing the null
+    character in the first character of the string.
+
+
+    ```
+
+    status = scanf("%99s", strOne);
+
+    ```
+
+
+    Although we have ignored it until now, scanf() returns the number of items successfully
+    scanned. In this example the expected result is 1, the one we are scanning. We
+    will use this to control the termination of the loop. This will take effect if
+    the end-of-file is encountered before the period at the end of the sentence.
+
+
+    We also used the field width specification to make sure that at most 99 characters
+    are read. Without this, a user could enter a really long string, overrunning the
+    end of the char array strOne. This would cause unpredictable behavior of the program.
+    Always use the field width specification when using scanf() to read strings. We
+    will return to this issue in a moment.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Strings 63\n\n```\n```c\nwhile (status == 1 &&\n    strone[strlen(strone)-1]\
+    \ != '.')\n```\n```\n\nWe will continue to read in strings until the scanf() fails\
+    \ to return 1, as recorded in status, or until a string ending in a period is\
+    \ read. The expression strlen(strone)-1 is the index of the last character in\
+    \ the string.\n\n```\n```c\nprintf(\"%s\\n\", strone);\nstatus = scanf(\"%99s\"\
+    , strone);\n```\n```\n\nThe body of the loop prints the previously read string\
+    \ on a line by itself and then reads in another.\n\n```\n```c\nprintf(\"%s\\n\"\
+    , strone);\n```\n```\n\nWhen the loop ends, we print the last string read. Normally,\
+    \ this will be the ending in a period. The scanf() conversion specification [...]\
+    \ can be used to scan an arbitrary set of characters (a scan set). There are two\
+    \ cases, determined by the first character after the [. If the first character\
+    \ is the character \", then the remaining characters specify which characters\
+    \ will not be scanned. When any one of the 'not' to be scanned characters is encountered,\
+    \ the input ends for the first character is the character ',', then any character\
+    \ not in the set ends the input.\n\nFor example, [%-0123456789] might be used\
+    \ to read a phone number written in the common form such as (888)444-1234, storing\
+    \ the result as a string. The normal string reading conversion specification %s\
+    \ reads until a white space character is read. The %s is shorthand for %[^\t\\\
+    n], which specifies to read any characters that are not tab, newline, or space\
+    \ (the white space characters).\n\nWe emphasized the importance of using field\
+    \ specifications when reading strings. Originally a function gets() was also used\
+    \ to read strings but it should not be used since format strings cannot be specified\
+    \ at all gets(). Hence a user could overrun the end of the string and cause unpredictable\
+    \ behavior of the program."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '64
+
+
+    In contrast, the function puts() is a proper alternative to printf(), if you just
+    want to print a string. It prints a newline character at the end. Hence the following
+    statements give the same result.
+
+
+    ```
+
+    printf("Hello, world!\n");
+
+    ```
+
+
+    ```
+
+    puts("Hello, world!");
+
+    ```
+
+
+    So puts() is similar to System.out.println() in Java.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Chapter Summary
+
+
+    +   * String is not a standard type in C. A string is simply an array of characters.
+
+
+    +   * A proper string is terminated by a null character, ''\0''.
+
+
+    +   * C includes the same string literal syntax as in Java — for example, "this
+    is a string".
+
+
+    +   * A char array used to hold a string must be long enough to store the terminating
+    character.
+
+
+    +   * A string variable can be declared as either a char*, or using an array declaration
+    — char s[10].
+
+
+    +   * The standard C library includes functions for manipulating strings.
+
+
+    +   * Strings can be read from the standard input (typically, the keyboard) using
+    scanf() with the %s conversion character.
+
+
+    +   * Always use the field width specification when using scanf() to read strings.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# 5. Structured Data Types\n\nC uses the struct construct to specify user defined\
+    \ types. A struct is similar to a class in Java, but far more limited.\n\n+  \
+    \ * A struct can have only data members, not function members.\n* A struct cannot\
+    \ be derived from another struct using inheritance.\n* A struct does not have\
+    \ the notions of private and public. All fields are essentially public.\n* Not\
+    \ having function members, a struct cannot have a constructor.\n\nIn Java, the\
+    \ name of the class is a new type and can be used in variable declarations. In\
+    \ C, a separate keyword, typedef, is used to create a new type.\n\n# 5.1. Declaring\
+    \ a structured data type\n\nThe following example demonstrates the use of typedef\
+    \ and struct.\n\n```\n/* structassignment.c\n * Creating a new type.\n */\n#include\
+    \ <stdio.h>\n#include <string.h>\n\n#define NAME_SIZE 80\n\ntypef struct {\nchar\
+    \ last[NAME_SIZE];\nchar first[NAME_SIZE];\ndouble gpa;\nint startYear;\n} student_t;\n\
+    ```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# 68\n\n```\nint main() {\n    student_t studentOne, studentTwo;\n\n    studentOne.gpa\
+    \ = 3.5;\n    studentOne.startYear = 2000;\n    strcpy(studentOne.first,\n   \
+    \     \"Jane\", NAME_SIZE);\n    strcpy(studentOne.last,\n        \"Programmer\"\
+    , NAME_SIZE);\n\n    // field by field assignment\n    studentTwo = studentOne;\n\
+    \    studentTwo.gpa = 3.45;\n    strcpy(studentTwo.first, \"John\", NAME_SIZE);\n\
+    \n    printf(\"%s, %s: gpa:%f, year:%d\\n\",\n        studentOne.last, studentOne.first,\n\
+    \        studentOne.gpa, studentOne.startYear);\n\n    printf(\"%s, %s: gpa:%f,\
+    \ year:%d\\n\",\n        studentTwo.last, studentTwo.first,\n        studentTwo.gpa,\
+    \ studentTwo.startYear);\n\n    return 0;\n}\n```\n\nThe output of this program\
+    \ is:\n\n```\nProgrammer, Jane: gpa:3.500000, year:2000\nProgrammer, John: %s:gpa:3.450000,\
+    \ year:2000\n```"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Structured Data Types 69
+
+
+    # Dissection of structAssignment.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    #include <string.h>
+
+
+    #define NAME_SIZE 80
+
+    ```
+
+
+    #define compiler directive is used to create named constants. Constants such as
+    this make the program easier to modify and understand. The program is also less
+    likely to have errors. A minor typographical error in a literal constant, such
+    as 90 instead of 80 will go undetected by the compiler. However, a minor typographical
+    error in a named constant, such as NAME_SSIZE instead of NAME_SIZE, will generally
+    result in a compiler error.
+
+
+    ```
+
+    typedef struct {
+
+    char last[NAME_SIZE];
+
+    char first[NAME_SIZE];
+
+    double gpa;
+
+    int startYear;
+
+    } student_t;
+
+    ```
+
+
+    The above statement declares student_t to be a new struct type. We use the style
+    convention of appending _t to an identifier to indicate it is a type name. This
+    particular structure type contains four fields. As you can see, fields can be
+    simple types or arrays. Fields can even be other structures.
+
+
+    ```
+
+    student_t studentOne, studentTwo;
+
+    ```
+
+
+    In this example, we declare two variables of type student_t. The variables studentOne
+    and studentTwo are not pointers to student_t values; they actually contain a student_t
+    value in the same way that an int variable contains an int value. This is important
+    because we do not need to create a student_t value with something like Java''s.
+    Furthermore, we cannot change studentOne to later refer to a different student_t
+    structure, although we can change the values of the fields.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# 70
+
+
+    ```
+
+    studentOne.gpa = 3.5;
+
+    studentOne.startYear = 2000;
+
+    ```
+
+
+    These assignments use the same notation used in Java for assigning
+
+    values to fields.
+
+
+    ```
+
+    strcpy(studentOne.first,
+
+    "Jane", NAME_SIZE);
+
+    ncpy(studentOne.last,
+
+    "Programmer", NAME_SIZE);
+
+    ```
+
+
+    It is not possible to use simple assignment with arrays. For example, the
+
+    following is not legal syntax in C:
+
+
+    ```
+
+    // not legal C
+
+    studentOne.first = "Jane";
+
+    ```
+
+
+    Instead, we use the standard C string copy function, strcpy(), to copy
+
+    the characters from the literal strings for the names, into the character
+
+    array fields of studentOne. Recall that strcpy() copies the characters
+
+    in the second string, into the first, stopping when either the null
+
+    character is copied, or the number of characters specified by the third
+
+    parameter have been copied, whichever comes first. After execution of
+
+    t two strcpy() functions, all the fields of studentOne have been
+
+    initialized.
+
+
+    ```
+
+    // field by field assignment
+
+    studentTwo = studentOne;
+
+    ```
+
+
+    This assignment copies each field in the structure studentOne into the
+
+    corresponding fields of the structure studentTwo. This is very different
+
+    from the syntactically similar assignment in Java. In Java this would-
+
+    sign studentTwo and studentOne to refer to the same object (stru-
+
+    ture). After execution of this statement in Java, if you modified a field of
+
+    studentTwo, you would also be modifying a field of studentOne, because
+
+    are are the same object. This is very different from C, as shown by the'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'next two statements.
+
+
+    ```
+
+    studentTwo.gpa = 3.45;
+
+    strncpy(studentTwo.first, "John", NAME_SIZE);
+
+    ```
+
+
+    These two statements modify two of the fields of studentTwo. This has
+
+    no effect on the fields in the structure studentOne.
+
+
+    ```
+
+    printf("%s, %s: gpa:%f, year:%d\n"
+
+    studentOne.last, studentOne.first,
+
+    studentOne.startYear\);
+
+    ```
+
+
+    ```
+
+    printf("%s, %s: gpa:%f, year:%d\n"
+
+    studentTwo.last, studentTwo.first,
+
+    studentTwo.gpa, studentTwo.startYear\);
+
+    ```
+
+
+    We print out the values of the two structures, to show that indeed,
+
+    there two structures, not two references to one structure. As the
+
+    above example shows, assignment of structure values in C is treated just
+
+    like assignment of values of built-in types. This is different from Java
+
+    where assignment of class type variables has very different behavior for
+
+    asignment of primitive type variables.
+
+
+    # 5.2. Passing structures as parameters
+
+
+    As indicated earlier, C, like Java, always uses call-by-value for parameter
+
+    passing. The difference between C and Java is that, in C, a structure
+
+    variable actually contains the structure data as opposed to containing
+
+    areference to the structure. This was shown in the previous example, where
+
+    we assigned one structure variable to another. The result is that structures
+
+    are copied when passed as parameters. It is possible to pass a pointer to
+
+    a structure, but that requires pointer notation (see the following section).
+
+    Consider the following example.
+
+
+    ```
+
+    /* student.c
+
+    * Passing structures to functions.
+
+    */
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "```\n#include <stdio.h>\n#include <string.h>\n#define NAME_SIZE 32\n\ntyped\
+    \ struct {\n    char last[NAME_SIZE];\n    char first[NAME_SIZE];\n    double\
+    \ gpa;\n    int startYear;\n} student_t;\n\nvoid printRecord(student_t student);\n\
+    student_t readRecord(void);\n\nint main() {\n    student_t student;\n\n    student\
+    \ = readRecord();\n    printRecord(student);\n    return 0;\n}\n\nvoid printRecord(student_t\
+    \ student) {\n    printf(\"%s, %s: gpa:%f, year:%d\\n\",\n           student.last,\
+    \ student.first,\n           student.gpa, student.startYear);\n}\n\nstudent_t\
+    \ readRecord(void) {\n    student_t student;\n    student.gpa = 3.5;\n    student.startYear\
+    \ = 2000;\n    strncpy(student.first, \n           \"Jane\", NAME_SIZE);\n   \
+    \ strncpy(student.last, \n           \"Programmer\", NAME_SIZE);\n\n    return\
+    \ student;\n}\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "# Structured Data Types\n\nDissection of student.c\n\n```\nvoid printRecord(student_t\
+    \ student);\nstudent_t readRecord(void);\n```\n\nThis example uses the same student_t\
+    \ as the previous example. A structure type can be used just like a built-in type.\
+    \ Structure values can be passed as parameters and returned as results of functions.\
+    \ Just as with built-in types, structure values are passed by-value. The above\
+    \ two lines are function prototypes so that main() can be defined prior to the\
+    \ full definition of the functions printRecord() and readRecord().\n\n```\nstudent_t\
+    \ student;\n\nstudent = readRecord();\nprintRecord(student);\n```\n\nIn the example\
+    \ above, we declare a single variable of type student_t. The function readRecord()\
+    \ will return a student_t value that is assigned (by field) to student. We then\
+    \ pass the value student to printRecord() for printing.\n\n```\nvoid printRecord(student_t\
+    \ student) {\n  printf(\"%s, %s: gpa:%f, year:%d\\n\",\n         student.last,\
+    \ student.first,\n         student.gpa, student.startYear);\n}\n```\n\nHere, and\
+    \ in the following sections, the function printRecord() takes a single argument,\
+    \ which is a student_t value. The fields of a structure value are accessed much\
+    \ like the fields of a Java object, as shown earlier. The expression student.gpa\
+    \ is a double value, and student.startYear is an int value. The expression student.last[0]\
+    \ would be the first character of the last name. The parameter student in printRecord()\
+    \ will contain a copy of the value of student in main(). It is not a pointer,\
+    \ or reference to the value as it would be in Java. This is an important difference\
+    \ that is discussed in the following section."
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\nstudent_t readRecord(void) {\n    student_t student;\n    student.gpa\
+    \ = 3.5;\n    student.startYear = 2000;\n    strncpy(student.first,\n      \"\
+    Jane\", NAME_SIZE);\n    strncpy(student.last,\n      \"Programmer\", NAME_SIZE);\n\
+    \n    return student;\n}\n```\n\nThe function readRecord() demonstrates that a\
+    \ structure value can be re-terned as a value from a function. Furthermore, the\
+    \ assignment in main()\n\n```\nstudent = readRecord();\n```\n\nshows that structure\
+    \ values can be assigned just like built-in values such as int.\n\nAlthough similar\
+    \ in syntax to returning an object value from a method in Java, operationally\
+    \ C is quite different. In the previous C example, the result of the return from\
+    \ readRecord() and the subsequent assignment in main() resulted in the values\
+    \ in the fields of the structure value student in readRecord() being copied into\
+    \ the fields of structure value student in main(). We are not returning a reference\
+    \ or pointer to the structure value student in readRecord(). The actual memory\
+    \ locations used to store the fields of readRecord() are different from the memory\
+    \ locations used to store the fields of student in main().\n\nIn Java, when you\
+    \ pass an object variable, you are actually passing a reference or pointer, so\
+    \ changes to the fields of the object will be seen back at the caller. In C, changing\
+    \ the fields in a structure parameter of a function such as printRecord() will\
+    \ not have any effect on the original value. Consider the following example, which\
+    \ attempts to modify a value passed as a parameter, with the intent that the changes\
+    \ will be visible at the point of the call. The program is erroneous, because\
+    \ the function readRecord() as defined below has no effect in main()."
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# Structured Data Types 75\n\n```\n/* structByValue.c\n * Show that structures\
+    \ are copied.\n */\n#include <stdio.h>\n#include <string.h>\n\n#define NAME_SIZE\
+    \ 80\n\ntyp struct {\nchar last[NAME_SIZE];\nchar first[NAME_SIZE];\ndouble gpa;\n\
+    int startYear;\n} student_t;\n\nvoid printRecord(student_t student);\nvoid readRecord(student_t\
+    \ student);\n\nint main() {\n    student_t student;\n\n    // initialize all fields\n\
+    \    student.last[0] = '\\0';\n    student.first[0] = '\\0';\n    student.gpa\
+    \ = 0;\n    student.startYear = 0;\n\n    // the structure is copied\n    readRecord(student);\n\
+    \    printRecord(student);\n    return 0;\n}\n\nvoid printRecord(student_t student)\
+    \ {\n    printf(\"%s, %s: gpa:%f, year:%d\\n\",\n           student.last, student.first,\n\
+    \           student.gpa, student.startYear);\n}\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# 76\n\n```\nvoid readRecord(student_t student) {\n    student.gpa = 3.5;\n\
+    \    student.startYear = 2000;\n    strncpy(student.first, \"Jane\", NAME_SIZE);\n\
+    \    strncpy(student.last, \"Programmer\", NAME_SIZE);\n}\n```\n\nThe output of\
+    \ this program is:\n\n: gpa:0.000000, year:0\n\n# Dissection of structByValue.c\n\
+    \n```\nvoid readRecord(student_t student);\n```\n\nThis program is largely the\
+    \ same as student.c, discussed earlier. The main change is that the function readRecord()\
+    \ takes a student_t parameter instead of returning a student_t value as a result.\n\
+    \n```\nstudent_t student;\n\n// initialize all fields\nstudent.last[0] = '\\00';\n\
+    student.first[0] = '\\00';\nstudent.gpa = 0;\nstudent.startYear = 0;\n```\n\n\
+    Local variables, such as student above, are not initialized to any particular\
+    \ value by default. To make this program have predictable output, we initialize\
+    \ all of the fields of the structure variable student."
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# Structured Data Types 77
+
+
+    ```
+
+    // the structure is copied
+
+    readRecord(student);
+
+    ```
+
+
+    In the previous example we had readRecord() return a value that was assigned to
+    student. In this example we pass student as a parameter. If this were Java, the
+    method readRecord() could modify the fields of the object referred to student,
+    so that the return from readRecord(), the fields would have been changed. Using
+    the notation shown here, C copies the entire structure value into the formal parameter
+    in the function readRecord(). The result will be that any changes made inside
+    readRecord() will have no effect.
+
+
+    ```
+
+    void readRecord(student_t student) {
+
+    student.gpa = 3.5;
+
+    student.startYear = 2000;
+
+    strncpy(student.first,
+
+    "Jane", NAME_SIZE);
+
+    strncpy(student.last,
+
+    "Programmer", NAME_SIZE);
+
+    }
+
+    ```
+
+
+    The above function readRecord() is erroneous. It assigns values to all of the
+    fields of the formal parameter student, but this does not change any of the fields
+    in the variable structure in main(). It is important to note that even the array
+    fields, first and last, are copied. This is different from the handling of an
+    array passed as a parameter by itself. When an array is passed directly as a parameter,
+    the array is not copied, only the address of the first element of the array is
+    passed. When an array is part of the structure, the entire array is copied.
+
+
+    # 5.3. Pointer to structures
+
+
+    In our examples of structures above, we were dealing with structure variables
+    that contained structure values. Although similar in syntax to reference variables
+    in Java, these structure variables were not pointers or references.'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# 78\n\nAs with the built-in types, it is possible to declare and use pointers\
+    \ to structures. The behavior of pointers to structures is very similar to the\
+    \ behavior of references in Java. Unfortunately, the Java syntax for references\
+    \ is most similar to the C syntax for structures that are not pointers.\n\nThe\
+    \ pointer syntax introduced earlier for use with built-in types can be used with\
+    \ structure values, as shown in the following example.\n\n```\n/* structPointer.c\n\
+    \ * Demonstrate pointers to structures.\n * */\n#include <stdio.h>\n#include <string.h>\n\
+    \n#define NAME_SIZE 80\n\ntyp struct {\n    char last[NAME_SIZE];\n    char first[NAME_SIZE];\n\
+    \    double gpa;\n    int startYear;\n} student_t;\n\nvoid printRecord(student_t\
+    \ student);\nvoid readRecord(student_t *student_p);\n\nint main() {\n    student_t\
+    \ student;\n\n    readRecord(&student);\n    printRecord(student);\n    return\
+    \ 0;\n}\n\nvoid printRecord(student_t student) {\n    printf(\"%s, %s: gpa:%f,\
+    \ year:%d\\n\",\n           student.last, student.first,\n           student.gpa,\
+    \ student.startYear);\n}\n```"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Structured Data Types 79\n\n```\nvoid readRecord(student_t *student_p) {\n\
+    (*student_p).gpa = 3.5;\n(*student_p).start = 2000;\nstrnpy((*student_p).first,\n\
+    \  \"Jane\", NAME_SIZE);\nstrnpy((*student_p).last,\n  \"Programmer\", NAME_SIZE);\n\
+    }\n```\n\nThis example is very similar to the erroneous example from the previous\
+    \ section. In this case the program is correct. In particular, the function readRecord()\
+    \ passes a pointer to the structure value in main(), which can modify the fields\
+    \ of the structure variable student in main(). Notice that the call to readRecord()\
+    \ passes the address of student, not the value student. Then in the function readRecord(),\
+    \ the parameter is declared to be a pointer to student_t, not a simple student_t\
+    \ value. Finally, we use the indirection operator to get to the actual student_t\
+    \ value and then access the fields. The parentheses in statements such as\n\n\
+    ```\n*student_p).gpa = 3.5;\n```\n\nrequired. Both * and . are operators in this\
+    \ statement. They have precedence, and the precedence for . is higher than the\
+    \ precedence for *. Therefore, with the parentheses\n\n```\n*student_p.gpa = 3.5;\n\
+    ```\n\nwould first try to access the field gpa of the pointer student_p. But student_p\
+    \ is not a structure value that has fields; it is a pointer. Thus the expression\
+    \ student_p.gpa is a syntax error. With the parentheses, the expression (*student_p)\
+    \ is a student_t value that has a field gpa so that (*student_p).gpa is a legal\
+    \ expression.\n\nBecause pointers to structures are frequently used in C, probably\
+    \ more often than actual structure variables, C provides a special syntax for\
+    \ accessing a field of using a pointer to the structure value. The following is\
+    \ an equivalent way of writing readRecord() using the preferred syntax for accessing\
+    \ fields, given pointer to a structure value."
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "# 80\n\n```\nvoid readRecord(student_t *student_p) {\n    student_p->gpa =\
+    \ 3.5;\n    student_p->startYear = 2000;\n    strncpy(student_p->first,\n    \
+    \  \"Jane\", NAME_SIZE);\n    strncpy(student_p->last,\n      \"Programmer\",\
+    \ NAME_SIZE);\n}\n```\n\nThe operator -> is called the pointer operator. As you\
+    \ can see in the code, the expression student_t->gpa is equivalent to the expression\
+    \ (*student_t).gpa. A trick for remembering when to use and when to use -> for\
+    \ accessing fields is that you use the -> when you have a pointer, and -> looks\
+    \ somewhat like a pointer or arrow.\n\n# 5.4. Dynamic allocation of structure\
+    \ values\n\nAs with arrays (chapter 3), structure values can be dynamically allocated.\
+    \ The following example dynamically allocates a student_t value and assigns student_one_p\
+    \ to point to that. The example also shows pointer assignment in C is analogous\
+    \ to assignment with reference variables in Java. Compare this program and its\
+    \ output with the program Assignment.c from the first section of this chapter.\
+    \ The two student_t variables in the earlier example have been changed to pointers\
+    \ to student_t_values. Most of the variables have been adjusted to accommodate\
+    \ the fact studentTwo_p = student_one_p below was left as a simple assignment.\
+    \ The result is that both studentTwo_p and student_one_p will be pointing to the\
+    \ same structure value.\n\n```\n* structPointer2.c\n* Demonstrate structure pointer\
+    \ assignment.\n*/\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n\
+    \n#define NAME_SIZE 80\n```"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# Structured Data Types\n\n```\ntypedef struct {\nchar last[NAME_SIZE];\nchar\
+    \ first[NAME_SIZE];\ndouble gpa;\nint startYear;\n} student_t;\n\nint main() {\n\
+    \  student_t *studentOne_p, *studentTwo_p;\n\n  studentOne_p = malloc(sizeof(student_t));\n\
+    \  studentOne_p->gpa = 3.5;\n  studentOne_p->startYear = 2000;\n  strcpy(studentOne_p->first,\n\
+    \    \"Jane\", NAME_SIZE);\n  strpy(studentOne_p->last,\n    \"Programmer\", NAME_SIZE);\n\
+    \n  // pointer assignment\n  studentTwo_p = studentOne_p;\n\n  studentTwo_p->gpa\
+    \ = 3.45;\n  strcpy(studentTwo_p->first,\n    \"John\", NAME_SIZE);\n\n  printf(\"\
+    %s, %s: gpa:%f, year:%d\\n\",\n    studentOne_p->last,\n    studentOne_p->gpa,\n\
+    \    studentOne_p->startYear);\n  printf(\"%s, %s: gpa:%f, year:%d\\n\",\n   \
+    \ studentTwo_p->last,\n    studentTwo_p->gpa,\n    studentTwo_p->startYear);\n\
+    \  return 0;\n}\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# 82
+
+
+    The output of this program is:
+
+
+    | Programmer, John: gpa:3.450000, year:2000 |
+
+    | Programmer, John: gpa:3.450000, year:2000 |
+
+
+    # Dissection of structPointer2.c
+
+
+    | student_t *studentOne_p, *studentTwo_p;
+
+
+    This program creates two pointers to student_t values. No student_t values have
+    yet been created. Notice that the * is associated with the variable name, not
+    with the type. Consider the declaration
+
+
+    | student_t* studentOne_p, studentTwo_p;
+
+
+    which is syntactically legal, but it declares studentOne_p to be a pointer to
+    a student_t and it declares studentTwo_p to be a student_t, not a pointer.
+
+
+    | studentOne_p = malloc(sizeof(student_t));
+
+
+    The above statement creates one student_t value, the only one created in this
+    program.
+
+
+    | studentOne_p->gpa = 3.5;
+
+    studentOne_p->startYear = 2000;
+
+    strncpy(studentOne_p->first,
+
+    "Jane", NAME_SIZE);
+
+    strpy(studentOne_p->last,
+
+    "Programmer", NAME_SIZE); |'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Structured Data Types 83
+
+
+    The above statements fill in the fields of the student_t value pointed to by studentOne_p.
+
+
+    ```
+
+    // pointer assignment
+
+    studentTwo_p = studentOne_p;
+
+    ```
+
+
+    The above assignment is like a Java assignment of two reference variables. Specifically,
+    after execution of this statement, studentTwo_p will be pointing to the exact
+    same memory location (student_t value) that studentOne_p is pointing to.
+
+
+    ```
+
+    studentTwo_p->gpa = 3.45;
+
+    strncpy(studentTwo_p->first,
+
+    "John", NAME_SIZE);
+
+    ```
+
+
+    Using the variable studentTwo_p, we change two of the fields in the one student_t
+    value created in this program. This is the same student_t value that studentOne_p
+    is pointing to, as shown by the print statements that follow.
+
+
+    ```
+
+    printf("%s, %s: gpa:%f, year:%d\n",
+
+    studentOne_p->last,
+
+    studentOne_p->first,
+
+    studentOne_p->gpa,
+
+    studentOne_p->startYear);
+
+    printf("%s, %s: gpa:%f, year:%d\n",
+
+    studentTwo_p->last,
+
+    studentTwo_p->first,
+
+    studentTwo_p->gpa,
+
+    studentTwo_p->startYear);
+
+    ```
+
+
+    Here we print the values pointed to both student_t pointers. As shown above, the
+    output of both statements is the same. There is only one student_t value in the
+    above program.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "# 84\n\nTry replacing the assignment\n\n```\nstudentTwo_p = studentOne_p;\n\
+    ```\n\nwith the following:\n\n```\nstudentTwo_p = malloc(sizeof (student_t));\n\
+    *studentTwo_p = studentOne_p;\n```\n\nNow you will get the same output as produced\
+    \ by the earlier example.\nIf you leave out the first of the two statements above\
+    \ then the program\nwill compile and run, giving unpredictable results.\n\nWe\
+    \ used the standard library function calloc() to allocate arrays in chap-\ter\
+    \ 3. We could allocate a student_t structure using the following call:\n\n```\n\
+    ... = calloc(1, sizeof (student_t));\n```\n\nHowever, it is more common to use\
+    \ the standard function malloc(), which\ntakes only a single parameter, the size\
+    \ of the structure being allocated.\nThese allocation functions return a generic\
+    \ pointer which is implicitly con-\\vertedverted to a pointer to a student_t."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Structured Data Types 85
+
+
+    # Chapter Summary
+
+
+    +   - A struct in C is like a class with only data members, no methods.
+
+
+    +   - Unlike Java, a struct value can be stored directly in a variable. C can
+    also declare pointers to struct values. These pointers are like Java references.
+
+
+    +   - To access a field of a struct value, if the variable contains the struct
+    value, then you use the field selection operator — for example, studentOne.gpa.
+
+
+    +   - To access a field of a pointer to a struct value, use the indirect field
+    selection operator, ->, for example, student_p->gpa.
+
+
+    +   - Although a pointer to a struct value behaves most like a reference to a
+    Java object, syntactically, field access in C is most similar to Java when using
+    actual struct values, not pointers.
+
+
+    +   - Passing a struct value in C is not like passing a Java object. To get the
+    same behavior as in Java, in C we must pass a pointer to a struct value.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "# File I/O and Multiple Source Files\n\n# 6. File I/O and Multiple Source Files\n\
+    \nThere are many libraries of functions that can be called from C programs. Some\
+    \ of them are standard and found on essentially all platforms that support C,\
+    \ while others are specific to a particular platform. For example, there is standard\
+    \ C library support for file I/O, but no standard C library for supporting the\
+    \ development of graphical user interfaces. We begin this chapter with a brief\
+    \ discussion of the standard C support for file I/O.\n\nWe conclude this chapter\
+    \ and with this book an extended example that also introduces the use of header\
+    \ files and multiple source files.\n\n# 6.1. File I/O and command-line arguments\n\
+    \nIn this section we briefly introduce some standard C functions for performing\
+    \ input and using files. The example also introduces the use of command-line arguments,\
+    \ which is very similar to how they are handled in Java. The following program\
+    \ opens a text file and copies the entire contents into another text file. The\
+    \ names of the two files will be specified on the command line when the program\
+    \ is executed.\n\n```\n* fileCopy.c\n* Demonstrate text file I/O by copying one\
+    \ file\n* to another.\n* The program also uses command line arguments.\n */\n\
+    #include <stdio.h>\n#include <stdlib.h>\n\nvoid copy(FILE* in_file, FILE* out_file);\n\
+    \nint main(int argc, char* argv[]) {\n    FILE* in_file;\n    FILE* out_file;\n\
+    ```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\nif (argc != 3) {\n    printf(\"Usage: fileCopy input\\n\");\n    exit(1);\n\
+    }\n```\n\n```\nin_file = fopen(argv[1], \"r\");\nif (in_file == NULL) {\n    fprintf(stderr,\
+    \ \n        \"ERROR: couldn't open %s for reading\\n\",\n        argv[1]);\n \
+    \   exit(1);\n}\n```\n\n```\nout_file = fopen(argv[2], \"w\");\nif (out_file ==\
+    \ NULL) {\n    fprintf(stderr, \n        \"ERROR: couldn't open %s for writing\\\
+    n\",\n        argv[2]);\n    exit(1);\n}\n```\n\n```\ncopy(in_file, out_file);\n\
+    \nreturn 0;\n```\n\n```\n#define BUF_SIZE 200\n\nvoid copy(FILE* in, FILE* out)\
+    \ {\n    char buffer[BUF_SIZE];\n\n    while (fgets(buffer, BUF_SIZE, in) != NULL)\
+    \ {\n        fprintf(out, \"%s\", buffer);\n    }\n```"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# File I/O and Multiple Source Files 89
+
+
+    If the above program was compiled into an executable with the name fileCopy, then
+    the following command could be used to copy the contents of the file input.txt
+    into the file outputFile.txt as shown below.
+
+
+    ```
+
+    fileCopy inputFile.txt outputFile.txt
+
+    ```
+
+
+    # Dissection of fileCopy.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    ```
+
+
+    The function prototypes for the I/O functions used in this program are in the
+    standard header file, stdio.h.
+
+
+    ```
+
+    void copy(FILE* in, FILE* out);
+
+    ```
+
+
+    To make the program more readable, we have separated the actual copying into a
+    separate function. The function is defined after main(), thus the the need for
+    a function prototype. The type FILE is a standard type from the header file stdio.h.
+    This is what we will use to refer to a file once it has been opened for reading
+    or writing.
+
+
+    ```
+
+    int main(int argc, char* argv[])
+
+    ```
+
+
+    In all previous examples, main() was not passed any arguments. As shown in this
+    example, the main() function of a C program can pass any array of strings. Recall
+    that char* is the closest to the type string in C, so argv above is an array of
+    strings. Because arrays arrays do not include a length, main() is also passed
+    the length of the array in the argument argc. The names argc and argv are simple
+    identifiers and can, in principle, be any legal identifier; however, these are
+    the names used by convention. The names come from ''argument count'' and ''argument
+    vector''.'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "# 90\n\n| FILE* in_file;\n| FILE* out_file;\n\nHere we declare two FILE* variables.\
+    \ The standard manipulation functions deal with this type, as shown below.\n\n\
+    ```\nif (argc != 3) {\n    printf(\"Usage: fileCopy input output\\n\");\n    exit(1);\n\
+    }\n```\n\nUnlike Java, the command line arguments passed to a C program include\
+    \ the name of the program as the first entry in the array. Therefore, this program\
+    \ is expecting the array to be length 3, the program name, the input file, and\
+    \ the output file. The function exit() is a standard function that abort the program.\n\
+    \n```\nin_file = fopen(argv[1],\"r\");\nif (in_file == NULL) {\n    fprintf(stderr,\n\
+    \        \"ERROR: couldn't open %s for reading\\n\",\n        argv[1]);\n    exit(1);\n\
+    }\n```\n\n```\nout_file = fopen(argv[2],\"w\");\nif (out_file == NULL) {\n   \
+    \ fprintf(stderr,\n        \"ERROR: couldn't open %s for writing\\n\",\n     \
+    \   argv[2]);\n    exit(1);\n}\n```\n\nThe function fopen() is a standard function\
+    \ for opening a file. The first argument is the name of the file. The second argument\
+    \ is a string indicating how the file should be opened. There are a number of\
+    \ variations. In this example we use \"r\" for reading the input file and \"w\"\
+    \ for writing"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# File I/O and Multiple Source Files 91\n\nthe output file. The function fopen()\
+    \ will return a pointer to the FILE structure used to manipulate the file, if\
+    \ the file is opened successfully. If the open fails, the function returns NULL.\
+    \ To make our program reasonably user friendly, we test the return value and print\
+    \ an appropriate message if the open fails. The function fprintf() is the same\
+    \ as printf() except that it takes an additional parameter that is a pointer of\
+    \ an open FILE structure. This allows us to print any file. The variable stderr\
+    \ refers to the standard error output stream. Although not shown, there is a function\
+    \ scanf() that is the same as scanf() except that, like fprintf(), it takes a\
+    \ file parameter.\n\n```\ncopy(in_file, out_file);\n```\n\nHere we pass the pointers\
+    \ to the two successfully opened files to the function copy(), which does the\
+    \ actual copying.\n\n```\n#define BUF_SIZE 200\n```\n\nWe use a constant to document\
+    \ the size of the buffer we will use for reading text from the input file.\n\n\
+    ```\nvoid copy(FILE* in, FILE* out) {\n    char buffer[BUF_SIZE];\n\n    while\
+    \ (fgets(buffer, BUF_SIZE, in) != NULL) {\n        fprintf(out, \"%s\", buffer);\n\
+    \    }\n}\n```\n\nThe function fgets() is a standard C library function that reads\
+    \ strings from a text file. Each call to fgets() transfers characters from the\
+    \ input file into the char array indicated by the first parameter (buffer in our\
+    \ example). The function continues to copy characters until BUF_SIZE-1 characters\
+    \ (the second parameter minus 1) have been transferred, or a newline has been\
+    \ transferred, or the end-of-file is encountered. In every case, the string is\
+    \ terminated with a null character. Notice that by stopping at BUF_SIZE-1, there\
+    \ will always be room for the null character to terminate the string. If the call\
+    \ transfers any characters, the fgets() returns its first parameter; otherwise,\
+    \ it returns NULL. As you can see,"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# 92
+
+
+    end-of-file is signalled by a return value of NULL.
+
+
+    The standard C libraries include other functions for performing I/O. Refer to
+    the documentation with your system or a standard book on C for more details.
+
+
+    # 6.2. Header files
+
+
+    C, like Java, allows programs to be composed from multiple source files. As we
+    saw in chapter 2, it is necessary to provide a function prototype for a function,
+    if we call the function before defining the function. This same mechanism is used
+    when calling a function that is defined in a different file. It is for this reason
+    that we have included files like stdio.h #include directive. These files, called
+    header files, include function prototypes, type definitions (using typedef) and
+    constants (using #define). By placing this information in a header file, we can
+    avoid having to retype the information in all of the files that may need it. All
+    we need to type is the single line:
+
+
+    ```
+
+    #include <someHeader.h>
+
+    ```
+
+
+    Just as in Java, a C program must contain a function main(). And just as in Java,
+    you can combine several files together to make a program. Because all functions
+    in C share the same name space, that is, they are not grouped into classes, there
+    can be only one in your program that contains a function main(). Recall that you
+    can have several Java classes that contain a main() method. When you start the
+    Java program, you indicate which class you want to use as the main class. In C,
+    the compiler will combine all of the source files into a single output file, which
+    must contain only one main()
+
+
+    Both header files (ending in .h) and normal C source files (files ending in .c)
+    are considered part of the C source code. As mentioned above, the header files
+    will generally contain type definitions, constant definitions, and function prototypes.
+    The other C source files will contain the function definitions. The following
+    program is composed of three source files, two regular source files, and one header
+    file. One source file will contain the main() function, and the other will contain
+    functions to implement a simple stack.'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# File I/O and Multiple Source Files\n\n```\n/* stackMain.c\n * Demonstrate\
+    \ separate compilation and header\n * files using a simple stack implementation.\n\
+    \ */\n#include <stdio.h>\n#include \"stack.h\"\n\nint main() {\n    stack_t* myStack\
+    \ = newStack();\n\n    push(myStack, 123);\n    push(myStack, 99);\n    push(myStack,\
+    \ 4444);\n    while (!empty(myStack))\n        printf(\"popped: %d\\n\", pop(myStack));\n\
+    \n    return 0;\n}\n```\n\n```\n/* stack.h\n * A header file for a stack containing\
+    \ type\n * declarations and function prototypes.\n */\ntypef struct stackElem\
+    \ {\n    int value;\n    struct stackElem* next_p;\n} stackElem_t;\n\ntypef struct\
+    \ {\n    stackElem_t* top_p;\n} stack_t;\n\nint pop(stack_t* stack_p);\nvoid push(stack_t*\
+    \ stack_p, int value);\nint top(stack_t* stack_p);\nstack_t* newStack(void);\n\
+    int empty(stack_t* stack_p);\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\n/* stack.c\n* A simple integer stack implementation.\n* This implementation\
+    \ uses a linked list.\n */\n#include <stdlib.h>\n#include <stdio.h>\n#include\
+    \ \"stack.h\"\n\nstack_t* newStack(void) {\n    stack_t* result = malloc(sizeof(stack_t));\n\
+    \    result->top_p = NULL;\n    return result;\n}\n\nint pop(stack_t* stack_p)\
+    \ {\n    if (stack_p == NULL ||\n        stack_p->top_p == NULL) {\n        fprintf(stderr,\n\
+    \            \"ERROR: pop empty stack\\n\");\n        exit(1); // abort the program\n\
+    \    }\n    else {\n        int result;\n        stackElem_t* result_elem;\n \
+    \       result_elem = stack_p->top_p;\n        result = result_elem->value;\n\
+    \        stack_p->top_p = result_elem->next_p;\n        free(result_elem);\n \
+    \       return result;\n    }\n}\n\nvoid push(stack_t* stack_p, int value) {\n\
+    \    stackElem_t* temp = =\n        malloc(sizeof(stackElem_t));\n    temp->value\
+    \ = value;\n    temp->next_p = stack_p->top_p;\n    stack_p->top_p = temp;\n}\n\
+    ```"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# File I/O and Multiple Source Files 95\n\n```\nint top(stack_t* stack_p) {\n\
+    \    if (stack_p == NULL ||\n        stack_p->top_p == NULL) {\n        fprintf(stderr,\
+    \ \n            \"ERROR: top empty stack\\n\");\n        exit(1); // abort the\
+    \ program\n    }\n    else\n        return stack_p->top_p->value;\n}\n```\n\n\
+    ```\nint empty(stack_t* stack_p) {\n    return (stack_p->top_p == NULL);\n}\n\
+    ```\n\nThe program above can be compiled as shown below.\n\n```\ngcc stackMain.c\
+    \ stack.c -o stackTest\n```\n\nThe program can be executed by typing stackTest\
+    \ and the output is:\n\n```\npopped: 4444\npopped: 99\npopped: 123\n```\n\nFor\
+    \ large C programs consisting of many source files, there are mechanisms that\
+    \ do not require every source file to be recompiled each time. The details of\
+    \ these mechanisms vary from system to system."
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Dissection of stackMain.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    #include "stack.h"
+
+    ```
+
+
+    When including header files from the standard Library, the name of the file is
+    enclosed in <angle brackets>. When including header files that you create yourself,
+    and that reside in the same directory as your other source files, the file name
+    is enclosed in quotes. The choice of enclosing symbols affects where the C compiler
+    to find the header file. The function prototype for printf() is in stdio.h, and
+    the prototypes typedefs for our stack implementation are in stack.h, dissected
+    later.
+
+
+    ```
+
+    stack_t* myStack = newStack();
+
+    ```
+
+
+    The stack_t is defined in the header file stack.h. The function newStack() is
+    implemented in the file file stack.c, and a prototype for the function is in stack.h.
+    At this point it is sufficient to know that newStack() returns a pointer to a
+    stack_t value.
+
+
+    ```
+
+    push(myStack, 123);
+
+    push(myStack, 99);
+
+    push(myStack, 4444);
+
+    ```
+
+
+    To demonstrate our stack, we push three integer values onto the stack. The function
+    push() is defined in stack.c, dissected later. Recall that in Java the first call
+    would probably have been written:
+
+
+    ```
+
+    myStack.push(123);
+
+    ```
+
+
+    In C, functions are not part of the type, and there is no implicit first parameter.
+    Therefore, we explicitly pass the stack as the first parameter to the function
+    push().'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "# File I/O and Multiple Source Files 97\n\n```\nwhile (!empty(myStack)) {\n\
+    \    printf(\"popped: %d\\n\", pop(myStack));\n```\n\nThe functions empty() and\
+    \ pop() are defined in stack.c, and have pro-\ntotypes in stack.h.\n\n# Dissection\
+    \ of stack.h\n\n```\ntypedef struct stackElem {\n    int value;\n    struct stackElem*\
+    \ next_p;\n} stackElem_t;\n```\n\nWe declare a type that will be used to store\
+    \ each of the values pushed\nto the stack, in a simple linked list. Each element\
+    \ will point to the next\nelement in the stack. This example presents a complication\
+    \ that arises\nwhen declaring recursive data structures as this in C. In Java,\
+    \ the name\nof a class is immediately available to the implementation of the class\
+    \ as a\ntype. In C, the typedef notation, shown here for creating a new type,\
+    \ does\nnot make the new type available until the typedef has been completely\n\
+    processed. The solution is as shown here. By including an identifier such\nas\
+    \ stackElem after the keyword struct, we can immediately use struct\nstackElem\
+    \ as the type. In fact, the typedef as used here is a way of\ndefining the name\
+    \ stackElem_t to be a shorthand for struct stackElem.\nThe shorthand version can't\
+    \ be used within the struct definition.\nThe identifier after struct is optional\
+    \ if we only plan to use the shorthand\n\n```\ntypedef struct {\n    stackElem_t*\
+    \ top_p;\n} stack_t;\n```\n\nThis is the main stack type. It is simply a pointer\
+    \ to the top element\nthe stack. An empty stack will be represented by having\
+    \ top_p be NULL."
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '```
+
+    int pop(stack_t* stack_p);
+
+    void push(stack_t* stack_p, int value);
+
+    int top(stack_t* stack_p);
+
+    stack_t* newStack(void);
+
+    int empty(stack_t* stack_p);
+
+    ```
+
+
+    These are the function prototypes for the functions that implement the stack.
+    stack.c. By placing the prototypes in this header file, functions in other files,
+    such as stackMain.c, can call the functions defined in stack.c by simply including
+    stack.h using the #include directive in the other source files.
+
+
+    # Dissection of stack.c
+
+
+    ```
+
+    #include "stack.h"
+
+    ```
+
+
+    The file stack.c provides the implementation for the function prototypes in stack.h.
+    In addition, stack.c uses the types defined in stack.h to implement the stack
+    operations.
+
+
+    ```
+
+    stack_t* newStack() {
+
+    stack_t* result = malloc(sizeof (stack_t));
+
+    result->top_p = NULL;
+
+    return result;
+
+    }
+
+    ```
+
+
+    For this stack design, we decided that users of the stack should always manipulate
+    pointers to stack values. They obtain a pointer to a properly initialized stack
+    value by calling this function. This function simulates the behavior of a Java
+    constructor.'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "# File I/O and Multiple Source Files\n\n```\nint pop(stack_t* stack_p) {\n\
+    \    if (stack_p == NULL ||\n        stack_p->top_p == NULL) {\n        fprintf(stderr,\n\
+    \            \"ERROR: pop empty stack\\n\");\n        exit(1); // abort the program\n\
+    \    }\n    else {\n        int result;\n        stackElem_t result_elem;\n  \
+    \      result_elem = stack_p->top_p;\n        result = result_elem->value;\n \
+    \       stack_p->top_p = result_elem->next_p;\n        free(result_elem);\n  \
+    \      return result;\n    }\n}\n```\n\nC does not have direct support for exception\
+    \ handling. In a Java program we might throw an exception if an attempt was made\
+    \ to pop an empty stack or a stack that had not been properly initialized. In\
+    \ this example we simply abort the program printing an error message. If the stack\
+    \ is not empty, we remove the top element, top_p to the next element in the stack,\
+    \ and free the memory occupied by the popped stackElem_t value. Without the free(),\
+    \ the memory for the popped stackElem_t would constitute a memory leak. A program\
+    \ using this implementation would slowly consume more and more memory until it\
+    \ ran out of memory. There are weaknesses with this implementation. There is nothing\
+    \ in the language that prevents other parts of a program from pointing to stackElem_t\
+    \ values from the stack and using them. However, if a program did this, then unpredictable\
+    \ behavior would result when we free the memory, as we do here. There are ways\
+    \ to implement a stack that provide increased data hiding, but those techniques\
+    \ are beyond the scope of this brief book on C."
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\nvoid push(stack_t* stack_p, int value) {\n    stackElem* temp =\n    malloc(sizeof(stackElem));\n\
+    \    temp->value = value;\n    temp->next_p = stack_p->top_p;\n    stack_p->top_p\
+    \ = temp;\n}\n```\n\nThis function assumes the stack_t value has been properly\
+    \ initialized (i.e., the top_p field has a meaningful value). Because a C struct\
+    \ does not have constructors, there is no guarantee that the value has been initialized.\
+    \ If the stack value was created using the function newStack() the top_p field\
+    \ will be valid. The function allocates memory for a new stackElem_t value and\
+    \ links that value onto the top of the stack.\n\n```\nint top(stack_t* stack_p)\
+    \ {\n    if (stack_p == NULL ||\n        stack_p->top_p == NULL) {\n        fprintf(stderr,\
+    \ \n            \"ERROR: top empty stack\\n\");\n        exit(1); // abort the\
+    \ program\n    }\n    else\n        return stack_p->top_p->value;\n}\n```\n\n\
+    This function returns the same value as pop(), but it doesn't modify the stack.\n\
+    \n```\nint empty(stack_t* stack_p) {\n    return (stack_p->top_p == NULL);\n}\n\
+    ```\n\nThis function allows the user of a stack to check and see if there are\
+    \ any elements remaining in the stack. Such a function is essential, given this\
+    \ design where pop() aborts the program if you try to pop an element from an empty\
+    \ stack."
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# File I/O and Multiple Source Files 101
+
+
+    # Chapter Summary
+
+
+    +   - C provides access to command line arguments by passing an array of strings
+    and an argument count as parameters to main().
+
+    - A file can be opened for reading or writing using the standard C function fopen().
+
+    - The function fprintf() is like printf(), but it can be used to print to a specific
+    file.
+
+    - The function fscanf() is like scanf(), but it can be used to read from a specific
+    file.
+
+    - The functions of a C program can be grouped into multiple source files.
+
+    - Header files (ending in .h by convention) are used to hold function prototypes,
+    constant declarations, and type declarations. These header files can then be included
+    in any source file needing those declarations.
+
+    - Unlike a Java class name, the name defined by a typedef cannot be used as a
+    type within the typedef. For struct types, the new type can be referred to using
+    the notation struct name, even within the type definition. For example, in the
+    declaration
+
+
+    the name someType_t cannot be used to define a field in this struct type; however,
+    the type struct someType can be used. The identifier someType is not required
+    if this struct type is not recursive.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# Index
+
+
+    +   ANSI standard, 9
+
+    arrays, 41
+
+    accessing with pointers, 49
+
+    as fields of a struct, 37
+
+    as parameters, 44
+
+    assignment, 70
+
+    bounds checking, 41
+
+    dynamic allocation, 48
+
+    initializers, 42
+
+    length, 42
+
+    multidimensional, 43
+
+
+    +   free(), 49, 99
+
+    fscanf(), 91
+
+    functions, 11
+
+    declaring, 29
+
+    prototype, 30
+
+    signature, 30
+
+
+    +   garbage collection, 65
+
+    gcc, 9, 13, 16, 95
+
+    gets(), 63
+
+    GNU Compiler Collection (GCC), 9
+
+
+    +   boolean, 13
+
+    operators, 14
+
+
+    +   header files, 58, 89, 92
+
+    #include, 12
+
+    inheritance, 67
+
+    initialization, 14
+
+    ISO C standard, 99
+
+
+    +   C standards, 9
+
+    call-by-reference, 34
+
+    call-by-value, 29, 34
+
+    calloc(), 49, 84
+
+    command-line arguments, 87
+
+    compiling
+
+    multiple files, 95
+
+    gcc, 9, 13, 16, 95
+
+    constants, 58, 69
+
+    constructor, 67
+
+
+    +   libraries, 87
+
+    local variables, 14
+
+    main(), 12
+
+    return value, 13
+
+    malloc(), 84
+
+    memory leak, 50
+
+
+    +   dangling pointer, 50
+
+    #define, 58
+
+    end-of-file, 62, 91
+
+    escape sequence, 54
+
+    exit(), 90
+
+
+    +   null character, 53, 54
+
+    operators, 14
+
+    ^, 14
+
+    ==, 14
+
+    !, 14
+
+    !=, 14
+
+    <, 14
+
+    <<, 14
+
+    <=, 14
+
+    >, 14
+
+    >>, 14
+
+    >=, 14
+
+
+    +   fgets(), 91
+
+    field, 67, 69
+
+    FILE, 89
+
+    file I/O, 87
+
+    open(), 90
+
+    format string, 17, 18, 24
+
+    printf(), 91'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# 104
+
+
+    l, 14
+
+    ||, 14
+
+    &, 14
+
+    &&, 14
+
+    +, 14
+
+    ++, 16
+
+    -, 14
+
+    --,, 16
+
+    ->, 80
+
+    *, 14
+
+    /, 14
+
+    %, 14
+
+    sizeof, 49
+
+
+    swap.c, 35
+
+    prototype, 30
+
+    puts(), 64
+
+    reference, 29, 31, 34
+
+    scan set, 25, 63
+
+    scanf(), 23, 61
+
+    signature, 30
+
+    sizeof, 49
+
+    standard
+
+    ANSI C, 9
+
+    ISO C, 9
+
+    standard functions
+
+
+    parameter passing, 29
+
+    pointer arithmetic, 47
+
+    pointers, 31
+
+    printf(), 12, 18
+
+    programs
+
+    arrayBounds.c, 42
+
+    arrayParams.c, 45
+
+    arrayParams2.c, 47
+
+    basicSyntax.c, 15
+
+    dynamic.c, 48
+
+    fileCopy.c, 88
+
+    hello.c, 11
+
+    min.c, 30
+
+    min2.c, 31
+
+    pointer.c, 32
+
+    printf.c, 23
+
+    printfExample.c, 19
+
+    readingStrings.c, 62
+
+    scanExample.c, 24
+
+    stack.c, 95
+
+    stack.h, 94
+
+    stackMain.c, 93
+
+    stringLib.c, 57
+
+    strings.c, 54
+
+    structAssignment.c, 68
+
+    structByValue.c, 76
+
+    structPointer.c, 79
+
+    structPointer.c, 82
+
+    student.c, 73
+
+
+    calloc(), 49, 84
+
+    exit(), 90
+
+    fget(), 91
+
+    fopen(), 90
+
+    printf(), 91
+
+    free(), 49, 99
+
+    fscanf(), 91
+
+    gets(), 63
+
+    malloc(), 84
+
+    printf(), 12, 18
+
+    uts(), 64
+
+    scanf(), 23, 61
+
+    strcat(), 56
+
+    strchr(), 56
+
+    strcmp(), 56
+
+    strcpy(), 56
+
+    strlen(), 56
+
+    strcat(), 56
+
+    strnmp(), 56
+
+    strncpy(), 56, 70
+
+    strchr(), 56
+
+    statements, 14
+
+    for, 14
+
+    -else, 14
+
+    while, 14
+
+    stdio.h, 12, 89
+
+    stdlib.h, 49
+
+    strcat(), 56
+
+    strchr(), 56'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# INDEX 105
+
+
+    +   strcmp(), 56
+
+    strpy(), 56
+
+    string.h, 58
+
+    strings, 53
+
+    strlen(), 56
+
+    strcat(), 56
+
+    strncmp(), 56
+
+    strncpy(), 56, 70
+
+    strstr(), 56
+
+    structures, 67
+
+
+    +   assignment, 70
+
+    dynamic allocation, 80
+
+    field access, 69
+
+    passing as parameters, 71
+
+    pointers to, 77
+
+
+    +   trouble spot
+
+    & in scanf(), 24
+
+    = vs ==, 17
+
+    no boolean type, 13
+
+    proper use of * & &, 37
+
+    uninitialized arrays, 43
+
+    uninitialized variables, 46
+
+    unterminated string, 60
+
+    variable declarations, 14
+
+
+    +   typedef, 67
+
+
+    +   uninitialized variables, 16
+
+
+    +   virtual memory, 34
+
+    void, 12'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# JAVA TO C:
+
+    A PRIMER
+
+
+    This book is designed to be used as a quick introduction to C for programmers
+    already familiar with Java. It is not a replacement for a reference book on C,
+    but is instead a supplement. For the programmer already familiar with Java, the
+    typical book on C requires the reader to wade through many details of already-familiar
+    material. In this book, we quickly present the main concepts needed to begin writing:
+    serious programs in C, highlighting the differences between C and Java.
+
+
+    Polyteknisk
+
+    Forlag
+
+
+    ![](img/2bdc652be3c5c6d927ebe8559dc9e48c_107_0.png)'
+  merge: -1
+  pgno: 107
