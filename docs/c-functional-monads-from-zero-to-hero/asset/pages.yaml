@@ -1,0 +1,2225 @@
+- img_proc: true
+  md: '# # C# FUNCTIONAL
+
+    MONADS FROM ZERO TO HERO
+
+    CARLOS BUENO
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # C# Functional: Monads from Zero to Hero.
+
+
+    Carlos Bueno
+
+
+    Copyright © 2024 by Carlos Bueno.
+
+
+    All rights reserved. No part of this book may be used or reproduced in any form
+    whatsoever without written permission except in the case of brief quotations in
+    critical articles or reviews.
+
+
+    For more information, or to book an event, contact:
+
+    carlosbueno@sapo.pt
+
+    http://www.github.com/kinderbueno360
+
+
+    My Functional Library Functional.DotNet
+
+    https://github.com/kinderbueno360/Functional.DotNet
+
+
+    Book design by Carlos Bueno
+
+    Cover design by Carlos Bueno
+
+
+    First Edition: 2023'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# DEDICATION
+
+
+    To my beloved wife Ewa Walegga-Bueno,
+
+
+    Your constant support and source of inspiration have been the cornerstone of this
+    journey. Your unwavering love, encouragement, and patience have been my guiding
+    stars, helping me navigate and overcome every challenge to make this book a reality.
+
+
+    Thank you for always believing in me, for your steadfast faith in my abilities,
+    and for being the light in the darkest moments.
+
+
+    To my cherished children, Luiz Carlos Bueno, Gustavo Bueno, and Mikołaj Walegga-Bueno,
+
+
+    You are my pride and joy, the embodiments of hope and dreams for the future. Your
+    laughter and curiosity fuel my desire to create, inspire, and dream bigger.
+
+
+    To my dear brother Cleber Bueno,
+
+
+    Your companionship and solidarity through the years have been invaluable. Your
+    presence in my life has been a source of strength and joy, reminding me of the
+    unbreakable bond we share.
+
+
+    To my beloved mother Celia Bueno and father Carlos Roberto Bueno,
+
+
+    Your guidance, sacrifices, and unconditional love have shaped the person I am
+    today. You have instilled in me values and virtues that no words can fully express
+    my gratitude for.
+
+
+    And to my late grandmother Anna Fantucci,
+
+
+    Your memory is a treasure I hold close to my heart. More than 25 years since you
+    passed, yet your influence remains a powerful force in my life. You were the most
+    important person in my world, a beacon of wisdom, love, and kindness. Your legacy
+    continues to inspire and guide me every day.
+
+
+    This book is dedicated to all of you as a token of my profound love, gratitude,
+    and respect. Each of you has played a significant role in this journey, and it
+    is with immense honor that I share this achievement with you.
+
+
+    Carlos Bueno'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Table of Contents
+
+
+    Preface
+
+
+    Chapter 1: Introduction
+
+
+    +   - Brief Overview of the Book
+
+
+    +   - Why Monads Matter in C
+
+
+    Chapter 2: Understanding Functional Programming in the Latest C#
+
+
+    +   - Brief Explanation of Functional Programming
+
+
+    +   - New Functional Features in C# 11
+
+
+    +   - Record Structs
+
+
+    +   - Interpolated Strings as Format Strings
+
+
+    +   - with Expressions for Structs
+
+
+    +   - Parameter Null Checking
+
+
+    Chapter 3: .NET 8: Setting the Stage for Functional Programming
+
+
+    +   - Brief Overview of .NET 8
+
+
+    +   - Importance of .NET 8 for Functional Programming in C#
+
+
+    +   - Improved Language Features
+
+
+    +   - Immutable Data Types
+
+
+    +   - LINQ and Advanced Collection Manipulation
+
+
+    +   - Task-Based Asynchronous Programming
+
+
+    +   - High-Performance Functional Libraries
+
+
+    Chapter 4: Monad Essentials
+
+
+    +   - What are Monads?
+
+
+    +   - Monad Structure and Properties
+
+
+    +   - Monad Structure
+
+
+    +   - Monad Laws'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Chapter 5: Monads in Action with C# and .NET 8
+
+
+    Existing Monad Libraries in C
+
+
+    Creating and Using Simple Monads with .NET 8 and C# 11
+
+
+    # Chapter 6: Building Your Own Monad Library with .NET 8 and C#
+
+
+    Planning Your Library
+
+
+    Designing and Implementing Monads
+
+
+    Maybe<T>
+
+
+    +   - Samples
+
+    - Using Map
+
+    - Using Bind
+
+    - Using GetOrElse
+
+    - All together
+
+
+    Either<L, R>
+
+
+    Validation<T>
+
+
+    +   - Using Validation<T> in a Web API
+
+
+    Try<T>: Dealing with Exceptions Functionally
+
+
+    Examples
+
+
+    +   - Running the Try
+
+    - Exceptional<T>
+
+    - Sample Usage of Exceptional<T>
+
+    - Conclusion
+
+
+    # Chapter 7: Practical Examples - Real-world Scenarios of Using Your Own Monad
+    Library with .NET 8 and C#
+
+
+    Scenario
+
+
+    Building the Application'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Chapter 8: Conclusion and Next Steps
+
+
+    +   Appendix / Further Resources
+
+    - Books
+
+    - Online Courses
+
+    - Blogs and Websites
+
+    - Video Resources
+
+    - Podcasts
+
+    - Other
+
+
+    # Preface
+
+
+    Welcome to "C# Functional: Monads from Zero to Hero". This concise guide has been
+    designed to rapidly elevate your understanding and practical use of monads in
+    functional programming using C# and .NET 8.
+
+
+    The idea of monads, imported from the realm of functional programming, has always
+    been a challenging concept to grasp for many developers. Yet, they represent a
+    powerful and expressive tool in a programmer''s arsenal. This book aims to demystify
+    monads and illustrate their practicality and usefulness in your everyday coding
+    tasks.
+
+
+    In the rapidly evolving landscape of software development, the latest updates
+    to C# and the .NET framework have'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'brought a paradigm shift, making functional programming more prevalent than
+    ever. The functional paradigm allows developers to write more predictable, testable,
+    and debuggable code. We will delve into how the features of C# and .NET 8 are
+    well-suited for functional programming and specifically for implementing and utilizing
+    monads.
+
+
+    This book is not just about theory. One of our key objectives is to help you build
+    your own monad library. This hands-approach will allow you to better understand
+    the inner workings of monads and how they can be customized to suit your specific
+    programming needs.
+
+
+    The journey from ‘zero to hero’ does not require any previous understanding of
+    monads or functional programming in C#. We will start from the basics and gradually
+    move towards more complex concepts. Each step will build upon the previous one,
+    ensuring a solid foundation and a clear path of progression.
+
+
+    This is a short book by design, meant to be a concise and focused guide rather
+    than an exhaustive reference. Our goal is to deliver the core understanding and
+    practical skills you need to start working with monads in C# and .NET 8.
+
+
+    Whether you''re a professional C# developer seeking to deepen your understanding
+    of functional programming or a student of computer science curious about the practical
+    uses of monads, this book has something for you.
+
+
+    So, let''s embark on this exciting journey to master monads in C# and .NET 8.
+
+
+    Happy Coding!
+
+
+    Carlos Bueno'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Chapter 1: Introduction
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Brief Overview of the Book
+
+
+    Welcome to the world of functional programming in C# and .NET 8, where we demystify
+    and explore the fascinating concept of monads. This book, "C# Functional: Monads
+    from Zero to Hero - Create Your Own Library", is designed to be a concise and
+    focused guide that takes you on a step-by-step journey to understand and implement
+    monads in your C# code.
+
+
+    Our journey begins with understanding the core principles of functional programming
+    and how they are supported in the latest version of C# and .NET 8. We then delve
+    into the concept of monads, looking at their structure, properties, and their
+    importance in functional programming.
+
+
+    As we progress, we will look at how monads are used in C# and .NET 8 and how to
+    build and use a library of our own. We will be hands-on throughout the journey,
+    as we believe that the best learning comes from doing.
+
+
+    By the end of this book, you''ll have a solid understanding of monads and functional
+    programming in C#. You''ll be equipped with the knowledge and skills to build
+    your own monad library and use it effectively in your projects.
+
+
+    # Why Monads Matter in C
+
+
+    In computer science, monads offer a framework that allows us to sequence functions
+    together in a way that leads to modular, reusable, and maintainable code. They
+    are a powerful construct that lets us handle side effects, exceptions, computations,
+    and state in a clear and composable way.
+
+
+    Monads matter in C because they can tackle complexity by providing a structure
+    for abstracting over computational context. They can encapsulate concerns like
+    null-checking, exception handling, state, and more, letting us focus more on our
+    problem domain and less on the mechanics of the language and environment. This
+    leads to cleaner, more maintainable code.
+
+
+    In C#, as in many other languages, monads are not an explicit part of the language
+    syntax, but a pattern that can be'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'utilized to bring the benefits of functional-style programming to our code.
+
+
+    Even if you''ve never heard of monads before, you''ve likely used them without
+    realizing it. Many constructs in C# and .NET, such as Nullable<T>, IEnumerable<T>,
+    and Task<T>, follow the monad pattern. By explicitly understanding monads, we
+    can use these constructs more effectively and write more robust and maintainable
+    C# code.
+
+
+    In the following chapters, we will explore these ideas in more depth, providing
+    practical examples and guidance to help you master the use of monads in your C#
+    code.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Chapter 2: Understanding Functional Programming in the Latest C#
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_10_0.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Brief Explanation of Functional Programming
+
+
+    Functional programming (FP) is a programming paradigm that centers around the
+    use of pure functions, i.e., functions that produce the same output for the same
+    input and have no side effects. In FP, functions are first-class citizens, meaning
+    they can be passed around as arguments, returned from other functions, or assigned
+    to variables.
+
+
+    FP is characterized by the principle of immutability, whereby data cannot be changed
+    once created. Instead of altering existing objects, new objects are created with
+    the required changes. This approach leads to more predictable and safer code,
+    reducing bugs and making code easier to test and debug.
+
+
+    If you''re interested in diving deeper into the principles of functional programming
+    and how to apply them in C#, my book "Functional C#: Embracing Functional Programming
+    in a C# World" provides a comprehensive guide.
+
+
+    # New Functional Features in C# 11
+
+
+    C# has evolved significantly over the years, with each new version bringing features
+    that make functional programming more natural and accessible. C# 11 continues
+    this trend with several exciting additions:
+
+
+    # Record Structs
+
+
+    C# 11 introduces record structs, which are immutable value types. They extend
+    the concept of record types (immutable reference types introduced in C# 9) and
+    provide a more efficient option in certain scenarios.
+
+
+    ```
+
+    public record struct Point(int X, int Y);
+
+    ```
+
+
+    # Interpolated Strings as Format Strings
+
+
+    Interpolated strings, introduced in earlier versions, can now be used as format
+    strings in C# 11. This feature makes'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'string formatting more convenient and code cleaner.
+
+
+    ```
+
+    int number = 42;
+
+    string str = $"The answer is {number}";
+
+    ```
+
+
+    # with Expressions for Structs
+
+
+    with expressions, which were previously only available for record types, have
+    been extended to structs in C# 11. This feature allows you to create a new struct
+    that is a copy of an existing one with some properties changed.
+
+
+    # public struct Point
+
+
+    ```
+
+    {
+
+    public int X { get; init; }
+
+    public int Y { get; init; }
+
+    }
+
+    ```
+
+
+    ```
+
+    var point1 = new Point { X = 10, Y = 20 };
+
+    var point2 = point1 with { X = 30 };
+
+    ```
+
+
+    # Parameter Null Checking
+
+
+    C# 11 introduces a concise syntax for checking if a parameter is null, reducing
+    boilerplate code and enhancing code readability.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "```\npublic void ExampleMethod(string value!!)\n{\n    // Method body\n}\n\
+    ```\n\nIn the code above, a System.ArgumentNullException will be thrown automatically\
+    \ if the value parameter is null.\n\nThese are just a few of the functional programming\
+    \ features in C# 11. We'll leverage these and more in the following chapters as\
+    \ we explore the world of monads in C#."
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Chapter 3: .NET 8: Setting the Stage for Functional Programming
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Brief Overview of .NET 8
+
+
+    .NET 8 is the latest major release of the .NET platform, continuing the trajectory
+    of innovation and performance improvements that started with .NET Core. It''s
+    a versatile platform that allows developers to build many types of applications,
+    such as web, desktop, cloud, mobile, gaming, IoT, and AI, using a single unified
+    platform.
+
+
+    The .NET 8 release, like the ones before it, focuses on improving developer productivity,
+    modernizing existing applications, and supporting the latest trends in software
+    development. It brings enhancements to C# language, performance improvements,
+    better cloud integration, and more.
+
+
+    # Importance of .NET 8 for Functional Programming in C#
+
+
+    .NET 8 continues to provide a robust platform for applying functional programming
+    principles in C#. It further integrates functional concepts into the C# language
+    and the larger .NET ecosystem, making it easier to write functional code in a
+    traditionally object-oriented environment.
+
+
+    Here are some key ways .NET 8 supports functional programming in C#:'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Improved Language Features
+
+
+    With every release, C# continues to incorporate more functional programming features.
+    In .NET 8, this includes features such as record structs and improved pattern
+    matching, which allow for more expressive, concise, and safe code.
+
+
+    # Immutable Data Types
+
+
+    .NET 8 and C# provide a range of immutable data types and structures that are
+    fundamental for functional programming, such as System.String, System.DateTime,
+    and record types. These types ensure data consistency and make code easier to
+    reason about.
+
+
+    # LIN and Advanced Collection Manipulation
+
+
+    Language Integrated Query (LINQ) is a powerful feature in .NET that allows developers
+    to perform complex queries on collections, similar to SQL queries in databases.
+    LINQ, along with the rich suite of collection classes in .NET, allow for functional-style
+    operations like map, filter, and reduce.
+
+
+    # Task-Based Asynchronous Programming
+
+
+    The Task and Task<T> types in .NET provide a model for asynchronous programming,
+    which is inherently functional. They allow developers to write non-blocking code
+    in a straightforward, linear style, avoiding callback hell.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# High-Performance Functional Libraries
+
+
+    .NET has a wide range of high-quality, open-source libraries that are inspired
+    by functional programming. Libraries like LanguageExt provide functional data
+    types and functions, making it easier to write functional-style code in C#.
+
+
+    In the following chapters, we''ll explore these features and more as we we delve
+    into the world of monads and functional programming with C# and .NET 8.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Chapter 4: Monad Essentials
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'Monads are a foundational concept in functional programming, notably in languages
+    such as Haskell, but they''re also found in C#, F#, and others. They''re often
+    met with a sense of dread due to their abstract nature, but understanding them
+    can significantly enrich your programming toolbox.
+
+
+    What are Monads?
+
+
+    Monad are containers that have value(s) and if you apply a function to that value(s)
+    you get the same kind of container with the value(s) inside of it transformed.
+    A type that possesses a defined Map/Select function qualifies as a functor. The
+    Map function can be broadly described as follows:
+
+
+    ```
+
+    Map: (C<T>, (T -> R)) -> C<R>
+
+    ```
+
+
+    Map is a function that takes a generic container that wraps inner value of type
+    T and a function f that transforms T to R and returns a container C<R> wrapping
+    the value after applying f to the container''s inner value.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '![](img/c0b8b96a0157eda20d597ec50a87edc6_20_0.png)
+
+
+    At their core, monads can be understood as a design pattern that allows the handling
+    of additional operations or effects without changing the existing function signatures.
+    They encapsulate these side-effects or additional operations in a way that maintains
+    functional purity, avoiding the need for altering the function''s behavior or
+    its interaction with other parts of the system.
+
+
+    One popular analogy used to describe monads is the concept of an "elevated world".
+    Imagine you have a set of functions that operate on simple types, but now you
+    need to handle these types in an "elevated" or "enhanced" context.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'This could be dealing with asynchronous operations (Task<T> in C#), nullable
+    types (Maybe<T> ), or lists of values (IEnumerable<T>).
+
+
+    The idea of elevation gives rise to two fundamental problems:
+
+
+    +   - How can we apply our regular functions in this elevated world?
+
+
+    +   - How can we handle situations where we end up with an "elevation of an elevation"
+    (like Task<Task<T>>) or IEnumerable<IEnumerable<T>> )
+
+
+    Monads provide a solution to both of these problems.
+
+
+    Firstly, monads have a mechanism (usually a method called Bind, SelectMany in
+    C#, or >== operator in Haskell) to apply a function to the elevated value, commonly
+    known as "binding". This allows us to use our regular functions to interact with
+    the elevated values.
+
+
+    Secondly, monads can handle nested elevations by "flattening" them. In other words,
+    if you find yourself with an IEnumerable<IEnumerable<T>> or a Task<Task<T>>, a
+    monad provides a way to combine these nested elevations into a single elevation
+    (IEnumerable<T> or Task<T>), making it easier to work with.
+
+
+    To be a monad, a type needs to support two operations:
+
+
+    +   - Return (also known as pure or unit): A function that takes a regular value
+    and elevates it into the monad''s context (for example, Task.FromResult in C#
+    or Just in Haskell''s Maybe monad).
+
+
+    ```
+
+    public static Functor<T> Return<T>(T x)
+
+    ```'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '(or SelectMany in C#, and >>= Haskell): A function that takes an elevated value
+    and a function that operates on the underlying value and returns an elevated result.
+    It applies the function to the elevated value and flattens the result if necessary.
+
+
+    ```
+
+    public static Functor<TResult> SelectMany<T, TResult>(
+
+
+    this Functor<T> source,
+
+
+    Func<T, Functor<TResult>> selector)
+
+    ```
+
+
+    These two operations should obey certain laws (known as monad laws) to ensure
+    consistent behavior, which we will discuss in a separate chapter.
+
+
+    In conclusion, monads offer a powerful way to manage complexity in our code by
+    providing a structured way to work with "elevated" or "enhanced" types. By understanding
+    and using monads, we can write cleaner, more abstract, and more composable code.
+
+
+    # Monad Structure and Properties
+
+
+    When discussing monads, it''s important to understand their structure and the
+    properties they must possess to be classified as a monad.
+
+
+    # Monad Structure
+
+
+    At a high level, a monad is a type that defines two operations: Return and Bind
+    (also known as SelectMany in C# or >>= in Haskell).
+
+
+    > Return (also known as pure or unit): This operation takes a value from a plain
+    type and puts it into a container of the monadic type. The name Return can be
+    a bit misleading, especially for those coming from an object-oriented background
+    where return is used to denote the output of a function. In the context of'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'monads, Return doesn''t signify the end of computation, but rather, it''s a
+    means of lifting a value into the monadic context.
+
+
+    public static Monad<T> Return<T>(T value)
+
+
+    Bind (or SelectMany in C#, FlatMap in Scala, and >= in Haskell): This operation,
+    known as binding, takes a container of the monadic type and a function that takes
+    the plain type and returns a container of the monadic type. It applies the function
+    to the unwrapped value and returns a new monadic container. If the function already
+    returns a monadic value, Bind ensures that we don''t end up with a nested monadic
+    but flattens it to a single-layer monadic.
+
+
+    public static Monad<TResult> SelectMany<TSource, TResult>(
+
+
+    this Monad<TSource> monad,
+
+
+    Func<TSource, Monad<TResult>> function)
+
+
+    These two operations, when implemented, give a type the monadic structure. However,
+    for a type to be a monad, it also needs to adhere to certain laws.
+
+
+    # Monad Laws
+
+
+    Monad laws are axioms that every monad must satisfy. These laws ensure that monads
+    behave consistently and predictably. They are not enforced by programming languages,
+    but it''s crucial to keep them in mind when implementing monads to avoid unexpected
+    behavior. There are three main laws:
+
+
+    +   - Left Identity: If we take a value and put it in a context using Return and
+    then feed it to a function using Bind , it''s the same as just taking the value
+    and applying the function to it. In other words, if Return is our way of lifting
+    a value into the monad context, it shouldn''t have any additional side effects
+    that would make it differ from just applying the function directly.
+
+
+    Return(value).SelectMany(f) == f(value)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '+   - Right Identity: If we have a monadic value and we use Bind to feed it
+    to Return, we should end up with the same monadic value. This means that Return
+    should not change the context called inside a Bind.
+
+
+    ```
+
+    monad.SelectMany(Return) == monad
+
+    ```
+
+
+    +   - Associativity: When we have a chain of monadic function applications with
+    Bind, it shouldn''t matter how they''re nested. This ensures that the sequence
+    of computations is independent of the nesting of Bind calls.
+
+
+    ```
+
+    monad.SelectMany(f).SelectMany(g) ==
+
+    ```
+
+
+    ```
+
+    monad.SelectMany(x => f(x).SelectMany(g))
+
+    ```
+
+
+    These laws might seem abstract, but they''re crucial for reasoning about the behavior
+    of monads and ensuring that they compose well.
+
+
+    In conclusion, the structure of monads and their properties provide a powerful
+    and consistent abstraction for encapsulating computations with additional context
+    or effects.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Chapter 5: Monads in Action with C# and .NET 8
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_25_0.png)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'In this chapter, we will delve into the practical usage of Monads in C# with
+    .NET 8. We''ll explore existing monad
+
+    libraries in C# and guide you through creating and using simple monads with .NET
+    8 and C# 11.
+
+
+    # Existing Monad Libraries in C
+
+
+    Several libraries in C# already leverage the power of monads. These libraries
+    use monadic concepts to handle nullable
+
+    types, exception handling, and more. Here are a few notable ones:
+
+
+    +   - LanguageExt: This library provides a set of higher-order functions and types,
+    including monads, that bring
+
+    powerful functional programming concepts to C#. You''ll find constructs like Option,
+    Either, and more,
+
+    directly inspired by languages like Haskell.
+
+
+    +   - Optional: This library focuses on handling optional (null) values and error
+    states, providing monadic
+
+    constructs like Option and Either.
+
+
+    +   - Monads.NET: As the name suggests, this library provides various types of
+    monads like Maybe, Either, List ,
+
+    and more.
+
+
+    These libraries provide an excellent starting point if you want to incorporate
+    monads into your C# projects. However,
+
+    to truly understand monads, we will create our own.
+
+
+    Creating and Using Simple Monads with .NET 8 and C# 11
+
+
+    To understand monads more deeply, let''s create a simple Maybe monad. This monad
+    is used for computations that
+
+    might not return a value. In C#, this is often handled with null, but null can
+    lead to runtime errors if not handled
+
+    correctly. The Maybe monad helps us avoid this issue.
+
+
+    Here''s a simple implementation of a Maybe monad:'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "```\npublic sealed class Maybe<T>\n{\n    public static readonly Maybe<T> Nothing\
+    \ = new Maybe<T>();\n    public T Value { get; }\n    public bool HasValue { get;\
+    \ }\n\n    private Maybe()\n    {\n        HasValue = false;\n    }\n\n    public\
+    \ Maybe(T value)\n    {\n        Value = value;\n        HasValue = true;\n  \
+    \  }\n}\n```\n\nTo create a monadic context, we just wrap a value with Maybe<T>\
+    \ :\n\n```\nvar maybeInt = new Maybe<int>(5);\n```\n\nTo extract the value, we\
+    \ check if HasValue is true, and then access the Value property:\n\n```\nif (maybeInt.HasValue)\n\
+    {\n    Console.WriteLine(maybeInt.Value);\n}\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'This Maybe monad can be improved by adding Bind and Return functions, making
+    it more powerful and flexible.
+
+    We''ll explore these concepts in future chapters.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Chapter 6: Building Your Own Monad Library with .NET 8 and C#
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_29_0.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'In this chapter, we will embark on an exciting journey to construct our own
+    Monad library with .NET 8 and C# 11. This undertaking will provide a profound
+    comprehension of Monads, showcasing their power within the .NET ecosystem.
+
+
+    # Planning Your Library
+
+
+    The initial step in establishing our Monad library involves laying out its structure
+    and pinpointing the monads we aim to incorporate. Our library will incorporate
+    a variety of monads, including:
+
+
+    +   - Maybe<T> : Symbolizes a computation that may or not yield a value.
+
+
+    +   - Either<L, R> : Denotes a computation that can produce one of two types,
+    frequently employed to signify computations that may fail.
+
+
+    +   - Validation<T> : Used for computations that require validation checks.
+
+
+    +   - Try<T> : Similar to Either but specific to exceptions, lazily evaluated
+    and invoked with Run.
+
+
+    +   - Exceptional<T> : A Monad specifically designed to handle exceptions.
+
+
+    +   - Task<T> : A well-known monad in .NET for handling asynchronous computations.
+
+
+    Designing and Implementing Monads
+
+
+    Let''s delve into the implementation of these Monads.
+
+
+    Maybe<T>
+
+
+    We crafted a rudimentary version of Maybe<T> in the preceding chapter. Now, let''s
+    expand it with additional functionality.
+
+
+    In this section, we will enhance our Maybe<T> monad by adding three important
+    methods: Map, Bind, and GetOrElse.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "Map: This method is used to transform the value inside the Maybe<T> monad.\
+    \ It takes a function that converts from type T to type R , and applies it to\
+    \ the value if it exists. If the Maybe<T> monad is None, it returns None.\n\n\
+    Bind: This method is similar to Map, but the function it takes returns a Maybe<R>\
+    \ instead of a simple R. This allows youElse to chain operations that may fail.\n\
+    \nOrElse This method is used to extract the value from the Maybe<T> . If the Maybe<T>\
+    \ is None , a default value is returned.\n\nLet's look at the code to understand\
+    \ these methods in detail.\n\n```\npublic sealed class Maybe<T>\n{\n    private\
+    \ readonly T _value;\n\n    private Maybe(T value)\n    {\n        _value = value;\n\
+    \        HasValue = true;\n    }\n\n    public bool HasValue { get; }\n\n    public\
+    \ T Value\n    {\n        get {\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "```\nif (HasValue)\n  return _value;\n    throw new InvalidOperationException();\n\
+    }\n  public static Maybe<T> Some(T value) => new Maybe<T>(value);\n\npublic static\
+    \ Maybe<T> None { get; } = new Maybe<T>(default(T));\n\n// Map\npublic Maybe<R>\
+    \ Map<R>(Func<T, R> f)\n{\n  return HasValue ? Maybe<R>.Some(f(_value)) : Maybe<R>.None;\n\
+    }\n\n// Bind\npublic Maybe<R> Bind<R>(Func<T, Maybe<R>> f)\n{\n  return HasValue\
+    \ ? f(_value) : Maybe<R>.None;\n}\n\n// GetOrElse\npublic T GetOrElse(T defaultValue)\n\
+    {\n  return HasValue ? _value : defaultValue;\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "}\n\n}\n\nIn the code above, you can see how Map, Bind, and GetOrElse methods\
+    \ have been defined for the Maybe<T> monad.\n\nThe Map function checks if the\
+    \ Maybe has a value using the HasValue property. If it does, it applies the function\
+    \ f to the value and wraps it in a Some. If it doesn't, it simply returns None.\n\
+    \nThe Bind function also checks if the Maybe has a value. If it does, it applies\
+    \ the function f to the value. The difference here is that the function f returns\
+    \ a Maybe<R>, allowing you to chain operations that may fail.\n\nThe GetOrElse\
+    \ function is straightforward - it returns the value if it exists, and the provided\
+    \ default value otherwise.\n\nThese additional methods make Maybe<T> a powerful\
+    \ tool for handling operations that may or may not produce a value, and help us\
+    \ avoid null reference exceptions.\n\nSamples\n\nLet's assume we have a simple\
+    \ function Divide that takes two integers and returns their division as a Maybe<double>.\
+    \ If the divisor is zero, it returns None; otherwise, it returns Some(result).\n\
+    \n```\npublic Maybe<double> Divide(int numerator, int denominator)\n{\nif (denominator\
+    \ == 0)\n{\n    return Maybe<double>.None;\n}\nelse\n{\n    return Maybe<double>.Some((double)numerator\
+    \ / denominator);\n```"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Using Map
+
+
+    ```
+
+    Maybe<int> number = Maybe<int>.Some(5);
+
+    Maybe<int> result = number.Map(n => n * 2);
+
+    ```
+
+
+    ```
+
+    Console.WriteLine(result.GetOrElse(0)); // Output: 10
+
+    ```
+
+
+    In this example, we first create a Maybe<int> that contains the number 5. We then
+    use the Map function to multiply the number by 2, resulting in a new Maybe<int>
+    that contains the number 10. If the original Maybe<int> were None, the Map function
+    would have resulted in None.
+
+
+    # Using Bind
+
+
+    ```
+
+    Maybe<int> numerator = Maybe<int>.Some(10);
+
+    Maybe<int> denominator = Maybe<int>.Some(2);
+
+    ```
+
+
+    ```
+
+    Maybe<double> result = numerator.Bind(n => denominator.Map(d => Divide(n, d)));
+
+    ```
+
+
+    ```
+
+    Console.WriteLine(result.GetOrElse(0)); // Output: 5
+
+    ```
+
+
+    In this example, we''re chaining two operations using Bind . The outer Bind operation
+    extracts the numerator, and the inner Map operation extracts the denominator.
+    We then use these two values to call the Divide function. If either numerator
+    or denominator were None, the Divide function would not be called, and result
+    would be None.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# Using GetOrElse\n\n```\nMaybe<int> number = Maybe<int>.None;\nint result\
+    \ = number.GetOrElse(0);\n```\n\n```\nConsole.WriteLine(result); // Output: 0\n\
+    ```\n\nIn this example, we're calling GetOrElse on a Maybe<int> that is None.\
+    \ Because number is None , GetOrElse returns the default value we provided, which\
+    \ is 0.\n\nAll together\n\nConsider we have two functions FindPerson and GetAge.\
+    \ FindPerson function takes a person's name and returns a Maybe<Person> object.\
+    \ If the person is not found, it returns None; otherwise, it returns Some(person).\
+    \ The GetAge function takes a Person object and returns the person's age as a\
+    \ Maybe<int>. If the person object is null, it returns None ; otherwise, it returns\
+    \ Some(age).\n\n```\npublic record Person\n{\n    public string Name { get; init;\
+    \ }\n    public int Age { get; init; }\n}\n\npublic Maybe<Person> FindPerson(string\
+    \ name) =>\n(name == \"John\") // Simulating database or API lookup\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    Maybe<Person>.Some(new Person [ Name = "John", Age = 30 ]);
+
+    :Maybe<Person>.None;
+
+    ```
+
+
+    ```
+
+    public Maybe<int> GetAge(Person person) =>
+
+
+    person == null
+
+    ?Maybe<int>.None
+
+    :Maybe<int>.Some(person.Age);
+
+    ```
+
+
+    Now let''s use Map, Bind , and GetOrElse to find a person''s age:
+
+
+    ```
+
+    string personName = "John";
+
+
+    func<int,int> addOne = (age) => age + 1;
+
+    Maybe<int> age = FindPerson(personName)
+
+    .Bind(GetAge)
+
+    .Map(addOne); // Adding 1 to age
+
+
+    int finalAge = age.GetOrElse(0);
+
+    Console.WriteLine(finalAge); // Output: 31
+
+    ```
+
+
+    In this example, we first use FindPerson to look up a person by name. This gives
+    us a Maybe<Person> object. We then use Bind to extract the Person object and pass
+    it to GetAge , which gives us a Maybe<int> object. We use Map to add 1 to the
+    age, resulting in a new Maybe<int> object. Finally, we use GetOrElse to extract
+    the age from the Maybe<int>'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "object. If any step in this chain fails and results in None, GetOrElse will\
+    \ return the default value we provided, which is 0. This way, we can handle potentially\
+    \ missing values in a safe and clean way.\n\nThese examples demonstrate how Map,\
+    \ Bind, and GetOrElse can be used to safely handle operations that may or may\
+    \ not produce a value, and how they can be used to chain operations in a clean\
+    \ and readable manner.\n\n# Either<L, R>\n\nThe Either monad represents a computation\
+    \ that may result in one of two types. We often use it to represent computations\
+    \ that can fail, where L is an error type, and R is a success type. Let's take\
+    \ a look at a basic implementation:\n\n```\npublic abstract class Either<L, R>\n\
+    {\n    public abstract T Match<T>(Func<L, T> Left, Func<R, T> Right);\n\n    public\
+    \ sealed class Left : Either<L, R>\n    {\n        private readonly L value;\n\
+    \        public Left(L value) => this.value = value;\n        public override\
+    \ T Match<T>(Func<L, T> Left, Func<R, T> Right) = Left(value);\n    }\n\n    public\
+    \ sealed class Right : Either<L, R>\n    \n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "private readonly R value;\n\n```\npublic Right(R value) => this.value = value;\n\
+    \npublic override T Match<T>(Func<L, T> Left, Func<R, T> Right) => Right(value);\n\
+    \n```\n\n```\n// Map\npublic Either<L, RR> Map<R, RR>(Func<R, RR> f)\n=> Match<Either<L,\
+    \ RR>>(\n    Left: l => new Either<L, RR>.Left(l),\n    Right: r => new Either<L,\
+    \ RR>.Right(f(r))\n);\n```\n\n```\n// Bind\nublic Either<L, RR> Bind<R, RR>(Func<R,\
+    \ Either<L, RR>> f)\n=> Match(\n    Left: l => new Either<L, RR>.Left(l),\n  \
+    \  Right: r => f(r)\n);\n```\n\nThis code defines a generic Either<L, R> abstract\
+    \ class which represents a type that can hold either a value of type L (Left)\
+    \ or R (Right). This is a common type in functional programming languages and\
+    \ is often used to represent the result of a computation that can succeed (Right)\
+    \ or fail (Left). The L type typically represents an error or failure state, and\
+    \ the R type represents a successful result."
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "Either<L, R> class has two concrete subclasses, Left and Right, each representing\
+    \ a value of the respective type. The Match method is abstract in the parent class\
+    \ and is implemented in each of the subclasses. This method takes two Func arguments,\
+    \ for handling a Left value and one for handling a Right value. This is a typical\
+    \ pattern matching often used with such types.\n\nThe Map and Bind are implementations\
+    \ of the core operations that make Either a Monad.\n\n+   - Map: This method allows\
+    \ you to apply a function to the Right value of an Either object, if it exists.\
+    \ If the Either object is a Left, it just returns that Left value without applying\
+    \ the function. The method uses the Match method to decide which action to take.\n\
+    \n+   - Bind: This method is also known as flatMap or SelectMany in other contexts.\
+    \ It allows you to apply a function to the Right value of an Either object, where\
+    \ the function returns another Either object. This is useful when you have a series\
+    \ of computations that each return an Either: you can chain them together using\
+    \ Bind. If any computation fails (returns a Left), the chain short-circuits and\
+    \ the Left value is immediately returned.\n\nHere's an example of how you could\
+    \ use this Either class:\n\n```\n// A function that might fail\nEither<string,\
+    \ int> TryParse(string str)\n{\n    if (int.TryParse(str, out var result))\n \
+    \       return new Either<string, int>.Right(result);\n    else\n        return\
+    \ new Either<string, int>.Left(\"Failed to parse\")\n}\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "```\n// Usage:\nvar either = TryParse(\"123\");\n\neither = either.Map(x =>\
+    \ x * 2); // If parsing succeeded, double the number\n\nLet's see more about Bind\
+    \ in the next sample.\n\n// A function that might fail\nEither<string, int> TryParse(string\
+    \ str)\n{\n    if (int.TryParse(str, out var result))\n        return new Either<string,\
+    \ int>.Right(result);\n    else\n        return new Either<string, int>.Left(\"\
+    Failed to parse\");\n}\n\n// A function that might fail\nEither<string, int> DivideByTwo(int\
+    \ number)\n{\n    if (number % 2 == 0)\n        return new Either<string, int>.Right(number\
+    \ / 2);\n    else\n        return new Either<string, int>.Left(\"Cannot divide\
+    \ by two\");\n}\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\nvar either = TryParse(\"4\");\n```\n\n```\neither = either.Bind(DivideByTwo);\
+    \ // If parsing succeeded, divide the number by 2\n```\n\nIn this example, TryParse\
+    \ is a function that tries to parse a string into an integer. DivideByTwo is another\
+    \ function that tries to divide an integer by two. If the integer is not divisible\
+    \ by two, it returns an error message wrapped in a Left. The Bind call chains\
+    \ these computations together: if parsing succeeds, it tries to divide the parsed\
+    \ number by two. If either computation fails, it short-circuits and returns the\
+    \ error.\n\nNow let's see an example using both Map and Bind:\n\n```\n// A function\
+    \ that might fail\nEither<string, int> TryParse(string str)\n{\n    if (int.TryParse(str,\
+    \ out var result))\n        return new Either<string, int>.Right(result);\n  \
+    \  else\n        return new Either<string, int>.Left(\"Failed to parse\");\n}\n\
+    ```\n\n```\n// A function that might fail\nEither<string, int> DivideByTwo(int\
+    \ number)\n{\n    if (number % 2 == 0)\n        return new Either<string, int>.Right(number\
+    \ / 2);\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '```
+
+    else
+
+    return new Either<string, int>.Left("Cannot divide by two");
+
+    }
+
+
+    // Usage:
+
+    var either = TryParse("4");
+
+    either = either
+
+    .Map(x => x * 2)// If parsing succeeded, double the number
+
+    .Bind(DivideByTwo); // Then, try to divide by two
+
+    ```
+
+
+    In this example, we first apply the Map function to double the parsed number if
+    parsing succeeded. Then, we use Bind to divide the result by two. If any step
+    fails, it short-circuits and returns the error.
+
+
+    # Validation<T>
+
+
+    We''ve previously explored the Maybe and Either monads, which provide powerful
+    ways to handle optional and either-or values. Now, let''s examine the Validation
+    monad. This monad is particularly useful when you want to accumulate errors rather
+    than fail-fast, which is common in situations like form validation where you want
+    to report all validation errors at once, rather than one at a time.
+
+
+    The Validation<T> monad is very useful when we want to accumulate all the errors
+    while validating a data set rather than stopping at the first one. This is especially
+    useful in web development, where we want to validate user inputs and send back
+    all the errors at once.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "The basic structure of the Validation<T> class is similar to our previous Maybe\
+    \ and Either<L, R> monads. However, instead of having a \"Some\" and \"None\"\
+    \ case like in Maybe, or \"Left\" and \"Right\" like in Either<L, R>, we will\
+    \ have \"Valid\" and \"Invalid\" cases.\n\nHere's the code for the Validation<T>\
+    \ monad:\n\n```\npublic abstract class Validation<T>\n{\n    public sealed class\
+    \ Valid : Validation<T>\n    {\n        public T Value { get; }\n        public\
+    \ Valid(T value) => Value = value;\n    }\n\n    public sealed class Invalid :\
+    \ Validation<T>\n    {\n        public string[] Errors { get; }\n        public\
+    \ Invalid(params string[] errors) => Errors = errors;\n    }\n\n    public bool\
+    \ IsValid => this is Valid;\n    public bool IsInvalid => !IsValid;\n\n    //\
+    \ Map\n    // Map\n    public Validation<U> Map<U>(Func<T, U> map)\n{\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\nreturn this switch\n{\n    Valid valid => new Validation<U>.Valid(map(valid.Value)),\n\
+    \    Invalid invalid => new Validation<U>.Invalid(invalid.Errors),\n    _ => throw\
+    \ new NotImplementedException()\n};\n```\n\n```\n// Bind\npublic Validation<U>\
+    \ Bind<U>(Func<T, Validation<U>> bind)\n{\n    return this switch\n{\n       \
+    \ Valid valid => bind(valid.Value),\n        Invalid invalid => new Validation<U>.Invalid(invalid.Errors),\n\
+    \        _ => throw new NotImplementedException()\n    };\n}\n```\n\n```\n// Match\n\
+    public U Match<U>(Func<T, U> onValid, Func<string[], U> onInvalid)\n{\\n    return\
+    \ this switch\n{\n        Valid valid => onValid(valid.Value),\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nInvalid invalid => onInvalid(invalid.Errors),\n  => throw new NotImplementedException()\n\
+    );\n\n```\n\nThe Valid class encapsulates a valid value of type T, and the Invalid\
+    \ class encapsulates a list of error messages. The IsValid and IsInvalid properties\
+    \ allow us to quickly check the state of the validation.\n\nThe Map, Bind, and\
+    \ Match methods work similarly to our previous monads. Map allows us to transform\
+    \ the value inside a Valid instance, Bind allows us to chain operations that return\
+    \ Validation<T>, and Match allows us to handle both Valid and Invalid cases.\n\
+    \nWe can now use the Validation<T> monad to perform various operations.\n\nLet's\
+    \ start with a simple example:\n\n```\nValidation<int> valid = new Validation<int>.Valid(5);\n\
+    Validation<int> invalid = new Validation<int>.Invalid(\"Not a number\");\n\nConsole.WriteLine(valid.Map(x\
+    \ => x * 2)); // Outputs: Valid(10)\nConsole.WriteLine(invalid.Map(x => x * 2));\
+    \ // Outputs: Invalid(\"Not a number\")\n```\n\n```\nvar result = invalid.Bind(x\
+    \ => x > 0 ? new Validation<int>.Valid(x * 2) : new Validation<int>.Invalid(\"\
+    Negative number\"));\nConsole.WriteLine(result); // Outputs: Valid(10)\n\nConsole.WriteLine(result);\
+    \ // Outputs: Invalid(\"Not a number\")\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'In the code above, we created a valid and an invalid Validation. We then used
+    Map to double the value inside a Valid instance and Bind to chain operations that
+    return a Validation. Notice how Map and Bind both return an Invalid instance when
+    called on an Invalid instance, preserving the error messages.
+
+
+    We can use Match to handle both Valid and Invalid cases in a way that''s similar
+    to pattern matching:
+
+
+    Now, let''s see how we can use the Validation<T> monad in a web API to validate
+    user inputs. Assume we have a User model with Name and Email properties, and we
+    want to validate that both are not empty.
+
+
+    First, we''ll create a validation function for each property:'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "```\npublic Validation<string> ValidateName(string name)\n{\n    return string.IsNullOrEmptyOrWhiteSpace(name)\n\
+    \    ? new Validation<string>.Invalid(\"Name cannot be empty\")\n    : new Validation<string>.Valid(name);\n\
+    }\n```\n\n```\npublic Validation<string> ValidateEmail(string email)\n{\n    return\
+    \ string.IsNullOrEmptyOrWhiteSpace(email)\n    ? new Validation<string>.Invalid(\"\
+    Email cannot be empty\")\n    : new Validation<string>.Valid(email);\n}\n```\n\
+    \nWe can then use these functions to validate the User model:\n\n```\npublic Validation<User>\
+    \ ValidateUser(User user)\n{\n    var nameValidation = ValidateName(user.Name);\n\
+    \    var emailValidation = ValidateEmail(user.Email);\n\n    if (nameValidation\
+    \ is Validation<string>.Invalid invalidName)\n{\n        return new Validation<User>.Invalid(invalidName.Errors);\n\
+    }\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "```\nif (emailValidation is Validation<string>.InvalidEmail)\n{\n    return\
+    \ new Validation<User>.Invalid(invalidEmail.Errors);\n}\n\nreturn new Validation<User>.Valid(user);\n\
+    ```\n\nIn the controller action, we can use the Match method to handle both valid\
+    \ and invalid cases, returning an HTTP OK response for valid cases and an HTTP\
+    \ 400 Request for invalid ones:\n\n```\napp.Map(\"/user\", (User user) =>\n{\n\
+    \    var result = ValidateUser(user);\n\n    return result.Match(\n        onValid:\
+    \ validUser => Results.Ok(validUser),\n        onInvalid: errors => Results.BadRequest(string.Join(\"\
+    ,\", errors))\n    );\n});\n```\n\nIn this way, the Validation<T> monad allows\
+    \ us to perform validation in a declarative, expressive way, preserving all error\
+    \ messages.\n\n# Try<T> : Dealing with Exceptions Functionally\n\nIn traditional\
+    \ imperative programming, error handling is often done through exceptions. When\
+    \ an error occurs, an exception is thrown, and control jumps to the nearest catch\
+    \ block that can handle that type of exception. This can make"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'control flow hard to follow and reasoning about the program difficult.
+
+
+    Functional programming offers an alternative way of dealing with errors that can
+    make control flow clearer and the program easier to reason about. Instead of throwing
+    exceptions, functions return values that represent either a successful computation
+    or an error. The caller can then decide how to handle the error.
+
+
+    Let''s implement it:
+
+
+    ```
+
+    public abstract class Try<T>
+
+    {
+
+    public abstract TResult Match<T, TResult>(Func<T, TResult> onSuccess, Func<System.Exception,
+    TResult> onException);
+
+
+    public sealed class Success : Try<T>
+
+    {
+
+    private readonly T _value;
+
+    public Success(T value) => _value = value;
+
+    public override TResult Match<T, TResult>(Func<T, TResult> onSuccess, Func<System.Exception,
+    TResult> onException) => onSuccess(_value);
+
+    }
+
+
+    public sealed class Exception : Try<T>
+
+    {
+
+    private readonly System.Exception _exception;
+
+    public Exception(System.Exception exception) => _exception = exception;
+
+    public override TResult Match<T, TResult>(Func<T, TResult> onSuccess, Func<System.Exception,
+    TResult> onException) => onException(_exception);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\npublic static Try<T> Of(Func<T> f)\n{\n    try {\n        return new Success(f());\n\
+    \    }\n    catch (System.Exception ex) {\n        return new Exception(ex);\n\
+    \    }\n}\n```\n\n```\n// Map\npublic Try<TResult> Map<TResult>(Func<T, TResult>)\
+    \ => Match(\n    onSuccess: t => Try<TResult>.Of(() => f(t)),\n    onException:\
+    \ ex => new Try<TResult>.Exception(ex)\n);\n```\n\n```\n// Bind\npublic Try<TResult>\
+    \ Bind<TResult>(Func<T, Try<TResult>>) => Match(\n    onSuccess: t => f(t),\n\
+    \    onException: ex => new Try<TResult>.Exception(ex)\n);\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\npublic T GetOrElse(T defaultValue)\n=> Match(\n  onSuccess: t => t,\n\
+    \  onException: _ => defaultValue\n);\n```\n\nThis Try<T> class represents a computation\
+    \ that may fail with an exception. It's an abstract class with two derived classes:\
+    \ Success and Exception. The Success class represents a successful computation\
+    \ and holds the result of type T, while the Exception class represents a failed\
+    \ computation and holds the exception that caused the failure.\n\nThe Of method\
+    \ is used to create a Try<T> instance from a potentially exception-throwing function.\
+    \ If the function throws an exception, a Try<T>.Exception instance is returned;\
+    \ otherwise, a Try<T>.Success instance is returned.\n\nThe Map and Bind methods\
+    \ are used to transform and chain Try<T> instances respectively, in a way that\
+    \ preserves the exceptional state. If the Try<T> instance represents a failed\
+    \ computation, the transformation or chaining operation is skipped and the exception\
+    \ is propagated.\n\nThe GetOrElse method is used to retrieve the result of the\
+    \ computation if it was successful, or a default value if it failed.\nExamples\n\
+    \nSuppose we have a function Divide that can throw a DivideByZeroException :\n\
+    \n```\npublic static double Divide(double x, double y)\n{\n  return x / y;\n}\n\
+    ```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'We can encapsulate this function in a Try<T> to handle the potential exception:
+
+
+    ```
+
+    var tryResult = Try<double>.Of(() => Divide(10, 0));
+
+    ```
+
+
+    Now, tryResult is a Try that represents the result of the division operation.
+    If the operation was successful, tryResult is a Try.Success with the result of
+    the division. If the operation threw an exception, tryResult is a Try.Exception
+    with the thrown exception.
+
+
+    We can transform the result using the Map method:
+
+
+    ```
+
+    var tryQuotientPlusOne = tryResult.Map(quotient => quotient + 1);
+
+    ```
+
+
+    If tryResult is a Try.Success, tryQuotientPlusOne is a Try.Success with the result
+    of the division plus one. If tryResult is a Try.Exception, tryQuotientPlusOne
+    is the same Try.Exception.
+
+
+    We can chain computations using the Bind method:
+
+
+    ```
+
+    var tryReciprocal = tryResult.Bind(quotient => Try<double>.Of(() => 1 / quotient));
+
+    ```
+
+
+    If tryResult is a Try.Success, tryReciprocal is a Try that represents the result
+    of computing the reciprocal of the quotient. If tryResult is a Try.Exception,
+    tryReciprocal is the same Try.Exception.
+
+
+    We can handle both success and error cases using the Match method:
+
+
+    ```
+
+    string message = tryResult.Match(
+
+    onSuccess: quotient => "$The result is {quotient}.",
+
+    oneException: ex => "$An error occurred: {ex.Message}"
+
+    );
+
+    ```
+
+
+    Here, message is a string that contains either a success message with the quotient,
+    or an error message with the exception message.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "Finally, we can use the GetOrElse method to retrieve the result or a default\
+    \ value:\n\n```\ndouble quotient = tryResult.GetOrElse(0);\n```\n\nHere, quotient\
+    \ is the quotient if the operation was successful, or 0 if the operation threw\
+    \ an exception.\n\nLet's see how we can use Try<T> in a unit test following the\
+    \ AAA (Arrange, Act, Assert) pattern. We'll use the Divide function and Try<T>\
+    \ from the previous examples.\n\n[Test]\n\n```\npublic void Divide_ByZero_ReturnTryException()\n\
+    {\n    // Arrange\ndouble x = 10, y = 0;\n\nvar expectedResult = new DivideByZeroException();\n\
+    \n// Act\nvar result = Try<double>.Of(() => Divide(x, y));\n\n// Assert\nresult.Match(\n\
+    \ onSuccess: quotient => Assert.Fail(\"Expected an exception, but got a quotient.\"\
+    ),\n onException: ex => Assert.InstanceOf<DivideByZeroException>(ex)\n);\n}\n\
+    ```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'In this test, we''re asserting that dividing by zero results in a Try.Exception
+    with a DivideByZeroException. If the operation is successful (which it shouldn''t
+    be), the test fails. If the operation throws an exception, we assert that the
+    exception is a DivideByZeroException.
+
+
+    # Running the Try
+
+
+    The Run method executes the encapsulated computation and returns the result as
+    an Exceptional. This is useful when you want to execute the computation and handle
+    the result immediately, rather than passing around a Try<T>.
+
+
+    Here''s how you can use Run with the Divide function from the previous examples:
+
+
+    ```
+
+    Exceptional<double> result = Try<double>.Of(0) => Divide(10, 0).Run();
+
+    ```
+
+
+    ```
+
+    result.Match(
+
+    onSuccess: quotient => Console.WriteLine("The result is {quotient}"),
+
+    onException: ex => Console.WriteLine("An error occurred: {ex.Message}")
+
+    );
+
+    ```
+
+
+    Here, result is an Exceptional<double> that contains either the result of the
+    division, or the thrown exception. We then handle both cases using the Match method.
+
+
+    # Exceptional<T>
+
+
+    In functional programming, we strive to represent computations that can fail,
+    or throw exceptions, in a way that is composable, and thus, maintainable. To that
+    end, we introduce a type Exceptional<T>, which represents a computation that can
+    either succeed with a result of type T, or fail with an exception.
+
+
+    Exceptional<T> is a struct that contains either a value of type T or an Exception.
+    This allows us to encapsulate computations that can throw exceptions and handle
+    them explicitly. This approach allows us to avoid catching exceptions at a distance,
+    leading to code that is easier to reason about.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "Now, let's look at the implementation of Exceptional<T> :\n\n```\npublic struct\
+    \ Exceptional<T>\n{\n    private readonly Exception? _exception;\n    private\
+    \ readonly T _value;\n\n    public bool IsSuccess { get; }\n    public bool IsException\
+    \ => IsSuccess;\n\n    public Exceptional(Exception exception)\n    {\n      \
+    \  _exception = exception ?? throw new ArgumentNullException(nameof(exception));\n\
+    \        _value = default!\n        IsSuccess = false;\n    }\n\n    public Exceptional(T\
+    \ value)\n    {\n        _value = value ?? throw new ArgumentNullException(nameof(value));\n\
+    \        _exception = null;\n        IsSuccess = true;\n    }\n\n    public static\
+    \ implicit operator Exceptional<T>(Exception ex) => new Exceptional<T>(ex);\n\
+    \    public static implicit operator Exceptional<T>(T value) => new Exceptional<T>(value);\n\
+    ```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\npublic Exceptional<TResult> Apply<TResult>(ExceptionalFunc<T, TResult>>\
+    \ exceptionalFunc\n{\n    return exceptionalFunc.Success ? Map(exceptionalFunc_value!)\
+    \ : new Exceptional<TResult>(exceptionalFunc_exception!);\n}\n\npublic Exceptional<TResult>\
+    \ Map<TResult>(Func<T, TResult> map)\n{\n    return IsException ? new Exceptional<TResult>(_exception!)\
+    \ : new Exceptional<TResult>(map(_value));\n}\n\npublic Exceptional<TResult> Bind<TResult>(Func<T,\
+    \ Exceptional<TResult>> bind)\n{\n    return IsException ? new Exceptional<TResult>(_exception!)\
+    \ : bind(_value);\n}\n\npublic TResult Match<TResult>(Func<Exception, TResult>\
+    \ Exception, Func<T, TResult> Success)\n=> IsException ? onException(_exception!)\
+    \ : onSuccess(_value);\n\n```\n\nHere, the Exceptional<T> struct is designed to\
+    \ hold either a value of type T (indicating success) or an Exception (indicating\
+    \ an exception was thrown). The boolean property IsSuccess tells us which one\
+    \ it is.\n\nTwo implicit conversion operators are provided to easily create instances\
+    \ of Exceptional<T> from either an Exception or T.\n\nThe Match method is used\
+    \ to extract the value from an Exceptional<T>. It takes two functions as arguments,\
+    \ to handle the case where the Exceptional<T> contains a T and another to handle\
+    \ the case where it contains an Exception. This forces explicit handling of cases."
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "We also have a series of extension methods on Exceptional<T> to allow chaining\
+    \ operations in a fluent manner. These include Apply, Map, and Bind functions,\
+    \ and their respective overloads.\n\nThe Apply function applies a function that's\
+    \ wrapped in an Exceptional<T> to another Exceptional<T>, returning a new Exceptional<T>.\n\
+    \nThe Map function applies a function to the value inside the Exceptional<T>,\
+    \ if it exists, and wraps the result back into an Exceptional<T>.\n\nThe Bind\
+    \ function is similar to Map, but the function given as an argument returns an\
+    \ Exceptional<T>, allowing for chaining of operations that return Exceptional<T>.\n\
+    \nIn addition, we provide Select and SelectMany methods to support LINQ query\
+    \ syntax. This is a powerful feature in C#, allowing Exceptional<T> to integrate\
+    \ seamlessly with existing .NET codebases.\n\nNow, let's illustrate the use of\
+    \ Exceptional<T> with an example.\n\nSample Usage of Exceptional<T>\n\n```\nExceptional<int>\
+    \ Divide(int x, int y)\n{\ntry\n{\n    return x / y;\n}\ncatch(DivideByZeroException\
+    \ ex)\n{\n    return ex;\n}\n}}\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "This function returns an Exceptional<int> that encapsulates the result of the\
+    \ division operation. If the division is successful, it returns the result wrapped\
+    \ in an Exceptional<T>. If a DivideByZeroException is thrown, it captures the\
+    \ exception and returns it wrapped in an Exceptional<T>.\n\nLet's see how we can\
+    \ use this function and handle the result.\n\n```\nvoid DisplayResult(Exceptional<int>\
+    \ result)\n{\n  result.Match(\n    Success: value => Console.WriteLine($\"Result:\
+    \ {value}\"),\n    Exception: ex => Console.WriteLine($\"An error occurred: {ex.Message}\"\
+    )\n  );\n);\n```\n\n// Usage\n\nvar result = Divide(10, 2);\n\nDisplayResult(result);\
+    \ // Outputs: \"Result: 5\"\n\nresult = Divide(10, 0);\n\nDisplayResult(result);\
+    \ // Outputs: \"An error occurred: Attempted to divide by zero.\"\n\nIn the DisplayResult\
+    \ function, we use the Match method to explicitly handle both possible outcomes\
+    \ of the Divide function. This makes it clear at the point of use that the division\
+    \ operation can fail, and requires that we handle the failure.\n\nNow let's see\
+    \ how we can use the Map and Bind functions."
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\n// Squares the result if the division was successful\nvar squareResult\
+    \ = result.Map(value => value * value);\n```\n\n```\n// Tries to perform another\
+    \ division operation on the result if the first one was successful\nvar chainedResult\
+    \ = result.Bind(value => Divide(value, 2));\n```\n\nIn the first example, we use\
+    \ Map to square the result of the division operation. The squaring operation is\
+    \ only performed if the division was successful. If an exception occurred, Map\
+    \ does nothing and the exception is preserved.\n\nIn the second example, we use\
+    \ Bind to perform another division operation on the result of the first one. The\
+    \ second division is only performed if the first one was successful. If an exception\
+    \ occurred in the first division, Bind does nothing and the exception is preserved.\n\
+    \nThe power of Exceptional<T> becomes evident when we want to chain multiple operations\
+    \ that can throw exceptions. By encapsulating exceptions in Exceptional<T>, we\
+    \ can easily chain operations and handle exceptions in a clear and concise way.\n\
+    \nTask\n\nAsynchronous programming is a critical aspect of modern application\
+    \ development, particularly in I/O-bound operations where responsiveness is key.\
+    \ In .NET, the Task<T> type is the primary tool for managing these operations.\
+    \ Task<T> is a monadic type, providing powerful methods for chaining and transforming\
+    \ asynchronous computations. Let's delve into the monadic operations of Task<T>\
+    \ and illustrate their usage with examples.\n\n```\npublic static class TaskExtensions\n\
+    {\n    // Map\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "```\npublic static Task<TResult> Map<TSource, TResult(\n    this Task<TSource>\
+    \ task,\n    Func<TSource, TResult> projection)\n{\n    return task.ContinueWith(t\
+    \ => projection(t.Result));\n}\n```\n\nThe Map function applies a projection to\
+    \ the result of a task. It's useful when you want to transform the result of an\
+    \ asynchronous computation. For example, if you have a Task<int> representing\
+    \ an asynchronous operation that counts items, you could use Map to transform\
+    \ the count into a string.\n\nNext, let's implement Bind:\n\n```\n// Bind\npublic\
+    \ static Task<TResult> Bind<TSource, TResult(\n    this Task<TSource> task,\n\
+    \    Func<TSource, Task<TResult>> projection)\n{\n    return task.ContinueWith(t\
+    \ => projection(t.Result)).Unwrap();\n}\n```\n\nThe Bind function allows us to\
+    \ chain asynchronous operations together. It takes a function that returns a task\
+    \ and applies it to the result of a previous task. The call to Unwrap is necessary\
+    \ because without it, we would end up with Task<Task<TResult>>. Unwrap flattens\
+    \ this into Task<TResult>.\n\nThe next function is GetOrElse:"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\n// GetOrElse\npublic static Task<T> GetOrElse<T>(\n\nthis Task<T> task,\n\
+    T defaultValue\n{\n    return task.ContinueWith(t => t.IsFaulted ? defaultValue\
+    \ : t.Result);\n}\n```\n\nGetOrElse provides a default value if the task fails.\
+    \ It's a way of handling errors that allows the rest of your code to remain oblivious\
+    \ to failure. If the task completes successfully, GetOrElse passes through the\
+    \ result. If the task faults (throws an exception), GetOrElse returns the default\
+    \ value instead.\n\nFinally, we have Recover:\n\n```\n// Recover\npublic static\
+    \ Task<T> Recover<T>(\n\nthis Task<T> task,\nFunc<Exception, T> recoverFunc\n\
+    {\n    return task.ContinueWith(t => t.IsFaulted ? recoverFunc(t.Exception) :\
+    \ t.Result);\n}\n```\n\nRecover allows us to handle exceptions and recover from\
+    \ them. If a task throws an exception, Recover catches that exception and passes\
+    \ it to a recovery function. The recovery function can then decide how to recover\
+    \ from the error.\n\nLet's continue by implementing Select, SelectMany, Join,\
+    \ GroupJoin, and Where methods:"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\n// Select\npublic static Task<TResult> Select<TSource, TResult>(\nthis\
+    \ Task<TSource> task,\nFunc<TSource, TResult> selector\n{\n    return task.Map(selector);\n\
+    }\n```\n\n```\n// SelectMany\npublic static Task<TResult> SelectMany<TSource,\
+    \ TResult>(\nthis Task<TSource> task,\nFunc<TSource, Task<TResult>> selector\n\
+    {\n    return task.Bind(selector);\n}\n```\n\n```\n// Where\npublic static Task<TSource>\
+    \ Where<TSource>(\nthis Task<TSource> task,\nFunc<TSource, bool> predicate\n{\n\
+    \    return task.ContinueWith(t =>\n        if (t.IsFaulted) throw t.Exception;\n\
+    \        return predicate(t.Result) ? t.Result : throw new Exception(\"Predicate\
+    \ does not hold\");\n}\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\n));\n}\n```\n\nHere's how each of these work:\n\n+   - Select : This is\
+    \ essentially the same as Map. It's named Select to align with LINQ syntax.\n\n\
+    +   - SelectMany : Similarly, SelectMany is just another name for Bind. Again,\
+    \ this is to make it consistent with LINQ.\n\n+   - Where : This function allows\
+    \ us to filter the result of a task based on a predicate. If the predicate doesn't\
+    \ hold, it will throw an exception.\n\n```\n// Join\npublic static Task<TResult>\
+    \ Join<TOuter, Tinner, TKey, TResult>(\n    Task<TOuter> outer,\n    Task<Tinner>\
+    \ inner,\n    Func<TOuter, TKey, object> outerKey,\n    Func<Tinner, TKey, object>\
+    \ innerKey,\n    Func<TOuter, Tinner, TResult> resultSelector)\n{\n    return\
+    \ outer.ContinueWith(o =>\n        {\n            return inner.ContinueWith(i\
+    \ =>\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\nif (outerKeySelector(o.Result).Equals(innerKeySelector(i.Result)))\n{\n\
+    \    return resultsSelector(o.Result, i.Result);\n}\nthrow new Exception(\"Keys\
+    \ do not match\");\n)).Result;\n);\n```\n\nIn this version of Join, both outer\
+    \ and inner tasks must complete and their keys (as provided by outerKeySelector\
+    \ and innerKeySelector) must match. If they do, Join will combine the results\
+    \ using resultSelector.\n\nKeep in mind that these are simplified versions and\
+    \ there are various considerations to be taken into account when using them in\
+    \ real-world scenarios, such as handling task cancellation and timeout scenarios.\n\
+    \nIn the next part of this chapter, we'll explore how to use these new extension\
+    \ methods with practical examples.\n\nExamples Now that we have defined the basic\
+    \ building blocks of a Task<T> monad, let's see how we can use them in practice.\n\
+    \nExample 1: Using Map (or Select in LINQ)\n\n```\nTask<int> task = Task.FromResult(5);\n\
+    Task<int> squaredTask = task.Map(x => x * x);\nConsole.WriteLine(await squaredTask);\
+    \ // Output: 25\n```\n\nIn this example, we create a task that immediately completes\
+    \ with the result 5. We then use Map to transform the result of the task, squaring\
+    \ the value."
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "# Example 2: Using Bind (or SelectMany in LINQ)\n\n```\nTask<int> task = Task.FromResult(5);\n\
+    ```\n\n```\nTask<int> bindTask = task.Bind(x => Task.FromResult(x * x));\n```\n\
+    \n```\nConsole.WriteLine(await bindTask); // Output: 25\n```\n\nIn this example,\
+    \ instead of a simple transformation of the result, we use Bind to create a new\
+    \ task based on the result of the first task.\n\n# Example 3: Using OrElse to\
+    \ Recover\n\n```\nTask<int> task = Task.FromException<int>(new Exception(\"Error!\"\
+    ));\n```\n\n```\nTask<int> recoveredTask = task.OrElse(Task.FromResult(0));\n\
+    ```\n\n```\nConsole.WriteLine(await recoveredTask); // Output: 0\n```\n\nIn this\
+    \ case, we create a faulted task that immediately throws an exception. Using OrElse,\
+    \ we can recover from the error and provide a fallback task that completes with\
+    \ the result 0.\n\n# Example 4: Using Where\n\n```\nTask<int> task = Task.FromResult(5);\n\
+    ```\n\n```\nTask<int> filteredTask = task.Where(x => x > 10);\n```\n\n```\ntry\n\
+    {\n    Console.WriteLine(await filteredTask);\n}\ncatch (Exception e)\n{}\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\nConsole.WriteLine(e.Message); // Output: Predicate does not hold\n}\n\
+    ```\n\nHere, we apply a filter to the task result. Since 5 is not greater than\
+    \ 10, an exception is thrown when we attempt\nawait the result of the task.\n\n\
+    # Example 5: Using Join\n\n```\nTask<int> outer = Task.FromResult(5);\nTask<int>\
+    \ inner = Task.FromResult(10);\nTask<int> joinedTask = outer.Join(inner, o =>\
+    \ o, i => i* 0.5, (o, i) => o + i);\ntry{\n  Console.WriteLine(await joinedTask);\n\
+    } catch (Exception e)\n{\n  Console.WriteLine(e.Message); // Output: Keys do not\
+    \ match\n}\n```\n\nIn this example, we attempt to join two tasks based on a key.\
+    \ However, the keys don't match, so an exception is thrown.\nIf the keys did match,\
+    \ the Join function would combine the results of both tasks using the provided\
+    \ result selector\nfunction.\n\nBy using these monadic operations, we can build\
+    \ complex pipelines of asynchronous operations in a clean and readable\nway. This\
+    \ makes error handling and control flow easier to manage in asynchronous and concurrent\
+    \ scenarios."
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# Conclusion
+
+
+    The concepts and code shared in this chapter are a starting point for building
+    your own monadic structures in .NET 8 with C#. This journey through the world
+    of monads is just the beginning, and I hope it has sparked your curiosity and
+    interest in functional programming.
+
+
+    We delved deep into the theory and then brought it back into the practical realm
+    of C#, exploring how we can harness the power of monads to write cleaner, more
+    maintainable, and error-resistant code. We explored several examples, such as
+    Maybe<T>, Exceptional<T>, Validation<T>, Try<T>, Either<T>, and Task<T>, each
+    providing different ways to handle control flow, error handling, and data transformation.
+
+
+    Remember, functional programming and the use of monads is not an all-or-nothing
+    proposition. You can gradually introduce these concepts into your existing projects
+    and see the benefits unfold over time.
+
+
+    This chapter is a stepping stone, and there is much more to explore and understand
+    in functional programming. As you continue your journey, always remember the goal
+    is not to write code that is clever or tricky, but to write code that is clear,
+    understandable, and maintainable.
+
+
+    In the end, it''s all about improving as a software craftsman and delivering quality
+    software. I hope this chapter has given you the tools and understanding to do
+    just that with monads in .NET 8 and C#.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# Chapter 7: Practical Examples - Real-world Scenarios of Using Your Own Monad
+    Library with .NET 8 and C#
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_68_0.png)'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: 'In this chapter, we will delve into a real-world example of how the monads
+    we''ve created in the previous chapters (Maybe<T>, Either<L, R>, Validation<T>,
+    Try<T>, Exceptional<T>, Task<T>) can be used in a practical .NET application.
+    We''ll be creating a simple bank loan approval system, which will demonstrate
+    the power of these monads in handling complex business logic, error handling,
+    and asynchronous operations. We''re going to use minimal API approach.
+
+
+    The minimal API approach emphasizes the simplicity and productivity in developing
+    APIs. It provides a lightweight, low-ceremony way to build HTTP APIs with ASP.NET
+    Core, and reduces the amount of boilerplate code, making your codebase cleaner
+    and more manageable.
+
+
+    # Scenario
+
+
+    Our client, Let''s Lend Bank, wants to develop a loan approval system. The system
+    will have the following requirements:
+
+
+    +   **Validate loan requests:** Each loan request must be validated. The request
+    must have a valid customer ID, a positive loan amount, and a term between 1 to
+    30 years.
+
+
+    +   **Check customer''s credit score:** The credit score of the customer must
+    be fetched from an external service. If the service fails or returns an error,
+    the loan approval process should fail.
+
+
+    +   **Check customer''s loan history:** The customer''s loan history must also
+    be fetched from another external service. Again, if the service fails or returns
+    an error, the loan approval process should fail.
+
+
+    +   **Calculate loan approval:** If all the previous steps are successful, the
+    system should calculate whether the loan should be approved or not based on the
+    credit score, loan history, loan amount, and term. If the loan'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "is approved, the system should return the approved loan amount, term, and interest\
+    \ rate. If not not, it should\nreturn a reason for the rejection.\n\nThe system\
+    \ should be implemented as an HTTP API using the new .NET 8 minimal API approach.\n\
+    \n# Building the Application\n\nLet's start by defining the basic models for our\
+    \ system.\n\n```\npublic class LoanRequest\n{\n    public int CustomerId { get;\
+    \ set; }\n    public decimal LoanAmount { get; set; }\n    public int LoanTerm\
+    \ { get; set; } // In years\n}\n```\n\n```\npublic class LoanApproval\n{\n   \
+    \ public int CustomerId { get; set; }\n    public decimal ApprovedAmount { get;\
+    \ set; }\n    public int LoanTerm { get; set; } // In years\n    public decimal\
+    \ InterestRate { get; set; } // As a percentage\n    public string ApprovalStatus\
+    \ { get; set; }\n}\n```\n\n```\npublic class CreditScore\n{\n```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '```
+
+    public int CustomerId { get; set; }
+
+    public int Score { get; set; }
+
+    }
+
+    ```
+
+
+    ```
+
+    public class LoanHistory
+
+    {
+
+    public int CustomerId { get; set; }
+
+    public int NumberOfDefaults { get; set; }
+
+    public int NumberOfPaidLoans { get; set; }
+
+    }
+
+    ```
+
+
+    Now let''s define the service interfaces that will handle fetching the credit
+    score and loan history.
+
+
+    ```
+
+    public interface ICreditScoresService
+
+    {
+
+    Task<Either<string, CreditScore>> GetCreditScore(int customerId);
+
+    }
+
+    ```
+
+
+    ```
+
+    public interface ILoanHistoryService
+
+    {
+
+    Task<Either<string, LoanHistory>> GetLoanHistory(int customerId);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "ICreditScoreService.GetCreditScore and IloanHistoryService.GetLoanHistory return\
+    \ Task<Either<string, T>> which means they perform an asynchronous operation that\
+    \ can either result in a string error or a successful value of type T.\n\nLet's\
+    \ implement these services:\n\n```\npublic class CreditScoreService : ICreditScoreService\n\
+    {\n    public async Task<Either<string, CreditScore>> GetCreditScore(int customerId)\n\
+    \    {\n        // Simulate an asynchronous operation with a delay\n        await\
+    \ Task.Delay(1000);\n\n        // For simplicity, we'll return a random score\
+    \ for each customer\n        var rng = new Random();\n        if (rng.Next(0,\
+    \ 100) < 80)\n        {\n            return new CreditScore { CustomerId = customerId,\
+    \ Score = rng.Next(300, 850) };\n        }\n        else\n        {\n        \
+    \    // 20% of the time, simulate a failure\n            return \"Failed to fetch\
+    \ credit score\";\n        }\n    }\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "```\npublic class LoanHistoryService : ILoanHistoryService\n{\n    public async\
+    \ Task<Either<string, LoanHistory>> GetLoanHistory(int customerId)\n    {\n  \
+    \      // Simulate an asynchronous operation with a delay\n        await Task.Delay(1000);\n\
+    \n        // For simplicity, we'll return a random history for each customer\n\
+    \        var rng = new Random();\n        if (rng.Next(0, 100) < 80)\n       \
+    \ {\n            return new LoanHistory{\n                CustomerId = customerId,\n\
+    \                NumberOfDefaults = rng.Next(0, 5),\n                NumberOfPaidLoans\
+    \ = rng.Next(0, 20)\n            };\n        }\n        else\n        {\n    \
+    \        // 20% of the time, simulate a failure\n            return \"Failed to\
+    \ fetch loan history\";\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "```\n}\n}\n```\n\nNow, let's implement the loan approval logic. We'll create\
+    \ a LoanService that uses the ICreditscoresService and ILoanHistoryService to\
+    \ validate a loan request and calculate a loan approval.\n\n```\npublic class\
+    \ LoanService\n{\n    private readonly ICreditscoresService _creditscoresService;\n\
+    \    private readonly ILoanHistoryService _loanHistoryService;\n\n    public LoanService(ICreditscoresService\
+    \ creditscoresService, ILoanHistoryService loanHistoryService)\n    {\n      \
+    \  _creditscoresService = creditscoresService;\n        _loanHistoryService =\
+    \ loanHistoryService;\n    }\n\n    public async Task<Either<string, LoanApproval>>\
+    \ ApproveLoan(LoanRequest loanRequest)\n    {\n        return await ValidateLoanRequest(loanRequest)\n\
+    \            .Bind(request => _creditscoresService.GetCreditScore(request.CustomerId))\n\
+    \            .Bind(creditscore => _loanHistoryService.GetLoanHistory(creditscore.CustomerId))\n\
+    \            .Map(loanHistory => new { CreditScore = creditscore, LoanHistory\
+    \ = loanHistory }));\n}\n```"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "```\nMap(data => CalculatedLoanApproval(data.CreditScore, data.LoanHistory,\
+    \ loanRequest));\n}\n```\n\n```\nprivate LoanApproval CalculateLoanApproval(Creditscore\
+    \ creditscore, LoanHistory loanHistory, LoanRequest loanRequest)\n{\n    // Add\
+    \ loan approval calculation logic here...\n\n    return new LoanApproval {/*...*/};\n\
+    }\n```\n\nOur API will have a single POST endpoint at /loanapproval which will\
+    \ receive a LoanRequest in the body of the request and will return a LoanApproval\
+    \ or an error message.\n\n```\nvar builder = WebApplication.CreateBuilder(args);\n\
+    var app = builder.Build();\n\n// Register dependencies\napp.Services.AddSingleton<ICreditscoreService,\
+    \ CreditscoreService>();\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\napp.Services.AddSingleton<ILoanHistoryService, LoanSystemService>();\\\
+    app.Services.AddSingleton<LoanService>();\n```\n\n```\napp.MapPost(\"/loanapproval\"\
+    , async (LoanService loanService, LoanRequest loanRequest) =>\n{\n    var result\
+    \ = await loanService.ApproveLoan(loanRequest);\n\n    return result.Match<ActionResult>(\n\
+    \        valid => new OkObjectResult(valid),\n        error => new BadRequestObjectResult(error)\n\
+    \    );\n});\n```\n\n```\napp.Run();\n```\n\nIn this snippet, we first set up\
+    \ the dependency injection for our services. Then, we define the POST endpoint\
+    \ for loan approval. We use the LoanService and LoanRequest as parameters for\
+    \ the mapped function. The LoanService is injected by the DI system, while the\
+    \ LoanRequest is automatically model-bound from the request body.\n\nThe LoanService.ApproveLoan\
+    \ method returns an Either<string, LoanApproval>, which we match into an ActionResult.\
+    \ If the loan approval was successful (i.e., the Either is a Valid), we return\
+    \ an OkObjectResult with the LoanApproval. If there was an error (i.e., the Either\
+    \ is an Invalid), we return a BadRequestObjectResult with the error message.\n\
+    \nHere, the power of our monadic approach shines through. Even though we are dealing\
+    \ with complex business logic that involves error handling and asynchronous operations,\
+    \ our API endpoint logic remains extremely clean and easy"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: to understand. This approach enables us to build robust and maintainable APIs
+    that can handle real-world complexity. This is just a simple demonstration of
+    how monads can be used in a real-world application. In reality, the validation
+    and calculation logic would be much more complex and would require more sophisticated
+    error handling. But as you can see, using monads allows us to handle errors and
+    asynchronous operations in a very elegant and readable way.
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Chapter 8: Conclusion and Next Steps
+
+
+    ![](img/c0b8b96a0157eda20d597ec50a87edc6_78_0.png)'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'Throughout this book, we''ve embarked on an enriching journey to explore the
+    world of monads in the realm of C# and .NET. We''ve delved deep into the essence
+    of functional programming and discovered how monads, as a powerful abstraction,
+    can provide us with elegant solutions to tackle complexity in our code.
+
+
+    We started with understanding the core concepts of functional programming and
+    then gradually unfolded the mystery of monads. We''ve seen the Maybe<T>, Either<L,
+    R>, Validation<T>, Try<T>, Exceptional<T>, and Task<T> monads can make our code
+    more robust, readable, and maintainable. Moreover, we didn''t stop at theory;
+    we''ve applied these concepts in practical, real-world scenarios, such as the
+    loan approval process in a banking system, demonstrating their profound impact
+    on software design and architecture.
+
+
+    Our journey doesn''t stop here. The world of functional programming and monads
+    is vast and ever-evolving. There''s always more to learn, more patterns to understand,
+    and more applications to discover. Here are some next steps for you to further
+    your knowledge and expertise:
+
+
+    +   Explore more complex monad patterns: There are more complex monads out there
+    like the State, Reader, Writer, and Cont (continuation) monads. Understanding
+    these can further enhance your programming skills.
+
+
+    +   Dive into functional data structures: Learning about functional data structures
+    like Lists, Trees, and Graphs, which are immutable, can give you a fresh perspective
+    on data manipulation.
+
+
+    +   Functional Libraries for .NET: There are several libraries that provide advanced
+    functional programming constructs for .NET, such as LanguageExt and FSharp. Exploring
+    these can give you ready-to-use tools and also deepen your understanding of functional
+    programming.
+
+
+    +   Learn more functional languages: Languages like F#, Haskell, or Scala have
+    functional programming at their core. Learning these languages will give you a
+    broader perspective.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: 'Apply, Apply, Apply: Theory and practice go hand in hand. Keep finding opportunities
+    to apply your knowledge of monads in your projects. This will not only reinforce
+    your understanding but also help you appreciate their practical utility.
+
+
+    # Appendix / Further Resources
+
+
+    This book has provided an introduction to the concepts and principles of functional
+    programming in C#, but there''s always more to learn! Here are some additional
+    resources that can help deepen your understanding and enhance your skills.
+
+
+    Books
+
+
+    +   - "**Functional C#: Embracing Functional Programming in a C# World**" by Carlos
+    Bueno. This book provides an in-depth exploration of functional programming principles
+    and their application in C#. Available on Amazon.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '"Introduction to Functional Programming using Haskell" (2nd ed.) by Richard
+    Bird. This book gives a comprehensive introduction to the principles of functional
+    programming using Haskell.
+
+
+    "Functional Programming in Scala" by Paul Chiusano & Rúnar Bjarnason. A great
+    resource for understanding how functional programming can be implemented in a
+    statically typed, JVM language like Scala.
+
+
+    "Programming in Haskell" by Graham Hutton. An introduction to functional programming
+    using Haskell, a pure functional language.
+
+
+    "Learn You a Haskell for Great Good!" by Miran Lipovaca. A humorous and practical
+    introduction to Haskell and functional programming concepts.
+
+
+    "Real World Haskell" by Bryan O''Sullivan, Don Stewart, and John Gozen. This book
+    applies functional programming principles to real-world scenarios.
+
+
+    "Functional Programming in C#: How to write better C# code" by Enrico Buonanno.
+    This book dives deep into exploring the principles of functional programming,
+    its techniques and ways to solve common programming problems.
+
+
+    # Online Courses
+
+
+    +   - "Functional Programming in C#" on Pluralsight. This course provides a deep-dive
+    into functional programming concepts and how they can be implemented in C#.
+
+
+    +   - "Mastering Functional Programming" on Udemy. This course explores functional
+    programming from the ground up.'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Blogs and Websites
+
+
+    +   Carlos Bueno''s Blog: As the author of "Functional C#: Embracing Functional
+    Programming in a C# World",
+
+
+    +   Carlos Bueno regularly explores functional programming concepts in C#.
+
+
+    +   "Monads" by Mark Seemann. A multi-part blog series exploring the concept of
+    monads in depth. Available at
+
+
+    +   http://blog.ploeh.dk/2019/02/04/monads-part-1/.
+
+
+    +   "The Elevated World" by Scott Wlaschin. A blog post that discusses the concept
+    of "elevating" types in functional programming. Available at https://fsharpforfunandprofit.com/posts/elevated-world-2/.
+
+
+    +   "Understanding Monads" by Scott Wlaschin. A comprehensive blog post that helps
+    unravel the mysteries of monads in functional programming. Available at https://fsharpforfunandprofit.com/posts/understanding-monads/.
+
+
+    # Video Resources
+
+
+    +   "Functional Programming Principles in Scala" on Coursera. This online course
+    from Martin Odersky, the creator of Scala, introduces functional programming from
+    the basics to advanced concepts.
+
+
+    +   "Haskell Fundamentals" on Pluralsight. An excellent course to learn Haskell
+    and get a more concrete understanding of functional programming.
+
+
+    # Podcasts
+
+
+    +   "Functional Geekery": A podcast on functional programming, where software
+    engineers discuss their journey into functional programming and share their insights.
+
+
+    +   "LambdaCast": A podcast that aims to bridge the gap between the academic world
+    of functional programming and the needs of industrial programmers.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'Other
+
+
+    +   - StackOverflow: The functional-programming tag on StackOverflow is a great
+    place to ask questions and learn from others'' experiences.
+
+
+    Remember, becoming proficient in functional programming is a journey. Take your
+    time, explore the resources, and enjoy the process. Happy coding!
+
+
+    # ABOUT THE AUTHOR
+
+
+    Carlos Bueno is a Software Architect at CSL Luxembourg, specializing in delivering
+    high-quality software solutions with a focus on functional programming. With extensive
+    experience in the field, Carlos is adept in the latest programming techniques
+    and best practices, ensuring the creation of efficient, maintainable, and superior
+    code.
+
+
+    Carlos is the author of several influential books. His first, "O Guia do Mestre
+    Programador: pensando como pirata, evoluindo como jedi" (The Master Programmer''s
+    Guide: Thinking Like a Pirate, Evolving Like a Jedi), published by Casa do Código,
+    has been instrumental in helping developers enhance their skills and broaden their
+    knowledge. His latest work, "Functional C#: Embracing Functional Programming in
+    a C# World," is a comprehensive guide that introduces readers to functional programming
+    concepts and techniques, particularly in the C# programming language. This book
+    explores the benefits of functional programming and its comparison with object-oriented
+    programming, making it an invaluable resource for modern software developers.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: Outside of his professional pursuits, Carlos is a cycling enthusiast who enjoys
+    exploring new trails and participating in various cycling events. He also dedicates
+    his free time to playing video games, engaging in role-playing games, and staying
+    abreast of the latest advancements in programming and technology.
+  merge: -1
+  pgno: 84
