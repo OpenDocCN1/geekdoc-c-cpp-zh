@@ -1,0 +1,3056 @@
+- img_proc: true
+  md: '# HISTORY OF C
+
+
+    By 1960 the high level languages available for programming were developed for
+    specific purposes. This situation limited the programmers to work from a particular
+    type of problem solution. To overcome this limitation a common programming language
+    was needed an international committee was set to develop such a language. This
+    committee came out with ALGOL-60 a general high level programming language.
+
+
+    However ALGOL-60 never became popular because it was general. Due to its generality,
+    a new language CPL (COMBINED PROGRAMMING LANGUAGE) was developed at Cambridge
+    university but CPL had many features that it was hard to learn and difficult to
+    implement.
+
+
+    Later on another language named BCPL was developed by Martin Richards at Bell
+    lab of AT&T . But unfortunately it turned out to be powerful. Around the same
+    time as the BELL lab AT&T, a programmer named KEN THOM developed a language as
+    a further simplification of CPL named as B. But it also turned out be very specific.
+    After that at the laboratory a programmer named DENNIS RITCHIE inherited the features
+    of BCPL and added some of own and developed a language in 1972. This language
+    was named “C” as a next step of language “B”. In 1983 a committee was established
+    to create ANSI version of C. ANSI was finally adopted in December 1989. The first
+    copy was released in 1990 as C39. The standard was also adopted by ISO, as ANSI/ISO
+    standard C.
+
+
+    During 1990 work on C continued as C99 . In general C99 retained all the features
+    of C89 with a little addition.
+
+
+    # INTRODUCTION AND FEATURES OF “C”
+
+
+    ![](img/a82bd3224fd572cdc958a29e758ad59a_0_0.png)
+
+
+    “C” is one of the most powerful and popular language. Its popularity is due to
+    its many desirable features. It is a structured modular programming language in
+    which an application can be developed as a collection of module it has a rich
+    set of built- in function and operators which makes the writing of complain program
+    easier, the “C” compiler combines it is well suited to developed both system and
+    application softwares.
+
+
+    C supports a vast range of data types to make the program more space efficient.
+    The “C” program run much faster than the program by using any other language of
+    this category.
+
+
+    “C” is very simple to learn because it has only 32 keywords. But it is more powerful.
+    Its power lies in its built in function library. In addition C allows enhancing
+    its library by adding new functions.
+
+
+    Being a structured modular language and having certain additional features. It
+    allows to be used at lower level. This feature fills the gap between assembly
+    language and conventional high level languages. Since programs are partition in
+    modules and functions. The programmer can concentrate at a particular point as
+    well as parallel programming is possible which reduces the production time.
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: "# STEP FOR EXECUTION OF A C PROGRAMME\n\n1) The programmer writes and saves\
+    \ the source code by the editor of IDE (INTEGRATED DEVELOPMENT OF Environment)\n\
+    \n2) To run the C language we press ctrl f9- after which the compiler compiles\
+    \ the program and saves the object code.\n\n3) The linkers link the libraries\
+    \ modules with the object code and makes the executable code.\n\n4) The loader\
+    \ loads the exe code inside the main memory.\n\n5) The processor picks the instructions\
+    \ one by one and executes them.\n\n6) The results are either saw in a fill or\
+    \ send to output terminal.\n\nDemo.c\n\n![](img/a82bd3224fd572cdc958a29e758ad59a_1_0.png)\n\
+    \n# A C PROGRAM\n\n```\n# include <stdio.h>\nvoid main ( {\nint n,m, sum, diff;\n\
+    puts(\"enter two numbers\");\nscanf(\"%d.%d\",&n,&m);\nSum = n+m;\nif (n>m)\n\
+    Diff = n-m;\nelelse\nDiff = m-n;\nprintf(\"N=%d m=\"%d\",n,m);\nprintf(\"Sum=%d\
+    \ difference=%d\",sum, diff) \ngetchar( );\n}\n```\n\ndeclaration statement\n\
+    output statement\ninput statement\narithmetical statement\nlogical statement\n\
+    arithmetical statement\nlogical statement\narithmetical statement\noutput\noutput\n\
+    output statement\n\n# COMPONENT OF A C PROGRAMME\n# (DIRECTIVE)\n\nThe directive\
+    \ indicates the compiler that a preprocessor command such as include or define\
+    \ has to come.\n\ninclude -It is a pre-processor command which brings the content\
+    \ of specified header file in the object code.\n\nProvided by Anjna Chaudhary"
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'stdio.h -It is a header file. Header file contains declaration of function
+    related with a particular type of work. The stdio.h contains prototyping for standard
+    I/O functions such as printf, scanf
+
+
+    main ( )-Since C programs follow top-down decomposition there must be one user
+    define function which will we the manager function of the application the fixed
+    name of the manager is main.
+
+
+    # { } ( OPEN AND CLOSE CURLY BRACES ) :-
+
+
+    In C programming each function and structure have their own block. These blocks
+    are differentiated by enclosing within a pair of opening and closing curly braces.
+
+
+    Statements
+
+    Within the block there will be C statement. In C we may get five types of statements
+    declaration input output statement arithmetical statement and logical statement.
+
+
+    A statement is a complete
+
+    instruction LE selected by the processor for execution.Every language have their
+    own end of statement character. In C it is semicolon (;). A statement may consist
+    of one or more expressions.
+
+
+    An expression is the action taken by the processor at a time. An expression is
+    up of one operator and one more operands.
+
+
+    *C is a free flow language that means a single statement can be written in multiple
+    editing lines while multiple statements can be written in a single editing line.
+
+
+    *C is a case sensitive language. It means the keywords and identifiers must be
+    written in the case in which they are provided otherwise they will not be understood
+    by the compiler. Most of the C keywords are in small case.
+
+
+    # The C Tokens
+
+
+    | keywords | Constant | Identifier | Operands | Special Symbol |
+
+    |---|---|---|---|---|
+
+
+    C Tokens
+
+    AS a sentence to make a literature is made up of part of speeches. We write statement
+    to be program. These statements have their own part of speeches called as token.
+    A c statement Keyword
+
+    Constant
+
+
+    Provided by Anjna Chaudhary
+
+
+    ![](img/a82bd3224fd572cdc958a29e758ad59a_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Identifiers Operators and Special Symbols
+
+
+    # Keywords :-
+
+
+    Every language has their own set of keywords. A keyword is the part of statement
+    which has a fixed meaning for the compiler. The compiler translates the keyword
+    in to a particular bit sequence I.E then executed by the processor to do certain
+    task.
+
+
+    In C there are only 32 keywords 27 of them were provided by Dennis Ritchie while
+    five added by ANSI. Following the C keywords.
+
+
+    # Data type related keywords :-
+
+
+    All these keywords are used to specify type of a variable or return type of a
+    function :- int,char,short,long,float,double,signed,unsigned.
+
+
+    # Secondary data type related keywords :-
+
+
+    Used to declare secondary type variable or user defined data type- Struct,union,
+    typedef, enum, const
+
+
+    # Branching keywords :-
+
+
+    Used to create branching construct :- if,else,switch ,case ,default
+
+
+    # Looping keywords :-
+
+
+    Used to form looping construct :- While ,do ,for.
+
+
+    # Control transfer keywords :-
+
+
+    Used to transfer control of flow- Break ,goto ,continue
+
+
+    # Storage class related keywords :-
+
+
+    Used to specify storage class of variables- auto ,static,register,extern
+
+
+    # Other :-
+
+
+    return,volatile,enum,sizeof,const.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Constant:-
+
+
+    Constants are the values written literally in a program. This kind of values cannot
+    be changed during one or more execution of the program. In other words we can
+    say that constants are the value which are not identified. So they cannot located
+    and hence cannot be changed.
+
+
+    There are two basic type of constant.
+
+
+    Primary constant and Secondary constant.
+
+
+    Primary constant :-
+
+
+    A primary constant is an individual value used within a program. There may be
+    two types of primary constant numbers and characters.
+
+
+    Numbers :-
+
+
+    Any number is made up of digits positive negative symbols decimal point and exponents.
+    The numbers can be used as integers and for real number.
+
+
+    Any integer consists of one or more digits the +ive -ive signs. It must not contain
+    decimal point and any other symbol. The integer can be represented in decimal,
+    octal or hexadecimal form.
+
+
+    When the numeric values are increased or decreased integer are not sufficient
+    to represent them in situations we need use of fraction. A number consisting of
+    digits,+,- signs decimal point and exponential parts are called as real. Real
+    numbers may be written in fractional and exponential format.
+
+
+    Character:- anything enclosed within single quotes is character as- ''a'', ''2''
+    ''> '' etc.
+
+
+    # Secondary constant :-
+
+
+    A secondary constant always depends on one or more primary constant. It may be
+    a list or collection it may be address of some location. Secondary constant are
+    found in the form of array_string,structure,union and pointer.
+
+
+    An array is collection of homogeneous values. A string is a collection of zero
+    or more characters enclosed within a pair of double quotes. In the other hand
+    and structure is collection of heterogeneous values used to represent complete
+    information about an organism.
+
+
+    # Identifiers :-
+
+
+    Identifiers are the names given to different components of our program such as
+    variables, functions and labels. To form this identifier rules are defined by
+    the designers. These are :- An identifier must consists of alphabet, digits and
+    underscore.
+
+
+    No space and special symbols are allowed in an identifier.
+
+
+    It must not be more than 256 characters.
+
+
+    # Valid Identifier
+
+
+    # Invalid Identifier
+
+
+    +   Roll
+
+    F_NM
+
+    VAL1
+
+    _pnm
+
+
+    +   1 VAL
+
+    F-NM
+
+    I - PER
+
+    $ NAME
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Variables :-
+
+
+    Variable are identified memory locations in which we can keep different value
+    at different time during one or more execution of the program.
+
+
+    The main difference between constant and variable is that have only read value
+    (R ) while variables both have R value and location value ( L ). Since they have
+    L value we can refer to them and so change the value of memory location. Each
+    variable is able to hold a particular type of value.
+
+
+    With a C program variables we are going to use in the function must be declared
+    before writing any other statement of the program.
+
+
+    # The declaration syntax is
+
+
+    Data type variable;
+
+
+    # Data Types
+
+
+    To keep our values inside the main memory we need to declare variables. The variable
+    declaration requires the specification that how long the word length of this variable
+    will and which kind of values this variable will start. Data types are the technique
+    which tells the compiler about this specification.
+
+
+    The C language provides a vast range for integer and real numbers. Even it provides
+    six separate data type for the integers and that we can select the best one for
+    our requirement.
+
+
+    # The data types for integers:
+
+
+    Short :- it is specified by the keyword int or short . we use it to store entirely
+    small numbers . the word length is machine dependent on the machine up -to 16
+    -bit it is one byte long variable i.e. -1256 to +127 or -32768 to +32767
+
+
+    Int :- if we use size of integer variables then C provides the int data type .
+    the size of it is 2 bytes on the machine up 16 -bit but it is 4 bytes for higher
+    configuration. The first bit of variable is used to store the sign value that
+    is for + ve and for - ve we that the rest of the bits are used to store the binary
+    magnitude of the numbers . The range of the value is -32768 to 32767 or -2147483648
+    to +2147483647
+
+
+    Long :- it is used to store integer value . it has a size of 4byte.s Among the
+    first bit is used to store the sign of .the range -2147483647 to +2147483647
+
+
+    All the data types has their unsigned counter parts same number length but the
+    range of value is doubled because they do not store the sign of number for all
+    the bits of their word length are used to store the binary magnitudes of the number
+    increase of I increase the power of 2 by 1 which doubles the value . but the unsigned
+    data type cannot store - ve values
+
+
+    # Data types for real numbers
+
+
+    To store the real numbers C provides following data types :'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "Float: it is used to store small fractional numbers by 4 bytes in which we\
+    \ fractional and exponential format it\nprovides a word length in which we can\
+    \ store up to 6 digits after decimal accurately .\nThe range of value is 3.4e-37\
+    \ to 3.4e+37\n\nDouble: it has 6 digits of precision are not sufficient for our\
+    \ problem solution we can use\ndouble data type . it provides 14 digits of precision\
+    \ . because word length is 8 types the range\nvalue of +1.7e308.\n\nLong double\
+    \ :- sometimes we may need a higher precision than 14 digits . to handle such\n\
+    situation c provides long data types with a word length of 10 types and 18 of\n\
+    precision the range of value is 3.4e-4932 to 1.1e+4932.\n\n# Data types for characters\n\
+    \nTo store the single character we :\nChar:- it has a signal word length in which\
+    \ the code of character is stored in both the\nsigned and unsigned form it is\
+    \ from -128 to+127 for signed and 0 to 255 for unsigned\ntypes.\n\n# Declaration\
+    \ of variable\n\nAny variable we are going to use in a c program must be declared\
+    \ at the beginning of the\nfunction . declaration of variables specifies storage\
+    \ class of the variable and the data type\nof the variable if the storage class\
+    \ is omitted in the declaration system . it is considered as\nauto storage class\
+    \ by the compiler .the declaration system is storage class . data type . variable\n\
+    name:\n\n```\nauto int n;\nstatic int k;\nint p s;\nchar nm, a;\n```\n\nTo store\
+    \ string :=\nchar name [20];\n\n# DEFINITION OF VARIABLE\n\nWhen we declare a\
+    \ variable in a program, it occupies the specified word length and identifies\
+    \ it\nwith a name as well as an initial value is stored in this space by the compiler\
+    \ itself . The initial\nvalue given by the compiler is called default value .\
+    \ For the auto and register storage\nclass the initial value is garbage that ,\
+    \ it is unpredictable . This garbage value may produce error\nin output of program\
+    \ . Therefore we should define a Variable.\n\nDefinition of variable is the declaration\
+    \ by giving initial value directly . we can say that\nassignment expression in\
+    \ declaration statement is called as definition .\n\nSyntax\n\n+   - Storage class\
+    \ data type name = value;\n  static int n = 5;\n  float x=0.5, y=1.3, z=3.6;\n\
+    \  char key = 'k';\n  char nm [20] = \" anja\";\n\n# Operator:-\n\nAny expression\
+    \ is made up of at least one operator and one operand. the operand is the data\n\
+    value given as constant or variable , which operator is the symbol that tells\n\
+    the processor to take some action on the given operand . C provides a vast range\
+    \ of operators."
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'According to the numbers of operand they have the C Unary operators Binary
+    operators Ternary operators :-
+
+
+    Unary operators :- Operators of this class have a single operand some examples
+    are +,-,&*,! Etc... Binary operators :- Such kind of operators have two operands
+    some example +-,*,<> etc...
+
+
+    Ternary operators :- This kind of operator has three operands . They consist of
+    two symbols . There is a ternary operator i.e the conditional operator (?:); According
+    to the action perform. Operators are separated by types:-
+
+
+    Arithmetical operators :- Such kind of operators perform calculative operations.
+    It includes the Following Operators : +(plus) Used both as unary and binary to
+    make the value +ve or to perform addition. -(minus)
+
+
+    Used also in unary and binary form to negate the value or provide difference .
+    *(multiplication) Used to give product of two values Used to perform division
+    and return quotient. The result type depends upon the types of operands. -if both
+    the operands are integer result will be integer otherwise it will be real. %(integral
+    division) Used to perform integral division and return the remainder.
+
+
+    (2)Increment and Decre operators :- Frequently we need to add or subtract one
+    value from a variable i.-e. as v = v+1/v = -1. To square this purpose C supports
+    two short cut operator as increment and decrement operators and symbolism as ++
+    and -- respectively. These are called unary operators and can we given is prefix
+    or post fix from as : ++ V; V++; V--; --.
+
+
+    There is no different B/W prefix and postfix. If given as a single statement.
+    But if as an expression within another statement they behave differently. If given
+    prefix they execute before other parts of the statement otherwise other parts
+    of the statement are executed their execution.
+
+
+    (3) Relational operator To perform logical processing i.e. comparison and selection
+    we can use operators of this category. Which check the relation in two values-
+    the operators are as given below-=(equal to):
+
+
+    Used to check equality in between two operands and return true if both are same.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Eg- if (a==c)
+
+
+    != (Not equal to )
+
+
+    It returns true if both of its operands have different values.
+
+
+    >(Greater than )
+
+
+    It returns true if left operand is bigger than the right one.
+
+
+    >= (Greater equal to )
+
+
+    It returns true if the left operand is bigger as well as equal to right operand.
+
+
+    <(less than)
+
+
+    returns true if the left operand is smaller than right one.
+
+
+    <=(Smaller equal to )
+
+
+    Returns true if left operand is less or equal to the right operand.
+
+
+    # (4)Logical operator :-
+
+
+    In many situations we need to compare more than one relation. To handle such situations
+    we use the logical operators which are based on the operations of Boolean Algebra.
+    Following are the operators of this kind.
+
+
+    & & (And )
+
+
+    It is based on logical multiplication and returns one(true) only when both of
+    its relational expressions are returning one(true).
+
+
+    || ( OR )
+
+
+    It is based on Boolean algebra operation ''plus''. It return one only when any
+    of its operand relational expression is returning one.
+
+
+    ! (NOT )
+
+
+    It is based on the Boolean algebra complement operation. It is a unary operator
+    and returns if it its operand relational expression is returning zero(false).
+
+
+    # (5)Conditional Operator:-
+
+
+    It is the single ternary operator. It is used in the situation where we have to
+    perform something after evaluating a condition and something else after evaluating
+    the condition false. Its first operand is a condition, second operand is the expression
+    which has to we executed after evaluating the condition true and the third operand
+    is the expression. Which has to be after evaluating the condition false.
+
+
+    Condition ? expression : false expression ;
+
+
+    # (6)Bitwise operator :-
+
+
+    In addition to the operators that work on overall value of a variable or constant
+    C supports a range of operators to work with single bit of binary magnitude of
+    a value. This class includes the following operators.
+
+
+    Bitwise Not Or Complement (~) :-
+
+
+    As logical it is not a unary operator but instead replacing 0 or 1. It returns
+    complement of bit pattern of its operand i.e 0 bit as 1 bit and 1 bit as 0 bit.
+
+
+    Short X=10
+
+
+    | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 1 | 0 |'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Bitwise And (&) :-
+
+
+    It is a binary operator which compares its operands by bit and returns an 1 if
+    both operand
+
+    have 1 bit at that position.
+
+
+    ```
+
+    Using short Y = 15 ;   00001111
+
+    R = x & y         00001010
+
+    ```
+
+
+    # Bitwise OR ( | ) :-
+
+
+    As the bitwise AND operator compares bits of its operand and returns 1 bit. If
+    any of them
+
+    having 1 bit at that position.
+
+
+    # Bitwise XOR (^) :- ^
+
+
+    By comparing bits of the values it returns 1 bit. If there are dissimilar bits
+    at that position
+
+    otherwise returns a 0 bit.
+
+
+    # Bitwise Left Shift (<<) :-
+
+
+    Instead comparing the bits of operand. This operator moves the bit pattern of
+    its left operand.
+
+    According to its right operand towards left position.
+
+
+    i.e. normally as n<<p = N*2^p
+
+    because shifting most significant bit by one two values.
+
+
+    +   (f) Bitwise Right shift (>>) : :
+
+    As left it also moves the bits from left to right. i.result as n>>p=n/2^p
+
+    because moving MSB by one has that values.
+
+
+    +   (7)Assignment operator :=
+
+    Assignment mean giving a value to a variable. In general it is done by using the
+    "=" operator.
+
+    Along with equals ''='' C'' supports short hand assignment operators which consists
+    of any other
+
+    operators and equals. They perform some action according to the value of its left
+    and right
+
+    operand. Then assign its left operand with the resulted value. The common ones
+    are =, +, -= = =
+
+    * = , /, % = .
+
+
+    # (8)Special Operator :-
+
+
+    The groups of operators includes the symbol in which each one is responsible to
+    do a specific
+
+    operation.
+
+
+    Following are the operators included in this group.
+
+
+    # Parenthesis ( ) :-
+
+
+    It is used for function definition and function call. it is also used to increase
+    the precedence of
+
+    yany other operator to level one.
+
+
+    # Subscription :-
+
+
+    This operator is used to specify size of an array or to give index of an element
+    of an array.
+
+
+    # Comma ( , ) :-
+
+
+    It is used to separate item of a list.
+
+
+    # Member selection ( . -> ) :-'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'They are used to select an individual members of a structure variable.
+
+
+    # Address of value ( & :-
+
+
+    It is a unary operator which returns the address of memory location where its
+    operand is stored.
+
+
+    # Dereference or Value at address (* ) :-
+
+
+    It is also an operator used to declare a pointer variable and to access value
+    of a memory location through a pointer.
+
+
+    # Operator Precedence :-
+
+
+    The term precedence describes the quality of an operator that is used to specify
+    privilege of execution. When there are more than one operators present in a single
+    statement. Each operator in C is assigned a rank. Since there are lot of operators
+    the ranking is not limited as BODMAS. The operator ranking for arithmetic is also
+    different than BODMAS.
+
+
+    # Operator Associativity :-
+
+
+    There may be more than one operator belonging to same rank present in a single
+    statement. In such situation the quality associativity is used to decide the sequence
+    of execution. The associativity may be left to right or right to left.
+
+
+    | OPERATORS | SYMBOLS | RANK | ASSOCIATIVITY |
+
+    | :--- | :--- | :--- | :--- |
+
+    | Parenthesis | ( ) | 1 | L → R |
+
+    | Subscription | [ ] | | |
+
+    | Unary plus / Minus / Increment ; Decrement ; logical | +,+,+,-,,~*,& | 2 | R
+    → L |
+
+    | Not, bitwise not, Size of Multiplication Division modulus | *,|% | 3 | L → R
+    |
+
+    | Binary plus / minus | +- | 4 | L → R |
+
+    | Bitwise left shift / right shift | <<>> | 5 | L → R |
+
+    | Greater than less with Equality | <,,>= | 6 | L → R |
+
+    | Equality, Not Equality | ==,! | 7 | L → R |
+
+    | Bitwise And | & | 8 | L → R |
+
+    | Bitwise XOR | | 9 | L → R |
+
+    | Bitwise OR | ^ | 10 | L → R |
+
+    | Logical AND | && | 11 | L → R |
+
+    | Logical OR | || | 12 | L → R |
+
+    | Conditional | ? | 13 | L → R |
+
+    | Assignment | X=, | 14 | R → L |
+
+    | Operators | +=,- | | |
+
+    | Comma | , | 15 | L → R |
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Type conversion & casting :-
+
+
+    In a statement there may be more than one operands. In such situations all the
+    operands are converted in similar type to give a single type of result. This conversion
+    is alone by the compiler and is called as implicit conversion in general it implicit
+    from lower to higher ranking of the operand i.e. as char -> int long float double
+    -> long double. In assignment expression is done lower or higher as the left operand.
+    In some situation we need to enforce the compiler to convert one type of data
+    in another. This type of conversion is called as explicit conversion or perform
+    type casting.
+
+
+    To suppress the conversion given by compiler . In lack of precision after implicit
+    conversion. To increase the accuracy of our expression.
+
+
+    Before differencing void pointer. Syntax = (required type) expression Eg. = avg
+    (float) total /nos. NOTE :- In C++ compiler the syntax is required type (expression).
+    Eg. Avg= float (total /nos)
+
+
+    # Basic input and output in c :-
+
+
+    The basics i/o operation include accepting value from the keyword and producing
+    the result on the monitor. For all kind of i/o realizes on its library function.
+    The C library contain three group of i/o functions for character string and various
+    data type.
+
+
+    # Character i/o function
+
+
+    For single character i/o. There are following function in C library. getch():-
+    It produce a cursor on the screen to indicate for pressing any key when we press
+    a key. It accepts that terminates and return the pressed key. It can use an assignment
+    operator to assign the return value to the variable. Syntax :- getch();
+
+
+    Eg- char key; Key = getch();
+
+
+    It is prototyped in conio.h not in stdio.h getchar():- it work as getchar() with
+    a little difference that echoes the pressed character and terminated when we press
+    enter key. Syntax :- getchar(); Char key; Key = getchar();
+
+
+    getche():- it works as getchar function. The difference is that after echo the
+    pressed character. return without enter key.
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '```
+
+    Syntax - getche();
+
+    Eg- char key
+
+    Key = getche();
+
+    putch() and putchar() :-
+
+    ```
+
+
+    Both the function are identical. They take an argument of char type. That can
+    be a constant enclosed within single quote or be a variable of char type prints
+    the value of their arguments on the screen at the cursor position.
+
+    Syntax: putch (char constant variable)
+
+
+    ```
+
+    Eg- putch(''x'') putchar(key);
+
+    String input output :
+
+    gets() :-
+
+    ```
+
+
+    It accepts one type variable as its argument. After calling it produces a cursor
+    on the screen to start typing. It accepts all the character we including space
+    and tab. It terminate when we press the enter key. Before termination, it place
+    the NULL character at the end of the given string.
+
+    Syntax - gets(variable);
+
+    uts() :-
+
+    It also accept one argument of string type. Either constant or variable prints
+    the given string on the screen and then place the cursor in next.
+
+    Syntax - puts("string/variable);
+
+    It also create a new line after printing the string.
+
+    Escape or back slash character :
+
+    In "C" there are some characters having specific meaning for the compiler.
+
+    For example - the quotes and sign of interrogation (?) and we want to get that
+    as usual,while we need some specific output that is not present directly on the
+    keyboard. In such situation a simple character is used to get that specific output.
+    To escape the special meaning of a specific character or give specific meaning
+    for a general printable character we combine the character with the back slash.i.e
+    two character but one output. Such character are called as escape character back
+    slash character.
+
+    Following are some escape character and their meaning.
+
+
+    | Escape character | Meaning |
+
+    |---|---|
+
+    | \'' | |
+
+    | \n'' | new line |
+
+    | \r'' | Enter key |
+
+    | \" | |
+
+    | \"" | |
+
+    | \b'' | Back space |
+
+    | \q'' | Beep sound |
+
+    | \? | ? |
+
+    | \t'' | Horizontal tab |
+
+    | \v'' | Vertical tab |
+
+
+    Provided by Anjia Chaudhary'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Different type of input:-nTo accept value from the keyboard for different type
+    of variables .The function is used scanf( ). The scanf ( ) has two arguments.
+    The first argument is a string and the second is a variable of any data type.
+    The first argument contains the type specifier which consists of percent and an
+    alphabet which specifies the values for the coming variables. The names of variable
+    must be prefixed with the address operator (&) to specify the address of memory
+    location represented by that variable. Only the string variable will not be prefixed
+    with & syntax-
+
+    Scarf("Type specifier", & var);
+
+
+    | Type specifier | Data type |
+
+    |--- | :--- |
+
+    | %d | Any type int |
+
+    | %l | Base 10 int |
+
+    | %o | Octal int |
+
+    | %x | Hexadecimal int |
+
+    | %sh | Short int |
+
+    | %ld | Long |
+
+    | %c | Character |
+
+    | %f | Fractional float |
+
+    | %e | Exponential |
+
+    | %lf | Double |
+
+    | %Lf | LONG DOUBLE |
+
+    | %s | String |
+
+
+    Scan terminates when white space or invalid value for that type is entered.
+
+    Remark:-nScanning the integer and char type with u specification scans unsigned
+    values for ex %ud is unsigned int.
+
+    The scanf can receive more than one variable of different data type. But in such
+    case for every variable there will be a format specifier, no matter the variable
+    are same type or of different type.
+
+    If there are different type of variable given for one scanf , their corresponding
+    type specifier must be matched their position .
+
+    If there are extra or lack of type specifier or variable, it will cause problem
+    for the next scan statement.
+
+    Taking input for a variable by scanf terminates. when a white space (spacebar,
+    tab, enter) is given or an invalid value for that variable is given.
+
+    Since scanf terminates with a white space therefore by using %s we can not input
+    a string containing space. But there is following type specifier which may help
+    us.
+
+    Syntax : %[character or set]—to take only given character .
+
+    %[%character or set]-to take except given character.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\nprintf( );\n```\n\nThe printf ( ) help us print any kind of values on\
+    \ the monitor. It has at least one argument if\there is only one argument that\
+    \ must be a constant string. If there are more one argument\nthen the first argument\
+    \ must be a string which contains constant character and type specifier\ncorresponding\
+    \ to the coming argument. The type specifier are as same as the scanf except\n\
+    the specifier \" %s does not ignore the spaces.\n\n```\nprintf f(\"constant specifier\"\
+    );\nprintf f(\"constant specifier\", variable/ expression);\n```\n\n# Formatted\
+    \ input and output:-\n\nThe printf does not do anything to organize the output\
+    \ in a particular manner. It starts the\nprinting of value, from where the cursor\
+    \ is present after displaying the result of previously\nexecuted statement. Particularly\
+    \ when we print two or more values in sequence the values are mixed up together.\n\
+    printf provides very undesirable result.\nSo that they are like a single value.\n\
+    \nTo produce a desirable output. We can use the escape character within formatting\
+    \ string to\nproduce new lines or tabs space. In addition the type specifiers\
+    \ , we have some formatting\nfeature to organize the output. These are given below.\n\
+    \n+   -with %d we can add an integer value between % and d specify width of the\
+    \ output as\n% 7d.\nWe can also add a dot and integer to specify the number of\
+    \ digit to be printed as %.3d.\nWe can combine both of them as % 10.3d\n- with\
+    \ % c we can add the width specification as % 6c.\n=with the %s we can specify\
+    \ both the width and number of character as %7.3s.\nWith the %f we can specify\
+    \ both w and but the n is to specify the number of digit after\ndecimal point\
+    \ as %9.3f.\n\n# Mathematical function and math.h header file:-\n\nThere are so\
+    \ many works with the arithmetic and trigonometry we need to perform . For all\n\
+    such commons there are range of library functions precede and stored in C library.\
+    \ All\nthese mathematics related function are prototyped in the header file math.h.\
+    \ If we include\nthis file in our program. We can only use these functions. Following\
+    \ are some common\nmathematical function.\n\npow(): This function accepts two\
+    \ argument double- n and another integer – p evaluates\nt power of n up p and\
+    \ returns the result in double.\nSyntax - pow(n,p);\nsqrt ():- it accept a single\
+    \ argument and return the square root of passed value.\nSyntax - sqrt (n);\nabs():\
+    \ it accept a double argument and return the absolute value of argument that is\
+    \ the\nvalue without sign.\nSyntax - abs(n);\nround (): this function receives\
+    \ two argument n and d where n is a double value. And d is an\niteger. it returns\
+    \ the n after rounding it up to number of digits given as .\nSyntax - around (n,\
+    \ d);"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'ceil(); this function take a fractional value and returns this value by ceiling
+    the partial part but not less than the current value. Therefore it returns the
+    integrals part of its argument by adding 1.
+
+
+    Syntax: ceil(n);
+
+    floor(): It work like ceil but do not return a value greater than its argument.
+    Therefore it returns the integral part of its argument.
+
+
+    Syntax-floor(n);
+
+    sin():- It accepts an angle as its argument, evaluate in and return the sine value
+    of that argument angle.
+
+    Syntax : sin(a);
+
+    cos():- It accept an angle as its arguments and return the cosine value of that
+    angle.
+
+    Syntax - cos(a);
+
+    tan():- It accepts an angle as its argument calculate the transient and returns.
+
+    Syntax - tan(a);
+
+    acos():- It accepts an angle as its argument evaluate the arbolic cosine and returns.
+
+    asin():- It accepts an angle as it argument calculate the arbolic sinec value
+    of that angle.
+
+    Syntax - asin(a);
+
+    atan():- It accepts an angle as its argument calculate the arbolic transient value
+    of that angle.
+
+    Syntax - atan(a);
+
+
+    # Character function and type.h header file :-
+
+
+    The header file type.h contains a range of library function which can be applied
+    on a single character. Some of these function are used to check the status of
+    the character passed to it. following are some common character included in this
+    group.
+
+
+    | isprint(char) | To check printable or not |
+
+    | isnalnum(char) | To check alphabet|digit|number |
+
+    | isalpha(char) | To check alphabet or not |
+
+    | isdigit(char) | To check digit or not |
+
+    | ispunct(char) | To check punctuation work or not |
+
+    | isspace(char) | To check or not |
+
+    | isupper(char) | To check uppercase or not |
+
+    | islower(char) | To check lowercase or not |
+
+
+    All these function return either a zero or a non zero value. zero is for false
+    and non zero is for true. We can check the returning value or make a decision
+    according to that.
+
+
+    There are two more functions that accept a character as an argument and return
+    the argument in its reverse case. These function are:
+
+    tlower(char) – return the letter in lower case.
+
+    tupper(char) – return the letter in upper case.
+
+
+    # BORANCHING AND CONDITIONAL STATEMENT:-
+
+
+    The technique to execute a block of instruction by calculating the truthiness
+    of a condition is called branching. Being a structured (language ''c'' also support
+    a technique of branching. To use'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "this technique 'C' provides two conditional statements. The if-else statement\
+    \ and the switch-case statement.\n\nThere are four forms of if statements. These\
+    \ are:\n\n# Simple if\n\nThere may be situations in which we need to execute a\
+    \ block of statement, Only when a given condition is true. In such situations\
+    \ we use the simple statement. In this from the if statement is followed by a\
+    \ block of instruction if the condition given with if is executed true. The Control\
+    \ of flow is passed to the coming block. Otherwise this block is simply skipped.\
+    \ The syntax\n\n```\nIf (condition)\n statement\n  2;\n  3;\n}\n```\n\n# If-else:-\n\
+    \nThere may be situation in which we need to execute a block of instruction, if\
+    \ a condition is evaluated true and a totally different block of instructions,\
+    \ after evaluating the same condition false. In such situation the simple can't\
+    \ fulfill our requirement but there is the if-else form which helps us.\n\nIn\
+    \ this form the if is followed by a block of instruction. After then there is\
+    \ the else statement i.e. followed by another set of instruction evaluating the\
+    \ given condition true – the control passed to the if block and the else block\
+    \ is skipped. Evaluating the condition false the control passed to the else block.\n\
+    \nSyntax - If (condition)\n\n```\nstatement\n  ;\n}\nelse\n statement\n  ;\n \
+    \ ;\n}\n```\n\n# NESTED IF – ELSE :\n\nIn real programming there may be situation\
+    \ when after evaluating a condition true, we need to check another condition or\
+    \ after evaluating the first condition false. We need to check another condition.\
+    \ To handle such situation. We give an if – else statement within another if block\
+    \ or else block.. It is called nested if-else. There may be up to 255 levels of\
+    \ nesting\n\nThe format is"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '```
+
+    a) If (condition1
+
+    { If (condition2
+
+    {
+
+    }
+
+    else
+
+    { inner else block
+
+    {
+
+    }
+
+    else
+
+    { outer else block
+
+    }}
+
+    ```
+
+
+    ```
+
+    b) If(condition 1)
+
+    {
+
+    }
+
+    else
+
+    {
+
+    If(condition 2)
+
+    {
+
+    else
+
+    {
+
+    }
+
+    }
+
+    ```
+
+
+    ```
+
+    c) If(condition 1)
+
+    {
+
+    If(condition 2)
+
+    {
+
+    else
+
+    {
+
+    }
+
+    else
+
+    {
+
+    ```'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '```
+
+    If(condition 3)
+
+    {
+
+    }
+
+    else
+
+    {
+
+    }
+
+    }
+
+    ```
+
+
+    # Ladder of if- else:-
+
+
+    In many situation we have more than option to perform a single task or we may
+    have to do different work in different condition checked against one another.
+    In such the situation if statement comes consequently after else statement making
+    a ladder like structure If indented properly. Therefore called as ladder of if.
+    In this form of if, when the condition is evaluated true. The flow of control
+    is passed to the block coming after, and after executing that passed next to the
+    last else the next condition is checked and so on.
+
+
+    ```
+
+    If (condition1)
+
+    {
+
+    }
+
+    else
+
+    If (condition2)
+
+    {\}
+
+    else
+
+    If (condition3)
+
+    {\}
+
+    elelse;
+
+    {\}
+
+    ```
+
+
+    # Use of AND operator and OR :-
+
+
+    When we need to check multiple condition to be true to do a particular task for
+    this purpose we need nesting of if . But the nesting of if can be reduced by using
+    the and(&&&) operator. We know that the AND operator takes two input and return
+    true only when all of these are true. So we can use the AND operator to remove
+    nesting. The format is
+
+
+    Provided by Anjana Chaudhary'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# If (cond01&& cond2 && comnd 3.........)
+
+
+    In the situation where we have to check more than one condition one after another
+    but to do the work after evaluating any of the condition true. In general we use
+    the ladder of if but it can the replace with the use of Or(||) operator. Because
+    the OR operator takes two input as true or false and return true if any of these
+    are evaluated true.
+
+
+    # BREAK STATEMENT:-
+
+
+    In A C PROGRAM there may be so many blocks some of them are anyblocks and some
+    are related with branching and looping structure. Some time we need to move the
+    control of flow outside a block without executing it completely. The break statement
+    serves this purpose. When the break statement is encountered the control is passed
+    directly outside that block. The break statement itself is unconditional. But
+    it is quite natural that we want to break a block in a particular situation. So
+    we generally use this statement with a branching statement such as if and.
+
+
+    # Switch case:-
+
+
+    ```
+
+    switch (value)
+
+    { case condition 1:
+
+    Work to do
+
+    break;
+
+    { case condition 1:
+
+    Work to do
+
+    break;
+
+    ```
+
+
+    ```
+
+    default:
+
+    Work
+
+    }
+
+    ```
+
+
+    # Switch case structure:-
+
+
+    It is another structure provided by C to perform the branching technique. It is
+    made up of using three key — switch, case, default.
+
+    The switch key followed by a variable given within parenthesis this variable’s
+    value is checked against, given conditions. If there is a block enclosed within
+    pair of curly braces, which contains different case statement followed by the
+    set of statement to execute. After evaluating the condition true. Each case statement
+    is followed by a value postfixed with colon. The variable given with switch is
+    checked against these values.
+
+
+    At the first case is compared, if it is evaluated true the control is passed below
+    and executes the statement given after. otherwise the control is passed to the
+    next case. If all the case are evaluated false then the statement given after
+    default are executed.
+
+
+    Provided by Anjina Chaudhary'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '```
+
+    if (cond01& && cond2 && cmd 3..........)
+
+    ```
+
+
+    In the situation where we have to check more than one condition one another but
+    to do the same work after evaluating any of the condition true. In general we
+    use the ladder of if but it can the replace with the use of Or(|) operator. Because
+    the OR operator takes two input as true or false and return a true if any of these
+    are evaluated true.
+
+
+    # BREAK STATEMENT:-
+
+
+    In A C PROGRAM there be so many blocks some of them are anymons blocks and some
+    are relating branching and looping structure. Some time we need to move the control
+    of flow outside a block without executing it completely. The break statement serves
+    this purpose. When the break statement is encountered the control is passed directly
+    outside that block. The break statement itself is unconditional. But it is quite
+    natural that we want to break a block in a particular situation. So we generally
+    use this statement with a branching statement such as if
+
+
+    # Switch case :-
+
+
+    ```
+
+    switch (value)
+
+    { case condition 1:
+
+    Work to do
+
+    break;
+
+    { case condition 1:
+
+    Work to do
+
+    break;
+
+    ```
+
+
+    default:
+
+    Work
+
+    }
+
+
+    # Switch case structure:-
+
+
+    It is another structure provided by C to perform the branching technique. It is
+    made up of using three key words – switch, case, default.
+
+    The switch followed by a variable given within parenthesis this variable''s value
+    is checked against, the conditions. After then there is a block within pair of
+    curly braces, which contains different case statement followed by the set of statement
+    to be executed. After evaluating the condition true. Each case statement is followed
+    by a value postfixed with colon. The variable given with switch is checked against
+    these values.
+
+    At the first case is compared, if it is evaluated true the control is passed below
+    and executes the statement given after then otherwise the control is passed to
+    the next case. If all the case are evaluated false then the statement given after
+    default are executed.
+
+
+    > Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'The switch structure is a better alternative for ladder if else. Particularly
+    when we need to executes a set of different kind of instruction for each of the
+    condition because there is no separated blocks for the case statement and we do
+    not need to keep track about the opening and closing braces every time it replace
+    the if else ladder due to its limitation it has the following limitation:
+
+
+    Only the integer can be switched
+
+
+    Only a single value is placed against case therefore we can check only equality.
+    Once a case is evaluated true the control is passed below and the other cases
+    are ignored. Therefore we need to add break statement after every case to get
+    desired result. Although we can not use any relational and logical operator with
+    case but the above limitations let us to make a situation as like or operator.
+
+
+    # Goto statement
+
+
+    Although it is said to structure programming gets less programming. But it is
+    still used in C and C++ programming statement is used to send the flow of control
+    anywhere in the programmed i.e.Labeled. A label is any value identifier followed
+    by colon,( if the label is given at the end of program then there must be semicolon).
+    When we use goto then the general flow of control i.e. to top bottom by instruction
+    is overlapped and it may be passed back or jump forward by skipping some statement.
+    Since goto is not conditional its may be problematic even if we make the program
+    infinite. If it is used against any branching statement, it is used to perform
+    looping technique.
+
+    Syntax - goto label;
+
+
+    # Looping:-
+
+
+    For the structure programming it is necessary to provide a provision for the repeat
+    of a set of instruction. looping is the technique designed by ANSI which allows
+    us to repeat/ iterate a set of instruction till a given condition is evaluated
+    true .
+
+    According to the ANSI rule each structured language must support three looping
+    structures
+
+
+    +   While
+
+    Do and handle
+
+    For
+
+
+    All these looping structures can be divided into two basic type called as entry
+    loops-in before executing the given set of instruction first time the condition
+    to continue the loop is checked. If it is evaluated true the loop body is executed
+    and again the condition is checked. for entry controlled loop body may may be
+    executed. The & for looping structure are entry control.
+
+
+    In the exit control statement inside loop body are executed first and then a condition
+    is checked to repeat the body next time that the exits control loop must be executed.
+    Once the loop is the exit controlled loop.
+
+    Both the entry and exit control loop may be determinate (even) or indeterminate
+    (odd).
+
+    For the determinate loop the number of repeat can be predicated before its starting.
+    It is controlled by a variable called as counter. The value of counter is either
+    increased or decrease by certain step in repeats of the loop.
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "'For the indeterminate loop cannot be predicted, how many time it will repeat.\
+    \ every execution of the program the number of repeat way varies. The variable\
+    \ by which the loop is changed in every repeat either by taking a new input or\
+    \ assigning with a new value.\n\n# The while loop:\n\nThe while loop is an entry\
+    \ control loop, that may be both determinate and indeterminate. In 'C' language,\
+    \ the while keyboard is followed by condition within a parenthesis. That is followed\
+    \ by body of loop enclosed within a pair of curly braces. (if there is the statement\
+    \ there is no of curly braces).the condition given while is evaluated and if resulted\
+    \ true the control is passed to the loop body. From the end of the loop it is\
+    \ passed back to the control. It evaluated again for the repeat of loop. As soon\
+    \ as the condition goes false the flow of control is moved after the loop body.\n\
+    \n```\n{\n  Statement\n}\n```\n\n# For loop :-\n\nThe for looping is designed\
+    \ by ANSI in such a way that it can be used as a determinate entry loop .In the\
+    \ C language also follows same format as designed by ANSI. But in this language\
+    \ some special features are added to the for structure. Therefore it can be used\
+    \ as intermediate loop.\n\nThe general format of syntax in C language consists\
+    \ of three parts separated by semi-colon (;). The first part is the initialization\
+    \ which assign the initial value to counter. The second part is to specify the\
+    \ condition which will cause the termination of loop and the third part is the\
+    \ expression in which we give any type of expression to be executed before evaluating\
+    \ the condition next time.\n\nWhen the control of flow comes to the statement,\
+    \ it first executes the initialization block and checks the control if it evaluated\
+    \ true, the control is passed to the loop body. That is executed and the control\
+    \ is passed to the expression statement. After then it passed to the control statement.\
+    \ According to the result of condition, the control is passed either to the loop\
+    \ body or after the loop body.\n\n# Syntax\n\n```\nFor (initialization; condition;\
+    \ expression)\n{ loop body\n}\n```\n\n# Special features for loop :-\n\n-In general\
+    \ in for loop only one counter can be initialized but the format for in C language\
+    \ allows us to initialize more than one variable separated with comma in its initialization\
+    \ block.-If the loop to be controlled by a variable which already has a value,\
+    \ we can omit the initialization block but must give the corresponding semicolon."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'In general the format of for can have a single condition as than equal to or
+    less to the C language allow us to specify complex condition also by using the
+    logical operators.
+
+    -Even the condition statement can also be omitted. But then the condition specification
+    is always evaluated as true. Therefore the flow of control is always. Passed to
+    the loop body making the loop infinite. So we must do something within the loop
+    body to terminate the loop.
+
+    -The expression statement may also have more than one expression separated by
+    comma.
+
+    -The expression statement may be of any kind of arithmetical expression.
+
+    -The expression statement may also be omitted.
+
+    -All the statements making the for loop can also be omitted. But there must be
+    the corresponding semicolon.
+
+
+    # ### The do loop:-
+
+
+    The do while construct is an exit control loop. There may be situation in which
+    we need that the body of loop must be executed at least once. In such a situation
+    we can use the do while loop.
+
+    This is started with the keyboard do followed by the body of loop. ie then followed
+    by the keyword while having condition after its parenthesis there must be a ;
+    Control of flow is just past to the body of loop, it is executed then the condition
+    within the while is checked. If the condition is evaluated true the control of
+    flow is passed back to the keyboard. Otherwise it is passed to the next statement
+    after while.
+
+
+    # ### Format:-
+
+
+    ```
+
+    do
+
+    {
+
+    loop body
+
+    } while (condition);
+
+    ```
+
+
+    # ### Nesting of loop:-
+
+
+    There be situation in which we have to repeat a block of instruction and within
+    that block of instruction there are some statement which has to be repeated also.
+    To handle such situation we are allowed to nest a looping structure within the
+    body of another loop. This nesting can be done up to 255 levels. In one repeated
+    of the outer loop the inner loop completes all its cycle.
+
+    Therefore the total number of repeat for the inner loop will be of repeat for
+    inner loop multiplied (*)with number of repeat for outer loop.
+
+    Any loop can be nested within any other loop without regarding its type.
+
+
+    # ### Format:-*
+
+
+    ```
+
+    for (----)
+
+    {
+
+    while (condition)
+
+    {
+
+    }
+
+    }
+
+    ```
+
+
+    # ### Continue statement:-'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'Continue is a unconditional statement i.e. given within the body of a loop.
+    When the continue statement is encountered , the flow of control is passed back
+    to the condition to be checked. The statements given continue remain unexecuted.
+    It is quite natural that the statement given should be executed within the loop
+    body. But there may be situation in which some of the statement are undesirable.
+    To handle such situation we can use the continue statement. But it should be used
+    against an if statement or case statement.
+
+
+    # Format
+
+
+    Looping structure ( )
+
+    {---
+
+
+    Continue:
+
+    -----
+
+
+    # Array:-
+
+
+    When we need to store a group of data items, we must follow some manner to organize
+    the storage. The data items creating group are collected together by producing
+    a relationship between them is called data structure.
+
+
+    An array is a static data structure. It is a collection of homogenous data item
+    stored in contiguous memory locations. That means there is a physical and mathematical
+    relationship between the elements of array. If the address of an element is known
+    ,we can easily calculate the address of other elements.
+
+
+    We create an array when we have to store and handle a number of variable having
+    same type of information and to be operated in same manner. However, creating
+    an array of n size declaring n number of i takes some memory capacity. But it
+    is easy to handle the elements of an array because all the memory location making
+    the element of an array share the same name but can speciified individually by
+    their offset. (index)
+
+
+    # Declaration of array :-
+
+
+    An array is also a variable therefore it must be declared before it''s use. An
+    array is declared in the same way as other variables except the dimension of array
+    is subscribed with the identifier.
+
+
+    ```
+
+    Syntax -
+
+    Data type identifier[dimension];nint A[5];nfloat x[2];ndouble D[25];
+
+    ```
+
+
+    The dimension value always be constant integers however it could be macro created
+    with or symbolic declare with const keyword.
+
+
+    # Definition of array :-
+
+
+    As have defined some primary variables to avoid, we can define an array also by
+    providing initial value for its elements. It could be done in
+
+
+    ```
+
+    Data type identifier[dimension]=(x1, x2);
+
+    Datatype name[]={v1,v2,v3....};
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Datatype name[size]=(v);
+
+
+    Memory map of a single dimensional Array:
+
+    When we declared an array of n size, n* word length of the data type are kept
+    aside and the address of the first byte is tracked, by calculating which element
+    of the array can be accessed.
+
+
+    # Referencing an element of array:-
+
+
+    Any element of an array can be referenced randomly by subscribing a name called
+    as its index. The index is usually the offset of (distance from the base address
+    in term of word length) that element index start from zero, and goes to n-1. As
+    -
+
+
+    | | | | | | |
+
+    |---|---|---|---|---||
+
+    | | | | | | |
+
+
+    Array [index]=value;
+
+
+    # Traversing an Array :-
+
+
+    Traversing means touching each element of an array for doing some kind of work
+    with the elements. Traversing can be done for the complete array or for a number
+    of elements. As we know an element is referred by its index number, therefore
+    to traverse an array. We can use a decorate loop and subscribe its counter to
+    refer the elements one by one. As the counter is increased or decreased, it refers
+    the corresponding elements.
+
+    Format-
+
+    For(counter=0;counter<size; counter++)
+
+    Do with a [counter]
+
+
+    # 2D Array or matrices :-
+
+
+    In addition to single dimensional array having certain number of element, C supports
+    2D array also. For a 2D array we can specify the number of row and then the number
+    of column per row.
+
+    A 2D array is also known as matrix.
+
+
+    # Declaration and definition of 2D Array:-
+
+
+    A 2D array is declared by subscribing its two dimensional as:
+
+    Data array [rows][column];nFor the definition of 2D array element value can be
+    provided grouped by the curly braces or within the single curly braces also the
+    format:
+
+    Data type A[R][C] = {V1, V2.......},
+
+    {V1, V2.......},
+
+    { };
+
+
+    # Memory map of 2D array :-
+
+
+    However we assume a 2D array as a group of value organized row by row. But in
+    the memory the value are stored in a leaner fashioned one after another. For all
+    of the elements of first row are stored then the elements of second row and so
+    on. Each row has its own index and the column in their row has their own index:
+
+
+    | AR1C1 | A2R0 |
+
+    |---|---|
+
+    | | |
+
+
+    ![](img/a82bd3224fd572cdc958a29e758ad59a_25_0.png)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Referencing Element:-
+
+
+    Since the element of a 2D array are stored row by row. Therefore to refer an element
+    we need to specify both the offset of row from the base address and then from
+    the offset of column i.e. it needs two subscription first the row index and the
+    second column index.
+
+    ARow[column]=Val;
+
+
+    # Traversing 2D Array:-
+
+
+    A matrix can be traversed in two directions-
+
+    Row by row
+
+    Column by column
+
+    In any case it require two loops. The first loop moves through the direction and
+    the inner loop is used to specify each element in that different.
+
+
+    Format:
+
+    Row wise:
+
+
+    ```
+
+    For(row=0;row<n;row++)
+
+    for(column=0;column<n;column++)
+
+    {work with A[row][column];}}
+
+    ```
+
+
+    Column wise:
+
+
+    ```
+
+    For(column=0;column<n;column++)
+
+    {for(row=0;row<n;row++)
+
+    Do work with A[row][column]]}
+
+    ```
+
+
+    # String handling in ''C'':-
+
+
+    Every programming language provide some way to handle string. A string is anything
+    enclosed within a pair of double quotes. Some languages treat string as a primitive
+    data type, some handle it as an object but ''C'' handles the string in a different
+    way. In ''C'' a string is stored as an array of characters terminated with \ or
+    NULL. There is the big difference between array of character and string. An array
+    of character is handled by element but the string can be handled as a whole values
+    or by element.
+
+
+    Although a string is declared as an array of characters but when we input a value
+    using the %ss with scanf or the function gets, NULL character is automatically
+    inserted after the last character termination.
+
+
+    If we assign or array character but do not insert the NULL character by ourselves
+    it will simply be an array of character and will not be handled as a string by
+    ''C''. Being an array of character the string variables have some limitation as:-nThey
+    cannot be assigned with any other variables or constants after definition.
+
+
+    Two string cannot be concatenated using the ''+'' operator.
+
+    Two strings cannot be compared using relational operator.
+
+    But we don''t worry, because to manipulate the string there is a range of function
+    present in the library of ''C''. All these functions are prototyped in the header
+    file string.h .
+
+
+    ![](img/a82bd3224fd572cdc958a29e758ad59a_26_0.png)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Declaration of string :-
+
+
+    A variable is declared as a single dimensional character array.
+
+
+    # Format
+
+
+    Char variable name[size];
+
+    A variable declare in this way can accept numbers of character up to the size.
+    It will provide a full length of character, space for NULL is automatically accumulated.
+
+    Initialization or definition of string:
+
+    There are two way to define a string :-
+
+    Character by character method:
+
+
+    # Format
+
+
+    ```
+
+    Char variable name[size]={char1,char2........};
+
+    Char name[30]={-, -, -, -};
+
+    ```
+
+
+    # Shortcut method:
+
+
+    # Format:
+
+
+    ```
+
+    char variable name[size]="string";
+
+    ```
+
+
+    # Getting input for string variable :-
+
+
+    To accept value for a string variable we can use the %s format of scanf or the
+    function gets. The scanf terminates with white space therefore it is unable to
+    accept a multiword string. The gets(s) terminate with the enter key only so it
+    can accept space also but it is able to take input for a single variable at a
+    time.
+
+
+    # Format:
+
+
+    ```
+
+    scanf("%s", variable name);
+
+    gets(var);
+
+    ```
+
+
+    # Outputting string :-
+
+
+    To print the string on the monitor we can use both the printf %s and puts function.
+
+    The printf function is able to print more than one value but does not change the
+    cursor after printing, while the puts function can print only one value at a time
+    and place the cursor to the next line after print.
+
+
+    ```
+
+    printf("%s",variable name);
+
+    Puts(variable);
+
+    ```
+
+
+    # Library function to manipulate string :-
+
+
+    Following are some string manipulation functions we need to use frequently. To
+    use any of these functions we must include string.h header file.
+
+    strlen() :-
+
+
+    In many situation we need to know the length of a string variable or constant,
+    so that we can handle it from beginning to n or, from n to beginning. We can use
+    the strlen( ) and return the number of character present in the string including
+    space but excluding Null.
+
+
+    # Format:
+
+
+    ```
+
+    l=strlen(string);
+
+    ```'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# strcpy() :-
+
+
+    As we know a string variable cannot be assigned a value but often we need to give
+    a new value i.e. already present to a string variable. To fulfill this need there
+    is strcpy() it has two argument the first argument must be a string variable which
+    needs to has the new value. The second argument may be a string or constant i.e.
+    assign to the first argument.
+
+
+    strcpy(target string variable, source string variable or constant);
+
+
+    # strncpy() :-
+
+
+    It works as same as strcpy() with a title modification. It accept a third argument
+    also i.e. the number of character copied to be the source to the target. Format:
+    strncpy(target string variable, source string variable/constant ,number of character);
+
+
+    # strnmp() :-
+
+
+    This function takes two string arguments and compare them by character by character
+    subtracting the ASCII code of string from the ASCII code of first. The comparison
+    is continued till the subtraction is resulted as ''0'' or NULL value is not found.
+    It returns one of the following
+
+
+    +   - Zero means both are same
+
+    - Positive value means first string is greater
+
+    - Negative value means the second string is greater
+
+
+    strncmp(string1, string2);
+
+
+    # strnmp() :-
+
+
+    This function takes the string argument and compare them by character by subtracting
+    the ASCII code of string from the ASCII code of first. The comparison is continued
+    till the end by ignoring the cases of the character. strncmp() case sensitive.
+
+
+    strncmp(str1, str2);
+
+
+    # strcat() :-
+
+
+    It also works as strcpy but accept a third argument i.e. an integer value and
+    compare only the given number of character.
+
+
+    strcat(str1, str2, no of character);
+
+
+    # strcat() :-
+
+
+    As like strcpy it also takes target string and source string as its argument but
+    instead assigning the target string with source. It appends the source at the
+    end of target string.
+
+
+    strcat(targetstr,sourcestr);
+
+
+    # strcat() :-
+
+
+    It also works as the strcat but there is an additional argument i.e. the number
+    of character means only given number of character would be appended or concatenated
+    at the end of target string.
+
+
+    strcat(source string, target string, number of characters);'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# strchr() :-\n\nThis function helps us to search a character within a string.\
+    \ Its first argument is a string while the second one is a character. It checks\
+    \ the string for the character and return the address of its first appearance.\
+    \ If the character is not found it returns NULL.\n\n# strchr() :-\n\nIt also works\
+    \ as same as the strchr() but start scanning from right and return the address\
+    \ of its appearance found otherwise NULL.\n\n```\nstrchr(string, char);      ->\
+    \ left\nIf (strchr(string,char)!=NULL);\n    If(strchr(get,'I')==NULL)\n     \
+    \   puts(\"found\");\nelse\n```\n\n# strstr and Strstr() :-\n\nBoth of the functions\
+    \ work in the same way as strchr and strstr within a single difference i.e. its\
+    \ second argument is also a string they mean for a sequence of character within\
+    \ a string from left or right respectively.\nSyntax:-strstr(string, string)\n\n\
+    # strrev() :-\n\nIt is very useful function which takes a single string argument\
+    \ and reverse the character. Last character is placed at the first position and\
+    \ the first character is placed at the last position and so on.\n\n```\nstrrev(str1)\n\
+    ```\n\n# Array of string :-\n\nIn many situations we need to store a list of word\
+    \ or some lines of text. To fulfill this requirement we define an array of string.\
+    \ An array of string is actually a two dimensional character array in which row\
+    \ contain a certain number of characters and terminates with the NULL character,\
+    \ But since array of character can be handled as an overall value we don't require\
+    \ to work with each array of string.\nSyntax:- char str[row][column];\n\n# User\
+    \ Defined Function in 'C' :-\n\nBeing a structured language every C application\
+    \ is divided into one or more module. Each of the module is a collection of one\
+    \ or more functions. A function is a self contained set of instruction stored\
+    \ with an identifier to carry on a particular sub-task associated with the application.\
+    \ In a 'C' application every works is done by a function. The function in a 'C'\
+    \ application may be divided in two types:-\n\nThe library function and\nThe user\
+    \ define function\n\nThe library functions are those which are predefined, pre-compiled\
+    \ and stored as separate routines in a special directory of language directory\
+    \ hierarchy. For almost every common work\n\n> Provided by Anjna Chaudhary"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'there is the function in ''C'' library. But every programmer has a specific
+    work domain. Therefore it is not possible to have function in the library to fulfill
+    the requirement of all kinds of programmers. The ''C'' language allows the programmer
+    to develop a set of function according to their requirement.
+
+
+    The function defined by the programmer with a specific name and stored with the
+    source file of the application are called user define function. The UDF are stored
+    in context with the applicable program and there no linking process between the
+    main application and the UDF. Each ''C'' application must have at least one UDF
+    i.e. its manager function named as main.
+
+
+    Advantages of UDF- There are so many advantage of using define function. Dividing
+    the program in function increase the productivity of the programmer because the
+    UDF provide us usability. when we use UDFs our code become smaller than the monolithic
+    code.
+
+
+    It reduces both the storage requirement and compilation time. Since the code is
+    written one place and at many places. Therefore the number of errors also reduced
+    and debugging becomes easier. At the last maintenance time of the program is reduced.
+
+
+    Within an application dormant called by any other function. Functions are passive
+    entities they stay dormant until called by any other function. The functions are
+    present in an application in a relationship of caller and caller ,or as calling
+    and called function. Although functions in an application have similar status
+    anyone be the caller and anyone became. Even the manager function may also be
+    called by any other function. There is only one specialty with the manager function
+    that the execution is always started from main and its name is fixed as main the
+    main is called by kernel of O.S. The rest of the functions are called by main
+    at any level.
+
+
+    If there are UDFs other than main in a program then there will be three kinds
+    of syntax related with UDF
+
+
+    # Function prototyping or declaration -
+
+
+    It contains the function header followed by semicolon. The function header consist
+    of return type, function name followed by parenthesis that may contain a list
+    of arguments.
+
+
+    ```
+
+    Return type functions(function argument --------------- -);
+
+    void print();
+
+    long sums(int x y);
+
+    ```
+
+
+    # Function_definition:
+
+
+    Function definition is like function prototyping except that the closing parenthesis
+    of the function header is followed by a pair of curly braces, which makes the
+    body of function and distinguish one from another. The function prototyping could
+    within another function or in global space. But the function definition is always
+    present at the global place it would not be within any other function.
+
+
+    ```
+
+    Return type function (argument)
+
+    {------
+
+    ;
+
+    ------};
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Function calling or function invocation:-
+
+
+    The invocation syntax does not contain any data type. It just consist of their
+    function name, followed by the value within parenthesis semicolon passing the
+    value is optional. The invocation syntax always be present within the body of
+    another function.
+
+    Format:
+
+
+    function name (value to pass):
+
+
+    As we know the structured programming data is present at two levels:-
+
+    (a) As global data
+
+    (b) As local datanThe global data is available to all the functions while the
+    local data is shared between the caller and the callee passing and returning argument
+    or parameter. According to level of data sharing the function can be divided into
+    following categories.
+
+
+    # Function without argument without return:-
+
+
+    Such kind of functions neither accept a value from the caller nor return a value
+    to their caller.
+
+    Example- The library function lcrscr().
+
+
+    # Function with argument without return:-
+
+
+    Function of this categories may accept one or more values from their caller but
+    don''t return a value to their caller. e.g.-The library function puts() and putchar()
+
+
+    # Function with argument with return:-
+
+
+    When sending the control to the callee does not pass any value to the function
+    of this category, but they always return a value to their caller.
+
+    e.g.-The library function get(), getch() and getche().
+
+
+    # Function with argument with return:-
+
+
+    Most of the functions fall in this category. Such kind of function takes some
+    value from their caller process this value and return the processed value to their
+    callee. Library function-printf, scanf, isalfa, strlen are all example of their
+    category.
+
+    When the invocation syntax is encountered the execution of the callee is suspended
+    and the control of flow is to the place of callee along with the value if passed
+    and the address of location where to comeback. The instructions given in body
+    of the callee are executed and the control is returned back at the address in
+    the caller. The execution of the caller is resumed.
+
+
+    # Actual argument and formal argument:-
+
+
+    All the function have their separate memory place within the program memory block
+    to store their local variable. When a callee passes value to its callee i.e. called
+    as the actual argument. To receive the actual argument there are variables declared
+    in the function header. These variables are called as formal argument. The actual
+    argument is stored in the stack of caller while the formal argument is stored
+    in the stock of callee.
+
+
+    Provided by Anjia Chaudhary'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'The formal arguments are always a copy of their actual argument. Therefore
+    if there is a change in the value of formal argument i.e. not reflected in the
+    actual argument when the control is returned back. The stack of the function is
+    created when the control is passed to it. The formal argument is allocated in
+    this stack with the initial values as passed by actual argument. The stack of
+    the function is disposed when the control is returned back , therefore the formal
+    arguments are created and disposed many times during a single execution of the
+    program.
+
+
+    | HEAP | RUN |
+
+    | TIMEstack |
+
+    | PRIME AREA |
+
+
+    # Return Keyword:-
+
+
+    The return keyword is used within a function body to send the control back to
+    the caller. however from the closing braces of the function control automatically
+    return back to the caller but we need the return keyword to send the control back
+    before the closing braces in a particular situation . If the caller has to return
+    a value to its caller then it is given as the argument of the return. The return
+    can accept only one value. Within a function body the return can be appeared multiple
+    time.
+
+
+    # Storage class :-
+
+
+    This is another term related with a variable we declare , variables are stored
+    in a particular storage class. The storage classes describe four qualities about
+    the variable. These are-
+
+    Place of storage:- They tell the compiler where to store the variable either in
+    the RAM location or in the CPU register.
+
+
+    The default initial value:- It is storage class which specify what value will
+    be given by the compiler to the variable at the time of allocation either garbage
+    or zero.
+
+
+    Scope of variable:- The storage class define that either variable will be confined
+    to the function declaring it or It would be alive to all the function of a program.
+
+
+    Life or longevity of the variable:- How long the variable will be alive is also
+    specified by the full execution of the program or they may be alive to a single
+    call of the function.
+
+    There are four storage classes:-
+
+
+    +   (a) Auto storage
+
+    (b) Static storage
+
+    (c) Register storage
+
+    (d) Extern storage
+
+
+    Auto storage class:- The auto storage class specifies that the variable will be
+    stored in the RAM location that the initial value will be garbage if not defined.
+    Its scope is local and it will be alive in a single call of the function. It is
+    declared as
+
+
+    ```
+
+    auto data type variable;
+
+    int x;
+
+    ```
+
+
+    Provided by Anjana Chaudhary'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'Static storage class:- It is static because the value of static variable remain
+    stable during the complete execution of program , once they are created. That
+    means the static variable are stored in the prime area not in the stack of functions.
+    Therefore they do not allocated and disposed many times. The default initial value
+    is zero. Static variables are placed is RAM location and scope is local for the
+    static variable. It is declared with the keyword word. static data type var;
+
+
+    Register storage class:- It is as as the auto storage class except that it requests
+    that the variable be stored in CPU register. But it can request only. If the register
+    are not vacant. The variable are stored in the RAM location and converted into
+    auto.
+
+
+    Extern storage class:- Variable of this class are also called global because they
+    are available to all the function and their life is through of program. All variable
+    declared in the global space are included in this group. To keep a variable in
+    the extern class we do not need to declare them with extern keyword. There is
+    a single situation in which we need to declare them with extern keyword , when
+    a variable used within a function i.e define before its declaration then it is
+    treated as undefined within function. If we want to take the value from a variable
+    i.e defined anywhere in the program then we need to declare it within a function
+    with the extern keyword. The storage class is RAM class and default-initial value
+    is zero for the extern variable.
+
+
+    The selections of storage class depend upon the need of the value during the program
+    execution. When a variable has to change by most of the functions we use extern
+    storage class. If a function is called repeatedly and it is required that the
+    value of a variable remain stable than we use static class. To increase the possibility
+    of fastness of the program we declared register class otherwise we use Auto class
+    variable.
+
+
+    # Register type -
+
+
+    +   Memory buffer register
+
+    Memory address register
+
+    Instruction register
+
+    Program counter register
+
+    Accumulator register
+
+    Sequence register
+
+    Input/output register
+
+
+    # Recursion:-
+
+
+    Recursion is another tool to use that. Recursion to repeat a process function
+    calls itself directly or indirectly. Recursion is very useful to reduce the complexity
+    of the source code in some situation such as tree-traversal, searching, and sorting
+    algorithm. But it is the fact that recursion needs extra overheads. In both of
+    time and space therefore if possible we avoid recursion.
+
+
+    When performing recursion there is a chance to have bad recursion that means recursion
+    could be infinite. So we breaks the recursion. These conditions are called as
+    base criteria. In every repeat of the call we must do something that will make
+    the base criteria nearer, so that the recursion will be finished.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '```
+
+    Format()
+
+    void main()
+
+    {
+
+    puts("recursion going to be infinite");
+
+    main();
+
+    }
+
+    ```
+
+
+    # Pointer:-
+
+
+    Pointers are secondary type of constant that are actually address of memory location.
+    A pointer variable can hold the address of any memory location either allocated
+    for a constant, for another variable or , for a function. Once the addresses are
+    stored in the pointer variable then the memory location can be accessed by dereferencing
+    these pointers. Since these variables indicates another memory location called
+    as pointer. The use of pointer allows the ''C'' language is as middle level language.
+
+    Wait, this is why some people say that ''C'' language
+
+
+    +   Working with address through pointers gives many advantages of some of the
+    advantages=-
+
+    -If an application is consisting of so many variable and some of the functions
+    has to manipulate the value of a variable declared in the caller. However we can
+    have global variables but in this they will be available to all the function and
+    unauthorized function can change their values. However we gives the ability to
+    change values.
+
+    -Taking input through the pointer reduces the processing requirement.
+
+    -Since arrays are internally deal by the pointers if we deal directly by the pointers
+    then the execution speed can be increased.
+
+    -Strings are also array of characters handling string by using pointer gives so
+    many facilities. We can have a direct assignment and comparison of string if dealing
+    with pointers. pointers.
+
+    -By using pointers we can create an array of string in which all the elements
+    can have a different number of byte allocation.
+
+    -Pointers helps us to dynamically allocate memory and -deallocate them according
+    to our requirement.
+
+    -Ability to dynamically allocate memory permits us to create an auto size list.
+
+
+    Declaration and definition of pointer variable:
+
+    As like any other variable before the pointer variable must be declared. However
+    a pointer holds address of memory location and address are always unsigned long
+    integer but we declare a pointer in different types. This type difference is required
+    because though the pointers we manipulate a particular word length therefore the
+    compiler has to know how many bits will be manipulated when this pointer will
+    be dereference. The format is:
+
+
+    ```
+
+    Data type *Identifier;
+
+    int ptr;
+
+    char *cpt; doit *fp;
+
+    ```
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'As the memory allocated to any variable is assigned with a default initial
+    value. The memory allocated to a pointer is also assigned with a default initial
+    value i.e. garbage in the cases. Having a garbage value for a pointer is more
+    dangerous. It can make the pointer dangling (a dangling pointer that points memory
+    location i.e. still not allocated). On the other hand the pointer may be assigned
+    with the address of a memory location i.e. allocated to another pointer dereferencing
+    such pointer can corrupt the memory of that. Even the system can crashed therefore
+    the pointer must be defined. In the definition the pointer can be assigned with
+    zero; Null or address of a declared variable, therefore we can say that the right
+    way to declare a pointer
+
+
+    ```
+
+    data type *identifier=0; *ptr=0;
+
+    int,n; *ptr=n;
+
+    ```
+
+
+    There is a special type of pointer which can hold address of any kind i.e. the
+    void pointer cannot be difference until they are not cast.
+
+
+    # Accessing the address of value:-
+
+
+    The & (address of value) operator is used to access the address of a variable.
+    Pointer variable can be assigned with a variable prefixed with this operator to
+    get the address.
+
+    printf("%d",*ptr);
+
+    ptr=&var;
+
+
+    # Getting value of a variable through pointer:-
+
+
+    The *(difference or decrementing of address) Operator is used to access the value
+    of a variable address is stored in a pointer.
+
+    printf("%d",*ptr);
+
+    With the difference operator can be used in any type of arithmetical or logical
+    statement.
+
+
+    # Pointer arithmetic and logic:-
+
+
+    With the value of pointer itself we can perform two arithmetical operations-addition
+    and subtraction. Adding or subtracting n to the pointer actually add or subtract
+    n* word length of pointer type:
+
+    ptr=ptr+n;
+
+    *ptr=ptr+n*(data type);g
+
+
+    By incrementing and decrementing pointers we can move through the adjacent locations.
+    Pointer can be compared by using any relational operator with each other, with
+    a constant value or Null value.
+
+    Ex. If(ptr1==ptr2)
+
+    While (ptr<5)
+
+    If (ptr!=Null)
+
+
+    # Pointer and array:-
+
+
+    There is a relationship between pointers and array. When we declared an array,
+    the compiler itself also declares a constant pointer with the same name of the
+    array and the pointer is assigned with the address of the first element called
+    the base address. When we subscribe an index to an array to refer an element of
+    the array actually the specified index is multiple with the word length and the
+    result is added to the value of that constant pointer. We
+
+
+    Provided by Anjia Chaudhary'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "to this relationship we handle an array easily with a pointer. We can have\
+    \ a pointer assigned to the base address; then we use to traverse the array by\
+    \ increasing it.as-\n\n```\nint a[10], *ptr;\nptr=&a[0]; ptr=a;\nboth are same\n\
+    a[i] means\na+i*wl(a)\n```\n\n# Pointer and string:-\n\nSince string are also\
+    \ array of character. The same relationship exists in pointers and string also.\
+    \ This relationship allows us to handle the string in the different way. We can\
+    \ assign a character pointer with a constant string or another character pointer\
+    \ we can compare and we can create a variable length string array.\n\n# Pass by\
+    \ value and by address:-\n\nAs we know the caller passes parameters to the callee.\
+    \ The copy of actual argument is passed to the formal argument. Therefore the\
+    \ callee cannot change the value of actual argument. If it is required that the\
+    \ callee can change the value of the variable passed. Then the caller can send\
+    \ their address. It is called pass by address\n\nCall by address . if actual argument\
+    \ is an address then the callee must declare a pointer in it's header to receive\
+    \ that address. The default setting for passing argument is pass by value.\n\n\
+    ```\nvoid change(int &n)\n{\n  *n=7;\n}\nvoid main()\n{\n  int x;\n  scanf(\"\
+    %d\", &x);\n  printf(\"%x=%d\",x);\n  change(&x);\n  printf(\"%x=%d\",x);\n}\n\
+    ```\n\n# Passing array to function :-\n\nThe array are always passed by address.\
+    \ To pass an array to a function we pass just its name i.e. actually a constant\
+    \ pointer holding the base address. Along with the number of elements to be processed\
+    \ is passed. If we subscribe any value when passing the array to a function that\
+    \ particular element is passed, not the entire array.\n\nThe function can receive\
+    \ an array by subscription notation or by pointer notation. Using the pointer\
+    \ nation gives the facility to the function to be used for both array or a single\
+    \ value.\n\n```\nvoid input(int *a, int n)\n{\n  int c;\n  for(c=0;c<n;c++)\n\
+    \  scanf(\"%d\",a[c]);\n}\n```\n\nProvided by Anjna Chaudhary"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# Structure:-
+
+
+    In real world programming. We often need to work with records. As we know a record
+    is a collection of fields or attributes .Where the attributes describe a single
+    quality of an object. The value consisting a record may be of different type.
+    To work with record ''C'' allows us to use different types of values. Such a combination
+    is called structure. Structure is a template or blue print which represent a particular
+    type of record of real world entry. To work with such an entity first we need
+    to define the structure by collecting the fields representing the entity.
+
+
+    # Definition of structure :-
+
+
+    To define a structure keyword is used i.e. followed by the name of structure.
+    After that there the block of structure within which the member are declared.
+    The block is ended with semicolon. However we can use typedef statement before
+    the struct keyboard than the name be given in between closing braces or semicolon.
+
+
+    # Format :-
+
+
+    ```
+
+    Struct name
+
+    { datatype member
+
+    1;
+
+    2;
+
+    };
+
+    tntypef struct
+
+    { data type member
+
+    1;
+
+    2;
+
+    }name;
+
+    ```
+
+
+    # Declaring structure variable :-
+
+
+    Defining a structure does not permits us to work with a record. Because there
+    is no memory mapping for that. It is just a data type on which variables can be
+    declared. After declaring a variable the memory is mapped and then we can store
+    the member of the structure. The Structure variable can be declared in the following
+    ways.
+
+    If the typedef is not used the variables can be declared at the time of definition
+    of the structure by giving list of identifier before the semicolon.
+
+
+    ```
+
+    Format :struct name
+
+    data type number
+
+    { data type number 1;
+
+    { data type number 2;
+
+    =) var 1 , var 2 ...;
+
+    After the definition of the variable of the structured type can be declared as.
+
+    Format:
+
+    Struct name var 1, var 2, ....
+
+    If the typedef statement is used then we just give the name followed by the identifier
+    list
+
+    Format
+
+    Stud , sn ,sm;
+
+    ```
+
+
+    # Memory mapping for structure variable :-
+
+
+    The total number byte reserved for the structure variable is equal to the sum
+    of the word length of all its member. The word length for the members are occupied
+    in the sequence in declared within the block.
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Accessing the member of a structure:-
+
+
+    When we work with a structure variable, the value are written or read to form
+    there members. Therefore we need to refer the member indivually . To access the
+    member operator is used with the structure variable followed by the name of member.as-
+
+
+    Variable. member
+
+
+    Ex:-
+
+
+    ```
+
+    Sn.roll=101;
+
+    ```
+
+
+    # Structure and array:-
+
+
+    Since a structure is a collection of heterogeneous value. it can have a member
+    i.e. an array of any type. On the other hand structure are secondary data type
+    therefore we can declare an array of structure type variable In both case the
+    subscription operator is used at its appropriate place.
+
+
+    As for - array as member.
+
+
+    ```
+
+    Var.A[index]
+
+    ```
+
+
+    For array of structure
+
+
+    ```
+
+    Var[index]. Member.
+
+    ```
+
+
+    # Structure within structure or nested structure :-
+
+
+    Many time it may happen that a structure need to have a member i.e. also described
+    by more one value. In which situation the structure may declare a variable belonging
+    to another structure. The type representing the member may be defined at a global
+    place or within the block of owner structure.
+
+
+    When a structure is defined in the block of another structure it is called a nested
+
+
+    nested structure.
+
+
+    A variable of nested structure type can be declared only within the block of owner
+    structure. If a structure variable has a structure member , it''s members are
+    required to be accessed by using double() operators as -
+
+
+    ```
+
+    Var.member.member
+
+    ```
+
+
+    # Passing structure to function:-
+
+
+    Both a member of structure variable and variable itself can be passed to a function
+    as any other variables. This passing again be in two way that are pass by value
+    and pass by address (reference).
+
+
+    # Structure and pointers:-
+
+
+    As we can the address of a variable in a pointer the address of a structure type
+    variable can be stored in a pointer. To declare a structure pointer we use the
+    keyword struct. If typedef is not used the name of the type is only as
+
+
+    ```
+
+    struct name *pointer;
+
+    ```
+
+
+    ```
+
+    Struct *pointer ;
+
+    ```
+
+
+    If a structure is pointed by a pointer then to access the member through a pointer.
+    We use the one of the following way.
+
+
+    Using dot operator with difference :
+
+
+    ```
+
+    (*pointer). member
+
+    ```
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# Using arrow operator:-\n\nPointer -> member\n\nFor ex:-\n\n```\nStud sn,\
+    \ *sptr;\nSptr=&sn\n(*sptr).marks=78;\n```\n\nOr\n\n```\nSptr->78;\n```\n\n# Union:-\n\
+    \nIt is a space saving type just like structure. It is also used to represent\
+    \ a record. But the main difference between structure and union is that only one\
+    \ member of a union variable can be stored in the memory.\n\nMemorymapping of\
+    \ union variable:- The number of bytes required to store a union variable is equal\
+    \ to the word length of its largest member. At the same place the members are\
+    \ stored at different time. Which will be manipulated during the processing is\
+    \ decided dynamically. According to the type of member that is stored currently.\n\
+    \n# Definition or union datatype:-\n\nThe union is defined by using the keyword\
+    \ union in the same way as structure.\n\n```\nTypedef union\n{\n    Data type\
+    \ member;\n} name;\n```\n\n# Declaration of union variable:-\n\nunion name variable;\n\
+    \nMemory map for union variable. The memory byte mapped for a union variable will\
+    \ be equal to the size of its largest number.\nNote – rest are as same as the\
+    \ structure except that we need to manipulate the member by one.\n\n# File handling\
+    \ in ‘C:-\n\nFile is the smallest unit on the storage device provided by the operating\
+    \ system to store our data or program. Anything we want to keep for a long time\
+    \ is stored on the mass storage device in the form of file. Whenever we need the\
+    \ data stored in the file. It is opened in the main memory form where the processor\
+    \ can read it.\n\nWhen we execute a program creates data i.e. stored in the main\
+    \ memory. Since the main memory is volatile in the nature the data created by\
+    \ program is lost if we must have to write it in a file. On the other hand some\
+    \ program may need to write the data for future use we must have to input a large\
+    \ amount of data frequently at the time they are executed. In such situation entering\
+    \ data from the keyboard is very time taking and we want to store that data in\
+    \ a file, so that from there it\n\nProvided by Anjia Chaudhary"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'can be entered into the program memory area. To full - fill such requirement
+    programming provides some way to work with file, so that the ''C'' also. As any
+    other thing handling in ''C'' also rely on the function those are prototype in
+    the header file "stdio.h". In addition the function named FILE is also defined
+    in this header file, which describe the qualities of the file such as name, size,
+    read, write pointers EOF character c.
+
+
+    To work with the file first we need to open it and to keep track of its base address,
+    so that it can be accessed, therefore the work of file handling is started with
+    the declaration of a
+
+
+    FILE * pointer name;
+
+
+    Ex- FILE * fp;
+
+
+    # After then we do our work using the following function :-
+
+
+    fopen ();- This function is used to open a file, that means to load a file in
+    the main memory and then to return its base address FILE pointer. Some time it
+    may be unable to load a file then it returns a null pointers. A file can be opened
+    in different type of modes, therefore it accepts two string argument specifying
+    the name of file and mode type. following are the mode type speculator we can
+    pass any one to the fopen ( ):-
+
+
+    +   (A)\r" - It opens the specified file if existed in read only mode and sets
+    the read pointer at the first byte. It does not exist NULL
+
+
+    +   (B)\r+\ - as like "r" mode also allow to write in the file.
+
+
+    +   (C)\w" - it opens the specified file in writable mode that means it create
+    a new file to save our data. It sets the write pointer at the first byte. If the
+    specified already exist then it overwrites.
+
+
+    +   (D)\w+\ - as like the "w" mode but if the specified file already exists it
+    does not overwrite that allow to read from and modify it.
+
+
+    +   (E)\a+\ - it open the specified file in append mode then the write pointer
+    is set at the end of the file it does not exist , it creates a new file.
+
+
+    +   (F)\a" - as like the "a" mode but also allow to read from the file and to
+    modify the file.
+
+
+    Ex- fp = fopen ("text", "a+");
+
+
+    +   fclose ();- After completing the work the file should be closed so that the
+    occupied memory could be released and used for some other work. The closing of
+    file is done by passing the pointer holding the address of file to the fclose().
+
+
+    +   ftell ();- We can use this function to know that where the read /write pointer
+    is currently situated. Knowing this is very useful to do something randomly. It
+    returns the position in term of byte :- Ex - n = ftell (fp);
+
+
+    Provided by Anjna Chaudhary'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# > rewind ( ):--
+
+
+    This function is used to set back the read/write pointer at the first byte form
+    its current position.
+
+
+    # > fseek( ):--
+
+
+    This is very useful to random access the file for reading/writing. A variety of
+    parameters specified to pass the function so that the read/write pointer can be
+    placed at a particular byte . It can be used in the following forms:
+
+
+    +   fseek(ptr, n, 0) - To place the pointer at nth byte from current position.
+
+    fseek(ptr, n, 1) - To place the pointer at nth byte from current position.
+
+    fseek(ptr, n, 2) - To place the pointer at nth byte from the end of file.
+
+    fseek(fp, 01, 0) - to place at the beginning.
+
+    fseek(fp, 01, 2) - to place at the end.
+
+    fseek(fp, 01, 1) - to remain at current position.
+
+
+    # > Reading to and writing from a file:-
+
+
+    putc( ):- it can be used to write a character at current position in the specified
+    file. The syntax is
+
+
+    ```
+
+    putc(''char'', file printer)
+
+    putw( )- used to write an value to a file putw(int, fp);
+
+    puts( )- it can be used to write a string to a file -puts "string", fp);
+
+    fprintf( ): it can be used to write different kind of value to the file.
+
+    fprintf(fp, "specifier", var);
+
+    fprint(fp ("%s", var);
+
+    ```
+
+
+    getc( ): to read a character from a file as - vn = getc(fp);
+
+    getw( ): to read an int from a file as
+
+
+    ```
+
+    Var = getw(fp);
+
+    ```
+
+
+    fgets( ): it is homolog to gets but used to read a string from a file. It accepts
+    a string file pointer and the length of string to be read.
+
+    gets( string,length,filepointer );
+
+
+    Ex. gets( str, 20, fpn );
+
+    scanf( ):- is used to read different kind of values from a file.
+
+
+    ```
+
+    scansf( filepointer, " format specifier ", &var)
+
+    ansf( fp, "%f", &val );
+
+    ```
+
+
+    eof( ):- it returns a true if found the end of the file. Therefore can be used
+    as the loop condition when reading a file from start to end.'
+  merge: -1
+  pgno: 41
