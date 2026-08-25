@@ -1,0 +1,959 @@
+- img_proc: true
+  md: '# EURO Journal on Computational Optimization 11 (2023) 100066
+
+
+    Contents lists available at ScienceDirect
+
+
+    # EURO Journal on Computational Optimization
+
+    journal homepage: www.elsevier.com/locate/ejco
+
+
+    ![](img/ce617cbf3f63b50f5e5f3c3ddb99fec4_0_0.png)
+
+
+    ![](img/ce617cbf3f63b50f5e5f3c3ddb99fec4_0_1.png)
+
+
+    # Using multiple reference vectors and objective scaling in the Feasibility Pump
+
+
+    ![](img/ce617cbf3f63b50f5e5f3c3ddb99fec4_0_2.png)
+
+
+    Gioni Mei<sup>a</sup> Timo Berthold<sup>b,*</sup> Domenico Salvagnin<sup>c</sup>
+
+
+    +   *a Zuse Institute, Takstraße 7, 14195, Berlin, Germany
+
+    *b Fair Isac Deutschland GmbH, An der Weise 10, 60322, Frankfurt (Main), Germany
+
+    *c University of Padova, Via Gradenigo 6/B, 35131, Padova, Italy
+
+
+    # ARTICLE INFO ABSTRACT
+
+
+    Keywords:
+
+    Mixed-integer programming
+
+    Primal heuristics
+
+
+    The Feasibility Pump (FP) is one of the best-known primal heuristics for mixed-integer
+    programming (MIP): more than 15 papers suggested various modifications of all
+    its steps. So far, no variant considered information across multiple iterations,
+    but all maintained the principle to optimize towards a single reference point.
+    In this we evaluate the use of multiple reference vectors in all stages of the
+    FP algorithm. In particular, we use LP-feasible vectors obtained during the main
+    loop to tighten the variable domains before entering the computational core, a
+    procedure we refer to as mRENS. We consider multiple reference vectors to mrens
+    to explore further optimizing directions and introduce alternative objective scaling
+    terms to balance the contributions of the distance functions and the original
+    MIP objective.
+
+
+    Our computational experiments demonstrate that the new method can improve performance
+    on general MIP test sets. In detail, our modifications provide a 29.3% solution
+    improvement and 4.0% running improvement in an embedded setting, meeting 16.0%
+    fewer iterations over a large set of MIP instances. In addition, the method''s
+    success rate increases consistently within the first few iterations. We also observe
+    a moderate performance
+
+
+    > * Corresponding author.
+
+    E-mail: timoberthold@fico.com (T. Berthold).
+
+
+    https://doi.org/10.1016/j.ejco.2023.100066
+
+    2192-4400 © 2023 The Author(s). Published by Elsevier Ltd on behalf of Association
+    of European Operational Research Societies (EURO). This is an open access article
+    under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# G. Mexi et al. / EURO Journal on Computational Optimization 11 (2023) 100066
+
+
+    improvement, which makes our version of FP suitable for the
+
+    two main use-cases of the algorithm.
+
+
+    © 2023 The Author(s). Published by Elsevier Ltd on behalf
+
+    of Association of European Operational Research Societies
+
+    (EURO). This is an open access article under the CC
+
+    BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0).
+
+
+    # 1. Introduction
+
+
+    Mixed-integer programming is widely used for modeling and solving challenging
+    op-
+
+    tization problems that arise from real-world applications. We define a mixed-integer
+
+    program (MIP) in matrix and vector notation as follows:
+
+
+    **Definition 1.1.** (mixed-integer program) Let $m, n \in \mathbb{Z}_{\ge0}$.
+    Given some matrix $A \in \mathbb{Q}^{m\times n}$,
+
+    vectors $b \in \mathbb{Q}^{m}, c \in \mathbb{Q}^{n}, u \in \mathbb{Q}^{n} \cup
+    \{\pm\infty\}$, and a set of indices $I \in \mathbb{N} :=\{1,\dots,n\}$, a
+
+    problem in the form
+
+
+    ```
+
+    \begin{aligned} \min_{x\in X} & & c^T x \ \text{s.t.} & & Ax \le b \ & & l \le
+    x \le u \ & & x_j \in \mathbb{Z} \quad \text{for all } j\in I, \end{aligned} (1)
+
+    ```
+
+
+    is called a mixed integer program (MIP).
+
+
+    Finding a feasible solution to a given mixed integer programming (MIP) model is
+
+    very important, $NP$-complete problem that can be extremely hard in practice and
+    is
+
+    often approached via primal heuristics [1,2]. The most successful schemes
+
+    for finding initial feasible solutions for MIPs is the Feasibility Pump, originally
+    proposed
+
+    of Fischetti, Glover, and Lodi [3].
+
+
+    The fundamental idea of all FP algorithms is to construct two sequences of\points
+    that hopefully converge to a feasible solution to a given optimization problem;
+    in
+
+    a MIP. One sequence consists of points that are feasible for a continuous relaxation
+
+    (typically the LP relaxation), but possibly integer infeasible. The other sequence
+
+    of points that are integral but might violate some of the imposed (linear) constraints.
+
+    net next of each sequence is always generated by minimizing the distance to the
+
+    last point of the sequence, using different measures in either case (e.g.,
+
+    $\ell_{1}$ and the $\ell_{2}$ norm). For an overview of FP variants, we refer
+    to [4].
+
+
+    The outline of this paper is as follows. In Section 2 we describe the core idea
+    of
+
+    FP, concentrating on the Objective Feasibility Pump 2.0 (OFP2), which is the baseline
+
+    alg of our work. In Sections 3 and 4, we describe one of our two contri-
+
+    butions, namely variations of all three stages of the FP algorithm to consider
+    multiple'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "reference vectors in each Stage. Section 5 describes our second contribution,\
+    \ namely the application of an alternative objective scaling method, to better\
+    \ balance optimality and feasibility considerations. Finally, in Sections 6 and\
+    \ 7 we present computational results with a detailed comparison in both an embedded\
+    \ and a standalone setting.\n\n# 2. The Objective Feasibility Pump 2.0\n\nThe\
+    \ Feasibility Pump (FP) was originally introduced by Fischetti et al. [3]. In\
+    \ Algorithm 1, we outline the principle idea of FP. In the main loop (pumping\
+    \ loop) the algorithm constructs two sequences of vectors $\\{\tilde{x}^k\\}_{k=1}^K$\
+    \ and $\\{\\hat{x}^k\\}_{k=1}^K$ for a finite $K$. These sequences satisfy the\
+    \ feasibility requirements of the MIP in LP-feasible vectors, i.e., from More\
+    \ precisely, the first sequence contains\n\n$P = \\{x \\in \\mathbb{R}^n | Ax\
+    \ \\le b, l \\le x \\le u\\}$$\n\nand the second contains integer vectors, i.e.,\
+    \ vectors that satisfy the integrity constraints, but are not LP-feasible. The\
+    \ goal of FP is to iteratively reduce the distance between the vectors of the\
+    \ two sequences and converge to a feasible MIP solution. The distance between\
+    \ two vectors $\\tilde{x}^k$ and $\\hat{x}^k$ is defined as\n\n$\\Delta(\\tilde{x}^k,\
+    \ \\hat{x}^k) := \\sum_{j \\in I} |\\tilde{x}^k_j - \\hat{x}^k_j|$$\n\nIn every\
+    \ iteration $k$, the vector $\\tilde{x}^k$ is obtained in the rounding step (line\
+    \ 5), by rounding all values $\\tilde{x}^{k-1}_j \\notin \\mathbb{Z}$ with $j\
+    \ \\in I$ to integer values. The vector $\\tilde{x}^k$ is obtained in the projection\
+    \ step (line 8) by solving the optimization problem\n\n$$\\min(\\Delta(x, \\hat{x}^k)\
+    \ : x \\in P).$$\n\n$\\Delta(x, \\hat{x}^k)$ requires the addition of auxiliary\
+    \ variables and constraints for every $\\hat{x}^k_j, j \\in I$ with $l_j < \\\
+    hat{x}^k_j < u_j$. More specifically, $\\Delta(x, \\hat{x}^k)$ can be written\
+    \ as\n\n$$\\Delta(x, \\hat{x}^k) = \\sum_{j \\in I: \\hat{x}^k_j=l_j} (x_j - l_j)\
+    \ + \\sum_{j \\in I: \\hat{x}^k_j=u_j} (u_j - x_j) d_j$$\n\nwhere the auxiliary\
+    \ variables $d_j$ satisfies the constraints\n\n$d_j \\ge \\tilde{x}^k_j - x_j\
+    \ \\text{ and } d_j \\ge x_j - \\tilde{x}^k_j.$\n\nNote for binary MIPs, no auxiliary\
+    \ variables and constraints are required.\n\nOne major issue of FP is cycling.\
+    \ During the pumping loop, it can happen that the current integer vector $\\tilde{x}^k$\
+    \ is the same as a previous integer vector $\\tilde{x}^r$. If the cycle has length\
+    \ one, hence $r = k-1$, a \"slight\" perturbation is applied to $\\hat{x}^k$,\
+    \ which means that"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "4 G. Mexi et al. / EURO Journal on Computational Optimization 11 (2023) 100066\n\
+    \na small number of its integer components are chosen and their value is flipped.\
+    \ In the case of a cycle with a length greater than one, a “strong” perturbation,\
+    \ also known as a restart is applied. In general, frequent use of perturbations\
+    \ and restarts is considered not desirable, since they often counteract the progress\
+    \ on reducing the distance of the two sequences.\n\n```\n**Algorithm 1**: Feasibility\
+    \ Pump (core idea).\n**Input** : A MIP in the form (1), $k$\n**Initialization**\
+    \ : $\tilde{x}^0 \\leftarrow \\arg\\min\\{c^T x : x \\in P\\}$, $k \\leftarrow\
+    \ 0$\n**Output** : A feasible solution of the MIP or $\tilde{x}$ if no found\n\
+    **while** not (termination condition) do\n&nbsp;&nbsp;$k \\leftarrow k+1$\n&nbsp;&nbsp;++if**\
+    \ $\tilde{x}^{k-1}$ is integer then\n&nbsp;&nbsp;&nbsp;&nbsp;++return** $\tilde{x}^{k-1}$\n\
+    &nbsp;&nbsp;$tilde{x}^k \\leftarrow \\text{round}(\\tilde{x}^{k-1})$ // Rounding\
+    \ step *\n&nbsp;&nbsp;++if** cycle detected then\n&nbsp;&nbsp;&nbsp;&nbsp;$tilde{x}^k\
+    \ \\leftarrow \\text{perturb}(\\tilde{x}^k)$ // Perturbation step *\n&nbsp;&nbsp;$tilde{x}^k\
+    \ \\leftarrow \\arg\\min{\\Delta(x, \\tilde{x}^k) : x \\in P\\}$ // Projection\
+    \ step *\n**return** $\\emptyset$\n```\n\nThe computational experiments in [3]\
+    \ show that FP has a satisfactory success rate for finding feasible solutions\
+    \ for binary MIPs. However, for MIPs with both binary and integer variables, the\
+    \ success rate of FP is lower, and the algorithm is more likely to cycle.\n\n\
+    Bertacco et al. [5] proposed to split FP in three stages. In Stage 1, the integrality\
+    \ constraints on the general integer variables are relaxed before the execution\
+    \ of the pumping loop. Hence, Stage 1 searches for a “binary” feasible solution,\
+    \ i.e., an LP-feasible vector satisfying the integrality constraints on binary\
+    \ variables. Then, in Stage 2 the integrality constraints on general integers\
+    \ are restored and the pumping loop proceeds. The main idea of Stage 3 is to search\
+    \ for feasible solutions in the proximity of an “almost” feasible integer vector.\
+    \ Therefore, the original MIP is solved by replacing the objective function by\
+    \ the distance $\\Delta(x, \\tilde{x}^*)$, where $\\tilde{x}^*$ is the vector\
+    \ closest to the polyhedron P obtained in the previous stages.\n\nA major drawback\
+    \ of FP is that it considers the original objective of the MIP only in the initialization\
+    \ phase. Thus, the objective value of the final solution is of low quality. Achterberg\
+    \ and Berthold [6] proposed to replace the objective of the projection step by\
+    \ a convex combination of the distance to a single reference vector $\\tilde{x}^k$\
+    \ and term considering the original objective function of the MIP, i.e.,\n\n>\
+    \ $$\\Delta_k(x, \\tilde{x}^k) := (1 - \\alpha_k)\\Delta(x, \\tilde{x}^k) + \\\
+    frac{\\alpha_k ||c||_2}{||c||_2}c^T x$,\n\nwith $\\alpha_k \\in [0, 1]$. The idea\
+    \ of OFP is to dynamically adjust the influence of $\\Delta(x, \\tilde{x}^k)$\
+    \ and $c^T x$ in the projection step. In early iterations of the pumping loop,\
+    \ the projection"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "step prioritizes with good quality over feasibility, and gradually, the priority\
+    \ of feasibility over solution quality is increased. The aim of the Euclidean\
+    \ norms $\\|\\Delta\\|_2$ and $\\|c\\|_2$ is to bridge the terms $\\Delta(x, \t\
+    ilde{x}^k)$ and $c^T x$ on the same scale. While $\\|\\Delta\\|_2$ is the Euclidean\
+    \ norm of the objective function vector in $\\Delta(x, \tilde{x}^k)$ and is equal\
+    \ to $\\sqrt{|\\mathcal{I}|}$.\n\nOFP incorporates an adjustment in the restart\
+    \ mechanism. Revisiting integer vectors does not mean that the algorithm stops\
+    \ since the parameter $\\alpha_k$ is dynamically adjusted. Consequently, if the\
+    \ current integer vector $\tilde{x}^k$ is equal to $\bar{x}$ with $r \\in \\{1,\
+    \ \\dots, k-2\\}$, the authors propose to apply the restart procedure only if\
+    \ $\\alpha_l - \\alpha_k < \\delta$ with $\\delta \\in [0, 1]$ being a fixed threshold\
+    \ parameter.\n\nFischetti and Salvagnin [7] introduced the Feasibility Pump (FP2.0),\
+    \ which integrates techniques from constraint programming in the rounding step\
+    \ of FP. Note that OFP and FP2.0 can be combined. The resulting algorithm is called\
+    \ *Objective Feasibility Pump 2.0 (FP2)* and is considered the baseline algorithm\
+    \ for our implementation. See overview of Berthold et al. [4] for (many) further\
+    \ variants of FP.\n\n# ## 3. Multiple reference vectors in Stage 3\n\nWhen embedded\
+    \ in MIP solvers, primal heuristics are usually run only for a short amount of\
+    \ time. Therefore, the computationally demanding Stage 3 of FP is deactivated\
+    \ or only used under certain circumstances, e.g., the distance of the closest\
+    \ integer vector to the LP-polyhedron $P$ is below a certain threshold. Therefore,\
+    \ we design an alternative Stage 3 that uses multiple reference vectors obtained\
+    \ from FP and large neighborhood search heuristic RENS [8,9]. Notably, while the\
+    \ traditional Stage 3 solves an auxiliary MIP of the same dimensions as the original,\
+    \ our alternative approach will solve a sub-MIP, which can be significantly smaller\
+    \ and hence much faster to solve in practice.\n\n# ### 3.1. Multi-reference RENS\n\
+    \nThe principle idea of RENS is to search for solutions for a MIP in the proximity\
+    \ of the optimal solution of its LP relaxation $\bar{x}^0$. More specifically,\
+    \ RENS solves a sub-MIP of the original MIP with tighter bounds on the integer\
+    \ variables based on their value in $\bar{x}^0$. To that end, for each $j \\in\
+    \ Z$, if $\bar{x}^0$ is an integer, $x_j$ is fixed at that value. Otherwise, the\
+    \ bounds of $x_j$ are tightened to the nearest integer values of $\bar{x}^0$,\
+    \ $L_j$ is set to $[L_j^0]$, and $u_j$ to $[U_j^0]$. To summarize, RENS solves\
+    \ the sub-MIP\n\n```\n$\\min \\min x \\in \\mathbb{R}^n\\nAx \\leq b\\ns.t.\\\
+    nL_j \\leq x_j \\leq u_j \\ntext{for all } j \\notin \\mathcal{I}.\\n[L_j^0] \\\
+    leq x_j \\leq [U_j^0] \\ntext{for all } j \\in \\mathcal{I}.\\nx_j \\in \\mathbb{Z}\
+    \ \\ntext{for all } j \\in \\mathcal{I}$.\n```"
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "In practice, solving (3) may be computationally expensive if only a small percentage\
+    \ of integer variables are assigned tighter bounds. On the contrary, a considerable\
+    \ amount of cases, RENS tightens too many variable bounds, which leads to the\
+    \ infeasibility of (3) [8]. In the following, we propose to combine RENS with\
+    \ information obtained from Stages 1 and 2 of FP. By the loop, FP generates a\
+    \ sequence $\tilde{x}^0, \\dots, \tilde{x}^k$ of LP-feasible vectors which can\
+    \ be used as reference vectors for RENS. Let $\tilde{X}$ be a subset of $\\{\t\
+    ilde{x}^0, \\dots, \tilde{x}^k\\}$. We propose a modified version of RENS, in\
+    \ which the variable bounds are tightened based on the values they take from vectors\
+    \ in $\tilde{X}$. More precisely, we call multi-reference RENS (mRENS), in which\
+    \ for each $j \\in \\mathcal{I}$, we set $l_j$ to $[\\min_{x \\in \tilde{X}} x_j]$,\
+    \ and $u_j$ to $[\\max_{x \\in \tilde{X}} x_j]$. To summarize, mRENS solves the\
+    \ sub-MIP\n\n```\n$$\\begin{aligned} \\min_{x \\in \\mathbb{R}^n} & c^\top x \\\
+    \ \\text{s.t.} & Ax \\leq b \\ & l_j \\leq x_j \\leq u_j & \\text{for all } j\
+    \ \notin \\mathcal{I}. \\ & [\\min_{x \\in \tilde{X}} \tilde{x}_j] \\leq x_j \\\
+    leq [\\max_{x \\in \tilde{X}} \tilde{x}_j] & \\text{for all } j \\in \\mathcal{I}.\
+    \ \\ & x_j \\in Z & \\text{for all } j \\in \\mathcal{I}. \\end{aligned}$ (4)$\n\
+    ```\n\nNote that $\tilde{x}^0 \\in \tilde{X}$, then the RENS sub-MIP is itself\
+    \ a sub-MIP of the mRENS sub-MIP.\n\n# 4. Multiple reference vectors in Stages\
+    \ 1 and 2\n\nNext, we investigate how we can use multiple reference vectors in\
+    \ Stages 1 and 2. Already mentioned, the projection step objective concerns the\
+    \ distance to the integer vector $\tilde{x}^k$ obtained in the current iteration.\
+    \ From a geometric point of view, the distance function points towards a direction\
+    \ that is likely to violate the integrity constraints of the MIP. All its coefficients\
+    \ are in $\\{-1, 0, 1\\}$ depending on the values of $\tilde{x}^k$, which reduces\
+    \ the set of possible distance functions to $3^n$. We enlarge this set by considering\
+    \ a conic combination of multiple distance functions (w.r.t. multiple integer\
+    \ vectors in (2)). Using directions “in-between”, may also lead to feasible MIP\
+    \ solutions or other LP solutions from the projection step that can be easily\
+    \ rounded to such. Further, they might serve as a “tie-breaker” in dimensions\
+    \ where the current distance function would have a zero coefficient.\n\nLet $\\\
+    mathcal{L} = \\{1, \\dots, k\\}$ be the set of integer vectors obtained during\
+    \ the pumping loop. By $\\Delta(x, \tilde{X}, \\Lambda_{\\mathcal{L}})$, we denote\
+    \ a conic combination of the $L_1$-distances to the integer vectors $\tilde{x}^i,\
+    \ i \\in \\mathcal{L}$, more precisely,\n\n```\n$\\Delta(x, \tilde{X}, \\Lambda_{\\\
+    mathcal{L}}) := \\sum_{i \\in \\mathcal{L}} \\lambda_i \\Delta(x, \tilde{x}^i),$\
+    \ (5)$\n```"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# G. Mei et al. / EURO Journal on Computational Optimization 11 (2023) 100066\
+    \ 7\n\nwhere $\\Lambda_{\\mathcal{L}} := \\{\\lambda_1, \\dots, \\lambda_k\\}$,\
+    \ $\\lambda_i \\geq 0$ for all $i \\in \\mathcal{L}$, are the conic weights and\
+    \ $\tilde{X}_{\\mathcal{L}} := \\{\tilde{x}^1, \\dots, \tilde{x}^k\\}$.\n\nWe\
+    \ suggest using some variant of (5) as an objective in the projection step of\
+    \ FP. Hence, in the projection step, we have to solve the following LP\n\n```\n\
+    $\\min \\sum_{i \\in \\mathcal{L}: \\lambda_i > 0} \\lambda_i \\left( \\sum_{j\
+    \ \\in \\mathcal{I}: \\tilde{x}^j = l_j} (x_j - l_j) + \\sum_{j \\in \\mathcal{I}:\
+    \ \\tilde{x}^j = u_j} (u_j - x_j) \\right) - \\sum_{j \\in \\mathcal{L}: \\tilde{x}^j\
+    \ < u_j} d_j^2$$\n$$\\$\\text{s.t} \\quad x \\in P$$\n$$d_j^2 \\geq \\tilde{x}^j\
+    \ - x_j, \\quad i \\in \\mathcal{L}, j \\in \\mathcal{I}: \\lambda_i > 0, l_j\
+    \ < \\tilde{x}^j < u_j$$\n$$d_j^2 \\geq u_j - \\tilde{x}^j, \\quad i \\in \\mathcal{L},\
+    \ j \\in \\mathcal{I}: \\lambda_i > 0, \\tilde{x}^j < u_j$$\n$$d_j^2 \\in \\mathbb{R},\
+    \ \\quad i \\in \\mathcal{L}, j \\in \\mathcal{I}: \\lambda_i > 0, l_j < \\tilde{x}^j\
+    \ < u_j.\\quad (6)\n```\n\nIn (6) each term of the objective function $\\Delta(x,\
+    \ \tilde{X}_{\\mathcal{L}}, \\Lambda_{\\mathcal{L}})$ is linearized separately,\
+    \ as explained in Section 2. A combination with the OFP objective is straightforward.\
+    \ Thus, the objective function of (6) is replaced by\n\n```\n$\\Delta_{\\alpha}(x,\
+    \ \\tilde{X}_{\\mathcal{L}}, \\Lambda_{\\mathcal{L}}) := (1 - \\alpha_k) \\Delta(x,\
+    \ \\tilde{X}_{\\mathcal{L}}, \\Lambda_{\\mathcal{L}}) + \\frac{\\alpha_k ||\\\
+    Delta||_2}{||c||_2} c^T x.\\quad (7)\n```\n\nHere, $|\\cdot||_2$ is the Euclidean\
+    \ norm of the objective function of (6). Note that for the special case where\
+    \ $\\lambda_k = 1$ and $\\lambda_i = 0$ for all $i \\in \\mathcal{L}\\setminus\\\
+    {k\\}$ is equal to (2).\n\nAnother idea is to create a such aggregated reference\
+    \ vector $\\tilde{x}^{agg}$, e.g., by a combination of the vectors from previous\
+    \ iterations and replace the distance function in function (2) by $\\Delta(x,\
+    \ \\tilde{x}^{agg})$. Another natural thing to try is to compute a single reference\
+    \ vector as a combination of integers However, $\\tilde{x}^{agg}$ is not guaranteed\
+    \ to satisfy the integrity constraints, i.e., and will not be considered any.\n\
+    \nThe following theorem and corollary motivate why (5) is a reasonable choice\
+    \ to drive the LP towards integrality, and how weights should be chosen.\n\n**Theorem\
+    \ 4.1.** $\\mathcal{L} = \\{1,\\dots,k\\}$ be the set of indices of $k \\in \\\
+    mathbb{N}$ integer vectors $\\tilde{x}^1, \\dots, \\tilde{x}^k \\in \\mathbb{Z}^n$.\
+    \ Further, let $\\lambda_i \\geq 0$, for all $i \\in \\mathcal{L}$, and $\\Delta(x,\
+    \ \\tilde{X}_{\\mathcal{L}}, \\Lambda_{\\mathcal{L}})$ be defined as in (5). The\
+    \ set of minimizers of $\\Delta(x, \\tilde{X}_{\\mathcal{L}}, \\Lambda_{\\mathcal{L}})$\
+    \ over $\\mathbb{R}^n$ always contains an integer vector.\n\n**Proof.** See Appendix\
+    \ A. $\\square$\n\n**Remark 4.2.** Since $\\Delta(x, \\tilde{X}_{\\mathcal{L}},\
+    \ \\Lambda_{\\mathcal{L}})$ is convex, it follows that its set of minimizers $S$\
+    \ is also convex. Further, from Theorem 4.1 it follows that $S$ is the Cartesian\
+    \ product of"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "closed intervals with integer boundaries (which might consist of a single integer\
+    \ value, as an important special case).\n\n**Corollary 4.3.** Let $\\mathcal{L}=\\\
+    {1, \\dots, k\\}$ be the set of indices of $k \\in \\mathbb{N}$ integer vectors\
+    \ $\tilde{x}^1, \\dots, \tilde{x}^k \\in \\mathbb{Z}^n$. Further, $\\lambda_i\
+    \ \\ge 0$ for all $i \\in \\mathcal{L}$, and $\\Delta(x, X_{\\mathcal{L}}, \\\
+    Lambda_{\\mathcal{L}})$ be defined as (5). If for any two disjoint sets $U, V\
+    \ \\subseteq \\mathcal{L}$ with $U \\cup V=\\mathcal{L}$ it holds that\n\n```\n\
+    $$\\sum_{i \\in U} \\lambda_i \\neq \\sum_{i \\in V} \\lambda_i. (8)$\n```\n\n\
+    then the set of minimizers of $\\Delta(x, X_{\\mathcal{L}}, \\Lambda_{\\mathcal{L}})$\
+    \ over $\\mathbb{R}^n$ contains integer vectors.\n\nCorollary 4.3 introduces a\
+    \ condition on the weights $\\Lambda_{\\mathcal{L}}$, which ensures the integrality\
+    \ of the minimizers of (5). However, this does not imply that any set of weights\
+    \ fulfilling this condition is an appropriate choice for the projection step FP.\
+    \ For instance, if any iteration $k$ holds that $\\lambda_i = \\lambda_j = \\\
+    dots = \\lambda_{k-1} > \\lambda_k$, then (8) is obviously fulfilled. But as $k$\
+    \ gets larger, the distance function changes less and less, leading to stalling\
+    \ in the FP algorithm. Therefore, we suggest considering only a few integer vectors\
+    \ and $\\Lambda_{\\mathcal{L}}$ to achieve the above behavior. Based on the results\
+    \ of Melo [10] we consider three reference vectors in iteration $k$ with geometric\
+    \ properties (0.5, 0.25, 0.125). The first one is $\\tilde{x}$ and the remaining\
+    \ two are obtained integer vectors with the smallest sum of variation over all\
+    \ constraints.\n\nBy design, using multiple reference vectors in Stages 1 and\
+    \ 2 leads to smaller changes of the distance function in the projection step objective,\
+    \ which can be seen as taking smaller \"steps\" towards convergence at staying\
+    \ close to good feasible solutions. This is expected to come with a slightly increased\
+    \ number of iterations that are traded for better solution quality. Note that\
+    \ this might not necessarily be desired when running FP with strict iteration\
+    \ limits.\n\nConsidering information from previous iterations in the projection\
+    \ step may increase the probability of cycling, since the distance function in\
+    \ the objective may not change during the pumping loop. Therefore, it is essential\
+    \ to provide different ways to escape cycles, since an increased number of random\
+    \ perturbations, and especially restarts, may drastically reduce the success rate\
+    \ of FP [6]. For instance, if a cycle of length one is detected, i.e., $\\tilde{x}^k\
+    \ = \\tilde{x}^{k-1}$, normally a small number of integer components of $\\tilde{x}^k$\
+    \ set to a different integer value. One effective way of breaking this cycle is\
+    \ to reset the weights $\\Lambda_{\\mathcal{L}}$ and repeat the iteration $k-1$.\
+    \ Intuitively, since we reduce the value of $\\lambda_{k-1}$, i.e., reduce the\
+    \ contribution of $\\Delta(x, x^{k-1})$ in (5). In that case a cycle of length\
+    \ greater than one is detected, i.e., $\\tilde{x}^k = \\tilde{x}^l$ for some $l\
+    \ \\in \\{1, \\dots, k-2\\}$, the restart mechanism can be avoided in a similar\
+    \ way. For instance, if $l \\in \\mathcal{L}_{active}$, we decided to use the\
+    \ original projection step of FP for one iteration by setting $\\lambda_k = 1$,\
+    \ $\\lambda_i = 0, i \\in \\mathcal{L}\\setminus\\{k\\}$ to ignore all information\
+    \ from previous iterations. Lastly, if the cycle persists or a new cycle is detected,\
+    \ we apply the usual restart of FP."
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# 5. Alternative objective scaling\n\nAfter experimenting with the problem\
+    \ instance misc07, Pragnac et al. [11] observed that for this the fixed scaling\
+    \ terms $||\\Delta||_2$ and $||c||_2$ do not provide a balanced contribution of\
+    \ $\\Delta(x, \\tilde{x})$ and $c^\top x$ in (2). Therefore, they proposed to\
+    \ replace $||c||_2$ with $|c^\top \\tilde{x}|$, where $\\tilde{x}$ is the LP-feasible\
+    \ vector obtained in the projection step of the previous iteration. This modification\
+    \ resulted in a more balanced contribution of the two objective terms for this\
+    \ specific problem instance. However, no comparison over a large test set was\
+    \ presented.\n\nInspired by this idea, we propose to replace the scaling term\
+    \ $||\\Delta||_2$ by the dynamically changing term $|\\Delta(\\tilde{x}^{k-1},\
+    \ x)|$ in addition to the scaling suggested above. In the spirit of this work,\
+    \ one of of these modifications as considering information from previous iterations\
+    \ in the projection step.\n\nRecall that FP aims at minimizing the distance of\
+    \ the vectors $\\tilde{x}$ and $\\tilde{x}$, and reach convergence. Thus, it is\
+    \ expected that the components of $\\tilde{x}$ and $\\tilde{x}$ do not differ\
+    \ much from the corresponding components of $\\tilde{x}^{k-1}$ and $\\tilde{x}^{k-1}$.\
+    \ In, in the projection step we also observe that $\\Delta(x, \\tilde{x})$ and\
+    \ $c^\top x$ will acquire close values to $\\Delta(\\tilde{x}^{k-1}, \\tilde{x})$\
+    \ and $c^\top \\tilde{x}^{k-1}$, respectively. Therefore, the suggested scaling\
+    \ should provide a more balanced contribution of the two objective terms. To summarize,\
+    \ we proposed the modified projection step objective by\n\n```\n$$\\Delta_{\\\
+    alpha_k}(x,\\tilde{x}) := (1 -\\alpha_k)\\Delta(x,\\tilde{x}) + \\frac{|\\Delta(\\\
+    \tilde{x}^{k-1},\\tilde{x})|}{|c^\top \\tilde{x}^{k-1}|}c^\top x,$\n```\n\nwhere\
+    \ $\\alpha_k \\in [0,1]$. That a small value for $|\\Delta(\\\tilde{x}^{k-1},\\\
+    tilde{x})|$ might also be an indicator of convergence in subsequent iterations.\
+    \ Whenever $|\\Delta(\\\tilde{x}^{k-1},\\tilde{x})|$ decreases, the contribution\
+    \ of $c^\top x$ in the objective also decreases, which turns the priority of the\
+    \ projection step more towards feasibility and less towards solution quality.\
+    \ Therefore, dynamically adjusting the two scaling terms may also accelerate the\
+    \ feasible solution.\n\n# 6. Setup\n\nAs a baseline for our C++ implementation\
+    \ we use the FP code from [7], that incorporates the WALKSALT perturbation procedure\
+    \ described in Dey et al. [12].\n\nWe carefully examined the literature to decide\
+    \ which FP variants should include in our implementation. We also (re-)implemented\
+    \ some variants that did not end up in our final experiments, on the test set\
+    \ used, they would have deteriorated the baseline w.r.t. the measures we concentrated\
+    \ on.\n\nSome suggested amendments had a different scope, e.g., [13] or [14],\
+    \ which present an approach that can find better quality solutions than OFP2,\
+    \ however, at the cost of increased computational time, often by orders of magnitude.\
+    \ This is out of our scope"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'to achieve better solutions with comparable or faster performance w.r.t. OP2.
+    Other suggested improvements, e.g., [15], are based on older FP implementations,
+    and we found that they do not combine with OP2 or achieved almost identical performance,
+    e.g., [16,17].
+
+
+    In our implementation, FP communicates with LP/MIP solvers through an abstract
+    interface, which is implemented for two-of-the-art commercial solvers, namely,
+    the FICO Xpress Optimizer [18] and IBM LOG CPLEX [19]. In addition, we provide
+    a solver interface for the non-commercial SCIP [20] using SoPlex [21] for LPs.
+    The best of our knowledge, this is the first state-of-the-art OP2 implementation
+    that only uses open-source software. Our version of the code is freely available
+    and can be downloaded from https://github.com/GioniMex/feasump3.
+
+
+    Similar to [7] we compare variants of FP in an embedded and a standalone scenario.
+    In the first case, we evaluate FP as a primitive heuristic in a general-purpose
+    MIP solver. Typically, in this scenario, we set a limit of 20 iterations in Stages
+    1 and 2. In the second scenario, we evaluate the performance of each variant as
+    a standalone heuristic. Here the limit is 2000 iterations. A detailed description
+    of the parameter settings that we use for our standalone experiment can be found
+    in [5,6]. The chosen iteration limits align with those in earlier implementations,
+    we also tried different limits (e.g., 50 or 100 iterations in Stages 1 and 2)
+    and found that this does not change the performance by much.
+
+
+    In both scenarios, embedded and standalone, we evaluate the performance of mRENS
+    and Stage 3, we limit the number of MIP solvers to 500. With typical node limits
+    used for sub-MIP solvers in SCIP, see, e.g., [8,22,23], and is marked in difference
+    to previous implementations of FP heuristics which avoided a sub-MIP stage altogether
+    (when used in an embedded setting) or did not limit any resources by time (when
+    used in a standalone setting).
+
+
+    Our test sets of the official benchmark set MIPLIB 2017 [24] and all instances
+    used in [7] are not part of MIPLIB 2017. We excluded decomp2,ex9, and ex10, since
+    they were solved to optimality during,, and standalonecase9, since its LP relaxation
+    exceeded one hour of computation. In our total, main test set consists of 283
+    instances, for see our online supplement https://github.com/GioniMexi/online-supplement-feasump3.
+
+
+    All results were obtained on a cluster of Intel Xeon E-2690 @ 2.6 GHz machines
+    with 128 GB of RAM, using exclusive runs for each job. In all experiments, we
+    used the FICO Xpress Optimizer as LP and MIP solver. To mitigate the impact of
+    performance variability, each FP variant is used on the complete test set with
+    three different seeds. Therefore, we decided to average results over all three
+    seeds to compare FP variants. For details about performance variability in mixed-integer
+    programming, we refer to Lodi and Tramontani [25].'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# 7. Computational results\n\nFor our comparisons, we used the so-called geometric\
+    \ mean [26], with a shift of 1. All FP variants are extended over the whole set\
+    \ with the same random seeds. In our tables, we always report the number of instances\
+    \ for which an FP variant finds a solution with all, some, and none of the seeds.\
+    \ Further, we compute the primal gap (gap()), running time (time(s)), and number\
+    \ of iterations (iter) as the shifted mean over all instances solved by at least\
+    \ one of the FP variants that we compare. Here, the primal gap is a number between\
+    \ 0% and 100% defined as follows:\n\n**Definition 7.1.** Let $\\tilde{x}$ be a\
+    \ solution for a MIP, and $\\tilde{x}_{opt}$ an optimal (or best) solution for\
+    \ our MIP. We define the primal gap $\\gamma \\in [0, 1]$ w.r.t. $\\tilde{x}$\
+    \ as:\n\n```\n$$\\gamma_{\tilde{x}}(\tilde{x}) := \\begin{cases} 0, & \\text{if\
+    \ } |c^T\\tilde{x}_{opt}| = |c^T\\tilde{x}| = 0, \\ 1, & \\text{if } c^T\\tilde{x}_{opt}\
+    \ \\cdot c^T\\tilde{x} < 0, \\\\frac{|c^T\\tilde{x}_{opt} - c^T\\tilde{x}|}{\\\
+    max\\{|c^T\\tilde{x}_{opt}|, |c^T\\tilde{x}|}}, & \\text{otherwise.} \\end{cases}$\n\
+    ```\n\nIn all tables, we highlight values in blue and bold that are at least 10%\
+    \ better than the values obtained by the reference runs, which are the first row\
+    \ of each table. Values that are at least 10% worse than the reference are highlighted\
+    \ in red and italics. Over all 89 instance-seed combinations, we count the number\
+    \ of wins, i.e., the number of instances of an FP variant provides at least a\
+    \ 10% improvement, for the primal gap, running time, and the number of iterations.\
+    \ As before, if the number of wins exceeds the number of losses by more than 10%,\
+    \ the number of wins is highlighted in blue and bold. If it is the other way around,\
+    \ the number of losses is highlighted in red and italics.\n\nIn Sections 7.1 to\
+    \ 7.3 we examine the performance of different FP variants in an embedded setting\
+    \ and in Section 7.4 in a standalone setting. For the complete results, we refer\
+    \ to our online supplement https://github.com/GioniMexi/online-supplement-feaspump3.\
+    \ Note that for all variants, we use OPF2 as a baseline and hence FP in setting\
+    \ abbreviations will always mean a variant of OFP2 was used. We present our results\
+    \ in the order of the paper outline.\n\n# 7.1. Applying mRENS\n\nFirst, we illustrate\
+    \ the benefits of using (m)RENS before Stage 3. To this end, we compare FP with\
+    \ active Stage 3 (FP-s3) to the variant which applies RENS or mRENS, called FP-(RENS,s3)\
+    \ and FP-(mRENS,s3), respectively. In this setting, if (m)RE finds a feasible\
+    \ solution, we terminate. Otherwise, we use the original Stage 3 for the remaining\
+    \ available time. Our experiment is conducted over the 153 instances (out of 283)\
+    \ where FP fails to find a feasible solution within the limit of 20 iterations."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'G. Mexi et al.. EURO Journal on Computational Optimization 11 (2023) 100066
+
+
+    Table 1
+
+    Comparison of RENS and mRENS before Stage 3 after the 153 instances for which
+    no feasible solution is found in Stage 1 and 2 after 20 iterations. Geometric
+    means are highlighted blue-blue if they indicate a 10% improvement or red-italic
+    if they indicate a 10% deterioration. The numbers in parentheses in the last column
+    show the time spent in (m)RENS and RENS.
+
+
+    | solved(#seeds) | all | some | none | #wins/#losses vs FP gap (%) time (s) |
+    gap (%) time (s) |
+
+    |---|---|---|---|---|---|---||
+
+    | FP-(s3) | 127 | 16 | 10 | | 35.88 | 5.54(1.80) |
+
+    | FP-(RENS,s3) | 129 | 14 | 0 | 145/21 57/86 | 22.58 | 5.71(2.00) |
+
+    | FP-(mRENS,s3) | 131 | 13 | 9 | 198/25 23/63 | 20.78(1.83) |
+
+
+    The results in Table 1 show that both new variants find feasible solutions for
+    slightly more instances than FP-(s3). In addition, FP-(mRENS,s3) significantly
+    outperforms FP-(s3) w.r.t. solution quality. More precisely, it is a 41.8% gap
+    decrease over instances solved by at least one FP variant, with a slight increase
+    of computational time in many cases two sub-MIPs are solved. The geometric mean
+    of the time spent in the sub-MIP stages of FP is shown in the parentheses in the
+    last column of the table. In particular, RENS and mRENS are able to find a solution
+    with all three seeds for 42% and 54% of the instances and hence Stage 3. Both
+    RENS and mRENS are significantly faster than the original Stage 3. Namely, in
+    terms of geometric means RENS requires 0.24 seconds, and mRENS 0.67 seconds.
+
+
+    As already mentioned, many implementations of FP in MIP solvers solve the demanding
+    Stage 3. We suggest that mRENS is a good alternative for Stage 3 in embedded implementations
+    of FP, as it require 62.8% less computational time. However, similar to the RENS
+    heuristic, there is no guarantee that the defined sub-MIP is going to be feasible.
+    Fortunately, in many cases-of-the-art MIP solvers are able to detect infeasibility
+    in a short amount of time, which “fail fast” design concept primal heuristics
+    [1]. It is worth pointing out that the time spent in the sub-MIP heuristics (s3)(RENS,s3)/(mRENS,s3)
+    was less than the time spent in Stages 1 and 2 over all three cases, supporting
+    the claim that we can afford Stage 3, with appropriate limits, even in the embedded
+    setting.
+
+
+    # 7.2. Applying the new scaling
+
+
+    Next, we compare FP with configurations that use the alternative scaling terms
+    introduced in Section 5. Here, we deactivate Stage 3 to better compare the gains
+    in Stage 1 and Table 2 summarizes the results of three runs: (1) FP, (2) FP using
+    the alternative scaling for $||c||_2$ (FP-($c$)), and (3) FP using the alternative
+    scaling for both $||c||_2$ and $||\Delta||_2$ (FP-($\Delta$)).
+
+
+    Both FP-(c) and FP-($\Delta$) lead to a significant performance improvement. Especially
+    FP-($\Delta$) to a 33.6% gap decrease over instances solved by at least one FP
+    variant and requires 15.8% fewer iterations than FP to find a feasible solution.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Comparison of FP and variants that use the alternative objective scaling in
+    an embedded setting. Geometric means are highlighted blue-bold if they indicate
+    a 10% improvement.
+
+
+    | | solved (#seeds) | | | #wins/#losses vs FP | | | geom. mean | |
+
+    |---|---|---|---|---|---|---|---||
+
+    | configuration | all | none | gap (%) | time (s) | iter | gap (%) | time (s)
+    | iter |
+
+    | FP | 99 | 31 | 153 | | | | 29.16 | 3.0 | 11.0 |
+
+    | FP-($\Delta$) | 104 | 36 | 143 | 110/91 | 211/144 | 123/85 | 24.31 | 3.02 |
+    10.67 |
+
+    | FP-($\Delta$,$\Delta$) | 132 | 30 | 121 | 174/81 | 268/143 | 222/72 | 19.37
+    | 2.89 | 9.26 |
+
+
+    | | solved (#seeds) | | #wins/#losses vs FP | | geom. mean | |
+
+    |---|---|---|---|---|---|---|---||
+
+    | configuration | all | none | gap (%) | time (s) | iter | gap (%) | time (s)
+    | iter |
+
+    | FP-($s3$) | 256 | 17 | 10 | | | | 25.56 | 4.26 | 11.0 |
+
+    | FP-($\Delta$,$\Delta$)-($mREENS,$s3$) | 259 | 11 | 13 | 327/133 | 340/194 |
+    222/72 | 18.06 | 4.09 | 9.24 |
+
+
+    A more impressive result is that FP-($\Delta$) is able to find a feasible solution
+    for 33.3% more instances than FP in less than 20 iterations. Our results suggest
+    that replacing FP with FP-($\Delta$) in MIP solvers could be beneficial, for solvers
+    that use FP only for a few iterations.
+
+
+    # 7.3. Final embedded setting
+
+
+    In the embedded setting with mREENS and the alternative objective scaling provide
+    a significant performance improvement, we incorporate both in FP and make a final
+    comparison. We observe in an offline experiment that multiple reference vectors
+    are not beneficial in this scenario. As we will see in the following subsection,
+    multiple reference vectors tend to increase the iteration count, which is inferior
+    in a setup with a strict iteration limit.
+
+
+    In Table 3 we compare FP-($s3$) with the combination of FP-($\Delta$,$\Delta$)
+    and FP-($mREENS,$s3$). Here FP-($\Delta$,$\Delta$)-($mREENS,$s3$) undoubtedly
+    outperforms FP-($s3$). It provides a 29.3% gap decrease over instances solved
+    by at least one of the algorithms, and a 4.0% decrease in running time requires
+    16.0 fewer iterations.
+
+
+    # 7.4. Standalone results
+
+
+    As has been shown in the thesis of Mexi [10], the new scaling and the use of multiple
+    reference vectors in Stages 1 and 2 enhance the performance of a standalone FP
+    implementation in a complementary way. In particular, the new scaling mostly lead
+    to an improvement in running time and iterations, whereas using multiple reference
+    vectors in the projection step improves the solution quality. Based on this, it
+    seems natural to compare combinations of different FP variants in a standalone
+    setting.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Table 4
+
+    Comparison of FP to standalone variants. Geometric means are highlighted blue-bold
+    if they indicate a 10% improvement or red-italic if they indicate a deterioration.
+
+
+    | | solved(#seeds) all some none | #wins/#losses vs FP gap time iter | geom. mean
+    gap time iter |
+
+    |---|---|---|---|---|---|---|---||
+
+    | FP-(s3) | 266 | 9 | | | | | 21.27 | 6.41 | 28.93 |
+
+    | FP-(c,Δ)-(s3) | 266 | 13 | 177/211 | 318/185 | 325/177 | 21.93 | 6.15 | 22.88
+    |
+
+    | FP-(mrv)-(c,Δ)-(s3) | 266 | 10 | 205/132 | 147/270 | 118/307 | 21.92 | 6.95
+    | 35.02 |
+
+    | FP-(mrv)-(c,Δ)-(s3) | 266 | 11 | 213/204 | 309/254 | 294/247 | 21.28 | 6.32
+    | 26.34 |
+
+    | FP-(c,Δ)-(mRENS,s3) | 267 | 9 | | 210/192 | 301/210 | 325/317 | 20.11 | 6.22
+    | 22.88 |
+
+    | FP-(mrv)-(mRENS,s3) | 266 | 10 | | 232/123 | 131/276 | 118/307 | 18.98 | 7.0
+    | 35.02 |
+
+    | FP-(c,Δ)-(mRENS,s3) | 268 | 4 | | 223/202 | 278/231 | 294/247 | 20.94 | 6.19
+    | 26.34 |
+
+
+    In the first part of Table 4 we compare FP to FP-(c,Δ)-(mrv)-(s3) which uses three-ner
+    integer reference vectors in the projection step, and FP-(mrv)-(c,Δ)-(s3) which
+    uses both the alternative scaling and multiple reference vectors. Here, even FP-(c,Δ)-(s3)
+    is faster and requires significantly fewer iterations than FP, the solution quality
+    is slightly worse, the gap 3.1% worse than the gap obtained by FP. On the other
+    hand, using multiple integer reference vectors (FP-(mrv)-(c,Δ)) leads to a 5.4%
+    gap improvement by worsening of the running time and iterations. Combining both
+    approaches (FP-(mrv)-(c,Δ)-(s3)) we detain more wins w.r.t. the gap, and a decrease
+    in the total number of iterations. By enhancing the previous versions of FP by
+    mRENS the gap improves FP-(mRENS,s3) where the gap improves up to 10.8%.
+
+
+    To conclude, our results indicate that in the standalone case using the new scaling,
+    three integer reference vectors in Stage 1 and 2, and applying mRENS before Stage
+    3, lead to both solution quality and running improvement.
+
+
+    # 8. Conclusion
+
+
+    In this paper, we have presented a new version of the Objective Feasibility Program
+    heuristic that works in all stages of the algorithm. In particular, we introduced
+    a modified version of RENS, which can mRENS that uses LP-feasible reference vectors
+    obtained in the main loop of FP to tighten the bounds before the computationally
+    expensive Stage 3. We extended the idea to Stage 1 and 2. This is achieved by
+    using a conic combination of distance functions in the projection step objective.
+    Moreover, we introduced alternative objective scaling to balance the contributions
+    of the distance functions and the original MIP objective $c^Tx$. In addition,
+    we provide a solver interface for the non-commercial solver SCIP via Soplex [21]
+    for solving LPs. To the best of our knowledge, this is the first state-of-the-art
+    FP implementation that only uses open'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'source software. Our final version of the code is freely available and can
+    be downloaded from https://github.com/GoniMexi/feasump3.
+
+
+    Our computational experiments demonstrate that the new method can improve the
+    performance on general MIP test sets. In detail, our modifications provide in
+    an embedded setting 29.3% solution quality improvement and 4.0% running time improvement,
+    needing 16.0% fewer iterations over a large set of MIP instances. In addition,
+    the success rate of the method within the first few iterations increases considerably.
+    In a standalone setting, we observed also a moderate performance improvement for
+    the gap, running time, and iterations.
+
+
+    # Declaration of competing interests
+
+
+    The authors declare that they have no competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Appendix A. Proof of Theorem 4.1
+
+
+    Proof. If $\lambda_i=0$ for all $i \in \mathcal{L}$, the claim clearly holds.
+    Assume there exists an $i \in \mathcal{L}$ $\lambda_i>0$. The distance function
+    $\Delta(x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}})$ can be rewritten as
+
+
+    ```
+
+    $$\Delta(x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}}) = \sum_{i \in \mathcal{L}}
+    \lambda_i \Delta(x, \tilde{x}^i)\n=\sum_{i \in \mathcal{L}} \lambda_i ||x - \tilde{x}^i||_1\n=\sum_{i
+    \in \mathcal{L}} \sum_{j \in J} \lambda_i |x_j - \tilde{x}_j^i|
+
+    =\sum_{j \in J} \sum_{i \in \mathcal{L}} \lambda_i |x_j - \tilde{x}_j^i| \n= f_j(x_j)$
+
+    ```
+
+
+    Thus, $\Delta(x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}})$ is the sum of
+    $|\mathcal{J}|$ terms $f_j(x_j)$, where each term depends only on the variable
+    $x_j$. Here, the set of minimizers
+
+
+    ```
+
+    $S := \arg min (x, \tilde{X}_{\mathcal{L}}, \Lambda_{\mathcal{L}}) \n x \in \mathbb{R}^n$
+
+    ```
+
+
+    is the Cartesian product over the $|\mathcal{J}|$ sets
+
+
+    ```
+
+    $\arg min f_j(x_j), j \in \mathcal{J}. \n x_j \in \mathbb{R}$
+
+    ```
+
+
+    Note that $f_j(x_j) > f_j(\min_{i \in \mathcal{L}} \tilde{x}_j^i)$ for all $x_j
+    < \tilde{x}_j^i$, and $f_j(x_j) > f_j(\max_{i \in \mathcal{L}} \tilde{x}_j^i)$
+    for all $x_j > \max_{i \in \mathcal{L}} \tilde{x}_j^i$. Therefore, $f_j$ attains
+    its minimum in $[min_{i \in \mathcal{L}} \tilde{x}_j^i, \max_{i \in \mathcal{L}}
+    \tilde{x}_j^i]$.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "Now, assume there was a non-integer minimizer $x^* \\in \\mathbb{R}^n$ of $S$.\
+    \ Then, there exists $r \\in \\mathcal{J}$, such that $x_r^* \notin \\mathbb{Z}$.\
+    \ Since $x_r^*$ is a minimizer of $f_r$, it holds that\n\n> $f_r(x_r^*) \\leq\
+    \ f_r(x_r) \\quad \\text{for all } x_r \\in \\mathbb{R}. \\quad (*)$\n\nConsider\
+    \ the sets $L_r, U_r \\subseteq \\mathcal{L}$ defined as\n\n$L_r := \\{i \\in\
+    \ \\mathcal{L} : \\tilde{x}_i^* < x_i^*, i \\in \\mathcal{J}\\},$\n\nand\n\n$U_r\
+    \ := \\{i \\in \\mathcal{L} : \\tilde{x}_i^* > x_i^*, i \\in \\mathcal{J}\\}.$\n\
+    \nSince $x_r^* \\notin \\mathbb{Z}$, it holds that $L_r \\cup U_r = \\mathcal{L}$.\
+    \ Then,\n\n> $f_r(x_r^*) = \\sum_{i \\in \\mathcal{L}} \\lambda_i |x_r^* - \\\
+    tilde{x}_i^*| \\n = \\sum_{i \\in L_r} \\lambda_i |x_r^* - \\tilde{x}_i^*| + \\\
+    sum_{i \\in U_r} \\lambda_i |x_r^* - \\tilde{x}_i^*| \\n = \\sum_{i \\in L_r}\
+    \ \\lambda_i (x_r^* - \\tilde{x}_i^*) + \\sum_{i \\in U_r} \\lambda_i (\\tilde{x}_i^*\
+    \ - x_r^*) \\n = (\\left( \\sum_{i \\in L_r} \\lambda_i - \\sum_{i \\in U_r} \\\
+    lambda_i \\right) =:\\Delta L_r) x_r^* + \\sum_{i \\in L_r} \\lambda_i \\tilde{x}_i^*\
+    \ - \\sum_{i \\in U_r} \\lambda_i \\tilde{x}_i^* =::\\tau_r$\n\nFrom the choice\
+    \ of $L_r$ and $U_r$, it follows that for all $x_r \\in [[x_r^*], [ [x_r^*]]$,\n\
+    \n> $f_r(x_r) = \\Delta L_r x_r + \\tau_r.$\n\nWe distinguish the following cases:\n\
+    \n+   - $\\Delta L_r < 0$: If $x_r^* > 0$\n\nwhich shows that $\\Delta L_r = 0$,\
+    \ and $[x_r^*]$ are minimizers of $f_r$. Therefore, for any $j \\in \\mathcal{J}$\
+    \ there exists an integer minimizer of $f_j$, which shows the existence of an\
+    \ integer vector in $S$."
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'G. Mexi et al. / Journal of Computational Optimization 2023 (11) 100666
+
+
+    # # References
+
+
+    +   [1] Berthold, Heuristic algorithms in global mixed MINLP solvers, Ph.D. thesis,
+    Technische Universität Berlin, 2014, http://www.zibd.de/Berthold2014.pdf.
+
+
+    +   [2] Berthold, Heuristics for mixed integer programs, Masters'' thesis, Technische
+    Universität Berlin, 2006, http://nb-resolving.de/urn:nbe:0297-zib-1029.
+
+
+    +   [3] M. Fischetti, F. Avo, L. Aoldi, The feasibility pump, Math. Program. 104
+    (2005) 91–104, https://doi.org/10.1007/s00140-074-3
+
+
+    +   [4] T. Berthold, A. Aoldi, D. Lucardi, Ten years of feasibility pump, and
+    counting, EURO J. Comput. Opt. 7 (2019) 1-https://doi.org/10.1007/s10675-018-0109-7.
+
+
+    +   [5] L. Bertaco, M. Fischetti, L. Aoldi, A feasibility pump heuristic for global
+    mixed-integer problems, Discrete Opt. 4 (2006) 63–76, https://doi.org/10.1016/j.dopt.2006.10.001.
+
+
+    +   [6] T. Achterberg, T. Berthold, Improving the feasibility pump, Discrete Opt.
+    4 (2007) 77–86, https://doi.org/10.1016/j.dopt.2006.10.004.
+
+
+    +   [7] M. Fischetti, D. Salvagini, Feasibility pump, Math. Program. 6 (2009)
+    201–222, https://doi.org/10.1007/s00642-008-0053-3
+
+
+    +   [8] T. Berthold, R. Enns, Mixed Integer Programming Comp. 6 (2013) 33–54,
+    https://doi.org/10.1007/s22532-013-0060-9.
+
+
+    +   [9] T. Berthold – Reinforcement Enhanced Search, ZIB-Report 27, Institute
+    Berlin, 2007,http://nb-resolving.de/urn:nbe:0297-zib-4264.
+
+
+    +   [10] G. Mexi, New ideas for Feasibility Pump Using Multiple Reference Vectors,
+    Masters'' thesis, Technische Universität Berlin, 2021, http://nb-resolving.de/urn:nbe:0297-zib-8374.
+
+
+    +   [11] N. Pradimac, A. Hammer, H. G. Katzberger, A feasibility pump algorithm
+    embedded in an annealing framework, https://doi.org/10.48550/acm.2006.096634
+
+
+    +   [12] S.S. Day, A. Erome, M. Molinaro, D. Salvagini, The randomization strategy
+    in feasibility pump, SIAM J. Opt. 28 (2018) 355–378, https://doi.org/10.1137/16099562
+
+
+    +   [13] N.L. Boland, A. Achterberg, F. England, A. Touskaas, A new approach to
+    the feasibility pump in mixed integer programming, SIAM OPT. 22 (2012) 831–861,
+    https://doi.org/10.1137/11082556
+
+
+    +   [14] N.L. Boland, A. Achterberg, F. England, M. Fischetti, M.W. Savelsbergh,
+    A. Touskaas, The feasibility pump, Math. Program. Comput. 6 (2015) 242–255, https://doi.org/10.1007/s12532-014-0068-x
+
+
+    +   [15] D. Balseiro, J. Castro, The analysis centrality in the feasibility pump,
+    Euro Res. Lett. 39 (2011) 299–310, https://doi.org/10.1016/j.elor.2011.07.005.
+
+
+    +   [16] M. De Santi, S. Lucidi, F. Rinaldi, Feasibility pump-like heuristics
+    for mixed integer problems, Discrete Appl. Math. 15 (2014) 152–167, https://doi.org/10.1016/j.dam.2013.06.018.
+
+
+    +   [17] M. De Santi, S. Lucidi, SIAM J. Opt. 23 (2013) 1755–1766, https://doi.org/10.1137/11085531
+
+
+    +   [18] IBM, ILOG, CPLEX v12.0 reference manual, http://www.ibm.com/support/knowledgecenter/SSSA_A55P-100/en/KO_kt_home.htm,
+    2020.
+
+
+    +   [20] K. Bestusta, A. Messaghehem, W-K. Chen, A. Chmiela, D. Touskaas, J. van
+    Doornweg, L. Eiter, O. Guth, G. Gleixner, A. Gammarth, C. Grabarczyk, K. Halberg,
+    A. Cohn, H. Ryan, J van der Houst, T. Mock, K. Schlichter, S. Jaeger, F. Maurer,
+    E. Müller, M.P. We, D. Reinhfeldt, S. Schlichter, F. Schösser, R. Serrano, B.
+    Bonrane, T. Summer, S. Viggerske, F. Weigcheid, P. Wolner, J. Winterig, The SCIP
+    Optimization Suite 8.0 Technical Report, Optimization Online, http://nb-resolving.de/urn:nbe:0297-zib-8509.
+
+
+    +   [21] Berlin, 1996, http://nb-resolving.de/urn:nbe:0297-zib-536.
+
+
+    +   [22] L. Eiter, R. Rothberg, C. Le Pape, Efficiently reduced heuristics to
+    improve MIP solutions, Math. Program. Comput. (2020) 71–75, https://doi.org/10.1007/s12537-014-0518-7.
+
+
+    +   [23] G. Gleixner, H. Daniel, G. Gammarth, T. Achterberg, M. Bastberg, T. Berthold,
+    P. Christophel, K. Warp, J. Jock, L. Winterlich, et al., MILPLIB 2017: data-driven
+    comparison of the six mixed-integer programming library. Math. Program. Comput.
+    (2021) 1–37, https://doi.org/10.1007/s12532-021-00209-7.
+
+
+    +   [24] A. Gleixner, H. Daniel, G. Gammarth, T. Achterberg, M. Bastberg, T. Berthold,
+    P. Christophel, K. Warp, J. Jock, L. Winterlich, et al., MILPLIB 2017: data-driven
+    comparison of the six mixed-integer programming library. Math. Program. Comput.
+    (2021) 1–48, https://doi.org/10.1007/s12532-020-00194-3.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '+   [25] A. Lodi, A. Tramontani, Performance variability in mixed-integer programming,
+    in: Theory Driven by Influential Applications. INFORMS, 2013, pp. 1–12.
+
+
+    +   [26] T. Achterberg, Constraint integer programming, Ph.D. thesis, Technische
+    Universität Berlin, 2007, http://nbn-resolving.de/urn:nbn:de:0297-zib-11129.'
+  merge: -1
+  pgno: 17
