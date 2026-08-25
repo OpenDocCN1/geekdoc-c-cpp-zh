@@ -1,0 +1,813 @@
+- img_proc: true
+  md: '# KIDS GET CODING
+
+
+    CODING IN THE REAL WORLD'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'Please return or renew this item by the last date shown.
+
+
+    Libraries Line and Renewals: 020 7361 3010
+
+
+    Web Renewals: www.rbkc.gov.uk/renewyourbooks
+
+
+    KENSINGTON AND CHELSEA LIBRARY SERVICE
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_2_0.png)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# KIDS GET CODING
+
+    CODING IN THE REAL WORLD
+
+
+    Heather Lyons
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# # Contents
+
+
+    +   - Getting started 3
+
+    - Everyday computers 4
+
+    - Car or computer? 6
+
+    - Road safety 8
+
+    - Home sweet home 10
+
+    - Shopping 12
+
+    - Money, money 14
+
+    - Flying high 16
+
+    - Follow that robot! 18
+
+    - The future 20
+
+    - Extension activities 22
+
+    - Words to remember 22
+
+    - Activity answers 23
+
+    - Index 24
+
+
+    Children will need access to the Internet for most of the activities in this book.
+    Parents or teachers should supervise this and discuss staying safe online with
+    children.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # Getting started
+
+
+    Hi! I''m Data Duck. I''m going to tell you about the computers that are all around
+    us. We can''t always see them, but they play a big part in our lives every day.
+
+
+    All around us, there are computers that control machines, vehicles, robots, lights
+    and many other things. They can do this because of the way they are programmed.
+    When we program a computer, we tell it what to do using code.
+
+
+    > DATA DUCK
+
+    Code is a set of instructions we use to tell computers what to do. In this book,
+    we will be using coding blocks, like the one below. Coding blocks are instructions
+    that we can combine to create code for a computer.
+
+
+    Change height by -10 m
+
+
+    Play duck call
+
+
+    There are lots of activities in the book for you to try out. There are also some
+    online activities for you to practise. For the online activities, go to www.blueshiftcoding.com/kidsgetcoding
+    and look for the activity with the page number from the book.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Everyday computers
+
+
+    Did you know that computers aren''t just in our homes and schools? They are around
+    us almost all the time. Computers control the street lights, our cars and things
+    such as lights and alarms in and around our homes.
+
+
+    Many of these computers around us include something called a ''sensor''. Sensors
+    can pick up on certain things around them. Some can measure the temperature, others
+    whether it is light or dark, and some can sense if there are any objects nearby.
+
+
+    +   Street lights: A street light uses a light sensor to find out when it''s getting
+    dark. Once night-time falls, its light turns on.
+
+
+    > House: Some houses have a motion sensor outside. It can find out if somebody
+    is moving towards the house at night, and turn on a light.
+
+
+    > Car: Some cars have distance sensors. These sensors can find how far away the
+    car is from other objects, such as a wall. Drivers use these sensors when they
+    are parking their car.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Lights on!
+
+
+    Some cars turn on their headlights when it gets dark outside.
+
+    Can you work out which kind of sensor a car uses to do this?
+
+    A. A sensor that measures the distance between itself and the car in front.
+
+    B. A sensor that measures how light or dark it is outside.
+
+    C. A sensor that measures the temperature outside.
+
+
+    Turn to page 23 to see the answers.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_8_0.png)
+
+
+    DATA DUCK
+
+    Sensors are a bit like our senses! Do you remember what our senses are? Think
+    of three senses and what they can do.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_8_1.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Car or computer?
+
+
+    Cars have many computers in them - some even have hundreds! These computers, or
+    processors, all make sure the car works the way it should.
+
+
+    There are computers that control the car''s heating, speed and its lights. Some
+    computers can show maps of the area the car is in, while others can play music.
+    Some cars have so many clever computers that they can even drive themselves!
+
+
+    DATA DUCK
+
+    In a car, the sensors pass on the information they find out to the car''s computer.
+    This is called input. Then, the computer passes on signals to other parts of the
+    car to tell it to do certain things. This is called output.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Time for a refill
+
+
+    Drivers need to know in good time when their car''s petrol tank needs refilling,
+    because they still need to be able to drive to the petrol station.
+
+    Look at the inputs and outputs below, and pick which ones mean this car''s computer
+    is doing its job properly.
+
+
+    Turn to page 23 to see the answers.
+
+
+    # Input:
+
+
+    # Output:
+
+
+    +   1. Tank sensor tells computer tank is full.
+
+
+    +   1. Computer passes on signal to warning light: start flashing.
+
+
+    +   2. Tank sensor tells computer tank is empty.
+
+
+    +   2. Computer passes on signal to radio: play music.
+
+
+    +   3. Tank sensor tells computer tank is nearly empty.
+
+
+    +   3. Computer passes on signal to heating: switch on.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_10_0.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Road safety
+
+
+    Traffic lights are very important. They keep people who are crossing the street
+    safe. They also keep traffic moving, so that we can all get to where we need to
+    go. And they all work with sensors!
+
+
+    Traffic light sensors can detect when there is a lot of traffic or when someone
+    is waiting to cross the street. The sensors pass this information on to the computer.
+    The computer then sends on a signal to the lights, so they change to red, amber
+    or green at the right time.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# DATA DUCK
+
+
+    It''s very important for the traffic light''s computer, or processor, to change
+    the lights at the right time. This helps everyone on the road stay safe.
+
+
+    # Change the lights
+
+
+    Traffic light computers are programmed to make sure they pass on the right information
+    to the lights. Have a look at the information below, and choose which the computer
+    needs to send to the lights.
+
+
+    To pass page 23 to see the answers.
+
+
+    Sensor information: There are many people waiting to cross the road.
+
+
+    Sensor information: There are many cars waiting at a red light, and not many people
+    (pedestrians) crossing the road.
+
+
+    # Computer signal to lights:
+
+
+    # Computer signal to lights:
+
+
+    +   A: Turn red for cars. Then turn green for people, so they can cross.
+
+
+    +   A: First, turn green for cars. Then, turn red for pedestrians.
+
+
+    +   B: Remain green for cars. Turn green for people, too.
+
+
+    +   B: First, turn red for pedestrians. Then, turn green for cars.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_12_0.png)'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Home sweet home
+
+
+    Computers in our home help keep us safe and comfortable. They make sure our rooms
+    aren''t too cold, they tell us when there is a fire and they switch on lights
+    when it''s dark outside.
+
+
+    Alarm system: Sensors tell a computer when a door or a window is opened. The computer
+    sends a signal to switch to a loud alarm. Some computers even send a signal to
+    the police, so they know there has been a break-in.
+
+
+    Smoke detector: Sensors tell a computer when there is smoke in the house. The
+    computer sets off an alarm to warn people that something is burning.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_13_0.png)
+
+
+    Automatic light: A movement sensor tells a computer when someone is moving outside
+    the house. The computer switches on the outside light.
+
+
+    Thermostat: This computer uses a temperature sensor to check whether rooms are
+    too cold or warm. The computer then passes on the right signal to the heating
+    system.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Invent it!
+
+
+    Can you think of a computer you would like to invent for your house? What would
+    it be able to do? Can you think of the sorts of sensors it might use? Draw your
+    invention and explain how it would work.
+
+
+    # DATA DUCK
+
+
+    There are many other great inventions that can help around the home: mini robots
+    that vacuum the floor in any room when it gets dirty, and devices that make sure
+    plants get watered at the right time. All of these inventions use computers!
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Shopping
+
+
+    When we go to a shop, computers keep track of what we buy and how much we pay.
+    Most of the time, the computers find out all this information thanks to something
+    called a ‘barcode’.
+
+
+    A barcode is a picture made up of lots of lines and numbers. You can find a barcode
+    on the back of this book! Computers can read barcodes with the help of a sensor
+
+
+    called a scanner. The barcodes help computers to find out what the scanned item
+    is and how much it costs.
+
+
+    # DATA DUCK
+
+
+    At a shop check-out till, all the items a customer would like to buy are scanned.
+    The information on the barcode is passed on from the scanner to the till’s computer.
+    The computer then adds up the cost of all the items and shows the amount on the
+    till screen.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Time to add up
+
+
+    Imagine you are the till''s computer. Which total amount would you send to the
+    screen of the till if the scanner passed on on this information:
+
+
+    Turn to page 23 to see the answers.
+
+
+    | cheese | £2 |
+
+    | --- | --- |
+
+    | fish | £3 |
+
+    | milk | £1 |
+
+    | bread | £1 |
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Money, money
+
+
+    At shop tills, we use scanners and computers to tell us how much we need to pay
+    for our shopping. And when we pay, we sometimes use even more computers!
+
+
+    People can pay for things by using a bank card or even their phone. They do this
+    by tapping the phone or the card on a small machine, called a reader.
+
+
+    During the tap, information is sent to and from the reader so that money goes
+    from the person''s bank account to pay the shop.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_17_0.png)
+
+
+    # DATA DUCK
+
+
+    All computers need a battery (or electricity) to work. So the reader sends electric
+    power to the bank card. This means that the card is powered and can now send and
+    receive information.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_17_1.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Tap to pay
+
+
+    Data Duck is at the shop and wants to buy some eggs that cost £1.50. He taps his
+    card on the reader, but gets an error message and a beep. He can''t pay with his
+    card. What might have happened?
+
+
+    +   A. He only has £1 left in his bank account.
+
+    B. The machine can''t connect to the bank.
+
+    C. His card is cracked.
+
+    D. Any of the above.
+
+
+    Turn to page 23 to see the answers.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Flying high
+
+
+    Planes, helicopters and even small flying robots, called drones, all need sensors
+    and computers to fly. Without them, these aircraft wouldn''t even be able to lift
+    off the ground.
+
+
+    One of the most important sensors is the distance sensor, which can measure the
+    distance between the aircraft and the ground. The pilot needs to know this information
+    so that she can make sure the aircraft doesn''t land too soon, or crash.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# DATA DUCK
+
+
+    Aircraft sensors send their information to a processor (computer). The processor
+    then passes the information on to the dashboard, where the pilot can read it.
+
+
+    # Keep it up!
+
+
+    Look at the coding blocks below, and choose which one needs to sit in the gap
+    so the drone never flies too high.
+
+
+    Turn to page 23 to see the answers.
+
+
+    ```
+
+    If height over 100 m then
+
+    Repeat until height under 100 m
+
+    ```
+
+
+    ```
+
+    Play duck call
+
+    ```
+
+
+    ```
+
+    Change height by -10 m
+
+    ```
+
+
+    ```
+
+    Turn to left
+
+    ```'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Follow that robot!
+
+
+    Robots are used for many things, from building cars to moving goods. Inside the
+    robot, a computer is connected to sensors and motors. The motors make the robot
+    move.
+
+
+    One kind of robot that uses sensors and motors to move around is called a line-following
+    robot. It can follow a line on the ground. This is because there is
+
+
+    a sensor at the bottom of the robot that can find out where the line is. The computer
+    makes sure the robot follows the line as it moves around.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_21_0.png)
+
+
+    # DATA DUCK
+
+
+    We can program the computers inside these robots to do all sorts of amazing things.
+    There are robots that can help doctors perform operations. Others can build cars
+    or even play table tennis!
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_21_1.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Build a robot!
+
+
+    Let''s build our own robot! To help it work, we need to make sure our robot has
+    an input, a processor and an output. Look at the list below and pick one of each.
+    What will your robot be able to do?
+
+
+    Input:
+
+
+    +   1. Distance sensor – this can find out how far away objects are from the robot
+
+    2. Light sensor – this can find out whether it is light or dark around the robot
+
+
+    Output:
+
+
+    +   1. Motor attached to arms – this means our robot can do things such as flick
+    a light switch
+
+    2. Motor attached to wheels – this means our robot can move around
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_22_0.png)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# The future
+
+
+    Computers are everywhere. They can be so tiny that we can barely see them. They
+    can send information to each other and to devices, such as phones, without needing
+    any wires.
+
+
+    We can now wear computers, for example smart watches. These are watches with tiny
+    computers in them that tell us things about ourselves. They can show us how fast
+    we are breathing, and how long we slept last night.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_23_0.png)'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# A toast to friends!
+
+
+    Someone has invented a toaster that sends a message to all your friends when you
+    make a piece of toast! Now it''s your turn. Think about what your toaster of the
+    future might be able to do. Write down or draw your design.
+
+
+    # DATA DUCK
+
+
+    We can put computers inside the machines we use every day, such as kettles and
+    toasters! These machines can send and receive information from other computers.
+    For example, we could use a phone to switch on the kettle!
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_24_0.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Extension activities\n\nGo to blueshiftcoding.com/kidsgetcoding for more\
+    \ fun activities and to practise: \n\n+   * using coding blocks\n* writing programs\n\
+    * predicting what programs will do\n* exploring sensors\n\n# Words to remember\n\
+    \n| code | the arrangement of instructions in a computer program |\n| dashboard\
+    \ | in cars and planes, a panel with controls and information that is fitted in\
+    \ front of the driver or pilot |\n\n| input | something that puts information\
+    \ into a computer, such as a sensor |\n\n| output | something used to send information\
+    \ out of a computer, such as a warning light or an alarm |\n\n| scanner | a device\
+    \ that is used to ‘read’ barcodes and send the information to a computer. |\n\n\
+    | sensor | a device that works like our senses, and can measure light, temperature,\
+    \ movement and other things. |"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Activity answers
+
+
+    p. 5
+
+
+    B. A sensor that measures how light or dark it is outside sends a signal to the
+    car''s computer to turn on the headlights when it''s dark.
+
+
+    p. 15
+
+
+    D. Any of the above.
+
+
+    p. 7
+
+
+    p. 17
+
+
+    Input:
+
+
+    +   3. Tank sensor tells computer tank is nearly empty.
+
+
+    Output:
+
+
+    +   1. Computer passes on signal to warning light: start flashing.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_26_0.png)
+
+
+    p. 9
+
+
+    Sensor information: There are many people waiting to cross the road.
+
+
+    Computer signal to lights:
+
+
+    +   A: Turn red for cars. Then turn green for people, so they can cross.
+
+
+    Sensor information: There are many cars waiting at a red light, and not many people
+    (pedestrians) crossing the road.
+
+
+    Computer signal to lights:
+
+
+    +   B: First, turn red for pedestrians. Then, turn green for cars.
+
+
+    p. 13
+
+
+    The computer would send the amount of £7 to the till''s screen (£2 + £3 + £1 +
+    £1 = £7).'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Index
+
+
+    aircraft 16, 17 10, 11, 12, 13, 14, 17, sensor 4, 5, 6, 7, 8, 9,
+
+    car 4, 5, 6–7, 18 18, 20, 21 10, 11, 12, 16, 17,
+
+    code 3 home 4, 10–11 18, 19
+
+    computer 3, 4, 6–7, 8, 9, robot 3, 11, 16, 18–19
+
+
+    First published in Great Britain in 2017 by Wayland
+
+    Copyright © Hodder & Stoughton Ltd, 2017
+
+    Text copyright © Heather Lyons,
+
+    All rights reserved.
+
+    Editor: Liza Miller
+
+    Cover Illustrator: Alex Westgate
+
+    Illustrator: Dan Crisp.
+
+    Freelance editor: Julia Adams
+
+    Designer: Tim Mayer (Mayer Media)
+
+    ISBN: 978 1 5263 0222 9 10 987 65 432 1
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_27_0.png)
+
+
+    Wayland\An imprint of:
+
+    Hachette Children’s Group
+
+    Part of Hodder & Stoughton
+
+    Carmelite House
+
+    50 Victoria Embankment
+
+    London EC4Y 0DZ
+
+    Hachette UK Company
+
+    www.hachette.co.uk
+
+    www.hachettechildren.co.uk
+
+    Printed in China
+
+
+    The website addresses (URLs) included in this book were valid at the time of going
+    to press
+
+    However, it is possible that contents or addresses may have changed since the
+    publication of this book.
+
+    No responsibility for any changes can be accepted by either the author or the
+    Publisher.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '| KENSINGTON & CHELSEA | | |
+
+    | LIBRARIES SERVICE | | |
+
+    | 3 0116 02050343 7 | | |
+
+    | A & H | |
+
+    | J005.1 JUNIOR | | |'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# # CODING IN THE REAL WORLD
+
+
+    If you want to get ahead in today''s digital world, you need to understand computers.
+
+
+    Computers are all around us - in our homes and on the streets. They control traffic
+    lights, cars, smoke detectors, supermarket tills and much more. Learn how to write
+    code that can keep traffic flowing safely or make sure a plane doesn''t crash.
+    You can also discover how to program a car so the driver knows when to fill the
+    tank! Then try out your new skills on the companion website. Let''s go!
+
+
+    > Heather Lyons is co-founder of blue[shift] coding, a company specialising in
+    teaching coding to young programmers. You can read more about blue[shift] at blueshiftcoding.com.
+
+
+    ![](img/e21802b3f4809ba10a603c190aef0236_31_0.png)
+
+
+    WAYLAND
+
+    www.waylandbooks.co.uk'
+  merge: -1
+  pgno: 31
