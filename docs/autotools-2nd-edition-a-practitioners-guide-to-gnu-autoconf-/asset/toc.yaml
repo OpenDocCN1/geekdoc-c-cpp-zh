@@ -1,0 +1,906 @@
+- - '#'
+  - Autotools 第二版：GNU Autoconf, Automake 和 Libtool 实用指南
+- - '#'
+  - 献给 Michelle
+- - '#'
+  - 关于作者
+- - '#'
+  - 关于技术审查员
+- - '#'
+  - 3 理解 GNU 编码标准
+- - '#'
+  - 4 使用 AUTOCONF 配置你的项目
+- - '#'
+  - 5 玩 AUTOTOOL 的更多乐趣：配置用户选项
+- - '#'
+  - 6 使用 AUTOMAKE 自动生成 Makefile
+- - '#'
+  - 7 使用 LIBTOOL 构建库
+- - '#'
+  - 8 库接口版本控制与运行时动态链接
+- - '#'
+  - 9 使用 AUTOTEST 进行单元测试与集成测试
+- - '#'
+  - 10 使用 PKG-CONFIG 构建依赖关系
+- - '#'
+  - 12 本地化
+- - '#'
+  - 14 测试：AUTOTOOLS 示例
+- - '#'
+  - 15 测试第二部分：挑战极限
+- - '#'
+  - 16 在 AUTOCONF 中使用 M4 宏处理器 - M4 文本处理
+- - '#'
+  - 17 在 Windows 上使用 AUTOTOOLS
+- - '##'
+  - 18 创建优秀项目的技巧与可重用解决方案
+- - '##'
+  - 索引
+- - '##'
+  - 第一版前言
+- - '##'
+  - 第二版前言
+- - '##'
+  - 前言
+- - '##'
+  - 为什么要使用 Autools？
+- - '#'
+  - 引言
+- - '#'
+  - 谁应该读这本书
+- - '#'
+  - 本书的结构
+- - '#'
+  - 本书使用的约定
+- - '##'
+  - 本书使用的 Autotools 版本
+- - '##'
+  - 用户对 GNU AUTOTOOLS 的视角
+- - '##'
+  - 软件源码存档
+- - '##'
+  - 解压源码存档
+- - '##'
+  - 构建软件
+- - '##'
+  - GNU Autoconf 2.69 test suite.
+- - '##'
+  - Test results.
+- - '##'
+  - testsuite.log was created.
+- - '#'
+  - 安装构建的软件
+- - '#'
+  - GNU AUTOTOOLS 简述
+- - '#'
+  - 谁应该使用 Autotools？
+- - '#'
+  - 在什么情况下你不应该使用 Autotools？
+- - '#'
+  - Apple 平台和 OS X
+- - '#'
+  - 语言的选择
+- - '##'
+  - 生成你的包构建系统
+- - '##'
+  - 配置
+- - '##'
+  - Autoconf
+- - '##'
+  - NOTE
+- - '##'
+  - autoreconf
+- - '##'
+  - autoheader
+- - '##'
+  - autoscan
+- - '##'
+  - autoupdate
+- - '##'
+  - autom4te
+- - '##'
+  - 协同工作
+- - '##'
+  - Automake
+- - '##'
+  - automake
+- - '##'
+  - aclocal
+- - '##'
+  - libtool
+- - '##'
+  - libtoolize
+- - '##'
+  - ldtl, Libtool C API
+- - '##'
+  - 构建你的软件包
+- - '##'
+  - 运行 configure
+- - '##'
+  - 在源码目录外构建
+- - '##'
+  - 运行 make
+- - '##'
+  - 安装最新的 Autotools
+- - '#'
+  - note - a few tests (501 and 503) may fail
+- - '#'
+  - this is fine for this release
+- - '#'
+  - 总结
+- - '#'
+  - 3 理解 GNU 编码标准
+- - '#'
+  - Makefile 基础
+- - '#'
+  - 规则 (Rules)
+- - '#'
+  - 变量 (Variables)
+- - '##'
+  - 变量绑定
+- - '##'
+  - 规则详情
+- - '##'
+  - 依赖规则
+- - '##'
+  - 自动变量
+- - '#'
+  - 列表 3-11：在命令中使用自动变量
+- - '##'
+  - 隐式规则
+- - '##'
+  - 伪目标
+- - '##'
+  - 多目标
+- - '##'
+  - Makefile 作者的资源
+- - '##'
+  - 创建源码归档
+- - '##'
+  - Git tag 3.1
+- - '##'
+  - 强制执行规则
+- - '##'
+  - Git tag 3.2
+- - '##'
+  - 强制执行规则
+- - '##'
+  - 前导字符
+- - '##'
+  - 自动测试发行版
+- - '##'
+  - 有人要做测试吗？
+- - '##'
+  - 安装产品
+- - '##'
+  - Git tag 3.6
+- - '##'
+  - 安装选择
+- - '#'
+  - 卸载包
+- - '#'
+  - 测试安装与卸载
+- - '#'
+  - 文件系统层次级标准
+- - '#'
+  - 支持标准目标和变量
+- - '##'
+  - 标准目标
+- - '#'
+  - 标准变量
+- - '##'
+  - 为 find 添加位置变量
+- - '##'
+  - 将你的项目引入 Linux 发行版
+- - '##'
+  - 构建与安装覆盖
+- - '##'
+  - 用户变量
+- - '#'
+  - 表 3-2（续）
+- - '##'
+  - 非递归构建系统
+- - '#'
+  - include src/Makefile
+- - '##'
+  - '列表 3-38: Makefile：顶层 Makefile 的非递归版本'
+- - '##'
+  - '列表 3-39: src/Makefile：src 级 Makefile 的非递归版本'
+- - '##'
+  - 配置你的包
+- - '##'
+  - 使用 Autoconf 配置你的项目
+- - '##'
+  - Autoconf 配置脚本
+- - '##'
+  - 注意事项
+- - '##'
+  - 使用 Autoconf 配置你的项目
+- - '###'
+  - 最短的 configure.ac
+- - '###'
+  - M4 与 C 预处理器的比较
+- - '##'
+  - M4 宏的本质
+- - '##'
+  - 执行 autoconf
+- - '##'
+  - 执行 configure
+- - '##'
+  - 执行 config.status
+- - '##'
+  - 添加一些实际功能
+- - '#'
+  - Makefile. Generated from Makefile.in by configure.
+- - '#'
+  - '@configure_input@'
+- - '#'
+  - 包特定的替换变量
+- - '#'
+  - 前缀特定的替换变量
+- - '#'
+  - '@configure_input@'
+- - '#'
+  - 包特定的替换变量
+- - '#'
+  - 前缀特定的替换变量
+- - '#'
+  - '@configure_input@'
+- - '#'
+  - 包特定的替换变量
+- - '#'
+  - 前缀特定的替换变量
+- - '##'
+  - 添加 VPATH 构建功能
+- - '#'
+  - 前缀特定的替换变量
+- - '#'
+  - VPATH 特定的替换变量
+- - '#'
+  - 前缀特定的替换变量
+- - '#'
+  - VPATH 特定的替换变量
+- - '##'
+  - 使用 autoscan 更快启动
+- - '#'
+  - Process this file with autoconf to produce a configure script.
+- - '##'
+  - 检查程序。
+- - '#'
+  - 检查头文件。
+- - '#'
+  - 检查 typedef、结构体和编译器特性。
+- - '#'
+  - 检查库函数。
+- - '#'
+  - Process this file with autoconf to produce a configure script.
+- - '##'
+  - 传说中的 bootstrap.sh
+- - '##'
+  - Autoconf 缺失的文件
+- - '##'
+  - 更新 Makefile.in
+- - '#'
+  - 初始化包信息
+- - '#'
+  - AC_PREREQ
+- - '#'
+  - AC_INIT
+- - '##'
+  - 为模板生成文件
+- - '##'
+  - 使用 autoheader 生成模板
+- - '#'
+  - Error, this code requires libfcn.h.
+- - '#'
+  - 暂时回到远程构建
+- - '#'
+  - 总结
+- - '#'
+  - 5 更多玩转 AUTOCNF：
+- - '#'
+  - 配置选项
+- - '#'
+  - AC_SUBST
+- - '##'
+  - 替换与定义
+- - '##'
+  - AC_DEFINE
+- - '##'
+  - 检查编译器
+- - '##'
+  - 检查变量
+- - '##'
+  - 工具特定的变量
+- - '##'
+  - Autoconf 的常见问题
+- - '##'
+  - 检查程序。
+- - '##'
+  - 列表 5-5 显示了该宏生成的 configure 部分。
+- - '#'
+  - 检查 prog-to-for 是否在路径中存在。
+- - '##'
+  - 将变量设置为 value-if-found，否则 value-if-found。
+- - '##'
+  - 检查绝对文件名。
+- - '#'
+  - 检查程序。
+- - '#'
+  - 检查 header files.
+- - '#'
+  - 检查 libraries.
+- - '#'
+  - 检查 header files.
+- - '#'
+  - 打印消息
+- - '#'
+  - 支持可选功能和软件包
+- - '###'
+  - 'Listing 5-15: 默认禁用功能'
+- - '##'
+  - 检查程序
+- - '##'
+  - 检查头文件
+- - '##'
+  - 检查命令行选项
+- - '#'
+  - 检查库。
+- - '#'
+  - 检查 header files。
+- - '#'
+  - 检查 libraries。
+- - '#'
+  - 检查 header files。
+- - '#'
+  - 检查程序
+- - '#'
+  - 检查类型和结构
+- - '#'
+  - 检查命令行。
+- - '#'
+  - 检查头文件
+- - '#'
+  - 检查字符串。
+- - '#'
+  - 检查 strings.
+- - '#'
+  - 检查变量
+- - '#'
+  - 检查库。
+- - '#'
+  - AC_OUTPUT
+- - '#'
+  - 引号
+- - '#'
+  - 总结
+- - '#'
+  - 使用 AUTOMAKE 自动生成 MAKEFILES
+- - '##'
+  - 切入正题
+- - '#'
+  - rm bootstrap.sh src/Makefile.in
+- - '#'
+  - echo "SUBDIRS = src" > Makefile.am
+- - '#'
+  - echo "PROGRAMS = find" > src/Makefile.am
+- - '#'
+  - echo "find_SRC = main.c" > src/Makefile.am
+- - '#'
+  - touch NEWS Authors ChangeLog
+- - '##'
+  - README
+- - '##'
+  - 在 configure.ac 中启用 Automake
+- - '#'
+  - -*- Autoconf -
+- - '#'
+  - 使用此文件通过 autoconf 生成配置脚本。
+- - '###'
+  - gnits, gnu, foreign
+- - '###'
+  - check-news
+- - '###'
+  - dist-bzip2, dist-zip, dist-xz, dist-shar, dist-tar
+- - '###'
+  - readme-alpha
+- - '##'
+  - parallel-tests
+- - '##'
+  - subdir-objects
+- - '##'
+  - version
+- - '##'
+  - 隐藏的好处：自动跟踪
+- - '##'
+  - Makefile.am 中到底什么？
+- - '##'
+  - 分析我们的新构建系统
+- - '##'
+  - 产品列表变量
+- - '##'
+  - 安装位置前缀
+- - '##'
+  - 与安装无关的前缀
+- - '#'
+  - EXTRA
+- - '#'
+  - Primaries
+- - '#'
+  - PROGRAMS
+- - '#'
+  - LIBRARIES/LIBRARIES
+- - '#'
+  - LISP
+- - '#'
+  - PYTHON
+- - '#'
+  - JAVA
+- - '#'
+  - SCRIPTS
+- - '#'
+  - DATA
+- - '#'
+  - HEADERS
+- - '#'
+  - MANS
+- - '#'
+  - TEXINFO
+- - '#'
+  - Product Source Variables
+- - '##'
+  - PLV 和 PSV 修饰符
+- - '##'
+  - 单元测试：支持 make check
+- - '#'
+  - include <thread.h>
+- - '##'
+  - 产品选项变量 (Product Option Variables)
+- - '###'
+  - product_CPPFLAGS
+- - '###'
+  - product_CFLAGS
+- - '###'
+  - product_CXXFLAGS
+- - '###'
+  - product_LDADD
+- - '###'
+  - library_LIBADD
+- - '###'
+  - ltlibrary_LIBADD
+- - '##'
+  - Makefile 选项变量
+- - '##'
+  - 构建新库
+- - '#'
+  - Checks for programs.
+- - '##'
+  - 分发中包含什么？
+- - '##'
+  - 维护者模式
+- - '#'
+  - 消除噪音
+- - '#'
+  - 非递归 Automake
+- - '#'
+  - Process PREREQ(2.69)
+- - '#'
+  - to produce a configure script.
+- - '#'
+  - Checks for library functions.
+- - '##'
+  - 总结
+- - '##'
+  - 使用 LIBTOOL 构建库
+- - '##'
+  - 共享库的优势
+- - '##'
+  - 共享库如何工作
+- - '#'
+  - 运行时动态链接
+- - '#'
+  - 使用 Libtool
+- - '#'
+  - 抽象构建过程
+- - '#'
+  - 运行时抽象
+- - '#'
+  - 安装 Libtool
+- - '##'
+  - 为 find 添加共享库
+- - '##'
+  - 使用 LIBRARIES 主项
+- - '##'
+  - 公共包含目录
+- - '##'
+  - 使用 Libtool 构建库
+- - '#'
+  - Process this file with autoconf to produce a configure script.
+- - '#'
+  - Checks for programs.
+- - '#'
+  - Checks for header files.
+- - '##'
+  - 使用 LT_INIT 选项自定义 Libtool
+- - '###'
+  - dlopen
+- - '###'
+  - win32-dll
+- - '###'
+  - aix-some-aix|svr4
+- - '###'
+  - disable-fast-install
+- - '###'
+  - shared and disable-shared
+- - '#'
+  - 那么 PIC 到底是什么？
+- - '#'
+  - 7-2：共享库镜像中的相对地址
+- - '##'
+  - 修复 find PIC 问题
+- - '##'
+  - 总结
+- - '#'
+  - 库接口版本控制
+- - '##'
+  - 系统特定的版本控制
+- - '##'
+  - Linux 和 Solaris 库版本控制
+- - '#'
+  - IBM AIX 库版本控制
+- - '#'
+  - Microsoft DLL 版本控制
+- - '##'
+  - HP-UK/AT&T SVR4 库版本控制
+- - '##'
+  - Libtool 库版本控制方案
+- - '##'
+  - 库版本控制就是接口版本控制
+- - '#'
+  - 使用 libtdl
+- - '#'
+  - 必需的基础设施
+- - '#'
+  - 添加插件接口
+- - '#'
+  - 旧方法
+- - '#'
+  - 检查头文件。
+- - '#'
+  - 检查库。
+- - '#'
+  - 检查 typedef、结构和编译器特性。
+- - '#'
+  - 检查库函数。
+- - '##'
+  - 第 8 章
+- - '##'
+  - 预加载多个模块
+- - '##'
+  - 使用 AUTOTEST 进行单元测试与集成测试
+- - '#'
+  - $ make check
+- - '#'
+  - $ make check
+- - '#'
+  - 'TOTAL: 1'
+- - '#'
+  - 'PASS: 1'
+- - '#'
+  - 'SKIP: 0'
+- - '#'
+  - 'XFAIL: 0'
+- - '#'
+  - 'ERROR: 0'
+- - '#'
+  - Autotest 概述
+- - '##'
+  - 连接 Autotest
+- - '#'
+  - 检查 检查程序。
+- - '#'
+  - 使用 autoconf 处理此文件以生成脚本。
+- - '#'
+  - AC_INIT
+- - '#'
+  - tests/testsuite.at
+- - '##'
+  - 1.0 测试套件。
+- - '##'
+  - 测试结果。
+- - '#'
+  - 添加测试
+- - '#'
+  - 'TOTAL: 1'
+- - '#'
+  - 'PASS: 1'
+- - '#'
+  - 'SKIP: 0'
+- - '#'
+  - 'XFAIL: 0'
+- - '#'
+  - 'ERROR: 0'
+- - '##'
+  - 使用 AC_CHECK
+- - '#'
+  - 9-1：stdout 和 stderr 参数允许的特殊命令。
+- - '##'
+  - 使用 AC_SETUP 和 AC_CLEANUP 定义测试
+- - '##'
+  - 1.0 test suite.
+- - '##'
+  - Test results.
+- - '##'
+  - testsuite.at.log was created.
+- - '##'
+  - 注意事项
+- - '##'
+  - 使用 AC_SETUP 和 AC_CLEANUP 定义测试组
+- - '##'
+  - 1.0 test suite.
+- - '##'
+  - Test results.
+- - '##'
+  - 测试结果。
+- - '#'
+  - 添加测试
+- - '#'
+  - 'TOTAL: 1'
+- - '#'
+  - 'PASS: 1'
+- - '#'
+  - 'SKIP: 0'
+- - '#'
+  - 'XFAIL: 0'
+- - '#'
+  - 'ERROR: 0'
+- - '##'
+  - 发生了什么？
+- - '##'
+  - 1.0 test suite.
+- - '##'
+  - '1: find-execution'
+- - '##'
+  - Test results.
+- - '##'
+  - 单元测试 vs 集成测试
+- - '##'
+  - 1.0 test suite.
+- - '##'
+  - '--------------------------------'
+- - '##'
+  - Test results.
+- - '##'
+  - '--------------------------------'
+- - '##'
+  - 管理细节
+- - '##'
+  - 分发文件
+- - '##'
+  - 1.0 test suite.
+- - '##'
+  - '--------------------------------'
+- - '##'
+  - Test results.
+- - '##'
+  - '--------------------------------'
+- - '##'
+  - 管理细节
+- - '##'
+  - 分发文件
+- - '##'
+  - 检查已安装
+- - '##'
+  - '列表 9-20: tests/find.at: 测试安装和未安装的执行情况-1'
+- - '##'
+  - '列表 9-21: tests/find.at: 使用 AUTOTOOL_PATH 的更好方法'
+- - '##'
+  - '列表 9-22: tests/local.at: 将 find 移动到 M4 宏'
+- - '#'
+  - 注意
+- - '#'
+  - 细节处理
+- - '#'
+  - 极简方法
+- - '#'
+  - 总结
+- - '#'
+  - 关于-config 版本的说明
+- - '##'
+  - 深入学习
+- - '#'
+  - '列表 10-1: libssl.pc: 示例 .pc 文件'
+- - '#'
+  - '10-1: pkg-config 识别的预定义变量'
+- - '#'
+  - '10-2: pkg-config 识别的键值中的已知键'
+- - '##'
+  - 信息性字段
+- - '##'
+  - 功能性字段
+- - '##'
+  - 使用 Autoconf 生成 .pc 文件
+- - '##'
+  - 未安装的 .pc 文件
+- - '##'
+  - 在 configure.ac 中使用 pkg-config
+- - '#'
+  - '列表 10-2: configure.ac 中使用 pkg-config 访问 libssl'
+- - '##'
+  - pkg-config Autoconf 宏
+- - '##'
+  - 总结
+- - '##'
+  - 国际化
+- - '##'
+  - 强制免责声明
+- - '##'
+  - 国际化 (i18n)
+- - '##'
+  - 为动态消息源码
+- - '##'
+  - LC_ALL
+- - '##'
+  - LC_COLLATE
+- - '##'
+  - LC_CTYPE
+- - '##'
+  - LC_MONETARY
+- - '##'
+  - LC_NUMERIC
+- - '##'
+  - LC_TIME
+- - '##'
+  - 设置和使用区域
+- - '##'
+  - 生成和安装区域设置
+- - '#'
+  - '列表 11-4: sc.c: 一个区域排序顺序差异的短程序'
+- - '##'
+  - X/Open 和 POSIX 标准扩展
+- - '##'
+  - 消息目录的选择
+- - '#'
+  - '12'
+- - '#'
+  - 本地化 (LOCALIZATION)
+- - '##'
+  - 起始
+- - '##'
+  - 语言选择
+- - '##'
+  - 构建目录
+- - '#'
+  - mkdir po
+- - '#'
+  - SOME DESCRIPTIVE TITLE.
+- - '#'
+  - Copyright (C) YEAR holder
+- - '#'
+  - This file is distributed under the same license as PACKAGE.
+- - '#'
+  - FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+- - '#'
+  - fuzzy
+- - '#'
+  - -format
+- - '#'
+  - French translations for PACKAGE package
+- - '#'
+  - Copyright (C) 2019 THE PACKAGE'S HOLDER
+- - '#'
+  - This file is distributed under the same license as the PACKAGE package.
+- - '#'
+  - Automatically generated, 2019.
+- - '#'
+  - '#:gt.c:21'
+- - '#'
+  - c-format
+- - '#'
+  - 使用 autoconf 处理文件以生成配置脚本。
+- - '#'
+  - 检查程序。
+- - '#'
+  - 检查库。
+- - '#'
+  - 检查头文件。
+- - '#'
+  - 检查 typedef、结构体和编译器特性。
+- - '#'
+  - 检查库函数。
+- - '#'
+  - $ gettextize
+- - '#'
+  - Autoconf -*
+- - '#'
+  - 使用 autoconf 处理文件以生成配置脚本。
+- - '#'
+  - 检查库函数。
+- - '##'
+  - 什么应该提交？
+- - '#'
+  - 添加语言
+- - '#'
+  - French translations for gt package.
+- - '#'
+  - Copyright (C) 2019 John Calcote
+- - '#'
+  - This file is distributed under the same license as the gt package.
+- - '#'
+  - John Calcote <john.calcote@gmail.com>, 2019.
+- - '#'
+  - src:gt.c:21
+- - '#'
+  - 安装语言文件
+- - '#'
+  - 手动 make 目标
+- - '#'
+  - 总结
+- - '##'
+  - 向项目添加 Gnlib 模块
+- - '#'
+  - 使用 autoconf 处理文件以生成配置脚本。
+- - '##'
+  - 总结
+- - '##'
+  - 14 章：主张：一个 AUTOTOOLS 示例
+- - '###'
+  - 什么是 FLAIM？
+- - '###'
+  - 为什么选择 FLAIM？
+- - '##'
+  - 入门
+- - '##'
+  - 添加 configure.ac 文件
+- - '#'
+  - '- Autoconf -'
+- - '#'
+  - 使用 autoconf 处理文件以生成配置脚本。
+- - '##'
+  - 伞型项目中的 Automake
+- - '##'
+  - 为什么要添加 Libtool？
+- - '##'
+  - 添加子目录
+- - '##'
+  - 顶层 Makefile.am
+- - '##'
+  - 顶层 Makefile.am
+- - '##'
+  - FLAIM 子项目
+- - '#'
+  - Checks for programs.
+- - '#'
+  - Checks for libraries.
+- - '#'
+  - 'FIXME: Replace ''main'' with function'
+- - '#'
+  - 'FIXME: Replace ''main'' with function'
+- - '##'
+  - FLAIM configure.ac
+- - '#'
+  - 使用 autoconf 处理文件以生成配置脚本。
+- - '#'
+  - 检查程序。
+- - '#'
+  - 检查文件。
+- - '##'
+  - 使用 LT_INIT 选项自定义 Libtool
+- - '###'
+  - dlopen
+- - '###'
+  - win32-dll
+- - '###'
+  - aix-some-aix|svr4
+- - '###'
+  - disable-fast-install
+- - '###'
+  - shared and disable-shared
+- - '#'
+  - 那么 PIC 到底是什么？
+- - '#'
+  - 7-2：共享库镜像中的相对地址
+- - '##'
+  - 修复 find PIC 问题
+- - '##'
+  - 总结
