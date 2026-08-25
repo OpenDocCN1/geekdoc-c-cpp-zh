@@ -1,0 +1,787 @@
+- md: "\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_0_0.png)\n\n## C++ for Kids\n\n\
+    A fun and visual introduction to the fundamental programming language\n\nby Blaise\
+    \ Vanden-Heuvel & John C. Vanden-Heuvel Sr.\n\nIllustrations by Tom Holmes\n\n\
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_2_0.png)\n\nCopyright © 2015 Blaise Vanden-Heuvel\
+    \ & John C. Vanden-Heuvel Sr.\nProduced and Designed by Code Babies\nAll rights\
+    \ reserved. Published by Code Babies Media\nFirst Edition\n\n```cpp\n// Kid's\
+    \ first C++ program\n#include <iostream>\nusing namespace std;\n\nint main()\n\
+    {\n    cout << \"Hello Little Coder!\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_3_0.png)\n\
+    \n## Output\n\nHello Little Coder!\n\nWords in green are pretend.\nThe rest are\
+    \ our friends.\nWords in blue are special.\nWords in red are said.\n\n```cpp\n\
+    // 3 output statements\n#include <iostream>\nusing namespace std;\n\nint main()\n\
+    {\n    cout << \"Hello Little Coder!\" << endl;\n    cout << \"I love you.\\n\"\
+    ;\n    cout << \"Goodbye.\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_5_0.png)\n\
+    \n## Output\n\nHello Little Coder!\nI love you.\nGoodbye.\n\nMore words in red\
+    \ means more words are said.\nMore words in green are still never seen.\nTo create\
+    \ new lines use << endl.\nYou can use '\\n' as well.\n\n```cpp\n// Airplane output\
+    \ program\n#include <iostream>\nusing namespace std;\n\nint main() {\n    cout\
+    \ << \" ____________________\" << endl;\n    cout << \" -=\\c...................\"\
+    \ << endl;\n    cout << \" `~~~~~~/ ~~ \" << endl;\n    cout << \" -==/ / \" <<\
+    \ endl;\n    cout << \" -'\" << endl;\n    cout << endl << \"\\n\";\n    cout\
+    \ << \" ._\" << endl;\n    cout << \" (_)_\" << endl;\n    cout << \" (_ _(_),\"\
+    \ << endl;\n}\n```\n\n## Output\n\n```\n\\\n   __________\n-=\\c~~~~~~~~~~ )\n\
+    \   '~~~~~~/ ~~~\n      -==/ / !\n        _/\n\n   ':.\n  ( _ )_\n (_ _ )(_ ,)\n\
+    ```\n\n**main()** is the best, it is in charge of all the rest.\nWithout **main()**\
+    \ there would be no plane.\n**<<endl** ends a line, every time.\n\n```cpp\n//\
+    \ How to add in C++\n#include <iostream>\nusing namespace std;\n\nint main()\n\
+    {\n    int a;\n    int b;\n    int c;\n\n    a = 1;\n    b = 2;\n    c = a + b;\n\
+    \n    cout << c;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_9_0.png)\n\
+    \n## Output\n\n3\n\nNumbers are also said,\n\nbut they aren't in red.\n\ncout<<c\
+    \ means the computer says 3.\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_11_0.png)\n\
+    \n## Output\n\nVariable a is 1\nArray b[4] is 5\n\n- Variables like 'a' hold only\
+    \ one thing.\nThat one thing could be a number,\na letter or a string.\n\n- Arrays\
+    \ like b[ ] can hold a lot.\nb[ ] has 5 slots.\n\n```cpp\n// What is a string?\n\
+    #include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n\
+    \    string bird;\n    bird = \"Polly\";\n\n    cout << bird << \"wants a cracker?\"\
+    ;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_13_0.png)\n\n## Output\n\
+    \nPolly wants a cracker?\n\nThink of string\nas a long rope\nthat can hold anything.\n\
+    \nstring bird can hold letters,\nnumbers and words.\n\n```cpp\n// Using cin for\
+    \ the first time\n#include <iostream>\nusing namespace std;\n\nint main() {\n\
+    \    string name;\n    cout << \"Let's play a game,\\n\";\n    cout << \"type\
+    \ in your name:\\n\";\n    cin >> name;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_15_0.png)\n\
+    \n## Output\n\nLet’s play a game,\ntype in your name:\n\n> The computer talks\
+    \ with cout<<\nand listens with cin>>\nWhen you see cin>>\nthat is when you type\
+    \ your name in\nSay your name\nto finish the game!\n```\n\n```cpp\n// Kid's first\
+    \ function\n#include <iostream>\nusing namespace std;\nvoid train ();\nint main()\n\
+    {\n    train();\n}\n\nvoid train()\n{\n    cout << \"      ______\" << endl;\n\
+    \    cout << \"     |  __  _\" << endl;\n    cout << \"     |  | |___V_\" << endl;\n\
+    \    cout << \"     | || ||   \\\"\" << endl;\n    cout << \"     |  |   |   \
+    \ \\\"\" << endl;\n    cout << \"     / \\\\|_ /\\| /\\\\\" << endl;\n    cout\
+    \ << \"      \\\\   /\" << endl;\n```\n\n## Output\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_18_0.png)\n\
+    \nmain() is a function and so is train()\n\ntrain() is inside main()\n\ntrain()\
+    \ uses main() as a junction\nThat is how we call a function.\n\n```cpp\n// How\
+    \ to use an if statement\n#include <iostream>\nusing namespace std;\n\nint main()\
+    \ {\n    if ( 1 > 2 )\n        cout << \"1 is larger than 2\" << endl;\n    if\
+    \ ( 2 > 1)\n        cout << \"2 is larger than 1\" << endl;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_19_0.png)\n\
+    \n## Output\n\n2 is larger than 1\n\nif is always followed by a condition.\nif\
+    \ is also in blue.\nThe computer will then make a decision.\nOne is not larger\
+    \ than two.\n\n```cpp\n// Using a while loop to repeat\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n    int age=1;\n    while (age < 5) {\n\
+    \        cout << \"Jack is \" << age << \" years old.\";\n        cout << \"Jack\
+    \ doesn’t go to school.\" << endl;\n        age++; //age= age+1;\n    }\n    cout\
+    \ << \"Jack is now \" << age << \" years old and can go to school!\";\n}\n```\n\
+    \n## Output\n\nJack is 1 years old. Jack doesn't go to school.\nJack is 2 years\
+    \ old. Jack doesn't go to school.\nJack is 3 years old. Jack doesn't go to school.\n\
+    Jack is 4 years old. Jack doesn't go to school.\nJack is now 5 years old and can\
+    \ go to school!\n\nwhile also has a condition and is a loop,\neverything in {\
+    \ } is in its group.\n\nWhen the condition is true,\neverything in the group gets\
+    \ a redo.\n\nWhen the condition is false,\nthe group falls through.\n\n```cpp\n\
+    // Using a for loop to repeat\n#include <iostream>\nusing namespace std;\n\nint\
+    \ main() {\n    // for loop j\n    for (int j = 1; j < 6; j++) {\n        cout\
+    \ << j;\n    }\n    cout << endl;\n\n    // for loop k\n    for (int k = 1; k\
+    \ < 6; k++) {\n        cout << k;\n    }\n    cout << endl;\n}\n```\n\n## Output\n\
+    \n```\n*\n*\n*\n```\n\nfor is another type of loop,\nThe only difference between\
+    \ j and k is that they\n\n## Glossary\n\n- compiler: A program that translates\
+    \ C++ into machine language.\n- #include: Tells the compiler to refer to file.\
+    \ Use <> to surround the file name.\n- iostream: Said as Input and Output. A previously\
+    \ created file that adds the use.\n- using namespace std: Said before cout and\
+    \ cin.\n- <<: Insertion Operator. Used with cout to display text or values.\n\
+    - >>: Extraction Operator. Used with cin to obtain values or other input.\n- //:\
+    \ Designates any preceding information as comments and are ignored by the compiler.\n\
+    - ;: Ends a C++ statement. Very similar to the way a period ends a sentence.\n\
+    - \"\": Used with cout to output text within the quotations.\n"
+  mdcn: "\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_0_0.png)\n\n## 少儿童 C++\n\n一个关于基础编程语言的趣味且视觉化的介绍\n\
+    \n作者：Blaise Vanden-Heuvel & John C. Vanden-Heuvel Sr.\n\n插图：Tom Holmes\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_2_0.png)\n\
+    \n版权 © 2015 Blaise Vanden-Heuvel & John C. Vanden-Heuvel Sr.\n由 Code Babies 制作与设计\n\
+    版权所有。Code Babies Media 出版\n第一版\n\n```cpp\n// 孩子的第一个 C++ 程序\n#include <iostream>\n\
+    using namespace std;\n\nint main()\n{\n    cout << \"Hello Little Coder!\";\n\
+    }\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_3_0.png)\n\n## 输出\n\nHello\
+    \ Little Coder!\n\n绿色的字是虚假的。\n其余是我们的朋友。\n蓝色的字是特殊的。\n红色的字是被说出来的。\n\n```cpp\n//\
+    \ 3 个输出语句\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n    cout\
+    \ << \"Hello Little Coder!\" << endl;\n    cout << \"I love you.\\n\";\n    cout\
+    \ << \"Goodbye.\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_5_0.png)\n\
+    \n## 输出\n\nHello Little Coder!\nI love you.\nGoodbye.\n\n红色的字越多，说的话越多。\n绿色的字仍然永远看不见。\n\
+    要创建新行使用 << endl。\n你也可以使用 '\\n'。\n\n```cpp\n// 输出输出程序\n#include <iostream>\nusing\
+    \ namespace std;\n\nint main() {\n    cout << \" ____________________\" << endl;\n\
+    \    cout << \" -=\\c...................\" << endl;\n    cout << \" `~~~~~~/ ~~\
+    \ \" << endl;\n    cout << \" -==/ / \" << endl;\n    cout << \" -'\" << endl;\n\
+    \    cout << endl << \"\\n\";\n    cout << \" ._\" << endl;\n    cout << \" (_)_\"\
+    \ << endl;\n    cout << \" (_ _(_),\" << endl;\n}\n```\n\n## 输出\n\n```\n\\\n \
+    \  __________\n-=\\c~~~~~~~~~~ )\n   '~~~~~~/ ~~~\n      -==/ / !\n        _/\n\
+    \n   ':.\n  ( _ )_\n (_ _ )(_ ,)\n```\n\n**main()** 是最好的，它负责所有的其他工作。\n没有 **main()**\
+    \ 就没有飞机。\n**<<endl** 每次都会结束一行。\n\n```cpp\n// 如何在 C++ 中相加\n#include <iostream>\n\
+    using namespace std;\n\nint main()\n{\n    int a;\n    int b;\n    int c;\n\n\
+    \    a = 1;\n    b = 2;\n    c = a + b;\n\n    cout << c;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_9_0.png)\n\
+    \n## 输出\n\n3\n\n数字也会被出来，\n\n但它们不是红色的。\n\ncout<<c 意味着电脑说了 3。\n\n![](img/c250f5b4c11_0.png)\n\
+    \n## 输出\n\n变量 a 是 1\n数组 b[4] 是 5\n\n- 像 'a' 这样的变量只保存一个东西。\n这个东西可以是一个数字、\n一个字母或字符串。\n\
+    \n- 像 b[ ] 这样的数组可以包含很多。\nb[ ] 有 5 个槽位。\n\n```cpp\n// 什么是字符串？\n#include <iostream>\n\
+    #include <string>\nusing namespace std;\n\nint main() {\n    string bird;\n  \
+    \  bird = \"Polly\";\n\n    cout << bird << \"wants a cracker?\";\n}\n```\n\n\
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_13_0.png)\n\n## 输出\n\nPolly wants a cracker?\n\
+    \n把 string 想象成一根\n长绳子\n可以系任何东西。\n\nstring bird 可以包含字母、\n数字和单词。\n\n```cpp\n// 第一次使用\
+    \ cin\n#include <iostream>\nusing namespace std;\n\nint main() {\n    string name;\n\
+    \    cout << \"Let's play a game,\\n\";\n    cout << \"type in your name:\\n\"\
+    ;\n    cin >> name;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_15_0.png)\n\
+    \n## 输出\n\nLet’s play a game,\ntype in your name:\n\n> 电脑用 cout<< 说话\n用 cin>>\
+    \ 倾听\n当你看到 cin>> 时\n那就是你输入名字的时候\n说出你的名字\n结束游戏！\n```\n\n```cpp\n// 孩子的第一个函数\n#include\
+    \ <iostream>\nusing namespace std;\nvoid train ();\nint main()\n{\n    train();\n\
+    }\n\nvoid train()\n{\n    cout << \"      ______\" << endl;\n    cout << \"  \
+    \   |  __  _\" << endl;\n    cout << \"     |  | |___V_\" << endl;\n    cout <<\
+    \ \"     | || ||   \\\"\" << endl;\n    cout << \"     |  |   |    \\\"\" << endl;\n\
+    \    cout << \"     / \\\\|_ /\\| /\\\\\" << endl;\n    cout << \"      \\\\ \
+    \  /\" << endl;\n```\n\n## 输出\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_18_0.png)\n\
+    \nmain() 是一个函数，train() 也是。\n\ntrain() 在 main() 内部\n\ntrain() 使用 main() 作为连接点\n\
+    这就是我们调用函数的方式。\n\n```cpp\n// 如何使用 if 语句\n#include <iostream>\nusing namespace std;\n\
+    \nint main() {\n    if ( 1 > 2 )\n        cout << \"1 is larger than 2\" << endl;\n\
+    \    if ( 2 > 1)\n        cout << \"2 is larger than 1\" << endl;\n}\n```\n\n\
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_19_0.png)\n\n## 输出\n\n2 is larger than\
+    \ 1\n\nif 后面总是跟着一个条件。\nif 也是蓝色的。\n电脑将做出决定。\n1 并不比2 大。\n\n```cpp\n// 使用 while 循环重复\n\
+    #include <iostream>\nusing namespace std;\n\nint main() {\n    int age=1;\n  \
+    \  while (age < 5) {\n        cout << \"Jack is \" << age << \" years old.\";\n\
+    \        cout << \"Jack doesn’t go to school.\" << endl;\n        age++; //age=\
+    \ age+1;\n    }\n    cout << \"Jack is now \" << age << \" years old and can go\
+    \ to school!\";\n}\n```\n\n## 输出\n\nJack is 1 years old. Jack doesn't go to school.\n\
+    Jack is 2 years old. Jack doesn't go to school.\nJack is 3 years old. Jack doesn't\
+    \ go to school.\nJack is 4 years old. Jack doesn't go to school.\nJack is now\
+    \ 5 years old and can go to school!\n\nwhile 也有一个条件并且是一个循环，\n{ } 中的所有内容都在同一个组内。\n\
+    \n当条件为真时，\n组内的所有内容都会重新执行。\n\n当条件为假时，\n组跳过。\n\n```cpp\n// 使用 for 循环重复\n#include\
+    \ <iostream>\nusing namespace std;\n\nint main() {\n    // for 循环 j\n    for (int\
+    \ j = 1; j < 6; j++) {\n        cout << j;\n    }\n    cout << endl;\n\n    //\
+    \ for 循环 k\n    for (int k = 1; k < 6; k++) {\n        cout << k;\n    }\n   \
+    \ cout << endl;\n}\n```\n\n## 输出\n\n```\n*\n*\n*\n```\n\nfor 是另一种类型的循环，\nj 和 k\
+    \ 之间唯一的区别在于它们\n\n## 术语表\n\n- compiler: 一个将 C++ 翻译成机器语言的程序。\n- #include: 告诉编译器引用文件。使用\
+    \ <> 包围文件名。\n- iostream: 读作输入和输出。一个之前创建的文件，增加了这些使用。\n- using namespace std: 用在\
+    \ cout 和 cin 之前。\n- <<: 插入运算符。配合 cout 用于显示文本或值。\n- >>: 提取运算符。配合 cin 用于获取值或其他输入。\n\
+    - //: 将之前的任何信息标记为注释，它们会被编译器忽略。\n- ;: 结束一个 C++ 语句。非常类似于句号结束句子的方式。\n- \"\": 用于 cout\
+    \ 输出引号内的文本。\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_0_0.png)'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - '[PAGE 2]
+
+
+    # # C++ for Kids
+
+
+    A fun and visual introduction to the fundamental programing language
+
+
+    by Blaise Vanden-Heuvel & John C. Vanden-Heuvel Sr.
+
+
+    Illustrations by Tom Holmes
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_2_0.png)
+
+
+    Copyright © 2015 Blaise Vanden-Heuvel & John C. Vanden-Heuvel Sr.
+
+    Produced and Designed by Code Babies
+
+    All rights reserved. Published by Code Babies Media
+
+    First Edition'
+  - "[PAGE 3]\n\n```\n//Kid's first C++ program\n#include <iostream>\nusing namespace\
+    \ std;\n\nvoid main ()\n{\n    cout<<\"Hello Little Coder!\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_3_0.png)"
+  - '[PAGE 4]
+
+
+    # Output
+
+
+    Hello Little Coder!
+
+
+    Words in green are pretend.
+
+    The rest are our friends.
+
+    Words in blue are special.
+
+    Words in red are said.'
+  - "[PAGE 5]\n\n```\n//3 output statements\n#include <iostream>\nusing namespace\
+    \ std;\n\nvoid main ()\n{\n    cout << \"Hello Little Coder!\" << endl;\n    cout\
+    \ << \"I love you.\\n\";\n    cout << \"Goodbye.\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_5_0.png)"
+  - '[PAGE 6]
+
+
+    # Output
+
+
+    Hello Little Coder!
+
+    I love you.
+
+    Goodbye.
+
+
+    More words in red means more words are said.
+
+    More words in green are still never seen.
+
+    To create new lines use <<endl.
+
+    You can use ''\n'' as well.'
+  - "[PAGE 7]\n\n```\n//Airplane output program\n#include <iostream>\nusing namespace\
+    \ std;\n\nvoid main () {\n    cout<<\" \\ ____________________\"<<endl\";\n  \
+    \  cout<<\" -=\\c.......................\")<<endl\";\n    cout<<\" `~~~~~~/ ~~~\\\
+    \ \"<<endl\";\n    cout<<\" -==/ / \"<<endl\";\n    cout<<\" _-' \"<<endl\";\n\
+    \    cout<<endl;\\n    cout<<\" ._\"<<endl\";\n    cout<<\" ( _)_\"<<endl\";\n\
+    \    cout<<\" (_ _(_),)\"<<endl\";\n}\n```"
+  - "[PAGE 8]\n\n# Output\n\n```\n\\\\\n   __________\n-=\\c~~~~~~~~~~ )\n   '~~~~~~/\
+    \ ~~~\n      -==/ / !\n        _/\n\n   ':.\n  ( _ )_\n (_ _ )(_ ,)\n```\n\n**main()**\
+    \ is the best, it is in charge of all the rest.\nWithout **main()** there would\
+    \ be no plane.\n**<<endl** ends a line, every time."
+  - "[PAGE 9]\n\n```\n//How to add in C++\n#include <iostream>\nusing namespace std;\n\
+    \nvoid main ()\n{\n    int a;\n    int b;\n    int c;\n\n    a= 1;\n    b= 2;\n\
+    \    c= a + b;\n\n    cout<<c;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_9_0.png)"
+  - '[PAGE 10]
+
+
+    # Output
+
+
+    3
+
+
+    Numbers are also said,
+
+
+    but they aren''t in red.
+
+
+    cout<<c means the computer says 3.'
+  - '[PAGE 11]
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_11_0.png)'
+  - '[PAGE 12]
+
+
+    # Output
+
+
+    Variable a is 1
+
+    Array b[4] is 5
+
+
+    > Variables like ''a'' hold only one thing.
+
+
+    That one thing could be a number,
+
+    a letter or a string.
+
+
+    Arrays like b[ ] can hold a lot.
+
+    b[ ] has 5 slots.'
+  - "[PAGE 13]\n\n```\n//What is a string?\n#include <iostream>\n#include <string>\n\
+    using namespace std;\n\nvoid main ()\\{\n    string bird;\n    bird=\"Polly\"\
+    ;\n\n    cout<<bird<<\"wants a cracker?\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_13_0.png)"
+  - '[PAGE 14]
+
+
+    # Output
+
+
+    Polly wants a cracker?
+
+
+    Think of string
+
+    as a long rope
+
+    that can hold anything.
+
+
+    string bird can hold letters,
+
+    numbers and words.'
+  - "[PAGE 15]\n\n```\n//Using cin for the first time\n#include <iostream>\nusing\
+    \ namespace std;\n\nvoid main () {\n    string name;\n    cout<<\"Let's play a\
+    \ game,\\n\";\n    cout<<\"type in your name:\\n\";\n    cin>>name;\n\n}\n```\n\
+    \n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_15_0.png)"
+  - '[PAGE 16]
+
+
+    # Output
+
+
+    Let’s play a game,
+
+    type in your name:
+
+
+    ```
+
+    The computer talks with cout<<
+
+    and listens with cin>>
+
+    When you see cin>>
+
+    that is when you type your name in
+
+    Say your name
+
+    to finish the game!
+
+    ```'
+  - "[PAGE 17]\n\n```\n//Kid's first function\n#include <iostream>\nusing namespace\
+    \ std;\nvoid train ()\nn\nvoid main ()\n{\n    train();\n}\n\nvoid train())\n\
+    {\n    cout<<\"      ______\"<<endl;\n    cout<<\"     |  __  _\"<<endl;\n   \
+    \ cout<<\"     |  | |___V_\"<<endl;\n    cout<<\"     | || ||   \\\"<<endl;\n\
+    \    cout<<\"     |  |   |    \\\"<<endl;\n    cout<<\"     / \\||_ /\\| /\\\"\
+    <<endl;\n    cout<<\"      \\/   \\/\"<<endl;\n```"
+  - '[PAGE 18]
+
+
+    # Output
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_18_0.png)
+
+
+    main() is a function and so is train()
+
+
+    train() is inside main()
+
+
+    train() uses main() as a junction
+
+    That is how we call a function.'
+  - "[PAGE 19]\n\n```\n//How to use an if statement\n#include <iostream>\nusing namespace\
+    \ std;\n\nvoid main () {\n    if ( 1 > 2 )\n        cout<<\"1 is larger than 2\"\
+    <<endl;\n    if ( 2 >1)\n        cout<<\"2 is larger than 1\"<<endl;\n}\n```\n\
+    \n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_19_0.png)"
+  - '[PAGE 20]
+
+
+    # Output
+
+
+    2 is larger than 1
+
+
+    if is always followed by a condition.
+
+    if is also in blue.
+
+    The computer will then make a decision.
+
+    One is not larger than two.'
+  - "[PAGE 21]\n\n```\n//Using a while loop to repeat\n#include <iostream>\nusing\
+    \ namespace std;\n\nvoid main () {\n    int age=1;\n    while (age < 5) {\n  \
+    \      cout<<\"Jack is \"<<age<<\" years old.\";\n        cout<<\"Jack doesn’t\
+    \ go to school.\\<<endl;\n        age++; //age= age+1;\n    }\n    cout<<\"Jack\
+    \ is now \"<<age<<\" years old and can go to school!\";\n}\n```"
+  - '[PAGE 22]
+
+
+    # Output
+
+
+    Jack is 1 years old. Jack doesn''t go to school.
+
+    Jack is 2 years old. Jack doesn''t go to school.
+
+    Jack is 3 years old. Jack doesn''t go to school.
+
+    Jack is 4 years old. Jack doesn''t go to school.
+
+    Jack is now 5 years old and can go to school!
+
+
+    while also has a condition and is a loop,
+
+    everything in { } is in its group.
+
+
+    When the condition is true,
+
+    everything in the group gets a redo.
+
+
+    When the condition is false,
+
+    the group falls through.'
+  - "[PAGE 23]\n\n```\n//Using a for loop to repeat\n#include <iostream>\nusing namespace\
+    \ std;\n\nvoid main() {\n    //for loop j\n    for (int j = 1; j < 6; j++) {\n\
+    \        cout<<\"*\";\n    }\n    cout<<endl<<endl;\n\n    //for loop k\n    for\
+    \ (int k=1; k<6; k++) {\n        cout<<\"*\"\\endl;\n    }\n}\n```"
+  - '[PAGE 24]
+
+
+    # Output
+
+
+    ```
+
+    ******
+
+    *
+
+    *
+
+    *
+
+    *
+
+    *
+
+    ```
+
+
+    for is another type of loop,
+
+    it goes around like a hula-hoop.
+
+
+    Both loops go from 1 to 6,
+
+    every time outputting an asterisk.
+
+
+    The only difference between loop j and k
+
+    is is that they go in a different way.'
+  - '[PAGE 25]
+
+
+    # Glossary
+
+
+    # compiler
+
+
+    A computer program that translates C++ language into machine language so the computer
+    can understand it.
+
+
+    # #include
+
+
+    Tells the compiler to refer to another, already created file. Use <> to surround
+    the file name.
+
+
+    # iostream
+
+
+    Said as [I O stream] for Input and Output. A previously created file that adds
+    the use of input and output.
+
+
+    # using namespace std
+
+
+    Said as [using namespace standard]. A commonly used statement that includes std::
+    before standards like cout and cin so we don''t have to
+
+
+    ```
+
+    C-OUT
+
+    ```
+
+
+    cout
+
+    Said as [c out]. The standard output for the language.'
+  - '[PAGE 26]
+
+
+    # cin
+
+
+    Said as [c in]. The standard input for the language.
+
+
+    # <<<<
+
+
+    Insertion Operator. Used with cout to display text or values.
+
+
+    # >>
+
+
+    Extraction Operator. Used with cin to obtain values or other input from the user.
+
+
+    # //
+
+
+    Designates any preceding information as comments and are ignored by the compiler.
+
+
+    # ;
+
+
+    Ends a c/c++ statement. Very similar to the way a period (.) ends a sentence in
+    the English language.
+
+
+    # " ""
+
+
+    Used with cout to output text within the quotations.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_26_0.png)
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_26_1.png)'
+  - '[PAGE 27]
+
+
+    # void
+
+
+    Data/return type that allows a null (empty or invalid) value.
+
+
+    # int
+
+
+    Data/return type that allows identifiers to store an integer.
+
+
+    # string
+
+
+    Data/return type that allows identifiers to store a group of characters. Since
+    string is not included in the iostream file, to use it, #include<string>.
+
+
+    # main ()
+
+
+    Necessary and primary function that executes code.
+
+
+    # function
+
+
+    A group of statements that are executed when the function name is called in main.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_27_0.png)'
+  - '[PAGE 28]
+
+
+    # array
+
+
+    Allows identifiers to store multiple data. The number within the braces is how
+    many pieces of data it can store. int A[2] is said [array A sub 2]. Array A can
+    hold 2 integers.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_28_0.png)
+
+
+    # identifier
+
+
+    The name of a variable, which is made known to the compiler by using data types.
+
+
+    # if
+
+
+    A statement that lets the computer make a choice based on the condition.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_28_1.png)
+
+
+    # for/while Loop
+
+
+    A statement that repeats until the condition proves false.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_28_2.png)
+
+
+    # endl \n
+
+
+    Used to visually end a line when using cout.'
+- md: '
+
+    We would love to hear from you!
+
+    Say hi :- at:
+
+    codebabies.com
+
+    Facebook.com/CodeBabiesBooks
+
+    Twitter: @codebabies
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_29_0.png)
+
+
+    Made in the USA
+
+    Middletown, DE
+
+    20 January 2016
+
+
+    ## It’s never too early to program!
+
+
+    Computers aren’t smart.
+
+    Someone has to tell them what to do.
+
+    Kids are smart.
+
+
+    Get them started right with introductions to arrays, functions, if statements,
+    loops and more with C++ for Kids.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_35_0.png)
+
+
+    Say hi at :-)
+
+    codebabies.com
+
+    Facebook.com/CodeBabiesBooks
+
+    Twitter: @codebabies
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_35_1.png)
+
+    '
+  mdcn: '
+
+    我们非常期待听到你的反馈！
+
+    在下方打个招呼吧 :-
+
+    codebabies.com
+
+    Facebook.com/CodeBabiesBooks
+
+    Twitter: @codebabies
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_29_0.png)
+
+
+    美国制造
+
+    特拉华州，米德尔敦
+
+    2016年1月20日
+
+
+    ## 学习编程越早越好！
+
+
+    电脑并不聪明。
+
+    必须由人告诉它们该做什么。
+
+    而孩子们是聪明的。
+
+
+    通过《少儿 C++》，让孩子们学习数组、函数、if 语句、循环等知识，让他们从正确的起点开始学习。
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_35_0.png)
+
+
+    在下方打个招呼吧 :-)
+
+    codebabies.com
+
+    Facebook.com/CodeBabiesBooks
+
+    Twitter: @codebabies
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_35_1.png)
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 29]
+
+
+    We would love to hear from you!
+
+    Say hi :- at:
+
+    codebabies.com
+
+    Facebook.com/CodeBabiesBooks
+
+    Twitter: @codebabies
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_29_0.png)'
+  - '[PAGE 30]
+
+
+    <!-- no content -->'
+  - '[PAGE 31]
+
+
+    <!-- no content -->'
+  - '[PAGE 32]
+
+
+    <!-- no content -->'
+  - '[PAGE 33]
+
+
+    Made in the USA
+
+    Middletown, DE
+
+    20 January 2016'
+  - '[PAGE 34]
+
+
+    <!-- no content -->'
+  - '[PAGE 35]
+
+
+    # # It’s never too early to program!
+
+
+    Computers aren’t smart.
+
+    Someone has to tell them what to do.
+
+    Kids are smart.
+
+
+    Get them started right with introductions to arrays, functions, if statements,
+    loops and more with C++ for Kids.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_35_0.png)
+
+
+    Say hi at :-)
+
+    codebabies.com
+
+    Facebook.com/CodeBabiesBooks
+
+    Twitter: @codebabies
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_35_1.png)'

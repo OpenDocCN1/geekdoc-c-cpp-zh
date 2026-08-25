@@ -1,0 +1,565 @@
+- img_proc: true
+  md: '![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # C++ for Kids
+
+
+    A fun and visual introduction to the fundamental programing language
+
+
+    by Blaise Vanden-Heuvel & John C. Vanden-Heuvel Sr.
+
+
+    Illustrations by Tom Holmes
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_2_0.png)
+
+
+    Copyright © 2015 Blaise Vanden-Heuvel & John C. Vanden-Heuvel Sr.
+
+    Produced and Designed by Code Babies
+
+    All rights reserved. Published by Code Babies Media
+
+    First Edition'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "```\n//Kid's first C++ program\n#include <iostream>\nusing namespace std;\n\
+    \nvoid main ()\n{\n    cout<<\"Hello Little Coder!\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_3_0.png)"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Output
+
+
+    Hello Little Coder!
+
+
+    Words in green are pretend.
+
+    The rest are our friends.
+
+    Words in blue are special.
+
+    Words in red are said.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "```\n//3 output statements\n#include <iostream>\nusing namespace std;\n\nvoid\
+    \ main ()\n{\n    cout << \"Hello Little Coder!\" << endl;\n    cout << \"I love\
+    \ you.\\n\";\n    cout << \"Goodbye.\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_5_0.png)"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Output
+
+
+    Hello Little Coder!
+
+    I love you.
+
+    Goodbye.
+
+
+    More words in red means more words are said.
+
+    More words in green are still never seen.
+
+    To create new lines use <<endl.
+
+    You can use ''\n'' as well.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "```\n//Airplane output program\n#include <iostream>\nusing namespace std;\n\
+    \nvoid main () {\n    cout<<\" \\ ____________________\"<<endl\";\n    cout<<\"\
+    \ -=\\c.......................\")<<endl\";\n    cout<<\" `~~~~~~/ ~~~\\ \"<<endl\"\
+    ;\n    cout<<\" -==/ / \"<<endl\";\n    cout<<\" _-' \"<<endl\";\n    cout<<endl;\\\
+    n    cout<<\" ._\"<<endl\";\n    cout<<\" ( _)_\"<<endl\";\n    cout<<\" (_ _(_),)\"\
+    <<endl\";\n}\n```"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# Output\n\n```\n\\\\\n   __________\n-=\\c~~~~~~~~~~ )\n   '~~~~~~/ ~~~\n\
+    \      -==/ / !\n        _/\n\n   ':.\n  ( _ )_\n (_ _ )(_ ,)\n```\n\n**main()**\
+    \ is the best, it is in charge of all the rest.\nWithout **main()** there would\
+    \ be no plane.\n**<<endl** ends a line, every time."
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "```\n//How to add in C++\n#include <iostream>\nusing namespace std;\n\nvoid\
+    \ main ()\n{\n    int a;\n    int b;\n    int c;\n\n    a= 1;\n    b= 2;\n   \
+    \ c= a + b;\n\n    cout<<c;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_9_0.png)"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Output
+
+
+    3
+
+
+    Numbers are also said,
+
+
+    but they aren''t in red.
+
+
+    cout<<c means the computer says 3.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_11_0.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Output
+
+
+    Variable a is 1
+
+    Array b[4] is 5
+
+
+    > Variables like ''a'' hold only one thing.
+
+
+    That one thing could be a number,
+
+    a letter or a string.
+
+
+    Arrays like b[ ] can hold a lot.
+
+    b[ ] has 5 slots.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "```\n//What is a string?\n#include <iostream>\n#include <string>\nusing namespace\
+    \ std;\n\nvoid main ()\\{\n    string bird;\n    bird=\"Polly\";\n\n    cout<<bird<<\"\
+    wants a cracker?\";\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_13_0.png)"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Output
+
+
+    Polly wants a cracker?
+
+
+    Think of string
+
+    as a long rope
+
+    that can hold anything.
+
+
+    string bird can hold letters,
+
+    numbers and words.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\n//Using cin for the first time\n#include <iostream>\nusing namespace std;\n\
+    \nvoid main () {\n    string name;\n    cout<<\"Let's play a game,\\n\";\n   \
+    \ cout<<\"type in your name:\\n\";\n    cin>>name;\n\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_15_0.png)"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Output
+
+
+    Let’s play a game,
+
+    type in your name:
+
+
+    ```
+
+    The computer talks with cout<<
+
+    and listens with cin>>
+
+    When you see cin>>
+
+    that is when you type your name in
+
+    Say your name
+
+    to finish the game!
+
+    ```'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "```\n//Kid's first function\n#include <iostream>\nusing namespace std;\nvoid\
+    \ train ()\nn\nvoid main ()\n{\n    train();\n}\n\nvoid train())\n{\n    cout<<\"\
+    \      ______\"<<endl;\n    cout<<\"     |  __  _\"<<endl;\n    cout<<\"     |\
+    \  | |___V_\"<<endl;\n    cout<<\"     | || ||   \\\"<<endl;\n    cout<<\"   \
+    \  |  |   |    \\\"<<endl;\n    cout<<\"     / \\||_ /\\| /\\\"<<endl;\n    cout<<\"\
+    \      \\/   \\/\"<<endl;\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Output
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_18_0.png)
+
+
+    main() is a function and so is train()
+
+
+    train() is inside main()
+
+
+    train() uses main() as a junction
+
+    That is how we call a function.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "```\n//How to use an if statement\n#include <iostream>\nusing namespace std;\n\
+    \nvoid main () {\n    if ( 1 > 2 )\n        cout<<\"1 is larger than 2\"<<endl;\n\
+    \    if ( 2 >1)\n        cout<<\"2 is larger than 1\"<<endl;\n}\n```\n\n![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_19_0.png)"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Output
+
+
+    2 is larger than 1
+
+
+    if is always followed by a condition.
+
+    if is also in blue.
+
+    The computer will then make a decision.
+
+    One is not larger than two.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\n//Using a while loop to repeat\n#include <iostream>\nusing namespace std;\n\
+    \nvoid main () {\n    int age=1;\n    while (age < 5) {\n        cout<<\"Jack\
+    \ is \"<<age<<\" years old.\";\n        cout<<\"Jack doesn’t go to school.\\<<endl;\n\
+    \        age++; //age= age+1;\n    }\n    cout<<\"Jack is now \"<<age<<\" years\
+    \ old and can go to school!\";\n}\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Output
+
+
+    Jack is 1 years old. Jack doesn''t go to school.
+
+    Jack is 2 years old. Jack doesn''t go to school.
+
+    Jack is 3 years old. Jack doesn''t go to school.
+
+    Jack is 4 years old. Jack doesn''t go to school.
+
+    Jack is now 5 years old and can go to school!
+
+
+    while also has a condition and is a loop,
+
+    everything in { } is in its group.
+
+
+    When the condition is true,
+
+    everything in the group gets a redo.
+
+
+    When the condition is false,
+
+    the group falls through.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "```\n//Using a for loop to repeat\n#include <iostream>\nusing namespace std;\n\
+    \nvoid main() {\n    //for loop j\n    for (int j = 1; j < 6; j++) {\n       \
+    \ cout<<\"*\";\n    }\n    cout<<endl<<endl;\n\n    //for loop k\n    for (int\
+    \ k=1; k<6; k++) {\n        cout<<\"*\"\\endl;\n    }\n}\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Output
+
+
+    ```
+
+    ******
+
+    *
+
+    *
+
+    *
+
+    *
+
+    *
+
+    ```
+
+
+    for is another type of loop,
+
+    it goes around like a hula-hoop.
+
+
+    Both loops go from 1 to 6,
+
+    every time outputting an asterisk.
+
+
+    The only difference between loop j and k
+
+    is is that they go in a different way.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Glossary
+
+
+    # compiler
+
+
+    A computer program that translates C++ language into machine language so the computer
+    can understand it.
+
+
+    # #include
+
+
+    Tells the compiler to refer to another, already created file. Use <> to surround
+    the file name.
+
+
+    # iostream
+
+
+    Said as [I O stream] for Input and Output. A previously created file that adds
+    the use of input and output.
+
+
+    # using namespace std
+
+
+    Said as [using namespace standard]. A commonly used statement that includes std::
+    before standards like cout and cin so we don''t have to
+
+
+    ```
+
+    C-OUT
+
+    ```
+
+
+    cout
+
+    Said as [c out]. The standard output for the language.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# cin
+
+
+    Said as [c in]. The standard input for the language.
+
+
+    # <<<<
+
+
+    Insertion Operator. Used with cout to display text or values.
+
+
+    # >>
+
+
+    Extraction Operator. Used with cin to obtain values or other input from the user.
+
+
+    # //
+
+
+    Designates any preceding information as comments and are ignored by the compiler.
+
+
+    # ;
+
+
+    Ends a c/c++ statement. Very similar to the way a period (.) ends a sentence in
+    the English language.
+
+
+    # " ""
+
+
+    Used with cout to output text within the quotations.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_26_0.png)
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_26_1.png)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# void
+
+
+    Data/return type that allows a null (empty or invalid) value.
+
+
+    # int
+
+
+    Data/return type that allows identifiers to store an integer.
+
+
+    # string
+
+
+    Data/return type that allows identifiers to store a group of characters. Since
+    string is not included in the iostream file, to use it, #include<string>.
+
+
+    # main ()
+
+
+    Necessary and primary function that executes code.
+
+
+    # function
+
+
+    A group of statements that are executed when the function name is called in main.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_27_0.png)'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# array
+
+
+    Allows identifiers to store multiple data. The number within the braces is how
+    many pieces of data it can store. int A[2] is said [array A sub 2]. Array A can
+    hold 2 integers.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_28_0.png)
+
+
+    # identifier
+
+
+    The name of a variable, which is made known to the compiler by using data types.
+
+
+    # if
+
+
+    A statement that lets the computer make a choice based on the condition.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_28_1.png)
+
+
+    # for/while Loop
+
+
+    A statement that repeats until the condition proves false.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_28_2.png)
+
+
+    # endl \n
+
+
+    Used to visually end a line when using cout.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'We would love to hear from you!
+
+    Say hi :- at:
+
+    codebabies.com
+
+    Facebook.com/CodeBabiesBooks
+
+    Twitter: @codebabies
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_29_0.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'Made in the USA
+
+    Middletown, DE
+
+    20 January 2016'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# # It’s never too early to program!
+
+
+    Computers aren’t smart.
+
+    Someone has to tell them what to do.
+
+    Kids are smart.
+
+
+    Get them started right with introductions to arrays, functions, if statements,
+    loops and more with C++ for Kids.
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_35_0.png)
+
+
+    Say hi at :-)
+
+    codebabies.com
+
+    Facebook.com/CodeBabiesBooks
+
+    Twitter: @codebabies
+
+
+    ![](img/c250f5b4c5b7fab1cd6ff30d8c375a1f_35_1.png)'
+  merge: -1
+  pgno: 35
