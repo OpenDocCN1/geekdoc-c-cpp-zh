@@ -1,0 +1,2086 @@
+- img_proc: true
+  md: '# 1 – Concepts of OOP
+
+
+    1) What is Object Oriented Programming? Differentiate procedure oriented and object
+    oriented programming language. OR
+
+    List out characteristics of POP and OOP.
+
+
+    Object Oriented Programming paradigm represents concepts as objects that has fields
+    and associated procedures known as methods.
+
+
+    | Procedure Oriented Programming (POP) | Object Oriented Programming (OOP) |
+
+    |---|---|n| 1. Emphasis is on doing things not on data, means it is function |
+    1. Emphasis is on data rather than procedure, means object driven |
+
+    | 2. Main focus is on the function and procedures that operate on data | 2. Main
+    focus is on the data that is being operated |
+
+    | 3. Top Down approach in program design | 3. Up approach in program design |
+
+    | 4. Large programs are divided into smaller programs known as functions | 4.
+    Large programs are divided into classes and objects |
+
+    | 5. Most of the functions share global data | 5. Data is tied together with function
+    in the data structure |
+
+    | 6. Data moves openly in the system from one function to another | 6. Data is
+    hidden and cannot be accessed by external functions |
+
+    | 7. Adding of data and function is difficult | 7. Adding of data and function
+    is easy |
+
+    | 8. We cannot declare namespace directly | 8. We can use name space directly,
+    Ex: using namespace std; |
+
+    | 9. Concepts like inheritance, polymorphism, data encapsulation, abstraction,
+    access specifiers are not available. | 9. Concepts like inheritance, polymorphism,
+    data encapsulation, abstraction, access specifiers are available and can be easily
+    used |
+
+    | 10. Examples: C, Fortran, Pascal, etc... | 10. Examples: C++, Java, C#, etc...
+    |
+
+
+    2) Explain Basic Concepts of OOP. OR
+
+    Explain Following terms.
+
+
+    Various concepts present in OOP to make it more powerful, secure, reliable and
+    easy.
+
+
+    Object
+
+
+    +   * An object is an instance of a class.
+
+    * An object means anything from real world like person, computer, bench etc...
+
+    * Every object has at least one unique identity.
+
+    * An object is a component of a program that knows how to interact with other
+    pieces of the program.
+
+    * An object is the variable of the type class.
+
+    * For example, If water is class then river is object.
+
+
+    Class
+
+
+    +   * A class is a template that specifies the attributes and behavior of things
+    or objects.
+
+    * A class is a blueprint or prototype from which objects are created.
+
+    * A class is the implementation of an abstract data type (ADT).
+
+    * It defines attributes and methods.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: "# 1 – Concepts of OOP\n\nExample:\n\n```\nclass employee // Class\n{\n    char\
+    \ name[10]; // Data member\n    int id; // Data member\n    public:\n    void\
+    \ getdata() // Member function\n    {\n        cout<<\\\n```\n\n+   - In example\
+    \ class employee is created and 'a' is object of this class.\n\n+   - Object declaration\
+    \ can also be made in main() function as follows:\n\n```\nint main()\n{\n    employee\
+    \ a;\n}\n```\n\n# Data Abstraction\n\n+   - Just represent essential features\
+    \ without including the background details.\n- They encapsulate all the essential\
+    \ properties of the objects that are to be created.\n- The attributes are sometimes\
+    \ called 'Data members' because they hold information.\n- The functions that operate\
+    \ on these data are sometimes called 'methods' or 'member functions'.\n- It is\
+    \ used to implement in class to provide data security.\n\n# Encapsulation\n\n\
+    +   - Wrapping up of a data and functions into single unit is known as encapsulation.\n\
+    - In C++ the data is not accessible to the outside world.\n- Only those functions\
+    \ can access it which is written within single unit.\n\n# Inheritance\n\n+   -\
+    \ Inheritance is the process, by which class can acquire the properties and methods\
+    \ of another class.\n- The mechanism of deriving a new class from old class is\
+    \ called inheritance.\n- The new class is called derived class and old class is\
+    \ called base class.\n- The derived class may have all the features of the base\
+    \ class.\n- Programmer can add new features to the derived class.\n- For example,\
+    \ Student is a base class and Result is derived class.\n\n# Polymorphism\n\n+\
+    \   - A Greek word polymorphism the ability to take more than one form.\n- Polymorphism\
+    \ allows a single name to be used for more than one purpose.\n- The concept of\
+    \ polymorphism is characterized by the idea of 'one interface, multiple methods',\\\
+    n- That using a generic interface for a group of related activities.\n- The advantage\
+    \ of polymorphism is that it helps reduce complexity by using one interface to\
+    \ specify a general class of action'. It is the compiler's job to select the specific\
+    \ action as it applies to each situation.\n- It means ability of operators and\
+    \ functions to act differently in different situations."
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: "# 1 – Concepts of OOP\n\nExample:\n\n```\nint total(int, int);\nint total(int,\
+    \ int, float);\n```\n\n# Static Binding\n\n+   - Static Binding defines the properties\
+    \ of variables at compile time. Therefore they can't be changed.\n\n# Dynamic\
+    \ Binding\n\n+   - Dynamic Binding means linking of procedure call to the code\
+    \ to be executed in response to the call.\n- It is also known as late binding,\
+    \ because it will not bind the code until the time of call at run. In other properties\
+    \ of the variables are determined at runtimes.\n- It is associated with polymorphism\
+    \ and inheritance.\n\n# Message Passing\n\n+   - A program contains set of object\
+    \ that communicates with each other.\n- Basic steps to communicate\n  1. Creating\
+    \ classes that define objects and their behavior.\n  2. Creating objects from\
+    \ class definition\n  3. Establishing communication among objects.\n\nMessage\
+    \ passing inwolves the object name, function name and the information to be sent.\n\
+    Example: employee.salary(name);\nIn above statement employee is an object. salary\
+    \ is a message, and name information to be sent.\n\n+   3) List out benefits of\
+    \ OOP.\n- We can eliminate redundant code though inheritance.\n- Development time\
+    \ and cost by using existing methods.\n- Build secure program by data hiding.\n\
+    - It is easy to partition the work in a project based on object.\n- Data centered\
+    \ design approach captures more details of the programming model.\n- It can be\
+    \ upgraded from small to large system.\n- It is easy to map objects in the problem\
+    \ domain to those in the program.\n- Through message interface between objects\
+    \ makes simpler description with external system.\n- Software complexity can be\
+    \ easily managed.\n\n+   4) List out Applications of OOP.\nApplications of OOP\
+    \ technology has gained importance in almost all areas of computing including\
+    \ real-time business systems. Some of the examples are as follows:\n  1. Real-time\
+    \ systems\n  2. Simulation and modeling\n  3. Object oriented database\n  4. Artificial\
+    \ intelligence and expert systems\n  5. Neural networks and parallel programming\n\
+    \  6. Decision support and office automation\n  7. CIM/CAM/CAD systems.\n  8.\
+    \ Distributed/Parallel/Heterogeneous computing\n  9. Data warehouse and data mining/Web\
+    \ mining"
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# 2 – C++ Basics\n\n1) What is C++? Explain Structure of C++ Program.\n\n+\
+    \   * C++ is an object oriented programming language.\n* It is a superset of C\
+    \ language and also called as extended version of C language.\n* It was developed\
+    \ by Bjarne Ststrup at AT&T Bell lab in New Jersey, USA in the early 1980s.\n\
+    * Structure of C++ program is as follow.\n\n| Include Files |\n| Class Declaration\
+    \ or Definition |\n| Member functions definitions |\n| Main function |\n\n+  \
+    \ * In any program first write header files as iostream.h, conio.h, etc..as requirement\
+    \ of program.\n* After header file write class declaration or definition as per\
+    \ your planning.\n* After class, define member functions which are not define\
+    \ but declare inside the class.\n* In last main function without main program\
+    \ execution is not possible.\nExample:\n\n```\n#include <iostream> //Header File\n\
+    using namespace std;\n\nclass trial //Class\n{\n    int a;\npublic:\n    void\
+    \ getdata()\n    {\n        a=10;\n    }\n    void putdata();\n};\nvoid trial::putdata()\
+    \ //Member Function outside class definition\n{\n    cout<<\"The value of a =\
+    \ \"<<a;\n}\nint main() //Main Function{\n    trial T;\n    T.getdata();\n   \
+    \ T.putdata();\n}\n```\n\nOutput:\nThe value of a = 10\n\n2) Explain following\
+    \ terms.\n\nNamespace:\n\n+   * It defines a scope for the identifiers that are\
+    \ used in a program.\n* For using identifiers in namespace directive is used as\
+    \ follows: using namespace std;\n* std is the namespace where ANSI C++ standard\
+    \ class libraries are defined.\n* All ANSI C++ programs must include this directive.\n\
+    * This will bring all the identifiers in std to the current global scope."
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: "# Darshan\nInstitute of Engineering & Technology\n\n# 2 – C++ Basics\n\n**Keywords:**\n\
+    \n+   - They are explicitly reserved identifiers and cannot be used as names for\
+    \ the program variables or other user-defined program elements.\n- Ex: int, class,\
+    \ void etc.\n\n**Identifiers:**\n\n+   - They refer to the names of variables,\
+    \ functions, arrays, classes etc., created by the programmer.\n- Each language\
+    \ has its own rules for naming these identifiers.\n- Following are common rules\
+    \ for both C and C++:\n  - Only alphanumeric characters, digits and underscores\
+    \ are permitted.\n  - The name cannot start with a digit.\n  - Uppercase and lowercase\
+    \ letters are distinct.\n  - A declared keyword cannot be used as a variable name.\n\
+    \n**Constants:**\n\n+   - Like variables, constants are data storage locations.\
+    \ But variables can vary, constants do not change.\n- You must initialize a constant\
+    \ when you create it, and you cannot assign new value later, after initialization.\n\
+    \n**Defining constant using #define:**\n\n+   - #define is a preprocessor directive\
+    \ that declares symbolic constant.\n- Example syntax:\n  ```#define PI 3.14```\n\
+    - Every time the preprocessor sees the word PI, it puts 3.14 in the text.\n\n\
+    **Example:**\n\n```\n```#include<iostream>\nusing namespace std;\n#define PI 3.14\n\
+    \nint main() {\n  int r\n```\n\nOutput:\nEnter Radius :5\nArea of Circle = 78.5\n\
+    \n**Defining constant using const keyword:**\n\n+   - 'const' keyword is used\
+    \ to declare constant variable of any type.\n- We cannot change its value during\
+    \ execution of program.\n- Syntax: const DataType Variable_Name=a=2;\n- Now 'a'\
+    \ is an integer type constant."
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "# 2 – C++ Basics\n\n3) Explain various Data types used in C++.\n\n+   * C++\
+    \ provides following data types.\n* We can divide data types into three parts\n\
+    \  1. Primary data type\n  2. Derived data type\n  3. User defined data type\n\
+    \n![](img/f20ebad23d7bd6ce200c44e70b08aa15_5_0.png)\n\nPrimary/Inbuilt Data types:\n\
+    * The primary data type of C++ is as follows.\n\n| Size (bytes) | Range |\n|---|---||\n\
+    | char | 1 | -128 to 127 |\n| unsigned char | 1 | 0 to 255 |\n| short or int |\
+    \ 2 | -32,768 to 32,767 |\n| unsigned int | 2 | 0 to 65535 |\n| long | 4 | -2147483648\
+    \ to 2147483647 |\n| unsigned long | 4 | 0 to 4294967295 |\n| float | 4 | 3.4e-38\
+    \ to 3.4e+38 |\n| double | 8 | 1.7e-308 to 1.7e+308 |\n| long double | 10 | 3.4e-4932\
+    \ to 1.1e+4932 |\n\nDerived Data types:\n* Following derived data types."
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Darshan
+
+    Institute of Engineering & Technology
+
+    2 – C++ Basics
+
+
+    +   1. Arrays
+
+    2. Function
+
+    3. Pointers
+
+
+    * We cannot use the derived data type without use of primary data type.
+
+    * **Array**: An array is a fixed-size sequenced collection of elements of the
+    same data type.
+
+    * **Pointer**: Pointer is a special variable which contains address of another
+    variable.
+
+    * **Function**: A Group of statements combined in one for some special purpose.
+
+
+    **User Defined types:**
+
+    * We have following type of user data type in C++ language.
+
+    * The user data type is defined by programmer as his/her requirement.
+
+    * **Structure**: Structure is a collection of logically related items of different
+    data types grouped together and by a single name.
+
+    * **Union**: Union is like a structure, except that element shares the common
+    memory.
+
+    * **Class**: A class is a template that defines the fields and methods of things
+    or objects. A class is a prototype from which objects are created.
+
+    * **enum**: Enum is a user-defined type consisting of a set of named constants
+    enumerator.
+
+
+    +   * In other words enum also used to assign numeric constants to strings
+
+    * Syntax of enumeration: enum_tag {list of variables};
+
+    * Example of enumeration: enum day_of_week {mon=1,tue,wed,thu,fri,sat,sun};
+
+
+    Describe various operators used in C++.
+
+    An operator is a symbol that the compiler to perform certain mathematical or logical
+    operation.
+
+
+    1. Arithmetic Operators
+
+    Arithmetic operators are used for mathematical calculation. C++ supports following
+    arithmetic operators
+
+
+    | | |
+
+    | + | Addition or unary plus |
+
+    | | Subtraction or unary minus |
+
+    | * | Multiplication |
+
+    | / | Division |
+
+    | % | Modulo division |
+
+
+    2. Relational Operators
+
+    Relational operators are used to compare two numbers and taking decisions based
+    on their relation.
+
+    Relational expressions are used in decision statements such as if, for, while,
+    etc...
+
+
+    | | |
+
+    | < | less than |
+
+    | <= | less than equal to |
+
+    | > | greater than |
+
+    | >= | greater than or equal to |
+
+
+    Hardik A. Doshi, CE Department | 2140705 – OBJECT ORIENTED PROGRAMMING WITH C++
+    7'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 2 – C++ Basics
+
+
+    | == | is equal to |
+
+    | != | is not equal to |
+
+
+    # 3. Logical Operators
+
+
+    Logical operators are used to test more than one condition and make decisions
+
+
+    | && | logical AND (Both non zero true, either is zero false) |
+
+    | || | logical OR (Both zero false, either is non zero true) |
+
+    | ! | logical NOT (non zero false, zero then true) |
+
+
+    # 4. Assignment Operators
+
+
+    Assignment operators are used to assign the result of an expression to a variable.
+    C++ also shorthand operators which simplify operation with assignment
+
+
+    | = | Assigns value of right to left side |
+
+    | += | a += 1 is same as a = a + 1 |
+
+    | -= | a -= 1 is same as a = a - 1 |
+
+    | *= | a *= 1 is same as a = a * 1 |
+
+    | /= | a /= 1 is same as a = a / 1 |
+
+    | %= | a %= 1 is same as a = a % 1 |
+
+
+    # 5. Increment and Decrement Operators
+
+
+    These are special operators in C++ which are generally not found in other languages.
+
+
+    | ++ | Increments value by 1. |
+
+    | a++ is postfix, the expression is evaluated first and then the value is incremented.
+    |
+
+    | Ex.a=10; b++; after this statement, a=11, b=10. |
+
+    | ++a is prefix, the value is incremented first and then the expression is evaluated.
+    |
+
+    | Ex.a=10; b++;; after this statement, a=11, b=11. |
+
+    | -- | Decrements value by 1. |
+
+    | a-- is postfix, the expression is evaluated first and then the value is decremented.
+    |
+
+    | Ex.a=10; b--;; after this statement, a=9, b=10. |
+
+    | --a is prefix, the value is decremented first and then the expression is evaluated.
+    |
+
+    | Ex.a=10; b--;; after this statement, a=9, b=9. |
+
+
+    # 6. Conditional Operator'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '![](img/f20ebad23d7bd6ce200c44e70b08aa15_8_0.png)
+
+
+    # 2 – C++ Basics
+
+
+    A ternary operator is known as Conditional Operator.
+
+    exp1Exp2:exp3 if exp1 is true execute exp2 otherwise exp3
+
+
+    ```
+
+    x = (a-b)?a:b; which is same as
+
+    if(x=a)
+
+    else
+
+    x=b;
+
+    ```
+
+
+    # 7. Bitwise Operators
+
+
+    Bitwise operators are used to perform operation bit by bit. Bitwise operators
+    may not be applied to float or double.
+
+
+    | & |
+
+    | | bitwise OR |
+
+    | ^ bitwise exclusive OR |
+
+    | << shift left ( shift means multiply by 2 |
+
+    | >> shift right ( shift right divides by 2 ) |
+
+
+    # 8. Special Operators
+
+
+    | & Address operator, it is used to determine address of the variable |
+
+    | * Pointer operator, it is used to declare pointer variable and to get value
+    from it |
+
+    | , Comma operator. It is used to link the related expressions together |
+
+    sizeof It returns the number of bytes the operand occupies |
+
+    | . member selection operator, used in structure |
+
+    | -> member selection operator, used in pointer to structure.
+
+
+    # 9. Extraction operator (>>)
+
+
+    Extraction operator (>>) is used with cin to input data from keyboard.
+
+
+    # 10. Insertion operator (<<)
+
+
+    Insertion operator (<<) is used with cout to output data from keyboard.
+
+
+    # 11. Scope resolution operator (::)
+
+
+    Scope resolution (::) is used to define the already declared member functions
+    of the class.
+
+
+    # 5) Explain Memory Management Operators of C++ with example.
+
+
+    +   - For dynamic memory management, C+ provides two unary operator ''new'' and
+    ''delete''.
+
+    - An object can be created using new, and destroy using delete, and when needed.
+
+    - Dynamic allocation of memory using new
+
+    - Syntax of new :
+
+
+    ```
+
+    pointer_variable = new data_type;
+
+    ```
+
+
+    +   - Here pointer_variable is a pointer of any data type.
+
+    - The new operator allocates sufficient memory to hold a data object.
+
+
+    Hardik A. Doshi, CE Department | 2140705 – OBJECT ORIENTED PROGRAMMING WITH C++
+    9'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Darshan
+
+    Institute of Engineering & Technology
+
+
+    # 2 – C++ Basics
+
+
+    +   - The pointer_variable holds the address of the memory space allocated.
+
+    - For example:
+
+
+    ```
+
+    p=new int;
+
+    q=new float;
+
+    ```
+
+
+    +   - Type of ''p'' is integer and type of ''q'' is float.
+
+
+    +   - We can combine declaration and initialization.
+
+
+    ```
+
+    int *p=new int;
+
+    float *q=new float;
+
+    ```
+
+
+    +   - We can dynamic allocate space for array, structure and classes by new.
+
+
+    ```
+
+    int *p=new int[10];
+
+    ```
+
+
+    +   - Allocates a memory space for an array of size 10.
+
+    - p[0] will refer location of p[1] and p[1] will refer location of [2] and so
+    on.
+
+
+    +   - Release memory usage
+
+    - When a data object is no longer needed, it is destroyed to release the memory
+    space for reuse.
+
+    - Syntax of delete_variable: delete pointer_variable;
+
+    - The pointer_variable is the pointer that points to a data object created with
+    new.
+
+    - For example:
+
+
+    ```
+
+    delete p;
+
+    delete q;
+
+    ```
+
+
+    +   - To free a dynamically allocated array
+
+    delete [size] pointer_variable;
+
+    delete [10]p;
+
+
+    +   6 What is reference variable? What is its major use?
+
+    - A reference provides an alias (alternative name) for a previously defined variable.
+
+    - This mechanism is useful in object oriented programming because it permits the
+    manipulation of objects by reference, and limits the copying of object parameters
+    back and forth.
+
+    - It is important to note that references can be created not only for built-in
+    data types but also for user-defined types.
+
+    - Syntax: Data_type & reference_name = variable
+
+    - For example:
+
+
+    ```
+
+    int &a=100;
+
+    int &b=a;
+
+    ```
+
+
+    +   7 Explain use of scope resolution operator (::) by giving example.
+
+    - The scope resolution operator is used to resolve or extend the scope of variable.
+
+    - C++ is block structured language. We know that the same variable name can be
+    used to have different meaning in block.
+
+    - The scope resolution operator will refer value of global variable from anywhere
+    (also from inner block).'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# 2 – C++ Basics\n\nWithout scope resolution operator all will refer local\
+    \ value.\n\nExample:\n#include <iostream.h>\nint m=10;\nint main()\n\n```\nint\
+    \ m=20;\n{\n    int k=m;\n    int m=30;\n    cout<<\"k\"=\"<<k<<\"\\n\";\n   \
+    \ cout<<\"m\"=\"<<m<<\"\\n\";\n    cout<<\"::m\"=\"<<:::m<<\"\\n\";\n}\ncout<<\"\
+    we are in outer block\\\"\\n\";\ncout<<\"m-20\"=\"<<m-20<<\"\\n\";\ncout<<\"::m-20\"\
+    =\"<<:::m-20<<\"\\n\";\nreturn 0;\n```\n\nOutput:\nwe are in inner block\nk=20\n\
+    m=30\nwe are in outer block\nm=20\n::=m-20\n\n+   8) Explain member dereferencing\
+    \ operators in short.\n\nC++ provides three pointers to member operators to access\
+    \ the class member through pointer.\n\n| Operators | Function |\n| ::* | To declare\
+    \ a pointer to a member of a class. |\n| .* | To access a member using object\
+    \ name and a pointer to that member. |\n| ->* | To access a member using a pointer\
+    \ to the object and a pointer to that member. |\n\n+   9) Explain implicit and\
+    \ explicit type conversion in short.\n\nImplicit Conversion:\n\n+   * When data\
+    \ types are mixed in an expression, C++ performs the conversions automatically.\
+    \ This is known as implicit or automatic conversion.\n* Example: m=5+2.5;\n* For\
+    \ a binary operator, if the types differ, the compiler converts one of them to\
+    \ match with the other.\n* Using the rule that the smaller type is converted to\
+    \ wider type.\n* For example if one operand is integer and another is float then\
+    \ integer is converted to float because float is wider than integer.\n* In above\
+    \ example answer m, will be in float.\n\nExplicit conversion:\n\n+   * C++ permits\
+    \ explicit type conversion of variables or expressions using the type cast operator."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# Darshan\nInstitute of Engineering & Technology\n\n# 2 – C++ Basics\n\n+ \
+    \  - Syntax: type_name (expression)\n- Example: average = sum/float(i);\n- Alternatively\
+    \ we can use typedef to create an identifier of the required type and use it in\
+    \ the functional notation.\n\nExample:\ntypedef int *int_ptr;\np = int_ptr(q);\n\
+    \nExample:\n#include<iostream>\nusing namespace std;\n\n```\nint main()\n{\n \
+    \   int intvar=5;\n    float floatvar=3.5;\n\n    cout<<\"\\nintvar = \"<<intvar<<\\\
+    n\";\n    cout<<\"\\nfloatvar = \"<<floatvar<<\\n\";\n    cout<<\"\\nfloat(intvar)\
+    \ = \"<<float(intvar)<<\\n\";\n}\n```\n\nOutput:\nintvar = 5\nfloatvar = 3.5\n\
+    float(intvar) = 5\nint(floatvar) = 3"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 3 – C++ Functions\n\nExplain Call by Value and Call by Reference with appropriate\
+    \ example. Write a program to interchange value of two variables.\n\n# Call By\
+    \ Value\n\n+   - In call by value, value of variable is passed during function\
+    \ call.\n- And this copy will be stored in another variable at function definition.\n\
+    - In call by value the original value in calling function will never change after\
+    \ execution of function.\n\nExample:\n\n```\n#include<iostream>\nusing namespace\
+    \ std;\n\nvoid swp(int a, int b) {\n    int temp=a;\n    a=b;\n    b=temp;\n}\n\
+    int main() {\n    int x,y;\n    cout<<\"Enter value of a and b:\"\";\n    cin>>x>>y;\n\
+    \    swp(x,y);\n    cout<<\"after swapping a = \"<<\"a\"<<\"and b = \"<<\"b\"\"\
+    \\n    return 0;\n}\n```\n\nOutput:\nEnter value of a and b:\n45\nAfter swapping\
+    \ a = 5 and b = 4\n\n# Call By Reference\n\n+   - In call by reference, reference\
+    \ is passed during function call.\n- The formal arguments in the called function\
+    \ become aliases to the actual function call.\n- In call by reference the original\
+    \ value in calling function will change after execution of function.\n\nExample:\n\
+    \n```\n#include<iostream>\nusing namespace std;\n\nvoid swp(int &a, int &b) //\
+    \ It is the only difference from above program\n{\n    int temp=a;\n    a=b;\n\
+    \    b=temp;\n}\nint main() {\n    int a,b;\n    cout<<\"Enter two numbers:\"\"\
+    ;\n    cin>>a>>b;\n    swap(a,b);\n    cout<<\"a=\"<<\"\"a\"<<\"and b=\"<<\"\"\
+    b\"\"\\n    return 0;\n}\n```\n\nOutput:\nEnter value of a and b:\n45"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# 3 – C++ Functions\n\n**After swapping a = 5 and b = 4**\n\n# **What is inline\
+    \ function? Explain with example.**\n\n+   - The functions can be made inline\
+    \ by adding prefix inline to the function definition.\n- An inline function is\
+    \ a function that is expanded in line when it is invoked.\n- The compiler replaces\
+    \ the function call with the corresponding function code.\n- Inline function saves\
+    \ time of calling function, saving registers, pushing arguments onto the stack\
+    \ and returning from function.\n- Preprocessor macros are popular in C, which\
+    \ has similar kind of advantages mentioned above.\n- The major drawback of macros\
+    \ is that they are not real functions.\n- Therefore, the usual error checking\
+    \ does not occur during execution of macros.\n- We should be careful when using\
+    \ inline function. If function has few lines of code and simple expressions then\
+    \ it should be used.\n\n+   **Critical situations for inline function:**\n- 1)\
+    \ If loop, a switch or a goto exists in function body.\n- 2) If function is not\
+    \ returning any value.\n- 3) If function contains static variables.\n- 4) If function\
+    \ is recursive.\n\n```\nExample:\n```cpp\ninline int cube(int n) {\n    return\
+    \ n*n;\n}\nint main() {\n    int c;\n    c = cube(10);\n    cout<<c;\n}\n```\n\
+    ```\n\nFunction call is replaced with expression so c = cube(10); becomes c=10*10*10;\
+    \ at compile time.\n\n# **Explain Function with Default Arguments with appropriate\
+    \ example.**\n\n+   - C++ allows us to call a function without specifying all\
+    \ its arguments.\n- In such cases, the function assigns a default value to the\
+    \ parameter.\n- Default values are specified when the function is declared.\n\
+    - We must add default arguments from right to left.\n- We cannot provide a default\
+    \ value to a particular argument in the middle of an argument list.\n- Default\
+    \ arguments are used in situations where arguments always have the same value.\n\
+    - For Example, passing marks.\n\n# **Legal and illegal default arguments**\n\n\
+    ```\n```cpp\nvoid f(int a, int b, int c=0);    // legal\nvoid f(int a, int b=0,\
+    \ int c=0); // legal\nvoid f(int a=0, int b, int c=0);// illegal\nvoid f(int a=0,\
+    \ int b, int c);   // illegal\nvoid f(int a=0, int b=0, int c=0);// legal\n```\n\
+    ```\n\n```\nExample:\n```cpp\n#include <iostream>\nusing namespace std;\nvoid\
+    \ f(int a=0, int b=0)\n```\n```"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# 3 – C++ Functions\n\n```\n{\ncout<<=\"a\" << a << \", b=\" << b<<endl;\n\
+    }\nint main()\n{\n  f();\nf(10);\nf(10, 99);\n  return 0;\n}\n\nOutput:\na=0,\
+    \ b=0\na=10, b=0\na=10, b=99\n```\n\n# What is friend function? Explain with example.\n\
+    \n+   - A friend function is a function that is declared using friend keyword.\n\
+    - It is not a member of the class but it has access to the private and protected\
+    \ members of the class.\n- It is not in the scope of the class to which it has\
+    \ been declared as friend.\n- It cannot access the member names directly.\n- It\
+    \ can be declared either in public or private part of the class.\n- It is not\
+    \ a member of the class so it cannot be called using object.\n- Usually, it has\
+    \ the objects as arguments.\n- It is normal external function which has special\
+    \ access privileges.\n\n```\nSyntax:\nclass ABC\n{\n  public:\n    friend void\
+    \ xyz(void); // declaration\n};\n\nExample:\n#include<iostream>\nusing namespace\
+    \ std;\nclass numbers\n{\n  public:\n    int num1, num2;\n    void setdata(int\
+    \ a, int b);\n    friend int add(numbers N);\n};\nvoid numbers ::setdata(int a,\
+    \ int b)\n{\n  num1=a;\n  num2=b;\n}\nint add(numbers N)\n{\n  return (N.num1+N.num2);\n\
+    }\nint main()\n{\n  numbers N1;\n  N1.setdata(10,20);\n  cout<<\"Sum = \"<<add(N1);\n\
+    ```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# 3 – C++ Functions\n\n}\nOutput: Sum = 30\n\n+   - add is a friend function\
+    \ of the class numbers so it can access all members of the class(private, public\
+    \ and protected).\n\n+   - Member functions of one class can be made friend function\
+    \ of another class, like...\n```cpp\nclass X\n{\n    int f();\n};\n\nclass Y\n\
+    {\n    friend int X::f();\n};\n```\n\n+   - The function f is a member of class\
+    \ X and a friend of the class Y and a friend of class.\n\n+   - We can declare\
+    \ all the member functions of one class as friend functions of another class.\
+    \ In such cases, the class is called a friend class, like class X is the friend\
+    \ class of class Z\n```cpp\nclass Z\n{\n    friend class X;\n};\n```\n\n# 5) Explain\
+    \ function overloading with example.\n\n+   - Function overloading is compile\
+    \ time polymorphism.\n\n+   - Function overloading is the practice of declaring\
+    \ the same function with different signatures.\n\n+   - The same function name\
+    \ will be used with different number of parameters and parameters of different\
+    \ type.\n\n+   - Overloading of functions with different return types is not allowed.\n\
+    \n+   - Compiler identifies which function should be called out of using the type\
+    \ and number of arguments.\n\n+   - However, the two functions with the same name\
+    \ must differ in at least one of the functions,\n\n+   a) The data type of parameters\n\
+    b) The data type of parameters\nc) The order of appearance\n\nExample:\n```cpp\n\
+    #include <iostream>\nusing namespace std;\nclass Math\n{\n    public:\n      \
+    \  void Add(int num1, int num2) //Function 1\n        {\n            cout << num1\
+    \ + num2 << endl;\n        }\n        void Add(float num1, float num2) //Function\
+    \ 2\n        {\n            cout << num1 + num2 << endl;\n        }\n};\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# 3 – C++ Functions\n\n```\nvoid add(int num1, int num2, int num3) //Function\
+    \ 3\n{\n    cout<<num1 + num2 + num3 <<endl;\n}\n```\n\n```\n;\nint main()\n{\n\
+    \    Math;\n    m.Add(10,20); // Calls function 1\n    m.Add(10.15, 25.70); //\
+    \ Calls function 2\n    m.Add(1,2,3); // Calls function 3\n}\nOutput:\n30\n35.85\n\
+    6\n```\n\n6) Explain operator overloading is compile time polymorphism.\n\n+ \
+    \  * Operator overloading is compile time polymorphism.\n* The operator overloading\
+    \ provides mechanism to perform operations on user defined data type.\n* We can\
+    \ give special meaning to any operators in which program it is implemented.\n\
+    * Rules for operator overloading\n\n+   1. Only existing operator can be overloaded.\n\
+    2. The overloaded operator must have at least one operand that is user defined.\n\
+    3. We cannot change the basic meaning and syntax of an operator.\n4. We cannot\
+    \ use friend to overload certain operators. However member function can be used\
+    \ to overload them.\n5. Unary operators, overloaded by means member function,\
+    \ take no explicit argument and return no explicit value, but those overloaded\
+    \ by a friend of function take one reference argument.\n6. Binary operators overloaded\
+    \ through a member function take one explicit argument and which are overloaded\
+    \ through a friend function take two explicit arguments.\n7. When using binary\
+    \ operators overloaded through a member function, the left hand operand must be\
+    \ an object of the relevant class.\n8. We cannot overload operators.\n\n| Operator\
+    \ | Name |\n|---|---|\n| . and * | Class member access operator |\n| :: | Scope\
+    \ Resolution Operator |\n| sizeof() | Size Operator |\n| ? | Conditional Operator\
+    \ |\n\n* Example for Unary Operator Overloading\n\n```\n#include <iostream>\n\
+    using namespace std;\nclass sample\n{\n    int a,b;\n    public:\n    void getdata()\n\
+    }\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# 3 – C++ Functions\n\n```\n{\n  a=10;\n  b=20';\n}\nvoid operator - () //Unary\
+    \ Member Function\n{\n  a = a - 5;\n  b = b - 5;\n}\nvoid disp() {\n  cout<<\"\
+    \\nnThe value of a=\"\"<<a;\n  cout<<\"\\nnThe value of b=\"\"<<b;\n}\n\nint main()\
+    \ {\n  sample S;\n  S.getdata();\n  -S;\n  S.disp(); //Call Unary Member Function\n\
+    \  getch();\n  return 0;\n}\n```\n\n**Example for Unary Operator Overloading using\
+    \ Friend function.**\n\n```\n#include <iostream>\nusing namespace std;\nclass\
+    \ sample {\n  int a,b;\npublic:\n  void getdata() {\n    a=10;\n    b=20;\n  }\n\
+    \  friend sample operator +(sample A) //Unary Friend Function\n    A.a = A.a +\
+    \ 5;\n    A.b = A.b + 5;\n    return A;\n  }\n  void disp() {\n    cout<<\"\\\
+    nnThe value of a=\"\"<<a;\n    cout<<\"\\nnThe value of b=\"\"<<b;\n  }\n}\nint\
+    \ main() {\n  sample S;\n  S.getdata();\n  S=S; //Call Unary Friend Function\n\
+    \  S.disp();\n  getch();\n  return 0;\n}\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# 3 – C++ Functions\n\n+   Example for Binary Operator Overloading\n\n```\n\
+    #include <iostream>\nusing namespace std;\nclass complex\n{\n    float real, imag;\n\
+    public:\n    complex(float _real, float _imag) // constructor\n    {\n       \
+    \ real = _real;\n        imag = _imag;\n    }\n    void disp()\n    {\n      \
+    \  cout << \"The value of real=\" << real << endl;\n        cout << \"The value\
+    \ of imag=\" << imag << endl;\n    }\n    void operator +(complex c) // Binary\
+    \ Member Function\n    {\n        real = real + c.real;\n        imag = imag +\
+    \ c.imag;\n    }\n};\nint main()\n{\n    complex x(4,4);\n    complex y(6,6);\n\
+    \    x = x + y; // Call Binary Member Function\n    x.disp();\n    getch();\n\
+    \    return 0;\n}\n```\n\n+   Example of operator overloading using friend function\n\
+    \n```\n#include <iostream>\nusing namespace std;\nclass complex\n{\n    float\
+    \ real, imag;\npublic:\n    complex(float _real, float _imag) // constructor\n\
+    \    {\n        real = _real;\n        imag = _imag;\n    }\n    void disp()\n\
+    \    {\n        cout << \"The value of real=\" << real << endl;\n        cout\
+    \ << \"The value of imag=\" << imag << endl;\n    }\n};\nriend operator +(complex\
+    \ c, complex d) // Binary Friend Function\n{\n    d.real = d.real + c.real;\n\
+    \    d.imag = d.imag + c.imag;\n    return d;\n}\nint main()\n{\n    complex x(4,4);\n\
+    \    complex y(6,6);\n    x = x + y; // Call Binary Friend Function\n    x.disp();\n\
+    }\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# 3 – C++ Functions'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n1) Explain basic concept of class.\n\n+   - A\
+    \ class is a template that specifies the attributes and behavior of things or\
+    \ objects.\n- A class is a blueprint or prototype from which objects are created.\n\
+    - A class is the implementation of an abstract data type (ADT).\n- It defines\
+    \ attributes and methods.\n\nObject declaration:\n\n+   - In following example\
+    \ class employee is created and 'a' is object of this class.\n\n```\nclass item\n\
+    {\n    // data members and member functions\n}\nitem a;\n```\n\n+   - In above\
+    \ syntax class name is item, and a is object of this class\n- Object declaration\
+    \ can be done in main() function as follows:\n\n```\nint main()\n{\n    item a;\n\
+    }\n```\n\nAccess class member:\n\n+   - Private members of the class can only\
+    \ be accessed by the members in that class.\n- Public members of the class can\
+    \ be accessed outside the class.\n- For accessing class member outside class can\
+    \ be done by dot operator and object of that class using following syntax,\n\n\
+    ```\nobject-name.function-name(actual-arguments);\n```\n\n+   - Member functions\
+    \ of the class can be declared outside class definition also as follows,\n\nSyntax:\n\
+    \n```\nclass item\n{\npublic:\n    void getdata();\n}\nvoid item::getdata();\n\
+    ```\n\nExample:\n\n```\n#include<iostream>\nusing namespace std;\n```\n\n```\n\
+    class employee\n{\n    char name[10]; // data member\n    int id; // data member\n\
+    public:\n    void getdata(); // prototype declaration\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\n;\nvoid putdata(); // prototype declaration\n\
+    \nvoid employee::getdata() // member function\n{\n    cout<<\"Enter name and id\
+    \ of employee: \";\n    cin>>name>>id;\n}\n\nvoid employee::putdata() // member\
+    \ function\n{\n    cout<<\"Display name and id of employee: \";\n    cout<<name<<id;\n\
+    }\nint main()\n{\n    employee x;\n    x.getdata();\n    x.putdata();\n}\n```\n\
+    \n2) Explain memory allocation of objects with example.\n\n+   - The member functions\
+    \ are created and placed in the memory space only once when they are defined as\
+    \ part of a class specification.\n- No separate space is allocated for member\
+    \ functions when the objects are created.\n- Only space for member variable is\
+    \ allocated separately for each object.\n- A separate memory location for the\
+    \ objects happens, because the member variables will hold different data values\
+    \ for different objects.\n\n| Common for all objects |\n| Member function 1 |\n\
+    | | |\n| Member function 1 | Memory created when |\n| Object 1 | Object 2 | Object\
+    \ 3 |\n| Member function 1 | Member function 1 | Member function 1 |\n| | | |\
+    \ |\n| Member function 1 | Member function 1 | Member function 1 |\n| | | | |\n\
+    | | | Memory created when |"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\nExample:\n\n```\nclass item\n{\n    public:\n\
+    \    int id, cost;\n    void getdata();\n};\nint main()\n{\n    item x,y,z;\n\
+    }\n```\n\n+   - In above value each object x, y and z has separate space for both\
+    \ id and cost.\n- Means value of id and cost can be different for each object.\n\
+    - But no default space is allocated to function when object is declared.\n- Required\
+    \ separate space is allocated to function during calling of function.\n\n3) Explain\
+    \ Public and Private Access modifier (specifier) for C++ classes.\n\nPublic:\n\
+    \n+   - Public members of the class are accessible by any program from anywhere.\n\
+    - There are no restrictions on accessing public members of a class.\n- Class members\
+    \ that allow manipulating or accessing the data are made public.\n\nPrivate:\n\
+    \n+   - Private members of the class can be accessed within the class and member\
+    \ functions of the class.\n- They cannot be accessed outside the class or other\
+    \ programs, not even from inherited class.\n- Encapsulation is possible due to\
+    \ the private access modifier.\n- If one tries to access the private members outside\
+    \ the class it results in a compile time error.\n- If any other access modifier\
+    \ is not specified then the member default acts as Private member.\n\nExample:\n\
+    \n```\n#include <iostream>\nusing namespace std;\nclass ABC\n{\n    public:\n\
+    \    int a;\n    private:\n    int b;\n}\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\nint main()\n{\n    ABC x;\n    x.a=5;\n \
+    \   cout<<\"Value of public variable = \"<<x.a\";\n}\n```\n\nOutput:\n5\n\n+ \
+    \  - In above program b is private member of class ABC.\n- So we cannot use it\
+    \ with object ABC outside the class, Means we cannot use x.b in main as x shown\
+    \ above.\n\n4) Explain Static data members and static member functions with example.\n\
+    \nStatic data members:\n\n+   - Data members of the class which are shared by\
+    \ all objects are known as static data members.\n- Only one copy of a static variable\
+    \ is maintained by the class and is common for all objects.\n- Static members\
+    \ are declared inside the class and defined outside the class.\n- It is initialized\
+    \ to zero when the first object of the class is created. No other initialization\
+    \ is performed.\n- It is visible within the class but its lifetime is the entire\
+    \ program.\n- Static members are generally used to maintain values common to the\
+    \ entire class.\n\nStatic member functions:\n\n+   - Static member functions are\
+    \ associated with a class, not with any object.\n- They can be invoked using class\
+    \ name, not object.\n- They can access only static members of the class.\n- They\
+    \ cannot be virtual.\n- They cannot be declared as constant or volatile.\n- A\
+    \ static member function can be called, even when a class is not instantiated.\n\
+    - There cannot be static and non-static version of the same function.\n- A static\
+    \ member function does not have this pointer.\n\nExample:\n\n```\n#include<iostream>\n\
+    using namespace std;\n\nclass item\n{\n    int number;\n    static int count;\
+    \ // static variable declaration\npublic:\n    void getdata(int a)\n{\n      \
+    \  number = a;\n        count++;\n    }\n}\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\nstatic void getcount() // the only difference\
+    \ from above program\n{\n    cout<<\"value of count: \"<<count;\n}\n\nint item\
+    \ : count; // static variable definition\n```\n\n```\nint main() {\n    item a,b,c;\n\
+    \    a.getdata(100);\n    b.getdata(200);\n    c.getdata(300);\n    a.getcount();\n\
+    \    b.getcount();\n    c.getcount();\n    get();\n    return 0;\n}\n```\n\n|\
+    \ Object a | Object b | Object c |\n| --- | --- | --- |\n| 100 | 200 | 300 |\n\
+    | | 3 | |\n\nOutput:\nvalue of count:3\nvalue of count:3\nvalue of count:3\n\n\
+    +   5) What is constructor? List out characteristics of constructors.\n\n* A constructor\
+    \ is a \"special\" member function which initializes the objects of class.\n\n\
+    Properties of constructor:\n* Constructor is invoked automatically whenever an\
+    \ object of class is created.\n* Constructor name must be the same as class name.\n\
+    * Constructors should be declared in the public section because private constructor\
+    \ cannot be invoked outside the class or so they are useless.\n* Constructors\
+    \ do not have return types and they cannot return values, not even good.\n* Constructors\
+    \ cannot be inherited, even though a derived class can call the base class constructor.\n\
+    * Constructors cannot be virtual.\n* An object with a constructor cannot be used\
+    \ as a member of a union.\n* They imply implicit to the operators new and delete\
+    \ when memory allocation is required."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\nExample:\n\n```\nclass integer\n{\n    int m,n;\n\
+    public:\n    integer() // Default constructor\n    {\n        m=n=0;\n    }\n\
+    }\n```\n\n# 2. Parameterized constructor\n\n+   - Constructors that take arguments\
+    \ are called parameterized constructors.\n- Sometimes it is necessary to initialize\
+    \ the various data elements of different objects with different values when they\
+    \ are created.\n- We can achieve this objective by passing arguments to the constructor\
+    \ function when the objects are created.\n\nExample:\n\n```\nclass integer\n{\n\
+    \    int m,n;\npublic:\n    integer(int x, int y) // Parameterized constructor\n\
+    \    {\n        m = x;\n        n=y;\n    }\n}\n```\n\n# 3. Copy constructor\n\
+    \n+   - A copy constructor is used to declare and initialize an object from another\
+    \ object.\n- For example, integer(integer &); OR integer I2 (Il).\n- Constructor\
+    \ which accepts a reference to its own class as a parameter is called copy constructor\n\
+    \nExample:\n\n```\nclass integer\n{\n    int m, n;\npublic:\n    integer(integer\
+    \ &x) // Copy constructor\n    {\n        m = x.m;\n        n = x.n;\n    }\n\
+    ```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n};\n;\n\nExample:\n\n```\n#include<iostream>\n\
+    using namespace std;\n\nclass rectangle\n{\n    int length, width;\n\npublic:\n\
+    \    rectangle() // Default constructor\n    {\n        length=0;\n        width=0;\n\
+    \    }\n    rectangle(int _length, int _width) // Parameterized constructor\n\
+    \    {\n        length = _length;\n        width = _width;\n    }\n    rectangle(rectangle\
+    \ &r_) // Copy constructor\n    {\n        length = _r.length;\n        width\
+    \ = _r.width;\n    }\n\n    // other functions for reading, writing and processing\
+    \ can be written\nhere\n```\n\n};\n\n```\nint main()\n{\n    rectangle r1; //\
+    \ Invokes default constructor\n    rectangle r2(10,10); // Invokes parameterized\
+    \ constructor\n    rectangle r3(r2); // Invokes copy constructor\n}\n```\n\n7)\
+    \ Explain destructor with example.\n\n+   - Destructor is used to destroy the\
+    \ objects that have been created by a constructor.\n- Destructor is a member function\
+    \ name must be same as class name but is preceded by a tilde (~).\n- Destructor\
+    \ never takes any argument nor it returns any value nor it has return type.\n\
+    - Destructor is invoked automatically upon exit from the program.\n- Destructor\
+    \ should be declared in the public section\n\nExample:\n\n```\n#include<iostream.h>\n\
+    using namespace std;\nclass rectangle\n{\n```\n\nHardik A. Doshi, CE Department\
+    \ | 2140705 – OBJECT ORIENTED PROGRAMMING WITH C++"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\nint length, width;\npublic:\n    rectangle()\
+    \ //Constructor\n{\n        length=0;\n        width=0;\n}\n    ~rectangle() //Destructor\n\
+    {\n    // other functions for reading, writing and processing can be written\n\
+    \    here\n}\n```\n\n```\nint main()\n{\n    rectan x; // default constructor\
+    \ is called for this object\n}\n```\n\n8) Explain use of objects as function arguments\
+    \ with example.\n\n+   Like any other data type may be used as a function argument.\
+    \ It can be done in following ways:\n1. A copy of the entire object is passed\
+    \ to the function\n    * This method is call value.\n    * Since copy of the object\
+    \ is passed to the function, any changes made to the object inside the function\
+    \ do not affect the object used to call the function.\n2. Only the address of\
+    \ the object is transferred to the function.\n    * This method is call pass-by-reference.\n\
+    \    * When an address of the object is passed, the called function works directly\
+    \ on the actual object used in the call.\n    * This means that any changes made\
+    \ to the object inside the function will reflect in the actual object.\n    *\
+    \ This method is more efficient because it requires passing only addresses of\
+    \ the object, not an entire object.\n\nExample:\n\n```\n#include<iostream>\nusing\
+    \ namespace std;\nclas time\n{\n    int hours;\n    int minutes;\npublic:\n  \
+    \  void gettime(int h, int m)\n{\n        hours=h;\n        minutes=m;\n    }\n\
+    \    void pouttime(void)\n{\n        cout<<hours<<\" hours and\";\n}\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\ncout<<\"minutes\"<<\"\\n\";\n}\nnvoid sum(time,\
+    \ time); //declaration with objects as arguments\n\nvoid time:sum(time t1, time\
+    \ t2) //t1,t2 are objects\n{\n    minutes = t1.minutes + t2.minutes;\n    hours\
+    \ = minutes/60;\n    minutes = minutes % 60;\n    hours = hours + t1.hours + t2.hours;\n\
+    }\n\nint main()\n{\n    time t1, t2, t3;\n    t1.gettime(2,45); //get t1\n   \
+    \ t2.gettime(3,30); //get t2\n    t3.sum(t1,t2); //= t1 + t2\n    cout<<\"t1:\
+    \ \" << t1.puttime(); //display t1\n    cout<<\"t2: \" << t2.puttime(); //display\
+    \ t2\n    cout<<\"t3: \" << t3.puttime(); //display t3\n\n    return 0;\n}\n```\n\
+    \n# 9) Explain operator overloading with example.\n\n+   * Operator overloading\
+    \ is compile time polymorphism.\n* The operator overloading provides mechanism\
+    \ to perform operations on user defined data type.\n* We can give special meaning\
+    \ to any operators in program it is implemented.\n* Rules for operator overloading\n\
+    \    1. Only existing operator can be overloaded.\n    2. The overloaded operator\
+    \ must have at least one operand that is user defined type.\n    3. We cannot\
+    \ change the basic nature and syntax of an operator.\n    4. We cannot use friend\
+    \ function to overload certain operators.\n5. Unary operators, overloaded by means\
+    \ of a member function, take no explicit arguments and return no explicit value;\n\
+    \    * But, those overloaded by means of a friend function, take one reference\
+    \ argument.\n6. Binary overloaded overloaded through member function take one\
+    \ explicit argument and which are overloaded through a friend function take two\
+    \ explicit arguments.\n7. When using binary operators overloaded through a member\
+    \ function, the left hand operand must be an object of the relevant class.\n8.\
+    \ We cannot overload following operators.\n\n| Operator | Name |\n| :--- | :---\
+    \ |\n| . and * | Class member access operator |\n| :: | Scope Resolution Operator\
+    \ |\n| sizeof() | Size Operator |\n| ? | Conditional Operator |"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n+   - Example for Unary Operator Overloading\n\
+    \n```\n#include <iostream>\nusing namespace std;\n\nclass sample\n{\n    int a,b;\n\
+    \n    public:\n    void getdata()\n    {\n        a=10;\n        b=20;\n    }\n\
+    \    void operator - () //Unary Member Function\n    {\n        a = a - 5;\n \
+    \       b = b - 5;\n    }\n    void disp()\n    {\n        cout<<\"\\nThe value\
+    \ of a=\\\n```\n\nOutput:\nThe value of a=5\nThe value of b=15\n\n+   - Example\
+    \ for Unary Operator Overloading using Friend function.\n\n```\n#include <iostream>\n\
+    using namespace std;\n\nclass sample\n{\n    int a,b;\n\n    public:\n    void\
+    \ getdata()\n    {\n        a=10;\n        b=20;\n    }\n    friend sample operator\
+    \ +(sample A) //Unary Friend Function\n    {\n        A.a = A.a + 5;\n       \
+    \ A.b = A.b + 5;\n        return A;\n    }\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\n{\n  void disp() {\n    cout<<\\nnThe value\
+    \ of a=\"\"<<a;\\n    cout<<\"\\nThe value of b=\"\"<<b;\n  }\n}\nint main() {\n\
+    \  sample S;\n  S.getdata();\n  S=S; //Call Unary Friend Function\n  S.disp();\n\
+    \  return 0;\n}\n```\n\nOutput:\nThe value of a=15\nThe value of b=25\n\n+   Example\
+    \ for Binary Operator Overloading\n\n```\n#include <iostream>\nusing namespace\
+    \ std;\nclass complex {\n  float real, imag;\npublic:\n  complex(float _real,\
+    \ float _imag) // constructor\n  {\n    real = _real;\n    imag = _imag;\n  }\n\
+    \  void disp() {\n    cout<<\\nThe value of real=\"\"<<real;\n    cout<<\\nThe\
+    \ value of imag=\"\"<<imag;\n  }\n  void operator +(complex c) //Binary Member\
+    \ Function\n  {\n    real = real + c.real;\n    imag = imag + c.imag;\n  }\n}\n\
+    int main() {\n  complex x(4,6);\n  complex y(6,6);\n  x + y; // Call Binary Member\
+    \ Function\n  x.disp();\n  getch();\n  return 0;\n}\n```\n\nOutput:\nThe value\
+    \ of real=10\nThe value of imag=10\n\n+   Example for Unary Operator Overloading\
+    \ using Friend function.\n\n```\n#include <iostream>\nusing namespace std;\nclass\
+    \ complex {\n\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\nfloat real, imag;\npublic:\n    complex(float\
+    \ _real, float _imag) // constructor\n{\n    real = _real;\n    imag = _imag;\n\
+    }\nvoid voidisp()\n{\n    cout<<\"The value of real=\"<<real<<\"\\n\";\n    cout<<\"\
+    The value of imag=\"<<imag<<\"\\n\";\n}\nfriend complex operator +(complex c,\
+    \ complex d) //Binary Friend function\n{\n    d.real = d.real + c.real;\n    d.imag\
+    \ = d.imag + c.imag;\n    return d;\n};\nint main()\n{\n    complex x(4,4);\n\
+    \    complex y(6,6);\n    complex s = x + y; // Call Binary Friend function\n\
+    \    z.disp();\n}\n```\n\nOutput:\nThe value of real=10\nThe value of imag=10\n\
+    \n10) List various type conversion techniques? Explain basic to class type conversion\
+    \ with.\n\n+   - C++ provides mechanism to perform automatic type conversion if\
+    \ all variable are of basic type.\n- For user defined data type programmers have\
+    \ to convert it using constructor or by using casting operator.\n- Three type\
+    \ of situation arise in user defined type conversion.\n\n+   1. Basic type to\
+    \ Class type\n2. Class type to Basic type\n3. Class type to Class type\n\nNow\
+    \ we will see each situation with example\n\n# 1. Basic type to Class type\n\n\
+    +   - The basic type to class conversion is done by using constructor.\n\nExample:\n\
+    \n```\n#include <iostream>\nusing namespace std;\nclass sample\n{\n    float a;\n\
+    public:\n    sample {}\n    sample(int x) //Constructor to convert Basic to Class\
+    \ type\n{\n    a=x;\n};\n```\n\nHardik A. Doshi, CE Department | 2140705 – OBJECT\
+    \ ORIENTED PROGRAMMING WITH C++ 31"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\n}\nvoid disp()\n{\n    cout<<\"The value\
+    \ of a=\"<<a;\nn}\nint main()\n{\n    int a=10;\n    sample S;\n    S=a; //Basic\
+    \ to class type conversion\n    S.disp();\n    return 0;\n}\n```\n\n**Output:**\n\
+    The value of a=10\n\n+   11) Explain type conversion for class to basic type.\n\
+    \n+   * The Class type to Basic type conversion is done by Casing Operator.\n\
+    * The casting operator function should satisfy the following conditions.\n\n+\
+    \   1. It must be a class member.\n2. It must not specify a return type.\n3. It\
+    \ must not have any arguments.\n\n**Example:**\n\n```\n#include <iostream>\nusing\
+    \ namespace std;\n\nclass sample\n{\n    float a;\npublic:\n    sample()\n   \
+    \ {\n        a=10.23;\n    }\n    operator int();\n}\nsample::operator int() //Casting\
+    \ operator function\n{\n    int x;\n    x=a;\n    return x;\n}\nint main()\n{\n\
+    \    sample S;\n    int y=S; // Class to Basic conversion\n    cout<<\"The value\
+    \ of y=\"<<y;\n    getch();\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\nOutput:\nnThe value of y=10\n\n# 12) Explain type\
+    \ conversion for class type to another class type\n\n+   - The class to class\
+    \ conversion is done by both constructor and casting operator.\n- If conversion\
+    \ takes place at source class, then by casting operator.\n  operator_destination_class_name()\
+    \ //Definition of Casting operator\n    //Create object of destination class\n\
+    \    //write statement to convert value\n    // Return objectcc of destination\
+    \ class\n- If conversion takes place at destination class, then by constructor.\n\
+    \  Constructor_of_Destination_Class(Source_Class Object_Name)\n  {\n    //Statement\
+    \ for conversion\n  }\n- We cannot convert a time in both source and destination\
+    \ class.\n\nExample:\n\n#include <iostream>\nusing namespace std;\n\nclass invent;\
+    \ // destination class declared\nclass invent l1; // source class\n{\n  int code;\
+    \ // item code\n  int items; // no. of items\n  float price; // cost of each item\n\
+    public:\n  invent1(int a, int b, float c)\n  {\n    code = a;\n    items = b;\n\
+    \    price = c;\n  }\n  void putdata()\n  {\n    cout <<\"code:\" << code << \"\
+    \\n\";\n    cout <<\"items:\" << items << \"\\n\";\n    cout <<\"value:\" << price\
+    \ << \"\\n\";\n  }\n\n  int getcode() {return code};\n  int getitems() {return\
+    \ items};\n  float getprice() {return price};\n\n  operator float() {return items\
+    \ * price};\n};"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# 4 – Objects and Classes\n\n```\nint code;\nfloat value;\npublic:\nninvent2\
+    \ ()\n    code = 0; value =0;\n\ninvent2(float x, float y)\n    code=x;\n    value\
+    \ = y;\n}\nvoid putdata () {\n    cout<<\"code:\" << code << \"\\n\";\n    cout<<\"\
+    value:\" << price << \"\\n\";\n}\ninvent2(invent1 p) {\n    code = p.getcode();\n\
+    \    value = p.getitems()*p.getprice();\n};\n\nint main() {\n    invent sl1(100,5,140.0);\n\
+    \    invent2 d1;\n    float _total_value;\n    total_value =sl1;\n    cout<<\"\
+    product details-invent1 type\"<<\"\\n\"\n    sl1.putdata();\n    cout << \"_stock_value\"\
+    <<\"\\n\";n    cout << \"_value=\"<<_total_value<<\"\\n\";\n\n    cout<<\"product\
+    \ details-invent2 type\"<<\"\\n\"\n    d1.putdata();\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Explain types of inheritance with example.
+
+
+    +   - Inheritance is the process, by which class can acquire the properties and
+    methods of another class.
+
+    - The mechanism of the new class is derived from a new class from an old class
+    is called inheritance.
+
+    - The new class is derived base class and old class is called the base class.
+
+    - The derived class may have all the features of the base class and the programmer
+    can add new features to the derived class.
+
+
+    # Types of Inheritance:
+
+
+    # Single Inheritance
+
+
+    +   - If a class is derived from a single class then it is called single inheritance.
+
+    - Class B is derived from class A
+
+
+    ![](img/f20ebad23d7bd6ce200c44e70b08aa15_35_0.png)
+
+
+    # Multilevel Inheritance
+
+
+    +   - A class is derived from a class which is derived from another class then
+    it is called multilevel inheritance
+
+    - Here, class C is derived from class B and class B is derived from class A, so
+    it is called multilevel inheritance.
+
+
+    ![](img/f20ebad23d7bd6ce200c44e70b08aa15_35_1.png)
+
+
+    # Multiple Inheritance
+
+
+    +   - If a class is derived from more than one class then it is called multiple
+    inheritance.
+
+    - Here, class C is derived from two classes, class A and class B.
+
+
+    ![](img/f20ebad23d7bd6ce200c44e70b08aa15_35_2.png)
+
+
+    # Hierarchical Inheritance
+
+
+    +   - If one or more classes are derived from one class then it is called hierarchical
+    inheritance.
+
+    - Here, class B, class C and class D are derived from class A.
+
+
+    ![](img/f20ebad23d7bd6ce200c44e70b08aa15_35_3.png)'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# Hybrid Inheritance\n\n+   - It is a combination of any inheritance types.\
+    \ That is either multiple or multilevel or hierarchical or any other combination.\n\
+    \n+   - Here, class B and class C are derived from class A and class D is derived\
+    \ from class B and class C.\n\n+   - class A, class B and class C is example of\
+    \ Hierarchical Inheritance and class B, class C and class D is example of Multiple\
+    \ Inheritance so this hybrid inheritance is combination of Hierarchical and Multiple\
+    \ Inheritance.\n\n![](img/f20ebad23d7bd6ce200c44e70b08aa15_36_0.png)\n\nExample:\n\
+    \n```\n#include<iostream>\nusing namespace std;\nclass A\n{\npublic:\n    void\
+    \ dispA()\n    {\n        cout<<\"Class method\"<<endl;\n    }\n};\nclass B :\
+    \ public A // Single Inheritance - class B is derived from class A\n{\npublic:\n\
+    \    void dispB()\n    {\n        cout<<\"class B method\"<<endl;\n    }\n};\n\
+    class C : public B // Multilevel Inheritance - class C is derived from class B\n\
+    {\npublic:\n    void dispC()\n    {\n        cout<<\"class C method\"<<endl;\n\
+    \    }\n};\nclass D\n{\npublic:\n    void dispD()\n    {\n        cout<<\"class\
+    \ D method\"<<endl;\n    }\n};\nclass E : public A, public D //Multiple Inheritance:class\
+    \ E is derived from class A // and D\n{\npublic:\n    void dispE()\n}\n\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\nComputer Engineering\n\n```\n\
+    {\n    cout<<\"class E method\";\n}\nclass F: public B, public C //Hybrid Inheritance:class\
+    \ F is derived from class B\n{\n    public:\n// and C\n    void dispF()\n    {\n\
+    \        cout<<\"class F method\";\n    }\n}\nint main()\n{\n    A a;\n    B b;\n\
+    \    C c;\n    D d;\n    E e;\n    F f;\n    b.displayA();\n    f.displayF();\n\
+    \    f.displayA();\n}\n```\n\nOutput:\nclass A method\nclass A method\nclass D\
+    \ method\nclass C method\n\n+   - Class B and class E are derived from class A\
+    \ so it is example of Hierachal Inheritance.\n- Class F is derived from class\
+    \ B and class C, class B is derived from class A so displayA() is not a member\
+    \ of class F then we can access it using object of class F.\n\n2) List out visibility\
+    \ of inherited members in various categories of inheritance.\n\n| Base class visibility\
+    \ | Derived class visibility | Protected derivation |\n| --- | --- | --- | ---\
+    \ |\n| Private | Not inherited | Not inherited | Not inherited |\n| Protected\
+    \ | Protected | Private | Protected |\n| Public | Public | Private | Protected\
+    \ |\n\n3) Explain protected access modifier for class members.\n\nProtected:\n\
+    \n+   - This access modifier plays a key role in inheritance.\n- Protected members\
+    \ of the class can be accessed within the class and from derived class but cannot\
+    \ be accessed from any other class or program.\n- It works like public for derived\
+    \ class and private for other programs"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# Example:\n\n```\n#include<iostream>\nusing namespace std;\n\nclass A\n{\n\
+    \    protected:\n        int a;\n\n    public:\n        void getdata()\n     \
+    \   {\n            cout<<\"Enter value of a:\"\n            cin>>a;\n        }\n\
+    }\nclass B:public A\n{\n    public:\n        void show()\n        {\n        \
+    \    cout<<\"Value of a is:\"<<a;\n        }\n}\nint main()\n{\n    B x;\n   \
+    \ x.getdata();\n    x.show();\n}\n```\n\nOutput:\nEnter value of a:5\nValue of\
+    \ a is:5\n\n# 4) What is overriding in C+? Explain with suitable example.\n\n\
+    +   - If base class and derived class have member functions with same name and\
+    \ arguments.\n- If you create an object of derived class and write code to access\
+    \ that member function then, the member function in derived class is only invokes.\n\
+    - Means the member function of derived class overrides the member function of\
+    \ base class.\n- This is called function overriding or method overriding in C++.\n\
+    \n# Example:\n\n```\n#include<iostream>\nusing namespace std;\nclass A\n{\n  \
+    \  public:\n        void display()\n        {\n            cout<<\"This is parent\
+    \ class\";\n        }\n}\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n140705 - OOP with C++nComputer\
+    \ Engineering\nUnit - 5 Inheritance\n\n```\nclass B:public A {\n    public:\n\
+    \        void display() // overrides the display() function of class A\n{\n  \
+    \          cout<<\"nThis is child class\";\n        }\n}\nint main() {\n    B\
+    \ x;\n    x.display(); // method of class B invokes, instead of class A\n}\n```\n\
+    \nOutput:\nThis is child class\n\n+   5) Explain virtual base class with example.\n\
+    * It is used to prevent the duplication/ambiguity.\n* In inheritance child class\
+    \ has two direct parents which themselves have a common base class.\n* So, the\
+    \ child inherits the grandparent via two seperate paths. it is also called as\
+    \ indirect parent class.\n* All the public and protected member of grandparent\
+    \ are inherited twice into child.\n\n![](img/f20ebad23d7bd6ce200c44e70b08aa15_39_0.png)\n\
+    \n+   * We can stop this duplication by making base class virtual.\n\n```\nFor\
+    \ example:\nclass A {\n    public:\n        int i;\n}\nclass B : virtual public\
+    \ A {\n    public:\n        int j;\n}\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n140705 - OOP with C++\nComputer\
+    \ Engineering\nUnit - 5 Inheritance\n\n```\nclass C: virtual public A\n    public:\n\
+    \        int k;\n};\n```\n\n```\nclass D: public B, public C\n{\n    public:\n\
+    \        int sum;\n};\n```\n\n+   - The keywords virtual and public may be used\
+    \ in either order.\n- If we use virtual base class, then it will inherit only\
+    \ single copy of member of base class to child class.\n\n6) List out various situations\
+    \ for the execution of base class constructor in inheritance.\n\n| Method of Inheritance\
+    \ | Order of Execution |\n|--- |--- |\n| Class B:public A { }; | A(); base constructor\
+    \ <br>B(); derived constructor |\n| Class A:public B, public C { }; | B(); base(first)\
+    \ <br>C(); base(second) <br>A(); derived |\n| Class A:public B, virtual C { };\
+    \ | C(); virtual base <br>B(); ordinary base <br>A(); derived |"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Write a short note on Polymorphism.
+
+
+    +   - Polymorphism means the ability to take more than one form.
+
+    - It allows a single name to be used for more than one related purpose.
+
+    - It means ability of operators and functions to act differently in different
+    situations.
+
+
+    Different types of polymorphism
+
+
+    ![](img/f20ebad23d7bd6ce200c44e70b08aa15_41_0.png)
+
+
+    # Compile time:
+
+
+    +   - Compile time polymorphism is function and operator overloading.
+
+
+    # Function Overloading:
+
+
+    +   - Function overloading is the practice of declaring the same function with
+    different signatures.
+
+    - The same function name will be used with different number of parameters and
+    parameters of different type.
+
+    - Overloading of functions with different return type is not allowed.
+
+
+    # Operator Overloading:
+
+
+    +   - Operator overloading is the ability to tell the compiler how to perform
+    a certain operation based on its corresponding operator''s data type.
+
+    - Like + performs addition of two integer numbers, concatenation of two string
+    variables and works totally when used with objects of time class.
+
+
+    # Dynamic Binding (Late Binding):
+
+
+    +   - Dynamic binding is the linking of a route or object at runtime based on
+    the conditions at that moment.
+
+    - It means the code associated with a given procedure is not known until the time
+    of the call.
+
+    - At-run, the code matching the object under current reference will be called.
+
+
+    # Virtual Function:
+
+
+    +   - Virtual function is a member function of class, whose functionality can
+    be over-ridden in its derived classes.
+
+    - The whole function body can be replaced with a new set of implementation in
+    the derived class.
+
+    - It is declared as virtual in the base class using the virtual keyword.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Darshan Institute of Engineering and Technology 140705 – Object Oriented\
+    \ Programming with C++\nComputer Engineering Unit - 6 Polymorphism\n\n# 2) Explain\
+    \ pointers to objects with example.\n\n+   * A pointer can point to an object\
+    \ created by a class.\n* Object pointers are useful in creating objects at run\
+    \ time.\n* For example,\n\n```\nitem x;\nitem *ptr = &x;\n```\n\nHere pointer\
+    \ ptr is initialized with the address of x.\nxx.display();\n\nAbove is equivalent\
+    \ to,\n\n```\nptr->show();\n```\n\nExample:\n\n```\n#include<iostream>\nusing\
+    \ namespace std;\nclass item\n{\nint code;\nfloat price;\npublic:\n  void getdata(int\
+    \ a, float b)\n{\n  code=a;\n  price=b;\n}\n  void show(void)\n{\n  cout<<\"code\"\
+    <<code<<\"\\n\";\n  cout<<\"price\"<<price<<\"\\n\";\n}\n};\nconst int size =2;\n\
+    int main()\n{\nitem *p=new item[size];\nitem *d = p;\nint x, i;\nfloat y;\nfor(i=0;\
+    \ i<size; i++)\n{\ncout<<\"input code and price for \"input\"<<i+1<<\"\\n\";\n\
+    cin>>x>>y;\np->getdata(x, y);\np++\n}\nfor(i=0; i<size; i++)\n{\ncout<<\"item\"\
+    <<i+1<<\"\\n\";\n}\n```\n\nHardik Doshi, Ishan Rajani 42"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "# Darshan Institute of Engineering and Technology\n\n# 140705 – Object Oriented\
+    \ Programming with C++\n\nComputer Engineering\n\nUnit - 6 Polymorphism\n\n```\n\
+    d->show();\nd++;\n)\nreturn 0;\n}\n```\n\n# 3) Explain ‘this’ pointer example.\n\
+    \n+   - 'this' pointer represent an object that invoke or call a member function.\n\
+    - It will point to the object for which member function is called.\n- It is automatically\
+    \ passed to a member function when it is called.\n- It is also called as implicit\
+    \ argument to all member function.\n- For example: S.getdata();\n- Here S is an\
+    \ object and getdata() is a member function. So, ‘this’ pointer will point or\
+    \ set to the address of object S.\n- Suppose ‘a’ is private data member, we can\
+    \ access it only in public member function by using ‘this’ pointer like as follows\n\
+    this->a=50;\n- Both will work same.\n\n# Example:\n\n```\n#include <iostream>\n\
+    using namespace std;\n\nclass sample\n{\n    int a;\n\npublic:\n    sample()\n\
+    \    {\n        a=10;\n    }\n    void disp(int a)\n    {\n        cout<<\"The\
+    \ value of argument a=\"<<a<<\"\";\n        cout<<\"\\nThe value of data member\
+    \ a=\"<<this->a<<\"\";\n    }\n};\n\nint main()\n{\n    sample S;\n    S.disp(20);\n\
+    \    return 0;\n}\n```\n\nOutput:\nThe value of argument a=20\nThe value of data\
+    \ member a=10"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "# Darshan Institute of Engineering and Technology 140705 – Object Oriented\
+    \ Programming with C++nComputer Engineering Unit - 6 Polymorphism\n\n+   - The\
+    \ most important advantage of 'this' pointer is, if there is same name of argument\
+    \ and data member than you can differentiate it.\n\n+   - By using 'this' pointer\
+    \ we can access the data member and without 'this' we can access the argument\
+    \ in same function.\n\n# 4) Explain pointer to derived class.\n\n+   - We can\
+    \ use pointers not only to the base objects but also to the objects of derived\
+    \ classes.\n\n+   - A single pointer variable can be made to point to objects\
+    \ belonging to different classes.\n\n+   - For example:\n\n```\nB *ptr //pointer\
+    \ to class B type variable\nB b; //base object\nD d; //derived object\nptr = &b;\
+    \ //ptr points to object b\n```\n\n+   - In example base class B and D is derived\
+    \ from B, then a pointer declared as a pointer to B and point to the object b.\n\
+    \n+   - We can make ptr to point to the object d as follow\n\n```\nptr = &d;\n\
+    ```\n\n+   - We can access members of derived class which are inherited from base\
+    \ class by base pointer.\n\n+   - But we can access original member of derived\
+    \ class which are not inherited by base class by pointer of derived class.\n\n\
+    # Example:\n\n```\n#include <iostream>\nusing namespace std;\n\nclass base\n{\n\
+    \    public:\n    int b;\n    void show()\n    {\n        cout<<\"\\n\\nThe value\
+    \ of b=\\\n```\n\nHardik Doshi, Ishan Rajani 44"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Darshan Institute of Engineering and Technology
+
+    140705 – Object Oriented Programming with C++
+
+    Computer Engineering
+
+    Unit - 6 Polymorphism
+
+
+    ```
+
+    bptr->b=100;
+
+    bptr->show();
+
+    bptr->d=0;
+
+    bptr->b=200;
+
+    cout << "\\nBase class pointer assign address of derived class object";
+
+    bptr->show();
+
+    desived *dptr;
+
+    dptr = 400;
+
+    cout << "\\nDerived class pointer assign address of derived class object";
+
+    bptr->d=300;
+
+    bptr->show();
+
+    return 0;
+
+    ```
+
+
+    Output:
+
+    Base class pointer assign address of base class object
+
+    The value of b100
+
+    Base class pointer assign address of derived class object
+
+    The value of b200
+
+    Derived class pointer assign address of derived class object
+
+    The value of b=200
+
+    The value of d=300
+
+
+    +   5) Explain virtual function
+
+
+    +   - It is a run time polymorphism.
+
+    - Base class and derived class have same function name and base class pointer
+    is assigned address of derived class object
+
+    - To execute function of derived class, we have to declare function of base class
+    as virtual.
+
+    - To declare virtual function just uses keyword virtual preceding its normal function
+    declaration.
+
+    - After making virtual function, the compiler will determine which function to
+    execute at run time on the basis of assigned pointer to address of base class.
+
+
+    +   Rules for virtual function
+
+    1. The virtual functions must be member of any class.
+
+    2. They cannot be static members.
+
+    3. They are accessed using object pointers.
+
+    4. A virtual function can be a friend of another class.
+
+    5. A virtual function in a base class must be defined, even though it may not
+    be used.
+
+    6. If two functions with the same name have different prototypes, C++ considers
+    them as overloaded functions, and the virtual function mechanism is ignored.
+
+    7. We cannot have virtual constructors, but we can have virtual destructors.
+
+    8. The derived class pointer cannot point to the object of base class.
+
+    9. When a base pointer points to a derived class, then it is incremented or decremented
+    only relative to its base type.\ Therefore we should not use this method to move
+    the pointer to the next object.
+
+    10. If a virtual function is defined in base class, it need not be necessarily
+    redefined in the derived class.
+
+    In such cases, call will invoke the base class.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# Darshan Institute of Engineering and Technology 140705 - Object Oriented\
+    \ Programming with C++\nComputer Engineering - Unit - 6 Polymorphism\n\nExample:\n\
+    \n```\n#include <iostream>\nusing namespace std;\n\nclass base\n{\npublic:\n \
+    \   void disp()\n    {\n        cout<<\\nSimple function in base class\";\n  \
+    \  }\n    virtual void show()\n    {\n        cout<<\\nVirtual function of Base\
+    \ class\";\n    }\n};\n\nclass derived: public base\n{\npublic:\n    void disp()\n\
+    \    {\n        cout<<\\nSame name with simple function of base class in derived\
+    \ class\";\n    }\n    void show()\n    {\n        cout<<\\nSame name with virtual\
+    \ function of base class in derived class\";\n    }\n};\n\nint main()\n{\n   \
+    \ base B;\n    derived D;\n    base *bptr;\n    bptr=\\&B;\n    cout<<\\nBase\
+    \ class pointer assign address of base class object\";\n    bptr->disp();\n  \
+    \  bptr=\\&D;\n    cout<<\\nBase class pointer assign address of derived class\
+    \ object\";\n    bptr->disp();\n    bptr->show();\n    return 0;\n}\n```\n\nOutput:\n\
+    \nSimple function in base class\nVirtual function of base class\nBase class pointer\
+    \ assign address of derived class object\nSimple function in base class\nSame\
+    \ name with virtual function of base class in derived class"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Explain Run time polymorphism with example.\n\n+   - We must access virtual\
+    \ functions through the use of a pointer declared as a pointer to the base class.\n\
+    - But, runtime polymorphism using virtual functions is achieved only when a virtual\
+    \ function is accessed through a pointer to the base class.\n\nExample:\n\n```\n\
+    #include<iostream>\n#include<string>\nusing namespace std;\nclass media {\nprotected:\n\
+    \    char title[50];\n    float price;\npublic:\n    media(char *s, float a)\n\
+    \    {\n        strcpy(title, s);\n        price = a;\n    }\n    virtual void\
+    \ display() ( )\n};\nclass book: public media {\n    int pages;\npublic:\n   \
+    \ book(char *s, float a, int p):media(s, a)\n    {\n        pages = p;\n    }\n\
+    \    void display();\n};\nclass tape:public media {\n    Float time;\nPublic:\n\
+    \    Tape(char *s, float a, float t):media(s, a)\n    {\n        Time = t;\n \
+    \   }\n    Void display();\n};\nvoid book::display() {\n    cout<<\"\\nTitle:\"\
+    \"<<title<<\"\"\\n    cout<<\"\\nPages:\"\"<<pages<<\"\"\\n    cout<<\"\\nPrice:\"\
+    \"<<price<<\"\"\\n}\nvoid tape::display() {\n    cout<<\"\\nTitle:\"\"<<title;\n\
+    ```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# Darshan Institute of Engineering and Technology\nComputer Engineering\n\n\
+    # 140705 – Object Oriented Programming with C++\nUnit - 6 Polymorphism\n\n```\n\
+    cout<<\\nPlay time:\"<<pages;\\ncout<<\\nPrice:\"<<pages;\\n\nint main()\n{\n\
+    \    char * title=new char[30];\n    float price, time;\n    int pages;\n\n  \
+    \  // book details\n    cout<<\\nenter book details\\n\";n    cout<<\\ntitle:\
+    \ \"\";\n    cin>>title;\n    cout<<\\n price: \"\";\n    cin>>price;\n    cout<<\\\
+    npages: \"\";\n    cin>>pages;\n\n    book1(title, price, pages);\n\n    cout<<\\\
+    nenter tape details \\n\"\n    cout<<\\nTitle: \"\";\n    cin>>title;\n\n    cout<<\\\
+    nPrice: \"\";\n    cin>>price;\n    cout<<\\nPlay time (mins):\";\n    cin>>time;\n\
+    \    tape1(title, price, time);\n\nmedia* list[2];\n    list[0] = &book1;\n  \
+    \  list[1] = &tape1;\n\n    cout<<\\n MEDIA DETAILS\"\n\n    cout<<\\nBOOK......\"\
+    ;\n    list[0] -> display();\n\n    cout<<\\nTAPE......\";\n    list[1] -> display();\n\
+    \n    return 0;\n}\n```\n\n# 7) Explain pure virtual functions.\n\n+   - A pure\
+    \ virtual function means 'no notion'.\n- We can say empty function. A pure virtual\
+    \ function has no definition relative to the base class.\n- Programmers have to\
+    \ redefine pure virtual function in derived class, because it has no definition\
+    \ in base class.\n- A class containing pure virtual function cannot be used to\
+    \ create any direct objects of its own.\n- This type of class is also called as\
+    \ abstract class.\n- Syntax:\n    virtual void display() = 0; OR virtual void\
+    \ display() {"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Darshan Institute of Engineering & Technology 140705 – OOP C++
+
+    Computer Engineering Unit - 7 IO and File Management
+
+
+    1) C++ Stream Classes
+
+
+    ![](img/f20ebad23d7bd6ce200c44e70b08aa15_49_0.png)
+
+
+    | Class Name | Contents |
+
+    | --- | --- |
+
+    | ios (General I/O stream class) | • Contains basic facilities that are used by
+    all other input and output classes.<br>• Also contains a pointer to a buffer object.<br>•
+    Declares constants and functions that are necessary for handling formatted input
+    and output functions. |
+
+    | istream (Input stream) | • Inherits the properties of ios.<br>• Declares input
+    functions such as get(), getline() and read()<br>• Contains overloaded extraction
+    operator >> |
+
+    | ostream (output stream) | • Inherits the properties of ios.<br>• Declares output
+    functions such as put() and write()<br>• Contains overloaded insertion operator
+    << |
+
+    | iostream (I/O stream) | • Inherits the properties of ios, **istream**, and **ostream**
+    through multiple inheritance and thus contains all the input and output functions.
+    |
+
+    | streambuf | • Provides an interface to physical devices through buffers.<br>•
+    Acts as a base for filebuf used by ios files. |
+
+
+    2) List out and explain Unformatted I/O Operations.
+
+
+    +   • C++ language provides a set of standard built-in functions which will do
+    the work of reading and displaying data or information on the I/O devices during
+    program execution.
+
+    • Such I/O functions establish an interactive communication between the program
+    and the user.
+
+
+    | Function | Syntax | Use |
+
+    | --- | --- | --- |
+
+    | cout | cout << ""; | To display character, string and number on output device.
+    |
+
+    | cin | cin >> var2; | To read character, string and number from input device.
+    |
+
+    | get(char*) | char ch; | To read character including blank space, tab and newline
+    |
+
+
+    Hardik Doshi, Ishan Rajani 49'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n\n# 140705 – OOP with C++\n\
+    Unit - 7 IO and File Management\n\nComputer Engineering\n\n| cin.get(ch); | character\
+    \ from input device. |\n|---|---|\n| get(void) | char ch; \n-cin=cin.get(); |\
+    \ It will assign input character to argument. \nTo read character including blank\
+    \ space, tab and newline from input device. It will returns input character. |\n\
+    | put() | char ch; \n-cout.put(ch); | To display single character on output device.\
+    \ If we use a number as argument to the function put(), then it will convert into\
+    \ character. |\n| getline() | char name[20]; \n-int size=10; \n-cin.getline(name,size);\
+    \ | It is used to reads a whole line of text that ends with a newline character\
+    \ or size -1 character. \nFirst argument represents the name of string and argument\
+    \ indicates the number of character to be read. |\n| write() | char name[20];\
+    \ \n-int size=10; \n-cout.write(name,size); | It is used to display whole line\
+    \ of text on output device. First argument represents the name of string and argument\
+    \ indicates the number of character to display. |\n\n+   * **Example of cin and\
+    \ out:**\n#include <iostream>\nusing namespace std;\nint main() {\n\nint a;\n\
+    cout<<\"Enter the number\";\ncin>>a;\nout<<\"The value of a=\"<<a;\n\nreturn 0;\n\
+    }\n* **Example of get(char*), char(void) and put():**\n#include <iostream>\nusing\
+    \ namespace std;\nint main() {\n\nint a=65;\nchar ch;\ncin.get(ch); //get(char*)\n\
+    out.put(ch); //put())\nch-cin.get(ch); //get(void)\nout.put(ch);\nout.put(a);\n\
+    return 0;\n}\n* **Example of getline() and write():**\n#include <iostream>\nusing\
+    \ namespace std;\nint main() {\nn\n\nHardik Doshi, Ishan Rajani\n\n50"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "```\n{\n  int size=5;\n  char name[50];\n  cin.getline(name,size); //getline()\n\
+    \  cout.write(name,size); //write\n  return 0;\n}\n```\n\n# 3) List and explain\
+    \ functions and manipulators used for Formatted I/O operations.\n\n+   - We can\
+    \ format input and output by following methods.\n1. ios class functions and flags.\n\
+    2. Manipulators.\n3. User-defined output functions.\n- Now we will see each method\
+    \ in detail.\n- The ios format functions are shown in the below table:\n\n| Function\
+    \ | Use |\n| --- | --- |\n| width() | cout.width(size); | To specify the required\
+    \ field size for displaying an output value. |\n| precision() | cout.precision(2);\
+    \ | To specify the number of digits to be displayed after the decimal point of\
+    \ a float value. |\n| fill() | cout.fill('character'); | To specify a character\
+    \ that is used to fill the unused portion of a field. |\n| setf() | cout.setf(arg1,\
+    \ arg2); | To specify format flags that can control the form of output display\
+    \ as left or right justification. |\n| unset() | cout.unsetflags(flags) | To clear\
+    \ the flags specified. |\n\n+   - In setf() we can provide one or two argument.\n\
+    cout.setf(arg1, arg2);\n- The arg1 is formatting flags in the ios class. Arg2\
+    \ is known as bit field specifies the group to which the formatting belongs.\n\
+    - The flags and bit field are shown below\n\n| Format required | Flag (arg1) |\
+    \ Bit-field (arg2) |\n| --- | --- | --- |\n| Left justified output | ios::left\
+    \ | ios::adjustfield |\n| Right justified output | ios::right | ios::adjustfield\
+    \ |\n| Padding after sign or base (like +##20) | ios::internal | ios::adjustfield\
+    \ |\n| Scientific notation | ios::scientific | ios::floatfield |\n| Fixed point\
+    \ notation | ios::fixed | ios::floatfield |\n| Decimal base | ios::doc | ios::basefield\
+    \ |"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n\n# 147075 – OOP with C+\n\
+    \nComputer Engineering\nUnit - 7 IO and File Management\n\n| Octal | ios::oct\
+    \ | ios::basefield |\n| --- | --- | --- |\n| Hexadecimal | ios::hex | ios::basefield\
+    \ |\n\n+   - The flags without base field are shown below\n\n| Flag | Meaning\
+    \ |\n| --- | --- |\n| ios::showbase | Use base indicator for numbers. |\n| ios::showpos\
+    \ | Print + before positive numbers. |\n| ios::showpoint | Show trailing decimal\
+    \ point and zeros. |\n| ios::uppercase | Use uppercase letters for hex output.\
+    \ |\n| ios::skipws | Skip white space on input. |\n| ios::unitbuf | Flush all\
+    \ streams after insertion. |\n| ios::stdio | Flush stdout and stderr after insertion.\
+    \ |\n\n+   - Example of ios functions:\n\n```\n#include <iostream>\n#include <math>\n\
+    using namespace std;\nint main()\n{\n    cout.fill('*');\n    cout.setf(ios::left,\
+    \ ios::adjustfield);\n    cout.width(10);\n    cout<<\"value\":\\n    cout.setf(ios::right,\
+    \ ios::adjustfield);\n    cout.width(15);\n    cout<<\"SQRT OF VALUE:\"\\\\n\"\
+    ;\n    cout.fill('.');\n    cout.precision(4);\n    cout.setf(ios::showpoint);\n\
+    \    cout.setf(ios::showpos);\n    cout.setf(ios::fixed, ios::floatfield);\n\n\
+    \    for(int i=1; i<=10; i++)\n{\n        cout.setf(ios::internal, ios::adjustfield);\n\
+    \        cout.width(5);\n        cout<<i;\n\n        cout.setf(ios::right, ios::adjustfield);\n\
+    \        cout.width(20);\n        cout<<sqrt(i)<<\"\\\\n\";\n    }\n\ncout.setf(ios::scientific,\
+    \ ios::floatfield);\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n\n# 140705 – OOP with C++\n\
+    Unit - 7 IO and File Management\n\n```\ncout=\"$sqrt(100)=\"sqrt(100)\"\\n\";\n\
+    return 0;\n\n```\n\nOutput:\n\n```\nvalue*******SQRT OF VALUE\n+1......1.0000\n\
+    +2......1.4142\n+3......1.7321\n+4......2.0000\n+5......2.2361\n+6......2.4494\n\
+    +7......2.6457\n+8......2.8284\n+9......3.0000\n+10.....3.1623\n```\n\n```\nSQRT(100)=1.0000e+01\n\
+    ```\n\n+   The manipulators are shown in below table:\n\n| Manipulators | Use\
+    \ |\n|---|---|\n| setw() | To specify the required field size for displaying an\
+    \ output value. |\n| setprecision() | To specify the number of digits to be displayed\
+    \ after the decimal point of a float value. |\n| setfill() | To specify a character\
+    \ that is used to fill the unused portion of a field. |\n| setiosflags() | To\
+    \ specify format flags that can control the format of output such as left or right\
+    \ justification. |\n| resetflags() | To clear the flags specified. |\n\n+   *\
+    \ Manipulators are used to manipulate the output in specific format.\n* Example\
+    \ for manipulators\n\n```\n#include <iostream>\n#include <iomanip>\nusing namespace\
+    \ std;\nint main()\n{\n  cout.setf(ios::showpoint);\n  cout<<setw(5)<<\"\\n\"\n\
+    \  <<setw(15)<<\"Inverse of n\"<<\\n\"\n  <<setw(15)<<\"Sum of terms\\n\\n\"\n\
+    \ndouble term,sum=0;\n  for(int n=1;n<=10;n++){\n    term=1.0/float(n);\n  }\n\
+    ```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Darshan Institute of Engineering & Technology
+
+    140705 – OOP with C++nComputer Engineering
+
+    Unit - 7 IO and File Management
+
+
+    ```
+
+    sum=sum+term;
+
+    ```
+
+
+    ```
+
+    cout<<setw(5)<<n
+
+    <<setw(14)<<setprecision(4)
+
+    <<setiosflags(ios::scientific)<<term
+
+    <<setw(13)<<resetflags(ios::scientific)
+
+    <<sum<<endl;
+
+
+    }
+
+    return 0;
+
+    ```
+
+
+    Output:
+
+    Inverse of Sum of terms
+
+
+    | n | | |
+
+    | 1 | 1.0000e+00 | 1.0000 |
+
+    | 2 | 5.0000e-01 | 1.5000 |
+
+    | 3 | 3.3333e-01 | 1.8333 |
+
+    | 4 | 2.5000e-01 | 2.0833 |
+
+    | 5 | 2.0000e-01 | 2.2833 |
+
+    | 6 | 1.6667e-01 | 2.4500 |
+
+    | 7 | 1.4286e-01 | 2.5929 |
+
+    | 8 | 1.2500e-01 | 2.7179 |
+
+    | 9 | 1.1111e-01 | 2.8290 |
+
+    | 10 | 1.0000e-01 | 2.9290 |
+
+
+    +   4) Explain file stream classes with iostream classes in short.
+
+
+    ![](img/f20ebad23d7bd6ce200c44e70b08aa15_54_0.png)'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\nComputer Engineering\n147075\
+    \ – OOP C++\nUnit - 7 IO and File Management\n\n| Class | Contents |\n\n| filebuf\
+    \ | Its purpose is to set the file buffers to read and write. Contains Openprot\
+    \ constant in the open() of stream classes. Also contain close() and open() as\
+    \ members. |\n fstreambase | Provides operations on the file streams serves as\
+    \ a base for fstream, ifstream, and ofstream classes. Contains open() and close()\
+    \ functions. |\n ifstream | Provides input operations. Contains open() with default\
+    \ input mode. Inherits the functions get(), getline(), read(), seekg() and tellg()\
+    \ functions from istream. |\n ofstream | Provides output operations with default\
+    \ output mode. Inherits put(), seek(), tellp(), And write(), functions from ofstream.\
+    \ |\n fstream | Provides support for simulations input and output operations.\
+    \ Contains open() with default input mode. Inherits all the functions from istream\
+    \ and ofstream classes iostream. |\n\n+   5) List out various File mode parameters\
+    \ and explain in short.\n\n| Parameter | Meaning |\n ios::app | Append to end\
+    \ of file. |\n ios::ate | Go to end of file on opening. |\n ios::binary | Binary\
+    \ file. |\n ios::in | Open file for reading only. |\n ios::nocreate | Open fails\
+    \ if the file does not exist. |\n ios::noreplace | Open file if the file already\
+    \ exists. |\n ios::out | Open file for writing only. |\n ios::trunc | Delete the\
+    \ contents of the file if it exists. |\n\n+   - Opening a file in ios::out mode\
+    \ also opens it in the ios::trunc mode by default.\n- Both ios::out and ios::ate\
+    \ take us to the end of the file when opened. The difference between the parameters\
+    \ is that ios::app allows us to add data to the end of file only, which permits\
+    \ us to add or modify the data anywhere in the file. In both cases, a file is\
+    \ created by the specified name, if it does not exist.\n- Creating a stream using\
+    \ istream implies input and creating a stream using ofstream implies output. So,\
+    \ in these cases it is not necessary to provide the mode parameters.\n- The mode\
+    \ can combine two or more parameters using the bitwise OR operator shown as follows.\n\
+    - Fout.open(\"data\", ios::app | ios::nocreate);\n- This opens the file in the\
+    \ append mode but fails to open the file if it does not exist."
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n140705 - OOP C++nComputer\
+    \ Engineering\nUnit - 7 IO and File Management\n\n# 6) Explain File pointing functions\
+    \ in short.\n\n+   - Each file has two pointers one is getpointer to input and\
+    \ second one putpointer to output.\n- Functions for manipulation of file pointer\n\
+    \n| Functions | Meaning |\n| --- | --- |\n| seekg() | Moves get pointer (input)\
+    \ to specified location. |\n| seekp() | Moves put pointer (output) to specified\
+    \ location. |\n| tellg() | Gives the current position of the get pointer. |\n\
+    | tellp() | Gives the current position of the put pointer. |\n\n+   - For example:\n\
+    infile.seekg(20);\nint p=fileout.tellp();\n\n+   - We can also pass argument in\
+    \ the seekg() and seekp() functions as below.\nseekg(offset, refposition);\nseekp(offset,\
+    \ refposition);\n- The parameter offset represent the number of bytes by the file\
+    \ pointer is to be moved from the location specified by the parameter refposition.\n\
+    - For refposition the ios class provides following constants.\n\nExample:\n\n\
+    ```\n#include<iostream>\n#include<fstream>\n#include<cstring>\nusing namespace\
+    \ std;\n\nclass emp {\n    char name[30];\n    int ecode;\n    public:\n    emp()\
+    \ {\n}\n    emp(char *c, int c) {\n        strcpy(name,n);\n        ecode=c;\n\
+    \    }\n};\n```\n\nHardik Doshi, Ishan Rajani 56"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\nComputer Engineering\n140705\
+    \ – OOP C++\nUnit - 7 IO and File Management\n\n```\nvoid main() {\n    emp e[4];\n\
+    \    e[0]=emp(\"amit\",1);\n    e[1]=emp(\"joy\",2);\n    e[2]=emp(\"rahul\",3);\n\
+    \    e[3]=emp(\"vikas\",4);\n```\n\n```\nopen(\"empolee.dat\",ios::in | ios::out);\n\
+    \nint i;\nfor(i=0;i<4;i++)\n    file.write((char *) &e[i], sizeof(e[i]));\n  \
+    \  file.seekg(0, ios::end);\n    end_file=file.tell();\n```\n\n```\ncout<<\"number\
+    \ of objects stored in employee.dat is\"<<sizeof(emp);\n}\n```\n\n# 7) W. A. P.\
+    \ for reading and writing class objects.\n\n```\n#include<iostream>\n#include<fstream>\n\
+    ```\n\nusing namespace std;\n\n```\nclass inventory {\n    char name[10];\n  \
+    \  int code;\n    float cost;\npublic:\n    void readdata();\n    void writtenata();\n\
+    };\n```\n\n```\nvoid inventory::readda() {\n    cout<<\"Enter name\"<<endl;\n\
+    \    cin>>name;\n    cout<<\"Enter code\"<<endl;\n    cin>>code;\n    cout<<\"\
+    Enter price/cost\"<<endl;\n    cin>>cost;\n}\n```\n\n```\nvoid inventory::writtenata()\
+    \ {\n    cout<<\"Name =\"<<name;\n    cout<<\"Name =\"<<code;\n    cout<<\"Name\
+    \ =\"<<cost;\n}\n```\n\n```\nint main() {\n    inventory item[3];\n    fstream\
+    \ file;\n    file.open(\"stock.txt\",ios::in | ios::out);\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n\n# 140705 – OOP with C++nUnit\
+    \ - 7 IO and File Management\n\n```\ncout<<\"Enter details of 3 items\";nfor(int\
+    \ i=0;i<3;i++)\n{\n    item[i].readdata();\n    file.write((char *)&item[i],sizeof(item[i]));\n\
+    }\n\nfile.seek(0);\ncout<<\"output\";\nfor(int i=0;i<3;i++)\n{\n    file.read((char\
+    \ *)&item[i],sizeof(item[i]));\n    item[i].writedata();\n}\nfile.close();\nreturn\
+    \ 0;\n```\n\n+   8) W. A. P. That write content of file1 in file2 omits uppercase\
+    \ letters.\n\n```\n#include <iostream>\n#include <fstream>\n\nusing namespace\
+    \ std;\nint main()\n{\n    fstream f1,f2;\n\nf1.open(\"abc.txt\", ios::);\n  \
+    \  f2.open(\"xyz.txt\", ios::);\n\n    char ch;\n    while(f1)\n    {\n      \
+    \  f1.get(ch);\n\n        if(ch<65 || ch<90)\n        {\n            f2.put(ch);\n\
+    \        }\n    }\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n140705 – OOP C++\nComputer\
+    \ Engineering\nUnit - 8 Templates, Exceptions and STL\n\n# 1) Explain Function\
+    \ and Class Templates with appropriate example.\n\n+   * C++ templates are a powerful\
+    \ mechanism for code reuse, as they enable the programmer to write code\nthat\
+    \ behaves the same for any data type.\n* By template we can define generic classes\
+    \ and functions.\n* It can be considered as a kind of macro. When an object of\
+    \ a specific type is defined for actual use, the\ntemplate definition for that\
+    \ class is substituted with the required data type.\n\n# Function Template:\n\n\
+    +   * Suppose you write a function printData:\n\n```\nvoid printData(int value)\n\
+    {\n    cout<<The value is \"<<value\";\n}\n```\n\n+   * Now you want to print\
+    \ two double values or strings, then you have to overload the function:\n\n```\n\
+    void printData(float value)\n{\n    cout<<The value is \"<<value\";\nvoid printData(char\
+    \ *value)\n{\n    cout<<The value is \"<<value\";\n}\n```\n\n+   * To perform\
+    \ some operation with different data type, we have to write same code multiple\
+    \ time.\n* C++ provides templates to reduce this type of duplication code.\n\n\
+    ```\ntemplate<typename T>\nvoid printData(T value)\n{\n    cout<<The value is\
+    \ \"<<value\";\n}\n```\n\n+   * We can now use printData for any data type. Here\
+    \ T is a template parameter that identifies a type. anywhere in the function where\
+    \ T appears, it is replaced with whatever type the function is instantiated.\n\
+    * For example:\n\n```\nint i=3;\nfloat d=4.7;\nchar s=\"hello\";nprintData(i);\
+    \ // T is int\nprintData(d); // T is float\nprintData(s); // T is string\n```\n\
+    \n# Function Templates with Multiple Parameters:\n\n+   * We can use more one\
+    \ generic data type in the template statement, comma separated list as shown below.\n\
+    * For example:\n\n```\ntemplate <class T1, class T2>\nvoid printData(T1 a, T2\
+    \ b)\n{}\n```\n\nHardik Doshi, Ishan Rajani 59"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "```\ncout<<\\\"na=\"<<a<<\\\"tb=\"<<b;\n}\nint main()\n{\n    printData(12,\
+    \ 'N');\n    printData(12.5, 34);\n    return 0;\n}\n```\n\n2) Explain class template.\
+    \ Also write a C++ program for class template with multiple parameters.\n\n# Class\
+    \ Template:\n\n+   • Suppose you want to perform addition of two integer number\
+    \ in class\nclass add {\n    int a,b,c;\n    public:\n    add() {\n        a =\
+    \ 10;\n        b = 20;\n        c = a + b;\n    }\n    void putdata() {\n    \
+    \    cout<<\\\"nThe sum=\"<<c;\n    }\n};\n\n+   • If you later decide you also\
+    \ to perform addition of two float numbers in class then you will have to separate\
+    \ class for addition of two numbers.\nclass add {\n    float a,b,c;\n    public:\n\
+    \    add() {\n        a = 10.45;\n        b = 20.67;\n        c = a + b;\n   \
+    \ }\n    void putdata() {\n        cout<<\\\"nThe sum=\"<<c;\n    }\n};\n\n+ \
+    \  • It means have to write same class two time because of different data type.\n\
+    • We can solve this problem by using template as follow.\n\n```\ntemplate<class\
+    \ T>\nclass Sample {\n    T a,b,c;\n    public:\n    void getdata() {\n      \
+    \  cout<<\\\"Enter the value of a & \\b\\n\"\n        cin>>a>>b;\n    }\n\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\nComputer Engineering\n\n#\
+    \ 140705 – OOP C++nUnit - 8 Templates, Exceptions and STL\n\n```\n) void sum()\n\
+    {\n  c=a+b;\n}\nvoid putdata()\n{\n  cout<<\"\\nnThe sum=\"<<c;\n}\n\nint main()\n\
+    {\n  clrscr();\n  Sample <int> S1;\n  S1.getData();\n  S1.sum();\n  S1.putdata();\n\
+    \  Sample <float> S2;\n  S2.getData();\n  S2.sum();\n  S2.putdata();\n  getch();\n\
+    \  return 0;\n}\n```\n\n+   We will pass data type when we create object of class.\
+    \ Now template variable 'T' is replace by data type which we passed with object.\n\
+    \n# Class Templates with Multiple Parameters:\n\n+   We can use more than one\
+    \ generic data type in a class template. They are declared as, comma separated\
+    \ list within the template specification as shown below.\n\n```\ntemplate <class\
+    \ T1, class T2>\nclass class\n{\n  /*Statement 1;\n  Statement 2;\n\n  Statement\
+    \ n; */\n}\n```\n\n# Example:\n\n```\ntemplate <class T1, class T2>\nclass Sample\n\
+    {\n  T1 a;\n  T2 b;\npublic:\n  Sample(T1 x,T2 y)\n{\n    a=x;\n    b=y;\n}\n\
+    \  void disp()\n{\n  cout<<\"\\na=\"<<a<<\"\\tb=\"<<b;\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n140705 – OOP with C++nComputer\
+    \ Engineering\nUnit - 8 Templates, Exceptions and STL\n\n```\n);\nint main()\n\
+    {\n    Sample <int,float> S1(12,23.3);\n    Sample <char,int> S2('N',12);\n  \
+    \  S1.disp();\n    S2.disp();\n    return 0;\n}\n```\n\n# 3) What is exception\
+    \ handling? Explain how to handle an exception with appropriate example. Explain\
+    \ how to handle exceptions using throw, catch and throw mechanism.\n\n+   * In\
+    \ programming two most common types of error are logical error and syntax error.\n\
+    * The syntax error is detected during compilation of program, but the logical\
+    \ error will detect during execution of program.\n* The exception handling provides\
+    \ mechanism to handle logical error during execution of program.\n* Steps to handle\
+    \ logical error.\n\n+   1. Find the problem (Hit the exception)\n2. Inform that\
+    \ an error has occurred (Throw the exception)\n3. Receive the error information\
+    \ (Catch the exception)\n4. Take corrective actions (Handle the exception)\n\n\
+    # Exception Handling Mechanism:\n\n+   * This mechanism is built upon three keyword:\
+    \ try, throw and catch.\n* try is used to preface a block of statement that may\
+    \ generate exceptions.\n* When an exception is detected, it is thrown using a\
+    \ throw statement.\n* A catch block is used to catches the exceptions thrown by\
+    \ throw statement and take appropriate action.\n* The relationship between try,\
+    \ throw and catch is shown in below figure.\n\n| try block |\n| :--- |\n| Detects\
+    \ and throws an exception |\n| catch block |\n| Catches and handles the exception\
+    \ |\n\nHardik Doshi, Ishan Rajani 62"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "Darshan Institute of Engineering & Technology\n\n140705 – OOP with C++\nUnit\
+    \ - 8 Templates, Exceptions and STL\n\n# Syntax:\n\n```\ntry {\n  // Set of Statements;\n\
+    \  throw exception;\n  // Set of Statements;\n} catch (type arg) {\n  // Set of\
+    \ Statements;\n}\n```\n\n# Example:\n\n```\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main() {\n  int a,b;\n  cout<<\"Enter the value of a and b\\n\"\
+    ;\n  try {\n    if(b != 0)\n      cout<<\"The result (a/b)=\"<<<<a/b;\n    else\n\
+    \      throw(b);\n  } catch (int x) {\n    cout<<\"Exception caught b=\"<<x;\n\
+    \  }\n  return 0;\n}\n```\n\n+   * When the value of b is zero at that time exception\
+    \ will throw and this exception will catch in catch block and print the message\
+    \ value is zero.\n\n4) Explain multiple catch statements with appropriate example.\n\
+    \n+   * It is possible that a program segment has more than one condition to throw\
+    \ an exception.\n* For these situations we can associate more than one catch statement\
+    \ with a try block.\n* When an exception is thrown, the exception handlers are\
+    \ searched in order for an appropriate match.\n* The fist handler that handles\
+    \ a match is executed.\n* After executing the handler, the control goes to the\
+    \ first statement after the last catch block for that try.\n* Note: It is possible\
+    \ that arguments of seven catch statements match the type of an exception.\n*\
+    \ In such cases, the first handler that matches the exception type is executed.\n\
+    \n# Example:\n\n```\n#include <iostream>\nusing namespace std;\n\nvoid test(int\
+    \ x) {\n  try\n```\n\nHardik Doshi, Ishan Rajani\n\n63"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Darshan Institute of Engineering & Technology\n\n# 140705 – OOP C++\nUnit\
+    \ - 8 Templates, Exceptions and STL\n\n```\nif (x==1) {\n    throw (x==0);\n}\
+    \ else if (x==0) {\n    throw 'x';\n} else if (x===-1) {\n    throw 1.0;\n}\n\n\
+    catch (char c) {\n    cout<<\"Caught a character\"<<endl;\n}\ncatch (int m) {\n\
+    \    cout<<\"Caught an integer\"<<endl;\n}\ncatch (float n) {\n    cout<<\"Caught\
+    \ a double\"<<endl;\n}\ncout<<\"End of the try catch system\"<<endl;\n\nint main()\
+    \ {\n    cout<<\"Testing multiple catch\"<<endl;\n    cout<<\"x=1\"<<endl;\n\n\
+    test(1);\n    cout<<\"x=0\"<<endl;\n    test(0);\n    cout<<\"x=-1\"<<endl;\n\
+    \    test(-1);\n    cout<<\"x=2\"<<endl;\n    test(2);\n    return 0;\n}\n```\n\
+    \n# 5) Explain Rethrowing an Exception with appropriate example.\n\n+   * A handler\
+    \ may decide to rethrow the exception without processing it.\n* In such situations,\
+    \ we simply invoke throw without any arguments as shown below:\nthrow;\n* This\
+    \ causes the current exception to be thrown to the next enclosing try/catch sequence\
+    \ and is caught by a statement listed after that enclosing block.\n\nExample:\n\
+    \n```\n#include<iostream>\nusing namespace std;\nvoid divide(double x, double\
+    \ y)\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\n{\n    cout<<\"Inside function \\n\";\n    try {\n        if (y==0)\n\
+    \            throw y;\n        else\n            cout<<\"Division = <<x/y<<\\\
+    n\";\n    } catch (double) {\n        cout<<\"caught double inside the function\
+    \ \\n\";\n    }\n    cout<<\"End of function \\n\\n\";\n}\n\nint main() {\n  \
+    \  cout<<\"Inside main\\n\";\n    try {\n        divide(10.5,2.5);\n        divide(4,0);\n\
+    \    } catch (double) {\n        cout<<\"caught double inside main \\n\";\n  \
+    \  }\n    cout<<\"End of main\\n\";\n    return 0;\n}\n```\n\n# 6) Explain short\
+    \ introduction of STL.\n\n+   - Alexander Stepanov and Meng Lee of Hewlett-jPackard\
+    \ developed a set of general-purpose templated classes and function for storing\
+    \ and processing of data.\n- The collection of these generic classes is Standard\
+    \ Template Library(STL).\n- The STL has now become a part of the ANSI C++ library.\n\
+    - Using STL, we can save considerable time and effort, and lead to high quality\
+    \ programs.\n- All these benefits are possible because we are basically \"reusing\"\
+    \ the well-written and well-tested components in the STL.\n- STL components which\
+    \ are now part of the standard C++ library are defined in the namespace std.\n\
+    - We must therefore use namespace std;` to intend to use the standard C++ library.\n\
+    \n# 7) List out components of STL and explain in short.\n\n+   - There are three\
+    \ core components of STL as follows:\n  1. Containers\n  2. Algorithms\n  3. Iterators"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Darshan Institute of Engineering & Technology 140705 - OOP C++
+
+    Computer Engineering             Unit - 8 Templates, Exceptions and STL
+
+
+    +   * These three components work in conjunction with one another to provide support
+    to a variety of programming solution.
+
+    * The relationship between the three components is shown in following figure,
+
+
+    ![](img/f20ebad23d7bd6ce200c44e70b08aa15_66_0.png)
+
+
+    # Container:
+
+
+    +   * A container is an object that actually stores data.
+
+    * It is a data way is organized in memory.
+
+    * The STL containers are implemented by template classes and therefore can be
+    easily customized to hold different types of data.
+
+
+    # Algorithm:
+
+
+    +   * An algorithm is a procedure that is used to process the data contained in
+    the containers.
+
+    * The STL includes many different kinds of algorithms to provide support to tasks
+    such as initializing, searching, copying, sorting, and merging.
+
+    * Algorithms are implemented by template functions.
+
+
+    # Iterator:
+
+
+    +   * The iterators is an object(like a pointer) that points to an element in
+    a container.
+
+    * We can use iterators to move through the contents of containers.
+
+    * Iterators are handled just like pointers.
+
+    * We can increment or decrement them.
+
+    * Iterators connect algorithms with containers and play a key role in the manipulation
+    of data stored in the containers'
+  merge: -1
+  pgno: 66
