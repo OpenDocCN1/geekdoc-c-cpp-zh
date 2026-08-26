@@ -1,0 +1,2409 @@
+- md: '
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Helpful Hackers
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_0_0.png)
+
+
+    HEATHER C. HUDAK
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_1_0.png)
+
+
+    https://archive.org/details/helpfulhackers0000huda
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Helpful Hackers
+
+
+    Heather C. Hudak
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_4_0.png)
+
+
+    # ABDOPUBLISHING.COM
+
+
+    Published by Abdo Publishing, a division of ABDO, PO Box 398166, Minneapolis,
+    Minnesota 55439. Copyright © 2019 by Abdo Consulting Group, Inc. International
+    copyrights reserved in all countries. No part of this book may be reproduced in
+    any form without written permission from the publisher. Checkerboard Library™
+    is a trademark and logo of Abdo Publishing.
+
+
+    Printed in the United States of America, North Mankato, Minnesota
+
+    052018
+
+    092018
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_5_0.png)
+
+
+    Design: Kelly Doudna, Mighty Media, Inc.
+
+    Production: Mighty Media, Inc.
+
+    Editor: Liz Salzmann
+
+    Cover Photographs: iStockphoto (left), Shutterstock (right)
+
+    Interior Photographs: Albany, p. 9; AP Images, p. 10, 17, 18, 21, 26, 28; Courtesy
+    MIT Museum, p. 15; Daniel Ge/Flickr, p. 27; iStockphoto, p. 7; Jeff Keyzer/Flickr,
+    p. 25, 29; New America/Flickr, p. 22; Shutterstock, pp. 4, 13
+
+
+    Library of Congress Cataloging Number: 2017961592
+
+
+    Publisher''s Cataloging-in Data
+
+    Name: Hudak, Heather C., author.
+
+    Title: Helpful Hacker / by Heather C. Hudak.
+
+    Description: Minneapolis, Minnesota : Abdo Publishing, 2019. | Series: It''s a
+    digital world! | Includes online resources and index.
+
+    Identifiers: ISBN 9781532153349 (lib.bdg.) | ISBN 9781532156069 (ebook)
+
+    Subjects: LCSH: Hackers--Juvenile literature. | Ethical hacking (Computer security)--Juvenile
+    literature. | Debugging in computer science--Juvenile literature. | Occupations--Careers--Jobs--Juvenile
+    literature.
+
+
+    Classification: DDC 005.8092--dc23
+
+
+    # CONTENTS
+
+
+    - Stretching the Boundaries of Technology .....................................................................
+    5
+
+    - How to Become a Hacker .................................................................................
+    . . . . . . . . . . . . . . . . 6
+
+    - Black Hats vs. White Hats .................................................................................
+    . . . . . . . . . . . . . . . . . . 8
+
+    - Stopping Security Threats .................................................................................
+    . . . . . . . . . . . . . . 12
+
+    - Hacker History .................................................................................................................
+    . . . . . . . . . . . . . . . . . 14
+
+    - Intent to Harm .................................................................................................................................
+    . . . . . . . . . . . . . . . . 16
+
+    - Hacker Attack .................................................................................................................................
+    . . . . . . . . . . . . . . . . . 20
+
+    - Hacker Revolution ........................................................................................................................
+    . . . . . . . . . . . . . . . 24
+
+    - Timeline ........................................................................................................................................
+    . . . . . . . . . . . . . . . . 28
+
+    - Glossary ........................................................................................................................................
+    . . . . . . . . . . . . . . . 30
+
+    - Online Resources ..........................................................................................................................
+    . . . . . . . . . . . . 31
+
+    - Index .................................................................................................................................................
+    . . . . . . . . . . . . . 32
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_7_0.png)
+
+
+    # STRETCHING THE BOUNDARIES OF TECHNOLOGY
+
+
+    **Have you ever planned a surprise party that you needed to keep secret?** Did
+    you save information about it on a computer? Maybe you used a password to keep
+    other people from being able to read it. What if someone was able to get into
+    your computer and read about the party? They could change the information or they
+    could even remove it.
+
+
+    Hackers find weaknesses in computer systems and **software**. Most hackers try
+    to fix problems as they find them. They have jobs in **cybersecurity** or software
+    testing. But some hackers use their skills to harm others. They break into computer
+    systems to steal or destroy information.
+
+
+    Hackers stretch the boundaries of **technology** to find new ways to use it. Hackers
+    can visualize how to do things differently. Then they find **innovative** ways
+    to make their visions come true.
+
+
+    # CHAPTER 1: HOW TO BECOME A HACKER
+
+
+    **Hackers'' jobs are to invent new ways to solve problems and improve processes.**
+    Hackers have expert knowledge of computer systems and software and enjoy figuring
+    out how they they work. Many hackers like taking things apart and putting them
+    back together.
+
+
+    Hackers look for new ways to use existing systems and software. When computer
+    programs don''t do what hackers need them to do, hackers find ways to get the
+    job done. They may even write new computer code. Hackers are also good at creating
+    new computer programs.
+
+
+    A college or university degree is not required to be a hacker. Hackers just need
+    to know a lot about computers and software. Still, many hackers have degrees in
+    computer science, information technology (IT), or network security.
+
+
+    Some organizations offer special certifications for hackers. Such certifications
+    show that hackers have the skills
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_10_0.png)
+
+
+    Students at the University of Illinois can apply for the Illinois Cyber Security
+    Scholars Program. Graduates of the program have gone on to work for government
+    agencies such as Homeland Security and the Central Intelligence Agency.
+
+
+    and and knowledge they need to do their jobs well. Having a **certification**
+    also shows that a hacker is trustworthy.
+
+
+    Some hackers work as part of a team. The whole team works together to find solutions
+    to problems. Other hackers work alone. They work for companies on a project-by-project
+    basis.
+
+
+    # CHAPTER 2: BLACK HATS VS. WHITE HATS
+
+
+    When hackers are mentioned in the news, the story is usually about unethical hackers
+    who have done something wrong. Unethical hackers are also called black hat hackers.
+    This is because in old Western movies, the bad guys almost always wore black hats.
+
+
+    Black hat hackers break into computer systems and software for the purpose of
+    harming others. They steal data and damage systems. They might steal money, invade
+    people''s privacy, or destroy documents.
+
+
+    Because of news coverage of hacking crimes, many people think that all hackers
+    do. However, most hackers are ethical. They want to make computers more secure.
+    Ethical hackers are called white hat hackers because the good guys in Westerns
+    usually wore white hats.
+
+
+    White hat hackers help protect companies from black hat hackers. Companies hire
+    white hat hackers to break into systems
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_12_0.png)
+
+
+    The Lone Ranger is a hero in many Western television shows and movies. He is known
+    for wearing a white hat.
+
+
+    and programs to find weaknesses. Then the hackers determine how to make the systems
+    stronger. This is called penetration testing. Hackers also help other people in
+    their workplaces understand possible threats. They teach others how to prevent
+    **cybercriminals** from harming their systems and **software**.
+
+
+    White hat hackers keep an eye on the data that flows in out of their companies''
+    servers each day. They watch for security threats and weaknesses where black hat
+    hackers could break into the systems. They make sure the company''s connection
+    to the internet is as secure as possible.
+
+
+    **Cybersecurity** isn’t the only way hackers use their skills. Some hackers test
+    new games, apps, and software programs before they are released. These hackers
+    look for any problems and make sure these products work properly. When hackers
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_13_0.png)
+
+
+    > Kevin Mitnick was the first hacker to be on the FBI’s Most Wanted list. In the
+    1990s, he spent several years in jail for hacking. Later, he became a white hat
+    hacker and started a cybersecurity consulting business.
+
+    '
+  mdcn: '
+
+
+    # 这是一个数字世界！
+
+
+    # 乐心的黑客
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_0_0.png)
+
+
+    HEATHER C. HUDAK
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_1_0.png)
+
+
+    https://archive.org/details/helpfulhackers0000huda
+
+
+    # 这是一个数字世界！
+
+
+    # 乐心的黑客
+
+
+    Heather C. Hudak
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_4_0.png)
+
+
+    # ABDOPUBLISHING.COM
+
+
+    由 Abdo Publishing 出版，该 ABDO 分部，PO Box 398166, Minneapolis, Minnesota 55439。版权所有
+    © 2019  Abdo Consulting Group, Inc。所有国家保留国际版权。未经出版者书面许可，不得以任何形式复制本书的任何部分。Checkerboard
+    Library™ 是 Abdo Publishing 的商标和标志。
+
+
+    印于美国明尼苏达州明尔曼卡托市
+
+    052018
+
+    092018
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_5_0.png)
+
+
+    设计：Kelly Doudna, Mighty Media, Inc.
+
+    制作：Mighty Media, Inc.
+
+    编辑：Liz Salzmann
+
+    封面照片：iStockphoto（左），Shutterstock（右）
+
+    内插照片：Albany, 第9页；AP Images, 第10, 17, 18, 21, 26, 28页；MIT Museum 感谢，第15页；Daniel
+    Ge/Flickr, 第27页；iStockphoto, 第7页；Jeff Keyzer/Flickr, 第25, 29页；New America/Flickr,
+    第22页；Shutterstock, 第4, 13页
+
+
+    美国国会图书馆目录分类号：2017961592
+
+
+    出版者分类数据
+
+    作者名：Hudak, Heather C.
+
+    书名：Helpful Hacker / Heather C. Hudak 著
+
+    描述：明尼苏达州明尼阿波利：Abdo Publishing, 2019。 | 系列：这是一个数字世界！ | 包括在线资源和索引。
+
+    标识符：ISBN 9781532153349 (lib.bdg.) | ISBN 9781532155069 (电子书)
+
+    主题：LCSH：黑客--青少年文学。 | 伦理破解（计算机安全）--青少年文学。 | 计算机科学中的调试--青少年文学。 | 职业--职业--工作--青少年文学。
+
+
+    分类：DDC 005.8092--dc23
+
+
+    # 目录
+
+
+    - 拓展技术的边界 .....................................................................
+    5
+
+    - 如何成为一名黑客 .................................................................................
+    . . . . . . . . . . . . . . . . 6
+
+    - 黑帽对白帽 .................................................................................
+    . . . . . . . . . . . . . . . . . . . 8
+
+    - 停止安全威胁 .................................................................................
+    . . . . . . . . . . . . . . 12
+
+    - 黑客历史 .................................................................................................................................
+    . . . . . . . . . . . . . . . . . 14
+
+    - 伤害意图 .................................................................................................................................
+    . . . . . . . . . . . . . . . . . 16
+
+    - 黑客攻击 .................................................................................................................................
+    . . . . . . . . . . . . . . . . . . 20
+
+    - 黑客革命 ........................................................................................................................
+    . . . . . . . . . . . . . . . 24
+
+    - 时间线 ........................................................................................................................................
+    . . . . . . . . . . . . . . . . . 28
+
+    - 术语表 ........................................................................................................................................
+    . . . . . . . . . . . . . . . . . 30
+
+    - 在线资源 ..........................................................................................................................
+    . . . . . . . . . . . . . . . . 31
+
+    - 索引 .................................................................................................................................................
+    . . . . . . . . . . . . . . . . 32
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_7_0.png)
+
+
+    # 拓展技术的边界
+
+
+    **你是否曾经计划过一场需要保密的惊喜派对？** 你是否在电脑上保存了关于这个派对的信息？也许你还使用了密码来防止别人阅读它。如果有人能够进入你的电脑并读到关于这个派对的信息呢？他们可能会更改信息，甚至可能将其删除。
+
+
+    黑客在计算机系统和**软件**中寻找弱点。大多数黑客尝试在发现问题时尝试修复它们。他们在**网络安全**或软件测试领域工作。但有些黑客会利用他们的技能来伤害他人。他们入侵计算机系统来盗取或破坏信息。
+
+
+    黑客拓展**技术**的边界，以寻找使用它的新方法。黑客可以对不同的做事方式进行可视化。然后他们找到了**创新**的方法来使他们的愿景变为现实。
+
+
+    # 第一章：如何成为一名黑客
+
+
+    **黑客的工作是发明新方法来解决问题并改进流程。** 黑客拥有计算机系统和软件的专家知识，并喜欢研究它们是如何运作的。许多黑客喜欢将事物拆解并重新组装。
+
+
+    黑客寻找使用现有系统和软件的新方法。当计算机程序没有按照黑客需要的方式执行工作时，黑客会找到完成任务的方法。他们甚至可能编写新的计算机代码。黑客也擅长创建新的计算机程序。
+
+
+    成为黑客并不需要大学学位。黑客只需要对计算机和软件有深入的了解。尽管如此，许多黑客拥有计算机科学、信息技术（IT）或网络安全的学位。
+
+
+    一些机构为黑客提供特殊的认证。此类认证证明了黑客具备所需的技能
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_10_0.png)
+
+
+    伊利诺伊大学的学生可以申请伊利诺伊网络安全学者计划。该计划的毕业生已进入国土安全部和中央情报局等政府机构工作。
+
+
+    以及他们良好完成工作所需的知识。拥有**认证**也能证明一名黑客是值得信赖的。
+
+
+    有些黑客以团队形式工作。整个团队合作寻找解决方案。另一些黑客则独立工作。他们按项目为公司服务。
+
+
+    # 第二章：黑帽对白帽
+
+
+    当新闻中提到黑客时，故事通常是关于不伦理黑客的。不伦理黑客也被称为黑帽。这是因为在旧的西部片中，坏人总是戴着黑帽子。
+
+
+    黑帽为了伤害他人而入侵计算机系统和软件。他们盗取数据并破坏系统。他们可能会窃取、侵犯他人隐私或破坏文件。
+
+
+    由于对黑客犯罪的报道，很多人认为所有黑客都是。然而然而大多数黑客是有伦理的。他们想要让计算机更加安全。伦理黑客被称为白帽，因为西部片中的好人通常戴着白帽子。
+
+
+    白帽帮助公司免受黑帽的侵害。公司聘佣白帽入侵系统
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_12_0.png)
+
+
+    牛仔侠是许多西部剧集和电影中的英雄。他以戴着白帽子而闻名。
+
+
+    和程序以寻找弱点。然后黑客会确定如何加强系统。这被称为渗透测试。黑客还帮助工作场所的其他人员了解潜在威胁。他们教导如何防止**网络犯罪分子**侵害他们的系统和**软件**。
+
+
+    白帽黑客每天监控进出公司服务器的数据。他们留意黑帽可能入侵系统的安全威胁和弱点。他们确保公司与互联网的连接尽可能安全。
+
+
+    **网络安全**并不是黑客利用技能的唯一方式。有些黑客会在发布前测试新的游戏、应用程序和软件程序。这些黑客会寻找任何问题并确保这些产品正常运行。当黑客
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_13_0.png)
+
+
+    > Kevin Mitnick 是第一个进入 FBI 通缉逃犯名单的黑客。他在 20 世纪 90 年代因黑客被判了几年。后来，他成为一名白帽黑客并成立了一家网络安全咨询公司。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Helpful
+
+    Hackers
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_0_0.png)
+
+
+    HEATHER C. HUDAK'
+  - '[PAGE 1]
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_1_0.png)
+
+
+    https://archive.org/details/helpfulhackers0000huda'
+  - '[PAGE 2]
+
+
+    <!-- no content -->'
+  - '[PAGE 3]
+
+
+    <!-- no content -->'
+  - '[PAGE 4]
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    # Helpful
+
+    Hackers
+
+
+    Heather C. Hudak
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_4_0.png)'
+  - '[PAGE 5]
+
+
+    # ABDOOPBLISHING.COM
+
+
+    Published by Abdo Publishing, a division of ABDO, PO Box 398166, Minneapolis,
+    Minnesota
+
+    55439. Copyright © 2019 by Abdo Consulting Group, Inc. International copyrights
+    reserved in all countries. No part of this book may be reproduced in any form
+    without written permission from the publisher. Checkerboard Library™ is a trademark
+    and logo of Abdo Publishing.
+
+
+    Printed in the United States of America, North Mankato, Minnesota
+
+    052018
+
+    092018
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_5_0.png)
+
+
+    Design: Kelly Doudna, Mighty Media, Inc.
+
+    Production: Mighty Media, Inc.
+
+    Editor: Liz Salzmann
+
+    Cover Photographs: iStockphoto (left), Shutterstock (right)
+
+    Interior Photographs: Albany, p. 9; AP Images, p. 10, 17, 18, 21, 26, 28; Courtesy
+    MIT Museum, p. 15; Daniel Ge/Flickr, p. 27; iStockphoto, p. 7; Jeff Keyzer/Flickr,
+    p. 25, 29; New America/Flickr, p. 22; Shutterstock, pp. 4, 13
+
+
+    Library of Congress Cataloging Number: 2017961592
+
+
+    Publisher''s Cataloging-in Data
+
+    Name: Hudak, Heather C., author.
+
+    Title: Helpful Hacker / by Heather C. Hudak.
+
+    Description: Minneapolis, Minnesota : Abdo Publishing, 2019. | Series: It''s a
+    digital
+
+    world! | Includes online resources and index.
+
+    Identifiers: ISBN 9781532153349 (lib.bdg.) | ISBN 9781532156069 (ebook)
+
+    Subjects: LCSH: Hackers--Juvenile literature. | Ethical hacking (Computer security)--
+
+    Juvenile literature. | Debugging in computer science--Juvenile literature. |
+
+    Occupations--Careers--Jobs--Juvenile literature.
+
+
+    Classification: DDC 005.8092--dc23'
+  - '[PAGE 6]
+
+
+    # CONTENTS
+
+
+    +   Stretching the Boundaries of Technology .....................................................................
+    5
+
+    How to Become a Hacker .................................................................................
+    . . . . . . . . . . . . . . . 6
+
+    Black Hats vs. White Hats .................................................................................
+    . . . . . . . . . . . . . . . . . . 8
+
+    Stopping Security Threats .................................................................................
+    . . . . . . . . . . . . . 12
+
+    Hacker History .................................................................................................................
+    . . . . . . . . . . . . . . . . . 14
+
+    Intent to Harm .................................................................................................................................
+    . . . . . . . . . . . . . . . 16
+
+    Hacker Attack .................................................................................................................................
+    . . . . . . . . . . . . . . . . 20
+
+    Hacker Revolution ........................................................................................................................
+    . . . . . . . . . . . . . 24
+
+    Timeline ........................................................................................................................................
+    . . . . . . . . . . . . . . 28
+
+    Glossary ........................................................................................................................................
+    . . . . . . . . . . . . . . 30
+
+    Online Resources ..........................................................................................................................
+    . . . . . . . . . . . . 31
+
+    Index .................................................................................................................................................................
+    . . . . . . . . . . . . 32'
+  - '[PAGE 7]
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_7_0.png)'
+  - '[PAGE 8]
+
+
+    # # STRETCHING THE BOUNDARIES OF TECHNOLOGY
+
+
+    **Have you ever planned a surprise party that you needed to keep secret?** Did
+    you save information about it on a computer? Maybe you used a password to keep
+    other people from being able to read it. What if someone was able to get into
+    your computer and read about the party? They could change the information or they
+    could even remove it.
+
+
+    Hackers find weaknesses in computer systems and **software**. Most hackers try
+    to fix problems as they find them. They have jobs in **cybersecurity** or software
+    testing. But some hackers use their skills to harm others. They break into computer
+    systems to steal or destroy information.
+
+
+    Hackers stretch the boundaries of **technology** to find new ways to use it. Hackers
+    can visualize how to do things differently. Then they find **innovative** ways
+    to make their visions come true.'
+  - '[PAGE 9]
+
+
+    # CHAPTER 1
+
+    HOW TO BECOME A HACKER
+
+
+    **Hackers'' jobs are to invent new ways to solve problems and improve processes.**
+    Hackers have expert knowledge of computer systems and software and enjoy figuring
+    out how they they work. Many hackers like taking things apart and putting them
+    back together.
+
+
+    Hackers look for new ways to use existing systems and software. When computer
+    programs don''t do what hackers need them to do, hackers find ways to get the
+    job done. They may even write new computer code. Hackers are also good at creating
+    new computer programs.
+
+
+    A college or university degree is not required to be a hacker. Hackers just need
+    to know a lot about computers and software. Still, many hackers have degrees in
+    computer science, information technology (IT), or network security.
+
+
+    Some organizations offer special certifications for hackers. Such certifications
+    show that hackers have the skills'
+  - '[PAGE 10]
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_10_0.png)
+
+
+    Students at the University of Illinois can apply for the Illinois Cyber Security
+    Scholars Program. Graduates of the program have gone on to work for government
+    agencies such as Homeland Security and the Central Intelligence Agency.
+
+
+    and and knowledge they need to do their jobs well. Having a
+
+    **certification** also shows that a hacker is trustworthy.
+
+
+    Some hackers work as part of a team. The whole team works together to find solutions
+    to problems. Other hackers work alone. They work for companies on a project-by-project
+    basis.'
+  - '[PAGE 11]
+
+
+    # CHAPTER 2
+
+    BLACK HATS VS. WHITE HATS
+
+
+    When hackers are mentioned in the news, the story is usually about unethical hackers
+    who have done something wrong. Unethical hackers are also called black hat hackers.
+    This is because in old Western movies, the bad guys almost always wore black hats.
+
+
+    Black hat hackers break into computer systems and software for the purpose of
+    harming others. They steal data and damage systems. They might steal money, invade
+    people''s privacy, or destroy documents.
+
+
+    Because of news coverage of hacking crimes, many people think that all hackers
+    do. However, most hackers are ethical. They want to make computers more secure.
+    Ethical hackers are called white hat hackers because the good guys in Westerns
+    usually wore white hats.
+
+
+    White hat hackers help protect companies from black hat hackers. Companies hire
+    white hat hackers to break into systems'
+  - '[PAGE 12]
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_12_0.png)
+
+
+    The Lone Ranger is a hero in many Western television shows and movies. He is known
+    for wearing a white hat.'
+  - '[PAGE 13]
+
+
+    and programs to find weaknesses. Then the hackers determine how to make the systems
+    stronger. This is called penetration testing. Hackers also help other people in
+    their workplaces understand possible threats. They teach others how to prevent
+    **cybercriminals** from harming their systems and **software**.
+
+
+    White hat hackers keep an eye on the data that flows in out of their companies''
+    servers each day. They watch for security threats and weaknesses where black hat
+    hackers could break into the systems. They make sure the company''s connection
+    to the internet is as secure as possible.
+
+
+    **Cybersecurity** isn’t the only way hackers use their skills. Some hackers test
+    new games, apps, and software programs before they are released. These hackers
+    look for any problems and make sure these products work properly. When hackers
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_13_0.png)
+
+
+    > American Kevin Mitnick was the first hacker to be on the FBI’s Most Wanted list.
+    In the 1990s, he spent several years in jail for hacking. Later, he became a white
+    hat hacker and started a cybersecurity consulting business.'
+- md: '
+
+    find problems, they may work with the original programmers to fix them. Or they
+    might fix the problems themselves.
+
+
+    White hat and black hat hackers use the same programs and methods. There are many
+    programs they can use. Some programs help hackers enter private **networks** or
+    computer systems. White hat hackers are allowed to enter these systems. Black
+    hat hackers are not.
+
+
+    Cain & Abel and Aircrack-ng are programs that help hackers find peoples’ passwords.
+    Other programs help hackers test **software** and security. Hackers use software
+    programs Wireshark and Nmap to see who is connecting to a computer network and
+    perform security tests. They use programs such as Omnipeek to watch and report
+    on wireless traffic.
+
+
+    Many hackers share the programs they use so they can learn from another. They
+    make their computer source **code available** to others use for free. Source code
+    is a series of instructions, comments, and functions that tells a computer what
+    to do. It is part of any software program. Source code that is shared freely is
+    open source code.
+
+
+    # OPEN SOURCE CODE
+
+
+    ## CHAPTER 3
+
+    STOPPING SECURITY THREATS
+
+
+    **Hackers can be helpful to all types of companies, big or small.** Any companies
+    that use computer **networks** or the internet are at risk for security threats.
+    Companies hire white hat hackers to tell them what they need to do to protect
+    themselves.
+
+
+    Large organizations, such as governments, hospitals, banks, and universities have
+    thousands of people connecting to their systems. Each of these people has a computer
+    and other devices that contain important information. This information could include
+    top-secret military activities, ground-breaking research, or credit card details.
+    In the wrong hands, this information could be used to hurt people or steal from
+    them. White hat hackers help find ways to protect these devices from security
+    threats.
+
+
+    In addition to trying to hack into systems, black hat hackers often use **scams**.
+    They contact people through email or websites and pretend to be trustworthy. They
+    might say they are from a government agency or a reputable company such as Google.
+
+
+    Then they ask for personal or sensitive information, such as credit card or Social
+    Security numbers. The hackers could use this information to buy expensive products
+    or steal the person''s identity. White hat hackers show people how to recognize
+    these scams and avoid giving information to the wrong people.
+
+
+    > Between 2005 and 2007, a group of hackers stole 45.6 million credit card numbers
+    from TJX Companies. TJX owns several retail brands, including T.J. Maxx. The hacker
+    group''s leader, Albert Gonzalez, was sentenced to 20 years in prison.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_16_0.png)
+
+
+    ## CHAPTER 4
+
+    HACKER HISTORY
+
+
+    **The word hack hasn''t always been associated with computers.** The word has
+    been part of the English language for hundreds of years and has many different
+    meanings. One meaning is “to cut or chop with uneven or unskillful blows.”
+
+
+    During the 1960s, *hack* started being associated with computer programming. Students
+    at Massachusetts Institute of Technology (MIT) began using computer programming
+    in new and creative ways. *Hacking* was used to describe these new methods.
+
+
+    At the time, modern computers were just starting to be developed. So, these were
+    the types of systems people began to hack. This was how scientists and engineers
+    came up with new and better ways to use computers.
+
+
+    During the mid-1900s, hackers were people who had big ideas about what they could
+    do with computers. They stretched the capabilities of computer systems. They began
+    working on
+
+
+    > An early group to use the term hack was the Tech Model Railroad Club at MIT.
+    Club members used hack to refer to inventing new ways to set up electrical circuits
+    for model trains.
+
+
+    ways to connect computers to one another so they could share information. This
+    was the beginning of computer networks.
+
+
+    Hackers were considered the best at what they did by their peers in computer science.
+    These innovators pushed the boundaries of technology and what it could do. Their
+    ideas and advancements led to the development of the internet, smartphones, and
+    other technologies. Hackers helped change the world.
+
+
+    ## CHAPTER 5
+
+    INTENT TO HARM
+
+
+    **Computers started becoming more widely available in the 1970s and 1980s.** Before
+    then, computers were huge and expensive. Only large companies and institutions
+    such as universities had computers.
+
+
+    But improved **technology** was allowing computers to be smaller and less expensive.
+    More and more people were buying computers and learning how they worked. But some
+    of these programmers started to use their skills to get into other computers for
+    their own benefit.
+
+
+    Some of the earliest systems to be hacked were telephone systems. At the time,
+    telephone calls were routed based on specific sounds, or tones. Some people started
+    copying tones for long-distance routing so they could make free calls. These hackers
+    became known as “phone freaks.”
+
+
+    One of the most famous phone phaks was computer programmer John Draper. He built
+    a device called a blue box.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_20_0.png)
+
+
+    John Draper based his blue box on the sound made by a toy whistle included in
+    Cap''n Crunch cereal. Because of this, Draper became known as "Captain Crunch."
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_21_0.png)
+
+
+    In 2017, hackers broke into the computer system of consumer credit reporting agency
+    Equifax. More than 145 million accounts were affected. The hackers stole Social
+    Security numbers, birth dates, addresses, credit card information, and more.
+
+
+    - It could make the correct tones for hacking AT&T’s phone lines.
+
+    - Draper was arrested for hacking for the first time in 1972.
+
+    - He was arrested several more times in the 1970s.
+
+
+    During the 1980s, there was a growing community of skilled hackers. They viewed
+    themselves as **innovators**. Magazines, such as *Phrack* and *2600: The Hacker
+    Quarterly*, were aimed at hackers. Secret hacker clubs began to form.
+
+
+    One of the most famous clubs was the Legion of Doom (LOD). It was started in 1984
+    by a hacker who called himself Lex Luther. The group published journals for its
+    members explaining how to hack systems. LOD members frequently hacked into systems,
+    especially telecommunications systems. This was mostly to practice their skills
+    and show other hackers what they could do. They generally didn''t harm the systems
+    they hacked into. In fact, some members were kicked out of LOD for causing harm.
+
+
+    In the 1980s and 1990s, laws were passed to stop hackers from misusing their abilities.
+    In May 1990, the US Secret Service launched Operation Sundial. It was a plan to
+    try and catch hackers. But hackers can be extremely difficult to track down. They
+    can get in and out of computer systems without leaving a trace. Operation Sundial
+    turned out to be a failure. Very few hackers were arrested.
+
+
+    By the 2000s, most people thought of hackers as criminals. Hackers started being
+    regularly featured in the news. It seemed no one was safe from attack, not even
+    the largest companies or law enforcement agencies. One of the biggest attacks
+    in history happened to web service provider Yahoo in August 2013. More than 3
+    billion user accounts were hacked.
+
+
+    ## CHAPTER 6
+
+    HACKER ATTACK
+
+
+    Over the past decade, computer hacking has become big business. Since the mid-2000s,
+    internet scams and computer viruses have become common. Black hat hackers sell
+    their skills to criminals and others who want to harm people.
+
+
+    One method black hackers use is called phishing. This is a type of scam. The victims
+    receive an email or text from a hacker. The hacker pretends to be someone the
+    victim trusts, such as an online store or a friend. The hacker claims to need
+    personal details, such as passwords or banking information. The hacker uses the
+    information for personal gain. Common crimes include stealing from bank accounts
+    and identity theft.
+
+
+    Malware is another way hackers harm people and damage computers. Malware is short
+    for malicious software. A virus is a type of malware. A virus is a program that
+    changes the way a computer works. It can quickly spread from one computer to another.
+    It may erase data and software.
+
+    '
+  mdcn: '
+
+    发现问题，他们可能会与原始程序员合作修复它们。或者他们可能会自己修复这些问题。
+
+
+    白帽客和黑帽客使用相同的程序和方法。他们有很多可以使用的程序。某些程序可以帮助黑客进入私人**网络**或计算机系统。白帽客被允许进入这些系统，而黑帽客则不能。
+
+
+    Cain & Abel 和 Aircrack-ng 是帮助黑客寻找密码的程序。其他程序帮助黑客测试**软件**和安全性。黑客使用 Wireshark 和 Nmap
+    等软件程序查看谁正在连接到计算机网络并进行安全测试。他们使用 Omnipeek 等程序来监控和报告无线流量。
+
+
+    许多黑客会共享他们使用的程序，以便让他们互相学习。他们将自己的计算机**源代码公开**供他人免费使用。源代码是一系列指令、注释和函数，告诉计算机应该做什么。它是任何软件程序的一部分。免费共享的源代码就是开源代码。
+
+
+    # 开源代码
+
+
+    ## 第 3 章
+
+    停止安全威胁
+
+
+    **黑客对所有类型的公司，无论大小，都很有帮助。** 任何使用计算机**网络**或互联网的公司都面临着安全威胁的风险。公司聘请白帽客来告诉他们需要做什么来保护自己。
+
+
+    大型机构（如政府、医院、银行和大学）有成千上万的人连接到他们的系统。这些人中的每个人都有计算机和其他包含重要信息的设备。这些信息可能包括顶密军事活动、突破性研究或信用卡详情。在别有用的人手中，这些信息可能被用来伤害他人或从他们那里偷窃。白帽客帮助寻找保护这些设备免受安全威胁的方法。
+
+
+    除了尝试入侵系统外，黑帽客经常使用**诈骗**。他们通过电子邮件或网站联系人员并假装成值得信赖的人。他们可能会说自己来自政府机构或像 Google 这样著名的公司。
+
+
+    然后他们会索取个人或敏感信息，例如信用卡号或社会安全号码。黑客可以使用这些信息购买昂贵的产品或盗取他人的身份。白帽客教人们如何识别这些诈骗，并避免向错误的人提供信息。
+
+
+    > 在 2005 年到 2007 年间，一个黑客从 TJX 公司盗取了 4560 万个信用卡号。TJX 拥有多个零售品牌，包括 T.J. Maxx。该黑客组织的头目阿尔伯特·冈萨莱斯（Albert
+    Gonzalez）被判处 20 年监。
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_16_0.png)
+
+
+    ## 第 4 章
+
+    黑客历史
+
+
+    **hack 这个词并不总是与计算机相关联。** 这个词在英语中已经存在了数百年，有许多不同的含义。其中一个意思是“用不均匀或不熟练的击打来切砍”。
+
+
+    在 20 世纪 60 年代，hack* 开始与计算机编程相关。麻省理工学院（MIT）的学生开始以新颖且创意的方式使用计算机编程。*Hacking*（黑客）被用来描述这些新方法。
+
+
+    当时，现代计算机刚刚开始开发。因此，这些是人们开始破解的系统类型。科学家和工程师就是这样想出了使用计算机的新、更好的方法。
+
+
+    在 20 世纪中期，黑客是指那些对计算机能做什么有宏大想法的人。他们扩展了计算机系统的能力。他们开始致力于
+
+
+    > 最早使用 hack 术语的团体之一是麻省理工学院的 Tech 模型铁路俱乐部。俱乐部成员使用 hack 指代发明为模型火车设置电气电路的新方法。
+
+
+    将计算机相互连接，以便他们共享信息。这就是计算机网络的开始。
+
+
+    黑客被计算机科学领域的同行认为是他们所做领域的最顶尖者。这些创新者推向了技术及其能力的边界。他们的想法和进步导致了互联网、智能手机和其他技术的发展。黑客帮助改变了世界。
+
+
+    ## 第 5 章
+
+    伤害意图
+
+
+    **计算机从 20 世纪 70 年代和 80 年代开始变得越来越普及。** 在那时，计算机是巨大且昂贵的。只有大型公司和大学等机构才拥有计算机。
+
+
+    但改进的**技术**让计算机变得更小、更廉价。越来越多的人开始购买计算机并学习它们的工作原理。但其中一些程序员开始利用他们的技能进入其他计算机以获取个人利益。
+
+
+    最早被破解的一些系统是电话系统。当时，电话通话是根据特定的声音或音调路由的。一些人开始复制用于长途路由的音调，以便他们拨打免费电话。这些黑客被称为“电话狂人（phone
+    freaks）”。
+
+
+    最著名的电话黑客之一是计算机程序员约翰·德珀（John Draper）。他制造了一个名为蓝盒（blue box）的设备。
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_20_0.png)
+
+
+    约翰·德珀的蓝盒基于 Cap''n Crunch 麦片中附带的玩具哨发出的声音。正因如此，德珀被称为“脆队长（Captain Crunch）”。
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_21_0.png)
+
+
+    2017 年，黑客入侵了消费者信贷报告机构 Equifax 的计算机系统。超过 1.45 亿账户受到影响。黑客盗了社会安全号码、出生日期、地址、信用卡信息等。
+
+
+    - 它能产生用于破解 AT&T 电话线的正确音调。
+
+    - 德珀在 1972 年首次因破解被捕。
+
+    - 他在 20 世纪 70 年代又被捕了好几次。
+
+
+    在 20 世纪 80 年代，出现了一个日益增长的熟练黑客社区。他们认为自己是**创新者**。*Phrack* 和 *2600: The Hacker Quarterly*
+    等杂志是针对黑客的。秘密黑客俱乐部开始形成。
+
+
+    最著名的俱乐部之一是末日骑士团（LOD）。它由一个自称 Lex Luther（莱克斯·路德）的黑客于 1984 年创立。该小组为成员出版期刊，解释如何破解系统。LOD
+    成员经常入侵系统，特别是电信系统。这主要是为了练习他们的技能并向其他黑客展示他们能做什么。他们通常不会损害他们破解的系统。事实上，有些成员因为造成伤害而被踢出了
+    LOD。
+
+
+    在 20 世纪 80 年代和 90 年代，人们通过了法律以防止黑客滥用他们的能力。1990 年 5 月，美国特勤局启动了“日表行动（Operation Sundial）”。这是一个试图抓捕黑客的计划。但黑客极难追踪。他们可以在不留痕迹的情况下进出计算机系统。日表行动事实证明是失败的。很少有黑客被捕。
+
+
+    在 21 世纪，大多数人将黑客视为罪犯。黑客开始频繁出现在新闻中。似乎没有人是安全的，即使是规模最大的公司或执法机构也是如此。历史上最大的攻击之一发生在 2013
+    年 8 月，针对网络服务提供商 Yahoo。超过 30 亿账户被破解。
+
+
+    ## 第 6 章
+
+    黑客攻击
+
+
+    在过去的十年里，计算机黑客已成为一门大生意。自 21 世纪世纪中期以来，网络诈骗和计算机病毒变得越来越普遍。黑帽客将他们的技能卖给犯罪分子和其他想要伤害他人的人。
+
+
+    黑客使用的一种方法被称为网络钓鱼（phishing）。这是一种诈骗。受害者收到来自黑客的电子邮件或短信。黑客假装成受害者信任的人，例如在线商店或朋友。黑客声称需要个人详情，例如密码或银行信息。黑客利用这些信息获取个人利益。常见的犯罪包括盗取银行账户资金。
+
+
+    恶意软件是黑客伤害人类损坏计算机的另一种方式。Malware 是恶意软件的缩写。病毒是恶意软件的一种。病毒是一种改变计算机工作方式的程序。它可以迅速从一台计算机传播到另一台计算机。它可能会删除数据和软件。
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 14]
+
+
+    find problems, they may work with the original programmers to fix them. Or they
+    might fix the problems themselves.
+
+
+    White hat and black hat hackers use the same programs and methods. There are many
+    programs they can use. Some programs help hackers enter private **networks** or
+    computer systems. White hat hackers are allowed to enter these systems. Black
+    hat hackers are not.
+
+
+    Cain & Abel and Aircrack-ng are programs that help hackers find peoples’ passwords.
+    Other programs help hackers test **software** and security. Hackers use software
+    programs Wireshark and Nmap to see who is connecting to a computer network and
+    perform security tests. They use programs such as Omnipeek to watch and report
+    on wireless traffic.
+
+
+    Many hackers share the programs they use so they can learn from another. They
+    make their computer source **code available** to others use for free. Source code
+    is a series of instructions, comments, and functions that tells a computer what
+    to do. It is part of any software program. Source code that is shared freely is
+    open source code.
+
+
+    # OPEN SOURCE CODE'
+  - '[PAGE 15]
+
+
+    # CHAPTER 3
+
+    STOPPING SECURITY THREATS
+
+
+    **Hackers can be helpful to all types of companies, big or small.** Any companies
+    that use computer **networks** or the internet are at risk for security threats.
+    Companies hire white hat hackers to tell them what they need to do to protect
+    themselves.
+
+
+    Large organizations, such as governments, hospitals, banks, and universities have
+    thousands of people connecting to their systems. Each of these people has a computer
+    and other devices that contain important information. This information could include
+    top-secret military activities, ground-breaking research, or credit card details.
+    In the wrong hands, this information could be used to hurt people or steal from
+    them. White hat hackers help find ways to protect these devices from security
+    threats.
+
+
+    In addition to trying to hack into systems, black hat hackers often use **scams**.
+    They contact people through email or websites and pretend to be trustworthy. They
+    might say they are from a government agency or a reputable company such as Google.'
+  - '[PAGE 16]
+
+
+    Then they ask for personal or sensitive information, such as credit card or Social
+    Security numbers. The hackers could use this information to buy expensive products
+    or steal the person''s identity. White hat hackers show people how to recognize
+    these scams and avoid giving information to the wrong people.
+
+
+    > Between 2005 and 2007, a group of hackers stole 45.6 million credit card numbers
+    from TJX Companies. TJX owns several retail brands, including T.J. Maxx. The hacker
+    group''s leader, Albert Gonzalez, was sentenced to 20 years in prison.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_16_0.png)'
+  - '[PAGE 17]
+
+
+    # CHAPTER 4
+
+    HACKER HISTORY
+
+
+    **The word hack hasn''t always been associated with computers.** The word has
+    been part of the English language for hundreds of years and has many different
+    meanings. One meaning is “to cut or chop with uneven or unskillful blows.”
+
+
+    During the 1960s, *hack* started being associated with computer programming. Students
+    at Massachusetts Institute of Technology (MIT) began using computer programming
+    in new and creative ways. *Hacking* was used to describe these new methods.
+
+
+    At the time, modern computers were just starting to be developed. So, these were
+    the types of systems people began to hack. This was how scientists and engineers
+    came up with new and better ways to use computers.
+
+
+    During the mid-1900s, hackers were people who had big ideas about what they could
+    do with computers. They stretched the capabilities of computer systems. They began
+    working on'
+  - '[PAGE 18]
+
+
+    > An early group to use the term hack was the Tech Model Railroad Club at MIT.
+    Club members used hack to refer to inventing new ways to set up electrical circuits
+    for model trains.
+
+
+    ways to connect computers to one another so they could share information. This
+    was the beginning of computer networks.
+
+    Hackers were considered the best at what they did by their peers in computer science.
+    These innovators pushed the boundaries of technology and what it couldd do. Their
+    ideas and advancements led to the development of the internet, smartphones, and
+    other technologies. Hackers helped change the world.
+
+
+    # 15'
+  - '[PAGE 19]
+
+
+    # CHAPTER 5
+
+    INTENT TO HARM
+
+
+    **Computers started becoming more widely available in the 1970s and 1980s.** Before
+    then, computers were huge and expensive. Only large companies and institutions
+    such as universities had computers.
+
+
+    But improved **technology** was allowing computers to be smaller and less expensive.
+    More and more people were buying computers and learning how they worked. But some
+    of these programmers started to use their skills to get into other computers for
+    their own benefit.
+
+
+    Some of the earliest systems to be hacked were telephone systems. At the time,
+    telephone calls were routed based on specific sounds, or tones. Some people started
+    copying tones for long-distance routing so they could make free calls. These hackers
+    became known as “phone freaks.”
+
+
+    One of the most famous phone phaks was computer programmer John Draper. He built
+    a device called a blue box.'
+  - '[PAGE 20]
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_20_0.png)
+
+
+    John Draper based his blue box on the sound made by a toy whistle included in
+    Cap''n Crunch cereal. Because of this, Draper became known as "Captain Crunch."'
+  - '[PAGE 21]
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_21_0.png)
+
+
+    In 2017, hackers broke into the computer system of consumer credit reporting agency
+    Equifax. More than 145 million accounts were affected. The hackers stole Social
+    Security numbers, birth dates, addresses, credit card information, and more.
+
+
+    It could make the correct tones for hacking AT&T’s phone lines.
+
+    Draper was arrested for hacking for the first time in 1972.
+
+    He was arrested several more times in the 1970s.
+
+    During the 1980s, there was a growing community of skilled hackers. They viewed
+    themselves as **innovators**. Magazines, such as *Phrack* and *2600: The Hacker
+    Quarterly*, were aimed at hackers. Secret hacker clubs began to form.'
+  - '[PAGE 22]
+
+
+    One of the most famous clubs was the Legion of Doom (LOD). It was started in 1984
+    by a hacker who called himself Lex Luther. The group published journals for its
+    members explaining how to hack systems. LOD members frequently hacked into systems,
+    especially telecommunications systems. This was mostly to practice their skills
+    and show other hackers what they could do. They generally didn''t harm the systems
+    they hacked into. In fact, some members were kicked out of LOD for causing harm.
+
+
+    In the 1980s and 1990s, laws were passed to stop hackers from misusing their abilities.
+    In May 1990, the US Secret Service launched Operation Sundial. It was a plan to
+    try and catch hackers. But hackers can be extremely difficult to track down. They
+    can get in and out of computer systems without leaving a trace. Operation Sundial
+    turned out to be a failure. Very few hackers were arrested.
+
+
+    By the 2000s, most people thought of hackers as criminals. Hackers started being
+    regularly featured in the news. It seemed no one was safe from attack, not even
+    the largest companies or law enforcement agencies. One of the biggest attacks
+    in history happened to web service provider Yahoo in August 2013. More than 3
+    billion user accounts were hacked.'
+  - '[PAGE 23]
+
+
+    # # CHAPTER 6
+
+    HACKER ATTACK
+
+
+    Over the past decade, computer hacking has become big business. Since the mid-2000s,
+    internet scams and computer viruses have become common. Black hat hackers sell
+    their skills to criminals and others who want to harm people.
+
+
+    One method black hackers use is called phishing. This is a type of scam. The victims
+    receive an email or text from a hacker. The hacker pretends to be someone the
+    victim trusts, such as an online store or a friend. The hacker claims to need
+    personal details, such as passwords or banking information. The hacker uses the
+    information for personal gain. Common crimes include stealing from bank accounts
+    and identity theft.
+
+
+    Malware is another way hackers harm people and damage computers. Malware is short
+    for malicious software. A virus is a type of malware. A virus is a program that
+    changes the way a computer works. It can quickly spread from one computer to another.
+    It may erase data and software.'
+- md: '
+
+    # Norton Internet Security 2009
+
+
+    Smart Security, Engineered for Speed
+
+
+    1 Year Protection for up to 3 PCs per Household
+
+
+    +   INCLUDES
+
+    - Norton Identity Safe™
+
+    - Norton™ Antiphishing
+
+    - Norton™ Pulse Updates
+
+    - Norton Insight
+
+    - Norton Browser Protection
+
+    - Norton AntiVirus™
+
+    - Norton Antispyware
+
+    - Norton Personal Firewall
+
+
+    FREE SUPPORT*
+
+
+    Strong on protection, light on system resources
+
+
+    +   - Fast, light, and
+
+    - Stops online identity theft viruses, spyware,
+
+
+    Since 1991, Norton has been one of the most popular brands of antivirus and computer
+    security software.
+
+
+    > In the late 1980s, Steven Bellovin developed one of the first computer firewalls.
+    He and William Cheswick created it while working at Bell Laboratories.
+
+
+    Other types of malware include Trojans, spyware, and ransomware. A Trojan looks
+    like a program that is safe to use. However, it creates weaknesses in systems
+    so that hackers can get in. Spyware learns victims’ passwords, banking details,
+    and more. Ransomware shuts down victims'' computer systems until a ransom is paid.
+
+
+    Black hat hackers send malware through text and email attachments. When opened
+    or clicked on, the malware begins to spread throughout the device. In 2017, 360,000
+    malware files were detected every day. White hat hackers work to find ways to
+    stop malware from spreading.
+
+
+    There are several main methods for preventing hacks. One defense is a firewall.
+    This is a system that keeps unwanted people from connecting to a computer network.
+    Firewalls have to be updated often as hackers can eventually find their way around
+    them.
+
+
+    Another defense is anti-malware software. This type of software scans devices
+    for threats. The software can also prevent malware from getting into devices.
+    And it removes any malware that it finds in the system.
+
+
+    Firewalls and anti-malware software are often used together to protect computer
+    systems. But they are just two ways people can protect themselves from black hat
+    hackers. New defenses are being developed all the time.
+
+
+    ## CHAPTER 9
+
+    ## HACKER REVOLUTION
+
+
+    **New forms of hacking are forming all the time.** One trend that started in the
+    mid-1990s is hacktivism. The term *hacktivism* is a combination of *hack* and
+    **activism**.
+
+
+    Hackers use hacktivism to promote causes that are important to them. They might
+    write a message about the cause on a website that opposes the cause. They may
+    **disrupt** traffic from visiting a site or redirect it to another site. This
+    type of hacking usually doesn’t harm the system being hacked. However, even if
+    the hackers don’t cause harm, it is usually still illegal.
+
+
+    Not all activists are disruptive. **Random** Hacks of Kindness (RHoK) is a hacktivist
+    group. It looks for **innovative** ways to use **technology** to solve problems
+    around the world. RHoK holds events called hackathons. The group’s goal is to
+    use computers and other technologies to help people.
+
+
+    Organizations such as colleges and universities also use hackathons to spark innovation.
+    Students from universities
+
+
+    ## DIGITAL SPOTLIGHT
+
+    ## RANDOM HACKS OF KINDNESS
+
+
+    RHoK was formed in 2009 by Microsoft, Google, Yahoo, NASA, and the World Bank.
+    They wanted to focus on improving disaster relief efforts. Their idea was to combine
+    the knowledge of disaster relief experts and programmers at hackathons held around
+    the world.
+
+
+    During RHoK hackathons, the disaster relief experts give the hackers a problem
+    to solve. Then they work on the problem for a couple of days and propose solutions.
+    The disaster experts choose winning solutions to try in real disaster response
+    situations.
+
+
+    The first hackathon took place at Hacker Dojo in Mountain View, California, in
+    November 2009. Some of the software built at the event was used in relief efforts
+    after the Haiti and Chile earthquakes in 2010. Since then, RHoK hackathons have
+    been held every six months.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_28_0.png)
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_29_0.png)
+
+
+    Social media company Facebook often holds hackathons to come up with new features.
+    Founder and CEO Mark Zuckerberg reviews the best ideas from each hackathon.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_30_0.png)
+
+
+    > The University of Pennsylvania''s 2015 PennApps hackathon was the largest student
+    hackathon in the world. Hackers came from 147 universities in 24 US states and
+    11 countries.
+
+
+    around the world gather at events such as PennApps and MHacks. They learn how
+    to use different kinds of software and computers, write new code, and come up
+    with creative ideas.
+
+
+    These forms of hacking are more like what the original hackers of the 1960s did.
+    Each day, hackers think of new ideas for computers and software. Good or bad,
+    hackers are always pushing the limits to do things that have not been done before.
+    No one knows what will come next. But hackers will definitely play a big part
+    in the future of computers and technology.
+
+
+    ## TIMELINE
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_31_0.png)
+
+
+    # 1970
+
+    Computers start becoming more widely available.
+
+
+    # 1972
+
+    John Draper is arrested for hacking for the first time.
+
+
+    # 1960s
+
+    The word *hack* starts being associated with computer programming.
+
+
+    # 1984
+
+    The hacker club Legion of Doom (LOD) is formed.
+
+
+    # 1990
+
+    The federal government launches Operation Sundial to investigate hacking.
+
+
+    # 2009
+
+    Microsoft, Google, Yahoo, NASA, and the World Bank form RHoK. The first RHoK hackathon
+    is held.
+
+
+    # 2013
+
+    More than 3 billion Yahoo accounts are hacked.
+
+
+    # 2017
+
+    360,000 malware files are detected every day.
+
+
+    # 2010
+
+    Software developed at a RHoK hackathon is used to help relief efforts after earthquakes
+    in Haiti and Chile.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_32_0.png)
+
+
+    activism–a practice that emphasizes direct action in support of or in opposition
+    to an issue that causes disagreement.
+
+
+    available–able to be had or used.
+
+
+    certification–official recognition that someone has fulfilled certain requirements.
+
+
+    code–a set of instructions for a computer.
+
+
+    cybercriminal–someone who commits a crime related to or using computers.
+
+
+    cybersecurity–measures taken to protect a computer or computer system against
+    attack.
+
+
+    disaster–an event that causes damage, destruction, and often loss of life. Natural
+    disasters include events such as hurricanes, tornadoes, and earthquakes.
+
+
+    disrupt–to throw into disorder.
+
+
+    ethical–morally right. Something unethical is morally wrong.
+
+
+    innovate–to come up with a new idea, method, or device. Something marked by a
+    new idea, method, or device is innovative. Someone who innovates is an innovator.
+
+
+    malicious–having or showing a desire to cause harm to another person.
+
+
+    NASA–National Aeronautics and Space Administration. NASA is a US government agency
+    that manages the nation’s space program and conducts flight research.
+
+
+    network–a system of computers connected to.
+
+
+    ## ONLINE RESOURCES
+
+    To learn more about computer hacking, visit online links. These links are monitored
+    for current information.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_34_0.png)
+
+    '
+  mdcn: '
+
+
+    # 诺顿网络安全 2009
+
+
+    智能安全，为速度而设计
+
+
+    每个家庭最多 3 台电脑提供 1 年保护
+
+
+    +   包含
+
+    - Norton 身份安全™
+
+    - Norton™ 防钓鱼
+
+    - Norton™ 脉冲更新
+
+    - Norton 洞察
+
+    - Norton 浏览器保护
+
+    - Norton 杀病毒软件™
+
+    - Norton 反间谍软件
+
+    - Norton 个人防火墙
+
+
+    免费支持*
+
+
+    防护强力，系统资源占用少
+
+
+    +   - 快速、轻量且
+
+    - 阻止在线身份盗取病毒、间谍软件，
+
+
+    自 1991 年以来，诺顿一直是最受欢迎的反病毒和计算机安全软件品牌之一。
+
+
+    > 20 世纪 80 年代后期，史蒂·贝洛文（Steven Bellovin）开发了最早的计算机防火墙之一。他在贝尔实验室与 William Cheswick
+    一创建了它。
+
+
+    其他类型的恶意软件包括木马、间谍软件和勒索软件。木马看起来像是一个可以安全使用的程序。然而，它会在系统中创建漏洞，让黑客得以入侵。间谍软件会学习害者的密码、银行详情等信息。勒索软件会关闭害者的计算机系统，直到支付赎金为止。
+
+
+    黑帽黑客通过短信和电子邮件附件发送恶意软件。当被打开或点击时，恶意软件开始在整个设备中传播。2017 年，每天检测到 360,000 个恶意软件文件。白帽黑客致力于寻找阻止恶意软件传播的方法。
+
+
+    防止黑客有几种主要方法。一种防御是防火墙。这是一种防止不受允许的人连接计算机网络的系统。防火墙必须经常更新，因为黑客最终会找到绕过它们的方法。
+
+
+    另一种防御是反恶意软件软件。这类软件会扫描设备中的威胁。该软件还可以防止恶意软件进入设备，并移除在系统中发现的任何恶意软件。
+
+
+    防火墙和反恶意软件通常结合使用以保护计算机系统。但它们只是人们保护自己受黑帽黑客攻击的方法两种。新的防御正在不断开发。
+
+
+    ## 第 9 章
+
+    ## 黑客革命
+
+
+    **新的黑客形式正在不断出现。** 20 世纪 90 年代中期开始的一种趋势是“黑客行动”（hacktivism）。这个词是 *hack*（黑客）与 **activism**（行动主义）的结合。
+
+
+    黑客利用黑客行动来推他们对他们重要的事业。他们可能会在反对该事业的网站上写下关于该事业的消息。他们可能会**破坏**访问网站的流量，或将其重定向到另一个网站。这种类型的黑客行为通常不会损害被黑入的系统。然而，即使黑客没有造成伤害，这通常也是违法的。
+
+
+    并非所有行动主义者都是破坏性的。“随机善良黑客”（RHoK）是一个黑客行动小组。他们寻找**创新**的方法，利用**技术**来解决世界各地的问题。RHoK
+    举办名为“黑客马拉松”的活动。该小组的目标是使用计算机和其他技术来帮助人们。学院和大学等机构也利用黑客马拉松来激发创新。来自世界各地的学生
+
+
+    ## 数字聚光灯
+
+    ## 随机善良黑客
+
+
+    RHoK 由微软、谷歌、雅虎、美国（NASA）和世界银行于 2009 年成立。他们希望专注于改进灾难救援工作。他们的想法是在全球范围内举办的黑客马拉松，将灾难救援专家和程序员的知识结合起来。
+
+
+    在 RHoK 黑客马拉松期间，灾难救援专家会给黑客一个需要解决的问题。然后他们会对该问题工作几天并提出解决方案。灾难专家选择获胜的解决方案，在真实的灾难响应情况下进行尝试。
+
+
+    第一场黑客马拉松于 2009 年 11 月在加利福尼亚州山景城的 Hacker Dojo 举行。活动中构建的一些软件被用于 2010 年海地和智利地震后的救援工作。自那以后，RHoK
+    黑客马拉松每六个月举行一次。
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_28_0.png)
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_29_0.png)
+
+
+    社交媒体公司 Facebook 经常举办黑客马拉松以开发新功能。创始人兼首席执行官马克·扎克伯格（Mark Zuckerberg）会审查每场黑客马拉松的最佳点子。
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_30_0.png)
+
+
+    > 宾夕法尼亚大学 2015 年 PennApps 黑客马拉松是全球最大的学生黑客马拉松。黑客来自美国 24 个州和 11 个国家的 147 所大学。
+
+
+    聚集在 PennApps 和 MHacks 等活动中。他们学习如何使用不同类型的软件和计算机，编写新代码，并提出创意的想法。
+
+
+    这些形式的黑客更像 20 世纪 60 年代原始黑客所做的。每天，黑客都会为计算机和软件想出新点。无论好坏，黑客总是推向极限，去做以前没有做过的事情。没有人知道接下来会发生什么。但黑客无疑将在计算机和未来发挥巨大作用。
+
+
+    ## 时间轴
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_31_0.png)
+
+
+    # 1970 计算机开始变得更加普及。
+
+
+    # 1972 约翰·德拉（John Draper）首次因黑客行为被捕。
+
+
+    # 1960 年代 *hack* 一词开始与计算机编程相关。
+
+
+    # 1984 黑客俱乐部邪恶骑士（LOD）成立。
+
+
+    # 1990 联邦政府启动“太阳径行动”（Operation Sundial）调查黑客行为。
+
+
+    # 2009 微软、谷歌、雅虎、美国和世界银行成立 RHoK。举办了首场 RHoK 黑客马拉松。
+
+
+    # 2013 30 亿雅虎账户被黑。
+
+
+    # 2017 每天检测到 360,000 个恶意软件文件。
+
+
+    # 2010 在 RHoK 黑客马拉松开发的软件被用于海地和智利地震后的救援工作。
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_32_0.png)
+
+
+    activism——支持或反对引起争议的问题并采取行动的实践。
+
+
+    available——可以获得或使用的。
+
+
+    certification——对某人履行某些要求的官方认可。
+
+
+    code——计算机的一组指令。
+
+
+    cybercriminal——与计算机相关或使用计算机犯罪的人。
+
+
+    cybersecurity——保护计算机或计算机系统免受攻击的措施。
+
+
+    disaster——造成破坏、毁灭并通常导致人员生命的事件。自然灾难包括飓风、龙卷风和地震等事件。
+
+
+    disrupt——破坏秩序。
+
+
+    ethical——道德上正确的。不道德的道德上是错误的。
+
+
+    innovate——想出新的想法、方法或设备。以新想法、方法或设备为特征的是创新的。创新的人是创新者。
+
+
+    malicious——具有或表现出伤害他人的愿望。
+
+
+    NASA——美国航空航天局。NASA 是管理国家太空计划并进行飞行研究的美国政府机构。
+
+
+    network——连接的计算机系统。
+
+
+    ## 在线资源
+
+    要了解更多关于计算机黑客，请访问在线链接。这些链接会监控以最新信息。
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_34_0.png)
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 24]
+
+
+    # Norton Internet Security 2009
+
+
+    Smart Security, Engineered for Speed
+
+
+    1 Year Protection for up to 3 PCs per Household
+
+
+    +   INCLUDES
+
+    - Norton Identity Safe™
+
+    - Norton™ Antiphishing
+
+    - Norton™ Pulse Updates
+
+    - Norton Insight
+
+    - Norton Browser Protection
+
+    - Norton AntiVirus™
+
+    - Norton Antispyware
+
+    - Norton Personal Firewall
+
+
+    FREE SUPPORT*
+
+
+    Strong on protection, light on system resources
+
+
+    +   - Fast, light, and
+
+    - Stops online identity theft viruses, spyware,
+
+
+    Since 1991, Norton has been one of the most popular brands of antivirus and computer
+    security software.'
+  - '[PAGE 25]
+
+
+    > In the late 1980s, Steven Bellovin developed one of the first computer firewalls.
+    He and William Cheswick created it while working at Bell Laboratories.
+
+
+    Other types of malware include Trojans, spyware, and ransomware. A Trojan looks
+    like a program that is safe to use. However, it creates weaknesses in systems
+    so that hackers can get in. Spyware learns victims’ passwords, banking details,'
+  - '[PAGE 26]
+
+
+    and more. Ransomware shuts down victims'' computer systems until a ransom is paid.
+
+
+    Black hat hackers send malware through text and email attachments. When opened
+    or clicked on, the malware begins to spread throughout the device. In 2017, 360,000
+    malware files were detected every day. White hat hackers work to find ways to
+    stop malware from spreading.
+
+
+    There are several main methods for preventing hacks. One defense is a firewall.
+    This is a system that keeps unwanted people from connecting to a computer network.
+    Firewalls have to be updated often as hackers can eventually find their way around
+    them.
+
+
+    Another defense is anti-malware software. This type of software scans devices
+    for threats. The software can also prevent malware from getting into devices.
+    And it removes any malware that it finds in the system.
+
+
+    Firewalls and anti-malware software are often used together to protect computer
+    systems. But they are just two ways people can protect themselves from black hat
+    hackers. New defenses are being developed all the time.'
+  - '[PAGE 27]
+
+
+    # CHAPTER 9
+
+    HACKER REVOLUTION
+
+
+    **New forms of hacking are forming all the time.** One trend that started in the
+    mid-1990s is hacktivism. The term *hacktivism* is a combination of *hack* and
+    **activism**.
+
+
+    Hackers use hacktivism to promote causes that are important to them. They might
+    write a message about the cause on a website that opposes the cause. They may
+    **disrupt** traffic from visiting a site or redirect it to another site. This
+    type of hacking usually doesn’t harm the system being hacked. However, even if
+    the hackers don’t cause harm, it is usually still illegal.
+
+
+    Not alltivists are disruptive. **Random** Hacks of Kindness (RHoK) is a hacktivist
+    group. It looks for **innovative** ways to use **technology** to solve problems
+    around the world. RHoK holds events called hackathons. The group’s goal is to
+    use computers and other technologies to help people.
+
+
+    Organizations such as colleges and universities also use hackathons to spark innovation.
+    Students from universities'
+  - '[PAGE 28]
+
+
+    # DIGITAL SPOTLIGHT
+
+    RANDOM HACKS OF KINDNESS
+
+
+    RHoK was formed in 2009 by Microsoft, Google, Yahoo, NASA, and the World Bank.
+    They wanted to focus on improving disaster relief efforts. Their idea was to combine
+    the knowledge of disaster relief experts and programmers at hackathons held around
+    the world.
+
+
+    During RHoK hackathons, the disaster relief experts give the hackers a problem
+    to solve. Then they work on the problem for a couple of days and propose solutions.
+    The disaster experts choose winning solutions to try in real disaster response
+    situations.
+
+
+    The first hackathon took place at Hacker Dojo in Mountain View, California, in
+    November 2009. Some of the software built at the event was used in relief efforts
+    after the Haiti and Chile earthquakes in 2010. Since then, RHoK hackathons have
+    been held every six months.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_28_0.png)'
+  - '[PAGE 29]
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_29_0.png)
+
+
+    Social media company Facebook often holds hackathons to come up with new features.
+    Founder and CEO Mark Zuckerberg reviews the best ideas from each hackathon.'
+  - '[PAGE 30]
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_30_0.png)
+
+
+    > The University of Pennsylvania''s 2015 PennApps hackathon was the largest student
+    hackathon in the world. Hackers came from 147 universities in 24 US states and
+    11 countries.
+
+
+    around the world gather at events such as PennApps and MHacks. They learn how
+    to use different kinds of software and computers, write new code, and come up
+    with creative ideas.
+
+
+    These forms of hacking are more like what the original hackers of the 1960s did.
+    Each day, hackers think of new ideas for computers and software. Good or bad,
+    hackers are always pushing the limits to do things that have not been done before.
+    No one knows what will come next. But hackers will definitely play a big part
+    in the future of computers and technology.'
+  - '[PAGE 31]
+
+
+    # TIMELINE
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_31_0.png)
+
+
+    # 1970
+
+
+    Computers start
+
+    becoming\more widely
+
+    available.
+
+
+    # 1972
+
+
+    John Draper
+
+    is arrested for
+
+    hacking for
+
+    the first time.
+
+
+    # 1960s
+
+
+    The word *hack* starts
+
+    being associated with
+
+    computer programming.
+
+
+    # 1984
+
+
+    The hacker club
+
+    Legion of Doom
+
+    (LOD) is formed.
+
+
+    # 1990
+
+
+    The federal
+
+    government
+
+    unches
+
+    Operation
+
+    Sundial to
+
+    investigate
+
+    hacking.'
+  - '[PAGE 32]
+
+
+    # 2009
+
+
+    Microsoft, Google,
+
+    yahoo, NASA,
+
+    and the World
+
+    Bank form RHoK.
+
+    The first RHoK
+
+    hackathon is held.
+
+
+    # 2013
+
+
+    More than
+
+    3 billion Yahoo
+
+    accounts are
+
+    hacked.
+
+
+    # 2017
+
+
+    360,000
+
+    malware files
+
+    are detected
+
+    every day.
+
+
+    # 2010
+
+
+    Software developed at a
+
+    RHoK hackathon is used
+
+    to help relief efforts after
+
+    earthquakes in Haiti and Chile.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_32_0.png)'
+  - '[PAGE 33]
+
+
+    activism–a practice that emphasizes direct action in support of or in opposition
+    to an issue that causes disagreement.
+
+
+    available–able to be had or used.
+
+
+    certification–official recognition that someone has fulfilled certain requirements.
+
+
+    code–a set of instructions for a computer.
+
+
+    cybercriminal–someone who commits a crime related to or using computers.
+
+
+    cybersecurity–measures taken to protect a computer or computer system against
+    attack.
+
+
+    disaster–an event that causes damage, destruction, and often loss of life. Natural
+    disasters include events such as hurricanes, tornadoes, and earthquakes.
+
+
+    disrupt–to throw into disorder.
+
+
+    ethical–morally right. Something unethical is morally wrong.
+
+
+    innovate–to come up with a new idea, method, or device. Something marked by a
+    new idea, method, or device is innovative. Someone who innovates is an innovator.
+
+
+    malicious–having or showing a desire to cause harm to another person.'
+  - '[PAGE 34]
+
+
+    NASA–National Aeronautics and Space Administration. NASA is a US government agency
+    that manages the nation’s space program and conducts flight research.
+
+
+    network–a system of computers connected by communications lines.
+
+
+    online–connected to the internet.
+
+
+    random–lacking a definite plan or pattern.
+
+
+    ransom–money demanded for the release of a captured person or return of property.
+
+
+    scam–a fake or illegal act or operation.
+
+
+    Secret Service–a federal law enforcement agency. Its duties include conducting
+    criminal investigations and protecting national leaders. This includes the president
+    and visiting foreign leaders.
+
+
+    software–the written programs used to operate a computer.
+
+
+    technology (tehk-NAH-luh-jee)–machinery and equipment developed for practical
+    purposes using scientific principles and engineering.
+
+
+    # ONLINEONLINE RESOURCES
+
+
+    To learn more about computer hacking, visit abdobooklinks.com. These links are
+    routinely monitored and updated to provide the most current information available.
+
+
+    ![](img/d9ae122cf7a6b4ccdac0ef78583cc322_34_0.png)'
+  - '[PAGE 35]
+
+
+    # INDEX
+
+
+    Aircrack-ng, 11
+
+    AT&T, 18
+
+
+    Google, 12, 25
+
+
+    privacy, 5, 8
+
+
+    black hat hackers, 6, 10,
+
+    11, 12, 20, 23
+
+    blue box, 16, 18
+
+
+    hackathons, 24, 25, 27
+
+    hacker clubs, 18, 19
+
+
+    problem-solving, 5, 6, 7,
+
+    10, 14, 25
+
+
+    Hacker Dojo, 25
+
+    hacking laws, 19
+
+    hacktivism, 24, 25
+
+
+    Random Hacks of
+
+    Kindness, 24, 25
+
+    ransomware, 22, 23
+
+
+    Cain & Abel, 11
+
+    computer networks, 6,
+
+    11, 12, 15, 23
+
+
+    identity theft, 13, 20
+
+    innovation, 5, 15, 18, 24,
+
+    27
+
+
+    scams, 12, 23
+
+    software testing, 5, 10,
+
+    11
+
+
+    computer programs, 6,
+
+    10, 11
+
+
+    spyware, 22, 23
+
+    stealing, 5, 8, 12, 13, 20
+
+
+    computer viruses, 6
+
+    credit card numbers, 12,
+
+    13
+
+
+    Legion of Doom, 19
+
+    Luther, Lex, 19
+
+
+    telephone hacking, 16,
+
+    18
+
+
+    cybercrime, 5, 8, 10, 12,
+
+    13, 16, 18, 19, 20, 24
+
+    cybersecurity, 5, 10, 11,
+
+    12, 23
+
+
+    malware, 20, 22, 23
+
+    Hacks, 27
+
+    Microsoft, 25
+
+
+    Trojans, 22
+
+    2600: The Hacker
+
+    Quarterly, 18
+
+
+    NASA, 25
+
+
+    Omnipeek, 11
+
+    Operation Sundial, 19
+
+
+    universities, 6, 12, 14,
+
+    16, 24, 27
+
+    US Secret Service, 19
+
+
+    education, 6, 7, 14
+
+    ethics, 8
+
+
+    passwords, 5, 11, 20, 22
+
+    PennApps, 27
+
+    phishing, 20
+
+
+    white hat hackers, 8, 10,
+
+    11, 12, 23
+
+    World Bank, 25
+
+
+    phone freaks, 16
+
+    Phrack, 18-
+
+
+    firewalls, 23
+
+
+    Yahoo, 19, 25'
+- md: '
+
+    # IT''S A DIGITAL WORLD!
+
+
+    Technology is everywhere! It''s hard to imagine going a whole day without using
+    a computer, smartphone, or tablet. But how do these devices work? Do you know
+    how your favorite games, websites, podcasts, and apps were created? What''s it
+    like to have a career working with computers? Find out the answers to these questions
+    and It''s a Digital World! Explore the exciting world of computer technology,
+    from computer programming and hacking to website development, game design, and
+    more. Learn about pioneering programmers and how they created breakthrough apps
+    and computer software. Discover what it''s like to have a career as a podcast
+    producer or app developer. This series will open the door to an exciting future
+    in the digital world!
+
+
+    # BOOKS IN THIS SERIES
+
+
+    - *Amazing App Developers*
+
+    - *Creative Podcast Producers*
+
+    - *Dynamic Website Developers*
+
+    - *Gifted Game Designers*
+
+    - *Helpful Hackers*
+
+    - *Master Computer Programmer*
+
+
+    ISBN 978-1-5321-1534-9
+
+
+    9000
+
+    '
+  mdcn: '
+
+
+    # 这是一个数字世界！
+
+
+    技术无处不在！很难想象一整天不使用电脑、智能手机或平板电脑。但这些设备是如何运作的呢？你知道你最喜欢的游戏、网站、播客和应用程序是如何创建的吗？从事计算机相关职业是一种怎样的体验？在《这是一个数字世界！》中寻找这些问题的答案吧！探索计算机技术的奇妙世界，从计算机编程、黑客技术到网站开发、游戏设计等。了解那些先驱的程序员，以及他们如何创造出突破性的应用程序和计算机软件。发现作为播客制作人或应用程序开发者的职业生活是怎样的。本系列将为你开启通往数字世界中令人兴奋的未来大门！
+
+
+    # 本系列书籍
+
+
+    - *神奇的应用开发者*
+
+    - *创意的播客制作人*
+
+    - *活力的网站开发者*
+
+    - *有天赋的游戏设计师*
+
+    - *乐于人的黑客*
+
+    - *大师级程序员*
+
+
+    ISBN 978-1-5321-1534-9
+
+
+    9000
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 36]
+
+
+    <!-- no content -->'
+  - '[PAGE 37]
+
+
+    <!-- no content -->'
+  - '[PAGE 38]
+
+
+    <!-- no content -->'
+  - '[PAGE 39]
+
+
+    # IT''S A DIGITAL WORLD!
+
+
+    Technology is everywhere! It''s hard to imagine going a whole day without using
+    a computer, smartphone, or tablet. But how do these devices work? Do you know
+    how your favorite games, websites, podcasts, and apps were created? What''s it
+    like to have a career working with computers? Find out the answers to these questions
+    and It''s a Digital World! Explore the exciting world of computer technology,
+    from computer programming and hacking to website development, game design, and
+    more. Learn about pioneering programmers and how they created breakthrough apps
+    and computer software. Discover what it''s like to have a career as a podcast
+    producer or app developer. This series will open the door to an exciting future
+    in the digital world!
+
+
+    # BOOKS IN THIS SERIES
+
+
+    +   * Amazing App Developers
+
+    * Creative Podcast Producers
+
+    * Dynamic Website Developers
+
+    * Gifted Game Designers
+
+    * Helpful Hackers
+
+    * Master Computer Programmer
+
+
+    ISBN 978-1-5321-1534-9
+
+
+    9000'
