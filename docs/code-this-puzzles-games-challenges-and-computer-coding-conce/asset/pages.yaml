@@ -1,0 +1,7300 @@
+- img_proc: true
+  md: '# NATIONAL GEOGRAPHIC KIDS
+
+
+    # CODE THIS!
+
+
+    PUZZLES, GAMES, CHALLENGES AND COMPUTER CODING CONCEPTS FOR THE PROBLEM-SOLVER
+    IN YOU!
+
+
+    JENNIFER SZYMANSKI'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '![](img/ff0a36fd32e78d548bb789af8cd599c4_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # NATIONAL GEOGRAPHIC KIDS
+
+    # CODE THIS!
+
+
+    PUZZLES, GAMES, CHALLENGES,
+
+    AND COMPUTER CODING CONCEPTS
+
+    FOR THE PROBLEM-SOLVER IN YOU!
+
+    JENNIFER SZYMANSKI
+
+
+    NATIONAL GEOGRAPHIC
+
+    WASHINGTON, D.C.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# CONTENTS
+
+
+    +   Introduction . . . . . . . . . . . . . . . . . . 6
+
+    Thinking Logically . . . . . . . . . . . . . . . 8
+
+    Try It Out . . . . . . . . . . . . . . . . . . 10
+
+    Welcome to the Coder Crew . . . . . . . . . . . 16
+
+
+    # CHAPTER 1
+
+
+    +   THE MYSTERIOUS CAVE . . . . . . . . . . 18
+
+    Algorithms . . . . . . . . . . . . . . . . . . . 22
+
+    Optimization . . . . . . . . . . . . . . . . . . 26
+
+    Cryptology . . . . . . . . . . . . . . . . . . . 32
+
+    Directions . . . . . . . . . . . . . . . . . . . 42
+
+    Loops . . . . . . . . . . . . . . . . . . . . 46
+
+    The Challenge: The Mysterious Cave . . . . . 50
+
+
+    # CHAPTER 2
+
+
+    +   DEEP-SEA SURPRISES . . . . . . . . . . 52
+
+    Constraints . . . . . . . . . . . . . . . . . . 56
+
+    Debugging . . . . . . . . . . . . . . . . . . . 62
+
+    Binary Code . . . . . . . . . . . . . . . . . 70
+
+    Binary Search . . . . . . . . . . . . . . . . 74
+
+    The Challenge: Deep-Sea Surprises . . . . 80'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# CHAPTER 3
+
+
+    +   SAVE THE SATELLITE ........................... 82
+
+    Trial and Error ................................. 86
+
+    Users and Events ................................ 88
+
+    Pixels ............................................ 96
+
+    Decomposition ................................... 102
+
+    The Challenge: Save the Satellite ................... 108
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_8_0.png)
+
+
+    # CHAPTER 4
+
+
+    +   TRICKY TEPUI ................................... 110
+
+    Optimization .................................... 114
+
+    Making Shapes ................................. 120
+
+    Conditionals .................................... 126
+
+    The Challenge: Tricky Tepui ........................... 136
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_8_1.png)
+
+
+    +   Afterword ...................................... 138
+
+    Solutions ....................................... 140
+
+    Go Further! .................................... 148
+
+    Code On ........................................ 152
+
+    Glossary ....................................... 154
+
+    Index ......................................... 156
+
+    Credits ........................................ 159
+
+    Copyright and Acknowledgments ................... 160
+
+
+    > I''m a hairball hacker
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_8_2.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# INTRODUCTION
+
+
+    # CODING AND COMPUTER SCIENCE
+
+
+    The title of this book is Code This!, but there are actually two things we''re
+    going to learn. One is the art of figuring out how to do things in general. That''s
+    called computer science. The other is the art of explaining how to do something
+    in particular. That is called programming, or coding. We call them both "arts"
+    because they require the same creativity you use when drawing, dancing, singing,
+    or telling stories.
+
+
+    Why are they two different arts? Because in order to explain something clearly
+    enough for a computer to understand, you first have to be able to think about
+    it clearly to yourself. If your thoughts don''t make sense, the reflection won''t
+    make sense.
+
+
+    And like kinds of art, computer science and computer programming use different
+    tools. If you''re in a painting class, you use brushes and pencils. If you''re
+    in band or orchestra, you use a musical instrument. It''s the same with different
+    kinds of computer arts. In computer science puzzles, your tools include logic
+    and math. In computer programming, you write specific code.
+
+    Computer science and coding are like puzzle pieces—they''re different from each
+    other, but they fit together to solve a problem.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# PRACTICAL APPLICATIONS
+
+
+    ### What can we do with computer science?
+
+
+    Almost anything! The world increasingly relies on computers—to send and receive
+    information through the internet, to use mobile phones, to watch television, and
+    to play games. Even this book you''re holding right now was written on a computer.
+
+
+    > The doctor is in... the computer? Computer scientists write programs that help
+    doctors learn diseases and how to cure them. Special programs can even help doctors
+    to do surgery
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_10_0.png)
+
+
+    Sometimes the best way to learn about Earth is to study space Computer programmers
+    write code that helps satellites look deep into space to grab photos. They also
+    control the machines that scramble over faraway surfaces, like on Mars, or high
+    in the atmosphere of other planets in our solar system
+
+
+    Do you like to rock out, or are you more of the classical type? Hip-hop, salsa,
+    jazz—if you''re listening hearing it courtesy of a computer. It takes special
+    code to make your favorite songs sound perfectly in tune.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_10_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_10_2.png)
+
+
+    Computers are hard at work even when we are relaxing People-called software engineers
+    program computers to make your favorite movies and video games come to life
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_10_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_10_4.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_10_5.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_10_6.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# THINKING
+
+    LOGICALLY
+
+
+    # WHAT IS LOGIC?
+
+
+    Good coders always consider logic when they tackle a problem. Logic is just thinking
+    about something in a way that makes sense. When you''re getting dressed in the
+    morning, you wouldn''t put your shoes before your socks, would you? That wouldn''t
+    make sense. If the goal is to have your socks under your shoes, it''s more logical—that
+    is, it makes more sense—to put your socks on first.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_11_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_11_1.png)
+
+
+    # COMPUTER LOGIC
+
+
+    > My computer will
+
+    need socks and
+
+    shees if it''s going to
+
+    "run" my program!
+
+
+    Since the idea behind programming a computer is to write directions in a way that
+    gets the computer to do something, accomplish a goal, then it helps to think about
+    how to write those directions in a way that makes sense. Hey, that''s logic! So,
+    doing logic problems is a big part of computer science. Do computers use logic?
+    In a way, they do. In fact, the tiny electronic parts that make up computers are
+    put together in a way that uses a special kind of logic.
+
+
+    But computer logic is different from human logic. A human brain is creative. It''s
+    also great at sensing the world around us and taking all of what it senses into
+    consideration as it tries to figure out what to do next. So, ultimately, it takes
+    the human mind to dream up the best way to solve a problem, and to tell the computer
+    how to do it.
+
+
+    CODE THIS!'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# WHY DO COMPUTERS NEED CODE?
+
+
+    A computer is like any other kind of tool. A screwdriver won''t drive a screw
+    into a board by itself. It takes a person to pick up the screwdriver, point the
+    correct end of the screwdriver towards the screw, line up the tip of the screwdriver
+    with the slot on the screw, put the end into the slot, push down, turn the screw
+    in the right direction, and stop when the screw is all the way in.
+
+
+    Now, you''d probably do all of that without thinking about it too much. But if
+    you didn''t do all of those things, and all of those things in the right order,
+    the screwdriver wouldn''t be able to do its job correctly—or at all! The computer
+    computer scientists think about how to write the directions so the computer works
+    to do a task completely and efficiently, and as quickly as possible. If they write
+    them correctly, the right kind of computer will be able to do any kind of job!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_12_0.png)'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# TRY IT OUT
+
+
+    # MEET THE FROGBOT
+
+
+    Meet the Frontus jumpus robotic frog (not a real frog or a real robot). This robot
+    is a very simple computer. It can only jump forward—and it can only jump hop at
+    a time. And, like all computers, it doesn''t do anything it''s not programmed
+    to do!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_13_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_13_1.png)
+
+
+    Super spongyy legs and feet help frogbot leap long distances
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_13_2.png)
+
+
+    Frogbot can''t turn unless it''s instructed to.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_13_3.png)
+
+
+    Its eyes and antenna can sense obstacles
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_13_4.png)
+
+
+    Unlike a real frog, frogbot can only do what it''s programmed to do
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_13_5.png)
+
+
+    Frogbot can only complete one command at a time. It can move forward or it can
+    rotate. not both'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# MEET THE BLOCK COMMANDS
+
+
+    Beginning computer coders learn to write code using what we''ll call block commands.
+    A command is an instruction that a computer follows. In this book, a block command
+    looks like this:
+
+
+    ```
+
+    JUMP FORWARD
+
+    ```
+
+
+    To write code, you simply pile blocks together in a list. Frogbot will follow
+    the commands beginning at the top, and ending at the bottom.
+
+
+    +   - START
+
+    - JUMP FORWARD
+
+    - TURN LEFT
+
+    - JUMP FORWARD
+
+    - TURN RIGHT
+
+    - JUMP FORWARD
+
+    - JUMP FORWARD
+
+    - TURN RIGHT
+
+    - JUMP FORWARD
+
+    - TURN LEFT
+
+    - JUMP FORWARD
+
+    - STOP
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# TRY IT OUT
+
+    CONTINUED
+
+
+    If frogbot needs to reach the flower, how would you use the command blocks?
+
+
+    # STEP 2
+
+
+    If you wanted frogbot to jump one more space to the flower, you''d add a second
+    command block.
+
+
+    ```
+
+    JUMP FORWARD
+
+    ```
+
+
+    So, the whole code would be:
+
+
+    ```
+
+    START
+
+    JUMP FORWARD
+
+    JUMP FORWARD
+
+    STOP
+
+    ```
+
+
+    # STEP 1
+
+
+    If you use the command block:
+
+
+    ```
+
+    JUMP FORWARD
+
+    ```
+
+
+    Frogbot would move forward one space.
+
+
+    Jumping sounds like fun!'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Welcome to my pad.
+
+
+    Maybe you could leach me some new moves!'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# # TRY IT OUT
+
+    CONTINUED
+
+
+    Let''s add a new command block:
+
+
+    ```
+
+    TURN LEFT
+
+    ```
+
+
+    When frogbot reaches this command block, it will turn left, like this:
+
+
+    How can you use the command blocks to help frogbot cross the stream?
+
+
+    So this:
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_17_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_17_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_17_2.png)
+
+
+    If you wrote:
+
+
+    Looks like this:
+
+
+    ```
+
+    START
+
+    JUMP FORWARD
+
+    JUMP FORWARD
+
+    JUMP FORWARD
+
+    STOP
+
+    ```
+
+
+    ```
+
+    START
+
+    JUMP FORWARD
+
+    TURN LEFT
+
+    JUMP FORWARD
+
+    JUMP FORWARD
+
+    STOP
+
+    ```
+
+
+    That''s correct! To get the whole way across the stream, frogbot has to move three
+    hops. So, you have to tell it to jump forward three times.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Try it again
+
+
+    Write the code to get frogbot across the stream and to the flower. Remember that
+    frogbot can''t do two commands at once. It can jump, or it can turn, but it can''t
+    do both at the same time.
+
+
+    # START
+
+
+    # Hint: There are 6 steps
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_4.png)
+
+
+    # CODE TOOLBOX
+
+
+    Jump to it
+
+
+    | START |
+
+    | JUMP FORWARD |
+
+    | TURN LEFT |
+
+    | TURN RIGHT |
+
+    | STOP |
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_5.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_6.png)
+
+
+    HERE''S THE ANSWER:
+
+    START
+
+    JUMP FORWARD
+
+    JUMP FORWARD
+
+    TURN LEFT
+
+    JUMP FORWARD
+
+    TURN RIGHT
+
+    JUMP FORWARD
+
+    JUMP FORWARD
+
+    JUMP FORWARD
+
+    STOP
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_7.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_18_8.png)
+
+
+    # STOP'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# # WELCOME TO THE CODER CREW
+
+
+    Ready for your mission?
+
+
+    # MEET CODY
+
+
+    Imagine that National Geographic''s whiz engineers created Cody, an all-purpose
+    robot that will help Explorers in the field with... well, just about anything.
+    Cody is flexible, sturdy, and packed with gadgets. It can easily get to all the
+    difficult and dangerous places where Explorers collect data.
+
+
+    > No need to haul samples to a lab! Cody can process any thing it needs to its
+    belly.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_19_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_19_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_19_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_19_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_19_4.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_19_5.png)
+
+
+    If you need it. Cody''s arm gadgets include a flashlight tools, and more
+
+
+    Cody can go anywhere thanks to its extendable all-terrain wheels. It can even
+    be customized to take on water challenges!
+
+
+    Cody was built with many features that help it blend into its surroundings, including
+    an extendable neck!'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# THE CATCH
+
+
+    Whenever an Explorer needs a hand, Cody''s there to help. Unfortunately, it''s
+    very particular about the details. It can''t simply collect a rare type of bacteria
+    from a volcano. It needs step-by-step instructions on where to go, how to collect
+    the bacteria, what bacteria to collect, and how to get back to the Explorers.
+    Explorers are busy folks with a lot of cool stuff on their minds. They rarely
+    give Cody the instructions it needs, which makes it want to totally short-circuit.
+    That''s where YOU come in.
+
+    **Welcome to Cody Crew.**
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_20_0.png)
+
+
+    # YOUR MISSION
+
+
+    **THROUGH THIS BOOK, YOUR JOB IS TO GIVE CODY THE INSTRUCTIONS IT NEEDS TO COMPLETE
+    THE EXPLORERS'' MISSIONS.**
+
+    You''ll need to break down each of the Nat Geo Explorers'' big tasks into smaller
+    ones that you can give Cody instructions for. Then you''ll need to instruct Cody
+    what to do. Are you up for the challenge? The Nat Geo Explorers are relying on
+    YOU for some of the toughest, trickest, most awesome missions on Earth.
+
+    There are lots of different
+
+
+    kinds of puzzles in this book—will be easy, and some will be a little more challenging.
+    Don''t be afraid to try them all!
+
+    Real computers have something in common with kids—both learn by trying new things
+    and making mistakes.
+
+    **And here''s a hint that might surprise you—if you''re really stuck, go find
+    the answer in the back!** That''s right. Look at the solution. But here''s the
+    catch: Don''t just look at the answer, really examine it. Ask yourself: Why is
+    this the right answer? How could you get the answer? Work backward! Sometimes''s
+    the best way to learn.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_20_1.png)
+
+
+    Ready to take on the challenge? Let''s Code This'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# # CHAPTER 1
+
+    # THE MYSTERIOUS CAVE
+
+
+    CODING CONCEPTS IN THIS CHAPTER:
+
+
+    +   - ALGORITHMS
+
+    - OPTIMIZATION
+
+    - CRYPTOLOGY
+
+    - DIRECTIONS
+
+    - LOOPS'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# # THE
+
+    CHALLENGE
+
+
+    >> FIND THE ARTIFACTS
+
+
+    **OBJECTIVE:** PROGRAM CODY TO EXPLORE A CAVE
+
+    AND LOOK FOR ANCIENT ARTIFACTS.
+
+
+    # THE SITUATION
+
+
+    Exploring a route used by
+
+    people to trade goods for
+
+    hundreds of years, the
+
+    Explorers come upon a cave.
+
+    Could there be some **artifacts**
+
+    left from these travelers in
+
+    cave? No one knows what
+
+    conditions are like in the cave,
+
+    so it''s **not safe for humans** to
+
+    go exploring. But Cody''s up to
+
+    the task! How can the
+
+    Explorers program Cody to
+
+    find artifacts in the dark cave?
+
+
+    > THERE''S NO TELLING
+
+    HOW DEEP THIS CAVE IS,
+
+    AND BATTIES DON''T
+
+    LAST FOREVER! YOU''LL
+
+    HAVE TO PROGRAM CODY
+
+    TO BE EFFICIENT.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'I''m going where no robot has gone before.
+
+
+    WHOA, IT LOOKS PRETTY DARK IN THERE! YOU''RE GOING TO NEED TO MAKE SURE CODY DOESN''T
+    GET LOST MOVING THROUGH THE CAVE.
+
+
+    CHAPTER 1 | 21
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_24_0.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# > BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    ALGORITHMS
+
+
+    # DECODE THE CONCEPT
+
+
+    Computers use algorithms to accomplish tasks. An algorithm is just a fancy word
+    for a list of directions. You use algorithms all the time, and probably didn''t
+    even know it!
+
+
+    +   THERE ARE TWO BIG RULES FOR WRITING A GOOD ALGORITHM FOR A COMPUTER:
+
+    1. Write down every single step that the computer needs to do.
+
+    2. Write down all the steps in the right order.
+
+
+    Following these steps is a little like following a path. You need to travel in
+    the right order to accomplish your goal.
+
+
+    > Mmm—nBananas.
+
+    Thai algorithm looks yummy
+
+
+    # ADA LOVELACE
+
+
+    The world''s first computer algorithm was written by Ada Lovelace. She wrote a
+    list of directions to be followed by a machine that had never been invented yet!
+    She is considered to be the world''s first computer programmer.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_25_0.png)'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: 'If you''ve ever baked a cake or made cookies, you''ve used an algorithm. If
+    you don''t follow the steps of a recipe in the right order, you''re likely to
+    end up with a kitchen catastrophe ... or at least something that doesn''t taste
+    very good!
+
+    But do you know if you''re writing a good algorithm? Computer coders don''t just
+    write a list of directions and how it works. After they write an algorithm, they
+    make sure all of the steps are there. If there are any missing steps, they go
+    back and add them.
+
+
+    Here are a few other steps that can be added to the algorithm. Can you figure
+    out where they should go?
+
+
+    ```
+
+    TURN OFF THE BLENDER.
+
+    PEEL A BANANA AND BREAK IT INTO PIECES.
+
+    PUT THE LID ON THE BLENDER.
+
+    PUT THE FRUIT INTO THE BLENDER.
+
+    POUR THE SMOOTHIE INTO A GLASS.
+
+    ```
+
+
+    # How to Make a Smoothie (Sort of)
+
+
+    Here are some steps that can be used to make a yummy smoothie.
+
+
+    Write your smoothie algorithm on a piece of paper. Add any additional steps you
+    need to finish your fruity masterpiece!
+
+
+    +   - PUT BANANA PIECES INTO THE BLENDER.
+
+    - GET A CUP OF YOUR FAVORITE FROZEN FRUIT.
+
+    - MEASURE ½ CUP OF MILK OR YOGURT.
+
+    - PUT THE MILK OR YOGURT IN THE BLENDER.
+
+    - TURN THE BLENDER ON TO ITS HIGHEST SETTING.
+
+    - WAIT 3 OR 4 MINUTES, OR UNTIL SMOOTH.
+
+    - TAKE THE LID OFF THE BLENDER.
+
+    - DRINK THE SMOOTHIE.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_26_0.png)
+
+
+    But are all the steps really there?
+
+
+    ALGORITHMS CONTINUES CHAPTER 2 23'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# > YOUR TURN
+
+
+    # # CODING CONCEPT:
+
+    ALGORITHMS
+
+
+    # TRY IT OUT
+
+
+    # ## PROGRAM A FRIEND
+
+
+    Write an algorithm to help a friend drop a paper ball into a trash can.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_27_0.png)
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   - An empty trash can or bucket
+
+    - Tape
+
+    - A pillow or other soft object
+
+    - A piece of paper, waded up into a ball
+
+    - Pencil and paper
+
+    - A friend
+
+
+    # WHAT TO DO
+
+
+    +   1 STAND NEXT TO THE TRASH CAN. Take five steps in one direction. Mark this
+    spot on the floor with a piece of tape.
+
+    2 PLACE THE PILLOW about halfway between the tape and the trash can.
+
+    3 Using the commands in the toolbox, WRITE AN ALGORITHM (list of directions) that
+    will cause your friend to walk to the tape, around the pillow, up to the trash
+    can, and then drop the ball into it.
+
+    4 GIVE YOUR FRIEND the ball of paper. Direct them to stand at the tape and close
+    their eyes. Read your algorithm aloud one step at a time, with your friend performing
+    each action. Your friend can only do what you say, and nothing else!
+
+
+    # CODE TOOLBOX
+
+
+    TAKE ONE STEP FORWARD
+
+
+    TURN TO THE LEFT
+
+
+    TURN TO THE RIGHT
+
+
+    OPEN YOUR HAND
+
+
+    RAISE YOUR ARM
+
+
+    24 CODE THINGS'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# 1
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_28_0.png)
+
+
+    # 2,3
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_28_1.png)
+
+
+    # 4
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_28_2.png)
+
+
+    > It''s more than just moving things around. It''s making a choice that makes
+    sense for everyone involved.
+
+
+    # WHAT''S GOING ON?
+
+
+    We''d like to think that sometimes we can''t understand why our neighbors do things.
+    It is frustrating when you throw a ball and it crashes and instead of getting
+    the steps you need to do again, you understand each other.
+
+
+    # PROBLEM SOLVED!
+
+
+    Did your algorithm work? Why or why not? How would you change it if there were
+    two pillows in the way instead of one?'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# CODING CONCEPT: OPTIMIZATION
+
+
+    # DECODE THE CONCEPT
+
+
+    Computers can solve problems quickly. This is, in part, because of something called
+    optimization. When coders write algorithms, they try to write so that the computer
+    can carry out the instructions in the best way possible.
+
+
+    Coders use a logic problem called the Traveling Salesperson to help them practice
+    how to optimize the code they write.
+
+
+    This logic problem is way older than computers. The Traveling Salesperson asks
+    the question: “How can I get to all of the stops I need to make in the most efficient
+    way possible?”
+
+
+    It got its name from a time when there were salespeople who would travel from
+    town to town—and sometimes home to home—to try to sell their products. To do that,
+    salespeople would want to visit all the possible customers using the shortest
+    possible route. That way they could meet with more customers in the same amount
+    of time. The most efficient route is clear, but sometimes it’s much harder to
+    figure out.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# CODING CONNECTION
+
+
+    One of the reasons that computer science can be tricky is that there''s often
+    more than one answer to a problem. What if the salesperson had to travel to 50
+    cities? 100? Then there might be a million ways and it wouldn''t take a long time
+    to figure out the best one. Minimum codes pick the answer unless it''s not good
+    enough.
+
+
+    # DID YOU KNOW?
+
+
+    This problem was first officially described in the 1800s by a mathematician named
+    William Rowan Hamilton. A path that visits each of an area''s points is called
+    a Hamiltonian path. Unless it makes a loop, in which case it''s called a Hamiltonian
+    cycle.
+
+
+    # DON''T TRY THIS AT HOME!
+
+
+    Hamilton is also famous for carving mathematical equations into the Broom Bridge
+    in Dublin, Ireland, on October 16, 1843. To honor the mathematician, people visit
+    this graffiti every year on that date.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_30_0.png)
+
+
+    OPTIMIZATION CONTINUES'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# CODING CONCEPT:
+
+    OPTIMIZATION
+
+
+    # TRY IT OUT
+
+
+    # YOU BE THE TRAVELING EXPLORER
+
+
+    it''s your turn to be the traveling explorer. You have some errands to do before
+    dinner.
+
+
+    And let''s say you have a little red wagon, so you don''t need to worry about
+    carrying anything.
+
+
+    Now, the places you need to be are scattered all over your neighborhood, like
+    this. The numbers between each point show the time in minutes it takes to walk
+    between each of them: What''s the best route for you
+
+
+    YOU HAVE TO:
+
+
+    +   1. drop off library books
+
+    2. go to the grocery store
+
+    3. mail a package at the post. office
+
+
+    You need to visit each place once (and only once: You''re in a hurry, remember),
+    and you need to start from home and end up back there in time for dinner.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_31_0.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# In which order will you go from place to place?
+
+
+    +   1. Leave home
+
+    2. STOP 1
+
+    (total time traveled so far = ?)
+
+    3. STOP 2
+
+    (total time traveled so far = ?)
+
+    4. STOP 3
+
+    (total time traveled so far = ?)
+
+    5. Return home
+
+    (total time for the whole trip = ?)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_32_0.png)
+
+
+    # WHAT''S GOING ON?
+
+
+    While there are many different routes you could take, not all would take the same
+    amount of time. And while the post office to the library may be the shortest leg
+    on its own, it may not lend itself being part of the overall trip! You might have
+    to try a few different combinations to find the shortest overall route
+
+
+    # PROBLEM SOLVE!
+
+
+    How long did your trip take? Can you find a shorter route by another route and
+    see?'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# # CODY''S CODING CHALLENGE
+
+
+    # # CODING CONCEPT: OPTIMIZATION
+
+
+    # TRY IT OUT
+
+
+    # CAVE EXPLORER CODY
+
+
+    **OK, Cody Crew. Ready to help Cody tackle the cave?**
+
+    The National Geographic Explorers have done their research. With the help of LIDAR,
+    they have made a map of the rooms inside the first tunnel.
+
+    Each letter on the map represents a small room in the cave where there might be
+    artifacts. The lines between the rooms represent paths that connect the rooms.
+    The numbers represent the time in minutes it will take Cody to get from room to
+    room to get back to HQ before its batteries lose all charge, so you want to program
+    Cody to explore each room once (and only once) and then come back out of the tunnel
+    in the shortest amount of time. **What would be the best path to program Cody
+    to follow?**
+
+
+    # WHAT TO DO
+
+
+    +   1. **START** at the room labeled A.
+
+    2. **Decide WHICH ROOM** Cody should go to next. Write down the number between
+    these two rooms.
+
+    3. **Decide which room Cody should go to next.** Write down the number between
+    these two rooms: **REPEAT** until Cody has in all the rooms.
+
+    4. **REMEMBER:** Cody shouldn''t go to any room more than once, and it has to
+    finish at room A.
+
+    5. **ADD ALL THE NUMBERS** together. How long will your route take Cody to complete?
+
+
+    # WHAT''S LIDAR?
+
+
+    LIDAR or Light Detection and Ranging is a remote-sensing method that uses laser
+    light to measure distances to Earth. The data from the light pulses form a 3D
+    image of whatever you''re scanning. That''s handy when you''re mapping out things
+    you can''t easily see from Earth''s surface, like caves!
+
+
+    > Hints Cody is already facing room B
+
+
+    > Before you begin, think about different decisions you might make to pick a path
+
+
+    > Can there be more than one way to write the code?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_33_0.png)'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "![](img/ff0a36fd32e78d548bb789af8cd599c4_34_0.png)\n\n```\nCODE TOOLBOX\nMOVE\
+    \ FORWARD FOR 5 MINUTES\nMOVE FORWARD FOR 10 MINUTES\nTURN RIGHT\nTURN LEFT\n\
+    ```\n\nGO FURTHER!\nWe must finish tonight from Cody's attack. The\nExplorers\
+    \ know there is a could attack in EACH\nroom. Now that Cody is in room A, they\
+    \ want to\ngo and stop a pickle before explodes. Using the com\nmind blocks in\
+    \ the TOOLBOX, Plus the commands Space\n & Pics can you write code for Cody to\
+    \ follow?\nWhy should we move from A to room C?\n\nCHAPTER 1 31"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    CRYPTOLOGY
+
+
+    When computers send messages, such as emails, through the internet, they often
+    need to be protected. After all, you wouldn''t want everyone in the world knowing
+    your business. But cryptology—the study of how to write and understand codes—is
+    nothing new. People have been sending secret messages for as long as there have
+    been people!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_35_0.png)
+
+
+    Code breakers—people who learned how to fight off opponents—have changed the history
+    of the world. Alan Turing and Gordon Welchman were able to break the Enigma code
+    used by Germany in World War II and members of the Native American Navajo tribe
+    developed a code to use during the Pacific war that proved to be nearly unbreakable.
+
+
+    Agent 001
+
+    reporting for
+
+    duly
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_35_1.png)'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# SECRET CIPHERS
+
+
+    An important part of breaking ciphers is knowing the key. The key to this code
+    is below.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_36_0.png)
+
+
+    Can you tell what the cipher below says?
+
+    Grab a piece of paper and a pencil, and find out!
+
+
+    25 15 21 19 15 12 22 5 4 20 8 5 3 9 16 8 5 18
+
+    3 15 4 25 12 15 22 5 19 5 24 16 12 15 18 9 14 7
+
+    3 15 21 14 20 20 8 5 6 18 15 7 2 15 20 19
+
+
+    > THINK ABOUT IT What would happen if the person who gets your message doesn''t
+    know the key?
+
+
+    CIPHERS CONTINUES'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# H''L OHMJ ADBZTRD H DZS RGQHLO
+
+
+    # > YOUR TURN
+
+
+    # CODING CONCEPT:
+
+    CRYPTOLOGY
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_37_0.png)
+
+
+    # TRY IT OUT
+
+
+    # SUBSTITUTION CIPHERS
+
+
+    One of the more difficult ciphers is called a substitution cipher. In this kind
+    of cipher, one letter is changed with another. Both the person who sends the message
+    and the person who receives the message need to have the key to discover the message.
+
+
+    IN THIS KEY, THE ALPHABET USED TO WRITE THE CIPHER IS MOVED ONE LETTER.
+
+
+    Normal:
+
+    A B C D E F G H I J K L M N O P Q R S T U V W X Y
+
+
+    Cipher:
+
+    Z A C D E F G H I J K L M N O P Q R S T U V W X Y
+
+
+    Grab a piece of paper. Can you write these messages below using the cipher alphabet
+    in the second row?
+
+
+    A GIRAFFE''S TONGUE
+
+    IS BLACK!
+
+
+    BATS HAVE THUMBS!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_37_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_37_2.png)'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Now can you decrypt these fun animal facts?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_0.png)
+
+
+    ZM NBSNOTR GZR
+
+    SQDD GDZQSR.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_1.png)
+
+
+    FNKCEHRG BZM
+
+    KDZQM SN CN
+
+    SQHBJR.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_2.png)
+
+
+    MN SVN SHFDQR''
+
+    RSQOHDR ZQD ZKHJD.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_3.png)
+
+
+    LZKD ODMGFTHMR
+
+    JDDO DFFR VZQL.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_38_4.png)
+
+
+    AQHFGS BNKNOR
+
+    VZQM ZVZX
+
+    OQDZSQNR.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# > YOUR TURN\n\n# # CODING CONCEPT:\n CRYPTOLOGY\n\n# ## TRY IT OUT\n\n# ###\
+    \ MAKE A CIPHER WHEEL\n\nIt can be hard to come up with a supersecret cipher.\
+    \ After all, just about anyone could guess a key that just shifted the letters\
+    \ of the alphabet by one letter. Use this cipher wheel to help generate hard-to-crack\
+    \ ciphers.\n\n+   - Two paper plates\n- Scissors\n- Pencil or pen\n- Single-hole\
+    \ punch or scissors\n- Paper fastener\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_39_0.png)\n\
+    \n![](img/ff0a36fd32e78d548bb789af8cd599c4_39_1.png)\n\n> CODING CONNECTION\n\
+    Lots of important information is sent around and stored on computers. Computer\
+    \ scientists use cryptology to learn how to protect information. Learning about\
+    \ ciphers also helps you write real programs.\n\nNow try this cipher wheel! You\
+    \ will want to make a code and then translate it back.\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_39_2.png)"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# WHAT TO DO
+
+
+    +   1 CUT ONE PAPER PLATE so that it''s a smaller circle than the other.
+
+
+    +   2 FOLD EACH PAPER PLATE IN QUARTERS, so that it looks like a piece of pie.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_40_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_40_1.png)
+
+
+    MAKE A CIPHER WHEEL CONTINUES'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# MAKE A CIPHER WHEEL
+
+
+    # WHAT TO DO
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_41_0.png)
+
+
+    +   3 Use the hole punch or scissors to PUNCH OR CUT A SMALL HOLE AT THE VERY
+    END OF THE FOLDED PLATE. Be careful not to make the hole too big. Unfold the plates.
+
+    4 USING THE IMAGE SHOWN ON PAGE 39 AS A GUIDE, place the small circle on top of
+    the large circle. Write the alphabet on each wheel, evenly spaced around each
+    wheel. You may wish to draw 26 dots evenly spaced around each circle so they line
+    up together across the small and large circle, then write in each letter.
+
+    5 Put the smaller wheel on top of the larger wheel. FASTEN THE WHEELS TOGETHER
+    with the paper fastener.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_41_1.png)'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# 4,5
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_42_0.png)
+
+
+    Tip Put the letter
+
+    A at 12 o''clock
+
+    N at 6 o''clock
+
+    3 o''clock should be
+
+    bween G and H
+
+    and 9 o''clock
+
+    should be between
+
+    T and U
+
+
+    HOW TO USE YOUR CIPHER WHEEL
+
+    CHOOSE TWO LETTERS TO BE YOUR KEY. Remember, only you and the person you''re sending
+    the cipher to should know these letters! For example, you might choose the letters
+    E and A.
+
+    FIND THE FIRST KEY LETTER (E) on the
+
+    large wheel. Turn the inside wheel until the second
+
+    key letter (A) is right below the first.
+
+    USE THE LETTERS ON THE INSIDE WHEEL TO WRITE YOUR CIPHER. For example, if the
+    key letters are E and A, Cody''s name (CODY) would be: YKZU.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_42_1.png)'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# > CODY''S CODING CHALLENGE
+
+
+    # CODING CONCEPT: CRYPTOLOGY
+
+
+    # TRY IT OUT
+
+
+    # CAVE CODES
+
+
+    As Cody makes its way into the room labeled C, it comes upon some strange writing
+    on the wall. It looks like a cipher. Can you figure out what it says?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_43_0.png)'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# PDA OPQZU
+
+    KB YWRAO
+
+    EO YWHHAZ
+
+    OLAHAKHKCU
+
+
+    The lizard is sunbathing on the rock. It is looking for some food.
+
+
+    The lizard is sunbathing on the warm rock. It is looking for some food.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_44_0.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# > BREAK IT DOWN
+
+
+    # CODING CONCEPT: DIRECTIONS
+
+
+    # DECODE THE CONCEPT
+
+
+    You''ve probably worked your way through a maze, but have you ever really thought
+    about all the different parts of a maze? You can use the parts of a maze to understand
+    how to write a maze-solving code!
+
+
+    > Who knew that mazes had parts? Me that''s who!
+
+
+    ENTRANCE
+
+    The starting point, or where you enter the maze from the outside
+
+
+    WALL
+
+    The barriers that you cannot pass through within the maze. The spaces between
+    the walls form the paths.
+
+
+    PATH
+
+    A route you travel through a maze
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_45_0.png)'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# DEAD END
+
+
+    A spot in the maze where a path comes to an end—you have no choice but to turn
+    around and choose a different direction.
+
+
+    # BACKTRACK
+
+
+    Turning around to try a new path
+
+
+    # EXIT
+
+
+    The end point of the maze
+
+
+    # JUNCTION
+
+
+    A point in the maze where paths branch off from each other or meet up with each
+    other
+
+
+    # SOLUTION
+
+
+    A successful path from the entrance to the exit'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# YOUR TURN
+
+
+    # CODING CONCEPT:
+
+    DIRECTIONS
+
+
+    # TRY IT OUT
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   - Chalk, tape, or other materials for marking
+
+    - A big open area
+
+    - A friend to be the mousebot
+
+
+    # MOUSEBOT ON THE THE MOVE!
+
+
+    Meet the Mousus movus robotic mouse (not a real mouse or real robot). This robot
+    is a very simple computer. It can do two things: It can move and it can rotate.
+    But it can''t do them at the same time. To get mousebot to turn in a new direction,
+    you first need to program it to turn, then you need to program it to move forward
+    in the new direction it is facing.
+
+
+    = = Go forward one space.
+
+    > Turn right
+
+    < Turn left
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_47_0.png)
+
+
+    # WHAT TO DO
+
+
+    +   1 COPY THE MAZE on the next page onto the big open area using tape or chalk.
+
+    2 Using only the blocks in the toolbox, WRITE AN ALGORITHM to get your mousebot
+    through the maze.
+
+    3 Have your MOUSEBOT STAND IN THE MAZE, at the area marked "Start"
+
+    4 FOLLOW YOUR ALGORITHM STEP AT A TIME. Remember, You can''t go through the maze
+    walls! And you can''t do more than one command at the same time.
+
+
+    # FOLLOW THAT WALLI
+
+
+    People have always enjoyed solving mazes, including lately which we have lego
+    for walls. Design for getting out of a maze is called wall following. There are
+    two rules to follow:
+
+    1 Keep your right hand on the right wall at all times
+
+    2 Make a right at every junction
+
+    This strategy might take a long time, but it will work!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_47_1.png)
+
+
+    44 CODE THIS!'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# CODE TOOLBOX\n\nCODING CONNECTION\nsome programs have millions of lines of\
+    \ code.\nWhy might others use pre-written systems like?\nBecause it's faster and\
+    \ easier than writing them out yourself!\nnGo ahead and try:\n\n```\n{\n  >\n\
+    {\n<}\n```\n\nIf you're unsure where to start,\nremember that you can\nalways\
+    \ change what you\nwritten before. Try out different types of\nObjects, Classes,\
+    \ and Functions.\nWhen you feel more confident:\n\nStop\n\nRight, now\ntake a\
+    \ left.\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_48_0.png)\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_48_1.png)\n\
+    \n![](img/ff0a36fd32e78d548bb789af8cd599c4_48_2.png)\n\nStart\n\nCHAPTER 1 45"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    LOOPS
+
+
+    I bet I can run loops around that mouseball!
+
+
+    # DECODE THE CONCEPT
+
+
+    Computers don''t get bored doing the same thing over and over again, but people
+    do! One of the shortcuts that coders take when writing directions is called a
+    loop. A loop is any action that''s done more than one time in a row. Clap your
+    hands three times. You just did a loop!
+
+
+    It''s easy to use!
+
+
+    Just fit the command you want to do into the slot.
+
+
+    THE COMMAND BLOCK FOR A LOOP LOOKS LIKE THIS:
+
+
+    | REPEAT | TIMES |
+
+    |---|---|
+
+    | DO | A |
+
+
+    | REPEAT | TIMES |
+
+    |---|---|
+
+    | DO | A |
+
+
+    Write the number of times you want it done in the circle.
+
+
+    # CODING CONNECTION
+
+
+    Sometimes coders will write loops into a program to save time and space. There''s
+    at least one loop in almost every computer program. Sometimes there are loops
+    in loops - these are called nested loops Loops save coders lots of time, but they
+    can some times make programs run more slowly if not used carefully.
+
+
+    | REPEAT | 3 | TIMES |
+
+    |---|---|---|
+
+    | DO | A |'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# TRY IT OUT
+
+
+    Help mousebot reach the toadstool.
+
+
+    Now write the algorithm again. This time you can use the loop block.
+
+
+    On a piece of paper, write an algorithm using the directional command blocks in
+    the toolbox for mousebot to reach the toadstool.
+
+
+    Use a coin or other object to try both of your algorithms on the board below.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_0.png)
+
+
+    # CODE TOOLBOX
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_1.png)
+
+
+    # Start
+
+
+    # PROBLEM SOLVER
+
+
+    How many steps are in each algorithm? Which algorithm was shorter?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_2.png)
+
+
+    # WHAT''S GOING ON?
+
+
+    The mousebot encountered the loop. I added a new command within the loop to count
+    how many times to repeat. Every time the mouse finished a loop, I added one more
+    new command in the algorithm.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_4.png)
+
+
+    # CODING CONNECTION
+
+
+    Computer programs and apps might run on hundreds or even thousands of lines, but
+    sometimes the code that makes a loop can have more than 10 lines. Try using loops
+    instead of repeating to save much code.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_5.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_6.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_7.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_8.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_9.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_10.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_11.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_12.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_50_13.png)'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# > CODY''S CODING CHALLENGE
+
+
+    # # CODING CONCEPT: LOOPS
+
+
+    # ## TRY IT OUT
+
+
+    #  CODY AND THE LABYRINTH
+
+
+    After exploring the first tunnel, Cody returned with a cool cipher. After studying
+    the map some more, the Explorers think there might be some interesting crystals
+    in the second tunnel. Take a look at the cave map. Can you write an algorithm
+    using the command blocks in the toolbox to get Cody to the room deep inside the
+    cave? Write your code, then use a coin or other object to try it out on page 49.
+    Did it work?
+
+
+    > Remember
+
+    A means move forward 1 space
+
+
+    > You don''t want to disturb the spiders Cody should avoid them!
+
+
+    > The loop command block looks like it might come in handy!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_51_0.png)'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# Start
+
+
+    # CODE TOOLBOX
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_0.png)
+
+
+    ```
+
+    REPEAT TIMES DO
+
+    ```
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_4.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_52_5.png)
+
+
+    # Stop'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# >> THE CHALLENGE
+
+
+    # THE MYSTERIOUS CAVE
+
+
+    OBJECTIVE: FIND AND PHOTOGRAPH ALL 10 ARTIFACTS AND RETURN TO THE CAVE ENTRANCE
+    USING THE SHORTEST ALGORITHM POSSIBLE.
+
+
+    OK, Coder Crew. You''ve learned a lot in this chapter about algorithms, efficiency,
+    and loops. It''s time to put it all together and send Cody into the cave to see
+    what artifacts it can find and photograph. Grab a piece of paper and a pencil
+    to write out your algorithm using the commands in the toolbox. Then grab a coin
+    or other small object to represent Cody and try out your algorithm on the map!
+
+
+    ```
+
+    CODE TOOLBOX
+
+    >
+
+    >
+
+    REPEAT TIMES
+
+    TAKE PHOTO
+
+    ```'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'Don''t forget: Cody needs to return to the cave entrance once it''s done photographing
+    the 10 artifacts in the cave, and it can''t go through the gray blocks.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_54_0.png)
+
+
+    > Hint Remember Cody can only do one action at a time. It can move it can turn
+    or it can take a photo.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# CHAPTER 2
+
+
+    # DEEP-SEA
+
+    SURPRISES
+
+
+    CODING CONCEPTS IN THIS CHAPTER:
+
+
+    +   - CONSTRAINTS
+
+    - DEBUGGING
+
+    - BINARY CODE
+
+    - BINARY SEARCH
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_56_0.png)'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# # THE CHALLENGE
+
+
+    # >> DEEP-SEA DIVING
+
+
+    **OBJECTIVE:** PROGRAM CODY TO HELP THE EXPLORERS DO SOME DEEP-SEA EXPLORATION.
+
+
+    # ## THE SITUATION
+
+
+    The ocean floor can be a dark and dangerous place. Scientists often use robotic-controlled
+    vehicles to explore the deepest part of the ocean and to see what kinds of interesting
+    animals live there. The National Geographic Explorers want to take a look down
+    into the ocean depths. **How can you program Cody to help the Explorers on their
+    deep-sea expedition?**'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: 'THERE ARE A LOT OF COOL UNKNOWN CREATURES WAITING TO BE DISCOVERED! MAKE SURE
+    CODY IS EQUIPPED TO GATHER ALL THE INFO IT NEEDS.
+
+
+    Captain Cody.
+
+    at your service!
+
+
+    IT''S HARD TO SEE VERY DEEP INTO THE WATER. YOU''LL NEED TO FIND WAYS TO DELIVER
+    COMMUNICATIONS CLEARLY TO CODY.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# > BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    CONSTRAINTS
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_59_0.png)'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# DECODE THE CONCEPT
+
+
+    One of the things coders must consider when they write computer programs are **constraints**.
+    A constraint is anything that might keep a solution from working, or might keep
+    it from working well. Try to tie your shoe. How long does it take? Add the constraint
+    of not being able to use your thumbs, and then try to tie your shoe again. How
+    does this change the solution?
+
+
+    You can practice working with constraints by solving this logic problem: Three
+    frogs and three toads sit on seven stones in a pond. The frogs on the left three
+    stones would like to sit on the three stones on the right. The toads on the right
+    would like to sit on the three stones on the left. Each animal can only hop one
+    hop at a time, they can only hop forward, and they can''t share a stone with another
+    toad or frog. Each stone can only hold one animal at a time. **Can you figure
+    out how to move the frogs and toads so that they switch sides?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_60_0.png)'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '# > YOUR TURN
+
+
+    # CODING CONCEPT:
+
+    CONSTRAINTS
+
+
+    # TRY IT OUT
+
+
+    # HOP TO IT!
+
+
+    Instead of frogs and toads, you can use objects to work out a solution to the
+    previous page. Can you use logic to help help two groups of objects switch sides?
+
+
+    | WHAT YOU''LL NEED |
+
+    | --- |
+
+    | A piece of paper and a pencil or pen |
+
+
+    +   * A piece of paper and a pencil or pen
+
+    * Six small objects, like coins or blocks—with three of one kind and three of
+    another to symbolize the frogs and toads
+
+
+    > I''m more of a howler than a hopper
+
+
+    CODING CONNECTION
+
+    Did you know that frogs and toads have different characteristics? In programming,
+    these are called constraints. They are limits or rules that help us solve problems
+    in a specific way.
+
+
+    # MORE THAN A MATHEMATICIAN
+
+
+    Richard Guy, one of the people who helped to create this game won over 100 awards
+    right in 2015. Even after forming the game, he worked every day and is still studying
+    and researching mathematics.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_61_0.png)'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# 1
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_62_0.png)
+
+
+    # 2
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_62_1.png)
+
+
+    # 3
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_62_2.png)
+
+
+    # 4
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_62_3.png)
+
+
+    # WHAT TO DO
+
+
+    +   1 DRAW SEVEN CIRCLES on the paper in a row like this. Number the circles 1
+    through 7. These seven circles will be the stones in the pond.
+
+
+    +   2 PUT THREE OF THE SAME OBJECT ON CIRCLES 1, 2, AND 3. These will represent
+    the frogs in the pond.
+
+
+    +   3 PUT THE OTHER THREE OBJECT ON CIRCLES 5, 6, AND 7. These represent the toads.
+
+
+    +   4 JUMP! Use the circles and objects to figure out the frogs and toads can
+    jump from rock to rock until the frogs are on 5, 6, and 7, and the toads are on
+    1, 2, and 3.
+
+
+    +   5 IF YOUR SOLUTION DOESN''T WORK, THAT''S OK! Just try again!
+
+
+    > WHAT''S GOING ON?
+
+    Sometimes thinking about solving a problem means figuring out what to do. Did
+    you try a solution that didn''t work? Did it make a move that ended with two frogs
+    or two loads right next to each other? Once you identify what parts of solution
+    doesn''t work, it''s often easier to come up with one that does work!
+
+
+    > THINK ABOUT IT
+
+    What constraints are in this problem? Would the solution change if there were
+    no constraints? What if there were more constraints?'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# > CODY''S CODING CHALLENGE
+
+
+    # CODING CONCEPT:
+
+    CONSTRAINTS
+
+
+    # TRY IT OUT
+
+
+    # SPECIAL DELIVERY
+
+
+    Every Journey begins with a single step.
+
+    And in this case, it begins with a problem! The Explorers have to get all of their
+    supplies from shore out to their home base—a boat anchored out in the ocean. To
+    do this, they plan on taking a smaller boat in multiple trips. Finally, they have
+    just three things left to take:
+
+
+    +   - The Explorers'' picnic basket
+
+    - The Expedition''s official mascots: a cat and a dog
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_63_0.png)
+
+
+    > Hints. What are the constraints in this problem? What are some of the pairings
+    won''t work on the boat? What are some that will work on the boat?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_63_1.png)'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: 'The Explorers are anxious to get started on their expedition. How can they
+    program Cody to get all three things out to the home-base boat?
+
+    Write an algorithm that will get everything to the boat.
+
+
+    # THERE ARE A FEW THINGS YOU NEED TO KNOW ABOUT THE SUPPLY TRIPS, THOUGH:
+
+
+    +   1. There is room for only three things in the boat—and one of those things
+    has to be Cody, because the Explorers can remotely use it to steer the boat.
+
+    2. If the dog is left with the picnic basket, he will nab a few sandwiches.
+
+    3. The cat''s super picky, and won''t eat the food, but she and the dog can''t
+    be left alone together because they don''t get along very well (at all!).
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_64_0.png)
+
+
+    > Hope there
+
+    arere some nuts
+
+    for lunch!
+
+
+    > Where is
+
+    that cal?'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# CODING CONCEPT:
+
+    # DEBUGGING
+
+
+    # DECODE THE CONCEPT
+
+
+    Sometimes coders write code that, well, doesn''t work. And that''s okay! It happens
+    all time—a piece of code just doesn''t work the way it''s supposed to. A **bug**
+    is a mistake in code. **Debugging** is finding mistakes in code ... and then fixing
+    those mistakes.
+
+
+    Coders don''t just guess when they''re debugging—they have a plan, or **strategy**.
+    One easy strategy to use when debugging is to ask your-self these three questions:
+
+
+    +   1. What happens when you run the code?
+
+    2. What should happen? (Instead of what did happen.)
+
+    3. What does this mean?
+
+
+    > There might be a bug in my travel plans
+
+
+    This will tell you what kind of mistake you''re looking-for.
+
+
+    **Get a pencil, a piece of paper, and a ruler and try it!**
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_65_0.png)'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# WHAT YOU''LL NEED
+
+
+    # TRY IT OUT
+
+
+    +   - A piece of paper
+
+    - A pencil
+
+    - A ruler
+
+
+    Let''s go back to frogbot. It''s been improved!
+
+    Frogbot has been changed a little bit so that it can hold a pencil.
+
+
+    Did you catch it? Here''s a hint: Put yourself in frogbot''s shoes, and see things
+    from its perspective.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_66_0.png)
+
+
+    This is the code that was written so that frogbot would draw the shape above,
+    but there''s a mistake in it.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_66_1.png)
+
+
+    The corrected code:
+
+
+    | PUT THE POINT OF THE PENCIL DOWN ON PAPER |
+
+    | GO DOWN 2 INCHES (5 CM) |
+
+    | TURN RIGHT |
+
+    | GO 2 INCHES |
+
+
+    To find the mistake, or bug, start with the first line of code. Read and follow
+    each line exactly until you find the mistake. Then, fix the mistake.
+
+
+    | PUT THE POINT OF THE PENCIL DOWN ON PAPER |
+
+    | GO DOWN 2 INCHES |
+
+    | TURN RIGHT LEFT |
+
+    | GO 2 INCHES |
+
+
+    DEBUGGING CONTINUES'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# > YOUR TURN
+
+
+    # # CODING CONCEPT:
+
+    # DEBUGGING
+
+
+    # TRY IT OUT
+
+
+    # ## CUP-STACKING
+
+    ## CODE DEBUGGING
+
+
+    Have you ever gotten a homework answer incorrect, and then gone back to figure
+    out where you went wrong? Then you''ve already practiced debugging! Keep going
+    by finding out what''s wrong with the code in this game.
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   - 8 plastic drink cups
+
+    - A large piece of paper
+
+    - A pen
+
+
+    # THOMAS EDISON
+
+
+    No one is sure why errors in computer programs are called bugs; but the term has
+    been around since long. Before there were computers, even Thomas Edison—who worked
+    in the late 1800s and early 1900s—called the problems he found in his inventions
+    bugs.
+
+
+    In the early days of computers, parts were not small enough to actually stop.
+    There''s been at least one record of a moth getting caught in a computer and causing
+    the computer to network correctly!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_67_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_67_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_67_2.png)'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# WHAT TO DO
+
+
+    +   1 TURN ONE OF THE CUPS UPSIDE DOWN AND TRACE ITS MOUTH on one edge of the
+    paper. This will make a circle.
+
+
+    +   2 MOVE THE CUP OVER so that you trace it the next time, the edge of the next
+    circle will just touch the first.
+
+
+    +   3 REPEAT UNTIL THERE ARE FIVE CIRCLES in a single row across the paper. Number
+    them 1, 2, 3, 4, and 5
+
+
+    +   4 PLACE THE STACK OF 6 CUPS UPSIDE DOWN to the left of circle one.
+
+
+    +   5 ON THE NEXT PAGE, READ THE CODE IN EACH LINE OF THE TABLE. The picture in
+    the second column shows what the cups should look like after you follow all the
+    code. Follow this code to see if the code works.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_68_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_68_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_68_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_68_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_68_4.png)
+
+
+    Here''s an example: the code for a row of cups that looks like this ...
+
+
+    | CODE TOOLBOX |
+
+    | A Pick up a cup |
+
+    | > Move right one circle |
+
+    | < Move left one circle |
+
+    | V Put the cup down |
+
+    | T Flip the cup over |
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_68_5.png)
+
+
+    ... would look like this:
+
+
+    ```
+
+    ^>>>>>>V<<<<
+
+    ^^^^V<<<
+
+    ^^^^V
+
+    ```
+
+
+    DEBUGGING CONTINUES'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# How about some bug juice when we''re done with those cups?
+
+
+    # CUP-STACKING
+
+    CODE DEBUGGING
+
+
+    Is the code for this stack correct? Try it and see! Start with the cups right-side
+    up.
+
+
+    # CODE
+
+
+    >>>>>V<<<<<
+
+    >>>>>V<<<<
+
+    >>>V<<<
+
+    >>><
+
+
+    # CORRECT EXECUTION
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_69_0.png)
+
+
+    When you followed this code, did your stack look like this? If not, can you spot
+    the bug in the code?
+
+
+    # CODE TOOLBOX
+
+
+    +   - Pick up a cup
+
+    - Move right one circle
+
+    - Move left one circle
+
+    - Put the cup down
+
+    - Flip the cup over
+
+
+    > WHAT''S GOING ON
+
+    Computers don''t make mistakes... But humans have something that computers don''t
+    have... It takes a human brain to go through code to find and fix mistakes. That
+    is why debugging is so important!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_69_1.png)'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# CODE
+
+
+    ```
+
+    ^>>>>>V<<<<
+
+    ^^^^>>V<<<<
+
+    ^^^^>>V<<<
+
+    ^^^^>>V<
+
+    ^^^^V<
+
+    ^^^^>>TV<<<<
+
+    ^^^^>>TV<<<
+
+    ^TV<
+
+    ```
+
+
+    # CORRECT EXECUTION
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_70_0.png)
+
+
+    When you followed this code, did your stack look like this? If not, can you spot
+    the bug in the code?
+
+
+    # CODE
+
+
+    ```
+
+    ^>>>>>V<<<<
+
+    ^^^^>>V<<<<
+
+    ^^^^>>TV<<<
+
+    ^^^^>>TV<<<
+
+    ^^^^V<
+
+    ^^^^>>V<<<<
+
+    ^>>TV<
+
+    ```
+
+
+    # CORRECT EXECUTION
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_70_1.png)
+
+
+    When you followed this code, did your stack look like this? If not, can you spot
+    the bug in the code?
+
+
+    > THINK ABOUT IT
+
+    This is a short code, but what if you had a very long code? What if there were
+    100 cups? How would you go about finding a bug?
+
+
+    > GO FURTHER!
+
+    What would the code look like for a tower that has four cups tall?
+
+    A pyramid that has five cups in its bottom row?
+
+    A cup creation that''s all your own?
+
+    Try it and see!'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# # CODY''S CODING CHALLENGE
+
+
+    # ## CODING CONCEPT:
+
+    DEBUGGING
+
+
+    # ## TRY IT OUT
+
+
+    # ### CODY MISSES THE MARK
+
+
+    The National Geographic Explorers have used sonar to visualize the cold, dark
+    seafloor. They programmed Cody to dive deep into the ocean''s depths to photograph
+    the floor. But it appears Cody missed the mark! Knowing that Cody started the
+    first two steps correctly (you could see it from the boat), you can debug this
+    code so that it goes to the correct spot?
+
+
+    ```
+
+    MOVE FORWARD
+
+    TURN LEFT
+
+    MOVE FORWARD
+
+    TURN RIGHT
+
+    MOVE FORWARD
+
+    TURN LEFT
+
+    MOVE FORWARD
+
+    TURN RIGHT
+
+    ```
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_71_0.png)
+
+
+    # ### WHAT''S SONAR?
+
+
+    People use sonar (Sound Navigation and Ranging) to help them find things around
+    underwater or identify objects that are ship under the surface. Sonar sends sound
+    waves into the water and then measures how long it takes the waves to return after
+    they''ve bounced off an object. People are not the only creatures to use sound
+    waves to find things—animals such as bats and whales have their own echolocation
+    abilities.
+
+
+    > Hint: What questions can you ask yourself to help you debug code that''s not
+    working right?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_71_1.png)'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Start
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_72_0.png)'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# > BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    BINARY CODE
+
+
+    # DECODE THE CONCEPT
+
+
+    Computers take the instructions written in words coders and change them into what''s
+    called binary code. There are lots of different kinds of binary codes, but they
+    all have one thing in common—they have just two parts.
+
+
+    The Morse code alphabet looks like this:
+
+
+    | A | ● — | N | — ● |
+
+    |---|---|---|---|
+
+    | B | — ● ● | O | ● ● ● |
+
+    | C | — ● — | P | ● ● — |
+
+    | D | — ● — | Q | — — ● |
+
+    | E | ● | R | — ● ● |
+
+    | F | ● ● — | S | ● ● ● |
+
+    | G | — — ● | T | — |
+
+    | H | ● ● ● | U | — — ● |
+
+    | I | ● ● | V | ● ● — |
+
+    | J | ● — — | W | — ● |
+
+    | K | — ● — | X | ● — ● |
+
+    | L | ● — ● | Y | — ● — |
+
+    | M | — — — | Z | — — — |
+
+
+    > THE "BI" IN BINARY MEANS TWO—nJUST LIKE THERE ARE TWO WHEELS ON A BICYCLE.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_73_0.png)
+
+
+    Morse code is a kind of binary code. All the letters in the Morse code alphabet
+    are made up of only two things: dots and dashes.
+
+    One of the coolest things about Morse code is that you can make the short and
+    long parts using light! Try it for yourself!'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# TRY IT OUT
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   - Pencil and paper
+
+    - Two copies of the Morse code alphabet
+
+    - A flashlight
+
+    - A friend
+
+
+    # WHAT TO DO
+
+
+    +   1 WRITE A TWO- OR THREE-WORD MESSAGE ON the paper
+
+    2 CHANGE EACH LETTER OF THE MESSAGE INTO MORSE CODE using the alphabet on the
+    facing page
+
+    3 USE A FLASHLIGHT in a dim room to send your code to someone else!
+
+
+    # 1 Write your secret message
+
+
+    # 2
+
+
+    W R I T E
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_74_0.png)
+
+
+    > A DOT IS ONE QUICK FLASH OF THE LIGHT OR ONE QUICK TAP SOUND.
+
+
+    > A DASH IS A FLASH OF THE LIGHT OR TAP SOUND THAT IS THREE TIMES LONG AS A DOT.
+
+
+    # MORSE CODE
+
+
+    Before telephones, people sent telegrams using Morse code. A person would take
+    a message to a telegram office and give it to the operator. The operator would
+    change the message into Morse code and tap it into a machine. The signal would
+    travel through long wires to an operator on the other end, who would change the
+    Morse code into a message using the regular alphabet.
+
+
+    # WHAT''S GOING ON?
+
+
+    You could send and receive signals along a telephone, but you might find it perfectly
+    easy. But what if you wanted to send a message without any wires? Morse code is
+    a code of dots and dashes that represents letters, numbers, and punctuation. If
+    you use it, you can send a message to another person with just a flashlight or
+    another sound!
+
+
+    # THINK ABOUT IT
+
+
+    Can you think of another way to use light or sound to send Morse code to send
+    messages?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_74_1.png)
+
+
+    # BINARY CODE CONTINUES'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# > YOUR TURN
+
+
+    # CODING CONCEPT:
+
+    BINARY CODE
+
+
+    Hey, I''m two colors, too!
+
+
+    # DECODE THE CONCEPT
+
+
+    Some computers use a code that is a bit like Morse code. Its official name is
+    American Standard Code for Information Interchange, but you can just call it by
+    its nickname, ASCII (pronounced AS-key).
+
+
+    ASCII letters are made of eight boxes. Some are colored in, and some are open.
+    The ASCII alphabet looks like this:
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_75_0.png)
+
+
+    | A | | | | | | | | | N | | | | | | | | |
+
+    | B | | | | | | | | | D | | | | | | | | |
+
+    | C | | | | | | | | | P | | | | | | | | |
+
+    | D | | | | | | | | | Q | | | | | | | | |
+
+    | E | | | | | | | | | R | | | | | | | | |
+
+    | F | | | | | | | | | T | | | | | | | | |
+
+    | G | | | | | | | | | U | | | | | | | | |
+
+    | H | | | | | | | | | V | | | | | | | | |
+
+    | I | | | | | | | | | W | | | | | | | | |
+
+    | J | | | | | | | | | X | | | | | | | | |
+
+    | K | | | | | | | | | Y | | | | | | | | |
+
+    | L | | | | | | | | | | Z | | | | | | | | |
+
+    | M | | | | | | | | | |'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# TRY IT OUT
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   - Pencil
+
+    - Paper
+
+
+    Can you write your name in ASCII? Grab a piece of paper and write your name in
+    a line going from top to bottom. That''s how a computer would read the code. Then,
+    use the ASCII chart to draw the correct boxes for each letter.
+
+
+    Here''s how Cody would spell its name:
+
+
+    # CODE TOOLBOX
+
+
+    +   - Open
+
+    - Closed
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_76_0.png)
+
+
+    What is being spelled with these ASCII letters?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_76_1.png)'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# > BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    BINARY SEARCH
+
+
+    We use computers to help us find the answers to problems all the time. Did you
+    ever wonder how computers can find the answers so quickly? One type of algorithm
+    that computers use to find information is called a binary search. Binary searches,
+    like binary code, rely on the power of two. Let''s see how!
+
+
+    DID YOU EVER PLAY "GUESS MY NUMBER?" In this game, one person thinks of a number,
+    and the other tries to guess it. For example, two friends decide to play this
+    game. They decide that the rules of the game are:
+
+
+    +   1. The number has to be between 1 and 10.
+
+    2. After every incorrect guess, the person thinking of the number has to say whether
+    their number is higher or lower. If the correct number is 7, it might go something
+    like this:
+
+
+    At the beginning of the game, any number between 1 and 10 could be the right answer.
+
+    After the first guess, only numbers higher than 3 can be correct: 4, 5, 6, 7,
+    8, 9 or 10.
+
+    After the next guess of 9, only 4, 5, 6, 7, or 8 could be right. Each time the
+    number of right answers is cut into two parts until only the right answer (7)
+    is left!
+
+
+    > CODING CONNECTION
+
+    Some kinds of binary search are used to quickly search a warehouse. Databases
+    are large pools of information Some of the world''s largest data help us to search
+    the internet, to watch online and to contact others email or phone
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_77_0.png)'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# Let's try it.\nYou think of a number, and I'll ngess ...\n\nThen I'll say\
+    \ ...\n\nWHAT'S GOING ON?\nThe game is a whole lot like\na a computer goes through\n\
+    when it searches for something\nlooking for. Are you\nsearching for a file?\n\
+    or a text document? What at\ntime you just were creating\ncreat cartoon? As the\
+    \ com-\nputer goes through each dive\n follows the path created\nby your input\
+    \ requests.\n\n... 3\n\n... higher!\n\n... 9\n\n... lower!\n\n... 6\n\n... higher!\n\
+    \n... lower!\n\n... 8\n\n... you're right!\n\n... 7\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_78_0.png)\n\
+    \nBINARY SEARCH CONTINUES\nCHAPTER 2 | 75"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# # CODY''S CODING CHALLENGE
+
+
+    # # CODING CONCEPT: BINARY SEARCH
+
+
+    # ## TRY IT OUT
+
+
+    To figure out the meaning of Cody''s flag, read each statement in the binary search
+    tree. If the statement is true, follow the YES line. If the statement is false,
+    follow the NO line. Keep going until the path ends!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_79_0.png)'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Start Here!
+
+
+    # FLAG IS SQUARE
+
+
+    Yes
+
+
+    No
+
+
+    # FLAG HAS ONLY ONE COLOR
+
+
+    Yes
+
+
+    No
+
+
+    # I AM CARRY DANGEROUS CARGO
+
+
+    # THERE IS A SCUBA DIVER IN THE AREA
+
+
+    GO FURTHER!
+
+    Can you use the tree to figure out what these other flags mean?'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# > YOUR TURN
+
+
+    # CODING CONCEPT:
+
+    BINARY SEARCH
+
+
+    # TRY IT OUT
+
+
+    +   WHAT YOU''LL NEED
+
+    - Paper and a pencil!
+
+    - One friend or more
+
+
+    # TWENTY QUESTIONS
+
+
+    Finding answers doesn''t always have to be complicated—you can find out a lot
+    of information by only asking yes and no questions! Try this game to see how,
+    and to discover how a computer binary search works.
+
+
+    +   WHAT TO DO
+
+    1. One person should think of an object... but not tell anyone! This person is
+    the ANSWERER.\n2. The other person (or people) now try to figure out the identity
+    of the mystery object—these people are the ASKERS.
+
+    3. Each asker takes a turn asking a question about the mystery object. The question
+    must have one of two possible answers: Yes or No. The askers can only ask 20 questions
+    total.
+
+    4. Write down each question and its answer on a piece of paper.
+
+    5. If one of the askers guesses the mystery object, they become the next answerer!
+
+    6. If no one can guess the identity of the mystery object, the answerer thinks
+    of a new mystery object.
+
+
+    > Is it bigger than a refrigerator?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_81_0.png)'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Start here
+
+
+    # IS IT LIVING?
+
+
+    Yes
+
+
+    No
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_2.png)
+
+
+    # IS IT AN ANIMAL?
+
+
+    No
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_4.png)
+
+
+    > GO FURTHER!
+
+
+    This game is like a board game where you answer questions to earn objects. For
+    example, if you say to ''Is it alive?'' ''No'', then draw the mystery object that
+    is not an animal.
+
+
+    Finally rank each question and write down the order of the objects that were eliminated
+    after the answer to each.
+
+
+    # DOES IT HAVE FUR?
+
+
+    Yes
+
+
+    No
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_5.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_82_6.png)'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# >> THE CHALLENGE
+
+
+    # DEEP-SEA
+
+    SURPRISES
+
+
+    OBJECTIVE: WRITE AN ALGORITHM
+
+    FOR CODY TO PHOTOGRAPH EACH CREATURE
+
+    AND SEND ITS NAME TO THE EXPLORERS.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_1.png)
+
+
+    OK, Coder Crew. You''ve learned a lot
+
+    in this chapter about debugging,
+
+    binary searches, and binary code.
+
+    Time to put it all together and send
+
+    ody on a deep-sea expedition.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_2.png)
+
+
+    Cody''s mission is to find and
+
+    photograph each deep-sea creature
+
+    shown on the map. Cody needs to
+
+    first get to the creature without
+
+    going through the dark spots. Then
+
+    Cody should snap a photo of the
+
+    creature. Finally, Cody should send
+
+    ent the Explorers back on the
+
+    ship''s name
+
+    using ASCII code. Then
+
+    Cody can move on to
+
+    the next creature.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_83_4.png)'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: 'Write your algorithm for Cody to find and photograph each sea creature and
+    send its name back to the Explorers. Then follow your algorithm below. Don''t
+    forget to debug your code.
+
+
+    # Start
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_84_0.png)
+
+
+    Hints: When you''re debugging don''t forget to check each line- there might be
+    more than one mistake!
+
+
+    Don''t forget to stack the letters of each creature''s name read ASCII code top
+    to bottom.
+
+
+    CHAPTER 2 81'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# CHAPTER 3
+
+
+    # SAVE THE
+
+    ATELLITE
+
+
+    # CODING CONCEPTS IN THIS CHAPTER:
+
+
+    +   - TRIAL AND ERROR
+
+    - USERS AND EVENTS
+
+    - PIXELS
+
+    - DECOMPOSITION
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_86_0.png)'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# THE CHALLENGE
+
+
+    # >> BROKEN SATELLITE
+
+
+    **OBJECTIVE:** PROGRAM CODY TO FIX A SATELLITE SO THE EXPLORERS CAN CHECK OUT
+    AN ERUPTING VOLCANO ON ONE OF JUPITER''S MOONS.
+
+
+    # THE SITUATION
+
+
+    There are volcanoes all over space. Some, like the ones on Earth, spew lava. Others,
+    called **cryovolcanoes**, spew supercold liquids. **Jupiter''s moon lo** is one
+    of the most volcanically active worlds in our solar system. And the Explorers
+    think one of its active volcanoes is erupting! But the satellite that sends images
+    back from space is not functioning properly. **Can you help Cody take the right
+    steps to get the satellite working again?**
+
+
+    > WHEN YOU''RE PROGRAMMING ONE COMPUTER TO TALK TO ANOTHER COMPUTER, DIRECTIONS
+    NEED TO BE EXTRA CLEAR!'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: 'THE BROKEN SATELLITE IS HOLDING UP RESEARCH. SO THE FASTER YOUR PROGRAMS CAN
+    RUN, THE FASTER IT''S BACK IN ACTION.
+
+
+    Hmmm ... something''s not right.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# > BREAK IT DOWN
+
+
+    # CODING CONCEPT: TRIAL AND ERROR
+
+
+    > If at first you can''t ride a turtle, try again!
+
+
+    # DECODE THE CONCEPT
+
+
+    Have you ever heard the phrase "We all make mistakes''? Well, it''s true But one
+    of the most important ways we learn is through trial and error. Trial and error
+    works like this:
+
+
+    +   1. Try a solution
+
+    2. Fail
+
+    3. Go back to step 1 until you succeed.
+
+
+    Trial and error can be frustrating, but learning not to do something is as important
+    as learning how to do it. That way, you can save time by not making the same mistakes
+    you''ve already made. Coders learn a lot through trial and error.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_89_0.png)
+
+
+    # MAGIC SQUARES!
+
+
+    Magic squares may not be magic, but they are the subject of magical stories. According
+    to legend from China, a turtle with a Magic Square on its shell was able to keep
+    a river from flooding!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_89_1.png)
+
+
+    86 CODE THIS!'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# THE MAGIC SQUARE PUZZLE
+
+
+    Solving Magic Square puzzles usually requires a little bit of trial and error.
+    To solve a Magic Square puzzle, you need to follow two rules:
+
+
+    +   1. You can only use the numbers 1 through 9, and you can only use each number
+    one time.
+
+    2. The sum of the numbers in each column, row, and diagonal must be the same.
+
+
+    Copy this magic square onto a piece of paper to try it for yourself.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_90_0.png)
+
+
+    > THINK ABOUT IT
+
+    How would you show your customer that all the rows, columns, and diagonals set
+    up in the Magic Square are correct before starting to solve the problem?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_90_1.png)
+
+
+    > WHAT''S GOING ON?
+
+    Magic Squares aren''t magic at all of course—they''re based on the number of rows
+    and columns in the square. Completing the square can take a lot of time and error.
+    One column and row might add up right, but that doesn''t mean they all will'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# > BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    USERS & AND EVENTS
+
+
+    # DECODE THE CONCEPT
+
+
+    As a computer''s **user**, you are able to control what the computer does. Any
+    time you click a mouse or touch a key on the keyboard, you create an **event**.
+
+    A program on the computer picks up on the event. What happens next depends on
+    the code!
+
+    When writing code, a coder needs to think not only about what the code will do,
+    but also what will trigger that event.
+
+
+    TAKE A CODE THAT LOOKS LIKE THIS:
+
+
+    ```
+
+    JUMP
+
+    ```
+
+
+    The coder connects that command block to something the user can control. For example:
+
+
+    ```
+
+    WHEN SPACE BAR
+
+    ```
+
+
+    ```
+
+    JUMP
+
+    ```
+
+
+    If our frogbot reads this code, it will jump in place when the user presses the
+    space bar.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_91_0.png)'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# TRY IT OUT
+
+
+    # THE MAIN EVENT
+
+
+    Using the command blocks in the toolbox, pair the codes to make frogbot respond
+    to the user pressing the arrow keys.
+
+
+    # CODE TOOLBOX
+
+
+    +   WHEN LEFT ARROW
+
+
+    +   WHEN RIGHT ARROW
+
+
+    +   WHEN UP ARROW
+
+
+    +   WHEN DOWN ARROW
+
+
+    +   JUMP LEFT
+
+
+    +   JUMP RIGHT
+
+
+    +   JUMP UP
+
+
+    +   LAND
+
+
+    > THINK ABOUT IT
+
+
+    What would happen if you connected a move-left command to the right-arrow key?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_92_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_92_1.png)'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# > YOUR TURN
+
+
+    # CODING CONCEPT:
+
+    USERS AND EVENTS
+
+
+    # >> TRY IT OUT
+
+
+    # YOU BE THE VIDEO GAME CHARACTER
+
+
+    Video games are all about users and events. Think about it—if you, the player,
+    didn''t have to do something to make something happen in the game, well, it wouldn''t
+    be much of a challenge, would it? The trick is to make each event happen at just
+    the right time. That can be tricky, but it''s also the fun of mastering the game.
+    Grab a friend and see if you can become user/event champs.
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   - balloon
+
+    - A long piece of string or yarn
+
+    - Tape
+
+    - A friend
+
+    - Pieces of paper and markers
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_93_0.png)'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# WHAT TO DO
+
+
+    +   1 BLOW UP THE BALLOON AND KNOT IT. Tie the string to one end of the balloon.
+
+
+    +   2 Ask an adult to help you TIE OR TAPE THE STRING TO THE CEILING in the middle
+    of the room. The balloon should hang high enough so that both you and your friend
+    have to jump to touch it (but not so high that you can''t reach it all).
+
+
+    +   3 WRITE EACH OF THE SYMBOLS IN THE TOOLBOX ON A SEPARATE PIECE OF PAPER. Make
+    sure the symbols are large enough to be seen from across the room. represent keys
+    on a keyboard.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_94_0.png)
+
+
+    # 1,2
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_94_1.png)
+
+
+    # 3
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_94_2.png)
+
+
+    # CODING CONNECTION
+
+
+    Event commands are what make video games so much fun. Some event commands are
+    linked to keys or mouse, but others occur because of other parts of code. The
+    clinking sound made when you pick up a coin or the springy sound made when a character
+    jumps are the result of event commands:
+
+
+    | > Move one step left |
+
+    | > Move one step right |
+
+    | A Move one step forward SPACE Jump |
+
+
+    # VIDEO GAME CHARACTER CONTINUES
+
+
+    CHAPTER 3 91'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# YOU BE THE VIDEO GAME CHARACTER
+
+
+    # WHAT TO DO
+
+
+    +   4 HAVE ONE PERSON STAND DIRECTLY ACROSS FROM THE OTHER PERSON on the opposite
+    side of the room
+
+
+    +   5 ONE PERSON WILL HAVE ALL OF THE SYMBOLS. This person is the user. The other
+    person will follow what the symbols say. This person is the video game character.
+
+
+    +   6 THE USER HOLDS UP A SYMBOL. The character then does the action represented
+    by the symbol.
+
+
+    +   7 THE GOAL OF THE GAME is to have the video game character jump up and touch
+    the balloon.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_95_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_95_1.png)
+
+
+    > Did some bunny say video games?
+
+
+    # CODE TOOLBOX
+
+
+    +   < Move one step left
+
+    > Move one step right
+
+    > Move one step forward
+
+    SPACE: Jump
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_95_2.png)'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '![](img/ff0a36fd32e78d548bb789af8cd599c4_96_0.png)
+
+
+    # TENNIS FOR TWO
+
+
+    One of the earliest video games dates back to 1958. Players of the game Tennis
+    for Two tried to hit an electronic ''ball'' back and forth over a net Users could
+    only do one of two things: twist a knob to control the angle of the ball or press
+    a button to ''hit'' the ball back to the other side.
+
+
+    CHAPTER 2 93'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# CODY''S CODING CHALLENGE
+
+
+    # CODING CONCEPT: USERS AND EVENTS
+
+
+    # TRY IT OUT
+
+
+    # REMOTE-CONTROL CODY
+
+
+    The first thing that Cody needs to do to get the satellite back up and running
+    is to push some of the buttons on the control panel. Use the command blocks to
+    write a code that will tell Cody what to do when the Explorers press keyboard
+    buttons back on Earth. Write out the whole algorithm for the Explorers and Cody
+    to press the buttons in the right order. The satellite should move every time
+    Cody presses a button.
+
+
+    # CODE TOOLBOX
+
+
+    | WHEN LEFT ARROW |
+
+    | WHEN RIGHT ARROW |
+
+    | WHEN UP ARROW |
+
+    | WHEN DOWN ARROW |
+
+    | WHEN SPACE BAR |
+
+    | WHEN PUSH BUTTON |
+
+    | MOVE LEFT |
+
+    | MOVE RIGHT |
+
+    | MOVE UP |
+
+    | MOVE DOWN |
+
+    | PUSH BUTTON |
+
+    | REPEAT TIMES |
+
+    | DO |
+
+    | SATELLITE MOVES |
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_97_0.png)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# Remember Cody can only do one thing at a time
+
+
+    CORRECT ORDER:
+
+
+    | | | | |
+
+    |---|---|---|--|
+
+    | square | triangle | circle | square |
+
+    | circle | square | triangle | circle |
+
+    | square | square | triangle | triangle |
+
+    | square | triangle | circle | square |
+
+
+    CHAPTER 3 95'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    PIXELS
+
+
+    > Just call me Spot!
+
+
+    # DECODE THE CONCEPT
+
+
+    All the images, or **graphics**, on a computer screen are made of **pixels**.
+    Coders tell which of these dots should be colored in by using code. Let''s say
+    a coder wanted to create this picture on the screen.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_99_0.png)
+
+
+    How can you write code for the pattern shown?
+
+
+    # PIXEL
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_99_1.png)'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '# Here''s how it works.
+
+
+    1. Start in the first space of the grid, the one
+
+    ''s in the upper left-hand corner.
+
+    (Don''t start outside the grid!)
+
+
+    4. Oops, out of squares! Tell the computer to\move down one space: D
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_1.png)
+
+
+    2. The first space is white, so you can just write
+
+    code to move one space to the right: >
+
+
+    5. That space is white, so tell the computer to
+
+    move one space to the left: <nIt''s a black space! So color it in: X
+
+
+    This space is black, so you need to use a
+
+    command that means "color this space in!": X
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_3.png)
+
+
+    6. Move over two spaces to get to the next
+
+    black square: << and color it in: X
+
+
+    Move right to the next space: >
+
+    It''s white, so move right again: > and
+
+    then tell the computer to color the space in: X
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_4.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_100_5.png)
+
+
+    > THE CODE FOR THE FIRST TWO ROWS OF THE
+
+    CHECKERBOARD LOOKS LIKE THIS:
+
+    X>>KD<<X
+
+    CAN YOU FINISH THE REST?'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '> You can make pictures out of dots? Color me impressed!'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# WHAT TO DO
+
+
+    1 Starting in the upper left-hand corner, and moving to the right and then down,
+    SEE WHICH PIXELS SHOULD BE COLORED IN.
+
+
+    2 Now WRITE YOUR CODE. Using the symbols in the toolbox write code that your friend
+    can use to re-create the hippo on the graph paper.
+
+
+    3 When you have finished, ASK A FRIEND TO FOLLOW YOUR CODE using a clean piece
+    of graph paper. Does the picture look exactly the same as the original?
+
+
+    # CODE TOOLBOX
+
+
+    | Move right | Color in blue |
+
+    | Move left | Color in pink |
+
+    | Move down | Color in gray |
+
+    | | Color in black |
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_102_0.png)
+
+
+    # START
+
+
+    WHAT''S GOING ON?
+
+    All the things we see on a computer screen, from the words we type to the moving
+    graphics in our favorite games, are there because of the way code tells a computer
+    to light up pixels on a computer screen.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# > CODY''S CODING CHALLENGE
+
+
+    # CODING CONCEPT:
+
+    PIXELS
+
+
+    # TRY IT OUT
+
+
+    # WHICH BUTTON?
+
+
+    The next step to fixing the satellite is for Cody to push four buttons on the
+    dashboard. The Explorers need to tell Cody what it should be looking for. The
+    button code has to be an exact match of what''s in Cody''s robot memory, or it
+    won''t know which buttons to push. (It''s fussy like that.) Cody can''t read the
+    picture, so you need to send it clear directions of what each button looks like.
+    Can you write the code for each of these pictures? Then Cody will know what buttons
+    to look for.
+
+
+    # CODE TOOLBOX
+
+
+    +   > Move right
+
+    < Move left
+
+    M Move down
+
+    X Color in black
+
+    R Color in red
+
+    Y Color in yellow
+
+    P Color in pink
+
+    G Color in gray
+
+    T Color in tan
+
+    B Color in blue
+
+    L Color in light green
+
+    D Color in dark green
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_103_0.png)'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# BUTTON 1
+
+
+    START
+
+
+    # BUTTON 2
+
+
+    START
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_104_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_104_1.png)
+
+
+    # BUTTON 3
+
+
+    START
+
+
+    # BUTTON 4
+
+
+    START
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_104_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_104_3.png)'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '# > BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    DECOMPOSITION
+
+
+    # DECODE THE CONCEPT
+
+
+    Sometimes problems can feel pretty big. And it''s no different for coders when
+    they''re writing algorithms. **Decomposition** is one strategy that can help make
+    big problems easier to deal with. In decomposition, you break a big problem down
+    into smaller pieces.
+
+
+    > DID YOU KNOW
+
+    Musicians like Mozart and Beethoven are called composers because they put together
+    music, like notes in a story, something bigger like a symphony. Decomposition
+    of a problem is the opposite—breaking it down into smaller pieces.
+
+
+    I can sleep all day long by breaking up the day into 2-hour nap blocks!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_105_0.png)'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "# TRY IT OUT\n\n# WHAT YOU'LL NEED\n\n+   - Construction paper\n- This pattern:\n\
+    \  - Small\n  - Medium\n  - Large\n- A pen or pencil\n- Scissors\n- A piece of\
+    \ blank paper\n\n# DISC DECOMPOSITION\n\nOne of the ways to practice decomposition\
+    \ is to use a puzzle that looks like this.\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_106_0.png)\n\
+    \nThe goal of this puzzle is to move all the discs from Tower 1 to Tower 3. There\
+    \ are two constraints: You cannot put a larger disc onto a smaller disc, and you\
+    \ must move only one disc at a time.\nTry making some discs of your own to see\
+    \ if you can decompose a solution to the problem.\n\n# WHAT TO DO\n\n+   1 DRAW\
+    \ EACH CIRCLE on a separate piece of construction paper\n2 Carefully CUT OUT EACH\
+    \ CIRCLE with the scissors\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_106_1.png)\n\
+    \n# DISC DECOMPOSITION CONTINUES"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# DISC DECOMPOSITION
+
+
+    > Did someone say discs?
+
+    ''ll play!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_107_0.png)
+
+
+    # WHAT TO DO
+
+
+    +   3 DIVIDE THE PLAIN PIECE OF PAPER INTO THREE COLUMNS. Label the first column
+    ''Tower 1'', the second column ''Tower 2'' and the third column ''Tower 3''.
+
+
+    +   4 PLACE THE THREE CIRCLES IN A STACK IN THE COLUMN LABELED TOWER 1. The largest
+    circle should be on the bottom, and the smallest one on top.
+
+
+    +   5 Can you figure out how to MOVE ALL THE DISCS TO TOWER 3 without ever putting
+    a larger disc on top of a smaller one?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_107_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_107_2.png)'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# 5
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_108_0.png)
+
+
+    # WHAT''S GOING ON?
+
+
+    Solving problems can be a big challenge. Coders break them into small pieces...
+    and smaller pieces and even smaller pieces... until they find a piece of the problem
+    that they can solve. Then they apply what they learned to solve other pieces of
+    the problem. They repeat this process until they can put all their solutions together
+    to solve the entire problem.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_108_1.png)
+
+
+    Can you work with an angle and permutations could help us solve this puzzle?
+
+
+    # DID YOU KNOW?
+
+
+    This puzzle gets harder as you add more that''s to the stack. There is a legend
+    in which a person trying to solve this problem used 64 years. If the legend happened
+    in real life the result would take SBS billion years to finish!'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# > CODY''S CODING CHALLENGE
+
+
+    # CODING CONCEPT:
+
+    DECOMPOSITION
+
+
+    # TRY IT OUT
+
+
+    # MIRROR MOVING
+
+
+    The last step Cody has to do is to move these telescope mirrors from post A to
+    post C. Cody needs to be very careful. The mirrors are fragile. So Cody can only
+    move one at a time, and a smaller mirror can''t have a larger one on top of it.
+    Write an algorithm for Cody to use.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_109_0.png)'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '![](img/ff0a36fd32e78d548bb789af8cd599c4_110_0.png)
+
+
+    Post A
+
+
+    Post B
+
+
+    Post C'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# ## THE CHALLENGE
+
+
+    # # SAVE THE SATELLITE
+
+
+    OK, Coder Crew. You''ve learned a lot in this chapter about trial and error, adding
+    user events, pixels, and decomposition. **It''s time to put it all together ...
+    and save the satellite!**
+
+    You''ll need to send these instructions to tell Cody which buttons need to be
+    pushed, and in what order. Can you write code to send this picture to Cody?'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# BUTTON ORDER
+
+
+    START
+
+
+    | CODE TOOLBOX |
+
+    |> Move right
+
+    |< Move left
+
+    D Move down
+
+    R Color in blue
+
+    B Color in blue
+
+    G Color in green
+
+    Y Color in yellow |
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_112_0.png)
+
+
+    Cody must press the buttons indicated by the color of each pixel in the order
+    they appear.'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# CHAPTER 4
+
+    TRICKY TEPUI
+
+
+    CODING CONCEPTS IN THIS CHAPTER:
+
+
+    +   - OPTIMIZATION
+
+    - MAKING SHAPES
+
+    - CONDITIONALS'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# # THE CHALLENGE
+
+
+    >> BIG CAT SELFIE
+
+
+    **OBJECTIVE:** PROGRAM CODY TO GET A PHOTO OF A JAGUAR.
+
+
+    # ## THE SITUATION
+
+
+    **Tepuis are South American plateaus—rocky islands that rise high above the rain
+    forests of Venezuela.** Some tepui are shrouded in swirling clouds and mist all
+    year long, making any expeditions to them extremely treacherous. But tepui are
+    also home to some of the world''s coolest big cats, including the jaguar and the
+    puma. **Can you help the Explorers by programming Cody to snap a shot of one of
+    these amazing animals?**'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# SCALING
+
+    TEPUI WALLS
+
+    WILL BE
+
+    CHALLENGING!
+
+
+    CODY NEEDS
+
+    TO BE CAREFUL... IF IT\NDAMAGED\NON THE TEPUI, THE
+
+    EXPLORERS WON''T
+
+    BEABLE TO EASILY
+
+    REPAIR IT.
+
+
+    Why do I feel
+
+    like something''s
+
+    watching me?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_116_0.png)'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "# > BREAK IT DOWN\n\n# CODING CONCEPT:\n OPTIMIZATION\n\nDECODING THE CONCEPT\n\
+    if you've ever had to pack a bag for a long trip, you\nknow that you can't take\
+    \ it all. It is the same with coding. Though there are often\nmany ways to write\
+    \ the same directions, shorter\ncode will make the computer run more efficiently.\n\
+    \n> optimize the space in your bag by choosing\nthe things you need most that\
+    \ will fit into your bag.\n\nTRY OPTIMIZING\nTHE BEST COMBINATION\\NF THINGS ON\
+    \ THIS PAGE.\nCAN YOU MAKE THE\nBEST CHOICES FOR A\nTRIP TO THE BEACH?\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_117_0.png)"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# # TRY IT OUT
+
+
+    # ## CODY''S CAMP CHAIR
+
+
+    Jaguars are notoriously shy animals, so it might be some time before one feels
+    safe enough to approach Cody''s camp. Cody needs to be prepared to wait a while.
+    Can you construct a model of a chair that''s light and easy to fold up (so it
+    can fit inside Cody''s cargo compartment) but sturdy enough to hold Cody''s weight?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_118_0.png)
+
+
+    # ### WHAT YOU''LL NEED
+
+
+    +   - Paper and pencil
+
+    - A sandwich bag
+
+    - A potato or apple (to represent Cody)
+
+    - Scissors
+
+    - Tape
+
+    - Toothpicks
+
+    - Wooden craft sticks
+
+    - Plastic wrap
+
+    - Aluminum foil
+
+    - A piece of cloth about 5 inches (13 cm)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_118_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_118_2.png)
+
+
+    # ### WHAT TO DO
+
+
+    +   1 USE THE PIECE OF PAPER AND PENCIL TO SKETCH A FEW IDEAS FOR YOUR CHAIR.
+    Your model should be small enough to fit into the plastic baggage (You can fold
+    your chair or take it apart, as long as you can put it back together when you
+    ''get'' to the camp) Remember You can only use the materials you have on the list!
+
+
+    CODY''S CAMP CHAIR CONTINUES'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# CODY''S CAMP CHAIR
+
+
+    WHAT TO DO
+
+
+    +   2. Once you have two (or more!) ideas, PICK YOUR FAVORITE, and build it.
+
+
+    +   3. MAKE SURE YOU TEST YOUR MODEL CHAIR—does it fit into the baggie? Does it
+    hold your model Cody? If not, try another design.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_119_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_119_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_119_2.png)'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '![](img/ff0a36fd32e78d548bb789af8cd599c4_120_0.png)
+
+
+    # CODING CONNECTION
+
+
+    When coders write a computer program, they have to make some of the same kinds
+    of choices you do when finding a solution to a problem. Some kinds of code will
+    work with one another or make the program run slowly. Coders have to think about
+    the goal of the program and then choose the best, or optimal, code that works.
+
+
+    > If you want to build something great, you have to start with something small.
+    A great idea starts with a small angle to it.
+
+
+    GO FURTHER!
+
+    Can you build a better model chair using other materials you can find around the
+    house?'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "# > CODY'S CODING CHALLENGE\n\n# CODING CONCEPT:\n OPTIMIZATION\n\n# TRY IT\
+    \ OUT\n\n# CODY'S BACKPACK\n\nit's a big climb to the top of the tepui! Cody doesn't\
+    \ have much room in its backpack, and it can carry only 15 pounds (6.8 kg). Which\
+    \ things should Cody take on the journey?\n\n12 lb\n(5.4 kg)\n\n.25 lb\n(11 kg)\n\
+    \n.13 lb\n(.05 kg)\n\n5 lb\n(2.2 kg)\n\n> Hint: Don't forget the goal of the journey-\n\
+    get a photo of a jaguar!\n\n.25 lb\n(11 kg)\n\n.13 lb\n(.05 kg)\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_121_0.png)"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '13 lb
+
+    (.06 kg)
+
+
+    1 lb
+
+    (.45 kg)
+
+
+    5 lb
+
+    (.2.2 kg)
+
+
+    .34 lb
+
+    (.15 kg)
+
+
+    0.5 lb
+
+    (.22 kg)
+
+
+    .63 lb
+
+    (.28 kg)
+
+
+    0.3 lb
+
+    (.14 kg)
+
+
+    # THE KNAPSACK PROBLEM
+
+
+    One famous optimization problem is called the Knapsack Problem. The goal of the
+    first problem is to carry as many valuable items as possible without going over
+    a limit.
+
+
+    2 lb
+
+    (.09 kg)'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# BREAK IT DOWN
+
+
+    # CODING CONCEPT: MAKING SHAPES
+
+
+    # DECODING THE CONCEPT
+
+
+    Shapes are probably one of the first things that you learned how to draw. Simple
+    shapes–like circles, squares, and triangles–are the basics that even professional
+    artists and graphic designers use to create all kinds of drawings.
+
+
+    I''m totally in shape.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_123_0.png)
+
+
+    It''s the same with coding, too. Student computer programmers don''t start by
+    writing graphics code for a super-realistic 3D video game. Instead, they learn
+    to give computers directions on how to draw those simple shapes they first made
+    themselves. And they don''t get to see their computer drawings until they run
+    the program.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# # TRY IT OUT
+
+
+    # ## SHAPING UP
+
+
+    Shaping geometric shapes are easy to draw—and they''re supposed to be! Drawing
+    objects with basic shapes can help communicate an idea quickly and easily. Grab
+    a friend and try this shape drawing challenge.
+
+
+    # ## WHAT YOU''LL NEED
+
+
+    +   - Pencil and paper
+
+    - A friend
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_124_0.png)
+
+
+    # ## WHAT TO DO
+
+
+    +   1 CHOOSE A SHAPE OR DRAWING FROM THE ONES SHOWN. Or, choose something from
+    your imagination!
+
+
+    +   2 CLOSE YOUR EYES, AND DRAW THE PICTURE. How did you come to the original?
+
+
+    +   3 CHOOSE ANOTHER PICTURE. This time, ask someone else to give you directions
+    on how to draw the picture after you close your eyes. Move your pencil exactly
+    how they tell you—and no peeking!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_124_1.png)
+
+
+    > WHAT''S GOING ON?
+
+    Remember that programmers can''t tell a computer to draw something. They have
+    to write directions that tell the computer exactly how to make a shape—and they
+    don''t know for sure what the shape looks until they run the program. It''s a
+    bit like drawing with your eyes closed!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_124_2.png)
+
+
+    # ## GO FURTHER!
+
+
+    Give a friend directions on how to draw something without telling him or her what
+    it is!'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# CODING CONCEPT:
+
+    MAKING SHAPES
+
+
+    # TRY IT OUT
+
+
+    # PROGRAMMING
+
+    ARTIST
+
+
+    Are you ready to improve your graphics programming skills? Think like a programmer
+    by using command blocks to write an algorithm.
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   - Masking tape (for an inside activity) or chalk (for outside activity)
+
+    - Coins (for an inside activity)
+
+    - Pencil and paper
+
+    - Yardstick (or meterstick)
+
+
+    # CODE TOOLBOX
+
+
+    | MOVE FORWARD 13 INCHES |
+
+    | TURN LEFT |
+
+    | TURN RIGHT |
+
+    | REPEAT TIMES |
+
+    | DO |
+
+    | MAKE A DOT ON THE GROUND |
+
+
+    # WHAT TO DO
+
+
+    +   1 FIND AN OPEN SPOT, either inside (such as an empty dining table) or outside
+    (such as the sidewalk) that''s about 3 feet (1 m) square.
+
+
+    +   2 MAKE A SMALL MARK TO SYMBOLIZE YOUR BEGINNING SPOT using either masking
+    tape (if you''re outside) or chalk (if you''re inside).
+
+
+    +   3 Using the commands in the toolbox above WRITE AN ALGORITHM THAT WILL MAKE
+    A SQUARE that has sides that are 3 feet (1 m) in length
+
+
+    +   4 TRY IT OUT! Does your code successfully make the square?
+
+
+    > No llama drama here!
+
+    It''s hip to be a square.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_125_0.png)'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# WHAT''S GOING ON?
+
+
+    The images we see when we use motion capture of our famous video games are all
+    based on code. The actors is now in real life and just part on the screen. The
+    movies capture the images and their costumes.
+
+
+    # MOTION CAPTURE
+
+
+    Some computer graphics use a lot of help from real actors. The graphics in many
+    video games and some movies start with an actor in a special suit. Special computer
+    parts record the movement of the actor inside the suit. Then people use graphics
+    to create the video game or movie character.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_126_0.png)'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# > CODY''S CODING CHALLENGE
+
+
+    # CODING CONCEPT:
+
+    MAKING SHAPES
+
+
+    # TRY IT OUT
+
+
+    # SETTING UP THE PICTURE
+
+
+    The Nat Geo Explorers want to get a picture of a jaguar. To do this, they have
+    to make sure the jaguar is in a certain spot. They''ll need Cody to trace a rectangle
+    on the ground that will fit into the camera''s viewer. Using the command blocks,
+    write an algorithm to help Cody use its special marker to mark the area for the
+    picture.
+
+
+    # CODE TOOLBOX
+
+
+    +   - MOVE FORWARD 12 INCHES
+
+    - TURN LEFT
+
+    - TURN RIGHT
+
+    - REPEAT TIMES (DO)
+
+
+    MAKE A DOT ON THE GROUND'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '![](img/ff0a36fd32e78d548bb789af8cd599c4_128_0.png)
+
+
+    > ONCE A
+
+    CAMERA TRAP
+
+    IS SET UP, IT CAN ONLY
+
+    CAPTURE PHOTOS
+
+    IN A CERTAIN AREA'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# BREAK IT DOWN
+
+
+    # CODING CONCEPT: CONDITIONALS
+
+
+    # DECODING THE CONCEPT
+
+
+    From the time you wake up in the morning until you go to bed at night, you make
+    decisions—lots of them. Computers can''t decide on their own, but they can make
+    choices with the right kind of code. Conditionals are special instructions that
+    help computers make decisions.
+
+
+    Conditionals are set up as if/Then statements: If something happens, then do something.
+    For example, if the traffic light is red, then stop. If the condition isn''t met
+    (for example, the traffic light is any color but red), then the action won''t
+    happen.
+
+
+    IF it''s cheese
+
+
+    THEN eat the cheese!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_129_0.png)'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# TRY IT OUT
+
+
+    Conditionals can also be set up to give the computer specific instructions about
+    what to do if the condition is met and what to do if it isn''t. For a continuous
+    carousel of photos (where the buffalo displays after the fish, for example), that
+    could look something like this:
+
+
+    IF the up arrow is clicked, THEN display the photo. ELSE wait 3 seconds, then
+    display the next photo to the right.
+
+
+    Can you figure out what that means? What happens if the arrow is clicked? What
+    happens if the arrow isn''t clicked?
+
+
+    How would you write a conditional statement to open the photo of the frog?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_130_0.png)
+
+
+    How would you write a conditional statement to open the photo of the snake?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_130_1.png)'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# BREAK IT DOWN
+
+
+    # CODING CONCEPT:
+
+    CONDITIONALS
+
+
+    # DECODE THE CONCEPT
+
+
+    Now that you understand how conditionals work,it''s time to get coding!
+
+    If/Else blocks look like this:
+
+
+    If you have a nut\THEN give it to me!
+
+
+    ```
+
+    IF THEN
+
+    ELSE
+
+    ```'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "To use an If/Else block, just **\"plug in\"** the right words to describe what\
+    \ condition you want the computer to look for.\n\n```\nIF CAN'T GO FORWARD THEN\n\
+    \  ELSE\n```\n\nNext **add what the action should be if the condition is true.**\
+    \ For example, if Cody CAN'T GO FORWARD, then it should TURN LEFT.\n\n```\nIF\
+    \ CAN'T GO FORWARD THEN\n  TURN LEFT\n  ELSE\n```\n\nFinally, **add the action\
+    \ that should happen if the condition isn't true.** For example, if Cody can go\
+    \ forward, then Cody should MOVE FORWARD 1.\n\n```\nIF CAN'T GO FORWARD THEN\n\
+    \  TURN LEFT\n  ELSE\n  MOVE FORWARD 1\n```\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_132_0.png)\n\
+    \n# Must reach tree\n\nCONDITIONALS CONTINUES >"
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# > YOUR TURN
+
+
+    # CODING CONCEPT:
+
+    CONDITIONALS
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   - The game board shown on the following pages
+
+    - A die
+
+    - A coin or other marker for each person playing
+
+    - A few friends to play with
+
+
+    # CONDITIONAL LAND
+
+
+    Conditionals are also part of lots of games. Think about it. How many games have
+    you played that rely on something happening or not happening? Many games depend
+    on the number you roll, or the card you draw.
+
+
+    > I''m the programmer.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_133_0.png)'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# Spots are a condition for being dice ... or a tapir.
+
+
+    # IF ACTION SUGGESTIONS
+
+
+    If a [3] is rolled, raise your left arm. ELSE move the number of spaces you rolled.
+
+
+    If a [3] is rolled, clap your hands. ELSE move the number of spaces you rolled.
+
+
+    If a [3] is rolled, stick out your tongue. ELSE move the number of spaces you
+    rolled.
+
+
+    If a [3] is rolled, jump up and down. ELSE move the number of spaces you rolled.
+
+
+    If a [3] is rolled, say the name of your favorite book. ELSE move the number of
+    spaces you rolled.
+
+
+    If a [3] is rolled, sing a song. ELSE move the number of spaces you rolled.
+
+
+    If a [3] is rolled, pat your head and rub your stomach at the time. ELSE move
+    the number of spaces you rolled.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_134_0.png)
+
+
+    # WHAT TO DO
+
+
+    +   1. During each round, ONE PLAYER WILL BE THE PROGRAMMER. EVERYONE ELSE BE
+    COMPUTERS for that round.
+
+
+    +   2. To start each round, THE PROGRAMMER ROLLS THE DIE. Whatever number comes
+    up on the die will be the IF-number for that round.
+
+
+    +   3. THE PROGRAMMER DECIDES WHAT ACTION THE COMPUTERS SHOULD DO whenever they
+    roll the IF number on the die (See the suggestions if you get stuck!)
+
+
+    +   4. EACH COMPUTER WILL TAKE A TURN AND ROLL THE DIE. If a computer rolls the
+    IF number, he or she will do the action that the programmer chose at the beginning
+    of the round. If they do not roll the IF number, take the ELSE path, and move
+    the number of spaces on the die forward.
+
+
+    +   5. ONCE ALL OF THE COMPUTERS HAVE ROLLED, THE ROUND ENDS. The person to the
+    right of the programmer becomes the next programmer, and a new round starts.
+
+
+    +   6. THE GAME ENDS WHEN SOME REACHES THE END OF THE PATH!
+
+
+    Grab a few friends. It''s time to play Conditional Land!
+
+
+    > If there''s a game going on then I''m ready to play!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_134_1.png)
+
+
+    # CONDITIONAL LAND CONTINUES'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# START
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_135_0.png)
+
+
+    # CONDITIONAL LAND'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '![](img/ff0a36fd32e78d548bb789af8cd599c4_136_0.png)'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '# > CODY''S CODING CHALLENGE
+
+
+    # CODING CONCEPT: CONDITIONALS
+
+
+    # TRY IT OUT
+
+
+    # GETTING HOME
+
+
+    It''s time to get Cody home. That might sound easy, but Cody has some decisions
+    to make along the way. Help Cody get to the edge of the tepui by using the command
+    blocks in the toolbox.
+
+
+    # WHAT''S GPS?
+
+
+    Cody''s map was made in part, by people using the global positioning system (GPS
+    for short). GPS devices use satellites in space to send and receive information
+    about where an object is on Earth. Early on, GPS was only available to a small
+    number of people, such as the military. But now these useful pieces of technology
+    are found in many cars, boats, and cell phones.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_137_0.png)
+
+
+    > Hint: Plan out the path you want Cody to take before you start writing the code
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_137_1.png)'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Start
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_138_0.png)
+
+
+    # CODE TOOLBOX
+
+
+    +   - MOVE FORWARD 1
+
+    - TURN LEFT
+
+    - TURN RIGHT
+
+    - CAN''T GO FORWARD
+
+
+    | IF THEN |
+
+    | ELSE |
+
+
+    # End'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: "# >> THE CHALLENGE\n\n# TRICKY TEPUI\n\n**OBJECTIVE:** WRITE ALGORITHMS\nTO\
+    \ HELP CODY SAFELY CLIMB FROM THE\nTOP OF THE TEPUI DOWN TO BASE CAMP.\n\nOK,\
+    \ Coder Crew. You've\nlearned a lot in this\nchapter about optimi-\nization, making\
+    \ shapes,\nand conditionals. It's\ntime to put all\ntogether to help Cody\npick\
+    \ the best path.\nGrab a piece of paper\n a pencil and use\nthe command blocks\
+    \ to\nwrite algorithms that\nwill take Cody down\neach path. Then decide\nwhich\
+    \ path to send\ncody down.\n\nCheese!\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_139_0.png)\n\
+    \n136 CODE THIS!"
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# AFTERWORD
+
+
+    Computers are powerful machines, but they are still the same as all other machines—they
+    need people to tell them what to do. Algorithms, the instructions that a computer
+    follows to accomplish a task, are written by thinking about how to solve the problem,
+    and then writing the code that helps the computer do it.
+
+
+    But NONE of this would be possible without the thinking power of the human brain.
+    And more important, its curiosity. What can you do? Keep asking questions and
+    keep thinking about problems. After all, programming is just giving a machine
+    some clear directions and the tools to solve problems. What problems will solve
+    in the future? The answer could be based on code you might write!
+
+
+    Some of the first computers, like ENIAC, took up entire rooms. Today, many people
+    carry a smartphone that can fit in a pocket. The art of computer programming changed
+    a lot, too. People are inventing new ways to use computers, inventing new types
+    of computers, and figuring out how to make computers run faster and do more than
+    ever before.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_141_0.png)'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '![](img/ff0a36fd32e78d548bb789af8cd599c4_142_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_142_1.png)
+
+
+    Artificial intelligence computer Watson competes in the TV game Jeopardy! against
+    human opponents
+
+
+    Roboticists use programming to help robots interact with the real world.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_142_2.png)
+
+
+    Early computers were the size of an entire room
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_142_3.png)
+
+
+    This smart technology allows someone to control a "hand" to move a real ball from
+    far away.'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# SOLUTIONS
+
+
+    CHECK YOUR WORK! Did you come up with these solutions?
+
+
+    One of the best things about coding is that you can make it your own. Just as
+    there''s often more than one way to think about a problem, there''s often more
+    than one way to write code that works. So, some of the solutions in this section
+    may not be the only ones! You might come up with code that doesn''t look exactly
+    like ours.
+
+
+    # CHAPTER 1
+
+
+    PAGE 21 HOW TO MAKE A SMOOTHIE
+
+
+    PAGE 31 CAVE EXPLORER CODE
+
+
+    PAGE 35 SUBSTITUTION CIPHERS
+
+
+    +   STEPS:
+
+    Feel a banana and break it into pieces.
+
+    Put banana pieces into the blender.
+
+    Get a cup of your favorite frozen fruit.
+
+    Put the fruit into the blender.
+
+    Measure out 1/2 cup of milk or yogurt.
+
+    Put the milk or yogurt in the blender.
+
+    Put the lid on the blender.
+
+    Turn the blender to its higher setting.
+
+    Wait 3 or 4 minutes.
+
+    Turn off the blender.
+
+    Take the lid off the blender.
+
+    Put the smoothie into a glass.
+
+    Drink the smoothie.
+
+
+    The shortest path:
+
+    A → B
+
+    B → C
+
+    C → D
+
+    D → A
+
+
+    Total time:
+
+    140 minutes
+
+
+    FNCEHRG BZM KDZOM
+
+    SN CN SQHBJR
+
+    GOLDFISH CAN LEARN
+
+    TO TRICKS.
+
+    LZKO ODMFTMR
+
+    JDDO FFJR VZL
+
+    MALE PEENGUIS KEEP
+
+    EGGS WARM.
+
+    AQHFS BNKNQR VQM
+
+    ZVX OQDCSNOR
+
+    BRIGHT COLORS WARN
+
+    AWAY PREDATORS.
+
+    M NBSNOTR GZR
+
+    SGGGDD GZR
+
+    OCTOPUS HAS
+
+    THREE HEARTS.
+
+    MVN SHN SDFQR
+
+    RSHOOD ZQD ZKH.
+
+    NO TIGERS
+
+    STRIPES ARE ALIKE.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_143_0.png)
+
+
+    PAGE 33 SECRET CIPHERS
+
+
+    YOU SOLVED THE CIPHER
+
+    CODY LOVES EXPLORER
+
+    COUNT THE FROGBTS
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_143_1.png)
+
+
+    (from top to bottom)
+
+
+    PAGE 28-29 TRAVELING EXPLORER
+
+
+    PAGE 34 SUBSTITUTION CIPHERS
+
+
+    PAGE 41 DATE CODES
+
+
+    The shortest path would be groceries, then office, the library (or in backward
+    order) for a total of 29 minutes.
+
+
+    A GIRFFE''S TONGUE IS BLACK!
+
+    FZHOEDE''S SNMFTD HR AKZBI!
+
+    BATS HAVE THUMBS!
+
+    AZSR GDUD STGLAR!
+
+
+    PDA OPQZU
+
+    THE STUDY
+
+    KB YRAWO
+
+    OF CAVES
+
+    EO YWHHAZ
+
+    IS CALLED
+
+    OLAHHKHCU
+
+    SPELEOLOGY
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_143_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_143_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_143_4.png)
+
+
+    140 BOOK THIS'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# PAGE 45 MOUSEBOT ON THE MOVE
+
+
+    # PAGE 47 HELP MOUSEBOT REACH THE TOADSTOOL
+
+
+    # PAGE 48-49 GODY AND THE LABYRINTH
+
+
+    Our Solution:
+
+
+    Our Solution:
+
+
+    Our Solution:
+
+
+    +   Start
+
+    >
+
+    >
+
+    >
+
+    >
+
+    >
+
+    >
+
+    >
+
+    Stop
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_1.png)
+
+
+    | REPEAT 3 TIMES |
+
+    |---||
+
+    | REPEAT 4 TIMES |
+
+    |---||
+
+    | REPEAT 3 TIMES |
+
+    |---|
+
+
+    | REPEAT 4 TIMES |
+
+    |---||
+
+    | REPEAT 3 TIMES |
+
+    |---|
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_4.png)
+
+
+    # PAGE 50-51 THE MYSTERIOUS CAVE
+
+
+    | REPEAT 3 TIMES |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---||
+
+    | REPEAT 1 TIMES |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---||
+
+    | REPEAT 5 TIMES |
+
+    |---||
+
+    | REPEAT 2 TIMES |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---||
+
+    | REPEAT 3 TIMES |
+
+    |---|
+
+
+    | REPEAT 2 TIMES |
+
+    |---||
+
+    | REPEAT 3 TIMES |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---||
+
+    | REPEAT 2 TIMES |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---|
+
+
+    | REPEAT 2 TIMES |
+
+    |---||
+
+    | REPEAT 2 TIMES |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---||
+
+    | REPEAT 3 TIMES |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---||
+
+    | REPEAT 2 TIMES |
+
+    |---|
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_5.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_6.png)
+
+
+    | REPEAT 9 TIMES |
+
+    |---||
+
+    | TAKE PHOTO |
+
+    |---|
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_7.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_8.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_9.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_144_10.png)'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '# CHAPTER 2
+
+
+    # PAGE 59 HOP TO ITI
+
+
+    # PAGES 66-67 CUP-STACKING CODE DEBUGGING
+
+
+    # PAGES 68-69 CODY MISSES THE MARK
+
+
+    Page 66: The correct code should be:
+
+
+    To get Cody to the camera, add these blocks to the bottom of the code that''s
+    already there:
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_145_0.png)
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_145_1.png)
+
+
+    ```
+
+    ^>V<
+
+    ```
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_145_2.png)
+
+
+    > THIS LINE IS MISSING
+
+
+    # PAGE 71 ASCII ASSIGNMENT
+
+
+    PANDA
+
+
+    Page 67 (top): The correct code should be:
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    # PAGES 76-77 CODY COMMUNICATION
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    The flag means:
+
+
+    ```
+
+    ^>V<
+
+    ```
+
+
+    I WISH TO COMMUNICATE WITH YOU
+
+
+    ```
+
+    ^>>TV<<<
+
+    ```
+
+
+    ```
+
+    ^>TV<<<
+
+    ```
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_145_3.png)
+
+
+    # PAGES 64-65 SPECIAL DELIVERY
+
+
+    STEPS:
+
+
+    +   1 Take the dog off the boat, leaving the cat and picnic basket together on
+    the shore.
+
+
+    +   2 Leave the dog off the boat, return to the shore alone.
+
+
+    +   3 Carry the picnic basket to the boat. Leave the picnic basket on the boat,
+    bring the dog back to shore.
+
+
+    +   4 Leave the dog on the shore, and take the cat to the boat. Leave the cat
+    on the boat with the picnic basket.
+
+
+    +   5 Return to the shore alone.
+
+
+    +   6 Pick up the dog and take it to the boat.
+
+
+    # PAGE 77 BINARY SEARCH: GO FURTHER
+
+
+    Page 67 (bottom): The correct code should be:
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    ```
+
+    ^>>TV<<<
+
+    ```
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    ```
+
+    ^>TV<<<
+
+    ```
+
+
+    ```
+
+    ^>V<
+
+    ```
+
+
+    ```
+
+    ^>>V<<<
+
+    ```
+
+
+    ```
+
+    ^>V<<<
+
+    ```
+
+
+    YES
+
+
+    I AM TURNING TO THE RIGHT
+
+
+    REQUEST ENTRY TO A PORT
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_145_4.png)'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# PAGES 80-81 DEEP-SEA SURPRISES
+
+
+    # CHAPTER 3
+
+
+    Our Solution:
+
+
+    ASCII names:
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_146_0.png)
+
+
+    REPEAT 4 TIMES
+
+
+    | | | | | |
+
+    |---|---|---|---||
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    ANGLER FISH
+
+
+    DO
+
+
+    TAKE A PICTURE
+
+
+    TRANSMIT NAME
+
+
+    REPEAT 2 TIMES
+
+
+    PAGE 87 MAGIC SQUARE
+
+
+    | 2 | 9 | 4 |
+
+    | 7 | 5 | 3 |
+
+    | 6 | 1 | 8 |
+
+
+    DO
+
+
+    VAMPIRE SQUID
+
+
+    TAKE A PICTURE
+
+
+    TRANSMIT NAME
+
+
+    | | | | | | |
+
+    |---|---|---|---||
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | |
+
+    | | | | | ||
+
+
+    PAGE 89 THE MAIN EVENT
+
+
+    WHEN LEFT ARROW
+
+
+    JUMP LEFT
+
+
+    SPIDER CRAB
+
+
+    WHEN RIGHT ARROW
+
+
+    JUMP RIGHT
+
+
+    REPEAT 3 TIMES
+
+
+    WHEN UP ARROW
+
+
+    JUMP UP
+
+
+    WHEN DOWN ARROW
+
+
+    LAND
+
+
+    DO
+
+
+    TAKE A PICTURE
+
+
+    TRANSMIT NAME
+
+
+    TUBE WORM
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_146_1.png)
+
+
+    TAKE A PICTURE
+
+
+    TRANSMIT NAME
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_146_2.png)
+
+
+    143'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# PAGES 94-95 REMOTE-CONTROL BODY
+
+
+    | REPEAT 2 TIMES | WHEN LEFT ARROW | WHEN PUSH BUTTON |
+
+    | --- | --- | --- |
+
+    | WHEN UP ARROW | SPACE BAR | WHEN UP ARROW |
+
+    | WHEN LEFT ARROW | WHEN PUSH BUTTON | WHEN PUSH BUTTON |
+
+    | WHEN SPACE BAR | WHEN UP ARROW | REPEAT 2 TIMES |
+
+    | WHEN PUSH BUTTON | WHEN RIGHT ARROW | WHEN LEFT ARROW |
+
+    | REPEAT 2 TIMES | SPACE BAR | SPACE BAR |
+
+    | WHEN DOWN ARROW | WHEN DOWN ARROW | | |
+
+
+    # PAGES 97 PIXELS
+
+
+    The rest of the checkerboard code would be:
+
+    D>X>>XD<<X
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_147_0.png)
+
+
+    # PAGES 98-99 PIXEL PAINTING
+
+
+    For pixel puzzles, follow the answers like this:
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_147_1.png)
+
+
+    ```
+
+    >>B-D>>>>>>>>>>B-B-D
+
+    D<B-B-B-B-B-B-B-B-B-B-B-B-B<C
+
+    D<B-B-B-B-B-B-B-B-B-B-B-B-B-D
+
+    D<B-B-B-B-B-B-B-B-B-B-B-B-B-D
+
+    D<B-B-B-B-B-B-B-B-B-B-B-B-B<C
+
+    >>B-B-B-B-B-B-B-B-B-B-B-B-B-D
+
+    D<B-B-B-B-B-B-B-B-B-B-B-B-B-D
+
+    D<B-B-B-B-B-B-B-B-B-B-B-B-B-D
+
+    D<B-B-B-B-B-B-B-B-B-B-B-B-B-D
+
+    END<<G-G-G-G-G-G-G-G-G-G<<G
+
+    ```
+
+
+    # PAGES 100-103 WHICH BUTTON?
+
+
+    | BUTTON 1 | BUTTON 2 | BUTTON 3 | BUTTON 4 |
+
+    | --- | --- | --- | --- |
+
+    | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>>>>M | M<<<<C<C<C<C<C<C | M |
+
+    | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C<C<G>> |
+
+    | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>>>>M | M<<<<C<C<C<C<C<C<C>H |
+
+    | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<<<<<<<<<<C<<C>> |
+
+    | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>>>>M | M<<<<C<C<C<C<C<C<C>C |
+
+    | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C<C<C<C>M |
+
+    | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>>>>M | M<<<<C<C<C<C<C<C<C<C<C>> |
+
+    | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C<C<C<C<C>H |
+
+    | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>>>>M | M<<<<C<C<C<C<C<C<C<C<C<C |
+
+    | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C<C<C<C<C>H |
+
+    | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>>>>M | M<<<<C<C<C<C<C<C<C<C<C<C>C |
+
+    | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C<C<C<C<C<C>M |
+
+    | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>>>>M | M<<<<<<<<<<<<C<C<< |
+
+    | M<<<<<<<<<<<<>>>>>> | MC<<<<<<<<<<<< | M<<<<C<C<C<C<C |
+
+    | M<<<<<<<<<<<<>>>>>> | >>>>>>>>>>>>M | END<<<C<C<C<C<C<C<<C
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_147_2.png)
+
+
+    144 CODE THIS'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# PAGE 108-109 SAVE THE SATELLITE
+
+
+    # CHAPTER 4
+
+
+    # PAGE 102-107 DECOMPOSITION
+
+
+    # PAGE 110-118 CODY''S BACKPACK
+
+
+    Our Solution:
+
+
+    ```
+
+    >>>R-G>>>D
+
+    >>>D<R-G<B<<<
+
+    >>>G>Y=R>G>>>D
+
+    <<D<B>Y<C<Y>>>D
+
+    >>R>Y>R>G<B>G>>>Y
+
+    <<D<G<R>G<B-R<Y<<<
+
+    >>-B>>R>>>D
+
+    >>D<G<R<<Y<B<<<
+
+    >>>Y>R>G<B>>>D
+
+    <<D<B>Y<C<<R<R<
+
+    <<B<R>Y-R<G<B<G>>>D
+
+    >>G>G>B>G>Y<B-C
+
+    <<B<C>Y>B>G>Y<B-C
+
+    >>G-B>G>G>B<G>>>RD
+
+    DY<Y>G<<<<<Y<R<G<D
+
+    GR>B>Y>>>>>>Y-BD
+
+    END<<<<<B
+
+    ```
+
+
+    Spare parts (22.5 lb, 11 kg)
+
+
+    Rope (12 lb, 5.4 kg)
+
+
+    Camera battery (13 lb, 0.5 kg)
+
+
+    Camera (34 lb, 15 kg)
+
+
+    Total: 12.72 pounds (5.7 kg)
+
+
+    STEP 1
+
+
+    STEP 2
+
+
+    STEP 3
+
+
+    STEP 4
+
+
+    STEP 5
+
+
+    # PAGE 124-123 MAKING SHAPES
+
+
+    +   REPEAT 3 TIMES
+
+
+    MOVE FORWARD 12 INCHES
+
+
+    +   REPEAT 3 TIMES
+
+
+    MOVE FORWARD 12 INCHES
+
+
+    +   REPEAT 3 TIMES
+
+
+    MOVE FORWARD 12 INCHES
+
+
+    STEP 6
+
+
+    STEP 7
+
+
+    STEP 8
+
+
+    # PAGE 106-107 MIRROR MOVING
+
+
+    +   REPEAT 3 TIMES
+
+
+    MOVE FORWARD 12 INCHES
+
+
+    +   REPEAT 3 TIMES
+
+
+    MOVE FORWARD 12 INCHES
+
+
+    STEP 1
+
+
+    STEP 9
+
+
+    STEP 2
+
+
+    STEP 10
+
+
+    STEP 3
+
+
+    STEP 11
+
+
+    # PAGE 124-125 SETTING UP THE PICTURE
+
+
+    Our Solution:
+
+
+    STEP 4
+
+
+    STEP 12
+
+
+    STEP 5
+
+
+    STEP 13
+
+
+    MOVE FORWARD 1 YARD
+
+
+    STEP 6
+
+
+    STEP 14
+
+
+    MOVE FORWARD 1 YARD
+
+
+    STEP 7
+
+
+    STEP 15
+
+
+    +   REPEAT 3 TIMES
+
+
+    MOVE FORWARD 1 YARD
+
+
+    STEP 8
+
+
+    STEP 16
+
+
+    +   REPEAT 3 TIMES
+
+
+    MOVE FORWARD 1 YARD
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_148_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_148_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_148_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_148_3.png)'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: "# Frog\n\n```\nIF THE UP ARROW IS CLICKED THEN\n  PLAY THE PROJECT\nELSE\n\
+    \  HIDE THE PROJECT;\n```\n\n```\nIF THE UP ARROW IS CLICKED THEN\n  DISPLAY THE\
+    \ PROJECT\nELSE\n  HIDE THE PROJECT;\n```\n\n```\nIF THE UP ARROW IS CLICKED THEN\n\
+    \  DISPLAY THE PROJECT\nELSE\n  HIDE THE PROJECT;\n```\n\n```\nIF THE UP ARROW\
+    \ IS CLICKED THEN\n  DISPLAY THE PROJECT\nELSE\n  HIDE THE PROJECT;\n```\n\n```\n\
+    IF THE UP ARROW IS CLICKED THEN\n  DISPLAY THE PROJECT\nELSE\n  HIDE THE PROJECT;\n\
+    ```\n\n```\nIF THE UP ARROW IS CLICKED THEN\n  DISPLAY THE PROJECT\nELSE\n  HIDE\
+    \ THE PROJECT;\n```\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_149_0.png)\n\n\
+    # Snake\n\n```\nIF THE UP ARROW IS CLICKED THEN\n  DISPLAY THE PROJECT\nELSE\n\
+    \  HIDE THE PROJECT;\n```\n\n```\nIF THE UP ARROW IS CLICKED THEN\n  DISPLAY THE\
+    \ PROJECT\nELSE\n  HIDE THE PROJECT;\n```\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_149_1.png)\n\
+    \n```\nIF THE UP ARROW IS CLICKED THEN\n  DISPLAY THE PROJECT\nELSE\n  HIDE THE\
+    \ PROJECT;\n```\n\n```\nIF THE UP ARROW IS CLICKED THEN\n  DISPLAY THE PROJECT\n\
+    ELSE\n  HIDE THE PROJECT;\n```\n\n```\nIF THE UP ARROW IS CLICKED THEN\n  DISPLAY\
+    \ THE PROJECT\nELSE\n  HIDE THE PROJECT;\n```\n\n```\nIF THE UP ARROW IS CLICKED\
+    \ THEN\n  DISPLAY THE PROJECT\nELSE\n  HIDE THE PROJECT;\n```\n\nPAGE 134-135\
+    \ GETTING HOME\n\nOur Solution:\n\n```\nREPEAT 3 TIMES\n  IF CAN'T GO FORWARD\
+    \ THEN\n    MOVE LEFT\n  ELSE\n    MOVE FORWARD ?\n```\n\n```\nREPEAT 2 TIMES\n\
+    \  IF CAN'T GO FORWARD THEN\n    MOVE LEFT\n  ELSE\n    MOVE FORWARD ?\n```\n\n\
+    ```\nREPEAT 2 TIMES\n  IF CAN'T GO FORWARD THEN\n    MOVE LEFT\n  ELSE\n    MOVE\
+    \ FORWARD ?\n```"
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '# Our Solutions:
+
+
+    Blue path:
+
+
+    Orange path:
+
+
+    Green path:
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_150_0.png)'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# # GO FURTHER!
+
+
+    READY TO TRY SOME MORE-ADVANCED PROGRAMMING?
+
+    Apply what you know, and give these additional activities a try.
+
+
+    # A BATTY BINARY SEARCH
+
+
+    Write a binary search tree for this crazy creature!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_151_0.png)
+
+
+    > Rosy-lipped batfish live in the waters off Costa Rica, near Costa Rica; they
+    likes to walk along the seafloor
+
+
+    Here''s a suggestion to start you out.
+
+
+    # START HERE
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_151_1.png)'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: '# MAKE YOUR OWN BINARY CODE!
+
+
+    You can make your own binary code out of almost anything. Just choose two objects
+    to represent the parts of your code. Then, write a message to someone else using
+    your code, and ask them to read it!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_152_0.png)
+
+
+    # YOUR HOME: THE MAZE
+
+
+    Hide a surprise in a room in your home.
+
+    Write an algorithm** to help a family member find the surprise by starting in
+    a different room.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_152_1.png)
+
+
+    MORE TO TRY!'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# GO FURTHER
+
+
+    CONTINUED
+
+
+    # YOUR OWN LANGUAGE
+
+
+    Write your own cryptogram using symbols! First, write the alphabet on a piece
+    of paper—then think of a different symbol to represent each letter. Draw the symbols
+    under the alphabet. This is your key. Write a message to someone using the symbols.
+    Give them a copy of the key, and ask them to decode the message. Be as creative
+    with your symbols as you can—use different colors, shapes, and sizes!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_153_0.png)
+
+
+    If...
+
+
+    # IF/ELSE SIMON SAYS GAME
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_153_1.png)
+
+
+    Grab some friends for some active fun by playing a Code This Simon Says!
+
+
+    In this version, it''s the programmer''s job to say commands—and the computers''
+    job is to follow them!
+
+    For example, the programmer says, "IF I raise my right hand, you jump. ELSE you
+    stand still." Any computer that doesn''t follow the command correctly is out.
+    How fast can the computers follow the programmer''s commands?'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: '# OPTIMIZED SLIME
+
+
+    # WHAT YOU''LL NEED
+
+
+    +   * 1 cup (240 mL) of white school glue
+
+    * 1 1/4 cup (300 mL) foaming shaving cream
+
+    * About 1/2 cup (120 mL) saline solution
+
+
+    # SPECIAL SLIME INGREDIENTS!
+
+
+    +   * A pinch (or more) of cornstarch
+
+    * A pump of hand lotion
+
+    * More shaving cream
+
+
+    Make some super slime using the recipe to the left (first ask a parent for permission
+    and help!). Then optimize your slime by adding some of the special ingredients.
+    Write down how adding the special ingredients changes the slime. Which makes
+
+
+    +   * the softest slime?
+
+    * the fluffiest slime?
+
+    * the squishiest slime?
+
+
+    # WHAT TO DO
+
+
+    +   1 MIX THE GLUE AND SHAVING CREAM in a plastic container.
+
+    2 Stir in the SALINE SOLUTION a little at a time until the mixture stops sticky.
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_154_0.png)'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: "# CODE ON\n\nBLOCK COMMANDS ARE A GREAT WAY TO START LEARNING TO CODE. But\
+    \ most programming is done by writing code in languages. Just like any language,\
+    \ programming languages like JavaScript, Python, and Ruby have words and specific\
+    \ orders to write them in.\n\n# HTML/JAVASCRIPT\n\nHere's some code in HTML/JavaScript.\
+    \ In this game, the computer picks a \"right\" answer between 1 and 10 at random.\n\
+    \n```\n<!DOCTYPE html>\n<body>\n<p>I'm thinking of a number. Can you guess it?</p>\n\
+    Type in a number between 1 and 10:</p>\n<input id=\"myInput\" type=\"text\">\n\
+    <button onclick=\"myFunction()\">Is it right?</button>\n<p id=\"demo\"></p>\n\
+    <script>\nvar var = Math.floor(Math.random() * 10) + 1;\nfunction myFunction()\
+    \ {\n var guess = document.getElementById(\"myInput\");\n var text = Number(guess.value);\n\
+    \ // If the guess is correct\n if (correct === var) {\n \text{text} = \"That's\
+    \ it! Great job!\";\n // If the guess is too high\n else if (guess > var) {\n\
+    \ \text{text} = \"Try lower.\";\n // If the guess is too low\n } else {\n \text{text}\
+    \ = \"Try higher.\";\n}\ndocument.getElementById(\"demo\").innerHTML = text;\n\
+    }\n</script>\n</body>\n</html>\n```\n\nThese \"words\" are part of the programming\
+    \ language. They tell the computer things like this section of the webpage starts.\n\
+    \nThese are the actual words that someone playing the game will see on screen.\
+    \ The code pair <p></p> tells the computer which paragraph of text starts and\
+    \ ends.\n\nThis command tells the button on the screen how to work.\n\nThis command\
+    \ sequence is the If/Else command. It tells the computer how to respond to the\
+    \ player's game. If the player guesses the number picked, the computer will read,\
+    \ \"That's it! Great job.\" If the player guesses a number too high, the text\
+    \ will read, \"Try lower.\" And if the player guesses a number too low, the text\
+    \ will read, \"Try higher.\".\n\nI'm thinking of a number. Can you guess it? Type\
+    \ in a number between 1 and 10.\n\n| 2 |\n| Is it right? |\n\nTry higher."
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: "# PYTHON\n\nHere's the game written in Python.\n\n```\nimport random\nnum =\
+    \ random.randint(1, 10)\nwhile True:\n    print(\"I'm thinking of a number. Can\
+    \ you guess\nit? Type in a number between 1 and 10\")\n    guess = int(input())\n\
+    \    if guess == num:\n        print(\"Great job!\")\n        break\n    elif\
+    \ guess < num:\n        print(\"Try Higher\")\n    else:\n        print(\"Try\
+    \ Lower\")\n```\n\nThis code tells the computer to pick a \"right\" answer number\
+    \ between 1 and 10.\n\nThese are the actual words that someone playing the game\
+    \ will see on their screen. The code \"print\" tells the computer what text to\
+    \ display.\n\nThis command sequence is the If/Else command. It tells the computer\
+    \ how to respond to the player's guess. If the player guesses a number the computer\
+    \ picked, the text on the screen will read \"Great job\" If the player guesses\
+    \ a number too low, the text on the screen will read \"Try Higher.\" If the player\
+    \ guesses a number too high, the text on the screen will read \"Try Lower.\"\n\
+    \n# TRY IT OUT\n\nNow that you've mastered the ideas behind coding, it's time\
+    \ to put them to work. With an adult's permission, visit these sites for more\
+    \ in-depth coding practice.\n\n+   CODE.ORG\ncode.org\nKid-friendly coding courses,\
+    \ plus additional resources\n\n+   CODEACADEMY\ncodeacademy.com\nIn-depth tutorials\
+    \ appropriate for older learners such as teens and adults\n\n+   SCRATCH\nscratch.mit.edu\n\
+    Kid-friendly games, tutorials, and a free off-line editor\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_156_0.png)\n\
+    \nCode thissssss!"
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# GLOSSARY
+
+
+    **algorithm**: a set of steps or list of instructions a computer uses to accomplish
+    a goal
+
+
+    **coding**: the process of thinking about and writing down instructions for a
+    computer
+
+
+    **ASCII**: a type of binary code that represents letters, numbers, and symbols
+    (ASCII stands for American Standard Code for Information)
+
+
+    **combine**: to put two or more parts of something together
+
+
+    **binary**: made of two things
+
+
+    **command**: an instruction that a computer follows
+
+
+    **binary code**: code that uses two symbols to represent letters, numbers, and
+    other characters
+
+
+    **computer science**: the study of how to write logical computer programs
+
+
+    **binary search**: the process of repeatedly dividing a large amount of information
+    to find a specific piece of information
+
+
+    **conditional**: a piece of code that causes a computer to choose one of two paths
+
+
+    **constraint**: anything that might keep a solution to a problem from working
+    (or working well)
+
+
+    **bug**: a mistake in computer code that causes a program to run poorly or in
+    a way that is not expected
+
+
+    **cryptology**: the study of writing and breaking codes
+
+
+    **cipher**: a message written in a secret language
+
+
+    **debugging**: the process of going through code to find problems
+
+
+    **cipher wheel**: a tool used to write and decode ciphers
+
+
+    **decomposition**: the process of breaking down a problem into smaller parts that
+    are easier to solve
+
+
+    **code**: the specific directions written for a computer to follow
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_157_0.png)'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: 'efficient: working in the best possible way
+
+
+    pixel: a tiny piece of a picture on a computer screen
+
+
+    event: anything that causes a computer program to run a certain way
+
+
+    programming: the process of writing code for computers
+
+
+    global positioning system (GPS): a tool that uses computers and satellite signals
+    to help people find their location on Earth
+
+
+    sonar: a tool that uses sound waves bouncing off of something to determine its
+    location
+
+
+    graphics: the pictures that computers make by reading code
+
+
+    # labyrinth: a maze
+
+
+    logic: thinking about something in a way that makes sense
+
+
+    strategy: a plan used to accomplish a goal
+
+
+    substitution cipher: a message written in a secret language in which each letter
+    is replaced by a different symbol
+
+
+    loop: a set of steps that are followed over and again
+
+
+    Traveling Salesperson: a computer logic problem that asks the user to find the
+    shortest path between a group of points
+
+
+    Lovelace, Ada: English countless wrote the first algorithm and is considered to
+    be the world''s first computer programmer
+
+
+    trial and error: a way to solve problems that involves making a guess, being wrong,
+    and then again
+
+
+    Morse code: a type of binary code made of dots and dashes (short and long signals)
+
+
+    user: a person that uses a computer
+
+
+    optimize: to write computer code so that it works best for a particular situation
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_158_0.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_158_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_158_2.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_158_3.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_158_4.png)'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: "# # INDEX\n\nIllustrations are indicated by **boldface.**\n\n#  A\n\n+   Actors:\
+    \ motion capture suits 123, **123**\nAlgorithms 22–25, 74, 138\nAlphabets\n  ASCII\
+    \ 72, **72**\n  cipher 34, **34**\n  cryptogram 150\n  Mse code 70, **70**\nAmerican\
+    \ Standard Code for Information\nInterchange (ASCII) **72**, 72–73, 80, 81\nApps\
+    \ 47\nArtificial intelligence computers **139**\n\n#  B\n\n+   Bats **34**, **68**,\
+    \ **68**\nBinary code 70–73, 149\nBinary searches 74–79, 148\nBlock commands 11,\
+    \ **11**, 152\nBrain, human **8, 25, 66, 138**\nBroome Bridge, Dublin, Ireland\
+    \ **27**, **27**\n\n#  C\n\n+   Camera traps 125\nCars\ncomputers and 7\nGPS devices\
+    \ 134\nCave exploration 20–51\nCaves **20–21**, **30**, **40–41**, **48–51**\n\
+    Cell phones: GPS technology **134**, **134**\nChars, model: how to make 115–117,\
+    \ **115–117**\nCheckerboard code 97\nChina: ancient legend 86\nCipher wheels:\
+    \ how to make **36–39**, **36–39**\nCiphers 32–44\n\n+   Code breakers 32\nCoding:\
+    \ computer science and 6\nCoding concepts\nalgorithms 22–25, 74, 138\nbinary code\
+    \ 70–73, 149\nbinary searches 74–79, 148\nconditionals 126–135\nconstraints 58–61\n\
+    cryptology 32–41\ndebugging 62–69, 81\ndecomposition 102–107\ndirections 42–45\n\
+    loops 46–49\nmaking shapes 120–125\noptimization 26–29, 114–115, 118–119\npixels\
+    \ 96–101, 123\ntrial 86–87\ntrial and error 88–95\nusers and events: 88–95\nColors\
+    \ **72**, **98**, 123\nCommand blocks: how to write code using 11\nComposers 102\n\
+    Computer programmers 7, 22, 120\nComputer science 6–7, 8, 27\nComputers\nconditionals\
+    \ 133\nearly early computers 64, 98, **138**, **139**\ngraphics 96, 123\nlogic\
+    \ 8\nparts 8, 64, 123\nscreens 96, 98, 99, 123\nsending messages using 71\nsoftware\
+    \ 47\nConditional Land (game) 130–131, **132–133**\nConditionals 126–135\nConstraints\
+    \ 58–61\nCryovolcanoes 84\nCryptograms 150, **150**\ncryptology 32–44\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_159_0.png)"
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# D
+
+
+    Databases 74
+
+    Debugging 62–69, 81
+
+    Decomposition 102–107
+
+    Deep-sea challenge 54–81
+
+    Dice 130, 130, 131
+
+    Directions (coding concept) 42–45
+
+    Doctors 7, 7
+
+
+    # I
+
+
+    If/Else blocks 128–129, 128–129
+
+    If/Else Simon Says (game) 150
+
+    Internet 7, 32, 74
+
+    lo (moon of Jupiter) 84
+
+
+    # J
+
+
+    Jaguars 112, 115, 125, 136
+
+    JavaScript 152
+
+    Jeopardy! (TV show) 139
+
+    Jupiter (planet) 84
+
+
+    # E
+
+
+    Echolocation 68
+
+    Edison, Thomas 64, 64
+
+    Email 32, 71, 74
+
+    ENIAC (computer) 138
+
+    Enigma code 32
+
+    Event commands 91
+
+
+    # K
+
+
+    Keyboards, computer 88, 89, 91
+
+    Knapsack Problem 119
+
+
+    # F
+
+
+    Frogbot activities 10–15, 63, 88–89
+
+    Frogs and toads (logic problem) 57–59
+
+    Fruit smoothies 23, 23
+
+
+    # L
+
+
+    Labyrinths 44, 44
+
+    Languages, programming 152
+
+    Laser lights 30
+
+    Legends, ancient 86
+
+    LDAR (Light Detection and Ranking) 30
+
+    Light, using to send messages 70, 71
+
+    Logic: what it is er
+
+    Logic problems 8, 26–27, 59
+
+    Loops 46–49
+
+    Lovelace, Ada 22, 22
+
+
+    # G
+
+
+    Games
+
+    Conditional Land 130–131, 132–133
+
+    Guess My Number 74–75
+
+    If/Else Simon Says 150
+
+    Twenty Questions 78–79
+
+    Geometric shapes 120, 120–121, 121
+
+    Germany: World War II 32
+
+    Global positioning system (GPS) devices 134, 134
+
+    Graffiti 27
+
+    Graphics 96, 99, 120, 122, 123
+
+    Guy, Richard 58, 58
+
+
+    # M
+
+
+    Magic Square puzzles 87, 87
+
+    Mars (planet) 7
+
+    Math 6, 87
+
+    Mathematical equations 27
+
+    Mazes 42–44, 42–44
+
+    Mice, computer 88, 91
+
+    Mobile phones
+
+    GPS technology 134, 134
+
+    reliance on computers 7
+
+    smartphones 47, 71, 138
+
+    Moths 64
+
+    Motion capture 123, 123
+
+    Mousebot activities 44–47
+
+    Movies: computers and 7, 123
+
+    Music and musicians 7, 102
+
+
+    # H
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_160_0.png)
+
+
+    157'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: '# N
+
+
+    Navajo people 32, 32
+
+    Nested loops 46
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_161_0.png)
+
+
+    # O
+
+
+    Ocean floor 54, 68, 148
+
+    Optimization 26–29, 114–115, 118–119
+
+
+    # P
+
+
+    Passwords 36
+
+    Pixels 96–101, 123
+
+    Programming, computer 6, 8, 84, 122, 138, 152
+
+    Python (programming language) 152, 153
+
+
+    # T
+
+
+    Tablet apps 47
+
+    Telegrams 71
+
+    Tennis for Two (video game) 93, 93
+
+    Tepui challenge 112–137
+
+    Tepuis 112, 112–113, 136–137
+
+    Texting 71
+
+    Traffic lights 126, 126
+
+    Traveling Salesperson (logic problem) 26–27
+
+    Trial and error 86–87
+
+    Turing, Alan 32
+
+    Twenty Questions (game) 78–79
+
+
+    # R
+
+
+    Recipes 23, 151
+
+    Remote sensing 30
+
+    Robotically controlled vehicles 54
+
+    Robots 10, 16, 44, 139, 139
+
+    Rosy-lipped batfish 148, 148
+
+
+    # U
+
+
+    Users and events 88–95
+
+
+    # V
+
+
+    Venezuela: tepui 112
+
+    Video games
+
+    conditions 133
+
+    earlyarly video games 93, 93
+
+    event commands 91
+
+    graphics 123
+
+    reliance on computers
+
+    users and events 90
+
+    “you be the character” 90–93, 90–93
+
+    Volcanoes 84
+
+
+    # S
+
+
+    Satellite challenge 84–109
+
+    Satellites 7, 84–85, 94, 106
+
+    Sea creatures 80, 81, 148, 148
+
+    Seafloor exploration 54, 68
+
+    Shapes, making 120–125
+
+    Slime: how to make 151, 151
+
+    Smart technology 139
+
+    Smartphones 47, 71, 138
+
+    Smoothies: how to make 23, 23
+
+    Software 47
+
+    Software engineers 72
+
+    Solar system 7
+
+    Sonar 68, 68
+
+    Sound, using, to send messages 71
+
+    Sound waves 68
+
+    Space exploration 7, 7; see also Satellites
+
+    Strategies
+
+    debugging 62
+
+    decomposition 102
+
+    wall-following 44
+
+    Substitution ciphers 34, 34
+
+    Surgery: computer programs 77
+
+
+    # W
+
+
+    Wall-following 44
+
+    Watson (computer) 139
+
+    Welchman, Gordon 32
+
+    Whales 68
+
+    World War II 32
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_161_1.png)
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_161_2.png)'
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: "# CREDITS\n\nDL: Showtime; Getty Images; Shutterstock.\n\n# Coven\n\n(3D animation\
+    \ on computer screen), Kindle/\n(LA)/Shining filming team, Getty; Valentinova\n\
+    (LA)/Computer image, artstars/\n(multi-color) (for T1-5), Basset\n(green leafy\
+    \ texture), Getty;\n(green video texture), Best Images;\n(paper texture), Anderson/Bon;\
+    \ Back cover,\n(LA) Lorstein/Shutterstock\n\nAllison (35), 13 (LEO), Getty;\n\
+    Allison (35), 13 (LEO), Dierksen/35\n(LO, RT), Shani Chiton-Jo/35; (LO\n, RT),\
+    \ Zeyher Artstars, artstars/\n(47) (leaves), Michael/Photoshop/37\n(46) (leaves),\
+    \ Chronicle/36 (36)\n(47), PARIN/37, 38 (LEO), Estein/NEK\nStaff/37 (37); Allison\
+    \ (35), 38 (LEO)\n(LO, RT), Getty; Lorstein/Shutterstock\n(39) (leaves), Lorstein/Shutterstock\n\
+    (39) (leaves), Lorstein/Shutterstock\n(40) (leaves), Lorstein/Shutterstock\n(41)\
+    \ (leaves), Lorstein/Shutterstock\n(42) (leaves), Lorstein/Shutterstock\n(42)\
+    \ (leaves), Lorstein/Shutterstock\n(43) (leaves), Lorstein/Shutterstock\n(44)\
+    \ (leaves), Lorstein/Shutterstock\n(45) (leaves), Lorstein/Shutterstock\n(46)\
+    \ (leaves), Lorstein/Shutterstock\n(47) (leaves), Lorstein/Shutterstock\n(48)\
+    \ Light & Magic Photography/48\n(48) (49), Lorstein/Shutterstock\n(49) (leaves),\
+    \ Lorstein/Shutterstock\n(50) (leaves), Lorstein/Shutterstock\n(51) (leaves),\
+    \ Lorstein/Shutterstock\n(52) (leaves), Lorstein/Shutterstock\n(53) (leaves),\
+    \ Lorstein/Shutterstock\n(54) (leaves), Lorstein/Shutterstock\n(55) (leaves),\
+    \ Lorstein/Shutterstock\n(56) (leaves), Lorstein/Shutterstock\n(57) (leaves),\
+    \ Lorstein/Shutterstock\n(58) (leaves), Lorstein/Shutterstock\n(59) (leaves),\
+    \ Lorstein/Shutterstock\n(60) (leaves), Lorstein/Shutterstock\n(61) (leaves),\
+    \ Lorstein/Shutterstock\n(62) (leaves), Lorstein/Shutterstock\n(63) (leaves),\
+    \ Lorstein/Shutterstock\n(64) (leaves), Lorstein/Shutterstock\n(65) (leaves),\
+    \ Lorstein/Shutterstock\n(66) (leaves), Lorstein/Shutterstock\n(67) (leaves),\
+    \ Lorstein/Shutterstock\n(68) (leaves), Lorstein/Shutterstock\n(69) (leaves),\
+    \ Lorstein/Shutterstock\n(70) (leaves), Lorstein/Shutterstock\n(71) (leaves),\
+    \ Lorstein/Shutterstock\n(72) (leaves), Lorstein/Shutterstock\n(73) (leaves),\
+    \ Lorstein/Shutterstock\n(74) (leaves), Lorstein/Shutterstock\n(75) (leaves),\
+    \ Lorstein/Shutterstock\n(76) (leaves), Lorstein/Shutterstock\n(77) (leaves),\
+    \ Lorstein/Shutterstock\n(78) (leaves), Lorstein/Shutterstock\n(79) (leaves),\
+    \ Lorstein/Shutterstock\n(80) (leaves), Lorstein/Shutterstock\n(81) (leaves),\
+    \ Lorstein/Shutterstock\n(82) (leaves), Lorstein/Shutterstock\n(83) (leaves),\
+    \ Lorstein/Shutterstock\n(84) (leaves), Lorstein/Shutterstock\n(85) (leaves),\
+    \ Lorstein/Shutterstock\n(86) (leaves), Lorstein/Shutterstock\n(87) (leaves),\
+    \ Lorstein/Shutterstock\n(88) (leaves), Lorstein/Shutterstock\n(89) (leaves),\
+    \ Lorstein/Shutterstock\n(90) (leaves), Lorstein/Shutterstock\n(91) (leaves),\
+    \ Lorstein/Shutterstock\n(92) (leaves), Lorstein/Shutterstock\n(93) (leaves),\
+    \ Lorstein/Shutterstock\n(94) (leaves), Lorstein/Shutterstock\n(95) (leaves),\
+    \ Lorstein/Shutterstock\n(96) (leaves), Lorstein/Shutterstock\n(97) (leaves),\
+    \ Lorstein/Shutterstock\n(98) (leaves), Lorstein/Shutterstock\n(99) (leaves),\
+    \ Lorstein/Shutterstock\n\n(BACKGND), AI; artstars/alamy/88\n(angler), Rust; Shani\
+    \ Zalki, alamy/88\n(avramov), Steve Downey/Source\nSource/88 (Getty Images);\n\
+    80-81 (vector), Pixabay.com/i\n\nElasson/130 (130 LO), Georgiulli/Stock/\n131\
+    \ (UP), Eissler/131 (02), Erwin\nutter/132-133 (grass leaves), Anton-\nBergen/134-135\
+    \ (leaves), Instagram.\nIngram/136-137 (leaves), Getty Images;\n138-139 (leaves),\
+    \ Anna/Bakina/130 (131)\nkoos/141-142), Getty/Photo.Jay/143\n(texture), 144, 145\
+    \ (leaves), Getty/\n146-147 (leaves), 148 (leaves), Getty Images/\n149-150 (leaves),\
+    \ 151 (leaves), Getty/\n152 (leaves), 153 (leaves), 154 (leaves), 155\n156 (leaves),\
+    \ 157 (leaves), 158 (leaves)\n159 (leaves), 160 (leaves), 161 (leaves)\n162 (leaves),\
+    \ 163 (leaves), 164 (leaves)\n165 (leaves), 166 (leaves), 167 (leaves)\n168 (leaves),\
+    \ 169 (leaves), 170 (leaves)\n171 (leaves), 172 (leaves), 173 (leaves)\n\n# Front\
+    \ matter\n\n1. Title................................................................................................................\n\
+    \n2. (BACKGND), BACKGND/artstars/alamy/\n(LA), checlcked/02, Zeyher Artstars/\n\
+    (LA), Getty; Zeyher Artstars, 2\n(top spot), Zeyher Artstars, 2 night spot;\n\
+    shutterstock, Getty; Valentinova/\n(LA)/Computer image, artstars/\n(multi-color)\
+    \ (for T1-5), Basset\n(green leafy texture), \n(white), paper, Steffon/4, 4\n\
+    (LEO), Zeyher Artstars, 2 (small)\nspot), Zeyher Artstars, 3 (small),\nsmelner,\
+    \ 3 (small), Zeyher Artstars, 3\n(small), Zeyher Artstars, 4 (small),\n(small),\
+    \ Steffon/4, 4 (LEO),\n\n\n3. Copyright....................................................................................................\n\
+    \n4. ISBN................................................................................................................\n\
+    \n5. Dedication................................................................................................\n\
+    (if applicable).\n\n6. Table of Contents....................................................................................\n\
+    \n7. ...................................................................................................\n\
+    \n8...................................................................................................................\n\
+    \n9...................................................................................................................\n\
+    \n10...................................................................................................................\n\
+    \n11...................................................................................................................\n\
+    \n12.................................................................................................................\n\
+    \n13.................................................................................................................\n\
+    \n14.................................................................................................................\n\
+    \n15...............................................................................................................\n\
+    \n16...............................................................................................................\n\
+    \n17...............................................................................................................\n\
+    \n18...............................................................................................................\n\
+    \n19..............................................................................................................\n\
+    \n# Chapter 1\n\n20. Jason-Edison National Geographic;\n21. Creative Life; Science\
+    \ & Society\nPublisher;22. Art History, Getty;\n23. The River of Life, Richards;\n\
+    24. Maalen, Henderson/artstars;\n25. Nielsen, Henderson/artstars;\n26. (blue background),\
+    \ Valentinova/\n(27) (leaves), Basset;\n(28) (green leafy texture), Getty;\n(29)\
+    \ (green video texture), Best Images;\n(30) (paper texture), Anderson/Bon; Back\
+    \ cover,\nLA) Lorstein/Shutterstock;\n(31) (leaves), Lorstein/Shutterstock;\n\
+    (32) (leaves), Lorstein/Shutterstock;\n(33) (leaves), Lorstein/Shutterstock;\n\
+    (34) (leaves), Lorstein/Shutterstock;\n(35) (leaves), Lorstein/Shutterstock;\n\
+    (36) (leaves), Lorstein/Shutterstock;\n(37) (leaves), Lorstein/Shutterstock;\n\
+    (38) (leaves), Lorstein/Shutterstock;\n(39) (leaves), Lorstein/Shutterstock;\n\
+    (40) (leaves), Lorstein/Shutterstock;\n(41) (leaves), Lorstein/Shutterstock;\n\
+    (42) (leaves), Lorstein/Shutterstock;\n(43) (leaves), Lorstein/Shutterstock;\n\
+    (44) (leaves), Lorstein/Shutterstock;\n(45) (leaves), Lorstein/Shutterstock;\n\
+    (46) (leaves), Lorstein/Shutterstock;\n(47) (leaves), Lorstein/Shutterstock;\n\
+    (48) Light & Magic Photography/48\n(48) (49), Lorstein/Shutterstock;\n(49) (leaves),\
+    \ Lorstein/Shutterstock;\n(50) (leaves), Lorstein/Shutterstock;\n(51) (leaves),\
+    \ Lorstein/Shutterstock;\n(52) (leaves), Lorstein/Shutterstock;\n(53) (leaves),\
+    \ Lorstein/Shutterstock;\n(54) (leaves), Lorstein/Shutterstock;\n(55) (leaves),\
+    \ Lorstein/Shutterstock;\n(56) (leaves), Lorstein/Shutterstock;\n(57) (leaves),\
+    \ Lorstein/Shutterstock;\n(58) (leaves), Lorstein/Shutterstock;\n(59) (leaves),\
+    \ Lorstein/Shutterstock;\n(60) (leaves), Lorstein/Shutterstock;\n(61) (leaves),\
+    \ Lorstein/Shutterstock;\n(62) (leaves), Lorstein/Shutterstock;\n(63) (leaves),\
+    \ Lorstein/Shutterstock;\n(64) (leaves), Lorstein/Shutterstock;\n(65) (leaves),\
+    \ Lorstein/Shutterstock;\n(66) (leaves), Lorstein/Shutterstock;\n(67) (leaves),\
+    \ Lorstein/Shutterstock;\n(68) (leaves), Lorstein/Shutterstock;\n(69) (leaves),\
+    \ Lorstein/Shutterstock;\n(70) (leaves), Lorstein/Shutterstock;\n(71) (leaves),\
+    \ Lorstein/Shutterstock;\n(72) (leaves), Lorstein/Shutterstock;\n(73) (leaves),\
+    \ Lorstein/Shutterstock;\n(74) (leaves), Lorstein/Shutterstock;\n(75) (leaves),\
+    \ Lorstein/Shutterstock;\n(76) (leaves), Lorstein/Shutterstock;\n(77) (leaves),\
+    \ Lorstein/Shutterstock;\n(78) (leaves), Lorstein/Shutterstock;\n(79) (leaves),\
+    \ Lorstein/Shutterstock;\n(80) (leaves), Lorstein/Shutterstock;\n(81) (leaves),\
+    \ Lorstein/Shutterstock;\n(82) (leaves), Lorstein/Shutterstock;\n(83) (leaves),\
+    \ Lorstein/Shutterstock;\n(84) (leaves), Lorstein/Shutterstock;\n(85) (leaves),\
+    \ Lorstein/Shutterstock;\n(86) (leaves), Lorstein/Shutterstock;\n(87) (leaves),\
+    \ Lorstein/Shutterstock;\n(88) (leaves), Lorstein/Shutterstock;\n(89) (leaves),\
+    \ Lorstein/Shutterstock;\n(90) (leaves), Lorstein/Shutterstock\n\n# Chapter 4:\n\
+    \n11. National-Geographic Society;\n12. Creative Life; Science & Society\nPublisher;13.\
+    \ Art History, Getty;\n14. The River of Life, Richards;\n15. Maalen, Henderson/artstars;\n\
+    16. Nielsen, Henderson/artstars;\n17. (blue background), Valentinova/\n(18) (leaves),\
+    \ Basset;\n(19) (green leafy texture), Getty;\n(20) (green video texture), Best\
+    \ Images;\n(21) (paper texture), Anderson/Bon; Back cover,\nLA) Lorstein/Shutterstock;\n\
+    (22) (leaves), Lorstein/Shutterstock;\n(23) (leaves), Lorstein/Shutterstock;\n\
+    (24) (leaves), Lorstein/Shutterstock;\n(25) (leaves), Lorstein/Shutterstock;\n\
+    (26) (leaves), Lorstein/Shutterstock;\n(27) (leaves), Lorstein/Shutterstock;\n\
+    (28) (leaves), Lorstein/Shutterstock;\n(29) (leaves), Lorstein/Shutterstock;\n\
+    (30) (leaves), Lorstein/Shutterstock;\n(31) (leaves), Lorstein/Shutterstock;\n\
+    (32) (leaves), Lorstein/Shutterstock;\n(33) (leaves), Lorstein/Shutterstock;\n\
+    (34) (leaves), Lorstein/Shutterstock;\n(35) (leaves), Lorstein/Shutterstock;\n\
+    (36) (leaves), Lorstein/Shutterstock;\n(37) (leaves), Lorstein/Shutterstock;\n\
+    (38) (leaves), Lorstein/Shutterstock;\n(39) (leaves), Lorstein/Shutterstock;\n\
+    (40) (leaves), Lorstein/Shutterstock;\n(41) (leaves), Lorstein/Shutterstock;\n\
+    (42) (leaves), Lorstein/Shutterstock;\n(43) (leaves), Lorstein/Shutterstock;\n\
+    (44) (leaves), Lorstein/Shutterstock;\n(45) (leaves), Lorstein/Shutterstock;\n\
+    (46) (leaves), Lorstein/Shutterstock;\n(47) (leaves), Lorstein/Shutterstock;\n\
+    (48) Light & Magic Photography/48\n(48) (49), Lorstein/Shutterstock;\n(49) (leaves),\
+    \ Lorstein/Shutterstock;\n(50) (leaves), Lorstein/Shutterstock;\n(51) (leaves),\
+    \ Lorstein/Shutterstock;\n(52) (leaves), Lorstein/Shutterstock;\n(53) (leaves),\
+    \ Lorstein/Shutterstock;\n(54) (leaves), Lorstein/Shutterstock;\n(55) (leaves),\
+    \ Lorstein/Shutterstock;\n(56) (leaves), Lorstein/Shutterstock;\n(57) (leaves),\
+    \ Lorstein/Shutterstock;\n(58) (leaves), Lorstein/Shutterstock;\n(59) (leaves),\
+    \ Lorstein/Shutterstock;\n(60) (leaves), Lorstein/Shutterstock;\n(61) (leaves),\
+    \ Lorstein/Shutterstock;\n(62) (leaves), Lorstein/Shutterstock;\n(63) (leaves),\
+    \ Lorstein/Shutterstock;\n(64) (leaves), Lorstein/Shutterstock;\n(65) (leaves),\
+    \ Lorstein/Shutterstock;\n(66) (leaves), Lorstein/Shutterstock;\n(67) (leaves),\
+    \ Lorstein/Shutterstock;\n(68) (leaves), Lorstein/Shutterstock;\n(69) (leaves),\
+    \ Lorstein/Shutterstock;\n(70) (leaves), Lorstein/Shutterstock;\n(71) (leaves),\
+    \ Lorstein/Shutterstock;\n(72) (leaves), Lorstein/Shutterstock;\n(73) (leaves),\
+    \ Lorstein/Shutterstock;\n(74) (leaves), Lorstein/Shutterstock;\n(75) (leaves),\
+    \ Lorstein/Shutterstock;\n(76) (leaves), Lorstein/Shutterstock;\n(77) (leaves),\
+    \ Lorstein/Shutterstock;\n(78) (leaves), Lorstein/Shutterstock;\n(79) (leaves),\
+    \ Lorstein/Shutterstock;\n(80) (leaves), Lorstein/Shutterstock;\n(81) (leaves),\
+    \ Lorstein/Shutterstock;\n(82) (leaves), Lorstein/Shutterstock;\n(83) (leaves),\
+    \ Lorstein/Shutterstock;\n(84) (leaves), Lorstein/Shutterstock;\n(85) (leaves),\
+    \ Lorstein/Shutterstock;\n(86) (leaves), Lorstein/Shutterstock;\n(87) (leaves),\
+    \ Lorstein/Shutterstock;\n(88) (leaves), Lorstein/Shutterstock;\n(89) (leaves),\
+    \ Lorstein/Shutterstock;\n(90) (leaves), Lorstein/Shutterstock\n\n# End Matter\n\
+    \n140 (UP), 141 (UP), 142 (UP),\n143 (UP), 144 (UP), 145 (UP),\n(banana slices),\
+    \ Red/; 146 (UP), Rosa\n(citrus), 147 (UP), 148 (UP), 149\n(citrus), 150 (UP),\
+    \ 151 (UP), 152\n(citrus), 153 (UP), 154 (UP), 155\n(citrus), 156 (UP), 157 (UP),\
+    \ 158\n(citrus), 159 (UP), 160 (UP), 161\n(citrus), 162 (UP), 163 (UP), 164\n\
+    (citrus), 165 (UP), 166 (UP), 167\n(citrus), 168 (UP), 169 (UP), 170\n(citrus),\
+    \ 171 (UP), 172 (UP), 173\n(citrus), 174 (UP), 175 (UP), 176\n(citrus), 177 (UP),\
+    \ 178 (UP), 179\n(citrus), 180 (UP), 181 (UP), 182\n(citrus), 183 (UP), 184 (UP),\
+    \ 185\n(citrus), 186 (UP), 187 (UP), 188\n(citrus), 189 (UP), 190 (UP), 191\n\
+    (citrus), 192 (UP), 193 (UP), 194\n(citrus), 195 (UP), 196 (UP), 197\n(citrus),\
+    \ 198 (UP), 199 (UP), 200\n(citrus), 201 (UP), 202 (UP), 203\n(citrus), 204 (UP),\
+    \ 205 (UP), 206\n(citrus), 207 (UP), 208 (UP), 209\n(citrus), 210 (UP), 211 (UP),\
+    \ 212\n(citrus), 213 (UP), 214 (UP), 215\n(citrus), 216 (UP), 217 (UP), 218\n\
+    (citrus), 219 (UP), 220 (UP), 221\n(citrus), 222 (UP), 223 (UP), 224\n(citrus),\
+    \ 225 (UP), 226 (UP), 227\n(citrus), 228 (UP), 229 (UP), 230\n(citrus), 231 (UP),\
+    \ 232 (UP), 233\n(citrus), 234 (UP), 235 (UP), 236\n(citrus), 237 (UP), 238 (UP),\
+    \ 239\n(citrus), 240 (UP), 241 (UP), 242\n(citrus), 243 (UP), 244 (UP), 245\n\
+    (citrus), 246 (UP), 247 (UP), 248\n(citrus), 249 (UP), 250 (UP), 251\n(citrus),\
+    \ 252 (UP), 253 (UP), 254\n(citrus), 255 (UP), 256 (UP), 257\n(citrus), 258 (UP),\
+    \ 259 (UP), 260\n(citrus), 261 (UP), 262 (UP), 263\n(citrus), 264 (UP), 265 (UP),\
+    \ 266\n(citrus), 267 (UP), 268 (UP), 269\n(citrus), 270 (UP), 271 (UP), 272\n\
+    (citrus), 273 (UP), 274 (UP), 275\n(citrus), 276 (UP), 277 (UP), 278\n(citrus),\
+    \ 279 (UP), 280 (UP), 281\n(citrus), 282 (UP), 283 (UP), 284\n(citrus), 285 (UP),\
+    \ 286 (UP), 287\n(citrus), 288 (UP), 289 (UP), 290\n(citrus), 291 (UP), 292 (UP),\
+    \ 293\n(citrus), 294 (UP), 295 (UP), 296\n(citrus), 297 (UP), 298 (UP), 299\n\
+    (citrus), 300 (UP), 301 (UP), 302\n(citrus), 303 (UP), 304 (UP), 305\n(citrus),\
+    \ 306 (UP), 307 (UP), 308\n(citrus), 309 (UP), 310 (UP), 311\n(citrus), 312 (UP),\
+    \ 313 (UP), 314\n(citrus), 315 (UP), 316 (UP), 317\n(citrus), 318 (UP), 319 (UP),\
+    \ 320\n(citrus), 321 (UP), 322 (UP), 323\n(citrus), 324 (UP), 325 (UP), 326\n\
+    (citrus), 327 (UP), 328 (UP), 329\n(citrus), 330 (UP), 331 (UP), 332\n(citrus),\
+    \ 333 (UP), 334 (UP), 335\n(citrus), 336 (UP), 337 (UP), 338\n(citrus), 339 (UP),\
+    \ 340 (UP), 341\n(citrus), 342 (UP), 343 (UP), 344\n(citrus), 345 (UP), 346 (UP),\
+    \ 347\n(citrus), 348 (UP), 349 (UP), 350\n(citrus), 351 (UP), 352 (UP), 353\n\
+    (citrus), 354 (UP), 355 (UP), 356\n(citrus), 357 (UP), 358 (UP), 359\n(citrus),\
+    \ 360 (UP), 361 (UP), 362\n(citrus), 363 (UP), 364 (UP), 365\n(citrus), 366 (UP),\
+    \ 367 (UP), 368\n(citrus), 369 (UP), 370 (UP), 371\n(citrus), 372 (UP), 373 (UP),\
+    \ 374\n(citrus), 375 (UP), 376 (UP), 377\n(citrus), 378 (UP), 379 (UP), 380\n\
+    (citrus), 381 (UP), 382 (UP), 383\n(citrus), 384 (UP), 385 (UP), 386\n(citrus),\
+    \ 387 (UP), 388 (UP), 389\n(citrus), 390 (UP), 391 (UP), 392\n(citrus), 393 (UP),\
+    \ 394 (UP), 395\n(citrus), 396 (UP), 397 (UP), 398\n(citrus), 399 (UP), 400 (UP),\
+    \ 401\n(citrus), 402 (UP), 403 (UP), 404\n(citrus), 405 (UP), 406 (UP), 407\n\
+    (citrus), 408 (UP), 409 (UP), 410\n(citrus), 411 (UP), 412 (UP), 413\n(citrus),\
+    \ 414 (UP), 415 (UP), 416\n(citrus), 417 (UP), 418 (UP), 419\n(citrus), 420 (UP),\
+    \ 421 (UP), 422\n(citrus), 423 (UP), 424 (UP), 425\n(citrus), 426 (UP), 427 (UP),\
+    \ 428\n(citrus), 429 (UP), 430 (UP), 431\n(citrus), 432 (UP), 433 (UP), 434\n\
+    (citrus), 435 (UP), 436 (UP), 437\n(citrus), 438 (UP), 439 (UP), 440\n(citrus),\
+    \ 441 (UP), 442 (UP), 443\n(citrus), 444 (UP), 445 (UP), 446\n(citrus), 447 (UP),\
+    \ 448 (UP), 449\n(citrus), 450 (UP), 451 (UP), 452\n(citrus), 453 (UP), 454 (UP),\
+    \ 455\n(citrus), 456 (UP), 457 (UP), 458\n(citrus), 459 (UP), 460 (UP), 461\n\
+    (citrus), 462 (UP), 463 (UP), 464\n(citrus), 465 (UP), 466 (UP), 467\n(citrus),\
+    \ 468 (UP), 469 (UP), 470\n(citrus), 471 (UP), 472 (UP), 473\n(citrus), 474 (UP),\
+    \ 475 (UP), 476\n(citrus), 477 (UP), 478 (UP), 479\n(citrus), 480 (UP), 481 (UP),\
+    \ 482\n(citrus), 483 (UP), 484 (UP), 485\n(citrus), 486 (UP), 487 (UP), 488\n\
+    (citrus), 489 (UP), 490 (UP), 491\n(citrus), 492 (UP), 493 (UP), 494\n(citrus),\
+    \ 495 (UP), 496 (UP), 497\n(citrus), 498 (UP), 499 (UP), 500\n(citrus), 501 (UP),\
+    \ 502 (UP), 503\n(citrus), 504 (UP), 505 (UP), 506\n(citrus), 507 (UP), 508 (UP),\
+    \ 509\n(citrus), 510 (UP), 511 (UP), 512\n(citrus), 513 (UP), 514 (UP), 515\n\
+    (citrus), 516 (UP), 517 (UP), 518\n(citrus), 519 (UP), 520 (UP), 521\n(citrus),\
+    \ 522 (UP), 523 (UP), 524\n(citrus), 525 (UP), 526 (UP), 527\n(citrus), 528 (UP),\
+    \ 529 (UP), 530\n(citrus), 531 (UP), 532 (UP), 533\n(citrus), 534 (UP), 535 (UP),\
+    \ 536\n(citrus), 537 (UP), 538 (UP), 539\n(citrus), 540 (UP), 541 (UP), 542\n\
+    (citrus), 543 (UP), 544 (UP), 545\n(citrus), 546 (UP), 547 (UP), 548\n(citrus),\
+    \ 549 (UP), 550 (UP), 551\n(citrus), 552 (UP), 553 (UP), 554\n(citrus), 555 (UP),\
+    \ 556 (UP), 557\n(citrus), 558 (UP), 559 (UP), 560\n(citrus), 561 (UP), 562 (UP),\
+    \ 563\n(citrus), 564 (UP), 565 (UP), 566\n(citrus), 567 (UP), 568 (UP), 569\n\
+    (citrus), 570 (UP), 571 (UP), 572\n(citrus), 573 (UP), 574 (UP), 575\n(citrus),\
+    \ 576 (UP), 577 (UP), 578\n(citrus), 579 (UP), 580 (UP), 581\n(citrus), 582 (UP),\
+    \ 583 (UP), 584\n(citrus), 585 (UP), 586 (UP), 587\n(citrus), 588 (UP), 589 (UP),\
+    \ 590\n(citrus), 591 (UP), 592 (UP), 593\n(citrus), 594 (UP), 595 (UP), 596\n\
+    (citrus), 597 (UP), 598 (UP), 599\n(citrus), 600 (UP), 601 (UP), 602\n(citrus),\
+    \ 603 (UP), 604 (UP), 605\n(citrus), 606 (UP), 607 (UP), 608\n(citrus), 609 (UP),\
+    \ 610 (UP), 611\n(citrus), 612 (UP), 613 (UP), 614\n(citrus), 615 (UP), 616 (UP),\
+    \ 617\n(citrus), 618 (UP), 619 (UP), 620\n(citrus), 621 (UP), 622 (UP), 623\n\
+    (citrus), 624 (UP), 625 (UP), 626\n(citrus), 627 (UP), 628 (UP), 629\n(citrus),\
+    \ 630 (UP), 631 (UP), 632\n(citrus), 633 (UP), 634 (UP), 635\n(citrus), 636 (UP),\
+    \ 637 (UP), 638\n(citrus), 639 (UP), 640 (UP), 641\n(citrus), 642 (UP), 643 (UP),\
+    \ 644\n(citrus), 645 (UP), 646 (UP), 647\n(citrus), 648 (UP), 649 (UP), 650\n\
+    (citrus), 651 (UP), 652 (UP), 653\n(citrus), 654 (UP), 655 (UP), 656\n(citrus),\
+    \ 657 (UP), 658 (UP), 659\n(citrus), 660 (UP), 661 (UP), 662\n(citrus), 663 (UP),\
+    \ 664 (UP), 665\n(citrus), 666 (UP), 667 (UP), 668\n(citrus), 669 (UP), 670 (UP),\
+    \ 671\n(citrus), 672 (UP), 673 (UP), 674\n(citrus), 675 (UP), 676 (UP), 677\n\
+    (citrus), 678 (UP), 679 (UP), 680\n(citrus), 681 (UP), 682 (UP), 683\n(citrus),\
+    \ 684 (UP), 685 (UP), 686\n(citrus), 687 (UP), 688 (UP), 689\n(citrus), 690 (UP),\
+    \ 691 (UP), 692\n(citrus), 693 (UP), 694 (UP), 695\n(citrus), 696 (UP), 697 (UP),\
+    \ 698\n(citrus), 699 (UP), 700 (UP), 701\n(citrus), 702 (UP), 703 (UP), 704\n\
+    (citrus), 705 (UP), 706 (UP), 707\n(citrus), 708 (UP), 709 (UP), 710\n(citrus),\
+    \ 711 (UP), 712 (UP), 713\n(citrus), 714 (UP), 715 (UP), 716\n(citrus), 717 (UP),\
+    \ 718 (UP), 719\n(citrus), 720 (UP), 721 (UP), 722\n(citrus), 723 (UP), 724 (UP),\
+    \ 725\n(citrus), 726 (UP), 727 (UP), 728\n(citrus), 729 (UP), 730 (UP), 731\n\
+    (citrus), 732 (UP), 733 (UP), 734\n(citrus), 735 (UP), 736 (UP), 737\n(citrus),\
+    \ 738 (UP), 739 (UP), 740\n(citrus), 741 (UP), 742 (UP), 743\n(citrus), 744 (UP),\
+    \ 745 (UP), 746\n(citrus), 747 (UP), 748 (UP), 749\n(citrus), 750 (UP), 751 (UP),\
+    \ 752\n(citrus), 753 (UP), 754 (UP), 755\n(citrus), 756 (UP), 757 (UP), 758\n\
+    (citrus), 759 (UP), 760 (UP), 761\n(citrus), 762 (UP), 763 (UP), 764\n(citrus),\
+    \ 765 (UP), 766 (UP), 767\n(citrus), 768 (UP), 769 (UP), 770\n(citrus), 771 (UP),\
+    \ 772 (UP), 773\n(citrus), 774 (UP), 775 (UP), 776\n(citrus), 777 (UP), 778 (UP),\
+    \ 779\n(citrus), 780 (UP), 781 (UP), 782\n(citrus), 783 (UP), 784 (UP), 785\n\
+    (citrus), 788 (UP), 789 (UP), 790\n(citrus), 791 (UP), 792 (UP), 793\n(citrus),\
+    \ 794 (UP), 795 (UP), 796\n(citrus), 797 (UP), 798 (UP), 799\n\nOrange/Red; Stock/121\n\
+    (angler), Rust; Shani Zalki, alamy/88\n(avramov), Steve Downey/Source\nSource/88\
+    \ (Getty Images);\n80-81 (vector), Pixabay.com/i\n\nElasson/130 (130 LO), Georgiulli/Stock/\n\
+    131 (UP), Eissler/131 (02), Erwin\nutter/132-133 (grass leaves), Anton-\nBergen/134-135\
+    \ (leaves), Instagram.\nIngram/136-137 (leaves), Getty/Photo.Jay/143\n(texture),\
+    \ 144, 145 (leaves), Getty/\n146-147 (leaves), 148 (leaves), 149\n(citrus), 150\
+    \ (UP), 151 (UP), 152\n(citrus), 153 (UP), 154 (UP), 155\n(citrus), 156 (UP),\
+    \ 157 (UP), 158\n(citrus), 159 (UP), 160 (UP), 161\n(citrus), 162 (UP), 163 (UP),\
+    \ 164\n(citrus), 165 (UP), 166 (UP), 167\n(citrus), 168 (UP), 169 (UP), 170\n\
+    (citrus), 171 (UP), 172 (UP), 173\n(citrus), 174 (UP), 175 (UP), 176\n(citrus),\
+    \ 177 (UP), 178 (UP), 179\n(citrus), 180 (UP), 181 (UP), 182\n(citrus), 183 (UP),\
+    \ 184 (UP), 185\n(citrus), 186 (UP), 187 (UP), 188\n(citrus), 189 (UP), 190 (UP),\
+    \ 191\n(citrus), 192 (UP), 193 (UP), 194\n(citrus), 195 (UP), 196 (UP), 197\n\
+    (citrus), 198 (UP), 199 (UP), 200\n(citrus), 201 (UP), 202 (UP), 203\n(citrus),\
+    \ 204 (UP), 205 (UP), 206\n(citrus), 207 (UP), 208 (UP), 209\n(citrus), 210 (UP),\
+    \ 211 (UP), 212\n(citrus), 213 (UP), 214 (UP), 215\n(citrus), 216 (UP), 217 (UP),\
+    \ 218\n(citrus), 219 (UP), 220 (UP), 221\n(citrus), 222 (UP), 223 (UP), 224\n\
+    (citrus), 225 (UP), 226 (UP), 227\n(citrus), 228 (UP), 229 (UP), 230\n(citrus),\
+    \ 231 (UP), 232 (UP), 233\n(citrus), 234 (UP), 235 (UP), 236\n(citrus), 237 (UP),\
+    \ 238 (UP), 239\n(citrus), 240 (UP), 241 (UP), 242\n(citrus), 243 (UP), 244 (UP),\
+    \ 245\n(citrus), 246 (UP), 247 (UP), 248\n(citrus), 249 (UP), 250 (UP), 251\n\
+    (citrus), 252 (UP), 253 (UP), 254\n(citrus), 255 (UP), 256 (UP), 257\n(citrus),\
+    \ 258 (UP), 259 (UP), 260\n(citrus), 261 (UP), 262 (UP), 263\n(citrus), 264 (UP),\
+    \ 265 (UP), 266\n(citrus), 267 (UP), 268 (UP), 269\n(citrus), 270 (UP), 271 (UP),\
+    \ 272\n(citrus), 273 (UP), 274 (UP), 275\n(citrus), 276 (UP), 277 (UP), 278\n\
+    (citrus), 279 (UP), 280 (UP), 281\n(citrus), 282 (UP), 283 (UP), 284\n(citrus),\
+    \ 285 (UP), 286 (UP), 287\n(citrus), 288 (UP), 289 (UP), 290\n(citrus), 291 (UP),\
+    \ 292 (UP), 293\n(citrus), 294 (UP), 295 (UP), 296\n(citrus), 297 (UP), 298 (UP),\
+    \ 299\n(citrus), 300 (UP), 301 (UP), 302\n(citrus), 303 (UP), 304 (UP), 305\n\
+    (citrus), 306 (UP), 307 (UP), 308\n(citrus), 309 (UP), 310 (UP), 311\n(citrus),\
+    \ 312 (UP), 313 (UP), 314\n(citrus), 315 (UP), 316 (UP), 317\n(citrus), 318 (UP),\
+    \ 319 (UP), 320\n(citrus), 321 (UP), 322 (UP), 323\n(citrus), 324 (UP), 325 (UP),\
+    \ 326\n(citrus), 327 (UP), 328 (UP), 329\n(citrus), 330 (UP), 331 (UP), 332\n\
+    (citrus), 333 (UP), 334 (UP), 335\n(citrus), 336 (UP), 337 (UP), 338\n(citrus),\
+    \ 339 (UP), 340 (UP), 341\n(citrus), 342 (UP), 343 (UP), 344\n(citrus), 345 (UP),\
+    \ 346 (UP), 347\n(citrus), 348 (UP), 349 (UP), 350\n(citrus), 351 (UP), 352 (UP),\
+    \ 353\n(citrus), 354 (UP), 355 (UP), 356\n(citrus), 357 (UP), 358 (UP), 359\n\
+    (citrus), 360 (UP), 361 (UP), 362\n(citrus), 363 (UP), 364 (UP), 365\n(citrus),\
+    \ 366 (UP), 367 (UP), 368\n(citrus), 369 (UP), 370 (UP), 371\n(citrus), 372 (UP),\
+    \ 373 (UP), 374\n(citrus), 375 (UP), 376 (UP), 377\n(citrus), 378 (UP), 379 (UP),\
+    \ 380\n(citrus), 381 (UP), 382 (UP), 383\n(citrus), 384 (UP), 385 (UP), 386\n\
+    (citrus), 387 (UP), 388 (UP), 389\n(citrus), 390 (UP), 391 (UP), 392\n(citrus),\
+    \ 393 (UP), 394 (UP), 395\n(citrus), 396 (UP), 397 (UP), 398\n(citrus), 399 (UP),\
+    \ 400 (UP), 401\n\nThe Art of Making\nBook, by James James of\nfrom the Collection,\
+    \ , New York, 1998\n(gift,), J of of of,,,, 1n14. The Art of\nstock/47 (leaves),\
+    \ Lorstein/Shutterstock\n\n![](img/ff0a36fd32e78d548bb789af8cd599c4_162_0.png)"
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: 'Copyright © 2019 National Geographic Partners, LLC
+
+
+    Published by National Geographic Partners, LLC. All rights reserved. Reproduction
+    of the whole or any part of the contents without permission from the publisher
+    is prohibited.
+
+
+    Since 1888, the National Geographic Society has funded more than 12,000 research,
+    exploration, and preservation projects around the world. The Society receives
+    funds from National Geographic Partners, LLC, funded in part by your purchase.
+    A portion of the proceeds from this book supports this vital work. To learn more,
+    visit nationalgeographic.com/info.
+
+
+    NATIONAL GEOGRAPHIC and Yellow Border Design are trademarks of the National Geographic
+    Society, used under license.
+
+
+    For information, visit nationalgeographic.com, call 1-800-647-5463, or write to
+    the following address:
+
+
+    National Geographic Partners
+
+    1145 17th Street N.W.
+
+    Washington, D.C. 20036-4888 U.S.A.
+
+
+    Visit us at nationalgeographic.com/books
+
+    For librarians and teachers
+
+    genchildrenbooks.org
+
+
+    More for kids at National Geographic: natgekids.com
+
+    National Geographic Kids magazine inspires children to explore their world with
+    fun yet educational articles on animals, science, nature, and more. Using fresh
+    storytelling and amazing photography, Nat Geo shows kids 6 to 14 the fascinating
+    truth about the world—and why they should care. kids.nationalgeographic.com/subscribe
+
+
+    For information about special discounts for bulk purchases, contact National Geographic
+    Books Special: specialsales@natgeo.com
+
+
+    For rights or permissions inquiries, please contact National Geographic Books
+    Subsidiary Rights: copyrights@natgeo.com
+
+
+    To Mike. Thanks for taking the journey with Thanks to Carlos Bueno for helping
+    me to get started in the world of coding. The authors and publisher also wish
+    to the book team. Shelby Lees, senior editor; Kathryn Williams, associate editor
+    and illustrator; Jennifer Epstein, photo director; Danny Meldung, photo editor;
+    Callie Broaddus, senior designer; Amanda Larsen, design director; Anne LeeSon
+    and Gus Tello, production designers; Emma and Roy for participating in the photo
+    shoot; Dr. Kyle Burke, professor of Computer Science and Plymouth State University,
+    and Suzanne Sarraf and Tom Walton for their expertise in reviewing the code —
+    JS
+
+
+    # Design by Fan Works Design
+
+
+    Names: Szymanski, Jennifer, author.
+
+    Title: Code this! / by Jennifer Szymanski.
+
+    Description: Washington, DC : National Geographic Kids. [2019] Includes index.
+    Audience: Ages 9-12. Grade 4 to6.
+
+    Identifiers: LCC 20180316281 ISBN 9781412633436 (pbk.) | ISBN 9781412633443 (hardcover)
+
+    Subjects: LCSH: Computer programming--\Juvenile literature
+
+    Classification: L QA67.6115.S96 2019 DDC 005.1--dc23
+
+    LC record available at: lcc.loc.gov/20180316281
+
+
+    Printed in China
+
+    19/RRDS/1
+
+
+    160 CODE THIS!'
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: '# # WELCOME TO THE CODER CREW!
+
+
+    Whether you''re an aspiring computer scientist or just casually curious about
+    coding, this book is for YOU!
+
+
+    # ## Meet Cody.
+
+
+    This rad robot does everything you could possibly want, with only one teeny problem:
+    It needs YOU to write the instructions to get the job done.
+
+
+    No worries, budding coders! This book will have you tackling totally cool coding
+    challenges in no time, using the basics of coding and computer programming. Each
+    challenge helps Cody get one step closer to completing its mission. Are you ready
+    to take on some of the toughest, trickiest, most awesome missions on Earth?
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_167_0.png)
+
+
+    # ## WHAT''S INSIDE:
+
+
+    +   - Engaging story line to keep the learning fun and accessible
+
+    - Hands-on, active challenges provide ways to learn and practice basic coding
+    concepts, such as command blocks, algorithms, loops, debugging, optimizing, constraints,
+    conditionals, and more
+
+    - Extension activities for when you''re ready to take it to the next level
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_167_1.png)
+
+
+    Check out these other hands-on STEM books!
+
+
+    ![](img/ff0a36fd32e78d548bb789af8cd599c4_167_2.png)'
+  merge: -1
+  pgno: 167
