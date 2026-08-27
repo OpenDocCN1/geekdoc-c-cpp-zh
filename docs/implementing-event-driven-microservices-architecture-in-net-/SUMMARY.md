@@ -1,0 +1,2 @@
++   [在 .NET 7 中实现事件驱动微服务架构：使用 C# 11 和 .NET 7 开发可随不断变化的业务需求扩展的事件型分布式应用](README.md)
++   [在 .NET 7 中实现事件驱动微服务架构：使用 C# 11 和 .NET 7 开发可随不断变化的业务需求扩展的事件型分布式应用](implementing-event-driven-microservices-architecture-in-net-.md)
