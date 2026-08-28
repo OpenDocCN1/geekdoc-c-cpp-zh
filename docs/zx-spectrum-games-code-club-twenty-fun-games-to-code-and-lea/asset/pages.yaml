@@ -1,0 +1,7563 @@
+- img_proc: true
+  md: '# ZX SPECTRUM GAMES CODE CLUB
+
+
+    TWENTY FUN GAMES TO TYPE IN, LEARN FROM AND EXTEND
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_0_0.png)
+
+
+    Sinclair BASIC is fun and easy-to-learn.
+
+    Type in a game, play it and then we''ll explain it.
+
+
+    # Includes...
+
+
+    Flappy Bird, ZX Breakout, Astral Invaders, C5 Solar Race,
+
+    MiniPong, Retro Hunter, Takeaway Ted, Billy Bob''s Gold and many more.
+
+
+    Gary Plowman'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# ZX SPECTRUM GAMES
+
+    CODE CLUB
+
+
+    Twenty fun games to type in, learn from and extend
+
+
+    Gary Plowman
+
+
+    # Gazzapper Games 👾'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'First published in 2015 by Gazzapper Press
+
+
+    http://www.gazzapper.com
+
+
+    Cover design by Gary Plowman
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed,
+    transmitted in any form or by any means, including photocopying, recording, or
+    other electronic or mechanical methods, without the prior written permission of
+    the publisher, except in the case of brief quotations embodied in critical reviews
+    and certain other noncommercial uses permitted by copyright law. For permission
+    requests, write to the author, at the address below.
+
+
+    # Published By Gazzapper Press
+
+
+    Copyright © 2015 Gary Plowman
+
+
+    All rights reserved.
+
+
+    ISBN-10: 0993474411
+
+
+    ISBN-13: 978-0993474415 (Gazzapper Press)'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# # SPECIAL THANKS
+
+
+    To Gabby and Pippin for putting up with the late nights'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# ACKNOWLEDGEMENTS
+
+
+    I would like to express my gratitude to all the supporters of this book and those
+    ZX Spectrum & BASIC coding fans that supported the idea in early stages.
+
+
+    I would like to thank my partner Gabrielle for her help in testing some of the
+    code
+
+    within this book.
+
+
+    Thanks to my parents for buying me the ZX Spectrum for Christmas back in 80s.
+
+
+    Thanks to Richard Langford for the use of his 48k Spectrum graphic image.
+
+
+    Thanks to the larger Retro community in general who help spread the word.
+
+
+    Thanks to Sir Clive Sinclair for making the Sinclair ZX Spectrums.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Contents
+
+
+    +   - TIC TAC TOE
+
+    - ZX BREAKOUT
+
+    - SNAKE BITE
+
+    - FLAPPY BIRD
+
+    - THE NUMBERS GAME
+
+    - BATTLESHIP WAR....................................................................
+
+    - CODEBREAK
+
+    - ASTRAL INVADERS
+
+    - COLOUR STACKS
+
+    - ANGRY CHICKY
+
+    - ALLOTMENT WARS
+
+    - RETRO HUNTER
+
+    - SNOWBALL SHOOTOUT
+
+    - TETRIX
+
+    - TYPE INVADERS
+
+    - MINIPONG
+
+    - TAKEAWAY TED
+
+    - C5 SOLAR RACE
+
+    - PENALTY SHOOTOUT
+
+    - BILLY BOB''S GOLD
+
+    - APPENDIX A - The character set
+
+    - ABOUT THE AUTHOR'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# INTRODUCTION
+
+
+    Before we start, let’s just clarify the purpose of this book. This is not intended
+    as an all-knowing reference book on the ins and outs of the Sinclair BASIC language.
+    This is a book to facilitate the learning of Sinclair BASIC by typing through
+    the code listings for various games, the added benefit is that you get to enjoy
+    your efforts in the book, we some ‘old school’ gaming. As you progress through
+    the book, we do less explaining so as not to bore you. There are many different
+    types of games in this book, so I hope there is something of interest for everyone.
+
+
+    Perhaps some of you want to introduce a younger generation to the glory days of
+    early micro computing with a machine that grew up with. Or you may wish to provide
+    a local Code Club with easy to learn activities for building fun games, without
+    the need to be a skilled artist, boffin or whiz kid. Or perhaps you are a ZX fan
+    and have gotten yourself one of those new Bluetooth ZX Spectrums, either way we
+    hope you have fun using this book.
+
+
+    As a teenager I benefited from learning BASIC programming and the experience opened
+    doors to many possibilities, it gave me a passion for computing and coding in
+    general. Today, I am involved in desktop, web and mobile coding for both game
+    development, business applications and Internet startups. Everyone has to start
+    somewhere and it’s never too late or too early to learn to code.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# So why Sinclair BASIC?
+
+
+    The Sinclair BASIC language is one of the gateways to professional coding that
+    many successful British and European programmers started with before going on
+    program amazing games and utilities, during the 1980s. All this was done in less
+    than 48k of RAM. Some examples of the these are RARE (aka Ultimate Play the Game,
+    aka ACG), The Oliver Twins (Dizzy series), Codemasters, and many more.
+
+
+    BASIC stands for Beginners All Purpose Symbolic Instruction Code, so it''s perfect
+    for beginners learning to code. It is friendly and fun to learn and the commands
+    are logical and clearly named after the function they perform.
+
+
+    Sinclair BASIC teaches logic, how to perform decisions and structure your code
+    but only for simple concepts. It helps with basic math skills – and you do not
+    need to be a math Guru to learn it.
+
+
+    The BASIC ROM (Read Only Memory) is the operating system of the Sinclair machine
+    and is setup in such a way it will not allow illegal code to be entered. Each
+    line is validated by the ROM, so after entering a line you will hear an acceptance
+    beep sound for a line entered correctly. If the line is incorrect, then a lower
+    tone sound is used and the system prompts you to fix any incorrect code.
+
+
+    A note of thanks must go to the Sinclair guys and especially Steve Vickers and
+    the rest of the guys at Nine Tiles Ltd for creating Sinclair BASIC.
+
+
+    # What do you need before we start?
+
+
+    Any of the following configurations is fine for starting quickly:
+
+
+    +   a) A Real ZX Spectrum: e.g. ZX Spectrum 16k, 48k, 48K+, 128K or any further
+    model.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'b) A computer that can run an emulator: Example of some emulators for various
+    platforms...
+
+
+    Windows: ZX Spin, Spectacular, Speccy plus many more.
+
+
+    Mac OS: Fuse
+
+
+    Linux/Unix: Fuse
+
+
+    iOS/Android: Spectacularator, Fuse, Speccy, Marvin
+
+
+    Chrome/FF: There are a couple of online emulators that will work from a browser.
+    Using Google will lead you to these, but here are two examples I know of that
+    will work in your browser...
+
+
+    http://jsspeccy.zxdemo.org
+
+    http://torinak.com/qaop
+
+
+    c) Another good option is the new Recreated ZX Spectrum (Bluetooth) which works
+    with Android and iOS.
+
+
+    For beginners for the ZX Spectrum I would suggesting coding in 128k mode as this
+    allows for typed commands and does not require combination key-presses required
+    by 48k mode. But if you are up to the challenge or you want a nostalgia hit then
+    by all means go for 48k or 16k mode.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '![](img/a5b1b953bf13d825daab6d82a3f4e6b5_9_0.png)
+
+
+    # # Quick Start
+
+
+    If you want to dive into writing your code now, and you have one of the options
+    above ready-to-go, then by all means you can skip this next section and begin
+    coding one of the games right now.
+
+
+    # # Basic Commands
+
+
+    Some of the most common commands that we will be using are PRINT, IF, GOTO, GO
+    SUB, DIM and LET. I will only give you an overview of each of as this is a book
+    for learning-by-doing and not meant to be used like a manual. Having too much
+    technical jargon to get readers boring after a while. We need to be hitting the
+    fleshy keys of the Spectrum 48k or the plastic clicks tones of the Spectrum 128k
+    models or your preferred emulator.
+
+
+    Here is the obligatory “hello world” example that is present in nearly all coding
+    books.
+
+
+    ```
+
+    10 PRINT AT 10,5; “Hello World”
+
+    ```
+
+
+    Hit Enter at the end of the line to save it in memory, then type RUN and hit enter
+    again to see it working.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'The breakdown of the above example code is...
+
+
+    ```
+
+    10      = Line numbering (sequence order of the program)
+
+    PRINT   = PRINTing on the screen (easy!)
+
+    ```
+
+
+    ```
+
+    AT y,x = Telling the program coordinates to PRINT at where y is vertical axis
+    and x is horizontal
+
+    ```
+
+
+    ```
+
+    ; = Allows for a new sub function or for the text to print
+
+    ```
+
+
+    ```
+
+    "Hello World" = Your text contents
+
+    ```
+
+
+    PRINT will populate text or special characters (i.e. UGs) on the screen at the
+    position you specify. The ZX Spectrum workable screen is 32 character columns
+    (0 to 31) wide and 22 lines long (0 to 21). The AT (operand) part of command is
+    telling the command to place items at Y (line) , X (Column). There are 2 additional
+    lines but these are not used with the standard PRINT command.
+
+
+    The following sub functions will work inline with the PRINT command:
+
+
+    +   **INK <0-7>** Sets the foreground colour for the pen which prints all text
+    and graphics
+
+    **PAPER <0-7>** Sets the colour for the paper background of the main screen
+
+    **INVERSE <1 or 0>** Prints and Inverse of the current INK and PAPER setup
+
+    **OVER <1 or 0>** Turns on / off Overprinting on the screen
+
+    **FLASH <1 or 0>** Flash with repeatedly alternate between the current and inverse
+    colours
+
+    **BRIGHT <1 or 0 or 8>** Brighter versions of the colors 1 – 6 (for INK and'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# PAPER) 8 is transparent
+
+
+    TAB # Moves across horizontally from left to right # spaces
+
+
+    E.g. PRINT INK 2; AT 10,10;"Test"; TAB 16;PAPER 1;INK 7;1;"Print"
+
+
+    As you can see you can have almost any combination of those commands on a PRINT
+    statement.
+
+
+    # Line Numbering
+
+
+    It is good practice to leave adequate gaps in numbering your code lines so you
+    can enter additional commands at a later stage. I would suggest for your own programs
+    to step in increments of 10 at least. So line 10, then line 20 and so on. Sinclair
+    BASIC can have a maximum of 9999 lines but lines can contain multiple statements
+    when separated by a colon \”, so commands can run into tens of thousands.
+
+
+    # 128k Mode and Line Numbers
+
+
+    The 128k spectrum mode has another feature that is handy for new coders. If your
+    program is missing a section and you did not make enough space for the commands,
+    you can run RENUMBER and it will re-organise the program line numbers. There are
+    limitations to this but we need not be concerned about those at this early stage.
+
+
+    # UDGs (User Definable Graphics)
+
+
+    You will learn how to make your own graphics with ease! So you can return to some
+    of the programs in this book and add your own graphics to enhance them.
+
+
+    # Machine Code'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'For the purposes of this book, machine code would be a little difficult to
+    grasp. So we will not be covering it. However, signup for our alerts at Gazzapper.com
+    as we may release updated versions of some of the games with small routines of
+    machine code included.
+
+
+    # So what is a ‘Type-in Listing’?
+
+
+    In the earlier days of micro computing, magazines would publish’listings’ or ‘type-in
+    listings’ for young enthusiasts (aka coders / programmers) to sit down and type
+    in at their keyboards from the comfort of their bedrooms. Some listings would
+    be misprinted or would contain bugs causing the user to be frustrated and furious
+    with the author. If you couldn’t fix the bugs, you were stuck with code that didn’t
+    run spent hours typing them.
+
+
+    Well I am happy to say I have written and tested all the listings so that they
+    do work and any issues worked through the new Facebook group I set called ZX Spectrum
+    Code Club. Or if you are already a member of a ZX Spectrum group post your questions
+    there (if the rules allow).
+
+
+    The listings were coded in a way to make the most of the speed limitations of
+    Sinclair BASIC (within reason) so that the games are playable and hopefully fun
+    too. The structure is made to be easy to follow and although not perfect, will
+    allow the user to follow what is going inside each game. The structure of the
+    games are kept similar so that you become familiar with them and also provides
+    a simple template for your own creations.
+
+
+    A great feature of Sinclair BASIC is that the ROM validates the majority of the
+    code before accepting the statements. In case you missed it earlier, ROM stands
+    for Read Only Memory and it contains the operating system and various routines
+    required by BASIC.
+
+
+    Although REM statements are not required for the running of the programs it is
+    good practice to provide these, as the more code you add into a program the more
+    comments are needed. Especially for the user to refer to whenever editing or extending
+    the code at a future date. They can also be useful as visual dividers between
+    sections of your program, making it easier to read.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Sinclair BASIC is not the fastest of programming languages but it is one of
+    the easiest to learn and it''s great fun. Without going into too much technical
+    details a user can speed up any of the Spectrum emulators running speed from the
+    standard 3.54MHz to x2 speed or higher in the options.
+
+
+    # Emulator keyboard mapping
+
+
+    When using an emulator over a real Spectrum machine there are a few intricacies
+    that should be pointed out in relation to keyboard mappings. Below is a real 48k
+    Spectrum keyboard layout.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_13_0.png)
+
+
+    Selecting symbols such as quotes and * etc might be different on your PC / MAC
+    keyboard than that of the emulator. This may be the case for some keyboards and
+    emulators. You can see above that certain symbols will be different on your keyboard.
+
+
+    # Standard Keyboard Equivalents for Sinclair Emulators
+
+
+    Below is a list of how some of the mappings might differ. Keep in mind that some
+    emulators might use Alt instead of Ctrl for some of these mappings.
+
+
+    +   * (asterisk) = Ctrl and B
+
+    ( = Ctrl and 8
+
+    ) = Ctrl and 9
+
+    “ (quotes) = Ctrl and P'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '. (full stop) = Alt Gr and M
+
+    , (comma) = Alt Gr and n
+
+    ; (semi colon) = Alt Gr and O
+
+    : (colon) = Alt Gr and O
+
+    Delete = Shift and 0 (zero)
+
+
+    Note: Alt Gr is the right Alt key
+
+
+    If you get stuck of run into any issues then submit your query to one of the many
+    ZX Spectrum Facebook groups.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Saving your Type-Ins
+
+
+    This is relatively straightforward for emulator users – Just save a snapshot (.sna)
+    file, but for the ‘real’ machine users you need an old school tape recorder and
+    a blank C15, C30, C60 or C90 cassette. To save your Type-in Press ‘Play & Record’
+    on your tape deck (with ear and mic connected) and use SAVE “<Typein Name>” LINE
+    10.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Game Loop Basics\n\nThe Game Loop is the part of your game where all the\
+    \ action happens and runs repeatedly until the game is over. It follows a certain\
+    \ structure or sequence of events. This structure is not set in stone, but a simple\
+    \ example is shown below of how a Game Loop fits into your code.\n\n+   - Setup\
+    \ : Graphic UDGs (a.k.a. Sprites) or loading data\n- Initialise: Key variables,\
+    \ strings and arrays\n- Menu / Start Screen for Game\n- Game Loop:\n  - Process\
+    \ Input / Keypresses\n  - Updating positions / AI updates etc\n  - Draw / Print\
+    \ Screen items\n  - Repeat Loop\n- End / Quit Game\n\nI have used this type structure\
+    \ for most of the games in this book. I hope you find that the format helps you\
+    \ get your head around what a Game Loop does and how it should be used.\n\n# How\
+    \ to use this Book\n\nYou can code or type in these listings in any order you\
+    \ wish. Some commands or newer concepts though may not be explained as they may\
+    \ have been dealt with in a previous listing but is fine. You will get there eventually.\
+    \ Remember this is for fun so if a certain game is not of interest to you feel\
+    \ free to skip it.\n\nAlso here is a very handy space character rule (only relevant\
+    \ to printed versions of book) for the printed book, each 12 characters is approx.\
+    \ 3cm."
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '| 10 | 20 | 30 |
+
+    |---|---|---|
+
+    | 3cm | 6cm | 9 |
+
+
+    Scan / copy and print it or just refer back to if you need it for calculating
+    spaces in the code listings. You can also make your own. The listings are mono-spaced
+    so it should be easy to use or work out spaces.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Some Handy Tips when Typing in code...
+
+
+    +   1) To quicken data entry for Type-Ins you could ask a friend or a family member
+    to read out the code listing to you line by line.
+
+
+    +   2) Another method is to use a ruler or another book to hide the lines you
+    haven''t yet typed in.
+
+
+    > 3) Always double-check the line number is correct! Lots of people make typos
+    when typing numbers out.
+
+
+    So without further delay, start typing in our games!'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# TIC TAC TOE
+
+    OR
+
+    NOUGHTS AND CROSSES
+
+
+    So let''s start with a simple game. Tic Tac Toe, or Naughts and Crosses, is a
+    simple and a fairly universal game. Most people have played this at least once
+    before, using pencil and paper. Many school copy books were littered with these
+    games.
+
+
+    Players: 2
+
+
+    Rules: Player 1 tries to get a row of Xs and Player 2 tries to get a row of Os.
+
+
+    Controls: Keys 1 to 9 will pick your square on the grid. See grid of positions
+    below.
+
+
+    1 2 3
+
+    4 5 6
+
+    7 8 9
+
+
+    10 REM ************ZX CODE CLUB*\*\*\*\*\*\*\*\*\*\*
+
+    15 REM * Tic-Tac-Toe or Naughts and Crosses *
+
+    20 REM ************ Gary Plowman **\*\*\*\*\*\*\*\*
+
+    30 INK 7: PAPER 6: BORDER 7: CLS : LET ply=1: LET win=0: DIM a(9,2); LET'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'sq=0
+
+
+    40 GO SUB 90
+
+
+    50 GO TO 300
+
+
+    60 REM ********* DRAW BOARD
+
+
+    90 PRINT AT 2,10; INK 1;“Tic Tac Toe
+
+
+    110 PLOT INK 5;100,40; DRAW INK 5;0,100
+
+
+    120 PLOT INK 5;150,40; DRAW INK 5;0,100
+
+
+    130 PLOT INK 5;65,70: DRAW INK 5;120,0
+
+
+    140 PLOT INK 5;65,110: DRAW INK 5;120,0
+
+
+    160 REM State 1=player 1,2=Player 2
+
+
+    175 INK 5: PLOT 50,170: DRAW -40,-40; PLOT 10,170: DRAW 40,-90
+
+
+    180 CIRCLE INK 4,220,150,
+
+
+    190 PRINT; INK 0; PAPER 3AT 14,0;“1 2 3”; AT 15,0;“4 5 6"; AT 16,0;“7 8 9
+
+
+    210 RETURN
+
+
+    300 REM ******* Test Press
+
+
+    310 PRINT AT 18,1; INK 7; PAPER 6-ply;“PLAYER “ply”; Choose Square 1 - 9
+
+
+    320 LET i$=INKEY($)
+
+
+    330 IF i$="1” AND i$="9” THEN LET square=VAL i$: GO SUB 1000
+
+
+    340 IF i$="7” THEN GOTO 320
+
+
+    350 GO SUB 2000: REM ******* Test for Winning Conditions )
+
+
+    355 IF sq=0 THEN LET win=-1
+
+
+    360 IF win=0 THEN PRINT AT 18,1;“PLAYER “win;” has WON!; BEEP 4,3;
+
+    BEEP 2,10; GO TO 10
+
+
+    370 IF win<0 THEN PRINT AT 18,1;“GAME DRAWN - RESTARTING:); BEEP
+
+    4,3; BEEP 2,10; GO TO 10
+
+
+    400 GO TO 300
+
+
+    1000 REM ******* Check squares
+
+
+    1010 IF a(square,1)=1 OR a(square,2)=1 THEN PRINT AT 18,1; INK 3;“Square
+
+    Taken Already”; BEEP .3,1; GO TO 1050
+
+
+    1020 LET a(square,poly)=1: LET ply=ply+1: LET sq+1
+
+
+    1025 PRINT AT 18,1; INK 4;“Good move!” BEEP .4,12
+
+
+    1030 IF ply=3 THEN LET ply=1
+
+
+    1040 GO SUB 3000: REM ******* Draw Move'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '1050 PRINT AT 18,1;"
+
+
+    1090 RETURN
+
+
+    2000 REM ***** WINNING CONDITIONS CHECK
+
+
+    ```
+
+    2010 FOR n=1 TO 2
+
+    2020 IF a(1,n)=1 AND a(2,n)=1 AND a(3,n)=1 THEN win=n
+
+    2030 IF a(1,n)=1 AND a(4,n)=1 a(7,n)=1 THEN win=n
+
+    2040 IF a(2,n)=1 AND a(5,n)=1 AND a(8,n)=1 THEN win=n
+
+    2050 IF a(3,n)=1 AND a(6,n)=1 AND a(9,n)=1 THEN win=n
+
+    2060 IF a(3,n)=1 AND a(5,n)=1 a(7,n)=1 THEN win=n
+
+    2070 IF a(1,n)=1 AND a(5,n)=1 a(9,n)=1 THEN win=n
+
+    2080 IF a(4,n)=1 AND a(5,n)=1 a(6,n)=1 THEN win=n
+
+    2090 IF a(7,n)=1 AND a(8,n)=1 AND a(9,n)=1 THEN win=n
+
+    2100 NEXT n
+
+    ```
+
+
+    2110 RETURN
+
+
+    3000 REM ***** DRAW MOVE *****
+
+
+    ```
+
+    3010 LET posx=80: LET posy=130: REM where to draw
+
+    3020 IF square=1 THEN LET posx=80: LET posy=130
+
+    3030 IF square=2 THEN LET posx=130: LET posy=130
+
+    3040 IF square=3 THEN LET posx=180: LET posy=130
+
+    3050 IF square=4 THEN LET posx=80: LET posy=100
+
+    3060 IF square=5 THEN LET posx=130: LET posy=100
+
+    3070 IF square=6 THEN LET posx=180: LET posy=100
+
+    3080 IF square=7 THEN LET posx=80: LET posy=70
+
+    3090 IF square=8 THEN LET posx=130: LET posy=70
+
+    3100 IF square=9 THEN LET posx=180: LET posy=70
+
+    3300 IF ply=1 THEN CIRCLE INK 4;posx-10,posy-10
+
+    3310 IF ply=2 THEN INK 5: PLOT posx,posy: DRAW -20,-20: PLOT posx-20,posy:
+
+    DRAW 20,-20
+
+    ```
+
+
+    3350 RETURN'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '![](img/a5b1b953bf13d825daab6d82a3f4e6b5_22_0.png)
+
+
+    Now that you have completed your Type-In game, you can start playing it. To run
+    a program in BASIC, type RUN at the prompt and then hit the enter key.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# After you play
+
+
+    We will not go through every line, just the important stuff or any part I think
+    might be harder to grasp.
+
+
+    So what does it all mean? Well lines 10 to 20 are just for show, the REM command
+    is for adding any comments or remarks about the code.
+
+
+    | 10 REM ****************************************| 15 REM * Tic-Tac-Toe or Nought
+    & Crosses |
+
+    | 20 REM ********** Gary Plowman ********** |
+
+
+    Line 30 sets up the display of the game. INK command is the pen colour, PAPER
+    is the main screen area and BORDER is the area outside the main screen area. The
+    border area is rarely used and it not reached by PLOT or PRINT commands, but it
+    can be made flash to indicate getting a hit or scoring point.
+
+
+    ```
+
+    30 INK 7: PAPER 6: BORDER 7: CLS: LET ply=1: LET win=0: DIM a(9,2): LET sq=0
+
+    ```
+
+
+    Next on that line is CLS. This means Clear the Screen and without the PAPER command
+    would not have made the whole of the screen area colour. After that the LET command
+    is used to setup variables. Variables store values to be used or changed at a
+    later time in the code.
+
+
+    # Arrays & Multi-dimensional Arrays
+
+
+    This next is part is not that difficult at all but don''t worry if you don''t
+    get Arrays just yet. Arrays are tricky in the beginning, and it is best to think
+    of them as lists of values.
+
+
+    Last part of line 30 is the DIM a(9,2) command (dimensional array). This is an
+    array of variables and works like a list or spreadsheet in numerical order. But
+    if you do not understand that maybe this will explain it better.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'The first dimension can be thought of as Column 1 contains 9 rows of data.
+    With the second part referring to Column 2 with a different set of 9 rows of data.
+
+
+    # DIM a(9,2) – 9 rows down with 2 columns
+
+
+    | Column 1 | Column 2 |
+
+    | LET a(1,1)=1 | LET a(1,2)=1 - Row |
+
+    | ... | ... |
+
+    | LET a(9,1)=9 | LET a(9,2)=9 - Row |
+
+
+    The commands above will store value in different sections of the array. An error
+    occurs if you try to exceed the limits of the array as setup in your DIM statement.
+    Arrays in Sinclair BASIC always start from 1 and not 0 (Zero).
+
+
+    # GO SUB Explained
+
+
+    The GO SUB command means Go Subroutine. A GO SUB will allow a program to leap
+    to another part of the code based on the line number provided and then it can
+    return to the previous position if a RETURN statement is encountered. This is
+    very useful for dividing a BASIC program into logical sections. A GO SUB is handy
+    to keep in mind for any code extending you might want to add to any of the games.
+    Each significant problem you run into can be separated off as GO SUB routine,
+    which helps you keep track of your program.
+
+
+    # Summary of the Remaining Program
+
+
+    Lines 90 to 210 draw the contents of the game screen.
+
+
+    +   90 PRINT AT 2,10; INK 1;“Tic Toe"
+
+    110 PLOT INK 5:100,40; DRAW INK 5:0,100
+
+    120 PLOT INK 5:150,40; DRAW INK 5:0,100
+
+    130 PLOT INK 5:65,70: DRAW INK 5:120,0
+
+    140 PLOT INK 5:65,110; DRAW INK 5:120,0
+
+    160 REM State 1=player 1, 2=Player 2'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'Lines 110 to 140 with # PLOT, creating the starting points for drawing from.
+
+    These draw the # grid for the game. PLOT command places your pen on
+
+    t screen (making a dot). Then the DRAW command creates a line or arc.
+
+    Lines 175 to 190 will draw the large X and O symbols to the sides of the grid
+
+    and will also print the grid for the player controls.
+
+    Lines 300 to 400 will run the main Game Loop, which is quite short for the
+
+    game.
+
+
+    ```
+
+    300 REM ****** Test Press
+
+    310 PRINT AT 18,1; INK 7; PAPER 6-ply;"PLAYER ;ply"; Choose Square 1 - 9
+
+    320 LET i$=INKEY($)
+
+    330 IF i$="1" AND i$<="9" LET square=VAL i$: GO SUB 100
+
+    340 IF i$="" THEN GOTO 320
+
+    350 GO SUB 200: REM ****** Test for Winning Conditions )
+
+    360 IF win=0 THEN PRINT AT 18,1;"PLAYER ;win"; has WON!"; BEEP .4,3;
+
+    BEEP 2,10: GO TO 10
+
+    370 IF win=0 THEN PRINT AT 18,1;"GAME DRAW - RESTARTING"; BEEP
+
+    4,3: BEEP 2,10: GO TO 10
+
+    400 GO TO 300
+
+    ```
+
+
+    Lines 320 is important as it captures the keypresses of the players.
+
+    Lines 330 checks to make sure the key pressed is valid (i.e. between 1 and 9)
+
+    Lines 1000 to 1090 check to ensure the chosen square within the grid is
+
+    already taken.
+
+
+    ```
+
+    1000 REM ****** Check squares
+
+    1010 IF a(square,1)=1 OR a(square,2)=1 THEN PRINT AT 18,1; INK 3;"SquarenTaken
+    Already"; BEEP .3,1: GO TO 1050
+
+    1020 LET a(square,ply)=1: LET ply=ply+1: LET sq=sq+1
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '1025 PRINT AT 18; INK 4;"Good move!": BEEP .4,12
+
+    1030 IF ply=3 THEN LET ply=1
+
+    1040 GO SUB 3000: REM ****** Draw Move
+
+    1050 PRINT AT 18,1;"
+
+    1090 RETURN
+
+
+    Lines 2000 to 2110 to check if the winning conditions were met. If a winner is
+    found the program will announce it and the game restarts.
+
+
+    +   2000 REM ****** WINNING CONDITIONS CHECK
+
+    2010 FOR n=1 TO 2
+
+    2020 IF a(1,n)=1 AND a(2,n)=1 AND a(3,n)=1 THEN LET win=n
+
+    2030 IF a(1,n)=1 AND a(4,n)=1 AND a(7,n)=1 THEN LET win=n
+
+    2040 IF a(2,n)=1 AND a(5,n)=1 AND a(8,n)=1 THEN LET win=n
+
+    2050 IF a(3,n)=1 AND a(6,n)=1 AND a(9,n)=1 THEN LET win=n
+
+    2060 IF a(3,n)=1 AND a(5,n)=1 AND a(7,n)=1 THEN LET win=n
+
+    2070 IF a(1,n)=1 AND a(5,n)=1 AND a(9,n)=1 THEN LET win=n
+
+    2080 IF a(4,n)=1 AND a(5,n)=1 AND a(6,n)=1 THEN LET win=n
+
+    2090 IF a(7,n)=1 AND a(8,n)=1 AND a(9,n)=1 THEN LET win=n
+
+    2100 NEXT n
+
+    2110 RETURN
+
+
+    Lines 3000 to 3350 will draw a new mark on the board depending on who''s turn
+    it is.
+
+
+    +   3000 REM ****** DRAW MOVE
+
+    3010 LET posx=80: LET posy=130: REM ****** where to draw
+
+    3020 IF square=2 THEN LET posx=80: LET posy=130
+
+    3030 IF square=2 THEN LET posx=130: LET posy=130
+
+    3040 IF square=3 THEN LET posx=180: LET posy=130
+
+    3050 IF square=4 THEN LET posx=80: LET posy=100
+
+    3060 IF square=5 THEN LET posx=130: LET posy=100
+
+    3070 IF square=6 THEN LET posx=180: LET posy=100
+
+    3080 IF square=7 THEN LET posx=80: LET posy=70'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '```
+
+    3090 IF square=8 THEN LET posx=130: LET posy=70
+
+    3100 IF square=9 THEN LET posx=180: LET posy=70
+
+    3300 IF ply=1 THEN CIRCLE INK 4;posx-10,posy-10,10
+
+    3310 IF ply=2 THEN INK 5: PLOT posx,posy: DRAW -20,-20: PLOT posx-20,posy:
+
+    DRAW 20,-20
+
+    3350 RETURN
+
+    ```
+
+
+    # CONGRATS! You’ve reached LEVEL 1
+
+
+    So that wasn’t too difficult to understand and providing you already have some
+    prior knowledge of BASIC you might want to consider the following exercises for
+    extending the game. If you need more time then move on on and start coding your
+    next game.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Suggestions for Extending (optional)
+
+
+    +   1] Create a tally for Player One and Player Two to five as the winner.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_28_0.png)
+
+
+    +   2] Add a single player versus the computer with some basic AI (Artificial
+    Intelligence)*
+
+
+    +   3] Draw a line across the winning squares
+
+
+    * Simple AI is not too difficult to implement.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# ZX BREAKOUT
+
+
+    Based on the original Arcade game Breakout by Atari. My first experience of playing
+    Breakout was in a pool hall near our house. I think it was the first arcade game
+    I played that was in colour. Although later in life, I found I was duped! The
+    game was really only black and white – the extra colours were achieved using an
+    overlay of coloured transparent plastic. The effect on screen was quite similar
+    to that of the ZX Spectrum’s colour clash. Still, it worked its magic and I was
+    hooked. By the way, did I mention that the two main founders of Apple created
+    Breakout!
+
+
+    Players:
+
+    Rules: Launch the ball and keep it from falling past your bat.
+
+    Eliminate 70 points worth of blocks to get to the next screen.
+
+    Controls:
+
+    z = left, x = right, [space]=launch ball.
+
+
+    ```
+
+    10 REM **********ZX CODE CLUB*********
+
+    15 REM * ZX BREAKOUT by G Plowman 2015
+
+    20 REM *********************************
+
+    25 GO SUB 7000
+
+    30 INK 1: PAPER 7: BORDER 4: CLS
+
+    35 LET lives=3
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 2;"ZX BREAKOUT"; BRIGHT 0;
+
+    ```'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'PAPER 7; INK 1;AT 6,0;"Taken from..";AT 8,0;ZX Spectrum Games Code Book"; PAUSE
+    0
+
+
+    100 GO SUB 300: REM initialise
+
+
+    120 GO SUB 500: REM menu
+
+
+    130 GO SUB 1000: REM main loop for game
+
+
+    ```
+
+    300 LET ply=2; LET win=0; DIM a(9,2); DIM d(30); LET lvl=1; LET pos=30; LET
+
+    x=10; LET time=0; LET score=0; LET timer=0; LET mov=11; LET pos=11; LET
+
+    v=0; LET vy=0; LET speed=1; LET ball=0; LET bx=0; LET by=0; LET score=2
+
+    ```
+
+
+    ```
+
+    310 LET b$="CHR(147)+CHR(145)+" " LET w$=CHR(146)+CHR$
+
+    (146)
+
+    ```
+
+
+    ```
+
+    400 RETURN
+
+    ```
+
+
+    ```
+
+    500 CLS
+
+    ```
+
+
+    ```
+
+    510 LET w$=CHR(146)
+
+    ```
+
+
+    ```
+
+    520 FOR n = 0 TO 31
+
+    ```
+
+
+    ```
+
+    530 PRINT INK 2;AT 1,n;w$;AT 21,n$
+
+    ```
+
+
+    ```
+
+    540 NEXT n
+
+    ```
+
+
+    ```
+
+    545 FOR n = 0 TO 20:
+
+    ```
+
+
+    ```
+
+    546 PRINT INK 2;AT n,0;w$;AT n,31;w$
+
+    ```
+
+
+    ```
+
+    549 NEXT n
+
+    ```
+
+
+    ```
+
+    550 RETURN
+
+    ```
+
+
+    ```
+
+    1000 REM Main Loop
+
+    ```
+
+
+    ```
+
+    1005 PRINT AT 20,x-2;";b$"; "
+
+    ```
+
+
+    ```
+
+    1010 LET i=$INKEY($); LET kemp=IN 51
+
+    ```
+
+
+    ```
+
+    1020 LET timer=timer+1
+
+    ```
+
+
+    ```
+
+    1030 IF (i="z" OR komp=2) AND x>2 THEN x=x-1:
+
+    ```
+
+
+    ```
+
+    1040 IF (i="x" OR komp=1) AND x<29 LET x=x+1
+
+    ```
+
+
+    ```
+
+    1045 IF i$="z" OR is="" OR komp=0 THEN PRINT AT 20,x-2; ";b$"; "
+
+    ```
+
+
+    ```
+
+    1050 IF (i=CHR(32) OR komp=16) AND ball=0 THEN vx=(RND*1.5)
+
+    (RND*1.5): LET vy=-1; LET ball=1; LET bx=x; LET by=19
+
+    ```
+
+
+    ```
+
+    1060 timer=5 THEN SUB 300
+
+    ```
+
+
+    ```
+
+    1070 ball=1 THEN GO SUB 4000
+
+    ```
+
+
+    ```
+
+    1080 PRINT AT 0,2;"SCORE:";score;\;(Lvl);lvl;";Lives";lives:
+
+    ```
+
+
+    ```
+
+    2000 GO TO 1010
+
+    ```'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '3000 REM draw blocks
+
+
+    3010 FOR n = 1 TO 20 STEP 2
+
+
+    3020 FOR p = 1 TO 10 STEP 2
+
+
+    3025 LET ir=RND*4+1
+
+
+    3030 PRINT AT p+2,n+4; INK 0; PAPER ir;__";
+
+
+    3050 NEXT p
+
+
+    3060 NEXT n
+
+
+    3070 LET timer = 6
+
+
+    3100 RETURN
+
+
+    4000 REM **** BALL MOVE
+
+
+    4005 PRINT AT by,bx;" “
+
+
+    4010 LET bx=bx+vx: LET by=by+vy
+
+
+    4014 LET y$=$SCREEN (INT (by),INT(bx)
+
+
+    4015 IF y$=\” THEN LET score = score + 1: BEEP.008,vx+bx: LET
+
+    score2=score2+1; LET vy=-vy*speed
+
+
+    4016 IF by=19 AND (bx-x)<2 THEN LET vx=((RND*2)+1)-((RND*2)+1)
+
+    vy=-vy*speed; PRINT AT 20,x-2; “b;b;” “
+
+
+    4020 PRINT AT by,bx; INK 2;CHR($144)
+
+
+    4040 IF bx>29 THEN LET vx-(vx*speed)
+
+
+    4050 IF bx<2 THEN LET vx=(-vx*speed)
+
+
+    4060 IF by>20 THEN LET lives=lives-1: BORDER 2: BEEP 1,0:
+
+    BORDER 4
+
+
+    4070 IF by<3 THEN LET vy=(-vy*speed)
+
+
+    4080 IF lives=0 THEN GO SUB 5000:
+
+
+    4090 IF score>=70 THEN GO SUB 6000: REM Next level:
+
+
+    4200 RETURN
+
+
+    5000 REM **** restart
+
+
+    5010 PRINT AT 10,5; FLASH 1; PAPER 6; INK 2;“G A M E O V R
+
+
+    5030 FOR n = 1 TO 200
+
+
+    5050 NEXT n
+
+
+    5100 PRINT AT 12,5;“PRESS KEY TO START
+
+
+    5110 IF INKEY=$=\” THEN GO TO 5110
+
+
+    5120 GO TO 30'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# 6000 REM **** NEXT LEVEL
+
+
+    ```
+
+    6005 LET lvl=lvl+1: CLS ; PRINT AT 10; FLASH 1; “L E V L ;lvl
+
+    6010 BEEP 1,13
+
+    6020 LET timer=2
+
+    6050 FOR n=1 TO 100
+
+    6055 BEEP .001,n/10
+
+    6060 NEXT n
+
+    6070 LET score2=0
+
+    6080 LET ball=0
+
+    6100 GO TO 120
+
+    7000 REM **** CREATE UDG GRAPHICS!!
+
+    7010 FOR n = 0 TO 31
+
+    7020 READ graph
+
+    7030 POKE USR “a”+n,graph
+
+    7050 NEXT n
+
+    7060 RETURN
+
+    7190 REM ************BALL
+
+    7200 DATA BIN 00111100
+
+    7210 DATA BIN 01100110
+
+    7220 DATA BIN 01011110
+
+    7230 DATA BIN 01011110
+
+    7240 DATA BIN 01111110
+
+    7250 DATA BIN 00111100
+
+    7260 DATA BIN 00000000
+
+    7270 DATA BIN 00000000
+
+    7280 REM *************BAT left side- using full numbers
+
+    7300 DATA 252,42,41,2,252,248,0,224
+
+    7270 REM *******************wall
+
+    7400 DATA 231,195,165,24,24,165,195,231
+
+    7470 REM ************* BAT right side
+
+    7480 DATA 63,84,148,64,63,31,0
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# What’s New?
+
+
+    The RND function is used to generate a Random value between 0 and 1 which is multiplied
+    by a value which determines the range of the values involved. E.g. INT(RND*10)
+    will return an INTEGER value of RND*10, so a value between 0 and 9 as INT command
+    rounds down a number to ZERO decimal places.
+
+
+    Other new parts in this listing are UDGs (User Definable Graphics) and some basic
+    collision detection. We will go over these briefly. Also new is the use of directional
+    vector values stored in vx and vy. Which constantly increase or decrease the x
+    and y values for ball movement by adding itself (vx or vy) to x or y in every
+    loop.
+
+
+    ```
+
+    4010 LET bx=bx+vx: LET by=by+vy
+
+    ```
+
+
+    # What are UDGs?
+
+
+    UDGs stand for User Definable Graphics and they help add graphic sprites to a
+    game. Lines 7010 to 7050 look for values to place into memory to create the UDGs.
+    While Lines 7300 keep the data which make up the values to go into the UDG memory.
+
+
+    ```
+
+    7010 FOR n = 0 TO 31
+
+    7020 READ graph
+
+    7030 POKE USR “a”+n,graph
+
+    7050 NEXT n
+
+    ```
+
+
+    The READ command looks for DATA statements in your code. It reads each value within
+    the DATA statements in order, if it runs out of data then an error occurs. So
+    can tell READ where to start from using RESTORE <data_line_number>. UDGs are graphics
+    characters within the character set, by default they start looking like the same
+    as the letters A to Z. After some well thought out POKEs these letters can be
+    changed to graphics. Each UDG character has 8 bytes by each byte containing 8
+    bits.
+
+
+    An easy way to create these graphics is to use BIN function which is short for'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'Binary. The BIN function will covert a string of 1s and 0s into a decimal number.
+
+
+    Binary on the spectrum ranges from 0 to 255 which each 0 or 1 digit representing
+    a number which doubles the value of the previous digit.
+
+
+    | Digit1 | Digit2 | Digit3 | Digit4 | Digit5 |
+
+    |---|---|---|---|---|
+
+    | 1 = 1 | 1 = 2 | 1 = 4 | 1 = 8 | 1 = 16 |
+
+    | Digit6 | Digit8 | | | 1 = |
+
+    | 32 | 1 = 128 | | | |
+
+    | Digit7 | | | | |
+
+    | 1 = 64 | | | | |
+
+
+    All 8 digits would total to make 255. Below is an example of binary data to make
+    a basic tree shape and the decimal equivalents of each bye of the UDG. A UDG contains
+    8 bytes of data.'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: 'Here is an example of what Binary => Decimal looks like
+
+
+    | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 | 00111000 | 28 |
+
+    | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 01010100 | 42 |
+
+    | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 10010010 | 73 |
+
+    | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 | 00111000 | 28 |
+
+    | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 0 | 01010100 | 42 |
+
+    | 1 | 0 | 0 | 1 | 0 | 0 | 1 | 0 | 10010010 | 73 |
+
+    | 0 | 0 | 1 | 1 | 1 | 0 | 0 | 0 | 00111000 | 28 |
+
+    | 0 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 01111100 | 62 |
+
+
+    Tip: Using code to create UDGs is relatively easy, USR “a” is the first UDG character.
+
+
+    ```
+
+    7010 FOR n = 0 TO 7
+
+    7020 READ graph
+
+    7030 POKE USR “a”+n,graph
+
+    7050 NEXT n
+
+    7060 RETURN
+
+    7200 DATA BIN 00111100, BIN 01010110, BIN 01011110, BIN 01011110, BIN 01111110,
+    BIN 00111100, BIN 00000000, BIN 00000000
+
+    ```
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_35_0.png)
+
+
+    Suggestions for Extending (optional)
+
+
+    +   1] Add more level formations
+
+    2] Add power-ups'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# # SNAKE BITE
+
+
+    You must help the snake survive and grow by eating the apples that are falling
+    from the trees. Try to eat as many as possible without running into the side of
+    the screen or your own tail! Good Luck! Myself and classroom buddies spent a lot
+    of time playing this DOS game on our IBMs during computer classes. It also appeared
+    later on the Nokia phones and was one of the first original mobile games!
+
+
+    **Players: 1 Player**
+
+
+    **Rules:** Player tries to eat as many apples as possible and beat their high
+    score. Running into the borders or your own tail will end the game.
+
+
+    **Controls:** q = up, a = down, o = left, p = right.
+
+
+    | 10 REM ******ZX Spectrum Club *** |
+
+    | 15 REM * SNAKE BITE by Gary Plowman |
+
+    | 20 REM ********************************* |
+
+    | 25 LET hsc=0: GO SUB 6000 |
+
+    | 30 INK 1: PAPER 7: BORDER 4: CLS |
+
+    | 45 REM ***** Initialising variables |
+
+    | 50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 2;"SNAKE BITE": PRINT 4,5;"Control
+    your snake * |
+
+    | 35 LET lives=3 |
+
+    | 60 PRINT AT 7,5;"Avoid your tail! *****" |
+
+    | 65 PRINT AT 8,5;"Eat the apples"; PAPER 6;"o" |
+
+    | 70 PRINT AT 11,2;"Controls";AT 12,2;"Q/A=Up/Down,O/P=Left/Right" |
+
+    | 80 PRINT AT 18,5; FLASH 1;"PRESS A KEY TO START": PAUSE 0 |'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '100 GO SUB 300: REM initialise
+
+
+    130 GO SUB 1000: REM main loop for game
+
+
+    200 GO TO 30:
+
+
+    300 REM *** SETUP
+
+
+    310 LET x=10: LET y=10: LET vx=0: LET vy=0: LET score=0: LET lvl=1: LET
+
+    ax=1: LET ay=1: LET ax2=0: LET ay2=0: LET loot=0: LET snk=5: LET dx-x:
+
+    LET dy-y: LET longer=0: LET snkpos=1: LET ny=0: LET nx=0: LET ly=0: LET
+
+    lx=0
+
+
+    330 RETURN
+
+
+    1000 CLASS
+
+
+    1010 FOR n=0 TO 19:
+
+
+    1030 PRINT n,0;CHR$(136);AT n,31;CHR$(136)
+
+
+    1040 NEXT n
+
+
+    1045 FOR n=1 TO 30
+
+
+    1050 PRINT 0,n;CHR$(136);AT 19,n;CHR$(136)
+
+
+    1060 NEXT n
+
+
+    1087 PRINT AT INT (RND*15)+3,INT (RND*25)+3; PAPER 6;“o
+
+
+    1095 PRINT AT 20,1;“Score”:score
+
+
+    1096 FOR n=1 TO 5
+
+
+    1097 PRINT AT y,x-n;"**
+
+
+    1098 NEXT n
+
+
+    1099 PRINT AT y,y;"**
+
+
+    1100 LET i=$INKEY($): LET i=IN 31
+
+
+    1110 IF(i="q" OR i=2) AND y>2 THEN vy=-1: LET vx=0
+
+
+    1120 IF(i=$“a” OR i=4) AND y<19 THEN vy=1: LET vx=0
+
+
+    1130 IF(i=$“o” OR i=1) AND x>20 THEN vx=-1: LET vy=0
+
+
+    1140 IF(i=$“p” OR i=2) AND y>30 THEN vx=1: LET vy=0
+
+
+    1190 LET x=x+vx: LET y=y+vy
+
+
+    1150 IF x=0 THEN GO SUB 200
+
+
+    1160 IF x=31 THEN GO SUB 2000
+
+
+    1170 IF y=19 THEN GO SUB 2000
+
+
+    1180 IF y=0 THEN GO SUB 2000
+
+
+    1185 LET a=$SCREEN$ (y,x)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '1200 IF a=$="o" THEN GO SUB 3000
+
+
+    1210 IF vx<>0 OR vy<>0 THEN GO SUB 2500
+
+
+    1230 PRINT AT y,x;"*"
+
+
+    1300 GO TO 1100
+
+
+    1900 STOP
+
+
+    2000 PRINT AT 10,10;"DEAD!";AT 15,10; FLASH 1;"RESTARTING"; BEEP 2,1:
+
+    PAUSE 1000
+
+
+    2010 IF score=hsc THEN LET hsc=hsc
+
+
+    2100 GO TO 30
+
+
+    2500 REM *** DRAW SNAKE
+
+
+    2510 IF a=$*" AND (vx<>0 OR vy<>0) THEN GO SUB 2000
+
+
+    2520 PRINT AT dy,dx;"*"
+
+
+    2525 longer>0 THEN LET longer-1: RETURN
+
+
+    2526 LET mx=0; LET nx=0; LET ny=0
+
+
+    2530 IF SCREEN$(dy-1,dx)=\*" THEN LET ny=-1: LET mx=mx+1
+
+
+    2540 IF SCREEN$(dy+1,dx)=\*" THEN LET ny=1: LET mx=mx+1
+
+
+    2550 IF SCREEN$(dy,dx-1)=\*" THEN LET nx=nx-1: LET mx=mx+1
+
+
+    2560 IF SCREEN$(dy,dx+1)=\*" THEN LET nx=1: LET mx=mx+1
+
+
+    2570 IF mx>1 THEN GO SUB 400
+
+
+    2575 dy = dy + ny: LET dx=dx+nx
+
+
+    2580 RETURN
+
+
+    3000 REM *** EAT APPLE
+
+
+    3010 LET score = score +INT(RND*4)+1
+
+
+    3020 PRINT AT 20,1; PAPER 1; INK 7;"Score:;score;AT 20,16;"Hi-Score:;hsc:
+
+    BEEP;05,20
+
+
+    3030 LET ax=INT(RND*25)+3: LET ay=INT(RND*15)+3
+
+
+    3040 IF$(ay,ax)=\*" THEN GO TO 3030
+
+
+    3060 RETURN
+
+
+    4000 REM *** Follow correct route
+
+
+    4010 LET r1=0: LET r2=0
+
+
+    4020 IF SCREEN$(dy,nx)=\*" THEN LET r1=r1+1
+
+
+    4030 IF SCREEN$(dy+(ny*2),dx)=\*" THEN LET r1=r1+1'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '```
+
+    4040 SCREEN$(dy+(ny*3)
+
+    ```
+
+
+    #  What’s New?
+
+
+    The main thing that is new here is a second method for controls. IN 31 is used
+    to read the Joystick port of the machine (or emulator). So now you will have the
+    ability to use joystick controls in your games. Yes, it''s really that easy to
+    add joystick controls to a Sinclair BASIC game. Lines 1100 to 1140 contain the
+    code to detect keyboard and joystick controls for your game. That''s 5 lines of
+    code!
+
+
+    ```
+
+    1100 IF i$=INKEY$(): LET i=IN 31
+
+    1110 IF (i$="q" OR i=8) AND y>2 THEN LET vy=-1: LET vx=0
+
+    1120 IF (i$="a" OR i=4) AND y<19 THEN LET vy=1: LET vx=0
+
+    1130 IF (i$="o" OR i=1) AND x>2 THEN LET vx=-1: LET vy=0
+
+    1140 IF (i$="p" OR i=2) AND y<30 THEN LET vx=1: LET vy=0
+
+    ```
+
+
+    You use one of more Sinclair joystick port options, you need setup keys 1,2,3,4
+    and 5 or 6,7,8,9 and 0 these keys would be equivalent of left, right,'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Speed
+
+
+    In order to keep the game running at the same speed throughout, without resulting
+    to any machine code, we used a custom tail eating routine for our snake. And to
+    allow the snake to grow we delayed the tail eating routine each time the snake
+    ate.
+
+
+    # Collision Detection
+
+
+    Commands like SCREEN$ (dy+ny,dx)="*" can be useful for testing for collision or
+    letting the program know where objects can move to, or if part of the screen is
+    empty or not. Keep this in mind when you are creating any of your own games.
+
+
+    # High Scoring
+
+
+    My personal best at this version of the game is 72. Try to beat that if you can!
+
+
+    # IF x THEN y
+
+
+    All games need to perform decisions. These decisions in BASIC are performed using
+    IF THEN statements. IF x=1 THEN do something : now do something else : and so
+    on. IF statements in Sinclair BASIC are quite simple and execute only a single
+    line of commands. They do not have the ELSE or ELSEIF alternative conditions.
+    But you can branch off and perform multiple commands using a GOTO or a GO SUB.
+    Throughout this book we will also see IF statements with multiple conditions to
+    meet using the AND / OR Boolean expressions.
+
+
+    # Simple Boolean expression example
+
+
+    Between the IF THEN you can have a number of different expressions which you can
+    test as TRUE or FALSE and order those expressions using brackets and using the
+    Boolean operators of AND and OR.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 128k Mode offers another option in the form of the PLAY command that uses the
+    more musical AY chip, but for easy of use and compatibility we will just be BEEP.
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Suggestions for Extending (optional)
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_43_0.png)
+
+
+    +   1] Add UDGs and use colour attributes for collision detections
+
+
+    +   2] Add more obstacles to avoid
+
+
+    +   3] Add timer to put more pressure on the player to act quickly'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# FLAPPY BIRD
+
+
+    The world went Flappy mad in 2014. Flappy Bird was everywhere and with the news
+    that the developer created the game in such a short time frame thousands of new
+    coders came on the scene. It re-ignited interest in bedroom-coding in many countries
+    around the world. I created a version in BASIC that same year, just for fun. Its
+    not as fast as the original but who cares? It''s still Flappy Bird, especially
+    if you increase the emulator speed. Enjoy!
+
+
+    Players: 1
+
+    Rules: Player tries to get through the oncoming pipes crashing into them. Player
+    tries to beat their high score.
+
+    Controls: Press any key to stay in the air. That''s it!
+
+
+    ```
+
+    1 REM Specky Conversion by G Plowman (Gazzapper Games)
+
+    2 PRINT AT 10,10;“LOADING GRAPHICS”
+
+    3 GO SUB 3000
+
+    5 BRIGHT 1
+
+    6 PAPER 7
+
+    7 INK 1: CLS
+
+    8 LET hscore=0
+
+    10 PRINT AT 1,0; INK 2: PRINT"= = ===== ===== ===== ="
+
+    20 INK 3: PRINT"= = = = = =\
+
+    ```'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '26 INK 3: PRINT “= = =\"
+
+
+    28 INK 2: PRINT “= == =\"
+
+
+    30 PRINT “”
+
+
+    32 INK 4: PRINT “= == =====”
+
+
+    34 INK 2: PRINT “= == =\"
+
+
+    36 INK 1: PRINT “==== == ===”
+
+
+    38 INK 4: PRINT “= = = =\"
+
+
+    40 INK 3: PRINT “= = = =\"
+
+
+    42 INK 5: PRINT “==== == ===”
+
+
+    43 PRINT “”: INK 0
+
+
+    48 PRINT “SINCLAIR SPECTRUM CONVERSION”
+
+
+    49 PRINT “By Gary Plowman- Orig.Gears”
+
+
+    50 PRINT
+
+
+    51 PRINT ” PRESS A KEY TO START"
+
+
+    53 PRINT ” (CONTROLS : ANY KEY TO FLY)
+
+
+    55 LET b$=" : LET c$=b+$CHR (132); LET c$=c+$CHR (136) : NEXT n
+
+
+    56 FOR n=1 TO 30: LET b$
+
+
+    58 INK 3: PRINT AT 19,0;bb
+
+
+    60 FOR n=1 TO 30
+
+
+    62 PRINT AT 1,n;“CHR$ (144)
+
+
+    64 PAUSE 5
+
+
+    66 PRINT AT 1,n;“CHR$ (145)
+
+
+    68 BEEP..02,1
+
+
+    70 PAUSE 5
+
+
+    75 IF INKEY$<> THEN GO TO 200
+
+
+    80 NEXT n
+
+
+    85 PRINT AT 1,n;“
+
+
+    86 GO TO 60
+
+
+    200 LET score=INT (0): LET r=1
+
+
+    202 DIM x(10): DIM h(10)
+
+
+    203 LET pipes=1
+
+
+    204 LET fly=12: LET anim=0'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '205 BRIGHT 1: PAPER 7: INK 2
+
+
+    206 CLS
+
+
+    210 PRINT AT 10,10;"G E T R E A D Y!"
+
+
+    220 PRINT ""
+
+
+    222 INK 1: PRINT AT 12,10; ";CHR$(144)
+
+
+    226 PRINT
+
+
+    227 INK 2: PRINT " Tap To Fly"
+
+
+    230 IF INKEY=$=" THEN GO TO 230
+
+
+    300 REM ***** START ****
+
+
+    302 FOR o=1 TO 10
+
+
+    303 LET h(o)=INT(RND*8)+1
+
+
+    305 NEXT o
+
+
+    306 FOR l=1 TO 10
+
+
+    308 LET x(l)=25+(l*5)
+
+
+    309 NEXT l
+
+
+    310 GO SUB
+
+
+    600 GO TO 310
+
+
+    999 REM *********************
+
+
+    1000 REM **** DRAW PIPES
+
+
+    1002 CLS
+
+
+    1010 INK 1: PRINT AT fly,10;";CHR$(144): LET fly=fly+1
+
+
+    1011 INK 3: PLOT 0,20: DRAW 240,00
+
+
+    1012 IF anim=1 THEN INK 1: PRINT AT fly-1,10;";CHR$(145)
+
+
+    1013 LET anim=
+
+
+    1016 LET r=r+1
+
+
+    1017 INK 3: PRINT AT 0,2;"SCORE:";score: PRINT AT 0,20;"HI-SCORE";hscore
+
+
+    1018 IF INKEY<>"" THEN LET fly=fly-2: BEEP .01,2
+
+
+    1030 FOR p=1 TO 10
+
+
+    1033 IF INKEY<>"" THEN anim=1
+
+
+    1035 INK 4
+
+
+    1039 LET bh=h(p)*8: IF x(p)<30 AND x(p)>1 AND h(p)>0 THEN PLOT
+
+    x(p)*8,3*8: DRAW 0,bh: DRAW 0,-(bh)
+
+
+    1040 LET nh=INT((13-h(p)))*8): IF x(p)<30 AND x(p)>1 AND h(p)>0 THEN'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '```
+
+    PLOT x(p)*8150: DRAW 0
+
+    ```'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# What’s New?
+
+
+    So now that you have typed in a Spectrum version of Flappy Bird you can see how
+    such a game can be done with simple code. Okay, parts of the code here are a little
+    confusing to you but that is probably down to the use of maths. It is quite easy
+    once explained, the screen collision detection for pipes were multiplied by 8
+    to allow for the pipes to be drawn on the screen grid of 256 (x-axis) by 192 (y-axis)
+    pixels. But the actual collision detection was based on the character printing
+    grid of 32 (x-axis) by 22 (y-axis) character positions. So just it is easier to
+    understand, when comparing character printing locations to pixel locations we
+    need to multiply or divide by a factor of 8. For every 8 pixels there is 1 character
+    position. See the diagram below on how the screen work for pixels and characters.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_48_0.png)
+
+
+    # Hello Colour Clash
+
+
+    A known limitation of the Sinclair Spectrum is that only two colours can exist
+    within each character position on the screen ( 8 x 8 pixels). This adds a bit
+    of retro-charm to the games when they clash together. You will notice this feature
+    in this game as your Flappy Bird collides with the pipes. There go, that’s colour
+    clash!'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Basic Animation
+
+
+    Animating with UDGs (a.k.a. Sprites) is executed very simply here.
+
+
+    ```
+
+    1033 IF INKEY$>"" THEN anim=1
+
+    ```
+
+
+    The line above sets the anim value to 1 so that we can know to draw the flapping
+    bird UDG sprite, thus making our bird flap his wings.
+
+
+    ```
+
+    1012 IF anim=1 THEN INK 1: PRINT AT fly-1,10;"CHR$(145)
+
+    ```
+
+
+    This is a very simple method but easily done, to do more than one frame of animation
+    usually involves tracking movement with a timer value. But that level of detail
+    is for another time. The first part of the PRINT command clears the old position
+    of our bird before printing at the new position.
+
+
+    ```
+
+    302 FOR o=1 TO 10
+
+    303 LET h(o)=INT(RND*8)+1
+
+    305 NEXT o
+
+    306 FOR l=1 TO 10
+
+    308 LET x(l)=25+(l*5)
+
+    309 NEXT 1
+
+    ```
+
+
+    Above creates our pipe positions and heights but will not display them until they
+    have scrolled left enough to show on our screen.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_49_0.png)
+
+
+    Suggestions for Extending (optional)
+
+
+    +   1] Add enemies
+
+    2] Remove the top pipes and work on a Scramble clone!'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# THE NUMBERS GAME
+
+
+    I love “8 Out of 10 Cats Does Countdown” and I love trying to solve the Math bits!
+    This is inspired by that. It’s not terribly advanced but give it a go and see
+    if you can solve your own problems! Maybe you might be inspired to create the
+    ‘words’ version at a later date?
+
+
+    Players: 1
+
+
+    Rules: Player tries to calculate the result using the numbers provided and maths
+    commands.
+
+
+    Controls: Typing in the respective values and commands: ‘add’, ‘mult’ and ‘sub’.
+
+
+    ```
+
+    10 REM ************ZX CODE CLUB*********
+
+    15 REM * The Numbers Game (Countdown)
+
+    20 REM ************G,Plowman***********
+
+    30 INK 0: PAPER 5: BORDER 4: CL
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 2,7; INK 7; BRIGHT 1; PRINT 7; INK 3;“The Numbers Game”: PRINT AT
+    4,5;"
+
+    60 PRINT AT 4,5;“Athletes Get Ready!”
+
+    80 PRINT AT 18,5; FLASH 1;“PRESS A KEY TO START”: PAUSE 0: CLS
+
+    100 REM GO SUB 5000: REM Graphics
+
+    110 GO SUB 300: REM initialise
+
+    130 GO SUB 1000: REM draw screen
+
+    140 GO SUB 2000: main loop
+
+    300 REM **** init *
+
+    ```'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '310 LET p1=0: LET p2=0: LET p3=0: LET p4=0: LET p5=0: LET p$=": LET
+
+    q$=""; LET r$="";
+
+
+    320 LET s$="": LET t$="";
+
+
+    330 RETURN
+
+
+    1000 REM ****** Screen
+
+
+    1005 PRINT AT 3,10; PAPER 7; BRIGHT 1; INK 3;“THE NUMBERS GAME
+
+
+    1010 FOR n=5 TO 10
+
+
+    1020 PRINT AT n,10; PAPER 7;” ”
+
+
+    1030 NEXT n
+
+
+    1040 PRINT AT 5,3; INK 6;CHR(137);CHR(143);CHR(143);CHR(143);
+
+    (143);CHR(134)
+
+
+    1060 PRINT AT 6,2; INK 6;CHR(133); PAPER 7;CHR(138);CHR(137);
+
+    ";CHR(137); INK 6;CHR(133); PAPER 5;CHR(138)
+
+
+    1070 PRINT AT 7,2; INK 6;CHR(133); PAPER 7;CHR(138); INK 1;CHR
+
+    (132);";CHR(132); INK 6;CHR(133); PAPER 5;CHR(138)
+
+
+    1080 PRINT AT 8,2; INK 6;CHR(133); PAPER 7;CHR(138); “; PAPER
+
+    5;CHR(138)
+
+
+    1090 PRINT AT 9,2; INK 6;CHR(133); PAPER 7;CHR(138); INK 2;CHR
+
+    (132);CHR(140);"; INK 6; PAPER 5;CHR(143)
+
+
+    1100 PRINT AT 10,3; INK 6;CHR(133); PAPER 7;CHR(138); “; INK 6;CHR
+
+    (133)
+
+
+    1110 PRINT AT 11,4; PAPER 7;” “
+
+
+    1200 FOR n = 12 TO 18
+
+
+    1205 RANDOMIZE
+
+
+    1210 LET c=INT (RND*4);CHR(143);CHR(143);CHR(143)
+
+    (143); AT n,4;CHR(143);;AT n+1,5;CHR(143);CHR(143)
+
+
+    1230 NEXT n
+
+
+    1250 FOR n=13 TO 19 STEP 2
+
+
+    1260 PRINT AT n,14; PAPER 7;“; PAPER 5;“; PAPER 7;“; PAPER 5;“
+
+    PAPER 7;"; PAPER 5;"; PAPER 7;“ “
+
+
+    1270 NEXT n
+
+
+    2000 PRINT AT 1,10;“PRESS S TO START
+
+
+    2010 LET i=$INKEY($)
+
+
+    2020 IF i$=“s” THEN GO TO 2100'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# 2030 GO TO 2010
+
+
+    ```
+
+    2100 RANDOMIZE
+
+    2105 LET ans=0: LET ans1=0
+
+    2110 LET n1=INT(RND*90)+10
+
+    2120 LET n2=INT(RND*10)+2
+
+    2130 LET n3=INT(RND*10)+2
+
+    2140 LET n4=INT(RND*10)+2
+
+    2150 LET n5=INT(RND*10)+2
+
+    2170 LET o1=INT(RND*4)+1
+
+    2180 LET o2=INT(RND*4)+1
+
+    2190 LET o3=INT(RND*4)+1
+
+    2195 LET o4=INT(RND*4)+1:
+
+    2200 PRINT PAPER 1; INK 7;82
+
+    ```'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '2340 INPUT“Enter command add, sub, mult or calc”, LINE q$
+
+
+    2345 IF q=$“calc” THEN GO SUB 3000
+
+
+    2350 INPUT“Enter next number from the cards above:”,p3
+
+
+    2355 IF p3>n1 AND p3<n2 AND p3>n3 AND p3<n4 AND p3>n5 THEN BEEP ,5.0; PRINT 11,10;“WRONG
+    NUMBER”: GO TO 2350
+
+
+    2360 INPUT“Enter command add, sub, mult or calc”, LINE r$
+
+
+    2370 IF r=$“calc” THEN GO SUB 3000
+
+
+    2380 INPUT“Enter next number from the cards above:”,p4
+
+
+    2385 IF p4>n1 AND p4<n2 AND p4>n3 AND p4<n4 AND p4>n5 THEN BEEP ,5.0; PRINT 11,10;“WRONG
+    NUMBER”: GO TO 2380
+
+
+    2390 INPUT“Enter command add, sub, mult or calc”, LINE s$
+
+
+    2400 IF s=$“calc” THEN GO SUB 3000
+
+
+    2410 INPUT“Enter next number from the cards above,p5$
+
+
+    2420 IF p5>n1 AND p5<n2 AND p5>n3 AND p5<n4 AND p5>n5 THEN BEEP ,5.0; PRINT 11,10;“WRONG
+    NUMBER”: GO TO 2380:
+
+
+    2440 IF s=$“calc” THEN GO SUB 3000:
+
+
+    2490 GO SUB 3000
+
+
+    3000 REM ***** CHECK ANSWER
+
+
+    3010 LET answer=0
+
+
+    3020 IF p=$“add” THEN LET answer = p1+p2
+
+
+    3030 IF p=$“sub” THEN LET answer = p1-p2
+
+
+    3040 IF p=$“mult” THEN LET answer = p1*p2
+
+
+    3050 IF q=$“add” THEN LET answer = answer+ p3
+
+
+    3060 IF q=$“sub” THEN LET answer = answer-p3
+
+
+    3070 IF q=$“mult” THEN LET answer = answer*p3
+
+
+    3080 IF r=$“add” THEN LET answer = answer+p4
+
+
+    3090 IF r=$“sub” THEN LET answer = answer-p4
+
+
+    3100 IF r=$“mult” THEN LET answer = answer*p4
+
+
+    3110 IF s=$“add” THEN LET answer = answer+p5
+
+
+    3120 IF s=$“sub” THEN LET answer = answer-p5
+
+
+    3130 IF s=$“mult” THEN LET answer = answer*p5
+
+
+    3200 IF answer = ans THEN BEEP 1,6; PRINT AT 11,10; INK 1;“Yay ! “answer”; is
+    correct!”'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "3210 IF answer<>THEN BEEP 1,-7; PRINT AT 11,10; INK 2;“You Got\n“;answer;”\
+    \ \n3250 PRINT AT 12,10;“Press to Play Again”: PAUSE 0\n3260 GO TO 1000\n\n# Progress\n\
+    \nWell how are you getting along with BASIC? You should be understanding\\what\
+    \ certain commands are specifically used for by now. You will have\noticed a lot\
+    \ of Character codes in the last listing. These can be looked up\nt end of the\
+    \ book in Appendix A.\n\n# Input\n\nWe used a fair amount of INPUT commands. This\
+    \ is quite a useful command\nasking the user to perform actions or make decisions.\
+    \ It is very useful for\ntext adventure games or interactive stories where the\
+    \ users decisions can\nchange the route of the story.\n\n# PEEKs and POKES\n\n\
+    For our UDG graphics we used a command called POKE. This commands\nplaces a decimal\
+    \ value into a memory location. We can then collect this value\nagain using a\
+    \ PEEK command.\n\ne.g. Try POKE 33000,45 then enter, now try PEEK 33000 to get\
+    \ the value\back.\n\n# Maths Functions\n\nSinclair BASIC has a lot of maths functions.\
+    \ It is not perfect, nor does it have\nevery function but it has the majority\
+    \ of what a beginner would need for\nsimple Trigonometry or Alegebra. Examples:\
+    \ PI (that 3.141592...etc.), EXP\n(Exponential), LN (Logarithms), SIN (Sine),\
+    \ COS (Cosine), TAN (Tangent)."
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Suggestions for Extending (optional)
+
+
+    +   1] Add more complex math solutions
+
+
+    +   2] Add the letter / words part of the Countdown game'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# # BATTLESHIP WAR
+
+
+    Another classic Pen and Paper game. Battleship War is the computerized version
+    of the game with some small amendments. Pick your grid to place your ships. Make
+    sure your opponent is not looking to see where you are placing. Then when your
+    finished it''s their turn to put there ships on the grid. The winner is player
+    that destroys all their opponents ships. So get typing and get playing!
+
+
+    Players: 2
+
+
+    Rules: Place your ships on the grid by pressing the keys for the coordinates.
+    The winner is the player who destroys all the opponents ships.
+
+
+    Controls: Keys A to J for horizontal and 1 to 9 for vertical placement on the
+    grid or firing shots. R to rotate the ship position before hitting ENTER to save.
+
+
+    Tip: A nice piece of cardboard is good for hiding screens during ‘hotseat’
+
+
+    ```
+
+    10 REM ****** ZX Code Club ************
+
+    15 REM * BATTLESHIP WAR by Gary Plowman
+
+    20 REM **********************************
+
+    30 INK 7: PRINT PAPER 0; BORDER 4: CLS
+
+    40 PRINT AT 5,10; INK 2;"BATTLESHIP WAR"
+
+    50 PRINT AT 10,5;"2 Player Game (hotseat)
+
+    60 PRINT AT 12,5; BRIGHT 1; INVERSE 1;"1. Start Game"
+
+    70 PRINT AT 15,2;"Use a card to hide some"
+
+    80 PRINT AT 16,2;"of the screen or look away"
+
+    90 PRINT AT 17,2;"when other player is placing";AT 18,2;"their units":
+
+    100 IF INKEY$="1" THEN LET gm=1: GO TO 130
+
+    ```'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '120 GO TO 100
+
+
+    130 BEEP .2,7: BEEP .BEEP .3,-3: BEEP .7,9
+
+
+    135 INPUT "ENTER # SHIPS EACH (2 to 5);";nhips
+
+
+    140 BORDER 5: CLS
+
+
+    150 PRINT AT 1,10; INK 2;"BATTLESHIP WAR"
+
+
+    160 GO SUB 190
+
+
+    170 GO TO 270
+
+
+    180 REM ********************* Redo Board *
+
+
+    190 FOR n=6 TO 14
+
+
+    200 PRINT AT n,5; PAPER 5; INK 1;"----"
+
+
+    210 PRINT AT n,17; PAPER 5; INK 1;"----"
+
+
+    220 PRINT AT n,3; PAPER 3;n-5;AT n,28;n-5
+
+
+    230 NEXT n
+
+
+    240 LET a$="ABCDEFGHIJ"
+
+
+    250 PRINT AT 5,5;a$;AT 18,3;a$
+
+
+    260 RETURN
+
+
+    270 IF gm=2 THEN PRINT AT 18,3;"PLAYER 1 GET READY";AT 19,3;"PLAYER 2 LOOK AWAY"
+
+
+    280 PRINT AT 21,5; FLASH 1;"PRESS KEY TO CONTINUE"
+
+
+    290 IF INKEY="" THEN GO TO 290
+
+
+    300 GO SUB 320
+
+
+    310 GO SUB 380
+
+
+    320 REM ***************** Clearing part of screen
+
+
+    325 PRINT AT 17,0; ""
+
+
+    330 PRINT AT 18,0; ""
+
+
+    340 PRINT AT 19,0; ""
+
+
+    350 PRINT AT 20,0; ""
+
+
+    360 PRINT AT 21,0; ""
+
+
+    370 RETURN
+
+
+    380 REM ********************* PLACING PLAYER 1 UNITS
+
+
+    390 DIM a(nhips,2,2); DIM h(2); DIM f(2); DIM x(nhips,2); DIM y(5); LET shp1=1;
+    LET shp2=1; LET r=0; LET m$=""; LET ply=1
+
+
+    400 PRINT AT 17,3;"Press Coords for ship ;shp1;AT 18,3;e.g. A"'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '410 LET i$=INKEY($)
+
+
+    420 IF i$="a"<k THEN LET a(shp1,1,ply)=(CODE (i$))-96: LET
+
+    m=$+STR(a(shp1,2,ply)); BEEP.05,6
+
+
+    430 IF i$="1" AND i$="9" THEN a(shp1,2,ply)=VAL(i): LET
+
+    m=$+STR(a(shp1,2,ply)); BEEP.05,7
+
+
+    435 IF a(shp1,1,ply)=0 OR a(shp1,2,ply)=0 THEN GO 400
+
+
+    440 IF i$=1 THEN PRINT AT 4,2;CHR(a(shp1,1,ply)+96);a(shp1,2,ply); INK 6;"
+
+    Ship#"6;shp1
+
+
+    445 IF i$=2 THEN PRINT AT 4,2;"";AT 4,7;CHR$
+
+    (a(shp1,1,ply)+96);a(shp1,2,ply); INK 6"; Ship#"shp1
+
+
+    450 IF r=1 AND a(shp1,2,ply)>7 THEN LET r=NOT r
+
+    460 IF i="r" THEN LET r=NOT r
+
+
+    470 IF r=0 AND a(shp1,1,ply)>7 THEN LET r=NOT r
+
+    480 IF i$=CHR$(13) AND a(shp1,2,ply)>0 AND a(shp1,1,ply)>0 THEN BEEP .3,2;
+
+    LET shp1=shp1+1; GO SUB 320: REM ************ clean of screen / unit
+
+
+    490 IF shp1-ships+1 AND ply=1 THEN BEEP 1,7: BEEP .2,4: LET shp1=1
+
+    ply=2: GO 590
+
+
+    500 IF shp1-ships+1 AND ply=2 THEN LET ply=1: BEEP 1,7: BEEP .2,4: GO
+
+    1000
+
+
+    505 IF a(shp1,2,ply)>0 OR a(shp1,1,ply)=0 THEN PRINT AT 20,0; INK 6";[R
+
+    Rotate Ship"; 21,0; FLASH 1;[Enter Next Ship
+
+
+    510 IF a(shp1,1,ply)=0 OR a(shp1,2,ply)=0 THEN GO 400
+
+    520 IF i$="" THEN GO 590: REM ************ redo again *
+
+
+    530 IF r=0 THEN LET x(shp1,1,ply)=0
+
+    540 IF r=1 THEN LET x(shp1,1,ply)=1
+
+
+    550 FOR n=1 TO shp1
+
+    560 IF x(n,ply)=0 AND ply=1 THEN PRINT AT a(n,2)+5,a(n,1,ply)+4;"****
+
+
+    570 IF x(n,ply)=1 AND ply=1 THEN PRINT AT a(n,2)+5,a(n,1,ply)+4;"";AT
+
+    a(n,2),a(n,1,ply)+6,a(n,2,ply)+7,a(n,1,ply)+4;"**
+
+
+    580 IF x(n,ply)=0 AND ply=2 THEN PRINT a(n,2)+5,a(n,1,ply)+16;"****"
+
+    590 IF x(n,ply)=1 AND ply=2 THEN PRINT a(n,2)+5,a(n,1,ply)+16;"";AT
+
+    a(n,2,ply)+6,a(n,1,ply)+16;"**";AT a(n,2)+7,a(n,1,ply)+16;"**
+
+
+    600 NEXT n
+
+    700 GO 400
+
+    1000 REM **** TAKE TURNS'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '1005 LET hits=1: LET ply=1: LET hits1=1: LET hits2=1
+
+
+    1010 PRINT AT 4,2;""
+
+
+    1020 GO SUB 190
+
+
+    1030 GO SUB 320
+
+
+    1040 PRINT AT 17,0;"PLAYER ;ply";....FIRE SHOT..e.g. A5
+
+
+    1050 GO SUB 2000: REM Get shot
+
+
+    2000 REM ****** Get shot coords
+
+
+    2005 LET ply=ply+1
+
+
+    2006 IF ply>2 THEN LET ply=1
+
+
+    2008 PRINT AT 18,0;"Current Hits on Target:;f(ply)
+
+
+    2010 LET i=$INKEY($)
+
+
+    2020 IF i="a" AND i<="k" THEN h(1)=(CODE (i$))-96: LET
+
+    m=$i+$STR(h(1)): BEEP .05,6
+
+
+    2030 IF i="1" AND i<="9" THEN h(2)=VAL(i$): LET m=$i+$STR
+
+    (h(2)): BEEP .05,7
+
+
+    2040 IF h(1)>0 AND h(2)>0 PRINT AT 20,0; INK
+
+    6;"FIRING...";h(1);";h(2): GO SUB 2300: GO 1030: REM **** Check for
+
+    hits
+
+
+    2050 IF f(ply)=nships*3 THEN GO SUB 2200:
+
+
+    2100 GO TO 2010
+
+
+    2200 REM ****** WINNER!
+
+
+    2210 PRINT AT 10,10;"PLAYER ;ply;" WINS!
+
+
+    2220 FOR n = 1 TO 10
+
+
+    2230 BEEP .1,n+RND*2
+
+
+    2240 NEXT n
+
+
+    2250 BEEP 1,2: PAUSE 0
+
+
+    2260 GO TO 30
+
+
+    2260 RETURN
+
+
+    2300 REM **** Hit checks *********************
+
+
+    2305 LET miss=1
+
+
+    2316 IF ply=1 AND ATTR(h(2)+5,h(1)+4)<41 THEN BEEP .1,-2: GO TO 2380
+
+
+    2317 IF ply=2 AND ATTR(h(2)+5,h(1)+16)<41 THEN BEEP .1,-2: GO TO 2380
+
+
+    2320 FOR n=1 TO nships'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '```
+
+    2330 IF h(1)=a(n,1,ply) AND h(2)=a(n,2,ply) THEN miss=0: LET
+
+    f(ply)=f(ply)+1
+
+    ```
+
+
+    ```
+
+    2345 IF x(n,ply)=0 AND h(1)-1=a(n,1,ply) OR h(1)-2=a(n,2,ply) AND
+
+    h(2)=a(n,2,ply) THEN miss=0: LET f(ply)=f(ply)+1
+
+    ```
+
+
+    ```
+
+    2346 IF x(n,ply)=1 AND h(2)-1=a(n,2,ply) OR h(2)-2=a(n,2,ply) AND
+
+    h(1)=a(n,1,ply) THEN miss=0: LET f(ply)=f(ply)+1
+
+    ```
+
+
+    ```
+
+    2350 NEXT n
+
+    ```
+
+
+    ```
+
+    2360 IF ply=1 AND miss=0 THEN PRINT AT 21,0; FLASH 1;PLAYER2 SHIP
+
+    HIT";AT h(2)+5,h(1)+4; PAPER 2;"*"
+
+    ```
+
+
+    ```
+
+    2370 IF ply=2 AND miss=0 THEN PRINT AT 21,0; FLASH 1;"PLAYER1 SHIP\NHIT";AT h(2)+5,h(1)+16;
+    PAPER 2;"*"
+
+    ```
+
+
+    ```
+
+    2390 IF miss=1 AND ply=1 AND ATTR h(2)+5,h(1)+4=41 THEN PRINT AT
+
+    21,0;"YOU MISSED!"
+
+    ;AT h(2)+5,h(1)+4; INK 6;"; BEEP .3,2
+
+    ```
+
+
+    ```
+
+    2400 LET h(1)=0: LET h(2)=0
+
+    ```
+
+
+    ```
+
+    2410 RETURN
+
+    ```
+
+
+    # What’s New?
+
+
+    A lot more Array used here to keep status and locations of the
+
+    ships. Don’t worry if the array side of the code is confusing to you. Beginners
+
+    use arrays sparsely until they get a bit more confident, then they
+
+    experiment with them.
+
+
+    For efficiency parts of the screen may not be redrawn so we can
+
+    avoid that by using selective clearing of the screen area after an action has
+
+    occurred. Simple tricks like this help up your programs.
+
+
+    |320 REM ************ Clearing part of screen |
+
+    |325 PRINT AT 17,0;"" |
+
+    |330 PRINT AT 18,0;"" |
+
+    |340 PRINT AT 19,0;"" |
+
+    |350 PRINT AT 20,0;"" |'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '360 PRINT AT 21,0;" \”
+
+
+    DIM a(noships,2,2)
+
+
+    The above array used as a storage container for ships (x ships), location (2 values
+    x and y), player (2 players).
+
+
+    Also the commands CODE and STR$ are used for getting key press values as grid
+    coordinates. We then use m$ to display the selected coordinate.
+
+
+    ```
+
+    2020 IF i$="a" AND i$<="k" THEN LET h(1)=(CODE (i))-96: LET m=$+STR$(h(1))
+
+    ```
+
+
+    The array pointer is used to plot the ship position and rotation which is saved
+    into the x(#,#) array. No need to worry if the arrays are confusing to you. With
+    enough practice you will start to use them in your own code without any problems.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_61_0.png)
+
+
+    | Suggestions for Extending (optional) |
+
+    | 1] | Add CPU player options |
+
+    | 2] | Add UDG graphics for the ships |'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# CODEBREAK
+
+
+    It’s WWII and the enemy is sending secret orders to their troops. You must crack
+    the code to decrypt the messages! Okay, remember a little electronic game where
+    you had to solve the colour code? Also there was a 2 player board game called
+    MasterMind that worked using a second player to set the code and tell you if you
+    worked out of the sequence correctly.
+
+
+    Players: 1 or more (co-operative)
+
+
+    Rules: Limited turns to guess the colour code sequence. Choosing from Red, Blue,
+    Green, Cyan, Magenta (purple) and Yellow. The CPU will tell you indicate Y with
+    number of colours correct in sequence and C for number of colours correct.
+
+
+    Controls: Enter a colour sequence per turn using previous turns to work out the
+    code.
+
+
+    10 REM ******ZX Spectrum Club ****
+
+    15 REM * CODEBREAK by G Plowman 2015
+
+    20 REM ************************************n30 INK 1: PAPER 7: BORDER 4: CLS
+
+    35 REM POKE 23617,128: REM **** PUT CURSOR IN CAPS MODE
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 2;CODEBREAK”: PRINT 4,5;Find the Colour
+    Code!
+
+    60 PRINT AT 7,5;"Get code in sequence"
+
+    70 PRINT AT 8,5;"Enter Colours 1 at a time.":'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '80 PRINT AT 18
+
+
+    100 GO SUB 300: REM initiale
+
+
+    130 GO SUB 1000: REM main loop for game
+
+
+    200 GO TO 30:
+
+
+    300 REM ***** SETUP
+
+
+    310 LET turn=1: DIM c(4): DIM t$(1,1): LET col=0: LET colseq=0: LET
+
+    codeseq=1
+
+
+    330 RETURN
+
+
+    1000 PAPER 4: CLS
+
+
+    1010 RANDOMIZE
+
+
+    1020 FOR n = 1 TO 4
+
+
+    1030 LET c(n)=INT (RND*5)+1
+
+
+    1040 NEXT n:
+
+
+    1050 GO SUB 2000: REM **** CREATE BOARD:
+
+
+    1100 REM **** START GAME LOOP
+
+
+    1005 PRINT AT 0,4;"Code Break “
+
+
+    1110 PRINT AT 2,2;"Turn":"turn;turn AT 20,0;"Seq";codeseq
+
+
+    1120 PRINT AT 18,0;"Enter each letter for code”
+
+
+    1130 INPUT Enter each r,g,b,c,m,y,a$(1,1):
+
+
+    1140 IF a$(1,1)="c” THEN LET t(codeseq)=2
+
+
+    1150 IF a$(1,1)="b” THEN LET t(codeseq)=1
+
+
+    1160 IF a$(1,1)="g” THEN LET t(codeseq)=4
+
+
+    1170 IF a$(1,1)="y” THEN LET t(codeseq)=6
+
+
+    1180 IF a$(1,1)="m” THEN LET t(codeseq)=3
+
+
+    1190 IF a$(1,1)="c” THEN LET t(codeseq)=5
+
+
+    1390 LET codeseq=codeseq+1
+
+
+    1400 IF codeseq=5 THEN LET codeseq=1: GO SUB 4000: REM *** CODE
+
+
+    1900 GO TO 1100:
+
+
+    2000 FOR n = 1 TO 15
+
+
+    2010 PRINT AT 2+n,10; PAPER 7; BRIGHT 1;"; PAPER 5;"; PAPER 6;
+
+
+    2020 NEXT n
+
+
+    2030 REM FOR n = 1 TO 4: PRINT AT 2,10+n; INK c(n);CHR$(143)'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '```
+
+    2040 REM NEXT n: rem **** Un-REM if you want to see code
+
+    2050 RETURN
+
+    4000 REM checking value
+
+    4010 LET col=0: LET colseq=0
+
+    4020 FOR n = 1 TO 4
+
+    4030 IF t(n)=c(n) THEN colseq=colseq+1: GO TO 4050
+
+    4040 IF t(n)<c(n) AND (t(n)=c(1) OR t(n)=c(2) OR t(n)=c(3) OR t(n)=c(4)) THEN
+
+    LET col=1
+
+    4050 NEXT n
+
+    4060 LET turn=turn+1
+
+    4070 PRINT AT 18-turn,18; PAPER 7;Y="colseq; C="col
+
+    4080 FOR n = 1 TO 4: PRINT AT 18-turn,10+n; PAPER (t(n));": NEXT n
+
+    4090 IF turn=15 PRINT AT 10,10;" LOSE ": GO SUB 4300:
+
+    4100 If col=4 THEN PRINT AT 10,5;"CONGRATS CODEBREAKER!";AT
+
+    12,5;PRESS PLAY AGAIN"; PAUSE 0: GO TO 30
+
+    4110 RETURN
+
+    4300 REM Lost
+
+    4310 PRINT PAPER 7;AT 12,10;";AT 13,10;";AT 14,10;"
+
+    4320 FOR n = 1 TO 4
+
+    4340 PRINT AT 13,12+n; PAPER c(n);"\n4350 NEXT n
+
+    4360 PAUSE 0
+
+    4370 GO TO 30
+
+    ```
+
+
+    # Simple but fun
+
+
+    It’s a simple colourful game that one of players can play. Players can debate
+    and agree on the colours to use in the sequence. Lines 2030 and 2040 allow for
+    a little cheat mode for testing your program is working correctly. To you would
+    need to remove the REM at the start of each line.
+
+
+    # What’s New?
+
+
+    RANDOMIZE is used to generate a new Random Seed value. When placed after user
+    responses this makes your program much more random when using'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'RND functions. Another use was found here for our friend the Array. However
+    it is a more simple and straightforward usage this time.
+
+
+    1180 IF a$(1,1)="m" THEN t(codeseq)=3
+
+
+    The array() is used to save our code sequence as a numeric value for each colour.
+    We then check those to the user know how they are getting on with colseq counting
+    exact colour and sequence matches, and col value just counting correct colours
+    present.
+
+
+    ```
+
+    4000 REM checking code value
+
+    4010 LET col=0: LET colseq=0
+
+    4020 FOR n =1 TO 4
+
+    4030 IF t(n)=c(n) THEN colseq=colseq+1: GO TO 4050
+
+    4040 IF t(n)>c(n) AND t(n)=c(1) OR t(n)=c(2) OR t(n)=c(3) OR t(n)=c(4) LET col=col+1
+
+    4050 NEXT n
+
+    ```
+
+
+    # A note on Debugging
+
+
+    It is good practice to use PRINT and other commands to show you information when
+    Debugging your programs. Also another very useful command is the STOP command.
+    You can use this with an IF statement to search and test for certain conditions
+    that you want to avoid or fix. STOP will simply end the program at that line and
+    return the user to the BASIC prompt.
+
+
+    # Suggestions for Extending (optional)
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_65_0.png)
+
+
+    | 1] | Add more colour and graphics to the game in general |
+
+    | 2] | Add a 2 player option where the one player can choose the code |'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# ASTRAL INVADERS
+
+
+    Prepare to defend your base! The Aliens are attacking! How long can you survive
+    the onslaught of the oncoming aliens who are here to enslave your people. The
+    Space Invaders theme never gets old and nearly everyone has enjoyed a version
+    of this classic 80s game. The game is fun and addictive with nice colourful UDG
+    graphics, so get coding and start zapping some aliens.
+
+
+    Players: 1
+
+
+    Rules: Space Invader / Galaxian-type game that is reminiscent of those table-top
+    electronic games like Astro Wars etc. Shoot the aliens before they attack your
+    base. Letting them get past will result in losing a life. Good fun!
+
+
+    Controls: z = left, x = right, [space]=fire.
+
+
+    ```
+
+    10 REM ******ZX Spectrum Code Club ****
+
+    15 REM * ASTRAL INVADERS by Gary Plowman
+
+    20 REM ************2015************
+
+    30 INK 7: PAPER 0: BORDER 0: CLS
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 2,8; INK 7; BRIGHT 1; PAPER 0;ASTRAL INVADERS": PRINT
+
+    AT 4,6;DONT LET THEM LAND"; AT 6,1; INK 6;"Controls"; AT 8,1;"Z=Left,
+
+    XRight, Space to fire"
+
+    80 PRINT AT 18,5; FLASH 1;"PRESS A KEY TO START"; PAUSE 0: LET his0
+
+    ```'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '100 GO SUB 5000: REM Graphics
+
+
+    110 GO SUB 300: REM initiale
+
+
+    130 GO SUB 1000: REM main loop game
+
+
+    200 GO TO 30
+
+
+    300 REM ***** SETUP
+
+
+    310 LET lives=5: LET score=0: LET lvl=1: LET ax=INT(RND*16)+6: LET ay=1:
+
+    LET alien=145+INT(RND*3): LET acol=INT(RND*6)+1: LET x=10: LET i$=L E
+
+    ONE
+
+
+    315 LET speed=1
+
+
+    320 RESTORE 340
+
+
+    305 RANDOMIZE
+
+
+    390 RETURN
+
+
+    1000 CLS : PRINT AT 0,7;i$: REM ****** MAIN GAME
+
+
+    1010 FOR n=2 TO 19
+
+
+    1020 PRINT AT n,30; PAPER 6; INK RND*5;CHR$(137);CHR$(134);AT
+
+    0;CHRS(137);CHR$(134)
+
+
+    1030 NEXT n
+
+
+    1031 FOR n=16 TO 170
+
+
+    1032 PLOT RND*6;INT(RND*200)+20,n
+
+
+    1036 NEXT n
+
+
+    1038 PRINT AT 0,7;"Astral Invaders "; BRIGHT 1;AT 0,0; INK 2;"1 UP";AT 1,0;
+
+    INK 7";AT 02,25;"Hi-Sc"; INK 7;AT 1,25;hisc
+
+
+    1039 FOR n=1 TO lives: PRINT AT 20,n; INK 6;CHR$(144); NEXT n: BEEP 1,4
+
+    BRIGHT 1
+
+
+    1040 LET i$="z” THEN LET x=x-1
+
+
+    1070 IF i$="x” THEN LET x=x+1
+
+
+    1080 PRINT AT 18,x;"CHR$(144);""
+
+
+    1090 IF i$=" ” THEN GO SUB 3500: REM Firing
+
+
+    1100 GO SUB 3000: REM Bug movement
+
+
+    1110 IF ay = 19 THEN BEEP 1,2: LET ax=INT(RND*16)+6: RANDOMIZE : LET
+
+    lives-1
+
+
+    1120 ay=19 THEN FOR n=1 TO lives: PRINT AT 20,n; INK 6;CHR$(144);“"
+
+    NEXT n: LET ay=2'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '1130 IF lives=0 THEN GO SUB 2000
+
+
+    1300 GO TO 1040
+
+
+    2000 REM ***** DEAD
+
+
+    2010 PRINT AT 18,5; INK 2;""\* BASE DESTROYED \*\*"
+
+
+    2020 PRINT AT 10,1; FLASH 1;"PRESS TO RESTART"
+
+
+    2030 IF INKEY($)=" THEN GO TO 2030
+
+
+    2050 GO TO 1000
+
+
+    3000 REM *** move alien
+
+
+    3020 PRINT AT ay,ax; "
+
+
+    3030 IF ay=6 LET ax=ax+INT ((RND*2)-(RND*2))
+
+
+    3050 LET ay=ay+1
+
+
+    3060 PRINT ay,ax; INK acol;CHR$(alien): BEEP speed,ay-10
+
+
+    3070 IF score>200 LET L$="L E V E T W O"
+
+
+    3080 IF speed > .01 THEN LET speed = speed - .01:
+
+
+    3400 RETURN
+
+
+    3500 REM ***** FIRING
+
+
+    3510 PLOT x*8+12,32; DRAW OVER 1; INK 2;000; DRAW OVER 1;0,-100:
+
+    PLOT INK 0;x*8+12,132
+
+
+    3520 BEEP .01,10
+
+
+    3530 IF x+1>ax THEN RETURN
+
+
+    3540 FOR n =7 TO 0 STEP -1
+
+
+    3550 PRINT INK n;AT ay,ax;CHR$(alien)
+
+
+    3560 BEEP .006,n*2
+
+
+    3570 NEXT n
+
+
+    3575 PRINT AT ay,ax; "
+
+
+    3580 LET score = score + ((alien-144)*10):
+
+
+    3590 LET ax=INT (RND*16)+6: LET ay=2
+
+
+    3600 IF score> hisc THEN LET hisc=score
+
+
+    3610 PRINT AT 1,0;score; ";AT 1,25;hisc; "
+
+
+    3620 RANDOMIZE : LET acol=INT (RND*6)+1: LET alien = 145+INT (RND*3)
+
+
+    3700 RETURN
+
+
+    5000 FOR n = 0 TO 31:
+
+
+    5010 READ dat'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# What’s New?\n\nWe have setup and pre-drawn the screen and the gameplay movement\
+    \ overwrites some of the background but not much. This provides a nice colourful\
+    \ convincing game screen for our action shooter.\n\n```\n1110 IF ay = 19 THEN\
+    \ BEEP .1,2 LET ax=INT(RND*16)+6: RANDOMIZE : LET\nlives=lives-1\n```\n\nAbove\
+    \ we can see that if the Alien reaches the bottom of the screen we will forfeit\
+    \ a life.\n\n```\n3000 REM *** move alien\n3020 PRINT AT ay,ax;“ \n3030 IF ay=9\
+    \ OR ay=6 LET ax=INT ((RND*2)-(RND*2))\n3050 LET ay=ay+1\n3060 PRINT AT ay,ax;\
+    \ INK col;CHR$(alien): BEEP speed,ay-10\n3070 IF score>200 THEN LET I$=L E V L\
+    \ T W O\"\n3080 IF speed > .01 THEN LET speed = speed - .01:\n3400 RETURN\n```\n\
+    \nAbove section controls the Alien movement and adds some challenge shifting the\
+    \ movement at certain points on the screen randomly.\n\n```\n3500 REM ***** FIRING\n\
+    ```"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '```
+
+    3510 PLOT X*8+12,32: DRAW OVER 1; INK 2;0,100: DRAW OVER 1;0,-100:
+
+    PLOT INK 0;x*8+12,132
+
+    3520 BEEP .01,10
+
+    3530 IF x+1<>ax THEN RETURN
+
+    3540 FOR n =7 TO 0 STEP -1
+
+    3550 PRINT INK n;AT ay,ax;CHR$(alien)
+
+    3560 BEEP .006,n*2
+
+    3570 NEXT n
+
+    ```
+
+
+    The above section will test our shooting. Again we use 8*value to our PLOT and
+    DRAW commands so we can position them with our UDGs (Sprites).
+
+    nRemember: PLOT places your pen and DRAW makes the lines.
+
+
+    | Suggestions for Extending (optional)|
+
+    | 1] Add more enemies to the game |
+
+    | 2] Add more enemies attacking the player at the same time within a close proximity
+    on the screen |
+
+    | 3] Add more sound effects or change the graphics and theme of the whole game
+    to one of your own |
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_71_0.png)'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# COLOUR STACKS
+
+
+    This is a fun and addictive game, more fun than the name implies. I was playing
+    around with prototyping different ideas when I came up with this simple but addictive
+    puzzler. You have to avoid the wrong colours and watch your move counter but you
+    have a limited amount of switches to change the colour. I am planning to release
+    a mobile version of this game in the near future.
+
+
+    +   - Players: 1
+
+    Rules: Puzzle game where the player must attach the block to the same colour without
+    coming into contact with any other colours. The player has a move counter that
+    increases if they complete correct matches.
+
+    Controls: q = up, a = down, o = left, p = right, [space] = switch colour.
+
+
+    ```
+
+    10 REM ******ZX Spectrum Code Club ***
+
+    15 REM * COLOUR STACKS by Gary Plowman
+
+    20 REM *****************2015***********
+
+    30 INK 7: PAPER 0: BORDER 4: CL
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 0;"COLOUR STACKS"; PRINT
+
+    AT 4,5;"MATCH COLOURS TOGETHER!";AT 6,5;"TOUCH A WRONG
+
+    COLOUR WILL";AT 8,5;"FORCE A RESTART!";AT 10,5;"[SPACE] to change
+
+    colour"
+
+    80 PRINT AT 18,5; FLASH 1;"PRESS A KEY TO START": PAUSE 0
+
+    100 GO SUB 300: REM initialise
+
+    130 GO SUB 1000: REM main loop for game
+
+    ```'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# 200 GO TO 30:
+
+
+    300 REM ***** SETUP
+
+
+    310 LET lives=3: LET score=0: LET misses=0: LET y=19: LET x=24 : LET
+
+    timer=50: LET setting=-INT(RND*5)+1: LET r=0: LET xx=0: LET yy=0: LET
+
+    ch=3:
+
+
+    320 RANDOMIZE
+
+
+    390 RETURN
+
+
+    1000 CLS : REM ****** MAIN GAME:
+
+
+    1010 PLOT 10,10: INK 6: DRAW 0,150: DRAW 200,0: DRAW 0,-150: DRAW
+
+    -200,0:
+
+
+    1020 GO SUB 2000: REM *** DRAW Board
+
+
+    1100 LET i=$INKEY($)
+
+
+    1105 IF timer=0 THEN STOP
+
+
+    1106 PRINT AT 12
+
+
+    1110 IF i=$="o" GO TO 1100
+
+
+    1115 xx = x; LET yy = y; PRINT AT y,x; PAPER 0;"
+
+
+    1120 IF i=$="o" THEN LET x=x-1
+
+
+    1130 IF i=$="p" THEN LET x=x+1
+
+
+    1140 IF i=$="q" THEN LET y=y-1
+
+
+    1150 IF i=$="a" THEN LET y=y+1
+
+
+    1055 IF x>24 OR x<2 THEN LET x=xx
+
+
+    1056 IF y>19 OR y<2 THEN LET y=yy
+
+
+    1160 IF i=$=" " AND>0 THEN LET chg=chg-1: BEEP .3,3: LET setting=-INT
+
+    (RND*5)+1
+
+
+    1170 GO SUB 3000: REM test for colour
+
+
+    1180 LET timer=timer-1
+
+
+    1200 PRINT AT y,x; INK 7; PAPER setting;“O"
+
+
+    1900 GO TO 1100
+
+
+    2000 FOR n =1 TO 30
+
+
+    2010 PRINT AT INT(RND*13)+3,INT(RND*20)+2; PAPER INT (RND*5)+1; “
+
+
+    2030 NEXT n
+
+
+    2040 PRINT AT y,x; INK 7; PAPER setting;“O"
+
+
+    2050 RETURN'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '```
+
+    3000 REM **** fail colour doesnt match
+
+    ```
+
+
+    ```
+
+    3010 LET att1=INT (ATTR (y,x+1)/8)
+
+    ```
+
+
+    ```
+
+    3020 LET att2=INT (ATTR (y,x-1)/8)
+
+    ```
+
+
+    ```
+
+    3030 LET att3=INT (ATTR (y-1,x)/8)
+
+    ```
+
+
+    ```
+
+    3040 LET att4=INT (ATTR (y+1,x)/8)
+
+    ```
+
+
+    ```
+
+    3060 IF att1= setting OR att2=setting att3=setting OR att4=setting THEN
+
+    PRINT AT y;x; PAPER setting; “ LET score=score+1: LET timer=timer+
+
+    (setting*2); LET x=xx; LET y=yy; LET setting=INT (RND*5)+1: BEEP .1,5;
+
+    RETURN
+
+    ```
+
+
+    ```
+
+    3070 IF att1 >0 OR att2>0 OR att3>0 OR att4>0 THEN PRINT “Dead”! BEEP
+
+    1,-5; GO 10 TO 10
+
+    ```
+
+
+    ```
+
+    3080 PRINT AT 4,27;SC”; AT 6,27;score
+
+    ```
+
+
+    ```
+
+    3090 PRINT AT 0,2;“You have “chg; switches [SP] left
+
+    ```
+
+
+    ```
+
+    3100 RETURN
+
+    ```
+
+
+    # What’s New?
+
+
+    ATTR() function is similar to SCREEN($) but it returns the colour attributes for
+    the screen location queried in the form of a numeric value. It’s slightly more
+    complex but much more useful where the collision detection cannot rely on SCREEN($).
+    SCREEN($) will not work with UDGs for instance. The workings of the ATTR() function
+    is harder to work out but here is the gist of
+
+
+    ATTR() is the sum of the following values of attributes for a single character
+    position on the screen.
+
+
+    If the character position is flashing = 128 otherwise 0
+
+    If the character position is bright = 64 otherwise 0
+
+    Paper colour = colour value * 8 (e.g. Paper Cyan = 5*8 = 40)
+
+    Ink colour = (e.g. Ink Red = 2)
+
+
+    So adding all of those attributes will tell you what value should be returned
+    by'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'ATTR() function ATTR is lot more reliable than SCREEN($).
+
+
+    ```
+
+    3010 LET att1=INT (ATTR (y,x+1)/8)
+
+    3020 LET att2=INT (ATTR (y,x-1)/8)
+
+    3030 LET att3=INT (y-1,x)/8)
+
+    3040 LET att4=INT (ATTR (y+1,x)/8)
+
+    ```
+
+
+    3010 to 3040 are checking all sides for collision with a colour other than black
+    and if you do not not match the colour it will be Game Over.
+
+
+    ```
+
+    1180 LET timer=timer-1
+
+    ```
+
+
+    Using a Timer in your game is a nice easy dynamic and puts the player on alert
+    from the start. In this game we deduct the timer only when the player moves, so
+    it is not a real time timer. Because our game is a puzzle game we allow the player
+    to think about there next move. This could also be employed for a game where you
+    needed to reduce a players energy when they move, requiring them to eat to get
+    energy back.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# Suggestions for Extending (optional)
+
+
+    +   1] Add more variation to the game – items to increase time could appear randomly
+
+
+    +   2] Add small maze sections to the game'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# ANGRY CHICKY
+
+
+    It''s Christmas day and Young Timmy is hungry for his breakfast but needs some
+    Eggs for his Eggy Bread and Eggnog. The chicken who laid the eggs is angry and
+    looking to bite poor Timmy and prevent him taking the eggs! Guide Timmy to collect
+    as many eggs as possible and advance to the next screen.
+
+
+    Players: 1
+
+
+    Rules: Collect all the gold and avoid the traps the Apache Indians.
+
+
+    Controls: q = up, a = down, o = left, p = right, also Joystick will work if you
+    have one.
+
+
+    Bonus: As a little chore for you for the graphics try to work out on paper the
+    BIN to Decimal values for the graphics to save having to key in those 1s and 0s.
+
+
+    ```
+
+    10 REM *******ZX Spectrum Code Club ***
+
+    15 REM * ANGRY CHICKY by G Plowman 5015
+
+    20 REM ************************************n25 GO SUB 7000: REM **** Create graphics
+
+    30 INK 1: PAPER 7: BORDER 4: CLS
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 2;"ANGRY CHICKY"; PRINT AT 4,5;"Help
+    Timmy;CHR(145);" grab eggs to make his Eggy Bread";AT 6,5;"Avoid the Angry Chicky!";
+    INK 2;CHR$ (146)
+
+    35 LET lives=3
+
+    60 PRINT AT 7,5;"Avoid the cracked ice!"; PAPER 5; INK 2;"x"
+
+    ```'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '65 PRINT AT 8,5;Collect the EGGS!; PAPER 6;“o
+
+
+    70 PRINT AT 11,2;Controls: “;AT 12,2;Q/A=Up/Down, O/P=Left/Right
+
+
+    80 PRINT AT 18,5;FLASH 1;PRESS A KEY TO START”: PAUSE 0
+
+
+    100 GO SUB 300: REM initialise
+
+
+    130 GO SUB 1000: REM loop for game
+
+
+    200 GO TO 30:
+
+
+    300 REM ***** SETUP
+
+
+    310 LET x=10: LET y=0: LET vx=0: LET vy=0: LET score=0: LET lvl=1: LET
+
+    ax=1: LET ay=1: LET ax2=0: LET ay2=0: LET loot=0
+
+
+    330 RETURN
+
+
+    1000 CLS
+
+
+    1010 FOR n = 0 TO 19:
+
+
+    1030 PRINT AT n,0;CHR$ (144);AT n,31;CHR$ (144)
+
+
+    1040 NEXT n
+
+
+    1045 FOR n=1 TO 30
+
+
+    1050 PRINT AT 0,n;CHR$ (144);AT 19,n;CHR$ (144)
+
+
+    1060 NEXT n:
+
+
+    1070 FOR n = 1 TO 20
+
+
+    1080 PRINT AT INT (RND*(15)+3,INT (RND*(25)+3; PAPER 5;K 2;“x
+
+
+    1085 NEXT n
+
+
+    1086 FOR n = 1 TO 5:
+
+
+    1087 PRINT AT INT (RND*(15)+3,RND*(25)+3; PAPER 6;“o
+
+
+    1090 NEXT n
+
+
+    1095 PRINT AT 20,1;“Egg Bread: “;score
+
+
+    1100 LET i$=INKEY($): LET i=IN 31
+
+
+    1110 IF (i=“q” OR i=8) AND y>2 THEN LET vy=-1: LET vx=0
+
+
+    1120 IF (i=“a” OR i=4) AND y<19 THEN vy=1: LET vx=0
+
+
+    1140 IF (i$=“o” OR i=2) AND x>2 THEN vx=-1: LET vy=0
+
+
+    1130 IF (i$=“p” OR i=1) AND y<30 THEN vx=1: LET vy=0
+
+
+    1190 LET x=x+vx: LET y=y+vy
+
+
+    1150 IF x=0 THEN GO SUB 2000
+
+
+    1160 IF x=31 THEN GO SUB 2000
+
+
+    1170 IF y=19 THEN GO SUB 200'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '1180 IF y=0 THEN GO SUB 2000
+
+
+    1185 LET a=$SCREEN$(y,x)
+
+
+    1190 IF a=$“x” OR (y=ay AND x=ax) THEN GO SUB 2000
+
+
+    1200 IF a=$“o” THEN GO SUB 3000
+
+
+    1210 PRINT AT y,x;CHR$(145)
+
+
+    1230 IF vx<>0 PRINT AT y,vx;“
+
+
+    1240 IF vy<>0 PRINT AT y-vy,x;“
+
+
+    1250 IF lvl>0 THEN GO SUB 3500
+
+
+    1300 GO TO 1100
+
+
+    1900 STOP
+
+
+    2000 PRINT AT 21,15;“DEAD!”;AT 15,10; FLASH 1;“RESTARTING”; BEEP 2,1:
+
+    PAUSE 1000
+
+
+    2100 GO TO 30
+
+
+    3000 REM *** Collect loot
+
+
+    3010 LET score = score +(INT(RND*4)+1
+
+
+    3020 PRINT AT 20,1; PAPER 6; INK 2;“Eggry Bread:;score: BEEP .05,20
+
+
+    3030 LET loot=loot+1
+
+
+    3040 IF loot=5 PRINT AT 15,10; FLASH 1;“NEXT ROUND!”; BEEP 2,1
+
+
+    3050 IF loot=5 THEN PRINT loot=0: LET lvl=lvl+1: LET ax=2: LET ay=2: LET vx=0:
+
+    vy=0: GO TO 1000
+
+
+    3060 RETURN
+
+
+    3500 REM **** Move Chucky
+
+
+    3505 LET ax2=ax; LET ay2=ay
+
+
+    3510 IF ax>x THEN PRINT AT,ax;“: LET ax=ax-1: GO TO 3550
+
+
+    3530 IF ax<x THEN PRINT AT,ax;“: LET ax=ax+1: GO TO 3550
+
+
+    3520 IF ay<y THEN PRINT AT,ay;“: LET ay=ay+1.2: GO TO 3550
+
+
+    3540 IF ay>y THEN PRINT AT,ay;“: LET ay=ay-1.2
+
+
+    3550 SCREEN$(ay,ax)<” ” THEN ax=ax2: LET ay=ay2:
+
+
+    3560 PRINT AT ay,ax; INK 2;CHR$(146):
+
+
+    3565 IF ax=X AND ABS(ay-y)<1.5 GO TO 2000
+
+
+    3590 RETURN
+
+
+    7000 FOR n = 0 TO 23
+
+
+    7010 READ dat'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '```
+
+    7020 POKE USR "a"+n,dat
+
+    7030 NEXT n
+
+    7040 RETURN
+
+    7050 DATA BIN 00111100
+
+    7060 DATA BIN 01000011
+
+    7070 DATA BIN 10110101
+
+    7080 DATA BIN 11000011
+
+    7090 DATA BIN 10000001
+
+    7110 DATA BIN 10000001
+
+    7120 DATA BIN 01000010
+
+    7130 DATA BIN 00111100
+
+    7150 DATA BIN 00111100
+
+    7160 DATA BIN 01111000
+
+    7165 DATA BIN 01000111
+
+    7170 DATA BIN 00100100
+
+    7180 DATA BIN 10111101
+
+    7210 DATA BIN 11111111
+
+    7220 DATA BIN 11000011
+
+    7230 DATA BIN 00000000
+
+    7350 DATA BIN 00111000
+
+    7360 DATA BIN 00110110
+
+    7365 DATA BIN 01111111
+
+    7370 DATA BIN 11000101
+
+    7380 DATA BIN 11011000
+
+    7410 DATA BIN 10111110
+
+    7420 DATA BIN 01111111
+
+    7430 DATA BIN 00111100
+
+    ```'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '# Fun Themes
+
+
+    A fun game with a funny premise. That is what a lot of the old spectrum classics
+    have in common. Games like Mathew Smith’s Manic Miner and Jet Set Willy, British
+    gaming is literally full of games that were based on wacky ideas. Don’t be afraid
+    to experiment and have fun when making your games.
+
+
+    # What’s New?
+
+
+    We have used the ABS() function in our code, this is useful for calculating distances
+    of objects from one another, amongst other things. This function returns the result
+    as an absolute value, i.e. converting it to positive. So -1 become 1 and +1 is
+    1. This allows you test for difference between two values without the need of
+    worrying if the value tested is +2 or -2. The use case in our Angry Chicky game
+    is to find out if Chicky has caught Timmy.
+
+
+    # Suggestions for Extending (optional)
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_81_0.png)
+
+
+    | 1] Add another Angry Chicky to chase you |
+
+    | 2] Add more items to collect |
+
+    | 3] Add a timer bonus score to encourage the user to complete the screen quicker
+    |'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# ALLOTMENT WARS\n\nIn this odd game you have to make money from your produce\
+    \ and compete with your opposing allotments by sabotaging each others veg. Throw\
+    \ weeds at the opponents allotment to reduce the supply of veg! Harking back to\
+    \ the mad days of bedroom coding zaniness that made British gaming great! This\
+    \ game is not in this league, but disregard weird ideas right away, some very\
+    \ successful indie games sound terrible on paper. This game is made for extending\
+    \ or changing so feel free to take apart and add extra features etc.\n\nPlayers:\
+    \ 1\n\nRules: Throw weeds to hit other opponents Veg. Each shot you takes one\
+    \ of the opponents get a shot back at you. You lose if score goes below -4 and\
+    \ win the round if your score is 5 or more.\n\nControls: Keys A – G or 1 to 7\
+    \ will place your Gardener. Then A = Across, U = Up, D = Diagonal\n\n```\n10 REM\
+    \ ************************************n20 REM * ALLOTMENT WARS - Gary Plowman\n\
+    25 REM ************************************\n30 INK 7: PAPER 0: BORDER 0\n45 GO\
+    \ SUB 500\n50 CLS : PRINT AT 2,10; INK 6; BRIGHT 1; PAPER 1;“ALLOTMENT WARS\"\n\
+    LVL i = 10; LET round=1\n60 PRINT AT 4,1;“You must win Best Allotment\"\n70 PRINT\
+    \ AT 6,1;“Throw weeds to spill opp. Veg \n75 PRINT AT 8,1;“Score 5 to get to next\
+    \ round!”AT 10,1;“Each Veg you hit will give you an extra Veg\"\n80 PRINT AT 18,5;\
+    \ FLASH 1;“PRESS A KEY TO START”: PAUSE 0; CLS :\n```"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# RANDOMIZE
+
+
+    ```
+
+    110 GO SUB 300: REM initialise
+
+    130 GO SUB 1000: REM draw screen
+
+    140 GO SUB 3000: REM draw info on screen
+
+    150 GO SUB 2000: main loop
+
+    160 GO TO 50
+
+    300 REM **** Setup
+
+    310 LET score1=0: DIM v(3): LET score2=0: LET score3=0: LET score4=0
+
+    320 LET power=0: LET rightpos=0: LET toppos=0: LET g$="CPBT"; LET targ=0:
+
+    LET turn=1
+
+    400 RETURN
+
+    1000 REM **** Screen
+
+    1005 PRINT AT 1,23;"ALLOTMENT";AT 2,25;"WARS"
+
+    1010 FOR n=1 TO 7
+
+    1020 PRINT AT n,5; PAPER 4;"*-*-*-*--";
+
+    1030 PRINT AT n+10,5; PAPER 4;"*-*-*-*--"; PAPER 0;n
+
+    1040 PRINT AT n,15; PAPER 4;"*-*-*-*--";
+
+    1050 PRINT AT n+10,15; PAPER 4;"*-*-*-*--";
+
+    1080 NEXT n
+
+    1085 RANDOMIZE
+
+    1090 PRINT AT 7,12; INK 3;CHR$(144);AT 7,14; INK 5;CHR$(144);AT 20,20:
+
+    INK 2;CHR$(144)
+
+    1100 PRINT AT 10,5;"ABCDEFG";AT 19,0;"GROWING VEG - PLEASE WAIT..."
+
+    1120 PRINT AT 9,13; INK 6;CHR$(144)
+
+    1140 REM ******** WE ADD SOME VEG
+
+    1150 FOR n = 1 TO 18
+
+    1160 FOR m = 1 TO 20
+
+    1165 LET m =INT(RND(lvl)+1)
+
+    1170 IF SCREEN$(n,m)="**" AND rn<5 THEN PRINT AT n,m; PAPER 4; INK
+
+    3;g$(m)
+
+    1180 NEXT m
+
+    1190 NEXT n
+
+    1500 RETURN
+
+    ```'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '2000 REM **** Main Loop
+
+
+    2010 LET a$=INKEY$()
+
+
+    2020 IF a="" THEN GO TO 2010
+
+
+    2030 IF a$="1” AND a$="7” THEN LET rightpos = VAL a$: GO SUB 2500:
+
+    SUB 3000
+
+
+    2040 IF a$="a” AND a$="g” THEN LET topos = CODE a$-96: GO SUB 2500:
+
+    GO SUB 3000
+
+
+    2100 GO TO 2010
+
+
+    2500 REM **** Throw weeds
+
+
+    2505 PRINT AT 10,13;" BEEP .05,4
+
+
+    2510 IF rightpos>0 THEN PRINT AT 10+rightpos,13; PRINT
+
+    at 10,13;"
+
+
+    2515 IF topos>0 THEN PRINT AT 9+toppos, INK 6;CHR$(144): PRINT AT
+
+    10,13;"
+
+
+    2520 PRINT AT 19,0;"(A)cross Up or (D)diagonal"; AT 9,13; "
+
+
+    2540 LET b$=power+1: PRINT AT 20,0;"Pwr:"
+
+
+    2560 PRINT IN 2;AT 20,3+power;";CHR$(138)
+
+
+    2570 IF power > 8 THEN LET power = 1
+
+
+    2580 IF b$="a” OR b$="u” OR b$="d” THEN GO TO 2600
+
+
+    2590 GO TO 2540:
+
+
+    2600 BEEP .05,4: LET fx=0: LET fy=0
+
+
+    2610 FOR n = power TO 1 STEP -.5
+
+
+    2620 BEEP .05,n
+
+
+    2630 NEXT n
+
+
+    2650 IF rightpos>0 AND b$="a” THEN LET fx=13: LET fy=10+rightpos
+
+
+    2660 IF rightpos>0 AND b$="u” THEN LET fx=13: LET fy=10+rightpos-power
+
+
+    2670 IF rightpos>0 AND b$="d” THEN LET fx=13: LET fy=10+rightpos-
+
+    power
+
+
+    2680 IF topos>0 AND b$="a” THEN LET fx=4+toppos: LET fy=9
+
+
+    2690 IF topos>0 AND b$="u” THEN LET fx=4+toppos: LET fy=9-power
+
+
+    2700 IF topos>0 AND b$="d” THEN LET fx=4+toppos+power: LET fy=9-power
+
+
+    2710 LET r$=SCREEN$(fy,fx)
+
+
+    2710 PRINT AT fy,fx; INK 6;"'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '```
+
+    2715 IF fx<12 THEN LET targ=1
+
+    2720 IF fx>9 AND fy>9 THEN LET targ=2
+
+    2730 IF fx>12 AND fy>9 LET targ=3:
+
+    2735 LET rightpos=0: LET toppos=0
+
+    2740 IF rs="C" OR rs="P" OR rs="B" OR rs="T" THEN LET score1=score1+1:
+
+    BEEP,5,9; LET vx=5; LET vy=11; GO SUB 3200
+
+    2745 GO SUB 3300
+
+    2750 RETURN
+
+    3000 REM **** Redraw INFO *******
+
+    3010 PRINT AT 9,5;"
+
+    3020 FOR n = 1 TO 9
+
+    3030 PRINT AT 8+n,13;"
+
+    3040 NEXT n
+
+    3050 PRINT AT 19,0;"Select A - G or 1 - 7 "AT 20,0;"
+
+    3060 PRINT AT 3,23; INK 6;"You;"CHR(96);score1;" "AT 4,23; INK
+
+    3;"Pump;"CHR(96);v(1);" "AT 5,23; INK 5;"Blue";"CHR(96);v(2);" "AT 6,23;
+
+    INK 2;"Red;"CHR(96);v(3);" ""
+
+    3070 PRINT AT 9,13; INK 6;CHR(144)
+
+    3075 PRINT AT 8,23;"ROUND:";round
+
+    3080 IF score1<-2 OR score1>4 THEN GO SUB 3400:
+
+    3090 RETURN
+
+    3200 REM WIN SOMEOME VEG
+
+    3021 LET cnt=0
+
+    3205 IF targ=0 THEN LET v(targ)=v(targ)-1
+
+    3206 IF targ=0 THEN LET v(n)=v(n)+1
+
+    3210 LET veg=vgx+INT(RND*8); LET veg=vgy+INT(RND*4)
+
+    INT=(RND*4)+1
+
+    3220 IF SCREEN$(veg,veg)="*" THEN PRINT AT veg,veg; PAPER 4; INK
+
+    1;r$: RETURN
+
+    3225 LET cnt = cnt + 1
+
+    3226 IF cnt > 40 RETURN
+
+    3230 GO TO 3210
+
+    3240 RETURN
+
+    3300 REM *** Enemy shoot
+
+    ```'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# What’s New?
+
+
+    The original concept for this game changed a few times. In the end I went away
+    from an action based game to a turn-based one. This was purely due to the Spectrum’s
+    limits and playability. This offers more options to extend over the arcade version.
+    If you wish can convert / re-write to a multiplayer (hotseat) game for 1 to four
+    players, while keeping remaining players as controlled.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '# Reducing code
+
+
+    We were able to reduce the number of IF statements for keypresses by using code
+    that translated the keypress information into coordinates for our game.
+
+
+    ```
+
+    2030 IF a$="1" AND a$<="7" THEN LET rightpos = VAL a$: GO SUB 2500: GO SUB 3000
+
+    2040 IF a$="a" AND a$<="g" THEN LET toppos = CODE$-96: GO SUB 2500: GO SUB 3000
+
+    ```
+
+
+    VAL converts string numbers to actual numbers and CODE returns the character set
+    value for a string character.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Suggestions for Extending (optional)
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_88_0.png)
+
+
+    +   1] Add more features – e.g. multiplayer
+
+
+    +   2] Make the veg type matter – give different score per veg
+
+
+    +   3] Maybe you could add random events that affect the game'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# RETRO HUNTER
+
+
+    Little Ally has gone to a Retro Gaming Expo and must try to collect many games
+    as he he can within his time limit. He is slightly bonkers and runs in one direction
+    until he reaches a stall or the wall of the building. The more games he can collect,
+    the more time will be added to his timer. However, other Retro Collectors are
+    here and looking to snap up retro games too. So he''s gotta be quick to figure
+    out how to get around the Play Expo in this fun little Puzzle game.
+
+
+    Players: 2
+
+    Rules: Navigate the location and use the other stalls to reach the areas to collect
+    your games.
+
+    Controls: q = up, a = down, o = left, p = right to move.
+
+
+    | 10 REM ******ZX Spectrum Code Club |
+
+    | 15 REM * RETRO HUNTER by Gary Plowman |
+
+    | 20 REM****************2015*********** |
+
+    | 30 INK 0: PAPER 5: BORDER 1: CLS |
+
+    | 40 GO SUB 6000 |
+
+    | 50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 0;"RETRO HUNTER" |
+
+    | 60 PRINT AT 4,5;"Collect games to succeed!";AT 5,5;"Collections increase Timer!
+    |
+
+    | 80 PRINT AT 18,5; FLASH 1;"PRESS A KEY TO START"; PAUSE 0: CLS : RANDOMIZE |
+
+    | 110 GO SUB 300: REM initialise |
+
+    | 130 GO SUB 1000: REM draw screen |
+
+    | 140 GO SUB 2000: REM main loop |'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# 300 REM *******
+
+
+    310 LET x=7: LET y=17: LET vy=0: LET vx=0: LET sega=0: LET nin=0:
+
+    spec=0: LET comm=0; LET timer=100
+
+
+    400 RETURN
+
+
+    1000 REM ****** Screen
+
+
+    1010 CLS ; INK 5: PAPER 5: PRINT INK 0;AT 0,4;"RUN AROUND PLAY EXPO
+
+    HALL";AT 1,4;"COLLECTING RETRO GAMES";AT 20,0;"RETnHUNTER*"
+
+
+    1020 PRINT AT 03,5;MMMMMMMMMMMM
+
+
+    1030 PRINT AT 04,5;MM MM"
+
+
+    1040 PRINT AT 05,5;M M M
+
+
+    1050 PRINT AT 06,5;MM M M M
+
+
+    1060 PRINT AT 07,5;MM M M
+
+
+    1070 PRINT AT 08,5;M MM
+
+
+    1080 PRINT AT 09,5;M MMM M M
+
+
+    1090 PRINT AT 10,5;M M
+
+
+    1100 PRINT AT 11,5;MMM"
+
+
+    1110 PRINT AT 12,5;M"
+
+
+    1120 PRINT AT 13,5;MMM"
+
+
+    1130 PRINT AT 14,5;MM M M"
+
+
+    1140 PRINT AT 15,5;M MM M"
+
+
+    1145 PRINT AT 16,5;M MMM M"
+
+
+    1140 PRINT AT 17,5;M M M"
+
+
+    1150 PRINT AT 18,5;"MMMMMMMMMMMM"
+
+
+    1160 FOR n=3 TO 18
+
+
+    1170 FOR m = 5 TO 18
+
+
+    1180 IF SCREEN$(n,m)="M" THEN PRINT AT n,m;PAPER 1;INK 1;"M"
+
+
+    1190 NEXT m: NEXT n
+
+
+    1200 INK 2: PRINT AT 3,20;"SEGA;:sega;AT 5,20;Nndo;"nin;AT 7,20;ZXSp;
+
+    ";spec;AT 9,20;"C-64;";;comm
+
+
+    1210 LET score=min+spec+comma
+
+
+    1220 IF score<10 THEN s$="Novice"
+
+
+    1230 IF score>=10 THEN s$="Beginner"'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '1240 IF score>30 THEN s$="RetroFan"
+
+
+    1250 IF score>50 THEN s$="RetroGuru"
+
+
+    1280 PRINT AT 18,20;s;s;“
+
+
+    1300 RETURN
+
+
+    2000 REM GAME LOOP
+
+
+    2010 IF i=$INKEY($); LET j=IN31
+
+
+    2110 IF (i=$“q” OR j=8) AND (vx=0 AND vy=0) THEN LET vy=-1; LET vx=0
+
+
+    2120 IF (i=$“a” OR j=4) AND (vx=0 AND vy=0) THEN LET vy=1; LET vx=0
+
+
+    2140 IF (i=$“o” OR j=1) AND (vx=0 AND vy=0) THEN LET vx=-1; LET vy
+
+
+    2130 IF (i=$“p” OR j=2) AND (vx=0 AND vy=0) THEN LET vx=1; LET vy=0
+
+
+    2190 SCREEN$(y+vy,x+vx)<“M” THEN PRINT AT y,x;”: LET x=x+vx; LET
+
+    y=y+vy
+
+
+    2192 IF$(y+vy,x+vx)=“M” THEN vx=0; LET vy=0
+
+
+    2195 IF$“S” THEN LET lega= sega +1; LET timer=timer+20; BEEP .2,8; GO
+
+    SUB 1200
+
+
+    2210 IF$“C” THEN LET comm= comm+1; LET timer=timer+10; BEEP .2,5;
+
+    SUB 1200
+
+
+    2220 IF$“Z” THEN LET spec= spec +1; LET timer=timer+30; BEEP .2,13: GO
+
+    SUB 1200
+
+
+    2230 IF$“N” THEN LET nin= nin +1; LET timer=timer+20; BEEP .2,8: GO
+
+    SUB 1200
+
+
+    2240 IF timer> 60 THEN timer=160;
+
+
+    2290 PRINT AT y,x; INK 0;CHR$(144); AT 20,20;Clock;;timer; “
+
+
+    2300 LET timer<= 0 PRINT AT 10,10;“GAME OVER”; AT 12,10;“SCORE
+
+    WAS”;score; BEEP 2,10; CLS GO TO 50
+
+
+    2400 INT (RND*100)<6 THEN GO SUB 3100
+
+
+    2410 INT (RND*50)<20 THEN GO SUB 3200
+
+
+    3000 GO TO 2000
+
+
+    3100 REM ***** PLACE COLLECTABLE
+
+
+    3110 LET cx=6+INT (RND*10): LET cy=4+INT (RND*10): LET ty=INT
+
+    (RND*4)+1
+
+
+    3120 IF SCREEN$(cy,cx)=“M” THEN GO TO 3110'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '# Puzzle Games
+
+
+    These type of games work very well in Sinclair BASIC. They usually don''t rely
+    on fast paced action and require more thinking and analysis. You can change this
+    game in many ways and have it resemble another theme that is of interest to you
+    or of interest to someone in your family. Changing the screen level is simply
+    done by altering lines 1020 to 1150. Also only a few changes are required to make
+    a simple maze game from this base code.
+
+
+    ```
+
+    1020 PRINT AT 03,5;"MMMMMMMMMMMM"
+
+    1030 PRINT AT 04,5;"MM MM"
+
+    1040 PRINT AT 05,5;"M M M"
+
+    1050 PRINT AT 06,5;"M M M M"
+
+    1060 PRINT AT 07,5;"MM M"
+
+    ```'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '| 1070 PRINT AT 08,5;"M M MM" |
+
+    | 1080 PRINT AT 09,5;"M MMMM M" |
+
+    | 1090 PRINT AT 10,5;"M M" |
+
+    | 1100 PRINT AT 11,5;"MMM M" |
+
+    | 1110 PRINT AT 12,5;"M M" |
+
+    | 1120 PRINT AT 13,5;"M MMM" |
+
+    | 1130 PRINT AT 14,5;"MM M M" |
+
+    | 1140 PRINT AT 15,5;"M MM M" |
+
+    | 1145 PRINT AT 16,5;"M MMM M" |
+
+    | 1140 PRINT AT 17,5;"M M" |
+
+    | 1150 PRINT AT 18,5;"MMMMMMMMMMMM" |
+
+
+    # # Making your game fun
+
+
+    Everyone wants to make a fun game. But the concept can sound a lot more fun than
+    the end result. The game Retro Hunter started out with your character Ally collecting
+    on the screen against the clock but it had no real challenge as just a running
+    maze game. The end version became a puzzle game with only small tweaks to the
+    code and a redesign of the screen map. So rethinking your ideas is better than
+    scrapping a game completely. And this is a lot more fun now.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_93_0.png)
+
+
+    Suggestions for Extending (optional)
+
+
+    | 1] mechanics Make your own map and theme using the same |
+
+    | 2] Increase the screen size |
+
+    | 3] Add a 2 player mode with each taking turns to move to collect games |'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# SNOWBALL SHOOTOUT
+
+
+    No list of games is complete without a Christmas themed game to enjoy in the festive
+    season. Try to beat the other team by scoring 5 snowballs first. Choose the shooter
+    then choose two members of your team to hide.
+
+
+    Players: 2
+
+
+    Rules: Choose a Shooter and then two of your team to hide.
+
+
+    Be careful to hide your key presses from your opponent.
+
+
+    Controls: Keys 1 to 4.
+
+
+    ```
+
+    10 REM ******* ZX Spectrum Code Club
+
+    15 REM * SNOWBALL SHOOTOUT G Plowman 2015
+
+    18 REM ************************************
+
+    20 BRIGHT 1: INK 2: PAPER 7: BORDER 4 : CLS
+
+    30 GO SUB 5000: REM *** graphics
+
+    40 GO SUB 200: REM *** Setup
+
+    50 GO SUB 300: REM *** Restart
+
+    60 GO SUB 1000: REM *** Main loop:
+
+    200 LET score=0; DIM p(4): DIM o(4): LET turn=1: LET shoot1=0: LET shoot2=0:
+
+    sc1=0: LET sc2=0: LET hide=0
+
+    210 FOR n = 1 TO 4
+
+    220 LET p(n)=0: LET o(n)=0
+
+    250 RETURN
+
+    300 PRINT AT 6,5;"Snowball Shootout!"
+
+    310 PRINT AT 8,5;"Winter Is Coming!";AT 10,5;"EACH TURN";AT 12,5;"Choose
+
+    your player to shoot";AT 16,3; FLASH 1;"PRESS A KEY TO START";
+
+    ```'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '320 BEEP 1,4: PAUSE 0: CLS
+
+
+    390 RETURN
+
+
+    1000 REM *** Main loop / Setup screen
+
+
+    1005 LET hide=0
+
+
+    1010 FOR n=1 TO 20 STEP 2
+
+
+    1020 PRINT INK 4;AT n,0;CHR$ (146);AT n,30;CHR$ (146)
+
+
+    1030 PRINT INK 4;AT n+1,0;CHR$ (147);AT n+1,30;CHR$ (147)
+
+
+    1040 NEXT n:
+
+
+    1050 FOR n =0 TO 30
+
+
+    1060 PRINT INK 0,n;CHR$ (147);AT 20,CHR$ (146)
+
+
+    1070 NEXT n:
+
+
+    1110 PRINT AT 3,7;"\;AT 4,7;""
+
+
+    1112 PRINT AT 17,7;";AT 18,7;""
+
+
+    1115 FOR n =1 TO 4
+
+
+    1120 PRINT INK 4,6+n*3;CHR$ (146);AT 16,6+n*3;CHR$ (146);""
+
+
+    1130 PRINT INK 4;5,6+n*3;CHR$ (147);AT 17,6+n*3;CHR$ (147);":
+
+
+    1140 NEXT n
+
+
+    1150 IF p(n)=10 THEN GO TO 1165
+
+
+    1160 PRINT INK n+1;AT 3,7+n*3;CHR$ (145)
+
+
+    1165 IF o(n)=10 THEN GO TO 1185
+
+
+    1170 PRINT INK n;AT 18,7+n*3;CHR$ (145)
+
+
+    1185 NEXT n:
+
+
+    1190 PRINT AT 10,5; INK 1; PAPER 4;"PLAYER 1;"\BEGIN SNOWFIGHT!\": PAUSE 0:
+
+    SUB 3000: REM clear part of screen"
+
+
+    1200 REM *** game loop
+
+
+    1205 LET hide=0
+
+
+    1210 IF turn=1 THEN PRINT AT 10,5 :"shooter";AT 3,2; PAPER 7;"PLY 2";AT 18,2;
+    PAPER
+
+    11,5;"PRESS 1-4 FOR "shooter";AT 18,2; PAPER 7;"PLY 1";AT 3,2; PAPER
+
+    4;"PLY 1"
+
+
+    1210 IF turn=2 THEN PRINT AT 10,5; INK 1; PAPER 4;"PLAYER 2;"\AT
+
+    11,5;"PRESS 1-4 FOR "shooter";AT 18,2; PAPER 7;"PLY 1";AT 3,2; PAPER
+
+    4;"PLY 2"
+
+
+    1215 PRINT AT 3,26;"SC";AT 4,26;sc2;AT 18,26;"SC";AT 19,26;sc1'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '1220 i=$INKEY($); LET v=0
+
+
+    1225 IF i>="1" AND i<="4" THEN v=VAL i$: GO TO 1240
+
+
+    1230 GO TO 1220
+
+
+    1240 IF v<1 AND v>4 THEN BEEP .4,0 REM ** wrong!
+
+
+    1250 IF p(v)<11 AND turn=1 THEN BEEP .1,12: LET p(v)=1: GO TO 1280
+
+
+    1260 o(v)<11 AND turn=2 THEN BEEP .1,12: o(v)=1: GO TO 1280
+
+
+    1270 GO TO 1220:
+
+
+    1280 i=$INKEY($); LET v=0: REM ** Select who is to take cover
+
+
+    1285 i>="1" AND i<="4" THEN v=VAL i
+
+
+    1290 IF turn=1 PRINT AT 10,5; INK 1; PAPER 4;PLAYER 1: "AT
+
+    11,5;PRESS 1-4 to Take Cover"
+
+
+    1290 IF turn=2 PRINT AT 10,5; INK 1; PAPER 4;PLAYER 2: "AT
+
+    11,5;PRESS 1-4 to Take Cover"
+
+
+    1295 IF v=0 THEN GO 1280
+
+
+    1300 IF v=1 AND v<=4 AND turn=1 p(v)<10 THEN GO TO 1360
+
+
+    1310 IF v>1 AND v<=4 AND turn=2 o(v)<10 THEN GO 1350
+
+
+    1330 GO TO 1280:
+
+
+    1350 o(v)=0 AND turn=2 THEN BEEP .1,8: LET o(v)=2: hide=hide+1
+
+
+    1360 p(v)=0 AND turn=1 THEN BEEP .1,8: p(v)=2: hide=hide+1
+
+
+    1370 GO SUB 3400
+
+
+    1390 turn=1 AND (check=5) AND hide=2 THEN turn=2: GO TO 1200
+
+
+    1400 turn=2 AND (check=5) AND hide=2 THEN BEEP .4,4: GO SUB 3000:
+
+    GO SUB 2000:
+
+
+    1450 GO TO 1280
+
+
+    1600 *** Redraw Teams:
+
+
+    1610 FOR n=1 TO 4
+
+
+    1620 p(n)=1 PRINT AT 18,7+n*3; ";AT 17,7+n*3; INK n;CHR$ (145)
+
+
+    1630 o(n)=1 PRINT AT 3,7+n*3; ";AT 4,7+n*3; INK n+1;CHR$ (145)
+
+
+    1640 p(n)=0 PRINT AT 18,7+n*3; ";AT 17,7+n*3; ";AT 18,7+n*3; INK
+
+    n;CHR$ (145)
+
+
+    1650 o(n)=0 PRINT AT 3,7+n*3; ";AT 4,7+n*3; ";AT 3,7+n*3; INK
+
+    n;CHR$ (145)
+
+
+    1640 p(n)=2 PRINT AT 18,7+n*3; ";AT 18,6+n*3; INK n+1;CHR$ (145)
+
+
+    1650 o(n)=2 PRINT AT 3,7+n*3; ";AT 3,6+n*3; INK n;CHR$ (145)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '1690 NEXT n
+
+
+    1700 RETURN
+
+
+    2000 REM *** NEXT Turn
+
+
+    2010 GO SUB 1600
+
+
+    2020 FOR n =1 TO 4
+
+
+    2030 IF p(n)=1 THEN LET shoot1=n
+
+
+    2040 IF o(n)=1 THEN LET shoot2=n
+
+
+    2050 NEXT n
+
+
+    2060 REM *** shoot
+
+
+    2070 FOR n =1 TO 13
+
+
+    2080 PRINT AT 16-n+1,shoot1*3; “
+
+
+    2090 PRINT AT 5+n-1,7,shoot2*3; "
+
+
+    2100 PRINT AT 16-n,7,shoot1*3;CHR$(144)
+
+
+    2110 PRINT AT 5+n,7,shoot2*3;CHR$(144)
+
+
+    2120 BEEP .1,n
+
+
+    2140 NEXT n
+
+
+    2150 IF o(shoot1)<2 THEN BEEP 1,12: PRINT AT 3,7,shoot1*3;"ow!": LET
+
+    o(shoot1)=10: LET sc1=sc1+1
+
+
+    2150 IF p(shoot2)<2 THEN BEEP 1,12: PRINT AT 18,7+shoot2*3;"ow!": LET
+
+    p(shoot2)=10: LET sc2=sc2+1
+
+
+    2200 LET turn =1
+
+
+    2210 REM PRINT AT 11,3;"NEXT ROUND!"
+
+
+    2220 FOR n=1 TO 4
+
+
+    2230 IF o(n)<11 THEN LET o(n)=0
+
+
+    2240 IF p(n)<11 THEN LET p(n)=0
+
+
+    2250 NEXT n
+
+
+    2260 GO SUB 3400: REM ** check team
+
+
+    2270 IF sc2>=5 AND sc1<sc2 PRINT AT 10,10;"PLAYER 1 LOST!":
+
+    PAUSE 100: BEEP 1,10: PAUSE 0: CLS : GO TO 40
+
+
+    2280 IF sc1>=5 AND sc2<sc1 PRINT AT 10,10;"PLAYER 2 LOST!":
+
+    PAUSE 100: BEEP 1,10: PAUSE 0: CLS : GO TO 40
+
+
+    2290 GO TO 1110
+
+
+    2300 RETURN'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '```
+
+    3000 REM *** Clear screen routine
+
+    3010 PRINT AT 10,3;"
+
+    3020 PRINT AT 11,3;"
+
+    3030 RETURN
+
+    3400 REM *** Checking teams routine
+
+    3410 LET check1=p(1)+p(2)+p(3)+p(4)
+
+    3420 LET check2=o(1)+o(2)+o(3)+o(4)
+
+    3450 RETURN
+
+    5000 FOR n = 0 TO 31:
+
+    5010 READ dat
+
+    5020 POKE USR "a"+n,dat
+
+    5030 NEXT n
+
+    5050 RETURN
+
+    5100 DATA 0,24,55,122,60,24,0,0
+
+    5110 DATA 24,60,102,102,60,219,24,36
+
+    5120 DATA 8,28,28,42,73,28,42,73
+
+    5130 DATA 28,42,73,28,42,73,28,62
+
+    ```
+
+
+    # Progress
+
+
+    If you''ve gotten this far you must be really getting to grips with BASIC and
+    learning intuitively what most of the BASIC commands do. Also you must be familiar
+    now with coding in a simple template for a new game.
+
+    That''s how I learned to code!
+
+
+    # What''s New?
+
+
+    Loops are very handy for doing a lot of work with very little code. An easy way
+    to think of it is "count from 1 to 13" is the FOR n=x to y and the NEXT part seals
+    the loop by jumping back to increase the count. Other types of loops but the FOR
+    NEXT loop was the original one in Sinclair BASIC.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '```
+
+    2070 FOR n = 1 TO 13
+
+    2080 PRINT AT 16-n+1,7+shoot1*3;"
+
+    2090 PRINT AT 5+n-1,7+shoot2*3;"
+
+    2100 PRINT AT 16-n,7+shoot1*3;CHR$(144)
+
+    2110 PRINT AT 5+n,7+shoot2*3;CHR$(144)
+
+    2120 BEEP .1,n
+
+    2140 NEXT n
+
+    ```
+
+
+    The above code creates the shooting effect in the game. You can count backwards
+    also providing you use something like...
+
+
+    ```
+
+    2070 FOR n = 13 TO 1 STEP -1
+
+    ```
+
+
+    It''s not always the best choice if the loop is small. Looping from 1 to 2 is
+    not usually done. Also keep in mind the commands you have within your loop, slow
+    commands can really slow down your code if they happen to be included in a loop
+    for no good reason or by mistake.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_100_0.png)
+
+
+    # Suggestions for Extending (optional)
+
+
+    +   1] Add more sound effects or change the graphics and theme of the whole game
+    to one of your own e.g. Cowboys'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# TETRIX
+
+
+    Inspired by another super game that was extremely popular and is still played
+    today. The amazing Russian game Tetris that broke records across the world and
+    shipped with the hugely successful Game Boy hand held from Nintendo. Still the
+    best hand held system that ever was! In my humble opinion. Our version will have
+    a little bit more colour to it. I hope you enjoy this simplified version of the
+    gaming classic that came from behind the Iron Curtain. Nostrovia!
+
+
+    Players: 1
+
+
+    Rules: Make complete lines to get points and free up the screen.
+
+
+    Controls: z = left, x = right, space will rotate some of the block shapes.
+
+
+    ```
+
+    10 REM ******ZX Spectrum Club *****
+
+    15 REM * TETRIX by Gary Plowman 2015
+
+    20 REM ************************************
+
+    30 INK 0: PAPER 7; BORDER 4
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 0;"TETRIX": PRINT AT 4,5;"
+
+    60 PRINT AT 4,5;"Mistakes cost Points!"
+
+    80 PRINT AT 18,5; FLASH 1;"PRESS A KEY TO START": PAUSE 0: CLS
+
+    100 GO SUB 5000: REM Graphics
+
+    110 GO SUB 300: REM initialise:
+
+    130 GO SUB 1000: REM draw loop
+
+    140 GO SUB 2000: main loop:
+
+    ```'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '300 blocktype=0: LET rotate=0: LET inkcol=0: LET ypos=4: LET xpos=INT
+
+    (RND*10)+7: LET rotateproc=3000
+
+
+    310 DIM a(3): DIM c(3): DIM d$(3):
+
+
+    330 LET xpos2=0: LET score=0: LET offset=0: LET mov=0: LET lines=0
+
+
+    340 GO SUB 3000
+
+
+    360 RETURN
+
+
+    1000 REM ****** Screen
+
+
+    1010 FOR n = 6 TO 16: PRINT AT 19,n; PAPER 4; INK 6;CHR$(146): NEXT n
+
+
+    1020 FOR m=2 TO 19
+
+
+    1030 PRINT AT m,5; PAPER 4; INK 6;CHR$(146);CHR$(146);AT m,16;CHR$
+
+    (146);CHR$(146)
+
+
+    1030 NEXT m
+
+
+    1040 PRINT AT 4,20; PAPER 1; INK 6;"LINES";AT 5,20;lines
+
+
+    1100 RETURN
+
+
+    2000 REM *** MAIN SUB
+
+
+    2005 GO SUB 3600
+
+
+    2008 IF mov=1 THEN GO SUB 3700
+
+
+    2010 LET i$=INKEY$():
+
+
+    2010 mov=0
+
+
+    2020 LET attr1=ATTR (ypos,xpos): LET attr2=ATTR (ypos+1,xpos): LET
+
+    attr11=ATTR (ypos,xpos+1): LET attr12=ATTR (ypos+1,xpos+1): LET attr21=ATTR
+
+    (ypos,xpos+2): LET attr22=ATTR (ypos+1,xpos+2):
+
+
+    2030 IF blockSize<=2 AND (attr1=56 OR attr2=56) AND (attr11=56 OR attr12=56)
+
+    AND (attr21=56 OR attr22=56) THEN mov=1
+
+
+    2040 IF blockSize>2 AND (attr1=56 OR attr2=56) AND (attr11=56 OR attr12=56)
+
+    THEN mov=1
+
+
+    2050 IF mov=1 AND i$="x" AND ATTR (ypos,xpos-1)=56 THEN GO
+
+    SUB 3600: LET xpos=xpos-1: offset=1
+
+
+    2060 mov=1 AND i$="x" AND ((attr11=56 AND ATTR (ypos-1,xpos+1)=56) OR
+
+    attr21=56 AND ATTR (ypos-1,xpos+2)=56) OR (ATTR (ypos,xpos+3)=56) AND
+
+    ATTR (ypos-1,xpos+3=56)) THEN GO SUB 3600: LET xpos=xpos+1: LET
+
+    offset=-1
+
+
+    2070 IF i$="" AND mov=1 THEN GO SUB 4800
+
+
+    2100 LET ypos=ypos+mov
+
+
+    2110 IF mov=0 THEN GO SUB 3500:'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '2205 GO TO 2000
+
+    2210 GO SUB 3000
+
+    2600 GO TO 2000
+
+    3000 REM rotateoproc
+
+    3005 GO SUB 4000: GO SUB 4000: RANDOMIZE
+
+    3006 FOR n =1 TO 3: LET b(n)=0: LET a(n)=0: LET c$(n)="": LET d$(n)=""
+
+    NEXT n
+
+    3007 IF ypos < 4 THEN BEEP .5,-4: PRINT AT 10,10;"GAME OVER": PAUSE 0
+
+    PAUSE 0: CLS GO TO 110
+
+    3010 blocktype=INT(RND*7)
+
+    3020 IF blocktype=0 THEN LET b(2)=1: LET a(1)=1: LET a(2)=1: LET a(3)=1
+
+    3030 IF blocktype=1 THEN a(1)=1: LET b(1)=1: LET b(2)=1: LET b(3)=1
+
+    3030 IF blocktype=2 THEN a(3)=1: LET b(1)=1: LET b(2)=1: LET b(3)=1
+
+    3040 IF blocktype=3 OR blocktype=3 THEN b(1)=1: LET b(2)=1: LET a(1)=1
+
+    LET a(2)=1
+
+    3050 IF block=4 THEN a(1)=1: LET b(1)=1: LET b(2)=1
+
+    3070 IF blocktype=5 THEN a(2)=1: LET b(1)=1: LET b(2)=1
+
+    3075 IF blocktype>5 THEN a(1)=1: LET b(1)=1: LET b(2)=1
+
+    3080 LET ypos=2: LET xpos=7+INT(RND*3)
+
+    3200 RETURN
+
+    3500 REM **** PRINT BLOCKS with alternate colour
+
+    3505 LET inkbl = INT (blocktype/2)+1
+
+    3510 FOR n =1 TO 3
+
+    3540 IF a(n)=1 THEN PRINT INK inkbl;AT ypos,xpos+(n-1);CHR$ (145)
+
+    3550 IF b(n)=1 THEN PRINT INK inkbl;AT ypos-1,xpos+(n-1);CHR$ (145)
+
+    3560 NEXT n
+
+    3570 RETURN
+
+    3600 REM **** CLEAR BLOCKS
+
+    3610 FOR n =1 TO 3
+
+    3620 IF a(n)=1 THEN PRINT PAPER 7;AT ypos,xpos+(n-1)+offset; ""
+
+    3630 IF b(n)=1 THEN PRINT PAPER 7;AT ypos-2,xpos+(n-1)+offset; ""
+
+    3660 NEXT n
+
+    3665 LET offset=0'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '```
+
+    3670 RETURN
+
+    3700 REM **** PRINT BLOCKS with standard colour
+
+    3710 FOR n=1 TO 3
+
+    3740 IF a(n)=1 THEN PRINT INK 1; PAPER 7;AT ypos
+
+    ```'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: '4520 FOR m=7 TO 15
+
+
+    4530 IF count=9 AND ATTR (ypos-n,m)>56 THEN PRINT INK 0; PAPER 7;AT
+
+    ypos-1-n,m;"AT ypos-n+1,m;CHR$(145)
+
+
+    4540 IF count=9 AND ATTR (ypos-n,1)>56 THEN PRINT INK 0; PAPER 7;AT
+
+    ypos-n,m;"AT ypos-n+1,m;CHR$(145)
+
+
+    4590 NEXT n
+
+
+    4600 NEXT n
+
+
+    4610 RETURN
+
+
+    4700 REM ***---SHIFT DOWN
+
+
+    4710 FOR n =cn ypos TO 3 STEP -1
+
+
+    4720 FOR j =7 TO 15
+
+
+    4725 LET att=ATTR (n,j)
+
+
+    4730 IF att<56 THEN PRINT INK att-56; PAPER 7;AT n+1,j;CHR$(145);AT n;
+
+    INK 0; PAPER 7;"
+
+
+    4740 NEXT j
+
+
+    4750 NEXT n
+
+
+    4760 RETURN
+
+
+    4800 IF blocktype > 5 THEN blocktype=5: BEEP .2,8: GO SUB 3600: LET
+
+    a(1)=1: LET a(2)=0: GO SUB 3700: RETURN
+
+
+    4810 IF blocktype =5 THEN blocktype=6: BEEP .2,8: GO SUB 3600: LET
+
+    a(2)=1: LET a(1)=0: GO SUB 3700: RETURN
+
+
+    4820 IF blocktype =2 THEN blocktype=1: BEEP .2,8: GO SUB 3600: LET
+
+    a(3)=1: LET a(1)=0: GO SUB 3700: RETURN
+
+
+    4830 IF blocktype =1 THEN blocktype=2: BEEP .2,8: GO SUB 3600: LET
+
+    a(1)=1: LET a(3)=0: GO SUB 3700: RETURN
+
+
+    4840 RETURN
+
+
+    5000 FOR n =0 TO 23:
+
+
+    5010 READ dat
+
+
+    5030 NEXT n
+
+
+    5050 RETURN
+
+
+    5100 DATA 85,162,85,168,21,170,69,170,255,129,189,165,165 ,189,129,255
+
+
+    5110 DATA 255,145,145,245,253,133,255'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# What’s New?
+
+
+    So the we start by building our game screen and limiting the movement within the
+    Tetrix play area. The items will advance down the screen until they encounter
+    the ground tiles or another block. Now the next item will start coming down one
+    position at a time.
+
+
+    If the area below the block is occupied and the block cannot fit then the block
+    will get stuck there and we are on the next block and so on.
+
+
+    Now that’s all very easy, the hard part comes when we need to match and a line
+    and bring down the rest of the blocks. This is done with an array, a loop and
+    our friend the ATTR() function. As SCREEN$() will not work with UDGs and it does
+    not distinguish colour attributes like ATTR() does.
+
+
+    ```
+
+    4710 FOR n = ypos-cn TO 3 STEP -1
+
+    4720 FOR j = 7 TO 15
+
+    4725 LET=ATTR(n,j)
+
+    4730 IF att<-56 THEN PRINT INK att-56; PAPER 7;AT n+1,j;CHR$(145);AT n,j;
+
+    INK 0; PAPER 7;"
+
+    4740 NEXT j
+
+    4750 NEXT n
+
+    ```
+
+
+    Above is some simple code that is used for shifting down the positions and colour
+    attributes of the blocks. Our Tetrix game is not perfect, but you could add more
+    rotations on the shapes to improve it. I took a simple approach to try to keep
+    it easy to understand and short enough to type in.
+
+
+    # Suggestions for Extending (optional)
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_106_0.png)'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '2] Try to add features the game play
+
+
+    3] Add more block graphic styles or a different theme to the game'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# TYPE INVADERS
+
+
+    How about a game that tested your reflexes, spelling and how you coped under pressure.
+    Well that''s exactly what Type Invaders does. A game with a slight bit of educational
+    content while still remaining at heart, a race against the clock. Compete against
+    a friend or family member to see who can get the best score by remaining calm
+    and composed.
+
+
+    Players: 1
+
+
+    Rules: Player types out the words as the attack the base on right side of the
+    screen.
+
+
+    Controls: Type out words, making an error will mean having to start the word again
+    by hitting enter key. Also a fun game for kids – using smaller words.
+
+
+    ```
+
+    10 REM ******ZX Spectrum Code Club ***
+
+    15 REM * TYPE INVADERS by Gary Plowman
+
+    20 REM *********************************
+
+    30 INK 7: PAPER 0; BORDER 4: CLS
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 0;“TYPE INVADERS”: PRINT 4,5;“Fast to
+    Keep the Invaders"
+
+    60 PRINT AT 4,5;“Mistakes cost Points!"
+
+    80 PRINT AT 18,5; FLASH 1;“PRESS A KEY TO START”: PAUSE 0
+
+    100 GO SUB 300: REM initialise
+
+    130 GO SUB 1000: REM main loop for game
+
+    200 GO TO 30:
+
+    ```'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '# 300 ***** SETUP
+
+
+    310 LET lives=3: DIM a$(18,20): DIM x(18): DIM y(18): LET score=0: LET
+
+    misses=0: LET t$="BEEP: LET limit=3: LET lmt=0
+
+
+    320 RESTORE 340
+
+
+    305 RANDOMIZE
+
+
+    330 FOR n=1 TO 18:
+
+
+    340 READ d$
+
+
+    350 LET a$(n)=d$: LET y(n)=INT(RND*18)+1
+
+
+    370 NEXT n
+
+
+    390 RETURN
+
+
+    1000 CLS : REM ****** MAIN GAME
+
+
+    1010 FOR n=1 TO 19
+
+
+    1020 PRINT AT n,30; PAPER 6; INK RND*5;CHR$(139);CHR$(139)
+
+
+    1030 NEXT n
+
+
+    1031 FOR n=1 TO 170
+
+
+    1032 PLOT INK RND*6;INT(RND*210),n
+
+
+    1036 NEXT n
+
+
+    1038 PRINT AT 0,0; ** TYPE INVADERS **"
+
+
+    1040 LET i$=INKEY$(
+
+
+    1045 LET lmt=0
+
+
+    1050 FOR n=1 TO 18:
+
+    1060 IF x(n)>0 THEN PRINT AT y(n),x(n);";a$(n): LET lmt+1: LET
+
+    x(n)=x(n)+5.
+
+
+    1080 IF x(n)=30 THEN GO SUB 2000:
+
+
+    1070 IF i$="" THEN LET i$=INKEY$(
+
+
+    1090 NEXT n
+
+
+    1100 IF limit<limit THEN LET test=INT(RND*17)+1
+
+
+    1110 IF x(test)=0 THEN LET x(test)=1: LET y(test)=test:
+
+    1120 IF i$="" THEN LET i$=BEEP$(
+
+
+    1130 IF i$CHR$(13) THEN BEEP .05,4 GO SUB 1500: REM *** check for
+
+    match
+
+
+    1200 IF i$="" AND i$="z" THEN GO TO 1040
+
+
+    1205 IF i<>"" THEN BEEP .02,10'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '```
+
+    1210 LET t=$t+$i$
+
+    1220 PRINT AT 20,0; PAPER 7; INK 2;t$
+
+    1230 PRINT AT 20,13; INK 7; BRIGHT 1;"Score;:score;" Misses:;misses
+
+    1400 GO TO 1040:
+
+    1500 REM **** Checking for a hit
+
+    1510 LET t=$=""\
+
+    ```
+
+
+    # What’s New?
+
+
+    As we are using INKEY() to capture key presses but this time we are simulating
+    text entry and allowing for the Enter key (CHR$(13)) to finish the entry sequence.
+
+
+    ```
+
+    1120 IF i$="" THEN i$=INKEY$():
+
+    ```'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '1130 IF i=$CHR$ (13) THEN BEEP .05,4: GO SUB REM *** check for
+
+    match
+
+
+    Another new command introduced here is LEN. This just returns a value for the
+    length of the string you wish to query.
+
+
+    We also used DATA to store our string values for our words. Below is the code
+    used to READ in those words and place them randomly on your screen.
+
+
+    ```
+
+    330 FOR n=1 TO 18:
+
+    340 READ d$
+
+    350 LET a(n)=d$: LET y(n)=INT(RND*18)+1
+
+    370 NEXT n
+
+    ```
+
+
+    Each string of the array is associated with an array value, y() for the y-axis
+    screen position. Lines 1520 to 1540 test your answer and fill out your string
+    with the blank spaces that Sinclair BASIC needs when working with arrays. Sinclair
+    BASIC string arrays are always fixed in length, and pad out each value with spaces.
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_111_0.png)
+
+
+    > Suggestions for Extending (optional)
+
+
+    +   1] Add more words or change the existing words
+
+    2] Increase speed of the game over the levels
+
+    3] Randomise the speed of the words so that some words are faster than others
+    and need to be entered first'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# MINIPONG
+
+
+    Based on another classic that appeared in the Arcades and at home on the consoles
+    such as the Atari 2600. Who doesn''t remember the unforgettable sound of the square
+    ball missing your bat. Pong, the original arcade version, was made up entirely
+    of discrete logic chips (no CPU) and was a phenomenon across the world. This is
+    a short simple version of how to do a pong clone.
+
+
+    +   Players: 1
+
+
+    +   Rules: Hit the ball to other computer. Avoid missing to win!
+
+
+    +   Controls: q = up, a = down
+
+
+    | 10 REM ******ZX Spectrum Club ***** |
+
+    | 15 REM * MINIPONG by Gary Plowman |
+
+    | 20 REM ************2015*********** |
+
+    | 30 INK 7: PAPER 0: BORDER 0: CLS |
+
+    | 45 REM ***** Initialising variables |
+
+    | 50 PRINT AT 2,10; INK 7; BRIGHT 1; PAPER 2;"MIN PONG": PAUSE 0 |
+
+    | 35 LET lives=3 |
+
+    | 100 GO SUB 300: REM initialise |
+
+    | 120 GO SUB 500: REM menu |
+
+    | 130 GO SUB 1000: REM main loop for game |
+
+    | 200 GO TO 30 |
+
+
+    ```
+
+    300 LET ply=2; LET win=0; DIM a(9,2); DIM d(30); LET lvl=1; LET posY=30; LET
+
+    y=10; LET y2=10; LET frm=0; LET score=0; LET score2=0; LET time=0
+
+    ```'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '```
+
+    mov=11: LET ball=0: LET vx=0: LET vy=0: LET p=$CHR$(143)
+
+    400 RETURN
+
+    500 CLS
+
+    510 LET w=$CHR(140)
+
+    520 FOR n=0 TO 31
+
+    530 PRINT INK 7; AT1
+
+    ```'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '2060 IF bx+vx<3 AND abs collide>1 THEN LET score2=score2+1: BEEP 1,0
+
+    TO 1000
+
+
+    2065 IF bx+vx>27 AND collide<1 THEN LET vx=-1*(vx): LET vy=(RND*3)-
+
+    (RND*3): BEEP .2,4
+
+
+    2070 IF bx+vx<3 AND collide<1 THEN LET vx=-1*(vx): LET vy=(RND*3)-
+
+    (RND*3): BEEP .2,4
+
+
+    2080 LET bx=bx+vx: LET vy=by+vy:
+
+
+    2090 PRINT AT by,bx;p$
+
+
+    2100 RETURN
+
+
+    2500 REM **** PLAYER 2 movement
+
+
+    2510 IF y2>by+vy bx>9 THEN LET y2=y2-.8
+
+
+    2520 IF y2<by+vy bx>9 THEN LET y2=y2+.8
+
+
+    2550 RETURN
+
+
+    # What’s New?
+
+
+    Some basic movement AI for the opponent. Simple bouncing achieved using a reversal
+    of the horizontal or vertical direction value. To increase the difficulty you
+    can increase the player 2 speed settings.
+
+
+    ```
+
+    2500 REM **** PLAYER 2 movement
+
+    2510 IF y2>by+vy bx>9 THEN LET y2=y2-.8
+
+    2520 IF y2<by+vy bx>9 THEN LET y2=y2+.8
+
+    ```
+
+
+    # Suggestions for Extending (optional)
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_114_0.png)
+
+
+    +   1) Increase difficulty
+
+    2) Add obstacles to vary the bouncing
+
+    3) Make two player with one player using the joystick'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# 4] Add additional colour theme options'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# TAKEWAY TED
+
+
+    Ted must manage his Takeaway shop well or risk losing customers and money. Also
+    his missus will give him an ear-bashing if he messes it up too much. Ted must
+    feed the customers with the correct orders to bring in the moolah! If a food queue
+    is fully used then Ted will save money on the running costs. If he gives the customer
+    the wrong food...Uh oh!
+
+
+    Players: 1
+
+
+    Rules: Start your queue and as the customers come into your chip shop you have
+    to match their orders with what''s in your queue. Letters on screen: C = Chips,
+    B = Burger, F = Fish, P = Pizza and K = Kebab. Match the orders to your customer
+    queue. ''K'' will generate a new list of food items but it will cost money. Using
+    all available items gets you a free list of food to serve. Give a wrong order
+    to a customer and lose some of your money. The shop spends money to run so try
+    to make enough to keep it open.
+
+
+    Controls: k = make up to 5 food items. Selecting food: keys a, b, c, d or to select
+    food. Keys 1–8 to give item to customers.
+
+
+    ```
+
+    10 REM ******ZX Spectrum Code Club ***
+
+    15 REM * TAKEAWAY TED (Chip Shop Sim)
+
+    20 REM ******** Gary Plowman 2015 ****
+
+    30 INK 2: PAPER 0: BORDER 0: CLS
+
+    45 REM ******** TED*: Initialising variables
+
+    50 PRINT AT 1,8;"TAKEAWAY TED": PAUSE 0
+
+    35 DIM p(2): DIM l(10): DIM c(8): LET cash=30; LET speed=100: DIM c$(8):
+
+    LET cost=0: DIM q$(5): LET k$="CBFPK": LET take = 0: LET timer=20: LET
+
+    score=0
+
+    100 GO SUB 300 REM initialise and start game
+
+    ```'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '130 SUB 1000: REM main loop for game
+
+
+    200 GO TO 30
+
+
+    300 REM *** DRAW SCREEN
+
+
+    310 CLS
+
+
+    320 INK 6: PLOT 20,150: DRAW 0,-100: DRAW 200,0: DRAW 0,100: PLOT 30,70,
+
+    DRAW 180,0: DRAW 0,80: PLOT 30,70: DRAW 0,80
+
+
+    325 INK 4: PLOT 20,104: DRAW 0,-15: DRAW 15,0: DRAW 0,-15: DRAW -15,0,
+
+    PLOT 105,114: DRAW 0,-5: PLOT 110,114: DRAW 0,-5
+
+
+    326 INK 6: PLOT 107,102: DRAW 0,-7: DRAW -5,0
+
+
+    327 PLOT 112,102: DRAW 0,-9: DRAW -5,0:
+
+
+    330 PRINT AT 20,12; PAPER 2; INK 7;Door”
+
+
+    340 INK 3: PRINT AT 20,0; PAPER 6;“Ted’s Chips”; AT 20,17; Take Away “
+
+    350 PRINT AT 14,19;” Counter
+
+
+    360 PRINT AT 14,3;“12345678;
+
+
+    370 INK 4: PRINT AT 0,10;CASH: $”;cash; “ Sc”; score
+
+
+    380 FOR N =1 TO 5 PRINT 2+n, INK 6;CHR$(6+n) NEXT n
+
+    390 REM ** draw more...
+
+
+    400 INK 5: PLOT 120,130: DRAW -34,0
+
+
+    410 PLOT 140,130: DRAW 0,30: for n = 10 TO 30 STEP 4: PLOT 137,130+n:
+
+    DRAW 7,0; NEXT n
+
+
+    420 PRINT AT 4,11;“Oven”;AT 2,19;“Kebab”; BRIGHT 1;“K=New Food”
+
+    430 INK 6:PRINT AT 6,18;“_menu_”; BRIGHT 1;AT 7,17;“Chips $2”;AT
+
+    8,17;“Burger $3”;AT 9,17;“Fish $5”;AT 10,17;“Pizza $8”;AT 11,17;Kebab $4
+
+
+    500 RETURN
+
+
+    1000 LET a=INKEY($); LET timer=timer-1
+
+
+    1002 IF timer<0 AND INT (RND*4) THEN c=$INT(RND*8)+1)=“ ”
+
+
+    1005 IF timer<0 THEN LET timer=10: LET cash=cash-1
+
+
+    1008 IF a=$$” THEN GO TO 3800
+
+
+    1110 IF a=“k” THEN GO SUB 4200: GO SUB 4100
+
+
+    1120 IF a=“a” THEN LET timer=1: PRINT AT 3,7;“-”: BEEP ,3,5
+
+
+    1130 IF a=“b” THEN LET timer=2: PRINT AT 4,7;“-”: BEEP ,3,5
+
+
+    1140 IF a=“c” THEN LET timer=3: PRINT AT 5,7;“-”: BEEP ,3,5
+
+
+    1150 IF a=“d” THEN LET timer=4: PRINT AT 6,7;“-”: BEEP ,3,5'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '```
+
+    1160 IF a="e" THEN take=5; PRINT AT 7,7;BEEP .3,5;
+
+    1170 IF take>0 AND a>=="1" AND a<=="8" THEN GO SUB 4700; GO SUB 4100
+
+    3800 GO SUB 4300
+
+    3810 GO SUB 4600
+
+    3900 GO TO 1000
+
+    4100 REM *** PRINT KITCHEN QUEUE
+
+    4110 INK 2: FOR n = 1 TO 5
+
+    4120 PRINT AT 2+n,6;q($n);
+
+    4130 NEXT n
+
+    4150 RETURN
+
+    4200 REM *** ADD TO QUEUE
+
+    4205 LET cash = cash - 5
+
+    4206 RANDOMIZE
+
+    4208 FOR n = 1 TO 8
+
+    4210 LET r=INT(RND*10): LET qpos=INT(RND*5)+1
+
+    4220 IF r = 1 OR r=6 THEN LET q$(qpos)=\B"
+
+    4230 IF r = 2 OR r=7 THEN LET q$(qpos)=\C"
+
+    4240 IF r = 3 THEN LET q$(qpos)=\F"
+
+    4250 IF r = 4 THEN LET q$(qpos)=\K"
+
+    4250 IF r = 5 THEN LET q$(qpos)=\P"
+
+    4255 BEEP .02,qpos
+
+    4260 NEXT n
+
+    4290 RETURN
+
+    4300 REM **** RECALC SCREEN
+
+    4310 INK 4: PRINT AT 0,10;"CASH: $$\;cash;";" Sc";score
+
+    4320 FOR n = 1 TO 8
+
+    4330 PRINT BRIGHT 1;AT 16,2+n;c$(n)
+
+    4340 NEXT n
+
+    4400 RETURN
+
+    4600 REM **** NEW CUSTOMER
+
+    4610 RANDOMIZE : LET r =INT(RND*20)
+
+    4620 LET p =INT(RND*8)+1
+
+    ```'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '```
+
+    4630 LET order=INT(RND*5)+1
+
+    4640 IF r>0 THEN RETURN
+
+    4650 IF c$(p)="" THEN LET c$(p)=k$
+
+    4690 RETURN
+
+    4700 REM **** GIVE OUT ORDER
+
+    4705 BEEP .2, 11
+
+    4710 LET qpos=VAL a$
+
+    4720 IF q$(take)="C" THEN LET price=2
+
+    4730 IF q$(take)="B" THEN LET price=3
+
+    4740 IF q$(take)="P" THEN LET price=8
+
+    4750 IF q$(take)="F" THEN LET price=5
+
+    4760 IF q$(take)="K" THEN LET price=4
+
+    4765 IF c$(qos)<q$(take) THEN GO TO 4820
+
+    4770 IF c$(qos)=q$(take) AND q$()<>" THEN LET cash=cash+price:
+
+    c$(qos)="": LET q$(take)="-": LET take=0: LET score=score+1
+
+    4775 LET count=0
+
+    4780 FOR n=1 TO 10
+
+    4785 IF q$(n)="" OR q$(n)="" THEN LET count=count+1
+
+    4790 NEXT n
+
+    4800 IF count=5 THEN LET cash=cash+5: GO SUB 4200
+
+    4810 RETURN
+
+    4820 LET cash=cash-10: LET c$(qos)="": LET q$(take)="-": LET take=0
+
+    4900 RETURN
+
+    ```'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# What’s New?
+
+
+    Wackiness galore and who doesn’t love a bag of chips! The game is a queue based
+    game which needs quick reflexes to get your goods out the door in the hands of
+    your customers. This one might make your brain hurt.
+
+
+    We created graphics with PLOTs and DRAWs rather than UDGs here as there was no
+    screen action to be concerned with.
+
+
+    ```
+
+    326 INK 6: PLOT 107,102: DRAW 0-7; DRAW -5,0
+
+    ```
+
+
+    DRAW has a third parameter which is used for providing the angle of the line.
+    We did not use it – but it is handy to know it’s there in case you plan to try
+    something with it.
+
+
+    # Suggestions for Extending (optional)
+
+
+    +   1) Increase difficulty
+
+    2) Add more items or change the theme
+
+    3) Turn the wackiness up to 11'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# C5 SOLAR RACE
+
+
+    Sir Clive Sinclair has successfully funded his Kickstarter to build 4 Solar C5s
+    for use in his annual Sinclair C5 Solar Race. The 4 contenders will race over
+    200m to win the coveted trophy which will be presented by Sir Clive himself. The
+    trophy is constructed entirely from pre-used white ZX80 plastic casings.
+
+
+    Players: 2
+
+    Rules: Up to Four players (sort of), you press down the number of your C5 Car
+    to increase speed but if you run out of you stall and need to allow the sun to
+    regenerate your battery.
+
+    Controls: Keys 1 to 4.
+
+
+    |10 REM ****************************|
+
+    20 REM * C5 Solar Race |
+
+    30 REM * Gary Plowman * |
+
+    40 REM ****************************|
+
+    100 PAPER 7: INK 0: BORDER 7: BRIGHT 1: CLS |
+
+    140 GO SUB 300: REM setup game |
+
+    150 GO SUB 100: REM draw setup |
+
+    160 GO SUB 2000: REM main loop|
+
+
+    ```
+
+    300 LET a=$CHR 136: LET b=$CHR 139+$CHR 142+$CHR 140+$CHR 134:
+
+    LET c=$CHR 142+$CHR 140+$CHR 140+$CHR 140+$CHR 138:
+
+    310 LET s=$CHR 143+$CHR 143: LET=$CHR 143+$CHR 143+$CHR 143+143: DIM p(4); DIM
+    x(4): LET dist=0
+
+    320 FOR n =1 TO 4: LET p(n)=10: LET x(n)=1: NEXT n
+
+    330 LET ply=1; LET l=""; q=""; LET redraw=0
+
+    ```'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '340 FOR n=1 TO 31: LET i=$l+$CHR 132: LET q=q+$CHR 136: NEXT n:
+
+    1000 PRINT INK 6;AT 0,24;s$;AT 1,23;$AT 2,23;$AT 3,23;t;AT 4,24;s$
+
+
+    1010 FOR n = 5 TO 17: PRINT n,0; INK 7; PAPER 0;”
+
+    NEXT n
+
+
+    1020 FOR n = 1 TO 40
+
+    1050 PRINT PAPER 0; INK 7;AT n*3+2,x(n);a$;AT n*3+3,x(n);b$;AT
+
+    n*3+4,x(n);c$;AT n*3+2,x(n); INK n+1;CHR$ 143
+
+    1060 NEXT n
+
+
+    1080 PRINT AT 0,0;”Players 1 - 4 for Boost”;AT 4,0;”200m Race!”
+
+    1090 RANDOMIZE
+
+
+    1100 LET i=$INKEY($);
+
+    1105 PRINT AT 1,0;dist;”m”: LET dist=dist+1
+
+    1110 GO SUB 2000: REM anim screen
+
+    1115 GO SUB 2500: REM accelerate
+
+
+    1118 IF dist>200 THEN GO SUB 5000
+
+    1120 IF i<$1” OR i>“4” THEN GO TO 1100
+
+    1130 LET v=VAL i
+
+
+    1140 IF p(v)=2 THEN LET p(v)=p(v)-INT (RND*3): LET x(v)=x(v)+5. BEEP .01,
+
+    1150 IF p(v)<2 THEN x(v)=x(v)-2: LET p(v)=2: BEEP .01,-5:
+
+
+    1180 GO SUB 3500
+
+    1190 GO TO 1100
+
+    2000 REM *** Screen anim
+
+
+    2030 IF p(n)<9 THEN LET p(n)=p(n)+4
+
+    2040 NEXT n
+
+    2100 RETURN
+
+    2500 REM *** Acc
+
+
+    2510 LET choose=INT (RND*4)+1
+
+    2520 LET x(choose)=x(choose)+RND*2
+
+    2530 LET v=choose: GO SUB 3500'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: "```\n2570 RETURN\n```\n\n```\n3000 REM *** power bar\n```\n\n```\n3005 PRINT\
+    \ AT 20,0; INK 2;“P”;v\n```\n\n```\n3010 FOR n = 1 TO p(v); PRINT AT 20,n+3; INK\
+    \ 2;CHR $138; “: NEXT n\n```\n\n```\n3020 RETURN\n```\n\n```\n3500 REM *** ReDraw\
+    \ C5 Buggy\n```\n\n```\n3510 IF x(1)=25 OR x(2)>25 OR x(3)>25 OR x(4)>25 THEN\
+    \ GO SUB 3800:\n3700: REM *** Scroll Screen\n```\n\n```\n3550 LET pos=v*3+2:\n\
+    ```\n\n```\n3560 PRINT PAPER 0; INK 7;AT pos,x(v)-2; “;AT pos+1,x(v)-2; “;AT\n\
+    pos+2,x(v)-2; “\n```\n\n```\n3570 PRINT PAPER 0; INK 7;AT v*3+2,x(v);a$;AT v*3+3,x(v);b$;AT\n\
+    v*3+4,x(v);c$;AT v*3+2,x(v); INK v+1;CHR $143:\n```\n\n```\n3600 RETURN\n```\n\
+    \n```\n3700 REM *** Scroll\n```\n\n```\n3710 FOR n=1 TO 4; LET x=x(n)-10\n```\n\
+    \n```\n3720 IF x(n)<0 THEN LET x(n)=2\n```\n\n```\n3730 NEXT n\n```\n\n```\n3760\
+    \ RETURN\n```\n\n```\n3800 REM *** redraw\n```\n\n```\n3810 FOR n=1 TO 4\n```\n\
+    \n```\n3820 PRINT PAPER 0; INK 7;AT n*3+2,x(n)-2; “;AT n*3+3,x(n)-2; “;AT\nn*3+4,x(n)-2;\
+    \ “ ”\n```\n\n```\n3830 IF x(n)<2 THEN LET x(n)=2\n```\n\n```\n3840 NEXT n\n```\n\
+    \n```\n3850 RETURN\n```\n\n```\n5000 REM *** Declare winner\n```\n\n```\n5010\
+    \ LET win=0; LET winner=0\n```\n\n```\n5020 FOR n=1 TO 4\n```\n\n```\n5030 IF\
+    \ x(n)>win THEN LET win=x(n); LET winner=n\n```\n\n```\n5040 NEXT n\n```\n\n```\n\
+    5050 PRINT AT 10,10;“WINNER IS”, BEEP 2,8: PAUSE 0: GO TO 100\n```\n\n```\n5060\
+    \ PRINT AT 12,10;“Player ;winner: \n```"
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# Prototyping a game
+
+
+    Using really basic graphics for a game idea is a good way to test the idea before
+    investing too much time into doing a lot of coding. BASIC is really fun for prototyping
+    with. A prototype is like a crude demo model of something. Next time you think
+    of a game idea, try to make it in BASIC and see if its fun. If it is then you
+    probably have a good case to build your idea into a full game!
+
+
+    # Simple Block Graphics
+
+
+    Block graphics are retro and the Minecraft look is very popular. You can use the
+    Spectrum graphics characters to create simple graphics for your games – saving
+    you from having to create unnecessary UDGs for simple shapes.
+
+
+    # Suggestions for Extending (optional)
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_124_0.png)
+
+
+    | 1] | More C5s |
+
+    | 2] | Use your imagination and go wild |'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# PENALTY SHOOTOUT
+
+
+    Everyone loves a good Penalty Shootout. So you can code in your own 2 player version
+    here. Timing is everything in this little fun game. Hopefully you won''t fall
+    out with any friends while playing it. Have a good time and don''t spill your
+    tea in frustration.
+
+
+    Players: 2
+
+
+    Rules: Player 1 in Blue, Player 2 in Red. Taking turns and first to 5 wins proving
+    the opponent is at least 2 points behind. Shooter takes his shot then the player
+    in goal gets a chance to save it.
+
+
+    Controls: S = Shoot at goal (try not to go wide!), G = Goalkeeper makes a save
+    attempt.
+
+
+    ```
+
+    10 REM ******ZX Spectrum Code Club ****
+
+    15 REM * PENALTY SHOOTOUT – G Plowman
+
+    20 REM *********************************
+
+    30 INK 1: PAPER 4: BORDER 4: CLS
+
+    45 REM ***** Initialising variables
+
+    50 PRINT AT 1,5; INK 7; BRIGHT 1; PAPER 2;“PENALTY SHOOTOUT":
+
+    USE 0
+
+    35 LET lives=3: LET dice=0: LET ply=1: DIM p(2): DIM l(10): DIM c(2): LET
+
+    miss=0
+
+    100 GO SUB 300: REM initiale
+
+    120 GO SUB 500: REM menu
+
+    130 GO SUB 1000: REM main loop for game
+
+    200 GO TO 30
+
+    ```'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '300 PRINT AT 2,8; INK 1; BRIGHT 1;"0123456789"; AT 10; INK 1; BRIGHT
+
+    1;"0123456789";
+
+
+    320 FOR n = 1 TO 30: PRINT AT 3+n,0; INK n=OoOoOoOo; AT 3+n,10, PAPER
+
+    7,"; PAPER; INK 4; n=OoOoOoOo; NEXT n
+
+
+    330 PRINT AT 6,0; PAPER 2,"==========";AT 6,6;==========
+
+
+    340 PLOT 80,190-(6*8); DRAW 10,-14; PLOT 80+6*8,190-(6*8); DRAW -10,-14
+
+    1000 PRINT AT 18,20; FOR n TO INT (RND*15)+4; BEEP .1,n
+
+    NEXT n
+
+
+    1001 IF ply=1 THEN PRINT AT 16
+
+
+    1005 BEEP .3,10; LET ink = 1; IF ply=2 THEN INK ink=2
+
+    1006 PRINT INK inc; AT 10,6;CHR(139); AT 11,5;CHR(137);CHR$
+
+    (143);CHR(134);AT 12,6;CHR(142)
+
+
+    1010 FOR n = 1 TO 10
+
+    1020 LET i=$INKEY($)
+
+    1030 PRINT AT 11,8+(n-2); INK 6;";CHR(143);""
+
+    1040 IF i="g" THEN GO TO 1200
+
+    1045 NEXT n; PRINT AT 11,16; ""
+
+    1050 GO TO 1010
+
+
+    1100 BEEP .3,10
+
+    1100 IF ply=1 THEN PRINT AT 16,0; INK 2;"PLAYER 2 to save g(oal"
+
+    1102 IF ply=2 THEN PRINT AT 16,0; INK 1;"PLAYER 1 to save g(aol"
+
+    1110 FOR m = 1 TO 10
+
+    1120 LET i=$INKEY($)
+
+    1130 PRINT AT 3,8+(n-2); INK 6;";CHR(143); ""
+
+    1140 IF i="g" THEN GO TO 1200
+
+    1145 NEXT m; PRINT AT 3,16; ""
+
+    1150 GO TO 1110
+
+
+    1200 LET c(ply) = c(ply) + 1 : LET miss=0
+
+    1210 IF n=m THEN PRINT AT 18,10;"S A V D!"; LET miss=1:
+
+    1220 IF n<>m OR (n<3 n>7) THEN PRINT AT 18,10;"Wide!!"; LET
+
+    miss=1
+
+    1225 IF n<>m AND (n>2 AND n<8) THEN PRINT AT 18,10; INK 2;"G O A L L !!!""'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: 'LET miss=0
+
+
+    ```
+
+    1230 REM ply =1 AND miss=1
+
+    1240 IF ply =1 AND miss=0 THEN p(ply)=p(ply)+1: BEEP 1,14
+
+    1250 REM IF ply =2 AND miss=1 THEN l(c(ply))=0
+
+    1260 IF ply =2 AND miss=0 THEN p(ply)=p(ply)+1: BEEP 1,14
+
+    1270 IF miss=1 THEN BEEP 1,-1
+
+    1275 miss=9 THEN BEEP 1,-1
+
+    1276 PRINT AT 11,9; ";AT 3,9;"
+
+    1280 IF ply=1 THEN ply=2: GO SUB 2000
+
+    1290 IF ply=2 THEN ply=1: GO SUB 2000
+
+    1300 GO TO 1000:
+
+    2000 REM *** WINNER
+
+    2010 p(1)<5 AND p(2)<5 THEN GO TO 1000
+
+    2020 p(1)>5 AND p(1)-p(2)=2 THEN win=1: GO SUB 3000
+
+    2030 p(2)=5 AND p(2)-p(1)=2 THEN win=2: GO SUB 3000
+
+    2050 RETURN
+
+    3000 REM *** WINNER
+
+    3010 PRINT AT 10,10; FLASH 1;"WINNER IS PLAYER \win:
+
+    3020 PAUSE 0: PAUSE 0: CLS
+
+    3030 BEEP 2,0
+
+    3050 GO TO 45
+
+    ```
+
+
+    # Suggestions for Extending (optional)
+
+
+    +   1] Add better graphics
+
+
+    ![](img/a5b1b953bf13d825daab6d82a3f4e6b5_127_0.png)
+
+
+    +   2] Change around completely and make your own footy game with the penalty
+    part becoming the scoring scene for the game'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# BILLY BOB’S GOLD
+
+
+    This little game is a mash-up of a few games. Part Hungry Horace, part Pacman,
+    part a race against the clock. Your Claim to my mine is under threat from three
+    bad outlaws. They are looking to find you and put you out of your mine so they
+    can keep all the gold.
+
+
+    +   - Players: 1
+
+    Rules: Collect the Gold from Billy Bob’s mine while careful not to run down your
+    timer.
+
+    Controls: q = up, a = down, o = left, p = right. Also the joystick connected as
+    a Kempston.
+
+
+    ```
+
+    10 REM ********* ZX Code Club
+
+    20 REM * Billy Bob’s Gold - Gary Plowman
+
+    25 REM ************************************n30 INK 6: PAPER 0: BORDER 0: BRIGHT
+    1: CLS
+
+    40 GO SUB 6000
+
+    50 PRINT AT 2,6; INK 7; BRIGHT; PAPER 0;“BILLY BOB’S GOLD”: PRINT AT 4,5"
+
+    60 PRINT AT 6,0;"Collect gold beware the outlaws";AT 8,0;"Gold nuggets slow the
+    Timer!"
+
+    80 PRINT AT 18,5; FLASH 1;"PRESS KEY TO START"; PAUSE 0 : CLS : RANDOM : INK 0
+
+    110 GO SUB 300: REM initialise:
+
+    130 GO SUB 1000: REM draw scene
+
+    140 GO SUB 2000: REM main loop
+
+    300 REM ***********
+
+    305 LET score=0: LET maxgold=0
+
+    ```'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '310 LET x=7; LET y=17; LET vy=0; LET vx=0; LET timer=99
+
+
+    320 LET ex1=2; LET ex2=22; LET e=""; LET fs=""; LET ey1=4; LET ey2=4
+
+
+    330 LET vx1=0; LET vx2=0; LET vy1=0; LET vy2=0; LET vx3=0; LET vy3=0;
+
+    LET ey3=18; LET ex3=22; LET h$="
+
+
+    340 r3=0
+
+
+    400 RETURN
+
+
+    1000 REM ****** Screen
+
+
+    1010 CLS : INK 7; PAPER 0; PRINT INK 4;AT 0;0; Billy Bob’s Gold"
+
+
+    1015 INK 0
+
+
+    1020 PRINT AT 03;0;"MMMMMMMMMMMMMMMMMMMMMMMM"
+
+
+    1030 PRINT AT 04;0;"M
+
+    M"
+
+
+    1040 PRINT AT 05;0;"M MMMMMMM M MMMMMMM M"
+
+
+    1050 PRINT AT 06;0;"M M M M''"
+
+
+    1060 PRINT AT 07;0;"M MMMMM M M MM MM M''"
+
+
+    1070 PRINT AT 08;0;"M MM M"
+
+
+    1080 PRINT AT 09;0;"M MMMMMMM M MMM MM M"
+
+
+    1090 PRINT AT 10,0;"M M M''"
+
+
+    1100 PRINT AT 11;0;"MMMM M MMM MMM"
+
+
+    1110 PRINT AT 12;0;"M M''"
+
+
+    1115 PRINT AT 13;0;"M MMM MMM M MMMMMMM"
+
+
+    1120 PRINT AT 14;0;"M M''"
+
+
+    1125 PRINT AT 15;0;"MM MMMMMMM M MMMMMMM M"
+
+
+    1130 PRINT AT 16;0;"M M''"
+
+
+    1140 PRINT AT 17;0;"M MMMMMMM M MMM MM M"
+
+
+    1145 PRINT AT 18;0;"M M''"
+
+
+    1150 PRINT AT 19,0;"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+
+
+    1155 INK 7
+
+
+    1160 FOR n= 3 TO 19
+
+
+    1170 FOR m = 0 TO 25
+
+
+    1180 IF SCREEN$(n,m)="M" THEN PRINT AT n,m; PAPER 1; INK 1;"M"
+
+
+    1185 IF SCREEN$(n,m)="  " THEN PRINT AT n,m; INK 6;"6"
+
+
+    1190 NEXT m: NEXT n
+
+
+    2000 GAME LOOP *****************************************************************'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: "2010 LET i=$INKEY($): LET j=IN 31\n\n2110 IF (i=$=0 OR j=8) THEN LET vy=-1:\
+    \ LET vx=0\n\n2120 IF (i=$=a\" OR j=4) THEN LET vy=1: LET vx=0\n\n2140 IF (i=$=o\"\
+    \ OR j=1) THEN LET vx=-1: LET vy=0\n\n2130 IF (i=$=p\" OR j=2) THEN LET vx=1:\
+    \ LET vy=0\n\n2190 IF SCREEN$(y+vy,x+vx)<\"M\" THEN PRINT AT y,x;\"; LET x=x+vx;\
+    \ \ny=y+vy\n\n2195 LET y=$SCREEN(y,x)\n\n2200 IF y=\".\" THEN LET score=score+1:\
+    \ LET timer=timer+1: LET\nmaxgold=maxgold+1: BEEP,.018\n\n2240 IF timer>160 THEN\
+    \ timer=160:\n\n2290 PRINT AT y,x;CHR(144);AT 20,18;\"Clock;\";timer\";AT 2,0;\
+    \ INK\n6;\"Score\";score\n\n2300 LET timer=1\n\n2310 IF timer <=0 THEN PRINT AT\
+    \ 10,10;\"GO OVER\";AT 12,10;SCORE\nWAS=\";score: BEEP 2,10; CLS : GO TO 50\n\n\
+    2400 IF maxgold=score THEN maxgold=maxgold*2: PRINT AT 10,10;\"NEXT\nLEVEL\";\
+    \ BEEP 1,8: BEEP,.50: GO SUB 310: GO TO 130\n\n2420 PRINT AT ey1,ex1; INK 6;CHR(145);AT\
+    \ ey2,ex2; INK 5;CHR(145);AT\ny3,ex3; INK 4;CHR(145)\n\n2430 GO SUB 4000:\n\n\
+    3000 GO TO 2000\n\n3010 REM *********************************************************************\n\
+    \n4000 REM **** MOVE ENEMIES\n\n4010 LET r1=0: LET r2=0: LET r3=0: RANDOMIZE\n\
+    \n4020 IF (vx=1 AND vy=0) OR (ex1=11 OR ex1=14) THEN LET r1=INT\n(RND*4)+1\n\n\
+    4025 IF (vx=2 AND vy2=0) OR (ex2=11 OR ex2=14) THEN LET r2=INT\n(RND*4)+1\n\n\
+    4030 IF (vx=3 AND vy3=0) OR (ex3=11 OR ex3=14) THEN LET r3=INT\n(RND*4)+1:\n\n\
+    4040 IF ABS (vy-vy1)<4 AND ABS (vy-vy1)<4 THEN LET vx1=vx AND\nvy1=vy\n\n4060\
+    \ IF vy1=0 AND r1=1 THEN vx1 =-1: GO TO 4080\n\n4065 IF vy1=0 AND r1=2 THEN vx1=1:\
+    \ GO TO 4080"
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '```
+
+    4070 IF vy1 AND r1=3 THEN LET vy1=-1: GO 4080
+
+    4075 IF vy1=0 AND r1=4 THEN LET vy1=1
+
+    4080 IF vy2=0 AND r2=1 THEN LET vx2=-1: GO 4120
+
+    4095 IF vy2=0 AND r2=2 THEN LET vx2=1: GO 4120
+
+    4100 IF vy2=0 AND r3=3 THEN LET vy2=-1: GO 4120
+
+    4110 IF vy2=0 AND r2=4 THEN LET vy2=1
+
+    4120 IF vy3=0 AND r3=1 THEN LET vx3=-1: GO 4200
+
+    4135 IF vy3=0 AND r3=2 THEN LET vx3=1: GO 4200
+
+    4140 IF vy3=0 AND r3=3 THEN LET vy3=-1: GO 4200
+
+    4150 IF vy3=0 AND r3=4 THEN LET vy3=1
+
+    4200 REM *** move ::
+
+    4210 PRINT INK 6; AT ey1,ex1,e$;AT ey2,ex2,f$;AT ey3,ex3,h:
+
+    4215 SCREEN$(ey1+vy1,vx1)="M" THEN vy1=0: LET vx1=0
+
+    4216 SCREEN$(ey2+vy2,vx2)="M" THEN vy2=0: LET vx2=0
+
+    4218 SCREEN$(ey3+vy3,vx3)="M" THEN vy3=0: LET vx3=0
+
+    4220 LET ex1=ex1+vx1: LET ey1=ey1+vy1
+
+    4230 LET ex2=ex2+vx2: LET ey2=ey2+vy2
+
+    4232 LET ex3=ex3+vx3: LET ey3=ey3+vy3
+
+    4235 LET e$=SCREEN$(ey1,ex1): LET f$=SCREEN$(ey2,ex2): LET
+
+    h$=SCREEN$(ey3,ex3)
+
+    4240 PRINT ey1,ex1, INK 6;CHR$(145);AT ey2,ex2, INK 5;CHR$(145);AT
+
+    y3,ex3; INK 4;CHR$(145)
+
+    4250 IF ABS(x-1)<2 AND (y-1)<2 THEN GO SUB 4600
+
+    4260 IF ABS(x-2)<2 AND (y-2)<2 THEN GO SUB 4600
+
+    4270 IF ABS(x-3)<2 AND (y-3)<2 THEN GO SUB 4600
+
+    4410 RETURN
+
+    4600 REM ***** GAME OVER
+
+    4610 PRINT AT AT 10,10;"GAME OVER";AT 12,10;"SCORE WAS ";score
+
+    4620 FOR n=1 TO 10: BEEP n/10,n:NEXT n
+
+    4630 CLS
+
+    4640 GO TO 50
+
+    4650 RETURN
+
+    5999 REM **** GRAPHICS
+
+    ```'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: "```\n6000 FOR n = 0 TO 15\n6010 READ dat\n6020 POKE USR \"a\"+n,dat\n6030 NEXT\
+    \ n\n6040 RETURN\n6100 DATA 24,60,24,27,15,11,24,60,24,36,126,153,126, 24,36,36\n\
+    ```\n\n# # What’s New?\n\nLook we have used ABS once again to test for collision\
+    \ with baddies. \n4250 IF ABS (x-ex1)<2 AND ABS (y-ey1)<2 THEN GO SUB 4600\n\n\
+    Also in order to mix up the baddie movement we added very basic AI to change direction\
+    \ of the baddie randomly if they a\n4020 IF (vx1=0 AND vy1=0) OR (ex1=11 OR ex1=14)\
+    \ THEN LET r1=INT\n(RND*4)+1\n\n# # Maze Games\n\nWho doesn’t love maze games!\
+    \ In the 1980s everyone went crazy for a dot munching Icon. So here we have added\
+    \ 3 baddies with basic rudimentary AI (random) and a few hacks to make the baddie\
+    \ go down the centre part of the screen maze. Lots can be done with this, our\
+    \ final game in this book.\n\n![](img/a5b1b953bf13d825daab6d82a3f4e6b5_133_0.png)\n\
+    \nSuggestions for Extending (optional)\n\n+   1] Increase difficulty\n2] Add another\
+    \ baddie\n3] Change around and make your own maze chaser!"
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# Congratulations
+
+
+    You are now a certified Sinclair BASIC Coder!
+
+
+    Thank You for purchasing this book and taking the time to work through it. If
+    you got through all the games you should be very familiar with BASIC by now, and
+    able to write some programs of your own. Plan your games on paper first in rough
+    form and type in your code piece by piece.
+
+
+    I hope you had fun and learned a little along the way while you typed in some
+    or all of these games. I hope you have enjoyed the experience and perhaps it has
+    got your brain cells working on how to create super games of your own with Sinclair
+    BASIC, or maybe you have been inspired to tackle other coding languages for your
+    next project.
+
+
+    Don’t forget to check out our Android games too, just search for Gazzapper Games
+    on Playstore. Please leave a review for this book on store you purchased from.
+
+
+    You can follow us on www.Twitter.com/Gazzapper or visit our site and signup for
+    updates
+
+
+    www.gazzapper.com
+
+
+    Thank you,
+
+
+    Gary Plowman
+
+
+    P.s. If you really liked it! You can also get a Printed Edition in a lovely Glossy
+    8x10” Book on Amazon.'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# APPENDIX A - The character set
+
+
+    This is the complete Spectrum character set, with codes in decimal.
+
+    E.g. PRINT CHR$(38) will display the & character
+
+
+    | Code | Character |
+
+    | 0 | Not used |
+
+    | 1 | Not used |
+
+    | 2 | Not used |
+
+    | 3 | Not used |
+
+    | 4 | Not used |
+
+    | 5 | Not used |
+
+    | 6 | PRINT comma |
+
+    | 7 | EDIT |
+
+    | 8 | |
+
+    | 9 | |
+
+    | 10 | |
+
+    | 11 | |
+
+    | 12 | DELETE |
+
+    | 13 | ENTER |
+
+    | 14 | number |
+
+    | 15 | not used |'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: '| 16 | INK control |
+
+    | 17 | PAPER control |
+
+    | 18 | FLASH control |
+
+    | 19 | BRIGHT control |
+
+    | 20 | INVERSE control |
+
+    | 21 | OVER control |
+
+    | 22 | AT control |
+
+    | 23 | TAB control |
+
+    | 24 | Not used |
+
+    | 25 | Not used |
+
+    | 26 | Not used |
+
+    | 27 | Not used |
+
+    | 28 | Not used |
+
+    | 29 | Not used |
+
+    | 30 | Not used |
+
+    | 31 | Not used |
+
+    | 32 | space |
+
+    | 33 | ! |
+
+    | 34 | ” |
+
+    | 35 | # |'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '| 36 | $ |
+
+    | 37 | % |
+
+    | 38 | & |
+
+    | 39 | , |
+
+    | 40 | ( |
+
+    | 41 | ) |
+
+    | 42 | * |
+
+    | 43 | + |
+
+    | 44 | , |
+
+    | 45 | - |
+
+    | 46 | . |
+
+    | 47 | / |
+
+    | 48 | 0 |
+
+    | 49 | 1 |
+
+    | 50 | 2 |
+
+    | 51 | 3 |
+
+    | 52 | 4 |
+
+    | 53 | 5 |
+
+    | 54 | 6 |
+
+    | 55 | 7 |
+
+    | 56 | 8 |
+
+    | 57 | 9 |'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '| 58 | | |
+
+    | 59 | ; | |
+
+    | 60 | < | |
+
+    | 61 | = | |
+
+    | 62 | > | |
+
+    | 63 | ? | |
+
+    | 64 | @ | |
+
+    | 65 | A | |
+
+    | 66 | B | |
+
+    | 67 | C | |
+
+    | 68 | D | |
+
+    | 69 | E | |
+
+    | 70 | F | |
+
+    | 71 | G | |
+
+    | 72 | H | |
+
+    | 73 | I | |
+
+    | 74 | J | |
+
+    | 75 | K | |
+
+    | 76 | L | |
+
+    | 77 | M | |
+
+    | 78 | N | |
+
+    | 79 | O | |'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '| 80 | P |
+
+    | 81 | Q |
+
+    | 82 | R |
+
+    | 83 | S |
+
+    | 84 | T |
+
+    | 85 | U |
+
+    | 86 | V |
+
+    | 87 | W |
+
+    | 88 | X |
+
+    | 89 | Y |
+
+    | 90 | Z |
+
+    | 91 | [ |
+
+    | 92 | / |
+
+    | 93 | ] |
+
+    | 94 | ^ |
+
+    | 95 | _ |
+
+    | 96 | £ |
+
+    | 97 | A |
+
+    | 98 | B |
+
+    | 99 | C |
+
+    | 100 | D |
+
+    | 101 | E |'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '| 102 | F |
+
+    | 103 | g |
+
+    | 104 | h |
+
+    | 105 | i |
+
+    | 106 | j |
+
+    | 107 | k |
+
+    | 108 | l |
+
+    | 109 | m |
+
+    | 110 | n |
+
+    | 111 | o |
+
+    | 112 | p |
+
+    | 113 | q |
+
+    | 114 | r |
+
+    | 115 | s |
+
+    | 116 | t |
+
+    | 117 | u |
+
+    | 118 | v |
+
+    | 119 | w |
+
+    | 120 | x |
+
+    | 121 | y |
+
+    | 122 | z |
+
+    | 123 | { |'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '| 146 | (c) |
+
+    | 147 | (d) |
+
+    | 148 | (e) |
+
+    | 149 | (f) |
+
+    | 150 | (g) |
+
+    | 151 | (h) |
+
+    | 152 | (i) |
+
+    | 153 | (j) |
+
+    | 154 | (k) |
+
+    | 155 | (l) |
+
+    | 156 | (m) |
+
+    | 157 | (n) |
+
+    | 158 | (o) |
+
+    | 159 | (p) |
+
+    | 160 | (q) |
+
+    | 161 | (r) |
+
+    | 162 | (s) |
+
+    | 163 | (t) |
+
+    | 164 | (u) |
+
+    | 165 | RND |
+
+    | 166 | INKEY$ |
+
+    | 167 | PI |'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '| 168 | FN |
+
+    | 169 | POINT |
+
+    | 170 | SCREEN$ |
+
+    | 171 | ATTR |
+
+    | 172 | AT |
+
+    | 173 | TAB |
+
+    | 174 | VAL$ |
+
+    | 175 | CODE |
+
+    | 176 | VAL |
+
+    | 177 | LEN |
+
+    | 178 | SIN |
+
+    | 179 | COS |
+
+    | 180 | TAN |
+
+    | 181 | ASN |
+
+    | 182 | ACS |
+
+    | 183 | ATN |
+
+    | 184 | LN |
+
+    | 185 | EXP |
+
+    | 186 | INT |
+
+    | 187 | SOR |
+
+    | 188 | SGN |
+
+    | 189 | ABS |'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '| 190 PEEK |
+
+    | 191 IN |
+
+    | 192 USR |
+
+    | 193 STR$ |
+
+    | 194 CHR$ |
+
+    | 195 NOT |
+
+    | 196 BIN |
+
+    | 197 OR |
+
+    | 198 AND |
+
+    | 199 <= |
+
+    | 200 >= |
+
+    | 201 <> |
+
+    | 202 LINE |
+
+    | 203 THEN |
+
+    | 204 TO |
+
+    | 205 STEP |
+
+    | 206 DEF FN |
+
+    | 207 CAT |
+
+    | 208 FORMAT |
+
+    | 209 MOVE |
+
+    | 210 ERASE |
+
+    | 211 OPEN # |'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '| 212 | CLOSE # |
+
+    | 213 | MERGE |
+
+    | 214 | VERIFY |
+
+    | 215 | BEEP |
+
+    | 216 | CIRCLE |
+
+    | 217 | INK |
+
+    | 218 | PAPER |
+
+    | 219 | FLASH |
+
+    | 220 | BRIGHT |
+
+    | 221 | INVERSE |
+
+    | 222 | OVER |
+
+    | 223 | OUT |
+
+    | 224 | LPRINT |
+
+    | 225 | LLIST |
+
+    | 226 | STOP |
+
+    | 227 | READ |
+
+    | 228 | DATA |
+
+    | 229 | RESTORE |
+
+    | 230 | NEW |
+
+    | 231 | BORDER |
+
+    | 232 | CONTINUE |
+
+    | 233 | DIM |'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '| 234 | REM |
+
+    | 235 | FOR |
+
+    | 236 | GO TO |
+
+    | 237 | GO SUB |
+
+    | 238 | INPUT |
+
+    | 239 | LOAD |
+
+    | 240 | LIST |
+
+    | 241 | LET |
+
+    | 242 | PAUSE |
+
+    | 243 | NEXT |
+
+    | 244 | POKE |
+
+    | 245 | PRINT |
+
+    | 246 | PLOT |
+
+    | 247 | RUN |
+
+    | 248 | SAVE |
+
+    | 249 | RANDOMIZE |
+
+    | 250 | IF |
+
+    | 251 | CLS |
+
+    | 252 | DRAW |
+
+    | 253 | CLEAR |
+
+    | 254 | RETURN |
+
+    | 255 | COPY |'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# ABOUT THE AUTHOR
+
+
+    Gary Plowman is Game Developer, Designer and Internet Entrepreneur from Dublin,
+    Ireland. Gary Plowman founded Gazzapper Games in 2014 and to date his games have
+    over a million downloads and thousands of downloads daily.'
+  merge: -1
+  pgno: 148
