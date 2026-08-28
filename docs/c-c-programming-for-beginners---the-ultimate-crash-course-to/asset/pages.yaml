@@ -1,0 +1,744 @@
+- img_proc: true
+  md: '![](img/2b6e10b0849c2eb74b8f55d776f45b4e_0_0.png)
+
+
+    # C++ PROGRAMMING FOR BEGINNERS - THE ULTIMATE CRASH COURSE TO LEARNING BASICS
+    OF C++ IN 24 HOURS OR LESS!
+
+
+    EDWARD COLE'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# C++:
+
+    C++ Programming For Beginners - The Ultimate Crash Course To Learning Basics Of
+    C++ In 24 Hours Or Less!'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of contents
+
+
+    +   Introduction
+
+    Chapter 1 – Getting Through Some Basic Symbols
+
+    Chapter 2 – Really Important Characters (Really They Are)
+
+    Chapter 3 – Learning to Think Differently
+
+    Chapter 4 – Using Classes to Help Build the Structure
+
+    Chapter 5 – Getting Down with Lists
+
+    Chapter 6 – Keeping Your Members Safe
+
+    Conclusion'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Introduction
+
+
+    Hi there! We''re going to do our best to plow through a little bit of the wonderfully
+    complex and intricate computer language that is known simply as C++. Learning
+    C++ certainly takes quite a bit of time, in fact you could dedicate entire semesters
+    of time to trying to master the intricacies involved with it.
+
+
+    Think of it like learning any language. You have to learn the basics of the sounds
+    and how words are pronounced along with their meaning long before you ever get
+    to the stage of actually being able to put sentences together with fully conjugated
+    verbs and dashing descriptive elements. The same it with C++.
+
+
+    We will be able to go over some of the basics in this crash course so that hopefully
+    you have some sort of language and it looks less foreign by the time we are completed.
+    Or, at least you will be able to understand why some of the things go where they
+    go, and why that is the case.
+
+
+    The basic language is broken down into two main components that are based on a
+    language that is similar to the one that you are reading now, and then the syntax
+    of the computer language honestly looks just...well it looks like computer language.
+
+
+    It isn''t really legible and doesn''t seem to make much sense whatsoever. It is
+    however the language that the computer speaks and if you want the computer to
+    do what you need it you are going to have to learn to speak in its language.
+
+
+    Just going to a foreign country
+
+
+    C++ is used to build nearly all of the programs that you have ever used. The purpose
+    of it is to write out a long series of commands that the computer is able to process
+    and turn into a series of executable actions that build upon one to another start
+    performing the functions that you want it.
+
+
+    Most people use one form of editor or another to write the code and then once
+    the code is written it must be converted over into a manner that the computer
+    can use through a compiler.
+
+
+    You only need to know that this is the process though because most programs now
+    day (or environments) provide both of these aspects nicely wrapped into one simple
+    package like Microsoft''s Visual C++.Net., or you can always get a free version
+    by doing a search online for a public domain shareable version that will easily
+    give you just much access, especially when you are at the beginning phases of
+    learning your way around coding.
+
+
+    Once you have gotten one of the many different environments available for you
+    to start writing code you are ready to begin.
+
+
+    The process isn''t pretty. It doesn''t look flashy, and there, and certainly certainly
+    aren''t any bells and whistles to getting code written. Unlike many of the website
+    builders that are available nowadays that use visual elements in a more drag-and-drop
+    basis, writing code involves a'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'boring window that you do nothing type in.
+
+
+    Writing code is certainly not for the faint of heart or those with a short amount
+    of patience, but you have made it this far and clearly have some sort of desire
+    to punish yourself by trying to conquer coding.
+
+
+    The good thing about it though is that once you have it down you will be be an
+    invaluable resource to many businesses and companies as there is always a need
+    for coders.
+
+
+    Plus, you may even be hot on the tail of being able to build your own program
+    that could make you the next overnight sensation. Stranger things have happened.
+
+
+    That being said, get ready to roll up your sleeves and prepare to be left with
+    more questions than you have found answers to that. That is just the way learning
+    code goes.
+
+
+    You will wonder how to do something and you will most likely have to go out there
+    and hunt for ways that other developers have done the same commands in their programs.
+
+
+    Thankfully, for the most part the online community of coders are usually more
+    than willing to help out other coders as the process is long and takes many hours
+    of sitting at the computer. Any human contact is welcome. Even if it''s just through
+    a forum.
+
+
+    Here we go.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Chapter 1 – Getting Through Some Basic Symbols
+
+
+    When you begin to write your first few commands you will notice lots of symbols
+    like "//" and "<inserted here>" and other commands such as "#include". Most code
+    that people write begin with a series of comments that are directions that the
+    programmer uses to keep an eye on what the program is heading in the right direction.
+
+
+    The lines of code for a program can be endless and at first glance you might not
+    exactly know what a given code is. That''s why programmers use the first 6 lines
+    or so to dictate what is going on with the code.
+
+
+    These lines begin with "//" and really don''t do anything for the program itself
+    except provide with a waking aim for anyone that may ever encounter a copy of
+    the code.
+
+
+    You may also notice if you look at a line of coding that most of the lines are
+    relatively short. The traditional standard is to keep the lines at or around 80
+    characters. This isn''t a necessity, but you will find that it certainly makes
+    scrolling through long lines of code much easier than you have to keep moving
+    your eyes fully across the screen.
+
+
+    Every line of code that you write actually tells the program what is referred
+    to as a statement and will always end with ". You will fare well if you think
+    a lot of the process of writing code as something similar to algebra. If this
+    then or X=2-Y or some sort of variation of a Variable. You will also learn that
+    C++ is sensitive.
+
+
+    This greatly increases the possibility for different coding that you can write,
+    but will make it difficult if you happen to forget that you capitalized a certain
+    command in one place and then forget to do it in another.
+
+
+    You name your variables as you create them and it is a wise programmer who learns
+    how to keep the titles of them short and sweet.
+
+
+    When you set up variables you will use the command "int x" or substitute x with
+    whatever letter or number you want to use as the variable. Following the "" you
+    go ahead and tell the program what the variable equals by typing something like
+    "x=32;"
+
+
+    Clearly you are going to be doing more than simply making equations with numbers
+    and letters but just of the command lungo is that you have to declare what the
+    variable will be and this is done through the "int" command stands for integer.
+    You can also do "string y" "y=whatever you want to be these verses right here"
+    When you write out a sentence for it to have you the phrase in quotation marks.
+
+
+    As you see above instead of using the phrase of "int y" when using a string of
+    words, we use the "string y" to dictate that there is a string of characters that
+    fulfill the purpose of the variable.
+
+
+    Some other variables that you will be the "double", the "float" and the "char"
+    these all mean (respectively) that you can use a decimal in an integer, a precision
+    number, and of course a single character from the alphabet.
+
+
+    Some of the variable can seem a bit odd, but you will learn to get the hang of
+    them the'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: more that you are required to use them in the different coding strings that
+    you develop and build.
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Chapter 2 – Really Important Characters (Really They Are)
+
+
+    In each line of code that you see, most of them at any rate, you will see the
+    use of the backslash a lot.
+
+
+    You use the backslash in combination with another character or letter to perform
+    a set every time it appears in your code. For instance, if you want to start a
+    new line you would type `/n` in your code.
+
+
+    You use `/t` to dictate that there needs to be a tab. `/0` (that’s a zero) to
+    represent something is null. And lastly as we already covered you want to represent
+    something simply a backslash you use the double backslash, `\\`.
+
+
+    When you are building up different variables you can assign them to different
+    functions by adding a character in front of the word. The front letter will also
+    help you identify what mixed-mode of expression you are using.
+
+
+    For the most part though you will find that it is best not to perform this type
+    of coding in case you would use things like nVariable for ‘int’ and dVariable
+    for ‘double’ and then cVariable for ‘character’ and szVariable for string.
+
+
+    That aspect is okay for all intents and purposes but when you begin to mix them
+    so that dVariable=cVariable you start to complicate things in a way that is not
+    necessary when the programming of the compiler is well capable enough to handle
+    these conversions for you automatically.
+
+
+    You will experience this as you code and then it will make sense. For now, just
+    know that you can simplify the naming of variables by placing a character or two
+    in front of them.
+
+
+    The next set of characters that you will want to involve operators that help the
+    program distinguish essentially if something is true or false. If it again again
+    in terms of ‘if this then’.
+
+
+    If two values are always no matter (what they have the same value) then you would
+    use a double equals `==` between variables and values.
+
+
+    If there is inequality you use `!=` You are probably familiar with the greater
+    or lesser signs. `<` and `>` they are as applicable in programming as they are
+    in mathematics. You use `&&` to dictate the word ‘and’ and it means that both
+    statements are true on both sides so long as the arguments are true that you use.
+
+
+    If only one of them is true then you use this `||` if it is false (I it doesn’t
+    make sense now) then you use the `||` symbol between both arguments.
+
+
+    You will also need to eventually build loops in your coding. This is a series
+    that will continue a certain action or condition is occurring. One of the easiest
+    to do this is to specify it with the word “While” followed by the condition.
+
+
+    So you could do something like “WhileStarting” followed by a set of commands marked
+    by the beginning and ending loop characters of “{ to start and }”} to finish the
+    loop.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'These are, of course, just the basics but hopefully they will help you start
+    to recognize some of the characters that you see so that you know a little bit
+    more of what is going on with them.
+
+
+    Remember that learning C++ or any code for that matter truly is learning another
+    language. It is going to look foreign and make absolutely no sense at first, until
+    you start to see it more and recognize what is going on will it kick in that it
+    actually makes any sense to you.
+
+
+    Just keep at it, and keep expanding your ''vocabulary'' and remember that much
+    of it depends on what you set each variable and condition to be.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Chapter 3 – Learning to Think Differently
+
+
+    Despite the language aspect of coding, which you will inevitably pick up on your
+    own accord over time and with practice, you are going to need to rewire the way
+    you think about things.
+
+
+    Right now you are probably like the rest of the world and think in terms of the
+    object that is in front of you. Right now it is whatever device you are using
+    to read this on.
+
+
+    It most likely is a smartphone or at the very least a tablet. I highly doubt many
+    of you are actually reading this on a laptop screen leave a big monitor, but still
+    you could be. For the sake of example let''s say that the lines you are reading
+    on your smartphone.
+
+
+    As you move the lines looking for some form of useful information you are scrolling
+    along with your thumb.
+
+
+    You are really only looking at the words. Your process of retrieving the useful
+    information involves skimming through quickly and not really thinking too much
+    about all the other process that is going on.
+
+
+    To start to think like a programmer, you need to step inside of the machine a
+    little bit more.
+
+
+    You need to think about all the circuitry that is going when you do your brain
+    to signal your thumb to move across the screen of your smartphone. You are swiping
+    the screen along but what sort of coding flow is necessary to make that happen.
+    That is just one part of the code. It is called an instance.
+
+
+    Then if you step even further inside of the machine there is the data tower that
+    is sending the information to you so that you can view it.
+
+
+    There is a path back from the data tower that came from Amazon, or wherever you
+    happen to come across a copy of this.
+
+
+    Further back from that there was a publisher, there was me the writer, there was
+    the day I went through, and there was the coffee I consumed in order to make this
+    happen.
+
+
+    This backtracking and looking through the many different abstractions that create
+    an event are the ways that you must begin to think when you are doing coding.
+
+
+    You have to think about everything that must go into the desired outcome, without
+    thinking solely on what you want the desired outcome to be.
+
+
+    If you get to focused on the plain reality of what you see with the objective
+    outlook (i.e. the text in front of you) then you''re not going to be dive deeper
+    into the matrix of it all what is going behind the scenes
+
+
+    When you are learning coding this process will get easier, then harder, then easier,
+    even more complicated than you can ever imagine. It is a wild chase down a rabbit
+    hole that at times will seem like it never ends.
+
+
+    Hence why you use those first few lines of the code and everyone else that might
+    pick up your code what it was you were trying to do. Inevitably there will come
+    a'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'time when you are simply fed up and no longer wish to continue, as you may
+    be feeling about this book right now now.
+
+
+    But trust that learning coding in a nutshell basically means that you are going
+    to be learning that you need to let go of everything you ever thought in terms
+    of the superficial aspects of what you see when you use a program. This is why
+    programmers pool together.
+
+
+    They are stuck in a real life RPG where hopefully all of the kinks in their code
+    can get worked out. There are always kinks in a code. You will never, no offense,
+    just sit down and pump out the perfect code. It just doesn''t work that way.
+
+
+    Our brains aren''t wired for that. But you can practice, and practice, and eventually
+    you will minimize the errors and increase the efficiency of your coding as you
+    learn to do more with less coding.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Chapter 4 – Using Classes to Help Build the Structure
+
+
+    When you are writing code there is a stage where you will want to quit using all
+    of the functional codes that mentioned earlier (and some of the other ones that
+    you are surely to pick up in the beginning) and you will want to start to define
+    classes.
+
+
+    Classes are a great way to make sure that all the information you input stays
+    within a group. When you set a class you define what the class will be.
+
+
+    You could write, "classBandStartYear" and as you build the code around it you
+    would write things such as "display(BandStartYear)\ and the code that you are
+    talking about the programming that you designed to input the name of a band and
+    it will spit out the corresponding date that the band started up given the long
+    pages of coding that you have put in with a set of bands.
+
+
+    You can see imagine that just coding for 30 different bands and their corresponding
+    start dates would require lengthy coding to produce a very minimal result.
+
+
+    The important thing that you realize is that building classes will help you group
+    everything so that the program knows which set of commands to apply to your class.
+
+
+    Let''s imagine you have made a class that involves something like "class Radio"
+    in order to get the class to start doing things you will use different phrases
+    as defined as functions that are key to the specific class that you assign them
+    too.
+
+
+    When you assign these functions they are known member functions and they will
+    always refer back to the specific class that you set them in.
+
+
+    You could do something like "channel()" inside of the radio class as a function
+    to define a specific radio station that you know clearly. The program could store
+    lists of applicable radio stations in your area that all come under "class Radio".
+
+
+    Whenever you go through the process of adding a member function to a class with
+    ‘channel’ example, you simply have to use the phrase "addChannel(int, double)"
+
+
+    This lets the program know that it will be a number and that it will be a value
+    that your standard radio station does. In order to fully connect this member function
+    to your class you will need to make it connected by typing the following "Radio:addChannel(int,double)"
+
+
+    This is essentially the full master of stating that the function goes along with
+    that specific class. It can be shortened to simply ":addChannel(int.double)" but
+    this would mean that the Class has nothing whatsoever do to the Radio class.
+
+
+    As you add different member functions you will find that it is always best to
+    keep them all directly in line with the class they go along with.
+
+
+    This will help ease the stress on your processor but there are times when you
+    will find the need to actually put the member function outside of the class.
+
+
+    This can be when the member function is an exceptionally lengthy piece of code.
+    To do'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: this would then create a source file that is external that your main class would
+    begin to reference when the scenario of the function becomes needed.
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Chapter 5 – Getting Down with Lists
+
+
+    Lists are commonly used to keep you from having to make a set declaration as to
+    the size of how long an object list will be. A list can go on indefinitely or
+    it can be shortened as much as you want.
+
+
+    The problem with lists though is that they aren’t quite as accessible as other
+    forms (such as arrays) considering that you have to go through each process of
+    a list before you reach the portion that you want.
+
+
+    Imagine it like the times that you feel out those wonderful forms for different
+    applications online. Many times you would like to skip some of unnecessary information
+    and get right to the point of just clicking on the ‘accept’ button, only you can’t.
+
+
+    You have to take your time and actually go through every little step in order
+    to get to the point where you fully move forward. That’s the way lists work. They
+    can work greatly to your advantage, and a linked list can certainly give great
+    efficiency given its expandability, but remember that it comes at the cost of
+    having to have your user through every little step.
+
+
+    Before you decide to make a list in one of your classes you have to make sure
+    that you can actually have a list in it. This is done through the following command:
+    “class LinkableClass”.
+
+
+    This leads up to the next important piece of code: “Next”. This is the bit of
+    code that will continue the list on to the next portion of the ladder. It gets
+    you through the list by essentially forming a chain for the list. You then continue
+    the list using //// for each of the different members that are included in the
+    class.
+
+
+    When you are starting off the list you use the code: “Next”, to define that it
+    is the head of the chain. Then at the end when you are finished you simply close
+    with “Head”.
+
+
+    Not necessarily the first thing you would think of when it comes to closing a
+    list, but then again we are talking about coding terminology here. You have to
+    suspend anything that makes you too much sense. Computers talk funny. “Head” essentially
+    commands the chain to close back to the beginning of it.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Chapter 6 – Keeping Your Members Safe
+
+
+    When you are creating member functions for certain classes you have to make sure
+    that they cannot be affected by other commands that reside outside of the given
+    class.
+
+
+    This is a process of protecting them more often than not from yourself so that
+    you don’t any harm to the integrity of the member function the further you delve
+    into your coding. It’s not like you are protecting them with some wildly safe
+    code. You are simply making sure they stay where you put them.
+
+
+    This process also will help you ensure that the class that you have created continues
+    to function in the manner that you made it.
+
+
+    If suddenly another line of your code were interfering with the member function
+    that you have set up, then the class that you created will no longer function
+    the way that it previously did. This could actually mess up far more than simply
+    the member function that you neglected protect.
+
+
+    This will also enable you to deal with ‘chunks’ of a class in a much easier organized
+    manner. If you ever need to replace part of it or make changes, you can do without
+    necessarily jeopardizing the remainder of the class and the other member functions
+    that fall under it.
+
+
+    It is also an important part of coding that stays completely out of site from
+    the person that is using the program.
+
+
+    This is when you truly get to start to make the magic happen behind the scenes.
+    It’s essentially the electricity that is flowing through your smartphone as you
+    read this.
+
+
+    The distinguishing terms for whether your class is public or protected is pretty
+    straightforward for this instance. You use the word “public” in addition to the
+    class to dictate that any of the other member functions that you may add down
+    through the class can also apply to the class.
+
+
+    If you want to protect it, you simply add “protected” in front of class to make
+    sure that non-members of the class can’t jump in and start making changes that
+    you don’t want or anticipate.
+
+
+    When you are starting to develop classes, as a general rule of thumb, all programmers
+    take the time to type out of the two commands as whether or not the class is public
+    or protected.
+
+
+    It is a quick change down the road to go from one or the other, but to keep things
+    in good form, it is ideal to go ahead and make the declaration when you are building
+    a class for the first time in every code.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Conclusion
+
+
+    This is just a quick and simplified crash course when it comes to learning the
+    language of C++. Individuals spend upwards of a year and then some just trying
+    to master enough coding to be able to make a decent and simple game.
+
+
+    The process isn''t that difficult if you are just looking to build a simple program
+    or library. But still you will be looking at a few months'' worth of intensive
+    study to get the point where you are comfortable with it. About all you can do
+    is what you have already done up to this point.
+
+
+    Immerse yourself in as much coding and jargon as you possibly can and expose yourself
+    to new things with coding on a continual basis. I know we have covered this already,
+    but it is really like learning a foreign language.
+
+
+    You could travel to France to learn the language, and it would be completely a
+    mind press without knowing a single bit of the language before you went there.
+    Eventually you would catch on, but it would most likely be through the help of
+    other locals that already speak the language.
+
+
+    The same is true with coding. One could argue that you never truly master it as
+    a language. Think of how many people speak English that are really far from being
+    able to claim anything complete mastery over the language. Sure they can speak
+    it and get by just fine on a daily basis, but they are not experts.
+
+
+    That is sort of how you code. You will learn to do some basics first and then
+    you will add to it. Eventually you will want to do more, and as you do you will
+    encounter a whole new vast set of complexities that will stand in your way like
+    the largest roadblock ever.
+
+
+    The more you work with the program you will learn that things change, the whole
+    landscape of coding is evolving as programs are upgraded and changing as well
+    as the operating systems that are performing all of the different fundamental
+    controls that you have included in your code.
+
+
+    The response to that is that you will forever by shifting your understanding of
+    the coding language as it is anything but a firm exacting science.
+
+
+    It is best to think of the language as more of a tool that is there to help you
+    solve the problem of building the program that you need. Remember that this isn’t
+    the only'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'language that is out there when it comes to programming.
+
+
+    You may find that there is another language that suits you far better and makes
+    more sense to use. There is also a vast array of new programming interfaces out
+    there that eventually eliminate the need to get involved and basic as C++.
+
+
+    Now you can build entire programs without ever having to touch a bit of code.
+    You can do it all visually, which for many people is a lot more intuitive when
+    it comes to making a program that is a game or that is going to function in a
+    more visually intensive manner.
+
+
+    These types of programs are usually done with more of a building blocks sort of
+    drag and drop setup that one can learn in a single evening spent playing around
+    with the programming ‘language’.
+
+
+    Of course any of the languages that are available out there, knowing how to use
+    it and actually building something worthwhile with it are two completely separate
+    things.
+
+
+    If you decide to stick with C++ (and there really is no reason why you shouldn''t)
+    prepare yourself for years of study and continual growth as you push the boundaries
+    of what you understand about the code.
+
+
+    There is no short quick answer when it comes to using this specific programming
+    language. It is probably harder to learn and understand than any spoken language
+    that there is.
+
+
+    The amount of variables and flexibility can exist each time that you work toward
+    identifying new problems and conquering them is nearly limitless.
+
+
+    The most important thing you can do with your coding is to learn to recognize
+    a problem when you see it as you are building and to be able to work your way
+    around it before you have set your scope on hundreds of hours of coding and have
+    missed making some of the necessary declarations early on in the coding.
+
+
+    This will come to learn over time as you start small and work your way up to making
+    some of the more intensive programming commands. Remember it''s slow and steady
+    that wins the race and the saying couldn''t be anymore applicable then it is when
+    it comes to coding.
+
+
+    If you stick with it, the reward of being able to write code on this level will
+    boost you to ninja programmer status instantly. C++ is anything but easy. Best
+    of wishes.'
+  merge: -1
+  pgno: 30
