@@ -1,0 +1,1984 @@
+- md: "\n# Data Structures and Algorithms in C++\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_0_0.png)\n\
+    \nYujing He\n\n# Data Structures and Algorithms in C++\n\nCopyright @2012, Yujing\
+    \ He\n\n# Content\n\n- [Data Structure](#)\n  - [Array](#)\n  - [Linked List](#)\n\
+    \  - [Queue](#)\n  - [Stack](#)\n  - [Set](#)\n  - [Binary Tree](#)\n- [Algorithm](#)\n\
+    \  - [Insert an element to an array](#)\n  - [Delete an element from an array.](#)\n\
+    \  - [Search an element from an array](#)\n  - [Sort an array](#)\n  - [Bubble\
+    \ Sort](#)\n  - [Insertion Sort](#)\n  - [Selection Sort](#)\n  - [Insert an element\
+    \ to a list](#)\n  - [Delete an element from a list](#)\n\n- Get the intersection\
+    \ of two arrays\n\n- Get the union of two arrays\n\n- Get the complement of an\
+    \ array\n\n- Get the Cartesian product of two arrays\n\n- Binary Search Tree\n\
+    \n- Width first Traverse\n\n- Depth First Traverse\n\n- Binary Tree Search\n\n\
+    # Data Structure\n\nData structure is a way to represent the storage and the organization\
+    \ of data in the computer for programming languages to easily access the data\
+    \ and process the data within. There are several kinds of data structures that\
+    \ are very commonly used: Array, List, Queue, Stack, Binary Tree, and Set that\
+    \ we will discuss here.\n\nDifferent data structure has its own characteristics.\
+    \ These data structures are used in most programming languages. Here we will use\
+    \ the C++ language to represent those data structures and see how to use them.\n\
+    \n# Array\n\nAn array is a sequence of data next to each other and one after another\
+    \ in a linear order. Array elements normally are stored adjacent to each other\
+    \ in the computer. Each element in the array is assigned a number associated with\
+    \ it which is called index, which is from 0 to n-1, and n is the total number\
+    \ of elements in the array because the index starts from 0 not from 1. For example,\
+    \ if the array have 9 elements totally, and the index in this array will be from\
+    \ 0 to 8, which is 0, 1, 2, 3, 4, 5, 6, 7, 8.\n\nIn C++, we use [] to indicate\
+    \ that it is an array:\n\n```cpp\nstring A[4] = { \"a\", \"b\", \"c\", \"d\" };\n\
+    ```\n\nThe above code shows that we initialize the array A to have four elements:\
+    \ \"a\", \"b\", \"c\", \"d\". Each of these elements has its inherent index which\
+    \ starts from 0. The \"a\" has the index 0, \"b\" has the index 1, \"c\" has the\
+    \ index 2, and \"d\" has its index 3.\n\nThe Array A looks like the following:\n\
+    \n| 0 | 1 | 2 | 3 |\n| a | b | c | d |\n\nTo access the element inside the array,\
+    \ we just need to use A[t], here t can be from 0 to 3; but cannot be less than\
+    \ 0 or larger than 3 since there are only 4 elements here, otherwise, it will\
+    \ be out of bound of the range.\n\nTo access \"a\" which is the first element,\
+    \ we use A[0]; to access \"b\" which is the 2nd element, we use A[1]; to access\
+    \ \"c\" which is the 3rd element, we use A[2]; to access \"d\" which is the 4th\
+    \ element, we use A[3].\n\nSo the number N’s element in the array, its index is\
+    \ N-1. To access the element in the array by one, we can use the following \"\
+    for\" statement. \"for\" statement is using the index to access each element with\
+    \ the index from 0 to N-1. \"count << \" will print out each element.\n\n```cpp\n\
+    for (int t = 0; t < 4; t++)\n{\n    cout << A[t];\n}\n```\n\n# Linked List\n\n\
+    Linked List is a list of nodes connected one after another. Each node has a pointer\
+    \ pointing to the address of next node. So in the computer, the nodes in the list\
+    \ no need to be stored adjacent to each other. And in this case, unlike an array,\
+    \ there is no index that can be used to access the node in the list directly.\
+    \ You need to walk through the head of the list to the next, and then to the next\
+    \ until the tail of the list.\n\nA -> B -> C -> D\n\nThe above is a list. The\
+    \ list in the computer will be similar to the following:\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_9_0.png)\n\
+    \nThe nodes in the list might or not be next to each other. The arrow in the diagram\
+    \ represents the address of the next node. The last node point to no where, we\
+    \ can use “null” to indicate, meaning no next node.\n\nEach node in the list has\
+    \ two properties: data and next node’s address or it is called the next pointer;\
+    \ Data field stores the actual data, such as string, integer, or floating number;\
+    \ the next pointer stores the address of the next node.\n\nWe can use the following\
+    \ struct to hold the two properties.\n\n```cpp\nstruct Node\n{\n    string data;\n\
+    \    Node * next;\n};\n```\n\nTo construct the list, we provide value to the data\
+    \ and the next for each node. “&” means to get the address of the node.\n\n```cpp\n\
+    Node A;\nA.data = \"a\";\nNode B;\nB.data = \"b\";\nNode C;\nC.data = \"c\";\n\
+    Node D;\nD.data = \"D\";\n```\n\n```cpp\nA.next = &B;\nB.next = &C;\nC.next =\
+    \ &D;\n```\n\nTo access the node, we need to go from the first node, which is\
+    \ called the header of the node, here in this list, the node A is the header of\
+    \ this list.\n\nNode * head = &A;\n\nWe use the “current” pointer to indicate\
+    \ each node that we arrive. For each current node, after print out the data it\
+    \ holds, we move the current variable to the next node, and print its data until\
+    \ the tail of the list.\n\n```cpp\nNode * current = head;\nwhile (current != nullptr)\
+    \ {\n    cout << current->data;\n    current = current->next;\n}\n```\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_9_0.png)\n\
+    \n# Queue\n\nThe characteristics of a queue are First In First Out (FIFO) and\
+    \ Last In Out. It is like the line or queue in the real world. When you want to\
+    \ purchase a coffee in Starbucks, the first customer gets served first, and the\
+    \ last customer in line gets served last. The middle of the queue will be served\
+    \ in sequence.\n\n| Apple | Orange | Banana | Cherry | Peach | Melon |\n\nIn the\
+    \ above example, if the left side is the beginning of the queue, the first in\
+    \ the queue is Apple, the following will be Orange, Banana, Cherry, Peach, Melon.\n\
+    \n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\n#include\
+    \ <queue>\n```\n\n```cpp\nint main ()\n{ /*create a queue \"Hello World !\"\n\
+    \  queue<string> q;\n  q.push(\"Hello\");\n  q.push(\"\");\n  q.push(\"World\"\
+    );\n  q.push(\"\");\n  q.push(\"!\");\n}\n```\n"
+  mdcn: "\n\n# C++ 数据结构与算法\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_0_0.png)\n\n\
+    Yujing He\n\n# C++ 数据结构与算法\n\nCopyright @2012, Yujing He\n\n# 目录\n\n- [数据结构](#)\n\
+    \  - [数组](#)\n  - [链表](#)\n  - [队列](#)\n  - [栈](#)\n  - [集合](#)\n  - [二叉树](#)\n\
+    - [算法](#)\n  - [向数组插入元素](#)\n  - [从数组中删除一个元素](#)\n  - [从数组中搜索一个元素](#)\n  - [对数组进行排序](#)\n\
+    \  - [冒泡排序](#)\n  - [插入排序](#)\n  - [选择排序](#)\n  - [向链表插入元素](#)\n  - [从链表中删除一个元素](#)\n\
+    \n- 获取两个数组的交集\n\n- 获取两个数组的并集\n\n- 获取数组的补集\n\n- 获取两个数组的笛卡尔积\n\n- 二叉搜索树\n\n- 广优先遍历\n\
+    \n- 深度优先遍历\n\n- 二叉树搜索\n\n# 数据结构\n\n数据结构是在计算机中表示数据存储和组织的方式，以便编程语言能够轻松地访问和处理其中的数据。有几种常用的数据结构：我们在这里讨论的数组、链表、队列、栈、二叉树和集合。\n\
+    \n不同的数据结构都有自己的特性。这些数据结构被用于大多数编程语言。在这里，我们将使用 C++ 语言来表示这些数据结构并查看如何使用它们。\n\n# 数组\n\
+    \n数组是线性顺序上相邻且一个接一个的数据序列。数组元素通常在计算机中相邻存储。数组中的每个元素都分配了一个与其相关的数字，称为索引（index），范围从\
+    \ 0 到 n-1，n 是数组中元素的总数，因为索引从 0 开始而不是从 1。例如，如果数组共有 9 个元素，那么该数组的索引将从 0 到 8，即 0, 1,\
+    \ 2, 3, 4, 5, 6, 7, 8。\n\n在 C++ 中，我们使用 [] 来表示它是一个数组：\n\n```cpp\nstring A[4] =\
+    \ { \"a\", \"b\", \"c\", \"d\" };\n```\n\n上面的代码显示我们初始化了数组 A 有四个元素：\"a\", \"b\"\
+    , \"c\", \"d\"。这些元素中的每一个元素都有其从 0 开始的固有索引。\"a\" 的索引为 0，“b\" 的索引为 1，“c\" 的索引为 2，“d\"\
+    \ 的索引为 3。\n\n数组 A 看起来如下：\n\n| 0 | 1 | 2 | 3 |\n| a | b | c | d |\n\n要访问数组内部的元素，我们只需要使用\
+    \ A[t]，这里 t 可以从 0 到 3；但不能小于 0 或大于 3，因为这里只有 4 个元素，否则将越范围。\n\n要访问第一个元素 \"a\"，我们使用\
+    \ A[0]；要访问第二个元素 \"b\"，我们使用 A[1]；要访问第三个元素 \"c\"，我们使用 A[2]；要访问第四个元素 \"d\"，我们使用 A[3]。\n\
+    \n所以数组中第 N 个元素的索引是 N-1。要逐个访问数组中的元素，可以使用下面的 \"for\" 语句。\"for\" 语句使用索引来访问索引从 0 开始的每个元素。\n\
+    \n```cpp\nfor (int t = 0; t < N; t++)\n{\n    cout << A[t];\n}\n```\n\n# 链表\n\n\
+    链表是由一个接一个连接的节点列表。链表中的节点指向下一个节点的地址。在计算机中，链表节点是顺序存储的。与数组不同，我们需要从链表的头部开始访问，直到链表的末尾。\n\
+    \nA -> B -> C -> D\n\n上面的列表如下所示：\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_9_0.png)\n\
+    \n链表中的节点可能并不相邻。箭头表示下一个节点的地址。可以使用“null”来表示没有下一个节点。每个节点有两个属性：data和next。data 字段存储实际数据，如字符串、整数或浮点数；next指针存储下一个节点的地址。\n\
+    \n我们可以使用以下结构体持有这两个属性：\n\n```cpp\nstruct Node\n{\n    string data;\n    Node *\
+    \ next;\n};\n```\n\n为了构造链表，我们为数据和下一个提供值。\n\n```cpp\nNode A;\nA.data = \"a\";\n\
+    Node B;\nB.data = \"b\";\nNode C;\nC.data = \"c\";\nNode D;\nD.data = \"d\";\n\
+    ```\n\n```cpp\nA.next = &B;\nB.next = &C;\nC.next = &D;\n```\n\n要访问节点，我们需要从第一个节点开始，它是链表的头部。我们使用“current”指针来指示到达的每个节点。对于每个当前节点，在打印它保存的数据后，我们将当前变量移动到下一个节点，直到链表的末尾。\n\
+    \n```cpp\nNode * current = &A;\nwhile (current != nullptr) {\n    cout << current->data;\n\
+    \    current = current->next;\n}\n```\n\n# 队列\n\n队列的特性是先进先出（FIFO）和后进先（LIFO）。它就像现实世界中的队伍或队列。当你在星巴克购买咖啡时，先来的顾客先被服务，最后来的顾客最后被服务。队列中间的部分将按顺序服务。\n\
+    \n| Apple | Orange | Banana | Cherry | Peach | Melon |\n\n在上面的例子中，如果左侧是队列的开头，队列中的第一个是\
+    \ Apple，接下来是 Orange、Banana、Cherry、Peach、Melon。\n\n```cpp\n#include <iostream>\n\
+    #include <string>\nusing namespace std;\n#include <queue>\n```\n\n```cpp\nint\
+    \ main ()\n{ /*创建一个队列 \"Hello World !\"\n  queue<string> q;\n  q.push(\"Hello\"\
+    );\n  q.push(\"\");\n  q.push(\"World\");\n  q.push(\"\");\n  q.push(\"!\");\n\
+    }\n```\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # Data Structures and Algorithms in C++
+
+
+    ![](img/c11c4a3212693e8558c7b1c05f5b5ac7_0_0.png)
+
+
+    Yujing He'
+  - "[PAGE 1]\n\n# # Data Structures and Algorithms in C++\n\nCopyright @2012, Yujing\
+    \ He\n\n# Content\n\n+   - [Data Structure](#)\n  - [Array](#)\n  - [Linked List](#)\n\
+    \  - [Queue](#)\n  - [Stack](#)\n  - [Set](#)\n  - [Binary Tree](#)\n- [Algorithm](#)\n\
+    \  - [Insert an element to an array](#)\n  - [Delete an element from an array.](#)\n\
+    \  - [Search an element from an array](#)\n  - [Sort an array](#)\n  - [Bubble\
+    \ Sort](#)\n  - [Insertion Sort](#)\n  - [Selection Sort](#)\n  - [Insert an element\
+    \ to a list](#)\n  - [Delete an element from a list](#)"
+  - '[PAGE 2]
+
+
+    Get the intersection of two arrays
+
+
+    Get the union of two arrays
+
+
+    Get the complement of an array
+
+
+    Get the Cartesian product of two arrays
+
+
+    Binary Search Tree
+
+
+    Width first Traverse
+
+
+    Depth First Traverse
+
+
+    Binary Tree Search'
+  - '[PAGE 3]
+
+
+    <!-- no content -->'
+  - '[PAGE 4]
+
+
+    # Data Structure
+
+
+    Data structure is a way to represent the storage and the organization of data
+    in the computer for programming languages to easily access the data and process
+    the data within. There are several kinds of data structures that are very commonly
+    used: Array, List, Queue, Stack, Binary Tree, and Set that we will discuss here.
+
+
+    Different data structure has its own characteristics. These data structures are
+    used in most programming languages. Here we will use the C++ language to represent
+    those data structures and see how to use them.'
+  - '[PAGE 5]
+
+
+    <!-- no content -->'
+  - '[PAGE 6]
+
+
+    # Array
+
+
+    An array is a sequence of data next to each other and one after another in a linear
+    order. Array elements normally are stored adjacent to each other in the computer.
+    Each element in the array is assigned a number associated with it which is called
+    index, which is from 0 to n-1, and n is the total number of elements in the array
+    because the index starts from 0 not from 1. For example, if the array have 9 elements
+    totally, and the index in this array will be from 0 to 8, which is 0, 1, 2, 3,
+    4, 5, 6, 7, 8.
+
+
+    In C++, we use [] to indicate that it is an array:
+
+
+    ```
+
+    string A[4] = { "a", "b", "c", "d" };
+
+    ```
+
+
+    The above code shows that we initialize the array A to have four elements: "a",
+    "b", "c", "d". Each of these elements has its inherent index which starts from
+    0. The "a" has the index 0, "b" has the index 1, "c" has the index 2, and "d"
+    has its index 3.
+
+
+    The Array A looks like the following:
+
+
+    | 0 | 1 | 2 | 3 |
+
+    | a | b | c | d |
+
+
+    To access the element inside the array, we just need to use A[t] , here t can
+    be from 0 to 3; but cannot be less than 0 or larger than 3 since there are only
+    4 elements here, otherwise, it will be out of bound of the range.
+
+
+    To access "a" which is the first element, we use A[0]; to access "b" which is
+    the 2nd element, we use A[1]; to access "c" which is the 3rd element, we use A[2];
+    to access "d" which is the 4th element, we use A[3].
+
+
+    So the number N’s element in the array, its index is N-1. To access the element
+    in the array by one, we can use the following "for" statement. "for" statement
+    is using the index to access each element with the index from'
+  - "[PAGE 7]\n\n0 to N-1. \"count << \" will print out each element.\n\n```\nfor\
+    \ (int t = 0; t < 4; t++)\n{\n    cout << A[t];\n}\n```"
+  - '[PAGE 8]
+
+
+    <!-- no content -->'
+  - "[PAGE 9]\n\n# Linked List\n\nLinked List is a list of nodes connected one after\
+    \ another. Each node has a pointer pointing to the address of next node. So in\
+    \ the computer, the nodes in the list no need to be stored adjacent to each other.\
+    \ And in this case, unlike an array, there is no index that can be used to access\
+    \ the node in the list directly. You need to walk through the head of the list\
+    \ to the next, and then to the next until the tail of the list.\n\nA -> B -> C\
+    \ -> D\n\nThe above is a list. The list in the computer will be similar to the\
+    \ following:\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_9_0.png)\n\nThe nodes\
+    \ in the list might or not be next to each other. The arrow in the diagram represents\
+    \ the address of the next node. The last node point to no where, we can use “null”\
+    \ to indicate, meaning no next node.\n\nEach node in the list has two properties:\
+    \ data and next node’s address or it is called the next pointer; Data field stores\
+    \ the actual data, such as string, integer, or floating number; the next pointer\
+    \ stores the address of the next node.\n\nWe can use the following struct to hold\
+    \ the two properties.\n\n```\nstruct Node\n{\n    string data;\n```"
+  - '[PAGE 10]
+
+
+    ```
+
+    Node * next;
+
+    };
+
+    ```
+
+
+    To construct the list, we provide value to the data and the next for each node.
+    “&” means to get the address of the node.
+
+
+    ```
+
+    Node A;
+
+    A.data = "a";
+
+    Node B;
+
+    D.data = "b";
+
+    Node C;
+
+    C.data = "c";
+
+    Node D;
+
+    D.data = "D";
+
+    ```
+
+
+    ```
+
+    A.next = &B;
+
+    B.next = &C;
+
+    C.next = &D;
+
+    ```
+
+
+    To access the node, we need to go from the first node, which is called the header
+    of the node, here in this list, the node A is the header of this list.
+
+
+    Node * head = &A;
+
+
+    We use the “current” pointer to indicate each node that we arrive. For each current
+    node, after print out the data it holds, we move the current variable to the next
+    node, and print its data until it arrives at the end of the list.'
+  - "[PAGE 11]\n\nThe symbol “*” can be used in the declaration of a pointer (an address\
+    \ of the data), the examples are the variable “head” declaration; if the symbol\
+    \ “*” is on the right side of a variable already declared, it indicates to get\
+    \ the content of its address, the example is the code (*current) in the while\
+    \ loop below.\n\nNode * current=head;\n\n```\nwhile ( current != 0 ) {\n    cout\
+    \ << (*current).data;\n    current = (*current).next;\n}\n```\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_11_0.png)\n\
+    \nFor a list, you can easily append another node at the end of the list; or insert\
+    \ another node at the beginning or in the middle of the list. The same thing,\
+    \ you can easily remove a node from anywhere of the list, just remember that after\
+    \ removing the middle node, you need to connect the node before the removed node\
+    \ with the node after the removed so that the list won't be broken. The same when\
+    \ inserting a node, you need to link the existing list with the inserted node\
+    \ point to the next element in the list, and make the previous node point to the\
+    \ inserted node.\n\nTo search an element in the linked list, we start from the\
+    \ head of the list, and from the first node, we get the location of its next node,\
+    \ and from the next node, we will continue to get the location of its own next\
+    \ node, and in such way, we walk through all the nodes in the list. Whenever locating\
+    \ a node, we compare the value in the node with the value that needs be searched,\
+    \ if we find out the node, we will return this node location; otherwise we walk\
+    \ to the end of the list, if the last node of the list does not satisfied the\
+    \ search criteria,"
+  - "[PAGE 12]\n\nthen we return null, which means no result available satisfying\
+    \ the search criteria.\n\nConstruct a list:\n\n```\n#include <iostream>\n#include\
+    \ <string>\nusing namespace std;\n\nstruct Node\n{\n    string data;\n    Node\
+    \ * next;\n};\n\nint main ()\n{\n    Node A;\n    A.data = \"a\";\n    Node B;\n\
+    \    B.data = \"b\";\n    Node C;\n    C.data = \"c\";\n    Node D;\n    D.data\
+    \ = \"D\";\n\n    A.next = &B;\n    B.next = &C;\n    C.next = &D;\n\n    Node\
+    \ * head = &A;\n```"
+  - "[PAGE 13]\n\n```\nNode * current=head;\nwhile ( current != 0 )\n{\n    cout <<\
+    \ (*current).data;\n    current = (*current).next;\n}\nreturn 0;\n\n```"
+  - '[PAGE 14]
+
+
+    <!-- no content -->'
+  - "[PAGE 15]\n\n# Queue\n\nThe characteristics of a queue are First In First Out\
+    \ (FIFO) and Last In Out. It is like the line or queue in the real world. When\
+    \ you want to purchase a coffee in Starbucks, the first customer gets served first,\
+    \ and the last customer in line gets served last. The middle of the queue will\
+    \ be served in sequence.\n\n| Apple | Orange | Banana | Cherry | Peach | Melon\
+    \ |\n\nIn the above example, if the left side is the beginning of the queue, the\
+    \ first in the queue is Apple, the following will be Orange, Banana, Cherry, Peach,\
+    \ Melon\n\n```\n#include <iostream>\n#include <string>\nusing namespace std;\n\
+    #include <queue>\n```\n\n```\nint main ()\n{ /*create a queue \"Hello World !\"\
+    */\n  queue<string> q;\n  q.push(\"Hello\");\n  q.push(\"\");\n  q.push(\"World\"\
+    );\n  q.push(\"\");\n  q.push(\"!\");\n}\n```\n\n```\n/*get each element of the\
+    \ queue and print it out, then remove the element from the queue*/\n```"
+- md: "\n```cpp\nwhile (!q.empty())\n{\n    string s = q.front();\n    cout << s;\n\
+    \    q.pop();\n}\n```\n\n```cpp\nreturn 0;\n}\n```\n\nIt will print out:\n\nHello\
+    \ World !\n\n# Stack\n\nThe characteristics of a stack are First In Last Out (FILO),\
+    \ and last in first out. For example you put several books on the table, one on\
+    \ the top of another, the first book you put will be on the bottom; and the last\
+    \ book you put will be on the top. Several days later, when you want to move these\
+    \ books by one, the first book you get is on the top, which was the last one put\
+    \ on the other books several days ago; and the last book you get is the book on\
+    \ the bottom, which was the first you put on the table several days ago. So in\
+    \ this case, it is first in last out, and last in first out. It is called a Stack.\n\
+    \nIf the following is a stack, not a queue, and assume the right hand side is\
+    \ the end of the stack, the first one you can pop from the stack is Melon.\n\n\
+    | Apple | Orange | Banana | Cherry | Peach | Melon |\n| :--- | :--- | :--- | :---\
+    \ | :--- | :--- |\n\nAfter Melon is removed from the stack, the stack will look\
+    \ like the following. At this moment, Peach is the top one in the stack. At this\
+    \ moment, we can only remove or pop up the Peach.\n\n| Apple | Orange | Banana\
+    \ | Cherry | Peach |\n| :--- | :--- | :--- | :--- | :--- |\n\nIn such a sequence,\
+    \ after Peach it will be Cherry; after Cherry it will be Banana, after Banana\
+    \ it will be Orange, and the last is Apple. So the sequence is the opposite of\
+    \ queue.\n\n```cpp\n#include <iostream>\n#include <string>\n#include <stack>\n\
+    using namespace std;\n\nint main ()\n```\n\n```cpp\n/**create a stack \" World\
+    \ Hello\"*/\nstack<string> s;\ns.push(\"!\");\ns.push(\" \");\ns.push(\"World\"\
+    );\ns.push(\" \");\ns.push(\"Hello\");\n```\n\n```cpp\n/**get each element of\
+    \ the stack and print it out \"Hello World !\" */\nwhile (!s.empty())\n{\n   \
+    \ string t = s.top();\n    cout << t;\n    s.pop();\n}\n\nreturn 0;\n}\n```\n\n\
+    It prints out:\n\nHello World !\n\n# Set\n\nSet is a group of distinguished object.\
+    \ The object inside the set is well-defined.\n\nThe operations for two sets can\
+    \ be Union, Intersection, Completion, and Cartesian product.\n\nUnion of two sets\
+    \ is the combination of the elements of the two sets. If element exist in both\
+    \ sets, the union will only keep one copy of the common element.\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_21_0.png)\n\
+    \nIntersection of the two sets is to get the elements which are common to both\
+    \ sets.\n\nCompletion of a set is in the context of a set A can be completely\
+    \ included in another set B, then the completion of the set A is B minus A: B-A,\
+    \ which gets the elements containing in B, but not in A.\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_21_1.png)\n\
+    \nCartesian product is to combine every element in one set with every element\
+    \ in another set, even though some of the elements are the same. It won’t remove\
+    \ the duplicated elements.\n\n# Binary Tree\n\nA tree has branches. It can have\
+    \ 0 or several branches. The most commonly used tree type data structure is binary\
+    \ tree. Binary tree means it has only up to two branches for each node: the left\
+    \ branch and the right branch.\n\nIn the following diagram, the node N has up\
+    \ to two branches, Left and Right. The node Left does not have any branch, and\
+    \ the node Right does not have any branch, they are called leaves. If Node is\
+    \ the top node of the whole tree, it is called root. So the tree structure is\
+    \ the upside down according to the tree in the real world. The tree in the garden\
+    \ has the root at the bottom, and leaves on the top. But in computer, the root\
+    \ is on the top, and leaves are on the bottom.\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_24_0.png)\n\
+    \nIn the following Algorithm section, we will get into more details about how\
+    \ to use each data structure in the programming.\n\n# Algorithm\n\n# Insert an\
+    \ element to an array\n\nIf insert an element at the very end of the array, the\
+    \ operation is easy, just assign the element to the end of the array where the\
+    \ first available space it has.\n\nFor example, if the array space is 7; and the\
+    \ array have 5 elements currently, from index 0 to 4:\n\n| Ann | Tom | John |\
+    \ Nancy | Alice | | | |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---\
+    \ |\n\n```cpp\nstring students[8];\nstudents[0] = \"Ann\";\nstudents[1] = \"Tom\"\
+    ;\nstudents[2] = \"John\";\nstudents[3] = \"Nancy\";\nstudents[4] = \"Alice\"\
+    ;\n```\n\nSo insert a data to the first available space in the array will be:\n\
+    \n> **string toInsert = \"Kate\";**\n**students[5] = toInsert;**\n\n| Ann | Tom\
+    \ | John | Nancy | Alice | Kate | | | |\n| :--- | :--- | :--- | :--- | :--- |\
+    \ :--- | :--- | :--- | :--- |\n\nIf insert an element in the middle of the array,\
+    \ then the elements after the place to be inserted need to be moved one space\
+    \ behind, so that the place to be inserted will be available for the new element.\n\
+    \nWhen the new element needs to be inserted to the very beginning of the array,\
+    \ then every element in the array needs to be moved one place behind, so that\
+    \ there is an empty space at the very beginning of the array to store the newly\
+    \ inserted element. To move every element one space behind, we will move the last\
+    \ element first, and then move the other elements till the first element.\n\n\
+    For example, using the last example of students array, insert “Billy” into the\
+    \ 3rd place of the array (which is index 2), then need to move the 6th element\
+    \ to be the 7th, the 5th element to be the 6th until the 3rd element to be the\
+    \ 4th, and put the 3rd element “Billy” in place:\n\n| Ann | Tom | Billy | Nancy\
+    \ | Alice | Kate |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n\n```cpp\nstudents[6]\
+    \ = \"Kate\";\nstudents[5] = \"Alice\";\nstudents[4] = \"Nancy\";\nstudents[3]\
+    \ = \"John\";\nstudents[2] = \"Billy\";\n```\n\nIf insert “Billy” into the 1st\
+    \ place of the array (which is index 0), then need to move 2 more elements:\n\n\
+    | Billy | Ann | Tom | John | Nancy | Alice | Kate |\n| :--- | :--- | :--- | :---\
+    \ | :--- | :--- | :--- |\n\n```cpp\nstudents[6] = \"Kate\";\nstudents[5] = \"\
+    Alice\";\nstudents[4] = \"Nancy\";\nstudents[3] = \"John\";\nstudents[2] = \"\
+    Tom\";\nstudents[1] = \"Ann\";\nstudents[0] = \"Billy\";\n```\n\nIf there are\
+    \ hundreds or thousands of elements in the array, using the above way will be\
+    \ very cumbersome. We can use “for” loop to make the above work easier.\n\n```cpp\n\
+    string students[8];\nstudents[0] = \"Ann\";\nstudents[1] = \"Tom\";\nstudents[2]\
+    \ = \"John\";\nstudents[3] = \"Nancy\";\nstudents[4] = \"Alice\";\n```\n\n```cpp\n\
+    string students[8];\nstudents[0] = \"Ann\";\nstudents[1] = \"Tom\";\nstudents[2]\
+    \ = \"John\";\nstudents[3] = \"Nancy\";\nstudents[4] = \"Alice\";\nstudents[5]\
+    \ = \"Kate\";\n```\n\n```cpp\nint currentTotal = 6;\n```\n\n```cpp\nint InsertIndex\
+    \ = 2;\n```\n\n```cpp\nfor (int i = currentTotal; i > InsertIndex; i--)\n{\n \
+    \   students[i] = students[i - 1];\n}\n```\n\n```cpp\nstudents[InsertIndex] =\
+    \ \"Billy\";\n```\n\n| Ann | Tom | Billy | Nancy | Alice | Kate |\n| :--- | :---\
+    \ | :--- | :--- | :--- | :--- |\n\nThe above algorithm works for any number from\
+    \ 0 to n, n is the the of of of of it to the the beginning the the the.\n\n# an\
+    \ element from an array\n\nTo delete an element from the array at the index q,\
+    \ after deleting the element, there is a space empty in this array at the location\
+    \ q, if q is the end of the array, the operation is easy, just remove the element\
+    \ in array, no need to move the element behind it.\n\nIf q is the middle of the\
+    \ array, then need to move all the elements behind q one spot forward starting\
+    \ from the element right behind the q,\n\nFor example, there is an array as following:\n\
+    \n| Ann | Tom | John | Nancy | Alice | | | |\n| :--- | :--- | :--- | :--- | :---\
+    \ | :--- | :--- | :--- |\n\n```cpp\nstring studentsToDelete[6];\nstudentsToDelete[0]\
+    \ = \"Ann\";\nstudentsToDelete[1] = \"Tom\";\nstudentsToDelete[2] = \"John\";\n\
+    studentsToDelete[3] = \"Nancy\";\nstudentsToDelete[4] = \"Alice\";\nstudentsToDelete[5]\
+    \ = \"Kate\";\n```\n\nWe want to remove the 5th element, assign '\\0' which indicates\
+    \ null:\n\n| Ann | Tom | John | Nancy | Alice | | | |\n| :--- | :--- | :--- |\
+    \ :--- | :--- | :--- | :--- | :--- |\n\n```cpp\nstudentsToDelete[5] = \"\\0\"\
+    ;\n```\n\nIf we want to remove the 0th element Ann, then we will move the elements\
+    \ behind to one spot forward:\n\n| Tom | John | Nancy | Alice | Kate | | | |\n\
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n\n```cpp\nstudentsToDelete[0]\
+    \ = \"Tom\";\nstudentsToDelete[1] = \"John\";\nstudentsToDelete[2] = \"Nancy\"\
+    ;\nstudentsToDelete[3] = \"Alice\";\nstudentsToDelete[4] = \"Kate\";\nstudentsToDelete[5]\
+    \ = \"\\0\";\n```\n\nIf for the original array, we want to remove the 3rd element\
+    \ (index is 2: John):\n\n| Ann | Tom | Nancy | Alice | Kate | | | |\n| :--- |\
+    \ :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n\n```cpp\nstudentsToDelete[0]\
+    \ = \"Ann\";\nstudentsToDelete[1] = \"Tom\";\nstudentsToDelete[2] = \"Nancy\"\
+    ;\nstudentsToDelete[3] = \"Alice\";\nstudentsToDelete[4] = \"Kate\";\nstudentsToDelete[5]\
+    \ = \"\\0\";\n```\n"
+  mdcn: "\n\n```cpp\nwhile (!q.empty())\n{\n    string s = q.front();\n    cout <<\
+    \ s;\n    q.pop();\n}\n```\n\n```cpp\nreturn 0;\n}\n```\n\n它将输出：\n\nHello World\
+    \ !\n\n# 栈 (Stack)\n\n栈的特点是后进先出（FILO），以及后进先出。例如，你在桌子上放了几本书，一本一叠地放在另一本上面，你放的第一本书书会在最底部；而你最后放的某本书会在最上方。几天后，当你想要移动这些书时，你拿到的第一本书是在顶部的那个，那是你几天前最后放在其他书之上的；而你拿到的最后一本书是底部的那本，那是你几天前先放在桌子上的第一本。在在这种情况下，它是后进先出，也是后进先出。这被称为栈。\n\
+    \n如果下面是一个栈而不是队列，假设右侧是栈的末端，那么你可以从栈中弹出的第一个元素是西瓜（Melon）。\n\n| 苹果 | 橙子 | 香蕉 | 樱桃 |\
+    \ 桃子 | 西瓜 |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n\n当西瓜从栈中移除后，栈将如下所示。此时，桃子是栈中的顶端元素。此时，我们只能移除或弹出桃子。\n\
+    \n| 苹果 | 橙子 | 香蕉 | 樱桃 | 桃子 |\n| :--- | :--- | :--- | :--- | :--- |\n\n在这样的序列中，桃子之后将是樱桃；樱桃之后是香蕉，香蕉之后是橙子，最后是苹果。因此，这个序列与队列是相反的。\n\
+    \n```cpp\n#include <iostream>\n#include <string>\n#include <stack>\nusing namespace\
+    \ std;\n\nint main ()\n```\n\n```cpp\n/**创建一个栈 \" World Hello\"*/\nstack<string>\
+    \ s;\ns.push(\"!\");\ns.push(\" \");\ns.push(\"World\");\ns.push(\" \");\ns.push(\"\
+    Hello\");\n```\n\n```cpp\n/**获取栈的每个元素并打印出来 \"Hello World !\" */\nwhile (!s.empty())\n\
+    {\n    string t = s.top();\n    cout << t;\n    s.pop();\n}\n\nreturn 0;\n}\n\
+    ```\n\n它输出：\n\nHello World !\n\n# 集合 (Set)\n\n集合是一组独特的对象。集合内部的对象是有良好定义的。\n\n两个集合的操作可以是并集、交集、补集和笛卡尔积。\n\
+    \n两个集合的并集是两个集合元素的组合。如果元素存在于两个集合中，并集将只保留公共元素的一个副本。\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_21_0.png)\n\
+    \n两个集合的交集是获取两个集合共同拥元素。\n\n集合的补集是在集合 A 可以完全包含在另一个集合 B 中的语境下，那么集合 A 的补集就是 B 减去 A：B-A，它获得了在\
+    \ B 中但不在 A 中的元素。\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_21_1.png)\n\n笛卡尔积是将一个集合中的每个元素与另一个集合中的每个元素结合，即使某些元素是相同的。它不会移除重复元素。\n\
+    \n# 二叉树 (Binary Tree)\n\n树有分支。它可以有 0 个或多个分支。最常用的树类型数据结构是二叉树。二叉树意味着每个节点最多有两个分支：左分支和右分支。\n\
+    \n在下面的图中，节点 N 有两个分支：左和右。左节点没有分支，右节点也没有任何分支，它们被称为叶子（leaves）。如果 Node 是树的顶部，它被称为根（root）。在现实世界中，树的根在底部，叶子在顶部。但在计算机中，根在顶部，叶子在底部。\n\
+    \n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_24.png)\n\n在下面的算法部分，我们将获得更多关于如何在编程中使用数据结构的细节。\n\
+    \n# 向数组中插入元素\n\n如果在数组的末尾插入一个元素，操作是简单的，只需将元素分配到数组末尾的可用空间即可。\n\n例如，如果数组空间为 7；目前有\
+    \ 5 个元素，索引从 0 到 4：\n\n| 安 | 汤姆 | 约翰 | 娜西 | 爱丽 | | |\n| :--- | :--- | :--- | :---\
+    \ | :--- | | |\n\n```cpp\nstring students[8];\nstudents[0] = \"Ann\";\nstudents[1]\
+    \ = \"Tom\";\nstudents[2] = \"John\";\nstudents[3] = \"Nancy\";\nstudents[4] =\
+    \ \"Alice\";\n```\n\n所以在数组第一个可用空间插入：\n\n**string toInsert = \"Kate\";**\n**students[5]\
+    \ = toInsert;**\n\n| 安 | 汤姆 | 约翰 | 娜西 | 爱丽 | 凯特 | | |\n| :--- | :--- | :--- |\
+    \ :--- | :---\n\n如果在数组中间插入一个元素，那么插入位置之后的元素需要向后移动一个空间，以便插入的位置供新元素使用。\n\n当新元素需要插入到数组的开头时，数组中的每个元素都需要向后移动一个位置，以便数组开头有一个空空间存储新插入的元素。为了让每个元素向后移动一个空间，我们将首先移动最后一个元素，然后移动其他元素直到第一个元素。\n\
+    \n例如，使用 students 数组的最后一个例子，将“Billy”插入到数组的第三位置（索引为2），需要将第 6 个元素移动到第 7 个，第 5 个元素移动到第\
+    \ 6 个，直到第 3 个元素移动到第 4 个，并将“Billy”元素放在第 3 个位置：\n\n| 安 | 汤姆 | 比利 | 娜西 | 爱丽 | 凯特\
+    \ |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n\n```cpp\nstudents[6] = \"Kate\"\
+    ;\nstudents[5] = \"Alice\";\nstudents[4] = \"Nancy\";\nstudents[3] = \"John\"\
+    ;\nstudents[2] = \"Billy\";\n```\n\n如果将“Billy”插入到数组的第一个位置（索引为 0），则需要移动更多的 2 个元素：\n\
+    \n| 比利 | 安 | 汤姆 | 约翰 | 娜西 | 爱丽 | 凯特 |\n| :--- | :--- | :--- | :--- | :--- | :---\
+    \ | :--- |\n\n```cpp\nstudents[6] = \"Kate\";\nstudents[5] = \"Alice\";\nstudents[4]\
+    \ = \"Nancy\";\nstudents[3] = \"John\";\nstudents[2] = \"Tom\";\nstudents[1] =\
+    \ \"Ann\";\nstudents[0] = \"Billy\";\n```\n\n如果数组中有成百或数千元素，使用上述方法将非常繁琐。我们可以使用“for”循环让上述工作变得更容易。\n\
+    \n```cpp\nstring students[8];\nstudents[0] = \"Ann\";\nstudents[1] = \"Tom\";\n\
+    students[2] = \"John\";\nstudents[3] = \"Nancy\";\nstudents[4] = \"Alice\";\n\
+    ```\n\n```cpp\nstring students[8];\nstudents[0] = \"Ann\";\nstudents[1] = \"Tom\"\
+    ;\nstudents[2] = \"John\";\nstudents[3] = \"Nancy\";\nstudents[4] = \"Alice\"\
+    ;\nstudents[5] = \"Kate\";\n```\n\n```cpp\nint currentTotal = 6;\n```\n\n```cpp\n\
+    int InsertIndex = 2;\n```\n\n```cpp\nfor (int i = currentTotal; i > InsertIndex;\
+    \ i--)\n{\n    students[i] = students[i - 1];\n}\n```\n\n```cpp\nstudents[InsertIndex]\
+    \ = \"Billy\";\n```\n\n| 安 | 汤姆 | 比利 | 娜西 | 爱丽 | 凯特 |\n| :--- | :--- | :--- |\
+    \ :--- | :--- | :--- |\n\n上述算法适用于从 0 到 n 的任意数字，n 是从开头的数量。\n\n# 从数组中删除元素\n\n从索引\
+    \ q 处的数组中删除元素，删除元素后，数组在该位置会有一个空空间，如果 q 是数组的末尾，该操作是简单的，只需移除数组中的元素，不需要移动其后面的元素。\n\
+    \n如果 q 是数组的中间，则需要将 q 之后的所有元素向前移动一个位置，从紧邻 q 的元素元素开始。\n\n例如，有一个如下数组：\n\n| 安 | 汤姆\
+    \ | 约翰 | 娜西 | 爱丽 | | |\n| :--- | :--- | :--- | :--- | :--- | | |\n\n```cpp\nstring\
+    \ studentsToDelete[6];\nstudentsToDelete[0] = \"Ann\";\nstudentsToDelete[1] =\
+    \ \"Tom\";\nstudentsToDelete[2] = \"John\";\nstudentsToDelete[3] = \"Nancy\";\n\
+    studentsToDelete[4] = \"Alice\";\nstudentsToDelete[5] = \"Kate\";\n```\n\n我们要删除第\
+    \ 5 个元素，赋值 '\\0' 表示空值：\n\n| 安 | 汤姆 | 约翰 | 娜西 | 爱丽 | | |\n| :--- | :--- | :---\
+    \ | :--- | :--- | | |\n\n```cpp\nstudentsToDelete[5] = \"\\0\";\n```\n\n如果我们想删除第\
+    \ 0 个元素 安，那么我们将后面的元素向前移动一个位置：\n\n| 汤姆 | 约翰 | 娜西 | 爱丽 | 凯特 | | |\n| :--- | :---\
+    \ | :--- | :--- | :--- | | |\n\n```cpp\nstudentsToDelete[0] = \"Tom\";\nstudentsToDelete[1]\
+    \ = \"John\";\nstudentsToDelete[2] = \"Nancy\";\nstudentsToDelete[3] = \"Alice\"\
+    ;\nstudentsToDelete[4] = \"Kate\";\nstudentsToDelete[5] = \"\\0\";\n```\n\n如果对于原始数组，我们想删除第\
+    \ 3 个元素（索引为 2：约翰）：\n\n| 安 | 汤姆 | 娜西 | 爱丽 | 凯特 | | |\n| :--- | :--- | :--- | :---\
+    \ | :--- | | |\n\n```cpp\nstudentsToDelete[0] = \"Ann\";\nstudentsToDelete[1]\
+    \ = \"Tom\";\nstudentsToDelete[2] = \"Nancy\";\nstudentsToDelete[3] = \"Alice\"\
+    ;\nstudentsToDelete[4] = \"Kate\";\nstudentsToDelete[5] = \"\\0\";\n```\n\n"
+  merge: 1
+  raw:
+  - "[PAGE 16]\n\n```\nwhile (!q.empty())\n{\n    string s = q.front();\n    cout\
+    \ << s;\n    q.pop();\n}\n```\n\n```\nreturn 0;\n}\n```\n\nIt will print out:\n\
+    \nHello World !"
+  - '[PAGE 17]
+
+
+    <!-- no content -->'
+  - '[PAGE 18]
+
+
+    # Stack
+
+
+    The characteristics of a stack are First In Last Out (FILO), and last in first
+    out. For example you put several books on the table, one on the top of another,
+    the first book you put will be on the bottom; and the last book you put will be
+    on the top. Several days later, when you want to move these books by one, the
+    first book you get is on the top, which was the last one put on the other books
+    several days ago; and the last book you get is the book on the bottom, which was
+    the first you put on the table several days ago. So in this case, it is first
+    in last out, and last in first out. It is called a Stack.
+
+
+    If the following is a stack, not a queue, and assume the right hand side is the
+    end of the stack, the first one you can pop from the stack is Melon.
+
+
+    | Apple | Orange | Banana | Cherry | Peach | Melon |
+
+
+    After Melon is removed from the stack, the stack will look like the following.
+    At this moment, Peach is the top one in the stack. At this moment, we can only
+    remove or pop up the Peach.
+
+
+    | Apple | Orange | Banana | Cherry | Peach |
+
+
+    In such a sequence, after Peach it will be Cherry; after Cherry it will be Banana,
+    after Banana it will be Orange, and the last is Apple. So the sequence is the
+    opposite of queue.
+
+
+    ```
+
+    #include <iostream>
+
+    #include <string>
+
+    #include <stack>
+
+    using namespace std;
+
+
+    int main ()
+
+    ```'
+  - "[PAGE 19]\n\n```\n/**create a stack \" World Hello\"*/\nstack<string> s;\ns.push(\"\
+    !\");\ns.push(\" \");\ns.push(\"World\");\ns.push(\" \");\ns.push(\"Hello\");\n\
+    ```\n\n```\n/**get each element of the stack and print it out \"Hello World !\"\
+    \ */\nwhile (!s.empty())\n{\n    string t = s.top();\n    cout << t;\n    s.pop();\n\
+    }\n\nreturn 0;\n}\n```\n\nIt prints out:\n\nHello World !"
+  - '[PAGE 20]
+
+
+    <!-- no content -->'
+  - '[PAGE 21]
+
+
+    # Set
+
+
+    Set is a group of distinguished object. The object inside the set is well-defined.
+
+
+    The operations for two sets can be Union, Intersection, Completion, and Cartesian
+    product.
+
+
+    Union of two sets is the combination of the elements of the two sets. If element
+    exist in both sets, the union will only keep one copy of the common element.
+
+
+    ![](img/c11c4a3212693e8558c7b1c05f5b5ac7_21_0.png)
+
+
+    Intersection of the two sets is to get the elements which are common to both sets.
+
+
+    Completion of a set is in the context of a set A can be completely included in
+    another set B, then the completion of the set A is B minus A: B-A, which gets
+    the elements containing in B, but not in A.
+
+
+    ![](img/c11c4a3212693e8558c7b1c05f5b5ac7_21_1.png)'
+  - '[PAGE 22]
+
+
+    Cartesian product is to combine every element in one set with every element in
+    another set, even though some of the elements are the same. It won’t remove the
+    duplicated elements.'
+  - '[PAGE 23]
+
+
+    <!-- no content -->'
+  - '[PAGE 24]
+
+
+    # Binary Tree
+
+
+    A tree has branches. It can have 0 or several branches. The most commonly used
+    tree type data structure is binary tree. Binary tree means it has only up to two
+    branches for each node: the left branch and the right branch.
+
+
+    In the following diagram, the node N has up to two branches, Left and Right. The
+    node Left does not have any branch, and the node Right does not have any branch,
+    they are called leaves. If Node is the top node of the whole tree, it is called
+    root. So the tree structure is the upside down according to the tree in the real
+    world. The tree in the garden has the root at the bottom, and leaves on the top.
+    But in computer, the root is on the top, and leaves are on the bottom.
+
+
+    ![](img/c11c4a3212693e8558c7b1c05f5b5ac7_24_0.png)
+
+
+    In the following Algorithm section, we will get into more details about how to
+    use each data structure in the programming.'
+  - '[PAGE 25]
+
+
+    <!-- no content -->'
+  - '[PAGE 26]
+
+
+    # Algorithm'
+  - '[PAGE 27]
+
+
+    # Insert an element to an array
+
+
+    If insert an element at the very end of the array, the operation is easy, just
+    assign the element to the end of the array where the first available space it
+    has.
+
+
+    For example, if the array space is 7; and the array have 5 elements currently,
+    from index 0 to 4:
+
+
+    | Ann | Tom | John | Nancy | Alice | | | |
+
+
+    ```
+
+    string students[8];
+
+    students[0] = "Ann";
+
+    students[1] = "Tom";
+
+    students[2] = "John";
+
+    students[3] = "Nancy";
+
+    students[4] = "Alice";
+
+    ```
+
+
+    So insert a data to the first available space in the array will be:
+
+
+    > **string toInsert = "Kate";**
+
+    **students[5] = toInsert;**
+
+
+    | Ann | Tom | John | Nancy | Alice | Kate | | |
+
+
+    If insert an element in the middle of the array, then the elements after the place
+    to be inserted need to be moved one space behind, so that the place to be inserted
+    will be available for the new element.
+
+
+    When the new element needs to be inserted to the very beginning of the array,
+    then every element in the array needs to be moved one place behind, so that there
+    is an empty space at the very beginning of the array to store the'
+  - '[PAGE 28]
+
+
+    newly inserted element. To move every element one space behind, we will move the
+    last element first, and then move the other elements till the first element.
+
+
+    For example, using the last example of students array, insert “Billy” into the
+    3rd place of the array (which is index 2), then need to move the 6th element to
+    be the 7th, the 5th element to be the 6th until the 3rd element to be the 4th,
+    and put the 3rd element “Billy” in place:
+
+
+    | Ann | Tom | Billy | Nancy | Alice | Kate |
+
+
+    ```
+
+    students[6] = "Kate";
+
+    students[5] = "Alice";
+
+    students[4] = "Nancy";
+
+    students[3] = "John";
+
+    students[2] = "Billy";
+
+    ```
+
+
+    If insert “Billy” into the 1st place of the array (which is index 0), then need
+    to move 2 more elements:
+
+
+    | Billy | Ann | Tom | John | Nancy | Alice | Kate |
+
+
+    ```
+
+    students[6] = "Kate";
+
+    students[5] = "Alice";
+
+    students[4] = "Nancy";
+
+    students[3] = "John";
+
+    students[2] = "Tom";
+
+    students[1] = "Ann";
+
+    students[0] = "Billy";
+
+    ```
+
+
+    If there are hundreds or thousands of elements in the array, using the *'
+  - "[PAGE 29]\n\nabove way will be very cumbersome. We can use “for” loop to make\
+    \ the above work easier.\n\n```\nstring students[8];\nstudents[0] = \"Ann\";\n\
+    students[1] = \"Tom\";\nstudents[2] = \"John\";\nstudents[3] = \"Nancy\";\nstudents[4]\
+    \ = \"Alice\";\nstudents[5] = \"Kate\";\n```\n\n```\n/* currently has 6 students\
+    \ */\nint currentTotal = 6;\n```\n\n```\n/*insert to the 2nd index place*/\nint\
+    \ InsertIndex = 2;\n```\n\n```\nfor (int i = currentTotal; i > InsertIndex; i—)\n\
+    {\n    students[i] = students[i - 1];\n}\n```\n\n```\nstudents[InsertIndex] =\
+    \ \"Billy\";\n```\n\n```\ncurrentTotal = currentTotal + 1;\n```\n\n| Ann | Tom\
+    \ | Billy | John | Nancy | Alice | Kate |\n\nThe above algorithm works for any\
+    \ number of the inserted index from 0 to n, (n is the total number of elements\
+    \ in the array) For example, you can assign 0 the “InsertIndex” to change its\
+    \ value, so that it will insert to the beginning of the array."
+  - '[PAGE 30]
+
+
+    <!-- no content -->'
+  - '[PAGE 31]
+
+
+    # Delete an element from an array.
+
+
+    To delete an element from the array at the index q, after deleting the element,
+    there is a space empty in this array at the location q, in this case, all elements
+    behind the index q will move one spot forward so that the elements in the array
+    are adjacent to each other.
+
+
+    If q is the end of the array, the operation is easy, just remove the element in
+    the array, and no need to move the element behind it to be one spot forward since
+    there is no element behind it.
+
+
+    If q is the middle of the array, then need to move all the elements behind q one
+    spot at a time starting from the element right behind the q spot, and then one
+    after another until the element at the very end of the array.
+
+
+    For example, there is an array as following:
+
+
+    | Ann | Tom | John | Nancy | Alice | Kate | | | |
+
+
+    ```
+
+    string studentsToDelete[6];
+
+    studentsToDelete[0] = "Ann";\studentsToDelete[1] = "Tom";\studentsToDelete[2]
+    = "John";\studentsToDelete[3] = "Nancy";\studentsToDelete[4] = "Alice";\studentsToDelete[5]
+    = "Kate";
+
+    ```
+
+
+    We want to remove the 5th element, assign ''\0'' which indicates null:
+
+
+    | Ann | Tom | John | Nancy | Alice | | | |'
+  - '[PAGE 32]
+
+
+    studentsToDelete[5] = "\0";
+
+
+    If we want to remove the 0th element Ann, then we will move the elements behind
+    to be one spot forward:
+
+
+    | Tom | John | Nancy | Alice | Kate | | | |
+
+
+    studentsToDelete[0] = "Tom";
+
+    studentsToDelete[1] = "John";
+
+    studentsToDelete[2] = "Nancy";
+
+    studentsToDelete[3] = "Alice";
+
+    studentsToDelete[4] = "Kate";
+
+    studentsToDelete[5] = "\0";
+
+
+    If for the original array, we want to remove the 3rd element (index is 2: John):
+
+
+    | Ann | Tom | Nancy | Alice | Kate | | | |
+
+
+    studentsToDelete[0] = "Ann";
+
+    studentsToDelete[1] = "Tom";
+
+    studentsToDelete[2] = "Nancy";
+
+    studentsToDelete[3] = "Alice";
+
+    studentsToDelete[4] = "Kate";
+
+    studentsToDelete[5] = "\0";
+
+
+    If there are hundreds or thousands of elements in the array, using the above way
+    will be very cumbersome. We can use for loop to make the above work easier.
+
+
+    string studentsToDelete[6];
+
+    studentsToDelete[0] = "Ann";
+
+    studentsToDelete[1] = "Tom";'
+- md: "\n```\nstudentsToDelete[2] = \"John\";\nstudentsToDelete[3] = \"Nancy\";\n\
+    studentsToDelete[4] = \"Alice\";\nstudentsToDelete[5] = \"Kate\";\n```\n\n```\n\
+    int currentArrayTotal = 6;\nint deleteIndex = 2;\n\nfor (int i = deleteIndex+1;\
+    \ i < currentArrayTotal; i++)\n{\n studentsToDelete[i] = studentsToDelete[i +\
+    \ 1];\n}\n```\n\n```\nstudentsToDelete[currentArrayTotal] = '0';\n\ncurrentArrayTotal\
+    \ = currentArrayTotal - 1;\n```\n\nThe above algorithm works for any number of\
+    \ the inserted index from 0 to n-1, (n is the total number of elements in the\
+    \ array) for example, you can assign 0 to the deleteIndex, so that it will delete\
+    \ the beginning of the array, and move the other element forward.\n\n# Search\
+    \ an element from an array\n\nSearch an element that is equal to a specific value\
+    \ in the array, we will go through every element in the array from the start to\
+    \ the end until the searched element is found, or until it is identified that\
+    \ none of the element in the array satisfies the search condition.\n\nIf the first\
+    \ element satisfies the condition then the operation stops, otherwise it will\
+    \ compare one by one with the second element, the third elements, until the search\
+    \ is found, or until the last element is compared.\n\n| Ann | Tom | John | Nancy\
+    \ | Alice | Kate |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n\n```\nstring\
+    \ studentsForSearch[8];\nstudentsForSearch[0] = \"Ann\";\nstudentsForSearch[1]\
+    \ = \"Tom\";\nstudentsForSearch[2] = \"John\";\nstudentsForSearch[3] = \"Nancy\"\
+    ;\nstudentsForSearch[4] = \"Alice\";\nstudentsForSearch[5] = \"Kate\";\n```\n\n\
+    We want to know whether \"Nancy\" is in the array, we will compare each element\
+    \ to see whether we find Nancy. For array which is hundreds or thousands of element,\
+    \ it is easier to search by programming.\n\n```\nstring studentsForSearch[8];\n\
+    studentsForSearch[0] = \"Ann\";\nstudentsForSearch[1] = \"Tom\";\nstudentsForSearch[2]\
+    \ = \"John\";\nstudentsForSearch[3] = \"Nancy\";\n```\n\nstudentsForSearch[4]\
+    \ = \"Alice\";\nstudentsForSearch[5] = \"Kate\";\n\n```\nint currentSearchTotal\
+    \ = 6;\nstring ToSearch=\"Nancy\";\nbool found = false;\n```\n\n```\nfor (int\
+    \ i = 0; i < currentSearchTotal; i++)\n{\n    if (studentsForSearch[i] == ToSearch)\n\
+    \    found = true;\n}\n```\n\nYou can change the string \"ToSearch\" to be \"\
+    Steve\" or \"Kate\" or any other string for search.\n\nIf we want to delete a\
+    \ specific value of element from the array, we will need to first do a search\
+    \ to find out the location of the element to be delete; after it is found, we\
+    \ will continue the deleting operation; if no element is found, then no deletion\
+    \ is needed. For example, if we want to see Nancy is in the array, if it is, then\
+    \ delete this element:\n\n```\nstring studentsForSearch[8];\nstudentsForSearch[0]\
+    \ = \"Ann\";\nstudentsForSearch[1] = \"Tom\";\nstudentsForSearch[2] = \"John\"\
+    ;\nstudentsForSearch[3] = \"Nancy\";\nstudentsForSearch[4] = \"Alice\";\nstudentsForSearch[5]\
+    \ = \"Kate\";\n```\n\n```\nint currentTotal = 6;\nstring ToSearch=\"Nancy\";\n\
+    int ToDelete = 0;\nbool found = false;\nfor (int i = 0; i < currentTotal; i++)\n\
+    {\n  if (studentsForSearch[i] == ToSearch)\n  {\n    found = true;\n    ToDelete\
+    \ = i;\n  }\n}\n```\n\n```cpp\n/*if found, delete this element*/\nif (found)\n\
+    {\n  for (int i = ToDelete + 1; i < currentTotal; i++)\n  {\n    studentsForSearch[i]\
+    \ = studentsForSearch[i + 1];\n  }\n  studentsForSearch[currentTotal] = '\\0';\n\
+    \  currentTotal = currentTotal - 1;\n}\n```\n\n| Ann | Tom | John | Alice | Kate\
+    \ | | |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n\nWe want to insert\
+    \ a specific value of element before or after a value, we will need to firstly\
+    \ do a search to find out the location of the element; after it is found, we will\
+    \ continue the insertion; if no element is found, then no insertion is needed.\
+    \ For example, we want to see whether “Steve” is in the array, if it is not, we\
+    \ want to insert in 5th index. If it is in the array, don't do anything.\n\n```\n\
+    string studentsForSearch[8];\nstudentsForSearch[0] = \"Ann\";\nstudentsForSearch[1]\
+    \ = \"Tom\";\nstudentsForSearch[2] = \"John\";\nstudentsForSearch[3] = \"Nancy\"\
+    ;\nstudentsForSearch[4] = \"Alice\";\nstudentsForSearch[5] = \"Kate\";\n```\n\n\
+    ```\nint currentTotal = 6;\nstring ToSearch=\"Steve\";\nint toInsert = 5;\nbool\
+    \ found = false;\nfor (int i = 0; i < currentTotal; i++)\n{\n    if (studentsForSearch[i]\
+    \ == ToSearch)\n    {\n        found = true;\n    }\n}\n```\n\n```cpp\n/*if not\
+    \ found, insert it*/\nif (!found)\n{\n    for (int i = currentTotal; i > toInsert;\
+    \ i--)\n    {\n        studentsForSearch[i] = studentsForSearch[i - 1];\n    }\n\
+    \    studentsForSearch[toInsert] = ToSearch;\n    currentTotal = currentTotal\
+    \ + 1;\n}\n```\n\n| Ann | Tom | John | Nancy | Kate |\n| :--- | :--- | :--- |\
+    \ :--- | :--- |\n\n# Sort an array\n\nIf the array stores integer value, sometimes\
+    \ the elements in the array are not ordered ascending or descending. In order\
+    \ to sort the array to ascending, there are different algorithms such as bubble\
+    \ sort, insert sort, which are the most basic sorting algorithms.\n\n# Bubble\
+    \ Sort\n\nTo sort the array to ascending, bubble sort indicates the biggest element\
+    \ will flow to the end of the array, like a bubble. After the biggest element\
+    \ on top, the second biggest element flows to the position next to the biggest,\
+    \ and so on until the end, which the smallest element will be located at the beginning\
+    \ of the array. In this way, all the elements are sorted.\n\nFor example, the\
+    \ original array is: 2, 6, 9, 3, 5, 7\n\nWe will start from the first element:\n\
+    2<6, no swap; 6<9, no swap; 9>3, swap: 2, 6, 3, 9, 5, 7\n9>5, swap: 2, 6, 3, 5,\
+    \ 9, 7\n9>7, swap: 2, 6, 3, 5, 7, 9\nNo more element to swap for this round, 9\
+    \ is the biggest element in the array.\n\nNext round: 2<6, no swap; 6>3, swap:\
+    \ 2, 3, 6, 5, 7, 9\n6>5, swap: 2, 3, 5, 6, 7, 9\n6<7, no swap, so 7 is the second\
+    \ largest element in the array: 2, 3, 5, 6, 7, 9\n\nNext round: 2<3, no swap;\
+    \ 3<5, no swap; 5<6, no swap: 2, 3, 5, 6, 7, 9\nNext round: 2<3, no swap; 3<5,\
+    \ no swap: 2, 3, 5, 6, 7, 9\nNext round: 2<3, no swap: 2, 3, 5, 6, 7, 9\nNext\
+    \ round: 2 is the only element left for comparison, no swap: 2, 3, 5, 6, 7, 9\n\
+    \nThe array is sorted now. The algorithm is as follows:\n\n```cpp\n/* BubbleSort\
+    \ Algorithm */\nvoid BubbleSort(int A[], int length)\n{\n  /* variables to use\
+    \ in the algorithm */\n  int i, j, temp;\n\n  /* i indicates upto which element\
+    \ that the current round will compare to; for each round the biggest value flows\
+    \ up to the end of the index range */\n  for (i = length-1; i >= 0; i--)\n  {\n\
+    \    /* each round compare from the first element till the last element in the\
+    \ range */\n    for (j = 1; j <= i; j++)\n    {\n      /* compare the element\
+    \ with its upper element, swap if current element is bigger than its upper element\
+    \ */\n      if (A[j - 1] > A[j])\n      {\n        /*do the swap between A[j-1]\
+    \ and A[j]*/\n        temp = A[j - 1];\n        A[j - 1] = A[j];\n        A[j]\
+    \ = temp;\n      }\n    }\n  }\n}\n```\n\n# Insertion Sort\n\nFor an array of\
+    \ elements, start from the beginning, make the elements before the element that\
+    \ will be inserted sorted (the first element is itself so it is sorted already);\
+    \ for the element to be inserted, compare it with the already sorted elements,\
+    \ get the location to be inserted. Do the same thing until the whole array is\
+    \ sorted.\n\nFor example, the original array is: 2, 6, 9, 3, 5, 7\n\nWe will start\
+    \ from the first element:\n2<6, no swap; 6<9, no swap; 9>3, swap: 2, 6, 3, 9,\
+    \ 5, 7\n9>5, swap: 2, 6, 3, 5, 9, 7\n9>7, swap: 2, 6, 3, 5, 7, 9\n\nNext round:\
+    \ 2<6, no swap; 6>3, swap: 2, 3, 6, 5, 7, 9\n6>5, swap: 2, 3, 5, 6, 7, 9\n6<7,\
+    \ no swap, so 7 is the second largest element in the array: 2, 3, 5, 6, 7, 9\n\
+    \nNext round: 2<3, no swap; 3<5, no swap; 5<6, no swap: 2, 3, 5, 6, 7, 9\nNext\
+    \ round: 2<3, no swap; 3<5, no swap: 2, 3, 5, 6, 7, 9\nNext round: 2<3, no swap:\
+    \ 2, 3, 5, 6, 7, 9\n\nThe array is sorted now. The algorithm is as follows:\n\n\
+    ```cpp\n/*Sorting to be ascending from left to right*/\nint* InsertionSort(int\
+    \ * A, int length)\n{\nint i, j, current;\n/*A[0]-A[i-1] are sorted, i starts\
+    \ from 1;\nstart from the 2nd element until the last element in the array*/\n\
+    for (i = 1; i < length; i++)\n{\ncurrent = A[i];\n/*j starts from the same value\
+    \ as i, and go forward to compare the values\nget the location of the element\
+    \ which is smaller than the current value which needs to be inserted*/\nfor (j\
+    \ = i; j > 0 && A[j - 1] > current; j--)\n{\n  /*move one element that has larger\
+    \ value backward to leave a space to be inserted*/\n  A[j] = A[j - 1];\n}\n/*get\
+    \ the location to be inserted after the for loop*/\nA[j] = current;\n}\nreturn\
+    \ A;\n}\n```\n"
+  mdcn: "\n\n```\nstudentsToDelete[2] = \"John\";\nstudentsToDelete[3] = \"Nancy\"\
+    ;\nstudentsToDelete[4] = \"Alice\";\nstudentsToDelete[5] = \"Kate\";\n```\n\n\
+    ```\nint currentArrayTotal = 6;\nint deleteIndex = 2;\n\nfor (int i = deleteIndex+1;\
+    \ i < currentArrayTotal; i++)\n{\n studentsToDelete[i] = studentsToDelete[i +\
+    \ 1];\n}\n```\n\n```\nstudentsToDelete[currentArrayTotal] = '0';\n\ncurrentArrayTotal\
+    \ = currentArrayTotal - 1;\n```\n\n上述算法适用于从 0 到 n-1 的任意插入索引（n 是数组中元素的总数），例如，你可以将\
+    \ `0` 赋值为 `deleteIndex`，这样它将删除数组开头的元素，并将其他元素向前移动。\n\n# 从数组中搜索元素\n\n在数组中搜索一个等于特定值的元素，我们将从头到尾遍历数组中的每个元素，直到找到搜索的元素，或者确定数组中没有元素满足搜索条件。\n\
+    \n如果第一个元素满足条件，则操作停止；否则它将逐个与第二个元素、第三个元素进行比较，直到找到搜索结果，或者比较到最后一个元素。\n\n| Ann | Tom\
+    \ | John | Nancy | Alice | Kate |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n\
+    \n```\nstring studentsForSearch[8];\nstudentsForSearch[0] = \"Ann\";\nstudentsForSearch[1]\
+    \ = \"Tom\";\nstudentsForSearch[2] = \"John\";\nstudentsForSearch[3] = \"Nancy\"\
+    ;\nstudentsForSearch[4] = \"Alice\";\nstudentsForSearch[5] = \"Kate\";\n```\n\n\
+    我们想知道数组中是否存在 \"Nancy\"，我们将比较每个元素以查看是否找到了 \"Nancy\"。对于包含成百或数千元素的数组，通过编程进行搜索更容易。\n\
+    \n```\nstring studentsForSearch[8];\nstudentsForSearch[0] = \"Ann\";\nstudentsForSearch[1]\
+    \ = \"Tom\";\nstudentsForSearch[2] = \"John\";\nstudentsForSearch[3] = \"Nancy\"\
+    ;\n```\n\nstudentsForSearch[4] = \"Alice\";\nstudentsForSearch[5] = \"Kate\";\n\
+    \n```\nint currentSearchTotal = 6;\nstring ToSearch=\"Nancy\";\nbool found = false;\n\
+    ```\n\n```\nfor (int i = 0; i < currentSearchTotal; i++)\n{\n    if (studentsForSearch[i]\
+    \ == ToSearch)\n    found = true;\n}\n```\n\n你可以将字符串 \"ToSearch\" 改为 \"Steve\"\
+    \ 或 \"Kate\" 或其他用于搜索的字符串。\n\n如果我们想从数组中删除一个特定值的元素，我们首先需要进行搜索以找到待删除元素的位置；找到后，我们将继续删除操作；如果没有找到该元素，则不需要删除。例如，如果我们想看数组中是否有\
+    \ Nancy，如果是，则删除该元素：\n\n```\nstring studentsForSearch[8];\nstudentsForSearch[0]\
+    \ = \"Ann\";\nstudentsForSearch[1] = \"Tom\";\nstudentsForSearch[2] = \"John\"\
+    ;\nstudentsForSearch[3] = \"Nancy\";\nstudentsForSearch[4] = \"Alice\";\nstudentsForSearch[5]\
+    \ = \"Kate\";\n```\n\n```\nint currentTotal = 6;\nstring ToSearch=\"Nancy\";\n\
+    int ToDelete = 0;\nbool found = false;\nfor (int i = 0; i < currentTotal; i++)\n\
+    {\n  if (studentsForSearch[i] == ToSearch)\n  {\n    found = true;\n    ToDelete\
+    \ = i;\n  }\n}\n```\n\n```cpp\n/*如果找到，删除此元素*/\nif (found)\n{\n  for (int i = ToDelete\
+    \ + 1; i < currentTotal; i++)\n  {\n    studentsForSearch[i] = studentsForSearch[i\
+    \ + 1];\n  }\n  studentsForSearch[currentTotal] = '\\0';\n  currentTotal = currentTotal\
+    \ - 1;\n}\n```\n\n| Ann | Tom | John | Alice | Kate | |\n| --- | --- | --- | ---\
+    \ | --- |\n\n如果我们想在特定值之前或之后插入一个元素，我们需要首先进行搜索找到该元素的位置；找到后，我们将继续插入；如果没有找到元素，则不需要插入。例如，我们想看\
+    \ “Steve” 是否在数组中，如果在，我们要插入第 5 个索引。如果不在，则什么都不做。\n\n```\nstring studentsForSearch[8];\n\
+    studentsForSearch[0] = \"Ann\";\nstudentsForSearch[1] = \"Tom\";\nstudentsForSearch[2]\
+    \ = \"John\";\nstudentsForSearch[3] = \"Nancy\";\nstudentsForSearch[4] = \"Alice\"\
+    ;\nstudentsForSearch[5] = \"Kate\";\n```\n\n```\nint currentTotal = 6;\nstring\
+    \ ToSearch=\"Steve\";\nint toInsert = 5;\nbool found = false;\nfor (int i = 0;\
+    \ i < currentTotal; i++)\n{\n    if (studentsForSearch[i] == ToSearch)\n    {\n\
+    \        found = true;\n    }\n}\n```\n\n```cpp\n/*如果没有找到，插入它*/\nif (!found)\n\
+    {\n    for (int i = currentTotal; i > toInsert; i--)\n    {\n        studentsForSearch[i]\
+    \ = studentsForSearch[i - 1];\n    }\n    studentsForSearch[toInsert] = ToSearch;\n\
+    \    currentTotal = currentTotal + 1;\n}\n```\n\n| Ann | Tom | Nancy | Kate |\n\
+    | --- | --- | --- | --- |\n\n# 排序数组\n\n如果数组存储整数值，有时数组中的元素不是升序的。为了按升序排序数组，有不同的算法，如冒泡排序、插入排序，这些都是基础的排序算法。\n\
+    \n# 冒泡排序\n\n为了按升序排序数组，冒泡排序表示最大的元素会像泡沫一样流向数组末尾。最大的元素之后，第二大的元素流向它的位置，以此此类推，直到最小的元素位于数组开头。通过这种方式，所有元素都排序了。\n\
+    \n例如，原始数组为：2, 6, 9, 3, 5, 7\n\n我们将从第一个元素开始：\n2<6, 不交换；6<9, 不交换；9>3, 交换：2, 6, 3,\
+    \ 9, 5, 7\n9>5, 交换：2, 6, 3, 5, 9, 7\n9>7, 交换：2, 6, 3, 5, 7, 9\n这一轮没有更多交换的元素，9\
+    \ 是数组中最大的元素。\n\n下一轮：2<6, 不交换；6>3, 交换：2, 3, 6, 5, 7, 9\n6>5, 交换：2, 3, 5, 6, 7,\
+    \ 9\n6<7, 不交换，所以 7 是数组中第二大的元素：2, 3, 5, 6, 7, 9\n\n下一轮：2<3, 不交换；3<5, 不交换；5<6, 不交换：2,\
+    \ 3, 5, 6, 7, 9\n下一轮：2<3, 不交换；3<5, 不交换：2, 3, 5, 6, 7, 9\n下一轮：2<3, 不交换：2, 3, 5,\
+    \ 6, 7, 9\n下一轮：只剩下元素 2 进行比较，不交换：2, 3, 5, 6, 7, 9\n\n数组现在排序好了。算法如下：\n\n```cpp\n\
+    /* 冒泡排序算法 */\nvoid BubbleSort(int A[], int length)\n{\n  /*算法中使用的变量 */\n  int\
+    \ i, j, temp;\n\n  /* i 表示当前轮将比较到哪个元素；每一轮最大值都会流到索引范围的末尾 */\n  for (i = length-1;\
+    \ i >= 0; i--)\n  {\n    /* 每一轮从范围内的第一个元素比较到最后一个元素 */\n    for (j = 1; j <= i;\
+    \ j++)\n    {\n      /* 比较元素与它的上方元素，如果当前元素比上方元素大，则交换 */\n      if (A[j - 1] >\
+    \ A[j])\n      {\n        /* 在 A[j-1] 和 A[j] 之间交换 */\n        temp = A[j - 1];\n\
+    \        A[j - 1] = A[j];\n        A[j] = temp;\n      }\n    }\n  }\n}\n```\n\
+    \n# 插入排序\n\n对于元素数组，从开头开始，将待插入元素之前的元素进行排序（第一个元素本身就是排序好的）；对于待插入的元素，与已排序的元素进行比较，找到插入的位置，直到整个数组都排序好。\n\
+    \n例如，数组为：2, 6, 9, 3, 5, 7\n\n我们将从第一个元素开始：\n2<6, 不交换；6<9, 不交换；9>3, 交换：2, 6, 3,\
+    \ 9, 5, 7\n9>5, 交换：2, 6, 3, 5, 9, 7\n9>7, 交换：2, 6, 3, 5, 7, 9\n\n下一轮：2<6, 不交换；6>3,\
+    \ 交换：2, 3, 6, 5, 7, 9\n6>5, 交换：2, 3, 5, 6, 7, 9\n6<7, 不交换，所以 7 是数组中第二大的元素：2, 3,\
+    \ 5, 6, 7, 9\n\n下一轮：2<3, 不交换；3<5, 不交换；5<6, 不交换：2, 3, 5, 6, 7, 9\n下一轮：2<3, 不交换；3<5,\
+    \ 不交换：2, 3, 5, 6, 7, 9\n下一轮：2<3, 不交换：2, 3, 5, 6, 7, 9\n\n数组现在排序好了。算法如下：\n\n```cpp\n\
+    /* 从左到右升序排序 */\nint* InsertionSort(int * A, int length)\n{\nint i, j, current;\n\
+    /* A[0]-A[i-1] 是已排序的，i 从 1 开始；\n从从第二个元素开始到数组的最后一个元素 */\nfor (i = 1; i < length;\
+    \ i++)\n{\ncurrent = A[i];\n/* j 从与 i 相同的值开始，并向前与已排序的元素比较，\n找到小于待插入的当前值的元素的位置\
+    \ */\nfor (j = i; j > 0 && A[j - 1] > current; j--)\n{\n  /* 将一个值较大的元素向后移动以留出插入空间\
+    \ */\n  A[j] = A[j - 1];\n}\n/* for 循环后获取插入位置 */\nA[j] = current;\n}\nreturn A;\n\
+    }\n```\n\n"
+  merge: 1
+  raw:
+  - "[PAGE 33]\n\n```\nstudentsToDelete[2] = \"John\";\nstToDelete[3] = \"Nancy\"\
+    ;\nstToDelete[4] = \"Alice\";\\studentsToDelete[5] = \"Kate\";\n```\n\n```\nint\
+    \ currentArrayTotal = 6;\nint deleteIndex = 2;\n\nfor (int i = deleteIndex+1;\
+    \ i < currentArrayTotal; i++)\n{\n studentsToDelete[i] = studentsToDelete[i +\
+    \ 1];\n}\n```\n\n```\nstudentsToDelete[currentArrayTotal] = '0';\n\ncurrentArrayTotal\
+    \ = currentArrayTotal - 1;\n```\n\nThe above algorithm works for any number of\
+    \ the inserted index from 0 to n-1, (n is the total number of elements in the\
+    \ array) for example, you can assign 0 the deleteIndex, so that it will delete\
+    \ the beginning of the array, and move the other element forward."
+  - '[PAGE 34]
+
+
+    <!-- no content -->'
+  - '[PAGE 35]
+
+
+    # Search an element from an array
+
+
+    Search an element that is equal to a specific value in the array, we will go through
+    every element in the array from the start to the end until the searched element
+    is found, or until it is identified that none of the element in the array satisfies
+    the search condition.
+
+
+    If the first element satisfies the condition then the operation stops, otherwise
+    it will compare one by one with the second element, the third elements, until
+    the search is found, or until the last element is compared.
+
+
+    | Ann | Tom | John | Nancy | Alice | Kate |
+
+
+    ```
+
+    string studentsForSearch[8];
+
+    studentsSearch[0] = "Ann"
+
+    studentsForSearch[1] = "Tom"
+
+    studentsForSearch[2] = "John"
+
+    studentsForSearch[3] = "Nancy"
+
+    studentsForSearch[4] = "Alice"
+
+    studentsForSearch[5] = "Kate";
+
+    ```
+
+
+    We want to know whether "Nancy" is in the array, we will compare each element
+    to see whether we find Nancy. For array which is hundreds or thousands of element,
+    it is easier to search by programming.
+
+
+    ```
+
+    string studentsForSearch[8];
+
+    studentsForSearch[0] = "Ann"
+
+    studentsForSearch[1] = "Tom"
+
+    studentsForSearch[2] = "John"
+
+    studentsForSearch[3] = "Nancy";
+
+    ```'
+  - "[PAGE 36]\n\nstudentsForSearch[4] = \"Alice\";\nstudentsForSearch[5] = \"Kate\"\
+    ;\n\n```\nint currentSearchTotal = 6;\nstring ToSearch=\"Nancy\";\nbool found\
+    \ = false;\n```\n\n```\nfor (int i = 0; i < currentSearchTotal; i++)\n{\n    if\
+    \ (studentsForSearch[i] == ToSearch)\n    found = true;\n}\n```\n\nYou can change\
+    \ the string \"ToSearch\" to be \"Steve\" or \"Kate\" or any other string for\
+    \ search.\n\nIf we want to delete a specific value of element from the array,\
+    \ we will need to first do a search to find out the location of the element to\
+    \ be delete; after it is found, we will continue the deleting operation; if no\
+    \ element is found, then no deletion is needed. For example, if we want to see\
+    \ Nancy is in the array, if it is, then delete this element:\n\n```\nstring studentsForSearch[8];\n\
+    studentsForSearch[0] = \"Ann\";\nstudentsForSearch[1] = \"Tom\";\nstudentsForSearch[2]\
+    \ = \"John\";\nstudentsForSearch[3] = \"Nancy\";\nstudentsForSearch[4] = \"Alice\"\
+    ;\nstudentsForSearch[5] = \"Kate\";\n```"
+  - "[PAGE 37]\n\n```\nint currentTotal = 6;\nstring ToSearch=\"Nancy\";\nintToDelete\
+    \ = 0;\nbool found = false;\nfor (int i = 0; i < currentTotal; i++)\n{\n  if (studentsForSearch[i]\
+    \ == ToSearch)\n  {\n    found = true;\n    ToDelete = i;\n  }\n}\n```\n\n```\n\
+    /*if found, delete this element*/\nif (found)\n{\n  for (int i =ToDelete + 1;\
+    \ i < currentTotal; i++\n  {\n    studentsForSearch[i] = studentsForSearch[i +\
+    \ 1];\n  }\n  studentsForSearch[currentTotal] = '\\0';\n  currentTotal = currentTotal\
+    \ - 1;\n}\n```\n\n| Ann | Tom | John | Alice | Kate | | |\n\nWe want to insert\
+    \ a specific value of element before or after a value, we will need to firstly\
+    \ do a search to find out the location of the element to be inserted; after it\
+    \ is found, we will continue the insertion; if no element is found, then no insertion\
+    \ is needed. For example, we want to see whether “Steve” is in the array, if it\
+    \ is not, we want to insert in the 5th index of the array. If it is in the array,\
+    \ we don't do anything."
+  - "[PAGE 38]\n\n```\nstring studentsForSearch[8];\nstudentsForSearch[0] = \"Ann\"\
+    ;\nstudentsForSearch[1] = \"Tom\";\nstudentsForSearch[2] = \"John\";\nstudentsForSearch[3]\
+    \ = \"Nancy\";\nstudentsForSearch[4] = \"Alice\";\nstudentsForSearch[5] = \"Kate\"\
+    ;\n```\n\n```\nint currentTotal = 6;\nstring ToSearch=\"Steve\";\nint toInsert\
+    \ = 5;\nbool found = false;\nfor (int i = 0; i < currentTotal; i++)\n{\n    if\
+    \ (studentsForSearch[i] == ToSearch)\n    {\n        found = true;\n    }\n}\n\
+    ```\n\n```\n/* if not found, insert it */\nif (!found)\n{\n    for (int i = currentTotal;\
+    \ i > toInsert; i--)\n    {\n        studentsForSearch[i] = studentsForSearch[i\
+    \ - 1];\n    }\n    studentsForSearch[toInsert] = ToSearch;\n    currentTotal\
+    \ = currentTotal + 1;\n}\n```"
+  - '[PAGE 39]
+
+
+    | Ann | Tom | John | Nancy | Alice | Kate | | |
+
+    |---|---|---|---|---|---|---||'
+  - '[PAGE 40]
+
+
+    <!-- no content -->'
+  - '[PAGE 41]
+
+
+    # Sort an array
+
+
+    If the array stores integer value, sometimes the elements in the array are not
+    ordered either ascending or descending. In order to sort the array to be ascending,
+    there are different algorithms, such as bubble sort, insert sort, which are the
+    most basic sorting algorithms.'
+  - '[PAGE 42]
+
+
+    <!-- no content -->'
+  - '[PAGE 43]
+
+
+    # Bubble Sort
+
+
+    If to sort the array to be ascending, bubble sort indicates the biggest element
+    will flow to the end of the array, like a bubble. After the biggest element on
+    the top, the second biggest element to flow to the position next to the biggest
+    element, and so on until the end of the element, which is the smallest element
+    will be at located at the beginning of the array. In this way, all the elements
+    are sorted.
+
+
+    For example, the original array is: 2, 6, 9, 3, 5, 7
+
+
+    We will start from the first element: 2:
+
+
+    2<6, no swap; 6<9, no swap; 9>3, swap:
+
+
+    2, 6, 3, 9, 5, 7
+
+
+    9>5, swap: 2, 6, 3, 5, 9, 7
+
+
+    9>7, swap: 2, 6, 3, 5, 7, 9
+
+
+    No more element to swap for this round, 9 is the biggest element in the array
+
+
+    Next round: 2<6, no swap; 6>3, swap:
+
+
+    2, 3, 6, 5, 7, 9
+
+
+    6>5, swap: 2, 3, 5, 6, 7, 9
+
+
+    6<7, no swap, so 7 is the second largest element in the array:
+
+
+    2, 3, 5, 6, 7, 9'
+  - "[PAGE 44]\n\nNext round: 2<3, no swap; 3<5, no swap; 5<6, no swap:\n\n2, 3, 5,\
+    \ 6, 7, 9\n\nNext round: 2<3, no swap; 3<5, no swap:\n\n2, 3, 5, 6, 7, 9\n\nNext\
+    \ round: 2<3, no swap: 2, 3, 5, 6, 7, 9\n\nNext round: 2 is the only element left\
+    \ for comparaison, no swap: 2, 3, 5, 6, 7, 9\n\nThe array is sorted now. The algorithm\
+    \ is as follows:\n\n```\n/* BubbleSort Algorithm */\nvoid BubbleSort(int A[],\
+    \ int length)\n{\n  /* variables to use in the algorithm */\n  int i, j, temp;\n\
+    \n  /* i indicates upto which element that the current round will compare to;\
+    \ for each round the biggest value till flow up to the end of the index range\
+    \ */\n  for (i = length-1; i >= 0; i--)\n  {\n    /* each round compare from the\
+    \ first element till the last element in the range */\n    for (j = 1; j <= i;\
+    \ j++)\n    {\n      /* compare the element with its upper element, swap if current\
+    \ element is bigger than its upper element */\n      if (A[j - 1] > A[j])\n  \
+    \    {\n        /*do the swap between A[j-1] and A[j]*/\n        temp = A[j -\
+    \ 1];\n```"
+  - '[PAGE 45]
+
+
+    ```
+
+    A[j - 1] = A[j];
+
+    A[j] = temp;
+
+    }
+
+    }
+
+    }
+
+    ```'
+  - '[PAGE 46]
+
+
+    <!-- no content -->'
+  - '[PAGE 47]
+
+
+    # Insertion Sort
+
+
+    For an array of elements, start from the beginning, make the elements before the
+    element that will be inserted to sorted (the first element is itself so it is
+    sorted already); for the element to be inserted, compare it with the element in
+    the already sorted elements, get the location to be inserted. Do the same thing
+    to every element until the whole array is sorted.
+
+
+    For example, the original array is:
+
+
+    2, 6, 9, 3, 5, 7
+
+
+    We will start from the first element, 2 by it is sorted, so we won’t do any movement:
+
+
+    2, 6, 9, 3, 5, 7
+
+
+    When it comes to 6, 6>2, so it is in its correct location:
+
+
+    2, 6, 9, 3, 5, 7
+
+
+    For 9, 9>6, so it is also in its correct location:
+
+
+    2, 6, 9, 3, 5, 7
+
+
+    For 3, 3<9, so 9 should move one spot backward, 3<6, 6 also should move one spot
+    backward; 3>2, so no need to move 2
+
+
+    2, 3, 6, 9, 5, 7
+
+
+    For 5, 5<9, so 9 should move one spot backward, 5<6, 6 also should move one spot
+    backward; 5>3, so no need to move 3
+
+
+    2, 3, 5, 6, 9, 7'
+  - "[PAGE 48]\n\nFor 7, 7<9, so 9 should move one spot backward, 7>6, so no need\
+    \ to move\n\n2, 3, 5, 6, 7, 9\n\nNo more elements to move, the array is sorted\
+    \ now. The algorithm is as follows:\n\n```\n/*Sorting to be ascending from left\
+    \ to right*/\nint* InsertionSort(int * A, int length)\n{\nint i, j, current;\n\
+    /*A[0]-A[i-1] are sorted, i starts from 1;\nstart from the 2nd element until the\
+    \ last element in the array*/\nfor (i = 1; i < length; i++)\n{\ncurrent = A[i];\n\
+    /*j starts from the same value as i, and go forward to compare the values\nget\
+    \ the location of the element which is smaller than the current value which needs\
+    \ to be inserted*/\nfor (j = i; j > 0 && A[j - 1] > current; j—)\n{\n  /*move\
+    \ one element that has larger value backward to leave a space to be inserted*/\n\
+    \  A[j] = A[j - 1];\n}\n/*get the location to be inserted after the for loop*/\n\
+    A[j] = current;\n}\nreturn A;\n```"
+- md: "\n# Selection Sort\n\nFor an array of elements, select the smallest element,\
+    \ and put it to the beginning of the array; and then select the next smallest\
+    \ element, and put it to the position next to the smallest element; do the same\
+    \ thing until the whole array is sorted.\n\nFor example, the original array is:\
+    \ 2, 6, 9, 3, 5, 7\n\nWe use min to store the index where the current smallest\
+    \ value we have met; from the beginning 2, since the beginning only 1 element\
+    \ is met, we set min to be 2, and then compare the other elements with the current\
+    \ smallest element, no element is smaller than 2, so 2 is the smallest element\
+    \ in the array. 2 is positioned at the beginning of the array. 2, 6, 9, 3, 5,\
+    \ 7\n\nWe move to the next 6, in this round we don’t need to consider 2, which\
+    \ is already positioned. Currently 6 is the only element we meet, assign the index\
+    \ of 6 to be the smallest; and compare the other elements with 6, 6<9 no change,\
+    \ 6<3, we assign the min to be the index of 3, 3<5, no change, 3<7, no change,\
+    \ so min is 3, we swap 3 with the beginning of current round which is 6:\n\n+\
+    \ 2, 3, 9, 6, 5, 7\n\nWe now move to the next element in the next round which\
+    \ is 9; 9<6, min is pointed to 6; 6<5, min points to 5; 5<7, no change, so current\
+    \ round 5 is the smallest, we swap 5 with 9: 2, 3, 5, 6, 9, 7\n\nNext round, min\
+    \ points to 6, 6<9, no change, 6<7, no change, min points to 6:\n\n+ 2, 3, 5,\
+    \ 6, 9, 7\n\nNext round: min points to 9, 9>7, min points to 7; 7 swap with 9:\n\
+    \n2, 3, 5, 6, 7, 9\n\nNext round, min points to 9, the last element in the array,\
+    \ the array is sorted now:\n\n2, 3, 5, 6, 7, 9\n\nThe algorithm is as following:\n\
+    \n```cpp\n// Selection Sort Algorithm\nvoid SelectionSort(int A[], int length)\n\
+    {\n//i and j are used for the rounds\n//min gets the index of minimum value\n\
+    //temp is used as temporary place for values swap\nint i, j, min, temp;\n\n//it\
+    \ takes length-1 rounds, each round selects the minimum value\n//it starts from\
+    \ the 1st element, the minimum value of each round will be swapped with the value\
+    \ in the ith location\nfor (i = 0; i < length - 1; i++)\n{\n//assign the min index\
+    \ to the beginning of each round\nmin = i;\n\n//compare the element up to the\
+    \ end of the array\nfor (j = i + 1; j < length; j++)\n{\n//if smaller value is\
+    \ found, change the min value to be the smaller value index\nif (A[j] < A[min])\n\
+    {\nmin = j;\n}\n}\n//swap the minimum value with the i index value\nif (min !=\
+    \ i)\n{\n    temp = A[i];\n    A[i] = A[min];\n    A[min] = temp;\n}\n//the next\
+    \ round i=i+1, will move to the next element as next round\n}\n}\n```\n\nFor example,\
+    \ there is a list containing A, B, C, and D\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_55_0.png)\n\
+    \nHere we want to insert another element H to be between C and D, so the linked\
+    \ list structure is changed as follows:\n\nThe code to do the insertion to a linked\
+    \ list:\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_55_1.png)\n\n```cpp\n//find\
+    \ the node that has the SearchValue in the list, insert a node with the ToInsert\
+    \ value after the value found\n//if no value found, insert to be the end of the\
+    \ list\n//return the list after it is done\nNode * InsertNode(string ToInsert,\
+    \ Node * AList, string SearchValue)\n  //if the list is an empty list, the header\
+    \ of the list will point to the new node\n  if ((*AList).header == NULL)\n  {\n\
+    \    (*AList).header = new Node();\n    (*AList).header).data = ToInsert;\n  \
+    \  (*(AList).header).next = NULL;\n    return AList;\n  }\n\n//if the list has\
+    \ at least one node\nNode * current = (*AList).header;\n\n```cpp\n//do a search\
+    \ to the list until the node is found, or until the end of the list met\nwhile\
+    \ ((*current).data != SearchValue && (*current).next!=NULL)\n{\n    current =\
+    \ (*current).next;\n}\n\n//construct the new node\nNode aNewNode;\naNewNode.data\
+    \ = ToInsert;\n\n//maintain the link\naNewNode.next = (*current).next;\n(*current).next\
+    \ = &aNewNode;\n\nreturn AList;\n}\n```\n\n# Delete an element from a list\n\n\
+    For example, there is a list containing A, B, C, and D\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_58_0.png)\n\
+    \nHere we want to delete the element C, so the linked list structure is changed\
+    \ as follows:\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_58_1.png)\n\nThe code\
+    \ to do the deletion to a linked list:\n\n```cpp\nstruct Node\n{\n  string data;\n\
+    \  Node * next;\n  Node * header;\n};\n\n//find the node that has the SearchValue\
+    \ in the list, delete the node\n//if no value found, no deletion\n//return the\
+    \ list after it is done\n// (Wait, the OCR text for deletion is fragmented, reconstructing\
+    \ logic based on provided snippets)\n```\n\n*Note: The OCR text for the deletion\
+    \ logic was highly fragmented across pages. I have cleaned the available code\
+    \ fragments as requested.*\n\n```cpp\n//if the list is not empty\nif (AList).header\
+    \ != NULL)\n{\n    Node * current = AList->header;\n    //do a search to the list\
+    \ until the node is found, or until the end of the list met\n    while (current->data\
+    \ != SearchValue && current->next != NULL)\n    {\n        current = current->next;\n\
+    \    }\n    // logic for deletion would follow here\n}\n```\n"
+  mdcn: "\n\n# 选择排序\n\n对于一个元素数组，选择最小的元素，并将其放在数组的开头；然后选择下一个最小的元素，并将其放在紧邻最小元素的位置；重复此操作，直到整个数组完成排序。\n\
+    \n例如，原始数组为：2, 6, 9, 3, 5, 7\n\n我们使用 `min` 来存储当前遇到的最小值的索引；从开头的 2 开始，由于开头只遇到了 1\
+    \ 个元素，我们将 `min` 设为 2，然后将其他元素与当前最小元素进行比较，没有元素比 2 小，因此 2 是数组中最小的元素。2 位于数组的开头。此时数组为：2,\
+    \ 6, 9, 3, 5, 7\n\n我们移动到下一个 6，在这一轮中我们不需要考虑已经定位的 2。目前 6 是我们遇到的唯一元素，将 6 的索引赋值为最小；并将其他元素与\
+    \ 6 进行比较，6<9 无变化，6<3，我们将 `min` 赋值为 3 的索引，3<5 无变化，3<7 无变化，因此 `min` 为 3，我们将 3 与当前轮的开头即\
+    \ 6 进行交换：\n\n+ 2, 3, 9, 6, 5, 7\n\n我们现在移动到下一轮的下一个元素即 9；9<6，`min` 指向 6；6<5，`min`\
+    \ 指向 5；5<7 无变化，因此当前轮 5 是最小的，我们将 5 与 9 交换：2, 3, 5, 6, 9, 7\n\n下一轮，`min` 指向 6，6<9\
+    \ 无变化，6<7 无变化，`min` 指向 6：\n\n+ 2, 3, 5, 6, 9, 7\n\n下一轮：`min` 指向 9，9>7，`min` 指向\
+    \ 7；7 与 9 交换：\n\n2, 3, 5, 6, 7, 9\n\n下一轮，`min` 指向 9，即数组的最后一个元素，现在数组已排序：\n\n2,\
+    \ 3, 5, 6, 7, 9\n\n该算法如下：\n\n```cpp\n// 选择排序算法\nvoid SelectionSort(int A[], int\
+    \ length)\n{\n//i 和 j 用于轮次循环\n//min 获取最小值的索引\n//temp 用作值交换的临时位置\nint i, j, min,\
+    \ temp;\n\n// 它需要 length-1 轮循环，每轮选择一个最小值\n// 它从第 1 个元素开始，每轮的最小值将与第 i 位置的值进行交换\n\
+    for (i = 0; i < length - 1; i++)\n{\n// 将 min 索引赋值为每轮的开头\nmin = i;\n\n// 比较直到数组末尾的元素\n\
+    for (j = i + 1; j < length; j++)\n{\n// 如果找到了更小的值，则将 min 改为较小值的索引\nif (A[j] <\
+    \ A[min])\n{\nmin = j;\n}\n}\n// 将最小值与 i 位置的值进行交换\nif (min != i)\n{\n    temp\
+    \ = A[i];\n    A[i] = A[min];\n    A[min] = temp;\n}\n// 下一轮 i=i+1，将移动到下一个元素作为下一轮\n\
+    }\n}\n```\n\n例如，假设有一个包含 A, B, C 和 D 的列表\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_55_0.png)\n\
+    \n在这里我们想要插入另一个元素 H 在 C 和 D 之间，因此链表结构改变如下：\n\n对链表执行插入操作的代码：\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_55_1.png)\n\
+    \n```cpp\n// 在列表中找到包含 SearchValue 的节点，在找到的值后插入一个带有 ToInsert 值的节点\n// 如果未找到该值，则插入到列表末尾\n\
+    // 完成后返回列表\nNode * InsertNode(string ToInsert, Node * AList, string SearchValue)\n\
+    \  // 如果列表为空列表，链表头将指向新节点\n  if ((*AList).header == NULL)\n  {\n    (*AList).header\
+    \ = new Node();\n    (*AList).header).data = ToInsert;\n    (*(AList).header).next\
+    \ = NULL;\n    return AList;\n  }\n\n// 如果列表至少有一个节点\nNode * current = (*AList).header;\n\
+    \n```cpp\n// 遍历列表直到找到节点，或到达列表末尾\nwhile ((*current).data != SearchValue && (*current).next!=NULL)\n\
+    {\n    current = (*current).next;\n}\n\n// 构造新节点\nNode aNewNode;\naNewNode.data\
+    \ = ToInsert;\n\n// 维护连接\naNewNode.next = (*current).next;\n(*current).next =\
+    \ &aNewNode;\n\nreturn AList;\n}\n```\n\n# 从列表中删除元素\n\n例如，假设有一个包含 A, B, C 和 D\
+    \ 的列表\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_58_0.png)\n\n在这里我们想要删除元素 C，因此链表结构改变如下：\n\
+    \n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_58_1.png)\n\n对链表执行删除操作的代码：\n\n```cpp\n\
+    struct Node\n{\n  string data;\n  Node * next;\n  Node * header;\n};\n\n// 如果列表不为空\n\
+    if (AList).header != NULL)\n{\n    Node * current = AList->header;\n    // 遍历列表直到找到节点，或到达列表末尾\n\
+    \    while (current->data != SearchValue && current->next != NULL)\n    {\n  \
+    \      current = current->next;\n    }\n    // 删除逻辑将在此之后\n}\n```\n\n*注：由于原文存在碎片化，已根据提供的代码片段进行了整理。*\n\
+    \n"
+  merge: 0
+  raw:
+  - '[PAGE 49]
+
+
+    ```
+
+    }
+
+    ```'
+  - '[PAGE 50]
+
+
+    <!-- no content -->'
+  - '[PAGE 51]
+
+
+    # Selection Sort
+
+
+    For an array of elements, select the smallest element, and put it to the beginning
+    of the array; and then select the next smallest element, and put it to the position
+    next to the smallest element; do the same thing until the whole array is sorted.
+
+
+    For example, the original array is: 2, 6, 9, 3, 5, 7
+
+
+    We use min to store the index where the current smallest value we have met; from
+    the beginning 2, since the beginning only 1 element is met, we set min to be 2,
+    and then compare the other elements with the current smallest element, no element
+    is smaller than 2, so 2 is the smallest element in the array. 2 is positioned
+    at the beginning of the array. 2, 6, 9, 3, 5, 7
+
+
+    We move to the next 6, in this round we don’t need to consider 2, which is already
+    positioned. Currently 6 is the only element we meet, assign the index of 6 to
+    be the smallest; and compare the other elements with 6, 6<9 no change, 6<3, we
+    assign the min to be the index of 3, 3<5, no change, 3<7, no change, so min is
+    3, we swap 3 with the beginning of current round which is 6:
+
+
+    +   2, 3, 9, 6, 5, 7
+
+
+    We now move to the next element in the next round which is 9; 9<6, min is pointed
+    to 6; 6<5, min points to 5; 5<7, no change, so current round 5 is the smallest,
+    we swap 5 with 9: 2, 3, 5, 6, 9, 7
+
+
+    Next round, min points to 6, 6<9, no change, 6<7, no change, min points to 6:
+
+
+    +   2, 3, 5, 6, 9, 7
+
+
+    Next round: min points to 9, 9>7, min points to 7; 7 swap with 9:'
+  - '[PAGE 52]
+
+
+    2, 3, 5, 6, 7, 9
+
+
+    Next round, min points to 9, the last element in the array, the array is sorted
+    now:
+
+
+    2, 3, 5, 6, 7, 9
+
+
+    The algorithm is as following:
+
+
+    ```
+
+    // Selection Sort Algorithm
+
+    void SelectionSort(int A[], int length)
+
+    {
+
+    //i and j are used for the rounds
+
+    //min gets the index of minimum value
+
+    //temp is used as temporary place for values swap
+
+    int i, j, min, temp;
+
+
+    //it takes length-1 rounds, each round selects the minimum value
+
+    //it starts from the 1st element, the minimum value of each round will be swapped
+    with the value in the ith location
+
+    for (i = 0; i < length - 1; i++)
+
+    {
+
+    //assign the min index to the beginning of each round
+
+    min = i;
+
+
+    //compare the element up to the end of the array
+
+    for (j = i + 1; j < length; j++)
+
+    {
+
+    //if smaller value is found, change the min value to be the smaller value index
+
+    if (A[j] < A[min])
+
+    {
+
+    min = j;
+
+    ```'
+  - "[PAGE 53]\n\n```\n}\n//swap the minimum value with the i index value\nif (min\
+    \ !=i)\n{\n    temp = A[i];\n    A[i] = A[min];\n    A[min] = temp;\n}\n//the\
+    \ next round i=i+1, will move to the next element as next round\n}\n}\n```"
+  - '[PAGE 54]
+
+
+    <!-- no content -->'
+  - "[PAGE 55]\n\nFor example, there is a list containing A, B, C, and D\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_55_0.png)\n\
+    \nHere we want to insert another element H to be between C and D, so the linked\
+    \ list structure is changed as follows:\n\nThe code to do the insertion to a linked\
+    \ list:\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_55_1.png)\n\n```\n//find the\
+    \ node that has the SearchValue in the list, insert a node with the ToInsert value\
+    \ after the value found\n//if no value found, insert to be the end of the list\n\
+    //return the list after it is done\nNode * InsertNode(string ToInsert, Node *\
+    \ AList, string SearchValue)\n  //if the list is an empty list, the header of\
+    \ the list will point to the new node\n  if ((*AList).header == NULL)\n  {\n \
+    \   (*AList).header = new Node();\n    (*AList).header).data = ToInsert;\n```"
+  - "[PAGE 56]\n\n```\n(*(AList).header).next = NULL;\nreturn AList;\n}\n```\n\n//if\
+    \ the list has at least one node\nNode * current = (*AList).header;\n\n```\n//do\
+    \ a search to the list until the node is found, or until the end of the list met\n\
+    while ((*current).data != SearchValue && (*current).next!=NULL)\n{\n    current\
+    \ = (*current).next;\n}\n```\n\n//construct the new node\nNode aNewNode;\naNewNode.data\
+    \ = ToInsert;\n\n//maintain the link\naNewNode.next = (*current).next;\n(*current).next\
+    \ = &aNewNode;\n\n```\nreturn AList;\n}\n```"
+  - '[PAGE 57]
+
+
+    <!-- no content -->'
+  - "[PAGE 58]\n\n# Delete an element from a list\n\nFor example, there is a list\
+    \ containing A, B, C, and D\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_58_0.png)\n\
+    \nHere we want to delete the element C, so the linked list structure is changed\
+    \ as follows:\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_58_1.png)\n\nThe code\
+    \ to do the deletion to a linked list:\n\n```\nstruct Node\n{\n  string data;\n\
+    \  Node * next;\n  Node * header;\n};\n\n//find the node that has the SearchValue\
+    \ in the list, delete the node\n//if no value found, no deletion\n//return the\
+    \ list after it is done\n```"
+  - "[PAGE 59]\n\n```\n//if the list is not an empty list, for pointer, we can also\
+    \ use -> to get the data within\nif (AList->header != NULL)\n{\n    Node * current\
+    \ = AList->header;\n\n    //if the node to be deleted is at the beginning of the\
+    \ list\n    if (current->data == SearchValue)\n    {\n        AList->header =\
+    \ current->next;\n    }\n    else\n{\n        Node * pre=current;\n\n        //use\
+    \ pre to point to the node previously compared\n        //move current to the\
+    \ next node to be compared\n        //do a search to the list until the node to\
+    \ be deleted is found, or until the end of the list is met\n        while (current\
+    \ != NULL && &current->data != SearchValue)\n        {\n            pre = current;\n\
+    \            current = current->next;\n        }\n        //current is the node\
+    \ to be deleted; maintain the link so the list is not broken\n        if (current\
+    \ != NULL)\n        {\n            pre->next = current->next;\n            current->next\
+    \ = NULL;\n        }\n    }\n```"
+  - '[PAGE 60]
+
+
+    ```
+
+    }
+
+    return AList;
+
+    }
+
+    ```'
+  - '[PAGE 61]
+
+
+    <!-- no content -->'
+  - '[PAGE 62]
+
+
+    <!-- no content -->'
+  - "[PAGE 63]\n\n# Get the intersection of two arrays\n\nThis example tries to get\
+    \ the insertion set of two arrays.\n\n```\n//two arrays\nint array1[] = { 2, 5,\
+    \ 3, 1, 7, 9 };\nint array2[] = { 2, 10, 12, 26, 3, 1 };\n\n//compare each element\
+    \ in the two arrays, if element exists in both arrays, print it out\nfor (int\
+    \ i = 0; i < 6; i++)\n{\n    for (int j = 0; j < 6; j++)\n    {\n        if (array2[j]\
+    \ == array1[i])\n        {\n            cout << array2[j];\n        }\n    }\n\
+    }\n```\n\nIt prints out: 2, 3, 1\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_63_0.png)"
+  - '[PAGE 64]
+
+
+    <!-- no content -->'
+  - "[PAGE 65]\n\n# Get the union of two arrays\n\nThis example tries to get the union\
+    \ set of two arrays.\n\n```\n//two arrays\nint array1[] = { 2, 5, 3, 1, 7, 9 };\n\
+    int array2[] = { 2, 10, 12, 26, 3, 1 };\n\n//compare each element in array1 to\
+    \ see whether it is in array2\nfor (int i = 0; i < 6; i++) {\n    //use flag to\
+    \ indicate whether element exist in array2, 0 means no, 1 means yes\n    int flag\
+    \ = 0;\n    for (int j = 0; j < 6; j++) {\n        if (array2[j] == array1[i])\
+    \ {\n            flag = 1; break;\n        }\n    }\n\n    //if the element in\
+    \ array1 is not in array2, print it out\n    if (flag == 0) {\n        cout <<\
+    \ array1[i];\n    }\n}\n\n//print out array2\n```"
+  - "[PAGE 66]\n\n```\nfor (int j = 0; j < 6; j++)\n{\n    cout << array2[j];\n}\n\
+    ```\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_66_0.png)\n\nIt prints out:\n\n\
+    5, 7, 9, 2, 10, 12, 26, 3, 1"
+  - '[PAGE 67]
+
+
+    <!-- no content -->'
+  - "[PAGE 68]\n\n# Get the complement of an array\n\nThis example tries to get the\
+    \ complement set of two arrays.\n\n```\n//two arrays, get the complement of array1\
+    \ regarding array2\nint array1[] = { 2, 3, 1 };\nint array2[] = { 2, 10, 12, 26,\
+    \ 3, 1 };\n\n//compare element in array1 with array2\nfor (int i = 0; i < 6; i++)\n\
+    {\n    //use flag to indicate whether element exist in array1, 0 means no, 1 means\
+    \ yes\nint flag = 0;\nfor (int j = 0; j < 3; j++)\n{\n    if (array1[j] == array2[i])\n\
+    \    {\n        flag = 1; break;\n    }\n}\n\n//if the element in array2 is not\
+    \ in array1, print it out\nif (flag == 0)\n{\n    cout << array2[i];\n}\n\n```"
+  - '[PAGE 69]
+
+
+    ![](img/c11c4a3212693e8558c7b1c05f5b5ac7_69_0.png)
+
+
+    It prints out:
+
+
+    10, 12, 26'
+  - '[PAGE 70]
+
+
+    <!-- no content -->'
+  - "[PAGE 71]\n\n# Get the Cartesian product of two arrays\n\nThis example tries\
+    \ to get the Cartesian product set of two arrays.\n\n```\n//two arrays\nint array1[]\
+    \ = { 2, 3, 1, 5, 9, 0};\nint array2[] = { 2, 10, 12, 26, 3, 1 };\n\n//get the\
+    \ elements in array1\nfor (int i = 0; i < 6; i++)\n{\n    cout << array1[i];\n\
+    }\n\n//get the elements in array2\nfor (int i = 0; i < 6; i++)\n{\n    cout <<\
+    \ array2[i];\n}\n```\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_71_0.png)"
+- md: "\nIt prints out:\n\n2, 3, 1, 5, 9, 0, 2, 10, 12, 26, 3, 1\n\n# Binary Search\
+    \ Tree\n\nIn a binary search tree, for each node, the value of the left node is\
+    \ less than the value of the root node; the value of the right node is larger\
+    \ than the value of the root node. For example, with the following binary tree:\n\
+    \n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_74_0.png)\n\nFirst let's program how\
+    \ to construct this tree.\n\n```cpp\n#include <iostream>\n#include <string>\n\
+    using namespace std;\n\n//tree node structure\nclass TreeNode {\npublic:\nTreeNode\
+    \ * leftChild;\nTreeNode * rightChild;\nint value;\n\n//default constructor\n\
+    TreeNode(){}\n```\n\n```cpp\n//constructor, assign a value to the node\nTreeNode(int\
+    \ val)\n{\n    value = val;\n}\n```\n\n```cpp\n//Binary Tree method and root property\n\
+    class BinaryTree{\npublic:\n    TreeNode * root;\n```\n\n```cpp\n//constructor,\
+    \ assign a value to the root of the binary tree\nBinaryTree(int aValue)\n{\n \
+    \   root = new TreeNode(aValue);\n}\n```\n\n```cpp\n//insert a node to the tree\
+    \ recursively finds out is correct location\nvoid InsertNode(TreeNode * subRoot,\
+    \ TreeNode * tn)\n{\n    if (subRoot == NULL) {\n        subRoot = tn;\n    }\n\
+    \n    if (tn->value < subRoot->value)\n{\n  InsertNode(subRoot->leftChild, tn);\n\
+    }\nelse if (tn->value > subRoot->value)\n{\n  InsertNode(subRoot->rightChild,\
+    \ tn);\n}\n}\n```\n\n```cpp\n//Print out all values in the Binary Tree\nvoid printTree(TreeNode\
+    \ * subRoot)\n{\n  if (subRoot->leftChild != NULL) printTree(subRoot->leftChild);\n\
+    \  cout << subRoot->value;\n  if (subRoot->rightChild != NULL) printTree(subRoot->rightChild);\n\
+    }\n\nint main ()\n{\n  BinaryTree * bt = new BinaryTree(21);\n\n  TreeNode * tn\
+    \ = new TreeNode(18);\n  bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(8);\n\
+    \  bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(35);\n  bt->InsertNode(bt->root,\
+    \ tn);\n  tn = new TreeNode(25);\n  bt->InsertNode(bt->root, tn);\n  tn = new\
+    \ TreeNode(23);\n  bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(62);\n \
+    \ bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(78);\n  bt->InsertNode(bt->root,\
+    \ tn);\n\n  bt->printTree(bt->root);\n  return 0;\n}\n```\n\n**printTree** method\
+    \ in this example is **an In-Order Traverse**, it first traverse the left child\
+    \ and then the parent node, and then the right child, so it prints out:\n\n8,\
+    \ 18, 21, 23, 25, 35, 62, 78.\n\nWe can see that the number is sorted ascending\
+    \ by printing them using In-order traverse.\n\n# Width first Traverse\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_79_0.png)\n\
+    \nWidth first traverse will traverse nodes level by level starting from the root.\
+    \ In the above tree, width first traverse order is: 21, 18, 35, 8, 25, 62, 23,\
+    \ 78\n\nThe algorithm is as following using queue data structure. In order to\
+    \ use queue, need to add #include <queue>to the very beginning of the C++ code\n\
+    \n```cpp\nvoid BreadthFirstTraversal(TreeNode *root)\n{\nqueue<TreeNode> que;\n\
+    \nif (root == NULL) return;\n\nque.push(*root);\nwhile (!que.empty()) {\n  TreeNode\
+    \ temp = que.front();\n  int val = temp.value;\n  cout << val;\n\n  if (temp.leftChild\
+    \ != NULL) que.push(*temp.leftChild);\n\n  if (temp.rightChild != NULL) que.push(*temp.rightChild);\n\
+    }\n}\n```\n\n# Depth First Traverse\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_82_0.png)\n\
+    \nDepth first traverse will traverse nodes branch by branch starting from the\
+    \ root. In the above tree, width first traverse order is: 21, 18, 8, 35, 25, 23,\
+    \ 62, 78.\n\nDepth first traverse is also Pre-Order Traverse. It traverses the\
+    \ parent node first and then traverses its left child and then the right child.\n\
+    \nThe algorithm is as following, using the stack as data structure:\n\n```cpp\n\
+    void PreOrderTraversal(TreeNode * root)\n{\n    stack<TreeNode*> sta;\n\n    if\
+    \ (root == NULL) return;\n\n    sta.push(root);\n    while (!sta.empty()) {\n\
+    \        TreeNode * temp = sta.top();\n        sta.pop();\n        int val = temp->value;\n\
+    \        cout << val;\n\n        if (temp->rightChild != NULL) sta.push(temp->rightChild);\n\
+    \n        if (temp->leftChild != NULL) sta.push(temp->leftChild);\n    }\n}\n\
+    ```\n\n# Binary Tree Search\n\nFor example, we need to search the value 25, we\
+    \ compare 25 with the root 21, it is larger than 21, we continue search its right\
+    \ branch, which is 35, 25 is smaller than 35, we will continue 35’s left branch,\
+    \ and then we found 25.\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_85_0.png)\n\
+    \nTo search a value in the binary search tree, we compare the value with the parent\
+    \ node, if the value is less than the parent, we search its left branch; if the\
+    \ value is bigger than the parent, and we search its right branch, until we found\
+    \ the value, or until no other value can be compared.\n\n```cpp\nbool Search(int\
+    \ val, TreeNode * root)\n{\n  TreeNode * current=root;\n\n  while (current!=NULL)\
+    \ {\n    if (val<current->value) current=current->leftChild;\n    else if (val>current->value)\
+    \ current=current->rightChild;\n    else return true;\n  }\n  return false;\n\
+    }\n```\n"
+  mdcn: "\n\n输出如下：\n\n2, 3, 1, 5, 9, 0, 2, 10, 12, 26, 3, 1\n\n# 二叉搜索树\n\n在二叉搜索树中，对于每个节点，左子节点的值小于根节点的值；右子节点的值大于根节点的值。例如，对于如下二叉树：\n\
+    \n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_74_0.png)\n\n首先让我们编写程序来构建这棵树。\n\n```cpp\n\
+    #include <iostream>\n#include <string>\nusing namespace std;\n\n//树节点结构\nclass\
+    \ TreeNode {\npublic:\nTreeNode * leftChild;\nTreeNode * rightChild;\nint value;\n\
+    \n// 默认构造函数\nTreeNode(){}\n```\n\n```cpp\n// 构造函数，给节点赋值\nTreeNode(int val)\n{\n\
+    \    value = val;\n}\n```\n\n```cpp\n// 二叉树类和根节点属性\nclass BinaryTree{\npublic:\n\
+    \    TreeNode * root;\n```\n\n```cpp\n// 构造函数，给二叉树的根赋值\nBinaryTree(int aValue)\n\
+    {\n    root = new TreeNode(aValue);\n}\n```\n\n```cpp\n// 插入节点到树，递归寻找正确的位置\nvoid\
+    \ InsertNode(TreeNode * subRoot, TreeNode * tn)\n{\n    if (subRoot == NULL) {\n\
+    \        subRoot = tn;\n    }\n\n    if (tn->value < subRoot->value)\n{\n  InsertNode(subRoot->leftChild,\
+    \ tn);\n}\nelse if (tn->value > subRoot->value)\n{\n  InsertNode(subRoot->rightChild,\
+    \ tn);\n}\n}\n```\n\n```cpp\n// 打印二叉树中所有的值\nvoid printTree(TreeNode * subRoot)\n\
+    {\n  if (subRoot->leftChild != NULL) printTree(subRoot->leftChild);\n  cout <<\
+    \ subRoot->value;\n  if (subRoot->rightChild != NULL) printTree(subRoot->rightChild);\n\
+    }\n\nint main ()\n{\n  BinaryTree * bt = new BinaryTree(21);\n\n  TreeNode * tn\
+    \ = new TreeNode(18);\n  bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(8);\n\
+    \  bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(35);\n  bt->InsertNode(bt->root,\
+    \ tn);\n  tn = new TreeNode(25);\n  bt->InsertNode(bt->root, tn);\n  tn = new\
+    \ TreeNode(23);\n  bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(62);\n \
+    \ bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(78);\n  bt->InsertNode(bt->root,\
+    \ tn);\n\n  bt->printTree(bt->root);\n  return 0;\n}\n```\n\n此示例中的 **printTree**\
+    \ 方法是**中序遍历**，它首先遍历左孩子，然后是父节点，最后是右孩子，因此它的输出为：\n\n8, 18, 21, 23, 25, 35, 62, 78.\n\
+    \n我们可以看到，通过中序遍历打印，数字是按升序排序的。\n\n# 宽度优先遍历\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_79_0.png)\n\
+    \n宽度优先遍历将从根节点开始层层遍历节点。在上面的树中，宽度优先遍历的顺序是：21, 18, 35, 8, 25, 62, 23, 78。\n\n使用队列数据结构的算法如下。为了使用队列，需要在代码最开始添加\
+    \ #include <queue>\n\n```cpp\nvoid BreadthFirstTraversal(TreeNode *root)\n{\n\
+    queue<TreeNode> que;\n\nif (root == NULL) return;\n\nque.push(*root);\nwhile (!que.empty())\
+    \ {\n  TreeNode temp = que.front();\n  int val = temp.value;\n  cout << val;\n\
+    \n  if (temp.leftChild != NULL) que.push(*temp.leftChild);\n\n  if (temp.rightChild\
+    \ != NULL) que.push(*temp.rightChild);\n}\n}\n```\n\n# 深度优先遍历\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_82_0.png)\n\
+    \n深度优先遍历将从根节点开始分支遍历节点。在上面的树中，宽度优先遍历的顺序是：21, 18, 8, 35, 25, 23, 62, 78。\n\n深度优先遍历也是前序遍历。它先遍历父节点，然后遍历左孩子，最后遍历右孩子。\n\
+    \n使用栈数据结构的算法如下：\n\n```cpp\nvoid PreOrderTraversal(TreeNode * root)\n{\n    stack<TreeNode*>\
+    \ sta;\n\n    if (root == NULL) return;\n\n    sta.push(root);\n    while (!sta.empty())\
+    \ {\n        TreeNode * temp = sta.top();\n        sta.pop();\n        int val\
+    \ = temp->value;\n        cout << val;\n\n        if (temp->rightChild != NULL)\
+    \ sta.push(temp->rightChild);\n\n        if (temp->leftChild != NULL) sta.push(temp->leftChild);\n\
+    \    }\n}\n```\n\n# 二叉树搜索\n\n例如，我们需要搜索值 25，我们将 25 与根节点 21 比较，它大于 21，我们继续搜索它的右分支，即\
+    \ 35；25 小于 35，我们将继续搜索 35 的左分支，然后找到了 25。\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_85_0.png)\n\
+    \n在二叉搜索树中搜索值，我们将该值与父节点比较，如果值小于父节点，我们搜索它的左分支；如果值大于父节点，我们搜索它的右分支，直到找到该值，或者没有其他可以比较的值了。\n\
+    \n```cpp\nbool Search(int val, TreeNode * root)\n{\n  TreeNode * current=root;\n\
+    \n  while (current!=NULL) {\n    if (val<current->value) current=current->leftChild;\n\
+    \    else if (val>current->value) current=current->rightChild;\n    else return\
+    \ true;\n  }\n  return false;\n}\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 72]
+
+
+    It prints out:
+
+
+    2, 3, 1, 5, 9, 0, 2, 10, 12, 26, 3, 1'
+  - '[PAGE 73]
+
+
+    <!-- no content -->'
+  - '[PAGE 74]
+
+
+    # Binary Search Tree
+
+
+    In a binary search tree, for each node, the value of the left node is less than
+    the value of the root node; the value of the right node is larger than the value
+    of the root node. For example, with the following binary tree:
+
+
+    ![](img/c11c4a3212693e8558c7b1c05f5b5ac7_74_0.png)
+
+
+    First let''s program how to construct this tree.
+
+
+    ```
+
+    #include <iostream>
+
+    #include <string>
+
+    using namespace std;
+
+
+    //tree node structure
+
+    class TreeNode {
+
+    public:
+
+    TreeNode * leftChild;
+
+    TreeNode * rightChild;
+
+    int value;
+
+    ```'
+  - "[PAGE 75]\n\n```\n//default constructor\nTreeNode(){}\n```\n\n```\n//constructor,\
+    \ assign a value to the node\nTreeNode(int val)\n{\n    value = val;\n}\n```\n\
+    \n```\n//Binary Tree method and root property\n```\n\n```\nclass BinaryTree{\n\
+    public:\n    TreeNode * root;\n```\n\n```\n//constructor, assign a value to the\
+    \ root of the binary tree\nBinaryTree(int aValue)\n{\n    root = new TreeNode(aValue);\n\
+    }\n```\n\n```\n//insert a node to the tree recursively finds out is correct location\n\
+    ```\n\n```\nvoid InsertNode(TreeNode * subRoot, TreeNode * tn)\n{\n    if (subRoot\
+    \ == NULL) {\n        subRoot = tn;\n    }\n\n    if (tn->value < subRoot->value)\n\
+    ```"
+  - "[PAGE 76]\n\n```\n{\n  InsertNode(subRoot->leftChild, tn);\n}\nelse if (tn->value\
+    \ > subRoot->value)\n{\n  InsertNode(subRoot->rightChild, tn);\n}\n```\n\n```\n\
+    //Print out all values in the Binary Tree\nvoid printTree(TreeNode * subRoot)\n\
+    {\n  if (subRoot->leftChild != NULL) printTree(subRoot->leftChild);\n  cout <<\
+    \ subRoot->value;\n  if (subRoot->rightChild != NULL) printTree(subRoot->rightChild);\n\
+    }\n```\n\n```\nint main ()\n{\n  BinaryTree * bt = new BinaryTree(21);\n\n  TreeNode\
+    \ * tn = new TreeNode(18);\n  bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(8);\n\
+    \  bt->InsertNode(bt->root, tn);\n  tn = new TreeNode(35);\n  bt->InsertNode(bt->root,\
+    \ tn);\n  tn = new TreeNode(25);\n```"
+  - '[PAGE 77]
+
+
+    ```
+
+    bt->InsertNode(bt->root, tn);
+
+    tn = new TreeNode(23);
+
+    bt->InsertNode(bt->root, tn);
+
+    tn = new TreeNode(62);
+
+    bt->InsertNode(bt->root, tn);
+
+    tn = new TreeNode(78);
+
+    bt->InsertNode(bt->root, tn);
+
+
+    bt->printTree(bt->root);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    **printTree** method in this example is **an In-Order Traverse**, it first traverse
+    the left child and then the parent node, and then the right child, so it prints
+    out:
+
+
+    8, 18, 21, 23, 25, 35, 62, 78.
+
+
+    We can see that the number is sorted ascending by printing them using In-order
+    traverse.'
+  - '[PAGE 78]
+
+
+    <!-- no content -->'
+  - "[PAGE 79]\n\n# Width first Traverse\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_79_0.png)\n\
+    \nWidth first traverse will traverse nodes level by level starting from the root.\
+    \ In the above tree, width first traverse order is: 21, 18, 35, 8, 25, 62, 23,\
+    \ 78\n\nThe algorithm is as following using queue data structure. In order to\
+    \ use queue, need to add #include <queue>to the very beginning of the C++ code\n\
+    \n```\nvoid BreadthFirstTraversal(TreeNode *root)\n{\nqueue<TreeNode> que;\n\n\
+    if (root == NULL) return;\n\nque.push(*root);\nwhile (!que.empty()) {\n  TreeNode\
+    \ temp = que.front();\n  int val = temp.value;\n```"
+  - '[PAGE 80]
+
+
+    ```
+
+    cout << val;
+
+
+    if (temp.leftChild != NULL) que.push(*temp.leftChild);
+
+
+    if (temp.rightChild != NULL) que.push(*temp.rightChild);
+
+    }
+
+    ```'
+  - '[PAGE 81]
+
+
+    <!-- no content -->'
+  - "[PAGE 82]\n\n# Depth First Traverse\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_82_0.png)\n\
+    \nDepth first traverse will traverse nodes branch by branch starting from the\
+    \ root. In the above tree, width first traverse order is: 21, 18, 8, 35, 25, 23,\
+    \ 62, 78.\n\nDepth first traverse is also Pre-Order Traverse. It traverses the\
+    \ parent node first and then traverses its left child and then the right child.\n\
+    \nThe algorithm is as following, using the stack as data structure:\n\n```\nvoid\
+    \ PreOrderTraversal(TreeNode * root)\n{\n    stack<TreeNode*> sta;\n\n    if (root\
+    \ == NULL) return;\n\n    sta.push(root);\n    while (!sta.empty())\n        TreeNode\
+    \ * temp = sta.top();\n        int val = temp->value;\n```"
+  - '[PAGE 83]
+
+
+    ```
+
+    cout << val;
+
+
+    if (temp->rightChild != NULL) sta.push(temp->rightChild);
+
+
+    if (temp->leftChild != NULL) sta.push(temp->leftChild);
+
+    }
+
+    ```'
+  - '[PAGE 84]
+
+
+    <!-- no content -->'
+  - "[PAGE 85]\n\n# Binary Tree Search\n\nFor example, we need to search the value\
+    \ 25, we compare 25 with the root 21, it is larger than 21, we continue search\
+    \ its right branch, which is 35, 25 is smaller than 35, we will continue 35’s\
+    \ left branch, and then we found 25.\n\n![](img/c11c4a3212693e8558c7b1c05f5b5ac7_85_0.png)\n\
+    \nTo search a value in the binary search tree, we compare the value with the parent\
+    \ node, if the value is less than the parent, we search its left branch; if the\
+    \ value is bigger than the parent, and we search its right branch, until we found\
+    \ the value, or until no other value can be compared.\n\n```\nbool Search(int\
+    \ val, TreeNode * root)\n{\n  TreeNode * current=root;\n\n  while (current!=NULL)\
+    \ {\n    if (val<current->value) current=current->leftChild;\n    else if (val>current->value)\
+    \ current=current->rightChild;\n  }\n}\n```"
+  - '[PAGE 86]
+
+
+    ```
+
+    else return true;
+
+    }
+
+    return false;
+
+    }
+
+    ```'
