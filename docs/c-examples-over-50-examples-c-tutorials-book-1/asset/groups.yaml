@@ -1,0 +1,3871 @@
+- md: "\n# C Examples\n\nOver 50 Examples\n\n![](img/c2ccd27e9fcde6057069b8c0a6bb628d_0_0.png)\n\
+    \n# C-Programming Examples\n\n- HelloWorld.c — p. 4\n- DataTypes.c — p. 5\n- Variables.c\
+    \ — p. 6\n- Operators.c — p. 7\n- IfStatement.c — p. 9\n- CoinFlip.c — p. 10\n\
+    - LogicalOperators.c — p. 11\n- TernaryOperator.c — p. 12\n- Switch.c — p. 13\n\
+    - Loops.c — p. 15\n- Scope.c — p. 17\n- Functions.c — p. 18\n- Recursion.c — p.\
+    \ 19\n- FibRecursion.c — p. 20\n- Array.c — p. 21\n- Average.c — p. 23\n- String.c\
+    \ — p. 24\n- StringArray.c — p. 25\n- Struct.c — p. 26\n- Typedef.c — p. 27\n\
+    - BitFields.c — p. 28\n- Pointer.c — p. 29\n- PointerToNull.c — p. 30\n- PointerToVoid.c\
+    \ — p. 31\n- PointerToConstant.c — p. 32\n- MultiplePointers.c — p. 33\n- PointerToArray.c\
+    \ — p. 34\n- PointerToStruct.c ---> p. 35\n- PointerFunction.c ---> p. 36\n- Binary.c\
+    \ ---> p. 37\n- TypeCasting.c ---> p. 38\n- IO.c ---> p. 39\n- GuessThePassPhrase.c\
+    \ > p. 40\n- TempConverter.c ---> p. 42\n- FileIO.c ---> p. 43\n- ErrorHandling.c\
+    \ ---> p. 44\n- MyHeader.h ---> p. 45\n- Header.c ---> p. 46\n- ChemicalElement.c\
+    \ ---> p. 47\n- PeriodicTable.c ---> p. 48\n- CommandLine.c ---> p. 49\n- MemoryManagement.c\
+    \ ---> p. 50\n- DynamicString.c ---> p. 51\n- DynamicIntArray.c ---> p. 52\n-\
+    \ ArrayAnalysis.c ---> p. 54\n- TicTacToe.h ---> p. 56\n- TicTacToeGame.c --->\
+    \ p. 57\n- Pieces.h ---> p. 58\n- Moves.h ---> p. 59\n- Game.c ---> p. 60\n\n\
+    # Author’s Note\n\nThank you very much for your purchase, and your interest in\
+    \ learning a wonderful programming language. “C Examples” contains over 30 examples\
+    \ that are fully functional, easy to use, and unique. Previous programming knowledge\
+    \ is not required, however previous knowledge can do nothing but help. The only\
+    \ requirement is patience, dedication, and a passion for learning. However, as\
+    \ to not deter you from learning C I am going to explain how to create, compile,\
+    \ and run a “c.” source file.\n\nIn order to create an editable “c” source file\
+    \ you first need to choose a text editor, I am going to use emacs. So to create\
+    \ a “c” source file type the following command into your\n\n```\nemacs SourceFile.c\n\
+    ```\n\nThen to compile use the following command:\n\n```bash\ngcc -o SourceFile.c\
+    \ SourceFile\n```\n\nThen to run your file, use:\n\n```bash\n./SourceFile\n```\n\
+    \nNew topics are presented in this book in an easy to understand way, then programs\
+    \ are made using the new topic as well as previously discussed topics in order\
+    \ to review and learn new material simultaneously. This helps you maximize learning\
+    \ a new language. There is much to learn and practice makes perfect. So let us\
+    \ begin.\n\nThank You\n\n# HelloWorld.c\n\n```c\n#include <stdio.h> // header\
+    \ file, this includes input and output\n// so we can use printf below\n// how\
+    \ to set up a .c file. This is just a test to\n// sure your environment is set\
+    \ up properly.\nint main() { // what is when you run a program\n    printf(\"\
+    Hello World!\\n\"); // is a newline character, it puts onto a new line\n    return\
+    \ 0; // for no errors\n}\n```\n\nOutput: Hello World!\n\n# DataTypes.c\n\n```c\n\
+    #include <stdio.h>\n/* The types of data available to use within C.\nNotice the\
+    \ sizeof() function, it returns the size (in bytes) of the data type. lu is a\
+    \ placeholder that holds unsigned long. There are many types listed here: char,\
+    \ int, float, and double. */\n```\n\nOutput: Storage size for char: 1 byte\nStorage\
+    \ size for int: 4 byte\nStorage size for float: 4 byte\nStorage size for long:\
+    \ 8 byte\n\n# Variables.c\n\n```c\n#include <stdio.h>\n/* Shows how to declare\
+    \ and initialize a variable. Multiple declarations are legal, just on separate\
+    \ lines. You can perform operations on similar data types. To initialize the variable\
+    \ equal to a value. */\nint main(){\n    char x; // declaration of a variable\n\
+    \    x = 't'; // initializing the variable\n    // notice is with printf\n   \
+    \ int x, y, z; // multiple declarations on the same line\n    x = 3;\n    y =\
+    \ 2;\n    z = x+y;\n    printf(\"z: %d\\n\", z);\n    return 0;\n}\n```\n\nOutput:\
+    \ z: 5\n\n# Operators.c\n\n```c\n#include <stdio.h>\n/* Basic operators in C,\
+    \ when you perform operations with operators, the must be on the same data type.\
+    \ Operators include arithmetic, relational/comparison, and assignment operators.\
+    \ There are more but this is all we need for now. */\nint main() {\n    int x,\
+    \ y;\n    x = 2;\n    y = 2;\n\n    /*Arithmetic Operators*/\n    printf(\"2 +\
+    \ 2: %d\\n\", x+y);\n    printf(\"2 - 2: %d\\n\", x-y);\n    printf(\"2 * 2: %d\\\
+    n\", x*y);\n    printf(\"2 / 2: %d\\n\", x/y);\n    x++; // same as x + 1\n  \
+    \  printf(\"++: %d\\n\", x);\n    y--; // same as y+1\n    printf(\"2--: %d\\\
+    n\", y);\n    int m = 3%2;//returns the remainder of the quotient\n    printf(\"\
+    modulus: %d\\n\", m, m);\n\n    /*Relational Operators*/\n    //0(representing\
+    \ false) or 1(representing true)\n    printf(\"2 == 2: %d\\n\", x==y);//not an\
+    \ assignment, a comparison\n    printf(\"2 != 1: %d\\n\", x!=y);//bang operator\n\
+    \    printf(\"2 > 2: %d\\n\", x>y);//will return 0\n    printf(\"2 >= 2: %d\\\
+    n\", x>=y);\n    printf(\"2 < 2: %d\\n\", x<y);\n    printf(\"2 <= 2: %d\\n\"\
+    , x<=y);\n\n    /*Assignment Operators*/\n    printf(\"x += y: %d\\n\", x+=y);//x\
+    \ = x+y\n    printf(\"x: %d\\n\", x);//x=4\n    printf(\"x -= y: %d\\n\", x-=y);//x\
+    \ = x-y x:2\n    printf(\"x: %d\\n\", x);//x=2\n    printf(\"x *= y: %d\\n\",\
+    \ x*=y);//x = x*y\n    printf(\"x: %d\\n\", x: %d\\n\", x/=y);//x = x/y\n    printf(\"\
+    x: %d\\n\", x);\n    printf(\"x %= y: %d\\n\", x%=y); //x = x%y\n    //two signs\
+    \ needed to print out a % sign\n    printf(\"x: %d\\n\", x);\n\n    return 0;\n\
+    }\n```\n\nOutput:\n2 + 2 : 4\n2 - 2 : 0\n2 * 2 : 4\n2 / 2 : 1\n++ : 3\n2-- : 1\n\
+    modulus : 1\n2 == 2 : 1\n2 != 2 : 0\n\n```\n2>2:0\n2>=2:1\n2<2:0\n2<=2:1\n\nx+=\
+    \ y: 4\nx: 4\nx-= y: 2\nx: 2\nx*= y: 4\nx: 4\nx/= y: 2\nx: 2\n```\n\n# IfStatement.c\n\
+    \n```c\n#include <stdio.h>\n/* Illustrates if statements and decision making.\
+    \ If statements control the flow of your program (they decide which code gets\
+    \ ran). */\nint main() {\n    int x = 1;\n    int y = 2;\n\n    if(x==y) { //\
+    \ if this statement passes\n        printf(\"Passed the if statement\\n\");\n\
+    \    } else if(x!=y) { // if this passes and previous fails\n        printf(\"\
+    x was changed...\\n\");\n    } else{ // if all fail\n        printf(\"in else\
+    \ statement\\n\");\n    }\n\n    printf(\"x: %d\\n\",x);\n\n    return 0;\n}\n\
+    ```\n\n# CoinFlip.c\n\n```c\n#include<stdio.h>\n#include<stdlib.h>\n#include<time.h>\n\
+    /*\nAuthor | Email | Date\nCoinFlip: Simulates a coin toss by random number generation.\
+    \ Random number generation uses time so we need import time.hand stdlib.h for\
+    \ this work. Random numbers make you programs more interesting.\n*/\nint main()\
+    \ {\n\n    srand(time(0));\n    int r = rand()%2 + 1;//gives us a range of [1,2]\n\
+    \n    if (r == 1) \n        printf(\"Heads\\n\");\n    else\n        printf(\"\
+    Tails\\n\");\n\n    return 0;\n}\n```\n\nOutput1: Heads\nOutput2: Heads\nOutput3:\
+    \ tails\n\n# LogicalOperators.c\n\n```c\n#include <stdio.h>\n/* DoEasy |email]|[date]\n\
+    Logical Operators: Logical operators include the and operator, &&. The or operator,\
+    \ ||, and the bang operator, !. The bang operator allows you to reverse a statement,\
+    \ it produces the opposite result. Logical operators allow you to chain together\
+    \ true/false statements.\n*/\nint main(){\n    int a, b, c;\n    a = 100;\n  \
+    \  b = 100;\n    c = 99;\n    if (a == b && a != c){ // if this passes\n     \
+    \   printf(\"&& returns: %d\\n\", (a==b && a != c));\n    }\n    else if(a ==\
+    \ b || a == c){ // if this passes and previous fails\n        printf(\"|| returns:\
+    \ %d\\n\", (a==b || a == c));\n    }else{ // if all fail\n        printf(\"No\
+    \ check passed :\\n\");\n    }\n\n    return 0;\n}\n```\n\nOutput:\n&& returns:\
+    \ 1\n"
+  mdcn: "\n\n# C语言示例\n\n超过 50 个示例\n\n![](img/c2ccd27e9fcde6057069b8c0a6bb628d_0_0.png)\n\
+    \n# C语言编程示例\n\n- HelloWorld.c — 第 4 页\n- DataTypes.c — 第 5 页\n- Variables.c —\
+    \ 第 6 页\n- Operators.c — 第 7 页\n- IfStatement.c — 第 9 页\n- CoinFlip.c — 第 10 页\n\
+    - LogicalOperators.c — 第 11 页\n- TernaryOperator.c — 第 12 页\n- Switch.c — 第 13\
+    \ 页\n- Loops.c — 第 15 页\n- Scope.c — 第 17 页\n- Functions.c — 第 18 页\n- Recursion.c\
+    \ — 第 19 页\n- FibRecursion.c — 第 20 页\n- Array.c — 第 21 页\n- Average.c — 第 23\
+    \ 页\n- String.c — 第 24 页\n- StringArray.c — 第 25 页\n- Struct.c — 第 26 页\n- Typedef.c\
+    \ — 第 27 页\n- BitFields.c — 第 28 页\n- Pointer.c — 第 29 页\n- PointerToNull.c —\
+    \ 第 30 页\n- PointerToVoid.c — 第 31 页\n- PointerToConstant.c — 第 32 页\n- MultiplePointers.c\
+    \ — 第 33 页\n- PointerToArray.c — 第 34 页\n- PointerToStruct.c ---> 第 35 页\n- PointerFunction.c\
+    \ ---> 第 36 页\n- Binary.c ---> 第 37 页\n- TypeCasting.c ---> 第 38 页\n- IO.c --->\
+    \ 第 39 页\n- GuessThePassPhrase.c > 第 40 页\n- TempConverter.c ---> 第 42 页\n- FileIO.c\
+    \ ---> 第 43 页\n- ErrorHandling.c ---> 第 44 页\n- MyHeader.h ---> 第 45 页\n- Header.c\
+    \ ---> 第 46 页\n- ChemicalElement.c ---> 第 47 页\n- PeriodicTable.c ---> 第 48 页\n\
+    - CommandLine.c ---> 第 49 页\n- MemoryManagement.c ---> 第 50 页\n- DynamicString.c\
+    \ ---> 第 51 页\n- DynamicIntArray.c ---> 第 52 页\n- ArrayAnalysis.c ---> 第 54 页\n\
+    - TicTacToe.h ---> 第 56 页\n- TicTacToeGame.c ---> 第 57 页\n- Pieces.h ---> 第 58\
+    \ 页\n- Moves.h ---> 第 59 页\n- Game.c ---> 第 60 页\n\n# 作者的话\n\n非常感谢你的购买，以及你对学习奇妙编程语言的兴趣。“C示例”包含了超过\
+    \ 30 个功能完全、易于使用且独特的示例。不需要具备先前的编程知识，不过有之前的知识大有裨益。唯一的要求是耐心、投入和对学习的热情。不过，为了不让你对学习\
+    \ C产生望步，我将解释如何创建、编译和运行一个“c”源文件。\n\n为了创建一个可编辑的“c”源文件，你首先需要选择一个文本编辑器，我将使用 emacs。所以要创建一个“c”源文件，在你的终端输入以下命令：\n\
+    \n```\nemacs SourceFile.c\n```\n\n然后使用以下命令进行编译：\n\n```bash\ngcc -o SourceFile.c\
+    \ SourceFile\n```\n\n然后使用以下命令运行你的文件：\n\n```bash\n./SourceFile\n```\n\n本书以易于理解的方式介绍新话题，然后使用新话题以及之前讨论的话题来编写程序，以便在复习的同时学习新材料。这有助于你最大化地学习一门新语言。有很多东西需要学习，熟能生巧。让我们让我们开始吧。\n\
+    \n谢谢\n\n# HelloWorld.c\n\n```c\n#include <stdio.h> // 头文件，包含了输入和输出\n// 这样我们可以在下面使用\
+    \ printf\n// 如何设置 .c 文件。这只是为了测试\n// 确保你的环境已正确设置。\nint main() { // 运行程序时发生了什么\n\
+    \    printf(\"Hello World!\\n\"); // 是换行符，它将内容置于新行\n    return 0; // 表示无错误\n}\n\
+    ```\n\n输出: Hello World!\n\n# DataTypes.c\n\n```c\n#include <stdio.h>\n/* C语言中可用的数据类型。\n\
+    注意 sizeof() 函数，它返回数据类型的大小（字节字节）。lu 是一个存储无符号长整型的占位符。这里列出了许多类型：char, int, float\
+    \ 和 double。 */\n```\n\n输出: char 的存储大小: 1 字节\nint 的存储大小: 4 字节\nfloat 的存储大小: 4 字节\n\
+    long 的存储大小: 8 字节\n\n# Variables.c\n\n```c\n#include <stdio.h>\n/* 显示如何声明和初始化变量。多次声明是合法的，只需分行即可。你可以对相似的数据类型执行操作。将变量初始化为某个值。\
+    \ */\nint main(){\n    char x; // 变量声明\n    x = 't'; // 初始化变量\n    // 注意这里有 printf\n\
+    \    int x, y, z; // 同一行的多个声明\n    x = 3;\n    y = 2;\n    z = x+y;\n    printf(\"\
+    z: %d\\n\", z);\n    return 0;\n}\n```\n\n输出: z: 5\n\n# Operators.c\n\n```c\n\
+    #include <stdio.h>\n/* C 中的基础运算符。当你执行操作时，运算符必须是相同的数据类型。运算符包括算术、关系和赋值运算符。这些都是我们需要的。\
+    \ */\nint main() {\n    int x, y;\n    x = 2;\n    y = 2;\n\n    /* 算术运算符*/\n\
+    \    printf(\"2 + 2: %d\\n\", x+y);\n    printf(\"2 - 2: %d\\n\", x-y);\n    printf(\"\
+    2 * 2: %d\\n\", x*y);\n    printf(\"2 / 2: %d\\n\", x/y);\n    x++; // 同于 x +\
+    \ 1\n    printf(\"++: %d\\n\", x);\n    y--; // 同于 y - 1\n    printf(\"--: %d\\\
+    n\", y);\n    int m = 3%2;// 返回余数\n    printf(\"modulus: %d\\n\", m);\n\n    /*\
+    \ 关系运算符*/\n    // 0（表示假）或 1（表示真）\n    printf(\"2 == 2: %d\\n\", x==y);//不是赋值，是比较\n\
+    \    printf(\"2 != 1: %d\\n\", x!=y);//感叹运算符\n    printf(\"2 > 2: %d\\n\", x>y);//将返回\
+    \ 0\n    printf(\"2 >= 2: %d\\n\", x>=y);\n    printf(\"2 < 2: %d\\n\", x<y);\n\
+    \    printf(\"2 <= 2: %d\\n\", x<=y);\n\n    /* 赋值运算符*/\n    printf(\"x += y:\
+    \ %d\\n\", x+=y);//x = x+y\n    printf(\"x: %d\\n\", x);//x=4\n    printf(\"x\
+    \ -= y: %d\\n\", x-=y);//x = x-y x:2\n    printf(\"x: %d\\n\", x);//x=2\n    printf(\"\
+    x *= y: %d\\n\", x*=y);//x = x*y x:4\n    printf(\"x: %d\\n\", x /= %d\\n\", x/=y);//x\
+    \ = x/y x:2\n    printf(\"x: %d\\n\", x);\n    printf(\"x %= y: %d\\n\", x%=y);//x\
+    \ = x%y\n    // 需要两个符号来打印 %\n    printf(\"x: %d\\n\", x);\n\n    return 0;\n}\n\
+    ```\n\n输出:\n2 + 2 : 4\n2 - 2 : 0\n2 * 2 : 4\n2 / 2 : 1\n++ : 3\n-- : 1\nmodulus\
+    \ : 1\n2 == 2 : 1\n2 != 2 : 0\n\n```\n2>2:0\n2>=2:1\n2<2:0\n2<=2:1\n\nx+= y: 4\n\
+    x: 4\nx-= y: 2\nx: 2\nx*= y: 4\nx: 4\nx/= y: 2\nx: 2\n```\n\n# IfStatement.c\n\
+    \n```c\n#include <stdio.h>\n/* 演示 if 语句和决策。if 语句控制程序的流程（决定运行哪些代码）。 */\nint main()\
+    \ {\n    int x = 1;\n    int y = 2;\n\n    if(x==y) { // 如果语句通过\n        printf(\"\
+    Passed the if statement\\n\");\n    } else if(x!=y) { // 如果此通过且之前的失败\n       \
+    \ printf(\"x was changed...\\n\");\n    } else{ // 如果全部失败\n        printf(\"in\
+    \ else statement\\n\");\n    }\n\n    printf(\"x: %d\\n\",x);\n\n    return 0;\n\
+    }\n```\n\n# CoinFlip.c\n\n```c\n#include<stdio.h>\n#include<stdlib.h>\n#include<time.h>\n\
+    /*\n作者 | 邮箱 | 日期\nCoinFlip: 通过随机数生成模拟抛硬币。随机数生成使用时间，因此我们需要导入 time.h 和 stdlib.h。随机数让你的程序更有趣。\n\
+    */\nint main() {\n\n    srand(time(0));\n    int r = rand()%2 + 1;//给了我们一个 [1,2]\
+    \ 的范围\n\n    if (r == 1) \n        printf(\"Heads\\n\");\n    else\n        printf(\"\
+    Tails\\n\");\n\n    return 0;\n}\n```\n\n输出1: Heads\nOutput2: Heads\nOutput3:\
+    \ tails\n\n# LogicalOperators.c\n\n```c\n#include <stdio.h>\n/* DoEasy | 邮箱]|[日期]\n\
+    逻辑运算符: 逻辑运算符包括与运算符 &&。或运算符 ||，以及感叹/非运算符 !。感叹运算符允许你反转一个语句，它产生相反的结果。逻辑运算符允许你将真/假语句链在一起。\n\
+    */\nint main(){\n    int a, b, c;\n    a = 100;\n    b = 100;\n    c = 99;\n \
+    \   if (a == b && a != c){ // 如果此通过\n        printf(\"&& returns: %d\\n\", (a==b\
+    \ && a != c));\n    }\n    else if(a == b || a == c){ // 如果此通过且之前的失败\n       \
+    \ printf(\"|| returns: %d\\n\", (a==b || a == c));\n    }else{ // 如果全部失败\n   \
+    \     printf(\"No check passed :\\n\");\n    }\n\n    return 0;\n}\n```\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # C Examples
+
+
+    Over 50 Examples
+
+
+    ![](img/c2ccd27e9fcde6057069b8c0a6bb628d_0_0.png)'
+  - '[PAGE 1]
+
+
+    # C-Programming Examples
+
+
+    +   - HelloWorld.c ——— p. 4
+
+
+    +   - DataTypes.c ——— p. 5
+
+
+    +   - Variables.c ——— p. 6
+
+
+    +   - Operators.c ——— p. 7
+
+
+    +   - IfStatement.c ——— p. 9
+
+
+    +   - CoinFlip.c ——— p. 10
+
+
+    +   - LogicalOperators.c ——— p. 11
+
+
+    +   - TernaryOperator.c ——— p. 12
+
+
+    +   - Switch.c ——— p. 13
+
+
+    +   - Loops.c ——— p. 15
+
+
+    +   - Scope.c ——— p. 17
+
+
+    +   - Functions.c ——— p. 18
+
+
+    +   - Recursion.c ——— p. 19
+
+
+    +   - FibRecursion.c ——— p. 20
+
+
+    +   - Array.c ——— p. 21
+
+
+    +   - Average.c ——— p. 23
+
+
+    +   - String.c ——— p. 24
+
+
+    +   - StringArray.c ——— p. 25
+
+
+    +   - Struct.c ——— p. 26
+
+
+    +   - Typedef.c ——— p. 27
+
+
+    +   - BitFields.c ——— p. 28
+
+
+    +   - Pointer.c ——— p. 29
+
+
+    +   - PointerToNull.c ——— p. 30
+
+
+    +   - PointerToVoid.c ——— p. 31
+
+
+    +   - PointerToConstant.c ——— p. 32
+
+
+    +   - MultiplePointers.c ——— p. 33
+
+
+    +   - PointerToArray.c ——— p. 34'
+  - '[PAGE 2]
+
+
+    +   PointerToStruct.c ---> p. 35
+
+    PointerFunction.c ---> p. 36
+
+    Binary.c ---> p. 37
+
+    TypeCasting.c ---> p. 38
+
+    IO.c ---> p. 39
+
+    GuessThePassPhrase.c > p. 40
+
+    TempConverter.c ---> p. 42
+
+    FileIO.c ---> p. 43
+
+    ErrorHandling.c ---> p. 44
+
+    MyHeader.h ---> p. 45
+
+    Header.c ---> p. 46
+
+    ChemicalElement.c ---> p. 47
+
+    PeriodicTable.c ---> p. 48
+
+    CommandLine.c ---> p. 49
+
+    MemoryManagement.c ---> p. 50
+
+    DynamicString.c ---> p. 51
+
+    DynamicIntArray.c ---> p. 52
+
+    ArrayAnalysis.c ---> p. 54
+
+    TicTacToe.h ---> p. 56
+
+    TicTacToeGame.c ---> p. 57
+
+    Pieces.h ---> p. 58
+
+    Moves.h ---> p. 59
+
+    Game.c ---> p. 60'
+  - '[PAGE 3]
+
+
+    # # Author’s Note
+
+
+    Thank you very much for your purchase, and your interest in learning a wonderful
+    programming language. “C Examples” contains over 30 examples that are fully functional,
+    easy to use, and unique. Previous programming knowledge is not required, however
+    previous knowledge can do nothing but help. The only requirement is patience,
+    dedication, and a passion for learning. However, as to not deter you from learning
+    C I am going to explain how to create, compile, and run a “c.” source file.
+
+
+    In order to create an editable “c” source file you first need to choose a text
+    editor, I am going to use emacs. So to create a “c” source file type the following
+    command into your
+
+
+    ```
+
+    emacs SourceFile.c
+
+    ```
+
+
+    Then to compile use the following command:
+
+
+    ```
+
+    gcc -o SourceFile.c SourceFile
+
+    ```
+
+
+    Then to run your file, use:
+
+
+    ```
+
+    ./SourceFile
+
+    ```
+
+
+    New topics are presented in this book in an easy to understand way, then programs
+    are made using the new topic as well as previously discussed topics in order to
+    review and learn new material simultaneously. This helps you maximize learning
+    a new language. There is much to learn and practice makes perfect. So let us begin.
+
+
+    Thank You
+
+
+    # # HelloWorld.c'
+  - "[PAGE 4]\n\n```\n#include <stdio.h> // header file, this includes input and output\n\
+    // so we can use the printf function below\n// how you comment\n/*\n[author] |\
+    \ [email] | [date]\n[FileName]: [Description]\nHellow: Discusses how to set up\
+    \ a .c file. This is just a test to\nmake sure your environment is set up properly.\n\
+    */\n\nint main() { //what is ran when you run a c program\n    printf(\"Hello\
+    \ World!\\n\"); //'\n' is a newline character, it puts\n    //output onto a new\
+    \ line\n    return 0; //return for main, no errors\n}\n```\n\n# OutPut:\n\nHello\
+    \ World!"
+  - '[PAGE 5]
+
+
+    # DataTypes.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [author] |[email] |[date]
+
+    DataTypes: The types of data available to use within C.
+
+    Notice the sizeof(of) function, it returns the size (in bytes) of the data type.
+    %lu is a type of placeholder that holds an unsigned long. There are many data
+    types not listed here, these are some basic types. Data types include: char, int,
+    float, and double.
+
+    */
+
+    ```
+
+
+    # **OutPut:**
+
+
+    Storage size for char: 1 byte
+
+    Storage size for int: 4 byte
+
+    Storage size for float: 4 byte
+
+    Storage size for long: 8 byte'
+  - "[PAGE 6]\n\n# Variables.c\n\n#include <stdio.h>\n/*\n[author] ||[email] ||[date]\n\
+    Variable: Shows how to declare and initialize a variable. Multiple declarations\
+    \ are legal, just\ninitialize on separate lines. You can only perform operations\
+    \ on similar data types. To initialize\nmeans to\nset the variable equal to a\
+    \ value.\n\n```\nint main(){\n    char letter; //declaration of a variable\n \
+    \   letter = 't'; //initializing the variable\n    //notice char is init with\
+    \ ''\n    printf(\"letter: %c \\n\", letter);\n\n    int x, y, z; //notice multiple\
+    \ variable\n    //declarations on the same line\n    x = 3;\n    y = 222;\n  \
+    \  z = x+y;\n    printf(\"z: %d \\n\",z);\n\n    return 0;\n}\n```\n\nOutPut:"
+  - '[PAGE 7]
+
+
+    # Operators.c
+
+
+    ```
+
+    #include<stdio.h>
+
+    /*
+
+    [author] | [email] |[date]
+
+    Operators: Basic operators in C, when you perform operations with operators, the
+    operations
+
+    must be on the same data type. Operators
+
+    include: arithmetic operators, relational/comparison operators, and
+
+    assignment operators. There are more but this is all we need for now.
+
+    */
+
+    int main() {
+
+    int x, y;
+
+    x = 2;
+
+    y = 2;
+
+
+    /*Arithmetic Operators*/
+
+    printf("2 + 2 : %d \n", x+y);
+
+    printf("2 - 2 : %d \n", x-y);
+
+    printf("2 * 2 : %d \n", x*y);
+
+    printf("2 / 2 : %d \n", x/y);
+
+    x++; //same as x = x + 1
+
+    ```'
+  - '[PAGE 8]
+
+
+    ```
+
+    printf("++: %d\n", x);
+
+    y--; //same as y = y+1
+
+    printf("2--: %d\n", y);
+
+    int m = 3%%2;//returns the remainder of the quotient
+
+    printf("modulus: %d\n", m, m);
+
+    ```
+
+
+    ```
+
+    /*Relational Operators*/
+
+    //0(representing false) or 1(representing true)
+
+    printf("2 == 2: %d\n", x==y);//not an assignment, a comparison
+
+    printf("2 != 1: %d\n", x!=y);//bang operator
+
+    printf("2 > 2: %d\n", x>y);//will return 0
+
+    printf("2 >= 2: %d\n", x>=y);
+
+    printf("2 < 2: %d\n", x<y);
+
+    printf("2 <= 2: %d\n", x<=y);
+
+    ```
+
+
+    ```
+
+    /*Assignment Operators*/
+
+    printf("x += y: %d\n", x+=y);//x = x+y
+
+    printf("x: %d\n", x);//x=4
+
+    printf("x -= y: %d\n", x-=y);//x = x-y x:2
+
+    printf("x: %d\n", x);//x=2
+
+    printf("x *= y: %d\n", x*=y);//x = x*y
+
+    printf("x: %d\n", x: %d\n", x/=y);//x = x/y
+
+    printf("x: %d\n", x);
+
+    printf("x %= y: %d\n", x%%=y); //x = x%y
+
+    //two signs needed to print out a % sign
+
+    printf("x: %d\n", x);
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    2 + 2 : 4
+
+    2 - 2 : 0
+
+    2 * 2 : 4
+
+    2 / 2 : 1
+
+    ++ : 3
+
+    2-- : 1
+
+    modulus : 1
+
+    2 == 2 : 1
+
+    2 != 2 : 0'
+  - '[PAGE 9]
+
+
+    ```
+
+    2>2:0
+
+    2>=2:1
+
+    2<2:0
+
+    2<=2:1
+
+
+    x+= y: 4
+
+    x: 4
+
+    x-= y: 2
+
+    x: 2
+
+    x*= y: 4
+
+    x: 4
+
+    x/= y: 2
+
+    x: 2
+
+    x%= y: 0
+
+    x: 0
+
+    ```
+
+
+    # IfStatement.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [author] |[email] |[date]
+
+    IfStatement: Illustrates if statements and decision making. If
+
+    statements controls the flow of your program (they decide which code gets ran
+    and which code
+
+    does not based off of some true/false
+
+    ```'
+  - "[PAGE 10]\n\n```\nstatement.\n/*\nint main(){\n int x = 1;\n int y = 2;\n\nif(x==y)\
+    \ {\n //if this statement passes all other 'else if' and 'else'\n //statements\
+    \ will not execute\n printf(\"Passed the if statement \\n\");\n } else if(x!=y)\
+    \ {\n //if this passes and previous fails this code will run\n //and the else\
+    \ statement will run\n  x=y;\n  printf(\"x was changed... \\n\");\n } else{\n\
+    \ //will run if both(or all) if and else statements fail\n printf(\"in else statement\
+    \ \\n\");\n }\n\n printf(\"x: %d \\n\",x);\n\n  return 0;\n }\n```\n\nOutPut:\n\
+    \nx was changed...\nx: 2\n\n# CoinFlip.c"
+  - "[PAGE 11]\n\n```\n#include<stdio.h>\n#include<stdlib.h>\n#include<time.h>\n/*\n\
+    Author | Email | Date\nCoinFlip: Simulates a coin toss by random\nnumber generation.\
+    \ Random number generation uses time so we need\nimport time.hand stdlib.h for\
+    \ this work. Random numbers make you\nprograms more interesting.\n*/\nint main()\
+    \ {\n\n    srand(time(0));\n    int r = rand()%2 + 1;//gives us a range of [1,2]\n\
+    \n    if (r == 1) \n        printf(\"Heads\\n\");\n    else\n        printf(\"\
+    Tails\\n\");\n    return 0;\n}\n```\n\n# Output1:\n\nHeads\n\n# Output2:\n\nHeads\n\
+    \n# Output3:\n\ntails"
+  - '[PAGE 12]
+
+
+    # LogicalOperators.c
+
+
+    #include <stdio.h>
+
+    /*
+
+    DoEasy |email]|[date]
+
+    Logical Operators: Logical operators include the and operator, &&. The or operator,
+    ||, and the bang operator, !. The bang operator allows you to reverse a statement,
+    it produces the opposite result. Logical operators allow you to chain together
+    true/false statements.
+
+    /
+
+
+    ```
+
+    int main(){
+
+    int a, b, c;
+
+    a = 100;
+
+    b = 100;
+
+    c = 99;
+
+    if (a == b && a != c){ {switch to ==
+
+    printf("&& returns: %d\n", (a==b && a != c));//logical op
+
+    }
+
+    else if(a == b || a == c){switch to !=
+
+    printf("|| returns: %d\n", (a==b || a == c));//logical op
+
+    }else{
+
+    printf("No check passed :\n");
+
+    }
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    && returns: 1'
+- md: "\n# TernaryOperator.c\n\n/*\nAuthor | Email | Date\nTernaryOperator: A ternary\
+    \ operator is pretty much shorthand notation for if blocks. They are also called\
+    \ operators.\n*/\n\n```c\nint main() {\n\nint number = 99;//this number can be\
+    \ anything\n\nint outcome;\n//below is shorthand notation for:\n//if 99%2 equals\
+    \ 0 outcome = 1\n//else outcome = 0\noutcome = (99%2 == 0) ? 1 : 0;\nprintf(\"\
+    outcome: %d\\n\",outcome);\n//this is a test to see if number is\n//odd or even,\
+    \ if number is evenly divisible\n//by two (the remainder is 0) then it is an\n\
+    //even number\n\n}\n```\n\n# Output:\n\noutcome: 0\n\n# Switch.c\n\n```c\n#include<stdio.h>\n\
+    #include<stdlib.h>\n#include<time.h>\n/*\nSwitch: How to use switch statements\
+    \ in C.\nSwitch statements are essentially if blocks,\nbut they switch on some\
+    \ condition. We are also\ngoing to see how to generate random numbers to\nmake\
+    \ our programs more exciting.\n*/\n\n```c\nint main(){\n//we are going to simulate\
+    \ a dice roll\n//lets create a random number in between 0 & 6\nrand(time(0));\n\
+    int number = rand()%6+1;\n//number is now in between 1 and 6\n//so we must adjust\
+    \ below to make in the proper range\n\n//let's declare the switch statement\n\
+    switch(number){\ncase 1:\nprintf(\"You rolled a One!\\n\");\nbreak;\ncase 2:\n\
+    printf(\"You rolled a Two\\n\");\nbreak;\ncase 3:\nprintf(\"You rolled a Three\\\
+    n\");\nbreak;\ncase 4:\nprintf(\"You rolled a Four\\n\");\nbreak;\ncase 5:\nprintf(\"\
+    You rolled a Five\\n\");\nbreak;\ncase 6:\nprintf(\"You rolled a Six\\n\");\n\
+    break;\n}\n}\n```\n\n# Output:\n\nYou rolled a Two\n\n# Loops.c\n\n```c\n#include\
+    \ <stdio.h>\n/*\n[author] | [email] | [date]\nLoops: Outlines the types of loops.\
+    \ There are for, while, and do while loops, although while loops are not presented\
+    \ because they are very similar to while loops, with one exception, the\n\nbody\
+    \ is guaranteed to\nexecute at least once.\n*/\n\n```c\nint main(){\n}\n```\n\n\
+    ```c\n/*Set up for a loop, we must initialize some sort of counter\nvariable,\
+    \ then we must set up a condition to test each time,\nthen we need some sort of\
+    \ step to keep the for loop going.\n*/\nfor(int i=0; i<=10;i++){//initialization,\
+    \ condition, step\nprintf(\"i : %d \\n\",i);\n}\n```\n\n```c\n//Multiplication\
+    \ table\n//this is called a nested loop\nfor(int i=1; i<=12;i++){\nfor(int j=1;\
+    \ j<=12; j++) {\nprintf(\"%d \\n\",i*j);//will run 144 times\n}\nprintf(\"\\n\"\
+    );\n}\n```\n\n```c\n//while loops are good for when you don't know how long\n\
+    //your loop will be running for\nint x = 0;\nwhile(x<10){\nprintf(\"xx : %d \\\
+    n\", x);\nx++;//watch out for infinite loop, comment out to see what\n//happens...,\
+    \ terminate with cntrl+c\n}\nreturn 0;\n}\n```\n\n# OutPut:\n\ni: 0\ni: 1\ni:\
+    \ 2\ni: 3\ni: 4\ni: 5\ni: 6\ni: 7\ni: 8\ni: 9\ni: 10\n\n1 2 3 4 5 6 7 8 9 10 11\
+    \ 12\n2 4 6 8 10 12 14 16 18 20 22 24\n3 6 9 12 15 18 21 24 27 30 33 36\n4 8 12\
+    \ 16 20 24 28 32 36 40 44 48\n5 10 15 20 25 30 35 40 45 50 55 60\n6 12 18 24 30\
+    \ 36 42 48 54 60 66 72\n7 14 21 28 35 42 49 56 63 70 77 84\n8 16 24 32 40 48 56\
+    \ 64 72 80 88 96\n9 18 27 36 45 54 63 72 81 90 99 108\n10 20 30 40 50 60 70 80\
+    \ 90 100 110 120\n11 22 33 44 55 66 77 88 99 110 121 132\n12 24 36 48 60 72 84\
+    \ 96 108 120 132 144\n\nx: 0\nx: 1\nx: 2\nx: 3\nx: 4\nx: 5\nx: 6\nx: 7\nx: 8\n\
+    x: 9\n\n# Scope.c\n\n```c\n#include <stdio.h>\n/*\n[author] | [email] | [date]\n\
+    Scope: Illustrates variable scope with for loop. Scope is where you can use variables,\
+    \ methods, etc. based off they variables declared have global scope\n*/\n\nint\
+    \ main(){\nint i; //within the main method, i has local scope\nfor(i = 5; i>0;i--)\
+    \ {try declaring i within for loop\nprintf(\"i: %d\\n\",i);\n}\nprintf(\"i: %d\\\
+    n\", i);//will work because i is in scope of main\nif i was declared in for loop,\
+    \ printf wouldn't\nreturn 0;\n}\n```\n\n# Output:\n\ni: 5\ni: 4\ni: 3\ni: 2\n\
+    i: 1\ni: 0\n\n# Functions.c\n\n```c\n#include <stdio.h>\n/*\n[author] | [email]\
+    \ | [date]\nFunctions: How to declare, define, and use your own functions.\n*/\n\
+    \n- Declare function above main\n- declare return type, name and parameter list\n\
+    - return type can be any legal type\n- function name should be in case\n- param\
+    \ list can be as large or small as needed\n- define the function below the main\
+    \ method\n- call the function within the main method\n\n```c\n//declaring function\n\
+    void add(int i);//global scope\nint a = 0;//global scope\n\nint main(){\n//local\
+    \ scope within the main function\nint a = 100;\n\nprintf(\"a before function:\
+    \ %d\\n\", a);\nadd(223); //calling(using) the function\nprintf(\"a after function:\
+    \ %d\\n\", a);\nreturn 0;\n}\n\n//defining the function\nvoid add(int i){// must\
+    \ be declared outside of the main function\na += i;\n}\n```\n\n# Output:\n\na\
+    \ before function: 100\na after function: 223\n\n# Recursion.c\n\n```c\n#include<stdio.h>\n\
+    /*\nRecursion: A recursive function is a function that calls itself. Infinite\
+    \ recursion is possible so beware of this. Also, you must have a proper base case\
+    \ in order to avoid this. Recursive functions are somewhat easier to read and\
+    \ write however they take up more space on the heap so they take longer to execute.\
+    \ However, for this size program we will be alright.\n*/\n\nint factorial(int\
+    \ n);\nint main(){\nint n = factorial(5);\nprintf(\"5!: %d\\n\",n);\nprintf(\"\
+    6!: %d\\n\", factorial(6));\n\nreturn 0;\n}\n\n```\n\n```c\n/*\nCalculates the\
+    \ factorial of n.\n*/\nint factorial(int n){\n  //base case\n  if (n == 0)\n \
+    \   return 1;\n  //recursive step\n  else\n    return n * factorial(n-1);\n}\n\
+    }\n```\n\n# Output:\n\n5!: 120\n6!: 720\n\n# FibRecursion.c\n\n```c\n#include<stdio.h>\n\
+    /*\nAuthor | Email | Date\nFibRecursion: Calculates the fibonacci number up to\
+    \ the desired place.\n*/\n\nint fibonacci(int n);\n\nint main(){\n\n  int fibArray[10];\n\
+    \  printf(\"Populating Array\\n\");\n\nfor(int i = 0; i < 10; i++){\n fibArray[i]\
+    \ = fibonacci(i);\n printf(\"fibArray[%d]: %d\\n\",i,fibArray[i]);\n}\n return\
+    \ 0;\n}\n```\n\n```c\nint fibonacci(int n){\n //base case\n if (n == 0)\n  return\
+    \ 0;\n else if (n == 1)\n  return 1;\n else\n  return fibonacci(n-1) + fibonacci(n-2);\n\
+    }\n```\n\n# Output:\n\nPopulating Array\nfibArray[0]: 0\nfibArray[1]: 1\nfibArray[2]:\
+    \ 1\nfibArray[3]: 2\nfibArray[4]: 3\nfibArray[5]: 5\nfibArray[6]: 8\nfibArray[7]:\
+    \ 13\nfibArray[8]: 21\nfibArray[9]: 34\n\n# Array.c\n\n```c\n#include <stdio.h>\n\
+    /*\n[Author] | [Email] |[Date]\nArray: Shows two ways to initialize arrays, and\
+    \ how to access array data members. Also, you can make 2-D arrays, and so on as\
+    \ needed.\n*/\n\nint main(){\n/**Two Ways to initialize arrays*/\nint arr[] =\
+    \ {10, 20, 30, 40, 50};\nint size = sizeof(arr)/sizeof(arr[0]);\nfor(int i=0;\
+    \ i<size; i++){\n    printf(\"element %d: %d\\n\", i, arr[i]);\n}\n\nint matrix[2][3]\
+    \ = {\n    {1, 2, 3},\n    {4, 5, 6}\n};\nfor(int i=0; i<2; i++){\n    for(int\
+    \ j=0; j<3; j++){\n        printf(\"%d \", matrix[i][j]);\n    }\n    printf(\"\
+    \\n\");\n}\n\n//second way to initialize\nint arr2[5] = {1, 2, 3, 4, 5};\nfor(int\
+    \ i=0; i<5; i++){\n    printf(\"arr2[%d]: %d\\n\", i, arr2[i]);\n}\n\nreturn 0;\n\
+    }\n```\n"
+  mdcn: "\n\n# TernaryOperator.c\n\n/*\n作者 | 邮箱 | 日期\nTernaryOperator: 三元运算符基本上是 if\
+    \ 块的简写。它们也被称为运算符。\n*/\n\n```c\nint main() {\n\nint number = 99;//这个数字可以是任何值\n\n\
+    int outcome;\n//以下是代码的简写：\n//if 99%2 等于 0 outcome = 1\n//else outcome = 0\noutcome\
+    \ = (99%2 == 0) ? 1 : 0;\nprintf(\"outcome: %d\\n\",outcome);\n// 这是一个测试，用于检查\
+    \ number 是\n//奇数还是偶数，如果 number 能被\n// 2 整除（余数为 0）那么它就是\n//偶数\n\n}\n```\n\n# 输出:\n\
+    \noutcome: 0\n\n# Switch.c\n\n```c\n#include<stdio.h>\n#include<stdlib.h>\n#include<time.h>\n\
+    /*\nSwitch: 如何在 C 中使用 switch 语句。\nswitch 语句本质上是 if 块，\n但它们根据某些条件进行切换。我们还将\n学习如何生成随机数来\n\
+    让我们的程序更加生动。\n*/\n\n```c\nint main(){\n//我们将模拟掷骰子\n//让我们在 0 & 6 之间创建一个随机数\nrand(time(0));\n\
+    int number = rand()%6+1;\n//number 现在介于 1 和 6 之间\n//所以我们必须调整下面的内容使其处于正确的范围内\n\n\
+    //让我们声明 switch 语句\nswitch(number){\ncase 1:\nprintf(\"You rolled a One!\\n\");\n\
+    break;\ncase 2:\nprintf(\"You rolled a Two\\n\");\nbreak;\ncase 3:\nprintf(\"\
+    You rolled a Three\\n\");\nbreak;\ncase 4:\nprintf(\"You rolled a Four\\n\");\n\
+    break;\ncase 5:\nprintf(\"You rolled a Five\\n\");\nbreak;\ncase 6:\nprintf(\"\
+    You rolled a Six\\n\");\nbreak;\n}\n}\n```\n\n# 输出:\n\nYou rolled a Two\n\n# Loops.c\n\
+    \n```c\n#include <stdio.h>\n/*\n[作者] | [邮箱] | [日期]\nLoops: 概述循环的类型。有 for、while\
+    \ 和 do while 循环，虽然没有介绍 do while 循环，因为它们与 while 循环非常相似，唯一的例外是，\n\n循环\n体被保证\n至少执行一次。\n\
+    */\n\n```c\nint main(){\n}\n```\n\n```c\n/*为了设置一个循环，我们必须初始化某种计数器\n变量，然后我们必须设置一个条件在每次运行时进行测试，\n\
+    然后我们需要某种步进方式来让 for 循环继续运行。\n*/\nfor(int i=0; i<=10;i++){//初始化，条件，步进\nprintf(\"\
+    i : %d \\n\",i);\n}\n```\n\n```c\n//乘法表\n//这被称为嵌套循环\nfor(int i=1; i<=12;i++){\n\
+    for(int j=1; j<=12; j++) {\nprintf(\"%d \\n\",i*j);//将运行 144 次\n}\nprintf(\"\\\
+    n\");\n}\n```\n\n```c\n//while 循环适用于你不知道循环\n//将运行多长时间\nint x = 0;\nwhile(x<10){\n\
+    printf(\"xx : %d \\n\", x);\nx //注意无限循环，注释掉以查看\n//会发生什么...用 ctrl+c 终止\n}\nreturn\
+    \ 0;\n}\n```\n\n# 输出:\n\ni: 0\ni: 1\ni: 2\ni: 3\ni: 4\ni: 5\ni: 6\ni: 7\ni: 8\n\
+    i: 9\ni: 10\n\n1 2 3 4 5 6 7 8 9 10 11 12\n2 4 6 8 10 12 14 16 18 20 22 24\n3\
+    \ 6 9 12 15 18 21 24 27 30 33 36\n4 8 12 16 20 24 28 32 36 40 44 48\n5 10 15 20\
+    \ 25 30 35 40 45 50 55 60\n6 12 18 24 30 36 42 48 54 60 66 72\n7 14 21 28 35 42\
+    \ 49 56 63 70 77 84\n8 16 24 32 40 48 56 64 72 80 88 96\n9 18 27 36 45 54 63 72\
+    \ 81 90 99 108\n10 20 30 40 50 60 70 80 90 100 110 120\n11 22 33 44 55 66 77 88\
+    \ 99 110 121 132\n12 24 36 48 60 72 84 96 108 120 132 144\n\nx: 0\nx: 1\nx: 2\n\
+    x: 3\nx: 4\nx: 5\nx: 6\nx: 7\nx: 8\nx: 9\n\n# Scope.c\n\n```c\n#include <stdio.h>\n\
+    /*\n[作者] | [邮箱] | [日期]\nScope: 通过 for 循环演示变量作用域。作用域是你可以使用变量、\n方法等的地方。定义的变量具有全局作用域\n\
+    */\n\nint main(){\nint i; //在 main 方法中有全局作用域\nfor(i = 5; i>0;i--) {\nprintf(\"\
+    i: %d\\n\",i);\n}\nprintf(\"i: %d\\n\", i);//如果 i 在 for 循环中定义，则不会\nreturn 0;\n\
+    }\n```\n\n# 输出:\n\ni: 5\ni: 4\ni: 3\ni: 2\ni: 1\ni: 0\n\n# Functions.c\n\n```c\n\
+    #include <stdio.h>\n/*\n[作者] | [邮箱] | [日期]\nFunctions: 如何声明、定义和使用自己的函数。\n*/\n\n\
+    - 在 main 上声明函数\n- 返回类型、名称和参数列表\n- 返回类型可以是任何类型\n- 参数列表可以根据需要大或小\n- 在 main 方法下方定义函数\n\
+    - 在 main 方法内调用函数\n\n```c\n//声明函数\nvoid add(int i);//全局作用域\nint a = 0;//全局作用域\n\
+    \nint main(){\nint a = 100;\n\nprintf(\"a before function: %d\\n\", a);\nadd(23);\n\
+    printf(\"a after function: %d\\n\", a);\nreturn 0;\n}\n\n//定义函数\nvoid add(int\
+    \ i){//在 main 方法之外定义\na += i;\n}\n```\n\n# 输出:\n\na before function: 100\na after\
+    \ function: 23\n\n# Recursion.c\n\n```c\n#include<stdio.h>\n/*\nRecursion: 调用自身的函数。可能会发生无限递归，请注意。你必须有一个正确的边界条件来避免这种情况。递归函数稍微易于读和写，但它们会占用更多的堆空间。然而，对于这种大小的程序是可以的。\n\
+    */\n\nint factorial(int n);\nint main(){\nint n = factorial(5);\nprintf(\"5!:\
+    \ %d\\n\",n);\nprintf(\"6!: %d\\n\", factorial(6));\n\nreturn 0;\n}\n```\n\n```c\n\
+    /*\n计算 n 的阶乘。\n*/\nint factorial(int n){\n  //边界条件\n  if (n == 0)\n    return\
+    \ 1;\n  //递归步骤\n  else\n    return n * factorial(n-1);\n}\n```\n\n# 输出:\n\n5!:\
+    \ 120\n6!: 720\n\n# FibRecursion.c\n\n```c\n#include<stdio.h>\n/*\n作者 | 邮箱 | 日期\n\
+    FibRecursion: 计算指定位置的斐波那契数。\n*/\n\nint fibonacci(int n);\n\nint main(){\n\n  int\
+    \ fibArray[10];\n  printf(\"Populating Array\\n\");\n\nfor(int i = 0; i < 10;\
+    \ i++){\n fibArray[i] = fibonacci(i);\n printf(\"fibArray[%d]: %d\\n\",i,fibArray[i]);\n\
+    }\n return 0;\n}\n```\n\n```c\nint fibonacci(int n){\n //边界条件\n if (n == 0)\n\
+    \  return 0;\n else if (n == 1)\n  return 1;\n else\n  return fibonacci(n-1) +\
+    \ fibonacci(n-2);\n}\n```\n\n# 输出:\n\nPopulating Array\nfibArray[0]: 0\nfibArray[1]:\
+    \ 1\nfibArray[2]: 1\nfibArray[3]: 2\nfibArray[4]: 3\nfibArray[5]: 5\nfibArray[6]:\
+    \ 8\nfibArray[7]: 13\nfibArray[8]: 21\nfibArray[9]: 34\n\n# Array.c\n\n```c\n\
+    #include <stdio.h>\n/*\n[作者] | [邮箱] |[日期]\nArray: 展示了两种初始化数组的方法，以及如何访问数组数据成员。此外，你也可以根据需要创建二维数组等。\n\
+    */\n\nint main(){\n/**两种数组的方法**/\nint arr[] = {10, 20, 30, 40, 50};\nint size\
+    \ = sizeof(arr)/sizeof(arr[0]);\nfor(int i=0; i<size; i++){\n    printf(\"element\
+    \ %d: %d\\n\", i, arr[i]);\n}\n\nint matrix[2][3] = {\n    {1, 2, 3},\n    {4,\
+    \ 5, 6}\n};\nfor(int i=0; i<2; i++){\n    for(int j=0; j<3; j++){\n        printf(\"\
+    %d \", matrix[i][j]);\n    }\n    printf(\"\\n\");\n}\n\n//第二种初始化方法\nint arr2[5]\
+    \ = {1, 2, 3, 4, 5};\nfor(int i=0; i<5; i++){\n    printf(\"arr2[%d]: %d\\n\"\
+    , i, arr2[i]);\n}\n\nreturn 0;\n}\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 13]
+
+
+    # TernaryOperator.c
+
+
+    /*
+
+    Author | Email | Date
+
+    TernaryOperator: A ternary operator is pretty much shorthand notation for if blocks.
+    They are also called operators.
+
+    */
+
+
+    ```
+
+    int main() {
+
+
+    int number = 99;//this number can be anything
+
+
+    int outcome;
+
+    //below is shorthand notation for:
+
+    //if 99%2 equals 0 outcome = 1
+
+    //else outcome = 0
+
+    outcome = (99%2 == 0) ? 1 : 0;
+
+    printf("outcome: %d\n",outcome);
+
+    //this is a test to see if number is
+
+    //odd or even, if number is evenly divisible
+
+    //by two (the remainder is 0) then it is an
+
+    //even number
+
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    outcome: 0'
+  - '[PAGE 14]
+
+
+    # Switch.c
+
+
+    ```
+
+    #include<stdio.h>
+
+    #include<stdlib.h>
+
+    #include<time.h>
+
+    /*
+
+    ```
+
+
+    Switch: How to use switch statements in C.
+
+    Switch statements are essentially if blocks,
+
+    but they switch on some condition. We are also
+
+    going to see how to generate random numbers to
+
+    make our programs more exciting.
+
+
+    ```
+
+    /*
+
+    int main(){
+
+    //we are going to simulate a dice roll
+
+    //lets create a random number in between 0 & 6
+
+    rand(time(0));
+
+    int number = rand()%6+1;
+
+    //number is now in between 1 and 6
+
+    //so we must adjust below to make in the proper range
+
+
+    //let''s declare the switch statement
+
+    switch(number){
+
+    case 1:
+
+    printf("You rolled a One!\n");
+
+    ```'
+  - '[PAGE 15]
+
+
+    ```
+
+    break;
+
+    case 2:
+
+    printf("You rolled a Two\n");
+
+    break;
+
+    case 3:
+
+    printf("You rolled a Three\n");
+
+    break;
+
+    case 4:
+
+    printf("You rolled a Four\n");
+
+    break;
+
+    case 5:
+
+    printf("You rolled a Five\n");
+
+    break;
+
+    case 6:
+
+    printf("You rolled a Six\n");
+
+    break;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    You rolled a Two'
+  - '[PAGE 16]
+
+
+    # Loops.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [author] | [email] | [date]
+
+    ```
+
+
+    Loops: Outlines the types of loops. There are for, while, and do while loops,
+    although while loops are not presented because they are very similar to while
+    loops, with one exception, the'
+  - '[PAGE 17]
+
+
+    body is guaranteed to
+
+    execute at least once.
+
+    */
+
+
+    ```
+
+    int main(){"
+
+    ```
+
+
+    ```
+
+    /*nSet up for a loop, we must initialize some sort of counter
+
+    variable, then we must set up a condition to test each time,
+
+    then we need some sort of step to keep the for loop going.
+
+    */
+
+    for(int i=0; i<=10;i++){//initialization, condition, step
+
+    printf("i : %d \n",i);
+
+    }
+
+    ```
+
+
+    ```
+
+    //Multiplication table
+
+    //this is called a nested loop
+
+    for(int i=1; i<=12;i++){
+
+    for(int j=1; j<=12; j++) {
+
+    printf("%d \n",i*j);//will run 144 times
+
+    }
+
+    printf("\n");
+
+    ```
+
+
+    ```
+
+    //while loops are good for when you don''t know how long
+
+    //your loop will be running for
+
+    int x = 0;
+
+    while(x<10){
+
+    printf("xx : %d \n", x);
+
+    x++;//watch out for infinite loop, comment out to see what
+
+    //happens..., terminate with cntrl+c
+
+    }
+
+    return 0;
+
+    ```'
+  - '[PAGE 18]
+
+
+    # OutPut:
+
+
+    i: 0
+
+    i: 1
+
+    i: 2
+
+    i: 3
+
+    i: 4
+
+    i: 5
+
+    i: 6
+
+    i: 7
+
+    i: 8
+
+    i: 9
+
+    i: 10
+
+
+    1 2 3 4 5 6 7 8 9 10 11 12
+
+    2 4 6 8 10 12 14 16 18 20 22 24
+
+    3 6 9 12 15 18 21 24 27 30 33 36
+
+    4 8 12 16 20 24 28 32 36 40 44 48
+
+    5 10 15 20 25 30 35 40 45 50 55 60
+
+    6 12 18 24 30 36 42 48 54 60 66 72
+
+    7 14 21 28 35 42 49 56 63 70 77 84
+
+    8 16 24 32 40 48 56 64 72 80 88 96
+
+    9 18 27 36 45 54 63 72 81 90 99 108
+
+    10 20 30 40 50 60 70 80 90 100 110 120
+
+    11 22 33 44 55 66 77 88 99 110 121 132
+
+    12 24 36 48 60 72 84 96 108 120 132 144
+
+
+    x: 0
+
+    x: 1
+
+    x: 2
+
+    x: 3
+
+    x: 4
+
+    x: 5
+
+    x: 6
+
+    x: 7
+
+    x: 8
+
+    x: 9'
+  - "[PAGE 19]\n\n# Scope.c\n\n```\n#include <stdio.h>\n/*\n[author] |[email] |[date]\n\
+    ```\n\nScope: Illustrates variable scope with a for loop. Scope is where you can\
+    \ use variables, methods, etc, based off of they were\n\n```\n*/\n\n//variables\
+    \ declared out have global scope\nint main(){\nint i; //within the scope of the\
+    \ main method, i has local scope\n\nfor(i = 5; i>0;i--) { //try declaring i within\
+    \ for loop\n  printf(\"i: %d\\n\",i);\n}\n```\n\n```\nprintf(\"i: %d\\n\", i);//will\
+    \ work because i is in scope of main\n//if i was declared in for loop, printf\
+    \ wouldn't run\nreturn 0;\n}\n```\n\n# Output:\n\ni: 5\ni: 4\ni: 3\ni: 2\ni: 1\n\
+    i: 0"
+  - '[PAGE 20]
+
+
+    # Functions.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [author] |[email] |[date]
+
+    Functions: How to declare, define, and use your own functions.
+
+    */
+
+    ```
+
+
+    +    Set Up a function you must use this format:
+
+    -Declare function above main
+
+    -declare return type, method, name and parameter list
+
+    -return type can be any legal data type
+
+    -function name should be in lower case
+
+    -param list can be as large or small as needed
+
+    -define the function below the main method
+
+    -call the function within the main method
+
+
+    ```
+
+    /*
+
+    //declaring function
+
+    void add(int i);//global scope
+
+    int a = 0;//global scope
+
+    ```
+
+
+    ```
+
+    int main(){
+
+    //local scope within the main function
+
+    int a = 100;
+
+    ```'
+  - '[PAGE 21]
+
+
+    ```
+
+    printf("a before function: %d\n", a);
+
+    add(223); //calling(using) the function
+
+    printf("a after function: %d\n", a);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    ```
+
+    //defining the function
+
+    void add(int i){// must be declared outside of the main function
+
+    a += i;//a = a+i;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    a before function: 100
+
+    a after function: 323
+
+
+    # Recursion.c
+
+
+    ```
+
+    #include<stdio.h>
+
+    /*
+
+    Recursion: A recursive function is a function that calls itself. Infinite recursion
+    is possible so beware of this.
+
+    Also, you must have a proper base case in order to avoid this.
+
+    Recursive functions are somewhat easier to read and write however they do take
+    up more space on the heap so they take longer to execute. However, for this size
+    program we will be alright.
+
+    /
+
+    ```
+
+
+    ```
+
+    int factorial(int n);
+
+    int main(){
+
+    int n = factorial(5);
+
+    printf("5!: %d\n",n);
+
+    printf("6!: %d\n", factorial(6));
+
+
+    return 0;
+
+    }
+
+    ```'
+  - "[PAGE 22]\n\n```\n/*\nCalculates the factorial of n.\n*/\nint factorial(int n){\n\
+    \  //base case\n  if (n == 0)\n    return 1;\n  //recursive step\n  else\n   \
+    \ return n * factorial(n-1);\n}\n```\n\n# Output:\n\n5!: 120\n6!: 720\n\n# FibRecursion.c\n\
+    \n```\n#include<stdio.h>\n/*\nAuthor | Email | Date\nFibRecursion: Calculates\
+    \ the fibonacci number up\nto the desired place.\n*/\n```\n\n```\nint fibonacci(int\
+    \ n);\n\nint main(){\n\n  int fibArray[10];\n  printf(\"Populating Array\\n\"\
+    );\n```"
+  - "[PAGE 23]\n\n```\nfor(int i = 0; i < 10; i++){\n fibArray[i] = fibonacci(i);\n\
+    \ printf(\\(\"fibArray[%d]: %d\\n\",i,fibArray[i]);\n}\n return 0;\n}\n```\n\n\
+    ```\nint fibonacci(int n){\n //base case\n if (n == 0)\n  return 0;\n else if\
+    \ (n == 1)\n  return 1;\n else\n  return fibonacci(n-1) + fibonacci(n-2);\n}\n\
+    ```\n\n# Output:\n\nPopulating Array\nfibArray[0]: 0\nfibArray[1]: 1\nfibArray[2]:\
+    \ 1\nfibArray[3]: 2\nfibArray[4]: 3\nfibArray[5]: 5\nfibArray[6]: 8\nfibArray[7]:\
+    \ 13\nfibArray[8]: 21\nfibArray[9]: 34\n\n# Array.c\n\n```\n#include <stdio.h>\n\
+    /*\n[Author] | [[Email]] |[Date]\nArray: Shows two ways to initialize arrays,\
+    \ and how to access array data members. Also, you can make 2-D arrays, and so\
+    \ on as needed.\n*/\n```"
+  - '[PAGE 24]
+
+
+    ```
+
+    int main(){
+
+    /**Two Ways to Initialize arrays*/
+
+    //below will make array just big enough
+
+    int list[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    printf("byte size of int[]: %lu\n", sizeof(list));
+
+    //second way to initialize an array
+
+    int forList[5] =0}; //set aside memory in space
+
+    for(int index = 0; index < 5; index++){
+
+    forList[index] = index*2;
+
+    printf("Array%d: %d\n", index, index*2);
+
+    }
+
+    printf("\n");
+
+    list[0] = list[4];//legal
+
+    printf("list[0]: %d\n", list[0]);
+
+    list[0]=10001; //legal to initialize array
+
+    printf("list[0]: %d\n", list[0]);
+
+
+    /*
+
+    2-D Array, an array within an array. Organized by row, column, notice double for
+    loop.
+
+    */
+
+    //init with row and column
+
+    int box[4][4]={{1, 2, 3, 4},
+
+    {11, 12, 13, 14},
+
+    {21, 22, 23, 24},
+
+    {31, 32, 33, 34}};
+
+    for(int r = 0; r<4; r++){
+
+    for(int c = 0; c<4; c++)++){//nested for loop
+
+    printf("box[%d][%d]: %d\t", r, c, box[r][c]);
+
+    }
+
+    }
+
+    printf("\n");
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:'
+  - '[PAGE 25]
+
+
+    ```
+
+    byte size of int[]: 40
+
+    Array[0] : 0 Array[1] : 2 Array[2] : 4 Array[3] : 6 Array[4] : 8
+
+    list[0]: 8
+
+    list[0]: 10001
+
+    box[0][0]: 1 box[0][1]: 2 box[0][2]: 3 box[0][3]: 4
+
+    box[1][0]: 11 box[1][1]: 12 box[1][2]: 13 box[1][3]: 14
+
+    box[2][0]: 21 box[2][1]: 22 box[2][2]: 23 box[2][3]: 24
+
+    box[3][0]: 31 box[3][1]: 32 box[3][2]: 33 box[3][3]: 34
+
+    ```'
+  - "[PAGE 26]\n\n# Average.c\n\n```\n#include<stdio.h>\n#include<stdlib.h>\n#include<time.h>\n\
+    /*\nAuthor | Email | Date\nAverage: Calculates the average of a random int[].\n\
+    */\\int main() {\n\n    srand(time(0));\n    int numbers[10];\n    int total =\
+    \ 0;\n\n    for(int i = 0; i < 10; i++){\n        numbers[i] = rand()%101;// includes\
+    \ [0,100]\n        total += numbers[i];\n    }\n\n    printf(\"Array Populated:\\\
+    n\");\n    double average = total/10;// ten total numbers, or use sizeof\n   \
+    \ printf(\"Average: %.2f\\n\", average);\n\n    return 0;\n}\n```\n\n# Output:\n\
+    \nArray Populated:\nAverage: 39.00"
+- md: "\n# String.c\n\n```c\n#include <stdio.h>\n#include <string.h> //notice header\
+    \ file\n/*\n[Author] |[Email] |[Date]\nString: A string is a one dimensional array\
+    \ of chars.\nThere are a couple different ways to init a char[].\nThere are many\
+    \ functions to run on strings.\nA string is terminated by a null character, or\
+    \ a null byte '\\0'\n*/\n\nint main(){\n\nchar name[5] = {'F','r','i','d','\\\
+    0'};\nchar nameTwo[] = \"Robert\";\n//will automatically make array just big enough,\n\
+    //will also add null byte\nprintf(\"name: %s\\n\", name);//place holder for string\
+    \ is %s\nprintf(\"nameTwo: %s\\n\", nameTwo);\n\n//there are many functions in\
+    \ string.h header file\n//one is strcat(s1, s2) concatenates s2 into s1\nchar\
+    \ nameAndSurname[14];//make sure this is big enough to hold what\n//you are concatenating\n\
+    strcat(nameAndSurname, \"Tommy Pickles\");\nprintf(\"nameAndSurname: %s\\n\",nameAndSurname);\n\
+    return 0;\n}\n```\n\n# Output:\n\nname: Fred\nnameTwo: Robert\nnameAndSurname:\
+    \ Tommy Pickles\n\n# IndexArray.c\n\n```c\n#include <stdio.h>\n#include <string.h>\n\
+    /*\n[Author] | [Email] | [Date]\nIndexArray: How to declare an array of strings.\n\
+    */\n```\n\n```c\nint main(){\n//declared just like this, or with a for loop, must\
+    \ know size\nchar *array[6] = {\"This\", \"is\", \"an\", \"array\", \"of\", \"\
+    strings\"};\nfor(int i = 0; i<6; i++){\n    printf(\"Word %d: %s\\n\", i, array[i]);\n\
+    }\n\nreturn 0;\n}\n```\n\n# Output:\n\n# Struct.c\n\n```c\n#include <stdio.h>\n\
+    #include <string.h> //notice the include statement\n/*\n[Author] | [Email] | [Date]\n\
+    Struct: Short for data structure a struct is grouping of separate data types,\
+    \ just like a basic variable(like an int), memory space is set aside when you\
+    \ declare a struct.\n*/\n\n//declaration outside of main\nstruct Person{\n  char\
+    \ name[20];\nint age;\n//notice the semi colon at the end\n};\n\nint main() {\n\
+    \n//declaring a struct variable\nstruct Person personOne;\n//length == 24 bytes\n\
+    printf(\"size of personOne:%lu\", sizeof(personOne));\n//initializing a struct\
+    \ variable\nstrncpy(personOne.name,\"DoEasy Productions!\");\npersonOne.age =\
+    \ 1;\n//dot operator allows you to access\n//data members within a dat structure\n\
+    return 0;\n}\n```\n\n# Typedef.c\n\n```c\n#include <stdio.h>\n#include <string.h>\n\
+    /*\n[Author] |[Email] |[Date]\n\nTypeDef: Explains how to use typedef, a keyword\
+    \ in C. Typedef allows you to rename a type in order to call a type by its new\
+    \ name. They are useful with structs.\n*/\n```\n\n```c\n/*\nint main(){\n//typedef\
+    \ is a keyword, so it can't be used anywhere\n//it is used to give a type new\
+    \ name\n*/\n```\n\n```c\ntypedef unsigned char BYTE;\n//now we can use BYTE instead\
+    \ of 'unsigned char'\nBYTE b;//8 bits\nb = (2*2*2*2*2*2*2)-1;\nprintf(\"Max value\
+    \ BYTE can hold: %d\\n\",b);\nBYTE four[4];//32 bits\n```\n\n```c\n//can also\
+    \ do something like:\ntypedef struct Person{\nchar name[10];\nint age;\n}Person;\n\
+    ```\n\n```c\nPerson doEasy; //notice no struct\nstrcpy(doEasy.name,\"DOEASY\"\
+    );\ndoEasy.age = 100;\nprintf(\"Name: %s\\nAge: %d\\n\",doEasy.name, doEasy.age);\n\
+    ```\n\n```c\nreturn 0;\n}\n```\n\n# Output:\n\nMax value BYTE can hold: 255\n\
+    Name: DOEASY\nAge: 100\n\n# BitField.c\n\n```c\n#include <stdio.h>\n/*\n[Author]\
+    \ | [Email] | [Date]\nBitField: How to change the bit length of data types.\n\
+    */\n\n//will change the width of an int to 1,\n//instead of 8 bytes (32 bits)\n\
+    struct{\nunsigned int b : 1;\n}Boolean;\n\nint main(){\n    Boolean.b = 0;//legal\n\
+    \    Boolean.b = 1;//legal\n    Boolean.b = 2;//not legal unless you assign width\
+    \ of 2\n    //because it takes bits to express 2 in binary\n    Boolean.b = 7\
+    \ // illegal for reason above, except you\n    //would have to change the width\
+    \ to 3\n    return 0;\n}\n```\n\n# Pointer.c\n\n```c\n#include <stdio.h>\n/*\n\
+    [Author] | [Email] | [Date]\nPointer: A pointer is a special variable which stores\
+    \ the memory address of a type. When you declare a variable, memory space is allocated\
+    \ to store that variable. A pointer can retrieve the data stored at memory address.\
+    \ When you access the value at memory address, this is called dereferencing. You\
+    \ can have a pointer to a pointer.\n*/\n```\n\n```c\nint main(){\n\nint number\
+    \ = 1;\nint two;\n\n//to access a memory address use & symbol\nprintf(\"Address\
+    \ of number: %p\\n\", &number);\nprintf(\"Address of two: %p\\n\", &two);//placeholder\
+    \ for pointer is %p\n//these addresses will be separated by 4 bytes, or 32 bits\n\
+    //and since they were declared after the other they are stored in \"linear\" fashion\n\
+    //to declare a pointer use the same type in this case not an *\nint *pointerToInt\
+    \ = &number;//declaring a pointer variable\n//that points to address of number\n\
+    //just referencing the pointer will return an address\nprintf(\"Address of where\
+    \ int is stored: %p\\n\", pointerToInt);\n//to access what the pointer is pointing\
+    \ to use * on the pointer\n//this is called referencing pointer\nprintf(\"What\
+    \ is stored in number: %d\\n\", *pointerToInt);\nreturn 0;\n}\n```\n\nOutput:\n\
+    Address of number: 0x7fff5f1be8\nAddress of two: 0x7fff5f1be4\nAddress of where\
+    \ int is stored: 0x7fff5f1be8\nWhat is stored in number: 1\n\n# PointerToNull.c\n\
+    \n```c\n#include <stdio.h>\n/*\n[Author] | [Email] | [Date]\nPointerToNull: Null\
+    \ in C is nothing, it literally not have a value and is used in place of data.\
+    \ Pointers to null are legal within C. When a pointer is assigned to null the\
+    \ pointer does not point to anything. Two null pointers will always be equal.\
+    \ Pointers to not point to anything. The address stored in a pointer to null is\
+    \ an invalid memory address. They are useful to perform checks.\n*/\nint main(){\n\
+    int *p;\np = NULL;\nint *cp = NULL;\nprintf(\"*p: %p\\n\",p,cp);//p is a placeholder\
+    \ for pointer\nprintf(\"*p==cp: %d\\n\",p==cp);//1 is true, 0 or false\n\n//can\
+    \ use a pointer to null in an if statement\nif(p!=NULL){\nprintf(\"*p is not null\\\
+    n\");\n}else {\nprintf(\"*p is null\\n\");\n}\n\n//NULL is nothing, pointer to\
+    \ null are useful\n//in data structures to signify the end of the data structure,\
+    \ for example a linked list\nreturn 0;\n}\n```\n\nOutput:\n\np: 0x0\np==cp: 1\n\
+    p is null\n\n# PointerToVoid.c\n\n```c\n#include <stdio.h>\n/*\n[Author] | [Email]\
+    \ | [Date]\nPointerToVoid: Pointers to void are legal within c. A pointer to void\n\
+    can be used to hold a pointer to any data type. Pointers to void\ndisplay traits\
+    \ of polymorphism.\n*/\n\n```int main(){\n//Pointer to void can hold any data\
+    \ type\nint a = 100;\nint *p = &a;\nprintf(\"Address of p: %p\\n\",p);\nprintf(\"\
+    sizeof(p): %lu\\n\", sizeof(p));\nprintf(\"Dereferencing of p: %d\\n\",*p);\n\
+    void *vp;\nvp = p;//this pointer can hold any data type,\n//useful for function\
+    \ parameters\n/*\n-a pointer to void will have the same representation and memory\n\
+    alignment as a char\n-a ptr to void will never be == another ptr, two pointers\
+    \ to void\nassigned to NULL will ==\n*/\n\nprintf(\"Address of vp: %p\\n\",vp);\n\
+    printf(\"sizeof(vp): %lu\\n\", sizeof(vp));\n\nreturn 0;\n}\n```\n\n# Output:\n\
+    \nAddress of p: 0x7fff5c39cba8\nsizeof(p): 8\nDereferencing of p: 100\nAddress\
+    \ of vp: 0x7fff5c39cba8\nsizeof(vp): 8\n\n# PointerToConstant.c\n\n```c\n#include\
+    \ <stdio.h>\n/*\n[Author] | [Email] | [Date]\nPointers to a constant are legal\
+    \ within c. Once a pointer\nto a constant is initialized it cannot be changed.\
+    \ Constant is a\nmodifier you can add to a variable. Once a variable has been\
+    \ defined\nas constant cannot change later. Constants help to secure your code.\n\
+    */\nint main() {\n\nint x = 100;\nconst int *pci = &x;\nprintf(\"Address: %p\\\
+    n\",pci);\nprintf(\"Dereference: %d\\n\", *pci);\n//this is not legal so it is\
+    \ commented out\n//*pci = 200;//illegal\n//if pci was not a pointer to a constant\
+    \ you could\n//change the value by dereferencing\n\nreturn 0;\n}\n```\n\n# Output:\n\
+    \nAddress: 0x7fff54958ba\nDereference: 100\n\n# MultiplePointers.c\n\n```c\n#include\
+    \ <stdio.h>\n/*\n[Author] |[Email] |[Date]\nYou can have multiple pointers pointing\
+    \ to the same memory address.\nBut each of those pointers will have different\
+    \ addresses.\nBe careful doing this because memory addresses can become lost\n\
+    if done improperly. Please note in this example, there is also a\nreference of\
+    \ a pointer to a pointer.\n*/\n\n```\n\nint main({\nint x = 1000;\nint *p1 = &x;\n\
+    int *p2 = &x;\n//pointers have addresses themselves\n//and can be retrieved using\
+    \ &operator\n```\n"
+  mdcn: "\n\n# String.c\n\n```c\n#include <stdio.h>\n#include <string.h> //注意头文件\n\
+    /*\n[作者] |[邮箱] |[日期]\nString: 字符串是字符的一维数组。\n初始化 char[] 有几种不同的方法。\n有很多函数可以在字符串上运行。\n\
+    字符串以空字符（或空字节 '\\0'）结束结束标志。\n*/\n\nint main(){\n\nchar name[5] = {'F','r','i','d','\\\
+    0'};\nchar nameTwo[] = \"Robert\";\n//会自动让数组恰好足够大，\n//也会添加空字节\nprintf(\"name:\
+    \ %s\\n\", name);//字符串的占位符是 %s\nprintf(\"nameTwo: %s\\n\", nameTwo);\n\n//string.h\
+    \ 头文件中有很多有很多函数\n//其中之一是 strcat(s1, s2) 将 s2 拼接到 s1 中\nchar nameAndSurname[14];//确保这个空间足够容纳\n\
+    //你正在拼接的内容\nstrcat(nameAndSurname, \"Tommy Pickles\");\nprintf(\"nameAndSurname:\
+    \ %s\\n\",nameAndSurname);\nreturn 0;\n}\n```\n\n# 输出:\n\nname: Fred\nnameTwo:\
+    \ Robert\nnameAndSurname: Tommy Pickles\n\n# IndexArray.c\n\n```c\n#include <stdio.h>\n\
+    #include <string.h>\n/*\n[作者] | [邮箱] | [日期]\nIndexArray: 如何声明一个字符串数组。\n*/\n```\n\
+    \n```c\nint main(){\n//像这样声明，或者使用 for 循环，必须知道大小\nchar *array[6] = {\"This\", \"\
+    is\", \"an\", \"array\", \"of\", \"strings\"};\nfor(int i = 0; i<6; i++){\n  \
+    \  printf(\"Word %d: %s\\n\", i, array[i]);\n}\n\nreturn 0;\n}\n```\n\n# 输出:\n\
+    \n# Struct.c\n\n```c\n#include <stdio.h>\n#include <string.h> //注意包含语句\n/*\n[作者]\
+    \ | [邮箱] | [日期]\nStruct: 数据结构的缩写，struct 是独立数据类型的分组，就像基本变量（如 int）一样，当你声明一个 struct\
+    \ 时，会留出内存空间。\n*/\n\n// 在 main 之外声明\nstruct Person{\n  char name[20];\nint age;\n\
+    //注意末尾的分号\n};\n\nint main() {\n\n//声明 struct 变量\nstruct Person personOne;\n//长度\
+    \ == 24 字节\nprintf(\"size of personOne:%lu\", sizeof(personOne));\n//初始化 struct\
+    \ 变量\nstrncpy(personOne.name,\"DoEasy Productions!\");\npersonOne.age = 1;\n//点运算符允许你访问\n\
+    //结构内部的数据成员\nreturn 0;\n}\n```\n\n# Typedef.c\n\n```c\n#include <stdio.h>\n#include\
+    \ <string.h>\n/*\n[作者] |[邮箱] |[日期]\n\nTypeDef: 解释如何使用 typedef，C 语言中的一个关键字。typedef\
+    \ 允许你重命名类型，以便通过新名称调用该类型。它们在 struct 中非常有用。\n*/\n```\n\n```c\n/*\nint main(){\n\
+    //typedef 是关键字，所以它不能在任何地方使用\n//它用于给类型起一个新名字\n*/\n```\n\n```c\ntypedef unsigned\
+    \ char BYTE;\n//现在我们可以用 BYTE 代替 'unsigned char'\nBYTE b;//8 位\nb = (2*2*2*2*2*2*2)-1;\n\
+    printf(\"Max value BYTE can hold: %d\\n\",b);\nBYTE four[4];//32 位\n```\n\n```c\n\
+    //也可以做类似的事情：\ntypedef struct Person{\nchar name[10];\nint age;\n}Person;\n```\n\
+    \n```c\nPerson doEasy; //注意没有 struct\nstrcpy(doEasy.name,\"DOEASY\");\ndoEasy.age\
+    \ = 100;\nprintf(\"Name: %s\\nAge: %d\\n\",doEasy.name, doEasy.age);\n\n```c\n\
+    return 0;\n}\n\n# 输出:\n\nMax value BYTE can hold: 255\nName: DOEASY\nAge: 100\n\
+    \n# BitField.c\n\n```c\n#include <stdio.h>\n/*\n[作者] | [邮箱] | [日期]\nBitField:\
+    \ 如何改变数据类型的位宽。\n*/\n\n//将 int 改为 1，\n//而不是 8 字节（32 位）\nstruct{\nunsigned int b\
+    \ : 1;\n}Boolean;\n\nint main(){\n    Boolean.b = 0;//合法\n    Boolean.b = 1;//合法\n\
+    \    Boolean.b = 2;//非法，除非你\n    //将宽度改为 3\n    return 0;\n}\n```\n\n# Pointer.c\n\
+    \n```c\n#include <stdio.h>\n/*\n[作者] | [邮箱] | [日期]\nPointer: 指针是一个存储内存地址的特殊变量。\n\
+    当你声明一个变量时，会分配内存来存储该变量。\n指针可以检索内存地址处的数据。\n访问内存地址处的值，这被称为解引用。\n你可以有一个指向指针的指针。\n\
+    */\n\n```c\nint main(){\n\nint number = 1;\nint two;\n\n//使用 & 符号访问内存地址\nprintf(\"\
+    Address of number: %p\\n\", &number);\nprintf(\"Address of two: %p\\n\", &two);//指针的占位符是\
+    \ %p\n//这些地址被 4 字节分隔，或者 32 位\n//由于它们在声明后，它们以“线性”方式存储\n//使用相同的类型来声明指针，不是 *\nint\
+    \ *pointerToInt = &number;//声明一个指向\n//number 地址的指针\n//引用指针将返回一个地址\nprintf(\"Address\
+    \ of where int stored: %p\\n\", pointerToInt);\n//使用 * 访问指针指向的内容\nprintf(\"What\
+    \ is stored in number: %d\\n\", *pointerToInt);\nreturn 0;\n}\n\n输出:\nAddress\
+    \ of number: 0x7fff5fbe8\nAddress of two: 0x7fff5fbe4\nAddress of where int stored:\
+    \ 0x7fff5fbe8\nWhat is stored in number: 1\n\n# PointerToNull.c\n\n```c\n#include\
+    \ <stdio.h>\n/*\n[作者] | [邮箱] | [日期]\nPointerToNull: Null 在 C 语言中表示空，它实际上没有值并被用于替代数据。空指针是合法的。\n\
+    当指针被赋值为 null 时，指针不指向任何地方。\n两个空指针总是相等的。空指针不指向任何地方。\n空指针存储的地址是无效内存地址。它们用于进行检查。\n\
+    */\nint main(){\nint *p;\np = NULL;\nint *cp = NULL;\nprintf(\"*p: %p\\n\",p,cp);//指针的占位符是\
+    \ %p\nprintf(\"*p==cp: %d\\n\",p==cp);//1 为真，0 为假\n\n//在 if 语句中使用空指针\nif(p!=NULL){\n\
+    printf(\"*p is not null\\n\");\n}else {\nprintf(\"*p is null\\n\");\n}\n\n//NULL\
+    \ 表示空，空指针在数据结构中用于标记\n数据结构的结束，例如链表\nreturn 0;\n}\n```\n\n输出:\n\np: 0x0\np==cp:\
+    \ 1\np is null\n\n# PointerToVoid.c\n\n```c\n#include <stdio.h>\n/*\n[作者] | [邮箱]\
+    \ | [日期]\nPointerToVoid: 空指针在 c 语言中是合法的。\n空指针可以持有指向任何类型的指针。\n空指针显示了多态的特征。\n*/\n\
+    \n```int main(){\n//空指针可以持有任何数据类型的指针\nint a = 100;\nint *p = &a;\nprintf(\"Address\
+    \ of p: %p\\n\",p);\nprintf(\"sizeof(p): %lu\\n\", sizeof(p));\nprintf(\"Dereference\
+    \ of p: %d\\n\",*p);\nvoid *vp;\nvp = p;//这个指针可以持有任何数据类型，\n//对函数参数非常有用\n/*\n-空指针具有与\
+    \ char 相同的表示形式和内存对齐\n-空指针永远不会等于另一个指针，\n两个赋值为 NULL 的空指针将相等\n*/\n\nprintf(\"Address\
+    \ of vp: %p\\n\",vp);\nprintf(\"sizeof(vp): %lu\\n\", sizeof(vp));\n\nreturn 0;\n\
+    }\n```\n\n# 输出:\n\nAddress of p: 0x7fff5c39cba8\nsizeof(p): 8\nDereference of\
+    \ p: 100\nAddress of vp: 0x7fff5c39cba8\nsizeof(vp): 8\n\n# PointerToConstant.c\n\
+    \n```c\n#include <stdio.h>\n/*\n[作者] | [邮箱] | [日期]\n指向常量的指针在 c 语言中是合法的。\n指向常量的指针一旦初始化，就不能更改。\n\
+    常量是一个你可以添加到变量上的修饰符。一旦变量被定义为常量，稍后无法更改。常量有助于保护你的代码。\n*/\nint main() {\n\nint x =\
+    \ 100;\nconst int *pci = &x;\nprintf(\"Address: %p\\n\",pci);\nprintf(\"Dereference:\
+    \ %d\\n\", *pci);\n//这是不合法的，所以注释掉了\n//*pci = 200;//非法\n//如果 pci 不是指向常量的指针，你可以\n\
+    通过解引用更改值\n\nreturn 0;\n}\n```\n\n# 输出:\n\nAddress: 0x7fff54958ba\nDereference:\
+    \ 100\n\n# MultiplePointers.c\n\n```c\n#include <stdio.h>\n/*\n[作者] |[邮箱] |[日期]\n\
+    你可以让多个指针指向同一个内存地址。\n但这些指针本身会有不同的地址。\n在这样做时要小心，因为如果操作不当，内存地址可能会丢失。\n请注意在示例中，还有一个指向指针的指针的引用。\n\
+    */\n\n```\n\nint main({\nint x = 1000;\nint *p1 = &x;\nint *p2 = &x;\n//指针本身也有地址\n\
+    //并可以使用 & 运算符获取\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 27]
+
+
+    # String.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    #include <string.h> //notice header file
+
+    /*
+
+    [Author] |[Email] |[Date]
+
+    String: A string is a one dimensional array of chars.
+
+    There are a couple different ways to init a char[].
+
+    There are many functions to run on strings.
+
+    A string is terminated by a null character, or a null byte ''\0''
+
+    */
+
+
+    int main(){
+
+
+    char name[5] = {''F'',''r'',''i'',''d'',''0};
+
+    char nameTwo[] = "Robert"
+
+    //will automatically make array just big enough,
+
+    //will also add null byte
+
+    printf("name: %s\n", name);//place holder for string is %s
+
+    printf("nameTwo: %s\n", nameTwo);
+
+
+    //there are many functions in string.h header file
+
+    //one is strcat(s1, s2) concatenates s2 into s1
+
+    char nameAndSurname[14];//make sure this is big enough to hold what
+
+    //you are concatenating
+
+    strcat(nameAndSurname, "Tommy Pickles");
+
+    printf("nameAndSurname: %s\n",nameAndSurname);
+
+    return 0;
+
+    ```'
+  - "[PAGE 28]\n\n```\n}\n\n```\n\n# Output:\n\nname: Fred\nnameTwo: Robert\nnameAndSurname:\
+    \ Tommy Pickles\n\n# IndexArray.c\n\n```\n#include <stdio.h>\n#include <string.h>\n\
+    /*\n[Author] | [Email] | [Date]\nIndexArray: How to declare an array of strings.\n\
+    */\n```\n\n```\nint main(){\n//declared just like this, or with a for loop, must\
+    \ know size\nchar *array[6]=\"This\", \"is\", \"an\", \"array\", \"of\", \"strings\"\
+    ;\nfor(int i = 0; i<6; i++){\n    printf(\"Word %d: %s\\n\", i, array[i]);\n}\n\
+    \nreturn 0;\n}\n```\n\n# Output:"
+  - "[PAGE 29]\n\n# Struct.c\n\n```\n#include <stdio.h>\n#include <string.h> //notice\
+    \ the include statement\n/*\n[Author] | [Email] | [Date]\nStruct: Short for data\
+    \ structure a struct is grouping of separate data types, just like a basic variable(like\
+    \ an int), memory space is set aside when you declare a struct.\n*/\n\n//declaration\
+    \ outside of main\nstruct Person{\n  char name[20];\n```"
+  - '[PAGE 30]
+
+
+    int age;
+
+    //notice the semi colon at the end
+
+
+    int main() {
+
+
+    ```
+
+    //declaring a struct variable
+
+    struct Person personOne;
+
+    //length == 24 bytes
+
+    printf("size of personOne:%lu", sizeof(personOne));
+
+    //initializing a struct variable
+
+    strncpy(personOne.name,"DoEasy Productions!");
+
+    personOne.age = 1;
+
+    //dot operator allows you to access
+
+    //data members within a dat structure
+
+    return 0;
+
+    ```
+
+
+    # Typedef.c
+
+
+    #include <stdio.h>
+
+    #include <string.h>
+
+    /*
+
+    [Author] |[Email] |[Date]'
+  - '[PAGE 31]
+
+
+    TypeDef: Explains how to use typedef, a keyword in C. Typedef allows you to rename
+    a type in order to call a type by its new name. They are useful with structs.
+
+
+    ```
+
+    /*
+
+    int main(){
+
+    //typedef is a keyword, so it can''t be used anywhere
+
+    //it is used to give a type new name
+
+    ```
+
+
+    ```
+
+    typedef unsigned char BYTE;
+
+    //now we can use BYTE instead of ''unsigned char''
+
+    BYTE b;//8 bits
+
+    b = (2*2*2*2*2*2*2)-1);
+
+    printf("Max value BYTE can hold: %d\n",b);
+
+    BYTE four[4];//32 bits
+
+    ```
+
+
+    ```
+
+    //can also do something like:
+
+    t typedef struct Person{
+
+    char name[10];
+
+    int age;
+
+    }Person;
+
+    ```
+
+
+    ```
+
+    Person doEasy; //notice no struct
+
+    strcpy(doEasy.name,"DOEASY");
+
+    deEasy.age = 100;
+
+    printf("Name: %s\nAge: %d\n",doEasy.name, doEasy.age);
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    Max value BYTE can hold: 255
+
+    Name: DOEASY
+
+    Age: 100'
+  - "[PAGE 32]\n\n```\n#include <stdio.h>\n/*\n[Author] || [Email] ||[Date]\nBitField:\
+    \ How to change the bit length of data types.\n*/\n\n//will change the width of\
+    \ an int to 1 bit,\n//instead of 8 bytes (32 bits)\nstruct{\nunsigned int b :\
+    \ 1;\n}Boolean;\n\nint main(){\n    Boolean.b = 0;//legal\n    Boolean.b = 1;//legal\n\
+    \    Boolean.b = 2//not legal unless you assign a width of 2 bits\n    //because\
+    \ it takes two bits to express 2 in binary\n    //Boolean.b = 7 // illegal for\
+    \ same reason above, except you\n    //would have to change the bit width to 3\n\
+    \    return 0;\n}\n```\n\n# BitField.c"
+  - '[PAGE 33]
+
+
+    # Pointer.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] | [Email] | [Date]
+
+    ```
+
+
+    Pointer: A pointer is a special variable which stores the memory address of a
+    data type. A pointer
+
+    oints the memory address where a variable''s data is stored. When you declare
+    a variable in
+
+    C, memory space is allocated to store that variable. A pointer can retrieve the
+    data stored at a
+
+    memory address. When you access the value at a memory address, this is called
+    dereferencing the
+
+    pointer. You can have a pointer to a pointer.
+
+
+    ```
+
+    /*
+
+    int main(){
+
+
+    int number = 1;
+
+    int two;
+
+
+    //to access a memory address use the & symbol
+
+    //next to variable name
+
+    printf("Address of number: %p\n", &number);
+
+    printf("Address of two: %p\n", &two);//placeholder for pointer is %p
+
+    //these addresses will be separated by 4 bytes, or 32 bits
+
+    //in memory and since they were declared one after the other they
+
+    //are stored in a "linear" fashion
+
+    //to declare a pointer use the same data type
+
+    //in this case not then an * next to the name
+
+    int *pointerToInt = &number;//declaring a pointer variable
+
+    //+that points to address of number
+
+    \n//just referencing the pointer will return an address
+
+    printf("Address of where int is stored: %p\n", pointerToInt);
+
+    //to access what the pointer is pointing to use a * on the pointer
+
+    //this is called referencing a pointer
+
+    printf("What is stored in number: %d\n", *pointerToInt);
+
+    return 0;
+
+    }
+
+    ```'
+  - '[PAGE 34]
+
+
+    Output:
+
+    Address of number: 0x7fff5f315be8
+
+    Address of two: 0x7fff5f315be4
+
+    Address of where int is stored: 0x7fff5f315be8
+
+    What is stored in number address: 1
+
+
+    # ## PointerToNull.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] ||[Email] ||[Date]
+
+    PointerToNull:Null in C is nothing, it literally does not have a value and is
+    used in place of data
+
+    Pointers to null are legal within C. When a pointer is assigned
+
+    to null the pointer does not point to anything.
+
+    Two null pointers will always be equal.
+
+    Pointers to do not point to anything.
+
+    The address stored in a pointer to null is an invalid memory address.
+
+    They are useful to perform checks.
+
+    */
+
+    int main(){
+
+    int *p;
+
+    p = NULL;
+
+    int *cp = NULL;
+
+    printf("*p: %p\n",p,cp);//p%p is a placeholder for a pointer
+
+    printf("*p==cp: %d\n",p==cp);//1 is true, 0 or false
+
+
+    //can use a pointer to null in an if statement
+
+    if(p){//can use p!=NULL
+
+    print("*p is not null\n");
+
+    }else {
+
+    print("**p is null\n");
+
+    }
+
+
+    //NULL is nothing, pointer to null are useful
+
+    //in data structures to signify
+
+    //the end of the data structure, for example a linked list
+
+    return 0;
+
+    }
+
+    ```'
+  - '[PAGE 35]
+
+
+    Output:
+
+
+    ```
+
+    p: 0x0
+
+    p==cp: 1
+
+    p p is null
+
+    ```
+
+
+    # PointerToVoid.c
+
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] | [Email] | [Date]
+
+    PointerToVoid: Pointers to void are legal within c. A pointer to void
+
+    can be used to hold a pointer to any data type. Pointers to void
+
+    display traits of polymorphism.
+
+    /*
+
+
+    ```
+
+    int main(){
+
+    //Pointer to void can hold any data type
+
+    int a = 100;
+
+    int *p = &a;
+
+    printf("Address of p: %p\n",p);
+
+    printf("sizeof(p): %lu\n", sizeof(p));
+
+    printf("Dereferencing of p: %d\n",*p);
+
+    void *vp;
+
+    vp = p//this pointer can hold any data type,
+
+    //useful for function parameters
+
+    /*
+
+    ```
+
+
+    -a pointer to void will have the same representation and memory
+
+    alignment as a char
+
+    -a ptr to void will never be == another ptr, two pointers to void
+
+    assigned to NULL will ==
+
+    /*
+
+
+    ```
+
+    printf("Address of vp: %p\n",vp);
+
+    printf("sizeof(vp): %lu\n", sizeof(vp));
+
+    ```'
+  - '[PAGE 36]
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    Address of p: 0x7fff5c39cba8
+
+    sizeof(p): 8
+
+    Dereferencing of p: 100
+
+    Address of vp: 0x7fff5c39cba8
+
+    sizeof(vp): 8
+
+
+    # PointerToConstant.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] | [Email] | [Date]
+
+    Pointers to a constant are legal within c. Once a pointer
+
+    to a constant is initialized it cannot be changed. Constant is a
+
+    modifier you can add to a variable. Once a variable has been defined
+
+    as constant it cannot change later. Constants help to secure your code.
+
+    */
+
+    int main() {
+
+    ```
+
+
+    ```
+
+    int x = 100;
+
+    const int *pci = &x;
+
+    printf("Address: %p\n",pci);
+
+    printf("Dereference: %d\n", *pci);
+
+    //this is not legal so it is commented out
+
+    //*pci = 200;//illegal
+
+    //if pci was not a pointer to a constant you could
+
+    //change the value by dereferencing
+
+
+    return 0;
+
+    ```'
+  - '[PAGE 37]
+
+
+    ```
+
+    }
+
+
+    ```
+
+
+    # Output:
+
+
+    Address: 0x7fff54958ba
+
+    Dereference: 100
+
+
+    # MultiplePointers.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] |[Email] |[Date]
+
+    You can have multiple pointers pointing to the same memory address.
+
+    But each of those pointers will have different addresses.
+
+    Be careful doing this because memory addresses can become lost
+
+    if done improperly. Please note in this example, there is also a
+
+    reference of a pointer to a pointer.
+
+    */
+
+    ```
+
+
+    ```
+
+    int main({
+
+    int x = 1000;
+
+    int *p1 = &x;
+
+    int *p2 = &x;
+
+    //pointers have addresses themselves
+
+    //and can be retrieved using &operator
+
+    ```'
+- md: "\n```c\nprintf(\"Memory address of x: %p\\n\", p1);\nprintf(\"Memory address\
+    \ of p1: %p\\n\", &p1);\nprintf(\"Dereference of p1: %d\\n\", *p1);\n```\n\n```c\n\
+    printf(\"Memory address of x: %p\\n\", p2);\nprintf(\"Memory address of p1: %p\\\
+    n\", &p2);\nprintf(\"Dereference of p2: %d\\n\", *p2);\n```\n\n```c\nreturn 0;\n\
+    }\n```\n\nOutput:\nMemory address of x: 0x7fffbf59ba8\nMemory address of p1: 0x7fffbf59ba0\n\
+    Dereference of p1: 1000\nMemory address of x: 0x7fffbf59ba8\nMemory address of\
+    \ p1: 0x7fffbf59b98\nDereference of p2: 1000\n\n# PointerToArray.c\n\n```c\n#include\
+    \ <stdio.h>\n/*\n[Author] | [Email] | [Date]\nPointerToArray: When you declare\
+    \ an array, and try to access this\narray by name an address to the first index\
+    \ will automatically return. You can use the technique\nbelow to iterate through\
+    \ an array.\n*/\n```\n\n```c\nint main(){\nint *p; //declare a pointer before\n\
+    int list[] = {777, 222, 100};//initialize array\n//if you use list, instead of\
+    \ list[n], a pointer to the first memory\n//address in the array is returned.\n\
+    \np = list;//will give us an address, same as p = &list[0]\nfor(int i=0; i<3;\
+    \ i++){\n    printf(\"Memory Address of index %d : %p\\n\", i, (p+i));\n    //this\
+    \ is called pointer arithmetic\n    printf(\"*(p + i) : %d\\n\", i, *(p + i));\n\
+    \    //same as printing list[i]\n    printf(\"\\n\");\n}\n\nreturn 0;\n}\n```\n\
+    \nOutput:\nMemory Address of index 0 : 0x7fff5ec02bbc\n*(p + 0) : 777\n\nMemory\
+    \ Address of index 1 : 0x7fff5ec02bc0\n*(p + 1) : 222\n\nMemory Address of index\
+    \ 2 : 0x7fff5ec02bc4\n*(p + 2) : 100\n\n# PointerToStruct.c\n\n```c\n#include\
+    \ <stdio.h>\n#include <string.h>\n```\n\n/*\n[Author] | [Email] | [Date]\n\nPointerToStruct:\
+    \ You have a pointer to a struct the same way you can have a pointer to any\n\
+    other data type. When you declare a pointer the memory address belongs to the\
+    \ first data type in\nstruct. You can iterate through a struct the same way we\
+    \ learned before, however printing them\nout may be more difficult.\n*/\n```\n\
+    \n```c\nstruct Person{\n    char name[20];\n    int age;\n //notice the semi-colon\n\
+    };\n```\n\n```c\nvoid printStruct(struct Person *person);\n```\n\n```c\nint main(){\n\
+    \    struct Person person;\n    printf(\"Size of Struct: %lu\\n\\n\",sizeof(person));\n\
+    \    strcpy(person.name, \"DoEasy Prod.\");\n    person.age = 1;\n    struct Person\
+    \ *p = &person;//memory address of name[];\n    for(int i=0; i<2; i++){\n    \
+    \    printf(\"address[%d]: %p\\n\",i,(p+i));\n    }\n    printStruct(p);\n   \
+    \ return 0;\n}\n```\n\nSince we are using a pointer to a struct we pass a pointer\
+    \ to a struct as a parameter, to see what\nthe pointer is pointing to we must\
+    \ use the -> operator, not the * operator. This is still\ndereferencing a pointer\n\
+    however to dereference pointers of structs you must use the -> operator.\n\n```c\n\
+    void printStruct(struct Person *person){\n    printf(\"Name: %s\\nAge: %d\\n\"\
+    , person->name, person->age);\n}\n```\n\n# Output:\n\nSize of Struct: 24\n\naddress[0]\
+    \ : 0x7fff55633bb0\naddress[1] : 0x7fff55633bc8\n\n# PointerToFunction.c\n\n```c\n\
+    #include <stdio.h>\n/*\n[Author] | [Email] | [Date]\nExplains what a pointer to\
+    \ a function is, and how to use them. You can have a pointer to a function\njust\
+    \ like you can have a pointer to\nanything else. You can even call a function\
+    \ by the pointer, below\nillustrates how.\n*/\n//declaring a function\nint add(int\
+    \ x, int y);\nint main(){\n```\n\n```c\n/*\nSo we declare a pointer to a function,\
+    \ we must do so with a\nspecified format. First, declare the return type(it must\
+    \ be the\nsame return type as the function). Next, name the pointer in our\ncase\
+    \ the pointer name is ‘ptr’. Third, in parenthesis declare the\nparameter list\
+    \ the exact same as the function. In our case our\nfunctions takes in two arguments,\
+    \ both ints. So our pointer must do\nthe same. Finally, set the pointer equal\
+    \ to the address where the\nfunction is stored.\n*/\nint (*ptr)(int, int) = &add;\n\
+    int r = (*ptr)(10,3);\nprintf(\"r: %d\\n\",r);\nreturn 0;\n}\n```\n\n```c\nint\
+    \ add(int x, int y) {\nreturn x+y;\n}\n```\n\nOutput:\nr: 13\n\n# Binary.c\n\n\
+    ```c\n#include <stdio.h>\n/*\n[Author] | [Email] | [Date]\nBinary: Converts a\
+    \ char[], representing an 8 bit number, into a base\n10 number, covers all topics\
+    \ discussed far. Good practice to try out some of the topics we have covered.\n\
+    */\n//global scope, can be used anywhere .c source file\nchar binary[8] = {'0','0','0','0','1','1','0','1'};\
+    \ //arrays\nint binaryToDecimal(char binary[]); //functions\n```\n\n```c\nint\
+    \ main() {\n  printf(\"decimal: %d \\n\", binaryToDecimal(binary));\n  return\
+    \ 0;\n}\n```\n\n```c\nint binaryToDecimal(char binary[]) {\n  char *p = binary;\
+    \ //pointer to first address\n  int sum = 0;\n  int base = 1;\n  for(int i = 7;\
+    \ i>=0; i--) { //loops and operator\n    if(*p+i) == '1'){//pointer to array,\
+    \ and if statement\n      sum += base;//assignment operator\n    base *= 2;//assignment\
+    \ operator\n  }\n  return sum;\n}\n```\n\nOutput:\n\n# TypeCasting.c\n\n```c\n\
+    #include <stdio.h>\n/*\n[Author] | [Email] | [Date]\nTypeCasting: How to type\
+    \ cast, and the subtleties of so. When you type cast you convert\ndata type to\
+    \ the specified type, but only for one line in which you cast\nthat cast to a\
+    \ variable.\n*/\nint main(){\n/*\n-Can use casting to pass data types to functions\n\
+    -Can cast any type to another type\n-Watch out for data loss, casting a float\
+    \ to an int\n*/\ndouble x = 89.99;\nprintf(\"x before cast: %f\\n\", x);\nprintf(\"\
+    sizeof(x): %lu\\n\", sizeof(x));\nprintf(\"x after cast: %d\\n\", (int)x);\n\n\
+    // instead of casting x to an int each time\n// could assign it to a variable,\n\
+    // make sure that variable is the same as cast\nint cast = (int)x;\nreturn 0;\n\
+    }\n```\n\nOutput:\nx before cast: 89.990000\nsizeof(x): 8\nx after cast: 89\n\
+    sizeof(x): 4\n\n# IO.c\n\n```c\n#include <stdio.h>\n/*\n[Author] | [Email] | [Date]\n\
+    IO: We've been dealing with output all along with printf(), now let's try some\
+    \ input using scanf() function. Standard input comes from the keyboard, so now\
+    \ we can start to create really fun and exciting programs.\n*/\nint main(){\n\
+    // we have already seeing input, but what if you to get user input from the keyboard?\n\
+    /*\ngetchar() and putchar()\n*/\nchar c;\nprintf(\"Enter a value: \");\nc = getchar();//only\
+    \ retrieves one character\nprintf(\"\\nChar Entered: \");\nputchar(c);\nprintf(\"\
+    \\n\");\n```\n\n```c\n/*\nscanf() and printf()\n */\nchar input[100];\nint i;\n\
+    printf(\"Enter a value: \");\n```\n\nOutput:\nEnter a value: s\nChar Entered:\
+    \ s\nEnter a value: string\nInput Entered: string\n\n# GuessThePassPhrase.c\n\n\
+    ```c\n#include <stdio.h>\n#include <stdlib.h>\n#include <string.h>\n/*\n[Author]\
+    \ | [Email] | [Date]\nA game to test out while loops, user input and logic, the\
+    \ game will end when the user guesses password.\n*/\n/*\nReturns 1 if guess ==\
+    \ password\nOtherwise 0 is returned.\n*/\n```\n\n```c\nint equals(char* guess,\
+    \ char* password);\n```\n\n```c\nint main(){\n    char PASSWORD[1] = \"Password\"\
+    ;//this can be any password you like\n    char* pp = PASSWORD;//this pointer holds\
+    \ the first memory address of PASSWORD\n    char guess[15]//guess can be no longer\
+    \ than 14 characters\n//because we need to account for the null byte\n    do\n\
+    \        printf(\"Guess the password: \\n\");\n        scanf(\"%s\", guess);\n\
+    \    }while(equals(guess, pp) == 0);\n    printf(\"You win the password was: %s\\\
+    n\",PASSWORD);\n    return 0;\n}\n```\n\n```c\n/*\nReturns 1 if guess == password\n\
+    Otherwise 0 is returned.\n*/\nint equals(char* guess, char* password){\n    int\
+    \ i = 0;\n    while(*(password+i) != '\\0'){\n        if (*(password+i)!=*(guess+i)){\n\
+    \            return 0;//it is ok to leave out curly brackets\n        }\n    \
+    \    i++;\n    }\n    return 1;\n}\n```\n\nOutput:\nGuess the password: these\n\
+    Guess the password: are\nGuess the password: some\nGuess the password: guesses\n\
+    Guess the password: Password\nYou win the password was: Password\n\n# TempConverter.c\n\
+    \n```c\n#include <stdio.h>\n#include <stdlib.h>\n/*\n[Author] | [Email] | [Date]\n\
+    Converts a temperature in Fahrenheit to Celsius and Kelvin.\n*/\nint main() {\n\
+    \    printf(\"Enter degrees in F:\\n\");\n    double tempF = 0;\n    scanf(\"\
+    %lf\", &tempF);\n\n    double tempC = (tempF-32)*(double)5/9;\n    double tempK\
+    \ = tempC + 273.15;\n\n    printf(\"tempF: %.2f\\n\",tempF);\n    printf(\"tempC:\
+    \ %.2f\\n\",tempC);\n    printf(\"tempK: %.2f\\n\",tempK);\n}\n```\n\nOutput:\n\
+    Enter degrees in F:\n0\ntempF: 0.00\ntempC: -17.78\ntempK: 255.37\n"
+  mdcn: "\n\n```c\nprintf(\"Memory address of x: %p\\n\", p1);\nprintf(\"Memory address\
+    \ of p1: %p\\n\", &p1);\nprintf(\"Dereference of p1: %d\\n\", *p1);\n```\n\n```c\n\
+    printf(\"Memory address of x: %p\\n\", p2);\nprintf(\"Memory address of p1: %p\\\
+    n\", &p2);\nprintf(\"Dereference of p2: %d\\n\", *p2);\n```\n\n```c\nreturn 0;\n\
+    }\n```\n\nOutput:\nMemory address of x: 0x7fffbf59ba8\nMemory address of p1: 0x7fffbf59ba0\n\
+    Dereference of p1: 1000\nMemory address of x: 0x7fffbf59ba8\nMemory address of\
+    \ p1: 0x7fffbf59b98\nDereference of p2: 1000\n\n# PointerToArray.c\n\n```c\n#include\
+    \ <stdio.h>\n/*\n[Author] | [Email] | [Date]\nPointerToArray: When you declare\
+    \ an array, and try to access this\narray by name an address to the first index\
+    \ will automatically return. You can use the technique\nbelow to iterate through\
+    \ an array.\n*/\n```\n\n```c\nint main(){\nint *p; //在前面声明一个指针\nint list[] = {777,\
+    \ 222, 100};//初始化数组\n//如果你使用 list 而不是 list[n]，则会返回一个指向数组中第一个\n// 内存地址的指针。\n\n\
+    p = list;//这将为我们返回一个地址，同于 p = &list[0]\nfor(int i=0; i<3; i++){\n    printf(\"\
+    Memory Address of index %d : %p\\n\", i, (p+i));\n    //这被称为指针算术\n    printf(\"\
+    *(p + i) : %d\\n\", i, *(p + i));\n    //同于打印 list[i]\n    printf(\"\\n\");\n\
+    }\n\nreturn 0;\n}\n```\n\nOutput:\nMemory Address of index 0 : 0x7fff5ec02bbc\n\
+    *(p + 0) : 777\n\nMemory Address of index 1 : 0x7fff5ec02bc0\n*(p + 1) : 222\n\
+    \nMemory Address of index 2 : 0x7fff5ec02bc4\n*(p + 2) : 100\n\n# PointerToStruct.c\n\
+    \n```c\n#include <stdio.h>\n#include <string.h>\n```\n\n/*\n[Author] | [Email]\
+    \ | [Date]\n\nPointerToStruct: 你可以拥有指向结构体的指针，就像你可以拥有指向任何\n其他数据类型的指针一样。当你声明一个指针时，该内存地址属于结构体中的\n\
+    第一个数据类型。你可以像我们之前学的那样遍历结构体，但是打印它们可能会更困难。\n*/\n```\n\n```c\nstruct Person{\n   \
+    \ char name[20];\n    int age;\n //注意分号\n};\n```\n\n```c\nvoid printStruct(struct\
+    \ Person *person);\n```\n\n```c\nint main(){\n    struct Person person;\n    printf(\"\
+    Size of Struct: %lu\\n\\n\",sizeof(person));\n    strcpy(person.name, \"DoEasy\
+    \ Prod.\");\n    person.age = 1;\n    struct Person *p = &person;//name[]的内存地址;\n\
+    \    for(int i=0; i<2; i++){\n        printf(\"address[%d]: %p\\n\",i,(p+i));\n\
+    \    }\n    printStruct(p);\n    return 0;\n}\n```\n\n由于我们使用指向结构体的指针，因此我们将指向结构体的指针作为参数传递，为了查看指针\n\
+    指向哪里，必须使用 -> 运算符，而不是 * 运算符。但是解引用\n结构体指针必须使用 -> 运算符。\n\n```c\nvoid printStruct(struct\
+    \ Person *person){\n    printf(\"Name: %s\\nAge: %d\\n\", person->name, person->age);\n\
+    }\n```\n\n# Output:\n\nSize of Struct: 24\n\naddress[0] : 0x7fff5563bb0\naddress[1]\
+    \ : 0x7fff5563bc8\n\n# PointerToFunction.c\n\n```c\n#include <stdio.h>\n/*\n[Author]\
+    \ | [Email] | [Date]\n解释什么是函数指针，以及如何使用它们。你可以拥有指向函数的\n就像你可以拥有指向任何东西的指针一样。你甚至可以通过指针调用函数，下面演示了如何操作。\n\
+    */\n//声明函数\nint add(int x, int y);\nint main(){\n\n```c\n/*\n我们声明一个函数指针，必须按照指定的\n\
+    格式进行。首先，声明返回类型（必须与函数\n相同）。接下来，将指针命名为‘ptr’。第三，在括号内声明\n参数列表（与函数相同）。最后，将指针设置为函数存储的地址。\n\
+    */\nint (*ptr)(int, int) = &add;\nint r = (*ptr)(10,3);\nprintf(\"r: %d\\n\",r);\n\
+    return 0;\n}\n```\n\n```c\nint add(int x, int y) {\nreturn x+y;\n}\n```\n\nOutput:\n\
+    r: 13\n\n# Binary.c\n\n```c\n#include <stdio.h>\n/*\n[Author] | [Email] | [Date]\n\
+    Binary: 将代表8位数字的 char[]\n转换为10进制数字，涵盖了到为止讨论的所有主题。尝试一下我们已经涵盖的话题。\n*/\n//全局作用域，可以在任何\
+    \ .c 文件中使用\nchar binary[8] = {'0','0','0','0','1','1','0','1'}; //数组\nint binaryToDecimal(char\
+    \ binary[]); //函数\n```\n\n```c\nint main() {\n  printf(\"decimal: %d \\n\", binaryToDecimal(binary));\n\
+    \  return 0;\n}\n```\n\n```c\nint binaryToDecimal(char binary[]) {\n  char *p\
+    \ = binary; //指向第一个地址的指针\n  int sum = 0;\n  int base = 1;\n  for(int i = 7; i>=0;\
+    \ i--) { //循环和运算符\n    if(*p+i) == '1'){//指针数组和if语句\n      sum += base;//赋值运算符\n\
+    \    base *= 2;//赋值运算符\n  }\n  return sum;\n}\n```\n\nOutput:\ndecimal: 29\n\n\
+    # TypeCasting.c\n\n```c\n#include <stdio.h>\n/*\nTypeCasting: 如何进行类型转换以及类型转换的细微之处。当你进行类型转换时，会将\n\
+    数据类型转换为指定的类型，但仅针对你将该转换赋值变量的行。\n*/\nint main(){\n/*\n-可以使用类型转换将数据类型传递给函数\n-可以将任何类型转换为另一种类型\n\
+    -注意数据丢失，将 float 转换为 int\n*/\ndouble x = 89.99;\nprintf(\"x before cast: %f\\n\"\
+    , x);\nprintf(\"sizeof(x): %lu\\n\", sizeof(x));\nprintf(\"x after cast: %d\\\
+    n\", (int)x);\n\n//与其每次都将 x 转换为 int\n//可以将其赋值给一个变量，\n// 变量与转换相同\nint cast = (int)x;\n\
+    return 0;\n}\n```\n\nOutput:\nx before cast: 89.990000\nsizeof(x): 8\nx after\
+    \ cast: 89\nsizeof(x): 4\n\n# IO.c\n\n```c\n#include <stdio.h>\n/*\n[Author] |\
+    \ [Email] | [Date]\nIO: 我们一直都在使用 printf() 处理输出，现在尝试使用 scanf() 函数进行一些输入。标准输入来自键盘，所以现在我们可以开始创建非常有趣有趣的程序了。\n\
+    */\nint main(){\n//我们已经见过输入，但如果你想从键盘获取用户输入呢？\n/*\ngetchar() 和 putchar()\n*/\n\
+    char c;\nprintf(\"Enter a value: \");\nc = getchar();//只检索一个字符\nprintf(\"\\nChar\
+    \ Entered: \");\nputchar(c);\nprintf(\"\\n\");\n```\n\n```c\n/*\nscanf() 和 printf()\n\
+    \ */\nchar input[100];\nint i;\nprintf(\"Enter a value: \");\n```\n\nOutput:\n\
+    Enter a value: s\nChar Entered: s\nEnter a value: string\nInput Entered: string\n\
+    \n# GuessThePassPhrase.c\n\n```c\n#include <stdio.h>\n#include <stdlib.h>\n#include\
+    \ <string.h>\n/*\n[Author] | [Email] | [Date]\n一个测试 while 循环、用户输入和逻辑的游戏，当用户猜测密码时游戏结束。\n\
+    */\n/*\n如果 guess == password 则返回 1\n否则返回 0。\n*/\n```\n\n```c\nint equals(char*\
+    \ guess, char* password);\n```\n\n```c\nint main(){\n    char PASSWORD[1] = \"\
+    Password\";//可以是任何你喜欢的密码\n    char* pp = PASSWORD;//指针持有 PASSWORD 的内存地址\n    char\
+    \ guess[15]//guess不能超过14个字符\n//因为我们需要考虑空字节\n    do\n        printf(\"Guess the\
+    \ password: \\n\");\n        scanf(\"%s\", guess);\n    }while(equals(guess, pp)\
+    \ == 0);\n    printf(\"You win the password was: %s\\n\",PASSWORD);\n    return\
+    \ 0;\n}\n```\n\n```c\nint equals(char* guess, char* password){\n    int i = 0;\n\
+    \    while(*(password+i) != '\\0'){\n        if (*(password+i)!=*(guess+i)){\n\
+    \            return 0;//省略括号\n        }\n        i++;\n    }\n    return 1;\n\
+    }\n```\n\nOutput:\nGuess the password: these\nGuess the password: are\nGuess the\
+    \ password: some\nGuess the password: guesses\nGuess the password: Password\n\
+    You win the password was: Password\n\n# TempConverter.c\n\n```c\n#include <stdio.h>\n\
+    #include <stdlib.h>\n/*\n[Author] | [Email] | [Date]\n将华氏度温度转换为摄氏度和开尔文。\n*/\n\
+    int main() {\n    printf(\"Enter degrees in F:\\n\");\n    double tempF = 0;\n\
+    \    scanf(\"%lf\", &tempF);\n\n    double tempC = (tempF-32)*(double)5/9;\n \
+    \   double tempK = tempC + 273.15;\n\n    printf(\"tempF: %.2f\\n\",tempF);\n\
+    \    printf(\"tempC: %.2f\\n\",tempC);\n    printf(\"tempK: %.2f\\n\",tempK);\n\
+    }\n```\n\nOutput:\nEnter degrees in F:\n0\ntempF: 0.00\ntempC: -17.78\ntempK:\
+    \ 255.37\n\n"
+  merge: 1
+  raw:
+  - '[PAGE 38]
+
+
+    ```
+
+    printf("Memory address of x: %p\n", p1);
+
+    printf("Memory address of p1: %p\n", &p1);
+
+    printf("Dereference of p1: %d\n", *p1);
+
+    ```
+
+
+    ```
+
+    printf("Memory address of x: %p\n", p2);
+
+    printf("Memory address of p1: %p\n", &p2);
+
+    printf("Dereference of p2: %d\n", *p2);
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    Output:
+
+    Memory address of x: 0x7fffbf59ba8
+
+    Memory address of p1: 0x7fffbf59ba0
+
+    Dereference of p1: 1000
+
+    Memory address of x: 0x7fffbf59ba8
+
+    Memory address of p1: 0x7fffbf59b98
+
+    Dereference of p2: 1000
+
+
+    # PointerToArray.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] | [Email] | [Date]
+
+    PointerToArray: When you declare an array, and try to access this
+
+    ray by name an address to the first index will automatically return. You can use
+    the technique
+
+    below to iterate through an array.
+
+    */
+
+    ```
+
+
+    ```
+
+    int main(){"
+
+    ```'
+  - "[PAGE 39]\n\n```\nint *p; //declare a pointer before\nint list[] = {777, 222,\
+    \ 100};//initialize array\n//if you use list, instead of list[n], a pointer to\
+    \ the first memory\n//address in the array is returned.\n\np = list;//will give\
+    \ us an address, same as p = &list[0]\nfor(int i=0; i<3; i++){\n    printf(\"\
+    Memory Address of index %d : %p\\n\", i, (p+i));\n    //this is called pointer\
+    \ arithmetic\n    printf(\"*(p + d) : %d\\n\", i, *(p + i));\n    //same as printing\
+    \ list[i]\n    printf(\"\\n\");\n}\n\nreturn 0;\n\n```\n\nOutput:\n\nMemory Address\
+    \ of index 0 : 0x7fff5ec02bbc\n*(p + 0) : 777\n\nMemory Address of index 1 : 0x7fff5ec02bc0\n\
+    *(p + 1) : 222\n\nMemory Address of index 2 : 0x7fff5ec02bc4\n*(p + 2) : 100\n\
+    \n# PointerToStruct.c\n\n```\n#include <stdio.h>\n#include <string.h>\n```"
+  - "[PAGE 40]\n\n/*\n[Author] | [Email] | [Date]\n\nPointerToStruct: You have a pointer\
+    \ to a struct the same way you can have a pointer to any\nother data type. When\
+    \ you declare a pointer the memory address belongs to the first data type in\n\
+    struct. You can iterate through a struct the same way we learned before, however\
+    \ printing them\nout may be more difficult.\n*/\n\n```\nstruct Person{\n    char\
+    \ name[20];\n    int age;\n //notice the semi-colon\n```\n\n```\nvoid printStruct(struct\
+    \ Person *person);\n```\n\n```\nint main(){\n    struct Person;\n    printf(\"\
+    Size of Struct: %lu\\n\\n\",sizeof(person));\n    strcpy(person.name, \"DoEasy\
+    \ Prod.\");\n    person.age = 1;\n    struct Person *p = &person;//memory address\
+    \ of name[];\n    for(int i=0; i<2; i++){\n        printf(\"address[%d]: %p\\\
+    n\",i,(p+i));\n    }\n    printStruct(p);\n    return 0;\n}\n```\n\nSince we are\
+    \ using a pointer to a struct we pass a pointer to a struct as a parameter, to\
+    \ see what\nthe pointer is pointing to we must use the -> operator, not the *\
+    \ operator. This is still\ndereferencing a pointer\nhowever to dereference pointers\
+    \ of structs you must use the -> operator.\n\n```\nvoid printStruct(struct Person\
+    \ *person){\n    printf(\"Name: %s\\nAge: %d\\n\", person->name, person->age);\n\
+    }\n```\n\n# Output:\n\nSize of Struct: 24\n\naddress[0] : 0x7fff55633bb0\naddress[1]\
+    \ : 0x7fff55633bc8"
+  - '[PAGE 41]
+
+
+    # PointerToFunction.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] |Email] | [Date]
+
+    Explains what a pointer to a function is, and how to use them. You can have a
+    pointer to a function
+
+    just like you can have a pointer to
+
+    anything else. You can even call a function by the pointer, below
+
+    illustrates how.
+
+    */
+
+    //declaring a function
+
+    int add(int x, int y);
+
+    int main(){
+
+    ```
+
+
+    ```
+
+    /*
+
+    So we declare a pointer to a function, we must do so with a
+
+    specified format. First, declare the return type(it must be the
+
+    same return type as the function. Next, name the pointer in our
+
+    case the pointer name is ‘ptr’. Third, in parenthesis declare the
+
+    parameter list the exact same as the function. In our case our
+
+    functions takes in two arguments, both ints. So our pointer must do
+
+    the same. Finally, set the pointer equal to the address where the
+
+    function is stored.
+
+    */
+
+    int (*ptr)(int, int) = &add;
+
+    int r = (*ptr)(10,3);
+
+    printf("r: %d\n",r);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    ```
+
+    int add(int x, int y) {
+
+    return x+y;
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    r: 13'
+  - "[PAGE 42]\n\n# Binary.c\n\n```\n#include <stdio.h>\n/*\n```\n\n[Author] | [Email]\
+    \ | [Date]\nBinary: Converts a char[], representing an 8 bit binary number, into\
+    \ a base 10 number, covers all topics discussed thus far. Good practice to try\
+    \ out some of the topics we have covered.\n*/\n\n```\n//global scope, can be used\
+    \ anywhere .c source file\nchar binary[8] = {'0','0','0','0','1','1','0','1'};\
+    \ //arrays\nint binaryToDecimal(char binary[]); ///functions\n```\n\n```\nint\
+    \ main() {\nprintf(\"decimal: %d \\n\", binaryToDecimal(binary));\n  return 0;\n\
+    }\n```\n\n```\nint binaryToDecimal(char binary[]) {\n  char *p = binary; //pointer\
+    \ to first address in binary\n  int sum = 0;\n  int base = 1;\n  for(int i = 7;\
+    \ i>0; i--) { //loops and operator\n    //try i < sizeof(binaryNumber)/sizeof(char)\n\
+    \    if(*p+i) == '1'){//pointer to array, and if statement\n      sum += base;//assignment\
+    \ operator\n    base *= 2;//assignment operator\n  }\n  return sum;\n}\n```\n\n\
+    Output:"
+  - '[PAGE 43]
+
+
+    # TypeCasting.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] || [Email] | [[Date
+
+    TypeCasting: How to type cast, and the subtleties of do so. When you type cast
+    you convert one
+
+    data type to the specified data type, but only for the one line in which you cast,
+    unless you assign
+
+    that cast to a variable.
+
+    */
+
+    int main(){
+
+    /*
+
+    -Can use casting to pass different data types to functions
+
+    -Can cast any data type to another data type
+
+    -Watch out for data loss, casting a float to an int
+
+    */
+
+    double x = 89.99;
+
+    printf("x before cast: %fn", x);
+
+    printf("sizeof(x): %lu\n", sizeof(x));
+
+    printf("x after cast: %d\n", (int)x);
+
+    printf("sizeof((int)x): %lu\n", sizeof((int)x));
+
+
+    //or instead of casting x to an int each time
+
+    // we could assign it to a variable,
+
+    //just make sure that variable is the same as the cast
+
+    int castVariable = (int)x;
+
+    return 0;
+
+    n
+
+    ```
+
+
+    Output:'
+  - '[PAGE 44]
+
+
+    ```
+
+    x before cast: 89.99000
+
+    sizeof(x): 8
+
+    x after cast: 89
+
+    sizeof((int)x): 4
+
+    ```
+
+
+    # IO.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    /*
+
+    [Author] | [Email] |[Date]
+
+    IO: We''ve been dealing with output all along with the printf()
+
+    function, now let''s try some input using the scanf() function.
+
+    Standard input comes from the keyboard, so now we can start to
+
+    create some really fun and exciting programs.
+
+    */
+
+    int main(){
+
+    // we have already been seeing input, but what if you
+
+    //want to get user input from the keyboard?
+
+    /*
+
+    getchar() and putchar()
+
+    */
+
+    char c;
+
+    printf("Enter a value>>> ");
+
+    c = getchar();//only retrieves one character
+
+    printf("\nChar Entered: ");
+
+    putchar(c);
+
+    printf("\n");
+
+    ```'
+  - "[PAGE 45]\n\n```\n/*\nscanf() and printf()\n */\nchar input[100];\nint i;\nprintf(\"\
+    Enter a value>>> \\\n```\n\n# Output:\n\nEnter a value>>> s\nChar Entered: s\n\
+    Enter a value>>> string 4\nInput Entered: string 4\n\n# GuessThePassPhrase.c\n\
+    \n```\n#include<stdio.h>\n#include<stdlib.h>\n#include<string.h>\n/*\n[Author]\
+    \ | [[Email]] | [[Date]\nA game to test out while loops, user input and\nlogic,\
+    \ the game will end when the user guesses\npassword.\n*/\n\n/*\nReturns 1 if guess\
+    \ == password\nOtherwise 0 is returned.\n*/\n```"
+  - "[PAGE 46]\n\n```\nint equals(char* guess, char* password);\n```\n\n```\nint main(){\n\
+    \    char PASSWORD[1] = \"Password\";//this can be any password you like\n   \
+    \ char* pp = PASSWORD;//this pointer holds\n    //the first memory address of\
+    \ PASSWORD\n    char guess[15]//guess can be no longer than 14 characters\n  \
+    \  //because we need to account for the null byte\n    do{\n        printf(\"\
+    Guess the password: \\n\");\n        scanf(\"%%s\", guess);\n    }while(equals(guess,\
+    \ pp) == 0);\n    printf(\"You win the password was: %%s\\n\",PASSWORD);\n   \
+    \ return 0;\n}\n```\n\n```\n/*\nReturns 1 if guess == password\nOtherwise 0 is\
+    \ returned.\n*/\nint equals(char* guess, char* password){\n    int i = 0;\n  \
+    \  while(*(password+i) != '\\0'){\n        if (*(password+i)!=*(guess+i)){\n \
+    \           return 0;//it is ok to leave out curly brackets\n        }\n     \
+    \   i++;\n    }\n    return 1;\n}\n```\n\n# **Output:**\n\nGuess the password:\n\
+    these\nGuess the password:\nare\nGuess the password:\nsome\nGuess the password:"
+  - '[PAGE 47]
+
+
+    guesses
+
+
+    Guess the password:
+
+
+    Password
+
+
+    You win the password was: Password'
+  - "[PAGE 48]\n\n# TempConverter.c\n\n```\n#include<stdio.h>\n#include<stdlib.h>\n\
+    /*\n[Author] | [Email] | [Date]\nConverts a temperature in Fahrenheit to Celsius\
+    \ and Kelvin.\n*/\nint main() {\n    printf(\"Enter degrees in F:\\n\");\n   \
+    \ double tempF = 0;\n    scanf(\"%lf\", &tempF);\n\n    double tempC = (tempF-32)*(double)5/9;\n\
+    \    double tempK = tempC + 273.15;\n\n    printf(\"tempF: %.2f\\n\",tempF);\n\
+    \    printf(\"tempC: %.2f\\n\",tempC);\n    printf(\"tempK: %.2f\\n\",tempK);\n\
+    }\n```\n\nOutput:\n\nEnter degrees in F:\n0\ntempF: 0.00\ntempC: -17.78\ntempK:\
+    \ 255.37"
+- md: "\n# FileIO.c\n\n```c\n#include <stdio.h>\n#include <string.h>\n/*\n```\n\n\
+    [Author] | [Email] | [Date]\nFileIO: In C you can read input from a file, and\
+    \ also write to a\nfile from your program. fgets reads in one line from a file,\
+    \ fputs\na line onto a file, when you do this however all content in the\nfile\
+    \ is erased, and replaced with what is inside fputs, so be sure\nto use the append\
+    \ option if you want to avoid this.\n*/\n```\n\n```c\nint main() {\n/*\nfgetc(fp)\
+    \ --reads in a char\nfscanf(fp\nfuts(\"This will also go in the file\",fp);\n\
+    return 0;\n}\n```\n\n# Output:\n\nWord 1: This\nWord 2: scans\nWord 3: words\n\
+    Line 1:\n\nLine 2: this is another line\n\nLine 3: file input and output\n\nLine\
+    \ 4: can be very useful\n\n# ErrorHandling.c\n\n```c\n#include <stdio.h>\n#include\
+    \ <stdlib.h>\n/*\n[Author] | [Email] | [Date]\nErrorHandling: How to deal with\
+    \ errors, what to look for,\nstderr, part of the stdlib. We are going to use a\
+    \ simple example\ntrying to divide by zero. When you divide by zero, a non real\n\
+    number is returned. So we want to set up some precautions to avoid this, error\
+    \ handling is very\nspecific to your program.\n*/\n```\n\n```c\nint main(){\n\
+    int numerator = 4;\nint denominator = 1;\nint quotient;\n\n//below is the error\
+    \ check\nif(denominator == 0) {\nprintf(stderr, \"Error: Denominator == 0\\n\"\
+    );\nprintf(\"Exiting with return status 1.\\n\");\nreturn 1;\n}\nquotient = numerator/denominator;\n\
+    printf(\"Quotient: %d\", quotient);\n\nreturn 0;\n}\n```\n\n# **Output:**\n\n\
+    Quotient: 4\n\n# MyHeader.h\n\n```c\n> /*\nIn C you can create your own header\
+    \ files, which you then can\ninclude in any other C/C++ program. Structs are a\
+    \ common thing\nto place in a header file.\n\n```\n*/\ntypedef struct Person{\n\
+    char name[10];\nint age;\n} Person;\n```\n\n//can put methods in here,\n//can\
+    \ put error handling within those methods as well\n\n# Header.c\n\n```c\n#include\
+    \ <stdio.h>\n#include <string.h>\n#include \"MyHeader.h\"//notice the include\n\
+    /*\n[Author] || [Email] || [Date]\nHeader: Uses our self made MyHeader.h\n*/\n\
+    int main() {\n    Person me;\n    strcpy(me.name, \"DoEasy\");\n    me.age = 100;\n\
+    \    printf(\"Name: %s\\nAge: %d\\n\",me.name, me.age);\n\nreturn 0;\n}\n```\n\
+    \nOutput:\n\nName: DoEasy\nAge: 100\n\n# ChemicalElement.h\n\n```c\n/*\n[Author]\
+    \ | [Email] | [Date]\nA header file that contains a data structure\nthat mimics\
+    \ a chemical element.\n*/\n```\n\n```c\ntypedef struct ChemicalElement{\n//names\
+    \ cannot be longer that 19 characters\n//can you make this String dynamic?\nchar\
+    \ name[20];\nint number;\ndouble mass;\n//anymore members you can think of?\n\
+    } ChemicalElement;\n```\n\n# PeriodicTable.c\n\n```c\n#include \"ChemicalElement.h\"\
+    \n#include <stdio.h>\n#include <string.h>\n#include <stdlib.h>\n/*\n[Author] ||\
+    \ [[Email]] || [[Date]]\nPeriodicTable: A C source file where you can save chemical\
+    \ elements,\nand maybe start creating molecules.\n*/\nint main() {\n\n    ChemicalElement\
+    \ hydrogen;\n    strcpy(hydrogen.name, \"Hydrogen\");\n    hydrogen.number = 1;\n\
+    \    hydrogen.mass = 1.001;\n\n    ChemicalElement oxygen;\n    strcpy(oxygen.name,\
+    \ \"Oxygen\");\n    oxygen.number = 8;\n    oxygen.mass = 15.9994;\n\n    ChemicalElement\
+    \ h2o[3];\n    h2o[0] = hydrogen;\n    h2o[1] = hydrogen;\n    h2o[2] = oxygen;\n\
+    \n    printf(\"Printing Water:%n\");\n    double totalMass=0;\n    for(int i =\
+    \ 0; i < 3; i++){\n        printf(\"%s: %.2f\\n\", h2o[i].name, h2o[i].mass);\n\
+    \        totalMass += h2o[i].mass;\n    }\n    printf(\"Total Mass: %.2f\\n\"\
+    , totalMass);\n\n    return 0;\n}\n```\n\n# Output:\n\nPrinting Water:\nHydrogen:\
+    \ 1.00\nHydrogen: 1.00\nOxygen: 16.00\nTotal Mass: 18.00\n\n# CommandLineLine.c\n\
+    \n```c\n#include <stdio.h>\n/*\n[Author] | [Email] | [Date]\nCommandLine: How\
+    \ to pass in command line arguments.\nPlease note they are passed as an array\
+    \ of strings\nso to accept a different data type takes more work.\n*/\nint main(int\
+    \ argc, char *argv[]){\n\n    if (argc == 1) {\n        printf(\"NO COMMAND LINE\
+    \ ARGS\\n\");\n        return 0;\n    } else {\n        int i = 1;\n        while(i<argc){\n\
+    \            printf(\"Command Line Arg[%d]:%s\\n\", i, argv[i]);\n           \
+    \ i++;\n        } //end while\n    } //end else\n\n    return 0;\n}\n```\n\nCommandLine\
+    \ These Are Args\nCommand Line Arg[1]:These\nCommand Line Arg[2]:Are\nCommand\
+    \ Line Arg[3]:the\nCommand Line Arg[4]:Args\n\n# MemoryManagement.c\n\nHow to\
+    \ create memory space. This means how to create\nmemory space during run time.\
+    \ Useful when you don’t know how much memory you need.\n\n```c\nvoid *calloc(int\
+    \ num, int size)-->allocates an array of num, each with size\nfree(void *address)-->release\
+    \ a block of memory given address\nvoid malloc(int num)-->allocates an array of\
+    \ num bytes, which are uninitialized\nvoid *realloc(void *address, int newsize)-->realloc\
+    \ memory, extending to size\n```\n\nSo we can define a pointer without defining\
+    \ how much is required\n\n```c\nint main() {\n\n    char name[10];\n    char *about_name;\n\
+    \    strcpy(name, \"Dynamic\");\n    printf(\"about_name: %s\\n\", about_name);\n\
+    \    free(about_name);\n\n    return 0;\n}\n```\n\nOutput:\nsizeof(): 8\naddress:\
+    \ 0x7fff5c8b90\nname: Dynamic\nabout_name: This string can be big as the malloc\n\
+    \n# DynamicString.c\n\n```c\n/*\nAuthor | Email | Date\nDynamicString: How to\
+    \ create a string dynamically.\nMost times into a program you do not know how\
+    \ long your input is to be, we will deal with that.\n*/\nint main(){\n\n//first\
+    \ declare pointer to a char,\n//using malloc set your pointer equal to length\n\
+    //malloc returns a void* so you must cast to the type we are working with\nchar*\
+    \ input = (char*)malloc(sizeof(char));\nint count = 0;\n\n//next we will get some\
+    \ user input of unknown length\nprintf(\"Enter a sentence: \");\nchar token;\n\
+    token = getchar();\n//can only read in one sentence, hit enter from command line\n\
+    //to keep program going\nwhile(token != '\\n') {\n//realloc returns a void* so\
+    \ you must cast\ninput = (char*)realloc(input, sizeof(char))*(count+1));\ninput[count]\
+    \ = token;//add to array\ntoken = getchar();//get the next token\ncount++;increment\
+    \ our size\n}\nprintf(\"You entered: %s\\n\", input);\nprintf(\"Counted %d tokens.\"\
+    ,count);\nreturn 0;\n}\n```\n\n# Output:\n\nEnter a sentence: any length\nYou\
+    \ entered: this sentence any length\n\n# DynamicIntArray.c\n\n```c\n#include <stdio.h>\n\
+    #include <stdlib.h>\n/*\n[Author] | [Email] | [Date]\nDynamicIntArray.: A dynamic\
+    \ int array can grow or shrink\nduring run time. We are going to use the same\
+    \ approach as before, but with integers this time.\n*/\nint main(){\n\n    int*\
+    \ numbers = (int*)malloc(sizeof(int));\n    printf(\"Enters numbers, press enter\
+    \ to add a number:\\n\");\n    printf(\"Enter a -1 to exit.\\n\");\n    int input\
+    \ = 0;\n    int count = 0;\n    while(input!=-1) {\n        scanf(\"%d\",&input);\n\
+    \        numbers = (int*)realloc(numbers, sizeof(int)*(count+1));\n        numbers[count]\
+    \ = input;\n        count++;\n    }\n\n    printf(\"\\nPrinting Numbers:\\n\"\
+    );\n    for(int i = 0; i<count-1;i++){\n        printf(\"number[%d]: %d\\n\",i,numbers[i]);\n\
+    \    }\n\n    printf(\"\\nThat was %d numbers.\\n\",count-1);\n\n    return 0;\n\
+    }\n```\n\n# **Output:**\n\nEnters numbers, press enter to add a number:\nEnter\
+    \ a -1 to exit.\n0\n22\n222\n-1\n\nPrinting Numbers:\nnumber[0]: 0\nnumber[1]:\
+    \ 22\nnumber[2]: 222\n\nThat was 3 numbers.\n\n# ArrayAnalysis.c\n\n```c\n#include\
+    \ <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n/*\nAuthor | Email | Date\n\
+    ArrayAnalysis: Calculates the average, biggest, and smallest number\nof a randomly\
+    \ generated array. We are going to discuss how to return an array from a function,\
+    \ and how to pass an array as a parameter\n*/\nint* initArray(int size, int range);\n\
+    double average(int* numbers, int size);\nint biggest(int* numbers, int size);\n\
+    int smallest(int* numbers, int size);\n\n/*\nCreates an array of length size,\
+    \ with random numbers in between [0, range].\nWhen you return an array you must\
+    \ return a pointer to an array, which you can iterate through.\n*/\nint* initArray(int\
+    \ size, int range){\n    srand(time(0));\n    int* num = (int*)malloc(sizeof(int));\n\
+    \    for(int i = 0; i < size; i++){\n        num = realloc(num, sizeof(int)*(i+1));\n\
+    \        *(num+i) = rand()%range;\n    }\n//this returns a pointer to the first\
+    \ address of numbers\nreturn num;\n}\n```\n\n```c\n/*\nage: Calculates the average\
+    \ of our array.\nWhat we are doing passing an array into our function.\nMore specifically\
+    \ we are passing a pointer into our function\nwhich we can then use pointer arithmetic\
+    \ on dereference it's members. When you do this it is a good practice to pass\
+    \ in the size as well.\n*/\ndouble average(int* numbers, int size) {\n    double\
+    \ total = 0;\n    for(int i = 0; i < size; i++)\n        total += *(numbers+i);\n\
+    \    return total/(double)size;\n}\n```\n\n```c\n/*\nbigest: finds the largest\
+    \ number in an array.\nWe will use the same technique as above.\n*/\nint biggest(int*\
+    \ numbers, int size) {\n    int biggest = *numbers;\n//initialize biggest to the\
+    \ first element\n    for(int i = 1; i < size; i++)\n        if(*(numbers+i) >\
+    \ biggest)\n        biggest = *(numbers+i);\n    return biggest;\n}\n```\n\n```c\n\
+    /*\nsmall: finds the smallest number in an array.\nWe will use the same technique\
+    \ as above.\n*/\nint smallest(int* numbers, int size) {\n    int smallest = *numbers;\n\
+    //initialize biggest to the first element\n    for(int i = 1; i < size; i++)\n\
+    \        if(*(numbers+i) <smallest)\n        smallest = *(numbers+i);\n    return\
+    \ smallest;\n}\n```\n"
+  mdcn: "\n\n# FileIO.c\n\n```c\n#include <stdio.h>\n#include <string.h>\n/*\n```\n\
+    \n[Author] | [Email] | [Date]\nFileIO: 在C语言中，你可以从文件读取输入，也可以从程序向文件写入内容。fgets 从文件中读取一行，\n\
+    fputs 将一行内容写入文件。然而，当你这样做时，文件中的所有内容将被擦除，\n并替换为 fputs 内部的内容，因此，如果你想避免这种情况，请务必使用追加选项。\n\
+    */\n```\n\n```c\nint main() {\n/*\nfgetc(fp) --读取一个字符\nfscanf(fp\nfuts(\"This\
+    \ will also go in the file\",fp);\nreturn 0;\n}\n```\n\n# 输出:\n\nWord 1: This\n\
+    Word 2: scans\nWord 3: words\nLine 1:\n\nLine 2: this is another line\n\nLine\
+    \ 3: file input and output\n\nLine 4: can be very useful\n\n# ErrorHandling.c\n\
+    \n```c\n#include <stdio.h>\n#include <stdlib.h>\n/*\n[Author] | [Email] | [Date]\n\
+    ErrorHandling: 如何处理错误，需要寻找什么，\nstderr，是 stdlib 的一部分。我们将使用一个简单的示例，\n尝试除以零。当你除以零时，会返回一个非实数。\n\
+    所以，我们想要设置一些预防措施来避免这种情况，错误处理非常特定于你的程序。\n*/\n```\n\n```c\nint main(){\nint numerator\
+    \ = 4;\nint denominator = 1;\nint quotient;\n\n//下面是错误检查\nif(denominator == 0)\
+    \ {\nprintf(stderr, \"Error: Denominator == 0\\n\");\nprintf(\"Exiting with return\
+    \ status 1.\\n\");\nreturn 1;\n}\nquotient = numerator/denominator;\nprintf(\"\
+    Quotient: %d\", quotient);\n\nreturn 0;\n}\n```\n\n# **输出:**\n\nQuotient: 4\n\n\
+    # MyHeader.h\n\n```c\n> /*\n在C语言中，你可以创建你自己的头文件，然后你可以将它们\n包含在任何其他C/C++ 程序中。结构体（Structs）是放置在头文件中常见的类型。\n\
+    \n```\n*/\ntypedef struct Person{\nchar name[10];\nint age;\n} Person;\n```\n\n\
+    //可以在这里放置方法，\n// 也可以在这些方法中放置错误处理\n\n# Header.c\n\n```c\n#include <stdio.h>\n#include\
+    \ <string.h>\n#include \"MyHeader.h\"//注意这里的包含\n/*\n[Author] || [Email] || [Date]\n\
+    Header: 使用了我们自定义的 MyHeader.h\n*/\nint main() {\n    Person me;\n    strcpy(me.name,\
+    \ \"DoEasy\");\n    me.age = 100;\n    printf(\"Name: %s\\nAge: %d\\n\",me.name,\
+    \ me.age);\n\nreturn 0;\n}\n```\n\nOutput:\n\nName: DoEasy\nAge: 100\n\n# ChemicalElement.h\n\
+    \n```c\n/*\n[Author] | [Email] | [Date]\n一个包含数据结构的头文件，\n模拟了一个化学元素。\n*/\n```\n\n\
+    ```c\ntypedef struct ChemicalElement{\n//名称长度不能超过19个字符\n//你能让这个字符串动态化吗？\nchar\
+    \ name[20];\nint number;\ndouble mass;\n//你还能想到其他成员变量吗？\n} ChemicalElement;\n\
+    ```\n\n# PeriodicTable.c\n\n```c\n#include \"ChemicalElement.h\"\n#include <stdio.h>\n\
+    #include <string.h>\n#include <stdlib.h>\n/*\n[Author] || [[Email]] || [[Date]]\n\
+    PeriodicTable: 一个C源文件，你可以在其中保存化学元素，\n并可能创建分子。\n*/\nint main() {\n\n    ChemicalElement\
+    \ hydrogen;\n    strcpy(hydrogen.name, \"Hydrogen\");\n    hydrogen.number = 1;\n\
+    \    hydrogen.mass = 1;\n\n    ChemicalElement oxygen;\n    strcpy(oxygen.name,\
+    \ \"Oxygen\");\n    oxygen.number = 8;\n    oxygen.mass = 15.994;\n\n    ChemicalElement\
+    \ h2o[3];\n    h2o[0] = hydrogen;\n    h2o[1] = hydrogen;\n    h2o[2] = oxygen;\n\
+    \n    printf(\"Printing Water:%n\");\n    double totalMass=0;\n    for(int i =\
+    \ 0; i < 3; i++){\n        printf(\"%s: %.2f\\n\", h2o[i].name, h2o[i].mass);\n\
+    \        totalMass += h2o[i].mass;\n    }\n    printf(\"Total Mass: %.2f\\n\"\
+    , totalMass);\n\n    return 0;\n}\n```\n\n# 输出:\n\nPrinting Water:\nHydrogen:\
+    \ 1.00\nHydrogen: 1.00\nOxygen: 16.00\nTotal Mass: 18.00\n\n# CommandLine.c\n\n\
+    ```c\n#include <stdio.h>\n/*\n[Author] | [Email] | [Date]\nCommandLine: 如何传递命令行参数。\n\
+    请注意它们是以字符串数组的形式传递的，\n接受不同的数据类型需要更多工作。\n*/\nint main(int argc, char *argv[]){\n\
+    \n    if (argc == 1) {\n        printf(\"NO COMMAND ARGS\\n\");\n        return\
+    \ 0;\n    } else {\n        int i = 1;\n        while(i<argc){\n            printf(\"\
+    Command Line[%d]:%s\\n\", i, argv[i]);\n            i++;\n        } // while 结束\n\
+    \    } // else 结束\n\n    return 0;\n}\n```\n\nCommandLine These Args\nCommand\
+    \ Line Arg[1]:These\nCommand Line Arg[2]:Are\nCommand Line Arg[3]:the\nCommand\
+    \ Line Arg[4]:Args\n\n# MemoryManagement.c\n\n如何创建内存空间。这意味着在运行时\n创建内存空间。当你不知道需要多少内存时非常有用。\n\
+    \nvoid *calloc(int num, int size)-->分配一个num大小的数组，且未初始化\nfree(void *address)-->释放一块内存\n\
+    void malloc(int num)-->分配一个num个字节的数组\nvoid *realloc(void *address, int newsize)-->扩展内存到newsize\n\
+    \n这样我们就可以定义指针，而不需要定义具体的长度\n\n```c\nint main() {\n\n    char name[10];\n    char\
+    \ *about_name;\n    strcpy(name, \"Dynamic\");\n    printf(\"about_name: %s\\\
+    n\",about_name);\n    free(about_name);\n\n    return 0;\n}\n```\n\nOutput:\n\
+    sizeof(): 8\naddress: 0x7fff5c90\nname: Dynamic\nabout_name: This string can be\
+    \ big as the\n\n# DynamicString.c\n\n```c\n/*\nAuthor | Email | Date\nDynamicString:\
+    \ 如何动态创建字符串。\n大多数时候你并不知道输入有多长，我们会处理这种情况。\n*/\nint main(){\n\n//首先声明一个char指针，\n\
+    //使用malloc设置指针等于长度\n//malloc返回void*，所以必须转换为要处理的类型\nchar* input = (char*)malloc(sizeof(char));\n\
+    int count = 0;\n\n//接下来我们将获取未知长度的用户输入\nprintf(\"Enter a sentence: \");\nchar token;\n\
+    token = getchar();\n//可以只能读取一行，按回车键继续运行程序\nwhile(token != '\\n') {\n//realloc返回void*，所以必须转换\n\
+    input = (char*)realloc(input, sizeof(char))*(count+1));\ninput[count] = token;//添加到数组\n\
+    token = getchar();//获取下一个字符\ncount++;//增加大小\n}\nprintf(\"You entered: %s\\n\"\
+    , input);\nprintf(\"Counted %d tokens.\",count);\nreturn 0;\n}\n```\n\nOutput:\n\
+    \nEnter a sentence: any length\nYou entered: this sentence any length\n\n# DynamicIntArray.c\n\
+    \n```c\n#include <stdio.h>\n#include <stdlib.h>\n/*\n[Author] | [Email] | [Date]\n\
+    DynamicIntArray.: 动态整数数组可以在运行时\n增长或缩小。\n我们将使用与之前相同的方法，但这次使用的是整数。\n*/\nint main(){\n\
+    \n    int* numbers = (int*)malloc(sizeof(int));\n    printf(\"Enters numbers,\
+    \ press enter to add a number:\\n\");\n    printf(\"Enter a -1 to exit.\\n\");\n\
+    \    int input = 0;\n    int count = 0;\n    while(input!=-1) {\n        scanf(\"\
+    %d\",&input);\n        numbers = (int*)realloc(numbers, sizeof(int)*(count+1));\n\
+    \        numbers[count] = input;\n        count++;\n    }\n\n    printf(\"\\nPrinting\
+    \ Numbers:\\n\");\n    for(int i = 0; i<count-1;i++){\n        printf(\"number[%d]:\
+    \ %d\\n\",i,numbers[i]);\n    }\n\n    printf(\"\\nThat was %d numbers.\\n\",count-1);\n\
+    \n    return 0;\n}\n```\n\n**输出:**\n\nEnters numbers, press enter to add a number:\n\
+    Enter a -1 to exit.\n0\n22\n222\n-1\n\nPrinting Numbers:\nnumber[0]: 0\nnumber[1]:\
+    \ 22\nnumber[2]: 222\n\nThat was 3 numbers.\n\n# ArrayAnalysis.c\n\n```c\n#include\
+    \ <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n/*\nAuthor | Email | Date\n\
+    ArrayAnalysis: 计算随机生成数组的平均值、最大值最小值。\n我们将讨论如何从函数返回数组，以及如何将数组作为参数传递。\n*/\nint* initArray(int\
+    \ size, int range);\ndouble average(int* numbers, int size);\nint biggest(int*\
+    \ numbers, int size);\nint smallest(int* numbers, int size);\n\n/*\n创建一个长度为size的数组，其中包含[0,\
+    \ range]范围内的随机数。\n当你返回一个数组时，必须返回一个数组的指针，你可以通过它遍历。\n*/\nint* initArray(int size,\
+    \ int range){\n    srand(time(0));\n    int* num = (int*)malloc(sizeof(int));\n\
+    \    for(int i = 0; i < size; i++){\n        num = realloc(num, sizeof(int)*(i+1));\n\
+    \        *(num+i) = rand()%range;\n    }\n//返回numbers的起始地址\nreturn num;\n}\n```\n\
+    \n```c\n/*\nage: 计算数组的平均值。\n我们正在将数组传递给函数。\n更具体地说，我们将指针传递到函数中，\n然后我们可以对其成员进行指针算术运算。\n\
+    这样做时，同时传递size也是一个良好的习惯。\n*/\ndouble average(int* numbers, int size) {\n    double\
+    \ total = 0;\n    for(int i = 0; i < size; i++)\n        total += *(numbers+i);\n\
+    \    return total/(double)size;\n}\n```\n\n```c\n/*\nbigest: 找到数组中的最大值。\n我们将使用与之前相同的方法。\n\
+    */\nint biggest(int* numbers, int size) {\n    int biggest = *numbers;\n//将第一个元素设置为最大\n\
+    \    for(int i = 1; i < size; i++)\n        if(*(numbers+i) > biggest)\n     \
+    \   biggest = *(numbers+i);\n    return biggest;\n}\n```\n\n```c\n/*\nsmall: 找到数组中的最小值。\n\
+    我们将使用与之前相同的方法。\n*/\nint smallest(int* numbers, int size) {\n    int smallest =\
+    \ *numbers;\n//将第一个元素设置为最小值\n    for(int i = 1; i < size; i++)\n        if(*(numbers+i)\
+    \ <smallest)\n        smallest = *(numbers+i);\n    return smallest;\n}\n```\n\
+    \n"
+  merge: 0
+  raw:
+  - "[PAGE 49]\n\n# FileIO.c\n\n```\n#include <stdio.h>\n#include <string.h>\n/*\n\
+    ```\n\n[Author] | [Email] | [Date]\nFileIO: In C you can read input from a file,\
+    \ and also write to a\nfile from your program. fgets reads in one line from a\
+    \ file, fputs\n a line onto a file, when you do this however all content in the\n\
+    file is erased, and replaced with what is inside fputs, so be sure\nto use the\
+    \ append option if you want to avoid this.\n*/\n\n```\nint main() {\n/*\nfgetc(fp)\
+    \ --reads in a char\nfcanf(fp\n```"
+  - '[PAGE 50]
+
+
+    ```
+
+    futs("This will also fo in the file",fp);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    Word 1: This
+
+    Word 2: scans
+
+    Word 3: words
+
+    Line 1:
+
+
+    Line 2: this is another line
+
+
+    Line 3: file input and output
+
+
+    Line 4: can be very useful
+
+
+    # ErrorHandling.c
+
+
+    ```
+
+    #include <stdio.h>
+
+    #include <stdlib.h>
+
+    /*
+
+    [Author] | [Email] | [Date]
+
+    ErrorHandling: How to deal with errors, what to look for,
+
+    stderr, part of the stdlib. We are going to use a simple example
+
+    trying to divide by zero. When you divide by zero, a non real
+
+    number is returned. So we want to set up some precautions to avoid this, error
+    handling is very
+
+    specific to your program.
+
+    /
+
+    ```
+
+
+    ```
+
+    int main(){
+
+    int numerator = 4;
+
+    int denominator = 1;
+
+    int quotient;
+
+
+    //below is the error check
+
+    if(denominator == 0) {
+
+    printf(stderr,"Error: Denominator == 0\n");
+
+    printf("Exiting with return status 1.\n");
+
+    return 1;
+
+    }
+
+    quotient = numerator/denominator;
+
+    printf("Quotient: %d", quotient);
+
+    ```'
+  - '[PAGE 51]
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # **Output:**
+
+
+    Quotient: 4
+
+
+    # MyHeader.h
+
+
+    > /*
+
+    In C you can create your own header files, which you then can
+
+    include in any other C/C++ program. Structs are a common thing
+
+    to place in a header file.
+
+
+    ```
+
+    */
+
+    typ struct Person{
+
+    char name[10];
+
+    int age;
+
+    }Person;
+
+    ```
+
+
+    //can put methods in here,
+
+    //can put error handling within those methods as well'
+  - "[PAGE 52]\n\n# Header.c\n\n```\n#include <stdio.h>\n#include <string.h>\n#include\
+    \ \"MyHeader.h\"//notice the include\n/*\n[Author] || [Email] ||[Date]\nHeader:\
+    \ Uses our self made MyHeader.h\n*/\nint main() {\n    Person me;\n    strcpy(me.name,\"\
+    DoEasy\");\nme.age = 100;\n    printf(\"Name: %s\\nAge: %d\\n\",me.name, me.age);\n\
+    ```"
+  - '[PAGE 53]
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    Output:
+
+
+    Name: DoEasy
+
+    Age: 100
+
+
+    # ChemicalElement.h
+
+
+    ```
+
+    /*
+
+    [Author] | [Email] | [Date]
+
+    A header file that contains a data structure
+
+    that mimics a chemical element.
+
+    */
+
+    ```'
+  - '[PAGE 54]
+
+
+    ```
+
+    typedef struct ChemicalElement{
+
+    //names cannot be longer that 19 characters
+
+    //can you make this String dynamic?
+
+    char name[20];
+
+    int number;
+
+    double mass;
+
+    //anymore members you can think of?
+
+    }ChemicalElement;
+
+    ```
+
+
+    # PeriodicTable.c'
+  - "[PAGE 55]\n\n```\n#include<ChemicalElement.h\"\n#include<stdio.h>\n#include<string.h>\n\
+    #include<stdlib.h>\n/*\n[Author] || [[Email]] || [[Date]\nPeriodicTable: A C source\
+    \ file where you can save chemical elements,\nand maybe start creating molecules.\n\
+    */\nint main({\n\nChemicalElement hydrogen;\nstrcpy(hydrogen.name, \"Hydrogen\"\
+    );\nhydro.number = 1;\nhydro.mass = 1.001;\n\nChemicalElement oxygen;\nstrcpy(oxygen.name,\
+    \ \"Oxygen\");\noxygen.number = 8;\noxygen.mass = 15.9994;\n\nChemicalElement\
+    \ h2o[3];\nh2o[0] = hydrogen;\nh2o[1] = hydrogen;\nh2o[2] = oxygen;\n\nprintf(\"\
+    Printing Water:%n\");\ndouble totalMass=0;\nfor(int i = 0; i < 3; i++){\n  printf(\"\
+    %s: %.2f\\n\", h2o[i].name, h2o[i].mass);\n  totalMass += h2o[i].mass;\n}\nprintf(\"\
+    Total Mass: %.2f\\n\", totalMass);\n\nreturn 0;\n}\n```\n\n# Output:\n\nPrinting\
+    \ Water:\nHydro: 1.00\nHydro: 1.00\nOxygen: 16.00\nTotal Mass: 18.00"
+  - "[PAGE 56]\n\n# CommandLineLine.c\n\n```\n#include <stdio.h>\n/*\n[Author] |[Email]\
+    \ |[Date]\nCommandLine: How to pass in command line arguments.\nPlease note they\
+    \ are passed as an array of strings\nso to accept a different data type takes\
+    \ more work.\n*/\nint main(int argc, char *argv[]){\n\nif (argc == 1) {\n    printf(\"\
+    NO COMMAND LINE ARGS\\n\");\n    return 0;\n} else {\n    int i = 1;\n    while(i<argc){\n\
+    \        printf(\"Command Line Arg[%d]:%s\\n\", i, argv[i]);\n        i++;\n \
+    \   }//end while\n}//end else\n\nreturn 0;\n}\n```\n\n.//CommandLine These Are\
+    \ the Args\n\nCommand Line Arg[1]:These\nCommand Line Arg[2]:Are\nCommand Line\
+    \ Arg[3]:the\nCommand Line Arg[4]:Args"
+  - '[PAGE 57]
+
+
+    # MemoryManagement.c
+
+
+    How to create memory space dynamically. This means how to create
+
+    memory space during run time. Useful for when you don’t know how much memory you
+    will need.
+
+
+    ```
+
+    void *calloc(int num, int size)-->allocates an array of num, elements, each with
+    given size
+
+    ```
+
+
+    ```
+
+    free(void *address)-->release a block of memory given by address
+
+    ```
+
+
+    ```
+
+    void malloc(int num)-->allocates an array of num bytes, which are uninitialized
+
+    ```
+
+
+    ```
+
+    void *realloc(void *address, int newsize)-->realloc memory, extending to size
+
+    ```
+
+
+    So we can define a pointer to a data type without defining how much memory is
+    required
+
+    /*
+
+
+    ```
+
+    int main() {
+
+
+    char name[10];
+
+    char *about_name;
+
+    strcpy(name
+
+    ```'
+  - '[PAGE 58]
+
+
+    ```
+
+    printf("about_name: %s\n", about_name);
+
+    free(about_name);
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    Output:
+
+    sizeof(): 8
+
+    address: 0x7fff5c8e3b90
+
+    name: doesy
+
+    about_name: This string can be as big as the malloc...
+
+
+    # DynamicString.c
+
+
+    ```
+
+    /*
+
+    Author | Email | Date
+
+    DynamicString: How to create a string dynamically.
+
+    Most times going into a program you do not know
+
+    how long your input is going to be, we will deal with
+
+    that right now.
+
+    */
+
+    int main(){
+
+    ```
+
+
+    ```
+
+    //first declare pointer to a char,
+
+    //using malloc set your pointer equal to one char length
+
+    //malloc returns a void* so you must cast to the
+
+    //data type we are woking with
+
+    char* input = (char*)malloc(sizeof(char));
+
+    int count = 0;
+
+    ```
+
+
+    ```
+
+    //next we will get some user input of unknown length
+
+    printf("Enter a sentence: ");
+
+    char token;
+
+    token = getchar();
+
+    //can only read in one sentence, hit enter from command line
+
+    //to keep program going
+
+    while(token != ''\\n'') {
+
+    ```'
+  - '[PAGE 59]
+
+
+    ```
+
+    //realloc returns a void* so you you must cast
+
+    // to the type of pointer you are working with
+
+    input = (char*)realloc(input, sizeof(char)*(count+1));
+
+    input[count] = token;//add to array
+
+    token = getchar();//get the next token
+
+    count++;//increment our size
+
+    }
+
+    ```
+
+
+    ```
+
+    printf("You entered: %s\n", input);
+
+    printf("Counted %d tokens.",count);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    # Output:
+
+
+    Enter a sentence: this sentence can be any length
+
+    You entered: this sentence can be any length
+
+
+    # DynamicIntArray.c
+
+
+    ```
+
+    #include<stdio.h>
+
+    #include<stdlib.h>
+
+    /*
+
+    [Author] |[Email] |[Date]
+
+    DynamicIntArray.: A dynamic int array can grow or shrink
+
+    during run time. We are going to use much the same approach
+
+    as before, but with integers this time.
+
+    */
+
+    int main(){
+
+
+    int* numbers = (int*)malloc(sizeof(int));
+
+    printf("Enters numbers, press enter to add a number:\n");
+
+    printf("Enter a -1 to exit.\n");
+
+    int input = 0;
+
+    int count = 0;
+
+    while(input!=-1) {
+
+    sccanf("%d",&input);
+
+    numbers = (int*)realloc(numbers, sizeof(int)*(count+1));
+
+    numbers[count] = input;
+
+    count++;
+
+    }
+
+    ```'
+  - "[PAGE 60]\n\n```\nprintf(\"nPrinting Numbers:\\n\");\nfor(int i = 0; i<count-1;i++){\n\
+    \    printf(\"number[%d]: %d\\n\",i,numbers[i]);\n}\n\nprintf(\"\\nThat was %d\
+    \ numbers.\\n\",count-1);\n\nreturn 0;\n}\n```\n\n# **Output:**\n\nEnters numbers,\
+    \ press enter to add a number:\nEnter a -1 to exit.\n0\n22\n222\n-1\n\nPrinting\
+    \ Numbers:\nnumber[0]: 0\nnumber[1]: 22\nnumber[2]: 222\n\nThat was 3 numbers."
+  - '[PAGE 61]
+
+
+    # ArrayAnalysis.c
+
+
+    ```
+
+    #include<stdio.h>
+
+    #include<stdlib.h>
+
+    #include<time.h>
+
+    /*
+
+    ```
+
+
+    Author | Email | Date
+
+    ArrayAnalysis: Calculates the average, biggest, and smallest number'
+  - '[PAGE 62]
+
+
+    of a randomly generated array. We are going to discuss how to return an array
+    from a function, and how to pass an array as a parameter
+
+    /*
+
+
+    ```
+
+    int* initArray(int size, int range);
+
+    double average(int* numbers, int size);
+
+    int biggest(int* numbers, int size);
+
+    int smallest(int* numbers, int size);
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    /*
+
+    Creates an array of length size, with random numbers in between [0, range].\When
+    you return an array you must return a pointer to an array, which you can later
+    iterate through.
+
+    */
+
+
+    ```
+
+    int* initArray(int size, int range){
+
+    srand(time(0));
+
+    int* num = (int*)malloc(sizeof(int));
+
+    for(int i = 0; i < size; i++){
+
+    num = realloc(num, sizeof(int)*(i+1));
+
+    *(num+i) = rand()%range;
+
+    }
+
+    //this returns a pointer to the first
+
+    //address of numbers
+
+    return num;
+
+    }
+
+    ```'
+  - '[PAGE 63]
+
+
+    ```
+
+    /*
+
+    age: Calculates the average of our array.
+
+    What we are doing passing an array into our function.
+
+    More specifically we are passing a pointer into our function
+
+    which we can then use pointer arithmetic on
+
+    dereference it''s members. When you do this it is a good practice
+
+    to pass in the size as well.
+
+    */
+
+    ```
+
+
+    ```
+
+    double average(int* numbers, int size) {
+
+    double total = 0;
+
+    for(int i = 0; i < size; i++)
+
+    total += *(numbers+i);
+
+    return total/(double)size;
+
+    }
+
+    ```
+
+
+    ```
+
+    /*
+
+    bigest: finds the largest number in an array.
+
+    We will use the same technique as above.
+
+    */
+
+    ```
+
+
+    ```
+
+    int biggest(int* numbers, int size) {
+
+    int biggest = *numbers;
+
+    //initialize biggest to the first element
+
+    for(int i = 1; i < size; i++)
+
+    if(*(numbers+i) > biggest)
+
+    biggest = *(numbers+i);
+
+    return biggest;
+
+    }
+
+    ```
+
+
+    ```
+
+    /*
+
+    small: finds the smallest number in an array.
+
+    We will use the same technique as above.
+
+    */
+
+    ```
+
+
+    ```
+
+    int smallest(int* numbers, int size) {
+
+    int smallest = *numbers;
+
+    //initialize biggest to the first element
+
+    for(int i = 1; i < size; i++)
+
+    if(*(numbers+i) <smallest)
+
+    smallest = *(numbers+i);
+
+    return smallest;
+
+    }
+
+    ```
+
+
+    # Output:'
+- md: "\nAnalyzing Array:\nAverage 60.30\nBiggest 90\nSmallest 0\n\n# TicTacToe.h\n\
+    \n```c\n/*\n[Author] | [Email] |[Date]\nThe beginning to a TicTacToe game. It\
+    \ needs some work but that would be great practice.\nchar board[3][3];\nint player1\
+    \ = 1;\nint player2 = 0;\n\nvoid initBoard(){\nfor(int i = 0; i < 3; i++){\nfor(int\
+    \ j = 0; j < 3; j++){\nboard[i][j] = '\\'';\n}\n}\n}\n\nvoid printBoard(){\nfor(int\
+    \ i = 0; i < 3; i++){\nfor(int j = 0; j < 3; j++){\nprintf(\"%c\",board[i][j]);\n\
+    }\nprintf(\"\\n\");\n}\n}\n\n/*\nPut functions in here to check to see whose turn\
+    \ it is.\nAnd to make moves.\n*/\n```\n\n# TicTacToeGame.c\n\n```c\n#include <stdio.h>\n\
+    #include \"TicTacToe.h\"\n/*\n[Author] || [[Email]] || [[Date]]\nExercises out\
+    \ your TicTacToe.h header file. This file is where\nthe game is actually played.\
+    \ You can choose to make the game\nfor one or two players.\n*/\n\nint main() {\n\
+    \n  initBoard();\n  printBoard();\n  board[0][1] = 'X';\n  printBoard();\n\n}\n\
+    ```\n\nOutput:\n\n```\n[][][ ]\n[][][ ]\n[][][ ]\n[[X][]\n[][][ ]\n[][][ ]\n```\n\
+    \n# pieces.h\n\n```c\n/*\n[Author] | [Email] | [Date]\npieces: Contains the pieces\
+    \ to a chess game.\n*/\n#include <stdio.h>\nchar *board[8][8];\nchar pawn = 'p';\n\
+    char rook = 'r';\nchar night = 'n';\nchar bishop = 'b';\nchar queen = 'q';\nchar\
+    \ king = 'k';\nchar block = '-';\nchar *lostBlackPieces[16];\nchar *lostWhitePieces[16];\n\
+    void initBoard(){\nfor(int i = 0; i<8; i++){\nfor(int j = 0; j<8; j++)++){\nif(i==1\
+    \ || i == 6){\n  board[i][j] = &pawn;\n}\nelse if (i==7 || i!=0 || i!=1 || i!=6)\n\
+    \  board[i][j]=block;\n}\n}\n}\n```\n\n```c\nboard[7][0]=&rook;\nboard[7][1]=&night;\n\
+    board[7][2]=&bishop;\nboard[7][3]=&queen;\nboard[7][4]=&king;\nboard[7][5]=&bishop;\n\
+    board[7][6]=&night;\nboard[7][7]=&rook;\nboard[0][0]=&rook;\nboard[0][1]=&night;\n\
+    board[0][2]=&bishop;\nboard[0][3]=&king;\nboard[0][4]=&queen;\nboard[0][5]=&bishop;\n\
+    board[0][6]=&night;\nboard[0][7]=&rook;\n```\n\n```c\nvoid printBoard(){\n  for\
+    \ (int r = 0; r<8; r++){\n    for (int c = 0; c<8; c++) {\n      printf(\"%c\"\
+    , *(board[r][c]));\n    }\n    printf(\"\\n\");\n  }\n}\n```\n\n# moves.h\n\n\
+    ```c\n/* [Author] | [Email] | [Date]\nmoves: Contains the moves allowed in a chess\
+    \ game. */\n\n```c\nint checkPawnMove(char *p, int fromr, int fromc, int tor,\
+    \ int toc) {\nif(p != &pawn){\nreturn 0;\n}\nelse if(tor-fromr == 1 || tor - fromr\
+    \ != -1){\n  return 0;\n}\nelse if(tor < 0 || tor > 7){\n  return 0;\n}\nelse\
+    \ if(toc-fromc != 0){\n  return 0;\n}\nelse{\n  return 1;\n}\n}\n```\n\n```c\n\
+    /*\nint jumpWithPawn(char *piece, int r, int c, int tor, int toc){\n*/\nvoid movePawn(char\
+    \ *piece, int r, int c, int tor, int toc){\nif(checkPawnMove(piece, r, c, tor,\
+    \ toc) == 1){\n  board[tor][toc] = piece;\n  board[r][c] = &block;\n}\n}\n```\n\
+    \n# Game.c\n\n```c\n#include <stdio.h>\n#include \"pieces.h\"\n#include \"moves.h\"\
+    \n/*\nGame: A game of chess. Here is where you will implement the header files\
+    \ to actually play a\ngame of Chess. The game is far from complete but it is a\
+    \ nice start. Have fun :)\n*/\nint main(){\n\n    initBoard();\n    printBoard();\n\
+    \    movePawn(board[6][0], 6, 0, 5, 0);\n    printBoard();\n    movePawn(board[5][0],\
+    \ 5, 0, 4, 0);\n    printBoard();\n    return 0;\n}\n```\n\n# Conclusion\n\nIn\
+    \ conclusion, we have only scratched the surface with these examples.\nHowever,\
+    \ now you have a great base on which to build. So get out there and start building,\
+    \ breaking, and having fun with your own code. Please check out my website for\
+    \ more information:\n\ntfoss0001.github.io\n\nFor fun and interactive video tutorials\
+    \ check out my youtube channel:\n\nDoEasy Productions\n\nThere are playlists on\
+    \ that channel to help guide you through these examples\nto give you ideas for\
+    \ your own programs. Thank you very much.\n\n-Torin Foss\n"
+  mdcn: "\n数组分析：\n平均值 60.30\n最大值 90\n最小值 0\n\n# TicTacToe.h\n\n```c\n/*\n[Author]\
+    \ | [Email] |[Date]\n井井棋游戏的开始。它还需要一些完善，但这将是一次非常好的练习。\nchar board[3][3];\nint player1\
+    \ = 1;\nint player2 = 0;\n\nvoid initBoard(){\nfor(int i = 0; i < 3; i++){\nfor(int\
+    \ j = 0; j < 3; j++){\nboard[i][j] = '\\'';\n}\n}\n}\n\nvoid printBoard(){\nfor(int\
+    \ i = 0; i < 3; i++){\nfor(int j = 0; j < 3; j++){\nprintf(\"%c\",board[i][j]);\n\
+    }\nprintf(\"\\n\");\n}\n}\n\n/*\n在此处放置函数来检查轮到谁的了。\n并执行移动。\n*/\n```\n\n# TicTacToeGame.c\n\
+    \n```c\n#include <stdio.h>\n#include \"TicTacToe.h\"\n/*\n[Author] || [[Email]]\
+    \ || [[Date]]\n实现你的 TicTacToe.h 头文件。此文件是实际进行游戏的地方。\n你可以选择制作单玩家或双玩家的游戏。\n*/\n\n\
+    int main() {\n\n  initBoard();\n  printBoard();\n  board[0][1] = 'X';\n  printBoard();\n\
+    \n}\n```\n\n输出：\n\n```\n[][][ ]\n[][][ ]\n[][][ ]\n[[X][]\n[][][ ]\n[][][ ]\n\
+    ```\n\n# pieces.h\n\n```c\n/*\n[Author] | [Email] | [Date]\npieces: 包含象棋游戏中的棋子。\n\
+    */\n#include <stdio.h>\nchar *board[8][8];\nchar pawn = 'p';\nchar rook = 'r';\n\
+    char night = 'n';\nchar bishop = 'b';\nchar queen = 'q';\nchar king = 'k';\nchar\
+    \ block = '-';\nchar *lostBlackPieces[16];\nchar *lostWhitePieces[16];\nvoid initBoard(){\n\
+    for(int i = 0; i<8; i++){\nfor(int j = 0; j<8; j++)++){\nif(i==1 || i == 6){\n\
+    \  board[i][j] = &pawn;\n}\nelse if (i==7 || i!=0 || i!=1 || i!=6)\n  board[i][j]=block;\n\
+    }\n}\n}\n```\n\n```c\nboard[7][0]=&rook;\nboard[7][1]=&night;\nboard[7][2]=&bishop;\n\
+    board[7][3]=&queen;\nboard[7][4]=&king;\nboard[7][5]=&bishop;\nboard[7][6]=&night;\n\
+    board[7][7]=&rook;\nboard[0][0]=&rook;\nboard[0][1]=&night;\nboard[0][2]=&bishop;\n\
+    board[0][3]=&king;\nboard[0][4]=&queen;\nboard[0][5]=&bishop;\nboard[0][6]=&night;\n\
+    board[0][7]=&rook;\n```\n\n```c\nvoid printBoard(){\n  for (int r = 0; r<8; r++){\n\
+    \    for (int c = 0; c<8; c++) {\n      printf(\"%c\", *(board[r][c]));\n    }\n\
+    \    printf(\"\\n\");\n  }\n}\n```\n\n# moves.h\n\n```c\n/* [Author] | [Email]\
+    \ | [Date]\nmoves: 包含象棋游戏中允许的移动。 */\n\n```\n\n```c\nint checkPawnMove(char *p,\
+    \ int fromr, int fromc, int tor, int toc) {\nif(p != &pawn){\nreturn 0;\n}\nelse\
+    \ if(tor-fromr == 1 || tor - fromr != -1){\n  return 0;\n}\nelse if(tor < 0 ||\
+    \ tor > 7){\n  return 0;\n}\nelse if(toc-fromc != 0){\n  return 0;\n}\nelse{\n\
+    \  return 1;\n}\n}\n```\n\n```c\n/*\nint jumpWithPawn(char *piece, int r, int\
+    \ c, int tor, int toc){\n*/\nvoid movePawn(char *piece, int r, int c, int tor,\
+    \ int toc){\nif(checkPawnMove(piece, r, c, tor, toc) == 1){\n  board[tor][toc]\
+    \ = piece;\n  board[r][c] = &block;\n}\n}\n```\n\n# Game.c\n\n```c\n#include <stdio.h>\n\
+    #include \"pieces.h\"\n#include \"moves.h\"\n/*\nGame: 象棋游戏。在这里你将实现头文件来实际玩一局象棋。游戏远未完成，但这是一个很好的开始。玩得开心\
+    \ :)\n*/\nint main(){\n\n    initBoard();\n    printBoard();\n    movePawn(board[6][0],\
+    \ 6, 0, 5, 0);\n    printBoard();\n    movePawn(board[5][0], 5, 0, 4, 0);\n  \
+    \  printBoard();\n    return 0;\n}\n```\n\n# 结论\n\n总之，我们通过这些示例仅仅触及了皮毛。\n然而，你现在有了一个非常好的基础可以在基础上进行构建。所以，尽管去尝试，开始构建、调试并享受你自己的代码带来的乐趣。请访问我的网站以获取更多信息：\n\
+    \ntfoss0001.github.io\n\n想要趣味互动的视频教程，请关注我的 YouTube 频道：\n\nDoEasy Productions\n\
+    \n该频道上有播放列表，可以引导你学习这些示例，并为你自己的程序提供灵感。非常感谢。\n\n-Torin Foss\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 64]
+
+
+    Analyzing Array:
+
+    Average 60.30
+
+    Biggest 90
+
+    Smallest 0
+
+
+    # TicTacToe.h
+
+
+    ```
+
+    /*
+
+    [Author] | [Email] |[Date]
+
+    The beginning to a TicTacToe game. It needs some work but that would be great
+    practice.
+
+    char board[3][3];
+
+    int player1 = 1;
+
+    int player2 = 0;
+
+
+    void initBoard(){
+
+    for(int i = 0; i < 3; i++){
+
+    for(int j = 0; j < 3; j++){
+
+    board[i][j] = ''\'''';
+
+    }
+
+    }
+
+
+    void printBoard(){
+
+    for(int i = 0; i < 3; i++){
+
+    for(int j = 0; j < 3; j++){
+
+    printf("%c",board[i][j]);
+
+    }
+
+    nprintf("\n");
+
+    }
+
+
+    /*
+
+    Put functions in here to check to see whose turn it is.
+
+    And to make moves.
+
+    */
+
+    ```'
+  - "[PAGE 65]\n\n# TicTacToeGame.c\n\n#include <stdio.h>\n#include \"TicTacToe.h\"\
+    \n/*\n[Author] || [[Email]] || [[Date]\nExercises out your TicTacToe.h header\
+    \ file. This file is where\nt game is actually played. You can choose to make\
+    \ the game\nfor one or two players.\n*/\n\n```\nint main() {\n\n  initBoard();\n\
+    \  printBoard();\n  board[0][1] = 'X';\n  printBoard();\n\n}\n```\n\nOutput:\n\
+    \n```\n[][][ ]\n[][][ ]\n[][][ ]\n[[X][]\n[][][ ]\n[][][ ]\n```"
+  - '[PAGE 66]
+
+
+    # pieces.h
+
+
+    ```
+
+    /*
+
+    [Author] | [Email] | [Date]
+
+    pieces: Contains the pieces to a chess game.
+
+    */
+
+    #include <stdio.h>
+
+    char *board[8][8];
+
+    char pawn = ''p'';
+
+    char rook = ''r'';
+
+    char night = ''n'';
+
+    char bishop = ''b'';
+
+    char queen = ''q'';
+
+    char king = ''k'';
+
+    char block = ''-'';
+
+    char *lostBlackPieces[16];
+
+    char *lostWhitePieces[16];
+
+    void initBoard(){
+
+    for(int i = 0; i<8; i++){
+
+    for(int j = 0; j<8; j++)++)
+
+    ```'
+  - "[PAGE 67]\n\n```\nif(i==1 || i == 6){\n  board[i][j] = &pawn;\n}\nelse if (i==7\
+    \ || 1!=0 || i!=1 || i!=6)\n  board[i][j]=block;\n}\n```\n\n```\nboard[7][0]=&rook;\n\
+    board[7][1]=&night;\nboard[7][2]=&bishop;\nboard[7][3]=&queen;\nboard[7][4]=&king;\n\
+    board[7][5]=&bishop;\nboard[7][6]=&night;\nboard[7][7]=&rook;\nboard[0][0]=&rook;\n\
+    board[0][1]=&night;\nboard[0][2]=&bishop;\nboard[0][3]=&king;\nboard[0][4]=&queen;\n\
+    board[0][5]=&bishop;\nboard[0][6]=&night;\nboard[0][7]=&rook;\n```\n\n```\nvoid\
+    \ printBoard(){\n  for (int r = 0; r<8; r++){\n    for (int c = 0; c<8; c++) {\n\
+    \      printf(\"%c\", *(board[r][c]));\n    }\n    printf(\"\\n\");\n  }\n}\n\
+    ```\n\n# moves.h\n\n/* [Author] | [Email] | [Date]\nmovess: Contains the moves\
+    \ allowed in a chess game. */\n\n```\nint checkPawnMove(char *p, int fromr, int\
+    \ fromc, int tor, int toc {\nif(p != &pawn){\n```"
+  - "[PAGE 68]\n\n```\nreturn 0;\n}\nelse if(tor-fromr == 1 || tor - fromr!=-1){\n\
+    \  return 0;\n}\nelse if(tor < 0 || tor > 7){\n  return 0;\n}\nelse if(toc-fromc\
+    \ != 0){\n  return 0;\n}\nelse{\n  return 1;\n}\n}\n```\n\n```\n/*\nint jumpWithPawn(char\
+    \ *piece, int r, int c, int tor, int toc{\n*/\nvoid movePawn(char *piece, int\
+    \ r, int c, int tor, int toc){\nif(checkPawnMove(piece, r, c, toc)==1){\n  board[tor][toc]\
+    \ = piece;\n  board[r][c] = &block;\n}\n}\n```\n\n# Game.c\n\n```\n#include <stdio.h>\n\
+    #include \"pieces.h\"\n```"
+  - "[PAGE 69]\n\n```\n#include \"moves.h\"\n/*\nGame: A game of chess. Here is where\
+    \ you will implement the header files to actually play a\ngame of Chess. The game\
+    \ is far from complete but it is a nice start. Have fun :)\n*/\nint main(){\n\n\
+    \    initBoard();\n    printBoard();\n    movePawn(board[6][0], 6, 0, 5, 0);\n\
+    \    printBoard();\n    movePawn(board[5][0], 5, 0, 4, 0);\n    printBoard();\n\
+    \    return 0;\n}\n```"
+  - "[PAGE 70]\n\n# Conclusion\n\nIn conclusion, we have only scratched the surface\
+    \ with these examples.\nHowever, now you have a great base on which to build.\
+    \ So get out there and start building, breaking, and having fun with your own\
+    \ code. Please check out my website for more information:\n\ntfoss0001.github.io\n\
+    \nFor fun and interactive video tutorials check out my youtube channel:\n\nDoEasy\
+    \ Productions\n\nThere are playlists on that channel to help guide you through\
+    \ these examples\n to give you ideas for your own programs. Thank you very much.\n\
+    \n-Torin Foss"
