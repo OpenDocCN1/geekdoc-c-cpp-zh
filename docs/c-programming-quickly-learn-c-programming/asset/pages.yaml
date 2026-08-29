@@ -1,0 +1,1235 @@
+- img_proc: true
+  md: '# C# Programming
+
+
+    Quickly Learn C# Programming'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Copyright ©
+
+
+    All rights reserved. No part of this book may be reproduced, stored in a retrieval
+    system, or transmitted in any form or by any means, electronic, mechanical, photocopying,
+    recording, scanning, or otherwise, without the prior written permission of the
+    publisher.
+
+
+    # Disclaimer
+
+
+    All the material contained in this book is provided for educational and informational
+    purposes only. No responsibility can be taken for any results or outcomes resulting
+    from the use of this material. While every attempt has been made to provide information
+    that is both accurate and effective, the author does not assume any responsibility
+    for the accuracy or use/misuse of this information.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   - C# Programming
+
+    - Table of Contents
+
+    - Introduction
+
+    - Chapter 1: C# 101
+
+    - Chapter 2: First Program and Basic Syntax
+
+    - Chapter 3: Variables and Data Types
+
+    - Chapter 4: Operators
+
+    - Chapter 5: Conditional Statements
+
+    - Chapter 6: Loops
+
+    - Chapter 7: Understanding Methods
+
+    - Chapter 8: Using Arrays
+
+    - Chapter 9: Exception Handling
+
+    - Chapter 10: Inheritance
+
+    - Conclusion'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Introduction
+
+
+    It’s fascinating to see how numbers, letters, and symbols come together to power
+    our computers. If you have always had an an idea for a computer program, now is
+    your time to learn to code. With C#, your dreams of becoming a programmer can
+    become true. And they can do so without frustration as C# is easy to understand.
+
+
+    In this book, you will learn the basics of coding in C#. The book has been written
+    in a way to be understood by even those with zero programming skills. If you have
+    always thought that coding was difficult, this book will prove you wrong. Inside,
+    there are lots of examples to deepen your understanding. And by the time you hit
+    the last page, you should be able to create simple C# programs.
+
+
+    With that, we can get started. If you haven’t already, fire up your computer.
+    And if you don’t understand some things at the beginning of the book, just keep
+    going—things will make sense the further you go.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Chapter 1: C# 101
+
+
+    C#, pronounced as “C sharp,” is a general purpose object-oriented programming
+    language. Some of its strengths are that it is easy to learn, creates efficient
+    programs, and can be compiled on a number of systems. It is part of the .Net framework.
+    And for this reason, some refer to it as the .Net language. C# was developed by
+    Microsoft, thanks to one Anders Helsberg.
+
+
+    With the name sounding like C and C++, you would expect C# to resemble those two
+    aforementioned languages. And that is the case. But C# goes on to mimic most of
+    what Java has to offer.
+
+
+    If you already have an understanding of C or C++, C# will prove to be easy.
+
+    With C#, you have freedom to create programs that C, C++, Java, and other high-level
+    programming languages can produce. You can create games, Windows applications,
+    web applications, and apps for iOS and Android.
+
+
+    # Setting Up the Right Environment
+
+
+    In order to create C# programs, you need to have the right tools. Your computer
+    is the most important tool in this environment. But you will also need other things
+    on the software side.
+
+
+    .Net Framework
+
+    I already said that C# is part of the .Net Framework. As such, your computer needs
+    this in order to execute C# code. If you are on a Windows computer, then you probably
+    already have the .Net Framework.
+
+
+    Integrated Development Environment (IDE)
+
+
+    Microsoft offers Visual Studio (VS) as the IDE for creating C# applications and
+    other languages like C++. With VS, you can create just about any kind of application
+    you can imagine. VS can be downloaded from the Microsoft website for free.
+
+
+    C# on Mac OS and Linux'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "The .Net framework is not available on Mac OS and Linux. Frankly, there is\
+    \ an open-source alternative called Mono. And it comes with a C# compiler. Visit\
+    \ the Go Mono website for more on this.\n\n# Chapter 2: First Program and Basic\
+    \ Syntax\n\n# Hello, Word!\n\nAs with every programming language, we will get\
+    \ our hands wet with the Hello World program. Know that the examples in this book\
+    \ use Microsoft Visual C# 2010 Express, a trimmed version of Visual Studio.\n\n\
+    First, launch Visual C#. Click File, select New Project, and then Console Application.\
+    \ In my case, this opens an editor in a file named Program.cs.\n\nSince there\
+    \ is some code in the editor, hit F5 to run it. A window will quickly open and\
+    \ close. That’s because the code does not have anything specific to do. We need\
+    \ to add more to it to create a “Hello World” program. Here is how that will look:\n\
+    \n+   using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing\
+    \ System.Text;\n\n```\nnamespace ConsoleApplication1\n{\n    class Program\n \
+    \   {\n        static void Main(string[] args)\n        {\n            // my first\
+    \ program in C#\n            Console.WriteLine(\"Hello, World!\");\n         \
+    \   Console.ReadLine();\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Notice the three lines I have added? The one in the green, the right below
+    it, and the one that reads
+
+    Console.ReadLine(); If you hit F5 again, you would get this output:
+
+
+    Hello, World!
+
+
+    # Explanation
+
+
+    ```
+
+    using System;
+
+    using System.Collections.Generic;
+
+    using System.Linq;
+
+    using System.Text;
+
+    ```
+
+
+    **using** is a keyword employed to import a namespace. In this case, it imports
+    the System namespace and other sub-namespaces of System.
+
+
+    Now may you ask, what is a namespace? This refers to a construct that is used
+    to organize code. Code that is similar in functionality is grouped together, ensuring
+    that there is no conflict. The most important namespace is **System**.
+
+
+    ```
+
+    namespace ConsoleApplication1
+
+    ```
+
+
+    This line contains the namespace declaration, which in this case **ConsoleApplication1**.
+
+
+    ```
+
+    class Program
+
+    ```
+
+
+    **class** is another keyword that introduces the class declaration. After the
+    class keyword, you can then write the class name, which in this case is **Program**.
+    Every program in C# needs at least one class. A class contains data and methods
+    for your program.
+
+
+    Code contained in a class must be enclosed in curly brackets.
+
+
+    ```
+
+    static void Main(string[]) args
+
+    ```
+
+
+    This is the entry point of this program, meaning this is the first piece of code
+    the program will execute.
+
+    static means that the method can be accessed without an instance of the class.
+    **Void** means what the method will return, which in this case is nothing. Every
+    program must contain a method called **Main**; otherwise, the program will not
+    run.
+
+
+    ```
+
+    // my first program in C#
+
+    ```
+
+
+    This is a comment. The compiler will ignore it. Comments can help you remember
+    what your code does if you forget. And they will tell others what you intend to
+    achieve with your code. The double slash at the beginning the comment is limited
+    to one line. If you have a comment that takes several lines, write your comment
+    inside the slashes (comments spanning several lines need to be formatted with
+    star*/).
+
+
+    ```
+
+    Console.WriteLine("Hello, World!");
+
+    ```'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Console.WriteLine gives you the ability to output data in the console window.
+    The data to display is enclosed in parentheses.
+
+
+    Console.ReadLine();
+
+
+    When the program executes the Console.WriteLine statement, a console window will
+    print "Hello, World!" Without Console.ReadLine(), that window will close as quickly
+    as it opens: you won''t even see your text. Console.ReadLine() tricks your program
+    into keeping the console window open until you provide an input, pressing the
+    Enter key.
+
+
+    You might have noticed that our code contains blank lines and white spaces. These
+    are there to make the code readable.
+
+
+    You must know that C# is case sensitive. So Main and main are not the same. Also
+    know that after every statement or expression, you must write a semicolon (:).
+
+    For some reason you do not want to use Visual C#, then you can code in a text
+    editor. Here is how you can create a Hello World program:
+
+
+    +   - Copy the Hello World code into a text editor like Notepad.
+
+    - Save the file as helloworld.cs
+
+    - Open Command Prompt and navigate to where you saved your file.
+
+    - Type csc helloworld.cs
+
+    - If everything is right, command line will create an executable file of your
+    program.
+
+    - Type helloworld to run it.
+
+
+    # Identifiers and Keywords
+
+
+    # Identifiers
+
+
+    These are names you assign to namespaces, classes, variables, methods, etc. You
+    can use letters, numbers, and underscores to create identifiers. However, an identifier
+    can only begin with a letter or an underscore. If you would like to use a keyword
+    as an identifier, then include @ at the beginning (e.g. @class).
+
+
+    Here are other examples of valid identifiers:
+
+
+    +   - FIRST
+
+    - first
+
+    - fir_st
+
+    - FirstName
+
+    - \123names'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# Chapter 3: Variables and Data Types\n\nVariables are important in C# because\
+    \ you use them to store data (values). When assigning a value to a variable, you\
+    \ need to specify the data type of the variable. C# is a type-safe language, meaning\
+    \ that each variable holds data of the appropriate type.\n\nHere is how to declare\
+    \ a variable:\n\ndata_type variable_name;\n\nor\n\ndata_type variable_name = value;\n\
+    \nThe = sign is an assignment operator. And you will use it to assign values to\
+    \ variables. Here is how to declare a variable and assign a value:\n\n```\nstatic\
+    \ void Main(string[] args)\n{\n    string message;\n    // value assigned after\
+    \ variable declaration\n    message = \"Hello World!!\";\n\n    Console.WriteLine(message);\n\
+    \    Console.ReadLine();\n}\n```\n\nstring is the data type and message is the\
+    \ variable. The value that message holds is assigned in the line after the comment\
+    \ and value is Hello World!!\n\nBut you can also declare a variable and assign\
+    \ it a value in the same line:\n\n```\nstatic void Main(string[] args)\n{\n  \
+    \  string message = \"Hello World!!\";\n\n    Console.WriteLine(message);\n  \
+    \  Console.ReadLine();\n}\n```\n\nC# also allows you to assign a value to several\
+    \ variables like this:\n\nint a, b, c, d = 5;"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "And you can also make multi-line variable declarations by doing this:\n\n```\n\
+    int a, b,\n    c,\nd = 5;\n```\n\nThe compiler will read the above code as one\
+    \ line until it finds the semi-colon.\n\nYou can well declare a variable by assigning\
+    \ it to another variable:\n\n```\nint r = 56;\nint y = r; // the value of y will\
+    \ also be 56 as a result\n```\n\nHere is a program you can copy. Copy it into\
+    \ the Visual C# editor and run it:\n\n```\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Text;\n\nnamespace ConsoleApplication1\n{\n \
+    \   class Program\n    {\n        static void Main(string[] args)\n        {\n\
+    \            string firstname, lastname;\n\n            Console.WriteLine(\"Enter\
+    \ Your First Name:\");\n            firstname = Console.ReadLine();\n\n      \
+    \      Console.WriteLine(\"Enter Your Last Name:\");\n            lastname = Console.ReadLine();\n\
+    \n            Console.WriteLine(\"Your name is \" + firstname + \" \" + lastname);\n\
+    \n            Console.ReadLine();\n        }\n    }\n}\n```\n\nRemember that Console.ReadLine()\
+    \ is meant to take input from the user. Whatever input the user enters will become\
+    \ the values of the variables firstname and lastname. Try changing the code and\
+    \ observe what happens; for example, delete the quotes and one plus sign between\
+    \ firstname and lastname in the line that you prints.\n\n# Data Types"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'This chapter made it clear before you declare a variable, you must specify
+    its data type:
+
+    data_type variable_name;
+
+
+    From the examples above, you might have noticed string and int. But these are
+    not the only data types.
+
+    Let''s look at the most popular ones in detail:
+
+
+    string: this is used for storing text. You can take Hello World as an example.
+    When working with\strings, be sure to place them in quotes.
+
+
+    char: single unicode character.
+
+
+    int: for storing numbers. As such, you can use it to store whole numbers. Some
+    examples are 5, 10, and 1003.
+
+    float: this represents 32-bit single-precision floating point type. Its range
+    is -3.402823e38 to
+
+    3.402823e38.
+
+
+    double: this is 64-bit double-precision floating point type. And its range is
+    -1.797693134862332e-308 to
+
+    1.797693134862332e-308
+
+
+    decimal: this stands for 128-bit decimal values from 28 to 29 significant figures.
+
+    byte: this indicates an 8-bit unsigned integer. Its range is 0 to 255.
+
+
+    byte: this represents an 8-bit signed integer. The range is -128 to 127.
+
+    uint: stands for a 32-bit signed integer and has a range of 0 to 4294967295.
+
+    short: means a 16-bit signed integer. The range is -32,768 to 32,767.
+
+
+    long: represents a 64-bit signed integer.
+
+    ulong: indicates a 64-bit unsigned integer.
+
+    bool: the simplest data type in C#. Its range consists of 2 values which are True
+    and False. You will use
+
+    it when writing logical expressions.
+
+    DateTime: use to indicate date and time.
+
+
+    If a value to a variable is not in accordance with the specified data type, the
+    compiler will show
+
+    an error message. Try the following example:
+
+
+    ```
+
+    int x = 1;
+
+    Console.WriteLine(x);
+
+    Console.ReadLine();
+
+    ```
+
+
+    Now try this wrong example:
+
+
+    ```
+
+    int x = "Program";
+
+    Console.WriteLine(x);
+
+    Console.ReadLine();
+
+    ```
+
+
+    Remember, int can only take whole numbers; Program is a string.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Chapter 4: Operators
+
+
+    Operators instruct a compiler to perform a specific operation. For example, in
+    the expression 5 – 3, the minus sign is the operator while 5 and 3 are operands.
+    This expression tells the compiler to subtract 3 from 5.
+
+
+    Below, we will look at the different types of operators available in C#.
+
+
+    # 1. Assignment Operators
+
+
+    Here is a list of assignment operators you can use in C#:
+
+
+    | Operator | Explanation | Example |
+
+    | --- | --- | --- |
+
+    | = | The equals assigns a value to a variable. | a = 7<br>b = x - y<br>c = "Chris"
+    |
+
+    | += | This is ADD AND. It adds the left operand to the right operand and makes
+    the result of the left operand. | a += b means a = a + b |
+
+    | -= | This is Subtract AND. And it subtracts the right operand from the left
+    operand to make the result the left operand. | a -= b means a = a - b |
+
+    | *= | Represents Multiply AND. It multiplies the left operand by the one on the
+    right and places the result as the left operand. | a *= b means a = a * b |
+
+    | /= | This represents DIVIDE AND. And it divides the left operand by the one
+    on the right. The result becomes the left operand. | a /= b means a = a / b |
+
+    | %= | This is Modulus AND. It performs the Modulo on the left and right operands
+    and makes the result the left operand. | a %= b means a = a % b |
+
+    | << | This is Left Shift AND. | a << b means a = a << b |
+
+    | >>= | And this is Right Shift AND. | a >>= b means a = a >> b |'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# 2. Arithmetic Operators
+
+
+    These operators are useful in creating mathematical expressions. Here is a table
+    for more (a = 1 and b = 2):
+
+
+    | Operator | Explanation | Example |
+
+    | --- | --- | --- |
+
+    | + | This adds the operands involved. | a + b = 3 |
+
+    | | This subtracts the right operand from the left operand. | b - a = 1 |
+
+    | * | This multiplies the right operand by the one on the left. | a * b = 2 |
+
+    | / | This operator divides the left operand by the right operand. | b / a = 2
+    |
+
+    | % | This performs a Modula on the left and right operands. | b % a = 0 |
+
+
+    Here is a code you can use to try these operators:
+
+
+    ```
+
+    int a = 1;
+
+    int b = 2;
+
+
+    Console.WriteLine(b * a);
+
+    Console.ReadLine();
+
+    ```
+
+
+    Change the operator in Console.WriteLine(b * a) and observe what happens.
+
+
+    # 3. Logical Operators
+
+
+    These are used to check if expressions are either true or false. Here is a table
+    for (a = true and b = false):
+
+
+    | Operator | Explanation | Example |
+
+    | --- | --- | --- |
+
+    | && | This is Logical AND. It checks if both operands involved True. If they
+    are, it returns True. But if one or both is false, the expression returns False.
+    | a && b will return false |
+
+    | || | This is Logical OR. It returns True if any of the operands is true. | a
+    || b will return true |
+
+    | ! | This is Logical NOT. And it invents the current value of a Boolean expression.
+    | !(a && b) becomes true. |'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# 4. Relational Operators
+
+
+    These operators are used to check if two operands involved in an expression are
+    true or false. The table below shows the relational operators you can use in C#
+    (a = 4, b = 10):
+
+
+    | Operator | Explanation | Example |
+
+    | --- | --- | --- |
+
+    | == | This evaluates if the operands on either side of the operator are equal.
+    If they are, it returns True. | a == b is false |
+
+    | != | This means not equal to. It returns True if the operands on either side
+    of the operator are not equal. | a != b is true |
+
+    | < | This is less than. And it returns True if the operand on the left is less
+    than that on the right. | a < b is true |
+
+    | > | This is greater than. And it checks if the left operand is greater than
+    that on the right. And if it is, it returns True. | b > a is true |
+
+    | <= | This operator is called less or equal to. And it checks if the left operand
+    is less than or equal to the right operand. If it is, it returns True. | a <=
+    b is true |
+
+    | >= | This is greater than or equal to. And it returns true if the left operand
+    is greater or equal to the right operand. | b >= a is true |'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# Chapter 5: Conditional Statements\n\n# if Statement\n\nThis is one of the\
+    \ most important statements when coding. It allows you to specify an action program\
+    \ should take if a certain condition is met.\n\nThis means you need to specify\
+    \ the condition first. Your program will check if this condition is true, after\
+    \ which it will execute a specific action. But in case the condition is false,\
+    \ the program will not execute the body of the if statement.\n\nHere is the syntax\
+    \ of an if statement:\n\n```\nif(boolean expression)\n{\n// execute this code\
+    \ block if expression is true\n}\n```\n\nHere is an example to help you understand\
+    \ this:\n\n```\nstatic void Main(string[] args)\n{\n    int a = 5, b = 35;\n\n\
+    \    if (a >= b)\n    {\n        Console.WriteLine(\"a is greater than or equal\
+    \ to b\");\n        Console.ReadLine();\n    }\n\n    if (a <= b)\n    {\n   \
+    \     Console.WriteLine(\"a is less than or equal to b\");\n        Console.ReadLine();\n\
+    \    }\n\n    if (a == b)\n    {\n        Console.WriteLine(\"a is equal to b\"\
+    );\n        Console.ReadLine();\n    }\n}\n```\n\nIn the example above, a is equal\
+    \ to 5 and b is equal to 35. Needless to say, a is less than b. This means the\
+    \ first if statement evaluates to False. So the program will skip it (will not\
+    \ execute its code block) and"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "move on to the next if statement, which evaluates to True. The code block of\
+    \ the second if statement will be executed, displaying \"a is less than or equal\
+    \ to b.\"\n\nC# gives you a chance to use an else statement, which comes right\
+    \ after the if statement. This tells the program what to do in the event that\
+    \ the if statement evaluates to False (or is not executed). Here is an example:\n\
+    \n```\nstatic void Main(string[] args)\n{\n    int a = 5, b = 35;\n\n    if (a\
+    \ == b)\n    {\n        Console.WriteLine(\"a is equal to b\");\n        Console.ReadLine();\n\
+    \    }\n\n    else\n    {\n        Console.WriteLine(\"a and b are not equal\"\
+    );\n        Console.ReadLine();\n    }\n```\n\nSince a and b are not equal, the\
+    \ if statement will not be executed. The program will turn to the else statement\
+    \ which it will execute. Here is another example:\n\n```\nstatic void Main(string[]\
+    \ args)\n{\n    int number;\n\n    Console.WriteLine(\"Input a number that is\
+    \ between 50 and 70\");\n    number = int.Parse(Console.ReadLine());\n\n    if\
+    \ (number > 70)\n    {\n        Console.WriteLine(\"Oops! The number can only\
+    \ be between 50 and 70.\");\n    }\n    else if (number < 50)\n    {\n       \
+    \ Console.WriteLine(\"Oops! That's less than 50.\");\n    }\n    else\n    {\n\
+    \        Console.WriteLine(\"You got it. Yeah!!!\");\n    }\n\n    Console.ReadLine();\n\
+    }\n```\n\n# The Switch Statement"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "If you have multiple conditions to check, you are free to use multiple if statements.\
+    \ However, this makes your code hard to read. And it's also an inefficient way\
+    \ to run programs. Your best bet is to use the switch statement, which is similar\
+    \ to having multiple if statements. With this, you will create one switch statement\
+    \ and pair it with cases. Here is an example:\n\n```\nstatic void Main(string[])\
+    \ args\n{\n    Console.WriteLine(\"Choose a color: blue, green, red, or orange.\"\
+    );\n    string color = Console.ReadLine();\n    switch (color.ToLower())\n{\n\
+    \        case \"blue\":\n        case \"green\":\n        case \"red\":\n    \
+    \        Console.WriteLine(\"We have this in stock.\");\n            break;\n\
+    \        case \"orange\":\n            Console.WriteLine(\"We don't have this\
+    \ color in stock.\");\n            break;\n    }\n    Console.ReadLine();\n}\n\
+    ```\n\nExplanation of the above program: When creating switch statements, place\
+    \ the identifier, which in this case is the variable color, in front of the keyword\
+    \ switch. color can take any Value. In the above example, it can only take switches\
+    \ which are to be entered by the user.\nIn the switch statement, ToLower() tells\
+    \ our compiler to convert what the user inputs to lowercase. Remember, blue and\
+    \ Blue are as far as C# is concerned. break is a keyword that's used to stop the\
+    \ execution of a particular code block.\n\nswitch statements allow you to add\
+    \ default actions. This means that if a user inputs something that's not case,\
+    \ the program will execute the default action. Here is an example of that:\n\n\
+    ```\nstatic void Main(string[]) args\n{\n    Console.WriteLine(\"Choose a color:\
+    \ blue, green, red, or orange.\");\n    string color = Console.ReadLine();\n \
+    \   switch (color.ToLower())\n{\n        case \"blue\":\n        case \"green\"\
+    :\n        case \"red\":\n            Console.WriteLine(\"We have this in stock.\"\
+    );\n            break;\n        case \"orange\":\n            Console.WriteLine(\"\
+    We don't have this in stock.\");\n            break;\n    }\n}\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "```\ndefault:\n    Console.WriteLine(\"Re-run the program and type the correct\
+    \ color.\");\n    break;\n}\nConsole.ReadLine();\n}\n```\n\nWith the default action,\
+    \ a user will get a nice message and not a blank line telling him or her what\
+    \ to do after entering an unrecognized string. You can think of yellow as an example."
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Chapter 6: Loops\n\nYou may want to repeat a part of your code several times.\
+    \ This means you would have to rewrite that code as many times as you want it\
+    \ repeated. However, that is inefficient. You can easily get around this problem\
+    \ with loops. Let's discuss the different types you have at your disposal.\n\n\
+    # The Simplest of all loops\n\nThis is the simplest of all loops. It executes\
+    \ your code as long as a condition you have specified in the while statement stays\
+    \ true. This means that if the condition evaluates true, the code block of the\
+    \ while statement will be executed. The program will recheck the condition, if\
+    \ it is still true, it will re-execute the code of the while statement. This will\
+    \ go on until the condition evaluates to false. After this, the program will move\
+    \ on to the next line in your code. Here is an example:\n\n```\nstatic void Main(string[])\
+    \ args\n{\n    int x = 0;\n\n    while (x < 5)\n    {\n        Console.WriteLine(\"\
+    The value of x is {0}\", + x);\n        x++;\n    }\n\n    Console.ReadLine();\n\
+    }\n```\n\nOutput:\n\nThe value of x is 0\nThe value of x is 1\nThe value of x\
+    \ is 2\nThe value of x is 3\nThe value of x is 4\n\nIn the above example, the\
+    \ while statement has been designed to check the value of x. If x is less than\
+    \ 5, its value should be printed on screen. x++ tells our program to look at the\
+    \ value of x at any given time and add 1 to it. You can alternatively write this\
+    \ as x = x + 1.\n\nIn the first instance the while statement is run, x is equal\
+    \ to 0. Being less than 5, 0 is printed on screen. The program then returns to\
+    \ the while statement and equals x. This time, x is 1. So it is printed on"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "screen. This goes until x becomes 5, which makes the while statement return\
+    \ False. So the code block\nof the while statement is not executed and the program\
+    \ moves to the next line (Console.ReadLine()).\n\nYou might have noticed {0} inside\
+    \ the statement that prints the value of x on screen. The zero is a\nplaceholder.\
+    \ And it represents the variable x, which is on position zero at the end of that\
+    \ statement.\n\n# Do...While Loop\n\nThis is the same as while loop. The only\
+    \ difference is that in the Do...While loop, the code block is\nexecuted first\
+    \ and the condition is checked later. So your code gets executed at least once.\
+    \ Here is an\nexample:\n\n```\nstatic void Main(string[]) args\n{\n    int x =\
+    \ 0;\n\ndo{\n        Console.WriteLine(\"The value of x is {0}\", x);\n      \
+    \  x++;\n    }while (x < 6);\n    Console.ReadLine();\n}\n```\n\nTry changing\
+    \ the value of x to 7 and observe what happens.\n\n# For Loop\n\nThis is one of\
+    \ the most popular loops you can use. And it repeats your code for a specific\
+    \ number of\ntimes. Here is its syntax:\n\n```\nfor (initialize value; state condition;\
+    \ state increment/decrement)\n{\n    statement(s);\n}\n```\n\nHere is an example\
+    \ you can try:\n\n```\nstatic void Main(string[]) args\n{\n    for (int x = 0;\
+    \ x < 5; x++)\n    {\n        Console.WriteLine(\"Value of x: {0}\", x);\n   \
+    \ }\n    Console.ReadLine();\n}\n```\n\nOutput:"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "Value of x: 0\n\nValue of x: 1\n\nValue of x: 2\n\nValue of x: 3\n\nValue of\
+    \ x: 4\n\nIn the **for** statement, we have 0 as the value of x. **x < 5** is\
+    \ a bool condition which will evaluate to True or False. x++ adds 1 to the current\
+    \ value of x.\n\n# Foreach\n\nThis works in the same way as **for** loop. **foreach**\
+    \ is best used when you want to loop items in an array. **foreach** is easier\
+    \ to read and less prone to errors than **for** loop. Here is an example:\n\n\
+    ```\nstatic void Main(string[] args)\n{\n    string[] boyNames = new string[]\
+    \ {\n        \"John\",\n        \"Emmanuel\",\n        \"Fred\",\n        \"Tom\"\
+    ,\n        \"Mike\"\n    };\n\n    foreach (string Name in boyNames)\n    {\n\
+    \        Console.WriteLine(\"Boy Name: {0}\", Name);\n    }\n    Console.ReadLine();\n\
+    }\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Chapter 7: Understanding Methods\n\nWe briefly looked at methods earlier\
+    \ in the book. In this chapter, we will dive deeper into this topic as it's important.\n\
+    \nSo far, the programs we have created have our code go into the Main() method.\
+    \ There is no problem with this since most of them had single tasks to perform.\
+    \ But as your code grows, you will find necessary to add other methods. Similar\
+    \ functions will be grouped together, making your code easier to read and reusable.\
+    \ You will also have a chance to hide some information and avoid duplication.\\\
+    \n\t\t\tnWhen creating a method, ensure that you contain it in a class. And do\
+    \ not get carried away to include too many functions in the method—just one is\
+    \ enough.\n\n# How to Define a Method\n\nHere is the syntax you can use when specifying\
+    \ methods:\n\n```\nAccessLevel ReturnValueType MethodName(ParamList)\n{\n    Statements\n\
+    }\n```\n\n**Access Level**: this uses access modifiers to specify the visibility\
+    \ of a method. **private** means the method can only be seen by every other elements\
+    \ in the class. **public** refers to methods freely visible to everyone and everything.\
+    \ **protected** is for methods with their access restricted to the class and derived\
+    \ classes.\n\n**Return Value Type**: a method can return a value. And you use\
+    \ data types to indicate the value a method should return. **int**, for instance,\
+    \ means the method will return an integer while **void** means it will return\
+    \ nothing.\n\n**Method Name**: this is just an identifier. And you must follow\
+    \ the rules used when making identifiers.\n\n**Parameter List**: this comes in\
+    \ a pair of parentheses. If you have more than one parameter, separate them with\
+    \ commas. Parameters pass and receive data to the method. If you have empty parentheses,\
+    \ it means you have no parameters.\n\n**Statements**: this is the code to be executed,\
+    \ and it's enclosed in curly brackets.\n\nHere is an example on this:\n\n```\n\
+    public void sampleMethod()\n{\n    Console.WriteLine(\"My sample method has been\
+    \ called.\");\n}\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# Calling a Method\n\nThe above method (sampleMethod()) can be called from\
+    \ another method. Here is an example:\nusing System;\n\n```\nclass Program {\n\
+    \    static void Main() {\n        Console.WriteLine(\"This is the main method.\"\
+    );\n        sampleMethod();\n        Console.ReadLine();\n    }\n\n    public\
+    \ static void sampleMethod() {\n        Console.WriteLine(\"My sample method has\
+    \ been called.\");\n    }\n```\n\nWhen the program executes the Main method, it\
+    \ will first display \"This is the main method.\" The next line, however, tells\
+    \ it to execute sampleMethod(). So the program will leave Main() and go to sampleMethod().\
+    \ After it is done with, it will go back to Main to execute Console.ReadLine().\n\
+    \nYou might have noticed that I have added static in the sampleMethod. That's\
+    \ because I cannot call a non-static Method into a static one.\n\n# Popular Statements\n\
+    \nThe Return Statement\nMethods can be coded to return values into other methods.\
+    \ Consider the below example:\n\n```\nnamespace ConsoleApplication {\nclass Addition\
+    \ {\n    static void Main() {\n        addInt(10, 30);\n    }\n\n    static void\
+    \ addInt(int a, int b) {\n        int c = a + b;\n        Console.WriteLine(\"\
+    Adding {0} and {1} brings {2} as the answer.\", a, b, c);\n    }\\}\n```"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "```\nConsole.ReadLine();\n}\n}\n```\n\nIn the above example, addInt is being\
+    \ called in the Main. We can rewrite this code to only return the result when\
+    \ addInt is called. Here is how our code will look like:\n\n```\nnamespace ConsoleApplication1\n\
+    {\n    class Addition\n    {\n        static void Main()\n        {\n        \
+    \    int result = addInt(10, 30);\n            Console.WriteLine(\"The answer\
+    \ is {0}\", result);\n            Console.ReadLine();\n        }\n\n        static\
+    \ int addInt(int a, int b)\n        {\n            int c = a + b;\n          \
+    \  return c;\n        }\n    }\n}\n```\n\nThe addInt method had to have its value\
+    \ changed from void to int, which stops it from returning to nothing. return c\
+    \ also had to be added in the statements, replacing the code that printed the\
+    \ answer on screen. Now we have addInt returning a value to the method it is called\
+    \ from, we need to capture that return value in the Main method, which is where\
+    \ addInt is being called. The line that has int result = addInt(10, 30) accomplishes\
+    \ this.\n\n# The break Statement\n\nThis is one other important statement in C#.\
+    \ When you have a break in a certain code block, the program will terminate that\
+    \ code and move on to the next code block. Here is an example:\n\nnamespace breakExample\n\
+    \n```\n{\n    class Program\n    {\n        static void Main(string[] args)\n\
+    \        {\n            int a = 5;\n            while (a < 15)\n        }\n  \
+    \  }\n}\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\n{\n  Console.WriteLine(a);\n  if (a == 9)\n  {\n    Console.WriteLine(\"\
+    Break statement encountered.\");\n    break;\n  }\n  a++;\n}\nConsole.ReadLine();\n\
+    }\n```\n\nIn the above example, the program cannot display any numbers greater\
+    \ than 9 because it has been instructed to break once a becomes 9."
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Chapter 8: Using Arrays
+
+
+    An array is a collection of data of a similar type. Arrays can hold more than
+    one item (also called element) at a time. Each of these items has an index representing
+    it; for example, the index of the first item is 0 while the index of the second
+    item is 1. Although you can use variables to hold data, arrays save time.
+
+
+    Here is the syntax of an array:
+
+
+    ```
+
+    dataType[] arrayName;
+
+    ```
+
+
+    +   - dataType represents the type of data an array can hold. This can be int,
+    string, char, etc.
+
+    - The square brackets indicate that this is an array.
+
+    - The arrayName is just an identifier.
+
+
+    # Declaring and Initializing Arrays
+
+
+    When initializing an array, you must use the new keyword. Here is an example:
+
+
+    ```
+
+    int[] num = new int[5];//This is how you declare a single-dimensional array
+
+    ```
+
+
+    The 5 in the square brackets indicates the number of values the array can hold.
+    Such an array is said to be one-dimensional. Here is an example of a multi-dimensional
+    array:
+
+
+    ```
+
+    string[,] couples = new string[3, 2];// Declaring a multi-dimensional array
+
+    ```
+
+
+    With multi-dimensional arrays, a comma goes inside the first square brackets.
+    The second bracket, [3, 2], indicates that we have 3 pairs of couples. For a better
+    understanding of this, let''s look at examples. We will start with the num array:
+
+
+    ```
+
+    int[] num = new int[5] { 1, 2, 3, 4, 5 };//declaration and initialization at once
+
+    ```
+
+
+    Or we can rewrite this:
+
+
+    ```
+
+    int[] num = new int[5]; //this declares the array
+
+    ```
+
+
+    ```
+
+    //initializes the array
+
+    num[0] = 1;//the 0 in the square brackets is the index
+
+    num[1] = 2;
+
+    num[2] = 3;
+
+    num[3] = 4;
+
+    num[4] = 5;
+
+    ```'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'Now let''s look at how you can initialize a multi-dimensional array. We will
+    use the couples array from
+
+    above:
+
+
+    string[], couples = new string[3, 2] {"John","Loyce"},{"James","Linda"},{"Vincent","Mary"};
+
+
+    # Accessing Arrays
+
+
+    To access an element in an array, use the index. For example, if I want to access
+    the element at index 1, I
+
+    need to put it in square brackets just after the array name. Here is an example:
+
+
+    ```
+
+    static void Main(string[]) args
+
+    {
+
+    int[] num = new int[5]; //this declares the array
+
+
+    // initializes the array
+
+    num[0] = 1; //the 0 in the square brackets is the index
+
+    num[1] = 2;
+
+    num[2] = 3;
+
+    num[3] = 4;
+
+    num[4] = 5;
+
+
+    // accessing an array
+
+    Console.WriteLine("The first number is {0}", num[0]);
+
+    Console.WriteLine("The second number is {0}", num[1]);
+
+    Console.WriteLine("The third number is {0}", num[2]);
+
+    Console.WriteLine("The fourth number is {0}", num[3]);
+
+    Console.WriteLine("The fifth number is {0}", num[4]);
+
+
+    Console.ReadLine();
+
+    }
+
+    ```
+
+
+    To access elements in a multi-dimensional array, here is a code you can copy and
+    paste it just after
+
+    t opening bracket of the main method:
+
+
+    string[], couples = new string[3, 2] {"John","Loyce"},{"James","Linda"},{"Vincent","Mary"};
+
+
+    ```
+
+    //accessing an array
+
+    Console.WriteLine("The first couple is {0} and {1}", couples[0, 0], couples[0,
+    1]);
+
+    Console.WriteLine("The second couple is {0} and {1}", couples[1, 0], couples[1,
+    1]);
+
+    Console.WriteLine("The third couple is {0} and {1}", couples[2, 0], couples[2,
+    1]);
+
+
+    Console.ReadLine();
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# Chapter 9: Exception Handling\n\nAn exception is an error that occurs at\
+    \ runtime. Here is a popular example: assume you've created a program that returns\
+    \ a result after dividing two numbers that have to be entered by the user. Now\
+    \ imagine a situation where a user enters 0 as the other number. This will cause\
+    \ an error and the program will crash. Exception handling comes in to keep this\
+    \ from happening. If you employ it, the program will display a message about the\
+    \ error and continue running.\n\nTo use exception handling, you need three important\
+    \ blocks of code: **try, catch, and finally**. But you may also add a fourth called\
+    \ **throw**:\n\n+   - try: this is a keyword. And it identifies a block of code\
+    \ which may cause an exception.\n- catch: this is also another keyword. And it\
+    \ handles the exception after try has raised it.\n- finally: this block of code\
+    \ is executed whether there is an exception or not.\n- throw: another keyword\
+    \ used to add user defined exception messages.\n\nLet's look at an example:\n\n\
+    ```\nstatic void Main(string[] args)\n{\n  int num1,num2;\n  decimal result;\n\
+    \n  Console.WriteLine(\"This program divides two numbers\");\n  Console.WriteLine(\"\
+    Enter the first Number: \");\n  num1 = Convert.ToInt32(Console.ReadLine());\n\
+    \  Console.WriteLine(\"Enter the second Number: \");\n  num2 = Convert.ToInt32(Console.ReadLine());\n\
+    }\n```\n\n```\nresult = (decimal)num1 / (decimal)num2;\nConsole.WriteLine(\"The\
+    \ answer is \" + result.ToString());\nConsole.ReadLine();\n```\n\nCopy this code\
+    \ into the editor and run the program. On your first run, input 4 as the first\
+    \ number and 2 as the second number. As you will see, you should have no troubles.\
+    \ Close the console and run the program again. This, enter any number and 0.\n\
+    \nThe program will crash, staining our coding abilities in the eyes of our users.\
+    \ Frankly, we have exception handling. Here is a code that can save us from the\
+    \ embarrassment:\n\n```\nstatic void Main(string[] args)\n{\nMainBlock:\n//This\
+    \ is the try block\ntry\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    {
+
+    int num1, num2;
+
+    decimal result;
+
+
+    Console.WriteLine("This program divides two numbers");
+
+    Console.WriteLine("Enter the first Number: ");
+
+    num1 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("Enter the second Number: ");
+
+    num2 = Convert.ToInt32(Console.ReadLine());
+
+
+    result = (decimal)num1 / (decimal)num2;
+
+    Console.WriteLine("The answer is " + result.ToString());
+
+    }
+
+    ```
+
+
+    ```
+
+    //This is the catch block to handle exception
+
+    catch (DivideByZeroException dex)
+
+    {
+
+    Console.WriteLine("Entering 0 raises an exception!");
+
+    Console.WriteLine("Details about Error: " + dex.ToString());
+
+    goto MainBlock;
+
+    }
+
+    ```
+
+
+    ```
+
+    //This is the finally block
+
+    finally
+
+    {
+
+    Console.ReadLine();
+
+    Console.WriteLine("Press Enter to close or reload the program");
+
+    Console.ReadLine();
+
+    }
+
+    ```
+
+
+    After running the program, input any number and 0. This program will not crash.
+    Rather, it will display an error and allow you to rerun it by pressing Enter.
+
+
+    Know that goto is a keyword that instructs a program to jump to a certain label
+    in your code. In the above example, the label is MainBlock.
+
+
+    # User-Defined Exceptions
+
+
+    In C#, you can create your own exceptions. These are called user generated exceptions
+    or custom exceptions. And they use the throw keyword we already talked about.
+    Study this example:
+
+
+    ```
+
+    namespace userDefinedException
+
+    {
+
+    class Program
+
+    {
+
+    static void Main(string[] args)
+
+    {}
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\nint maxR;\nConsole.WriteLine(\"Please rate the last movie you just watched.\
+    \ The rating goes from 1 (very\nbad) to 5 (very exciting).\\nmaxR = Convert.ToInt32(Console.ReadLine());\n\
+    try\n{\n    if (maxR <= 5)\n    {\n        Console.WriteLine(\"You have given\
+    \ a rating of {0}. Thank you for your input!\", maxR);\n        Console.ReadLine();\n\
+    \    }\n    else\n    {\n        throw (new wrongR(\"Wrong Rating Exception: This\
+    \ rating is not valid.\"));\n    }\n}\ncatch (wrongR oex)\n{\n    Console.WriteLine(oex.Message.ToString());\n\
+    \    Console.ReadLine();\n}\n\n```\n\n//This code creates a custom exception called\
+    \ wrongR\npublic class wrongR : Exception\n{\n    public wrongR(string message)\n\
+    \    : base(message)\n}\n\n\nIf you enter 1 to 5 after running the program as\
+    \ it recommends, the custom exception will not be\nexecuted. However, if you enter\
+    \ a rating that's above 5, the program will bring an error."
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# Chapter 10: Inheritance\n\nThis is one of the most important concepts in\
+    \ C#. And you can bet that you will be using it a lot. With this, you can make\
+    \ a class inherit the properties of another class. This will save you time you\
+    \ would have spent coding functions you already have. Your code will be reusable\
+    \ and programs will be simple and efficient to run.\n\nThe base class, which you\
+    \ can think of as the parent, defines the properties. The derived class, also\
+    \ called the child class, borrows those properties.\n\nHere is the syntax:\n\n\
+    ```\naccessSpecifier class baseClass\n{\n    Statements\n}\n```\n\n```\nclass\
+    \ derivedClass : baseClass\n{\n    Statements\n}\n```\n\nIn the derived class,\
+    \ start with the keyword class. Then write the class name followed by a colon\
+    \ and then the name of the base class. The colon tells the program to inherit\
+    \ properties from the base class. Let's look at an example:\n\n```\nnamespace\
+    \ Inheritance_Example\n{\n    class Program\n    {\n        static void Main(string[]\
+    \ args)\n        {\n            Eagle b1 = new Eagle();\n            b1.EagleInfo();\n\
+    \n            Owl b2 = new Owl();\n            b2.OwlInfo();\n\n            Chicken\
+    \ b3 = new Chicken();\n            b3.ChickenInfo();\n\n            Console.ReadKey();\n\
+    \        }\n    }\n}\n//This is the base class\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\nclass Bird\n{\n    protected void BirdInfo()\n    {\n        Console.WriteLine(\"\
+    It has a pair of wings and a pair of feet.\");\n        Console.ReadLine();\n\
+    \    }\n}\n```\n\n```\n//This is the first derived class\nclass Eagle : Bird\n\
+    {\n    public void EagleInfo()\n    {\n        Console.WriteLine(\"This is an\
+    \ Eagle, a bird.\");\n        BirdInfo();\n    }\n}\n```\n\n```\n//This is the\
+    \ second derived class\nclass Owl : Bird\n{\n    public void OwlInfo()\n    {\n\
+    \        Console.WriteLine(\"This is an Owl, a bird.\");\n        BirdInfo();\n\
+    \    }\n}\n```\n\n```\n//This is the third derived class\nclass Chicken : Bird\n\
+    {\n    public void ChickenInfo()\n    {\n        Console.WriteLine(\"This is a\
+    \ chicken, a bird.\");\n        BirdInfo();\n    }\n}\n```\n\nChicken, owl, and\
+    \ eagle are all birds. And we know that they have wings and feet. So of writing\
+    \ in each of the derived classes that each of these birds has wings and feet,\
+    \ we can simply create a base class that contains these common features. Each\
+    \ derived class will then inherit those common features and also add its own,\
+    \ which in this case, is the line that tells us the type of bird we are looking\
+    \ at."
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'Know that any class can become a base: for example, if I want to make chicken
+    the base and owl the derived class, I can write the code this way:
+
+
+    ```
+
+    class Owl : Chicken
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Conclusion
+
+
+    Thank you for reading the book, I hope it has helped you learn how to get started
+    coding in C#. By now, I''m sure you can create simple console programs.
+
+
+    However, this is not the end: you should keep practicing. Come up with program
+    ideas you can code. In addition, take time to study code written by other people.
+    It also helps to think of complex programs you already know and try to build them.
+    Experimenting is one of the best ways to improve your coding abilities.
+
+
+    If you stumble on something, which will happen a lot as you are just getting started,
+    let the internet be your best friend. There are lots of forums that offer coding
+    advice.
+
+
+    Getting good at coding takes time and hard work. I wish you good luck as you develop
+    as a programmer.'
+  merge: -1
+  pgno: 41
