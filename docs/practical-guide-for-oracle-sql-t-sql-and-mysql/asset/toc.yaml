@@ -1,0 +1,529 @@
+- - '#'
+  - Oracle SQL、T-SQL 和 MySQL 实用指南
+- - '#'
+  - 前言
+- - '##'
+  - 第10章 连接
+- - '##'
+  - 关于作者
+- - '##'
+  - 第1章
+- - '#'
+  - SQL 和关系型数据库简介
+- - '##'
+  - SQL 和数据库系统的简史
+- - '###'
+  - 1.1 SQL 和数据库发展历史
+- - '###'
+  - 1.2 SQL 标准
+- - '###'
+  - 1.3 Oracle、SQL Server 和 MySQL 版本
+- - '##'
+  - RDBMS 简介
+- - '##'
+  - 关系型数据库基本概念
+- - '##'
+  - 属性
+- - '###'
+  - 属性的类型
+- - '##'
+  - 'NULL'
+- - '##'
+  - 约束
+- - '##'
+  - 数据完整性
+- - '##'
+  - 关系类型
+- - '##'
+  - 一对多关系
+- - '##'
+  - 多对多关系
+- - '##'
+  - 自引用关系
+- - '##'
+  - 10 SQL 与关系型数据库简介
+- - '##'
+  - 总结
+- - '#'
+  - 第 2 章
+- - '#'
+  - 数据类型
+- - '##'
+  - 字符数据类型
+- - '##'
+  - 数字数据类型
+- - '###'
+  - NUMBER (p, s) (Oracle)
+- - '###'
+  - DECIMAL (p, s) (T-SQL)
+- - '###'
+  - Oracle 数字示例
+- - '##'
+  - 日期和时间数据类型
+- - '##'
+  - 布尔类型
+- - '##'
+  - 总结
+- - '#'
+  - 第 3 章
+- - '##'
+  - 最低系统要求
+- - '##'
+  - Oracle 12c 安装
+- - '##'
+  - 第 3 章 安装 Oracle、SQL Server 和 MySQL
+- - '##'
+  - SQL Server 2016 安装
+- - '##'
+  - 以下需要翻译的文本
+- - '##'
+  - 'are database database tools tools: Command line tools and graphic user interface
+    tools. Command Line Tools including Oracle SQL Plus and MySQL Command Client.
+    Graphic User Interface Tools include Oracle SQL Developer, SQL Server Management
+    Studio and MySQL Workbench.'
+- - '##'
+  - Command Line Tools
+- - '###'
+  - Oracle SQL Plus
+- - '##'
+  - MySQL 命令行客户端
+- - '##'
+  - 图形用户界面工具
+- - '##'
+  - Oracle SQL Developer 的安装
+- - '##'
+  - SQL Server Management Studio 的安装
+- - '#'
+  - 第 4 章 数据库开发工具
+- - '##'
+  - MySQL Workbench 的安装
+- - '##'
+  - 在 GUI 中创建数据库 (MySQL)
+- - '##'
+  - 删除数据库
+- - '##'
+  - 创建表
+- - '###'
+  - 1. 使用 SQL 命令创建表
+- - '##'
+  - 创建 Regions 表
+- - '##'
+  - 创建 Country 表
+- - '##'
+  - 创建 Departments 表
+- - '##'
+  - 创建 Employees 表
+- - '##'
+  - 创建 Locations 表
+- - '##'
+  - 创建 Job 表
+- - '##'
+  - 3) MySQL
+- - '##'
+  - 删除表 (Dropping a Table)
+- - '##'
+  - 清空表 (Truncating a Table)
+- - '##'
+  - 修改表（修改列） (Altering a Table - Modifying a Column)
+- - '##'
+  - 修改表（添加列） (Altering a Table - Adding a Column)
+- - '##'
+  - 总结 (Summary)
+- - '##'
+  - 练习 (Exercises)
+- - '#'
+  - 第6 章 数据操作语言 (DML)
+- - '##'
+  - 向部门表（Departments Table）插入数据
+- - '##'
+  - 向国家表（Country Table）插入数据
+- - '##'
+  - 向工作表（Job Table）插入数据
+- - '##'
+  - 工作表
+- - '##'
+  - 向地点表（Location Table）插入数据
+- - '##'
+  - 向区域表（Regions）插入数据
+- - '##'
+  - 区域表（Regions Table）
+- - '##'
+  - SELECT 语句
+- - '##'
+  - SELECT 所有列
+- - '###'
+  - 选择特定列
+- - '###'
+  - DISTINCT 子句
+- - '###'
+  - WHERE 子句
+- - '##'
+  - 算术运算符
+- - '##'
+  - 算术运算符的优先级
+- - '##'
+  - 比较运算符
+- - '##'
+  - AND 条件
+- - '##'
+  - OR 条件
+- - '##'
+  - IN 条件
+- - '##'
+  - BETWEEN 条件
+- - '##'
+  - IS NULL
+- - '##'
+  - IS NOT NULL
+- - '##'
+  - LIKE 条件
+- - '##'
+  - ORDER BY 子句
+- - '##'
+  - 使用别名
+- - '##'
+  - 从现有表插入多条记录
+- - '##'
+  - UPDATE 语句
+- - '##'
+  - DELETE 语句
+- - '#'
+  - 数据控制语言 5 DCL
+- - '##'
+  - 语法
+- - '##'
+  - 总结
+- - '##'
+  - 练习
+- - '###'
+  - '6.1'
+- - '###'
+  - '6.2'
+- - '###'
+  - '6.3'
+- - '###'
+  - '6.4'
+- - '###'
+  - '6.5'
+- - '###'
+  - '6.6'
+- - '###'
+  - '6.7'
+- - '###'
+  - '6.8'
+- - '###'
+  - '6.9'
+- - '###'
+  - '6.10'
+- - '###'
+  - '6.11'
+- - '###'
+  - '6.12'
+- - '###'
+  - '6.13'
+- - '###'
+  - '6.14'
+- - '#'
+  - 第 7 章
+- - '##'
+  - 聚合函数和 GROUP BY 子句
+- - '##'
+  - 聚合函数
+- - '###'
+  - SUM ( ) 函数
+- - '##'
+  - GROUP BY 和 HAVING 子句
+- - '###'
+  - 语法
+- - '###'
+  - 使用 AVG () 函数 GROUP BY
+- - '###'
+  - 使用 COUNT ( ) 函数 GROUP BY
+- - '###'
+  - 带 HAVING GROUP BY 示例
+- - '##'
+  - 总结
+- - '##'
+  - 练习
+- - '#'
+  - 第8 章函数
+- - '##'
+  - 常用数值函数
+- - '###'
+  - CEIL () – Oracle 和 MySQL
+- - '###'
+  - FLOOR ()
+- - '###'
+  - GREATEST () – Oracle 和 MySQL
+- - '###'
+  - LEAST ( ) – Oracle 和 MySQL
+- - '###'
+  - MOD () – Oracle 和 MySQL
+- - '##'
+  - POWER ()
+- - '##'
+  - ROUND ()
+- - '##'
+  - SQRT ()
+- - '##'
+  - TRUNC ()
+- - '##'
+  - 常用字符串函数
+- - '###'
+  - CONCAT ()
+- - '###'
+  - CONCAT () 使用 Oracle || 运算符或 T-SQL ' +' 运算符
+- - '###'
+  - FORMAT () – MySQL
+- - '###'
+  - LEFT () – T-SQL & MySQL
+- - '###'
+  - INITCAP () – Oracle
+- - '###'
+  - LENGTH () – Oracle & MySQL
+- - '###'
+  - LOWER ()
+- - '###'
+  - LPAD () – Oracle 和 MySQL
+- - '###'
+  - LTRIM ()
+- - '###'
+  - REPLACE ()
+- - '###'
+  - RIGHT () – T-SQL & MySQL
+- - '###'
+  - RPAD () – Oracle 和 MySQL
+- - '###'
+  - RTRIM ()
+- - '###'
+  - SUBSTR () / SUBSTRING ()
+- - '###'
+  - UPPER ()
+- - '##'
+  - 常用日期时间函数
+- - '###'
+  - CURRENT_TIMESTAMP
+- - '###'
+  - Add_Months () – Oracle
+- - '###'
+  - 语法
+- - '###'
+  - DATEADD () – T-SQL
+- - '###'
+  - 语法
+- - '###'
+  - DATE_ADD () – MySQL
+- - '###'
+  - 语法
+- - '###'
+  - MONTHS_BETWEEN ( ) – Oracle
+- - '###'
+  - DATEDIFF ( ) – T-SQL
+- - '###'
+  - PERIOD_DIFF ( ) – MySQL
+- - '###'
+  - SYSDATE – Oracle
+- - '###'
+  - SYSDETIME ( ) – T-SQL
+- - '###'
+  - SYSDATE ( ) – MySQL
+- - '##'
+  - 转换函数
+- - '###'
+  - CAST ()
+- - '###'
+  - TO_DATE ( ) – Oracle
+- - '###'
+  - CONVERT ( ) – T-SQL
+- - '###'
+  - STR_TO_DATE () – MySQL
+- - '##'
+  - 总结
+- - '##'
+  - 练习题
+- - '###'
+  - '8.1'
+- - '###'
+  - '8.2'
+- - '###'
+  - '8.3'
+- - '#'
+  - 第九章
+- - '##'
+  - 1. UNION, UNION ALL
+- - '##'
+  - 3. MINUS (Oracle), EXCEPT (T-SQL), NOT IN (MySQL)
+- - '##'
+  - 4. ROWNUM (Oracle), TOP (T-SQL) and LIMIT (MySQL)
+- - '##'
+  - 5. 子查询
+- - '##'
+  - 6. CASE
+- - '##'
+  - 语法
+- - '##'
+  - 7. SEQUENCE (Oracle), IDENTITY (T-SQL), AUTO_INCREMENT (MySQL)
+- - '##'
+  - Oracle 样式
+- - '##'
+  - T-SQL 样式
+- - '##'
+  - MySQL 样式
+- - '##'
+  - Oracle SEQUENCE 示例
+- - '#'
+  - 第 9 章 高级 SQL
+- - '##'
+  - T-SQL IDENTITY 示例
+- - '##'
+  - MySQL AUTO_INCREMENT 示例
+- - '##'
+  - 总结
+- - '##'
+  - 练习
+- - '###'
+  - '9.1'
+- - '###'
+  - '9.2'
+- - '#'
+  - 第 10 章
+- - '##'
+  - 语法
+- - '##'
+  - 旧语法
+- - '##'
+  - 使用 JOIN 子句 (Oracle)
+- - '##'
+  - 连接两个及以上的表
+- - '##'
+  - LEFT JOIN (左连接)
+- - '##'
+  - 推荐的 SQL 风格
+- - '##'
+  - 总结
+- - '##'
+  - 练习
+- - '###'
+  - '10.1'
+- - '###'
+  - '10.2'
+- - '###'
+  - '10.3'
+- - '#'
+  - 第 11 章视图
+- - '##'
+  - 语法
+- - '##'
+  - 在 Oracle 中创建视图
+- - '##'
+  - 步骤 2：使用用户名和密码连接 HR schema：
+- - '##'
+  - 在 T-SQL 中创建视图
+- - '##'
+  - 在 MySQL 中创建视图
+- - '##'
+  - 更新视图
+- - '##'
+  - 删除视图
+- - '##'
+  - 总结
+- - '##'
+  - 练习
+- - '#'
+  - 第 12 章 数据导入与导出
+- - '##'
+  - Oracle 查询结果导出
+- - '##'
+  - SQL Server 查询结果导出
+- - '##'
+  - MySQL 查询结果导出
+- - '##'
+  - Oracle 数据导入
+- - '##'
+  - 2. 使用导入向导
+- - '##'
+  - MySQL 数据导入工具
+- - '##'
+  - 总结
+- - '##'
+  - 练习题
+- - '###'
+  - '12.1'
+- - '#'
+  - 第13章 存储过程
+- - '##'
+  - 什么是存储过程
+- - '##'
+  - 简单的存储过程
+- - '##'
+  - 创建 Oracle 存储过程的步骤
+- - '##'
+  - 简单存储过程的比较
+- - '##'
+  - Oracle 存储过程参数
+- - '##'
+  - SQL Server 存储过程参数
+- - '##'
+  - MySQL 存储过程参数
+- - '###'
+  - 创建带有 OUT 参数的 Oracle 存储过程
+- - '###'
+  - 执行带有 OUT 参数的 Oracle 过程
+- - '###'
+  - 创建带有 IN OUT 参数的 Oracle 存储过程
+- - '###'
+  - 执行带有 IN OUT 参数的 Oracle 过程
+- - '###'
+  - 创建带有 IN 参数的 SQL Server 存储过程
+- - '##'
+  - 执行带有 IN 参数的 SQL Server 存储过程：
+- - '##'
+  - 创建带有 IN 和 OUT 参数的 MySQL 存储过程：
+- - '##'
+  - 执行带有 IN 和 OUT 参数的 MySQL 过程：
+- - '##'
+  - 总结
+- - '##'
+  - 练习
+- - '###'
+  - '13.1'
+- - '##'
+  - 索引
+- - '###'
+  - A
+- - '###'
+  - B
+- - '###'
+  - C
+- - '###'
+  - F
+- - '###'
+  - D
+- - '###'
+  - E
+- - '###'
+  - G
+- - '###'
+  - H
+- - '###'
+  - I
+- - '###'
+  - J
+- - '###'
+  - K
+- - '###'
+  - L
+- - '###'
+  - M
+- - '###'
+  - N
+- - '###'
+  - O
+- - '###'
+  - P
+- - '###'
+  - Q
+- - '###'
+  - R
+- - '###'
+  - S
