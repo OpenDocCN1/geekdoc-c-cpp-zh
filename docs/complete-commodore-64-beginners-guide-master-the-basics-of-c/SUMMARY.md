@@ -1,0 +1,2 @@
++   [Complete Commodore 64 初学者指南：通过这本标志性 Commodore 64 编程综合指南，掌握编码基础](README.md)
++   [Complete Commodore 64 初学者指南：通过这本标志性 Commodore 64 编程综合指南，掌握编码基础](complete-commodore-64-beginners-guide-master-the-basics-of-c.md)
