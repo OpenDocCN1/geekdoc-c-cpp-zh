@@ -1,0 +1,2788 @@
+- img_proc: true
+  md: '# # OBJECT-ORIENTED
+
+    # PROGRAMMING IN C#
+
+
+    SUCCINCTLY
+
+
+    BY SANDER ROSSEL
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Object-Oriented Programming
+
+    in C# Succinctly
+
+
+    By
+
+    Sander Rossel
+
+
+    Foreword by Daniel Jebaraj
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Important licensing information. Please read.
+
+
+    This book is available for free download from www.syncfusion.com on completion
+    of a registration form.
+
+
+    If you obtained this book from any other source, please register and download
+    a free copy from
+
+    www.syncfusion.com.
+
+
+    This book is licensed for reading only if obtained from www.syncfusion.com.
+
+
+    This book is licensed strictly for personal or educational use.
+
+
+    Redistribution in any form is prohibited.
+
+
+    The authors and copyright holders provide absolutely no warranty for any information
+    provided.
+
+
+    The authors and copyright holders shall not be liable for any claim, damages,
+    or any other liability arising
+
+    from, out of, or in connection with the information in this book.
+
+
+    Please do not use this book if the listed terms are unacceptable.
+
+
+    Use shall constitute acceptance of the terms listed.
+
+
+    SYNCFUSION, SUCCINCTLY, DELIVER INNOVATION WITH EASE, ESSENTIAL, and .NET ESSENTIALS
+    are the
+
+    registered trademarks of Syncfusion, Inc.
+
+
+    Technical Reviewer: James McCaffrey
+
+
+    Copy Editor: Darren West, content producer, Syncfusion, Inc.
+
+
+    Acquisitions Coordinator: Hillary Bowling, online marketing manager, Syncfusion,
+    Inc.
+
+
+    Proofreader: Darren West, content producer, Syncfusion, Inc.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Table of Contents
+
+
+    The Story behind the Succinctly Series of Books ............................................................
+    7
+
+
+    About the Author .................................................................................................
+    9
+
+
+    Introduction to OOP ...............................................................................................
+    10
+
+
+    Why OOP? ............................................................................................................
+    10
+
+
+    Terminology ......................................................................................................
+    10
+
+
+    Chapter 1 The Three Pillars of OOP.......................................................................
+    12
+
+
+    Inheritance .......................................................................................................
+    12
+
+
+    Inheritance vs. Composition..................................................................................
+    15
+
+
+    Encapsulation..................................................................................................
+    16
+
+
+    Polymorphism ......................................................................................
+    18
+
+
+    The Takeaway ......................................................................................
+    19
+
+
+    Chapter 2 Interfaces..................................................................................
+    20
+
+
+    Explicitly Implementing Interfaces..................................................................
+    23
+
+
+    Inheritance vs. Interface ......................................................................
+    25
+
+
+    The Takeaway ......................................................................................
+    25
+
+
+    Chapter 3 SOLID .......................................................................
+    26
+
+
+    Single Responsibility Principle (SRP) ........................................
+    26
+
+
+    Open Closed Principle (OCP) ...................................................
+    27
+
+
+    Liskov Substitution Principle (LSP) ................................... 28
+
+
+    Interface Segregation Principle (ISP)................................... 29
+
+
+    Dependency Inversion Principle (DIP) ....................................... 30
+
+
+    Dependency Injection (DI) ...................................................
+    31
+
+
+    Inversion of Control (IoC)...................................................
+    35
+
+
+    The Takeaway..................................................................................
+    35
+
+
+    Chapter 4 Design Patterns .......................................................
+    36'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '+   Creational Patterns...............................................................................................36
+
+
+    +   Abstract Factory..............................................................................................37
+
+
+    +   Factory Method.....................................................................................................40
+
+
+    +   Singleton...............................................................................................................43
+
+
+    +   Structural Patterns...........................................................................................45
+
+
+    +   Adapter ................................................................................................46
+
+
+    +   Composite .............................................................................................49
+
+
+    +   Decorator.................................................................................................52
+
+
+    +   Behavioral Patterns...............................................................................55
+
+
+    +   Observer.............................................................................................55
+
+
+    +   Strategy ................................................................................................60
+
+
+    +   Template Method...............................................................................64
+
+
+    +   More Patterns......................................................................................67
+
+
+    +   Lazy Load...............................................................................................67
+
+
+    +   Model View Controller.........................................................................70
+
+
+    +   Repository.........................................................................................72
+
+
+    +   The Takeaway.......................................................................................74
+
+
+    # Chapter 5 General Responsibility Assignment Software Patterns or Principles
+    (GRASP) .................................................................75
+
+
+    +   Creator..................................................................................................75
+
+
+    +   Information Expert...............................................................................76
+
+
+    +   Low Coupling.......................................................................................78
+
+
+    +   High Cohesion.......................................................................................80
+
+
+    +   Pure Fabrication..................................................................................82
+
+
+    +   The Takeaway.....................................................................................83
+
+
+    # Chapter 6 Architecture..................................................................................84
+
+
+    +   Don''t Repeat Yourself (DRY)........................................................84'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   Packages ...........................................................................................................86
+
+
+    +   Reuse/Release Equivalence Principle (REP)................................................................86
+
+
+    +   Common Reuse Principle (CRP)...............................................................................86
+
+
+    +   Common Closure Principle (CCP)........................................................................86
+
+
+    +   Acyclic Dependencies Principle (ADP)................................................................87
+
+
+    +   Stable Dependencies Principle (SDP)................................................................88
+
+
+    +   Stable Abstractions Principle (SAP) .................................................88
+
+
+    +   Layers and Tiers...............................................................................................89
+
+
+    +   Architectural styles and patterns...............................................................90
+
+
+    +   The Takeaway ................................................................................90
+
+
+    # Chapter 7 Other Paradigms................................................................92
+
+
+    +   Procedural Programming..................................................................92
+
+
+    +   Functional Programming ................................................................92
+
+
+    +   Stateless programming ................................................................92
+
+
+    +   Aspect-Oriented Programming ................................................94
+
+
+    # Conclusion ................................................................................96'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# The Story behind the Succinctly Series of Books
+
+
+    Daniel Jebaraj, Vice President
+
+    Syncfusion, Inc.
+
+
+    taying on the cutting edge
+
+    As many of you may know, Syncfusion is a provider of software components for the
+
+    Microsoft platform. This puts us in the exciting but challenging position of always
+
+    being on the cutting edge.
+
+
+    Whenever platforms or tools are shipping out of Microsoft, which seems to be about
+
+    every other week these days, we have to educate ourselves, quickly.
+
+
+    # Information is plentiful but harder to digest
+
+
+    In reality, this translates into a lot of book orders, blog searches, and Twitter
+    scans.
+
+
+    While more information is becoming available on the Internet and more and more
+    books are
+
+    being published, even on topics that are relatively new, one aspect that continues
+    to inhibit us
+
+    the inability to find concise technology overviews.
+
+
+    We are usually faced with two options: read several 500+ page books or scour the
+    web for
+
+    relevant blog posts and other articles. Just as everyone else who has a job to
+    do and customers
+
+    serve, we find this quite frustrating.
+
+
+    # The Succinctly series
+
+
+    This frustration translated into a deep desire to produce a series of concise
+    technical books that
+
+    would be targeted at developers working on the Microsoft platform.
+
+
+    We freely believe, given the background knowledge such developers have, that most
+    topics can
+
+    translated into books that are between 50 and 100 pages.
+
+
+    This is exactly what we resolved to accomplish with the Succinctly series. Isn''t
+    everything
+
+    wonderful out of a deep desire to change things for the better?
+
+
+    # The best authors, the best content
+
+
+    Each author was carefully chosen from a pool of talented experts who shared our
+    vision. The
+
+    book you now hold in your hands, and the others available in this series, are
+    a result of the
+
+    authors'' tireless work. You will find original content that is guaranteed to
+    get you up and running
+
+    in about the time it takes to drink a few cups of coffee.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Free forever
+
+
+    Syncfusion will be working to produce books on several topics. The books will
+    always be free.
+
+    Any updates we publish will also be free.
+
+
+    # Free? What is the catch?
+
+
+    There is no catch here. Syncfusion has a vested interest in this effort.
+
+
+    # Let us know what you think
+
+
+    If you have any topics of interest, thoughts, or feedback, please feel free to
+    send them to us at
+
+    succinctly-series@syncfusion.com.
+
+
+    We sincerely hope you enjoy reading this book and that it helps you better understand
+    the topic
+
+    of study. Thank you for reading.
+
+
+    Please follow us on Twitter and "Like" us on Facebook to help us spread the
+
+    word about the Succinctly series!
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_7_0.png)
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_7_1.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# About the Author
+
+
+    Sander Rossel is a professional developer with over five years of working experience
+    in .NET (VB and C#, WinForms, MVC, Entity Framework), JavaScript, and SQL Server.
+
+
+    He has an interest in various technologies including, but not limited to, functional
+    programming, NoSQL, and software design.
+
+
+    He seeks to educate others on his blog, Sander''s Bits – Writing the code you
+    need, and on his CodeProject profile.
+
+
+    In his spare time he likes to play games, watch a movie, and listen to music.
+    He currently lives with his cat, Nika, in the Netherlands.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# # Introduction to OOP
+
+
+    Object-oriented programming, or OOP for short, has been around since the 60''s
+    and is now the de facto standard programming paradigm. The programming language
+    Simula first adopted OOP concepts in the 60''s. Later, these concepts were taken
+    further by the first OOP language, Smalltalk. OOP started to really pick steam
+    in the 90''s with languages such as Java. C# and .NET principles that are discussed
+
+
+    OOP is a powerful concept that solves many problems in software development. OOP
+    is not the holy grail of programming, but as we will see through this book, it
+    can help in writing code that is easy to read, easy to maintain, easy to update,
+    and easy to expand.
+
+
+    The concepts in this book are not unique to C#. Other object-oriented languages,
+    such as Java, C++ and Python, share principles discussed throughout this book.
+
+
+    The included code samples were all tested in the free Community Edition of Visual
+    Studio 2015 and were created in .NET 4 (though most will also run in earlier versions
+    of .NET).
+
+
+    Throughout this book I''m assuming basic knowledge of C#. If you know how to write
+    a class and declare a variable, you''re pretty much good to go.
+
+
+    # ## Why OOP?
+
+
+    OOP is all about architecting your software. Let''s compare software to a house.
+    Would you want a bunch of builders to start building your house without predefined
+    rules and agreements? I bet! Your house would be a mess. Still, that''s what often
+    happens in software and, as expected, a lot of software turns out a mess! Returning
+    to our house metaphor, let''s say your lamps were built into the ceiling. Whenever
+    a lamp broke you''d need a new ceiling! Luckily, that''s not the case. Yet in
+    software, when a small detail needs to change, we often find ourselves rewriting
+    huge pieces of code. And in many cases functionality that had nothing to do with
+    the change breaks away. By abstracting away certain functionality we can just
+    worry about the detail and we''re sure other parts of the system won''t break.
+    On top of that we can reuse code if that functionality needs to change we''re
+    sure it''s changed everywhere where we use it. How that''s done become clear throughout
+    the book.
+
+
+    # ## Terminology
+
+
+    Before we dive into OOP it''s important that we get some terminology straight.
+
+
+    Often, we see the class and object used interchangeably. Let''s get out of the
+    way, they are two different things. A class is a blueprint for an object. It contains
+    the methods and properties that will eventually define the behavior of an object.
+    An object is the actual instance of a class, created at runtime using the new
+    keyword.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "In the following code listing we'll see an example of a Person class. It doesn't\
+    \ do anything, it just sits there.\n\n# Code Listing 1: A Class\n\n```\npublic\
+    \ class Person {\n    public string FirstName { get; set; }\n    public string\
+    \ LastName { get; set; }\n    public string GetFullName() {\n        return FirstName\
+    \ + \" \" + LastName;\n    }\n}\n```\n\nNow the usage of this class can see how\
+    \ as follows:\n\n# Code Listing 2: Object Instantiation and Usage\n\n```\nPerson\
+    \ personObject = new Person();\npersonObject.FirstName = \"Sander\";\npersonObject.LastName\
+    \ = \"Rossel\";\nstring fullName = personObject.getFullName();\n```\n\nIn the\
+    \ previous code listing, we can see how one or more types is instantiated from\
+    \ a class by calling its constructor (using the new keyword).\n\nLet's go a bit\
+    \ further. Each object has one or more types. A type is defined by the class that\
+    \ was used to instantiate an object. For example, personObject has the type Person.\
+    \ One type objects in C# share the type Object (or, including its namespace, System.Object).\
+    \ This is possible because C# supports Inheritance, but we'll get into that later.\
+    \ We have a couple of ways to check the type of an object, for example, we can\
+    \ use GetType, typeof or the is operator. For now, let's move on.\n\nLast I'd\
+    \ like to mention packages. A package is a common name for a set of code that\
+    \ is compiled together. In Microsoft land a package is often called a DLL. In\
+    \ .NET a DLL is often known as an Assembly. In Visual Studio each project is compiled\
+    \ into a DLL or an exe (executable) file."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "# Chapter 1 The Three Pillars of OOP\n\nObject-oriented programming has three\
+    \ characteristics that define the paradigm, the so-called \"three pillars of OOP.\"\
+    \ In this chapter, we'll look at each one of them in detail. They all play an\
+    \ important role in the design of your applications. That's not to say that your\
+    \ systems will have a great design by simply applying these concepts. In fact,\
+    \ there is no single correct way of applying these concepts, and applying them\
+    \ can be difficult.\n\n# Inheritance\n\nInheritance is an important part of any\
+    \ object-oriented language. Classes can inherit from each other, which means the\
+    \ inheriting class gets all of the behavior of the inherited class, also known\
+    \ as the base class. Let's look at the Person example I used earlier.\n\nCode\
+    \ Listing 3: Inheritance Example\n\n```\npublic class Person\n{\n    public string\
+    \ FirstName { get; set; }\n    public string LastName { get; set; }\n    public\
+    \ string GetFullName()\n{\n        return FirstName + \" \" + LastName;\n    }\n\
+    }\npublic class Employee : Person\n{\n    public decimal Salary { get; set; }\n\
+    }\n```\n\nThe trick is in the Employee : Person part. That part basically says\
+    \ \"Employee inherits from Person.\" And remember everything inherits from Object.\
+    \ In this case Employee inherits from Person and Person (because it's not explicitly\
+    \ inheriting anything) from Object. Now let's look at how we use Employee.\n\n\
+    Code Listing 4: Subclass usage\n\n```\nEmployee employee = new Employee();\nemployee.FirstName\
+    \ = \"Sander\";\nemployee.LastName = \"Rossel\";\nstring fullName = employee.GetFullName();\n\
+    employee.Salary = 1000000; // I wish :-)\n```\n\nThat's pretty awesome! We got\
+    \ everything from Person just by inheriting from it! In this case we can call\
+    \ Person a base class or superclass and Employee a subclass. Another common way\
+    \ of saying it is that Employee extends Person."
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "There's a lot more though! Let's say we'd like to write some common behavior\
+    \ in some base class, but we'd like subclasses to be able to extend or override\
+    \ that behavior. Let's say we'd like subclasses to change the behavior of GetFullName\
+    \ in the previous example. We can do this using the virtual keyword in the base\
+    \ class and override in the subclass.\n\n# Code Listing 5: Method overriding\n\
+    \n```\npublic class Person\n{\n    public string FirstName { get; set; }\n   \
+    \ public string LastName { get; set; }\n    public virtual string GetFullName()\n\
+    \    {\n        return FirstName + \" \" + LastName;\n    }\n}\nublic class Employee\
+    \ : Person\n{\n    public decimal Salary { get; set; }\n    public override string\
+    \ GetFullName()\n    {\n        string originalvalue = base.GetFullName();\n \
+    \       return LastName + \" \" + FirstName;\n    }\n}\n```\n\nAs you can see\
+    \ we can override, or re-define, GetFullName because it was marked virtual in\
+    \ the base class. We can then call the original method using the base keyword\
+    \ (which points to the implementation of the base class) and work with that, or\
+    \ we can return something completely different. Calling the original method is\
+    \ optional, but keep in mind that some classes may break if you don't.\n\nNow\
+    \ here's an interesting thing: the type is Employee, but it also has the type\
+    \ Person. That means in any code where we need a Person we can actually use an\
+    \ Employee. When we do this we can, of course, access Employee specific members,\
+    \ such as Salary. So here's a little question: what will the following code print?\n\
+    \n# Code Listing 6: What will the code print?\n\n```\nperson = new Employee();\n\
+    person.FirstName = \"Sander\";\nperson.LastName = \"Rossel\";\nstring fullName\
+    \ = person.GetFullName();\nConsole.WriteLine(fullName);\n// Press any key to quit.\n\
+    Console.ReadKey();\n```\n\nIf you answered \"Rossel\", Sander (rather than Sander\
+    \ Rossel) you were right!\n\nWhat else can we do? We can force a subclass to inherit\
+    \ certain members. When we do this we must mark a method, and with that entire\
+    \ class, as abstract. An abstract class can't be instantiated and must be inherited\
+    \ (with abstract members overridden)."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Code Listing 7: An Abstract Class\n\n```\npublic abstract class Person {\n\
+    \    public string FirstName { get; set; }\n    public string LastName { get;\
+    \ set; }\n    public abstract string GetFullName();\n}\n\npublic class Employee\
+    \ : Person {\n    public decimal Salary { get; set; }\n    public override string\
+    \ GetFullName() {\n        return LastName + \" \" + FirstName;\n    }\n}\n```\n\
+    \nOf course we can't make a call to base.GetFullName() anymore, as it has no implementation.\
+    \ While overriding GetFullName was optional before, it is mandatory now. Other\
+    \ than that the usage of Employee stays exactly the same.\n\nOn the other end\
+    \ of the spectrum, we can explicitly state that a class or method may not be inherited\
+    \ or overridden. We can do this using the sealed keyword.\n\n# Code Listing 8:\
+    \ A Sealed Class\n\n```\npublic sealed class Person {\n    public string FirstName\
+    \ { get; set; }\n    public string LastName { get; set; }\n    public string GetFullName()\
+    \ {\n        return FirstName + \" \" + LastName;\n    }\n}\n```\n\nNow that Person\
+    \ is sealed no one can inherit from it. It means we can't create an Employee class\
+    \ and use Person as a base class.\n\nMethods can be sealed in subclasses. After\
+    \ all, if you don't want people to override your method, simply don't mark it\
+    \ virtual. However, if you have a virtual method and a subclass wants to prevent\
+    \ further overriding it's possible to mark it as sealed.\n\n# Code Listing 9:\
+    \ A sealed method\n\n```\npublic class Person {\n    public string FirstName {\
+    \ get; set; }\n    public string LastName { get; set; }\n    public virtual string\
+    \ GetFullName() {\n        return FirstName + \" \" + LastName;\n    }\n}\n```"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\npublic class Employee : Person\n{\n    public decimal Salary { get; set;\
+    \ }\n    public sealed override string GetFullName()\n    {\n        return LastName\
+    \ + \", \" + FirstName;\n    }\n}\n```\n\nNo subclass of Employee can override\
+    \ GetFullName.\n\nWhy would you use sealed on your classes or methods? First,\
+    \ there is a small performance gain because the .NET runtime doesn't have to take\
+    \ over overridden methods into account. The gain is negligible, so that's not\
+    \ really a good reason. A better reason is perhaps a class implements some security\
+    \ checks that really shouldn't be extended in any way.\n\n> Note: Some languages,\
+    \ like C++, know multiple inheritance. That means a subclass can inherit from\
+    \ more than one base class. In C# this is not possible; each subclass can inherit\
+    \ from, at most, one base class.\n\n# Inheritance vs. Composition\n\nWhile inheritance\
+    \ is very important in OOP, it can be a real pain, especially when you get huge\
+    \ inheritance trees with branches to all sides. There is an alternative to inheritance:\
+    \ composition. Inheritance implies an \"is-a\" relationship between classes. An\
+    \ Employee is a Person. Using composition, we can define a \"has-a\" relationship.\n\
+    Let's take a car. A car is built up from many components, like an engine. When\
+    \ we model a car we inherit Car from Engine? That would be problematic, because\
+    \ a car also has doors, chairs and a backseat.\n\nCode Listing 10: No Go\n\n```\n\
+    public class Engine\n{\n    // ...\n}\npublic class Car : Engine\n{\n    // ...\n\
+    }\n```\n\nHow would this look when using composition?\n\nCode Listing 11: Composition\n\
+    \n```\npublic class Engine\n{\n    // ...\n}\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\n```java\npublic class Car {\n    private Engine engine = new Engine();\n\
+    \    // ...\n}\n```\n```\n\nCar can now use the Engine, but it is not an Engine!\n\
+    \nWe could've used this approach with Person and Employee as well, but how would\
+    \ we set FirstName and LastName? We could make Person public, but we are now breaking\
+    \ a principle called encapsulation (as discussed in the next chapter). We could\
+    \ mimic Person by defining a FirstName and LastName property, but we now have\
+    \ to change the public interface of Employee every time the public interface of\
+    \ Person changes. Additionally, Employee will not be of type Person anymore, so\
+    \ the type of Employee changes and it will not be interchangeable with Person\
+    \ anymore.\n\nA solution will be presented in Chapter 2: Interfaces.\n\n# Encapsulation\n\
+    \nEncapsulation is the process of hiding the internal workings of our classes.\
+    \ That means we specify a public specification, used by consumers of our class,\
+    \ while the actual work is hidden away. The advantage is that a class can change\
+    \ how it works without needing to change its consumers.\n\nIn C# we have four\
+    \ access modifiers which enable five ways of controlling code visibility:\n\n\
+    +   * private—only visible to the containing class.\n* protected—only visible\
+    \ to the containing class and inheritors.\n* internal—only visible to classes\
+    \ in the same assembly.\n* protected internal—only visible to the same assembly\
+    \ or in derived classes, even in other assemblies.\n* public—visible to everyone.\n\
+    \nLet's say we're building some class that runs queries on a database. Obviously\
+    \ we need some method of RunQuery's visible to every consumer of our class. The\
+    \ method for accessing the database could be different for every database, so\
+    \ perhaps we're leaving open for inheritors. Additionally, we use some helper\
+    \ class that's only visible to our project. Last, we need to store some private\
+    \ state, which may not be altered from outside our class as it could leave it\
+    \ in an invalid state."
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Code Listing 12: Access Modifiers\n\n```\npublic class QueryRunner {\n  \
+    \  private IDbConnection connection;\n\n    public void RunQuery(string query)\
+    \ {\n        Helper helper = new Helper();\n        if (helper.Validate(query))\
+    \ {\n            OpenConnection();\n            // Run the query...\n        \
+    \    CloseConnection();\n        }\n    }\n\n    protected void OpenConnection()\
+    \ {\n        // ...\n    }\n\n    protected void CloseConnection() {\n       \
+    \ // ...\n    }\n}\n\ninternal class Helper {\n    internal bool Validate(string\
+    \ query) {\n        // ...\n        return true;\n    }\n}\n```\n\nIf we were\
+    \ to compile this into an assembly and access it from another project we'd only\
+    \ be able to see the QueryRunner class. If we created an instance of the QueryRunner\
+    \ we could only call the RunQuery method. We could also access OpenConnection\
+    \ and CloseConnection. The Helper class and the connection field will be hidden\
+    \ from us though.\n\nI should mention that classes can contain nested private\
+    \ classes, classes that are only visible to the containing class. Private classes\
+    \ can access private members of their containing classes. Likewise, an object\
+    \ can access private members of other objects of the same type.\n\n# Code Listing\
+    \ 13: A private nested class\n\n```\npublic class SomeClass {\n    private string\
+    \ someField;\n}\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "```\npublic void SomeMethod(SomeClass otherInstance)\n{\n    otherInstance.someField\
+    \ = \"Some value\";\n}\n\nprivate class InnerClass\n{\n    public void SomeMethod(SomeClass\
+    \ param)\n    {\n        param.someField = \"Some value\";\n    }\n}\n```\n\n\
+    When omitting an access modifier, a default is assigned (internal for classes\
+    \ and private for everything). I'm a big fan of explicitly adding access modifiers\
+    \ though.\n\nA last remark, before moving on, is that subclasses cannot have an\
+    \ accessibility greater than their base class. If some class has the internal\
+    \ access modifier an inheriting class cannot be made public (but it could be private).\n\
+    \n# Polymorphism\n\nWe see inheritance and that we can alter the behavior of a\
+    \ type through inheritance. Our Person class had a GetFullName method which was\
+    \ altered in Employee. We also see that whenever, at run-time, an object of type\
+    \ Person is expected we can throw in any subclass of Person, like Employee. This\
+    \ is called polymorphism.\n\nIn the following example the PrintFullName method\
+    \ takes an object of Person, but it prints \"Sander\" because the parameter that's\
+    \ passed into the method is actually of a subtype,, which overrides the functionality\
+    \ of GetFullName.\n\n> Code Listing 14: Polymorphism\n\n```\nclass Program{\n\
+    \    static void Main(string[] args)\n    {\n        Person p = new Employee();\n\
+    \        p.FirstName = \"Sander\";\n        p.LastName = \"Rossel\";\n       \
+    \ PrintFullName(p);\n        // Press any key to quit.\n        Console.ReadKey();\n\
+    \    }\n\n    public static void PrintFullName(Person p)\n    {\n        Console.WriteLine(p.GetFullName());\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "```\n}\npublic class Person\n{\n    public string FirstName { get; set; }\n\
+    \    public string LastName { get; set; }\n    public virtual string GetFullName()\n\
+    \    {\n        return FirstName + \" \" + LastName;\n    }\n}\npublic class Employee\
+    \ : Person\n{\n    public decimal Salary { get; set; }\n    public sealed override\
+    \ string GetFullName()\n    {\n        return LastName + \", \" + FirstName;\n\
+    \    }\n}\n```\n\nWe're going to see a lot more of this in the next chapter.\n\
+    \n# The Takeaway\n\nThe Three Pillars of OOP are the foundation of object-oriented\
+    \ programming. They haven't been implemented for nothing and they solve real problems.\
+    \ It's crucial that you know these features by heart and practice them in your\
+    \ daily code. Think about encapsulation every time you create a class or method.\
+    \ Use inheritance when necessary, but don't forget it brings extra complexity\
+    \ to the table as well. Be very wary of polymorphism, know which code will run\
+    \ when you inherit classes and override methods. Even if you don't practice it\
+    \ you'll come across code that does. Throughout this book we'll see these be used\
+    \ extensively."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# Chapter 2 Interfaces\n\nIn the previous chapter, we saw that the class Employee\
+    \ inherits from Person. Do you see any potential issues with this approach? What\
+    \ if a person is an employee, but also a stamp collector? Obviously, a person\
+    \ can also be a stamp collector but not an employee (lots of people are “between\
+    \ jobs”). If we all had inheritance we might write the following code:\n\n> Code\
+    \ Listing 15: An inheritance chain\n\n```\npublic class Person {\n  // ...\n}\n\
+    public class Employee : Person {\n  // ...\n}\npublic class StampCollector : Person\
+    \ {\n  // ...\n}\npublic class EmployeeStampCollector : Employee {\n  // ...\n\
+    }\n```\n\nI don't know about you, but it just doesn't feel right to me. The problem\
+    \ we have is that the only thing EmployeeStampCollector and the StampCollector\
+    \ have in common is the Person base class, but they're still stamp collectors!\
+    \ Writing a method that takes a stamp collector as input is not impossible! This\
+    \ problem could be solved using multiple inheritance, but C# doesn't have (and\
+    \ many developers say it is better that way).\n\nSo do we solve this problem?\
+    \ We use a Interface. An Interface is something like an abstract class with abstract\
+    \ methods. It really doesn't do more than defining a type. The good part though,\
+    \ is we can inherit, or ‘implement’, multiple interfaces in a single class!\n\n\
+    Let's look at an example of a random interface:\n\n> Code Listing 16: An interface\n\
+    \n```\npublic interface ISomeInterface {\n  string SomeProperty { get; set; }\n\
+    \  string SomeMethod();\n  void SomethingElse();\n}\n```"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "Notice that none of the fields have an access modifier. If a class implements\
+    \ an interface everything on that interface is publicly accessible. This is what\
+    \ the actual implementation would look like:\n\n# Code Listing 17: Interface implementation\n\
+    \n```\npublic class SomeClass : ISomeInterface\n{\n    public string SomeProperty\
+    \ { get; set; }\n\n    public string SomeMethod() {\n        // ...\n    }\n\n\
+    \    public void SomethingElse() {\n        // ...\n    }\n}\n```\n\nHere SomeClass\
+    \ has the types object, SomeClass, and ISomeInterface. The \"I\" prefix on ISomeInterface,\
+    \ or any interface, is common practice in C#, but not necessary.\n\nWhen using\
+    \ inheritance and interface implementation on a single class, you first specify\
+    \ the base class and then a comma-separated list of interfaces. How would this\
+    \ look for our Person, Employee and StampCollector example?\n\n# Code Listing\
+    \ 18: Interfaces\n\n```\npublic interface IEmployee\n{\n    // ...\n}\n\npublic\
+    \ interface IStampCollector\n{\n    // ...\n}\n\npublic class Person\n{\n    //\
+    \ ...\n}\n\npublic class Employee : Person, IEmployee\n{\n    // ...\n}\n\npublic\
+    \ class StampCollector : Person, IStampCollector\n{\n    // ...\n}\n\npublic class\
+    \ EmployeeStampCollector : Employee, IStampCollector\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\n{\n  // ...\n}\n```\n\nNow both StampCollector and EmployeeStampCollector\
+    \ are of type Person and type IStampCollector. EmployeeStampCollector is also\
+    \ of type Employee (and IEmployee) because it inherits from Employee, which implements\
+    \ IEmployee.\n\nBecause a class can implement multiple interfaces it is possible\
+    \ to have an interface inherit from multiple interfaces. A class must then implement\
+    \ all interfaces that are inherited by it. For obvious reasons, an interface can't\
+    \ inherit a class.\n\nCode Listing 19: Interface inheritance\n\n```\npublic interface\
+    \ IPerson {\npublic interface IEmployee : IPerson {\n}\\public interface IStampCollector\
+    \ : IPerson {\n}\\public interface IEmployeeStampCollector : IEmployee, IStampCollector\
+    \ {\n}\n```\n\nNow that's a very theoretical example, but let's consider a real\
+    \ world example. Let's say an application needs to log some information. We may\
+    \ want to log to a database in a production environment, but we'd also like to\
+    \ log to the console for debugging purposes. Additionally, if the database isn't\
+    \ available, we'd like to log to the Windows Event log.\n\nCode Listing 20: Loggers\n\
+    \n```\nclass Program {\nstatic void Main(string[] args) {\nList<ILogger> loggers\
+    \ = new List<ILogger>();\nloggers.Add(new ConsoleLogger());\nloggers.Add(new WindowsLogger());\n\
+    loggers.Add(new DatabaseLogger());\nforeach (ILogger logger in loggers) {\nlogger.LogError(\"\
+    Some error occurred.\");\nlogger.LogInfo(\"All's well!\");\n}\nConsole.ReadKey();\n\
+    }\npublic interface ILogger {\nvoid LogError(string error);\nvoid LogInfo(string\
+    \ info);\n}\npublic class ConsoleLogger : ILogger {\n}\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "```\npublic void LogError(string error)\n{\n    Console.WriteLine(\"Error:\
+    \ \" + error);\n}\n\npublic void LogInfo(string info)\n{\n    Console.WriteLine(\"\
+    Info: \" + info);\n}\n\npublic class WindowsEventLogger : ILogger\n{\n    public\
+    \ void LogError(string error)\n    {\n        Console.WriteLine(\"Logging error\
+    \ to Windows Event log: \" + error);\n    }\n\n    public void LogInfo(string\
+    \ info)\n    {\n        Console.WriteLine(\"Logging info to Windows Event log:\
+    \ \" + info);\n    }\n}\n\npublic class DatabaseLogger : ILogger\n{\n    public\
+    \ void LogError(string error)\n    {\n        Console.WriteLine(\"Logging error\
+    \ to database: \" + error);\n    }\n\n    public void LogInfo(string info)\n \
+    \   {\n        Console.WriteLine(\"Logging info to database: \" + info);\n   \
+    \ }\n}\n```\n\nThat's pretty nifty! And as you can, add or remove loggers as we\
+    \ please.\n\nBy the way, having an interface and a base class (which implements\
+    \ the interface) is perfectly fine. Maybe you have an ILogger, a DbLogger (which\
+    \ implements ILogger and defines some common behavior for logging to a database)\
+    \ and then have a SqlServerLogger, an OracleLogger, a MySQLLogger, etc. (which\
+    \ all inherit from DbLogger).\n\n# Explicitly Implementing Interfaces\n\nI've\
+    \ mentioned that when you implement an interface, all members of that interface\
+    \ are public by default. Their logical behavior, after all, an interface is a\
+    \ sort of contract that promises other code that will have some members and properties\
+    \ defined (because it's of a certain type). It is, however, possible to hide interface\
+    \ members. To do that, you can explicitly implement an interface. When you explicitly\
+    \ implement an interface member, the only way to invoke that member is by using\
+    \ the class as a type of the interface."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Code Listing 21: Explicitly Implemented Interface\n\n```\npublic interface\
+    \ ISomeInterface\n{\n    void MethodA();\n    void MethodB();\n}\npublic class\
+    \ SomeClass : ISomeInterface\n{\n    public void MethodA() {\n        // Even\
+    \ SomeClass cannot invoke MethodB without a cast.\n        ISomeInterface me =\
+    \ (ISomeInterface)this;\n        me.MethodB();\n    }\n    // Explicitly implemented\
+    \ interface member.\n    // Not visible in SomeClass.\n    void ISomeInterface.MethodB()\
+    \ {\n        throw new NotImplementedException();\n    }\n}\n```\n\nUsers of SomeClass\
+    \ cannot invoke MethodB either.\n\n```\nclass Program\n{\n    static void Main(string[]\
+    \ args)\n    {\n        SomeClass o = new SomeClass();\n        o.MethodA();\n\
+    \        o.M\n    }\n}\n```\n\n| | |\n|---|---|\n| Equals | |\n| GetHashCode |\
+    \ |\n| GetType | |\n| MethodA | void SomeClass.MethodA() |\n| ToString | |\n\n\
+    Figure 1: MethodB is not accessible.\n\nUnless they use it, or cast it to, ISomeInterface.\n\
+    \n# Code Listing 22: Invoking an Explicitly Implemented Member\n\n```\nISomeInterface\
+    \ obj = new SomeClass();\nobj.MethodA();\nobj.MethodB();\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Inheritance vs. Interface\n\nOne discussion you will find frequently online,\
+    \ or might get engaged in at work, is that of inheritance vs. using an interface.\
+    \ Remember that you can only inherit from one class. That means if you use inheritance,\
+    \ like Person -> Employee, your Employee is stuck with the Person base class.\
+    \ Alternatively, you could define an IPerson and implement it separately in Person\
+    \ and Employee. One guideline you'll see is that inheritance defines an \"is-a\"\
+    \ relationship (an Employee is a Person) while interface defines a \"can do\"\
+    \ or \"has-a\" relationship (a Person has a stamp collection). As you see, it's\
+    \ not entirely proof, as a stamp collector is also a Person, but still inheritance\
+    \ can lead us into trouble.\n\nI like to use when I have some functionality that\
+    \ is shared across multiple, if not all, subtypes of that class, like with the\
+    \ Dblogger example.\n\nAnd remember, composition may also be a viable option!\n\
+    \n# The Takeaway\n\nAn interface is a means to create additional types without\
+    \ the need for multiple inheritance. They are extremely useful, I've talked to\
+    \ people say every class needs a matching interface. It's an important feature\
+    \ that Visual Studio has the option to create an interface based on a class. When\
+    \ your cursor is in a class, you can find it under Edit -> Refactor -> Extract\
+    \ Interface in the top menu.\n\n```\npublic class SomeClass {\n    public void\
+    \ MethodA()\n    { }\n    public void MethodB()\n    { }\n    private void Something()\n\
+    \    {}\n}\n```\n\n![](img/a03594f8f44c9d45de3912512db3a264_24_0.png)\n\nLearn\
+    \ to use them well, as we'll use them a lot throughout this book."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# # Chapter 3 SOLID\n\nWe've seen the building blocks that make up an object-oriented\
+    \ language, but how can we write our classes so that they make sense? When to\
+    \ inherit, what to put inside a class, how many interfaces do we need? These are\
+    \ questions that can be answered in part by the so-called SOLID principles. SOLID\
+    \ is an acronym and each letter stands for a principle.\n\n+   * Single Responsibility\
+    \ Principle (SRP)\n* Open Closed Principle (OCP)\n* Liskov Substitution Principle\
+    \ (LSP)\n* Interface Segregation Principle (ISP)\n* Dependency Inversion Principle\
+    \ (DIP)\n\nIn this chapter we're going to look at all of them. These principles\
+    \ can help you write modular code that is easy to maintain and expand. The principles\
+    \ are described by Robert C. Martin in his 2006 book Agile Principles, Patterns,\
+    \ and Practices in C#.\n\n# # Single Responsibility Principle, (SRP)\n\nThe Single\
+    \ Responsibility Principle, or SRP, states that a class should be responsible\
+    \ for a single functionality. A functionality can be considered a reason to change.\
+    \ For example, a class that logs errors to a database can change because the database\
+    \ communication should change, or because the format of the log output needs to\
+    \ change. So more generally, a class should have only one reason to change. That's\
+    \ a little tricky; after all, each line of code could be changed at one time or\
+    \ another. And indeed, I have met programmers who believe a class should contain\
+    \ only a single method. That's really what SRP is about!\n\nLet's look at a concrete\
+    \ example. Say you're building a database module. Now you've got a class that\
+    \ can establish a connection to the database, get send data, and finally close\
+    \ the connection. If we defined an interface it could follows:\n\n> Code Listing\
+    \ 23: A Possible Violation of SRP\n\n```\npublic interface Database {\n    void\
+    \ Connect(string connectionString);\n    void Close();\n    object GetData();\n\
+    \    void SendData(object data);\n}\n```\n\n¹ R.C. Martin, M. Martin - Agile Principles,\
+    \ Patterns and Practices in C#"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "So this could really be the interface to your class, right? Unfortunately,\
+    \ this class is doing two things. The class deals with opening and closing connections\
+    \ and with data communication. Here comes the tricky part, the question you ask\
+    \ yourself is: will the application change in a way that either connections or\
+    \ data communications will, but not both? This is important, because when the\
+    \ time comes and you realize you need to change one of the functionalities, the\
+    \ functionality that doesn't need to change will be in the way. The more functionality\
+    \ that is in the way, the more chances you have of having those parts of the application.\n\
+    \nWhen applying SRP, your classes will be a smaller and more maintainable, but\
+    \ you'll have more classes to deal with. Would you rather change, a class with\
+    \ 200 lines of code that does multiple things, or a class with 100 lines of code\
+    \ that does only one?\n\nAs you see, there is no wrong or right in SRP. It's a\
+    \ bit of a gut feeling. If you feel a class is to bloated, then identifying different\
+    \ responsibilities gives each their own class.\n\n# Open Closed Principle (OCP)\n\
+    \nWithout a doubt, one of the hardest to grasp and get right is the Open Closed\
+    \ Principle, or OCP: \"Open Closed\" means that a class should be open for extension,\
+    \ but closed for modification. That means consumers of your class should be able\
+    \ to customize its usage, without actually changing its code. And unless your\
+    \ coworkers are working in the same solution consumers of your class, even they\
+    \ probably can't change the source of your class.\n\nLet's say you have that database\
+    \ we talked about. In a sense it's already extensible, since everyone can inherit\
+    \ from it and add methods and properties. Doing so will almost certainly result\
+    \ in breaking SRP though, since the core functionality of the class is already\
+    \ defined in the base class and we can't change that. You could make every method\
+    \ in the base class virtual, and yet we've seen that that's not really good practice\
+    \ as consumers now break your class. For example, if they override Connect and\
+    \ just leave it, no connection will be made and each subsequent method call to\
+    \ your class will fail. Besides, even if the method is overridden the base class\
+    \ will not be sitting there just doing, which doesn't feel right.\n\nI propose\
+    \ a different solution, one of many. Let's break up the previously proposed interface\
+    \ into two separate interfaces. You'll probably need some more methods now, but\
+    \ let's stick to simplicity for now.\n\nCode 24: SRP for OCP\n\n```\npublic interface\
+    \ IConnectionManager {\n    void Connect(string connectionString);\n    void Close();\n\
+    }\n\npublic interface IDataManager {\n    object GetData(IConnectionManager connManager);\n\
+    }\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "```\nvoid SendData(IConnectionManager connManager, object data);\n}\n```\n\n\
+    Now suppose I'd like to change the way I connect to the database. I can implement\
+    \ my own IConnectionManager and pass it to my IDataManager. Without touching the\
+    \ original code, I am now able to extend the functionality of the classes without\
+    \ actually breaking the existing class! Likewise, if I'd like to change the way\
+    \ I'm getting or sending data I can simply implement my own IDataManager and use\
+    \ it with the already existing implementation of IConnectionManager.\n\nIt gets\
+    \ better, every class that depends on IConnectionManager and/or IDataManager is\
+    \ now extendable in that it can use any database you can ever imagine! Well, theoretically.\n\
+    \nLater we'll look at Design Patterns, which can help you in designing classes\
+    \ that conform to OCP.\n\n# Liskov Substitution Principle (LSP)\n\nThe Liskov\
+    \ Substitution Principle, LSP for short, is about inheritance. It states that\
+    \ subclasses and base classes must be substitutable. That means that any method\
+    \ of any base type must not know if it's using a base class or any subclass. Here's\
+    \ an example of what you wouldn't do (although I've written code just like this\
+    \ in the past):\n\n> Code Listing 25: Violation of LSP\n\n```\nbool TestConnection(IConnectionManager\
+    \ connMgr)\n{\n    if (connMgr is SQLConnectionManager)\n    {\n        // Do\
+    \ something...\n    }\n    else if (connMgr is OracleConnectionManager)\n    {\n\
+    \        // Do something else...\n    }\n    else\n    {\n        // ...\n   \
+    \ }\n}\n```\n\nTestConnection is a function that receives an object of type IConnectionManager,\
+    \ which could be any connection manager. In this case, the method checks for the\
+    \ type of connMgr and acts accordingly. That means for every new implementation\
+    \ of IConnectionManager, you need to change this method. Furthermore, you've just\
+    \ violated OCP as this function is now unable to test new connection types. There's\
+    \ plenty of ways to fix this, like using a Strategy Pattern, but we'll get to\
+    \ that in a later chapter. In the above method it should always be good enough\
+    \ to invoke the Connect() or Close() method, no matter what IConnectionManager\
+    \ you get."
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "A subtle violation of LSP is when subclasses behave differently than their\
+    \ base classes. The classic example is that of a Square class that inherits from\
+    \ a Rectangle class. A square is a rectangle (with equal width and height), so\
+    \ this inheritance looks plausible. Unfortunately, in some scenarios a square\
+    \ may behave differently than a rectangle and may break users of the Rectangle\
+    \ class and get a Square instead.\n\n> Code Listing 26: Breaks with Square\n\n\
+    ```\nvoid TestSquareMeters(Rectangle rect)\n{\n    rect.Height = 2;\n    rect.Width\
+    \ = 3;\n    Assert(rect.Height * rect.Width == 6);\n}\n```\n\n# Interface Segregation\
+    \ Principle (ISP)\n\nThe Interface Segregation Principle, or ISP, is kind of like\
+    \ the Single Responsibility Principle for Interfaces. Strictly speaking, we're\
+    \ not talking about the abstract-like Interfaces, but your class' public methods.\
+    \ In C# practice, we're doing ISP mostly through Interfaces. Let me clear up.\
+    \ Let's consider our database example for a second. We had the following interface:\n\
+    \n> Code Listing 27: An IDatabase Interface\n\n```\npublic interface IDatabase\n\
+    {\n    void Connect(string connectionString);\n    void Close();\n    object GetData();\n\
+    \    void SendData(object data);\n}\n```\n\nAs I mentioned in the bit about SRP,\
+    \ this may or may not be SRP-proof, depending on your requirements. Let's say\
+    \ it is okay for our example, but let's take another approach, that of inheritance.\
+    \ Specifically, I'm going to create a base class for connection management and\
+    \ inherit that for data management.\n\n> Code Listing 28: DatabaseManager Using\
+    \ Inheritance\n\n```\npublic class ConnectionManager\n{\n    public void Connect(string\
+    \ connectionString)\n    {\n        // ...\n    }\n    public void Close()\n \
+    \   {\n        // ...\n    }\n}\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\npublic class DataManager : ConnectionManager\n{\n    public virtual object\
+    \ GetData()\n    {\n        // ...\n    }\n    public virtual void SendData(object\
+    \ data)\n    {\n        // ...\n    }\n}\npublic class DatabaseManager : DataManager\n\
+    {\n    // Needs ConnectionManager...\n}\n```\n\nSo our DatabaseManager is inheriting\
+    \ ConnectionManager, through DataManager, to make use of, of course, its base\
+    \ implementation, but also to make of multipurpose functions as TestConnection\
+    \ defined earlier. Can we be sure that all data managers need connection managers\
+    \ though? We could even use composition to, the DatabaseManager needs it, but\
+    \ what about our?\n\nCode Listing 29: FileDataManager\n\n```\npublic class FileDataManager\
+    \ : DataManager\n{\n    // Doesn't need Connection...\n```\n\nNow our FileDataManager\
+    \ has a fat interface. It depends on classes it doesn't need Notice that this\
+    \ would not have happened if we created two Interfaces and implemented those instead.\
+    \ We could use re-use the ConnectionManager in other Data(base)Managers. The downside\
+    \ to this is FileDataManager now depends upon ConnectionManager, even though it\
+    \ doesn't need it. Any change to ConnectionManager may break FileDataManager though!\
+    \ Such couplings between classes should be avoided\n\n# Dependency Inversion Principle\
+    \ (DIP)\n\nThe Dependency Inversion Principle, DIP for short, states that you\
+    \ should depend on abstractions instead of concrete types. This one principle\
+    \ you're going to see a lot which is pretty hard to put into practice (correctly).\
+    \ Let's consider our TestConnection method again. We could create one for SqlDatabaseManager,\
+    \ as in the following example:\n\nCode Listing 30: A Violation of DIP\n\n```\n\
+    class Program\n{\n    ///...\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\nbool TestConnection(SqlConnection connMgr)\n{\n    // ...\n}\n\npublic\
+    \ interface IConnectionManager\n{\n    void Close();\n    void Connect(string\
+    \ connectionString);\n}\n\npublic class SqlConnectionManager : IConnectionManager\n\
+    {\n    // ...\n}\n```\n\nIt should be obvious that TestConnection can only be\
+    \ used for SqlConnectionManager. We have created two problems. First, TestConnection,\
+    \ and Program with it, now depend on SqlConnectionManager. Second, we'll have\
+    \ to write a TestConnection for each ConnectionManager we're going to go. We're\
+    \ saying that SqlConnectionManager is a concrete type of the abstract type IConnectionManager.\
+    \ So let's fix that so that we're relying on abstract types compliant to DIP.\n\
+    \nCode Listing 31: Fixed for DIP\n\n```\nbool TestConnection(IConnectionManager\
+    \ connMgr)\n{\n    // ...\n}\n```\n\nYou may think that's a pretty lame solution,\
+    \ and you may even see this will break your existing code because TestConnection\
+    \ relies on methods that aren't part of the IConnection Interface. If that's the\
+    \ case, you should ask yourself three things: Is TestConnection implemented correctly,\
+    \ and does it really test connections? Is SqlConnectionManager really an IConnectionManager?\
+    \ Finally, is IConnectionManager defined correctly?\n\nNow why is this principle\
+    \ so important? It has everything to do with expanding and changing existing systems.\
+    \ If you depend on abstractions, it's easier to switch implementations. In theory\
+    \ you could switch your database (or at least the connection manager) and TestConnection\
+    \ would still behave as expected. We've seen log earlier, depend on ILogger and\
+    \ you can switch from file logging to database logging without problems!\n\n#\
+    \ Dependency Injection (DI)\n\nAs I're going to see DI is a part. Perhaps you've\
+    \ heard of Dependency Injection (DI) before? There's plenty of \"DI Frameworks\"\
+    \ that help you put DI into practice. The previous example was as simple as changing\
+    \ our method signature to using an Interface instead of a concrete Type. But any\
+    \ method still gets a concrete type at runtime, so where does that come from?\
+    \ We'll have to break this \"all abstract type\" principle somewhere! And that's\
+    \ where DI comes in."
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "For the next example I'm going to use Unity, a DI library developed by Microsoft\
+    \ and now maintained by other people. You can get it using the NuGet Package Manager\
+    \ in Visual Studio. Just go to Tools > NuGet Package Manager > Manage NuGet Packages\
+    \ for Solution and search for \"Unity\". Install it in your (saved) project and\
+    \ you're good to go.\n\nA \"Container\", which Unity provides, is a sort of repository\
+    \ where abstract types are mapped to concrete types. Any code can ask that repository\
+    \ for an instance of an abstract type and the repository will return whatever\
+    \ concrete type you've mapped to. Your entire code base, save for the part(s)\
+    \ where you map your types, can now depend upon abstractions. Sounds pretty neat,\
+    \ so let's have a look at some code;\n\nI've slightly modified the ConnectionManager\
+    \ example from earlier:\n\nCode List 32: IConnectionManager\n\n```\npublic interface\
+    \ IConnectionManager\n{\n    void Close();\n    void Connect();\n}\n\npublic class\
+    \ SqlConnectionManager : IConnectionManager\n{\n    public void Close() {\n  \
+    \      Console.WriteLine(\"Closed SQL server connection...\");\n    }\n\n    public\
+    \ void Connect() {\n        Console.WriteLine(\"Connected to SQL Server!\");\n\
+    \    }\n}\n\npublic class OracleConnectionManager : IConnectionManager\n{\n  \
+    \  public void Close() {\n        Console.WriteLine(\"Closed Oracle connection...\"\
+    );\n    }\n\n    public void Connect() {\n        Console.WriteLine(\"Connected\
+    \ to Oracle!\");\n    }\nn\n```\n\nHere's the definition of TestConnection:\n\n\
+    Code List 33: Definition for TestConnection\n\n```\nstatic bool TestConnection(IConnectionManager\
+    \ connMgr)\n{\n    connMgr.Connect();\n    connMgr.Close();\n\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "```\nreturn true;\n}\n```\n\nUsing Unity, we can register either SqlConnectionManager\
+    \ or OracleConnectionManager with IConnectionManager:\n\n# Code Listing 34: Registering\
+    \ a Type with Unity\n\n```\nclass Program\n{\n    static void Main(string[]) args\n\
+    {\n        // Create a new DI Container...\n        IUnityContainer container\
+    \ = new UnityContainer();\n        //And Register a type!\n        container.RegisterType<IConnectionManager,\
+    \ SqlConnectionManager>();\n    }\nn\n```\n\nAnd elsewhere we can now request\
+    \ an IConnectionManager and call TestConnection:\n\n# Code Listing 35: Resolving\
+    \ a Type with Unity\n\n```\nIConnectionManager connMgr = container.Resolve<IConnectionManager>();\n\
+    bool success = TestConnection(connMgr);\n// Do something with the result...\n\
+    ```\n\nYou should see \"Connected to SQL Server\" and \"Closed SQL connection...\"\
+    \ in your console window. Now change the call to RegisterType so it registers\
+    \ as OracleConnectionManager. The TestConnection will now print Oracle instead\
+    \ of SQL Server. Imagine: by changing this line of code you could change an entire\
+    \ application to use Oracle instead of SQL Server!\n\nNow suppose you have some\
+    \ dynamic user interface and the controls that are shown on screen depend on some\
+    \ settings and/or configuration. Let's see how HTML form defined in the database,\
+    \ and we wish to generate the HTML server side. I'm letting you to figure one\
+    \ out yourself, but I'm pretty sure you'll get it.\n\n# Code Listing 36: HTML\
+    \ Generator\n\n```\nclass Program\n{\n    static void Main(string[]) args\n{\n\
+    \        IUnityContainer container = new UnityContainer();\n        container.RegisterType<HtmlCreator\n\
+    ```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\nType = \"text\"\n```\n\n```\n},\n{\n    Text = \"Do you wish to receive\
+    \ offers?\",n    Type = \"checkbox\"\n}\n};\n```\n\n```\n// Generate the HTML...\n\
+    StringBuilder builder = new StringBuilder();\nforeach (var dbField in someDbFields)\n\
+    {\n    builder.Append($<p>{dbField.Text}</p>\");\n    IHtmlCreator html = container.Resolve<IHtmlCreator>(dbField.Type);\n\
+    \    builder.Append(html.CreateHtml());\n}\nConsole.WriteLine(builder.ToString());\n\
+    Console.ReadKey();\n```\n\n```\n}\npublic interface IHtmlCreator\n{\n    string\
+    \ CreateHtml();\n}\n```\n\n```\npublic class HtmlInputTextCreator : IHtmlCreator\n\
+    {\n    public string CreateHtml()\n{\n        return \"<input type=\\\\text\\\"\
+    ;\n    }\n}\n```\n\n```\npublic class HtmlInputCheckboxCreator : IHtmlCreator\n\
+    {\n    public string CreateHtml()\n{\n        return \"<input type=\\\\checkbox\\\
+    \";\n    }\n}\n```\n\nThat just saved you from an unruly switch/if statement?\
+    \ And the best part is that you can add new HtmlCreators and types without changing\
+    \ the code that generates the HTML! So you've just OCP and DIP compliant code\
+    \ (except for the <p> tags, but you can figure that out!)\n\nThis isn't a tutorial\
+    \ on Unity, but it does show the basic principle of DIP and DI containers. The\
+    \ sample in this section demonstrated Interface Injection, but it is also possible\
+    \ to create objects using a specified constructor, called Constructor Injection,\
+    \ and automatically set objects on properties, called Property, or Setter. Other\
+    \ DI frameworks exist, such as Ninject and Spring. In this example we've written\
+    \ code to set up container, but other frameworks also work with (XML) config files.\
+    \ All of them work with the same principle though, and depend upon abstractions."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# Inversion of Control (IoC)
+
+
+    Often mentioned together with DI is Inversion of Control, or IoC. You may even
+    see the terms being used interchangeably. The basic principle of IoC is that "higher"
+    code depends upon abstractions. We have already seen this in action in TestConnection.
+    Here''s another fun fact: DI is actually a form of IoC (not necessarily the other
+    way around though)!
+
+
+    # The Takeaway
+
+
+    Generally speaking, the SOLID Principles can lead to good, maintainable, extensible,
+    and testable software design at the expense of additional complexity. However,
+    they do not come naturally to a lot of developers. Let''s be honest, it''s hard
+    to think ahead, so if you need a SqlConnectionManager now, why bother with some
+    IConnectionManager that may need to be modified anyway? It''s a lot easier to
+    simply create a SqlConnectionManager and use it throughout your code. However,
+    you cannot predict the future and, even though you think you''ll have to switch
+    to something other than SQL Server now, the future may prove otherwise. When you''ll
+    have to switch to something else, you will wish you had practiced the Dependency
+    Inversion Principle. Likewise, when your API that has always been internal suddenly
+    has to go public, you will wish you had practiced the Open Closed Principle. And
+    that stuff does happen. I''ve heard "that will never happen" a few times too many,
+    so really, think ahead and practice SOLID!'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# Chapter 4 Design Patterns
+
+
+    Have you ever had that problem that you know you''ve solved somewhere else? Many
+    people have. Design Patterns are general solutions to specific problems that many
+    people face. Design Patterns were first systematically organized for the C++ language
+    in the book *Design Patterns: Elements of Reusable Object-Oriented Software*,
+    by Erich Gamma et al. in 1995.
+
+
+    In general there are three kinds of Design Patterns: Creational, Structural, and
+    Behavioral. Not do they solve recurring problems, a formalized solution to a problem
+    that we don''t re-invent the wheel that we can communicate more clearly about
+    our code. Any programmer will (hopefully) recognize your use of pattern X and
+    then know how to change your code.
+
+
+    In this chapter, I''m going to discuss a few (of many) Design Patterns. I''ll
+    include a Unified Modeling Language (UML) class diagram of each pattern. UML is
+    outside the scope of this book, so I can''t explain how the diagrams should be
+    interpreted. I''ve added them for reference and they''re the "official" UML, so
+    the class and method names don''t match those in the examples. You can use them
+    for visual explanation, but if you don''t get them dont worry, it''s all explained
+    in the text.
+
+
+    The patterns I''m discussing are mentioned by the Design Patterns book as good
+    starting patterns. They''re pretty easy to get into and you''ll probably see them
+    a lot as.
+
+
+    # Creational Patterns
+
+
+    Creational Patterns deal with, as the name implies, the creation of objects. With
+    Creational Patterns we can abstract away the process of object instantiation.
+    As we''ve seen before, we can use composition rather than inheritance. Creating
+    a set of objects that work together as a group can be beneficial, but than hard-coding
+    which concrete types to use we can abstract this process like we''ve seen with
+    DI. In the next section we''re going to look at a few Creational Patterns. It''s
+    not a full list, but it shows the power they can bring.
+
+
+    > 2 Gamma, Helm, Johnson, Vlissides - Design Patterns: Elements of Reusable Object-Oriented
+    Software'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# Abstract Factory\n\n![](img/a03594f8f44c9d45de3912512db3a264_36_0.png)\n\n\
+    Figure 3: Class Diagram of the Abstract Factory Pattern\n\nOne of the easiest,\
+    \ yet most useful, Creational Design Patterns is the Abstract Factory. The Abstract\
+    \ Factory defines an interface for the creation of closely related objects. Imagine,\
+    \ again, that we're building a dynamic user interface. We need textboxes, buttons,\
+    \ checkboxes, radio buttons, etc. So let's say we have the following Interface,\
+    \ analogous to the example I've used before, but in WinForms:\n\nCode Listing\
+    \ 37: An Abstract Factory\n\n```\npublic interface IControlFactory {\n    Control\
+    \ CreateTextBox();\n    Control CreateCheckBox();\n}\n```\n\nAnd let's say it's\
+    \ used as follows (which creates a pretty much useable user interface):\n\nCode\
+    \ Listing 38: Usage of the Abstract Factory\n\n```\nprivate void CreateGui(IControlFactory\
+    \ factory) {\n    Control textBox = factory.CreateTextBox();\n    textBox.Location\
+    \ = new Point(10, 10);\n    Controls.Add(textBox);\n    Control checkBox = factory.CreateCheckBox();\n\
+    \    checkBox.Location = new Point(10, 50);\n    Controls.Add(checkBox);\n}\n\
+    ```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\n}\n```\n\nWe can now create concrete types for this Interface.\n\nCode\
+    \ Listing 39: Concrete Factories\n\n```\npublic class RedControlFactory : IControlFactory\n\
+    {\n    public Control CreateTextBox() {\n        return new TextBox { BackColor\
+    \ = Color.Red };\n    }\n    public Control CreateCheckbox() {\n        return\
+    \ new CheckBox { BackColor = Color.Red };\n    }\n}\n```\n\n```\npublic class\
+    \ GreenControlFactory : IControlFactory\n{\n    public Control CreateTextBox()\
+    \ {\n        return new TextBox { BackColor = Color.Green };\n    }\n    public\
+    \ Control CreateCheckbox() {\n        return new CheckBox { BackColor = Color.Green\
+    \ };\n    }\n}\n```\n\nNow our application can create either a red or a green\
+    \ GUI using the specified concrete type.\n\nCode Listing 40: Using the Concrete\
+    \ Factory\n\n```\nprivate void Form1_Load(object sender, EventArgs e)\n{\n   \
+    \ CreateGui(new RedControlFactory());\n}\n```\n\nThe result is stunning:"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "![](img/a03594f8f44c9d45de3912512db3a264_38_0.png)\n\nAnd of course, changing\
+    \ RedControlFactory to GreenControlFactory changes the rendered Form from red\
+    \ to green.\n\n![](img/a03594f8f44c9d45de3912512db3a264_38_1.png)\n\nNotice how\
+    \ easy it would be to add a BlueControlFactory without breaking any existing code?\
+    \ Or even better, we can swap our ugly Forms controls with custom controls or\
+    \ with third party controls.\n\nIn .NET you can find the Abstract Factory Pattern\
+    \ when working with databases. The DbProviderFactory base class is such an Abstract\
+    \ Factory, although it's typically necessary to implement yourself.\n\nCode Listing\
+    \ 41: Abstract Factory in .NET\n\n```\npublic class SqlProviderFactory : DbProviderFactory\n\
+    {\n    public override DbConnectionStringBuilder CreateConnectionStringBuilder()\n\
+    \    {\n        return new SqlConnectionBuilder();\n    }\n    public override\
+    \ DbConnection CreateConnection()\n    {\n        return new SqlConnection();\n\
+    \    }\n    public override DbCommand CreateCommand()\n    {\n        return new\
+    \ SqlCommand();\n    }\nn\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "```\n}\n/ // ...\n}\n```\n\n# # Factory Method\n\n![](img/a03594f8f44c9d45de3912512db3a264_39_0.png)\n\
+    \nFigure 6: Class Diagram of the Factory Method Pattern\n\nSometimes it does not\
+    \ make sense to create an Abstract Factory. What if there are no closely related\
+    \ objects, like TextBox, CheckBox, Button, etc.? Having an Abstract Factory to\
+    \ create a single object (which may contain other objects, of course), while possible,\
+    \ feels weird (although can be useful). Suppose we're building some class that\
+    \ generates our UI. The UIGenerator make use of an IControlFactory to construct\
+    \ the UI. Furthermore we may have multiple UIGenerators to build U for different\
+    \ kinds of users.\n\nWith the Factory Pattern we can delegate the creation of\
+    \ objects to subclasses. This is especially useful when a base class can't anticipate\
+    \ which subclass it'll need to perform its functionality.\n\nThe next example\
+    \ is again, in WinForms.\n\nSo here is the BaseUIGenerator which will serve as\
+    \ a base for all UIGenerators.\n\nCode List 42: A Base Class for UIGenerators\n\
+    \n```\npublic abstract class BaseUIGenerator\n{\n    public void GenerateUI(Control\
+    \ container)\n{\n        IControlFactory factory = CreateControlFactory();\n \
+    \       Control textBox = factory.CreateTextBox();\n        textBox.Location =\
+    \ new Point(10, 10);\n        container.Controls.Add(textBox);\n        Control\
+    \ checkBox = factory.CreateCheckBox();\n        checkBox.Location = new Point(10,\
+    \ 50);\n        container.Controls.Add(checkBox);\n    }\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "```\n}\nprotected abstract IControlFactory CreateControlFactory();\n}\n```\n\
+    \nWe can now easily create new UIGenerators.\n\nCode Listing 43: ConcreteUIBuilders\n\
+    \n```\npublic class RedUIGenerator : BaseUIGenerator\n{\n    protected override\
+    \ IControlFactory CreateControlFactory()\n    {\n        return new RedControlFactory();\n\
+    \    }\n}\npublic class GreenUIGenerator : BaseUIGenerator\n{\n    protected override\
+    \ IControlFactory CreateControlFactory()\n    {\n        return new GreenControlFactory();\n\
+    \    }\n}\n```\n\nThe creation of the IControlFactory is now delegated to subclasses\
+    \ of BaseUIGenerator. Now you can use a generator to generate the UI.\n\nCode\
+    \ Listing 44: Usage of the Generator Class\n\n```\nprivate void Form1_Load(object\
+    \ sender, EventArgs e)\n{\n    BaseUIGenerator generator = new RedUIGenerator();\n\
+    \    builder.GenerateUI(this);\n}\n```\n\nThis will build the form as in the previous\
+    \ example:\n\n![](img/a03594f8f44c9d45de3912512db3a264_40_0.png)\n\nFigure 7:\
+    \ Form Using the RedUIGenerator\n\nIt's also possible to use something else as\
+    \ a container, for example a Panel1."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "# Code Listing 45: Using the Generator with Panels\n\n```\nprivate void Form1_load(object\
+    \ sender, EventArgs e)\n{\n    BaseUIGenerator red = new RedUIGenerator();\n \
+    \   red.GenerateUI(panel1);\n    BaseUIGenerator green = new GreenUIGenerator();\n\
+    \    green.GenerateUI(panel2);\n}\n```\n\nThe result is that Panel now has the\
+    \ same Controls, but in a different color.\n\n![](img/a03594f8f44c9d45de3912512db3a264_41_0.png)\n\
+    \nFigure 8: Panels with Different UIGenerators\n\nThis example also demonstrates\
+    \ the power of the Abstract Factory and Factory Method patterns.\n\nThe .NET Framework\
+    \ uses the Factory Method Pattern too, such as when working with database connections.\n\
+    \n# Code Listing 46: Factory Method in .NET\n\n```\nusing (SqlConnection connection\
+    \ = new SqlConnection(\"connString\"))\nusing (DbCommand cmd = connection.CreateCommand())\
+    \ // Factory Method\n{\n    DbParameter param = cmd.CreateParameter(); // Factory\
+    \ Method\n    //...\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Singleton\n\n```\nSingleton\nstatic Instance()\nSingletonOperation()\nGetSingletonData()\n\
+    static uniqueInstance\nsingletonData\nreturn uniqueInstance();\n```\n\nFigure\
+    \ 9: Class Diagram of the Singleton Pattern\n\nThe Singleton Pattern is pretty\
+    \ fun. It's also, but often implemented incorrectly. It's loved, and it's hated.\
+    \ So, why do I want to include it here? The Singleton limits the amount of created\
+    \ objects of a specific type to exactly one, which is pretty neat and can be necessary\
+    \ (examples of Singletons are your print spooler, the file system, etc.). Also\
+    \ since it's often used incorrectly, I'd like to educate a little and clear up\
+    \ when to use this. Last, since it's so often incorrectly implemented, we're going\
+    \ to do it correctly now, once and for all.\n\nAt the base of the Singleton is\
+    \ a private constructor. You read that right. When the constructor of a class\
+    \ is private no other class can create instances of this. That may come in handy,\
+    \ as the class now create instances of itself and keep track of those instances.\
+    \ That's a bit counter-intuitive, but with a static field completely possible.\n\
+    \nCode Listing 47: The Start of a Singleton\n\n```\npublic class SomeSingleton\n\
+    {\n    private static SomeSingleton instance;\n\n    private SomeSingleton()\n\
+    \    }\n}\n```\n\nAt this point no other class can create or reach an instance\
+    \ of this class. We'll need another static method (or property) to get access\
+    \ to the instance of this class. We'll also need to create that instance.\n\n\
+    Code Listing 48: The Complete Singleton\n\n```\npublic class SomeSingleton\n{\n\
+    \    private static SomeSingleton instance;\n\n    private SomeSingleton()\n \
+    \   }\n\n    public static SomeSingleton Instance\n    get\n    {\n        if\
+    \ (instance == null)\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\n{\n  instance = new SomeSingleton();\n}\nreturn instance;\n\n```\n\nAnd\
+    \ now the Singleton is complete. Indeed, this is the implementation we'll often\
+    \ find in code bases (you'll also often find Singletons with public constructors\
+    \ a.k.a. not Singletons at all).\n\nSo what is wrong with this Singleton? Nothing,\
+    \ if your application is completely single-threaded. When you're going multi-threaded,\
+    \ this implementation can still result in multiple instances. This happens when\
+    \ two threads try to get the instance at the same time. Both threads will see\
+    \ that instance is null neither thread has actually created the new instance,\
+    \ so we'll need to lock this code for multiple threads. And as a small optimization,\
+    \ we won't lock after the instance is created. Here is the full thread-safe Singleton:\n\
+    \n# Code Listing 49: The Thread-Safe Singleton\n\n```\npublic class SomeSingleton\
+    \ {\n    private static SomeSingleton instance;\n    private static object syncRoot\
+    \ = new object();\n\n    private SomeSingleton() {\n    }\n\n    get {\n     \
+    \   if (instance == null) {\n            lock(syncRoot) {\n                if\
+    \ (instance == null) {\n                    instance = new SomeSingleton();\n\
+    \                }\n            }\n            return instance;\n        }\n \
+    \   }\n\n    public void SomeMethod() {\n        // Just an instance method like\
+    \ any other.\n    }\n}\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'The double null check may look weird, but remember when two threads access
+    Instance at the same time, both will see that instance is null, and one thread
+    will be locked while the other creates the instance. After the locked thread is
+    released, it should check for null again or it will create a new instance.
+
+
+    Other methods on the Singleton can now be public instance methods and behave like
+    any other. Just keep in mind that the state of a Singleton object is shared throughout
+    the entire application because it''s static
+
+
+    So what''s the problem with Singletons? They''re used far too often. I''ve seen
+    Singletons that, after a year, needed a second instance somewhere in the application!
+    As it turned out, this doesn''t feel completely right.
+
+    Singleton wasn''t a Singleton at all!
+
+
+    Second, Singletons cannot be subclassed. Since the constructor is not accessible
+    by any part of the application except the Singleton itself, not subclasses can
+    access it (meaning you won''t be able to construct them).
+
+
+    Last, Singletons are hard to test. Suppose you''re testing a part of the application
+    that internally uses a Singleton. For a long time there was no way for you to
+    mock the Singleton. It''s now possible using testing frameworks that use code
+    weaving and Aspect Oriented Programming (AOP), but it still doesn''t feel completely
+    right.
+
+
+    So when you use a Singleton? Basically when you''re absolutely sure your application
+    will never need a second instance of an object (or when another instance may be
+    harmful for the system). It may also be in handy to provide one-point access to
+    shared resources (like the print spooler). Logging is often not an acceptable
+    use of the Singleton Pattern.
+
+
+    While many objects in .NET logically have only one instance (like Application),
+    I am not aware of any Singleton implementations in .NET (that, the constructor
+    is just internal instead of private). If a rather huge framework like .NET doesn''t
+    need Singletons, you should think very carefully if you need them or if you can
+    solve your problem differently.
+
+
+    # Structural Patterns
+
+
+    Structural Patterns are about making objects work together and structuring your
+    code accordingly. Where Creational Patterns are the creation of objects, but without
+    these objects knowing about each other''s internals.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# Adapter\n\n![](img/a03594f8f44c9d45de3912512db3a264_45_0.png)\n\nFigure 10:\
+    \ Class Diagram of the Adapter Pattern\n\nAn easy and well known Structural Pattern\
+    \ is the Adapter Pattern, or Wrapper. With the Adapter Pattern, we can make two\
+    \ classes work together even though they have incompatible interfaces. Suppose\
+    \ we're creating a data retrieval system, but the client hasn't decided on Oracle\
+    \ or SQL Server, or they might switch in the future. And let's say both databases\
+    \ come with some API's with different classes and methods (of course, both already\
+    \ have compatible .NET API's). The following code is simplified, but does show\
+    \ the use of the Adapter:\n\nCode Listing 50: External database API's\n\n```\n\
+    public class SqlServerApi\n{\n    public DataTable GetData()\n    {\n        return\
+    \ new DataTable();\n    }\n\n    public void SendData(DataTable data)\n    {\n\
+    \        // ...\n    }\n}\n\npublic class OracleApi\n{\n    public object GetQuery()\n\
+    \    {\n        return new object();\n    }\n\n    public void ExecQuery(object\
+    \ data)\n    {\n        // ...\n    }\n}\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "The problem here is that if we choose one API, we can't easily replace it with\
+    \ the other.\nSqlServerApi works with DataTables while Oracle works with objects,\
+    \ the methods have different names, and so on. In the real world you'll find both\
+    \ interfaces use different classes, have many different methods (that the other\
+    \ doesn't have), and more. So let's create an interface that can tie these two\
+    \ incompatible API's together. The problem is what we'll do with the DataTables.\
+    \ Our interface can work with DataTables and we should make that we work for Oracle,\
+    \ or we work with objects and convert it to DataTables for SQL Server. A third\
+    \ option is to create a custom object which can be converted to that plain object\
+    \ and a DataTables. For simplicity we will work with object.\n\n# Code List 51:\
+    \ IdBApiAdapter\n\n```\npublic interface IdBApiAdapter\n{\n    object GetData();\n\
+    \    void SendData(object data);\n}\n```\n\nNow we can implement this for both\
+    \ SQL Server and Oracle.\n\n# Code List 52: IdBApiAdapterations\n\n```\npublic\
+    \ class SqlServerApiAdapter : IdBApiAdapter\n{\n    private SqlServerApi api =\
+    \ new SqlServerApi();\n\n    public object GetData()\n    {\n        DataTable\
+    \ table = api.GetData();\n        object o = ConvertToObject(table);\n       \
+    \ return o;\n    }\n\n    private object ConvertToObject(DataTable table)\n  \
+    \  {\n        // ...\n        return null; // Placeholder.\n    }\n\n    public\
+    \ void SendData(object data)\n    {\n        DataTable table = ConvertToDataTable(data);\n\
+    \        api.SendData(table);\n    }\n\n    private DataTable ConvertToDataTable(object\
+    \ obj)\n    {\n        // ...\n        return new DataTable();\n    }\n}\n\npublic\
+    \ class OracleApiAdapter : IdBApiAdapter\n{\n    private OracleApi api = new OracleApi();\n\
+    }\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "```\npublic object GetData()\n{\n    return api.Query();\n}\n\npublic void\
+    \ SendData(object data)\n{\n    api.ExecQuery(data);\n}\n```\n\nAs you can see,\
+    \ converting to DataTable is now \"implementation detail.\" We don't really care\
+    \ how the SqlServerApi does it (probably with Reflection), as long as the public\
+    \ API is correct. You can now work with the IdbApiAdapter and leave the creation\
+    \ of a specific adapter to another part of the system (using a Factory or Dependency\
+    \ Injection).\n\n# Code Listing 53: Usage of IdbApiAdapter\n\n```\nstatic void\
+    \ Main(string[] args)\n{\n    IdbApiAdapter adapter = DbApiFactory();\n    object\
+    \ o = adapter.GetData();\n    adapter.SendData(new object());\n}\n\nstatic IdbApiAdapter\
+    \ DbApiFactory()\n{\n    return new SqlServerApiAdapter();\n}\n```\n\nThe Adapter\
+    \ Pattern is used in .NET when working with COM objects. When referencing a COM\
+    \ object, .NET creates a wrapper (or adapter) that can be used within .NET to\
+    \ call the corresponding COM methods."
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# Composite\n\n![](img/a03594f8f44c9d45de3912512db3a264_48_0.png)\n\nFigure\
+    \ 11: Class Diagram of the Composite Pattern\n\nComposite is also one of the easier\
+    \ patterns. Let's say you have a collection of something, a List<Something> if\
+    \ you do. And maybe all these \"somethings\" have a collection of those same things,\
+    \ too. child someth. In that case we have a tree of somethings. Now something\
+    \ has some operation, and when that operation is performed the same operation\
+    \ should be performed on all children. Sounds abstract, but let's say that something\
+    \ is a Control (like TextBox, Checkbox, DataGrid, etc.). So we have a Control\
+    \ which has children and each child Control can have Controls as well. And the\
+    \ operation is rendering the Control. When we render our topmost Control all child\
+    \ Controls and children of those children should render tou.\n\nThe next example\
+    \ may seem a bit farfetched, but it's not easy to create an example of the Composite\
+    \ Pattern, so bear with me. In the example, we're going to print sentences symbol\
+    \ by symbol. So our operation will be Print. We need to be a single symbol, like\
+    \ \"c\" or \"#\" so let's create a class that can just do that.\n\nCode Listing\
+    \ 54: Iprintable for our Composite\n\n```\npublic interface Iprintable\n{\n  \
+    \  void Print();\n}\n\npublic class Symbol : Iprintable\n{\n    private char symbol;\n\
+    \n    public Symbol(char c)\n    {\n        symbol = c;\n    }\n\n    public void\
+    \ Print()\n{}\n```"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "```\nConsole.Write(symbol);\n}\n```\n\nWith that, we can create an IPrintable\
+    \ containing any single symbol. Let's create some additional IPrintables for our\
+    \ convenience (and for the example).\n\nCode List 55: Additional IPrintable Implementations\n\
+    \n```\npublic class LineBreak : IPrintable\n{\n    public void Print()\n    {\n\
+    \        Console.WriteLine();\n    }\n}\n```\n\n```\npublic class Space : IPrintable\n\
+    {\n    public void Print()\n    {\n        Console.Write(\" \");\n    }\n}\n```\n\
+    \nNow we make a composite class that can contain multiple symbols (or IPrintables),\
+    \ a Writing.\n\nCode List 56: The (Composite) Writing Class\n\n```\npublic class\
+    \ Writing : IPrintable\n{\n    private List<IPrintable> printables = new List<IPrintable>();\n\
+    \n    public void Add(IPrintable printable)\n    {\n        printables.Add(printable);\n\
+    \    }\n\n    public void Remove(IPrintable printable)\n    {\n        printables.Remove(printable);\n\
+    \    }\n\n    public IPrintable GetPrintable(int index)\n    {\n        return\
+    \ printables[index];\n    }\n\n    public void Print()\n    {\n        foreach\
+    \ (IPrintable printable in printables)\n        {\n            printable.Print();\n\
+    \        }\n    }\n}\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '}
+
+    }
+
+
+    And that''s it. We can now use these classes to compose words and sentences and
+    print them
+
+    screen. In a simple Console application, the usage looks as follows:
+
+
+    # Code Listing 57: Composite Usage
+
+
+    ```
+
+    // Create the writing ''hello''
+
+    writing hello = new Writing();
+
+    hello.Add(new Symbol(''h''));
+
+    hello.Add(new Symbol(''e''));
+
+    hello.Add(new Symbol(''l''));
+
+    hello.Add(new Symbol(''l''));
+
+    hello.Add(new Symbol(''o''));
+
+    // Add a line break.
+
+    LineBreak br = new LineBreak();
+
+    hello.Add(br);
+
+
+    // Print hello.
+
+    hello.Print();
+
+    // Remove the line break, so we can re-use hello.
+
+    hello.Remove(br);
+
+
+    // Create the writing ''bye''
+
+    Writing bye = new Writing();
+
+    bye.Add(new Symbol(''b''));
+
+    bye.Add(new Symbol(''y''));
+
+    bye.Add(new Symbol(''e''));
+
+
+    // Create a writing consisting of the writings
+
+    // hello and bye separated by a space.
+
+    Writing helloBye = new Writing();
+
+    helloBye.Add(hello);
+
+    helloBye.Add(new Space());
+
+    helloBye.Add(bye);
+
+
+    // Print all the printables.
+
+    helloBye.Print();
+
+
+    Console.ReadKey();
+
+    ```
+
+
+    In .NET, this pattern is used, as mentioned, in WinForms when rendering Controls
+    (and
+
+    ably in WPF and ASP.NET as well).'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# Decorator\n\n![](img/a03594f8f44c9d45de3912512db3a264_51_0.png)\n\nFigure\
+    \ 12: Class Diagram of the Decorator Pattern\n\nThe Decorator Pattern can be used\
+    \ to add functionality to an object dynamically. It's especially useful when one\
+    \ object can have multiple functionalities that aren't always used at the same\
+    \ time, like different representations of the same data. In that respect it offers\
+    \ a flexible alternative to inheritance.\n\nLet's have some text message and we\
+    \ want to print and/or email and/or fax (yes, people still do do that) and/or\
+    \ send it to an external system. Additionally, the message must always be saved\
+    \ to the database. First we will need our Message class that contains the message\
+    \ we want to process and we can implement the default process (after all, we always\
+    \ need to send the message to the database).\n\nCode Listing 58: The Message Class\n\
+    \n```\npublic interface IMessage {\n    string Msg { get; set; }\n    void Process();\n\
+    }\n\npublic class Message : IMessage {\n    public string Msg { get; set; }\n\
+    \    public void Process() {\n        Console.WriteLine(String.Format(\"Saved\
+    \ {0} to database.\", Msg));\n    }\n}\n```"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "We can now create a base decorator. Notice that we always need another IMessage\
+    \ passed to the constructor (or we ll get a NullReference, you may want to add\
+    \ a check there). The Msg property is simply delegated to the root IMessage.\n\
+    \n# Code Listing 59: A Base Decorator\n\n```\npublic abstract class BaseMessageDecorator\
+    \ : IMessage {\n    private IMessage innerMessage;\n\n    public BaseMessageDecorator(IMessage\
+    \ decorator) {\n        innerMessage = decorator;\n    }\n\n    public virtual\
+    \ void Process() {\n        innerMessage.Process();\n    }\n\n    public string\
+    \ Msg {\n        get {\n            return innerMessage.Msg;\n        }\n    \
+    \    set {\n            innerMessage.Msg = value;\n        }\n    }\n}\n```\n\n\
+    Now that we have our base decorator, we can create some sub decorators.\n\n# Code\
+    \ Listing 60: Sub Decorators\n\n```\npublic class EmailDecorator : BaseMessageDecorator\
+    \ {\n    public EmailDecorator(IMessage decorator)\n        : base(decorator)\n\
+    }\n\n    public override void Process() {\n        base.Process();\n        Console.WriteLine(String.Format(\"\
+    Sent '{0}' as email.\", Msg));\n    }\n}\n\npublic class FaxDecorator : BaseMessageDecorator\
+    \ {\n    public FaxDecorator(IMessage decorator)\n        : base(decorator)\n\
+    }\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\npublic override void Process()\n{\n    base.Process();\n    Console.WriteLine(String.Format(\"\
+    Sent '{0}' as fax.\", Msg));\n}\n\npublic class ExternalSystemDecorator : BaseMessageDecorator\n\
+    {\n    public ExternalSystemDecorator(IMessage decorator)\n    : base(decorator)\n\
+    \n    public override void Process()\n    {\n        base.Process();\n       \
+    \ Console.WriteLine(String.Format(\"Sent '{0}' to external system.\", Msg));\n\
+    \    }\n}\n```\n\nWe can now process our message in many different ways; we can\
+    \ just save it to the database, we can save it and email or send it to an external\
+    \ system; we can save, email and fax; save, email, and send it to the external\
+    \ system; save, for, and send it to the external system. The beauty is that we\
+    \ can easily add new functionality without breaking the already existing functionality.\n\
+    \nIn a simple Console application, the usage could be as follows:\n\n> Code List\
+    \ 61: Usage of the Decorators\n\n```\nIMessage msg = new Message();\nmsg.Msg =\
+    \ \"Hello\";\n\nIMessage decorator = new EmailDecorator(\nnew FaxDecorator(\n\
+    \    new ExternalSystemDecorator(msg));\ndecorator.Process();\n\nConsole.WriteLine(\n\
+    decorator = new EmailDecorator(msg);\ndecorator.Msg = \"Bye\"\ndecorator.Process());\n\
+    \nConsole.ReadKeyKey();\n```\n\nIn .NET we find the Decorator Pattern when using\
+    \ streams. Many streams, like MemoryStream, BufferedStream, and FileStream offer\
+    \ the same functionality provided by the Stream base class, but they work differently\
+    \ internally. So the different streams decorate the Stream class. In the usage\
+    \ of these classes we can often find a Strategy Pattern (explained later)."
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# Behavioral Patterns
+
+
+    Behavioral Patterns are about changing runtime behaviors of algorithms and classes.
+    If Creational Patterns are about the creation of objects, and Structural Patterns
+    about how the objects work together, Behavioral Patterns are about changing the
+    implementation of those objects. With the three kinds of Patterns, you can build
+    highly scalable and maintainable software that is nearly organized into small
+    pieces of code.
+
+
+    # Observer
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_54_0.png)
+
+
+    Figure 13: Class Diagram of the Observer Pattern
+
+
+    With the Observer Pattern it is possible for a class, a so-called observable,
+    to notify other classes, of changes. .NET events are implemented using this pattern.
+
+
+    A few notes regarding the Observer Pattern in .NET. First of all, because .NET
+    already has events, it shouldn''t be necessary to implement this pattern yourself.
+    Let''s assume for a moment that you still want to. You''re probably going to start
+    out with two interfaces: IObservable and IObserver. Then you find out .NET already
+    has interfaces (in a generic variant). Do not use them. I''ve seen the .NET interfaces
+    being used in the Observer Pattern, but those interfaces are meant to be used
+    primarily with Reactive Extensions (Rx). I can''t explain Rx here, but the interfaces
+    make little sense for the "traditional" Observer Pattern I''m going to discuss
+    this here.
+
+
+    So let''s start out by defining the IObservable and IObserver interfaces.
+
+
+
+    ```
+
+    Code Listing 62: Observer Pattern Interfaces
+
+    {
+
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\nvoid Attach(IOObserver observer);\nvoid Detach(IOObserver observer);\n\
+    void Notify();\n\npublic interface IOObserver {\n  void Update(IObservable observer);\n\
+    }\n```\n\nNow let's implement the IOObservable. We're going to create a product\
+    \ stock, and every time the stock changes we're going to notify observers (also\
+    \ called listeners). The code is a bit lengthy, mostly due to the properties at\
+    \ the bottom. Notice that these properties have nothing to the Observer Pattern,\
+    \ they're simply necessary to identify the stock.\n\nCode Listing 63: IOObservable\
+    \ Implementation\n\n```\npublic class Stock : IOObservable {\n  private List<IOObserver>\
+    \ observers = new List<IOObserver>();\n  private string productName;\n  private\
+    \ int noOfItemsInStock;\n\n  public Stock(string name) {\n    productName = name;\n\
+    \  }\n\n  public void Attach(IOObserver observer) {\n    observers.Add(observer);\n\
+    \  }\n\n  public void Detach(IOObserver observer) {\n    observers.Remove(observer);\n\
+    \  }\n\n  public void Notify() {\n    foreach (IOObserver observer in observers)\
+    \ {\n      observer.Update(this);\n    }\n  }\n\n  public string ProductName {\n\
+    \    get {\n      return productName;\n    }\n  }\n\n  public int NoOfItemsInStock\
+    \ {\n    get\n  }\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\n{\n  return noOfItemsInStock;\n}\nset {\n  noOfItemsInStock = value;\n\
+    \  Notify();\n}\n}\n```\n\nAnd now we can create observers.\n\nCode Listing 64:\
+    \ Observers\n\n```\npublic class Seller : IObserver\n{\n  public void Update(IObservable\
+    \ observable)\n{\n    Console.WriteLine(\"Seller was notified about the stock\
+    \ change.\");\n  }\n}\npublic class Buyer : IObserver\n{\n  public void Update(IObservable\
+    \ observable)\n{\n    Console.WriteLine(\"Buyer was notified about the stock change.\"\
+    );\n  }\n}\n```\n\nThe usage in a simple Console application is now pretty.\n\n\
+    Code Listing 65: Usage of the Observer\n\n```\nStock stock = new Stock(\"Cheese\"\
+    );\nstock.NoOfItemsInStock = 10;\n// Register observers.\nSeller seller = new\
+    \ Seller();\nstock.Attach(seller);\nBuyer buyer = new Buyer();\nstock.Attach(buyer);\n\
+    stock.NoOfItemsInStock = 5;\nConsole.ReadKey();\n```\n\nYou'll find a bit of caveat\
+    \ with this approach. The buyer and seller get notified, but they don't know about\
+    \ what. It's just Observable. There are a few options here. First we can simply\
+    \ cast the Observable to Stock. For example, the Seller class would now look as\
+    \ follows:\n\n```\npublic class Seller : IObserver\n{\n  public void Update(IObservable\
+    \ observable)\n```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "```\n{\n  Stock stock = (Stock)observable;\n  Console.WriteLine(String.Format(\"\
+    Seller was notified about the stock change\n{0} to {1} items.\",\n      stock.ProductName,\
+    \ stock.NoOfItemsInStock));\n}\n```\n\nThis approach is taken in a WinForm event\
+    \ where every event has the signature of\n(object sender, EventArgs). The sender\
+    \ can be any type of Control and should be\nl you'd like to do anything useful\
+    \ with the sender (the initiator of the event).\n\nA second approach is to make\
+    \ your IObservable generic (or more specific). In this case,\nIObservable would\
+    \ get the ProductName and NoOfItemsInStock properties (and you might\nwant to\
+    \ rename it to IStock.\n\n# Code Listing 66: A More Specific IObservable\n\n```\n\
+    public interface IObservable\n{\n  void Attach(IObserv observer);\n  void Detach(IObserv\
+    \ observer);\n  void Notify();\n  string ProductName { get; }\n  int NoOfItemsInStock\
+    \ { get; set; }\n}\npublic class Seller : IObservable\n{\n  public void Update(IObservable\
+    \ observable)\n{\n    Console.WriteLine(String.Format(\"Seller was notified about\
+    \ the stock change\n{0} to {1} items.\",\n      observable.ProductName, observable.NoOfItemsInStock));\n\
+    \  }\n}\n```\n\nOf course, the problem with this approach is that you can't reuse\
+    \ IObservable for other\nclasses.\n\nSo last, not least, you might want to use\
+    \ Generics. This should solve all your problems.\nRemember that Observer<T> and\
+    \ IObservable<T> already exist for Reactive Extensions, so\nwe'll have to use\
+    \ another name. We used INotifier and IListener. Not much changes, but\nthe implementation\
+    \ is slightly more different.\n\n# Code Listing 67: Generic IObservable\n\n```\n\
+    public interface INotifier<T>\n{\n  void Attach(IListener<T> observer);\n  void\
+    \ Detach(IListener<T> observer);\n  void Notify();\n}\npublic interface IListener<T>\n\
+    ```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\n{\n  void Update(T observable);\n}\npublic class Stock : INotifier<Stock>\
+    \ {\n  private List<IListener<Stock>> observers = new List<IListener<Stock>>();\n\
+    \  private string string ProductName;\n  private int noOfItemsInStock;\n  public\
+    \ Stock(string name) {\n    productName = name;\n  }\n  public void Attach(IListener<Stock>\
+    \ observer) {\n    observers.Add(observer);\n  }\n  public void Detach(IListener<Stock>\
+    \ observer) {\n    observers.Remove(observer);\n  }\n  public void Notify() {\n\
+    \    foreach (IListener<Stock> observer in observers) {\n      observer.Update(this);\n\
+    \    }\n  }\n  public string ProductName {\n    get {\n      return productName;\n\
+    \    }\n  }\n  public int NoOfItemsInStock {\n    get {\n      return noOfItemsInStock;\n\
+    \    }\n    set {\n      noOfItemsInStock = value;\n      Notify();\n    }\n \
+    \ }\n}\npublic class Seller : IListener<Stock> {\n  public void Update(Stock observable)\n\
+    ```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\n{\n  Console.WriteLine(String.Format(\"Seller was notified about the stock\
+    \ change of {0} to {1} items.\",\n    observable.ProductName, observable.NoOfItemsInStock));\n\
+    }\n```\n\n# Strategy\n\n![](img/a03594f8f44c9d45de3912512db3a264_59_0.png)\n\n\
+    Figure 14: Class Diagram of the Strategy Pattern\n\nThe Strategy Pattern allows\
+    \ you to encapsulate a family of algorithms and use them interchangeably. You\
+    \ can think of many applications for the Strategy Pattern, for example a video\
+    \ game where units on a battlefield behave the same in many aspects, such as moving\
+    \ and rendering, but differ by attack strategy. One unit might be offensive while\
+    \ another is defensive. The offensive or defensive algorithm can be injected into\
+    \ each unit.\n\nAnother example is the sorting of a list. Depending on the size\
+    \ of the list you might want to use another sorting algorithm, but you don't want\
+    \ to hard code each algorithm into the list class.\n\nSo let's make a little game.\
+    \ It's a Simple Console application and we'll be pressing any button which will\
+    \ move our units and may result in an enemy encounter (keep pressing buttons or\
+    \ escape to quit). Each unit reacts differently to an enemy encounter. So first\
+    \ we define a generic Unit class.\n\nCode Listing 68: The Strategy Pattern\n\n\
+    ```\npublic interface IUnitBehavior\n{\n  void ReactToOpponent();\n}\n\npublic\
+    \ class Unit\n{\n  private string name;\n  private IUnitBehavior behavior;\n\n\
+    \  public Unit(string name, IUnitBehavior behavior)\n}\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "```\nthis.behavior = behavior;\nthis.name = name;\n}\n\npublic void Render()\n\
+    {\n    Console.WriteLine(\"\\o/\");\n    Console.WriteLine(\"@ 0\");\n    Console.WriteLine(\"\
+    / \\\\\");\n}\n\npublic void Move()\n{\n    Console.WriteLine(String.Format(\"\
+    {0} moves...\", name));\n}\n\npublic void ReactToOpponent()\n{\n    behavior.ReactToOpponent();\n\
+    }\n```\n\nSo as you can see the Render and Move methods are the same for each\
+    \ Unit ReactToOpponent, however, is injected through the constructor. The UnitBehavior\
+    \ interface defines the ultimate strategy to use. Let's define some strategies.\n\
+    \n> Code Listing 69: Some Strategies\n\n```\npublic class WarriorBehavior : UnitBehavior\n\
+    {\n    public void ReactToOpponent()\n    {\n        Console.WriteLine(\"\\\\\\\
+    ATTACK!\\\\\\\\\");\n    }\n}\n\npublic class DefenderBehavior : UnitBehavior\n\
+    {\n    public void ReactToOpponent()\n    {\n        Console.WriteLine(\"\\\\\\\
+    Hold the line!\\\\\\\\\");\n    }\n}\n```\n\nAnd let's get the Unit and UnitBehavior\
+    \ together.\n\n> Code Listing 70: The Final Battle\n\n```\nUnit warrior = new\
+    \ Unit(\"Warrior\", new WarriorBehavior());\nUnit defender = new Unit(\"Defender\"\
+    , new DefenderBehavior());\n\nList<Unit> units = new List<Unit>();\nunits.Add(warrior);\n\
+    units.Add(defender);\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\nforeach (Unit unit in units)\n{\n    unit.Render();\n    Console.WriteLine();\n\
+    }\nConsole.WriteLine(\"Your troops are on an important mission!\");\nConsole.WriteLine(\"\
+    Press Escape to quit or any other key to continue.\");\nConsole.WriteLine(\");\n\
+    Random rnd = new Random();\nwhile (Console.ReadKey().Key != ConsoleKey.Escape)\n\
+    {\n    foreach (Unit unit in units)\n    {\n        unit.Move();\n    }\n    Console.WriteLine();\n\
+    \    // Returns 0, 1, or 2.\n    if (rnd.Next(3) == 0)\n    {\n        Console.WriteLine(\"\
+    The enemy attacks!\");\n        foreach (Unit unit in units)\n        {\n    \
+    \        unit.ReactToOpponent();\n        }\n    }\n    else\n    {\n        Console.WriteLine(\"\
+    Nothing happened...\");\n    }\n    Console.WriteLine();\n}\n```\n\nThat's quite\
+    \ a bit of code, but it's really the first two lines that matter. We're defining\
+    \ two Units, but with another UnitBehavior. When an enemy attacks (chance 1 in\
+    \ 3) you'll see each Unit behaves according to its strategy. It also becomes easy\
+    \ to add another strategy.\n\n> Code Listing 71: Adding a New Strategy\n\n```\n\
+    // ...\nUnit priest = new Unit(\"Priest\", new PriestBehavior());\n// ...\nunits.Add(priest);\n\
+    // ...\npublic class PriestBehavior : IUnitBehavior\n{\n    public void ReactToOpponent()\n\
+    \    {\n        Console.WriteLine(\"Heal our troops!\\\");\n    }\n}\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "The .NET Framework makes use of the Strategy Pattern as well, such as when\
+    \ calling List<T>.Sort(). You can pass in an optional IComparer<T>. Let's check\
+    \ out as it's another good example. We're going to sort people by their first\
+    \ and last names.\n\n# Code Listing 72: Class Person and IComparer\n\n```\npublic\
+    \ class Person\n{\n    public string FirstName { get; set; }\n    public string\
+    \ LastName { get; set; }\n}\n\npublic class FirstNameSorter : IComparer<Person>\n\
+    {\n    public int Compare(Person x, Person y)\n    {\n        return x.FirstName.CompareTo(y.FirstName);\n\
+    \    }\n}\n\npublic class LastNameSorter : IComparer<Person>\n{\n    public int\
+    \ Compare(Person x, Person y)\n    {\n        return x.LastName.CompareTo(y.LastName);\n\
+    \    }\n}\n```\n\nWe now create a list, put some people in it, and sort them by\
+    \ first or last name.\n\n# Code Listing 73: Sorting a List with Strategy\n\n```\n\
+    Person bill = new Person { FirstName = \"Bill\", LastName = \"Gates\" };\nPerson\
+    \ steve = new Person { FirstName = \"Steve\", LastName = \"Ballmer\" };\nPerson\
+    \ satya = new Person { FirstName = \"Satya\", LastName = \"Nadella\" };\n\nList<Person>\
+    \ ceos = new List<Person>();\nceos.Add(bill);\nceos.Add(steve);\nceos.Add(satya);\n\
+    \nceos.Sort(new FirstNameSorter());\nforeach (Person p in ceos)\n{\n    Console.WriteLine(String.Format(\"\
+    {0}, {1}\", p.FirstName, p.LastName));\n}\nConsole.WriteLine();\n\nceos.Sort(new\
+    \ LastNameSorter());\nforeach (Person p in ceos)\n{\n    Console.WriteLine(String.Format(\"\
+    {0}, {1}\", p.LastName, p.FirstName));\n}\nConsole.ReadKey();\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Template Method\n\n![](img/a03594f8f44c9d45de3912512db3a264_63_0.png)\n\n\
+    Figure 15: Class Diagram of the Template Method\n\nThe Template Method Pattern\
+    \ is really very simple. In fact, it' not much more than simple inheriting and\
+    \ method overriding. It's the inheritance variant of the Strategy Pattern (Inheritance\
+    \ vs. Delegation).\n\nLet's say we have a general pattern of connecting to a database,\
+    \ constructing a query, executing the query, retrieving the results, and finally\
+    \ closing the connection. We can quite literally write down this example without\
+    \ worrying about the details.\n\nCode Listing 74: Template Method\n\n```\npublic\
+    \ abstract class BaseDataRetriever {\n    public DataTable RetrieveData() {\n\
+    \        Connect();\n        string query = GetQuery();\n        DataTable result\
+    \ = ExecQuery(query);\n        Close();\n        return result;\n    }\n\n   \
+    \ protected abstract void Connect();\n    protected abstract string GetQuery();\n\
+    \    protected abstract DataTable ExecQuery(string query);\n    protected abstract\
+    \ void Close();\n}\n```\n\nLet's say we need to retrieve the Product table from\
+    \ a SQL Server database. We can inherit the BaseDataRetriever and fill in the\
+    \ blanks."
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "# Code Listing 75: Inheritance of the Template Class\n\n```\npublic class ProductRetriever\
+    \ : BaseDataRetriever {\n    private string connString;\n    private SqlConnection\
+    \ connection;\n\n    public ProductRetriever(string connString) {\n        this.connString\
+    \ = connString;\n    }\n\n    protected override void Connect() {\n        connection\
+    \ = new SqlConnection(connString);\n    }\n\n    protected override string GetQuery()\
+    \ {\n        return \"SELECT ID, Name, Price FROM Product\";\n    }\n\n    protected\
+    \ override DataTable ExecQuery(string query) {\n        using (SqlDataAdapter\
+    \ adapter = new SqlDataAdapter(query, connection)) {\n            DataTable result\
+    \ = new DataTable();\n            return result;\n        }\n    }\n\n    protected\
+    \ override void Close() {\n        connection.Dispose();\n        connection =\
+    \ null;\n    }\n}\n```\n\nLikewise, we can implement it for ODBC, Oracle, or what\
+    \ have you.\n\nIt would make sense to add another level of depth, so we can implement\
+    \ this for SQL Server, but not make it query specific. Just rename ProductRetriever\
+    \ to SqlDataRetriever, make it abstract, and remove the GetQuery method. Now the\
+    \ ProductRetriever would look as follows:\n\n# Code Listing 76: ProductRetriever\n\
+    \n```\npublic class ProductRetriever : SqlDataRetriever {\n    public ProductDataRetriever(string\
+    \ connString) {\n        : base(connString);\n    }\n\n    protected override\
+    \ string GetQuery() {\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\nreturn \"SELECT Id, Name, Price FROM Product\";\n}\n```\n\nAnd it's now\
+    \ very easy to create a CustomerRetriever.\n\nCode Listing 77: CustomerRetriever\n\
+    \n```\npublic class CustomerRetriever : SqlDataRetriever\n{\n    public CustomerRetriever(string\
+    \ connString)\n        : base(connString)\n\n    protected override string GetQuery()\n\
+    \    {\n        return \"SELECT Id, FirstName, LastName, Address FROM Customer\"\
+    \n    }\n}\n```\n\nThe usage of the CustomerRetriever class (or any BaseDataRetriever\
+    \ class) is as straight forward as it gets.\n\nCode Listing 78: Usage of the Template\
+    \ Method\n\n```\nCustomerRetriever retriever = new CustomerRetriever(\"connString\"\
+    );\nDataTable table = retriever.RetrieveData();\n// Do stuff with the data.\n\
+    ```\n\nIn .NET we find the Template Method frequently. Basically, every method\
+    \ that you can override is a Template Method. One example is the Collection<T>\
+    \ class, which was meant as a base class for custom collections.\n\nCode Listing\
+    \ 79: A Custom Collection\n\n```\npublic class UniqueCollection<T> : Collection<T>\n\
+    {\n    // Only insert or set items if\n    // the item is not yet in the collection.\n\
+    \    protected override void InsertItem(int index, T item)\n    {\n        if\
+    \ (!this.Contains(item))\n        {\n            base.InsertItem(index, item);\n\
+    \        }\n    }\n\n    protected override void SetItem(int index, T item)\n\
+    \    {\n        if (!this.Contains(item))\n        {\n            base.SetItem(index,\
+    \ item);\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# More Patterns
+
+
+    The patterns discussed so far are "classic" patterns that were systematically
+    described in the book Design Patterns: Elements of Reusable Object-Oriented Software.
+    However, there are many more Design Patterns. Many of these are discussed in the
+    book Patterns of Enterprise Application Architecture by Martin Fowler³ (in Java).
+    The patterns discussed in Fowler''s book cover different areas of your code, such
+    as patterns specific for your domain logic, communication with your data source,
+    concurrency and web session. I will discuss a few of these patterns that are widely
+    known and used.
+
+
+    Martin Fowler uses a lot of UML sequence diagrams. Like UML class diagrams, sequence
+    diagrams are outside the scope of the book, but I will add them for reference
+    and visual explanation.
+
+
+    # Lazy Load
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_66_0.png)
+
+
+    Figure 16: Sequence Diagram of the Lazy Load Pattern
+
+
+    The Lazy Load Pattern is about not getting data until you actually use it. It
+    comes in four flavors: lazy initialization, virtual proxy, value holder, and ghost.
+    We''ll look at lazy initialization only, as it''s the most common and discussing
+    all of them takes up too much space. I also want to discuss this one because it
+    has become more and more relevant and widely used. Functional languages, such
+    as Haskell, have a default lazy loading strategy for everything. Such practices
+    are becoming more common in .NET as well.
+
+
+    > ³ Martin Fowler - Patterns of Enterprise Application Architecture'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "We have actually already seen the Lazy Loading Pattern when we implemented\
+    \ Singleton Pattern. The Singleton instance was not created until the object was\
+    \ actually used. Let's take a look at the (simple) implementation again.\n\n#\
+    \ Code Listing 80: Lazy Initialization\n\n```\npublic class SomeSingleton{\n \
+    \   private static SomeSingleton instance;\n\n    private SomeSingleton()\n{\n\
+    }\n    public static SomeSingleton Instance {\n        get {\n            if (instance\
+    \ == null) {\n                instance = new SomeSingleton();\n            }\n\
+    \            return instance;\n        }\n    }\n}\n```\n\nIf SomeSingleton.Instance\
+    \ is not referenced anywhere in your code, then SomeSingleton will never be initialized.\
+    \ This is what's called lazy initialization. It's especially useful when an object\
+    \ takes a long time to load and you don't want to execute the code unless you\
+    \ really need to.\n\nThe .NET Framework has a Lazy<T> class for lazy loading any\
+    \ class. Let's say we have a class that takes five seconds to initialize.\n\n\
+    # Code Listing 81: A heavy initialization\n\n```\npublic class Something{\n  \
+    \  public Something(){\n        // Fake some heavy computation.\n        Thread.Sleep(5000);\n\
+    \    }\n\n    public void Print(){\n        Console.WriteLine(\"Something is used.\"\
+    );\n    }\n}\n```\n\nBy using a Lazy<T> wrapper we won't actually need to create\
+    \ the instance until we use it."
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# Code List 82: Usage of Lazy<T>\n\n```\nStopwatch sw = new Stopwatch();\n\
+    sw.Start();\nLazy<Something> lazy = new Lazy<Something>();\nsw.Stop();\nConsole.WriteLine(String.Format(\n\
+    \  \"Initializing the Lazy<Something> cost: {0} ms\",\n  sw.ElapsedMilliseconds));\n\
+    \nsw.Restart();\nlazy.Value.PrintUse();\nsw.Stop();\nConsole.WriteLine(String.Format(\n\
+    \  \"Using the Lazy<Something>.Value cost: {0} ms\",\n  sw.ElapsedMilliseconds));\n\
+    Console.ReadKey();\n```\n\nThe result should not be surprising.\n\n![](img/a03594f8f44c9d45de3912512db3a264_68_0.png)\n\
+    \nFigure 17: Result of the Lazy<T>\n\nWe can use complex initialization, too,\
+    \ using a lambda method.\n\n# Code List 83: Lazy<T> with Complex Initialization\n\
+    \n```\n//\nLazy<Something> lazy = new Lazy<Something>(() => new Something(new\
+    \ object()));\n//\n\npublic class Something\n{\n  public Something(object someParam)\n\
+    {\n    // ...\n  }\n```\n\nThe .NET Framework uses lazy loading extensively with\
+    \ the Entity Framework, an Object Relation Mapper (ORM). The Entity Framework\
+    \ maps database tables to classes within .NET and can update your database using\
+    \ these classes. Now imagine you have a SalesOrder table; each SalesOrder has\
+    \ SalesOrderLines, which is another table. You have classes in C# with the same\
+    \ name and Attributes. Your C class has a property, SalesOrderLines, which is\
+    \ in fact a collection of SalesOrders. When loading your SalesOrders, your SalesOrderLines\
+    \ will be empty until you actually request the SalesOrderLines of a SalesOrder.\
+    \ This is not necessarily faster if you need ALL SalesOrderLines, but if you need\
+    \ some of them, it can be pretty fast and convenient. See the sequence diagram\
+    \ at the beginning of this section for a visualization."
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# Model View Controller
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_69_0.png)
+
+
+    Figure 18: Class Diagram of the MVC Pattern
+
+
+    The Design Patterns book also mention the Model View Controller pattern, MVC for
+    short, used in Smalltalk-80, but only to say this pattern makes use of the Observer,
+    Composition, and Strategy Design Patterns. There is more to the MVC pattern though.
+    Each use of three components: the Model, the View, and the Controller [insert
+    Enrico Morricone soundtrack here]. The Model contains some information on the
+    domain, such as a product, a customer, or a sales order. The Model is strictly
+    non-UI. The UI information is in the View object. If this is a web page, the view
+    might contain HTML. Or it contains some UI widgets that are displayed on-screen.
+    The third component, the Controller, glues these together. It handles requests
+    from the View, retrieves and manipulates data that is put in a Model, which is
+    returned to the View, which can use the Model for display on-screen.
+
+
+    The entire MVC is about separation of concerns (SoC). Indeed, using MVC becomes
+    easy to swap one part of the system in favor of something else. In web development
+    you could swap the Views or have multiple Views representing the same data.
+
+
+    The Model View Controller pattern is so prevalent that Microsoft created an entire
+    framework around it and named it the pattern, ASP.NET MVC. The best way to check
+    this out is to simply start your lot of files and folders (an often heard comment
+    about ASP.NET MVC), but the classes we''ll be interested in are Controllers, Models
+    and Views folders. The HomeController, for example, has three methods, Index,
+    About, and Contact. All of them return a View without a Model. The AccountController
+    has some methods that return a View and pass in a Model, but they''re a bit complex
+    to discuss here (this isn''t a book about ASP.NET MVC after). If you look at the
+    Model, for example the classes in AccountViewModels, you will see that these are
+    just classes with some properties and attributes. The Models are initialized in
+    the ViewController and used in the Account Views (which is composed of many chtml
+    files). For simpler Views check out the Home Views, About.cshtml, Contact.cshtml
+    and Index.cshtml.
+
+
+    As a simple example, I''m going to create a new ASP.NET MVC project, rename it
+    to "MyMvcApp", change the authentication type to "No Authentication" and create
+    a very simple, static website. First, throw away all Views, except Home/Index.cshtml.
+    Now I want to show some data in my View, I''m going to create a Model, the PersonModel.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# Code Listing 84: The Model\n\n```\npublic class PersonModel {\n    public\
+    \ string FirstName { get; set; }\n    public string LastName { get; set; }\n}\n\
+    ```\n\nNext, I'm going to change the HomeController so it will pass a PersonModel\
+    \ to the View.\n\n# Code Listing 85: The Controller\n\n```\npublic class HomeController\
+    \ : Controller {\n    public ActionResult Index() {\n        PersonModel model\
+    \ = new PersonModel();\n        model.FirstName = \"Bill\";\n        model.LastName\
+    \ = \"Gates\";\n        return View(model);\n    }\n}\n```\n\nAnd finally I'm\
+    \ going to change the Home/Index View (which isn't exactly valid HTML, but it'll)\
+    \ so it will show the data in the Model.\n\n# Code Listing 86: The View\n\n```\n\
+    @using MyMvcApp.Models\n@model PersonModel\n```\n\n<p>The person that was passed\
+    \ in the PersonModel is: @Model.FirstName @Model.LastName</p>\n\nAnd that will\
+    \ show the following web page:\n\n![](img/a03594f8f44c9d45de3912512db3a264_70_0.png)\n\
+    \nThe person that was passed in the PersonModel is: Bill Gates\n\n# Figure 19:\
+    \ The Resulting View\n\nIf you change the name in the Controller to something\
+    \ else it will be reflected in the View. You don't have to change the Model or\
+    \ the View. To recap, a user requests a View from the Controller. The Controller\
+    \ (optionally) creates a Model, passes it to the View, and returns the View. The\
+    \ View displays the data on the screen.\n\nTwo Design Patterns related to MVC\
+    \ are Model View ViewModel (MVVM) and Model View Presenter (MVP)."
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'MVP is a pattern for the user interface. The Presenter sits between the Model
+    and the View formats data so the View can use it.
+
+
+    In MVVM, the ViewModel is an abstraction of the View that uses for display. Because
+    of abstraction of the View, two-way binding is made possible (updates in the Model
+    are directly presented in the View and updates in the View are directly pushed
+    to the Model). MVVM was created for Microsoft''s Windows Presentation Foundation
+    (WPF), but can now also be found in many JavaScript frameworks like KnockoutJS
+    and AngularJS. Together MVC, MVP, and MVVM are referred to as the MV* Patterns.
+    Note that they are not mutually exclusive.
+
+
+    # Repository
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_71_0.png)
+
+
+    Figure 20: Sequence Diagram of the Repository Pattern
+
+
+    The Repository Pattern is a difficult pattern to, luckily, you don''t have to
+    implement yourself. It makes use of other patterns, the Data Mapper and the Query
+    Object. A Data Mapper is a piece of code that maps database records to C# domain
+    objects. The database and the domain objects are unaware of each other. A Query
+    Object is a C# object that behaves like a database WHERE clause and can be passed
+    to the Data Mapper ("criteria" in the diagram). The Repository, finally, is a
+    collection-like interface that can retrieve domain objects and sits between your
+    domain and data mapping layers. Once going, the benefit to it is separation of
+    concerns. Your domain objects dont know about your database and can be reused
+    for other purposes. Your database layer can be swapped (for example, going from
+    Oracle to SQL Server) and you''ll only have to change your Data Mapper. Your Data
+    Mapper, Query Object, and Repository can also be reused in other projects.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "As much as I'd like building a Data Mapper, Query Object, Repository, we're\
+    \ not going to do that. That costs a lot of time and can be a book on its Own.\
+    \ Instead, I'm going to create a simple Console application, save it, an ADO.NET\
+    \ Entity model to project, and connect to database I have a Person table. The\
+    \ Entity Framework will generate the Person class for me (I'm not taking the first\
+    \ approach)\n\n# Code Listing 87: Generated Person Class\n\n```\npublic partial\
+    \ class Person\n{\n    public int Id { get; set; }\n    public string FirstName\
+    \ { get; set; }\n    public string LastName { get; set; }\n    public Nullable<DateTime>\
+    \ DateBirth { get; set; }\n}\n```\n\nIt will also create the Repository, which\
+    \ inherits from DbContext, and gives access to my Person objects like they were\
+    \ in memory C objects.\n\n# Code Listing 88: Generated DbContext\n\n```\npublic\
+    \ partial class ApplicationEntities : DbContext\n{\n    public ApplicationEntities()\n\
+    \    {\n        base(\"ApplicationEntities\")\n    }\n    protected override void\
+    \ OnModelCreating(DbBuilder modelBuilder)\n    {\n        throw new UnintentionalCodeFirstException();\n\
+    \    }\n    public virtual DbSet<Person> People { get; set; }\n}\n```\n\nAnd here\
+    \ comes the beauty. The usage of the Repository Pattern (when done right) is just\
+    \ really easy.\n\n# Code Listing 89: Usage of the Repository\n\n```\nusing (ApplicationEntities\
+    \ context = new ApplicationEntities())\n{\n    // Construct a query.\n    context.People\
+    \ is the Repository.\n    // The Query Object (an Expression) is constructed .Where(lambda).\n\
+    \    // The Data Mapper is not visible, but is used by the Entity Framework internally.\n\
+    \    IQueryable<Person> query = context.People.Where(p => p.FirstName.Contains(\"\
+    Sand\"));\n    // ToList() will actually call the database.\n    List<Person>\
+    \ people = query.ToList();\n}\n```\n\nPersonally I feel the whole lambda creates\
+    \ Expression (Query Object) philosophy, but it observes the pattern bit. Other\
+    \ APIs I've used have a more explicit Query Object."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# Code List 90: Explicit Query Object
+
+
+    ```
+
+    List<Person> people = SomeApi.People.Select(Query.Contains("FirstName", "Sand"));
+
+    ```
+
+
+    It still beats writing SQL!
+
+
+    A word of caution when using a Repository: everything may look like C#, but the
+    dark truth is that it isn''t. Ultimately, some query will be sent to your database,
+    and if you''re not careful it''s not going to be pretty. The Entity Framework
+    (and other ORM''s) are capable of joining, aggregating, what you have. Some SQL
+    code will be generated and if you don''t know what you''re doing it will be ugly
+    and slow. Sometimes it''s just a lot quicker to write some SQL and do with it!
+
+
+    # The Takeaway
+
+
+    There are many patterns. Some patterns can be generally applied in any (object-oriented)
+    language, while others are language specific. Some patterns are even specific
+    to a certain programming paradigm. For example, JavaScript, which has no modifiers,
+    has Design Patterns, like Module, to be able to hide internal objects. When you''re
+    building a multi-threaded application, you might want to use patterns specifically
+    designed to simplify multi-threaded code. To discuss all these patterns, you''d
+    need many books that aren''t exactly succinct. Design Patterns, like most things
+    in life, have fans and opponents. While it''s true that Design Patterns do not
+    guarantee beautiful software, and may even lead to overly complex software, it''s
+    also important that you know the tools and methods that are available to you.
+    Design Patterns are in no way the holy grail of programming, but, when applied
+    correctly, can help you in creating robust and maintainable software.
+
+
+    The .NET Framework uses many of other Design Patterns that aren''t discussed here,
+    for example; the Iterator Pattern, with IEnumerable and Enumerator, making it
+    possible to loop through collections, the Builder Pattern, for constructing complex
+    objects, for example the ConnectionStringBuilder; the Visitor Pattern in the ExpressionVisitor
+    (when working with Expressions/the Entity Framework); the Proxy Pattern when working
+    with Windows Communication Foundation (WCF); and the Unit of Work Pattern to gracefully
+    handle database transactions in the Entity Framework.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# # Chapter 5 General Responsibility Assignment Software Patterns or Principles\
+    \ (GRASP)\n\nOne set of patterns that you aren't going to see a lot are the GRASP\
+    \ patterns, General Responsibility Assignment Software Patterns or Principles\
+    \ (I'm pretty sure the abbreviation came first). They are not quite patterns like\
+    \ Design Patterns, they are more like advice that should help you solve some programming\
+    \ problems. I'm not sure why GRASP is not as popular as SOLID or Design Patterns,\
+    \ as the principles are no less important and every developer should know them.\
+    \ Craig Larman discusses them in his book Applying UML and Patterns - An Introduction\
+    \ to Object-Oriented Analysis and Design and Iterative Development⁴ There are\
+    \ a total of nine GRASP principles, and some of them overlap with what was already\
+    \ discussed. In this chapter I'll discuss the GRASP Patterns that have no overlap\
+    \ with what we previously discussed. The ones that overlap are Controller (like\
+    \ we've seen in MVC), Polymorphism (one of the three pillars of OOP), Induction\
+    \ (another word for Dependency Inversion), and Protected Variations (another form\
+    \ of Dependency Inversion) and Encapsulation.\n\n# ## Creator\n\nOne of the first\
+    \ problems you will encounter with any OO application is that you need to create\
+    \ an instance of some object, but you're not sure what object is to create it.\
+    \ In some cases this is obvious, as when working with certain Design Patterns\
+    \ such as Factory Method or Singleton. Other times it's not obvious. At the start\
+    \ of this book, we saw a small example with a Car and an Engine class (Inheritance\
+    \ vs. Composition).\n\n**Code Listing 91: Car and Engine\n\n```\npublic class\
+    \ Engine {\n    // ...\n}\n\npublic class Car {\n    private Engine engine = new\
+    \ Engine();\n    // ...\n}\n```\n\n> ⁴ Craig Larman - Applying UML and Patterns:\
+    \ An Introduction to Object-Oriented Analysis and Design and Iterative Development"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "A Car has an Engine, so it should obviously create an Engine, right? Well,\
+    \ maybe. There are a few pointers for whether one class creates another. If some\
+    \ class or aggregates another class, closely uses another, or has the initializing\
+    \ data for another class (see also Information Expert in the next section), it\
+    \ might be a good idea to have that class create another class. A Car does contain\
+    \ an Engine, but it does not aggregate it. A Car uses an Engine. also has the\
+    \ initializing data for an Engine? Who knows? It depends on your design. In this\
+    \ case I would go for another solution, which is to compose the Car with an Engine\
+    \ class through the constructor (or through some means).\n\n# Code Listing 92:\
+    \ Different Engines\n\n```\npublic abstract class Engine {\npublic class GasolineEngine\
+    \ : Engine {\npublic class DieselEngine : Engine { }\n\npublic class Car\n{\n\
+    \    private Engine engine;\n    public Car(Engine engine) {\n        this.engine\
+    \ = engine;\n    }\n    // ...n}\n```\n\nAnd now that another class creates an\
+    \ Engine, you can give your Car any Engine you want.\n\n# Code Listing 93: Compose\
+    \ by your Car\n\n```\nCar diesel = new Car(new DieselEngine());\nCar gas = new\
+    \ Car(new GasolineEngine());\n```\n\nOf course, that still doesn't solve the entire\
+    \ problem, because who creates the Car, and does that same class or yet create\
+    \ the Engine?\n\nIt is important to note that these objects are objects and not\
+    \ domain objects. The domain, or real world objects, are probably created on some\
+    \ assembly line. Chances in your code, that's probably not going to create the\
+    \ Car or Engine. One thing you know for sure, a Car has never created an Engine\
+    \ in the real world.\n\n# Information Expert\n\nInformation Expert is a principle\
+    \ that you are already applying. Information Expert addresses the problem of which\
+    \ object handles responsibility. Often have you wondered what the right class\
+    \ was for a method? The answer lies with Information Expert and is deceptively\
+    \ simple. A responsibility should be assigned to the class that has all the information\
+    \ necessary to fulfill that responsibility.\n\nLet's take a look at an example.\
+    \ Earlier we created an Adapter for a SqlServerApi class. Here's a small reminder:"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\npublic class SqlServerApiAdapter : IDBApiAdapter\n{\n    private SqlServerApi\
+    \ api = new SqlServerApi();\n\n    public object GetData()\n    {\n        DataTable\
+    \ table = api.GetData();\n        object o = ConvertToObject(table);\n       \
+    \ return o;\n    }\n\n    private object ConvertToObject(DataTable table)\n  \
+    \  {\n        // ...\n        return null; // Placeholder.\n    }\n\n    public\
+    \ void SendData(object data)\n{\n        DataTable table = ConvertToDataTable(data);\n\
+    \        api.SendData(table);\n    }\n\n    private DataTable ConvertToDataTable(object\
+    \ obj)\n{\n        // ...\n        return new DataTable();\n    }\n}\n\npublic\
+    \ class OracleApiAdapter : IDBApiAdapter\n{\n    private OracleApi api = new OracleApi();\n\
+    \n    public object GetData()\n    {\n        return api.GetQuery();\n    }\n\n\
+    \    public void SendData(object data)\n{\n        api.ExecQuery(data);\n    }\n\
+    }\n```\n\nCode Listing 94: The SqlServerApiAdapter\n\nNow as it turns out we want\
+    \ to be able to create new databases. That is new functionality as it is not supported\
+    \ by GetData or SendData. Now could we put this new CreateDatabase method? Maybe\
+    \ in our Program class?\n\nCode Listing 95: SqlServerApi in Program\n\n```\nclass\
+    \ Program\n{\n    static void Main(string[] args)\n{\"\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "```\nCreateDatabase(\"MyDB\");\nSqlServerApiAdapter adapter = new SqlServerApiAdapter();\n\
+    object data = adapter.GetData();\n// ...\n\nstatic void CreatedDatabase(string\
+    \ name)\n{\n    SqlServerApi api = new SqlServerApi();\n    api.CreateDatabase(name);\n\
+    }\n```\n\nI think you can see the problem. We've gone through all the trouble\
+    \ of creating an Adapter for the SqlServerApi and now we're going to use it directly\
+    \ in our application. It makes no sense, as SqlServerApiAdapter is the much more\
+    \ obvious choice. It already uses SqlServer here anyway! And that's exactly the\
+    \ point of Information Expert. The SqlServerApiAdapter has all the information\
+    \ that's necessary to create a new database, so it is a good candidate for getting\
+    \ this new functionality. The alternative, Program, knows nothing about SqlServer\
+    \ here, so the choice is easily made.\n\nThe example is kind of obvious, but it\
+    \ demonstrates what Information Expert is all about. I'll tell you a little secret\
+    \ too: I've seen software that had CreateDatabase in Program (well, not exactly\
+    \ that, but a likewise situation). When a code grows large, it is not always obvious\
+    \ where new functionality goes.\n\n# Low Coupling\n\nThe Low Coupling principle\
+    \ helps in keeping the impact of changes to a minimum. Coupling between classes\
+    \ is when a class depend upon another. Needless to say that a lot of classes depend\
+    \ on a certain class it becomes difficult to change that class. The Information\
+    \ Expert Principle actually helps towards this end. Let's check the previous example\
+    \ with the SqlServerApi. Putting the CreateDatabase method in Program was bad\
+    \ design because Program didn't know about SqlServerApi and shouldn't need to\
+    \ know about it. It created unnecessary coupling between SqlServerApi and Program."
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '![](img/a03594f8f44c9d45de3912512db3a264_78_0.png)
+
+
+    Figure 21: Sequence Diagram of High Coupling
+
+
+    As you can see in the diagram, there is a direct line between the **Program**
+    and the **SqlServerApi**. If the **SqlServerApi** changes, it is possible we need
+    to change **Program** and **SqlServerApiAdapter**. In the other design, where
+    the **SqlServerApiAdapter** creates the database, we get another figure.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "![](img/a03594f8f44c9d45de3912512db3a264_79_0.png)\n\nIn this design the **Program**\
+    \ depends upon **SqlServerApiAdapter** and the **SqlServerApiAdapter** depends\
+    \ upon **SqlServerApi**. Now if **SqlServerApi** changes we only need to change\
+    \ **SqlServerApiAdapter**. Of course, if the change in **SqlServerApi** causes\
+    \ another (breaking) change in **SqlServerApiAdapter** we need to change **Program**\
+    \ too.\n\nAs you see, the Low Coupling principle can be used to compare different\
+    \ design solutions and we should, in most situations, pick the design which has\
+    \ the lowest coupling between classes. Because Information Expert guides you in\
+    \ finding the class that has all the necessary information for a certain responsibility,\
+    \ it helps lead to a design with the least coupling.\n\n# # High Cohesion\n\n\
+    Cohesion is the degree to which elements of a class belong together. The High\
+    \ Cohesion Principle states that a class' cohesion should be high. In other words,\
+    \ the methods and properties of a class should belong together. Let's look at\
+    \ another example. Suppose we have a **Person** class with some properties and\
+    \ methods:\n\nCode Listing 96: A Person Class\n\n```\npublic class Person {\n\
+    \    public string FirstName { get; set; }\n}\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\npublic string LastName { get; set; }\npublic DateTime DateOfBirth { get;\
+    \ set; }\n\npublic string GetFullName()\n{\n    return String.Format(\"{0} {1}\"\
+    , FirstName, LastName);\n}\n\npublic int GetAge()\n{\n    int age = DateTime.Today.Year\
+    \ - DateOfBirth.Year;\n    // Month and Day correction.\n    if (EndOfBirth.AddYears(age)\
+    \ > DateTime.Today)\n    {\n        age -= 1;\n    }\n    return age;\n}\n```\n\
+    \nCohesion is high because all properties and methods describe a person. Let's\
+    \ add a method.\n\nCode Listing 97: Person with SalesOrders\n\n```\npublic class\
+    \ Person\n{\n    // ...\n    public List<SalesOrder> GetSalesOrders()\n    {\n\
+    \        // ...\n    }\n}\n```\n\nThe cohesion of Person just went down. It's\
+    \ not completely wrong, but you should ask yourself if a Person really needs to\
+    \ know about a SalesOrder. It's not unthinkable that you want to use the Person\
+    \ in a context where you don't also want to depend on the SalesOrder class. Maybe\
+    \ we could delegate the retrieval of SalesOrders for a Person to some other class.\n\
+    \nCode Listing 98: A SalesOrderRepository\n\n```\npublic class SalesOrderRepository\n\
+    {\n    public List<SalesOrder> GetPersonsSalesOrders(Person)\n    {\n        //\
+    \ ...\n    }\n}\n```\n\nUsage would now look as follows:\n\nCode Listing 99: Usage\
+    \ of the SalesOrderRepository\n\n```\nPerson sander = new Person\n{}\n```"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "```\nFirstName = \"Sander\",\nLastName = \"Rossel\",\nDateOfBirth = new DateTime(1987,\
+    \ 11, 8);\nSalesOrderRepository repo = new SalesOrderRepository();\nList<SalesOrder>\
+    \ orders = repo.GetPersonsSalesOrders(sander);\n```\n\nI am not saying this is\
+    \ the best solution, but it increases the cohesion, and the lower the coupling,\
+    \ of the Person class.\n\nAs you see, High Cohesion and Low Coupling go in hand.\
+    \ When the cohesion of a class is high the coupling is typically low. Again, the\
+    \ Information Expert and Low Coupling Principles lead towards a design with the\
+    \ highest cohesion.\n\n# Pure Fabrication\n\nWe've seen Pure Fabrication a lot.\
+    \ In fact, it's what you do when responsibility doesn't fit in any class you make\
+    \ up one specifically designed for this task. In the previous example, we created\
+    \ a SalesOrderRepository because getting SalesOrders for a Person class violated\
+    \ low coupling and high cohesion. Basically, any class that does not model a domain\
+    \ object is a pure fabrication (a fabrication of imagination that is pure fabrication\
+    \ it has only one responsibility).\n\nLet's look another example. We still have\
+    \ our Person class. Now what class is going to save our Person to the database?\
+    \ We don't have any database classes and a Person has most of the information\
+    \ necessary to save itself to the database. It would seem alright to have the\
+    \ Person class do the database logic necessary to save itself to the database.\
+    \ We already know that's not quite a good idea, mostly because we want our Person\
+    \ to have low coupling and high cohesion.\n\n```\n### Code List 100: Person Class\
+    \ that Breaks Low Coupling and High Cohesion\npublic class Person\n{\n    public\
+    \ string FirstName { get; set; }\n    public string LastName { get; set; }\n \
+    \   public DateTime DateOfBirth { get; set; }\n\n    public void Save()\n    {\n\
+    \        // Database logic here.\n    }\n}\n```\n\nWe so go about and create a\
+    \ pure fabrication, a class with the sole purpose of saving a Person to the database.\
+    \ I won't include the code here because I think you get the point. When we apply\
+    \ other patterns and principles we've seen in this book, we will end up with a\
+    \ Data Mapper and, possibly, a Repository."
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# The Takeaway
+
+
+    GRASP is really useful when designing classes. Unlike anything else we''ve seen
+    so far, they aren''t of a very technical nature, and they don''t describe classes
+    or methods. They describe how to get an efficient design for your software. This
+    chapter has shown that there is not one design for an application. In fact, when
+    we only had a Car and an Engine we already had two design choices (and even more
+    less obvious ones). Keeping GRASP in mind, we can get to some design that''s at
+    least better than many of the alternatives (there is no such thing as a "best
+    design\). The fun thing about GRASP is that a lot of it is already common sense
+    to most developers (like a Person shouldn''t save itself), but with GRASP you
+    have some formal rules that describe why it makes such common sense.'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "# Chapter 6 Architecture\n\nSo far you've seen a lot of code on small scale.\
+    \ We've seen how to design a single class, how to have multiple classes communicate\
+    \ with each other, and how to abstract certain components (like a database). Chances\
+    \ are you need to write more than a few classes though. When looking at the high\
+    \ level structures of a software system, we speak about the architecture of that.\
+    \ In this chapter I'm going to discuss technical challenges and methods that you\
+    \ may encounter when building an application.\n\nI want to emphasize that I will\
+    \ not discuss as well. I will not discuss the job of a software architect, who\
+    \ is talking to the stakeholders, deciding on development processes (Agile or\
+    \ Waterfall), documentation, budget, and other factors that you will have to deal\
+    \ with when building an actual application.\n\nThe architecture of a system is\
+    \ the part that is not easily changed. Opinions on this vary, let's consider a\
+    \ database. Many people point at the database, call it the heart of any system,\
+    \ and tell you it's pretty hard to change later on in the development process.\
+    \ We know, however, that we abstract away behind a Data Mapper and a Repository\
+    \ (on which the software depends upon abstractions) changing databases is \"simple\
+    \ to matter switching to our Data Mapper, and possibly Repository. Or its a lot\
+    \ of work, and everything will have to be tested thoroughly, but we shouldn't\
+    \ have to change our front-end, for example.\n\nSo what is hard to change, Suppose\
+    \ half-way into the project you decide to change the interface of your Data Mapper\
+    \ or your Repository. That could be pretty problematic. Or you decide to throw\
+    \ in an MVC and/or MVVM architecture. That will need a good rewriting of many\
+    \ components.\n\n# Don't Repeat Yourself (DRY)\n\nOne important principle we have\
+    \ not yet discussed the DRY Principle, or Don't Repeat Yourself. Why do we go\
+    \ through all the trouble of putting everything behind abstractions, thinking\
+    \ about architecture, and reuse anyway? DRY is the answer. Prevent writing the\
+    \ same code twice. The next example will illustrate why.\n\nSuppose you have a\
+    \ Person class which has save logic. We broke low coupling and high cohesion,\
+    \ but we can save our Person.\n\n```\nCode Listing 101: Person with Save Logic\n\
+    public class Person {\n  // ...\n  public void Save() {\n    // Daase logic for\
+    \ Person here.\n  }\n}\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: "And now we need a SalesOrder. Because we don't have a single class that can\
+    \ save domain objects, we'll need to write the save functionality again, but this\
+    \ time for our SalesOrder. No problem, we'll just copy/paste it from Person!\n\
+    \n# Code Listing 102: SalesOrder Class with a Bug\n\n```\npublic class SalesOrder\
+    \ {\n  // ...\n  public void Save() {\n    // Dataase logic for Person here.\n\
+    \  }\n}\n```\n\nIt's a no-brainer, the programmer copy/pasted the Save method\
+    \ from Person and now the SalesOrder literally reads \"Database logic for Person\
+    \ here.\" I have seen this happen many times, even in production code!\n\nThere's\
+    \ another problem though. The method doesn't read \"Database\", but \"Dataase\"\
+    . It seems we have another bug. Let's fix the SalesOrder class.\n\n# Code Listing\
+    \ 103: Fixed SalesOrder\n\n```\npublic class SalesOrder {\n  // ...\n  public\
+    \ void Save() {\n    // Database logic for SalesOrder here.\n  }\n}\n```\n\nNeat,\
+    \ our SalesOrder works! But our Person class has the same bug. We must now remember\
+    \ to fix this or it will keep the same bug we just fixed in SalesOrder.\n\nIf\
+    \ we had one Save method that worked on both SalesOrder and Person we would not\
+    \ have the first bug (SalesOrder saving a Person) and we would only have to solve\
+    \ the second bug once. And that's why you should strive to make code abstract:\
+    \ so you can write it once, test it once, fix bugs once, and use it often."
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '# Packages
+
+
+    By creating classes and methods, we can reuse our code throughout our application.
+    Many times we want to reuse code between applications. One example is a tool,
+    may be an XML or JSON parser, or a data mapper, that you''ve written and that
+    you want to use in other applications as well. We''ve seen that copy/pasting,
+    even between applications, is not practical. You can reuse these components by
+    creating packages (Dynamic Link Libraries or DLL''s) that can be used by other
+    applications. When you use .NET you are actually using packages Microsoft created.
+    Just like class design there are some best practices when releasing and using
+    packages. In his book Agile Principles, Patterns, and Practices in C#, Robert
+    C. Martin discusses these practices^5I will quickly summarize them here.
+
+
+    # Reuse/Release Equivalence Principle (REP)
+
+
+    The Reuse/Release Equivalence Principle states that only what is released can
+    be reused. A release is something that is maintained by another author or entity.
+    The release is a product and you are the customer. Releases get updates, which
+    may or not be of interest to you, and you may choose to update or stick to the
+    old version for a while. Clearly, copied code does not fit this description (as
+    we''ve seen DRY). Applications often consist of hundreds of classes and interfaces,
+    releasing single classes is tedious and overwhelming. A package is a good candidate
+    for release so that everything can be reused.
+
+
+    # Common Reuse Principle (CRP)
+
+
+    The Common Reuse Principle is kind of the High Cohesion Principle for packages.
+    Classes that are packaged together belong together. If you reuse one class in
+    a package you need to update, validate your software, and redistribute your software.
+    For this reason classes in a package should have a high cohesion (I''m talking
+    about cohesion between classes, not per class). You will be very happy if you
+    need an update and have to do all that work, but you don''t actually need the
+    update. Of course this happens a lot in practice, since the alternative is having
+    many packages, which is not great.
+
+
+    It might be nice to mention that some script libraries, like jQuery (a JavaScript
+    library), allow you to download only the code that''s necessary for your use.
+    You can then tick the components you want and leave the rest. Of course, such
+    practice is not possible for compiled packages because you compile everything
+    or nothing.
+
+
+    # Common Closure Principle (CCP)
+
+
+    The Common Closure Principle states that classes that change together should be
+    packaged together. That is because if you change a class, or responsibility, you
+    don''t want to update more than one package. You don''t want to have unrelated
+    functionality in one package (CRP) and you don''t want a single functionality
+    in more than one package (CCP).
+
+
+    > ^5 R.C. Martin, M. Martin - Agile Principles, Patterns and Practices in C#'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# Acyclic Dependencies Principle (ADP)
+
+
+    The Acyclic Dependency Principle is reality an issue in C# and Visual Studio.
+    According to this principle, packages cannot depend upon packages that depend
+    upon them, creating a cycle in your dependencies. Making such dependencies is
+    not possible in Visual Studio, though. If you attempt to compile .NET code that
+    violates the ADP, you''ll get an error with a message that complains you are creating
+    a circular reference. Let''s dig into it a little deeper anyway. Suppose you have
+    four packages: Data, Business, UIComponents, and UI. UI depends upon Business
+    and UIComponents, and Business depends upon Data.
+
+
+    ![](img/a03594f8f44c9d45de3912512db3a264_86_0.png)
+
+
+    Figure 23: Dependencies without Cycles
+
+
+    If Business changes we know UI depends on it, so we should check whether UI still
+    works. We know that UIComponents and Data remain unaltered though. Likewise, if
+    Data changes we know we should check Business and UI, but not UIComponents.
+
+
+    Now suppose Data depends upon UI.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '![](img/a03594f8f44c9d45de3912512db3a264_87_0.png)
+
+
+    We have now created a cycle. If Business changes now we should check if UI still
+    works, but because Data now depends upon UI we should also check Data. If UIComponents
+    changes, you have to revalidate every package. This is tiresome for four packages,
+    but in a real world application with tens of packages it is pretty much undoable.
+    In any case, it''s very poor design and prohibited by Visual Studio.
+
+
+    # Stable Dependencies Principle (SDP)
+
+
+    Some packages are written once and regularly updated, while other packages change
+    frequently. Think of the user interface: every new feature to an application needs
+    a change in the user interface to support that feature. Your Data Mapper, hopefully,
+    changes a lot less often. If a package rarely changes, it is said to be stable.
+    According to the Stable Dependencies Principle, stable packages should not depend
+    upon unstable packages. That makes sense because every time a dependency is updated,
+    we should validate a package. That means if a dependency changes often, we should
+    validate often. By that logic a package is only as stable as the least stable
+    package it depends upon, so stable packages should not depend upon less stable
+    packages.
+
+
+    # Stable Abstractions Principle (SAP)
+
+
+    For packages to be stable it is necessary that these packages have a certain level
+    of abstraction. Without abstraction these packages could not be easily changed
+    or extended rendering them unchangeable or unstable. We have already seen how
+    we can create extendable software by using interfaces, inheritance, and SOLID
+    principles.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# Layers and Tiers
+
+
+    You will often hear the terms layered or tiered software design. A layer is a
+    level of abstraction A tier is a physical separation between software responsibilities.
+    A client-server solution, for example, is a 2-tier architecture. If you decide
+    to throw in an extra server for some business logic, you have created a 3-tier
+    architecture. N-tier architecture is relatively easy in object-oriented programming
+    because modules can be reused on different tiers. When you practice the principles
+    laid out in this book your layered architecture will come along naturally. A well-known
+    layered structure is that of the OSI model, a model for describing the different
+    layers of the Internet. Simply put, your browser has no idea how to send bits
+    and bytes over a line, nor does your link know about any browser. Yet, through
+    abstraction, both work together to present websites and applications. The same
+    principle goes for software. Your application has no knowledge of a database,
+    yet through some IDataMapper interface, it is able to communicate with a data
+    storage.
+
+
+    Such a layer can easily be replaced without affecting the rest of the system.
+    When you look at the Internet, you can easily switch from a dial-up connection
+    to ADSL to cable to wireless. No need to replace your browser or your computer.
+    Likewise, TCP/IP, the protocol used to send and receive data on the Internet,
+    can be switched for UDP. In your application, you can switch your databases, rebuild
+    your user interface, without touching the rest of the system (given that you''ve
+    successfully separated concerns in different layers).
+
+
+    A common layered or tiered architecture may look as follows:
+
+
+    | Application | | |
+
+    |---|---|---|
+
+    | Presentation | HTML, CSS, JavaScript | WinForms, WPF |
+
+    | Business | Business Logic | |
+
+    | | | Domain Models |
+
+    | Data Access | Database | Web Service |
+
+
+    > Figure 25: Common Layers or Tiers'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# Architectural styles and patterns\n\nAll these patterns, layers, and tiers\
+    \ can be combined to create greater architectural styles and patterns that are\
+    \ not mutually exclusive. Picking what's right for you and your project is extremely\
+    \ difficult and probably a matter of what you know and what you prefer. Sure,\
+    \ some patterns make more sense for specific applications or technologies, but\
+    \ overall you have some choices.\n\nConsider an ASP.NET MVC application. The pattern\
+    \ already implies we're using MVC. The MVC framework uses REST (Representational\
+    \ State Transfer), meaning, in simplified terms, that your server sits waiting\
+    \ for a request, handles the request, sends a response, and continues waiting).\
+    \ Perhaps you're already using AngularJS or KnockoutJS in the front-end, where\
+    \ MVVM. probably already three-layer (HTML, CSS, AngularJS/KnockoutJS) on the\
+    \ client, a web server, and a database server). You can opt to create some additional\
+    \ services for business logic that you can use for other platforms as well. Additionally,\
+    \ the front-end might make use of an event-driven design.\n\nAs you see, you probably\
+    \ use a lot of patterns and already didn't know it. Discussing these patterns\
+    \ individually requires another books, so I won't do that. Having these tough\
+    \ architectural decisions made for you by the framework or technology you're using\
+    \ may be how you like it, or you may want to create something on your own. There\
+    \ are pros and cons to approach.\n\n# The Takeaway\n\nObject-oriented design should\
+    \ have no secrets for you now. You might be wondering how far you should go in\
+    \ abstraction and reuse. After all, just because you can doesn't mean you should.\
+    \ It's really hard to say where you should draw the line as it's highly subjective.\
+    \ I once\n\n> Code Listing 104: NowResolver\n\n```\npublic interface INowResolver\
+    \ {\n    DateTime GetNow();\n}\npublic class NowResolver : INowResolver {\n  \
+    \  public DateTime GetNow() {\n        return DateTime.Now;\n    }\n}\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'Is this going too far? Has the programmer lost himself in a sea of abstraction?
+    You might be tempted to think so, but actually this is pretty smart. Imagine you
+    have to run some tests on a class that gives different results dependent on the
+    current time (or date). That''s not uncommon at all; maybe it''s a financial application
+    that needs to get the exchange rate at a given date. So try testing if the codebase
+    has DateTime.Now directly in the methods. With the INowResolver you can inject
+    your now and test for yesterday, now, and tomorrow.
+
+
+    Personally, I''ve never seen abstraction go too far. I have missed lots of abstractions
+    though. Sure, having many unnecessary abstractions is hard to read, but missing
+    abstractions is hard to maintain. So the only advice I can give here is to keep
+    thinking, come up with different designs, compare them using the tools I''ve laid
+    out in this book, and use your best judgement. Luckily, some of the harder decisions
+    are already made for you by the framework or technology you choose for your next
+    project.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "# # Chapter 7 Other Paradigms\n\nBy now I hope you've realized that Object-Oriented\
+    \ design is pretty awesome. It's not the only way to write software out there\
+    \ though. In fact, C# is a multi-paradigm language. Knowing which paradigms helps\
+    \ to identify the strengths and weaknesses of OOP.\n\n# ## Procedural Programming\n\
+    \nProcedural Programming has been around for a long time. The name comes from\
+    \ procedures or subroutines, also known as methods. Procedural languages, like\
+    \ OO languages, have methods (procedures), variables, data structures, and even\
+    \ some sort of modularity. Procedural languages have no notion of classes, though.\
+    \ If two methods need access to the same variable that variable must be declared\
+    \ on a global level. In larger applications this becomes problematic as it's very\
+    \ easy to accidentally manipulate a variable and mess up your entire application.\
+    \ Well known procedural languages are C, Pascal, FORTRAN, and BASIC.\n\n# ## Functional\
+    \ Programming\n\nThough Functional Programming has been around since the 50's,\
+    \ it has recently seen an uptick in popularity. The first functional language,\
+    \ in 1958, was LISP. In Functional Languages, closely related to mathematical\
+    \ functions, have a central role, as like in mathematics a function can only work\
+    \ with the input it has been given. This makes it possible to reason about functional\
+    \ programs because you know functions will not alter any program state. Since\
+    \ functions are so important, it is easy to compose new functions from existing\
+    \ functions, to return functions from functions, and to pass inputs to other functions.\
+    \ We say that functions are first class citizens. Functional languages often have\
+    \ a sophisticated type system which makes it unnecessary to declare variable types,\
+    \ yet type safety is guaranteed.\n\nC# has some functional constructs. For example\
+    \ LINQ and lambda's have been borrowed from functional languages. Other popular\
+    \ functional languages are F#, ML, Erlang, and Haskell.\n\n# ## Stateless programming\n\
+    \nOne difference between Functional and OO Programming is the notion of state.\
+    \ Every OO language has state inside a class that determine the state of a class.\
+    \ Having state does more for a language than you might think. For example, consider\
+    \ the Incrementer class:\n\n> Code List 105: The Incrementer Class\n\n```\npublic\
+    \ class Incrementer {\n    private int counter = 0;\n}\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\npublic void Increment()\n{\n    counter += 1;\n}\n\npublic int GetIncrement()\n\
+    {\n    return counter;\n}\n```\n\nThe state of any Increment instance is determined\
+    \ by the value of counter. When we call the Increment function we not know the\
+    \ state of our instance unless we know the state before we call Increment. This\
+    \ makes it very hard to reason about programs. When we call GetIncrement, we don't\
+    \ know what it will return because we don't know the state of the object.\n\n\
+    Let's check out an example. Suppose we have a class Math with a function Add.\n\
+    \n> Code Listing 106: A Math Class\n\n```\npublic class Math\n{\n    public int\
+    \ Add(int a, int b)\n    {\n        return a + b;\n    }\n}\n```\n\nIn this case,\
+    \ we know that if we call the function with parameters 1 and 2 the result will\
+    \ be 3. However, and this is very important, in an OO language we can never be\
+    \ sure.\n\n> Code Listing 107: Add with Side Effects\n\n```\npublic class Math\n\
+    {\n    private int something;\n    public int Add(int a, int b)\n    {\n     \
+    \   something += 1;\n        return a + b;\n    }\n}\n```\n\nNothing stops us\
+    \ from writing an Add function that changes the internal state of our Math class.\
+    \ The change of a class' internal state is called a side effect.\n\nFunctional\
+    \ Programming forbids such side effects. This makes it possible to predict the\
+    \ outcome of a function given the input parameters. It's difficult though; try\
+    \ writing an application without state or side effects."
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# Aspect-Oriented Programming\n\nOOP is great for many things. One it isn't\
+    \ very good at handling so-called cross-cutting concerns. A cross-cutting concern\
+    \ is a general responsibility that is used throughout the application. Think of\
+    \ logging, for example, which you might want to implement in just about any method\
+    \ in every layer and project. The result is that all your methods start with something\
+    \ like Log.Log(currentName, parameters). Another example is something like the\
+    \ INotifyPropertyChanged and INotifyPropertyChanged interfaces in .NET. They can\
+    \ be implemented on a class, which would then raise the PropertyChanging and PropertyChanged\
+    \ events whenever a property changes. The implementation is rather tedious\n\n\
+    Code List 108: INotifyPropertyChanged and INotifyPropertyChanged\n\n```\npublic\
+    \ class SomeClass : INotifyPropertyChanged, INotifyPropertyChanged\n{\n    public\
+    \ event PropertyChangedEventHandler PropertyChanged;\n    public event PropertyChangingEventHandler\
+    \ PropertyChanging;\n\n    private int someProperty;\n    public int SomeProperty\n\
+    \    {\n        get { return someProperty; }\n        set\n        {\n       \
+    \     if (value != someProperty)\n            {\n                RaisePropertyChanging(\"\
+    SomeProperty\");\n                someProperty = value;\n                RaisePropertyChanged(\"\
+    SomeProperty\");\n            }\n        }\n    }\n\n    private void RaisePropertyChanging(string\
+    \ propertyName)\n    {\n        if (PropertyChanging != null)\n        {\n   \
+    \         PropertyChanging(this, new PropertyChangingEventArgs(propertyName));\n\
+    \        }\n    }\n\n    private void RaisePropertyChanged(string propertyName)\n\
+    \    {\n        if (PropertyChanged != null)\n        {\n            PropertyChanged(this,\
+    \ new PropertyChangedEventArgs(propertyName));\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: 'That''s a lot of boilerplate code! A class that would need one line of code
+    now has over thirty!
+
+
+    Aspect-Oriented Programming aims to fix this issue by altering existing code dynamically.
+    The Proxy or Decorator Patterns are often used to accomplish this. One of the
+    most known AOP frameworks is probably PostSharp⁶. Another is DynamicProxy by Castle
+    Project⁷.
+
+
+    ⁶ https://www.postsharp.net/
+
+    ⁷ http://www.castleproject.org/projects/dynamicproxy/'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# Conclusion
+
+
+    Object-oriented programming is an awesome programming paradigm which enables you
+    to write huge enterprise applications that are readable, extendable, and maintainable.
+    The tools available to you, such as Inheritance, Encapsulation, Interfaces, and
+    Design Patterns, are quite numerous. Still, many projects fail completely, never
+    seeing the light of day. When the tools are applied incorrectly, or not at all,
+    you will still end up with a bunch of unmaintainable spaghetti code. For this
+    reason it is important that you study and practice different patterns and designs
+    so you can make an informed decision on what to use when that time comes.'
+  merge: -1
+  pgno: 95
