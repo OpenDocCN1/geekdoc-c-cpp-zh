@@ -1,0 +1,19 @@
+- img_proc: true
+  md: '# FIGURE A.5
+
+    Main window of Rcmdr.
+
+
+    ![](img/801853aad6f586206fbd36c652395db4_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# FIGURE 3.6
+
+
+    Plot of the sine function.
+
+
+    ![](img/801853aad6f586206fbd36c652395db4_1_0.png)'
+  merge: -1
+  pgno: 1

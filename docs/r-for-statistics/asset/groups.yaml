@@ -1,0 +1,60 @@
+- md: '
+
+    # FIGURE A.5
+
+    Main window of Rcmdr.
+
+
+    ![](img/801853aad6f586206fbd36c652395db4_0_0.png)
+
+
+    # FIGURE 3.6
+
+
+    Plot of the sine function.
+
+
+    ![](img/801853aad6f586206fbd36c652395db4_1_0.png)
+
+    '
+  mdcn: '
+
+
+    # 图 A.5
+
+    Rcmdr 的主窗口。
+
+
+    ![](img/801853aad6f586206fbd36c652395db4_0_0.png)
+
+
+    # 图 3.6
+
+
+    正弦函数图表。
+
+
+    ![](img/801853aad6f586206fbd36c652395db4_1_0.png)
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # FIGURE A.5
+
+    Main window of Rcmdr.
+
+
+    ![](img/801853aad6f586206fbd36c652395db4_0_0.png)'
+  - '[PAGE 1]
+
+
+    # FIGURE 3.6
+
+
+    Plot of the sine function.
+
+
+    ![](img/801853aad6f586206fbd36c652395db4_1_0.png)'
