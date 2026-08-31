@@ -1,0 +1,1276 @@
+
+# C++：新手硬核 C++ 速成课 - 8 小时学会在 C++ 编程！（编程系列丛 1）
+
+## 引言
+
+感谢你的下载，并祝贺你下载这本书《C++：针对新手的干话 C++ 速成课程——8 小时学会 C++ 编程！》。
+
+一个世纪前，教育完全是为了学习字母表。IT 和编程领域对技能的需求也非常低。多年来，技术进步如此巨大，以至于世界已经离不开它。
+
+互联网改变了世界，将其变成一个紧密连接的小型村庄，信息可以在几秒内跨不同的大陆。今天，人们可以轻松地从网上获取信息。企业依赖互联网获得广泛的收益，从接触更广泛的受众到提供全年 24 小时 7 天无候的服务。
+
+由于几乎每个人都在奔波，移动设备已成为必需品。此外，越来越多的人使用智能手机访问互联网。网站是网页的核心，提供了连接全球的平台。
+
+在未来，几乎所有的自动化都将依赖技术。由于编程是这些发展的核心，对程序员的需求不仅很高，而且预计未来将爆炸式增长。
+
+根据最近的一项研究，到 2020 年，将需要约 140 万开发者。然而，到 2020 年只有 40 万开发者可用，这表明行业面临程序员的短缺。
+
+因此，学习和开发编程技能是不可避免的，这就是你大显身手的地方。学习 C++ 编程语言是一个很好的开始。这种语言将为你提供成为成功程序员所需的基础。
+
+这本书包含了如何使用 C++ 编程语言编码的经过验证的步骤和策略。本书共 8 章。在你迈向专家程序员的途中，我将介绍你需要学习的各种基础但关键的概念。你做出了选择！
+
+再次感谢下载这本书，希望你喜欢！祝你玩得开心！
+
+## 第 1 章
+
+### C++ 的起源
+
+C++ 的起源追溯到 1979 年。那是贝尔 AT&T 的员工比雅恩·斯特拉斯鲁普（Bjarne Stroustrup）开始研究 C 编程语言及其类的时候。比雅恩从 CLU、Simula、ML、ALGOL 68 和 Ada 等语言中借用了各种理想特性。
+
+这意味着 C++ 由 C 编程语言特征组成，包括强类型检查、基础继承、类和默认函数参数。它最初被称为“带类的 C”，在 1983 年更名为 C++。C++ 语言规范标准由 ANSI-ISO 在 1998 年发布。
+
+名为 C++11 的 C++ 新标准于 2011 年中期发布。它的出现受到了 Boost 库的重大影响。正是通过这些库，C++ 引入了许多新的对应模块。
+
+从这些库引入的一些特性包括原子支持、全面的随机数库、容器类、`auto` 关键字、标准线程库、正则表达式支持、数组初始化列表、改进的联合支持、新的 C++ 时间库和新模板。
+
+2014 年 12 月，发布了 C++14，在 C++11 的基础上进行了微小的错误修复和增强。
+
+### 为什么要学习 C++
+
+尽管 C++ 是一门起源于 80 年代的语言，但它现在仍然是一门流行的编程语言，并不断进化以满足现代开发者的需求。C++ 是一门重要的语言，值得程序员投入时间和精力的，原因主要有以下五点：
+
+* 高可移植性 – `C++` 具有良好的可移植性。这意味着你可以用它开发跨平台和多设备的应用程序。
+
+* 拥有函数库 – `C++` 拥有丰富的函数库，包含了你在开发程序时所需的各种函数。
+
+* 面向对象 – `C++` 是一种面向对象的编程语言。这简单意味着它具有继承、数据抽象、类、封装和多态性。
+
+* 高效、且快速 – `C++` 不仅高效强大，而且是一种强大的编程语言。可以用它来开发各种程序或应用程序，从游戏、3D 图形到实时数学模拟和 GUI 应用程序。当你需要直接访问硬件，以及需要高效快速的程序执行时，它会非常有用。
+
+爱好者们已经使用 `C++`（全部或部分）开发了开源游戏。例如，`openTTD` 是使用 `C++` 开发的，而 `Raspberry Pi Units` 和 `Arduino` 电路则是用 `C++` 和 `C` 编写的。
+
+这种语言具有良好的可读性且功能强大，让你能够在语言能力范围内完成你想做的任何事情。
+
+* 函数重载与异常处理 – 与 `C` 编程语言不同，你可以在 `C++` 中轻松地重载函数并处理异常。
+
+#### 所以，什么是 C++？
+
+`C++` 读作“C 加加”。它是一种通用的面向对象编程语言。如前所述，它基于 `C` 编程语言，由 `Bjarne Stroustrups` 创建，并于 1983 年首次发布。
+
+许多应用程序都是使用 `C++` 开发的，包括微软应用程序、Mac OS/X` 的部分、`Adobe` 以及 `MongoDB` 数据库等程序或应用。在开发对性能至关重要的应用程序（如音视频处理或“twitch”类游戏开发）时，`C++` 是最好的编程语言。
+
+根据目标的不同，`C++` 应用开发继续让全球中小企业受益。随着版本的不断更新，使用 `C++` 开发的应用程序或程序的范围在不断扩大。
+
+`C++` 是最广泛使用的编程语言。然而，由于 `C#` 和 `Java` 等更自然且不晦涩的语言日益流行，它的人气多年来略有下降。`Ruby`、`Python` 和 `Perl` 脚本语言变得变得流行，导致 `C++` 的排名有所下降。
+
+`C++` 仍然是一门重要的底层编程语言。由于这种语言是通用的，学习它可以帮助你维护它的遗留代码。
+
+作为初级开发者，学习 `C++` 无疑为你的编程职业打下了良好的基础。它分别连接了高级语言（如 `Python` 或 `Java`）和底层语言（C）。
+
+掌握了关于 `C++` 以及你为什么需要学习它的知识后，你现在可以进入下一章。开始吧，编写你的第一个 `C++` 程序。
+
+## 第 2 章
+
+### 入门 – 在 C++ 中编写你的第一个程序
+
+我在本电子书中提供的指令非常简单，因为我意识到你是一个初学者。我为你准备了这份简单的指南，让你能够尽快开始编码。我将为你提供开启编程生涯所需的所有信息。
+
+#### 选择要使用的编译器和 IDE
+
+作为新手或初学者，要开始 `C++` 需要一个编译器和一个 `IDE`。集成开发环境（`IDE`）是你编写代码的平台。根据你所选择的 `IDE`，你可以在编码环境中执行各种功能，从调试程序到运行你编写的代码等等角色。
+
+人类和机器理解不同的语言。人类使用基于单词的自然语言，而机器（设备或硬件）理解基于代码的机器语言。因此，将你编写的程序转换为机器可以理解的语言是非常重要的。
+
+这就是编译器大显身场。编译器是一个翻译器，起着将你编写的程序翻译成机器语言（代码）的角色，这是机器容易读取和理解的形式。
+
+在很多情况下，`IDEs` 自带编译器。然而，在编写程序时并不一定需要 `IDE`。这是因为理论上讲你可以使用文本编辑器编写代码，将其保存为 `.cpp` 文件并在编译器上运行它。但是，我不建议你（作为一个初学者）或任何其他程序员（无论涉及何种编程语言）使用文本编辑器来替代 `IDE`。
+
+我们在这个初级指南中使用 `CodeBlocks IDE`。不过，在练习编程技能时，可以自由使用你喜欢的任何其他 `IDE`。如果你想使用实时的基于 Web 的编译器，可以考虑 `Rextester.com`。否则，访问 [www.codeblocks.org](http://www.codeblocks.org) 获取此集成开发环境。
+
+找到下载（downloads）页面，点击显示“download the binary release”的链接。为你的操作系统选择正确的版本。如果你使用的是 Windows，请寻找名为“codeblocks-(此处填写版本) mingw-setup.exe”的文件。对 `Mac OS/X`、`Linux` 或任何其他操作系统也执行相同的操作。
+
+访问“Downloads”文件夹中的可执行文件并双击它。点击 `OK` 运行文件。安装成功后启动程序并选择你想要使用的编译器。注意，默认选择了 `MinGW/GCC` 编译器。由于我们要使用它，只需点击“ok”按钮即可。
+
+设置好 `IDE` 程序的所有内容，且其窗口仍在你的电脑桌面上激活时，在任务栏上找到“file”（文件）并点击它。将鼠标悬停在上面，选择弹出的“New”（新建）子菜单。最后，选择“empty file”（空文件）选项。
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+cout <<”Hello World! I’m Here Now\n”;
+
+return 0;
+}
+```
+
+完成后，在同一个 IDEIDE 窗口中找到位于任务栏正下方的图标栏。它有一组图标，包括播放、齿轮以及组合播放/齿轮按钮。播放按钮将允许你运行程序，齿轮按钮是你编译代码所需的工具，而组合播放/齿轮按钮则同时执行这两个功能。
+
+注意，在 `C++` 中，你必须在运行或执行程序之前对其进行编译。
+
+尝试每个按钮并看看代码发生了什么变化。点击齿轮按钮看看发生了什么。对其他图标按钮也执行相同的操作。
+
+大搞定！那只是你的第一个 `C++` 程序。按住 `ctrl` 键并按 `S` 保存文件，或点击“Edit”（编辑）菜单然后“Save”（保存）子菜单执行相同操作。将文件命名为‘FirstCplusplus.cpp’。
+
+观察你的第一个 `C++` 代码发生了什么变化。
+
+哇！它有了颜色，当然还有了生命。这正是你的 `IDE` 的目的所在，为你提供一个编写 `C++` 代码的理想环境。你看到的彩色部分被称为语法高亮，即将你的程序分割成若干不同的部分。
+
+你准备好了，开发环境和第一个 `C++` 程序就在面前。这还能更刺激吗？拭目以待！
+
+在计算领域，数据存储和检索至关重要。程序和应用程序不仅是为了处理数据，也是为了使用数据。计算机内存是数据存储的地方。
+
+如果你想检索数据，必须知道它存储的内存位置。通过变量，你可以轻松地访问存储的数据。它们充当占位符。
+
+变量是存储在应用程序和程序中的数据。你可以轻松地更改或操作它们。在 `C++` 中，如果你需要为值提供存储，变量会非常有用。在这种语言中，你可以以多种方式解释变量（数据）。
+
+编译器根据数据类型分配内存位置。变量就是分配在计算机内存中的这些位置。每个变量声明都有独特的功能和内存需求。
+
+因此，变量是某些名称，通过数据值标识符作为内存位置的引用，你可以在应用或程序中轻松地更改或操作它们。数据类型是存储在内存中的多种方式。
+
+#### 变量数据类型
+
+以下是 `C++` 中的五种主要数据类型：
+
+- **Char** – 此数据类型用于存储变量 ASCII 字符。这些字符通常被包含在单引号中。
+
+  `'c'` `' 'x'` `'a'` `'*'` 等。
+
+- **Float** – 此数据类型用于存储小数，也称为浮点数。这些数字由整数部分和小数组成，用小数点将两者分开。此外，它们可以是负数也可以是正数。
+
+  `.9` `199955.68` `0.6` `10.2` 等。
+
+- **Int** – 此数据类型用于存储整数或具有整数值的数字。虽然这些数字可以是负号也可以是正号，但不允许使用逗号。
+
+  `10` `4` `-35` `22` `-40` 等。
+
+- **Bool** – 此数据类型用于存储布尔值，即真（true）或假（false）。
+
+- **Double** – 此数据类型用于存储双精度或较大的浮点值。
+
+##### 变量数据类型变体
+
+五种数据类型还有不同的变体以便更好地控制。
+
+- **Short int** – 这是一个从 `-45589` 到 `45589` 的整数。与普通整数不同，短整型占据的空间更少。
+
+- **Unsigned int** – 这些是正整数，但范围是普通正整数的两倍。
+
+- **Constants** – 常量在声明之前被赋予值，一旦声明，它们就会保持不变。在数据类型之前放置 `const` 可以声明一个常量，尽管该变量已被声明过。
+
+- **C-string** – 虽然这既不是数据类型也不被声明，但它们展示了 `c-like` 字符串。它们是字符数组，可以包含多个单个字符的数据。
+
+虽然最后两种变量类型现在并不至关重要，但在其他编程应用领域通常是必不可少的。
+
+#### 实际用途/示例
+
+让我们现在通过示例来学习。
+
+启动 `CodeBlocks` 并定位到 `File` 菜单。在弹出的新子菜单下，选择 `New` 然后 `Project`。
+
+在打开的新窗口的可用选项中找到 `Console Application`。使用编译器的默认选项，创建你的 `C++` 实践项目并输入名称 `Variables`。对每个章节执行此操作，将项目命名为相应的章节标题。
+
+在活动编译器窗口的侧边栏上，找到 `Expand Variables`。点击它然后选择 `Expand Sources` 选项。在新列表中，双击 `main.cpp`。
+
+文件打开后，删除出现的所有项目。开始在文件中输入以下代码进行练习：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int apartments = 5; // 变量 "apartments", 给它赋一个值
+    cout << "I have" << apartments << " apartments!\n "; //打印
+    return 0;
+}
+```
+
+接下来，你需要编译你的代码然后运行它。
+
+你的控制台应该显示：“I have 5 apartments!”
+
+没错。
+
+你做得很好。请继续努力。
+
+#### 注释
+
+双斜杠用于表示注释，注释有两种变体：单行注释和多行注释。
+
+**单行注释** – 它们可以出现在程序代码的任何地方。它们告诉编译器忽略该代码行之后的任何内容。例如，
+
+`//this is your comment`
+
+**多行注释** – 它们以 `/*` 开始，以 `*/` 结束。其中 `/*` 向编译器指示注释的开始，而 `*/` 则终止或结束它。如果不用 `*/` 指定注释的结束，编译器会将 `/*` 之后的所有内容视为注释。例如，
+
+```cpp
+/* this is
+your multi-line
+comment */
+```
+
+根据我们上面代码中的注释，很清楚我们声明的变量被称为 `apartments`。它的数据类型是整数，我们给它赋值为 `5`。
+
+#### 变量操作
+
+接下来，你需要学习并练习如何操作变量。例如，将整数的值从 `5` 更改为其他数字，比如 `10`。
+
+你会注意到在编译和运行更改后的代码后，程序将显示“I have 10 apartments!”
+
+你还可以询问用户他们拥有多少公寓。这里将你会有更多乐趣的地方！
+
+要做到这一点，首先删除文件上的所有内容。不要担心，因为你不仅在学习更多，而且还在获得更多的乐趣。
+
+在文件中输入以下代码：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int apartments;
+
+    cout << “ How many apartments do you have?\n”;
+    cin >> apartments;
+    cout << “Oh My God! You have “ << apartments;
+    return 0;
+}
+```
+
+```cpp
+cin >> apartments >> detached houses >> bungalows >> condos;
+
+cout <<“Oh My God! You have”<< apartments <<“apartments,“<< detached houses <<“bungalows, and”<< condos <<“condos!\n”;
+
+return 0;
+
+}
+```
+
+如你所见，`C++` 不仅易用，而且易于理解。
+
+了解枚举器（enumerators）同样重要。在你继续学习这门编程语言时，它们可能会派上用场。
+
+#### 枚举器
+
+枚举器也称为迭代器（iterators），它们允许程序员（你）编写“状态”（state）语句。虽然它们仅仅是整数值，但你可以轻松地利用它们进行比较。我将在下一章向你展示如何使用枚举器。
+
+查看下文了解如何声明枚举器：
+
+```cpp
+Enum houses { apartments, detached houses, bungalows, condos };
+```
+
+## 第 4 章
+
+### 条件与循环
+
+我向你保证，这一章更加有趣。你一定会喜欢的！
+
+#### 控制流
+
+语句从第一条到最后一条执行。执行从第一语句开始，接着是第二条，然后是第三条，以此类推。一直持续到最后一条语句执行。此时，程序终止。
+
+如果你的程序只是按顺序运行或执行类似的语句，它实际上是毫无用的。根据实际情况和你想做的操作，你的程序应该允许你进行必要的语句更改或选择要执行的语句。
+
+一个很好的例子是你的程序设计用于统计文档中特定单词的次数。无论你想检查哪个文档，你的程序都应该轻松地检查任何给定文件是否存在特定单词，并给出该单词的正确数量。
+
+这就是所谓的控制流（control flow）。你能够改变程序执行语句的方式。如果你希望程序的行为符合你的输入，那么就应该有一种方法来检查后者。这就是条件（conditions）用用场。
+
+
+
+通过条件，你的程序会检查变量的值，并根据被称为条件的特定语句，决定是执行还是不执行。C++ 中使用的两种主要条件结构是：
+
+`if` 和 `switch-case`
+
+在我们讨论这两个条件结构并向你展示如何实际使用它们之前，让我们先来看运算符。
+
+### 运算符
+
+运算符可以是逻辑的，也可以是关系的。通过这些运算符，编译器可以判断语句中的条件是真是假。
+
+#### 关系运算符
+
+关系运算符有助于确定任何两个表达式之间的关系。关系运算符的示例包括：
+
+- `>` 意味着大于
+- `>=` 意味着大于或等于
+- `<` 意味着小于
+- `<=` 意味着小于或等于
+- `==` 意味着等于
+- `!=` 意味着不等于
+
+虽然关系运算符的作用与算术运算符类似，但前者检查两个表达式之间的关系，返回一个布尔值来指示真假。注意，布尔表达式是返回真或假值的表达式。
+
+#### 逻辑运算符
+
+另一方面，逻辑运算符组合简单的关系表达式以产生复杂的布尔表达式。以下是你需要的逻辑运算符示例：
+
+- `&&` 意味着“与”（and）
+- `||` 意味着“或”（or）
+- `!` 意味着“非”（not）
+
+这是一个逻辑返回真或假的示例：
+
+| Apartments | Condos | Apartments && Condos |
+| :--- | :--- | :--- |
+| True | True | True |
+| True | False | False |
+| False | True | False |
+| False | False | False |
+
+`!` 运算符否定单个参数的值。这是一个简单的实际示例（`Apartments = 10` 且 `Condos = 4`）：
+
+- `!(Apartments > 6)` → False
+- `(Apartments > Condos) && (Condos > 0)` → True
+- `(Apartments < Condos) && (Condos > 0)` → False
+- `(Apartments < Condos) || (Condos > 0)` → True
+
+在布尔表达式中，任何值为 0 的语句均为假，而任何非 0 值的语句均为真。
+
+### If、If-else 和 Else-if
+
+`if` 条件是一个带有待检查值的表达式。如果在程序继续运行之前，条件为真，则你的语句将执行。然而，如果条件为假，编译器将忽略这些语句。你可以按照以下格式编写 `if` 条件：
+
+```cpp
+if (condition to be met)
+{
+    Statement 1
+    Statement 2
+…
+}
+```
+
+如果是单个语句，不需要使用大括号。查看下例：
+
+```cpp
+if (condition to be met)
+Statement
+```
+
+`if-else` 条件在需要在一个块中检查两个顺序语句时非常有用。如果 `if` 条件被确定为真，则相应的块语句将被执行。相反，如果条件为假，则执行 `else` 语句。在这种情况下，只有一个语句块被执行，因为条件可能满足，也可以不满足。`if-else` 条件按以下格式编写：
+
+```cpp
+if (condition)
+{
+    Statement 1a
+    Statement 1b
+…
+}
+else
+{
+    Statement 2a
+    Statement 2b
+…
+}
+```
+
+然而，如果你的代码仅有一个块语句（如下例所示），则省略大括号：
+
+```cpp
+if (condition)
+    Statement 1a
+else
+    Statement 2a
+```
+
+### Else-if
+
+当你的代码有许多条件需要满足时，且至少有两个块语句需要执行时，`else-if` 条件非常有用。如果第一个条件满足，则执行对应的块语句。相反，如果第一个条件不满足，则在第二个条件满足时执行对应的语句。`else-if` 条件的格式如下：
+
+```cpp
+if (condition)
+{
+    Statement1a
+    Statement1b
+…
+}
+else if (condition)
+{
+    Statement2a
+    Statement2b
+…
+```
+
+C++ 代码可以至少有一个 `else-if` 条件，每个条件都有待满足。一旦某个条件满足并执行了相应的块语句，编译器将忽略其他的 `else-if` 条件。这意味着如果你的代码有 `if-else-else` 条件，在这种情况下，如果之前的所有条件都不满足，则执行最后一个 `else` 条件对应的块语句。就像普通的 `if-else` 条件一样，至少有一个对应的块语句被执行。
+
+空谈理论够了，让我们实际操作一下。回到你的 CodeBlocks 编译器。删除文件中的所有内容并输入以下代码：
+
+```cpp
+#include <iostream>
+
+Using namespace std;
+
+int main()
+{
+    int Apartments = 6;
+    int Condos = 3;
+    if (Apartments > Condos)
+        cout <<“Apartments are more than Condos\n”;
+    else if (Condos > Apartments)
+        cout <<“Condos are more than Apartments\n”;
+    else
+        cout <<“Apartments and Condos are equal in number\n”;
+    return 0;
+}
+```
+
+编译并运行这个程序；看看发生了什么。代码返回 `Apartments are more than Condos`。如果你交换 `Apartments` 和 `Condos` 的值（`apartments=3` 和 `Condos=6`），程序将输出 `Condos are more than Apartments`。如果你给每个变量分配相似的值，例如 `Apartments =6` 和 `Condos =6`，程序输出 `Apartments and Condos are equal in number`。
+
+### Switch-Case 条件
+
+就像我们上面讨论的 `if`、`if-else` 和 `else-if` 条件一样，`switch-case` 条件在相应条件满足时执行某些语句，或者不执行。然而，这两种类型之间的区别在于 `switch-case` 独特的行为和语法。
+
+```cpp
+switch (expression)
+{
+    case constant1:
+        statement1a
+        statement1b
+        …
+        break;
+    case constant2:
+        statement2a
+        statement2b
+        …
+        break;
+    …
+    default:
+        statement3a
+}
+```
+
+`statement3b`
+
+…
+
+}
+
+在我们上方的程序代码中，`switch` 测试表达式。如果 `constant1` 和 `expression` 相等，则 `case constant1` 之后的所有语句都将被执行，直到编译器找到 `break` 为止。
+
+然而，如果 `expression` 不等于 `constant1`，则会与 `constant2` 进行比较。如果 `case constant2` 和 `expression` 相等，则 `case constant2` 之后的所有语句都将被执行，直到编译器找到 `break` 为止。
+
+否则，该过程将对所有常量重复进行。如果没有找到匹配项，则 `default` 之后的所有语句都将被执行。
+
+请注意，在这种情况下，大括号在封装整个 `switch-case` 时是重要的，但当至少有一条语句时则不需要；我们将此归因于 `switch-case` 独特的行为。
+
+尽管你可以在 `switch-case` 中使用等价的 `if-else` 条件，但你可以用更好的方式来表达这种行为。
+
+是时候练习了，让我们回到编译器。
+
+删除文件中的所有内容并输入以下代码：
+
+```cpp
+#include <iostream>
+
+Using namespace std;
+
+int main()
+
+{
+
+int Apartments=10;
+
+switch (Apartments)
+{
+
+case 1:
+cout << “Apartments are 1\n”;
+break;
+case2:
+case3:
+cout << “Apartments are 2 or 3”;
+break;
+default;
+cout << “Apartments are not 1, 2, or 3”;
+}
+
+return 0;
+
+}
+```
+
+编译并运行代码。看看发生了什么。
+
+该程序将输出 `Apartments are not 1, 2, or 3`。将 `Apartments=10` 替换为 `Apartments=2` 并注意新的程序输出。
+
+它将打印 `Apartments are 2 or 3`。
+
+### 循环
+
+循环可以帮助你反复执行或运行多个语句，直到满足特定条件。给定的语句按顺序执行，直到指定的条件被声明为真。
+
+语句序列保持在循环体（大括号）中。每次执行循环体时，编译器都会检查语句是真还是假。如果是假，则再次执行循环体。这会一直持续，直到确定条件为真。
+
+#### 循环类型
+
+循环有三种形式：`while`、`do-while` 和 `for`。
+
+##### While 和 Do-while
+
+`while` 循环——这个循环与我们上面讨论的 `if` 条件相同。代码写法如下：
+
+```cpp
+while (condition)
+{
+
+statement1
+statement2
+…
+}
+```
+
+块中的语句会一个接一个地重复执行，直到满足条件。如果你的代码中只有一条语句，则不需要使用大括号。
+
+现在很清楚了，每当我们练习新代码时，你都需要清理编译器文件为我们的新程序留出空间。我相信你现在已经掌握了这一点，并发现自己在自动删除之前工作过的代码。
+
+好了，让我们继续。
+
+输入以下代码：
+
+```cpp
+#include <iostream>
+
+Using namespace std;
+
+int main()
+
+{
+
+int Apartments=0;
+
+while (Apartments are less than 10)
+Apartments=Apartments + 1;
+cout << “Apartments are” << Apartments << “\n”;
+
+return 0;
+
+}
+```
+
+编译并运行这段代码后，你的程序输出是什么？它应该像这样：
+
+`Apartments are 10.`
+
+`do-while` 循环——这是一个循环变体，确保块语句至少执行一次。你可以这样编写此循环：
+
+```cpp
+do
+{
+
+Statement1
+Statement2
+…
+}
+
+while (condition);
+```
+
+如果满足条件，则执行块语句，之后程序将回到块的开头。在这种情况下，你必须使用大括号。
+
+注意，程序以紧邻待满足的 `while` 条件后的分号结束。
+
+##### For
+
+`for` 循环——与 `while` 循环类似，区别在于语法不同。查看以下代码：
+
+```cpp
+for (initialization; condition; increment)
+{
+
+statement1
+statement2
+…
+}
+```
+
+该循环在循环开始时启用一个初始化的计数变量，并在每次循环迭代中增加。如果你的程序只有一条语句，请考虑不要使用大括号。
+
+我们必须在编译器文件中输入新代码以删除其中的所有内容。
+
+```cpp
+#include <iostream>
+
+Using namespace std;
+
+int main()
+
+{
+
+for (int Apartments = 0; Apartments < 10; Apartments = Apartments +1)
+cout << Apartments << “\n”;
+
+return 0;
+
+}
+```
+
+编译并运行代码。输出是什么？
+
+数字 0 到 9 将被打印出来，每个值占一行。
+
+如果你已经预定义了计数变量，则不需要在 `for` 循环的初始化部分进行新定义。因此，下面的程序代码是有效的：
+
+清理你的编译器文件并输入以下：
+
+```cpp
+#include <iostream>
+
+Using namespace std;
+
+int main()
+
+{
+
+int Apartments = 0;
+
+for (; Apartments < 10; Apartments = Apartments + 1)
+cout << Apartments << “\n”;
+
+return 0;
+
+}
+```
+
+`for` 循环括号内的第一个分号是必要的。你可以将 `for` 循环表示为 `while` 循环，反之亦然。根据我们上面已经写的 `for` 循环结构或形式，让我们写一个等效的 `while` 循环：
+
+```cpp
+Initialization
+
+while (condition)
+{
+
+Statement1
+Statement2
+…
+
+Increment
+}
+```
+
+根据我们的 `for` 循环示例，我们可以编写如下等效的 `while` 循环：
+
+```cpp
+#include <iostream>
+
+Using namespace std;
+
+int main()
+
+{
+
+int Apartments = 0;
+
+while (Apartments < 10)
+{
+
+cout << Apartments << “\n”;
+Apartments = Apartments + 1;
+}
+
+return 0;
+
+}
+```
+
+- `A Function Name` – 这是你在引用函数时使用的名称。与对象的名称不同，函数的名称通常是一个动词。
+- `Return Type` – 函数起着返回变量类型的作用。它可以是一个字符串，也可以是一个整数。
+- `Parameters` – 这些是函数可以接收的元素。此外，你可以使用函数轻松修改参数。
+
+### 接收和返回整数
+
+函数可以接收一个整数 `Apartments` 并返回一个整数，如下：
+
+```cpp
+int return_int (int Apartments)
+{
+    return Apartments;
+}
+```
+
+在上面的代码中，`int` 是我们的返回类型，而 `return_int` 是函数名称。`Integer Apartments` 是我们的参数。简单来说，这个函数接收整数 `Apartments` 并返回整数 `Apartments`。
+
+### 在 Main 中调用函数
+
+我们将在 `main` 中调用上面的函数。让我们开始吧。
+
+创建一个整数 `Studio`。我们将它作为 `return-int` 输出。我们的函数将接收一个 `6`。现在来写这段代码；清除你的编译器文件并输入以下代码：
+
+```cpp
+#include <iostream>
+
+int return_int (int Apartments)
+{
+    return Apartments;
+}
+
+int main ()
+{
+    int Studio = return_int (6);
+    std:cout<<“Hello World, I’m Here Now!\n”;
+}
+```
+
+在测试代码之前，让我们将 “Hello World, I’m Here Now!\n” 替换为 `Studio`。你的新代码应该如下：
+
+```cpp
+#include <iostream>
+
+int return_int (int Apartments)
+{
+    return Apartments;
+}
+
+int main ()
+{
+    Int Studio = return_int (6);
+    std:cout << Studio;
+}
+```
+
+你的输出控制台中显示了什么？它应该是 ‘6’。
+
+### 一个接收整数 `Apartments` 和 `Condos` 并返回它们的和（结果也是整数）的函数
+
+在清除编译器文件中的所有内容后，在文件中输入以下代码：
+
+```cpp
+#include <iostream>
+
+int add_ints (int Apartments, int Condos)
+{
+    int Houses = Apartments + Condos;
+    return Houses;
+}
+
+int main ()
+{
+    Int Homes = add_ints (6, 5);
+    std:cout << Homes;
+}
+```
+
+我们的函数会将 `6` 加 `5`，并将输出 `11` 存储在变量 `Homes` 中以便打印。编译并运行它。它应该输出 `11`。
+
+### 字符串函数
+
+让我们写一段接收两个字符串并将它们相加的代码。我们将使用函数 `combine_strings` 来合并字符串 `Apartments` 和 `Condos`。你会发现它与之前的代码有些相似之处；我们只是在各处修改了几个地方。
+
+在清空的编译器文件中输入以下代码：
+
+```cpp
+#include <iostream>
+
+std: string combine_strings (std:: string Apartments, std:: string Condos)
+{
+    std:: string combined = Apartments + Condos;
+    return combined;
+}
+
+int main ()
+{
+    Std:: string Houses = combine_strings(“Apartments”,“Condos”);
+    std:cout << Houses;
+}
+```
+
+在这段代码中，我们的字符串 `Apartments` 和 `Condos` 将相加；这与我们之前相整数相似。两个字符串将被合并并打印结果；这就是 `return combined` 函数的作用。
+
+在计算中，这种组合或相加被称为“拼接”（concatenation）。
+
+
+
+现在编译并运行程序。显示了什么？`Apartments` 和 `Condos` 按该顺序出现。
+
+## 函数与 if 语句
+
+让我们多创建一个函数，让它接收两个整数 `Apartments` 和 `Condos` 并返回一个整数。
+
+```cpp
+#include <iostream>
+
+int more (int Apartments, int Condos)
+{
+    if (Apartments > Condos)
+    {
+        return Apartments;
+    }
+    else
+    {
+        return Condos;
+    }
+}
+```
+
+我们的`more`函数在参数中接收两个整数`Apartments`和`Condos`并对它们进行比较。它只返回较大的那个整数。例如，如果`Apartments`多于`Condos`，它返回后者。反之亦然。
+
+在编译器中运行代码之前，让我们先为我们的`main`函数定义一个整数。我们将创建一个整数`Houses`来存储`more`函数的结果。它会像这样：
+
+`int Houses = more (12, 6);`
+
+我们的最终代码将如下所示（清除编译器文件并输入它，因为我们现在需要测试它）：
+
+```cpp
+#include <iostream>
+
+int more (int Apartments, int Condos)
+{
+    if (Apartments > Condos)
+    {
+        return Apartments;
+    }
+    else
+    {
+        return Condos;
+    }
+}
+
+int main ()
+{
+    int Houses = more (12, 6);
+    std:cout << Houses;
+}
+```
+
+编译并运行代码。两个整数经过比较，你的程序将显示`12`作为输出。
+
+## Void 函数（空函数）
+
+虽然我们刚刚探索了字符串和整数函数，但函数也可以接收并返回双精度浮点数、`float`、字符甚至布尔值。在本章结束之前，让我向你展示如何编写一个 `void` 函数。
+
+`void`函数不返回任何值。当我们期望代码或程序不返回结果时使用它。
+
+`Datatype ArrayName[Order\Dimension] = {item1, item2, …, itemn};`
+
+在编译器文件中输入以下代码：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+double weight[] = {34.66, 450.45, 23.58, 5.33, 54.04};
+cout << “1stmember =“<< weight[0] << endl;
+cout << “3rdmember =“<< weight[2] << endl;
+return 0;
+}
+```
+
+编译并运行代码。输出是什么？
+
+它应该显示为：
+
+```
+1st member = 34.66
+
+3rd member = 23.58
+```
+
+如果你想访问所有项或数组成员，只需执行相同的操作，按照数组列表从第一个到最后一个列出项即可。
+
+## 指针
+
+当你声明一个变量时，计算机会为它预留内存空间，并使用其名称来引用内存中预留的空间。在计算中，这个空间通过地址来引用。这意味着所有声明的变量都有地址。可以找到声明变量的地址。
+
+当你找到变量的地址后，就可以使用它。每当我们向函数传递一个参数（变量）时，就像引用一样，它的地址会被使用。结果是，调用函数访问变量的地址来直接使用它的值。这意味着我们可以通过调用函数更改变量的值。
+
+在通常情况下，一旦你退出调用函数，之前的变量值会被保留。然而，通过指针，即使调用函数最初被声明为`void`，它也可以返回多个值。
+
+当声明数组时，必须定义它们的维度。与数组不同，指针可以帮助我们在不需要知道或找到数组维度的情况下编写代码。这是因为它们是更好的内存管理器。
+
+由于数组可以包含整个文本和长字符，指针由于能够持有不同大小的数组而变得非常有用。这意味着我们可以使用指针代替数组，从而消除了知道给定数组大小的需求。这由编译器处理。
+
+与数组一样，函数可以接收指针并返回修改后的值，即使对于`void`函数也是如此。
+
+当我们需要处理多维数组时，指针是理想的工具。我们不再直接引用变量的地址，而是声明另一个变量来执行引用。
+
+因此，指针是引用或指向其他变量地址的变量。就像任何其他变量一样，指针在使用之前必须先声明并初始化。
+
+### 声明指针
+
+我们按照标识符（数据类型）、星号（`*`）、指针名和分号（`;`）的顺序来声明指针。
+
+格式如下：
+
+`Datatype * Pointername;`
+
+你选择的数据类型或标识符应该是要引用地址的变量的类型。这意味着如果变量是整数，那么数据类型就变成整数。星号标识正在声明的变量为指针。
+
+星号必须出现在每个要声明为指针的变量之前，每个变量之间用逗号分隔，如下：
+
+`Datatype* pointer1, *pointer2;`
+
+你也可以在不同的行声明它们，如下：
+
+`Datatype* pointer1;`
+
+`Dataype * pointer2;`
+
+如何附加星号并不重要，只要它出现在标识符和要声明为指针的变量之间。如果你将星号放在每个要声明为指针的变量之前，只有第一个变量被视为指针，其余的是普通变量。
+
+看这个：
+
+`Datatype * pointer1, pointer2;`
+
+`pointer2`不是指针，而是一个普通变量。
+
+### 命名和初始化指针
+
+由于指针是变量，它们使用与我们在之前的章节中介绍变量时相同的命名系统。
+
+当我们初始化指针时，就像处理变量的情况一样，我们告诉编译器它将做什么。
+
+`int* pointer;`这样声明的指针初始化如下：
+
+`int* pointer = &Variable;`（在初始化时移除星号，但在变量前保留`&`，当需要在另一行进行初始化时也是可以的。）
+
+让我们练习一下：在编译器文件中输入以下代码。
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int value = 22;
+int* pointer = &value;
+cout <<“Value is at:”<< Value <<“\n”;
+cout <<“Pointer is at:”<< *Pointer;
+cout << “\n\n”;
+return 0;
+}
+```
+
+编译并运行这段代码。程序输出以下结果：
+
+```
+Value is at: 22
+
+Pointer is at: 22
+```
+
+你也可以如下初始化指针：结果是相同的。
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int value = 22;
+int* pointer;
+cout <<“Value is at:”<< Value <<“\n”;
+pointer = &value;
+cout <<“Pointer is at:”<< *Pointer;
+cout << “\n\n”;
+return 0;
+}
+```
+
+我们也可以先声明变量稍后初始化，如下：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int value;
+int* pointer;
+value = 22;
+pointer = &value;
+cout <<“Value =”<< Value <<“\n”;
+cout <<“Pointer =”<< *Pointer <<“\n”;
+return 0;
+}
+```
+
+我们可以更改一个声明并赋值了新值的变量的值：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int value;
+int* pointer;
+pointer = &value;
+value = 56;
+cout <<“Value is at:”<< Value <<“\n”;
+cout <<“Pointer is at:”<< *Pointer;
+value = 15;
+cout << “Value =”<< value <<“\n”;
+*pointer = 10;
+return 0;
+}
+```
+
+让我们现在将以下代码输入编译器并看看发生什么。
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int value;
+int* pointer;
+pointer = &value;
+value = 100;
+cout <<“Value is at:”<< value <<“\n”;
+cout <<“Pointer is at:”<< *pointer;
+cout << “\n”;
+return 0;
+}
+```
+
+编译并运行代码。输出应该是：
+
+```
+Value is at: 100
+
+Pointer is at: 100
+```
+
+## 字符串
+
+以终止空字符（`\0`）结尾的字符数组构成字符串。当你想要定义字符串时，通常使用`std`命名空间字符串库。
+
+有很多字符串函数可以操作字符串。它们包括：
+
+*   `strlen()`函数用于确定字符串的长度。
+
+*   `strcat()`函数用于拼接或添加两个字符串的字符。
+
+*   `strncat()`函数用于将源字符串的特定字符附加到目标字符串中。
+
+*   `strcpy()`函数用于将一个字符串复制到另一个字符串中，替换后者。
+
+*   `strncpy()`函数用于将源字符串的特定字符复制到目标字符串中，替换后者。
+
+*   `strdup()`函数用于制作字符串的副本或拷贝。
+
+*   `strcmp()`函数用于比较两个字符串，返回整数作为比较结果。
+
+*   `strncmp()`函数用于比较字符串的特定字符与另一个字符串的字符。它返回整数作为比较结果。
+
+*   `stricmp()`函数用于不区分大小写地比较两个字符串，这意味着大小写混合没有影响。
+
+*   `strincmp()`函数用于不区分大小写地比较两个字符串，这意味着大小写混合没有影响。然而，比较是基于特定数量字符的。
+
+*   `sprintf()`函数用于格式化字符串并定义显示方式。
+
+*   `strupr()`函数用于将小写字符串转换为大写字母。
+
+*   `strlwr()`函数用于将大写字符串转换为小写字母。
+
+*   `strstr()`函数用于在另一个字符串中搜索子字符串的首次出现位置。它返回剩余字符串作为一组新的字符集或字符串。
+
+*   `strrchr()`函数用于从字符串右侧筛选字符串以查找特定字符。
+
+*   `strchr()`函数用于在字符串中搜索特定字符的首次出现位置。
+
+由于我们只是在学习 C++ 编程语言的基础知识，我们不会深入探讨所有的函数。然而，了解它们以及它们的作用是重要的。让我们通过上述列表中的第二个字符串函数进行练习。
+
+将以下代码输入到编译器文件中：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+char *Make = "Suzuki ";
+char *Model = "Wagon";
+cout << "Historically, Make = " << Make;
+
+strcat(Make, Model);
+
+cout << "\n\nAfter concatenating, Make = " << Make << endl;
+
+return 0;
+}
+```
+
+编译这段代码并运行它。输出是什么？
+
+输出将是：
+
+```
+Historically, Make = Suzuki
+
+After concatenating, Make = Suzuki Wagon
+```
+
+你现在已经学习了 C++ 数组、指针和字符串中的重要基础，使你能够编写简单的代码。
+
+在下一章中，我们将通过 C++ 的文件 I/O 和类来完成本书。
+
+# 第 8 章
+
+## C++ 中的文件 I/O 和类
+
+### 文件 I/O
+
+在本章中，我们将学习文本文件的文件 I/O。注意，这个主题比我在这里涵盖的内容要更高级。
+
+C++ 中有两个基本类负责处理文件。它们包括分别写作`ifstream`和`ofstream`的流。在程序中使用这两个类时，必须使用`fstream`头文件。
+
+虽然我们可以使用`ifstream`从文件中读取或将数据输入文件，但`ofstream`则便于写入文件或文件输出。
+
+#### 声明文件 I/O 类
+
+按如下方式声明两个类之一的`ifstream`或`ofstream`：
+
+`ifstream a_file;`或`ofstream a_file;`
+
+或者
+
+`ifstream a_file ("nameoffile");`或`ofstream a_file ("nameoffile");`
+
+如果你在两个类中都将文件名作为参数或变量，文件实际上会被打开。这两个类也使用`open`和`close`命令。
+
+`(a_file.open())`是打开命令，而`a_file.close())`是两个类都使用的关闭命令。
+
+然而，由于程序在终止时会自动调用`close`命令，因此你不需要使用它。但是当需要在程序终止之前关闭文件时，它非常有用。
+
+让 C++ 在文件处理方面具有吸引力的是其文件 I/O 函数的简单性。在类实例之前使用`<<`和`>>`是可能的，因为 C++ 支持运算符重载。实际上，在文件流打开后，我们可以将它们作为`cin`和/或`cout`。
+
+清除编译器文件并输入以下代码：
+
+```cpp
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  char str[10];
+  // 创建一个 ofstream 实例并打开 variables.txt
+  ofstream a_file ( "variables.txt" );
+  // 通过 a_file 输出到 variables.txt
+  a_file<<"This text will be inside variables.txt";
+  // 完全关闭文件流
+  a_file.close();
+  // 打开文件进行读取
+  ifstream b_file ( "variables.txt" );
+  // 读取文件中的单个字符串
+  b_file>> str;
+  // 输出 'This'
+  cout<< str <<"\n";
+  cin.get();    // 在按下按键之前什么都不会发生
+  // b_file 在此点完全关闭
+}
+```
+
+编译并运行这段代码以查看发生了什么。
+
+通过创建一个不存在的`ofstream`，你激活了默认模式下的文件打开。然而，如果存在`close`命令结构，则会清除或删除所有内容。也可以声明第二个变量来定义你希望编译器如何处理文件。
+
+考虑以下内容：
+
+*   使用`ios::app`追加文件
+
+*   使用`ios::ate`将当前位置设置在末尾
+
+*   使用`ios::trunc`删除文件中的所有项
+
+你可以在打开文件时追加新数据，而不必触动其内容。使用下面的函数：
+
+`ofstream a_file ("variables.txt", ios::app );`
+
+如果你无法打开文件，不要使用该函数打开它。先使用下面的代码进行测试：
+
+```
+ifstream a_file ( "variables.txt" );
+
+if ( !a_file.is_open() )
+
+{
+
+  // 文件无法打开
+
+}
+
+else
+
+{
+
+  // 安全地使用文件流
+
+}
+```
+
+### 类
+
+通过类，你可以创建自定义或定制的数据类型。使用关键字`class`。类可以是空的，也可以赋值。一旦创建，类就可以像普通的内置数据类型（如`char`、`int`、`bool`等）一样使用。
+
+例如，让我们在下面的代码中声明`Books`类：
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class Books
+{
+int numberOfpages;
+};
+
+int main()
+{
+return 0;
+}
+```
+
+如果你想声明一个空类，请删除下方代码中的函数：
+
+```cpp
+{
+int numberOfpages;
+};
+```
+
+`public`（类内外均可访问）、`protected`（仅类内访问）和`private`（类似于`protected`）是 C++ 中的三种限制级别。你可以使用各自的关键字声明它们，并以分号结束。
+
+限制使得类更易用。构造函数和析构函数必须在类中体现。前者初始化变量，后者清理内存以释放空间。
+
+编译器也会创建默认构造函数，即使你不需要它们。析构函数也是如此。这意味着每当你声明类实例时，构造函数就会被调用。
+
+当作用域结束、程序终止或分配内存删除时，析构函数就会被调用。现在重要的是你理解构造函数和析构函数的概念。注意，两者都不返回变量或参数，因此你不会将它们用于这些目的。
+
+给析构函数和构造函数`public`限制以便你创建类。这归因于每当创建一个类时，就会调用构造函数。否则会导致编译错误。
+
+我们的课程结束了！
+
+我祝贺你完成了本书的学习。虽然书结束了，但学习并没有结束。尽可能多次阅读这本书，每次都享受其中！
+
+# 结
+
+再次感谢下载这本书！
+
+我希望这本书帮助你学习初级开发者需要的重要基础 C++ 编程技能。注意，每章中讨论的每个概念都是迈向资深 C++ 程序员之路的基础知识。
+
+下一步是练习、练习再练习。使用书中的代码进行练习，甚至尝试编写自己的代码。我建议你在练习时使用不同的编译器。这样，你就能找到一个适合未来持续使用的编译器。当你练习时，你不仅能更好地理解解释的概念，还能掌握这些技能。祝你新发现的编程事业一切顺利。希望你每一步都享受其中！
+
+最后，如果你喜欢这本书，我想请你帮个忙，你是否愿意在 Amazon 上给这本书留个评论？将不胜感激！
+
+感谢并祝你好运！
