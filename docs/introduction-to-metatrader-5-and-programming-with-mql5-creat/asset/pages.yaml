@@ -1,0 +1,4695 @@
+- img_proc: true
+  md: '# # Introduction to MetaTrader 5 and Programming with MQL5
+
+
+    Create your 1 st Investment Robot with MQL5 step by step from ZERO.
+
+
+    RAFAEL F. V. C. SANTOS
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_0_0.png)
+
+
+    # # MetaTrader 5 MQL 5'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Introduction to MetaTrader 5 and Programming with MQL5
+
+
+    Create your 1st Investment Robot with MQL5 step by step from ZERO.
+
+
+    All rights reserved. This e-book or any part thereof may not be reproduced or
+    used in any way without the express written permission of the author or publisher,
+    except for the use of short quotations in a review of the e-book.
+
+
+    First edition, 2018.'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'Author: **Rafael F. V. C. Santos** (rafaelfvcs@gmail.com)
+
+
+    Specialist in strategic risk management applied to the financial market. He works
+    with the development of automated investment strategies (Robots of investment
+    - Expert Advisor) using machine learning and spatial statistics. Graduated in
+    Chemical Engineering from the Federal University of Pernambuco (UFPE) - Brazil.
+    He holds a Masters and PhD in Civil Engineering (UFPE) in the areas of characterization,
+    modeling and statistical simulation, applied to oil wells and reservoirs. He has
+    several articles, with the theme of applied statistics, published in national
+    and international magazines and congresses.
+
+
+    Copyright©2018 de Rafael F. V. C. Santos.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# Summary\n\n+   1. Introduction\n  1.1. Digital Age\n  1.2. Artificial Intelligence\n\
+    \  1.3. High Frequency Trading - HFT\n  1.4. Computer Programming\n  1.5. What\
+    \ will we learn?\n  1.6. Why MetaTrader 5?\n  1.7. EA Strategy\n  1.8. Advantages\
+    \ of Using EA\n  1.9. E-book Summary\n2. MetaTrader 5\n  2.1. Downloading and\
+    \ installing MetaTrader 5\n  2.2. Main elements of the MetaTrader 5\n  2.3. Navigator\
+    \ Field\n  2.4. Field Toolbox\n  2.5. Looking for Candels\n  2.6. Saving Templates\n\
+    \  2.7. Drawing Objects\n  2.8. Transition between Graph Times\n  2.9. Adding\
+    \ Indicators\n  2.10. Data Window\n3. MQL5 Community\n4. MetaEditor MQL5\n  4.1.\
+    \ MetaEditor\n  4.2. Creating a new Project\n  4.3. OnInit()\n  4.4. OnDeinit()\n\
+    \  4.5. OnTick()\n  4.6. Programming Accessories\n    4.6.1. Comments\n  4.7.\
+    \ EA Properties"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '+   4.8. MetaTrader and MetaEditor File Types
+
+
+    +   4.9. Adding Libraries
+
+
+    +   5. Basic Programming Logic with MQL5
+
+
+    +   5.1. Types of Variables
+
+
+    +   5.2. Declaration of Variables
+
+
+    +   5.2.1. Integer Type
+
+
+    +   5.2.2. Type Double
+
+
+    +   5.2.3. Type String
+
+
+    +   5.2.4. Type bool
+
+
+    +   5.2.5. Type Datetime
+
+
+    +   5.3. Declaring Constants
+
+
+    +   5.4. Vector Variables: Arrays
+
+
+    +   5.5. For loop
+
+
+    +   5.6. Enum
+
+
+    +   5.7. Input Type Variables
+
+
+    +   5.8. Local and Global Variables
+
+
+    +   5.8.1. Local variables
+
+
+    +   5.8.2. Global Variables
+
+
+    +   5.9. Variables Predefined by MQL5
+
+
+    +   5.10. Math Operations
+
+
+    +   5.11. Logical and Conditional Relationships
+
+
+    +   5.12. Ternary Operator
+
+
+    +   5.13. Methods or Functions
+
+
+    +   5.14. Candles and Tick Variables
+
+
+    +   5.15. Functions Comment () and Alert ()
+
+
+    +   5.15.1. Comment()
+
+
+    +   5.15.2. Alert()
+
+
+    +   5.16. Adding MQL5 Indicators
+
+
+    +   6. Programming the EA
+
+
+    +   6.1. Strategy overview
+
+
+    +   6.1.1. Moving Averages
+
+
+    +   6.1.2. Relative Strength Index (RSI)
+
+
+    +   6.2. Creating EA
+
+
+    +   6.3. Declaration of Global Variables'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   6.3.1. Variables for the User
+
+    6.3.2. Global Variables
+
+    6.4. OnInit () Function
+
+    6.5. Function OnDeinit()
+
+    6.6. Expert Advisor Functions
+
+    6.6.1. Error Handling
+
+    6.7. Function: OnTick()
+
+    7. Backtests
+
+    7.1. Backtest in MetaTrader 5
+
+    7.2. Analyzing the Backtest Charts
+
+    7.3. Performance Charts'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Chapter 1'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# 1. Introduction'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# .1. Digital Age
+
+
+    We are living in the digital age. Nowadays, information and knowledge travel through
+    the optical fibers. Everything is in constant development and accelerated growth.
+    This evolutionary dynamic is unprecedented in the history of mankind.
+
+
+    Devices and objects are becoming increasingly intelligent and independent. Nowadays,
+    it is possible to find, for sale, smart phones and watches that recharge the battery
+    with the temperature of the human body. Research shows that by 2025, at least
+    half of the US fleet will be traveling completely autonomously. That''s right,
+    the profession of driver, taxi driver and many others, are counting their days.
+    And for the financial market this is no different. Professional traders are being
+    replaced by algorithms.
+
+
+    These are just small examples of the avalanche of modifications and benefits brought
+    in from the world shouting for change. We are changing the world and the world
+    forcing us to change into a virtuous circle of prosperity.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# 2. Artificial Intelligence
+
+
+    Embedded systems are gradually dominating our daily lives. People and things are
+    becoming more and more connected to the internet. A new intelligence is created
+    from this new cosmos. We are opening the doors to **Artificial Intelligence (AI)**.
+    Practically everyone benefits (or will benefit) in some way from the wonders brought
+    by AI.
+
+
+    Many say that this new generation may bring us problems, but we must be optimistic
+    about the uncertainties, as we are on the way to an inevitable and non-return
+    path.
+
+
+    Several companies and investment funds are currently working heavily on the use
+    of artificial intelligence to make their investment decisions. From AI, we can
+    filter and group information and knowledge hidden in apparently meaningless numeric
+    data and connection.
+
+
+    In this race, it is advantageous to dominate subjects and knowledge related to
+    mathematics, statistics and computer programming.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# .3. High Frequency Trading - HFT
+
+
+    Investors and speculators in the financial market know that the main enemy to
+    make money in this world is precisely the emotional factor. Human beings have
+    desires, wants, greed, fears and fears that make the activity decide the best
+    time to buy and / or sell a real challenge.
+
+
+    When we are working with Investment Robots, we are discussing a strategy that
+    has been previously defined and structured so that it can be executed in a timely
+    manner. Frequently, robots do not get tired, stress or have any feelings that
+    allow misunderstandings and / or biases when buying or selling.
+
+
+    Optical fibers allowed for a revolution in communication. In the investment world,
+    for example, every thousandth of a second can cost millions of dollars. So-called
+    High Frequency Traders (HFTs) operating on the world''s top stock exchanges makes
+    decisions at infinitesimal speeds and thus are threatening many professional brokers
+    and traders.
+
+
+    The HFTs'' decision to buy and / sell is taken in milliseconds, up to ten to fifty
+    times faster than a simple wink of the human eye (lasting approximately 300 milliseconds).
+    It is practically unfeasible and unfair the operational comparison of any computational
+    system of this category with a normal human being.
+
+
+    Recent data (year 2018) show that more than 50% of US financial operations are
+    carried out by investment robots. And the results show that these robots can increase
+    financial returns by up to 15%. There are some stock exchanges where more than
+    90% of operations are carried out by investment robots.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# .4. Computer Programming
+
+
+    Most people have the following objections when it comes to programming: it''s
+    very difficult, needs to know a lot of math, I''ve never been good with numbers.
+    However, many of these objections are nothing more than a misunderstanding of
+    this programming activity, which is as trivial as telling a brief story with beginning
+    middle and end.
+
+
+    The interesting thing is that anyone able to write the steps of running a cake
+    recipe on a sheet of paper is able to create a computer program. To program is
+    to communicate with the outside, with the other, in order to conduct actions.
+    For our case, this other is the machine.
+
+
+    We have a structure of activities to be followed and we need, for a good realization
+    of it, an adequate sequence of order of execution. Programming is to master a
+    language the machine understands and know how to position our deliberative needs
+    in time and space, so that they are executed correctly.
+
+
+    Therefore, it is up to every curious investor and with the patience to learn something
+    new to look at in the world of programming. This is because scheduling computers
+    is a much simpler activity than many imagine.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# .5. What will we learn?
+
+
+    In this e-book we will learn how to create, step by step, an automated investment
+    strategy. We will create an Investment Robot (Expert Advisor - EA) from scratch
+    using the MetaTrader 5 and MQL5 programming language.
+
+
+    Thus, having a program written in a high-level language (MQL5) (those closest
+    to the understanding of humans, low-level languages are closer to the understanding
+    of machines) we will be able to leave the arduous and exhausting work of monitoring
+    purchase and sale of a financial asset on the stock exchange for the robot.
+
+
+    We will spend a few hours to program a robot known as **Expert Advisor** and spend
+    the rest of the time monitoring the execution of the strategy in a much quieter
+    and safer way. That leaves more time for a contemplative and pleasurable life.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# .6. Why MetaTrader 5?
+
+
+    MetaTrader 5 is a powerful platform for visualizing, operating and scheduling
+    investment strategies for various types of financial markets.
+
+
+    It was created in the year 2005 and continues to be improved and distributed by
+    MetaQuotes (https://www.metaquotes.net). We can use MetaTrader 5 to operate in
+    the stock markets, futures, options, currency pairs (FOREX) among others.
+
+
+    MetaTrader 5 was chosen to build our first EA, as it is a ''free'' tool, quite
+    powerful and complete from the point of view of the main functionalities that
+    a trader platform should have.
+
+
+    Inside MetaTrader 5 we have the option to create scripts, indicators and, of course,
+    investment robots using the MQL5 programming language. This language is very similar
+    to C++, Java and C#. So anyone who already knows any of them will feel extremely
+    comfortable learning MQL5.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# .7. EA Strategy
+
+
+    We will develop from scratch a strategy of crossing two moving averages (one fast
+    and slow) with the possibility of an input filter in operations with the rather
+    popular indicator RSI (relative strength index).
+
+
+    Our robot will be multi-strategy. It will be able to work, using as input triggers
+    in the operations, only the crossing of the moving averages, only the RSI or both
+    (crossing of averages plus RSI).
+
+
+    We will also learn how to make backtests of the created robot. Thus we will be
+    able to test various setups on historical data of various financial assets. The
+    book is full of guidelines, with screenshots, using the key parts of MetaTrader
+    5 and MetaEditor.
+
+
+    We will learn the programming syntax in MetaEditor. We have several features when
+    programming with MQL5. It already presents a very significant set of libraries
+    to work with graphical manipulation, mathematical operations, statistics, with
+    price structures and control of the sending of trading orders.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# .8. Advantages of Using EA
+
+
+    Let''s go to the advantages behind using investment robots. They are many, but
+    we go to the main ones:
+
+
+    +   - Eliminates all emotional side;
+
+    - Test ready strategies with backtests;
+
+    - Simulate adverse market situations;
+
+    - EA are free from fatigue, stress, lose attention, or fail to execute the strategy;
+
+    - We can optimize the strategy from a Robot;
+
+    - EA are infinitely disciplined and speedy compared to us;
+
+    - Statistical validations can be made. EA statistically validated winners and
+    consistent in the medium and long term.
+
+    - EA has a single mindset that is to execute the scheduled strategy;
+
+    - EA operate from the first second of market opening to the last second before
+    closing, without truce and misconduct.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# .9. E-book Summary
+
+
+    So to achieve the goal of creating our first Expert Advisor, this e-book organizes
+    and simplifies in a didactic way the necessary steps with the knowledge and usage
+    information of MetaTrader 5 and its MQL5 programming language.
+
+
+    Here''s a summary of what you will learn from reading this e-book:
+
+
+    +   - Learn how to install MetaTrader 5;
+
+    - Know the main benefits of the MetaTrader online portal;
+
+    - Understand the main features and differences between MetaTrader and MQL5;
+
+    - Learn to add indicators and EA;
+
+    - Know MetaEditor and some of the main shortcuts to facilitate programming;
+
+    - Learn the programming syntax of MQL5;
+
+    - Understand the main functions of the MQL5 development libraries.
+
+    - Create a strategy using trend indicators (moving averages) and consolidated
+    market indicators (Relative Strength Index - RSI);
+
+    - Program step-by-step a Multrategy EA;
+
+    - Make backtests of the created EA;
+
+    - Know the backtest statistics;
+
+    - And much more.
+
+
+    Now we are moving towards the future of investments. Congratulations on your decision
+    to enter this grand and fascinating world of automated investments.
+
+
+    Thank you for your confidence in purchasing this material. The future is here
+    and we will build it together.
+
+
+    Everyone a great read!
+
+
+    # Important note[1].'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Chapter 2'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# ! MetaTrader 5
+
+
+    MetaTrader is a platform developed to assist in the visualization of prices of
+    financial assets and execution of buy and sell orders on the stock exchange. It
+    is also possible to create scripts (algorithms for specific actions), indicators
+    and investment robots.
+
+
+    It is a free tool developed and distributed by MetaQuotes Softwares (https://www.metaquotes.net/).
+    Initially, it was developed thinking about the Forex market. However, several
+    brokerages have been allowing for the use in the stock market.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_18_0.png)
+
+
+    Millions of traders and hundreds of brokers cannot be wrong — they have chosen
+    MetaTrader 5 for trading Forex and financial markets!
+
+
+    We need a company (investment broker) to provide routing pricing data for the
+    platform. Many investment brokers offer this service for free. Some even offer
+    a demo account where we can simulate buy and sell operations in the financial
+    market with dummy money. Also, in the demo account, we can put our robots to test
+    in real time before using them in a real account.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'MetaTrader 4 was created in 2005 and since then has been undergoing major transformation
+    of improvements in its system and security features. It is currently in its second
+    major release called MetaTrader 5 which was released in 2010.
+
+
+    We can use MetaTrader on both desktop and smartphones. It is available to work
+    on the Web, on Mac, Linux, Windows and Android systems. The leading Internet browsers
+    on the market support MetaTrader 5 online.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_19_0.png)
+
+
+    MetaTrader 5 is not only a tool for visualizing and routing orders (buy/sell)
+    of financial assets, but also an excellent platform for developing investment
+    strategies from scripts, indicators and robots (Expert Advisors). For this it
+    counts on the environment of development for the language MQL5 (MetaQuotes Language)
+    that presents/displays great similarities with C++, Java and C#. Therefore, those
+    who have had some knowledge in any of these programming languages will feel comfortable
+    with the MQL5 syntax.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: In comparison to MetaTrader 4, MetaTrader 5 allows developing strategies using
+    the object-oriented programming paradigm (OOP).
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# ## 1. Downloading and installing MetaTrader 5
+
+
+    In the world several brokerages offer free use of MetaTrader 5. All we need is
+    that we are a client of the investment broker. We need, after downloading the
+    platform, to request a release of a demo and / real account so that we can have
+    access to the routing of the data of the financial assets.
+
+
+    The direct download of the platform can be done by the site: https://www.metaquotes.com/en/metatrader5/.
+
+
+    As said before, several brokers around the world offer free routing, but many
+    for the Forex market. Some Forex brokers only need a valid phone number to release
+    a demo account. In this e-book we will use the prices of financial assets present
+    in the São Paulo (Brazil) BM&FBovespa exchange.
+
+
+    However, to follow the studies in the book, you do not necessarily need to have
+    an account with a Brazilian investment broker.
+
+
+    The installation process is very simple and straightforward. After two clicks
+    on the file an installation wizard will guide you with the necessary steps.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_21_0.png)
+
+
+    Just go ahead until the end of the installation. At the end you will be asked
+    for account with login and password. It is necessary for us to use the pricing
+    data for financial assets. In this e-book we will use a demo account from XP Investimentos.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'See below the open program requesting the login, password and type of server
+    (if real or demo).
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_22_0.png)'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# ## ..2. Main elements of the MetaTrader 5
+
+
+    One of our main interests is to visualize asset prices from candles (candlesticks).
+    So, let''s get to know the main visualization features of the MetaTrader 5 platform.
+
+
+    In the **Menu: View -> Symbols**, we have the option to choose the financial assets
+    that we wish to work.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_23_0.png)
+
+
+    We can choose between Bovespa and BMF Assets (continuous series). In the assets
+    of Bovespa we have the OPTIONS (calls and puts), the shares in A VISTA and the
+    INDICES (futures market) traded in the Brazilian market.
+
+
+    It is important to note that each brokerage will provide distinct data routing.
+    With more data and some with less. For example, if we were with some brokerage
+    that works with the Forex market, the options that would appear in this window
+    of Assets would be completely different.
+
+
+    The addition of a symbol that represents a company, which is being consulted in
+    the prices, can be executed in the **Market Watch.**'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_24_0.png)
+
+
+    In this Market Observation field we can add the assets related to the companies
+    traded on the stock exchange in which the brokerage firm is released to operate.
+
+
+    Still within the **Market Watch** field we have the **Details** tab that offers
+    additional information regarding the financial asset being evaluated. Below, for
+    example, we can see the information on this tab for *Petrobras* shares. In the
+    **Trading** tab we have several options where we can make purchases and sales
+    with just one click.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '| Symbol | Bid | Ask | Last |
+
+    |---|---|---|--|
+
+    | PETRA | 14.68 | 14.69 | 14.69 |
+
+    | VALES | 48.02 | 48.04 | 48.02 |
+
+    | ABE3 | 18.33 | 18.35 | 18.33 |
+
+
+    | IBOVESPA | Last | High | Low |
+
+    |---|---|---|--|
+
+    | 69965 | 70757 | 69954 |
+
+    | 69954 | 1.84521M | 14.62 |
+
+    | 1896708 | 51.0849948 |
+
+    | 70757 | 69994 |
+
+
+    | PETRA | | | |
+
+    |---|---|---|--|
+
+    | SELL | 100.00 | BUY |
+
+    | 14 | 71 | 14.72 |
+
+    | LOW | 14.72 | HIGH |
+
+    | 14.62 | 14.77 |
+
+
+    | VALES | 10:24:34 |
+
+    |---|---|--|
+
+    | SELL | 100.00 | BUY |
+
+    | 48 | 13 | 16 |
+
+    |LOW | HIGH |
+
+    | 47.86 | 48.62 |
+
+
+    | ABE3 | 10:24:34 |
+
+    |---|---|--|
+
+    | SELL | 100.00 | BUY |
+
+    | 18 | 30 | 31 |
+
+    |LOW | HIGH |
+
+    | 18.15 | 18.37 |'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# 1.3. Navigator Field
+
+
+    The field Navigator is where it contains the information regarding the account
+    of the user if demo or real, as well as the indicators and robots of investments
+    available by the platform and those that were developed by ourselves.
+
+
+    In this field, we can choose the type of indicator, script or EA and drag directly
+    to the financial asset chart of interest.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_26_0.png)
+
+
+    Another way to add indicators or EA is from the menu Insert -> Indicators, Insert
+    -> Expert (Robots).'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'Let''s add an indicator from the menu:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_27_0.png)
+
+
+    In the figure above, we can see that the indicators are separated by trend indicators,
+    oscillators, volumes, Bill Williams and Custom. Trend indicators, as the name
+    implies, are more apt to warn when the market is within some well-defined directional
+    behavior. On the other hand, the Oscillator indicators in'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'are more adequate to warn of opportunities within a lateralized market, a market
+    in consolidation.
+
+
+    Bill Williams[2] is a very popular trader who has developed several important
+    and widely used indicators. Therefore, a specific section was created for the
+    indicators created by it.
+
+
+    It is interesting the possibility that we have to use indicators and native EA
+    of MetaTrader itself and indicators and EA created by us or even offered in the
+    Market tab of the field Toolbox.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# 1.4. Field Toolbox
+
+
+    In the Toolbox field we can find several importants informations regarding the
+    sale of the main indicators and investment robots developed for MetaTrader platform.
+    We can also download those provided for free (tab Libraries). We can view the
+    main news (tab News) in real time of trading as market auction and output of news
+    relevant to the market.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_29_0.png)
+
+
+    In the Experts tab, we can view the main information logs regarding the operation
+    of our robots. In this place, we are informed about the sending and execution
+    of orders, problems with variables, errors of execution and operations.
+
+
+    Now that we already know, in general, the main fields of MetaTrader 5, we go to
+    the main graphic field, which is the window of visualization of the price candles.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# 1.5. Looking for Candels
+
+
+    The MetaTrader 5 platform allows us to customize the way we visualize prices in
+    different ways. For example, we can change the background of the screen, the colors
+    of the contours and fill of the high/low/doji candles, the separation lines of
+    periods, grids, among several other properties.
+
+
+    We can switch between three types of price visualization of financial assets.
+    These visual types are given through Bar Chart, Candlestick or Line Chart.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_30_0.png)
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_30_1.png)'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_31_0.png)'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# 1.6. Saving Templates
+
+
+    It is important to note that each time a new chart is requested to be opened in
+    MetaTrader it will appear on the screen with the default settings. However, there
+    is a way to save our screen customization from creating a template.
+
+
+    For example, let''s set up a template. For this we must make our customizations.
+    With a right click on the graphic field we can choose Properties and make the
+    appropriate color settings to our liking.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_32_0.png)
+
+
+    Let''s consider the following changes:'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'Then right click on the graphic screen and go to Template -> Save Templates.
+    We chose a name and that''s it.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_33_0.png)
+
+
+    So, just load the saved template, to a new graphic, so that the settings are immediately
+    applied. That way, we have a lot of flexibility to be able to configure visualization
+    templates for setups of different strategies.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# 7. Drawing Objects
+
+
+    You can draw several objects in price charts. We can add channels, support lines
+    and resistance, Fibonacci, up/down arrows etc.
+
+
+    In this way, it is possible to make a visual technical analysis very complete
+    with the main graphic objects present in the platform.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_35_0.png)
+
+
+    Right-click on the graph you can see the list of objects and make different types
+    of edits modify subtitles, colors.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_35_1.png)'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: It is worth spending some time familiarizing yourself with the use of graphics
+    and objects.
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# .8. Transition between Graph Times
+
+
+    The transition between the graphical scales of candle formation observation is
+    quite simple and fast. Just right click on top of the chart, go to Timeframes
+    and choose the time of candles.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_37_0.png)
+
+
+    We can also change the candle time from the shortcut bar, as shown below:'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_38_0.png)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# ## .9. Adding Indicators
+
+
+    The indicators, for many traders, are the main guiding factors for decision making.
+    These are the indicators that often alert us to enter and exit an operation in
+    timely situations. When you talk about indicators, MetaTrader does not leave you
+    wanting.
+
+
+    Currently, the platform has more than 2,000 indicators available for free download.
+    This download can be done either by the site itself or by the platform in the
+    Toolbox on the Code Base tab.
+
+
+    Let''s, for example, add moving averages to the chart. We can do this either through
+    the menu Insert -> Indicators or directly clicking in the field Navigator -> indicators,
+    click and hold the chosen indicator and drag to the graphic window.
+
+
+    As an example, let''s insert a Moving Average indicator:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_39_0.png)
+
+
+    Let''s add two moving averages. Our averages should have periods of 72 and 32
+    with zero shift, exponential methods and applied to closing prices:'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'After clicking on ‘ok’, we have the immediate addition to the selected asset
+    graph.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_40_0.png)
+
+
+    Let''s now add the Relative Strength Index (RSI). This indicator is interesting
+    as it is drawn in a separate window from the main candle price window (see figures
+    below).'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'Let''s leave a period of 9 applied to the closing price:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_41_0.png)
+
+
+    The result is:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_41_1.png)'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_42_0.png)
+
+
+    The RSI is an indicator used to warn about overbought and/or oversold. Basically,
+    we have two reference levels that we must choose for for the activation trigger
+    of the overbought or oversold. We can choose the levels of 30 (oversold) and 70
+    (overbought).
+
+
+    For example, RSI values above 70 are indicating that the price is overbought,
+    that is, at any moment in a consolidated market, we can begin to see a drop in
+    prices. On the other hand, if the value of the IFR is below 30 we can say that
+    the price is oversold and a sudden high in prices is eminent.
+
+
+    These two indicators were presented, since they will be used to create our investment
+    robot. Going forward, we will use three strategies: one with the crossing of moving
+    averages, another with only the RSI and one with both indicators.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# 10. Data Window
+
+
+    A very important field, which greatly facilitates the visualization of prices
+    and values of indicators, is the **Data Window**. To open it we can: go to the
+    **View** menu -> **Data Window** or use the keyboard shortcut Ctrl + D.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_43_0.png)
+
+
+    This action will open, for us, a new field: **Data Window**. Now we can position
+    the mouse cursor over any candle of the graph to obtain detailed information of
+    prices and indicators in the place chosen.
+
+
+    See the example below, where we place the mouse on the highlighted candle in green
+    and the Data Window gives us the detailed information:'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_44_0.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Chapter 3'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: After reading this e-book and/or even now, the reader is invited to make an
+    account and start adding their knowledge and ask questions from the portal.
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# # A PLATAFORMA #1 AGORA EM MINAS GERAIS
+
+
+    # Traders Forum
+
+
+    Ask questions on technical analysis, discuss trading systems and improve your
+    MQL programming skills to develop your own strategies.
+
+
+    Communicate and share your experience with traders from all over the world. General
+    discussions, technical indicators, trading articles and material.
+
+
+    general discussions - trading system - experts - robots - technical indicators
+    - trading articles and material
+
+
+    # Find Last N Candles
+
+
+    +   1. Anyone can help me with this issue as I''m new to programming. If someone
+    knows how to find the last red candle it is for I only know one way to do that.
+    But the problem is (if the candle is not red but back(7) for If it or 4 or 5 is).
+
+
+    # Experts: Junior Scal EA
+
+
+    Junior MQL5 EA Expert Advisor or Junior Scal Indicator. Author: Hemant Awrawal
+
+
+    # Babylon Expert Advisor - Babylon Indicator - Ready to use
+
+
+    +   1. I search on Market but I did not find... I am developing my own... with
+    my little knowledge, if someone can help me from anywhere () Babylon indicator
+    and if you have it, I download Babylon Expert.ex4 please.
+
+
+    I was able to modify my code, so the alert can only be done right(after the candle
+    closed) Let me know which part of my code needs to be amended. Thanks! Nikolai_Custom-BabylonIndicator.mq4...
+
+
+    # Volume Indicator
+
+
+    Apparently, it is impossible to have a volume indicator for Forex, http://video.google.com/?.
+    I want an indicator that represents the number of ticks per bar to give us an
+    approximation of volatility. Does anyone have a similar indicator?
+
+
+    # ZIP - Universal EA with Patterns, Search for patterns
+
+
+    The ZUP indicator allows searching for multiple known patterns, parameters for
+    which we have already
+
+
+    # Financial Trading Articles
+
+
+    Learn how to create your own technical indicators and trading
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_47_0.png)
+
+
+    Soon after the registration we will have access to a very interesting set of functionalities.
+    For example, we can access the MetaTrader 5 web terminal, documentation that is
+    extensive and up-to-date, key information on the global financial market, and
+    other benefits.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# MQL5 Reference
+
+
+    +   - Language Basics
+
+    - Data Types, Enumerations
+
+    - MQL5 programs
+
+    - Development Environment
+
+    - Common Functions
+
+    - Arithmetic
+
+    - Conversion Functions
+
+    - Math Functions
+
+    - Event handling
+
+    - Debugging
+
+    - Compilation
+
+    - Timers and Accessors
+
+    - Trade Operations
+
+    - Chart Operations
+
+    - Data Window
+
+    - Trade Signals
+
+    - Objects of the Terminal
+
+    - Custom Indicators
+
+    - Technical Indicators
+
+    - Trading Requests
+
+    - Working with Events
+
+    - Working with Charts
+
+    - Standard Library
+
+
+    MQL5 Reference
+
+    nMQL5 is a high-level language designed for developing technical indicators, trading
+    robots and utility applications, which automate financial trading. It has been
+    developed by MetaTrader Software Corp. with advanced code writing tools, such
+    as templates, wizards and visual debuggers.
+
+
+    In addition to MQL5 language, the trading package also includes the MetaEditor
+    IDE with highly advanced features. The language syntax is very close to C++, enabling
+    easy transition for programmers.
+
+
+    The project also has a community website, which contains a huge free community
+    and a platform of articles. These articles cover all the aspects of modern trading,
+    including expert advisors, trading systems, trading signals, and applications.
+
+
+    MQL5 language provides specialized trading functions and predefined event handlers
+    to develop Expert Advisors (EAs), which automatically control trade execution
+    following specific trading rules. In addition, MQL5 also allows developing custom
+    indicators, scripts, and libraries.
+
+
+    The standard library contains many classes divided into several categories. The
+    reference also provides descriptions of Standard library classes used for trading
+    strategies, custom graphics and control panels, and file access. Additionally,
+    the library contains the MQL5 numerical analysis library, which can be used for
+    solving mathematical problems.
+
+
+    Something very important for anyone who is starting with the MQL5 language are
+    the open source code samples available in CodeBase. In this location we will have
+    access to codes for both the MQL4 and MQL5 languages. It is extremely valuable
+    to spend time researching and studying these codes.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# MQL4 and MQL5 Source Code Library
+
+
+    Don''t know where to start learning MQL4 or MQL5 programming language? Various
+    programs for MetaTrader are available online. You can download free library of
+    scripts and Expert Advisors. Publish your applications in the MetaTrader market.
+    Your example MQL4 and MQL5 codes will be distributed via m5-folders, and thousands
+    of traders will know about!
+
+
+    +   - Expert/expert_example.mq4
+
+    - Indicator/indicator_example.mq4
+
+    - Script/script_example.mq4
+
+    - EA/expert_example.mq4
+
+
+    Indicator example shows the signals of IndicatorExample indicator.
+
+
+    +   - Indicator/MovingAverage.mq4
+
+    - Indicator/MACD.mq4
+
+    - Indicator/RSI.mq4
+
+    - Indicator/Stochastic.mq4
+
+
+    A trading system based on the MACD, Moving Average indicator.
+
+
+    +   - EA/TrendFollow.mq4
+
+    - EA/Grid.mq4
+
+    - EA/Martingale.mq4
+
+
+    A trading system based on RSI, Bollinger Bands indicator.
+
+
+    +   - Script/CloseAll.mq4
+
+    - Script/CloseOrders.mq4
+
+    - Script/DeleteOrders.mq4
+
+
+    The Expert Advisor does not use indicators. It only uses the current
+
+
+    +   - Four horizontal lines
+
+
+    The indicator plots four horizontal lines: Three basic ones (red) and
+
+
+    +   - TP
+
+
+    +   - SL
+
+
+    +   - EMFilter/Settings
+
+
+    We have the section of Articles where tutorials with excellent didactics are added.
+    These are also of the indispensable fields for anyone with the pretense
+
+    ter mastering the MQL5 language.
+
+
+    # MQL4 and MQL5 Programming Articles
+
+
+    Study the MQL4 for developing strategies in published articles most written by
+    the community members.
+
+
+    We also publish and discuss them on the Forum!
+
+
+    ZIF - Universal Zone for pattern searching. Search for the ZIF indicator plots
+    on the screen to answer any questions related to: Indicator, Trading, Scalping,
+    etc..
+
+
+    Synthesizing several trend-based oscillators on chart
+
+    When trading values, then define an approach. A flexible feed that offers options
+    in type of Scalping, Trend Following, or Arbitrage. They often contain graphical
+    objects. Applying the objects to
+
+
+    The article provides an example of an MQL4 application with
+
+    neural networks. It shows the deplondraw graphs based on the last test results.
+
+
+    Deep Neural Networks (Part VI). Bayesian estimation of
+
+    The article considers the possibility of predicting market trends
+
+    obtained obtained by varying training tests. The classification
+
+
+    Non-probabilistic trend following strategy
+
+    in this article, we continue using the code to verify
+
+    trading systems in the MT5 Backtest and Strategy
+
+    Tester. Term...
+
+
+    Creating a new feed for MetaTrader 5
+
+    In this article, we create a flexible
+
+    feed that offers options in type of the
+
+    for Scalping, Trend Following, or Arbitrage.
+
+
+    The HTR indicator and trading module based on HTR
+
+    for the MQL5 platform
+
+    in this article, we show how to use the HTR indicator and
+
+    create a trading system based on this indicator. We are going
+
+    to show the results of the strategy.
+
+
+    Trading patterns that arise when trading currency pairs
+
+    We continue using the patterns and the methods
+
+    described in the article to test the
+
+    Letter in practice, whether it is possible to use the'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'Anyone who wants to build an EA with a more robust and complex strategy can
+    hire MQL programmers from orders on the Freelance portal. Also, for those who
+    have begun to master the tool and earn extra, they can accept projects and offer
+    their robot production services, indicators and investment scripts.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_50_0.png)
+
+
+    In the field Market we can buy indicators and EA offered by individuals and specialized
+    companies.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# TESTE GRÁTIS APLICATIVO ANTES DE COMPRA
+
+
+    A Market of Trading Robots, Indicators, and Trading Applications
+
+    The MetaTrader Market is a unique store of trading robots and technical indicators.
+
+    Read more about the wide range of services we offer to traders: copying trading
+    signals, custom
+
+    applications developed by freelancers, automatic payments via the Payment System
+    and the MQL Cloud Network.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_51_0.png)
+
+
+    A very interesting field that is Investment Signals. Through it we can follow
+    the entry and exit of trader operations. We have the evolution of yields, the
+    level of reliability, maximum profit, among other information, for each one of
+    the traders who were willing to provide the signals of their operations. Some
+    signal services can be contracted (paid for) and automatic execution can be synchronized
+    with our accounts.'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# MQL5 WebTerminal Documentation Calendar Codebase Articles Freelance Market
+    VPS Forum Login English Q
+
+
+    COMO ENCONTRAR TEMPO PARA QUE REALMENTE IMPORTA? VOCÊ PODE AUTOMATIZAR A NEGOCIAÇÃO.
+
+
+    MetaTrader 5 Trading Signals with Automatic Execution on Your Account
+
+
+    Signals Add widget Rules Filter Comparator
+
+
+    Broker server Search by name, author, broker
+
+
+    Maximum profit Reliability Profitable within a Intraday For under 50 USD Having
+    reviews
+
+
+    # COMPROU UM ROBÔ?
+
+
+    Reliability See all
+
+
+    | Geraldo Paira | YI XONG | Phong Son |
+
+    | --- | --- | --- | --- |
+
+    | AmonPaliva | 242% Growth since 2014 | BestscalperDut... 69% Growth since 2017
+    | Right Trades 50% Growth since 2018 |
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_52_0.png)
+
+
+    After finding a strategy and consistent setups and prove validity through testing
+    the demo account, an important step is to hire a virtual machine service. This
+    type of service will leave us more secure and protected with regard to lack of
+    energy and internet.
+
+
+    Oscillations in the energy and internet network are problems that compromise the
+    proper functioning of our investment robots. An alternative to solving this problem
+    is by hiring a Virtual Private Server (VPS) virtual machine. The MQL5 portal itself
+    provides this kind of service.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# MQL5 Documentation Calendar Articles Finance Market Signals Forum Login
+
+
+    TODOS OS INDICADORES MACROECONÔMICOS
+
+    TEMPO REAL
+
+
+    # MetaTrader VPS VPS
+
+
+    +   - You need hosting
+
+    - How to choose a server
+
+    - VPS works
+
+    - Free hosting
+
+    - VPS plans and discounts
+
+    - VPS pays off
+
+    - Rules
+
+
+    # Forex VPS for MetaTrader
+
+
+    We will offer a server with the lowest ping and the best execution
+
+
+    ```
+
+    Specify your broker''s server ->
+
+    ```
+
+
+    Rent a Forex VPS
+
+    for $19 per month
+
+
+    Virtual hosting for MetaTrader 4/5 is the best VPS solution
+
+    for Forex. It is cheap, requires no configuration and it features
+
+    reliable access to the market.
+
+
+    For only $19 per month, you obtain a virtual platform that
+
+    works around the clock, saves you and pays off.
+
+
+    Create your own instance of any account from the
+
+    platform. Launch trading robots or activate a single account.
+
+
+    Traders choose our service as the best VPS solution
+
+    for its unbeatable trade execution and high availability assured.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_53_0.png)
+
+
+    # VOCÊ JÁ TEM SEU ROBÔ?
+
+
+    There is the possibility of contracting the VPS machine service by
+
+    other companies, such as Amazon AWS (https://aws.amazon.com/vpc/)
+
+    that even offers a free year of use.
+
+
+    aws Entre em conta | Soluções v Conta Português v Crie sua conta agora
+
+
+    +   Amazon VPC | Visão geral | Recursos | Definição de preço | Configurações avançadas
+    | Recursos | Perguntas frequentes
+
+
+    # Amazon Virtual Private Cloud
+
+
+    Provisione uma seção da rede da Amazon Web Services (AWS) isolada logic onde é
+    possível criar e executar instâncias Amazon EC2 da AWS,\ em uma rede virtual que
+    você mesmo definir
+
+
+    Comece a usar AWS agora
+
+
+    Amazon Virtual Private Cloud (AWS) VPC permite fornecer uma seção de rede da AWS
+    isolada logicamente de onde é possível criar e executar instâncias Amazon EC2.
+    Você pode definir sua própria rede, criar sub-rede e configurar tabelas de roteamento
+    e gateways de rede. Você pode usar IPv4 e IPv6 na sua rede conforme desejar.
+
+
+    É possível personalizar a configuração de rede da Amazon VPC. Por exemplo, você
+    pode criar uma rede pública para serviços que têm acesso à internet e isolar os
+    sistemas de back-end, criar uma rede privada para isolar sua base de dados, aproveitar
+    várias camadas de segurança, como security groups e listas de controle de acesso,
+    para ajustar o acesso às instâncias Amazon EC2 em cada sub-rede.
+
+
+    Comece a usar a AWS gratuitamente
+
+
+    No Plano Gratuito da AWS
+
+
+    Receba meses de acesso gratuito a instâncias EC2 da AWS, com atendimento 24 horas
+    por dia, 7 dias por semana, 365 dias por ano e suporte de nível com recursos ilimitados.
+
+
+    We have the Forum field which is where we will probably spend a good part'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '# of our learning journey answering and putting our doubts about MQL5 codes.
+    This is a good place to exchange experiences, make friendships and partnerships.
+
+
+    | MQL5 | WebTerminal Documentation Codebase Articles Freelance Market Signals
+    VPS Forum Login Sign up | English 🔍 |
+
+    |---|---|---|---|---|---|---|---|---|---|---||
+
+    | Download MetaTrader 5 | | | | | | | | | | | |
+
+    | | 34.67 MB | | | | | | | | | |
+
+    | | EXECUÇÃO RÁPIDA DE OPERAÇÕES | | | | | | | | | |
+
+    | | BAIQUIR AGORA | | | | | | | | | |
+
+    | General (28823) | | | | | | | | | | | |
+
+    | Volume Indicator #0111149 | It is impossible to have a Volume Indicator for
+    Forex, https://video.google.com/watch?v=dbF7963712474184315 Alternatives, the
+    indicator can count the number of ticks per line to give an approximation of activity.
+    Anyone have a similar indicator? | | | | | | | | | | | |
+
+    | There''s a better way to test robots | I''ve been trying to find and testing
+    my Robot Investors to make changes. The problem is that the Robot, is SUPER, SUPER
+    difficult to test in an ordinary way. Has anyone seen a better way? | | | | |
+    | | | | | | |
+
+    | Any real traders have a profitable EA #0111112 | I''ve noticed that 95% of traders
+    have failed and can''t make money from trading. Are there ours social signals
+    and EA better than I assume real trader talking about all forums and ones, and
+    all agrees on them. | | | | | | | | | | | |
+
+    | Quote of MetaTrader 5 signals for compatibility with Windows 10 April 2018 (Update
+    #14) | Due to user feedback, we are releasing an update for Windows 10 which fixes
+    compatibility issues on the desktop version. We strongly recommend you install
+    this update, if you have already installed Windows... | | | | | | | | | | | |
+
+    | Who knows Elliot indicator #0111147 | Does anyone know a free Elliot indicator
+    I have found one that would be really useful like a recommendation thanks? | |
+    | | | | | | | | | |
+
+    | Who has forexindicator.com | I''ve been looking for this indicator for days,
+    could anyone provide me with this file or not an expired link? thanks so much!
+    | | | | | | | | | | | |
+
+    | RSI/CAD close to resistance #0111140 | The EURUSD bullish trend is forming,
+    may be the 1.3568 level and from there the price may stall or even break to the
+    downside, but if it keeps dropping, then we may see a breakout of that level.
+    A breakdown of the bullish trend may indicate a change in direction, but... |
+    | | | | | | | | | | |
+
+    | VPS doesn''t gain execution speed... #0999 | I just started recently to test
+    VPS location (names removed) and I don''t see any gain in final speed execution
+    of the orders, even with a 1ms latency on the server, Compare to my | | | | |
+    | | | | | | |'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# Chapter 4'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# 1. MetaEditor MQL5
+
+
+    The language MQL5 (MetaQuotes Language 5) has a large number of useful functions
+    to analyze the prices of financial assets. We need to know these functions so
+    that we do not recreate the wheel. But before it, is important to know as much
+    as possible of our language programming environment (MetaEditor).'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# I.1. MetaEditor
+
+
+    MetaEditor is an Integrated Development Environment (IDE) for the MQL5 language
+    that is included in MetaTrader 5. Let us now know the main features of developments
+    offered by MetaEditor.
+
+
+    To open MetaEditor we must click the highlighted icon in the image below or press
+    the F4 shortcut.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_57_0.png)
+
+
+    After clicking on the icon for MetaEditor we will have a development environment
+    with three main areas that will assist us in the development of our codes.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_58_0.png)
+
+
+    **Area 1:** Navigator - where we will manage our code library archives and libraries
+    in development.
+
+
+    **Area 2:** Window where the codes are properly typed.
+
+
+    **Area 3:** Toolbox - here is where we will follow the development of our compilation
+    and debugging tests. We have 6 tabs (Errors, Search, Articles, Code Base, Public
+    Projects and Journal). Basically, for the creation of our algorithms we will only
+    use the Errors and Journal tabs.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_58_1.png)'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '# I.2. Creating a new Project
+
+
+    Let''s click the **New** icon and then choose from the MQL5 wizard the type of
+    project that we want to create.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_59_0.png)
+
+
+    We can notice that we have several design options. This **Wizard** even allows
+    us to create investment robots without programming knowledge. Of course in this
+    case we will be blind to most of the steps and we will hardly do anything with
+    confidence and due security.
+
+
+    As this ebook intends to provide the first steps with the MQL5 tool we will only
+    have the first option **Expert Advisor** (model). There are two[3] other ebooks-
+    from the same author that show you how to develop Indicator and Scripts codes.
+
+
+    Let''s first name our investment robot (Expert Advisor). We''ll call it **EA_MA_Cros_RSI**
+    (Expert Advisor of Moving Moving Crosses with the RSI Dindicator). This is just
+    a temporary name for MetaEditor presentation.'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# MQL Wizard - File
+
+
+    General properties of the Expert Advisor
+
+    Please specify general properties of the Expert Advisor.
+
+
+    | Name | Type | Initial value |
+
+    | --- | --- | --- |
+
+    | ExpertEA_MA_Paz_RSI | | |
+
+    | Author | Copyright 2016, MetaQuotes Software Corp. | | |
+
+    | link | https://www.mql5.com | | |
+
+    | Parameters | | |
+
+
+    Watch how to assemble a trading robot
+
+
+    # Event handlers of the Expert Advisor
+
+    Please select event handlers of the Expert Advisor.
+
+
+    +   - OnTrade
+
+    The function is called when the Trade event occurs.
+
+    - OnTradeTransaction
+
+    The function is called when the TradeTransaction event occurs.
+
+    - OnTimer
+
+    The OnTimer function is called when the Timer event occurs.
+
+    - OnChartEvent
+
+    The OnChartEvent is the handler of a group of ChartEvent events.
+
+    - OnDeinit
+
+    It is generated for Expert Advisors only when Depth of Market changes.
+
+
+    Watch how to assemble a trading robot
+
+
+    # MQL Wizard - File
+
+
+    Tester event handlers of the Expert Advisor
+
+    Please select the tester event handlers of the Expert Advisor.
+
+
+    +   - OnTester
+
+    The OnTester function is called when the Tester event occurs.
+
+    - OnTesterInit
+
+    The OnTesterInit function is called when the TesterInit event occurs.
+
+    - OnTesterPass
+
+    The OnTesterPass function is the handler of the TesterPass event.
+
+    - OnTesterDeinit
+
+    The OnTesterDeinit is the handler of the TesterDeinit event.
+
+
+    Watch how to assemble a trading robot
+
+
+    After clicking Finish the MQL5 Wizard creates us for the basic body required for
+    the development of any investment robot. Therefore, we already have a divided
+    structure with the main methods for the operation of an EA.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\n//+------------------------------------------------------------------+\n\
+    //| EA Cross RSI.mq5\n//| Copyright 2018, MetaQuotes Software Corp.\n//| https://www.mq55.com\n\
+    //+------------------------------------------------------------------+\n#property\
+    \ copyright \"Copyright 2018, MetaQuotes Software Corp.\"\n#property link \"https://www.mq55.com\"\
+    \n#property version \"1.00\"\n//+------------------------------------------------------------------+\n\
+    // Expert initialization function\nint OnInit()\n{\n    return(INIT_SUCCEEDED);\n\
+    }\n//+------------------------------------------------------------------+\n//\
+    \ Expert deinitialization function\nvoid OnDeinit(const int reason)\n{\n\n}\n\
+    //+------------------------------------------------------------------+\n// Expert\
+    \ tick function\nvoid OnTick()\n{\n\n}\n\n```\n\n![](img/6d863e70ea1a0ecdc703a17721d7e78b_61_0.png)\n\
+    \n![](img/6d863e70ea1a0ecdc703a17721d7e78b_61_1.png)\n\n![](img/6d863e70ea1a0ecdc703a17721d7e78b_61_2.png)\n\
+    \nThe structure of an EA, for its proper functioning, will always contain at least\
+    \ these three functions or methods: OnInit(), OnDeinit () and OnTick()."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# I.3. OnInit()
+
+
+    The first function executed in an EA is OnInit (). It is triggered only when we
+    initialize the robot. We use this function to initialize pointers (Handles) of
+    indicators, variables, as well as make previous configurations and loads of variables
+    and templates.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# I.4. OnDeinit()
+
+
+    The OnDeinit () function is called when the robot is removed from MetaTrader.
+    For example, we use this function to clean indicator handles, variables, remove
+    graphic and textual objects from the screen, and so on.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# I.5. OnTick()
+
+
+    One of the most important is the OnTick() function because it is a lot of our
+    programming logic is running. This function is one of the most requested by our
+    robot, since it is called every time a market operation happens. At each new sell,
+    buy, release and order cancellation this function is called.
+
+
+    It is worth mentioning that this function is only called when we have EA within
+    trading hours. That''s because only with the trading in progress is that we have
+    changes in the market.
+
+
+    If we are working on the development of a robot and we are not in the trading
+    hours we will not see any call of this function. Alternatively, we can use the
+    OnTimer() function to minimize these problems and to make tests and debugs through
+    it (using the Print() function). Later in Chapter 5 we will see an example of
+    using the OnTimer() function.
+
+
+    It is worth highlighting that there are several other predefined functions like
+    ChartEvent(), OnTrader(), OnTester(), and others. However, we will only study
+    the main ones. Further details regarding these other functions can be found in
+    the MetaTrader 5 documentation.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# I.6. Programming Accessories
+
+
+    We have some elements (functions) that help us in the readability and organization
+    of our robot codes.
+
+
+    # I.6.1. Comments
+
+
+    Commenting on our algorithms is of the utmost importance for readability and understanding
+    of key steps.
+
+
+    For example, we have the comment element we can represent by // or * */
+
+
+    ```
+
+    /*
+
+    // EA_MA_Cros_IFR.mq5
+
+    // Copyright 2018.
+
+    // https://www.mq15.com
+
+    */
+
+
+    #property copyright "Copyright 2018."
+
+    #property link "https://www.mq15.com"
+
+    #property version "1.00"
+
+    ```
+
+
+    This type of structure (// causes the compiler not to interpret the characters
+    they saw immediately. So we can make small reminders and explanatory comments
+    to make the code clear and readable for editing by developers and even us.
+
+
+    The second type of comment / * / allows you to write entire paragraphs between
+    them.
+
+
+    ```
+
+    /*
+
+    13
+
+    14 Here I can put a comment as a paragraph. I can skip the line
+
+    15 between these special characters
+
+    16
+
+    17 */
+
+    18
+
+    ```
+
+
+    We have some shortcuts to the comments. For example, if we want to'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: 'comment several lines we can make the selection of them and press (Ctrl + ~).
+    To remove the comments, simply select and press (Ctrl + Ċ).
+
+
+    ```
+
+    //+--------------------------------
+
+    //property copyright "Copyright 2018."
+
+    //property link "https://www.mq15.com"
+
+    //property version "1.0"
+
+    //----------------
+
+    ```
+
+
+    The shortcut (Ctrl +.) Lets you create the following annotated string. This is
+    useful for separating large sections of code.
+
+
+    ```
+
+    //--------------------------------
+
+    //|                               |
+
+    //|                               |
+
+    //---------------------------------
+
+    ```
+
+
+    The shortcut (Ctrl +;) lets you create a small separation with the following strings:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_66_0.png)'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "# I.7. EA Properties\n\nIt is always good to inform details of robot development.\
+    \ Thus, directive #property serves to describe basic information about EA. In\
+    \ the example below, where we have the property directive, we can observe information\
+    \ regarding copyright, link directed to some website and version of the robot.\n\
+    \n```\n1/++                               EA MA_Ros_IFR.mq5 |\n2//|          \
+    \                     Copyright 2018. |\n3//|                               https://www.mq15.com\
+    \ |\n4//|                                                \n5//--------------------------------------------------\n\
+    6#property copyright \"Copyright 2018\"\n7#property link \"https://www.mq15.com\"\
+    \n8#property version \"1.00\"\n```\n\nAfter pressing the Compile button:\n\n![](img/6d863e70ea1a0ecdc703a17721d7e78b_67_0.png)\n\
+    \nWe note that in the Toolbox field on the Errors tab the compiler did not raise\
+    \ any problems."
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_68_0.png)
+
+
+    So automatically in the MetaTrader Platform in the field Navigator -> clicking
+    on the more of Expert consultant we can find our EA compiled (.exe5). You can
+    now click, hold and drag to the candle chart and observe the #property information
+    present.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_68_1.png)
+
+
+    As we still have practically nothing programmed from the robot information in
+    the Common tab above, are the only available so far. Then, with each new modification
+    made in the code with MetaEditor we can observe the changes in the field Navigator
+    in the part of experts.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '# 1.8. MetaTrader and MetaEditor File Types
+
+
+    The file type generated with MetaEditor has the extension ''.mql''. We can verify
+    this in the MetaEditor Navigator field where we have our robot edition file called
+    EA_MA_Cros_RSI.mql5.
+
+
+    After clicking on the button Compile a file with the extension ''EA_MA_Cros_RSI.exe5''
+    is automatically created in the field Navigator -> Expert Advisor of MetaTrader.
+
+
+    It is important to note the difference between MetaTrader and MetaEditor. In MetaEditor
+    we have files with extension ''.mql5'' and in MetaTrader we have ''.exe5'' files.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# I.9. Adding Libraries
+
+
+    We can add special libraries provided by MQL5. For this we just need to know the
+    name of the library with the following code structure:
+
+
+    ```
+
+    //12--- Includes
+
+    13 #include <ChartObjects/ChartObjectsFibo.mqh>
+
+    14 #include <Trade/Trade.mqh>
+
+    ```
+
+
+    The above example adds a set of classes and methods ready to generate Fibonacci
+    figures in the first <ChartObjects/ChartObjectsFibo.mqh>, and work with sensing
+    and managing sales orders in the second include <Trade/Trade.mqh>.
+
+
+    Note that the extension of these files is of type ''.mqh''. MetaEditor also allows
+    you to create this type of file. From which we can create complex algorithms that
+    work with the graphic part and even visual animations.
+
+
+    We can research and study the main MQL5 libraries from the site:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_70_0.png)'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: In Chapter 5 we will know and study better MetaEditor functionality from the
+    study of the MQL5 syntax.
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Chapter 5'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# b. Basic Programming Logic with MQL5
+
+
+    As mentioned before, the MQL5 language has great similarities with the C++, Java,
+    and C # languages. Therefore, anyone who has any knowledge of these languages
+    will have great ease in understanding the MQL5 operating syntax.
+
+
+    Every algorithm, every recipe for cake, begins with the description of the ingredients.
+    So let''s make an analogy and start studying the ingredients of our EA, our cake.
+
+
+    Let''s first understand the main types of variables present in MQL5. We also need
+    to know how this language declares and assigns values to variables.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# i.1. Types of Variables
+
+
+    The variable is the basic unit of data storage in any programming language. Almost
+    every algorithm needs variables. In MQL5 we need to declare a variable always
+    with some type.
+
+
+    The main types of variables used to create robots are: Integer (int), floating
+    point - decimal values (float and double), alphanumeric characters (string), logical
+    (bool) and dates (datetime).
+
+
+    Unlike MQL5 there are some languages that have automatic typing with, for example,
+    Python.
+
+
+    Having to explicitly declare the variable type has practical security advantages
+    and makes it easy to find compilation errors. When we are limiting the type of
+    the variable, we protect it from possible arithmetic errors, assignment errors,
+    and programming logic errors.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# i.2. Declaration of Variables
+
+
+    Every MQL5 variable must have a type and a name. The type of this variable must
+    always be specified before the name. Then we can assign values corresponding to
+    the variable type. Let''s study the most used and that will be part of the structure
+    of our EA.
+
+
+    # i.2.1.Integer Type
+
+
+    We have some peculiarities regarding the memory consumption required to store
+    a variable. In most EAs this is not a problem, but we will discuss these issues
+    in case you want to leave your robot optimized for the memory consumption requirement
+    of processing.
+
+
+    For example, the type variables char, short, int, uchar, ushort, uint that serve
+    for integer variables.
+
+
+    char - uses 1 byte of memory. You can allow values in the range of -128 to 127.
+
+
+    short - uses 2 bytes of memory. Can support values in the range of -32,768 to
+    32,767.
+
+
+    int - uses 4 bytes of memory. You can allow values in the range of -2,147,483,648
+    through 2,147,483,647.
+
+
+    uchar - uses 1 byte of memory. The range of values is 0 to 255.
+
+
+    ushort - uses 2 bytes of memory. The range of values is 0 to 65,535.
+
+
+    uint - uses 4 bytes of memory. The range of values is 0 to 4,294,967,295.
+
+
+    See the example below:
+
+
+    ```
+
+    int int movingAveragePeriod = 24;
+
+    15
+
+    ```'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'In this case we have a variable with the name ‘movingAveragePeriod, which accepts
+    integer values (int). We can see a value assignment equal to 24. If no value is
+    assigned to the variable MQL5 immediately assigns zero.
+
+
+    # 2.2.Type Double
+
+
+    When we are interested in storing variables with decimal numbers the most appropriate
+    is to use the double type. The double type consumes 8 bytes of memory. More economical,
+    we have the float type that consumes half, 4 bytes.
+
+
+    The main difference between these two types (float and double) is that the accuracy
+    of significant digits is larger for the double type (15 significant digits) while
+    the float has only 7 significant digits. The difference in memory consumption
+    for our robots will be irrelevant we use only the double type that is more accurate.
+
+
+    For example, the division, in the figure below, does not involve many numeric
+    digits. Therefore, the double or float type makes no difference. On the other
+    hand, if we had a problem where the result was some periodic tithing multiplied
+    by some number or other decimal, cumulative rounding errors could interfere with
+    the accuracy of the results.
+
+
+    ```
+
+    14 int movingAveragePeriod = 24;
+
+    15
+
+    16 double valueRSI = 1.611;
+
+    17
+
+    18 double a = 1.0;
+
+    19 double b = 0.5;
+
+    20
+
+    21 double c = a / b;
+
+    ```
+
+
+    To the present moment do not worry about observing the results of operations.
+    We will do this later with the use of the Print() function. For the time being,
+    let''s take a look at the structure of the statement of variables.'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '# ### .2.3.Type String
+
+
+    Textual character variables are typed with string. The MQL5 language allows string
+    concatenation in a very simplified way as shown below.
+
+
+    ```
+
+    22
+
+    23 string s_1 = "My first";
+
+    24 string s_2 = "Expert Advisor";
+
+    25
+
+    26 string s_t = s_1 + s_2; // return: My first Expert Advisor;
+
+    27
+
+    ```
+
+
+    For a string if no value is assigned, an empty string (NULL) is placed.
+
+
+    # ### .2.4.Type bool
+
+
+    When the interest is to have a variable with boolean characteristics, that is,
+    only allow true values (true) or false (false) we can use the type bool:
+
+
+    ```
+
+    28 int x = 10;
+
+    29 int y = 20;
+
+    30
+
+    31 bool result; //without initial assignment we have (false)
+
+    32
+
+    33 result = x < y; // return (true)
+
+    34
+
+    ```
+
+
+    It should be noted that in the case the variable ''bool response'' was declared
+    without initial value, so the value of (false) is immediately assigned. Only then,
+    see figure above, that we have a value change to true, because x is less y.
+
+
+    # ### .2.5.Type Datetime
+
+
+    This is one of the most widely used types, since asset price data are collected'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'over some time scale. We will always be able to make evaluations of times and
+    days for operations. Therefore, we should be well aware of the use of this type
+    of variable.
+
+
+    The date and time format for MQL5 is defined as follows: {Dyyyy.mm.dd hh: mm:
+    ss''} {year.mon.day hours: minutes: seconds}
+
+
+    The capitalized D letter placed at the beginning of the date causes the variable
+    to have the datetime constant.
+
+
+    ```
+
+    36 datetime today = D''2018.07.17 00:00:00''; // full description
+
+    37
+
+    38 datetime today2 = D''2018.07.17 00''; // just hour
+
+    39
+
+    40 datetime today3 = D''2018.07.17''; // just date
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# i.3. Declaring Constants
+
+
+    We have a way to create constants from global declarations at the beginning of
+    our code from the #define directive.
+
+
+    ```
+
+    10 #define PI 3.141S
+
+    12 #define NOME_EMPRESA = "1º EA LTDA."
+
+    13
+
+    ```
+
+
+    Of course, the values of the constants can not be changed. If there is any attempt
+    to change the value, we will have a compilation error.
+
+
+    It is standard to consider the names of constants with upper-case characters.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# i.4. Vector Variables: Arrays
+
+
+    An array is a variable that supports multiple values. We may think that an array
+    is something like a list of values with a certain type. Within this list we can
+    do iterations traversing each of its values.
+
+
+    We will often use variable arrays to store mainly financial asset price information
+    and indicator variables.
+
+
+    Here is an example of a three-position array declaration for storing integer numbers:
+
+
+    ```
+
+    42 int myArray[3]; // creates a variable and allocates three int positions
+
+    43 myArray[0] = 10; // saves the value 10 in the zero position
+
+    45
+
+    46 myArray[1] = 20; // saves the value 10 in the one position
+
+    47
+
+    48 myArray[2] = 30; // saves the value 10 in the two position
+
+    ```
+
+
+    If we try to do:
+
+
+    ```
+
+    49
+
+    50 myArray[3] = 40; // we will have a compilation error!
+
+    51
+
+    ```
+
+
+    This compilation error happens because we made an initial statement (myArray[3])
+    to allocate only 3 memory locations and we are trying to add a fourth position.
+
+
+    We can make our array of the type of variable we want. However, in advance, MQL5
+    needs to know the size of the list of values we need for the array. So putting
+    some value in brackets soon after the variable name is required.
+
+
+    Another way to declare arrays is to directly assign values to it. We should do
+    this in the following way:'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '```
+
+    52
+
+    53 double myArray[4] = {3.14, 2.22, 1.61, 17.21};
+
+    54
+
+    ```'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "# i.5. For loop\n\nWe will now study a very important repetition loop used\
+    \ in the development of investment robots. When we want the computer to perform\
+    \ repetitive activities within certain predetermined limits, a practical way of\
+    \ informing the machine is through the **for loop.**\n\nWhen we type the word\
+    \ **for** in MetaEditor we will have a small set as shown below:\n\n![](img/6d863e70ea1a0ecdc703a17721d7e78b_82_0.png)\n\
+    \nWhen we press **Tab**, the editor will autocomplete the whole structure of the\
+    \ **for loop.**\n\n```\n62\n63 for(int i=0;i<total;i++)\n64 {\n65 \n66 }\n67\n\
+    ```\n\nThis structure means that we will iterate from the integer 0 (zero) to\
+    \ the integer (total-1) with an iteration increment ‘i’ of a unit (i ++ is the\
+    \ same as i = i + 1, as well as i-- is the same as i = i-1).\n\nSo if we want\
+    \ to make a scan inside the elements of an array we can do from the **for loop**\
+    \ as follows:"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "```\ndouble myArray[4] = {3.14, 2.22, 1.61, 17.21};\nfor (i i=0;i<4;i++) {\n\
+    \  Print(\"myArray[\"++i+\"] = \", myArray[i]);\n}\n// out: myArray[0] = 3.14\n\
+    myArray[1] = 2.22\nmyArray[2] = 1.61\nmyArray[3] = 17.21\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# i.6. Enum
+
+
+    The enum structure is a special type of integer where we can define, through a
+    list, assignment constants. With enum we can customize the types of variables
+    that best suit our problem.
+
+
+    For example, let''s create an enum to represent the seasons of the year. We know
+    that there are only 4 seasons of the year: spring, summer, autumn and winter.
+
+
+    When you type the word enum we have a small arrow pointing to the right, as shown
+    below:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_84_0.png)
+
+
+    Another Tab, we have autocomplete. Our enum should look like this:
+
+
+    ```
+
+    13 enum SEASONS
+
+    14 {
+
+    15 spring,
+
+    16 summer,
+
+    17 fall,
+
+    18 winter,
+
+    19 };
+
+    ```
+
+
+    We can now use ‘SEASONS’ as a type of variable to be declared. In many situations
+    this is very useful to make our code more intuitive and organized.
+
+
+    ```
+
+    21 SEASONS season;
+
+    22
+
+    23 season = summer;
+
+    24
+
+    25 Print(season);    // out: 1
+
+    ```
+
+
+    The value of output was 1 (one) because enum considers the ordering of'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: integers from zero. In our case we have spring (0), summer (1), fall (2), winter
+    (3). Interesting and quite useful the enum, right?
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: '# 7. Input Type Variables
+
+
+    Input variables are the only ones that allow the user of the indicators or EA
+    to assign values to them. These variables are used to provide the user with the
+    possibility of changing the setups of the indicators, stop loss, take profit,
+    number of lots etc.
+
+
+    Input variables can be of any type including enum types. Let''s take an example
+    to make it easier to understand.
+
+
+    ```
+
+    13 enum SEASONS
+
+    14 {
+
+    15   spring,
+
+    16   summer,
+
+    17   fall,
+
+    18   winter,
+
+    19 };
+
+    20
+
+    21 input SEASONS season = spring; // Season
+
+    22
+
+    23 input int numPeriod = 32;      // Periods
+
+    24
+
+    25 input string comment = ""; // Enter a comment
+
+    ```
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_86_0.png)
+
+
+    After compiling the above code we will have in MetaTrader the following possibility
+    of setting the EA:'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_87_0.png)
+
+
+    Therefore, the input directive allows us to dialogue with the user on the **Input**
+    tab of our EA.'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '# ### i.8. Local and Global Variables
+
+
+    It is very important to know the distinction between local variables and global
+    variables. The confusion between these two types of variables leads to many EA
+    compilation and execution errors. Therefore, we must be very careful and pay close
+    attention to where we are making the declaration of variables.
+
+
+    # #### i.8.1.Local variables
+
+
+    Let''s create a function to show an example of local variables. When variables
+    are declared within a function/methods they with their assigned values will only
+    be used within functions. So we have local variables because they are declared
+    within a method or function.
+
+
+    ```
+
+    28 // test function with void return
+
+    29 void funTest()
+
+    30 {
+
+    31
+
+    32     int movingAveragePeriod = 7;
+
+    33
+
+    34     int multiplier = 2;
+
+    35
+
+    36     Print(movingAveragePeriod * multiplier); // out: 14
+
+    37
+
+    38 }
+
+    ```
+
+
+    # #### i.8.2.Global Variables
+
+
+    When we want a variable to be used by any function/method anywhere in our algorithm,
+    we must declare it globally as shown in the example below. Pay close attention
+    to this example as it is very important to understand the difference between variables.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '```
+
+    28 int varGlobal_1 = 3;
+
+    29
+
+    30 int varGlobal_2 = 4;
+
+    31
+
+    32 // test function with void return
+
+    33 void funTest()
+
+    34 {
+
+    35
+
+    36     int movingAveragePeriod = 7;
+
+    37
+
+    38     int multiplier = 2;
+
+    39
+
+    40     Print(movingAveragePeriod * multiplier); // out: 14
+
+    41
+
+    42     Print(movingAveragePeriod * varGlobal_1); // out: 21
+
+    43
+
+    44     Print(varGlobal_1 + varGlobal_2); // out: 7
+
+    45
+
+    46 }
+
+    47
+
+    48 // ''movingAveragePeriod'' is local
+
+    49 Print(movingAveragePeriod * multiplier); // out: compile error!
+
+    50
+
+    51 Print(varGlobal_1 * varGlobal_2); // out: 12
+
+    ```
+
+
+    Let''s take another example, now with the chaining of a structure with the if-conditional
+    Boolean. Carefully evaluate this example.
+
+
+    ```
+
+    23 int varLoc_0 = 11;
+
+    24
+
+    25 void secondFunTest()
+
+    26 {
+
+    27     int varLoc_1 = 3;
+
+    28
+
+    29     int varLoc_2 = 7;
+
+    30
+
+    31     if(varLoc_2 > varGlobal_1)
+
+    32     {
+
+    33         int varLoc_3 = 10;
+
+    34
+
+    35         int varLoc_4 = 20;
+
+    36
+
+    37         Print(varLoc_0+varLoc_1+varLoc_2+varLoc_3+varLoc_4); // out: 51
+
+    38     }
+
+    39
+
+    40     Print(varLoc_0+varLoc_1+varLoc_2+varLoc_3+varLoc_4); // out: compile error!
+
+    41     // varLoc_3 and varLoc_4 are local inside ''if''
+
+    42
+
+    43     Print(varLoc_0+varLoc_1+varLoc_2); // out: 21
+
+    44 }
+
+    45
+
+    46 Print(varLoc_0+varLoc_1+varLoc_3); // out: compile error!
+
+    47 //varLoc_1 and varLoc_2 are local variables
+
+    ```'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '# i.9. Variables Predefined by MQL5
+
+
+    The MQL5 language has several predefined routinely used variables for strategy
+    development. These variables have their own notation and are preceded by an underscore
+    (_).
+
+
+    The main variables most used and that we will apply to create our first EA are:
+
+
+    +   _Symbol: represents the financial asset symbol present on the current chart
+    shown on the screen.
+
+    _Period: refers to the period, in minutes, of the current candle chart.
+
+    _Point: represents the size of points that characterize the financial asset.
+
+    _Digits: represents the number of decimal point digits of the current asset.
+
+
+    The use of these variables will become clearer when we are developing our EA.'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# i.10. Math Operations
+
+
+    We have already seen several mathematical operations. Let''s study some more of
+    them. The MQL5 language provides us with a very intuitive simple structure for
+    working with mathematical operations.
+
+
+    ```
+
+    14 Adição e subtração
+
+    15 // varA
+
+    16 int varA = 2 + 3;           // Resultado: 5
+
+    17
+
+    18 double varB = 2.5 + varA;  // Resultado: 7.5
+
+    19
+
+    20 double varC = varA - varB;  // Resultado: 2.5
+
+    21
+
+    22
+
+    23 // Multiplicação
+
+    24 int varD = 2 * 3;          // Resultado: 6
+
+    25
+
+    26 double varE = 2.5 * varD; // Resultado: 15
+
+    27
+
+    28 // Divisão
+
+    29 double varF = 5 / 2;      // Resultado: 2.5
+
+    30 int
+
+    31 varG = 5 / 2;            // Resultado: 2
+
+    32
+
+    ```
+
+
+    The language itself already comes with a set of mathematical and statistical functions
+    to work connected with the most diverse operations. We have the functions with
+    radical MathXXX quite useful:
+
+
+    ```
+
+    13 Math
+
+    14 MathAbs
+
+    15 MathArccos
+
+    16 MathArccosh
+
+    17 MathArcsin
+
+    18 MathArcsinh
+
+    19 MathArctang
+
+    20 MathArctan
+
+    21 MathArctanh
+
+    22 MathCeil
+
+    23
+
+    24
+
+    ```'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# s.11. Logical and Conditional Relationships\n\nIn the structure of our algorithms\
+    \ we commonly use logical relations that return values of true or false. The main\
+    \ relationships we will be working on are represented as follows by MQL5:\n\n\
+    ```\n54 A > B // greater than\n55\n56 A < B // less than\n57\n58 A >= B // greater\
+    \ or equal\n59\n60 A <= B // less than or equal\n61\n62 A == B // equal\n63\n\
+    64 A != B // different\n```\n\nSee the use of the conditional plus the logical\
+    \ connectives && (AND) and || (OR):\n\n```\n67 int A = 7;\n68 int B = 7;\n69 int\
+    \ C = 10;\n70\n71 if(A == B && A+B == C) // && is the boolean AND operation\n\
+    72\n   {\n73   Print(true); // Out: true\n74   }\n75\n76 if(A == B || A == C)\
+    \ // || is the boolean OR operation\n77\n   {\n78   Print(true); // Out: true\n\
+    79 }\n```\n\nLet's now go to the conditional structure of the else type. The else\
+    \ is activated if the 'if' conditional is not true. Therefore, if the 'if' is\
+    \ false automatically the else becomes true and everything inside the keys of\
+    \ this structure is executed."
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '```
+
+    62 int var1 = 1;
+
+    63 int var2 = 4;
+
+    64 int var3 = 7;
+
+    65
+
+    66 if(var1 >= var3)
+
+    67 {
+
+    68 Print("Maior Var1 >= Var3");
+
+    69 else
+
+    70 {
+
+    71 Print("Var1 não é >= Var3");
+
+    72 }
+
+    73
+
+    ```
+
+
+    The else if structure is very useful in many cases. When the chain of conditions
+    is extensive we can use this structure. If no else if is true, else executes automatically.
+
+
+    ```
+
+    77 int var1 = 1;
+
+    78 int var2 = 4;
+
+    79 int var3 = 7;
+
+    80
+
+    81 if(var3 == 1)
+
+    82 Print("Var3 = 1");
+
+    83
+
+    84 else if(var3 == 4)
+
+    85 Print("Var3 = 1");
+
+    86
+
+    87 else
+
+    88 Print("Var3 = \var3);
+
+    89
+
+    ```'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '# 5.12. Ternary Operator
+
+
+    The ternary operator exists in several high-level programming languages and in
+    MQL it is no different. This is a very useful operator to simplify conditional
+    structures that could use if and else.
+
+
+    The ternary operator has the following operating structure:
+
+
+    (conditional)? (alternative 1 if true): (alternative 2 if false)
+
+
+    Let''s take an example:
+
+
+    ```
+
+    102 bool conditional = true;
+
+    103
+
+    104 bool resultado = conditional ? true : false;
+
+    105
+
+    106 Print(resultado);    // Out: true
+
+    ```
+
+
+    In the place where we use the conditional variable we could do any structure using
+    the logical evaluators (>, <=, &&, ||).'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# i.13. Methods or Functions
+
+
+    When we are working with object-oriented programming (OOP) we make constant use
+    of classes. Classes are the master plans of the objects architecture. Do not worry
+    if this seems complicated because we will not use OOP.
+
+
+    Among the classes we usually find methods and attributes. The term function is
+    commonly used when we are working with procedural programming. The MQL5 language
+    allows us to program both in the object-oriented and procedural paradigm. This
+    book is about procedural programming, so we will talk about methods and functions
+    as if they were the same thing.
+
+
+    But what are methods or functions? They are code blocks that allow you to perform
+    a specific task. Usually the functions have input and return parameters. In other
+    words, the functions process the parameter entries according to a well-defined
+    logic and returns a result.
+
+
+    Here is an example to further clarify this:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_96_0.png)
+
+
+    In a function we can have several types of returns and input parameters. The processing
+    performed depends on the logic of the problem.
+
+
+    Let''s take another example where we have functions used to calculate the sum,
+    multiplication, and division of two numbers:'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '```
+
+    90 double sum(double a, double b)
+
+    91 {
+
+    92     double s = a + b
+
+    93     return s;
+
+    94 }
+
+    95
+
+    96 double multiplication(double a, double b)
+
+    97 {
+
+    98     double m = a * b
+
+    99     return m;
+
+    100 }
+
+    101
+
+    102 double division(double a, double b)
+
+    103 {
+
+    104     double d = a / b
+
+    105     return d;
+
+    106 }
+
+    ```
+
+
+    Functions that do not return values have void type declaration. However, if the
+    function has some kind of return we are required to return something relative
+    to the return type.
+
+
+    ```
+
+    108 void sendMessage(string msg)
+
+    109 {
+
+    110
+
+    111     Print("This is your message : ", msg);
+
+    112
+
+    113 }
+
+    ```'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: '# 14. Candles and Tick Variables
+
+
+    The MQL5 language has a set of libraries prepared to work with the acquisition
+    and manipulation of candle prices. We have the MqlRates structure that stores
+    the price information of opening, closing, maximum, minimum, volume, spread and
+    time.
+
+
+    Tick information refers to those collected from the book of offers such as (bid),
+    bid (sale), last business etc. This information can be accessed from the MqlTick
+    structure.
+
+
+    Let''s see how to declare a candle variable and tick. We must beware, because
+    we must first declare the variable after doing the proper loading of the data
+    in the variable declared from other specific functions.
+
+
+    In order to load, we must specify the financial asset (which can be the current
+    one of the graph using _Symbol) and the period of the candles (to use the current
+    chart we put _Period).
+
+
+    For an example, we will create a new Expert Advisor with the name of Study_Var
+    (study of variables). In the wizard now we will add the OnTimer option.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_98_0.png)'
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "We decided to add the OnTimer() function, because with it we can work and view\
+    \ our debug codes outside the trading hours. As we saw in Chapter 4, the OnTick()\
+    \ function is called every time a new trading operation is performed, and as we\
+    \ are probably making the codes outside trading hours no call to this function\
+    \ will be made.\n\nSo we'll use the OnTimer() function to make timed calls and\
+    \ be able to see the development of our codes. Let's ask it to be called every\
+    \ 2 seconds for the EventSetTimer(2) function (see example below).\n\n```\nMqlRates\
+    \ candle[]; // global variable candles\nMqlTick tick;      // global variable\
+    \ tick\nint OnInit() {\n  // create timer\n  EventSetTimer(2); // every 2 seconds\
+    \ the OnTimer() function will be called\n  // Loads the variable candles 10 positions\
+    \ with prices:\n  CopyRates(Symbol,Period,0,10,candle);\n  // Sort the vector\
+    \ of 10 positions, position 0 is the current price\n  ArraySetAsSeries(candle,true);\n\
+    \n  // returns current prices of a specified symbol in a variable of the MqlTick\
+    \ type.\n  SymbolInfoTick(Symbol,tick);\n\n  return (INIT_SUCCEEDED);\n}\n```\n\
+    \nThe CopyRates() and SymbolInfoTick() functions have been completed following\
+    \ the structures:\n\n```\nint CopyRates(\n  string symbol_name,      // symbol\
+    \ name\n  ENUM_TIMEFRAMES timeframe,  // period\n  int start_pos,           //\
+    \ start position\n  int count,               // data count to copy\n  MqlRates\
+    \ rates[];          // target array to copy\n);\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\nbool SymbolInfoTick(\n    string symbol,      // symbol name\n    MqlTick&\
+    \ tick       // reference to a structure\n);\n```\n\nWe can better understand\
+    \ the structures and main functions of the MQL5\nlibrary using the **F1** key.\
+    \ To do this, just place the mouse cursor on the\nstructure of interest and press\
+    \ F1. For example, let's do this for **MQLRates:**\n\n![](img/6d863e70ea1a0ecdc703a17721d7e78b_100_0.png)\n\
+    \nThe F1 key we have access to a very complete documentation of the\nMQL5 language.\
+    \ So we should always use it when we doubt arabic. \n\nAs already discussed, we\
+    \ are not always developing EA in the trading hours\nand then we need to make\
+    \ some **debugs** in the code, so we are using\n**OnTimer().\n\nHowever, within\
+    \ the OnTimer() function we will add the following code:"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: "```\n51 //+--------------------------+\n52 //| Timer function\n53 //+--------------------------+\n\
+    54 void onTimer()\n55 {\n56 //+--------------------------+\n57     Print(\"Open\
+    \ price = %s\", candle[0].open);\n58     Print(\"Max price = %s\", candle[0].high);\n\
+    59     Print(\"Close price = %s\", candle[0].close);\n60     Print(\"Min price\
+    \ = %s\", candle[0].low);\n61     Print(\"--------------------------\");\n62 //+--------------------------+\n\
+    63 \n64 }\n65\n```\n\nLet's compile. Now let's go to MetaTrader and drag EA 'Study_Var.exe5'\
+    \ to the chart. Then in the Toolbox (if it is not showing going to the display\
+    \ menu and ask to open) and enable the Experts tab.\n\nOnce the robot has been\
+    \ added to the graph, we can notice that this tab every 2 seconds will execute\
+    \ the OnTimer() function and what is inside it. In our case we see the prices\
+    \ of open, max, close and min.\n\n| Horário | Fonte | Mensagem |\n|---|---|---|\n\
+    | 2018.06.05 12:42:18.532 | Estudio_Var (BRPS5) | Prego Max = 24.93 |\n| 2018.06.05\
+    \ 12:42:18.532 | Estudio_Var (BRPS5) | Prego close = 24.63 |\n| 2018.06.05 12:42:18.532\
+    \ | Estudio_Var (BRPS5) | Prego Min = 24.15 |\n| 2018.06.05 12:42:18.537 | Estudio_Var\
+    \ (BRPS5) | Prego Open = 24.68 |\n| 2018.06.05 12:42:19.537 | Estudio_Var (BRPS5)\
+    \ | Prego Max = 24.53 |\n| 2018.06.05 12:42:20.537 | Estudio_Var (BRPS5) | Prego\
+    \ close = 24.63 |\n| 2018.06.05 12:42:20.537 | Estudio_Var (BRPS5) | Prego Min\
+    \ = 24.03 |\n\nWe are taking the prices of the candle in position '0', that is,\
+    \ collecting the values of the most current candle. The candle can represent any\
+    \ time chart, what really matters is your position. We can choose any desired\
+    \ position, all we need is to understand the order of the vector. Below is an\
+    \ illustration to facilitate this understanding (it is worth noting that this\
+    \ illustration is valid only after using the ArraySetAsSeries() that orders the\
+    \ vector as shown)."
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_102_0.png)
+
+
+    Our candle vector has only 10 positions, because we use the function CopyRates(_Symbo,
+    _Period, 10, candles).
+
+
+    We can make our code more easily able to choose the position of the candles and,
+    in addition, add tick information, see below:
+
+
+    Let''s now test the case of the variable (pos = 10). We choose for a vector with
+    only 10 price positions, but we are trying to access the position of number 11
+    (remembering the count starts with zero). So the code will compile normally, however
+    when executed in MetaTrader we will get the following error message:'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '| Horário | Fonte | Mensagem |
+
+    | --- | --- | --- |
+
+    | 2018.06.05 13:01:47.517 | Estudo_Var (AEBV2,D1) | array out of range in ''Estudo_Var.mq5''
+    (59,32) |
+
+    | Negociação | Exposição | Histórico | Notícias | Caixa de E-mail | Calendário
+    | Empresa | Mercado | Alertas | Sinais | Biblioteca | Experts | Dário |
+
+
+    We have an array out of range error. MetaTrader also informs the line of code
+    in the .mql file where we find the violation (line 59). We must be alert because
+    this type of error is quite frequent in our robot creations. So be very careful
+    with the sizes and tracking positions of the arrays.'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# 15. Functions Comment () and Alert ()
+
+
+    By using some useful functions we can create warning elements and alerts to provide
+    greater security of use and better understanding of what is happening with our
+    EAs.
+
+
+    # 15.1. Comment()
+
+
+    Comments are always welcome. Let''s take an illustrative example:
+
+
+    ```
+
+    void OnTimer() {
+
+    55  (
+
+    57 //-----
+
+    58     int pos = 0; // choose candle position
+
+    60     string legend = "Open price = " +DoubleToString(candle[pos].open,2)+"\n"
+
+    61             "Max price = " + DoubleToString(candle[pos].high,2)+"\n"
+
+    62             "Close price = " + DoubleToString(candle[pos].close,2)+"\n"
+
+    63             "Min price = " + DoubleToString(candle[pos].low,2)+"\n"
+
+    64             "Last tick = " + DoubleToString(tick.last,2)+"\n"
+
+    65             "Time = " +tick.time;
+
+    66  )
+
+    67  Comment(legend);
+
+    68 }
+
+    ```
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_104_0.png)
+
+
+    We are using the DoubleToString() function to make the change from double to string.
+    If we are not careful to use this we will not have a compilation error, but in
+    the Errors tab of MetaEditor Toolbox we will'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "observe the following composition of warnings:\n\n```\nvoid OnTimer() {\n \
+    \   //\n    int pos = 0; // choose candle position\n    string legend = \"Open\
+    \ price = \"+candle[pos].open+\\n\"+\n\n                   \"Max price = \"+candle[pos].high+\\\
+    n\"+\n\n                   \"Close price = \"+candle[pos].close+\\n\"+\n\n   \
+    \                \"Min price = \"+candle[pos].low+\\n\"+\n\n                 \
+    \  \"Last tick = \"+tick.last+\\n\"+\n\n                   \"Time = \"+tick.time;;\n\
+    \    Comment(legend);\n}\n```\n\n| Descrição | Arquivo |\n| --- | --- |\n| Estudo_Var.mq5\
+    \ | |\n| implicit conversion from 'number' to 'string' | Estudo_Var.mq5 |\n| implicit\
+    \ conversion from 'number' to 'string' | Estudo_Var.mq5 |\n| implicit conversion\
+    \ from 'number' to 'string' | Estudo_Var.mq5 |\n| implicit conversion from 'number'\
+    \ to 'string' | Estudo_Var.mq5 |\n| implicit conversion from 'number' to 'string'\
+    \ | Estudo_Var.mq5 |\n| generating code | |\n| 0 error(s), 6 warning(s), compile\
+    \ time: 201 msec | |\n| Erros | Pesquisa | Artigos | Codebase | Projetos públicos\
+    \ | Diário |\n\n# i.15.2. Alert()\n\nThe Alert() function displays an alert box\
+    \ in the center of the screen with the requested information. Those who are interested\
+    \ can search for audible alerts, because it is also possible to add them to their\
+    \ EAs."
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "```\n54 void OnTimer() \n55 {\n56 //-- \n57     int pos = 0; // choose candle\
+    \ position\n58 \n59     string legend = \"+Open price = \"+DoubleToString(candle[pos].open,2)+\"\
+    \\n+\n60             \"+Max price = \"+DoubleToString(candle[pos].high,2)+\"\\\
+    n+\n61             \"+close price = \"+DoubleToString(candle[pos].close,2)+\"\\\
+    n+\n62             \"+Min price = \"+DoubleToString(candle[pos].low,2)+\"\\n+\n\
+    63             \"+Last tick = \"+DoubleToString(tick.last,2)+\"\\n+\n64      \
+    \       \"+Time = \"+tick.time;\"\n65             -->\n66     Alert(legend);\n\
+    67 }\n```\n\n![](img/6d863e70ea1a0ecdc703a17721d7e78b_106_0.png)"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# 5.6. Adding MQL5 Indicators\n\nLet us now turn to one of the most common\
+    \ and important practices when the goal is to plan an investment strategy. It\
+    \ is very likely that your investment strategy will make use of some indicator,\
+    \ so let's learn how to call indicators from the MQL5 language.\n\nInitially,\
+    \ we need to declare the variables for our indicator. How we will declare variables\
+    \ will depend greatly on the type and functioning of the indicator.\n\nThere are\
+    \ indicators that provide only one output of information, such as a moving average.\
+    \ From the moving average we have only one output of information which is the\
+    \ value of the moving average calculated for a specific point in the graph. In\
+    \ this case we say that the moving average has only one memory buffer. Every indicator\
+    \ needs at least one Handle and it must be an integer type.\n\n```\n//--- Moving\
+    \ Averages\nint ma_Handle; // Handle Moving Average\ndouble ma_Buffer[]; // Buffer\
+    \ Moving Average\n/*\n//+ Expert initialization function\n//*/\nint OnInit()\n\
+    {\n    ma_Handle = iMA(Symbol,Period,7.0,MODE_EMA,PRICE_CLOSE);\n\n    if(ma_Handle<0)\n\
+    \    {\n        Alert(\"Error trying to create Handles for indicator error: \"\
+    +GetLastError(),\"!**\");\n        return(-1);\n    }\n\n    // To add the indicator\
+    \ to the chart:\n    ChartIndicatorAdd(0,0,ma_Handle);\n\n    return(INIT_SUCCEEDED);\n\
+    }\n```\n\nThe declaration of the moving average indicator is given by a function\
+    \ of MQL5 (**iMA**) with a F1 in this function we obtain:"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# MQL5 Reference
+
+
+    MQL5 Reference / Technical Indicators / IMA
+
+
+    Type in a request to look for:
+
+
+    # IMA
+
+
+    The function returns the handle of the Moving Average Indicator. It has one buffer.
+
+
+    ```
+
+    int    symbol;                // symbol name
+
+    int    TIMEFRAMES;         // period
+
+    int    price;                // averaging period
+
+    int    MQL_MA_METHOD;      // method
+
+    int    MQL_APPLIED_PRICE;  // type of price or handle
+
+    hint    handle;
+
+    ```
+
+
+    Parameters
+
+
+    +   [symbol] The name of the security, the data of which should be used to calculate
+    the indicator. The value means the current symbol.
+
+
+    period
+
+
+    In our case we are using a moving average period of 7 with the simple smoothing
+    type (MODE_SMA) applied to the closing price (PRICE_CLOSE). It is good to point
+    out, once again, that each indicator has its own structure of parameters necessary
+    for its proper functioning.
+
+
+    It is always good to point codes to evaluate possible variable loading errors.
+    In our case we added an Alert() if we have problems with the variable ''mm_Handle''.
+    We did this because the correct functioning of this variable is extremely important
+    to our robot strategy. However, the practice of evaluating the loading of variables
+    is always welcome.
+
+
+    The same procedure can be done for the i RSI indicator.
+
+
+    We made the initial statement and addition of the indicator on the chart with
+    the function ChartIndicatorAdd(0,0,mm,Handle). Now we should point ''mm_Handle''
+    to the vector of ''mm_Buffer[]'' which is where we will access the values of our
+    moving average.
+
+
+    To do this within the OnTick() function we must call the CopyBuffer() function.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "```\n//++-\n// Expert tick function\n//++-\nvoid OnTick()\n{\n    // Copy a\
+    \ three-dimensional data vector to Buffer\n    CopyBuffer(ma_Handle, 0,0,3,ma_Buffer);\n\
+    \n    // Sort the data vector:\n    ArraySetAsSeries(ma_fast_Buffer,true);\n}\n\
+    ```\n\nWe can understand the the structure of CopyBuffer() as follows:\n\n![](img/6d863e70ea1a0ecdc703a17721d7e78b_109_0.png)\n\
+    \nNow let's add the RSI indicator. This indicator also has only a single Buffer.\
+    \ If you are in doubt regarding the number of buffers of each indicator simply\
+    \ go to the documentation from the F1 key and look for #property indicator_buffers:\n\
+    \n![](img/6d863e70ea1a0ecdc703a17721d7e78b_109_1.png)\n\nIt follows the code with\
+    \ the addition of the two indicators (moving average and RSI). Note that the (iRSI)\
+    \ function of the RSI indicator has input parameters that are very different from\
+    \ the iMA () function:"
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "```\n//--- Moving Averages\nint ma_Handle;      // Handle Moving Average\n\
+    double ma_Buffer[]; // Buffer Moving Average\n\n//--- RSI\nint rsi_Handle;   \
+    \  // Handle for RSI\ndouble rsi_Buffer[];  // Buffer for RSI\n\n//| Expert initialization\
+    \ function\nint OnInit()\n{\n    int ma_Handle = IMA(Symbol, Period, 7, NODE_EMA,\
+    \ PRICE_CLOSE);\n    double rsi_Buffer = iRSI(Symbol, Period, 3, PRICE_CLOSE);\n\
+    \    if (ma_Handle<0 || rsi_Handle<0)\n    {\n        Alert(\"Error trying to\
+    \ create Handles for indicator - error: \" + GetLastError(),\"!\");\n        return(-1);\n\
+    \    }\n    // To add the indicator to the chart:\n    ChartIndicatorAdd(0,0,ma_Handle);\n\
+    \    ChartIndicatorAdd(0,1,rsi_Handle);\n    return(INIT_SUCCEEDED);\n}\n\n//|\
+    \ Expert deinitialization function\nvoid OnDeinit(const int reason)\n{\n    IndicatorRelease(ma_Handle);\n\
+    \    IndicatorRelease(rsi_Handle);\n}\n```"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "```\n53 //+------------------------------------------------+\n54 //| Expert\
+    \ tick function\n55 //+------------------------------------------------+\n56 void\
+    \ OnTick() {\n57 {\n58 //+------------------------------------------------+\n\
+    59     // Copy a three-dimensional data vector to Buffer\n60 CopyBuffer(ma_Handle,0,0,3,ma_Buffer);\n\
+    61 CopyBuffer(rsi_Handle,0,0,3,rsi_Buffer);\n62 \n63 // Sort the data vector:\n\
+    64 ArraySetAsSeries(ma_fast_Buffer,true);\n65 ArraySetAsSeries(rsi_Buffer,true);\n\
+    66 \n67 Print(\"ma_Buffer = \", ma_Buffer[0]);\n68 Print(\"rsi_Buffer = \", rsi_Buffer[0]);\n\
+    69 Print(\"===============================================\");\n70 \n71 }\n```\n\
+    \nFinally, we are fully equipped with the minimum information necessary to start\
+    \ programming our investment robot. Let's go to the next chapter!"
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '# Chapter 6'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: '# b. Programming the EA
+
+
+    Now that we know the main functionality of MetaTrader, we have already understood
+    the basics of the features of the MQL5 language and the use of MetaEditor we are
+    minimally prepared to start developing our investment robot (Expert Advisor -
+    EA).
+
+
+    Before starting to program, let us know and understand the details of our EA strategy.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# i.1. Strategy overview
+
+
+    Our EA will have two moving averages and the RSI indicator. The crossing of two
+    Moving Averages works well when the market is in a trend. On the other hand, in
+    parallel markets or in consolidation, the RSI indicator performs better.
+
+
+    There are several indicators that offer indicative when the market is in trend
+    as the ADX indicator. We decided to choose the RSI for reasons of making an alternative
+    between the possibility of choosing the market in the trend and/or lateralized
+    market.
+
+
+    For the buy or sell operations, our EA will have the possibility to choose only
+    one of the indicators (crossing of averages or RSI) or both at the same time.
+    Thus, we will have an EA that will track the input triggers based on two indicators:
+    moving averages and RSI.
+
+
+    Let us understand how the input triggers in operations will be given for each
+    of these indicators.
+
+
+    # i.1.1. Moving Averages
+
+
+    First go to the trigger for the crossing of moving averages. We have two moving
+    averages and the type, whether exponential or arithmetic, of these averages can
+    be changed as we will see next.
+
+
+    One of the moving averages will be called the fast average and the other slow
+    average. The fast average is the one that has the shortest period, on the other
+    hand the slow average should always have the longest period.
+
+
+    We give these names to averages because fast averages are those with a shorter
+    period of time and are more adherent to price, so they move faster than those
+    of longer periods where they have slower directional behavior.
+
+
+    Let''s look at an illustrative diagram of how these triggers work in trading:'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# i.1.2.Relative Strength Index (RSI)
+
+
+    O indicador RSI (Relative Strength Index) no MetaTrader se refere a um Oscilar,
+    ou seja, é útil para indicar posições de sobrecompra e revenda em mercado lateralizado
+    (consolidado).
+
+
+    We will not go into detail the calculations behind the RSI because it is not the
+    goal at the moment. But let''s understand the kittens buy and sell this indicator
+
+
+    The figure below shows the RSI and two main levels (solid lines in red) at 30
+    and 70. Each of these lines represents the levels to allow overbought (line 70)
+    and oversold (line 30). In other words, in a consolidated market, when the RSI
+    is equal to or greater than line 70, it can be a reversal warning, warning an
+    overbought, that it is a good time to make a sale. On the other hand, if the RSI,
+    once again in a consolidated market, is less than equal to line 30, we are in
+    an oversold region indicating a good time to buy.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_115_0.png)
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_115_1.png)'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: 'In our EA we will leave those levels of 70 (overbought) and 30 (oversold) possible
+    to be changed by the user. So you can choose more loose restrictive levels for
+    the kittens to buy and sell.
+
+
+    Let''s now set an example where the trigger levels to buy are at line 30 and the
+    trigger to sell is at line 70:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_116_0.png)
+
+
+    Let us, therefore, to a summary of the strategy with the elements that we will
+    need to program for our EA:
+
+
+    +   1 - We must add two moving averages (fast and slow) both with the possibility
+    of choosing the period, the average application price and the average method used.
+
+
+    +   2 - We must add the RSI indicator with possibility of period choice, applied'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: 'price, and oversold and oversold levels.
+
+
+    3 - The user can choose among the options to enter the traders if they come from
+    the moving averages plus the RSI, only moving averages or only the RSI.
+
+
+    Now that we know the operation to buy and sell for our two indicators (crossing
+    of averages and RSI) we are ready to start developing the algorithm with the presented
+    strategy.'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# i.2. Creating EA
+
+
+    Let''s open MetaEditor and ask the wizard to create a new Expert Advisor. Let''s
+    give it the following name: MM_CROS_RSI.mq5.
+
+
+    If you want to obtain the complete source code of the robot you can access the
+    following page in github https://github.com/rafaelfvcs or send an email to rafaelfvcs@gmail.com.
+    However, it is strongly recommended that you enter the codes presented to gradually
+    memorize the use of MetaEditor functions and features.
+
+
+    Here we have the skeleton of our EA:
+
+
+    ```
+
+    1 //+------------------------------------------------------------------+ MM_CROS_IFR.mq5
+
+    2 //|                                              Copyright 2018. |
+
+    3 //|                                     https://www.mq5.com |
+
+    4 //+------------------------------------------------------------------+
+
+    5 //#property copyright "Copyright 2018."                                 ||
+
+    6 //#property link                      "https://www.mq5.com"      ||
+
+    7 //#property version     "1.00"                                     |
+
+    8 //+//+------------------------------------------------------------------+
+
+    9 //| Expert initialization function                                     |
+
+    10//+------------------------------------------------------------------+
+
+    11//int OnInit()                                                        |
+
+    12//{                                                                   |
+
+    13//                                                                   |
+
+    14//                                                                   |
+
+    15//                                                                   |
+
+    16//    return (INIT_SUCCEEDED);                                       |
+
+    17//}                                                                   |
+
+    18//+------------------------------------------------------------------+
+
+    19//| Expert deinitialization function                                  |
+
+    20//+------------------------------------------------------------------+
+
+    21//void OnDeinit(const int reason)                               |
+
+    22//{                                                                   |
+
+    23//                                                                   |
+
+    24//                                                                   |
+
+    25//                                                                   |
+
+    26//}                                                                   |
+
+    27//+------------------------------------------------------------------+
+
+    28//| Expert tick function                                              |
+
+    29//+------------------------------------------------------------------+
+
+    30//void OnTick()                                                      |
+
+    31//{                                                                   |
+
+    32//                                                                   |
+
+    33//                                                                   |
+
+    34//                                                                   |
+
+    35//}                                                                   |
+
+    36//+------------------------------------------------------------------+
+
+    ```'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# i.3. Declaration of Global Variables
+
+
+    Let''s start by declaring our global variables. We will separate those variables
+    that the user will have access to modify and those that will be used for the structure
+    of the EA algorithm.
+
+
+    # i.3.1.Variables for the User
+
+
+    We will provide the following options (input parameters): profit targets, stop
+    loss, number of traded lots, chart time, average periods, RSI period, application
+    of methods in processes (opening, closing, max, min) for both the averages and
+    the RSI, possibility of choice in the strategy of entry triggers in operations
+    (Moving averages plus RSI, only crosses, RSI only) and time limit to close the
+    open operations.
+
+
+    Below is the code of all this:
+
+
+    ```
+
+    // Variables Input
+
+    ----------------------Strategy-------
+
+    20 input string s0; // = ONLY_MA; // Trader Entry Strategy
+
+    21 input STRATEGY_IN strategy
+
+
+    ----------------------Moving Averages-----------------
+
+    23 input string s1; // = Fast Moving Average Period
+
+    24 input int ma_fast_period = 12; // Slow Moving Average Period
+
+    25 input int ma_slow_period = 32;
+
+    26 input EN_TIMRAMES ma_time_graphic = PERIOD_CURRENT; // Graphic Time
+
+    27 input METHOD = Method; // Method
+
+    28 input APPLIED_PRICE ma_price = PRICE_CLOSE; // Price Applied
+
+
+    30 input string s2; //----------------------RSI Period
+
+    31 input string rsi_period
+
+    32 input EN_TIMRAMES rsi_time_graphic = PERIOD_CURRENT; // Graphic Time
+
+    33 input APPLIED_PRICE rsi_price = PRICE_CLOSE; // Price Overbought
+
+
+    35 input string rsi_overbought = 70; // Level Overbought
+
+    36 input string rsi_oversold = 30; // Level Oversold
+
+
+    38 input string s3; // = 100; // Number of lots
+
+    39 input int num_lots = // // Take Profit
+
+    40 input double TR = 60; // Stop Loss
+
+    41 input double SL = 30;
+
+
+    43 input string s4; // = "17:40"; // Time Limit Close Position
+
+    44 input string limit_close_op
+
+    ```
+
+
+    For the ''strategy'' variable it was chosen to create an enum (this should be'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: 'declared at the top of the algorithm above the Input variables:
+
+
+    ```
+
+    11 enum STRATEGY_IN
+
+    12 {
+
+    13 ONLY_MA,      // Only moving averages
+
+    14 ONLY_RSI,     // Only RSI
+
+    15 MA_AND_RSI   // moving averages plus RSI
+
+    16 };
+
+    ```
+
+
+    # i.3.2.Global Variables
+
+
+    We must now declare the global variables that will be used by the functions of
+    our algorithm. See below:
+
+
+    ```
+
+    46+//------------------------------------------------------
+
+    47+// Variables for indicators
+
+    48+//------------------------------------------------------
+
+    49+// Moving Averages
+
+    50 // FAST - shorter period
+
+    51 int ma_fast_Handle;      // Handle Fast Moving Average
+
+    52 double ma_fast_Buffer[]; // Buffer Fast Moving Average
+
+    53
+
+    54 // SLOW - longer period
+
+    55 int ma_slow_Handle;      // Handle Slow Moving Average
+
+    56 double ma_slow_Buffer[]; // Buffer Slow Moving Average
+
+    57
+
+    58 //-- RSI
+
+    59 int rsi_Handle;          // Handle for RSI
+
+    60 double rsi_Buffer[];      // Buffer for RSI
+
+    61
+
+    62+//------------------------------------------------------
+
+    63+// Variables for functions
+
+    64+//------------------------------------------------------
+
+    66 int magic_number = 123456;  // Magic Number
+
+    67
+
+    68 MqlRates candle[];      // Variable for storing candles
+
+    69 MqlTick tick;           // Variable for storing ticks
+
+    70
+
+    ```'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# i.4. OnInit() Function
+
+
+    In the OnInit() function we will add the initialization variables to the indicators
+    and add them to the chart with the ChartIndicatorAdd() function.
+
+    Follow the code:
+
+
+    ```
+
+    //--- Expert initialization function
+
+    //
+
+    int OnInit()
+
+    {
+
+    //
+
+    ma_fast_Handle = iMA(Symbol, ma_time_graphic,ma_fast_period, 0,ma_method, ma_price);
+
+    ma_slow_Handle = iMA(Symbol, ma_time_graphic,ma_slow_period, 0,ma_method, ma_price);
+
+
+    rsi_Handle = iRSI(Symbol,rsi_time_graphic,rsi_price,rsi_price);
+
+    if(ma_fast_Handle==0 || ma_slow_Handle==0 || rsi_Handle==0)
+
+    {
+
+    Alert("Error trying to create Handles for indicator error: "GetLastError(),"!");
+
+    return(-1);
+
+    }
+
+
+    CopyBuffer(Symbol, Period,0,0,candles);
+
+    ArraySetAsSeries(candles,true);
+
+    // To add the indicator to the chart:
+
+    ChartIndicatorAdd(0,0,ma_fast_Handle);
+
+    ChartIndicatorAdd(0,0,ma_slow_Handle);
+
+    ChartIndicatorAdd(0,1,rsi_Handle);
+
+    //---
+
+    return (INIT_SUCCEEDED);
+
+    }
+
+    ```
+
+
+    Note that ChartIndicatorAdd(0,0,mm_fast_Handle) and ChartIndicatorAdd(0,0,mm_slow_Handle)
+    has the same graphical addition reference (0 zero), which means that both indicators
+    will be on the main screen where the candles. However, ChartIndicatorAdd(0,1,ifr_Handle)
+    terms the reference (1 one) is the bookmark will be added to another chart box.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# i.5. Function OnDeinit()
+
+
+    When the EA is removed we need to remove the indicators and if necessary clear
+    variables and parameters. The OnDeinit() function is called when the robot is
+    removed. Thus, within this function we can write our disinitialization activities
+    of the parameters:
+
+
+    ```
+
+    100+//------------------------------------------------------+
+
+    101/* Expert deinitialization function */
+
+    102+//------------------------------------------------------+
+
+    103 void OnDeinit(const int reason)
+
+    104 {
+
+    105 //--
+
+    106 IndicatorRelease(ma_fast_Handle);
+
+    107 IndicatorRelease(ma_slow_Handle);
+
+    108 IndicatorRelease(rsi_Handle);
+
+    109 }
+
+    ```
+
+
+    As we write these codes it is advisable to compile and test EA in MetaTrader.
+    So if we drag the file: MM_CROS_RSI.exe5 in MetaTrader for some financial asset
+    we will have the following:'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_123_0.png)
+
+
+    Clicking on ok will add the indicators to the chart and the EA will appear in
+    the upper right corner or not if the automated trading button is on.
+
+    nSee the example below:'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_124_0.png)'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# i.6. Expert Advisor Functions
+
+
+    Let''s create some useful and important functions for the operation of our EA.
+    We can use the shortcut (Ctrl +) To create sections for a set of functions that
+    we will create for our EA.
+
+
+    First, we will need a function that informs the appearance of a new candle regardless
+    of the graphical time. Still, we do not have a native function in MQL5 that allows
+    us to accurately assess changing candle and so we must create it.
+
+
+    The function should return true if a new candle appears on the chart. Here is
+    the code used in in the tutorials in the MetaTrader article portal:'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: "```\n//--- USEFUL FUNCTIONS\n//--- for bar change\nbool isNewBar() {\n    //\
+    \ determine the time of opening of the last bar in the static variable\n    static\
+    \ datetime last_time=0;\n    // current time\n    datetime lastbar_time=(datetime)SeriesInfoInteger(Symbol(),Period(),SER_LASTBAR_DATE);\n\
+    \    // if it is the first call of the function\n    if (last_time==0) {\n   \
+    \     // set the time and exit\n        last_time=lastbar_time;\n        return(false);\n\
+    \    }\n    // if the time differs\n    if (last_time!=lastbar_time) {\n     \
+    \   // memorize the time and return true\n        last_time=lastbar_time;\n  \
+    \      return(true);\n    }\n    // if we passed this line, then the bar is not\
+    \ new; return false\n    return(false);\n}\n```\n\nLet's use a function to help\
+    \ you visualize the entry points of our strategies. This function basically will\
+    \ construct a graphical object (vertical line). Every time our robot performs\
+    \ logical conditions (the trigger is activated) a vertical line will be drawn\
+    \ on the graph with a name and color referring to the type of warning.\n\n```\n\
+    //--- FUNCTIONS TO ASSIST IN THE VISUALIZATION OF THE STRATEGY\n//---\nvoid drawVerticalLine(string\
+    \ name, datetime dt, color color = clrAliceBlue) {\n    ObjectDelete(0,name);\n\
+    \    ObjectCreate(0,name,OBJ_VLINE,0,dt,0);\n    ObjectSetInteger(0,name,OBJPROP_COLOR,color);\n\
+    }\n```\n\nThe function drawsVerticalLine() has four input variables. MQL5 allows\
+    \ the last input variables of a function to already come with a default value.\
+    \ See the case of the variable 'color = clrAliceBlue'. This means that the user\
+    \ does not set a specific color the 'clrAliceBlue' will automatically be assigned\
+    \ to the variable. Therefore, the user has no obligation to assign values to this\
+    \ type of variables. However it is mandatory to enter values for the other"
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: "variables.\n\nNow let's create one of the most important functions for our\
+    \ EA. They are the functions of sending orders.\n\nWe need to send orders to buy\
+    \ or sell every time a trigger is started. In MQL we can do this type of sending\
+    \ in different ways. We can use a specific class called CTrade to work with the\
+    \ handling and sending of orders. However, here we choose to use the requisite\
+    \ assembly structures (MqlTradeRequest) and send response (MqlTradeResult).\n\n\
+    MqlTradeRequest is used to perform all trade requests for a trade operation. It\
+    \ contains all the fields necessary for performing a trade deal.\n\n```\nstruct\
+    \ MqlTradeRequest {\n  ENUM_TRADE_REQUEST_ACTIONS action; // Trade operation type\n\
+    \  long magic;         // Expert ID (magic number)\n  long order;         // Order\
+    \ ticket\n  string symbol;      // Trade symbol\n  double volume;      // Requested\
+    \ volume for the deal in lots\n  double price;       // Price\n  double stoploss;\
+    \    // Stop loss of the order\n  double takprofit; // Take profit\n  int deviation;\
+    \     // Price deviation from the requested price\n  ENUM_ORDER_TYPE_FILLING type;\
+    \ // Order type\n  ENUM_ORDER_TYPE_TIME filling; // Order execution type\n  long\
+    \ time;          // Order execution time (for the orders ORDER_TIME_SPECIFIED\
+    \ type)\n  string comment;     // Order comment\n};\n```\n\nMqlTradeResult is\
+    \ used for any trade operation. The variable declared to this will be able to\
+    \ access the trade request results.\n\n```\nstruct MqlTradeResult {\n  uint code;\
+    \           // Operation return code\n  long deal;           // Deal ticket, if\
+    \ it is performed\n  long order;          // Order ticket, if it is placed\n \
+    \ double deal;        // Deal price, confirmed by broker\n  double price;    \
+    \   // Current price\n  double asr;         // Current ask price\n  string comment;\
+    \     // Comment to operation (by default it is filled by the operation description)\n\
+    };\n```\n\nFrom these structures we can delimit the type of order that we are\
+    \ interested in, specifying details of it. The request and response variables\
+    \ may be used in an order send function called OrderSend().\n\nBelow is a function\
+    \ created to send an order to buy with market with type of fill FOK (fill or kill\
+    \ fills the size of the order or does not execute). This order, executed to market,\
+    \ already has stop and target of gains (take profit) defined."
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: "In every market there are offers from the best buyers and best sellers. Therefore,\
+    \ we need to access the book of offers to know these prices. As we have seen,\
+    \ in Chapter 5, we can access book information from the MqlTick structure. So\
+    \ we created a variable 'tick' to store this information. With it we can access\
+    \ the best seller 'tick.bid' and the best buyer 'tick.ask'.\n\nWe have the bid\
+    \ = (sell, offer) and ask = (buy, demand).\n\n```\n// BUY TO MARKET\n123 bool\
+    \ Buy&Market(){\n124 \n125   MqlTradeRequest request;      // request;\n126  \
+    \ MqlTradeResult response;     // response;\n127 \n128   ZeroMemory(request);\n\
+    129   ZeroMemory(response);\n130 \n131   request.action       = TRADE_ACTION_DEAL;\
+    \ // Trade operation\n132   request.magic        = 123456; // Magic number\n133\
+    \   request.volume       = 1.0; // Lot number\n134   request.price        = NormalizeDouble(tick.ask,\
+    \ Digits); // Price to buy\n135   request.sl           = NormalizeDouble(tick.ask\
+    \ - Point, Digits); // Stop Loss\n136   request.tp           = 0; // Take Profit\n\
+    137   request.deviation    = 100; // Maximum possible deviation\n138   request.type\
+    \        = ORDER_TYPE_BUY; // Order type\n139   request.filling     = ORDER_FILLING_IOC;\
+    \ // Order execution type\n140 }\n141 //\n142 if(OrderSend(request, response)\
+    \ == 10000)\n143 {\n144   Print(\"Order Buy executed successfully!\");\n145 }\n\
+    146 else\n147 {\n148   Print(\"Error sending Order to Buy. Error = %d\n\", GetLastError());\n\
+    149   ResetLastError();\n150 }\n```\n\nThe type of action to be chosen is the\
+    \ first request that we assign:\n\n![](img/6d863e70ea1a0ecdc703a17721d7e78b_128_0.png)\n\
+    \nWe have several types of orders. We can choose from the structure type:"
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '```
+
+    requisicao.type = ORDER_TYPE
+
+    ORDER_TYPE_BUY
+
+    ORDER_TYPE_BUY_LIMIT
+
+    ORDER_TYPE_BUY_STOP
+
+    ORDER_TYPE_BUY_STOP_LIMIT
+
+    ORDER_TYPE_CLOSE_BY
+
+    ORDER_TYPE_FILLING
+
+    ORDER_TYPE_SELL
+
+    ORDER_TYPE_SELL_LIMIT
+
+    ```
+
+
+    The NormalizeDouble() function is used for rounding variables. We need to use
+    it because some financial assets have the number of different price digits of
+    others. We have assets that are quantified by points (as is the case of index
+    and dollar futures contracts), others are quantified by price and even pips (Forex
+    market). In Chapter 5 we discussed the use of _Point and _Digits.
+
+
+    The values of the SL and TK variables should be chosen by the user in the form
+    of points. Notice that for the stop loss price we did: NormalizeDouble(tick.ask
+    - SL * _Point, _Digits) as we are buying and our stop loss point needs to be below
+    the (ask). Already the target of the take (take profit) naturally for a purchase
+    should be above TK ask points.
+
+
+    It is with the request request.type_filling = ORDER_FILLING_FOK'' that we choose
+    the order fulfillment type. We basically have three types of order fulfillment:
+
+
+    ```
+
+    requisicao.type_filling = ORDER_FILLING_
+
+    ORDER_FILLING_FOK
+
+    ORDER_FILLING_IOC
+
+    ORDER_FILLING_RETURN
+
+    ```'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Let''s see the function to sell:
+
+
+    In this case, we have the stop level above the bid price NormalizeDouble(tick.bid
+    + SL * _Point, _Digits) and the gain target naturally below NormalizeDouble(tick.bid
+    - TK * _Point, _Digits).
+
+
+    We also need to create two functions to close open orders if they arrive at the
+    time limit chosen by the user. That because our robot is daytrader, we do not
+    want to sleep position. Remembering to guarantee that the closing of open orders
+    we have the variable ''Limit Closing Position'' chosen by the'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: 'user.
+
+
+    So to close a sale we must buy and to close a purchase we must sell.
+
+
+    We can note that for the CloseBuy() function the request_type_filling = ORDER_FILLING_RETURN,
+    this is because we want to close the order independent of the best buy or sell.
+    As we know this type of fill (ORDER_FILLING_RETURN) executes the order until it
+    reaches the limit of the number of lots.'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: "```\n323 void CloseSell() {\n324     {\n325     MqlTradeRequest request;  \
+    \    // request;\n326     MqlTradeResult response;      // response;\n327\n328\
+    \     ZeroMemory(request);\n329     ZeroMemory(response);\n330\n331     //---\
+    \ For Buy Order\n332     request.action = TRADE_ACTION_DEAL;\n333     request.magic\
+    \ = magic_number;\n334     request.symbol = Symbol;\n335     request.volume =\
+    \ num_lots;\n336     request.price = 0;\n337     request.type = ORDER_TYPE_BUY;\n\
+    338     request.type_filling = ORDER_FILLING_RETURN;\n339\n340     //-\n341  \
+    \   OrderSend(request, response);\n342\n343     //-\n344     if(response.retcode\
+    \ == 10008 || response.retcode == 10009) \n345     {\n346         Print(\"Order\
+    \ Buy executed successfully!!\");\n347     }\n348     else\n349     {\\n350  \
+    \       Print(\"Error sending Order to Buy. Error = \", GetLastError());\n351\
+    \         ResetLastError();\n352     }\n353 }\n```\n\n# ## i.6.1.Error Handling\n\
+    \nIt is always good to treat the returns of the orders sent. This is because we\
+    \ can minimize problems and evaluate execution errors. In our functions we did\
+    \ this from answer.retcode which returns a code (with 5 digits) coming from the\
+    \ brokerage server. Below is a window showing details of these codes. You can\
+    \ get to this window by pressing the F1 key on code number 10008 or 10009."
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Return Codes of the Trade Server
+
+
+    All requests to execute trade operations are sent as a structure of a trade request
+    MTradeRequest. The function execution result is placed in structure MTradeResult,
+    whose retcode field contains the trade server return code.
+
+
+    | Code | Constant | Description |
+
+    |---|---|---|
+
+    | 10004 | TRADE_RETCODE_REQUOTE | Re-quote |
+
+    | 10006 | TRADE_RETCODE_REJECT | Request rejected |
+
+    | 10007 | TRADE_RETCODE_CANCEL | Request canceled by trader |
+
+    | 10008 | TRADE_RETCODE_PLACED | Order placed |
+
+    | 10009 | TRADE_RETCODE_DONE | Request completed |
+
+    | 10010 | TRADE_RETCODE_DONE_PARTIAL | Only part of the request was completed
+    |
+
+    | 10011 | TRADE_RETCODE_ERROR | Request processing error |
+
+    | 10012 | TRADE_RETCODE_TIMEOUT | Request canceled by timeout |
+
+    | 10013 | TRADE_RETCODE_INVALID | Invalid request |'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# i.7. Function: OnTick()
+
+
+    The goal now is to create the functions ready for its EA. We already have the
+    necessary functions ready for its operation. It is within the OnTick() function,
+    called each time new business carried out on the stock exchange, that we will
+    write the strategic body.
+
+
+    First, we must feed our candle, tick, and indicator variables with data. Also,
+    let''s not forget to sort them appropriately with the ArraySetAsSeries() function:
+
+
+    ```
+
+    116 // Copy a three-dimensional data vector to Buffer
+
+    117 CopyBuffer(ma_fast_Handle,0,0,4,ma_fast_Buffer);
+
+    118 CopyBuffer(ma_slow_Handle,0,0,4,ma_slow_Buffer);
+
+    119
+
+    120
+
+    121 CopyBuffer(rsi_Handle,0,0,4,rsi_Buffer);
+
+    122
+
+    123 -- Feed candle buffers with data:
+
+    124 CopyRates(Symbol_,Period,0,4,candle);
+
+    125 ArraySetAsSeries(candle,true);
+
+    126
+
+    127 // Sort the data vector:
+
+    128 ArraySetAsSeries(ma_fast_Buffer,true);
+
+    129 ArraySetAsSeries(ma_slow_Buffer,true);
+
+    130 ArraySetAsSeries(rsi_Buffer,true);
+
+    131
+
+    132 --
+
+    133 // Feed with tick variable data
+
+    134 SymbolInfoTick(Symbol_,tick);
+
+    ```
+
+
+    After this we can make use of these variables to build the logic of the buy and
+    sell action of EA. Follow the conditions of crossings:'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# Crossings conditions
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_135_0.png)
+
+
+    In the MQL5 language it is:
+
+
+    | 135 | // LOGIC TO ACTIVATE PURCHASE |
+
+    | 136 | bool buy_ma_cros = ma_fast_Buffer[0] > ma_slow_Buffer[0] && |
+
+    | 137 | ma_fast_Buffer[2] < ma_slow_Buffer[2] ; |
+
+    | 138 | |
+
+    | 139 | bool buy_rsi = rsi_Buffer[0] <= rsi_oversold; |
+
+    | 140 | |
+
+    | 141 | // LOGIC TO ACTIVATE SALE |
+
+    | 142 | bool sell_ma_cros = ma_slow_Buffer[0] > ma_fast_Buffer[0] && |
+
+    | 143 | ma_slow_Buffer[2] < ma_fast_Buffer[2]; |
+
+    | 144 | |
+
+    | 145 | bool sell_rsi = rsi_Buffer[0] >= rsi_overbought;
+
+
+    We have to create a logic to use the enum (STRATEGY_IN). We need the sales and
+    purchase triggers to be oriented with the options of: ONLY_MM (mobile averages
+    only), ONLY_RSI (RSI only) and MA_AND_RSI (Moving averages plus RSI) described
+    in this enum. Here''s a possible solution to this problem:'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '```
+
+    148  bool Buy = false; // Can Buy?
+
+    149  bool Sell = false; // Can Sell?
+
+    150
+
+    151  if(strategy == ONLY_MA)
+
+    152  {
+
+    153      Buy = buy_ma_cros;
+
+    154      Sell = sell_ma_cros;
+
+    155
+
+    156  }
+
+    157  else if(strategy == ONLY_RSI)
+
+    158  {
+
+    159      Buy = buy_rsi;
+
+    160      Sell = sell_rsi;
+
+    161  }
+
+    162  else
+
+    163  {
+
+    164      Buy = buy_ma_cros && buy_rsi;
+
+    165      Sell = sell_ma_cros && sell_rsi;
+
+    166  }
+
+    ```
+
+
+    Now we can organize our functions so EA can make buying and selling decisions.
+    It is important to know when a new bar (candle) is created so that the algorithm
+    can track, without much computational effort, a possible crossing of averages
+    and RSI values in the desired region. Let''s draw a vertical line when the buy/sell
+    triggers are activated.'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: "```\n // returns true if we have a new candle\nbool newBar = isMenuBar();\n\
+    // Every time there is a new candle enter this 'if'\nif (newBar)\n{\n    // Buy\
+    \ Condition:\n    if(Buy && PositionSelect(_Symbol)==false)\n    {\n        drawVerticalLine(\"\
+    Buy\",candle[1].time,clrBlue);\n        BuyAtMarket();\n    }\n\n    // Sell Condition:\n\
+    \    if(Sell && PositionSelect(_Symbol)==false)\n    {\n        drawVerticalLine(\"\
+    Sell\",candle[1].time,clrRed);\n        SellAtMarket();\n    }\n}\n```\n\nThe\
+    \ 'PositionSelect(_Symbol)' function returns a boolean. If there is any operation\
+    \ in progress it returns true, otherwise false. So we just want to get into an\
+    \ operation if the EA has no open position.\n\nFinally, to end our long-awaited\
+    \ EA need a code to close some open position at the time limit, i.e., that position\
+    \ that did not reach the winning target or the stop loss.\n\n```\nif(newBar &&\
+    \ TimeCurrent(CurrentTime(),TIME_MINUTES) == limit_close && PositionSelect(_Symbol)==true)\n\
+    {\n    // End of period: End Open Positions:\n    drawVerticalLine(\"Limit_close\"\
+    ,TimeCurrent(),clrrBlue);\n    if(PositionGetInteger(POSITION_TYPE) == POSITION_TYPE_BUY)\n\
+    \    {\n        CloseBuy();\n    }\n    else if(PositionGetInteger(POSITION_TYPE)\
+    \ == POSITION_TYPE_SELL)\n    {\n        CloseSell();\n    }\n}\n```\n\nThe PositionGetInteger(POSITION_TYPE)\
+    \ function returns the open position type. If it is a buy position we have POSITION_TYPE_BUY\
+    \ in the case of a sale we have POSITION_TYPE_SELL."
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: 'Once again if you want to have access to the complete code of this EA can be
+    downloaded at: https://github.com/rafaelfvcs. Or if you prefer, you can send an
+    email to rafaelfvcs@gmail.com and I''ll be happy to send it to you!
+
+
+    Let''s now do backtests with our newest multi-strategy investment EA.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# Chapter 7'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# 7. Backtests
+
+
+    Our main interest with Expert Advisor (EA) is to have a winning strategy over
+    the long term. There is that famous phrase; that nobody in the financial market
+    has a crystal ball. It is no use trying to predict the future of the market, because
+    unfortunately, it is impossible until the present moment.
+
+
+    We need to be realistic to accept that our strategy will have ups and downs regarding
+    financial returns. The 100% winning strategy is a utopia. However, it is important
+    to know how good our strategy is. There is nothing better than using past data
+    to gauge how it performed under various market conditions. So testing our strategy
+    at past time periods is called a backtest.
+
+
+    Fortunately, when it comes to backtesting MetaTrader 5 provides a collection of
+    simple and useful features to extract as much information as possible from the
+    performance of our EA.
+
+
+    Now that we already have an EA (MM_CROS_RSI.exe5) multi-strategy programmed and
+    working properly, let''s do the backtests.'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: '# 1. Backtest in MetaTrader
+
+
+    Let''s open MetaTrader and go to the field Navigator -> **Expert Advisor** consultant
+    and look for our newest EA. Once found we should right click on it and then on
+    **Test.**
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_141_0.png)
+
+
+    This will give us a new field in MetaTrader called **Strategy Tester**, in the
+    settings tab we have the following panel of possibilities:
+
+
+    | Expert | EA_MA_Cross_RSIv5 | PETR4 | M5 |
+
+    |---|---|---|---|n| Date custom period | 2015.01.23 | 2016.06.11 | |
+
+    | Forward | No | | |
+
+    | Execution | Without Delay | 1 minute OHLC | | |
+
+    | Deposit | 10000 USD | 1:1 | Visualization |
+
+    | Optimization | Disabled | Balance index | |
+
+    | Testing progress: | | | |
+
+
+    With these features we will be able to choose the financial asset for the'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: 'backtest:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_142_0.png)
+
+
+    # The graphical time:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_142_1.png)
+
+
+    We have the option to choose how the **formation of our candles** simulated by
+    MetaTrader.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_142_2.png)
+
+
+    For this way of generating prices in candles, let’s go to the main options most'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: 'used:
+
+
+    Every tick or Every tick based on real ticks: MetaTrader tries to simulate real
+    price ticks in the formation of candles. This option leaves the backtest more
+    accurate, but requires more computational resources once inside a candle the MetaTrader
+    tries to reproduce the formation of real ticks. It is worth noting that ticks
+    are not real just a simulation (a possible representation of reality). This article
+    clarifies the functioning of simulation:https://www.mql5.com/en/articles/75.
+
+
+    1 minute OHLC: In this type of candle formation MetaTrader generates only 4 price
+    values: O - open, H - High, L - Low, C - Close. This option requires fewer computational
+    resources compared to the tick option.
+
+
+    Open price only: This is the least costly computationally, because it only uses
+    a price to represent a candle.
+
+
+    In our backtests we will always leave the option Forward marked No (see the figure
+    below). This option is useful when we are doing strategy optimizations and want
+    to use optimization methods such as Walk Forward Analysis (WFA). This type of
+    study is beyond the scope of this book. If you want to know more about it, you
+    can buy the other e-book (How to Properly Optimize Investment Robots in MetaTrader
+    5[4]).
+
+
+    | Expert | EA_MA_Cross_RSI.ex5 |
+
+    |---||
+
+    | Date: Custom period | |
+
+    | Forward: No | 2015.01.07 |
+
+    | Execution: Without Delay | |
+
+    | Deposit: 10000 USD 1:1 |
+
+    | Optimization: Disabled | |
+
+
+    The type of execution with or without Delay is interesting so we can simulate
+    the conditions in which the servers are and the speed of our internet. Latency
+    refers to the time required for routing orders to be properly executed.'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_144_0.png)
+
+
+    We have the possibility to choose the financial from the initial deposit as well
+    the possibility to leverage investments (in the case of the below 1: 1 - without
+    leverage).
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_144_1.png)
+
+
+    For our backtests the **Optimization** field should be disabled.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_144_2.png)'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: 'We should choose the data period for the backtest.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_145_0.png)
+
+
+    And check the option to view the backtest:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_145_1.png)
+
+
+    Let''s now go to the **Input** (Parameters) tab of the Strategy Tester.'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '![](img/6d863e70ea1a0ecdc703a17721d7e78b_146_0.png)
+
+
+    In this field we can put the setup necessary for the realization of our backtests.
+    At the moment, what interests us is is just the Value column, highlighted in low
+    red. The other columns (highlighted in green) are used as parameters for EA optimization.
+
+
+    | | Value | Start | Step | Step |
+
+    |---|---|---|---|---|
+
+    | -Strategy- | | Only moving averages | Only moving averages | moving averages
+    plus... |
+
+    | -Moving Average- | | | 1 | 120 |
+
+    | Fast Moving Average Period | | 32 | 1 | 120 |
+
+    | Slow Moving Average Period | | 32 | 1 | 1 Month |
+
+    | Graphic Time | | current | | | Linear weighted |
+
+    | Price Applied | | Close price | Close price | | Weighted price |
+
+    | RSI Period | | current | | | 50 |
+
+    | Graphic Time | | Close price | Close price | | 1 Month |
+
+    | Level Overbought | | 70 | | | Weighted price |
+
+    | Level Oversold | | 30 | | | 700 |
+
+
+    In the **Agents** tab we have information regarding the computational power of
+    the machine we are using to do the backtests and optimizations. A backtest is
+    usually computationally inexpensive. However, when we are doing optimizations
+    (many backtests are required) we will need a lot of resources and therefore this
+    **Agents** tab will be important to us.'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: 'We can make a log to use multiple processing cores in the cloud and thus increase
+    our computing power. The use of these extra cores is very affordable. With a few
+    dollars we can make hundreds of thousands of optimizations.
+
+
+    After setting the parameters correctly for the backtest, simply go back to the
+    Settings tab and hit the Start button.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_147_0.png)'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# 2. Analyzing the Backtest
+
+
+    As soon as you press the Start button, the following window appears:
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_148_0.png)
+
+
+    So we have a screen to visualize what is happening with the backtest. We can control
+    the speed with which new candles (candles) appear, from the highlighted buttons
+    (red) of the figure above.
+
+
+    You can also have the prices of each candle and indicator (green area highlighted),
+    just place the mouse over the desired element on the screen.
+
+
+    In the Toolbox we have four tabs (Trading, History, Operations and Journal) where
+    we can track records regarding our trades operations of our EA.'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# Take profit
+
+
+    Stop Loss
+
+
+    # trade informations
+
+
+    Buy
+
+
+    In the **Toolbox** in the **Operations** tab we follow the records with each of
+    the sales and purchase operations. Something very useful is that we can give two
+    clicks on some of this operation and the graph will automatically show the operation
+    in question.'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: 'The Toolbox history shows a bit more detail. We can quickly see profitable
+    (green) and lossy (red) operations from colorful highlights.
+
+
+    | Time | Order | Asset | Type | Direction | Volume | Price | S/L | T/P | Gained
+    | Comment |
+
+    |---|---|---|---|---|---|---|---|---|---||
+
+    | 2023-03-18 17:48:09 | l | pateli | exchange | sell | 100.00 | 100.00 | | | |
+    |
+
+    | 2023-03-18 16:25:40 | l | pateli | exchange | buy | 100.00 | 17.05 | | 17.25
+    | |
+
+    | 2023-03-18 15:43:20 | l | pateli | exchange | buy | 100.00 | 16.00 | 18.03 |
+    17.08 | |
+
+    | 2023-03-18 11:45:00 | l | pateli | exchange | buy | 100.00 | 17.12 | 17.47 |
+    | |
+
+    | 2023-03-18 09:22:15 | l | pateli | exchange | sell | | | | | | -1.00 |
+
+
+    Finally, the Operation tab shows the progress of each particular negotiation.
+    We have the information regarding the entry price, our available financial margin
+    and how the trade is progressing, whether with gain or loss.
+
+
+    | Time | Order | Asset | Type | Direction | Volume | Price | S/L | T/P | Gained
+    | Comment |
+
+    |---|---|---|---|---|---|---|---|---|---|---||
+
+    | 2023-03-18 13:50:40 | 25 | pateli | wait | | | 18.35 | | | 2023-03-18 13:50:40
+    | Filled | tp 18.35 |
+
+    | 2023-03-18 14:13:40 | 25 | pateli | wait | | | 18.25 | 17.31 | | 2023-03-18
+    14:13:40 | Filled | tp 18.50 |
+
+    | 2023-03-18 14:27:20 | 25 | pateli | buy | | | 17.02 | 17.17 | | 2023-03-18 14:27:20
+    | Filled | |
+
+    | 2023-03-18 15:16:00 | 25 | pateli | buy | | | 17.02 | 16.02 | 2023-03-18 15:16:00
+    | Filled | tp 17.34 |
+
+    | 2023-03-18 15:43:20 | 25 | pateli | buy | | | 17.00 | 17.01 | | 2023-03-18 15:43:20
+    | Filled | |
+
+    | 2023-03-18 16:05:00 | 25 | pateli | buy | | | 17.00 | 16.00 | | 2023-03-18 16:05:00
+    | Filled | |
+
+    | 2023-03-18 16:25:40 | 25 | pateli | exchange | buy | 100.00 | 17.05 | | 17.25
+    | | |
+
+    | 2023-03-18 17:10:10 | 25 | pateli | wait | | | 17.00 | 17.12 | 17.47 | 2023-03-18
+    17:10:10 | 1.8 | tp 17.37 |
+
+    | 2023-03-18 17:48:09 | 25 | pateli | exchange | sell | 100.00 | 100.00 | | |
+    | | -1.00 |
+
+
+    | Ticket | | | Type | Volume | Price | S/L | T/P | Gained | Comment |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | Sale: 100 051.00 Capital: 100 051.02 Margins Free: 542.00 Margins Loss: 96.00
+    Margins Margin: 106.78% | | | | 0.00 |'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: '# .3. Performance Charts
+
+
+    During the backtest or after the end we can follow the evolution of our capital
+    in the Graph tab that appears in the Strategy Tester.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_151_0.png)
+
+
+    After, at the end of the backtest, a new tab called Backtest appears. This tab
+    provides a summary of the operational statistics of our strategy. In we can see
+    the Profit of the operation (ratio between gross profit and gross loss), recovery
+    factor, drawdown or retraction, total trading, number of short positions and bought
+    gains and losses, sharp index among others.
+
+
+    | Qualidade do histórico | 91% | | 1 |
+
+    |---|---|---|---||
+
+    | Bares | 8733 | Ticker | 173527 | Outros | |
+
+    | Depósito Inicial | 100.000,00 | Rebaixamento Absoluto do Saldo | Máximo Absoluto
+    de Capital Líqua... | 100.00 (0%)
+
+    | Lucro Líquido Total | 520,00 | Rebaixamento Máximo do Saldo | 181.18 (0.1%)
+    | Rebaixamento Máximo de Capital Líquido | 100.00 (0%)
+
+    | Lucro Bruto | -625,00 | Rebaixamento Relativo do Saldo | 0.18 (18.0%) | Rebaixamento
+    Relativo de Capital Líquido | 0.25 (25%)
+
+    | Perda Bruta | | 0,83 | Exposto Esperado (Payback) | -0.66 | Nível de Margem
+    | 3649.16
+
+    | Fator de Lucro | | 0,53 | Index de Sharpe | -0,07 | Z-Fonte | | 127 (79.50%)
+
+    | Fator de Recuperação | 1.0000 (0%) | | | -0,00 | Resultado OnTest | |
+
+    | GPHR | 1.0000 (0%) | | | 36.66 | |
+
+    | Total de Negociações | 160 | Posições Vendidas (7% de ganho) | 0 (00%) | Posições
+    Compradas (7% de perda) | 140 (26%)
+
+    | Oferta Total | 320 | Lucros com Sucesso (7% de total) | 33 (20.6%) | Negociações
+    com Perda (de total) | 127 (79.38%)
+
+    | | Máximo | | 20,00 | perda na Negociação | | -5,00
+
+    | | Média | | 15,78 | perda na negociação | | -4,02
+
+    | | Máximo | | 3,08 (00) | maior lucro consecutivo (5) | | 15 (73,00)
+
+    | | Máxima | | 41,00 (3) | perda consecutiva (contagem) | | -73,00 (15)
+
+    | | Média | | | lucros consecutivos | | perdas consecutivas | | 4'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: 'We can visualize bar charts informing about the schedules, the days of the
+    week and the month where we have more entries in traders.
+
+
+    You can track the frequency of profits and losses: by EA operating hours, days
+    of the week, and months of the year. We also have information regarding the maximum
+    time set and the minimum duration of a position.
+
+
+    However, as we can see, MetaTrader 5 gives us a very thorough review of our backtest.
+
+
+    ![](img/6d863e70ea1a0ecdc703a17721d7e78b_152_0.png)
+
+
+    ---=* *---==
+
+
+    Congratulations on getting here!! Thank you for your confidence in reading this
+    e-book. Sorry for the problems with the translation. Feel free to submit suggestions,
+    criticisms and errors in the texts and subjects covered in the e-book.
+
+
+    Now that you''ve been able to create your first EA and make the backtests, it
+    means you have a new journey of study towards more sophisticated strategies. It
+    is worth remembering that the EA taught in this book is purely demonstrative and
+    offers no means to use as a suggestion of real investments.
+
+
+    If you want to know other books, with similar didactics, it is worth checking
+    the following:
+
+
+    How to create indicators and scripts in MQL5 (step by step).
+
+
+    How to Properly Optimize Investment Robots in MetaTrader 5'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: "If you are interested in any of these books please contact me by e-mail:rafaelfvcs@gmail.com\n\
+    \nThis material was written thinking of your dear reader. It is good to remember\
+    \ that we are all motivated by criticism or praise. If this book was helpful to\
+    \ you in any way, whether or not you liked the didactics, please leave a comment\
+    \ on the Amazon store. This kind of attitude is of extreme importance so that\
+    \ future editions are even better.\n\nThank you very much!\n\n+   [1] Obs: The\
+    \ information contained in this e-book does not represent or offer any suggestion\
+    \ and / or expectation of investment. \n\n+   [2] https://en.wikipedia.org/wiki/Bill_Williams_(trader)\n\
+    \n+   [3] More information send an email to: rafaelfvcs@gmail.com .\n\n+   [4]\
+    \ By the same author (rafaelfvcs@gmail.com)"
+  merge: -1
+  pgno: 153
