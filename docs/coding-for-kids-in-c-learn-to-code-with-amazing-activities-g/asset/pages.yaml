@@ -1,0 +1,2428 @@
+- img_proc: true
+  md: '# LEARN TO CODE WITH AMAZING ACTIVITIES,
+
+    GAMES AND PUZZLES IN C++
+
+
+    # CODING
+
+    FOR
+
+    KIDS
+
+    IN C++
+
+
+    # BOB MATHER'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Coding for Kids in C++'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   - Table of Contents
+
+    - Disclaimer
+
+    - Free Gift
+
+    - Introduction
+
+    - Why Learn Programming
+
+    - Setting Up the Workspace
+
+    - Hello World in C++
+
+    - Variables
+
+    - Mathematics Operations
+
+    - Functions
+
+    - Conditional Statement
+
+    - Loops
+
+    - Arrays
+
+    - Structures
+
+    - Final Project'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Disclaimer
+
+
+    Copyright © 2021
+
+
+    All Rights Reserved
+
+
+    No part of this eBook can be transmitted or reproduced in any form, including
+    print, electronic, photocopying, scanning, mechanical, or recording, without prior
+    written permission from the author.
+
+
+    While the author has taken the utmost effort to ensure the accuracy of the written
+    content, all readers are advised to follow the information mentioned herein at
+    their own risk. The author cannot be held responsible'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: for any personal or commercial damage caused by the information. All readers
+    are encouraged to seek professional advice when needed.
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Free Gift
+
+
+    We do want you to succeed in coding. To ensure your success, we are giving you
+    a free list of projects that you can work on once you are completed with this
+    book.
+
+    https://coding.gr8.com/
+
+
+    ![](img/1c0edee3ee8f0c0e33e80da6eb597604_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # Introduction
+
+
+    #  What is Programming
+
+
+    Programming is the art of writing a computer program. A computer program is a
+    set of instructions that a machine can comprehend to perform a certain task. Computer
+    programming is how humans communicate with machines.
+
+
+    Computers are pretty good at following the instructions we give them.
+
+
+    A program is just simply a list of steps that should be followed to achieve a
+    goal. It is just like a recipe, to prepare your favorite dish you just need to
+    follow the instructions on the recipe.
+
+
+    The only issue is that computers do not speak English as we do, they speak their
+    own language. This computer language is known as machine language.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'There is a part on the computer called the interpreter, which interprets our
+    instructions to machine language so that the computer is able to understand the
+    instructions we are giving it. This interpreter is also known as a **compiler.**
+
+
+    A compiler is the interface between the programming language and the machine.
+    A programming language is a very simple language to learn and there are numerous
+    programming languages out there. We are only going to learn C++ in this book.
+
+
+    As you know, spoken languages usually have grammar. Grammar is a way of arranging
+    words in a language to make sense to others who speak that language. Programming
+    languages have grammar as well, which we call **syntax.**
+
+
+    In order for the compiler to understand you, you have to use the proper syntax
+    or else it will cause an error. We will at first spend a lot of time learning
+    the syntax of our programming language.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'In summary, we write a program using a programming language. The programming
+    languages communicates with the compiler. The compiler translates the language
+    to machine language and then runs the program. The computer reads our instructions
+    and does what we have told it to do.
+
+
+    Your first programming language is usually the toughest to learn but after learning
+    it, it becomes easier to learn other languages.
+
+
+    # Why C++
+
+
+    You can do a lot after learning C++. You can make games, use the Arduino board
+    to make cool projects or even program planes if you are allowed to do that. The
+    only limit you have is your imagination.
+
+
+    The main benefit of C++ is that it is very portable between operating systems
+    and compilers. This means the same code can be used in Windows, Linux, Opera etc.
+
+
+    C++ has a large community support with'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'developer forums, online tutorials, Facebook community groups, which is very
+    significant for beginner programmers. It''s much easier to learn as you can ask
+    other people in the community if you get stuck.
+
+
+    C++ is also very scalable and flexible in multiple environments. This means that
+    it can be used by beginner programmers and advanced professionals for different
+    purposes. It can also be used to code games, applications, software and apps.
+
+
+    C++ is wildly used in graphics and is now used in emerging technologies like image
+    processing, pattern recognition and in embedded systems like location tracing.
+
+
+    C++ is more efficient at using computer memory, so it saves space on your hard
+    drive.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# # Why Learn Programming
+
+
+    Programming at its core is not really about writing code but thinking of ways
+    to solve problems. You get to learn and appreciate that there are different ways
+    to tackle a problem and sometimes one way is better than the other. You also learn
+    that breaking a big problem into small parts makes your work easier.
+
+
+    It is also about learning how to collaborate with others. People usually assume
+    that programmers work by themselves to solve problems, but programmers act as
+    a team most of the time. We like sharing what we have built with others, and this
+    enables us to learn from one another there by advancing each other''s skills.
+
+
+    In addition, programming teaches you to never give up easily, because your programs'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'will never work out the first time you write them. You will get errors from
+    time to time but as a programmer you don''t let them bring you down. You pick
+    yourself up when you fall and to try again.
+
+
+    Finally, you feel comfortable in this digital world where computers run almost
+    everything. To you it will not be be magic as you know how to use computers to
+    do your tasks.
+
+
+    At the end of the day even if you don''t become a programmer, you will be able
+    to know how computers can help you out in your work and gain all these skills.
+
+
+    # Setting Up the Workspace
+
+
+    In order to write code, you need at least a text editor and a compiler.
+
+
+    A text editor is just a program that enables you to write and save code as a file.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Files usually have extensions to their file names to indicate the kind of file
+    it is. When writing
+
+    C++ files, the files will have the extension .cpp , example main.cpp
+
+
+    We are going to use an application known as Code::Blocks to write, compile and
+    run our programs. Code::Blocks is what is known as an IDE , integrated development
+    environment.
+
+
+    An IDE has everything you need to write, compile and run a program in one place.
+
+
+    Below is a picture of the layout of the Code::Blocks IDE'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "```\n#include <iostream>\n\nusing namespace std;\n\nint main()\n{\n    cout\
+    \ << \"Hello world!\" << endl;\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Downloading and Installing Code::Blocks
+
+
+    You will need:
+
+
+    +   1. A laptop/ Desktop
+
+    2. Internet Connection
+
+    3. Web browser such as Chrome, Windows Edge or Firefox
+
+
+    Go to this website and download the Code::Blocks application:
+
+    https://www.fosshub.com/Code-Blocks.html?dwl=codeblocks-20.03mingw-setup.exe
+
+
+    Just copy and paste the link to the browser
+
+
+    Note: please ensure that you download the file named Code Blocks Windows 64 bit
+    (including compiler).
+
+
+    This version includes the compiler which we need
+
+
+    After that just install the application and open it when done:'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'You can head over to the Code::Blocks website at the following link:
+
+    https://www.codeblocks.org/ to learn more about it. It also includes user manual
+    and links to download the IDE for other operating systems
+
+
+    # Hello World in C++
+
+
+    The first program that all programmers write when learning a new programming language
+    is known as Hello World.
+
+
+    It is just basically writing a program that displays the words ''Hello World''
+    to the screen. Since we are programmers now, we say that we are printing the words
+    ''Hello World'' to the screen.
+
+
+    I will be giving out code examples, and you will have to type the examples in
+    the'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'Code::Blocks and click on the build and run button to compile and execute the
+    code in order to see the results.
+
+
+    # Creating A Project in Code::Blocks
+
+
+    In order to run code in Code::Blocks we have to first create a project. So first
+    of all we need to open up Code::Blocks.
+
+
+    To create a project, click on **File > New > Project**
+
+
+    In the pop-up window select **Console application** and click on the button **Go**'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '![](img/1c0edee3ee8f0c0e33e80da6eb597604_17_0.png)
+
+
+    Ensure you select C++ in this window
+
+    Click Next on the information window'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '![](img/1c0edee3ee8f0c0e33e80da6eb597604_18_0.png)
+
+
+    Give the Project a title, for now it is **Hello World.** Select which folder it
+    will be saved at.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/1c0edee3ee8f0c0e33e80da6eb597604_19_0.png)
+
+
+    Ensure that you have **GNU GCC Compiler** selected as the compiler and click on
+    **Finish.**
+
+
+    Now on the left-hand side, under Hello World, click on the + icon next to the
+    **Sources folder** to reveal the **main.cpp** file. Double click on it to display
+    the file on the editor window on the right-hand side.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "![](img/1c0edee3ee8f0c0e33e80da6eb597604_20_0.png)\n\nThe code in the editor\
+    \ looks like the example below\n\n# Code\n\n```\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main()\n{\n    cout << \"Hello World\" << endl;\n    return 0;\n\
+    }\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'I am pretty sure that the above code looks overwhelming when you first see
+    it. But we are going to understand what it all means by the end of a few chapters.
+    For now hang in there as I try to explain the main part of this program.
+
+    The trick with programming is to persevere as things get easier the more you learn.
+
+
+    Let''s first run the code.
+
+
+    # Running the code
+
+
+    To run the code, we have to compile it first.
+
+
+    In Code::Blocks, we use the term *build* instead of compile. This is because a
+    project usually consists of multiple C++ files and we call the process of compiling
+    all of them building.
+
+
+    There are three buttons on top of the editor that enable us to build and run our
+    project.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "![](img/1c0edee3ee8f0c0e33e80da6eb597604_22_0.png)\n\nThe yellow gear button\
+    \ enables you to build the project, the green play button enables you to run the\
+    \ build project, while the third, which is a combination of the gear and play\
+    \ button, enables you to build and run the project. Click on the combination of\
+    \ the two to execute the project.\n\nA pop-up window will appear with the words\
+    \ \x17Hello World\x17 as shown below."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '```
+
+    $ C:\Users\asania\Documents\cpp_projects\s\bin\Debug\s.exe
+
+    Hello world!
+
+    Process returned 0 (0x0)  execution time : 0.014 s
+
+    Press any key to continue.
+
+    ```
+
+
+    This is what is known as the console or terminal. The console shows the output
+    in C++. Just close the window to get rid of it.
+
+
+    NOTE: make sure that you save you file before building and running it, this can
+    be done by pressing Control-s (Ctrl+s) after every change
+
+
+    # Explanation of the code
+
+
+    The main line in this program, is the line:
+
+
+    ```
+
+    cout << "Hello World" << endl;
+
+    ```'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'First of all, notice that the line ends with a semicolon (;), this is very
+    important as it indicates the end of this instruction.
+
+
+    **cout** is just the programmer way of calling screen, you can think of it as
+    the short form of console output.
+
+
+    The symbols << just mean display the things after me on the screen
+
+
+    ''Hello World'' is the text that we want to display on the screen. Notice that
+    it is surrounded by double quotes. The double quotes are part of the syntax and
+    are very important.
+
+
+    We call text surrounded by double quotes a **string.**
+
+
+    The next << symbol over means, add what''s after me to the text ''Hello world''.
+    In programming we call this **concatenation** is adding two strings together
+
+
+    **endl**, means add a newline, a newline is just like pressing enter while typing
+    something on the computer, it takes you to a next line'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'below the current text
+
+
+    As you can see when writing programs, we do not just write it in plain English,
+    we follow some specific rules known as the syntax of the language.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Exercise
+
+
+    +   1. Change the text so that the program prints out your name, build and run
+    the code.
+
+
+    +   2. Write the line of code cout << "Hello World";; two times and see what is
+    printed on the console. How is that different from writing cout << ''Hello World''
+    << endl; two times
+
+
+    +   3. Create a new project and give it any name you like and store it in a different
+    folder location.
+
+
+    +   a. For this new project click the run icon and notice what happens
+
+    b. For this new project click the build gear icon then the run icon individually
+    and note what happens.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# # Variables
+
+
+    In this chapter I will first take you through the main parts of the computer that
+    are important in programming.
+
+
+    The main part of the computer is known as the processor. This is what actually
+    reads your code and does what you instructed.
+
+
+    In addition, there is a storage area known as **RAM**, which stands for **Random
+    Access Memory**. This is where everything you need is stored, even your program
+    is stored here.
+
+
+    You can think of it as a bunch of shelves with boxes where you can store things.
+    In addition, these boxes are of different sizes and type. Hence you can determine
+    what you can store in them.
+
+
+    In addition, we can label these boxes so that we can refer to the name later easily.
+
+
+    # # Variable Assignment'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'A variable is a name given to a value that is stored in memory.
+
+
+    A variable name is also known as an **identifier.**
+
+
+    You can think of a variable as a box where we place our value in, and a variable
+    name as a label we place on the box.
+
+
+    There is also a thing called data type assigned to each box. A data type is a
+    type of information that is stored in a box. That means that the particular variable
+    can store only a particular type of data. Examples of data types include strings,
+    numbers, booleans etc.
+
+
+    Below is an example of a variable assignment. We write it in Code::Blocks in a
+    new project called variables, save the file by pressing **Control-S** then build
+    and run.
+
+
+    # Example code'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'Above we have declared a variable of the name **radius** of data type int,
+    meaning integer and initialized it to the value 20.
+
+
+    **int** is what we call the **data type**. Using the box analogy a data type determines
+    the type of the box to store our value. The value which we store is 20. The variable
+    name is called **radius**, which means the label on the box is radius.
+
+
+    The value of the variable can change throughout the program as long as it is of
+    the same data type. In the above program, we change the value to 40.
+
+
+    This is acceptable as 40 is an int (integer) data type.
+
+
+    # Data types
+
+
+    Below is a list of data types available and the kind and range of values they
+    represent. Each data type has an example associated with it.
+
+
+    int'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'The data type **int** stands for integer. An integer is a whole number, meaning
+    that it cannot have a decimal to it. Examples of integers are 1,0,45,768,23343
+    etc.
+
+
+    Example: int radius = 2;'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# long\n\nThe data type **long** is also a whole number, but the numbers used\
+    \ can be a lot bigger than int. **long** variables can hold up to 20 digits, while\
+    \ in variables can only hold 10 digits. For example, below, **x**, **y** and **result**\
+    \ are long variables that can hold numbers up to 20 digits.\n\n```\n#include <iostream>\n\
+    using namespace std;\nint main() {\n    long x = 9988891919;\n    long y = 3465829;\n\
+    \    long result = x * y;\n    cout << result;\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '```
+
+    C:\Users\asarai\Documents\cpp_projects\Variables\.bin\Debug\Variables.exe
+
+    1242897643
+
+    Process returned 0 (0x0) execution time : 0.028 s
+
+    Press any key to continue.
+
+    ```'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# float\n\nRepresent numbers with decimals places. See example below. pi is\
+    \ a float variable with a value of 3.142 and areaaoofcircle is another float variable.\n\
+    \n```\n#include<iostream>\nusing namespace std;\n\nint main() {\n    float pi\
+    \ = 3.142;\n    int radius = 3;\n    float areaOfCircle = pi * radius * radius;\n\
+    \    cout << areaOfCircle;\n    return 0;\n}\n```\n\n![](img/1c0edee3ee8f0c0e33e80da6eb597604_33_0.png)"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# double\n\nA double variable can hold numbers that contain decimals places\
+    \ with higher precision and can hold more decimal places (up to 15 decimal places).\n\
+    In below example, acceleration, mass and force are three double variables that\
+    \ can each hold numbers that contain up to 15 decimal places.\n\n```\n#include<iostream>\n\
+    using namespace std;\n\nint main(){\n    double acceleration = 9.98;\n    double\
+    \ mass = 30.03;\n    double force = acceleration * mass;\n    cout << force;\n\
+    \    return 0;\n\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    C:\Users\asaria\Documents\cpp_projects\Variables\bin\Debug\Variables.exe
+
+    299.699
+
+    Process returned 0 (0x0)   execution time : 0.014 s
+
+    Press any key to continue.
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# bool\n\nIt stands for boolean.\nIt can only hold two values, the value true\
+    \ or false.\nThe boolean variable is used for conditionals.\nIn the example below,\
+    \ two boolean variables isHungry and isSleepy are declared.\nIf isHungry is true,\
+    \ the program prints “I am hungry” on the screen.\nIf isSleepy is true, the program\
+    \ prints “I am sleepy” on the screen.\n\n```\n#include <iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    bool isHungry = true;\n    bool isSleepy = false;\n\
+    \    if (isHungry) {\n        cout << \"I am hungry\" << endl;\n    }\n    if\
+    \ (isSleepy) {\n        cout << \"I am sleepy\" << endl;\n    }\n\n    isSleepy\
+    \ = true;\n    if (isSleepy) {\n        cout << \"I am going to bed\" << endl;\n\
+    \    }\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '```
+
+    C:\Users\asaria\Documents\cpp_projects\Variables\bin\Debug\Variables.exe
+
+    i am hungry
+
+    i am going to bed
+
+    Process returned 0 <0x0> execution time : 0.015 s
+
+    Press any key to continue.
+
+    ```'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# char
+
+
+    char stands for character, char is a variable that can hold only one value. The
+    value is a string of length 1. In below example, excellent is a char variable
+    that holds the grade of a student in Mathematics.
+
+
+    ![](img/1c0edee3ee8f0c0e33e80da6eb597604_38_0.png)'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# string\n\nA string is a variable used to store text. It can hold a string\
+    \ of any length. In the below example, **yourName** is a variable that holds the\
+    \ value \"Catherine\".\n\n```\n#include <iostream>\nusing namespace std;\n\nint\
+    \ main() {\n    string yourName = \"Catherine\";\n    cout << \"Good morning \"\
+    \ << yourName << endl;\n    return 0;\n}\n```\n\n![](img/1c0edee3ee8f0c0e33e80da6eb597604_39_0.png)\n\
+    \n# Variable names"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'A C++ variable name must start with either a letter or an underscore and all
+    the rest of the characters must be letters, digits or an underscore.
+
+
+    Examples of valid variable names are:
+
+
+    +   x
+
+    x1
+
+    x_1_abc
+
+    RATE
+
+    bigBonus_
+
+
+    Examples of invalid variable names:
+
+
+    +   12
+
+    3x
+
+    %change data
+
+    -1 PROG.CPP
+
+
+    The first three, 12 3x %change, are not allowed because they do not start with
+    a letter or an underscore.
+
+
+    C++ is also case sensitive, meaning that the following are three distinct variable
+    names:
+
+
+    +   Rate
+
+    RATE'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Rate
+
+
+    # Camel Case
+
+
+    Camel case is a programming practice where multiple words are written without
+    spaces and the first letter of each word is capitalized (except for the first
+    word)
+
+
+    The word end of car would become: endOfCar
+
+    Camel case is a commonly used programming practice to name variables.
+
+
+    # Keywords
+
+
+    Keywords are names that cannot be used as variable names as they are reserved
+    for programming language syntax.
+
+
+    If you use them as variable names the compiler will throw errors, or you might
+    end up changing the basic functionality of some basic function.
+
+
+    Examples of keywords include the basic data types, such as int, bool and the rest,
+    and'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'names such as struct and class.
+
+
+    # Comments
+
+
+    Sometimes we want to explain our code so that others can understand what we did.
+    In the future that information will help us remember what we did as we go through
+    the code.
+
+
+    In programming we achieve this by writing comments within our code. There are
+    two types of comments, single line comments and multiline comments.
+
+
+    Single line comments begin with two forward slashes (//) while multiline comments
+    sit in between the following symbols: /**
+
+
+    Examples of comments:
+
+
+    ```
+
+    // Test Code
+
+
+    /* Line 1 of Comments
+
+    Line 2 of Comments */
+
+    ```
+
+
+    # Declaring variables'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: 'All variables must be declared or defined before they are used.
+
+
+    To declare/define a variable you just need to specify a data type and a variable
+    name followed by a semicolon:
+
+
+    When you declare a variable without giving it a value, we say that the variable
+    is *uninitialized*.
+
+
+    Uninitialized variable will have a random value in it.
+
+
+    Giving an uninitialized variable a value is known as *initializing* it.
+
+
+    You can also declare and initialize a variable at the same time.
+
+
+    In this example we are going to make use of comments and declare some variables
+    whose value we will print to the console
+
+
+    Create a new project in Code::Blocks, write the following code, build and run
+    it.
+
+
+    # Example code'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\n#include <iostream>\nusing namespace std;\n\nint main() {\n    /*\n  \
+    \  This is a multiline comment\n    As can be seen , it spans\n    multiple lines\n\
+    \    */\n    int length; // declaring the variable length\n    int width; // declaring\
+    \ the variable width\n\n    length = 20; // initializing the variable length\n\
+    \    width = 20;// initializing the variable width\n\n    int depth = 40; // declaring\
+    \ and initializing\n\n    cout << length << endl;\n    cout << width << endl;\n\
+    \    cout << depth << endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Explanation
+
+
+    In the above program, in the main block of code, we first begin by writing a multiline
+    comment by writing in between /***/.
+
+    We then declare two variables of type int which are length and width without initializing
+    them, which we do later.
+
+
+    We then declare and initialize the variable depth of type int to 40. Finally,
+    we print the values of length, width and depth to the console each on its own
+    separate line.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# Exercise
+
+
+    +   1. Write a program that contains statements that output the values of five
+    or six variables that have been defined, but not initialized. Compile and run
+    the program. What is the output? Explain.
+
+
+    +   2. Create a string variable with your name and print it to the console.
+
+
+    +   3. Create a char variable and print it to the console
+
+
+    +   4. Create a bool variable and print it to the console
+
+
+    +   5. Create a float variable and print it to the console
+
+
+    +   6. Create a long variable named, time of day, in camel case and print it to
+    the console'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Mathematics Operations
+
+
+    In this section we will make a small calculator that only performs multiplication
+    of two numbers. The program will ask us for two numbers to multiply and print
+    the result of multiplication.
+
+
+    First, we will go through how to perform mathematic operations in C++
+
+
+    # Addition
+
+
+    Addition is done using the + operator
+
+
+    # Addition Example code'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "```\n#include<iostream>\nusing namespace std;\n\nint main() {\n    int x =\
+    \ 1;\n    int y = 2;\n    int sum = x + y;\n    cout << sum;\n    return 0;\n\
+    }\n```\n\nThe output of the code will be 3, which is the sum of x and y.\n\n#\
+    \ Subtraction\n\nSubtraction is done using the - operator\n\n# Subtraction Example\
+    \ code"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "```\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int x =\
+    \ 1;\n    int y = 2;\n    int difference = x - y;\n    cout << difference;\n \
+    \   return 0;\n}\n```\n\nThe output of the code will be -1"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# # Multiplication\n\nMultiplication is done using the * operator\n\n# ## Multiplication\
+    \ Example code\n\n```\n#include<iostream>\nusing namespace std;\n\nint main()\
+    \ {\n    int x = 3;\n    int y = 2;\n    int multiplication = x * y;\n    cout\
+    \ << multiplication;\n    return 0;\n}\n```\n\nThe output of the code will be\
+    \ **6**"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# # Division\n\nDivision is done using the / operator, this returns the quotient\
+    \ of the division\n\n# ## Division Example code\n\n```\ncpp\n#include<iostream>\n\
+    using namespace std;\nint main() {\n    int x = 3;\n    int y = 2;\n    int quotient\
+    \ = x / y;\n    cout << quotient;\n    return 0;\n}\n```\n\nThe output of above\
+    \ code will be 1.5"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Remainder\n\nIn order to get the remainder of a division use the modulo operator\
+    \ which is represented by the symbol %.\n\n```\n#include<iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    int x = 3;\n    int y = 2;\n    int remainder = x\
+    \ % y;\n    cout << remainder;\n    return 0;\n}\n```\n\nThe output of the code\
+    \ will be **1**, which is the reminder when x is divided by y."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Getting Input from users
+
+
+    So far, we have just been printing things to the console without any input from
+    the user. In this section we are going to make our program more exciting by asking
+    for input from users.
+
+
+    # cin
+
+
+    **cin** is use to accept input from the keyboard, it can be thought of as standing
+    for console input'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "# Example code\n\n```\n#include <iostream>\nusing namespace std;\n\nint main()\
+    \ {\n    int num;\n\n    cout << \"Enter a number: \";\n\n    // take integer\
+    \ input\n    cin >> num;\n\n    cout << \"You entered: \" << num;\n\n    return\
+    \ 0;\n}\n```\n\n# Explanation\n\nHere we first create a variable called *num*\
+    \ of type int which we will use to store the value we get from the keyboard input.\n\
+    \nWe ask the user for some input, and just print it back to the console: 'You\
+    \ entered: 1', if you type in 1 in the console"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# A simple calculator\n\nWe will have to ask the user for two numbers\nto multiply,\
+    \ and show the result of\nmultiplication to the user.\n\n# Example Code\n\n```\n\
+    #include <iostream>\nusing namespace std;\n\nint main() {\n    int num1;\n   \
+    \ int num2;\n\n    // prompt to enter num1\n    cout << \"Enter a num1: \";\n\
+    \    cin >> num1;\n\n    // prompt to enter num2\n    cout << \"Enter a num2:\
+    \ \";\n    cin >> num2;\n\n    int multiplication = num1 * num2;\n    cout <<\
+    \ \"Result of multiplication: \" << multiplication;\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Explanation
+
+
+    We first declare two int type variables that will store the use input that is
+    num1 and num2
+
+
+    We prompt the user for num1, then store it in the corresponding variable using
+    cin. We do the sameat to num2
+
+
+    We then perform multiplication on the two and display the result to the user
+
+
+    # Exercise
+
+
+    +   1. Convert each of the following mathematical formulas to a C++ expression,
+    each variable getting its value from the user input
+
+
+    +   1. 3x
+
+    2. 3x + y
+
+    3. (x + y)/7
+
+    4. (3x + y) / (z + 2)'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '+   2. Write a program that takes in school marks in 6 subjects using 6 input
+    variables.
+
+    Calculate total marks and average marks for the subjects
+
+    3. Write a program that takes in a integer from the user and determines whether
+    it is an even number or an odd number. Hint: Use modulo'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# # Functions
+
+
+    A function is a group of lines of code that perform a given task. Each function
+    has been assigned a name and will be referenced by that name in the program.
+
+
+    In C++ functions are expected to return a value and the data type of the value
+    to be returned is usually indicated when defining a function.
+
+
+    In this section we will write a function that calculates the area of a rectangle
+
+
+    # # Example of a function
+
+
+    The area of a rectangle is equal to its length multiplied by width, so below is
+    a function to calculate it
+
+
+    Write this before the main function as so:'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\n#include <iostream>\nusing namespace std;\n\n//defining the function named\
+    \ areaOfRectangle\nint areaOfRectangle(int length , int width) {\n    int area\
+    \ = length * width;\n    return area;\n}\n\nint main() {\n    return 0;\n}\n```\n\
+    \n# Explanation\n\n**int** is the data type of the function to give us back an\
+    \ integer when we run it. This is indicated by the line **return area;** just\
+    \ above the closing curly brace in line 7. Notice the variable **area** is declared\
+    \ as an integer type since that is the variable that the function returns.\n\n\
+    **areaOfRectangle** is the name we give to our function. Notice that it is written\
+    \ in camel case.\n\nWhat follows the name of a function is a pair of parentheses,\
+    \ in the parenthesis we declare"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'two variables, and these variables are known as **parameters**. In the example
+    above, **length** and **width** are the parameters.
+
+
+    They will hold values we pass to the function when we run it and they can be accessed
+    with the function’s block of code.
+
+
+    We then have our code in curly braces so as to mark it as the lines of code associated
+    with that function name.
+
+
+    Finally, we have the **return** statement.
+
+
+    # Running a function
+
+
+    Look at the code below'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\n#include <iostream>\n\nusing namespace std;\n\nint areaOfRectangle(int\
+    \ length , int width){\n    int area = length * width;\n    return area;\n}\n\n\
+    int main() {\n    // calling the areaOfRectangle function\n    // length = 4 and\
+    \ width = 5\n\n    int area = areaOfRectangle(4,5);\n\n    cout << \"Area is:\
+    \ \" << area << endl;\n    return 0;\n}\n```\n\n```\nC:\\Users\\alex\\Documents\\\
+    cpp_projects\\Functions\\Debug\\Functions.exe\nArea is: 20\nProcess returned 0\
+    \ (0x0) execution time : 0.061 s\nPress any key to continue.\n```\n\n# Explanation"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: 'When we want to run a function, we usually say that we are **calling** that
+    function.
+
+
+    Some functions take in values when there are being called like ours does, we call
+    these values **arguments** of the function.
+
+
+    Notice the syntax used to pass arguments to functions, we first write the function
+    name and in between an opening and closing parenthesis we write the arguments,
+    separated by commas.
+
+
+    So, in our example, we are calling the function **areaOfRectangle** passing in
+    the two arguments, that is, 4 and 5.
+
+
+    We expect the function to return a value, which is the area that has been calculated
+    and the value of the area calculated to be of the the data type integer.
+
+
+    For this reason, we assign the returned value to the variable named *area* of
+    type int.
+
+
+    We then print the result to the screen. In this case, the area of the rectangle
+    is 20 so that is the output shown on the screen.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "# Void Functions\n\nThe functions known as void functions are functions that\
+    \ do not return anything after being called\n\n# Example code\n\n![](img/1c0edee3ee8f0c0e33e80da6eb597604_63_0.png)\n\
+    \n```\n#include <iostream>\nusing namespace std;\n\nvoid showResults(double fDegrees,\
+    \ double cDegrees) {\n    cout << fDegrees << \" degrees Fahrenheit is equivalent\
+    \ to\\n\";\n    cout << cDegrees << \" degrees Celsius.\\n\";\n}\n\nint main()\
+    \ {\n    showResults(30.0, 100.5);\n    return 0;\n}\n```\n\n![](img/1c0edee3ee8f0c0e33e80da6eb597604_63_1.png)"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Explanation
+
+
+    Notice that the specified return type is void and that we do not use the return
+    keyword in the body of the function.
+
+
+    Apart from that there are not any other differences with the way we define other
+    non-void functions.
+
+
+    # Exercise
+
+
+    +   1. Create a function called Descending() that takes four arguments. Each argument
+    is a number of type int. The function returns true if the four numbers are in
+    descending order; otherwise, it returns false. For example, Descending(4, 3, 3,
+    1) and Descending(3, 2, 2, 1) both return true, whereas Descending(2, 1, 3, 2)
+    returns false.
+
+
+    +   2. Create a function called isOdd()'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "takes in one argument of type int and returns a Boolean value. The function\
+    \ returns true if the input is an odd number. It returns false if it is an even\
+    \ number.\n\n+   3. What is the output of the following program?\n\n```\n#include\
+    \ <iostream>\nusing namespace std;\nvoid sayhi();\nvoid hide(int audiencenumber);\n\
+    int main()\n{\n    sayhi();\n    hide(6);\n    cout << \"Extra time:\\n\";\n \
+    \   hide(2);\n    sayhi();\n    cout << \"End of program.\\n\";\n    return 0;\n\
+    }\nvoid sayhi()\n{\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\ncout << \"Hello\\n\";\n}\nvoid hide(int audiencienumber)\n{\n    if (audiencumber\
+    \ < 5)\n        return;\n    cout << \"Bye\\n\";\n}\n```\n\n+   4. Write a function\
+    \ that calculates the perimeter of a circle, that has a parameter called radius\
+    \ of type int and returns type double. Use pi as a double variable of value 3.142."
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '# A Short message from the Author:
+
+
+    Hey, are you enjoying the book? I''d love to
+
+    hear your thoughts!
+
+
+    ![](img/1c0edee3ee8f0c0e33e80da6eb597604_67_0.png)
+
+
+    I would be incredibly thankful if you could
+
+    take just 60 seconds to write a brief review on
+
+    Amazon, even if it''s just a few sentences!
+
+
+    >> Click here to leave a quick review
+
+
+    Thank you for taking the time to share your
+
+    thoughts!'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '# # Conditional Statement
+
+
+    We usually want to do something only when a certain condition is true. For example,
+    if it is sunny outside then we go out and play, else we stay at home.
+
+
+    The statement, it is sunny outside, can only either be true or false.
+
+
+    In programming we have a data type that can only store the value true or false,
+    this data type is known as a **boolean**. In C++ we usually shorten it to **bool**.
+
+
+    In addition, we sometimes want to run lines of code only when a certain condition
+    is true, and we achieve this using **if** statement. Let''s do an example, which
+    will make it easier to understand
+
+
+    # ## Example Code'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "```\n#include <iostream>\nusing namespace std;\n\nint main() {\n    bool sunny\
+    \ = true;\n\n    if (sunny) {\n        cout << \"You can go outside to play\"\
+    \ << endl;\n    } else {\n        cout << \"Don't go outside to play\" << endl;\n\
+    \    }\n    return 0;\n}\n```\n\n![](img/1c0edee3ee8f0c0e33e80da6eb597604_69_0.png)\n\
+    \n# Explanation\n\nIn the above example, we first create a variable called sunny\
+    \ that holds a boolean value since it has the data type bool.\n\nUsing the if\
+    \ statement we check whether it is true that it is sunny, if it is, we print \"\
+    You can go outside to play\" to the screen else we print \"Don't go outside to\
+    \ play\""
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Exercise
+
+
+    Change the variable *sunny* to be *false* and see what will be printed.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# Comparison Operators
+
+
+    Comparison operators compare two values and return either true or false
+
+
+    Examples of comparison operators are:
+
+
+    Less than (<)
+
+
+    It returns true if the value on the left is less than the value on the right.
+    Otherwise, it returns false.
+
+
+    Greater than (>)
+
+
+    It returns true if the value on the left is greater than the value on the right.
+    Otherwise, it returns false.
+
+
+    Less than or equal to (<=)
+
+
+    It returns true if the value on the left is less than or equal to the value on
+    the right. Otherwise, it returns false.
+
+
+    Greater than or equal to (>=)
+
+
+    It returns true if the value on the left is greater than or equal to the value
+    on the right. Otherwise, it returns false.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# Equal to (==)\n\nIt returns true if the value on the left is equal to the\
+    \ value on the right. Otherwise, it returns false.\n\n# Not equal to (!=)\n\n\
+    It returns true if the value on the left is not equal to the value on the right.\
+    \ Otherwise, it returns false.\n\n# Example of use of comparison operators\n\n\
+    Let's say you want to print to the screen the string ‘x is greater than 5’ if\
+    \ x is indeed greater than 5 else you print ‘x is less than or equal to 5’\n\n\
+    ```\n#include<iostream>\nusing namespace std;\n\nint main() {\n    int x = 3;\n\
+    \n    if(x > 5){\n        cout << \"x is greater than 5\" << endl;\n    } else{\n\
+    \        cout << \"x is less than or equal to 5\" << endl;\n    }\n    return\
+    \ 0;\n}\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '```
+
+    C:\Users\asana\Documents\cpp_projects\ConditionalStatements\bin\Conditional Stateme..\nis
+    is less than or equal to 5
+
+    Process returned (0x0)   execution time : 0.021 s
+
+    Press any key to continue.
+
+    ```
+
+
+    # # Building Boolean Expressions
+
+
+    A **Boolean expression** is any expression that has one of two values. It is either
+    true or false. It is basically an expression that compares two values and returns
+    true/false.
+
+
+    Two comparisons can be combined using the “**and” operator, which is **&&** in
+    C++. For example, the following Boolean expression is true provided a is bigger
+    in value than 5 and a is smaller than 10:
+
+
+    **(5 < a) && (a < 10)**
+
+
+    The above operation returns true if a is between 5 and 10 (not including 5,10).'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: 'When two comparisons are connected using a &&, the entire expression is true,
+    provided both comparisons are true; otherwise, the entire expression is false.
+
+
+    You can also combine two comparisons using the “or” operator, which is spelled
+    || in C++. For example, the following is true provided b is less than 2 or b is
+    greater than 9:
+
+
+    # (b < 2) || (b > 9)
+
+
+    The above expression returns true if b is less than 2 or b is greater than 9.
+
+
+    In an expression that uses || operation, the expression is true provided that
+    either of the comparisons is true. If both expressions are false, then the expression
+    is false.
+
+
+    A Boolean expression can be negated using the ! operation. For example,
+
+
+    # !(a > b)
+
+
+    Returns true if “a is not greater than b”.
+
+
+    In most cases, there is no need to use the exclamation (!) operator.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'For example,
+
+    !(a > b) is the same as a <= b'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: '# Truth Tables
+
+
+    The following are known as truth tables. It indicates all the possibilities that
+    a combination of each expression can be and and the resulting boolean value.
+
+
+    AND
+
+
+    | expression1 | expression2 | expression1 && expression2 |
+
+    | --- | --- | --- |
+
+    | true | True | True |
+
+    | true | False | False |
+
+    | false | True | False |
+
+    | false | False | False |
+
+
+    OR
+
+
+    | expression1 | expression2 | expression1 || expression2 |
+
+    | --- | --- | --- |
+
+    | true | True | True |'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '| true | False | True |
+
+    |---|---|---|
+
+    | false | True | True |
+
+    | false | False | False |'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# NOT
+
+
+    | expression | ! expression |
+
+    |---|--|
+
+    | true | False |
+
+    | false | True |'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "# Example of Boolean expressions\n\nLet's say that you only buy food when you\
+    \ are hungry, and you have money. To represent this in code it will be something\
+    \ like this.\n\n# Example\n\n```\n```cpp\n#include<iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    bool isHungry = true;\n    bool hasMoney = true;\n\
+    \n    if (isHungry && hasMoney) {\n        cout << \"I will buy food\" << endl;\n\
+    \    } else {\n        cout << \"I can't but food\" << endl;\n    }\n    return\
+    \ 0;\n}\n```\n```\n\n![](img/1c0edee3ee8f0c0e33e80da6eb597604_79_0.png)"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# Explanation
+
+
+    The string ‘I will buy food’ only gets printed when the variables isHungry and
+    hasMoney are true. Otherwise, the string ‘I can’t buy food’ is printed.
+
+    Change the program to print ‘I will buy food’ if isHungry is true or hasMoney
+    is true.
+
+
+    # Exercise
+
+
+    +   1. Write a program that outputs the word Small if the score is less than 10
+    and Big if the value of the score is bigger than 100.
+
+
+    +   2. Write a program that outputs the word Success provided the variable test
+    is greater than or equal to 50 and the value of the variable codingPrograms is
+    greater than 5. Otherwise, the programs output the word failure. The variables
+    test and codingPrograms are both of type int.'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: +   3. Write a program that outputs the word **Danger** if the variable **temp**
+    is greater than 37, or the value of the variable **press** is greater than 1,
+    or both. Otherwise, the program prints the word **Great**. The variables **temp**
+    and **press** are both of type int.
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Loops
+
+
+    Loops enable us to repeat a set of instructions a fixed number of times. It can
+    also be repeated forever if we wanted to.
+
+
+    There are usually two types of loops, *finite loops and infinite loops.*
+
+
+    Finite loops repeat the set of instructions a countable number of times while
+    infinite loops repeat a set of instructions forever.
+
+
+    # How we specify loops
+
+
+    In C++ there are two ways of declaring loops. One way is to use the **for** keyword
+    and the other is to use the **while** keyword.
+
+
+    # For loops
+
+
+    Let''s say you want to print out your name 10 times to the console, you might
+    think of writing out the instruction ''cout << "My"'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: 'name"<< endl;'' 10 times.
+
+    Using For loops is a good way to prevent repetition of the same statement and
+    shorten the code.'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# # Example
+
+
+    ![](img/1c0edee3ee8f0c0e33e80da6eb597604_84_0.png)
+
+
+    # # Explanation
+
+
+    To use the **for loop** we specify the number of'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'times we want to run the block of code associated with that for loop.
+
+
+    The block of code associated with the for loop is in between the opening and closing
+    curly braces
+
+
+    ```
+
+    {
+
+    }
+
+    ```
+
+
+    In our code the associated block of code has only the line: cout << "My name"
+    << endl;
+
+
+    Inside the opening and closing parenthesis associated with the for keyword we
+    specify three important things separated by two semicolons
+
+
+    The first is what number to begin counting at, for us, we begin counting from
+    1 so we declare the integer variable i holding the value 1.
+
+
+    The second, separated from the first by a semicolon, is the condition that should
+    be true in order for the block of code associated with for loop to be executed.
+    We usually use comparison operators such as >, <, <= >= in this section.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'In our case , **i <= 10**, means only run the block of code if the value of
+    the variable i is less or equal to 10, otherwise stop the loop and proceed with
+    the rest of the program.
+
+
+    Finally, the third part, separated by a semicolon from the second part, increments
+    the count variable, in our case we increment by 1 using the special notation **i++**
+
+
+    In addition, this increment occurs after the block of code runs
+
+
+    # Exercise
+
+
+    +   1. Change the program to loop over our text 100 times
+
+
+    # Example Using Counter Inside Loop
+
+
+    We can use our declared integer inside the associated block of code, for example,
+    we could print the value 1 to 10 with the code below.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "```\n#include<iostream>\nusing namespace std;\n\nint main() {\n    for(int\
+    \ i = 1; i <= 10; i++) {\n        cout << i << endl;\n    }\n    return 0;\n}\n\
+    ```\n\n```\nC:\\Users\\asania\\Documents\\cpp_projects\\Loops\\bin\\Debug\\Loops.exe\n\
+    nProcess returned 0 (0x0) execution time : 0.026 s\nPress any key to continue.\n\
+    ```\n\n# while loops\n\nwhile loops are similar to for loops, with the"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: only difference being that it is only the condition to be met that is in the
+    parenthesis associated with the while keyword.
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "# Example\n\n```\ncpp\n#include<iostream>\nusing namespace std;\n\nint main()\
+    \ {\n    int i = 1;\n\n    while(i <= 10) {\n        cout << \"Hi from the while\
+    \ loop\" << endl;\n        i++;\n    }\n\n    return 0;\n}\n```\n\n# Explanation\n\
+    \nWe first declare where we will start counting from the line: **int i = 1;**\n\
+    \n**while(i <= 10)**, while the value of the variable **i** is less or equal to\
+    \ 10 run the associated block of code.\n\nNotice that just before the closing\
+    \ brace we increment the value of i by 1.\n\nThe while loop then repeats to check\
+    \ whether"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: 'i is less or equal to 10, if it is, it executes the associated block of code.
+    If i is greater than 10, the block of code is not executed, and the program goes
+    to the next instructions
+
+
+    # Infinite loops
+
+
+    Infinite loops occur when the condition that for loop or while loop checks in
+    order to decide whether to run their associated block of code, is always true.
+
+    **So, it basically runs forever.**
+
+
+    # Example
+
+
+    ```
+
+    main.cpp X
+
+    1 #include<iostream>
+
+    2  using namespace std;
+
+    3
+
+    4  int main() {
+
+    5
+
+    6
+
+    7      while (true) {
+
+    8          cout << "Hi from the infinite loop"<< endl;
+
+    9
+
+    10     }
+
+    11
+
+    12     return 0;
+
+    13  }
+
+    14
+
+    ```'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '```
+
+    C:\Users\asaria\Documents\cpp_projects\Loops\Debug\Loops.exe
+
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    Hi from the infinite while loop
+
+    ```'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "# Explanation\n\nThis will run forever as the condition is always true\n\n\
+    # Infinite For Loop\n\nAn infinite for loop is defined as shown below:\n\n```\n\
+    #include<iostream>\nusing namespace std;\n\nint main() {\n    for(;;){\n     \
+    \   cout << \"Hi from the infinite loop\"<< endl;\n    }\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "![](img/1c0edee3ee8f0c0e33e80da6eb597604_93_0.png)\n\n# Explanation\n\nNotice\
+    \ that to declare an infinite for loop, you just need to have two semicolons in\
+    \ the parentheses associated with the for keyword, that is:\n\n```\nfor(;;{\n\
+    \  //this code will run infinitely\n}\n```\n\n# Exercise\n\n+   1. Rewrite the\
+    \ following loops as for loops."
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\nint x = 2;\nwhile(x <= 200)\n{\n    if (x < 10 && x != 1)\n    cout <<\
+    \ ‘YY’\n    x=x+2;\n}\n```\n\n```\nint a = 2;\nwhile(a <==21)\n{\n    cout <<\
+    \ ‘YY’\n    a++;\n}\n```\n\n2. What is the output of the following\n(when embedded\
+    \ in a complete\nprogram)?\n\nfor (int ctr = 2; ctr < 15; ctr++)\ncout << (3 +\
+    \ ctr) << endl;\n\n3. What is the output of the following?\n\n```\nfor (int b\
+    \ = 50; b > 2; b = b - 3)\n{\n```"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: '```
+
+    cout << "Hi ";
+
+    cout << b << endl;
+
+    }
+
+    ```
+
+
+    +   4. Write a program that create prints out your name an infinite number of
+    times using a for loop.
+
+
+    # # Arrays
+
+
+    An array is a collection of values of the same data type.
+
+
+    Each value in the collection has an index associated with it that that can be
+    used to retrieve the value.
+
+
+    Indices in C++ start from 0 not 1, this is known as **zero based indexing**. It
+    is like starting to count from 0 and not 1.
+
+
+    # # Exercise'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: 'How many items do I have, if I gave them labels from 0 to 4?
+
+
+    **Answer: 5**
+
+
+    # Declaring an array
+
+
+    When declaring an array, we begin specifying the data type of the values that
+    the array will hold followed by the variable name of the array then by the number
+    of elements it will hold in square brackets.
+
+
+    For example:
+
+
+    ```
+
+    int size[4];
+
+    size = {1,2,3,4};
+
+    ```
+
+
+    # Explanation
+
+
+    Above we have declared an array with the variable name size which holds 4 values
+    of the data type integer
+
+
+    ```
+
+    int size[4];
+
+    ```
+
+
+    int -> data type of elements held by the'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '```
+
+    array
+
+    size -> name of the array
+
+    [4] -> specification of the number of
+
+    elements held by the array
+
+    ```
+
+
+    The statement, size = {1, 2, 3, 4}, initializes an array, which simply means assigning
+    a value to the array variable.
+
+
+    You can also declare and initialize an array at the same time as shown below:
+
+
+    # Example
+
+
+    ```
+
+    int size[4] = { 1,2,3,4};
+
+    int size[] = { 1,2,3,4};
+
+    ```
+
+
+    If the arguments are less, the rest are initialized to the zero value of the data
+    type.'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# Retrieving values from an array\n\nValues are retrieved from an array by\
+    \ specifying the location of the needed value using an index\n\n# Example\n\n\
+    Let's say we want to retrieve the first element in an array, our code would be:\n\
+    \n```\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int size[4]\
+    \ = { 1,2,3,4 };\n    int firstElement = size[0];\n    cout << firstElement;\n\
+    \    return 0;\n}\n```"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '# Explanation
+
+
+    The line, **int firstElement = size[0];** retrieves the first element in the array.
+
+
+    Notice that since in C++ we start counting from 0, the index of the first element
+    in the array is 0.
+
+
+    The program prints out 1 since the 1st element in size is 1.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "# Exercise\n\nRetrieve the fourth element. (Hint the index is not 4)\n\n# Looping\
+    \ through elements in an array\n\nIf we want to retrieve all the elements in an\
+    \ array, we can use loops to do that. We will use for loop since it is the simplest\
+    \ way to go about it.\n\n# Example\n\n```\n#include<iostream>\nusing namespace\
+    \ std;\n\nint main() {\n    int size[4] = { 1, 2, 3, 4};\n    for(int i = 0; i\
+    \ < 4; i++) {\n        cout << size[i];\n    }\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '![](img/1c0edee3ee8f0c0e33e80da6eb597604_101_0.png)
+
+
+    # # Explanation
+
+
+    Notice that we start our counter from 0 and our condition is that the value of
+    the counter i should be less than 4, which is the size of the array.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# Exercise
+
+
+    This is to be done in one file:
+
+
+    +   1. Write a function that calculates the area of a circle.
+
+    2. Create an array that holds 10 circle radii that you want to know the areas
+    of.
+
+    3. Loop through the array to calculate the areas of the circles and print the
+    result to the screen
+
+    4. Calculate only the area of the circle in the fourth position in the array.
+
+    5. Create an array of the character of your name and print all of the characters
+    to the screen.'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# Structures
+
+
+    A structure is a group of values that enables you to order data in a logical manner,
+    that is, in a manner that makes sense to you.
+
+
+    Let''s say that you want to collect information about your friends’ age, weight
+    and height.
+
+
+    With the current knowledge we have we would do it something like this:
+
+
+    # Example code'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "```\n#include <iostream>\nusing namespace std;\n\nint main() {\n    int kevinAge\
+    \ = 10;\n    int kevinWeight = 30;\n    int kevinHeight = 1;\n\n    int jesiccaAge\
+    \ = 15;\n    int jesiccaWeight = 28;\n    int jesiccaHeight = 1;\n}\n```\n\nStructures\
+    \ make grouping such information easier.\n\nLet's first define a structure.\n\n\
+    # Structure definition"
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "```\n#include<iostream>\nusing namespace std;\n\nstruct PersonInfo{\n    int\
+    \ age;\n    int weight;\n    int height;\n};\n\nint main() {\n    return 0;\n\
+    }\n```\n\n# Explanation\n\nA structure is defined outside any function definition,\
+    \ including the main function.\n\nWe use the keyword struct to define a structure\
+    \ followed by the name we want to give the structure, this name is known as a\
+    \ structure tag\n\nInside the curly braces associated with the structure tag,\
+    \ we declare structure variables which are also known as member names. In the\
+    \ above example, age, weight and height are member names."
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "Notice that there is a semicolon after the closing curly brace.\n\n# Initializing\
+    \ structures\n\n```\n#include <iostream>\nusing namespace std;\nstruct PersonInfo{\n\
+    \    int age;\n    int weight;\n    int height;\n};\n\nint main() {\n    // initializing\
+    \ the structure\n    PersonInfo kevin = {10,30,1};\n    PersonInfo jesicca = {15,28,1};\n\
+    \n    return 0;\n}\n```"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '# Explanation
+
+
+    By creating a structure, we have created a new data type.
+
+
+    As we usually do when we declare any variables, we start with the data type that
+    it will hold.
+
+
+    In curly braces we pass in the arguments to be values for the declared structure
+    variables.
+
+
+    The order of the arguments is important.
+
+
+    You will get an error if there are more initializer values than structure members.
+
+
+    If the values are less, the last ones that aren''t in the list are initialized
+    to zero.'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# Accessing struct member values\n\nTo access a structure's member variables\
+    \ value, you use the dot operator as shown below\n\n# Example code\n\n```\n#include<iostream>\n\
+    using namespace std;\n\nstruct PersonInfo{\n    int age;\n    int weight;\n  \
+    \  int height;\n};\n\nint main(){\n    // initializing the structure\n    PersonInfo\
+    \ kevin = {10,30,1};\n    PersonInfo jesicca = {15,28,1};\n\n    cout << kevin.age\
+    \ << endl;\n    cout << jesicca.age << endl;\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '```
+
+    C:\Users\asaria\Documents\cpp_projects\StructuresAndClasses\bin\Debug\Structure
+
+    10
+
+    15
+
+    Process returned 0 (0x0)  execution time : 0.137 s
+
+    Press any key to continue.
+
+    ```
+
+
+    The output for **kevin.age** and **jessica.age** are 10 and 15 in the output above.
+    Age is the first member of the structure. 10 and 15 are the first numbers in the
+    structure initialization, thus they reference Kevin and Jessica’s age.'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# Exercise
+
+
+    Create a structure called Date, that has the member variables year, month and
+    day. Initialize it with your current date and print all the values to the screen.'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# # Final Project
+
+
+    In the final project, we aim to utlize a lot of the skills we’ve learned throughout
+    the book.
+
+
+    # ## Tasks
+
+
+    Design a student management system. New students are added with information entered
+    including their name and registration number. The user can search the particular
+    student on the basis of registration number. The user can check the entire list
+    of students and delete a particular student in the basis of registration number
+    and exit the program.
+
+
+    The code below performs the task; and all the tasks are explained clearly after
+    the program.'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "# Code\n\n```\n#include<iostream>\nusing namespace std;\n#include <string>\n\
+    string array[];\n// search record function to search the record of the student\
+    \ if it is exist and then print record\nvoid searchRecord(string name[], string\
+    \ regnum[], string reg,int in) {\n    // is found variable to check wether a record\
+    \ is exist or not in the array if exist set it true\n    bool isfound = false;\n\
+    \    // loop till array to check wether a record exist or not\n    for(int index\
+    \ = 0; index < in; index = index + 1) {\n        // check every record in array\
+    \ if match then\n        if (regnum[index] == reg) {\n            // record is\
+    \ found\n            isfound = true;\n            // printing the record\n   \
+    \         cout << \"Student Registration Number \" << \"\\t\\t\" << \" Student\
+    \ Name : \" << name[index] << endl;\n            cout << endl;\n            //\
+    \ terminating loop\n            break;\n        }\n    }\n    // If a particular\
+    \ record is not exist then\n    if (isfound == false) {\n        // display that\
+    \ record is not exist\n        cout << \"Record is not found :\" <<endl;\n   \
+    \     cout << endl;\n    }\n}\n\nint main() {\n    // loop control variable set\
+    \ it true when the user exist from the programme set cont false\n    bool cont\
+    \ = true;\n    // registration number array to store the user registration number\n\
+    \    string registrationNum[100];\n    |\n```"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: "```\n// student name array to store the student registration number\nstring\
+    \ name[100];\n\n// declaring variable to store the user entered option\nint selectedNumber;\n\
+    \n// Index to count the total number of added student\nint index = 0;\n\n// Loop\
+    \ till user exits the programme\nwhile(1) {\n    // printing menu\n    cout <<\
+    \ \"[1] Create New Record \\n\";\n    cout << \"[2] Search A Record \\n[3] View\
+    \ All Record \\n[4] Delete a Record \\n[5] Exit \\n\" << endl;\n\n    // prompt\
+    \ user to enter the number\n    cout << \"Select Number: \";\n    cin >> selectedNumber;\n\
+    \n    // store the user entered in selectedNumber into array\n    if (selectedNumber\
+    \ == 1) {\n        // declare name and regnum variable to store the user entered\
+    \ and regnum\n        string name;\n        string regnum;\n\n        // prompt\
+    \ user to enter name\n        cout << \"Enter your name: \";\n        cin >> name;\n\
+    \n        // store the user entered name into variable\n        // prompt user\
+    \ to enter the registration number\n        cout << \"Enter your Registration\
+    \ Number: \";\n        cin >> regnum;\n\n        // storing the user entered name\
+    \ and regnum into their respective array\n        registrationNum[index] = regnum;\n\
+    \        name[index] = name;\n\n        // increasing index\n        index +=\
+    \ 1;\n        cout << endl;\n    } else if (selectedNumber == 2) {\n        //\
+    \ check if there is at least one record in the array then\n        if (index >\
+    \ 0) {\n            // prompt user to enter registration number\n            string\
+    \ renum;\n            cout << \"Enter Your Registration Number: \";\n        \
+    \    cin >> renum;\n\n            // storing the user entered registration number\
+    \ into remov variable\n            cin >> renum;\n\n            // calling the\
+    \ function which find a record and print it\n            searchRecord(name,registrationNum,renum,index);\n\
+    \        }\n    }\n\n    // if there is no record in the array then\n```"
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: "```\nelse {\n    // simply print there is no record in the system\n    cout\
+    \ << \"There is no Record in the System\" << endl;\n    cout << endl;\n}\n```\n\
+    \n```\n// check if the user entered number 3 then\nelse if (selectedNumber ==\
+    \ 3) {\n// Printing all the records of students\nfor (int i = 0; i < index; i++)\
+    \ {\n        // if there is null in the array which record is deleted\n      \
+    \  if (name[i] == \"null\") {\n            // Just ignore that index\n       \
+    \     continue;\n        }\n\n```\n\n```\nelse {\n    // printing all the record\
+    \ of student\n    cout << \"Student Registration Number : \" << registrationNum[i]\
+    \ << \" \n         << \" Student Name : \" << name[i] << endl;\n}\n```\n\n```\n\
+    // check if the user entered the number 4 then\nelse if (selectedNumber == 4)\
+    \ {\n    // check if there is any record in the array then\n    if (index >= 0)\
+    \ {\n        // declare the variable rename to store the registration number\n\
+    \        string renum;\n        // prompt the user to enter registration number\n\
+    \        cout << \"Enter Your Registration Number : \";\n        cin >> renum;\n\
+    \n```\n\n```\n    // is found variable which check if the record is found or not\
+    \ in array\n    bool found = false;\n    for (int i = 0; i < index; i++) {\n \
+    \       // if the current record is equal to registration num in array\n     \
+    \   if (registrationNum[i] == renum) {\n            // set the value of found\
+    \ to true\n            found = true;\n            // add the null to arrays where\
+    \ value is found\n            name[i] = \"null\";\n            registrationNum[i]\
+    \ = \"null\";\n            // Just print that record deleted successfully\n  \
+    \          cout << \" Record deleted successfully : \" << endl;\n            cout\
+    \ << endl;\n        }\n    }\n\n```\n\n```\n// if the user entered registration\
+    \ number is not found then\n```"
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "```\nif (isfound == false) {\n    // print record id not found\n    cout <<\
+    \ \" There is not found : \" << endl;\n    cout << endl;\n}\n\n// if there is\
+    \ no record in the array then\nelse {\n    // print record is not exits\n    cout\
+    \ << \" There is no record in the system: \" << endl;\n    cout << endl;\n}\n\n\
+    // check if the user entered the number 5 then\nelse if(selectedNumber == 5) {\n\
+    \    // print take care\n    cout << \" Take Care \" << endl;\n}\n\n// set cont\
+    \ to flase so that programme terminate\ncont = false;\n}\nelse {\n    // if the\
+    \ user did not enter any number from 1-5 then print please enter valid number\n\
+    \    cout << \" Invalid entry : \" << endl;\n    cout << endl;\n}\n\nreturn 0;\n\
+    }\n```"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# Output
+
+
+    ```
+
+    [1] Create New Record
+
+    [2] Search A Record
+
+    [3] View All Record
+
+    [4] Delete a Record
+
+    [5] Exit
+
+
+    Select Number : 1
+
+    Enter your name : john
+
+    Enter your Registration Number : 44
+
+
+    [1] Create New Record
+
+    [2] Search A Record
+
+    [3] View All Record
+
+    [4] Delete a Record
+
+    [5] Exit
+
+
+    Select Number : 1
+
+    Enter your name : jimmy
+
+    Enter your Registration Number : 66
+
+
+    [1] Create New Record
+
+    [2] Search A Record
+
+    [3] View All Record
+
+    [4] Delete a Record
+
+    [5] Exit
+
+
+    Select Number : 1
+
+    Enter your name : hussain
+
+    Enter your Registration Number : 12
+
+
+    [1] Create New Record
+
+    [2] Search A Record
+
+    [3] View All Record
+
+    [4] Delete a Record
+
+    [5] Exit
+
+
+    Select Number : 2
+
+    ter your Registration Number : 12
+
+    Student Registration Number : 12
+
+    ```'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: "```\n[1] Create New Record\n[2] Search A Record\n[3] View All Record\n[4] Delete\
+    \ a Record\n[5] Exit\n\nSelect Number : 3\nStudent Registration Number : 44  \
+    \  Student Name : John\nStudent Registration Number : 66    Student Name : Jimmy\n\
+    Student Registration Number : 12    Student Name : Hussain\n\n[1] Create New Record\n\
+    [2] Search A Record\n[3] View All Record\n[4] Delete a Record\n[5] Exit\n\nSelect\
+    \ Number : 4\nEnter Your Registration Number :66\nRecord deleted successfully\
+    \ : \n```\n\n```\n[1] Create New Record\n[2] Search A Record\n[3] View All Record\n\
+    [4] Delete a Record\n[5] Exit\n\nSelect Number : 3\nStudent Registration Number\
+    \ : 44    Student Name : John\nStudent Registration Number : 12    Student Name\
+    \ : hussain\n\n[1] Create New Record\n[2] Search A Record\n[3] View All Record\n\
+    [4] Delete a Record\n[5] Exit\n\nSelect Number : 5\nTake Care\n\nProcess exited\
+    \ after 40.77 seconds with return value 0\nPress any key to continue . . .\n```\n\
+    \n# # Add a record in array\n\nWe have declared two arrays for student names and\
+    \ student registration numbers. The"
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: "two arrays are called registrationNum and nam.\n\nIf the user enters the number\
+    \ ‘1’ then program will ask user to enter student name and registration number.\
+    \ The user then enters the name and registration number. It is stored in their\
+    \ variable called index which counts the number of students which are created.\
+    \ The index is increased by 1 each time a student is added.\n\nThe process of\
+    \ adding the record is shown in the part of the code below.\n\n```\nif ( selectedNumber\
+    \ == 1) {\n    // declare name and regNum variable to store the entered nam and\
+    \ regNum\n    string name;\n    string regNum;\n\n    // prompt user to enter\
+    \ name:\n    cout << \"Enter your name : \";\n\n    // store the user entered\
+    \ name into name variable\n    cin >> name;\n\n    // prompt user to enter the\
+    \ registration number\n    cout << \"Enter your Registration Number : \";\n  \
+    \  cin >> regNum;\n\n    // storing the user entered name and regNum into their\
+    \ respective array\n    registrationNum[index] = regNum;\n    name[index] = name;\n\
+    \n    // incrementing index\n    index = index + 1;\n    cout << endl;\n}\n```"
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: "# Search record from the array\n\nA user can search a particular student using\
+    \ their enrolled registration number by pressing ‘2’ at the start of the program.\
+    \ The program first checks if the student array is empty. If the array is not\
+    \ empty, the user then enters the registration number. The program compares the\
+    \ user-entered registration numbers existing in array. It does this using the\
+    \ function searchRecord().\n\n```\n} // check if user entered 2 then\nelse if\
+    \ (selectedNumber == 2) {\n\n // check if there is at least one record in the\
+    \ array\nif (index >= 0) {\n\n // prompt user to enter registration number\nstring\
+    \ renum;\ncout << \"Enter Your Registration Number: \";\n\n // storing the user\
+    \ entered registration number into renum variable\n >> renum;\n\n // calling the\
+    \ function which fine a record and print it\nsearchRecord(name,registrationNum,renum,index);\n\
+    }\n\n// if there is no record in the array then\n```"
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: 'The function searchRecord() takes in an array of names (name[]) and an array
+    of registration numbers (regnum[]) as arguments. It also takes in two variables
+    for registration number reg and index in.
+
+    reg is the registration number we are using to search for the student record,
+    while in is the number of records.
+
+
+    The function search the array regum[] using a for loop for the registration number
+    reg.
+
+    If reg is found, the function prints out the student registration number and name.
+
+    If reg is not found, the function prints out “Record is not found”'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: "```\n// search record function to search the record of the student if it is\
+    \ exist and then print record\nvoid searchRecord(string name[], string regnum[],\
+    \ string reg, int n) {\n    // is found variable to check wther a record is exist\
+    \ or not in the array if exist set it true\n    bool isfound = false;\n    //\
+    \ loop till array to check wther a record exist or not\n    For(int index=0; index\
+    \ < n; index + 1) {\n        // check the every record in array if match then\n\
+    \        if (regnum[index] == reg) {\n            // record is found\n       \
+    \     isfound = true;\n            // printing the record\n            cout <<\
+    \ \"Student Registration Number : \" << regnum[index] << \"\t\" << \" Student\
+    \ Name : \" << name[index] << endl;\n            // terminating from Loop\n  \
+    \          break;\n        }\n    }\n    // if a particular record is not exist\
+    \ then\n    if (isfound == false) {\n        // display that record is not exist\n\
+    \        cout << \" Record is not found : \" << endl;\n        cout << endl;\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: "# View all the records\n\nTo view all the record of students, the user presses\
+    \ ‘3’ at the start of the program. There is count variable called index which\
+    \ counts the number of students. A loop is used to retrieve each student record\
+    \ and print out each student name and registration number. The loop continues\
+    \ till it reaches the value of index which indicates that we are at the end of\
+    \ the array.\n\n```\n// check if the user entered number 3 then\nelse if (selectedNumber\
+    \ == 3) {\n\n    // Printing all the records of students\n    for (Int i = 0;\
+    \ i < index; i++) {\n        if (name[i] is null in the array which record is\
+    \ deleted\n        if (name[i] == \"null\") {\n            // Just ignore that\
+    \ index\n            continue;\n        }\n\n        // printing all the record\
+    \ of student\n        cout << \"Student Registration Number: \" << registrationNum[i]\
+    \ << \" <<\"\n             << \"Student Name: \" << name[i] << endl;\n    }\n\n\
+    \n    // adding space\ncout << endl;\n}\n```\n\n# Delete a record\n\nIf the user\
+    \ presses ‘4’ at the start of the"
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: 'program, the user can delete a particular student on the basis of registration
+    number. The user first enters the registration number into a variable called renum.
+    The program will check if student array is empty then display there is no record
+    in the system if it is empty. If the array is not empty then the program compares
+    the renum with registration numbers which are in array registrationNum. This is
+    done using a loop that iterates through the array. If the student is found then
+    the record is deleted from the array by declaring the relevant name and registrationNum
+    to null. If the student record is not found then the program prints “Record is
+    not found”.
+
+
+    ```
+
+    // check if the user entered the number 4 then
+
+    else if ( selectedNumber == 4 ) {
+
+
+    // check there is any record in the array
+
+    if ( index > 0 ) {
+
+
+    // declare the variable renum to store the user restartion number
+
+    string renum;
+
+
+    // prompt user to enter registration number
+
+    cout << "Enter Your Registration Number :";
+
+    cin >> renum;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: "```\n// is found variable check if the record is found or not in array\nbool\
+    \ isfound = False;\n\n// loop till the end of number of record\nfor(int ind =\
+    \ 0; ind < index; ind++) {\n    // check if the user entered registration is equal\
+    \ to registration num in array\n    if (registrationnum[ind] == in) {\n      \
+    \  // set the value of found to true\n        isfound = True;\n        name[ind]\
+    \ = \"null\";\n        // adding the null to arrays where value is found\n   \
+    \     registrationnum[ind] = \"null\";\n        // just print that record deleted\
+    \ successfully\n        cout << \" Record deleted successfully : \" << endl;\n\
+    \    }\n}\n\n// if the user entered registration number is not found then\nelse\
+    \ {\n    // print record is not exits\n    cout << \" There is no record in the\
+    \ system: \" << endl;\n}\n```\n\n# Exit\n\nIf the user enter the number ‘5’ then\
+    \ simply break from the loop. The variable cont is set to false. This terminates\
+    \ the program as the program is in a while loop that continues cont is true.\n\
+    \n```\n// check if the user entered the number 5 then\nelse if(selectedNum ==\
+    \ 5) {\n    // print take care\n    cout << \" Take Care \" << endl;\n\n    //\
+    \ set cont to false so that programme terminate\n    cont = false;\n}\n```"
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# Conclusion
+
+
+    Thanks for reading this book.
+
+    I hope this has helped you get started
+
+    with programming in C++.
+
+
+    If you’d like to take the next steps in
+
+    C++, I’d suggest the books below on
+
+    Amazon.
+
+
+    +   - Learn C++ Quickly
+
+    https://www.amazon.com/Learn-Quickly-Beginners-Programming-Hands-ebook/dp/B08DZ3NY6Z/
+
+
+    +   - Programming: Principles and Practice
+
+    using C++
+
+    https://www.amazon.com/Programming-Principles-Practice-Using-2nd/dp/0321992784/
+
+
+    If you’re interested in Javascript or'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: 'Python, I have a few books on my product page below.
+
+
+    Bob Mather product page
+
+    https://www.amazon.com/kindle-dbs/entity/author/B07HHQZC4Y'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# The end... almost!
+
+
+    Reviews are not easy to come by.
+
+
+    As an independent author with a tiny marketing budget, I rely on readers, like
+    you, to leave a short review on Amazon.
+
+
+    Even if it''s just a sentence or two!
+
+
+    ![](img/1c0edee3ee8f0c0e33e80da6eb597604_127_0.png)
+
+
+    So if you enjoyed the book, please...
+
+
+    >> Click here to leave a brief review on Amazon.
+
+
+    I am very appreciative for your review as it truly makes a difference.
+
+
+    Thank you from the bottom of my heart for purchasing this book and reading it
+    to the the'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: end.
+  merge: -1
+  pgno: 128
