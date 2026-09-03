@@ -1,0 +1,2329 @@
+- img_proc: true
+  md: '# # Build Your Own
+
+
+    # # Redis
+
+
+    with C/C++
+
+
+    Learn network programming and data structures
+
+    by coding from scratch
+
+
+    ![](img/e11cab1295d9145a4d6446f9d2e698e3_0_0.png)
+
+
+    > "What I cannot create, I do not understand"
+
+
+    https://build-your-own.org/'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # Build Your Own Redis with C/C++
+
+
+    Learn network programming
+
+    and data structures
+
+
+    James Smith
+
+
+    build-your-own.org
+
+
+    2023-01-31'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# # Contents
+
+
+    +   - Part 1. Getting Started ................................................................................
+    1
+
+
+    +   - 01. Introduction ........................................................................................
+    2
+
+
+    +   - 02. Introduction to Sockets ......................................................................
+    4
+
+
+    +   - 03. Hello Server/Client ...................................................................
+    6
+
+
+    +   - 04. Protocol Parsing ............................................................................
+    10
+
+
+    +   - 05. The Event Loop and Nonblocking IO ................................................
+    17
+
+
+    +   - 06. The Event Loop Implementation..................................................
+    20
+
+
+    +   - 07. Basic Server: get, set, del ......................................................
+    30
+
+
+    +   - Part 2. Essential Topics ................................................................
+    38
+
+
+    +   - 08. Data Structure: Hashtables .....................................................
+    39
+
+
+    +   - 09. Data Serialization ...........................................................
+    48
+
+
+    +   - 10. The AVL Tree: Implementation & Testing ....................... 55
+
+
+    +   - 11. The AVL Tree and the Sorted Set ...................................
+    67
+
+
+    +   - 12. The Event Loop and Timers....................................................
+    76
+
+
+    +   - 13. The Heap Data Structure and the TTL ....................... 84
+
+
+    +   - 14. The Thread Pool & Asynchronous Tasks ................. 93
+
+
+    +   - Appendixices ..........................................................................
+    99
+
+
+    +   - A1: Hints to Exercises ................................................
+    100'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# PART 1. GETTING STARTED
+
+
+    Make a functioning server that responds to commands.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# 01. Introduction
+
+
+    # What Is This Book About?
+
+
+    This book contains a step-by-step walkthrough of a simple implementation of a
+    Redis-like server. It is intended as a practical guide or tutorial to network
+    programming and the implementation and application of basic data structures in
+    C.
+
+
+    # What to Learn From This Book?
+
+
+    Redis could be considered one of the building blocks of modern computing that
+    stood the test of time. The knowledge required for building such a project is
+    broader and deeper than usual application-level development. Learning from such
+    projects is a good way for software developers to level their skills.
+
+
+    Redis is a good target for learning because it covers two important subjects of
+    software engineering: network programming and data structures.
+
+
+    +   - While there are many guides on socket APIs or high-level libraries, network
+    programming is more than just calling APIs or libraries. It is important to understand
+    core concepts such as the event loop, protocols, timers, etc, which this book
+    will cover. The lack of understanding can result in fatal mistakes even if you
+    are just employing high-level networking libraries or frameworks in your applications.
+
+    - Although many people learned some basic data structures from textbooks, there
+    is still something to learn. Data structures implemented in real projects often
+    have some practical considerations which are not touched by textbooks. Learning
+    how data structures are used in a non-toy environment (especially in C) is a unique
+    experience from building Redis.
+
+
+    Like most-world projects, Redis is a complex project built with lots of effort,
+    which can be hard to grasp for beginners. Instead, this book takes an opposite
+    approach: learning by building things from scratch.
+
+
+    # Why From Scratch?
+
+
+    A couple of points:'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# 01. Introduction
+
+
+    +   - faster. Building things from scratch, concepts can be introduced gradually.
+    Starting from the small, adding things incrementally, and getting the big picture
+    in the end.
+
+
+    +   - deeper. While there are many materials explaining how an existing stuff
+    works, the understanding obtained by reading those materials is often not the
+    same as building the stuff yourself. And it''s easy to mistake memorization for
+    understanding, and it''s easier to pick unimportant details than principles and
+    basics.
+
+
+    +   - more. The “scratch” approach forces you to touch every aspect of the subject
+    – there are no shortcuts to knowledge! And not every aspect is known to you beforehand,
+    you may discover “things I don''t know I don''t know” in the process.
+
+
+    Summarized in a quote from Feynman: “What I cannot create, I do not understand”.
+
+
+    # How to Use This Book?
+
+
+    This book follows a step-by-step approach. Each step builds on the previous one,
+    adding a new concept. The full source code is provided on the web for reference
+    purposes, readers are advised to tinker with it or DIY without it.
+
+
+    The code is written as direct and straightforwardly as the author could. It''s
+    mostly plain C with minimal C++ features. Don''t worry if you don''t know C, you
+    just have the opportunity to do it in another language by yourself.
+
+
+    The end result is a mini Redis with about 1200 lines of code. 1200 LoC seems low,
+    but it illustrates many important aspects the book attempts to cover.
+
+
+    The techniques and approaches used in the book are not exactly the same as the
+    real Redis. Some are intentionally simplified, and some are chosen to illustrate
+    a general topic. Readers can learn even more by comparing approaches.
+
+
+    The code used in this book is intended to run on Linux only, and can be downloaded
+    at this URL.
+
+
+    https://build-your-own.org/redis/src.tgz
+
+
+    The contents and the source code of this book can be browsed online at:
+
+
+    https://build-your-own.org'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: "# 02. Introduction to Sockets\n\nThis chapter is an introduction to socket\
+    \ programming. Readers are assumed to have basic knowledge of computer networking\
+    \ but no experience in network programming. This book does not contain every detail\
+    \ on how to use socket APIs, you are advised to read manages and other network\
+    \ programming guides while learning from this book. (https://beej.us/ is a good\
+    \ source for socket APIs.)\n\nRedis is an example of the server/client system.\
+    \ Multiple clients connect to a single server, and the server receives requests\
+    \ from TCP connections and sends responses back. There are several Linux system\
+    \ calls we need to learn before we can start socket programming.\n\nThe socket()\
+    \ syscall returns an fd. \"fd\" if you are unfamiliar with Unix systems: An fd\
+    \ is an integer that refers to something in the Linux kernel, like a TCP connection,\
+    \ a disk file, a listening port, or other resources, etc.\n\nThe bind() and listen()\
+    \ syscall: the bind() associates an address to a socket fd, and the listen() enables\
+    \ us to accept connections to that address.\n\nThe accept() takes a listening\
+    \ fd, when a client makes a connection to the listening address, the accept()\
+    \ returns an fd that represents the connection socket. Here is the pseudo-code\
+    \ that explains the typical workflow of a server:\n\n```\nfd = socket()\nbind(fd,\
+    \ address)\nlisten(fd)\nwhile True:\n  conn.fd = accept(fd)\n  do_something.with(conn_fd)\n\
+    close(conn.fd)\n```\n\nThe read() syscall receives data from a TCP connection.\
+    \ The write() syscall sends data. The close() destroys the resource reserved by\
+    \ the fd and recycles the fd number.\n\nWe have introduced the syscalls needed\
+    \ for server-side network programming. For the client side, the connect() syscall\
+    \ takes a socket fd and address and makes a TCP connection to that address. Here\
+    \ is the pseudo-code for the client:"
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '```
+
+    fd = socket()
+
+    connect(fd, address)
+
+    do_something_with_fd(fd)
+
+    close(fd)
+
+    ```
+
+
+    The next chapter will help you get started using real code.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# 03. Hello Server/Client\n\nThis chapter continues the introduction of socket\
+    \ programming. We'll write 2 simple (incomplete and broken) programs to demonstrate\
+    \ the syscalls from the last chapter. The first program is a server, it accepts\
+    \ connections from clients, reads a single message, and writes a single reply.\
+    \ The second program is a client, it connects to the server, writes a single message,\
+    \ and reads a single reply. Let's start with the first server.\n\nFirst, we need\
+    \ to obtain a socket fd: `int fd = socket(AF_INET, SOCK_STREAM, 0);`\n\nThe `AF_INET`\
+    \ is for IPv4, `AF_INET6` for IPv6 or dual-stack socket. For simplicity, we'll\
+    \ just use `AF_INET` throughout this book.\n\nThe `SOCK_STREAM` is for TCP. We\
+    \ won't use anything other than TCP in this book. All the 3 parameters of the\
+    \ `socket()` call are fixed in this book.\n\nNext, we'll introduce a new syscall:\n\
+    \n```\nint val = 1;\nsetsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &val, sizeof(val));\n\
+    ```\n\nThe `setsockopt()` is used to configure various aspects of a socket. This\
+    \ particular call enables the `SO_REUSEADDR` option. Without this option, the\
+    \ server won't able to bind to the same address if restarted. Exercise to reader:\
+    \ find out what exactly is `SO_REUSEADDR` and why it is needed.\n\nThe next step\
+    \ is the `bind()` and `listen()`, we'll bind on the wildcard address `0.0.0.0:1234:`\n\
+    \n```\n// bind, this is the syntax that deals with IPv4 addresses\nstruct sockaddr_in\
+    \ addr = {};naddr.sin_family = AF_INET;\naddr.sin_port = ntohs(1234);\naddr.sin.s_addr\
+    \ = ntohl(0); // wildcard address 0.0.0.0\nint rv = bind(fd, (const sockaddr *)&addr,\
+    \ sizeof(addr));\nif (rv) {\n    die(\"bind\");\n}\n```"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: "```\n// listen\nrv = listen(fd, SOMAXCONN);\nif (rv) {\n    die(\"listen()\"\
+    );\n}\n```\n\nLoop for each connection and do something with them.\n\n```\nwhile\
+    \ (true) {\n    // accept\n    struct sockaddr_in client_addr = {};\n    socklen_t\
+    \ socklen = sizeof(client_addr);\n    int connfd = accept(fd, (struct sockaddr*)client_addr,\
+    \ &socklen);\n    if (connfd < 0) {\n        continue;\n        // error\n   \
+    \ }\n\n    do_something(connfd);\n}\n```\n\nThe do_something() function is simply\
+    \ read and write.\n\n```\nstatic void do_something(int connfd) {\n    char rbuf[64]\
+    \ = {};\n    ssize_t n = read(connfd, rbuf, sizeof(rbuf) - 1);\n    if (n < 0)\
+    \ {\n        msg(\"read() error\");\n        return;\n    }\n    printf(\"client\
+    \ says: %s\\n\", rbuf);\n\n    char wbuf[] = \"world\";\n    write(connfd, wbuf,\
+    \ strlen(wbuf));\n}\n```"
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "Note that the read() and write() call returns the number of read or written\
+    \ bytes. A real programmer must deal with the return value of functions, but in\
+    \ this chapter, I have omitted lots of things for brevity. And the code in this\
+    \ chapter is not the correct way to do networking program is much simpler:\n\n\
+    ```\nint fd = socket(AF_INET, SOCK_STREAM, 0);\nif (fd < 0) {\n    die(\"socket\"\
+    );\n}\n\nstruct sockaddr_in addr = {};naddr.sin_family = AF_INET;\naddr.sin_port\
+    \ = htons(1234);\naddr.sin_addr.s_addr = ntohl(INADDR_LOOPBACK); // 127.0.0.1\n\
+    int rv = connect(fd, (const struct sockaddr *)&addr, sizeof(addr));\nif (rv) {\n\
+    \    die(\"connect\");\n}\n\nchar msg[] = \"hello\";\nwrite(fd, msg, strlen(msg));\n\
+    \nchar rbuf[64] = {};\nsize_t n = read(fd, rbuf, sizeof(rbuf) - 1);\nif (n < 0)\
+    \ {\n    die(\"read\");\n}\n\nprintf(\"server says: %s\\n\", rbuf);\nclose(fd);\n\
+    ```\n\nCompile our programs with the following command line:\n\n```\ng++ -Wall\
+    \ -Wextra -02 -g 03.server.cpp -o server\ng++ -Wall -Wextra -02 -g 03.client.cpp\
+    \ -o client\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'Run ./server in a window and then run ./client in another window. You should
+    see the following results:
+
+
+    ```
+
+    $ ./server
+
+    client says: hello
+
+    ```
+
+
+    ```
+
+    $ ./client
+
+    server says: world
+
+    ```
+
+
+    Exercise for readers: read manpages of APIs used in this chapter, or find online
+    tutorials for them. Make sure you know how to find helps on API usage since this
+    book won''t cover the details of API usage.
+
+
+    +   - 03_client.cpp
+
+    - 03_server.cpp'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# 04. Protocol Parsing\n\nOur server will be able to process multiple requests\
+    \ from a client, to do that we need to implement some sort of \"protocol\", at\
+    \ least is split requests apart from the TCP byte stream. The easiest way to split\
+    \ requests apart is by declaring how long the request is at the beginning of the\
+    \ request. Let's use the following scheme.\n\n```\n------+--------------------------------------+\n\
+    | len | msg1 | len | msg2 | more...|\n------+--------------------------------------+\n\
+    ```\n\nThe protocol consists of 2 parts: a 4-byte little-endian integer indicating\
+    \ the length of the following request, and a variable length request.\n\nStarts\
+    \ from the code from the last chapter, the loop of the server is modified to handle\
+    \ multiple requests:\n\n```\nwhile (true) {\n    // accept\n    struct sockaddr_client_addr\
+    \ = {};\n    socklen_t socklen = sizeof(client_addr);\n    int connfd = accept(fd,\
+    \ (struct sockaddr*)client_addr, &socklen);\n    if (connfd < 0) {\n        continue;\
+    \ // error\n    }\n\n    // only serves one client connection at once\n    while\
+    \ (true) {\n        int32_t err = one_request(connfd);\n        if (err) {\n \
+    \           break;\n        }\n    }\n    close(connfd);\n}\n```\n\nThe one_request\
+    \ function only parses one request and replies, until something bad happens or\
+    \ the client connection is gone. Our server can only handle one connection at\
+    \ once until we introduce the event loop in later chapters."
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "Adding two helper functions before listing the one_request function:\n\n```\n\
+    static int32_t read_full(int fd, char *buf, size_t n) {\n    while (n > 0) {\n\
+    \        size_t rv = read(fd, buf, n);\n        if (rv <= 0) {\n            return\
+    \ -1; // error, or unexpected EOF\n        }\n        assert((size_t)rv <= n);\n\
+    \        n -= (size_t)rv;\n        buf += rv;\n    }\n    return 0;\n}\n```\n\n\
+    ```\nstatic int32_t write_all(int fd, const char *buf, size_t n) {\n    while\
+    \ (n > 0) {\n        size_t rv = write(fd, buf, n);\n        if (rv <= 0) {\n\
+    \            return -1; // error\n        }\n        assert((size_t)rv <= n);\n\
+    \        n -= (size_t)rv;\n        buf += rv;\n    }\n    return 0;\n}\n```\n\n\
+    Two things to note:\n\n+   1. The read() syscall just returns whatever data is\
+    \ available in the kernel, or blocks if there is none. It's the application that\
+    \ is responsible for handling insufficient data. The read_full() function read\
+    \ from the kernel until it gets exactly n bytes.\n2. Likewise, the write() syscall\
+    \ can return successfully with partial data written if the kernel buffer is full,\
+    \ we need to keep trying when the write() returns fewer bytes than we need.\n\n\
+    The one_request function did the actual work:"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "```\nconst size_t k_max_msg = 4096;\nstatic int32_t one_request(int connfd)\
+    \ {\n    // 4 bytes header\n    char rbuf[4 + k.max_msg + 1];\n    errno = 0;\n\
+    \    int32_t err = read_full(connfd, rbuf, 4);\n    if (err) {\n        if (errno\
+    \ == 0) {\n            msg(\"EOF\");\n        } else {\n            msg(\"read\
+    \ error\");\n        }\n        return err;\n    }\n\n    uint32_t len = 0;\n\
+    \    memcpy(&len, rbuf, 4); // assume little endian\n    if (len > k.max_msg)\
+    \ {\n        msg(\"too long\");\n        return -1;\n    }\n\n    // request body\n\
+    \    err = read_full(&connfd, &rbuf[4], len);\n    if (err) {\n        msg(\"\
+    read error\");\n        return err;\n    }\n\n    // do something\n    rbuf[4\
+    \ + len] = '\\0';\n    printf(\"client says: %s\\n\", &rbuf[4]);\n\n    // reply\
+    \ using the same protocol\n    const char reply[] = \"world\";\n    char wbuf[4\
+    \ + sizeof(reply)];\n    len = (uint32_t)strlen(reply));\n```"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "```\nmemcpy(wbuf, &len, 4);\nmemcpy(&wbuf[4], reply, len);\nreturn write_all(connfd,\
+    \ wbuf, 4 + len);\n}\n```\n\nFor convenience, we added a limit to the maximum\
+    \ request size and use a large enough buffer to hold the request. Endianness used\
+    \ to be a consideration when parsing protocols, but it is less relevant today\
+    \ so we are just memcpy- integers.\n\nThe client code for making requests and\
+    \ receiving replies:\n\n```\nstatic int32_t query(int fd, const char *text) {\n\
+    \    uint32_t len = (uint32_t)strlen(len);\n    if (len > k_max_msg) {\n     \
+    \   return -1;\n    }\n\n    char wbuf[4 + k_max_msg];\n    memcpy(wbuf, &len,\
+    \ 4); // assume little endian\n    memcpy(&wbuf[4], text, len);\n    if (int32_t\
+    \ err = write_all(fd, wbuf, 4 + len)) {\n        return err;\n    }\n\n    //\
+    \ 4 bytes header\n    char rbuf[4 + k_max_msg + 1];\n    errno = 0;\n    int32_t\
+    \ err = read_full(fd, rbuf, rbuf, 4);\n    if (err) {\n        if (errno == 0)\
+    \ {\n            msg(\"EDF\");\n        } else {\n            msg(\"read() error\"\
+    );\n        }\n        return err;\n    }\n}\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\nmemcpy(&len, rbuf, 4); // assume little endian\nif (len > k_max_msg) {\n\
+    \    msg(\"too long\");\n    return -1;\n}\n\n// reply body\nerr = read.full(fd,\
+    \ &rbuf[4], len);\nif (err) {\n    msg(\"read(err) error\");\n    return err;\n\
+    }\n\n// do something\nrbuf[4 + len] = '\\n0';\nprintf(\"server says: %s\\n\",\
+    \ &rbuf[4]);\nreturn 0;\n```\n\nTest our server by sending multiple commands:\n\
+    \n```\nint main() {\n    int fd = socket(AF_INET, SOCK_STREAM, 0);\n    if (fd\
+    \ < 0) {\n        die(\"socket()\");\n    }\n\n    // code omitted ...\n\n   \
+    \ // multiple requests\n    int32_t err = query(fd, \"hellol\");\n    if (err)\
+    \ {\n        goto L_DONE;\n    }\n    err = query(fd, \"hello2\");\n    if (err)\
+    \ {\n        goto L_DONE;\n    }\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "```\n}\nerr = query(fd, \"hello3\");\nif (err) {\n    goto L_DONE;\n}\n```\n\
+    \n```\nL_DONE:\nclose(fd);\nreturn 0;\n}\n```\n\nRunning the server and the client:\n\
+    \n```\n$ ./server\nclient says: hello1\nclient says: hello2\nclient says: hello3\n\
+    EOF\n```\n\n```\n$ ./client\nserver says: world\nserver says: world\nserver says:\
+    \ world\n```\n\nThe protocol parsing code requires at least 2 read() syscalls\
+    \ as read per request. The number of syscalls can be reduced by using \"buffered\
+    \ IO\". That is read as much as you can into a buffer at once, then try parse\
+    \ multiple requests from that buffer. Readers are encouraged to try this as an\
+    \ exercise as it may be helpful to understand later chapters.\n\nNotes on protocols:\
+    \ The protocol used in this chapter is the simplest practical protocol. Most real-world\
+    \ protocols are more complicated than this. Some use text instead of binary data.\
+    \ While text protocols require more parsing than binary ones, which are more coding\
+    \ and error-prone. Another thing to think about complex protocol parsing is that\
+    \ some protocols don't have a way to split messages apart, those protocols may\
+    \ use delimiters, or require further parsing to split messages. The use of delimiters\
+    \ in protocols can add another complication when the"
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'protocol is carrying arbitrary data, as the delimiters in data need to be “escaped”.
+    We’ll stick to the simple binary protocol for later chapters.
+
+
+    +   - 04_client.cpp
+
+    - 04_server.cpp'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# 05. The Event Loop and Nonblocking IO\n\nThere are 3 ways to deal with concurrent\
+    \ connections in server-side network programming. They are: forking, multi-threading,\
+    \ and event loops. Forking creates new processes for each client connection to\
+    \ achieve concurrency. Multi-threading uses threads instead of processes. An event\
+    \ loop uses polling and nonblocking IO and usually runs on a single thread. Due\
+    \ to the overhead of processes and threads, most modern production-grade software\
+    \ use event loops for networking.\n\nThe simplified pseudo-code for the event\
+    \ loop of our server is:\n\n```\nall_fds = [...]\nwhile True:\n    active_fds\
+    \ = poll(all_fds)\n    for fd in active_fds:\n        do_something_with(fd)\n\n\
+    def do_something_with(fd):\n    if fd is a listening socket:\n        add_new.client(fd)\n\
+    \    elif fd is a client connection:\n        while work_not_done(fd):\n     \
+    \       do_something_to_client(fd)\n\ndef do_something_to_client(fd):\n    if\
+    \ should_read_from(fd):\n        data = read_until_EAGAIN(fd)\n        process_incoming_data(data)\n\
+    \    while should_write_to(fd):\n        write_until_EAGAIN(fd)\n    if should_close(fd):\n\
+    \        destroy_client(fd)\n```\n\nInstead of just doing things (reading, writing,\
+    \ or accepting) we use the poll operation to tell us which fd can be operated\
+    \ immediately without blocking. When we perform an IO operation on an fd, the\
+    \ operation should be performed in the nonblocking mode."
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "2023-01-31\n\n05. The Event Loop and Nonblocking IO\n\nIn blocking mode, `read`\
+    \ blocks the caller when there are no data in the kernel, `write` blocks when\
+    \ the write buffer is full, `accept` blocks when there are no new connections\
+    \ in the kernel queue. In nonblocking mode, those operations either succeed without\
+    \ blocking, or fail with the errno ` EAGAIN`, which means “not ready”. Nonblocking\
+    \ operations that fail with `EAGAIN` must be retried after the notification was\
+    \ notified by the poll.\n\nThe `poll` is the sole blocking operation in an event\
+    \ loop, everything else must be nonblocking; a single thread can handle multiple\
+    \ concurrent connections. All networking IO APIs, such as `read`, `write`, and\
+    \ `accept`, have a nonblocking mode. APIs that do not have a nonblocking mode,\
+    \ such as `gethostname`, and disk IO, should be performed in thread pools, which\
+    \ will be covered in later layers. Also, timers must be implemented within the\
+    \ event loop since we can't `sleep` inside the event loop.\n\nThe syscall for\
+    \ setting `fd_set_nb(int fd)`\n\n```\nstatic void fd_set_nb(int fd) {\nnerno =\
+    \ 0;\nint flags = fcntl(fd, F_GETFL, 0);\nif (errno) {\n  die(\"fcntl error\"\
+    );\n  return;\n}\n\nflags |= 0_NONBLOCK;\n\nerno = 0;\n(void) fcntl(fd, F_SETFL,\
+    \ flags);\nif (errno) {\n  die(\"fcntl error\");\n}\n}\n```\n\nOn Linux, besides\
+    \ the `poll` syscall, there are also `select` and `epoll`. The ancient `select`\
+    \ syscall is basically the same as the `poll`, except that the maximum fd number\
+    \ is limited to a small number, which makes it obsolete in modern applications.\
+    \ The `epoll` API consists of 3 syscalls: `epoll_create`, `epoll_wait`, and `epoll_ctl`.\
+    \ The `epoll` API is Stateful, instead of supplying a set of fds as a syscall\
+    \ argument, `epoll_ctl` was used to manipulate an fd created by `epoll_create`,\
+    \ which the `epoll_wait` is operating on.\n\nbuild-your-own.org\n\n18"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: We'll use the **poll** syscall in the next chapter it's slightly less code than
+    the stateful **epoll** API. However, the **epoll** API is preferable in real-world
+    projects since the argument for the **poll** can become too large as the number
+    of fds increases.
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# 06. The Event Loop Implementation\n\nThis chapter walks through the real\
+    \ C++ code of an echo server.\n\nThe definition of struct Conn:\n\n```\nenum {\n\
+    \    STATE_REQ = 0,\n    STATE_RES = 1,\n    STATE_END = 2,    // mark the connection\
+    \ for deletion\n}\n\nstruct Conn {\n    int fd = -1;\n    uint32_t state = 0;\
+    \    // either STATE_REQ or STATE_RES\n    // buffer for reading\n    size_t rbuf_size\
+    \ = 0;\n    uint8_t rbuf[4 + k_max_msg];\n    // buffer for writing\n    size_t\
+    \ wbuf_size = 0;\n    size_t wbuf_sent = 0;\n    uint8_t wbuf[4 + k_max_msg];\n\
+    };\n```\n\nWe need buffers for reading/writing, since in nonblocking mode, IO\
+    \ operations are often deferred.\n\nThe state is used to decide what to do with\
+    \ the connection. The STATE_REQ is for reading requests and the STATE_RES is for\
+    \ sending responses.\n\nThe code for the event loop:\n\n```\nint main() {\n  \
+    \  int fd = socket(AF_INET, SOCK_STREAM, 0);\n    if (fd < 0) {\n        die(\"\
+    socket()\");\n    }\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "```\n}\n\n// bind, listen and etc\n// code omitted...\n\n// a map of all client\
+    \ connections, keyed by fd\nstd::vector<Conn *> fd2conn;\n\n// set the listen\
+    \ fd to nonblocking\nfd_set_nb(fd);\n\n// the event loop\nstd::vector<struct pollfd>\
+    \ poll_args;\nwhile (true) {\n  // prepare the arguments of the poll()\n  poll_args.clear();\n\
+    \  // for convenience, the listening fd is put in the first position\n  struct\
+    \ pollfd pfd = {fd, POLLIN, 0};\n  poll_args.push_back(pfd);\n  // connection\
+    \ fds\n  for (Conn *conn : fd2conn) {\n    if (!conn) {\n      continue;\n   \
+    \ }\n    struct pollfd pfd = {};\n    pfd.fd = conn->fd;\n    pfd.events = (conn->state\
+    \ == STATE_REQ) ? POLLIN : POLLOUT;\n    pfd.events = pfd.events | POLLERR;\n\
+    \    poll_args.push_back(pfd);\n  }\n\n  // poll for active fds\n  // the timeout\
+    \ argument doesn't matter here\n  int rv = poll(poll_args.data(), (nfds_t)poll_args.size(),\
+    \ 1000);\n  if (rv < 0) {\n    die(\"poll\");\n  }\n}\n```"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# The Event Loop Implementation\n\n```\n// process active connections\nfor\
+    \ (size_t i = 1; i < poll_args.size(); ++i) {\n    if (poll_args[i].events) {\n\
+    \        Conn +conn = fd2conn[poll_args[i].fd];\n        connection.io(conn);\n\
+    \        if (conn->state == STATE_END) {\n            // client closed normally,\
+    \ or something bad happened.\n            // destroy this connection\n       \
+    \     fd2conn[conn->fd] = NULL;\n            (void)close(conn->fd);\n        \
+    \    free(conn);\n        }\n    }\n}\n\n// try to accept a new connection if\
+    \ the listening fd is active\nif (poll_args[0].events) {\n    (void)accept_new_conn(fd2conn,\
+    \ fd);\n}\n\n```\n\nThe first thing in our event loop is setting up arguments\
+    \ of poll. The listening fd is polled with the POLL flag. For the connection,\
+    \ the state of the struct Conn determines the poll flag. In this particular case,\
+    \ the poll flag is either reading (POLLIN) or writing (POLLOUT), never both. If\
+    \ using epoll, the first thing in an event loop is usually updating the fd set\
+    \ with epoll_ctl.\n\nThe poll also takes a timeout argument which can be used\
+    \ to implement timers, in our case, this argument doesn't matter, just set it\
+    \ to a big number. After the return of poll, we are notified by reading/writing\
+    \ and acting accordingly.\n\nThe accept_new_conn() function accepts a new connection\
+    \ and creates the struct Conn object."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "2023-01-31\n\n06. The Event Loop Implementation\n\n```\nstatic void conn_put(std::vector<Conn>\
+    \ *> &fd2conn, struct Conn *conn) {\n    if (fd2conn.size() <= (size_t)conn->fd)\
+    \ {\n        fd2conn.resize(conn->fd + 1);\n    }\n    fd2conn[conn->fd] = conn;\n\
+    }\n\nstatic int32_t accept_new(std::vector<Conn> *> &fd2conn, int fd) {\n    //\
+    \ accept\n    struct sockaddr_in client_addr = {};\n    socklen_t len = sizeof(client_addr);\n\
+    \    int connfd = accept(fd, (struct sockaddr *)&client_addr, &len);\n    if (connfd\
+    \ < 0) {\n        msg(\"accept error\");\n        return -1; // error\n    }\n\
+    \n    // set the new connection fd to nonblocking mode\n    fd_set_nb(connfd);\n\
+    \    // creating the struct Conn\n    struct Conn *conn = (struct Conn *)malloc(sizeof(struct\
+    \ Conn));\n    if (!conn) {\n        close(connfd);\n        return -1;\n    }\n\
+    \n    conn->fd = connfd;\n    conn->state = STATE_REQ;\n    conn->rbuf..size =\
+    \ 0;\n    conn->wbuf..size = 0;\n    conn->wbuf..sent = 0;\n    conn_put(fd2conn,\
+    \ conn);\n    return 0;\n}\n```\n\nThe connection_io() is the state machine for\
+    \ client connections.\n\nbuild-your-own.org\n\n23"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "```\nstatic void connection_io(Conn *conn) {\n    if (conn->state == STATE_REQ)\
+    \ {\n        state_req(conn);\n    } else if (conn->state == STATE_RES) {\n  \
+    \      state_res(conn);\n    } else {\n        assert(0); // not expected\n  \
+    \  }\n}\n```\n\nThe STATE_REQ state is for reading:\n\n```\nstatic void state_req(Conn\
+    \ *conn) {\n    while (try.fill_buffer(conn)) {\n}\n\nstatic bool try.fill_buffer(Conn\
+    \ *conn) {\n    // try to fill the buffer\n    assert(conn->rbuf.size < sizeof(conn->rbuf));\n\
+    \    ssize_t rv = 0;\n    do {\n        size_t cap = sizeof(conn->rbuf) - conn->rbuf->size;\n\
+    \        rv = read(conn->fd, &conn->rbuf[conn->rbuf->size], cap);\n    } while\
+    \ (rv < 0 && errno == EINTR);\n    if (rv < 0 && errno == EAGAIN) {\n        //\
+    \ EAGAIN, stop.\n        return false;\n    }\n    if (rv < 0) {\n        msg(\"\
+    read error\");\n        conn->state = STATE_END;\n        return false;\n    }\n\
+    \    if (rv == 0) {\n        if (conn->rbuf->size > 0) {\n            msg(\"unexpected\
+    \ EOF\");\n        } else {\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "# 06. The Event Loop Implementation\n\n```\nmsg(\"EOF\");\n\nconn->state =\
+    \ STATE_END;\nreturn false;\n}\n\\conn->rbuf_size += (size_t)rv;\nassert(conn->rbuf_size\
+    \ <= sizeof(conn->rbuf) - conn->rbuf_size);\n```\n\n```\n// Try to process requests\
+    \ one by one.\n// Why is there a loop? Please read the explanation of \"pipelining\"\
+    .\nwhile (try_one..request == STATE_REQ);\nreturn (conn->state == STATE_REQ);\n\
+    }\n```\n\nThere are lots of things to unpack here. To understand this function,\
+    \ let's review the pseudo-code from the last chapter:\n\n```\ndef do_something_to_client(fd):\n\
+    \    if should_read_from(fd):\n        data = read_until_EAGAIN(fd)\n        process_incoming_data(data)\n\
+    \    # code omitted..\n```\n\nThe try_fill_buffer function fills the read buffer\
+    \ with data. Since the size of the read buffer is limited, the read buffer can\
+    \ be full before we hits EAGAIN, so we need to process immediately after reading\
+    \ to clear some read buffer space, the try_fill_buffer() loops until we hit EAGAIN.\n\
+    \nThe read syscall (and any other syscalls) need to be retried after getting the\
+    \ errno EINTR. The EINTR means the syscall was interrupted by a signal, the retrying\
+    \ is needed even if our application does not use of signals.\n\nThe try_one_request\
+    \ function handles the incoming data, but why is this in this loop? Is there more\
+    \ than one request in the read buffer? The answer is yes. For a request/response\
+    \ protocol, clients are not limited to sending one request and waiting for the\
+    \ response at a time, clients can save some latency by sending multiple requests\
+    \ without waiting for"
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "responses in between, this mode of operation is called \"pipelining\". Thus\
+    \ we can't assume the reader buffer contains at most one request.\n\nListing the\
+    \ try_one_request function:\n\n```\nstatic bool try_one_request(Conn *conn) {\n\
+    \  // try to parse a request from the buffer\n  if (conn->rbuf.size < 4) {\n \
+    \   // not enough data in the buffer. Will retry in the next iteration\n    return\
+    \ false;\n  }\n  uint32_t len = 0;\n  memcpy(&len, &conn->rbuf[0], 4);\n  if (len\
+    \ > k_max_msg) {\n    msg(\"too long\");\n    conn->state = STATE_END;\n    return\
+    \ false;\n  }\n\n  if (4 + len > conn->rbuf.size) {\n    // not enough data in\
+    \ the buffer. Will retry in the next iteration\n    return false;\n  }\n\n  //\
+    \ got one request, do something with it\n  printf(\"client says: %s\\n\", len,\
+    \ &conn->rbuf[4]);\n\n  // generating echoing response\n  memcpy(&conn->wbuf[0],\
+    \ &len, 4);\n  memcpy(&conn->wbuf[4], &conn->rbuf[4], len);\n  conn->wbuf.size\
+    \ = 4 + len;\n\n  // remove the request from the buffer.\n  // note: frequent\
+    \ memmove is inefficient.\n  // note: better handling for production code.\n \
+    \ size_t remain = conn->rbuf.size - 4 - len;\n  if (remain) {\n    memmove(conn->rbuf,\
+    \ &conn->rbuf[4 + len], remain);\n  }\n  conn->rbuf.size = remain;\n```\n\nbuild-your-own.org"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\n// change state\nconn->state = STATE_RES;\nstate_res(conn);\n\n// continue\
+    \ the outer loop if the request was fully processed\nreturn (conn->state == STATE_REQ);\n\
+    ```\n\nThe try..request takes one request from the read buffer, generates a response,\
+    \ then transits to the STATE_RES state.\n\nThe code for the state STATE_RES:\n\
+    \n```\nstatic void state_res(Conn =conn) {\n    while (try_flush_buffer(conn))\
+    \ { }\n}\n\nstatic bool try_flush_buffer(Conn =conn) {\n    size_t rv = 0;\n \
+    \   do {\n        size_t remain = conn->wbuf_size - conn->wbuf_sent;\n       \
+    \ rv = write(conn->fd, &conn->wbuf[conn->wbuf_sent], remain);\n        if (rv\
+    \ < 0 && errno == EAGAIN) {\n            // got EAGAIN, stop.\n            return\
+    \ false;\n        }\n    } while (rv < 0) {\n        msg(\"write error\");\n \
+    \       conn->state = STATE_END;\n        return false;\n    }\n    conn->wbuf_sent\
+    \ += (size_t)rv;\n    assert(conn->wbuf_sent <= conn->wbuf_size);\n    if (conn->wbuf_sent\
+    \ == conn->wbuf_size) {\n        // response was fully sent, change state back\n\
+    \        conn->state = STATE_REQ;\n    }\n    conn->wbuf_sent = 0;\n}\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "```\nconn->wbuf_size = 0;\nreturn false;\n}\n// still got some data in wbuf,\
+    \ could try to write again\nreturn true;\n```\n\nThe above code flushes the buffer\
+    \ until it gets EAGAIN, or transits back to the STATE_REQ if the flushing is done.\n\
+    \nTo test our server, we can run the client from chapter 04 since the protocol\
+    \ is identical. We can also modify the client to demonstrate pipelining client:\n\
+    \n```\n// the `query` function was simply splited into `send_req` and `read_res`.\n\
+    static int32_t send_req(int fd, const char *text);\nstatic int32_t read_res(int\
+    \ fd);\n\nint main() {\n  int fd = socket(AF_INET, SOCK_STREAM, 0);\n  if (fd\
+    \ < 0) {\n    die(\"socket\");\n  }\n\n  // code omitted...\n\n  // multiple pipelined\
+    \ requests\n  const char *query_list[3] = {\"hello1\",\"hello2\",\"hello3\"};\n\
+    \  for (size_t i = 0; i < 3; ++i) {\n    int32_t err = send_req(fd, query_list[i]);\n\
+    \    if (err) {\n      goto L_DONE;\n    }\n  }\n  for (size_t i = 0; i < 3; ++i)\
+    \ {\n    int32_t err = read_res(fd);\n    if (err) {\n      goto L_DONE;\n   \
+    \ }\n  }\n```"
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\n}\n\nclose(fd);\nreturn 0;\n}\n```\n\n# Exercises:\n\n+   1. Try to use\
+    \ epoll instead of poll in the event loop. This should be easy.\n2. We are using\
+    \ memmove to reclaim read buffer space. However, memmove on every request is unnecessary,\
+    \ change the code the perform memmove only before read.\n3. In the state_res function,\
+    \ write was performed for a single response. In pipelined scenarios, we could\
+    \ buffer multiple responses and flush them in the end with a single write call.\
+    \ Note that the write buffer could be full in the middle.\n    * 06_client.cpp\n\
+    \    * 06_server.cpp"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# 07. Basic Server: get, set, del\n\nWith the event loop code from the last\
+    \ chapter, we can finally start adding commands to our server.\n\nThe \"command\"\
+    \ in our design is a list of strings, like `set key val`. We'll encode the \"\
+    command\" with the following scheme:\n\n```\n+----------------------------------------------------------------------+\n\
+    | nstr | len | str1 | len | str2 | ... | len | strn |\n+----------------------------------------------------------------------+\n\
+    ```\n\nThe **nstr** is the number of strings and the **len** is the length of\
+    \ the following string. Both are 32-bit integers.\n\nThe response is a 32-bit\
+    \ status code followed by the response string.\n\n```\n+-----------------------+\n\
+    | res | data...          |\n+-----------------------+\n```\n\nStarts with the\
+    \ **try_one_request** function.\n\n```\nstatic bool try_one_request(Conn *conn)\
+    \ {\n  // try to parse a request from the buffer\n  if (conn->rbuf->size < 4)\
+    \ {\n    // not enough data in the buffer. Will retry in the next iteration\n\
+    \    return false;\n  }\n\n  uint32_t len = 0;\n  memcpy(&len, conn->rbuf[0],\
+    \ 4);\n  if (len > k_max_msg) {\n    msg(\"too long\");\n    conn->state = STATE_END;\n\
+    \    return false;\n  }\n\n  if (4 + len > conn->rbuf->size) {\n    // not enough\
+    \ data in the buffer. Will retry in the next iteration\n    return false;\n  }\n\
+    }\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "```\n// got one request, generate the response.\nint32_t rescode = 0;\nint32_t\
+    \ wlen = 0;\nint32_t err = do_request(\n    &conn->rbuf[4], len,\n    &rescode,\
+    \ &conn->wbuf[4 + 4], &wlen\n);\nif (err) {\n    conn->state = STATE_END;\n  \
+    \  return false;\n}\nwlen += 4;\nmemcpy(&conn->wbuf[0], &wlen, 4);\nmemcpy(&conn->wbuf[4],\
+    \ rescode, 4);\nconn->wbuf_size = 4 + wlen;\n\n// remove the request from the\
+    \ buffer.\n// note: frequent memmove is ineffficient.\n// note: need better handling\
+    \ for production code.\nsize_t remain = conn->rbuf_size - 4 - len;\nif (remain)\
+    \ {\n    memmove(conn->rbuf, &conn->rbuf[4 + len], remain);\n}\nconn->rbuf_size\
+    \ = remain;\n\n// change state\nconn->state = STATE_RES;\nstate_res(conn);\n\n\
+    // continue the outer loop if the request was fully processed\nreturn (conn->state\
+    \ == STATE_REQ);\n```\n\nThe *do_request* function handles the request. Only 3\
+    \ commands (get, set, del) are recognized now."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "2023-01-31\n\n```\nstatic int32_t do_request{\n    const uint8_t *req, uint32_t\
+    \ reqlen,\n    uint32_t *rescode, uint8_t *res, uint32_t *reslen\n{\n    std::vector<std::string>\
+    \ cmd;\n    if (0 != parse_req(req, reqlen, cmd)) {\n        msg(\"bad req\");\n\
+    \        return -1;\n    }\n    if (cmd.size() == 2 && cmd_is(cmd[0], \"get\"\
+    )) {\n        *rescode = do_get(cmd, res, reslen);\n    } else if (cmd.size()\
+    \ == 3 && cmd_is(cmd[0], \"set\")) {\n        *rescode = do_set(cmd, res, reslen);\n\
+    \    } else if (cmd.size() == 2 && cmd_is(cmd[0], \"del\")) {\n        *rescode\
+    \ = do_del(cmd, res, reslen);\n    } else {\n        // cmd is not recognized\
+    \ RES_ERR;\n        *rescode = RES_ERR;\n        const char *msg = \"Unknown cmd\"\
+    ;\n        strcpy((char *)res, msg);\n        *reslen = strlen(msg);\n       \
+    \ return 0;\n    }\n    return 0;\n}\n```\n\nThe parsing of the command is straightforward:\n\
+    \n```\nstatic int32_t parse_req{\n    const uint8_t *data, size_t len, std::vector<std::string>\
+    \ &out\n{\n    if (len < 4) {\n        return -1;\n    }\n    uint32_t n = 0;\n\
+    \    memcpy(&n, &data[0], 4);\n    if (n > k_max_args) {\n```\n\nbuild-your-own.org\n\
+    \n32"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\nreturn -1;\n}\nsize_t pos = 4;\nwhile (n--) --{\n  if (pos + 4 > len)\
+    \ {\n    return -1;\n  }\n  uint32_t sz = 0;\n  memcpy(&sz, &data[pos], 4);\n\
+    \  if (pos + 4 + sz > len) {\n    return -1;\n  }\n  out.push_back(std::string((char*)&data[pos\
+    \ + 4], sz));\n  pos += 4 + sz;\n}\nif (pos != len) {\n  return -1; // trailing\
+    \ garbage\n}\nreturn 0;\n```\n\nThe \"implementation\" of 3 commands:\n\n```\n\
+    enum {\nRES_OK = 0,\nRES_ERR = 1,\nRES_NX = 2,\n};\n```\n\n> // The data structure\
+    \ for the key space. This is just a placeholder\n// until we implement a hashtable\
+    \ in the next chapter.\nstatic std::map<std::string, std::string> g_map;\n\n```\n\
+    static uint32_t do_get(\n  const std::vector<std::string>&cmd, uint8_t *res, uint32_t\
+    \ *reslen);\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "```\nif (!g.map.count(cmd[1])) {\n    return RES_NX;\n}\nstd::string &val =\
+    \ g.map[cmd[1]];\nassert(val.size() <= k_max_msg);\nmemcopy(res, val.data(), val.size());\n\
+    *reslen = (uint32_t)val.size();\nreturn RES_OK;\n```\n\n```\nstatic uint32_t do_set(\n\
+    \    const std::vector<std::string>& &cmd, uint8_t *res, uint32_t *reslen\n{\n\
+    \    (void)res;\n    (void)reslen;\n    g_map[cmd[1]] = cmd[2];\n    return RES_OK;\n\
+    }\n```\n\n```\nstatic uint32_t do_del(\n    const std::vector<std::string>& &cmd,\
+    \ uint8_t *res, uint32_t *reslen\n{\n    (void)res;\n    (void)reslen;\n    g_map.erase(cmd[1]);\n\
+    \    return RES_OK;\n}\n```\n\n```\nstatic int32_t send_req(int fd, const std::vector<std::string>&\
+    \ &cmd) {\n    uint32_t len = 4;\n    for (const std::string &s : cmd) {\n   \
+    \     len += 4 + s.size();\n    }\n    if (len > k_max_msg) {\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "```\nreturn -1;\n}\nchar wbuf[4 + k_max_msg];\nmemcpy(&wbuf[0], &len, 4); //\
+    \ assume little endian\nuint32_t n = cmd.size();\nmemcpy(&wbuf[4], &len, 4);\n\
+    size_t cur = 8;\nfor (const std::string &s : cmd) {\n  uint32_t p = (uint32_t)s.size();\n\
+    \  memcpy(&wbuf[cur], &p, 4);\n  memcpy(&wbuf[cur + 4], s.data(), s.size());\n\
+    \  cur += 4 + s.size();\n}\nreturn write_all(fd, wbuf, 4 + len);\n```\n\n```\n\
+    static int32_t read_res(int fd) {\n  // code omitted...\n\n  // print the result\n\
+    \  uint32_t rescode = 0;\n  if (len < 4) {\n    msg(\"bad response\");\n    return\
+    \ -1;\n  }\n\n  memcpy(&rescode, &wbuf[4], 4);\n  printf(\"server says: [%u].%s\\\
+    n\", rescode, len - 4, &wbuf[8]);\n  return 0;\n}\n```\n\n```\nint main(int argc,\
+    \ char **argv) {\n  int fd = socket(AF_INET, SOCK_STREAM, fd);\n  if (fd < 0)\
+    \ {\n    die(\"socket()\");\n  }\n\n  // code omitted...\n\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "```\nstd::vector<std::string> cmd;\nfor (int i = 1; i < argc; ++i) {\n    cmd.push_back(argv[i]);\n\
+    }\nint32_t err = send_req(fd, cmd);\nif (err) {\n    goto L_DONE;\n}\nerr = read_res(fd);\n\
+    if (err) {\n    goto L_DONE;\n}\nL_DONE:\nclose(fd);\nreturn 0;\n```\n\nTesting\
+    \ commands:\n\n$ ./client get k\nserver says: [2]\n$ ./client set k v\nserver\
+    \ says: [0]\n$ ./client get k\nserver says: [0] v\n$ ./client del k\nserver says:\
+    \ [0]\n$ ./client get k\nserver says: [2]\n$ ./client aaa bbb\nserver says: [1]\
+    \ Unknown cmd"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '+   - 07_client.cpp
+
+    - 07_server.cpp'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# PART 2. ESSENTIAL TOPICS
+
+
+    Learn more network programming and data structures.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# 08. Data Structure: Hashtables
+
+
+    This chapter fills the placeholder code in the last chapter''s server. We''ll
+    start by implementing a hashtable. Hashtables are often the obvious data structure
+    for holding an unknown amount of key-value data that does not require ordering.
+
+
+    There are two kinds of hashtables: chaining and open addressing. Their primary
+    difference is collision resolution. Open addressing seeks another free slot in
+    the event of a collision while simply chaining conflicts with a linked list. There
+    are many variants of open addressing due to the need to find free slots, while
+    the hashtable is pretty much a fixed design. The hashtable used in our server
+    is a chaining one. A chaining hashtable is easy to code; it does not require much
+    choice-making.
+
+
+    The definition of our data types:
+
+
+    ```
+
+    // hashtable node, should be embedded into the payload
+
+    struct HNode {
+
+    HNode *next = NULL;
+
+    uint64_t hcode = 0;
+
+    };
+
+    ```
+
+
+    ```
+
+    // a simple fixed-sized hashtable
+
+    struct HTab {
+
+    HNode **tab = NULL;
+
+    size_t mask = 0;
+
+    size_t size = 0;
+
+    };
+
+    ```
+
+
+    When the size of the hashtable is the power of two, the indexing operation is
+    a simple bit mask with the hash code.
+
+
+    ```
+
+    // n must be a power of 2
+
+    static void h_init(HTab *htab, size_t n) {
+
+    assert(n > 0 && ((n - 1) & n) == 0);
+
+    ab->tab = (HNode **)calloc(sizeof(HNode *), n);\htab->mask = n - 1;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "```\nhtab->size = 0;\n}\n\n// hashtable insertion\nstatic void insert(HTab\
+    \ *htab, HNode *node) {\n  size_t pos = node->hcode & htab->mask;\n  HNode *next\
+    \ = htab->tab[pos];\n  node->next = next;\n  htab->tab[pos] = node;\n  htab->size++;\n\
+    }\n```\n\nThe lookup subroutine is simply a list traversal:\n\n```\n// hashtable\
+    \ look up subroutine.\n// Pay attention to the return value. It returns the address\
+    \ of\n// the parent pointer that owns the target node,\n// which can be used to\
+    \ delete the target node.\nstatic HNode *lookup(HTab *htab, bool key, bool (*cmp)(HNode\
+    \ *, HNode *)) {\n  if (!htab->tab) {\n    size_t pos = key & htab->mask;\n  \
+    \  HNode *from = &htab->tab[pos];\n    while (*from) {\n      if (cmp(*from, key))\
+    \ {\n        return from;\n      }\n      from = &(*from)->next;\n    }\n    return\
+    \ NULL;\n  }\n}\n```\n\nDeleting is easy. Notice how the use of pointers enables\
+    \ succinct code. The from"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "can be either an item of the array or from a node, yet the code doesn't differentiate.\n\
+    \n```\n// remove a node from the chain\nstatic HNode *detach(HTab *htab, HNode\
+    \ **from) {\n    HNode *node = *from;\n    *from = (*from)->next;\n    htab->size--;\n\
+    \    return node;\n}\n```\n\nOur hashtable is fixed in size, we need to migrate\
+    \ to a bigger one when the load factor is too high. There is an extra consideration\
+    \ when using hashtables in Redis. Resizing a large hashtable requires moving a\
+    \ lot of nodes to a new table, which can stall the server for some time. This\
+    \ shall be avoided by not moving everything at once, instead, we keep two hashtables\
+    \ and gradually move them between them. Here is the final hashtable interface:\n\
+    \n```\n// the real hashtable interface.\n// it uses 2 hashtables for progressive\
+    \ resizing.\nstruct HMap {\n    HTab ht1;\n    HTab ht2;\n    size_t resizing.pos\
+    \ = 0;\n};\n```\n\nThe lookup subroutine now helps with resizing:\n\n```\nHNode\
+    \ *hm_lookup(\nnHMap *hmap, HNode *key, bool (*cmp)(HNode *, HNode *))\n{\n  \
+    \  hm.help_resizing(hmap);\n    HNode *from = h_lookup(&hmap->ht1, key, cmp);\n\
+    \    if (!from) {\n        from = h_lookup(&hmap->ht2, key, cmp);\n    }\n   \
+    \ return from ? *from : NULL;\n}\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "The hm_help_resizing function is the subroutine for gradually moving nodes:\n\
+    \n```\nconst size_t k_resizing_work = 128;\n\nstatic void hm_help_resizing(HMap\
+    \ *umap) {\n    if (umap->ht2.tab == NULL) {\n        return;\n    }\n\n    size_t\
+    \ nwork = 0;\n    while (nwork < k_resizing_work && hmap->ht2.size > 0) {\n  \
+    \      // scan for nodes from ht2 and move them to ht1\n        HNode *from =\
+    \ &umap->ht2.tab[umap->resizing_pos];\n        if (!from) {\n            umap->resizing_pos++;\n\
+    \            continue;\n        }\n\n        h_insert(&umap->ht1, h_detach(&umap->ht2,\
+    \ from));\n        nwork++;\n    }\n\n    if (umap->ht2.size == 0) {\n       \
+    \ // done\n        free(umap->ht2.tab);\n        umap->ht2 = HTab();\n    }\n\
+    }\n```\n\nThe insertion subroutine will trigger resizing the table become too\
+    \ full:\n\n```\nconst size_t k_max_load_factor = 8;\n\nvoid hm_insert(HMap *umap,\
+    \ HNode *node) {\n    if (!umap->ht1.tab) {\n        h_init(&umap->ht1, 4);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "```\nh_insert(&hmap->ht1, node);\n```\n\n```\nif (!hmap->ht2.tab) {\n    //\
+    \ check whether we need to resize\n    size_t load_factor = hmap->ht1.size / (hmap->ht1.mask\
+    \ + 1);\n    if (load_factor >= k.max_load_factor) {\n        hmap_start_resizing(hmap);\n\
+    \    }\n}\nhm_help_resizing(hmap);\n```\n\n```\nstatic void hm_start_resizing(Hmap\
+    \ *hmap) {\n    assert(hmap->ht2.tab == NULL);\n    // create a bigger hashtable\
+    \ and swap them\n    hmap->ht2 = hmap->ht1;\n    h_init(&hmap->ht1, (hmap->ht1.mask\
+    \ + 1) * 2);\n    hmap->resizing_pos = 0;\n}\n```\n\nThe subroutine for removing\
+    \ a key. Nothing interesting.\n\n```\nHNode *hm_pop(Hmap *hmap, HNode *key, bool\
+    \ (*cmp)(HNode *, HNode *)) {\n    hm_help_resizing(hmap);\n    HNode **from =\
+    \ &hm_lookup(&hmap->ht1, key, cmp);\n    if (*from) {\n        return hm_detach(&hmap->ht1,\
+    \ from);\n    }\n    from = hm_lookup(&hmap->ht2, key, cmp);\n    if (*from) {\n\
+    \        return hm_detach(&hmap->ht2, from);\n    }\n    return NULL;\n}\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "The hashtable implementation is done. Let's add them to the server. Looking\
+    \ at the struct HNode again, this structure contains no data, how do we actually\
+    \ use that? The answer is called \"intrusive data structure\":\n\n```\n// the\
+    \ structure for the key\nstruct Entry {\n    struct HNode node;\n    std::string\
+    \ key;\n    std::string val;\n};\n```\n\nInstead of making our data structure\
+    \ is the standard way of creating generic data structures in C. Besides making\
+    \ the data structure fully generic, this technique also has the advantage of reducing\
+    \ unnecessary memory management. The structure node is not separately allocated\
+    \ but is part of the payload data, and the data structure code does not own the\
+    \ payload but merely organizes it. This may be a new idea to you if you learned\
+    \ data structures from textbooks, which is probably using void or C++ templates\
+    \ or even macros.\n\nListing the do.get function to show the intrusive data structure\
+    \ is used:\n\n```\n// The data structure for the key space.\nstatic struct {\n\
+    \    HMap db;\n} g_data;\nstatic uint32_t do_get(\nstd::vector<std::string> &cmd,\
+    \ uint8_t *res, uint32_t *reslen)\n{\n    Entry key;\n    key.key.swap(cmd[1]);\n\
+    \    key.node.h = str_hash((uint8_t *)key.key.data(), key.key.size());\n\nHNode\
+    \ *node = hm_lookup(&g_data.db, &key.node, &entry_eq);\nif (!node) {\n    return\
+    \ RES_NX;\n}\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '```
+
+    }
+
+
+    const std::string &val = container_of(node, Entry, node)->val;
+
+    asert(val.size() <= k.max_msg());
+
+    cmempy(res, val.data(), val.size());
+
+    *reslen = (uint32_t)val.size();
+
+    return RES.OK;
+
+    }
+
+    ```
+
+
+    ```
+
+    static bool entry_eq(HNode *lhs, HNode *rhs) {\struct Entry *le = container_of(lhs,
+    struct Entry, node);
+
+    struct Entry *re = container_of(rhs, struct Entry, node);
+
+    return lhs->hcode == rhs->hcode && le->key == re->key;
+
+    }
+
+    ```
+
+
+    The hm_lookup returns a pointer to HNode, which is a member of the Entry, and
+    some pointer arithmetic to convert pointer to an Entry point. The container_of
+    macro is commonly used in C projects for this purpose:
+
+
+    ```
+
+    #define container_of(ptr, type, member) {\
+
+    const typedef ((type*)0)*__mptr __mptr = (ptr); \
+
+    (type*)((char*)__mptr - offsetof(type, member));}}
+
+    ```
+
+
+    The do_set and do_del are both trivial.
+
+
+    ```
+
+    static uint32_t do_set(
+
+    std::vector<std::string> &cmd, uint8_t *res, uint32_t *reslen)
+
+    {
+
+    (void)res;
+
+    (void)reslen;
+
+    nEntry key;
+
+    key.key.swap(cmd[1]);
+
+    key.node.hcode = str_hash((uint8_t*)key.key.data(), key.key.size());
+
+
+    HNode *node = hm_lookup(&g_data.db, &key.node, &entry_eq);
+
+    ```'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "2023-01-31\n\n08. Data Structure: Hashtables\n\n```\nif (node) {\n    Container_of(node,\
+    \ Entry, node)->val.swap(cmd[2]);\n} else {\n    Entry _ent = new Entry();\n \
+    \   ent->key.swap(key.key);\n    ent->node.hcode = node.hcode;\n    ent->val.swap(cmd[2]);\n\
+    \    hm_insert(&g_data.db, &ent->node);\n}\nreturn RES_OK;\n\nstatic uint32_t\
+    \ do_del(\n    std::vector<std::string> &cmd, uint8_t *res, uint32_t *reslen)\n\
+    {\n    (void)res;\n    (void)reslen;\n\n    Entry key;\n    key.swap(cmd[1]);\n\
+    \    key.node.hcode = str_hash((uint8_t*)key.data(), key.size());\n\nHNode *node\
+    \ = hm.pop(&g_data.db, &key.node, &entry_eq);\nif (node) {\n    delete container_of(node,\
+    \ Entry, node);\n}\nreturn RES_OK;\nn}\n```\n\n# Exercises:\n\n+   1. Our hashtable\
+    \ triggers resizing when the load factor is too high, should we also shrink the\
+    \ hashtable when the load factor is too low? Can the shrinking be performed automatically?\n\
+    \nbuild-your-own.org\n\n46"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '+   * 08_server.cpp
+
+    * hashtable.cpp
+
+    * hashtable.h'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "# 09. Data Serialization\n\nFor now, our server protocol response is an error\
+    \ code string plus a key. What if we need to return more complicated data? For\
+    \ example, we might add the **keys** command that returns a list of strings. We\
+    \ have already encoded the list-of-strings in the request protocol. In this chapter,\
+    \ we will generalize the encoding to handle different types of data. This is often\
+    \ called \"serialization\".\n\nOur serialization protocol consists of five types\
+    \ of data:\n\n```\nenum {\n  SER_NIL = 0,\n  SER_ERR = 1,\n  SER_STR = 2,\n  SER_INT\
+    \ = 3,\n  SER_ARR = 4,\n};\n```\n\nThe **SER_NIL** is like NULL, the **SER_ERR**\
+    \ is for returning error code and message, the **SER_STR** and **SER_INT** are\
+    \ for string and int64, and the **SER_ARR** is for arrays.\n\nCode list starts\
+    \ with the `try_one_request` function:\n\n```\nstatic bool try_one_request(Conn\
+    \ *conn) {\n  // code omitted...\n\n  // parse the request\n  std::vector<std::string>\
+    \ cmd;\n  if (0 != parse_req(&conn->rbuf[4], len, cmd)) {\n    msg(\"bad req\"\
+    );\n    conn->state = STATE_END;\n    return false;\n  }\n\n  // got one request,\
+    \ generate the response.\n  std::string out;\n  do_request(cmd, out);\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# 09. Data Serialization\n\n```\n// pack the response into the buffer\nif (4\
+    \ + out.size() > k_max_msg) {\n    out.clear();\n    out_err(out, ERR_2BIG, \"\
+    response is too big\");\n}\nuint32_t wlen = (uint32_t)out.size();\nmemcpy(&conn->wbuf[0],\
+    \ &wlen, 4);\nmemcpy(&conn->wbuf[4], out.data(), out.size());\nconn->wbuf_size\
+    \ = 4 + wlen;\n\n// code omitted...\n```\n\nFor convenience, std::string was used\
+    \ to hold the response data. Production-grade projects often have more sophisticated\
+    \ ways to manage buffers.\n\nA new command keys was added to the do_request handler:\n\
+    \n```\nstatic void do_request(std::vector<std::string> &cmd, std::string &out)\
+    \ {\n    if (cmd.size() == 1 && cmd_is(cmd[0], \"keys\")) {\n        do_keys(cmd,\
+    \ out);\n    } else if (cmd.size() == 2 && cmd_is(cmd[0], \"get\")) {\n      \
+    \  do_get(cmd, out);\n    } else if (cmd.size() == 3 && cmd_is(cmd[0], \"set\"\
+    )) {\n        do_set(cmd, out);\n    } else if (cmd.size() == 2 && cmd_is(cmd[0],\
+    \ \"del\")) {\n        do_del(cmd, out);\n    } else {\n        // cmd is not\
+    \ recognized\n        out_err(out, ERR_UNKNOWN, \"Unknown cmd\");\n    }\n}\n\
+    ```\n\nThe code for our serialization protocol:"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\nstatic void out_nil(std::string &out) {\n    out.push_back(SER_NIL);\n\
+    }\n```\n\n```\nstatic void out_str(std::string &out, const std::string &val) {\n\
+    \    out.push_back(SER_STR);\n    uint32_t len = (uint32_t)val.size();\n    out.append((char\
+    \ *)len, 4);\n    out.append(val);\n}\n```\n\n```\nstatic void out_int(std::string\
+    \ &out, int64_t val) {\n    out.push_back(SER_INT);\n    out.append((char *)val,\
+    \ 8);\n}\n```\n\n```\nstatic void out_err(std::string &out, int32_t code, const\
+    \ std::string &msg) {\n    out.push_back(SER_ERR);\n    out.append((char *)code,\
+    \ 4);\n    uint32_t len = (uint32_t)msg.size();\n    out.append((char *)len, 4);\n\
+    \    out.append(msg);\n}\n```\n\n```\nstatic void out_arr(std::string &out, uint32_t\
+    \ n) {\n    out.push_back(SER_ARR);\n    out.append((char *)n, 4);\n}\n```\n\n\
+    As we can see, the serialization protocol starts with one byte of data type, followed\
+    \ by various types of payload data. Arrays come with their size first, then possibly\
+    \ nested elements.\n\nThe `do_keys` function generates a response consisting of\
+    \ a list of strings:\n\n```\nstatic void h_scan(HTab *tab, void (*f)(HNode *,\
+    \ void *), void *arg) {\n    if (tab->size == 0) {\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "```\nreturn;\n\nfor (size_t i = 0; i < tab->mask + 1; ++i) {\n    HNode *node\
+    \ = tab->tab[i];\n    while (node) {\n        f(node, arg);\n        node = node->next;\n\
+    \    }\n}\n```\n\n```\nstatic void cb_scan(HNode *node, void *arg) {\n    std::string\
+    \ *str = *(std::string *)arg;\n    out_.str(out, container.of(node, Entry, node)->key);\n\
+    }\n```\n\n```\nstatic void do_keys(std::vector<std::string> &cmd, std::string\
+    \ &out) {\n    (void)cmd;\n    out.arr(out, (uint32_t)hm.size(&g.data.db));\n\
+    \    h.scan(&g.data.db.ht1, &cb_scan, &out);\n    h.scan(&g.data.db.ht2, &cb_scan,\
+    \ &out);\n}\n```\n\nThe del command responds with an integer indicating whether\
+    \ the deletion took place.\n\n```\nstatic void do_del(std::vector<std::string>\
+    \ &cmd, std::string &out) {\n    Entry key;\n    key.swap(cmd[1]);\n    key.hcode\
+    \ = str_hash((uint8_t *)key.data(), key.size());\n```\n\n```\nHNode *node = hm_pop(&g.data.db,\
+    \ &key.node, &entry_eq);\nif (node) {\n    delete container.of(node, Entry, node);\n\
+    \    return _int_out(out, node ? 1 : 0);\n}\n```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "The code for other commands is nothing interesting, there is no need to list\
+    \ them.\n\nListing the client \"deserialization\" code:\n\n```\nstatic int32_t\
+    \ on_response(const uint8_t *data, size_t size) {\n    if (size < 1) {\n     \
+    \   msg(\"bad response\");\n        return -1;\n    }\n    switch (data[0]) {\n\
+    \        case SER_NIL:\n            printf(\"nil\\n\");\n            return 1;\n\
+    \        case SER_ERR:\n            if (size < 1 + 8) {\n                msg(\"\
+    bad response\");\n                return -1;\n            }\n            int32_t\
+    \ code = 0;\n            uint32_t len = 0;\n            memcpy(&code, &data[1],\
+    \ 4);\n            memcpy(&len, &data[1 + 4], 4);\n            if (size < 1 +\
+    \ 8 + len) {\n                msg(\"bad response\");\n                return -1;\n\
+    \            }\n            printf(\"err%% %d.*%s\\n\", code, len, &data[1 + 8]);\n\
+    \            return 1 + 8 + len;\n    }\n    case SER_STR:\n        // code omitted...\n\
+    \    case SER_INT:\n        // code omitted...\n    case SER_ARR:\n        if\
+    \ (size < 1 + 4) {\n            msg(\"bad response\");\n            return -1;\n\
+    \        }\n    }\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\n{\n  uint32_t len = 0;\n  memcpy(&len, &data[1], 4);\n  printf(\"arr)\
+    \ len=%%u\\n\", len);\n  size_t arr_bytes = 1 + 4;\n  for (uint32_t i = 0; i <\
+    \ len; ++i) {\n    int32_t rv = on_response(&data[arr_bytes], size - arr_bytes);\n\
+    \    if (rv < 0) {\n      return rv;\n    }\n    arr_bytes += (size_t)rv;\n  }\n\
+    \  printf(\"arr) end\\n\");\n  return (int32_t)arr_bytes;\n}\ndeault:\n  msg(\"\
+    bad response\");\n  return -1;\n}\n```\n\nTesting our new server/client:"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '```
+
+    $ ./client asdf
+
+    (err) 1 Unknown cmd
+
+    $ ./client get asdf
+
+    (nil)
+
+    $ ./client set k v
+
+    (nil)
+
+    $ ./client get k
+
+    (str)
+
+    $ ./client keys
+
+    (arr) len=1
+
+    (str) k
+
+    (arr) end
+
+    $ ./client del k
+
+    (int) 1
+
+    $ ./client del k
+
+    (int) 0
+
+    $ ./client keys
+
+    (arr) len=0
+
+    (arr) end
+
+    ```
+
+
+    +   - 09_client.cpp
+
+    - 09_server.cpp
+
+    - hashtable.cpp
+
+    - hashtable.h'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "# 10. The AVL Tree: Implementation & Testing\n\nWhile Redis is often referred\
+    \ to as a key-value store, the “value” part of Redis is not restricted to plain\
+    \ strings, lists, hashmaps, and sorted sets are quite nice things to have. Redis\
+    \ is also referred to as the “data server” due to its rich set of data structures.\
+    \ Redis is often used as an in-memory cache, and when storing in memory, there\
+    \ is an advantage of freely using data structures. The sorted set data structure\
+    \ in Redis is quite a unique and useful thing. Not only it offers the ability\
+    \ to sort your data in order, but also has the feature of querying ordered by\
+    \ rank. If you put 20M records into a sorted set, you can get the record ranked\
+    \ at 10M, without going through the first 10M records, this is a feat that cannot\
+    \ be emulated by current SQL databases.\n\nAs the name “sorted set” implies, it’s\
+    \ a data structure for sorting. Trees, balanced binary trees, are popular data\
+    \ structures for storing sorted data. Among various data structures, the author\
+    \ found the AVL tree particularly simple and easy to code, which will be used\
+    \ in this book to implement sorted set. The real Redis project usesplist which\
+    \ is also considered easy to code.\n\nThe idea of AVL tree is to restrict the\
+    \ height difference between the left subtree and the right subtree. The height\
+    \ difference between subtrees is restricted to be at most one, when inserting/removing\
+    \ nodes from an AVL tree, the height difference can temporarily reach two, which\
+    \ is then fixed by the node rotations. The rotation operation is the basis of\
+    \ balanced binary trees, which is also used by other balanced trees like the RB\
+    \ tree. After the rotation, a node with a subtree height difference of two is\
+    \ reduced back to at most one.\n\nLet’s start with the tree node:\n\n```\nstruct\
+    \ AVLNode {\n  uint32_t depth = 0;\n  uint32_t cnt = 0;\n  AVLNode *left = NULL;\n\
+    \  AVLNode *right = NULL;\n  AVLNode *parent = NULL;\n};\n\nstatic void avl_init(AVLNode\
+    \ *node) {\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "```\nnode->depth = 1;\nnode->cnt = 1;\nnode->left = node->right = node->parent\
+    \ = NULL;\n}\n```\n\nThis is a regular binary tree with extras. The depth field\
+    \ is is the height of the tree. The cnt field is the size of the tree, this field\
+    \ is not specific to the AVL tree, it is used to implement the rank-based query,\
+    \ which will be explained in the next chapter.\n\nListing some helper functions:\n\
+    \n```\nstatic uint32_t avl_depth(AVLNode +node) {\n  return node ? node->depth\
+    \ : 0;\n}\n```\n\n```\nstatic uint32_t avl_cnt(AVLNode +node) {\n  return node\
+    \ ? node->cnt : 0;\n}\n```\n\n```\nstatic uint32_t max(uint32_t lhs, uint32_t\
+    \ rhs) {\n  return lhs < rhs ? rhs : lhs;\n}\n```\n\n```\n// maintaining the depth\
+    \ and cnt field\nstatic void avl_update(AVLNode +node) {\n  node->depth = 1 +\
+    \ max(avl_depth(node->left), avl_depth(node->right));\n  node->cnt = 1 + avl_cnt(node->left)\
+    \ + avl_cnt(node->right);\n}\n```\n\nThe node rotation code:\n\n```\nstatic AVLNode\
+    \ *rot.left(AVLNode +node) {\n  AVLNode *new_node = node->right;\n  if (new_node->left)\
+    \ {\n    new_node->left->parent = node;\n  }\n  node->right = new_node->left;\n\
+    }\n```"
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "```\nnew_node->left = node;\nnew_node->parent = node->parent;\nnode->parent\
+    \ = new_node;\navl->update(node);\navl->update(new_node);\nreturn new_node;\n\
+    }\n```\n\n```\nstatic AVLNode *rot_right(AVLNode *node) {\n  // a mirror of the\
+    \ rot_left()\n  // code omitted...\n}\n```\n\nb d\n / /\na d => b\n /  / \\\n\
+    nc   a c\n\nThe avl_fix_left and avl_fix_right are functions for fixing excess\
+    \ height difference:\n\n```\n// the left subtree is too deep\nstatic AVLNode *avl_fix_left(AVLNode\
+    \ *root) {\n  if (avl_depth(root->left->left) < avl_depth(root->left->right))\
+    \ {\n    root->left = rot_left(root->left);\n  }\n  return rot_right(root);\n\
+    }\n```\n\n```\n// the right subtree is too deep\nstatic AVLNode *avl_fix_right(AVLNode\
+    \ *root) {\n  if (avl_depth(root->right->right) < avl_depth(root->right->left))\
+    \ {\n    root->right = rot_right(root->right);\n  }\n  return rot_left(root);\n\
+    }\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "If the right subtree is too deep, a left rotation will fix it. Before the left\
+    \ rotation, we may need a right rotation on the right subtree to ensure the right\
+    \ subtree is leaning in the correct direction. Here is the visualization:\n\n\
+    ```\nb      b      d\n / \\/    / \\/\n c  ==> a d ==> b c\n /      / /\n d  \
+    \    c a\n```\n\nThe avl_fix function fixes everything after an insertion/deletion\
+    \ operation. It goes from the initially affected node to the root. Since the rotation\
+    \ may change the root of the tree, the node is returned. This is the core of the\
+    \ AVL tree implementation.\n\n```\n// fix imbalanced nodes and maintain invariants\
+    \ until the root is reached\nstatic AVLNode *avl_fix(AVLNode +node) {\n    while\
+    \ (true) {\n        avl_update(node);\n        uint32_t l = avl_depth(node->left);\n\
+    \        uint32_t r = avl_depth(node->right);\n        AVLNode **from = NULL;\n\
+    \        if (node->parent->left == node) {\n            from = (node->parent)->left\
+    \ ? &node->parent->left : &node->parent->right;\n        }\n        if (l == r\
+    \ + 2) {\n            node = avl_fix_left(node);\n        } else if (l == r ==\
+    \ 2) {\n            node = avl_fix_right(node);\n        }\n        if (!from)\
+    \ {\n            return node;\n        }\n        *from = node;\n        node\
+    \ = node->parent;\n    }\n}\n```\n\nInsertion for binary trees is easy, just walk\
+    \ down from the root until you find an empty subtree and place the new node here,\
+    \ then call up avl_fix for maintenance."
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "2023-01-31\n\n10. The AVL Tree: Implementation & Testing\n\nDeletion is more\
+    \ complicated. If the target node has no subtree, just remove it straight, if\
+    \ it has one subtree, replace the node with that subtree. The problem arises when\
+    \ the node has both subtrees, we can't remove it straight, instead, we remove\
+    \ its sibling in the right subtree, and swap it with the detached sibling. Here\
+    \ is the function for removing a node:\n\n```\n// detach a node and returns the\
+    \ new root of the tree\nstatic AVLNode *avl_del(AVLNode *node) {\n  if (node->right\
+    \ == NULL) {\n    // no right subtree, replace the node with the left subtree\n\
+    \    // link the left subtree to the parent\n    AVLNode *parent = node->parent;\n\
+    \    if (node->left) {\n      node->left->parent = parent;\n    }\n    if (parent)\
+    \ {\n      // attach the left subtree to the parent\n      (parent->left == node)\
+    \ ? parent->left : parent->right = node->left;\n      return avl_fix(parent);\n\
+    \    } else {\n      // removing root?\n      return node->left;\n    }\n  } else\
+    \ {\n    // swap the node with its next sibling\n    AVLNode *victim = node->right;\n\
+    \    while (victim->left) {\n      victim = victim->left;\n    }\n    AVLNode\
+    \ *root = avl_del(victim);\n    *victim = *node;\n    if (victim->left) {\n  \
+    \    victim->left->parent = victim;\n    }\n    if (victim->right) {\n      victim->right->parent\
+    \ = victim;\n    }\n    return root;\n  }\n}\n```\n\nbuild-your-own.org\n\n59"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\nAVLNode *parent = node->parent;\nif (parent) {\n    (parent->left == node\
+    \ ? parent->left : parent->right) = victim;\n    return root;\n} else {\n    //\
+    \ removing root?\n    return victim;\n}\n```\n\nThis is the generic function for\
+    \ removing nodes from a binary tree, with the AVL-tree-specific avl_fix.\n\nReaders\
+    \ with experiences with the RB tree may notice how small and simple the AVL tree\
+    \ implementation is. The maintenance code for RB tree node deletion is significantly\
+    \ more complicated than the insertion; while the AVL tree uses the same function\
+    \ avl_fix for both insertion and deletion, this symmetry greatly reduces the efforts\
+    \ required to code an AVL tree.\n\nThe AVL tree is significantly more complicated\
+    \ than the hashtable we coded before, hence to invest more time on testing. The\
+    \ testing code also demonstrates the usage of those AVL tree functions.\n\nHere\
+    \ are our data types. If you are not familiar with intrusive data structures,\
+    \ read the hashtable chapter.\n\n```\nstruct Data {\n    AVLNode node;\n    uint32_t\
+    \ val = 0;\n};\nstruct Container {\n    AVLNode *root = NULL;\n}\n```\n\nThe insertion\
+    \ code:"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\nstatic void add(Container &c, uint32_t val) {\n  Data *data = new Data();\n\
+    \  avl_init(&data->node);\n  data->val = val;\n\n  if (!c.root) {\n    c.root\
+    \ = &data->node;\n    return;\n  }\n\n  AVLNode *cur = c.root;\n  while (true)\
+    \ {\n    AVLNode **from = container_of(cur, Data, node)->val\n      ? &(val <\
+    \ &cur->left : &cur->right);\n    if (!from) {\n      *from = &data->node;\n \
+    \     data->node.parent = cur;\n      c.root = avl_fix(&data->node);\n      break;\n\
+    \    }\n    cur = *from;\n  }\n}\n```\n\nThis demonstrates the deletion of nodes:\n\
+    \n```\nstatic bool del(Container &c, uint32_t val) {\n  AVLNode *cur = c.root;\n\
+    \  while (cur) {\n    uint32_t node_val = container_of(cur, Data, node)->val;\n\
+    \    if (val == node_val) {\n      node_val;\n      break;\n    }\n    cur = val\
+    \ < node_val ? cur->left : cur->right;\n  }\n  if (!cur) {\n```"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "```\nreturn false;\n}\n\nc.root = avl_del(cur);\ndelete container_of(cur, Data,\
+    \ node);\nreturn true;\n\n```\n\nHere is the function for verifying the correctness\
+    \ of the tree structure:\n\n```\nstatic void avl_verify(AVLNode *parent, AVLNode\
+    \ =node) {\n    if (!node) {\n        return;\n    }\n\n    assert(node->parent\
+    \ == parent);\n    avl_verify(node, node->left);\n    avl_verify(node, node->right);\n\
+    \n    assert(node->cnt == 1 + avl_cnt(node->left) + avl_cnt(node->right));\n\n\
+    \    uint32_t l = avl_depth(node->left);\n    uint32_t r = avl_depth(node->right);\n\
+    \    assert(l == r || l + 1 == r || r == l + 1);\n    assert(node->depth == 1\
+    \ + max(l, r));\n\n    uint32_t val = container_of(node, Data, node)->val;\n \
+    \   if (node->left) {\n        assert(node->left->parent == node);\n        assert(container_of(node->left,\
+    \ Data, node)->val <= val);\n    }\n\n    if (node->right) {\n        assert(node->right->parent\
+    \ == node);\n        assert(container_of(node->right, Data, node)->val >= val);\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "Code for comparing the contents of AVL tree with the expected data:\n\n```\n\
+    static void extract(AVLNode *node, std::multiset<uint32_t> &extracted) {\n  if\
+    \ (!node) {\n    return;\n  }\n  extract(node->left, extracted);\n  extracted.insert(container_of(node,\
+    \ Data, node)->val);\n  extract(node->right, extracted);\n}\n```\n\n```\nstatic\
+    \ void container_verify() {\n  Container &c, const std::multiset<uint32_t> &ref;\n\
+    \  avl_verify(NULL, c.root);\n  assert(avl_cnt(c.root) == ref.size());\n  std::multiset<uint32_t>\
+    \ extracted;\n  extract(c.root, extracted);\n  assert(extracted == ref);\n}\n\
+    ```\n\nDon't forget to clean up after tests:\n\n```\nstatic void dispose(Container\
+    \ &c) {\n  while (c.root) {\n    AVLNode *node = c.root;\n    c.root = avl_del(c.root);\n\
+    \    delete container_of(node, Data, node);\n  }\n}\n```\n\nOur test cases start\
+    \ with simple things:\n\n```\nContainer c;\n\n// some quick tests\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\ncontainer_verify(c, {});\nadd(c, 123);\ncontainer_verify(c, {123});\n\
+    assert(!del(c, 124));\nassert(del(c, 123));\ncontainer_verify(c, {});\n```\n\n\
+    ```\n// sequential insertion\nstd::multiset<uint32_t> ref;\nfor (uint32_t i =\
+    \ 0; i < 1000; i += 3) {\n    add(c, i);\n    ref.insert(i);\n    container_verify(c,\
+    \ ref);\n}\n```\n\nThen we throw in random operations\n\n```\n// random insertion\n\
+    for (uint32_t i = 0; i < 100; i++) {\n    uint32_t val = (uint32_t)rand() % 1000;\n\
+    \    add(c, val);\n    ref.insert(val);\n    container_verify(c, ref);\n}\n```\n\
+    \n```\n// random deletion\nfor (uint32_t i = 0; i < 200; i++) {\n    uint32_t\
+    \ val = (uint32_t)rand() % 1000;\n    auto it = ref.find(val);\n    if (it ==\
+    \ ref.end()) {\n        assert(!del(c, val));\n    } else {\n        assert(del(c,\
+    \ val));\n        ref.erase(it);\n    }\n    container_verify(c, ref);\n}\n```"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "Some targeted tests. Given a tree of a certain size, perform insertion/deletion\
+    \ at every possible position.\n\n```\nstatic void test_insert(uint32_t sz) {\n\
+    \    for (uint32_t val = 0; val < sz; ++val) {\n        Container c;\n       \
+    \ std::multiset<uint32_t> ref;\n        for (uint32_t i = 0; i < sz; ++i) {\n\
+    \            if (i == val) {\n                continue;\n            }\n     \
+    \       add(c, i);\n        }\n        ref.insert(i);\n    }\n    container_verify(c,\
+    \ ref);\n\n    add(c, val);\n    ref.insert(val);\n    container_verify(c, ref);\n\
+    \    dispose(c);\n}\n\nstatic void test_remove(uint32_t sz) {\n    for (uint32_t\
+    \ val = 0; val < sz; ++val) {\n        Container c;\n        std::multiset<uint32_t>\
+    \ ref;\n        for (uint32_t i = 0; i < sz; ++i) {\n            add(c, i);\n\
+    \            ref.insert(i);\n        }\n        container_verify(c, ref);\n  \
+    \  }\n\n    assert(del(c, val));\n    ref.erase(val);\n    container_verify(c,\
+    \ ref);\n    dispose(c);\n}\n```"
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "```\n// insertion/deletion at various positions\nfor (uint32_t i = 0; i < 200;\
+    \ ++i) {\n    test_insert(i);\n    test_remove(i);\n}\n```\n\nWith the help of\
+    \ those test cases, the author did found and fixed a couple of mistakes while\
+    \ writing this chapter.\n\nExercises:\n\n+   1. While there is not much code for\
+    \ our AVL tree, the AVL tree implementation is probably not a very efficient one.\
+    \ Our code contains some reductant pointer updates, which might be a source of\
+    \ optimization. Also, we don't need to store the height value for balancing, it\
+    \ is possible to store the height difference instead. Research and explore AVL\
+    \ tree implementations.\n2. You can create more test cases? The test cases presented\
+    \ in this chapter are unlikely to be sufficient.\n\n+   - avl.cpp\n- test_avl.cpp"
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# 11. The AVL Tree and the Sorted Set\n\nBased on the AVL tree in the last\
+    \ chapter, the sorted set data structure can be easily added.\nThe structure definition:\n\
+    \n```\nstruct ZSet {\n    AVLNode *tree = NULL;\n    HMap hmap;\n};\n\nstruct\
+    \ ZNode {\n    AVLNode tree;\n    HNode hmap;\n    double score = 0;\n    size_t\
+    \ len = 0;\n    char name[0];\n};\n\nstatic ZNode *znode_new(const char *name,\
+    \ size_t len, double score) {\n    ZNode *node = (ZNode*)malloc(sizeof(ZNode)\
+    \ + len);\n    assert(node); // not a good idea in real projects\n    avl_init(&node->tree);\n\
+    \    node->hmap.next = NULL;\n    node->hmap.code = str_hash((uint8_t *)name,\
+    \ len);\n    node->score = score;\n    node->len = len;\n    memcpy(&node->name[0],\
+    \ name, len);\n    return node;\n}\n```\n\nThe sorted set is a sorted list of\
+    \ pairs of (score, name) that supports query or update by\nt sorting key, or by\
+    \ the name. It's a combination of the AVL tree and hashtable, and the\npair node\
+    \ belongs to both, which demonstrates the flexibility of intrusive data structures.\n\
+    The name string is embedded at the end of the pair node, in the hope of saving\
+    \ some\nspace overheads."
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "# 2023-01-31 11. The AVL Tree and the Sorted Set\n\nThe function for tree insertion\
+    \ is roughly the same as the testing code seen from the previous chapter:\n\n\
+    ```\n// insert into the AVL tree\nstatic void tree_add(Zset *zset, ZNode *node)\
+    \ {\n    if (!zset->tree) {\n        zset->tree = &node->tree;\n        return;\n\
+    \    }\n\n    AVLNode *cur = zset->tree;\n    while (true) {\n        AVLNode\
+    \ *from = zless(&node->tree, cur) ? &cur->left : &cur->right;\n        if (!from)\
+    \ {\n            *from = &node->tree;\n            node->tree.parent = cur;\n\
+    \            zset->tree = avl_fix(&node->tree);\n            break;\n        }\n\
+    \        cur = *from;\n    }\n}\n```\n\nzless is the helper function for comparing\
+    \ two pairs:\n\n```\n// compare by the (score, name) tuple\nstatic bool zless(\n\
+    \    AVLNode *lhs, double score, const char *name, size_t len) {\n    ZNode *zl\
+    \ = container_of(lhs, ZNode, tree);\n    if (zl->score != score) {\n        return\
+    \ zl->score < score;\n    }\n    int rv = memcmp(zl->name, name, min(zl->len,\
+    \ len));\n    if (rv != 0) {\n        return rv < 0;\n    }\n})\n```\n\nbuild-your-own.org\
+    \ 68"
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: "# 11. The AVL Tree and the Sorted Set\n\n```\nreturn zl->len < len;\n\nstatic\
+    \ bool zless(AVLNode *lhs, AVLNode *rhs) {\n  ZNode *zr = container_of(rhs, ZNode,\
+    \ tree);\n  return zless(lhs, zr->score, zr->name, zr->len);\n}\n```\n\nThe insertion/update\
+    \ subroutines:\n\n```\n// update the score of an existing node (AVL tree reinsertion)\n\
+    static void zset_update(ZSet *zset, ZNode *node, double score) {\n  if (node->score\
+    \ == score) {\n    return;\n  }\n  zset->tree = avl_del(&node->tree);\n  node->score\
+    \ = score;\n  avl_init(&node->tree);\n  tree_add(zset, node);\n}\n```\n\n```\n\
+    // add a new (score, name) tuple, or update the score of the existing node\nbool\
+    \ zset_add(ZSet *zset, const char *name, size_t len, double score)) {\n  ZNode\
+    \ *node = zset_lookup(zset, name, len);\n  if (node) {\n    zset_update(zset,\
+    \ node, score);\n    return false;\n  } else {\n    node = znode_new(name, len,\
+    \ score);\n    hm_insert(&zset->hmap, &node->hmap);\n    tree_add(zset, node);\n\
+    \    return true;\n  }\n}\n```\n\n```\n// lookup by name\nZNode zset_lookup(ZSet\
+    \ *zset, const char *name, size_t len) {\n```"
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "# 11. The AVL Tree and the Sorted Set\n\n```\n// just a hashtable look up\n\
+    // code omitted...\n}\n```\n\nHere is the primacy case of sorted sets: the range\
+    \ query.\n\n```\n// find the (score, name) tuple that is greater or equal to the\
+    \ argument,\n// then offset relative to it.\nNode =zset_query(\nZSet *zset, double\
+    \ score, const char *name, size_t len, int64_t offset\n{\nAVLNode *found = NULL;\n\
+    AVLNode *cur = zset->tree;\nwhile (cur) {\n  if (zless(cur, score, name, len))\
+    \ {\n    cur = cur->right;\n  } else {\n    found = cur; // candidate\n    cur\
+    \ = cur->left;\n  }\n}\nif (found) {\n  found = avl_offset(found, offset);\n}\n\
+    return found ? container_of(found, ZNode) : NULL;\n}\n```\n\nThe range query is\
+    \ just a regular binary tree look-up, followed by an offset operation. The offset\
+    \ operation is what makes the sorted set special, it is not a regular binary tree\
+    \ walk.\n\nLet's review the AVLNode:\n\n```\nstruct AVLNode {\nuint32_t depth\
+    \ = 0;\nuint32_t cnt = 0;\nAVLNode *left = NULL;\n```\n\nbuild-your-own.org\n\n\
+    70"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "2023-01-31\n\n11. The AVL Tree and the Sorted Set\n\n```\nAVLNode *right =\
+    \ NULL;\nAVLNode *parent = NULL;\n};\n```\n\nIt has an extra cnt field (the size\
+    \ of the tree), which is not explained in the previous chapter. It is used by\
+    \ the avl_offset function:\n\n```\n// offset into the succeeding or preceding\
+    \ node.\n// note: the worst-case is O(logn) regardless of how long the offset\
+    \ is.\nAVLNode *avl_offset(AVLNode *node, int64_t offset) {\n    int64_t pos =\
+    \ 0; // relative to the starting node\n    while (offset != 0) {\n        if (pos\
+    \ < offset && avl_cnt(node->right) >= offset) {\n            // the target is\
+    \ inside the right subtree\n            node = node->right;\n            pos +=\
+    \ avl_cnt(node->left) + 1;\n        } else if (pos > offset && avl_cnt(node->left)\
+    \ <= offset) {\n            // the target is inside the left subtree\n       \
+    \     node = node->left;\n            pos += avl_cnt(node->right) + 1;\n     \
+    \   } else {\n            // go to the parent\n            AVLNode *parent = node->parent;\n\
+    \            if (!parent) {\n                return NULL;\n            }\n   \
+    \         if (parent->right == node) {\n                pos -= avl_cnt(node->left)\
+    \ + 1;\n            }\n            node = parent;\n        }\n    }\n    return\
+    \ node;\n}\n```\n\nbuild-your-own.org\n\n71"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# 2023-01-31 11. The AVL Tree and the Sorted Set\n\nWith the size information\
+    \ embedded in the node, we can determine whether the offset target is inside a\
+    \ subtree or not. The offset operation runs in two phases: firstly, it walks up\
+    \ along the tree if the target is not in a subtree, it walks down the tree, narrowing\
+    \ the distance until the target is met. The worst-case is O(logn)) regardless\
+    \ of how long the offset is, which is better than offsetting by walking to the\
+    \ succeeding node one by one (best-case of O(offset)). The real Redis project\
+    \ uses a similar technique for skip lists.\nIt is a good idea to implement and\
+    \ test the new avl_offset function now.\n\n```\nstatic void test_case(uint32_t\
+    \ sz) {\n  Container c;\n  for (uint32_t i = 0; i < sz; ++i) {\n    add(c, i);\n\
+    \  }\n\n  AVLNode *min = c.root;\n  while (min->left) {\n    min = min->left;\n\
+    \  }\n  for (uint32_t i = 0; i < sz; ++i) {\n    AVLNode *node = avl_offset(min,\
+    \ (int64_t)i);\n    assert(container_of(node, Data, node)->val == i);\n\n    for\
+    \ (uint32_t j = 0; j < sz; ++j) {\n      int64_t offset = (int64_t)j - (int64_t)i;\n\
+    \      AVLNode *n2 = avl_offset(node, offset);\n      assert(container_of(n2,\
+    \ Data, node)->val == j);\n    }\n    assert(!avl_offset(node, -(int64_t)i - 1));\n\
+    \    assert(!avl_offset(node, sz - i));\n  }\n\n  dispose(c.root);\n}\n```\n\n\
+    For now, we have implemented major functionalities of the sorted set. Let’s add\
+    \ the sorted type to our server."
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "```\nenum {\n    T_STR = 0,\n    T_ZSET = 1,\n};\n\n// the structure for the\
+    \ key\nstruct Entry {\n    struct HNode node;\n    std::string key;\n    std::string\
+    \ val;\n    uint32_t type = 0;\n    ZSet *zset = NULL;\n};\n```\n\nThe rest of\
+    \ the code is considered trivial, which will be omitted in the code listing.\n\
+    \nAdding a Python script for testing new commands:"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\nCASES = r'''\n$ ./client zscore asdf nl1\n(nil)\n$ ./client zquery xxx\
+    \ 1 asdf 1 10\n(arr) len=0\n(arr) end\n# more cases...\n...\n\nimport shlex\n\
+    import subprocess\n\ncmds = []\noutputs = []\nlines = CASES.splitlines()\nfor\
+    \ x in lines:\n    x = x.strip()\n    if not x:\n        continue\n    if x.startswith('$\
+    \ '):\n        cmds.append(x[2:])\n        outputs.append('')\n    else:\n   \
+    \     outputs[-1] = outputs[-1] + x + '\\n'\n)'''\n```\n\nassert len(cmds) ==\
+    \ len(outputs)\nfor cmd, expect in zip(cmds, outputs):\n    out = subprocess.check_output(shlex.split(cmd)).decode('utf-8')\n\
+    \    assert out == expect, f'cmd:{cmd} out:{expect}'\n\nExercises:\n\n+   1. The\
+    \ avl_offset function gives the ability to query sorted set by rank, reverse a\
+    \ node in an AVL tree, find its rank, with a worst-case of **O(log(n))**. (This\
+    \ is the zcommand).\n2. Another sorted set application: count the number of elements\
+    \ within a range. (also with a worst-case of **O(log(n))**).\n3. The **11_server.cpp**\
+    \ file already contains some shlex commands, trying adding more."
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '+   * 11_client.cpp
+
+    * 11_server.cpp
+
+    * avl.cpp
+
+    * avl.h
+
+    * common.h
+
+    * hashtable.cpp
+
+    * hashtable.h
+
+    * test_cmds.py
+
+    * test_offset.cpp
+
+    * zset.cpp
+
+    * zset.h'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# 12. The Event Loop and Timers\n\nThere is one major thing missing in our\
+    \ server: timeouts. Every networked application needs to handle timeouts since\
+    \ the other side of the network can just disappear. Not only do ongoing IO operations\
+    \ like read/write need timeouts, but it is also a good idea to kick idle TCP connections.\
+    \ To implement timeouts, the event loop must be modified so the poll is the only\
+    \ thing that is blocking.\n\nLooking at our event loop code:\n\n```\nint rv =\
+    \ poll(poll_args.data(), (nfds_t)poll_args.size(), 1000);\n```\n\nThe poll syscall\
+    \ takes a timeout argument, which imposes an upper bound of time on the poll syscall.\
+    \ The timeout value is currently an arbitrary value of 1000 ms. If we set the\
+    \ timeout value according to the timer, poll should wake up at the time it expires,\
+    \ or before that; then we have a chance to fire the timer in due time.\n\nThe\
+    \ problem is that we have more than one timer, the timeout value of poll should\
+    \ be the value of the nearest timer. Some data structure is needed for finding\
+    \ the nearest timer. The heap data structure is a popular choice for finding the\
+    \ min/max value and is often used for such purpose. Also, any data structure for\
+    \ sorting can be used. For example, we can use the AVL tree to order timers and\
+    \ possibly augment the tree to keep track of the minimum value.\n\nLet's start\
+    \ by adding timers to kick idle TCP connections. For each connection there is\
+    \ a timer, set to a fixed timeout in the future, every time there are IO activities\
+    \ on the connection, the timer is renewed to a fixed timeout. Notice that we renew\
+    \ a timer, it becomes the most distant one; therefore, we can exploit this to\
+    \ simplify the data structure; a simple linked list is sufficient to keep the\
+    \ order of timers: the new or updated timer simply goes to the end of the list,\
+    \ and the list maintains sorted order. Also, operations on linked lists are O(1),\
+    \ which is better than sorting data structures.\n\nDefining the linked list is\
+    \ a trivial task:\n\n```\nstruct DList {\n    DList *prev = NULL;\n    DList *next\
+    \ = NULL;\n```"
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "```\n};\n\ninline void dlist_init(DList *node) {\n    node->prev = node->next\
+    \ = node;\n}\n```\n\n```\ninline bool dlist_empty(DList *node) {\n    return node->next\
+    \ = node;\n}\n```\n\n```\ninline void dlist_detach(DList *node) {\n    DList *prev\
+    \ = node->prev;\n    DList *next = node->next;\n    prev->next = next;\n    next->prev\
+    \ = prev;\n}\n```\n\n```\ninline void dlist_insert_before(DList *target, DList\
+    \ *rookie) {\n    DList *prev = target->prev;\n    prev->next = rookie;\n    rookie->prev\
+    \ = prev;\n    rookie->next = target;\n    target->prev = rookie;\n}\n```\n\n\
+    get_monotonic_usec is the function for getting the time. Note that the timestamp\
+    \ is monotonic. Timestamp jumping backward can cause all sorts of troubles in\
+    \ computer systems.\n\n```\nstatic uint64_t get_monotonic_usec() {\n    timespec\
+    \ tv = {0, 0};\n    clock_gettime(CLOCK_MONOTONIC, &tv);\n    return uint64_t(tv.tv_sec)\
+    \ * 1000000 + tv.tv_nsec / 1000;\nn\n```\n\nThe next step is adding the list to\
+    \ the server and the connection struct."
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# 12. The Event Loop and Timers
+
+
+    2023-01-31
+
+
+    ```
+
+    // global variables
+
+    static struct {
+
+    HMap db;
+
+    // a map of all client connections, keyed by
+
+    std::vector<Conn *> fd2conn;
+
+    // timers for idle connections
+
+    DList idle_list;
+
+    } g_data;
+
+    ```
+
+
+    ```
+
+    struct Conn {
+
+    int fd = -1;
+
+    uint32_t state = 0; // either STATE_REQ or STATE_RES
+
+    // buffer for reading
+
+    size_t rbuf_size = 0;
+
+    uint8_t rbuf[4 + k.max_msg];
+
+    // buffer for writing
+
+    size_t wbuf_size = 0;
+
+    size_t wbuf_sent = 0;
+
+    uint8_t wbuf[4 + k.max_msg];
+
+    uint64_t idle_start = 0;
+
+    // timer
+
+    DList idle_list;
+
+    };
+
+    ```
+
+
+    An overview of the modified event loop:
+
+
+    ```
+
+    int main() {
+
+    // some initializations
+
+    dlist_init(&data.idle_list);
+
+
+    int fd = socket(AF_INET, SOCK_STREAM, 0);
+
+    // bind, listen & other miscs
+
+    // code omitted..
+
+    ```
+
+
+    build-your-own.org
+
+
+    78'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "```\n// the event loop\nstd::vector<struct pollfd> poll_args;\nwhile (true)\
+    \ {\n    // prepare the arguments of the poll()\n    // code omitted...\n\n  \
+    \  // poll for active fds\n    int timeout_ms = (int)next_timer.ms();\n    int\
+    \ rv = poll(poll_args.data(), (nfds_t)poll_args.size(), timeout_ms);\n    if (rv\
+    \ < 0) {\n        die(\"poll\");\n    }\n\n    // process active connections\n\
+    \    for (size_t i = 1; i < poll_args.size(); ++i) {\n        if (poll_args[i].events)\
+    \ {\n            Conn *conn = g.data.fd2conn[poll_args[i].fd];\n            connection.io(conn);\n\
+    \            if ((conn)->state == STATE_END) {\n                // client closed\
+    \ normally, or something bad happened.\n                destroy this connection\n\
+    \                conn.done(conn);\n            }\n        }\n    }\n\n    // handle\
+    \ timers\nprocess..timers();\n\n    // try to accept a new connection if the listening\
+    \ fd is active\n    if (poll_args[0].events) {\n        (void)accept_new_conn(fd);\n\
+    \    }\n\n    return 0;\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "```\nstatic void process_timers() {\n  uint64_t now_us = get_monotonic_use();\n\
+    \  while (dlist.empty(&g_data.idle_list)) {\n    Conn *next = container_of(g_data.idle_list.next,\
+    \ Conn, idle_list);\n    uint64_t next_us = next->idle_start + k_idle_timeout_ms\
+    \ * 1000;\n    if (next_us >= now_us + 1000us) {\n      // not ready, the extra\
+    \ 1000us is for the ms resolution of poll()\n      break;\n    }\n}\n```"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "}\n\n```\nprintf(\"removing idle connection: %d\\n\", next->fd);\nconn->done(next);\n\
+    ```\n\n}\n\n}\n\nTimers are updated in the connection_io function:\n\n```\nstatic\
+    \ void connection_io(Conn *conn) {\n  // waked up by poll, update the idle timer\n\
+    \  // moving conn to the end of the list.\n  conn->idle_start = get_monotonic_usec();\n\
+    \  dlist_detach(&conn->idle_list);\n  dlist_insert_before(&g_data.idle_list, &conn->idle_list);\n\
+    \n  // do the work\n  if (conn->state == STATE_REQ) {\n    state_req(conn);\n\
+    \  } else if (conn->state == STATE_RES) {\n    state_res(conn);\n  } else {\n\
+    \    assert(0); // not expected\n  }\n}\n```\n\nTimers are initialized in the\
+    \ accept_new_conn function:\n\n```\nstatic int32_t accept_new_conn(int fd) {\n\
+    \  // code omitted...\n\n  // creating the struct Conn\n  struct Conn *conn =\
+    \ (struct Conn *)malloc(sizeof(struct Conn));\n  if (!conn) {\n    close(fd);\n\
+    \    return -1;\n\n```"
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '```
+
+    }
+
+    conn->fd = connfd;
+
+    conn->state = STATE_REQ;
+
+    conn->rbuf_size = 0;
+
+    conn->wbuf_size = 0;
+
+    conn->wbuf_start = 0;
+
+    conn->idle_start = get_monotonic_usec();
+
+    dlist_insert_before(&g.data.idle_list, &conn->idle_list);
+
+    conn->put(g.data.fd2conn, conn);
+
+    return 0;
+
+    ```
+
+
+    Don''t forget to remove the connection from the list when:
+
+
+    ```
+
+    static void conn_done(Conn *conn) {
+
+    g.data.fd2conn[conn->fd] = NULL;
+
+    (void)close(conn->fd);
+
+    dlist_detach(&conn->idle_list);
+
+    free(conn);
+
+    }
+
+    ```
+
+
+    We can test the idle timeouts using the nc or socat command:
+
+
+    ```
+
+    $ ./server
+
+    removing idle connection: 4
+
+    ```
+
+
+    ```
+
+    $ socat tcp:127.0.0.1:1234 -
+
+    ```
+
+
+    The server should close the connection by 5s.
+
+
+    Exercises:
+
+
+    +   1. Add timeouts to IO operations (read & write).
+
+    2. Try to implement more generic timers using sorting data structures.'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '+   * 12_server.cpp
+
+    * avl.cpp
+
+    * avl.h
+
+    * common.h
+
+    * hashtable.cpp
+
+    * hashtable.h
+
+    * list.h
+
+    * zset.cpp
+
+    * zset.h'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "# 13. The Heap Data Structure and the TTL\n\nThe primary use of Redis is as\
+    \ cache servers, and one way to manage the size of the cache is through explicitly\
+    \ setting TTLs (time to live). TTLs can be implemented using timers. Unfortunately,\
+    \ timers in the last chapter are of fixed value (using linked lists); thus, a\
+    \ sorting data structure is needed for implementing arbitrary and mutable timeouts;\
+    \ and the heap data structure is a popular choice. Compared with the AVL tree\
+    \ we used before, the heap data structure has the advantage of using less space.\n\
+    \nA quick review of the heap data structure:\n\n+   1. A heap is a binary tree,\
+    \ packed into an array; and the layout of the tree is fixed. The parent–child\
+    \ relationship is implicit, pointers are not included in heap elements.\n2. The\
+    \ only constraint on the tree is that parents are no bigger than their kids.\n\
+    3. The value of an element can be updated. If the value changes:\n    * Its value\
+    \ is bigger than before: it may be bigger than its kids, and if so, swap it with\
+    \ the smallest kid, so that the parent–child constraint is satisfied again. Now\
+    \ that one of the kids is bigger than before, continue this process until reaching\
+    \ a leaf.\n    * Its value is smaller: likewise, swap it with its parent until\
+    \ reaching the root.\n4. New elements are added to the end of the array as leaves.\
+    \ Maintain the constraint as above.\n5. When removing an element from a heap,\
+    \ replace it with the last element in the array, then maintain the constraint\
+    \ as its value was updated.\n\nThe code listing begins:\n\n```\nstruct HeapItem\
+    \ {\n    uint64_t val = 0;\n    size_t *ref = NULL;\n};\n// the structure for\
+    \ the key\nstruct Entry {\n    struct HNode node;\n    std::string key;\n```"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "```\nstd::string val;\nuint32_t type = 0;\nZSet *zset = NULL;\n// for TTLs\n\
+    size_t heap.idx = -1;\n```\n\nThe heap is used to order the timestamps, and the\
+    \ Entry is mutually linked with the timestamp. The heap_idx is the index of the\
+    \ corresponding HeapItem, and the ref points to the Entry. We are using the intrusive\
+    \ data structure again, the ref pointer points to the heap_idx field.\n\nThe parent-child\
+    \ relationship is fixed:\n\n```\nstatic size_t heap.parent(size_t i) {\n  return\
+    \ (i + 1) / 2 - 1;\n}\n```\n\n```\nstatic size_t heap.left(size_t i) {\n  return\
+    \ i * 2 + 1;\n}\n```\n\n```\nstatic size_t heap.right(size_t i) {\n  return i\
+    \ * 2 + 2;\n}\n```\n\nSwap with the parent when a kid is smaller than its parent.\
+    \ Note the heap_idx is updated through the ref pointer while swapping.\n\n```\n\
+    static void heap.up(HeapItem *a, size_t pos) {\n  HeapItem t = a[pos];\n  while\
+    \ (pos > 0 && a[heap.parent(pos)].val > t.val) {\n    // swap with the parent\n\
+    \    a[pos] = a[heap.parent(pos)];\n    *a[pos].ref = pos;\n    pos = heap.parent(pos);\n\
+    \  }\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\n}\na[pos] = t;\n*a[pos].ref = pos;\n}\n```\n\nSwapping with the smallest\
+    \ kid is similar.\n\n```\nstatic void heap_down(HeapItem *a, size_t pos, size_t\
+    \ len) {\n  HeapItem t = a[pos];\n  while (true) {\n    // find the smallest one\
+    \ among the parent and their kids\n    size_t l = heap.left(pos);\n    size_t\
+    \ r = heap.right(pos);\n    size_t min_pos = -1;\n    size_t min_val = t.val;\n\
+    \    if (l < len && a[l].val < min_val) {\n      min_pos = l;\n      min_val =\
+    \ a[l].val;\n    }\n    if (r < len && a[r].val < min_val) {\n      min_pos =\
+    \ r;\n    }\n    if (min_pos == (size_t)-1) {\n      break;\n    }\n    // swap\
+    \ with the kid\n    a[pos] = a[min_pos];\n    *a[pos].ref = pos;\n    pos = min_pos;\n\
+    \  }\n  a[pos] = t;\n  *a[pos].ref = pos;\n}\n```\n\nThe heap..update is the heap\
+    \ function for updating a position. It is used for updating, inserting, and deleting."
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "```\nvoid heap_update(HeapItem *a, size_t pos, size_t len) {\n  if (pos > 0\
+    \ && heap->parent(pos).val > a[pos].val) {\n    heap.up(a, pos);\n  } else {\n\
+    \    heap.down(a, pos, len);\n  }\n}\n```\n\nAdd the heap to our server:\n\n```\n\
+    // global variables\nstatic struct {\nHMap db;\n  // map of all client connections,\
+    \ keyed by fd\nstd::vector<Conn *> fd2conn;\n  // timers for idle connections\n\
+    DList idle_list;\n  // timers for TTLs\nstd::vector<HeapItem> heap;\n} g.data;\n\
+    ```\n\nUpdating, adding, and removing a timer to the heap. Just call the heap_update\
+    \ updating an element of the array.\n\n```\n// set or remove the TTL\nstatic void\
+    \ entry_set_ttl(Entry *ent, int64_t ttl_ms) {\n  if (ttl_ms < 0 && ent->heap_idx\
+    \ != (size_t)-1) {\n    // erase item from the heap\n    // by replacing it with\
+    \ the last item in the array.\n    size_t pos = ent->heap_idx;\n    g.data.heap[pos]\
+    \ = g.data.heap.back();\n    g.data.heap.pop_back();\n    if (pos < g.data.heap.size())\
+    \ {\n      heap.update(g.data.heap.data(), pos, g.data.heap.size());\n    }\n\
+    \    ent->heap_idx = -1;\n  }\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "```\nelse if (ttl_ms >= 0) {\n  size_t pos = ent->heap_idx;\n  if (pos == (size_t)-1)\
+    \ {\n    // add an new item to the heap\n    HeapItem item;\n    item.ref = &ent->heap_idx;\n\
+    \    g.data.heap.push_back(item);\n    pos = g.data.heap.size() - 1;\n  }\n  g.data.heap[pos].val\
+    \ = get_monotonic_usec() + (uint64_t)ttl_ms + 1000;\n  heap.update(g.data.data(),\
+    \ pos, g.data.heap.size());\n}\n```\n\nRemoving the possible TTL timer when deleting\
+    \ an Entry:\n\n```\nstatic void entry_del(Entry *ent) {\n  switch (ent->type)\
+    \ {\n    case T_ZSET:\n      zset_dispose(ent->zset);\n      delete ent->zset;\n\
+    \      break;\n  }\n  entry_set_ttl(ent, -1);\n  delete ent;\n}\n```\n\nThe next_timer_ms\
+    \ function is modified to use both idle timers and TTL timers.\n\n```\nstatic\
+    \ uint32_t next_timer_ms() {\n  uint64_t now = get_monotonic_usec();\n  uint64_t\
+    \ next = (uint64_t)-1;\n\n  // idle timers\n  if (!dlist.empty(g.data.idle_list))\
+    \ {\n    Conn *next = container_of(g.data.idle_list.next, Conn, idle_list);\n\n\
+    ```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\nnext_us = next->idle_start + k_idle_timeout_ms = 1000;\n}\n```\n\n```\n\
+    // ttl timers\nif (!g.data.heap.empty() && g.data.heap[0].val < next_us) {\nnext_us\
+    \ = g.data.heap[0].val;\n}\n```\n\n```\nif (next_us == (uint64_t)-1) {\n  return\
+    \ 10000; // no timer, the value doesn't matter\n}\n```\n\n```\nif (next_us <=\
+    \ now->us) {\n  // missed?\n  return 0;\n}\n```\n\n```\nreturn (uint32_t)(next_us\
+    \ - now->us) / 1000;\n```\n\nAdding TTL timers to the `process_timers` function:\n\
+    \n```\nstatic void process_timers() {\n  // the extra 1000us is for the ms resolution\
+    \ of poll()\nuint64_t now_us = get_monotonic_usec() + 1000;\n```\n\n```\n// idle\
+    \ timers\nwhile (!idlelist.empty(&g.data.idle_list)) {\n  // code omitted...\n\
+    }\n```\n\n```\n// TTL timers\nconst size_t k_max_works = 2000;\nsize_t nworks\
+    \ = 0;\nwhile (!g.data.heap.empty() && g.data.heap[0].val < now_us) {\n  Entry\
+    \ *ent = container_of(g.data.heap[0].ref, Entry, heap_idx);\nHNode *node = hmp_pop(&g.data.db,\
+    \ &ent->node, &hnode_same);\n  assert(node == &ent->node);\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\nentry_del(ent);\nif (nworks++ >= k_max_works) {\n    // don't stall the\
+    \ server if too many keys are expiring at once\n    break;\n}\n```\n\nThis is\
+    \ just checking the minimal value of the heap and removing keys. Note that we\
+    \ put a limit on the number of keys expired per event loop iteration; the limit\
+    \ is needed to prevent the server from stalling there there are too many keys\
+    \ expiring at once.\nThe command for updating and querying TTLs is straightforward\
+    \ to add:\n\n```\nstatic void do_expire(std::vector<std::string>&cmd, std::string\
+    \ &out) {\nint64_t ttl_ms = 0;\nif (!str2int(cmd[2], ttl_ms)) {\n    return out_err(out,\
+    \ ERR_ARG, \"expect int64\");\n}\n\nEntry key;\nkey.key.swap(cmd[1]);\nkey.node.hcode\
+    \ = str_hash((uint8_t *)key.key.data(), key.key.size());\n\nHNode *node = hm_lookup(&key.data.db,\
+    \ &key.node, &entry.eq);\nif (node) {\n    Entry -ent = container_of(node, Entry,\
+    \ node);\n    entry_set_ttl(ent, ttl_ms);\n}\nreturn out_int(out, node ? 1 : 0);\n\
+    }\n```\n\n```\nstatic void do_ttl(std::vector<std::string>&cmd, std::string &out)\
+    \ {\nEntry key;\nkey.key.swap(cmd[1]);\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "# 13. The Heap Data Structure and the TTL\n\n```\nkey.node.hcode = str_hash((uint8_t\
+    \ *)key.key.data(), key.key.size());\n\nHNode *node = hm_lookup(&g_data.db, &key.node,\
+    \ &entry_eq);\nif (!node) {\n    return out_int(out, -2);\n}\n\nEntry *ent = container_of(node,\
+    \ Entry, node);\nif (ent->heap_idx == (size_t)-1) {\n    return out_int(out, -1);\n\
+    }\n\nuint64_t expire_at = g_data.heap[ent->heap_idx].val;\nuint64_t now_us = get_monotonic.use();\n\
+    return out_int(out, expire_at > now_us ? (expire_at - now_us) / 1000 : 0);\n```\n\
+    \nExercises:\n\n+   1. The heap-based timer adds O(log(n)) operations to the server,\
+    \ which might be a bottleneck for a sufficiently large number of keys. Can you\
+    \ think of optimizations for a large number of timers?\n2. The real Redis does\
+    \ not use sorting for expiration, find out how it is done, and list the pros and\
+    \ cons of both approaches.\n\n+   * 13_server.cpp\n* avl.cpp\n* avl.h\n* common.h\n\
+    * hashtable.cpp\n* hashtable.h\n* heap.cpp\n* heap.h\n* list.h\n* test_heap.cpp\n\
+    * zset.cpp"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: +   - zset.h
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# 14. The Thread Pool & Asynchronous Tasks\n\nThere is a flaw in our server\
+    \ since the introduction of the sorted set data type: the deletion of keys. If\
+    \ the size of a sorted set is huge, it can take a long time to free its nodes\
+    \ and the server is stalled during the destruction of the key. This can be easily\
+    \ fixed by using multi-threading to move the destructor away from the main thread.\n\
+    \nFirstly, we introduce the \"thread pool\", which is literally a pool of threads.\
+    \ The thread from the pool consumes tasks from a queue and executes them. It is\
+    \ trivial to code a multi-producer multi-consumer queue using pthread APIs. (Although\
+    \ there is only a single producer in our case.)\n\nThe relevant thread primitives\
+    \ are pthread_mutex_t and pthread_cond_t; they are called the mutex and the condition\
+    \ variable respectively. If you are unfamiliar with them, it is advised to get\
+    \ some education on multi-threading after reading this chapter. (Such as manpages\
+    \ of the pthread APIs, textbooks on operating systems, online courses, etc.)\n\
+    \n+   * The queue is accessed by multiple threads (both the producer and consumers),\
+    \ so it needs the protection of a mutex, obviously.\n\n+   * The consumer threads\
+    \ should be sleeping when idle, and only be woken up when the queue is not empty,\
+    \ this is the job of the condition variable.\n\nThe thread pool data type is defined\
+    \ as follows:\n\n```\nstruct Work {\n    void (*f)(void *) = NULL;\n    void *arg\
+    \ = NULL;\n};\n\nstruct ThreadPool {\n    std::vector<pthread> threads;\n    std::deque<Work>\
+    \ queue;\n    pthread_mutex_t mu;\n    pthread_cond_t not_empty;\n};\n```"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "2023-01-31\n\n14. The Thread Pool & Asynchronous Tasks\n\nThe `thread_pool_init`\
+    \ is for initialization and starting threads. `thread` types are initialized by\
+    \ `thread_xxx_init` functions and the `pthread_create` starts a thread with the\
+    \ target function `worker`.\n\n```\nvoid thread_pool_init(ThreadPool *tp, size_t\
+    \ num_threads) {\n    assert(num_threads > 0);\n\n    int rv = pthread_mutex_init(&tp->mu,\
+    \ NULL);\n    assert(rv == 0);\n    rv = pthread_cond_init(&tp->not_empty, NULL);\n\
+    \    assert(rv == 0);\n\n    tp->threads.resize(num_threads);\n    for (size_t\
+    \ i = 0; i < num_threads; ++i) {\n        int rv = pthread_create(&tp->threads[i],\
+    \ NULL, &worker, tp);\n        assert(rv == 0);\n    }\n}\n```\n\nThe consumer\
+    \ code code:\n\n```\nstatic void *worker(void *arg) {\n    ThreadPool *tp = (ThreadPool\
+    \ *)arg;\n    while (true) {\n        pthread_mutex_lock(&tp->mu);\n        //\
+    \ wait for the condition: a non-empty queue\n        while (tp->queue.empty())\
+    \ {\n            pthread_cond_wait(&tp->not_empty, &tp->mu);\n        }\n\n  \
+    \      // got the job\n        Work w = tp->queue.front();\n        tp->queue.pop();\n\
+    \        pthread_mutex_unlock(&tp->mu);\n\n        // do the work\n        w.f(arg);\n\
+    \    }\n}\n```\n\nbuild-your-own.org\n\n94"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\n}\nreturn NULL;\n}\n```\n\n```\npthread_mutex_lock(&tp->mu);\ntp->queue.push_back(w);\n\
+    pthread_cond_signal(&tp->not_empty);\npthread_mutex_unlock(&tp->mu);\n}\n```\n\
+    \nThe producer code:\n\nThe explanation:\n\n+   1. For both the producer and consumers,\
+    \ the queue access code is surrounded by the pthread_mutex_lock and the thread_mutex_unlock,\
+    \ only one thread can access the queue at once.\n2. After a consumer acquired\
+    \ the mutex, check the queue:\n    * If the queue is not empty, grab a job from\
+    \ the queue, release the mutex and do the work.\n    * Otherwise, release the\
+    \ mutex and go to sleep, the sleep can be awakened later by the condition variable.\
+    \ This is accomplished via a single pthread_cond_wait call.\n3. After the producer\
+    \ puts a job into the queue, the producer calls the pthread_cond_signal to wake\
+    \ up a potentially sleeping consumer.\n4. After a consumer woken up from the pthread_cond_wait,\
+    \ the mutex is held again automatically. The consumer must check for the condition\
+    \ again after waking up, if the condition (non-empty queue) is not satisfied,\
+    \ go back to sleep.\n\nThe use of the condition variable needs some explanations:\
+    \ The pthread_cond_wait function is always inside a loop checking for the condition.\
+    \ This is because the condition"
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# 2023-01-31 14. The Thread Pool & Asynchronous Tasks\n\ncould be changed by\
+    \ other consumers before the awakening consumer grabs the mutex, the mutex is\
+    \ not transferred from the signaler to the to-be-waked consumer! It is probably\
+    \ a mistake if you see a condition variable used without a loop.\n\nA concrete\
+    \ sequence to help you understand the use of condition variables:\n\n+   1. The\
+    \ producer signals.\n2. The producer releases the mutex.\n3. Some consumer grabs\
+    \ the mutex and empties the queue.\n4. A consumer wakes up from the producer's\
+    \ signal and grabs the mutex, but the queue is empty!\n\nNote that the `pthread_cond_signal`\
+    \ doesn't need to be protected by the mutex, signaling after releasing the mutex\
+    \ is also correct.\n\nThe thread pool is done. Let's add that to our server:\n\
+    \n```\n// global variables\nstatic struct {\n    HMap db;\n    // a map of all\
+    \ client connections, keyed by fd\n    std::vector<Conn *> fd2conn;\n    // timers\
+    \ for idle connections\n    DList id_list;\n    // timers for TTLs\n    std::vector<HeapItem>\
+    \ heap;\n    // the thread pool\n    ThreadPool tp;\n} g_data;\n```\n\nInside\
+    \ the `main` function:\n\n```\n// some initializations\ndlist_init(&g.data.id_list);\n\
+    thread_pool_init(&g.data.tp, 4);\n```\n\nThe `entry_del` function is modified:\
+    \ It will put the destruction of large sorted sets into the thread pool. The thread\
+    \ pool is only for the large ones since multi-threading has some overheads too.\n\
+    \nbuild-your-own.org 96"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "```\n// deallocate the key immediately\nstatic void entry_destroy(Entry +ent)\
+    \ {\n    switch (ent->type) {\n    case T_ZSET:\n      zset_dispose(ent->zset);\n\
+    \      delete ent->zset;\n      break;\n    }\n    delete ent;\n}\n```\n\n```\n\
+    static void entry_del_async(void *arg) {\n    entry_destroy((Entry *)arg);\n}\n\
+    ```\n\n```\n// dispose the entry after it got detached from the key space\nstatic\
+    \ void entry_del(Entry +ent) {\n    entry_set_ttl(ent, -1);\n\n    const size_t\
+    \ k_large_container_size = 10000;\n    bool too_big = false;\n    switch (ent->type)\
+    \ {\n    case T_ZSET:\n      too_big = hm_size(&ent->zset->hmap) > k_large_container_size;\n\
+    \      break;\n    }\n\n    if (too_big) {\n        thread_pool_queue(&g.data.tp,\
+    \ &entry.del_async, ent);\n    } else {\n        entry_destroy(ent);\n    }\n\
+    }\n```\n\nExercises:\nnThe semaphore is often introduced as a multi-threading\
+    \ primitive instead of the condition variable and the mutex. Try to implement\
+    \ the thread pool using the"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: 'semaphore.
+
+
+    +   2. Some fun exercises to help you understand these primitives further:
+
+
+    1. Implement the mutex using the semaphore. (Trivial)
+
+    2. Implement the semaphore using the condition variable. (Easy)
+
+    3. Implement the condition variable using only mutexes. (Intermediate)
+
+    4. Now that you know these primitives are somewhat equivalent, why should you
+    prefer one to another?
+
+
+    +   - 14_server.cpp
+
+    - avl.cpp
+
+    - avl.h
+
+    - common.h
+
+    - hashtable.cpp
+
+    - hashtable.h
+
+    - heap.cpp
+
+    - heap.h
+
+    - list.h
+
+    - thread_pool.cpp
+
+    - thread_pool.h
+
+    - zset.cpp
+
+    - zset.h'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# # APPENDIXIXES'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: '# A1: Hints to Exercises
+
+
+    # 08. Data Structure: Hashtables
+
+
+    > Q: Our hasht triggers resizing when the load factor is too high, should we also
+    shrink the hashtable when the load factor is too low? Can the shrinking be performed
+    automatically?
+
+
+    Hints:
+
+
+    Hashtable shrinking is not done automatically in practice. Many real-world usage
+    patterns are periodic, shrinking is not always clearly beneficial. Besides, shrinking
+    does not always return the memory to OS, this is dependent on many factors such
+    as the malloc implementation and the level of memory fragmentation; the outcome
+    of shrinking is not easily predictable.
+
+
+    # 10. The AVL Tree: Implementation & Testing
+
+
+    > Q: Can you create more test cases? The test cases presented in this chapter
+    are unlikely to be sufficient.
+
+
+    Hints:
+
+
+    Our existing test cases enumerate AVL trees of various sizes. However, given a
+    tree of a particular size, there are many possible configurations, we can go further
+    by enumerating tree configurations.
+
+
+    Also, for more complicated code, it is helpful to use profiling tools to check
+    whether the test cases give full coverage of the target code. Non-full coverage
+    indicates bugs in test cases or target code.
+
+
+    Another technique that is worth mentioning is Fuzz Testing.
+
+
+    # 11. The AVL Tree and the Sorted Set'
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: 'Q: The avl_offset function gives us the ability to query sorted set by rank,
+    now do
+
+    t reverse, give a node in an AVL tree, find its rank, with a worst-case of 0(log(n)).
+
+    (This is the zrank command.)
+
+
+    Hints:
+
+
+    The rank of a node is related to the rank of its parent. And the rank of the root
+    is obvious.
+
+
+    > Q: Another sorted set application: count the number of elements within a range.
+    (also
+
+    with a worst-case of 0(log(n)).
+
+
+    Hints:
+
+
+    Use the rank of the node.
+
+
+    # 13. The Heap Data Structure and the TTL
+
+
+    > Q: The heap–based timer adds O(log(n)) operations to the server, which might
+    be a
+
+    bottleneck for a sufficiently large number of keys. Can you think of optimizations
+    for
+
+    a large number of timers?
+
+
+    Hints:
+
+
+    We can make the heap cache friendly by using the n-ary tree instead of the binary
+
+    tree. Some real-world project uses the quadtree which fits in the 64-byte cache
+    line.
+
+    Also, in our case, the TTL timers don''t have to be fired at the exact time. We
+    can use a
+
+    very coarse timestamp (such as round up to 1min resolution) for TTL timers, and
+    keys
+
+    with the same timestamp can share the same timer. This reduces the number of timers,
+
+    but the timers are delayed so we need to check the expiration time when accessing
+
+    t key.
+
+
+    > Q: The real Redis does not use sorting for expiration, find out how it is done,
+    and list
+
+    t pros and cons of both approaches.
+
+
+    Hints:'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: 'Taking the idea that keys don''t need to be expired at the exact time, read
+    Redis samples
+
+    t key space at random to find dead keys. The higher ratio of dead keys, the easier
+    to
+
+    find and eliminate them.
+
+
+    The pros of this approach are:
+
+
+    +   1. It doesn''t require extra space.
+
+    2. The concept is simple, and the implementation is easy.
+
+
+    The cons:
+
+
+    +   1. It requires keys with a TTL should not be mixed with keys without a TTL,
+
+    otherwise, the non-TTL keys interfere with the sampling, making it harder to find
+
+    dead keys. This can be a source of surprise for operators.
+
+    2. While the concept is simple, the implementation uses some heuristics to determine
+
+    t rate of the sampling. If the heuristic is not tuned properly, in a worse-case,
+    the
+
+    server might not be removing dead keys fast enough, leading to excessive memory
+
+    usage, which may frustrate the operator.
+
+
+    # 14. The Thread Pool & Asynchronous Tasks
+
+
+    > Q: Implement the condition variable using only mutexes. (Intermediate)
+
+
+    Hints:
+
+
+    You need to figure out how to sleep and wake up mutex first. Then you need to
+
+    keep track of a list of sleepers in the condition variable so that you can wake
+    up them
+
+    later.'
+  merge: -1
+  pgno: 104
