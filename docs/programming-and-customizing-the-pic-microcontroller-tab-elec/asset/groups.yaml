@@ -1,0 +1,402 @@
+- md: '
+
+    Excerpted from Programming and Customizing the PIC Microcontroller, Myke Predko,
+    3rd edition, 2007, ISBN: 978-0071472876
+
+
+    970 APPENDIX A
+
+
+    The C Programming Language, 2nd ed. (1988)
+
+    Authors: B. W. Kernighan and D M. Ritchie
+
+    ISBN: 0-13110-362-8
+
+
+    Brian W. Kernighan and Dennis M. Ritchie''s classic text explaining the C programming
+    language has not of its usefulness seen by more students in colleges and universities
+    than any other. Despite the fact that the book was written originally for a programming
+    course, the writing is crisp, sharp, and easily understandable. It is a book that
+    I''ve probably owned five copies of, with a couple being worn out and a growing
+    pile and walking out of my office.
+
+
+    ## Recommended PIC Microcontroller Websites
+
+
+    When I have a problem, here is a list of sites that I turn to in an attempt to
+    find the answers to what other people have done. Most of these are dedicated to
+    the PIC16F84 (and the PIC16C84), but there is also a list of useful information,
+    code, and circuits that you can get from these sites. This list is still current,
+    although it is changing all the time.
+
+
+    As I write, there is somewhere in the neighborhood of 1,000 web pages devoted
+    to the PIC microcontroller with different applications, code snippets, code development
+    tools, programmers, and other miscellaneous information on the PIC microcontroller
+    and other microcontrollers. To simplify your searching, I have included websites
+    that have either unique information and applications or have substantial links
+    to other sites.
+
+
+    My own website has links and information on not only the PIC microcontroller but
+    other devices and subjects as well:
+
+
+    www.myke.com
+
+
+    Bob Blick''s website has some interesting PIC microcontroller projects that are
+    quite a bit different from the run-of-the-mill projects:
+
+
+    www.boblick.com/
+
+
+    Scott Dattallo''s highly optimized PIC microcontroller does math algorithms. This
+    is the best place to go if you are looking for mathematical functions for the
+    PIC microcontroller:
+
+
+    www.dattalo.com/technical/software/software.html
+
+
+    Along with the very fast PIC microcontroller routines, Scott also has been working
+    on some GNU general purpose license tools designed to run under Linux. More information
+    on these tools can be downloaded from
+
+
+    www.dattalo.com/gnupic/gpsim.html
+
+
+    www.dattalo.com/gnupic/gpasm.html
+
+
+    RESOURCES 971
+
+
+    Marco Di Leo''s PIC Corner has some interesting applications, including information
+    on networking microcontrollers and using them for cryptography:
+
+
+    http://members.tripod.com/~mdileo/
+
+
+    On the Dontronics home page, Don McKenzie presents a wealth of information on
+    the PIC microcontroller, as well as other electronic products. There are lots
+    of useful links to other sites, and it is the home of the SimmStick:
+
+
+    www.dontronics.com/
+
+
+    On the Fast Forward Engineering home page, Andrew Warren presents useful information
+    and a highly useful question and answer page on the PIC microcontroller:
+
+
+    http://home.netcom.com/~fastwd/
+
+
+    Steve Lawther''s list of PIC microcontrollers has many interesting PIC microcontroller
+    (and other microcontroller) projects:
+
+
+    http://www.worldcompuser.com/homepages/steve_lawther/ucindex.htm
+
+
+    Eric Smith''s PIC Page has some interesting projects and code examples to work
+    through:
+
+
+    www.brouhaha.com/~eric/pic/
+
+
+    Rickard''s PIC-Wall is a good site with a design for a PIC microcontroller–based
+    composite video game generator:
+
+
+    www.efd.lth.se/~e9gr/pic.html
+
+
+    PicPoint has lots of good projects to choose from, including 5 MB free to anyone
+    that wants to start his own PIC microcontroller webpage:
+
+
+    www.picpoint.com/
+
+
+    MicroTronics presents programmer and application reviews:
+
+
+    www.eedevl.com/index.html
+
+
+    ## Periodicals
+
+
+    Here are a number of magazines that give a lot of information and projects on
+    PIC microcontrollers. Every month, each magazine has a better than 50% chance
+    of presenting a PIC microcontroller application.
+
+    '
+  mdcn: '
+
+
+    摘自《Programming and Customizing the PIC Microcontroller》，Myke Predko 著，第3版，2007年，ISBN：978-0071472876
+
+
+    970 附录 A
+
+
+    《C程序语言》，第2版（1988年）
+
+    作者：B. W. Kernighan 和 D M. Ritchie
+
+    ISBN: 0-13110-362-8
+
+
+    Brian W. Kernighan 和 Dennis M. Ritchie 编写的这本解释 C 语言语言的经典教材，在大学和学院中见过的学生人数多于任何其他书籍。尽管这本书最初是为一门编程课程编写的，但其文字简洁、犀利且易于理解。这本书我可能拥有过五份，其中几本已经磨损了，还有一叠书在我的办公室里越堆越高。
+
+
+    ## 推荐的 PIC 微控制器网站
+
+
+    当我遇到问题时，这里是我会尝试的网站列表，用以寻找他人做法的答案。其中大多数网站专门针对 PIC16F84（以及 PIC16C84），但你也可以从这些网站获取有用的信息、代码和电路。这个列表仍然有效，尽管它在不断更新。
+
+
+    正如我所写的，这里大约有 1000 个关于 PIC 微控制器的网页，包含了各种应用程序、代码片段、程序员和其他信息。为了方便你的搜索，我包含了一些具有独特信息或应用，或者拥有其他网站链接的网站。
+
+
+    我自己的网站包含了关于 PIC 微控制器以及其他设备和主题的链接信息：
+
+
+    www.myke.com
+
+
+    Bob Blick 的网站有一些有趣的 PIC 微控制器项目，与平庸的项目大不相同：
+
+
+    www.boblick.com
+
+
+    Scott Dattallo 有高度优化的 PIC 微控制器数学算法。如果你在寻找 PIC 微控制器的数学函数，这里是最佳去处：
+
+
+    www.dattalo.com/technical/software.html
+
+
+    除了快速的 PIC 微控制器程序，Scott 还编写了一些运行在 Linux 下的 GNU 通用工具。关于这些工具的更多信息可以下载：
+
+
+    www.dattalo.com/gnupic/gpsim.html
+
+
+    www.dattalo.com/gnupic/gpasm.html
+
+
+    资源 971
+
+
+    Marco Di Leo 的 PIC Corner 有一些有趣的应用程序，包括关于微控制器网络以及将其用于加密：
+
+
+    http://members.tripod.com/~mdileo/
+
+
+    在 Dontronics 首页，Don McKenzie 展示了关于 PIC 微控制器的丰富信息以及其他电子产品。这里有很多指向其他网站的有用链接，它是 SimmStick
+    的首页：
+
+
+    www.dontronics.com/
+
+
+    在 Fast Forward Engineering 首页，Andrew Warren 展示了关于 PIC 微控制器的有用信息和一个非常有问答页面：
+
+
+    http://home.netcom.com/~fastwd/
+
+
+    Steve Lawther 的 PIC 微控制器列表有很多 PIC 微控制器（以及其他控制器）项目：
+
+
+    http://www.worldcompuser.com/homepages/steve_lawther/ucindex.htm
+
+
+    Eric Smith 的 PIC Page 有一些有趣的项目和代码示例供学习：
+
+
+    www.brouhaha.com/~eric/pic/
+
+
+    Rickard 的 PIC-Wall 是一个很好的网站，有一个基于 PIC 微控制器的复合视频游戏生成的设计：
+
+
+    www.efd.lth.se/~e9gr/pic.html
+
+
+    PicPoint 有许多优质项目供选择，包括为任何想要建立自己的 PIC 微控制器网页的人免费提供 5 MB 的资源：
+
+
+    www.picpoint.com/
+
+
+    MicroTronics 提供程序员和应用评测：
+
+
+    www.eedevl.com/index.html
+
+
+    ## 期刊
+
+
+    以下是许多提供 PIC 微控制器提供大量信息和项目的杂志。每月，每本杂志都有超过 50% 的概率介绍 PIC 微控制器应用。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    Excerpted from Programming and Customizing the PIC Microcontroller, Myke Predko,
+    3rd edition, 2007, ISBN: 978-0071472876
+
+
+    970 APPENDIX A
+
+
+    The C Programming Language, 2nd ed. (1988)
+
+    Authors: B. W. Kernighan and D M. Ritchie
+
+    ISBN: 0-13110-362-8
+
+
+    Brian W. Kernighan and Dennis M. Ritchie''s classic text explaining the C programming
+    language has not of its usefulness seen by more students in colleges and universities
+    than any other. Despite the fact that the book was written originally for a programming
+    course, the writing is crisp, sharp, and easily understandable. It is a book that
+    I''ve probably owned five copies of, with couple being worn out and a growing
+    legs and walking out of my office.
+
+
+    # # Recommended PIC
+
+    Microcontroller Websites
+
+
+    When I have a problem, here is a list of sites that I turn in an attempt to find
+    the answers to what other people have done. Most of these are dedicated to the
+    PIC16F84 (and the PIC16C84), but there is also a list of useful information, code,
+    and circuits that you can get from these sites. This list is still current, although
+    it is changing all the time.
+
+
+    As I write, there is somewhere in the neighborhood of 1,000 web pages devoted
+    to the PIC microcontroller with different applications, code snippets, code development
+    tools, programmers, and other miscellaneous information on the PIC microcontroller
+    and other microcontrollers. To simplify your searching, I have included websites
+    that have either unique information and applications or have substantial links
+    to other sites.
+
+
+    My own website has links and information on not only the PIC microcontroller but
+    other devices and subjects as well:
+
+
+    www.myke.com
+
+
+    Bob Blick''s website has some interesting PIC microcontroller projects that are
+    quite a bit different from the run-of-the-mill projects:
+
+
+    www.boblick.com/
+
+
+    Scott Dattallo''s highly optimized PIC microcontroller does math algorithms. This
+    is best place to go if you are looking for mathematical functions for the PIC
+    microcontroller:
+
+
+    www.dattalo.com/technical/software/software.html
+
+
+    Along with the very fast PIC microcontroller routines, Scott also has been working
+    on some GNU general purpose license tools designed to run under Linux. More information
+    on these tools can be downloaded from
+
+
+    www.dattalo.com/gnupic/gpsim.html
+
+
+    www.dattalo.com/gnupic/gpasm.html'
+  - '[PAGE 1]
+
+
+    RESOURCES 971
+
+
+    Marco Di Leo''s PIC Corner has some interesting applications, including information
+    on networking microcontrollers and using them for cryptography:
+
+
+    http://members.tripod.com/~mdileo/
+
+
+    On the Dontronics home page, Don McKenzie presents a wealth of information on
+    the PIC microcontroller, as well as other electronic products. There are lots
+    of useful links to other sites, and it is the home of the SimmStick:
+
+
+    www.dontronics.com/
+
+
+    On the Fast Forward Engineering home page, Andrew Warren presents useful information
+    and a highly useful question and answer page on the PIC microcontroller:
+
+
+    http://home.netcom.com/~fastwd/
+
+
+    Steve Lawther''s list of PIC microcontrollers has many interesting PIC microcontroller
+    (and other microcontroller) projects:
+
+
+    http://www.worldcompuser.com/homepages/steve_lawther/ucindex.htm
+
+
+    Eric Smith''s PIC Page has some interesting projects and code examples to work
+    through:
+
+
+    www.brouhaha.com/~eric/pic/
+
+
+    Rickard''s PIC-Wall is a good site with a design for a PIC microcontroller–based
+    composite video game generator:
+
+
+    www.efd.lth.se/~e9gr/pic.html
+
+
+    PicPoint has lots of good projects to choose from, including 5 MB free to anyone
+    that wants to start his or own PIC microcontroller webpage:
+
+
+    www.picpoint.com/
+
+
+    MicroTronics presents programmer and application reviews:
+
+
+    www.eedevl.com/index.html
+
+
+    # Periodicals
+
+
+    Here are a number of magazines that give a lot of information and projects on
+    PIC microcontrollers. Every month, each magazine has a better than 50% chance
+    of presenting a PIC microcontroller application.'
