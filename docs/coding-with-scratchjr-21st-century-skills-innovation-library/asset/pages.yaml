@@ -1,0 +1,591 @@
+- img_proc: true
+  md: '# # Coding with ScratchJr
+
+
+    By Adrienne Matteson
+
+
+    ![](img/36e194ea6fa5b0114022609c91b4e6f8_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# WITHDRAWN
+
+
+    Makers as INNOVATORS JUNIOR
+
+
+    # Coding with ScratchJr
+
+
+    ![](img/36e194ea6fa5b0114022609c91b4e6f8_2_0.png)
+
+
+    By Adrienne Matteson'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '![](img/36e194ea6fa5b0114022609c91b4e6f8_3_0.png)
+
+
+    Published in the United States of America by
+
+    Cherry Lake Publishing
+
+    Ann Arbor, Michigan
+
+    www.cherrylakeepublishing.com
+
+
+    Series Adviser: Kristin Fonticchiaro
+
+    Reading Adviser: Marla Conn, MS, Ed., Literacy specialist,
+
+    Read-Ability, Inc.
+
+    Photo Credits: Cover, Wesley Frey / tinyurl/gq2ldo
+
+    CC BY 2.0; all other images by Adrienne Matteson
+
+
+    Copyright ©2017 by Cherry Lake Publishing
+
+    All rights reserved. No part of this book may be reproduced or
+
+    utilized in any form or by means without written permission
+
+    from the publisher.
+
+
+    Library of Congress Cataloging-in-Publication Data
+
+    Title: Coding with Scratch / by Adrienne, Matteson.
+
+    Other titles: Coding with Scratch Jr / 21st century skills innovation library.
+
+    Makers: as innovators.
+
+    Description: Ann Arbor, Michigan : Cherry Lake Publishing, [2017] | Series: Makers
+
+    innovators junior | Series: 21 century skills innovation library | Audience: K
+    to
+
+    grade 3 | Includes references and index.
+
+    Identifiers: ISBN 20160347252 (pdf) | ISBN 9781634723168 (lib. bd.) | ISBN 9781634723183
+
+    (pbk.) | ISBN 9781634723848 (ebook)
+
+    Subjects: LCS: Scratch (Computer program language)-Juvenile literature. | Computer
+
+    programming-Juvenile literature. | Programming languages (Electronic computers)-
+
+    Juvenile literature.
+
+    Classification: LC QA76.52.M3835 2017 | DDC 005.26/2-dc23 LC record available
+
+    at https://icon.loc.gov/2016032413
+
+
+    Cherry Lake Publishing would like to acknowledge the work of the Partnership for
+
+    21st Century Learning. Please visit www.p21.org for more information.
+
+
+    Printed in the United States of America
+
+    Corporate Graphics
+
+
+    > A Note to Adults: Please review
+
+    the instructions for the
+
+    activities in this book before\allowing children to do them.
+
+    Be sure to help them with any
+
+    activities you do not think
+
+    can safely complete on their own.
+
+
+    > A Note to Kids. Be sure to
+
+    ast an adult for help with these
+
+    when you need it.
+
+    Always put your safety first!'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # Table of Contents
+
+
+    +   - Who Can Write Computer Programs? ....................... 5
+
+    - What Is ScratchJr? ................................................ 7
+
+    - How Does ScratchJr Work? ................................. 9
+
+    - Characters ........................................................ 11
+
+    - Backgrounds ......................................................... 13
+
+    - Color-Coded Code Blocks ................................. 15
+
+    - Control Blocks ................................................... 17
+
+    - Make It Your Own! ................................................ 19
+
+    - Sharing Your Project ............................................... 21
+
+    - Glossary ............................................................ 22
+
+    - Find Out More ....................................................... 23
+
+    - Index ................................................................ 24
+
+    - About the Author ................................................. 24'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '![](img/36e194ea6fa5b0114022609c91b4e6f8_5_0.png)
+
+
+    ScratchJr is easy to use. It is also a lot of fun!'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# Who Can Write Computer Programs?
+
+
+    Our world is full of computers. Computers are in phones, watches, and even cars!
+    Every computer works by following **programs**. Have you ever thought about creating
+    your own computer programs? You could make a computer do whatever you want. One
+    great way to get started is to use something called ScratchJr.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# ScratchJr
+
+
+    Cat
+
+
+    Elephant
+
+
+    Giraffe
+
+
+    Monkey
+
+
+    ![](img/36e194ea6fa5b0114022609c91b4e6f8_7_0.png)
+
+
+    ![](img/36e194ea6fa5b0114022609c91b4e6f8_7_1.png)
+
+
+    ![](img/36e194ea6fa5b0114022609c91b4e6f8_7_2.png)
+
+
+    You can create programs in ScratchJr by dragging colorful blocks around on the
+    touch screen of a tablet computer.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# What Is ScratchJr?
+
+
+    ScratchJr is a programming language made just for kids. It works on iPads and
+    other tablet computers. With ScratchJr, you can create stories and games for your
+    friends to play. You will also learn how to think like a computer programmer!
+
+
+    # What Is a Programming Language?
+
+
+    A programming language is a set of words, symbols, and rules. It is used to write
+    instructions for a computer. There are a lot of programming languages. ScratchJr
+    is just one of them!'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '![](img/36e194ea6fa5b0114022609c91b4e6f8_9_0.png)
+
+
+    # 1 | Undo
+
+
+    Reverses the most recent change.
+
+
+    +   - About ScratchJr
+
+
+    +   - Interface Guide
+
+
+    +   - Paint Editor Guide
+
+
+    +   - Blocks Guide
+
+
+    You can change the way characters look in your ScratchJr projects.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# How Does ScratchJr Work?
+
+
+    A ScratchJr project is made up of three parts. These are characters, backgrounds,
+    and **code blocks**. Characters are the things in your project that move and talk.
+    Backgrounds are the pictures that set the scene for a story. Code blocks tell
+    your characters and backgrounds what to do.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '![](img/36e194ea6fa5b0114022609c91b4e6f8_11_0.png)
+
+
+    ScratchJr comes with many characters you can choose from.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Characters
+
+
+    A character is anything in your project that moves, speaks, or changes somehow.
+    Characters can be people and animals. A character might also be a rock or a cupcake.
+    It can be an object another character picks up. Even a star twinkling in the sky
+    can be a character in your project.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '![](img/36e194ea6fa5b0114022609c91b4e6f8_13_0.png)
+
+
+    There is a background for any project you can think of in ScratchJr.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Backgrounds
+
+
+    Where does your story take place? There are lots of backgrounds to choose from.
+    Don’t worry if they aren’t the right color. Every background can be changed to
+    fit your ideas. Just tap on the paintbrush when you pick a background. Then use
+    the drawing tools to make it just right.
+
+
+    # Think About It!
+
+
+    You can use up to four backgrounds per project. Can you think of a story to tell
+    that takes place in more than one setting?'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: All programs start with a yellow block.
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Color-Coded Code Blocks
+
+
+    How do you know which code blocks to use? Blocks are color coded to help you remember
+    what they do.
+
+
+    +   - Yellow blocks begin a program.
+
+    - Red blocks end it.
+
+    - Blue blocks move characters around the screen.
+
+    - Purple blocks change the characters’ looks.
+
+    - Green blocks let you add sounds.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# SCRATCHJR
+
+
+    Wait
+
+
+    Stop
+
+
+    +   - Pauses the script for a specified amount of time (in tenths of seconds).
+
+
+    +   - Stops all the characters'' scripts.
+
+
+    Set Speed
+
+
+    Repeat
+
+
+    +   - Changes the rate at which certain blocks are run.
+
+
+    +   - Runs the blocks inside a specified number of times.
+
+
+    ```
+
+    END BLOCK
+
+    ```
+
+
+    End
+
+
+    Repeat Forever
+
+
+    Control blocks let you bring your projects to life.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Control Blocks
+
+
+    Orange code blocks are called control blocks. Orange blocks are in charge! Do
+    you want Scratch Cat to spin around five times? Use the orange “Repeat” block.
+    Do you want an elephant to lose a race? Use the orange “Set Speed” block to make
+    him move slowly.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '![](img/36e194ea6fa5b0114022609c91b4e6f8_19_0.png)
+
+
+    Try creating your own colorful backgrounds.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Make It Your Own!
+
+
+    Can''t find the background you want in the ScratchJr gallery? No problem! Use
+    the paint editor to create your own. The paint editor has tools for filling in
+    color, drawing by hand, and adding shapes. You can even use the camera to add
+    your own face to a character.
+
+
+    # Can I Save the Characters and Backgrounds I Make?
+
+
+    Yes! Every character and background you create is saved to the gallery. This means
+    you can use it again in other projects. If friends share their projects with you,
+    their characters and backgrounds will be saved, too.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '![](img/36e194ea6fa5b0114022609c91b4e6f8_21_0.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Sharing Your Project
+
+
+    When you finish a project, you can share it!
+
+    ScratchJr projects can be shared two ways.
+
+    One way is to send them to friends through e-mail. The other way only works with
+    iPads.
+
+    You can use the AirDrop feature to send your project from one iPad to another.
+    Ask an adult to help you before sharing anything. Congratulations! You made a
+    program!'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Glossary
+
+
+    code blocks (KODE BLAHKS) the smallest pieces of a ScratchJr program, each containing
+    a single instruction
+
+
+    gallery (GAL-ur-ee) a picture list of all the characters or backgrounds available
+    to use in ScratchJr
+
+
+    instructions (in-STRUK-shuhnz) directions on how to do something
+
+
+    programming language (PROH-gram-ing LANG-wij) a set of words, symbols, and rules
+    used to write instructions for a computer
+
+
+    programs (PROH-gramz) instructions that tell a computer how to complete a task
+
+
+    symbols (SIM-buhlz) designs or objects that stand for something else'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Find Out More
+
+
+    **Book**nBers, Marina Umaschi, and Mitchel Resnick. *The Official ScratchJr Book:
+    Help Your Kids Learn to Code!* San Francisco: No Starch Press, 2016.
+
+
+    **Web Sites**nScratch
+
+    scratch.mit.edu
+
+    When you are ready, make more complicated programs using ScratchJr’s big brother,
+    Scratch.
+
+
+    **ScratchJr**nwww.scratchjr.org
+
+    Learn all about using ScratchJr, watch videos, and try practice activities.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Index
+
+
+    +   adults, 21
+
+    AirDrop, 21
+
+    backgrounds, 9, 13, 19
+
+    blue blocks, 15
+
+    cameras, 19
+
+    characters, 9, 11, 15, 19
+
+    code blocks, 9, 15, 17
+
+    computers, 5, 7
+
+    control blocks, 17
+
+    drawing tools, 13, 19
+
+    e-mail, 21
+
+    gallery, 19
+
+    green blocks, 15
+
+    iPads, 7, 21
+
+
+    +   movement, 9, 11, 15, 17
+
+    orange blocks, 17
+
+    paintbrush, 13
+
+    paint editor, 19
+
+    programming languages, 7
+
+    programs, 5, 21
+
+    purple blocks, 15
+
+    red blocks, 15
+
+    “Repeat” block, 17
+
+    “Set Speed” block, 17
+
+    sharing, 19, 21
+
+    tablet computers, 7, 21
+
+    yellow blocks, 15
+
+
+    # About the Author
+
+
+    Adrienne Matteson is a school librarian. She spends most of her days playing with
+    robots and helping her students write programs about unicorns.
+
+
+    ```
+
+    31901060623289
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# What will you make?
+
+
+    Some of today''s most incredible inventions are the work of makers. These people
+    apply creativity to the latest technology to build a variety of homemade devices.
+    Whether they are programming tiny computers, designing their own board games,
+    or finding new uses for plastic, makers work together to share new ideas and technology.
+    What will you make?
+
+
+    # Read all of the Makers as Innovators Jr. books
+
+
+    +   - Coding with Blockly
+
+    - Coding with ScratchJr
+
+    - Controlling an Ozobot
+
+    - Designing Board Games
+
+    - Looking Inside a 3D Printer
+
+    - Making Electric Jewelry
+
+    - Organizing a MakerFest
+
+    - Starting a Makerspace
+
+
+    ISBN-13: 978-1634723183
+
+
+    ![](img/36e194ea6fa5b0114022609c91b4e6f8_27_0.png)
+
+
+    9 781634723183
+
+
+    CONTRA COSTA COUNTY LIBRARY
+
+    AUGUST 2017
+
+    ccclib.org
+
+
+    IFLOAT'
+  merge: -1
+  pgno: 27
