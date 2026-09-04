@@ -1,0 +1,2 @@
++   [C++ 中的数学对象：统一面向对象方法的计算工具 (Chapman & Hall／CRC 数值分析与科学计算系列)](README.md)
++   [C++ 中的数学对象：统一面向对象方法的计算工具 (Chapman & Hall／CRC 数值分析与科学计算系列)](mathematical-objects-in-c-computational-tools-in-a-unified-o.md)
