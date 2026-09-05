@@ -1,0 +1,921 @@
+- img_proc: true
+  md: '# STEM trailblazer BIOS
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_0_0.png)
+
+
+    # ## CODE-BREAKER AND MATHEMATICIAN
+
+
+    ALAN TURING
+
+
+    HEATHER E. SCHWARTZ
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_0_1.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '![](img/db58f542749354fde4835edbc0ae9a1a_1_0.png)
+
+
+    https://archive.org/details/codebreakermathe0000heat'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# STEM trailblazer BIOS
+
+
+    # CODE-BREAKER AND MATHEMATICIAN
+
+
+    ALAN TURING
+
+
+    BY HEATHER E. SCHWARTZ
+
+
+    Lerner Publications -> Minneapolis'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'Copyright © 2018 by Lerner Publishing Group, Inc.
+
+
+    All rights reserved. International copyright secured. No part of this book may
+    be reproduced, stored in a retrieval system, or transmitted in any form or by
+    any means—electronic, mechanical, photocopying, recording, or otherwise—without
+    prior written permission of Lerner Publishing Group, Inc., except for the inclusion
+    of brief quotations at acknowledged review.
+
+
+    Lerner Publications Company
+
+    Division of Lerner Publishing Group, Inc.
+
+    241 First Avenue North
+
+    Minneapolis, MN 55401
+
+
+    For reading levels and more, look up this title at www.lernerbooks.com.
+
+
+    Content consultant: John Dooley, professor of computer science, Knox College
+
+
+    # Library of Congress Cataloging-in Publication Data
+
+
+    Names: Schwartz, Heather E. author.
+
+    Title: Code-breaker and mathematician Alan Turing / Heather E. Schwartz.
+
+    Description: Minneapolis : Lerner Publishing, [2017] / Series: STEM trailblazer
+    bios | Audience: Agges 7-11 / Audience: Grade 4 to 6.
+
+    Identifiers: LCC 2017010166 (print) | LCC 2017024181 (ebook) | ISBN 9781512499834
+    (lb) : alk. part
+
+    Subjects: LCSH: Turing, Alan, 1912–1954/Juvenile literature. Mathematicians—Great
+    Britain—Biography—Juvenile literature. I Gay men—Great Britain—Biography—Juvenile
+    literature. Enigma cipher system—Juvenile literature.
+
+    Classification: LCC QA29.T8 (ebook) | LCC QA29.T8 S39 2017 (print) | DDC 510.92
+    [B] —dc23 LC record available at https://lccn.gov/2017010166
+
+
+    Manufactured in the United States of America
+
+    1-4316-33367-6/7/2017
+
+
+    The images in this book were used with the permission of: REX/Shutterstock, p.
+    4; © London Metropolitan Archives, City of London/Bridgeman Images, p. 5; © The
+    Turing Digital/Archive''s College College, p. 6; Courtesy of the Sherbole school,
+    p. 7, 8; © National Physical Laboratory/Crown Pyramid/Science Source, p. 10; ©
+    Private Collection/Prismatic Pictures/Bridgeman Images, p. 11; Library of Congress
+    (HABS, JN11-PRINT-4, p. 13; Suddeutsche Zeitung/Almy Stock Photo, p. 14; National
+    Archives (200-SF52, p. 7); © Chronicle/Almy Stock Photo, p. 17; © Christian Lind/fflickr.com
+    (CC BY 2.0), p. 18; Photo courtesy dr David Haver/National Museum of the US Air
+    Force, p. 19; Les Wilson/SOLDO Syndication/Newscom, p. 21; World History Archive/Almy
+    Stock Photo, p. 22; © Science & Society Library/Getty Images, p. 23, 25; Mike
+    Robinson/Almy Stock Photo, p. 27; © National Portrait Gallery, London, UK/Prismatic
+    Pictures/Bridgeman Images,28.
+
+    Front cover: © Private Collection/Prismatic Pictures/Bridgeman Images.
+
+    Main body text in Adriana Regular 12/22. Typeface produced by Chank.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# CONTENTS
+
+
+    CHAPTER 1
+
+    Budding Brilliance 4
+
+
+    CHAPTER 2
+
+    Code-Breaking 10
+
+
+    CHAPTER 3
+
+    Building the Bombe 16
+
+
+    CHAPTER 4
+
+    After the War 22
+
+
+    Timeline 29
+
+
+    Source Notes 30
+
+
+    Glossary 30
+
+
+    Further Information 31
+
+
+    Index 32'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Chapter 1
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_5_0.png)
+
+
+    # # BUDDING
+
+    # BRILLIANCE
+
+
+    Mathematician Alan Turing showed that ideas could be as powerful as weapons. Combining
+    his math and science talents with a passion to help his country, he found a way
+    to help Britain and its allies win World War II (1939–1945).'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Alan was born in London, England, on June 23, 1912. Alan''s parents soon went
+    back to India, where Alan''s father worked for the government. Alan and his brother
+    did not live with their parents. The boys lived with family friends and grew up
+    in England.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_6_0.png)'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Alan began attending Hazelhurst, a boarding school in Sussex, when he was nine
+    years old. He lived and studied there. Alan loved math and science, and he spent
+    most of his free time thinking about the subjects. He even did his own chemistry
+    experiments. But his abilities were often unrecognized by his teachers and classmates.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_7_0.png)
+
+
+    > Alan''s brother, John, also went to school at Hazelhurst.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '![](img/db58f542749354fde4835edbc0ae9a1a_8_0.png)
+
+
+    > Alan''s mother sketched this picture of Alan (left) examining daisies while
+    his classmates played a field hockey game. Young Alan was always interested in
+    plants than in sports.
+
+
+    # Hockey or Watching the Daisies Grow
+
+
+    Alan was especially fascinated with plants. Alan''s mother sketched a picture
+    of him gazing at daisies while he was supposed to be playing field hockey with
+    Hazelhurst classmates. Alan also enjoyed reading a book called Natural Wonders
+    Every Child Should Know by Edwin Tenney Brewster. It was a well-known science
+    book that covered the similarities and differences between living things.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Alan’s mother was not pleased that her son enjoyed science so much. Science
+    was not considered a proper course of study for young British gentlemen. Schools
+    at the time valued subjects such as Latin and English literature. She worried
+    he would not be accepted into a good school after leaving Hazelhurst.
+
+
+    # DIFFICULT STUDENT
+
+
+    His mother had no reason to worry. At thirteen, Alan was accepted to the Sherborne
+    School, a well-regarded British institution. There, he kept digging into his interest
+    in science on his own. He read Albert Einstein’s general theory of relativity.
+    The theory was Einstein’s idea of
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_9_0.png)
+
+
+    > This photo was taken when Alan was a student at Sherborne School. The school
+    is in southwestern England.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'how gravity works. He said that objects bend, or curve, time and space depending
+    on how much mass they have. Gravity is the result of these curves. Despite the
+    complex nature of the theory, Alan’s notes on the subject proved that he understood
+    it.
+
+
+    Alan was clearly intelligent. But his teachers didn''t see it. They called his
+    schoolwork careless and sloppy, and he was so far behind in some subjects that
+    he almost wasn''t allowed to take his final exams.
+
+
+    # PROVING HIMSELF
+
+
+    But Alan took his exams. He passed and graduated from Sherborne School. Then he
+    went to King''s College in Cambridge. His teachers there were more accepting of
+    his interest in math and science. He began to think about more complex mathematical
+    ideas, such as statistics. Turing rowed, sailed, and ran to clear his mind when
+    he wasn''t studying.
+
+
+    After graduating in 1934, Turing stayed at the college as a fellow—scholar who
+    works at a college. He studied probability theory. This branch of mathematics
+    has to do with how likely it is that random events will occur. In 1936, Turing
+    won a Smith’s Prize from the University of Cambridge for his work in probability
+    theory.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Chapter 2
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_11_0.png)
+
+
+    > Turing ran for fun and also competed in races during his time at King''s College.
+
+
+    # CODE-BREAKING
+
+
+    Turing was out running one day when he got an idea he just had to write down.
+    He thought it might be possible to build a computing machine that could solve
+    math problems by itself.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'Turing imagined his machine reading a set of instructions for solving math
+    problems. The instructions would be on a length of tape. The tape would have squares
+    on it. Some squares would be blank. Others would be marked with characters such
+    as 1 or 0. The machine would read the numbers on the tape and be able to calculate
+    answers to difficult problems.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_12_0.png)
+
+
+    > Turing was one of the world''s first computer scientists.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'The machine Turing had in mind was a thought experiment. He didn''t think it
+    could really be built. He worked alone and didn''t realize other mathematicians
+    were working on similar ideas.
+
+
+    In 1936, Turing published a paper about a math problem. To solve the problem,
+    he wrote about a computing machine. The paper was the first explanation of how
+    such a machine could be programmed. He didn''t know it then, but the paper would
+    be groundbreaking in the world of mathematics.
+
+
+    # PREPARING FOR WAR
+
+
+    The same year he published his paper, Turing began
+
+
+    > COMPUTER PIONEER Turing''s idea for instructions for a computing machine is
+    the basis for modern computer languages. Most computer languages are translated
+    by the machine into a series of 1s and Os called a binary code. By reading the
+    order of the binary code, the computer can follow complex instructions.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'attending Princeton University in New Jersey. He studied mathematics and, later,
+    **cryptography**. His interest in cryptography grew from frightening current events
+    during the 1930s.
+
+
+    > Princeton University is one of the oldest colleges in the United States. It
+    began accepting students in 1746.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '![](img/db58f542749354fde4835edbc0ae9a1a_15_0.png)
+
+
+    > Adolf Hitler (right) became the leader of Germany in 1933.
+
+
+    While Turing was studying at King''s College and Princeton, Adolf Hitler rose
+    to power to become the dictator of Germany. Hitler and the Nazi Party had plans
+    to expand into other countries through military force. Britain was likely to go
+    to war against Germany. Like many others throughout Europe and the world, Turing
+    was scared. But he knew that knowledge of cryptography could be useful in a war.
+
+
+    In 1938, Turing graduated from Princeton. He was offered a position at the university
+    and could have stayed in the United States. Instead, he returned to Cambridge
+    and then began'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'work at the Government Code and Cypher School. It wasn''t really a school but
+    rather a secret code-breaking organization started during World War I (1914–1918).
+    It gathered intelligence about the enemy to keep Britain safe.
+
+
+    The Germans enciphered their military messages. That prevented their enemies from
+    reading them and learning their plans. In 1938, a team of mathematicians in Poland
+    designed a machine called Bomba. It deciphered codes and allowed the mathematicians
+    to unlock and read entire coded messages written by the German military. It worked
+    as long as the Germans followed a certain pattern when creating their messages
+    each day.
+
+
+    Soon enough, the Germans changed their method of creating codes so Bomba could
+    not crack them. Bomba would still prove to be useful, however. It would become
+    an important part of Turing''s code-breaking work during World War II.
+
+
+    # TECH TALK
+
+
+    > [Turing] invented the idea of software, essentially. It''s software that''s
+    really the important invention.
+
+
+    --Freeman Dyson, physicist'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Chapter 3
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_17_0.png)
+
+
+    # BUILDING THE BOMBE
+
+
+    On September 1, 1939, Germany invaded Poland. Two days later, France and Britain
+    declared war on Germany. World War II had begun. Turing''s work in math and cryptography
+    suddenly became urgent and an important part of the war effort.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'Britain and its allies, including the United States, wanted to decode Germany''s
+    messages to prevent surprise attacks. But the Germans had a secret weapon on their
+    side: the Enigma machine. Invented by a German engineer, the Enigma machine could
+    encipher code that was impossible for human code-breakers to crack.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_18_0.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'The Enigma machine looked similar to a typewriter—machines with keyboards that
+    people used to write on before computers were developed. It had a keyboard and
+    several rotating wheels. When messages were typed on the keyboard, the wheels
+    turned and changed letters to scramble messages. The machine was able to scramble
+    letters in so many different ways that code-breakers could not possibly try them
+    all. And the settings were changed each day to create an entirely new code.
+
+
+    # GUESSING GAME
+
+
+    Turing had some clues about how to crack the Enigma code. He knew that certain
+    words and phrases were common in messages the Germans sent. For example, many
+    messages were about the weather. Commonly used words such as wettervorhersage,
+    or weather forecast, could be deciphered. These were called cribs. A crib can
+    help unlock the rest of the text in a message.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_19_0.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'By studying captured German intelligence, Turing also learned that the Enigma
+    machine would never encipher a letter as itself. It would always be a different
+    letter in a scrambled message. The Germans made their machine work this way on
+    purpose, thinking it would make the messages harder to unscramble. But knowing
+    a letter would never be coded as itself was a clue that Turing used to create
+    cribs.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_20_0.png)
+
+
+    > Scrambled German messages such as this were commonly intercepted by British
+    agents.'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'These clues helped Turing make educated guesses about how the Enigma code could
+    be cracked. They were bits of information that helped form a mathematical solution
+    in his mind. But they were not enough to break the code.
+
+
+    # CRACKING THE CODE
+
+
+    The main obstacle to cracking the Enigma code was the number of possibilities
+    that existed. There were too many for a code-breaker to test. But Turing believed
+    a machine could do what humans could not.
+
+
+    He built a machine called the Bombe based on the Polish Bomba. The Bombe was made
+    of rotors and switches that acted like thirty-six Enigma machines. The parts moved
+    quickly to test thousands of different letter combinations.
+
+
+    > THE BOMBE
+
+    The Bombe was an enormous machine. It was about 7 feet (2.1 m) wide, 6.5 feet
+    (2 m) tall, and weighed 1 ton (0.9 t). It used 12 miles (19 km) of wiring and
+    contained ninety-seven thousand parts.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '![](img/db58f542749354fde4835edbc0ae9a1a_22_0.png)
+
+
+    > To ensure that British agents would be able to decipher all the German messages
+    they intercepted, more than two hundred Bombes were built during the war.
+
+
+    With the help of a crib, the Bombe worked on German messages that the British
+    intercepted. It found a small number of likely solutions to each enciphered message
+    for code-breakers to check. From there, they could easily decipher the code and
+    read the messages.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Chapter 4
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_23_0.png)
+
+
+    # AFTER THE WAR
+
+
+    World War II ended with Germany''s defeat in 1945. The Bombe played a major role
+    in the outcome. Messages deciphered by the Bombe told about the enemy''s movements
+    and plans. Some experts believe the fighting would have'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: 'continued for two more years without Turing''s Bombe. They estimate two million
+    more people would have died in the war.
+
+
+    Britain recognized Turing''s efforts. He was honored as an Officer of the Most
+    Excellent Order of the British Empire. After the war, he continued working in
+    his field. At the National Physical Laboratory in London, Turing designed the
+    Automatic Computing Engine. It was the first computer design that could store
+    digital programs.
+
+
+    > Turing''s Automatic Computing Engine was first put to use in 1950.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_24_0.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# THE TURING TEST
+
+
+    In 1948, Turing became deputy director of the Computing Machine Laboratory at
+    the University of Manchester. There, he developed ideas for computer software
+    and artificial intelligence. He created the Turing test to study artificial intelligence.
+
+
+    The Turing test was an experiment to see if a computer''s artificial intelligence
+    could really think for itself. A person acting as a judge received messages on
+    a computer screen. Some messages came from another person. Others were from the
+    computer. If the judge mistakenly believed the computer-generated messages came
+    from a human at least half the time, it could be assumed that the computer was
+    intelligent. Forms of the Turing test are still used to judge a computer''s thinking
+    ability.
+
+
+    > “A computer would deserve to be called intelligent if it could deceive a human
+    into believing that it was human.”
+
+    —Alan Turing'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '![](img/db58f542749354fde4835edbc0ae9a1a_26_0.png)
+
+
+    # FINAL CONTRIBUTIONS
+
+
+    In 1952, Turing turned his attention to biology and how things grow. His interest
+    in the subject went back to his childhood, when he''d been fascinated with plants.
+    As an adult, he had new ideas that explained how patterns in living things develop
+    mathematically. He published a paper on his ideas, focusing on daisies.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'Around this time, Turing''s work was interrupted. In England in the 1950s,
+    it was against the law to be homosexual. Turing was homosexual. In 1952, he was
+    convicted of the crime of being homosexual. He lost his security clearance. He
+    could no longer work in cryptography for the government.
+
+
+    # DEATH AND HONOR
+
+
+    Turing died of cyanide poisoning in June 1954. Many people believe he committed
+    suicide. But his death may have been accidental. Turing often used cyanide in
+    experiments at home. He may have swallowed the poison or inhaled its vapors by
+    mistake.
+
+
+    After his death, the British government recognized that Turing had been mistreated
+    when he had been convicted of a crime.
+
+
+    > I believe that at the end of the [twentieth] century the use of words and general
+    educated opinion will have altered so much that one will be able to speak of machines
+    thinking without expecting to be contradicted.\n—Alan Turing
+
+
+    # TECH TALK'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: 'People may visit the Alan Turing Memorial in Manchester, England. It was unveiled
+    in 2001.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_28_0.png)'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'In 2009, British prime minister Gordon Brown offered an official apology to
+    Turing on behalf of the government. In 2013, Queen Elizabeth II formally pardoned
+    him for his criminal conviction.
+
+
+    Turing continues to be honored and respected for his work. He helped save the
+    world from Nazi aggression, and he sparked new ideas about math, science, and
+    technology.
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_29_0.png)'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# # TIMELINE
+
+
+    # ## 1912
+
+
+    Alan Turing is born.
+
+
+    # ## 1934
+
+
+    Turing graduates from King''s College.
+
+
+    # ## 1938
+
+
+    Turing graduates from Princeton University.
+
+
+    # ## 1939
+
+
+    World War II begins.
+
+
+    # ## 1945
+
+
+    World War II ends.
+
+
+    # ## 1950
+
+
+    Turing develops the Turing test.
+
+
+    # ## 1952
+
+
+    Turing loses his security clearance after being convicted of a crime for being
+    homosexual.
+
+
+    # ## 1954
+
+
+    Turing dies.
+
+
+    # ## 2009
+
+
+    Britain''s prime minister officially apologizes to Turing.
+
+
+    # ## 2013
+
+
+    Queen Elizabeth II formally pardons Turing.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# SOURCE NOTES
+
+
+    +   15 Joel Achenbach, “The Imitation Game Didn’t Tell You about Turing’s Greatest
+    Triumph,” Washington Post, February 20, 2015, http://www.washingtonpost.com/national/health-science/what-imitation-game-didnt-tell-you-about-alan-turings-greatest-triumph/2015/02/20/ffd210b6-b606-11e4-9423-f3d0a1aec335c_story.html?utm_term=bfb1ad333b44c.
+
+
+    +   24 S. Barry Cooper, Alan Turing: ‘I Am Building a Brain.’ Half a Century Later,
+    Its Successor Beat Kasparov,” Guardian (US ed.), May 14, 2012, https://www.theguardian.com/2012/the-norther/may/14/alan-turing-gary-kasparov-computer.
+
+
+    +   26 “Quora Question: Can Intelligent Machines Mimic Sentience?” Newsweek, December
+    25, 2016, http://www.newsweek.com/quora-question-can-machines-become-sentient-535030?amp=1.
+
+
+    # GLOSSARY
+
+
+    **cryptography**nthe science of encoding or decoding information
+
+
+    **probability**nhhow likely something is to happen
+
+
+    **deciphered**nturned code into normal text
+
+
+    **statistics**nthe scientific study of large amounts of numerical data
+
+
+    **enciphered**nturned normal text into code
+
+
+    **fellow**nna scholar who works at a college'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# FURTHER INFORMATION
+
+
+    # BOOKS
+
+
+    Burrows, Terry. Codes, Ciphers, and Cartography: Math Goes to War: Minneapolis:
+    Lerner Publications, 2018. Explore how math is used on the battlefield.
+
+
+    Kallen, Stuart A. World War II Spies and Secret Agents. Minneapolis: Lerner Publications,
+    2018. Read more about codes and secrets during World War II.
+
+
+    Nagelhout, Ryan. Alan Turing: Master of Cracking Codes. New York: PowerK13, 2016.
+    Learn more about Turing''s work in World War II and on computer development.
+
+
+    # WEBSITES
+
+
+    Alan Turing Facts and Biography
+
+    http://www.facts-about.org.uk/famous-people-facts-starting-with-a/alan-turing.htm
+
+    Learn more about the life of Alan Turing.
+
+
+    Get the Math
+
+    http://www.thirteen.org/get-the-math
+
+    Visit this site to learn more about math and its practical uses.
+
+
+    National Security Agency–Cryptologic Machines Image Gallery
+
+    https://www.nsa.gov/resources/everyone/digital-media-center/image-galleries/cryptologic-museum/machines
+
+    Take a look at images of the Bombe and other coding machines.
+
+
+    Expand learning beyond the printed book. Download free, complementary educational
+    resources for this book from our website, www.lernerource.com.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# INDEX
+
+
+    Automatic Computing Engine, 23
+
+    Bomba, 15, 20
+
+    Bombe, 16, 20–23
+
+    computing machine, 10–12
+
+    Computing Machine Laboratory, 24
+
+    crib, 18–19,
+
+    cyanide, 26
+
+    Einstein, Albert, 8–9
+
+    Elizabeth II (queen), 28
+
+    Enigma machine, 17–20
+
+
+    Government Code and Cypher School, 15
+
+    Hazhurst, 6–8
+
+    Hitler, Adolf, 14
+
+    King''s College, 9, 14
+
+    National Physical Laboratory, 23
+
+    Nazi Germany, 14
+
+    Officer of the Most Excellent Order of the British Empire, 23
+
+    Poland, 15–16
+
+
+    Princeton University, 13–14
+
+    Sherborne School, 8–9
+
+    Smith''s Prize, 9
+
+    University of Cambridge, 9
+
+    University of Manchester, 24
+
+    World War I, 15
+
+    World War II, 5, 16, 22
+
+
+    # ABOUT THE AUTHOR
+
+
+    Heather E. Schwartz has written more than sixty nonfiction books for kids. She
+    always enjoys researching and learning about people with a passion for what they
+    do, like Alan Turing.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '![](img/db58f542749354fde4835edbc0ae9a1a_35_0.png)
+
+
+    Have you ever wished you could do heroic to help your country? When Alan Turing
+    was a boy, he was fascinated by math and science. Later, Turing''s math skills
+    would help Great Britain win World War II.
+
+
+    Turing''s parents taught him he''d be better off dropping math in favor of more
+    gentlemanly studies, such as literature and Latin. But he stuck with it, and by
+    by the start of World War II in 1939, he was ready to take on the biggest challenge
+    his country faced: Nazi Germany. Turing put his advanced knowledge of math to
+    work decoding secret German messages. Great Britain turn to help the tide of the
+    war—they provided the foundation upon which much of modern computing and artificial
+    intelligence is based.
+
+
+    # STEM trailblazer BIOS
+
+
+    +   - Aerospace Engineer Avril Ericsson
+
+    - Alternate Reality Game Designer Jane McNeal
+
+    - Animal Scientist and Astronaut Jane Goode
+
+    - Astronaut and Physicist Sally Ride
+
+    - Astronaut Mae Mays
+
+    - Astronomer and Space Advocate Neil deGrasse Tyson
+
+    - Code-Breaker and Mathematician Alan Turing
+
+    - Computer Engineer own Sanghi
+
+    - Computer Scientist Jan Bartik
+
+    - Environmentalist Angela Wangari
+
+    - Environmentalist Rachel Carson
+
+    - Founder and Internet Entrepreneur Mark Zuckerberg
+
+    - Genetics Expert John L. Keyes
+
+    - Genius Physicist Albert Einstein
+
+    - Cybersecurity Expert Paris Tarbiz
+
+    - Google and Glasses Innovator Sebastian Thun
+
+    - GoPro Inventor Nickman
+
+
+    +   - Inventor, Engineer, and Physicist Nikola Tesla
+
+    - iPod and Electronics Visionary Tony Fadell
+
+    - Mars Science Lab Engineer Diana Trujillo
+
+    - Mathematician and Computer Scientist Grace Hopper
+
+    - Minecraft Creator Markus "Notch" Persson
+
+    - NASA Astronomer Nancy Grace
+
+    - Mathematician Catherine Johnson
+
+    - Nintendo Video Game Designer Shigeru Miyamoto
+
+    - Nuclear Physicist Chen-Shung Wu
+
+    - Programmer Elena Educator and Advocate Bill Nye
+
+    - Space Engineer and Scientist Margaret Hamilton
+
+    - Space Engineer Matters Elon Musk
+
+    - Super So Scientist Lonnie Johnson
+
+    - Theoretical Physicist Brian Green
+
+    - Theoretical Physicist Stephen Hawking
+
+    - Urban Biologist Danielle Lee
+
+    - Vaccine Experts Pearl Kenrick and Grace Eldering
+
+    - YouTube Founders Steve Chen, Chad Hurley, and
+
+    - Jared Karim
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_35_1.png)
+
+
+    ![](img/db58f542749354fde4835edbc0ae9a1a_35_2.png)'
+  merge: -1
+  pgno: 35
