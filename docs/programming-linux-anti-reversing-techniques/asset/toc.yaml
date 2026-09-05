@@ -1,0 +1,330 @@
+- - '#'
+  - Linux 编程：反逆向工程技术
+- - '##'
+  - 第 1 章：介绍
+- - '###'
+  - chap_1_introduction/trouble/CMakeLists.txt
+- - '###'
+  - 这将为绑定 shell（bind shell）创建一个 32 字节的“密码”。该命令
+- - '###'
+  - 仅在运行 "cmake" 时执行，因此如果你想生成新密码，
+- - '###'
+  - 应该从命令行运行 "cmake ..;"。
+- - '###'
+  - 将随机密码作为宏传递给 ${PROJECT_NAME}
+- - '###'
+  - 编译成功后，向用户显示随机密码
+- - '###'
+  - 代码部分
+- - '###'
+  - chap_1_introduction/trouble/trouble.c
+- - '###'
+  - 编译
+- - '###'
+  - 执行
+- - '###'
+  - 访问 Shell
+- - '##'
+  - 第 2 章：编译器选项
+- - '###'
+  - 聚焦 GCC
+- - '###'
+  - -g
+- - '###'
+  - readelf
+- - '###'
+  - 'Section Headers:'
+- - '###'
+  - objdump
+- - '###'
+  - 在 GDB 中生成回溯
+- - '###'
+  - 使用 Hexxdump 恢复 Bind Shell 密码
+- - '###'
+  - 查看 Trouble 的程序头
+- - '###'
+  - 使用 hexdump 打印 s_password
+- - '###'
+  - 使用 GDB 恢复 Shell
+- - '###'
+  - 使用 GDB 打印 s_password
+- - '###'
+  - 在 IDA 中调试
+- - '###'
+  - C 语言中的 check_password() 调用
+- - '###'
+  - 移除调试信息
+- - '###'
+  - 案例研究：XOR DDOS
+- - '###'
+  - 恶意软件
+- - '###'
+  - SYTAB vs DYSYM
+- - '###'
+  - 节头：
+- - '###'
+  - Kaiten SYMTAB 中的初始条目
+- - '###'
+  - 检查添加 -s 后的 Trouble
+- - '###'
+  - Trouble -s
+- - '###'
+  - -fvisibility
+- - '###'
+  - 查看 FUNC 符号
+- - '###'
+  - 隐藏 FUNC 符号
+- - '###'
+  - 静态函数
+- - '###'
+  - GDB 等待 main
+- - '###'
+  - Radare2 无 check_password() 情况
+- - '###'
+  - Radare2：未使用 -fvisibility=hidden 时的 check_password 调用
+- - '###'
+  - Radare2：使用 -fvisibility=hidden 时的 check_password 调用
+- - '###'
+  - -O
+- - '###'
+  - 编写良好的代码
+- - '###'
+  - 修正后的微型加密算法 (XXTEA)
+- - '###'
+  - Building tea
+- - '###'
+  - -Os
+- - '###'
+  - btea_encrypt() 的 -Os 版本的尺寸
+- - '###'
+  - btea_encrypt() 的 -Os 版本反编译版本
+- - '###'
+  - -funroll-loops
+- - '###'
+  - -static
+- - '###'
+  - 运行时解析函数
+- - '###'
+  - 在 libc.so 加载之前检查 memcmp
+- - '###'
+  - 在 libc.so 加载后检查 memcmp
+- - '###'
+  - 在 Trouble 上使用 ltrace
+- - '###'
+  - LD_PRELOAD
+- - '###'
+  - 使用 musl
+- - '###'
+  - 体积很重要
+- - '###'
+  - 使用 musl libc 的 Trouble 动态段
+- - '##'
+  - 第 3 章：文件黑客
+- - '###'
+  - Strip 工具
+- - '###'
+  - Trouble 的节表
+- - '###'
+  - .comment 的内容
+- - '###'
+  - '**从 Trouble 中剥离 .comment**'
+- - '###'
+  - 在每次编译时剥离 .comment
+- - '###'
+  - 移除节头
+- - '###'
+  - Trouble 的 ELF 头
+- - '###'
+  - 更新后的 ELF 头
+- - '###'
+  - 修改后 ELF 头下的 Radare2 节
+- - '###'
+  - 使用字符串查找节名
+- - '###'
+  - 程序头
+- - '###'
+  - man elf
+- - '###'
+  - 查看 Trouble 中存在异常的 EI_DATA
+- - '###'
+  - 使用 dd 修改 EI_DATA 字节
+- - '###'
+  - 修改 Trouble 的 EI_DATA 标志后的 readelf
+- - '###'
+  - 用字节序谎言欺骗 GDB
+- - '###'
+  - Trouble 仍然可用
+- - '###'
+  - 用字节序谎言欺骗 Radare2
+- - '###'
+  - 插入字节序谎言的 CMake 命令
+- - '###'
+  - echo ‘Ag==’ | base64-d
+- - '###'
+  - 使用 EI_DATA 混淆编译 Trouble
+- - '###'
+  - 第 3 章：文件技巧
+- - '###'
+  - 去除二进制符号后的 Trouble 视图
+- - '###'
+  - 为 Trouble 添加一个伪节段
+- - '###'
+  - 带有 fakeHeadersXBit 节头部表的 Trouble
+- - '###'
+  - 'Section Headers:'
+- - '###'
+  - 'Key to Flags: W (write), A (alloc), X (execute), M (merge), S (strings), l (large),
+    I (info), L (link), G (group), T (TLS), E (exclude), x (unknown), O (OS processing),
+    p (processor specific)。文件中没有节组 (groups)。'
+- - '###'
+  - 'Program Headers:'
+- - '###'
+  - 'Section to Segment mapping:'
+- - '###'
+  - Trouble 的入口点
+- - '###'
+  - main 的反汇编
+- - '###'
+  - 更新后的 `edit_elf_header()`
+- - '###'
+  - 更新后的 `add_data_section()`
+- - '###'
+  - 'Section Headers:'
+- - '###'
+  - Trouble 的伪节区
+- - '###'
+  - '节头部 (Section Headers):'
+- - '###'
+  - '通过重叠入口点和 .init '
+- - '###'
+  - 64位 ELF 节头部
+- - '###'
+  - chap_3_format_hacks/fakeHeadersEntry/CMakeLists.txt
+- - '###'
+  - chap_3_format_hacks/fakeHeadersEntry/src/fakeHeadersEntry.cpp
+- - '###'
+  - 格式破解
+- - '###'
+  - 在 IDA 中检查 fakeHeadersEntry 的问题
+- - '###'
+  - Hopper 中检查 fakeHeadersEntry 的问题
+- - '###'
+  - 混合符号
+- - '###'
+  - CMakeLists.txt
+- - '###'
+  - mixSymbols.cpp
+- - '###'
+  - Trouble 的dynym 表
+- - '###'
+  - 混合符号之前的 .dynym
+- - '###'
+  - Trouble 的 .dynym
+- - '###'
+  - 混合符号
+- - '###'
+  - 代码重构
+- - '###'
+  - 栈字符串
+- - '##'
+  - 第 4 章：对抗字符串
+- - '###'
+  - 在 Trouble 上使用 stripBinary
+- - '###'
+  - Dont 的 CMake.txt
+- - '###'
+  - Updating Trouble 的 CMake
+- - '###'
+  - 创建加密器 (Cryptor)
+- - '###'
+  - 什么是加密器？
+- - '###'
+  - 实现加密器
+- - '###'
+  - 分析部分
+- - '###'
+  - 应用 Cryptor 后 Trouble 的 ELF头部
+- - '###'
+  - 应用 Cryptor 后 Trouble 的程序头
+- - '###'
+  - 阻碍分析
+- - '###'
+  - 从 main() 调用 check_password()
+- - '###'
+  - 使用函数指针调用 check_password()
+- - '###'
+  - check_password() 的代码和数据交叉
+- - '###'
+  - 通过函数指针调用 check_password()
+- - '###'
+  - .data 中 indirect_call 的定义
+- - '###'
+  - 更新 Trouble 的 main() 将 check_password() 存储在 indirect_call 中
+- - '###'
+  - 只有数据引用的 check_password()
+- - '###'
+  - 对 check_password() 的数据交叉
+- - '###'
+  - 对 check_password() 的间接调用
+- - '###'
+  - 初始化为 NULL 后的 indirect_call
+- - '###'
+  - 在 indirect_call 中存储错误的地址
+- - '###'
+  - 调整 indirect_call 中的地址
+- - '###'
+  - 信号
+- - '###'
+  - 调用 spawn_shell() 调用 SIGUSR1
+- - '###'
+  - 通过 kill() 调用 spawn_shell()
+- - '###'
+  - 早期返回
+- - '###'
+  - 返回到 check_password() 的中间
+- - '###'
+  - 混淆失败
+- - '###'
+  - 混淆返回地址
+- - '###'
+  - check_password() 中的早期返回隐藏了代码
+- - '###'
+  - 跳转无效字节
+- - '###'
+  - 始终执行条件跳转
+- - '###'
+  - '`check_password()` 中的绝对跳转'
+- - '##'
+  - 第 5 章：代码流分析
+- - '###'
+  - 在捕获 GDB 等调试器之前，你需要了解它们的原理
+- - '###'
+  - 通过 `ptrace()` 检测调试器
+- - '###'
+  - 捕获调试器
+- - '###'
+  - 使用 SIGTRAP 捕获调试器
+- - '###'
+  - /proc/sysctl/status
+- - '###'
+  - 理解 /proc/status 的输出
+- - '###'
+  - 在 /proc/self/status 中查找 TracerPid
+- - '###'
+  - madvise
+- - '###'
+  - 在 Trouble 中添加 PR_SET_DUMPABLE
+- - '###'
+  - Core 文件生成已失效
+- - '###'
+  - 在 main() 之前的检测
+- - '###'
+  - 在 main() 之前检查 /proc/self/status
+- - '###'
+  - 在命中 main() 之前退出
+- - '###'
+  - 计算校验和
+- - '##'
+  - 第 6 章：逃避调试器
+- - '###'
+  - 结语：我们所经历的一切
