@@ -1,0 +1,1370 @@
+- img_proc: true
+  md: 'These are illegal enumeration types because none of the values is an identifier.
+
+    Following, however, are legal enumeration types:
+
+
+    If a value has already been used in one enumeration type, it cannot be used by
+    any other
+
+    enumeration type in the same block. The same rules apply to enumeration types
+    declared
+
+    outside of any blocks. Example 8–4 illustrates this concept.
+
+
+    # EXAMPLE 8-4
+
+
+    Consider the following statements:
+
+
+    ```
+
+    enum mathStudent {JOHN, BILL, CINDY, LISA, RON};
+
+    enum compStudent {SUSAN, CATHY, JOHN, WILLIAM}; //illegal
+
+    ```
+
+
+    Suppose that these statements are in the same program in the same block. The second
+
+    enumeration type, compStudent, is not allowed because the value JOHN was used
+    in the
+
+    previous enumeration type mathStudent.
+
+
+    # Declaring Variables
+
+
+    Once a type is defined, you can declare variables of that type. The syntax for
+
+    declaring variables of an enum type is the same as before:
+
+
+    ```
+
+    dataType identifier, identifier,...,;
+
+    ```
+
+
+    The statement:
+
+
+    ```
+
+    enum sports {BASKETBALL, FOOTBALL, HOCKEY, BASEBALL, SOCCER,
+
+    VOLLEYBALL};
+
+    ```
+
+
+    defines an enumeration type called sports. The statement:
+
+
+    sportsPopularSport, mySport;
+
+
+    declares popularSport and mySport to be variables of type sports.
+
+
+    # Assignment
+
+
+    Once a variable is declared, you can store values in it. Assuming the previous
+    declaration,
+
+    the statement:
+
+
+    ```
+
+    popularSport = FOOTBALL;
+
+    ```'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Enumeration Type | 437
+
+
+    stores FOOTBALL in popularSport. The statement:
+
+
+    mySport = popularSport;
+
+
+    copies the value of popularSport into mySport.
+
+
+    # Operations on Enumeration Types
+
+
+    No arithmetic operations are allowed on the enumeration type. So the following
+    statements are illegal:
+
+
+    ```
+
+    mySport = popularSport + 2;               //illegal
+
+    popularSport = FOOTBALL + SOCCER;     //illegal
+
+    popularSport = popularSport * 2;       //illegal
+
+    ```
+
+
+    Also, the increment and decrement operations are not allowed on enumeration types.
+    So the following statements are illegal:
+
+
+    ```
+
+    popularSport++;               //illegal
+
+    popularSport--;               //illegal
+
+    ```
+
+
+    Suppose you want to increment the value of popularSport by 1. You can use the
+    cast operator as:
+
+
+    ```
+
+    popularSport = static_cast<sports>(popularSport + 1);
+
+    ```
+
+
+    When the name is used, the compiler assumes that the user understands what he
+    or she is doing. Thus, the preceding statement is compiled, and during execution,
+    it advances the value of popularSport to the next value in the list. Consider
+    the following statements:
+
+
+    ```
+
+    popularSport = FOOTBALL;
+
+    popularSport = static_cast<sports>(popularSport + 1);
+
+    ```
+
+
+    After the second statement, the value of popularSport is HOCKEY. Similarly, the
+    result in storing BASKETBALL in popularSport.
+
+
+    ```
+
+    popularSport = FOOTBALL;
+
+    popularSport = static_cast<sports>(popularSport - 1);
+
+    ```
+
+
+    result in storing BASKETBALL in popularSport.
+
+
+    # Relational Operators
+
+
+    Because an enumeration is an ordered set of values, the relational operators can
+    be used with the enumeration type. Again, suppose you have the enumeration type
+    sports and the variables popularSport and mySport as defined earlier. Then:
+
+
+    ```
+
+    FOOTBALL <= SOCCER true
+
+    HOCKEY > BASKETBALL true
+
+    BASEBALL < FOOTBALL false
+
+    ```'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '438 | Chapter 8: User-Defined Simple Data Types, Namespaces, and the string
+    Type
+
+
+    Suppose that:
+
+
+    ```
+
+    popularSport = SOCCER;
+
+    mySport = VOLLEYBALL;
+
+    ```
+
+
+    Then:
+
+
+    ```
+
+    popularSport < mySport is true
+
+    ```
+
+
+    # ENUMERATION TYPES AND LOOPS
+
+
+    Recall that the enumeration type is an integral type and, using the cast operator
+    (operator that is, name), you can increment, decrement, and compare the values
+    of the enumeration type. Therefore, you can use these enumeration types in loops.
+    Suppose mySport is a variable declared earlier. Consider the following for loop:
+
+
+    ```
+
+    for (mySport = BASKETBALL; mySport < SOCCER;
+
+    mySport = static_cast<sports>(mySport + 1))
+
+    ```
+
+
+    .
+
+    .
+
+
+    This for loop has five iterations.
+
+
+    Using enumerations in loops increases the readability of the program.
+
+
+    # Input/Output of Enumeration Types
+
+
+    Because input and output are defined only for built-in data types such as int,
+    char, double, and so on, the enumeration type can be neither input nor output
+    (directly). However, you can input and output enumeration indirectly. Example
+    8-5 illustrates this concept.
+
+
+    > EXAMPLE 8-5
+
+
+    Suppose you have the following statements:
+
+
+    ```
+
+    enum courses {ALGEBRA, BASIC, PASCAL, CPP, PHILOSOPHY, ANALYSIS,
+
+    CHEMISTRY, HISTORY};
+
+    ```
+
+
+    courses registered;
+
+
+    The first statement defines an enumeration type, courses; the second declares
+    a variable registered of type courses. You can read (that is, input) the enumeration
+    type with the help of the char data type. You can distinguish between some of
+    the values of the enumeration type just by reading the first character and others
+    by reading the first two characters. For example, you can distinguish between
+    ALGEBRA and BASIC just by reading the first character; you can distinguish between
+    ALGEBRA and ANALYSIS by reading the first two characters. To read these values,
+    say, the keyboard, and then use a selection structure to assign the value to the
+    variable registered. Thus, you need to declare two variables of type char.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "char ch1, ch2;\nin >> ch1 >> ch2; //Read two characters\n\nThe following switch\
+    \ statement assigns the appropriate value to the variable registered:\n\n```\n\
+    switch (ch1) {\n    case 'a':\n    case 'A':\n        if (ch2 == 'l' || ch2 ==\
+    \ 'L')\n            registered = ALGEBRA;\n        else\n            registered\
+    \ = ANALYSIS;\n        break;\n    case 'b':\n    case 'B':\n        registered\
+    \ = BASIC;\n        break;\n    case 'c':\n    case 'C':\n        if (ch2 == 'h'\
+    \ || ch2 == 'H')\n            registered = CHEMISTRY;\n        else\n        \
+    \    registered = CPP;\n        break;\n    case 'h':\n    case 'H':\n       \
+    \ registered = HISTORY;\n        break;\n    case 'p':\n    case 'P':\n      \
+    \  if (ch2 == 'a' || ch2 == 'A')\n            registered = PASCAL;\n        else\n\
+    \            registered = PHILOSOPHY;\n        break;\n    default:\n        cout\
+    \ << \"Illegal input.\" << endl;\n}\n```\n\nSimilarly, you can output the enumeration\
+    \ type directly:\n\n```\nswitch (registered) {\n    case ALGEBRA:\n        cout\
+    \ << \"Algebra\";\n        break;\n    case ANALYSIS:\n        cout << \"Analysis\"\
+    ;\n        break;\n    case BASIC:\n        cout << \"Basic\";\n        break;\n\
+    ```\n\n![](img/b08b54ded82fc9e3d8d95107a5b40e44_3_0.png)"
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '```
+
+    case CHEMISTRY:
+
+    cout << "Chemistry";
+
+    break;
+
+    case CPP:
+
+    cout << "CPP";
+
+    break;
+
+    case HISTORY:
+
+    cout << "History";
+
+    break;
+
+    case PASCAL:
+
+    cout << "Pascal";
+
+    break;
+
+    case PHILOSOPHY:
+
+    cout << "Philosophy";
+
+    }
+
+    ```
+
+
+    If you try to output the value of the enumerator directly, the computer will output
+    the value assigned to registered = ALGEBRA; The following statement will output
+    the value 0 because the (default) value assigned to ALGEBRA is 0:
+
+
+    ```
+
+    cout << registered << endl;
+
+    Similarly, the following statement will output 4:
+
+    cout << PHILOSOPHY << endl;
+
+    ```
+
+
+    # Functions and Enumeration Types
+
+
+    You can pass the enumeration type as a parameter to functions just like any other
+    simple data type—that is, by value or reference. Also, just like any simple data
+    type, a function can return a value of the enumeration type. Using this facility,
+    you can use functions to input and output enumeration types.
+
+
+    The following function inputs data from the keyboard and returns a value of the
+    enumeration type. Assume that the enumeration type courses is defined as before:
+
+
+    ```
+
+    courses readCourses()
+
+    {
+
+    courses registered;
+
+    char ch1, ch2;
+
+
+    cout << "Enter the first two letters of the course: "
+
+    << endl;
+
+    cin >> ch1 >> ch2;
+
+
+    switch (ch1)
+
+    {
+
+    case ''a'':
+
+    ```'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "```\ncase 'A':\n    if (ch2 == '1' || ch2 == 'L')\n        registered = ALGEBRA;\n\
+    \    else\n        registered = ANALYSIS;\n    break;\ncase 'b':\ncase 'B':\n\
+    \    registered = BASIC;\n    break;\ncase 'c':\ncase 'C':\n    if (ch2 == 'h'\
+    \ || ch2 == 'H')\n        registered = CHEMISTRY;\n    else\n        registered\
+    \ = CPP;\n    break;\ncase 'h':\ncase 'H':\n    registered = HISTORY;\n    break;\n\
+    case 'p':\ncase 'P':\n    if (ch2 == 'a' || ch2 == 'A')\n        registered =\
+    \ PASCAL;\n    else\n        registered = PHILOSOPHY;\n    break;\ndefault:\n\
+    \    cout << \"Illegal input.\" << endl;\n}\nreturn registered;\n//end readCourse\n\
+    ```\n\nThe following function outputs an enumeration type value:\n\n```\nvoid\
+    \ printEnum(courses registered)\n{\n    switch (registered)\n    {\n        case\
+    \ ALGEBRA:\n            cout << \"Algebra\";\n            break;\n        case\
+    \ ANALYSIS:\n            cout << \"Analysis\";\n            break;\n        case\
+    \ BASIC:\n            cout << \"Basic\";\n            break;\n        case CHEMISTRY:\n\
+    \            cout << \"Chemistry\";\n            break;\n    }\n```"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '442 | Chapter 8: User-Defined Simple Data Types, Namespaces, and the string
+    Type
+
+
+    ```
+
+    case CPP:
+
+    out << "CPP";
+
+    break;
+
+    case HISTORY:
+
+    out << "History";
+
+    break;
+
+    case PASCAL:
+
+    out << "Pascal";
+
+    break;
+
+    case PHILOSOPHY:
+
+    out << "Philosophy";
+
+    /\end switch
+
+    //end printEnum
+
+    ```
+
+
+    # Declaring Variables When Defining the Enumeration Type
+
+
+    In previous sections, you first defined an enumeration and then declared variables
+    of that type. C++ allows you to combine these steps into one. That is, you can
+    declare variables of an enumeration type when you define an enumeration type.
+    For example, the statement:
+
+
+    ```
+
+    enum {A, B, C, D, F} courseGrade;
+
+    ```
+
+
+    defines an enumeration type, grades, and declares a variable courseGrade of type
+    grades.
+
+
+    Similarly, the statement:
+
+
+    ```
+
+    enum {PENNY, NICKEL, DIME, HALFDOLLAR, DOLLAR} change, usCoins;
+
+    ```
+
+
+    defines an enumeration type, coins, and declares two variables, change and usCoins,
+
+    ofype coins.
+
+
+    # Anonymous Data Types
+
+
+    A data type therein you directly specify values in the variable declaration with
+    no name is called an anonymous type. The following statement creates an anonymous
+    type:
+
+
+    ```
+
+    enum {BASKETBALL, FOOTBALL, BASEBALL, HOCKEY} mySport;
+
+    ```
+
+
+    This statement specifies the values and declares a variable mySport, but no name
+    is given to the data type.
+
+
+    Creating an anonymous type, however, has drawbacks. First, because there is no
+    name for the type, you cannot pass an anonymous type as a parameter to a function,
+    and a function cannot return an anonymous type value. Second, values used in one
+    anonymous type can be used in another anonymous type, but variables of those types
+    are treated differently. Consider the following statements:
+
+
+    ```
+
+    enum {ENGLISH, FRENCH, SPANISH, GERMAN, RUSSIAN} languages;
+
+    enum {ENGLISH, FRENCH, SPANISH, GERMAN, RUSSIAN} foreignLanguages;
+
+    ```'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'Enumeration Type | 443
+
+
+    Even though the variables languages and foreignLanguages have the same values,
+    the compiler treats them as variables of different types. The following statement
+    is, therefore, illegal:
+
+
+    ```
+
+    languages = foreignLanguages; //illegal
+
+    ```
+
+
+    Even though these facilities are available, use them with care. To avoid confusion,
+    first define an enumeration type and declare the variables.
+
+
+    We describe the typedef statement in C++.
+
+
+    # typedef Statement
+
+
+    In C++, you can create synonyms or aliases to a previously defined data type by
+    using the typedef statement. The general syntax of the typedef statement is:
+
+
+    ```
+
+    typedef existingTypeName newTypeName;
+
+    ```
+
+
+    In C++, typedef is a reserved word. Note that the typedef statement does not create
+    any data type; it creates only an alias to an existing data type.
+
+
+    > EXAMPLE 8-6
+
+
+    The statement:
+
+    typef int integer;
+
+
+    creates an alias, integer, for the data type int. Similarly, the statement:
+
+
+    typedef real;
+
+    creates an alias, real, for the data type double. The statement:
+
+
+    typedef decimal;
+
+    creates an alias, decimal, for the data type double.
+
+
+    Using the typedef statement, you can create your own Boolean data type, as shown
+    in 8-7.
+
+
+    > EXAMPLE 8-7
+
+
+    From Chapter 4, recall that logical (Boolean) expressions in C++ evaluate to 1
+    or 0, which are, in fact, int values. As a logical value, 1 represents true and
+    0 represents false. Consider the following statements:
+
+
+    ![](img/b08b54ded82fc9e3d8d95107a5b40e44_7_0.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '444 | Chapter 8: User-Defined Simple Data Types, Namespaces, and the string
+    Type
+
+
+    ```
+
+    typedef int Boolean; //Line 1
+
+    const Boolean TRUE = 1; //Line 2
+
+    const Boolean FALSE = 0; //Line 3
+
+    Boolean flag; //Line 4
+
+    ```
+
+
+    The statement in Line 1 creates an alias, Boolean, for the data type int. The
+    statements in Lines 2 and 3 declare the named constants TRUE and FALSE and initialize
+    them to 1 and 0, respectively. The statement in Line 4 declares flag to be a variable
+    of type Boolean. Because flag is a variable of type Boolean, the following statement
+    is
+
+
+    ```
+
+    flag = TRUE;
+
+    ```
+
+
+    # PROGRAMMING EXAMPLE: The Game of Rock, Paper, and Scissors
+
+
+    Children often play the game of rock, paper, and scissors. This game has two players,
+    each of whom chooses one of the three objects: rock, paper, or scissors. If player
+    1 chooses rock and player 2 chooses paper, player 2 wins the game because paper
+    covers rock. The game is played according to the following rules:
+
+
+    +   * If both players choose the same object, this is a tie.
+
+    * If one player chooses rock and the other chooses scissors, the player choosing
+    rock wins this because the rock breaks the scissors.
+
+    * If one player chooses rock and the other chooses paper, the player choosing
+    paper wins this because the paper covers the rock.
+
+    * If one player chooses scissors and the other chooses paper, the player choosing
+    scissors wins this because the scissors cut the paper.
+
+
+    Write an interactive program that allows two players to play this game.
+
+
+    +   * The users'' responses when asked to play the game.
+
+    * The players'' choices.
+
+
+    Input This program has two types of input:
+
+
+    Output The players'' choices and the winner of each play. After the game is over,
+    the total number of plays and the number of times that player won should be output
+    as.
+
+
+    Two players play this game. Each enters their choices via the keyboard. Each player
+    enters r or R for Rock, p or P for Paper, or s or S for Scissors. While the first
+    player enters a choice, the second player looks elsewhere. Once both entries are
+    in, if the entries are valid, the program outputs the players'' choices and declares
+    the winner of the play. The game continues until one of the players decides to
+    quit'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Programming Example: The Game of Rock, Paper, and Scissors | 445
+
+
+    the game. After the game ends, the program outputs the total number of plays and
+    the number of times that each player wins. This discussion translates into the
+    following algorithm:
+
+
+    +   1. Provide a brief explanation of the game and how it is played.
+
+    2. Ask the users if they want to play the game.
+
+    3. Get plays for both players.
+
+    4. If the plays are valid, output the plays and the winner.
+
+    5. Update the total game count and winner count.
+
+    6. Repeat Steps 2 through 5 while the users agree to play the game.
+
+    7. Output the number of plays and times that each player won.
+
+
+    We will use the enumeration type to describe the objects.
+
+
+    ```
+
+    enum objectType {ROCK, PAPER, SCISSORS};
+
+    ```
+
+
+    Variables (Function main) It is clear that the following variables are in the
+    function:
+
+
+    ```
+
+    int gameCount; //variable to store the number of
+
+    //games played
+
+    int winCount1; //variable to store the number of games
+
+    //by player 1
+
+    int winCount2; //variable to store the number of games
+
+    //by player 2
+
+
+    char gamewinner;
+
+    char response; //variable to get the user''s response to
+
+    //play the game
+
+
+    char selection1;
+
+    char selection2;
+
+    objectType play1; //player1''s selection
+
+    objectType play2; //player2''s selection
+
+    ```
+
+
+    This program is divided into the following functions, which ensuing the ensuctions
+    describe in detail.
+
+
+    +   * displayRules: This function displays some brief information about the game
+    and its rules.
+
+    * validSelection: This function checks whether a player''s selection is valid.
+    The only valid selections are R, r, P, p, S and s.
+
+    * retrievePlay: Because enumeration types cannot be read directly, this function
+    converts the entered choice (R, r, P, p, S or s) and returns the appropriate object
+    type.
+
+    * gameResult: This function outputs the players'' choices and the winner of the
+    game.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "446 | Chapter 8: User-Defined Simple Data Types, Namespaces, and the string\
+    \ Type\n\n+   - convertEnum: This function is called by the function gameResult\
+    \ to\noutput the enumeration type values.\n\n+   - winningObject: This function\
+    \ determines and returns the winning\nobject.\n\n+   - displayResults: After the\
+    \ game is over, this function displays the final\nresults.\n\ndisplayRules function\
+    \ has no parameters. It consists only of output statements to explain the\ngame\
+    \ and rules of play. Essentially, this function's definition is:\n\n```\nvoid\
+    \ displayRules() {\n    cout << \"  Welcome to the game of Rock, Paper, \"\n \
+    \   cout << \"  And Scissors.\" << endl;\n    cout << \"  This is a game for two\
+    \ players. For each \"\n    cout << \"  game, each \" << endl;\n    cout << \"\
+    \  player selects one of the objects Rock, \"\n    cout << \"  Paper, or Scissors.\"\
+    \ << endl;\n    cout << \"  The rules for winning the game are: \" << endl;\n\
+    \    cout << \"  1. If both players select the same object, it \"\n    cout <<\
+    \ \"  is a tie.\" << endl;\n    cout << \"  2. Rock breaks Scissors: So player\
+    \ who selects \"\n    cout << \"  Rock wins.\" << endl;\n    cout << \"  3. Paper\
+    \ covers Rock: So player who selects \"\n    cout << \"  Scissors win.\" << endl;\n\
+    \    cout << \"  4. Scissors cuts Paper: So player who selects \"\n    cout <<\
+    \ \"  Scissors win.\" << endl;\n    cout << \"  Enter R or r to select Rock, P\
+    \ or p to select \"\n    cout << \"  Paper, and S or s to select Scissors.\" <<\
+    \ endl;\n}\n```\n\nvalidSelection function checks whether a player's selection\
+    \ is valid.\n\nLet's use a switch statement to check for the valid selection.\
+    \ The definition of this function is:\n\n```\nbool validSelection(char selection)\
+    \ {\n    switch (selection) {\n        case 'R':\n        case 'r':\n        case\
+    \ 'P':\n        case 'p':\n        case 'S':\n```"
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "```\ncase 's':\n    return true;\n    default:\n        return false;\n}\n\
+    ```\n\nFunction retrievePlay Because the enumeration cannot be read, this function\
+    \ converts the entered choice (R, r, P, p, S, s) and returns the appropriate object\
+    \ type. This function has one parameter, type of char. It is a value-returning\
+    \ function, and it returns a value of objectType. In pseudocode, the algorithm\
+    \ of this function is:\n\n```\nif selection is 'R' or 'r'\n    return ROCK;\n\n\
+    if selection is 'P' or 'p'\n    return PAPER;\n\nif selection is 'S' or 's'\n\
+    \    return SCISSORS;\n```\n\nThe definition of the function retrievePlay is:\n\
+    \n```\nobject retrievePlay(char selection)\n{\n    object object;\n    switch\
+    \ (selection)\n    {\n        case 'R':\n        case 'r':\n            object\
+    \ = ROCK;\n            break;\n        case 'P':\n        case 'p':\n        \
+    \    object = PAPER;\n            break;\n        case 'S':\n        case 's':\n\
+    \            object = SCISSORS;\n    }\n    return object;\n```\n\nFunction gameResult\
+    \ This function decides whether a game is a tie or which player is the winner.\
+    \ It outputs the players' selections and the winner of the game. Clearly, this\
+    \ function has three parameters: player 1's choice, player 2's choice, and a parameter\
+    \ to return the winner. In pseudocode, this function is:\n\n+   a. if player1\
+    \ and player2 have the same selection, then this is a tie game."
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "448 | Chapter 8: User-Defined Simple Data Types, Namespaces, and the string\
+    \ Type\n\n# b. else\n\n+   1. Determine the winning object. (Call function winningObject)\n\
+    2. Output each player's choice.\n3. Determine the winning player.\n4. Return the\
+    \ winning player via a reference parameter to the\nfunction main that the function\
+    \ main can update the\nwinning player's win count.\n\nThe definition of this function\
+    \ is:\n\n```\nvoid gameResult(objectType play1, objectType play2,\n    int &winner)\n\
+    {\n    objectType winnerObject;\n    if (play1 == play2) {\n        winner = 0;\n\
+    \        cout << \"Both players selected \";\n        convertEnum(play1);\n  \
+    \      cout << \". This game is a tie.\" << endl;\n    } else {\n        winnerObject\
+    \ = winningObject(play1, play2);\n        //Output each player's choice\n    \
+    \    cout << \"Player 1 selected \";\n        convertEnum(play1);\n        cout\
+    \ << \" and player 2 selected \";\n        convertEnum(play2);\n        cout <<\
+    \ \".\";\n        //Decide the winner\n        if (play1 == winnerObject)\n  \
+    \          winner = 1;\n        else if (play2 == winnerObject)\n            winner\
+    \ = 2;\n        //Output the winner\n        cout << \"Player \" << winner <<\
+    \ \" wins this game.\";\n        cout << endl;\n    }\n}\n```\n\nBecause enumeration\
+    \ types cannot be output directly, let's write the function\nconvertEnum to output\
+    \ objects of the enum type objectType. This function\nhas one parameter, of type\
+    \ objectType. It outputs the string that corresponds to the\nobjectType. In pseudocode,\
+    \ this function is:"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "```\n{\nif object is ROCK\n    output \"Rock\"\n\nif object is PAPER\n    output\
+    \ \"Paper\"\n\nif object is SCISSORS\n    output \"Scissors\"\n\n```\n\nThe definition\
+    \ of the function convertEnum:\n\n```\nvoid convertEnum(objectType) {\n    switch\
+    \ (object) {\n        case ROCK:\n            cout << \"Rock\";n            break;\n\
+    \        case PAPER:\n            cout << \"Paper\";n            break;\n    \
+    \    case SCISSORS:\n            cout << \"Scissors\";\n    }\n}\n```\n\nFunction\
+    \ To decide the winner of the game, you looks at the players' selections and then\
+    \ the rules of the game. For example, if one player chooses ROCK and another chooses\
+    \ PAPER, the player who chose PAPER wins. In other words, the winning object is\
+    \ PAPER. The function winningObject, given two objects of type objectType, and\
+    \ returns the winning object. Clearly, this function has two parameters of type\
+    \ objectType, and the value returned by this function is also of type objectType.\n\
+    \n```\nobjectType winningObject(objectType play1, objectType play2) {\n    if\
+    \ (play1 == ROCK && play2 == SCISSORS)\n        || (play2 == ROCK && play1 ==\
+    \ SCISSORS)\n        return ROCK;\n    else if (play1 == ROCK && play2 == PAPER)\n\
+    \        || (play2 == ROCK && play1 == PAPER)\n        return PAPER;\n    else\n\
+    \        return SCISSORS;\n}\n```\n\nFunction display After the game is over,\
+    \ this function outputs the final results—that is, the total number of plays and\
+    \ the number of plays won by each player. The total number of plays is stored\
+    \ in the variable gameCount, and the number of plays won by player 1 is stored\
+    \ in the variable winCount, and the number of plays won by player 2 is stored"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "in the variable winCount2. This function has three parameters corresponding\
+    \ to\nthese three variables. Essentials, the definition of this function is:\n\
+    \n```\nvoid displayResults(int gCount, int wCount1, int wCount2) {\n    cout <<\
+    \ \"The total number of players: \" << gCount\n         << endl;\n    cout <<\
+    \ \"The number of plays won by player 1: \"\n         << wCount1 << endl;\n  \
+    \  cout << \"The number of plays won by player 2: \"\n         << wCount2 << endl;\n\
+    }\n```\n\nWe are now ready to write the algorithm for the function main.\n\n+\
+    \   1. Declare the variables.\n2. Initialize the variables.\n3. Display the rules.\n\
+    4. Prompt the users to play the game.\n5. Get the users' responses to play the\
+    \ game.\n6. while (response is yes) {\n    a. Prompt player 1 to make a selection.\n\
+    \    b. Get the play for player 1.\n    c. Prompt player 2 to make a selection.\n\
+    \    d. Get the play for player 2.\n    e. If both plays are legal {\n       \
+    \ i. Increment the total game count.\n        ii. Declare the winner of the game.\n\
+    \        iii. Increment the winner’s game win count by 1.\n    }\n    f. Prompt\
+    \ the users to determine whether they want to play again.\n    g. Get the players’\
+    \ responses.\n7. Output the game results."
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# PROGRAMMING LISTING\n\n```\n********************************************************************\n\
+    // Author: D.S. Malik, and Scissors\n//\n// Program: Rock, Paper, and Scissors\n\
+    // This program plays the game of rock, paper, and scissors.\n********************************************************************\n\
+    ```\n\n```\n#include <iostream>\nusing namespace std;\nenum objectType {ROCK,\
+    \ PAPER, SCISSORS};\n\n//Function prototypes\nvoid displayRules(){\n    objectType\
+    \ retrievePlay(char selection)\n    bool validSelection(char selection);\n   \
+    \ bool convertEnum(objectType object);\n    objectType winningObject(objectType\
+    \ play1, objectType play2);\n    void gameResult(objectType play1, objectType\
+    \ play2, int& winner);\n    void displayResults(int gCount, int wCount1, int wCount2);\n\
+    \nint main(){\n    //Step 1\n    int gameCount; //variable to store the number\
+    \ of\n    //games played\n    int winCount1; //variable to store the number of\
+    \ games\n    //won by player 1\n    int winCount2; //variable to store the number\
+    \ of games\n    //won by player 2\n    int gamewinner;\n    char response; //variable\
+    \ to get the user's response to\n    //play the game\n    char selection1;\n \
+    \   char selection2;\n    objectType play1; //player1's selection\n    objectType\
+    \ play2; //player2's selection\n\n    //Initialize variables; Step 2\n    gameCount\
+    \ = 0;\n    winCount1 = 0;\n    winCount2 = 0;\n\n    //Step 3\n    displayRules();\n\
+    \n    //Step 4\n    cout << \"Y/n to play the game: \";\n    cin >> response;\n\
+    \    //Step 5\n    cout << endl;}\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "```\nwhile (response == 'Y' || response == 'y') //Step 6\n{\n    cout << \"\
+    Player 1 enter your choice: \\ //Step 6a\n    cin >> selection1; //Step 6b\n \
+    \   cout << endl;\n\n    cout << \"Player 2 enter your choice: \\ //Step 6c\n\
+    \    cin >> selection2; //Step 6d\n    cout << endl;\n\n    //Step 6e\n    if\
+    \ (validSelection(selection1))\n    && validSelection(selection2))\n    {\n  \
+    \      play1 = retrievePlay(selection1);\n        play2 = retrievePlay(selection2);\n\
+    \        gameCount++;\n        gameResult(play1, play2, gamewinner); //Step 6e.i\
+    \ //Step 6e.ii\n        if (gamewinner == 1)\n            winCount++;\n      \
+    \  else if (gamewinner == 2)\n            winCount++;\n    }//end if //Step 6e.iii\n\
+    \\    cout << \"Enter Y/y to play the game: \\ //Step 6f\n    cin >> response;\
+    \ //Step 6g\n    cout << endl;\n}//end while\n\ndisplayResults(gameCount, winCount1,\
+    \ winCount2); //Step 7\n\n    return 0;\n}//end main\n```\n\n//Place the definitions\
+    \ of the functions displayRules,\n//validSelection, retrievePlay, convertEnum,\
+    \ winningObject,\n//gameResult, and displayResults as described previously here.\n\
+    \n# Namespaces\n\nIn July 1998, ANSI/ISO Standard C++ was officially approved.\
+    \ Most recent compilers are also compatible with ANSI/ISO Standard C++. (To be\
+    \ absolutely, check your compiler's documentation.) The two standards, Standard\
+    \ C++ and ANSI/ISO Standard C++, are virtually the same. The ANSI/ISO Standard\
+    \ C++ language has some features that are not available in Standard C++, which\
+    \ the remainder of this chapter addresses."
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "In subsequent chapters, unless specified otherwise, the C++ syntax applies\
+    \ to standards. First, we discuss the namespace mechanism of the ANSI/ISO Standard\
+    \ C++, which was introduced in Chapter 2.\n\nWhen a header file, such as iostream,\
+    \ is included in a program, the global identifiers in the header file also become\
+    \ the global identifiers in the program. Therefore, if a global identifier in\
+    \ a program has the same name as one of the global identifiers in the header file,\
+    \ the compiler generates a syntax error (such as \"identifier redefined\\ The\
+    \ same problem can occur if a program uses third-party libraries. To overcome\
+    \ this problem, third-party vendors begin their identifiers with a special symbol.\
+    \ In Chapter 2, you learned that compiler vendors begin their global identifier\
+    \ names with an underscore (_), to avoid linking identifiers.\n\nANSI/ISO Standard\
+    \ C++ tries to solve this problem of overlapping global identifiers with the namespace\
+    \ mechanism.\n\nThe general statement of the namespace is:\n\n```\nnamespace namespace_name\n\
+    {\n    members\n}\n```\n\nwhere members is usually named constants, variable declarations,\
+    \ functions, or other namespaces. Note that namespace_name is a C++ identifier.\n\
+    \nIn C++, namespace is a reserved word.\n\n# EXAMPLE 8-8\n\nThe statement:\n\n\
+    ```\nnamespace globalType\n{\n    const int N = 10;\n    const double RATE = 7.50;\n\
+    \    int count = 0;\n    void printResult();\n}\n```\n\ndefines globalType to\
+    \ be a namespace with four members: named constants N and RATE, the variable count,\
+    \ and the function printResult.\n\nThe scope of a namespace member is local to\
+    \ the namespace. You can usually access a namespace member outside the namespace\
+    \ in one of two ways, as described below."
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "454 | Chapter 8: User-Defined Simple Data Types, Namespaces, and the string\
+    \ Type\n\nThe general syntax for accessing a namespace member is:\n\n```\nnamespace_name::identifier\n\
+    ```\n\nRecall that in C++, :: is called the scope resolution operator.\nTo access\
+    \ the member RATE of the globalType, the following statement is required:\n\n\
+    globalType::RATE\n\nTo access the member printResult (which is a function), the\
+    \ following statement is required:\n\nglobalType::printResult();\n\nThus, to access\
+    \ a namespace, you use the namespace_name, followed by the scope resolution operator,\
+    \ by the member name.\n\nTo simplify the accessing of a namespace, ANSI/ISO Standard\
+    \ C++ provides the use of the statement using. The syntax to use the statement\
+    \ using is as follows:\n\n+   a. To simplify the accessing of all namespace members:\n\
+    \   using namespace namespace_name;\nb. To simplify the accessing of a specific\
+    \ namespace member:\n   using namespace_name::identifier;\n\nFor example, the\
+    \ using statement:\nusing namespace globalType;\nsimplifies the accessing of all\
+    \ members of the namespace globalType. The statement:\nusing globalType::RATE;\n\
+    sifies the accessing of the member RATE of the namespace globalType.\nin C++,\
+    \ using is a reserved word.\nYou typically put the using statement after the namespace\
+    \ declaration. For the namespace globalType, for example, you usually write the\
+    \ code as follows:\n\n```\nnamespace globalType\n{\n  const int N = 10;\n  const\
+    \ double RATE = 7.50;\n  int count = 0;\n  void printResult();\n}\nusing namespace\
+    \ globalType;\n```"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'Namespaces | 455
+
+
+    After the using statement, to access a namespace member, you do not have to put
+    the namespace_name and the scope resolution operator before the namespace member.
+    However, if a namespace member and a global identifier in a program have the same
+    name, to access this namespace member in the program, the namespace_name and the
+    scope resolution operator must precede the namespace member. Similarly, if a namespace
+    member in the block, and an identifier in a block have the same name, to access
+    this namespace member in the block, the namespace_name and the scope resolution
+    operator must precede the namespace member.
+
+
+    Examples 8-9 through 8-12 clarify the use of the namespace mechanism.
+
+
+    # EXAMPLE 8-9
+
+
+    Consider the following C++ code:
+
+
+    ```
+
+    #include <iostream>
+
+    using namespace std;
+
+    .
+
+    int main()
+
+    {
+
+    .
+
+    }
+
+    .
+
+    ```
+
+
+    In this example, you can refer to the global identifiers of the header file iostream,
+    such as cin, cout, and endl, without using the prefix std:: before the identifier
+    name. The obvious restriction is that the block (or function) that refers to the
+    global identifier (of the header file iostream) must not contain any identifier
+    with the same name as this global identifier.
+
+
+    # EXAMPLE 8-10
+
+
+    Consider the following C++ code:
+
+
+    ```
+
+    #include <cmath>
+
+    int main()
+
+    {
+
+    double x = 15.3;
+
+    double y;
+
+    ```'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "y = std::pow(x, 2);\n...\n...\n}\n\nThis example accesses the function pow\
+    \ of the header file cmath.\n\n# EXAMPLE 8-11\n\nConsider the following C++ code:\n\
+    \n```\n#include <iostream>\n...\nint main() {\n    using namespace std;\n...\n\
+    ...\n}\n```\n\nIn this example, the function main can refer to the global identifiers\
+    \ of the header file iostream without using the prefix std:: before the identifier\
+    \ name. The using statement appears inside the function main. Therefore, other\
+    \ functions (if any) should use the prefix std::: before the name of the global\
+    \ identifier of the header file iostream unless the function has a similar using\
+    \ statement.\n\n# EXAMPLE 8-12\n\nConsider the following C++ code:\n\n```\n#include\
+    \ <iostream>                               //Line 1\nusing namespace std;    \
+    \                         //Line 2\nint t;                                   \
+    \        //Line 3\ndouble u;                                       \nnamespace\
+    \ expN {\n    int x;                                        //Line 4\n    char\
+    \ t;                                      //Line 5\n}\n```"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\ndouble u; //Line 6\nvoid printResult(); //Line 7\n}\n\nusing namespace\
+    \ expN;\nint main() {\n    int one; //Line 8\n    double t; //Line 9\n    double\
+    \ three; //Line 10\n}\n\n```\n\n```\nvoid expN::printResult() //Definition of\
+    \ the function printResult\n{\n\n```\n\nIn this C++ program:\n\n+   1. To refer\
+    \ to the variable t in Line 2 in main, use the scope resolution operator, as ::\
+    \ (that is, refer to t as ::t), because the function has a variable named t (declared\
+    \ in Line 9). For example, to copy the value of x into you, use the statement\
+    \ ::t = x;\n2. To refer to the member t (declared in Line 5) of the namespace\
+    \ expN in main, use the prefix expN:: with t (that is, refer to as expN::t) because\
+    \ there is a global variable t (declared in Line 2) and a variable t in main.\n\
+    3. To refer the member u (declared in Line 6) of the namespace expN in main, use\
+    \ the prefix expN:: with u (that is, refer to u as expN::u) because there is a\
+    \ global variable u (declared in Line 3).\n4. You can refer the member x (declared\
+    \ in Line 4) of the namespace expN in main as either x or expN::x because there\
+    \ is no global identifier x and the function main does not contain any identifier\
+    \ x\n5. The definition of a function that is a member of a namespace, as printResult,\
+    \ is usually written outside the namespace as in the preceding program. To write\
+    \ the definition of the function printResult, the name of the function in the\
+    \ function heading can be either printResult or expN::printResult (because no\
+    \ other global identifier is named printResult)."
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '458 | Chapter 8: User-Defined Simple Data Types, Namespaces, and the string
+    Type
+
+
+    > The identifiers in the system-provided header files, such as iostream, cmath,
+    and iomanip, are defined in the namespace std. For this reason, to simplify the
+    accessing of identifiers from these header files, we have been using the following
+    statement:
+
+
+    ```
+
+    using namespace std;
+
+    ```
+
+
+    # string Type
+
+
+    In Chapter 2, you were introduced to the data type string. Recall that prior to
+    the ANSI/ISO C++ language standard, the Standard C++ library did not provide a
+    string data type. Compiler vendors often supplied their programmer-defined string
+    type, and the syntax and semantics of string operations often varied from vendor
+    to language;
+
+
+    The data type string is a programmer-defined type and is not part of the C++ language;
+    the C++ standard library supplies it. Before using the data type string, the program
+    must include the header file string, as follows:
+
+
+    ```
+
+    #include <string>
+
+    ```
+
+
+    Recall that in C++, a string is a sequence of zero or more characters, and strings
+    are enclosed in double quotation marks.
+
+
+    The statement:
+
+
+    ```
+
+    string name = "William Jacob";
+
+    ```
+
+
+    declares name to be a string variable and initializes name to "William Jacob".
+    The position of the first character, W, in name is 0; the position of the second
+    character, i, is 1; and so on. That, the position of the first character in a
+    string variable starts with 0, not 1.
+
+
+    The variable name can store (just) any size string.
+
+
+    Chapter 3 discussed I/O operations on the string type; Chapter 4 explained relational
+    operations on the string type. We recommend you revisit Chapters 3 and 4 and review
+    the I/O and relational operations on the string type.
+
+
+    Other operators, as the binary operator + (to allow the string concatenation operation)
+    and the array index (script) operator [], have also been defined for the data
+    type string. Let''s see how these operators work on the string data type.
+
+
+    Suppose you have the following declarations:
+
+
+    ```
+
+    string str1, str2, str3;
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'The statement:
+
+
+    ```
+
+    str1 = "Hello There";
+
+    ```
+
+
+    stores the string "Hello There" in str1. The statement:
+
+
+    ```
+
+    str2 = str1;
+
+    ```
+
+
+    copies the value of str1 into str2.
+
+
+    If str1 = "Sunny", the statement:
+
+
+    ```
+
+    str2 = str1 + " Day";
+
+    ```
+
+
+    stores the string "Sunny Day" into str2.
+
+
+    Suppose str1 = "Hello " + str2 = "There". The statement:
+
+
+    ```
+
+    str3 = str1 + " " + str2;
+
+    ```
+
+
+    stores "Hello" into str3. This statement is equivalent to the statement:
+
+
+    ```
+
+    str3 = str1 + '' '' + str2;
+
+    ```
+
+
+    Also, the statement:
+
+
+    ```
+
+    str1 = str1 + " Mickey";
+
+    ```
+
+
+    updates the value of str1 by appending the string "Mickey" to its old value. Therefore,
+    the new value of str1 is "Hello Mickey".
+
+
+    > For the operator + to work with the string data type, one of the operands of
+    + must be a string variable. For example, the following statements will not work:
+
+
+    ```
+
+    str1 = "Hello " + "there!"; //illegal
+
+    str2 = "Sunny Day " + '' ''!''; //illegal
+
+    ```
+
+
+    If str1 = "Hello there", the statement:
+
+
+    ```
+
+    str1[6] = ''T'';
+
+    ```
+
+
+    replaces the t with the character T. Recall that the position of the first character
+    in a string variable is 0. Therefore, because t is the seventh character in str1,
+    its position is 6.
+
+
+    In C++,[] is called the array subscript operator.
+
+
+    As illustrated previously, using the array subscript operator together with the
+    position of the character, you can access an individual character within a string.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# EXAMPLE 8-13\n\nThe following program shows the effect of the preceding statements.\n\
+    \n```\n//Example string operations\n\n#include <iostream>\n#include <string>\n\
+    \nusing namespace std;\n\nint main() {\n    string name = \"William Jacob\";\n\
+    \    string str1, str2, str3, str4;\n\n    cout << \"Line 3: Name = \" << name\
+    \ << endl;\n\n    str1 = \"Hello There\";\n    cout << \"Line 5: str1 = \" <<\
+    \ str1 << endl;\n\n    str2 = str1;\n    cout << \"Line 7: str2 = \" << str2 <<\
+    \ endl;\n\n    str3 = \"Sunny\";\n    str2 = str1 + \" Day\";\n    cout << \"\
+    Line 10: str2 = \" << str2 << endl;\n\n    str1 = \"Hello\";\n    str2 = \"There\"\
+    ;\n    str3 = str1 + \" \" + str2;\n    cout << \"Line 14: str3 = \" << str3 <<\
+    \ endl;\n\n    str3 = str1 + ' ' + str2;\n    cout << \"Line 16: str3 = \" <<\
+    \ str3 << endl;\n\n    str1 = str1 + \" \" Mickey\";\n    cout << \"Line 18: str1\
+    \ = \" << str1 << endl;\n\n    str1 = \"Hello there\";\n    cout << \"Line 20:\
+    \ str1[6] = \" << str1[6] << endl;\n\n    str1[6] = 'T';\n    cout << \"Line 22:\
+    \ str1 = \" << str1 << endl;\n\n    //String input operations\n    cout << \"\
+    Line 23: Enter a string with \";\n    cout << \"no blanks: \";\n    cin >> str1;\n\
+    \n    char ch1\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# string Type | 461\n\n```\ncin.get(ch);\ncout << endl;\ncout << \"Line 28:\
+    \ The string you entered = \"\n     << str1 << endl;\ncout << \"Line 29: Enter\
+    \ a sentence: \";\ngetline(cin, str2);\ncout << endl;\ncout << \"Line 32: The\
+    \ sentence is: \" << str2\n     << endl;\n\nreturn 0;\n```\n\n**Sample Run:**\
+    \ In the following sample run, the user input is shaded.\n\n+   Line 3: Name =\
+    \ William Jacob\nLine 5: str1 = Hello There\nLine 7: str2 = Hello There\nLine\
+    \ 10: str2 = Sunny Day\nLine 14: str3 = Hello There\nLine 16: str3 = Hello There\n\
+    Line 18: str1 = Hello Mickey\nLine 20: str1[6] = t\nLine 22: str1 = Hello There\n\
+    Line 23: Enter a string with no blanks: Programming\n\nLine 28: The string you\
+    \ entered = Programming\nLine 29: Enter a sentence: Testing string operations\n\
+    \nLine 32: The sentence is: Testing string operations\n\nThe preceding output\
+    \ is self-explanatory, and its unraveling is left as an exercise for\n\n# Additional\
+    \ string Operations\n\nThe data type string has a data type, string::size_type,\
+    \ and a named constant, string::npos, as defined as:\n\n| string::size_type |\
+    \ An unsigned integer (data) type |\n| string::npos | The maximum value of the\
+    \ (data) type string:string::size_type, a number such as 4294967295 on many machines\
+    \ |\n\nThe data type string contains several other functions for string manipulation.\
+    \ The following table describes these functions. In this table, we assume that\
+    \ strVar is a string variable and str is a string variable, a string constant,\
+    \ or a character array. (Arrays are discussed in Chapter 9.)"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '462 | Chapter 8: User-Defined Simple Data Types, Namespaces, and the string
+    Type
+
+
+    TABLE 8-1 Some string functions
+
+
+    | Expression | Effect |
+
+    | strVar.at(index) | Returns the element at the position specified by index. |
+
+    | strVar[index] | Returns the element at the position specified by index. |
+
+    | strVar.append(n, ch) | Appends n copies of ch to strVar, in which ch is a char
+    variable or char constant. |
+
+    | strVar.append(str) | Appends str to strVar. |
+
+    | strVar.clear() | Deletes all the characters in strVar. |
+
+    | strVar.compare(str) | Compares strVar and str. (This operation is discussed
+    in Chapter 4.) |
+
+    | strVar.empty() | Returns true if strVar is empty, otherwise, it returns false.
+    |
+
+    | strVar.erase() | Deletes all the characters in strVar. |
+
+    | strVar.erase(pos, n) | Deletes n characters from strVar starting at position
+    pos. |
+
+    | strVar.find(str) | Returns the index of the first occurrence of str in strVar.
+    If str is not found, the special value string:npos is returned. |
+
+    | strVar.find(str, pos) | Returns the index of the first occurrence or after pos
+    where str is found in strVar. |
+
+    | strVar.find_first_of(str, pos) | Returns the index of the first occurrence of
+    any character of strVar. The search starts at pos. |
+
+    | strVar.find_first_not_of(str, pos) | Returns the index of the first occurrence
+    of any character of str not in strVar. The search starts at pos. |
+
+    | strVar.insert(pos, n, ch) | Inserts occurrences of the ch into strVar; pos and
+    n are of type string:size_type; ch is a character. |
+
+    | strVar.insert(pos, str) | Inserts all the characters of str at index pos into
+    strVar. |
+
+    | strVar.length() | Returns a value of type string::size_type giving the number
+    of characters strVar. |'
+  merge: -1
+  pgno: 26
