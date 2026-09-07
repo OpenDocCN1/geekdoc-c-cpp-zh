@@ -1,0 +1,7 @@
+# 模拟与混合计算机编程 (De Gruyter 教科)
+
+> 原文：[Analog and Hybrid Computer Programming (De Gruyter Textbook)]()
+> 
+> 译者：[飞龙](https://github.com/wizardforcel)
+> 
+> 协议：[CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)
