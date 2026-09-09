@@ -1,0 +1,298 @@
+- - '#'
+  - ASP.NET Core 2.0 MVC & Razor Pages 初学者指南：网站构建指南
+- - '##'
+  - 15. 实体类
+- - '##'
+  - 16. 模拟数据仓库
+- - '##'
+  - 17. 成员控制器与 AutoMapper
+- - '##'
+  - 18. 仪表板视图
+- - '##'
+  - 19. 课程视图
+- - '##'
+  - 20. 视频视图
+- - '##'
+  - 21. 创建数据库表
+- - '##'
+  - 22. 数据库读取服务
+- - '##'
+  - 23. SQL 数据仓库
+- - '##'
+  - 24. 添加管理员项目
+- - '##'
+  - 25. 管理员仪表盘
+- - '##'
+  - 26. 管理员菜单
+- - '##'
+  - 27. 自定义按钮 Tag Helper
+- - '##'
+  - 28. 数据库写入服务 (Database Write Service)
+- - '##'
+  - 29. 用户服务 (User Service)
+- - '##'
+  - 30. 用户 Razor Pages
+- - '##'
+  - 31. 状态消息标签助手 (StatusMessage Tag Helper)
+- - '##'
+  - 32. 剩余的 Razor Pages
+- - '#'
+  - 作者的其他书籍
+- - '#'
+  - 作者的视频课程
+- - '#'
+  - 关于作者
+- - '#'
+  - 添加服务
+- - '#'
+  - 初学者 ASP.NET Core 2.0 MVC & Razor Pages
+- - '###'
+  - 配置并使用 HardcodedMessageService
+- - '#'
+  - 2. 中间件
+- - '##'
+  - 中间件是如何工作的？
+- - '##'
+  - ASP.NET Core MVC & Razor Pages 入学者教程
+- - '##'
+  - 异常处理
+- - '##'
+  - 提供静态文件
+- - '##'
+  - 设置 ASP.NET MVC
+- - '#'
+  - ASP.NET Core 2.0 MVC Razor Pages 初学者教程
+- - '##'
+  - 总结
+- - '#'
+  - 3. MVC 控制器
+- - '##'
+  - 路由
+- - '##'
+  - 约定路由
+- - '##'
+  - 特性路由
+- - '##'
+  - 添加另一个控制器
+- - '###'
+  - 特性路由 (Attribute Routing)
+- - '###'
+  - IActionResult
+- - '###'
+  - 实现 ContentResult
+- - '#'
+  - 初学者入门 ASP.NET Core 2.0 MVC & Razor Pages
+- - '##'
+  - 视图（Views）简介
+- - '##'
+  - 带数据集合的视图
+- - '#'
+  - 4. 模型 (Models)
+- - '###'
+  - 更改文件夹结构
+- - '###'
+  - 添加视图模型
+- - '###'
+  - 使用视图模型
+- - '##'
+  - 添加详情视图 (Details View)
+- - '##'
+  - 添加创建视图 (Create View)
+- - '##'
+  - 重构应用程序 (Refactoring the Application)
+- - '###'
+  - 添加 HTTP GET Create Action 和 Create View
+- - '##'
+  - 数据注解 (Data Annotations)
+- - '##'
+  - 准备 Create 视图
+- - '##'
+  - 在 Create 视图中添加验证
+- - '##'
+  - 在服务器上验证模型
+- - '##'
+  - 总结
+- - '#'
+  - 5. Entity Framework
+- - '##'
+  - 添加 VideoDbContext
+- - '##'
+  - 在 Startup 类中配置
+- - '##'
+  - 添加初始迁移并创建数据库
+- - '#'
+  - 6. Razor 视图 (Razor Views)
+- - '##'
+  - 布局视图 (Layout Views)
+- - '##'
+  - 修改内容视图
+- - '##'
+  - _ViewStart 文件
+- - '##'
+  - _ViewImports 文件
+- - '##'
+  - Tag Helpers (标签辅助)
+- - '##'
+  - Index 视图
+- - '##'
+  - Edit 视图及其操作
+- - '##'
+  - 重构 VideoData 服务
+- - '##'
+  - 视图组件 (View Components)
+- - '##'
+  - 为 IMessage 添加视图
+- - '#'
+  - 7. 表单验证 (Forms Authentication)
+- - '##'
+  - 创建 AspNet 数据库
+- - '##'
+  - 用户注册
+- - '##'
+  - 用户登录
+- - '##'
+  - 添加 _Login 局部视图
+- - '##'
+  - 添加 LoginViewModel 类
+- - '##'
+  - 添加 HTTP GET Login
+- - '##'
+  - 添加 HTTP POST Login
+- - '#'
+  - 8. 前端框架
+- - '##'
+  - 安装框架
+- - '##'
+  - Bootstrap 设置样式
+- - '##'
+  - 添加导航栏
+- - '##'
+  - Index 视图
+- - '##'
+  - 添加客户端验证
+- - '#'
+  - 第二部分：MVC
+- - '##'
+  - 9. 用例
+- - '##'
+  - 引言
+- - '##'
+  - 用例 (MVC)
+- - '##'
+  - 用户界面 (Razor Pages)
+- - '##'
+  - 登录与注册
+- - '##'
+  - 仪表板视图
+- - '##'
+  - 课程视图
+- - '##'
+  - 视频视图
+- - '##'
+  - 安装 AutoMapper
+- - '##'
+  - 创建数据库
+- - '##'
+  - 添加数据库项目
+- - '##'
+  - 添加用户类
+- - '##'
+  - 添加数据库上下文
+- - '#'
+  - 11. 登录
+- - '##'
+  - 重定向到登录视图
+- - '##'
+  - 设置登录视图
+- - '##'
+  - 添加样式
+- - '##'
+  - 修改登录视图的布局
+- - '##'
+  - 总结
+- - '#'
+  - 14. 数据传输对象
+- - '##'
+  - DTO
+- - '##'
+  - 添加 DTOs
+- - '##'
+  - 视图模型 (View Models)
+- - '##'
+  - 添加视图模型
+- - '##'
+  - 总结
+- - '#'
+  - 15. 实体类 (Entity Classes)
+- - '##'
+  - 实体 (The Entities)
+- - '##'
+  - 视频实体 (The Video Entity)
+- - '##'
+  - 下载实体 (The Download Entity)
+- - '##'
+  - 讲师实体 (The Instructor Entity)
+- - '##'
+  - 课程实体 (The Course Entity)
+- - '##'
+  - 模块实体 (The Module Entity)
+- - '##'
+  - 用户实体 (The User Entity)
+- - '#'
+  - 22. 数据库读取服务
+- - '##'
+  - 添加 DbReadService
+- - '##'
+  - 添加服务接口和类
+- - '##'
+  - 获取表中所有记录 (Get)
+- - '##'
+  - 查找实体的内部实体属性 (GetEntityNames)
+- - '#'
+  - 23. SQL 数据库
+- - '##'
+  - SqlReadRepository
+- - '##'
+  - 实现 Get 方法
+- - '#'
+  - 24. 添加管理员项目
+- - '##'
+  - 构建网站
+- - '#'
+  - 25. 管理员仪表板 (The Dashboard)
+- - '##'
+  - 修改导航菜单
+- - '##'
+  - 添加 CardViewModel
+- - '##'
+  - 添加 _CardPartial 视图
+- - '#'
+  - 18. Dashboard 视图
+- - '##'
+  - 创建 CoursePartial
+- - '#'
+  - 19. 课程视图 (Course View)
+- - '##'
+  - 添加课程
+- - '##'
+  - 添加 Course.css 样式
+- - '#'
+  - 20. Video 视图
+- - '##'
+  - Video 1 Title
+- - '##'
+  - 总结
+- - '##'
+  - 为视频内容添加行和列
+- - '##'
+  - 添加 _VideoPlayerPartial 部分视图
+- - '##'
+  - 将视频播放器添加到视频视图
+- - '##'
+  - 为 LessonInfo 类添加属性
+- - '##'
+  - 添加 _VideoComingUp 部分视图
+- - '#'
+  - 32. 其他 Razor Pages
+- - '##'
+  - Video Razor Pages
