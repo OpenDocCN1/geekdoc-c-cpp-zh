@@ -1,0 +1,1898 @@
+- img_proc: true
+  md: '# European Journal of Operational Research 314 (2024) 894-911
+
+
+    Contents lists available at ScienceDirect
+
+
+    # European Journal of Operational Research
+
+
+    journal homepage: www://www.elsevier.com/locate/ejor
+
+
+    ![](img/bdfe0fc633366a0ca165e70bee846a49_0_0.png)
+
+
+    ![](img/bdfe0fc633366a0ca165e70bee846a49_0_1.png)
+
+
+    # Integer programming and polyhedral study for the geodesic classification on
+    graphs
+
+
+    Paulo H. M. Araújoᵃ,b*, Manuel Campeloᵇ, Ricardo C. Corrêaᶜ, Martine Labbéᵈ
+
+
+    +   ª Federal University of Coeará, Quixadá, Brazil
+
+    ᵇ Federal University of Ceará, Fortaleza, Brazil
+
+    ᶜ Federal University of Rio de Janeiro, Nova Iguçu, Brazil
+
+    ᵈ Free University of Brussels, Brussels, Belgium
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    +   Article history
+
+    Received 21 May 2022
+
+    Accepted 18 August 2023
+
+
+    +   Keywords:
+
+    Combinatorial optimization
+
+    Classification
+
+    Geodesic convexity
+
+    Polyhedral combinations
+
+    Integer programming
+
+
+    We study a discrete version of the classification problem in Euclidean space,
+    to be called the geodesic classification problem. It is defined on a graph, where
+    some vertices are initially assigned and the remains classified. This vertex partition
+    is grounded on the concept of geodesic convexity on graphs, as a replacement for
+    Euclidean convexity in the multidimensional space. We propose new integer programming
+    models along with branch-and-bound algorithms to solve them. We carry out a polyhedral
+    analysis of the methods, which defines inequalities and separation algorithms.
+    Finally, we run experiments to evaluate the computational efficiency and the classification
+    accuracy of the proposed approaches by classic solution methods for the Euclidean
+    classification problem.
+
+
+    > © 2023 Elsevier B.V. All rights reserved.
+
+
+    # 1. Introduction
+
+
+    A present approach to the classification problem that appears in the context of
+    supervised learning classification. It consists of the methods, which are characterized
+    by numerical features, as colored points in ℝᵈ, where d ≥ 1. The goal is to assign
+    a point to a class represented by a center. The method then aims to carry out
+    the classification of natural samples by non-intersecting convex sets in such
+    a way that all points in each set have the same color (the color of the set).
+    The sample points whose color deviate from the color of their sets are outliers.
+    This approach, using continuous optimization methods, including linear and quadratic
+    programming, has been developed in recent years (see e.g. Cortes & Vargas (1995),
+    Fanios & Hansson (1998) and others). As seen in Bertsimas & Shimida (2017), Xu
+    & Papageorgiou (2009), typical solution methods are used to determine which convex
+    hulls of the remaining samples of each class are distinct. Then, they simultaneously
+    select theers that best separate the two classes (for example, by maximizing
+
+
+    the distance between closest points of either class and a hyperplane.
+
+
+    In Araújo, Corrêa, Labbé (2019), a novel variant of the classification problem
+    was introduced that differs from the Euclidean classification in several aspects
+    of the input parameters. This variant can be regarded as a discrete version in
+    the case where space is replaced by an undirected graph. Similarly, the method
+    is based on the convexity between discrete and continuous methods. This correspondence
+    is established by the vertex set and the distance between the vertices as
+
+
+    Geodesic classification. From the notion of convexity, the geodesic classification
+    problem (GCP) is defined in Araújo et al. (2019) with the following characteristics:
+
+
+    Unlike the Euclidean case, where an instance is defined by an arbitrary hyperplane
+    and the set of points, an instance of GCP is characterized by an arbitrary (unweighted
+    and connected) graph G=(V, E) and a set that represents a subset of V. The universe
+    U is the set of vertices of the graph. In contrast to the Euclidean case, where
+    each object in GCP is characterized by its binary similarities with other objects,
+    which are represented by the edges of E. While in the Euclidean formulation the
+    metric space depends only on d, in GCP it
+
+
+    * Corresponding author
+
+    E-mail addresses: pmanuel.aroajo@ufc.br (P.H. Araújo), manuelcampelo@ufc.br (M.
+    Campelo), martine.labbed@ubc.be (M. Labbé).
+
+
+    https://doi.org/10.1016/j.ej.2023.08.029
+
+
+    © 2023 Elsevier B.V. All rights reserved.
+
+
+    * Wentworth'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# (a) Euclidean classification in R². All points in the half-plane (above)
+    the line are classified as red (blue) except three outliers.
+
+
+    # (b) Graph classification. All vertices in the subgraph below (above) the line
+    are classified as red (blue) except for three outliers.
+
+
+    ![](img/bdfe0fc633366a0ca165e70bee846a49_1_0.png)
+
+
+    depends on W and E. To the universe to be classified, Rd is infinite in the first
+    case and finite in Gcp, V.
+
+
+    +   2. the existence of an unclear classification that can be expressed, or at
+    least approximated, by the notion of geodesic convexity in graphs (Pelayo, 2013).
+    A convexity is defined by shortest paths in G. In addition, it is assumed that
+    the cells are uniquely induced by the convex hull of vertices of each cell. In
+    the geodesic convexity, a subset of V is not convex in V if V belongs to a shortest
+    between two vertices of V unless V is the smallest set containing V.
+
+
+    +   3. The sample may contain an arbitrary number of outliers. These objects are
+    misclassified from possible labels or due to characteristics of the phenomenon
+    being modeled. In the upcoming discussion, we consider an outlier that leads the
+    set of vertices in class to deviate from the definition of convexity and use the
+    method to solve the classification problem since they have to be detected and
+    for an accurate solution to be found.
+
+
+    The goal of Gcp is to set the vertices into classes in a way that is measured
+    by Aminov et al. (2022 see fig. 1 for an illustration). In particular, we consider
+    the existence of only two classes and the number of disregarded outliers as error
+    measure. The classification of the vertices is the main problem.
+
+
+    Although Gcp could be considered a version of the Euclidean classification problem,
+    it is important to note that these are distinct problems. One allows arbitrary
+    similarity relations that are not necessarily based on numerical features. Even
+    when a symmetric property differs between the two problems. Indeed, a subset of
+    V in Rd, and the corresponding similarity graph G=(V,E) shows that points with
+    Euclidean distance is not a proper subset of V and one of two classes. The Euclidean
+    classification problem consists in partitioning the whole Euclidean space into
+    two (convex) subspaces based on the classification of the samples. By turn, the
+    geodesic classification problem aims to split or join the ''space'' in the data.
+    The two problems arise from different universes, and also on the same samples,
+    but the so classified
+
+
+    also differ. In other terms, the elements to be classified in advance in both
+    cases but we have distinct sets of unclassified elements for the same set of samples
+    in the geodesic graph, and this affects matters. The details can be seen in Section
+    2. Spite these differences, we can come upon results from the Euclidean case to
+    our study. In particular, we could cite the works in Blauum, Corrella, Mareno,
+    & Yldriz (2019); Corrella, Blauum, and Kochi (2015).
+
+
+    Applications of the point view. Gcp using embedding objects in terms of symmetric
+    and non-transitive graphs. This fact has many practical applications in big data,
+    especially when data are seen as points in a Euclidean space. The first situation
+    occurs when similarities are expressed in terms of symmetric and non-transitive
+    relations. Such relation defines an undirected similarity graph G. A possibility
+    is to cluster the points that are close to each other in a Euclidean space. The
+    situation, which arises when many different models of type are considered, by
+    symmetric and transitive relations, leads to connectivity. The particularity is
+    that Gcp is edge-weighted, the weight of edges stands for degree of similarity.
+    Cosine similarity in this analysis is also used frequently.
+
+
+    Geodesic sectioning and main contributions. We introduced the 2-GCP geodesic classification
+    problem (2-GCP) in the paper (Aterrato et al., 2019), which presents results based
+    on the clustering-algorithm-based formulation. A property shared with the Euclidean
+    case is that a solution can be built on the basis of two convex sets, one related
+    to each class. This, Gcp can be viewed as a problem with two objectives: clustering
+    and solving the what we call geodesic segmentation problem (GSP), that is, the
+    problem of minimizing an error measure (number of outliers) that the convex hulls
+    of the remaining vertices from each class are disjoint. Some vertices remain unclaimed
+    (i.e., un'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: 'covered by the convex hulls) depending on the similarity graph (if it does
+    not contain any convex partition. Dan-Lourado, Ševčič, 2011) or on the sets of
+    initially covered vertices. The second objective is the classification of uncovered
+    vertices, which need to be performed on other optimization criterion. We define
+    the two objectives strategy.
+
+
+    We present two ILP for 2-GSP (the GSP with two classes) with separation inequalities
+    and branch-and-bound algorithms for formulation. The first ILP models the problem
+    with a polynomial number of constraints, the second is an extended formulation
+    with more than a polynomial number of constraints. An interesting feature of the
+    first model is that it expresses 2-GSP as a linear programming problem. Numerical
+    experiments with realistic instances to evaluate the potential of the selected
+    features in the branch-and-bound algorithms. In these experiments, the branch-
+
+
+    at large scale, we use a second heuristic to deal with the vertices that left
+    uncovered (Arajo et al., 2019). The results of the experiments also provide some
+    performance indicators of the quality of the solutions obtained.
+
+
+    A detailed analysis of the polytopes associated with the various formulations
+    is carried out to establish their properties. In particular, we show that one
+    of the facets of each formulation is much stronger than the other, as counterparts
+    were proved by Corrê et al. (2019) for the single class. On the other hand, one
+    of them originate from specific properties of the graph problem. The classification
+    problems are different, the strength of the structure may be much better for design
+    solution methods. Later, the difference between the problems is also discussed.
+
+
+    Related problems. Regarding the graph literature, GSP (and GSP CP) can be linked
+    to a wide class of graph partitioning problems. For example, the vertex partitioning
+    problem involves partitioning a graph into two sets ($V_1, V_2$) such that any
+    path between $V_1$ and $V_2$ passes through $S$. The objective is to minimize
+    the size of the sets $V_1$ and $V_2$ which are bounded by some value. In contrast,
+    the problem solved by GSP is such that each vertex seeks the shortest path leading
+    and returning to an outlier. The OUTSP has been extensively studied. In particular,
+    various variants of GSP are presented in Balanas and Sousa (2008, 2009), the multi-commodity-related
+    tree partitioning problem (MRTMSP) which is solved by partitioning the graph into
+    $k$ disjoint sets ($V_1, ..., V_k$) such that each $V_i$ has a distinguishing
+    characteristic, and any two vertices between different sets are separated by at
+    least $d$ (Mahjoubi, Moutin, 2019). In Cornaaz et al. (2019) also appear in our
+    results - particular, outliers whose shortest paths lead to the anchor.
+
+
+    graphs mentioned in the cited references, as stars trees, also appear in our context.
+    In this case, we can benefit switching the number of colors to a very colorful
+    graph so that each color connects a connected subgraph. In the case of trees,
+    it means that the (shortest) path between two vertices is unique. With GSP, the
+    similarity constraints are similar to those used in Lima (Karp & Wakabayashi,
+    2014) to model CRP which also appears in one formulation of the ILP we present
+    for GSP. These are instances of the problem where we want to model the clique
+    partitioning problem (Grötsch & Wakabayashi, 1990).
+
+
+    It is worth noting the natural connection between GSP and the problem of finding
+    a partition of a graph with maximum diameter $d$. For $d=2$, as proved by Complete
+    et al. (2017; Buzatu & Catarcius, 2015), it implies that there are graphs that
+    cannot be covered or partitioned into $k$ sets. Furthermore, for $d > 2$, the
+    problem is NP-hard. This is also true for GSP. On the other hand, GSP can be seen
+    as a combination of a graph complexity problem and the well-known set covering
+    problem modeled in mathematical programming
+
+
+    Paper organization. The generation of the geodesic 2-GSP segmentation problem
+    is introduced in Section 2, and the ILP formulations associated with the problem
+    are studied in Sections 3 and 4. The experimental results are presented in Section
+    5, whereas in Section 6 we evaluate the performance of each computational approach.
+    We use generated instances as well as those derived from real data (the social
+    network case), so that we can compare the accuracy of our approaches with well-known
+    methods. Finally, we present concluding remarks and directions for future work
+    in Section 7. References, notation, and results of graph theory, linear algebra,
+    polyhedral combinatorics, programming, the set-and-bound method used in Nemhemer
+    & Wolsey (1988).
+
+
+    # 2. Geodesic classification and segmentation problems
+
+
+    # 2.1. Preliminary
+
+
+    We follow the basic concepts and terminology in graph theory as in Bondy & Murty
+    (2014). A path in a graph $G=(V, E)$ between two vertices $u$ and $v$ is a sequence
+    of vertices $p=(v_0, v_1, ..., v_k)$ where $v_0=u$, $v_k=v$ and $(v_{i-1}, v_i)
+    \in E$ for all $i=1, ..., k$. The length of the path is $k$. A shortest path between
+    $u$ and $v$ is denoted by $d(u, v)$. The distance between $u$ and $v$ is the length
+    of the shortest path between them.
+
+
+    In this section, we formulate the different types of 2-GSP that form the basis
+    based on the geodesic classification.
+
+
+    896'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: "# (a) $S=\\{v_1, v_6\\}$.\n\n# (b) $D^1[S]=\\cup\\{v_2, v_3, v_4\\}$.\n\n#\
+    \ (c) $D^2[S]=D^1[\\cup\\{v_5\\}].\n\n# (d) $D^3[S]=H[\\cup\\{v_7\\}].\n\n![](img/bdfe0fc633366a0ca165e70bee846a49_3_0.png)\n\
+    \n$(V_B, V_R)$ is linearly inseparable $v_0 \\in H[V_B] \\cap H[V_N]$.\n$(A_B,\
+    \ A_R) = (V_B \\setminus \\{v_0\\}, V_R)$ is linearly inseparable $H[A_R] \\cup\
+    \ \\{v_0, v_2\\}$ and $H[A_B]=A_B \\cup \\{v_0, v_7\\}$.\n\n$(a) $(X_B, X_R)$\
+    \ is linearly separable.\n\n![](img/bdfe0fc633366a0ca165e70bee846a49_3_1.png)\n\
+    \nFig. 3. (in)separability in Euclidean classification and geodesic classification.\
+    \ Points as close to $x_4$ and $x_5$ in Fig. 3a correspond to similar vertices\
+    \ in Fig. 3b: $X_B=\\{x_1, x_2, x_3, x_4, x_5\\}$ and $X_R=\\{x_6, x_7, x_8, x_9\\\
+    }$ are mapped to $V_B=\\{v_1, v_2, v_3, v_4, v_5\\}$ and $V_R=\\{v_6, v_7, v_8,\
+    \ v_9\\}$, respectively.\n\nand $H(V) \neq D[V]$ in some cases. For more details\
+    \ about non-convexity on graphs, we refer to Araujo, et al. (2019).\n\nTo define\
+    \ 2-GSCP, let $G=(V=V_B \\cup V_R, E)$ be a similarity graph where $V_B$ and $V_R$\
+    \ are disjoint subsets of vertices, colored by blue and red respectively. They\
+    \ are the classified and unclassified vertices. We identify the classified vertices\
+    \ as neutral vertices and the unclassified vertices as test vertices. The neutral\
+    \ vertices are the unclassified vertices and we refer to a non-specific class\
+    \ $K \\in \\{B, R\\}$, where $K=V_B \\cup V_R$. The first step to classify the\
+    \ problem is the linear separation of similarity, as follows:\n\n**Definition\
+    \ 1** Linear separation Araujo, et al. (2019). $A_B \\subseteq V_B$ is linearly\
+    \ separable in $G$ if $H[A_B]$ and $V_R$ are linearly separable in $G$.\n\n+ \
+    \  (1) $H[A_B] \\cap V_R = \\emptyset$\n(2) $H[V_R] \\cap A_B = \\emptyset$\n\
+    (3) $H[A_B] \\cap H[V_R] = \\emptyset$\n\nhold, and is linearly inseparable.\n\
+    \nWe observe that this definition is not equivalent to the one used adopted in\
+    \ Euclidean classification. For the sake of comparison, let us consider this problem\
+    \ in $\\mathbb{R}^2$. The usual scenario in classifying finite sets $X_B$ and\
+    \ $X_R$ of blue and red points, respectively, is to find a linear separation that\
+    \ separates them. In $\\mathbb{R}^2$, all pairs of points in a finite subset $X_B\
+    \ \\\\subseteq X_B \\cup X_R$ are linearly separable. As shown in Fig. 3a, let\
+    \ $X_B=\\{x_1, x_2, x_3, x_4, x_5\\}$ and $X_R=\\{x_6, x_7, x_8, x_9\\}$. Considering\
+    \ points as close or close to $x_4$ and $x_5$ in Fig. 3a correspond to similar\
+    \ vertices in Fig. 3b. The vertices of $X_B$ and $X_R$ are the vertices $V_B=\\\
+    {v_1, v_2, v_3, v_4, v_5\\}$ and $V_R=\\{v_6, v_7, v_8, v_9\\}$. In the Euclidean\
+    \ case, the usual approach is to find the linear separation with a hyperplane\
+    \ that separates $X_B$ from $X_R$, which corresponds to the convex hull in a subset\
+    \ (Corrê, et al. (2019)). Clearly, $X_B$ and $X_R$ are linearly separable in $\\\
+    mathbb{R}^2$. $(V_B, V_R)$\n\nis linearly inseparable in the similarity graph.\
+    \ Geodesic $v_0$ is inometrically between two red vertices $(v_2, v_3)$ and blue\
+    \ vertices $(v_5, v_6)$. Thus $H[V_B] \\cap H[V_R] \\neq \\emptyset$ so that Condition\
+    \ (3) is violated. $H[v_i] \\cap H[v_j] = \\emptyset$ for $i, j \\in \\{6, 8\\\
+    }$, as $V_i$ and $V_j$, are linearly separable.\n\n# 2.2. Problem statement\n\n\
+    In Definition of 1, a linearly separable pair $(A_B \\subseteq V_B, A_R \\subseteq\
+    \ V_R)$ implies that $V_B$ and $V_R$ are unclassified. In other words, a vertex\
+    \ $v_0$ is considered discarded when contained within the convex hull of the blue\
+    \ and red vertices. It is worth noting that this is not equivalent in the similarity\
+    \ graph and is still considered for determining the shortest path in 2-GSCP.\n\
+    \nProblem Geodesic 2-Class Segmentation Problem (2-GSCP). A connected graph $G=(V=V_B\
+    \ \\cup V_R, E)$ is linearly separable if $H[V_B]$ and $H[V_R]$ are linearly separable\
+    \ that optimize some linear function. We define the linear separation problem\
+    \ and discuss the objective on the objective function section."
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'A linearly inseparable (S,T) is said to be minimal if (S\u, T) or (S, T\u)
+    is linearly separable. If S=T, then that (S\u, S) is linearly separable. This
+    is not minimal, but this is particularly useful and satisfies the constraints
+    (2)-(3). Actually, in Section 3.4 we define necessary and sufficient conditions
+    for these constraints.
+
+    By now, we characterize linearly inseparable sets.
+
+
+    experiments we use a simple heuristic to deal with such cases and get a solution
+    to 2-GSP.
+
+    Two frameworks are worth considering in 2-GSP. First, we observe that every instance
+    admits a solution since we could consider all classified vertices of a class as
+    alternatives. Due to the vertices and the vertices $v_i(H_{A_i}) \cup H(A_i)$,
+    class does not necessarily define a convex set, and $H(A_i)$ is not a covering
+    of the vertices $V$.
+
+
+    # 3. A set covering for 2-GSP
+
+
+    # 3.1. IL formulation
+
+
+    In this section, we formulate 2-GSP as a problem of set covering
+
+
+    ```
+
+    $\min [\sum c_i y_i \text{ s.t. } Ay \ge 1] \quad (1)$
+
+    ```
+
+
+    where A is a-1 matrix and c is a vector. For any binary matrix A, it is not NP-hard
+    (Karp, 1972) but also valid inequalities and facet-defining properties can be
+    found in Sanchez-García, Wolkowicz & Virot (1998). For the problem of 2-GSP, we
+    define $y_i=1$ if $i$ is an alternative, and $y_i=0$ otherwise. Then $k(i) \in
+    E(R)$ and $h(i) \in E(B)$ respectively to denote the class and the opposite class
+    of vertex $i$. Thus $A$ corresponds to the following constraints
+
+
+    +   $\sum_{j \in B_i} y_j \ge 1, \forall i \in V_S; \quad (2)$)\n$\sum_{j \in
+    A_i} y_j \ge 1, \forall i \in V_T; |S \cap T| \neq \emptyset. \quad (3)$
+
+
+    This formulation is called IL. Constraints (2) refer to (C1) and (C2), while constraints
+    (3) refer to if (S,T) is linearly inseparable, then at least one of S or T must
+    be an alternative.
+
+
+    # Proposition 2. If (2) and (3) define the feasible solutions for 2-GSP.
+
+
+    Let $y^*$ be a solution of (2). Define $A_i = \{j \mid y_j^*=1\}$ for $i \in R$.
+    We want to show that $A_i$ satisfies (C1)–(C3). Suppose that Condition (C1) is
+    violated, $y_i=0$ for all $i \in J_A$, and $A_i \cap H(A) = \emptyset$. A contradiction
+    is showed by assuming that (C3) does not hold. If Condition (C2) does not hold,
+    then $S \subseteq A_i$. Conversely, let $y \in S$ be that $y_i=1$ if $i \in A_i$
+    and $y_i=0$ otherwise. Then $v \in S$ and $v \in T$ such that $v \in H(A_i)$.
+    Condition (C1) holds, $A_i \neq V_{Other}$. Otherwise, if (C2) does not hold,
+    then $S \subseteq A_i$. Using (2), we get a minimal solution for $y$ on $V_S$
+    and $V_T$ such that $|S \cap T| \neq \emptyset$ and $|S \cap T| \neq \emptyset$.
+    Let, consider the corresponding constraint (3). It follows from (C3) that $S \subseteq
+    A_i$ or $T \cap A_i \neq \emptyset$., which makes the constraint satisfied.
+
+
+    Observe that (S,T) is linearly inseparable in (2) (S,T) is linearly inseparable
+    in (3). So, inequalities (2)-(3) are part of the valid inequalities
+
+
+    +   $\sum_{j \in S} y_j \ge 1. \quad (S,T)$ linearly inseparable. \quad (4)$
+
+
+    # Proposition 3. A linearly inseparable (S,T) is minimal if and only, only one
+    of the following conditions holds:
+
+
+    +   (a) $S$ and $T$ are inseparable, for all $u \in T$; (b) $T$ and $H(u)$ are
+    inseparable, for all $u \in S$; (c) $H(S) \cap T \neq \emptyset$; (d) $H(T) \cap
+    S \neq \emptyset$; $H(u) \cap T = \emptyset$.
+
+
+    Proof. Assume that (a) does not hold. Then $S$ and $H(u)$ are inseparable for
+    every $u \in T$. Finally, satisfies (C1)–(C3) then (S,T) is linearly inseparable.
+    Thus (S,T) is not minimal. Now, assume and let $u \in S$ and $u \in T$. Then,
+    (S,T) is linearly inseparable if $|S \setminus u| \neq \emptyset$ and $|T \setminus
+    u| \neq \emptyset$ and $|S \setminus u| \cap T \neq \emptyset$ and $|T \setminus
+    u| \cap S \neq \emptyset$. Conversely, as that (S.T) is minimal. Then, for every
+    $u \in S$, (S,T) is linearly inseparable. If $|S \setminus u| \cap T = \emptyset$
+    and $|T \setminus u| \cap S = \emptyset$, then (S,T) is not minimal. Suppose that
+    does not hold, then we can find a solution. First, assume $S \cap T \neq \emptyset$.
+    Then (S) and (2) are satisfied. Since (S,T) is linearly inseparable, it is minimal.
+    Thus, for every $u \in S$, we can conclude that (S,T) is a solution.
+
+
+    # 3.2. Polyhedra
+
+
+    We turn in this section based on the properties of the polyhedra obtained from
+    the ILP formulation. For $A_i = v^i \cap (2-3)$, we will use the first results
+    from the fact case of two nonlinear coefficients (Balas & Johnson (2002)). We
+    present an alternative approach to show the facetness of the constraints used.
+    Here, we will use 1 to denote the unit vector and $e^i$ to denote the unit vector
+    i-th unit
+
+
+    # Proposition 4. If is inseparable,
+
+
+    Proof. Let $n$ be $n-1$ independent points $\Phi^1$ and $\Phi^i$, for all $i \in
+    V$. We show that for $n-1$ points that satisfy (1) and (2), and for (3), let $y
+    \in V_S$ and $y \in V_T$ such that $i \cap H(S) = \emptyset$. By definition, $n$
+    is inseparable (S,T). Then, for every $j \in S$ such that $h(j) \neq \emptyset$,
+    and $e^j=1$, which implies that (4) is satisfied for 2 and inseparable.
+
+
+    The solutions used in the proof of 4 allows us to show that the bounding identify
+    facets of $P_i$.
+
+
+    # Proposition 5. If $v \in V_B$, $y_i \ge 0$ and $y_i \ge 1$ are facet-defining
+
+
+    Proof. Let $v \in V_B$ that $y_i \ge 1$ contains the alternative independent points
+    1 and $\Phi^j$, for all $j \in V \setminus \{i\}$. The face we define'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: "P.M. Araujo, M. Campelo, R.C. Corrà et al. European Journal of Operational\
+    \ Research 314 (2024) 894–911\n\n![](img/bdfe0fc633366a0ca165e70bee846a49_5_0.png)\n\
+    \n![](img/bdfe0fc633366a0ca165e70bee846a49_5_1.png)\n\n**Fig. 4.** Examples of\
+    \ $N$-set inequalities. Facet defining structures according to Theorem 9. S and\
+    \ T are given by blue circles and red squares. Snaked graphs represent shortest\
+    \ paths between their endpoints. (For of references to colour in this figure,\
+    \ refer to the web version of this article.)\n\n$y_j \\ge 0$ contains the affine\
+    \ independent points $e^k$ and $e^l$, for all $j \\in V \\setminus \\{i\\}$. [].\n\
+    \nAgain, the following result proved in Balas & Ng (1989), and we give an alternative\
+    \ for proof.\n\n**Proposition 6.** *If $\\pi$ is a facet of $P_S$ then $\\pi \\\
+    cdot y \\ge \\pi_i y_i$ for all $i \\in S$, $\\pi_i > 0$ and $\\pi \\ge 0$.*\n\
+    \n*Let* $\\pi'$. If $\\pi' \\cdot y \\ge \\pi'_i y_i$ is derived from $y_i \\\
+    ge 1$, then the facet $F = \\{y \\in P_S \\mid \\pi' \\cdot y = \\pi'_i y_i\\\
+    }$ contains a point with $\\hat{y}_i = 0$. The point $\\hat{y}$ is in $P_S$, so\
+    \ we get $\\pi' \\cdot \\hat{y} \\ge \\pi'_i \\hat{y}_i = 0$, hence $\\pi' \\\
+    ge 0$. $F$ contains a point with $\\hat{y}_i = 1$ when $\\pi'_i = 1$. Then, $\t\
+    ilde{\\pi} = \\pi' - \\pi'_i e_i$ in this case.\n\n3.3. $N$-set inequalities\n\
+    \nLet $S \\subseteq V$ be linearly separable to the definition in Corrà et al.\
+    \ (2019) for the Euclidean case, if an $N$-set is a minimal $N \\subseteq V$ such\
+    \ that $(S,T,N)$ is linearly separable. We define $V^*(S,T) = (S \\cup T) \\setminus\
+    \ N$ as an $N$-set for $(S,T)$, and for each $S,T$.\n\n$|N| = \\min \\{|N'| \\\
+    mid N' \\in N(S,T)\\}$.\n\nWe assume that $y_i = 0$ if $i \\in N(S,T) \\setminus\
+    \ N$. Observe, that $y_i \\le 1$ for all $i \\in N$, and for all $i \\in S,T$.\n\
+    \n**Proposition 7.** *If $S \\subseteq V_T$ is linearly separable. The $N$-set\
+    \ inequality*\n\n+   $\\sum_{i \\in S} y_i \\ge 1 \\quad (5)$\n\nis valid for\
+    \ $P_S$.\n\n*Let* $\\hat{y}$ be a feasible solution and the nonempty set $N^*\
+    \ = \\{i \\in S \\cup T \\mid \\hat{y}_i = 1\\}$. Then, there exists $N^* \\in\
+    \ N(S,T)$ such that $(S,T,N^*)$ is linearly separable. 1. The equality and proof\
+    \ of inequality (1) follows from $N$ and $N^*$, respectively, whereas the inequality\
+    \ is due to $N \\in N^*(S,T)$, which implies $y_i \\le 1$ for all $i \\in N$.\n\
+    \nSome cases of this are illustrated in Fig. 4. We however, without loss of generality,\
+    \ that $y_i = 1$ for all $i \\in S \\cup T$. Otherwise, if $y_i=1$ for $i \\in\
+    \ S \\cup T \\setminus N$ is also linearly separable and we can use the same argument.\n\
+    \nFor $N \\subseteq V$, let $y^N$ be defined as $y^N=1$ if $i \\in N$ and $y^N=0$\
+    \ if $i \notin N$. $y^N$ is an $N$-set for $S$ if $|N|=|N|$ and is not linearly\
+    \ separable. If $N$ is not linearly separable, then there exists $N' \\subset\
+    \ N$ such that $N'$ is an $N$-set for $S$.\n\n**Proposition 8.** *If $S$ is an\
+    \ $N$-set perfect, then $y^N$ is a facet of $P_S$ satisfying at equality.*\n\n\
+    If $N$ is not $S$, then $(S,T,N)$ is linearly separable and there exists $y^N\
+    \ \\in P_S$. In addition, if $y_i=1$ for all $i \\in N$, then $\\sum_{i \\in N}\
+    \ y_i \\ge 1$.\n\nThe following notion was introduced in Corrà, Campelo, & Corrà\
+    \ (2008) (see Balam et al. 2019), for the $k$-th safe graph $G_T^k = (V_T^k, E_T^k)$,\
+    \ defined by $V_T^k = \\{i \\in S \\cup T \\mid y_i = k\\}$ and $E_T^k = \\{(i,j)\
+    \ \\mid i,j \\in V_T^k\\}$, where $\triangle$ denotes the symmetric difference.\n\
+    \n(1) for each $i \\in V_T$, $y_i=0$ or $(y_i^{k-1}=1$ and $G_T^k$ is connected);\
+    \ (2) there exists an $N \\in N^*(S,T)$ such that $(S \\cup U,T,N)$ is linearly\
+    \ separable.\n\n*Let $F$ be the facet of $P_S$ defined by (5), and suppose that\
+    \ $\\lambda_i=y$ for all $y \\in F$. Then each coefficient of $\\lambda$ is a\
+    \ multiple of the corresponding coefficient in (5) in Nemhauser & Wolsey (1988).*\n\
+    \nFirst, observe that $G_T^k$ is connected, for $k \\in N$, Indeed, $G_T^k$ is\
+    \ complete and, for $k$, condition (1) is met.\n\n899"
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'There are two cases. First, let $i, j \in V_S, K \neq i$. If $i \neq j$, then
+    there are two $N$-sets $N_i$ and $N_j$, such that $N_i \in J_K$ and $N_j \in J_K$.
+    Then, we have $y_i = y_j = 1$ by Proposition 8. Thus, these two solutions provide
+    unique identification in the variables $y_i$ and $y_j$, so
+
+
+    Similarly the structure in $d$ provides an inequality of type (3) with $|S \cap
+    T| = 2$ that satisfies strong conditions (condition $H[S] \cap H[T] \cap V_K =
+    \emptyset$). Precisely, it can be written as
+
+
+    ```
+
+    $y_i + y_j - y_k \ge 1$.
+
+    ```
+
+
+    Second, let $i, j \in V$ such that $v_i, v_j \neq S$. If $i \neq j$, then there
+    is at least one neighbor in $C(T)$ (condition (F1)) which ensures that $y_i =
+    y_j$. However, if one of them is a vertex in $C(T)$, then $y_i = 1, y_j = 0$ (then
+    $i$ is an $N$-set). The argument ensures the existence of a $N$-set $N$ in $S(T)$
+    such that $j \in N$. Proposition 8 implies that $y_j = 1$ and $y_i \ge 0$. So,
+    we have $y_i + y_j \ge 1$.
+
+
+    ```
+
+    $|v_i, v_j\| = [v_i, v_j\] \subseteq S$ such that $D[v_i, v_j]$\nD[v_i, v_j\]
+    \cap W \neq \emptyset$
+
+    D[v_i, v_j\] \cap W = D[v_i, v_j] \cap [v_i'', v_j''] = \emptyset$
+
+    ```
+
+
+    (7)
+
+
+    Finally, let $i \in V_S$. By condition (F2), let $N$ be a set such that $(S \cup
+    \{i\}, T)$ is linearly independent. This last condition implies that $y_i = 0$
+    is feasible. Since $N$ is an $N$-set, Proposition 8 implies that $y_i = 0$ and
+    $y_j \ge 0$. So, we get $y_i = 0$ a solution. This also ensures the uniqueness
+    of $y_i = 0$ for all $i \in V_S$.
+
+
+    # 3.4. Defining non-minimal $N$-inequalities
+
+
+    It is possible that some $N$-inequalities are not minimal. In this case, we define
+    non-minimal $N$-inequalities.
+
+
+    In the remainder of the section, we will analyze non-minimal $N$-inequalities,
+    which differ from the constraints of the ILP formulation. The first one is the
+    rank-1 Chordal inequality in Fig. 4c. It is the counterpart of a facet-defining
+    inequality for the formulation in Araujo [2005].
+
+
+    It is known that all $N$-inequalities are minimal except for those listed in (2.1)-(2.2)
+    of [2014]. As discussed in Section 3, we define them by linearly inseparable pairs.
+    From the previous section, we can conclude that the exactly $N$-inequalities given
+    by linearly inseparable pairs are minimal. Theorem 9 we can generate and sufficient
+    conditions in this case:
+
+
+    +   Corollary 10. An $N$-inequality defined by a linearly inseparable pair $(S,
+    T \subseteq V)$ is facet-defining if and only if $S$ and $T$ are disjoint.
+
+
+    1. for each $i, j \in V_S$, there exists $k \in V_S$ such that $(S \cup \{i\},
+    T)$ and $(S \cup \{j\}, T)$ are linearly independent. $(S \cup \{i, j\}, T \setminus
+    \{i, j\}) = \emptyset$
+
+
+    2. for each $i \in V_S$, there exists $k \in V_S$ such that $(S \cup \{i\}, T)$
+    is an $N$-set and $(S \cup \{k\}, T)$ is linearly independent. The proof of the
+    inequality follows in [2016] and the facet-defining property follows in [2016].
+
+
+    ```
+
+    $y_i + y_j - y_k \ge 1$
+
+
+    (8)
+
+    ```
+
+
+    An $N$-inequality is facet-defining for
+
+
+    Two final cases remain in the conclusion the generalized $C_4$ inequality is worth
+    noting. This results from the geometry of undirected geodesic connections that
+    cannot occur in Euclidean graphs. In addition to it, the [1]-Chordal-like constraint
+    for non-minimal $N$-inequalities defined for 3-path (in $w, v, u$).
+
+
+    $N$-inequalities are structured in Fig. 4c and 4d
+
+
+    d are discussed below.
+
+
+    Proof. First, that $(S, T)$ is facet-defining. Since $S$ is minimal, $y_i^* =
+    0$ for all $i \in K$ and $S$ follows (F1), (F3). This implies (F2). The $N$-inequality
+    for $(S, T)$ is facet-defining.
+
+
+    Proposition 12. Let $K \in (R, R)$, $S \subseteq V_K$, $|S| \ge 2$ and $i, j \in
+    V_S$ such that $j \in H[i]$ for all $i \in S$. Then, the following inequality
+    is
+
+
+    ```
+
+    $y_i + y_j - y_k \ge 1$
+
+
+    (9)
+
+    ```
+
+
+    Since $(S, T)$ is facet-defining, $(S, T)$ is linearly inseparable. If $i, j \in
+    V_S$ then the $N$-inequality is minimal.
+
+
+    $v_i^* = \min \{n_i \mid n \in N(S, T), n \in N\} = 2$
+
+
+    Since $(S, T)$ is linearly inseparable and $i, j \in V_S$ then the $N$-inequality
+    is minimal.
+
+
+    $\sum y_j \ge 2$
+
+
+    is valid for $P_i$. This inequality holds with $y_i \ge 1$ the $N$-inequality
+    for $(S, T)$, which then does not define a facet of $P$.
+
+
+    An $N$-inequality is facet-defining for $P$ if
+
+
+    Two special cases of $N$-inequalities can be separated in polynomial time as illustrated
+    in Fig. 4. The structure in fig. 4a is a special case of [2] when $|S| \ge 2$
+    and $H[S]$ is replaced by the stronger condition $D[S]$. In [2] we can generate
+    a generalized 3-path inequality, which
+
+
+    In general, which in terms of variables, it is defined as
+
+
+    ```
+
+    $y_i + y_j - y_k \ge 1$, for all $i, j \in V_S$ such that $k \in D[i, j]$. (6)
+
+    ```
+
+
+    The structure constructed below the result is illustrated in
+
+
+    4e.
+
+
+    900 * Asterisk'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# European Journal of Operational Research 2024 (394) 89-103\n\nis for $P$.\
+    \ Moreover, it is facet-defining (Condition (2) of Theorem 9 holds as the following\
+    \ inequality:\n\n+   1. $i_k \notin H[j_1, \\dots, j_{k-1}] \\cup H[j_k, \\dots,\
+    \ j_\\ell], 1 \\le k \\le \\ell+1$;\n2. $j_k \notin H[i_1, \\dots, i_{k-1}] \\\
+    cup H[i_{k+1}, \\dots, i_\\ell], 1 \\le k \\le \\ell$;\n\n**Fig. 5.** Alternating\
+    \ path resulting in the inequality $\\sum (y_{i_k}+y_{j_k}) \\ge 2$ (Proposition\
+    \ 14). Snaked segments represent shortest paths of endpoints.\n\nProof. To verify\
+    \ this, we use induction on $|T| = |S|-1$. In [1], the inequalities are exactly\
+    \ the ones in (6), which are already in the formulation, and thus true.\n\nLet\
+    \ $T$ be the alternating path defined by $S = \\{i_1, j_1, i_2, j_2, \\dots, i_\\\
+    ell, j_\\ell\\}$ and $T = \\{j_1, i_2, j_2, \\dots, i_\\ell\\}$. By the induction,\
+    \ the inequalities defined by the following sequences:\n\n+   $(i_{k-1},j_{k-1})\
+    \ + (i_k,j_k) \\ge \\sum_{m=1}^{k-1} (y_{i_m}+y_{j_m}) - y_{i_k}-y_{j_k}$;\n$(i_k,j_k)\
+    \ + (i_{k+1},j_{k+1}) \\ge \\sum_{m=1}^{k} (y_{i_m}+y_{j_m}) - y_{i_{k+1}}-y_{j_{k+1}}$;\n\
+    $(i_k,j_k) + (i_{k+1},j_{k+1}) \\ge y_{i_k}+y_{j_k}+y_{i_{k+1}}+y_{j_{k+1}}$;\n\
+    \nBy summing up these three inequalities and $y_0=0$, we obtain the desired inequality\
+    \ by rounding the right side we get (11), which is true.\n\n**Proposition 13**\
+    \ Let $K \\in \\mathcal{B}(R)$, $S \\subseteq V_S, T \\subseteq V_T$ be a linearly\
+    \ separable pair; $|T| \\ge 2$, $|S| = |T|$, and $S_1 \\subseteq V_S$ and $T_1\
+    \ \\subseteq V_T$ be the two paths such that $|S_1| = |S|-1$ and $|T_1| = |T|-1$.\
+    \ Moreover, suppose the following holds:\n\n+   (a) there exists $u \\in V_S,\
+    \ v \\in V_T$ (not vertex) where $u$ is an endpoint of $S_1$ (1.2) and $v$ is\
+    \ an endpoint of $T_1$ (1.2) such that $u \\vee v$ or $v \\vee u$;\n(b) $m_1,\
+    \ m_2$ are connected in $H[v,v]$ for all $v \\in V_T$ (1.5) or $v \\in V_S$ (1.2)\
+    \ in $T_1$ or $T_2$.\n\n```\n$(|T|-1)\\sum_{i \\in S} y_i - (|S|-1)\\sum_{j \\\
+    in T} y_j \\ge |S|-|T| - (1-y_{u,v}) \\quad (10)\n```\n\nThen,\n\nthe inequality\
+    \ (10) is a facet of $P(S,T)$ (1.1).\n\nProof. To prove this, we observe that\
+    \ $(u \\vee v)$ is an inseparable pair for any $S, T$ for all $v \\in V_S, w \\\
+    in V_T$ and $w \\in T_2$. If any of $S_1, T_1$ or $T$ is not in any $N$-set, then\
+    \ each must contain at least $(|S|-1)$ elements from $S$, other elements, and\
+    \ at least one vertex from $V_S$ and one vertex from $V_T$. Thus, if $N$ is an\
+    \ $N$-set, then $S_1, T_1$ or $T$ must be in $N$-set.\n\nTo show that $v_i \n\
+    otin N$ for all $i \\in S_1$, we assume $N$ is not $N$-set. If we find that $N$\
+    \ contains only one of the sets $S_1, T_1$ or $T_2$, the result follows that $v_i\
+    \ \notin N$ for all $i \\in S_1$.\n\nTo show that $v_j \notin N$ for all $j \\\
+    in T_1$, we assume $N$ is not $N$-set. If we find that $N$ contains only one of\
+    \ the sets $S_1, T_1$ or $T_2$, the result follows that $v_j \notin N$ for all\
+    \ $j \\in T_1$.\n\nWe prove first, we show that condition 1 ensures that (11)\
+    \ is an $N$-set inequality. If $(|S|-1)\\sum y_i - (|T|-1)\\sum y_j \\ge |S|-|T|$\
+    \ is not a facet of $P(S,T)$, then we can find an extreme point $y$ of $P(S,T)$\
+    \ that satisfies condition (1) but is (10)-facet.\n\nTo prove first, we show that\
+    \ condition 1 ensures that (11) is an $N$-set inequality. If $(|S|-1)\\sum y_i\
+    \ - (|T|-1)\\sum y_j \\ge |S|-|T|$ is not a facet of $P(S,T)$, then we can find\
+    \ an extreme point $y$ of $P(S,T)$ that satisfies condition (1) but is (10)-facet.\n\
+    \nTo prove first, we show that condition 1 ensures that (11) is an $N$-set inequality.\
+    \ If $(|S|-1)\\sum y_i - (|T|-1)\\sum y_j \\ge |S|-|T|$ is not a facet of $P(S,T)$,\
+    \ then we can find an extreme point $y$ of $P(S,T)$ that satisfies condition (1)\
+    \ but is (10)-facet.\n\nNow, to show that condition (11) of Theorem 9 is a facet\
+    \ of $(S,T)$, we follow [6]. Connected as, if $V_S \\cup V_T$ is a facet, then\
+    \ $j_k \notin H_k$ and $i_k \\in H_k$ for all $k \\in \\{1, \\dots, \\ell\\}$.\
+    \ By condition 1 and 4, for all $k \\in \\{1, \\dots, \\ell\\}$, we have $j_k\
+    \ \notin H_k \\cup H_k'$ and $i_k \\in H_k \\cup H_k'$.\n\nAs a last place, we\
+    \ show a next $N$-set inequality derived from the structure illustrated in Fig.\
+    \ 5, alternating path inequality.\n\n**Proposition 14** Let $S = \\{i_1, \\dots,\
+    \ i_\\ell\\} \\subseteq V_S$ and $T = \\{j_1, \\dots, j_\\ell\\} \\subseteq V_T$\
+    \ be $V_S \\cap V_T \\ge \\ell$ and $K \\in \\mathcal{B}(R)$, such that $\\{i_1,\
+    \ \\dots, i_\\ell, j_1, \\dots, j_\\ell\\}$ is a sequence of alternating path\
+    \ between $i_1$ and $i_{\\ell+1}$ in $G$. The alternating path inequality is\n\
+    \n```\n$\\sum_{i \\in K} y_i \\ge 1 \\quad (11)\n```\n\n# 4. A compact formulation\
+    \ for 2-GSP\n\n4.1 IP formulation\n\nThe second ILP formulation is obtained by\
+    \ including additional variables to reduce the number of constraints to a polynomial\
+    \ number. The new binary variables, $z_{ki}$, are used to determine if a vertex\
+    \ connects to the hull of the non-outs of a class. More precisely, in a 2-GSP\
+    \ feasible solution for each $K \\in \\mathcal{B}(R)$ and $i \\in V$, we define\
+    \ a binary variable $z_{ki}=1$ if $i \\in H[k]$. The feasible solutions of the\
+    \ new formulation are defined by the binary variables $y^e$ and $z$ such that\n\
+    \n```\n$y_i \\ge z_{ki}\n```\n\n```\n$i \\in V_k, K \\in \\mathcal{B}(R)$\n```\n\
+    \n```\n$y_i + z_{ki} \\le 1 \\quad (12)\n```\n\n```\n$i \\in V_N$\n```\n\n```\n\
+    $i \\in V_R, K \\in \\mathcal{B}(R)$\n```\n\n```\n$z_{ki} + z_{kj} - z_{ij} \\\
+    le 1 \\quad (13)\n```\n\n```\n$K \\in \\mathcal{B}(R), i, j \\in V: i \\in e(H(k))$\n\
+    ```\n\n```\n$z_{ki} + z_{kj} - z_{ij} \\le 1 \\quad (14)\n```\n\n![](img/bdfe0fc633366a0ca165e70bee846a49_7_0.png)\n\
+    \n![](img/bdfe0fc633366a0ca165e70bee846a49_7_1.png)"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: "# 4.2. Polyhedron\n\nWe discuss some structural properties of $P_n$ which is\
+    \ defined as $P_n = \\{x \\in \\mathbb{R}^{2n} : \\sum_{i=1}^n (x_i + x_{i+n})\
+    \ = 1\\}$. Let $\\mathbf{v}_i = [V_i]$, with the addition of $\\mathbf{e}_i$ and\
+    \ $\\mathbf{e}'_i$ to represent the unit vector $z$ in $\\mathbb{R}^{2n}$,\n\n\
+    +   1. $y_i \\le 1$, for all $i \\in V_{ap}$,\n2. $z_{i,j} \\ge 0$ for all $i,\
+    \ j \\in [K]$.\n\nTo show other facet-defining bounding inequalities, we will\
+    \ need the following in the next section. Let $S$ be a set of vertices and $V'\
+    \ = V \\setminus S$. $G(S)$ is said to be $l'$-arrangeable if the vertices in\
+    \ $V'$ are ordered as $v'_1, v'_2, \\dots, v'_{|V'|}$ satisfying $U(v'_i) \\subseteq\
+    \ U(v'_{i+1} \\dots v'_{|V'|})$. Roughly speaking, the operator D can progress\
+    \ regress through the vertices of $V'$,\n\nThis formulation is denoted LP2. We\
+    \ show that its equalities model conditions (C1)–(C3) and (12)–(15) are related\
+    \ to the correctness of LP2.\n\n**Proposition 15.** If $y_i + y_j = 1$ (C3) and\
+    \ $f_i = f_j = 1$ (B2) and $z_{i,j} = 1$ (15), then $f_{i,j} = f_i$.\n\n*Proof.*\
+    \ If $y_i + y_j = 1$ (i.e. $V_i \\cap V_j = \\emptyset$), then for $k \\in [K]$.\
+    \ By Proposition 2, and $A_k$ and conditions (C1)–(C3) show that if $y_i = y_j\
+    \ = 1$ (B2), then for all $k \\in [K]$, if $y_i = 1$ (i.e. $V_i \\cap V_k = \\\
+    emptyset$), then $y_k = 1$. If $y_i \\neq 1$, then $y_i = 0$, and if $y_k = 1$\
+    \ (i.e. $V_i \\cap V_k = \\emptyset$), then $f_i = 0$ or $\\mu_{i,k} = 0$. Similarly,\
+    \ if $y_i = y_j = 0$, then $\\mu_{i,k} = \\mu_{j,k} = 0$. If, then the difference\
+    \ between the inequalities $w_{i,k}$ and $w_{j,k}$ is $\\mu_{i,k} - \\mu_{j,k}\
+    \ = 0$.\n\n# **Proposition 17.** The following inequalities are facet-defining\
+    \ for $P_n$:\n\nBy Proposition 15, all $y_i$ for the parameters described in Section\
+    \ 1, are also valid for $P_2$. However, the facet conditions are not directly\
+    \ transferred to $P_2$ for the bounding constraints. In the remainder of this\
+    \ section, we will show facets of the bounding inequalities of LP2. The affine\
+    \ inequalities\n\n**Proposition 18.** For $K \\ge 4$ and $z_{i,j} \\le 1$ is facet-defining\
+    \ for $P_n$, if $i$ is $(k)$-arrangeable.\n\nmore at a time. We show that the\
+    \ following cannot occur: for $i \\in U_u$ or $j \\in U_v$, if $V_i \\cap V_j\
+    \ \\neq \\emptyset$ such that $U(i) \\subseteq U(j)$. In Fig. 2a, if $i$ is $(k)$-arrangeable\
+    \ then $V_i \\cap V_j = \\emptyset$ for all $j > i$. On the other hand, we goal\
+    \ D to progress to the order $v_u, \\dots, v_v$.\n\n*Proof.* Let $k \\in [K]$\
+    \ and $V_f = \\{j : y_j = 1\\}$. If $i, j \notin V_f$ (i.e. $y_i=0, y_j=0$), then\
+    \ $z_{i,j} = 1$. If one of $i \\in V_f$ and $j \\notin V_f$, then $z_{i,j} = 0$.\
+    \ If $i, j \\in V_f$, then $z_{i,j} = 1$. It is sufficient to prove that $\\mu_{i,k}\
+    \ = \\mu_{j,k} = \\pi$ for all $k \\in [K]$ such that $V_i \\cap V_k \\neq \\\
+    emptyset$ and $V_j \\cap V_k \\neq \\emptyset$. It is to prove that $\\mu_{i,k}\
+    \ = 0$ for all $k \\in [K]$ such that $V_i \\cap V_k = \\emptyset$ and $V_j \\\
+    cap V_k = \\emptyset$.\n\n$\\mu_{i,k} = 0$ for all $k \\in [V]$. By hypothesis,\
+    \ there is an ordering $v_1, \\dots, v_{|V|}$ of $V$ such that $U(v_i) \\subseteq\
+    \ U(v_{i+1})$ for $i < |V|$. Using this, we use induction on $k$ to show that\
+    \ $\\mu_{i,k} = \\mu_{j,k} = 0$ for all $k \\in [K]$ such that $V_i \\cap V_k\
+    \ = \\emptyset$ and $V_j \\cap V_k = \\emptyset$.\n\n$\\mu_{i,j} = 0$ for all\
+    \ $j \\in [V]$. If $y$ is not $(k)$-arrangeable, then there exist $i, j, l \\\
+    in [V]$ such that $U(i) \\subseteq U(l)$ and $U(l) \\subseteq U(j)$ but $i < l\
+    \ < j$.\n\n# **Proposition 16.** $P_n$ is facet-defining.\n\n*Proof.* Consider\
+    \ the inequalities $x_i + x_{i+n} = 1$ (for $i \\in [n]$) and $z_{i,i+n} = 1$\
+    \ (for $i \\in [n]$). 1. For all $k \\in [B]$ and $k \\in [R]$, they satisfy the\
+    \ equality $y_i + y_{i+n} = \\pi_k$ for $\\pi_k = \\pi$ on $(\\mathbb{R}^n \\\
+    times \\mathbb{R}^n)^B$. 2. It is sufficient to prove that $w_{i,k}$ and $w_{i+n,k}$\
+    \ satisfy the same equality $\\mu_{i,k} = \\mu_{i+n,k} = 0$. If, then the difference\
+    \ between the inequalities $w_{i,k}$ and $w_{i+n,k}$ is $\\mu_{i,k} - \\mu_{i+n,k}\
+    \ = 0$. If $\\mu_{i,k} \\neq 0$, then the points are affine independent.\n\nNow\
+    \ assume that $y$ is not $(k)$-arrangeable. Then there exist $i, j, l \\in [V]$\
+    \ such that $U(i) \\subseteq U(l)$ and $U(l) \\subseteq U(j)$ but $i < l < j$.\
+    \ Now, let $v_1, \\dots, v_{|V|}$ be an ordering of $V$ such that $U(v_i) \\subseteq\
+    \ U(v_{i+1})$ for $i < |V|$.\n\n# **Proposition 19.** $y_i y_j + z_{i,j} \\le\
+    \ 1$ is facet-defining for $P_n$.\n\nGeneralizations of inequalities (12)–(14)\
+    \ will be discussed in the next section (see Sections 20–23).\n\n*Proof.* For\
+    \ $k \\in [K]$, consider the $n+2$ points $(\\mathbf{e}_i, \\mathbf{e}'_i)$ for\
+    \ $i \\in [V]$ and $(\\mathbf{e}_j, \\mathbf{e}'_j)$ for $j \\in [V]$. They are\
+    \ feasible solutions that satisfy $y_i y_j + z_{i,j} \\le 1$ for all $i, j \\\
+    in [V]$. They are affine independent.\n\nWe discuss some structural properties\
+    \ of $P_n$ which is defined as $P_n = \\{x \\in \\mathbb{R}^{2n} : \\sum_{i=1}^n\
+    \ (x_i + x_{i+n}) = 1\\}$. Let $\\mathbf{v}_i = [V_i]$, with the addition of $\\\
+    mathbf{e}_i$ and $\\mathbf{e}'_i$ to represent the unit vector $z$ in $\\mathbb{R}^{2n}$,"
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Position 21. For all $K \in \mathcal{B}$, the constraints do not define facets
+    of $P_2$;
+
+
+    +   1. $y_i, z_{ij} \geq 0$, and $z_{ij} \geq 0$, for all $i, j \in V$.
+
+    2. $z_{ij} \leq 1$, for all $i \in V$.
+
+
+    By (12), $y_i = 0$ implies $z_{ij} = 0$ and $(z_{ij} = 1)$ implies $y_i = 1$;
+    for all $i \in V$, $y_i = 0$ and $z_{ij} \leq 1$ do not define facet of $P_2$.
+    By (13), since $y_i=1$ then $z_{ij}=0$ does not define facet of $P_2$. Finally,
+    $z_{ij} \leq 1$ is bounded by $z_{ij} + z_{ji} \leq 1$, for all $i, j \in V$$.
+
+
+    ![](img/bdfe0fc633366a0ca165e70bee846a49_9_0.png)
+
+
+    Fig. 6. $(y_1=1, y_2=0, y_3=1, y_4=0, y_5=1, y_6=0)$, $d_i \in D(i)$, $d_{12}
+    \in D(1,2), d_{13} \in D(1,3), d_{21} \in D(2,1), d_{23} \in D(2,3)$, and $d_{32}
+    \in D(3,2)$. Generalized walks inequalities $z_{12} + z_{23} + z_{31} - z_{21}
+    - z_{32} = 1$, for $K \in ( \mathcal{B} \)$. Shaded segments represent facets
+    of such inequalities.
+
+
+    # 4.3. Non-defining inequalities from $P_1$
+
+
+    As already mentioned, any inequality $\pi y \geq \pi$ valid for $P_1$ is also
+    valid for $P_2$, but may not induce a facet of $P_2$ if we could think of such
+    a lifting. Due to (12) and (13), a straightforward strategy $\pi y \geq 0$ would
+    be valid for $y_i$ if $z_{ij}=1$ or $i \in V$. We show some of the facet-defining
+    $\pi z \geq 0$ inequalities that remain valid for $P_2$ after lifting. We also
+    show non-defining inequalities to get facets of $P_2$.
+
+
+    We start by examining the structure associated with tree inequality (9) illustrated
+    in Fig. 4a and d.
+
+
+    Proposition 22. Let $K \in \mathcal{B}$, $S \subseteq V$, and $j \in V \setminus
+    S$ such that $j \in H(i)$, for all $i \in S$ or $i \in V \setminus j$.
+
+
+    ```
+
+    $$\sum_{i \in S} z_{ij} - z_{ji} \leq 1 \quad (16)$
+
+    ```
+
+
+    is valid for $P_2$, for $S \subseteq V$ and $j \in V \setminus S$. If $U$ is valid,
+    then $U \cup \{z_{ij} \leq 1\}$ is $j$-liftable, making it a facet of $P_2$.
+
+
+    Proof. Let $y$ be a feasible solution. If $$\sum_{i \in S} z_{ij} - z_{ji} \leq
+    1$, then it trivially holds. Suppose $$\sum_{i \in S} z_{ij} - z_{ji} > 1$, then
+    there exists $i \in S$ such that $z_{ij}=1$. By (15), $y_i=1$. By hypothesis,
+    $y_j=0$. Thus, $\$\sum_{i \in S} z_{ij} - z_{ji} \leq |S| - 1 = 1$.
+
+
+    Consider (16) for all $y_i \in V$ and $y_j$. Then, using (12) and (13), we show
+    $$\sum_{i \in S} z_{ij} - z_{ji} \leq |S| - 1 - \sum_{i \in S} (1 - y_i) + (1
+    - y_j)$.
+
+
+    ```
+
+    $$\sum_{i \in S} z_{ij} - z_{ji} \leq \sum_{i \in S} y_i - y_j \quad (17)$
+
+    ```
+
+
+    is valid for $P_2$. In particular, it demonstrates $(y_1, ..., y_{n_1}) \leq 1$
+    for $U_1 = \{y_1, ..., y_{n_1}\}$. If $U$ is $j$-liftable, then $U \cup \{y_j\}$
+    is $j$-liftable, making $U_k = U \cup \{y_1, ..., y_{n_k}\}$ a facet of $P_2$.
+    .
+
+
+    To prove the clause, if $$\pi y \geq \pi$ is a facet of $P_1$, then we can see
+    that in (8) that $$\pi'' y \geq \pi''$ is a facet of $P_2$, where $$\pi'' z \geq
+    \pi''$ is the lift-defining facet of $P_2$.
+
+
+    $(e^1_1, ..., e^1_{n_1})$ and $(e^2_1, ..., e^2_{n_2})$, are both in $P_1$. Show
+    that $$\pi y = 0$.
+
+
+    $$\mu_i = \pi_i$ for all $i \in V$, $i \neq j$, and $$\mu_j = \pi_j + \sum_{i
+    \in V} \pi_{ij}$$.
+
+
+    $$\mu_K(S) = \pi_K(S) - \sum_{i \in S} \pi_{ij}$ for all $i \in S$ the points
+
+
+    $(e^1_1, ..., e^1_{n_1})$ and $(e^2_1, ..., e^2_{n_2})$, $e^f$ both in $P_1$.
+
+
+    $$\sum_{i \in S} \mu_i z_{ij} - \mu_j z_{ji} \geq = 0$. The claimed result is
+    due to $$\mu_K(S) = 0$.
+
+
+    $$\mu_j = \pi_j + \sum_{i \in S} \pi_{ij}$
+
+
+    $$\mu_i = 0$ for all $i \in V, i \neq j$. Since $$\mu$ is $j$-liftable, there
+    is an ordering $i_1, ..., i_{n-1}, i_n=j, v'', p''$ such that $U_i$ satisfies
+    $U_{i_1} \cup U_{i_2} \cup ... \cup U_{i_{n-1}} \cup U_{i_n} \cup U_{v''} \cup
+    U_{p''}$ is a facet of $P_1$, and $(e^1_1, ..., e^1_{n_1})$ and $(e^2_1, ...,
+    e^2_{n_2})$ imply that $$\mu$ is a facet of $P_2$.
+
+
+    $$\mu_K = 0$ for all $i \in V$. By hypothesis, $$\mu_K = 0$ for all $i \in V \cup
+    \{j\$.
+
+
+    It is worth noting that $Constraints (15)$ can be special cases of $(17)$ for
+    $i=j$ as well as special cases of $(16)$ for $S$ and $j \in V$.
+
+
+    A generalization of inequalities can be obtained by lifting vertices more than
+    once in the base sequence. In this sense, a $w$ is a sequence $(v_1, v_2, ...,
+    v_n)$ of vertices such that $v_i \in H(v_i)$ for all $i$. The inequalities connected
+    in the next result are illustrated with the example described in Fig. 6.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# European Journal of Operational Research 314 (2024) 894–91
+
+
+    **Table 1**
+
+    Cases in the proof of Proposition 23.
+
+
+    | Case | Points in F |
+
+    |--- |--- |
+
+    | $\mu_{K,i} = 0$ for all $i \in V''$ | induction on $k$ \n$(\sum_{i \in V''}
+    \mu_{K,i} = 1, \sum_{i \in V''} \mu_{L,i} = 1)$ \n$(\{e''\}, \{e'' + \ell''\})$
+    \n$(\{e''\}, \{e'' + \ell''\})$, if $v'' \in V_C$ \n$(\{e''\}, (\sum_{i \in V_L}
+    \mu_{L,i} = 1), \{e'' + \ell''\})$, , if $v'' \in V_L$ \n$(\{e''\}, (\sum_{i \in
+    V_R} \mu_{R,i} = 1), \{e''\})$, , if $v'' \in V_R$ |
+
+
+    **Proposition 24.** *Let $u_1, u_2, \dots, u_t$ be a sequence contained in a walk
+    of $D(U, \mathcal{R})$ with $u_1, u_t \in G$ such that $\{u_1, \dots, u_t\} \cap
+    D(U, \mathcal{R}) = \emptyset$, and $1 \le t \le t'' \le \ell$, then the inequality
+
+
+    ```
+
+    $\sum_{i=1}^t Z_{u_i} - \sum_{j=1}^{t''} Z_{u_j} \le 1$ (19)
+
+    ```
+
+
+    is valid for $P_2$.
+
+
+    *Proof.* By contradiction that there exists an integer $n$ such that $(y, z) \in
+    P_2$ violates (20). Then, there exist $1 \le t \le t'' \le \ell$ such that $z_{u_i}
+    = 0$ and $z_{u_j} = 1$ for $j \in [t, t'']$, which contradicts (17).
+
+
+    Condition (18) requires that, for any two vertices $u, v$ on any path between
+    them, there is at least one vertex $w \in D(U, \mathcal{R})$. As a consequence,
+    the sequence cannot contain multiple occurrences of a single vertex $w$ in odd
+    positions of the distance $d(w, w)$. However, the valid linear constraints $\mathcal{C}_i$
+    given (8) for $P_i$ may provide invalid inequalities for $P_2$ that may also include
+    vertices in $V_C$.
+
+
+    As a counterpart the linear constraints $\mathcal{C}_i$ given (8) for $P_i$, we
+    now find valid inequalities for $P_2$ that may also include vertices in $V_C$.
+
+
+    **Proposition 25.** *Let $S \subseteq V_L \cup V_R$ and $T \subseteq V_L \cup
+    V_R$ such that $[S] = [T]$, $S \cap V_C = T \cap V_C = \emptyset$; then the following
+    inequality is valid:*
+
+
+    ```
+
+    $\sum_{i \in S \cup V_L} (y_i + z_i) - \sum_{j \in T \cup V_R} (y_j + z_j) \le
+    2$. (20)
+
+    ```
+
+
+    *Proof.* By contradiction that there exists an integer $n$ such that $(y, z) \in
+    P_2$ violates (20). Then we can assume that the first two terms in the left-hand
+    side of (20) are null, which implies $z_i = 1$ for all $i \in S$; Similarly, since
+    only one of the two terms in the right-hand side is null, then there must be some
+    $j$ such that $z_j = 0$ for $j \in T$; by (15) we have $z_j = 1$ if $j \in V_L$.
+    Then we have $z_j = 1$ for all $j \in V_L$, which is a contradiction. Both cases
+    proved.
+
+
+    It is worth noting, that in this case since the variables $y_i$ and $z_i$ are
+    variables, the inequality derived from (20) by replacing $y_i$ with $1-y_i$ and
+    $z_i$ with $1-z_i$ for $i \in S \cup T$ is valid, as some of these vertices may
+    be outliers. If $S_V \subseteq V_R$, then we have a feasible solution where one
+    vertex in $S$ is blue and the other three vertices in $S$ are red. So this solution
+    would violate the suggested inequality
+
+
+    # **5. Algorithms**
+
+
+    In this section, we describe branch-and-bound algorithms to solve 2-GCP in the
+    previously sections and with a specific objective function.
+
+
+    valid inequalities for ILP1 or ILP2 are only those from the root-of-branch-tree.
+    The separation algorithms employed for this purpose are described in this section.
+    The branch-and-bound algorithms are used in the experiments with some greedy heuristic
+    for the classification of vertices, so as to get a solution for 2-GCP.
+
+
+    # **5.1 Objective functions**
+
+
+    Given a feasible solution $(a, b)$ of 2-GCP, the vertices in $V \setminus (U \cup
+    \mathcal{R})$ are outliers while in $(H_a \cup H_b)$ they are called $(a, b)$.
+    Outliers and uncovered vertices establish a relationship between $a_G$ and $b_G$
+    concerning their linear distance. The objective function of the formulation as
+    a measures how much $V$ deviates from the separable sets $a, b$.
+
+
+    In practice, there are several ''criteria'' that could guide the minimization
+    of the outliers. The base of the formulation could, with the objective function,
+    to penalize uncovered vertices.
+
+
+    The experiments consider here the minimization of the outliers, the objective
+    function in both formulations ILP1 and ILP2 we use
+
+
+    ```
+
+    $\min \sum_{i \in V} y_i$,
+
+    ```
+
+
+    Other evaluated functions have not led to results in terms of classification measures
+    such as accuracy.
+
+
+    # **5.2. Pre-processing
+
+
+    Computing all-shortest paths is a straightforward approach breadth-first-search
+    (unweighted cases) or Floyd-Warshall (weighted) algorithms.
+
+
+    In the unweighted case, $D(h, j)$ contains all vertices in all paths from $h$
+    to $j$. To calculate all $D(h, j)$ we use breadth-first-search for each vertex
+    $h$ in $V$. Each graph $G$ has its $D(h, j)$ which is an updated distance of $j$
+    from $(h, i)$, if $(i, j)$ has a distance shorter than $D(h, j)$ (i.e., $D(h,
+    j) > D(h, i) + d(i, j)$) reached.
+
+
+    So, for each $h$ and all $j \in V$ we update in $O(n+m)$. In the weighted case,
+    we use Floyd-Warshall algorithm, which takes $O(n^3)$.
+
+
+    Notice that $H[S] = D[S]$ is the kernel of $k$ subset $S$ we calculate the convex
+    hull of $S$ with $W''$ and iteratively update it. After each iteration, so we
+
+
+    $W''$ in $D(U, v)$, for every pair of vertices $u, v \in W$
+
+
+    904'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'at least one of them adheres to W'' (iteration). This step is repeated until
+    W'' no changes. At this point, we get W'' = W. D(u) can be performed using the
+    BFS-like or Floyd-Warshall''s algorithm.
+
+
+    Given a instance C, we calculate the convex hull H(Vi) and its vertices. If i
+    does, then neither belongs to H(Vi). If i does not belong to H(Vi), then it can
+    be removed by a class of constraints. In this case, we fix zᵢ = 0 and zⱼ = 0 in
+    ILP2. However, if a vertex i does not belong to the convex hull of Vⱼ but it belongs
+    to the convex hull of Vⱼ, then we fix zⱼ = 1 in ILP2.
+
+
+    lutions. We search for a (minimal) linear inseparable pair (Sᵢ ∪ Vⱼ) whose overlap-set
+    constraint is violated. To do so, it is sufficient to intersect the current solution
+    y of ILP2 by explicitly calculating the convex hull of (Aᵢ, Aⱼ), where Aᵢ = {i
+    | yᵢ = 0, i ∈ Sᵢ}. Then, we get:
+
+
+    +   - If yᵢ = 0 for all i ∈ Sᵢ
+
+
+    To obtain minimal subsets S and T that keep the inequalities violated, as proved
+    in (4), we start with S=Ai and T={i}. If there is s such that H[S] still reaches
+    i, then we remove s from S. This procedure finishes when S becomes minimal. In
+    begin, we start with S={j} and T=Aj. If there is u such that H[T] still reaches
+    j, then we remove u from T. This procedure finishes when S∪T is minimal. It is
+    worth noting that the second type of constraint only needs to be verified if H[S]
+    ∩ H[T] ≠ ∅; otherwise it is covered by the first type. The algorithm complexity
+    is O(|V|(|G|).
+
+
+    # 5.3. Algorithm ILP
+
+
+    The main stands to handle the large number of constraints of ILPR are outlined
+    in Algorithm 1. The relaxed problem of the branch-and-bound tree with C inequalities.
+    Then, path constraints are iteratively separated for related problem. The exact
+    solution of the version of the formulation is obtained through the exploration
+    of the branch-and-bound tree, adding lazy constraints when they are violated.
+    The separation algorithms are presented in the next section:
+
+
+    # Algorithm 1: Solving inequalities
+
+
+    +   1. Computation of all D(i, j) sets.
+
+    2. Initial cut: A trivial solution is obtained by setting vertices of a class
+    as others, min[|Vᵢ|] is provided as a cut.
+
+    3. Initial configuration: All C2 inequalities (using Dᵢ, Dⱼ) are included in initial
+    model by enumeration of all pairs-2 subsets. The remaining constraints (4) are
+    made lazy.
+
+    4. Partial relaxation: At the root of the branch-and-bound tree, we solve the
+    linear relaxation of the integer model with constraints (17) and (20)
+
+    5. Eact model starting: Starting from the model after Step 4, we add the integrity
+    constraints and solve the ILPformation by adding (5) constraints as lazy constraints.
+
+
+    Generalized C2 Inequalities for ILP1. (Inequalities (8)) are generated during
+    the generation of the related problem by enumerating all 2-subsets of Vᵢ and Vⱼ.
+    For the sake of time, we search for pairs (i, j, r), (w, w'') such that w ∈ Vᵢ
+    and w'' ∈ Vⱼ. Then we find all pairs of pairs that are not violated by including
+    all inequalities (8). We find that by using a procedure in a primary model usually
+    leads to a better performance than random search.
+
+
+    Generalized Alternating Path Inequalities: The generalized alternating path inequalities
+    (11) are the constraints, for ILP2, of the convex inequalities. Their separation
+    can be obtained by the method described in the next section. In practice, we observed
+    that separating all inequalities was not working, we restricted ourselves to separate
+    the generalized 3-path inequalities (6) (the special case of (11) when i=j) enumeration.
+
+
+    The method of the solution adopted for formulation for ILP2 is similar to Algorithm
+    1. Actually, the first three steps are identical, for the inclusion of (12-14)
+    in the initial model. Step 4 and 5 solve the generalized C2 inequalities and generalized
+    inequalities. Their separation routines are described below:
+
+
+    # Algorithm 2: Solving inequalities
+
+
+    +   1. Computation of all D(i, j) sets, and inclusion of (12-14) in the initial
+    model.
+
+    2. Initial cut: A trivial solution is obtained by setting vertices of a class
+    as others, min[|Vᵢ|] is provided as a cut.
+
+    3. Initial configuration: All C2 inequalities (using Dᵢ, Dⱼ) are included in initial
+    model by enumeration of all pairs-2 subsets. The remaining constraints are made
+    lazy.
+
+    4. Partial relaxation: At the root of the branch-and-bound tree, we solve the
+    linear relaxation of the integer model with constraints (17) and (20)
+
+    5. Eact model starting: Starting from the model after Step 4, we add the integrity
+    constraints and solve the ILPformation by adding (15) constraints as lazy constraints.
+
+
+    Generalized C2 Inequalities for ILP2. Using a procedure similar to the Generalized
+    C2 Generator, we obtain and store all inequalities (20) —using Dᵢ, Dⱼ. For the
+    benefit of the problem this procedure is now such that each subset may be included
+    in the enumeration of all pairs-2 subsets. The number of inequalities is checked
+    and for. In practice, searching for all violations each time the separator runs
+    decreases the overall running time, since the size is much smaller than the maximum
+    number of pairs that are generated.
+
+
+    Generalized Convex Inequalities. We developed a separation algorithm for the convexity
+    inequalities (17).'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '![](img/bdfe0fc633366a0ca165e70bee846a49_12_0.png)
+
+
+    including the case where h=1 which corresponds to (15). The idea is follows: given
+    h \in V and K \in [B, R], find a sequence contained in a shortest path from h
+    (to any other v) whose inequality yields the maximum value in the left-hand side
+    of it. We search for a path in a DAG (directed acyclic graph) describing all sequences
+    contained in shortest paths starting at h. To create such a DAG for a given h
+    \in V, we apply the search (to be illustrated in the graph Fig. 7).
+
+
+    +   1. Create the DAG of all paths starting at h. This is easily calculated by
+    a breadth-first search algorithm similar to the one described in Section 5.2 (Fig.
+    7b);
+
+    2. Calculate the transitive closure of the DAG in step 1 (a path from h in this
+    DAG is a sequence contained in a shortest path starting at h). To do so, we apply
+    the algorithm again.
+
+    3. Finally, create a sink f and add edges (v, f) for every vertex v such that
+    (h, v) \in E.
+
+
+    The resulting DAG, for a given h, v, is given by. Observe that the values of a
+    path with convexity from h to v in a shortest path, a sequence, that yields a
+    generalized convex inequality (17).
+
+
+    Let consider a path from h to f with convexity in DAG whose sequence of vertices
+    is S = (h=v_0, v_1, ..., v_k=f). The left-hand side of the generalized convex
+    inequality (17) is induced by S and class K \in [B, R].
+
+
+    ```
+
+    $K_{v_0,v_1} + K_{v_1,v_2} + ... + K_{v_{k-1},v_k} =\
+
+    K_{v_0,v_1} + K_{v_1,v_2} + ... + K_{v_{k-1},v_k} + 2K_{v_1,v_2} + ... + 2K_{v_{k-2},v_{k-1}}
+    =\
+
+    K_{v_0,v_k} + 2\sum_{i=1}^{k-2} K_{v_i,v_{i+1}} \quad (22)
+
+    ```
+
+
+    Let \phi be a functional solution of \phi. Thus, to calculate the maximum path
+    in DAG, we assign each edge of the DAG a weight w(u, v) = K_{u,v}. By calculating
+    the weight of a path containing an arc (u, v), we multiply w(u, v) by 1 or 2 depending
+    on whether u appears in or even position in the path; however, the weight of the
+    path is the sum of the weights of its edges (with their appropriate weights) which
+    yields \phi.
+
+
+    We can determine the maximum weighted path by traversing the DAG in topological
+    order and calculating the weight of the paths. We have to take care to multiply
+    the weights by 1 or -1. If the weight of the maximum path is greater than 0, the
+    inequality is violated and this path is selected.
+
+
+    algorithm for a given source h, is mainly determined by Dijkstra''s algorithm,
+    which has complexity O(|V|^2 \log |V|), the topological sorting can be implemented
+    within complexity O(|V| + |E|) with depth-first search algorithm.
+
+
+    # Computational experiments
+
+
+    The aim of the computational experiments, whose results are reported in the sequel,
+    is to evaluate out the efficiency of the proposed algorithms in solving G-QSP
+    instances and the evaluation of the two formulations using the proposed algorithms
+    for facet-defining inequalities. From the other side, the quality of the geodesic
+    approach as classification method is discussed in random instances. These experiments
+    were applied to a class of vertices in V_h(|A|V_h) and a class that appears in
+    most instances.
+
+
+    The experiments were conducted on a machine equipped with a quad core processor,
+    8GB RAM, and Linux operating system. The implementation was carried out using
+    language C++ and the CPLEX package to solve both linear and integer programming
+    problems using default settings. The results of instances 1 and 2 for the formulations
+    showed only dominated instances and for realistic times. Each instance was set
+    to 3600 seconds. A time entry indicates that the time limit was exceeded for the
+    corresponding instance.
+
+
+    # Random instances
+
+
+    To generate random instances for the computational experiments, we first categorized
+    them to three parameters: the number of vertices, the graph density, and the initially
+    classified vertices. We choose n from the set {50, 100, 200, 500}, density from
+    {0.1, 0.3, 0.5}, and p from {50%, 80%}. We generated 10 random instances, for
+    each combination of n, d, and p, resulting in 720 instances in total. Note that
+    instances where all vertices of a class out gives a solution to the optimum are
+    therefore useless. For the generation procedure
+
+
+    consists of two phases and five parameters: n, d, and p. In the first phase, we
+    generate two connected graphs, G_a and G_b with n/2 vertices and density d, by
+    adding edges until the target density is reached. If the resulting graph is disconnected,
+    we repeat the process. The vertices of G_a and G_b are assigned the sequence (e_1,
+    ..., e_k). The length of this sequence is determined so as to be a'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "# Table 2\nAlgorithms 1 and 2 for random instances with p = 60% (in seconds).\n\
+    \n| Instance | Diam | minDeg | maxDeg | OPT | rGap(1) | rGap(2) | bn1 | bn2 |\
+    \ T_L1 | T_L2 |\n|---|---|---|---|---|---|---|---|---|---|---||\n| n050-d50 |\
+    \ 14 | 1 | 7 | 26 | | | 41 | 7 | 0.64 | 1.60 |\n| n0150-d10 | 8 | 2 | 9 | 30 |\
+    \ | | 65 | 47 | 0.63 | 1.31 |\n| n0110-d50 | 8 | 5 | 11 | 56 | | | 35 | 28 | 0.31\
+    \ | 1.42 |\n| n0115-d75 | 7 | 5 | 19 | 72 | | | 23 | 42 | 0.23 | 0.50 |\n| n0515-d35\
+    \ | 11 | 2 | 23 | 76 | | | 9 | 1 | 0.23 | 0.38 |\n| n0550-d55 | 18 | 4 | 24 |\
+    \ 81 | | | 6 | 5 | 2.04 | 7.97 |\n| n1005-d100 | 10 | 9 | 14 | 10 | | | 34 | 15\
+    \ | 0.67 | 1.34 |\n| n0115-d75 | 7 | 4 | 16 | 74 | | | 7 |   | 0.58 | 3.17 |\n\
+    | n0122-d125 | 17 | 32 | 10 | 50 | | | 10 | 0 | 1.04 | 4.98 |\n| n0125-d125 |\
+    \ 25 | 8 | 43 | 80 | | | 0 | 1 | 1.01 | 5.64 |\n| n0145-d95 | 5 | 39 | 48 | 60\
+    \ | | | 0 | 1 | 1.03 | 1.98 |\n| n0150-d75 | 9 | 22 | 16 | 72 | | | 12 | 17 |\
+    \ 2.06 | 4.71 |\n| n0150-d150 | 14 | 32 | 14 | 31 | | | 1 | 4 | 3.64 | 19.49 |\n\
+    | n0155-d225 | 22 | 52 | 24 | 50 | | | 0 | 1 | 2.91 | 30.07 |\n| n0155-d145 |\
+    \ 45 | 41 | 52 | 91 | | | 0 | 1 | 1.17 | 17.78 |\n| n0245-d145 | 6 | 70 | 43 |\
+    \ 80 | | | 4 | 2 | 1.78 | 4.40 |\n| n0155-d75 | 10 | 31 | 36 | 96 | | | 4 | 2\
+    \ | 3.82 | 8.07 |\n| n0200-d100 | 20 | 41 | 12 | 68 | | | 0 | 1 | 4.58 | 23.01\
+    \ |\n| n0215-d150 | 30 | 36 | 14 | 63 | | | 0 | 1 | 4.13 | 43.83 |\n| n0235-d65\
+    \ | 56 | 84 | 24 | 80 | | | 0 | 1 | 6.19 | 81.27 |\n| n0245-d145 | 55 | 78 | 96\
+    \ | 14 | | | 0 | 1 | 8.21 | 139.08 |\n| n0250-d75 | 26 | 26 | 20 | 71 | | | 11\
+    \ | 12 | 13.39 | 45.19 |\n| n0260-d125 | 12 | 42 | 20 | 51 | | | 1 | 1 | 10.17\
+    \ | 28.69 |\n| n0275-d125 | 25 | 54 | 24 | 91 | | | 0 | 1 | 19.87 | 38.44 |\n\
+    | n0245-d225 | 55 | 74 | 70 | 90 | | | 0 | 2 | 19.96 | 11.81 |\n| n0345-d75 |\
+    \ 100 | 120 | 26 | 61 | | | 0 | 1 | 17.82 | 163.07 |\n| n0050-d50 | 33 | 42 |\
+    \ 9 | 66 | | | 5 | 8 | 157.58 | 125.21 |\n| n0050-d75 | 51 | 78 | 34 | 81 | |\
+    \ | 0 | 1 | 139.82 | 119.32 |\n| n0115-d50 | 80 | 118 | 30 | 50 | | | 0 | 3 |\
+    \ 64.21 | 350.49 |\n| n0125-d75 | 96 | 121 | 52 | 96 | | | 0 | 1 | 71.21 | 881.60\
+    \ |\n| n0125-d125 | 123 | 157 | 40 | 53 | | | 0 | 1 | 106.33 | 1308.30 |\nAVERAGE\
+    \ | | | | | | 5.52 | 8.66 | 6.33 | 71.37 | 431.64 |\n\nas long as possible that\
+    \ $q \\geq \\ell^2$ and that no potential outliers are created nearby. To achieve\
+    \ this, by randomly generating each edge $uv \\in E'$, with $u,v \\in V(G) \\\
+    cup V(E)$, we make sure that there is no short path between $u$ and $v$ without\
+    \ the endpoint of each edge. In particular, for every $e=(u,v)$ with $k' < k$,\
+    \ where $u,v \\in V(G) \\cup V(E)$, $d_G(u,v) \\geq \\ell(e)+2$ and $k \\leq 4$.\n\
+    \nIn the final phase, the choice of $r$ selected vertices of $G$ and $G_e$ is\
+    \ selected by either clustering (with probability $\\sigma$) or by sampling (with\
+    \ probability $1-\\sigma$). We set $\\Delta = 0.1$, $\rho' = 0.80$, and $\\sigma\
+    \ = 1.25(1-\rho')$. If $np' = n(1-p)$ is the number of unclassified vertices,\
+    \ the choice is typically very tight, resulting in a finite graph density with\
+    \ low approximation error.\n\nTable 2-3 presents a comparison of the results obtained\
+    \ from Algorithms 1 and 2 for the random instances. Each value is the rounded-up\
+    \ average of 10 instances with the same $n$ and $p$. The columns in the table\
+    \ refer to $n'(v)$ ($d$-value), $p'(v)$ (Diameter); $diam$, and $min(deg)$ and\
+    \ $max(deg)$ (degrees in the final graph, respectively).\n\nTo clarify the interpretation\
+    \ of the table, the first of Line 2 refers to instances that have 50 vertices\
+    \ or more ([50.0)-(54.99]). Because $p=60\\%$, there are about 15 blue, 15 red,\
+    \ and 20 unclassified vertices. The classified vertices vary with an average of\
+    \ 4 that are considered as outliers in an optimal solution.\n\nWe also evaluated\
+    \ the effectiveness of the heuristics used in each algorithm. For each algorithm,\
+    \ we tested two versions: the first is the version described in this paper, and\
+    \ the second is the one we found in [ILP2] (added as cuts). The observed results\
+    \ are summarized in Tables 4 and 5.\n\nWe could not indicate that (8) were extremely\
+    \ effective; on average, 1.19 instances added in (ILP1) for ILP2 (200 instances\
+    \ when added as cuts), and reduced by 77% (66 instances) in the latter case. These\
+    \ were the most effective set of lazy constraints that we found.\n\nConstraints\
+    \ (6), which were added to the root of the branch-and-bound tree, were very effective\
+    \ as well. When adding them"
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Table 3
+
+    Algorithms 1 and 2 for comparison of random instances with p = 80% (in seconds).
+
+
+    | Instance | Diam | minDeg | maxDeg | OPT | rgap(1) | bbN1 | bbN2 | T_opt | T_avg
+    |
+
+    |---|---|---|---|---|---|---|---|---||
+
+    | n05d50-d805 | 14 | 1 | 7 | 4 | 25 | 78 | 7 | 0.44 | 0.56 |
+
+    | n05d10-d810 | 8 | 2 | 9 | 4 | 38 | 51 | 10 | 0.37 | 0.60 |
+
+    | n05d15-d815 | 8 | 5 | 8 | 2 | 21 | 28 | 43 | 0.27 | 0.65 |
+
+    | n05d25-d825 | 9 | 7 | 1 | 17 | 19 | 20 | 5 | 0.23 | 0.42 |
+
+    | n05d35-d835 | 11 | 5 | 22 | 2 | 0 | 0 | 1 | 0.31 | 0.61 |
+
+    | n05d45-d845 | 18 | 2 | 0 | 9 | 18 | 25 | 12 | 5 | 1.25 | 0.46 |
+
+    | n100d50-d8105 | 19 | 4 | 7 | 10 | 16 | 12 | 27 | 5 | 1.75 | 2.68 |
+
+    | n100d65-d1165 | 24 | 5 | 7 | 6 | 0 | 18 | 12 | 5 | 1.06 | 2.64 |
+
+    | n100d75-d1175 | 35 | 17 | 32 | 8 | 0 | 30 | 0 | 1 | 1.37 | 5.97 |
+
+    | n100d85-d1185 | 42 | 25 | 43 | 8 | 48 | 0 | 0 | 1 | 1.26 | 5.50 |
+
+    | n100d95-d1195 | 59 | 9 | 12 | 2 | 27 | 10 | 5 | 4 | 3.27 | 3.25 |
+
+    | n150d50-d1850 | 74 | 7 | 24 | 2 | 0 | 30 | 0 | 1 | 2.93 | 2.80 |
+
+    | n150d65-d1865 | 82 | 14 | 35 | 4 | 0 | 40 | 0 | 1 | 3.35 | 6.09 |
+
+    | n150d75-d1875 | 94 | 22 | 50 | 4 | 0 | 51 | 0 | 1 | 2.79 | 4.27 |
+
+    | n150d85-d1885 | 111 | 41 | 53 | 4 | 1 | 63 | 0 | 1 | 2.79 | 3.74 |
+
+    | n150d95-d1895 | 134 | 60 | 73 | 8 | 4 | 71 | 0 | 1 | 3.23 | 8.98 |
+
+    | n200d50-d2850 | 143 | 7 | 10 | 16 | 0 | 81 | 16 | 1 | 9.12 | 11.66 |
+
+    | n200d65-d2865 | 155 | 20 | 41 | 10 | 0 | 96 | 0 | 1 | 16.70 | 17.49 |
+
+    | n200d75-d2875 | 173 | 30 | 63 | 2 | 0 | 98 | 0 | 1 | 14.47 | 11.44 |
+
+    | n200d85-d2885 | 191 | 56 | 84 | 10 | 1 | 108 | 0 | 1 | 10.98 | 48.61 |
+
+    | n200d95-d2895 | 213 | 78 | 96 | 16 | 0 | 116 | 0 | 1 | 16.45 | 48.97 |
+
+    | n250d50-d3850 | 239 | 7 | 28 | 6 | 1 | 124 | 4 | 1 | 21.86 | 137.70 |
+
+    | n250d65-d3865 | 256 | 12 | 42 | 8 | 0 | 142 | 6 | 1 | 19.11 | 53.27 |
+
+    | n250d75-d3875 | 281 | 25 | 54 | 22 | 0 | 155 | 0 | 1 | 20.50 | 102.02 |
+
+    | n250d85-d3885 | 305 | 44 | 77 | 14 | 0 | 170 | 0 | 1 | 22.97 | 134.06 |
+
+    | n250d95-d3895 | 336 | 70 | 90 | 14 | 0 | 192 | 0 | 1 | 122.62 | 206.32 |
+
+    | n300d50-d4850 | 368 | 83 | 120 | 24 | 0 | 216 | 0 | 1 | 119.45 | 194.95 |
+
+    | n300d65-d4865 | 391 | 10 | 33 | 16 | 1 | 234 | 5 | 1 | 119.45 | 287.81 |
+
+    | n300d75-d4875 | 423 | 41 | 78 | 10 | 0 | 256 | 0 | 1 | 127.84 | 128.91 |
+
+    | n300d85-d4885 | 459 | 80 | 118 | 18 | 0 | 276 | 0 | 1 | 116.75 | 655.45 |
+
+    | n300d95-d4895 | 498 | 123 | 157 | 22 | 0 | 301 | 0 | 1 | 139.70 | 247.92 |
+
+    | AVERAGE | | | | | | 3.72 | 6.36 | 5.27 | 28.65 | 87.44 |
+
+
+    # Table 4
+
+    The effect of valid inequalities for ILP.
+
+
+    | Algorithm | N. of constraints (6) | N. of inequalities (8) | Lazy Constraint.
+    | Time Reduction |
+
+    |---|---|---|---||}{
+
+    | Step 3 only | 0 | 1.5/V| | 23% | 77% |
+
+    | Step 4 only | 5/V| | | 71% | 63% |
+
+    | Step 3 and Step 4 | 6/V| | 1.5/V| | 82% | 80% |
+
+
+    # Table 5
+
+    The effect of valid inequalities for ILP2.
+
+
+    | Algorithm | N. of inequalities (17) | N. of inequalities (8) | Lazy Constraint.
+    | Time Reduction |
+
+    |---|---|---|---||}{
+
+    | Step 3 only | 0 | 8/V| | | 17% | 76% |
+
+    | Step 4 only, with (17) | 8/V| | | 78% | 13% |
+
+    | Step 3 and Step 4 | 6/V| | 13/V| | | 82% | 80% |
+
+
+    was much better than including all of them in the initial model. On average, only
+    5/7 of these inequalities were added in ILP1, and they reduced the lazy constraints
+    by 63% the running time and 71% the number of constraints added.
+
+
+    The generalized inequalities (17), which are added during the root node in step
+    5 of Algorithm 2, did not have a significant effect on the running time for random
+    instances. However, they reduced the number of lazy constraints (15) by 78%. On
+    average, only 8/8 of these were added in ILP2, and they reduced the running time
+    in 31 and would be very useful for such instances.
+
+
+    The addition of the generalized inequalities (16) and (17) in the root node yielded
+    a very good reduction of instances, rare true inequalities (9, 16), and generalized
+    inequalities did not reduce the number of instances in the final result of the
+    branch-and-cut algorithms.
+
+
+    Regarding the lazy constraints proposed for ILP, its application with all valid
+    constraints (4) added to the initial model, it was impractical to solve the problem
+    without the lazy constraints scheme since the number of such constraints is potentially
+    exponential. Same was observed for the lazy constraints of ILP2.
+
+
+    > *17, which are added during the root node in step 5 of'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# (a) Algorithm 1.
+
+
+    # (b) Algorithm 2.
+
+
+    ![](img/bdfe0fc633366a0ca165e70bee846a49_15_0.png)
+
+
+    Fig. 8. Running time density, p = 60%.
+
+
+    # (a) Algorithm 1.
+
+
+    # (b) Algorithm 2.
+
+
+    ![](img/bdfe0fc633366a0ca165e70bee846a49_15_1.png)
+
+
+    Fig. 9. Running time density, p = 80%.
+
+
+    The root gap of ILP1 was about half of the root gap of ILP2. The lower bounds
+    to determine these gaps are calculated in the end of Step 4 of each algorithm.
+    It is evident that the cuts branching in ILP1 are of great help, while those in
+    ILP2 are not as valuable. Despite of that, the average number of branch-and-node
+    in the execution of ILP2 is about twice that of ILP1. However, the gaps are closed
+    earlier in ILP2 after branching, and noting that the cuts generated by CPLEX are
+    larger than the gaps that could have been created from Step 5. This explains why
+    an algorithm with the root even might gain some benefit. So, if we were not adding
+    a lazy constraint again, these potentially larger gaps would be added
+
+
+    Figs. 8 and 9 show the running times of Algorithms 1 and 2 as a function of the
+    graph density. For graphs with p = 60 and p = 80, the value of v varies in [50,
+    100, 150, 200, 250]. The results show that Algorithm 1 works well, especially
+    for medium-sized instances, because in such cases the size of U for the model
+    constraints is generally smaller, which can reduce the number of nodes. The instances
+    between 25% and 35% are shown to be the hardest to solve.
+
+
+    # 6.2. Realistic instances
+
+
+    Considering all random instances, the average running time of Algorithm 1 was
+    about twice, which is very good for every random instance. However, Algorithm
+    2 worked better in running time, yielding an average running time T2 much larger
+    than T1. In cases which Algorithm 2 produced better running times lies in instances
+    with low density. Overall, T1 was better than T2 in instances with many constraints,
+    except for the 10 instances which are due to the greater number of variables and
+    added lazy constraints/cuts in ILP2 (see Tables 4–5).
+
+
+    To test the algorithms for realistic applications, we perform experiments using
+    two real datasets: Parkinson''s instances (Litcher, McCarthy, Roberts, Costello,
+    & Monge) and Cardiac Proton Emission Tomography (SPECT) images (Kiuran, Cias,
+    Tadisiewicz, Ogela, & Guedja (2001)) available at https://archive.org/. These
+    instances are generated in terms of the Euclidean version of the classification
+    problem, where each important point represents a point to use to predict
+
+
+    From each dataset (Parkinson and SPECT), we derive two groups of 10 instances
+    each for the Euclidean classification problem. An instance in the first (resp.
+    second) group is formed by randomly choosing 20 (resp. 30) of the points to form
+    the vali'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Table 6
+
+
+    Properties of each instance.
+
+
+    | Instance | e | m | Dens | minDeg | maxDeg |
+
+    |---|---|---|---|---|--|
+
+    | Parkinson | 1950 | 1097 | 50 | 10 | 18 |
+
+    | SPECT | 2677 | 1826 | 55 | 8 | 36 |
+
+
+    # Table 7
+
+
+    Comparison of Algorithm in Araijo (2019), Algorithms 1, 2, SVM, and MLP for Parkinson
+    instances with p = 70%.
+
+
+    | Instance | $T_{Alg1}$ | $T_{Alg2}$ | $T_{MLP}$ | $Acc_{SVM}$ | $Acc_{MLP}$ |
+
+    |---|---|---|---|---|--|
+
+    | parkinson-pt-001 | 69.14 | 23.04 | 113.37 | 83.61 | 82.91 |
+
+    | parkinson-pt-002 | 64.58 | 21.90 | 120.47 | 69.87 | 70.44 |
+
+    | parkinson-pt-003 | 55.82 | 20.12 | 149.90 | 76.2 | 81.53 |
+
+    | parkinson-pt-004 | 48.01 | 18.61 | 84.56 | 70.69 | 70.92 |
+
+    | parkinson-pt-005 | 40.23 | 17.39 | 99.55 | 75.14 | 78.26 |
+
+    | parkinson-pt-006 | 37.55 | 16.58 | 106.12 | 72.48 | 72.41 |
+
+    | parkinson-pt-007 | 34.34 | 20.63 | 203.77 | 79.91 | 77.59 |
+
+    | parkinson-pt-008 | 33.56 | 19.55 | 133.33 | 75.55 | 76.55 |
+
+    | parkinson-pt-009 | 36.83 | 28.21 | 82.76 | 82.48 | 81.03 |
+
+    | spect-pt-001 | 0.16 | 0.21 | 0.23 | 72.50 | 83.75 |
+
+    | spect-pt-002 | 0.09 | 0.13 | 0.24 | 71.75 | 78.75 |
+
+    | spect-pt-003 | 0.07 | 0.12 | 0.19 | 76.25 | 81.25 |
+
+    | spect-pt-004 | 0.07 | 0.15 | 0.16 | 76.50 | 75.00 |
+
+    | spect-pt-005 | 0.07 | 0.09 | 0.14 | 62.50 | 81.32 |
+
+    | spect-pt-006 | 0.07 | 0.09 | 0.14 | 82.00 | 82.50 |
+
+    | spect-pt-007 | 0.09 | 0.17 | 0.18 | 51.25 | 78.75 |
+
+    | spect-pt-008 | 0.07 | 0.11 | 0.15 | 82.25 | 83.75 |
+
+    | spect-pt-009 | 0.07 | 0.10 | 0.23 | 87.50 | 86.25 |
+
+    | AVERAGE | 0.13 | 0.11 | 0.21 | 81.00 | 76.65 |
+
+
+    dataset (set of points used to choose the algorithm of). On the second hand, the
+    classified instances are identified as p = 80 and p = 70% in the first and second
+    group. Each instance is then transformed into a similarity graph (of 2-GCP) by
+    the transformation suggested by Zakaria et al. (2016). As follows, each pair of
+    points $(x_i, x_j)$ in $X$ is mapped to a distance using the Gaussian kernel function,
+    $k(x_i, x_j) = \exp(-\frac{\|x_i - x_j\|^2}{2\sigma^2})$, where $\|x_i - x_j\|^2$
+    is the square of the Euclidean distance between points $x_i$ and $x_j$. Then each
+    point $x_i$ is mapped to a node of the graph, and the graph weights are the similarity
+    values. We consider the $q$ nearest neighbors in terms of similarity, $v_{ij}$
+    where $v_{ij}$ represents the similarity value between it and its $q$th most similar
+    (used $q=10$).
+
+
+    Some characteristics of each instance are shown in Table 6. Each table shows a
+    summary of the graph properties: number (n); number of edges (m); edge density
+    (Dens); diameter (Diam); minimum degree (minDeg); maximum degree (maxDeg).
+
+
+    As a way to evaluate the quality of our classification algorithm, we run the SVM
+    and MLP Euclidean classification on the instances as well as Algorithms 1 and
+    2.
+
+
+    Tables 7 and 8 show the results for Parkinson and SPECT instances with p = 70%
+    (p is the absolute of instances). The columns are: running time of Algorithm 1
+    ($T_{Alg1}$); running time of Algorithm 2 ($T_{Alg2}$); running time of MLP ($T_{MLP}$);
+    accuracy ($Acc_{SVM}$/$Acc_{MLP}$) (the best among three methods; accuracy).
+
+
+    Regarding the 20 Parkinson instances, our approach obtained the best accuracy
+    in 10 instances, while 9 and 11 in others. For the 20 SPECT instances, the 2-GCP
+    approach presented the best accuracy in 18 instances, while SVM and MLP did in
+    1 and 14 respectively.
+
+
+    average, 2-GCP has the best accuracy, significantly better than the one MLP. The
+    results show that the 2-GCP approach was the best for 28 instances, while SVM
+    was the best for only 11 and MLP for 25 of them.
+
+
+    Comparing the running time of the three algorithms, we observe that Algorithm
+    1 is the fastest, however, we notice that Algorithm 2 is the fastest for the Parkinson
+    instances.
+
+
+    # 7. Concluding
+
+
+    In this work, we studied the 2-class geodesic classification problem (introduced
+    in Araijo (2019), a new classification problem that is an element of the geodesic
+    classification. The proposed methods present different perspectives on classification
+    aspects and appear as an intersection of graph connectivity problem and the well-known
+    set covering problem.
+
+
+    The main focus of this work was, to polish the algorithms associated with these
+    associations, by providing some values that indicate the performance. To run computational
+    experiments, we show the results of the geodesic classification approach and the
+    effectiveness of the proposed validation algorithm.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Acknowledgments
+
+
+    Partially supported by Coordenenação de Aperfeiçoamento de Nível Superior - CAPES
+    (Brazil) - FAPESP (2019) and CNPq (Contract No. 37481/2019 - 3009315/2019-0/06611-102)
+    and FCNP (2019).
+
+
+    We are deeply grateful to the organizers of the AIU/EU Conference and the reviewers
+    of this extended version of the paper for their insightful comments and suggestions,
+    which greatly helped us to refine our work and improve its quality.
+
+
+    # References
+
+
+    +   Araujo, P. H. M., Campello, M., Correa, R. C., & Labb, M. (2019). The geodesic
+    classification problem on graphs. Electronic Notes in Computer Science, 346, 65–72.
+    In proceedings of LAGOS 2019, the Latin and American Algorithms, Graphs and Optimization
+    LAGOS 2019.
+
+
+    +   Araujo, P. H. M., & Campello, M. (2015). A classification problem on graphs.
+    Mestrado e Doutorado em Computação, Departamento de Ciência da Computação, Universidade
+    Federal de Santa Catarina.
+
+
+    +   Aronov, B., Darijo, J., Núñez-Rodríguez, Y., Rappaport, D., Serva, & Utrânia,
+    J. (2012). Minimizing the error of linear separators on linearly inseparable data.
+    Data Mining.
+
+
+    Argigas, D., Dantas, S., Correa, M. C., & Swanciflick, J. L. (2011). Partitioning
+    a graph into clusters. Mathematical Programming, 88(1), 1–23.
+
+
+    +   Balas, E., & Ng, S. M. (1989). On the set covering problem: I. All facets
+    with cuts and inequalities. Mathematical Programming, 41(1), 57–68.
+
+
+    Balas, E., & Souza, C. C. d. (2005). The vertex partitioning problem: A polyhedral
+    investigation. Mathematical Programming, 107(3), 583–608.
+
+
+    +   Bertsimas, D., & Wolsey, M. (1998). Regression and integer optimization tradeoffs.
+    Operations Research, 55(2), 252–271.
+
+
+    +   Blaum, M., Correa, R. C., Machado, J., & Lody, M. (2019). An approach for
+    the dual-graph classification problem. Working paper.
+
+
+    +   Bundy, J. A., & Murray, S. U. R. (2008). Graph theory. Springer.
+
+
+    +   Buset, K., & Carátara, S. (2005). Convex graphs: Cover problem. Science.
+
+
+    +   Campello, M., Campos, A. V., & Correa, R. C. (2008). On the asymptotic behavior
+    of the graph classification problem. Journal of Machine Learning Research, 9(6),
+    1967–1971.
+
+
+    +   Carreira, A., Lima, K., Mouska, P., & Wakabayashi, Y. (2015). Solving polyhedral
+    problems: Facets and computational optimization methods. Mathematical Programming,
+    165(1), 1–35.
+
+
+    +   Correa, R. C., Machado, M., A. R., & Martin, S. (2019). The multi-terminal
+    vertex separator problem: Polyhedral analysis and branch-and-cut. Applied Mathematics
+    and Optimization, 40(1), 95–115.
+
+
+    +   Correa, R. C., Blum, M., & Lody, M. (2019). An integer programming approach
+    for the dual single-class classification problem. European Journal of Artificial
+    Intelligence, 59, 1039–1050.
+
+
+    +   Cortes, C., & Vapnik, Y. (1995). Support vector networks. In Machine Learning,
+    27, 271–300.
+
+
+    +   Crosson, P. J., Wilson, A. T., Smith, M. D., Liu, V. Y., & Duncan, D. M. (2013).
+    Visual topics of topics and their impact on online advertising. Journal of Marketing
+    Research, 50(4), 591–605.
+
+
+    +   Dumont, F. E., Souza, C. C., Reinhardt, R., & Wolsey, L. A. (1996). Facets
+    and inequalities for the node capacity graph partitioning problem. Biomedical
+    Engineering Online, 61(1), 23.
+
+
+    +   Grötschel, M., & Wakabayashi, Y. (1995). Facets of the clique partitioning
+    problem. Mathematical Programming, 67(1), 391–407.
+
+
+    +   Hovy, S. (2012). A statistical study of topic modeling in twitter. In SOMA
+    ’12: Proceedings of the conference on social media analytics (pp. 80–88).
+
+
+    +   Karp, P. M. (1972). Reducibility among combinatorial problems (pp. 85–103).
+    Boston, MA: MIT Press.
+
+
+    +   Kuran, L. A., King, J., Tadekiewicz, R., Ogiela, M., & Goodman, L. S. (2001).
+    Knowledge discovery approach to automated cardiac diagnosis. Artificial Intelligence
+    in Medical Systems, 32(1), 45–56.
+
+
+    +   Lima, K., & Wakabayashi, Y. (2014). Convex polyhedra. Discrete Applied Mathematics.
+
+
+    +   Little, A. M., McCarthy, P. E., Roberts, R. S., Stone, D. A., & Mohr, I. M.
+    (2007). Evaluation of facial and acoustic properties for voice disorder detection.
+    Biomedical Engineering Online, 61(1), 23.
+
+
+    +   Padberg, P., & Hammer, P. (2008). Data mining and mathematical programming:
+    A survey, 20(1), 1–20.
+
+
+    +   Poly, L. M. (2013). Geometric complexity in graphs. New York: Springer-Verlag.
+
+
+    +   Sánchez, J., & Santos, A. (2005). The vertex partitioning polyhedral problem:
+    Facets with inequalities in {0, 1, 2}. Operations Research Journal, 81, 343–360.
+
+
+    +   Xu, X., & Rodrigues, L. G. (2009). An integer optimization model for data
+    classification. Computers & Electronics in Industrial Engineering, 56(4), 1205–1215.
+
+
+    +   Zaki, M., & Wu, J. (2014). Data mining and analysis: Fundamental concepts
+    and algorithms. New York, NY, USA: Cambridge University Press.'
+  merge: -1
+  pgno: 17
