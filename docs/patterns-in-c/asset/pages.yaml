@@ -1,0 +1,3316 @@
+- img_proc: true
+  md: '# # Patterns in C
+
+
+    By Adam Tornhill
+
+
+    ![](img/36484cd32ea2e3eb1b027e721e2669a9_0_0.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Patterns in C
+
+
+    Patterns, Idioms and Design Principles
+
+
+    Adam Tornhill
+
+
+    This book is for sale at http://leanpub.com/patternsinc
+
+
+    This version was published on 2015-05-24
+
+
+    ![](img/36484cd32ea2e3eb1b027e721e2669a9_1_0.png)
+
+
+    This is a Leanpub book. Leanpub empowers authors and publishers with the Lean
+    Publishing process. Lean Publishing is the act of publishing an in-progress ebook
+    using lightweight tools and many iterations to get reader feedback, pivot until
+    you have the right book and build traction once you do.
+
+
+    ©2012 - 2015 Adam Tornhill
+
+
+    Leanpub'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Tweet This Book!
+
+
+    Please help Adam Tornhill by spreading the word about this book on Twitter!
+
+
+    The suggested tweet for this book is:
+
+
+    I just bought #PatternsInc by @AdamTornhill
+
+
+    The suggested hashtag for this book is #patternsinc.
+
+    Find out what other people are saying about the book by clicking on this link
+    to search for this hashtag on Twitter:
+
+
+    https://twitter.com/search?q=#patternsinc'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Contents
+
+
+    +   Patterns in C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . 1
+
+    Patterns in software . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . 1
+
+    The cognitive view . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . 1
+
+    Patterns go C . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . 2
+
+    About this book . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . 2
+
+    Scope of the book . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . 3
+
+    Patterns Categories . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . 3
+
+    Sample code . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . 4
+
+    About Adam Tornhill . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . 4
+
+    Credits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . 5
+
+
+    +   The FIRST-CLASS ADT Pattern . . . . . . . . . . . . . . . . . . . . . 6
+
+    Reflections on FIRST-CLASS ADT . . . . . . . . . . . . . . . . . . . . 6
+
+    Implementing the First-Class ADT Pattern . . . . . . . . . . . . . . . . . . .
+    6
+
+
+    +   The STATE Pattern . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 12
+
+    Reflections on STATE . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    12
+
+    Implementing the STATE Pattern . . . . . . . . . . . . . . . . . . . . . . . .
+    . 12
+
+
+    +   The STRATEGY Pattern . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    22
+
+    Reflections on STRATEGY . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+    Implementing STRATEGY . . . . . . . . . . . . . . . . . . . . . . . . . . 22
+
+
+    +   The OBSERVER Pattern . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+    Reflections on OBSERVER . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+    Implementing OBSERVER . . . . . . . . . . . . . . . . . . . . . . . . . . 29
+
+
+    +   The REACTOR Pattern . . . . . . . . . . . . . . . . . . . . . . . . 39
+
+    Reflections on REACTOR . . . . . . . . . . . . . . . . . . . . . . . . 39
+
+    Implementing REACTOR . . . . . . . . . . . . . . . . . . . . . . . . . 39
+
+
+    +   Idiomatic Expressions . . . . . . . . . . . . . . . . . . . . . . . 50
+
+    Reflections on the Idioms . . . . . . . . . . . . . . . . . . . . . . . 50
+
+    Idiomatic Expressions in C . . . . . . . . . . . . . . . . . . . . 50
+
+
+    +   References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . 59'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Patterns in C
+
+
+    # Patterns in software
+
+
+    Software development is hard. It''s an act of balancing different forces while
+    trying to close the gap between the problem domain and a solution model. Worse
+    yet, we have to start at a point where our understanding of these models is still
+    incomplete. We constantly have to juggle with tame complexity on multiple levels.
+    And need to be extremely precise and correct in expressing our solutions. The
+    computer is an unforgiving host.
+
+
+    Given this view we consider patterns as a tool in software designers set. Patterns
+    are valuable, they''re also one of the most misunderstood concepts within our
+    profession. We receive blame and ridicule. Criticism is valid. Patterns have been
+    used speculatively in many designs, perhaps most often within the Java community.
+    The relating context is layers of abstractions far from the actual problem to
+    solve. I mean, maintaining an AbstractFactorySingletonBuilderPrototypefly isn''t
+    why I went programming.
+
+
+    Other parts of the criticism may stem from the early years of patterns. Patterns
+    sprung from the work of architect Alexander. Since the days of large-scale programming
+    projects, the community has borrowed both terminology and design discipline of
+    architecture. Sometimes the parallels have been stretched beyond the limits of
+    both and reason. This was the case with much of the secondary literature on patterns
+    rather than actual patterns that arose out of the excitement over this fascinating
+    work. Working with patterns rather than actual programs we were writing. How do
+    they actually solve any interesting problem? The result was viewed as something
+    abstract. Nothing could be further from Alexander''s original intent.
+
+
+    The patterns found in Alexander''s books are simple and elegant formulations on
+    how to solve recurring problems in different contexts. Alexander''s patterns refer
+    to the physical world. They are about the nature of towns and buildings. Alexander''s
+    philosophy is about making buildings come alive. His work is a praise of collaborative
+    construction guided by a shared language – a pattern language. Such a generative,
+    non-mechanical construct. It''s a language with the power to evolve and grow.
+    As such, patterns are more of a communication tool than technical solutions.
+
+
+    # The cognitive view
+
+
+    In his classic talk at the Turing awards 1972, Dijkstra remarked that computer
+    programming is an "intellectual challenge which will without precedent in the
+    cultural history of mankind" (Dijkstra, 1972). What is it that makes software
+    development so hard, in Dijkstra''s terms, "without precedent" to anything we''ve
+    constructed? Dijkstra himself gave the answer by saying that a competent programmer
+    is fully aware of the strictly limited size of his own skill." It''s a matter
+    to make the great cognitive challenges of software development. Programming stretches
+    our cognitive abilities to a maximum and we need to counter with effective design
+    strategies to handle all the complexity inherent in software.
+
+
+    One of the main factors limiting the size of our skill is working memory. Working
+    memory is a theoretical construct and understood as the system that allows us
+    to hold information in our mind, integrate different parts, reason about them
+    and manipulate them. Working memory is what we use when we try to decipher a pattern
+    in Lisp, understand the relationship between two Java objects, or find a way to
+    express a certain domain in Haskell. It the conscious workbench of the mind.
+
+
+    Working memory is vital to our reasoning, problem solving, and decision making.
+    It''s also strictly limited in its capacity. Back in 1956, George Miller made
+    the first quantification of our working memory'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Patterns in C
+
+
+    capacity. Miller arrived at the now well-known heuristic of seven items, plus
+    minus two.
+
+
+    Given the seven items we can hold in working memory simultaneously, it''s no wonder
+    that programming is hard; any interesting programming problem has a multitude
+    of parameters, implications and possible alternatives. One around this limitation
+    is a process known as chunking. Chunking is an encoding strategy where individual
+    elements are grouped into higher-level groups, chunks. The limit on the number
+    of units still apply, each unit now holds more information.
+
+
+    Patterns are a sophisticated form of chunking. Instead of describing a design
+    as "well, I have this function that takes another function as argument. The function
+    as argument expresses the variability in the algorithm. Let me extend the behavior
+    without modifying the algorithm itself. I just write a new function fulfilling
+    the contract we could simply say "STRATEGY". Patterns serve as a handle to sophisticated
+    knowledge stored in long-term memory. When it comes to software maintenance, a
+    significant part of the benefit for any product, documented patterns are an advantage.
+
+
+    Patterns have psychological value beyond chunking. Like Alexander intended, patterns
+    allow us to build and share a common vocabulary. It simplifies the communication.
+    It''s also a powerful tool. Instead of reasoning about individual design elements
+    and coding constructs, patterns provide a way to group these concepts into a larger
+    unit
+
+
+    # Patterns go C
+
+
+    The format has gained tremendous popularity for capturing experience. One of the
+    reasons for this popularity is the unique success of the classic book Design Patterns
+    by the Gang of Four. The Design Patterns served the community by spreading the
+    word about patterns. But it was a double-edged sword. The unique success of Design
+    Patterns led many developers to believe that patterns are limited to object-oriented.
+
+
+    Todays in the software industry aren''t limited to design; there exists a broad
+    range of patterns, covering analysis patterns, patterns for organizations, patterns
+    for testing, etc.
+
+
+    When it comes to the actual implementations of patterns, most are also described
+    in the context of an object oriented design. By browsing a public bookstore, I
+    noticed a lot of specific pattern literature: design patterns in Java, C#, Smalltalk
+    and other object oriented languages. The C was sadly absent in the pattern literature.
+
+
+    Given the popularity of C, where are the books targeting the unique implementation
+    constraints and techniques for the language? Isn''t it possible to use patterns
+    in the development of C programs or doesn''t it add any benefits?
+
+
+    The purpose of this book is to answer those questions. It is my intent to convey
+    an idea of how patterns may be applied naturally in C. I discuss the actual implementation
+    techniques and trade-offs.
+
+
+    # About this book
+
+
+    This patterns in this book are based on an article I wrote back in 2005. Some
+    years earlier I had returned to programming in C after some years spent with object-oriented
+    languages. The relative simplicity of C language has always attracted me. What
+    I lacked was the guiding principles in common object-oriented communities.
+
+
+    I soon realized that lot of knowledge applied to programs in C as well. The problem
+    was the papers and books they discussed them using completely different language
+    contexts. To a programmer, inheritance and polymorphism aren''t necessary parts
+    of the design vocabulary. C has different approaches to solving problems.
+
+
+    As I started to apply design principles from my object-oriented background I was
+    to balance the implementations with the way C worked. I wanted to avoid emulating
+    object-oriented constructs.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Patterns in C
+
+
+    3
+
+
+    Instead, I looked to leverage the existing design elements of C into higher-level
+    constructs. An important thing to realize about patterns is that they are neither
+    a blueprint of a design, nor are they tied to any particular implementation. My
+    starting point was that it would be possible to find mechanisms fitting the paradigm
+    of C and thus letting C programmers benefit from the experience captured by patterns.
+
+
+    Once the project was finished I took some time to document my findings. Through
+    this book, I wish to share my findings with you I have gone through the original
+    writings, corrected where necessary, but largely left the original content untouched.
+    Instead, I provide a new reflection on each chapter. With the advantage of more
+    years of studies and experiences I hope to shed some light on the patterns, the
+    principles behind and their applicability.
+
+
+    Let the chapters ahead be the starting point for discussing patterns in the context
+    of the ever popular C language.
+
+
+    # Scope of the book
+
+
+    # What you will experience
+
+
+    It is my belief that C programmers will benefit from the growing catalogue of
+    patterns. This series will focus on the following areas:
+
+
+    +   * Implementation techniques. I will present a number of patterns and demonstrate
+    techniques for implementing them in the context of the C language. In case I''m
+    aware of common variations in the implementation, they will be discussed as well.
+    The implementations included should however not by any means be considered as
+    a final specification. Depending on the problem at hand, the implementation trade-offs
+    for every pattern has to be considered.
+
+    * Problem solved. Patterns solves problems. Without any common problem, the “pattern”
+    may simply qualify as a pattern. Therefore I will present the main problem solved
+    by introducing the pattern and provide examples of problem domains where the pattern
+    can be used.
+
+    * Consequences on the design. Every solution implies a set of trade-offs. Therefore
+    each pattern will discuss the consequences on the quality of the design in the
+    resulting context.
+
+
+    # ...and what you won''t
+
+
+    +   * Object oriented feature emulation. The pattern implementations will not
+    be based on techniques for emulating oriented features as inheritance or C++ virtual
+    functions. In my experience, these features are better left to a compiler; manually
+    emulating such features is obfuscating at best and a source of track bugs at worst.
+    Instead, it is my intent to present patterns that utilizes the strengths of the
+    abstraction mechanisms already included in the C language.
+
+    * In depth discussion of patterns. As the focus in this book is on the implementation
+    in C, each pattern should be seen as a complement to the original pattern descriptions.
+    By those means, this series will **not include** exhaustive, in depth treatment
+    of the patterns. Instead, I will provide a high-level description of the pattern
+    and reference existing work, where a detailed examination of the pattern is found.
+
+
+    # Pattern Categories
+
+
+    This book covers the following patterns:'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: "# Patterns in C\n\n| Pattern | Category | Purpose |\n| --- | --- | --- |\n\
+    | First-Class ADT | Idiom | Improves encapsulation, manages dependencies. |\n\
+    | State | Design | Models state-specific behavior. |\n| Strategy | Design | Encapsulates\
+    \ families of algorithms, makes design open-closed. |\n| Observer | Design | A\
+    \ notification mechanism between loosely coupled entities. |\n| Reactor | Architecture\
+    \ | Decouples responsibilities in event-driven applications. |\n| Expressions\
+    \ | Idioms | A collection of idioms for expressiveness and robustness. |\n\nThe\
+    \ patterns span the following categories:\n\n+   - **Architectural patterns.**\
+    \ Frank Buschmann defines such a pattern as \"a fundamental organization schema\
+    \ for software systems. It provides a set of predefined subsystems, specifies\
+    \ their responsibilities, and includes rules and guidelines for organizing the\
+    \ relationships between them\" [Buschmann, et al].- **Design patterns.** A design\
+    \ pattern typically affects the subsystem or component level. Most Patterns described\
+    \ in this book are from this category, including the patterns drawn from the classic\
+    \ Patterns [Gamma, et all book].- **Language level patterns.** This is the lowest\
+    \ level of the pattern-categories, also known as idioms. A language level pattern,\
+    \ as its name suggests, unique to one particular programming language. One simple,\
+    \ classic example is the strpy version from Kernighan and Ritchie [Kernigh & Ritchie].\n\
+    \n```\nvoid strcpy(char *s, char *t)\n{\n    while(*s++ = *t++);\n}\n```\n\n#\
+    \ Sample code\n\nThe source code included in the examples is available on GitHub:\
+    \ https://github.com/adamtornhill/PatternsInC\n\n# About Adam Tornhill\n\nAdam\
+    \ is a programmer who combines degrees in engineering and technology. He's the\
+    \ author of Your Code as a Crime Scene¹, who has published the Lisp for the Web²\
+    \ tutorial and self-published a book on\n\n> ¹https://prag.com/book/atcrime/your-code-as-a-crime-scene\n\
+    ²https://leanpub.com/lspweb"
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Patterns in C. Adam also writes open-source software in a variety of programming
+    languages. His other interests include modern history, music and martial arts.
+
+
+    # Credits
+
+
+    My deepest thanks to my beautiful Jenny Tornhill for all her support and motivation.
+    Jenny³ also designed the cover of this book.
+
+    Drago Krznaric, Andre Saitzkoff, Tord Andersson and Magnus Adamsson all read early
+    drafts of the original series. Thanks for your feedback! I would also like to
+    thank ACCU⁴ for publishing the original articles back in 2005.
+
+    Finally, thanks to all who have sent encouraging comments and feedback on the
+    original writings over the years. This book is for you.
+
+
+    > *http://www.jennyytornhill.se
+
+    ⁴http://accu.org/'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# The FIRST-CLASS ADT Pattern
+
+
+    # Reflections on FIRST-CLASS ADT
+
+
+    A common criticism of the book Design Patterns is that the patterns only apply
+    to message-passing object oriented languages like C++ or Java. The patterns are
+    seen as workarounds for absent language features. The need for patterns, the reasoning
+    goes, is taken as an indication that the language is somehow less powerful.
+
+
+    There is some indeed some truth to this statement. Design Patterns itself states
+    it clearly: "the choice of programming language is important because it is one
+    of view" (Gamma, et al). The book goes on to state that its pattern category assumes
+    "Smalltalk/C++ level language features." If we go for a higher-level language
+    than C++, like Common Lisp, we find that many design patterns don''t apply; Common
+    Lisp has a completely different design space. Many patterns are internalized in
+    the language itself (like first-class functions and VISITOR through the generic
+    function model in Common Lisp''s object)
+
+
+    But a language''s power depends on context. There are problems where Common Lisp,
+    despite its power, isn''t necessarily the best fit. Likewise, there may be cases
+    where C isn''t the best choice. The reasons may be technical, social, or cultural.
+
+
+    For, the interesting part is considering patterns from C horizon. Design Patterns
+    notes that a procedural language might typically include patterns like encapsulation.
+    First-Class ADT is exactly such a pattern.
+
+
+    To me, encapsulation is a tool for managing complexity. It''s a way to separate
+    aspects of a problem. Depending on my role I can view the design from any of these
+    perspectives: the external behavior and the internal details. In a successful
+    design, these two views are orthogonal and may depend independently.
+
+
+    Like other pattern, it is one to use with care and good taste. I wouldn''t design
+    all my modules as First-Class ADT. Rather, I often find the pattern useful when
+    enforcing boundaries between different layers in an application. The First-Class
+    ADT may serve as a technical firewall between different development teams, allowing
+    one of them to publish an interface while hiding the implementation details. Such
+    a design encourages work on different, related, parts to proceed in parallel.
+
+
+    # Implementing the First-Class ADT Pattern
+
+
+    Our journey through the patterns will start with a language level pattern that
+    decouples interface from implementation, improving encapsulation and reducing
+    dependencies for many of the sub-patterns in this book.
+
+
+    This pattern will lay the foundation
+
+
+    # FIRST-CLASS ADT Pattern
+
+
+    It''s getting close to the project deadline as the project manager rushes into
+    the office. "They found some problem with your with a stressed voice. "According
+    to the test-team, you cannot register more than 42 orders for a given customer.
+    Sounds strange, doesn''t it?
+
+
+    Darn. You know it. They hardened limits. "I''ll have a look at it," you reply
+    in a soft voice. "Fine, I expect the problem to be solved tomorrow," the manager
+    mumbles as he leaves office.
+
+
+    "No problem," you reply, confident that the design of the customer routines are
+    highly modular and clearly implemented (after all, you''ve implemented it yourself).
+
+
+    You launch your favorite code-editor and open a file with the following content:'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: "# The FIRST-CLASS ADT Pattern\n\n# Listing 1 : Interface in Customer.h\n\n\
+    ```\n/* Include guards and include files omitted. */\n#define MAX_NO_OF_ORDERS\
+    \ 42\n\n/* Internal representation of a customer. */\ntypedef struct {\n    const\
+    \ char* name;\n    Address address;\n    size_t noOfOrders;\n    Order orders[MAX_NO_OF_ORDERS];\n\
+    } Customer;\n\nvoid initCustomer(Customer* customer,\n    const char* name,\n\
+    \    Address* address);\n\nvoid placeOrder(Customer* customer,\n    const Order*\
+    \ order);\n/* A lot of other related functions... */\n```\n\nA quick glance reveals\
+    \ the problem. Simply increasing MAX_NO_OF_ORDERS would, wouldn't it? What's the\
+    \ correct value for it? Is it 64, 128, maybe even 2048 or some other number? Customers\
+    \ with, single order allocate space for, let's say, 2047 non-existing orders?\n\
+    As you think about it, realize that the current solution doesn't scale well. Clearly,\
+    \ we need another. Recall that a linked list exists in the code base's library.\
+    \ A linked list might do the trick. However, this means changing the internal\
+    \ structure of the customer.\nNo problem, it looks like you of everything; the\
+    \ clients of the customer module simply use the provided functions for all access\
+    \ of the customer structure. Updating those functions should be enough, shouldn't\
+    \ it?\n\n# Information hiding\n\nWell, in an ideal world the guest would be isolated\
+    \ to the, single module. Given the interface above, clients depend upon the internal\
+    \ structure in at least one.\nAt worst, the clients of the data structure themselves\
+    \ leading to costly changes of all clients.\nThis can be prevented by frequent\
+    \ code-inspections and programmer discipline. In any case, we still have the the\
+    \ compile-time dependencies and after changes, a re-compile of all clients is\
+    \ required and the compilation time may be significant in large systems.\nThe\
+    \ FIRST-CLASS ADT pattern will eliminate both dependency problems. The pattern\
+    \ provides us with a method of separating interface from implementation, achieving\
+    \ true information hiding.\n\n# Definition of a FIRST-CLASS ADT\n\nADT stands\
+    \ for Abstract Data Type and it is basically a set of values and operations on\
+    \ these values. The ADT is considered first-class if we can have many, unique\
+    \ instances of it.\nSounds like the interface listed in the introductory example\
+    \ above, doesn't it? However, the data type in the example is not abstract as\
+    \ it fails to hide its implementation details. In order to make it truly abstract,\
+    \ we have to utilize a powerful feature of C - the ability to specify incomplete\
+    \ types."
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: "The FIRST-CLASS ADT Pattern\n\n# Incomplete Types\n\nThe standard [C 1999]\
+    \ allows us to declare objects of incomplete types in a context where there sizes\
+    \ aren't needed. In our implementation, we are interested in one property of incomplete\
+    \ types – the possibility to specify a pointer to an incomplete type (please note\
+    \ that the pointer itself is not of an incomplete type).\n\nListing 2 : Pointer\
+    \ to an incomplete type\n\n```\n/* A pointer to an incomplete type (hides the\
+    \ implementation details). */\ntypedef struct Customer* CustomerPtr;\n```\n\n\
+    Instances of this pointer will serve as a handler for the clients of a FIRST-CLASS\
+    \ ADT. This mechanism enforces the constraint on clients using the provided interface\
+    \ functions because there is no client can access a field in the Customer structure\
+    \ (the C language does not allow an incomplete type to be de-referenced).\n\n\
+    The type is considered complete as soon as the compiler detects a subsequent specifier,\
+    \ with the same tag, and a declaration list containing the members.\n\nListing\
+    \ 3 : Completion of an incomplete type\n\n```\n/* The struct Customer is an incomplete\
+    \ type. */\ntyped struct Customer* CustomerPtr;\n\n/* Internal representation\
+    \ of a customer. */\nstruct Customer {\n  const char* name;\n  Address* address;\n\
+    \  size_t noOfOrders;\n  Order orders[42];\n};\\n/* At this point, struct Customer\
+    \ is considered complete. */\n```\n\n# Object Lifetime\n\nBefore we dive into\
+    \ the implementation of the ADT, we need to consider object creation and destruction.\
+    \ As clients only get a handle to the object, the responsibility for creating\
+    \ it rests the ADT. The straightforward approach is to write one function that\
+    \ encapsulates the allocation of an object and initializes it. In a similar way,\
+    \ we define a function for destructing the object.\n\nListing 4 : Interface to\
+    \ the ADT, Customer.h\n\n```\n/* Includes and include guards as before... */\n\
+    /* A pointer to an incomplete type (hides the implementation details). */\ntypedef\
+    \ struct Customer* CustomerPtr;\n```\n\n```\n/* Create a Customer and return a\
+    \ handle to it. */\nCustomerPtr createCustomer(const char* name,\n  const Address*\
+    \ address);\n```"
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: "# The FIRST-CLASS ADT Pattern\n\n```\n/* Destroy the given Customer.\nAll handles\
+    \ to it will be invalidated. */\nvoid destroyCustomer(CustomerPtr customer);\n\
+    ```\n\nListing 5 : Implementation of the ADT in Customer.c\n\n```\n#include <Customer.h>\n\
+    #include <stdlib.h>\n\nstruct Customer {\n    const char* name;\n    Address address;\n\
+    \    size_t noOfOrders;\n    Order orders[42];\n};\n\nCustomerPtr createCustomer(const\
+    \ char* name,\n                           const Address* address) {\n    CustomerPtr\
+    \ customer = malloc(sizeof * customer);\n    if(customer) {\n        /* Initialize\
+    \ each field in the customer... */\n    }\n    return customer;\n}\n\nvoid destroyCustomer(CustomerPtr\
+    \ customer) {\n    /* Perform clean-up of the customer internals,\n    if necessary.\
+    \ */\n    free(customer);\n}\n```\n\nThe example above uses malloc to obtain memory.\
+    \ In many embedded applications, this may not be an option. However, as we have\
+    \ encapsulated the memory allocation completely, we are free to choose another\
+    \ approach. In embedded programming, where the maximum number of needed resources\
+    \ is typically known, the simplest allocator then being an array.\n\nListing 6\
+    \ : Example of a static approach to memory allocation"
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "The FIRST-CLASS ADT Pattern\n\n10\n\n```\n#define MAX_NO_OF_CUSTOMERS 42\n\
+    static struct Customer objectPool[MAX_NO_OF_CUSTOMERS];\nstatic size_t numberOfObjects\
+    \ = 0;\n\nCustomerPtr createCustomer(const char* name,\n                     \
+    \       const Address* adres)\n{\n    CustomerPtr customer = NULL;\n    if (numberOfObjects\
+    \ < MAX_NO_OF_CUSTOMERS)\n    {\n        customer = objectPool[numberOfObjects++];\n\
+    \        /* Initialize the object... */\n    }\n    return customer;\n}\n```\n\
+    \nIn case of de-allocation, an array will still do, but a more sophisticated method\
+    \ for keeping track of \"allocated\" objects will be needed. However, such an\
+    \ algorithm is outside the scope of this book.\n\n# Copy Semantics\n\nAs clients\
+    \ only use a handle, which we have declared as a pointer, the ADT, the issue of\
+    \ copy semantics boils down to pointer assignment. Whilst efficient, in run-time\
+    \ performance, copies of a handle have to be managed properly; the handles are\
+    \ only valid as long as the real objects exist.\nWe want to copy the real object,\
+    \ and create a new, unique instance of the ADT, we have to define an explicit\
+    \ copy operation.\n\n# Dependencies managed\n\nWith the interface above, the C\
+    \ language guarantees that the internals of the data structure are encapsulated\
+    \ in the implementation with no possibility for clients to access the internals\
+    \ of the data structure.\nUsing the FIRST-CLASS ADT, the compile-time dependencies\
+    \ on internals are removed as well as changes of the implementation are limited\
+    \ to we, the implementation, just as it should be. As long as no functions are\
+    \ added or removed from the interface, the clients do not even have to be re-compiled.\n\
+    \n# Consequences\n\nThe main consequences of applying the FIRST-CLASS ADT pattern\
+    \ are:\n\n+   1. **Improved encapsulation.** The FIRST-CLASS ADT pattern we decouple\
+    \ interface and implementation, following the recommended principle of programming\
+    \ towards an interface, not an implementation.\n2. **Loose coupling.** As illustrated\
+    \ above, all dependencies on the internals of the data structure are eliminated\
+    \ from client code.\n3. **Controlled construction and destruction.** The FIRST-CLASS\
+    \ ADT pattern gives us full control over the construction and destruction of objects,\
+    \ providing us with the possibility to ensure that all objects are created in\
+    \ a valid state. Similarly, we can ensure proper de-allocation of all elements\
+    \ of the object, provided that client behaves correctly and calls the defined\
+    \ destroy-function."
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '4. Extra level of indirection. There is a slight performance cost involved.
+    Using the FIRST-CLASS ADT pattern implies one extra level of indirection on all
+    operations on the data structure.
+
+
+    5. Increased dynamic memory usage. In problem domains where there be potentially
+    many instances of a quantity unknown at compile-time, a static allocation strategy
+    cannot be used. As a consequence, the usage of dynamic memory tends to increase
+    when applying the FIRST-CLASS ADT pattern.
+
+
+    # Examples of use
+
+
+    The most prominent example comes from the C language itself or, to be more precise,
+    the C Standard Library – FILE. True, FILE isn''t allowed by the standard to be
+    an incomplete type and it may be possible to identify its structure, buried deep
+    down in the standard library. However, the principle is the same since the internals
+    of FILE are implementation specific and programs depending upon them are inherently
+    nonportable.
+
+
+    Sedgewick[Sedgewick] uses FIRST-CLASS ADT to implement many fundamental data structures
+    such as linked-lists and queues.
+
+
+    This pattern may prove useful for cross-platform development. For example, when
+    developing applications for network communication, there are differences between
+    Berkeley Sockets and the Winsock library. The FIRST-CLASS ADT pattern provides
+    the tool for abstracting away those differences for clients.
+
+
+    The trick is to provide two different implementations of the ADT, both sharing
+    the same interface (i.e. include file).'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# The STATE Pattern\n\n# Reflections on STATE\n\nOver the years, the STATE\
+    \ pattern has been at the end of the road for several successful refactorings.\
+    \ The main problem with the STATE pattern is its name. The name is ill-chosen.\
+    \ After all, state is all imperative programming about them. With such a dominant\
+    \ name, we run the risk of getting the emphasis on The State Pattern. It is quite\
+    \ a complex pattern. I tend to balance the alternatives carefully. In most cases,\
+    \ simpler alternatives will do. Other patterns, like Methods for States, are easier\
+    \ to reason about. In simple cases, explicit conditional logic is often just fine;\
+    \ we just have to watch out for duplications. As far as the name of the pattern\
+    \ is concerned, Design Patterns suggests a better name: Objects For State The\
+    \ alternative name is better fit. It expresses both the intent and structuring\
+    \ in a much better way.\n\nMy adventures in functional programming languages have\
+    \ taught me the value of minimizing state and side-effects. Introducing state\
+    \ in our programs has implications for our ability to reason about them. Not only\
+    \ do we have to consider the algorithm in the light of its input arguments; we\
+    \ must also determine the current state and how it will impact the computation.\n\
+    \nTo contemplate matters, most of these states are hidden. They're often implicit\
+    \ in the design, expressed as combinations of variables in many cases, these states\
+    \ are expressed as state machines in our code. By organizing and partitioning\
+    \ the algorithms in explicit states we get a different view of the problem. A\
+    \ simplification that allows us to assess the impact of potential changes. While\
+    \ all good designs try to keep side-effects to a minimum, mutable state is a complicated\
+    \ aspect inherent in imperative programming. We need conceptual tools to successfully\
+    \ express it.\n\n# Implementing the STATE Pattern\n\nEvery non-trivial program\
+    \ passes through a number of different states during its lifecycle. Describing\
+    \ this lifecycle as a finite state machine is a simple and useful abstraction.\
+    \ This chapter investigates different strategies for implementing state machines.\
+    \ The goal is to identify mechanisms that let the code communicate the intent\
+    \ of expressing the problem as a finite state machine.\n\nConsider a simple, digital\
+    \ stop-watch. In its most basic version, it has two states: started and stopped.\
+    \ A traditional and direct way to implement this in C is with conditional logic\
+    \ in the shape of switch/case statements and/or if-else clauses.\n\nThe digital\
+    \ stop-watch in this example is implemented as a First-Class ADT.\n\n```\ntypedef\
+    \ enum\n{\n    stopped,\n    started\n} State;\n\nstruct DigitalStopWatch\n{\n\
+    \    /* Let a variable hold the state of our object. */\n    State state;\n  \
+    \  TimeSource source;\n}\n```"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# The STATE Pattern\n\n```\nDisplay watchDisplay;\n};\nvoid startWatch(DigitalStopWatchPtr\
+    \ instance)\n{\n    switch(instance->state) {\n        case started:\n       \
+    \     /* Already started -> do nothing. */\n            break;\n        case stopped:\n\
+    \            instance->state = started;\n            break;\n        default:\n\
+    \            error(\"Illegal state\");\n            break;\n    }\n}\nvoid stopWatch(DigitalStopWatchPtr\
+    \ instance)\n{\n    switch(instance->state) {\n        case started:\n       \
+    \     instance->state = stopped;\n            break;\n        case stopped:\n\
+    \            /* Already stopped -> do nothing. */\n            break;\n      \
+    \  default:\n            error(\"Illegal state\");\n            break;\n    }\n\
+    }\n```\n\nThis is a universally simple solution. While the coding construct may\
+    \ be simple, the approach introduces several potential problems:\n\n+   1. It\
+    \ doesn't scale. In large machines the code may stretch over page after page of\
+    \ nested conditional logic. Imagine the true maintenance nightmare of changing\
+    \ large, monolithic segments of statements.\n2. Duplication. The conditional logic\
+    \ tends to be repeated, with small variations, in all functions that access the\
+    \ state variable. As always, duplication leads to error-prone maintenance. For\
+    \ example, simply adding a new state implies changing functions.\n3. No separation\
+    \ of concerns. When using conditional logic for implementing state machines, there\
+    \ is no clear separation between the code of the state machine itself and the\
+    \ actions associated with the various events. This makes the code hide the original\
+    \ intent (abstracting the behaviour as a finite state machine) and thus making\
+    \ the code less readable."
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: "# A Table-based Solution\n\nThe second traditional approach to implement finite\
+    \ state machines is through transition tables. Using this technique, our original\
+    \ example now reads as.\n\n```\ntypedef enum {\n  stopped,\n  started;\n} State;\n\
+    type enum {\n  stopEvent,\n  startEvent\n} Event;\n#define NO_OF_STATES 2\n#define\
+    \ NO_OF_EVENTS 2\nstatic State TransitionTable[NO_OF_STATES][NO_OF_EVENTS] = {\n\
+    \  {stopped, started},\n  {stopped, started}\n};\n\nvoid startWatch(DigitalStopWatchPtr\
+    \ instance) {\n  const State currentState = instance->state;\n  instance->state\
+    \ = TransitionTable[currentState][startEvent];\n}\nvoid stopWatch(DigitalStopWatchPtr\
+    \ instance) {\n  const State currentState = instance->state;\n  instance->state\
+    \ = TransitionTable[currentState][stopEvent];\n}\n```\n\nThe choice of a transition\
+    \ table over logical condition solved the previous problems:\n\n+   1. **Scales\
+    \ well.** Independent of the size of the state machine, the code for a state transition\
+    \ is just one simple table-lookup.\n2. **No duplication.** Without the burden\
+    \ of repetitive switch/case statements, modification comes easily. When adding\
+    \ a new state, the change is limited to the transition table; all code for the\
+    \ state handling itself goes unchanged.\n3. **Easy to understand.** A well structured\
+    \ transition table serves as a good overview of the complete lifecycle."
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: 'The STATE Pattern
+
+
+    # Shortcomings of Tables
+
+
+    As appealing as table-based state machines may seem at first, they have a major
+    drawback: it is very hard to add actions to the transitions defined in the table.
+    For example, the watch would typically invoke a function that starts to tick milliseconds
+    upon a transition to started. The state transition isn''t explicit, conditional
+    logic has to be added in order to ensure that the tick-function is invoked solely
+    as the transition succeeds. In combination with conditional logic, the inherent
+    benefits of the table-based solution decrease together with the quality of the
+    design.
+
+
+    Other approaches involve replacing the simple enumerations with pointers to functions
+    specifying the entry actions. Unfortunately, the immediate hurdle of trying to
+    make state transitions to actions in a table based solution is that the functions
+    need different arguments. This problem is possible to solve, but the resulting
+    design loses, in my opinion, both in readability as well in cohesion as it implies
+    either giving up type safety or passing around unused parameters. None of these
+    alternatives seem attractive.
+
+
+    Transition tables have their use, but when actions are to be associated with state
+    transitions, the STATE pattern provides a better alternative.
+
+
+    # Enter State Pattern
+
+
+    In its description of the STATE pattern, Design Patterns [Gamma, al def] defines
+    the differences from the table-based approach as "the STATE pattern models state-specific
+    behavior, whereas the table-driven approach focuses on defining state transitions".
+    When applying the STATE pattern to our example, the structure in illustration
+    1 emerges
+
+
+    | DigitalStopWatch | WatchState |
+
+    |---|--|
+
+    | * startWatch(): void | * startWatch(): void |
+
+    | * stopWatch(): void | * stopWatch(): void |
+
+
+    | StoppedState | StartedState |
+
+    |---|--|
+
+    | * startWatch(): void | * stopWatch(): void |
+
+
+    > Illustration 1: Canonical structure of the STATE pattern.
+
+
+    This diagram looks like an object oriented solution. But please dont worry – we
+    will not follow the temptation of the dark side and emulate inheritance in C.
+    However, before developing a concrete implementation, let''s explain the involved
+    participants.
+
+
+    +   * DigitalStopWatch: Design Patterns define this as the context. The context
+    has a reference to one of our states, without knowing exactly which. It is the
+    context that specifies the interface to the clients.
+
+    * WatchState: Defines the interface of the state machine, specifying all supported
+    events.
+
+    * StoppedState and StartedState: These are concrete states and each one of them
+    encapsulates the behavior associated with the state it represents.
+
+
+    The main idea captured in the STATE pattern is to represent each state as an object
+    of its own. A state transition simply means changing the reference in the context
+    (DigitalStopWatch) from one of the concrete states to the other.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: "# Implementation Mechanism\n\nWhich mechanism may be suitable for expressing\
+    \ this, clearly oriented idea, in C? Returning to our example, we see that we\
+    \ basically have to switch functions upon each state transition. Luckily, the\
+    \ C language supplies one powerful feature, pointers to functions, that serves\
+    \ needs perfectly by letting us change the behavior of an object at run-time.\
+    \ Using this mechanism, the interface of the states would look as:\n\nListing\
+    \ 1: The state interface in WatchState.h\n\n```\n/* An incomplete type for the\
+    \ state representation itself. */\nttypedef struct WatchState WatchStatePtr;\n\
+    /* Simplify the code by using typedefs for */\ntypef void (*EventStartFunc)(WatchStatePtr);\n\
+    typef void (*EventStopFunc)(WatchStatePtr);\nstruct WatchState\n{\nEventStartFunc\
+    \ start;\nEventStopFunc stop;\n};\n```\n\n# Breaking the Dependency Cycle\n\n\
+    After getting used to the scary syntax of pointers to functions, the interface\
+    \ above looks rather pleasant. However, with the interface as it is, a dependency\
+    \ cycle will evolve.\n\nConsider the pointers in the WatchState structure. Every\
+    \ concrete state has to define the functions to be pointed at. Each time an event\
+    \ is added to the interface, all concrete states have to be updated. The resulting\
+    \ code would be error-prone to maintain and not particularly flexible.\nThe good\
+    \ news is that breaking this dependency cycle is simple and the solution has the\
+    \ nice advantage of providing a potential error-handler. The trick is to provide\
+    \ a default implementation, as illustrated in the listing below.\n\nListing 2:\
+    \ Extend the interface as before.. */\n\n```\nvoid defaultImplementation(WatchStatePtr\
+    \ state);\n{\n  /* We will get here if the stop event isn't supported\n  in the\
+    \ concrete state. */\n}\nstatic void defaultStop(WatchStatePtr state);\n{\n  /*\
+    \ We will get here if the start event isn't supported\n  in the concrete state.\
+    \ */\n};\n```\n\nListing 3: Provide the default implementations in WatchState.c"
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'The STATE Pattern
+
+
+    17
+
+
+    ```
+
+    11 }
+
+    12
+
+    13 void defaultImplementation(WatchStatePtr state)
+
+    14 {
+
+    15     state->start = defaultStart;
+
+    16     state->stop = defaultStop;
+
+    17 }
+
+    ```
+
+
+    # Concrete States
+
+
+    The default implementation completes the interface of the states. The interface
+    of each state itself is minimal; all there is to do is an entry function for the
+    state. Listing 4: Interface of a concrete state, StoppedState.h
+
+
+    ```
+
+    1 #include "WatchState.h"
+
+    2
+
+    3 void transitionToStopped(WatchStatePtr state);
+
+    Listing 5: Interface of a concrete state, StoppedState.h
+
+    ```
+
+
+    ```
+
+    1 #include "WatchState.h"
+
+    2
+
+    3 void transitionToStarted(WatchStatePtr state);
+
+    ```
+
+
+    The responsibility of the entry functions is to set the pointers in the passed
+    WatchState structure to point to the functions specifying the behavior of the
+    particular state. We can utilize the default implementation, the implementation
+    of the concrete states is straightforward; each concrete state specifies the events
+    of interest in that state. Listing 6: StoppedState.c
+
+
+    ```
+
+    1 #include "StoppedState.h"
+
+    2 /* Possible transition to the following state: */
+
+    3 #include "StartedState.h"
+
+    4
+
+    5 static void startWatch(WatchStatePtr state)
+
+    6 {
+
+    7 transitionToStarted(state);
+
+    8 }
+
+    9
+
+    10 void transitionToStopped(WatchStatePtr state)
+
+    11 {
+
+    12 /* Initialize with the default implementation before
+
+    13 specifying the events to be handled in the stopped
+
+    14 state. */
+
+    15 defaultImplementation(state);
+
+    16 state->start = startWatch;
+
+    17 }
+
+    ```
+
+
+    Listing 7: StartedState.c'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "```\n#include \"StartedState.h\"\n/* Possible transition to the following state:\
+    \ */\n#include \"StoppedState.h\"\n\nstatic void stopWatch(WatchStatePtr state)\n\
+    {\n    transitionToStopped(state);\n}\nvoid transitionToStarted(WatchStatePtr\
+    \ state)\n{\n    /* Initialize with the default implementation\n       specifying\
+    \ the events to be handled in the started\n       state.*\n    defaultImplementation(state);\n\
+    \    state->stop = stopWatch;\n}\n```\n\n# Client Code\n\nThe reward for the struggle\
+    \ so far comes when implementing the context, i.e. the client of the state machine.\
+    \ All the client code has to do, the initial state has set, to delegate the requests\
+    \ to the state.\n\n```\nstruct DigitalStopWatch\n{\n    struct WatchState state;\n\
+    \    TimeSource source;\n    Display watchDisplay;\n};\n\ndigitalStopWatchPtr\
+    \ createWatch(void)\n{\n    DigitalStopWatchPtr instance = malloc(sizeof *instance);\n\
+    \    if(NULL != instance){\n        /* Specify the initial state. */\n       \
+    \ transitionToStopped(&instance->state);\n        /* Initialize the other attributes\
+    \ here... */\n    }\n    return instance;\n}\n\\void destroyWatch(DigitalStopWatchPtr\
+    \ instance)\n{\n    free(instance);\n}\n```"
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "The STATE Pattern\n\n19\n\n```\n27\n28 void startWatch(DigitalStopWatchPtr\
+    \ instance)\n29 {\n30     instance->state.start(&instance->state);\n31 }\n32 \n\
+    33 void stopWatch(DigitalStopWatchPtr instance)\n34 {\n35     instance->state.stop(&instance->state);\n\
+    36 }\n```\n\n# A Debug Aid\n\nIn order to debug, the state machine may be extended\
+    \ with a string holding the name of the actual state:\n\n```\n1 void transitionStopped(WatchStatePtr\
+    \ state)\n2 {\n3     defaultImplementation(state);\n4     state->name = \"Stopped\"\
+    ;\n5     state->start = startWatch;\n6 }\n```\n\nUtilizing this extension, it\
+    \ becomes possible to provide an exact diagnostic in the default implementation.\
+    \ Returning to our implementation of WatchState.c, the code now looks like:\n\n\
+    ```\n1 static void defaultStop(WatchStatePtr state)\n2 {\n3     /* We'll get here\
+    \ if the event isn't supported\n4     in the concrete state. */\n5 logUnsupportedEvent(\"\
+    Stop event\", state->name);\n6 }\n```\n\n# Extending the State Machine\n\nOne\
+    \ of the strengths of the STATE pattern is that it encapsulates all state-specific\
+    \ behavior making the state machine easy to extend.\n\n+   * Adding a new event.\
+    \ Supporting a new event implies extending the WatchState Using the mechanism\
+    \ described above, a new default implementation of the event is added to WatchState.c.\
+    \ This step protects code from changes; the only impact on the concrete states\
+    \ is on the states that intend to support the new event, which have to implement\
+    \ a function, the correct signature, to handle it.\n* Adding a new state. The\
+    \ new, concrete state has to implement functions for all events supported in that\
+    \ state. The only existing code that needs to be changed is the state in which\
+    \ we'll have a transition to the new state. Please note that the STATE pattern\
+    \ preserves one of the benefits of the table-based solution: client code, i.e.\
+    \ the context, remains unchanged."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Stateless States\n\nThe states in the sample code are stateless, i.e. the\
+    \ WatchState structure contains only pointers to re-entrant functions. this is\
+    \ a special case of the STATE pattern [Gamma, et al]. \"If State objects have\
+    \ no instance variables [...] then context can share a State object\". However,\
+    \ before sharing states, I would like to point to Joshua Kievsky's advice that\
+    \ \"it's best to add state-sharing code after your user experience deploys and\
+    \ pointers to the state-instantiation code as a prime bottleneck\" [Kievsky].\n\
+    \nIn the C language, states may be shared by declaring a static variable representing\
+    \ a certain state inside each function unless state transition. As the variables\
+    \ have permanent storage, the signature of the transition functions is changed\
+    \ to return a pointer to the variable representing the particular state.\n\nListing\
+    \ 8: Stateless function entry, Stateless.c\n\n```\nWatchStatePtr transitionToStarted(void)\n\
+    {\n    static struct WatchState startedState;\n    static int initialized = 0;\n\
+    \n    if( == initialized)\n{\n        defaultImplementation(&startedState);\n\
+    \        startedState.stop = stopWatch;\n        initialized = 1;\n    }\n\n \
+    \   return &startedState;\n}\n```\n\nThe client has been changed from holding\
+    \ a variable representing the state to holding a pointer to the variable representing\
+    \ the shared state. Further, the context has to define a callback function to\
+    \ be invoked as the concrete states request a state transition.\n\nListing 9:\
+    \ Client code for changing state\n\n```\nvoid change(DigitalStopWatchPtr instance,\n\
+    WatchStatePtr newState)\n{\n    /* Provides a good place for controls and\n  \
+    \     trace messages (all state transitions) have to\n       go through this function).\
+    \ */\n    instance->state = newState;\n}\n```\n\nThe stateless state version comes\
+    \ closer to the State described in Design Patterns as a state transition, in contrast\
+    \ with the previous approach, implying changing the object pointed to by the context\
+    \ instead of just swapping its behavior.\n\nListing 10: State transition in Stopped.c"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# The STATE Pattern
+
+
+    ```
+
+    1 static void startWatch(DigitalStopWatchPtr context)
+
+    2 {
+
+    3 changeState(context, transitionToStarted());
+
+    4 }
+
+    ```
+
+
+    A good quality of the stateless approach is that the point of state transitions
+    is centralized in the context. One obvious drawback is the need to pass around
+    a reference to a context. This reference functions as a memory allowing the new
+    state to be mapped to the correct context.
+
+    Another drawback is the care has to be taken with the initialization of the static
+    variables that the states are going to live in a multithreaded thread.
+
+
+    # Consequences
+
+
+    The main consequences of applying the STATE pattern are:
+
+
+    +   1. Reduces duplication by complex, state-altering conditional logic. As illustrated
+    in the example above, solutions based upon large segments of conditional logic
+    tend to contain duplicated code. The STATE pattern provides an appealing alternative
+    to removing duplication and reducing the complexity.
+
+    2. A clear expression of the intent. The context delegates all state dependent
+    operations to the state interface. Similar to the table-based solution, the STATE
+    pattern lets the code reflect the intent of abstracting the problem as a finite
+    state machine. With complex, conditional logic, that intent is typically less.
+
+    3. Encapsulates the behavior of each state. Each concrete state provides a good
+    overview of its behavior including all events supported in that state. Encapsulation
+    makes it both to identify and as updating the relevant code when changes to a
+    certain state are to be done.
+
+    4. Implicit error handling. The solutions based on conditional logic, as well
+    as the table-based one, require explicit code to ensure that a given combination
+    of state and event is valid. Using the technique described above of initializing
+    with a default implementation, the controls are built into the solution.
+
+    5. Increases the number of compilation units. The code typically becomes less
+    with the STATE pattern. As Design Patterns say "distribution is actually good
+    if there are many states". However, for a trivial machine with few, simple states,
+    the STATE pattern may introduce an unnecessary complexity. In case, if it is not
+    known that more complex behavior may be added, it is probably better to rely on
+    conditional logic the logic will be easy to follow.
+
+
+    # Summary
+
+
+    The STATE pattern lets us express a finite state machine, making the intent of
+    the code clear. The behavior is partitioned on a per-state-base and all state
+    transitions are explicit.
+
+
+    The STATE pattern may serve as a valuable tool when implementing complex state-dependent
+    behavior. On the other hand, for simple problems with few states, conditional
+    logic is just right.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# # The STRATEGY Pattern
+
+
+    # ## Reflections on STRATEGY
+
+
+    Of all the design patterns in this book, STRATEGY is the one I''ve been using
+    the most. The pattern is fundamental. A free shift in mindset. Applying STRATEGY
+    shifts the focus of an algorithm from how to what. Rather than trying to control
+    how a function performs its task we parameterize it with a high-level behavior
+    encapsulating what to do.
+
+
+    Within a software design, excessive coupling is one of the most damaging properties
+    of a program. And the worst form of coupling is control coupling. In the degenerate
+    case of control coupling, a client passes a flag to some to control its behavior.
+    It''s a common coding style that leads to conditional logic. Excessive conditional
+    logic introduces complexity in itself. But it gets worse.
+
+
+    Control coupling, as discussed in my original article, breaks the encapsulation.
+    Suddenly, the function is torn down, modules melt together. Such code is hard
+    to extend. It''s an invitation to bugs. The hardest bugs I''ve found are when
+    different features interact. That precisely case with the control coupling approach.
+    Instead, a good design separates features and variations. It lets them vary independently
+    (features often have different change rates) without arguments.
+
+
+    STRATEGY isn''t an object-oriented pattern. One of the main problems I have with
+    the Gang of Four book is its prominent use of class diagrams. Open any pattern
+    in the book. First thing we see is a class diagram. Often, a similar diagram is
+    repeated in the "Structure" section. This has led many developers to confuse the
+    diagram with the actual pattern. It''s not best, it''s one way to implement the
+    pattern in a certain language. Nothing more. A pattern is a dynamic, generative
+    entity. Depending on context, the applications of a pattern may look radically
+    different each time. It''s my firm belief that much of the harm done to the design
+    patterns movement could have been avoided had the Gang of Four excluded the section
+    on structure.
+
+
+    # ## Implementing STRATEGY
+
+
+    Identifying and exploiting commonality is fundamental to software design. By encapsulating
+    and re-using common functionality, the quality of the design rises above code
+    duplication and dreaded anti-patterns like copy-paste. This chapter dives into
+    a design pattern that adds flexibility to common software entities by letting
+    clients customize and extend them without modifying existing code.
+
+
+    # ## Control coupled customers
+
+
+    To attract and keep customers, many companies offer some kind of bonus system.
+    In our example, a customer is placed in one of three categories:
+
+
+    +   * Bronze customers: Get 2 % reduction on every item bought.
+
+    * Silver customers: Get 5 % reduction on every item bought.
+
+    * Gold customers: Get 10 % off on all items and free shipping.
+
+
+    A simple and straightforward way to implement a price calculation based upon this
+    bonus system is through conditional logic.'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# The STRATEGY Pattern\n\n```\ntypedef enum {\n  bronzeCustomer,\n  silverCustomer,\n\
+    \  goldCustomerCategory;\n}\ndouble calculatePrice(CustomerCategory category,\n\
+    \  double totalAmount,\n  double shipping)\n{\n  double price = 0;\n  /* Calculate\
+    \ the total price depending on\n  customer category. */\n  switch(category){\n\
+    \    case bronzeCustomer:\n      price = totalAmount * 0.98 + shipping;\n    \
+    \  break;\n    case silverCustomer:\n      price = totalAmount * 0.95 + shipping;\n\
+    \      break;\n    case goldCustomer:\n      /* Free shipping for gold customers.*/\n\
+    \      price = totalAmount * 0.90;\n      break;\n    default:\n      onError(\"\
+    Unsupported category\");\n      break;\n  }\n  return price;\n```\n\nAfter further\
+    \ inspection of the design, I would like to point out that representing currency\
+    \ as double may lead to marginally inaccurate results. Carelessly handled, they\
+    \ may turn out to be fatal to, for example, a banking system. Security features\
+    \ issue a possible overflow which should be ignored in business code. However,\
+    \ such issues have been deliberately left out of the example in order not to lose\
+    \ the focus on the problem in the scope of this book.\n\nReturning to the code,\
+    \ even in this simple example, it is possible to identify serious design problems\
+    \ with the approach, that wouldn't stand up in the real-world:\n\n+   1. **Conditional\
+    \ logic.** The solution above basically switches on a type code, leading to the\
+    \ risk of introducing a maintenance challenge. For example, the above mentioned\
+    \ security issues have to be addressed on one branch leading to potentially complicated,\
+    \ nested conditional logic.\n2. **Coupling.** The client of the function passes\
+    \ a flag (category) used to control the inner logic of the function. Page-[Jones]\
+    \ defines this kind of coupling as \"control coupling\" and concludes that control\
+    \ coupling itself isn't the problem, but that it \"often indicates the presence\
+    \ of other, more gruesome, design ill\" [Page-Jones]. One such design ill is the\
+    \ loss of encapsulation; the client of the function above knows about its internals.\
+    \ It is, the knowledge of the different customer categories is spread among several\
+    \ modules."
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'The STRATEGY Pattern
+
+
+    +   3. It doesn''t scale. As a consequence of the design flaws identified, the
+    solution has a scalability problem. As the customer categories are extended, the
+    inflexibility of the design forces modification to the function above. Modifying
+    existing code is often an error-prone activity.
+
+
+    The potential problems listed above, may be derived from the failure of adhering
+    to one, important design principle.
+
+
+    # The Open-Closed Principle
+
+
+    Although mainly seen in the context of object oriented literature, the open-closed
+    principle defines properties attractive in the context of C too. The principle
+    is summarized as *Software entities (classes, modules, functions, etc.) should
+    be open for extension, but closed for modification*[Martin].
+
+
+    According to the open-closed principle, extending the behavior of an ideal module
+    is achieved by adding code instead of changing the existing. Following this principle
+    only minimizes the risk of introducing bugs in testing but also raises the quality
+    of the design by introducing loose coupling. It is virtually impossible to design
+    a module in such a way that it is closed against all kinds of changes. When ever
+    trying to design software in such a way would overcomplicate the design far beyond
+    practicality. Identifying the modules to close, and the changes to make against
+    them, requires experience and a good understanding of the problem domain.
+
+
+    In the example used in this chapter, it would be suitable to close the customer
+    module against changes by Identifying a pattern that lets redress the code in
+    this respect seems like an attractive idea.
+
+
+    # STRATEGY
+
+
+    The design pattern STRATEGY provides a way to follow and reap the benefits of
+    the open-closed principle. Design Patterns [Gamma, et al] defines “Define a family
+    of algorithms, encapsulate each one, and make them interchangeable. Strategy lets
+    the algorithm vary independently from clients that use it”. Related to the discussion
+    above, the price calculations in the different customer categories are that “family
+    of algorithms”. By applying the price calculations, each one of them gets fully
+    encapsulated rendering the STRATEGY pattern, each one of them gets
+
+
+    | Customer | CustomerPriceStrategy |
+
+    | :--- | :--- |
+
+    | + placeOrder(Order): void | + calculatePrice(Order): double |
+
+
+    ![](img/36484cd32ea2e3eb1b027e721e2669a9_27_0.png)
+
+
+    | GoldPriceStrategy | SilverPriceStrategy | BronzePriceStrategy |
+
+    | :--- | :--- | :--- |
+
+    | + calculatePrice(Order): double | + calculatePrice(Order): double | + calculatePrice(Order):
+    double |
+
+
+    Illustration 1: The customer bonus system as a canonical STRATEGY.
+
+
+    In the context, the Customer does not have any knowledge about the concrete categories
+    anymore; the concrete strategy is typically assigned to the context by the application.
+    All price calculations are delegated to the assigned strategy.
+
+
+    Using this pattern, the interface for calculating price adheres to the open closed
+    principle; it is possible to add or remove categories without modifying the existing
+    calculation algorithms or the Customer'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# Implementation Mechanism\n\nWhen implementing the STRATEGY pattern in C,\
+    \ without language support for polymorphism and inheritance, an alternative to\
+    \ the object oriented features has to be found for the abstraction. This problem\
+    \ is almost identical to the one faced when implementing the STATE pattern in\
+    \ C, indicating that the same mechanism may be used, namely pointers to functions.\
+    \ The possibility to specify to pointers proves to be an efficient technique for\
+    \ implementing dynamic behavior.\n\nIn a C-implementation, the basic structure\
+    \ in the diagram remains, but the interface is expressed as a declaration of a\
+    \ pointer to function.\nListing 2: Strategy interface in CustomerStrategy.h\n\n\
+    ```\ntypedef double (*CustomerPriceStrategy)(double amount,\n                \
+    \                            double shipping);\n```\n\nThe different strategies\
+    \ are realized by following the signature specified by the interface. The privileges\
+    \ of each customer category, the context vary, are encapsulated within their concrete\
+    \ strategy. Depending on the complexity and the cohesion of the concrete strategies,\
+    \ the source code may be organized as either one strategy per customer or by gathering\
+    \ all supported strategies in a single compilation unit. For the strategies used\
+    \ in this example, the latter approach has been chosen.\nListing 3: Interface\
+    \ to the concrete categories in CustomerCategories.c\n\n```\ndouble bronzePriceStrategy(double\
+    \ amount, double shipping);\ndouble silverPriceStrategy(double amount, double\
+    \ shipping);\ndouble goldPriceStrategy(double amount, double shipping);\n```\n\
+    \nListing 4: Implementation of the concrete customer strategies in CustomerCategories.c\n\
+    \n```\n/* In production, all input should be validated and\nthe calculations secured\
+    \ upon entry of each function. */\ndouble bronzePriceStrategy(double amount, double\
+    \ shipping)\n{\n    return amount * 0.98 + shipping;\n}\n\ndouble silverPriceStrategy(double\
+    \ amount, double shipping)\n{\n    return amount * 0.95 + shipping;\n}\ndouble\
+    \ goldPriceStrategy(double amount, double shipping)\n{\n    /* Free shipping for\
+    \ gold customers. */\n    return amount * 0.90;\n}\n```\n\nUsing the strategies,\
+    \ the context code now delegates the calculation to the strategy associated with\
+    \ the customer.\nListing 5: Delegation to a strategy, Customer.c"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "The STRATEGY Pattern\n\n```\n#include \"CustomerStrategy.h\"\n/* Other include\
+    \ files omitted... */\nstruct Customer {\n    const char* name;\n    Address address;\n\
+    \    List orders;\n    /* Bind the strategy to Customer: */\n    CustomerStrategy\
+    \ priceStrategy;\n}\nvoid placeOrder(struct Customer* customer, const Order* order)\
+    \ {\n    double totalAmount = customer->priceStrategy(order->shipping);\n    /*\
+    \ More code to process the order... */\n}\n```\n\nThe code above selects the design\
+    \ algorithm. As the customer now only depends on the strategy interface, categories\
+    \ can be added or removed without changing the code of the customer and without\
+    \ the risk of introducing bugs into existing strategies. The remaining open issue\
+    \ with the implementation is to specify how a certain strategy gets bound to the\
+    \ customer.\n\n# Binding the Strategy\n\nThe strategy may be supplied by the client\
+    \ of the customer and bound to the customer during its creation, or an initial\
+    \ strategy may be chosen by the customer itself. The former alternative is clearly\
+    \ more flexible as it avoids the need for the customer to depend upon a concrete\
+    \ strategy. The code below illustrates this approach, using a customer implemented\
+    \ as a FIRST-CLASS ADT.\nListing 6: Binding strategy upon creation, Customer.c\n\
+    \n```\nCustomerPtr createCustomer(const char* name,\n    const Address* address,\n\
+    \    CustomerPriceStrategy priceStrategy);\n{\n    CustomerPtr customer = malloc(sizeof(*customer));\n\
+    \    if(NULL != customer)\n    {\n        /* Bind the initial strategy supplied\
+    \ by\n        the client. */\n        customer->priceStrategy = priceStrategy;\n\
+    \        /* Initialize the other attributes of the\n        customer here. */\n\
+    \    }\n    return customer;\n}\n```\n\nListing 7: Client code specifying the\
+    \ binding"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# The STRATEGY Pattern\n\n```\n#include \"Customer.h\"\n#include \"CustomerCategories.h\"\
+    \nstatic CustomerPtr createBronzeCustomer(const char* name, \n    const Address*\
+    \ address)\n{\n    return createCustomer(name, address, bronzePriceStrategy);\n\
+    }\n```\n\nDepending on the problem at hand, it can be re-bound to strategy. For\
+    \ example, as a customer gets promoted to the silver category, customer should\
+    \ get associated with the silverPriceStrategy. Using the technique of pointers\
+    \ to functions, a run-time change of strategy implies pointing to another function.\n\
+    \nListing 8: Rebinding strategy, Customer.c\n\n```\nvoid createPriceCategory(CustomerPtr\
+    \ customer, \n    CustomerStrategy newPriceStrategy)\n{\n    assert(NULL == customer);\n\
+    \    customer->priceStrategy = newPriceStrategy;\n}\n```\n\nAnother alternative\
+    \ is to avoid the binding and let the client pass different strategies to the\
+    \ context in each function invocation. This alternative may be suitable in case\
+    \ the context doesn't have any state memory. For example, this which uses first-class\
+    \ objects, the opposite is true and the natural abstraction is to associate the\
+    \ customer with a price-strategy as illustrated above.\n\n# Comparison of STRATEGY\
+    \ AND STATE\n\nWhen discussing the STRATEGY pattern, its relationship with the\
+    \ pattern preceding in the Design Patterns [Gama, et al] book deserves special\
+    \ mention. The design patterns STATE and STRATEGY are closely related. Robert\
+    \ C. Martin puts it this: \"all instances of the State pattern are also instances\
+    \ of Strategy pattern, but not all instances of Strategy are State\" [Martin].\n\
+    \nThis observation leads us to a remark by John Vlissides, co-author of Design\
+    \ Patterns, that \"Let the intents of the pattern be guided to their differences\
+    \ and not the classes that implement them\" [Vlissides]. Indeed, even though STATE\
+    \ and STRATEGY have a similar structure and similar mechanisms, they differ in\
+    \ their intent. The STATE pattern focuses on managing well-defined transitions\
+    \ between states, where the primary purpose of STRATEGY is to vary the implementation\
+    \ of an algorithm.\n\nRelated to the example above, had the categories been based\
+    \ on the sum of money spent by a customer, STATE would have been a better choice;\
+    \ the categories would basically illustrate the lifecycle of a customer, as the\
+    \ transitions between categories depend upon the history of the customer object.\
+    \ The STATE pattern may be used to implement this as a finite state machine.\n\
+    \nOn the other hand, if the placement in a category is the result of a membership\
+    \ fee, STRATEGY is a better abstraction. It is possible for a customer to wander\
+    \ between different categories, a transition to a new category doesn't depend\
+    \ upon the history of that customer.\n\nAlthough not to be taken a universal truth,\
+    \ a further observation relates to the usage of these patterns and relationships\
+    \ towards the client: STATE tends to be an internal concern of the context and\
+    \ the existence of STATE is usually encapsulated in the context. Contrasting this\
+    \ with STRATEGY, the client usually binds a strategy to its context."
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# Consequences
+
+
+    The main consequences of applying the STRATEGY pattern are:
+
+
+    +   1. The benefits of the open-closed principle. The design pattern STRATEGY
+    offers great flexibility that it allows clients to change and control the behavior
+    of an existing module by implementing their own, concrete strategies. Thus, however
+    is supported by adding new code instead of modifying code.
+
+    2. Reduces complexity, conditional logic. Complex interactions may lead to monolithic
+    modules littered with conditional logic, potentially in the form of control coupling.
+    Such code tends to be hard to maintain and extend. By encapsulating each branch
+    of the conditionals in a strategy, the STRATEGY pattern eliminates conditional
+    logic.
+
+    3. Allows different versions of the same algorithm. The non-functional requirements
+    on a module may vary depending on its usage. The typical trade-off between speed
+    versus memory usage is classic. Using the Strategy pattern, the choice of trade-offs
+    may be delegated to the user (“Strategies can provide different implementations
+    of the same behavior”) (Gamma, et al.).
+
+    4. An extra level of indirection. The main issue with this consequence arises
+    as data from the context has to be obtained in a strategy. As all functions used
+    as strategies have to follow the same signature, simply adding potentially unrelated
+    parameters lowers the cohesion. Implementing the context as a FIRST-CLASS AD may
+    solve this as it reduces the parameters to a single handle. With the FIRST-CLASS
+    ADT approach, the knowledge about the data of interest is encapsulated within
+    each strategy and obtained through the handle to the FIRST-CLASS ADT. A careful
+    design should strive to keep the module implemented as a FIRST-CLASS ADT highly
+    cohesive and avoid it decaying into a repository of unrelated data needed by different
+    strategies (such a design ill typically indicates that the wrong abstraction has
+    been chosen). Similarly, in case the flexibility of the STRATEGY pattern isn''t
+    needed and the problem may be solved by conditional logic that is easy to follow,
+    the latter is probably a better choice.
+
+
+    # Example of use
+
+
+    STRATEGY may prove useful for specifying policies in framework design. Using STRATEGY,
+    clients may parameter the implementation.
+
+
+    For example, error-handling is typically delegated to the application. Such a
+    design may be realized by letting the client provide a strategy to be invoked
+    upon an error. By those means, the error may be handled in an application specific
+    manner, which may stretch between simply ignoring the error to logging it or even
+    reboot the system.'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# The OBSERVER Pattern
+
+
+    # Reflections on OBSERVER
+
+
+    As I wrote the original patterns articles I based the implementations on actual
+    experience from several production code. Over the previous years I had collected
+    notes and sample implementations of several well-known patterns. My initial plan
+    was to publish five articles, starting with the more general patterns first. That
+    left me in the position where I had to choose and prioritize between the patterns.
+    The first three (First-Class ADT, STATE and STRATEGY) were all given. And I knew
+    wanted to finish with a discussion of the REACTOR pattern. Clearly, some patterns
+    had to
+
+
+    I finally selected OBSERVER. In retrospect, other patterns would probably have
+    made a better candidate. The FACADE (Gamma, et al), for example, is straightforward
+    and natural in C. In the end I went with the OBSERVER for reasons: preparation
+    and generality.
+
+
+    First, the implementation mechanisms I used in the OBSERVER are similar to the
+    ones I tend to use for the REACTOR. As, the OBSERVER implementation could serve
+    as a gentle introduction to the more complex architectural REACTOR pattern.
+
+
+    Second, event notification is a part of many applications. Decoupling the sender
+    and receiver of a event notification is central. Today, many programming languages
+    have come to include native support for OBSERVER. Cs, for example, provides a
+    general version with its events mechanism. And of course Common Lisp has it through
+    the before and after methods that make OBSERVER implementations both trivial and
+    expressive. In C, we have to go through more challenges to arrive at an implementation
+    that fits. Done right, observers can still be a viable solution.
+
+
+    # Implementing OBSERVER
+
+
+    Managing dependencies between entities in a system is crucial to a solid design.
+    In the previous chapter we had a look at the head of the open-closed principle.
+    Now we''ll turn to another principle for dependency management and illustrate
+    how both of these may be realized using the OBSERVER pattern.
+
+
+    # Dependencies arise
+
+
+    Returning to the examples used for the STATE pattern, they described techniques
+    for implementing the behavior of a simple stop-watch. Implementing such a watch
+    typically involves the task of fetching the time from some kind of time-source.
+    As the time-source would probably be tied to interactions with the operating system,
+    it is a good idea to encapsulate it in an abstraction hiding the system specific
+    parts in order to use testing and portability. Similarly, the internals of the
+    digital stop-watch should be encapsulated in a module of its. As the digital stop-watch
+    is responsible for fetching the time from the time-source (in order to present
+    it on its digital display), it clears that there will be a dependency between
+    the watch and the time-source. There are two obvious choices for the direction
+    of this dependency.
+
+
+    # Consider the Watch as a Client
+
+
+    It may seem rather natural to consider the watch as a client of the time-source.
+    That is, ... Unfortunately, implementing the dependency in this direction introduces
+    one obvious problem: how does the watch know if the time changes? The quick answer
+    is: it doesn''t. At least it doesn''t unless it introduces some kind of polling
+    mechanism towards the time-source. Just as important as it is to avoid premature
+    optimization, one should also strive to avoid premature pessimization:'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# The Observer Pattern\n\neven if the direction of the dependency seems correct,\
+    \ this solution is very likely to be extremely CPU consuming. In case the application\
+    \ needs to do more than updating a display, the problem calls for another solution.\n\
+    \n# Let the Time-Source update the Watch\n\nThe potential capacity described above\
+    \ may easily be avoided by reversing the dependency. The time-source may simply\
+    \ notify the watch as its time changes. This approach introduces a dependency\
+    \ from the time-source upon the watch.\n\nListing 1: Code for the time-source\n\
+    \n```\n#include \"DigitalStopwatch.h\"\n#include \"SystemTime.h\"\n\nstatic DigitalStopWatchPtr\
+    \ digitalWatch;\nstatic SystemTime currentTime;\n\n/* Invoked by the application\
+    \ at start-up. */\nvoid startTimeSource() {\n    digitalWatch = createWatch();\n\
+    \n    /* Code for setting up handlers for interrupts, or\nthe like, in order to\
+    \ get notified each millisecond\nfrom the operating system. */\n\n}\n\n/* This\
+    \ function is invoked through an\ninteraction with the operating system. */\n\
+    static void mTick() {\n    /* Invoke a function encapsulating the knowledge of\n\
+    time representation. */\n    currentTime = calculateNewTime();\n\n    /* Inform\
+    \ the watch that another millisecond passed. */\n    notifyChangedTime(digitalWatch,\
+    \ currentTime);\n}\n```\n\nThe attractiveness of this solution lies in simplicity.\
+    \ However, if scalability and flexibility are desired properties of the solution,\
+    \ the trade-offs are unacceptable. The potential problems introduced are best\
+    \ described in terms of the principles that this design violates.\n\n# The Open-Closed\
+    \ Principle\n\nHaving a recap on the open-closed principle, it is summarized as\
+    \ \"Software entities (classes, modules, functions, etc.) should be open for extension,\
+    \ but closed for modification\" [Martin]. The code for the source clearly violates\
+    \ this. In its current shape it supports only a single watch of one type. Imagine\
+    \ supporting other types of watches, for example with an analog display. The code\
+    \ for the timesource, due to its hard-coded notification, explode with dependencies\
+    \ in all directions on all types of watches."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# # The Stable Dependencies Principle
+
+
+    During software maintenance or incremental development changes to existing code
+    are normally unavoidable; even when applying the open-closed principle the design
+    is just closed against certain modifications based upon assumptions by the original
+    designer (it is virtually impossible for a software entity to be completely closed
+    against all kinds of changes). The stable dependencies principle tries to isolate
+    the impact of changes to existing code by making the recommendation that software
+    entities should "depend in the direction of stability"[Martin].
+
+
+    In the initial approach, the watch fetched the direction from the time-source.
+    With respect to the stable dependencies direction, this was a better choice. A
+    time-source is typically a highly cohesive unit and the more stable entity; simply
+    encapsulating it in a proper abstraction, which hides the system details, makes
+    it a good candidate to be packed in a reusable lower-level domain layer.
+
+
+    By having the timesource depend upon the higher-level digital watch, we violate
+    the stable dependencies principle. This violation manifests itself by making the
+    code for the watch to update.
+
+
+    Combining the dependency direction of the first approach with the notification
+    mechanism of the second would make it an ideal design and the design pattern OBS
+    provides the extra level of independence necessary to achieve the benefits of
+    both solutions without suffering from any of their drawbacks.
+
+
+    # OBSERVER
+
+
+    The OBSERVER pattern serves as a tool for making the open-closed principle work.
+    Design Patterns [Gama, et] captures the intent of OBSERVER to "Define a one-to-many
+    dependency between objects that when one object changes state, all its dependents
+    are notified and updated automatically". Applying the OBSERVER pattern to our
+    example, with a second type of watch, the "dependents" are the different watches.
+    Design Patterns define the role played by TimeSource as a "concrete subject",
+    the object whose state changes should trigger a notification and update of the
+    observers, i.e. Observers.
+
+
+    ![](img/36484cd32ea2e3eb1b027e721e2669a9_34_0.png)
+
+
+    Illustration 1: The decoupler and receivesver through OBSERVER.
+
+
+    # # Implementation Mechanism
+
+
+    In order to decouple the subject from its concrete observers and still enable
+    the subject to notify them, each observer must correspond to a unique instance.
+    The FIRST-CLASS ADT pattern provides a way to realize this. However, as seen from
+    the subject, all observers must be abstracted as one, general type sharing a common
+    interface. In the C language, without language support for inheritance, generality
+    is usually spelled \void*; any pointer to an object may be converted to \void*
+    and back to its original type again without loss of information.
+
+
+    Listing 2: Interface of the observers, TimeObserver.h'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# The OBSERVER Pattern\n\n```\n1 typedef void (*ChangeTimeNotification)(void*\
+    \ instance,\n2                               const SystemTime* newTime);\n3 typedef\
+    \ struct\n4 {\n5 void* instance;\n6 ChangeTimeNotification notification;\n7 }\
+    \ TimeObserver;\n```\n\nThe interface declares a pointer to a function, which\
+    \ proves to be an efficient technique for implementing dynamic behavior: a concrete\
+    \ observer attaches itself, together with a pointer to a function, at the subject.\
+    \ As the subject changes, it notifies the observer through the attached function.\n\
+    By using abstraction, type-safety is basically traded for flexibility: the responsibility\
+    \ for the conversion of the observer back to its original type lies on the programmer.\
+    \ A conversion back to another type other than the original may have disastrous\
+    \ consequences. Franz Kafka, although not very experienced in C programming, would\
+    \ provide a good example of behavior: \"When Gregor Samsa woke up one morning\
+    \ from unsettling dreams, he found himself in his bed into a monstrous vermin\"\
+    \ [Kafka]. Obviously, Gregor Samsa wasn't type-safe. In order to guard against\
+    \ such erroneous conversions, the TimeObserver has been introduced to maintain\
+    \ the binding between the observer and the function pointer. The implicit type\
+    \ conversion is encapsulated within the observer itself, as illustrated in the\
+    \ code.\nListing 5: A concrete observer implemented as a FIRST-CLASS ADT\n\n```\n\
+    1 /* Include files. */\n2 struct DisplayStopWatch\n3 {\n4     Display watchDisplay;\n\
+    5     /* Other attributes of the watch, e.g.\n6       digital display. */\n7 };\n\
+    8 \n9 /* Implementation of the function required by the\n10 TimeObserver interface.\
+    \ */\n11 static void changedTime(void* instance,\n12                         \
+    \   const SystemTime* newTime);\n13 {\n14     DigitalStopWatchPtr digitalWatch\
+    \ = instance;\n15     assert(NULL != digitalWatch);\n16 \n17     updateDisplay(digitalWatch,\
+    \ newTime);\n18 }\n```\n\nBefore an observer can get any notifications, it has\
+    \ to register for them. Listing 4 declares the interface required by the observers.\n\
+    Listing 4: Interface to the subject, Subject.h"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# The OBSERVER Pattern\n\n```\n#include \"TimeObserver.h\"\nvoid attach(const\
+    \ TimeObserver* observer);\nvoid detach(const TimeObserver* observer);\n```\n\n\
+    These are implemented by the concrete subject, the TimeSource, which has to keep\
+    \ track of all attached observers. The example below uses a linked-list for that\
+    \ task. Attaching an observer corresponds to adding a copy of the given TimeObserver\
+    \ representation to the list. Similarly, upon a call to detach, the node in the\
+    \ list corresponding to the given TimeObserver shall be removed and that observer\
+    \ will no longer receive any notifications from the subject. The code fragments\
+    \ below illustrate this mechanism.\n\nListing 5: Implementation of the subject,\
+    \ TimeSubject.c\n\n```\n#include \"TimeSubject.h\"\nstruct ListNode {\n  TimeObserver\
+    \ item;\n  struct ListNode* next;\n};\nstatic ListNode* observers;\nstatic SystemTime\
+    \ currentTime;\n\n/* Local helper functions for managing the linked-list\n   (implementation\
+    \ omitted) */\nstatic void appendToList(const TimeObserver* observer) {\n  /*\
+    \ Append a copy of the observer to the linked-list. */\n}\nstatic void removeList(const\
+    \ TimeObserver* observer) {\n  /* Identify the observer in the linked-list and\n\
+    \   remove that node. */\n}\n\n/* Implementation of the TimeSubject interface.\
+    \ */\nvoid attach(const TimeObserver* observer) {\n  assert(NULL != observer);\n\
+    \  appendToList(observer);\n}\nvoid detach(const TimeObserver* observer) {\n \
+    \ assert(NULL != observer);\n  removeList(observer);\n}\n```"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# The OBSERVER Pattern\n\n34\n\n```\n37\n38 /* Implementation of the original\
+    \ responsibility of the\n39  TimeSource(code for initialization, etc omitted).\
+    \ */\n40 static void msTick()\n41 {\n42     struct ListNode* node = observers.next;\n\
+    43 \n44 \n45     /* Invoke a function encapsulating the knowledge\n46        about\
+    \ time representation. */\n47     currentTime = calculateNewTime();\n48 \n49 \
+    \    /* Walk through the linked-list and notify every\n50        observer that\
+    \ another millisecond passed. */\n51     while(NULL != node) {\n52 \n53      \
+    \   TimeObserver* observer = &node->item;\n54         observer->notification(observer->instance,\n\
+    55                               currentTime);\n56 \n57         node = node->next;\n\
+    58     }\n```\n\nThe code above solves our problems; new types of watches may\
+    \ be added without any modification to the TimeSource, these watches, our observers,\
+    \ are updated in an efficient way without the cost of expensive polling.\n\n#\
+    \ Observer Registration\n\nAn additional benefit of implementing the OBSERVER\
+    \ pattern as a FIRST-CLASS ADT is the combination of loose dependencies with information\
+    \ hiding. The client neither knows nor depends upon a subject. In fact, the client\
+    \ doesn't even know that the DigitalStopWatch acts as an observer because the\
+    \ functions for creating and destroying the ADT encapsulate the registration handling.\
+    \ The code below, which extends\n\n```\n1 static void changedTime(void* instance,\n\
+    2                                     const SystemTime* newTime)\n3 {\n4     /*\
+    \ Implementation as before (Listing 3). */\n5 }\n6 \n7 DigitalStopWatchPtr createDigitalWatch(void)\n\
+    8 {\n9 \n10    DigitalStopWatchPtr watch = malloc(sizeof *watch);\n11    if(NULL\
+    \ != watch) {\n12        /* Successfully created -> attach to\n13           the\
+    \ subject. */\n14        TimeObserver observer = {@0};\n```\n\nListing 6: Encapsulation\
+    \ of the registration handling"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'The OBSERVER Pattern
+
+
+    35
+
+
+    ```
+
+    16 observer.instance = watch;
+
+    17 observer.notification = changedTime;
+
+    18
+
+    19     attach(&observer);
+
+    20 }
+
+    21     return watch;
+
+    22 }
+
+    23
+
+    24 void destroyDigitalWatch(DigitalStopWatchPtr watch)
+
+    25 {
+
+    26     /* Before deleting the instance we have to detach
+
+    27      from the observer. */
+
+    28     TimeObserver observer = {0};
+
+    29 observer.instance = watch;
+
+    30 observer.notification = changedTime;
+
+    31
+
+    32     detach(&observer);
+
+    33     free(watch);
+
+    34 }
+
+    ```
+
+
+    # Subject - Observer Dependencies
+
+
+    The introduction of the OBSERVER pattern results in loose dependencies between
+    the subject and its observers. no matter how loose, the dependencies cannot be
+    ignored and an often unseen aspect of the OBSERVER pattern is to ensure correct
+    behavior in case of changed registrations during a notification of the observers.
+    The problem should be addressed in all OBSERVER implementations and is illustrated
+    by investigating the notification code below:
+
+    Listing 7: Code extracted from
+
+
+    ```
+
+    1 /* Walk through the linked-list and notify every
+
+    2 observer that another millisecond passed. */
+
+    3 while(NULL l = node)
+
+    4 {
+
+    5     TimeObserver* observer = &node->item;
+
+    6 observer->notification(observer->instance,
+
+    7     &currentTime);
+
+    8     node = node->next;
+
+    9 }
+
+    ```
+
+
+    In an observer decide to detach itself during a notification, the list containing
+    the nodes may become corrupted. The solutions span for forbidding subject changes
+    during notification and, and at the other extreme, allow the subject to change
+    and ensure it works.
+
+    The solution with forbidding subject changes during notification calls for a well-documented
+    Subject interface. Further, the constraint may be checked at run-time using assertions.
+
+    Listing 8: Checking Subject constraints with assertions'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# The OBSERVER Pattern\n\n```\nstatic int isNotifying = 0;\n\nvoid attach(const\
+    \ TimeObserver* observer)\n{\n    assert(0 == isNotifying);\n    /* Code as before.\
+    \ */\n}\n\nvoid detach(const TimeObserver* observer)\n{\n    assert(0 == isNotifying);\n\
+    \    /* Code as before. */\n}\n\nstatic void mTick()\n{\n    struct ListNode*\
+    \ node = observers.next;\n\n    /* Ensure that no changes are done to the subject\
+    \ during notification. */\n    isNotifying = 1;\n\n    while(NULL != node)\n \
+    \   {\n        /* Loop through the observers as before. */\n    }\n\n    /* All\
+    \ observers notified, allow changes again. */\n    isNotifying = 0;\n```\n\nThe\
+    \ solution at the other side of the spectrum depends upon the data structure used\
+    \ to store the observers. The idea is to keep a pointer to the next observer to\
+    \ notify at file-scope. Attaching or detaching an observer involves the possible\
+    \ adjustment of that pointer. By excluding this pointer in the notification loop,\
+    \ the problem with unregistrations is solved. By choosing a strategy for new registrations,\
+    \ defining if the observers are to be notified during the loop they attach or\
+    \ not, the solution is complete. The extra complexity is rewarded with the flexibility\
+    \ of allowing observers to be added or removed during notification.\n\n# One pattern,\
+    \ two models\n\nIn the example above, the part of the subject that changed (in\
+    \ the example system time) was given to the observers as an notification function.\
+    \ This technique is known as the push-model. The advantage of this model is its\
+    \ simplicity and efficiency; the data that is changed is immediately available\
+    \ to the observers in a notification. A potential problem is the logical coupling\
+    \ between a subject and its observers; in order to deliver the correct data, the\
+    \ subject has to know the needs of its observers.\n\nThis potential problem is\
+    \ eliminated by the other model used in OBSERVER implementations. This model,\
+    \ known as the pull-model, does not send any detailed information about what changed\
+    \ at the subject; the observers have to fetch that data themselves from the subject.\
+    \ In case the subject contains several large data structures, the efficiency of\
+    \ the pull-model may be improved by introducing an update"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# The OBSERVER Pattern
+
+
+    protocol. Such a protocol specifies what while still putting the responsibility
+    on the observers to fetch the actual data. A simple enum may serve as an update
+    protocol.
+
+
+    # Consequences
+
+
+    The main consequences of applying the OBSERVER pattern are:
+
+
+    +   1. Introduce loose dependencies. As the subject only knows its observers through
+    the Observer interface, the code conforms to the open-closed principle; by avoiding
+    hard-coded notifications, any number and type of observers may be introduced as
+    long as they support the Observer interface. Behavior, in the form of new type
+    of observers, is added without modifying code. The loose dependencies provide
+    a way to communicate between layers in a sub-system. Design Patterns [Gamma, et
+    al] recognizes this: "Subject and Observer aren''t tightly coupled, they can belong
+    to different layers of abstraction in a system. A lower-level subject can communicate
+    with a higher-level observer, thereby keeping the system intact." This property
+    may serve as a barrier against modifications by following the stable dependencies
+    and enable a bidirectional communication between layers.
+
+    2. Potentially complex management of object lifetimes. As illustrated above, the
+    FIRST-CLASS AD pattern encapsulates the interaction with the subject. However,
+    in case the subject is also implemented as a first-class object, the dependencies
+    have to be resolved on a higher level and the client has to ensure that the subject
+    exists as long there are observers attached to it.
+
+    3. May complicate a design with cascades of notifications. If an observer plays
+    a second role for other observers, a notification may result in further updates
+    of these observers leading to overly complex interactions. Another problem may
+    arise if an observer, during its update, modifies the resulting in a new cascade
+    of notifications.
+
+    4. Lowers the cohesion of the subject. Besides its central purpose (in being a
+    subject also takes on the responsibility of managing and notifying observers.
+    By merging two observers in one module, the complexity of the subject is increased.
+    This extra complexity is acceptable in case the loose dependencies, introduced
+    by the OBSERVER pattern, provide significant benefits. Further, the subject may
+    be simplified in cases, during the life of the subject, there isn''t any need
+    to detach observers. In such a case, the detach function is simply omitted.
+
+    5. True-safety for flexibility. The gist of the OBSERVER pattern is that the subject
+    should be able to notify its dependents without any assumptions about what they
+    are. I.e it is possible to have observers of different types. The solution here
+    uses "void" as the abstraction of an observer. The potential problem arises when
+    the subject notifies its observers and passes them as "void" to the notification
+    functions. When converting a void-pointer back to a pointer of a concrete observer
+    type, the compiler doesn''t have any way to detect an erroneous conversion. This
+    problem may be prevented by defining a unique notification function for each different
+    type of observer in using a binding such as the TimeObserver structure introduced
+    above.
+
+
+    # Summary
+
+
+    This chapter illustrates how loose coupling with the OBSERVER pattern may serve
+    as a way to implement modules following the open-closed principle. We can add
+    new observers without modifying the subject. In fact, observers may even be replaced
+    at runtime.
+
+    Further, as OBSERVER reverses the dependencies it allows lower-level modules to
+    notify modules at a higher abstraction without compromising layering. This property
+    makes it possible to implement'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'modules following the stable dependencies principle in cases where the lower
+    layers in a system are the more stable and yet need to communicate with the higher
+    layers.
+
+
+    However, when hard-coded notifications are enough, by all means stick to them;
+    in case the loose coupling and extra level of indirection isn''t needed, the OBSERVER
+    pattern may just overcomplicate a design.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# # The REACTOR Pattern
+
+
+    # ## Reflections on REACTOR
+
+
+    So far the patterns in this book have addressed general, recurring design problems.
+    The kind of problems present in non-trivial programs. The REACTOR pattern is more
+    limited in its scope. It''s a pattern that operates on the architectural level
+    of design. The main reason I included it was due to the elegant separations of
+    concerns in the REACTOR. As such, the pattern is a nice example of good design
+    principles that have value in themselves.
+
+    wait, principles that have value in themselves.
+
+
+    Every design choice involves trade-offs. The REACTOR pattern is no exception.
+    It is a non-trivial model. Yet, when used in the right context, a REACTOR provides
+    an elegant programming model. Over the years I''ve worked on systems where the
+    REACTOR proved to be a perfect fit. These were both systems running on hardware
+    with limited capabilities. The systems received stimuli from multiple sources.
+    The messages were distributed through a third-party message-middleware between
+    independent Linux processes. At the same time, processes had to interface external
+    systems over the network. By providing the REACTOR as a service library, a great
+    deal of work could be accomplished in a relatively short amount of programming
+    since the communication messages were solved. Much of the messaging, the type
+    of receive would be encapsulated. When supporting, the application code could
+    focus on the actual problem and rely on the SYNCHRONOUS I/O.
+
+
+    The REACTOR is a pattern for SYNCHRONOUS I/O. Over the last years, asynchronous
+    I/O has become much more common. In part because asynchronous I/O provides an
+    opportunity for programs to take advantage of multi-core machines. If you happen
+    to work in that context, I recommend you to have a look at a close relative to
+    the REACTOR – the PROREACTOR pattern. A PROREACTOR specifically targets asynchronous
+    read and write operations.
+
+
+    # ## Implementing REACTOR
+
+
+    In this chapter we will step outside the domain of standard C and investigate
+    a pattern for eventriven applications. The REACTOR pattern decouples different
+    responsibilities and allows applications to demultiplex and dispatch events from
+    potentially many clients.
+
+
+    # ## The case of many Clients
+
+
+    In order to simplify maintenance of large systems, the diagnostics of the individual
+    subsystems are gathered in one, central unit. Each subsystem connects to the server
+    using TCP/IP. As TCP/IP is a connection-oriented protocol, the clients (the different
+    subsystems) have to request a connection at the server. When a connection is established,
+    a client may send diagnostics messages at any time.
+
+
+    The brute-force approach is to scan connection requests and diagnostics messages
+    from the clients one by one as illustrated in the activity diagram in illustration
+    1.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# The REACTOR Pattern
+
+
+    ![](img/36484cd32ea2e3eb1b027e721e2669a9_43_0.png)
+
+
+    Even in this strongly simplified example, there are several potential problems.
+    By intertwining the application logic with the networking and the code for event
+    dispatching, several unrelated responsibilities have been built into one module.
+    A such design is likely to lead to serious maintenance, testability, and scalability
+    problems by violating a fundamental design principle.
+
+
+    Illustration 1: An eternal loop to scan for events.
+
+
+    # The Single Responsibility Principle
+
+
+    The single responsibility principle states that “a class should have only one
+    reason to change” [Martin]. The goal of this principle is close to that of the
+    open-closed principle treated below: both strive to protect existing code from
+    modifications. When violating the single responsibility principle, a module gets
+    more reasons to change and modifications to become more likely. Worse, the different
+    responsibilities absorbed by a single module may become coupled and interact with
+    each other making modifications and testing of the module more complicated.
+
+
+    The single responsibility principle is basically about cohesion. It is useful
+    and valuable on many levels of abstraction, not least in a procedural context;
+    simply replacing the word “class” with “function” enables us to analyze algorithms
+    like the one above with respect to this principle.
+
+
+    # Violation of the Open-Closed Principle
+
+
+    By violating the single responsibility principle, the module in the example above
+    will be hard to maintain; it is code that one never wants to dig into. Unfortunately,
+    on collision course with that which is the fact that the event loop violates the
+    open-closed principle; new functionality cannot be added without modifying existing
+    code. Related to our example, a diagnostics server typically allows a technician
+    to connect and query stored information. Introducing that functionality would
+    double the'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'The REACTOR Pattern
+
+
+    logic in the event loop. Clearly, this design makes the code expensive to modify.
+
+
+    # # From a Performance Perspective
+
+
+    Making things worse, the solution above fails to scale in terms of performance
+    as well. As all events are scanned serially, even in case timeouts used, valuable
+    time is wasted nothing.
+
+
+    The potential performance problem may be derived from the failure of taking the
+    concurrent nature of the problem into account. One approach to address this problem
+    by introducing multiple threads. The diagnostics server keeps its event loop,
+    the loop is now reduced to scan for requests. As a connection is requested, a
+    new thread is allocated exclusively for handling messages on that new connection.
+
+
+    The multithreaded approach fails to address the overall design issue as it violates
+    both the single responsibility principle and the open-closed principle. Although
+    the code for scanning and dispatching diagnostics is moved out of the event loop,
+    adding a new server-port still requires modifications to existing code.
+
+
+    From a design perspective threads doesn''t improve anything. In fact, even with
+    respect to performance, this solution may due to context switches and synchronization
+    actually perform worse than the initial single-threaded approach.
+
+
+    The sheer complexity inherent in designing and implementing multithreaded applications
+    is a further argument for discarding this solution.
+
+
+    # # Problem Summary
+
+
+    Summarizing the experience so far, the design fails as it assumes these three
+    different responsibilities. The problem is bound to be worse as the design violates
+    the open-closed principle, making modifications to existing code more costly.
+
+
+    Summarizing the ideal solution, it would scale, encapsulate and decouple the different
+    responsibilities, and be able to serve multiple clients simultaneously without
+    introducing the liabilities of multithreading. The REACTOR pattern realizes this
+    solution by encapsulating each service of the application logic in event handlers
+    and separating out the code for event demultlexing.
+
+
+    # # The REACTOR Pattern
+
+
+    The intent of the REACTOR pattern is: "The architectural pattern allows event-driven
+    requests to demultiplex and dispatch service requests that are delivered to an
+    application from one or more clients" [Schmidt et al]
+
+
+    ![](img/36484cd32ea2e3eb1b027e721e2669a9_44_0.png)
+
+
+    Illustration 2: Demultiplex to decoupled event handlers.
+
+
+    The roles of the involved participants are:'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "# The REACTOR Pattern\n\n+   - EventHandler: An EventHandler defines an interface\
+    \ to be implemented by modules reacting to events. Each EventHandler owns its\
+    \ own Handle.\n- Handle: An efficient implementation of the REACTOR pattern requires\
+    \ an OS that supports handles (examples of Handlers include system resources like\
+    \ files, sockets, and timers).\n- DiagnosticsServer and Diagnostics: These are\
+    \ two event handlers, in order to receive event notifications, the concrete event\
+    \ handlers have reason to register themselves at the Reactor.\n- Reactor: The\
+    \ Reactor maintains registrations of EventHandlers and fetches the associated\
+    \ Handles. The Reactor waits on its set of registered Handles and invokes the\
+    \ corresponding EventHandler as a Handle indicates an event.\n\n# Event Detection\n\
+    \nIn its description of the Reactor, Pattern-Oriented Software Architecture [Schmidt\
+    \ et al] defines a further collaborator, the Synchronous Event Demlexer. The Synchronous\
+    \ Event Demlexer is called by the Reactor to wait for events to occur on the registered\
+    \ handlers.\nA synchronous event demlexer is provided by the operating system.\
+    \ This example will use poll(), select() and Win32WaitForMultipleObjects(or other\
+    \ functions available on common operating systems), which works with any descriptor.\n\
+    The code interacting with poll() will only be provided as a sketch, as the POSIX\
+    \ specific details are outside the scope of this article. The complete sample\
+    \ code, in this article, is available from my homepage [Petersen].\n\n# Implementation\
+    \ Mechanism\n\nThe collaboration between an EventHandler and the Reactor is similar\
+    \ to the interaction between an observer and its subject in the design pattern\
+    \ OBSERVER [Gamma, et al]. This relationship between these two patterns indicates\
+    \ that the techniques used to realize OBSERVER in C may serve well to implement\
+    \ the REACTOR.\nIn order to decode the Reactor from its handlers and still enable\
+    \ the Reactor to notify them, each concrete event handler must correspond to a\
+    \ unique instance. In our OBSERVER implementation, the FIRST-CLASS AD pattern\
+    \ is used to solve this problem. As all concrete event handlers have to be abstracted\
+    \ as one, generic type realizing the EventHandler interface, void is chosen as\
+    \ the \"general type\" to be registered at the Reactor (please refer to the previous\
+    \ part in this series for the rationale and technical reasons behind the void\
+    \ abstraction). These decisions enable a common interface for all event handlers:\n\
+    \nListing 1 : Interface of the event handlers, EventHandler.h\n\n```\n/* The type\
+    \ of a handler is system specific - \n   this example uses UNIX I/O handlers,\
+    \ which are \n   plain integer values. */\n\n   typedef int Handle;\n\n/* All\
+    \ interaction from Reactor to an event\n   handler goes through function pointers\
+    \ with the\n   following signatures: */\n\ntypedef Handle (*getHandleFunc)(void*\
+    \ instance);\n   typedef void (*EventHandlerFunc)(void* instance);\n\n   typedef\
+    \ struct\n\n*\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "# The REACTOR Pattern\n\n```\n{\n  void* instance;\n  getHandle getHandle;\n\
+    \  handleEvent handleEvent;\n} EventHandler;\n```\n\nHaving this interface in\
+    \ place allows us to declare the registration functions of the Reactor.\nListing\
+    \ 2 : Registration interface of the Reactor, Reactor.h\n\n```\n#include \"EventHandler.h\"\
+    \n\nvoid Register(EventHandler* handler);\nvoid Unregister(EventHandler* handler);\n\
+    ```\n\nThe application specific services have to implement the EventHandler interface\
+    \ and register themselves using the interface in order to be react to events.\n\
+    Listing 3 : Implementation of a concrete event handler, DiagnosticsServer.\n\n\
+    ```\n#include \"EventHandler.h\"\n\nstruct DiagnosticsServer {\n  Handle listeningSocket;\n\
+    \  EventHandler eventHandler;\n  /* Other attributes here... */\n};\n/* Implementation\
+    \ of the EventHandler interface. */\nstatic Handle getServerSocket(void* instance)\
+    \ {\n  const DiagnosticsServerPtr server = instance;\n  return server->listeningSocket;\n\
+    }\nstatic void handleConnectRequest(void* instance) {\n  DiagnosticsServerPtr\
+    \ server = instance;\n  /* The server gets notified as a new connection request\
+    \ arrives. Add code for accepting the new connection and creating a client here...\
+    \ */\n}\nDiagnosticsServerPtr createServer(unsigned int tcpPort) {\n  DiagnosticsServerPtr\
+    \ newServer = malloc(sizeof(*newServer));\n  if(NULL != newServer) {\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# The REACTOR Pattern
+
+
+    ```
+
+    /* Code for creating the server socket here.
+
+    ```
+
+
+    ```
+
+    // The real code should look for a failure, etc. */
+
+    ```
+
+
+    ```
+
+    newServer->listeningSocket = createSqlServer(tcpPort);
+
+    ```
+
+
+    ```
+
+    /* Successfully created -> register the
+
+    ```
+
+
+    ```
+
+    listening socket. */
+
+    ```
+
+
+    ```
+
+    newServer->eventHandler.instance = newServer;
+
+    ```
+
+
+    ```
+
+    newServer->eventHandler.handleEvent = getSqlServer();
+
+    ```
+
+
+    ```
+
+    newServer->eventHandler.handleEvent = handleConnectRequest;
+
+    ```
+
+
+    ```
+
+    Register(&newServer->eventHandler);
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    return newServer;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    void destroyServer(DiagnosticsServerPtr server
+
+    ```
+
+
+    ```
+
+    {
+
+    ```
+
+
+    ```
+
+    /* Before deleting the server we have to
+
+    ```
+
+
+    ```
+
+    unregister at the Reactor. */
+
+    ```
+
+
+    ```
+
+    Unregister(&newServer->eventHandler);
+
+    ```
+
+
+    ```
+
+    free(server);
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    # Reactor Registration Strategy
+
+
+    When implementing the concrete event handlers as a FIRST-CLASS AD, the functions
+    for creating and destroying serve to encapsulate the registration handling. The
+    advantage is the combination of loose dependencies with information hiding as
+    a client does not have to know about the usage and interactions with the Reactor.
+
+
+    Another reality is that the internals of the server, in our example the handles,
+    is encapsulated within the getSqlServer function. Sure, by giving the Reactor
+    a way to fetch it, but the Reactor is considered a well-trusted collaborator and
+    we are actively getting it by registering our event handler. There is no way for
+    any other module to mistakenly fetch the handler and corrupt the associated resource.
+
+
+    # Reactor Implementation
+
+
+    The details of the Reactor implementation are platform specific as they depend
+    upon the available synchronous demultiplexers. In the case operating system provides
+    more than one synchronous event demultiplexer (e.g. select() and poll()), a Reactor
+    may be implemented for each one them and the linker used to choose one of them
+    depending on the problem at hand. This technique is referred to as link-time polymorphism.
+
+
+    Each implementation has to decide the number of reactors required by the surrounding
+    environment. In the most case, the application can be structured around one, single
+    Reactor. In this case, the interface in Listing 2 (Reactor.h) will serve. An application
+    requiring more than one Reactor should consider making the Reactor itself a FIRST-CLASS
+    ADT. This variant complicates the clients slightly as references to the Reactor
+    ADT have to be maintained and passed around in the system.
+
+
+    Independent of the system specific demultiplexing mechanism, a Reactor has to
+    maintain a collection of registered, concrete event handlers. In its simplest
+    form, this collection may simply be an array. This approach serves well in case
+    the maximum number of clients is known in advance.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "# The REACTOR Pattern\n\nListing 4: Implementation of a Reactor using poll(),\
+    \ PollReactor.c\n\n```\n#include \"Reactor.h\"\n#include <poll.h>\n/* Other include\
+    \ files omitted ... */\n/* Bind an event handler to the struct used to\ninterface\
+    \ poll(). */\ntypef struct {\n    EventHandler handler;\n```\n\n```\nstruct pollfd\
+    \ fd;\n} HandlerRegistration;\n    static HandlerRegistration registeredHandlers[MAX_NO_OF_HANDLES];\n\
+    ```\n\n```\n/* Add a copy of the given handler to the first free\nposition in\
+    \ registeredHandlers. */\nstatic void addToToRegistry(EventHandler* handler);\n\
+    /* Identify the event handler in the registeredHandlers\nand remove it. */ */\n\
+    static void removeFromRegistry(EventHandler* handler);\n```\n\n```\n/* Implementation\
+    \ of the Reactor interface used for\nregistrations. */\nvoid Register(EventHandler*\
+    \ handler)\n{\n    assert(NULL != handler);\n    addToToRegistry(handler);\n}\n\
+    \nvoid Unregister(EventHandler* handler)\n{\n    assert(NULL != handler);\n  \
+    \  removeFromRegistry(handler);\n}\n```\n\n# Invoking the Reactor\n\nThe reactive\
+    \ event loop is the core of the Reactor and its responsibilities are to control\
+    \ the demultiplexing and dispatched the detected events to the registered, concrete\
+    \ event handlers. The event loop is contained within the HandleEvents() function\
+    \ and is typically invoked by the main() function.\nListing 5: Client code driving\
+    \ the reactor"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# The REACTOR Pattern\n\n```\nint main(void) {\n    const unsigned int serverPort\
+    \ = 0xC001;\n    DiagnosticsServerPtr server = createServer(serverPort);\n\n \
+    \   if(NULL == server) {\n        error(\"Failed to create the server\");\n  \
+    \  }\n\n    /* Enter the eternal reactive loop. */\n    for(;;) {\n        HandleEvents();\n\
+    \    }\n}\n```\n\nBefore investigating the implementation, which include file\
+    \ should provide the declaration of the HandleEvents() function cohesive? Unfortunately\
+    \ adding it to the file in Listing 2 (Reactor.h) would clearly make that interface\
+    \ cohesive; the registration functions model a different responsibility than the\
+    \ event loop. A solution is to create a stable interface for the event loop. This\
+    \ interface is intended solely for the compilation without invoking the event\
+    \ loop.\nListing 6: Interface to the event loop, ReactorEventLoop.h\n\n```\nvoid\
+    \ HandleEvents(void);\n```\n\nDespite its simplicity, this separation solves the\
+    \ cohesiveness problem and shields clients from functions they do not use. This\
+    \ technique of providing separate interfaces separate clients is known as the\
+    \ interface-segregation principle.\n\n# Implementing the Event Loop\n\nWith the\
+    \ interface, we can move on and implement the event loop itself. The listing below\
+    \ extends Listing 4.\nListing 7: Example of a reactive event loop, PollReactor.h\n\
+    \n```\n#include \"ReactorEvent.h\"\n/* The code from Listing 4 go here (omitted)...\
+    \ */\n/* Add a copy of all registered handlers to the given array. */\nstatic\
+    \ size_t buildPollArray(struct pollfd* fds);\n/* Identify the event handler corresponding\
+    \ to the given descriptor in the registeredHandlers. */\nstatic EventHandler*\
+    \ findHandler(int fd);\nstatic void dispatchSignalledHandlers(const struct pollfd*\
+    \ fds, size_t noOfHandlers);\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# The REACTOR Pattern
+
+
+    47
+
+
+    ```
+
+    15 {
+
+    16   /* Loop through all handles.
+
+    17   Upon detection of a handle signaled by poll,
+
+    18   its corresponding event handler is fetched
+
+    19   and invoked. */
+
+    20   size_t i = 0;
+
+    21   for(i = 0; i < noOfHandles; ++i)
+
+    22   {
+
+    23     /* Detect all signaled handles and
+
+    24     invoke their corresponding event handlers. */
+
+    25     if(POLLRDNORM | POLLERR & fds[i].revents)
+
+    26     {
+
+    27       EventHandler* signaledHandler =
+
+    28       findHandler(fds[i].fd);
+
+    29
+
+    30       if(NULL != signaledHandler)
+
+    31       {
+
+    32         signaledHandler->handleEvent(
+
+    33           signaledHandler->instance,
+
+    34         ...
+
+    35       }
+
+    36     }
+
+    37   }
+
+    38 }
+
+    39   /* Implementation of the reactive loop. */
+
+    40   void HandleEvents(void)
+
+    41 {
+
+    42     /* Build the array required to interact
+
+    43     with poll(). */
+
+    44     struct polfd fds[MAX_NO_OF_HANDLES] = {};
+
+    45     const size_t noOfHandles = buildPollArray(fds);
+
+    46
+
+    47     /* Invoke the synchronous event demultiplexer. */
+
+    48     if(@< poll(fds, noOfHandles, INFTIM))
+
+    49 {
+
+    50       /* Identify all signaled handles and
+
+    51       invoke the event handler associated with
+
+    52       each one. */
+
+    53       dispatchSignaledHandlers(fds, noOfHandles);
+
+    54     }
+
+    55   else
+
+    56   {
+
+    57     error("Poll failure");
+
+    58   }
+
+    59 }
+
+    ```
+
+
+    The example above lets each element in the collection maintain a binding between
+    the registered eventnhandler and the structure used to interact with poll(). One
+    alternative approach is to keep two separate lists and ensure consistency between
+    them. Pattern-Oriented Software Architecture [Schmidt et al] describes'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# The REACTOR Pattern
+
+
+    another, system alternative: in a UNIX implementation using select(), the "array"
+    is indexed by UNIX I/O handles values, which are unsigned integers ranging from
+    0 to FD_SETSIZE-1.
+
+
+    Returning to the example, by grouping the registration and the poll-structure,
+    the array used to interact with poll() has to be built each time the reactive
+    loop is entered. In case the performance penalty is unacceptable, this is probably
+    a better choice as it enables a simpler handling of registrations and unregistrations
+    during the event loop.
+
+
+    # Handling new registrations
+
+
+    In my previous article, I discussed strategies for managing changed registrations
+    during the notification of observers. Alternative unlike the OBSERVER pattern,
+    not an option for a REACTOR implementation. In the example used in this article,
+    the server reacts to the notification by creating a new client, which must be
+    registered before it ever be activated. This leaves only one option above for
+    a REACTOR implementation: ensure that it
+
+
+    One solution is to separate a array to interact with the synchronous event demultlexer
+    as illustrated above. This array is never modified in the event loop. However,
+    this solution has the consequence that handles unregistered during the current
+    event loop may be marked as a signaled in the separate array. The code simply
+    has to check for this issue and ignore handles, as illustrated by the function
+    dispatchChangedHandles in Listing stage.
+
+
+    The code uses the handle as identification. In cases resources are produced and
+    created during the same event loop, there, depending on platform, a possibility
+    that the handle ID are re-used; a signaled handle in the copy may belong to an
+    unregistered handler, but due to a new registration using the recycled handle
+    ID. If this is an issue, the problem may be prevented by introducing further book-keeping
+    data. For example, a second array containing the identities of handles unregistered
+    during the current event loop makes it possible to identify the case described
+    above and avoid it.
+
+
+    # More than one Type of Event
+
+
+    The design in the example above does only allow applications to register for one
+    type of event (readevents). The event type is hardcoded in the Reactor and it
+    is a simple solution sufficient for applications without any further event detection.
+    The REACTOR pattern, however, is not limited to one type of event. The pattern
+    scales to support different types of events.
+
+
+    Pattern-Oriented Software Architecture [Schmidt al] describes two general strategies
+    for dispatching notifications:
+
+
+    +   * Single-method interface: In this case, event handler is notified of all
+    events through one, single function. The type of event (typically in the form
+    of an enum) is passed as a parameter to the function. The disadvantage of this
+    approach is that it sets the stage for conditional logic, which could lead to
+    maintain.
+
+
+    +   * Multi-method interface: The event declares functions for each supported
+    event (e.g. handleRead, handleWrite, setTimeout). As the Reactor has the knowledge
+    of what event occurred, it invokes the corresponding function immediately, thus
+    avoiding the burden on the event handler to re-create the event from a parameter.
+
+
+    # Comparison of REACTOR and OBSERVER
+
+
+    Although the mechanisms used to implement them are related, there are differences
+    between these two patterns. The main difference is the notification mechanism.
+    As a Subject changes its state in the OBSERVER implementation, all its dependents
+    (observers) are notified. In a REACTOR implementation,'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: '# The REACTOR Pattern
+
+
+    this relationship is one to one – a detected event leads the Reactor to notify
+    exactly one dependent (EventHandler).
+
+
+    One typical of the OBSERVER pattern is that the cohesion of the subject is lowered;
+    besides serving its central purpose, a subject also takes on the responsibility
+    of managing and notifying observers. With this respect, a Reactor differs significantly
+    as its raison d''être is to dispatch events to its registered handlers.
+
+
+    # Consequences
+
+
+    The main consequences of applying the single-responsibility pattern are:
+
+
+    +   1. The benefits of the single-responsibility principle. Using the REACTOR
+    pattern, each of the responsibilities is encapsulated and decoupled from each
+    other. The design results in increased cohesion, which simplifies maintenance
+    and minimizes the risk of feature interaction. The platform dependent code for
+    event detection is decoupled from the application logic, unit testing is greatly
+    simplified (it is straightforward to simulate events through the EventHandler
+    interface).
+
+    2. The benefits of the open-closed principle. New responsibilities, in the form
+    of new event handlers, may be added without affecting the existing handlers.
+
+    3. Unified mechanism for event handling. Even if the REACTOR pattern is centered
+    on handles, it may be extended for other tasks. Pattern-Oriented Software Architecture
+    [Schmidt et al] describes different strategies for integrating the multiplexer
+    of 1/O with event handlers. The Reactor with timer threads is an alternative to
+    typical simple software based on signals or threads. This extension adds the possibility
+    to specify a timeout value specified with milliseconds. Although it will not suit
+    a hard real-time system, a Reactor based timer mechanism is easier to implement
+    and use a signal or thread-based solution as it to avoid re-entrance problems
+    and race-conditions.
+
+    4. Provides an alternative to multithreading. Using the REACTOR pattern, blocking
+    operations in the event handlers are avoided and consequently also multithreading.
+    As discussed, a multithreaded solution adds only significant complexity; it may
+    also prove to be efficient in terms of run-time performance. However, the Reactor
+    implies a pre-emptive multithasking model, each event handler must ensure that
+    it does not perform operations that starve out other event handlers.
+
+    5. Trades type-safety for flexibility. All event handlers are abstracted as "void".
+    When converting a void-pointer to a pointer of a event handler type, the compiler
+    doesn''t have any to detect an error conversion. This problem was faced in the
+    implementation of the OBSERVER pattern and the solution is the same for the REACTOR:
+    define unique notification functions for each different type of event handler
+    and bind the functions and event handler together using an EventHandler structure
+    as seen in Listing 1.
+
+
+    # Summary
+
+
+    The REACTOR pattern simplifies event-driven applications by decoupling the different
+    responsibilities. The responsibilities are now encapsulated in separate modules.
+
+
+    There is much more to the REACTOR pattern described in this one. Particularly
+    several variations that all come with different benefits and trade-offs. For an
+    excellent in-depth treatment of the REACTOR and other patterns in the domain,
+    I recommend the book Pattern-Oriented Software Architecture, volume 2 [Schmidt
+    et al].'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# Idiomatic Expressions
+
+
+    # Reflections on the Idioms
+
+
+    After I finished the original patterns series I took some time off on a winter
+    vacation to document some of the idioms I had applied in the implementations of
+    the patterns. This was a response to some direct questions from my readers why
+    I used certain code constructs or preferred a sensible style. These idioms that
+    I had picked up over the years. By either reading other people or sometimes through
+    discussions in the comp.lang.c frequent I encountered. Often, a change in style
+    come about after I made a mistake. The idioms I applied were the results of a
+    learning process. A painful bug due to an unintended assignment led me to adapt
+    CONSTANTS TO THE LEFT. My experiences with maintaining a large legacy code base
+    taught me to appreciate NAMED PARAMETERS AND MAGIC NUMBERS
+
+
+    Patterns exist at all levels of scale in our designs. At their lowest level they
+    are referred to as idioms. Idioms depend upon the implementation technology. Sometimes
+    we find that the idioms we use in one language isn''t applicable in a higher-level
+    language. It may be that the problem it intends to prevent is present in the new
+    language. INITIALIZE COMPOUND TYPES WITH {} is such an example; many languages
+    provide sensible defaults initialization for variables. CONSTANTS TO THE LEFT
+    is a non-issue in functional programming languages with immutability as a guiding
+    principle. It might also be the case that language has first-class support for
+    the idea behind the idiom. NAMED PARAMETERS is one such example. It is supported
+    naturally by languages such as Python and modern versions of C#. But these higher-level
+    languages grow their own idioms too. One challenge of learning a new language
+    is to get accustomed with its idiomatic curve for problem solving. By documenting
+    the idioms we can provide guidance and ease the learning curve for our technologies.
+
+
+    I have here the opportunity to write down the idioms I had collected during my
+    decade as a programmer. My original idea was to write more patterns. But life
+    had others. I switched jobs and found myself working with quite different technologies.
+    The C implementations got abandoned. Writing them up without working experience
+    didn''t feel right. I believe in fresh knowledge. Idiomatic expressions turned
+    out to be my last writings on C. I hope to return some day. When do, I''ll pick
+    up a copy of this final chapter as a starting point to guide my coding.
+
+
+    # Idiomatic Expressions in C
+
+
+    # The Evolution of Idioms
+
+
+    As a language evolves, different patterns arise. These patterns get used with
+    such a high frequency and naturalness that they almost grow together with the
+    language and generate an idiomatic usage for the practitioner of the language.
+    The resulting idiomatic expressions often seem peculiar to a newcomer using the
+    language. This holds equally true for both natural and computer languages; even
+    a programmer using the idioms has them in order to be reading at other people''
+    code.
+
+
+    The idioms at the lowest levels are useful in virtually every non-trivial C program.
+    Unfortunately idioms at this level are seldom described in introductory programming
+    books and more advanced literature expects the reader to be familiar with the
+    idioms. The intention of this chapter is to capture some of these common idiomatic
+    expressions.'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'Idiomatic Expressions
+
+
+    # Idiom Description Form
+
+
+    Because of their relative simplicity, devoting a chapter using a full-blown pattern
+    form to a single one of these idioms would be complicated it. On the other hand,
+    simply listing the idioms would overemphasize the solution aspect. Therefore,
+    each idiom will be introduced with a code sketch that illustrates a certain problem
+    context, where the idiom is applied to the code in order to solve the problem.
+    This before-after also identifies certain code constructs as candidates for refactoring
+    towards the idiomatic construct.
+
+
+    The idioms presented here are of two, overlapping categories:
+
+
+    +   - Idioms for robustness: The idioms in this category avoid around common pitfalls
+    in the C language. For example, the idiom INITIALIZE COMPOUND TYPES WITH [] provides
+    a tight and portable way to initialize structs and arrays.
+
+    - Idioms for expressiveness: Writing code that communicates its intent well goes
+    in hand with robustness; making the code easy to understand simplifies maintenance
+    and thereby contributes to the long-term robustness of the program. For example,
+    the idiom ASSERTION CONTEXT makes assertions self-descriptive.
+
+
+    # SIZEOF TO VARIABLES
+
+
+    # Problem Context
+
+
+    In the C language, generality is usually spelled void*. This is reflected in the
+    standard library. For example, the functions for dynamic memory allocation (malloc,
+    calloc, and realloc) return pointers to allocate void* and do not know anything
+    about the types we are allocating for. The client has to provide the required
+    size information to the allocation functions. Here is an example with malloc:
+
+
+    ```
+
+    HelloTelegram telegram = malloc(sizeof(HelloTelegram));
+
+    ```
+
+
+    Code like this is sneaky to maintain. As long as the telegram stays as a HelloTelegram
+    everything is fine. The sneakiness in the fact that malloc usage above contains
+    a certain subset of dependency; the size given must match the type on the left
+    side of the assignment. Consider a change in telegram type to a GoodTelegram.
+    With the code above means a change in two places, which is at least one change
+    too much:
+
+
+    ```
+
+    /* We change the type on both sides of the assignment! */
+
+    GoodTelegram telegram = malloc(sizeof(GoodTelegram));
+
+    ```
+
+
+    A failure to update both may have fatal consequences, potentially leaving the
+    code with undefined behavior.
+
+
+    # Applying the Idiom
+
+
+    ```
+
+    HelloTelegram telegram = malloc(sizeof(telegram));
+
+    ```
+
+
+    But wait! Is the code above dereferencing an invalid pointer? No, and the reason
+    that it is that sizeof is an operator and not a function; sizeof doesn''t evaluate
+    its argument and the statement sizeof *telegram is computed at compile time. Better
+    yet, if the type of telegram is changed, say to a GoodTelegram, the compiler automatically
+    calculates the correct size to allocate for this type.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "# Idiomatic Expressions\n\nAs telegram is of pointer type, the unary operator\
+    \ * is applied to it. The idiom itself is of course limited to pointers. To illustrate\
+    \ this, consider functions as memset and memcpy These functions achieve their\
+    \ generality by using void for the pointer arguments. Given only the void pointer,\
+    \ there is no choice for no way to know the size of the struct to operate on.\
+    \ Exactly as with malloc, it is left to the client to provide the correct size.\n\
+    \n```\nuint32_t telegramSize = 0;\nmemcpy(&telegramSize, binaryDatastream, sizeof\
+    \ telegramSize);\n```\n\nWith SEOF variables above as size, the information automatically\
+    \ matches the type given first argument. For example, consider a representation\
+    \ of the telegram size from 32-bits to 16-bits; the memcpy will be correct.\n\n\
+    # INITIALIZE COMPOUND TYPES WITH {0}\n\n# Problem Context\n\nVirtually every coding\
+    \ standard stands unbiased variables and with very good reasons. Initializing\
+    \ a basic type as int or char is straightforward, but what is the correct way\
+    \ of initializing a compound type like an array or struct? A dangerous but unfortunately\
+    \ common practice is shown:\n\n```\nstruct TemperatureNode\n{\n  double todaysAverage;\n\
+    \  struct TemperatureNode* nextTemperature;\n}\nstruct TemperatureNode node;\n\
+    memset(&node, 0, sizeof node);\n```\n\nThe problem is that memset, as its name\
+    \ indicates, sets the bits to the given value and it does without _any_knowledge\
+    \ of the underlying type. In C, all bits do not necessarily represent floating-point\
+    \ zero or a NULL pointer constant. Initializations using memset as above result\
+    \ in undefined behavior for such types.\n\nThe alternative of initializing the\
+    \ struct by one by one is both cumbersome and risky. Due to its subtle duplication\
+    \ with the declaration of the struct, this approach introduces a maintenance challenge\
+    \ that initialization has to be updated every time a member is added or removed.\n\
+    \n# Applying the Idiom\n\nLuckily, the portable solution provided by the INITIALIZE\
+    \ COMPOUND TYPES WITH {0} does not only ensure correctness; it requires less typing.\
+    \ The code guarantees to initialize all members (including fields and pointers)\
+    \ of the struct to zero. The compiler guarantees to do so in a portable way by\
+    \ automatically initializing to the correct representation for the platform.\n\
+    \n```\nstruct TemperatureNode node = {0};\n```\n\nAt the expense of creating an\
+    \ initialized-struct, memcpy may be used to reset an array or members of a structure\
+    \ later. Because it works by copying whole bytes, possible padding included, memcpy\
+    \ does not suffer from the same problem as memset may safely operate on."
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: '# Idiomatic Expressions
+
+
+    ```
+
+    const struct TemperatureNode zeroNode = {};nstruct TemperatureNode node = {};
+
+    /* Perform some operations on the node. */
+
+    /* Reset the node (equal to node = zeroNode); */
+
+    memcpy(&node, &zeroNode, sizeof node);
+
+    ```
+
+
+    Using memcpy for copying struct out isn''t the simplest possible way. After all
+    last line could be rewritten as node = zeroNode while preserving the same behavior.
+    Instead the strength of this idiom is bought when applied to an array. It helps
+    us avoid an explicit loop over all elements in the array as memcpy does and handles
+    the admittedly tedious task of resetting the array.
+
+
+    ```
+
+    const double zeroArray[NO_OF_TEMPERATURES] = {};ndouble temperatures[NO_OF_TEMPERATURES]
+    = {};
+
+    /* Store some values in the temperatures array. */
+
+    /* Reset the array. */
+
+    memcpy(temperatures, zeroArray, sizeof temperatures);
+
+    ```
+
+
+    # ARRAY SIZE BY DIVISION
+
+
+    # Problem Context
+
+
+    The C language does not provide much support for built-in arrays. For example,
+    when passing a array to a function, the array decays into a pointer to its first
+    element. Without any specific convention and giving only the pointer, it isn''t
+    simply possible to tell the size of the array. Most APIs allow this book-keeping
+    task to the programmer. One example is the poll() function in the POSIX API. poll()
+    is used as an event multiplex scanner arrays for events. These handles, which
+    refer to platform resources like sockets, are stored in an array and passed to
+    poll(). The array is followed by an argument specifying the number of elements.
+
+
+    ```
+
+    struct pollfd handles[NO_OF_HANDLES] = {};
+
+    /* Fill the array with handles to poll, */
+
+    code omitted... */
+
+    result = poll(handles, NO_OF_HANDLES, NFTIM);
+
+    ```
+
+
+    The problem with this array is that there is tying the constant NO_OF_HANDLES
+    to the possible number of elements except the name. Good naming does matter, but
+    it only matters to human readers of the code; the compiler doesn''t care.
+
+
+    # Applying the Idiom
+
+
+    By calculating ARRAY SIZE BY DIVISION, we are guaranteed that the calculated size
+    always matches the actual number of elements. The calculation is below at compile
+    time by the compiler itself.
+
+
+    ```
+
+    struct pollfd handles[NO_OF_HANDLES] = {};
+
+    const size_t noOfHandles = sizeof handles / handles[];
+
+    ```
+
+
+    This idiom builds upon taking the size of the compile array and dividing it with
+    the size of one of its elements (sizeof handles[0]).'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# MAGIC NUMBERS AS VARIABLES
+
+
+    # Problem Context
+
+
+    Experienced programmers avoid magic numbers. Magic numbers do not communicate
+    the intent of the code very well and may confuse anyone trying to read or modify
+    it. Traditionally, some numbers 0, 1, 34 and 42 are considered less magic than
+    others. Consider a variable that is initialized to 0. A reader immediately expects
+    this to be a default initialization and the variable will probably be assigned
+    another value later. Similarly, acquainted know that 42 is the answer to the ultimate
+    question of life, universe, and everything.
+
+
+    The problem with these so-not magic numbers is that they build upon assumptions
+    and expectations. These may be broken. One example is struct tm, which is used
+    to represent the components of a calendar time in standard C. For historical reasons
+    and in violation of the principle of least astonishment, assigning 0 to its tm_year
+    member does not represent year 0; tm_year holds the years since 1900.
+
+
+    Pure magic numbers are of even worse. Consider the code fragment below:
+
+
+    ```
+
+    startTimer(10, 0);
+
+    ```
+
+
+    Despite a good function name, it is from clear what''s going on. What''s the resolution
+    - is 10 a value in seconds or milliseconds? It is a value at 0 or does it refer
+    to some kind of id? And about what zero as second parameter?
+
+
+    # Applying the Idiom
+
+
+    A step towards self documenting code is to express MAGIC NUMBERS AS VARIABLES.
+    By applying this idiom to the code above the questions do not ever arise; the
+    code is not perfectly clear about its intent.
+
+
+    ```
+
+    const size_t timeoutSeconds = 10;
+
+    const size_t doNotRescheduleTimer = 0;
+
+    ```
+
+
+    ```
+
+    startTimer(timeoutSeconds, doNotRescheduleTimer);
+
+    ```
+
+
+    Of course the approach may be even further. By writing
+
+
+    ```
+
+    startTimer(tenSecondsTimeout, doNotRescheduleTimer);
+
+    ```
+
+
+    the code gets even more. Or does it really? The problem is that to compile the
+    variable tenSecondsTimeout is just a name.
+
+
+    There is no guarantee that it holds the value 10 as an evil maintenance programmer
+    I may have changed the declaration:
+
+
+    ```
+
+    /* Original value was 10 */
+
+    const size_t tenSecondsTimeout = 42;
+
+    ```
+
+
+    Such things happen and now debugging the program will be Pleasantly surprised
+    about how long ten seconds really are. They may feel like, hmm, well, 42 actually.
+
+
+    An idiom cannot be blindly applied and MAGIC NUMBERS AS VARIABLES is no exception.
+    My recommendation is to use it extensively but avoiding coding any values or data
+    types into the names of the variables. Values and types are just too likely to
+    change over time and such code gets unnecessarily hard.'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# NAMED PARAMETERS
+
+
+    # Problem Context
+
+
+    As we expressed MAGIC NUMBERS AS VARIABLES the code got easier to read. That is,
+    as long as the names of the variables convey meaning and finding good names is
+    hard. To illustrate this, let us return to the previous example where a timer
+    was started and extend it to include the start of two timers. I am rather happy
+    with the name timeoutSeconds and have a hard time finding a name that helps me
+    remember the purpose of the variable equally. Instead of going down the dark path
+    of naming by introducing obstructive outcalls as timeout1 and timeout2, I try
+    to use the existing variable by removing its qualification and re-assign it for
+    the second timer.
+
+
+    ```
+
+    size_t timeoutSeconds = 10;
+
+    size_t doNotRescheduleTimer = 0;
+
+    ```
+
+
+    ```
+
+    notifyClosingDoor = startTimer(timeoutSeconds,
+
+    doNotRescheduleTimer);
+
+    timeoutSeconds = 12;
+
+    closeDoor = startTimer(timeoutSeconds,
+
+    doNotRescheduleTimer);
+
+    ```
+
+
+    This is a tiny example, yet it''s obvious that the code doesn''t read as well
+    as the first. The first is part of the story, but there''s more to it. By re-using
+    the timeoutSeconds variable, a reader of the code has to follow the switch of
+    value. The right-hand side of the expressions starting the timers look identical,
+    the reader has to span multiple lines in order to get the whole picture.
+
+
+    # Applying the Idiom
+
+
+    By naming parameters, it is possible to bind a certain value to a name at the
+    ideal call site. C doesn''t have language support for this construct, but it is
+    possible to emulate NAMED PARAMETERS.
+
+
+    ```
+
+    size_t timeoutSeconds = 10;
+
+    size_t doNotRescheduleTimer = 0;
+
+    ```
+
+
+    ```
+
+    notifyClosingDoor = startTimer(timeoutSeconds = 10,
+
+    doNotRescheduleTimer = 0);
+
+    timeoutSeconds = 12;
+
+    closeDoor = startTimer(timeoutSeconds,
+
+    doNotRescheduleTimer);
+
+    ```
+
+
+    The timeoutSeconds variable is re-used to start the timers, but this time directly
+    in the function call. A reader of the code is free from remembering which variable
+    currently has, because the expression now reads perfectly from left to right.
+
+
+    As neat as this may seem, I hesitated to include it in a Java program. It first
+    felt rather exciting as I realized it would be possible in C. Well not now using
+    it would make my programs self-documenting; it would also bring me friends, money,
+    and fame. After once the initial excitement had decreased, I looked for and possible
+    uses of the idiom. I soon realized that the thing is, it looks like a good solution.
+    However, often it''s just deodorant covering a code smell. Most of the examples
+    of its applicability that I could come up with would be better by redesigning
+    the code (surprisingly often by making a function more cohesive or simply'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "Idiomatic Expressions\n\n56\n\nrenaming it. All this suggests that NAMED PARAMETERS\
+    \ are more of a cool trick than a true idiomatic expression.\n\nThat said, I still\
+    \ believe NAMED PARAMETERS have a use. There are cases where a redesign isn't\
+    \ possible (third-party code, published API's, etc). As I believe these cases\
+    \ are rare, my recommendation is to rethink the code and use NAMED PARAMETERS\
+    \ as a last resort. Of course, comments would be used to achieve the same.\n\n\
+    ```\ncloseDoor = startTime(/* Timeout in seconds */ / 12,\n    /* Do not reschedule\
+    \ */ 0);\n```\n\nBecause I believe such a break flows the code of obstructing\
+    \ its structure, I would recommend against it.\n\n# ASSERTION CONTEXT\n\n# Problem\
+    \ Context\n\nAssertions are a powerful programming tool that must not be confused\
+    \ with error handling. Instead they should primarily be used to state something\
+    \ due to a surrounding context is known to be true. I would assert this to protect\
+    \ the code from its worst enemy, the maintenance programmer, which very often\
+    \ turns out to be well, exactly:\n\nValidating function arguments is good programming\
+    \ practice and is so cohesion. To simplify functions and increase their cohesion\
+    \ I often delegate to small, internal functions. When passing pointers around,\
+    \ I validate them, once they pass on the state and I know they are valid with\
+    \ an assertion (please note that callers prior to C99 have the macro argument\
+    \ to assert an integral constant, which requires programmers to write assert(NULL!=\
+    \ myFunction); for well-defined behavior).\n\n```\nvoid sayHelloTo(const Address*\
+    \ aGoodFriend)\n{\n    if(aGoodFriend {\n        Telegram friendlyGreetings =\
+    \ {};n        /* Add some kind words to the telegram,\n        omitted here...\
+    \ */\n        sendTelegram(&friendlyGreetings, aGoodFriend);\n    }\n    else\
+    \ {\n        error(\"Empty address not allowed\");\n    }\n}\nstatic void sendTelegram(const\
+    \ Telegram* telegram,\n    const Address* receiver)\n{\n/* At this point we know\
+    \ that telegram\n    points to a valid telegram... */\n    assert(telegram);\n\
+    \    /* ...and the receiver points to a\n    valid address. */\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Idiomatic Expressions
+
+
+    57
+
+
+    24
+
+
+    assert(receiver);
+
+
+    25
+
+
+    ```
+
+    /* Code to process the telegram omitted... */
+
+    ```
+
+
+    26
+
+
+    27
+
+
+    ```
+
+    }
+
+    ```
+
+
+    In the example above assert is a protective mechanism decorated with comments
+    describing the rationale for the assertions. Always with comments, the best ones
+    are the ones you don''t have to write because the code is already crystal clear.
+    Specifying the intent of the code is a step towards clearness and assert itself
+    proves to be an excellent construct for:
+
+
+    The idiom ASSERTION CONTEXT increases the expressiveness of the code by merging
+    the comment, describing the assertion context, what it refers to. This context
+    is added as a string, which always evaluates to true in the assertion expression.
+    The single-line assertion is now self describing in how it communicates its context:
+
+
+    # Applying the Idiom
+
+
+    +   1 assert(receiver) && "Is validated by the caller";
+
+
+    Besides its primary purpose, communicating to a human reader of code that the
+    receiver is valid, ASSERTION CONTEXT allows itself debugging. As an assertion
+    fires, it writes information about the particular to the standard error file.
+    The fact of this information is implementation-defined, but it will include the
+    text of the argument. With carefully-chosen descriptive strings in the assertions
+    it becomes, for the author of the code, to make a qualified guess about the failure
+    without looking at the source. As it provides rapid feedback, I this feature particularly
+    useful during short, incremental development cycles driven by unit-tests.
+
+
+    A drawback of ASSERTION CONTEXT is the memory used for the strings. In small embedded
+    applications it may have a noticeable impact on the size of the executable. However,
+    it is important to notice that assert is pure debug functionality and do not affect
+    a release build; compiling with NDEBUG will remove all assertions together with
+    the context strings.
+
+
+    # CONSTANTS TO THE LEFT
+
+
+    # Problem Context
+
+
+    The C language has a rich flora of operators. The language is also very liberal
+    about usage. How liberating the slogan "Trust the programmer" feel, it also less
+    protection against errors and some errors are more frequent than others. It wouldn''t
+    be too wild a guess that virtually every C programmer in a moment of serious,
+    ahead caffeine abstinence has erroneously written an assignment instead of a comparison.
+
+
+    +   1 int x = 0;
+
+
+    +   2
+
+
+    +   3 if(x = 0)
+
+
+    +   4 {
+
+
+    +   5
+
+
+    ```
+
+    /* This will never be true! */
+
+    ```
+
+
+    +   6
+
+
+    ```
+
+    }
+
+    ```
+
+
+    So, why not simply ban assignments in comparisons? Well, if I personally avoid
+    it, assignments in comparisons may sometimes actually make some sense.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\nFriend* aGoodFriend = NULL;\n...\nif(aGoodFriend = findFriendAt(address))\n\
+    {\n    sayHelloTo(aGoodFriend);\n}\nelse\n{\n    printf(\"I am not your friend\"\
+    );\n}\n```\n\nHow is the compiler supposed to differentiate between the first,\
+    \ erroneous case and the correct case?\n\n# Applying the Idiom\n\nBy keeping CONSTANTS\
+    \ TO THE LEFT in comparisons the compiler will catch an erroneous assignment.\
+    \ A statement such as:\n\n```\nif(0 = x) { }\n/* We'll get here if x is zero --\
+    \ correct! */\n```\n\nis not valid C and the compiler is forced to issue a diagnostic.\
+    \ After correcting the if-statement, the code using this idiom looks like:\n\n\
+    ```\nif(0 == x)\n{\n    /* We'll get here if x is zero -- correct! */\n}\n```\n\
+    \nThe idiom works equally well in assertions involving pointers.\n\n```\nassert(NULL\
+    \ == myNullPointer);\n```\n\nDespite its obvious advantage, the CONSTANTS TO THE\
+    \ LEFT idiom is not completely agreed upon. Many experienced programmers argue\
+    \ it makes the code harder to read and the compiler will warn for potentially\
+    \ erroneous assignments anywhere. There is certain truth to this. I would just\
+    \ like to add that it is important to notice that a compiler is _not_required\
+    \ to warn for such usage. As far as readability concerns, this idiom has been\
+    \ used for years and a C programmer has to know anyway in order to understand\
+    \ coding style by others.\n\n# Summary\n\nThe collection of idiomatic expressions\
+    \ in this chapter is by no means complete. There are many idioms in C and each\
+    \ of them solves a different problem.\nIdiomatic expressions at this level are\
+    \ really just above language constructs. Thus, the learning curve is flat. Changing\
+    \ coding style towards using them is a small step with, I believe, immediate benefits."
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# # References
+
+
+    +   - Buschmann, F., Meunier, R., Rohnert, H., Sommerlad, P., and Stal, M., "POSA,
+    A System of Patterns Volume 1", Wiley
+
+    - Dijkstra (1972). The Humble Programmer
+
+    - Gamma, E., Helm, R., Johnson, R., and Vlissides, J, "Design Patterns", Addison-Wesley
+
+    - ISO/IEC 9899:1999, The C standard
+
+    - Kafka, F. "The Metamorphosis", Addison-Wesley
+
+    - Kerievsky, J. "Refactoring to Patterns", Addison-Wesley
+
+    - Kernighan, B., and Ritchie, D., "The C Programming Language", Prentice Hall
+
+    - Martin, R. C. "Agile Software Development", Prentice Hall
+
+    - Page-Jones, A. "The Practical Guide to Structured Systems Design", Prentice
+    Hall
+
+    - Petersen, A. _The complete REACTOR sample code used in this article, _http://www.adampetersen.se/ReactorSample
+
+    - Schmidt, Stal, Rohnert, Buschmann: "Pattern-Oriented Software Architecture,
+    volume 2", Wiley
+
+    - Sedgewick, R., "Algorithms in C, Parts 1-4", Addison-Wesley
+
+    - Vlissides, J. "Pattern Hatching", Addison-Wesley'
+  merge: -1
+  pgno: 62
