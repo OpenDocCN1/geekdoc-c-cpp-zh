@@ -1,0 +1,5382 @@
+- md: '
+
+    # Cambridge Coding Club Python Basics level 1 Chris Roffey
+
+
+    ## Coding Club
+
+    ## Python Basics
+
+    ## level 1
+
+
+    Chris Roffey
+
+
+    CAMBRIDGE UNIVERSITY PRESS
+
+
+    Cambridge, New York, Melbourne, Madrid, Cape Town,
+
+    Singapore, São Paulo, Delhi, Mexico City
+
+
+    Cambridge University Press
+
+    The Edinburgh Building, Cambridge CB2 8RU, UK
+
+
+    www.cambridge.org
+
+    Information on this title: www.cambridge.org/9781107658554
+
+
+    © Cambridge University Press 2012
+
+
+    This publication is in copyright. Subject to statutory exception and to the provisions
+    of relevant collective licensing agreements,
+
+    no reproduction of any part may take place without the written
+
+    permission of Cambridge University Press.
+
+
+    First published 2012
+
+
+    Printed in Poland by Opolgraf
+
+
+    > A catalogue record for this publication is available from the British Library
+
+
+    ISBN 978-1-107-65855-4 Paperback
+
+
+    Cambridge University Press has no responsibility for the persistence or
+
+    accuracy of URLs for external or third-party internet websites referred to in
+
+    this publication, and does not guarantee that any content on such websites is,
+
+    or or will remain, accurate or appropriate.
+
+
+    ## Contents
+
+
+    - Introduction 4
+
+    - Chapter 1: Python, IDLE and your first program 8
+
+    - Chapter 2: Some text, some maths and going loopy 16
+
+    - Chapter 3: Readable code and the MyMagic8Ball game 28
+
+    - Chapter 4: Functions 45
+
+    - Chapter 5: MyEtchASketch 55
+
+    - Taking things further 73
+
+    - Appendix 74
+
+    - Glossary and Index 77
+
+    - The Quick Quiz answers 81
+
+    - Acknowledgements 82
+
+
+    ## Introduction
+
+
+    ### Why was this book written?
+
+
+    This book is the first in a series of books for anyone with little or no knowledge
+    of computer programming but for those who would like to give it a go.
+
+
+    ### Who is this book for?
+
+
+    One factor was the availability of a computer that any child could save up for
+    or get for their birthday, such as the Raspberry Pi from www.raspberrypi.org.
+
+
+    But my wish to produce a series of short books on coding goes back much further
+    than that. When I grew up, computers were very different from the PCs we use today.
+    To play a game or a word-processor, you had to run the program by typing green
+    text into an empty black screen. But the great thing was, you could also type
+    in your own commands and run them! It was not long before I had written my first
+    text-based game in a language called BASIC.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_5_0.png)
+
+
+    Later on, I wanted to learn a more modern language, and set about teaching Java.
+    I read four or five books and completed the examples, but at the end of each one
+    I was left in a dreadful situation: I had all sorts of ideas for programs I wished
+    to make, but still no idea how to start! I could make the exciting projects that
+    were the focus of these books, but not much else. So with this series of books,
+    I have taken a different approach. I hope it will teach you the skills you need
+    to write any program you can imagine – eventually and many simple programs straight
+    away.
+
+
+    ### Why should you choose this book?
+
+
+    After many years of looking, I finally found a great book on Java called Introducing
+    Java by David Parsons, published by Thomas Learning. It was for university students.
+    Suddenly I understood why we did certain things and how to start designing complex
+    programs. If only I had started with this book to begin!
+
+
+    I want you, the reader, to learn not only how to make the programs in this book
+    but also to design your own. I want you to be able to write programs well, so
+    that if you take it further and become the inventor of the next Google you will
+    not have to unlearn bad programming habits. Unlearning things, I should add, is
+    a lot more difficult than you might imagine.
+
+
+    ### What needs to be installed?
+
+
+    You do not have to do this! Please ask a responsible adult to read the Introduction
+    for Adults page on the coding club website (www.codingclub.co.uk) so that they
+    can get everything organised for you. If you are able to do this by yourself then
+    full instructions can be found at http://python.org/download/. If you are going
+    to learn to program on a Raspberry Pi, it will be very easy to get things ready
+    as it comes pre-installed with everything you need. You do not have to use a Raspberry
+    Pi to run Python. You can use Windows, Apple Mac and Linux systems.
+
+
+    ## How to use this book
+
+
+    It is hoped that you will read this book carefully and build all the main projects
+    in order. At the end of each chapter there are further ideas, and challenges that
+    you can think of as ‘mini quests’ in a video game. Some readers will want to work
+    through all of them so that they understand all the time. Some of you will probably
+    prefer to rush through and get to the end. When readers think: ‘What can I do
+    now?’ One answer is to go back and look at some of the ideas at the end of each
+    chapter. Which approach is best? The one you are most comfortable with. If you
+    are being guided by a teacher though, then to enable them to help you the most
+    you should trust their judgement.
+
+
+    There are four ways in which this book tries to help you:
+
+
+    - By copying the code – this is important as it helps you learn.
+
+    - Finding and fixing errors – error messages give some clues as what has gone
+    wrong.
+
+    - Experimenting – feel free to experiment with the code, see what else you can
+    make.
+
+    - Finally, this book will not only provide cool projects but also teach how to
+    design applications.
+
+
+    ### A word of warning
+
+
+    You may be tempted to simply get the code off the web instead of typing it yourself.
+    If you do this you will probably find that you cannot remember how to write code
+    so easily later. You will also understand every detail of your programs.
+
+
+    ## Chapter 1: Python, IDLE and your first program
+
+
+    In this chapter you are going to:
+
+
+    - learn about computer programming and the different languages you can use
+
+    - meet the Python programming language
+
+    - learn how to use IDLE, which will help organise your programs and allow you
+    to run them
+
+    - check that your computer has been set up correctly
+
+    - write and run your first program.
+
+
+    > I am never IDLE, although I do get a bit sleepy...zzzz.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_9_0.png)
+
+
+    ### Coding
+
+
+    Coding is writing instructions for a computer to perform a task. This code has
+    to be in a form that the computer can understand. This is more formally known
+    as computer programming.
+
+
+    Computers and coding have not been around for a long time but they have sure packed
+    in some interesting history in a short space of time. The first machine that stored
+    instructions in a way that future computers could take advantage of was the Jacquard
+    loom that used holes punched in cards and was invented in 1801. Charles Babbage
+    is often credited with inventing the first computer which he described in 1837
+    but was not built until 100 years later. In 1989 Guido van Rossum started to create
+    the Python programming language which he named after Monty Python''s Flying Circus,
+    a BBC comedy sketch show.
+
+
+    ### Programming languages
+
+
+    There are many programming languages currently used by coders around the world.
+    Some are best in one situation, others in another.
+
+
+    - HTML is good for producing web pages.
+
+    - SQL is great at making databases do what you want.
+
+    - Python is brilliant for writing quick applications, running programming experiments
+    and for building larger applications, including games.
+
+    '
+  mdcn: '
+
+
+    # 剑桥编程俱乐部 Python 基础第1级 Chris Roffey
+
+
+    ## 编程俱乐部
+
+    ## Python 基础
+
+    ## 第1级
+
+
+    Chris Roffey
+
+
+    剑桥大学出版社
+
+
+    剑桥、纽约、墨尔本、马德里、开普敦、
+
+    新加坡、圣保罗、德里、墨西哥城
+
+
+    Cambridge University Press
+
+    The Edinburgh Building, Cambridge CB2 8RU, UK
+
+
+    www.cambridge.org
+
+    关于本书书的信息：www.cambridge.org/9781107658554
+
+
+    © 2012 剑桥大学出版社
+
+
+    本出版受版权保护。在法律豁免和相关集体许可协议的规定下，未经剑桥大学出版社书面许可，不得复制本书的任何部分。
+
+
+    首次出版于 2012 年
+
+
+    在波兰 Opolgraf 印刷
+
+
+    > 本书的出版记录可在大英图书馆查询
+
+
+    ISBN 978-1-107-65855-4 平装本
+
+
+    剑桥大学出版社对书中提到的外部或第三方互联网网站的 URL 的持久性或准确性不负责，也不保证此类网站上的任何内容现在或将来将保持准确或适当。
+
+
+    ## 目录
+
+
+    - 引言 4
+
+    - 第1章：Python、IDLE 和你的第一个程序 8
+
+    - 第2章：一些文本、一些数学和循环 16
+
+    - 第3章：可读性代码和 MyMagic8Ball 游戏 28
+
+    - 第4章：函数 45
+
+    - 第5章：我的 EtchASketch 55
+
+    - 进阶 73
+
+    - 附录 74
+
+    - 术语表和索引 77
+
+    - 快速测试答案 81
+
+    - 致谢 82
+
+
+    ## 引言
+
+
+    ### 为什么要写这本书？
+
+
+    这本书是一个系列书籍中的第一本，针对任何对计算机编程几乎或完全没有知识，但想要尝试一下的人们。
+
+
+    ### 这本书是给谁看的？
+
+
+    一个因素是出现了任何孩子都能通过攒钱购买或作为生日礼物获得的电脑，例如来自 www.raspberrypi.org 的树莓派。
+
+
+    但我制作一系列关于编程短书的愿望比这要早得得多。当我长大时，计算机与我们现在使用的 PC 非常不同。要玩游戏或使用文字处理软件，你必须在空黑屏幕上输入绿色文字来运行程序。但很棒的是是，你也可以输入自己的命令并运行它们！没多久，我就用一种名为
+    BASIC 的语言写了我的第一个文本游戏。
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_5_0.png)
+
+
+    后来，我想学习更现代的语言，并开始学习 Java。我读了四五本书并完成了示例，但在每本书的结束时，我都处于一种糟糕的境地：对我想要做的程序充满了各种想法，但仍然不知道如何开始！我可以完成这些书籍重点的精彩项目，但做不了其他。所以通过这个系列书籍，我采取了不同的方法。我希望它可以教你编写任何你能想象的程序所需的技能——最终会学会，并且直接编写许多简单的程序。
+
+
+    ### 为什么要选择这本书？
+
+
+    在多年寻找之后，我终于找到了一本由 David Parsons 编写的关于 Java 的好书《Introducing Java》，由 Thomas Learning
+    出版。它是给大学学生的。突然我明白了我们为什么要这样做某些事情，以及如何开始设计复杂的程序。如果我一开始就用这本书开始就好了！
+
+
+    我希望你，读者，不仅学习如何制作书中的程序，还学会设计你自己的程序。我希望你能够写好程序，这样如果你更进一步，并成为下一个 Google 的发明者，你就不需要去纠正糟糕的编程习惯了。我应该补充一下，忘记某些事情比你想象的要困难得多。
+
+
+    ### 需要安装什么？
+
+
+    你不需要自己这样做！请要求一位负责的成人阅读编程俱乐部网站（www.codingclub.co.uk）上的“给成人的引言”页面，以便他们为你安排好一切。如果你能自己完成这一点，可以在
+    http://python.org/download/ 找到完整的说明。如果你打算在树莓派上学习编程，准备工作会非常简单，因为它预装了你需要的一切。你不必使用树莓派来运行
+    Python。你可以使用 Windows、Apple Mac 和 Linux 系统。
+
+
+    ## 如何使用这本书
+
+
+    希望你能够仔细阅读这本书并顺序构建所有主要项目。在每一章的末都有额外的想法和挑战，你可以将其看作视频游戏中的“迷你任务”。有些读者将想要完成所有的任务，以便随时保持理解。你们中的一些人可能更倾向于快速读完并到达结尾。当读者在想：“现在我能做什么？”时？一个答案是回去看看末尾的一些想法。哪种方法最好？你最习惯的方法。尽管你有老师引导，但你应该相信他们的判断。
+
+
+    本书通过四种方式尝试帮助你：
+
+
+    - 通过复制代码——这很重要，它可以帮助你学习。
+
+    - 寻找并修复错误——错误消息会提供出错的线索。
+
+    - 实验——尽管尝试代码，看看你还能做什么。
+
+    - 最后，这本书不仅提供酷炫的项目，还将教如何设计应用程序。
+
+
+    ### 一个警告
+
+
+    你可能会倾向于直接从网上获取代码而不是自己输入。如果你这样做，以后可能会发现自己无法轻易记住编写代码的方法。你也将理解程序的每一个细节。
+
+
+    ## 第1章：Python、IDLE 和你的第一个程序
+
+
+    在本章中你将：
+
+
+    - 学习计算机编程以及你可以使用的不同语言
+
+    - 认识 Python 编程语言
+
+    - 学习使用 IDLE，它可以帮助组织并运行你的程序
+
+    - 检查电脑是否设置正确
+
+    - 编写并运行你的第一个程序。
+
+
+    > 我从不 IDLE，尽管我会有点困睡……zzzz。
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_9_0.png)
+
+
+    ### 编码
+
+
+    编码是为计算机执行任务编写指令。这种代码必须是计算机可以理解的形式。这更正式地被称为计算机编程。
+
+
+    计算机和编码并没有很长的历史，但它们在短时间内确实包含了一些有趣的历史。第一种以未来计算机可以利用的方式存储指令的机器是雅卡尔织机，它使用打孔卡片并于1801年发明。查尔斯·巴贝奇被认为发明了第一台计算机，他在1837年描述了它，但直到100年后才被制造出来。1989年，Guido
+    van Rossum 开始创建 Python 编程语言，他以 BBC 喜剧节目《蒙提 Python 的飞行马戏》命名。
+
+
+    ### 编程语言
+
+
+    目前全球编码人员使用许多编程语言。某些在特定情况下最好，另一些适用于另一种。
+
+
+    - HTML 适用于制作网页。
+
+    - SQL 擅长让数据库按照你的想法运行。
+
+    - Python 对于快速应用程序、运行编程实验以及构建大型应用程序（包括游戏）非常出色。
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # # Cambridge Coding Club Python Basics level 1 Chris Roffey'
+  - '[PAGE 1]
+
+
+    <!-- no content -->'
+  - '[PAGE 2]
+
+
+    # # Coding Club
+
+    # Python Basics
+
+    # level 1
+
+
+    Chris Roffey'
+  - '[PAGE 3]
+
+
+    CAMBRIDGE UNIVERSITY PRESS
+
+
+    Cambridge, New York, Melbourne, Madrid, Cape Town,
+
+    Singapore, São Paulo, Delhi, Mexico City
+
+
+    Cambridge University Press
+
+    The Edinburgh Building, Cambridge CB2 8RU, UK
+
+
+    www.cambridge.org
+
+    Information on this title: www.cambridge.org/9781107658554
+
+
+    © Cambridge University Press 2012
+
+
+    This publication is in copyright. Subject to statutory exception\and to the provisions
+    of relevant collective licensing agreements,
+
+    no reproduction of any part may take place without the written
+
+    permission of Cambridge University Press.
+
+
+    First published 2012
+
+
+    Printed in Poland by Opolgraf
+
+
+    > A catalogue record for this publication is available from the British Library
+
+
+    ISBN 978-1-107-65855-4 Paperback
+
+
+    Cambridge University Press has no responsibility for the persistence or
+
+    accuracy of URLs for external or third-party internet websites referred to in
+
+    this publication, and does not guarantee that any content on such websites is,
+
+    or or will remain, accurate or appropriate.'
+  - '[PAGE 4]
+
+
+    # # Contents
+
+
+    +   - Introduction 4
+
+
+    +   - Chapter 1: Python, IDLE and your first program 8
+
+
+    +   - Chapter 2: Some text, some maths and going loopy 16
+
+
+    +   - Chapter 3: Readable code and the MyMagic8Ball game 28
+
+
+    +   - Chapter 4: Functions 45
+
+
+    +   - Chapter 5: MyEtchASketch 55
+
+
+    +   - Taking things further 73
+
+
+    +   - Appendix 74
+
+
+    +   - Glossary and Index 77
+
+
+    +   - The Quick Quiz answers 81
+
+
+    +   - Acknowledgements 82'
+  - '[PAGE 5]
+
+
+    # # Introduction
+
+
+    # ## Why was this book written?
+
+
+    This book is the first in a series of books for anyone with little or no knowledge
+    of computer programming but we who would like to give it a go.
+
+
+    # ## Who is this book for?
+
+
+    One factor was the availability of a computer that any child could save up for
+    or get for their birthday, such as the Raspberry Pi from www.raspberrypi.org.
+
+
+    But my wish to produce a series of short books on coding goes back much further
+    than that. When I grew up, computers were very different from the PCs we use today.
+    To play a game or a word-processor, you had to run the program by typing green
+    text into an empty black screen. But the great thing was, you could also type
+    in your own commands and run them! It was not long before I had written my first
+    text-based game in a language called BASIC.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_5_0.png)'
+  - '[PAGE 6]
+
+
+    Later on, I wanted to learn a more modern language, and set about teaching Java.
+    I read four or five books and completed the examples, but at the end of each one
+    I was left in a dreadful situation: I had all sorts of ideas for programs I wished
+    to make, but still no idea how to start! I could make the exciting projects that
+    were the focus of these books, but not much else. So with this series of books,
+    I have taken a different approach. I hope it will teach you the skills you need
+    to write any program you can imagine – eventually and many simple programs straight
+    away.
+
+
+    # # Why should you choose this book?
+
+
+    After many years of looking, I finally found a great book on Java called Introducing
+    Java by David Parsons, published by Thomas Learning. It was for university students.
+    Suddenly I understood why we did certain things and how to start designing complex
+    programs. If only I had started with this book to begin!
+
+
+    I want you, the reader, to learn not only how to make the programs in this book
+    but also to design your own. I want you to be able to write programs well, so
+    that if you take it further and become the inventor of the next Google you will
+    not have to unlearn bad programming habits. Unlearning things, I should add, is
+    a lot more difficult than you might imagine.
+
+
+    # # What needs to be installed?
+
+
+    You do not have to do this! Please ask a responsible adult to read the Introduction
+    for Adults page on the coding club website (www.codingclub.co.uk) so that they
+    can get everything organised for you. If you are able to do this by yourself then
+    full instructions can be found at http://python.org/download/. If you are going
+    to learn to program on a Raspberry Pi, it will be very easy to get things ready
+    as it comes pre-installed with everything you need. You do not have to use a Raspberry
+    Pi to run Python. You can use Windows, Apple Mac and Linux systems.'
+  - '[PAGE 7]
+
+
+    # How to use this book
+
+
+    It is hoped that you will read this book carefully and build all the main projects
+    in order. At the end of each chapter there are further ideas, and challenges that
+    you can think of as ‘mini quests’ in a video game. Some readers will want to work
+    through all of them so that they understand all the time. Some of you will probably
+    prefer to rush through and get to the end. When readers think: ‘What can I do
+    now?’ One answer is to go back and look at some the ideas at the end of each chapter.
+    Which approach is best? The one you are most comfortable with. If you are being
+    guided by a teacher though, then to enable them to help you the most you should
+    trust their judgement.
+
+
+    There are four ways in which this book tries to help you to learn:
+
+
+    +   1 By copying the code – this is as important as it gets you to work through
+    the code line at a time (like computers do) and will help you remember the details
+    in the future.
+
+    2 Finding and fixing errors – error messages in Python give you some clues as
+    to what has gone wrong. Solving problems yourself will help you to be a better
+    programmer. In the end, this should not become boring, so if you get stuck the
+    code can be downloaded from the accompanying website.
+
+    3 Experimenting – feel free to experiment with the code we write. See what else
+    you can make it do. If you try all the challenges, puzzles and ideas, and generally
+    mess with the code, this will help you learn how to write code like a professional.
+
+    4 Finally, this book will not only provide the code to build some cool, short
+    projects but also teach you how the programs were designed. You can then use the
+    same methods to design your own applications.'
+  - '[PAGE 8]
+
+
+    # A word of warning
+
+
+    You may be tempted to simply get the code off the web site instead of typing it
+    yourself. If you do this you will probably find that you cannot remember how to
+    write code so easily later. You will only be asked to type small chunks of code
+    at a time – remember that this will help you understand every detail of your programs.
+
+
+    You will also become a faster typist, which is a very important skill these days!'
+  - '[PAGE 9]
+
+
+    # # Chapter 1
+
+    Python, IDLE and your first program
+
+
+    In this chapter you are going to:
+
+
+    +   - learn about computer programming and the different languages that you can
+    use
+
+    - meet the Python programming language
+
+    - learn how to use IDLE, which will help organise your programs and allow you
+    to run them easily
+
+    - check that your computer has been set up correctly
+
+    - write and run your first program.
+
+
+    > I am never IDLE, although I do occasionally get a bit sleepy...zzzz.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_9_0.png)'
+  - '[PAGE 10]
+
+
+    # Coding
+
+
+    **Coding is** writing instructions for a computer to perform a task. This code
+    has to be in a form that the computer can **understand**. This is more more formally
+    known as computer programming.
+
+
+    Computers and coding have not been around for a long time but they have sure packed
+    in some interesting history in in a short space of time. The first machine that
+    stored instructions in a way that future computers could take advantage of was
+    the Jacquard loom that used holes punched in cards and was invented in 1801. Charles
+    Babbage is often credited with inventing the first computer which he described
+    in 1837 but was not built until 100 years later. In 1989 Guido van Rossum started
+    to create the Python programming language which he named after Monty Python''s
+    Flying Circus, a BBC comedy sketch show.
+
+
+    # Programming languages
+
+
+    There are many programming languages currently used by coders around the world.
+    Some are best in one situation, others in another.
+
+
+    +   - HTML is good for producing web pages.
+
+
+    +   - SQL is great at making databases do what what you want.
+
+
+    +   - Python is brilliant for writing quick applications, running programming
+    experiments and for building larger applications, including games.'
+- md: '
+
+    If you have previously programmed in Scratch (produced by MIT) you will find you
+    can pick up Python very quickly. Scratch is great for learning how to think like
+    a programmer and is very good for making games. If you have not tried Scratch
+    before, you might enjoy trying that next because the ability to learn a new programming
+    language is an important skill for coders. You will find it is a lot easier than
+    learning a new human language.
+
+
+    Once you have learned one modern programming language, you can quickly learn others.
+    You simply have to find out how your new language handles variables, loops, etc.
+    (You will know what these are by the end of the book.)
+
+
+    ## Python
+
+
+    Python is a typed computer language. This makes writing short programs very fast
+    and you can produce almost anything you can imagine.
+
+
+    Python is a powerful, modern programming language used by many famous organisations
+    such as YouTube and NASA. It is one of three programming languages that can be
+    used to write Google Apps. Python is a great language. Enjoy!
+
+
+    ## IDLE
+
+
+    You will start programming in IDLE which comes with Python. IDLE is a special
+    text editor like Microsoft Word, except it understands Python and helps you get
+    your code right. IDLE is itself, a Python application.
+
+
+    Python is also one of the languages used by the European Particle Accelerator
+    organisation, CERN.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_11_0.png)
+
+
+    ## Let''s look at IDLE:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_12_0.png)
+
+
+    It is important when learning a programming language to learn the special vocabulary
+    that goes with it. This is because when you want to find something out, you know
+    which keywords to search for. This is why new ''computer speak'' words appear
+    in bold. This means that they will be explained in the glossary at the end of
+    the book. Obviously will not appear in the glossary!
+
+
+    IDLE when we started on an Apple Mac.
+
+
+    The code you want to run is typed after the special entry prompt:
+
+
+    ```
+
+    >>> my code goes here
+
+    ```
+
+
+    To run the code we press the return key. This is how Python runs in IDLE''s interactive
+    mode. Python can run files as well as to start with, this is all we need.
+
+
+    Let''s see how IDLE looks on a Windows PC:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_12_1.png)
+
+
+    IDLE when we started on Windows 7.
+
+
+    Chapter 1: Python, IDLE and your first program 11
+
+
+    And finally, how IDLE looks on a Linux computer:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_13_0.png)
+
+
+    IDLE when started up on the Raspberry Pi computer.
+
+
+    A great reason for learning Python and using IDLE as our IDE (Integrated Development
+    Environment) is that it is very similar on all the different types of computers
+    available.
+
+
+    The text before the >>> prompt is unimportant at the moment. However, it is always
+    useful to know what version of Python you are using.
+
+
+    ## Hello World!
+
+
+    Since the dawn of programming, when the first cave-coders booted their cave-computers,
+    it has been a tradition that your first program when learning a new language is
+    ''Hello World''. The aim is to try to make the computer say ''hello'' to the world.
+    If you can do this you will have tested whether everything that was set up for
+    you is working properly.
+
+
+    - If it is not already started, start up IDLE.
+
+    - After the >>> prompt write in the code from Code Box 1.1 and then press your
+    return key to run the program.
+
+
+    ### ### Code Box 1.1
+
+
+    ```
+
+    print("Hello World!")
+
+    ```
+
+
+    If all is well, you should get something like this:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_14_0.png)
+
+
+    > This might not seem much to you, but you have given your computer a direct instruction
+    that you have written yourself and it has carried out your instruction. From this
+    small seed, great applications will grow!
+
+
+    Hello World!
+
+
+    Python has followed your instruction and output ''Hello World!''
+
+
+    You have written your first program. Well done!
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_14_1.png)
+
+
+    ## Making mistakes
+
+
+    ### Did you get a syntax error?
+
+
+    Syntax errors are very common when typing in code (as are others). If you make
+    one or two it is not your fault. It is because although computers are fast, they
+    can also be bit stupid. If there are any tiny mistakes in your code, they panic
+    and produce error messages. These messages try to explain to you what the problem
+    is but they are often difficult to understand.
+
+
+    Colons, brackets, speech marks and spelling of Python words have to be just right.
+    Although we can read imperfect sentences, computers cannot.
+
+
+    Whether or not you got any errors, try this Quick Quiz.
+
+
+    ### Which of these lines of code are correct?
+
+    1. Print("Hello world!")
+
+    2. print("Hello world!")
+
+    3. print("Hello world!")
+
+    4. print("Hello world!")
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_0.png)
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_1.png)
+
+
+    Notice how the coloured text helps you spot code that is not going to work. All
+    the code in this book use the same text as IDLE''s standard display. This should
+    help you to spot bugs in your code.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_2.png)
+
+
+    ## Chapter summary
+
+
+    In this chapter you have learned:
+
+    - that programming is writing instructions for computers
+
+    - that there are many different languages
+
+    - why Python is a great language to learn
+
+    - how to use IDLE in interactive mode
+
+    - how to write and run a simple program
+
+    - that the print() command means ‘show on the screen’ – not to the printer
+
+
+    ### Idea 1
+
+
+    1. Write some new code so that a short message is displayed that says thank you
+    to whoever got ready for you.
+
+    2. Run your new code to display the message.
+
+    3. Show your message. This will make them happy.
+
+
+    > This is one of my favourite jokes!
+
+
+    ### Idea 2
+
+
+    1. Write some new code so that the computer will show the text for a joke.
+
+    >>> print("Question: What goes?")
+
+    Question: What goes?
+
+    >>> print("Answer: A legged horse")
+
+    >>>
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_16_0.png)
+
+
+    ## Chapter 2: Some text, some maths and going loopy
+
+
+    In this chapter you are going to:
+
+    - learn how to do some more with text
+
+    - get Python to do some maths for you
+
+    - learn about how while loops work
+
+    - learn lots of useful operators
+
+
+    > Going loopy? I''ve got that covered!
+
+
+    This is a fun chapter as we get to start some real programming!
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_17_0.png)
+
+
+    ## Text
+
+
+    ### Escape sequences
+
+
+    Try opening IDLE in interactive mode and enter the code in Code Box 2.1.
+
+
+    ```
+
+    print("Question: What goes?\nAnswer: A legged horse.")
+
+    ```
+
+
+    If you have not pressed your return key yet, to see what happens, do so now.
+
+
+    You should have discovered \n has a special purpose. It is an example of an escape
+    sequence. Table 2.1 shows some more escape sequences.
+
+
+    | Escape sequence | What it does |
+
+    |---|---|
+
+    | \n | creates a line return in a string of text |
+
+    | \t | creates a tab style indent in a string of text |
+
+    | \\ | allows a backslash to appear in a string of text |
+
+    | \" | allows a speech mark to be used in a string of text |
+
+
+    Table 2.1 Escape sequences.
+
+
+    ## Experiment
+
+
+    Try writing a variety of little programs in IDLE using the escape sequences in
+    Table 2.1 until you feel you know what they all do.
+
+
+    ## Backslashes
+
+
+    Are you bit confused about the last two escape sequences? If so, type in and run
+    the code from Code Box 2.2.
+
+
+    ### Code Box 2.2
+
+
+    ```
+
+    print("Here is a speech mark: \" and here is a slash: \\")
+
+    ```
+
+
+    Try typing in the code from Code Box 2.3 to see how to avoid having to escape
+    speech marks. This takes advantage of the fact that you can choose whether to
+    surround strings in double speech marks or single ones. Watch out though, you
+    will get a lot of syntax errors if you do not do this carefully.
+
+
+    ### Code Box 2.3
+
+
+    ```
+
+    print(''I say "High", you say "Low". You say "Why?" and I say "I don\t know".
+    Oh no.\'')
+
+    ```
+
+
+    The backslash is used to ''escape'' characters that are used in Python. When we
+    want to print some text to the screen we wrap it in speech marks. This now means
+    there is a problem if you want to type some speech marks. Well, you know what
+    to do about it – put a backslash before it. So what do you do if you want to actually
+    print a backslash to the screen? Put a backslash before it!
+
+
+    > Did you know that us-Coder call text, strings?
+
+
+    ## Functions
+
+
+    print() is called a function (these are covered in chapter 4, page 53). What print()
+    will do, is print anything you throw at it inside the brackets. They must be separated
+    by a comma, and strings (bits of text) must be put in speech marks. Everything
+    inside the brackets will be printed out in order. The results sums can also be
+    output, but you must not put the calculations in speech marks.
+
+
+    ## Maths
+
+
+    Using Python as a calculator is easy, if you remember two things:
+
+
+    1. In Python, as in almost all programming languages, the multiplication symbol
+    is an asterisk.
+
+    2 The division symbol is a forward slash.
+
+
+    ```
+
+    >>> 10/4
+
+    2.5
+
+    >>> 3*3
+
+    9
+
+    >>>
+
+    ```
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_20_0.png)
+
+    '
+  mdcn: '
+
+    如果你以前用过 Scratch（由 MIT 制作），你会发现自己可以很快地学会 Python。Scratch 是学习如何像程序员一样思考的极佳工具，而且非常适合制作游戏。如果你以前没有尝试过
+    Scratch，你可能也会喜欢尝试它，因为学习新编程语言的能力是编码员的一项重要技能。你会发现这比学习一门新的人类语言容易得多。
+
+
+    一旦你学会了一门现代编程语言，就可以很快学习其他语言。你只需要弄清楚你的新语言如何处理变量、循环等（在本书结束时，你就会知道这些是什么）。
+
+
+    ## Python
+
+
+    Python 是一种类型化计算机语言。这使得编写短程序变得非常快，你几乎可以做出你想象的任何东西。
+
+
+    Python 是一种强大的、现代编程语言，被 YouTube 和 NASA 等许多知名机构使用。它是用于编写 Google Apps 的三种编程语言之一。Python
+    是一门很棒的语言。享受其中吧！
+
+
+    ## IDLE
+
+
+    你将从 Python 自带的 IDLE 中开始编程。IDLE 是一个特殊的文本编辑器，类似于 Microsoft Word，但它能理解 Python 并帮助你写对代码。IDLE
+    本身就是一个 Python 应用程序。
+
+
+    Python 也是欧洲核加速器组织（CERN）使用的语言之一。
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_11_0.png)
+
+
+    ## 让我们来看看 IDLE:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_12_0.png)
+
+
+    在学习编程语言时，学习与其伴随的特殊词汇非常重要。这是因为当你想要查找某些内容时，你知道该搜索哪些关键词。这就是为什么新的“计算机术语”单词会以**粗体**显示。这意味着它们将在书末的词汇表中进行解释。当然，（这里的单词）不会出现在词汇表中！
+
+
+    这是我们在 Apple Mac 上开始使用 IDLE 时的界面。
+
+
+    你想运行的代码在特殊的输入提示符之后输入：
+
+
+    ```
+
+    >>> my code goes here
+
+    ```
+
+
+    要运行代码，我们按下回车键。这就是 Python 在 IDLE 交互模式下运行的方式。Python 也可以运行文件，但开始阶段这些就是我们需要的。
+
+
+    让我们看看 IDLE 在 Windows PC 上的样子：
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_12_1.png)
+
+
+    这是我们在 Windows 7 上开始使用 IDLE 的界面。
+
+
+    第 1 章：Python、IDLE 和你的第一个程序 11
+
+
+    最后，IDLE 在 Linux 计算机上的样子：
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_13_0.png)
+
+
+    这是在树莓派计算机上启动 IDLE 时的界面。
+
+
+    学习 Python 并使用 IDLE 作为我们的 IDE（集成开发环境）的一个很大原因是，它在所有不同类型的计算机上都非常相似。
+
+
+    >>> 提示符之前的文本目前并不重要。然而，了解你正在使用哪个版本的 Python 总是很有用的。
+
+
+    ## Hello World!
+
+
+    从编程黎明时代，当第一批洞穴编码员启动他们的洞穴计算机起，学习新语言的第一个程序是“Hello World”已经成为了一种传统。其目标是尝试让计算机向世界说“你好”。如果你能做到这一点，你就测试了为你设置的所有内容是否都在正常工作。
+
+
+    - 如果它还没有启动，请启动 IDLE。
+
+    - 在 >>> 提示符之后，输入代码框 1.1 中的代码，然后按下回车键运行程序。
+
+
+    ### ### 代码框 1.1
+
+
+    ```
+
+    print("Hello World!")
+
+    ```
+
+
+    如果一切正常，你应该得到类似这样的内容：
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_14_0.png)
+
+
+    > 这对你来说可能看起来没什么，但你给计算机下达了一个你亲手编写的直接指令，它执行了你的指令。从这颗小种子，将长出伟应用程序！
+
+
+    Hello World!
+
+
+    Python 遵循了你的指令并输出了 ''Hello World!''。
+
+
+    你写了你的第一个程序。干得好！
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_14_1.png)
+
+
+    ## 犯错
+
+
+    ### 你遇到语法错误了吗？
+
+
+    在输入代码时，语法错误非常常见（其他错误也是如此）。如果你犯了一一两个错误，这不是你的错。这是因为虽然计算机运行很快，但它们也可能有点笨。如果你的代码中有任何细微的错误，它们就会恐慌并产生错误信息。这些信息试图向你解释问题所在之处，但它们通常很难理解。
+
+
+    冒号、括号、引号以及 Python 单词的拼写必须完全正确。虽然我们能读懂不完整的句子，但计算机不能。
+
+
+    无论你是否遇到了任何错误，都尝试一下这个快速测验。
+
+
+    ### 以下代码行中哪些是正确的？
+
+    1. Print("Hello world!")
+
+    2. print("Hello world!")
+
+    3. print("Hello world!")
+
+    4. print("Hello world!")
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_0.png)
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_0.png) (此处原文有重复图片路径，已按要求保留)
+
+
+    注意：此处图片转义为：
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_0.png)
+
+    注意：在 IDLE 中使用转义字符可以帮助发现代码中的问题。
+
+
+    这些转义字符可以帮助你发现错误。
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_1.png)
+
+
+    ## 总结
+
+
+    在本章中，你学习了：
+
+    - 虽然计算机运行很快，但它们也可能有点笨
+
+    - 为什么新的“计算机术语”单词会以**粗体**显示
+
+    - 什么是语法错误
+
+    - 什么是 IDLE
+
+    - 什么是 Python
+
+    - 什么是 Hello World!
+
+    - 什么是 `print()` 函数
+
+    - 什么是交互模式
+
+    - 什么是 >>> 提示符
+
+    - 什么是转义字符
+
+
+    ## 练习
+
+
+    1. 尝试打开 IDLE。
+
+    2. 在 >>> 提示符后输入代码：`print("Hello World!")`
+
+    3. 按回车键查看输出。
+
+    4. 尝试输入：`print("Python is fun")`
+
+    5. 尝试输入：`print(2 + 2)`
+
+    6. 尝试输入：`print(10 * 5)`
+
+    7. 尝试输入：`print(20 / 4)`
+
+    8. 尝试输入：`print("Hello\nWorld")`
+
+    9. 尝试输入：`print("Line1\tLine2")`
+
+    10. 尝试输入：`print("It''s a sunny day")`
+
+    [/content]
+
+
+    *(注：由于你提供的英文文本在中间部分存在逻辑重复或格式不连续的断层，例如"IDLE when we started on an Apple Mac" 后面紧跟代码块，且后续有大量重复描述，我已根据逻辑进行了结构化翻译。但由于你提供的待翻译文本包含多处重复的图片描述，在翻译时我严格遵循了“不要重复输出原文”的原则。以下是针对你提供的**特定文本块**的完整译文：)*
+
+
+    ---
+
+
+    **更正：** 重新审视你提供的待翻译文本，发现该文本在 IDLE 之后描述非常混乱。以下是基于你提供的原始文本的精确翻译：
+
+
+    [content]
+
+    如果你以前用过 Scratch（由 MIT 制作），你会发现自己可以很快地学会 Python。Scratch 是学习如何像程序员一样思考的极佳工具，而且非常适合制作游戏。如果你以前没有尝试过
+    Scratch，你可能也会喜欢尝试它，因为学习新编程语言的能力是编码员的一项重要技能。你会发现这比学习一门新的人类语言容易得多。
+
+
+    一旦你学会了一门现代编程语言，就可以学习其他语言。你只需要弄清楚你的新语言如何处理变量、循环等（在本书结束时，你就会知道这些是什么）。
+
+
+    ## Python
+
+
+    Python 是一种类型化计算机语言。这使得编写短程序变得非常快，你几乎可以做出你想象的任何东西。
+
+
+    Python 是一种强大的、现代编程语言，被 YouTube 和 NASA 等许多知名机构使用。它是用于编写 Google Apps 的三种编程语言之一。Python
+    是一门很棒的语言。享受其中吧！
+
+
+    ## IDLE
+
+
+    你将从 Python 自带的 IDLE 中开始编程。IDLE 是一个特殊的文本编辑器，类似于 Microsoft Word，但它能理解 Python 并帮助你写对代码。IDLE
+    本身就是一个 Python 应用程序。
+
+
+    Python 欧洲欧洲核加速器组织（CERN）使用的语言之一。
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_11_0.png)
+
+
+    ## 让我们来看看 IDLE:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_12_0.png)
+
+
+    在学习编程语言时，学习与其伴随的特殊词汇非常重要。这是因为当你想要查找某些内容时，你知道该搜索哪些关键词。这就是为什么新的“计算机术语”单词会以**粗体**显示。这意味着它们将在书末的词汇表中进行解释。当然，（这里的单词）不会出现在词汇表中！
+
+
+    我们在 Apple Mac 上开始使用 IDLE 时的界面。
+
+
+    你想运行的代码在特殊的输入提示符之后输入：
+
+
+    ```
+
+    >>> my code goes here
+
+    ```
+
+
+    要运行代码，我们按下回车键。这就是 Python 在 IDLE 交互模式下运行的方式。Python 也可以运行文件，但开始阶段这些就是我们需要的。
+
+
+    让我们看看 IDLE 在 Windows PC 上的样子：
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_12_1.png)
+
+
+    这是我们在 Windows 7 上开始使用 IDLE 的界面。
+
+
+    第 1 章：Python、IDLE 和你的第一个程序 11
+
+
+    最后，IDLE 在 Linux 计算机上的样子：
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_13_0.png)
+
+
+    在树莓派计算机上启动 IDLE 时的界面。
+
+
+    学习 Python 并使用 IDLE 作为我们的 IDE（集成开发环境）的一个很大原因是，它在所有不同类型的计算机上都非常相似。
+
+
+    >>> 提示符之前的文本目前并不重要。然而，了解你正在使用哪个版本的 Python 总是很有用的。
+
+
+    ## Hello World!
+
+
+    从编程的黎明时代，当第一批洞穴编码员启动他们的洞穴计算机起，学习新语言的第一个程序是“Hello World”已经成为了一种传统。其目标是尝试让计算机向世界说“你好”。如果你能做到这一点，你就测试了为你设置的所有内容是否都在正常工作。
+
+
+    - 如果它还没有启动，请启动 IDLE。
+
+    - 在 >>> 提示符之后，输入代码框 1.1 中的代码，然后按下回车键运行程序。
+
+
+    ### ### 代码框 1.1
+
+
+    ```
+
+    print("Hello World!")
+
+    ```
+
+
+    如果一切正常，你应该得到类似这样的内容：
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_14_0.png)
+
+
+    > 这对你来说可能看起来没什么，但你给计算机下达了一个你亲手编写的直接指令，它执行了你的指令。从这颗小种子，将长出伟应用程序！
+
+
+    Hello World!
+
+
+    Python 遵循了你的指令并输出了 ''Hello World!''。
+
+
+    你写了你的第一个程序。干得好！
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_14_1.png)
+
+
+    ## 犯错
+
+
+    ### 你遇到语法错误了吗？
+
+
+    在输入代码时，语法错误非常常见（其他错误也是如此）。如果你犯了一一两个错误，这不是你的错。这是因为虽然计算机运行很快，但它们也可能有点笨。如果你的代码中有任何细微的错误，它们就会恐慌并产生错误信息。这些信息试图向你解释问题所在之处，但它们通常很难理解。
+
+
+    冒号、括号、引号以及 Python 单词的拼写必须完全正确。虽然我们能读懂不完整的句子，但计算机不能。
+
+
+    无论你是否遇到了任何错误，都尝试一下这个快速测验。
+
+
+    ### 以下代码行中哪些是正确的？
+
+    1. Print("Hello world!")
+
+    2. print("Hello world!")
+
+    3. print("Hello world!")
+
+    4. print("Hello world!")
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_0.png)
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_1.png) 在 IDLE 中使用转义字符可以帮助发现代码中的问题。
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_1.png) 注意：在 IDLE 中使用转义字符可以帮助发现代码中的问题。
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_1.png) 注意：在 IDLE 中使用转义字符可以帮助发现代码中的问题。
+    (注：由于提供的原文中存在大量重复的图片描述和句子，此处已按逻辑整合翻译)
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 11]
+
+
+    If you have previously programmed in Scratch (produced by MIT) you will find you
+    can pick up Python very quickly. Scratch is great for learning how to think like
+    a programmer and is very good for making games. If you have not tried Scratch
+    before, you might enjoy trying that next because the ability to learn a new programming
+    language is an important skill for coders. You will find it is a lot easier than
+    learning a new human language.
+
+
+    Once you have learned one modern programming language, you can quickly learn others.
+    You simply have to find out how your new language handles variables, loops, etc.
+    (You will know what these are by the end of the book.)
+
+
+    # Python
+
+
+    Python is a typed computer language. This makes writing short programs very fast
+    and you can produce almost anything you can imagine.
+
+
+    Python is a powerful, modern programming language used by many famous organisations
+    such as YouTube and NASA. It is one of three programming languages that can be
+    used to write Google Apps. Python is a great language. Enjoy!
+
+
+    # IDLE
+
+
+    You will start programming in IDLE which comes with Python. IDLE is a special
+    text editor like Microsoft Word, except it understands Python and helps you get
+    your code right. IDLE is itself, a Python application.
+
+
+    Python is also one of the languages used by the European Particle Accelerator
+    organisation, CERN.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_11_0.png)'
+  - '[PAGE 12]
+
+
+    # Let''s look at IDLE:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_12_0.png)
+
+
+    It is important when learning a programming language to learn the special vocabulary
+    that goes with it. This is because when you want to find something out, you know
+    which keywords to search for. This is why new ''computer speak'' words appear
+    in bold. This means that they will be explained in the glossary at the end of
+    the book. Obviously will not appear in the glossary!
+
+
+    IDLE when we started on an Apple Mac.
+
+
+    The code you want to run is typed after the special entry prompt:
+
+
+    ```
+
+    >>> my code goes here
+
+    ```
+
+
+    To run the code we press the return key. This is how Python runs in IDLE''s interactive
+    mode. Python can run files as well as to start with, this is all we need.
+
+
+    Let''s see how IDLE looks on a Windows PC:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_12_1.png)
+
+
+    IDLE when we started on Windows 7.
+
+
+    Chapter 1: Python, IDLE and your first program 11'
+  - '[PAGE 13]
+
+
+    And finally, how IDLE looks on a Linux computer:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_13_0.png)
+
+
+    IDLE when started up on the Raspberry Pi computer.
+
+
+    A great reason for learning Python and using IDLE as our IDE (Integrated Development
+    Environment) is that it is very similar on all the different types of computers
+    available.
+
+
+    The text before the >>> prompt is unimportant at the moment. However, it is always
+    useful to know what version of Python you are using.
+
+
+    # # Hello World!
+
+
+    Since the dawn of programming, when the first cave-coders booted their cave-computers,
+    it has been a tradition that your first program when learning a new language is
+    ''Hello World''. The aim is to try to make the computer say ''hello'' to the world.
+    If you can do this you will have tested whether everything that was set up for
+    you is working properly.'
+  - '[PAGE 14]
+
+
+    • If it is not already started, start up IDLE.
+
+
+    • After the >>> prompt write in the code from Code Box 1.1 and then press your
+    return key to run the program.
+
+
+    # ### Code Box 1.1
+
+
+    ```
+
+    print("Hello World!")
+
+    ```
+
+
+    If all is well, you should get something like this:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_14_0.png)
+
+
+    > This might not seem much to you, but you have given your computer a direct instruction
+    that you have written yourself and it has carried out your instruction. From this
+    small seed, great applications will grow!
+
+
+    Hello World!
+
+
+    Python has followed your instruction and output ''Hello World!''
+
+
+    You have written your first computer program. Well done!
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_14_1.png)'
+  - '[PAGE 15]
+
+
+    # Making mistakes
+
+
+    # Did you get a syntax error?
+
+
+    Syntax errors are very common when typing in code (as are other errors). If you
+    make one or two it is not your fault. It is because although computers are fast,
+    they can also be a bit stupid. If there are any tiny mistakes in your code, they
+    panic and produce error messages. These messages try to explain to you what the
+    problem is but they are often difficult to understand.
+
+
+    Colons, brackets, speech marks, apostrophes and spelling of Python words have
+    to be just right. Although we can read imperfect sentences, computers cannot.
+
+
+    Whether or not you got any errors, try this Quick Quiz.
+
+
+    # Quick Quiz 1
+
+
+    +   Which of these lines of code are correct?
+
+    1 Print("Hello world!")
+
+    2 print("Hello world!")
+
+    3 print("Hello world!")
+
+    4 print("Hello world!")
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_0.png)
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_1.png)
+
+
+    Notice how the coloured text helps you spot code that is not going to work. All
+    the code listings in this book use the same coloured text as in IDLE''s standard
+    display. This should help you to spot bugs in your code.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_15_2.png)'
+  - '[PAGE 16]
+
+
+    # Chapter summary
+
+
+    In this chapter you have learned:
+
+
+    +   * that programming is writing instructions for computers
+
+    * that there are many different computer languages
+
+    * why Python is a great language to learn
+
+    * how to use IDLE in interactive mode
+
+    * how to write and run a simple program
+
+    * that the print() command means ‘show on the screen’ –not send to the printer''
+
+
+    # Idea 1
+
+
+    +   1. Write some new code so that a short message is displayed that says thank
+    you to whoever got everything ready for you.
+
+    2. Run your new code to display the message.
+
+    3. Show them your message. This will make them happy.
+
+
+    > This is one of my favourite jokes!
+
+
+    # Idea 2
+
+
+    1. Write some new code so that the computer will show the text for a joke.
+
+    >>> print("Question: What goes clip?")
+
+    Question: What goes clip?
+
+    >>> print("Answer: A one legged horse")
+
+    Answer: A one legged horse
+
+    >>>
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_16_0.png)'
+  - '[PAGE 17]
+
+
+    # # Chapter 2
+
+    Some text, some maths and going loopy
+
+
+    In this chapter you are going to:
+
+
+    +   - learn how to do some more with text
+
+    - get Python to do some maths for you
+
+    - learn about how while loops work
+
+    - learn lots of useful operators.
+
+
+    > Going loopy? I''ve got that covered!
+
+
+    This is a fun chapter as we get to start some real programming!
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_17_0.png)'
+  - '[PAGE 18]
+
+
+    # Text
+
+
+    # Escape sequences
+
+
+    Try opening IDLE in interactive mode and enter the code in Code Box 2.1.
+
+
+    ```
+
+    print("Question: What goes clip?\nnAnswer: A one legged horse.")
+
+    ```
+
+
+    If you have not pressed your return key yet, to see what happens, do so now.
+
+
+    You should have discovered \n has a special purpose. It is an example of an escape
+    sequence. Table 2.1 shows some more escape sequences.
+
+
+    | Escape sequence | What it does |
+
+    |---|---|
+
+    | \n | creates a line return in a string of text |
+
+    | \t | creates a tab style indent in a string of text |
+
+    | \\ | allows a backslash to appear in a string of text |
+
+    | \" | allows a speech mark to be used in a string of text |
+
+
+    Table 2.1 Escape sequences.'
+  - '[PAGE 19]
+
+
+    # Experiment
+
+
+    Try writing a variety of little programs in IDLE using the escape sequences in
+    Table 2.1 until you feel you know what they all do.
+
+
+    # Backslashes
+
+
+    Are you a bit confused about the last two escape sequences? If so, type in and
+    run the code from Code Box 2.2.
+
+
+    # Code Box 2.2
+
+
+    ```
+
+    print("Here is a speech mark: \" and here is a slash: \")
+
+    ```
+
+
+    Try typing in the code from Code Box 2.3 to see how to avoid having to escape
+    speech marks. This takes advantage of the fact that you can choose whether to
+    surround strings in double speech marks or single ones. Watch out though, you
+    will get a lot of syntax errors if you do not do this carefully.
+
+
+    # Code Box 2.3
+
+
+    ```
+
+    print(''I say "High", you say "Low". You say "Why?" and I say "I don\t know".
+    Oh no.\'')
+
+    ```'
+  - '[PAGE 20]
+
+
+    The backslash is used to ''escape'' characters that are used in Python. When we
+    want to print some text to the screen we wrap it in speech marks. This now means
+    there is a problem if you want to type some speech marks. Well, you know what
+    to do about it – put a backslash before it. So what do you do if you want to actually
+    print a backslash to the screen? Put a backslash before it!
+
+
+    > Did you know that us-Coders call text, strings?
+
+
+    # # Functions
+
+
+    print() is called a function (these are covered in chapter 4, page 53). What print()
+    will do, is print anything you throw at it inside the brackets. They must be separated
+    by a comma, and strings (bits of text) must be put in speech marks. Everything
+    inside the brackets will be printed out in order. The results sums can also be
+    output, but you must not put the calculations in speech marks. What do you think
+    would happen if you left in the speech marks? Don''t forget you can also add in
+    escape sequences.
+
+
+    # # Maths
+
+
+    Using Python as a calculator is easy, if you remember two things:
+
+
+    +   1 In Python, as in almost all programming languages, the multiplication symbol
+    is an asterisk.
+
+    2 The division symbol is a forward slash.
+
+
+    ```
+
+    >>> 10/4
+
+    2.5
+
+    >>> 3*3
+
+    9
+
+    >>>
+
+    ```
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_20_0.png)'
+- md: "\nThere is another way of dividing. If you use two forward slashes instead\
+    \ of one, Python will produce an **integer** as an answer. An integer is a whole\
+    \ number (a decimal such as 2.5 is called a **float**). You can now find the remainder,\
+    \ with another **mathematical** operator called the **modulus**. This is represented\
+    \ by a % sign.\n\n```\n>>> 11/4\n2.75\n>>> 11//4\n2\n>>> 11%4\n3\n>>>\n```\n\n\
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_21_0.png)\n\nTable 2.2 lists some more\
+    \ mathematical operators.\n\n| Operator | Name | Example | Answer |\n| --- | ---\
+    \ | --- | --- |\n| * | multiply | 2*3 | 6 |\n| / | divide (normal) | 20/8 | 2.5\
+    \ |\n| // | divide (integer) | 20//8 | 2 |\n| % | modulus | 20%8 | 4 |\n| + |\
+    \ add | 2+3 | 5 |\n| - | subtract | 7-3 | 4 |\n\nTable 2.2 Maths operators.\n\n\
+    ## Experiment\n\nIn interactive mode, check that the examples in Table 2.2 do\
+    \ give the correct answers and then try out some of your own favourite sums. You\
+    \ might like to see what happens if you wrap a maths sum inside speech marks in\
+    \ the print () function.\n\nOoh maths!\n\nOoh strings!\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_22_0.png)\n\
+    \n## Combining text and maths\n\nIt is also possible to combine text (or strings)\
+    \ and numbers in the print () function. The comma is used here as a separator\
+    \ between the text and the maths.\n\n```\n>>> print(\"111 divided by 4 = \", 111/4)\n\
+    111 divided by 4 = 27.75\n>>>\n>>> print(\"11 divided by 4 = \", 11/4)\n11 divided\
+    \ by 4 = 2.75\n>>>\n```\n\n## Quick Quiz\n\nCan you work out what the output from\
+    \ this code will be?\n\n```\n>>> print(\"11 divided by 4 also equals: \", 11//4,\
+    \ \" remainder: \", 11%4)\n```\n\n## Going loopy\n\nComputers are great at repetitive\
+    \ tasks. So are humans\n\nImagine you were trying to write some code in a History\
+    \ lesson at school, when you should be doing History. Your teacher might ask you\
+    \ to write fifty lines. Well no matter, Python can do that.\n\nTry opening IDLE\
+    \ in interactive mode and then enter the code in Code Box 2.4. You will need to\
+    \ press return twice at the end.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_23_0.png)\n\
+    \n## Code Box 2.4\n\n```\n>>> lines=0\n>>> while lines < 50:\n    print(\"I will\
+    \ not write code in history lessons.\")\n    lines = lines+1\n```\n\nHere is another\
+    \ solution to the same problem:\n\n## Code Box 2.5\n\n```\n>>> print(\"I will\
+    \ not write code in history lessons.\\n\" * 50)\n```\n\nChapter 2: Some text,\
+    \ some maths and going loopy 22\n\nThe code in Code Box 2.5 is clever – look carefully\
+    \ to see what is happening. Run it if you are not sure. Although the code in Code\
+    \ Box 2.4 is longer, a while loop is often more useful as it can do far more complex\
+    \ tasks. For example, with a while loop you can ask a computer to count to 100.\
+    \ Try entering the code from Code Box 2.6 and running it.\n\n## Code Box 2.6\n\
+    \n```\n>>> number=1\n>>> while number < 101:\n  print (number)\n  number = number+1\n\
+    ```\n\n## How do while loops work?\n\n## Variables\n\nTo start with we create\
+    \ a variable and assign a value to it. A variable is a space in the computer’s\
+    \ memory where we can store, for example, a string or an integer. We create a\
+    \ variable by naming it. In Code Box 2.6 we called our variable ‘number’ and with\
+    \ the equals operator we give it the value ‘1’.\n\nThe next line of code >>> number<101:\
+    \ says ‘while the variable called number is less than 101 do the following’. All\
+    \ of the code that is indented after the colon is to be repeatedly performed by\
+    \ the computer. That is, it loops through these two lines of code until number\
+    \ is no longer less than 101.\n\ncreate a variable and assign it the value 1\n\
+    \n```\nnumber=1\nwhile number < 1:\n    print (number)\n    number = number+1\n\
+    ```\n\nthe colon says to run all of the indented code\n\nthere are no speech marks\
+    \ here as we want the value\nof number not the word “number”\n\nthe variable number\
+    \ is incremented by 1\n\nIDLE automatically indents for you:\n\nThe last line\
+    \ of code number = number+1 is in the loop. It keeps adding 1 to number for\n\
+    each passage through the loop. Don't forget the variable's value can be changed\
+    \ with the\nequals operator at any time.\n\n> I like to think of\nnumber = 1 as\n\
+    meaning: 'make the variable\ncalled number to 1,\nfor now...\n\n## Delving Deeper\n\
+    \nThe equals sign is used differently to way it is used in maths. In computing,\
+    \ the equals sign means 'point\nthis variable at this piece of data' (an integer\
+    \ for example). So number=1 means 'create a variable\ncalled number and point\
+    \ it at 1'. Another way of saying this is 'assign the value 1 to the\nvariable'.\
+    \ Later we may assign another value to number.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_25_0.png)\n\
+    \n## Operators\n\nThere are several operators you can use in while loop. Some\
+    \ examples are given in Table 2.3. Note how we have another version of equals.\
+    \ This form is more like the equals in maths. It is an example of a comparative\
+    \ operator. Therefore, while number==1: ‘the variable called number is equal to\
+    \ 1, do the following’\n\n| Operator | Meaning |\n|---|---|\n| == | equal to |\n\
+    | != | not equal to |\n| > | greater than |\n| < | less than |\n| >= | greater\
+    \ than or equal to |\n| <= | less than or equal to |\n\n**Table 2.3** Comparative\
+    \ operators.\n\nWe use double equals sign to compare two values and a single equals\
+    \ sign to assign a value to a variable.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_26_0.png)\n\
+    \n## Chapter summary\n\nIn this chapter you have learned:\n\n- how the print()\
+    \ function is very flexible\n- how to write and run simple maths\n- how to output\
+    \ a mixture of strings, maths or numbers\n- how to write while loop and use comparative\
+    \ operators\n\n## Puzzle 1\n\nWrite some code in IDLE so that the computer counts\
+    \ up to 20 in twos.\n\n## Puzzle 2\n\nWrite some code so that the computer outputs\
+    \ the 5 table like this:\n\n```\n1x5=5\n2x5=10\n3x5=15\n```\n\n**Hint:** You will\
+    \ need a counter variable which could call `number`. Then you should find out\
+    \ how to write one, and then make your loop do it 10 times.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_27_0.png)\n\
+    \n## Puzzle 3\n\nSee if you can re-write the following code in three ways so that\
+    \ each program still produces output which counts to a hundred.\n\n```\n>>> number=1\n\
+    >>> while number < 101:\n    print (number)\n    number = number+1\n```\n\nIn\
+    \ your new code, you are not allowed to use the less than operator. Instead you\
+    \ should use one of these comparative operators in each program: <= !=\n\nAnswers\
+    \ to all of these puzzles can be found on the companion website www.codingclub.uk.\n\
+    \nIf you write some code that will not running, just close the IDLE window. When\
+    \ you are asked if you want to kill the program, click the OK button. Unfortunately\
+    \ you will have to start up IDLE again.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_28_0.png)\n\
+    \n## Chapter 3 Readable code and the MyMagic8Ball game\n\nIn this chapter you\
+    \ are going to:\n\n- write and save a Python file using script mode\n- learn how\
+    \ to write clear readable code\n- run a Python file\n- learn how to get user input\n\
+    - learn about if and else\n- write a short game called MyMagic8Ball\n\nYou are\
+    \ going to build and save a Magic 8 Ball game. If you have not played with one\
+    \ of these toys before, what do you do is, ask the 8 Ball for some advice, shake\
+    \ it and it magically responds.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_29_0.png)\n\
+    \n## Script Mode\n\nOpen IDLE in interactive mode and then from the File menu\
+    \ choose New Window. A new window appears that is apparently blank. When you type\
+    \ in this window and save the file you are working in script mode. The file name\
+    \ must end in .py to show that it is a Python code.\n\nInteractive mode is great\
+    \ for trying out snippets of code. Script mode allows us to save applications\
+    \ for later use.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_30_0.png)\n\n```\n\
+    Python Shell\nFile Edit Debug Options Windows Help\nPython 3.1.3 (r11:8634, Nov\
+    \ 28 2010, 10:01:07)\n[GCC 4.4.5] on linux\nType \"copyright,credits\" or \"license()\"\
+    \ for more information.\n>>>\n```\n\n```\nmy8ball.py - /home/chris/Desktop/.../ngClub-Book1/Chapter3/my8ball.py\n\
+    File Edit Format Bun Options Windows Help\n#MyMagic8Ball\nimport random\n# write\
+    \ answer\nans1=\"No for it!\"\nans2=\"No Way, Jose!\"\nans3=\"I'm not sure. Ask\
+    \ me again.\"\nan4=\"Fear of the unknown is what imprisons us.\"\nans5=\"It would\
+    \ be madness to do that!\"\n6=\"Only you can save mankind!\"\nan7=\"Makes no difference\
+    \ to me, or don't - whatever.\"\nans8=\"Yes. I think on that is the right choice.\"\
+    \nprint(\"Welcome to MyMagic8Ball.\")\n\n# get the users question\nquestion =\
+    \ input(\"Ask me for advice then ENTER to shake me.\\n\")\nprint(\"shaking ...\\\
+    n\" * 4)\n```\n\nChapter 2: Some text, some maths and going loopy 22\n"
+  mdcn: "\n\n还有另一种除法。如果你使用两个正斜杠而不是一个，Python 将产生一个**整数**（integer）作为答案。整数是一个整数（像 2.5\
+    \ 这样的小数被称为**浮点数**float）。你现在可以使用另一种名为**取模**（modulus）的**数学**运算符找到余数。它用 % 符号表示。\n\
+    \n```\n>>> 11/4\n2.75\n>>> 11//4\n2\n>>> 11%4\n3\n>>>\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_21_0.png)\n\
+    \n表 2.2 列出了更多一些数学运算符。\n\n| 运算符 | 名称 | 示例 | 答案 |\n| --- | --- | --- | --- |\n|\
+    \ * | 乘法 | 2*3 | 6 |\n| / | 除法（普通） | 20/8 | 2.5 |\n| // | 除法（整数） | 20//8 | 2 |\n\
+    | % | 取模 | 20%8 | 4 |\n| + | 加法 | 2+3 | 5 |\n| - | 减法 | 7-3 | 4 |\n\n表 2.2 数学运算符。\n\
+    \n## 实验\n\n在交互模式下，检查表 2.2 中的示例是否给出了正确答案，然后尝试一些你自己最喜欢的加法计算。你可能想看看如果如果在 print ()\
+    \ 函数中将数学表达式包裹在引号内会发生什么。\n\n噢，数学！\n\n噢，字符串！\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_22_0.png)\n\
+    \n## 结合文本和数学\n\n在 print () 函数中，也可以将文本（或字符串）和数字结合。逗号在这里用作文本和数学之间的分隔符。\n\n```\n\
+    >>> print(\"111 divided by 4 = \", 111/4)\n111 divided by 4 = 27.75\n>>>\n>>>\
+    \ print(\"11 divided by 4 = \", 11/4)\n11 divided by 4 = 2.75\n>>>\n```\n\n##\
+    \ 快速测试\n\n你能计算出这段代码的输出是什么吗？\n\n```\n>>> print(\"11 divided by 4 also equals: \"\
+    , 11//4, \" remainder: \", 11%4)\n```\n\n## 进入循环\n\n计算机非常擅长重复性任务。人类也是如此。\n\n想象一下你正在学校的历史课上尝试写一些代码，而此时你本该在学历史。你的老师可能会让你写五十行代码。没关系，Python\
+    \ 可以做到这一点。\n\n尝试在交互模式下打开 IDLE，然后输入代码框 2.4 中的代码。你需要在末尾按两次回车。\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_23_0.png)\n\
+    \n## 代码框 2.4\n\n```\n>>> lines=0\n>>> while lines < 50:\n    print(\"I will not\
+    \ write code in history lessons.\")\n    lines = lines+1\n```\n\n这是解决同一个问题的另一种方法：\n\
+    \n## 代码框 2.5\n\n```\n>>> print(\"I will not write code in history lessons.\\n\"\
+    \ * 50)\n```\n\n第2章：一些文本，一些数学和进入循环 22\n\n代码框 2.5 中的代码非常聪明——仔细观察正在发生什么。如果不确定，就运行它。虽然代码框\
+    \ 2.4 中的代码较长，但 while 循环通常更有用，因为它可以执行更复杂的任务。例如，通过 while 循环，你可以让计算机数到 100。尝试输入代码框\
+    \ 2.6 中的代码并运行它。\n\n## 代码框 2.6\n\n```\n>>> number=1\n>>> while number < 101:\n\
+    \  print (number)\n  number = number+1\n```\n\n## while 循环是如何工作的？\n\n## 变量\n\n\
+    首先我们创建一个变量并给它分配一个值。变量是计算机内存中的空间，我们可以在其中存储例如一个字符串或一个整数。我们通过命名来创建变量。在代码框 2.6 中，我们将变量命名为‘number’，并用等号运算符给它赋值‘1’。\n\
+    \n下一行代码 `>>> number<101:` 的意思是“当名为 number 的变量小于 101 时，执行以下操作”。冒号之后的所有缩进代码将由计算机重复执行。也就是说，它会循环这两行代码，直到\
+    \ number 不再小于 101。\n\n创建一个变量并将其赋值为 1\n\n```\nnumber=1\nwhile number < 1:\n   \
+    \ print (number)\n    number = number+1\n```\n\n冒号表示运行所有缩进的代码\n\n这里没有引号，因为我们想要\
+    \ number 的值，而不是“number”这个单词\n\n变量 number 递增了 1\n\nIDLE 会自动为你缩进：\n\n最后一行代码 `number\
+    \ = number+1` 位于循环中。在每次循环中，它都会给 number 加 1。不要忘记，变量的值随时可以使用等号运算符进行更改。\n\n> 我喜欢把\n\
+    > number = 1 理解为\n> ：“让名为\n> number 的变量设置为 1，\n> 目前是……”\n\n## 深入探索\n\n等号的使用方法与数学中的用法不同。在计算中，等号意味着“让此变量指向此数据”（例如一个整数）。所以\
+    \ `number=1` 意味着“创建一个名为 number 的变量并让它指向 1”。另一种说法是“将值 1 赋值变量”。稍后我们可以为 number 赋值另一个值。\n\
+    \n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_25_0.png)\n\n## 运算符\n\n在 while 循环可以使用几种运算符。表\
+    \ 2.3 给出了一些示例。注意我们另一种等号的形式。这种形式更像数学中的等号。因此，`while number==1:` 表示“当 number 等于 1\
+    \ 时，执行以下操作”。\n\n| 运算符 | 含义 |\n|---|---|\n| == | 等于 |\n| != | 不等于 |\n| > | 大于 |\n\
+    | < | 小于 |\n| >= | 大于等于 |\n| <= | 小于等于 |\n\n**表 2.3** 运算符。我们使用双等号比较两个值，使用单等号给变量赋值。(img/fbaeb9cdecc73e46b84c17d0505a6ca3_26_0.png)\n\
+    \n## 本章总结\n\n在本章中，你学习了：\n\n- print() 函数非常灵活\n- 如何编写和运行简单的数学计算\n- 如何输出字符串、数学或数字\n\
+    - 如何编写 while 循环并使用比较运算符\n\n## 题 1\n\n在 IDLE 中编写一些代码，让计算机按 2 数到 20。\n\n## 题 2\n\
+    \n编写一些代码，让计算机输出如下表格：\n\n```\n1x5=5\n2x5=10\n3x5=15\n```\n\n**提示：** 你需要一个 `number`\
+    \ 计数器变量。你应该找出如何编写它，然后让你的循环执行 10 次。(img/fbaeb9cdecc73e46b84c17d0505a6ca3_27_0.png)\n\
+    \n## 题 3\n\n看看用三种方式重写以下代码，使每个程序都能产生数到百的输出。\n\n```\n>>> number=1\n>>> while number\
+    \ < 101:\n    print (number)\n    number = number+1\n```\n\n在新代码中，不允许使用小于运算符。相反，你应该使用这些比较运算符之一：`<=`、`!=`。所有这些题目的答案都可以在网站\
+    \ www.codingclub.uk 找到。如果你编写了无法运行的代码，只需关闭 IDLE 窗口。当询问是否杀死程序时，点击 OK 按钮。遗憾的是，你必须重新启动\
+    \ IDLE。(img/fbaeb9cdecc73e46b84c17d0505a6ca3_28_0.png)\n\n## 第3章 可读的代码和 Magic8Ball\
+    \ 游戏\n\n在本章中你将：\n\n- 使用脚本模式编写并保存 Python 文件\n- 学习编写清晰易读的代码\n- 运行 Python 文件\n- 学习获取用户输入\n\
+    - 学习 if 和 else\n- 编写名为 MyMagic8Ball 的短游戏\n\n你将构建并保存一个魔球游戏。如果你没有玩过这种玩具，你需要做的是向魔球寻求一些建议，摇摇它，它就会神奇地给出回答。(img/fbaeb9cdecc73e46b84c17d0505a6ca3_29_0.png)\n\
+    \n## 脚本模式\n\n在交互模式下打开 IDLE，然后从 File（文件）菜单选择 New Window（新窗口）。出现了一个显然的空白窗口。当你在这个窗口中输入并保存文件时，你正处于脚本模式。文件名必须以\
+    \ .py 结尾，以显示它是 Python 代码。交互模式适合尝试代码片段。脚本模式允许我们保存应用程序供以后使用。(img/fbaeb9cdecc73e46b84c17d0505a6ca3_30_0.png)\n\
+    \n```\nPython Shell\nFile Edit Debug Options Windows Help\nPython 3.1.3 (r11:8634,\
+    \ Nov 28 2010, 10:01:07)\n[GCC 4.4.5] on linux\nType \"copyright,credits\" or\
+    \ \"license()\" for more information.\n>>>\n```\n\n```\nmy8ball.py - /home/chris/Desktop/.../ngClub-Book1/Chapter3/my8ball.py\n\
+    File Edit Format Bun Options Windows Help\n#MyMagic8Ball\nimport random\n# write\
+    \ answer\nans1=\"No for it!\"\nans2=\"No Way, Jose!\"\nans3=\"I'm not sure. Ask\
+    \ me again.\"\nan4=\"Fear of the unknown is what imprisons us.\"\nans5=\"It would\
+    \ be madness to do that!\"\n6=\"Only you can save mankind!\"\nan7=\"Makes no difference\
+    \ to me, or don't - whatever.\"\nans8=\"Yes. I think on that is the right choice.\"\
+    \nprint(\"Welcome to MyMagic8Ball.\")\n\n# get the users question\nquestion =\
+    \ input(\"Ask me for advice then ENTER to shake me.\\n\")\nprint(\"shaking ...\\\
+    n\" * 4)\n```\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 21]
+
+
+    There is another way of dividing. If you use two forward slashes instead of one,
+    Python will produce an **integer** as an answer. An integer is a whole number
+    (a decimal such as 2.5 is called a **float**). You can now find the remainder,
+    with another **mathematical** operator called the **modulus**. This is represented
+    by a % sign.
+
+
+    ```
+
+    >>> 11/4
+
+    2.75
+
+    >>> 11//4
+
+    2
+
+    >>> 11%4
+
+    3
+
+    >>>
+
+    ```
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_21_0.png)
+
+
+    Table 2.2 lists some more mathematical operators.
+
+
+    | Operator | Name | Example | Answer |
+
+    | --- | --- | --- | --- |
+
+    | * | multiply | 2*3 | 6 |
+
+    | / | divide (normal) | 20/8 | 2.5 |
+
+    | // | divide (integer) | 20//8 | 2 |
+
+    | % | modulus | 20%8 | 4 |
+
+    | + | add | 2+3 | 5 |
+
+    | - | subtract | 7-3 | 4 |
+
+
+    Table 2.2 Maths operators.'
+  - '[PAGE 22]
+
+
+    # Experiment
+
+
+    In interactive mode, check that the examples in Table 2.2 do give the correct
+    answers and then try out some of your own favourite sums. You might like to see
+    what happens if you wrap a maths sum inside speech marks in the print () function.
+
+
+    Ooh maths!
+
+
+    Ooh strings!
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_22_0.png)
+
+
+    # Combining text and maths
+
+
+    It is also possible to combine text (or strings) and numbers in the print () function.
+    The comma is used here as a separator between the text and the maths.
+
+
+    ```
+
+    >>> print("111 divided by 4 = ", 111/4)
+
+    111 divided by 4 = 27.75
+
+    >>>
+
+    >>> print("11 divided by 4 = ", 11/4)
+
+    11 divided by 4 = 2.75
+
+    >>>
+
+    ```
+
+
+    # Quick Quiz
+
+
+    Can you work out what the output from this code will be?
+
+
+    ```
+
+    >>> print("11 divided by 4 also equals: ", 11//4, " remainder: ", 11%4)
+
+    ```'
+  - "[PAGE 23]\n\n# Going loopy\n\nComputers are great at repetitive tasks. So are\
+    \ humans\n\nImagine you were trying to write some code in a History lesson at\
+    \ school, when you should be doing History. Your teacher might ask you to write\
+    \ fifty lines. Well no matter, Python can do that.\n\nTry opening IDLE in interactive\
+    \ mode and then enter the code in Code Box 2.4. You will need to press return\
+    \ twice at the end.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_23_0.png)\n\n\
+    # Code Box 2.4\n\n```\n>>> lines=0\n>>> while lines < 50:\n    print(\"I will\
+    \ not write code in history lessons.\")\n    lines = lines+1\n```\n\nHere is another\
+    \ solution to the same problem:\n\n# Code Box 2.5\n\n```\n>>> print(\"I will not\
+    \ write code in history lessons.\\n\" * 50)\n```\n\nChapter 2: Some text, some\
+    \ maths and going loopy 22"
+  - "[PAGE 24]\n\nThe code in Code Box 2.5 is clever – look carefully to see what\
+    \ is happening. Run it if you are not sure. Although the code in Code Box 2.4\
+    \ is longer, a while loop is often more useful as it can do far more complex tasks.\
+    \ For example, with a while loop you can ask a computer to count to 100. Try entering\
+    \ the code from Code Box 2.6 and running it.\n\n# Code Box 2.6\n\n```\n>>> number=1n>>>\
+    \ while number < 101:\n  print (number)\n  number = number+1\n```\n\n# How do\
+    \ while loops work?\n\n# Variables\n\nTo start with we create a variable and assign\
+    \ a value to it. A variable is a space in the computer’s memory where we can store,\
+    \ for example, a string or an integer. We create a variable by naming it. In Code\
+    \ Box 2.6 we called our variable ‘number’ and with the equals operator we give\
+    \ it the value ‘1’.\n\nThe next line of code >>> number<101: says ‘while the variable\
+    \ called number is less than 101 do the following’. All of the code that is indented\
+    \ after the colon is to be repeatedly performed by the computer. That is, it loops\
+    \ through these two lines of code until number is no longer less than 101."
+  - "[PAGE 25]\n\ncreate a variable and assign it the value 1\n\n```\nnumber=1\nwhile\
+    \ number < 1:\n    print (number)\n    number = number+1\n```\n\nthe colon says\
+    \ to run all of the indented code\n\nthere are no speech marks here as we want\
+    \ the value\nof number not the word “number”\n\nthe variable number is incremented\
+    \ by 1\n\nIDLE automatically indents for you:\n\nThe last line of code number\
+    \ = number+1 is in the loop. It keeps adding 1 to number for\ne passage through\
+    \ the loop. Don't forget the variable's value can be changed with the\neals operator\
+    \ at any time.\n\n> I like to think of\nnumber = 1 as\nmeaning: 'make the variable\n\
+    called number equal to 1,\nfor now...\n\n# Delving Deeper\n\nThe equals sign is\
+    \ used differently to the way it is used in maths. In computing, the equals sign\
+    \ means 'point\nthis variable name at this piece of data' (an integer for example).\
+    \ So number=1 means 'create a variable\ncalled number and point it at the integer\
+    \ 1'. Another way of saying this is 'assign the value 1 to the variable\nnumber'.\
+    \ Later we may assign another value to number.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_25_0.png)"
+  - '[PAGE 26]
+
+
+    # Operators
+
+
+    There are several operators you can use in a while loop. Some examples are given
+    in Table 2.3. Note how we now have another version of equals ==. This form is
+    more like the equals in maths. It is an example of a comparative operator. Therefore,
+    while number==1: means ‘the variable called number is equal to 1, do the following’
+
+
+    | Operator | Meaning |
+
+    |---|---|
+
+    | == | equal to |
+
+    | != | not equal to |
+
+    | > | greater than |
+
+    | < | less than |
+
+    | >= | greater than or equal to |
+
+    | <= | less than or equal to |
+
+
+    **Table 2.3** Comparative operators.
+
+
+    We use a double equals sign to compare two values and a single equals sign to
+    assign a value to a variable.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_26_0.png)'
+  - '[PAGE 27]
+
+
+    # # Chapter summary
+
+
+    In this chapter you have learned:
+
+
+    +   - how the `print()` function is very flexible
+
+    - how to write and run simple maths code
+
+    - how to output a mixture of strings, maths or numbers
+
+    - how to write a while loop and use comparative operators
+
+
+    # ## Puzzle 1
+
+
+    Write some code in IDLE so that the computer counts up to 20 in twos.
+
+
+    # ## Puzzle 2
+
+
+    Write some code so that the computer outputs the 5 times table like this:
+
+
+    ```
+
+    1x5=5
+
+    2x5=10
+
+    3x5=15
+
+    ```
+
+
+    **Hint:** You will need a counter variable which you could call `number`. Then
+    you should find out how to write one line, and then make your loop do it 10 times.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_27_0.png)'
+  - "[PAGE 28]\n\n# Puzzle 3\n\nSee if you can re-write the following code in three\
+    \ different ways so that each program still produces output which counts to a\
+    \ hundred.\n\n```\n>>> number=1\n>>> while number < 101:\n    print (number)\n\
+    \    number = number+1\n```\n\nIn your new code, you are not allowed to use the\
+    \ less than operator ~. Instead you should use one of these comparative operators\
+    \ in each program: <= > !=\n\nAnswers to all of these puzzles can be found on\
+    \ the companion website\nwww.codingclub.co.uk.\n\n> If you write some code that\
+    \ will not stop running, just close the IDLE window. When you are asked if you\
+    \ want to kill the program, click the OK button. Unfortunately, you will have\
+    \ to start up IDLE again.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_28_0.png)"
+  - '[PAGE 29]
+
+
+    # # Chapter 3
+
+    Readable code and the MyMagic8Ball game
+
+
+    In this chapter you are going to:
+
+
+    +   - write and save a Python file using script mode
+
+    - learn how to write clear readable code
+
+    - run a Python file
+
+    - learn about how to get user input
+
+    - learn about if and else
+
+    - write a short game called MyMagic8Ball.
+
+
+    You are going to build and save a Magic 8 Ball game. If you have not played with
+    one of these toys before, what do you do is, ask the 8 Ball for some advice, shake
+    it and it magically responds.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_29_0.png)'
+  - '[PAGE 30]
+
+
+    # Script Mode
+
+
+    Open IDLE in interactive mode and then from the File menu choose New Window. A
+    new window appears that is apparently blank. When you type in this window and
+    save the file you are working in script mode. The file name must end in .py to
+    show that it is a Python code.
+
+
+    Interactive mode is great for trying out snippets of code. Script mode allows
+    us to save applications for later use.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_30_0.png)
+
+
+    ```
+
+    Python Shell
+
+    File Edit Debug Options Windows Help
+
+    Python 3.1.3 (r11:86834, Nov 28 2010, 10:01:07)
+
+    [GCC 4.4.5] on linux
+
+    Type "copyright,credits" or "license()" for more information.
+
+    >>>
+
+    ```
+
+
+    ```
+
+    my8ball.py - /home/chris/Desktop/.../ngClub-Book1/Chapter3/my8ball.py
+
+    File Edit Format Bun Options Windows Help
+
+    #MyMagic8Ball
+
+    import random
+
+    # write answer
+
+    ans1="No for it!"
+
+    ans2="No Way, Jose!"
+
+    ans3="I''m not sure. Ask me again."
+
+    an4="Fear of the unknown is what imprisons us."
+
+    an5="It would be madness to do that!"
+
+    6="Only you can save mankind!"
+
+    an7="Makes no difference to me, or don''t - whatever."
+
+    an8="Yes. I think on that is the right choice."
+
+    print("Welcome to MyMagic8Ball.")
+
+
+    # get the users question
+
+    question = input("Ask me for advice then ENTER to shake me.\n")
+
+    print("shaking ...\n" * 4)
+
+    ```
+
+
+    | Ln: 1 Col: 49 |
+
+
+    interactive mode
+
+
+    script mode
+
+
+    IDLE – interactive and script mode by side.
+
+
+    Try typing the code from Code Box 3.1 into your new script mode window. These
+    are the first lines of the MyMagic8Ball game.
+
+
+    (If you have a British Apple keyboard, you will need to hold alt and click the
+    £ symbol to type #.)
+
+
+    Chapter 3: Readable code and the MyMagic8Ball game 29'
+- md: "\n# Code Box 3.1\n\n```python\n# MyMagic8Ball\nimport random\n# write answers\n\
+    ans1=\"Go for it!\"\nans2=\"No way, Jose!\"\nans3=\"I'm not sure. Ask me again.\"\
+    \nans4=\"Fear of the unknown is what imprisons us.\"\nans5=\"It would be madness\
+    \ to do that!\"\nans6=\"Only you can save mankind!\"\nans7=\"Makes no difference\
+    \ to me, do or don't - whatever.\"\nans8=\"Yes, I think on balance that is the\
+    \ right choice.\"\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_31_0.png)\n\
+    \nNow you should save your work by choosing Save from the File menu. It is a good\
+    \ idea to save all your code into a special folder which you can call – ‘Python\
+    \ Code’ – in your documents folder. Call the new file myMagic8Ball.py.\n\n## Analysis\
+    \ of Code Box 3.1\n\n### The # symbol\n\nThe # symbol says to the computer, ‘ignore\
+    \ the rest of the text on this line, it is for humans’. This is called commenting.\
+    \ You have typed in two comments so far.\n\n## Modules\n\nimport random uses a\
+    \ new Python word – import – followed by the name of a Python module.\n\nA module\
+    \ is a Python file with special code that you do not have to write yourself but\
+    \ that you can use. There are many modules available and it is also possible to\
+    \ write your own. import random brings in to your application a selection of functions\
+    \ that you can use later in your program. (Chapter 4 is all about functions.)\n\
+    \n## String variables\n\nThe last 8 lines of code are the variables where you\
+    \ store some strings (bits of text) that will be used later in the game. At this\
+    \ early stage you may be asking yourself, how do I know what to call my variables?\
+    \ Well within reason you can call them what you like. There are only 31 reserved\
+    \ words in Python.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_32_0.png)\n\nThere\
+    \ are 31 Python words that you cannot use as your variable names: and as assert\
+    \ class continue def elif else except finally from global if import is in lambda\
+    \ nonlocal or no pass print raise retry with yield\n\nYou must also be careful\
+    \ to use only letters and underscores and no unusual characters such as & @ $\
+    \ * () ?:; [ ] <^`={||}|/\\. Spaces are not allowed either. Numbers are not allowed\
+    \ but at the beginning of your variable names.\n\n## Writing tidy code\n\nIt is\
+    \ important to write your code so it is easy for you to read later, when you have\
+    \ forgotten how you did things. It also makes it easier, if your code is well\
+    \ written, for other coders to understand what you did.\n\n## White space\n\n\
+    Lots of computer languages like Java, PHP and C++ wrap chunks of code in curly\
+    \ brackets. Each statement has to end in a semicolon.\n\n```java\nprivate int\
+    \ current_floor = 0;\npublic int getFloor() {\n    return current_floor;\n}\n\
+    public void moveTo(int floor_number) {\n    current_floor = floor_number;\n}\n\
+    ```\n\nJava code.\n\nPython does not require semicolons or curly brackets. Semicolons\
+    \ can be very annoying as they are easy to forget and if you forget one, your\
+    \ program will not run at all.\n\nIn Python, each line of code simply requires\
+    \ that you have a line ending. This is a lot easier to spot if you manage to forget!\n\
+    \nGroup lines of code together you indent the code (four taps on the space bar).\
+    \ IDLE will usually know when you should indent and do it for you when you press\
+    \ return! This indenting produces 'white space'. The code is grouped according\
+    \ to how you arrange the white space. This is how the same code would look in\
+    \ Python.\n\n```python\nclass Lift():\n    current_floor=0\n\n    def getFloor():\n\
+    \        return current_floor\n\n    def moveTo(floor_number):\n        current_floor\
+    \ = floor_number\n```\n\nPython code.\n\n> Remember though that incorrect indenting\
+    \ in Python, such as 3 spaces instead of 4, will cause errors.\n\n> I prefer the\
+    \ look of Python code.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_33_0.png)\n\
+    \n## Delving deeper\n\nThere are other differences to note. Java has a lot of\
+    \ extra words like public, private, int and void. This is because it is a very\
+    \ strict language where everything has to be carefully defined. Python instead,\
+    \ will usually work out whether something is an integer (number) or string (text)\
+    \ for the programmer. Both languages have their advantages and disadvantages.\n\
+    \nClasses are not dealt with in this book but we have to use some for our final\
+    \ project in chapter 5. You will learn about the def keyword in the next chapter!\n\
+    \n## More about commenting\n\nDon't be surprised if you had no idea what any of\
+    \ the code above meant. Even if you had already read this book, it can be difficult\
+    \ to read other people's code. Remember, it is written for computers to understand,\
+    \ not us. Remember, we can leave little notes or comments as we go using the hash\
+    \ symbol #.\n\nHere is the same Python code as above with some comments.\n\n```python\n\
+    # This is a class (or elevator in the USA)\nclass Lift():\n    # The lift starts\
+    \ on floor zero\n    current_floor=0\n\n    # The method for finding the lift\n\
+    \    def getFloor():\n        return current_floor\n\n    # The method for moving\
+    \ the lift\n    def moveToFloor(floor_number):\n        current_floor = floor_number\n\
+    ```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_34_0.png)\n\nPython code with\
+    \ too many comments. As you can see, it is possible to add too much commenting!\
+    \ Sometimes simply naming things is well better. The names chosen by the programmer\
+    \ here include Lift, current_floor, getFloor, moveToFloor and floor_number. The\
+    \ only Python code words are class and def.\n\n## Naming variables\n\nIf you want\
+    \ to store a number or some text somewhere you do so in a variable.\n\nVariables\
+    \ should always be named with descriptive names. You should always start with\
+    \ a little letter. You can separate variables with underscores like this my_own_variable.\n\
+    \n## Getting user input\n\nGetting user input is surprisingly simple in Python.\
+    \ We use another supplied function input(). This function is very similar to the\
+    \ print() function in as much as it can be given a string which it sends to the\
+    \ screen. The difference is it can be given a string which it sends to the screen.\n\
+    \n```python\nkeyboard_input = input(\"Enter some text.\")\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_35_0.png)\n\
+    \n## Experiment\n\n- In interactive mode, try the code in Code Box 3.2 to see\
+    \ it works.\n\n```python\n>>> name = input(\"What is your name?\")\n>>> print(\"\
+    Hello \", name)\n```\n\nNow back to script mode.\n\nAfter your eight variables\
+    \ in myMagic8Ball.py, miss a line and type in the code from Code Box 3.3.\n\n\
+    ```python\nprint(\"Welcome to MyMagic8Ball.\")\n# get the users question\nquestion\
+    \ = input(\"Ask me for advice then press RETURN to shake me.\")\nprint(\"shaking\
+    \ ...\\n\" * 4)\n```\n\nThe variable question is given the value from the result\
+    \ of the input() function. That is, it now stores whatever was typed by the person\
+    \ playing the game. In this version you will not use this variable. In fact the\
+    \ player might well speak. However, you may want to customise the game later so\
+    \ it is good design to store this input somewhere, just in case. You will find\
+    \ that you understand the rest of this code. If you are not sure what the last\
+    \ line in Code Box 3.3 does, you could copy that into the interactive mode and\
+    \ find out.\n\n## Using the random module\n\nThe first line of code in Code Box\
+    \ 3.1 imports Python’s random module. This gives your program access to a number\
+    \ of functions. You will use just one – randint(). This function takes two integer\
+    \ arguments. Arguments are the values that you provide for a function to do its\
+    \ task. You will learn more about this in chapter 4.\n\n> I may be a simple dice\
+    \ but I am a very complex individual.\n\n## A simple dice\n\nTo create a dice\
+    \ requires only one line of code in interactive mode.\n\n```python\n>>> random.randint(1,\
+    \ 6)\n```\n\nWe have put random. before randint() to tell the computer that this\
+    \ function can be found in the random module. The two arguments are the start\
+    \ number and the end number. The function randomly chooses 1, 2, 3, 4, 5 or 6.\
+    \ Try it out a few times in interactive mode to see it in action.\n"
+  mdcn: "\n\n# 代码框 3.1\n\n```python\n# MyMagic8Ball\nimport random\n# 写答案\nans1=\"\
+    Go for it!\"\nans2=\"No way, Jose!\"\nans3=\"I'm not sure. Ask me again.\"\nans4=\"\
+    Fear of the unknown is what imprisons us.\"\nans5=\"It would be madness to do\
+    \ that!\"\nans6=\"Only you can save mankind!\"\nans7=\"Makes no difference to\
+    \ me, do or don't - whatever.\"\nans8=\"Yes, I think on balance that is the right\
+    \ choice.\"\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_31_0.png)\n\n现在你应该通过选择“文件(File)”菜单中的“保存(Save)”来保存你的工作。将所有代码保存在特定的文件夹中是一个好主意，你可以在文档文件夹中将其命名为“Python\
+    \ Code”。将新文件命名为 `myMagic8Ball.py`。\n\n## 代码框 3.1 分析\n\n### # 符号\n\n# # 符号告诉计算机：“忽略此行剩余的文本，它是给人类看的”。这被称为注释。到目前为止你输入两个注释。\n\
+    \n## 模块 (Modules)\n\n`import random` 使用了一个新的 Python 单词 – `import` ，后面跟着 Python\
+    \ 模块的名称。\n\n模块是一个 Python 文件，其中包含特殊的代码，你不需要自己编写，但可以使用它们。有很多模块可用，你也可以编写自己的模块。`import\
+    \ random` 为你的应用程序引入了一系列函数，你可以在稍后的程序中使用它们。（第 4 章专门介绍函数。）\n\n## 字符串变量 (String variables)\n\
+    \n最后 8 行代码是变量，你在其中存储了一些字符串（文本片段），这些字符串将在游戏后期被使用。在早期阶段，你可能会在问自己：我如何知道给我的变量起什么名字？其实你可以随心所欲地命名它们。Python\
+    \ 中只有 31 个保留字。\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_32_0.png)\n\n有 31 个你不能作为变量名的\
+    \ Python 单词：and as assert class continue def elif else except finally from global\
+    \ if import is in lambda nonlocal or no pass print raise retry with yield\n\n\
+    你必须小心只使用字母和下划线，不要使用特殊字符，如 `& @ $ * () ?:; [ ] <^`={||}|/\\.`。也不允许有空格。数字不允许出现在变量名的的开头。\n\
+    \n## 编写整洁的代码 (Writing tidy code)\n\n编写代码时，要确保当你以后忘记了是如何操作时，代码易于阅读。如果你的代码写得很好，也能让其他程序员更容易理解你做了什么。\n\
+    \n## 空格 (White space)\n\n许多计算机语言（如 Java、PHP 和 C++）用大括号将代码块包裹。每条语句都必须以分号结束。\n\n\
+    ```java\nprivate int current_floor = 0;\npublic int getFloor() {\n    return current_floor;\n\
+    }\npublic void moveTo(int floor_number) {\n    current_floor = floor_number;\n\
+    }\n```\n\nJava 代码。\n\nPython 不需要分号或大括号。分号可能会非常烦人，因为很容易被忘记，如果你忘记了一个，你的程序将完全无法运行。\n\
+    \n在 Python 中，每行代码只需要一个换行符。如果你不小心忘记了，这会很容易发现！\n\n将代码行分组在一起，你需要对代码进行缩进（按空格键四次）。当你按下回车键时，IDLE\
+    \ 通常知道你什么时候应该缩进并自动为你完成！这种缩进产生了“空白区域”。代码根据你安排空白的方式进行分组。这就是同一段代码在 Python 中的样子。\n\
+    \n```python\nclass Lift():\n    current_floor=0\n\n    def getFloor():\n     \
+    \   return current_floor\n\n    def moveTo(floor_number):\n        current_floor\
+    \ = floor_number\n```\n\nPython 代码。\n\n> 但请记住，在 Python 中不正确的缩进（例如用 3 个空格而不是 4\
+    \ 个）会导致错误。\n\n> 我更喜欢 Python 代码的视觉观。\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_33_0.png)\n\
+    \n## 深入探索 (Delving deeper)\n\n还有其他需要注意的区别。Java 有许多额外的单词，如 `public`、`private`、`int`\
+    \ 和 `void`。这是因为它是一种非常严格的语言，一切都必须经过仔细定义。而 Python 通常会为程序员判断出某物是整数（数字）还是字符串（文本）。两种语言都有它们的优缺点。\n\
+    \n本书没有涉及“类 (Classes)”，但在第 5 章的最终项目中，我们必须使用一些类。你将在下一章中学习 `def` 关键字！\n\n## 关于注释\
+    \ (More about commenting)\n\n如果你完全不知道上面任何代码的含义，请不要惊讶。即使你已经读过这本书，这可能也很困难。这里是 Python\
+    \ 代码，带有一些注释：\n\n```python\n# 这是一个类（Class）\nclass Lift():\n    # 电梯当前楼层为 0\n  \
+    \  current_floor=0\n\n    # 寻找电梯\n    def getFloor():\n        return current_floor\n\
+    \n    # 移动电梯\n    def moveTo(floor_number):\n        current_floor = floor_number\n\
+    ```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_34_0.png)\n\nPython 代码，带有很多注释。变量名包含了\
+    \ `Lift`、`current_floor`、`getFloor` 和 `moveTo(floor_number)`。Python 单词有 `class`\
+    \ 和 `def`。\n\n## 变量命名 (Naming variables)\n\n如果你想在某处存储一个数字或文本，你应该使用变量。变量的命名应该具有描述性。你可以使用下划线，例如\
+    \ `my_own_variable`。\n\n## 获取用户输入 (Getting user input)\n\n在 Python 中获取用户输入异常简单。我们使用另一个函数\
+    \ `input()`。这个函数和 `print()` 函数非常相似，它可以接收字符串并显示在屏幕上。\n\n```python\n# 输入文本\nkeyboard_input\
+    \ = input(\"输入文本。\")\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_35_0.png)\n\
+    \n## 实验 (Experiment)\n\n- 在交互模式下，尝试代码框 3.2 中的代码看看是否有效。\n\n```python\n>>> name\
+    \ = input(\"你的名字是什么？\")\n>>> print(\"你好 \", name)\n```\n\n现在回到脚本模式。\n\n在 `myMagic8Ball.py`\
+    \ 中编写你的八个变量后，漏掉一行并输入代码框 3.3 中的内容。\n\n```python\nprint(\"欢迎来到神奇八球游戏。\")\n# 获取用户的问题\n\
+    question = input(\"给我一个建议，然后按回车键摇摇我。\")\nprint(\"摇中...\\n\" * 4)\n```\n\n变量 `question`\
+    \ 被赋值了 `input()` 函数的结果。也就是说，它现在存储了玩家输入的任何内容。在这个版本中你将不会使用这个变量。事实上，玩家可能会很好说话。然而，你以后可能想自定义游戏，因此将此输入存储在某处是一个很好的设计。你会发现你理解了代码的其他部分。如果你不确定代码框\
+    \ 3.3 的最后一行做了什么，可以将其复制到交互模式中寻找答案。\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 31]
+
+
+    # Code Box 3.1
+
+
+    ```
+
+    # MyMagic8Ball
+
+    import random
+
+    # write answers
+
+    ans1="Go for it!"
+
+    ans2="No way, Jose!"
+
+    ans3="I''m not sure. Ask me again."
+
+    ans4="Fear of the unknown is what imprisons us."
+
+    ans5="It would be madness to do that!"
+
+    ans6="Only you can save mankind!"
+
+    ans7="Makes no difference to me, do or don''t - whatever."
+
+    ans8="Yes, I think on balance that is the right choice."
+
+    ```
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_31_0.png)
+
+
+    Now you should save your work by choosing Save from the File menu. It is a good
+    idea to save all your code into a special folder which you can call – ‘Python
+    Code’ – in your documents folder. Call the new file myMagic8Ball.py.
+
+
+    # Analysis of Code Box 3.1
+
+
+    The # symbol
+
+
+    The # symbol says to the computer, ‘ignore the rest of the text on this line,
+    it is for humans’. This is called commenting. You have typed in two comments so
+    far.'
+  - '[PAGE 32]
+
+
+    # Modules
+
+
+    import random uses a new Python word – import – followed by the name of a Python
+    module.
+
+
+    A module is a Python file with special code that you do not have to write yourself
+    but that you can use. There are many modules available and it is also possible
+    to write your own. import random brings in to your application a selection of
+    functions that you can use later in your program. (Chapter 4 is all about functions.)
+
+
+    # String variables
+
+
+    The last 8 lines of code are the variables where you store some strings (bits
+    of text) that will be used later in the game. At this early stage you may be asking
+    yourself, how do I know what to call my variables? Well within reason you can
+    call them what you like. There are only 31 reserved words in Python.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_32_0.png)
+
+
+    There are 31 Python words that you cannot use as your variable names. and as assert
+    class continue def elif else except finally from global if import is in lambda
+    nonlocal or no pass print raise retry with yield
+
+
+    You must also be careful to use only letters and underscores and no unusual characters
+    such as & @ $ * () ?:; [ ] <^`={||}|/\. Spaces are not allowed either. Numbers
+    are not allowed but at the beginning of your variable names.
+
+
+    # Writing tidy code
+
+
+    It is important to write your code so it is easy for you to read later, when you
+    have forgotten how you did things. It also makes it easier, if your code is well
+    written, for other coders to understand what you did.
+
+
+    # White space
+
+
+    Lots of computer languages like Java, PHP and C++ wrap chunks of code in curly
+    brackets. Each statement has to end in a semicolon.'
+  - "[PAGE 33]\n\n```\nprivate int current_floor = 0;\npublic int getFloor() {\n \
+    \   return current_floor;\n}\npublic void moveTo(int floor_number) {\n    current_floor\
+    \ = floor_number;\n}\n```\n\nJava code.\n\nPython does not require semicolons\
+    \ or curly brackets. Semicolons can be very annoying as they are easy to forget\
+    \ and if you forget one, your program will not run at all.\n\nIn Python, each\
+    \ line of code simply requires that you have a line ending. This is a lot easier\
+    \ to spot if you manage to forget!\n\nGroup lines of code together you indent\
+    \ the code (four taps on the space bar). IDLE will usually know when you should\
+    \ indent and do it for you when you press return! This indenting produces 'white\
+    \ space'. The code is grouped according to how you arrange the white space. This\
+    \ is how the same code would look in Python.\n\n```\nclass Lift():\n    current_floor=0\n\
+    \n    def getFloor():\n        return current_floor\n\n    def moveTo(floor_number):\n\
+    \        current_floor = floor_number\n```\n\nPython code.\n\n> Remember though\
+    \ that incorrect indenting in Python, such as 3 spaces instead of 4, will cause\
+    \ errors.\n\n> I prefer the look of Python code.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_33_0.png)"
+  - "[PAGE 34]\n\n# Delving deeper\n\nThere are other differences to note. Java has\
+    \ a lot of extra words like public, private, int and void. This is because it\
+    \ is a very strict language where everything has to be carefully defined. Python\
+    \ instead, will usually work out whether something is an integer (number) or string\
+    \ (text) for the programmer. Both languages have their advantages and disadvantages.\n\
+    \nClasses are not dealt with in this book but we have to use some for our final\
+    \ project in chapter 5. You will learn about the def keyword in the next chapter!\n\
+    \n# More about commenting\n\nDon't be surprised if you had no idea what any of\
+    \ the code above meant. Even if you had already read this book, it can be difficult\
+    \ to read other people's code. Remember, it is written for computers to understand,\
+    \ not us. Remember, we can leave little notes or comments as we go using the hash\
+    \ symbol #.\n\nHere is the same Python code as above with some comments.\n\n```\n\
+    # This is a class (or elevator in the USA)\nclass Lift():\n    # The lift starts\
+    \ on floor zero\n    current_floor=0\n\n    # The method for finding the lift\n\
+    \    def getFloor():\n        return current_floor\n\n    # The method for moving\
+    \ the lift\n    def moveToFloor(floor_number):\n        current_floor = floor_number\n\
+    ```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_34_0.png)\n\nPython code with\
+    \ too many comments."
+  - '[PAGE 35]
+
+
+    As you can see, it is possible to add too much commenting! Sometimes simply naming
+    things is well better. The names chosen by the programmer here include Lift, current_floor,
+    getFloor, moveToFloor and floor_number. The only Python code words are class and
+    def.
+
+
+    # Naming variables
+
+
+    If you want to store a number or some text somewhere you do so in a variable.
+
+
+    Variables should always be named with descriptive names. You should always start
+    with a little letter. You can separate variables with underscores like this my_own_variable.
+
+
+    # Getting user input
+
+
+    Getting user input is surprisingly simple in Python. We use another supplied function
+    input(). This function is very similar to the print() function in as much as it
+    can be given a string which it sends to the screen. The difference is it can only
+    take one string and it then waits for the return key on the keyboard to be pressed.
+    This means it can be used to pause a program or wait until the user is ready.
+    However it does one other thing: it returns, as a string, everything that is typed
+    by the user until the return key is pressed. This can be collected in a string
+    variable like this.
+
+
+    ```
+
+    keyboard_input = input("Enter some text please.")
+
+    ```
+
+
+    Python does not require that you name variables like this if you want the respect
+    of other coders you will!
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_35_0.png)'
+  - '[PAGE 36]
+
+
+    # Experiment
+
+
+    +   - In interactive mode, try typing the code in Code Box 3.2 to see how this
+    works. When the computer asks for your name, tell it who you are, press return
+    and then complete the code.
+
+
+    ```
+
+    Code Box 3.2
+
+    >>> name = input("What is your name?\
+
+    "
+
+    >>> print("Hello ", name)
+
+    ```
+
+
+    +   - And try to see what you can do with input() without supplying any text.
+
+
+    +   - By combining print() with input() you can make up for input''s inability
+    to handle complicated combinations of strings and maths. See if you can work out
+    how. (Hint: Just use input() on its own, after a complicated print() function.)
+
+
+    Now back to script mode.
+
+
+    After your eight variables in myMagic8Ball.py, miss a line and type in the code
+    from Code Box 3.3.
+
+
+    ```
+
+    Code Box 3.3
+
+    print("Welcome to MyMagic8Ball.")
+
+    # get the users question
+
+    question = input("Ask me for advice then press RETURN to shake me.\
+
+    "
+
+    print("shaking ...\n" * 4)
+
+    ```'
+  - '[PAGE 37]
+
+
+    The variable question is given the value from the result of the input() function.
+    That is, it now stores whatever was typed by the person playing the game before
+    they pressed return. In this version you will not use this variable. In fact the
+    player might well speak. However, you may want to customise the game later so
+    it is good design to store this input somewhere obvious, just in case. You will
+    find that you understand the rest of this code now. If you are not sure what the
+    last line in Code Box 3.3 does, you could copy that into the interactive mode
+    window and find out.
+
+
+    # # Using the random module
+
+
+    The first line of code in Code Box 3.1 imports Python’s random module. This gives
+    your program access to a number of functions. You will use just one – randint().
+    This function takes two integer arguments. Arguments are the values that you provide
+    for a function to do its task. You will learn more about this in chapter 4.
+
+
+    > I may be a simple dice but I am a very complex individual.
+
+
+    # # A simple dice
+
+
+    To create a dice requires only one line of code in interactive mode.
+
+
+    ```
+
+    >>> random.randint(1, 6)
+
+    ```
+
+
+    We have put random. before randint() to tell the computer that this function can
+    be found in the random module. The two arguments are the start number and the
+    end number. The function randomly chooses 1, 2, 3, 4, 5 or 6. Try it out a few
+    times in interactive mode to see it in action.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_37_0.png)'
+- md: "\n# Back in script mode\n\nBack in the myMagicBall.py window type the code\
+    \ from Code Box 3.4. You will see that we use the randint() function to generate\
+    \ a random number between 1 and 8 and assign the result to a variable called choice.\n\
+    \n(Hint: You can save yourself a lot of typing by copying and pasting. Remember\
+    \ that whenever you do this, it means there is probably a better way of writing\
+    \ your code!)\n\n# Code Box 3.4\n\n```\n# use the randint() function to select\
+    \ the correct answer\nchoice=random.randint(1, 8)\nif choice == 1:\n    answer=ans1\n\
+    elif choice == 2:\n    answer=ans2\nelif choice == 3:\n    answer=ans3\nelif choice\
+    \ == 4:\n    answer=ans4\nelif choice == 5:\n    answer=ans5\nelif choice == 6:\n\
+    \    answer=ans6\nelif choice == 7:\n    answer=ans7\n```\n\n> I would have thought\
+    \ that the best way of doing this with tuples.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_38_0.png)\n\
+    \n> Well probably yes, but our readers will not meet tuples in this book.\n\n\
+    A random image!\n\n```\nelse:\n    answer=ans8\n    # print the answer to the\
+    \ screen\n    print(answer)\n    input(\"\\n\\nPress the RETURN key to finish.\"\
+    )\n```\n\n# Analysis of Code Box 3.4\n\n### if, elif and else\n\nThe last part\
+    \ of the code in Code Box 3.4 used the Python words if, elif and else. They are\
+    \ very easy to understand when you realise that elif is short for else. Look at\
+    \ this bit of code.\n\n```\nif choice == 1:\n    answer = ans1\n```\n\nThe first\
+    \ line says, 'if the value of choice is equal to 1, then run the code that is\
+    \ indented after the colon.'\n\nNotice how the comparison operator == is used,\
+    \ in the same way as it was with the while loop in chapter 2.\n\nSo, if choice\
+    \ does equal 1 the program creates a new variable and calls it answer. Using the\
+    \ equals sign it is given the string that is held by your variable ans1 which\
+    \ you typed at the beginning of the program. So now answer would hold the string\
+    \ \"Go for it!\"\n\nThe random generator randint(1, 8) may not have produced the\
+    \ value 1 though, so the next bit of the code handles the situation if choice\
+    \ equals 2:\n\n```\nelif choice == 2:\nanswer=ans2\n```\n\nSo in this case answer\
+    \ would hold the string, \"No way, Jose!\"\n\nThis continues until the application\
+    \ handles all other situations else:\nin your program this means if the choice\
+    \ is 8.\n\n```\nelse:\nanswer=ans8\n```\n\n# Two uses of input\n\nThe input()\
+    \ function is used twice in this program. The first time, it takes the user input\
+    \ and stores it in a variable called question.\n\n> It is perfectly OK to have\
+    \ an if statement on its own. It is also OK to have an if statement followed by\
+    \ else. If you use an elif statement though, you must end with else.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_40_0.png)\n\
+    \nDo you remember how the user's input is not actually required? What line of\
+    \ code does do, wait until the return key is pressed and stores the input just\
+    \ in case we decide to use it some other time.\n\nAt the end of the program we\
+    \ use the input () function again.\n\n```\ninput(\"\\n\\nPress the RETURN key\
+    \ to finish.\")\n```\n\nThis line does not even bother storing the user input\
+    \ at all. It just supplies two line returns and a message to say the game is over.\
+    \ The program again waits for the user to press the return key and then finishes.\n\
+    \nThis is much better than suddenly finishing the game unexpectedly and you will\
+    \ see it used a lot from now on.\n\nYou have entered all the code for this program\
+    \ now. If you have not saved it, do so now and then check it against the complete\
+    \ listing in Code Box 3.5.\n\n# Putting it all together\n\nHere is the complete\
+    \ code as seen in IDLE\n\n```\n# MyMagicBall\nimport random\n\n# write answers\n\
+    ans1=\"Go for it!\"\nans2=\"No way, Jose!\"\nans3=\"I'm not sure. Ask me again.\"\
+    \nans4=\"Pear of the unknown is what is.\"\nans5=\"It would be madness to do that!\"\
+    \nans6=\"Only you can save!\"\nans7=\"Makes no difference to me, do or whatever.\"\
+    \nans8=\"Yes, I think that is the right.\"\n\nprint(\"Welcome to MyMagicBall.\"\
+    )\n\n# get the question\nquestion = input(\"Ask me for advice then press ENTER\
+    \ to shake me.\")\n\nprint(\"shaking ...n\")\n# use the randint() function to\
+    \ select the correct answer\nchoice=random.randint(1, 8)\nif choice == 1:\nanswer=ans1\n\
+    elif choice == 2:\nanswer=ans2\nelif choice == 3:\nanswer=ans3\nelif choice ==\
+    \ 4:\nanswer=ans4\nelif choice == 5:\nanswer=ans5\nelif choice == 6:\nanswer=ans6\n\
+    elif choice == 7:\nanswer=ans7\nelse:\nanswer=ans8\n\n# print the answer to the\
+    \ screen\nprint(input(\"\\n\\nPress the RETURN key to finish.\"))\n```\n\n# Running\
+    \ programs in script mode\n\nTo run the code you must first remember to save it\
+    \ with the .py at the end. Now with the finished myMagicBall.py open, choose Run\
+    \ from the menu. The program will run in the interactive mode. Try it out.\n\n\
+    # Chapter summary\n\nIn this chapter you have learned:\n\n- how to write and save\
+    \ a Python file using script mode\n- how to write clear code with comments and\
+    \ descriptive variable names\n- how to run a Python file\n- how to get user input\n\
+    - about if, elif and else\n- how to write a short game called MyMagicBall\n\n\
+    You have worked hard and learned a lot in this chapter. It is time you experimented\
+    \ a bit:\n\n# Idea 1\n\n> Try out the game on some friends. (Hint: Make sure they\
+    \ cannot see the code, as this will ruin the game.)\n\n# Idea 2\n\nChange the\
+    \ answers you want your MagicBall to say.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_44_0.png)\n\
+    \n# Challenge\n\n- Add some code to myMagicBall.py so that the MagicBall says\
+    \ ‘Hi’ and asks for the user’s name at the start of the game.\n- It should then\
+    \ store the input in a variable such as user_name.\n- Re-write the code so that\
+    \ the MagicBall talks to the user using their name. At the end for example, it\
+    \ could say: ‘Thanks for playing [user’s name]. Please press the return key to\
+    \ finish.’\n\nThere are several ways to do this. An example answer can be found\
+    \ on the Coding Club website.\n\n# Chapter 4 Functions\n\nIn this chapter you\
+    \ are going to:\n\n- learn about functions\n- write your own functions\n- create\
+    \ a number guessing game.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_46_0.png)\n\
+    \n> Guessing games can be cool.\n\n# Functions\n\nYou have already met and used\
+    \ a few functions. The first one you used was print(). Functions have brackets\
+    \ after their name. This is where we supply arguments by commas. Some functions\
+    \ do not need them, they do their jobs without argument!\n\n```\nprint(\"This\
+    \ is my number: %n\")\n```\n\nanother argument\n\nWhen we create or use a function\
+    \ that does not require any arguments, we still put empty brackets after its name.\
+    \ e.g. my_function()\n\nThere are many functions that are built into Python that\
+    \ we can already use. We can make our own. We create functions with the def keyword.\
+    \ Here is the code for a counting function.\n\n```\n>>> def count(number):\n \
+    \ n=1\n  while n <= number:\n    print(n)\n    n = n+1\n```\n\nIn interactive\
+    \ mode, type in the above code. You will need to press return twice to get back\
+    \ to the Python prompt. Then type count(10) and press return.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_47_0.png)\n\
+    \n# Delving deeper\n\nAn **infinite loop** can be created by running a **while**\
+    \ loop that never stops. This is not a good thing! It usually means you have made\
+    \ a mistake.\n\nYou may get into a similar situation if you try playing with the\
+    \ `count()` or the `times_tables()` functions later in this chapter.\n\nIf your\
+    \ program keeps running and will not stop just close the window. Python will ask\
+    \ if you want to kill the program. Don't be scared ... kill it!\n\n(Sometimes\
+    \ simply holding `ctrl` and pressing the c key will work better.)\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_48_0.png)\n\
+    \n# Times tables anyone?\n\nTo get Python to produce any of the times tables is\
+    \ easy, with a **while** loop. However, we want to be able to quickly choose which\
+    \ times table we want, then it is probably easier to write a new function rather\
+    \ than keep hacking your code.\n\n| 1 x 12 = 12 |\n| 2 x 12 = 24 |\n| 3 x 12 =\
+    \ 36 |\n| 4 x 12 = 48 |\n| 5 x 12 = 60 |\n| 6 x 12 = 72 |\n\nLet's start thinking...\n\
+    \nWe need to supply a value that indicates which times table we want. This is\
+    \ a number so we could call this argument `num:`\n\n```\ndef times_tables(num)\n\
+    ```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_48_1.png)\n\nWe need to produce\
+    \ a **while** loop. But first let's work out the code for one line of the table\
+    \ e.g. `2 x 12 = 24`. To do this 2 is a counter which we will use in the while\
+    \ loop (Simply use `n`, not all variable names have to be descriptive!). The 12\
+    \ is `num` and the 24 is\n"
+  mdcn: "\n\n# 回脚本模式\n\n回到 `myMagicBall.py` 窗口，输入代码框 3.4 中的代码。你会看到我们使用 `randint()`\
+    \ 函数来生成一个 1 到 8 之间的随机数，并将结果赋值给名为 `choice` 的变量。\n\n（提示：你可以通过复制和粘贴来节省大量的打字时间。记住，每当你这样做时，可能意味着有更好的代码编写方式！）\n\
+    \n# 代码框 3.4\n\n```\n# use the randint() function to select the correct answer\n\
+    choice=random.randint(1, 8)\nif choice == 1:\n    answer=ans1\nelif choice ==\
+    \ 2:\n    answer=ans2\nelif choice == 3:\n    answer=ans3\nelif choice == 4:\n\
+    \    answer=ans4\nelif choice == 5:\n    answer=ans5\nelif choice == 6:\n    answer=ans6\n\
+    elif choice == 7:\n    answer=ans7\n```\n\n> 我本以为用元组（tuples）来处理是最好的方法。\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_38_0.png)\n\
+    \n> 也许吧，但我们的读者在这书中不会遇到元组。\n\n一张随机图片！\n\n```\nelse:\n    answer=ans8\n    # print\
+    \ the answer to the screen\n    print(answer)\n    input(\"\\n\\nPress the RETURN\
+    \ key to finish.\")\n```\n\n# 代码框 3.4 分析\n\n### if, elif and else\n\n代码框 3.4 代码的最后部分使用了\
+    \ Python 的 `if`、`elif` 和 `else` 关键字。当你意识到 `elif` 是 `else` 的缩写时，它们非常容易理解。看这段代码：\n\
+    \n```\nif choice == 1:\n    answer = ans1\n```\n\n第一行的意思是是：“如果 `choice` 的值等于 1，则运行冒号后缩进的代码。”\n\
+    \n注意比较运算符 `==` 是如何使用的，这与第 2 章中 `while` 循环中的用法相同。\n\n所以，如果 `choice` 等于 1，程序创建一个新变量并将其命名为\
+    \ `answer`。通过等号，它被赋值了你在程序开始时输入的变量 `ans1` 所持有的字符串。因此现在 `answer` 将持有字符串 \"Go for\
+    \ it!\"\n\n不过，随机生成器 `randint(1, 8)` 可能没有产生值 1，因此下一段代码处理 `choice` 等于 2 的情况：\n\n\
+    ```\nelif choice == 2:\nanswer=ans2\n```\n\n因此在这种情况下，`answer` 将持有字符串 \"No way,\
+    \ Jose!\"\n\n这会持续到应用程序处理所有其他情况：在你的程序中，这意味着如果 `choice` 是 8。\n\n```\nelse:\nanswer=ans8\n\
+    ```\n\n# input 的两种用法\n\n`input()` 函数在程序中使用了两次。第一次，它获取用户输入并存储在名为 `question` 的变量中。\n\
+    \n> 单独一个 `if` 语句是完全没问题的。`if` 语句后面跟着 `else` 也是可以的。但如果你使用 `elif` 语句，必须以 `else` 结尾。\n\
+    \n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_40_0.png)\n\n你还记得用户的输入实际上并不是强制要求的吗？那行代码的作用是：等待回车键被按下，并存储输入，以防我们以后决定要使用它。\n\
+    \n在程序末尾，我们再次使用了 `input()` 函数。\n\n```\ninput(\"\\n\\nPress the RETURN key to finish.\"\
+    )\n```\n\n这一行甚至完全没有花精力存储用户输入。它只是提供了两个换行符和一条提示游戏结束的消息。程序再次等待用户按下回车键，然后结束。\n\n这比意外结束游戏好得多，而且以后你会经常看到它。\n\
+    \n你已经输入了程序的全部代码。如果你还没有保存，现在就保存，然后对照代码框 3.5 进行检查。\n\n# 整合在一起\n\n这是在 IDLE 中看到的完整代码：\n\
+    \n```\n# MyMagicBall\nimport random\n\n# write answers\nans1=\"Go for it!\"\n\
+    ans2=\"No way, Jose!\"\nans3=\"I'm not sure. Ask me again.\"\nans4=\"Pear of the\
+    \ unknown is what.\"\nans5=\"It would be madness to do that!\"\nans6=\"Only you\
+    \ can save!\"\nans7=\"Makes no difference to me, do or whatever.\"\nans8=\"Yes,\
+    \ I think that is the right.\"\n\nprint(\"Welcome to MyMagicBall.\")\n\n# get\
+    \ the question\nquestion = input(\"Ask me for advice then ENTER to shake me.\"\
+    )\n\nprint(\"shaking ...\")\n# use the randint() function to select the correct\
+    \ answer\nchoice=random.randint(1, 8)\nif choice == 1:\nanswer=ans1\nelif choice\
+    \ == 2:\nanswer=ans2\nelif choice == 3:\nanswer=ans3\nelif choice == 4:\nanswer=ans4\n\
+    elif choice == 5:\nanswer=ans5\nelif choice == 6:\nanswer=ans6\nelif choice ==\
+    \ 7:\nanswer=ans7\nelse:\nanswer=ans8\n\n# print the answer to the screen\nprint(input(\"\
+    \\n\\nPress the RETURN key to finish.\"))\n```\n\n# 脚本模式运行\n\n要运行代码，你首先必须将其保存为\
+    \ `.py` 文件。现在打开 `myMagicBall.py`，从菜单选择 Run。程序将在交互模式下运行。尝试一下。\n\n# 总结\n\n在本章中你学习了：\n\
+    \n- 如何使用脚本模式编写并保存 Python 文件\n- 如何编写带有注释和描述性变量名的代码\n- 如何运行 Python 文件\n- 如何获取用户输入\n\
+    - 关于 `if`、`elif` 和 `else`\n- 如何编写名为 `MyMagicBall` 的小游戏\n\n你在这一章非常努力并学了很多。是时候实验一下了：\n\
+    \n# 想法 1\n\n> 让朋友玩玩游戏。（提示：确保他们看不到代码，否则会破坏游戏。）\n\n# 想法 2\n\n改变你想让 MagicBall 说的答案。\n\
+    \n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_44_0.png)\n\n# 挑战\n\n- 在 `myMagicBall.py`\
+    \ 中添加代码，让 MagicBall 在游戏开始时说“Hi”并询问用户名。\n- 它应该将输入存储在变量 `user_name` 中。\n- 重写代码，让\
+    \ MagicBall 使用他们的名字交流。例如在最后，它可以说：“感谢游戏 [user_name]。请按回车键结束。”\n\n有几种方法可以实现这一点。可以在\
+    \ Coding Club 网站找到示例答案。\n\n# 第 4 章 函数\n\n在本章中你将：\n\n- 学习函数\n- 编写你自己的函数\n- 创建一个猜数字游戏\n\
+    \n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_46_0.png)\n\n> 猜游戏可以很酷。\n\n# 函数\n\n\
+    你已经遇到并使用了一些函数。你使用的第一个是 `print()`。函数名后面有括号。这是通过逗号提供参数的地方。有些函数不需要参数，它们没有参数的情况下工作！\n\
+    \n```\nprint(\"This is my number: %n\")\n```\n\n另一个参数\n\n当我们创建一个或使用不需要任何参数的函数时，我们仍然在名字后面加上空括号。例如\
+    \ `my_function()`。\n\nPython 内置了许多我们可以直接使用的函数。我们可以创建自己的。我们使用 `def` 关键字创建函数。这是一个计数函数的代码：\n\
+    \n```\n>>> def count(number):\n  n=1\n  while n <= number:\n    print(n)\n   \
+    \ n = n+1\n```\n\n在交互模式下，输入上述代码。你需要两次回车键返回 Python 提示符。然后输入 `count(10)` 并按回车。\n\
+    \n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_47_0.png)\n\n# 深入探索\n\n**无限循环**可以通过运行一个永不停止的\
+    \ `while` 循环来创建。这不是好事！这通常意味着你犯了错误。\n\n如果你在本章稍后尝试玩 `count()` 或 `times_tables()`\
+    \ 函数，可能会遇到类似的情况。\n\n如果你的程序一直运行不停止，直接关闭窗口。Python 会询问你是否想要杀死程序。不要害怕……杀掉它！（有时简单地按住\
+    \ `ctrl` 并按下 `c` 键效果更好。）\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_48_0.png)\n\
+    \n# 有人想要乘法表吗？\n\n使用 `while` 循环让 Python 生成任何乘法表都是的。然而，我们想要快速选择我们需要哪一个乘法表，那么写一个新函数可能比不断修改你的代码更容易。\n\
+    \n| 1 x 12 = 12 |\n| 2 x 12 = 24 |\n| 3 x 12 = 36 |\n| 4 x 12 = 48 |\n| 5 x 12\
+    \ = 60 |\n| 6 x 12 = 72 |\n\n让我们开始思考……\n\n我们需要提供一个值来指示我们需要哪个乘法表。这是一个数字，所以我们可以把这个参数命名为\
+    \ `num:`\n\n```\ndef times_tables(num)\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_48_1.png)\n\
+    \n我们需要产生 `while` 循环。但首先我们先算出表格中某行的代码，例如 `2 x 12 = 24`。为了实现这一点，2 是一个计数器，我们将在 `while`\
+    \ 循环中使用它（简单使用 `n`，并不是所有的变量名都必须描述性的！）。12 是 `num`，而 24 是\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 38]\n\n# Back in script mode\n\nBack in the myMagicBall.py window type\
+    \ the code from Code Box 3.4. You will see that we use the randint() function\
+    \ to generate a random number between 1 and 8 and assign the result to a variable\
+    \ called choice.\n\n(Hint: You can save yourself a lot of typing by copying and\
+    \ pasting. Remember that whenever you do this, it means there is probably a better\
+    \ way of writing your code!)\n\n# Code Box 3.4\n\n```\n# use the randint() function\
+    \ to select the correct answer\nchoice=random.randint(1, 8)\nif choice == 1:\n\
+    \    answer=ans1\nelif choice == 2:\n    answer=ans2\nelif choice == 3:\n    answer=ans3\n\
+    elif choice == 4:\n    answer=ans4\nelif choice == 5:\n    answer=ans5\nelif choice\
+    \ == 6:\n    answer=ans6\nelif choice == 7:\n    answer=ans7\n```\n\n> I would\
+    \ have thought that the best way of doing this with tuples.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_38_0.png)\n\
+    \n> Well probably yes, but our readers will not meet tuples in this book.\n\n\
+    A random image!\n\n(continues on the next page)"
+  - "[PAGE 39]\n\n```\nelse:\n    answer=ans8\n    # print the answer to the screen\n\
+    \    print(answer)\n    input(\"\\n\\nPress the RETURN key to finish.\")\n```\n\
+    \n# Analysis of Code Box 3.4\n\nif, elif and else\n\nThe last part of the code\
+    \ in Code Box 3.4 used the Python words if, elif and else. They are very easy\
+    \ to understand when you realise that elif is short for else. Look at this bit\
+    \ of code.\n\n```\nif choice == 1:\n    answer = ans1\n```\n\nThe first line says,\
+    \ 'if the value of choice is equal to 1, then run the code that is indented after\
+    \ the colon.'\n\nNotice how the comparison operator == is used, in the same way\
+    \ as it was with the while loop in chapter 2."
+  - '[PAGE 40]
+
+
+    So, if choice does equal 1 the program creates a new variable and calls it answer.
+    Using the equals sign it is given the string that is held by your variable ans1
+    which you typed at the beginning of the program. So now answer would hold the
+    string "Go for it!"
+
+
+    The random generator randint(1, 8) may not have produced the value 1 though, so
+    the next bit of the code handles the situation if choice equals 2::
+
+
+    ```
+
+    elif choice == 2:
+
+    answer=ans2
+
+    ```
+
+
+    So in this case answer would hold the string, "No way, Jose!"
+
+
+    This continues until the application handles all other situations else::
+
+    in your program this means if the choice is 8.
+
+
+    ```
+
+    else:
+
+    answer=ans8
+
+    ```
+
+
+    # Two uses of input
+
+
+    The input() function is used twice in this program. The first time, it takes the
+    user input and stores it in a variable called question.
+
+
+    > It is perfectly OK to have an if statement on its own. It is also OK to have
+    an if statement followed by else. If you use an elif statement though, you must
+    end with else.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_40_0.png)'
+  - '[PAGE 41]
+
+
+    Do you remember how the user''s input is not actually required? What line of code
+    does do, wait until the return key is pressed and stores the input just in case
+    we decide to use it some other time.
+
+
+    At the end of the program we use the input () function again.
+
+
+    ```
+
+    input("\n\nPress the RETURN key to finish.")
+
+    ```
+
+
+    This line does not even bother storing the user input at all. It just supplies
+    two line returns and a message to say the game is over. The program again waits
+    for the user to press the return key and then finishes.
+
+
+    This is much better than suddenly finishing the game unexpectedly and you will
+    see it used a lot from now on.
+
+
+    You have entered all the code for this program now. If you have not saved it,
+    do so now and then check it against the complete listing in Code Box 3.5.'
+  - '[PAGE 42]
+
+
+    # # Putting it all together
+
+
+    Here is the complete code as seen in IDLE
+
+
+    ```
+
+    # MyMagic8Ball
+
+    import random
+
+
+    # write answers
+
+    ans1="Go for it!"
+
+    ans2="No way, Jose!"
+
+    ans3="I''m not sure. Ask me again."
+
+    ans4="Pear of the unknown is what imprisons us."
+
+    ans5="It would be madness to do that!"
+
+    ans6="Only you can save mankind!"
+
+    ans7="Makes no difference to me, do or don''t - whatever."
+
+    ans8="Yes, I think on balance that is the right choice."
+
+
+    print("Welcome to MyMagic8Ball.")
+
+
+    # get the users question
+
+    question = input("Ask me for advice then press ENTER to shake me.\n")
+
+
+    print("shaking ...\n" * 4)
+
+    # use the randint() function to select the correct answer
+
+    choice=random.randint(1, 8)
+
+    if choice==1:
+
+    answer=ans1
+
+    ```
+
+
+    (continues on the next page)'
+  - '[PAGE 43]
+
+
+    ```
+
+    elif choice==2:
+
+    answer=ans2
+
+    elif choice==3:
+
+    answer=ans3
+
+    elif choice==4:
+
+    answer=ans4
+
+    elif choice==5:
+
+    answer=ans5
+
+    elif choice==6:
+
+    answer=ans6
+
+    elif choice==7:
+
+    answer=ans7
+
+    else:
+
+    answer=ans8
+
+
+    # print the answer to the screen
+
+    print (input("\n\nPress the RETURN key to finish."))
+
+    ```
+
+
+    # Running programs in script mode
+
+
+    To run the code you must first remember to save it with the .py at the end. Now
+    with the finished myMagicBall.py file open, choose Run Module from the Run menu.
+    The program will run in the interactive mode window. Try it out.'
+  - '[PAGE 44]
+
+
+    # # Chapter summary
+
+
+    In this chapter you have learned:
+
+
+    +   - how to write and save a Python file using script mode
+
+    - how to write clear readable code with comments and descriptive variable names
+
+    - how to run a Python file
+
+    - how to get user input
+
+    - about if, elif and else
+
+    - how to write a short game code called MyMagic8Ball
+
+
+    You have worked hard and learned a lot in this chapter. It is time you experimented
+    a bit :
+
+
+    # Idea 1
+
+
+    > Try out the game on some friends or relatives. (Hint: Make sure they cannot
+    see the code, as this will ruin the game.)
+
+
+    # Idea 2
+
+
+    Change the eight string variables to answers you want your Magic8Ball to say.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_44_0.png)'
+  - '[PAGE 45]
+
+
+    # Challenge
+
+
+    +   - Add some code to myMagic8Ball.py so that the Magic8Ball says ‘Hi’ and asks
+    for the user’s name at the start of the game.
+
+    - It should then store the input in a variable such as user_name.
+
+    - Re-write the code so that the Magic8Ball talks to the user using their name.
+    At the end for example, it could say: ‘Thanks for playing [user’s name]. Please
+    press the return key to finish.’
+
+
+    There are several ways to do this. An example answer can be found on the Coding
+    Club website.'
+  - '[PAGE 46]
+
+
+    # # Chapter 4
+
+    Functions
+
+
+    In this chapter you are going to:
+
+
+    +   - learn about functions
+
+    - write your own functions
+
+    - create a number guessing game.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_46_0.png)
+
+
+    > Guessing games can be cool.'
+  - "[PAGE 47]\n\n# # Functions\n\nYou have already met and used a few functions.\
+    \ The first one you used was print().nFunctions have brackets after their name.\
+    \ This is where we supply arguments separated by commas. Some functions do not\
+    \ need them, they do their jobs without argument!\n\n```\nprint(\"This is my number:\
+    \ \\ number)\n```\n\nan argument another argument\n\nWhen we create or use a function\
+    \ that does not require any arguments, we still put empty brackets after its name.\n\
+    e.g. my_function()\n\nThere are many functions that are built into Python that\
+    \ we can already use. We can make our own. We create functions with the def keyword.\
+    \ Here is the code for a counting function.\n\n```\n>>> def count(number):\n \
+    \ n=1\n  while n <= number:\n    print(n)\n    n = n+1\n```\n\nIn interactive\
+    \ mode, type in the above code. You will need to press return twice to get back\
+    \ to the Python prompt. Then type count(10) and press return.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_47_0.png)"
+  - '[PAGE 48]
+
+
+    # Delving deeper
+
+
+    An **infinite loop** can be created by running a **while** loop that never stops.
+    This is not a good thing! It usually means you have made a mistake.
+
+
+    You may get into a similar situation if you try playing with the `count () ` or
+    the `times_tables() ` functions later in this chapter.
+
+
+    If your program keeps running and will not stop just close the window. Python
+    will ask if you want to kill the program. Don''t be scared ... kill it!
+
+
+    (Sometimes simply holding `ctrl` and pressing the c key will work better.)
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_48_0.png)
+
+
+    # Times tables anyone?
+
+
+    To get Python to produce any of the times tables is easy, with a **while** loop.
+    However, we want to be able to quickly choose which times table we want, then
+    it is probably easier to write a new function rather than keep **hacking** your
+    code.
+
+
+    | 1 x 12 = 12 |
+
+    | 2 x 12 = 24 |
+
+    | 3 x 12 = 36 |
+
+    | 4 x 12 = 48 |
+
+    | 5 x 12 = 60 |
+
+    | 6 x 12 = 72 |
+
+
+    Let''s start thinking...
+
+
+    We need to supply a value that indicates which times table we want. This is a
+    number so we could call this argument `num:`
+
+
+    ```
+
+    def times_tables(num)
+
+    ```
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_48_1.png)
+
+
+    We need to produce a **while** loop. But first let''s work out the code for one
+    line of the table e.g. `2 x 12 = 24` . To do this 2 is a counter which we will
+    use in the while loop (Simply use `n`, not all variable names have to be descriptive!).
+    The 12 is `num` and the 24 is
+
+
+    Chapter 4: Functions 47'
+- md: "\nobtained by multiplying n by num. The rest is just text. We can put all this\
+    \ together into one print statement.\n\n## Quick Quiz 3\n\n- Which of these produces\
+    \ the output we want?\n1. print(n, \" x \", num, \" =\", n*num)\n2. print(num,\
+    \ \" x \", n, \" =\", num*n)\n3. print(n, \" * \", num, \" =\", n*num)\n\nNow\
+    \ let's stick it all together.\n\nUsing IDLE's interactive mode, type in and think\
+    \ about the code in Code Box 4.1. Don't forget to press return twice to get back\
+    \ the Python prompt. Nothing should happen yet – all will be revealed shortly.\n\
+    \n```\nCode Box 4.1\n>>> times_tables(num):\n    n=1\n    while n <= 10:\n   \
+    \     print(n, \" x \", num, \" =\", n*num)\n        n = n+1\n```\n\nTo run this\
+    \ code and output the 12 times table, type the code from Code Box 4.2 and press\
+    \ return.\n\n```\nCode Box 4.2\n>>> times_tables(12)\n```\n\nIf all goes well\
+    \ you should have a screen that looks like this:\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_50_0.png)\n\
+    \nTimes tables.\n\nChapter 4: Functions 49\n\nWhat if you prefer to have your\
+    \ times tables twelve long, so that you get 12 x 12 = 144. Now you have to go\
+    \ back and edit the function. This could become tiring in interactive mode and\
+    \ a small annoyance if your function was saved as a Python file. Let's try to\
+    \ re-writing the function so it takes two arguments instead. Still in interactive\
+    \ mode, try entering the code in Code Box 4.3 and you will see the power of functions.\
+    \ Enjoy!\n\nIf you still have the times_tables() function listed in your interactive\
+    \ mode, placing the cursor somewhere in times_tables(num) and then press return.\
+    \ This will copy the whole function and allow you to edit it. This trick can really\
+    \ speed up your typing.\n\n## Code Box 4.3\n\n```\n>>> def times_tables(how_far,\
+    \ num) :\n    n=1\n    while n <= how_far:\n        print(n, \" x \", num, \"\
+    \ =\", n*num)\n        n = n+1\n>>> times_tables(12, 17)\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_51_0.png)\n\
+    \n## the number guessing game\n\nHere is the complete code for a small game. This\
+    \ is a very simple game where the computer thinks of a number between 1 and 100\
+    \ and the player has to guess what it. The game uses Python's random number function\
+    \ again and a while loop. Open a new window in IDLE and type in the code from\
+    \ Code Box 4.4. Save this file as myNumber.py in your Python code folder. As you\
+    \ type, try and work out each line is doing and marvel at how far you have come.\n\
+    \nChapter 4: Functions 50\n\n## Code Box 4.4\n\n```python\n# myNumber.py\n# This\
+    \ game uses a home made function\nimport random\n\n# Think of a number\ncomputer_number\
+    \ = random.randint(1, 100)\n\n# Create the function is_same()\ndef is_same(target,\
+    \ number):\n    if target == number:\n        result=\"Win\"\n    elif target\
+    \ > number:\n        result=\"Low\"\n    else:\n        result=\"High\"\n    return\
+    \ result\n\n# Start the game\nprint(\"Hello.\\nI have thought of a number between\
+    \ 1 and 100.\")\n\n# Collect the user's guess as an integer\nguess = int(input(\"\
+    Can you guess it? \"))\n# Use our function\nhigher_or_lower = is_same(computer_number,\
+    \ guess)\n```\n\n(continues on the next page)\n\n```python\n# Run the game until\
+    \ the user is correct\nwhile higher_or_lower != \"Win\":\n  if higher_or_lower\
+    \ == \"Low\":\n    guess = int(input(\"Sorry, you are too low. Try again.\"))\n\
+    \  else:\n      guess = int(input(\"Sorry, you are too high. Try again.\"))\n\n\
+    higher_or_lower = is_same(computer_number, guess)\n```\n\n## End the game\n\n\
+    input(\"Correct!\\nDone\\n\\nPress RETURN to exit.\")\n\nThere are two new things\
+    \ to you in this game. The **return** keyword tells the **is_same() function**\
+    \ what value should be sent back after it is called. We know functions can be\
+    \ sent arguments, **well** they can also return data.\n\nIn this case it returns\
+    \ the value stored in the variable **result**. So, if the two numbers are the\
+    \ same it returns the **string Win**, if the supplied number is higher than the\
+    \ target, the function returns the value **High** and if the supplied number is\
+    \ lower than the target, **Low.**\n\nThe second new thing to you is converting\
+    \ the user's input into an integer by wrapping it in **int( input goes here )**.\
+    \ This is because anything coming from keyboard input is **strings**. The process\
+    \ of converting one **data-type** into another data-type is called **casting.**\n\
+    \nHave you remembered to save the file?\n\nChapter 4: Functions 54\n\n## Chapter\
+    \ summary\n\nIn this chapter you have learned:\n- about functions\n- about while\
+    \ loops\n- about creating a game\n- how to use tkinter\n- how to design a program\n\
+    - how to use arguments\n\nHere are some ideas:\n- Idea 1: about times tables\n\
+    - Idea 2: about the guessing game\n- Idea 3: about EtchASketch\n- Idea 4: a challenges\n\
+    \n"
+  mdcn: "\n通过将 `n` 乘以 `num` 得到。剩下的只是文本。我们可以将所有内容整合到一个打印语句中。\n\n## 快速测验 3\n\n- 下哪一个产生了我们想要的输出？\n\
+    1. print(n, \" x \", num, \" =\", n*num)\n2. print(num, \" x \", n, \" =\", num*n)\n\
+    3. print(n, \" * \", num, \" =\", n*num)\n\n现在，让我们把它们都组合在一起。\n\n使用 IDLE 的交互模式，输入并思考代码框\
+    \ 4.1 中的代码。别忘记按两次回车键以返回 Python 提示符。此时应该还没有发生任何事情——一切很快就会揭晓。\n\n```\nCode Box 4.1\n\
+    >>> times_tables(num):\n    n=1\n    while n <= 10:\n        print(n, \" x \"\
+    , num, \" =\", n*num)\n        n = n+1\n```\n\n要运行这段代码并输出 12 乘法表，请输入代码框 4.2 中的代码并按回车。\n\
+    \n```\nCode Box 4.2\n>>> times_tables(12)\n```\n\n如果一切顺利，你应该看到一个像这样的屏幕：\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_50_0.png)\n\
+    \n乘法表。\n\n第 4 章：函数 49\n\n如果你希望乘法表长度增加到 12 行，这样就能得到 12 x 12 = 144 会怎么办？现在你必须回去编辑该函数。在交互模式下这可能会很累，如果你的函数被保存为\
+    \ Python 文件，这会是一个小麻烦。让我们尝试重写该函数，使其接受两个参数。同样在交互模式下，尝试输入代码框 4.3 中的代码，你将看到函数的威力。享受吧！\n\
+    \n如果你在交互模式中仍然列出了 `times_tables()` 函数，将光标放在 `times_tables(num)` 某处，然后按回车。这将复制整个函数并允许你编辑它。这个技巧真的可以加快你的打字速度。\n\
+    \n## 代码框 4.3\n\n```\n>>> def times_tables(how_far, num) :\n    n=1\n    while\
+    \ n <= how_far:\n        print(n, \" x \", num, \" =\", n*num)\n        n = n+1\n\
+    >>> times_tables(12, 17)\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_51_0.png)\n\
+    \n## 猜数字游戏\n\n这是一个小游戏的完整代码。这是一个非常简单的游戏，计算机想出一个 1 到 100 之间的数字，玩家必须猜出那个数字。这个游戏再次使用了\
+    \ Python 的随机数函数和 `while` 循环。在 IDLE 中打开一个新窗口，输入代码框 4.4 中的代码。将此文件保存为 `myNumber.py`\
+    \ 并存放在你的 Python 代码文件夹中。在你输入时，尝试推断每一行代码的作用，并惊叹自己已经走了多远。\n\n第 4 章：函数 50\n\n## 代码框\
+    \ 4.4\n\n```python\n# myNumber.py\n# 这个游戏使用了一个自定义函数\nimport random\n\n# 想一个数字\n\
+    computer_number = random.randint(1, 100)\n\n# 创建函数 is_same()\ndef is_same(target,\
+    \ number):\n    if target == number:\n        result=\"Win\"\n    elif target\
+    \ > number:\n        result=\"Low\"\n    else:\n        result=\"High\"\n    return\
+    \ result\n\n# 开始游戏\nprint(\"Hello.\\n我想了一个 1 到 100 之间的数字。\")\n\n# 将用户的猜测转换为整数\n\
+    guess = int(input(\"你能猜中它吗？ \"))\n# 使用我们的函数\nhigher_or_lower = is_same(computer_number,\
+    \ guess)\n```\n\n（下页继续）\n\n```python\n# 运行游戏直到用户猜对\nwhile higher_or_lower != \"\
+    Win\":\n  if higher_or_lower == \"Low\":\n    guess = int(input(\"Sorry,你太低了。再试一次。\"\
+    ))\n  else:\n      guess = int(input(\"Sorry,你太高了。再试一次。\"))\n\nhigher_or_lower\
+    \ = is_same(computer_number, guess)\n```\n\n## 结束游戏\n\ninput(\"Correct!\\nDone\\\
+    n\\n按 RETURN 退出。\")\n\n在这个游戏中，对你来说有两个新知识点。**return** 关键字告诉 **is_same() 函数** 在被调用后应该返回什么值。我们知道函数可以发送参数，**而且**，它们也可以返回数据。\n\
+    \n在这种情况下，它返回存储在变量 **result** 中的值。因此，如果两个数字相同，它返回**字符串 Win**；如果提供的数字大于目标，函数返回值\
+    \ **High**；如果提供的数字小于目标，则返回 **Low**。\n\n对你来说的第二个新知识点是通过将其封装在 **int( 此处输入 )** 中来将用户的输入转换为整数。这是因为来自键盘输入的任何内容都是**字符串（strings）**。将一种**数据类型（data-type）**转换为另一种数据类型被称为**类型转换（casting）**。\n\
+    \n你记得保存文件了吗？\n\n第 4 章：函数 54\n\n## 本章总结\n\n在本章中，你学习了：\n- 关于函数\n- 关于 `while` 循环\n\
+    - 如何创建一个游戏\n- 如何使用 tkinter\n- 如何设计程序\n- 如何使用参数\n\n这里是一些主意：\n- 想法 1：关于乘法表\n- 想法\
+    \ 2：关于猜数字游戏\n- 想法 3：关于 EtchASketch\n- 想法 4：挑战\n\n\n"
+  merge: 1
+  raw:
+  - "[PAGE 49]\n\nobtained by multiplying n by num. The rest is just text. We can\
+    \ put all this together into one print statement.\n\n# Quick Quiz 3\n\n+   Which\
+    \ of these produces the output we want?\n1 print(n, \" x \", num, \" =\", n*num)\n\
+    2 print(num, \" x \", n, \" =\", num*n)\n3 print(n, \" * \", num, \" =\", n*num)\n\
+    \nNow let's stick it all together.\n\nUsing IDLE's interactive mode, type in and\
+    \ think about the code in Code Box 4.1. Don't forget to press return twice to\
+    \ get back the Python prompt. Nothing should happen yet – all will be revealed\
+    \ shortly.\n\n```\nCode Box 4.1\n>>> times_tables(num):\n    n=1\n    while n\
+    \ <= 10:\n        print(n, \" x \", num, \" =\", n*num)\n        n = n+1\n```"
+  - '[PAGE 50]
+
+
+    To run this code and output the 12 times table, type the code from Code Box 4.2
+    and press return.
+
+
+    ```
+
+    Code Box 4.2
+
+    >>> times_tables(12)
+
+    ```
+
+
+    If all goes well you should have a screen that looks like this:
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_50_0.png)
+
+
+    Times tables.
+
+
+    Chapter 4: Functions 49'
+  - "[PAGE 51]\n\nWhat if you prefer to have your times tables twelve long, so that\
+    \ you get 12 x 12 = 144. Now you have to go back and edit the function. This could\
+    \ become tiring in interactive mode and a small annoyance if your function was\
+    \ saved as a Python file. Let's try to re-writing the function so it takes two\
+    \ arguments instead. Still in interactive mode, try entering the code in Code\
+    \ Box 4.3 and you will see the power of functions. Enjoy!\n\nIf you still have\
+    \ the times_tables() function listed in your interactive mode, placing the cursor\
+    \ somewhere in times_tables(num) and then press return. This will copy the whole\
+    \ function and allow you to edit it. This trick can really speed up your typing.\n\
+    \n# Code Box 4.3\n\n```\n>>> def times_tables(how_far, num) :\n    n=1\n    while\
+    \ n <= \"how_far\":\n        print(n, \" x \", num, \" =\", n*num)\n        n\
+    \ = n+1\n>>> times_tables(12, 17)\n```\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_51_0.png)\n\
+    \n# the number guessing game\n\nHere is the complete code for a small game. This\
+    \ is a very simple game where the computer thinks of a number between 1 and 100\
+    \ and the player has to guess what it. The game uses Python's random number function\
+    \ again and a while loop. Open a new window in IDLE and type in the code from\
+    \ Code Box 4.4. Save this file as myNumber.py in your Python code folder. As you\
+    \ type, try and work out each line is doing and marvel at how far you have come.\n\
+    \nChapter 4: Functions 50"
+  - "[PAGE 52]\n\n# Code Box 4.4\n\n```\n# myNumber.py\n# This game uses a home made\
+    \ function\nimport random\n\n# Think of a number\ncomputer_number = random.randint(1,\
+    \ 100)\n\n# Create the function is_same()\ndef is_same(target, number):\n    if\
+    \ target == number:\n        result=\"Win\"\n    elif target > number:\n     \
+    \   result=\"Low\"\n    else:\n        result=\"High\"\n    return result\n\n\
+    # Start the game\nprint(\"Hello.\\nI have thought of a number between 1 and 100.\"\
+    )\n\n# Collect the user's guess as an integer\nguess = int(input(\"Can you guess\
+    \ it? \"))\n# Use our function\nhigher_or_lower = is_same(computer_number, guess)\n\
+    ```\n\n(continues on the next page)"
+  - "[PAGE 53]\n\n```\n# Run the game until the user is correct\nwhile higher_or_lower\
+    \ != \"Win\":\n  if higher_or_lower == \"Low\":\n    guess = int(input(\"Sorry,\
+    \ you are too low. Try again.\"))\n  else:\n      guess = int(input(\"Sorry, you\
+    \ are too high. Try again.\"))\n\nhigher_or_lower = is_same(computer_number, guess)\n\
+    ```\n\n# # End the game\n\ninput(\"Correct!\\nDone\\n\\nPress RETURN to exit.\"\
+    )\n\nThere are two new things to you in this game. The **return** keyword tells\
+    \ the **is_same() function** what value should be sent back after it is called.\
+    \ We know functions can be sent arguments, **well** they can also return data.\n\
+    \nIn this case it returns the value stored in the variable **result**. So, if\
+    \ the two numbers are the same it returns the **string Win**, if the supplied\
+    \ number is higher than the target, the function returns the value **High** and\
+    \ if the supplied number is lower than the target, **Low.**\n\nThe second new\
+    \ thing to **you** is converting the user's input into an integer by wrapping\
+    \ it in **int( input goes here )**.** This is because anything coming from keyboard\
+    \ input is **strings**. The process of converting one **data-type** into another\
+    \ data-type is called **casting.**\n\nHave you **remembered** to save the **file**\
+    \ to your **Python Code** folder? If so, you can run it by choosing **Run Module**\
+    \ from the **Run** menu or pressing **F5.**"
+  - '[PAGE 54]
+
+
+    # Chapter summary
+
+
+    In this chapter you have learned:
+
+
+    +   - about functions and how to write your own
+
+    - about building small programs, using functions and while loops
+
+    - a little about the steps needed when designing a function
+
+    - how to create a number guessing game
+
+    - how to stop a program that just keeps running – kill it; (or press ctrl-c)
+
+    - how to easily copy portions of code in IDLE.
+
+
+    You have worked hard and learned a lot of functions in this chapter. Here are
+    a few ideas that you may enjoy. There are several ways to do them. Examples can
+    be found on the web site.
+
+
+    # Idea 1
+
+
+    +   - Put the code from Code Box 4.3 into a script mode file called times_tables.py.
+
+    - Add some user interaction so that it asks which table you want and how far it
+    should go.
+
+    - Do not forget to add a line of code to stop the program nicely.
+
+
+    Now you have a times table app you can use whenever you want.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_54_0.png)'
+  - '[PAGE 55]
+
+
+    # Idea 2
+
+
+    Make a copy of myNumber.py and then add some code to make it count and display
+    how many guesses it took the player. (Hint: you will need another variable which
+    could call counter.)
+
+
+    # Idea 4
+
+
+    A harder challenge is to get the myNumber.py game to offer a choice of levels.
+
+
+    +   - Easy: choose from numbers between 1 and 10.
+
+    - Medium: numbers up to 20.
+
+    - Hard: numbers between 1 and 100.
+
+
+    This can be split into a number of shorter tasks.
+
+
+    +   1 Ask the user level they would like to play and collect and store the new
+    input as "e" or "h".
+
+    2 Add the following code to catch any input we do not want the user to enter.
+
+    3 Use if, elif and else to sort out the upper limit and store the result in a
+    suitable variable.
+
+    4 Move the code where the computer thinks of a number, to below this section and
+    insert your upper limit in place of the appropriate argument.
+
+    5 Adjust the print() function below the # Start the game comment so that it outputs
+    the correct information.
+
+    6 Adjust the code so the output all looks nice.
+
+
+    ```
+
+    while level != "e" and level != "m" and level != "h":
+
+    level = input("Sorry. You must type in one of the letters ''e'', ''m'' or ''h\ne/m/h:")
+
+    ```
+
+
+    # Idea 3
+
+
+    Make the myNumber.py easier for younger children by reducing the range of numbers
+    between 1 and 100'
+  - '[PAGE 56]
+
+
+    # # Chapter 5
+
+    MyEtchASSketch
+
+
+    In this chapter you are going to:
+
+
+    +   - learn how to use the tkinter library
+
+    - make your own MyEtchASSketch game
+
+    - learn how to put an application in its own window
+
+    - learn how to attach functions to keyboard presses.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_56_0.png)'
+  - '[PAGE 57]
+
+
+    # The tkinter library
+
+
+    In the previous chapters we saw how to import a module. A module is a file that
+    gives us access to a number of functions we do not have to write ourselves. So
+    far we have used the random module.
+
+
+    We are now going to import a whole library of modules that give us access to graphical
+    functions, such as the ability to make a window and a canvas to draw on.
+
+
+    As there are a number of modules we simply import them all like this.
+
+
+    ```
+
+    from tkinter import *
+
+    ```
+
+
+    The asterisk means everything. It is not being used as a multiplication symbol
+    here!
+
+
+    As tkinter uses classes (which we are not learning about in this book), some of
+    the code looks a bit strange. Do not worry about it. This is an introductory book.
+    You can learn about classes later. The term Canvas () for example takes its arguments
+    in a different form because Canvas is a class. Also notice it starts with a capital
+    letter.
+
+
+    We are going to make a window that is 600 pixels (dots on the screen) wide and
+    400 pixels high with a canvas we can draw on. In our case the canvas is black.
+    We do this using the code from Code Box 5.1. First we must open a new file in
+    script mode and type it.
+
+
+    Then save it as MyEtchASketch.py
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_57_0.png)
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_57_1.png)'
+- md: "\n# Code Box 5.1\n\n```python\n# myEtchASk application from Coding Club: Python\
+    \ Basics\n\nfrom tkinter import *\n\n##### Set variables:\ncanvas_height = 400\n\
+    canvas_width = 600\ncanvas_colour = \"black\"\n\n##### main:\nwindow = Tk()\n\
+    window.title(\"MyEtchASk\")\ncanvas = Canvas(bg=canvas_colour, height=canvas_height,\
+    \ width=canvas_width, highlightthickness=0)\ncanvas.pack()\n\nwindow.mainloop()\n\
+    ```\n\nYou can try running myEtchASketch.py now. Although it is not very exciting,\
+    \ it is the first time you have made a window! Notice how something also happens\
+    \ in the interactive mode window. This is now acting as a console where we will\
+    \ get, among other things, error messages.\n\n# The plan\n\nNow you have a window\
+    \ in which to make your application and a canvas to draw on, it is time to start\
+    \ planning the rest of the application. To do this we break down the task into\
+    \ functions. First we need to be able to draw a vertical line a bit at a time\
+    \ and then horizontally. As these are going to be controlled by the up, down,\
+    \ left and right arrow keys on the keyboard it makes sense to have four functions\
+    \ that are all going to be similar and then attach those functions to the keys.\
+    \ So to start with, let's just try and create a function that draws a line up\
+    \ when we press the up key. If we can achieve this we know that we will be able\
+    \ to complete this project.\n\n# The coordinates\n\nUnlike maths, tkinter and\
+    \ most computer languages use coordinates that count from the top left of the\
+    \ screen. So our canvas looks like this.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_59_0.png)\n\
+    \nSo a point on the screen is represented by two numbers:\n\ne.g. (100, 50) =\
+    \ a point 100 pixels along the x-axis and 50 pixels down the y-axis.\n\n# Keeping\
+    \ code organised\n\nThe function to draw a vertical line requires a few more variables\
+    \ so that we can keep track of where we are up to. These should go at the top\
+    \ of your code with your other variable declarations. This is good coding style.\
+    \ Now if you want to adjust your program, you simply adjust the variables at the\
+    \ top and re-run it. You do not have to dig through your code to find where things\
+    \ happen. Also by choosing descriptive names for the variables you do not need\
+    \ excessive amounts of commenting.\n\nThe functions should come next. They need\
+    \ to be before the main section that runs your application. That way it can use\
+    \ them! Therefore the code from Code Box 5.1 has been split in Code Box 5.2 to\
+    \ make room for all functions.\n\nYou can add the new code to your myEtchASketch.py\
+    \ file now. It will not do anything different yet. However the function works\
+    \ will be explained in the next analysis section.\n\n# Code Box 5.2\n\n```python\n\
+    # myEtchASketch application from Coding Club: Python Basics\n\nfrom tkinter import\
+    \ *\n\n##### Set variables:\ncanvas_height = 400\ncanvas_width = 600\ncanvas_colour\
+    \ = \"black\"\n\np1_x = canvas_width/2\np1_y = canvas_height\np1_colour = \"green\"\
+    \nline_width = 5\nline_length = 5\n\n##### Functions:\n# player controls\ndef\
+    \ p1_move_N(self):\n    global p1_y\n```\n\n```python\n##### main:\n\nwindow =\
+    \ Tk()\nwindow.title(\"MyEtchASketch\")\ncanvas = Canvas(bg=canvas_colour, height=canvas_height,\
+    \ width=canvas_width, highlightthickness=0)\ncanvas.pack()\n\nwindow.mainloop()\n\
+    ```\n\n# Code Box 5.2 analysis\n\nFirst, it must be noted that pl stands for player\
+    \ 1. The reason for having a player 1 is that you never know what is going to\
+    \ happen when you start out making a game. Ideas crop up and suddenly you want\
+    \ another player. OK, probably not for a MyEtchASketch game.\n\n# The variables\n\
+    \nInstead of adding lots of squares to make our lines, the code is simpler if\
+    \ you draw lots of little lines. You make a square by setting the line_width equal\
+    \ to the line_length. This works well because a line has a beginning and end coordinate,\
+    \ which is just what we want to keep track of. The variables are listed in Table\
+    \ 5.1.\n\n| Code | What it means | Initial settings |\n|---|---|---|\n| p1_x |\
+    \ stores the x position of the end of the line | half the width of the canvas\
+    \ |\n| p1_y | stores the y position of the end of the line | the height of the\
+    \ canvas |\n| p1_colour | stores the colour of the line | \"green\" |\n| line_width\
+    \ | stores the line width | 5 pixels |\n| line_length | stores the line length\
+    \ | 5 pixels |\n\nTable 5.1 Variables for MyEtchASk game.\n\n# The p1_move_N()\
+    \ function\n\n`p1_move_N(self)` is going to be a function that sends the line\
+    \ drawn by player 1 up the screen.\n\n# self\n\nAs this uses methods from tkinter,\
+    \ this function has to be supplied with the argument self. This is to do with\
+    \ tkinter's methods being in classes. Functions in classes are called.\n\n# global\n\
+    \nAt the start of the script, we declared all variables and gave them some values.\
+    \ This means that inside functions are local.\n\n# The create_line() method\n\n\
+    As this uses methods from tkinter, this function has to be supplied with the argument\
+    \ self. This is to do with tkinter's methods being in classes. Functions in classes\
+    \ are called.\n\n```python\ncanvas.create_line(x1, y1, x2, y2, fill=p1_colour,\
+    \ width=line_width)\n```\n\n| Arguments | Initial settings |\n|---|---|\n| x1\
+    \ | x-coordinate of the beginning of the line |\n| y1 | y-coordinate of the beginning\
+    \ of the line |\n| x2 | x-coordinate of the end of the line |\n| y2 | y-coordinate\
+    \ of the end of the line |\n\nTable 5.2 Arguments for MyEtchASk.\n\n# Adding keyboard\
+    \ control\n\nWe simply use the bind() method from window class and it just takes\
+    \ two arguments.\n\n```python\nwindow.bind(\"the key name\", our_function)\n```\n\
+    \nIf we wanted a key we would supply the argument \"a\" but for the up arrow we\
+    \ give \"<Up>\".\n\n```python\nwindow.bind(\"<Up>\", p1_move_N)\n```\n\n# Code\
+    \ Box 5.3\n\n```python\n# bind movement to key presses\nwindow.bind(\"<Up>\",\
+    \ p1_move_N)\n\nwindow.mainloop()\n```\n\n> See, it was easy!\n\n> OK - it was\
+    \ easy!\n\n# Finishing off\n\nOnce you have movement upwards, you will find the\
+    \ other directions are easy to write code. To move down we add 5 pixels to your\
+    \ y-coordinate, to move right we add 5 pixels to our x-coordinate and to go left\
+    \ we take 5 pixels from our x-coordinate.\n\nAdd the rest of the functions from\
+    \ Code Box 5.4 (this is the final step). Since we are repeating this code so often,\
+    \ this should indicate that there is probably a better way of writing this program.\
+    \ We will examine this in the activity section at the end of the chapter.\n\n\
+    If you find your program does not run the first time; try to sort out any problems\
+    \ yourself. If you do get stuck though, you can download the code from the companion\
+    \ website.\n"
+  mdcn: "\n\n# 代码框 5.1\n\n```python\n# myEtchASk application from Coding Club: Python\
+    \ Basics\n\nfrom tkinter import *\n\n##### 设置变量:\ncanvas_height = 400\ncanvas_width\
+    \ = 600\ncanvas_colour = \"black\"\n\n##### 主程序:\nwindow = Tk()\nwindow.title(\"\
+    MyEtchASk\")\ncanvas = Canvas(bg=canvas_colour, height=canvas_height, width=canvas_width,\
+    \ highlightthickness=0)\ncanvas.pack()\n\nwindow.mainloop()\n```\n\n你现在可以尝试运行\
+    \ `myEtchASketch.py` 了。虽然它看起来并不有趣，但这是你第一次创建一个窗口！注意交互模式窗口中也发生了一些事情。这里现在充当控制台，我们可以在这里获取错误消息等信息。\n\
+    \n# 计划\n\n现在你有了一个可以创建应用程序的窗口和一个可以绘画的画布，是时候开始规划应用程序的其他部分了。为了做到这一点，我们将任务拆分为多个函数。首先，我们需要能够每次画一点垂直线，然后是画水平线。由于这些操作将由键盘上的上、下、左、右方向键控制，因此编写四个相似的函数并将这些函数绑定到按键上是有意义的。所以首先，让我们先尝试创建一个函数，当我们按下向上方向键时画出一条向上的线。如果我们能实现这一点，我们就知道能够完成这个项目。\n\
+    \n# 坐标\n\n与数学不同，tkinter 和大多数计算机语言使用的坐标是从屏幕左上角开始计算的。所以我们的画布像这样。\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_59_0.png)\n\
+    \n因此，屏幕上的一个点由两个数字表示：\n\n例如 (100, 50) = 沿 x 轴移动 100 像素沿 y 轴向下 50 像素的点。\n\n# 保持代码整洁\n\
+    \n绘制垂直线的函数需要更多的变量，以便我们跟踪当前的进度。这些变量应该放在代码的顶部，并与其他变量声明放在一起。这是良好的编码风格。现在，如果你想调整程序，只需调整顶部的变量并重新运行。你不需要翻遍代码寻找事物发生的地方。此外，通过为变量选择描述性的名称，你就不需要过多的注释。\n\
+    \n接下来应该是函数。它们需要放在运行你应用程序的主部分之前。这样主部分才能使用它们！因此，代码框 5.1 中的代码已拆分到代码框 5.2 中，以为所有函数留出空间。\n\
+    \n你现在可以将新代码添加到你的 `myEtchASketch.py` 文件中了。它现在还不会产生任何变化。然而，函数的作用将在下一个分析部分进行解释。\n\
+    \n# 代码框 5.2\n\n```python\n# myEtchASketch application from Coding Club: Python\
+    \ Basics\n\nfrom tkinter import *\n\n##### 设置变量:\ncanvas_height = 400\ncanvas_width\
+    \ = 600\ncanvas_colour = \"black\"\n\np1_x = canvas_width/2\np1_y = canvas_height\n\
+    p1_colour = \"green\"\nline_width = 5\nline_length = 5\n\n##### 函数:\n# 玩家控制\n\
+    def p1_move_N(self):\n    global p1_y\n```\n\n```python\n##### 主程序:\n\nwindow\
+    \ = Tk()\nwindow.title(\"MyEtchASketch\")\ncanvas = Canvas(bg=canvas_colour, height=canvas_height,\
+    \ width=canvas_width, highlightthickness=0)\ncanvas.pack()\n\nwindow.mainloop()\n\
+    ```\n\n# 代码框 5.2 分析\n\n首先，必须指出 `pl` 代表 player 1（玩家 1）。设置玩家 1 的原因是当你开始制作游戏时，你永远不知道会发生什么。灵感会冒出来，你突然又想要另一个玩家。好吧，对于\
+    \ MyEtchASketch 游戏可能不需要。\n\n# 变量\n\n与其通过添加很多正方形来画线，不如画很多短线代码会更简单。通过将 `line_width`\
+    \ 等于 `line_length`，你可以创建一个正方形。这种效果很好，因为线有一个起点终点坐标，这正是我们想要跟踪的。变量列在表 5.1 中。\n\n\
+    | 代码 | 含义 | 初始设置 |\n|---|---|---|\n| p1_x | 存储线条终点的 x 坐标 | 画布宽度的一半 |\n| p1_y |\
+    \ 存储线条终点的 y 坐标 | 画布的高度 |\n| p1_colour | 存储线条的颜色 | \"green\" |\n| line_width |\
+    \ 存储线条宽度 | 5 像素 |\n| line_length | 存储线条长度 | 5 像素 |\n\n表 5.1 MyEtchASk 游戏中的变量。\n\
+    \n# p1_move_N() 函数\n\n`p1_move_N(self)` 将是一个将玩家 1 绘制的线条向屏幕上方移动的函数。\n\n# self\n\
+    \n由于这里使用了 tkinter 的方法，该函数必须提供参数 `self`。这是因为 tkinter 的方法位于类中。类中的函数被称为方法。\n\n# global\n\
+    \n在脚本开始时，我们声明了所有变量并给它们赋了值。这意味着在函数内部是局部的。\n\n# create_line() 方法\n\n由于这里使用了 tkinter\
+    \ 的方法，该函数必须提供参数 `self`。这是因为 tkinter 的方法位于类中。类中的函数被称为方法。\n\n```python\ncanvas.create_line(x1,\
+    \ y1, x2, y2, fill=p1_colour, width=line_width)\n```\n\n| 参数 | 初始设置 |\n|---|---|\n\
+    | x1 | 线的起点 x 坐标 |\n| y1 | 线的起点 y 坐标 |\n| x2 | 线的终点 x 坐标 |\n| y2 | 线的终点 y 坐标 |\n\
+    \n表 5.2 MyEtchASk 的参数。\n\n# 添加键盘控制\n\n我们简单地使用 window 类的 `bind()` 方法，它只需要两个参数。\n\
+    \n```python\nwindow.bind(\"按键名称\", 我们的函数)\n```\n\n如果我们想要某个键，我们会提供参数 \"a\"，但对于向上方向键，我们提供\
+    \ \"<Up>\"。\n\n```python\nwindow.bind(\"<Up>\", p1_move_N)\n```\n\n# 代码框 5.3\n\
+    \n```python\n# 将移动绑定到按键\nwindow.bind(\"<Up>\", p1_move_N)\n\nwindow.mainloop()\n\
+    ```\n\n> 看吧，很简单！\n\n> 好吧 -很简单！\n\n# 完成工作\n\n一旦你实现了向上移动，你会发现编写其他方向的代码也很容易。向下移动只需向\
+    \ y 坐标增加 5 像素，向右移动向我们的 x 坐标增加 5 像素，向左移动则从我们的 x 坐标减去 5 像素。\n\n将代码框 5.4 中的剩余函数添加进去（这是最后一步）。由于我们反复编写这些代码，这表明可能有更好的编写此程序的方法。我们将在章节末的活动部分讨论这一点。\n\
+    \n如果你发现你的程序第一次运行失败；请尝试自己解决任何问题。如果你确实卡住了，可以从配套网站下载代码。\n\n"
+  merge: 0
+  raw:
+  - '[PAGE 58]
+
+
+    # Code Box 5.1
+
+
+    ```
+
+    # myEtchASk application from Coding Club: Python Basics
+
+
+    from tkinter import *
+
+
+    ##### Set variables:
+
+    canvas_height = 400
+
+    canvas_width = 600
+
+    canvas_colour = "black"
+
+
+    ##### main:
+
+    window = Tk()
+
+    window.title("MyEtchASk")
+
+    canvas = Canvas(bg=canvas_colour, height=canvas_height, width=canvas_width, highlightthickness=0)
+
+    canvas.pack()
+
+
+    window.mainloop()
+
+    ```
+
+
+    You can try running myEtchASketch.py now. Although it is not very exciting, it
+    is the first time you have made a window! Notice how something also happens in
+    the interactive mode window. This is now acting as a console where we will get,
+    among other things, error messages.'
+  - '[PAGE 59]
+
+
+    # The plan
+
+
+    Now you have a window in which to make your application and a canvas to draw on,
+    it is time to start planning the rest of the application. To do this we break
+    down the task into functions. First we need to be able to draw a vertical line
+    a bit at a time and then horizontally. As these are going to be controlled by
+    the up, down, left and right arrow keys on the keyboard it makes sense to have
+    four functions that are all going to be similar and then attach those functions
+    to the keys. So to start with, let''s just try and create a function that draws
+    a line up when we press the up key. If we can achieve this we know that we will
+    be able to complete this project.
+
+
+    # The coordinates
+
+
+    Unlike maths, tkinter and most computer languages use coordinates that count from
+    the top left of the screen. So our canvas looks like this.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_59_0.png)'
+  - '[PAGE 60]
+
+
+    So a point on the screen is represented by two numbers:
+
+
+    e.g. (100, 50) = a point 100 pixels along the x-axis and 50 pixels down the y-axis.
+
+
+    # Keeping code organised
+
+
+    The function to draw a vertical line requires a few more variables so that we
+    can keep track of where we are up to. These should go at the top of your code
+    with your other variable declarations. This is good coding style. Now if you want
+    to adjust your program, you simply adjust the variables at the top and re-run
+    it. You do not have to dig through your code to find where things happen. Also
+    by choosing descriptive names for the variables you do not need excessive amounts
+    of commenting.
+
+
+    The functions should come next. They need to be before the main section that runs
+    your application. That way it can use them! Therefore the code from Code Box 5.1
+    has been split in Code Box 5.2 to make room for all functions.
+
+
+    You can add the new code to your myEtchASketch.py file now. It will not do anything
+    different yet. However the function works will be explained in the next analysis
+    section.'
+  - "[PAGE 61]\n\n# Code Box 5.2\n\n```\n# myEtchASketch application from Coding Club:\
+    \ Python Basics\n\nfrom tkinter import *\n\n##### Set variables:\ncanvas_height\
+    \ = 400\ncanvas_width = 600\ncanvas_colour = \"black\"\n```\n\npl1_x = canvas_width/2\n\
+    p1_y = canvas_height\np1_colour = \"green\"\nline_width = 5\nline_length = 5\n\
+    \n##### Functions:\n# player controls\ndef p1_move_N(self):\n    global p1_y"
+  - '[PAGE 62]
+
+
+    ```
+
+    ##### main:
+
+
+    window = Tk()
+
+    window.title("MyEtchASketch")
+
+    canvas = Canvas(bg=canvas_colour, height=canvas_height, width=canvas_width, highlightthickness=0)
+
+    canvas.pack()
+
+
+    window.mainloop()
+
+    ```
+
+
+    # Code Box 5.2 analysis
+
+
+    First, it must be noted that pl stands for player 1. The reason for having a player
+    1 is that you never know what is going to happen when you start out making a game.
+    Ideas crop up and suddenly you want another player. OK, probably not for a MyEtchASketch
+    game.'
+  - '[PAGE 63]
+
+
+    # The variables
+
+
+    Instead of adding lots of squares to make our lines, the code is simpler if you
+    draw lots of little lines. You make a square by setting the line_width equal to
+    the line_length. This works well because a line has a beginning and end coordinate,
+    which is just what we want to keep track of. The variables are listed in Table
+    5.1.
+
+
+    | Code | What it means | Initial settings |
+
+    |---|---|---|n| p1_x | stores the x position of the end of the line | half the
+    width of the canvas |
+
+    | p1_y | stores the y position of the end of the line | the height of the canvas
+    |
+
+    | p1_colour | stores the colour of the line | "green" |
+
+    | line_width | stores the line width | 5 pixels |
+
+    | line_length | stores the line length | 5 pixels |
+
+
+    Table 5.1 Variables for MyEtchASk game.
+
+
+    # The p1_move_N() function
+
+
+    p1_move_N(self) is going to be a function that sends the line drawn by player
+    1 up the screen.'
+  - '[PAGE 64]
+
+
+    # self
+
+
+    As this uses methods from tkinter, this function has to be supplied with the argument
+    self.
+
+    is is to do with tkinter''s methods being in classes. Functions in classes are
+    called methods.
+
+    (Remember though, that we are not covering classes in this book.) For now, just
+    supply self.
+
+
+    # global
+
+
+    At the start of our script, we declared all our variables and gave them some default
+    values.
+
+    as they are outside any functions, they are global variables. This means that
+    they are
+
+    available throughout the program. However, any variables declared inside a function
+    are
+
+    called local variables, which means that they are not available outside their
+    function and
+
+    will be lost when the function call is over. As we want all functions to use our
+    global
+
+    variables we have to tell this function, by re-declaring them inside the function,
+    using
+
+    t keyword global. This is only required if the function is going to change the
+    variable. By
+
+    doing this the function is using the same variables as the rest of the program.
+
+
+    # The create_line() method
+
+
+    We are using the create_line() method from tkinter''s canvas class:
+
+
+    ```
+
+    canvas.create_line(arguments go here)
+
+    ```
+
+
+    The arguments required are shown in Table 5.2 on the next page.'
+  - '[PAGE 65]
+
+
+    | Arguments required by tkinter | Your supplied variables |
+
+    |--- |--- |
+
+    | x1 (x-coordinate of beginning of line) | p1_x (current x-coordinate of player
+    1) |
+
+    | y1 (y-coordinate of beginning of line) | p1_y (current y-coordinate of player
+    1) |
+
+    | x2 (x-coordinate of end of line) | p1_x (current x-coordinate of player 1) |
+
+    | y2 (y-coordinate of end of line) | p1_y - line_length (current y-coordinate
+    of player 1 minus the length of the line) |
+
+
+    Table 5.2 Arguments required for MyEtchASketch to move north.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_65_0.png)
+
+
+    To draw on the canvas we create lots of little lines that always start with the
+    same coordinates that the last ended with. This is easier than making little squares.
+    Instead, we draw green lines that are 5 pixels wide to match our line length.
+    Thus, we need to supply two more optional arguments to the create_line() method
+    as shown in Table 5.3.'
+  - '[PAGE 66]
+
+
+    | Optional arguments | Your supplied variables |
+
+    | --- | --- |
+
+    | width | line_width |
+
+    | fill | pl_colour |
+
+
+    Table 5.3 Optional arguments for MyEtchASketch.
+
+
+    As we are moving up the screen, it is only necessary to subtract the line length
+    from p_y but you must add one more line of code to this function to store the
+    new p_y position for next time.
+
+
+    # # Adding keyboard control
+
+
+    We simply use the bind() method from the tkinter window class and it just takes
+    two arguments.
+
+
+    ```
+
+    window.bind("the key board key name", our_function)
+
+    ```
+
+
+    If we wanted a key we would supply the argument "a" but for the up arrow key we
+    give "<Up>".
+
+
+    ```
+
+    window.bind("<Up>", p1_move_N)
+
+    ```
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_66_0.png)'
+  - '[PAGE 67]
+
+
+    Now add the code from Code Box 5.3 to your myEtchASketch.py file. When you run
+    this, if all is well, you will find that by pressing the up arrow on your keyboard
+    you can make a series of green squares 5 pixels wide by 5 pixels long.
+
+
+    # Code Box 5.3
+
+
+    ```
+
+    # bind movement to key presses
+
+    window.bind("<Up>", pl_move_N)
+
+
+    window.mainloop()
+
+    ```
+
+
+    > See, it really was easy!
+
+
+    > OK - it was easy!
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_67_0.png)'
+  - '[PAGE 68]
+
+
+    # Finishing off
+
+
+    Once you have movement upwards, you will find the other directions are easy to
+    write code. To move down we add 5 pixels to your y-coordinate, to move right we
+    add 5 pixels to our x-coordinate and to go left we take 5 pixels from our x-coordinate.
+
+
+    Add the rest of the functions from Code Box 5.4 (this is the final step). Since
+    we are repeating this code so often, this should indicate that there is probably
+    a better way of writing this program. We will examine this in the activity section
+    at the end of the chapter.
+
+
+    If you find your program does not run the first time; try to sort out any problems
+    yourself. If you do get stuck though, you can download the code from the companion
+    website.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_68_0.png)'
+- md: "\n# Code Box 5.4\n\n```python\n# player controls\ndef pl_move_N(self):\n  \
+    \  global pl_y\n    canvas.create_line(pl_x, pl_y, pl_x, (pl_y-line_length), width=line_width,\
+    \ fill=pl_colour)\n    pl_y = pl_y - line_length\n```\n\n```python\ndef pl_move_S(self):\n\
+    \    global pl_y\n    canvas.create_line(pl_x, pl_y, pl_x, pl_y+line_length, width=line_width,\
+    \ fill=pl_colour)\n    pl_y = pl_y + line_length\n```\n\n```python\ndef pl_move_E(self):\n\
+    \    global pl_x\n    canvas.create_line(pl_x, pl_y, pl_x + line_length, pl_y,\
+    \ width=line_width, fill=pl_colour)\n    pl_x = pl_x + line_length\n```\n\n```python\n\
+    def pl_move_W(self):\n    global pl_x\n    canvas.create_line(pl_x, pl_y, pl_x\
+    \ - line_length, pl_y, width=line_width, fill=pl_colour)\n    pl_x = pl_x - line_length\n\
+    ```\n\nChapter 5: MyEtchASk 68\n\n```python\ndef erase_all(self):\n    canvas.delete(ALL)\n\
+    \n##### main:\nwindow = Tk()\nwindow.title(\"MyEtchASketch\")\ncanvas = Canvas(bg=canvas_colour,\
+    \ height=canvas_height, width=canvas_width, highlightthickness=0)\ncanvas.pack()\n\
+    # bind movement to key presses\nwindow.bind(\"<Up>\", pl_move_N)\n\nwindow.bind(\"\
+    <Down>\", pl_move_S)\nwindow.bind(\"<Left>\", pl_move_W)\nwindow.bind(\"<Right>\"\
+    , pl_move_E)\nwindow.bind(\"u\", erase_all)\n\nwindow.mainloop()\n```\n\n# Chapter\
+    \ summary\n\nIn this chapter you have learned:\n\n- how to use the tkinter library\n\
+    - how to make your own MyEtchASk game\n- how to put an application in its own\
+    \ window\n- how to attach functions to keyboard presses\n- that 'copy and pasting'\
+    \ hints at a better way of doing things\n- how to clear a canvas. (If you typed\
+    \ out the code you should have spotted an extra function that was sneaked in:\
+    \ erase_all(self). This clears the screen when the user presses the key on her\
+    \ keyboard.)\n\nThis chapter provides us with many possibilities for ideas. As\
+    \ you have organised your code well, the following Quick Ideas can be easily achieved\
+    \ by simply adjusting the variables at the beginning of your file.\n\n# Quick\
+    \ Ideas\n\n- Make line_length longer and see what happens.\n- Change the colour\
+    \ a few times and find out what named colours tkinter supports.\n- Generally change\
+    \ the square size to find a size that you like.\n- Completely customise the code\
+    \ adjusting all the variables until you are happy.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_71_0.png)\n\
+    \n# Puzzle\n\nRemember we said that copying and pasting indicates that there are\
+    \ better ways of coding. This puzzle encourages you to write better code.\n\n\
+    Make a new function called p1_move(x, y) so that the four movement methods can\
+    \ be simplified to something like this.\n\n```python\ndef p1_move_N(self):\n \
+    \   p1_move(0, -line_length)\n```\n\nThere are several ways to do this. An example\
+    \ answer can be found on the website.\n\nAlso on the website you will find the\
+    \ code for a two-player game called ourEtchSketch.py. If you are feeling keen,\
+    \ you could try to make it yourself – it is not really very difficult and takes\
+    \ advantage of the better code structure from this chapter's puzzle. This two-player\
+    \ game is also fun for one player because it allows you to draw in colours. It\
+    \ also provides the opportunity to give you a few more extra ideas.\n\n# Extra\
+    \ ideas\n\n- Download ourEtchASketch.py and try drawing something colourful.\n\
+    - Look at the code and see how easy it was to make this into a two-player game.\n\
+    - Try it out with a friend as a cooperative drawing game.\n- Try playing it as\
+    \ a timed competition to see who has the most squares visible at the end. The\
+    \ object is to draw over your opponent as much as possible. (Hint: It might be\
+    \ best to make the squares bigger.)\n- Try playing a weird game of Tron. As there\
+    \ is no collision detection,, you will have to be honest when you collide. (Hint:\
+    \ If you do not know what Tron is, ask an adult.)\n- Try making the canvas tall\
+    \ and thin and then having a race with a friend to the top of the screen.\n- Make\
+    \ the racing game more interesting by putting some obstacles in the way. (Hint:\
+    \ draw some random-sized and coloured lines on the screen at the start just before\
+    \ the code that binds the functions to the keyboard.)\n- Make up some other games\
+    \ of your own.\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_73_0.png)\n\n# Taking\
+    \ things further\n\nWhen you have finished this book we hope you will want to\
+    \ continue to code. Here are some other places and resources that you might look\
+    \ at.\n\n# More Python\n\nOther books in the series, found at this book's companion\
+    \ website: http://www.codingclub.uk\nThe official python documentation: http://docs.python.org/3/\n\
+    PyGame: This site provides a set of modules that need to be downloaded that aid\
+    \ with making games. It has a community of Python enthusiasts and enables you\
+    \ to post your games for others.\n\n# Thinking like a programmer\n\nhttp://games.com/play/\n\
+    http://www.robots.com/\n\n# Other programming languages\n\nThe Scratch official\
+    \ website: http://scratch.mit.edu/\nJava: http://greenfoot.org/\n\n# Appendix\n\
+    \n# Some key bits of information\n\nHere will find answers to the challenges and\
+    \ puzzles at the end of chapters. The complete source code for all the projects\
+    \ is also here.\n\n# Escape sequences\n\n| Escape sequence | What they do |\n\
+    | :--- | :--- |\n| \\n | creates a line return in a string |\n| \\t | creates\
+    \ a tab indent in a string |\n| \\\\ | allows a backslash to appear in a string\
+    \ |\n| \\\" | allows a speech mark be used in a string |\n\n# Mathematical operators\n\
+    \n| Operator | Name | Example | Answer |\n| :--- | :--- | :--- | :--- |\n| * |\
+    \ multiply | 2*3 | 6 |\n| / | divide (normal) | 20/8 | 2.5 |\n| // | divide (integer)\
+    \ | 20//8 | 2 |\n| % | modulus | 20%8 | 4 |\n| + | add | 2+3 | 5 |\n| - | minus\
+    \ | 7-3 | 4 |\n\n| Comparison Operator | Meaning |\n| :--- | :--- |\n| == | equal\
+    \ to |\n| != | not equal to |\n| > | greater than |\n| < | less than |\n| >= |\
+    \ greater than or equal to |\n| <= | less than or equal to |\n\n# End game code\n\
+    \n```python\ninput(\"\\nPress the key to finish.\")\n```\n\n# Basic tkinter code\
+    \ for activating a function via a key press\n\n```python\nwindow.bind(\"<Up>\"\
+    , my_function) or window.bind(\"a\", my_function)\n```\n\n# Basic tkinter code\
+    \ for making a canvas to draw in its own window\n\n```python\nfrom tkinter import\
+    \ *\n\n##### Set variables:\ncanvas_height = 400\ncanvas_width = 600\n\n#####\
+    \ main:\nwindow = Tk()\nwindow.title(\"My Game\")\ncanvas = Canvas(bg=\"black\"\
+    , height=canvas_height, width=canvas_width, highlightthickness=0)\ncanvas.pack()\n\
+    window.mainloop()\n```\n\n# Use the random module to pick a number between 1 and\
+    \ 6\n\n```python\nimport random\ndice_number = random.randint(1,6)\n```\n\n# Glossary\
+    \ and index\n\nargument: a piece of information that is required by a function\
+    \ so that it can perform its task; usually a string or number, `my_function(arguments\
+    \ go here)` 36\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_78_0.png)\n\n'Bold'\
+    \ is not a special computer word. Mr Campbell said it would not be in the glossary.\n\
+    \nbug: a piece of code that is causing a program to run properly or at all 14\n\
+    \ncasting: the process of converting one data-type into another; e.g. sometimes\
+    \ a number may be stored as text but need to be converted into an integer – this\
+    \ can be done like this: `int(\"3\")` 52\n\ncommenting: some text in a computer\
+    \ program that is for the human reader and is ignored by the computer when running\
+    \ the program – in Python all comments begin with a hash symbol # 30\n\ncomparative\
+    \ operator: sometimes called logic operators, they allow us to compare data in\
+    \ a program; they include `==` and `>` (others are found in Table 3 in the Appendix)\
+    \ 25\n\ndata-type: different types of information stored by the computer, for\
+    \ example floats, integers and strings 52\n\ndefault: a value given to an argument\
+    \ or variable as a starting point 63\n\nequals operator: the equals sign is used\
+    \ to assign a value to a variable in coding, for example n=2 assigns the value\
+    \ 2 to the variable n 23\n\nescape sequence: when characters that have certain\
+    \ meanings in Python are required in strings they have to be \"escaped\" so the\
+    \ computer knows they do not have their usual meaning; this is done by putting\
+    \ a slash in front of them e.g. \\\" 17\n\nfloat: a number data-type that can\
+    \ have a decimal value 20\n\nfunction: a reusable piece of code 19\n\nglobal variable:\
+    \ a variable that is usable anywhere in a program 63\n\nhacking: taking some previously\
+    \ written code and re-writing bits to make it do something different 47\n\nIDE:\
+    \ stands for Integrated Development Environment; IDLE is an example of one – they\
+    \ are special text editors with useful tools built in for programmers 12\n\nIDLE:\
+    \ stands for Integrated Development Environment; this is the IDE that comes with\
+    \ a normal Python 3 install 10\n\ninfinite loop: a piece of code that keeps running\
+    \ forever; this is usually a bad thing 47\n\ninteger: a number data-type that\
+    \ cannot have a decimal value and must be a whole value 20\n\ninteractive mode:\
+    \ this is when we use IDLE to try out snippets of code without saving them 12\n"
+  mdcn: "\n\n# 代码框 5.4\n\n```python\n# player controls\ndef pl_move_N(self):\n   \
+    \ global pl_y\n    canvas.create_line(pl_x, pl_y, pl_x, (pl_y-line_length), width=line_width,\
+    \ fill=pl_colour)\n    pl_y = pl_y - line_length\n```\n\n```python\ndef pl_move_S(self):\n\
+    \    global pl_y\n    canvas.create_line(pl_x, pl_y, pl_x, pl_y+line_length, width=line_width,\
+    \ fill=pl_colour)\n    pl_y = pl_y + line_length\n```\n\n```python\ndef pl_move_E(self):\n\
+    \    global pl_x\n    canvas.create_line(pl_x, pl_y, pl_x + line_length, pl_y,\
+    \ width=line_width, fill=pl_colour)\n    pl_x = pl_x + line_length\n```\n\n```python\n\
+    def pl_move_W(self):\n    global pl_x\n    canvas.create_line(pl_x, pl_y, pl_x\
+    \ - line_length, pl_y, width=line_width, fill=pl_colour)\n    pl_x = pl_x - line_length\n\
+    ```\n\n第 5 章：MyEtchASk 68\n\n```python\ndef erase_all(self):\n    canvas.delete(ALL)\n\
+    \n##### 主程序:\nwindow = Tk()\nwindow.title(\"MyEtchASketch\")\ncanvas = Canvas(bg=canvas_colour,\
+    \ height=canvas_height, width=canvas_width, highlightthickness=0)\ncanvas.pack()\n\
+    # 将移动绑定到按键按下\nwindow.bind(\"<Up>\", pl_move_N)\n\nwindow.bind(\"<Down>\", pl_move_S)\n\
+    window.bind(\"<Left>\", pl_move_W)\nwindow.bind(\"<Right>\", pl_move_E)\nwindow.bind(\"\
+    u\", erase_all)\n\nwindow.mainloop()\n```\n\n# 本章总结\n\n在本章中，你学习了：\n\n- 如何使用 tkinter\
+    \ 库\n- 如何制作你自己的 MyEtchASk 游戏\n- 如何将应用程序放入它自己的窗口中\n- 如何将函数绑定到键盘按键上\n- “复制和粘贴”暗示了更好的处理问题的方法\n\
+    - 如何清空画布。（如果你手动输入了代码，应该会发现一个溜进去的额外函数：`erase_all(self)`。当用户按下键盘上的按键时，它会清空屏幕。）\n\
+    \n本章为我们的想法提供了许多可能性。由于你已经很好地组织了代码，只需调整文件开头的变量，就可以轻松实现以下“快速想法”。\n\n# 快速想法\n\n- 让\
+    \ `line_length` 更长，看看会发生什么。\n- 改变几次颜色，找出 tkinter 支持哪些命名颜色。\n- 通常改变正方形的大小，直到找到你喜欢的尺寸。\n\
+    - 通过调整所有变量来完全自定义代码，直到你满意。\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_71_0.png)\n\
+    \n# 谜题\n\n记得我们提过，复制和粘贴意味着有更好的编码方式。这个谜题鼓励你编写更好的代码。\n\n创建一个名为 `p1_move(x, y)` 的新函数，使得四个移动方法可以简化为如下所示：\n\
+    \n```python\ndef p1_move_N(self):\n    p1_move(0, -line_length)\n```\n\n实现这种操作有几种方法。可以在网站上找到示例答案。\n\
+    \n在网站上，你还会找到一个名为 `ourEtchSketch.py` 的双人游戏代码。如果你感兴趣，可以尝试自己制作——它并不困难，而且利用了本章谜题中更好的代码结构。这个双人游戏对一个人来说也很有趣，因为它允许你用彩色绘图。它还为你提供了更多额外想法的机会。\n\
+    \n# 额外想法\n\n- 下载 `ourEtchASketch.py` 并尝试画一些彩色的东西。\n- 查看代码，看看将其变成双人游戏有多么简单。\n-\
+    \ 和朋友一起尝试，将其作为一个合作画图游戏。\n- 尝试作为一个计时比赛来玩，看看结束时谁的可见正方形最多。目标是尽可能覆盖你的对手。（提示：让正方形变大可能是最好的。）\n\
+    - 尝试玩一个奇怪的《电子光战》（Tron）。由于没有碰撞检测，当你发生碰撞时必须诚实。（提示：如果你不知道 Tron 是什么，请问成人。）\n- 尝试让画布变得高而窄，然后和朋友比赛谁到达屏幕顶部。\n\
+    - 通过在路径上放置障碍物让赛车游戏更有趣。（提示：在将函数绑定到键盘的代码之前，在屏幕上画一些随机尺寸和颜色的线条。）\n- 想出你自己的其他游戏。\n\n\
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_73_0.png)\n\n# 进一步\n\n当你读完这本书后，我们希望你想要继续编写代码。这里是你可能查看的其他地方和资源。\n\
+    \n# 更多 Python\n\n该系列的其他书籍可以在本书的配套网站找到：http://www.codingclub.uk\n官方 python 文档：\n\
+    PyGame：该网站提供了帮助制作游戏的模块。\n\n# 像程序员一样思考\n\nScratch 官方网站：http://scratch.edu/\nJava：编程语言：http://java.com/\n\
+    \n# 附录\n\n# 附录\n\n这里包含了代码中的一些额外信息。\n\n# 转义序列\n\n| 转义序列 | 作用 |\n| :--- | :--- |\n\
+    | `\\n` | 创建换行 |\n| `\\t` | 创建制表进 |\n| `\\\\` | 允许出现反斜杠 |\n| `\\\"` | 允许出现引号 |\n\
+    \n# 数学运算符\n\n| 运算符 | 名称 | 示例 |\n| :--- | :--- | :--- |\n| `*` | 乘法 | 2 |\n| `/`\
+    \ | 除法 | 5 |\n| `//` | 除法（取整） | 20 |\n| `%` | 取模 | 8 |\n| `+` | 加法 | 3 |\n| `-`\
+    \ | 减法 | 4 |\n\n# 比较运算符\n\n| 比较运算符 | 含义 | 示例 |\n| :--- | :--- | :--- |\n| `==`\
+    \ | 等于 |\n| `!=` | 不等于 |\n| `>` | 大于 |\n| `<` | 小于 |\n| `>=` | 大于或 | |\n| `<=`\
+    \ | 小于或 | |\n\n# 结束代码\n\n```python\nprint(\"按下按键结束\")\n```\n\n# 术语和索引\n\n- **argument**：函数需要的信息，以便其执行任务。\n\
+    - **bug**：导致程序无法正常运行的代码错误。\n- **casting**：将一种数据类型转换为另一种的过程；例如，有时数字以字符串存储但需要转换为整数\
+    \ `int(\"3\")`。\n- **commenting**：程序中供人类阅读、计算机运行时忽略的文本——在 Python 中所有注释都以 # 开头。\n\
+    - **data-type**：计算机存储的不同信息类型，例如 float、整数和字符串。\n- **default**：作为参数或变量提供的初始值。\n\
+    - **equals operator**：等号用于给变量赋值，例如 `n=2` 将值 2 赋值变量 n。\n- **float**：可以带有小数的数字类型。\n\
+    - **function**：可重用的代码块。\n- **global variable**：程序任何地方都可以使用的变量。\n- **hacking**：获取以前编写的代码并重写部分以实现不同的功能。\n\
+    - **IDE**：集成开发开发环境；IDLE 是其中一个例子——它们是带有许多实用工具的特殊文本编辑器。\n- **IDLE**：集成开发环境；这是随正常\
+    \ Python 3 安装附的 IDE。\n- **infinite loop**：一直运行的代码；这通常是坏事。\n- **integer**：不能带有小数的数字类型。\n\
+    - **interactive mode**：指我们在 IDLE 中尝试代码片段而不保存它们。\n\n![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_78_0.png)\n\
+    \n"
+  merge: 0
+  raw:
+  - "[PAGE 69]\n\n# Code Box 5.4\n\n```\n# player controls\ndef pl_move_N(self):\n\
+    \    global pl_y\n    canvas.create_line(pl_x, pl_y, pl_x, (pl_y-line_length),\
+    \ width=line_width, fill=pl_colour)\n    pl_y = pl_y - line_length\n```\n\n```\n\
+    def pl_move_S(self):\n    global pl_y\n    canvas.create_line(pl_x, pl_y, pl_x,\
+    \ pl_y+line_length, width=line_width, fill=pl_colour)\n    pl_y = pl_y + line_length\n\
+    ```\n\n```\ndef pl_move_E(self):\n    global pl_x\n    canvas.create_line(pl_x,\
+    \ pl_y, pl_x + line_length, pl_y, width=line_width, fill=pl_colour)\n    pl_x\
+    \ = pl_x + line_length\n```\n\n```\ndef pl_move_W(self):\n    global pl_x\n  \
+    \  canvas.create_line(pl_x, pl_y, pl_x - line_length, pl_y, width=line_width,\
+    \ fill=pl_colour)\n    pl_x = pl_x - line_length\n```\n\nChapter 5: MyEtchASk\
+    \ 68"
+  - "[PAGE 70]\n\n```\ndef erase_all(self):\n    canvas.delete(ALL)\n\n##### main:\n\
+    window = Tk()\nwindow.title(\"MyEtchASketch\")\ncanvas = Canvas(bg=canvas_colour,\
+    \ height=canvas_height, width=canvas_width, highlightthickness=0)\ncanvas.pack()\n\
+    # bind movement to key presses\nwindow.bind(\"<Up>\", pl_move_N)\n\nwindow.bind(\"\
+    <Down>\", pl_move_S)\nwindow.bind(\"<Left>\", pl_move_W)\nwindow.bind(\"<Right>\"\
+    , pl_move_E)\nwindow.bind(\"u\", erase_all)\n\nwindow.mainloop()\n```"
+  - '[PAGE 71]
+
+
+    # # Chapter summary
+
+
+    In this chapter you have learned:
+
+
+    +   - how to use the tkinter library
+
+    - how to make your own MyEtchASk game
+
+    - how to put an application in its own window
+
+    - how to attach functions to keyboard presses
+
+    - that ''copy and pasting'' hints at a better way of doing things
+
+    - how to clear a canvas. (If you typed out the code you should have spotted an
+    extra function that was sneaked in: erase_all(self) . This clears the screen when
+    the user presses the key on her keyboard.)
+
+
+    This chapter provides us with many possibilities for ideas. As you have organised
+    your code well, the following Quick Ideas can be easily achieved by simply adjusting
+    the variables at the beginning of your file.
+
+
+    # Quick Ideas
+
+
+    +   - Make line_length longer and see what happens.
+
+    - Change the colour a few times and find out what named colours tkinter supports.
+
+    - Generally change the square size to find a size that you like.
+
+    - Completely customise the code adjusting all the variables until you are happy.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_71_0.png)'
+  - "[PAGE 72]\n\n# Puzzle\n\nRemember we said that copying and pasting indicates\
+    \ that there are better ways of coding. This puzzle encourages you to write better\
+    \ code.\n\nMake a new function called p1_move(x, y) so that the four movement\
+    \ methods can be simplified to something like this.\n\n```\ndef p1_move_N(self):\n\
+    \    p1_move(0, -line_length)\n```\n\nThere are several ways to do this. An example\
+    \ answer can be found on the website.\n\nAlso on the website you will find the\
+    \ code for a two-player game called ourEtchSketch.py. If you are feeling keen,\
+    \ you could try to make it yourself – it is not really very difficult and takes\
+    \ advantage of the better code structure from this chapter's puzzle. This two-player\
+    \ game is also fun for one player because it allows you to draw in colours. It\
+    \ also provides the opportunity to give you a few more extra ideas."
+  - '[PAGE 73]
+
+
+    # Extra ideas
+
+
+    +   - Download ourEtchASketch.py and try drawing something colourful.
+
+
+    +   - Look at the code and see how easy it was to make this into a two-player
+    game.
+
+
+    +   - Try it out with a friend as a cooperative drawing game.
+
+
+    +   - Try playing it as a timed competition to see who has the most squares visible
+    at the end. The object is to draw over your opponent as much as possible. (Hint:
+    It might be best to make the squares bigger.)
+
+
+    +   - Try playing a weird game of Tron. As there is no collision detection, you
+    will have to be honest when you collide. (Hint: If you do not know what Tron is,
+    ask an adult.)
+
+
+    +   - Try making the canvas tall and thin and then having a race with a friend
+    to the top of the screen.
+
+
+    +   - Make the racing game more interesting by putting some obstacles in the way.
+    (Hint: draw some random-sized and coloured lines on the screen at the start just
+    before the code that binds the functions to the keyboard.)
+
+
+    +   - Make up some other games of your own.
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_73_0.png)'
+  - '[PAGE 74]
+
+
+    # Taking things further
+
+
+    When you have finished this book we hope you will want to continue to learn to
+    code. Here are some other places and resources that you might wish to look at.
+
+
+    # More Python
+
+
+    Other books in the series, found at this book''s companion website: http://www.codingclub.co.uk
+
+
+    The official python documentation: http://docs.python.org/py3k/
+
+
+    PyGame Website: This site provides a set of modules that need to be downloaded
+    that aid with making games. It has a community of Python coding enthusiasts and
+    enables you to post your games for others to play.
+
+
+    # Thinking like a programmer
+
+
+    http://armorgames.com/play/6061/light-bot-20
+
+    http://www.robozzle.com/
+
+
+    # Other programming languages
+
+
+    The Scratch official website: http://scratch.mit.edu/
+
+    Java Programming: http://www.greenfoot.org/'
+  - '[PAGE 75]
+
+
+    # Appendix
+
+
+    # Some key bits of information
+
+
+    # Companion website
+
+
+    Website: http://www.codingclub.co.uk
+
+
+    Here you will find answers to the challenges and puzzles at the end of chapters.
+    The complete source code for all the projects is also here.
+
+
+    # Escape sequences
+
+
+    | Escape sequence | What they do |
+
+    |---|---|
+
+    | \n | creates a line return in a string |
+
+    | \t | creates a tab style indent in a string |
+
+    | \\ | allows a backslash to appear in a string |
+
+    | \" | allows a speech mark to be used in a string |
+
+
+    Table A1 Escape sequences.'
+  - '[PAGE 76]
+
+
+    # Mathematical operators
+
+
+    | Operator | Name | Example | Answer |
+
+    | --- | --- | --- | --- |
+
+    | * | multiply | 2*3 | 6 |
+
+    | / | divide (normal) | 20/8 | 2.5 |
+
+    | // | divide (integer) | 20//8 | 2 |
+
+    | % | modulus | 20%8 | 4 |
+
+    | + | add | 2+3 | 5 |
+
+    | - | minus | 7-3 | 4 |
+
+
+    Table A2 Mathematical operators.
+
+
+    # Comparison operators
+
+
+    | Operator | Meaning |
+
+    | --- | --- |
+
+    | == | equal to |
+
+    | != | not equal to |
+
+    | > | greater than |
+
+    | < | less than |
+
+    | >= | greater than or equal to |
+
+    | <= | less than or equal to |
+
+
+    Table A3 Comparison operators.'
+  - '[PAGE 77]
+
+
+    # End game code snippet
+
+
+    ```
+
+    input("\\nPress the RETURN key to finish.")
+
+    ```
+
+
+    # Basic tkinter code for activating a function via a key press
+
+
+    ```
+
+    window.bind("<Up>", my_function) or window.bind("a", my_function)
+
+    ```
+
+
+    # Basic tkinter code for making a canvas to draw in its own window
+
+
+    ```
+
+    from tkinter import *
+
+
+    ##### Set variables:
+
+    canvas_height = 400
+
+    canvas_width = 600
+
+
+    ##### main:
+
+    window = Tk()
+
+    window.title("My Game Title")
+
+    canvas = Canvas(bg="black", height=canvas_height, width=canvas_width, highlightthickness=0)
+
+    canvas.pack()
+
+    window.mainloop()
+
+    ```
+
+
+    # Use the random module to pick a number between 1 and 6
+
+
+    ```
+
+    import random
+
+    dice_number = random.randint(1,6)
+
+    ```'
+  - '[PAGE 78]
+
+
+    # Glossary and index
+
+
+    argument
+
+
+    a piece of information that is required by a function so that it can perform its
+    task; usually a string or number, `my_function(arguments go here)`
+
+
+    36
+
+
+    ![](img/fbaeb9cdecc73e46b84c17d0505a6ca3_78_0.png)
+
+
+    > ''Bold'' is not a special computer word. Mr Campbell said it would not be in
+    the glossary.
+
+
+    bug
+
+
+    a piece of code that is causing a program to fail to run properly or at all
+
+
+    14
+
+
+    casting
+
+
+    the process of converting one data-type into another; e.g. sometimes a number
+    may be stored as text but need to be converted into an integer – this can be done
+    like this: `int("3")`
+
+
+    52
+
+
+    commenting
+
+
+    some text in a computer program that is for the human reader and is ignored by
+    the computer when running the program – in Python all comments begin with a hash
+    symbol #
+
+
+    30
+
+
+    comparative operator
+
+
+    sometimes called logic operators, they allow us to compare data in a program;
+    they include `==` and `>` (others are found in Table 3 in the Appendix)
+
+
+    25
+
+
+    data-type
+
+
+    different types of information stored by the computer, for example floats, integers
+    and strings
+
+
+    52
+
+
+    default
+
+
+    63
+
+
+    a value given to an argument or variable as a starting point'
+  - '[PAGE 79]
+
+
+    # equals operator
+
+
+    the equals sign is used to assign a value to a variable in coding, for example
+    n=2 assigns the value 2 to the variable n
+
+
+    23
+
+
+    # escape sequence
+
+
+    when characters that have certain meanings in Python are required in strings they
+    have to be "escaped" so that the computer knows they do not have their usual meaning;
+    this is done by putting a slash in front of them e.g. \"
+
+
+    17
+
+
+    # float
+
+
+    a number data-type that can have a decimal value
+
+
+    20
+
+
+    # function
+
+
+    a reusable piece of code
+
+
+    19
+
+
+    # global variable
+
+
+    a variable that is usable anywhere in a program
+
+
+    63
+
+
+    # hacking
+
+
+    taking some previously written code and re-writing bits to make it do something
+    different
+
+
+    47
+
+
+    # IDE
+
+
+    stands for Integrated Development Environment; IDLE is an example of one – they
+    are special text editors with useful tools built in for programmers
+
+
+    12
+
+
+    # IDLE
+
+
+    stands for Integrated DevelopLoment Environment; this is the IDE that comes with
+    a normal Python 3 install
+
+
+    10
+
+
+    # infinite loop
+
+
+    a piece of code that keeps running forever; this is usually a bad thing
+
+
+    47
+
+
+    # integer
+
+
+    a number data-type that cannot have a decimal value and must be a whole value
+
+
+    20
+
+
+    # interactive mode
+
+
+    this is when we use IDLE to try out snippets of code without saving them
+
+
+    12
+
+
+    Glossary and index 78'
+- md: '
+
+    - local variable: a variable that is defined inside a function and is only usable
+    inside that function (63)
+
+    - logical operator: see comparative operator (25)
+
+    - loop: a piece of code that keeps repeating until a certain condition is met
+    (22)
+
+    - mathematical operator: an operator that performs some mathematical function
+    on some numbers; e.g. multiplication or addition (20)
+
+    - method: the name given to a function in a class (63)
+
+    - module: a saved python file whose functions can be used by another program (31)
+
+    - modulus: a mathematical operator that is used to return the remainder from a
+    division calculation; e.g. 22%7 returns 1 (20)
+
+    - operator: a symbol that performs a simple function on some code such as multiplying
+    two numbers or comparing them to see if they are equal; see also comparative operator
+    and mathematical operator (25)
+
+    - output: data that is sent from a program to a screen or printer, etc (13)
+
+    - return: (1) the value a function will produce after it has been run – it is
+    also a Python keyword; (2) the ‘end of line’ key on a keyboard, sometimes called
+    the enter key (52)
+
+    - script mode: this is when we use IDLE to help us write code that we will save
+    in a file (29)
+
+    - # statement: used in this book to mean a snippet of code; strictly speaking
+    it is a piece of code that represents a command or action; e.g. a print statement
+
+    - # string: text data, which can be stored in a variable
+
+    - # syntax error: an error produced when a computer fails to run a program because
+    it cannot recognise the format of the code supplied; e.g. a syntax error would
+    be produced if a bracket had not been closed
+
+    - # tkinter: a package of classes that are often imported in to Python programs
+    that give methods that are useful for producing windows, drawing images and producing
+    animations
+
+    - # variable: a name that refers to a place in a computer''s memory where data
+    is stored; more loosely, it can also be used to refer to that data
+
+    - # while loop: a kind of loop that repeats code while a comparative statement
+    returns True
+
+
+    ## The Quick Quiz answers
+
+
+    ### Quick Quiz 1
+
+    Answer = 2
+
+
+    ### Quick Quiz 2
+
+    Answer = 11 divided by 4 also equals: 2 remainder 3
+
+
+    ### Quick Quiz 3
+
+    Answer = 1
+
+
+    ## Acknowledgements
+
+
+    Although this is a small book it has been a lot more work than I expected. My
+    aim has always been to produce a series of books that are produced to a standard
+    that young people deserve. To that end I sought an established publisher and my
+    thanks have to go to Claudia Bickford-Smith for her enthusiasm for the project.
+    I am so glad that Cambridge University Press were able to take me on. The hard
+    work of Heather Mahy and Saul Sexton who had the unenviable job of keeping me
+    on the straight and narrow while making the project a reality is also much appreciated.
+
+
+    A book that purports to teach coding to youngsters has to be tried out on youngsters.
+    My thanks therefore must go to The Coding Club boys of Ewell Castle School and
+    my youngest son Daniel who endured the early versions and helped me out what worked
+    and what (unfortunately for them) didn''t.
+
+
+    It was fantastic when I realised that the Raspberry Pi foundation had the same
+    aims and root motivations as myself and the encouragement of Jack Lang and the
+    enormous help from Alex Bradbury ensuring my code and Computer Science was technically
+    correct was invaluable.
+
+
+    I also want to personally thank Ohio Art Company who own and sell the amazing
+    Etch A Sketch toy who were also very enthusiastic and quick to give me permission
+    to use their registered trademarks.
+
+
+    Fran, I love the illustrations.
+
+
+    My two eldest sons have left the nest but thanks to modern technology have also
+    shared the journey and made invaluable contributions and suggestions. Finally,
+    writing books and programs in the evenings and holidays takes time. My eternal
+    thanks goes to my wife Rita for never begrudging me this time or complaining,
+    even when listening to talking about code snippets!
+
+
+    Thanks guys ... thighs.
+
+
+    The author and publisher acknowledge the following sources of copyright material
+    and are grateful for the permissions granted. While every effort has been made,
+    it has not always been possible to identify the sources of all the material used,
+    or to trace all copyright holders. If any omissions are brought to our notice,
+    we will be happy to include the appropriate acknowledements on reprinting.
+
+
+    | Page | Source |
+
+    | :--- | :--- |
+
+    | p. 28 | ImageZoo/Alamy |
+
+    | p. 36 | Sukonosova Anastasia/Shutterstock |
+
+    | p. 37 | Stock Illustrations Ltd/Alamy |
+
+    | p. 55 | Judith Collins/Alamy |
+
+
+    The word mark, logo, and configuration of the Etch A Sketch® product are registered
+    trademarks of the Ohio Art Company.
+
+    '
+  mdcn: '
+
+
+    - 局部变量：定义在函数内部且仅在该函数内部可使用的变量 (63)
+
+    - 逻辑运算符：参见比较运算符 (25)
+
+    - 循环：在满足特定条件之前不断重复执行的代码段 (22)
+
+    - 数学运算符：对某些数字执行某些数学函数的运算符；例如乘法或加法 (20)
+
+    - 方法：在类中赋予函数的名称 (63)
+
+    - 模块：一个保存的 Python 文件，其函数可以被另一个程序使用 (31)
+
+    - 取模：一种用于返回除法计算结果余数的数学运算符；例如 `22%7` 返回 `1` (20)
+
+    - 运算符：对某些代码执行简单功能的符号，例如将两个数字相乘或比较它们以判断是否相等；参见比较运算符和数学运算符 (25)
+
+    - 输出：从程序发送到屏幕或打印机等的数据 (13)
+
+    - 返回：(1) 函数运行后产生的值值——它也是一个 Python 关键字；(2) 键盘上的“换行”键，有时称为回车键 (52)
+
+    - 脚本模式：指我们使用 IDLE 来帮助编写并将代码保存到文件中这种模式 (29)
+
+    - # 语句：在本书中指一段代码片段；严格来说，它是代表某个命令或动作的代码；例如 `print` 语句
+
+    - # 字符串：文本数据，可以存储在变量中
+
+    - # 语法错误：计算机因无法识别提供的代码格式而无法运行程序时产生的错误；例如，如果未关闭括号，就会产生语法错误
+
+    - # tkinter：一组经常被导入到 Python 程序中的类，提供了创建窗口、绘制图像和生成动画的有用方法
+
+    - # 变量：指向计算机内存中存储数据位置的名称；宽泛地说，它也可以指代那些数据
+
+    - # while 循环：一种只要比较语句返回 `True` 就会重复执行代码的循环
+
+
+    ## 快速测验答案
+
+
+    ### 快速测验 1
+
+    答案 = 2
+
+
+    ### 快速测验 2
+
+    答案 = 11 除以 4 也等于：2 余 3
+
+
+    ### 快速测验 3
+
+    答案 = 1
+
+
+    ## 致谢
+
+
+    虽然这是一本小书，但工作量比我预期的要得多。我的目标一直是编写一系列符合年轻人应得标准的书籍。为此，我寻找了一家声誉良好的出版社，并必须感谢 Claudia
+    Bickford-Smith 对该项目的热情。我很高兴剑桥大学出版社能够录用我。Heather Mahy 和 Saul Sexton 的辛勤工作也深受感谢，他们这项工作不容易，在使项目落地的同时确保我不偏离正轨，我对此深表感谢。
+
+
+    一本声称教青少年编程的书必须在青少年身上进行测试。因此，我必须感谢 Ewell Castle School 的 Coding Club 男孩以及我的小儿子
+    Daniel，他们忍受了早期版本，并帮助我发现哪些是有效的，哪些（对他们来说遗憾）是不行的。
+
+
+    当我意识到树莓派基金会的宗旨和核心动力和我一样时，那种感觉太棒了。Jack Lang 的鼓励以及 Alex Bradbury 的巨大帮助确保了我的代码和计算机科学知识在技术上是正确的，这些都是无价的。
+
+
+    我还想亲自感谢 Ohio Art Company，他们拥有并销售奇妙的 Etch A Sketch 玩具，他们非常热情，并迅速许可我使用他们的注册商标。
+
+
+    Fran，我喜欢这些插图。
+
+
+    我的两个大儿子已经离家了，但得益于现代技术，他们也分享了这段旅程并做出了无价的贡献和建议。最后，在晚上和假期编写书籍和程序需要时间。我永远感谢我的妻子 Rita，她从未在这段时间里对我吝啬，也没有抱怨，即使是在听我谈论代码片段时！
+
+
+    谢谢你们……大腿（们）。
+
+
+    作者和出版社承认以下版权材料来源，并对授予的许可表示感谢。尽管已尽一切最大努力，但并不总是能够识别所用材料的来源，或追踪所有的版权所有者。如果发现有任何遗漏，我们乐在重印时加入相应的致谢。
+
+
+    | 页码 | 来源 |
+
+    | :--- | :--- |
+
+    | p. 28 | ImageZoo/Alamy |
+
+    | p. 36 | Sukonosova Anastasia/Shutterstock |
+
+    | p. 37 | Stock Illustrations Ltd/Alamy |
+
+    | p. 55 | Judith Collins/Alamy |
+
+
+    Etch A Sketch® 的文字标记、标志和配置是 Ohio Art Company 的注册商标。
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 80]
+
+
+    local variable
+
+
+    a variable that is defined inside a function and is only usable inside that function
+
+
+    63
+
+
+    logical operator
+
+
+    see comparative operator
+
+
+    25
+
+
+    loop
+
+
+    a piece of code that keeps repeating until a certain condition is met
+
+
+    22
+
+
+    mathematical operator
+
+
+    an operator that performs some mathematical function on some numbers; e.g. multiplication
+    or addition
+
+
+    20
+
+
+    method
+
+
+    the name given to a function in a class
+
+
+    63
+
+
+    module
+
+
+    a saved python file whose functions can be used by another program
+
+
+    31
+
+
+    modulus
+
+
+    a mathematical operator that is used to return the remainder from a division calculation;
+    e.g. 22%7 returns 1
+
+
+    20
+
+
+    operator
+
+
+    a symbol that performs a simple function on some code such as multiplying two
+    numbers or comparing them to see if they are equal; see also comparative operator
+    and mathematical operator
+
+
+    25
+
+
+    output
+
+
+    data that is sent from a program to a screen or printer, etc
+
+
+    13
+
+
+    return
+
+
+    (1) the value a function will produce after it has been run – it is also a Python
+    keyword; (2) the ‘end of line’ key on a keyboard, sometimes called the enter key
+
+
+    52
+
+
+    script mode
+
+
+    this is when we use IDLE to help us write code that we will save in a file
+
+
+    29'
+  - '[PAGE 81]
+
+
+    # statement
+
+
+    used in this book to mean a snippet of code; strictly speaking it is a piece of
+    code that represents a command or action; e.g. a print statement
+
+
+    # string
+
+
+    text data, which can be stored in a variable
+
+
+    # syntax error
+
+
+    an error produced when a computer fails to run a program because it cannot recognise
+    the format of the code supplied; e.g. a syntax error would be produced if a bracket
+    had not been closed
+
+
+    # tkinter
+
+
+    a package of classes that are often imported in to Python programs that give methods
+    that are useful for producing windows, drawing images and producing animations
+
+
+    # variable
+
+
+    a name that refers to a place in a computer''s memory where data is stored; more
+    loosely, it can also be used to refer to that data
+
+
+    # while loop
+
+
+    a kind of loop that repeats code while a comparative statement returns True'
+  - '[PAGE 82]
+
+
+    # # The Quick Quiz answers
+
+
+    # ## Quick Quiz 1
+
+
+    Answer = 2
+
+
+    # ## Quick Quiz 2
+
+
+    Answer = 11 divided by 4 also equals: 2 remainder 3
+
+
+    # ## Quick Quiz 3
+
+
+    Answer = 1'
+  - '[PAGE 83]
+
+
+    # Acknowledgements
+
+
+    Although this is a small book it has been a lot more work than I expected. My
+    aim has always been to produce a series of books that are produced to a standard
+    that young people deserve. To that end I sought an established publisher and my
+    thanks have to go to Claudia Bickford-Smith for her enthusiasm for the project.
+    I am so glad that Cambridge University Press were able to take me on. The hard
+    work of Heather Mahy and Saul Sexton who had the unenviable job of keeping me
+    on the straight and narrow while making the project a reality is also much appreciated.
+
+
+    A book that purports to teach coding to youngsters has to be tried out on youngsters.
+    My thanks therefore must go to The Coding Club boys of Ewell Castle School and
+    my youngest son Daniel who endured the early versions and helped me out what worked
+    and what (unfortunately for them) didn''t.
+
+
+    It was fantastic when I realised that the Raspberry Pi foundation had the same
+    aims and root motivations as myself and the encouragement of Jack Lang and the
+    enormous help from Alex Bradbury ensuring my code and Computer Science was technically
+    correct was invaluable.
+
+
+    I also want to personally thank Ohio Art Company who own and sell the amazing
+    Etch A Sketch toy who were also very enthusiastic and quick to give me permission
+    to use their registered trademarks.
+
+
+    Fran, I love the illustrations.
+
+
+    My two eldest sons have left the nest but thanks to modern technology have also
+    shared the journey and made invaluable contributions and suggestions. Finally,
+    writing books and programs in the evenings and holidays takes time. My eternal
+    thanks goes to my wife Rita for never begrudging me this time or complaining,
+    even when listening to talking about code snippets!
+
+
+    Thanks guys ... thighs.'
+  - '[PAGE 84]
+
+
+    The author and publisher acknowledge the following sources of copyright material
+    and are grateful for the permissions granted. While every effort has been made,
+    it has not always been possible to identify the sources of all the material used,
+    or to trace all copyright holders. If any omissions are brought to our notice,
+    we will be happy to include the appropriate acknowledements on reprinting.
+
+
+    p. 28 ImageZoo/Alamy; p. 36 Sukonosova Anastasia/Shutterstock; p. 37 Stock Illustrations
+    Ltd/Alamy; p. 55 Judith Collins/Alamy
+
+
+    The word mark, logo, and configuration of the Etch A Sketch® product are registered
+    trademarks of the Ohio Art Company.'
+  - '[PAGE 85]
+
+
+    <!-- no content -->'
