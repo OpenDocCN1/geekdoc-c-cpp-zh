@@ -1,0 +1,3342 @@
+- md: '
+
+    # Journal of Cleaner Production 420 (2023) 138363
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Journal of Cleaner Production
+
+
+    journal homepage: http://www.elsevier.com/jclepro
+
+
+    # Unveiling environmental implications of Canadian electricity system''s low-carbon
+    transitions: A multi-regional stochastic optimization-driven input-output model
+
+
+    Leian Chan a, Guobe Huang b,c, Bin Lin c, Lirong Lu b
+
+
+    +   * a Environmental Systems Engineering Program, University of Regina, Regina,
+    Saskatchewan S4P 0A2, Canada
+
+    * b Centre for Environment & Sustainability, University of Surrey, Guildford G3V
+    9X1, United Kingdom
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    Handling Editor: Zhi Mi
+
+
+    Keywords:
+
+    - Energy system optimization model
+
+    - Environmentally-extended input-output analysis
+
+    - Factorial analysis
+
+    - Chance-constrained programming
+
+    - Carbon tax
+
+    - GHG emission mitigation
+
+
+    Low-carbon transition of the electricity system is essential for achieving greenhouse
+    gas (GHG) emission mitigation goals. Nevertheless, such a transition involves
+    various complexities and the environmental implications on various sectors to
+    be explored. In this study, a multi-regional stochastic optimization-driven input-output
+    model (STIO) has been developed to unveil the environmental implications of the
+    low-carbon transitions under various scenarios from a selective perspective and
+    to assess Canada. STIO can explore indirect emissions in the electricity sector
+    under different policy scenarios and provide links to a policy generation technology-focused
+    input-output model to examine environmental impacts; (3) reflect the effects of
+    multiple policy factors on system response through interaction analysis models;
+    (4) quantify changes in emissions of the electricity sector by 38.9% and 33.1%,
+    in 2050. Specifically, the significance of indirect emissions from the natural-gas-powered
+    sector in Alberta (the highest GDP contributor to Canada''s economy) is highlighted
+    by 15.9% and 16.1%. Further analysis shows that a high-level carbon tax and increasing
+    cost of natural-gas powered technology would contribute to the electricity sector''s
+    indirect emissions. The findings help policymakers gain insights into the environmental
+    impacts of various decarbonization pathways on the whole economy.
+
+
+    # 1. Introduction
+
+
+    Transitioning from fossil-fuel to low-carbon and renewable energy has been acknowledged
+    as a pivotal strategy for mitigating the greenhouse gas (GHG) emission reductions
+    under the Paris Agreement (10.1016/j.jclepro.2023.138363). While the electricity
+    facilities facilitate GHG emissions from fuel combustion, also a significant fraction
+    of emissions is embedded along the electricity sector which are referred to as
+    indirect GHG emissions. Failing to account for indirect emissions may result in
+    carbon leakage, which in reductions in the electricity system''s GHG emissions
+    may increase other sectors'' emissions. Carbon leakage would undermine the effectiveness
+    of environmental policies to mitigate the electricity system. It is vital to delve
+    into both direct and indirect emissions of electricity system''s low-carbon transitions
+    to provide important insights for decision-makers to plan effective decarbonization
+    strategies.
+
+
+    Electricity system transition is a complex process which is accelerated by various
+    socioeconomic and environmental effects. Bottom-up electricity/energy system optimization
+    models (ESOMs) are a well-recognized model for comprehensively reflecting trends
+    among technological and environmental factors; scaling optimal cost-least decarbonization
+    pathways under national and regional scales (Lehtveer and Farid, 2020; Lennox
+    and Kaplan, 2016; Welder et al., 2018). In ESOMs, the uncertainties in input parameters
+    (e.g., energy price and renewable resource availability) will arise due to lack
+    of knowledge about their values (Ilgin, 2022; Senthil Kumar, 2020a). Addressing
+    such uncertainties, the modeling may lack robustness and have significant influence
+    on the decision-making process. Various stochastic methods have been introduced
+    to the ESOM framework to address certain and stochastic features of the modeling,
+    such as linear programming (Luo, 2021; Xiao, 2022), fuzzy programming (Wang, 2021),
+    and stochastic programming (Liao, 2022; Zhang, 2022). For instance, Wang et al.
+    (2018) incorporated the chance-constrained programming method into the optimization
+    framework to address such uncertainties using probability distributions to help
+    identify optimal decisions at provincial level. Day et al. (2014) adopted a scenario-based
+    approach to capture uncertainty in power demand and evaluate hydro supply at state
+    level with the objective of minimizing the total costs.
+
+
+    Several studies have integrated ESOMs with an environmentally-extended input-output
+    model (EIO). The deployed ESOM was built for Canada. Canada recently updated its
+    nationally determined contribution (NDC) targets to reduce GHG emissions by 40%
+    below 2030 and net zero by 2050. In general
+
+
+    ## 2. Methods and results
+
+
+    ## 2.1. Development of the multi-regional stochastic optimization-driven input-output
+    model (STIO)
+
+
+    As an extension of previous efforts, the focus of this study is to develop a multi-regional
+    stochastic optimization-driven input-output model (STIO) through integrating three
+    modules, namely SEOM, PITO, and interaction analysis. The modeling framework is
+    presented in Fig. 1. In STIO, the electricity generation schedules are regulated
+    by development of SEOM. Then, the outputs of SEOM (i.e., power generation schedules
+    and direct emissions) are used as input for PITO to construct analysis model.
+
+
+    ### 2.1.1. Stochastic optimization module (SEOM)
+
+
+    Developing renewable power technology is a priority strategy to decarbonize the
+    electricity system, while the renewable resource availability have inherent characteristics
+    and their flexibility is highly dependent on natural events (e.g., wind speed,
+    radiant light and heat from the sun). Chance-constrained programming method (CCP)
+    is helpful to tackle uncertain parameters with stochastic features (expressed
+    as probability distributions) and such constraint violation risk (Charnes and
+    Cooper, 1959). Therefore, SE is introduced to address stochastic features of renewable
+    energy (wind and solar power). In addition, mixed-integer programming method (MILP)
+    is introduced to deal with problems with integer variables, such as capacity expansion
+    options for power generation technologies. By incorporating both SE and MILP,
+    a general SEOM can be formulated as:
+
+
+    Objective: Minimize $f = \sum_{i,j} c_{ij}x_{ij} + \sum_{i} d_i y_i$
+
+
+    subject to:
+
+    $(1b) \quad \sum_{j} (a_{ij}x_{ij} + b_{ij}y_j) \le p_i, i = 1, 2, ... v$
+
+    $(1c) \sum_{j} (a_{ij}x_{ij} + b_{ij}y_j) \le b_i^{max}, i = 1, 2, ... v$
+
+    $(1d) x_{ij} \ge 0$
+
+    $(1e) y_j \ge 0 \text{ or } y_j = 1$
+
+
+    (4) Initial generation capacity, electricity demand and cost are specified for
+    each region; however, the GHG emission target is specified for the system model:
+
+    (5) The parameters of wind and solar energy are expressed as probability distributions
+    to tackle such uncertainties. There are four types of energy resource availability:
+    $p_i = 0.01, 0.05, 0.10,$ and $0.25$. $P$ levels represent to limit the allowable
+    amount of wind and solar energy available as shown in Table 1. A lower $p$ level
+    indicates a lower level of risk of violating the constraints.
+
+
+    ### 2.1.2. Power generation technology-focused input-output model (PEM)
+
+
+    Transformation in electricity systems have significant implications for other
+    regions/sectors. NEM models are adopted to capture the spill-over effects of changes
+    in energy generation structure across multiple regions under independent markets
+    (Miller and Blair, 2009). Furthermore, ecological network analysis (ENA) has been
+    adopted to reflect the environmental interactions among sectors through the transformation
+    of markets, the flow of electricity between multiple regions and other economic
+    sectors. Under the Leontief''s input-output framework (Leontief, 1986; Miller
+    and Blair, 2009), PEM is formulated as:
+
+
+    | Variable | Description |
+
+    | :--- | :--- |
+
+    | XS | Total demand of each sector |
+
+    | A | Coefficient matrix |
+
+    | I-A | Leontief inverse |
+
+    | FD | Final demand |
+
+    | E | Embodied GHG intensity |
+
+    | G^g | Diagonal matrix of each sector''s emissions |
+
+    | IE | Direct emissions |
+
+    | ME | Indirect flows |
+
+    | TE | Total emission |
+
+
+    $(2a) XS = (I - A)D$
+
+    $(2b) e = [XS]$
+
+    $(2c) E = \sum_{j} TE_{ij}$
+
+    $(2d) G^g = \frac{IE}{TE}$
+
+    $(2f) N = (I - A)$
+
+    $(2g) ID = ME$
+
+
+    where $x_{ij}$ are decision variables, $a_{ij}$ and $c_{ij}$ are input parameters.
+    For factor in the interaction analysis model, factors with $m$ and $n$ levels
+    are defined from uncertain parameters $a_{ij}^q, a_{ij}^n, b_{ij}^q,$ and $b_{ij}^n$.
+
+
+    Equation (18) can be formulated
+
+    $b^i = F(b_i)$, with the cumulative distribution function (CDF) of the probability
+    of violating the constraint $b_i$; here is an uncertain parameter defined as probability
+    distributions (Charnes and Cooper, 1959).
+
+
+    The model provides options of energy supply investment, electricity expansion
+    scenarios, capacity expansion efficiency, inter-regional electricity generation,
+    and long-term horizon. The objective of SEOM is to minimize the total cost of
+    system operations, including investment, operation, transmission and distribution
+    electricity, imports and exports, and carbon; the constraints include balance
+    of primary energy, capacity expansion, demand meeting, GHG emission target, and
+    non-technical constraints. The main features of SEOM include:
+
+
+    - 1) The nation has 13 regions including Ontario (ON), Quebec (QC), Alberta (AB),
+    Saskatchewan (SK), Manitoba (MB), British Columbia (BC), New Brunswick (NB), Nova
+    Scotia (NS), Prince Edward Island (PE), Newfoundland and Labrador (NL), and Northern
+    Territories (NT), Yukon (YT).
+
+    - 2) The year 2020 is representing ten years from 2010 to 2020, with planning
+    horizon ten years.
+
+    - 3) A range of energy generation technologies that are on-grid or in planning
+    are included, such as coal-fired, natural gas wind-fired, oil-fired, with carbon
+    capture and
+
+
+    ### 2.1.3. Interaction system model
+
+
+    In electricity system management, the capital costs
+
+    '
+  mdcn: '
+
+
+    # 清洁生产杂志 420 (2023) 138363
+
+
+    ScienceDirect 可内容列表
+
+
+    # 清洁生产杂志 (Journal of Cleaner Production)
+
+
+    期刊首页：http://www.elsevier.com/jclepro
+
+
+    # 揭示加拿大电力系统低碳转型的环境影响：多区域随机优化驱动投入产出模型
+
+
+    Leian Chan a, Guobe Huang b,c, Bin Lin c, Lirong Lu b
+
+
+    +   * a 里贾纳大学环境系统工程专业，萨斯喀彻温省 S4P 0A2，加拿大
+
+    * b 萨里大学环境与可持续发展中心，格尔福德 G3V 9X1，英国
+
+
+    # 文章信息
+
+
+    # 摘要
+
+
+    处理编辑：Zhi Mi
+
+
+    关键词：
+
+    - 能源系统优化模型
+
+    - 环境扩展投入产出分析
+
+    - 因子分析
+
+    - 机会约束规划
+
+    - 碳税
+
+    - 温室气体排放减排
+
+
+    电力系统的低碳转型对于实现温室气体（GHG）减排目标至关重要。然而，这种转型涉及多种复杂性，且对不同部门的环境影响仍待探索。在本研究中，开发了一个多区域随机优化驱动投入产出模型（STIO），旨在从特定视角揭示不同场景下低碳转型的环境影响，并对加拿大进行评估。STIO
+    可以(1) 探索不同政策场景下电力部门的间接排放，并与政策生成技术导向的投入产出模型建立联系以检查环境影响；(2) 通过交互分析模型反映多种政策因素对系统响应的影响；(3)
+    定量了 2050 年电力部门排放量减少了 38.9% 和 33.1%。具体而言，研究强调了阿尔伯塔省天然气发电部门（加拿大经济最大的 GDP 贡献者）间接排放的显著性，分别为
+    15.9% 和 16.1%。进一步分析显示，高水平碳税和天然气发电技术成本的增加将导致电力部门间接排放增加。这些发现有助于决策者深入了解各种脱碳路径对整个经济的环境影响。
+
+
+    # 1. 引言
+
+
+    从化石燃料向低碳和可再生能源转型被认为是实现《巴黎协定》下温室气体（GHG）减排的关键策略（10.1016/j.jclepro.2023.138363）。虽然电力设施促进了燃料燃烧产生的温室气体排放，但很大一部分排放是嵌入在电力部门中的，这被称为间接温室气体排放。未能考虑到间接排放可能会导致碳泄漏，即在减少电力系统温室气体排放的同时，却增加了其他部门的排放。碳泄漏将削弱环境政策缓解电力系统问题的有效性。深入研究电力系统低碳转型的直接排放和间接排放至关重要，这可以为决策者制定有效的脱碳策略提供重要见解。
+
+
+    电力系统转型是一个复杂的过程，受到各种社会经济和环境因素的加速。自下而上的电力/能源系统优化模型（ESOMs）是一种广泛认可的模型，能够全面反映技术和环境因素的趋势，并在国家和区域尺度上扩展应用（Lehtveer
+    and Farid, 2020; Lennox and Kaplan, 2016; Welder et al., 2018）。在 ESOMs 中，由于对输入参数（例如能源价格和可再生资源可用性）的数值了解不足，会产生不确定性（Ilgin,
+    2022; Senthil Kumar, 2020a）。解决这些不确定性，建模可能缺乏稳健性，并对决策过程产生重大影响。各种随机方法被引入 ESOM 框架，以处理建模中的确定性和随机性特征，例如线性规划（Luo,
+    2021; Xiao, 2022）、模糊规划（Wang, 2021）和随机规划（Liao, 2022）。例如，Wang 等人 (2018) 将机会约束规划法引入优化框架，利用概率分布处理此类不确定性以帮助确定省级的最优决策；Day
+    等人 (2014) 采用基于场景的方法来捕捉电力需求的不确定性，并以成本最小化为目标评估州级供应。
+
+
+    许多研究将 ESOMs 与环境扩展投入产出模型（EIO）相结合。部署的 ESOM 是针对加拿大的。加拿大最近更新了其国家贡献（NDC）目标，是在 2030
+    年前温室气体排放减少 40%，并在 2050 年实现净零排放。
+
+
+    ## 2. 方法与结果
+
+
+    ## 2.1 多区域随机优化驱动投入产出模型（STIO）的发展
+
+
+    作为以往工作的延伸，本研究重点是通过整合三个模块——SEOM、PITO 和交互分析来开发多区域随机优化驱动投入产出模型（STIO）。建模框架如图 1 所示。在
+    STIO 中，发电计划由 SEOM调节。然后，SEOM 的输出（即发电计划和直接排放）作为 PITO 的输入以构建模型。
+
+
+    ### 2.1.1. 随机优化模块（SEOM）
+
+
+    开发可再生电力技术是电力系统脱碳的优先策略，但可再生资源的可用性具有内在特性，其灵活性取决于自然事件（例如风速、太阳光）。机会约束规划 CCP 有助于处理具有随机特征（以概率分布表示）的约束违反风险（Charnes
+    and Cooper, 1959）。因此，引入 SE 来处理可再生能源（风能和太阳能）的随机特征。此外，引入混合整数规划 MILP 来处理整数变量问题，例如发电技术的扩展方案。通过结合
+    SE 和 MILP，通用的 SEOM 可以公式化：
+
+
+    目标：最小化 $f = \sum_{i,j} c_{ij}x_{ij} + \sum_{i} d_i$
+
+
+    约束条件：
+
+    $(1b) \sum_{j} (a_{ij}x_{ij} + b_{ij}y_j) \le p_i, i = 1, 2, ...$
+
+    $(1c) \sum_{j} (a_{ij}x_{ij} + b_{ij}y_j) \le b_i^{max}, i = 1, 2, ...$
+
+    $(1d) x_{ij} \ge 0$
+
+    $(1e) y_j \ge 0 \text{ 或 } y_j = 1$
+
+
+    (4) 每个区域规定了初始容量、电力需求和成本；但系统模型规定了温室气体排放目标：
+
+    (5) 风能太阳能的参数以概率分布表示以处理此类不确定性。有四种资源可用性类型：$p_i = 0.01, 0.05, 0.10,$ 和 $0.25$。$P$
+    水平代表允许的风能和太阳能量，如表 1 所示。较低的 $p$ 水平表示违反约束的风险较低。
+
+
+    ### 2.1.2. 以发电技术为核心的投入产出模型（PEM）
+
+
+    电力系统的转型对其他区域部门具有重要影响。 NEM 模型用于捕捉独立市场下多个区域发电结构变化的溢出效应（Miller and Blair, 2009）。此外，采用生态网络分析（ENA）通过市场转型、多个区域与其他经济部门之间的电力流动反映部门间的环境交互。在列昂迪投入产出框架（Leontief,
+    1986; Miller and Blair, 2009）下，PEM 公式如下：
+
+
+    | 变量 | 说明 |
+
+    | :--- | :--- |
+
+    | XS | 各部门的总需求 |
+
+    | A | 系数矩阵 |
+
+    | I-A | 列昂迪逆 |
+
+    | FD | 最终需求 |
+
+    | E | 隐含温室气体强度 |
+
+    | G^g | 各部门排放的对角矩阵 |
+
+    | IE | 直接排放 |
+
+    | ME | 间接流 |
+
+    | TE | 总排放 |
+
+
+    $(2a) XS = (I - A)D$
+
+    $(2b) e = [XS]$
+
+    $(2c) E = \sum_{j} TE_{ij}$
+
+    $(2d) G^g = \frac{IE}{TE}$
+
+    $(2f) N = (I - A)$
+
+    $(2g) ID = ME$
+
+
+    其中 $x_{ij}$ 是决策变量，$a_{ij}$ 和 $c_{ij}$ 是输入参数。对于交互分析模型中的因子，具有 $m$ 和 $n$ 个层级的因子由不确定参数
+    $a_{ij}^q, a_{ij}^n, b_{ij}^q,$ 和 $b_{ij}^n$ 定义。
+
+
+    方程 (18) 可以公式化为：
+
+    $b^i = F(b_i)$，其中违反约束 $b_i$ 概率的累积分布函数（CDF）；此处为概率分布的不确定参数（Charnes and Cooper, 1959）。
+
+
+    该模型提供了能源供应投资、电力扩展方案、容量扩展效率、跨区域发电和长期等选项。SEOM 的目标是最小化系统运行的总成本，包括投资、运行、输配电、进出口以及碳；约束条件包括初级平衡、容量扩展、需求满足、温室气体排放目标和非技术约束。SEOM
+    的主要特征包括：
+
+
+    - 1) 国家拥有 13 个地区，包括安大略（ON）、魁北克（QC）、阿尔伯塔（AB）、萨斯喀彻温（SK）、马尼托巴（MB）、不列颠哥比亚（BC）、新不伦瑞克（NB）、新斯科舍（NS）、爱德华王子岛（PE）、纽芬兰和拉布拉多（NL）以及西北地区（NT）、育空地区（YT）。
+
+    - 2) 2020 年代表 2010 年到 2020 年的十年，规划周期为十年。
+
+    - 3) 包含一系列已并网或计划中的发电技术，如燃煤发电、天然气风电、燃油发电以及碳捕集和
+
+
+    ### 2.1.3. 交互系统模型
+
+
+    在电力系统管理中，资本成本
+
+
+    '
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # Journal of Cleaner Production 420 (2023) 138363
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Journal of Cleaner Production
+
+
+    journal homepage: http://www.elsevier.com/jclepro
+
+
+    # Unveiling environmental implications of Canadian electricity system''s
+
+    low-carbon transitions: A multi-regional stochastic optimization-driven
+
+    input-output model
+
+
+    Leian Chan a, Guobe Huang b,c, Bin Lin c, Lirong Lu b
+
+
+    +   * a Environmental Systems Engineering Program, University of Regina, Regina,
+    Saskatchewan S4P 0A2, Canada
+
+    * b Centre for Environment & Sustainability, University of Surrey, Guildford G3V
+    9X1, United Kingdom
+
+
+    # ARTICLE INFO
+
+
+    # ABSTRACT
+
+
+    Handling Editor: Zhi Mi
+
+
+    Keywords:
+
+    Energy system optimization model
+
+    Environmentally-extended input-output analysis
+
+    Factorial analysis
+
+    Chance-constrained programming
+
+    Carbon tax
+
+    GHG emission mitigation
+
+
+    Low-carbon transition of the electricity system is essential for achieving greenhouse
+    gas (GHG) emission mitigation goals. Nevertheless, such a transition involves
+    various complexities and the environmental implications on various sectors to
+    be explored. In this study, a multi-regional stochastic optimization-driven input-output
+    model (STIO) has been developed to unveil the environmental implications of the
+    low-carbon transitions under various scenarios from a selective perspective and
+    to assess Canada. STIO can explore indirect emissions in the electricity sector
+    under different policy scenarios and provide links to a policy generation technology-focused
+    input-output model to examine environmental impacts; (3) reflect the effects of
+    multiple policy factors on system response through interaction analysis models;
+    (4) quantify changes in emissions of the electricity sector by 38.9% and 33.1%,
+    in 2050. Specifically, the significance of indirect emissions from the natural-gas-powered
+    sector in Alberta is highlighted (the highest GDP contributor to Canada''s economy)
+    by 15.9% and 16.1%. Further analysis shows that a high-level carbon tax and increasing
+    cost of natural-gas powered technology would contribute to the electricity sector''s
+    indirect emissions. The findings help policymakers gain insights into the environmental
+    impacts of various decarbonization pathways on the whole economy.
+
+
+    # 1. Introduction
+
+
+    Transitioning from fossil-fuel to low-carbon and renewable energy has been acknowledged
+    as a pivotal strategy for mitigating the greenhouse gas (GHG) emission reductions
+    under the Paris Agreement (10.1016/j.jclepro.2023.138363). While the electricity
+    facilities facilitate GHG emissions from fuel combustion, also a significant fraction
+    of emissions is embedded along the electricity sector which are referred to as
+    indirect GHG emissions. Failing to account indirect emissions may result in carbon
+    leakage, which in reductions in the electricity system''s GHG emissions may increase
+    other sectors''
+
+
+    emissions. Carbon leakage would undermine the effectiveness of environmental policies
+    to mitigate the electricity system. It is vital to delve into both direct and
+    indirect emissions of electricity system''s low-carbon transitions to provide
+    important insights for decision-makers to plan effective decarbonization strategies.
+
+
+    Electricity system transition is a complex process which is accelerated by various
+    socioeconomic and environmental effects. Bottom-up electricity/energy system optimization
+    models (ESOMs) are a well-recognized model for comprehensively reflecting trends
+    among technological and environmental factors; scaling optimal cost-least decarbonization
+    pathways under national and regional scales (Lehtveer and Farid, 2020; Lennox
+    and Kaplan, 2016; Welder et al., 2018). In ESOMs,
+
+
+    > * Corresponding author.
+
+    E-mail: guhang@uregina.ca (G. Huang).
+
+
+    https://doi.org/10.1016/j.jclepro.2023.138363
+
+    Received 28 March 2023; Received 28 June 2023; Accepted 6 August 2023
+
+    Available online 7 July 2023
+
+    0969-6526/C 2023 Elsevier Ltd. All rights reserved.'
+  - '[PAGE 1]
+
+
+    # L. Chen et al.
+
+
+    # Journal of Cleaner Production 420 (2023) 138863
+
+
+    the uncertainties in input parameters (e.g., energy price and renewable resource
+    availability) will arise due to lack of knowledge about their values (Ilgin, 2022;
+    Senthil Kumar, 2020a). Addressing such uncertainties, the modeling may lack robustness
+    and have significant influence on the decision-making process. Various stochastic
+    methods have been introduced to the ESOM framework to address certain and stochastic
+    features of the modeling, such as linear programming (Luo, 2021; Xiao, 2022),
+    fuzzy programming (Wang, 2021), and stochastic programming (Liao, 2022; Zhang,
+    2022). For instance, Wang et al. (2018) incorporated the chance-constrained programming
+    method into the optimization framework to address such uncertainties using probability
+    distributions to help identify optimal strategy decisions at the provincial level.
+    Dayhim et al. (2014) adopted a scenario-based approach to capture uncertainty
+    in power demand and evaluate hydro power supply channels at the state level.
+
+
+    pathways under different policy scenarios and risks with the objective of minimizing
+    the total costs; in SEOM, chance-constrained programming method has been introduced
+    to address stochastic features of renewable resource availability (i.e., wind
+    and solar power generation) and support constraint-validation risk analysis; (2)
+    the outputs of power generation and carbon emissions are used to input a power
+    generation technology-input-output model (PITO) to evaluate the environmental
+    relationships between electricity sectors and other components like the impact
+    of electricity demand on GHG emissions; (3) a mixed-level analysis will be undertaken
+    in an integration analysis to evaluate the interactions among multiple sectors
+    (e.g., the impact of wind and natural gas power) on electricity sectors'' GHG
+    emissions. It is expected that the results can help decision-makers to formulate
+    electricity system management policies at a regional level.
+
+
+    ESOMs provide a technology-recognition investment of the entire system
+
+
+    Several studies have integrated ESOMs with an environmentally-extended input-output
+    model (EIO)
+
+
+    The deployed ESOM was built for Canada. Canada recently updated its nationally
+    determined contribution (NDC) targets to reduce GHG emissions by 40% below 2005
+    levels by 2030 and net zero by 2050.
+
+
+    In general
+
+
+    # 2. Methods and results
+
+
+    # 2.1. Development of the multi-regional stochastic optimization-driven-input-output
+    model (STIO)
+
+
+    developed through integrating three modules, namely SEOM, PITO, and integration
+    analysis. The modeling framework is presented in Fig. 1. In STIO, the electricity
+    generation schedules are regulated by the development of SEOM. Then, the outputs
+    of SEOM (i.e., power generation schedules and direct GHG emissions) are used as
+    input for PITO to construct the analysis model.
+
+
+    As an extension of the previous efforts, the focus of this study is to develop
+    a multi-regional stochastic optimization-driven-input-output model (STIO) through
+    integrating three modules for supporting electricity system management. In detail,
+    the objective entails: (1) a stochastic electricity optimization module (SEOM)
+    will be developed to optimize electricity system decarbonization
+
+
+    # 2.1.1. Stochastic electricity optimization module (SEOM)
+
+
+    Developing renewable power technology is a priority strategy to decarbonize the
+    electricity system, while the power electricity from renewable resource availability
+    have inherent characteristics and their flexibility is highly dependent on natural
+    events (e.g., wind speed, radiant light and heat from the sun). Chance-constrained
+    programming method (CCP) is'
+  - '[PAGE 2]
+
+
+    # Chen et al.
+
+
+    # Journal of Cleaner Production 420 (2023) 138063
+
+
+    helpful to tackle uncertain parameters with stochastic features (expressed as
+    probability distributions) and such constraint violation risk analysis (Charnes
+    and Cooper, 1959). Therefore, SE is introduced to address stochastic features
+    of renewable energy (i, wind and solar power). In addition, mixed-integer programming
+    method (MILP) is introduced to deal with problems with integer variables, such
+    as capacity expansion options for power generation technologies. By incorporating
+    both SE and MILP, a general SEOM can be formulated as:
+
+
+    ```
+
+    Objective: Minimize $f = \sum_{i,j} c_{ij}x_{ij} + \sum_{i} d_i y_i$
+
+    ```
+
+
+    subject to:
+
+
+    ```
+
+    $$(1b)\np_i \quad \sum_{j} (a_{ij}x_{ij} + b_{ij}y_j) \le p_i, i = 1, 2, ... ,
+    v$
+
+    ```
+
+
+    ```
+
+    $$(1c)\sum_{j} (a_{ij}x_{ij} + b_{ij}y_j) \le b_i^{max}, i = 1, 2, ... , v$
+
+    ```
+
+
+    ```
+
+    $$(1d)\nx_{ij} \ge 0$
+
+    ```
+
+
+    ```
+
+    $$(1e)\ny_j \ge 0 \text{ or } y_j = 1$
+
+    ```
+
+
+    storage (cc-CCS), nuclear, wind power, solar power, hydropower, biomass power,
+    and small nuclear reactor (SMR):
+
+
+    (4) Initial generation capacity, electricity demand and cost are specified for
+    each region; however, the GHG emission target is specified for the system model:
+
+
+    (5) The parameters of wind and solar energy are expressed as probability distributions
+    to tackle such uncertainties. There are four types of energy resource availability:
+    $p_i = 0.01, 0.05, 0.10,$ and $0.25$. $P$ levels represent to limit the allowable
+    amount of wind and solar energy available as shown in Table 1. A lower $p$ level
+    indicates a lower level of risk of violating the constraints.
+
+
+    2.1.2. Power generation technology-focused input-output model (PEM) Transformation
+    in electricity systems have significant implications for other regions/sectors.
+    NEM models are adopted to capture the spill-over effects of changes in energy
+    generation structure across multiple regions under independent markets (Miller
+    and Blair, 2009). Furthermore, ecological network analysis (ENA) has been adopted
+    to reflect the environmental interactions among sectors through the transformation
+    of markets, the flow of electricity between multiple regions and other economic
+    sectors. Under the Leontief''s input-output framework (Leontief, 1986; Miller
+    and Blair, 2009) and ENA (Faith et al., 2019), PEM be formulated as:
+
+
+    ```
+
+    $$(2a)\XS = (I - A)D$
+
+    ```
+
+
+    ```
+
+    $$(2b)\e = DE[XS - Z_i]$
+
+    ```
+
+
+    ```
+
+    $$(2c)\E = \sum_{j} TE_{ij}E_j$
+
+    ```
+
+
+    ```
+
+    $$(2d)\G^g = \frac{IE_{ij}^g}{TE}
+
+    ```
+
+
+    ```
+
+    $$(2f)\N = (I - A)^{-1}D$
+
+    ```
+
+
+    ```
+
+    $$(2g)\ID = M - ME
+
+    ```
+
+
+    where $XS$ is the total demand of each sector; A the coefficient matrix $M=(I
+    - A)^{-1}$ is the Leontief inverse; $FD$ represents the final demand of products;
+    $E$ is the embodied GHG emission intensity; $G^g$ is the diagonal matrix of each
+    sector''s emissions; $IE$ is the direct matrix of each sector''s emissions; $ME$
+    represents the indirect emission flows among sectors; $TE$ is the total emission;
+    $G^g = \frac{IE}{TE}$ represents the dimensionless input-output emission flows
+    from sector $i$ to sector $j$ in region $q$; $M = [m_{ij}^q]$ is the dimensionless
+    indirect emission flows from sector $i$ to sector $j$ in region $q$; $ID = [id_{ij}^q]$
+    is the dimensionless direct emission flows from sector $i$ to sector $j$ in region
+    $q$.
+
+
+    where $x_{ij}$ are decision variables defined in, $a_{ij}$ and $c_{ij}$ are input
+    parameters. For factor in the interaction analysis model, factors with $m$ and
+    $n$ levels are defined from uncertain parameters $a_{ij}^q, a_{ij}^n, b_{ij}^q,$
+    and $b_{ij}^n$.
+
+
+    Equation (18) can be formulated
+
+
+    where $b^i = F(b_i)$, with the cumulative distribution function (CDF) of the probability
+    of violating the constraint $b_i$; here is an uncertain parameter defined as probability
+    distributions (Charnes and Cooper, 1959).
+
+
+    The model provides options of energy supply investment, electricity expansion
+    scenarios, capacity expansion efficiency, inter-regional electricity generation,
+    and long-term horizon. The objective of SEOM is to minimize the total cost of
+    system operations, including investment, operation, transmission and distribution
+    electricity, imports and exports, and carbon; the constraints include balance
+    of primary energy, capacity expansion, demand meeting, GHG emission target, and
+    non-technical constraints. The main features of SEOM include
+
+
+    +   1) The nation has 13 regions including Ontario (ON), Quebec (QC), Alberta
+    (AB), Saskatchewan (SK), Manitoba (MB), British Columbia (BC), New Brunswick (NB),
+    Nova Scotia (NS), Prince Edward Island (PE), Newfoundland and Labrador (NL), and
+    Northern Territories (NT), Yukon (YT).
+
+    2) The year 2020 is representing ten years from 2010 to 2020, with planning horizon
+    ten years.
+
+    3) A range of energy generation technologies that are on-grid or in planning are
+    included, such as coal-fired, natural gas wind-fired, oil-fired, with carbon capture
+    and
+
+
+    # 2.1.3. Interaction system model
+
+
+    In electricity system management, the capital costs
+
+
+    3'
+- md: "\nL. Chen et al.\n\nJournal of Climate Production 420 (2023) 138636\n\nassociated\
+    \ with different generation technologies as environmental policies are critical\
+    \ factors in influencing the electricity sector structures and trends, fluctuating\
+    \ GHG emissions tends to a significant event. The main effect of each factor and\
+    \ their interactions on the electricity system is demonstrated through sensitivity\
+    \ analysis. Factorial analysis is advantageous in identifying the main factor\
+    \ as well as interactions among multiple factors (Montgomery, 2012). In the interaction\
+    \ analysis, the effects of non-renewable power (such as coal, gas, and wind-fired\
+    \ generation) and environmental (i.e., carbon tax) policies on the system (i.e.,\
+    \ electricity sectors) reflect indirect GHG emissions. In Canada, renewable energy\
+    \ technologies have the potential to reduce emissions from the electricity sector\
+    \ in the future (Government of Canada, 2010); however, future costs of wind power\
+    \ are highly uncertain. International Renewable Energy Agency (2022) predicts\
+    \ that costs of wind power will fall by 15% in 2021 compared to 2020 to reduce\
+    \ carbon costs by 10% to 30% which could be achievable in the long-term driven\
+    \ through improvements in the supply chain and efficiency. Another important source\
+    \ is to replace coal-fired power generation, which could be relatively valuable\
+    \ in the future as projected by Canada Energy Regulator (CER) (2021). Consequently,\
+    \ we reduce (-30% to +10%) with use of wind and gas-fired power generation. Furthermore,\
+    \ the development of environmental policies, such as carbon tax, is an essential\
+    \ factor in reducing regions' reliance on fossil fuels and accelerating transition\
+    \ to a low-carbon future. In Canada, different future carbon schemes have reflected\
+    \ the impact on emissions, of uncertainties, three of carbon levels (-30%, -10%,\
+    \ and +10%) are designed to represent different potentials of carbon taxes.\n\n\
+    $SS_{E} = SS_{A} - SS_{S} - SS_{AB}$\n\nThe detailed solutions for STIO are summarized\
+    \ in Section 1.1 in Supplementary Material.\n\n## 2.2. Comparison of Canadian\
+    \ IoT\n\nA Canada-input-output model with detailed electricity sectors (CA-IOT)\
+    \ has built with a total of 37 sectors, as shown in Table 1 (see Table 2 for description).\
+    \ In CA-IOT, the aggregation is based on users of SEOM (i.e., regional economic\
+    \ schemes). The electricity sector has been disintegrated into 13 provincial/territorial-level\
+    \ sectors. Alberta and Saskatchewan, two provincial electricity sectors have been\
+    \ further aggregated into 14-level electricity sectors (i.e., coal-fired, gas-fired,\
+    \ wind-fired, biomass, and hydro power). The three electricity effects, the inter-interaction\
+    \ characteristics show the demand and supply of sectors, are calculated by multiplying\
+    \ the row and column factors. The matter of intermediate use of 23 electricity\
+    \ sectors has derived based on the proportions of importance in results. Lastly,\
+    \ electricity sectors have been further segregated for segregation and aggregated\
+    \ into 14 sectors. For sectoral segregation and aggregation is based on Woski\
+    \ (1964) and Lindner (2012) (see Section 1.2 in Supplementary Material for details).\
+    \ The adjusted CA-IOT is balanced based on the method Kim et al. (2019).\n\nTo\
+    \ evaluate the effects of policies on electricity sectors as well the associated\
+    \ GHG emissions, policy schemes (i.e., REF, NDC, and CET) are summarized in Table\
+    \ 1. In this table, different carbon schemes reflect the carbon costs and policy\
+    \ options to achieve the GHG emission target sector. Each policy is tested under\
+    \ four run levels (r) of renewable energy resource availability (i.e., wind and\
+    \ solar energy), $r = 0.01, 0.05, 0.1, and 0.25.\n\nSince factors are presented\
+    \ at various levels, a multi-level analysis is adopted to analyze the effects\
+    \ of multiple policy factors on the system. By taking a 2-factor and 2-level()\
+    \ factorial analysis as an example, the models can be expressed as:\n\n```\n$y_{\\\
+    mu ab} = \\mu + \\beta_i + \\beta_j + \\gamma_{ij} + \\epsilon_{\\mu ab}, \\quad\
+    \ i=1,\\dots,a \\ j=1,\\dots,b \\ (3a)$\n```\n\nwhere $\\mu$ is the mean effect,\
+    \ $\\beta_i$ is the effect of factor $i$, $\\beta_j$ is the effect of factor $j$,\
+    \ $\\gamma_{ij}$ is the interaction between $i$ and $j$, and $\\epsilon_{\\mu\
+    \ ab}$ is a error component, and $y_{\\mu ab}$ is system response. In a two-factor\
+    \ experiment, there are $a \\times b$ total observations (Montgomery, 2012). The\
+    \ total sum of squares can be calculated as:\n\n```\n$SS_Y = \\sum_{i=1}^a \\\
+    sum_{j=1}^b (y_{\\mu ab} - \\bar{y}_{..})^2 \nSS_A = b \\sum_{i=1}^a (\\bar{y}_{i.}\
+    \ - \\bar{y}_{..})^2 \nSS_B = a \\sum_{j=1}^b (\\bar{y}_{.j} - \\bar{y}_{..})^2\
+    \ \nSS_{AB} = \\sum_{i=1}^a \\sum_{j=1}^b (y_{\\mu ab} - \\bar{y}_{i.} - \\bar{y}_{.j}\
+    \ + \\bar{y}_{..})^2 \n (3b)$\n```\n\nThe main effects of A ($SS_A$) and B ($SS_B$)\
+    \ and the interactive effects among them can be calculated as:\n\n```\n$SS_{A}\
+    \ = b \\sum_{i=1}^a (\\bar{y}_{i.} - \\bar{y}_{..})^2 \nSS_{B} = a \\sum_{j=1}^b\
+    \ (\\bar{y}_{.j} - \\bar{y}_{..})^2 \nSS_{AB} = \\sum_{i=1}^a \\sum_{j=1}^b (y_{\\\
+    mu ab} - \\bar{y}_{i.} - \\bar{y}_{.j} + \\bar{y}_{..})^2 \n (3c)$\n```\n\n##\
+    \ Table 1: Description of schemes.\n\n| GHG emission target | Carbon tax |\n|\
+    \ :--- | :--- |\n| REF | Assumes to reduce by 4% annually from 2020 to 2050 |\
+    \ $10; increase by $20 annually until 2050 (Government of Canada, 2019) |\n| NDC\
+    \ | Follows Canada's National Contributions (40% reduction below 2005 levels by\
+    \ Government of Canada, 2021a) | Same as REF |\n| CET | $10, increase by $20 annually\
+    \ by 2040, and $40 annually by 2050 (Canada Energy Regulator, 2021; Department\
+    \ of Environment and Climate Change) |\n\nNote: The sum of errors can be calculated\
+    \ as: The REF scenario's GHG emissions to decrease by 4% annually from 2020 to\
+    \ 2050, which is based on the average of Canada's historical reduction.\n\nand\
+    \ Environment Climate Change (2021). The availability of renewable energy (IE,\
+    \ wind and solar power) for each region is expressed as probability distributions\
+    \ under its natural fluctuation (see Table S1 for data). All traditional coal-fired\
+    \ power plants are assumed to be phased out by 2030 (Government of Canada, 2020),\
+    \ and it is assumed after 2030 as the federal and jurisdictional governments are\
+    \ currently reviewing opportunities for SMR technologies across the nation (Expert\
+    \ Finance Working Group, 2018). Furthermore, basic data required for compiling\
+    \ the CA-IOT is obtained from Statistics Canada (2021a), including a 2017 national\
+    \ IoT and thirteen 2017 provincial/territorial IOTs. The physical flow accounts\
+    \ for GHG emissions at both national and territorial levels are obtained from\
+    \ Statistics Canada (2021b). The method of final demand projection from 2020 to\
+    \ 2050 is provided in Section 2 in Supplementary Material.\n\n![](img/393827738208025e76e691fb84e38508_4_0.png)\n\
+    \nFig. 1. Nationally and regionally electricity generation schemes under different\
+    \ policy scenarios (REF, NDC, CT) over the planning horizon at $p_i = 0.01$ represents\
+    \ Canada. The thirteen regions are Alberta (AB), British Columbia (BC), Saskatchewan\
+    \ (SK), Manitoba (MB), Ontario (ON), Quebec (QC), New Brunswick (NB), Scotia (NS),\
+    \ Prince Edward Island (PE), Newfoundland and Labrador (NL), Yukon (YK), Nunavut\
+    \ (NV), and Northwest Territories (NWT).\n\n## 3. Results\n\nand geopolitical\
+    \ landscape, considering regional electricity generation plays a critical role\
+    \ in managing the low-carbon transition pathway. Fig 1 depicts regional electricity\
+    \ generation schemes under various scenarios over the planning horizon at $p_i=0.01$.\
+    \ The results reveal that after phasing out coal-fired plants by 2030, natural\n\
+    \n### 3.1. Regional optimal electricity system decarbonization pathways\n\nOwing\
+    \ to the spatial heterogeneity of Canada’s resource potential\n\n![](img/393827738208025e76e691fb84e38508_5_0.png)\n\
+    \n![](img/393827738208025e76e691fb84e38508_5_1.png)\n\nFig. 2. (a) Direct GHG\
+    \ emissions from power generation under different policy scenarios in different\
+    \ planning periods at $p_i=0.01$ (b) Changes in direct GHG emissions over time\
+    \ (from 2030 to 2050) under different policy scenarios and $p_i$ levels. The economics\
+    \ of all electricity sectors are Alberta (ABEL), Saskatchewan (SKEL), Nova Scotia\
+    \ (NSEL), New Brunswick (NBEL), Ontario (ONEL), Newfoundland and Labrador (NLEL),\
+    \ British Columbia (BCEL), Quebec (QCEL), Territories (TEEL), Manitoba (MBEL),\
+    \ and Prince Edward (PEEL). The three territories are combined into one sector\
+    \ because of their off-grid characteristics.\n"
+  mdcn: "\n\nL. Chen 等人\n\n《气候生产杂志》 420 (2023) 138636\n\n由于环境政策是影响电力部门结构和趋势的关键因素，与不同的发电技术相关，温室气体（GHG）排放的波动往往会成为重大事件。通过敏感性分析展示了每个因素及其相互作用对电力系统的主要影响。析因分析在识别主要因素以及多个因素之间的相互作用方面具有优势（Montgomery,\
+    \ 2012）。在相互作用分析中，非可再生电力（如煤电、燃气和风电发电）和环境政策（如碳税）对系统（即电力部门）的影响反映了间接温室气体排放。在加拿大，可再生能源技术未来具有减少电力部门排放的潜力（加拿大政府，2010年）；然而，风电的未来成本具有高度不确定性。国际可再生能源机构（2022）预测，由于供应链改进和效率提高，风电成本在\
+    \ 2021 年将比 2020 年下降 15%，使碳成本降低 10% 至 30%，这在长期内是可以实现的。另一个重要来源是取代煤电，根据加拿大能源监管局（CER）（2021）的预测，这在未来可能具有相对价值。因此，我们通过使用风电和燃气发电使排放减少了\
+    \ (-30% 到 +10%)。此外，环境政策（如碳税）的发展是减少地区对化石燃料依赖并加速向低碳未来转型的关键因素。在加拿大，不同的未来碳计划反映了对排放的影响，由于不确定性，设计了三个碳水平（-30%、-10%\
+    \ 和 +10%）来代表碳税的不同潜力。\n\n$SS_{E} = SS_{A} - SS_{S} - SS_{AB}$\n\nSTIO 的详细解决方案汇总在补充材料的第\
+    \ 1.1 节。\n\n## 2.2. 加拿大 IoT 的比较\n\n建立了一个具有详细电力部门的加拿大投入产出模型（CA-IOT），总共包含 37 个部门，如表\
+    \ 1 所示（描述请参见表 2）。在 CA-IOT 中，聚合基于 SEOM 的用户（即区域经济方案）。电力部门被细分为 13 个省/地区级部门。阿尔伯塔省和萨斯喀彻温省两个省级电力部门被进一步聚合为\
+    \ 14 级电力部门（即煤电、燃气、风电、生物质和水电）。三个电力效应，其相互作用特征显示了部门的供需情况，通过行因子和列因子相乘计算。23 个电力部门的中间使用问题是根据结果中的重要性比例得出的。最后，电力部门被进一步细分并聚合为\
+    \ 14 个部门。部门的细分和聚合基于 Woski (1964) 和 Lindner (2012）（详情请参见补充材料的第 1.2 节）。调整后的 CA-IOT\
+    \ 根据 Kim 等人 (2019) 方法实现了平衡。\n\n为了评估政策对电力部门的影响以及相关的温室气体排放，政策方案（即 REF、NDC 和 CET）汇总在表\
+    \ 1 中。在表表中，不同的碳计划反映了为了实现温室气体排放目标部门的碳成本和政策选择。每项政策都在可再生能源资源可用性（即风能和太阳能）的四个运行水平（r）下进行测试，$r\
+    \ = 0.01, 0.05, 0.1$ 和 $0.25$。\n\n由于因素以各种水平呈现，因此采用了多级分析来分析多个政策因素对系统的影响。以 2 因子\
+    \ 2 水平的析因分析为例，模型可以表示为：\n\n```\n$y_{\\mu ab} = \\mu + \\beta_i + \\beta_j + \\\
+    gamma_{ij} + \\epsilon_{\\mu ab}, \\quad i=1,\\dots,a \\ j=1,\\dots,b \\ (3a)$\n\
+    ```\n\n其中 $\\mu$ 是平均效应，$\\beta_i$ 是因子 $i$ 的影响，$\\beta_j$ 是因子 $j$ 的影响，$\\gamma_{ij}$\
+    \ 是 $i$ 和 $j$ 之间的相互作用，$\\epsilon_{\\mu ab}$ 是误差项，$y_{\\mu ab}$ 是系统响应。在双因子实验中，共有\
+    \ $a \\times b$ 个观测值（Montgomery, 2012）。总平方和可以计算为：\n\n```\n$SS_Y = \\sum_{i=1}^a\
+    \ \\sum_{j=1}^b (y_{\\mu ab} - \\bar{y}_{..})^2 \nSS_A = b \\sum_{i=1}^a (\\bar{y}_{i.}\
+    \ - \\bar{y}_{..})^2 \nSS_B = a \\sum_{j=1}^b (\\bar{y}_{.j} - \\bar{y}_{..})^2\
+    \ \nSS_{AB} = \\sum_{i=1}^a \\sum_{j=1}^b (y_{\\mu ab} - \\bar{y}_{i.} - \\bar{y}_{.j}\
+    \ + \\bar{y}_{..})^2 \n (3b)$\n```\n\nA ($SS_A$) 和 B ($SS_B$) 的主效应以及它们之间的交互效应可以计算为：\n\
+    \n```\n$SS_{A} = b \\sum_{i=1}^a (\\bar{y}_{i.} - \\bar{y}_{..})^2 \nSS_{B} =\
+    \ a \\sum_{j=1}^b (\\bar{y}_{.j} - \\bar{y}_{..})^2 \nSS_{AB} = \\sum_{i=1}^a\
+    \ \\sum_{j=1}^b (y_{\\mu ab} - \\bar{y}_{i.} - \\bar{y}_{.j} + \\bar{y}_{..})^2\
+    \ \n (3b)$\n```\n\n表 1: 方案描述。\n\n| 温室气体排放 | 碳 |\n| :--- | :--- |\n| REF | 假设从\
+    \ 2020 年到 2050 年每年减少 4% |\n| NDC | 遵循加拿大的贡献 |\n| CET | 从 2020 年增加 10%，到 2050 年增加\
+    \ 40% |\n\n注：REF 方案的总和可以计算为：从 2020 年到 2050 年每年减少 4%。由于各地区的可再生能源可用性（风能和太阳能），在 2030\
+    \ 年之前将淘汰传统煤电（专家工作小组，2018）。此外，用于编制 CA-IOT 的基础数据来自加拿大统计局（2021年），包括 2017 年国家和 13\
+    \ 个省的 IoT。国家和地区的温室气体物理流量来自加拿大统计局（2021年）。从 2020 年到 2050 年的最终需求预测在补充材料的第 2 节提供。\n\
+    \n## 3. 结果\n\n和地缘格局，考虑到区域发电在管理低碳转型路径方面至关重要。图 1 展示了在计划周期内 $p_i=0.01$ 下不同方案（REF、NDC、CET）的区域发电方案。结果显示，在\
+    \ 2030 年淘汰煤电后，自然\n\n### 3.1. 区域最优电力系统去碳路径\n\n由于加拿大资源潜能的空间异质性\n\n图 1. 在不同方案下、计划周期内\
+    \ $p_i=0.01$ 的国家和区域发电方案代表加拿大。十三个地区是阿尔伯塔省、不列颠哥省、萨斯喀彻温省等（此处此处省略其他省份地区名称）。\n\n图 2.\
+    \ (a) 在不同计划时期、不同政策方案下电力发电的直接温室气体排放；b) 在不同政策方案和 $p_i$ 水平下随时间（从 2030 年到 2050 年）变化的直接温室气体排放。所有电力部门的经济情况包括阿尔伯塔省（ABEL）、萨斯喀彻温省（SKEL）、新斯科舍亚省（NSEL）、新不伦瑞克省（NBEL）、安大略省（ONEL）、纽芬兰拉多省（NLEL）、不列颠哥省（BCEL）、魁北克省（QCEL）、地区（TEEL）、曼尼托巴省（MBEL）和爱德华王子省（PEEL）。三个地区由于其离网特性被合并为一个部门。\n\
+    \n"
+  merge: 1
+  raw:
+  - "[PAGE 3]\n\nL. Chen et al.\n\nJournal of Climate Production 420 (2023) 138636\n\
+    \nassociated with different generation technologies as environmental policies\
+    \ are critical factors in influencing the electricity sector structures and trends,\
+    \ fluctuating GHG emissions tends to a significant event. The main effect of each\
+    \ factor and their interactions on the electricity system is demonstrated through\
+    \ sensitivity analysis. Factorial analysis is advantageous in identifying the\
+    \ main factor as well as interactions among multiple factors (Montgomery, 2012).\
+    \ In the interaction analysis, the effects of non-renewable power (such as coal,\
+    \ gas, and wind-fired generation) and environmental (i.e., carbon tax) policies\
+    \ on the system (i.e., electricity sectors) reflect indirect GHG emissions. In\
+    \ Canada, renewable energy technologies have the potential to reduce emissions\
+    \ from the electricity sector in the future (Government of Canada, 2010); however,\
+    \ future costs of wind power are highly uncertain. International Renewable Energy\
+    \ Agency (2022) predicts that costs of wind power will fall by 15% in 2021 compared\
+    \ to 2020 to reduce carbon costs by 10% to 30% which could be achievable in the\
+    \ long-term driven through improvements in the supply chain and efficiency. Another\
+    \ important source is to replace coal-fired power generation, which could be relatively\
+    \ valuable in the future as projected by Canada Energy Regulator (CER) (2021).\
+    \ Consequently, we reduce (-30% to +10%) with use of wind and gas-fired power\
+    \ generation. Furthermore, the development of environmental policies, such as\
+    \ carbon tax, is an essential factor in reducing regions' reliance on fossil fuels\
+    \ and accelerating transition to a low-carbon future. In Canada, different future\
+    \ carbon schemes have reflected the impact on emissions, of uncertainties, three\
+    \ of carbon levels (-30%, -10%, and +10%) are designed to represent different\
+    \ potentials of carbon taxes.\n\n$SS_{E} = SS_{A} - SS_{S} - SS_{AB}$\n\nThe detailed\
+    \ solutions for STIO are summarized in Section 1.1 in Supplementary Material.\n\
+    \n# 2.2. Comparison of Canadian IoT\n\nA Canada-input-output model with detailed\
+    \ electricity sectors (CA-IOT) has built with a total of 37 sectors, as shown\
+    \ in Table 1 (see Table 2 for description). In CA-IOT, the aggregation is based\
+    \ on users of SEOM (i.e., regional economic schemes). The electricity sector has\
+    \ been disintegrated into 13 provincial/territorial-level sectors. Alberta and\
+    \ Saskatchewan, two provincial electricity sectors have been further aggregated\
+    \ into 14-level electricity sectors (i.e., coal-fired, gas-fired, wind-fired,\
+    \ biomass, and hydro power). The three electricity effects, the inter-interaction\
+    \ characteristics show the demand and supply of sectors, are calculated by multiplying\
+    \ the row and column factors. The matter of intermediate use of 23 electricity\
+    \ sectors has derived based on the proportions of importance in results. Lastly,\
+    \ electricity sectors have been further segregated for segregation and aggregated\
+    \ into 14 sectors. For sectoral segregation and aggregation is based on Woski\
+    \ (1964) and Lindner (2012) (see Section 1.2 in Supplementary Material for details).\
+    \ The adjusted CA-IOT is balanced based on the method Kim et al. (2019).\n\nTo\
+    \ evaluate the effects of policies on electricity sectors as well the associated\
+    \ GHG emissions, policy schemes (i.e., REF, NDC, and CET) are summarized in Table\
+    \ 1. In this table, different carbon schemes reflect the carbon costs and policy\
+    \ options to achieve the GHG emission target sector. Each policy is tested under\
+    \ four run levels (r) of renewable energy resource availability (i.e., wind and\
+    \ solar energy), $r = 0.01, 0.05, 0.1, and 0.25.\n\nSince factors are presented\
+    \ at various levels, a multi-level analysis is adopted to analyze the effects\
+    \ of multiple policy factors on the system. By taking a 2-factor and 2-level()\
+    \ factorial analysis as an example, the models can be expressed as:\n\n```\n$y_{\\\
+    mu ab} = \\mu + \beta_i + \beta_j + \\gamma_{ij} + \\epsilon_{\\mu ab}, \\quad\
+    \ i=1,\\dots,a \\ j=1,\\dots,b \\ (3a)$\n```\n\nwhere $\\mu$ is the mean effect,\
+    \ $\beta_i$ is the effect of factor $i$, $\beta_j$ is the effect of factor $j$,\
+    \ $\\gamma_{ij}$ is the interaction between $i$ and $j$, and $\\epsilon_{\\mu\
+    \ ab}$ is a error component, and $y_{\\mu ab}$ is the system response. In a two-factor\
+    \ experiment, there are $a \\times b$ total observations (Montgomery, 2012). The\
+    \ total sum of squares can be calculated as:\n\n```\n$SS_Y = \\sum_{i=1}^a \\\
+    sum_{j=1}^b (y_{\\mu ab} - \\bar{y}_{..})^2 \\nSS_A = b \\sum_{i=1}^a (\\bar{y}_{i.}\
+    \ - \\bar{y}_{..})^2 \\nSS_B = a \\sum_{j=1}^b (\\bar{y}_{.j} - \\bar{y}_{..})^2\
+    \ \\nSS_{AB} = \\sum_{i=1}^a \\sum_{j=1}^b (y_{\\mu ab} - \\bar{y}_{i.} - \\bar{y}_{.j}\
+    \ + \\bar{y}_{..})^2 \\n (3b)$\n```\n\nThe main effects of A ($SS_A$) and B ($SS_B$)\
+    \ and the interactive effects among them can be calculated as:\n\n```\n$SS_{A}\
+    \ = b \\sum_{i=1}^a (\\bar{y}_{i.} - \\bar{y}_{..})^2 \\nSS_{B} = a \\sum_{j=1}^b\
+    \ (\\bar{y}_{.j} - \\bar{y}_{..})^2 \\nSS_{AB} = \\sum_{i=1}^a \\sum_{j=1}^b (y_{\\\
+    mu ab} - \\bar{y}_{i.} - \\bar{y}_{.j} + \\bar{y}_{..})^2 \\n (3c)$\n```\n\n#\
+    \ Table 1\n\nDescription of schemes.\n\n| GHG emission target | Carbon tax |\n\
+    |---|---|\n| REF | Assumes to reduce by 4% annually from 2020 to 2050 | $170;\
+    \ increase by $20 annually until 2050 (Government of Canada, 2019) |\n| NDC |\
+    \ Follows Canada's National Determination Contributions (40% reduction below 2005\
+    \ levels by Government of Canada, 2021a) | Same as REF |\n| CET | $210, increase\
+    \ by $20 annually by 2040, and $40 annually by 2050 (Canada Energy Regulator,\
+    \ 2021; Department of Environment and Climate Change) |\n\nThe sum of errors can\
+    \ be calculated as:\n\nNote: The REF scenario's GHG emissions target to decrease\
+    \ by 4% annually from 2020 to 2050, which is based on the average of Canada's\
+    \ historical annual reduction.\n\n4"
+  - '[PAGE 4]
+
+
+    # Journal of Cleaner Production 420 (2023) 138363
+
+
+    and Environment Climate Change Canada (2021). The availability of renewable energy
+    (IE, wind and solar power) for each region is expressed as probability distributions
+    under its natural fluctuation characteristics (see Table S1 for data). All traditional
+    coal-fired power plants are assumed to be phased out by 2030 (Government of Canada,
+    2020), and it is assumed after 2030 as the federal and jurisdictional governments
+    are currently reviewing the opportunities for SMR technologies across the nation
+    (Expert Finance Working Group, 2018). Furthermore, basic data required for compiling
+    the CABIOT is
+
+
+    obtained from Statistics Canada (2021a), including a 2017 national IoT and thirteen
+    2017 provincial/territorial IOTs. The physical flow accounts for GHG emissions
+    at both national and territorial levels are obtained from Statistics Canada (2021b).
+    The method of final demand projection from 2020 to 2050 is provided in Section
+    2 in Supplementary Material.
+
+
+    ![](img/393827738208025e76e691fb84e38508_4_0.png)
+
+
+    Fig. 1. Nationally and regionally electricity generation schemes under different
+    policy scenarios (REF, NDC, CT) over the planning horizon at $p_i = 0.01$ represents
+    Canada. The thirteen regions are Alberta (AB), British Columbia (BC), Saskatchewan
+    (SK), Manitoba (MB), Ontario (ON), Quebec (QC), New Brunswick (NB), Scotia (NS),
+    Prince Edward Island (PE), Newfoundland and Labrador (NL), Yukon (YK), Nunavut
+    (NV), and Northwest Territories (NWT).'
+  - '[PAGE 5]
+
+
+    J. Chen et al.
+
+
+    Journal of Cleaner Production 420 (2023) 138663
+
+
+    # 3. Results
+
+
+    and geopolitical landscape, considering regional electricity generation plays
+    a critical role in managing the low-carbon transition pathway. Fig 1 depicts regional
+    electricity generation schemes under various scenarios over the planning horizon
+    at $p_i=0.01$. The results reveal that after phasing out coal-fired plants by
+    2030, natural
+
+
+    3.1. Regional optimal electricity system decarbonization pathways
+
+
+    Owing to the spatial heterogeneity of Canada’s resource potential
+
+
+    ![](img/393827738208025e76e691fb84e38508_5_0.png)
+
+
+    ![](img/393827738208025e76e691fb84e38508_5_1.png)
+
+
+    Fig. 2. (a) Direct GHG emissions from power generation under different policy
+    scenarios in different planning periods at $p_i=0.01$ (b) Changes in direct GHG
+    emissions over time (from 2030 to 2050) under different policy scenarios and $p_i$
+    levels. The economics of all electricity sectors are Alberta (ABEL), Saskatchewan
+    (SKEL), Nova Scotia (NSEL), New Brunswick (NBEL), Ontario (ONEL), Newfoundland
+    and Labrador (NLEL), British Columbia (BCEL), Quebec (QCEL), Territories (TEEL),
+    Manitoba (MBEL), and Prince Edward (PEEL). The three territories are combined
+    into one sector because of their off-grid characteristics.
+
+
+    6'
+- md: '
+
+    # L. Chen
+
+
+    # Journal of Climate Production 42 (2023) 138363
+
+
+    gas-fired power would dominate AB, SK, NS and NB by electricity, and the generations
+    would be 943.1, 250.4, 61.1, and 42.2 TWh (HOURS) by REF 2050, respectively (80,
+    82, and 34 of their total electricity production). Nevertheless, stringent policies
+    would diminish the role of natural gas-fired power plant, which would reduce by
+    16, 19, 25, and 31% in AB, SK, NS, and NB by REF 2050, respectively, compared
+    to 2020. By 2050, renewable energy (i.e., wind, hydro, and solar) would contribute
+    68-75% to Canada''s electricity production difference between 2020 and 2050.
+
+
+    On the other hand, the production of wind power generation would increase by 22,
+    25, 18, and 21% in AB, SK, NS, and NB between period 2 and 3, and increase significantly
+    to 35.2%, 23.3%, 29.7% and under REF (CF. 5). Moreover, its solar energy would
+    see an increase under each REF role. For example, solar power generation in AB
+    would increase from 0.3% in 2020 to 0.4% under REF, and from 5.5% to 9.5% under
+    CF in 2050.
+
+
+    Furthermore, by comparing under different p levels, the power generated from natural
+    gas would decrease as the p level increases, while there would be an increasing
+    trend in renewable energy (i.e., wind, and solar). Taking SK as an example, natural
+    wind power generation would increase from 31.5 TWh in 2020 to 45.1 TWh when p
+    = 0.01, 0.10, and 0.25, respectively, under REF in period 3. Mean wind, wind power
+    generation would be 24.6, 25.2, and 27.1 TWh, at three p levels. Such trend would
+    be much lower under ND and CF, but not exist.
+
+
+    Furthermore, wind power generation would be more evenly distributed (i.e., QC,
+    ON, NY, and NB) compared to 2020 and not be so heavily relied on by hydropower
+    (i.e., QC and NL) when changing p levels. Detailed results of different p levels
+    are provided in Figure 2. Different p levels lead to different levels in the increase
+    of the availability of wind power generation in multiple regions (i.e., AB, BC,
+    SK, and MB), helping to complement the generation deontology of fossil fuel power.
+
+
+    ## 3.2. Direct GHG emissions in the electricity sectors
+
+
+    The direct environmental impacts of electricity'' low-carbon transitions can be
+    analyzed through the analysis of GHG emissions from power generation (Fig. 2b)
+    and the emission reductions under each REF role.
+
+
+    Total direct GHG emissions for Canada would decrease from 420.2 Mt CO2 in 2020
+    to 360.4 Mt CO2 in 2050 under REF. Such a decline is mainly due to the decreased
+    share of coal-fired power generation, and direct GHG emissions would be reduced,
+    respectively, by 59.8, 54.4, and 4.7 Mt CO2 from 2020 to 2050 under ND and CF,
+    respectively.
+
+
+    0.0379 tonne CO2 eq per megawatt-hour under REF, NDC, and CF, respectively, at
+    p = 0.01 by 2050 (Fig. 5). As the p level increases, the GHG emissions would decrease
+    correspondingly. For example, under REF, the intensity would decrease to 0.0480,
+    0.0477, and 0.0470 tonne CO2 eq per megawatt-hour at p = 0.05, 0.10, and 0.25,
+    respectively.
+
+
+    ## 3.3. Indirect GHG emissions and impacts of electricity transition from various
+    sectors
+
+
+    Furthermore, the indirect emissions among electricity and other economic sectors
+    are essential to help investigate the environmental relationships (Fig. 2). From
+    the perspective of electricity sectors, the indirect emissions of electricity
+    sectors to other sectors, such as OMAN (2.1 Mt CO2 eq), BC (0.7 Mt CO2 eq), AB
+    (0.5 Mt CO2 eq), and QC/NL (0.4 Mt CO2 eq), respectively, together representing
+    approximately 57.5% of OMAN''s total indirect emissions in 2020.
+
+
+    Under REF, the electricity sectors would require significant amounts of energy
+    to maintain the development of low-carbon power technology; e.g., the manufacturing
+    sectors demand more energy. The reduction in indirect emissions from AGRF would
+    be 1.5 Mt CO2 eq in OMAN (0.6 Mt CO2 eq in BC, and 0.2 Mt CO2 eq in QC/NL respectively).
+
+
+    Under CF, the indirect emissions of OMAN, AGRF, CONNS, and SK would decrease significantly,
+    to course 6.4, 1.7, and 0.9 Mt CO2 eq, respectively. The GHG emissions of SKW
+    would also decrease by 2.6 Mt CO2 eq (1.3 Mt CO2 eq in OMAN). In summary, the
+    results imply the relationships between electricity sectors and other economic
+    sectors (e.g., the manufacturing and service sectors).
+
+
+    Figure 4 shows the impacts of the electricity system''s low-carbon transitions
+    on indirect sectors under ND and CF, reflecting in different periods at different
+    p levels. At p=0.01, indirect emissions of electricity sectors would decrease
+    over the time horizon from 35.8 Mt CO2 eq in 2020 to 33.3 Mt CO2 eq in 2050 under
+    REF; the indirect emissions would decrease over time, however the electricity
+    sectors would show an increase under ND and CF. At p=0.05, electricity sectors
+    would generate higher indirect emissions by 15.2 Mt and 6.6 Mt CO2 eq in 2020,
+    respectively, and the amount would decrease in 2050 with fossil-fired power generation.
+
+
+    Under stringent policies (i.e., ND and CF), the GHG emissions of electricity sectors''
+    total emissions would decrease significantly to BAU in 2050. Such a decline is
+    mainly due to the decreasing share of coal-fired natural gas-fired power in AB.
+    However, indirect emissions in low-carbon power generation would increase in SK.
+    For instance, indirect emissions in SKWN, ABSS, and SKRN would increase by 0.008,
+    0.006, and 0.03 Mt CO2 eq, respectively, compared to REF in 2050. Such an increase
+    would be masked by the overall decrease, but it is necessary to understand the
+    indirect emissions when implementing low-carbon transitions as they have impacts
+    on the optimal electricity generation, especially under GHG emission targets.
+    For example, indirect emissions in OMAN (1.4 Mt and 0.1 Mt CO2 eq, respectively,
+    in 2050) would generate relatively higher emissions in the process.
+
+
+    ![](img/393827738208025e76691fb84e3508_7_0.png)
+
+
+    Fig. 3. Indirect GHG emission flows to electricity sectors (a) and from electricity
+    sectors (b) at $p = 0.01$. The ribbon''s color represents different sectors''
+    emission flows; its width represents the amount of emission flows. For interpretation
+    of the legend in this figure, the reader is referred to the Web version of this
+    article.
+
+
+    ![](img/393827738208025e76691fb84e3508_7_1.png)
+
+
+    Fig. 4. The impacts of the electricity scenario on low-carbon transitions in indirect
+    GHG emissions during planning periods at $p_i = 0.01$. "NDC-REF" means the results
+    of the NDC scenario compared to REF, "CT-REF" means the results of the CT scenario
+    compared to REF consumption (i.e., their supply chains) due to larger electricity
+    generation capacities and higher population. Furthermore, the electricity system''s
+    transformation would not only affect impacts on other sectors. This could also
+    lead to electricity sectors’; OMAN had the highest emission reductions of 2.2
+    Mt CO2 eq in 2050, followed by SERV (-1.8 Mt CO2 eq), OGE (+0.8 Mt CO2 eq), and
+    CHEM (-0.8 Mt CO2 eq); moreover, the sectors would abate about 3.6, 2.6 and 1.2
+    Mt CO2 eq of indirect emissions under CT compared to REF in 2050, respectively.
+    The results imply that moving towards a low-carbon electricity system would bring
+    positive environmental impacts on other sectors; these sectors could trace their
+    sources from the electricity sectors when sectoral emission mitigation strategies.
+
+
+    ## 3.4. Interactive effects of multiple policy factors on electricity sectors
+    indirect GHG emissions
+
+
+    The effects of the interactions among multiple policy factors on electricity systems
+    are further examined through the environmental perspective and mixed-level analysis
+    with 12 experiments in Table 5; Fig. 5 shows the main effect of each factor and
+    their indirect effects on electricity sectors'' indirect sums. Each factor''s
+    contribution to the relative sum of squares indicates the main effect of factors
+    on the system in Table 2. The main effect plot (Fig. 5a) reveals that the carbon
+    tax (factor A), capital cost (factor B) and natural-gas powered factor (factor
+    C) would raise indirect emissions from the electricity sectors (response).
+
+
+    In response, the contribution of factor B to the system is negative, accounting
+    for 16.9%, followed by factor C (6.0%) and A (10.1%).
+
+
+    In addition to the main effects, it is crucial to examine the interactive effects
+    of multiple factors on electricity sectors'' indirect emissions. The interaction
+    between carbon tax and natural-gas powered factor on electricity'' indirect emissions
+    is significant. The B*C interaction (with p=0.01; 31.7%) reveals that when the
+    capital cost of natural-gas powered factor is at a low level, the A*C interaction
+    (with p=0.05; 25.1%) is negative; when the natural-gas powered factor is at a
+    high level, the carbon tax would lead to reduce emissions from the electricity
+    sectors.
+
+
+    The A*B interaction (with p=0.05; 22.8%) demonstrates that carbon tax with high
+    capital cost can reduce the indirect emissions on other sectors. The B*C interaction
+    indicates that the change of wind powered factor cost has no minimal effect on
+    the system when the carbon tax is at a lower level (-30% and -10%).
+
+
+    # Table 2
+
+
+    Summary of effects for each factor and their interactions on electricity sectors''
+    indirect emissions. Factors A, B, and C represent carbon tax, cost of wind power
+    technology, and cost of natural-gas powered technology, respectively.
+
+
+    | Source | Sum of Squares | F-Value | Contribution (%) |
+
+    |---|---|---|---|
+
+    | A | 329 | 0.276 | 0.3 |
+
+    | B | 4186 | 0.619 | 16.9 |
+
+    | C | 2436 | 0.539 | 10.1 |
+
+    | A*B | 4975 | 0.165 | 22.8 |
+
+    | A*C | 6196 | 0.518 | 25.1 |
+
+    | B*C | 1206 | 0.088 | 33.7 |
+
+    | Error | | | |
+
+
+    ***: p<0.001; **p<0.01; *p<0.05. High-interaction A*C is treated as error due
+    to the error degree.
+
+
+    ## 4. Discussion
+
+
+    ## 4.1. Environmental implications and findings
+
+
+    Electricity system decarbonization is an integral part of achieving GHG emission
+    targets. Nevertheless, the environmental implications of the low-carbon transitions
+    have received late of attention, especially in Canada. The developed STI in this
+    study can only help decision-makers in the electricity sector but from different
+    economic sectors
+
+
+    How to optimize electricity design scenarios? The results show that carbon tax
+    with higher targets would cause the reduction of renewable energy, while promote
+    wind power generation. As the carbon tax increases from 10% to 30%, the natural-gas
+    powered power generation would reduce by 17%; however, from a regional perspective,
+    wind power generation in Alberta and Saskatchewan would experience an increase
+    of renewable emissions by 15% and 28.8%, respectively.
+
+
+    ![](img/393827738208025e76691fb84e3508_8_0.png)
+
+
+    Fig. 5. Main effects (a) of factors A, B, and C and their interactive effects
+    (b) on electricity sectors'' indirect GHG emissions. The response system is the
+    mean of electricity sectors'' total indirect GHG emissions (kiltonne CO2 eq.).
+
+    '
+  mdcn: '
+
+
+    # L. Chen
+
+
+    # 《气候生产杂志》(Journal of Climate Production) 42 (2023) 138363
+
+
+    燃气发电将在 AB、SK、NS 和 NB 的电力领域占据主导地位，根据 REF 2050 情景，其发电量分别为 943.1、250.4、61.1 和 42.2
+    TWh（HOURS）（分别占其地区总发电量的 80%、82% 和 34%）。然而，严厉的政策将缩小天然气发电厂的作用，与 2020 年相比，AB、SK、NS
+    和 NB 的天然气发电量分别减少 16%、19%、25% 和 31%。到 2050 年，可再生能源（即风能、水电和太阳能）将贡献加拿大 2020 年至 2050
+    年发电量差异的 68-75%。
+
+
+    另一方面，风电发电量在第 2 期和第 3 期之间在 AB、SK、NS 和 NB 分别增加了 22%、25%、18% 和 21%，并在 REF 情景下显著增加至
+    35.2%、23.3%、29.7% 和以下（对比图 5）。此外，在每个 REF 角色下，太阳能发电都会有所增长。例如，AB 的太阳能发电量从 2020 年的
+    0.3% 增加到 REF 下的 0.4%，在 2050 年 CF 情景下从 5.5% 增加到 9.5%。
+
+
+    此外，对比不同的 p 水平，天然气发电量随 p 水平增加而减少，而可再生能源（即风能和太阳能）将呈增长趋势。以 SK 为例，在第 3 期 REF 情景下，天然风电发电量在
+    p = 0.01、0.10 和 0.25 时分别从 2020 年的 31.5 TWh 增加到 45.1 TWh。平均风电发电在三个 p 水平下分别为 24.6、25.2
+    和 27.1 TWh。这种趋势在 ND 和 CF 下要低得多，甚至不存在。
+
+
+    此外，当 p 水平改变时，风电的分布（即 QC、ON、NY 和 NB）比 2020 年更加均匀，且不再过度依赖水电（即 QC 和 NL）。图 2 提供了不同
+    p 水平的详细结果。不同的 p 水平导致多个地区（即 AB、BC、SK 和 MB）风电可用性增加的程度不同，有助于补充化石燃料发电的发电机理。
+
+
+    ## 3.2. 电力部门的直接 GHG 排放
+
+
+    电力低碳转型的直接环境影响可以通过分析发电的 GHG 排放量（图 2b）以及每个 REF 角色下的减排量来进行分析。
+
+
+    在 REF 情景下，加拿大的直接 GHG 排放总量将从 2020 年的 420.2 Mt CO2 减少到 2050 年的 360.4 Mt CO2。这种下降主要是由于煤电发电份额的减少，在
+    ND 和 CF 情景下，从 2020 年到 2050 年的直接 GHG 排放分别减少了 59.8、54.4 和 4.7 Mt CO2。
+
+
+    到 2050 年，在 p = 0.01 时，REF、NDC 和 CF 下的每瓦时排放量分别为 0.0379 吨 CO2 eq。随着 p 水平的增加，GHG
+    排放将相应减少。例如，在 REF 情景下，当 p 分别为 0.05、0.10 和 0.25 时，强度将下降至 0.0480、0.0477 和 0.0470
+    吨 CO2 eq/瓦时。
+
+
+    ## 3.3. 间接 GHG 排放及影响
+
+
+    此外，电力部门间的间接排放对于研究环境关系至关重要（图 2）。从电力部门的角度来看，其间接排放到 OMAN (2.1 Mt CO2 eq)、BC (0.7
+    Mt CO2 eq)、AB (0.5 Mt CO2 eq) 和 QC/NL (0.4 Mt CO2 eq)，合计约占 OMAN 2020 年总间接排放的 57.5%。
+
+
+    在 REF 情景下，电力部门为了维持低碳发电技术需要大量能源；例如，制造业需要更多能源。AGRF 的间接排放减少了 OMAN 的 1.5 Mt CO2 eq（BC
+    为 0.6 Mt CO2 eq，QC/NL 为 0.2 Mt CO2 eq）。
+
+
+    在 CF 情景下，OMAN、AGRF、CONNS 和 SK 的间接排放分别显著减少 6.4、1.7 和 0.9 Mt CO2 eq。SKW 的 GHG 排放也减少了
+    2.6 Mt CO2 eq（OMAN 为 1.3 Mt CO2 eq）。总之，结果暗示了电力部门与其他经济部门（例如制造业和服务业）之间的关系。
+
+
+    图 4 显示了在 ND 和 CF 下，不同 p 水平下电力系统低碳转型对间接部门的影响。在 p=0.01 时，REF 情景下，电力部门的间接排放从 2020
+    年的 35.8 Mt CO2 eq 减少到 2050 年的 33.3 Mt CO2 eq；但在 ND 和 CF 下，电力部门的间接排放随时间增加。在 p=0.05
+    时，2020 年电力部门产生的间接排放分别增加了 15.2 Mt 和 6.6 Mt CO2 eq，而在 2050 年由于化石发电，该量将减少。
+
+
+    在严厉政策下（即 ND 和 CF），电力部门的总 GHG 排放将显著下降到 2050 年的 BAU。这种下降主要是由于 AB 煤电天然气发电份额的减少。然而，SK
+    的低碳发电间接排放将增加。例如，与 2050 年 REF 相比，SKWN、ABSS 和 SKRN 的间接排放分别增加了 0.008、0.006 和 0.03
+    Mt CO2 eq。这种增加会被整体下降所掩盖，但在实施低碳转型时，理解间接排放是必要的，因为它们对最优发电有影响，特别是在 GHG 排放目标下。例如，2050
+    年 OMAN 的间接排放（分别为 1.4 Mt 和 0.1 Mt CO2 eq）在过程中会产生较高的排放。
+
+
+    ![](img/393827738208025e76691fb84e3508_7_0.png)
+
+
+    图 3. $p = 0.01$ 时进入电力部门 (a) 和来自电力部门 (b) 的间接 GHG 排放流。带的颜色代表不同部门的排放流；宽度代表排放流的数量。有关此图图例的解释，请参考本文的网络版。
+
+
+    ![](img/393827738208025e76691fb84e3508_7_1.png)
+
+
+    图 4. $p_i = 0.01$ 规划期间电力情景对间接 GHG 排放低碳转化的影响。“NDC-REF”是指 NDC 情景与 REF 相比的结果，“CT-REF”是指
+    CT 情景与 REF 消费（即其供应链）相比的结果，这是由于更大的发电容量和更高的人口。此外，电力系统的转型不仅影响其他部门。这还导致电力部门中：OMAN
+    在 2050 年减排量最高，达到 2.2 Mt CO2 eq，其次是 SERV (-1.8 Mt CO2 eq)、OGE (+0.8 Mt CO2 eq)
+    和 CHEM (-0.8 Mt CO2 eq)；此外，与 2050 年 REF 相比，这些部门在 CT 下的间接排放分别减少了3.6、2.6 和 1.2 Mt
+    CO2 eq。结果表明，转向低碳电力系统将给其他部门带来积极的环境影响；在部门排放减排策略中，这些部门可以从电力部门追溯其来源。
+
+
+    ## 3.4. 多政策因素对电力部门间接 GHG 排放的交互效应
+
+
+    多政策因素之间的相互作用对电力系统的影响通过环境视角和表 5 中 12 实验的混合水平分析进行进一步检查；图 5 显示了每个因素的主效应及其对电力部门间接总量的间接影响。每个因素对平方和的贡献指示了表
+    2 中因素对系统的主效应。主效应图（图 5a）揭示了碳税（因素 A）、资本成本（因素 B）和天然气发电因素（因素 C）会提高电力部门的间接排放。在 REF
+    情景下，电力部门的间接排放量占 16.9%，其次是 C (10.1%)。
+
+
+    # 表 2
+
+
+    各因素对电力部门间接排放的影响汇总。A、B、C 分别代表碳税、风电技术和天然气发电技术。
+
+
+    | 来源 | 平方 | F 值 | 贡献 (%) |
+
+    |---|---|---|---|
+
+    | A | 329 | 0.276 | 0.3 |
+
+    | B | 4186 | 0.619 | 16.9 |
+
+    | C | 2436 | 0.539 | 10.1 |
+
+    | A*B | 4975 | 0.165 | 22.8 |
+
+    | A*C | 6196 | 0.518 | 25.1 |
+
+    | B*C | 1206 | 0.088 | 33.7 |
+
+    | 误差 | | | |
+
+
+    ***: p<0.001; **p<0.01; *p<0.05。高交互作用 A*C 由于误差程度被视为误差。
+
+
+    ## 4. 讨论
+
+
+    ## 4.1. 环境意义与发现
+
+
+    电力系统去碳化是实现 GHG 排放目标不可或的一部分。然而，低碳转型的环境影响尚未引起关注，特别是在加拿大。本研究开发的 STI 只能帮助电力部门的决策者，但从不同的经济部门来看
+
+
+    如何优化电力设计方案？结果显示，较高的碳税会导致可再生能源减少，同时促进风电发电。随着碳税从 10% 增加到 30%，天然气发电量减少 17%；然而，从区域角度来看，阿尔伯塔省和萨斯喀彻省的风电可再生排放分别增加了
+    15% 和 28.8%。
+
+
+    ![](img/393827738208025e76691fb84e3508_8_0.png)
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 6]
+
+
+    # L. Chen
+
+
+    # Journal of Climate Production 42 (2023) 138363
+
+
+    gas-fired power would dominate AB, SK, NS and NB by electricity, and the generations
+    would be 943.1, 250.4, 61.1, and 42.2 TWh (HOURS) by REF 2050, respectively (80,
+    82, and 34 of their total electricity production). Nevertheless, stringent policies
+    would diminish the role of natural gas-fired power plant, which would reduce by
+    16, 19, 25, and 31% in AB, SK, NS, and NB by REF 2050, respectively, compared
+    to 2020. By 2050, renewable energy (i.e., wind, hydro, and solar) would contribute
+    68-75% to Canada''s electricity production difference between 2020 and 2050.
+
+
+    On the other hand, the production of wind power generation would increase by 22,
+    25, 18, and 21% in AB, SK, NS, and NB between period 2 and 3, and increase significantly
+    to 35.2%, 23.3%, 29.7% and under REF (CF. 5). Moreover, it solar energy would
+    see an increase under each REF role. For example, solar power generation in AB
+    would increase from 0.3% in 2020 to 0.4% under REF, and from 5.5% to 9.5% under
+    CF in 2050.
+
+
+    Furthermore, by comparing under different p levels, the power generated from natural
+    gas would decrease as the p level increases, while there would be an increasing
+    trend in renewable energy (i.e., wind, and solar). Taking SK as an example, natural
+    wind power generation would increase from 31.5 TWh in 2020 to 45.1 TWh when p
+    = 0.01, 0.10, and 0.25, respectively, under REF in period 3. Meanwind, wind power
+    generation would be 24.6, 25.2, and 27.1 TWh, at three p levels. Such trend would
+    be much lower under ND and CF, but not exist.
+
+
+    Furthermore, wind power generation would be more evenly distributed (i.e., QC,
+    KY, NY, and NB) compared to 2020 and not be so heavily relied on by hydropower
+    (i.e., QC and NL) when changing p levels. Detailed results of different p levels
+    are provided in Figure 2. Different p levels lead to different levels in the increase
+    of the availability of wind power generation in multiple regions (i.e., AB, BG,
+    SK, and MB), helping to complement the generation deontology of fossil fuel power.
+
+
+    # 3.2. Direct GHG emissions in the electricity sectors
+
+
+    The direct environmental impacts of electricity'' low-carbon transitions can be
+    analyzed through the analysis of GHG emissions from power generation (Fig. 2b)
+    and the emission reductions under each REF role. By p = 0.01 as an example, total
+    direct GHG emissions for Canada would decrease from 420.2 Mt CO2 in 2020 to 360.4
+    Mt CO2 in 2050 under REF. Such a decline is mainly due to the decreased share
+    of coal-fired power generation, and direct GHG emissions would be reduced, respectively,
+    by 59.8, 54.4, and 4.7 Mt CO2 from 2020 to 2050 under ND and CF, respectively.
+
+
+    0.0379 tonne CO2 eq per megawatt-hour under REF, NDC, and CF, respectively, at
+    p = 0.01 by 2050 (Fig. 5). As the p level increases, the GHG emissions would decrease
+    correspondingly. For example, under REF, the intensity would decrease to 0.0480,
+    0.0477, and 0.0470 tonne CO2 eq per megawatt-hour at p = 0.05, 0.10, and 0.25,
+    respectively.
+
+
+    # 3.3. Indirect GHG emissions and impacts of electricity transition from various
+    sectors
+
+
+    Furthermore, the indirect emissions among electricity and other economic sectors
+    are essential to help investigate the environmental relationships (Fig. 2). From
+    the perspective of electricity sectors, the indirect emissions of electricity
+    sectors to other sectors, such as OMAN (2.1 Mt CO2 eq), BCLE (0.7 Mt CO2 eq),
+    ABG (0.5 Mt CO2 eq), and QC/NL (0.4 Mt CO2 eq), respectively, together representing
+    approximately 57.5% of OMAN''s total indirect emissions in 2020.
+
+
+    Under REF, the electricity sectors would require significant amounts of energy
+    to maintain the development of low-carbon power technology; e.g., the manufacturing
+    sectors demand more energy. The reduction in indirect emissions from AGRF would
+    be 1.5 Mt CO2 eq in OMAN (0.6 Mt CO2 eq in BCLE, and 0.2 Mt CO2 eq in QC/NL respectively).
+
+
+    Under CF, the indirect emissions of OMAN, AGRF, CONNS, and SK would decrease significantly,
+    to course, 6.4, 1.7, and 0.9 Mt CO2 eq, respectively. The GHG emissions of SKW
+    would also decrease by 2.6 Mt CO2 eq (1.3 Mt CO2 eq in OMAN). In summary, the
+    results imply the relationships between electricity sectors and other economic
+    sectors (e.g., the manufacturing and service sectors).
+
+
+    Figure 4 shows the impacts of the electricity system''s low-carbon transitions
+    on indirect sectors under ND and CF respectively, reflecting in different periods
+    at different p levels. At p=0.01, indirect emissions of electricity sectors would
+    decrease over the time horizon, from 35.8 Mt CO2 eq in 2020 to 33.3 Mt CO2 eq
+    in 2050 under REF; the indirect emissions would decrease over time, however the
+    electricity sectors would show an increase under ND and CF. At p=0.05, electricity
+    sectors would generate higher indirect emissions by 15.2 Mt and 6.6 Mt CO2 eq,
+    in 2020, respectively, and the amount would decrease in 2050, respectively with
+    fossil-fired power generation.
+
+
+    Under stringent policies (i.e., ND and CF), the GHG emissions of electricity sectors''
+    total indirect emissions would decrease significantly to BAU, in 2050. Such a
+    decline is mainly due to the decreasing share of coal-fired natural gas-fired
+    power in AB. However, indirect emissions in low-carbon power generation would
+    increase in SK. For instance, indirect emissions in SKWN, ABSS, and SKRN, respectively
+    would increase by 0.008, 0.006, and 0.03 Mt CO2 eq, respectively, compared to
+    REF in 2050. Such an increase would be masked by the overall decrease, but it
+    is necessary to understand and the indirect emissions when implementing low-carbon
+    transitions as they have impacts on the optimal electricity generation mixes,
+    especially under stringent GHG emission targets. For example, indirect emissions
+    in OMAN (1.4 Mt and 0.1 Mt CO2 eq, respectively, in 2050) would generate relatively
+    higher emissions in the process of
+
+
+    7'
+  - '[PAGE 7]
+
+
+    # L. Chen et al.
+
+
+    # Journal of Cleaner Production 420 (2023) 138636
+
+
+    ![](img/393827738208025e76e691fb84e38508_7_0.png)
+
+
+    Fig. 3. Indirect GHG emission flows to electricity sectors (a) and from electricity
+    sectors (b) at $p_i = 0.01$. The ribbon''s color represents different sectors''
+    emission flows; its width represents the amount of emission flows. For interpretation
+    of the references to color in this figure legend, the reader is referred to the
+    Web version of this article.
+
+
+    ![](img/393827738208025e76e691fb84e38508_7_1.png)
+
+
+    Fig. 4. The impacts of the electricity scenario on low-carbon transitions in indirect
+    GHG emissions during planning periods at $p_i = 0.01$. "NDC-REF" means the results
+    of the NDC scenario compared to REF, "CT-REF" means the results of the CT scenario
+    compared to REF.
+
+
+    consumption (i.e., their supply chains) due to larger electricity generation capacities
+    and higher population.
+
+    Furthermore, the electricity system''s transformation would not only affect impacts
+    on other sectors. These could also lead to electricity sectors’; OMAN had the
+    highest electricity emission reductions of 2.2 Mt CO2 eq in 2050, followed by
+    SERV (-1.8 Mt CO2 eq), OGEG (+0.8 Mt CO2 eq), and CHEM (-0.8 Mt CO2 eq); moreover,
+    the sectors would abate about 3.6, 2.6 and 1.2 Mt CO2 eq of indirect emissions
+    under CT compared to REF in 2050, respectively. The results imply that moving
+    towards a low
+
+
+    carbon electricity system would bring positive environmental impacts on other
+    sectors; these sectors could trace their sources from the electricity sectors
+    when sectoral GHG emission mitigation strategies.
+
+
+    # 3.4. Interactive effects of multiple policy factors on electricity sectors
+
+    indirect GHG emissions
+
+
+    The effects of the interactions among multiple policy factors on electricity systems
+    are further examined through the environmental perspective and mixed-level analysis
+    with 12
+
+
+    8'
+  - '[PAGE 8]
+
+
+    # Journal of Cleaner Production 420 (2023) 138363
+
+
+    experiments in Table 5; Fig. 5 shows the main effect of each factor and their
+    indirect effects on electricity sectors'' indirect sums. Each factor''s contribution
+    to the relative sum of squares indicates the main effect of factors on the system
+    in Table 2. The main effect plot (Fig. 5a) reveals that the carbon tax (factor
+    A), capital cost (factor B) and natural-gas powered factor (factor C) would raise
+    indirect emissions from the electricity sectors (response).
+
+
+    In response, the contribution of factor B to the system is negative, accounting
+    for 16.9%, followed by factor C (6.0%) and A (10.1%).
+
+
+    In addition to the main effects, it is crucial to examine the interactive effects
+    of multiple factors on electricity sectors'' indirect emissions. The interaction
+    between carbon tax and natural-gas powered factor on electricity'' indirect emissions
+    is significant. The B*C interaction (with p=0.01; 31.7%) reveals that when the
+    capital cost of natural-gas powered factor is at a low level, the A*C interaction
+    (with p=0.05; 25.1%) is negative; when the natural-gas powered factor is at a
+    high level, the carbon tax would lead to reduce emissions from the electricity
+    sectors.
+
+
+    The A*B interaction (with p=0.05; 22.8%) demonstrates that carbon tax with high
+    capital cost can reduce the indirect emissions on other sectors. The B*C interaction
+    indicates that the change of wind powered factor cost has no minimal effect on
+    the system when the carbon tax is at a lower level (-30% and -10%); however, when
+    the carbon tax is at a high level (+30%), the electricity sectors'' indirect emissions
+    would increase with the decrease of cost of wind powered factor.
+
+
+    # Table 2
+
+
+    Summary of effects for each factor and their interactions on electricity sectors''
+    indirect GHG emissions. Factors A, B, and C represent carbon tax, capital cost
+    of natural-gas powered technology, and capital cost of gas-fired power technology,
+    respectively.
+
+
+    | Source | Sum of Squares | F-Value | Contribution (%) |
+
+    |---|---|---|--|
+
+    | A | 329 | 0.276 | 0.3 |
+
+    | B | 4186 | 0.619 | 16.9 |
+
+    | C | 2436 | 0.539 | 10.1 |
+
+    | A*B | 4975 | 0.165 | 22.8 |
+
+    | A*C | 6196 | 0.518 | 25.1 |
+
+    | B*C | 1206 | 0.088 | 33.7 |
+
+    | Error | | | |
+
+
+    ***: p<0.001; **p<0.01; *p<0.05. High-interaction A*C is treated as error due
+    to the limitation of the error degree.
+
+
+    the direct and indirect environmental impacts of the electricity system''s low-carbon
+    transitions. In what follows, the research questions presented in the Introduction
+    and the associated environmental implications will be considered.
+
+
+    How to optimize electricity design scenarios? The results show that carbon tax
+    with higher targets would cause the reduction of renewable energy, while promote
+    wind power generation. As the carbon tax increases from 10% to 30%, the natural-gas
+    powered power generation would reduce by 17%; however, from a regional perspective,
+    wind power generation in Alberta and Saskatchewan would experience an increase
+    of renewable emissions by 15% and 28.8%, respectively.
+
+
+    # 4. Discussion
+
+
+    # 4.1. Environmental implications and findings
+
+
+    Electricity system decarbonization is an integral part of achieving GHG emission
+    mitigation targets. Nevertheless, the environmental implications of the low-carbon
+    transitions have received late of attention, especially in Canada. The developed
+    STI in this study can only help decision-makers in the electricity sector but
+    from different economic sectors
+
+
+    ![](img/393827738208025e76e691fb84e38508_8_0.png)
+
+
+    Fig. 5. Main effects (a) of factors A, B, and C and their interactive effects
+    (b) on electricity sectors'' indirect GHG emissions. Factors A, B, and C represent
+    carbon tax, cost of wind power technology, and cost of natural-gas powered power
+    technology, respectively. The response system is the mean of electricity sectors''
+    total indirect GHG emissions (kiltonne CO2 eq.).
+
+
+    9'
+- md: '
+
+    L. Chen
+
+
+    Journal of Cluster Forecasting 420 (2023) 138063
+
+
+    higher direct emissions, such as BCEL, MOBEL, OCEL, and PEEL; they share a common
+    characteristic of higher emissions from non-fossil-fuel power generation. In specific,
+    QCEL is the largest electricity producer in Canada and its emissions are approximately
+    three times higher than direct emissions. The results indicate that Canada''s
+    electricity sector has lower but larger generation capacity; hence, greater attention
+    should be devoted to electricity sectors to allocate the responsibility of GHG
+    emissions and identify mitigation efforts across regional electricity sectors
+    which generation changes and thus has more control over direct emissions.
+
+
+    which may transfer to other electricity sectors through chain effects and trades.
+    An advantage of STIO is to tackle stochastic systems (renewable resource availability)
+    expressed as probability distributions, and constraint-variation risks. Consequently,
+    the modeling of electricity capacity expansion under different levels will also
+    reflect the environmental impacts and risks on other sectors. Secondly, STIO provides
+    the integrated modeling approaches to handle different levels.
+
+
+    The implications of de-fossil-fuel electricity decarbonization plan 2020 Emissions
+    Plan Proposed by the Government of Canada (2020), fostering the changes in the
+    market has been recognized as a challenge for the electricity sector but also
+    others. The study''s results, in line with the report, discover that the electricity''s
+    low-carbon transitions would result in significant GHG emissions in others: local
+    production and consumption like OMEGA (the highest GHG emission source) and SERV
+    (the highest GHG source). The results suggest that reducing fossil-fuel power
+    production would be an essential first step for indirect emission reductions.
+    However, it is noteworthy that the rapid development of low-carbon renewable energy
+    may increase GHG emissions from electricity generation due to the production of
+    power generation (e.g., manufacturing). Although such increases would be minimal
+    compared to other sectors, the results highlight the importance of considering
+    both direct and indirect emissions in forming the sector''s GHG reduction policies,
+    especially under low-carbon scenarios.
+
+
+    ## 5. Conclusions
+
+
+    In this study, an integrated model (STIO) has been developed through incorporating
+    a SEOM, a PGTO, and integrated environmental analysis to explore direct and indirect
+    environmental impacts of the electricity sector''s low-carbon transitions. STIO
+    has following (a) tackling stochastic features of renewable availability expressed
+    as probability distributions and constraint-variation risks; (b) linking the outputs
+    to decarbonization policies under different risk levels; (c) handling the variations
+    in electricity sectors induced by the changes in power generation schemes as a
+    conceptual result.
+
+
+    ## 4.2. Contributions of STIO to integrated modeling frameworks
+
+
+    The developed STIO has two main contributions to the existing integrated modeling
+    frameworks in electricity system management. Firstly, electricity systems are
+    all with uncertainties, quantifying the contribution of each environmental and
+    economic policy at multiple levels (risk levels) and their effects on the system.
+    The developed STIO has also provided important implications for Canada; other
+    regions/countries with variations in energy sectors and carbon emission trends
+    can benefit from it.
+
+
+    Future research directions are also discussed as follows. Firstly, for input-output
+    analysis, as electricity is a source of uncertainty, with GHG emissions which
+    are aggregated, more data and methods are needed. In STIO, the disaggregation
+    of electricity sectors in CA-ELOT has been developed which adequately represents
+    the technical-detail of SEOM, which represents the production structures and emission
+    profiles of regional electricity sectors.
+
+
+    Secondly, as renewable energy technologies become available and for other sectors
+    (e.g., heavy industry) to demand the usage of electricity, technology efficiency
+    factors, and impacts of prices, electricity could be introduced into the multi-sector
+    analysis to examine their environmental screening on electricity systems. Moreover,
+    factor screening could be conducted to help identify factors eliminating emissions
+    (Wang and Huang, 2015). Lastly, other programming methods could be incorporated
+    to address dynamic decision problems (e.g., multi-stage programming) and different
+    forms of uncertainty (e.g., fuzzy set, interval linear programming).
+
+
+    To discuss the implications of an environmental perspective, the study provides
+    additional insights into the interactive effects of environmental and economic
+    factors and their interactions on the electricity sector. In comparison, the results
+    were mainly focused on a single factor on the electricity''s direct effects, but
+    as shown by Carroll and Speight, 2021; Khan, 2018; Martelelli, 2020), renewable
+    energy generation may increase indirect GHG emissions at the cost of others (Jayslade,
+    2021; Shen, 2020). The study results indicate that the interactive effects of
+    different levels of carbon taxes and capital cost of power generation technologies
+    would lead to various results. For example, increasing the carbon tax from mid-level
+    to high-level, the lower the capital cost of natural gas-fuel power generation
+    would lead to reduce direct emissions, whilst, causing the negative impacts on
+    other sectors.
+
+
+    It is important to examine the interaction among multiple policies when determining
+    effective mitigation strategies for electricity sectors to avoid misleading consequences.
+
+
+    Chen et al.
+
+
+    Journal of Cleaner Production 420 (2023) 138636
+
+
+    ## Declaration of competing interest
+
+
+    The authors declare that they have no competing financial interests or personal
+    relationships that have appeared to influence the work reported in this paper.
+
+
+    ## Data availability
+
+
+    Data will be made available on request.
+
+
+    ## Credit authorship contribution statement
+
+
+    ## Acknowledgments
+
+
+    Leian Chen: Conceptualization, Methodology, Data curation, Visualization, Formal
+    analysis, Writing – original draft. Guo Huang: Supervision, Project administration,
+    Funding acquisition, Writing – review & editing, Bin Lu: Writing – review & editing.
+    Liring Lu: Writing –
+
+
+    This research was supported by Canada Research Program, Natural Science and Engineering
+    Council of Canada, and MITACS. We are also very grateful for the helpful inputs
+    from the Editor and anonymous reviewers.
+
+
+    ## Appendix A. Formulation of SEOM
+
+
+    The stochastic electricity system optimization model (SEOM) has developed for
+    supporting electricity system management in a multi-regional context. The objective
+    of SEOM is to minimize total costs, which can be formulated as:
+
+
+    Objective = $f_1 + f_2 + f_3 + f_4 + f_5 + f_6$
+
+
+    (1) Primary energy costs: $f_1 = \sum_{j=1}^{10} \sum_{m=1}^{3} CPE_{jm} \cdot
+    P_{it}$
+
+
+    (2) Investment costs: $f_2 = \sum_{j=1}^{10} \sum_{m=1}^{3} CAP_{jmk} \cdot Z_{mk}$
+
+
+    (3) Operation and maintenance costs: $f_3 = \sum_{j=1}^{10} \sum_{m=1}^{3} OPR_{jmk}
+    \cdot Y_{jk}$
+
+
+    (4) Transmission and distribution costs: $f_4 = \sum_{j=1}^{10} \sum_{m=1}^{3}
+    TDC_{jmk} \cdot Y_{jk}$
+
+
+    (5) Carbon tax: $f_5 = \sum_{j=1}^{10} \sum_{m=1}^{3} CTAX_t \cdot EMF_{jk}$
+
+
+    (6) Electricity imports and exports: $f_6 = \sum_{j=1}^{10} \sum_{m=1}^{3} BEX_{jk}
+    \cdot Y_{jk}$
+
+
+    Subject to six types of constraints:
+
+
+    (1) Mass balance: $\sum_{j=1}^{10} Y_{jk} (1 - LOSS) + YIM_{it} - YEX_{it} = EFI_{it}$
+
+
+    (2) Capacity constraints: $Y_{jk} \leq EFI_{it}, \forall i, j, t$
+
+
+    (3) $RCG_{jk} + \sum_{m=1}^{3} EXP_{jmk} \cdot Z_{mk} - W_{mj} \leq AV_{jk}, \forall
+    j = 1$ to $6, 9, 10, t, k$
+
+
+    (4) $PrRCG_{jk} + \sum_{m=1}^{3} EXP_{jmk} \cdot Z_{mk} - W_{mj} \geq 1 - p_j,
+    \forall j=7, 8, t, k$
+
+
+    (5) $\sum_{m=1}^{3} Z_{mk} \leq 1, \forall j, t, k$
+
+
+    (6) Electricity demand: $\sum_{j=1}^{10} Y_{jk} \geq \sum_{d=1}^{5} DE_{jdk},
+    \forall t, k$
+
+
+    (7) GHG emission target: $\sum_{j=1}^{10} \sum_{t=1}^{15} EMF_{jk} - Ysk_{jk}
+    \leq ETAR_{t}, \forall t, k$
+
+
+    (8) Non-negativity: $P_{it}, Z_{mk}, YEX_{it}, YIM_{it}, YCEX_{it}, YCIM_{it}
+    \geq 0, \forall i, j, t, m$
+
+
+    ## Nomenclatures
+
+
+    Sets
+
+
+    Primary energy resource ($i = 1$ for natural gas, $i = 2$ for oil-fired,
+
+
+    Electricity generation technology ($j = 1$ for natural gas-fired
+
+    '
+  mdcn: '
+
+    L. Chen
+
+
+    《聚类预测期刊》 420 (2023) 138063
+
+
+    较高的直接排放，如 BCEL、MOBEL、OCEL 和 PEEL；它们有一个共同特征，即非化石燃料发电的排放较高。具体而言，QCEL 是加拿大最大的发电厂，其排放量约为直接排放的三倍。结果表明，加拿大的电力部门发电能力较低但装机容量较大；因此，应该更多关注电力部门，以分配温室气体（GHG）排放责任，并识别跨区域电力部门的减排努力，因为发电方案的变化对直接排放具有更大的控制力。
+
+
+    这可能会通过链效应和贸易转移到其他电力部门。STIO 的优势在于处理表示为概率分布的随机系统（可再生资源可用性）以及约束变化风险。因此，不同水平下电力容量扩建的建模也将反映对其他部门的环境影响和风险。其次，STIO
+    提供了处理不同水平的集成化建模方法。
+
+
+    加拿大政府提出的《2020年排放计划》中“去化石燃料电力脱碳计划”的影响，促进市场变化被认为是电力部门及其他部门的挑战。该研究结果与报告一致，发现电力的低碳转型将导致其他领域产生大量的温室气体排放：例如本地生产和消费，如
+    OMEGA（最高温室气体排放源）和 SERV（最高温室气体源）。结果表明，减少化石燃料发电是减少间接排放的第一步。然而，值得注意的是，低碳可再生能源的快速发展可能会由于发电过程（例如制造）而增加发电产生的温室气体排放。虽然这种增加与其他部门相比是微不足道的，但结果强调了在制定部门温室气体减排政策时同时考虑直接和间接排放的重要性，特别是在低碳场景下。
+
+
+    ## 5. 结论
+
+
+    在本研究中，通过结合 SEOM、PGTO 和集成环境分析，开发了一个集成模型（STIO），以探索电力部门低碳转型对环境的直接和间接影响。STIO 具有以下功能：(a)
+    处理可再生能源可用性的随机特征和约束变化风险；(b) 将输出与不同风险水平下的脱碳政策挂钩；(c) 将发电方案变化引起的电力部门变化作为概念性结果进行处理。
+
+
+    ## 4.2. STIO 对集成建模框架的贡献
+
+
+    开发的 STIO 对电力系统管理中的现有集成建模框架有两个主要贡献。首先，电力系统均具有不确定性，STIO 量化了每项环境和经济政策在多个水平（风险水平）上的贡献及其对系统的影响。开发的
+    STIO 也为加拿大提供了重要启示；其他能源部门和碳排放趋势存在变化的地区/国家也可以从中受益。
+
+
+    文中还讨论了未来的研究方向。首先，对于产出分析，由于电力是不确定性的来源，且温室气体排放是聚合的，因此需要更多的数据和方法。在 STIO 中，开发了 CA-ELOT
+    中电力部门的拆分，这充分代表了 SEOM 的技术细节，而 SEOM 代表了区域电力部门的生产结构和排放特征。
+
+
+    其次，随着可再生能源技术的普及以及其他部门（例如重工业）对电力的需求，技术效率因素和价格的影响可以将电力引入多部门分析中，以检查其对电力系统的环境筛选。此外，可以进行因素筛选，以帮助识别消除排放的因素（Wang
+    and Huang, 2015）。最后，可以整合其他编程方法来解决动态决策问题（例如多阶段规划）和不同形式的不确定性（例如模糊集、区间线性规划）。
+
+
+    为了讨论环境视角的影响，本研究对环境和经济因素的相互作用及其对电力部门的影响提供了额外见解。相比之下，以往结果主要关注电力直接影响的单一因素，但正如 Carroll
+    和 Speight（2021）、Khan（2018）；Martelelli（2020）所示，可再生能源发电可能以其他领域为代价增加间接温室气体排放。研究结果表明，不同水平碳税和发电技术资本成本的相互作用会导致各种结果。例如，将碳税从中水平提高到高水平，天然气发电的资本成本越低会导致直接排放减少，同时会对其他部门产生负面影响。
+
+
+    在确定电力部门的有效减排策略时，检查多种政策之间的相互作用是重要的，以避免误导性后果。
+
+
+    Chen 等
+
+
+    《清洁生产杂志》 420 (2023) 138636
+
+
+    ## 利益冲突
+
+
+    作者声明，他们没有影响本文报告工作的竞争性财务利益或个人关系。
+
+
+    ## 数据可用性
+
+
+    数据可应要求提供。
+
+
+    ## 作者贡献声明
+
+
+    ## 致谢
+
+
+    Leian Chen：概念构化、方法论、数据整理、可视化、形式化分析、初稿编写。Guo Huang：监督、项目管理、资金获取、审阅与编辑，Bin Lu：审阅与编辑。Liring
+    Lu：编写——
+
+
+    本研究得到了加拿大研究计划、加拿大自然科学与工程理事以及 MITACS 的支持。我们还非常感谢编辑和匿名评审员提供的帮助建议。
+
+
+    ## 附录 A. SEOM 的公式
+
+
+    开发的随机电力系统优化模型（SEOM）旨在支持多区域背景下的电力系统管理。SEOM 的目标是总成本最小化，可以表示为：
+
+
+    目标 = $f_1 + f_2 + f_3 + f_4 + f_6$
+
+
+    (1) 原能源成本：$f_1 = \sum_{j=1}^{10} \sum_{m=1}^{3} CPE_{jm} \cdot P_{it}$
+
+
+    (2) 投资成本：$f_2 = \sum_{j=1}^{10} \sum_{m=1}^{3} CAP_{jmk} \cdot Z_{mk}$
+
+
+    (3) 运行维护成本：$f_3 = \sum_{j=1}^{10} \sum_{m=1}^{3} OPR_{jmk} \cdot Y_{jk}$
+
+
+    (4) 输配成本：$f_4 = \sum_{j=1}^{10} \sum_{m=1}^{3} TDC_{jmk} \cdot Y_{jk}$
+
+
+    (5) 碳税：$f_5 = \sum_{j=1}^{10} \sum_{m=1}^{3} CTAX_t \cdot EMF_{jk}$
+
+
+    (6) 电力进出口：$f_6 = \sum_{j=1}^{10} \sum_{m=1}^{3} BEX_{jk} \cdot Y_{jk}$
+
+
+    受限于六类约束：
+
+
+    (1) 质量平衡：$\sum_{j=1}^{10} Y_{jk} (1 - LOSS) + YIM_{it} - YEX_{it} = EFI_{it}$
+
+
+    (2) 容量限制：$Y_{jk} \leq EFI_{it}, \forall i, j, t$
+
+
+    (3) $RCG_{jk} + \sum_{m=1}^{3} EXP_{jmk} \cdot Z_{mk} - W_{mj} \leq AV_{jk}, \forall
+    j = 1$ 至 $6, 9, 10, t, k$
+
+
+    (4) $PrRCG_{jk} + \sum_{m=1}^{3} EXP_{jmk} \cdot Z_{mk} - W_{mj} \geq 1 - p_j,
+    \forall j=7, 8, t, k$
+
+
+    (5) $\sum_{m=1}^{3} Z_{mk} \leq 1, \forall j, t, k$
+
+
+    (6) 电力需求：$\sum_{j=1}^{10} Y_{jk} \geq \sum_{d=1}^{5} DE_{jdk}, \forall t, k$
+
+
+    (7) 温室气体排放目标：$\sum_{j=1}^{10} \sum_{t=1}^{15} EMF_{jk} - Ysk_{jk} \leq ETAR_{t},
+    \forall t, k$
+
+
+    (8) 非负性：$P_{it}, Z_{mk}, YEX_{it}, YIM_{it}, YCEX_{it}, YCIM_{it} \geq 0, \forall
+    i, j, t, m$
+
+
+    ## 符号表
+
+
+    集合
+
+
+    原能源（$i = 1$ 代表天然气，$i = 2$ 代表燃油）
+
+
+    发电技术（$j = 1$ 代表天然气发电
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 9]
+
+
+    L. Chen
+
+
+    Journal of Cluster Forecasting 420 (2023) 138063
+
+
+    higher direct emissions, such as BCEL, MOBEL, OCEL, and PEEL; they share a common
+    characteristic of higher emissions from non-fossil-fuel power generation. In specific,
+    QCEL is the largest electricity producer in Canada and its emissions are approximately
+    three times higher than direct emissions. The results indicate that Canada''s
+    electricity sector has lower but larger generation capacity; hence, greater attention
+    should be devoted to electricity sectors to allocate the responsibility of GHG
+    emissions and identify mitigation efforts across regional electricity sectors
+    which generation changes and thus has more control over direct emissions.
+
+
+    which may transfer to other electricity sectors through chain effects and trades.
+    An advantage of STIO is to tackle stochastic systems (renewable resource availability)
+    expressed as probability distributions, and constraint-variation risks. Consequently,
+    the modeling of electricity capacity expansion under different levels will also
+    reflect the environmental impacts and risks on other sectors. Secondly, STIO provides
+    the integrated modeling approaches to handle different levels.
+
+
+    The implications of de-fossil-fuel electricity decarbonization plan 2020 Emissions
+    Plan Proposed by the Government of Canada (2020), fostering the changes in the
+    market has been recognized as a challenge for the electricity sector but also
+    others. The study''s results, in line with the report, discover that the electricity''s
+    low-carbon transitions would result in significant GHG emissions in others: local
+    production and consumption like OMEGA (the highest GHG emission source) and SERV
+    (the highest GHG source). The results suggest that reducing fossil-fuel power
+    production would be an essential first step for indirect emission reductions.
+    However, it is noteworthy that the rapid development of low-carbon renewable energy
+    may increase GHG emissions from electricity generation due to the production of
+    power generation (e.g., manufacturing). Although such increases would be minimal
+    compared to other sectors, the results highlight the importance of considering
+    both direct and indirect emissions in forming the sector''s GHG reduction policies,
+    especially under low-carbon scenarios.
+
+
+    # 5. Conclusions
+
+
+    In this study, an integrated model (STIO) has been developed through incorporating
+    a SEOM, a PGTO, and integrated environmental analysis to explore direct and indirect
+    environmental impacts of the electricity sector''s low-carbon transitions. STIO
+    has following (a) tackling stochastic features of renewable availability expressed
+    as probability distributions and constraint-variation risks; (b) linking the outputs
+    to decarbonization policies under different risk levels; (c) handling the variations
+    in electricity sectors induced by the changes in power generation schemes as a
+    conceptual result.
+
+
+    # 4.2. Contributions of STIO to integrated modeling frameworks
+
+
+    The developed STIO has two main contributions to the existing integrated modeling
+    frameworks in electricity system management. Firstly, electricity systems are
+    all with uncertainties,
+
+
+    quantifying the contribution of each environmental and economic policy at multiple
+    levels (risk levels) and their effects on the system. The developed STIO has also
+    provided important implications for Canada; other regions/countries with variations
+    in energy sectors and carbon emission trends can benefit from it.
+
+
+    Future research directions are also discussed as follows. Firstly, for input-output
+    analysis, as electricity is a source of uncertainty, with GHG emissions which
+    are aggregated, more data and methods are needed. In STIO, the disaggregation
+    of electricity sectors in CA-ELOT has been developed which adequately represents
+    the technical-detail of SEOM, which represents the production structures and emission
+    profiles of regional electricity sectors.
+
+
+    Secondly, as renewable energy technologies become available and for other sectors
+    (e.g., heavy industry) to demand the usage of electricity, technology efficiency
+    factors, and impacts of prices, electricity could be introduced into the multi-sector
+    analysis to
+
+
+    To discuss the implications of an environmental perspective, the study provides
+    additional insights into the interactive effects of environmental and economic
+    factors and their interactions on the electricity sector. In comparison, the results
+    were mainly focused on a single factor on the electricity''s direct effects, but
+    as shown by Carroll and Speight, 2021; Khan, 2018; Martelelli, 2020), renewable
+    energy generation may increase indirect GHG emissions at the cost of others (Jayslade,
+    2021; Shen, 2020). The study results indicate that the interactive effects of
+    different levels of carbon taxes and capital cost of power generation technologies
+    would lead to various results. For example, increasing the carbon tax from mid-level
+    to high-level, the lower the capital cost of natural gas-fuel power generation
+    would lead to reduce direct emissions, whilst, causing the negative impacts on
+    other sectors.
+
+
+    It is important to examine the interaction among multiple policies when determining
+    effective mitigation strategies for electricity sectors to avoid misleading consequences.
+
+
+    10'
+  - '[PAGE 10]
+
+
+    Chen et al.
+
+
+    Journal of Cleaner Production 420 (2023) 138636
+
+
+    examine their environmental screening on electricity systems. Moreover, factor
+    screening could be conducted to help identify factors eliminating emissions (Wang
+    and Huang, 2015). Lastly, other programming methods could be incorporated to address
+    dynamic decision problems (e.g., multi-stage programming) and different forms
+    of uncertainty (e.g., fuzzy set, interval linear programming).
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no competing financial interests or personal
+    relationships that have appeared to influence the work reported in this paper.
+
+
+    # Data availability
+
+
+    Data will be made available on request.
+
+
+    # CEdit authorship contribution statement
+
+
+    # Acknowledgments
+
+
+    Leian Chen: Conceptualization, Methodology, Data curation, Visualization, Formal
+    analysis, Writing – original draft. Guo Huang: Supervision, Project administration,
+    Funding acquisition, Writing – review & editing, Bin Lu: Writing – review & editing.
+    Liring Lu: Writing –
+
+
+    This research was supported by Canada Research Program, Natural Science and Engineering
+    Council of Canada, and MITACS. We are also very grateful for the helpful inputs
+    from the Editor and anonymous reviewers.
+
+
+    # Appendix A. Formulation of SEOM
+
+
+    The stochastic electricity system optimization model (SEOM) has developed for
+    supporting electricity system management in Canada in a multi-regional context.
+    The objective of SEOM is to minimize total system costs, which can be formulated
+    as:
+
+
+    ```
+
+    Objective = Minimize = f₁ + f₂ + f₃ + f₄ + f₅
+
+    ```
+
+
+    +   (1) Primary energy costs
+
+
+    ```
+
+    f₁ = Σ_{j=1}^{10} Σ_{m=1}^{3} Σ_{k=1}^{11} CPE_{jmk} · P_{jmk}
+
+    ```
+
+
+    +   (2) Investment costs
+
+
+    ```
+
+    f₂ = Σ_{j=1}^{10} Σ_{m=1}^{3} Σ_{k=1}^{11} CAP_{jmk} · Z_{jmk}
+
+    ```
+
+
+    +   (3) Operation and maintenance costs
+
+
+    ```
+
+    f₃ = Σ_{j=1}^{10} Σ_{m=1}^{3} Σ_{k=1}^{11} OPR_{jmk} · F_{jmk} + Σ_{j=1}^{10}
+    Σ_{m=1}^{3} Σ_{k=1}^{11} OPF_{jmk} · (RCG_{jmk} + Σ_{m=1}^{3} Z_{jmk} - Z_{jmk})
+
+    ```
+
+
+    +   (4) Transmission and distribution costs
+
+
+    ```
+
+    f₄ = Σ_{j=1}^{10} Σ_{m=1}^{3} Σ_{k=1}^{11} TDC_{jmk} · Y_{jmk}
+
+    ```
+
+
+    +   (5) Carbon tax
+
+
+    ```
+
+    f₅ = Σ_{j=1}^{10} Σ_{m=1}^{3} Σ_{k=1}^{11} EMF_{jmk} · Y_{jmk} · CTAX_t
+
+    ```
+
+
+    +   (6) Electricity imports and exports
+
+
+    ```
+
+    f₆ = Σ_{j=1}^{10} Σ_{m=1}^{3} Σ_{k=1}^{11} [(CIM_{jmk} · YIM_{jmk}) - (BEX_{jmk}
+    · YEX_{jmk})]
+
+    ```
+
+
+    There are six types of constraints:'
+  - '[PAGE 11]
+
+
+    L. Chen et al.
+
+
+    # (1) Mass balance constraints
+
+
+    ```
+
+    $P_{ik} \leq AVE_{it}, \forall i, t, k$
+
+    ```
+
+
+    ```
+
+    $Y_{jk} - EFI_{jk} \leq P_{ij}, \forall i, j = 1, 2, t, k$
+
+    ```
+
+
+    # (2) Capacity constraints
+
+
+    ```
+
+    $Y_{jk} \leq \sum_{m=1}^{10} (RCG_{jm} + EXP_{jmk} \cdot Z_{mk} - W_{mj}) \cdot
+    CF_{jk} \cdot OT_{jk}, \forall j, t, k$
+
+    ```
+
+
+    ```
+
+    $YEX_{it} \leq \sum_{j=1}^{10} Y_{jit} - PEX_{it}, \forall v, t$
+
+    ```
+
+
+    ```
+
+    $YIM_{it} \leq \sum_{j=1}^{10} Y_{jit} - PIM_{it}, \forall v, t$
+
+    ```
+
+
+    ```
+
+    $YCEX_{it} \leq \sum_{j=1}^{10} Y_{jit} - PCE_{it}, \forall v, t$
+
+    ```
+
+
+    ```
+
+    $YCIM_{it} \leq \sum_{j=1}^{10} Y_{jit} - PCIM_{it}, \forall v, t$
+
+    ```
+
+
+    # (3) Capacity expansion constraints
+
+
+    ```
+
+    $RCG_{jk} + \sum_{m=1}^{3} EXP_{jmk} \cdot Z_{mk} - W_{mj} \leq AV_{jk}, \forall
+    j = 1$ to $6, 9, 10, t, k$
+
+    ```
+
+
+    ```
+
+    $Pr\RCG_{jk} + \sum_{m=1}^{3} EXP_{jmk} \cdot Z_{mk} - W_{mj} \leq AV_{jk}) \geq
+    1 - p_j, \forall j=7, 8, t, k$
+
+    ```
+
+
+    ```
+
+    $Z_{mk} = \begin{cases} 1, & \text{if expansion is udertaken}, \forall j, t, k
+    \ 0, & \text{otherwise} \end{cases}$
+
+    ```
+
+
+    ```
+
+    $\sum_{m=1}^{3} Z_{mk} \leq 1, \forall j, t, k$
+
+    ```
+
+
+    # (4) Electricity demand constraints
+
+
+    ```
+
+    $\sum_{j=1}^{10} Y_{jk} (1 - LOSS) + YIM_{it} - YEX_{it} \geq \sum_{d=1}^{5} DE_{jdk},
+    \forall t, k$
+
+    ```
+
+
+    # (5) GHG emission target constraints
+
+
+    ```
+
+    $\sum_{j=1}^{10} \sum_{t=1}^{15} EMF_{jk} - Ysk_{jk} \leq ETAR_{t}, \forall t,
+    k$
+
+    ```
+
+
+    # (6) Non-negativity constraints
+
+
+    ```
+
+    $P_{it}, Z_{mk}, YEX_{it}, YIM_{it}, YCEX_{it}, YCIM_{it} \geq 0, \forall i, j,
+    t, m$
+
+    ```
+
+
+    # Nomenclatures
+
+
+    Sets
+
+
+    Primary energy resource ($i = 1$ for natural gas, $i = 2$ for oil-fired,
+
+
+    Electricity generation technology ($j = 1$ for natural gas-fired'
+- md: '
+
+    L. Chen et al.
+
+
+    Journal of Climate Change 420 (2023) 138363
+
+
+    5 for nuclear; j = 6 for hydro; j = 7 for wind; j = 8 for solar; j = 9 for biomass;
+    j = 10 for small nuclear reactor)
+
+    Region (k = 1 for Alberta, k = 2 for British Columbia, k = 3 for Saskatchewan,
+    k = 4 for Manitoba, k = 5 for Ontario, k = 6 for Quebec, k = 7 for Nunavut, k
+    = 8 for Nova Scotia, k = 9 for Prince Edward, k = 10 for Newfoundland and Labrador,
+    k = 11 for Yukon, k = 12 for Territories)
+
+    Planning period (t = 1 for 2021–2030, t = 2 for 2031–2040, t = 3 for 2041–2050)
+
+    Capacity option (m = 1 for low, m = 2 for medium, m = 3 for high)
+
+    Demand use (d = 1 for commercial, d = 2 for residential, d = 3 for transportation)
+
+
+    ## Decision variables
+
+
+    - $P_{ikt}$ supply of energy resource i in period t in region k, GJ
+
+    - $Y_{ijt}$ total electricity generation of technology j in period t in region
+    k, MWh
+
+    - $YEX_{ikt}$ electricity exported to the US in period t, region k, MWh
+
+    - $YIM_{ikt}$ electricity imported from the US in period t, region k, MWh
+
+    - $YCE_{ikt}$ interprovincial outflows in period t in region k, MWh
+
+    - $YC_{ikt}$ interprovincial inflows in period t in region k, MWh
+
+
+    ## Parameters
+
+
+    - $C_{ikt}$ cost of energy resource i in period t in region k, GJ$
+
+    - $CAP_{ijt}$ investment costs of technology j in period t in region k, \$MW
+
+    - $OPVR_{ijt}$ variable costs of technology j in period t in region k, $/MW
+
+    - $OPFX_{ijt}$ fixed operational costs of technology j in period t in region k,
+    $/MW
+
+    - $TOC_{ijt}$ costs of emission and distribution for technology j in period t
+    in region k, $/MW
+
+    - $CIM_{ikt}$ cost of electricity imported in period t in region k, \$MW
+
+    - $BEN_{ijt}$ benefit of electricity exports in period t in region k, \$MW
+
+    - $CTAX_{ijmt}$ amount of carbon tax with option m in period t in region k, \$MW
+
+    - $EXP_{ijt}$ existing electricity capacity of technology j in period t in region
+    k, MWh
+
+    - $EMF_{ijt}$ emission factor of technology j in period t in region k, CO2/MWh
+
+    - $AVE_{ikt}$ availability of energy resource i in period t in region k, GJ
+
+    - $AV_{ijt}$ maximum resource availability for technology j in period t in region
+    k, MW
+
+    - $WJ_{ijt}$ capacity requirement for technology j in period t in region k, MW
+
+    - $ETAR_{ijt}$ gas emission factor of technology j in period t in region k, CO2
+
+    - $EFI_{ijt}$ conversion efficiency of technology j in period t in region k, GJ/MW
+
+    - $DE_{ikt}$ electricity demand for demand j in period t in region k, hours
+
+    - $CF_{ijt}$ capacity factor of technology j in period t in region k, %%
+
+    - $PEX_{ikt}$ proportion of electricity exports in period t in region k, %
+
+    - $PCEX_{ikt}$ proportion of interprovincial electricity exports in period t in
+    region k, %
+
+    - $PCM_{ikt}$ proportion of interprovincial electricity imports in period t in
+    region k, %
+
+    - $LOSS_{ikt}$ power transmission loss rate in period t, region k, %
+
+
+    ## Appendix B. Section description
+
+
+    Table B1 nSection description of CA-EIOT.
+
+
+    | Section Description | Description | Code | Abbreviation |
+
+    | :--- | :--- | :--- | :--- |
+
+    | **National-Level** | Agriculture, forestry, fishing and hunting | 1 | AGRF |
+
+    | | Oil and gas extraction | 2 | OGEX |
+
+    | | Mining and quarrying | 3 | MIDQ |
+
+    | | Natural gas distribution, water, sewage and other systems | 4 | NWIS |
+
+    | | Construction | 5 | CONS |
+
+    | | Other manufacturing | 6 | OMAN |
+
+    | | Paper manufacturing | 7 | PAFM |
+
+    | | Chemical manufacturing | 8 | CHEM |
+
+    | | Primary metal manufacturing | 9 | PMT |
+
+    | | Electrical equipment manufacturing | 10 | EQFM |
+
+    | | Wholesale trade | 11 | WELT |
+
+    | | Retail trade | 12 | RETL |
+
+    | | Transportation and warehousing | 13 | TRNS |
+
+    | | Services | 14 | SERV |
+
+    | **Provincial/Territorial-Level** | Electric power generation, transmission and
+    distribution | 15 | BCEL |
+
+    | | Manitoba | 16 | MBEL |
+
+    | | Ontario | 17 | ONEL |
+
+
+    ## Table B1 (continued) |
+
+
+    | Section Description | Code |
+
+    | :--- | :--- |
+
+    | Quebec | 18 QCBEL |
+
+    | New Brunswick | 19 NBEL |
+
+    | Nova Scotia | 20 NSEL |
+
+    | Prince Edward Island | 21 PEEL |
+
+    | Newfoundland and Labrador | 22 NEPL |
+
+    | The Territories | 23 TEEL |
+
+    | Alberta Technology Level | 24 ABNG |
+
+    | Natural gas-fired power | 25 ABCO |
+
+    | Coal-fire power | 26 ABHO |
+
+    | Hydropower | 27 ARBW |
+
+    | Wind power | 28 ABWIN |
+
+    | Biomass | 29 ABBS |
+
+    | Small reactor | 30 ABSR |
+
+    | Natural gas-fired power | 31 SKNG |
+
+    | Coal-fire power | 32 SKCO |
+
+    | Hydropower | 33 SKKY |
+
+    | Wind power | 34 SKWN |
+
+    | Solar power | 35 SKSO |
+
+    | Biomass | 36 SKIM |
+
+
+    ## Appendix Supplementary
+
+
+    Supplementary data to this article can be found at https://doi.org/10.1016/j.jclepro.2023.138363
+
+
+    ## References
+
+
+    - Bollinger, C., Ruter, T., and Todd, F., 2009. Assessment of energy management:
+    decoupling and beyond. J. Econ. Dyn. 33(4), 1648–1661.
+
+    - Canada Regulator, 2021. Canada’s Energy Future; https://www.cer.gc/en/data-reports/canada-energy-future/2021
+
+    - Carroll, D.S., Strechan, K., 2021. The impact of carbon pricing on federal revenue
+    of a carbon tax in electricity sector. Energy Policy, 158, 11256.
+
+    - Charles, A., Wood, W., 1999. Chance-constrained programming. Mag. Soc. 62(3),
+    625–640.
+
+    - Daily, E., Strachan, K., 2017. CO2 emission impacts of energy systems: using
+    IO and TIMES models. Energy Policy, 106, 993–1005.
+
+    - Dowlow, G., Fogasi, A., Honsius, H., Massacre, J., Sow, A., and Umour, E., 2018.
+    A Comprehensive Guide to Electricity Generation in Canada. Energy Policy, 115,
+    715–726.
+
+    - Climate and Change Canada, 2022. National Inventory Report: Greenhouse Emissions
+    of Canada, 2020; https://www.canada.ca/en/environment-climate-change/services/climatechange/greenhouse-gas-emissions/inventory.html
+
+    - Climate and Change Canada, 2022. A clean electricity standard in the north of
+    North America; https://www.canada.ca/en/environment-climate-change/services/climatechange/environmental-policy-strategy/clean-electricity-standard.html
+    (Accessed 7 August 2022).
+
+    - Government of Canada, 2020. National Inventory Report: Greenhouse Gas Emissions
+    of Canada, 2019. Energy Policy, 139, 10696.
+
+    - Government of Canada, 2021. Canada’s Nationally Determined Contribution; https://www.canada.ca/en/environment-climate-change/services/climatechange/action-climate/nationally-determined-contribution.html
+    (Accessed 30 November 2022).
+
+    - Government of Canada, 2021. Global Phase-Out: The Paris Alignment Commitment;
+    https://www.canada.ca/en/environment-climate-change/services/climatechange/action-climate/paris-policy-alignment.html
+    (Accessed 13 January 2022).
+
+    - Heller, T., 2005. Growth and Climate Change: Canada’s Plan to Address Climate
+    Change and the Green Economy. Environment Policy, 10, 13–20.
+
+    - Hansen, E., Avasov, V., Onagorski, T., 2018. Using a high-level model to analyze
+    climate gas emissions from energy transport. Energy Policy, 156, 119–128.
+
+    - Igar, M. 2022. Integrating fossil gas and power systems for the transition to
+    a low carbon future. Energy Policy, 165, 115896.
+
+    - Janssen, U.K., van der Weij, J., 2021. Intergenerational Policy on Climate Change:
+    Mitigation pathways and equity-based frameworks. Energy Policy, 159, 11191.
+
+    - Intergenerational Policy on Climate Change, 2022. Mitigation pathways and equity-based
+    frameworks. Energy Policy, 159, 111911.
+
+    - Lindner, S., Legler, J., Kraus, G., 2012. Developing endogenous-output models
+    with incomplete information. Econ. Strat. Res. 24, 329-347. https://doi.org/10.1016/S0304-3979(12)00014-4
+
+    - Liu, B., Huang, H., Chen, J., Zhang, X., Zhao, K., 2021. A chance-constrained
+    small modular reactor system – a case study for the Province of Saskatchewan,
+    Canada. Int. Econ. Res. 148, 112810. https://doi.org/10.1016/j.irec.2021.112810
+
+    - Miller, T., Cole, W., Watts, N., 2021. The impact of the 2019 energy crisis
+    on carbon emissions: evidence from the United Kingdom. Energy Policy, 158, 11253.
+    https://doi.org/10.1016/j.enerpol.2021.11253
+
+    - Martinez, A., Silva, J. M., Oliveira, M., 2020. Optimization of renewable energy
+    and carbon footprint for electricity systems using multi-objective programming.
+    Elect. Prog. 127, 969-978.
+
+    - Wei, M., Zeng, J., Zhang, H., Chen, X., Yuan, M., 2018. A multi-region input-output
+    mapping: China''s carbon emissions and output over two decades. J. Clean. Prod.
+    192, 545-550.
+
+    - Miller, R., Reich, P., 2009. Input-Output Analysis: Foundations and Extensions.
+    Cambridge University.
+
+    - Pavicevic, M., Mangano, A., Niho, M., Benlich, V., Kamizawa, J., 2020. The potential
+    of carbon sequestration in energy systems using the DIAS-SET models. Energy Soc.
+    11, 100318. https://doi.org/10.1016/j.esery.2020.100318
+
+    - Sajid, M. J., Li, X., Cao, Q., 2019. Demand and supply-side linkages of industry:
+    An input-output analysis. J. Clean. Prod. 229, 109684. https://doi.org/10.1016/j.jclepro.2019.109684
+
+    - Sajid, M. J., Qian, Q., Wang, Y., 2020. Impacts of industrial consumption on
+    carbon emissions: A multi-regional input-output analysis. Sci Rep. 10, 1-10. https://doi.org/10.1038/s41598-020-58814
+
+    - Sajid, M. J., Sant Gonzalez, O., E. R., 2021. The role of labor and capital
+    in global carbon emissions: A multi-regional input-output analysis. Energy Econ.
+    102, 105281. https://doi.org/10.1016/j.energyeco.2021.105281
+
+    - Senthil, I., 2021. Modeling carbon forecasting using intuitionistic fuzzy environment.
+    Int. J. Fuzzy Syst. Appl. Mag. 11, 189-222. https://doi.org/10.1007/s12542-019-0311-y
+
+    - Senthil, K., 2020. Developing a new approach to solve assignment problems under
+    intuitionistic fuzzy environment. Int. J. Fuzzy Syst. Appl. 9, 1-34. https://doi.org/10.1007/s12542-019-0045-x
+
+    - Senthil, K., 2019. Intuitionistic fuzzy assignment problems: a software-based
+    approach. Int. J. Fuzzy Syst. Appl. Mag. 11, 661-675. https://doi.org/10.1007/s13198-019-0974-w
+
+    - Senthil Kumar K., 2020. Solving for Insolvent Transportation Problems, pp. 62-99.
+    Springer. https://link.springer.com/book/resodul/
+
+    - Shen, Y., Wang, J., Sun, J., Fan, M., Peng, K., Dong, Y., 2020. A comprehensive
+    review of renewable energy levelized cost of electricity. Sustain. Energy Res.
+    123, 113081. https://doi.org/10.1016/j.renene.2020.113081
+
+    - Sinha, 2021. Statistics. Canada. Input-Output Tables. https://www.statcan.gc.ca/en/n1/t001/t001e0
+
+    - Shao, J., Wang J., Wang, Y., Zhang, H., Tang, G., Guo, K., 2022. Risk-aware
+    power distribution networks considering dynamic-financial pricing, carbon trading,
+    and solid waste recycling: a fuzzy programming approach. Int. J. Elect. Power
+    103, 105333.
+
+    - Vaccaro, R., Rocca, M., 2021. Assessing the impact of low carbon transformation
+    on energy efficiency: a case study of Italy''s energy intensity. Energy, 219,
+    119742. https://doi.org/10.1016/j.energy.2021.119742
+
+    - Vogle, S., Kamubchicka, W., Markewicz, P., 2009. A fuzzy energy model to analyze
+    carbon dioxide reductions policies of Germany. Int. J. Fuzzy Syst. 19(4), 581-600.
+    https://doi.org/10.1007/s10542-008-0063-z
+
+    '
+  mdcn: '
+
+
+    L. Chen 等人
+
+
+    《气候变化杂志》第4200 (2023) 138363
+
+
+    5 代表核能；j = 6 代表水能；j = 7 代表风能；j = 8 代表太阳能；j = 9 代表生物质；j = 10 代表小型核反应堆）
+
+    地区（k = 1 代表阿尔伯塔省，k = 2 代表不列颠哥伦比亚省，k = 3 代表萨斯喀彻省，k = 4 代表曼尼托巴省，k = 5 代表安大略省，k =
+    6 代表魁北克省，k = 7 代表努纳武特省，k = 8 代表新斯科舍亚省，k = 9 代表爱德华王子岛，k = 10 代表纽芬兰岛和拉布多省，k = 11
+    代表育空地区，k = 12 代表地区）
+
+    规划期（t = 1 代表 2021–2030，t = 2 代表 2031–2040，t = 3 代表 2041–2050）
+
+    容量选项（m = 1 代表低，m = 2 代表中，m = 3 代表高）
+
+    需求用途（d = 1 代表商业，d = 2 代表住宅，d = 3 代表交通）
+
+
+    ## 决策变量
+
+
+    - $P_{ikt}$ $t$ 期地区 $k$ 能源资源 i 的供应，GJ
+
+    - $Y_{ijt}$ $t$ 期地区 $k$ 技术 j 的总发电量，MWh
+
+    - $YEX_{ikt}$ $t$ 期地区 $k$ 出口到美国的电力，MWh
+
+    - $YIM_{ikt}$ $t$ 期地区 $k$ 从美国进口的电力，MWh
+
+    - $YCE_{ikt}$ $t$ 期地区 $k$ 的省际流，MWh
+
+    - $YC_{ikt}$ $t$ 期地区 $k$ 的省际流入，MWh
+
+
+    ## 参数
+
+
+    - $C_{ikt}$ $t$ 期地区 $k$ 能源资源 i 的成本，GJ$
+
+    - $CAP_{ijt}$ $t$ 期地区 $k$ 技术 j 的投资成本，\$MW
+
+    - $OPVR_{ijt}$ $t$ 期地区 $k$ 技术 j 的变动成本，$/MW
+
+    - $OPFX_{ijt}$ $t$ 期地区 $k$ 技术 j 的固定运营成本，$/MW
+
+    - $TOC_{ijt}$ $t$ 期地区 $k$ 技术 j 的排放和分配成本，$/MW
+
+    - $CIM_{ikt}$ $t$ 期地区 $k$ 进口电力成本，\$MW
+
+    - $BEN_{ijt}$ $t$ 期地区 $k$ 电力出口的收益，\$MW
+
+    - $CTAX_{ijmt}$ $t$ 期地区 $k$ 选项 m 的碳税金额，\$MW
+
+    - $EXP_{ijt}$ $t$ 期地区 $k$ 技术 j 的现有电力容量，MWh
+
+    - $EMF_{ijt}$ $t$ 期地区 $k$ 技术 j 的排放因子，CO2/MWh
+
+    - $AVE_{ikt}$ $t$ 期地区 $k$ 能源资源 i 的可用性，GJ
+
+    - $AV_{ijt}$ $t$ 期地区 $k$ 技术 j 的最大资源可用性，MW
+
+    - $WJ_{ijt}$ $t$ 期地区 $k$ 技术 j 的容量需求，MW
+
+    - $ETAR_{ijt}$ $t$ 期地区 $k$ 技术 j 的气体排放因子，CO2
+
+    - $EFI_{ijt}$ $t$ 期地区 $k$ 技术 j 的转换效率，GJ/MW
+
+    - $DE_{ikt}$ $t$ 期地区 $k$ 需求 j 的电力需求，小时
+
+    - $CF_{ijt}$ $t$ 期地区 $k$ 技术 j 的容量系数，%%
+
+    - $PEX_{ikt}$ $t$ 期地区 $k$ 电力出口比例，%
+
+    - $PCEX_{ikt}$ $t$ 期地区 $k$ 省际电力出口比例，%
+
+    - $PCM_{ikt}$ $t$ 期地区 $k$ 省际电力进口比例，%
+
+    - $LOSS_{ikt}$ $t$ 期地区 $k$ 传输损耗率，%
+
+
+    ## 附录 B. 部门描述
+
+
+    表 B1 CA-EIOT 的部门描述。
+
+
+    | 部门描述 | 描述 | 代码 | 缩写 |
+
+    | :--- | :--- | :--- | :--- |
+
+    | **国家级** | 农业、林业、渔业和狩猎 | 1 | AGRF |
+
+    | | 石油和天然气开采 | 2 | OGEX |
+
+    | | 采矿业 | 3 | MIDQ |
+
+    | | 天然气分配、水、污水和其他系统 | 4 | NWIS |
+
+    | | 建筑 | 5 | CONS |
+
+    | | 其他制造业 | 6 | OMAN |
+
+    | | 造纸业 | 7 | PAFM |
+
+    | | 化学制造业 | 8 | CHEM |
+
+    | | 原金属制造业 | 9 | PMT |
+
+    | | 电气设备制造业 | 10 | EQFM |
+
+    | | 批发 | 11 | WELT |
+
+    | | 零售 | 12 | RETL |
+
+    | | 运输和仓储 | 13 | TRNS |
+
+    | | 服务 | 14 | SERV |
+
+    | **省/地区级** | 电力发电、传输和分配 | 15 | BCEL |
+
+    | | 曼尼托巴省 | 16 | MBEL |
+
+    | | 安大略省 | 17 | ONEL |
+
+
+    ## 表 B1（续） |
+
+
+    | 部门描述 | 代码 |
+
+    | :--- | :--- |
+
+    | 魁北克省 | 18 QCBEL |
+
+    | 新不伦瑞克省 | 19 NBEL |
+
+    | 新斯科舍亚省 | 20 NSEL |
+
+    | 爱德华王子岛 | 21 PEEL |
+
+    | 纽芬兰岛和拉布多省 | 22 NEPL |
+
+    | 地区 | 23 TEEL |
+
+    | 阿尔伯塔技术水平 | 24 ABNG |
+
+    | 天然气火发电 | 25 ABCO |
+
+    | 火电发电 | 26 ABHO |
+
+    | 水力发电 | 27 ARBW |
+
+    | 风力发电 | 28 ABWIN |
+
+    | 生物质 | 29 ABBS |
+
+    | 小型反应堆 | 30 ABSR |
+
+    | 天然气发电 | 31 SKNG |
+
+    | 火电发电 | 32 SKCO |
+
+    | 水力发电 | 33 SKKY |
+
+    | 风力发电 | 34 SKWN |
+
+    | 太阳能发电 | 35 SKSO |
+
+    | 生物质 | 36 SKIM |
+
+
+    ## 附录 补充
+
+
+    本文的补充数据见 https://doi.org/10.1016/j.clepro.2023.13863
+
+
+    ## 参考文献
+
+
+    - Bollinger, C., Ruter, T., and Todd, F., 2009. 能源管理：脱钩与超越。J. Econ. Dyn. 33(4),
+    1648–1661.
+
+    - Canada Regulator, 2021. 加大的未来；https://www.cer.gc/en/data-reports/canada-future/2021
+
+    - Carroll, D.S., Strechan, K., 2021. 碳定价对电力部门收入的影响。Energy Policy, 158, 1125.
+
+    - Charles, A., Wood, W., 1999. 机会约束规划。Mag. Soc. 62(3), 625–640.
+
+    - Daily, E., Strachan, K., 2017. 能源系统的二氧化碳排放：使用 IO 和 TIMES 模型。Energy Policy, 106,
+    993–1005.
+
+    - Dowlow, G., Fogasi, A., Honsius, H., Massacre, J., Sow, A., and Umour, E., 2018.
+    加拿大发电指南。Energy Policy, 115, 715–726.
+
+    - Climate and Change Canada, 2022. 国家清单：温室气体排放，2020；https://www.canada.ca/en/environment-climate-change/services/climatechange/greenhouse-gas-emissions/inventory.html
+
+    - Climate and Change Canada, 2022. 北美的清洁电力；https://www.canada.ca/en/environment-climate-change/services/climatechange/environmental-policy/clean-electricity-standard.html
+    (2022年8月7日)。
+
+    - Government of Canada, 2020. 国家清单：温室气体排放，2019。Energy Policy, 139, 1069.
+
+    - Government of Canada, 2021. 加拿大国家贡献；https://www.canada.ca/en/environment-climate-change/services/climatechange/action-climate/nationally-determined-contribution.html
+    (2022年11月30日)。
+
+    - Government of Canada, 2021. 全球淘汰：巴黎协议承诺；https://www.canada.ca/en/environment-climate-change/services/climatechange/action-climate/paris-policy-alignment.html
+    (2022年1月13日)。
+
+    - Heller, T., 2005. 增长与气候变化：应对气候变化的绿色经济计划。Environment Policy, 10, 13–20.
+
+    - Hansen, E., Avasov, V., Onagorski, T., 2018. 使用高水平模型分析能源运输的气排放。Energy Policy,
+    156, 119–128.
+
+    - Igar, M. 2022. 为低碳未来转型整合化石气和电力系统。Energy Policy, 165, 1158.
+
+    - Janssen, U.K., van der Weij, J., 2021. 气候变化的代际政策：减排路径和公平框架。Energy Policy, 159,
+    119.
+
+    - Intergenerational Policy on Climate Change, 2022. 减排路径和公平框架。Energy Policy, 159,
+    1191.
+
+    - Lindner, S., Legler, J., Kraus, G., 2012. 基于不完整信息的内生输出模型。Econ. Strat. Res. 24,
+    329-347. https://doi.org/10.1016/S0304-3979(12)00014-4
+
+    - Liu, B., Huang, H., Chen, J., Zhang, X., Zhao, K., 2021. 机会约束的小模块反应堆系统——加拿大萨斯喀彻省的案例研究。Int.
+    Econ. Res. 148, 1128. https://doi.org/10.1016/j.irec.2021.112.
+
+    - Miller, T., Cole, W., Watts, N., 2021. 2019年能源危机对碳排放的影响：来自英国的证据。Energy Policy,
+    158, 1125. https://doi.org/10.1016/j.enerpol.2021.11.
+
+    - Martinez, A., Silva, J., Oliveira, M., 2020. 能源系统的优化与碳足迹。Energy. Prog., 127.
+
+    - Wei, M., J., Qian, Y., Zhang, H., 2019. 使用机会约束规划解决分配问题。
+
+
+    '
+  merge: 1
+  raw:
+  - '[PAGE 12]
+
+
+    L. Chen al.
+
+
+    Journal of Climate Change 420 (2023) 138363
+
+
+    5 for nuclear; j = 6 for hydro; j = 7 for wind; j = 8 for solar; j = 9 for biomass;
+    j = 10 for small nuclear reactor)
+
+    Region (k = 1 for Alberta, k = 2 for British Columbia, k = 3 for Saskatchewan,
+    k = 4 for Manitoba, k = 5 for Ontario, k = 6 for Quebec, k = 7 for Nunavut, k
+    = 8 for Nova Scotia, k = 9 for Prince Edward, k = 10 for Newfoundland and Labrador,
+    k = 11 for Yukon, k = 12 for Territories)
+
+    Planning period (t = 1 for 2021–2030, t = 2 for 2031–2040, t = 3 for 2041–2050)
+
+    Capacity option (m = 1 for low, m = 2 for medium, m = 3 for high)
+
+    Demand use (d = 1 for commercial, d = 2 for residential, d = 3 for transportation)
+
+
+    # Decision variables
+
+
+    +   $P_{ikt}$ supply of energy resource i in period t in region k, GJ
+
+    Y_{ijt}$ total electricity generation of technology j in period t in region k,
+    MWh
+
+    YEX_{ikt}$ electricity exported to the US in period t, region k, MWh
+
+    YIM_{ikt}$ electricity imported from the US in period t, region k, MWh
+
+    YCE_{ikt}$ interprovincial outflows in period t in region k, MWh
+
+    YC_{ikt}$ interprovincial inflows in period t in region k, MWh
+
+
+    # Parameters
+
+
+    +   $C_{ikt}$ cost of energy resource i in period t in region k, GJ$
+
+    CAP_{ijt}$ investment costs of technology j in period t in region k, \$MW
+
+    OPVR_{ijt}$ variable costs of technology j in period t in region k, $/MW
+
+    OPFX_{ijt}$ fixed operational costs of technology j in period t in region k, $/MW
+
+    TOC_{ijt}$ costs of emission and distribution for technology j in period t in
+    region k, $/MW
+
+    CIM_{ikt}$ cost of electricity imported in period t in region k, \$MW
+
+    BEN_{ijt}$ benefit of electricity exports in period t in region k, \$MW
+
+    CTAX_{ijmt}$ amount of carbon tax with option m in period t in region k, \$MW
+
+    EXP_{ijt}$ existing electricity capacity of technology j in period t in region
+    k, MWh
+
+    EMF_{ijt}$ emission factor of technology j in period t in region k, CO2/MWh
+
+    AVE_{ikt}$ availability of energy resource i in period t in region k, GJ
+
+    AV_{ijt}$ maximum resource availability for technology j in period t in region
+    k, MW
+
+    WJ_{ijt}$ capacity requirement for technology j in period t in region k, MW
+
+    ETAR_{ijt}$ gas emission factor of technology j in period t in region k, CO2
+
+    EFI_{ijt}$ conversion efficiency of technology j in period t in region k, GJ/MW
+
+    DE_{ikt}$ electricity demand for demand j in period t in region k, hours
+
+    CF_{ijt}$ capacity factor of technology j in period t in region k, %%
+
+    PEX_{ikt}$ proportion of electricity exports in period t in region k, %
+
+    PCEX_{ikt}$ proportion of interprovincial electricity exports in period t in region
+    k, %
+
+    PCM_{ikt}$ proportion of interprovincial electricity imports in period t in region
+    k, %
+
+    LOSS_{ikt}$ power transmission loss rate in period t, region k, %
+
+
+    # Appendix B. Section description
+
+
+    Table B1 nSection description of CA-EIOT.
+
+
+    | Section Description | Description | Code | Abbreviation |
+
+    | :--- | :--- | :--- | :--- |
+
+    | **National-Level** | Agriculture, forestry, fishing and hunting | 1 | AGRF |
+
+    | | Oil and gas extraction | 2 | OGEX |
+
+    | | Mining and quarrying | 3 | MIDQ |
+
+    | | Natural gas distribution, water, sewage and other systems | 4 | NWIS |
+
+    | | Construction | 5 | CONS |
+
+    | | Other manufacturing | 6 | OMAN |
+
+    | | Paper manufacturing | 7 | PAFM |
+
+    | | Chemical manufacturing | 8 | CHEM |
+
+    | | Primary metal manufacturing | 9 | PMT |
+
+    | | Electrical equipment manufacturing | 10 | EQFM |
+
+    | | Wholesale trade | 11 | WELT |
+
+    | | Retail trade | 12 | RETL |
+
+    | | Transportation and warehousing | 13 | TRNS |
+
+    | | Services | 14 | SERV |
+
+    | **Provincial/Territorial-Level** | Electric power generation, transmission and
+    distribution | 15 | BCEL |
+
+    | | Manitoba | 16 | MBEL |
+
+    | | Ontario | 17 | ONEL |
+
+    | (continued on next page) | | |
+
+
+    13'
+  - "[PAGE 13]\n\nL. Chen et al.\n\nJournal of Clean Production 420 (2023) 138363\n\
+    \n# Table B1 (continued)\n\n| Section Description | Code |\n|---|---|\n| Quebec\
+    \ | 18 QCBEL |\n| New Brunswick | 19 NBEL |\n| Nova Scotia | 20 NSEL |\n| Prince\
+    \ Edward Island | 21 PEEL |\n| Newfoundland and Labrador | 22 NEPL |\n| The Territories\
+    \ | 23 TEEL |\n| Alberta Technology Level | 24 ABNG |\n| Natural gas-fired power\
+    \ | 25 ABCO |\n| Coal-fire power | 26 ABHO |\n| Hydropower | 27 ARBW |\n| Wind\
+    \ power | 28 ABWIN |\n| Biomass | 29 ABBS |\n| Small molecular reactor | 30 ABSR\
+    \ |\n| Saskatchewan Natural gas-fired power | 31 SKNG |\n| Coal-fire power | 32\
+    \ SKCO |\n| Hydropower | 33 SKKY |\n| Wind power | 34 SKWN |\n| Solar power |\
+    \ 35 SKSO |\n| Biomass | 36 SKIM |\n| Small molecular reactor | 37 SKSR |\n\n\
+    # ## Appendix Supplementary data\n\nSupplementary data to this article can be\
+    \ found at https://doi.org/10.1016/j.jclepro.2023.138363.\n\n# References\n\n\
+    Böringer, C., Ruterhoff, T.F., and Todd, F. 2009. Assessment of energy management\
+    \ policies: decoupling de-growth and beyond. J. Econ. Dyn. 33(4), 1648–1661.\n\
+    \nCanada Energy Regulator, 2021. Canada’s Energy Future 2021; https://www.cer-rec.gc/en/data-reports/canada-energy-future-2021/\n\
+    \nCarroll, D.S., Strechan, K.A., 2021. The impact of carbon pricing on emissions\
+    \ and federal revenue of a carbon tax in the U.S. electricity sector. Energy Policy,\
+    \ 158, 112526\n\nCharles, A., Wood, W.W. 1999. Chance-constrained programming.\
+    \ Mag. Soc. 62(3), 625–640.\n\nDaily, E.H., Strachan, K., 2017. CO2 emission impacts\
+    \ of energy systems policies: using IO and TIMES models for the UK. Energy Policy,\
+    \ 106, 993–1005.\n\nDohlowera, G., Fogasi, A., Honsius, H., Massacre, J., Iduag,\
+    \ E., Sow, A., and Umour, E. 2018. A Comprehensive Guide to Electricity Generation\
+    \ Options in Canada. Energy Policy, 115, 715–726.\n\nClimate and Change Canada,\
+    \ 2022. National Inventory Report: Greenhouse Gas Emissions of Canada, 2020; https://www.canada.ca/en/environment-climate-change/services/climatechange/greenhouse-gas-emissions/inventory.html\n\
+    \nClimate and Change Canada, 2022. A clean electricity standard in the north of\
+    \ North America; https://www.canada.ca/en/environment-climate-change/services/climatechange/environmental-policy-strategy/clean-electricity-standard.html\
+    \ (Accessed 7 August 2022).\n\nGovernment of Canada, 2020. National Inventory\
+    \ Report: Greenhouse Gas Emissions of Canada, 2019. Energy Policy, 139, 106960.\n\
+    \nGovernment of Canada, 2021. Canada’s Nationally Determined Contribution; https://www.canada.ca/en/environment-climate-change/services/climatechange/action-climate/nationally-determined-contribution.html\
+    \ (Accessed 30 November 2022).\n\nGovernment of Canada, 2021. Global Phase-Out:\
+    \ The Paris Policy Alignment Commitment; https://www.canada.ca/en/environment-climate-change/services/climatechange/action-climate/paris-policy-alignment.html\
+    \ (Accessed 13 January 2022).\n\nHeller, T., 2005. Growth and Climate Change:\
+    \ Canada’s Plan to Address Climate Change and the Green Economy. Environment Policy,\
+    \ 10, 13–20.\n\nHansen, E., Avasov, V., Onagorski, T., 2018. Using a high-level\
+    \ model to analyze climate gas emissions from energy transport. Energy Policy,\
+    \ 156, 119–128.\n\nIgar, M. 2022. Integrating fossil gas and power systems for\
+    \ the transition to a low carbon future. Energy Policy, 165, 115896. \n\nJanssen,\
+    \ U.K., van der Weij, J., 2021. Intergenerational Policy on Climate Change: Mitigation\
+    \ pathways and equity-based frameworks. Energy Policy, 159, 111911.\n\nIntergenerational\
+    \ Policy on Climate Change, 2022. Mitigation pathways and equity-based frameworks.\
+    \ Energy Policy, 159, 111911.\n\n14"
+  - '[PAGE 14]
+
+
+    Lindner, S., Legler, J., Kraus, G., 2012. Developing insogenous-output models
+    with incomplete information. Econ. Strat. Res. 24, 329-347. https://doi.org/10.1016/S0304-3979(12)00014-4
+
+
+    Liu, B., Huang, H., Chen, J., Zhang, X., Zhao, K., 2021. A chance-constrained
+    small modular reactor system – a case study for the Province of Saskatchewan,
+    Canada. Int. Econ. Res. 148, 112810. https://doi.org/10.1016/j.irec.2021.112810
+
+
+    Miller, T., Cole, W., Watts, N., 2021. The impact of the 2019 energy price crisis
+    on carbon emissions: evidence from the United Kingdom. Energy Policy, 158, 112539.
+    https://doi.org/10.1016/j.enerpol.2021.112539
+
+
+    Martinez, A., Silva, J. M., Oliveira, M., 2020. Optimization of renewable energy
+    and carbon footprint for electric electricity systems using multi-objective programming.
+    Elect. Prog. 127, 969-978.
+
+
+    Wei, M., Zeng, J., Zhang, H., Chen, X., Yan, Y., Yuan, M., 2018. A multi-region
+    input-output table mapping: China''s carbon emissions and output intensities over
+    two decades. J. Clean. Prod. 192, 545-550.
+
+
+    Miller, R., Reich, P. D., 2009. Input-Output Analysis: Foundations and Extensions.
+    Cambridge: Cambridge University Press.
+
+
+    Pavicevic, M., Mangano, A., Niho, M., Benlich, V., Kamizawa, Navarro, J., Colak,
+    P., 2020. The potential of carbon sequestration in European energy systems using
+    the DIAS-SET and EU-TIBES models. Energy Strategy Soc. 11, 100318. https://doi.org/10.1016/j.esestyroc.2020.100318
+
+
+    Sajid, M. J., Li, X., Cao, Q., 2019. Demand and supply-side carbon linkages of
+    Turkish industry: An input-output analysis. J. Clean. Prod. 229, 109684. https://doi.org/10.1016/j.jclepro.2019.109684
+
+
+    Sajid, M. J., Qian, Q., Wang, K., Wang, Y., 2020. Impacts of industrial consumption
+    on carbon emissions: A multi-regional input-output analysis. Sci Rep. 10, 1-10.
+    https://doi.org/10.1038/s41598-020-58814-x
+
+
+    Sajid, M. J., Santanjon Gonzalez, O., E. R., 2021. The role of labor and capital
+    in global carbon emissions: A multi-regional input-output analysis. Energy Econ.
+    102, 105281. https://doi.org/10.1016/j.energyeco.2021.105281
+
+
+    Senthil, I., 2021. Modeling carbon emissions forecasting using intuitionistic
+    fuzzy environment. Int. J. Fuzzy Syst. Appl. Mag. 11, 189-222. https://doi.org/10.1007/s12542-019-0311-y
+
+
+    Senthil, K., 2020. Developing a new approach to solve solid assignment problems
+    under intuitionistic fuzzy environment. Int. J. Fuzzy Syst. Appl. 9, 1-34. https://doi.org/10.1007/s12542-019-0045-x
+
+
+    Senthil, K., 2019. Intuitionistic fuzzy solid assignment problems: a software-based
+    approach. Int. J. Fuzzy Syst. Appl. Mag. 11, 661-675. https://doi.org/10.1007/s13198-019-0974-w
+
+
+    Senthil Kumar K., 2020. Solving for Insolvent Fuzzy Transportation Problems, pp.
+    62-99. Springer. https://link.springer.com/book/resodul/...
+
+
+    Shen, Y., Wang, J., Sun, J., Fan, M., Peng, K., Dong, Y., 2020. A comprehensive
+    review of renewable energy levelized cost of electricity. Sustain. Energy Res.
+    123, 113081. https://doi.org/10.1016/j.renene.2020.113081
+
+
+    Sinha, 2021. Statistics. Canada. Input-Output Tables. https://www.statcan.gc.ca/en/n1/t001/t001e0
+
+
+    Shao, J., Wang J., Wang, Y., Zhang, H., Tang, G., Guo, K., 2022. Risk-aware power
+    distribution networks considering dynamic-financial pricing, carbon trading, and
+    solid waste recycling: a fuzzy programming approach. Int. J. Elect. Power 103,
+    105333.
+
+
+    Vaccaro, R., Rocca, M., 2021. Assessing the impact of low carbon transformation
+    on energy efficiency: a case study of Italy''s energy intensity. Energy, 219,
+    119742. https://doi.org/10.1016/j.energy.2021.119742
+
+
+    Vogle, S., Kamubchicka, W., Markewicz, P., 2009. A fuzzy energy model to analyze
+    carbon dioxide reductions policies of Germany. Int. J. Fuzzy Syst. 19(4), 581-600.
+    https://doi.org/10.1007/s10542-008-0063-z
+
+
+    Wang, L., Huang, G., Wang, X., Zhao, H., 2018. Risk-based electricity power system
+    planning for low carbon development: A fuzzy multi-objective optimization. Energy,
+    172, 204-217. https://doi.org/10.1016/j.energy.2018.03.071
+
+
+    Wang, S., Hu, J., 2022. The contribution of Chinese industry to export climate
+    change. Energy Policy 165, 112976. https://doi.org/10.1016/j.energypol.2022.112976
+
+
+    Weldner, L., Ryser, S.D., Kotarz, L., Robins, M., Moltnar, D., 2018. Spatio-temporal
+    optimization of the energy supply for power-electricity systems using intuitionistic
+    fuzzy environment. Energy 168, 640-653.
+
+
+    Wylie, A., 1984. A review of multi-regional input-output models for consumption-based
+    emission and resource accounting. Ecol. Econ. Res. 69, 211-222.
+
+
+    Xiao, Z., Du, Y., Liu, Y., Li, X., Guo, L., 2022. Time variant interval interval
+    programming for carbon emission-constrained power system planning. Energy 253,
+    120453.
+
+
+    Zhang, J., Liu, Y., 2022. Development of a stochastic lifecycle model for electric
+    power system planning – a case study for the Province of Saskatchewan, Canada.
+    Sustain. Energy Res. 158, 110444. https://doi.org/10.1016/j.renene.2022.110444'
