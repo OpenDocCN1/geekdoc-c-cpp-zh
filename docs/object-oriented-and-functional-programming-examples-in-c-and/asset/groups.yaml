@@ -1,0 +1,3744 @@
+- md: "\n# For Dummies\nExamples in C# and Python\n\n# OBJECT ORIENTED AND FUNCTIONAL\
+    \ PROGRAMMING\n\nLEONEL PEÑA\n\n![](img/5837c8935ecd30c8ae021c4977b70059_1_0.png)\n\
+    \nLeonel Peña\nleonelqpena@gmail.com\n\n# OBJECT ORIENTED AND FUNCTIONAL PROGRAMMING\n\
+    \nExamples in C# and Python\n\n# PREFACE\n\n- ADVANTAGES AND DISADVANTAGES OF\
+    \ FUNCTIONAL PROGRAMMING\n- CONCEPTS\n- PURE FUNCTIONS\n- FUNCTION COMPOSITION\n\
+    - RECURSIVE FUNCTIONS\n- HIGH ORDER FUNCTION\n- FUNCTIONAL PROGRAMMING PRINCIPLES\n\
+    - PRACTICE PLEASE!\n- LAMBDA\n- CLOSURES\n- FILTER\n- MAP\n- REDUCE\n- FUNCTIONAL\
+    \ LANGUAGES\n- COMPLEMENT PYTHON\n- FUNCTIONAL PROGRAMMING VS ORIENTED OBJECT\
+    \ PROGRAMMING\n- OBJECT ORIENTED PROGRAMMING\n- STRUCTURED PROGRAMMING PARADIGM\n\
+    - OBJECT-ORIENTED PROGRAMMING PARADIGM\n- LOGIC PROGRAMMING PARADIGM\n- FUNCTIONAL\
+    \ PROGRAMMING PARADIGM\n- DECLARATIVE AND IMPERATIVE PARADIGMS\n- DIFFERENCE BETWEEN\
+    \ DECLARATIVE AND IMPERATIVE LANGUAGES\n- WHAT IS PROGRAMMING?\n- WHAT IS AN OBJECT-ORIENTED\
+    \ PROGRAMMING?\n- OBJECTIVES OF AN OBJECT-ORIENTED PARADIGM\n- OOP MAKES IT EASILY\
+    \ TO CREATE SOFTWARE QUALITY\n- BEST MAINTENANCE\n- IMPROVE FEATURE EXTENSION\n\
+    - IMPROVES SOFTWARE REUSE\n- OOP USES A REAL-WORLD OBJECTS\n- OOP USESCEPTS OF\
+    \ OBJECTS AND CLASSES\n- INTRODUCTION TO CLASSES AND OBJECTS\n- CLASS\n- OBJECT\n\
+    - DIFFERENCE BETWEEN OBJECT AND CLASS\n- PRINCIPLES OF THE OBJECT-ORIENTED PARADIGM\n\
+    - ABSTRACTION\n- ENCAPSULATION\n- MODULARITY\n- HERITAGE\n- POLYMORPHISM\n- TYPE\
+    \ SYSTEM\n- What is a Data Type?\n- Weakly Typed Language\n- Strongly Typed Language\n\
+    - So, what is a polymorphism?\n- SUMMARY\n\n# PREFACE\n\nHello!\n\nIn this course\
+    \ of “OBJECT ORIENTED AND FUNCTIONAL PROGRAMMING” we will see the concepts of\
+    \ OOP and Functional Programming and we will analyze some functions with examples\
+    \ in C# and Python.\n\nFirst, it should be clarified that it is not the objective\
+    \ of this book to deepen teach about C# or Python, but rather to know the fundamental\
+    \ concepts of OOP and Functional Programming and see examples of it in those programming\
+    \ languages.\n\nWe will observe the advantages, disadvantages and characteristics\
+    \ of these paradigms and we will see the Principles of Functional Programming\
+    \ with learn their principles. We will also see the languages that support it\
+    \ and the examples of lambda, closures, filter, map, reduce and about OOP we will\
+    \ learn the relationship between OOP and FP.\n\nEasy. You don't need to know it.\
+    \ This book provides basic concepts, for beginners, on OOP and Functional Programming.\n\
+    \nIt is not essential that you have some previous knowledge although it is necessary\
+    \ that you have some knowledge of computer science and programming in general\
+    \ (if it is C# or Python better), since no explanation of Fundamentals of Programming\
+    \ will be provided.\n\nLet's get started!\n\nLeonel Peña\n\n# NOTE\n\nThe first\
+    \ version of this book had been written in Spanish. So, the examples are in that\
+    \ language. This is not a problem to understand the concepts of OOP and Functional\
+    \ Programming.\n\n# FUNCTIONAL PROGRAMMING\n\nThe Functional Programming is a\
+    \ declarative paradigm which has been gaining a lot of popularity lately and,\
+    \ in order not to be left behind, it would be important that you learn it. Even\
+    \ languages that are strongly Object Oriented had to incorporate Functional Programming\
+    \ due to their high increasing use, such as Java, which in version 8 incorporated\
+    \ elements of this type of programming.\n\nFunctional Programming emphasizes WHAT\
+    \ we are doing and not HOW we are doing it. This is called the Imperative Approach.\n\
+    \nFunctional language emphasizes statements rather than executing statements,\
+    \ unlike other types of languages that emphasize a local or global state.\n\n\
+    We will not describe flow controls; we will not use cycles or conditions. These\
+    \ ideas were based on the lambda calculus.\n\nLISP was the first language used,\
+    \ developed in 1960.\n\nOn the other hand, there is another term that is also\
+    \ gaining popularity, which is Reactive Programming, and this also uses Functional\
+    \ Programming, However, we will not go into Reactive Programming as it will be\
+    \ the subject of another book.\n\n# ADVANTAGES AND DISADVANTAGES OF FUNCTIONAL\
+    \ PROGRAMMING\n\nLike any programming paradigm, there are advantages and disadvantages\
+    \ that we must know before understanding whether it is good for a type of software\
+    \ project.\nThe advantages are as follows:\n\n- Functions are treated as values\
+    \ - improves code understanding and readability.\n- Supports the concept of lazy\
+    \ evaluation: it means that the value is only evaluated and stored when necessary.\n\
+    - The flow is clear: the state is not changed implicitly.\n- Efficient use of\
+    \ concurrency: due to the nature of pure functions that prevent variables from\
+    \ changing.\n- They do not have assignment statements: after a value is passed\
+    \ to a variable, it will not change (constant).\n- Focus on the WHAT and not the\
+    \ HOW.\n\n- On the other hand, there are some disadvantages that you need to know:\n\
+    - It is not easy: it is a bit complicated to learn for a beginner and even more\
+    \ so if it comes from Object Oriented Programming.\n- Difficult to maintain because\
+    \ there is the evolution of objects\n- Complicated needs: needs refactoring\n\
+    - Complication when representing real world objects\n\nIn short, each programmer\
+    \ is different and must know when to use which paradigm, since neither is a panacea,\
+    \ and all have their pros and cons.\nHowever, we will see later the differences\
+    \ between Functional Programming and Object-Oriented Programming.\n\n# CONCEPTS\n\
+    \n- There are 4 fundamental concepts of Functional Programming:\n- PURE FUNCTIONS\n\
+    - COMPOSITION OF FUNCTIONS\n- RECURSIVE FUNCTIONS\n- HIGH ORDER FUNCTIONS\n\n\
+    Let's look at each of these key concepts.\n\n# PURE FUNCTIONS\n\nA function is\
+    \ P, when it meets these fundamental requirements:\n- Same arguments always return\
+    \ the same. This is called referential transparency.\n- It has no collateral effect.\n\
+    \nLet's clarify the terms a bit. Referential transparency implies that the behavior\
+    \ of pure functions depends only on the arguments passed to the function in an\
+    \ explicit way.\nIt means if you pass the same input data, the function should\
+    \ generate the same return value.\nExample:\n\n```\nconst sum = (a, b) => (a +\
+    \ b);\nsum(1, 2); // 5\nsum(1, 2); // 5\n```\n\nIn this sum function, we pass\
+    \ it 2 numeric arguments (1 and 2), it should always return the same result. If\
+    \ we replaced the sum (1,2) invocations with 3 in our program, everything should\
+    \ still work fine. This is thanks to Referential Transparency.\n\nAs for the Collateral\
+    \ Effects, we mean that it does not affect the state outside its scope and that\
+    \ it has no interaction with the functions that call it or the outside world,\
+    \ beyond returning a value.\nSo, in summary, the Pure Function returns the same\
+    \ result every time I invoke it.\nIt differs from Impure Functions since the latter,\
+    \ in various calls, can return different values since the declared variables are\
+    \ not local. This is not recommended.\nLet's continue with the following concepts.\n\
+    \n# FUNCTION COMPOSITION\n\nThis concept comes from the hand of the creation of\
+    \ complex functions or other small ones.\nFor example, we have function 1 that\
+    \ receives the parameter X and returns the value Y and function 2 that receives\
+    \ the parameter A and returns the value \"Hello\".\nFrom these 2 functions we\
+    \ can create a third function that processes parameters and returns another result,\
+    \ using its logic, function 1 and 2.\nExample:\n\n```\nalCuadrado(numero):\n \
+    \ return numero * numero\n\nsumaDeCuadrados(num1,num2):\n  return alCuadrado(num1)\
+    \ + alCuadrado(num2)\n\nprint(sumaDeCuadrados(3, 4))\n```\n\nThe function alCuadrado\
+    \ receives a number and returns its square.\n\nThe function sumaDeCuadrados receives\
+    \ 2 numbers and in turn calls the function alCuadrado 2 times, making its sum\
+    \ with 2 numbers as a parameter.\nFinally, we will make a third function that\
+    \ we will call cuadradoAntecesorMasSucesor, which receives a number and calls\
+    \ the\n"
+  mdcn: "\n\n# 自呆教程 (For Dummies)\nC# 与 Python 示例\n\n# 面向对象与函数编程\n\nLEONEL PEÑA\n\n\
+    ![](img/5837c8935ecd30c8ae021c4977b70059_1_0.png)\n\nLeonel Peña\nleonelqpena@gmail.com\n\
+    \n# 面向对象与函数编程\n\nC# 与 Python 示例\n\n# 前言\n\n- 函数式编程的优缺点\n- 核心概念\n- 纯函数\n- 函数组合\n\
+    - 递归函数\n- 高阶函数\n- 函数式编程原则\n- 请开始练习！\n- Lambda\n- 闭包\n- Filter (过滤)\n- Map (映射)\n\
+    - Reduce (归约)\n- 函数式语言\n- 补充 Python\n- 函数式编程 vs 面对象编程\n- 面向对象编程\n- 结构化编程范式\n-\
+    \ 面向对象编程范式\n- 逻辑编程范式\n- 函数式编程范式\n- 声明式与命令式范式\n- 声明式与命令式语言的区别\n- 什么是编程？\n- 什么是面向对象编程？\n\
+    - 面向对象范式的目标\n- OOP 如何易于创建高质量软件\n- 最佳维护\n- 改进功能扩展\n- 提高软件复用\n- OOP 使用真实世界对象\n-\
+    \ OOP 使用对象和类的概念\n- 类与对象的介绍\n- 类\n- 对象\n- 对象与类的区别\n- 面向对象范式的原则\n- 抽象\n- 封装\n- 模块化\n\
+    - 继承\n- 多态\n- 类型系统\n- 什么是数据类型？\n- 弱类型语言\n- 强类型语言\n- 那么，什么是多态？\n- 总结\n\n# 前言\n\n\
+    你好！\n\n在“面向对象与函数编程”课程，我们将学习 OOP 和函数式编程的概念，并通过 C# 和 Python 的示例来分析一些函数。\n\n首先需要明确的是，本书的目的并不是深入教授\
+    \ C# 或 Python，而是了解 OOP 和函数式编程的基本概念，并在这些编程语言中看到它们的示例。\n\n我们将观察这些范式的优点、缺点和特征，并通过学习其原理来了解函数式编程原则。我们还将看到支持它的语言以及\
+    \ lambda、闭包、filter、map、reduce 的示例。关于 OOP，我们将学习 OOP 与 FP（函数式编程）之间的关系。\n\n很简单。你不需要预先了解。本书为初学者提供了关于\
+    \ OOP 和函数式编程的基础概念。\n\n你不需要具备某些先验知识，但你必须对计算机科学和通用编程有所了解（如果是 C# 或 Python 话更好），因为我们不会提供关于编程基础的解释。\n\
+    \n让我们开始吧！\n\nLeonel Peña\n\n# 注意\n\n本书的第一版本是用西班牙语编写的。因此，示例使用的是该语言。这对于理解 OOP 和函数式编程的概念没有影响。\n\
+    \n# 函数式编程\n\n函数式编程是一种声明式范式，最近非常流行，为了不掉队，学习它是非常重要的。即使是强面向对象的语言也由于其使用率的不断增加而不得不引入函数式编程，例如\
+    \ Java，在第 8 版本中引入了此类编程的元素。\n\n函数式编程强调我们正在**做什么**，而不是我们**怎么做**。这被称为命令式方法。\n\n函数式语言强调语句而非执行语句，这与其他强调局部或全局状态的语言类型不同。\n\
+    \n我们不会描述流控制；我们不会使用循环或条件。这些思想基于 lambda 演算。\n\nLISP 是第一个被使用的语言，开发于 1960 年。\n\n另一方面，另一个日益流行的术语是响应式编程\
+    \ (Reactive Programming)，它也使用了函数式编程。然而，我们不会深入响应式编程，因为它将是另一本书的主题。\n\n# 函数式编程的优缺点\n\
+    \n像任何编程范式一样，在理解它是否适用于某种软件项目之前，我们必须知道优缺点。\n优点如下：\n\n- 函数被视为值 - 提高了代码理解和可读性。\n-\
+    \ 支持惰性求概念：意味着只有在需要时才对值进行求值和存储。\n- 流清晰：状态不会被隐式改变。\n- 高效利用并发：由于纯函数的特性，防止了变量改变。\n\
+    - 没有赋值语句：值传递给变量后，它将不会改变（常量）。\n- 关注“做什么”而不是“怎么做”。\n\n- 另一方面，你还需要了解一些缺点：\n- 并不简单：对初学者来说学习有点复杂，如果来自面向对象编程则更是如此。\n\
+    - 难以维护，因为存在对象的演变。\n- 复杂的需求：需要重构。\n- 在表示真实世界对象时的复杂性。\n\n简而言之，每个程序员都是不同的，并且必须知道在何时使用哪种范式，因为两者都不是万灵药，而且它们都有自己的优缺点。\n\
+    然而，我们稍后将看到函数式编程和面向对象编程的区别。\n\n# 概念\n\n- 函数式编程有 4 个基本概念：\n- 纯函数\n- 函数组合\n- 递归函数\n\
+    - 高阶函数\n\n让我们来看这些核心概念。\n\n# 纯函数\n\n当一个函数满足以下基本要求时，它就是纯的（Pure）：\n- 相同的参数总是返回相同的结果。这被称为引用透明性。\n\
+    - 没有副作用。\n\n让我们稍微澄清一下术语。引用透明性意味着纯函数的行为完全取决于传递给函数的显式参数。\n这意味着如果你传递相同的输入数据，函数应该生成相同的返回值。\n\
+    示例：\n\n```javascript\nconst sum = (a, b) => (a + b);\nsum(1, 2); // 5\nsum(1,\
+    \ 2); // 5\n```\n\n在这个 sum 函数中，我们传递了两个数值参数（1 和 2），它总是返回相同的结果。如果我们在程序中将 sum(1,2)\
+    \ 的调用替换为 3，一切仍然会正常运行。这归功引用透明性。\n\n至于副作用，我们的意思是不会影响范围之外的状态，除了返回返回值外，与调用它的函数或外部世界没有任何交互。\n\
+    总之，纯函数每次被调用都会返回相同的结果。\n它与不纯函数不同，后者在多次调用中可能会返回不同的值，因为定义的变量不是局部的。这是不推荐的。\n让我们继续后续概念。\n\
+    \n# 函数组合\n\n这个概念源于创建复杂函数或其他小函数。\n例如，我们有一个函数 1 接收参数 X 并返回值 Y，函数 2 接收参数 A 并返回值“Hello”。\n\
+    通过这两个函数，我们可以创建一个第三个函数，它处理参数并返回另一个结果，并使用它的逻辑、函数 1 和 2。\n示例：\n\n```python\nalCuadrado(numero):\n\
+    \  return numero * numero\n\nsumaDeCuadrados(num1,num2):\n  return alCuadrado(num1)\
+    \ + alCuadrado(num2)\n\nprint(sumaDeCuadrados(3, 4))\n```\n\nalCuadrado 接收一个数字并返回它的平方。\n\
+    \nsumaDeCuadrados 接收两个数字，并反调用两次 alCuadrado 函数，将两个数字作为参数进行求和。\n最后，我们将制作一个名为 cuadradoAntecesorMasSucesor\
+    \ 的第三个函数，它接收一个数字并调用\n\n"
+  merge: -1
+  raw:
+  - '[PAGE 0]
+
+
+    # For Dummies
+
+    Examples in C# and Python
+
+
+    # OBJECT
+
+    ORIENTED AND
+
+    FUNCTIONAL
+
+    PROGRAMMING
+
+
+    LEONEL PEÑA'
+  - '[PAGE 1]
+
+
+    ![](img/5837c8935ecd30c8ae021c4977b70059_1_0.png)
+
+
+    Leonel Peña
+
+    leonelqpena@gmail.com
+
+
+    # # OBJECT ORIENTED
+
+    AND FUNCTIONAL
+
+    PROGRAMMING
+
+
+    Examples in C# and Python'
+  - '[PAGE 2]
+
+
+    # PREFACE
+
+
+    # FUNCTIONAL PROGRAMMING
+
+
+    +   ADVANTAGES AND DISADVANTAGES OF FUNCTIONAL PROGRAMMING
+
+
+    +   CONCEPTS
+
+
+    +   PURE FUNCTIONS
+
+
+    +   FUNCTION COMPOSITION
+
+
+    +   RECURSIVE FUNCTIONS
+
+
+    +   HIGH ORDER FUNCTION
+
+
+    +   FUNCTIONAL PROGRAMMING PRINCIPLES
+
+
+    +   PRACTICE PLEASE!
+
+
+    +   LAMBDA
+
+
+    +   CLOSURES
+
+
+    +   FILTER
+
+
+    +   MAP
+
+
+    +   REDUCE
+
+
+    +   FUNCTIONAL LANGUAGES
+
+
+    +   COMPLEMENT PYTHON
+
+
+    +   FUNCTIONAL PROGRAMMING VS ORIENTED OBJECT PROGRAMMING
+
+
+    +   OBJECT ORIED PROGRAMMING
+
+
+    +   STRUCTURED PROGRAMMING PARADIGM
+
+
+    +   OBJECT-ORIENTED PROGRAMMING PARADIGM
+
+
+    +   LOGIC PROGRAMMING PARADIGM
+
+
+    +   FUNCTIONAL PROGRAMMING PARADIGM
+
+
+    +   DECLARATIVE AND IMPERATIVE PARADIGMS
+
+
+    +   DIFFERENCE BETWEEN DECLARATIVE AND IMPERATIVE LANGUAGES
+
+
+    +   WHAT IS PROGRAMMING?
+
+
+    +   WHAT IS AN OBJECT-ORIENTED PROGRAMMING?
+
+
+    +   OBJETIVES OF AN OBJECT-ORIENTED PARADIGM
+
+
+    +   OOP MAKES IT EASILY TO CREATE SOFTWARE QUALITY
+
+
+    +   BEST MAINTENANCE
+
+
+    +   IMPROVE FEATURE EXTENSION'
+  - '[PAGE 3]
+
+
+    # IMPROVES SOFTWARE REUSE
+
+
+    # IMPROVE USABILITY
+
+
+    # OOP USES A REAL-WORLD OBJECTS
+
+
+    # OOP USES CONCEPTS OF OBJECTS AND CLASSES
+
+
+    # INTRODUCTION TO CLASSES AND OBJECTS
+
+
+    # CLASS
+
+
+    # OBJECT
+
+
+    # DIFFERENCE BETWEEN OBJECT AND CLASS
+
+
+    # PRINCIPLES OF THE OBJECT-ORIENTED PARADIGM
+
+
+    # ABSTRACTION
+
+
+    # ENCAPSULATION
+
+
+    # MODULARITY
+
+
+    # HERITAGE
+
+
+    # POLYMORPHISM
+
+
+    # TYPE SYSTEM
+
+
+    # What is a Data Type?
+
+
+    # Weakly Typed Language
+
+
+    # Strongly Typed Language
+
+
+    # So, what is a polymorphism?
+
+
+    # SUMMARY'
+  - '[PAGE 4]
+
+
+    # PREFACE
+
+
+    Hello!
+
+
+    In this course of “OBJECT ORIENTED AND FUNCTIONAL PROGRAMMING” we will see the
+    concepts of OOP and Functional Programming and we will analyze some functions
+    with examples in C# and Python.
+
+
+    First, it should be clarified that it is not the objective of this book to deepen
+    teach about C# or Python, but rather to know the fundamental concepts of OOP and
+    Functional Programming and see examples of it in those programming languages.
+
+
+    We will observe the advantages, disadvantages and characteristics of these paradigms
+    and we will see the Principles of Functional Programming with learn their principles.
+    We will also see the languages that support it and the examples of lambda, closures,
+    filter, map, reduce and about OOP we will learn the relationship between OOP and
+    FP.
+
+
+    Easy. You don''t need to know it. This book provides basic concepts, for beginners,
+    on OOP and Functional Programming.
+
+
+    It is not essential that you have some previous knowledge although it is necessary
+    that you have some knowledge of computer science and programming in general (if
+    it is C# or Python better), since no explanation of Fundamentals of Programming
+    will be provided.
+
+
+    Let''s get started!
+
+
+    Leonel Peña'
+  - '[PAGE 5]
+
+
+    # NOTE
+
+
+    The first version of this book had been written in Spanish. So, the examples are
+    in that language. This is not a problem to understand the concepts of OOP and
+    Functional Programming.'
+  - '[PAGE 6]
+
+
+    # FUNCTIONAL PROGRAMMING
+
+
+    The Functional Programming is a declarative paradigm which has been gaining a
+    lot of popularity lately and, in order not to be left behind, it would be important
+    that you learn it. Even languages that are strongly Object Oriented had to incorporate
+    Functional Programming due to their high increasing use, such as Java, which in
+    version 8 incorporated elements of this type of programming.
+
+
+    Functional Programming emphasizes WHAT we are doing and not HOW we are doing it.
+    This is called the Imperative Approach.
+
+
+    Functional language emphasizes statements rather than executing statements, unlike
+    other types of languages that emphasize a local or global state.
+
+
+    We will not describe flow controls; we will not use cycles or conditions. These
+    ideas were based on the lambda calculus.
+
+
+    LISP was the first language used, developed in 1960.
+
+
+    On the other hand, there is another term that is also gaining popularity, which
+    is Reactive Programming, and this also uses Functional Programming, However, we
+    will not go into Reactive Programming as it will be the subject of another book.'
+  - '[PAGE 7]
+
+
+    # ADVANTAGES AND DISADVANTAGES OF FUNCTIONAL PROGRAMMING
+
+
+    Like any programming paradigm, there are advantages and disadvantages that we
+    must know before understanding whether it is good for a type of software project.
+
+    The advantages are as follows:
+
+
+    +   - Functions are treated as values - improves code understanding and readability.
+
+    - Supports the concept of lazy evaluation: it means that the value is only evaluated
+    and stored when necessary.
+
+    - The flow is clear: the state is not changed implicitly.
+
+    - Efficient use of concurrency: due to the nature of pure functions that prevent
+    variables from changing.
+
+    - They do not have assignment statements: after a value is passed to a variable,
+    it will not change (constant).
+
+    - Focus on the WHAT and not the HOW.
+
+
+    +   On the other hand, there are some disadvantages that you need to know:
+
+    - It is not easy: it is a bit complicated to learn for a beginner and even more
+    so if it comes from Object Oriented Programming.
+
+    - Difficult to maintain because there is the evolution of objects
+
+    - Complicated needs: needs refactoring
+
+    - Complication when representing real world objects
+
+
+    In short, each programmer is different and must know when to use which paradigm,
+    since neither is a panacea, and all have their pros and cons.
+
+    However, we will see later the differences between Functional Programming and
+    Object-Oriented Programming.
+
+
+    # CEPTS
+
+
+    +   There are 4 fundamental concepts of Functional Programming:
+
+    - PURE FUNCTIONS'
+  - '[PAGE 8]
+
+
+    +   • COMPOSITION OF FUNCTIONS
+
+    • RECURSIVE FUNCTIONS
+
+    • HIGH ORDER FUNCTIONS
+
+
+    Let''s look at each of these key concepts.
+
+
+    # PURE FUNCTIONS
+
+
+    A function is P, when it meets these fundamental requirements:
+
+    • Same arguments always return the same. This is called referential transparency.
+
+    • It has no collateral effect.
+
+
+    Let''s clarify the terms a bit. Referential transparency implies that the behavior
+    of pure functions depends only on the arguments passed to the function in an explicit
+    way.
+
+    It means if you pass the same input data, the function should generate the same
+    return value.
+
+    Example:
+
+
+    ```
+
+    const sum = (a, b) => (a + b);
+
+    sum(1, 2); // => 5
+
+    sum(1, 2); // => 5
+
+    ```
+
+
+    In this sum function, we pass it 2 numeric arguments (1 and 2), it should always
+    return the same result. If we replaced the sum (1,2) invocations with 3 in our
+    program, everything should still work fine. This is thanks to Referential Transparency.'
+  - "[PAGE 9]\n\nAs for the Collateral Effects, we mean that it does not affect the\
+    \ state outside its scope and that it has no interaction with the functions that\
+    \ call it or the outside world, beyond returning a value.\nSo, in summary, the\
+    \ Pure Function returns the same result every time I invoke it.\nIt differs from\
+    \ Impure Functions since the latter, in various calls, can return different values\
+    \ since the declared variables are not local. This is not recommended.\nLet's\
+    \ continue with the following concepts.\n\n# FUNCTION COMPOSITION\n\nThis concept\
+    \ comes from the hand of the creation of complex functions or other small ones.\n\
+    For example, we have function 1 that receives the parameter X and returns the\
+    \ value Y and function 2 that receives the parameter A and returns the value \"\
+    Hello\".\nFrom these 2 functions we can create a third function that processes\
+    \ parameters and returns another result, using its logic, function 1 and 2.\n\
+    Example:\n\n```\nalCuadrado(numero):\n  return numero * numero\n\nsumaDeCuadrados(num1,num2):\n\
+    \  return alCuadrado(num1) + alCuadrado(num2)\n\nprint(sumaDeCuadrados(3, 4))\n\
+    ```\n\nThe function alCuadrado receives a number and returns its square.\n\nThe\
+    \ function alCuadrado receives 2 numbers and in turn calls the function alCuadrado\
+    \ 2 times, making its sum with 2 numbers as a parameter.\nFinally, we will make\
+    \ a third function that we will call cuadradoAntecesorMasSucesor, which receives\
+    \ a number and calls the"
+- md: "\nsumaDeCuadrados function, but passing it the number before and after the\
+    \ one that comes as a parameter.\n\n```python\ndef cuadradoAntecesorMasSesor(numero):\n\
+    \    return sumaDeCuadrados(numero-1, numero+1)\n```\n\nOne of the qualities of\
+    \ FUNCTION COMPOSITION is that each function does its specific task, encouraging\
+    \ reuse in different parts of the program and makes the code much cleaner and\
+    \ more orderly.\nIt is bad practice to develop a large function that has many\
+    \ things to do. It is much more desirable to separate the functions into small\
+    \ parts and to have functions that compose another (hence the term COMPOSITION\
+    \ OF FUNCTIONS).\nAnother important concept of this topic is that when one uses\
+    \ functions within the logic of another function, one \"forgets\" how the internal\
+    \ function is created (one does not worry about the implementation, but rather\
+    \ we focus on what it receives and, in the result, to be made).\n\n# RECURSIVE\
+    \ FUNCTIONS\n\nLet's look at this topic on Recursive Functions. A function is\
+    \ Recursive when the body of the function uses the function itself. In this case,\
+    \ we can distinguish 2 parts:\n\n- Base cases: those that do not need the function\
+    \ being defined for their solution.\n- Recursive cases: those that do need to\
+    \ use the function that is being defined\n\nExample\n\n```python\ndef saludar(mensaje):\n\
+    \    print(mensaje)\n    saludar(mensaje)\n```\n\nWe see here that a function\
+    \ can call itself. The problem is that every time it is called, a loop is created.\
+    \ As there is no end condition, it will be an endless loop.\nIf we call this function\n\
+    \nsaludar(\"hey world\")\n\nThere will be an error that will fill the stack and\
+    \ throw an exception. It happens that the function was called so many times the\
+    \ compiler generated an error that stops the execution. This error is called Recursion\
+    \ Error, as we see below.\n\n> RecursionError: maximum recursion depth exceeded\
+    \ while calling a Python object\n\nLet's see another example of a Recursive Function\
+    \ with some improvement that makes this function have a benefit.\nFor this to\
+    \ happen, we must give the function a termination condition.\n\n```python\ndef\
+    \ duplicarLista(lista):\n    if (len(lista) == 1):\n        return [lista[0]*2]\n\
+    \    else:\n        return [lista[0]*2] + duplicarLista(lista[1:])\n\nmi_lista\
+    \ = [1,2,3,4]\nprint(duplicarLista(mi_lista))\n```\n\nLet's look at this recursive\
+    \ duplicarLista function bit.\nFirst, notice that we have an end condition that\
+    \ if the length (len) of the list is equal to 1, then it returns the first value\
+    \ of the list multiplied by 2, otherwise it calls the function again adding the\
+    \ following value (1 :)\nThen, we call the function passing the list of 4 elements\
+    \ (1, 2, 3 and 4) and we print it on the screen.\n\n[2, 4, 6, 8]\n\n# HIGH ORDER\
+    \ FUNCTION\n\nLet's move on to the last concept, which is probably the most interesting\
+    \ of the 4. These functions are special, since they can receive within their parameters,\
+    \ other functions and can return data types such as strings or they can return\
+    \ another function.\nLet's look at the previous example of the recursive function\
+    \ of duplicarLista. With this new concept, using functions as parameters, we can\
+    \ continue to improve this recursive function.\n\n```python\ndef duplicarLista(lista):\n\
+    \    if (len(lista) == 1):\n        return [lista[0]*2]\n    else:\n        return\
+    \ [lista[0]*2] + duplicarLista(lista[1:])\n```\n\n```python\nmi_lista = [1,2,3,4]\n\
+    print(duplicarLista(mi_lista))\n```\n\nNotice that in this function we are going\
+    \ through a list and we apply the duplicate action to each element of the list.\
+    \ Wouldn't it be better if this duplicate action were an action that came from\
+    \ a parameter of this function? Let's look at the example of a new function called\
+    \ mapearList.\n\n```python\ndef duplicar(numero):\n    return numero * 2\n```\n\
+    \n```python\ndef mapearLista(lista, accion):\n    if (len(lista) == 1):\n    \
+    \    return [accion(lista[0])]\n    else:\n        return [accion(lista[0])] +\
+    \ mapearList(lista[1:], accion)\n```\n\n```python\nmi_lista = [1,2,3,4]\nprint(mapearLista(mi_lista,\
+    \ duplicar))\n```\n\nAs we can see, we first create the mapearLista function,\
+    \ which we will pass an iterable list as a parameter and a function that we create\
+    \ outside, called duplicate. The rest is the same as the previous example in terms\
+    \ of what the mapearLista function does, with the difference that now we can pass\
+    \ it a function that performs different actions, in our example, it will duplicate\
+    \ a value, but later we can pass it a function that say triple and it will just\
+    \ triple the value.\n\nResult:\n\n```\n[2, 4, 6, 8]\n```\n\nPython is an interpreted\
+    \ programming language whose purpose is to emphasize or put emphasis on the readability\
+    \ of your code. It is a multipadigm programming language, so it supports object\
+    \ orientation, imperative programming and, in turn, functional programming. It\
+    \ has an open-source license called the Python Software Foundation License. This\
+    \ means that Python accepts various ways of working with the language. In this\
+    \ case, there are 3 predominant paradigms or, in other words, 3 specific formats\
+    \ of organizing a code.\n\n- IMPERATIVE PROGRAMMING (structured): The code is\
+    \ executed from the beginning file to the end. Its main advantage is its simplicity.\
+    \ Its downside, however, is spaghetti code. If you never know this term, that's\
+    \ where the term comes from. You will see code that is difficult to follow.\n\
+    - OBJECT-ORIENTED PROGRAMMING: In this case, variables and functions are encapsulated\
+    \ in small cohesive modules. Its strong point is capacity for reuse and isolation.\
+    \ The negative issue lies in complexity of creating Classes that will contain\
+    \ variables.\n- FUNCTIONAL PROGRAMMING: In this case, the code is divided into\
+    \ simple functions capable of being invoked from other functions. Its ease of\
+    \ use due to its atomicity achieves solid maintenance and compatibility with almost\
+    \ any language. In addition, its immutability of variables avoids the problems\
+    \ that OOP suffers from.\n\nThe principles of Functional Programming are the following:\n\
+    \n- USE OF FUNCTIONS: Everything is built by means of functions. This way of working\
+    \ is not only simple, orderly, clear, easy to test, but it is also practice. They\
+    \ clearly did not use Python (or at least there is no record of it), but they\
+    \ applied the concept of \"divide and conquer\".\n- FIRST CLASS FUNCTIONS: Functions\
+    \ are treated as one more variable. They can even be \"returned\". This concept\
+    \ means that one function can call another and this returns data.\n- PURE FUNCTIONS:\
+    \ It means that it is totally predictive. The same input data will produce the\
+    \ same output data. You can replace the input parameters without altering the\
+    \ flow of program. own- RECURSIVITY: Functions can call themselves, simplifying\
+    \ tasks such as traversing data trees or managing variables.\n- IMMUTABILITY:\
+    \ There are no variables, only constants. Basically, this concept implies understanding\
+    \ its potential and putting it into practice is like giving your brain a \"reset\"\
+    .\n\nSpeaking of this subject, IMMUTABILITY, the Software usually fail? In most\
+    \ cases, it comes from a variable that has been modified. This causes a block\
+    \ of code to be executed with conditions not foreseen by anyone. You will have\
+    \ to review each line to find the failure variable.\nI give you a reflection:\
+    \ what if you use variables that you cannot modify? In other words, what if we\
+    \ create a new constant for each modification? If I tell you that at the performance\
+    \ level this is more efficient? It is an interesting concept to apply.\n\nLet's\
+    \ continue with the principles.\n\nLAZY EVALUATION: Also called NON-STRICT. In\
+    \ Functional\n"
+  mdcn: "\n\n`sumaDeCuadrados` 函数，但传入的是参数数字的前一个和后一个。\n\n```python\ndef cuadradoAntecesorMasSesor(numero):\n\
+    \    return sumaDeCuadrados(numero-1, numero+1)\n```\n\n**函数组合**FUNCTION COMPOSITION）的优点之一是每个函数都执行其特定任务，鼓励在程序的不同部分复用，并使代码变得更加整洁和有序。\n\
+    编写一个有很多事情要做的大型函数是一个坏习惯。理想的做法是将函数拆分成小的部分，并让函数组合其他函数（因此称为**函数组合** COMPOSITION OF\
+    \ FUNCTIONS）。\n此主题的另一个重要概念是，当在另一个函数的逻辑内部使用函数时，人们会“忘记”内部函数是如何创建的（我们不需要担心实现细节，而是关注它接收了什么，以及结果将产生什么）。\n\
+    \n# 递归函数\n\n让我们来看递归函数这个主题。当一个函数的体使用了函数本身时，该函数就是递归的。在这种情况下，我们可以区分出 2 部分：\n\n- 基础情况（Base\
+    \ cases）：那些不需要定义的函数即可解决的情况。\n- 递归情况（Recursive cases）：那些确实需要使用正在定义的函数的情况。\n\n示例\n\
+    \n```python\ndef saludar(mensaje):\n    print(mensaje)\n    saludar(mensaje)\n\
+    ```\n\n我们在这里看到函数可以调用自己。问题是，每当它被调用时，就会创建一个循环。由于没有结束条件，它将是一个死循环。\n如果我们调用这个函数：\n\n\
+    saludar(\"hey world\")\n\n将会产生错误，它会填充堆栈并抛出异常。这是由于函数被调用的次数太多，导致编译器生成了로停止执行的错误。这个错误被称为**递归错误**（Recursion\
+    \ Error），如下所示。\n\n> RecursionError: maximum recursion depth exceeded while calling\
+    \ a Python object\n\n让我们看另一个改进后的递归函数示例，这种改进让该函数产生了收益。\n要实现这一点，我们必须给函数提供一个终止条件。\n\
+    \n```python\ndef duplicarLista(lista):\n    if (len(lista) == 1):\n        return\
+    \ [lista[0]*2]\n    else:\n        return [lista[0]*2] + duplicarLista(lista[1:])\n\
+    \nmi_lista = [1,2,3,4]\nprint(duplicarLista(mi_lista))\n```\n\n让我们来看这个递归的 `duplicarLista`\
+    \ 函数。\n首先，注意我们有一个结束条件：如果列表的长度（len）等于 1，则它返回列表的第一个值乘以 2，否则它会再次调用函数并加上下一个值（1 :)）。\n\
+    然后，我们传入包含 4 个元素的列表（1, 2, 3 和 4）并该函数，并在屏幕上打印结果。\n\n[2, 4, 6, 8]\n\n# 高阶函数\n\n让我们转向最后一个概念，这可能是\
+    \ 4 个概念中最有趣的。这些函数是特殊的，因为它们可以在参数中接收其他函数，并可以返回字符串等数据类型，或者返回另一个函数。\n看看之前递归函数 `duplicarLista`\
+    \ 的示例。通过这个新概念，将函数作为参数，我们可以继续改进这个递归函数。\n\n```python\ndef duplicarLista(lista):\n\
+    \    if (len(lista) == 1):\n        return [lista[0]*2]\n    else:\n        return\
+    \ [lista[0]*2] + duplicarLista(lista[1:])\n```\n\n```python\nmi_lista = [1,2,3,4]\n\
+    print(duplicarLista(mi_lista))\n```\n\n注意，在这个函数中，我们正在遍历列表并对列表的每个元素应用重复操作。如果这个重复操作是来自参数的动作，难道不是更好吗？这个重复操作是来自参数的动作。\n\
+    \n```python\ndef saludar(mensaje):\n    print(mensaje)\n```\n\n```python\ndef\
+    \ duplicar(accion, lista):\n    if (len(lista) == 1):\n        return [accion(lista[0])]\n\
+    \    else:\n        return [accion(lista[0])] + duplicar(accion, lista[1:])\n\
+    ```\n\n```python\nmi_lista = [1,2,3,4]\nprint(duplicar(lambda x: x*2, mi_lista))\n\
+    ```\n\n结果：\n\n```\n[2, 4, 6, 8]\n```\n\nPython 是一种解释型编程语言，其目的是强调代码的可读性。它支持多种范式，对象对象、命令式编程以及函数式编程。它拥有开源许可证，即\
+    \ Python Foundation 许可证。这意味着它允许多种方式工作。在这种情况下，有：\n\n- 命令式编程（Imperative Programming）：代码从开始执行到结束。它的主要优点是简单。但缺点是“面条代码”。如果你不知道这个术语，它源于此。\n\
+    - 面对象编程（Object-Oriented Programming）：在这种情况下，变量和函数被封装在内聚模块中。它的优点是可复用性和隔离性。面问题在于类的复杂性。\n\
+    - 函数式编程（Functional Programming）：在这种情况下，代码被分为可以相互调用的简单函数。它的易用性由于其原子性实现了良好的维护性。此外，它避免了变量所引起的问题。\n\
+    \n函数式编程的原则如下：\n\n- 使用函数：一切都通过函数构建。这种工作方式不仅简单、有序、清晰、易于测试，而且是*可预测*的。\n- 一等公民函数（First\
+    \ Class Functions）：函数被视为一种特殊的变量，甚至可以被返回。这个概念意味着一个函数可以调用另一个函数，并返回数据。\n- 递归性（Recursivity）：函数可以调用自己，简化了如遍历树或管理变量等任务。\n\
+    - 不变性（Immutability）：没有变量，只有常量。基本上，这个概念意味着理解其潜力并将其付诸实践就像给你的大脑重置。\n\n关于这个主题，不变性，软件通常会失败吗？大多数情况下，是由于一个被修改的变量。这导致代码块以无人无法预料的方式执行。你不得不检查每一行来找到出错的变量。\n\
+    \n我给你一个反思：如果你使用不可修改的变量呢？换句话说，如果我们每次修改都创建一个新的常量呢？如果我告诉你在性能方面这更高效呢？这是一个有趣的概念。\n\n\
+    惰性求\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 10]\n\nsumaDeCuadrados function, but passing it the number before and after\
+    \ the one that comes as a parameter.\n\n```\ndef cuadradoAntecesorMasSesor(numero):\n\
+    \    return sumaDeCuadrados(numero-1, numero+1)\n```\n\nOne of the qualities of\
+    \ FUNCTION COMPOSITION is that each function does its specific task, encouraging\
+    \ reuse in different parts of the program and makes the code much cleaner and\
+    \ more orderly.\nIt is bad practice to develop a large function that has many\
+    \ things to do. It is much more desirable to separate the functions into small\
+    \ parts and to have functions that compose another (hence the term COMPOSITION\
+    \ OF FUNCTIONS).\nAnother important concept of this topic is that when one uses\
+    \ functions within the logic of another function, one \"forgets\" how the internal\
+    \ function is created (one does not worry about the implementation, but rather\
+    \ we focus on what it receives and, in the result, to be made)."
+  - "[PAGE 11]\n\n# RECURSIVE FUNCTIONS\n\nLet's look at this topic on Recursive Functions.\
+    \ A function is Recursive when the body of the function uses the function itself.\
+    \ In this case, we can distinguish 2 parts:\n\n+   - Base cases: those that do\
+    \ not need the function being defined for their solution.\n- Recursive cases:\
+    \ those that do need to use the function that is being defined\n\nExample\n\n\
+    ```\ndef saludar(mensaje):\n    print(mensaje)\n    saludar(mensaje)\n```\n\n\
+    We see here that a function can call itself. The problem is that every time it\
+    \ is called, a loop is created. As there is no end condition, it will be an endless\
+    \ loop.\nIf we call this function\n\nsaludar(\"hey world\")\n\nThere will be an\
+    \ error that will fill the stack and throw an exception. It happens that the function\
+    \ was called so many times the compiler generated an error that stops the execution.\
+    \ This error is called Recursion Error, as we see below.\n\n> RecursionError:\
+    \ maximum recursion depth exceeded while calling a Python object\n\nLet's see\
+    \ another example of a Recursive Function with some improvement that makes this\
+    \ function have a benefit.\nFor this to happen, we must give the function a termination\
+    \ condition."
+  - "[PAGE 12]\n\n```\ndef duplicarLista(lista):\n    if (len(lista) == 1):\n    \
+    \    return [lista[0]*2]\n    else:\n        return [lista[0]*2] + duplicarLista(lista[1:])\n\
+    \nmi_lista = [1,2,3,4]\nprint(duplicarLista(mi_lista))\n```\n\nLet's look at this\
+    \ recursive duplicarLista function bit.\nFirst, notice that we have an end condition\
+    \ that if the length (len) of the list is equal to 1, then it returns the first\
+    \ value of the list multiplied by 2, otherwise it calls the function again adding\
+    \ the following value (1 :)\nThen, we call the function passing the list of 4\
+    \ elements (1, 2, 3 and 4) and we print it on the screen.\n\n[2, 4, 6, 8]\n\n\
+    # HIGH ORDER FUNCTION\n\nLet's move on to the last concept, which is probably\
+    \ the most interesting of the 4. These functions are special, since they can receive\
+    \ within their parameters, other functions and can return data types such as strings\
+    \ or they can return another function.\nLet's look at the previous example of\
+    \ the recursive function of duplicarLista. With this new concept, using functions\
+    \ as parameters, we can continue to improve this recursive function."
+  - "[PAGE 13]\n\n```\ndef duplicarLista(lista):\n    if (len(lista) == 1):\n    \
+    \    return [lista[0]*2]\n    else:\n        return [lista[0]*2] + duplicarLista(lista[1:])\n\
+    ```\n\n```\nmi_lista = [1,2,3,4]\nprint(duplicarLista(mi_lista))\n```\n\nNotice\
+    \ that in this function we are going through a list and we apply the duplicate\
+    \ action to each element of the list. Wouldn't it be better if this duplicate\
+    \ action were an action that came from a parameter of this function? Let's look\
+    \ at the example of a new function called mapearList.\n\n```\ndef duplicar(numero):\n\
+    \    return numero * 2\n```\n\n```\ndef mapearLista(lista, accion):\n    if (len(lista)\
+    \ == 1):\n        return [accion(lista[0])]\n    else:\n        return [accion(lista[0])]\
+    \ + mapearList(lista[1:], accion)\n```\n\n```\nmi_lista = [1,2,3,4]\nprint(mapearLista(mi_lista,\
+    \ duplicar))\n```\n\nAs we can see, we first create the mapearLista function,\
+    \ which we will pass an iterable list as a parameter and a function that we create\
+    \ outside, called duplicate. The rest is the same as the previous example in terms\
+    \ of what the mapearLista function does, with the difference that now we can pass\
+    \ it a function that performs different actions, in our example, it will duplicate\
+    \ a value, but later we can pass it a function that say triple and it will just\
+    \ triple the value."
+  - '[PAGE 14]
+
+
+    Result:
+
+
+    ```
+
+    [2, 4, 6, 8]|
+
+    ```
+
+
+    Python is an interpreted programming language whose purpose is to emphasize or
+    put emphasis on the readability of your code. It is a multipadigm programming
+    language, so it supports object orientation, imperative programming and, in turn,
+    functional programming. It has an open-source license called the Python Software
+    Foundation License. This means that Python accepts various ways of working with
+    the language. In this case, there are 3 predominant paradigms or, in other words,
+    3 specific formats of organizing a code.
+
+
+    +   1. IMPERATIVE PROGRAMMING (structured): The code will be executed from the
+    beginning of a file (file) to the end, without following any type of deviation.
+    Its main advantage is its simplicity and low "weight''. Its downside, however,
+    is its spaghetti code. If you never know this term, think about the spaghetti
+    mixed in your dinner plate. You will only see an unintelligible mixture of "threads"
+    that is difficult to decipher. Well, that is where the term comes from. The code
+    is mixed up and difficult to follow. Files with hundreds or thousands of lines
+    of code where the owner of the code may be able to decipher it.
+
+
+    +   2. OBJECT-ORIENTED PROGRAMMING: In this case, variables and functions are
+    encapsulated in small cohesive modules, capable of being cloned. Its strong point
+    is the capacity for reuse and isolation, thus avoiding the relationship with other
+    functionalities. The negative issue lies in the complexity of creating great Classes
+    that will contain the variables and'
+  - '[PAGE 15]
+
+
+    functions and, on the other hand, the debugging.
+
+
+    +   3. **FUNCTIONAL PROGRAMMING**: In this case, the code is divided into simple
+    functions capable of being invoked from other functions. Its ease of use due to
+    its atomicity achieves a solid maintenance and compatible with almost any language.
+    In addition, its immutability of variables largely avoids the problems that OOP
+    suffers.'
+  - '[PAGE 16]
+
+
+    # FUNCTIONAL PROGRAMMING PRINCIPLES
+
+
+    The principles of Functional Programming are the following:
+
+
+    +   * **USE OF FUNCTIONS**: Everything is built by means of functions. This way
+    of working is not only simple, orderly, clear, easy to test, but it is also practice
+    used by great figures such as Julius Caesar or Napoleon. They clearly did not
+    use Python (or at least there is no record of it), but they applied the concept
+    of "divide and conquer". Functional Programming uses this strategy for almost
+    everything.
+
+    * **FIRST CLASS FUNCTIONS**: Functions are treated as one more variable. They
+    can even be "returned". This concept means that one function can call another
+    and this returns data.
+
+    * **PURE FUNCTIONS**: It means that it is totally predictive. The same input data
+    will produce the same output data. You can replace the input parameters without
+    altering the flow of the program.
+
+    * **RECURSIVITY**: Functions can call themselves, simplifying tasks such as traversing
+    data trees or managing variables.
+
+    * **IMMUTABILITY**: There are no variables, only constants. Basically, this concept
+    implies understanding its potential and putting it into practice is like giving
+    your brain a "reset" marked by the other paradigms. It''s a start over the basics
+    of programming. But is it worth it? It is relearning how to use variables.
+
+
+    Speaking of this subject IMMUTABILITY the Software usually fail? In most cases,
+    it comes from a variable that has been modified. This causes a block of code to
+    be executed with conditions not foreseen by anyone. You will have to review each
+    line to find the failure variable.
+
+    I give you a reflection: what if you use variables that you cannot modify? In
+    other words, what if we create a new constant for each modification? If I tell
+    you that at the performance level this is more efficient? It is an interesting
+    concept to apply.
+
+    Let''s continue with the principles.
+
+
+    LAZY EVALUATION: Also called NON-STRICT. In Functional'
+- md: "\nProgramming we can work with expressions that have not been evaluated. In\
+    \ other words, we can have variables whose result is not yet known. A side effect\
+    \ of this theme is the increase in performance and the other is that we can do\
+    \ “crazy things” like doing calculations with complex operations or infinite lists\
+    \ without doing calculations. You are surely wondering how this is possible. It\
+    \ happens that you work with mathematical expressions. The value is only calculated\
+    \ when you need it, such as when performing a “Print” action.\n\nLet's stop here.\
+    \ Let's think a bit. The question that comes to mind may be the following:\n\n\
+    What does it give you as a Programmer?\n\nYou are wondering to yourself; I already\
+    \ know how to program using Object Oriented Programming. And the following question\
+    \ falls when mature:\n\nWhat do I gain by learning these techniques?\n\nWell,\
+    \ on the one hand, let's get technical:\n\n- YOU WILL SIMPLIFY THE IMPERATIVE\
+    \ AND CREATION OF CONTESTS. One of its great advantages and why LIPS, which is\
+    \ a functional language for creating neural networks, became so popular is be\
+    \ able to work simultaneously with various functions without side effects.\n\n\
+    - REDUCTION OF PROBLEMS. As we saw earlier, the variables are now constant. They\
+    \ are immutable in Functional Programming. Consequently, there are no programming\
+    \ errors derived from the so-called mutable global state, as in Object Oriented\
+    \ projects.\n\n- QUICK TO TEST. We know what parameters we can give to a function\
+    \ and what results we expect.\n\n- EASY TO COMBINE WITH IMPERATIVE AND OBJECT-ORIENTED\
+    \ PROGRAMMING. In this case, Python adopts native tools from version 3.0.\n\n\
+    - CODE EASY TO ASSIMILATE AND READ. Understanding a function is much easier than\
+    \ seeing the structure of an object (OOP). Of course, in this case I speak from\
+    \ the point of view of a person who has just arrived at a project or is learning\
+    \ to program.\n\n## PRACTICE PLEASE!\n\nLet's stop with the theory a bit and see\
+    \ some practical examples. I anticipate that I am going to show you basic examples\
+    \ to get started, the tip of the iceberg. It will be for you to research and learn\
+    \ a huge world about tools and solutions anonymous this topic, both Python and\
+    \ Functional Programming. We will see the higher order functions: FILTER, LAMBDA,\
+    \ MAP.\n\n## LAMBDA\n\n```python\ndef incrementar(x):\n    return x + 1\n```\n\
+    \nfigure 1. lambda function\n\nFunctional languages have their origins in mathematical\
+    \ logic and lambda calculus. While imperative programming languages embrace the\
+    \ state-based calculus model, invented by British mathematician Alan Turing. Simply\
+    \ put, concise, restrictive anonymous functions. If we wanted to make a traditional\
+    \ function, which increases the value with the parameter that is given, we would\
+    \ have what we see in figure 1.\n\nAs you can see, the increment function only\
+    \ increments a number. To do it with a lambda, we would do it as shown in figure\
+    \ 2\n\n![](img/5837c8935ecd30c8ae021c4977b70059_19_0.png)\n\nfigure 2. using lambda\n\
+    \nWe will not be able to use it, but there are 2 ways to take advantage of it:\
+    \ With parentheses (figure 3) or by saving it in a variable (figure 4)\n\n![](img/5837c8935ecd30c8ae021c4977b70059_19_1.png)\n\
+    \nfigure 3. using lambda. Watch parentheses.\n\n```python\nincrement = lambda\
+    \ x: x + 1\nincrement(24)\n# 25\n```\n\nfigure 4. using lambda. Watch the assignment\
+    \ to a variable called incremento\nDo not misunderstand with the name of the function\
+    \ incremento.\n\n## CLOSURES\n\nLet's remember the concept of first-class functions.\
+    \ We can use functions within other functions and functions that return other\
+    \ functions in turn. In the following example in Figure 5, you can see the declaration\
+    \ of a function within another function, but also returns it.\n\n```python\n#\
+    \ Función que devuelve una función\ndef construir_multiplos(factor):\n    def\
+    \ interno(valor):\n        return valor * factor\n    return interno\n\n# Guardamos\
+    \ la expresión\nmultiplos_de_2 = construir_multiplos(2)\nmultiplos_de_7 = construir_multiplos(7)\n\
+    \n# Evaluamos\nmultiplos_de_2(10)\n# 20\n\nmultiplos_de_7(2)\n# 14\n```\n\nfigure\
+    \ 5. function that returns another function\n\nIn the following example we will\
+    \ use a super see dictionary with 4 elements. I say the word \"super\" as you\
+    \ will see, they are superheroes: Batman, Superman, Spiderman, Hulk. The publishers\
+    \ are DC and Marvel.\n\n```python\nsuperheroes = [\n  {\n    \"nombre\": \"Batman\"\
+    ,\n    \"editorial\": \"DC Comics\",\n    \"alter_ego\": \"Bruce Wayne\",\n  \
+    \  \"prima_aparicion\": \"Detective Comics #27\"\n  },\n  {\n    \"nombre\": \"\
+    Superman\",\n    \"editorial\": \"DC Comics\",\n    \"alter_ego\": \"Kal-El\"\
+    ,\n    \"prima_aparicion\": \"Action Comics #1\"\n  },\n  {\n    \"nombre\": \"\
+    Spider Man\",\n    \"editorial\": \"Marvel Comics\",\n    \"alter_ego\": \"Peter\
+    \ Parker\",\n    \"prima_aparicion\": \"Amazing Fantasy #15\"\n  },\n  {\n   \
+    \ \"nombre\": \"Hulk\",\n    \"editorial\": \"Marvel Comics\",\n    \"alter_ego\"\
+    : \"Bruce Banner\",\n    \"prima_aparicion\": \"The Incredible Hulk #1\"\n  }\n\
+    ]\n```\n\nfigure 6. structure with 4 elements\n\n## FILTER\n\nLet's start with\
+    \ the FILTER. The objective of this function is to filter an iterable, such as\
+    \ a list, into a smaller size, following a rule. In this example, we will search\
+    \ for superheroes that belong to DC.\n\n```python\nsuperheroesDC = filter(lambda\
+    \ superhero: superhero['editorial'] == \"DC Comics\", superheroes)\nprint(tuple(superheroesDC))\n\
+    ```\n\nfigure 7. declaration of filter\n\nLet's start with the FILTER. The objective\
+    \ of this function is to filter an iterable, such as a list, into a smaller size,\
+    \ following a rule. In this example, we will search for superheroes that belong\
+    \ to Marvel. I give my function and iteration. I print it with the PRINT function,\
+    \ and we can see the result in figure 9.\n\n```python\nsuperheroesMarvel = filter(lambda\
+    \ superhero: superhero['editorial'] == \"Marvel\", superheroes)\nprint(tuple(superheroesMarvel))\n\
+    ```\n\nfigure 8. use of filter\n\n## MAP\n\nLet's start with the MAP. The objective\
+    \ of this function is to apply a function to every item in an iterable. In this\
+    \ example, we will add a random value to each superhero.\n\n```python\nimport\
+    \ random\n\ndef anyadirPoder(superhero):\n    superhero.update(poder=random.randint(0,\
+    \ 100))\n    return superhero\n\nsuperheroesPoder = map(anyadirPoder, superheroes)\n\
+    \nprint(tuple(superheroesPoder))\n```\n\nfigure 9. result of filter/map operations\n\
+    \n```python\n{\n  \"nombre\": \"Batman\",\n  \"editorial\": \"DC Comics\",\n \
+    \ \"alter_ego\": \"Bruce Wayne\",\n  \"prima_aparicion\": \"Detective Comics #27\"\
+    ,\n  \"poder\": 88\n}, {\n  \"nombre\": \"Superman\",\n  \"editorial\": \"DC Comics\"\
+    ,\n  \"alter_ego\": \"Kal-El\",\n  \"prima_aparicion\": \"Action Comics #1\",\n\
+    \  \"poder\": 49\n}, {\n  \"nombre\": \"Spider Man\",\n  \"editorial\": \"Marvel\
+    \ Comics\",\n  \"alter_ego\": \"Peter Parker\",\n  \"prima_aparicion\": \"Amazing\
+    \ Fantasy #15\",\n  \"poder\": 35\n}, {\n  \"nombre\": \"Hulk\",\n  \"editorial\"\
+    : \"Marvel Comics\",\n  \"alter_ego\": \"Bruce Banner\",\n  \"prima_aparicion\"\
+    : \"The Incredible Hulk #1\",\n  \"poder\": 58\n}\n```\n"
+  mdcn: "\n\n在编程中，我们可以处理尚未被求值的表达式。换句话说，我们可以拥有结果尚未知的变量。这一主题的一个副作用是性能的提升，另一个是我们可以执行“疯狂的事情”，例如对复杂操作或无限列表进行计算而无需实际计算。你一定在想这是如何可能的。这正是因为你处理的是数学表达式。值只有在你需要它时（例如执行“打印”操作时）才会被计算。\n\
+    \n让我们停在这里。思考一下。脑海中浮出的问题可能是：\n\n作为程序员，这能给你带来什么？\n\n你心里想：我已经知道如何使用面向对象编程（OOP）来编程了。随后一个成熟的问题随之而来：\n\
+    \n学习这些技术我能收获什么？\n\n嗯，一方面，让我们从技术角度来看：\n\n- **你将简化命令式逻辑的创建。** 它的巨大优势之一，也是 LISP（一种用于创建神经网络的函数式语言）如此流行的原因在于，它能够在没有副作用的情况下同时处理各种函数。\n\
+    \n- **减少问题。** 正如我们之前看到的，变量现在是常量。在函数式编程中，它们是不可变的。因此，不会出现像面向对象项目那样源于所谓的“可变全局状态”的编程错误。\n\
+    \n- **快速测试。** 我们知道可以给函数传递什么参数以及期望什么样的结果。\n\n- **容易与命令式和面向对象编程结合。** 在这种情况下，Python\
+    \ 采用了从 3.0 版本开始的原生工具。\n\n- **代码易于理解和阅读。** 理解一个函数比观察对象的结构（OOP）容易得多。当然，在这种情况下，我是从刚加入项目或正在学习编程的人的角度来说考虑的。\n\
+    \n## 请练习！\n\n让我们暂时停止理论，来看一些实际示例。我预计我将向你展示一些入门的简单示例，即冰山一角。剩下的由你自己去研究和学习关于工具和解决方案的巨大世界，包括\
+    \ Python 和函数式编程。我们将看到高阶函数：FILTER、LAMBDA、MAP。\n\n## LAMBDA\n\n```python\ndef incrementar(x):\n\
+    \    return x + 1\n```\n\n图 1. lambda 函数\n\n函数式语言起源于数学逻辑和 lambda 演算。而命令式编程语言采用的是英国数学家艾伦·图灵发明的基于状态的演算模型。简单来说，就是简洁、受限的匿名函数。如果我们想创建一个传统的函数，根据给定的参数增加值，我们就会得到图\
+    \ 1 所示的内容。\n\n如你所见，increment 函数只增加一个数字。要用 lambda 实现，我们将像图 2 所示那样：\n\n![](img/5837c8935ecd30c8ae021c4977b70059_19_0.png)\n\
+    \n图 2. 使用 lambda\n\n我们无法直接使用它，但有两种方法可以利用它：使用括号（图 3）或将其保存到变量中（图 4）。\n\n![](img/5837c8935ecd30c8ae021c4977b70059_19_1.png)\n\
+    \n图 3. 使用 lambda。注意括号。\n\n```python\nincrement = lambda x: x + 1\nincrement(24)\n\
+    # 25\n```\n\n图 4. 使用 lambda。注意赋值给名为 `incremento` 的变量\n不要误解函数名 `incremento` 的含义。\n\
+    \n## 闭包 (CLOSURES)\n\n让我们回一下等等函数的概念。我们可以在其他函数内部函数，也可以让函数返回另一个函数。在图 5 的后续示例中，你可以看到在一个函数内部定义另一个函数，并且还返回了它。\n\
+    \n```python\n# 返回函数的函数\ndef construir_multiplos(factor):\n    def interno(valor):\n\
+    \        return valor * factor\n    return interno\n\n# 保存表达式\nmultiplos_de_2\
+    \ = construir_multiplos(2)\nmultiplos_de_7 = construir_multiplos(7)\n\n# 求值\n\
+    multiplos_de_2(10)\n# 20\n\nmultiplos_de_7(2)\n# 14\n```\n\n图 5. 返回另一个函数的函数\n\n\
+    在下一个示例中，我们将使用一个包含 4 个元素的超级字典。我说“超级”这个词是因为正如你看到的，他们是超级英雄：蝙蝠侠、超人、蜘蛛侠和绿巨人。出版社是 DC\
+    \ 和 Marvel。\n\n```python\nsuperheroes = [\n  {\n    \"nombre\": \"Batman\",\n\
+    \    \"editorial\": \"DC Comics\",\n    \"alter_ego\": \"Bruce Wayne\",\n    \"\
+    prima_aparicion\": \"Detective Comics #27\"\n  },\n  {\n    \"nombre\": \"Superman\"\
+    ,\n    \"editorial\": \"DC Comics\",\n    \"alter_ego\": \"Kal-El\",\n    \"prima_aparicion\"\
+    : \"Action Comics #1\"\n  },\n  {\n    \"nombre\": \"Spider Man\",\n    \"editorial\"\
+    : \"Marvel Comics\",\n    \"alter_ego\": \"Peter Parker\",\n    \"prima_aparicion\"\
+    : \"Amazing Fantasy #15\"\n  },\n  {\n    \"nombre\": \"Hulk\",\n    \"editorial\"\
+    : \"Marvel Comics\",\n    \"alter_ego\": \"Bruce Banner\",\n    \"prima_aparicion\"\
+    : \"The Incredible Hulk #1\"\n  }\n]\n```\n\n图 6. 带有4元素的结构\n\n## FILTER\n\n让我们开始学习\
+    \ FILTER。该函数的作用是将迭代对象（如列表）根据特定规则过滤成更小的集合。在这个示例中，我们将搜索属于 DC 的英雄。\n\n```python\n\
+    superheroesDC = filter(lambda superhero: superhero['editorial'] == \"DC Comics\"\
+    , superheroes)\nprint(tuple(superheroesDC))\n```\n\n图 7. filter 的声明\n\n让我们开始学习\
+    \ FILTER。该函数的作用是将迭代对象（如列表）根据特定规则过滤成更小的集合。在这个示例中，我们将搜索属于 Marvel 的英雄。我给出函数并进行打印，我们可以在图\
+    \ 9 中看到结果。\n\n```python\nsuperheroesMarvel = filter(lambda superhero: superhero['editorial']\
+    \ == \"Marvel\", superheroes)\nprint(tuple(superheroesMarvel))\n```\n\n图 8. filter\
+    \ 的使用\n\n## MAP\n\n让我们开始学习 MAP。该函数的作用是对迭代对象中的每一项应用函数。在这个示例中，我们将为每个超级英雄增加一个随机值。\n\
+    \n```python\nimport random\n\ndef anyadirPoder(superhero):\n    superhero.update(poder=random.randint(0,\
+    \ 100))\n    return superhero\n\nsuperheroesPoder = map(anyadirPoder, superheroes)\n\
+    \nprint(tuple(superheroesPoder))\n```\n\n图 9. filter/map 操作的结果\n\n"
+  merge: 1
+  raw:
+  - '[PAGE 17]
+
+
+    Programming we can work with expressions that have not been evaluated. In other
+    words, we can have variables whose result is not yet known. A side effect of this
+    theme is the increase in performance and the other is that we can do “crazy things”
+    like doing calculations with complex operations or infinite lists without doing
+    calculations. You are surely wondering how this is possible. It happens that you
+    work with mathematical expressions. The value is only calculated when you need
+    it, such as when performing a “Print” action.
+
+
+    Let''s stop here. Let''s think a bit. The question that comes to mind may be the
+    following:
+
+
+    What does it give you as a Programmer?
+
+
+    You are wondering to yourself; I already know how to program using Object Oriented
+    Programming. And the following question falls when mature:
+
+
+    What do I gain by learning these techniques?
+
+
+    Well, on the one hand, let''s get technical:
+
+
+    +   - YOU WILL SIMPLIFY THE IMPERATIVE AND CREATION OF CONTESTS. One of its great
+    advantages and why LIPS, which is a functional language for creating neural networks,
+    became so popular is be able to work simultaneously with various functions without
+    side effects.
+
+
+    +   - REDUCTION OF PROBLEMS. As we saw earlier, the variables are now constant.
+    They are immutable in Functional Programming. Consequently, there are no programming
+    errors derived from the so-called mutable global state, as in Object Oriented
+    projects.
+
+
+    +   - QUICK TO TEST. We know what parameters we can give to a function and what
+    results we expect.
+
+
+    +   - EASY TO COMBINE WITH IMPERATIVE AND OBJECT-ORIENTED PROGRAMMING. In this
+    case, Python adopts native tools from version 3.0
+
+
+    +   - CODE EASY TO ASSIMILATE AND READ. Understanding a function is much easier
+    than seeing the structure of an object (OOP). Of course, in this'
+  - '[PAGE 18]
+
+
+    case I speak from the point of view of a person who has just arrived at a project
+    or is learning to program.
+
+
+    # PRACTICE PLEASE!
+
+
+    Let''s stop with the theory a bit and see some practical examples. I anticipate
+    that I am going to show you basic examples to get started, the tip of the iceberg.
+    It will be for you to research and learn a huge world about tools and solutions
+    anonymous this topic, both Python and Functional Programming. We will see the
+    higher order functions: FILTER, LAMBDA, MAP.
+
+
+    # LAMBDA
+
+
+    ```
+
+    def incrementar(x):
+
+    return x + 1
+
+    ```
+
+
+    figure 1. lambda function
+
+
+    Functional languages have their origins in mathematical logic and lambda calculus.
+    While imperative programming languages embrace the state-based calculus model,
+    invented by British mathematician Alan Turing. Simply put, concise, restrictive
+    anonymous functions. If we wanted to make a traditional function, which increases
+    the value with the parameter that is given, we would have what we see in figure
+    1.
+
+    As you can see, the increment function only increments a number. To do it with
+    a lambda, we would do it as shown in figure 2'
+  - '[PAGE 19]
+
+
+    ![](img/5837c8935ecd30c8ae021c4977b70059_19_0.png)
+
+
+    figure 2. using lambda
+
+
+    We will not be able to use it, but there are 2 ways to take advantage of it: With
+    parentheses (figure 3) or by saving it in a variable (figure 4)
+
+
+    ![](img/5837c8935ecd30c8ae021c4977b70059_19_1.png)
+
+
+    figure 3. using lambda. Watch parentheses.
+
+
+    ```
+
+    increment = lambda x: x + 1
+
+    increment(24)
+
+    # 25
+
+    ```'
+  - "[PAGE 20]\n\nfigure 4. using lambda. Watch the assignment to a variable called\
+    \ incremento\nDo not misunderstand with the name of the function incremento.\n\
+    \n# CLOSURES\n\nLet's remember the concept of first-class functions. We can use\
+    \ functions\nwithin other functions and functions that return other functions\
+    \ in turn.\nIn the following example in Figure 5, you can see the declaration\
+    \ of a\nfunction within another function, but also returns it.\n\n```\n# Función\
+    \ que devuelve una función\ndef construir_multiplos(factor):\n    def interno(valor):\n\
+    \        return valor * factor\n    return interno\n\n# Guardamos la expresión\n\
+    multiplos_de_2 = construir_multiplos(2)\nmultiplos_de_7 = construir_multiplos(7)\n\
+    \n# Evaluamos\n\nmultiplos_de_2(10)\n# 20\n\nmultiplos_de_7(2)\n# 14\n```"
+  - "[PAGE 21]\n\nfigure 5. function that returns another function\n\nIn the following\
+    \ example we will use a super see dictionary with 4 elements. I say the word \"\
+    super\" as you will see, they are superheroes: Batman, Superman, Spiderman, Hulk.\
+    \ The publishers are DC and Marvel.\n\n```\nsuperheroes = [\n  {\n    \"nombre\"\
+    : \"Batman\",\n    \"editorial\": \"DC Comics\",\n    \"alter_ego\": \"Bruce Wayne\"\
+    ,\n    \"prima_aparicion\": \"Detective Comics #27\"\n  },\n  {\n    \"nombre\"\
+    : \"Superman\",\n    \"editorial\": \"DC Comics\",\n    \"alter_ego\": \"Kal-El\"\
+    ,\n    \"prima_aparicion\": \"Action Comics #1\"\n  },\n  {\n    \"nombre\": \"\
+    Spider Man\",\n    \"editorial\": \"Marvel Comics\",\n    \"alter_ego\": \"Peter\
+    \ Parker\",\n    \"prima_aparicion\": \"Amazing Fantasy #15\"\n  },\n  {\n   \
+    \ \"nombre\": \"Hulk\",\n    \"editorial\": \"Marvel Comics\",\n    \"alter_ego\"\
+    : \"Bruce Banner\",\n    \"prima_aparicion\": \"The Incredible Hulk #1\"\n  }\n\
+    ]\n```\n\nfigure 6. structure with 4 elements"
+  - '[PAGE 22]
+
+
+    Let''s start with the FILTER function
+
+
+    ```
+
+    filter(funcion, elemento_iterable)
+
+    ```
+
+
+    figure 7. declaration of filter function
+
+
+    # FILTER
+
+
+    The objective of this function is to convert an iterable element, such as a tuple
+    or list, into an equal one, but of a smaller size, filtering by what one needs.
+    Your signature consists of 2 arguments:
+
+
+    +   * EXPRESSION
+
+    * ELEMENT WE WANT TO TRAVEL
+
+
+    As you will see, it is a function whose parameter is sent another function. In
+    this example we will search for DC superheroes. See figure 8.
+
+
+    ```
+
+    superheroesDC = filter(lambda superhero: superhero[''editorial''] == "DC Comics",
+    superheroes)
+
+    print(tuple(superheroesDC))
+
+    ```
+
+
+    figure 8. use of filter function
+
+
+    I declare FILTER. I pass it a LAMBDA (which could have also been a function) and
+    give it an iteration as well. If I want to print it, I must first convert it to
+    a tuple or a list. As a result, we will have the following: figure 9. Note that
+    the superheroes returned are only those of DC.'
+  - "[PAGE 23]\n\n```\n{\n  'nombre': 'Batman',\n  'editorial': 'DC Comics',\n  'alter_ego':\
+    \ 'Bruce Wayne',\n  'primera_aparicion':\n  'Detective Comics #27'\n}{{\n  'nombre':\
+    \ 'Superman',\n  'editorial': 'DC Comics',\n  'alter_ego': 'Kal-El',\n  'primera_aparicion':\
+    \ 'Action Comics #1'\n})\n```\n\nfigure 9. result of filter function\n\n# MAP\n\
+    \nIts structure consists of 2 arguments:\n• EXPRESSION\n• ELEMENT WE WANT TO TRAVEL\n\
+    In this case, it is used to modify the value of an iterable following a rule.\n\
+    In the following example, I will add to each superhero their own Power.\nSince\
+    \ I do not want to enter any battle of who is stronger or who is weaker, I am\
+    \ going to give it a random value between 0 and 99.\nUsing a LAMBDA is not recommended\
+    \ if you are going to use more than one line in a function.\nObserve the code\
+    \ in figure 10."
+  - "[PAGE 24]\n\nFirst, I import the \"random\".\nThen, I declare the anyadirPoder\
+    \ function.\nI tell it that I want to modify (update function) the Power key (in\
+    \ this case I\nam going to add it with a value between 0 and 99) and I am going\
+    \ to return it.\nThen I declare my MAP. I give my function and iteration. I print\
+    \ it with the\nPRINT function, and we can see the result in figure 11.\n\n```\n\
+    import random\n\ndef anyadirPoder(superhero):\n    superhero.update(poder=random.randint(0,\
+    \ 100))\n    return superhero\n\nsuperheroesPoder = map(anyadirPoder, superheroes)\n\
+    \nprint(tuple(superheroesPoder))\n```\n\nfigure 10. use of a Map function"
+  - "[PAGE 25]\n\n```\n{\n  'nombre': 'Batman',\n  'editorial': 'DC Comics',\n  'alter_ego':\
+    \ 'Bruce Wayne',\n  'primera_aparicion': 'Detective Comics #27',\n  'poder': 88\n\
+    }, {\n  'nombre': 'Superman',\n  'editorial': 'DC Comics',\n  'alter_ego': 'Kal-El',\n\
+    \  'primera_aparicion': 'Action Comics #1',\n  'poder': 49\n}, {\n  'nombre':\
+    \ 'Spider Man',\n  'editorial': 'Marvel Comics',\n  'alter_ego': 'Peter Parker',\n\
+    \  'primera_aparicion': 'Amazing Fantasy #15',\n  'poder': 35\n}, {\n  'nombre':\
+    \ 'Hulk',\n  'editorial': 'Marvel Comics',\n  'alter_ego': 'Bruce Banner',\n \
+    \ 'primera_aparicion': 'The Incredible Hulk #1',\n  'poder': 58\n}\n```\n\nfigure\
+    \ 11. Result of Map function"
+- md: "\n# REDUCE\n\nThis function is used to make calculations from one iteration.\
+    \ Its structure consists of 3 arguments:\n- EXPRESSION\n- ITERABLE ELEMENT\n-\
+    \ START VARIABLE\nThis can be found within the functools library.\n\n```python\n\
+    import functools\n\ndef contarMan(resultado, superhero):\n    if 'man' in superhero['nombre'].lower():\n\
+    \        return resultado + 1\n    else:\n        return resultado\n\ntotal =\
+    \ functools.reduce(contarMan, superheroes, 0)\n\nprint(total)\n# 3\n```\n\nfigure\
+    \ 12. Reduce function\n\nLet's look at figure 12.\nSuppose we need to count the\
+    \ number of superheroes they contain in their name, the text man.\nI prepare my\
+    \ function, where I do the comparison with the if statement.\nThat is, if MAN\
+    \ exists within the superhero list in its item ‘name’, increase the result by\
+    \ 1.\nOtherwise, I just return the result.\nWhen I declare REDUCE, I give it my\
+    \ function and the iteration and the initial value which will be 0.\n\nThe result\
+    \ must be 3, since, in this case, only HULK does not have this element.\nYou may\
+    \ wonder why return is so hidden. These functions, MAP, FILTER, can be found since\
+    \ the beginning of 1994, but during the development of Python 3000, between 2006\
+    \ and 2009, the creator of Python requested the elimination of these characteristics\
+    \ due to a readability issue and because there are tools that together they performed\
+    \ the same tasks.\nHowever, he later changed his mind and only REDUCE was removed,\
+    \ even though it is still accessible via the functools module.\n\n# FUNCTIONAL\
+    \ LANGUAGES\n\nMan does not live on Python alone. To take advantage of the possibilities\
+    \ that we have mentioned, you can make the leap to other languages of the paradigm.\n\
+    This list is some of the languages that support Functional Programming.\n\n- D\n\
+    - Erlang\n- ML\n- Haskell\n- Lisp\n\nLisp has several variants, as well as Clojure\
+    \ which is a modernization of Lisp that has reinvigorated the language. It uses\
+    \ the Java virtual machine to run and has particularly good interoperability with\
+    \ Java libraries. Ideal for performing Web Services with high performance. Haskell,\
+    \ a pioneer to start with these characteristics. It is particularly good to get\
+    \ started in this paradigm and in the industry.\nElm, front end language highly\
+    \ influenced by Haskell.\n\nThe companies that use Functional Programming is large.\
+    \ A list would be the following:\n\n- Manzana\n- Atlassian\n- Boeing\n- Netflix\n\
+    - NASA\n- YCombinator\n- Nubank\n- Walmart\n- Etc.\n\nAs you can see, it is a\
+    \ varied list.\n\n# COMPLEMENT PYTHON\n\nIf you want to continue your knowledge\
+    \ or extend what you have already learned about Functional Programming within\
+    \ Python, you have some Libraries, such as:\n- PyFunctional: It gives you such\
+    \ important issues as concurrency or concatenated operations.\n- Frozendict: Implements\
+    \ immutable dictionaries.\n\n# FUNCTIONAL PROGRAMMING VS ORIENTED OBJECT PROGRAMMING\n\
+    \nAs I said, each programmer is a World. And as such, some will find one type\
+    \ of paradigm better or easier and others another. Nobody is right. And they are\
+    \ all right. Nobody can say loud \"the best paradigm is this.\" Because it is\
+    \ an excessively subjective issue. Just as some people like meat and others don't,\
+    \ some programmers will find one type of programming paradigm better over another.\
+    \ And it's OK.\nObject Oriented Programming, if you don't know the term, it is\
+    \ the paradigm in which a programmer models a software by abstracting classes\
+    \ in the form of objects that contain behavior and a state and has certain typical\
+    \ characteristics such as inheritance, polymorphism, modularity, encapsulation,\
+    \ classes, objects, etc.\n\nIt is not the idea of this book to deepen or talk\
+    \ about OOP, but to see some ideas about the relationships between both paradigms.\n\
+    \nHowever, and clarifying this controversial point, we will see in this section\
+    \ the relationships between 2 especially important paradigms: The Functional (objective\
+    \ of this book) and the Object-Oriented.\nKnowing that the Functional Paradigm\
+    \ (FP) is declarative, and OOP is directed to real world objects, it is perfectly\
+    \ feasible to use both. The substantial difference lies in the purpose or objective\
+    \ that each programmer shares. The FP places its emphasis on the correctness of\
+    \ a program (avoid shared states, and side effects).\nInstead, in OOP, the goal\
+    \ is to make the code more easily understandable, abstracting its components (called\
+    \ classes). That is, it is a matter of understanding the code and its readability.\n\
+    \nHaving clarified this, it is important in turn to mention that it is perfectly\
+    \ feasible to use both, that neither excludes the other. A class should not exclude\
+    \ the accuracy or lack of side effects.\n\nWe saw earlier in this book the idea\
+    \ of Pure Functions. Its output is determined by its input, without any visible\
+    \ side effects. This is perfectly applicable also for the methods of objects within\
+    \ the OOP that call other methods internally within the same class. The difference\
+    \ lies in the type of use of the methods that are well encapsulated within the\
+    \ class, which does not happen in Functional Programming as the concept of encapsulation\
+    \ does not exist (refer to the study of OOP for a better understanding).\n\nIn\
+    \ my opinion, OOP is more flexible and better associated with abstraction from\
+    \ the real world, by analyzing objects in the form of behavior and state. A program\
+    \ made with OOP can contain PF. Not the other way around. On the other hand, knowing\
+    \ the requirements of a software development and knowing that they may change,\
+    \ is something in which OOP may be better prepared to support it.\n\nOne difference\
+    \ that we can see between both paradigms is that Functional Programming is about\
+    \ the flow of data and control. That is, functional programming uses only expressions\
+    \ and in imperative programming expressions are used as statements.\n\nFor example,\
+    \ in an imperative programming variables and loops common in a state, while FP\
+    \ is handled by passing parameters, which avoids side effects.\n\nA good way to\
+    \ understand this difference is by referring to this concept that I read from\
+    \ a website on the subject, which I leave your link if you want to know more.\n\
+    \n“Well object-oriented programming is good because it allows you to model your\
+    \ complex problem in hierarchies so that you can simplify the problem. But it\
+    \ becomes difficult when you start to consider multi-threaded programming while\
+    \ using mutable objects. In such cases, you must use heavy use of sync objects\
+    \ and it is almost impossible to perfect a large application. That's where functional\
+    \ programming comes in. Due to things like immutability, functional programming\
+    \ really does simplify multi-threaded programs. It makes it almost trivially easy\
+    \ to parallelize something when you know that, given the input X to a function,\
+    \ it will always output Y. You also know that a variable (or value in functional\
+    \ programming) cannot change the average usage of another thread.\"\n\nhttps://laingenieria.info/questions/368/programacion-funcional-vs-oop-cerrado\n\
+    \nIn short, FP and OOP are complementary. Both have advantages and disadvantages\
+    \ depending on the type of software you are developing, your experience, ability\
+    \ to understand each one, and development evolution. Neither is better than the\
+    \ other, but both have qualities that may be better used in different projects.\
+    \ In my case, I use both and in OOP I can use PF without any problem.\n\nI recommend\
+    \ that you delve into both paradigms and try which one you feel better with.\n\
+    \n# OBJECT ORIENTED PROGRAMMING\n\nThere are 4 types of Paradigms in the field\
+    \ of Software Development (programming), namely:\n\n- Structured Programming Paradigm\n\
+    - Paradigm of Object-Oriented Programming\n- Logic Programming Paradigm\n- Paradigm\
+    \ of Functional Programming\n- Declarative Programming Paradigm\n- Paradigm of\
+    \ Imperative Programming\n\n# STRUCTURE PROGRAMMING PARADIGM\n\nIt is one of the\
+    \ most used to learn computer programming. It has the following rules:\n\n- The\
+    \ beginning of the file is the beginning of the schedule and the end of the file\
+    \ is the end of the schedule.\n- Iteration instructions (loops) are used\n- Control\
+    \ instructions are used (e.g., conditionals)\n\nIn this Paradigm the concepts\
+    \ of classes, objects, etc. are not used. which is typical of the Object-Oriented\
+    \ Paradigm.\n\nFor example, within this Paradigm we have Procedural Programming,\
+    \ considered the most common of the types of Programming.\nIn this type of programming,\
+    \ the programmer concentrates on the procedure, on the algorithm required to carry\
+    \ out the computation.\nExamples of languages of this style are: C, Basic, Pascal.\n"
+  mdcn: "\n\n# REDUCE\n\n该函数用于从一次迭代中进行计算。它的结构由3个参数组成：\n- 表达式 (EXPRESSION)\n- 可迭代元素\
+    \ (ITERABLE ELEMENT)\n- 起始变量 (START VARIABLE)\n可以在 `functools` 库中找到。\n\n```python\n\
+    import functools\n\ndef contarMan(resultado, superhero):\n    if 'man' in superhero['nombre'].lower():\n\
+    \        return resultado + 1\n    else:\n        return resultado\n\ntotal =\
+    \ functools.reduce(contarMan, superheroes, 0)\n\nprint(total)\n# 3\n```\n\n图 12.\
+    \ Reduce 函数\n\n让我们看看图 12。\n假设我们需要统计名字中包含 \"man\" 文本的超级英雄数量。\n我准备了我的函数，在其中通过 `if`\
+    \ 语句进行比较。\n也就是说，如果 `superheroes` 列表中的项属性 'name' 存在 \"MAN\"，则将结果加1。\n否则，我直接返回结果。\n\
+    当我声明 `REDUCE` 时，我给它传递了我的函数、迭代对象以及初始值 0。\n\n结果必须是 3，因为在这种情况下，只有 HULK 不包含这个元素。\n\
+    你可能会奇怪为什么 `return` 隐藏得如此深。这些函数（`MAP`、`FILTER`）自1994年起就存在，但在 Python 3000 的开发期间（2006年至2009年间），Python\
+    \ 的创建者要求消除这些特性，由于存在可读性问题，而且有工具组合可以完成相同的任务。\n然而，他后来改变了主意，只删除了 `REDUCE`，尽管它仍然可以通过\
+    \ `functools` 模块访问。\n\n# 函数式语言\n\n编程并不仅仅存在于 Python。为了利用我们提到的可能性，你可以跨越到其他范式的语言。\n\
+    以下列表是一些支持函数式编程的语言：\n\n- D\n- Erlang\n- ML\n- Haskell\n- Lisp\n\nLisp 有若干种变体，以及\
+    \ Clojure，它是 Lisp 的现代化版本，赋予了该语言新的活力。它使用 Java 虚拟机运行，并且与 Java 库具有特别良好的互操作性。非常适合执行高性能的\
+    \ Web 服务。Haskell 是开启这些特征的先驱。它非常适合入门这种范式并在工业界中使用。\nElm 是受 Haskell 影响很大的的前端语言。\n\
+    \n使用函数式编程的公司非常多。列表如下：\n\n- Manzana\n- Atlassian\n- Boeing\n- Netflix\n- NASA\n\
+    - YCombinator\n- Nubank\n- Walmart\n- 等\n\n如你所见，这是一个多样化的列表。\n\n# 补充 Python\n\n\
+    如果你想继续深入你的知识或扩展你已经在 Python 中学习的函数式编程知识，你可以使用一些库，例如：\n- PyFunctional：它为你提供了并发或连接操作等重要问题处理。\n\
+    - Frozendict：实现了不可变字典。\n\n# 函数式编程 面向对象编程\n\n正如我所说，每个程序员都是一个世界。因此，有些人会发现某一种范式更好或更容易，而另一些人发现另一种。没有人是错误的。他们都是正确的。没有人可以大声说“最好的范式是这个”。因为这是一个极其主观的问题。就像有些人喜欢肉而另一些不喜欢一样，有些程序员会发现一种编程范式优于另一种。这没关系。\n\
+    面向对象编程（OOP），如果你不知道这个术语，它是程序员通过将类抽象为对象来对软件进行建模的范式，对象包含行为和状态，并具有某些典型特征，如继承、多态、模块化、封装、类、对象等。\n\
+    \n本书的意图并不是深入探讨或谈论 OOP，而是查看关于这两种范式之间关系的一些想法。\n\n然而，在澄清这一争议点时，我们将在本节中查看两个特别重要的范式之间的关系：函数式（本书的目标）和面向对象式。\n\
+    鉴于函数式范式（FP）是声明式的，而 OOP 指向现实世界对象，因此同时使用两者是完全可行的。本质区别在于每个程序员所关注的用途或目标。FP 重点在于程序的正确性（避免共享状态和副作用）。\n\
+    相反，在 OOP 中，目标是使代码更易于理解，抽象其组件（称为类）。也就是说，这关乎于理解代码及其可读性。\n\n在澄清了这一点之后，同样重要的是提到，同时使用两者是完全可行的，它们互不排除。一个类不应该排斥准确性或消除副作用。\n\
+    \n我们在书的前面部分看过“纯函数”的概念。它的输出由输入决定，没有任何任何可见的副作用。这也完全适用于 OOP 中对象的方法，这些方法在同一个类内部调用其他方法。区别在于类内部良好封装的方法的使用类型，这在函数式编程中并没有发生，因为不存在封装的概念（请参考\
+    \ OOP 的研究以获得更好的理解）。\n\n在我看来，OOP 更灵活，并与抽象关联得更紧密；函数式则与现实世界的抽象关联得更好，以状态的形式处理。在 OOP\
+    \ 中可以包含 FP，反之亦然。在 OOP 中，函数式编程是更好的准备工作，这完全没有问题。\n\n我们观察到的两种范式之间的区别是，函数式编程是关于数据流和控制的。函数式编程通过传递参数处理，函数式编程只使用表达式，而命令式编程使用语句。\n\
+    \n例如，在命令式编程中，变量和循环很常见，而函数式编程使用的是表达式。\n\n“好吧，面向对象编程很好，因为它允许通过分层对象来简化问题。当你开始考虑多线程编程时，使用可变对象变得困难。由于不可，性，函数编程编程非常问题。关于这一点，我留下这个网站的链接：https://laingenieria.info/questions/368/programacion-funcional-vs-oop-cerrado\n\
+    \n简而言之，FP 和 OOP 是互补的。根据你开发的软件类型、你的经验以及对各者的理解，两者都有优缺点。没有哪个比另一个更好，但它们都有在不同项目中使用的特性。在我的情况下，我同时使用两者，在\
+    \ OOP 中我使用 FP 没有问题。\n\n我建议你深入研究两种范式，并尝试哪一种更适合你。\n\n# 面向对象编程\n\n软件开发（编程）领域有 4 种范式，即：\n\
+    \n- 结构化编程范式\n- 面向对象编程范式\n- 逻辑编程范式\n- 函数式编程范式\n- 声明式编程范式\n- 命令式编程范式\n\n# 结构化编程范式\n\
+    \n它是学习计算机编程最常用的类型。具有以下规则：\n\n- 文件开头是开始，结尾是结束\n- 使用迭代指令（循环）\n- 使用控制指令（例如条件判断）\n\
+    \n在这个范式中，不使用类、对象等概念，这是面向对象编程的典型特征。\n\n例如，在这个范式中我们有过程化编程，它是编程类型中最常见的。\n\n"
+  merge: 0
+  raw:
+  - "[PAGE 26]\n\n# REDUCE\n\nThis function is used to make calculations from one\
+    \ iteration. Its structure consists of 3 arguments: • EXPRESSION • ITERABLE ELEMENT\
+    \ • START VARIABLE This can be found within the functools library.\n\n```\nimport\
+    \ functools\n\ndef contarMan(resultado, superhero):\n    if 'man' in superhero['nombre'].lower():\n\
+    \        return resultado + 1\n    else:\n        return resultado\n\ntotal =\
+    \ functools.reduce(contarMan, superheroes, 0)\n\nprint(total)\n# 3\n```\n\nfigure\
+    \ 12. Reduce function\n\nLet's look at figure 12.\nSuppose we need to count the\
+    \ number of superheroes they contain in their name, the text man.\ni prepare my\
+    \ function, where I do the comparison with the if statement.\nThat is, if MAN\
+    \ exists within the superhero list in its item ‘name’, increase the result by\
+    \ 1.\nOtherwise, I just return the result.\nWhen I declare REDUCE, I give it my\
+    \ function and the iteration and the initial value which will be 0."
+  - '[PAGE 27]
+
+
+    The result must be 3, since, in this case, only HULK does not have this element.
+
+    You may wonder why return is so hidden. These functions, MAP, FILTER, can be found
+    since the beginning of 1994, but during the development of Python 3000, between
+    2006 and 2009, the creator of Python requested the elimination of these characteristics
+    due to a readability issue and because there are tools that together they performed
+    the same tasks.
+
+    However, he later changed his mind and only REDUCE was removed, even though it
+    is still accessible via the functools module.
+
+
+    # FUNCTIONAL LANGUAGES
+
+
+    Man does not live on Python alone. To take advantage of the possibilities that
+    we have mentioned, you can make the leap to other languages of the paradigm.
+
+    This list is some of the languages that support Functional Programming.
+
+
+    +   - D
+
+    - Erlang
+
+    - ML
+
+    - Haskell
+
+    - Lisp
+
+
+    Lisp has several variants, as well as Clojure which is a modernization of Lisp
+    that has reinvigorated the language. It uses the Java virtual machine to run and
+    has particularly good interoperability with Java libraries. Ideal for performing
+    Web Services with high performance. Haskell, a pioneer to start with these characteristics.
+    It is particularly good to get started in this paradigm and in the industry.
+
+    Elm, front end language highly influenced by Haskell.
+
+
+    The companies that use Functional Programming is large. A list would be the following:
+
+
+    +   - Manzana
+
+    - Atlassian'
+  - '[PAGE 28]
+
+
+    +   - Boeing
+
+    - Netflix
+
+    - NASA
+
+    - YCombinantor
+
+    - Nubank
+
+    - Walmart
+
+    - Etc.
+
+
+    As you can see, it is a varied list.
+
+
+    # COMPLEMENT PYTHON
+
+
+    If you want to continue your knowledge or extend what you have already learned
+    about Functional Programming within Python, you have some Libraries, such as:
+
+    - PyFunctional: It gives you such important issues as concurrency or concatenated
+    operations.
+
+    - Frozendict: Implements immutable dictionaries.
+
+
+    # FUNCTIONAL PROGRAMMING VS ORIENTED OBJECT PROGRAMMING
+
+
+    As I said, each programmer is a World. And as such, some will find one type of
+    paradigm better or easier and others another. Nobody is right. And they are all
+    right. Nobody can say loud "the best paradigm is this." Because it is an excessively
+    subjective issue. Just as some people like meat and others don''t, some programmers
+    will find one type of programming paradigm better over another. And it''s OK.
+
+    Object Oriented Programming, if you don''t know the term, it is the paradigm in
+    which a programmer models a software by abstracting classes in the form of objects
+    that contain behavior and a state and has certain typical characteristics such
+    as inheritance, polymorphism, modularity, encapsulation, classes,'
+  - "[PAGE 29]\n\nobjects, etc.\n\nIt is not the idea of this book to deepen or talk\
+    \ about OOP, but to see some ideas about the relationships between both paradigms.\n\
+    \nHowever, and clarifying this controversial point, we will see in this section\
+    \ the relationships between 2 especially important paradigms: The Functional (objective\
+    \ of this book) and the Object-Oriented.\nKnowing that the Functional Paradigm\
+    \ (FP) is declarative, and OOP is directed to real world objects, it is perfectly\
+    \ feasible to use both. The substantial difference lies in the purpose or objective\
+    \ that each programmer shares. The FP places its emphasis on the correctness of\
+    \ a program (avoid shared states, and side effects).\nInstead, in OOP, the goal\
+    \ is to make the code more easily understandable, abstracting its components (called\
+    \ classes). That is, it is a matter of understanding the code and its readability.\n\
+    \nHaving clarified this, it is important in turn to mention that it is perfectly\
+    \ feasible to use both, that neither excludes the other. A class should not exclude\
+    \ the accuracy or lack of side effects.\n\nWe saw earlier in this book the idea\
+    \ of Pure Functions. Its output is determined by its input, without any visible\
+    \ side effects. This is perfectly applicable also for the methods of objects within\
+    \ the OOP that call other methods internally within the same class. The difference\
+    \ lies in the type of use of the methods that are well encapsulated within the\
+    \ class, which does not happen in Functional Programming as the concept of encapsulation\
+    \ does not exist (refer to the study of OOP for a better understanding).\n\nIn\
+    \ my opinion, OOP is more flexible and better associated with abstraction from\
+    \ the real world, by analyzing objects in the form of behavior and state. A program\
+    \ made with OOP can contain PF. Not the other way around.\n the other hand, knowing\
+    \ the requirements of a software development and knowing that they may change,\
+    \ is something in which OOP may be better prepared to support it.\n\nOne difference\
+    \ that we can see between both paradigms is that Functional Programming is about\
+    \ the flow of data and control. That is, functional programming uses only expressions\
+    \ and in imperative programming expressions are used as statements.\n\nFor example,\
+    \ in an imperative programming variables and loops"
+  - '[PAGE 30]
+
+
+    common in a state, while FP is handled by passing parameters, which avoids side
+    effects.
+
+
+    A good way to understand this difference is by referring to this concept that
+    I read from a website on the subject, which I leave your link if you want to know
+    more.
+
+
+    “Well object-oriented programming is good because it allows you to model your
+    complex problem in hierarchies so that you can simplify the problem. But it becomes
+    difficult when you start to consider multi-threaded programming while using mutable
+    objects. In such cases, you must use heavy use of sync objects and it is almost
+    impossible to perfect a large application. That''s where functional programming
+    comes in. Due to things like immutability, functional programming really does
+    simplify multi-threaded programs. It makes it almost trivially easy to parallelize
+    something when you know that, given the input X to a function, it will always
+    output Y. You also know that a variable (or value in functional programming) cannot
+    change the average usage of another thread."
+
+
+    https://laingenieria.info/questions/368/programacion-funcional-vs-oop-cerrado
+
+
+    In short, FP and OOP are complementary. Both have advantages and disadvantages
+    depending on the type of software you are developing, your experience, ability
+    to understand each one, and development evolution. Neither is better than the
+    other, but both have qualities that may be better used in different projects.
+    In my case, I use both and in OOP I can also use PF without any problem.
+
+
+    I recommend that you delve into both paradigms and try which one you feel better
+    with.'
+  - '[PAGE 31]
+
+
+    # OBJECT ORIENTED PROGRAMMING
+
+
+    There are 4 types of Paradigms in the field of Software Development (programming),
+    namely:
+
+
+    +   - Structured Programming Paradigm
+
+    - Paradigm of Object-Oriented Programming
+
+    - Logic Programming Paradigm
+
+    - Paradigm of Functional Programming
+
+    - Declarative Programming Paradigm
+
+    - Paradigm of Imperative Programming
+
+
+    # STRUCTURE PROGRAMMING PARADIGM
+
+
+    It is one of the most used to learn computer programming. It has the following
+    rules:
+
+
+    +   - The beginning of the file is the beginning of the schedule and the end of
+    the file is the end of the schedule.
+
+    - Iteration instructions (loops) are used
+
+    - Control instructions are used (e.g., conditionals)
+
+
+    In this Paradigm the concepts of classes, objects, etc. are not used. which is
+    typical of the Object-Oriented Paradigm.
+
+
+    For example, within this Paradigm we have Procedural Programming, considered the
+    most common of the types of Programming.
+
+    In this type of programming, the programmer concentrates on the procedure, on
+    the algorithm required to carry out the computation.
+
+    Examples of languages of this style are: C, Basic, Pascal.'
+- md: '
+
+    # OBJECT-ORIENTED PROGRAMMING PARADIGM
+
+
+    It is one of the most used to program Software, since it has many advantages
+
+    in terms of issues such as reuse, abstraction, solving real world problems, etc.
+
+    Some of the things we should know about this Paradigm:
+
+
+    - Objects are created and destroyed
+
+    - We use classes to define objects
+
+    - Classes have attributes and methods (behavior)
+
+
+    This Paradigm is the objective of this book and all the basic concepts will be
+
+    studied so that you can apply it in a programming language that accepts it.
+
+    The most common languages that adopt this Paradigm are: C#, Java, C++,
+
+    VB.NET, among others.
+
+
+    # LOGIC PROGRAMMING PARADIGM
+
+
+    This is a type of Paradigm of programming that is within the Paradigm of Declarative
+    type. This Paradigm of logic programming revolves around the concept of predicate
+    or relation of elements. It is based on the concept of the more mathematical acceptance
+    function. Mathematical logic is the simplest way to formally express complex problems
+    and to be able to solve them based on rules, hypotheses and theorems. For example:
+
+
+    - Logical statements seen as a programming language
+
+    - Logical statements that are for formal specifications that describe the behavior
+    of a program.
+
+    - Data and Boolean expressions used in almost all programming languages.
+
+    - Boolean algebra
+
+
+    Logic programming involves the use of facts and relationships to represent information
+    and to answer queries.
+
+    Don''t forget the following equation.
+
+    Algorithm = logic + control
+
+
+    # FUNCTIONAL PROGRAMMING PARADIGM
+
+
+    This is a type of programming paradigm that is based on the use of Functions for
+    problem solving, avoiding mutable data and sharing states between functions.
+
+
+    Functions that can receive functions as parameters and return functions as results
+    are called Higher Order Function.
+
+    Functional programming is a Declarative Paradigm, like logic programming. We focus
+    on the WHAT and not the HOW (this would be imperative). What does it mean? We
+    do not use flow controls, that is, neither loops nor conditionals, only functions.
+
+
+    NOTE: If you are interested in Functional Programming, I have written a book on
+    INTRODUCTION TO FUNCTIONAL PROGRAMMING that you can purchase at Amazon Kindle
+    stores.
+
+
+    # DECLARATIVE AND IMPERATIVE PARADIGMS
+
+
+    As we mentioned previously, there are Paradigms of Programming called imperatives
+    and declaratives.
+
+    We already saw 2 of the declaratives: logical and functional.
+
+    In DECLARATIVE programming, what they do is describe the problem to be solved,
+    they are programmed by saying what they want to solve at the user level, but not
+    the instructions necessary to solve it.
+
+    The Prolog, Maude, SQL, Haskell, and Erlang languages are examples of declarative
+    languages.
+
+    as we discussed earlier, they focus on the WHAT rather than the HOW
+
+    On the other hand, IMPERATIVE programming requires knowing what data is required
+    for the calculation, associating the memory addresses with these and carrying
+    out a sequence of transformations on the stored data by step in such a way that
+    the final state represents the correct result.
+
+    Imperative programming is the oldest programming paradigm that exists. It consists
+    of instructions which are chained one after the other that determine what the
+    computer must always do to obtain a result.
+
+    The most popular programming languages are:
+
+    Fortran, Basic, C, C#, Pascal, Cobol, Python, Java, C++, etc.
+
+
+    # DIFFERENCE BETWEEN DECLARATIVE AND IMPERATIVE LANGUAGES
+
+
+    - IMPERATIVE PROGRAMMING: describes step by step a set of instructions that are
+    executed to vary the state of a program. Use the concept of algorithm (steps necessary
+    to solve a problem). The main advantage is that it is simpler than the declarative
+    one, easy to implement and to be able to reuse the same code in different places
+    in the program.
+
+    - DECLARATIVE PROGRAMMING: sentences are used that describe the problem, programming
+    what is to be solved at the user level, but the instructions necessary for the
+    solution are not indicated. As a fundamental advantage is that in which in declarative
+    languages mathematical reasoning is used.
+
+
+    # WHAT IS PROGRAMMING?
+
+
+    Before learning about the object-oriented paradigm, let''s remember a little about
+    what programming is.
+
+
+    Programming is the process of taking an algorithm and coding it in a certain language
+    that is understandable and executed by a computer. There are many programming
+    languages and different types of computers. But here the important thing is the
+    concept of algorithm, which are the necessary steps to solve a problem. In terms
+    of the data required to represent the case of a problem and the set of steps necessary
+    to produce the desired result.
+
+
+    Programming languages must give the programmer a notational way to represent the
+    process and the data with which every algorithm is going to work.
+
+
+    Speaking of data, it is represented as strings of binary digits, so we need to
+    represent data types to give them structure and meaning.
+
+
+    In short, programming is the art of developing a computer program by a programmer,
+    using a programming language, which contains algorithms, which are finite and
+    determined steps and uses data structures, procedures and any viable paradigm
+    to solve a problem.
+
+
+    I am not going to elaborate much more on this concept since it is not the objective
+    of this book to delve into the concept of programming itself, but rather to know
+    the fundamentals and theory about one of the most used paradigms of programming:
+    The Object-Oriented paradigm.
+
+
+    # WHAT IS AN OBJECT-ORIENTED PROGRAMMING?
+
+
+    Object Oriented Programming or OOP is the most widely used paradigm for software
+    development today, which is based on the use of a series of common principles
+    for such development, namely:
+
+
+    - Objects
+
+    - Classes
+
+    - Inheritance
+
+    - Encapsulation
+
+    - Polymorphism
+
+    - Abstraction
+
+    - Modularity
+
+
+    That is, a programmer solves a problem using this paradigm that creates real world
+    objects using an object-oriented language and using the technique of abstraction,
+    to model them by giving them characteristics and behavior.
+
+    We will analyze each of the principles in detail, with their corresponding examples.
+
+
+    # OBJECTIVES OF AN OBJECT-ORIENTED PARADIGM
+
+
+    Let''s start by analyzing the characteristics of this paradigm:
+
+
+    - Facilitates the creation of software
+
+    - Use real world objects and model them
+
+    - Uses the concepts
+
+
+    On the other hand, OOP has the following purposes:
+
+
+    - Better maintenance
+
+    - Extend features
+
+    - Usability
+
+
+    We will see each of the characteristics in detail:
+
+
+    # OOP MAKES IT EASILY TO CREATE SOFTWARE QUALITY
+
+
+    OOP allows to create software with fewer bugs, as it is more robust and of better
+    quality than other paradigm.
+
+
+    # BETTER MAINTENANCE
+
+
+    Maintaining a software using OOP is easier to perform, since developers who must
+    touch code are more likely to understand clearly what the main programmer wanted
+    to do, therefore, the code change or improvement is easier to do.
+
+
+    # FEATURE EXTENSION
+
+
+    The extension of characteristics of a software made with OOP is better than another
+    since it allows to use classes that are abstractions of the real world.
+
+
+    # IMPROVES SOFTWARE REUSE
+
+
+    The reuse builds on the above concept as by creating encapsulated classes (components)
+    we can use them in different projects and not have to rewrite them again. This
+    characteristic is one of the most important of this paradigm.
+
+
+    # USABILITY
+
+
+    Regarding usability, it refers to the ease of use and the quality of operation
+    of its interfaces (user / software options relationship), so developers should
+    pay attention to this element. Therefore, the concept of usability is closely
+    related to the quality of the software product. We can observe, with usability,
+    other concepts of Software Engineering such as reliability, efficiency and reliability.
+    However, we will not emphasize the latter as it is not the objective of this book.
+
+
+    Traditionally, software development methodologies have focused on process, which
+    refers to modeling activities, tools, and notations for creating software. Usability
+    is not recommended for changing projects and those in which development must be
+    reduced, but nevertheless it is desired to maintain the quality of the product.
+    In this case, using methodologies such as agile is more appropriate.
+
+
+    To end this concept of usability, we can say that tests are the ideal environment
+    to establish the degree of quality of a product based on usability. The incorporation
+    of usability techniques can be adapted to traditional development methodologies
+    (waterfall), but they are not recommended for agile methodologies, since they
+    are based on partial deliveries during short periods of time, which the product
+    grows exponentially with feedback user continuum.
+
+
+    # OOP USES REAL-WORLD OBJECTS
+
+
+    When we see the concept of abstraction, we can better understand what this topic
+    refers to. But basically, we can go on commenting that the objects in the real
+    world are all those that can be mentally analyzed to give them attributes and
+    behavior. For example, if we model a car buying / selling software, we can see
+    in a simple way that a suitable object is the AUTO, to which data can
+
+    '
+  mdcn: '
+
+
+    # 面向对象编程范式
+
+
+    它是最常用的软件编程范式之一，因为它在重用、抽象、解决现实世界问题等方面具有许多优势。
+
+    关于这种范式，我们需要了解的一些内容：
+
+
+    - 对象的创建与销毁
+
+    - 我们使用类（classes）来定义对象
+
+    - 类具有属性和方法（行为）
+
+
+    这种范式是本书的主题，我们将学习所有的基本概念，以便你能将其应用于支持该范式的编程语言中。
+
+    采用这种范式的常用语言有：C#、Java、C++、VB.NET 等。
+
+
+    # 逻辑编程范式
+
+
+    这是声明式（Declarative）范式的一种编程范式。逻辑编程范式围绕谓词或元素间关系的概念展开。它基于数学数学接受函数的概念。数学逻辑是形式化表达复杂问题并根据规则、假设和定理解决问题最简单的方法。例如：
+
+
+    - 被视为逻辑语句的逻辑陈述
+
+    - 用于描述程序行为的形式化规范
+
+    - 几乎所有编程语言中的数据和布尔表达式
+
+    - 逻辑编程涉及使用事实和关系来表示信息并回答查询。不要忘记公式：
+
+    算法 = 逻辑 + 控制
+
+
+    # 函数式编程范式
+
+
+    这是一类编程范式，基于使用函数来解决问题，避免可变数据和函数间的状态共享。
+
+
+    接收函数作为参数并返回函数作为结果的被称为高阶函数（Order Order）。函数式编程是一种声明式范式，类似于逻辑编程。我们关注“做什么”（WHAT）而不是“怎么做”（HOW）（即不使用控制语句，如循环或条件语句）。注意：如果你对函数式编程感兴趣，可以在亚马逊购买《函数式编程导论》这本书。
+
+
+    # 声明式与命令式范式
+
+
+    正如前面提到的，存在声明式（Declarative）和命令式（Imperative）编程范式。我们已经看到了声明式的：逻辑和函数式。在声明式编程中，它们做的是在用户层面描述要解决的问题。Prolog、Maude、Haskell
+    和 Erlang 都是声明式语言的示例。正如之前讨论的，它们关注“做什么”。
+
+
+    另一方面，命令式编程需要为了计算所需的数据，通过对存储的数据执行一系列转换，以获得最终的结果。命令式编程是最古老的编程范式，它由一个接一个的指令组成，决定了计算机必须做什么。最流行的编程语言有：Fortran、Basic、C、Pascal、Cobol、Python、Java、C++
+    等。
+
+
+    # 声明式与命令式语言的区别
+
+
+    - 命令式编程：逐步描述一组执行指令以改变程序的状态。它使用算法概念（解决问题的必要步骤）。其主要优势是比声明式的更简单、易于实现并能够在程序的不同地方重用代码。
+
+    - 声明式编程：使用的语句用于描述要解决的问题，即在用户层面，但没有指示解决方案所需的指令。其基本优势是声明式语言中使用了数学推理。
+
+
+    # 什么是编程？
+
+
+    在学习面向对象范式之前，让我们简单回顾一下什么是编程。
+
+
+    编程是将算法在某种计算机可以理解并执行的语言中进行编码的过程。有许多编程语言和类型的计算机。但这里重要的是算法概念，即解决问题的必要步骤。在表示问题案例方面，需要产生所需结果的数据。
+
+
+    编程语言必须为程序员提供一种方式来表示过程以及算法运行的数据。
+
+
+    谈到数据，它被表示为数字位，因此我们需要表示数据类型以赋予它们结构和意义。
+
+
+    简而言之，编程是程序员使用编程语言开发计算机程序的艺术，这种语言包含有限且确定的步骤，并使用数据结构、过程和任何可行的范式来解决问题。
+
+
+    我不再详细阐述这个概念，因为本书的目的不是深入研究编程本身的概念，而是了解最常用的编程范式之一：面向对象范式。
+
+
+    # 什么是面向对象编程？
+
+
+    面向对象编程（或 OOP）是目前最广泛使用的软件开发范式，它基于一系列用于此类开发的通用原则，即：
+
+
+    - 对象
+
+    - 类
+
+    - 继承
+
+    - 封装
+
+    - 多态
+
+    - 抽象
+
+    - 模块化
+
+
+    也就是说，程序员使用这种范式解决问题，使用面向对象的语言创建现实世界对象，并使用抽象技术通过赋予它们特征和行为来进行建模。我们将详细分析每个原则并给出相应的示例。
+
+
+    # 面向对象范式的目标
+
+
+    让我们从分析这种范式的特性开始：
+
+
+    - 便于创建软件
+
+    - 使用现实世界对象并对其建模
+
+    - 使用概念
+
+
+    另一方面，OOP 有以下目的：
+
+
+    - 更好的维护
+
+    - 扩展功能
+
+    - 可用性
+
+
+    我们将详细查看每个特性：
+
+
+    # OOP 能够轻松创建高质量软件
+
+
+    OOP 允许创建漏洞更少的软件，因为它比其他范式更健壮、质量更高。
+
+
+    # 更好的维护
+
+
+    使用 OOP 维护软件更容易执行，因为必须接触代码的开发者更有可能地理解主程序员想做什么，因此代码的更改或改进更容易实现。
+
+
+    # 功能扩展
+
+
+    使用 OOP 开发的软件，其特征扩展比其他范式更好，因为它允许使用现实世界的抽象的类。
+
+
+    # 提高软件重用
+
+
+    重用建立在上述概念之上，通过创建封装的类（组件），我们可以在不同的项目中使用它们，而无需重新编写它们。这一特性是该范式中最重要的特性之一。
+
+
+    # 可用性
+
+
+    关于可用性，它指的是界面的易用程度和操作质量（用户/软件选项的关系），因此开发者应该关注这一元素。因此，可用性概念与软件产品的质量密切相关。在软件工程中，除了可用性，我们还可以观察到可靠性、效率等概念，但我们不会强调后者，因为这不是本书的目标。
+
+
+    传统上，软件开发方法侧重于过程，即创建软件的活动、工具和符号。可用性技术的引入可以适应传统的开发方法（瀑布模型），但并不推荐敏捷开发方法，因为敏捷方法基于在短时间内的部分交付，产品随着持续的用户反馈呈指数级增长。
+
+
+    当我们看到抽象概念时，可以更好地理解这个主题指的是什么。
+
+
+    OOP 使用现实世界对象
+
+
+    使用面向对象的语言并使用抽象技术通过赋予它们特征和行为来进行建模。'
+  merge: 0
+  raw:
+  - '[PAGE 32]
+
+
+    # OBJECT-ORIENTED PROGRAMMING PARADIGM
+
+
+    It is one of the most used to program Software, since it has many advantages
+
+    in terms of issues such as reuse, abstraction, solving real world problems, etc.
+
+    Some of the things we should know about this Paradigm:
+
+
+    +   - Objects are created and destroyed
+
+    - We use classes to define objects
+
+    - Classes have attributes and methods (behavior)
+
+
+    This Paradigm is the objective of this book and all the basic concepts will be
+
+    studied so that you can apply it in a programming language that accepts it.
+
+    The most common languages that adopt this Paradigm are: C #, Java, C ++,
+
+    VB.NET, among others.'
+  - '[PAGE 33]
+
+
+    # LOGIC PROGRAMMING PARADIGM
+
+
+    This is a type of Paradigm of programming that is within the Paradigm of Declarative
+    type. This Paradigm of logic programming revolves around the concept of predicate
+    or relation of elements. It is based on the concept of the more mathematical acceptance
+    function. Mathematical logic is the simplest way to formally express complex problems
+    and to be able to solve them based on rules, hypotheses and theorems. For example:
+
+
+    +   - Logical statements seen as a programming language
+
+    - Logical statements that are for formal specifications that describe the behavior
+    of a program.
+
+    - Data and Boolean expressions used in almost all programming languages.
+
+    - Boolean algebra
+
+
+    Logic programming involves the use of facts and relationships to represent information
+    and to answer queries.
+
+    Don''t forget the following equation.
+
+    Algorithm = logic + control
+
+
+    # FUNCTIONAL PROGRAMMING PARADIGM
+
+
+    This is a type of programming paradigm that is based on the use of Functions for
+    problem solving, avoiding mutable data and sharing states between functions.
+
+
+    Functions that can receive functions as parameters and return functions as results
+    are called Higher Order Function.
+
+    Functional programming is a Declarative Paradigm, like logic programming. We focus
+    on the WHAT and not the HOW (this would be imperative). What does it mean? We
+    do not use flow controls, that is, neither loops nor conditionals, only functions.
+
+
+    NOTE: If you are interested in Functional Programming, I have written a book on
+    INTRODUCTION TO FUNCTIONAL PROGRAMMING that you can purchase at Amazon Kindle
+    stores.
+
+
+    # DECLARATIVE AND IMPERATIVE PARADIGMS'
+  - '[PAGE 34]
+
+
+    As we mentioned previously, there are Paradigms of Programming called imperatives
+    and declaratives.
+
+    We already saw 2 of the declaratives: logical and functional.
+
+    In DECLARATIVE programming, what they do is describe the problem to be solved,
+    they are programmed by saying what they want to solve at the user level, but not
+    the instructions necessary to solve it.
+
+    The Prolog, Maude, SQL, Haskell, and Erlang languages are examples of declarative
+    languages.
+
+    as we discussed earlier, they focus on the WHAT rather than the HOW
+
+    On the other hand, IMPERATIVE programming requires knowing what data is required
+    for the calculation, associating the memory addresses with these and carrying
+    out a sequence of transformations on the stored data by step in such a way that
+    the final state represents the correct result.
+
+    Imperative programming is the oldest programming paradigm that exists. It consists
+    of instructions which are chained one after the other that determine what the
+    computer must always do to obtain a result.
+
+    The most popular programming languages are:
+
+    Fortran, Basic, C, C#, Pascal, Cobol, Python, Java, C++, etc.
+
+
+    # DIFFERENCE BETWEEN DECLARATIVE AND IMPERATIVE LANGUAGES
+
+
+    +   -ERATIVE PROGRAMMING: describes step by step a set of instructions that are
+    executed to vary the state of a program. Use the concept of algorithm (steps necessary
+    to solve a problem). The main advantage is that it is simpler than the declarative
+    one, easy to implement and to be able to reuse the same code in different places
+    in the program.
+
+    - DECLARATIVE PROGRAMMING: sentences are used that describe the problem, programming
+    what is to be solved at the user level, but the instructions necessary for the
+    solution are not indicated. As a fundamental advantage is that in which in declarative
+    languages mathematical reasoning is used.'
+  - '[PAGE 35]
+
+
+    # WHAT IS PROGRAMMING?
+
+
+    Before learning about the object-oriented paradigm, let''s remember a little about
+    what programming is.
+
+
+    Programming is the process of taking an algorithm and coding it in a certain language
+    that is understandable and executed by a computer. There are many programming
+    languages and different types of computers. But here the important thing is the
+    concept of algorithm, which are the necessary steps to solve a problem. In terms
+    of the data required to represent the case of a problem and the set of steps necessary
+    to produce the desired result.
+
+
+    Programming languages must give the programmer a notational way to represent the
+    process and the data with which every algorithm is going to work.
+
+
+    Speaking of data, it is represented as strings of binary digits, so we need to
+    represent data types to give them structure and meaning.
+
+
+    In short, programming is the art of developing a computer program by a programmer,
+    using a programming language, which contains algorithms, which are finite and
+    determined steps and uses data structures, procedures and any viable paradigm
+    to solve a problem.
+
+
+    I am not going to elaborate much more on this concept since it is not the objective
+    of this book to delve into the concept of programming itself, but rather to know
+    the fundamentals and theory about one of the most used paradigms of programming:
+    The Object-Oriented paradigm.
+
+
+    # WHAT IS AN OBJECT-ORIENTED PROGRAMMING?
+
+
+    Object Oriented Programming or OOP is the most widely used paradigm for software
+    development today, which is based on the use of a series of common principles
+    for such development, namely:
+
+
+    +   - Objects
+
+    - Lessons
+
+    - Inheritance
+
+    - Encapsulation
+
+    - Polymorphism
+
+    - Abstraction
+
+    - Modularity'
+  - '[PAGE 36]
+
+
+    That is, a programmer solves a problem using this paradigm that creates real world
+    objects using an object-oriented language and using the technique of abstraction,
+    to model them by giving them characteristics and behavior.
+
+    We will analyze each of the principles in detail, with their corresponding examples.'
+  - '[PAGE 37]
+
+
+    # OBJETIVES OF AN OBJECT-ORIENTED PARADIGM
+
+
+    Let''s start by analyzing the characteristics or basic foundations of this paradigm:
+
+
+    +   - Facilitates the creation of quality software
+
+    - Your goal is to use real world objects and model them
+
+    - Uses the concepts of objects and classes as the main
+
+
+    On the other hand, Object Orientation has the following purposes:
+
+
+    +   - Better software maintenance
+
+    - Extend its features
+
+    - Reuse the software
+
+    - Usability
+
+
+    We will see each of the characteristics and objectives in detail below:'
+  - '[PAGE 38]
+
+
+    # OOP MAKES IT EASILY TO CREATE SOFTWARE QUALITY
+
+
+    OOP allows the programmer to create software with fewer bugs, as it is easier
+    for a person to abstract objects from the real world and give them characteristics
+    (in the form of attributes) and behavior (in the form of functions or methods).
+
+
+    Therefore, by having fewer errors, the software is more robust and of better quality
+    than other software that had more errors due to using a more complicated paradigm.
+
+
+    # BEST MAINTENANCE
+
+
+    Maintaining a software using OOP is easier to perform, since non-development programmers,
+    who must touch code developed by another, are more likely to understand more clearly
+    what the main programmer wanted to do, therefore, the code change or improvement
+    is easier to do.
+
+
+    # IMPROVE FEATURE EXTENSION
+
+
+    The extension of characteristics of a software made with OOP is better than with
+    another paradigm since it allows to use classes that are the abstractions of the
+    objects of the real world and allow the aggregates to be made in a more natural
+    way.'
+  - '[PAGE 39]
+
+
+    # IMPROVES SOFTWARE REUSE
+
+
+    The reuse builds on the above concept as by creating encapsulated classes (components)
+    we can use them in different projects and not have to rewrite them again. This
+    characteristic is one of the most important of this Object-Oriented paradigm.
+
+
+    # IMPROVE USABILITY
+
+
+    Regarding usability, it refers to the ease of use and the quality of operation
+    of its interfaces (user / software options relationship), so developers should
+    pay attention to this element. Therefore, the concept of usability is closely
+    related to the quality of the software product developed. We can observe, with
+    usability, other concepts of Software Engineering such as reliability, efficiency
+    and reliability. However, we will not emphasize the latter as it is not the objective
+    of this book.
+
+
+    Traditionally, software development methodologies have focused on process, which
+    refers to modeling activities, tools, and notations for creating software. Usability
+    is not recommended for changing projects and those in which development must be
+    reduced, but nevertheless it is desired to maintain the quality of the product.
+    In this case, using methodologies such as agile is more appropriate.
+
+
+    To end this concept of usability, we can say that tests are the ideal environment
+    to establish the degree of quality of a product based on usability. The incorporation
+    of usability techniques can be adapted to traditional development methodologies
+    (waterfall), but they are not recommended for agile methodologies, since they
+    are based on partial deliveries during short periods of time, which the product
+    grows exponentially with feedback user continuum.
+
+
+    # OOP USES A REAL-WORLD OBJECTS
+
+
+    When we see the concept of abstraction, we can better understand what this topic
+    refers to. But basically, we can go on commenting that the objects in the real
+    world are all those that can be mentally analyzed to give them attributes and
+    behavior. For example, if we model a car buying / selling software, we can see
+    in a simple way that a suitable object is the AUTO, to which data can'
+- md: "\nbe modeled (in the form of attributes, such as color, engine type, the number\
+    \ of doors, etc.) and behavior (in the form of functions or methods, such as forward,\
+    \ brake, reverse, fix, etc.).\nSo, we model real-world objects using the abstraction\
+    \ technique to create those objects that we will use in object-oriented programming\
+    \ using a programming language that adopts this technique.\n\n## OOP CONCEPTS\
+    \ OF OBJECTS AND CLASSES\n\nWe will also see it in more detail in the book, but\
+    \ we can go on saying that OOP uses two fundamental and basic concepts:\n\n- Objects:\
+    \ as we saw previously, they are what we abstract from the real world to give\
+    \ them attributes and behavior\n- Classes: these are the templates on which we\
+    \ will base ourselves to create the objects in the code.\n\nObjects are tested\
+    \ in the testing phase of a software project to see if they meet the expected\
+    \ results.\nOur internal representations are based on classifying objects in the\
+    \ real world based on colors, sizes, shapes, since we can observe, quantify, touch\
+    \ and, ultimately, model these objects.\n\nLet's continue. This Object-Oriented\
+    \ paradigm was created to use the features mentioned above and takes up the original\
+    \ ideas of how we see the world of objects.\n\nAs you can see, functionality is\
+    \ not only important. As a novice programmer you may think that all you are interested\
+    \ in is that your program works and nothing else. In this paradigm it is not enough.\
+    \ We must do things, go one step further. We must make software that complies\
+    \ with other characteristics, because the software must grow, it must be reused,\
+    \ it must be maintained for a longer time.\n\n## INTRODUCTION TO CLASSES AND OBJECTS\n\
+    \nThe Object-Oriented paradigm is based primarily on the concepts of classes and\
+    \ objects.\n\nWhen looking at the real world, we see objects everywhere. If we\
+    \ go out to the street (object), we can see trees, people, cars, motorcycles,\
+    \ bicycles, a sky, clouds, etc.\n\nEach of these objects can be modeled in this\
+    \ paradigm to give you attributes (characteristics) and behavior (actions). For\
+    \ example, in the case of a person, we can give him attributes such as age, height,\
+    \ hair color, weight, name, etc. And behavior such as walking, running, eating,\
+    \ sleeping, etc.\n\nOnce this is known, let's explain the theoretical concepts\
+    \ of a class and an object in the scope of the Object-Oriented paradigm.\n\n##\
+    \ CLASS\n\nA class is a description of a set of similar objects. It has common\
+    \ methods and characteristics of this set.\n\nIn other words, a class is a template\
+    \ where the characteristics and functions common to all the objects it contains\
+    \ are defined.\n\nFor example, the class PERSON has Name, Age and Weight as common\
+    \ characteristics and Running, Walking and Sleeping as common methods (there can\
+    \ be many more).\n\nThen, every object that is created in a programming language\
+    \ of the type of this class PERSON will automatically have the attributes and\
+    \ methods of that class available.\n\nLet's get on with the theory. A class is\
+    \ the declaration of an object type. Something like abstract data types in a programming\
+    \ language (for example, the integer or string type). Every time an object is\
+    \ constructed from a class, we are creating an instance of that class. This concept\
+    \ of instance is something awfully specific to OOP. Instance is the creation of\
+    \ an object in the memory of a PC.\n\nIn C# language, which is a purely object-oriented\
+    \ language, we instantiate an object of type PERSON, like this:\n\n```csharp\n\
+    Person = new Person ()\n```\n\nWhere\n**Person** is a type of class.\n**person**\
+    \ (all lowercase) is an object that belongs to Person (its class)\nnew is the\
+    \ C# reserved word where the compiler creates the object in memory.\nAnd then\
+    \ we put what we are going to create after new and always placing the final parentheses\
+    \ of the corresponding type.\n\n## OBJECT\n\nAn object is an element. It is the\
+    \ instance of a class in memory. It is the one that will be used in an object-oriented\
+    \ programming language to use its attributes or functionality.\n\nIn the example\
+    \ above, a person object can be used in C# like this:\n\n```csharp\nperson.Run();\n\
+    person.Age = 73;\n```\n\n## DIFFERENCE BETWEEN OBJECT AND CLASS\n\nAs we saw,\
+    \ an object is an element. A class describes the set of similar elements. From\
+    \ a class, an indeterminate number of objects is defined. Each object has its\
+    \ own state (for example, a person object can be running, and another person object\
+    \ can be walking) within the state of a program.\n\nThe class is an abstract type.\
+    \ The object is the concrete element that is used in a program to show its status\
+    \ and observe its functionality.\n\n## PRINCIPLES OF THE OBJECT-ORIENTED PARADIGM\n\
+    \nLet's go back to the principles of this paradigm. As we saw previously, the\
+    \ object-oriented paradigm has a series of principles that every developer who\
+    \ tries to program following this paradigm must make sure to use these principles,\
+    \ which are:\n\n- ABSTRACTION\n- ENCAPSULATION\n- MODULARITY\n- INHERITANCE\n\
+    - POLYMORPHISM\n\nYou won't be programming object-oriented if you don't use inheritance\
+    \ create objects from classes. You cannot use all the principles in a program,\
+    \ but the most important ones must be (abstraction, encapsulation, inheritance).\n\
+    \nWe will analyze each of them in detail, giving some application examples.\n\n\
+    ## ABSTRACTION\n\nAbstraction is the first principle of the object-oriented paradigm.\
+    \ What is abstraction?\nThink when you look at a real-world object, for example\
+    \ a tree. You need to get the most important information about this object in\
+    \ order to model it in a computer program. Therefore, you should worry about what\
+    \ you really need to know: in your case you only need to know: the type of tree,\
+    \ its height, its age. However, you do not need to know the cellular structure\
+    \ of every leaf.\n\nAbstraction is the process of hiding unnecessary details and\
+    \ showing only the essential features of an object. It allows us to work with\
+    \ complex systems without being overwhelmed by their internal implementation.\n\
+    \nIn OOP, abstraction is achieved through interfaces and abstract classes, which\
+    \ define what an object does without specifying how it does it.\n\nThis technique\
+    \ refers to the functionality (in OOP) that each object shows. In our example\
+    \ of the PERSON class, the chosen interface can be:\n\n```csharp\nRun()\nWalk()\n\
+    Sleep()\n```\n\nSo only the exterior will show this functionality.\n\n### Properties\
+    \ of an abstraction\n\nEvery abstraction has properties:\n- Static: it is not\
+    \ modifiable, for example: Name of a person.\n- Dynamic: it is modifiable, for\
+    \ example: Weight of a person\n\n## ENCAPSULATION\n\nEncapsulation is the process\
+    \ of storing in the same section the elements of an abstraction that constitute\
+    \ its structure and behavior.\n\nHere also appears the concept of interface, about\
+    \ an abstraction and its implementation.\n\nWe achieve this principle, applying\
+    \ the term of information concealment. This concept allows us to hide (obviously)\
+    \ the characteristics of an object that are not necessary to show to the outside\
+    \ (in programming, using the private reserved word).\n\nFor the abstraction to\
+    \ work, the implementation must be encapsulated (that is, it hides unnecessary\
+    \ implementation details from the outside). Let's look at some words or access\
+    \ modifiers, keys to this principle applying a programming language, for example,\
+    \ C#.\n\n- Public\n- Protected\n- Private\n\n### Public\n\nAll objects can access\
+    \ the data or methods that a class defines as public. It is all that the outer\
+    \ part you want it to know.\n\n### Protected\n\nThey are not public, except for\
+    \ the objects of the class and those that inherit from it which is set with the\
+    \ protected access modifier.\n\n### Private\n\nThey only access the data and methods,\
+    \ the objects of the class itself.\n\nLet's see some examples of the Person class.\n\
+    \n```csharp\nclass Person\n{\n  private string color;\n  color = 'red';\n}\n```\n\
+    \nIn this example, we see that the Person class has a private attribute called\
+    \ color and then we assign a piece of data to it (red). This data is only known\
+    \ by the person class.\n"
+  mdcn: "\n被建模为属性（以属性的形式，如颜色、引擎类型、车门数量等）和行为（以函数或方法的形式，如前进、刹车、倒车、修复等）。\n因此，我们使用抽象技术对现实世界对象进行建模，以便在采用这种技术的编程语言中使用面向对象编程创建出这些的对象。\n\
+    \n## 对象的与类的 OOP 概念\n\n我们将在书中更详细地介绍这些，但可以说，面向对象编程（OOP）使用了两个基本且基础的概念：\n\n- 对象（Objects）：正如我们之前看到的，它们是我们从现实世界中抽象出来的东西，并赋予它们属性和行为。\n\
+    - 类（Classes）：这些是模板，我们基于这些模板在代码中创建对象。\n\n在软件项目的测试阶段会对对象进行测试，以查看它们是否符合预期结果。\n我们的内部表示是根据颜色、大小、形状对现实世界中的对象进行分类，因为我们可以观察、量化、触摸并最终对这些对象进行建模。\n\
+    \n让我们继续。这种面向对象的范式是为了使用上述特征而创建的，它继承了我们看待对象世界的原始理念。\n\n如你所见，功能性不仅仅是重要的。作为一名初级程序员，你可能认为你关心的只是你的程序运行，别无其他。在这个范式中，这是不够的。我们必须做得更多，更进一步。我们必须制作符合其他特征的软件，因为软件必须增长、必须被重用、必须被长时间地维护。\n\
+    \n## 类与对象的介绍\n\n面向对象的范式主要基于类和对象的概念。\n\n当我们观察现实世界时，我们随处可见对象。如果我们走上街（对象），我们可以看到树、人、汽车、摩托车、自行车、天空、云朵等。\n\
+    \n这些对象中的每一个都可以在这种范式中被建模，以向你提供属性（特征）和行为（动作）。例如，以人为例，我们可以赋予他如年龄、身高、发色、体重、姓名等属性，以及如行走、跑步、进进、睡觉等行为。\n\
+    \n一旦了解了这些，让我们来解释面向对象范式范围内的类和对象的理论概念。\n\n## 类 (CLASS)\n\n类是一组相似对象的描述。它具有该组共有的方法和特征。\n\
+    \n换句话说，类是一个模板，在其中定义了其包含的所有对象共有的特征和功能。\n\n例如，PERSON 类具有 Name、Age 和 Weight 作为共同特征，具有\
+    \ Running、Walking 和 Sleeping 作为共同方法（可能还有更多）。\n\n那么，在这种 PERSON 类类型的编程语言中创建的每个对象都将自动拥有该类的属性和方法。\n\
+    \n让我们继续理论部分。类是对象类型的声明。类似于编程语言中的抽象数据类型（例如，整数或字符串类型）。每当我们从一个类构造一个对象时，我们就是在创建该类的一个实例（instance）。这个实例概念是面向对象编程（OOP）非常特有的。实例是在\
+    \ PC 内存中创建对象的过程。\n\n在 C# 语言中（这是一种纯面向对象的语言），我们像这样实例化一个 PERSON 类型的对象：\n\n```csharp\n\
+    Person = new Person ()\n```\n\n其中\n**Person** 是一种类类型。\n**person**（全小写）是一个属于 Person（其类）的对象。\n\
+    new 是 C# 的预留字，编译器通过它在内存中创建对象。\n然后，在 `new` 之后放置我们想要创建的内容，并始终放置对应类型的最后的圆括号。\n\n\
+    ## 对象 (OBJECT)\n\n对象是一个元素。它是内存中类的实例。它将在面向对象编程语言中使用，以使用其属性或功能。\n\n在上面的示例中，人对象可以这样在\
+    \ C# 中使用：\n\n```csharp\nperson.Run();\nperson.Age = 73;\n```\n\n## 对象与类的区别\n\n\
+    正如我们所看到的，对象是一个元素。类描述了相似元素的集合。从类中定义了不确定数量的对象。每个对象在程序状态内都有自己的状态（例如，一个人对象可以正在跑步，另一个人对象可以正在行走）。\n\
+    \n类是一个抽象类型。对象是程序中使用的具体元素，用于显示其状态并观察其功能。\n\n## 面向对象范式的原则\n\n让我们回到这个范式的原则上。正如我们之前看到的，面向对象范式有一系列原则，每个尝试按照此范式进行编程的开发者都必须确保使用这些原则，这些原则是：\n\
+    \n- 抽象（ABSTRACTION）\n- 封装（ENCAPSSULATION）\n- 模块化（MODULARITY）\n- 继承（INHERITANCE）\n\
+    - 多态（POLYMORPHISM）\n\n如果你不使用继承从类创建对象，你就不是在进行面向对象编程。你不能在程序中使用所有的原则，但最重要的原则（抽象、封装、继承）必须具备。\n\
+    \n我们将详细分析其中的每一个原则，并给出一些应用示例。\n\n## 抽象 (ABSTRACTION)\n\n抽象是面向对象范式的第一个原则。什么是抽象？\n\
+    想想当你观察一个现实世界的对象时，例如一棵树。你需要获取关于这个对象最重要的信息，以便在计算机程序中对其建模。因此，你应该关注你真正需要知道的：在你的情况下，你只需要知道：树的类型、它的高度、它的年龄。然而，你不需要知道每一片叶子的细胞结构。\n\
+    \n抽象是隐藏不必要的细节并只显示对象本质特征的过程。它允许我们处理复杂的系统而不被其内部实现所淹。\n\n在 OOP 中，抽象通过接口和抽象类实现，它们定义了对象做什么，而不是指定它是如何做的。\n\
+    \n这种技术指的是每个对象显示的（（在 OOP 中）。在我们类的示例中，选定的接口可以是：\n\n```csharp\nRun()\nWalk()\nSleep()\n\
+    ```\n\n所以只有外部会显示这种功能。\n\n### 抽象的属性\n\n每个抽象都有属性：\n- 静态：不可修改，例如：人的姓名。\n- 动态：可修改，例如：人的体重\n\
+    \n## 封装 (ENCAPSSULATION)\n\n封装是将构成抽象结构和行为的元素存储在同一个区域的过程。\n\n这里也出现了接口的概念，关于抽象及其实现。\n\
+    \n我们实现这一原则的方法应用了信息隐藏术语。这个概念允许我们隐藏（显而易见的）不需要展示给外部的对象特征（在编程中使用私有预留字）。\n\n为了让抽象生效，实现必须被封装（即从外部隐藏不必要的实现细节）。让我们看看一些单词或访问修饰符，这是应用该原则的编程语言，例如\
+    \ C#。\n\n- Public\n- Protected\n- Private\n\n### Public\n\n所有对象都可以访问类定义为公共的数据或方法。它是你希望外部部分知道的所有内容。\n\
+    \n### Protected\n\n它们不是公共的，除了类对象以及继承自它的对象（后者是通过受保护访问修饰符设置的）。\n\n### Private\n\n\
+    它们只访问类本身的数据和方法。\n\n让我们看看 Person 类的一些示例。\n\n```csharp\nclass Person\n{\n  private\
+    \ string color;\n  color = 'red';\n}\n```\n\n在这个示例中，我们看到 Person 类有一个私有的属性为 color，然后我们给它赋值了一个数据（red）。这个数据只有人类知道。\n\
+    \n"
+  merge: 1
+  raw:
+  - '[PAGE 40]
+
+
+    be modeled (in the form of attributes, such as color, engine type, the number
+    of doors, etc.) and behavior (in the form of functions or methods, such as forward,
+    brake, reverse, fix, etc).
+
+    So, we model real-world objects using the abstraction technique to create those
+    objects that we will use in object-oriented programming using a programming language
+    that adopts this technique.
+
+
+    # OOP CONCEPTS OF OBJECTS AND CLASSES
+
+
+    We will also see it in more detail in the book, but we can go on saying that OOP
+    uses 2 fundamental and basic concepts:
+
+
+    +   - Objects: as we saw previously, they are what we abstract from the real world
+    to give them attributes and behavior
+
+    - Classes: these are the templates on which we will base ourselves to create the
+    objects in the code.
+
+
+    Objects are tested in the testing phase of a software project to see if they meet
+    the expected results.
+
+    Our internal representations are based on classifying objects in the real world
+    based on colors, sizes, shapes, since we can observe, quantify, touch and, ultimately,
+    model these objects.
+
+
+    Let''s continue. This Object-Oriented paradigm was created to use the features
+    mentioned above and takes up the original ideas of how we see the world of objects.
+
+
+    As you can see, functionality is not only important. As a novice programmer you
+    may think that all you are interested in is that your program works and nothing
+    else. In this paradigm it is not enough. We must do things, go one step further.
+    We must make software that complies with other characteristics, because the software
+    must grow, it must be reused, it must be maintained for a longer time.'
+  - '[PAGE 41]
+
+
+    # INTRODUCTION TO CLASSES AND OBJECTS
+
+
+    The Object-Oriented paradigm is based primarily on the concepts of classes and
+    objects.
+
+
+    When looking at the real world, we see objects everywhere. If we go out to the
+    street (object), we can see trees, people, cars, motorcycles, bicycles, a sky,
+    clouds, etc.
+
+
+    Each of these objects can be modeled in this paradigm to give you attributes (characteristics)
+    and behavior (actions). For example, in the case of a person, we can give him
+    attributes such as age, height, hair color, weight, name, etc. And behavior such
+    as walking, running, eating, sleeping, etc.
+
+
+    Once this is known, let''s explain the theoretical concepts of a class and an
+    object in the scope of the Object-Oriented paradigm.
+
+
+    # CLASS
+
+
+    A class is a description of a set of similar objects. It has common methods and
+    characteristics of this set.
+
+
+    In other words, a class is a template where the characteristics and functions
+    common to all the objects it contains are defined.
+
+
+    For example, the class PERSON has Name, Age and Weight as common characteristics
+    and Running, Walking and Sleeping as common methods (there can be many more).
+
+
+    Then, every object that is created in a programming language of the type of this
+    class PERSON will automatically have the attributes and methods of that class
+    available.
+
+
+    Let''s get on with the theory. A class is the declaration of an object type. Something
+    like abstract data types in a programming language (for example, the integer or
+    string type). Every time an object is constructed from a class, we are creating
+    an instance of that class. This concept of instance is something awfully specific
+    to OOP. Instance is the creation of an object in the memory of a PC.
+
+
+    In C # language, which is a purely object-oriented language, we instantiate an
+    object of type PERSON, like this:'
+  - '[PAGE 42]
+
+
+    ```
+
+    Person = new Person ()
+
+    ```
+
+
+    Where
+
+    **Person** is a type of class.
+
+    **person** (all lowercase) is an object that belongs to Person (its class)
+
+    new is the C # reserved word where the compiler creates the object in memory.
+
+    And then we put what we are going to create after new and always placing the final
+    parentheses of the corresponding type.'
+  - '[PAGE 43]
+
+
+    # OBJECT
+
+
+    An object is an element. It is the instance of a class in memory. It is the one
+    that will be used in an object-oriented programming language to use its attributes
+    or functionality.
+
+
+    In the example above, a person object can be used in C # like this:
+
+
+    ```
+
+    person.Run();
+
+    person.Age = 73;
+
+    ```
+
+
+    # DIFFERENCE BETWEEN OBJECT AND CLASS
+
+
+    As we saw, an object is an element. A class describes the set of similar elements.
+    From a class, an indeterminate number of objects is defined. Each object has its
+    own state (for example, a person object can be running, and another person object
+    can be walking) within the state of a program.
+
+
+    The class is an abstract type. The object is the concrete element that is used
+    in a program to show its status and observe its functionality.'
+  - '[PAGE 44]
+
+
+    # PRINCIPLES OF THE OBJECT-ORIENTED PARADIGM
+
+
+    Let''s go back to the principles of this paradigm. As we saw previously, the object-oriented
+    paradigm has a series of principles that every developer who tries to program
+    following this paradigm must make sure to use these principles, which are:
+
+
+    +   - ABSTRACTION
+
+    - ENCAPSULATION
+
+    - MODULARITY
+
+    - INHERITANCE
+
+    - POLYMORPHISM
+
+
+    You won''t be programming object-oriented if you don''t use inheritance create
+    objects from classes. You cannot use all the principles in a program, but the
+    most important ones must be (abstraction, encapsulation, inheritance).'
+  - '[PAGE 45]
+
+
+    We will analyze each of them in detail, giving some application examples.
+
+
+    # ABSTRACTION
+
+
+    Abstraction is the first principle of the object-oriented paradigm. What is abstraction?
+
+    Think when you look at a real-world object, for example a tree. You need to get
+    the most important information about this object in order to model it in a computer
+    program. Therefore, you should worry about what you really need to know: in your
+    case you only need to know the scientific name of the tree, its type of leaf and
+    where it grows geographically. However, you do not care what type of root grows.
+    This information will be created in the program and an object will ONLY show the
+    outside (that is, to the objects that you use this information) the necessary
+    interfaces. No more less.
+
+    Here you are using the abstraction technique. The object will never show any other
+    type of information other than what is necessary. You get only what you are interested
+    in modeling, excluding what you don''t care to know to model said object.
+
+    Therefore, an abstraction focuses on the external view of an object using the
+    technique of least compromise.
+
+    This technique refers to the process by which an interface of an object (the information
+    it shows to the outside) shows only its specific behavior. Speaking of interface,
+    we refer to the functionality (in OOP, methods) that each object will show to
+    the outside without having to specify its implementation, that is, its details.
+
+    In our example of the PERSONA class, the chosen interface can be:
+
+
+    ```
+
+    Run()
+
+    Walk()
+
+    Sleep()
+
+    ```
+
+
+    So only the exterior will show this functionality and nothing else.
+
+
+    # Properties of an abstraction
+
+
+    +   Every abstraction has 2 properties:
+
+    * Static: it is not modifiable, for example: Name of external of a person.'
+  - '[PAGE 46]
+
+
+    +   - Dynamics: it is modifiable, for example: Weight of a person'
+  - '[PAGE 47]
+
+
+    # ENCAPSULATION
+
+
+    Encapsulation is the process of storing in the same section the elements of an
+    abstraction that constitute its structure and behavior.
+
+
+    Here also appears the concept of interface, about an abstraction and its implementation.
+
+
+    We achieve this principle, applying the term of information concealment. This
+    concept allows us to hide (obviously) the characteristics of an object that are
+    not necessary to show to the outside (in programming, using the private reserved
+    word).
+
+
+    For the abstraction to work, the implementation must be encapsulated (that is,
+    it hides unnecessary implementation details from the outside). Let''s look at
+    some words or access modifiers, keys to this principle applying a programming
+    language, for example, C #.
+
+
+    +   * Public
+
+    * Protected
+
+    * Private
+
+
+    # Public
+
+
+    All objects can access the data or methods that a class defines as public. It
+    is all that the outer part you want it to know.'
+  - "[PAGE 48]\n\n# Protected\n\nThey are not public, except for the objects of the\
+    \ class and those that inherit from it which is set with the protected access\
+    \ modifier.\n\n# Private\n\nThey only access the data and methods, the objects\
+    \ of the class itself.\n\nLet's see some examples of the Person class.\n\n```\n\
+    Class Person\n{\n  private string color;\n  color = 'red';\n}\n```\n\nIn this\
+    \ example, we see that the Person class has a private attribute called color and\
+    \ then we assign a piece of data to it (red). This data is only known by the person\
+    \ class."
+- md: "\n```cs\nClass Person\n{\n  public void Run();\n}\n```\n\nIn this example,\
+    \ we see that the Person class has a public method called Run, which will be accessed\
+    \ by external objects.\nThe void keyword implies that this method does not return\
+    \ anything.\n\nWe will see the Protected access modifier when we analyze the principle\
+    \ of Inheritance.\n\n# MODULARITY\n\nThe principle of Modularity consists of dividing\
+    \ a program into modules that are compiled (they go from a high-level language\
+    \ to a low-level one in a programming language separately but may have connections\
+    \ with other modules.\nThat is, when we programmers create classes, they belong\
+    \ to modules (executable files) of a specific type. Each module can be divided\
+    \ to make it easier to understand and maintain.\nModularity has 2 elements:\n\n\
+    - Cohesion\n- Coupling\n\nCohesion refers to the degree of understanding and relationship\
+    \ that a module has with its internal components. The objective is to focus as\
+    \ precisely as possible the purpose of the class. 2 methods that do different\
+    \ things in a class mean they have low cohesion. An object of the class that belongs\
+    \ to a module must be easily related to another object of this or another class,\
+    \ but of the same module. As a general principle, there should be HIGH COHESION\
+    \ in each module. Cohesion allows for better code reusability and readability,\
+    \ which allows for manageable complexity.\n\n# Coupling\n\nCoupling refers to\
+    \ the degree of dependency and relationship that a module has with a different\
+    \ module (or different classes of modules). An object of the class that belongs\
+    \ to one module should not easily access another object of another class that\
+    \ belongs to a different module. As a general principle, there should be LOW COPLING\
+    \ between 2 given modules. A low coupling implies 3 things:\n\n- Understand one\
+    \ class without reading another\n- Change one class without affecting another\n\
+    - Improve code readability\n\nLet's continue talking about the principle of modularity.\
+    \ As we have seen, as programmers divide all the logic of programming into these\
+    \ modules. These modules contain the classes that we will use to abstract attributes\
+    \ (data) and behaviors (methods or functions) that will be used by their instances,\
+    \ that is, their objects. With this we will be able to reuse our code, understand\
+    \ it better, have it organized, separate specific tasks and carry out complex\
+    \ work since we are using the principle of \"divide and conquer\".\n\n# Methods\n\
+    \nThe methods are the functions or the behavior that an object will have and are\
+    \ defined in the classes that make up the modules.\nThe typical structure of the\
+    \ methods is as follows.\n\n```\ntypeValue method_name (parameters)\n{\n    Actions...\n\
+    }\n```\n\nWhere\nValueType: is the type of data you can return (or void in C#\
+    \ if it doesn't return anything)\nmethod_name: is the name given to the method.\
+    \ Each language has its nomenclature to give names to the methods.\nparameters:\
+    \ are the optional variables that a method can receive to perform the actions\
+    \ found within the body of the method.\nactions: these are precisely the actions\
+    \ carried out by the method for which it was programmed.\n\nNOTE: The example\
+    \ above corresponds to a C# syntax.\n\n# HERITAGE\n\nLet's move on to understand\
+    \ this important principle of Object Orientation. This concept implies that a\
+    \ new class is created from an existing class. That is, one class depends on another,\
+    \ called Base Class. The inheriting class is commonly called a Derived Class or\
+    \ Subclass.\n\nThe most important thing to understand about this topic is that\
+    \ the subclass inherits the attributes and behavior of the base class if the latter\
+    \ has the appropriate access modifiers (public or protected). Remember that the\
+    \ private access modifier only allows objects to obtain the attributes and methods\
+    \ of their own class.\n\nThis principle of inheritance allows us to create a specialized\
+    \ hierarchical class structure, so when we as programmers create a class and inherit\
+    \ from it, we do not have to recreate its attributes and methods from scratch,\
+    \ but rather the programming language allows create them from your base class,\
+    \ which allows ease in writing code.\n\n# Class Hierarchy\n\nClasses can be hierarchized\
+    \ through a parent-child tree, which begins with a main base class called a superclass\
+    \ or parent, and its derived classes become specialized as they go down the tree.\n\
+    \nFor example, let's think about the ANIMAL class. This class will contain generic\
+    \ attributes and methods for an animal. But if we create, for example, a Carnivore,\
+    \ it will have a specialization that is to eat meat, which does not happen if\
+    \ we create a class called Herbivore, although it has the Eat method, will not\
+    \ do it in the same way as a carnivore. Therefore, we are specializing.\n\nIn\
+    \ this way, classes can continue to be created from existing classes, within their\
+    \ hierarchy. There is not limit.\n\nHowever, it is not very advisable for the\
+    \ tree to be quite large as a disadvantage is that the programmer can get lost\
+    \ in the code and it becomes unreachable.\n\n# Relations between classes\n\nThe\
+    \ relationships between the different classes indicate how the classes are communicating\
+    \ with each other.\nWe have different types of relationships, namely:\n\n- Association\n\
+    - Aggregation and composition\n- Dependency\n- Generalization / Specialization\n\
+    \n# Association\n\nAssociation describes a connection between objects. They are\
+    \ usually bidirectional, but sometimes it is necessary to make them unidirectional\
+    \ to restrict one-way navigation.\nFor example, we have the case of an Account\
+    \ and the Money deposited in it. Clearly there is an association between both\
+    \ classes, but we must give you a framework in the relationship, and in this case,\
+    \ it would be that the Money can appear in different Accounts. It's a 1-to-many\
+    \ relationship and it's one-way.\n\nAccount >> Money\n\nIf we want to make a bidirectional\
+    \ relationship, we can model it in the classes Account and Client\n\nAccount <<\
+    \ >> Money\n\nWhere 1 Client can have more than one Account, but 1 Account can\
+    \ only have 1 Client.\nThis relationship is bi-directional.\n\n# Multiplicity\
+    \ of Associations\n\nThe multiplicity of associations determines how many objects\
+    \ of each type are involved in the relationship. To put it another way, it is\
+    \ the number of instances of one class that relates to one instance of another\
+    \ class.\nSo, we have different types of multiplicity:\n\n- 1\n- 0..1\n- N..M\n\
+    - *\n- 0..*\n- 1..*\n\nWhere\n\n1 is the Reflexive, it means a relation of 1 and\
+    \ only 1.\n0..1 is Binary, it means a 0 or 1 relationship.\nN..M is N-ary, it\
+    \ means a relation from a value N to a value M\n* is also N-ary, that is, zero\
+    \ or more.\n0 .. * is N-ary, also zero or more.\n1 .. * is N-ary, but here it\
+    \ is 1 or several (at least one).\n\n# Aggregation and Composition\n\nThey are\
+    \ associations whose relationship is between a whole and its parts.\nIn aggregation,\
+    \ parts can be part of different aggregates.\nFor example, in the case of a Company\
+    \ with its Client.\nTo graph it, we use the rhombus symbol, as shown in the following\
+    \ figure:\n\nFor its part, in Composition, as its name indicates, one class composes\
+    \ another.\nLet's see a concrete example:\n\nWe have an Airplane and a Wing class.\n\
+    A wing cannot exist if it is not associated with an Airplane, so there is a strict\
+    \ relationship. The representation is seen in the figure below:\n\n# Dependence\n\
+    \nIt is a relationship weaker than an association and shows the relationship between\
+    \ a client object and a server object used by that client.\nThe client object\
+    \ is the one who requests a service, and the server is the one who provides a\
+    \ service.\nWe can graphically observe the representation of this relationship\
+    \ with a dashed line that points from the customer to the supplier.\n\n# Generalization/Specialization\n\
+    \nIt is a class relationship between parent-child or superclass-subclass, as we\
+    \ saw earlier.\n\nChild classes inherit the properties of the parent class (its\
+    \ attributes and operations) if they are available from it.\n"
+  mdcn: "\n\n```cs\nClass Person\n{\n  public void Run();\n}\n```\n\n在这个示例中，我们看到 Person\
+    \ 类有一个名为 Run 的公共方法，该方法可以被外部对象访问。\n`void` 关键字意味着该方法不返回任何内容。\n\n当我们分析继承原则时，将会遇到\
+    \ `Protected` 访问修饰符。\n\n# 模块化\n\n模块化原则由将程序划分为多个模块，这些模块是独立编译的（它们在编程语言中分别从高层语言转换为低层语言，但可能与其他模块有连接）。\n\
+    也就是说，当我们程序员创建类时，它们属于某种特定类型的模块（可执行文件）。每个模块都可以被拆分，以便于理解和维护。\n模块化包含 2 个元素：\n\n- \
+    \  内聚（Cohesion）\n-   耦合（Coupling）\n\n内聚是指一个模块与其内部组件之间的理解程度和关系。其目标是尽可能精确地聚焦于类的目的。如果一个类中有两个执行不同功能的方法，意味着它们的内聚性较低。属于某个模块的类对象必须与该模块或另一个模块的类对象轻松关联。作为一个一般原则，每个模块都应该具有**高内聚性**。内聚允许更好的代码重用性和可读性，从而使复杂度变得可控。\n\
+    \n# 耦合\n\n耦合是指一个模块与不同模块（或不同类型的模块）之间的依赖程度和关系。属于一个模块的类对象不应轻易访问属于不同模块的其他类的对象。作为一个一般原则，两个给定的模块之间应该保持**低耦合**。低耦合意味着三点：\n\
+    \n-   无需阅读另一个类即可理解一个类\n-   修改一个类而不影响另一个类\n-   提高代码的可读性\n\n让我们继续讨论模块化原则。正如我们所看到的，程序员将编程的所有逻辑划分为这些模块。这些模块包含了我们将使用的类，用这些类来抽象属性（数据）和行为（方法或函数），这些行为将被它们的实例（即对象）所使用。通过这种方式，我们能够重用代码、更好地理解它、使其组织良好、分离特定任务并执行复杂工作，因为我们正在使用“分而治”的原则。\n\
+    \n# 方法\n\n方法是对象将拥有的函数或行为，定义在组成模块的类中。\n方法的典型结构如下。\n\n```\ntypeValue method_name\
+    \ (parameters)\n{\n    Actions...\n}\n```\n\n其中\nValueType: 你可以返回的数据类型（或者在 C#\
+    \ 中如果不返回任何内容则为 `void`）。\nmethod_name: 给方法的名称。每种语言都有自己的命名法来给方法命名。\nparameters:\
+    \ 方法可以接收的可选变量，用于执行方法体内的操作。\nactions: 这些正是方法为其编程目标而执行的具体操作。\n\n注意：上面的示例对应于 C# 语法。\n\
+    \n# 继承\n\n让我们来理解这个面向对象的重要的重要原则。这个概念意味着从现有类创建一个新类。也就是说，一个类依赖于另一个类，称为基类（Base Class）。继承的类通常被称为派生类（Derived\
+    \ Class）或子类（Subclass）。\n\n理解这个主题最重要的的一点是：如果基类具有适当的访问修饰符（public 或 protected），子类将继承基类的属性和行为。记住，private\
+    \ 访问修饰符只允许对象获取其所属类的属性和方法。\n\n这种继承原则允许我们创建特殊的层次级类结构，因此当我们程序员创建一个类并继承它时，我们不需要从头重新创建它的属性和方法，而是编程语言允许从你的基类中创建它们，从而使代码编写变得简单。。\n\
+    \n# 类层次结构\n\n类可以通过父子树进行层次化，该树从一个名为超类（superclass）或父类的主基类开始，其派生类随着树向下变得越来越专门。\n\n\
+    例如，让我们考虑 ANIMAL（动物）类。这个类将包含动物的通用属性和方法。但如果我们创建一个，例如 Carnivore（肉食动物），它将拥有吃肉的专门化，而如果我们创建一个名为\
+    \ Herbivore（草食动物）的类，尽管它有 Eat 方法，但不会以与肉食动物相同的方式。因此，我们正在进行专门化。\n\n通过这种方式，类可以在层次结构内从现有类继续创建。没有限制。\n\
+    \n然而，树过于大并不理想，因为缺点是程序员可能会在代码中迷失，导致变得无法访问。\n\n# 类之间的关系\n\n不同类之间的关系指示了类如何相互通信。\n\
+    我们有不同类型的关系，即：\n\n-   关联（Association）\n-   聚合（Aggregation）与组合（composition）\n- \
+    \  依赖（Dependency）\n-   泛化 / 特化（Generalization / Specialization）\n\n# 关联\n\n关联描述了对象之间的连接。它们通常是双向的，但有时有必要将其变为单向以限制单向导航。\n\
+    例如，我们有 Account（账户）和存入其中的 Money（钱）。显然，这两个类之间存在关联，但我们必须在关系中提供一个框架，在这种情况下，Money 可以出现在不同的\
+    \ Account 中。这是一个 1 对多的关系，它是单向的。\n\nAccount >> Money\n\n如果我们想建立双向关系，可以在 Account\
+    \ 和 Client（客户）类中对其进行建模\n\nAccount << Money\n\n其中 1 个 Client 可以有多个 Account，但 1\
+    \ 个 Account 只能有一个 1 个 Client。\n这种关系是双向的。\n\n# 关联的多性\n\n关联的多性决定了关系中涉及多少个对象。换句话，它是一个类的实例到另一个类实例的数量。\n\
+    因此，我们有不同类型的多性：\n\n-   1\n-   0..1\n-   N..M\n-   *\n-   0..*\n-   1..*\n\n其中\n\
+    \n1 是自有的，意味着 1 对1 的关系。\n0..1 是二元的，意味着 0 或 1 的关系。\nN..M 是多多的，意味着从值 N 到值 M 的关系。\n\
+    * 也是多多的，即零或多个。\n0..* 是多多的，也是零或多个。\n1..* 是多多的，但这里是 1 或多个。\n\n# 聚合与组合\n\n它们是关系在整体和其部分之间的关联。\n\
+    在聚合中，部分可以属于不同的聚合体。\n例如，Company（公司）与其 Client（客户）的关系。\n为了绘图，我们使用菱形符号，如下所示。\n\n对于组合，正如其名所示，一个类组成另一个类。\n\
+    让我们来看一个具体的例子：\n\n我们有一个 Airplane（飞机）和一个 Wing（翅膀）类。\n如果翅膀没有与飞机关联，它就不可能存在，因此存在严格的关系。其表示方法如下所示。\n\
+    \n# 依赖\n\n它是一种比关联更弱的关系，显示了客户端对象与其所使用的服务器对象之间的关系。\n客户端对象是请求服务的对象，而服务器是提供服务的对象。\n\
+    我们可以通过从客户指向供应商的虚线在图形上观察到这种关系的表示。\n\n# 泛化/ 特化\n\n它是父子或超类/子类之间的类关系，正如我们之前看到的。\n\n\
+    子类继承父类的属性和操作，如果这些从父类中可用。\n\n"
+  merge: 1
+  raw:
+  - "[PAGE 49]\n\n```\nClass Person\n{\n  public void Run().\n}\n```\n\nIn this example,\
+    \ we see that the Person class has a public method called Run, which will be accessed\
+    \ by external objects.\nThe void keyword implies that this method does not return\
+    \ anything.\n\nWe will see the Protected access modifier when we analyze the principle\
+    \ of Inheritance.\n\n# MODULARITY\n\nThe principle of Modularity consists of dividing\
+    \ a program into modules that are compiled (they go from a high-level language\
+    \ to a low-level one in a programming language separately but may have connections\
+    \ with other modules.\nThat is, when we programmers create classes, they belong\
+    \ to modules (executable files) of a specific type. Each module can be divided\
+    \ to make it easier to understand and maintain.\nModularity has 2 elements:\n\n\
+    +   - Cohesion\n- Coupling\n\nCohesion refers to the degree of understanding and\
+    \ relationship that a module"
+  - '[PAGE 50]
+
+
+    has with its internal components. The objective is to focus as precisely as possible
+    the purpose of the class. 2 methods that do different things in a class mean they
+    have low cohesion. An object of the class that belongs to a module must be easily
+    related to another object of this or another class, but of the same module. As
+    a general principle, there should be HIGH COHESION in each module. Cohesion allows
+    for better code reusability and readability, which allows for manageable complexity.
+
+
+    # Coupling
+
+
+    Coupling refers to the degree of dependency and relationship that a module has
+    with a different module (or different classes of modules). An object of the class
+    that belongs to one module should not easily access another object of another
+    class that belongs to a different module. As a general principle, there should
+    be LOW COPLING between 2 given modules. A low coupling implies 3 things:
+
+
+    +   * Understand one class without reading another
+
+    * Change one class without affecting another
+
+    * Improve code readability
+
+
+    Let''s continue talking about the principle of modularity. As we have seen, as
+    programmers divide all the logic of programming into these modules. These modules
+    contain the classes that we will use to abstract attributes (data) and behaviors
+    (methods or functions) that will be used by their instances, that is, their objects.
+    With this we will be able to reuse our code, understand it better, have it organized,
+    separate specific tasks and carry out complex work since we are using the principle
+    of "divide and conquer".
+
+
+    # Methods
+
+
+    The methods are the functions or the behavior that an object will have and are'
+  - '[PAGE 51]
+
+
+    defined in the classes that make up the modules.
+
+    The typical structure of the methods is as follows.
+
+
+    ```
+
+    typeValue method_name (parameters)
+
+    {
+
+    Actions...
+
+    }
+
+    ```
+
+
+    Where
+
+    ValueType: is the type of data you can return (or void in C # if it doesn''t return
+    anything)
+
+    method_name: is the name given to the method. Each language has its nomenclature
+    to give names to the methods.
+
+    parameters: are the optional variables that a method can receive to perform the
+    actions found within the body of the method.
+
+    actions: these are precisely the actions carried out by the method for which it
+    was programmed.
+
+
+    NOTE: The example above corresponds to a C # syntax.'
+  - '[PAGE 52]
+
+
+    # HERITAGE
+
+
+    Let''s move on to understand this important principle of Object Orientation. This
+    concept implies that a new class is created from an existing class. That is, one
+    class depends on another, called Base Class. The inheriting class is commonly
+    called a Derived Class or Subclass.
+
+
+    The most important thing to understand about this topic is that the subclass inherits
+    the attributes and behavior of the base class if the latter has the appropriate
+    access modifiers (public or protected). Remember that the private access modifier
+    only allows objects to obtain the attributes and methods of their own class.
+
+
+    This principle of inheritance allows us to create a specialized hierarchical class
+    structure, so when we as programmers create a class and inherit from it, we do
+    not have to recreate its attributes and methods from scratch, but rather the programming
+    language allows create them from your base class, which allows ease in writing
+    code.
+
+
+    # Class Hierarchy
+
+
+    Classes can be hierarchized through a parent-child tree, which begins with a main
+    base class called a superclass or parent, and its derived classes become specialized
+    as they go down the tree.
+
+
+    For example, let''s think about the ANIMAL class. This class will contain generic
+    attributes and methods for an animal. But if we create, for example, a Carnivore,
+    it will have a specialization that is to eat meat, which does not happen if we
+    create a class called Herbivore, although it has the Eat method, will not do it
+    in the same way as a carnivore. Therefore, we are specializing.
+
+
+    In this way, classes can continue to be created from existing classes, within
+    their hierarchy. There is not limit.
+
+
+    However, it is not very advisable for the tree to be quite large as a disadvantage
+    is that the programmer can get lost in the code and it becomes unreachable.
+
+
+    # Relations between classes'
+  - '[PAGE 53]
+
+
+    The relationships between the different classes indicate how the classes are communicating
+    with each other.
+
+    We have different types of relationships, namely:
+
+
+    +   * Association
+
+    * Aggregation and composition
+
+    * Dependency
+
+    * Generalization / Specialization'
+  - '[PAGE 54]
+
+
+    # Association
+
+
+    Association describes a connection between objects. They are usually bidirectional,
+    but sometimes it is necessary to make them unidirectional to restrict one-way
+    navigation.
+
+    For example, we have the case of an Account and the Money deposited in it. Clearly
+    there is an association between both classes, but we must give you a framework
+    in the relationship, and in this case, it would be that the Money can appear in
+    different Accounts. It''s a 1-to-many relationship and it''s one-way.
+
+
+    Account >> Money
+
+
+    If we want to make a bidirectional relationship, we can model it in the classes
+    Account and Client
+
+
+    Account << >> Money
+
+
+    Where 1 Client can have more than one Account, but 1 Account can only have 1 Client.
+
+    This relationship is bi-directional.'
+  - "[PAGE 55]\n\n# Multiplicity of Associations\n\nThe multiplicity of associations\
+    \ determines how many objects of each type are involved in the relationship. To\
+    \ put it another way, it is the number of instances of one class that relates\
+    \ to one instance of another class.\nSo, we have different types of multiplicity:\n\
+    \n+   * 1\n* 0..1\n* N..M\n *\n* 0..\n* 1..*\n\nWhere\n\n1 is the Reflective,\
+    \ it means a relation of 1 and only 1.\n0.11 is Binary, it means a 0 or 1 relationship.\n\
+    N..M is N-ary, it means a relation from a value N to a value M\n* is also N-ary,\
+    \ that is, zero or more.\n0 .. * is N-ary, also zero or more.\n1 .. * is N-Aria,\
+    \ but here it is 1 or several (at least one).\n\n# Aggregation and Composition\n\
+    \nThey are associations whose relationship is between a whole and its parts.\n\
+    In aggregation, parts can be part of different aggregates.\nFor example, in the\
+    \ case of a Company with its Client.\nTo graph it, we use the rhombus symbol,\
+    \ as shown in the following figure:\n\nFor its part, in Composition, as its name\
+    \ indicates, one class composes another.\nLet's see a concrete example:"
+  - '[PAGE 56]
+
+
+    We have an Airplane and a Wing class.
+
+    A wing cannot exist if it is not associated with an Airplane, so there is a strict
+    relationship. The representation is seen in the figure below:'
+  - '[PAGE 57]
+
+
+    # Dependence
+
+
+    It is a relationship weaker than an association and shows the relationship between
+    a client object and a server object used by that client.
+
+    The client object is the one who requests a service, and the server is the one
+    who provides a service.
+
+    We can graphically observe the representation of this relationship with a dashed
+    line that points from the customer to the supplier.
+
+
+    # Generalization/Specialization
+
+
+    It is a class relationship between parent-child or superclass-subclass, as we
+    saw earlier.
+
+
+    Child classes inherit the properties of the parent class (its attributes and operations)
+    if they are available from it.'
+- md: '
+
+    # POLYMORPHISM
+
+
+    Polymorphism is another of the principles of the Object-Oriented paradigm. This
+    principle is closely related to the principle of Inheritance that we saw earlier.
+
+
+    I will try to explain this topic in a simple way, since it seems somewhat complicated,
+    although it is not.
+
+
+    Let''s start by talking about pure theory. Polymorphism, for several authors,
+    implies a relaxation of the type system, in such a way that a reference to a class
+    (attribute, parameter, etc.), accepts addresses of objects of said class and its
+    derived classes.
+
+
+    As we can see, inheritance and polymorphism are intricately linked concepts. We
+    implement polymorphism in classification hierarchies that occur through inheritance.
+
+
+    As we talk about the Type System, it is important that we look at this concept
+    first.
+
+
+    # TYPE SYSTEM
+
+
+    I''m going to assume that you already know what a data type means in a programming
+    language. But I''m going to mention it in case you don''t know it. There are weakly
+    typed languages, such as PHP or JavaScript, as well as strongly typed languages
+    like C or Java.
+
+
+    ### What is a Data Type?
+
+
+    A data type is, for a variable, what it is going to store inside. That is, if
+    a variable is of type integer, it means that it can only store an integer. If
+    it is of type string (string), it will obviously only store strings.
+
+
+    ### Weakly Typed language
+
+
+    So, a weakly typed language is one that is not interested in compilation mode
+    what type of data a variable is going to store but takes it automatically in execution
+    mode when there is an assignment.
+
+
+    For example, if we have the variable number, we all think that it will store an
+    integer. But if we do
+
+    Number = "Leonel"        Then you will be storing a string.
+
+    But if later in the program we do
+
+    Number = 73
+
+    Then the compiler will understand that variable is now an integer. This means
+    that a variable can change the data type in the same thread, depending on its
+    current assignment.
+
+
+    # Strongly Typed Language
+
+
+    A strongly typed language is one that is interested in what type of data each
+    of the variables will contain before its execution begins. That is, if when programming
+    we have Number = 73 (integer data type) So then we can''t do Number = "Leonel"
+    (data type string) Because that variable already has a data type assigned which
+    is integer. If we try to do the type of change in a strongly typed language, then
+    the compiler will show an error.
+
+
+    So, what is a polymorphism?
+
+
+    In object and class theory, and as strongly typed languages work, a variable must
+    point to an object of the class indicated at the beginning of its declaration.
+    That is, an object of a corresponding type must point to that type always
+
+    For example, in C#
+
+
+    ```
+
+    Car myCar = new Car();
+
+    ```
+
+
+    In this example we have that the myCar object is of type Auto and is constructed
+    by making a new of Auto, not of another class.
+
+
+    Okay. Polymorphism is a relaxation of this strongly typed system, that is, it
+    is feasible to be able to assign objects of derived classes.
+
+    But this is not so relaxed. It is only feasible to accept objects of classes of
+    the corresponding hierarchy, not of any class.
+
+    For example, we have 3 classes, a parent and 2 derivatives:
+
+    PARENT CLASS: Vehicle
+
+    DERIVATIVE CLASSES: Car, Bike
+
+
+    For example, in C#
+
+
+    ```
+
+    Vehicle myVehicle = new Vehicle ();
+
+    Car myCar = new Car();
+
+    Bike myBike = new Bike();
+
+    ```
+
+
+    If we declare a method that receives a vehicle, we think that we should only send
+    it a Vehicle object, but the principle of polymorphism says that it is possible
+    to send it a derived class object. For example
+
+
+    Start (Vehicle vehicle);
+
+
+    ```
+
+    myVehicle.Start(myBike);
+
+    myVehicle.Start(myBike);
+
+    ```
+
+
+    So, the start method has as a parameter an object of type Vehicle, but it is possible
+    to send a car or a motorcycle, because both are classes derived from Vehicle.
+
+    This is the main idea of the polymorphism principle, to be able to use a method
+    to send it different objects and its behavior to vary depending on the sent object.
+    This improves the readability, maintainability, and reuse of code.
+
+
+    # SUMMARY
+
+
+    The Object-Oriented Paradigm is a way of analyzing, designing and programming
+    software to create quality products using different principles, based on modeling
+    real world objects using the technique of abstraction. It differs from Structured
+    Programming in that it uses functions or procedures from beginning to end based
+    on data and algorithms.
+
+    Object Oriented Programming uses the following principles:
+
+
+    - Objects.
+
+    - Lessons.
+
+    - Inheritance.
+
+    - Encapsulation.
+
+    - Modularity.
+
+    - Abstraction.
+
+    - Polymorphism.
+
+
+    Classes are user-defined types. Templates that define attributes and behavior.
+    Objects are instances of classes in memory.
+
+    Inheritance is a way of generalizing /specializing classes to reuse the data and
+    behaviors of the base classes.
+
+    Encapsulation is a way of hiding information about a class from the outside.
+
+    Modularity is another principle of Object Orientation in which we divide the program
+    into modules, which must have high cohesion and low coupling.
+
+    Abstraction is the technique of capturing desirable information for an object
+    and leaving aside what is not of interest. The object shows the outside only what
+    it should show. No more no less.
+
+    Polymorphism is the last principle in which a method created with a base class
+    parameter, in turn admits objects of its derived classes to extend its functionality.
+
+
+    The advantages are clear:
+
+
+    - Improves readability.
+
+    - Improves software reuse.
+
+    - It is easy to understand, using abstraction of real-world objects.
+
+    - We can eliminate redundant code.
+
+    - We can divide the work to make it simpler (modularity).
+
+    - Improved software maintenance.
+
+    - Software complexity is managed efficiently.
+
+
+    The disadvantages are:
+
+    - It is not highly recommended if we have easy to develop software.
+
+    - Learning curve for those who come from a structured development.
+
+    - The execution of programs may be slower than usual.
+
+
+    Recommended object-oriented languages to learn:
+
+
+    - C
+
+    - C++
+
+    - C#
+
+    - Java
+
+    - Python
+
+
+    Contact: leonelpena@gmail.com
+
+    '
+  mdcn: '
+
+
+    # 多态
+
+
+    多态是面向对象范式的另一大原则之一。这一原则与我们之前看到的继承原则密切相关。
+
+
+    我将尝试用一种简单的方式来解释这个主题，因为它看起来有些复杂，尽管实际上并非如此。
+
+
+    让我们先从纯理论开始讨论。对于许多作者来说，多态意味着对类型系统的放宽，使得对某个类的引用（属性、参数等）可以接受该类及其派生类对象的地址。
+
+
+    正如我们所看到的，继承和多态是紧密关联的概念。我们在通过继承产生的分类分层结构中实现多态。
+
+
+    在我们谈论类型系统时，首先观察这个概念是非常重要的。
+
+
+    # 类型系统
+
+
+    我假设你已经知道编程语言中数据类型的含义了。但以防你不知道，我还是提一下。既有弱类型语言（如 PHP 或 JavaScript），也有像 C 或 Java
+    这样强类型的语言。
+
+
+    ### 什么是数据类型？
+
+
+    对于变量来说，数据类型就是它在内部将存储的内容。也就是说，如果一个变量的类型是整数（integer），意味着它只能存储整数。如果它是字符串（string）类型，那么它显然只会存储字符串。
+
+
+    ### 弱类型语言
+
+
+    所以，弱类型语言是指在编译模式下不关心变量将存储什么类型的数据，而在执行模式下进行赋值时自动获取类型的语言。
+
+
+    例如，如果我们有一个变量 `number`，我们都认为它将存储一个整数。但如果我们执行：
+
+    `Number = "Leonel"` 那么你存储的就是一个字符串。
+
+    但如果在程序稍后我们执行：
+
+    `Number = 73` 编译器就会理解该变量现在是一个整数。这意味着变量可以在同一个线程中根据其当前的赋值来改变数据类型。
+
+
+    # 强类型语言
+
+
+    强类型语言是指在执行开始之前就关心每个变量将包含什么类型的数据的语言。也就是说，如果在编程时有 `Number = 73`（整数数据类型），那么我们就不能执行
+    `Number = "Leonel"`（字符串数据类型），因为该变量已经分配了整数这一数据类型。如果我们尝试在强类型语言中进行类型更改，编译器将显示错误。
+
+
+    那么，什么是多态？
+
+
+    在对象和类理论中，以及强类型语言的工作方式，变量必须指向在其声明开始处指定的类对象。也就是说，对应类型的对象必须始终指向该类型。
+
+    例如，在 C# 中：
+
+
+    ```csharp
+
+    Car myCar = new Car();
+
+    ```
+
+
+    在这个示例中，我们知道 `myCar` 对象的类型是 `Auto`，并通过创建一个新的 `Auto` 来构造，而不是其他类。
+
+
+    好的。多态是对这种强类型系统的放宽，也就是说，可以分配派生类的对象。
+
+    但并没有那么宽松。它只接受对应层次结构中的类对象，而不是任何类。
+
+    例如，我们有 3 个类，一个父类和2 个派生类：
+
+    父类：Vehicle
+
+    派生类：Car, Bike
+
+
+    例如，在 C# 中：
+
+
+    ```csharp
+
+    Vehicle myVehicle = new Vehicle ();
+
+    Car myCar = new Car();
+
+    Bike myBike = new Bike();
+
+    ```
+
+
+    如果我们声明一个接收车辆的方法，我们认为应该只向它发送一个 `Vehicle` 对象，但多态原则说可以发送一个派生类对象。例如：
+
+
+    `Start (Vehicle vehicle);`
+
+
+    ```csharp
+
+    myVehicle.Start(myBike);
+
+    myVehicle.Start(myBike);
+
+    ```
+
+
+    所以，`start` 方法的参数是一个 `Vehicle` 类型的对象，但可以发送汽车或摩托车，因为它们都是派生自 `Vehicle` 的类。
+
+    这是多态原则的核心思想，能够使用一个方法来发送不同的对象，其行为会随发送的对象而变化。
+
+
+    # 总结
+
+
+    面向对象范式是一种分析、设计和编程的方法，通过不同的原则对真实世界进行建模来创建高质量的产品。它与结构化编程的区别在于，后者是从头到尾基于函数或过程的。
+
+    面向对象编程使用以下原则：
+
+
+    - 对象
+
+    - 类
+
+    - 继承
+
+    - 封装
+
+    - 模块化
+
+    - 抽象
+
+    - 多态
+
+
+    类是用户定义的类型，是定义属性和行为的模板。对象是内存中的类实例。继承是泛泛化/特化类的方式，以重用基类的数据和行为。封装是从外部隐藏类信息的一种方式。模块化是面向对象的另一个原则，我们将程序划分为模块，这些模块必须具有高内聚低耦合。抽象是捕捉对象所需信息而忽略无关信息的技术。对象只向外部显示它应该显示的内容，不多也不少。多态是最后一个原则，即使用基类参数创建的方法反可以接受其派生类的对象以扩展其功能。
+
+
+    其优点显而易见：
+
+
+    - 提高了可读性
+
+    - 提高了软件重用性
+
+    - 通过对真实世界的抽象易于理解
+
+    - 我们可以消除冗余代码
+
+    - 我们可以划分工作来简化开发（模块化）
+
+    - 提高了软件维护性
+
+    - 有效管理软件复杂度
+
+
+    其缺点是：
+
+    - 如果我们要开发的是简单的软件，并不高度推荐使用
+
+    - 对于习惯结构化开发的人来说有学习曲线
+
+    - 程序的执行速度可能比通常慢
+
+
+    推荐的面向对象语言：
+
+
+    - C
+
+    - C++
+
+    - C#
+
+    - Java
+
+    - Python
+
+
+    联系方式：leonelpena@gmail.com
+
+
+    '
+  merge: 0
+  raw:
+  - '[PAGE 58]
+
+
+    # POLYMORISM
+
+
+    Polymorphism is another of the principles of the Object-Oriented paradigm. This
+    principle is closely related to the principle of Inheritance that we saw earlier.
+
+
+    I will try to explain this topic in a simple way, since it seems somewhat complicated,
+    although it is not.
+
+
+    Let''s start by talking about pure theory. Polymorphism, for several authors,
+    implies a relaxation of the type system, in such a way that a reference to a class
+    (attribute, parameter, etc.), accepts addresses of objects of said class and its
+    derived classes.
+
+
+    As we can see, inheritance and polymorphism are intricately linked concepts. We
+    implement polymorphism in classification hierarchies that occur through inheritance.
+
+
+    As we talk about the Type System, it is important that we look at this concept
+    first.
+
+
+    # TYPE SYSTEM
+
+
+    I''m going to assume that you already know what a data type means in a programming
+    language. But I''m going to mention it in case you don''t know it. There are weakly
+    typed languages, such as PHP or JavaScript, as well as strongly typed languages
+    like C or Java.
+
+
+    What is a Data Type?
+
+
+    A data type is, for a variable, what it is going to store inside. That is, if
+    a variable is of type integer, it means that it can only store an integer. If
+    it is of type string string (string), it will obviously only store strings.
+
+
+    Weakly Typed language
+
+
+    So, a weakly typed language is one that is not interested in compilation mode
+    what type of data a variable is going to store but takes it automatically in'
+  - '[PAGE 59]
+
+
+    execution mode when there is an assignment.
+
+    For example, if we have the variable number, we all think that it will store an
+    integer. But if we do
+
+    Number = "Leonel"
+
+    Then you will be storing a string.
+
+    But if later in the program we do
+
+    Number = 73
+
+    Then the compiler will understand that variable is now an integer. This means
+    that a variable can change the data type in the same thread, depending on its
+    current assignment.
+
+
+    # Strongly Typed Language
+
+
+    A strongly typed language is one that is interested in what type of data each
+    of the variables will contain before its execution begins. That is, if when programming
+    we have Number = 73 (integer data type) So then we can''t do Number = "Leonel"
+    (data type string) Because that variable already has a data type assigned which
+    is integer. If we try to do the type of change in a strongly typed language, then
+    the compiler will show an error.
+
+
+    So, what is a polymorphism?
+
+
+    In object and class theory, and as strongly typed languages work, a variable must
+    point to an object of the class indicated at the beginning of its declaration.
+    That is, an object of a corresponding type must point to that type always
+
+    For example, in C #
+
+
+    ```
+
+    Car myCar = new Car();
+
+    ```
+
+
+    In this example we have that the myCar object is of type Auto and is constructed
+    by making a new of Auto, not of another class.'
+  - '[PAGE 60]
+
+
+    Okay. Polymorphism is a relaxation of this strongly typed system, that is, it
+    is feasible to be able to assign objects of derived classes.
+
+    But this is not so relaxed. It is only feasible to accept objects of classes of
+    the corresponding hierarchy, not of any class.
+
+    For example, we have 3 classes, a parent and 2 derivatives:
+
+    PARENT CLASS: Vehicle
+
+    DERIVATIVE CLASSES: Car, Bike
+
+
+    For example, in C #
+
+
+    ```
+
+    Vehicle myVehicle = newVehicle ();
+
+    Car myCar = new Car();
+
+    Bike myBike = new myBike();
+
+    ```
+
+
+    If we declare a method that receives a vehicle, we think that we should only send
+    it a Vehicle object, but the principle of polymorphism says that it is possible
+    to send it a derived class object. For example
+
+
+    Start (Vehicle vehicle);
+
+
+    ```
+
+    myVehicle.Start(myBike);
+
+    myVehicle.Start(myBike);
+
+    ```
+
+
+    So, the start method has as a parameter an object of type Vehicle, but it is possible
+    to send a car or a motorcycle, because both are classes derived from Vehicle.
+
+    This is the main idea of the polymorphism principle, to be able to use a method
+    to send it different objects and its behavior to vary depending on the sent object.
+    This improves the readability, maintainability, and reuse of code.'
+  - '[PAGE 61]
+
+
+    # SUMMARY
+
+
+    The Object-Oriented Paradigm is a way of analyzing, designing and programming
+    software to create quality products using different principles, based on modeling
+    real world objects using the technique of abstraction. It differs from Structured
+    Programming in that it uses functions or procedures from beginning to end based
+    on data and algorithms.
+
+    Object Oriented Programming uses the following principles:
+
+
+    +   * Objects.
+
+    * Lessons.
+
+    * Inheritance.
+
+    * Encapsulation.
+
+    * Modularity.
+
+    * Abstraction.
+
+    * Polymorphism.
+
+
+    Classes are user-defined types. Templates that define attributes and behavior.
+    Objects are instances of classes in memory.
+
+    Inheritance is a way of generalizing / specializing classes to reuse the data
+    and behaviors of the base classes.
+
+    Encapsulation is a way of hiding information about a class from the outside.
+
+    Modularity is another principle of Object Orientation in which we divide the program
+    into modules, which must have high cohesion and low coupling.
+
+    Abstraction is the technique of capturing desirable information for an object
+    and leaving aside what is not of interest. The object shows the outside only what
+    it should show. No more no less.
+
+    Polymorphism is the last principle in which a method created with a base class
+    parameter, in turn admits objects of its derived classes to extend its functionality.
+
+
+    The advantages are clear:
+
+
+    +   * Improves readability.
+
+    * Improves software reuse.
+
+    * It is easy to understand, using abstraction of real-world objects.
+
+    * We can eliminate redundant code.
+
+    * We can divide the work to make it simpler (modularity).'
+  - '[PAGE 62]
+
+
+    +   - Improved software maintenance.
+
+    - Software complexity is managed efficiently.
+
+
+    The disadvantages are:
+
+    - It is not highly recommended if we have easy to develop software.
+
+    - Learning curve for those who come from a structured development.
+
+    - The execution of programs may be slower than usual.
+
+
+    Recommended object-oriented languages to learn:
+
+
+    +   - C
+
+    - C++
+
+    - C#
+
+    - Java
+
+    - Python
+
+
+    Contact: leonelpena@gmail.com'
