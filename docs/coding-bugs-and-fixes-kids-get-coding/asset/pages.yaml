@@ -1,0 +1,995 @@
+- img_proc: true
+  md: '# KIDS GET CODING
+
+
+    # CODING, BUGS, AND FIXES
+
+
+    Heather LyonsnElizabeth Tweedale'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '![](img/1b6ae612dcebd27ea092d53714901ffe_1_0.png)
+
+
+    https://archive.org/details/codingbugsfixes0000ly'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# KIDS GET CODING
+
+
+    # CODING, BUGS, AND FIXES
+
+
+    Heather Lyons & Elizabeth Tweedale
+
+
+    Illustrated by Alex Westgate
+
+
+    Lerner Publications • Minneapolis'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Contents
+
+
+    Getting Started 3
+
+    Computers Everywhere 4
+
+    What Is an Algorithm? 6
+
+    Order, Order! 8
+
+    Make a Move 10
+
+    Loop the Loop 12
+
+    Predict It 14
+
+    Decisions, Decisions! 16
+
+    Search and Sort 18
+
+    Catching the Bug 20
+
+    Extension Activities 22
+
+    Words to Remember 22
+
+    Activity Answers 23
+
+    Index 24
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Getting Started
+
+
+    Hi, I''m Data Duck! I''m here to help you learn
+
+    all about algorithms and bugs. We''re going to
+
+    have lots of fun with activities too!
+
+
+    An algorithm is a simple set of instructions
+
+    that tells a computer what to do. We''re
+
+    going to learn how to make algorithms,
+
+    how to try them out, and how to fix them.
+
+
+    DATA DUCK
+
+    Here are some key
+
+    terms you will learn
+
+    about in this book.
+
+    Try saying them
+
+    out loud:
+
+
+    +   - algorithm
+
+    - sequence
+
+    - code
+
+    - loop
+
+    - debug
+
+
+    There are lots of activities in the book for you to try out. There are also
+
+    some activities for you to practice with too. For the online activities
+
+    go to www.blueshiftcoding.com/kidsgetcoding and look for the activity
+
+    with the page number from the book.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Computers Everywhere
+
+
+    Computers are all around us and come in all shapes and sizes. We can use computers
+    to help us do do things, such as make phone calls, pay for groceries, and do homework.
+
+
+    Computers are machines, so they aren''t very smart on their own. They need instructions
+    to be able to do their tasks. This book will teach you all about how to give computers
+    instructions.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_5_0.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# DATA DUCK
+
+    A computer’s instructions are stored in its memory.
+
+
+    # What Can You See?
+
+
+    Can you spot five different types of computers on these pages? What is each one
+    used for?
+
+
+    Turn to page 23 to see the answers.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# # What Is an Algorithm?
+
+
+    "Algorithm" sounds like a big word, but it just means a series of steps, like
+    those of a recipe.
+
+
+    Computers use algorithms to complete all the tasks we need them to do. We have
+    to give computers clear instructions in the algorithms, so they understand what
+    to do.
+
+
+    5. Brush top and bottom teeth for 2 minutes.
+
+
+    6. Spit out toothpaste.
+
+
+    7. Rinse toothbrush.
+
+
+    8. Put toothbrush back in holder.
+
+
+    DATA DUCK
+
+
+    A computer will use an algorithm to play a movie, search the Internet, or make
+    a phone call.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_7_0.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_7_1.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_7_2.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_7_3.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_7_4.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_7_5.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'We use algorithms to do all sorts of everyday jobs. An algorithm for brushing
+    our teeth might look something like this:
+
+
+    +   1. Take lid off toothpaste.
+
+
+    +   2. Pick up toothbrush.
+
+
+    +   3. Wet toothbrush.
+
+
+    +   4. Put a pea-sized drop of toothpaste on toothbrush.
+
+
+    +   9. Put lid on toothpaste.
+
+
+    # Write an Algorithm
+
+
+    Try and write an algorithm for getting ready for school. You''ll need to think
+    about all the things you do from the time you wake up, to the time you leave your
+    house.
+
+
+    Turn to page 23 to see an example.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Order, Order!
+
+
+    The steps of an algorithm need to be in the correct order for it to work. The
+    order of steps in an algorithm is called a sequence.
+
+
+    When we write an algorithm, we have to get the sequence of steps right. When we
+    get dressed, for example, it would be silly if we were to put on our shoes before
+    our socks!
+
+
+    > DATA DUCK
+
+    If the steps of an algorithm are in the wrong order, the algorithm won’t work!
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_9_0.png)'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# Cookie Algorithm
+
+
+    Data duck has written an algorithm to help him make his favorite chocolate chip
+    cookies, but he''s got the order of the steps all mixed up. Can you put the steps
+    in the correct order?
+
+
+    Turn to page 23 to see the answers.
+
+
+    Mix together the butter and sugar. Then add in eggs and flour.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_10_0.png)
+
+
+    OFF
+
+
+    Turn off oven.
+
+
+    Grease baking tray.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_10_1.png)
+
+
+    Put spoonfuls of mixture onto tray, then bake for 10 minutes.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_10_2.png)
+
+
+    Eat and enjoy!
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_10_3.png)
+
+
+    Heat oven to correct temperature.
+
+
+    350F
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_10_4.png)'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# # Make a Move
+
+
+    Algorithms are written in code. This is a kind of language that computers can
+    understand.
+
+
+    When we animate a character on a computer, we use code in the algorithm. It tells
+    the computer where the character should be on the screen.
+
+
+    To make the character move, we need to change the character''s position over and
+    over again.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_11_0.png)
+
+
+    +   move 10 steps
+
+
+    +   move 90 steps
+
+
+    +   move 10 steps
+
+
+    +   move 10 steps
+
+
+    +   move 10 steps
+
+
+    > DATA DUCK
+
+    The things that we can change in the algorithm, such as size, color, and position,
+    are called variables.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_11_1.png)
+
+
+    If we want to change a character''s size, color, or position, we have to change
+    the code.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_11_2.png)'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Spot the Variables
+
+
+    Look closely at the two pictures below. Can you find four different variables
+    in the second picture? Use this list to help you:
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_12_0.png)
+
+
+    Turn to page 23 to see the answers.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_12_1.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_12_2.png)
+
+
+    For more variable fun, and to try creating an algorithm to make Data Duck move,
+    complete the activity found at: www.blueshiftcoding.com/kidsgetcoding'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Loop the Loop
+
+
+    Sometimes, we need computers to do a task over and over again. We call these sorts
+    of instructions loops.
+
+
+    We repeat tasks every day. When we walk to school, we repeatedly put one foot
+    in front of the other. When we pedal our bikes, we move our feet round and round.
+    To tell a computer to do these things, we can use loops.
+
+
+    # DATA DUCK
+
+
+    We use loops whenever there''s an action or instruction we want to repeat. For
+    example, I need a loop to be able to walk all the way across the screen.
+
+
+    On page 10, we had to tell the duck to "move 10 steps" five times to get it to
+    move across the page. Another way to do this is to put one instruction inside
+    a loop, like below:
+
+
+    ```
+
+    repeat 4 times
+
+    move 10 steps
+
+    ```
+
+
+    Go to blueshiftcoding.com/kidsgetcoding for more practice with loops!'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Jam Sandwiches
+
+
+    Imagine you''re working in a sandwich shop and need to make the same type of sandwich
+    over and over again. Write instructions to make a jam sandwich. If you had to
+    make ten jam sandwiches, which steps would you put inside your loop?
+
+
+    Turn to page 23 to see an example.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# # Predict It
+
+
+    It''s helpful if we can predict what an algorithm is meant to do before asking
+    the computer to complete the instruction.
+
+
+    When we press play on a video, for example, we expect a movie to start. But if
+    the steps are in the wrong order, the video won''t play!
+
+
+    Look at the algorithms below. Can we predict what will happen to Data Duck if
+    we give him the following instructions?
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_15_0.png)
+
+
+    ```
+
+    change size by one-tenth smaller
+
+    ```
+
+
+    ```
+
+    rotate by quarter-turn
+
+    ```
+
+
+    He''s going to become smaller, and twist around by a quarter-turn.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_15_1.png)
+
+
+    Now, can we predict what will happen if we change the algorithm again?
+
+
+    ```
+
+    repeat 4 times
+
+    ```
+
+
+    ```
+
+    change size by one-tenth smaller
+
+    ```
+
+
+    ```
+
+    rotate by quarter-turn
+
+    ```
+
+
+    He''ll make the same movement as the first—but four times! He''s going to get
+    smaller four times, and turn four quarter-turns.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_15_2.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Guess the Shape
+
+
+    Can you predict what shape Data Duck is drawing?
+
+
+    +   - Repeat 4 times
+
+    - Move 4 steps
+
+    - Make a quarter-turn
+
+
+    Turn to page 23 to see the answers.
+
+
+    Now, try writing your own instructions to draw:
+
+
+    +   a cross shape
+
+
+    +   a T-shape
+
+
+    +   an L-shape
+
+
+    Can a friend guess the shape by following your instructions?
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Decisions, Decisions!
+
+
+    Sometimes, computers need to do something only when a special condition is met.
+    To do this, they use "if statements" to make decisions.
+
+
+    For example, if we tell Data Duck to move to the right, we want to make sure that
+    he doesn''t move off the page.
+
+
+    ```
+
+    repeat 5 times
+
+    move 10 steps
+
+    If on edge of page, reverse direction
+
+    ```
+
+
+    The computer needs to make a decision about what Data Duck should wear today.
+    First, it will check the weather. Then, it will look at a series of "if statements"
+    to decide what to do:
+
+
+    If it is sunny, tell Data Duck to wear sunglasses.
+
+
+    If it is raining, tell Data Duck to bring an umbrella.
+
+
+    If it is snowing, tell Data Duck to wear a winter hat.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_17_0.png)'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# DATA DUCK
+
+
+    Here''s how to make an “if statement":
+
+    First, think of a question you''d like to ask your friend, for example “Is it
+    raining?”\ If the answer is “yes”, they will have to do the following: Bring an
+    umbrella.
+
+    So the statement is:
+
+
+    # Make a statement
+
+
+    Let''s make an “if statement” game to play with your friends!
+
+
+    +   1. Write three different “if statements” on separate pieces of paper.
+
+    2. Put them all into a hat. Shake them around and then take turns to be the caller.
+
+    3. Each caller reads out an “if statement” for you and your friends to follow.
+
+
+    > If it is raining, bring an umbrella.
+
+
+    For example, you could use the following statements:
+
+
+    > If you have brown hair, stand on one foot.
+
+
+    > If you are a girl, raise your hands in the air.
+
+
+    > If you are a boy, touch your toes.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_18_0.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_18_1.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_18_2.png)
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_18_3.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Search and Sort
+
+
+    Algorithms can also be used to help search for information and sort through it.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_19_0.png)
+
+
+    For example, a computer can put names in alphabetical order. The computer uses
+    the alphabet to compare letters to see if they come before or after other letters.
+
+
+    > DATA DUCK
+
+    Algorithms that sort information have two simple parts:
+
+    1. Data to be sorted.
+
+    2. A rule for sorting the data.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_19_1.png)'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Friend Sorting
+
+
+    Can you sort your friends using a simple rule? Follow these easy steps to search
+    and sort out information about your friends, just like a computer!
+
+
+    +   1. Write down the names of eight of your friends.
+
+
+    +   2. Cut up the names and put them in an envelope.
+
+
+    +   3. Pull out one name at a time and put the names in alphabetical order.
+
+
+    +   4. Can you think of other ways you might order your friends? For example,
+    would you sort by height or by age?'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# # Catching the Bug
+
+
+    Algorithms are very useful, but sometimes they don''t work and we need to find
+    out why. Problems with algorithms are called bugs.
+
+
+    When a programmer reads through an algorithm to find errors and fix them, it is
+    called debugging. Errors might be that a step is missing or that part of the sequence
+    is in the wrong order.
+
+
+    > DATA DUCK
+
+    When computers were first invented, they were enormous! One day, one of these
+    big computers wouldn''t work. When scientists took it apart, they found a moth
+    inside! Some people say this is why we use the word computer "bug."
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_21_0.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# # Bed Bugs
+
+
+    Have a look at this algorithm for getting ready for bed. There are two bugs in
+    this algorithm. Can you find them?
+
+
+    # 1. Put on pajamas.
+
+
+    # 2. Brush teeth.
+
+
+    # 4. Get into bed.
+
+
+    # 3. Put on pajamas.
+
+
+    # 6. Read story.
+
+
+    # 7. Go to sleep.
+
+
+    # 5. Turn off light.
+
+
+    Go to blueshiftcoding.com/kidsgetcoding and look at the debugging exercises for
+    more practice.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Extension Activities
+
+
+    +   - creating algorithms
+
+    - using variables
+
+    - using loops
+
+    - predicting algorithm outcomes
+
+    - creating "if statements"
+
+    - debugging
+
+
+    # Words to Remember
+
+
+    **animate:** to give the appearance that something on screen has come to life
+
+
+    **bug:** an error in a computer program
+
+
+    **debugging:** to find and remove bugs or errors in a computer program
+
+
+    **loop:** a series of steps with the final step connected to the first step, the
+    steps are repeated
+
+
+    **memory:** a way of storing information in a computer
+
+
+    **sequence:** a particular order in which steps follow one another
+
+
+    **variable:** something that can be changed or adapted'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Activity Answers
+
+
+    # Pages 4–5
+
+
+    There are five computers on these pages: TV, phone, tablet, computer, and stereo.
+    Many TVs have little computer brains that allow them to find and play channels
+    and programs.
+
+
+    +   4. Take two slices of bread and lay out on work surface.
+
+    5. Pick up knife.
+
+    6. Spread jam on one slice of bread.
+
+    7. Put second slice of bread on top of first slice.
+
+    8. Cut sandwich in half.
+
+
+    # Page 7
+
+
+    For example: wake up; get dressed; eat breakfast; brush hair; brush teeth; put
+    on shoes and jacket; pick up backpack
+
+
+    +   To make ten sandwiches-10 times:
+
+    1. Put bread loaf on table.
+
+    2. Take lid off jam jar.
+
+    3. Put jam jar on table.
+
+
+    # Page 9
+
+
+    +   1. Heat oven to correct temperature.
+
+    2. Mix the butter and sugar. Then add in eggs and flour.
+
+    3. Grease baking tray.
+
+    4. Put spoonfuls of mixture onto tray, then bake for 10 minutes.
+
+    5. Eat and enjoy.
+
+
+    +   Then repeat 10 times:
+
+    1. Take two slices of bread and lay out on work surface.
+
+    2. Pick up knife.
+
+    3. Spread jam on one slice of bread.
+
+    4. Put second slice of bread on top of first slice.
+
+    5. Cut sandwich in half.
+
+    6. Put knife down.
+
+
+    # Page 11
+
+
+    +   1. Costume: Data Duck is wearing a hat.
+
+    2. Position: The mouse and the duck switched places.
+
+    3. Rotation: The mouse is now facing the opposite direction.
+
+    4. Size: The mouse is now smaller.
+
+
+    # Page 15
+
+
+    Data Duck has drawn a square!
+
+
+    # Page 21
+
+
+    “Put on pajamas” has been used twice in the algorithm.
+
+    “Turn off light” is before “Read story” in the algorithm.
+
+
+    # Page 13
+
+
+    You may have a slightly different answer for your jam sandwich making instructions
+    and loop!
+
+
+    +   1. Put bread loaf on table.
+
+    2. Take lid off jam jar.
+
+    3. Put jam jar on table.
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_24_0.png)'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Index
+
+
+    algorithm, 3, 6, 7, 8, 9, 10, 11, 14, 18, 20, 21 computer, 3, 4, 5, 6, 10, 12,
+    programmer, 20 14, 16, 18, 19, 20
+
+
+    bug, 3, 20, 21 Internet, 6 screen, 10, 12
+
+
+    code, 3, 10 loop, 3, 12 variable, 10, 11
+
+
+    First American edition published in 2017 by Lerner Publishing Group, Inc.
+
+
+    First published in 2016 by Wayland, a division of Hachette Children''s Group,
+    a Hachette UK company
+
+
+    Copyright © 2016 by Wayland
+
+    Published by arrangement with Wayland
+
+
+    All U.S. rights reserved. No part of this book may be reproduced, stored in a
+    retrieval system, or transmitted in any form or by means—electronic, mechanical,
+    photocopying, recording, or otherwise—without the prior written permission of
+    Lerner Publishing; Group, Inc., except for the inclusion of brief quotations in
+    an acknowledged review.
+
+
+    Lerner Publishing Companies
+
+    A division of Lerner Publishing Group, Inc.
+
+    241 First Avenue North
+
+    Minneapolis, MN 55401 USA
+
+
+    For reading levels and more information, look up this title at www.lernerbooks.com.
+
+
+    Main body text set in Futura Std Book 12. Typeface provided by Adobe Systems.
+
+
+    # Library of Congress Cataloging-in-Publication Data
+
+
+    Names: Lyons, Heather, 1974:author.; Tweedale, Elizabeth, author.; Westgate, Alex,
+    illustrator.
+
+    Title: Coding, bugs, and fixes / written by Heather Lyons and Elizabeth Tweedale
+    ; illustrated by Alex Westgate.
+
+    Description: Minneapolis : Lerner Publications, [2017] | Series: Kids coding ;
+    Audience: Ages 6-10 ; Audience: K-3
+
+
+    Indexes.
+
+    ISBN 2015044354 (print) | ISBN 2015045675 (ebook) | ISBN 97815152413595 (lb: paper)
+    | ISBN 97815152413608 (pb: alk. paper) | ISBN 97815152413809 (eb pdf)
+
+    Subjects: LCSH: Programming—Juvenile literature.
+
+    Classification: LQA76.6 (ebook) | DDC 005.1—dc23
+
+    LC record available at http://lccn.gov/2015044354
+
+
+    The website addresses (URLs) included in this book were valid at the time of going
+    to press. However, it is possible that contents or addresses may have changed
+    since the publication of this book. No responsibility for such changes can be
+    accepted by either the author or the Publisher.
+
+
+    Printed in China 1 – 8/16
+
+
+    ![](img/1b6ae612dcebd27ea092d53714901ffe_25_0.png)
+
+
+    {24}'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '![](img/1b6ae612dcebd27ea092d53714901ffe_27_0.png)
+
+
+    How do computers know what you want them to do?  They receive instructions called
+    code with the specific steps needed to perform a task. Learn how to create codes,
+    what happens when instructions are out of order, and how mistakes are fixed. Once
+    you know the basics, use the link in this book to go online and try coding yourself!
+
+
+    Try all the activities in the Kids Get Coding series!
+
+    Coding, Bugs, and Fixes
+
+    Learn to Program\Online Safety for Coders
+
+    A World of Programming'
+  merge: -1
+  pgno: 27
