@@ -1,0 +1,5618 @@
+- img_proc: true
+  md: '# C Programming Wizardry: From Zero to Hero in 10 Days'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: ': C Programming Wizardry: From Zero to Hero in 10 Days
+
+
+    Copyright © 2023 by Teo Kok Keong
+
+
+    All Rights Reserved, no part of this book may be reproduced or transmitted in
+    any form or by any means, electronic or mechanical, including photocopying, recording,
+    or by any information storage and retrieval system, without permission in writing
+    from the Author.
+
+
+    Inquiries should be addressed to:
+
+
+    teokk@knowledgeclique,biz'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Introduction
+
+
+    Welcome to the enchanting world of C programming! We''re absolutely delighted
+    that you''ve embarked on this incredible journey with us, from ground zero to
+    becoming a wizard in C programming, all in just 10 days.
+
+
+    C, often referred to as the "mother of all programming languages," is a timeless
+    and potent tool in the realm of computer programming. It''s the language that
+    has laid the foundation for countless software systems, operating systems, and
+    applications. In the next 10 days, you will traverse a path that will take you
+    from a complete novice to a proficient C programmer.
+
+
+    Whether you aspire to embark on a career in software development, enhance your
+    programming skills, or simply want to explore the intricate world of C, this course
+    is meticulously designed to provide you with the knowledge and practical skills
+    you need.
+
+
+    Each day of this course is thoughtfully structured to offer step-by-step guidance,
+    hands-on exercises, and a nurturing learning environment. I will accompany you
+    on this fascinating 10-day journey. Get ready to wield the magic of C programming
+    and unleash your inner coding wizard!
+
+
+    Please follow Knowledge Clique FB page to access all the exercises code an support
+    from the Author. FB page link'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'https://www.facebook.com/knowledgeclique
+
+
+    All the code listed in this book will be freely available in Github. The link
+    will be provided in the Knowledge Clique FB page.
+
+
+    Happy learning!
+
+
+    Sincerely,
+
+
+    Teo kok keong'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   Day 1 Introduction to C Programming
+
+
+    +   Reading Assignment What is C Programming?
+
+    Setting Up Your Development Environment
+
+    Hand on Exercise 1: Setup code::block
+
+
+    +   Day 2: Basic Concepts
+
+
+    +   Reading Assignment: Variables and Data Types
+
+
+    +   Reading Assignment: Input and Output
+
+
+    +   Hand on exercise 1: Declare and initialize variables of different data types
+
+
+    +   Day 3: Control Flow
+
+
+    +   Reading Assignment: Flow control in C
+
+    Reading Assignment: Decision-Making (if-else, switch)
+
+    Reading Assignment: Looping Techniques
+
+    Hand on Exercise 1: Positive or Negative Number
+
+    Exercise 3: Calculator
+
+
+    +   Day 4: Function
+
+
+    +   Reading Assignment: Functions and Modular Programming'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'Hand on Exercise 1: Simple Calculator
+
+
+    Exercise 2: Check Prime Numbers
+
+
+    Exercise 3: Factorial Calculation
+
+
+    # Day 5: Data Types and Operators
+
+
+    Reading Assignment: Integers and Floating-Point Numbers
+
+
+    Hand On: Exercise 1 declaration and initialization
+
+
+    Exercise 2 to swap the values of two variables
+
+
+    # Day 6: Advanced Control Flow
+
+
+    Reading Assignment: Decision-Making(if-else, switch)
+
+
+    Reading Assignment: Looping Techniques
+
+
+    Hand on Exercise 1: Guess the Number Game
+
+
+    Hand on exercise 2: Implement complex loop structures.
+
+
+    # Day 7: Arrays and Pointers
+
+
+    Reading Assignment: : One-Dimensional Array
+
+
+    Reading Assignment: Introduction to Pointers
+
+
+    Hand on Exercise 1: array declaration and initialization
+
+
+    Hand on Exercise 2: the sum of array
+
+
+    Exercise 3: Reverse an array.
+
+
+    Hand on Exercise 4: Swap Two Integers using Pointers
+
+
+    Exercise 5: Find the Length of a String using Pointers
+
+
+    Exercise 6: Calculate the Sum of an Array using Pointers
+
+
+    Exercise 7: Pointer Arithmetic with Arrays
+
+
+    # Day 8: File Handling'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'Reading Assignment: File I/O Basics
+
+
+    Hand on Exercise 1: Reading Text from a File
+
+
+    Exercise 2: Writing Text to a File
+
+
+    Exercise 3: Copying Text from One File to Another
+
+
+    Reading Assignment: Defining Structures
+
+
+    Reading Assignment: Unions
+
+
+    Hand on exercise 1: Define and Initialize a Structure
+
+
+    Exercise 2: Create an Array of Structures
+
+
+    Exercise 3: Pass a Structure to a Function
+
+
+    # Day 10: Advance Topics
+
+
+    Reading Assignment: Preprocessor Directives
+
+
+    Reading Assignment: Bit Manipulation
+
+
+    Exercise 1: Bit Manipulation in C'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Day 1 Introduction to C Programming'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Reading Assignment What is C Programming?
+
+
+    C PROGRAMMING IS A powerful and versatile computer programming language that has
+    played a pivotal role in shaping the world of software development. Created in
+    the early 1970s by Dennis Ritchie at Bell Labs, C has since become one of the
+    most widely used and influential programming languages in the world. But what
+    exactly is C programming, and why is it so important?
+
+
+    At its core, C is a general-purpose programming language known for its efficiency,
+    flexibility, and portability. Here''s what sets it apart:
+
+
+    +   1. Efficiency: C is renowned for its ability to produce highly efficient and
+    fast-running programs. Its low-level capabilities allow developers to control
+    hardware resources directly, making it an ideal choice for system-level programming,
+    embedded systems, and applications where performance is critical.
+
+
+    +   2. Flexibility: C is a versatile language that supports both high-level and
+    low-level programming. It offers a rich set of data types, operators, and control
+    structures, giving programmers the freedom to express complex algorithms and manipulate
+    data with precision.'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '3. Portability: C programs can be written to work on various platforms and
+    operating systems with minimal modification. This portability is essential for
+    creating software that can run on different computers, from desktop PCs to smartphones
+    and embedded devices.
+
+
+    4. Modularity: C promotes modular programming, allowing developers to break down
+    complex projects into smaller, manageable pieces called functions. This makes
+    code more organized, easier to understand, and simpler to maintain.
+
+
+    5. Large Standard Library: C comes with a vast standard library that provides
+    a wide range of functions for tasks like file handling, memory management, and
+    input/output operations. This library simplifies common programming tasks and
+    reduces the need to reinvent the wheel.
+
+
+    6. Legacy and Endurance: C''s enduring popularity is a testament to its reliability
+    and longevity. Many operating systems, including Unix and Linux, are written in
+    C. Countless software applications, from web browsers to video games, contain
+    C code or use libraries written in C.
+
+
+    C programming is an excellent choice for aspiring programmers and experienced
+    developers alike. Learning C not equips you with a solid foundation in programming
+    but also opens doors to various career opportunities in software development,
+    systems programming, game development, and more.
+
+
+    In summary, C programming is a versatile and efficient language with a rich history
+    and a bright future. It continues to be an essential tool in the world of technology,
+    enabling developers to create software that powers our digital world.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Setting Up Your Development Environment
+
+
+    Before you embark on your journey into the world of C programming, it''s essential
+    to set up a development environment that allows you to write, compile, and run
+    your C programs efficiently. Here are the key steps to get you started:
+
+
+    **1. Choose a Text Editor or Integrated Development Environment (IDE):**
+
+
+    The first decision you''ll need to make is selecting a text editor or an integrated
+    development environment (IDE) for writing your C code. Some popular options include:
+
+
+    +   - **Visual Studio Code (VS Code):** A highly customizable and free code editor
+    with C/C++ extensions.
+
+
+    +   - **Code::Blocks:**** A free, open-source IDE specifically designed for C/C++
+    development.
+
+
+    +   - **Eclipse:**** A versatile IDE that supports C/C++ development with various
+    plugins available.
+
+
+    +   - **Dev-C++;**** A simple and lightweight IDE for Windows users.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'Choose the one that suits your preferences and platform.
+
+
+    # **2. Install a C Compiler:**\*
+
+
+    To compile your C programs into executable files, you''ll need a C compiler. One
+    of the most commonly used C compilers is GCC (GNU Compiler Collection). The installation
+    process varies depending on your operating system:
+
+
+    +   - **Linux:** GCC is often pre-installed. If not, you can install it using
+    your package manager (e.g., `sudo apt install gcc` on Ubuntu).
+
+
+    +   - **Windows:** You can use MinGW (Minimalist GNU for Windows) to get GCC on
+    Windows. Install MinGW and select the C and C++ compilers during installation.
+
+
+    +   - **macOS:** You can install GCC using the Xcode Command Line Tools, which
+    you can get from the Mac App Store or by running `xcode-select --install` in the
+    terminal.
+
+
+    # **3. Verify Your Installation:**\*
+
+
+    To ensure that your C compiler is correctly installed, open a terminal or command
+    prompt and type:
+
+
+    ```
+
+    GCC--VERSION
+
+    ```'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: 'YOU SHOULD SEE INFORMATION about the installed GCC version. This verifies that
+    the compiler is ready for use.
+
+
+    # **4. Create a Workspace:**
+
+
+    Organize your C projects by creating a dedicated workspace folder on your computer.
+    This will help keep your projects organized and make it easier to manage your
+    files.
+
+
+    # **5. Start Writing Code:**
+
+
+    With your development environment set up, you''re ready to start writing C code.
+    Create a new C source file (typically with a `c` extension) in your workspace
+    and begin your programming journey.
+
+
+    Setting up your development environment is the first step towards becoming proficient
+    in C programming. Once you''re set up, you can dive into the world of coding,
+    learning the language''s syntax, and building increasingly complex and powerful
+    programs.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Hand on Exercise 1: Setup code::block
+
+
+    INT THIS EXERCISE, we will install Code::Blocks and write a "Hello, World!" program
+    in C on a Windows system:
+
+
+    Step 1: Download Code::Blocks
+
+
+    +   1. Open your web browser and go to the official Code::Blocks website: [http://www.codeblocks.org/downloads]
+    (http://www.codeblocks.org/downloads).
+
+
+    Note: that the web is fast changing and the link might be outdated, you could
+    instead google for the latest link.
+
+
+    +   2. Under the "Downloads" section, click on "Download the binary release."
+
+
+    +   3. Choose the "codeblocks-xx.xxmingw-setup.exe" version (where xx.xx is the
+    version number). This version includes the Code::Blocks IDE with the MinGW compiler
+    for Windows.
+
+
+    +   4. Click the download link to start the download. Save the installer to your
+    computer.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Step 2: Install Code::Blocks
+
+
+    +   1. Locate the downloaded "codeblocks-xx.xxmingw-setup.exe" file and double-click
+    on it to run the installer.
+
+
+    +   2. You will see a "Code::Blocks Setup Wizard" window. Click "Next" to begin
+    the installation process.
+
+
+    +   3. Accept the license agreement by selecting "I Agree" and click "Next."
+
+
+    +   4. Choose the installation directory for Code::Blocks. The default location
+    is usually fine, so you can click "Next."
+
+
+    +   5. Select the components to install. Ensure that "Code::Blocks" and "MinGW"
+    are selected. You can leave other options at their default settings and click
+    "Next."
+
+
+    +   6. Choose the Start Menu folder for shortcuts and click "Next."
+
+
+    +   7. Select the additional tasks if desired (e.g., creating desktop and quick
+    launch icons). Click "Next."
+
+
+    +   8. Review your choices, and when you''re ready, click "Install" to begin the
+    installation process.
+
+
+    +   9. Wait for the installation to complete. This may take a few minutes.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '10. Once the installation is finished, you will see a "Completing the Code::Blocks
+    Setup Wizard" screen. Check the box that says "Run Code::Blocks" and click "Finish."
+
+
+    Step 3: Write the "Hello, World!" Program
+
+
+    +   1. Code::Blocks should now be open. To create a new project, click on "File"
+    in the top menu and select "New" > "Project..."
+
+
+    +   2. In the "New Project" dialog, select "Console application" and click "Go."
+
+
+    +   3. Choose "C" as the programming language and click "Next."
+
+
+    +   4. Give your project a name, such as "HelloWorld," and choose a directory
+    to save it in. Click "Next."
+
+
+    +   5. Ensure that "Create Debug'' configuration" is selected and click "Finish."
+
+
+    +   6. In the Code::Blocks IDE, you will see a new project workspace. On the left,
+    you''ll have a "Sources" folder. Inside that, you''ll see a file named "main.c."
+    Double-click on it to open it.
+
+
+    +   7. Replace the existing code with the following "Hello, World!" program:
+
+
+    ```
+
+    ```c
+
+    ```'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '```
+
+    #include
+
+
+    int main() {
+
+
+    printf("Hello, World!\n");
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    +   8. Save the file by clicking "File" > "Save" or pressing Ctrl + S.
+
+
+    Step 4: Compile and Run the Program
+
+
+    +   1. Click on the "Build" menu and select "Build and Run" (or simply press F9).
+
+
+    +   2. Code::Blocks will compile your program and execute it. You should see the
+    "Hello, World!" message displayed in the console at the bottom of the IDE.
+
+
+    Congratulations! You''ve successfully installed Code::Blocks on Windows and written
+    and executed your first C program.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '```
+
+    C:\myproject\Debug\bin\Debug
+
+    Hello world!
+
+    Process returned 0 (0x0)  execution time : 0.023 s
+
+    Press any key to continue.
+
+    ```
+
+
+    Figure 1 Example of a console output of the execution of hello World program
+
+
+    NOTE THAT CODE:: BLOCK will be the default IDE use throughout this book.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Day 2: Basic Concepts'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# Day 2: Basic Concepts'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Reading Assignment: Variables and Data Types
+
+
+    IN THE WORLD OF variables are like the building blocks that allow you to store
+    and manipulate data. Understanding variables and data types is fundamental to
+    mastering the C programming language. In this chapter, we will explore the concept
+    of variables, learn about different data types, and understand how to declare
+    and use them in C.
+
+
+    # What Are Variables?
+
+
+    A variable is a named storage location in a computer''s memory where you can store
+    data. These named storage locations can hold different types of information, such
+    as numbers, characters, and more. Variables allow you to work with data in your
+    programs by giving it a meaningful name and a place in memory.
+
+
+    # Declaring Variables
+
+
+    Before you can use a variable in C, you need to declare it. Declaration tells
+    the compiler the variable''s name and data type, which is crucial for allocating
+    the right amount of memory. Here''s the basic syntax for declaring a variable:
+
+
+    ```
+
+    data_type variable_name;
+
+    ```'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: 'For example, to declare an integer variable named `age`, you would use:
+
+
+    int age;
+
+
+    # Data Types in C
+
+
+    C offers a variety of data types that allow you to store different kinds of data.
+    Some of the common data types include:
+
+
+    int: Used for storing integers (whole numbers), e.g., `int age = 25;`
+
+
+    float: Used for storing floating-point numbers (numbers with decimals), e.g.,
+    `float price = 19.99;`
+
+
+    char: Used for storing single characters, e.g., `char grade = ''A'';`
+
+
+    double: Used for storing double-precision floating-point numbers, e.g., `double
+    pi = 3.14159265359;`
+
+
+    Bool: Used for storing Boolean values (`true` or `false`), e.g.,
+
+
+    Bool isStudent = 1;
+
+
+    void: Used for indicating that a function does not return a value, e.g., `void
+    myFunction();`'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Initializing Variables
+
+
+    When you declare a variable, you can also initialize it, which means assigning
+    an initial value to the variable. Here''s how you can declare and initialize variables:
+
+
+    ```
+
+    int score = 100;
+
+    ```
+
+
+    ```
+
+    float temperature = 98.6;
+
+    ```
+
+
+    ```
+
+    char grade = ''A'';
+
+    ```
+
+
+    # Variable Naming Rules
+
+
+    In C, variable names must follow certain rules:
+
+
+    Variable names are case-sensitive, meaning `myVariable` and `variable` are considered
+    different.
+
+
+    Variable names can consist of letters, digits, and underscores but must start
+    with a letter or underscore.
+
+
+    Reserved words (keywords) like `int`, `float`, or `char` cannot be used as variable
+    names.
+
+
+    Variable names should be meaningful and reflect the purpose of the variable.'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: UNDERSTANDING VARIABLES and data types is essential as you begin your journey
+    into C programming. Variables allow you to store and manipulate data, and data
+    types determine what kind of data you can work with. In the next chapter, we'll
+    explore how to assign values to variables, perform operations on them, and delve
+    deeper into the world of C programming.
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Reading Assignment: Input and Output
+
+
+    PROGRAMMING WITHOUT input and output is like having a conversation without listening
+    or speaking. In this chapter, we will explore how to receive input from, display
+    output to the screen, and interact with the world outside your program in C. Input
+    and output (I/O) are essential aspects of any programming language, and C provides
+    a powerful set of tools for handling them.
+
+
+    # Standard Input and Output
+
+
+    In C, we use the Standard Input (`stdin`) and Standard Output (`stdout`) to perform
+    input and output operations. `stdin` represents the keyboard as the source of
+    input, while `stdout` represents the screen as the destination for output. These
+    streams are associated with the console by default.
+
+
+    # Output using printf()
+
+
+    The `printf()` function is a fundamental tool for displaying output in C. It allows
+    you to format and display text and data on the screen. Here''s a basic example:
+
+
+    ```
+
+    c
+
+    ```'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '```
+
+    #include
+
+
+    int main() {
+
+
+    printf("Hello, World!\n");
+
+
+    return 0;
+
+
+    }
+
+    ```
+
+
+    +   - printf() is a library function defined in ` ``.
+
+    - `\n` is an escape sequence for a newline character.
+
+
+    # Input using scanf()
+
+
+    The `scanf()` function is used to read input from the user. It is also part of
+    the `` ` library. Here''s an example of how to use `scanf()`:`
+
+
+    ```
+
+    int main() {
+
+    ```'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '```
+
+    int age;
+
+    printf("Enter your age: ");
+
+    scanf("%d", &age);
+
+    printf("You are %d years old.\n", age);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    - `%d` is a format specifier for an integer.
+
+
+    - `&age` is the address of the `age` variable, which allows `scanf()` to store
+    the input value there.
+
+
+    # Formatted Input and Output
+
+
+    C provides various format specifiers for different data types:
+
+
+    +   - `%d` for integers
+
+
+    +   - `%f` for floating-point numbers
+
+
+    +   - `%c` for characters'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '+   - `%s` for strings
+
+
+    +   - `%lf` for double-precision floating-point numbers'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# File Input and Output
+
+
+    C also supports file I/O operations, allowing you to read from and write to files.
+    You can use functions like `fopen()`, `fprintf()`, `fscanf()`, and `fclose()`
+    to work with files.
+
+
+    INPUT AND OUTPUT ARE fundamental concepts in programming, and mastering them is
+    essential for creating useful and interactive programs. In this chapter, we''ve
+    introduced you to the basics of input and output in C using `printf()` and `scanf()`.
+    In the next chapter, we''ll dive deeper into control structures and decision-making,
+    which are crucial for creating more sophisticated programs.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: 'Hand on exercise 1: Declare and initialize variables of different data types
+
+
+    # Variable Declarations and Initializations
+
+
+    Integer Variables: Declare and initialize two integer variables, num1 and num2,
+    with values of your choice.
+
+
+    Floating-Point Variables: Declare and initialize two floating-point variables,
+    float1 and float2, with values of your choice.
+
+
+    Character Variables: Declare and initialize two character variables, char1 and
+    char2, with characters of your choice.
+
+
+    String Variables: Declare and initialize a string variable, name, with your name
+    or any other string.
+
+
+    Boolean Variables: Declare and initialize a boolean variable, isProgrammingFun,
+    and set it to 1 if you find programming fun or 0 if you don''t.
+
+
+    Display Values: Print out the values of all the variables using printf statements.
+    For example:
+
+
+    ```
+
+    printf("num1: %d\n", num1);
+
+    ```'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "```\nif (isProgrammingFun) {\n\nprintf(\"I find programming fun!\\n\");\n\n\
+    \ else {\n\nprintf(\"Programming is not my thing.\\n\");\n\n}\n```"
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'USER INPUT: ASK THE user to input a new value for one of the variables (e.g.,
+    num1) using scanf and then print the updated value.
+
+
+    Challenge: Declare a constant variable PI and initialize it with the value of
+    $\pi$ (approximately 3.14159). Use this constant to calculate the circumference
+    of a circle with a radius of your choice and print the result.
+
+
+    Remember to include appropriate header files (#include ) and declare your variables
+    with the correct data types before using them. This exercise will help you get
+    hands-on experience with different data types in C and perform basic operations
+    with them.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: 'Here''s the solution to the exercise on declaring and initializing variables
+    of different data types in C programming, along with descriptions of each step:
+
+
+    ```
+
+    #include
+
+    ```
+
+
+    ```
+
+    int main() {
+
+    ```
+
+
+    ```
+
+    // Integer Variables
+
+    ```
+
+
+    ```
+
+    int num1 = 10; // Declare and initialize num1 with the value 10
+
+    ```
+
+
+    ```
+
+    int num2 = 20; // Declare and initialize num2 with the value 20
+
+    ```
+
+
+    ```
+
+    // Floating-Point Variables
+
+    ```
+
+
+    ```
+
+    float float1 = 3.14; // Declare and initialize float1 with the value 3.14
+
+    ```
+
+
+    ```
+
+    float float2 = 2.718; // Declare and initialize float2 with the value 2.718
+
+    ```
+
+
+    ```
+
+    // Character Variables
+
+    ```
+
+
+    ```
+
+    char char1 = ''A''; // Declare and initialize char1 with the character ''A''
+
+    ```
+
+
+    ```
+
+    char char2 = ''B''; // Declare and initialize char2 with the character ''B''
+
+    ```'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '```
+
+    // String Variable
+
+    ```
+
+
+    ```
+
+    char name[] = "John Doe"; // Declare and initialize a string variable with
+
+    your name
+
+    ```
+
+
+    ```
+
+    // Boolean Variable
+
+    ```
+
+
+    ```
+
+    int isProgrammingFun = 1; // Declare and initialize a boolean variable (1
+
+    for true)
+
+    ```
+
+
+    ```
+
+    // Display Values
+
+    ```
+
+
+    ```
+
+    printf("num1: %d\n", num1); // Print the value of num1
+
+    ```
+
+
+    ```
+
+    printf("num2: %d\n", num2); // Print the value of num2
+
+    ```
+
+
+    ```
+
+    printf("float1: %f\n", float1); // Print the value of float1
+
+    ```
+
+
+    ```
+
+    printf("float2: %f\n", float2); // Print the value of float2
+
+    ```
+
+
+    ```
+
+    printf("char1: %c\n", char1); // Print the value of char1
+
+    ```
+
+
+    ```
+
+    printf("char2: %c\n", char2); // Print the value of char2
+
+    ```
+
+
+    ```
+
+    printf("name: %s\n", name); // Print the string stored in the name variable
+
+    ```'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '```
+
+    // Perform Arithmetic Operations
+
+    int sum = num1 + num2; // Calculate the sum of num1 and num2
+
+
+    printf("Sum of num1 and num2: %d\n", sum); // Print the result
+
+
+    float product = float1 * float2; // Calculate the product of float1 and float2
+
+
+    printf("Product of float1 and float2: %f\n", product); // Print the result
+
+
+    // Character Operations
+
+    char combinedChars[3]; // Declare a character array to hold the combined characters
+
+
+    combinedChars[0] = char1; // Assign the value of char1 to the first element
+
+
+    combinedChars[1] = char2; // Assign the value of char2 to the second element
+
+
+    combinedChars[2] = ''\0''; // Null-terminate the string
+
+
+    printf("Combined characters: %s\n", combinedChars); // Print the combined string
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '```
+
+    // Boolean Output
+
+
+    if (isProgrammingFun) { // Check the value of isProgrammingFun
+
+
+    printf("I find programming fun!\n"); // If true, print this message
+
+    \sel {
+
+    printf("Programming is not my thing.\n"); // If false, print this message
+
+    }
+
+
+    // User Input
+
+
+    printf("Enter a new value for num1: "); // Prompt the user for input
+
+
+    scanf("%d", &num1); // Read and store the new value in num1
+
+
+    printf("Updated num1: %d\n", num1); // Print the updated value
+
+
+    // Challenge: Calculate Circumference
+
+
+    const float PI = 3.14159; // Declare and initialize a constant for PI
+
+
+    float radius = 5.0; // Declare and initialize a radius value
+
+
+    float circumference = 2 * PI * radius; // Calculate the circumference
+
+    ```'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '```
+
+    printf("Circumference of a circle with radius %.2f: %.2f\n", radius,
+
+    circumference); // Print the result
+
+    ```
+
+
+    return 0;
+
+
+    }
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_38_0.png)
+
+
+    FIGURE 1 EXAMPLE OF a console output of the execution of exercisel1
+
+
+    Type the Program shown above into Code::Block, compile and run as done in Day
+    1.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Day 3: Control Flow'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# Day 3: Control Flow'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Reading Assignment: Flow control in C
+
+
+    Flow control in C refers to the mechanisms and constructs used to manage the order
+    of execution of statements or blocks of code within a C program. It allows you
+    to make decisions, repeat actions, and control the overall flow of your program
+    based on certain conditions. Flow control is essential for creating programs that
+    can perform different tasks under different circumstances. There are primarily
+    three types of flow control in C:
+
+
+    +   1. Sequential Execution: By default, C programs execute statements in a top-down,
+    sequential order. This means that each statement is executed one after the other
+    in the order they appear in the code.
+
+
+    +   2. Conditional Execution: Conditional execution allows you to make decisions
+    in your program based on certain conditions. This is typically achieved using
+    `if-else` statements, `switch-case` statements, and the ternary conditional operator
+    (`? :`). Conditional execution allows you to execute different blocks of code
+    depending on whether a condition is true or false.
+
+
+    +   3. Iterative Execution (Loops): Iterative execution, also known as looping,
+    allows you to repeat a block of code multiple times. C provides several loop constructs
+    for this purpose, including `for`, `while`, and `do-while` loops. Loops are used
+    when you want to perform a certain action'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'repeatedly until a specific condition is met while a condition remains true.
+
+
+    Let''s briefly explain each of these flow control constructs in more detail:
+
+
+    +   1. Sequential Execution:
+
+
+    Sequential execution is the most straightforward type of flow control, where statements
+    are executed one after the other from top to bottom in the order they appear in
+    your code. There is no explicit decision-making or repetition involved in sequential
+    execution.
+
+
+    +   2. Conditional Execution (if-else and switch-case):
+
+
+    - `if-else` statements: These allow you to execute a block of code if a specified
+    condition is true, and an alternative block if the condition is false.
+
+
+    - `switch-case` statements: These are used for multi-way branching. Based on the
+    value of an expression, the program can jump to different code blocks.
+
+
+    +   3. Iterative Execution (Loops):
+
+
+    `for` loops: Used when you know the number of iterations in advance. It consists
+    of an initialization step, a condition to check before each iteration, and an
+    update step.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '`while` loops: Used when you want to repeat a block of code as long as a certain
+    condition remains true. The condition is checked before entering the loop.
+
+
+    `do-while` loops: Similar to `while` loops, but the condition is checked after
+    the block of code is executed, so the code inside the loop is always executed
+    at least once.
+
+
+    Flow control constructs allow you to create programs that can respond to various
+    input scenarios, handle errors, and perform tasks efficiently by controlling the
+    order in which statements are executed. These constructs are fundamental to programming
+    in C and are essential for writing complex and responsive software.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# Reading Assignment: Decision-Making (if-else, switch)
+
+
+    DECISION-MAKING IS a crucial aspect of programming that allows you to control
+    the flow of your code based on certain conditions. In C programming, you can achieve
+    decision-making using two primary constructs: `if-else` statements and `switch-case`
+    statements. Let''s explore both of these constructs in detail:
+
+
+    +   1. if-else Statements:
+
+
+    The `if-else` statement is used to execute different blocks of code based on whether
+    a specified condition is true or false. It allows you to create branching logic
+    in your program.
+
+
+    Here''s the basic syntax of an `if-else` statement:
+
+
+    ```
+
+    if (condition) {
+
+    // Code to execute if the condition is true
+
+    } else {
+
+    // Code to execute if the condition is false
+
+    ```'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '```
+
+    }}
+
+    ```
+
+
+    Example:'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "```\n#include\n\nint main() {\n    int num;\n\n    printf(\"Enter a number:\
+    \ \");\n\n    scanf(\"%d\", &num);\n\n    if (num > 0) {\n        printf(\"The\
+    \ number is positive.\\n\");\n    } else if (num < 0) {\n        printf(\"The\
+    \ number is negative.\\n\");\n    } else {\n        printf(\"The number is zero.\\\
+    n\");\n    }\n\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '```
+
+    }
+
+    ```
+
+
+    In this example, the program checks whether the entered number is positive, negative,
+    or zero and executes different code blocks accordingly.
+
+
+    +   2. switch-case Statements:
+
+
+    The `switch-case` statement is used for multi-way branching. It allows you to
+    select one of many code blocks to execute based on the value of an expression.
+
+
+    Here''s the basic syntax of a `switch-case` statement:
+
+
+    ```
+
+    switch (expression) {
+
+
+    case constant1:
+
+
+    // Code to execute when expression equals constant1
+
+
+    break;
+
+
+    case constant2:
+
+
+    // Code to execute when expression equals constant2
+
+
+    break;
+
+    ```'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: "```\n// More cases...\ndefault:\n// Code to execute when none of the cases\
+    \ match\n}\n```\n```\n\nExample:\n\n#include\n\n```\nint main() {\n  char grade;\n\
+    \n  printf(\"Enter your grade (A, B, C, D, or F): \");\n  scanf(\" %c\", &grade);\n\
+    \n  switch (grade) {\n    case 'A':\n\n```"
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '```
+
+    printf("Excellent!\n");
+
+    ```
+
+
+    ```
+
+    break;
+
+    ```
+
+
+    ```
+
+    case ''B'':
+
+    ```
+
+
+    ```
+
+    printf("Good job!\n");
+
+    ```
+
+
+    ```
+
+    break;
+
+    ```
+
+
+    ```
+
+    case ''C'':
+
+    ```
+
+
+    ```
+
+    printf("Satisfactory.\\n");
+
+    ```
+
+
+    ```
+
+    break;
+
+    ```
+
+
+    ```
+
+    case ''D'':
+
+    ```
+
+
+    ```
+
+    printf("Needs improvement.\\n");
+
+    ```
+
+
+    ```
+
+    break;
+
+    ```
+
+
+    ```
+
+    case ''F'':
+
+    ```
+
+
+    ```
+
+    printf("You failed.\\n");
+
+    ```
+
+
+    ```
+
+    break;
+
+    ```'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '```
+
+    default:
+
+
+    printf("Invalid grade.\n");
+
+    }
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    In this example, the program uses `switch-case` to provide feedback based on the
+    entered grade.
+
+
+    Both `if-else` and `switch-case` statements are powerful tools for controlling
+    the flow of your C programs. You can choose the one that best suits your specific
+    needs. `if-else` statements are flexible for complex conditions, while `switch-case`
+    statements are useful for situations where you need to match a value against multiple
+    cases. Proper use of these constructs is essential for creating efficient and
+    responsive programs.'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Reading Assignment: Looping Techniques
+
+
+    LOOPING TECHNIQUES in programming are essential for repeating a block of code
+    multiple times, often with slight variations or until a specific condition is
+    met. Loops allow you to perform tasks efficiently and can simplify your code significantly.
+    In C programming, there are three primary types of loops: for, `while`, and `do-while`.
+    Let''s explore these looping techniques in more detail:
+
+
+    +   1. for Loop:
+
+
+    The `for` loop is used when you know the number of iterations in advance. It consists
+    of three parts: initialization, condition, and update.
+
+
+    for (initialization; condition; update) {
+
+
+    ```
+
+    // Code to execute in each iteration
+
+
+    }
+
+    ```
+
+
+    Here''s an example that prints numbers from 1 to 5 using a `for` loop:
+
+
+    ```
+
+    #include
+
+    ```'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "```\nint main() {\n\n  for (int i = 1; i <= 5; i++) {\n\n    printf(\"%d \"\
+    , i);\n  }\n\n  return 0;\n}\n```"
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '2. while Loop:
+
+
+    The `while` loop is used when you want to repeat a block of code as long as a
+    certain condition remains true. The condition is checked before entering the loop.
+
+
+    ```
+
+    while (condition) {
+
+    // Code to execute in each iteration
+
+    }
+
+    ```
+
+
+    Example: Printing numbers from 1 to 5 using a `while` loop:
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+    int i = 1;
+
+
+    while (i <= 5) {
+
+    printf("%d ", i);
+
+    ni++;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: '```
+
+    }
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    3. do-while Loop:
+
+
+    The `do-while` loop is similar to the `while` loop, but the condition is checked
+    after the block of code is executed. This means that the code inside the loop
+    is always executed at least once.
+
+
+    ```
+
+    do {
+
+    // Code to execute in each iteration
+
+    n} while (condition);
+
+    ```
+
+
+    Example: Printing numbers from 1 to 5 using a `do-while` loop:
+
+
+    ```
+
+    int main() {
+
+
+    int i = 1;
+
+    ```'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\ndo {\n    printf(\"%d \", i);\n    i++;\n} while (i <= 5);\nreturn 0;\n\
+    }\n```\n\n# Loop Control Statements:\n\nIn addition to the basic loop constructs,\
+    \ C provides loop control statements that allow you to modify the behavior of\
+    \ loops:\n\n+   - `break`: Used to exit a loop prematurely based on a certain\
+    \ condition.\n\n+   - **continue**: Skips the rest of the current iteration and\
+    \ proceeds to the next iteration of the loop.\n\nExample of using `break` to exit\
+    \ a loop:\n\n```\n#include\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\nint main() {\n  for (int i = 1; i <= 10; i++) {\n    if (i == 5) {\n \
+    \     break; // Exit the loop when i equals 5\n    }\n    printf(\"%d \", i);\n\
+    \  }\n  return 0;\n}\n```\n\nThese looping techniques are fundamental in C programming\
+    \ and are used extensively to implement various algorithms and solve problems.\
+    \ Choosing the right type of loop and using loop control statements wisely can\
+    \ make your code more efficient and readable."
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: '# Hand on Exercise 1: Positive or Negative Number
+
+
+    WRITE A C PROGRAM THAT takes an integer as input and determines whether it is
+    a positive or negative number.
+
+
+    Type the Program shown above into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    int num;
+
+
+    printf("Enter an integer: ");
+
+
+    scanf("%d", &num);
+
+
+    if (num > 0) {
+
+
+    printf("The number is positive.\\n");
+
+    ```'
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '```
+
+    } else if (num < 0) {
+
+
+    printf("The number is negative.\n");
+
+
+    } else {
+
+
+    printf("The number is zero.\n");
+
+
+    }
+
+
+    return 0;
+
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '```
+
+    Enter an integer: -7
+
+    The number is negative.
+
+
+    Process returned 0 (0x0)  execution time : 3.926 s
+
+    Press any key to continue._
+
+    ```
+
+
+    Figure 2 Example of a console output of the execution of exercise1'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: '# Exercise 3: Calculator
+
+
+    Write a C program for a simple calculator that performs addition, subtraction,
+    multiplication, or division based on user input.
+
+
+    Type the Program shown above into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    char operator;
+
+
+    double num1, num2, result;
+
+
+    printf("Enter an operator (+, -, *, /): ");
+
+
+    canf(" %c", &operator);
+
+
+    printf("Enter two numbers: ");
+
+
+    canf("%lf %lf", &num1, &num2);
+
+    ```'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\nswitch (operator) {\n\n    case '+':\n        result = num1 + num2;\n\
+    \        break;\n\n    case '-':\n        result = num1 - num2;\n        break;\n\
+    \n    case '*':\n        result = num1 * num2;\n        break;\n\n    case '/':':\n\
+    \        if (num2 != 0) {\n            result = num1 / num2;\n        }\n    }\
+    \ else {\n```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '```
+
+    printf("Error: Division by zero!\n");
+
+
+    return 1; // Exit with an error code
+
+    }
+
+
+    break;
+
+    default:
+
+
+    printf("Invalid operator!\n");
+
+
+    return 1; // Exit with an error code
+
+    }
+
+
+    printf("Result: %lf\n", result);
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '```
+
+    C:\myproject\char\day3.exe
+
+    Enter an operator (+, -, *, /): +
+
+    Enter two numbers: 1
+
+    2
+
+    Result: 3.000000
+
+
+    Process returned 0 (0x0) execution time : 14.377 s
+
+    Press any key to continue.
+
+    ```
+
+
+    FIGURE 3 EXAMPLE OF a console output of the execution of exercise2'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '# Day 4: Functions'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# Day 4: Function'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '# Reading Assignment: Functions and Modular Programming
+
+
+    Cprogramming is a versatile and powerful language that allows you to write efficient
+    and organized code through the use of functions and modular programming. Functions
+    are blocks of code that perform specific tasks, and modular programming is a technique
+    that involves breaking down a program into smaller, manageable parts. In this
+    guide, we''ll explore the fundamentals of functions and modular programming in
+    C.
+
+
+    What is a Function?
+
+
+    A function in C is a self-contained block of code that performs a specific task.
+    Functions are used to divide a program into smaller, more manageable parts, making
+    the code easier to read, maintain, and debug. Functions have a name, a return
+    type, and a set of parameters (also known as arguments).
+
+
+    Here''s the basic syntax of a C function:
+
+
+    ```
+
+    return_type function_name(parameters) {
+
+
+    // Function body
+
+
+    // Code to perform a specific task
+
+    ```'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: '```
+
+    // ...
+
+    return value; // (optional) Return a value of the specified return_type
+
+    }
+
+    ```
+
+
+    Let''s break down the components of a function:
+
+
+    +   - `return_type`: This specifies the type of value that the function will return,
+    such as `int`, `float`, `void` (for functions that don''t return a value), or
+    a custom data type.
+
+
+    +   - `function_name`: This is the name of the function, which you can choose.
+    It should be descriptive of the task the function performs.
+
+
+    +   - `parameters`: These are variables or values that you pass into the function
+    to provide input. Parameters are optional, and a function can have none or multiple
+    parameters.
+
+
+    +   - `return_value`: If the function has a return type other than `void`, it
+    should return a value of that type using the `return` statement.
+
+
+    # ## Defining and Calling Functions
+
+
+    To use a function, you need to define it before calling it. Here''s an example
+    of a simple function that adds two numbers:
+
+
+    ```
+
+    #include
+
+    ```'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: '```
+
+    int add(int a, int b) {
+
+
+    return a + b;
+
+    }
+
+
+    int main() {
+
+
+    int result = add(5, 3); // Calling the add function
+
+
+    printf("Sum: %d\n", result);
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    In this example, the `add` function takes two `int` parameters, adds them, and
+    returns the result. In the `main` function, we call `add(5, 3)` and print the
+    result.
+
+
+    # Benefits of Modular Programming
+
+
+    Modular programming promotes code reusability and maintainability. By breaking
+    your program into smaller functions, you can:'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '+   1. Reusability: Functions can be used multiple times in different parts
+    of your program, reducing code duplication.
+
+
+    +   2. Readability: Smaller functions are easier to read and understand, making
+    your code more accessible to you and others.
+
+
+    +   3. Maintenance: When you need to fix a bug or make changes, you can focus
+    on the specific function without affecting the entire program.
+
+
+    +   4. Testing: Functions are easier to test in isolation, making it simpler to
+    identify and fix issues.
+
+
+    # Best Practices
+
+
+    Some best practices for using functions and modular programming in C:
+
+
+    +   1. Function Names: Choose descriptive names for your functions that indicate
+    their purpose.
+
+
+    +   2. Parameter Names: Use meaningful parameter names that clarify the function''s
+    input.
+
+
+    +   3. Documentation: Add comments to explain what each function does and how
+    to use it.
+
+
+    +   4. Separation of Concerns: Each function should have a single, well-defined
+    purpose.'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '+   5. Avoid Global Variables: Minimize the use of global variables; instead,
+    pass data through function parameters.
+
+
+    +   6. Error Handling: Implement error handling within your functions to handle
+    unexpected situations gracefully.
+
+
+    +   7. Testing: Write test cases for your functions to ensure they work correctly.
+
+
+    In summary, functions and modular programming are essential concepts in C programming.
+    They help you create organized, efficient, and maintainable code. As a beginner,
+    practice using functions to break down your programs into manageable pieces, and
+    you''ll become a more proficient C programmer over time.'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# Hand on Exercise 1: Simple Calculator
+
+
+    CREATE A C PROGRAM that defines and calls functions to perform basic arithmetic
+    operations: addition, subtraction, multiplication, and division. Your program
+    should:
+
+
+    Define four functions, one for each arithmetic operation (e.g., add, subtract,
+    multiply, and divide).
+
+
+    Prompt the user to enter two numbers and an operator (+, -, *, or /).
+
+
+    Call the appropriate function based on the operator entered by the user.
+
+
+    Display the result of the operation.
+
+
+    Type the Program shown above into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+    ```
+
+
+    ```
+
+    // Function to check if a number is prime
+
+    ```
+
+
+    ```
+
+    int isPrime(int n) {
+
+    ```'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "```\nif (n <= 1) {\n    return 0; // 0 and 1 are not prime\n}\n\nfor (int i\
+    \ = 2; i * i <= n; i++) {\n    if (n % i == 0) {\n        return 0; // Not prime\
+    \ if divisible by any number other than 1 and itself\n    }\n}\n    return 1;\
+    \ // Prime otherwise\n}\n\nint main() {\n    int num;\n    printf(\"Enter a positive\
+    \ integer: \");\n```"
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '```
+
+    scanf("%d", &num);
+
+
+    if (num <= 0) {
+
+
+    printf("Error: Please enter a positive integer.\n");
+
+
+    } else {
+
+
+    if (isPrime(num)) {
+
+
+    printf("%d is a prime number.\n", num);
+
+
+    } else {
+
+
+    printf("%d is not a prime number.\n", num);
+
+
+    }
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '```
+
+    C:\myproject\chero\day4.exe
+
+    Enter two numbers: 1 5
+
+    Enter an operator (+, -, *, /):
+
+    Result: 6.00
+
+
+    Process returned 0 (0x0) execution time : 7.729 s
+
+    Press any key to continue.
+
+    ```
+
+
+    FIGURE 4 EXAMPLE OF a console output of the execution of exercise1'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# Exercise 2: Check Prime Numbers
+
+
+    CREATE A C PROGRAM that defines a function to check if a given positive integer
+    is prime. Your program should:
+
+
+    Define a function isPrime that takes an integer as a parameter and returns true
+    (1) if it''s prime or false (0) otherwise.
+
+
+    Prompt the user to enter a positive integer.
+
+
+    Call the isPrime function to check if the entered number is prime.
+
+
+    Type the Program shown above into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    // Function to calculate factorial
+
+    ```
+
+
+    ```
+
+    long long calculateFactorial(int n) {
+
+    ```'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "```\nif (n <= 1) {\n    return 1;\n}\nreturn n * calculateFactorial(n - 1);\n\
+    ```\n\n```\nint main() {\n    int num;\n    printf(\"Enter a non-negative integer:\
+    \ \");\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '```
+
+    printf("Factorial of %d is %lld\n", num, factorial);
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_77_0.png)
+
+
+    Figure 5 Example of a console output of the execution of exercise2'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: '# Exercise 3: Factorial Calculation
+
+
+    Write a C program to calculate the factorial of a non-negative integer using a
+    function. Your program should:
+
+
+    Define a function calculateFactorial that takes an integer as a parameter and
+    returns its factorial.
+
+
+    Prompt the user to enter a non-negative integer.
+
+
+    Call the calculateFactorial function to compute the factorial.
+
+
+    Display the result.
+
+
+    Type the Program shown above into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    // Function to generate the first n Fibonacci numbers
+
+
+    void generateFibonacci(int n) {
+
+
+    int fib1 = 0, fib2 = 1, next;
+
+    ```'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: "```\nprintf(\"Fibonacci Series (first %d numbers):\\n\", n);\n\nfor (int i\
+    \ = 0; i < n; i++) {\n    if (i <= 1) {\n        next = i;\n    } else {\n   \
+    \     next = fib1 + fib2;\n        fib1 = fib2;\n        fib2 = next;\n    }\n\
+    \    printf(\"%d \", next);\n}\nprintf(\"\\n\");\n```"
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: "```\nint main() {\n    int n;\n    printf(\"Enter the number of Fibonacci numbers\
+    \ to generate: \");\\n    scanf(\"%d\", &n);\n    if (n <= 0) {\n        printf(\"\
+    Error: Please enter a positive integer.\\n\");\n    } else {\n        generateFibonacci(n);\n\
+    \    }\n    return 0;\n}\n```"
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: '![](img/50a3ffd9d521bd894000f66c4b293162_81_0.png)
+
+
+    Figure 6 Example of a console output of the execution of exercise3'
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: '# Day 5: Data Types and Operators'
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: '# Day 5: Data Types and Operators'
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# Reading Assignment: Integers and Floating-Point Numbers
+
+
+    # Integers and Floating -Point Numbers in C
+
+
+    In C programming, integers and floating-point numbers are fundamental data types
+    used to represent and manipulate numerical data. Understanding these data types
+    is crucial for beginners as they form the basis for performing mathematical operations
+    and storing numeric values in your programs.
+
+
+    # Integers
+
+
+    Integers are whole numbers, and in C, they can be of various sizes depending on
+    the specific data type used. Here are some common integer data types in C:
+
+
+    +   1. `int`
+
+
+    The `int` data type is the most commonly used integer type in C. It typically
+    represents signed integers, meaning it can hold both positive and negative whole
+    numbers. The size of an `int` can vary depending on the compiler and platform,
+    but it''s usually 4 bytes on most systems.
+
+
+    ```
+
+    int myInteger = 42;
+
+    ```'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: '2. `char`
+
+
+    Although `char` is often used to represent characters, it''s essentially a small
+    integer type that can hold integer values ranging from -128 to 127 (or 0 to 255
+    if unsigned). It occupies 1 byte of memory.
+
+
+    ```
+
+    char myChar = ''A'';
+
+    ```
+
+
+    3. `short` and `long`
+
+
+    `short` and `long` are used to define integers with different storage sizes. `short`
+    typically uses 2 bytes, while `long` usually uses 4 or 8 bytes, depending on the
+    system.
+
+
+    ```
+
+    short myShort = 32767;
+
+    ```
+
+
+    ```
+
+    long myLong = 2147483647;
+
+    ```
+
+
+    4. `unsigned` Integers
+
+
+    If you need to represent only non-negative integers, you can use `unsigned` versions
+    of integer types. These types have no sign bit, which means they can represent
+    larger positive values.
+
+
+    ```
+
+    unsigned int myUnsignedInt = 12345;
+
+    ```
+
+
+    Floating-Point Numbers'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'Floating-point numbers are used to represent real numbers, including fractional
+    values. In C, there are two primary types for representing floating-point numbers:'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: '+   1. `float`
+
+
+    The `float` data type is used to represent single-precision floating-point numbers.
+    It typically occupies 4 bytes and can store values with 6-9 significant decimal
+    digits.
+
+
+    ```
+
+    float myFloat = 3.14159;
+
+    ```
+
+
+    +   2. `double`
+
+
+    The `double` data type is used to represent double-precision floating-point numbers,
+    providing greater precision compared to `float`. It usually occupies 8 bytes and
+    can store values with 15-18 significant decimal digits.
+
+
+    ```
+
+    double myDouble = 3.141592653589;
+
+    ```
+
+
+    Example: Using Integers and Floating-Point Numbers
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    int myInteger = 42;
+
+
+    float myFloat = 3.14;
+
+    ```'
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: '```
+
+    printf("Integer: %d\n", myInteger);
+
+
+    printf("Float: %f\n", myFloat);
+
+
+    return 0;
+
+
+    }
+
+    ```
+
+
+    In this example, we declare an integer and a floating-point number, and then we
+    use `printf` to display their values.
+
+
+    Remember to choose the appropriate data type based on your program''s requirements
+    to avoid unnecessary memory usage or loss of precision. Understanding these fundamental
+    data types is essential for performing mathematical operations and handling numeric
+    data effectively in C programming.'
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# Hand On: Exercise 1 declaration and initialization
+
+
+    WRITE A C PROGRAM TO declare and initialize variables of different data types
+    (int, float, char, double) and print their values.
+
+
+    Type the Program shown above into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    int main() {
+
+    nint num1 = 10;
+
+
+    float num2 = 3.14;
+
+
+    char letter = ''A'';
+
+
+    double num3 = 5.6789;
+
+
+    printf("Integer: %d\n", num1);
+
+    ```'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: '```
+
+    printf("Float: %f\n", num2);
+
+    ```
+
+
+    ```
+
+    printf("Character: %c\n", letter);
+
+    ```
+
+
+    ```
+
+    printf("Double: %lf\n", num3);
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_90_0.png)
+
+
+    Figure 7 Example of a console output of the execution of exercise1'
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: '# Exercise 2 to swap the values of two variables
+
+
+    Write a C program to swap the values of two variables without using a temporary
+    variable.
+
+
+    Type the Program shown above into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    int a = 5, b = 10;
+
+
+    printf("Before swapping: a = %d, b = %d\n", a, b);
+
+
+    a = a + b;
+
+
+    b = a - b;
+
+
+    a = a - b;
+
+
+    printf("After swapping: a = %d, b = %d\n", a, b);
+
+    ```'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: '```
+
+    return 0;
+
+    }
+
+    ```
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_92_0.png)
+
+
+    Figure 8 Example of a console output of the execution of exercise2'
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: '# Day 6: Advanced Control Flow'
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: '# Reading Assignment: Decision-Making (if-else, switch)
+
+
+    Decision-making is a fundamental concept in programming that allows a program
+    to execute different sets of instructions based on certain conditions or criteria.
+    In C, decision-making is typically achieved using `if-else` statements and `switch`
+    statements. This topic explores these constructs in detail and provides examples
+    of how they are used in C programming.
+
+
+    if-else Statements:
+
+
+    The `if-else` statement in C is used to make decisions in your code. It allows
+    you to specify a condition, and based on whether that condition is true or false,
+    different blocks of code will be executed.
+
+
+    ```
+
+    if (condition) {
+
+
+    // Code to execute if the condition is true
+
+
+    } else {
+
+
+    // Code to execute if the condition is false
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: 'Example 1: Checking if a Number is Even or Odd:
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    int num;
+
+
+    printf("Enter integer: ");
+
+
+    scanf("%%d", &num);
+
+
+    if (num % 2 == 0) {
+
+
+    printf("%%d is even.\n", num);
+
+
+    } else {
+
+
+    printf("%%d is odd.\n", num);
+
+    }
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    Example 2: Determining Leap Years:'
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "```\n#include\n\nint main() {\n\n    int year;\n\n    printf(\"Enter a year:\
+    \ \");\n\n    scanf(\"%d\", &year);\n\n    if ((year % 4 == 0 && year % 100 !=\
+    \ 0) || (year % 400 == 0)) {\n        printf(\"%d is a leap year.\\n\", year);\n\
+    \    } else {\n        printf(\"%d is not a leap year.\\n\", year);\n    }\n\n\
+    \    return 0;\n}\n```"
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: 'switch Statements:
+
+
+    The `switch` statement in C is another way to make decisions. It allows you to
+    choose between multiple code blocks to execute based on the value of an expression.
+
+
+    switch (expression) {
+
+
+    case constant1:
+
+
+    // Code to execute if expression equals constant1
+
+
+    break;
+
+
+    case constant2:
+
+
+    // Code to execute if expression equals constant2
+
+
+    break;
+
+
+    // ...
+
+
+    default:
+
+
+    // Code to execute if expression doesn''t match any constant'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "```\n}\n\n#include\n\nint main() {\n    double num1, num2, result;\n\n    char\
+    \ operator;\n\n    printf(\"Enter two numbers: \");\n\n    scanf(\"%lf %lf\",\
+    \ &num1, &num2);\n\n    printf(\"Enter an operator (+, -, *, /): \");\n\n    scanf(\"\
+    \ %c\", &operator);\n\n    switch (operator) {\n        case '+':n\n        result\
+    \ = num1 + num2;\n```\n\nExample: Implementing a Calculator with `switch`:"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: '```
+
+    break;
+
+    case ''-'':
+
+    result = num1 - num2;
+
+    break;
+
+    case ''*'':
+
+    result = num1 * num2;
+
+    break;
+
+    case ''/'':
+
+    if (num2 != 0) {
+
+    result = num1 / num2;
+
+    } else {
+
+    printf("Error: Division by zero!\n");
+
+    return 1; // Exit with an error code
+
+    ```'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: '```
+
+    }
+
+    break;
+
+    default:
+
+    printf("Invalid operator\n");
+
+    return 1; // Exit with an error code
+
+    }
+
+    printf("Result: %lf\n", result);
+
+    return 0;
+
+    }
+
+    ```
+
+
+    In summary, decision-making in C programming is crucial for controlling the flow
+    of your program based on specific conditions or input values. `if-else` and ``switch`
+    statements provide powerful tools for implementing various decision-making scenarios
+    in your code. Understanding and using these constructs effectively is essential
+    for writing robust and flexible C programs.'
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# Reading Assignment: Looping Techniques
+
+
+    Looping techniques are fundamental in C programming, allowing you to execute a
+    block of code repeatedly until a specified condition is met. There are different
+    types of loops available in C, each with its own use cases and syntax. In this
+    discussion, we''ll cover the three primary types of loops in C: `for`, `while`,
+    and `do-while`.
+
+
+    +   1. `for` Loop:
+
+
+    The `for` loop is used when you know in advance how many times you want to execute
+    a block of code. It consists of three parts: initialization, condition, and increment/decrement.
+
+
+    for (initialization; condition; increment/decrement) {
+
+
+    ```
+
+    // Code to execute repeatedly
+
+
+    }
+
+    ```
+
+
+    **Example: Printing Numbers from 1 to 5 using a `for` Loop:**
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+    ```'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "```\nfor (int i = 1; i <= 5; i++) {\n    printf(\"%d \", i);\n}\n\nprintf(\"\
+    \\n\");\n\nreturn 0;\n}\n```"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '2. `while` Loop:
+
+
+    The `while` loop is used when you want to execute a block of code as long as a
+    certain condition is true. It evaluates the condition before each iteration.
+
+
+    ```
+
+    while (condition) {
+
+    // Code to execute repeatedly
+
+    }
+
+    ```
+
+
+    Example: Summing Numbers from 1 to 10 using a `while` Loop:
+
+
+    ```
+
+    #include
+
+    int main() {
+
+    int sum = 0;
+
+    int i = 1;
+
+    while (i <= 10) {
+
+    sum += i;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '```
+
+    i++;
+
+    }
+
+    printf("Sum: %d\n", sum);
+
+
+    return 0;
+
+
+    }
+
+    ```
+
+
+    3. `do-while` Loop:
+
+
+    The `do-while` loop is similar to the `while` loop, but it guarantees that the
+    code block is executed at least once because it evaluates the condition after
+    the first iteration.
+
+
+    ```
+
+    do {
+
+
+    // Code to execute repeatedly
+
+
+    } while (condition);
+
+    ```'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'Example: Reading User Input Until a Valid Number is Entered using a `do-while`
+    Loop:
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    int num;
+
+
+    do {
+
+
+    printf("Enter a positive number: ");
+
+
+    scanf("%d", &num);
+
+    } while (num <= 0);
+
+
+    printf("You entered: %d\n", num);
+
+
+    return 0;
+
+    \}
+
+    ```
+
+
+    Loop Control Statements:'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "In addition to basic looping techniques, C provides loop control statements\
+    \ that allow you to modify the flow of a loop:\n\n+   - `break`: Terminates the\
+    \ loop prematurely, moving the control outside of the loop.\n\n+   - `continue`:\
+    \ Skip the current iteration of the loop and continues with the next iteration.\n\
+    \n+   - `goto`: Allows you to jump to a labeled statement within the loop or function.\
+    \ However, the use of `goto` is generally discouraged because it can make code\
+    \ less readable and harder to maintain.\n\nHere's an example using `break` to\
+    \ exit a loop when a condition is met:\n\n```\n#include\n\nint main() {\n    for\
+    \ (int i = 1; i <= 10; i++) {\n        if (i == 5) {\n            break; // Exit\
+    \ the loop when i is 5\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: '```
+
+    printf("%d ", i);
+
+
+    }
+
+    printf("\n");
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    In summary, looping techniques are essential for controlling the flow of your
+    C programs when you need to repeat a set of instructions multiple times. Understanding
+    the differences and use cases of `for`, `while`, and `do-while` loops, as well
+    as loop control statements, is crucial for effective C programming.'
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '# Hand on Exercise 1: Guess the Number Game
+
+
+    Create a simple "Guess the Number" game in C. The program will generate a random
+    number between 1 and 100, and the user will have to guess the number. The program
+    should provide hints to help the user narrow down their guesses.
+
+
+    Instructions:
+
+
+    Generate a random number between 1 and 100.
+
+
+    Initialize a variable to keep track of the number of guesses.
+
+
+    Implement a loop that allows the user to guess the number until they guess correctly
+    or reach a maximum number of guesses (e.g., 10).
+
+
+    For each guess, provide feedback to the user:
+
+
+    If the guess is too low, print "Too low. Try again."
+
+
+    If the guess is too high, print "Too high. Try again."
+
+
+    If the guess is correct, print "Congratulations! You guessed the number in X guesses,"
+    where X is the number of guesses taken.'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: If the user exceeds the maximum number of guesses, print "You've run out of
+    guesses. The number was Y," where Y is the correct number.
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: 'Type the Program shown above into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    #include
+
+
+    int main() {
+
+
+    // Seed the random number generator with the current time
+
+
+    srand(time(NULL));
+
+
+    // Generate a random number between 1 and 100
+
+
+    int secretNumber = rand() % 100 + 1;
+
+
+    int guess;
+
+
+    int numGuesses = 0;
+
+
+    int maxGuesses = 10;
+
+    ```'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '```
+
+    printf("Welcome to the Guess the Number game!\n");
+
+
+    printf("I have selected a number between 1 and 100.\n");
+
+
+    while (numGuesses < maxGuesses) {
+
+
+    printf("Enter your guess: ");
+
+
+    canf("%d", &guess);
+
+
+    numGuesses++;
+
+
+    if (guess < secretNumber) {
+
+
+    printf("Too low. Try again.\n");
+
+    } else if (guess > secretNumber) {
+
+
+    printf("Too high. Try again.\n");
+
+    } else {
+
+
+    printf("Congratulations! You guessed the number in %d guesses.\n",
+
+    numGuesses);
+
+
+    break;
+
+    n}
+
+    ```'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: '```
+
+    }
+
+    }
+
+    if (numGuesses == maxGuesses) {
+
+
+    printf("You''ve run out of guesses. The number was %d.\n", secretNumber);
+
+
+    }
+
+    return 0;
+
+    }
+
+    ```
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_112_0.png)'
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'Figure 9 Example of a console output of the execution of exercise1
+
+
+    This program uses the rand() function to generate random number within the specified
+    range. It then uses a while loop to repeatedly ask the user for guesses and provides
+    feedback based on their guesses. If the user guesses the correct number or runs
+    out of guesses, the program displays an appropriate message.
+
+
+    Feel free to modify and expand this program to add more features or challenges
+    to the game.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Hand on exercise 2: Implement complex loop structures.
+
+
+    Write a C program to find the sum of prime numbers within a given range.
+
+
+    Instructions:
+
+
+    Prompt the user to enter a positive integer n as the upper limit of the range.
+
+
+    Implement a loop that iterates from 2 to n. For each number in this range, check
+    if it''s prime.
+
+
+    To check if a number is prime, you''ll need to use nested loops:
+
+
+    For each number x in the range 2 to the square root of the number you''re checking,
+    do the following:
+
+
+    If the number is divisible evenly by x, it''s not prime.
+
+
+    If no x in the range divides the number evenly, it''s prime.
+
+
+    If a number is prime, add it to a running sum.
+
+
+    After the loop, display the sum of all prime numbers within the range.'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: "Type the Program shown below into Code::Block, compile and run as done in Day\
+    \ 1.\n\n```\n#include\n```\n\n```\n#include\n```\n\n```\nint isPrime(int num)\
+    \ {\n\nif (num <= 1) {\n    return 0; // 0 and 1 are not prime\n}\nnif (num <=\
+    \ 3) {\n    return 1; // 2 and 3 are prime\n}\nif (num % 2 == 0 || num % 3 ==\
+    \ 0) {\n    return 0; // Numbers divisible by 2 or 3 are not prime\n}\n```"
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: "```\n// Check for prime using 6k +/- 1 rule\nfor (int i = 5; i * i <= num;\
+    \ i += 6) {\n    if (num % i == 0 || num % (i + 2) == 0) {\n        return 0;\
+    \ // Not prime\n    }\n}\nreturn 1; // Prime\n}\n\nint main() {\n    int n, sum\
+    \ = 0;\n    printf(\"Enter a positive integer n: \\\");\n    scanf(\"%d\", &n);\n\
+    \    if (n < 2) {\n```"
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '```
+
+    printf("There are no prime numbers in the specified range.\n");
+
+
+    } else {
+
+
+    for (int i = 2; i <= n; i++) {
+
+
+    if (isPrime(i)) {
+
+    sum += i;
+
+    }
+
+    }
+
+    printf("The sum of prime numbers from 2 to %d is %d.\n", n, sum);
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '![](img/50a3ffd9d521bd894000f66c4b293162_118_0.png)
+
+
+    FIGURE 10 EXAMPLE of a console output of the execution of exercise 2'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '# Day 7: Arrays and Pointers'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Day 7: Arrays and Pointers'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '# Reading Assignment: : One-Dimensional Array
+
+
+    One-dimensional arrays are a fundamental concept in the world of C programming.
+    They serve as essential tools for organizing and manipulating data efficiently.
+    An array is a collection of elements of the same data type, stored in contiguous
+    memory locations and identified by a common name. These elements can be accessed
+    individually using an index that represents their position within the array.
+
+
+    One-dimensional arrays are particularly useful when you need to work with a set
+    of related values, such as a list of numbers, characters, or any other data type.
+    They provide a structured way to store and manage multiple pieces of data under
+    a single variable name.
+
+
+    In this introduction to one-dimensional arrays in C, we''ll explore how to declare,
+    initialize, access, and manipulate arrays. We''ll also delve into common use cases
+    where one-dimensional arrays prove invaluable, from simple tasks like storing
+    a list of exam scores to more complex applications like managing data records.
+
+
+    By understanding the principles of one-dimensional arrays and practicing their
+    usage, you''ll gain a solid foundation in C programming that will empower you
+    to solve a wide range of computational problems efficiently and effectively. So,
+    let''s begin our journey into the world of one-dimensional arrays in C and unlock
+    their potential for managing and processing data.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: 'HERE''S A BASIC EXAMPLE of using a one-dimensional array in C:
+
+
+    ```
+
+    #include
+
+    ```
+
+
+    ```
+
+    int main() {
+
+
+    // Declare an array of integers with a fixed size of 5
+
+
+    numbers[5];
+
+
+    // Initialize the elements of the array
+
+
+    numbers[0] = 10;
+
+
+    numbers[1] = 20;
+
+
+    numbers[2] = 30;
+
+
+    numbers[3] = 40;
+
+
+    numbers[4] = 50;
+
+
+    // Access and print the elements of the array
+
+    ```'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '```
+
+    printf("Element at index 0: %d\n", numbers[0]);
+
+
+    printf("Element at index 1: %d\n", numbers[1]);
+
+
+    printf("Element at index 2: %d\n", numbers[2]);
+
+
+    printf("Element at index 3: %d\n", numbers[3]);
+
+
+    printf("Element at index 4: %d\n", numbers[4]);
+
+
+    return 0;
+
+
+    }
+
+    ```
+
+
+    In this example:
+
+
+    +   1. We include the standard input/output library `stdio.h`.
+
+    2. We declare an array called `numbers` capable of holding five integers.
+
+    3. We initialize each element of the array with integer values.
+
+    4. We access and print each element of the array using their respective indices.'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: This program declares, initializes, and prints the elements of a one-dimensional
+    integer array. It's a fundamental example to get started with one-dimensional
+    arrays in C. You can modify the size of the array and the values as needed for
+    your specific application.
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '# Reading Assignment: Introduction to Pointers
+
+
+    POINTERS ARE A POWERFUL and fundamental concept in the C programming language,
+    offering a level of control and flexibility that is not easily achievable through
+    other means. Understanding pointers is crucial for every C programmer, as they
+    play a pivotal role in memory management, data manipulation, and interaction with
+    the underlying system.
+
+
+    A pointer is a variable that stores the memory address of another variable. Instead
+    of directly holding data like regular variables (integers, floats, etc.), pointers
+    store the location in memory where data is stored. This ability to reference memory
+    addresses allows C programmers to perform tasks that would otherwise be challenging
+    or impossible.
+
+
+    In this introduction to pointers in C, we''ll explore how to declare, initialize,
+    and use pointers effectively. We''ll cover various pointer operations, such as
+    dereferencing (accessing the data at a memory address), pointer arithmetic (navigating
+    through memory), and dynamic memory allocation (allocating and freeing memory
+    at runtime).
+
+
+    Pointers are used extensively in C for a wide range of tasks, including:'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '+   1. **Dynamic Memory Allocation**:: Pointers enable the allocation and deallocation
+    of memory dynamically, allowing programs to adapt to changing data requirements.
+
+
+    +   2. **Passing Parameters to Functions**:: Pointers allow functions to modify
+    variables outside their scope by passing the memory address of those variables.
+
+
+    +   3. **Arrays and Strings**:: Arrays and strings in C are implemented using
+    pointers. Understanding this relationship is essential for efficient manipulation
+    of data.
+
+
+    +   4. **Data Structures**:: Pointers are integral to building complex data structures
+    like linked lists, trees, and graphs.
+
+
+    +   5. **Efficient I/O Operations**:: Pointers are used to optimize file handling
+    and network communication.
+
+
+    +   6. **Accessing Hardware**:: Pointers are used for direct memory access, which
+    is crucial when interacting with hardware devices.
+
+
+    While pointers offer a high degree of control, they also come with challenges,
+    including potential pitfalls like memory leaks and pointer-related errors (e.g.,
+    dereferencing a null pointer), it''s essential to learn pointers gradually, practice
+    diligently, and adopt best practices to write reliable and efficient C programs.'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: By mastering pointers, you'll unlock the true potential of the C language and
+    gain the ability to write more efficient, flexible, and low-level code, making
+    it a valuable skill for systems programming, embedded systems development, and
+    various other domains. So, let's embark on this journey to understand pointers
+    in C and harness their power in your programming endeavors.
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# Hand on Exercise 1: array declaration and initialization
+
+
+    # DECLARE AN ARRAY AND print its elements
+
+
+    Write a program that declares an array of integers and initializes it with values.
+    Then, print all the elements of the array.
+
+
+    TYPE THE PROGRAM SHOWN below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    // Declare and initialize an array of integers
+
+
+    int numbers[] = {10, 20, 30, 40, 50};
+
+
+    // Calculate the size of the array
+
+
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+    ```'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: "```\n// Print the elements of the array\n\nfor (int i = 0; i < size; i++) {\n\
+    \    printf(\"Element at index %d: %d\\n\", i, numbers[i]);\n}\n\nreturn 0;\n\
+    }\n```"
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '```
+
+    Element at index 0: 10
+
+    Element at index 1: 20
+
+    Element at index 2: 30
+
+    Element at index 3: 40
+
+    Element at index 4: 50
+
+
+    Process returned 0 (0x0) execution time : 0.804 s
+
+    Press any key to continue.
+
+    ```
+
+
+    Figure 11 Example of a console output of the execution of exercise 1'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# Hand on Exercise 2: the sum of array
+
+
+    WRITE A PROGRAM THAT calculates the sum of all elements in an array of integers.
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    int numbers[] = {10, 20, 30, 40, 50};
+
+
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+
+    int sum = 0;
+
+
+    // Calculate the sum of array elements
+
+
+    for (int i = 0; i < size; i++) {
+
+    ```'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '```
+
+    sum += numbers[i];
+
+
+    }
+
+    ```
+
+
+    printf("Sum of array elements: %d\n", sum);
+
+
+    return 0;
+
+
+    }
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_132_0.png)
+
+
+    FIGURE 12 EXAMPLE of a console output of the execution of exercise 2'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Exercise 3: Reverse an array
+
+
+    Write a program that reverses the elements of an array of integers in-place.
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    int numbers[] = {10, 20, 30, 40, 50};
+
+
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+
+    // Reverse the array in-place
+
+
+    for (int i = 0; i < size / 2; i++) {
+
+
+    int temp = numbers[i];
+
+
+    numbers[i] = numbers[size - 1 - i];
+
+
+    numbers[size - 1 - i] = temp;
+
+    ```'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '```
+
+    }
+
+
+    // Print the reversed array
+
+
+    for (int i = 0; i < size; i++) {
+
+
+    printf("Element at index %d: %d\n", i, numbers[i]);
+
+
+    }
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '```
+
+    Element at index 0: 50
+
+    Element at index 1: 40
+
+    Element at index 2: 30
+
+    Element at index 3: 20
+
+    Element at index 4: 10
+
+
+    Process returned 0 (0x0) execution time : 0.790 s
+
+    Press any key to continue.
+
+    ```
+
+
+    Figure 13 Example of a console output of the execution of exercise 3'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: '# Hand on Exercise 4: Swap Two Integers using Pointers
+
+
+    Write a C program that swaps the values of two integers using pointers.
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    void swap(int *a, int *b) {
+
+
+    int temp = *a;
+
+
+    *a = *b;
+
+
+    *b = temp;
+
+    }
+
+
+    int main() {
+
+
+    int num1 = 5, num2 = 10;
+
+
+    printf("Before swap: num1 = %d, num2 = %d\n", num1, num2);
+
+    ```'
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: 'swap(&num1, &num2);
+
+
+    printf("After swap: num1 = %d, num2 = %d\n", num1, num2);
+
+
+    return 0;
+
+
+    }
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_137_0.png)
+
+
+    Figure 14 Example of a console output of the execution of exercise 4'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# Exercise 5: Find the Length of a String using Pointers
+
+
+    Write a C program that calculates the length of a string using pointers.
+
+
+    TYPE THE PROGRAM SHOWN below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    int stringLength(const char *str) {
+
+
+    const char *p = str;
+
+
+    while (*p) {
+
+
+    np++;
+
+
+    }
+
+
+    return p - str;
+
+    ```'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '```
+
+    }
+
+
+    int main() {
+
+
+    const char *text = "Hello, World!";
+
+
+    int length = stringLength(text);
+
+
+    printf("Length of the string: %d\n", length);
+
+
+    return 0;
+
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '```
+
+    C:\myproject\chero\day7\ex5
+
+    Length of the string: 13
+
+    Process returned 0 (0x0) execution time : 0.725 s
+
+    Press any key to continue.
+
+    ```
+
+
+    Figure 15 Example of a console output of the execution of exercise 5'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: "# Exercise 6: Calculate the Sum of an Array using Pointers\n\nWrite a C program\
+    \ that calculates the sum of elements in an array using pointers.\n\nType the\
+    \ Program shown below into Code::Block, compile and run as done in Day 1.\n\n\
+    ```\nint arraySum(int *arr, int size) {\n\nint sum = 0;\n\nfor (int i = 0; i <\
+    \ size; i++) {\n\tsum += *(arr + i);\n}\n\nreturn sum;\n}\n```"
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '```
+
+    int main() {
+
+
+    int numbers[] = {1, 2, 3, 4, 5};
+
+
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+
+    int sum = arraySum(numbers, size);
+
+
+    printf("Sum of elements in the array: %d\n", sum);
+
+
+    return 0;
+
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '```
+
+    C:\myproject\chero\day7\.exe
+
+    Sum of elements in the array: 15
+
+    Process returned 0 (0x0) execution time : 0.549 s
+
+    Press any key to continue.
+
+    ```
+
+
+    Figure 16 Example of a console output of the execution of exercise 6'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# Exercise 7: Pointer Arithmetic with Arrays
+
+
+    Write a C program that demonstrates pointer arithmetic with arrays by printing
+    the elements of an integer array in reverse order using pointers.
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    void printReverse(int *arr, int size) {
+
+
+    int *p = arr + size - 1;
+
+
+    while (p >= arr) {
+
+
+    printf("%d ", *p);
+
+
+    p--;
+
+    }
+
+
+    printf("\n");
+
+    ```'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '```
+
+    }
+
+
+    int main() {
+
+
+    int numbers[] = {1, 2, 3, 4, 5};
+
+
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+
+    printf("Array in reverse order: ");
+
+
+    printReverse(numbers, size);
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_145_0.png)
+
+
+    Figure 17 Example of a console output of the execution of exercise
+
+
+    # Day 8: File Handling'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# Day 8: File Handling'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: '# Reading Assignment: File I/O Basics
+
+
+    File I/O (Input/Output ) is a fundamental aspect of programming that allows you
+    to read data from and write data to files. In this basic guide, I''ll provide
+    examples in C for both reading from and writing to files. You can adapt these
+    concepts to other programming languages as well.
+
+
+    +   1. Reading from a File
+
+
+    Here''s how you can read from a file in C:
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    // Declare a file pointer
+
+
+    FILE *file;
+
+
+    // Open the file for reading
+
+
+    file = fopen("sample.txt", "r");
+
+
+    // Check if the file opened successfully
+
+    ```'
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '```
+
+    if (file == NULL) {
+
+
+    printf("Error opening the file.\n");
+
+
+    return 1; // Exit with an error code
+
+
+    }
+
+    ```
+
+
+    // Read and print each line from the file
+
+
+    ```
+
+    char line[100]; // Assuming lines are not longer than 100 characters
+
+
+    while (fgets(line, sizeof(line), file) != NULL) {
+
+
+    printf("%s", line);
+
+
+    }
+
+
+    // Close the file
+
+
+    fclose(file);
+
+
+    return 0;
+
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: 'In this example, we:
+
+
+    +   - Declare a file pointer (`FILE *file`).
+
+
+    +   - Open the file using `fopen`
+
+
+    +   - Check if the file opened successfully.
+
+
+    +   - Use `fgets` to read lines from the file and print them.
+
+
+    +   - Finally, close the file with `fclose`.
+
+
+    # 2. Writing to a File
+
+
+    Here''s how you can write to a file in C:
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    // Declare a file pointer
+
+
+    FILE *file;
+
+
+    // Open the file for writing
+
+    ```'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '```
+
+    file = fopen("output.txt", "w");
+
+
+    // Check if the file opened successfully
+
+
+    if (file == NULL) {
+
+
+    printf("Error opening the file.\n");
+
+
+    return 1; // Exit with an error code
+
+    }
+
+
+    // Write data to the file
+
+
+    fprintf(file, "Hello, File I/O!\n");
+
+
+    fprintf(file, "This is a basic example.\n");
+
+
+    // Close the file
+
+
+    fclose(file);
+
+
+    return 0;
+
+    }
+
+    ```
+
+    ```'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: 'In this example, we:
+
+
+    +   - Declare a file pointer (`FILE *file`).
+
+
+    +   - Open the file using `fopen`, specifying the file name ("output.txt") and
+    the mode("w") for writing, which creates a new file or truncates an existing one.
+
+
+    +   - Check if the file opened successfully.
+
+
+    +   - Use `printf` to write data to the file.
+
+
+    +   - Finally, close the file with `fclose`.
+
+
+    Remember to handle errors properly, check for file opening success, and close
+    the file when you''re done to free up system resources. Additionally, you can
+    explore other modes (e.g., "a" for append) and error handling mechanisms for more
+    robust file I/O operations.'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: '# Hand on Exercise 1: Reading Text from a File
+
+
+    Write a C program that reads and prints the contents of a text file named "input.txt"
+    to the console.
+
+
+    Create a text file "input.txt" with "Hello" only. The "input.txt" file need to
+    be in the same directory as the main.c.
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    int main() {
+
+
+    FILE *file;
+
+
+    char ch;
+
+
+    // Open the file for reading
+
+
+    file = fopen("input.txt", "r");
+
+    ```'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '```
+
+    // Check if the file opened successfully
+
+
+    if (file == NULL) {
+
+
+    printf("Error opening the file.\n");
+
+
+    return 1; // Exit with an error code
+
+
+    }
+
+    ```
+
+
+    ```
+
+    // Read and print each character from the file
+
+
+    while ((ch = fgetc(file)) != EOF) {
+
+
+    printf("%c", ch);
+
+
+    }
+
+
+    // Close the file
+
+
+    fclose(file);
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: '```
+
+    C:\myproject\chero\day\ex1
+
+    Hello
+
+    Process returned 0 (0x0) execution time : 0.540 s
+
+    Press any key to continue.
+
+    ```
+
+
+    Figure 18 Example of a console output of the execution of exercise 1'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: '# Exercise 2: Writing Text to a File
+
+
+    WRITE A C PROGRAM THAT takes user input and writes it to a text file named "output.txt."
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    int main() {
+
+
+    FILE *file;
+
+
+    char text[1000];
+
+
+    // Open the file for writing
+
+
+    file = fopen("output.txt", "w");
+
+
+    // Check if the file opened successfully
+
+    ```'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: "```\nif (file == NULL) {\n\nprintf(\"Error opening the file.\\n\");\n\nreturn\
+    \ 1; // Exit with an error code\n\n}\n```\n\n```\n// Read user input and write\
+    \ it to the file\n\nwhile (fgets(text, sizeof(stdin)) != NULL) {\n\n  fprintf(file,\
+    \ \"%s\", text);\n\n}\n```\n\n```\n// Close the file\n\nfclose(file);\n\nreturn\
+    \ 0;\n}\n```"
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '```
+
+    C:\myproject\fzero\day1.Rx
+
+    Enter text (Press Enter, and then Ctrl+D or Ctrl+Z to end on most systems);
+
+    hello
+
+    *Z
+
+    ```
+
+
+    FIGURE 19 EXAMPLE of a console output of the execution of exercise
+
+    2'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# Exercise 3: Copying Text from One File to Another
+
+
+    Write a C program that reads the contents of one text file named "source.txt"
+    and writes it to another text file named "destination.txt"
+
+
+    Create a text file “source.txt” with “Hello” only. The “source.txt” file need
+    to be in the same directory as the main.c.
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    int main() {
+
+
+    FILE *sourceFile, *destinationFile;
+
+
+    char ch;
+
+
+    // Open the source file for reading
+
+
+    sourceFile = fopen("source.txt", "r");
+
+    ```'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: '```
+
+    // Check if the source file opened successfully
+
+
+    if (sourceFile == NULL) {
+
+
+    printf("Error opening the source file.\n");
+
+
+    return 1; // Exit with an error code
+
+
+    }
+
+    ```
+
+
+    // Open the destination file for writing
+
+
+    ```
+
+    destinationFile = fopen("destination.txt", "w");
+
+
+    // Check if the destination file opened successfully
+
+
+    if (destinationFile == NULL) {
+
+
+    printf("Error opening the destination file.\n");
+
+
+    fclose(sourceFile); // Close the source file before exiting
+
+
+    return 1; // Exit with an error code
+
+
+    }
+
+    ```
+
+
+    // Copy content from the source file to the destination file'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '```
+
+    while ((ch = fgetc(sourceFile)) != EOF) {
+
+
+    fputc(ch, destinationFile);
+
+
+    }
+
+
+    // Close both files
+
+
+    fclose(sourceFile);
+
+
+    fclose(destinationFile);
+
+
+    return 0;
+
+    }
+
+    ```
+
+
+    For result, Check that file “source.txt content is the same as "destination.txt".'
+  merge: -1
+  pgno: 160
+- img_proc: true
+  md: '# Day 9: Structures and Unions'
+  merge: -1
+  pgno: 161
+- img_proc: true
+  md: '# Reading Assignment: Defining Structures
+
+
+    IN C AND C++, A STRUCTURE is a composite data type that allows you to group together
+    variables of different data types under a single name. Structures are a powerful
+    tool for organizing and managing data. Here''s how you define structures:
+
+
+    ```
+
+    struct structureName {
+
+
+    data member1;
+
+
+    data member2;
+
+
+    // ...
+
+
+    data memberN;
+
+    };
+
+    ```
+
+
+    +   - `struct`: The `struct` keyword is used to declare a structure.
+
+
+    +   - `structureName`: This is the name of the structure type. You can choose
+    any valid identifier as the structure name.'
+  merge: -1
+  pgno: 162
+- img_proc: true
+  md: '- `dataType`: These are the data types of the structure members. Each member
+    can have a different data type.
+
+
+    - `member1`, `member2`, ..., `memberN`: These are the names of the structure members.
+    You can use any valid identifier as member names.
+
+
+    Example:
+
+
+    Let''s define a structure to represent a point in 2D space with `x` and `y` coordinates:
+
+
+    ```
+
+    struct Point {
+
+
+    int x;
+
+
+    int y;
+
+
+    };
+
+    ```
+
+
+    In this example, we''ve defined a structure named `Point` with two members: `x`
+    and `y`, both of type `int`. Now you can create variables of this structure type:
+
+
+    ```
+
+    struct Point p1;
+
+    ```
+
+
+    ```
+
+    struct Point p2;
+
+    ```'
+  merge: -1
+  pgno: 163
+- img_proc: true
+  md: 'To access and assign values to the members of a structure, you use the dot
+    (`.`) operator:
+
+
+    ```
+
+    p1.x = 10;
+
+    ```
+
+
+    ```
+
+    p1.y = 20;
+
+    ```
+
+
+    ```
+
+    p2.x = -5;
+
+    ```
+
+
+    ```
+
+    p2.y = 7;
+
+    ```
+
+
+    Now `p1` represents the point (10, 20), and `p2` represents the point (-5, 7).
+
+
+    # Initializing Structures:
+
+
+    You can also initialize a structure at the time of declaration. Here''s how you
+    can do it:
+
+
+    ```
+
+    struct Point p3 = {30, 40}; // Initializes p3 to (30, 40)
+
+    ```
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_164_0.png)
+
+
+    YOU CAN EVEN USE DESIGNATED initializers to assign values explicitly to specific
+    members:'
+  merge: -1
+  pgno: 164
+- img_proc: true
+  md: "```\nstruct Point p4 = {.x = 50, .y = 60}; // Initializes p4 to (50, 60)\n\
+    ```\n\nNested Structures:\n\nStructures can be nested within other structures.\
+    \ This is useful for representing complex data structures. For example:\n\n```\n\
+    struct Line {\n\n  struct Point start;\n\n  struct Point end;\n\n}\n```\n\nIn\
+    \ this case, the `Line` structure contains two `Point` structures as members.\n\
+    \nUsing Typedef:\n\nTo simplify the use of structures, you can use `typedef` to\
+    \ create a new type name for a structure. For example:\n\n```\nTYPEDEF STRUCT\
+    \ {\n```"
+  merge: -1
+  pgno: 165
+- img_proc: true
+  md: '```
+
+    int x;
+
+
+    int y;
+
+
+    } Point;
+
+    ```
+
+
+    Now you can declare `Point` variables directly without using `struct`:
+
+
+    Point p5;
+
+
+    Defining structures in C and C++ is a fundamental concept, allowing you to create
+    custom data types to represent complex data structures in your programs. They
+    are widely used for organizing and managing data efficiently.'
+  merge: -1
+  pgno: 166
+- img_proc: true
+  md: '# Reading Assignment: Unions
+
+
+    A UNION IN C IS A COMPOSITE data type that allows you to define a structure where
+    multiple variables of different data types share the same memory location. Unlike
+    structures, where all members have their memory allocated separately, in a union,
+    only one member can hold a value at a time. Unions are particularly useful when
+    you need to represent different types of data in the same memory space, saving
+    memory and providing flexibility in your programs. Here''s how you define and
+    use unions in C programming:
+
+
+    # Defining a Union:
+
+
+    The syntax for defining a union is similar to that of a structure:
+
+
+    ```
+
+    union unionName {
+
+
+    datype member1;
+
+
+    datype member2;
+
+
+    // ...
+
+    ```'
+  merge: -1
+  pgno: 167
+- img_proc: true
+  md: '```
+
+    dataType memberN;
+
+    }
+
+    ```
+
+
+    - `UNION`: THE keyword is used to declare a union.
+
+
+    - `unionName`: This is the name of the union type.
+
+
+    - `dataType`: These are the data types of the union members. Each member can have
+    a different data type.
+
+
+    - `member1`, `member2`, ..., `memberN`: These are the names of the union members.
+
+
+    Example:
+
+
+    Let''s define a union `Value` that can hold an integer, a float, or a character:
+
+
+    ```
+
+    union Value {
+
+    int intValue;
+
+    float floatValue;
+
+    ```'
+  merge: -1
+  pgno: 168
+- img_proc: true
+  md: '```
+
+    char charValue;
+
+
+    };
+
+    ```
+
+
+    In this example, we''ve defined a union named `Value` with three members: `intValue`,
+    `floatValue`, and `charValue`.
+
+
+    Accessing Union Members:
+
+
+    To access union members, you use the dot (.) operator in the same way you do with
+    structures. However, remember that only one member should be accessed and assigned
+    a value at any given time:
+
+
+    ```
+
+    union Value data;
+
+    ```
+
+
+    ```
+
+    data.intValue = 42; // Assign an integer value
+
+    ```
+
+
+    ```
+
+    data.floatValue = 3.14; // Assign a floating-point value
+
+    ```
+
+
+    ```
+
+    // Accessing a member after another has been assigned is undefined behavior
+
+    ```
+
+
+    # Size of a Union:
+
+
+    The size of a union is determined by the size of its largest member. In the example
+    above, the size of the `Value` union would be the size of an integer because it''s
+    the largest member.'
+  merge: -1
+  pgno: 169
+- img_proc: true
+  md: '# Initializing Unions:
+
+
+    You can initialize a union at the time of declaration:
+
+
+    ```
+
+    union Value data = {42}; // Initializes the intValue member to 42
+
+    ```
+
+
+    Use Cases:
+
+
+    +   1. Memory-Efficient Storage: Unions are used when you want to store different
+    types of data in the same memory location and only need one of those types at
+    a time, making your program more memory-efficient.
+
+
+    +   2. Implementing Variant Data: Unions are often used to create variant types
+    where a single variable can hold values of different data types.
+
+
+    Caution:
+
+
+    When working with unions, it''s crucial to keep track of which member is currently
+    valid. Accessing the wrong member can lead to undefined behavior and potential
+    data corruption.
+
+
+    In summary, unions in C provide a way to create flexible data structures that
+    allow multiple data types to share memory. They are especially useful when memory
+    efficiency is essential, and you need to work with variant data types in your
+    programs.'
+  merge: -1
+  pgno: 170
+- img_proc: true
+  md: '# Hand on exercise 1: Define and Initialize a Structure
+
+
+    nthis exercise, you will define a structure to represent a point in 2D space with
+    x and y coordinates. Then, you will initialize a few point structures and print
+    their values.
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+    // Define a structure for a 2D point
+
+
+    struct Point {
+
+    int x;
+
+
+    int y;
+
+    };
+
+    \int main() {
+
+    // Initialize two Point structures
+
+    ```'
+  merge: -1
+  pgno: 171
+- img_proc: true
+  md: '```
+
+    struct Point p1 = { 3, 4 };
+
+
+    struct Point p2 = { -1, 2 };
+
+
+    // Print the values of the points
+
+
+    printf("Point 1: (%d, %d)\n", p1.x, p1.y);
+
+
+    printf("Point 2: (%d, %d)\n", p2.x, p2.y);
+
+
+    return 0;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 172
+- img_proc: true
+  md: '```
+
+    C:\myproject\chero\day9\ext
+
+    Point 1: (3, 4)
+
+    Point 2: (-1, 2)
+
+
+    Process returned 0 (0x0) execution time : 0.769 s
+
+    Press any key to continue.
+
+    ```
+
+
+    Figure 20 Example of a console output of the execution of exercise 1'
+  merge: -1
+  pgno: 173
+- img_proc: true
+  md: '# Exercise 2: Create an Array of Structures
+
+
+    In this exercise, you will create an array of structures to represent a list of
+    students, each with a name and an age. Initialize the array and print the details
+    of each student.
+
+
+    Type the Program shown below into Code::Block, compile and run as done in Day
+    1.
+
+
+    ```
+
+    #include
+
+
+    // Define a structure for a student
+
+
+    struct Student {
+
+    char name[50];
+
+    int age;
+
+    };
+
+
+    int main() {
+
+    // Initialize an array of students
+
+    ```'
+  merge: -1
+  pgno: 174
+- img_proc: true
+  md: "```\nstruct Student students[3] = {\n    { \"Alice\", 20 },\n    { \"Bob\"\
+    , 22 },\n    { \"Charlie\", 19 }\n};\n\n// Print the details of each student\n\
+    for (int i = 0; i < 3; i++) {\n    printf(\"Student %d:\\n\", i + 1);\n    printf(\"\
+    Name: %s\\n\", students[i].name);\n    printf(\"Age: %d\\n\", students[i].age);\n\
+    \    printf(\"\\n\");\n}\n\nreturn 0;\n```"
+  merge: -1
+  pgno: 175
+- img_proc: true
+  md: '```
+
+    Student 1:
+
+    Name: Alice
+
+    Age: 20
+
+    Student 2:
+
+    Name: Bob
+
+    Age: 22
+
+    Student 3:
+
+    Name: Charlie
+
+    Age: 19
+
+
+    Process returned 0 (0x0) execution time : 0.597 s
+
+    Press any key to continue.
+
+    ```
+
+
+    FIGURE 21 EXAMPLE of a console output of the execution of exercise 2'
+  merge: -1
+  pgno: 176
+- img_proc: true
+  md: '# Exercise 3: Pass a Structure to a Function
+
+
+    In this exercise, you will define a function that takes a structure as an argument
+    and prints its values. You will then call this function to display the details
+    of a point.
+
+
+    ```
+
+    // Define a structure for a 2D point
+
+
+    struct Point {
+
+
+    int x;
+
+
+    int y;
+
+    };
+
+
+    // Function to print the details of a Point structure
+
+
+    void printPoint(struct Point p) {
+
+
+    printf("Point: (%d, %d)\n", p.x, p.y);
+
+    ```'
+  merge: -1
+  pgno: 177
+- img_proc: true
+  md: "```\n}\n\nint main() {\n  // Initialize a Point structure\n\n  struct Point\
+    \ p = { 5, 7 };\n\n  // Call the function to print the point\n\n  printPoint(p);\n\
+    \n  return 0;\n}\n```"
+  merge: -1
+  pgno: 178
+- img_proc: true
+  md: '```
+
+    C:\myproject\chero\day9.exe
+
+    Point: (5, 7)
+
+    Process returned 0 (0x0) execution time : 0.409 s
+
+    Press any key to continue.
+
+    ```
+
+
+    exercise 3Figure 22 Example of a console output of the execution of
+
+
+    THESE EXERCISES SHOULD give you a good starting point for understanding and using
+    structures in your programming language of choice. Structures are essential for
+    organizing and working with complex data in many programming tasks.'
+  merge: -1
+  pgno: 179
+- img_proc: true
+  md: '# Day 10: Advance Topics'
+  merge: -1
+  pgno: 180
+- img_proc: true
+  md: '# Day 10: Advance Topics'
+  merge: -1
+  pgno: 181
+- img_proc: true
+  md: '# Reading Assignment: Preprocessor Directives
+
+
+    PREPROCESSOR DIRECTIVES are an essential component of many programming languages,
+    including C, C++, and assembly language. They are special instructions that are
+    processed by the preprocessor before the actual compilation of code begins. Preprocessor
+    directives are used to provide instructions to the compiler regarding how to precess
+    the source code. They don''t belong to the core programming language but serve
+    to enhance code readability, maintainability, and portability. Here, we''ll focus
+    on the C and C++ programming languages, where preprocessor directives are commonly
+    used.
+
+
+    There are some commonly used preprocessor directives and their purposes:
+
+
+    +   1. #include: The `include` directive is used to include header files or other
+    source code files into your program. This is essential for code modularization
+    and reusability. For example:
+
+
+    ```
+
+    #include
+
+    ```
+
+
+    +   2. #define: The `define` directive is used to define macros, which are like
+    small code snippets that are replaced with their defined values during preprocessing.
+    This can be used for constants or simple functions. For example:'
+  merge: -1
+  pgno: 182
+- img_proc: true
+  md: 'PI 3.14159265359
+
+
+    3. #IFDEF / #IFNDEF / #endif: These directives are used for conditional compilation.
+    They allow you to include or exclude certain sections of code based on conditions.
+    For example:
+
+
+    ```
+
+    ```c
+
+    #ifdef DEBUG
+
+    // Debugging code here
+
+    #endif
+
+    ```
+
+    ```
+
+
+    4. #ifdef / #ifdef / #else / #endif: These directives work together to provide
+    conditional compilation with an alternative branch. If a condition is met, the
+    code between `#ifdef` and `#else` is included; otherwise, the code between `#else`
+    and `#endif` is included. For example:'
+  merge: -1
+  pgno: 183
+- img_proc: true
+  md: '# DEBUG
+
+
+    ```
+
+    // Debugging code here
+
+    ```
+
+
+    ```
+
+    #else
+
+    ```
+
+
+    ```
+
+    // Production code here
+
+    ```
+
+
+    ```
+
+    #endif
+
+    ```
+
+
+    5. `#pragma`: The `#pragma` directive is used to provide compiler-specific instructions
+    or hints. These instructions can vary between different compilers and are typically
+    used for fine-tuning compiler behavior. For example:
+
+
+    ```
+
+    4996 // Disable a specific compiler warning
+
+    ```
+
+
+    6. `#error`: The `#error` directive is used to generate an error message during
+    preprocessing. This can be helpful for enforcing coding standards or ensuring
+    that certain conditions are met before compilation. For example:
+
+
+    ```
+
+    #ifdef LINUX
+
+    ```
+
+
+    ```
+
+    // Linux-specific code
+
+    ```'
+  merge: -1
+  pgno: 184
+- img_proc: true
+  md: '```
+
+    #else
+
+
+    #error This code requires a Linux environment
+
+
+    #endif
+
+    ```
+
+
+    7. #undef: The `undef` directive is used to undefine a previously defined macro.
+    This can be useful for selectively disabling macros. For example:
+
+
+    ```
+
+    DEBUG // ENABLE debugging
+
+
+    // ...
+
+
+    #undef DEBUG // Disable debugging
+
+    ```
+
+
+    Preprocessor directives play a crucial role in C and C++ programming by allowing
+    developers to write more flexible and portable code. However, they should be used
+    judiciously to avoid code that is difficult to understand and maintain.'
+  merge: -1
+  pgno: 185
+- img_proc: true
+  md: '# Reading Assignment: Bit Manipulation
+
+
+    Bit manipulation in C involves performing various operations on individual bits
+    within data using bitwise operators. Here are some common bit manipulation operations
+    in C:
+
+
+    +   1. Bitwise AND (''&''):
+
+
+    This operation sets a bit to 1 if it''s 1 in both operands.
+
+
+    ```
+
+    unsigned int a = 5; // Binary: 0101
+
+    ```
+
+
+    ```
+
+    unsigned int b = 3; // Binary: 0011
+
+    ```
+
+
+    ```
+
+    unsigned int result = a & b; // Binary: 0001 (1 in decimal)
+
+    ```
+
+
+    +   2. Bitwise OR (''|''):
+
+
+    This operation sets a bit to 1 if it''s 1 in either operand.
+
+
+    ```
+
+    unsigned int a = 5; // Binary: 0101
+
+    ```
+
+
+    ```
+
+    unsigned int b = 3; // Binary: 0011
+
+    ```'
+  merge: -1
+  pgno: 186
+- img_proc: true
+  md: '```
+
+    unsigned int result = a | b; // Binary: 0111 (7 in decimal)
+
+    ```
+
+
+    3. Bitwise XOR (^^):
+
+
+    This operation sets a bit to 1 if it''s 1 in one operand but not both.
+
+
+    ```
+
+    unsigned int a = 5; // Binary: 0101
+
+    ```
+
+
+    ```
+
+    unsigned int b = 3; // Binary: 0011
+
+    ```
+
+
+    ```
+
+    unsigned int result = a ^ b; // Binary: 0110 (6 in decimal)
+
+    ```'
+  merge: -1
+  pgno: 187
+- img_proc: true
+  md: '4. Bitwise NOT (`~`):
+
+
+    This operation flips the bits of a number (1s become 0s, and vice versa).
+
+
+    ```
+
+    unsigned int a = 5; // Binary: 0101
+
+    ```
+
+
+    ```
+
+    unsigned int result = ~a; // Binary: 1010 (4294967290 in decimal)
+
+    ```
+
+
+    5. Left Shift (`<<`):
+
+
+    This operation shifts the bits of a number to the left by a specified number of
+    positions.
+
+
+    ```
+
+    unsigned int a = 5; // Binary: 0000 0101
+
+    ```
+
+
+    ```
+
+    unsigned int result = a << 2; // Binary: 0001 0100 (20 in decimal)
+
+    ```
+
+
+    6. Right Shift (`>>`):
+
+
+    This operation shifts the bits of a number to the right by a specified number
+    of positions.
+
+
+    ```
+
+    unsigned int a = 16; // Binary: 0001 0000
+
+    ```
+
+
+    ```
+
+    unsigned int result = a >> 2; // Binary: 0000 0100 (4 in decimal)
+
+    ```'
+  merge: -1
+  pgno: 188
+- img_proc: true
+  md: These bitwise operators can be used for various purposes, such as setting and
+    clearing individual bits, working with hardware registers, and optimizing code
+    for memory usage. Additionally, bit manipulation is often used for tasks like
+    encoding and decoding data structures and implementing efficient algorithms. When
+    working with bit manipulation in C, it's essential to consider data types, signed
+    vs. unsigned values, and potential overflow or unintended side effects.
+  merge: -1
+  pgno: 189
+- img_proc: true
+  md: '# Exercise 1: Bit Manipulation in C
+
+
+    In this hands-on exercise , you will work with bit manipulation operations in
+    the C programming language. The exercise covers the following key operations:
+
+
+    +   1. **Bitwise AND:**** Perform a bitwise AND operation between two unsigned
+    integers.
+
+
+    +   2. **Bitwise OR:**** Perform a bitwise OR operation between two unsigned integers.
+
+
+    +   3. **Bitwise XOR:**** Perform a bitwise XOR operation between two unsigned
+    integers.
+
+
+    +   4. **Bitwise NOT:**** Perform a bitwise NOT operation on an unsigned integer.
+
+
+    +   5. **Left Shift:**** Left shift the bits of an unsigned integer by a specified
+    number of positions.
+
+
+    +   6. **Right Shift:**** Right shift the bits of an unsigned integer by a specified
+    number of positions.'
+  merge: -1
+  pgno: 190
+- img_proc: true
+  md: The exercise provides a C program that demonstrates these operations and prints
+    both the binary and decimal representations of the results. By completing this
+    exercise, you will gain practical experience with fundamental bit manipulation
+    techniques commonly used in low-level programming and embedded systems development.
+  merge: -1
+  pgno: 191
+- img_proc: true
+  md: "Type the Program shown below into Code::Block, compile and run as done in Day\
+    \ 1.\n\n```\n// Function to print the binary representation of an unsigned integer\n\
+    \nvoid printBinary(unsigned int num) {\n    if (num > 1)\n        printBinary(num\
+    \ >> 1); // Recursive call, shift right\n        printf(\"%d\", num & 1); // Print\
+    \ the least significant bit\n}\n\nint main() {\n    unsigned int num1 = 18; //\
+    \ Binary: 010010\n\n    unsigned int num2 = 9; // Binary: 001001\n\n    // 1.\
+    \ Perform a bitwise AND operation between num1 and num2.\n```"
+  merge: -1
+  pgno: 192
+- img_proc: true
+  md: '```
+
+    unsigned int resultAnd = num1 & num2;
+
+    ```
+
+
+    ```
+
+    printf("Bitwise AND: ");
+
+    ```
+
+
+    ```
+
+    printBinary(resultAnd);
+
+    ```
+
+
+    ```
+
+    printf(" Decimal: %u\n", resultAnd);
+
+    ```
+
+
+    ```
+
+    // 2. Perform a bitwise OR operation between num1 and num2.
+
+    ```
+
+
+    ```
+
+    unsigned int resultOr = num1 | num2;
+
+    ```
+
+
+    ```
+
+    printf("Bitwise OR: ");
+
+    ```
+
+
+    ```
+
+    printBinary(resultOr);
+
+    ```
+
+
+    ```
+
+    printf(" Decimal: %u\n", resultOr);
+
+    ```
+
+
+    ```
+
+    // 3. Perform a bitwise XOR operation between num1 and num2.
+
+    ```
+
+
+    ```
+
+    unsigned int resultXor = num1 ^ num2;
+
+    ```
+
+
+    ```
+
+    printf("Bitwise XOR: ");
+
+    ```
+
+
+    ```
+
+    printBinary(resultXor);
+
+    ```'
+  merge: -1
+  pgno: 193
+- img_proc: true
+  md: '```
+
+    printf("Decimal: %u\n", resultXor);
+
+    ```
+
+
+    ```
+
+    // 4. Perform a bitwise NOT operation on num1.
+
+    ```
+
+
+    ```
+
+    unsigned int resultNot = ~num1;
+
+    ```
+
+
+    ```
+
+    printf("Bitwise NOT on num1: ");
+
+    ```
+
+
+    ```
+
+    printBinary(resultNot);
+
+    ```
+
+
+    ```
+
+    printf("Decimal: %u\n", resultNot);
+
+    ```
+
+
+    ```
+
+    // 5. Left shift num1 by 2 positions.
+
+    ```
+
+
+    ```
+
+    unsigned int resultLeftShift = num1 << 2;
+
+    ```
+
+
+    ```
+
+    printf("Left Shift by 2: ");
+
+    ```
+
+
+    ```
+
+    printBinary(resultLeftShift);
+
+    ```
+
+
+    ```
+
+    printf("Decimal: %u\n", resultLeftShift);
+
+    ```
+
+
+    ```
+
+    // 6. Right shift num2 by 1 position.
+
+    ```
+
+
+    ```
+
+    unsigned int resultRightShift = num2 >> 1;
+
+    ```'
+  merge: -1
+  pgno: 194
+- img_proc: true
+  md: '```
+
+    printf("Right Shift by 1: \ ");
+
+    ```
+
+
+    ```
+
+    printBinary(resultRightShift);
+
+    ```
+
+
+    ```
+
+    printf(" Decimal: %u\n", resultRightShift);
+
+    ```
+
+
+    ```
+
+    return 0;
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ![](img/50a3ffd9d521bd894000f66c4b293162_195_0.png)
+
+
+    FIGURE 23 EXAMPLE of a console output of the execution of exercise 3'
+  merge: -1
+  pgno: 195
+- img_proc: true
+  md: 'This program performs various bit manipulation operations on `num1` and `num2`,
+    including bitwise AND, OR, XOR, NOT, left shift, and right shift. It also prints
+    both the binary and decimal representations of the results.
+
+
+    Compile and run the program to observe the effects of these bit manipulation operations.
+    This exercise will help you become more comfortable with working on bit-level
+    operations in C.'
+  merge: -1
+  pgno: 196
