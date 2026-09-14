@@ -1,0 +1,2110 @@
+- img_proc: true
+  md: '# Computers and Chemical Engineering 177 (2023) 108317
+
+
+    Contents lists available at ScienceDirect
+
+
+    # Computers and Chemical Engineering
+
+
+    journal homepage: www.sciencedirect.com/compchemeng
+
+
+    # Mathematical Programming Models for Shale Oil & Gas Development: A Review and
+    Perspective
+
+
+    Markus G. Grouven^a, Diego C. Cafaro^b, Ignacio E. Grossmann^c
+
+    a National Energy Technology Laboratory, Pittsburgh, PA 15234, USA
+
+    Universidad Nacional del Liberal, Santa Fe, Argentina
+
+    cnegie Mellon University, Pittsburgh, PA 15213, USA
+
+
+    In this paper, we provide a comprehensive review of mathematical programming models
+    for shale oil & gas development, and we offer a perspective on outstanding research
+    opportunities. We distinguish between five major topic areas: (1) development
+    planning, (2) water management, (3) production optimization, (4) gathering & processing,
+    and (5) life cycle analysis & sustainability. We highlight how types of mathematical
+    programming models (i.e., linear, integer, nonlinear, and stochastic) have been
+    applied primarily by the Process Systems Engineering community to address the
+    decision-making problems, and highlight instances of successful deployment in
+    industry. Finally, based on a critical assessment of the body of work, we identify
+    opportunities for future research across the major topics.
+
+
+    # ABSTRACT
+
+
+    # 1. Introduction
+
+
+    The development of optimization tools for decision-making processes in the unconventional
+    oil & gas industry has primarily been driven by the ''shale revolution''. By contrast
+    natural gas remains a key resource in the energy transition to a cleaner market.
+    According to the International Energy Agency (IEA, 2019) coal-to-gas switching,
+    which in the U.S. reduced CO2 emissions by equivalent to adding 200 million electric
+    vehicles running on zero-carbon electricity over the same period. At the same
+    time, it is important to note that this switching, which does not provide a long-term
+    solution to climate change, and it is worth noting that global gas demand has
+    been growing, from 16% in 2017 to 23% in 2019 (IEA, 2019).
+
+
+    The need for computational tools to aid the sustainable development of shale oil
+    and gas remains rising. In the developing world, strategic investments in new
+    infrastructure could ensure that essential energies become more affordable, particularly
+    those that cannot be effectively replaced by low-carbon alternatives, such as
+    winter peak or the transportation of degassed gases (e.g., renewable methane or
+    hydrogen) while simultaneously offering benefits in terms of energy security (IEA,
+    2019). Such infrastructures may unmet
+
+
+    also accelerate the deploy capture, utilization and storage technology, of which
+    will require decision-support tools to be optimally and operated.
+
+
+    But even in ''established'' shale areas, there is a growing industry with increasing
+    complexity: ever-production production units, processing facilities, gathering
+    pipelines, and treatment resources needing to be managed simultaneously – all
+    while continuing to improve environmental stewardship and profitability. Making
+    ''decision'' activities has become more than daily, and reality requires the adoption
+    of mathematical optimization tools in practice.
+
+
+    This paper focuses on the development and use of decision-support tools to address
+    the known challenges in shale oil and gas development. Mathematical programming
+    (Mousifakis & Yayge, 1996) is one of many optimization techniques (not to be confused
+    with computer programming). The practical application of models which are solved
+    rigorously (i.e., heuristically) using numerical methods or algorithms. All mathematical
+    programming models involve an objective function to be minimized or maximized,
+    and variables (decision variables generally free) or model parameters (considering
+    relevant problem data). Many classes of mathematical programs exist depending
+    on the types of decision variables (e.
+
+
+    > * Corresponding author.
+
+    E-email: markus.grouven@netel.com (M.G. Grouven).
+
+    https://doi.org/10.1016/j.compchem.2023.108317
+
+    Received: 14 November 2022; Received in form 19 March 2023; Accepted 25 May 2023
+
+    Available online 2 June 2023
+
+    Published by Elsevier Ltd.'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'M.G. Drousen et al.
+
+
+    Computers and Chemical Engineering 177 (2023) 108317
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_1_0.png)
+
+
+    # Cement casing protects aquifers.
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_1_1.png)
+
+
+    Drilling turns horizontal, multiple fissures and increasing volume of oil and
+    natural gas.
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_1_2.png)
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_1_3.png)
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_1_4.png)
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_1_5.png)
+
+
+    +   1 2 3 4 5
+
+    -Production casing inserted into borehole, surrounded by cement.
+
+
+    Casing perforated blasting small holes through pipe, cement, and shale.
+
+
+    After drilling, the well is hydraulically fractured. A mixture of water, sand,
+    and chemicals (fracking fluid) is pumped into the well at high pressure.
+
+
+    The fluid generates numerous fissures in the shale, freeing trapped oil and gas
+    that flow back up the pipeline to the well. The sand keeps the fissures open to
+    increase the flow of oil and natural gas.
+
+
+    Fig. 1. The hydraulic fracturing process.
+
+    (Image source: https://www.waterwatercouncil.org/hydraulic-fracturing.html).
+
+
+    Reproduction Not to Scale.
+
+    Tip of the Mattwater Council, 2013.
+
+    www.waterwatercouncil.org
+
+
+    g., discrete or continuous, and the nature of the constraints and/or the objective
+    function (e.g., linear or nonlinear, convex or nonconvex). Rigorous and well-defined
+    solutions exist for each class of mathematical program (e.g., Simplex or Branch-and-Bound).
+    There are several features that distinguish mathematical programming from other
+    optimization techniques (e.g., meta-heuristics or constraint programming), such
+    as these methods do not involve exhaustive search. A mathematical programming
+    method which would solve the same solution (2) for every class of mathematical
+    programs (e.g., linear, nonlinear, programs, meta-integer programming, solutions)
+    is also possible if a feasible solution exists for an input given sufficient (time),
+    and (3) rigorous mathematical programming solving methods are able to compute
+    a measure of optimality (the “optimality gap”) as the feasible solution is at
+    worst – from the true optimum). These characteristics of mathematical programming
+    are valuable to practitioners, which is why, mathematical optimization is widely
+    used to improve many industrial processes (e.g., see Beale, 1968;
+
+
+    Cooper, 2002; Singer, 2017).
+
+
+    Over the years
+
+
+    This review covers over the many years, different optimization and other improvement
+    techniques (rigorous and non-rigorous) have been proposed and applied to schedule
+    planning activities. Includes the use of heuristics (Knudson et al., 2014a, Beck
+    & Bessel, 2022), design of experiments (Malhotra'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Background on oil and gas development and its impact
+
+
+    Fig. 1 shows the basic steps involved in the development of a shale oil or gas
+    well. The process usually begins with the construction of a well or "pad", as
+    shown in Fig. 2. This pad will house temporary equipment necessary for drilling
+    and producing hydrocarbons from one or many wells. Up to 60 wells may originate
+    from the surface of one well pad. Well development begins by drilling the vertical
+    section of the well, which before the well reaches the target depth, the top-set
+    is cemented, and a "horizontal" drilling is initiated. This well may extend several
+    hundred meters later during and after the production process (casing with layers
+    of steel and cement) to ensure the integrity of the well and prevent an uncontrollable
+    collapse of the well. Ideally, that fracturing is performed, which enhances the
+    production of hydrocarbons from the shale reservoir to the well itself. Finally,
+    large volumes of water (fresh, special sand) and chemicals are injected into the
+    reservoir at high pressure to create hydraulic fractures into the shale rock,
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_2_0.png)
+
+
+    (Image source: https://www.technokonzeichnis.de/ueber-kubstein/78/geolam-bodensec-981.html)
+
+
+    Li et al., 2021, as well as 2022 use simulations (Sanchez-River et al., 2015,
+    Feng et al., 2020). Evolutionary or genetic algorithms, such as Swarm Optimization,
+    have been particularly prominent in this field (Jemsik 2001, Hariri et al., 2018,
+    Zhang & Sheng, 2020). These algorithms are generally made to work without assumptions
+    about the mathematical nature of the problem being solved, and they can provide
+    feasible solutions to large problems, although often with high computational expense.
+    However, because they are stochastic, it is repeated and that the same problem
+    can be solved with different solutions (especially when time is used as a termination
+    criterion). Also, meta-heuristics do not provide a method of objective function
+    evaluation that can assess the quality of a given solution.
+
+
+    Undoubtedly, programming and optimization techniques have contributed to the improvement
+    of shale oil and gas development. However, we observe that field affiliation rather
+    than characteristics has greatly limited the development of optimization techniques
+    which have been applied to these problems. Research and practice in the industry
+    (Sengupta 2020) have focused on developing mathematical techniques for reservoir
+    planning, contributions from the Petroleum Engineering and Geosciences fields
+    although include non mathematical optimization techniques.
+
+
+    This paper begins with a general introduction on shale oil and gas development,
+    and the impact it has on the landscape in the United States, on the production
+    of petrochemicals, as well as on various subproblems. Next, the paper presents
+    an overview of mathematical techniques for addressing major problems, namely development
+    planning, production optimization, supporting decisions, and life cycle analysis
+    (LCA) & sustainability. Our objective is also to identify trends in linear vs.
+    nonlinear models, general purpose versus specialized solutions, and the extent
+    to which they account for uncertainty. The paper concludes with a critical assessment
+    of these techniques and the identification of opportunities for further research.
+
+
+    The "shale revolution" has made large quantities of oil and gas natural across
+    the world, especially in the United States. The U.S. Energy Information Administration
+    stated that "shale oil and gas production has increased significantly in the United
+    States, among countries with access to considerable natural resources. While shale
+    oil gas reserves include the United States, China, Argentina, Bolivia, Venezuela,
+    Mexico, Pakistan, and Canada. Shale gas is also abundant in Russia and Brazil.
+    After all, many countries could potentially recover hydrocarbons from shale reservoirs
+    at large scale, as shown in
+
+
+    water must be produced at the off-site which could create logistical and cost
+    challenges in the production process. The water required for hydraulic fracturing
+    can be treated and decjected, which presents a significant environmental cost
+    of hydraulic fracturing.
+
+
+    As per Sönchenko (2020), the shale oil producers based on'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# 2020 Shale Production - available- and 2013 Technically Recoverable Resources
+
+    (103 barrels)
+
+
+    United States
+
+    Shale Production: 2.2 [$10^9$ barrels/year]
+
+    Shale Resources: 103 [$10^9$ barrels]
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_3_0.png)
+
+
+    # 2020 Shale Gas Production - available- and 2013 Technically Recoverable Resources
+
+    (12 scf)
+
+
+    United States
+
+    Shale Gas Production: 20.1 [$10^9$/year]
+
+    Shale Gas Resources: 12 [$10^9$ scf]
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_3_1.png)
+
+
+    Fig. 3. Worldwide shale oil and gas production by 2020 (which data have been made).
+    Circles represent technically recoverable resources by the U.S. EIA as of June
+    2013 (except for the United States, for which estimates have been updated to 2020).
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_3_2.png)
+
+
+    Source: U.S. Energy Information Administration
+
+
+    Fig. 4. Major shale basins in the United States.
+
+
+    daily average crude and condensate production in the United States in 2020 were
+    Chevor, Exxon Resources, ConocoPhillips & China, Occidental Gas and Petroleum,
+    ExxonMobil. The largest producers of shale gas are EQT, Continental Resources,
+    Halliburton, Chevron Energy Corporation. Notably, the well-established majors
+    (i.g., ExxonMobil, Chevron, ConocoPhillips, Shell, BP, Total and others) are all
+    active oil and gas producers, but several smaller and less-known organizations
+    lead the production charts too. The major U.S. companies operate in
+
+
+    It is also worth noting that since shale development activities started up in
+    the United States around 2005, reduced CO2 emissions have been considered favorably.
+    This trend is due to coal being replaced by natural gas power generation. The
+    implication is that the widespread development of shale resources across the United
+    States — while perceived as a threat to secure their domestic energy supply, while
+    also reducing emission demands, the development of shale resources, in, as a transition
+    step to full carbon neutrality (i.e., "bridge fuel"), may be a worthy option to
+    consider.
+
+
+    Anadarko, Appalachia, Basin, Eagle'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# U.S. energy related carbon dioxide emissions (2000–2023)
+
+
+    million metric tons
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_4_0.png)
+
+
+    Fig. 5. U.S. energy related carbon dioxide emissions between 2000 to 2021. (Image
+    source: https://www.eia.gov/today/energy/detail.php?id=50958)
+
+
+    # 3. Mathematical programming models for shale development
+
+
+    # 3.1. Early history of shale development optimization
+
+
+    Seminal contributions presenting optimized strategies to exploit shale deposits
+    early in the 1970s (Crookston, 1975). The first assessed pyrolysis as an analytical
+    technique for oil extraction (Wen & Yen, 1977; Gufel, 1979). In the 1980s, the
+    first optimization techniques to enhance the recovery of oil and water mixtures,
+    came to light (Bose, 1980; Svartve, 1982). Production optimization in wells was
+    also addressed by Reeves et al. (1993), while the early contributions to the development
+    of shale well actually focused on water usage. Later models were proposed in the
+    2000s (Muskimmin, 2008; Gausfeld et al., 2008). By that time, the contributions
+    were merely 10% of the total number of publications that we find nowadays, and
+    most of them deal with shale oil production. The frequency increases to 25% by
+    2014, now deeper analysis on the economic and environmental impact of shale gas
+    production (Stephens, 2010; Jiang, 2011; Guanarni et al., 2013).
+
+
+    Cafano & Grassmann (2014) developed the first optimization model on the strategic
+    planning, design, and development of the shale gas chain. Then, the number of
+    contributions to the field has increased significantly. In 2017, Gao & Yu (2017)
+    published a first review concerning the design and optimization of shale energy
+    systems. This work was limited to research on shale gas only. Recent works relate
+    to the literature of all publications on oil and gas development since 2017. Also
+    important events (e.g., the COVID-19 pandemic, the Russian invasion of Ukraine)
+    have sparked debate among the academic community and the general public, on the
+    implications and impacts of hydrocarbon recovery from resources across the world.
+
+
+    # 3.2. Major areas
+
+
+    As part of this review, we distinguish between five major topics in the field
+    of oil and gas optimization, as shown in Fig. 6: (1) development planning, (2)
+    production optimization, (3) supplies, gathering & processing, (4) water management,
+    and (5) life cycle analysis (LCA) & sustainability. Development planning activities
+    associated with shale development involve drilling, fracturing and production
+    operations. Researchers active in this phase put forward mathematical programming
+    models to help decision-makers understand how to coordinate development activities
+    to improve economic or environmental performance. It is important to note that
+    oil and gas development require considerably different approaches and resources.
+    For information on conventional oil development approaches, and opportunities
+    to leverage Process Systems Engineering and optimization methods, we refer to
+    the work of Tavalli et al. (2014), Tavallisi (2016) and Epelle & Gerogios (2019).
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_4_1.png)
+
+
+    # Development Planning
+
+
+    # Water Management
+
+
+    # Production Optimization
+
+
+    well selection, timing of development operations, coordination of uncertainty
+
+
+    coordination of water deliveries, reduction of freshwater consumption
+
+
+    frequency and timing of well completions, simulations, coordination of uncertainty
+
+
+    # Supplies, Gathering, Processing
+
+
+    # LCA & Sustainability
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_4_2.png)
+
+
+    supply chain pipeline, treatment network design, facilities placement
+
+
+    assessment and quantification of emissions, "cradle-to-grave" analysis
+
+
+    Fig. 6. Major topics in the field of shale oil and gas optimization.'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: 'A summary of publications related to shape optimization from 2017 and topics
+    above.
+
+
+    | Development | Single Well | Multi-Well | Single System | Multiple Systems |
+    National Scale |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | Planning | | Ondeck et al. (2019a), Li et al. (2020) | Gao et al. (2018), Peng
+    et al. (2021), Bean (2020), Soni et al. (2021), Díaz-Gomez et al. (2021), Peng
+    et al. (2022) | Ondeck et al. (2019a) | |
+
+    | Production Optimization | Drouven et al. (2017), Cafaro et al. (2018), Zou &
+    Cremazzi (2021) | Hülbe et al. (2020), Ahmed et al. (2019), Achkar et al. (2021)
+    | Foss et al. (2018) | Drouven & Grousmann (2017a), Hong, Li (2020), Allen et
+    al. (2019) | Montagna & Cafaro (2019), Hong, Li et al. (2022) | Tan & Barton (2017)
+    |
+
+    | Supplies, Gathering, Processing, Management | | | Drouven & Grousmann (2017a),
+    Tavikakis (2016), López-Díaz et al. (2018), Ahmed et al. (2019), Carreiro-Pareja
+    et al. (2020), Al-Aboud et al. El-Hagwi (2019), Gao & Grousmann (2019), Wang,
+    Quiez et al. (2019), Caballero et al. (2020) | Okey et al. (2016) | Gao & You
+    (2017), Gao & You (2017c), Gao & You (2018), Gao & You (2019), Chen et al. (2017)
+    | |
+
+
+    # Life Cycle Analysis & Sustainability
+
+
+    The shape optimization technique, on the other hand, is constrained by recovery
+    of hydrocarbons from reservoirs. The manipulation or coordination of production
+    parameters (e.g., well pressure or artificial lift) can greatly improve economics
+    at energy. In turn, researchers have studied how and what production control strategies
+    can successfully respond to demand changes (e.g., natural gas flow).
+
+
+    Work on supplies, gathering and processing optimization has been equally prominent
+    over the years. It should be noted that this field is related to shape development
+    through the timing of drilling and operations controls which determines the oil
+    and gas formation shapes. However, although the oil or gas produced from reservoirs
+    can be recovered regardless of shape of the proposed well if it has not been constructed
+    on time and wisely. This到时候 characteristic is that development is an activity
+    usually carried out by operators, whereas supplies, gathering and processing primarily
+    falls into some mid-/downstream environments.
+
+
+    Water management is essential to shape oil and gas development. In turn, the extraction
+    of hydrocarbons from reservoirs depends on water availability. The production
+    of oil and gas formations is generated with water, adequately referred as “produced
+    water”. Upstream companies need to match demand: Supply and water management are
+    critical for transportation and hydraulic fracturing operations which can be a
+    logistical challenge and of itself. But, post-completions, substantial quantities
+    of produced water must be managed and transported to minimize water flow.
+
+
+    Finally, we approach LCA to shape oil and gas development but hydraulic fracturing
+    is a particular topic among scholars and the general public. Significant water
+    demand can control the potential release of greenhouse gases (e.g., methane emissions
+    and CO2). Surprisingly, the academic community has responded by proposing optimization
+    tools to assess and quantify the environmental performance of oil and gas development.
+    LCA has emerged as a powerful
+
+
+    and insightful framework is better to address “cradle-grave” implications of hydrocarbon
+    recovery from reservoirs (Chem et al., 2019).
+
+
+    While some have addressed shape oil and gas optimization opportunities across
+    all of these five topics, however, only one distinguishing feature of these features
+    is present in the shape scope of work in the field, ranging from (1) a single
+    oil or gas well, (2) a multi-well field, (3) a development or system complex,
+    (4) multiple design systems managed by a single entity, and (5) the national scale.
+    In terms of problem, the size and number of production locations (e.g., wells,
+    roads, regions) of the proposed shape are not consistent, yet ranging between
+    15 and 40. In addition, multiple complexity may be attributed to “perceptual”
+    aspects of shape and gas development being boundaries.
+
+
+    We refer to Table 1. As shown in the test, most report shape has been focused
+    on individual development areas or systems, which related to water management
+    and development planning. However, the general sustainability of shape oil and
+    gas development activities, at the end of the spectrum, few views have been concerned
+    with the optimization of shape and gas scale. Interestingly, in 2017, Gao & You
+    (2017a) has
+
+
+    Development planning: Wilson & Drouven (2013); Cafaro & Carreiro (2014); Calderon
+    et al. (2015); Gao et al. (2015b); Gao & You (2015a); Arredo-Ramirez et al. (2016);
+    Drouven & Grousmann (2017); Guerna et al. (2016)
+
+
+    Production optimization: Kneden & Foss (2013); Knudsen et al. (2014b); Knudsen
+    & Foss (2015); Cafaro et al. (2017)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: 'M.G. Drousen et al.
+
+
+    Computers and Chemical Engineering 177 (2023) 108317
+
+
+    +   - Development Planning
+
+    - Supplies, Gathering and Processing
+
+    - LCA & Sustainability
+
+    - Production Optimization
+
+    - Water Management
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_6_0.png)
+
+
+    Fig. 7. Publication count by topic areas since 2013.
+
+
+    +   - Supplies, gathering and processing: Martin and Grossmann (2013); Wang et
+    al. (2014); Nouredlin et al. (2014); Wang and Xu (2014)
+
+    - Water management: Yang et al. (2014); Yang et al. (2015); Gao & You (2015);
+    Bartholomew and Materer (2016); Lira et al. (2016)
+
+    - LCA sustainability: Gao & You (2015); Pascual-Gonzalez et al. (2016)
+
+
+    receive a considerable amount of attention by the academic community. Virtually
+    all constructions in recent years have been mixed-integer programming models (linear
+    and nonlinear). Discrete/or integer variables are introduced to capture decisions
+    regarding the scheduling of drilling/fracking activities, the existence/placement/sizing
+    of upstream infrastructure (such as water treatment facilities and processing
+    plants). Fig. 8 shows a development schedule, illustrating the complexity involved
+    in development problems.
+
+
+    Fig. 7 considers all publications captured in Table 1, as well as the contributions
+    listed above.
+
+
+    Optimal development problems have often employed mixed-integer nonlinear programs
+    to consider economies of size for sizing infrastructure (e.g., compressors, stations,
+    pipelines, plants), for addressing variations in the composition of the hydrocarbons
+    produced using various reservoir models or surrogate models (Wilson & Dorsey,
+    2013). More, however, the community has been gravitating towards later models
+    that account for the uncertainty in the planning process. Uncertainty parameters
+    include the expected lifetime return (EUR), production rates (Gao et al., 2018;
+    Perez et al., 2023) and commodity prices (Li et al., 2020; Bean, 2020). In planning
+    the development process, it may be beneficial or necessary to consider the fact
+    that drilling and fracking require different types of resources. Additionally,
+    the vertical section of a well is generally drilled with a vertical bit, while
+    the lateral section is drilled with a "horizontal" bit. Hydraulic fracturing of
+    the wells is performed by a fleet of trucks equipped with high-pressure pumps.
+    Disassembling these rigs and the required equipment is not an easy task, especially
+    in remote areas (Vales et al., 2018; Wang et al., 2019b) have proposed mathematical
+    frameworks that account for the resource wealth movements and mobilization costs
+
+
+    # 3.3. Development planning
+
+
+    At core, development planning options are meant to help organizations operate
+    efficiently and economically attractive drilling, fracking and production schedules.
+    Such "revolution" has been considered relatively straightforward. Planning involves
+    drilling wells one by one, then completing as many wells as they could. However,
+    researchers and the industry realized that this approach was suboptimal since
+    it could only take months before production starts. They soon proved that drilling
+    and fracking were powerful of different tools, depending on the overlap for leveraging
+    mechanism and support. Supporting the development and planning problems is inherently
+    discrete in nature since it is possible to drill or complete wells if decisions
+    are made in time with activities, coordination and conflict of objectives.
+
+
+    As illustrated in Table 1, the development planning options can range from multi-well
+    de-cks (Ondeck et al., 2019; Li et al., 2020) to consider single systems multiple
+    pads (Gao et al., 2018; Wang et al., 2021; Za-Gomez et al., 2022), best to plan
+    multi-field systems across geographically distributed areas (Ondeck et al., 2019b).
+    Nearly all publications in recent years are geared at planning scenarios spanning
+    multiple years. Discrete-time formulations are predominant with planning horizons
+    discretized by either weeks, months, annual periods or years.
+
+
+    Since the pioneering work on strategic development planning optimization by Cafaro
+    and Grossmann (2014), this time area continues to
+
+
+    7'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Annual Quarters
+
+
+    | Operation | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
+    | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 | 26 | 27 | 28 | 29 | 30 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | A1 | | | | | | | | | | | 14 | 14 | | | | | | | | | | | | | | | | |
+
+    | A2 | | | | | | | | | | | | 14 | 14 | | | | | | | |21 | | | | | | | | | | | |
+
+    | A3 | | | | | | | | | | | | | | | 15 | 15 | 15 | | | | | | | | | | | |
+
+    | A4 | | | | | | | | | | | | 21 | 11 | 11 | 13 | 13 | 10 | 10 | 10 | | | | | |
+    | | | | |
+
+    | A5 | | | | | | | | | | | | 11 | 11 | 1 | | 13 | 10 | 10 | 14 | | | | | | | |
+    |
+
+    | A6 | | | | | | | | | | | | 21 | 21 | | |3 | | |  | | | | | | | | | |
+
+    | B1 | | | | | | | | | | | | | | | | | 18 | 19 | 37 | | | | | | | |1 | |34 | |
+    |
+
+    | B2 | | | | | | | | | | | | | | | | 10 | 17 | 16 | 22 | | | 21 | | | | | | |
+    |
+
+    | B3 | | | | | | | | | | | | | | | | 13 | 13 | 13 | 12 | 13 | 14 | | | | | | |
+    | |
+
+    | B4 | | | | | | | | | | | | | | | | 10 | 19 | | | | | 10 | 20 | 17 | | | | |
+    | |
+
+    | B5 | | | | | | | | | | | | | | | | 19 | 18 | | | | | | | | | | | | | | | | |
+
+    | B6 | | | | | | | | | | | | | | | | 18 | 18 | 16 | 17 | | | | | | | | | | |
+
+    | C1 | | | | | | | | | | | | | | | | | 11 | 10 | 14 | 21 | 13 | 16 | | | | | |
+    | |
+
+    | C2 | | | | | | | | | | | | | | | | | 10 | 10 | 10 | 15 | 15 | 15 | 15 | | |
+    | | | |
+
+    | C3 | | | | | | | | | | | | | | | | | 11 | 11 | 11 | 11 | 11 | 11 | 11 | 1 |
+    | | | | | | | |4 | | | | | | | | | | | | | | | | | |11 | 11 | 11 | 11 | 11 |111
+    |11 | | | | | | |
+
+
+    Fig. 4. Development schedule for a shale facility illustrating the complexity
+    of underlying development planning problem (Note: development pace in terms of
+    "feet-of-pay" (i., combined length) where TS = top-setting, HD = horizontal direction,
+    FRAC=hydraulic fracturing, TUR=turning) [adapted from Ondeck et al., 2019].
+
+
+    Detailed comparison of results, based on development planning schedule.
+
+
+    | Publication | Oil/Gas | Problem Scope | Objective | Degree of Freedom | Model
+    | Solution Strategy | Uncertainty Consideration |
+
+    |---|---|---|---|---|---|---||
+
+    | Wilson & Durofsky (2013) | Gas | | Max NPV | | | Derivative-free, generalized
+    pattern search + surrogate model | |
+
+    | Cafaro & Gromann (2014) | Gas | | Max NPV | | MINLP | Custom branch-and-bound
+    decomposition strategy | |
+
+    | Draven (2016) | Gas | | Max NPV | | MINLP | Custom decomposition strategy |
+    |
+
+    | Gao, Yang & You (2018) | Gas | | Min cost | | | Reformulation | Yes (EUR and
+    market demand) |
+
+    | Ondeck et al. (2019a) | Gas | | | | | MILP | Commercial service | |
+
+    | Ondeck et al. (2019b) | Gas | | | | | MILP | Commercial service | |
+
+    | Bean | Gas | | Max NPV | | MILP | Commercial service | Yes (Price forecasting)
+    |
+
+    | Li et al. (2020) | Gas | | Max NPV | | | Commercial service | Yes (Price forecasting)
+    |
+
+    | Díaz-Gómez et al. (2021) | Gas | | | | | Commercial service | |
+
+    | Soni et al. (2021) | Oil | | Max NPV | | | Horizontal horizon approach | |
+
+    | Peng et al. (2021) | Gas | | | | | MILP | Bilevel decomposition | No |
+
+    | Peng et al. (2022) | Gas | | | | MILP | Lagrangian decomposition algorithm |
+    Yes (Production uncertainty) |
+
+
+    surpassing the capital intensity of natural oil and gas development with a focus
+    on maximizing production-related revenues. Where production volumes are directly
+    tied to the development schedule, as shown in Fig. 9, development planning can
+    significantly improve the economic performance of any organization.
+
+
+    Finally, note that the area of development planning has received considerable
+    attention from the Petroleum Engineering and Geosciences over the years. As previously
+    discussed, the optimization efforts predominantly rely on metophysics and not
+
+
+    mathematical techniques. Yet, the question of how to develop a good shale plan,
+    and where to optimally place wells is clearly of common interest (Jesmani et al.,
+    2016; de Brito and Harfi, 2020).
+
+
+    # 3.4. Production optimization
+
+
+    Production optimization models in the shale and gas industry involves a series
+    of strategies to sustain or improve well productivity over longer time horizons,
+    extending their economic lifespan.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# Drouven et al.
+
+
+    # Computers and Chemical Engineering 177 (2023) 108317
+
+
+    +   - Permit Lending
+
+    - Pad Construction
+
+    - Vertical & Horizontal Drilling
+
+    - Hydraulic Fracturing
+
+    - Temporary Shut-in
+
+    - Hydrocarbon Production
+
+
+    | | 4 | 7 | 10 | 13 | 16 | 19 | 22 | 25 | 28 | 31 | 34 | 37 | 40 | 43 |
+
+    |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---||
+
+    | PAD10 | | | | | | | | | | | | | | |
+
+    | PAD09 | | | | | | | | | | | | | | |
+
+    | PAD08 | | | | | | | | | | | | | | |
+
+    | PAD07 | | | | | | | | | | | | | | |
+
+    | PAD06 | | | | | | | | | | | | | | |
+
+    | PAD05 | | | | | | | | | | | | | | |
+
+    | PAD04 | | | | | | | | | | | | | | |
+
+    | PAD03 | | | | | | | | | | | | | | |
+
+    | PAD02 | | | | | | | | | | | | | | |
+
+    | PAD01 | | | | | | | | | | | | | | | |
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_8_0.png)
+
+
+    Fig. 9. Development strategy and corresponding profile. (adapted from Drouven
+    & Grommann, 2066).
+
+
+    is critically for the production of unconventional wells due to the steep decline
+    that characterize shale oil and gas productivity. To optimize the productivity
+    of shale wells can be broadly categorized into four groups, in order of control
+    from an operational viewpoint: curtailments and shut-ins, artificial lift, and
+    recovery methods.
+
+
+    # 3.4.1. Production curtailments and shut-ins
+
+
+    Foss et al. (2018) propose the concept of daily production optimization (DPO)
+    periods in which production engineers aim to optimize the system as effectively
+    as possible. They present a discussion on the use of simulations, by adjusting
+    control inputs to choke valves, and the limitations of the use of static models
+    vs. dynamic models, to address these problems.
+
+
+    Many important problems can be solved through the use of steady-state models while
+    others, in particular related to shale gas, have different characteristics. The
+    work in this field holds that daily production optimization problems are well
+    suited for mathematical programming.
+
+
+    Foss et al. (2018) propose a Generalized Direct Optimization Programming (GDOP)
+    framework for reservoir management based on proxy reservoir models. A receding
+    horizon optimization strategy is repeatedly solved at each step. On the other
+    hand, when reservoir production can be neglected, a static model is proposed for
+    each time step. Piecewise linear approximations are used to convert the MINLP
+    into a MILP. From simulation analysis, it is argued that a static optimization
+    framework suffices in most development
+
+
+    cases, in particular for production of offshore water wells. Important exceptions
+    are gas wells and thin oil rims. Hulse et al. (2020) suggest that static models
+    are applicable when the optimization-scale is faster than the underlying reservoir
+    dynamics. The limitations of static models are illustrated by an illustration
+    of oil pad platforms with valves for the production of wells and gas-lift operations.
+    Static practices are effectively solved in response to changes in demand. However,
+    when surface conditions change frequently or suddenly - potentially due to reduced
+    processing capacity - it is argued that the dynamics of wells should not be neglected
+    and efforts should be solved accordingly. When the conditions are normal, these
+    optimization models seek to find the best schedule of a well with varying compression
+    capacity. It is clear that better results can be achieved when the method is implemented
+    with more accurate simulation models and parameters. Nevertheless, given the large
+    number of decisions in this kind of field, even for small instances (with few
+    wells and time steps), it is still an open question to what extent it is worth
+    to include these details (adding more complexity) into the decision-making tool.
+
+
+    # 3.4.2. Artificial lift
+
+
+    Artificial lift systems involve a wide range of techniques
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_8_1.png)
+
+
+    Fig. 10. Simplified illustration of an oil production platform or well pad, with
+    gas-lift operations. (adapted from Hulse et al., 2020).'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'M.G. Drown
+
+
+    Computers and Chemical Engineering 177 (2023) 108317
+
+
+    aimed at delivering shale gas wells. These operations are relatively mature for
+    vertical wells in conventional reservoirs, enhancing the productivity of horizontal
+    oil and gas wells has become a new frontier for unconventional production. An
+    artificial infrastructure plan includes the selection of appropriate equipment
+    and its implementation was first proposed by Tao and Cremashi, later extended
+    by the authors (Zao and Cremashi). The authors propose a discrete-time MINLP formulation
+    to solve a multistage stochastic formulation. It incorporates endogenous uncertainty
+    and exogenous uncertainty in shale gas prices, although the latter uncertainty
+    does not affect the optimal solutions. The methods used do consider the production
+    history of two case studies in the Woodford Plow (U.S.). Although considering
+    the possibility of multistage lift methods (i.e., ALMs), the uncertainty is limited
+    to the lifespan of a single well. Akhtar et al. developing the enhanced MILP formulation
+    for integrated planning of artificial lift methods in a multistage context manages
+    investment and operational decisions, including functions for installation and
+    deployment times. As in this discrete-time approach, the major limitation is the
+    sensitivity of the MILP model to uncertain response and gas prices given data
+    (deterministic models). The authors conclude that the number of resources (i.e.,
+    ALMs) appears to have a larger impact than increasing the number of wells in the
+    pad.
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_9_0.png)
+
+
+    # Cone of uncertainty
+
+
+    Fig. 11. Illustration of uncertainty-based fracturing planning in light of uncertain
+    gas price forecasts (i.e., cone of uncertainty) and uncertain post-treatment performance
+    (adapted from Driver et al.).
+
+
+    # 3.4.3. Refactoring
+
+
+    Refactoring presents a strategy for addressing the accelerating decline rates
+    of shale wells. The core idea behind refactoring is to stimulate the reservoir
+    such that it yields untapped hydraulics and improves the overall production profile
+    of a well. The seminal work on planning optimal fracturing treatments of shale
+    wells was proposed by Driver et al. (2016). The authors present a decision-making
+    framework based on a novel forecast that predicts pre- and post-treatment productivity,
+    and a discrete-time, multistage MILP model that accounts for the possibility of
+    multiple fracturing treatments over the lifetime of the well. They consider multiple
+    accounts for the lifespan of the well (Cafaro et al., 2018), also considering
+    the net present value (NPV) of the production over continuous time horizon.
+
+
+    # Refactoring strategies
+
+
+    In this paper, we propose a refactoring model based on the disjunctive program
+    (Big-M, Stage and Convex-Hull). The proposed framework is limited to a single
+    well and can be applied to either existing or new wells. The number of fracturing
+    treatments and their timing are highly sensitive to the uncertain gas price forecast.
+    In two years later, the authors extend their method further to address the challenge
+    of handling the uncertainty associated with the well refactoring (Driver et al.,
+    2017). A two-stage stochastic programming model in a moving horizon strategy is
+    developed to solve the planning problem. The model predicts gas production over
+    time depending on how often a well has been refactored, and when it was estimated
+    last.
+
+
+    shale oil and capture account for uncertainty. Calderon and Pekoven (2020) address
+    the planning of EOR in shale oil to reduce gas fracturing. A multistage MILP framework
+    optimizes the decision of well location, fracturing, pipeline and processing infrastructure,
+    placement of injection sites, injection rates, and duration of EOR operations.
+    Due to the complexity of the mathematical problem, a heuristic approach is proposed
+    to solve the problem. The authors also propose using pseudo-dynamic models that
+    incorporate stochastic functions to approximate the transients.
+
+
+    # 3.5. Water management
+
+
+    Water management is an important, cost-intensive aspect of oil and gas development.
+    The extraction of hydrocarbons from unconventional reservoirs requires large quantities
+    of water. Drilling and fracturing a single well can consume a billion barrels
+    of water—which is about 63 Olympic swimming pools. However, companies rely on
+    recycled water for fracturing. At many locations, water is either sourced or treated
+    at the site, where up to 60 wells can be operated from one well pad, suggesting
+    that the overall demand for water can be given by tens of miles. At the same time,
+    oil and gas wells produce quality of high-TDS water with geochemistry and salinity,
+    which generally will not be released into the surface environment. Produced water
+    is commonly either injected for disposal purposes or reused by the oil and gas
+    industry to meet the demand for
+
+
+    # 3.4.4. Enhanced-recovery (EOR)
+
+
+    In recent years, technologies that tackle gas fracturing in oil production have
+    been a focal point. One of the promising alternatives is the injection of gas
+    flare to stimulate the production of
+
+
+    10'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# M.G. Drouven et al.
+
+
+    # Computers and Chemical Engineering 177 (2023) 108317
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_10_0.png)
+
+
+    Fig. 12. Illustration of water management options in shale layers. (adapted from
+    Drouven and Grossmann, 2017).
+
+
+    subsequent drilling and production. Actualisation of produced water continues
+    to be raise and is currently limited to niche applications.
+
+
+    Shale water management optimization continues to be an active area of research.
+    Over recent, there has been a consistent stream of publications in this area,
+    as shown in Fig. 7. Nearly all have concerned with the management of water (balancing
+    of supply and demand) within a single well, while a few focus on the management
+    of water specifically for shale oil. Several recent publications in this area
+    focus on co shale water management options along with scheduling – which drives
+    both water demand and oil production (Drouven et al., 2018). Since fracturing
+    scheduling dect the cost of oil and gas production services, several researchers
+    have chose the maximization of profits or NPV as the primary objective. The focus
+    is to find the optimal order of completions and de facto water management. It
+    is also noted that the shale scheduling involves discrete decisions (i.e., the
+    sequencing of well development projects). This naturally explains why integer
+    programming models are used, although recognizing the optimization of propane
+    and water pumping services using nonlinear model control has been done (Lin et
+    al., 2021).
+
+
+    The challenges of the shale water management optimization are: (1) where water
+    comes from source options (i.e., fresh, brackish or produced water), (2) where
+    to deliver produced water to (e.g., facilities,, sites or treatments) and (3)
+    how to use the water (e.g., evaporation, pore-storage, treatment facilities, injection
+    into wells). The latter rarely involves the selection of sites or standardized
+    equipment, which also adds binary and integer variables to mathematical programming
+    frameworks. Very few studies have considered water quality as part of the water
+    management frameworks; however, the work by Yang et al. (2015), Guiserra et al.
+    (2016) and Carreiro-Ferreno et al. (2018) is the example.
+
+
+    It is interesting to note that shale water management optimization problems have
+    also been addressed by the Process Systems Engineering community using mathematical
+    programming
+
+
+    techniques. The majority of these are inter-integer linear programs. When nonlinearities
+    are introduced, the respect models consider water quality (i.e., bilinear terms
+    as the result of multiplying unknowns flows with concentrations (Carcena et al.,
+    2019) or their economy costs of chemicals (e.g., power functions in Lopez-Diar
+    et al., 2018 and Tavakolli (2018)). In this context, it is worth noting that there
+    has been little work on developing scheduling models that consider water quality
+    production simultaneously. Many recent researchers focus on co shale water management
+    (e.g., PLEX or Gurobi) (Serrano-Aviles et al., 2022; Hernández-Perez et al., 2022;
+    Cao et al., 2022). An open-source optimization framework has been developed to
+    allow the identification of strategies to manage water, treat, recycle, and dispose
+    of safely produced water from oil and gas fields. The novel
+
+
+    Finally, we draw attention to the fact that few publications report to consider
+    uncertainty in parameter models. Stochastic programs have been used, because they
+    account for water variance (Yang et al., 2014), hard-to-predict demand and flow
+    fluctuations as well as uncertain oil and gas production rates (Liu et al., 2020).
+    Although not technically dealing with the water, the work by Carreiro-Ferreno
+    (2019, 2021) stands to focus on
+
+
+    # 3.6. Supplies, & processing optimization
+
+
+    For decades, and oil gas have been particularly interested in the optimal design
+    of pipeline networks with the size and location of processing facilities to maximize
+    hydrocarbon production from wells. One of these networks is to gather flows, consider
+    hydrocarbons, and send them to midstream distribution facilities
+
+
+    11'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'M.G. Drouven et al.
+
+
+    Computers and Chemical Engineering 177 (2023) 108317
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_11_0.png)
+
+
+    Fig. 13. Simplified illustration of process production and modular dynamic allocation.
+    (adapted from Hong, Li, Song, Chen, Zhang & Gao 2020).
+
+
+    and/or refineries. However, large-scale hydrocarbon production from unconconventional
+    wells has transformed the paradigm for facilities planning. First and foremost,
+    the steep decline of shale wells makes it necessary to develop new wells, where
+    production needs to be optimally allocated to facilities through network design.
+    The design of a supply chain network can facilitate task. Decisions regarding
+    the optimal design of the network of facilities serving oil and gas production
+    can be categorized into three groups, according to their scope: process facilities,
+    pipelines and storage units.
+
+
+    # 3.6.1. Processing facilities
+
+
+    Tan and Barton (2016) address the dynamic allocation of modules to monetize shale
+    gas production. Using the Bakken shale as a case study, they discuss the effects
+    of uncertainty in future supply, demand and price conditions by a two-stage stochastic
+    programming framework. They consider two types of plants: gas-lifts (converting
+    methane into heavier hydrocarbons) and liquefaction plants (producing liquefied
+    natural gas or LNG). They introduce 0-1 variables in an MILP model to determine
+    the optimal number of plants to be built at each stage of the process. The goal
+    is to maximize the expected NPV of the shale gas production. The authors conclude
+    that module plants offer a robust way to be flexible in uncertain environments.
+
+
+    Allen et al. address the sizing and allocation of modular and transport infrastructure
+    for gas processing under uncertain production rates. They introduce the concept
+    of keys that can be moved in parallel within each processing plant. A structure
+    of multi-period stochastic programming is used to solve the multistage stochastic
+    problem. They consider alternative locations, facilities size and production forecasts.
+    The results show that it is possible to conclude that modular units show much
+    better benefits over the permanent plants with fixed capacities. Hong et al. (2020)
+    propose an MILP model to optimally determine the time to build each plant, as
+    shown in Fig. 13. In contrast to the previous approaches, well production start
+    times are also variables in the problem, but the problem is solved under deterministic
+    conditions. Curtaining gas production is a feasible option when the processing
+    capacity is not large enough, and the
+
+
+    conservative assumption that the production being throttled is lost. Similar to
+    the contributions on development planning, this work confirms the synergistic
+    interaction of planning with the sizing and dynamic allocation of facilities can
+    enhance efficiency.
+
+
+    # 3.6.2. Pipeline networks
+
+
+    Drourmann and Grossman (2007) seek to optimize the planning of turn-in-line gas
+    pipeline networks through operations (i.e., operation of wells). Pipeline pressure
+    measurements provide information about production capacity; minimize costs from
+    gas compression as well are brought online, where revenues from gas are maximized
+    from an efficient plan of turning new wells. The authors introduce a MILP model
+    to determine the optimal location and capacity of compression stations to minimize
+    total investment and power compression costs. They also use a talled algorithm
+    to solve non-convex problems.
+
+
+    In the current work, an MILP model is used for linear infrastructure; second,
+    an MILP model is solved for non-linear infrastructure. Finally, a MINLP model
+    is used for the non-linear turn-in planning; and finally a global MINLP seeks
+    to optimize the integrated problem from the incumbent solution. The algorithm
+    is used to solve a robust solution from the Appalachian Basin, which is a representative
+    model of the field.
+
+
+    Wang et al. (2022) assess the design and planning of pipeline networks for natural
+    gas. Hydraulic equations and detailed production reports are accounted for in
+    the selection of pipeline diameters, nonlinear correlations are accounted for
+    by using linear correlations. They solve the problem by combining linear programming
+    (for the flow sub-problem) with Monte Carlo simulation (for the optimal design).
+
+
+    The study addresses the design and planning of pipeline networks for natural gas.
+    Hydraulic equations and detailed production reports are accounted for in the selection
+    of pipeline diameters, nonlinear correlations are accounted for by using linear
+    correlations. They solve the problem by combining linear programming (for the
+    flow sub-problem) with Monte Carlo simulation (for the optimal design).
+
+
+    +   More recently, Montana et al. (2022) address the optimal design of
+
+
+    12'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: 'M.G. Droussen et al.
+
+
+    Computers and Chemical Engineering 177 (2023) 108317
+
+
+    ![](img/b1a54ba24a183aff0397d529dfa0b154_12_0.png)
+
+
+    **Fig. 14.** Illustrative representation of the main elements comprised of the
+    upstream supply chain optimization model and the size data related to every production
+    site. (adapted from Montague and Cafaro, 2019).
+
+
+    pipeline networks gathering multiphase flow from shale oil wells. We develop a
+    comprehensive MINLP formulation to optimally determine the number, size and location
+    of tank basins and processing facilities together with pipelines. Non-convex relaxations
+    are used to predict performance, transport oil, the model to properly specify
+    size dimensions. Given the complexity, we develop an NLP-decomposition approach
+    to find better solutions, also implementing refinement strategies to tighten bounds
+    on the objective function and learn from the shale oil industry to achieve a global
+    optimality of 5%.
+
+
+    activity moves to shift shale development areas. To reduce the computational burden,
+    nearby wells with many characteristics are grouped and aggregated into a single
+    geographical node, which is usually representative of the materials that and services
+    are supplied in the oil and gas industry.
+
+
+    # 3.7. Life cycle and sustainability
+
+
+    Following a comprehensive literature review on optimization tools addressing the
+    environmental impacts of the shale gas industry, Gas and You (2017a) identified
+    several relevant research areas. Based on the need to integrate sustainable design
+    approaches, they provide a series of methods for design and operational strategies
+    while accounting for sustainability. This can be regarded as sustainable optimization
+    at a supply chain (well-to-wire level). In parallel, life-cycle assessment tools
+    have focused on evaluating the environmental impact of energy systems, using multi-criteria
+    Pareto frontiers. As a result, contributions in this field (as summarized in Table
+    6) have been grouped into two categories, as shown below
+
+
+    # 3.6.3. Supporting chains
+
+
+    Bounding the scope of facility planning problems in the oil and gas industry,
+    Tan and Barton (2017) address the optimal design of a country-wide supply chain
+    network, involving multiple sites. We propose an integrated framework for the
+    Pennsylvania, Haynes Eagle field in the United States. The aim is to determine
+    the optimal location, number and capacity of different types of plants (shale-skimming
+    refineries, gas-to-LNG plants, crude oil and diesel fuel refineries). The model
+    also considers the transportation modes (pipeline, rail, bath) to access the network.
+    For uncertainty, different scenarios are proposed based on crude oil prices. A
+    limiting assumption is that shale gas prices are linked to oil prices. The study
+    develops a two-stage stochastic programming whose deterministic evaluation leads
+    to a large-scale multipier MINLP. Finally, the model determines the optimal location,
+    capacity, and average response time of facilities from which materials and services
+    are delivered to the field. As depicted in Fig. 14, the optimization, under the
+    assumption that the development plan is interesting, and in the conventional oil
+    and gas industry, supply chain adapts to the drilling
+
+
+    Chen et al. (2017) use a multi-level framework to improve the development of shale
+    gas fields. These采取 seek leader-follower optimization over environmental, economic
+    and energy resources, through sustainable decisions: the lower level accounts
+    for sustainability like life-cycle greenhouse gas (GHG) emissions and focuses
+    on operational efficiency while the upper level seeks to minimize the life-cycle
+    of energy supply. In a subsequent contribution, Chen et al. (2018) develop a non-rigorous
+    multi-decision criteria that integrates life-cycle analysis, linear programming
+    and multiobjective programming (to handle uncertainty). They argue that, compared
+    with the pure economic optimization scheme, the consideration of an environmental
+    objective would lead to 17% reduction of GHG emissions, and freshwater consumption,
+
+
+    13'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '![](img/b1a54ba24a183aff0397d529dfa0b154_13_0.png)
+
+
+    Fig. 15. Pareto curve for the mitigation of the aggregated environmental impact
+    and the maximization of the profit shareholders (Caballero et al., 2020).
+
+
+    based on a real application of their framework to an Appalachian Basin based shale
+    gas chain.
+
+
+    In turn, Wang and Zhang (2019) present an empirical analysis of the sustainable
+    development of the shale gas industry in China. The study impacts of water shortage,
+    water pollution, pipeline density, geology, market risks and technology are the
+    first three major influencing factors for the sustainable development of gas chain
+    in China. Kroetz et al. (2019) develop a MILP for shale gas pipeline network development
+    accounting for habitat loss. In Pennsylvania (USA), they conclude that the incorporation
+    of impacts associated with both well and pipeline siting ensures more local environmental
+    benefit. Optimization models to guide the pipeline siting and process design benefit
+    local communities, companies, and stakeholders to identify cost-effective options
+    for land conservation. In an extension of their contributions to the management
+    field, Caballero et al. (2020) develop a Life-cycle assessment (LCA) model. The
+    model assesses the most common technologies for desalination. Based on economic
+    and environmental results from a bi-criterion LIFM formulation, the market analysis
+    shows that membrane vapor recompression (MVR) is the most suitable technology
+    for the wastewater treatment. They prove that by justing 1.0% of the profits,
+    the environmental impact decreases up to 13.5%, as shown in point and C in Fig.
+    15.
+
+
+    relationships between multiple stakeholders. Solving their MILBFP (mixed-integer,
+    bilinear, fractional programming) model to global optimization of shale gas supply
+    chain, they conclude that the noncompetitive perspective provides more insights
+    into the life contribution, and that applications of CCS (carbon capture and storage)
+    lead to significant improvement of the overall environmental performance of the
+    shale gas supply chain.
+
+
+    A second paper of the same group on the topic (Gao and You (2019)) presents a
+    mixed-integer nonlinear programming model to address environmental impact and
+    modular transformation into well-wire shale gas supply chains. The model can be
+    viewed as an extension of the previous contribution, leading to the conclusion
+    that decisions regarding infrastructure design and investment are interdependent.
+    The planning factors are the key factors that lead to economic and environmental
+    performances in a shale gas supply chain. In recent, the authors (Gao and You
+    (2018)) address the sustainability of shale gas supply chain using an integrated
+    hybrid life cycle optimization (LCO) modeling framework that, unlike the traditional
+    process-based systems that suffer from the trade-off between economic costs and
+    carbon emissions factors.
+
+
+    # 3.7.2 Supply chain
+
+
+    Holistic analysis of shale gas has been field proposed in recent papers by Gao
+    and You (2017, 2017, 2018, 2019). In their seminal contribution, Gao and You (2017)
+    propose a general modeling framework for the economic and environmental life cycle
+    optimization of supply chains and products with non stochastic stakeholders. The
+    framework defines functional-units of each for life cycle operation, although
+    a leader-follower Stackberg game structure is introduced to capture the decentralized
+    decision-making and noncooperative'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# Detailed comparison of selection, results on publication date.
+
+
+    | Publication | Oil/Gas | Problem Scope | Objective(s) | Degrees of Freedom |
+    Model Type | Solution Strategy | Uncertainty Consideration |
+
+    |---|---|---|---|---|---|---||
+
+    | Droven al. (2016) | Gas | Upstream | | Refactoring tuning | MILP, MILP | Reformulations
+    of Disjunctive Programming Models. | No |
+
+    | Droven et al. (2017) | Gas | Upstream & Midstream | Max NPV | Decision to drill,
+    or wait (Wait-and-Now) + Recourse (drill, refract or wait) | MILP | Two-stage
+    programming over a moving-horizon framework. | Yes (endogenous: gas price; endogenous:
+    volatility/ response) |
+
+    | Cafaro et al. (2018) | Gas | Upstream | Max NPV | Well-shut and inside decisions.
+    State and control variables | MILP | Global optimization solver. | No |
+
+    | Fien (2018) | Oil / Gas | Downstream | Max NPV | Drilling (production injection
+    wells) + Connection facilities. Installation and refining costs. | GDP | MINLP
+    reformulation | No |
+
+    | Calderón & McKinney (2020) | Gas | Upstream | | Well-shut and restart operations
+    and control variables | MILP | Iterative cluster-based strategy. | No (just a
+    simple analysis) |
+
+    | Hilse et al. (2020) | Gas | Upstream | Max NPV | Pseudo-dynamic models + | MILP
+    | Decomposition (sequential) - Piecewise linear approx. | Yes (endogenous: gas
+    price; endogenous: productivity) |
+
+    | Zuo & Cremaschi (2021) | Gas | Upstream | Max NPV | Selection of almost-first-list
+    system. Time to install and remove ALS. | MILP | Multi-stage stochastic programming.
+    | No |
+
+    | Akhlar et al. (2021) | Gas | Upstream | | Selection of almost-first-list system.
+    Allocation to time and length of lifting. | MILP | Commercial solver | |
+
+
+    that moving to lower carbon emissions causes the shift towards natural-gas-derived
+    method (from mainly shale gas) that is used for the production of olefins.
+
+
+    # 4. Critical assessment and new research opportunities for optimization modeling
+
+
+    In the following paragraphs, we critically review current contributions to the
+    literature in the area of oil and gas development optimization. By identifying
+    major opportunities for future research we reveal the advancements in the field.
+
+
+    One of the main challenges to date is to focus on the optimization of regional
+    or site-specific shale development strategies. There have been studies dedicated
+    to the impact that fully optimized shale development can have on energy supply
+    security at an international level. Furthermore, the replacement of field gas
+    natural gas power plants in the US-fueled by the shale gas has resulted in a decrease
+    in CO2 emissions, but the higher operational cost is needed for the centercity
+    strategy to achieve growth (Clemente, 2022). At the same time, methane emissions
+    from oil and gas operations continue to present a major concern (Coble et al.,
+    2021). It seems for the research community to explore and quantify these tradeoffs
+    that policymakers and the public can better evaluate these risks and uncertainties
+    in shale and gas development.
+
+
+    In this context it is also worth noting that, Tables 2-5 indicate the consideration
+    of uncertainty in their development planning optimization models over the past
+    years. Uncertain focus on production uncertainty and demand. However, there is
+    a broader uncertainty that the shale oil and gas industry, is the political support
+    and the public''s perception of the energy sector. As observed by Vergin (2022)
+    - [Many [...] believed that demand for oil gas in 2019 was quickly replaced by
+    renewables. Expected demand during COVID lockdowns seemed to validate that assessment
+    as.
+
+
+    energy transition was thought to be on its way, facilitated by a wide range of
+    government policies. That perception was upon against reality. Demand for oil
+    and gas bounced back and economies rebounded. Furthermore, the war in Ukraine
+    increased the demand for energy in Europe given the sharp cut in the supply of
+    natural gas. The global energy supply could not keep up, in large part due to
+    volatile energy sources. No framework has been proposed yet to address the challenge
+    of the decarbonization at the (international) scale (i.e., accelerate or decelerate
+    the development of shale resources or regions by optimization.
+
+
+    Moreover, from Fig 7, the field of water management has received increased attention
+    from the optimization community. However, it is remarkable that all work that
+    is in the Appalachian Basin has been focused on water development from shale operations,
+    particularly every study focuses on water support models with oils. There are
+    two areas of interest: first, the water (or water production) with oil production,
+    which has high demand in the Appalachian Basin and other development areas. In
+    the part of the Permian Basin, shale produce 9 barrels of water for every 1 barrel
+    of oil. A shale-based in comparison shows together over 70 times as much water
+    as the Appalachian Basin.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Table 4
+
+
+    | Publication | Oil/Gas | Problem Scope | Objective(s) | Degrees of Freedom |
+    Type | Solution Strategy | Uncertainty Consideration |
+
+    | --- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | Drouven & Grosmann (2017) | Gas | Water management | Max NPV | Fracturing schedule,
+    water deliveries, water blending, storage/placing/treatment units | MINLP | Commercial
+    solver | No |
+
+    | Lopez-Diaz et al. (2018) | Gas | Water management | Min costs, environmental
+    impact | Count/size of storage/treatment units | MINLP | Commercial solver | No
+    |
+
+    | Carreño et al (2018) | Gas | Water management | Max stability profit | Freshwater
+    scheduling, placement; sizing storage tanks; fracturing schedule, water reuse,
+    treatment units | MINLP | Custom decomposition strategy | No |
+
+    | Tavalli (2018) | Gas | Water management | Min costs | Coordination of water/transportation/disposal,
+    sizing of treatment units | (MIN) | Genetic algorithm | No |
+
+    | Abmad et al. (2019) | Gas | Water management | Min costs | Fracturing schedule,
+    disposal, water volume, treatment/capacity expansion | MINLP | Commercial solver
+    | No |
+
+    | Carreño et al (2019) | Gas | Water management | Max coeffic profile | Water
+    scheduling, placement/sizing storage tanks, fracturing schedule, operator pays/parameters
+    | MINLP | Commercial solver | No |
+
+    | Al-Booski & El-Halevi (2019) | Oil & gas | Produced water | Max profit | | MINLP
+    | Commercial solver | Yes (Solar irradiance, price focus) |
+
+    | Ole et al. (2019) | Gas | Upstream, downstream and water management | Max profit
+    | Water scheduling, water treatment/design, sizing of processing/power plants/pipelines
+    | MINLP | Commercial solver | No |
+
+    | Ren et al. (2019) | Gas | Water management | Min costs | Water coordination,
+    flow direction, use | LP | Multi-objective programming | Partial (sensitivity)
+    |
+
+    | Cafaro & Grosmann (2020) | Gas | Upstream planning and water management | Max
+    NPV | Size of water patterns and storage facilities, development planning, scheduling/design
+    (including fracturing schedule) | MINLP | Commercial solver | No |
+
+    | Ole et al. (2020) | Gas | Upstream, downstream and water management | Min costs
+    | | MINLP | Commercial solver | Yes (Gas price and demand) |
+
+    | Carreño et al. (2021) | Gas | Water management | Min operational cost, first
+    among companies | Water supplies, treatment facilities, by-product water reuse,
+    Piping and construction of water reuse/installation and expansion of facilities
+    | MINLP | Nash hashing approach, function linearization | No |
+
+    | Drouven et al. (2022) | Oil & gas | | Min total cost, Max water reuse | | MINLP
+    | Free & commercial solver | No |
+
+    | Hernández-Perez et al (2022) | Gas | Water management | Min Total Cost, Min
+    Total Water Requirements | Well scheduling, freshwater consumption, inner water
+    flow, treatment, and-sizing | MINLP | Commercial solver | Yes (deterministic)
+    + metaheuristic |
+
+    | Serrano-Arrazola et al (2022) | Gas | Water management | Min Total Cost, Min
+    Total Water Requirements | Selection of water, source, and storage strategies.
+    Wastewater segregation. Seasonal availability in freshwater | MINLP | Commercial
+    solver | No |
+
+    | Cao et al. (2023) | Gas | Upstream planning and water management | Max NPV |
+    CWT and facility constraints (compression, expansion) Modular devices, development
+    planning, Water / CO2 supplies for fracturing, treatment and sizing of produced
+    water/CO2 development | MINLP | Commercial solver | No
+
+
+    and interconnected networks of water pipelines passes across the states of Texas
+    and New Mexico. These ''hydrohydraulic fracturing'' (Collins, 2021) have facilitated
+    the large-scale usage of water which is a common concern in many arid regions.
+    In the Permian Basin, for instance, become reliant on the injection of brine into
+    saltwater disposal as a means of managing the massive quantities of water that
+    producers bring to supply. Yet, there has been little work focused on modeling
+    or optimizing produced water injection dynamics and their implications. This is
+    noteworthy since recent years, produced water disposal has been linked to
+
+
+    induced seismicity in Ohio, Texas and New Mexico. In others, where the industry
+    injection of water into the subsurface, surface earthquakes up to magnitude 5.0
+    and beyond has become a major concern. In fact, Texas has recently been described
+    as the ''earthquake capital of the U.S.'' (Chen and May, 2022). An increase in
+    seismic activity—both in terms of frequency and magnitude—has driven ramifications
+    for oil injection and energy security in the United States.
+
+
+    Another topic that could be of great interest to the broader optimization community
+    is how oil and gas produced water'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: 'M.G. Drown et al.
+
+
+    Computers and Chemical Engineering 177 (2023) 108317
+
+
+    management could contribute to transport and sequestration opportunities. Offfields
+    utilize the world already making use of CO2 for enhanced oil recovery (EOR). CO2
+    is transported over long distances from capture facilities (e.g., natural gas
+    facilities) to well-located sites with high-pressure wells. CO2 is injected into
+    saline reservoirs. In the lower, geology 60 million barrels of reservoir are capable
+    of permanent storage. In principle, that water could be carbonized by dissolving
+    CO2 into the reservoir water prior to injection and could then be sequestered
+    underground.
+
+
+    and proved to be beneficial. Lately, to do work on shale production planning have
+    addressed the fact that the response of producing wells to intervention (even,
+    like curtailment) is, in essence, unprecedented. Optimization of capture, storage,
+    and usage (CCUS) is an emerging research topic that benefits from knowledge from
+    oil and gas production models.
+
+
+    On the topic of topics, gathering and processing optimization, transportability,
+    mobility and flexibility to combine with uncertainty and demand volatility are
+    features of the optimal allocation of shale to processing facilities. If the design
+    of pipeline networks is integral to the facility planning problem, nonlinear and
+    cost-related models need to be solved together in a multilevel and combinatorial
+    approach (Cafaro, 2022). Within this topic, stochastic programming approaches
+    are hard ever. Given the complexity, optimization for the design of networks and
+    the distribution of refined products used only on the assumption that the demand
+    plan is given. The integration of well planning decides proves to be better, but
+    it is certainly difficult. Despite that, in practice, the decisions on wells are
+    interconnected with each other, by different businesses within shale oil and gas
+    companies. Moreover, the design of supply chains containing other attributes,
+    like pipelines, which are required by shale oil and gas operations, is complex.
+    Logistics represents a significant aspect of the overall cost of operations and
+    provides for improvement in the supply chain.
+
+
+    As a result of market lack, the Camfield Company (Carfax.com) has successfully
+    been co-injecting water and CO2 for storage purposes since 2014. To the oil and
+    gas industry, co-injection could be of potential interest if water is classified
+    as CO2 for which tax credits in the United States are currently valued at $85
+    per ton. To put this opportunity into perspective, we refer to a case study in
+    the Permian Basin (Wright, 2021), where 7 million barrels of produced water were
+    injected every day. At a depth of 800 m (which is the depth of a class II well)
+    all of which was injected, it is estimated that over 40 million tons of CO2 could
+    be co-injected in the Persian Basin every year. Considering that the passenger
+    vehicle in the United States emits 4 million tons of CO2 every year (8.7 million
+    vehicles), it is important to recognize that CO2 injection will not solve the
+    global carbon problem, but could represent a significant contribution to carbon
+    management efforts. The assessment of integrated water and CO2 pipelines would
+    need projects for the projects management coalition.
+
+
+    Surprisingly, noting the lack of addressed sustainability in optimization planning,
+    few models seem to deal with uncertainty, in terms of its forms. On one hand,
+    all of these models are based on statistical data that is subject to inaccuracies.
+    On the other hand, energy forecasts foresee many scenarios in a totally decarbonized
+    world where the use of data analytics could enable the transition to sustainable-optimization
+    models.
+
+
+    Finally, in certain parts of the oil world, brine are known to contain lithium
+    (Smith et al., 2019). brine produced from the Smackover formation in the United
+    States can contain over 500 mg/l of lithium. This has resulted in mineral offering
+    opportunities for lithium recovery. While United States has also been shown to
+    contain shale basins with high concentrations of lithium (S.U. EPA, 2016), the
+    main challenges in this area are that lithium concentrations tend to vary at different
+    times. Unlike mining operations, which however (Workley, 2019) require brine deliveries
+    with consistent frequency for their extraction processes to perform. One important
+    challenge is that the amount of water is required to perform lithium recovery.
+    What would suggest that this is an opportunity to develop decision-based support-tools
+    that allow gas operators to quantitatively explore for the recovery of lithium
+    and other potential minerals and elements from produced waters.
+
+
+    Finally, we need to note that, very shale-specific optimization models have been
+    implemented in fully supported software systems. The oil and gas industry still
+    lacks robust database and software solutions for managing field production programs
+    (e.g., WellView, Aries, etc.), which might not or do not make use of many advanced
+    programming techniques. The main uses of the aforementioned software frameworks
+    are for monitoring, control, and reporting. This provides an opportunity for the
+    academic community to better understand the particular workflow of this “asset
+    targets” in shale, and tailor optimization-of-production models.
+
+
+    # 5. Conclusions
+
+
+    This paper has presented a comprehensive review of optimization methods for shale
+    oil and gas development. It has provided a general overview of the operations
+    involved in the production of shale gas and oil well. Next, it has offered a comprehensive
+    overview of optimization strategies and approaches for development planning planning,
+    production optimization, supplies, water management, gathering and processing
+    optimization, and life cycle analysis (LCA) and sustainability problems.
+
+
+    In the area of oil gas production production, recently show that those optimization
+    models were suited for mathematical production planning (Liu et al., 2020), however
+    only few contributions have used the use of this approach for other production
+    engineering techniques in shale oil and gas assets. Problems leading to large-scale,
+    non-linear integer programming (MINLP) formulas. Piecewise linear approximations
+    are the closest match to address nonlinearities. Not on level, accurately predicting
+    and controlling (reservoir) responds to a wide range of interventions that requires
+    deep knowledge of both process systems and reservoir engineers (Shi et al., 2018).
+    The effort to recover reservoir models as much possible, while being representative
+    enough to capitalize production optimization
+
+
+    17'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'Detailed comparison of selection, recent publications on, gas gathering and
+    optimization strategy for platform.
+
+
+    | Publication | Oil/Gas | Problem Scope | Objective(s) | Degrees of Freedom |
+    Model | Solution Strategy | Uncertainty Consideration |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | Tan & Barrios (2016) | Gas | Upstream & Midstream | Max NPV | | Allocation of
+    mid liquids and LNG plants | MILP | Deterministic equivalent of two-stage stochastic
+    programming model. | Yes (homogeneous demand, gas production forecast) |
+
+    | Allen, Allende, El-Hargai (2019) | Gas | Upstream | Min Net Present Cost (NPC)
+    | | Number, size, and location of modular gas production units (skids). | MILP
+    | Deterministic equivalent of multi-stochastic programming model. | Yes (homogeneous
+    production forecast) |
+
+    | Hong, Li, Zhang & Gong (2020) | Gas | Upstream | Max NPV | | Production start
+    times. Allocation (purchase and mobilization) of gathering facilities. | MILP
+    | Commercial solver. | No |
+
+    | Droussen & Graham (2017a) | Gas | Upstream | | | To handle leaks. Pressures
+    at the nodes of the pipeline network, flow capacities and compression | MILP |
+    NLP for initialization. Bounding MILP for solution finding. Global NLP from incumbent.
+    | No |
+
+    | Hong, Di, Shi, Chen & Long (2020) | Gas | Upstream | Max NPV | | | Pipeline
+    locations, diameters. Flows and pressures over time. | MILP | Piecewise linear
+    approximation with discrete ranges for diameters. | No |
+
+    | Zhang, Li & Liang (2022) | Gas | Upstream | Min Purchase + Costs | | | MILP
+    | Commercial solver. | No |
+
+    | Montana, Cagiao, Barth, Wu & Furman (2021) | Oil | Upstream | Min NPV | | Number
+    and size of location of tanks and processing facilities. Pipeline connections
+    and compression | MILP | NLP decomposition and refinement strategies for solutions.
+    MILP relaxations for bounding | |
+
+    | Tan & Barrios (2017) | Gas | Upstream & Downstream | Max NPV | | Location and
+    capacity of plants (refineries, gas and LNG plants) Transportation modeling |
+    Deterministic equivalent of two-stage stochastic programming model. | Yes (egOD,
+    gas-price linked) |
+
+    | Montana & Cagiao (2019) | Oil | Upstream | Min NPV | | Size and location of
+    facility and service provision to all wells. | MILP | Clustering of wells. | No
+    |
+
+    | Wu et al. (2022) | Gas | Upstream | Min Total Annual Costs | | Exploration and
+    production facilities. | LP/NLP -> Metaheuristic | Linear Programming (network
+    flow) | Yes (Monte Carlo simulation)
+
+
+    In terms of optimization models for development planning summarized in Table 2,
+    it is clear that most of the work has aimed at gas and very little oil. It is
+    interesting to point out that 4 of the 12 models use uncertainty constraint. Most
+    of the proposed models use MILP, heuristic or tailored decomposition techniques.
+    With respect to production optimization models summarized in Table 3, they are
+    NLP, MILP, and MINLP, with 7 out of 8 models considering uncertainty.
+
+
+    Future work needs to address the challenges in oil and gas optimization, especially
+    integration of renewable energy sources. To address the impact on the environment,
+    long term expansion planning models (e.g., Lara et al., 2018) and Li et al. (2022)
+    should be included to help gas models to assess the benefits of fuel energy and
+    supply flexibility and the penetration of renewables such as gas and wind. It
+    is important to quantitatively evaluate the impact of decreased CO2 emissions
+    by replacing coal with natural gas for power generation.
+
+
+    In terms of water management models summarized in Table 4, there is nearly equal
+    split between MILP and MINLP models, and only one model considers uncertainty.
+    For scheduling and processing optimization problems, most models use MILP or MINLP
+    solvers.
+
+
+    For gathering and processing optimization models summarized in Table 5, there
+    are far more MILP models than MINLP, with 4 out of 10 considering uncertainty.
+    In life cycle analysis of gas systems, studies focus on the development of recycling
+    and treatment of water, as well as strategies for reducing methane emissions.
+
+
+    Furthermore, there are interesting possibilities for carbon sequestration in oil
+    and gas fields, as well as opportunities for carbon capture and storage technologies.
+
+
+    Finally, we conclude that mathematical programming techniques have played a major
+    role in the optimization of shale and gas development systems. It is clear that
+    they have shown their value as instance demonstrated by water scheduling tool
+    that EQT Corporation with a project expected to save the $25–35M per year (Ecot
+    et al., 2019).
+
+
+    Finally, we state that there are a number of outstanding we
+
+
+    # Declaration of Computing Interest
+
+
+    The authors declare no competing financial interests or personal relationships
+    that could have influenced the work reported in this paper.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '# Detailed comparison of selection, recent publications on LCA and sustainability
+    in fields.
+
+
+    | Publication | Problem | Objective | Degree of Freedom | Model Type | Solution
+    Strategy | Uncertainty |
+
+    | --- | --- | --- | --- | --- | --- | --- |
+
+    | Gao & Yu (2017b) | Gas | Upstream, Midstream & Downstream | * NPV Life Cycle
+    Impacts of Functional Units | Location and site of facilities; Selection of products,
+    and processing technologies, and end-use criteria | Leader-follower Stockenberg-game
+    MILIBP (bilevel, fractional programming) | Custom global optimization strategy;
+    Parametric, project-based decomposition. | No |
+
+    | Gao & Yu (2017c) | Gas | Upstream, Midstream & Downstream | * MNPC * Min Endpoint
+    Environmental Impact | Drilling schedule, water management, sourcing of equipment,
+    and sizing of gating pipelines. | MILNP (nonlinear integer fractional programming)
+    | Custom global optimization strategy based on a parametric and branch-and-branch
+    | No |
+
+    | Chen et al. (2017) | Gas | Upstream, Midstream & Downstream | * Max Benefits
+    * Min GHG Emissions | Number of wells, developed water (e.g., freshwater, water
+    treatment plants). | Multi-Level Programming (MLP) | Multi-level decomposition
+    | No |
+
+    | Chen et al. (2018) | Gas | Upstream, Midstream & Downstream | * Max Benefits
+    | Min GHG Emissions | Planning of sites, drilling production, location and sizing
+    of plants, gating pipelines and electricity infrastructure. | MILP | Integration
+    of LCA; multi-objective, and multi-criteria | No |
+
+    | Gao & Yu (2019) | Gas | Upstream, Midstream & Downstream | * Min Total LC GHG
+    Emissions * Water Consumption | None (optimization) | For region selection, production
+    capacity, management planning, risk network. | MILP | Parametric algorithm based
+    on Newton''s method | No |
+
+    | Wang & Zhou (2019) | Gas | Upstream | None (optimization) | For region selection,
+    water transportation, pipeline design, capacity, risk network topology. | Driving
+    force-pressure-static-impact-response-model (DPSRM) | Empirical: Co-evolution
+    accelerated genetic algorithms (RGA) and projection pursuit (PP) | |
+
+    | Kretz et al. (2019) | Gas | Midstream | * Min Costs * Min Habitats Impacts |
+    | MILP | Commercial solver | No |
+
+    | Caballero et al. (2020) | Gas | Upstream | * Max Profit * Min Environmental
+    Impacts | Fracturing schedule, gas production profile, water treatment facilities,
+    flow levels in tanks. | | MILP | Commercial solver | No |
+
+
+    # Data availability
+
+
+    No data was used in the research described in this article.
+
+
+    # References
+
+
+    Ashkar, V.G., Vargo, V.G., Mendez, C.A., Daro, C., 2021. Optimal planning of a
+    lifecycle operation in a shale gas multipield. AIChE 37 (6), e17199. https://doi.org/10.1002/acct.17199.
+
+
+    Ahmed, M.S., Ali, S., & Khan, S., 2019. Neuro-futuristic modeling and optimization
+    for life cycle assessment for shale gas water management using algorithm. Energy
+    Conversion 189, 113084. https://doi.org/10.1016/j.enconcon.2019.113084.
+
+
+    Al-Abousi, F.Y., El-Hajweh, M.M., 2019. A stochastic optimization approach to
+    the design of shale gas/water treatment systems with multiple energy sources and
+    life-cycle assessment. Journal of Cleaner Production 233, 114468. https://doi.org/10.1016/j.jclepro.2019.114468.
+
+
+    Ali, A., & El-Hajweh, M.M., 2019. Capacity planning and modeling of gas distribution
+    and transport infrastructure for shale gas production and integration. Ing. Eng.
+    Res. 150, 106332. https://doi.org/10.1016/j.ijpr.2019.106332.
+
+
+    Arreondo-Ramirez, K., Ponce-Ortega, J.M., El-Hajweh, M.M., 2016. Optimal planning
+    and infrastructure development for shale gas production. Energy Conv. 129, 1155-1160.
+    https://doi.org/10.1016/j.energycon.2016.05.073.
+
+
+    Aznit, C., Ruiz, L., 2009. Life cycle assessment and inventory framework for product
+    systems. International Journal of Life Cycle 14(4), 229-235. https://doi.org/10.1008/0961-34090900110005
+
+
+    Bartholomew, T., Masek, S., 2018. Multiobjective modeling for life cycle assessment
+    and environmental impact in shale gas and water management assessments. ACS Chem.
+    Eng. 7 (4), 3728-3735. https://doi.org/10.1021/acschemeng.8b00121
+
+
+    Boole, E.M., 1988. Mathematical Programming in Python. John Wiley & Sons. ISBN
+    978
+
+
+    Bean M.U. (2020). Unconventional shale gas field development under pressure. PhD
+    Thesis, University of Texas. http://www.utexas.org/repository/140972
+
+
+    Beck, A., Riley, J.E., 2022. A scalable and analytical method to improve decision
+    quality in shale gas water wells. Jiers 213, 110827. https://doi.org/10.1016/j.jclepro.2022.110827.
+
+    Bigler, L.T., 2017. New nonlinear programming frameworks for the future of process
+    optimization in the chemical industry. Energy 138, 17-183. https://doi.org/10.1016/j.energy.2017.03.019.
+
+    Bose, W., 2080. Feasibility of production of oil and gas from hydraulic fracturing
+    reservoirs. Energy & Fuels 34(5), 4000-4010.
+
+    Caballero, L., Jabarra, J.A., Quintero, N., Carretero-Perado, A., Gussmann, I.,
+    2020. Environmental impact assessment of shale gas production. International Journal
+    of Cleaner Production 254, 120368. https://doi.org/10.1016/j.jclepro.2019.120368.
+
+    Caballero, L., Castro, D.M., 2016. Strategic planning, development and evaluation
+    of shale gas water treatment systems. International Journal of Cleaner Production
+    114, 93-104. https://doi.org/10.1016/j.jclepro.2016.02.030.
+
+    Caballero, L., Castro, D.M., 2020. Optimization of design of water pipeline networks
+    for the development of shale gas wells. AIChE Journal 66 (1), e108. https://doi.org/10.1002/aic.15708.
+
+    Castro, D.M., Drouvets, M.G., 2018. Continuous-time formulations for the design
+    and operation of shale gas water treatment facilities. AIChE Journal 65 (6), 1551-1561.
+    https://doi.org/10.1002/aic.13695.
+
+    Calderon, A.J., Guerra, O.A., Petragiani, J.I., Liorka, J.R., Velakis, G., 2015a.
+    Preliminary evaluation of shale gas supply chain development strategies. Ing.
+    Eng. Res. 54 (4), 10334-10349. https://doi.org/10.1016/j.ijpr.2015.03.012.
+
+    Calderon, A.J., Guerra, O.A., Petragiani, J.I., Liorska, J.R., Velakis, G., 2015b.
+    Financial considerations in shale gas supply chain development. Energy 107, 4446-4457.
+    https://doi.org/10.1016/j.energy.2016.06.017.'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: 'M.G. Brown
+
+
+    Computers and Engineering 177 (2023) 108317
+
+
+    Gao, J., Castro, S., and Owens, K. J. (2023). The benefits of utilizing small
+    molecule design for flexible gas supply chain management. J. Clean Prod. 344,
+    135282; https://doi.org/10.1016/j.jclepe.2022.135282.
+
+
+    Carreiro-Parrido, Q., Uribe, A., Saldo-Diaz, Ruiz-Femeiza, R., Onstibi, V., Caballera,
+    J., Gassmann, I., et al. (2018). Holistic allocation and cooperation in gas supply
+    chain management. J. Clean. Prod. 57(39), 13311-133114; https://doi.org/10.1016/j.jclepro.2018.09.205
+
+
+    Gao, J., and Yu, F. (2015). Dealing with uncertainty in gas supply chain design
+    and optimization: novel modeling framework and computationally efficient solution
+    algorithm. Alchem.E J. 61 (11), 3739-3755; https://doi.org/10.1002/alchem.201410
+
+
+    Gao, J., and Yu, F. (2015). Operational design and operation of supply chain networks
+    for natural water gas production. Energy 96(4), 11184-11208; https://doi.org/10.1016/j.energy.2015.06.062
+
+
+    Gao, J., and Yu, F. (2015). Strategic gas supply chain design and operations for
+    economic life cycle performance: MINLP model and genetic algorithm. Comput. Ind.
+    Eng. 106, 597-608; https://doi.org/10.1016/j.cie.2016.08.010.
+
+
+    Carreiro-Parrido, Q., Uribe, A., Saldo-Diaz, R., Ruiz-Femeiza, R., Onstibi, V.,
+    et al. (2021). Strategic supply chain management in the gas industry: cooperation
+    of gas suppliers and consumers. Res. Environ. Environ. 177(11), 67237-67242; https://doi.org/10.1007/s40693-021-00499
+
+
+    Gao, J., and Yu, F. (2017). Modular manufacturing for the next game-changer in
+    gas supply chain design and operations for economic life cycle performance. Energy
+    135, 1053-1060; https://doi.org/10.1016/j.energy.2017.03.028
+
+
+    Chen, H., Chen, Y., Liu, J., and Li, H. (2017). Life cycle assessment of gas supply
+    chain emissions and water footprint for gas supply chain planning based on multi-objective
+    optimization. Energy, 134, 382-398; https://doi.org/10.1016/j.energy.2017.05.038
+
+
+    Gao, J. (2019). Analysis of gas supply chain dynamics using dynamic material flow
+    analysis. Alchem.E J. 79(9), 1099-1104; https://doi.org/10.1002/alchem.201803114
+
+
+    Chen, Y., Gao, J., Chen, B., et al. (2019). Integration and allocation of greenhouse
+    gas emissions in oil gas production: life cycle assessment and process simulation.
+    Comput. Clean. Prod. 223, 119633; https://doi.org/10.1016/j.jclepro.2019.119633
+
+
+    Gifford, A. W., Hough, O.L., Tayds, H. (2008). Water supply chain management using
+    life cycle assessment. The International Journal of Life Cycle, 20(6), 1063-1078;
+    https://doi.org/10.1080/159443908022165-x
+
+
+    Collins
+
+
+    Grosman, M., Gassmann, I., et al. (2016). Integration of multi-period planning
+    and design in active management of development gas supply chains. Alchem.E J.
+    62(12), 4297-4306; https://doi.org/10.1002/alchem.20160114
+
+
+    Gao, J., and Yu, F. (2021). Evaluation of the environmental impact of oil shale
+    refining using life cycle assessment. Energy. 205, 525-537. https://doi.org/10.1016/j.energy.2018.118945
+
+
+    Zheng, Y., Wang, J., et al. (2020). PARTO-based optimization of energy-sourced
+    water gas production. Opt. Energy. 128, 107410; https://doi.org/10.1016/j.optene.2020.107410
+
+
+    Feng, F., Xu, S., Shen, X., Zhang, J., Wang, S., and Zhao, Y. (2022). Advantages
+    and challenges in shale gas supply chain: a review. Energy Dev. Res. 44(4), 406-418;
+    https://doi.org/10.1016/j.egdr.2022.04.004.
+
+
+    Foss, R., Kindrun, B.R., and Grimast, B. (2018). Petroleum production optimization
+    - a strategic and dynamic approach. Comput. Chem. Eng. 184, 245-253; https://doi.org/10.1016/j.comchem.2018.09.010
+
+
+    EOQ Trust (2019). New market landscape, new focus. First quarter of 2019 update
+    report, April 25, 2019; https://www.reuters.com/article/id-USL1N2M6S21-business-report-q1
+
+
+    20'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: 'M.G. Brown et al.
+
+
+    Computers and Engineering 177 (2023) 108317
+
+
+    Kladson, B.R., Foss, B., 2015. Scale-based proxy models for field development
+    and production optimization problems. J. Nat. Gas Sci Eng. 27, 504-514, https://doi.org/10.1016/j.jnatgas.2015.04.012
+
+
+    Kladson, B.R., Foss, B., Conn, B., 2014a. Scale-based scheduling for gas-to-electricity
+    supply in electric power systems. Energy 81, 176-182, https://doi.org/10.1016/j.energy.2014.03.016-
+
+
+    Kladson, B.R., Foss, B., Conn, A., 2014b. Lagrangian relaxation based decomposition
+    for scheduling in shale gas markets. Comput. Chem. Eng. 66, 215-223, https://doi.org/10.1016/j.comchem.2014.03.012
+
+
+    Kladson, B.R., Sharma, S., Foss, B., 2020. On MILP heuristics for scheduling shale-gas
+    field development problems. Energy Policy 140, 2771-2786, https://doi.org/10.1016/j.energypol.2020.108804-108804
+
+
+    Kladson, B. and Foss, B., 2019. Systematically incorporating investment options
+    into shale gas field development: a vintage multi-objective spatial optimization.
+    Energy Conversion and Management 190, 111-123.
+
+
+    Kumer, A., Fattakul, H., Alam, J., Jirdash, H., 2019. Recovery efficiency of gas
+    from shale reservoirs: a review of challenges and directions. Energy 184, 1471-1475,
+    https://doi.org/10.1016/j.energy.2019.06.069
+
+
+    Li, C., Casey, J., Brown, M.G., Greenwell, I., 2020. Shale gas field development
+    under uncertainty: a stochastic programming approach. Energy 201, 118333.
+
+
+    Li, C., Hasan, J., ONeill, R.P., Siddiqui, J., Greenwell, I., 2021. Mixed-integer
+    linear programming models and algorithms for the planning and expansion of power
+    systems. Energy Res. 29 (3), 1071-1082, https://doi.org/10.1016/j.egyr.2020.09.015
+
+
+    Li, K., Hahn, J., Price, L., 2017. Multistage programming framework for control
+    and development of shale gas reservoirs. Energy 132, 951-960, https://doi.org/10.1016/j.energy.2017.02.038
+
+
+    Liu, J., Chen, Y., Zhang, Y., Wang, J., 2022. Optimal water management and recovery
+    for shale gas production under uncertainty. Energy Chem. 55, 131-145, https://doi.org/10.1016/j.energychem.2022.01.010-
+
+
+    Liu, J., Wang, J., et al., 2021. Well spacing and simulation focus on the Voraca
+    shale gas field. In: Proceedings of the SPE Hydraulic Fractacking Conference and
+    Exhibition, SPE-2063-MS.
+
+
+    Morton, M., Cummins, I., et al., 2013. Optimization of use of hydraulic fluids,
+    slickwater and fracturing for shale gas reservoir development. Energy 61, 375-389,
+    https://doi.org/10.1016/j.energy.2013.05.044.
+
+
+    Nouraei, M., Elbadawi, H., M.G., Greenwell, I., El-H, H., 2014. Optimization and
+    selection of shale gas wells using genetic algorithms. Chem. Res. 53 (18), 1841-1855,
+    https://doi.org/10.1021/cr502334g
+
+
+    Nouraei, M., Wang, J., Chen, Y., Zhang, Y., 2019. Optimization of water-energy
+    exchange in shale gas reservoirs: from exploration to production. Energy Conversion
+    and Management 246, 114, https://doi.org/10.1016/j.energycon.2019.11.093
+
+
+    Odek, A., Roucek, D., Blendino, N., Grossmann, I., 2019a. Multi-objective shale
+    gas field scheduling using a decomposition algorithm. Comput. Chem. Eng. 128,
+    47-50, https://doi.org/10.1016/j.comchem.2019.05.004
+
+
+    Odek, A., Roucek, D., Blendino, N., Grossmann, I., 2019b. Multi-system shale gas
+    field scheduling in gas markets. Comput. Chem. Eng. 128, 81-101, https://doi.org/10.1016/j.comchem.2019.05.035
+
+
+    Pascual-Gonzalez, J., Jimenez-Espinosa, L., Gullon-Gonzalez, G., Grossmann, I.,
+    2006. Macro-economic multi-objective input-output model for minimizing CO2 emissions:
+    application to the US economy. AIChE Journal 52 (2), 10, https://doi.org/10.1002/aic.02465-1
+
+
+    Peng, Z., Li, C., Greenwell, I., Kw, K., Kon, S., Foss, J., 2021. Multi-period
+    demand forecasting for shale gas development. Energy 217, 119675, https://doi.org/10.1016/j.energy.2020.119675
+
+
+    Peng, Z., Li, C., Greenwell, I., Kw, K., Kon, S., Foss, J., 2022. Shale gas field
+    development under uncertainty: robust optimization. Energy 242, 122939, https://doi.org/10.1016/j.energy.2021.122939
+
+
+    Ren, K., Tang, J., Yan, Y., Feng, J., Mok, H., 2019. Multi-objective optimization
+    of shale gas investment with water management: a case study from the Longmax shale
+    field. Energy 190, 785-793, https://doi.org/10.1016/j.energy.2019.01.045
+
+
+    Sanchez-Miera, R., Kalbaugh, M., 2015. Reservoir simulation and optimization of
+    Huff-and-Puff Operations in the shale market. Energy 94, 1472-1484, https://doi.org/10.1016/j.energy.2015.07.033
+
+
+    Sargarg, R.H., 2004. Shale gas engineering: a retrospective view with questions
+    for the future. Journal of the Petroleum Engineers, 129(6), 55-560.
+
+
+    Shi, J., Al-Shura, A., Bock, 2018. Optimal tracking control of shale gas field
+    development. AIChE Journal. 64(5), 1895-1906, https://doi.org/10.1002/aic.5438
+
+
+    The role of shale gas in the chemical industry. AIChE Journal. 60(2), 1013, https://doi.org/10.1002/aic.14438
+
+
+    Sun, A., Lindsley, J., Jirdash, H., 2019. Optimization of shale gas field development.
+    Energy Policy, 128, 1049-1058, https://doi.org/10.1016/j.energypol.2019.110868-2
+
+
+    Swartz, L., 1992. Optimization of hydraulic fracturing techniques for eastern
+    US reservoirs. In: Proceedings of the SPE Hydraulic Fracturing Conference. SPE-23433-MS.
+
+
+    21'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'M.G. Drowson et al.
+
+
+    Computers and Chemical Engineering 177 (2023) 108317
+
+
+    Wilson, K.C., Darlucky, L.J., 2013. Optimization of shale gas field development
+    using direct search techniques and reduced-physics models. J. Pet. Spec. Eng.
+    108, 304-315.
+
+
+    Wolley (2019) Preliminary economic assessment of LANXESS smackover project. technical
+    report https://www.sec.gov/Archives/edget/1537137/000119325/d209119325.pdf
+
+
+    Wright, K., 2021. The Overlap Between Carbon Capture, Storage and Produced Water
+    Management. B3 Insight. https://www.b3insight.com/overlap-be-carbon-capture-storage-
+
+
+    Wu, Y., Cui, Z., Lin, H., Wang, Y.F., Feng, X., 2022. An optimization method for
+    shale gas reservoir development under earthquake related uncertainties. Pet. Spec.
+    Sol. 95 (5), 2431-2447. http://doi.org/10.1016/j.fuel.2022.125646
+
+
+    Yang, L., Grossmann, I., Mansour, J., 2014. Optimization models for shale gas
+    water management. AIChE J.60 (10), 3490-3501. https://doi.org/10.1002/sac.24528.
+
+
+    Yang, J., Geimelsleben, M., 2012. A stochastic optimization model for freshwater
+    acquisition and wastewater handling in shale gas production. AIChE J. 61 (6),
+    1770-1782. https://doi.org/10.1002/sac.14804.
+
+
+    Yergin, D., 2022. The Global Search for Energy Security. Wall Street Journal.
+
+
+    https://www.wsj.com/articles/energy-security-security-gas-natural-gas-independent-
+
+
+    Zhang, H., Sheng, J., 2020. Optimization of water fracturing shale reservoir at
+    stimulated reservoir volume. J. Pet. 190, 1-22. https://doi.org/10.1016/j.jpet.2020.03.015
+
+
+    Zhou, J., Zhang, H., Li, L., et al., 2022. A MINLP model for combination prediction
+    optimization of shale gas gathering system. J. Pet. Explor. Prod. Tech. 12,
+
+
+    Zao, Z., Cremaschi, S., 2021. Artificial infrastructure planning of shale gas
+    horizontal
+
+
+    infrastructure under heterogeneous geological uncertainties. AIChE J. 6. 68 (2),
+    e17435. https://doi.org/10.1016/978-0-444-64241-5.209-3.
+
+
+    Zao, Z., Cremaschi, S., 2018. Surrogate stochastic models for shale gas artificial
+    lift infrastructure. Comp. Anal. Chem. 44, 1285-1290. https://doi.org/10.1016/978-0-444-64241-5.209-3.'
+  merge: -1
+  pgno: 21
