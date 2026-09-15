@@ -1,0 +1,2438 @@
+- img_proc: true
+  md: '# # C# FEATURES
+
+
+    SUCCINCTLY
+
+
+    BY DIRK STRAUSS'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# C# Features Succinctly
+
+
+    By
+
+    Dirk Strauss
+
+
+    Foreword by Daniel Jebaraj
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Important licensing information. Please read.
+
+
+    This book is available for free download from www.syncfusion.com on completion
+    of a registration form.
+
+
+    If you obtained this book from any other source, please register and download
+    a free copy from www.syncfusion.com.
+
+
+    This book is licensed for reading only if obtained from www.syncfusion.com.
+
+
+    This book is licensed strictly for personal or educational use.
+
+
+    Redistribution in any form is prohibited.
+
+
+    The authors and copyright holders provide absolutely no warranty for any information
+    provided.
+
+
+    The authors and copyright holders shall not be liable for any claim, damages,
+    or any other liability arising from, out of, or in connection with the information
+    in this book.
+
+
+    Please do not use this book if the listed terms are unacceptable.
+
+
+    Use shall constitute acceptance of the terms listed.
+
+
+    SYNCFUSION, SUCCINCTLY, DELIVER INNOVATION WITH EASE, ESSENTIAL, and .NET ESSENTIALS
+    are the registered trademarks of Syncfusion, Inc.
+
+
+    Technical Reviewer: James McCaffrey
+
+
+    Copy Editor: Courtney Wright
+
+
+    Acquisitions Coordinator: Tres Watkins, VP of content, Syncfusion, Inc.
+
+
+    Proofreader: Graham High, senior content producer, Syncfusion, Inc.'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Table of Contents
+
+
+    +   - The Story Behind the Succinctly Series of Books................................................................
+    7
+
+
+    +   - About the Author ................................................................................................................
+    9
+
+
+    +   - Chapter 1 The History of C#....................................................................................
+    10
+
+
+    +   - C# language version ............................................................................................
+    10
+
+
+    +   - C# version 1.0 .................................................................................................
+    11
+
+
+    +   - C# version 1.2 .................................................................................................
+    11
+
+
+    +   - C# version 2.0 .................................................................................................
+    11
+
+
+    +   - C# version 3.0 ..................................................................................
+    12
+
+
+    +   - C# version 4.0 .................................................................................................
+    12
+
+
+    +   - C# version 5.0 .................................................................................................
+    12
+
+
+    +   - C# version 6.0 .................................................................................................
+    13
+
+
+    +   - C# version 7.0 .................................................................................................
+    13
+
+
+    +   - C# version 7.1 .................................................................................................
+    13
+
+
+    +   - C# version 7.2 .................................................................................................
+    14
+
+
+    +   - C# version 7.3 .................................................................................................
+    14
+
+
+    +   - C# version 8.0 .................................................................................................
+    15
+
+
+    +   - Chapter 2 C# 7 Features Recap..................................................................
+    16
+
+
+    +   - out variables ...................................................................................
+    16
+
+
+    +   - Discards .......................................................................................
+    18
+
+
+    +   - Tuples ............................................................................................
+    19
+
+
+    +   - Tuple equality ................................................................................
+    20
+
+
+    +   - Using a tuple as a method return type ................................ 20
+
+
+    +   - Pattern matching ............................................................
+    22
+
+
+    +   - Local functions ..............................................................
+    24'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'Expression-bodied members for constructors and finalizers.......................................................27
+
+
+    Generalized async return types...............................................................................................28
+
+
+    # Chapter 3 C# 8.0 Features ................................................................................................31
+
+
+    Default interface methods....................................................................................................31
+
+
+    Nullable reference types.....................................................................................................32
+
+
+    The null-forgiving operator...............................................................................................34
+
+
+    Asynchronous streams......................................................................................................35
+
+
+    Asynchronous disposable.....................................................................................................37
+
+
+    Indices and ranges.........................................................................................................38
+
+
+    Switch expressions.........................................................................................................40
+
+
+    Readonly members..............................................................................................................41
+
+
+    Using declarations...........................................................................................................42
+
+
+    Static local functions........................................................................................43
+
+
+    Disposable ref structs...............................................................................................45
+
+
+    Null-coalescing assignment..................................................................................46
+
+
+    Unmanaged constructed types..................................................................................47
+
+
+    Enhancement of interpolated verbatim strings......................................................49
+
+
+    Enabling C# 8 in any .NET project.......................................................................49
+
+
+    Not all types are included..................................................................................52
+
+
+    Indexes and ranges...........................................................................................52
+
+
+    Using Directory.Build.props..................................................................53
+
+
+    # Chapter 4 The Future of C# and C# 9...............................................................54
+
+
+    Top-level programs........................................................................................54
+
+
+    Relational and logical patterns......................................................................56
+
+
+    Target-typed new expressions..................................................................59
+
+
+    Init-only properties.....................................................................................60'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '+   Init accessors and readonly fields...............................................................................61
+
+
+    +   Records.........................................................................................................................61
+
+
+    +   More C# 9.0 goodies......................................................................................................62
+
+
+    # Chapter 5 .NET Productivity Features in Visual Studio...............................................63
+
+
+    +   Developer PowerShell inside Visual Studio...............................................................63
+
+
+    +   The Visual Studio Git Window ...................................................................64
+
+
+    +   Drag and drop projects to add a reference................................................................69
+
+
+    +   Searching Visual Studio ................................................................................71
+
+
+    +   Code analyzers ................................................................................................73
+
+
+    +   File header support in .editorconfig...........................................................75
+
+
+    +   C# language resources ................................................................................77
+
+
+    +   C# language reference ................................................................................77
+
+
+    +   C# language proposals...............................................................................77
+
+
+    +   C# language design meetings...............................................................77
+
+
+    +   C# language design................................................................................77'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# The Story Behind the Succinctly Series of Books
+
+
+    Daniel Jebaraaj, Vice President
+
+    Syncfusion, Inc.
+
+
+    Staying on the cutting edge
+
+    As many of you know, Syncfusion is a provider of software components for the
+
+    Microsoft platform. This puts us in the exciting but challenging position of always
+
+    being on the cutting edge.
+
+
+    Whenever platforms or tools are shipping out of Microsoft, which seems to be about
+
+    eother week these days, we have to educate ourselves, quickly.
+
+
+    # Information is plentiful but harder to digest
+
+
+    In reality, this translates to a lot of book orders, book searches, and Twitter
+    scans.
+
+
+    While more information is becoming available on the internet and more more books
+    are
+
+    published, even on topics that are relatively new, one aspect that continues to
+    inhibit us
+
+    the inability to find concise technology overview books.
+
+
+    We are usually faced with two options: read several 500+ page books or scour the
+    web for
+
+    relevant blog posts and other articles. Just as everyone who has a job to do and
+    customers
+
+    serve, we find this quite frustrating.
+
+
+    # The Succinctly series
+
+
+    This frustration translated into a deep desire to produce a series of concise
+    technical books that
+
+    would be targeted at developers working on the Microsoft platform.
+
+
+    We firmly believe, given the background knowledge which developers have, that
+    most topics can
+
+    be translated into books that are between 50 and 100 pages.
+
+
+    This is exactly what we resolved to accomplish with the Succinctly series. Isn''t
+    everything
+
+    wonderful born out of a deep desire to change things for the better?
+
+
+    # The best authors, the best content
+
+
+    Each author was carefully chosen from a pool of talented experts who shared our
+    vision.
+
+    Thebook you now hold in your hands, and the others available in this series, are
+    a result of the
+
+    authors'' tireless work. You will find original content that is guaranteed to
+    get you up and running
+
+    in about the time it takes to drink a few cups of coffee.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# Free forever
+
+
+    Syncfusion will be working to produce books on several topics. The books will
+    always be free.
+
+    Any updates we publish will also be free.
+
+
+    # Free? What is the catch?
+
+
+    There is no catch here. Syncfusion has a vested interest in this effort.
+
+
+    As a component vendor, our unique claim has always been that we offer deeper and
+    broader frameworks than anyone else on the market. Developer education greatly
+    helps us market and sell against competing vendors who promise to "enable AJAX
+    support with one click," or "turn the moon to cheese!
+
+
+    # Let us know what you think
+
+
+    If you have any topics of interest, thoughts, or feedback, please feel free to
+    send them to us at succinctly-series@syncfusion.com.
+
+
+    We sincerely hope you enjoy reading this book and that it helps you better understand
+    the topic of study. Thank you for reading.
+
+
+    Please follow us on Twitter and “Like” on us on Facebook to help us spread the
+    word about the Succinctly series!
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_7_0.png)
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_7_1.png)'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# About the Author
+
+
+    Dirk Strauss is a software developer from South Africa with over 13 years of programming
+    experience. He has extensive experience in SYSPRO customization, with a focus
+    on C# and web development. He studied at Nelson Mandela University, where he wrote
+    software part-time to gain a better understanding of the technology. He remains
+    passionate about writing code and sharing what he learns with others.'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Chapter 1 The History of C#
+
+
+    C# is continuing to evolve and improve with each major release of the language.
+    As the C# team is innovating and adding features to C#, its members share their
+    thought process around the design of C# with the community.
+
+
+    If you head over the dotnet/Roslyn repository on GitHub, you will see detailed
+    language feature statuses as well as features that the C# team is considering
+    for upcoming releases. You can also view a history C# on the Microsoft Docs. As
+    of this writing, in particular interest are the planned features surrounding C#
+    9. Later in this book, we will have a look at what is planned for C# 9.
+
+
+    The C# build will default the language version to the latest major release. As
+    of C# 7.0, however, developers started seeing more point releases in the form
+    of versions C# 7.1, C# 7.2, and C# 7.3.
+
+
+    # C# language version
+
+
+    When creating a new project in Visual Studio, the C# compiler figures out which
+    version of C# to use based on the target framework of your project. This ensures
+    you do not use a language version that requires runtime or behavior not available
+    in the target framework of the project.
+
+
+    It is worth mentioning that C# 8.0 and higher will only be supported on .NET Core
+    3.x and later. Table 1 outlines the C# language defaults based on the target framework.
+
+
+    Table 1: Language version default mapping
+
+
+    | Target framework | Version | C# language default |
+
+    | .NET Core | 3.x | C# 8.0 |
+
+    | .NET Core | 2.x | C# 7.3 |
+
+    | .NET Standard | 2.1 | C# 8.0 |
+
+    | .NET Standard | 2.0 | C# 7.3 |
+
+    | .NET Standard | 1.x | C# 7.3 |
+
+    | .NET Framework | All | C# 7.3 |
+
+
+    As you will see later in this book, you can override the default language version.
+    You can do this by:
+
+
+    +   - Manually editing your .csproj file (explained later).'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '+   * Configuring multiple projects using a Directory.Build props file.
+
+    * Configuring the **-langversion** compiler option.
+
+
+    For more on the **-langversion** compiler option, refer to this NET documentation.
+
+
+    # # C# version 1.0
+
+
+    The release of Visual Studio .NET 2002 brought with it C# 1.0, a Java-looking,
+    general-purpose, object-oriented language. It didn''t contain LINQ or generics,
+    but what did it offer developers a viable alternative to Java, on a Windows platform.
+
+
+    C# 1.0 introduced the following:
+
+
+    +   * Classes
+
+    * Structs
+
+    * Interfaces
+
+    * Events
+
+    * Properties
+
+    * Delegates
+
+    * Expressions
+
+    * Statements
+
+    * Attributes
+
+
+    Having a look at these features today, one would be excused for feeling a little
+    spoiled with the features available in C# 8.0.
+
+
+    # # C# version 1.2
+
+
+    Visual Studio .NET 2003 shipped with C# 1.2 and only contained a few small enhancements.
+    It is here that code generated in **foreach** loops would call **Dispose** on
+    an **IEnumerator** if it implemented **IDisposable**.
+
+
+    # # C# version 2.0
+
+
+    When Visual Studio 2005 was released in 2005, we saw some nice features, such
+    as:
+
+
+    +   * Generics
+
+    * Partial classes
+
+    * Anonymous methods
+
+    * Nullable value types
+
+    * Iterators
+
+    * Covariance and contravariance
+
+
+    Existing features were also improved, such as:
+
+
+    +   * Getter/setter separate accessibility.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '+   * Method group conversions (simply assigning the name of method to a delegate
+    without using a new operator).
+
+    * Static classes.
+
+    * Delegate inference.
+
+
+    In many respects, C# 2.0 was a turning point in the language, especially with
+    the introduction of generics and iterators.
+
+
+    # # C# version 3.0
+
+
+    In the latter part of 2007, Visual Studio 2008 was released. The language features
+    it provided came with the release of the .NET Framework 3.5. These were as follows:
+
+
+    +   * Auto-implemented properties.
+
+    * Anonymous types.
+
+    * Query expressions (LINQ).
+
+    * Lambda expressions.
+
+    * Expression trees.
+
+    * Extension methods.
+
+    * Implicitly typed local variables.
+
+    * Partial methods.
+
+    * Object and collection initializers.
+
+
+    LINQ was one of the killer features of C#. This allowed you to write SQL-style,
+    declarative queries on collections, for example. Initially, I struggled with LINQ
+    (and I''m not the only one). These days, it is just quicker and more concise to
+    write. C# 3.0 was truly groundbreaking release.
+
+
+    # # C# version 4.0
+
+
+    Visual Studio 2010 brought C# 4.0. The features added in version 4.0 were:
+
+
+    +   * Dynamic binding.
+
+    * Named/optional arguments.
+
+    * Generic covariant and contravariant.
+
+    * Embedded interop types.
+
+
+    For me, the introduction of optional parameters was a breath of fresh air, but
+    it was the addition of the **dynamic** keyword in version 4.0 that stole the show.
+
+
+    # # C# version 5.0
+
+
+    C# version 5.0 was released with Visual Studio 2012 and made another groundbreaking
+    addition to the C# language—the introduction of `async` and `await` for asynchronous
+    programming. C# 5.0 introduced:
+
+
+    +   * Asynchronous members'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '+   - Caller info attributes
+
+
+    Asynchrony was now baked into C# as a first-class citizen.
+
+
+    # # C# version 6.0
+
+
+    Visual Studio 2015 brought C# version 6.0, and it is here that we started seeing
+    smaller features that made developers more productive. These included:
+
+
+    +   - using static (no Console.this and Console.that).
+
+    - Read-only auto-properties.
+
+    - Auto-property initializers.
+
+    - Expression-bodied function members.
+
+    - Null-conditional operators.
+
+    - String interpolation.
+
+    - Exception filters.
+
+    - The nameof of expression.
+
+    - await in Catch and Finally blocks.
+
+
+    I remember Mads Torgensen saying that C# 6.0 added a lot of syntactic sugar to
+    the language. I agree with him 100 percent.
+
+
+    # # C# version 7.0
+
+
+    Visual Studio 2017 saw C# version 7.0 released to the developer community. It
+    introduced the following language features:
+
+
+    +   - out variables.
+
+    - Tuples.
+
+    - Discards.
+
+    - Pattern matching.
+
+    - ref locals and returns.
+
+    - Local functions.
+
+    - More expression-bodied members.
+
+    - throw expressions.
+
+    - Generalized async return types.
+
+    - Numeric literal syntax improvements.
+
+
+    Developers could now write cleaner code and be more productive.
+
+
+    # # C# version 7.1
+
+
+    With C# 7.0, we started seeing point releases on C#, starting with version 7.1.
+    This marked an increased release cadence for C#. New language features for this
+    release were:
+
+
+    +   - async Main method.
+
+    - default literal expressions.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: "+   - Inferred tuple element names.\n- Pattern matching on generic type parameters.\n\
+    \nC# 7.1 also added the language version selection configuration element, as well\
+    \ as new compiler behavior.\n\n# C# version 7.2\n\nC# 7.2 added a few more smaller\
+    \ language features to C#. These were:\n\n+   - The addition of code enhancements\
+    \ allowing developers to write safe, efficient code:\n  - The in modifier on parameters.\n\
+    \  - The ref readonly on method returns.\n  - The readonly struct declaration.\n\
+    \  - The ref struct declaration.\n- Non-trailing arguments.\n- Leading underscores\
+    \ in numeric literals.\n- private protected access modifier.\n- Conditional expressions.\n\
+    \nYou can read more on writing safe and efficient code in C# here.\n\n# C# version\
+    \ 7.3\n\nThe point releases of C# 7 allowed developers to get their hands onto\
+    \ new language features sooner rather than later. It was the release of C# 7.3\
+    \ that had two main features. One allowed safe code to perform as performant code,\
+    \ and the other provided additional improvements to existing features.\n\nFrom\
+    \ a better performant code perspective, we saw:\n\n+   - The accessing of fields\
+    \ without pinning.\n- Reassigning ref local variables.\n- The use of initializers\
+    \ on stackalloc arrays.\n- Using fixed statements with any type that supports\
+    \ a pattern.\n- Additional generic constraints (you will see this in action with\
+    \ the unmanaged constraint later on in this book).\n\nFrom an enhancement perspective,\
+    \ we saw:\n\n+   - Being able to compare tuple types with == and !=.\n- The use\
+    \ of expression variables in more locations.\n- Attaching attributes to the backing\
+    \ field of auto-implemented properties.\n- Improved method resolution when arguments\
+    \ by in.\n- Fewer ambiguous cases for overload resolution.\n\nWe also saw new\
+    \ compiler options: -publicsign to enable open-source software signing of assemblies,\
+    \ and -pathmap to provide a mapping for source directories."
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# C# version 8.0
+
+
+    C# 8.0 specifically targets .NET Core. This is what this book is all about, and
+    why I would imagine you are reading it.
+
+
+    The following features and enhancements were added to C# 8.0:
+
+
+    +   - Readonly members.
+
+    - Default interface methods.
+
+    - Pattern matching enhancements.
+
+    - Using declarations.
+
+    - Static local functions.
+
+    - Disposable ref structs.
+
+    - Nullable reference types.
+
+    - Asynchronous streams.
+
+    - Indices and ranges.
+
+    - Null-coalescing assignment.
+
+    - Unmanaged constructed types.
+
+    - Stackalloc in nested types.
+
+    - Enhancements to interpolated verbatim strings with C#
+
+
+    There is a lot to consume here. If you have little experience with C#, the best
+    place to start is C# 7. This book will take a look at C# 7 before delving into
+    the new features of C# 8.0.
+
+
+    If you are already comfortable with C# 7, then dive straight into the chapter
+    on C# 8.0. Are you ready? Let''s go.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: "# Chapter 2 C# 7 Features Recap\n\nTo appreciate what C# 8.0 has to offer developers,\
+    \ it is important that we revisit some of the features available in C# 7. The\
+    \ C# language has been evolving, but it feels like the incremental releases of\
+    \ C#, which bring new features to the language, have been increasing in recent\
+    \ years.\n\n> Note: Most of the code examples in this ebook are presented as instance\
+    \ methods rather than static methods. If you wish to experiment with the example\
+    \ methods, you may want to decorate the examples with the static modifier so you\
+    \ can call them directly as placing them inside a class definition, instantiating\
+    \ an object instance, and then calling the method.\n\nPlease note that the public\
+    \ Demo used in some of the code examples is the constructor for a class called\
+    \ Demo. I encourage you to download the code for this book from GitHub.\n\n# out\
+    \ variables\n\nC# allows developers to use out variables. You might have used\
+    \ them before, and they are quite handy in certain circumstances. One thing that\
+    \ has always bugged me, though (before C# 7 was released), was the need for creating\
+    \ a 'loose-hanging' variable. Consider Code Listing 1. The declaration of the\
+    \ numberOfOfCopies variable in the constructor of the Demo class was necessary\
+    \ in order to use out variables in C#.\n\nCode Listing 1: The out variable C#\
+    \ 7\n\n```\npublic Demo() {\n    int numberOfOfCopies = 0;\n    GetNumberOfCopies(out\
+    \ numberOfOfCopies);\n}\n\nprivate void GetNumberOfCopies(out int numCopies) {\n\
+    \    numCopies = 20;\n}\n```\n\nHere is this (in my opinion) ugly-looking code\
+    \ required to make use of a truly neat language feature in C#. Along comes C#\
+    \ 7, and shakes up a little with an improved syntax for out variables. Let's consider\
+    \ the same code (in the constructor of the Demo class) from Code Listing 1, and\
+    \ rewrite it slightly:"
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: "# Code Listing 2: The out variable in C#7\n\n```\npublic Demo()\n{\n    GetNumberOfCopies(out\
+    \ int numberOfCopies);\n}\nprivate void GetNumberOfOfCopies(out int numCopies)\n\
+    {\n    numCopies = 20;\n}\n```\n\nYou will notice that C# 7 allowed developers\
+    \ to get rid of the unnecessary declaration int numberOfCopies = 0; and declare\
+    \ the out variable in the argument list of the GetNumberOfOfCopies method.\n\n\
+    This results in much cleaner code and makes the code easier to read. But C# 7\
+    \ allows developers to go one step further. If you have been following along in\
+    \ Visual Studio, you will see a green squiggly line under the int in your argument\
+    \ list of the GetNumberOfOfCopies method\n\n> Note: If you do not see a code style\
+    \ suggestion, you may have suppressed this code style rule in an EditorConfig\
+    \ file or your style preferences. For more information on code style preferences,\
+    \ [this article](https://docs.microsoft.com/en-us/visualstudio/howto/csharp/code-style-preferences)\
+    \ in Microsoft Docs.\n\nThis squiggly line is suggesting that you replace the\
+    \ int with the var keyword, as seen in Code Listing 3.\n\n# Code Listing 3: Replacing\
+    \ the int with var\n\n```\npublic Demo()\n{\n    GetNumberOfCopies(out var numberOfCopies);\n\
+    }\nprivate void GetNumberOfOfCopies(out int numCopies)\n{\n    numCopies = 20;\n\
+    }\n```\n\nIf you think about it, this is perfectly logical. The type of numberOfCopies\
+    \ is inferred from the type in the method signature of the GetNumberOfOfCopies\
+    \ method. This syntax can be used for any out variable, such as in a TryParse.\n\
+    \n# Code Listing 4: The out variable in a TryParse\n\n```\nif (int.TryParse(\"\
+    3\", out var factor))\n```"
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'Code Listing 4 illustrates the use of the out variable in a TryParse. The benefit
+    of using the improved syntax for out variables is:
+
+
+    +   - It improves code readability by declaring the out variable only where you
+    use it.
+
+    - Because the declaration happens where you use it, you do not need to assign
+    an initial value.
+
+
+    The syntax change to the out variable in C# 7 is one of the improved language
+    features aimed at making your code more readable and concise.
+
+
+    # Discards
+
+
+    In the previous section, we had a look at out variables. We saw that we can declare
+    the out right where we need it, without having to assign an initial value. What
+    if we don''t care about the value assigned to the out variable?
+
+
+    C# now supports discards to allow developers to indicate that they don''t care
+    for the variable. The discard is a write-only variable, and is denoted by underscore
+    _ in your assignment.
+
+
+    Think of the discard as an unassigned variable. It can be used in the following
+    situations:
+
+
+    +   - When used as out parameters.
+
+    - With the is and switch statements.
+
+    - As a standalone identifier.
+
+    - During the deconstruction of tuples (more tuples in the next section) or user-defined
+    types.
+
+
+    Let''s have a look back at Code Listing 4. All if we want to check if the value
+    parses to an integer value, we can use a discard variable instead of declaring
+    the variable factor, as shown in Code Listing 5.
+
+
+    > Code Listing 5: Using a discard
+
+
+    ```
+
+    if (int.TryParse("3", out var _))
+
+    {
+
+    }
+
+
+    ```
+
+
+    I like using extension methods. A favorite use for extension methods is to check
+    if a string value is an integer. Admittedly, the extension method can do so much
+    more than the simple example in Code Listing 6. What I want to focus your attention
+    on, however, is the use of the discard variable here.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# Code Listing 6: Using a discard in an extension method\n\n```\npublic static\
+    \ bool ToInt(this string value)\n{\n    return int.TryParse(value, out var _);\n\
+    }\n```\n\nI don't care about the value—I just want to check if it's an integer—and\
+    \ the discard is a perfect candidate for this type of situation.\n\n> Tip: You\
+    \ can further simplify the code in Code Listing 6 by using an expression body.\n\
+    \n# Tuples\n\nSometimes developers need to pass structures containing multiple\
+    \ data elements to methods. Tuples were added to C# to provide data structures\
+    \ containing multiple fields (up to a maximum of eight items) representing the\
+    \ data members.\n\nC# 7.0 also introduced language support for tuples that enabled\
+    \ semantic names for the tuple fields using new tuple types. Code Listing 7 illustrates\
+    \ a basic example of a tuple.\n\n# Code Listing 7: Field names specified in tuple\
+    \ initialization\n\n```\nvar fundedDates = (Microsoft: 1975, Apple: 1976, Amazon:\
+    \ 1994);\nConsole.WriteLine(\"Microsoft founded in {fundedDates.Microsoft}\");\n\
+    Console.WriteLine(\"Apple founded in {fundedDates.Apple}\");\nConsole.WriteLine(\"\
+    Amazon founded in {fundedDates.Amazon}\");\n```\n\nHere in Code Listing 7, you\
+    \ can see that the field names are explicitly specified in the initialization\
+    \ expression. You can also specify the field names in the tuple type definition,\
+    \ as seen in Code Listing 8.\n\n# Code Listing 8: Field names specified in the\
+    \ type definition\n\n```\n(int Microsoft, int Apple, int Amazon) fundedDates =\
+    \ (1975, 1976, 1994);\nConsole.WriteLine(\"Microsoft founded in {fundedDates.Microsoft}\"\
+    );\nConsole.WriteLine(\"Apple founded in {fundedDates.Apple}\");\nConsole.WriteLine(\"\
+    Amazon founded in {fundedDates.Amazon}\");\n```\n\nC# will also allow you to infer\
+    \ the field names from the variable names in the tuple initialization expression.\
+    \ This is illustrated in Code Listing 9."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Code Listing 9: Tuple field names inferred
+
+
+    ```
+
+    var distanceToEarth = 384400;
+
+    var radius = 1737.1;
+
+    var moon = (distanceToEarth, radius);
+
+
+    Console.WriteLine($"The moon is {moon.distanceToEarth} km from Earth.");
+
+    Console.WriteLine($"The moon has a radius of {moon.radius}\");"
+
+    ```
+
+
+    The field names are therefore inferred, so it''s probably a good idea to think
+    about them arbitrarily naming variables. For example, if distanceToEarth was simply
+    named distance, then the tuple would read as moon.distance, which somewhat obfuscates
+    the intent.
+
+
+    # Tuple equality
+
+
+    Tuple types also have support for == and != operators. This means that in the
+    code in Listing 10 will equate to true.
+
+
+    # Code Listing 10: Comparing tuples
+
+
+    ```
+
+    var teamOne = (JohnScore: 15, MikeScore: 27);
+
+    var teamTwo = (SallyScore: 15, MelissaScore: 27);
+
+
+    Console.WriteLine(teamOne == teamTwo); // Equates to true
+
+    ```
+
+
+    You can only compare tuples when:
+
+
+    +   - Each tuple has the same number of elements. TeamOne had an additional score,
+    Visual Studio would tell you that the tuple types must have matching cardinalities.
+
+    - For every tuple position, the elements from the left-hand and right-hand tuple
+    operands are comparable with the == and != operators.
+
+
+    This means the following code would not be comparable.
+
+
+    # Code Listing 11: Non-comparable tuples
+
+
+    ```
+
+    var teamOne = (JohnScore: 15, MikeScore: "27");
+
+    var teamTwo = (SallyScore: 15, MelissaScore: 27);
+
+
+    Console.WriteLine(teamOne == teamTwo); // Results in a compile-time error
+
+    ```
+
+
+    This is because == cannot be applied to operands of type string and int.
+
+
+    # Using a tuple as a method return type
+
+
+    Methods can also return tuple types. Consider the method illustrated in Code Listing
+    12.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "# Code Listing 12: Method returning a tuple\n\n```\nprivate (int Age, DateTime\
+    \ BirthDate, string FullName) ReadPersonInfo()\\{\n    var personData = (age:\
+    \ 0, birthday: DateTime.MinValue, fullName: \"\");\n    // Read data from somewhere\n\
+    \    personData.FullName = \"Joe Soap\";\n\n    var today = DateTime.Now;\n  \
+    \  personData.birthday = today.AddYears(-44);\n    personData.age = today.Year\
+    \ - personData.birthday.Year;\n\n    return personData;\n}\n```\n\nThe simple\
+    \ method returns a tuple, which can then be used by the calling code, as illustrated\
+    \ in Code Listing 13.\n\n# Code Listing 13: Calling with tuple return type\n\n\
+    ```\nvar person = ReadPersonInfo();\nConsole.WriteLine($\"{person.FullName} was\
+    \ born on {person.BirthDate:dd MMMM yyyy} and is {person.age} years old.\\\");\"\
+    \n```\n\nIf you wanted to, you could reconstruct the tuple instance into separate\
+    \ variables, as illustrated in Code Listing 14.\n\n# Code Listing 14: Deconstruct\
+    \ tuple into explicit variables\n\n```\n(int age, DateTime DOB, string fullName)\
+    \ = ReadPersonInfo();\nConsole.WriteLine($\"{fullName} was born on {DOB:dd MMMM\
+    \ yyyy} and is {age} years old.\\\");\n```\n\nThis allows me to explicitly specify\
+    \ the variable types to deconstruct the tuple into. I can also let the compiler\
+    \ do it for me by implicitly declaring the reconstructed variables. For this,\
+    \ I can use the var keyword, as illustrated in Code Listing 15.\n\n# Code Listing\
+    \ 15: Using the var keyword for implicit deconstruction\n\n```\nvar (age, DOB,\
+    \ fullName) = ReadPersonInfo();\nConsole.WriteLine($\"{fullName} was born on {DOB:dd\
+    \ MMMM yyyy} and is {age} years old.\\\");\n```\n\nThis is great for when you\
+    \ are not sure of the return type, or if you simply don't want to specify the\
+    \ return type for each deconstructed variable."
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: "# Pattern matching\n\nPatterns in C# whether a value has a certain shape. When\
+    \ one hears the word \"test,\". one thinks of if or switch statements in C#. When\
+    \ the test results in a match, that value being tested can be used to extract\
+    \ information.\n\nConsider the following classes.\n\nCode Listing 16: Shape Classes\n\
+    \n```\npublic class Cylinder\n{\n    public double Length { get; }\n    public\
+    \ double Radius { get; }\n\n    public Cylinder(double length, double radius)\n\
+    {\n        Length = length;\n        Radius = radius;\n    }\n}\npublic class\
+    \ Sphere\n{\n    public double Radius { get; }\n\n    public Sphere(double radius)\n\
+    {\n        Radius = radius;\n    }\n}\npublic class Pyramid\n{\n    public double\
+    \ BaseLength { get; }\n    public double BaseWidth { get; }\n    public double\
+    \ Height { get; }\n\n    public Pyramid(double baseLength, double baseWidth, double\
+    \ height)\n{\n        BaseLength = baseLength;\n        BaseWidth = baseWidth;\n\
+    \        Height = height;\n    }\n```\n\nUsing the is type pattern expression,\
+    \ we can check what type of the volumeShape variable is, and then perform a specific\
+    \ action based on that type to calculate the volume. This is illustrated in Code\
+    \ Listing 17 in a generic method called CalculateVolume."
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "# Code Listing 17: Using is type pattern expression\n\n```\nprivate double\
+    \ CalculateVolume<T>(T volumeShape)\n{\n    if (volumeShape is Cylinder c)\n \
+    \       return Math.PI * Math.Pow(c.Radius, 2) * c.Length;\n    else if (volumeShape\
+    \ is Sphere s)\n        return 4 * Math.PI * Math.Pow(s.Radius, 3) / 3;\n    else\
+    \ if (volumeShape is Pyramid p)\n        return p.BaseLength * p.Width * p.Height\
+    \ / 3;\n}\n```\n\nthrow new ArgumentException(message: \"Unrecognized object\"\
+    , paramName:nameof(volumeShape));\n\n}\n\nCalling the generic Volume method is\
+    \ as illustrated in Code Listing 18.\n\n# Code Listing 18: Calling the CalculateVolume\
+    \ method\n\n```\nvar cylinder = new Cylinder(20, 2.5);\nvar sphere = new Sphere(2.5);\n\
+    var pyramid = new Pyramid(2.5, 3, 16);\n\nvar cylinderVol = CalculateVolume(cylinder);\n\
+    var sphereVol = CalculateVolume(sphere);\nvar pyramidVol = CalculateVolume(pyramid);\n\
+    \nConsole.WriteLine(\"$The volume of the Cylinder is {Math.Round(cylinderVol,2)}\"\
+    );\nConsole.WriteLine(\"$The volume of the Sphere is {Math.Round(sphereVol,2)}\"\
+    );\nConsole.WriteLine(\"$The volume of the Pyramid is {Math.Round(pyramidVol,2)}\"\
+    );\n```\n\nThis approach allows developers to simplify their code and make it\
+    \ more readable. We can also apply pattern matching to switch statements, as illustrated\
+    \ in Code Listing 19.\n\n# Code Listing 19: Using pattern matching switch statements\n\
+    \n```\nprivate double CalculateVolume<T>(T volumeShape)\n{\n    switch (volumeShape)\n\
+    {\n        case Cylinder c:\n            return Math.PI * Math.Pow(c.Radius, 2)\
+    \ * c.Length;\n        case Sphere s:\n            return 4 * Math.PI * Math.Pow(s.Radius,\
+    \ 3) / 3;\n        case Pyramid p:\n    }\n```"
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "```\nreturn p.BaseLength * p.BaseWidth * p.Height / 3;\ndefault:\n    throw\
+    \ new ArgumentException(message: \"Unrecognized object\",\n    nameof(volumeShape));\n\
+    ```\n\nTraditionally, the switch statement supported the constant pattern, allowing\
+    \ you to compare a variable to any constant in the case statement. This was limited\
+    \ to numeric and string types. In C# 7 these restrictions do not apply anymore,\
+    \ and you can use type patterns in switch statements.\n\nFurthermore, you can\
+    \ also use when in your case expressions. Consider the code in Code List 20.\n\
+    \nCode List 20: Using when clauses in case expressions\n\n```\nprivate double\
+    \ CalculateVolume<T>(T volumeShape)\n{\n    switch (volumeShape)\n    {\n    \
+    \    case Sphere s when s.Radius == 0:\n            return 0;\n        case Cylinder\
+    \ c:\n            return Math.PI * Math.Pow(c.Radius, 2) * c.Length;\n       \
+    \ case Sphere s:\n            return 4 * Math.PI * Math.Pow(s.Radius, 3) / 3;\n\
+    \        case Pyramid p:\n            return p.BaseLength * p.BaseWidth * p.Height\
+    \ / 3;\n        default:\n            throw new ArgumentException(message: \"\
+    Unrecognized object\",\n            nameof(volumeShape));\n    }\n}\n```\n\nThe\
+    \ change is subtle, but syntactically important. The case Sphere s when s.Radius\
+    \ == 0 tells the compiler important regarding the variable s. If the Radius of\
+    \ the variable s is equal to 0, do not even attempt the volume calculation, because\
+    \ it makes no difference. The result will always be 0.\n\n# Local functions\n\n\
+    Local functions are by far one of my favorite features of C# 7. When the use of\
+    \ a specific method makes sense in only a single place, then it can be made local\
+    \ to only that specific enclosing method."
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "So if a method called CalculateVolume is only used by a single method called\
+    \ TotalObjectVolume, then it can be made local to TotalObjectVolume. Let's illustrate\
+    \ this by using some simplified code.\n\n# Code Listing 21: Simplified code\n\n\
+    ```\nprivate string MethodOne()\n{\n    var getText = MethodTwo();\n    return\
+    \ getText;\n}\n\nprivate string MethodTwo()\n{\n    return \"I am a method two\"\
+    ;\n}\n```\n\nAs you would expect, calling MethodOne with Console.WriteLine(MethodOne());\
+    \ results in the text I am method two being displayed.\n\nIntroducing a local\
+    \ function called MethodTwo inside the body of MethodOne will now result in the\
+    \ text I am local function two being displayed.\n\n# Code Listing 22: Introducing\
+    \ a local function\n\n```\nprivate string MethodOne()\n{\n    string MethodTwo()\n\
+    \    {\n        return \"I am a local function two\";\n    }\n\n    var getText\
+    \ = MethodTwo();\n    return getText;\n}\n\nprivate string MethodTwo()\n{\n  \
+    \  return \"I am a method two\";\n}\n```\n\nThis means local functions take precedence\
+    \ when used by code inside the scope of the enclosing method. If the use of MethodTwo\
+    \ only made sense within MethodOne, then it would do fine as a local function.\n\
+    \nLet's swing back to the TotalObjectVolume method that uses the CalculateVolume\
+    \ local function, illustrated in Code Listing 23."
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# Code Listing 23: CalculateVolume local function\n\n```\nprivate double TotalObjectVolume((Cylinder\
+    \ c, Sphere s, Pyramid p)\nvolumeShapes)\n{\n    var cylinderVol = CalculateVolume(volumeShapes);\n\
+    \n    double CalculateVolume<T>(T volumeShape)\n    {\n        switch (volumeShape)\n\
+    \        {\n            case Sphere s when s.Radius == 0:\n                return\
+    \ 0;\n            case Cylinder c:\n                return Math.PI * Math.Pow(c.Radius,\
+    \ 2) * c.Length;\n            case Sphere s:\n                return 4 * Math.PI\
+    \ * Math.Pow(s.Radius, 3) / 3;\n            case Pyramid p:\n                return\
+    \ p.BaseLength * p.BaseWidth * p.Height / 3;\n            default:\n         \
+    \       throw new ArgumentException(\"Unrecognized object\", name:nameof(volumeShape));\n\
+    \        }\n    }\n\n    var sphereVol = CalculateVolume(volumeShapes);\n    var\
+    \ pyramidVol = CalculateVolume(volumeShapes);\n\n    return Math.Round(cylinderVol\
+    \ + sphereVol + pyramidVol, 2);\n}\n```\n\nThe TotalObject method takes a tuple\
+    \ called volumeShapes as a parameter and uses the local function CalculateVolume\
+    \ to calculate the volume of the Cylinder, Sphere, and Pyramid types.\n\nIt also\
+    \ allows us to call the local function anywhere inside the enclosing TotalObjectVolume\
+    \ method. You can place the local function after the return statement, as seen\
+    \ in Code Listing 24.\n\n# Code Listing 24: Local function after return\n\n```\n\
+    private double TotalObjectVolume((Cylinder c, Sphere s, Pyramid p)\nvolumeShapes)\n\
+    {\n    var cylinderVol = CalculateVolume(volumeShapes);\n    var sphereVol = CalculateVolume(volumeShapes);\n\
+    \    var pyramidVol = CalculateVolume(volumeShapes);\n\n    return Math.Round(cylinderVol\
+    \ + sphereVol + pyramidVol, 2);\n}\n```"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "```\n// Local functions\ndouble CalculateVolume<T>(T volumeShape)\n{\n    switch\
+    \ (volumeShape)\n    {\n        case Sphere s when s.Radius == 0:\n          \
+    \  return 0;\n        case Cylinder c:\n            return Math.PI * Math.Pow(c.Radius,\
+    \ 2) * c.Length;\n        case Sphere s:\n            return 4 * Math.PI * Math.Pow(s.Radius,\
+    \ 3) / 3;\n        case Pyramid p:\n            return p.BaseLength * p.BaseWidth\
+    \ * p.Height / 3;\n        default:\n            throw new ArgumentException(message:\
+    \ \"Unrecognized object\", paramName: nameof(volumeShape));\n    }\n}\n```\n\n\
+    Local functions are a fantastic addition to C# that allow developers to quite\
+    \ specific in their intent. If you see a local function, then you know that it\
+    \ only makes sense for use within the enclosing method.\n\n# # Expression-bodied\
+    \ members for constructors and finalizers\n\nC# 6 introduced developers to expression-bodied\
+    \ members. These only apply to members and read-only properties. With C# 7 we\
+    \ can now use expression-bodied members on constructors and destructors, as well\
+    \ as on get and set accessors on properties and indexers. Consider the Circle\
+    \ class illustrated in Code Listing 25.\n\nThe class contains a constructor and\
+    \ a destructor, as well as a property that returns the square of the radius.\n\
+    \nCode Listing 25: The Circle class\n\n```\npublic class Circle\n{\n    public\
+    \ double Radius { get; }\n    public double RadiusSquared\n    {\n        return\
+    \ Math.Pow(Radius, 2);\n    }\n}\n```"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: "```\n}\nnpublic Circle(double radius)\n{\n    Radius = radius;\n}\n\n~Circle()\n\
+    {\n    Console.WriteLine(\"Run cleanup statements\");\n}\n}\n```\n\nUsing expression-bodied\
+    \ members, we can cut down on unnecessary code and make the class very readable.\
+    \ Consider the modified Circle class in Code Listing 26.\n\nCode Listing 26: The\
+    \ Circle class using expression-bodied members\n\n```\npublic class Circle\n{\n\
+    \    public double Radius { get; }\n    public double RadiusSquared\n    {\n \
+    \       get => Math.Pow(Radius, 2);\n    }\n\n    public Circle(double radius)\
+    \ => Radius = radius;\n\n    ~Circle() => Console.WriteLine(\"Run cleanup statements\"\
+    );\n}\n```\n\nThe code is more readable and succinct.\n\n# Generalized async return\
+    \ types\n\nLet's briefly discuss async methods before C# 7. Every async method\
+    \ was required to return Task, Task<T>, or void. The use of void-returning methods\
+    \ should only be used with async event handlers. Generally, an event handler is\
+    \ a case of fire and forget: I don't care what the result of the event is.\n\n\
+    If an async method is not returning a value, Task is used. If the method returns\
+    \ a value, then Task<T> is used.\n\nSince Task is a reference type, an object\
+    \ is allocated when using it. In situations where the async method will return\
+    \ a cached result or complete synchronously, these additional allocations can\
+    \ impact performance."
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "In C# 7, the ValueTask type has been added to solve this problem.\n\n> Note:\
+    \ To make use of ValueTask, you must install the System.Threading.Extensions.NuGet\
+    \ package.\n\nYour async methods return types are no longer limited to Task, Task<T>,\
+    \ and void. Have a look at Code Listing 27 and Code Listing 28, which illustrate\
+    \ this language feature.\n\nIn Code Listing 27, we have a static class that will\
+    \ act as the cache.\n\nCode Listing 27: The static cache class\n\n```\npublic\
+    \ static class ValueCache{\n    public static int CachedValue { get; set; } =\
+    \ 0;\n    public static DateTime TimeToLive { get; set; } = DateTime.MinValue;\n\
+    }\n```\n\nI have added Console.WriteLine statements to the code to make the output\
+    \ clearer. The code only calls the DoSomethingAsync when the TimeToLive value\
+    \ has expired. If the TimeLive is still valid, the cached result is returned.\n\
+    \nCode Listing 28: Using Task\n\n```\nstatic async Task Main(){\n    Console.WriteLine(await\
+    \ GetSomeValueAsync());\n    Console.WriteLine($\"Wait 1 second\");\n    await\
+    \ Task.Delay(1000);\n    Console.WriteLine(\"\"\");\n\n    Console.WriteLine(await\
+    \ GetSomeValueAsync());\n    Console.WriteLine($\"Wait 7 seconds\");\n    await\
+    \ Task.Delay(7000);\n    Console.WriteLine(\"\"\");\n\n    Console.WriteLine(await\
+    \ GetSomeValueAsync());\n    _ = Console.ReadLine();\n}\n\npublic static async\
+    \ ValueTask<int> GetSomeValueAsync(){\n    Console.WriteLine($\"DateTime.Now =\
+    \ {DateTime.Now.OfDay}\");\n    Console.WriteLine($\"ValueCache.TimeToLive = {ValueCache.TimeToLive.OfDay}\"\
+    );\n}\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\nif (DateTime.Now <= ValueCache.TimeToLive)\n{\n    Console.WriteLine($\"\
+    Return Cached value\");\n    return ValueCache.CachedValue;\n}\n\nvar val = await\
+    \ DoSomethingAsync();\nValueCache.CachedValue = val;\nConsole.WriteLine($\"Set\
+    \ time to live at 5 seconds\");\nValueCache.TimeToLive = DateTime.Now.AddSeconds(5.0);\n\
+    \nConsole.WriteLine($\"Return value\");\n\nprivate static async async Task<int>\
+    \ DoSomethingAsync()\n{\n    await Task.Delay(1);\n    return DateTime.Now.Second;\n\
+    }\n```\n\nYou can see the output of this in Code Listing 29.\n\n> Code Listing\
+    \ 29: Console output\n\nDateTime.Now = 17:16:39.8923332\nValueCache.TimeToLive\
+    \ = 00:00:00\nSet time to live at 5 seconds\nReturn value\n39\nWait 1 second\n\
+    \nDateTime.Now = 17:16:40.9243327\nValueCache.TimeToLive = 17:16:44.9223327\n\
+    Return Cached value\n39\nWait 7 seconds\n\nDateTime.Now = 17:16:47.9273331\nValueCache.TimeToLive\
+    \ = 17:16:44.9223327\nSet time to live at 5 seconds\nReturn value\n47\n\nIt must\
+    \ be noted that the returned type still needs to satisfy the async pattern. This\
+    \ means that the GetAwaiter method must be accessible."
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: "# Chapter 3 C# 8.0 Features\n\nWith the release of C# 8.0, developers have\
+    \ been given more features and enhancements to improve their codebases with, such\
+    \ as pattern matching enhancements. This will become evident when we look at switch\
+    \ expressions later on in this book.\n\nC# 8.0 is supported by .NET Core 3.x and\
+    \ .NET Standard 2.1.\n\n# Default interface methods\n\nThis change to interfaces\
+    \ in C# 8.0 might be somewhat controversial for some, depending on your views.\
+    \ The logic, however, behind the feature in C# 8.0 is welcome. To understand the\
+    \ change, we need to explain a scenario.\n\nAn application creates orders. For\
+    \ this scenario, an interface called IOrder has been created, and is implemented\
+    \ by your application. This interface is also used in an external codebase maintained\
+    \ by a different team of developers. The interface and implementation look as\
+    \ illustrated in Code Listing 30.\n\n> Code Listing 30: The IOrder Interface\n\
+    \n```\npublic class SalesOrder : IOrder{\n    public void CreateOrder(DateTime\
+    \ orderDate) { }\n}\n\npublic interface IOrder{\n    void CreateOrder(DateTime\
+    \ orderDate);\n}\n```\n\nChanges to logic in the program require developers to\
+    \ be able to default the order date. The change, therefore, needs to be made in\
+    \ the interface to provide the ability to create an order without specifying a\
+    \ date. This will simply default to the current date.\n\nThe problem with this\
+    \ approach is that once interfaces are released, they are considered immutable.\
+    \ Adding logic to the IOrder interface is a breaking change, as seen in Figure\
+    \ 1."
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "```\n0 references | 0 changes | 0 authors\npublic class SalesOrder : IOrder\n\
+    {\n  1 reference | 0 changes | 0 authors, 0 changes\n  public void CreateOrder(DateTime\
+    \ orderDate) { }\n}\n1 reference | 0 changes | 0 authors, 0 changes\npublic interface\
+    \ IOrder\n{\n  1 reference | 0 changes | 0 authors, 0 changes\n  void CreateOrder(DateTime\
+    \ orderDate);\n  0 references | 0 changes | 0 authors, 0 changes\n  void CreateOrder();\n\
+    }\n```\n\nFigure 1: Modifying the interface introduces a breaking change\n\nThis\
+    \ is because the addition of the CreateOrder() method requires implementation\
+    \ in all classes that use the interface. In C# 8.0, we can provide a default implementation\
+    \ when upgrading an interface.\n\nCode List 31: Default Interface method\n\n```\n\
+    public class SalesOrder : IOrder\n{\n  public void CreateOrder(DateTime orderDate)\
+    \ {\n}\n\npublic interface IOrder\n{\n  void CreateOrder(DateTime orderDate);\n\
+    \  void CreateOrder() => CreateOrder(DateTime.Now);\n}\n```\n\nNow, implementors\
+    \ of the interface that do not know about the new member are not affected. The\
+    \ default implementation is ignored.\n\n# Nullable reference types\n\nOne of the\
+    \ biggest changes with regards to developer impact is one that probably has the\
+    \ smallest syntactic impact. Developers can now express whether or not a specific\
+    \ reference can be null.\n\n> Note: Did you know that null has been around in\
+    \ OOP programming for over 50 years?\n\nThe question now is: what happens if the\
+    \ list of students is null? Consider the following code."
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: "# Code Listing 32: The ListStudents method\n\n```\nprivate void ListStudents(IEnumerable<Student>\
+    \ students)\n{\n    foreach (Student student in students)\n    {\n        Console.WriteLine(student.FirstName);\n\
+    \    }\n}\n```\n\nThere is no way to tell the compiler that the Student object\
+    \ might be null. With nullable reference types, we can express this more clearly.\
+    \ To enable this feature, you need to add `<Nullable>enable</Nullable>` to your\
+    \ .csproj file, as shown in Code Listing 33.\n\n# Code Listing 33: Enabling nullable\
+    \ reference types\n\n```\n<Project Sdk=\"Microsoft.NET.Sdk\">\n  <PropertyGroup>\n\
+    \    <OutputType>Exe</OutputType>\n    <TargetFrameworkFramework>netcore3.1</TargetFrameworkFramework>\n\
+    \    <Nullable>enable</Nullable>\n  </PropertyGroup>\n</Project>\n```\n\nThis\
+    \ will now enable more compiler feedback to allow you to get the code right the\
+    \ first time. A nullable reference type is indicated by using the same syntax\
+    \ as nullable value types: by adding a ? to the type of the variable, as seen\
+    \ in the method signature of the ListStudents method in Code Listing 34.\n\n#\
+    \ Code Listing 34: Specifying that Student can be null\n\n```\nprivate void ListStudents(IEnumerable<Student>?\
+    \ students)\n{\n    foreach (Student student in students)\n    {\n        Console.WriteLine(student.FirstName);\n\
+    \    }\n}\n```\n\nOnce you do that, the compiler generates more concise warnings\
+    \ regarding the use of the Student variable, as seen in Figure 2."
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "1 reference | 0 changes | 0 authors, 0 changes\n\n```\nprivate void List(IEnumerable<Student>\
+    \ students) {\n    foreach (Student student in students) {\n        Console.WriteLine(student.FirstName);\n\
+    \    }\n}\n```\n\n> (local variable) Student\n'student' may be null.\n\nDereference\
+    \ of a possibly null reference.\n\nShow potential fixes (Alt+Enter or Ctrl+.)\n\
+    \nFigure 2: Compiler warnings for null reference\n\nYou are now in a better position\
+    \ to code defensively against null reference exceptions.\n\n# The null-forgiving\
+    \ operator\n\nThose of you who worked with the Swift programming language might\
+    \ be familiar with the following syntax. In C# 8.0 we call it the null-forgiving\
+    \ operator, and it is implemented using the ! operator.\n\nConsider the Student\
+    \ class used in Code Listing 34. To ensure that we have a valid Student class,\
+    \ I have created an extension method that ensures my Student class is not null,\
+    \ and that the FirstName property will have a value. This is illustrated in Code\
+    \ Listing 35.\n\nCode Listing 35: The IsValid extension method\n\n```\npublic\
+    \ static class ExtensionMethods {\n    public static bool IsValid(this Student\
+    \ student) {\n        return student != null && string.IsNullOrEmpty(student.FirstName);\n\
+    \    }\n}\n```\n\nIf I had to use this in a method that gets the FirstName property\
+    \ of the Student class, I would see that I still receive the warning when accessing\
+    \ the FirstName property."
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "References | Changes | O authors, O changes\n\n```\nprivate void GetStudentName(Student?\
+    \ student)\n{\n    if (student.IsValid())\n    {\n        Console.WriteLine(student.FirstName);\n\
+    \    }\n}\n```\n\nFigure 3: Applying the IsNull extension method\n\nI am confident\
+    \ in this instance, because I am calling the IsValid extension method on my Student\
+    \ class, the FirstName property will not be null. I can therefore safely add the\
+    \ null-forgiving operator to my code makes the FirstName property, as seen in\
+    \ Code Listing 36.\n\nCode Listing 36: Applying the null-forgiving operator\n\n\
+    ```\nprivate void GetStudentName(Student? student)\n{\n    if (student.IsValid())\n\
+    \    {\n        Console.WriteLine(student!.FirstName);\n    }\n}\n```\n\nThe warning\
+    \ is removed and the intent of my code is quite clear.\n\n# Asynchronous streams\n\
+    \nThe introduction of asynchronous programming has forever changed the way developers\
+    \ write code. With the addition of async and await in .NET, C# developers could\
+    \ leverage as easily. Developers could not, however, consume streams of data asynchronously.\
+    \ That is, until C# 8.0 introduced IAsyncEnumerable<T>.\n\nIf this looks familiar,\
+    \ that's because it is. IAsyncEnumerable<T> is similar to IIEnumerable<T>, which\
+    \ is used to iterate over collections. The only difference is that IAsyncEnumerable<T>\
+    \ allows developers to iterate through a collection asynchronously. This means\
+    \ our code can wait for the next element in a collection without blocking a thread."
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "Methods return asynchronous streams have three properties:\n\n+   - They must\
+    \ be declared with the async modifier.\n- They return an IAsyncEnumerable<T>.\n\
+    - They contain yield return statements to return successive elements in the asynchronous\
+    \ stream.\n\nIt is worth noting that the stream elements are processed in the\
+    \ captured context. To disable this, you need to use the TaskAsyncEnumerableExtensions.ConfigureAwait\
+    \ extension method.\n\nFor more on this, see Microsoft Docs.\n\nTo illustrate\
+    \ IAsyncEnumerable<T>, let us assume that you need to return some data from a\
+    \ data store. It's great if you can get all data in a single call. You can perform\
+    \ asynchronous calls to get the data, and return it to the calling code.\n\nThe\
+    \ challenge, however, exists when you can't get all data at once. Sometimes the\
+    \ data needs to be returned in pages as it becomes available.\n\nIt is here that\
+    \ asynchronous streams shine. You can now send the data back to the calling code\
+    \ as soon as data is available. To appreciate IAsyncEnumerable<T>, let's illustrate\
+    \ the problem we are faced with by creating an asynchronous method that mimics\
+    \ the behavior of getting data that is paged.\n\nConsider the following.\n\n>\
+    \ Code Listing 37: Read a stream of data asynchronously\n\n```\nstatic async Task<IAsyncEnumerable<int>>\
+    \ GetSomethingAsync()\n{\n    var iValues = new List<int>();\n    for (var i =\
+    \ 0; i <= 10; i++)\n    {\n        await Task.Delay(1000);\n        iValues.Add(i);\n\
+    \    }\n    return iValues;\n}\n```\n\nWhen you call this method, as shown in\
+    \ Code Listing 38, the application will wait 10 seconds and display all the numbers\
+    \ at once in the console window.\n\n> Code Listing 38: Iterate asynchronously\n\
+    \n```\nforeach (var item in await GetSomethingAsync())\n{\n    Console.WriteLine(item);\n\
+    }\n```"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "To display the numbers on by one as they are generated, let's modify the GetSomethingAsync\
+    \ method by changing the Task<IIEnumerable<int>> to IAsyncEnumerable<int> and\
+    \ adding yield, as seen in Code List 39.\n\n# Code List 39: Using IAsyncEnumerable<T>\n\
+    \n```\nstatic async IAsyncEnumerable<int> GetSomethingAsync()\n{\n    for (var\
+    \ i = 0; i <= 10; i++)\n    {\n        yield return i;\n        await Task.Delay(1000);\n\
+    \    }\n}\n```\n\nThe yield keyword performs a stateful iteration and returns\
+    \ the values of a collection by one. To consume the asynchronous stream, the await\
+    \ keyword before the foreach so that your code looks as illustrated in Code List\
+    \ 40.\n\n# Code List 40: Consuming the asynchronous stream\n\n```\nawait foreach\
+    \ (var item in GetSomethingAsync())\n{\n    Console.WriteLine(item);\n}\n```\n\
+    \nRunning this code will display the numbers in the console window one by one,\
+    \ as they are available.\n\n# Asynchronous disposable\n\nIf you have a .NET class\
+    \ that uses unmanaged resources, then you should see the IDisposable interface\
+    \ implemented in that class. This is to allow for the release of unmanaged resources\
+    \ synchronously.\n\nIn C# 8.0 you can now do this asynchronously by using IAsyncDisposable.\
+    \ This gives you a mechanism for performing resource-intensive dispose operations\
+    \ without blocking the main UI thread.\n\nHaving a look at the IAsyncDisposable.DisposeAsync\
+    \ method, see that it returns a ValueTask representing the asynchronous dispose\
+    \ operation. You can see more on here.\n\nWhen you implement IAsyncDisposable\
+    \ on an object in your application, you should call DisposeAsync when you are\
+    \ finished using that object. A good practice is to put the code implementing\
+    \ IAsyncDisposable in a using statement. This ensures that the code releasing\
+    \ the resources will still do so in the event of an exception being thrown."
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "# Indices and ranges\n\nIndices and ranges provide a better and concise way,\
+    \ using bracket notation, to look at a single element from the start or end of\
+    \ an array. They can also be used to look at a range inside of an array.\n\n>\
+    \ Note: I use an array as an example here, but it can refer to any sequence of\
+    \ elements.\n\nConsider the code illustrated in Code Listing 41. (Notice that\
+    \ I am using static System.Console.)\n\nCode Listing 41: Reading months using\
+    \ indices\n\n```\nstring[] months = {\n    \"January\"  // From Start   ^12\n\
+    \    \"February\" // 0           ^11\n    \"March\"    // 2           ^10\n  \
+    \  \"April\"    // 3           ^9\n    \"May\"      // 4           ^8\n    \"\
+    June\"     // 5           ^7\n    \"July\"     // 6           ^6\n    \"August\"\
+    \   // 7           ^5\n    \"September\" // 8          ^4\n    \"October\"  //\
+    \ 9           ^3\n    \"November\" // 10          ^2\n    \"December\" // 11 \
+    \         ^1\n}\n\nWriteLine(months[3]); // From array start\nWriteLine(months[^12]);\
+    \ // From array end\n```\n\nWe know that C# is zero-based, meaning that the first\
+    \ item in the array starts at 0. Have a look at the ^ operator (call it hat operator).\
+    \ Quite controversially, this starts at ^1. The reason for this is that ^0 denotes\
+    \ the length of the array. Consider the code illustrated in Code Listing 42.\n\
+    \nCode Listing 42: Get items to the end of the array\n\n```\nvar slice = months[^4..^];\n\
+    foreach (var s in slice) WriteLine(s);\n```\n\nIt reads as follows: the months,\
+    \ starting from the fourth element from the end (^4) for the length (^0) of the\
+    \ array. Therefore, ^0 is one past the end, and points to the very end of the\
+    \ array.\n\nWe also see that the code in Code Listing 43 output the same element\
+    \ in the array."
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "# Code Listing 43: Using Length - 1 and ^1\n\n```\nWriteLine(months[months.Length\
+    \ - 1]);\nWriteLine(months[^1]);\n```\n\nYou can also pull out a range of values,\
+    \ as illustrated in Code Listing 44.\n\n# Code Listing 44: Find a range of values\n\
+    \n```\nvar year = months[..];\nforeach (var s in year) WriteLine(s); // January\
+    \ to December\n\nvar quarter = months[..3];\nforeach(var s in quarter) WriteLine(s);\
+    \ // Quarter 1 - January to March\n\nvar restOfYear = months[3..];\nforeach(var\
+    \ s in restOfYear) WriteLine(s); // April to December\n```\n\nLet's recap some\
+    \ rules for indices:\n\n+   * Index 0 = months[0]\n* Index ^0 = months.Length\n\
+    * Typing [n] is the same as months[months.Length - n] where n is any number.\n\
+    * A range specifies the start and end of a range with the start of the range inclusive,\
+    \ and the end of the range exclusive: Therefore:\n    * The range[..3] excludes\
+    \ April.\n    * The range[3..] includes April.\n    * The range[0..^] represents\
+    \ January to December.\n\nYou can assign variables, as illustrated in Code Listing\
+    \ 45.\n\n# Code Listing 45: Assign variables to index and range\n\n```\nvar july\
+    \ = ^6;\nWriteLine(months[july]); // July\n\nvar firstSemester = 0..6;\nvar semester\
+    \ = months[firstSemester];\nforeach (var s in semester) WriteLine(s); // January\
+    \ to June\n```\n\nAs noted earlier, ranges and indices work with any sequence\
+    \ of elements. You can use them with string<T>, or ReadOnlySpan<T>."
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# Switch expressions\n\nI have always disliked using switch statements. Personally,\
+    \ the switch statement always felt so cumbersome and unnecessarily clunky. Now\
+    \ with C# 8.0, we can be much more concise in the way we express ourselves using\
+    \ switch expressions. Consider the traditional switch statement that returns a\
+    \ string from a method called GetBirthStone, as illustrated in Code Listing 46.\n\
+    \nCode Listing 46: Traditional switch statement\n\n```\nprivate string GetBirthstone(Months\
+    \ month)\n{\n    case Months.January:\n        return \"Ruby or Rose Quartz\"\
+    ;n    case Months.March:\n        return \"Bloodstone and Aquamarine\";n    case\
+    \ Months.April:\n        return \"Diamond\";n    case Months.May:\n        return\
+    \ \"Emerald\";n    case Months.June:\n        return \"Pearl, Alexandrite, and\
+    \ Moonstone\";n    case Months.July:\n        return \"Ruby\";n    case Months.August:\n\
+    \        return \"Sardonyx and Peridot\";n    case Months.September:\n       \
+    \ return \"Sapphire\";n    case Months.October:\n        return \"Opal and The\
+    \ Tourmaline\";n    case Months.November:\n        return \"Topaz\"\n    case\
+    \ Months.December:\n        return \"Turquoise and Zircon\";n    default:\n  \
+    \      return $\"Did not find a birth stone for {month}\";\n}\n```\n\nCompare\
+    \ this with the concise switch expression returned from the modified GetBirthStone\
+    \ method illustrated in Code Listing 47.\n\nCode Listing 47: The new switch expression\n\
+    \n```\nprivate string GetBirthstone(Months month) =>\n    month switch\n{\n```"
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "| Months.January => \"Ruby or Rose Quartz\",nMonths.March => \"Bloodstone and\
+    \ Aquamarine\",nMonths.April => \"Diamond\",nMonths.May => \"Emerald\",nMonths.June\
+    \ => \"Pearl, Alexandrite and Moonstone\",nMonths.July => \"Ruby\",nMonths.August\
+    \ => \"Sardonyx and Peridot\",nMonths.September => \"Sapphire\",nMonths.October\
+    \ => \"Opal and The Tourmaline\",nMonths.November => \"Topaz\",nMonths.December\
+    \ => \"Turquoise and Zircon\",n=> \"$Did not find a birth stone for {month}\"\
+    \ \n\n};\n\nWe should note a few things here:\n\n+   - Because the GetBirthMethod\
+    \ just returns the value from the switch, it can be changed to use an expression\
+    \ body.\n- In the switch expression, the need for case and break keywords are\
+    \ removed.\n- The switch expression puts the variable before the switch keyword.\n\
+    - The case and: have been replaced with a single =>, (for anyway) looks much nicer.\n\
+    - The default case has been replaced with the _ discard.\n\nThis expression body\
+    \ makes cleaner, better-looking, and more readable code. To change a switch statement\
+    \ to a switch expression, place your cursor on the switch keyword and press Ctrl+.\
+    \ Convert switch statement to expression.\n\n# Readonly members\n\nYou can now\
+    \ add readonly modifiers to struct members. This is helpful if you need to indicate\
+    \ that a member does not modify state, and gives you a more fine-tuned approach\
+    \ to simply applying the readonly to a struct declaration.\n\nConsider the mutable\
+    \ struct in Code Listing 48.\n\n```\nCode Listing 48: Struct to calculate days\
+    \ since a given date\npublic struct DaysSince\n{\n    public DateTime GivenDate\
+    \ { get; set; }\n    public double Number => Math.Round((DateTime.Now - GivenDate).TotalDays,\
+    \ 0);\n\n    public override string ToString() => $\"Days since {GivenDate} =\
+    \ {Number} days\";\n}\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "We can see that the ToString method will not change the state, and you can\
+    \ indicate this by adding the readonly modifier to the ToString declaration. When\
+    \ you do this, however, you will receive a compiler warning, as seen in Figure\
+    \ 4.\n\n```\nreferences | changes | authors, changes => public readonly override\
+    \ string ToString() => \"$GivenDate since = (Number) days\";\n```\n\n# Figure\
+    \ 4: Compiler warning\n\nThis happens because the Number property is not marked\
+    \ as readonly, and the compiler will display this warning when it needs to create\
+    \ a defensive copy. We know that the Number property will not change the state,\
+    \ so we can safely add a readonly modifier to the declaration.\n\n# Code List\
+    \ 49: Add readonly modifier to struct member\n\n```\npublic struct DaysSince {\n\
+    \    public DateTime GivenDate { get; set; }\n    public readonly Number => Math.Round((DateTime.Now\
+    \ GivenDate).TotalDays, 0);\n\n    public readonly override string ToString()\
+    \ => \"$GivenDate since {Number} days\";\n```\n\nBe aware that the readonly modifier\
+    \ is only necessary on read-only properties. The compiler will not assume that\
+    \ getter accessors modify state, so you must specify that. The only exception\
+    \ is with auto-implemented properties where all auto-implemented getters are regarded\
+    \ as readonly by default. This is the reason that the GivenDate property didn't\
+    \ generate a compiler warning.\n\n# Using declarations\n\nYou should be familiar\
+    \ with the using statement in C#. It provides a way to ensure that your code adheres\
+    \ to the correct usage of IDisposable objects; when the code execution moves past\
+    \ the using statement's scope, the objects in that scope are properly disposed\
+    \ of.\n\nConsider the using statement in Code List 50.\n\n# Code List 50: Using\
+    \ statement to read a file\n\n```\nprivate void ReadFile() {\n    using (var reader\
+    \ = new System.IO.StreamReader(\"C:\\temp\\TextDocument.txt\")) {\n        var\
+    \ lines = reader.ReadToEnd();\n    }\n}\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "With C# 8.0, you can now make use of using declarations instead, as illustrated\
+    \ in Code Listing 51.\n\n# Code Listing 51: Using declaration to read a file\n\
+    \n```\nprivate void ReadFile()\\{\n    using var reader = new\n    System.IO.StreamReader(\"\
+    C:\\temp\\Document.txt\");\n    var lines = reader.ToEnd();\n}\n```\n\nWhat we\
+    \ notice about the using declaration is that the using keyword precedes the var\
+    \ keyword. This tells the compiler that the variable called reader is being declared\
+    \ must be disposed of at the end of the enclosing scope.\n\n# Static local functions\n\
+    \nLocal functions are another one of my favorite language features. First appearing\
+    \ in C# 7, you can now add the static modifier to a local function in C# 8.0.\
+    \ When we use a static local function, we know it does not use any of the arguments\
+    \ contained in its outer scope. This means that the compiler can optimize the\
+    \ code accordingly.\n\nConsider the following code.\n\n# Code Listing 52: Static\
+    \ local functions\n\n```\nprivate double TotalObjectVolume((Cylinder c, Sphere\
+    \ s, Pyramid p) volumeShapes)\\{\n    var cylinderVol = CalculateVolume(volumeShapes.c);\n\
+    \    var sphereVol = CalculateVolume(volumeShapes.s);\n    var pyramidVol = CalculateVolume(volumeShapes.p);\n\
+    \n    return Math.Round(cylinderVol + sphereVol + pyramidVol, 2);\n\n    // static\
+    \ local functions\n    static double CalculateVolume<T>(T volumeShape)\n{\n  \
+    \      return volumeShape switch\n{\n            Sphere s when s.Radius == 0 =>\
+    \ 0,\n            Cylinder c => Math.PI * Math.Pow(c.Radius, 2) * c.Length,\n\
+    \        }\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: "```\nSphere s => 4 * Math.PI * Math.Pow(s.Radius, 3) / 3,\nPyramid p => p.BaseLength\
+    \ * p.BaseWidth * p.Height / 3,\n=> throw new ArgumentException(message: \"Unrecognized\n\
+    object\", paramName: nameof(volumeShape)),\n}\n}\n```\n\nYou will notice that\
+    \ this is the same method we used in the Local Functions demo when discussing\
+    \ C#7 earlier in the book. The only difference is that it now uses a switch expression,\
+    \ as allowed in C# 8.0.\n\nThe local function called CalculateVolume has been\
+    \ marked as static. The compiler knows that it does not use any of the arguments\
+    \ in the outer scope. To see what this means, add the following static local function\
+    \ to the TotalObjectVolume method.\n\n> Code Listing 53: Static local function\
+    \ with a compiler error\n\n```\nstatic double GetCylinderRadius()\n{\\    var\
+    \ cylinder = volumeShapes.c; // Compiler error\n    return cylinder.Radius;\n\
+    }\n```\n\nThe code for the TotalObjectVolume method should now look like Code\
+    \ Listing 54.\n\n> Code Listing 54: The TotalObjectVolume method\n\n```\nprivate\
+    \ double TotalObjectVolume((Cylinder c, Sphere s, Pyramid p) volumeShapes)\n{\\\
+    \    var cylinderVol = CalculateVolume(volumeShapes.c);\n    var sphereVol = CalculateVolume(volumeShapes.s);\n\
+    \    var pyramidVol = CalculateVolume(volumeShapes.p);\n\n    return Math.Round(cylinderVol\
+    \ + sphereVol + pyramidVol, 2);\n\n    // static local functions\n    static double\
+    \ CalculateVolume<T>(T volumeShape)\n    {\\        return volumeShape switch\
+    \ {\n            Sphere s => s.Radius <= 0 => 0,\n            Cylinder c => Math.PI\
+    \ * Math.Pow(c.Radius, 2) * c.Length,\n            Sphere s => 4 * Math.PI * Math.Pow(s.Radius,\
+    \ 3) / 3,\n            Pyramid p => p.BaseLength * p.BaseWidth * p.Height / 3,\n\
+    \            => throw new ArgumentException(message: \"Unrecognized\nobject\"\
+    , paramName: nameof(volumeShape)),\n        }\n```"
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: "```\n};\n\nstatic double GetCylinderRadius()\n{\n    var cylinder = volumeShapes.c;\
+    \ // Compiler error\n    return cylinder.Radius;\n}\n\n```\n\nYou will notice\
+    \ that the code added for the GetCylinderRadius local function will generate a\
+    \ compiler error, as illustrated in Figure 5.\n\n```\nstatic double GetCylinderRadius()\n\
+    {\n    var cylinder = volumeShapes.c; // Compiler error\n    return cy - In\n\
+    }\n```\n\n> (parameter) Cylinder c, Sphere, Pyramid p) volumeShapes\nA static\
+    \ local function cannot contain a reference to 'volumeShapes'.\nShow potential\
+    \ fixes (Alt+Enter or Ctrl+.)\n\nFigure 5: The compiler error on a static local\
+    \ function\n\nThis is because the local function is marked as static, but it references\
+    \ volumeShapes, which is contained in the outer scope.\n\n# Disposable ref structs\n\
+    \nIn C# 7 we were allowed to declare a struct with the ref modifier. What we couldn't\
+    \ do, however, was implement interfaces on such structs. This means that the code\
+    \ in Code Listing 55 will generate a compiler error.\n\nCode Listing 55: A ref\
+    \ struct implementing an interface\n\n```\nref struct StudentScores : IDisposable\n\
+    {\n}\n```\n\nAs seen in Figure 6, the compiler is telling us that we cant implement\
+    \ an interface on our struct."
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: "1 reference | 0 changes | 0 authors, 0 changes\n\n```\nref struct StudentScores\
+    \ {\n    - interface System.IDisposable\n      Provides a mechanism for releasing\
+    \ unmanaged resources.\n    'StudentScores': ref structs cannot implement interfaces\n\
+    }\n```\n\nFigure 6: Compiler error on ref struct\n\nThis leaves us in a bit of\
+    \ a predicament. What if we need to perform some cleanup for our struct? In C#\
+    \ 8.0 we can now do that by adding a publicly accessible void Dispose method,\
+    \ as seen in Code Listing 56.\n\nCode Listing 56: A ref struct with a Dispose\
+    \ method\n\n```\nref struct StudentScores {\n    public void Dispose() {\n   \
+    \     // perform clean up\n    }\n}\n```\n\nWe can use it in our code in a using\
+    \ declaration, as illustrated in Code Listing 57.\n\nCode Listing 57: Using declaration\
+    \ for struct\n\n```\nusing var scores = new StudentScores();\n```\n\nYou can also\
+    \ use disposable ref structs with readonly ref struct declarations.\n\n# Null-coalescing\
+    \ assignment\n\nC# 8.0 also introduced the null-coalescing assignment operator:\
+    \ ??. This operator can now be used to assign the value of its right-hand operand\
+    \ to its left-hand operand only in the event of the left-hand operand evaluating\
+    \ to null.\n\nHow often have you seen code like the following?\n\nCode Listing\
+    \ 58: Checking for null and assigning\n\n```\nprivate void AddUpdateScores(List<int>\
+    \ lstScores) {\n    if (lstScores == null) {\n        lstScores = new List<int>();\n\
+    \    }\n}\n```"
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: "```\n}\n// Add/Update scores\n}\n```\n\nIn C 8.0 the null-coalescing assignment\
+    \ operator makes this check almost negligible, as seen in Code Listing 59.\n\n\
+    Code Listing 59: Checking for null using null-coalescing assignment\n\n```\nprivate\
+    \ void AddUpdateScores(List<int> 1stScores)\n{\n    1stScores ?? new List<int>();\n\
+    \    // Add/Update scores\n}\n```\n\nIf you read through the code too fast, you\
+    \ might miss it. It's a small change, but it has a big impact. It is also important\
+    \ to note that if the 1stScores variable is not null; the assignment is simply\
+    \ skipped.\n\n# Unmanaged constructed types\n\nUnmanaged types are not types defined\
+    \ in unmanaged code. It is a type that is not a reference type, and does not contain\
+    \ reference type fields at any level of nesting. Therefore, with C# 8.0, a constructed\
+    \ value type is unmanaged if it contains fields of unmanaged types only.\n\nConsider\
+    \ the code in Code Listing 60.\n\nCode Listing 60: A generic struct\n\n```\npublic\
+    \ struct MyStruct<T>\n{\n    public T One;\n    public T Two;\n}\n```\n\nIn Code\
+    \ Listing 61, we have an extension method with the unmanaged constraint on T.\n\
+    \nCode Listing 61: A generic extension method with an unmanaged constraint\n\n\
+    ```\npublic unsafe static PropertyInfo[] GetProps<T>(this T obj) where T : unmanaged\n\
+    {\n    var t = obj.GetType();\n}\n```"
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "```\nreturn t.GetProperties();\n}\n```\n\nThis means that if we create our\
+    \ struct as illustrated in Code Listing 62, we can call the extension method on\
+    \ the instance of that struct because it is an unmanaged constructed type.\n\n\
+    # Code Listing 62: Calling the extension method\n\n```\nvar mystruct = new MyStruct<int>\
+    \ { One = 1, Two = 2 };\nvar props = mystruct.GetProps();\n```\n\nThis is because\
+    \ int is an unmanaged type. If we had to use string, then we would no longer have\
+    \ an unmanaged constructed type, because string is not an unmanaged type, and\
+    \ mystruct2 would violate the unmanaged constraint on the extension method.\n\n\
+    ```\nvar mystruct2 = new MyStruct<string> { One = \"One\", Two = \"Two\" };\n\
+    mystruct2;\n```\n\n![](img/49b3596025ccb7ecebab509ce03bfac6_47_0.png)\n\nFigure\
+    \ 7: Not-unmanaged constructed type\n\nThe following types are unmanaged types:\n\
+    \n+   - sbyte, byte, short, ushort, int, uint, long, char, float, double, decimal,\
+    \ or bool.\n- Any enum type.\n- Any pointer type.\n- Any user-defined struct containing\
+    \ only unmanaged type fields and is not a constructed type pre-C#7.3.\n\nC# 7.3\
+    \ introduced the unmanaged constraint, as seen in the extension method in Code\
+    \ Listing 61. This means we can use the unmanaged constraint directly in the definition\
+    \ of the generic struct, as seen in Code Listing 63.\n\n# Code Listing 63: The\
+    \ unmanaged constraint on the generic struct\n\n```\npublic struct MyStruct<T>\
+    \ where T : unmanaged\n{\n    public T One;\n    public T Two;\n}\n```"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: 'This would generate a compiler error, as seen in Figure 8, because the creation
+    of mystruct2 violates the unmanaged constraint on the generic struct definition.
+
+
+    ```
+
+    var mystruct = new MyStruct<int> { One = 1, Two = 2 };
+
+    var props = mystruct.GetProps();
+
+    var mystruct2 = new MyStruct<string> { One = "One", Two = "Two" };
+
+    ```
+
+
+    Figure 8: The MyStruct<string> violates the constraint
+
+
+    We can see that a generic struct can be the source of both unmanaged and unwanted
+    constructed types. Where you place the constraint is up to you and what you need
+    to achieve.
+
+
+    # Enhancement of interpolated verbatim strings
+
+
+    In C# 8.0 the $ and @ tokens used with interpolated strings can be either $@@"$
+    or $@@".\.", and both are now valid interpolated verbatim strings. Before C# 8.0,
+    the $ token had to appear before the @ token.
+
+
+    This means var msg = = $@"The \t student is {studentName}"; will produce the exact
+    same output as var msg = $@"The \t student is {studentName}";; in the console
+    window.
+
+
+    # Enabling C# 8 in any .NET project
+
+
+    It is possible to enable C# 8.0 in any .NET project. There are a few frescos,
+    but I will get to those in a minute. To see this in action, create a .NET console
+    application using the .NET Framework, as seen in Figure 9.'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# Add a new project\n\nRecent project templates\n\n![](img/49b3596025ccb7ecebab509ce03bfac6_49_0.png)\n\
+    \nWhen this project is created, the shape classes seen in Code Listing 64 to your\
+    \ console application. These are the same classes that we used earlier in the\
+    \ book, but I'm presenting them here for convenience.\n\nCode Listing 64: Shape\
+    \ classes\n\n```\npublic class Cylinder {\n    public double Length { get; }\n\
+    \    public double Radius { get; }\n\n    public Cylinder(double length, double\
+    \ radius) {\n        Length = length;\n        Radius = radius;\n    }\n}\npublic\
+    \ class Sphere {\n    public double Radius { get; }\n}\n```"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: "```\npublic Sphere(double radius)\n{\n    Radius = radius;\n}\nublic class\
+    \ Pyramid\n{\n    public double BaseLength { get; }\n    public double BaseWidth\
+    \ { get; }\n    public double Height { get; }\n\n    public Pyramid(double baseLength,\
+    \ double baseWidth, double height)\n{\n    BaseLength = baseLength;\n    BaseWidth\
+    \ = baseWidth;\n    Height = height;\n}\n```\n\nLet's add our TotalObjectVolume\
+    \ method to our project that uses a static local function, also uses a switch\
+    \ expression. The code is illustrated in Code List 65.\n\nCode List 65: A static\
+    \ local function using a switch expression\n\n```\nprivate double TotalObjectVolume((Cylinder\
+    \ c, Sphere s, Pyramid p) volumeShapes)\n{\n    var cylinderVol = CalculateVolume(volumeShapes.c);\n\
+    \    var sphereVol = CalculateVolume(volumeShapes.s);\n    var pyramidVol = CalculateVolume(volumeShapes.p);\n\
+    \n    return Math.Round(cylinderVol + sphereVol + pyramidVol, 2);\n\n    // static\
+    \ local functions here\n    static double CalculateVolume<T>(T volumeShape)\n\
+    \    {\n        return volumeShape switch\n        {\n            Sphere s =>\
+    \ s.Radius == 0 => 0,\n            Cylinder c => Math.PI * Math.Pow(c.Radius,\
+    \ 2) * c.Length,\n            Sphere s => 4 * Math.PI * Math.Pow(s.Radius, 3)\
+    \ / 3,\n            Pyramid p => p.BaseLength * p.BaseWidth * p.Height / 3,\n\
+    \            _ => throw new ArgumentException(message: \"Unrecognized object\"\
+    , paramName: nameof(volumeShape)),\n        };\n    }\n```"
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "At this point, you will see a bunch of compiler errors in your static local\
+    \ function. The compiler errors will most likely tell you that you are trying\
+    \ to use C# 8.0 language features in an earlier version of C# (probably C# 7.3,\
+    \ depending on the .NET Framework you are using).\n\nTo use C# 8.0 in your console\
+    \ application using the .NET Framework (.NET Core—remember, we created a console\
+    \ app using the .NET Framework), you may need to modify your .csproj file as seen\
+    \ in Code List 66.\n\nChange the <LangVersion> to 8.0 in your .csproj file. If\
+    \ there isn't a <LangVersion>, just add one.\n\n```\nCode List 66: Add LangVersion\
+    \ to .csproj\n```xml\n<PropertyGroup>\n  <Configuration Condition=\"$(Configuration)\\\
+    =='Debug'\">\n  <Platform Condition=\"$(Platform)\\=='Any CPU'\">AnyCPU</Platform>\n\
+    \  <ProjectGuid>E16C86C3-D5C2-4D68-B34E-B1D062777DB9</ProjectGuid>\n  <OutputType>Exe</OutputType>\n\
+    \  <RootNamespace>NetFxConsole</RootNamespace>\n  <AssemblyName>NetFxConsoleApp</AssemblyName>\n\
+    \  <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>\n  <LangVersion>8.0</LangVersion>\n\
+    \  <FileAlignment>512</FileAlignment>\n  <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>\n\
+    \  <Deterministic>true</Deterministic>\n</PropertyGroup>\n```\n```\n\nSave your\
+    \ .csproj file and reload your project if needed. That's all there is to it. There\
+    \ are some provisos to this, though.\n\n# Not all types are included\n\nSome types,\
+    \ like IEnumerable, are not included. There is a workaround, though—you can install\
+    \ the Microsoft.Bcl.AsyncInterfaces and Microsoft.Bcl.HashCode NuGet packages.\n\
+    \n# Indexes and ranges\n\nBy using C# 8.0 in-.NET Core 3 or non-.NET Standard\
+    \ 2.1 projects, you will not be able to use indexes and ranges because these are\
+    \ runtime features, and your code will simply not compile."
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: "# Using Directory.Build.props\n\nIf you want each project in your solution\
+    \ to target C# 8.0, or if you need to add any custom property to all your projects,\
+    \ you can create a file called Directory.Build.props in the root of your solution\
+    \ and add the <LangVersion> in there.\n\nThis is illustrated in Code Listing 67.\n\
+    \nCode Listing 67: The Directory.Build.props file\n\n```\n<Project>\n  <PropertyGroup>\n\
+    \    <LangVersion>8.0</LangVersion>\n  </PropertyGroup>\n</Project>\n```\n\nI\
+    \ am not sure that I would necessarily enable C# 8.0 on any .NET project. I would\
+    \ probably take the time to create a .NET Core application from the get-go, but\
+    \ this solution isn't without its merits. This could be useful in situations where\
+    \ you are dealing with an existing .NET project that has had a lot of development\
+    \ effort invested, and that can't be easily rewritten from scratch in .NET Core.\n\
+    \nIn this situation, jimmying the .csproj file to enable C# 8.0 makes sense."
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "# Chapter 4 The Future of C# and C# 9\n\nThere are some nice features planned\
+    \ for C# 9. While all these planned features might not make it into the final\
+    \ release—and some things that do make it in might change between the writing\
+    \ of this book and then—they give a nice overview of the direction the C# team\
+    \ is taking.\n\n# Top-level programs\n\nCode List 68 illustrates the code that\
+    \ we have all seen, with a Program class followed by the Main method.\n\nCode\
+    \ List 68: Classes implementing IShape interface\n\n```\nusing System.Console;\n\
+    \nclass Program\n{\n    static void Main(string[] args)\n    {\n        var t\
+    \ = new Triangle\n        {\n            Base = 5.0,\n            Height = 10.5\n\
+    \        }\n\n        DisplayArea(t);\n\n        // static local functions\n \
+    \       static void DisplayArea<T>(T shape) where T : IShape\n        {\n    \
+    \        WriteLine(shape.Area());\n        }\n    }\n}\nclass Triangle : IShape\n\
+    {\n    public double Height { get; set; }\n    public double Base { get; set;\
+    \ }\n\n    public double Area() => Height * Base / 2;\n}\nclass Rectangle : IShape\n\
+    ```"
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: "```\n{\npublic double Length { get; set; }\npublic double Width { get; set;\
+    \ }\n\npublic double Area() => Length * Width;\n}\n\npublic interface IShape\n\
+    {\ndouble Area();\n}\n```\n\nIn C# 9, developers will be allowed to simply omit\
+    \ the Program class and the Main method. The code will be illustrated in Code\
+    \ Listing 69.\n\n# Code Listing 69: Omitting the static void Main\n\n```\nusing\
+    \ static System.Console;\n\nvar t = new Triangle\n{\n  Base = 5.0,\n  Height =\
+    \ 10.5\n};\n\nDisplayArea(t);\nReadLine();\n\n// static local functions\nstatic\
+    \ void DisplayArea<T>(T shape) where T : IShape\n{\n  WriteLine(shape.Area());\n\
+    }\n\nclass Triangle : IShape\n{\n  public double Height { get; set; }\n  public\
+    \ double Base { get; set; }\n\n  public double Area() => Height * Base / 2;\n\
+    }\n\nclass Rectangle : IShape\n{\n  public double Length { get; set; }\n}\n```"
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "```\npublic double Width { get; set; }\n\npublic double Area() => Length *\
+    \ Width;\n\npublic interface IShape{\n    double Area();\n}\n```\n\nThis means\
+    \ you can just write top-level statements at the top of your file. The top-level\
+    \ statements remain part of your Main method, and the DisplayArea local function\
+    \ remains a local function; it's just called from the top-level statements.\n\n\
+    Top-level statements must precede namespaces and type declarations, and can only\
+    \ appear in one file.\n\nAnother great feature is that if you place the await\
+    \ statements as top-level statements, then the Main becomes an async Task Main.\
+    \ At this point, I bet you are wondering what will become of the args argument\
+    \ in Main method.\n\nThis is not in any of the previews just yet, but there is\
+    \ a possibility that args will become a magic keyword. This means the C# team\
+    \ will make a variable available in the top-level statements called args. The\
+    \ magic variable makes me think of value in a property setter.\n\n# Relational\
+    \ and logical patterns\n\nC# 9.0 will introduce patterns that correspond to relational\
+    \ operators, such as < and <=. You will also be able to combine patterns with\
+    \ logical operators such as and, or not. Consider the code in Code Listing 70.\n\
+    \n> Code Listing 70: Method with switch expression\n\n```\npublic AreaSize DoSomething<T>(T\
+    \ shape, int numberOfShapes) where T : IShape {\n    var area = shape switch {\n\
+    \        Square s => s.Area() * numberOfShapes,\n        Circle c => c.Area()\
+    \ * numberOfShapes,\n        null => throw new ArgumentNullException(nameof(shape)),\n\
+    \        => throw new ArgumentException(message: $\"Unknown shape: {shape}\",\
+    \ paramName: nameof(shape))\n    };\n\nif (area < 3.0)\n```"
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "```\nreturn AreaSize.small;\nelse if (area < 5.0)\n  return AreaSize.medium;\n\
+    else if (area < 7.0)\n  return AreaSize.large;\nelse\n  return AreaSize.huge;\n\
+    ```\n\nWe have checked for null in the switch expression, and if the shape is\
+    \ null, we throw an ArgumentNullException. We can move the null => to the top\
+    \ of the switch expression if we want to (because it is null, why carry on??).\
+    \ The position here doesn't matter, but what is clear is that if we discard discard_\
+    \ =>, we know that the shape is null.\n\nConsider the code in Code Listing 71.\
+    \ At this point in the switch expression, we can be certain that shape is not\
+    \ null.\n\n# Code Listing 71: The discard in the switch expression\n\n```\n=>\
+    \ throw new ArgumentException(message: $\"Unknown shape: {shape}\",\\paramName:nameof(shape))\n\
+    ```\n\nThis means we can make our intent clear by using the null operator, as\
+    \ illustrated in Code Listing 72.\n\n# Code Listing 72: Using the null operator\n\
+    \n```\nnot null => throw new ArgumentException(message: $\"Unknown shape: {shape}\"\
+    ,\nparamName:nameof(shape))\n```\n\nSecondly, because C# 9.0 will add relational\
+    \ patterns, we can modify the if/else statement, as illustrated in Code Listing\
+    \ 73.\n\n# Code Listing 73: The if/else statement to convert\n\n```\nif (area\
+    \ < 3.0)\n  return AreaSize.small;\nelse if (area < 5.0)\n  return AreaSize.medium;\n\
+    else if (area < 7.0)\n  return AreaSize.large;\nelse\n  return AreaSize.huge;\n\
+    ```\n\nInterestingly, Visual Studio 2019 version 16.7.0 Preview 4.0 supports converting\
+    \ this statement to a switch expression using relational patterns, as seen in\
+    \ Figure 10."
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "![](img/49b3596025ccb7ecebab509ce03bfac6_57_0.png)\n\nFigure 10: Convert to\
+    \ switch expression\n\nThe converted switch expression looks nice and succinct,\
+    \ as illustrated in Code Listing 74.\n\nCode Listing 74: A switch expression using\
+    \ a relational pattern\n\n```\npublic AreaSize DoSomething<T>(T shape, int numberOfShapes)\
+    \ where T : IShape\n{\n    var area = shape switch\n    {\n        Square s =>\
+    \ s.Area() * numberOfShapes,\n        Circle c => c.Area() * numberOfShapes,\n\
+    \        null => throw new ArgumentNullException(nameof(shape)),\n        not\
+    \ null => throw new ArgumentException(message: $\"Unknown shape: {shape}\", paramName:\
+    \ nameof(shape))\n    };\n}\n//Relational pattern(min 21)\nreturn area switch\n\
+    {\n    < 3.0 => AreaSize.small,\n    < 5.0 => AreaSize.medium,\n    < 7.0 => AreaSize.large,\n\
+    \    => AreaSize.huge\n}\n```"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '```
+
+    };
+
+    }
+
+    ```
+
+
+    Taking logical patterns further, we can now get rid of unwieldy double parentheses
+    for **if conditions**. Consider the code in Code Listing 75.
+
+
+    # Code Listing 75: Standard if not condition
+
+
+    ```
+
+    if (!shape is Circle)) { }
+
+    ```
+
+
+    We can now replace this with the code in Code Listing 76.
+
+
+    # Code Listing 76: New if not condition using a logical pattern
+
+
+    ```
+
+    if (shape is not Circle) { }
+
+    ```
+
+
+    If a shape can be a **Circle** or a **Square**, we can do the following:
+
+
+    # Code Listing 77: Logical or pattern
+
+
+    ```
+
+    if (shape is Circle or Square) { }
+
+    ```
+
+
+    This will give developers a fantastic way to express the intent of their code
+    clearly and succinctly.
+
+
+    # Target-typed new expressions
+
+
+    In C# 9.0, whenever you wrote a **new** expression in C#, you were required to
+    specify the type. The only exception was implicitly typed arrays, where you would
+    create the following array:
+
+
+    # Code Listing 78: Implicitly typed array
+
+
+    ```
+
+    var planets = new[] { "Mars", "Saturn", "Jupiter" };
+
+    ```
+
+
+    In C# 9.0, you will be allowed to omit the type when it''s clear what the expression
+    is being assigned to. Consider the following code.
+
+
+    # Code Listing 79: The new expression for creating a Circle
+
+
+    ```
+
+    Circle c = new Circle(5);
+
+    ```
+
+
+    In C# 9.0, this code can simply be written as follows.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# Code Listing 80: The target-typed new expression\n\n```\nCircle c = new (5);\n\
+    ```\n\nThis code looks nearer and conveys exactly what it should. I do, however,\
+    \ think that those of us using var will probably not use target-typed new expressions\
+    \ too often.\n\n# Init-only properties\n\nC# allows developers to use object initialization,\
+    \ which is a very convenient and flexible way of creating a new object. Consider\
+    \ the SalesOrder class in Code Listing 81. It currently uses auto-property for\
+    \ OrderNumber.\n\n# Code Listing 81: The SalesOrder class\n\n```\npublic class\
+    \ SalesOrder\n{\n    public string OrderNumber { get; set; }\n}\n```\n\nOne limitation\
+    \ is that the properties have to be mutable object initializers to work. The object's\
+    \ default, parameterless constructor is called, and then the property is assigned.\
+    \ But you can set the property to a different value after initialization because\
+    \ it is mutable, as seen in Code Listing 82.\n\n# Code Listing 82: Initializing\
+    \ the SalesOrder class\n\n```\nvar salesOrder = new SalesOrder\n{\n    OrderNumber\
+    \ = \"123\"\n}\nsalesOrder.OrderNumber = \"345\";\n```\n\nWith init-only properties,\
+    \ this mutability is fixed. The init accessor is a variant of the set accessor,\
+    \ which can only be called during object initialization. If you modify your property\
+    \ to use init, as seen in Code Listing 83, then any subsequent assignments to\
+    \ the OrderNumber property will result in a compile-time error.\n\n# Code Listing\
+    \ 83: Setting init-only property on SalesOrder class\n\n```\npublic class SalesOrder\n\
+    {\n    public string OrderNumber { get; init; }\n}\n```"
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: "Visual Studio will tell you that your assignment after object initialization\
+    \ is not allowed.\n\n```\nvar salesOrder = new SalesOrder\n{\n    OrderNumber\
+    \ = \"123\"\n}\nsalesOrder.OrderNumber = \"345\";\n```\n\nFigure 11: Subsequent\
+    \ assignment results in a compile-time error\n\nThis is because the OrderNumber\
+    \ property is not mutable.\n\n# Init accessors and readonly fields\n\nConsider\
+    \ the same SalesOrder we had a look at earlier. Modifying it as illustrated in\
+    \ Code Listing 84, you will notice the following.\n\n```\npublic class SalesOrder\n\
+    {\n    private readonly string orderNumber;\n    public string OrderNumber\n \
+    \   {\n        get => orderNumber;\n        init => orderNumber = (value ?? throw\
+    \ new ArgumentNullException(nameof(OrderNumber)));\n    }\n}\n```\n\nThis is possible\
+    \ because init accessors can only be called during initialization. This means\
+    \ that they can mutate readonly fields in the enclosing class.\n\n# Records\n\n\
+    In the previous code listings, we saw that we can make individual properties immutable\
+    \ by using the init accessor. As seen in Code Listing 85, we can make the whole\
+    \ SalesOrder class become immutable and behave like a value by adding the data\
+    \ keyword.\n\nCode Listing 85: Creating a record\n\n```\npublic data class SalesOrder\n\
+    {\n```"
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: '```
+
+    public string OrderNumber { get; init; }
+
+    }
+
+    ```
+
+
+    Adding the data keyword to the class declaration marks the class as a record.
+    This means records are seen more as values, and less as objects—they don''t have
+    a mutable encapsulated state. To represent any change over time, you must create
+    a new record that represents the new state, meaning they are defined by their
+    contents.
+
+
+    # More C# 9.0 goodies
+
+
+    These are only some of the planned features for C# 9.0. While I know a lot could
+    change its release, the code illustrated in the previous examples gives us a nice
+    glimpse of where the C# team is headed. If you want to keep up to date on what
+    is happening around C# 9.0, swing over to the Language Feature Status page on
+    GitHub. This allows you to see planned C# 9.0 features and their current states.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: '# # Chapter 5 .NET Productivity Features in Visual Studio
+
+
+    There are a variety of nice productivity features in Visual Studio that can enhance
+    your workflow and make your day-to-day tasks easier. Currently, I am using Visual
+    Studio 2019 version 16.7 preview 5.0, but some of these features are also available
+    in the current release of Visual Studio 2019.
+
+
+    # ## Developer PowerShell inside Visual Studio
+
+
+    In Visual Studio, if you press Ctrl+`, you will open the Visual Studio terminal.
+
+
+    > Tip: The ` backtick is located on the same key as ~ on the keyboard. It is also
+    the same keystroke as used in Visual Studio Code. This makes Ctrl+ a very convenient,
+    one-handed keystroke used to open the terminal inside Visual Studio.
+
+
+    Launching the terminal opens the integrated Developer PowerShell instance, as
+    seen in Figure 12.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_62_0.png)
+
+
+    Figure 12: Developer PowerShell
+
+
+    If you are not comfortable using PowerShell, you can switch to using the Developer
+    Command Prompt, as seen in Figure 13.'
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '![](img/49b3596025ccb7ecebab509ce03bfac6_63_0.png)
+
+
+    Figure 13: Developer Command Prompt
+
+
+    You can easily select whichever terminal you want from the drop-down, as seen
+    in Figure 14.
+
+
+    | Developer Command Prompt |
+
+    | + Developer PowerShell |
+
+    | | Developer PowerShell |
+
+    | | Developer Command Prompt |
+
+
+    Figure 14: Selecting different terminals
+
+
+    You no longer need to leave Visual Studio to use the terminal window. This is
+    definitely a timesaver.
+
+
+    # The Visual Studio Git Window
+
+
+    Visual Studio will now include a new Git window. This is currently available in
+    the Preview edition of Visual Studio 2019.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: '![](img/49b3596025ccb7ecebab509ce03bfac6_64_0.png)
+
+
+    Figure 15: The new Git window
+
+
+    As seen in Figure 15, the new Git window is laid out rather nicely, and contains
+    everything you would expect to see.'
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: 'You can click the branch (currently set to master in Figure 16) and create
+    a new branch.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_65_0.png)
+
+
+    Figure 16: Managing branches
+
+
+    This will display the window in Figure 17. Here you can specify a branch name
+    and select the branch you want to base your new branch on.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: '![](img/49b3596025ccb7ecebab509ce03bfac6_66_0.png)
+
+
+    Figure 17: Creating a new branch
+
+
+    Once the new branch is created, it is available under the branches drop-down (Figure
+    18).
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_66_1.png)
+
+
+    Figure 18: Branches in the Git window'
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: 'Managing your branch is also easily done from the drop-down next to the branch
+    name, as seen in Figure 19.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_67_0.png)
+
+
+    Figure 19: Managing your branch
+
+
+    It is here that you can checkout, merge, rebase, rename, delete, or view the branch
+    history.'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'Double-clicking a file will show you the code changes in the diff view right
+    inside your editor, as seen in Figure 20.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_68_0.png)
+
+
+    Figure 20: View code changes
+
+
+    The Git window also allows you to do the usual tasks such as stashing, staging,
+    undoing changes, fetching, pulling, pushing, and syncing. According to Mika Dumont,
+    Program Manager on .NET and Visual Studio, the purpose of the Git window was to
+    streamline the Git Explorer user interface becoming somewhat busy.
+
+
+    # Drag and drop projects to add a reference
+
+
+    In Figure 21, you will notice that I have two projects in the solution. These
+    are:
+
+
+    +   - CSharpPreview
+
+    - CSharpPreview.Core
+
+
+    If I want to add a reference to CSharpPreview.Core from my CSharpPreview project,
+    I can simply click and drag the CSharpPreview.Core project onto the CSharpPreview
+    project.'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '![](img/49b3596025ccb7ecebab509ce03bfac6_69_0.png)
+
+
+    Figure 21: Adding a project reference
+
+
+    A reference to CSharpPreview.Core will be added, as seen in Figure 22.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_69_1.png)
+
+
+    Figure 22: Project reference added
+
+
+    There''s no right-clicking and adding a reference. You can also drag a file from
+    File Explorer to the Solution Explorer and drop it inside a project. The file
+    will then get copied to your source. Nice!'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Searching Visual Studio
+
+
+    Another nice feature in Visual Studio **Ctrl+Q**, a great keyboard shortcut that
+    gives the Search text box in Visual Studio focus, allowing you to start typing
+    immediately (Figure 23).
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_70_0.png)
+
+
+    Figure 23: Search Visual Studio
+
+
+    You can further filter your search results by only viewing results in Visual Studio
+    or results in your code (Figure 24).
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_70_1.png)
+
+
+    Figure 24: Searching code via camel case'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'Interestingly enough, you can search your code in Visual Studio by only typing
+    camel case, as seen in Figure 24. This is great, especially if someone in the
+    team decided to create a SalesOrderFunctionalPreprocessor class.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_71_0.png)
+
+
+    Figure 25: Partial camel case character search
+
+
+    Being able to type in SOF in this instance (Figure 25), makes searching code quick
+    and easy.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_71_1.png)
+
+
+    Figure 26: Search commands to run
+
+
+    The search also allows you to run commands (Figure 26). This enables you to run
+    tests, for example, and includes the keyboard shortcut, which is super helpful.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: '# Code analyzers
+
+
+    Code analyzers ensure that your code is more readable, and they will give you
+    suggestions as you go along. Consider Figure 27.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_72_0.png)
+
+
+    Figure 27: Lightbulb code suggestion
+
+
+    The lightbulb will suggest improvements to your code as you write it. Some of
+    these suggestions can, however, be missed. Consider Figure 28.
+
+
+    ```
+
+    var factorCount = intFactors.Count > 0 ? intFactors[intFactors.Count - 1] : 0;
+
+    ```
+
+
+    Figure 28: Code fix suggestion
+
+
+    If you look carefully at intFactors.Count - 1, you will notice the ellipsis (three
+    dots) below the "in" portion of the variable intFactors.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: 'If you click on the ellipsis, you will see the code fix suggestion (Figure
+    29). In this example, the suggestion is to use the index operator. Have a look
+    at Code Listing 41 for more on the index operator.
+
+
+    intactors[intFactors.Count - 1] : 0;
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_73_0.png)
+
+
+    Figure 29: Use index operator suggestion
+
+
+    You can also change the severity of this code fix suggestion by changing the severity
+    from the same place you applied the code fix (Figure 30).
+
+
+    intFactors[intFactors.Count - 1] : 0;
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_73_1.png)
+
+
+    Figure 30: Configure severity
+
+
+    Changing this code fix to a warning will give you a squiggly line under the code
+    being analyzed, as seen in Figure 31.
+
+
+    ```
+
+    var factorCount = intFactors.Count > 0 ? intFactors[intFactors.Count..1] : 0;
+
+    ```
+
+
+    Figure 31: Severity promoted to warning
+
+
+    Code analyzers are a fantastic feature of Visual Studio, and they help developers
+    and teams maintain good coding practices.'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# File header support in .editorconfig
+
+
+    The .editorconfig file is a universal way to enforce a specific code style or
+    code quality options across your team (Figure 32).
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_74_0.png)
+
+
+    Figure 32: The .editorconfig file
+
+
+    This can be checked into source control and can travel with your solution to new
+    team members.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: 'If you open the .editorconfig file (Figure 33), you will notice the warning
+    we added for the index operator in Figure 30. The .editorconfig includes file
+    header support. I can now add file headers to files in my solutions using .editorconfig.
+    To do this, add the text you want to the file_header_template as seen in Figure
+    33, and save your .editorconfig.
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_75_0.png)
+
+
+    Figure 33: Modifying the .editorconfig file
+
+
+    In a code file, place your cursor at the very top before the first using statement,
+    and click the lightbulb that is displayed (Figure 34).
+
+
+    ![](img/49b3596025ccb7ecebab509ce03bfac6_75_1.png)
+
+
+    Figure 34: Add file header'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'You are now able to include this file header in your code file. You can also
+    choose to add it to the document, project, or solution.
+
+
+    # # C# language resources
+
+
+    Microsoft has made many resources available to developers. There is a rich body
+    of code online, as well as various communities that allow developers to find help
+    if they need it. Here are a few resources you might find useful.
+
+
+    # # C# language reference
+
+
+    This [Introduction]() document is probably the one you will be reading the most.
+
+
+    # # C# language proposals
+
+
+    [Language proposals]() should be seen as living documents, and would be the place
+    to see what the current thinking is surrounding a specific language feature.
+
+
+    # # C# language design meetings
+
+
+    The language design meetings (also known as LDM) is where the C# team investigates,
+    designs, and decides on features being added to the C# language. You can read
+    the [meeting notes here]().
+
+
+    # # C# language design design
+
+
+    This is the [official repo for the C# language]().'
+  merge: -1
+  pgno: 76
