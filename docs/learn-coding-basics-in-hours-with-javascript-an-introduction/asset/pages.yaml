@@ -1,0 +1,4811 @@
+- img_proc: true
+  md: '![](img/33a81fac26246d29975692e5ecda6e53_0_0.png)
+
+
+    # # LEARN CODING BASICS
+
+    IN HOURS
+
+    WITH JAVASCRIPT
+
+
+    An Introduction to Computer Programming for Absolute Beginners
+
+
+    Written by:
+
+    Jack C. Stanley and Erik D. Gross,
+
+    Co-Founders of The Tech Academy'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'Ms. Ann Townsend Leverette
+
+    2524 Flair Knoll Dr NE
+
+    Atlanta, GA 30345-1316'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: 'ISBN-10: 0997326468
+
+    ISBN-13: 978-0-9973264-6-8
+
+    Third Edition, July 2020
+
+    Copyright © 2017, Prosper Consulting Inc., The Tech Academy
+
+
+    2
+
+    © Prosper Consulting Inc., The Tech Academy'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '![](img/33a81fac26246d29975692e5ecda6e53_4_0.png)
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_4_1.png)
+
+
+    # An Introduction to Computer Programming for People with No Prior Experience
+
+
+    Written by: Jack C. Stanley and Erik D. Gross,
+
+    Co-Founders of The Tech Academy'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# TABLE OF CONTENTS
+
+
+    Chapter One: Welcome, 9
+
+    Coding, 9
+
+
+    Chapter Two: Computers, 11
+
+
+    Chapter Three: Programs, 13
+
+
+    Chapter Four: Programming Languages, 15
+
+
+    Chapter Five: Machine Language, 18
+
+
+    Chapter Six: The Internet and World Wide Web, 19
+
+    Internet, 19
+
+    Internet vs. World Wide Web, 21
+
+    Programming, 22
+
+
+    Chapter Seven: JavaScript, 23
+
+    High-Level, 23
+
+    Untyped, 24
+
+    Interpreted, 24
+
+    Runtime, 28
+
+    Putting it Together, 29
+
+
+    Chapter Eight: Algorithms, 30
+
+    Result, 31
+
+    Finite Amount of Time, 31
+
+    Well-Ordered, 32
+
+    Effectively Computable, 32
+
+    Unambiguous, 32
+
+
+    Chapter Nine: Five Elements of a Program, 34
+
+    Entrance, 34
+
+    Control/Branching, 34
+
+    Variables, 35
+
+    Subprograms, 40
+
+    Exit, 41
+
+    Summary, 41
+
+
+    Chapter Ten: Types of Programming Languages, 42
+
+
+    Chapter Eleven: HTML and CSS, 44
+
+    HTML, 44
+
+    CSS, 44'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: 'History of JavaScript, 45
+
+
+    Value Types, 46
+
+
+    # Chapter Twelve: Coding Tips, 47
+
+
+    Challenges, 47
+
+
+    # Chapter Thirteenth: First Coding Assignments, 48
+
+
+    HTML, 48
+
+
+    Tags, 48
+
+
+    Elements, 49
+
+
+    Notepad++, 49
+
+
+    "Hello, World" in HTML, 50
+
+
+    Online Images, 51
+
+
+    Computer Image, 52
+
+
+    "Hello, World" in JavaScript, 54
+
+
+    Window.Alert(), 56
+
+
+    Document.Write(), 57
+
+
+    End of Chapter Challenge, 57
+
+
+    # Chapter Fourteen: Variables and Strings, 58
+
+
+    Assignment Operator, 58
+
+
+    Creating a String, 58
+
+
+    Concatenating a String, 59
+
+
+    Multiple Variables, 60
+
+
+    Str.FontColor(""), 60
+
+
+    End of Chapter Challenge, 61
+
+
+    # Chapter Fifteen: Expressions and Statements, 62
+
+
+    End of Chapter Challenge, 63
+
+
+    # Chapter Sixteen: Functions, 64
+
+
+    ```
+
+    <p> Element, 64
+
+    ```
+
+
+    Ids, 65
+
+
+    Document.GetElementById, 66
+
+
+    += Operator, 67
+
+
+    End of Chapter Challenge, 67
+
+
+    # Chapter Seventeen: Numbers, 68
+
+
+    Subtraction, 69
+
+
+    Multiplication, 69
+
+
+    Division, 69'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: 'Multiple Arithmetic Operators, 69
+
+
+    Modulus Operator, 70
+
+
+    Unary and Binary Operators, 70
+
+
+    Increment Operator, 71
+
+
+    Math.Random(), 72
+
+
+    End of Chapter Challenge, 73
+
+
+    # Chaptering: JavaScript Objects, 74
+
+
+    Dictionaries, 74
+
+
+    Assigning Multiple Values, 76
+
+
+    Operators as Words, 77
+
+
+    Typeof Operator, 77
+
+
+    End of Chapter Challenge, 78
+
+
+    # Chapter Nineteen: Floating Point, 80
+
+
+    Other Numbers, 80
+
+
+    End of Chapter Challenge, 82
+
+
+    # Chapter Twenty: Boolean Logic, 83
+
+
+    Console.Log Method, 86
+
+
+    Type Coercion, 87
+
+
+    End of Chapter Challenge, 87
+
+
+    # Chapter Twenty One: Comparison Operators, 88
+
+
+    End of Chapter Challenge, 90
+
+
+    # Chapter Twenty Two: Logical Operators, 91
+
+
+    # Chapter Twenty Three: Ternary Operators, 94
+
+
+    End of Chapter Challenge, 95
+
+
+    # Chapter Twenty Four: Object-Oriented Programming, 96
+
+
+    Constructors, 97
+
+
+    Keywords, 98
+
+
+    Reserved Keywords, 99
+
+
+    End of Chapter Challenge, 99
+
+
+    # Chapter Twenty Five: Identifiers and Literals, 100
+
+
+    Nested Functions, 100
+
+
+    Scope, 101
+
+
+    End of Chapter Challenge, 103
+
+
+    # Chapter Twenty Six: Conditional Statements, 104
+
+
+    Else Statements, 104'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: 'Else If Statements, 105
+
+
+    End of Chapter Challenge, 106
+
+
+    # Chapter Twenty Seven: String Methods, 107
+
+
+    Concat() Method, 107
+
+
+    Slice() Method, 107
+
+
+    End of Chapter Challenge, 108
+
+
+    # Chapter Twenty Eight: Number Methods, 109
+
+
+    End of Chapter Challenge, 109
+
+
+    # Chapter Twenty Nine: Final Challenge, 110
+
+
+    Final Challenge, 112
+
+
+    # Chapter Thirty: Congratulations!, 113
+
+
+    Index, 115
+
+
+    Other Reading, 117'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# CHAPTER ONE
+
+    WELCOME
+
+
+    Welcome to The Tech Academy''s Learn Coding Basics in Hours with JavaScript
+
+    book!
+
+
+    Now, we''re sure you want to dive right into coding but there''s some information
+    we are going to cover first to ensure you are well prepared. In fact, you won''t
+    write any code until the 13th chapter of this book.
+
+
+    It may seem like a lot of reading before we get down to business but it''s worth
+    it. Let''s compare this to another subject: how hard would it be to drive a car
+    if you couldn''t define the important terms – as steering wheel, gas pedal or
+    brake pedal? So, please bear with us and take some time learning some fundamental
+    data that will set you up well for the adventure that lies ahead.
+
+
+    We have attempted to define all technical terms used in this book if you come
+    across any one that you don''t understand, look up them in The Tech Academy''s
+    Technology Basics Dictionary (available for purchase on Amazon).
+
+
+    The Tech Academy is a technology school headquartered in Portland, Oregon, with
+    multiple campuses around the world. We specialize in coding camps (intensive training
+    programs at preparing graduates for entry-level technology positions, that can
+    be completed in a few months). We also offer custom training for companies, and
+    have published several books.
+
+
+    While we would love to tell you everything about computers and technology in this
+    book, we are only going to cover the absolutely necessary data. If you are interested
+    in learning how computers work exactly, we recommend reading our book You Are
+    Not Stupid – Computers and Tech Simplified, which can be purchased on Amazon.
+
+
+    Our educational philosophy is to *assume no prior knowledge on the part of the
+    student*. What this means is that our training content, including this book, is
+    written for absolute beginners. We operate on the assumption that you''ve never
+    written code before and that you don''t know basic technical terms – this ensures
+    nothing is over your head and that you aren''t lost while reading.
+
+
+    You''re about to experience The Tech Academy''s approach to education first hand:
+    we are going to start our book by defining the technical words used in the title
+    of our book!
+
+
+    # CODING
+
+
+    Coding refers to the act of entering instructions into computers to make them
+    perform specified actions. A computer is a special type of machine.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: 'Machines are devices (equipment with a purpose; tools) made by humans to get
+    work done. They are usually made out of durable materials like wood, plastic and
+    metal. Normally they have some parts that move and some parts that don''t; sometimes
+    they have no moving parts at all. They receive some kind of energy that they use
+    to do their work.
+
+
+    One of the traits that makes people different from animals is their ability to
+    create complex machines.
+
+
+    Usually people create machines because there is some work they want to do that
+    the machine could help them with. The help the machine provides could be to get
+    the work done faster, to do the work with less chance of errors, or to do the
+    work nearly continuously, without the need to stop for food or sleep. There are
+    other reasons people make machines, but it usually comes down to getting more
+    work done in a given amount of time with fewer errors.
+
+
+    As time goes on, machines often get improved or changed to make them more effective
+    or to respond to changes in the area of society where they are used.
+
+
+    Cars, planes, telephones and ovens are all machines.
+
+
+    Again, a computer is just another machine – it’s a device made by people to get
+    work done.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_11_0.png)
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_11_1.png)
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_11_2.png)
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_11_3.png)
+
+
+    Let’s take a closer look at computers.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# CHAPTER TWO
+
+    COMPUTERS
+
+
+    Computers were created to do a simple thing: they take in data
+
+    (information), change the data in some way, and send out data. That''s all.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_12_0.png)
+
+
+    There are certain truths regarding computers:
+
+
+    +   1. They are only machines. They are not people.
+
+
+    +   2. They were created by people and can only act if a person tells them to.
+    Even
+
+    then, they can only perform actions that a person thought of ahead of time and
+
+    built into them.
+
+
+    Computers do not have a soul. They cannot think. Everything ever done by
+
+    a computer was predetermined by humans. So-called “artificial intelligence"
+
+    (computer systems that are able to perform actions that require human
+
+    intelligence, like being able to recognize sounds and images), or computers that
+    can
+
+    “learn,” only have these abilities because we designed them that way.
+
+
+    As machines, some of the characteristics of computers include the following:
+
+
+    +   * They handle data. Data is information – such as words, symbols (something
+
+    written that represents an amount, idea or word), pictures, etc.
+
+
+    +   * They obey instructions (commands entered into them that perform certain
+
+    tasks).
+
+
+    +   * They automate (perform actions without human interaction) tasks that would
+
+    either take too long for a person to do or be too boring. Keep in mind that these
+
+    automatic actions were designed by a person.
+
+
+    +   * They process data. “Process” means to handle something through use of
+
+    established (and usually routine) set of procedures. When a computer displays
+
+    t word “processing,” it is saying, “Hold on while I perform some
+
+    pre-established procedures.” Processing refers to “taking actions with data”.
+
+    Searching through words to locate typos would be an example of “processing
+
+    data”.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: 'When data is being processed by a computer, you sometimes see a “progress bar”
+    (a symbol that shows how far along something is) like this:
+
+
+    # Processing...
+
+
+    Or you may see this symbol when data is processed:
+
+
+    # Processing
+
+
+    This circular symbol is called a “thber” due to the fact that they originally
+    expanded and contracted in size – i.e., the symbol “throbbed”.
+
+
+    The purpose of computers is to take in data, process it and send it out.
+
+
+    When computers perform actions, it is referred to as “executing” or “running”.
+    For example, you can run a search on the internet by clicking the search button
+    or you could execute an instruction by pressing enter on your keyboard.
+
+
+    It is important to understand that machines are not life forms. Even though they
+    can perform seemingly miraculous operations, the true source of their products
+    is humankind.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_13_0.png)
+
+
+    Computers aren’t very useful without programs – so let’s go over what programs
+    are exactly.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '# CHAPTER THREE
+
+    PROGRAMS
+
+
+    As a noun (thing), code is the written instructions you type into a computer
+
+    to make programs.
+
+
+    Programs are series of written instructions, entered into a computer, which
+
+    cause the computer to perform a specific task or tasks. For example, Microsoft-
+
+    Paint is a program that can be used to create basic illustrations on your computer.
+
+
+    Hardware refers to the "Hard" physical components of the computer – the parts
+
+    that can be touched. "Hard" means "solid" or "tangible" (able to be seen and felt),
+
+    and "ware" means "something created".
+
+
+    The computer screen, mouse, printer and keyboard are all hardware.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_14_0.png)
+
+
+    The opposite of hardware is software. Software is just another word for
+
+    “computer program” – sets of instructions that tell a computer what to do.
+
+    Computer games, like Solitaire, are examples of software.
+
+
+    Another word for computer program or software is “application.” These
+
+    terms are all interchangeable. Though “app” (abbreviation of application) is usually
+
+    used to refer to programs (applications; software) on a mobile device (like a
+    cell
+
+    phone).
+
+
+    The word software came about in the 1960s to emphasize the difference
+
+    between it and computer hardware. Software (programs; applications) are the
+
+    instructions, while hardware implements the instructions.
+
+
+    Installing a program means to put it into a computer so that the program
+
+    an execute.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: 'For example, you could install a program by transferring the data from the
+    internet to your computer. In the 1990s, most software was installed using a disk
+    that came in a box and looked something like this:
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_15_0.png)
+
+
+    The people that create programs are called computer programmers. They’re also
+    referred to as coders, software developers, software engineers and just developers.
+    These position names all mean the same thing.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_15_1.png)
+
+
+    Programs are created using programming languages, so let’s discuss what those
+    are.'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# CHAPTER FOUR
+
+    PROGRAMMING LANGUAGES
+
+
+    Languages are communication systems that allow you to transfer ideas in written
+    and spoken words. Similar to spoken languages that people use (like Spanish and
+    English), there are different languages that can be used to write (create) computer
+    programs — these are called programming languages or computer languages. Programming
+    languages are organized systems of words, phrases and symbols that let you create
+    programs.
+
+
+    There are many different types of programming languages, each of which was created
+    to fill a specific purpose. Usually a language is created in order to make the
+    creation of certain types of computer programs.
+
+
+    As an example, Python is a popular programming language. This is how you would
+    tell a computer to display the words “Hello, world!” on the screen, using the
+    computer language Python:
+
+
+    ```
+
+    print("Hello
+
+    ```
+
+
+    This is code. All software/applications/programs are made up of code. As a user
+    (the person using something), you don''t see the code. The three most common types
+    of programs that developers use to write their code in are:
+
+
+    +   1) Integrated development environment (IDE). An IDE is a set of programming
+    tools for writing software programs. IDEs are a great aid to computer program
+    creation. An IDE often combines many available tools into one place. Essentially,
+    an IDE is software that helps you make software.
+
+
+    For example, Visual Studio, available from the technology company Microsoft, is
+    one of the many IDEs available for software developers.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_16_0.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: 'IDEs are the most common programs used by developers to write their code.
+
+
+    2) Text editor: A text editor is a program used to write and edit text. Text editors
+    are very basic - meaning, the text is typically plain with no effects. This is
+    technically different from a word processor, which is a program on a computer
+    that allows you to create, format (design the style and layout), modify, and print
+    documents. While text editors be used to write code, word processors cannot. Instead,
+    word processors have more functionality (ability to perform a wider range of actions)
+    than text editors.
+
+
+    As an example of each, Microsoft Word (on the left) is a word processor, while
+    Notepad (on the right) is a text editor.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_17_0.png)
+
+
+    Out of the three programs listed here used to write code within, text editors
+    are the least popular and least recommended.
+
+
+    3) Code editor: As the name states, this is a program that can be used to write/edit
+    your code. Code editors are in between IDEs and text editors in terms of features
+    (functions built into an application) – they have fewer features than an IDE but
+    more than a text editor. One of the most popular code editors is Notepad++ (plus
+    plus).
+
+
+    As an example, the popular IDE Visual Studio has a feature called “LiveShare,”
+    which allows developers to share their code with others as it is being written.
+    Other developers can use LiveShare within Visual Studio to access and edit your
+    code from a separate computer! This feature is not included in the code editor
+    Notepad++.
+
+
+    On the other hand, Notepad++ has a cool feature “auto-completion” that suggests
+    various options for completing the code you are typing for you. For example, when
+    you type pr, auto-completion may suggest print. This feature does not exist in
+    the text editor Notepad.'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: '![](img/33a81fac26246d29975692e5ecda6e53_18_0.png)
+
+
+    As a verb (action), coding means typing out instructions (using a particular programming
+    language) to make a program that will make the computer perform certain actions.
+    It also refers to the creation of websites. Developers usually code in an IDE,
+    code editor or text editor.
+
+
+    Everything in computers comes down to 1s and 0s. Let''s see how and why that is.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_18_1.png)'
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# # CHAPTER FIVE
+
+    MACHINE LANGUAGE
+
+
+    You may have heard the concept that computers operate on 1s and 0s. How this works
+    exactly is beyond the scope of this book, but a simplified explanation is that
+    computers are made up of billions of tiny parts that can be either or off. 1 represents
+    on, 0 represents off. You can instruct computers to turn these parts on and off
+    by entering 1 and 0 into the computer. These 1s and 0s are called machine language.
+    Commands written in machine language are called machine instructions.
+
+
+    As an example, "10010100 01010111 01010111 01011010" could instruct the computer
+    to *Delete the file Vacation.doc.* The "10010100 01101011 01010111 01010110" is
+    a machine instruction.
+
+
+    It is difficult for people to read and write in machine language, since the languages
+    we created are just unique patterns of ones and zeroes. That is why programming
+    languages were created. The computer converts (translates) the code written by
+    developers into machine instructions.
+
+
+    It works like this:
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_19_0.png)
+
+
+    One of the main uses of computers is the internet. So, what is the internet and
+    how does JavaScript relate to it?'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# CHAPTER SIX
+
+    THE INTERNET AND WORLD WIDE WEB
+
+
+    JavaScript is a programming language that is able to work on most computers. It
+    was created in 1995 by an American named Brendan Eich and is particularly useful
+    in making websites.
+
+
+    The World Wide Web (abbreviated "www" or the "web") is a collection of linked
+    electronic documents, organized into groups called websites.
+
+
+    A website is composed of one or more individual webpages, where a "page" is an
+    organized, separate document containing text, images, video and other elements.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_20_0.png)
+
+
+    # THE INTERNET
+
+
+    A network is a system where two or more computers are connected to each other.
+    The computers can be connected by a cable (i.e., a wired connection) or connected
+    wirelessly (through the air). Network is the word used to describe the link between
+    things that are working together and is used in many different ways with computers.
+    Information can be shared from computer to computer through the use of a network.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_20_1.png)'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: 'Internet is a combination of the words “interconnected” and “network."
+
+
+    The internet is an interconnected network of many computers around the world.
+    It is the largest network in existence and allows computers to pass data to one
+    another.
+
+
+    There are lots of different types of data that can be sent back and forth between
+    computers connected to the internet – like electronic messages, electronic documents,
+    healthcare records, etc.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_21_0.png)
+
+
+    In addition to referring to the connection between computers on this network,
+    internet also means the set of agreements, or protocols, for how to transfer different
+    types of data between those computers.
+
+
+    A “protocol” is an official procedure. In technology, it is a formal description
+    of how a certain type of information will be formatted and handled. Basically,
+    it’s an agreement that the various people who work with that type of information
+    all adhere to. Protocols are usually described in written documents, and are very
+    precise. They are usually created by experts in the applicable industry.
+
+
+    An example of a type of data where a protocol would be valuable is healthcare
+    information. If various organizations in the healthcare industry were to transfer
+    healthcare data back and forth between computers as they perform their work, it
+    would be important that they all agree about things like the exact format of the
+    information, how to keep private data safe, etc. All of that would be laid down
+    in a written protocol. Several such protocols exist in the healthcare industry.
+
+
+    One or more protocols have been created for each type of data that can be transferred
+    around on the internet. Violation of these protocols results in an error and the
+    data will not be sent properly or at all.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: 'So to recap: the internet is an interconnected network of many computers around
+    the world, and a set of agreements, or protocols, for transferring different types
+    of data between those computers.
+
+
+    # INTERNET VS. WORLD WIDE WEB
+
+
+    So, what''s the difference between the internet and the World Wide Web? The internet
+    is the hardware and protocols that data is sent across, over the internet. whereas
+    the web is a collection of linked electronic documents called webpages.
+
+
+    The internet is the infrastructure (physical framework) while the web is the code
+    that is transmitted and displayed. In a way, the internet is the hardware and
+    the web is the software.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_22_0.png)
+
+
+    Dynamic refers to actions that take place the moment they are needed, rather than
+    in advance. For example, a restaurant that prepares your food to your specifications
+    when you order, would be dynamic. The opposite of dynamic is "static", which literally
+    means, "unchanging." A static restaurant would have food pre-cooked and waiting
+    before you order – the food doesn''t change in regards to time or circumstance.
+
+
+    In coding, dynamic means the computer processes your request right when you ask
+    it to – it does not have a predetermined result ahead of time.
+
+
+    Dynamic relates to the internet by describing websites that have content changes
+    while the website is being viewed.
+
+
+    These are mouse pointers:
+
+
+    As an example, a dynamic picture on a website could be one that has an effect
+    (movement or change) when you hover over it with a mouse (hovering with a mouse
+    refers to holding the pointer over a particular object).'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# PROGRAMMING
+
+
+    Programming (the action of creating computer programs by writing code; coding)
+    is a spectacular thing because it is one of the few skills that apply to virtually
+    all industries.
+
+
+    Yes, companies that create software definitely utilize coding the most – but if
+    you think about it, most industries utilize technology (software, websites, databases,
+    etc.). And so, coders are valuable assets for companies in any industry – construction,
+    food service, retail, transportation, etc.
+
+
+    There are many, many programming languages, and technology is ever-changing. The
+    whole thing can be quite overwhelming, but there are basics that apply across
+    the vast landscape of technology.
+
+
+    Now, let''s discuss what Javascript is.'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# CHAPTER SEVEN
+
+    JAVASCRIPT
+
+
+    JavaScript is a great language to use for an introduction to coding and tops some
+    lists as the most popular programming language in the world.
+
+
+    One of the main uses of JavaScript is to make websites more dynamic (describing
+    websites that have content that changes based on user action or other factors,
+    rather than being static in appearance and content).
+
+
+    JavaScript can also make programs and websites more interactive, such as making
+    it so videos start to play as soon as a user moves their mouse over them.
+
+
+    There are many other uses for JavaScript; it is used in the creation of many different
+    types of computer programs.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_24_0.png)
+
+
+    Right off the bat, that explanation shows why we made this book. That definition
+    makes no sense. So, in order to comprehend what is being said there, let''s dissent
+    the definition.
+
+
+    # HIGH-LEVEL
+
+
+    Machine language that we discussed earlier (1s and 0s) is considered a "low-level
+    language." This is due to the fact that it directly represents the on or off states
+    used in both the hardware of the computer in that it directly represents the computer
+    instructions and the data the computer operates on.
+
+
+    The opposite of a low-level language is a high-level language – code written in
+    a way that is easier to read and write because it is somewhat resembles English,
+    such as:
+
+
+    Print "Hello";'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: 'Here, you are telling the computer to write out the word Hello on the screen.
+
+
+    All the most popular programming languages are high-level languages – meaning,
+    they use English letters, symbols and words.
+
+
+    # UNTYPED
+
+
+    Data is information.
+
+
+    There are different types of data that computer programs will need. These are
+    data types like:
+
+
+    +   * Numbers,
+
+    * Letters,
+
+    * Dates,
+
+    * True or false, etc.
+
+
+    When information is used in a computer, that information will have a “data type.”
+    This is two things:
+
+
+    +   1. “What kind of information is this?,”
+
+    2. “What kind of things can we do with this data?”
+
+
+    Different data types can be used in different ways.
+
+
+    When data is stored in a computer, its type is also stored – that way the computer
+    knows how to work with that particular piece of data.
+
+
+    The various different things you can do with data are called operations. Not all
+    data types have the same operations available to them.
+
+
+    For example, a “decimal number” (0-9) is a data type. Typical operations you could
+    do with decimal number data are addition, subtraction, multiplication, etc.
+
+
+    Text
+
+
+    When creating computer programs, every piece of data being kept track of the computer
+    is a certain data type. For example, the datum 342.98 is data of type “decimal.”
+    The datum “casserole” is data of type “text.”
+
+
+    # A B C 1 2 3 TRUE/FALSE 3.14
+
+    (examples of data types)
+
+
+    24
+
+    © Prosper Consulting Inc., The Tech Academy'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "It would not make sense to apply mathematical operations to text data – for\
+    \ example, a computer to add the number 34 to the text “banana” wouldn’t work\
+    \ because the two types of data are different, and mathematics doesn't apply to\
+    \ text data.\n\nIn math, a variable is a symbol used to represent an unknown quantity\
+    \ or a quantity that may change. In computers, a variable is a construct (an idea\
+    \ formed from simpler elements) used to store data that may change as the computer\
+    \ performs its tasks.\n\nComputers often have to keep track of various pieces\
+    \ of information. These can be things like the name of a computer user, the color\
+    \ of the background shown on the computer screen, an order number for something\
+    \ a user ordered from a company, etc.\n\nThe computer usually gives each of these\
+    \ pieces of data a NAME and VALUE. The NAME is used to identify the exact piece\
+    \ of data, and the VALUE is used to show the actual data we need to keep track\
+    \ of. Usually the “=” symbol is used to set the VALUE of a variable.\n\nIn math,\
+    \ a value is a numeric amount, quantity, or number – like this: X = 10\n\nHere\
+    \ we are saying that the name “X” holds the value of “10.”\n\nIn coding, a value\
+    \ is any sort of characteristic or attribute. We could assign the value like this:\
+    \ \n\n```\nX = Happy\n```\n\nThis means we are saying the name X is assigned the\
+    \ value Happy. We could later tell the computer:\n\n```\nPrint X\n```\n\nThe computer\
+    \ would then display:\n\n```\nHappy\n```\n\nThe things the computer is keeping\
+    \ track of are usually called “variables.” This is because the VALUE part of it\
+    \ can change when you tell the computer to change it. The fact that the value\
+    \ can vary is why it’s called a “variable” – its value is not permanent or constant."
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: 'Many computer programming languages require the programmer to specify the data
+    type for a variable. These are called “typed languages.” When you create a variable
+    in a typed language, you need to specify what data type the variable is.
+
+
+    In a typed language, there are certain restrictions about how the various data
+    types can interact.
+
+
+    For example, you might need to make the computer instructions that calculate a
+    person''s pay for the day. Here, you could have three variables that had a data
+    type of "integer," meaning they represented numeric data (i.e., numbers). An integer
+    is a whole number – like 6, 99 and 182. 3.11 and 9½ are not integers.
+
+
+    You would create the variables that calculate a person''s pay for the day like
+
+
+    ```
+
+    integer PayRate = 35.00
+
+    integer HoursWorked = 10
+
+    integer Paycheck
+
+    ```
+
+
+    The third variable, the integer called Paycheck, doesn''t have a value yet. This
+    variable is meant to store the result of a math operation that determines how
+    much a worker has earned.
+
+
+    The computer instruction for this might look something like this:
+
+
+    ```
+
+    Paycheck = HoursWorked * PayRate
+
+    ```
+
+
+    Because all three variables are the same data type, the computer can process this
+    math operation and store the result in the value for variable “Paycheck”: 850.00.
+
+
+    Untyped languages are programming languages that do not make you define what data
+    type a variable is. Instead, the computer uses a predefined system to work out
+    what data type a variable is based on its value and how it is being used.
+
+
+    For example, let’s use the earlier math example but examine how it could work
+    when using an untyped language.
+
+
+    Here, we might have three variables similar to the ones from our earlier example:
+
+
+    ```
+
+    PayRate = 35.00
+
+    HoursWorked = “ten"
+
+    Paycheck
+
+    ```'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Notice that there are no data types specified. Notice, as well, that the
+    variable “HoursWork” has a value of “ten” – a word, not a number.
+
+
+    If we wanted to perform the same math as above example, we might create the same
+    computer instruction:
+
+
+    ```
+
+    Paycheck = HoursWorked x PayRate
+
+    ```
+
+
+    This makes math operations a bit different. The computer takes the value of the
+    variable PayRate, 35.00, and tries to multiply it by the value of the variable
+    HoursWorked, “ten”.
+
+
+    This doesn’t work at first glance, of course – you can’t multiply a number by
+    a word! But untyped languages have a predetermined system that is used to infer
+    (determine something based on the available information) the type of data that
+    the variable represents. Here, the language can work out that the word “ten” can
+    mean the number 10 – and since the instruction is a math operation, the language
+    interprets the variable in that manner and multiplies 35.00 by 10 to get 350.
+
+
+    JavaScript is an untyped programming language in that you aren’t required to define
+    the type of a variable.
+
+
+    # INTERPRETED
+
+
+    A compiler is a special program that converts the code that looks nearly English
+    into a form that the computer can understand and operate off of. The product of
+    a compiler would be a set of instructions for the computer to execute that would
+    end up doing what “nearly English” code described.
+
+
+    For example, if you typed this instruction within a computer program:
+
+
+    ```
+
+    if age > 18, print “You are an adult”
+
+    (the symbol > means greater than)
+
+    ```
+
+
+    A compiler would take what you wrote, change it and relay that command to the
+    computer so it can be executed (i.e., machine language–a long series of Is and
+    0s).
+
+
+    One important aspect of how a compiler works is that it takes all of the instructions
+    in the program and turns them into language the computer can understand before
+    actually executing the program. There are other methods of converting high-level
+    languages to computer-readable form that don’t involve converting the entire program
+    before it is executed. Instead, each instruction is converted and executed one
+    at a time. This is not how a compiler works, however.
+
+
+    A compiled programming language uses a compiler.'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: 'An interpreter is a special program that converts high-level language instructions
+    into low-level language instructions. An interpreter converts code one instruction
+    at a time rather than converting the entire set of instructions in the program
+    prior to execution.
+
+
+    In other words, the interpreter will read an instruction, convert it to the language
+    the computer can understand, have the computer execute that instruction, then
+    go on to the next instruction in the program and repeat.
+
+
+    Interpreted programming languages (like JavaScript) use interpreters.
+
+
+    # RUNTIME
+
+
+    Run means to start or execute something.
+
+
+    To understand runtime, you must first understand what a “compiler” is.
+
+
+    Runtime means the time when something is in the computer is running. Runtime is
+    exactly what it means – the time when the program is run. You can say something
+    happens at runtime or it happens at compile time.
+
+
+    The term “runtime” also describes software or instructions that are executed while
+    your program is running, especially those instructions that you did not write
+    explicitly, but are necessary for the proper execution of your code. This is actually
+    a “runtime library,” but is often shortened to simply “runtime.”
+
+
+    A library is a collection of pre-made resources to create computer programs. Most
+    often, these take the form of a package of code with built-in functions that all
+    relate to a specific area. They are usually used by adding them to a software
+    project already being created, and then coding in that project make use of the
+    various functions in the library.
+
+
+    In computer programming, a runtime library is a special program library used by
+    a compiler to implement functions built into a programming language during the
+    runtime (execution) of a computer program.
+
+
+    For example, you can design videos to load during runtime or if they were loaded
+    during runtime, then you would have to wait for it to load after you clicked on
+    it. If they were loaded prior to runtime, the videos would have loaded when you
+    originally opened the program (set of instructions entered into a computer that
+    performs exact functions) and so the program would take longer to load up when
+    started.'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'So, to circle back to the definition given at the beginning of this chapter.
+
+    "JavaScript" is "a high-level, un-typed, and interpreted runtime language." With
+    the
+
+    data covered in this chapter, you can now understand this definition!
+
+
+    Now let''s go over how to solve problems in coding.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# CHAPTER EIGHT\nALGORITHMS\n\n“Algorithm” is a mathematical term that means\
+    \ a plan for solving a problem.\nIt consists of a sequence of steps to solve a\
+    \ problem or perform an action.\n\nComputers use algorithms. An algorithm is a\
+    \ set of instructions that is used\nto do something done.\n\nFor example, an algorithm\
+    \ for selecting the right kind of shirt might have\nthe following steps:\n\n+\
+    \   1. Pick a shirt from your closet.\n2. Put the shirt on.\n3. Look at yourself\
+    \ in the mirror.\n4. If you like it, go to step 6.\n5. If you don't like it, return\
+    \ to step 2.\n6. End of procedure.\n\nComputers perform functions by processing\
+    \ algorithms. You can create\nalgorithms for computers to follow that other people\
+    \ can then use in the future\nwithout having to write out the entire list of steps\
+    \ again.\n\nFor example, when your computer prints something, there are many\n\
+    massive algorithms it uses to figure out which type of printer you have, how to\n\
+    vey the document to the printer in a way it understands, etc. This is all taken\n\
+    \ of in the background so that all you need to do is click “print.” These\nalgorithms\
+    \ were written by others to get the computer and printer to comply with\nyour\
+    \ wishes.\n\nAnother example of an algorithm could be a simple recipe, such as:\n\
+    \n+   1. Crack three eggs and pour their contents into a small bowl - attempt\
+    \ to\navoid getting eggshell in the bowl.\n2. In the case of eggshells, remove\
+    \ any eggshells from the bowl.\n3. Beat the  eggs for 90 seconds in the small\
+    \ bowl.\n4. Put a small frying pan on the stove and turn the burner on to medium\n\
+    tperature.\n5. Pour the eggs in a small frying pan and cook until very little\
+    \ to no\nwetness remains.\n6. Serve the eggs.\n\nWhile there are similarities,\
+    \ computers and people do not use algorithms\nthe same way; there are similar\
+    \ features between real life algorithms and computer\nalgorithms, but they are\
+    \ not identical."
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: 'Computers can''t think – they operate in a completely literal manner – so when
+    writing an algorithm for computers, there are certain characteristics that must
+    be present for a computer to use the algorithm. People can deduce things and people
+    have imagination. Computers can only do what they''ve been told to do.
+
+
+    To fully understand what an algorithm is for computers, some terms and concepts
+    must be cleared up first. Algorithms are composed of five separate characteristics:
+
+
+    +   1. Result: the outcome of something.
+
+
+    +   2. Finite amount of time: an exact amount of time for something.
+
+
+    +   3. Well-ordered: listed out in the correct sequence and in an organized fashion.
+
+
+    +   4. Effectively computable operations: this refers to a command that can be
+    processed successfully by a computer.
+
+
+    +   5. Unambiguous: ambiguous means unclear, confusing, not specified. Un = not.
+    Something that is unambiguous means that it is clear and defined.
+
+
+    Let''s go over each of these points in detail.
+
+
+    # RESULT
+
+
+    Result: the outcome of something.
+
+
+    In computers, a response could be considered the result. You type in: “Tell me
+    the date,” “Jan 3, 2022.” “Jan 3, 2022” would be the result. Answers to problems
+    are also considered a result.
+
+
+    Algorithms always have a result. If there is no result, it cannot be considered
+    a valid algorithm.
+
+
+    For example: print the number “2,” Result: 2.
+
+
+    # FINITE AMOUNT OF TIME
+
+
+    Finite amount of time: an exact amount of time for something.
+
+
+    Algorithms should have a finite number of operations included in them and execute
+    these operations in a set period of time. Algorithms should never be open-ended
+    or infinite. Since each step of an algorithm takes a certain amount of time to
+    be completed, this would mean the algorithm would be completed in a finite amount
+    of time.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: 'An incorrect algorithm would be:
+
+
+    +   1. Start an amount of 1
+
+    2. Add 1 to that amount
+
+    3. Go to step 2
+
+
+    The computer would count 0, 1, 2, 3, 4, forever.
+
+
+    For example, “Count from 1 to 10, then print a message that says, ‘I counted from
+    1-10,’ would be a correct algorithm because it contains a finite amount of steps.
+
+
+    # WELL-ORDERED
+
+
+    Well-ordered: listed out in the correct sequence and in an organized fashion.
+    Computers can only execute an algorithm if it is well-ordered. If it is put out
+    of sequence or no sequence is specified, etc., the computer cannot process the
+    algorithm.
+
+
+    For example, this is an incorrect algorithm because it is not well-ordered:
+
+
+    +   1. Close the program
+
+    2. Print “I am here” inside the program
+
+    3. Save your work in the program
+
+    4. Open the program
+
+
+    # EFFECTIVELY COMPUTABLE OPERATIONS
+
+
+    Effectively computable operations: this refers to a command that can be processed
+    successfully by a computer. The phrase literally means an operation that can be
+    computed in an effective way.
+
+
+    In algorithms, all of the parts of the algorithm must be possible to execute.
+
+
+    For example, a non-effectively computable operation could be: “multiply green
+    by red” – the computer cannot process this because it isn''t computable. Operations
+    contained in algorithms must be effectively computable, such as, “2 + 2 =”.
+
+
+    # UNAMBIGUOUS
+
+
+    Unambiguous: ambiguous means unclear, confusing, not specified. Un = not. Something
+    that is unambiguous means that it is clear and defined.'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "In computers, your algorithms must be unambiguous. You have to be extremely\
+    \ specific about each step/part of an algorithm or the algorithms cannot be processed\
+    \ by the computer.\n\nFor example, if you have an algorithm that is processing\
+    \ a list of ten numbers, then a step of your algorithm is “delete the number,”\
+    \ the computer cannot process this because you did not clearly specify which number\
+    \ you wanted.\n\nNow that you know the above terms and concepts, we have the full\
+    \ definition of “algorithm” as defined in the book Invitation to Computer Science\
+    \ by American authors Schneider and Gersting:\n\nAlgorithm: A well-ordered collection\
+    \ of unambiguous and effectively computable operations that when executed produces\
+    \ a result and halts in a finite amount of time.\n\nSorting means to put items\
+    \ in an exact sequence or order. Computers sort items often. On your computer,\
+    \ you can sort files by when they were created, their name, etc. Algorithms can\
+    \ be used by computers to organize data.\n\nFor example, you can sort files on\
+    \ your computer by name or date. This is done by a sorting algorithm within the\
+    \ computer. There are several different ways algorithms can be written to sort\
+    \ data. \n\nIn learning how to program, you would write algorithms to perform\
+    \ various functions. Computers have many algorithms programmed into them already\
+    \ that cause them to do a lot of the actions you use computers for. For example,\
+    \ your computer performs many complicated steps to save a document on your computer.\
+    \ These steps are taken care of because programmers entered in algorithms to handle\
+    \ it for you.\n\nWhether or not you ever learn to write code, it is helpful to\
+    \ know the elements that make up a program, which we will now cover."
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# CHAPTER NINE
+
+    FIVE ELEMENTS OF A PROGRAM
+
+
+    There are five key elements to any computer program:
+
+
+    +   1. Entrance
+
+    2. Control/Branching (decision points within a program)
+
+    3. Variables
+
+    4. Subprograms (programs within programs)
+
+    5. Exit
+
+
+    Let''s go over each of these in detail.
+
+
+    # ENTRANCE
+
+
+    A computer is a simple machine when you get down to it. It can only do one thing
+    at a time, and it performs a computer program''s instructions in the exact order
+    in which the computer programmer puts them. It can only execute (perform or run)
+    an instruction if it is directed to.
+
+
+    This means that any computer program has to have a clearly marked “first instruction.”
+    This is the first task that the computer will perform when the computer program
+    is started. From that point forward, each instruction in the program will direct
+    the computer what instruction to perform next after it performs the current instruction.
+
+
+    There are different ways to specify the entrance point, depending on which computer
+    programming language is being used, but every computer program has a defined entrance
+    point.
+
+
+    # CONTROL/BRANCHING
+
+
+    Computers are often used to automate actions that would otherwise be performed
+    by people. One of the most common things a person will be asked to do in performing
+    a program job is to assess the condition of a thing and, based on the condition
+    of that thing, choose between two or more possible courses of action. In other
+    words, they will have to make a decision. An example would be the activity of
+    “a teacher grading a stack of papers”.
+
+
+    +   1. Take the next student paper from the top of the stack.
+
+    2. Grade the paper.
+
+    3. Write the grade on the paper.
+
+    4. If the grade is 70% or higher, put the paper in a “Passed” stack.
+
+    5. If the grade is below 70%, put the paper in a “Failed” stack.'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'You can see that there are two possible "paths" here. A path is a "possible
+    course of action arising from a decision." Think of it as happens when you come
+    to a fork in the road. You have to decide on a course of action – which road do
+    you take? This is also called a branch.
+
+
+    All but the simplest computer programs will need to do the same thing. That is,
+    they will have to check the condition of a piece of data, and based on the condition
+    of that data, they will have to execute different sets of computer instructions.
+
+
+    In order to do this, the program will make use of special computer instructions
+    called "control" instructions. These are just instructions that tell the computer
+    what to look at in making a decision, and then tell the computer what to do for
+    each possible decision. The most fundamental control statement is "if." It is
+    used like this:
+
+
+    ```
+
+    IF [condition to check] THEN [branch of computer instructions to execute]
+
+    ```
+
+
+    Here, the "IF" is the control statement; the "THEN" is the branching instruction
+    that points to the path of the program to execute if the control statement is
+    true.
+
+
+    # VARIABLES
+
+
+    As we covered earlier, a variable is a piece of data that a computer program uses
+    to keep track of values that can change as the program is executed.
+
+
+    As a recap, a variable is a piece of data that a computer program uses to keep
+    track of values that can change as the program is executed. This might be something
+    like "the grade of the student paper that was just graded" or "the color of paint
+    to use for the next car on the assembly line".
+
+
+    Variables are a vital part of any computer program because they make so a computer
+    program can be used for more than a single, predetermined set of values. You can
+    imagine that if "the color of paint to use for the next car on the assembly line"
+    was only ever able to be "blue," the computer program using that data would be
+    very useful. It would make a lot less sense to make so the computer program could
+    change that value for each car that was going to be painted.
+
+
+    When you are writing variables in a computer program, they usually are written
+    in a manner like this:
+
+
+    ```
+
+    [name of the variable] = [value of the variable]
+
+    ```'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: 'For example, you might have something like this:
+
+
+    ```
+
+    color = "red"
+
+    ```
+
+
+    Let''s look at the example of a "teacher grading a stack of papers." Here, we
+    could have a variable called "Paper Grade" that changed each time the teacher
+    graded a paper. You could also have variables for the total number of questions
+    on the paper ("Total Questions") for both the number of questions the student
+    answered correctly ("Correct Questions") and for the grade of the paper.
+
+
+    The written description from above:
+
+
+    +   1. Take the next student paper from the top of the "To Be Graded" stack.
+
+    2. Grade the paper.
+
+    3. Write the grade on the paper.
+
+    4. If the grade is 70% or higher, put the paper in a "Passed" stack.
+
+    5. If the grade is below 70%, put the paper in a "Failed" stack.
+
+
+    In computer language, the procedure might look something like this:
+
+
+    +   1. Retrieve Next Paper
+
+    2. Set Total Questions = [total questions in Current Paper]
+
+    3. Grade Paper
+
+    4. Set Correct Questions = [number of questions answered correctly]
+
+    5. Set Paper Grade >= [Correct Questions/Total Questions]
+
+    6. If (Paper Grade >= 70%) then Paper Status = "passed"
+
+    7. (Paper Grade < 70%) then Paper Status = "failed",
+
+
+    This is a simple computer program.
+
+
+    For example: 5 >= 4
+
+
+    This means "check whether 5 is greater than or equal to 4." Since five is fact
+    greater than four, the answer is "true.",'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: 'Another example: 3 >= 6
+
+
+    This means “check whether 3 is greater than or equal to 6.” The answer is “false”.
+
+
+    As a final example: 6 >= 6
+
+
+    This means “check whether 6 is greater than or equal to 6.” The answer is “true”.
+
+
+    The reverse (opposite) symbol of >= is <=, which checks for the data on the left
+    side of the symbol is lesser/fewer or equal to the data on the right side.
+
+
+    Each time the computer runs the seven-step procedure listed earlier, it could
+    have different values for each of the variables in the program, depending on how
+    many questions the paper being graded is and how many of those the student answered
+    correctly.
+
+
+    For example, let''s say the paper has 100 questions, and the student answers 82
+    of them correctly. After the program is run, the result would be the following:
+
+
+    Total Questions: 100
+
+    Correct Questions: 82
+
+    Paper Grade: 82%
+
+    Paper Status: Passed
+
+
+    As another example, let''s say the paper has 50 questions, and the student answers
+    30 of them correctly. After the program is run, the result would be the following:
+
+
+    Total Questions: 50
+
+    Correct Questions: 30
+
+    Paper Grade: 60%
+
+    Paper Status: Failed
+
+
+    To clarify the need for variables: Let''s say that at the time computer program
+    was being created, all papers at the school had 100 questions, and the teachers
+    told the programmer to make it so that the number of questions was always assumed
+    to be 100. In that case, the programmer wouldn''t use a variable called “Total
+    Questions.”
+
+
+    Instead, they could make the program look like this:
+
+
+    +   1. Retrieve Next Paper
+
+    2. Grade Paper
+
+    3. Set Correct Questions = [number of questions answered correctly]'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "4. Set Paper Grade = [Correct Questions/100]\n5. If (Paper Grade >= 70%) then\
+    \ Paper Status = \"passed\"\n6. If (Paper Grade < 70%) then Paper Status = \"\
+    failed\"\n\nNotice that on line 4 of the program, the programmer set the number\
+    \ of questions to 100.\n\nNow, let's say that the school introduces the concept\
+    \ of \"quizzes,\" which are smaller papers with only 20 questions. If the paper\
+    \ being handled by the computer program is a quiz, the grade will no longer be\
+    \ accurate – even if a student got all 20 questions correct, they would only get\
+    \ a grade of 20% (20/100).\n\nA good programmer will analyze the need that the\
+    \ program is meant to resolve, build the program so that it can handle changing\
+    \ aspects of that need over time.\n\nAnother valuable control statement is a loop.\
+    \ This is where part of the program is executed over and until a certain condition\
+    \ is met.\n\nIn real-world terms, an example might be \"grade papers one at a\
+    \ time until all the papers have been graded\" or \"make five copies of this document.\"\
+    \n\nIn a computer program, a loop would look something like this:\n\n+   - [start\
+    \ loop]\n  - Perform action\n  - If [end condition has been met] then [exit the\
+    \ loop]\n  - If [end condition has not been met] then [repeat the loop]\n- [end\
+    \ loop]\n\nWe looked at that at grades papers could be set up as a loop. The instructions\
+    \ we would be laid out like this:\n\n+   - [start loop]\n  - Take the next student\
+    \ paper from the top of the \"To Be Graded\" stack.\n  - Grade the paper.\n  -\
+    \ Write the grade on the paper.\n  - If the grade is 70% or higher, put the paper\
+    \ in a \"Passed\" stack.\n  - If the grade is below 70%, put the paper in a \"\
+    Failed\" stack.\n  - If there are no more papers in the \"To Be Graded\" stack,\
+    \ exit the loop.\n  - If there are more papers in the \"To Be Graded\" stack,\
+    \ repeat the loop.\n- [end loop]\n\nOften loops make use of a special variable\
+    \ called \"counter.\" The counter keeps track of how many times the loop has been\
+    \ executed. This can be used to make sure the loop is only executed when needed."
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: 'Let''s add a counter to the grading program we''re looking at as well as two
+
+    ew variables: "Total Papers" will be used to hold the value "how many papers need
+
+    to be graded; while "Counter" will be used to hold the value "how many times the
+
+    loop has executed."
+
+
+    +   1. Set Total Papers = [total papers to be graded]
+
+
+    +   2. Set Counter = 0
+
+
+    +   3. If (Counter < Total Papers):
+
+    a. Retrieve next Paper
+
+    b. Set Total Questions = [total questions in current Paper]
+
+    c. Grade paper
+
+    d. Set Correct Questions = [number of questions answered correctly]
+
+    e. Set Paper Grade = [Correct Questions/Total Questions]
+
+    f. If (Paper Grade >= 70%) then Paper Status = "passed"
+
+    g. If (Paper Grade < 70%) then Paper Status = "failed"
+
+    h. Counter = Counter + 1
+
+    h. Go to step 3
+
+
+    +   4. [Continue on with the rest of the program
+
+
+    Here, the loop is found in step 3.
+
+
+    Let''s break down what each step is doing here:
+
+
+    +   Step 1: Count how many papers are in the "to be graded" stack and set the
+
+    value of the "Total Papers" variable to that number.
+
+
+    +   Step 2: Create a variable called "Counter" and set it to the value zero.
+
+    This variable will be used to keep track of how many papers are
+
+    graded.
+
+
+    +   Step 3: Use the control statement "if" to see if we should execute a
+
+    loop.
+
+
+    +   Step 3a-3g: Grade the paper; this has been covered above.
+
+
+    +   Step 3h: Since we have now graded a paper, add one to our Counter
+
+    variable.
+
+
+    +   Step 3i: Go to the top of the loop, where we check to see if we need to
+
+    execute the loop all over again.'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'Let''s see what would happen if we used this program to grade two papers.
+
+    Let''s say that the papers look like this:
+
+
+    Paper 1:
+
+    Total questions on the paper: 100
+
+    Total questions that were answered correctly: 95
+
+
+    Paper 2:
+
+    Total questions on the paper: 20
+
+    Total questions that were answered correctly: 10
+
+
+    If we analyze what happens when the program is executed by the computer,
+
+    itit would look like this:
+
+
+    ```
+
+    Total Papers = 2
+
+    Counter = 0
+
+    0 is less than 2, so loop will be executed
+
+    Paper 1 Retrieved
+
+    Total Questions = 100
+
+    Paper 1 Graded
+
+    Correct Questions = 95
+
+    Paper Grade = 95%
+
+    Paper Status = "passed"
+
+    Counter = 1
+
+    1 is less than 2, so loop will be executed
+
+    Paper 2 Retrieved
+
+    Total Questions = 20
+
+    Paper 1 Graded
+
+    Correct Questions = 10
+
+    Paper Grade = 50%
+
+    Paper Status = "failed"
+
+    Counter = 2
+
+    2 is not less than 2, so loop will not be executed
+
+    [Continue on with the rest of the program]
+
+    ```
+
+
+    # SUBPROGRAMS
+
+
+    The main series of instructions in a program is called the "main program."
+
+
+    It is sometimes valuable to create another program that can be used by
+
+    main program as needed. This is called a subplot. It is no different from any
+
+    other program – it is made up of the same elements (entrance point, variables,
+
+    control and branching statements, and exit point).'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: 'However, a subprogram isn''t used by itself. Instead, the main program can
+    execute, and the subprogram starts executing. When the subprogram is done executing,
+    the main program continues on where it left off.
+
+
+
+
+    This is referred to as "calling" the subprogram – that is, the main program calls
+    the subprogram, starts and stops, and the main program continues on where it left
+    off before calling the subprogram.
+
+
+    This is useful in creating programs because the computer programmer doesn''t have
+    to enter the instructions of the subprogram over and over. You only type them
+    in one, and when you need that subprogram to be called by the main program, you
+    only have to type in one instruction – the instruction to call the subprogram.
+    This lets you reuse the instructions you entered in for the subprogram rather
+    than rewriting them.
+
+
+    # EXIT
+
+
+    Every program must have an instruction that tells the computer that the program
+    is no longer running. Much like the Entrance, the exact instruction for this varies
+    based on the computer language used, but all computer languages will have this
+    type of instruction.
+
+
+    # SUMMARY
+
+
+    The fundamental elements of any computer program are:
+
+
+    +   1) An entrance point – the first instruction to be performed.
+
+
+    +   2) Control and branching statements – to control what is done and in what
+    order.
+
+
+    +   3) Variables – changeable items, held in computer memory, for the program
+    to use it as operates.
+
+
+    +   4) Subprograms – repeatable sets of computer instructions that act mini-programs.
+    The main program can use them as needed.
+
+
+    +   5) An exit point – the last instruction to be completed, so the computer knows
+    the program isn''t operating anymore.
+
+
+    Next we will discuss types of programming languages.'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# CHAPTER TEN
+
+    TYPES OF PROGRAMMING LANGUAGES
+
+
+    As we covered earlier in this book, programming languages are organized systems
+    of words, phrases and symbols that let you create programs. They''re also called
+    computer languages.
+
+
+    There are many different types of programming languages, each of which was created
+    to fill a specific purpose. Usually a language is created in order to make the
+    creation of certain types of computer programs easier.
+
+
+    "Markup" is the action of adding instructions to a document to control the format,
+    style and appearance of the content of the document. This applies to physical
+    printed documents, as well as to electronic documents that are displayed on a
+    computer screen (like websites).
+
+
+    A markup language is a type of programming language that is used to specify markup
+    instructions for the data in a document. In other words, markup instructions aren''t
+    the data in the document; they are data *about* the data in the document.
+
+
+    There are several types of markup languages. Usually they were created for commonly-used
+    types of documents that have exact specifications as far as their structure. Often,
+    these specifications as to document structure are well-known around the world
+    and available to anyone who wants to create documents of type.
+
+
+    A script is a list of commands the computer performs automatically without your
+    involvement. A scripting language is a computer language used to make scripts.
+
+
+    Often the tasks these scripts accomplish are valuable to automate — so that the
+    task steps don''t have to be entered into the computer again every time you want
+    to do those tasks.
+
+
+    The origin of the term is similar to its meaning in "a movie script tells actors
+    what to do"; a scripting language controls the operation of a computer, giving
+    it a sequence of work to do all in one. For instance, one could put a series of
+    editing commands in a file, and tell an editor to run that "script" as if commands
+    had been typed by hand.'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'As an example, if you wanted to make it so that every night at midnight, a
+    list of all the people who signed up for your school classes was printed, you
+    could use a scripting language to make a script that did this work.
+
+
+    JavaScript can be used to create scripts and is a scripting language.
+
+
+    There are a couple of languages used with JavaScript – let''s go over what those
+    are.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# CHAPTER ELEVEN
+
+
+    # HTML AND CSS
+
+
+    JavaScript is one of three of the main technologies utilized to create content
+    on the world wide web (HTML and CSS being the other).
+
+
+    # HTML
+
+
+    HyperText Markup Language is the markup language that makes up the webpages on
+    the World Wide Web. It was created by Tim Berners-Lee (the inventor of the web)
+    in 1990. Hypertext is a system for linking electronic documents. In an HTML document,
+    hypertext is words, images, videos, etc. that link to other HTML documents. When
+    a user selects the hypertext, the document is retrieved and displayed on the computer
+    screen. HTML is used to create webpages.
+
+
+    A computer programmer uses HTML to put markup instructions before and after the
+    content of a webpage. Markup instructions give the data about the elements of
+    the document – text, images, video, etc. When the document is actually displayed
+    on a screen, markup instructions aren''t displayed on the screen – instead, they
+    are used to control how the actual content of the document is displayed. As of
+    2020, HTML5 is the newest version of HTML. Here is an example of an HTML website
+    from the 1990s:
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_45_0.png)
+
+
+    # CSS
+
+
+    Cascading Style Sheets was created in 1996 and is used to control the appearance
+    of the text, images, videos, etc., on those webpages. A style sheet is a tool
+    used to design the format of a webpage. Style sheets are a central place to store
+    data about how that page will appear and how it will behave. They can be used
+    to store information about how to display colors, pictures, text, etc. A style
+    sheet is a sheet that handles the style of the website.'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'Styling is not concerned with the content of a page; rather, it is concerned
+    with the appearance of that content. Cascading is a term that comes from the idea
+    of water dropping down a series of drops in height. Think of it as a series of
+    small waterfalls. Information can cascade, meaning it can be stored at one central,
+    most important location and then be applied to other locations that are considered
+    to be lower than, or derived from, that more important central location. For web
+    pages, that means you can set style information in one high-level web page, and
+    that same styling information can "cascade" to other, lower pages without any
+    further work. CSS is usually used in conjunction with HTML to upgrade the appearance
+    and functionality of HTML websites. As of 2020, CSS3 was the newest version of
+    CSS.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_46_0.png)
+
+
+    HTML, CSS, and JavaScript are commonly used in conjunction with each to create
+    dynamic websites. In this book, we will teach you some basic JavaScript, and to
+    do so, we will use HTML occasionally.
+
+
+    # HISTORY OF JAVASCRIPT
+
+
+    A browser is a program that you use to look at webpages on the internet. In order
+    to look at information on the web, you use a web browser. The most common activity
+    people use browsers for finding and viewing websites – more particularly, the
+    webpages on websites. Google Chrome is the most used browser.
+
+
+    The difference between a browser and search engine is: a browser is used to visit
+    and display websites, while a search engine is used to search for websites. For
+    example, you could use the browser Internet Explorer to search on Yahoo''s search
+    engine.
+
+
+    In the mid-1990s, there was no Google, and so, prior to Google Chrome, the most
+    popular browser was Netscape Navigator. JavaScript was created by Brendan Eich
+    in 1995 who worked for Netscape at the time.
+
+
+    Java was a popular programming language at the time, and still is – and was one
+    of the inspirations for JavaScript. But to be clear, Java and JavaScript are two
+    completely different programming languages. Since Java was being heavily marketed
+    at the time, Netscape named the new scripting language JavaScript.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# VALUE TYPES
+
+
+    Nearly every programming language comes with certain data types built in and allows
+    for the creation of other types of data by computer programmers. In JavaScript,
+    these various types of data are called "values."
+
+
+    There are six value types in JavaScript:
+
+
+    +   1. Strings (data that represent text or a series of text)
+
+    2. Numbers
+
+    3. Booleans (true or false statements)
+
+    4. Objects (things with state and behavior)
+
+    5. Functions (a block of organized, reusable computer code used to perform a single,
+    related action – also called a subprogram or subroutine)
+
+    6. Values that are undefined
+
+
+    You will learn how to utilize these value types in this book.
+
+
+    We are really close to writing code! Let''s go over some tips to help you through
+    this book.'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# CHAPTER TWELVE
+
+    CODING TIPS
+
+
+    If you run into any trouble while going through this book, here are some tips:
+
+
+    +   1) Ensure you understand all the words and terms being used – clear up any
+    you don''t understand.
+
+
+    +   2) Ensure your code is written exactly as laid out here. A small error in
+    the code, such as a missing comma, can ruin the whole program. Code must be exact
+    for programs to run properly, so always meticulously check your code for errors.
+
+
+    +   3) Research online for solutions.
+
+
+    +   4) You can also contact The Tech Academy and ask for assistance – learncodinganywhere.com
+
+
+    # CHALLENGES
+
+
+    At the end of some chapters, we will have an “END OF CHAPTER CHALLENGE.” These
+    are opportunities for you to put together all that you''ve studied in that chapter.
+    At times you will also be instructed to figure out solutions to problems on your
+    own. Working software developers are often assigned projects and tasks they''ve
+    never done before. A key element of the job is researching solutions online. You''ll
+    find that some of the challenges in this book will instruct you to do something
+    that we haven''t taught you yet. This was done intentionally. We want you to gain
+    experience in locating new data online and figuring things out on your own. In
+    the words of more than one software developer: “I get paid to Google things!”
+
+
+    Some of these challenges will be a repeat of tasks you''ve already performed.
+    The reasons for this are to:
+
+
+    +   a. Provide you with an opportunity to create your own approach, and
+
+
+    +   b. Allow you to better understand and remember code through repetition.
+
+
+    Well done on making it through these beginning chapters! Now we are going to start
+    coding!'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# CHAPTER THIRTEEN
+
+    FIRST CODING ASSIGNMENTS
+
+
+    Here is your first task:
+
+
+    Download and install Notepad++ here: https://notepad-plus-plus.org/
+
+
+    You will be writing your code in the code editor Notepad++.
+
+
+    Note: If you are using a Macintosh computer, you can utilize a different editor
+    — such as Brackets.
+
+
+    # HTML
+
+
+    Before writing code in JavaScript, you must be familiar with some basic HTML.
+
+
+    The markup instructions in HTML give the computer data about the elements of the
+    document — text, images, video, etc. When the document is actually displayed on
+    a screen, instead, they are used to control how the actual content of the document
+    is displayed.
+
+
+    # TAGS
+
+
+    HTML utilizes tags. Tags are how the markup of the content in the HTML document
+    is specified.
+
+
+    The basic principle is this: If you put special instructions before and after
+    the content you want to affect, another program can tell the difference between
+    the instruction and the content, and can then present the data in a specified
+    manner.
+
+
+    Because of this, tags usually have two parts: an opening tag and a closing tag.
+    The content would go in between between these two tags. Opening tags indicate
+    the beginning of a markup instruction and closing tags indicate the end.
+
+
+    Opening tags are written as a "less than" angle bracket (<), followed by the markup
+    instruction, and then a "greater than" angle bracket (>).
+
+
+    An example would be the tag used to make text **bold**. The actual instruction
+    is the word "strong", meaning "make the text controlled by this tag stand out",
+    usually by making it bold. The opening "strong" tag would look like this:
+
+
+    ```
+
+    <strong>
+
+    ```'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: 'You need to specify a closing tag, so the computer program knows when to stop
+    making text bold. Where''s the closing tag comes in. Closing tags use the same
+    instruction as the opening tag, but with a forward slash (/) placed before the
+    instruction (</>).
+
+
+    The closing "strong" tag would look like this:
+
+
+    ```
+
+    </strong>
+
+    ```
+
+
+    Putting all the parts together, if you wanted to emphasize a quote, you would
+    write the HTML like this::
+
+
+    ```
+
+    <strong>Education is the most powerful weapon which you can use to change the
+    world."</strong> -Nelson Mandela
+
+    ```
+
+
+    The output of this code would look like this:
+
+
+    > "Education is the most powerful weapon which you can use to change the world."
+
+    Nelson Mandela
+
+
+    # ELEMENTS
+
+
+    The tags and the code written between them are called "elements." Here is a diagram
+    that shows this:
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_50_0.png)
+
+
+    In this chapter, we will be writing HTML and JavaScript together. That way, you
+    can see how they work together. Additionally, when you state that you know JavaScript,
+    it will be assumed that you also know HTML.
+
+
+    # NOTPAD++
+
+
+    Now that Notepad++ is installed on your machine, do the following:
+
+
+    Launch Notepad++
+
+
+    Click on File on the menu bar and open a New File (or just press Ctrl + N).'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: "# \"HELLO, WORLD\" IN HTML\n\nThe first code that developers usually write\
+    \ when learning a new language is to make the computer display the text: \"Hello\
+    \ world.\" We are going to first use HTML to do this.\n\nAt the top of each HTML\
+    \ document containing HTML code is the <!DOCTYPE HTML> declaration. This isn't\
+    \ a tag. It is an instruction to the browser telling you you are using HTML –\
+    \ there are other doctypes (types of documents) you could use, so clarifying that\
+    \ helps the browser out.\n\nThe <html> tag is inserted at the beginning of your\
+    \ code, and all your HTML code is contained in between it and the end tag </html>.\n\
+    \nThe <body> tag denotes where you can add the contents of an HTML document –\
+    \ such as text, images, videos, lists, links, etc.\n\nInside Notepad++, write\
+    \ the following code:\n\n```\n<!DOCTYPE HTML>\n<html>\n  <body>\n    Hello, world!\n\
+    \  </body>\n</html>\n```\n\nAs a reminder, the \"/\" symbol in the code you wrote\
+    \ denotes an \"end tag.\"\n\nSave this document by clicking on \"File,\" then\
+    \ \"Save As.\" Name the document Test.html and ensure you click on \"Hypertext\
+    \ Markup Language\" under \"Save as type.\" It is important to include .html at\
+    \ the end of all your HTML code files if you don't, your computer will not recognize\
+    \ that it is an HTML file and your code won't run. Also, make sure you save this\
+    \ file to your desktop.\n\nThere are various ways to run your code. One of the\
+    \ easiest is to drag and drop the HTML file into an open Google Chrome window,\
+    \ like this:\n\n![](img/33a81fac26246d29975692e5ecda6e53_51_0.png)"
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'Note that the file icon (symbol above the file name) in the picture above is
+    the Google Chrome logo, that''s because on the computer the photo is taken from,
+    Google Chrome is set as the default program used to open HTML files. The icon
+    of your file may or not be defined.
+
+
+    You can also right click on your file on the desktop and select "Open with" and
+    navigate to Google Chrome.
+
+
+    From now on in this book, when we say "run" or "execute" your code, we mean to
+    "Open it in Google Chrome" so you can see your webpage displayed in the browser.
+
+
+    For Mac users using Brackets, you can also click "File" and then "Live Preview"
+    to run your code.
+
+
+    Now do the following:
+
+
+    Run your code.
+
+
+    Congratulations! You made the browser display the text "Hello, world!"
+
+
+    # ONLINE IMAGES
+
+
+    A Uniform Resource Locator (URL) is a unique name for a web resource. "web resource"
+    is an identifying thing that can be found on the internet. The most common example
+    of a URL is a website - https://www.google.com is a URL.
+
+
+    An attribute is a word or phrase used inside an element''s opening tag that controls
+    the element''s behavior.
+
+
+    For example, the image <img> tag allows you to place images inside your webpage.
+    The src (source) attribute is used with this <img> tag and it gives the location
+    of the image (where the image is being displayed from).
+
+
+    You can see this in the following:
+
+
+    ```
+
+    <img src="https://www.petmd.com/sites/default/files/petmd-cat-happy-15.jpg">
+
+    ```
+
+
+    In this code, the image tag tells the browser where to put the image on the page,
+    while the src attribute gives the location to pull the image from. You can pull
+    (use) images from online or from your computer. In the code above, we are pulling
+    the image from online.'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: "Do the following:\n\nFind an image online that you would like to display in\
+    \ your HTML code and\ncopy the image’s URL.\n\nYou can do this as follows:\n\n\
+    +   1. Search for the image you want on Google (such as “kitten”).\n2. Click on\
+    \ “Images” under the search bar.\n3. Click on the image you want (it should then\
+    \ display on the right side on\nyour screen).\n4. Right click on the image and\
+    \ select “Copy image address.” Paste this URL\nsomewhere because we will be using\
+    \ it soon.\n\nOpen up your Test.html file (if not already open, one way to do\
+    \ this is to\nright click on your file on the desktop and select Edit with Notepad++)\
+    \ and replace\nthe code with:\n\n```\n<DOCTYPE HTML>\n<html>\n  <body>\n  <img\
+    \ src=\"insert the image's URL here\"></img>\n</body>\n</html>\n```\n\nSave and\
+    \ execute your code. Your image is displayed in the browser!\n\nNow let's try\
+    \ displaying an image that’s saved on your computer.\n\n# COMPUTER IMAGE\n\nThe\
+    \ route to a file is called a “file path”. The “file path” is the address of a\
+    \ file\nand specifies the exact location of a file. It provides a “path” to the\
+    \ file.\n\nFile paths say things like, “You can find the file name ‘Winter’ inside\
+    \ the\nfolder named ‘Poems’, which is inside the C drive. A drive is simply a\
+    \ location\nwhere data is stored. The C drive is where most files and software\
+    \ are stored on\ncomputer.\n\nThe various components of a path are separated by\
+    \ a text character that is\nunlikely to be used in the name of a directory or\
+    \ a file. Usually this character is a\nslash, backslash or colon (“/\", \"\\\"\
+    \ or “.\"))."
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'The (\") symbol separates the different parts of a collection of electronic
+    documents in computers and it has been used for a long time. It was created as
+    an aid to organize and finding the various files you might store on a computer.
+
+
+    In a file path, backslashes are used to show that one item is below another (in
+    terms of hierarchy).
+
+
+    A hierarchy refers to arranging things according to their rank or status. It refers
+    to arranging items according to their relative importance or characteristics.
+    Storage hierarchy refers to a system where various data storage devices are given
+    a hierarchical importance ranking as far as how they are used. The primary factor
+    influencing a device''s ranking is its response time – how long the device takes
+    to return a requested piece of stored data when the computer requests the data.
+    Faster response times are ranked higher.
+
+
+    In a file path, the item on the left is "above" the one on the right. If we take
+    our earlier example, the file path would be written as:
+
+
+    ```
+
+    C:\Poems\Winter
+
+    ```
+
+
+    To prepare for the next assignment, download an image of your choosing (ensure
+    to save it in your Downloads folder).
+
+
+    Written documents, pictures and videos are examples of different types of file
+    formats. The data in files is organized in a specific way, usually based on how
+    the data will be used by various processes the computer does.
+
+
+    For example, the data in a file that is a written document will be organized in
+    a very different way than the data in a file that is a video.
+
+
+    A common file format is "PDF". This stands for "Portable Document Format". This
+    is a file format developed by the software company Adobe in the 1990s. This file
+    format was developed to ensure consistent display of files regardless of what
+    computer they are being displayed on.
+
+
+    File formats are indicated by their extension. The extension is a code that states
+    the file format is (text, image, video, etc.). Extensions are tacked on the end
+    of the file''s name.
+
+
+    Let''s say you have a file entitled "Contract" and it''s stored as a PDF; the
+    file would be named "Contract.pdf" – .pdf is the extension.
+
+
+    Another common file format and extension is "txt" (short for "text file\). This
+    is a file type that is pure, unformatted (no special design; plain) text. If you''ve
+    ever used Notepad, it saves and runs .txt files.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: "As we covered earlier, your HTML files must always end with the .html extension.\n\
+    \nFor example, if we had a picture named “Kitten” stored in our Downloads folder,\
+    \ this could be the file path: C:\\Users\\user\\Downloads\\Kitten.jpeg\n\nJpeg\
+    \ is a type of image and we must include the extension for the image in our file\
+    \ path. Otherwise, the image will not display.\n\nOpen up your Test.html file\
+    \ and replace the code with this:\n\n```\n<!DOCTYPE HTML>\n<html>\n<body>\n  <img\
+    \ src=\"C:\\Users\\user\\Downloads\\File_Name.Extension\">\n</body>\n</html>\n\
+    ```\n\nSave and run your code.\n\nIf it doesn’t display correctly, check the following:\n\
+    \n+   1. Did you save your image in your Downloads folder? If not, move it to\
+    \ there.\n2. Did you include the image file extension? If not, add it.\n3. Did\
+    \ you enter the correct file path? If not, verify it and add it. ,\n\n> “HELLO,\
+    \ WORLD” IN JAVASCRIPT\n\nNow, there are two ways we can add JavaScript to our\
+    \ HTML code. The first way is to just write the code inside the HTML using the\
+    \ <script> element.\n\n<script> means we are inserting a script, and this is where\
+    \ we write our JavaScript code.,\n\nIn coding, an “object” is something that has\
+    \ state and behavior. For example, a “dog” object could have “awake” as its state\
+    \ and “barking” as its behavior."
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: "A \"method\" is something an object can do. It's named a sequence of events,\
+    \ such as CalculateIncomeTax – not Method_1 or something. That way you can get\
+    \ an idea of what it's supposed to do from reading the name.\n\n“Alert\" is a\
+    \ JavaScript method that displays an alert box (small window with an \"OK\" button).\n\
+    \nCharacters are letters, numbers and symbols – such as those on a keyboard. As\
+    \ we mentioned earlier, strings (sequences of characters) are one of the six types\
+    \ of value. In JavaScript, we can create strings with double quotes (\") or single\
+    \ quotes (''), like \"Mary had a little,\" or \"Its fleece was white as snow.\"\
+    \ In our above code, \"Hello, World!\" is a string. It doesn't matter whether\
+    \ you use double or single quotes; they both perform the same functions.\n\nLet's\
+    \ use JavaScript within our HTML file to display Hello, world! – edit your code\
+    \ as:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <script>\n    alert(\"Hello,\
+    \ World!\");\n  </script>\n</body>\n</html>\n```\n\nSave and execute this code.\
+    \ As a note: When we say “execute” here, we mean Run the code in Google Chrome\
+    \ by clicking 'Run', then clicking 'Launch in Chrome'. You should always save\
+    \ your code before running it.\n\nGood job! We just made a pop-up!\n\nWhen we\
+    \ include our JavaScript code inside of our HTML file, it's called inline JavaScript.\n\
+    \nThere's another way we can use JavaScript with HTML and that's by connecting\
+    \ our code to an external file. Meaning, we have an HTML file with your HTML code\
+    \ in it, and a separate file containing your JavaScript code.\n\nHere's how that\
+    \ would work. First, create a new file and write this code:\n\n```\nalert(\"Hello,\
+    \ World!\");\n```"
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "That is our JavaScript code.\n\nSave this file on your desktop. Save it as\
+    \ \"Test_1\", as a \"JavaScript file\" (i.e.), click File, Save As, write \"Test_1\"\
+    \ as the Name, and then click on JavaScript file under \"Save as type\".\n\nTo\
+    \ link our HTML file with your JavaScript file, we use the script element with\
+    \ the src attribute. Src is short for \"source\" – meaning, we are designating\
+    \ the source (location/name) of the file we are linking to.\n\nNow, go back to\
+    \ your original HTML file and write this code:\n\n```\n<!DOCTYPE html>\n<html>\n\
+    \  <body>\n    <script src=\"Test_1.js\">\n    </script>\n  </body>\n</html>\n\
+    ```\n\nSave and execute the code. We displayed the same alert box in a different\n\
+    \nway!\nKeeping your JavaScript code in a separate file from your HTML code is\
+    \ the recommended way and considered best practice. It keeps your code better\
+    \ organized.\n\nAs a recap, we can execute our JavaScript in two ways:\n\n+  \
+    \ 1) Inline JavaScript (write all your javascript within your HTML file), or\n\
+    \n+   2) Write your JavaScript code in a separate, external file and referencing\
+    \ (referring to it) in your HTML file.\n\nWhile the latter option is the way to\
+    \ go when doing professional software development, we will use both of these methods\
+    \ throughout this book.\n\n# WINDOW.ALERT()\n\nWe can cause an alert window to\
+    \ pop up using the window.alert() method. In JavaScript, statements are the lists\
+    \ of instructions to be executed by the computer that make a program. Statements\
+    \ are separated using a semicolon. It tells the computer, \"Here is the end of\
+    \ this statement\"."
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: "Delete the code in your HTML file and then write, save and execute this code:\n\
+    \n```\n<!DOCTYPE HTML>\n<html>\n<body>\n  <script>\n    window.alert(\"Hello,\
+    \ world!\");\n  </script>\n</body>\n</html>\n```\n\nGood job! You created a popup\
+    \ window with inline JavaScript.\n\n# DOCUMENTWRITE()\n\nYou can also display\
+    \ text in JavaScript using the document.write() method. Delete the code in your\
+    \ HTML file and then write, save and execute this code:\n\n```\n<!DOCTYPE HTML>\n\
+    <html>\n<body>\n  <script>\n    document.write(\"Hello, world!\");\n  </script>\n\
+    </body>\n</html>\n```\n\nAs you can see, there is more than one way to perform\
+    \ actions in programming – problems have multiple solutions!\n\n# END OF CHAPTER\
+    \ CHALLENGE\n\nWrite a program that includes the following:\n\n+   - Create a\
+    \ webpage that has text and an image and successfully run it in the browser.\n\
+    - Use an external JavaScript file (i.e., use <script src=\"\">) and document.write()\
+    \ to display text of your choosing."
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: "# CHAPTER FOURTEEN\nVARIABLES AND STRINGS\n\nA common action in coding is to\
+    \ assign variables. Variables are key in every programming language. We defined\
+    \ the term earlier, and to put the definition simply: it's a value that can be\
+    \ altered, depending on conditions or data passed to the program.\n\nIn mathematics,\
+    \ an operator is a symbol used to carry out a computation (that act of figuring\
+    \ out the amount of something using math). There are several different kinds of\
+    \ operators. Arithmetic operators, such as:\n\n+   - (add)\n- (subtract)\n- (divide)\n\
+    * (multiply)\nare used to perform math operations.\n\n# ASSIGNMENT OPERATOR\n\n\
+    In JavaScript, the assignment operator is \"=\"; it is used to assign value to\
+    \ a variable.\n\nFor example, to say that x = 10 in JavaScript, we are assigning\
+    \ the variable \"X\" the value \"10.\"\n\nLet's assign a variable in JavaScript.\
+    \ Delete your old code and write the following:\n\n```\n<DOCTYPE html>\n<html>\n\
+    <body>\n<script>\n  var X = \"Hello, world!\";\n  document.write(X);\n</script>\n\
+    </body>\n</html>\n```\n\nSave and execute this code. We assigned variable X to\
+    \ the string value \"Hello, world!\"\n\n# CREATING A STRING\n\nThere are some\
+    \ characters and functions that cannot easily be put within quotes when writing\
+    \ strings in JavaScript."
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'For example, what if you wanted to display: Sally said, “I don’t want to go”?
+    You not only have additional quotation marks around Sally’s statement, you also
+    have the single quote (apostrophe) within “don’t”.
+
+
+    The solution to this problem is to add a backslash (\) – this is referred to as
+    escaping’ the character and tells the computer that the character that follows
+    has a special meaning. For example: \'' or \" means that the quote mark(s) following
+    the backslash will not end the string but instead be printed on the screen.
+
+
+    Also, if you want to start a new line, you can use the HTML <br> tab, which is
+    like pressing Enter. This means “line break” literally creates a new line of text
+    – again, like pressing Return/Enter on your keyboard.
+
+
+    Let’s try out. Delete your previous HTML/JavaScript code and write this
+
+
+    ```
+
+    <DOCTYPE HTML>
+
+    <html>
+
+    <body>
+
+    <script>
+
+    document.write(")
+
+    </script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Save and execute your code. We have successfully displayed quotation marks and
+    an apostrophe!
+
+
+    Wait a second... What do you do if you need to display a backslash in your code?
+    Simple
+
+
+    # CONCATENATING A STRING
+
+
+    Concatenate means to connect items together, like links in a chain. It means to
+    take one piece of data and stick it on the end of another piece of data. For example,
+    concatenating the string “dev” and the string “ices” makes the text “devices.”
+
+
+    To concatenate a string in JavaScript, you use the + operator.'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: 'Delete your JavaScript code and write the following:
+
+
+    ```
+
+    <!DOCTYPE HTML>
+
+    <html>
+
+    <body>
+
+    <script>
+
+    document.write("Be who you are and say what you feel.\
+
+    ```
+
+
+    Save and execute your code. Something is not quite right... We are missing a space
+    between "feel," and "because."
+
+
+    To fix this, simply add a space before "because" as follows:
+
+
+    > "because those who mind and those who matter don''t mind."
+
+
+    Save and execute your code. Now it displays correctly!
+
+
+    # MULTIPLE VARIABLES
+
+
+    You can also assign multiple variables in one statement. Write this code:
+
+
+    ```
+
+    <!DOCTYPE HTML>
+
+    <html>
+
+    <body>
+
+    <script>
+
+    var Family = "The Arezzinis", Dad Dad = "Jeremiah",
+
+    Mom = "Hermoine", Daughter = "Penny", Son = "Zorro";
+
+    document.Write(Dad);
+
+    </script>
+
+    </body>
+
+    </html>
+
+    ```
+
+
+    Save and run your code. You assigned multiple variables and then displayed one.
+
+
+    # STR.FONTCOLOR("");
+
+
+    A cool thing we can do with our strings is change the font color using the str.fontcolor
+    method.'
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "Open a Notepad++ document and write this code:\n\n```\n<!DOCTYPE html>\n<html>\n\
+    <body>\n<script>\n  var blues = \"I have the blues\";\n  var blues = blues.fontcolor(\"\
+    blue\");\n  document.write(blues);\n</script>\n</body>\n</html>\n```\n\nSave and\
+    \ execute your code. We created a variable that was a string called \"blues.\"\
+    \ We assigned variable the color blue and then displayed it. See how that works?\n\
+    \n# END OF CHAPTER CHALLENGE\n\nWrite a program that includes the following:\n\
+    \n+   - Assign multiple variables and display one utilizing the document.write()\
+    \ method, and\n- Create a string, concatenate string and change the string's font\
+    \ color."
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: '# CHAPTER FIFTEEN
+
+    EXPRESSIONS AND STATEMENTS
+
+
+    Expressions are numbers, symbols, and operators grouped together that show the
+    amount of something. Basically, an expression is a written math problem.
+
+
+    In computers, an expression is a combination of values that are computed by the
+    computer. There are different ways to write out expressions, depending on which
+    language you are programming in.
+
+
+    For example, Name = "what person types in the name box" could be an expression.
+    Also, x + 5 is an expression.
+
+
+    As a reminder, statements are computer instructions. These are the instructions
+    used by people as they create computer programs. The simplest of these things
+    might be like "print", "delete", "add", "multiply", etc.
+
+
+    For example, the "print" statement tells your computer to print whatever text
+    you typed as part of the command.
+
+
+    In JavaScript, expressions and statements are different things. An expression
+    results in a value, while a statement performs a task – a program is basically
+    a series of statements.
+
+
+    There are basically two types of expressions:
+
+
+    +   1) Ones that have a value (or result in a value), and
+
+    2) Those that assign a value to a variable.
+
+
+    The following JavaScript code is an expression:
+
+
+    ```
+
+    3 + 3
+
+    ```
+
+
+    Now, consider the following:
+
+
+    ```
+
+    Document.write(3 + 3);
+
+    ```
+
+
+    This is a statement. Within this statement, the expression 3 + 3 is contained.'
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "Let's write a statement. Open your HTML file and write this code:\n\n```\n\
+    <!DOCTYPE HTML>\n<html>\n<body>\n<script>\n  document.write(1 + 1);\n</script>\n\
+    </body>\n</html>\n```\n\nSave and execute your code. You just performed math with\
+    \ JavaScript and displayed the result!\n\n# END OF CHAPTER CHALLENGE\n\nComplete\
+    \ the following:\n\n+   - Write your own statement and ensure it displays a result."
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: '# CHAPTER SIXTEEN
+
+    FUNCTIONS
+
+
+    A JavaScript function is a repeatable block of code that executes certain actions
+    and performs tasks. You execute a function by calling it. This is also called
+    “invoking” the function.
+
+
+    “Invoke” literally means to request or ask for something. In coding, it causes
+    something to be carried out (performed).
+
+
+    In JavaScript, a keyword identifies actions to be performed. There is a function
+    keyword.
+
+
+    Every spoken language has a general set of rules for how words and sentences should
+    be structured. These rules are known as the syntax of that particular language.
+    In programming languages, syntax serves the same purpose. Syntax is the rules
+    you must follow when talking to a computer and telling it what to do. There are
+    many languages you can use to program a computer. Each language has its own syntax.
+    Failing to use the syntax of a particular language correctly can mean whatever
+    you are designing will not work at all.
+
+
+    Syntax is the arrangement of words and phrases to create well-formed sentences
+    in a language. In computer science, it is the language that allows the user to
+    write out the program and the rules about how to write code properly.
+
+
+    The syntax for writing a JavaScript function is: the keyword, then the name, then
+    parentheses.
+
+
+    Functions are valuable because of code reuse — you can invoke functions over and
+    over. Since functions in JavaScript contain properties (state) and methods (behavior),
+    they are basically objects.
+
+
+    Functions are so useful so you don’t have to keep retyping code; you can simply
+    invoke the function whenever needed.
+
+
+    We will write a function shortly, but first...
+
+
+    # <p> ELEMENT
+
+
+    The <p> element is used to create paragraphs.'
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\n<!DOCTYPE HTML>\n<html>\n<body>\n  <p>This is a paragraph!</p>\n</body>\n\
+    </html>\n```\n\nSave and execute your code. Good job! You created a paragraph.\n\
+    \n# Ids\n\n\"Id\" is short for \"identification.\" One of the most popular attributes\
+    \ is the id attribute.\n\nThe id attribute specifies a unique name for an HTML\
+    \ element.\n\nFor example, you can assign a specific <p> element the id (name)\
+    \ \"paragraph\" as follows:\n\n```\n<p id=\"paragraph\">This is some text.</p>\n\
+    ```\n\nNow that you have that id, you can reference (bring up; refer to it) in\
+    \ your code later.\n\nYou will learn exactly how to do this and why it's useful\
+    \ shortly.\n\nIds are specific and you can only utilize one id per element. For\
+    \ example, you cannot assign the same <h1> element two different ids. As a note,\
+    \ the <h1>-<h6> elements create headers (section heads) in HTML. <h1> is the largest\
+    \ font size, and it gets smaller with each higher number (<h2>, <h3>, etc.). Also,\
+    \ you cannot use the same id for two elements.\n\nFor example, this would be incorrect:\n\
+    \n```\n<h2> id=\"heading\"></h2>\n<h3> id=\"heading\"></h3>\n```\n\nIds must be\
+    \ specific to one element and cannot contain any spaces."
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: "The document.getElementById method returns an element.\n\nThe element has an\
+    \ id attribute with a specific value assigned to it. It is used mainly to control\
+    \ or get information from an element within your code. If it can't find the element\
+    \ with the specified value, it will return \"null\". Null means \"having a value\
+    \ of zero; no value.\"\n\nYou'll understand it better once we put it into action!\n\
+    \nUsing the <button> element, we can create a button like this:\n\n![](img/33a81fac26246d29975692e5ecda6e53_67_0.png)\n\
+    \nNow let's create a function and use the document.getElementById method. First,\
+    \ open up your HTML code in Notepad++ (Test.html) and write this code:\n\n```\n\
+    <DOCTYPE html>\n<html>\n<body>\n  <button onclick=\"My_First_Function()\">\n \
+    \   Click me!\n  </button>\n  <p id=\"Irish\"></p>\n  <script>\nfunction My_First_Function()\
+    \ {\n  var String = \"Kiss me, I'm Irish!\";\n  var result = String.textcolor(\"\
+    green\");\n  document.getElementById(\"Irish\").innerHTML = result;\n}\n</script>\n\
+    </body>\n</html>\n```\n\nSave and execute your code. You created a function and\
+    \ a functional one!\n\nRead through your code and try to figure out what we just\
+    \ did.\n\nEverything inside the curly brackets { } is our function.\n\nWe used\
+    \ the ID attribute and assigned the button element value \"Irish.\"\n\nThen we\
+    \ returned the button element by calling the \"Irish\" value that we assigned\
+    \ earlier (when writing the ID attribute)."
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: "# + OPERATOR\n\nYou can also use the += operator to concatenate string. Write\
+    \ this code:\n\n```\n<!DOCTYPE HTML>\n<html>\n<body>\n  <p id=\"Concatenate\"\
+    ></p>\n  <script>\n    Sentence = \"I am learning ;\"\n    Sentence += \"a lot\
+    \ from this book!\";\n    document.getElementById('...').innerHTML = Sentence;\n\
+    \  </script>\n</body>\n</html>\n```\n\nSave and execute your code. Well done!You\
+    \ concatenated a string using the += operator.\n\n# END OF CHAPTER CHALLENGE\n\
+    \nWrite a program that includes the following:\n\n+   - A function, and\n- The\
+    \ document.getElementById() method."
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: "# CHAPTER SEVENTEEN\nNUMBERS\n\nFor simplicity, we are going to keep our HTML\
+    \ and JavaScript files separate in this chapter. So, first, open up your HTML\
+    \ file in Notepad++ (Test.html) and ensure the code states the following:\n\n\
+    ```\n<!DOCTYPE html>\n<html>\n<body>\n  <p id=\"Math\"></p>\n  <script src=\"\
+    Test_1.js\"></script>\n</body>\n</html>\n```\n\nSave your code. For the next few\
+    \ steps, we will refer to this file as \"HTML code.\"\n\nBinary is a form of counting\
+    \ and performing math that uses only two numbers. The word \"binary\" comes from\
+    \ the Latin word binarius, meaning \"two together\" or a \"pair.\" All quantities\
+    \ in binary are represented by numbers that use a 1 and a 0. In fact, any number\
+    \ can be written in binary.\n\nThe ones and zeros in a computer are called bits\
+    \ (short for \"binary digits\"). Bits are held in the computer by using very small\
+    \ devices, each of which can change to represent either a 1 or a 0.\n\nAs we discussed\
+    \ earlier, another JavaScript value type is \"numbers.\" To store numbers, JavaScript\
+    \ uses 64 bits. 64 bits allows for 18,000,000,000,000,000 different numbers.\n\
+    \nArithmetic is the most common use of numbers in JavaScript. We already defined\
+    \ \"operator,\" but as a reminder, an operator is a symbol used to carry out a\
+    \ computation. Arithmetic operators include +, -, /, and *. In JavaScript, we\
+    \ can use these to perform arithmetic.\n\nNow, open up your JavaScript file (Test_1.js)\
+    \ - referred to as your \"JavaScript code\" for the next few steps and write this\
+    \ code:\n\n```\nvar Simple_Math = 2 + 2;\ndocument.getElementById(\"Math\").innerHTML\
+    \ = \"Result is \" + Simple_Math;\n```"
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: "Save your code. Now, if you run your JavaScript file, it won't work! That's\
+    \ because you need to run your HTML file that is linked to the JavaScript code.\
+    \ Execute your HTML file.\n\n# SUBTRACTION\n\nLet's do some subtraction - edit\
+    \ your JavaScript code as follows:\n\n```\nvar Simple_Math = 5 - 2;\ndocument.getElementById(\"\
+    Math\").innerHTML = \"5 - 2\" + Simple_Math;\n```\n\nSave your JavaScript code\
+    \ and execute the HTML file.\n\n# MULTIPLICATION\n\nTo multiply, edit your JavaScript\
+    \ code as follows:\n\n```\nvar Simple_Math = 6 * 6;\ndocument.getElementById(\"\
+    Math\").innerHTML = \"6 * 6\" + Simple_Math;\n```\n\nSave your JavaScript code\
+    \ and execute the HTML file.\n\n# DIVISION\n\nWe can divide numbers - edit your\
+    \ JavaScript code as follows:\n\n```\nvar Simple_Math = 48 / 6;\ndocument.getElementById(\"\
+    Math\").innerHTML = \"48 / 6\" + Simple_Math;\n```\n\nSave your JavaScript code\
+    \ and execute the HTML file.\n\n# MULTIPLE ARITHMETIC OPERATORS\n\nLet's say you\
+    \ would like to multiply, subtract, add and divide numbers all at once. Edit your\
+    \ JavaScript code as follows (this is one way to do it):\n\n```\nvar Simple_Math\
+    \ = (1 + 2) * 10 / 2 - 5;\ndocument.getElementById(\"Math\").innerHTML = \"(1\
+    \ + 2) multiplied by 10, divided by 2 \" + \n\"divided in half and then subtracted\
+    \ by 5 equals \" + Simple_Math;\n```\n\nSave your JavaScript code and execute\
+    \ the HTML file."
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: '# MODULUS OPERATION
+
+
+    The modulus operation finds the remainder after dividing two numbers. Remember
+    back in math class? In division, the remainder is the amount left over dividing
+    two numbers. For example: 5 ÷ 2 would have a remainder of one.
+
+
+    A couple other math terms are "dividend" (the number being divided) and "divisor"
+    (the amount the number is divided by). In our earlier example, 5 is the dividend
+    and 2 is the divisor.
+
+
+    "Modulus" comes from the Latin word modulus, meaning "measure."
+
+
+    The modulus is the remainder after the dividend has been divided by the divisor.
+
+
+    In JavaScript, the % symbol represents the modulus operator – which could be the
+    remainder operator. Let''s put this to use. Open up your JavaScript code and write
+    the following:
+
+
+    ```
+
+    var Simple Math = 25 % 6;
+
+    document.getElementById("Math").innerHTML="When you divide 25 by 6 you have a
+    remainder of " + Simple Math;
+
+    ```
+
+
+    Save your JavaScript code and execute the HTML file.
+
+
+    # UNARY AND BINARY OPERATORS
+
+
+    “Unary” means having, made of, or acting on one component, item or element. “operand”
+    is the number that is being dealt with in a mathematical operation. It is not
+    the action being taken with the number – it is the number itself.
+
+
+    For example, in 5+6, the operands are 5 and 6. The “+\ is the operator.
+
+
+    A “binary operator” is an operation that only contains a single operand. An example
+    of this would be + 5.
+
+
+    A “binary operator” is an operation that requires two operands before the operator
+    and after one. An example of this would be 5 + 5.
+
+
+    There is a unary operator called a “negation operator.” Negate literally means
+    to deny or contradict something. The word “negation” in “operator” means “negative;
+    positive."
+
+
+    This returns the opposite or negative form of something.'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: "Let's write this code out in a new text document:\n\n```\n<DOCTYPE html>\n\
+    <html>\n<body>\n  <p id=\"Negation\"></p>\n  <script>\n    var x = 10;\n    document.getElementById(\"\
+    Negation\").innerHTML = -x;\n  </script>\n</body>\n</html>\n```\n\nSave and execute\
+    \ your code. Note: the syntax for the negation operator \"-x.\"\n\n# INCREMENT\
+    \ OPERATOR\n\nAn increment is an addition or increase to something. \"To increment\"\
+    \ means to increase. The increment operator in JavaScript is written as ++ and\
+    \ counts one step up.\n\nWrite this code:\n\n```\n<DOCTYPE html>\n<html>\n<body>\n\
+    \  <script>\n    var X = 5;\n    X++;\n    document.write(X);\n  </script>\n</body>\n\
+    </html>\n```\n\nSave and execute your code – it incremented from 5 to 6.\n\nThe\
+    \ opposite of this is the decrement operator. Decrement basically to count down."
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: "Write this code:\n\n```\n<!DOCTYPE html>\n<html>\n  <script>\n    var X = 5.25;\n\
+    \    X--;\n    document.write(X);\n  </script>\n</body>\n</html>\n```\n\nThis\
+    \ should show up as \"4.25.\"\n\n# MATH.RANDOM\n\nTo return a random number between\
+    \ 0 and 1, write this code:\n\n```\n<!DOCTYPE html>\n<html>\n  <body>\n    <script>\n\
+    \      window.alert(Math.random());\n    </script>\n</body>\n</html>\n```\n\n\
+    Save and run your code. Good job!\n\nTo have a random number displayed between\
+    \ ____ and ____ (such as 0 and 100), write this code:\n\n```\n<!DOCTYPE html>\n\
+    <html>\n  <body>\n    <script>\n      window.alert(Math.random() * 100);\n   \
+    \ </script>\n</body>\n</html>\n```\n\nSave and run your code. Excellent!"
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: '# END OF CHAPTER CHALLENGE
+
+
+    Write a program that includes the following:
+
+
+    +   * A binary operator,
+
+    * A unary operator,
+
+    * The modulus operator,
+
+    * Math.random(), and
+
+    * The increment or decrement operator.
+
+
+    NOTE: Ensure that each of the above displays (prints) the result.'
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: '# CHAPTER EIGHTEEN
+
+    JAVASCRIPT OBJECTS
+
+
+    We talked about objects earlier. Objects are items that can be represented in
+    a computer program. They are often meant to represent real-world things.
+
+
+    You are surrounded by objects – your dog, the TV, etc. Objects have state
+
+    and behavior. The state of an object would be its size, color, etc. The behavior
+    of an
+
+    object would be what the object does – the actions it takes.
+
+
+    A race car could be an object. Characteristics that it could be:
+
+    engine type, engine horsepower, wheel size, gas tank capacity, etc. Characteristics
+
+    describe its behavior could be: accelerate, decelerate, turn right, turn left,
+    etc.
+
+    In computers, objects are parts of computer programs and share a similarity to
+
+    real objects: they have a state and behavior.
+
+
+    Let’s look at a further example: an application might work with a
+
+    “Customer" object. Again, the state of an object would be the characteristics
+    and
+
+    attributes of the object. The behavior would be what the object could do. In our
+
+    example, the “Customer" object could have states like “active" or "deleted."
+
+    have behavior like "Upgrade Rewards Level" or "Add to Family Account."
+
+
+    Objects are one of the first subjects you think about designing a
+
+    program. An object is something on a computer that you can click on, interact
+
+    with, move around, etc. It can also be something behind the scenes that is made
+    up
+
+    of data and procedures used to manipulate data. An object is what actually runs
+    in the
+
+    computer.
+
+
+    As another example, let’s say you wanted to make two different types of cars
+
+    a a computer; each car would be an object. Each object (car) would have its own
+
+    size, shape, color, speed, distance it could travel without needing more gas,
+    etc.
+
+
+    # DICTIONARIES
+
+
+    In computer programming, dictionaries are a specialized type of list. The
+
+    first item is the key, and the second item is the value. Together, they are a
+
+    "key-value pair."
+
+
+    Key-value pair is abbreviated "KVP." A KVP is a set of two linked data items
+
+    that consists of: a key (a unique identifier for some item of data), and the value
+    (the
+
+    data that is identified by the key). The key is the unique name, and the value
+    is the
+
+    content.
+
+
+    Collections of KVPs (i.e., dictionaries) are often used in computer programs.'
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: 'Below is an example of a collection of KVPs that might be used in a name of
+    a computer program for a school. Here, the KEY is used to store the name of a
+    course at the school, and the VALUE is the description of the course – this is
+    a dictionary.
+
+
+    | KEY | VALUE |
+
+    | SOUND | Boom! |
+
+    | SEASON | Summer |
+
+    | WEATHER | Stormy |
+
+    | DAY | Saturday |
+
+    | MONTH | August |
+
+
+    Note that in this list, you could not have a second Key-Value Pair that used the
+    Key "SEASON" or "DAY" because the keys in a given collection of KVPs must be unique.
+
+
+    A "dictionary" is "a key-value pair collection."
+
+
+    In a dictionary, multiple values can be assigned to one key. This can be useful
+    because you can look up various values by their key. In the below example, each
+    key has three values assigned to it:
+
+
+    | KEY | VALUES |
+
+    | 0 | Eddard Stark | 35 years old | Male |
+
+    | 1 | Cersei Lannister | 32 years old | Female |
+
+    | 2 | Jon Snow | 18 years old | Male |
+
+    | 3 | Daenerys Targaryen | 20 years old | Female |'
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: "To create a dictionary in JavaScript, write this code in your HTML file\n(Test.html):\n\
+    \n```\n<DOCTYPE html>\n<html>\n<body>\n  <p id=\"Display\"></p>\n  <script>\n\
+    \    var Animal = {\n      Species: \"Dog\",\n      Color: \"Black\",\n      Breed:\
+    \ \"Labrador\",\n      Age: 5,\n      Sound: \"Bark\"\n    };\n    document.getElementById(\"\
+    Display\").innerHTML = Animal.Sound;\n  </script>\n</body>\n</html>\n```\n\nSave\
+    \ and execute your code. The output is: Bark! because this was associated with\
+    \ the key \"Sound\".\n\nNOTE: Due to the fact that 5 is the value type \"number\"\
+    , we don't have to place it within quotation marks.\n\n# ASSIGNING MULTIPLE VALUES\n\
+    \nWe can assign multiple values to the keys in our dictionary. Edit your previous\
+    \ code to the following:\n\n```\n<DOCTYPE HTML>\n<html>\n<body>\n  <p id=\"Display\"\
+    ></p>\n  <script>\n    var Food = {\n      Vegetables: [\"broccoli\", \"carrot\"\
+    , \"lettuce\"],\n\\      Meat: [\"hotdog\", \"steak\", \"hamburger\"],\n\\   \
+    \   Fruit: [\"strawberry\", \"orange\", \"apple\"],\n\\      Quantity: [10, 21,\
+    \ 182]\n    };\n    document.getElementById(\"Display\").innerHTML = Food.Fruit;\n\
+    \  </script>\n</body>\n</html>\n```"
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: "# OPERATORS AS WORDS\n\nMost operators are written as symbols: +, -, /, etc.\
+    \ But some are words. An example of this is the delete operator.\n\nEdit your\
+    \ previous code to the following:\n\n```\n<!DOCTYPE HTML>\n<html>\n<body>\n  <p\
+    \ id=\"Delete\"></p>\n  <script>\n    var Animal = {\n      Species: \"Dog\",\n\
+    \      Color: \"Black\",\n      Breed: \"Labrador\",\n      Age: 5,\n      Sound:\
+    \ \"Bark!\"\n    };\n    document.getElementById(\"Delete\").innerHTML = Animal.Sound;\n\
+    \  </script>\n</body>\n</html>\n```\n\nSave and execute your code. We deleted\
+    \ the value associated with the key Animal, so \"undefined\" is returned because\
+    \ the value is no longer defined in our dictionary.\n\n# TYPEOF OPERATOR\n\nThis\
+    \ operator gives the value type of a variable. Write this code:\n\n```\n<!DOCTYPE\
+    \ html>\n<html>\n<body>\n  <script>\n    document.write(typeof \"This is a string\"\
+    );\n  </script>\n</body>\n</html>\n```\n\nSave and execute your code. It returned\
+    \ \"string\"."
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: 'Now change your typeof operator to this:
+
+
+    ```
+
+    document.write(typeof 247365);
+
+    ```
+
+
+    Save and execute your code. It returned “number” – another JavaScript value.
+
+
+    # END OF CHAPTER CHALLENGE
+
+
+    Write a program that includes the following:
+
+
+    +   * A dictionary.
+
+    * Delete a KVP pair from your dictionary using the delete operator.
+
+    * Use the typeof operator.
+
+    * Try to create a dictionary with two identical keys, then attempt to display
+    the keys using the document.getElementById() method and see what happens.'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# CHAPTER NINETEEN
+
+    FLOATING POINT
+
+
+    It''s time to get mathematical!
+
+
+    Factors are numbers that can multiply together to get another number. For example,
+    4 and 5 are factors of 20 because $4 \times 5 = 20$
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_80_0.png)
+
+
+    Superscripts are smaller characters typically displayed toward the upper right
+    of another number - like this: $4^{12}$
+
+
+    Superscripts usually indicate "power." Power refers to how many times a number
+    is multiplied by itself. For example, $10^4$ means 10 to the fourth power—which
+    is 10,000 (10 multiplied by 10 multiplied by 10 multiplied by 10).
+
+
+    A notation is a symbol or symbols used to represent numbers or amounts—such as
+    an $E$ placed at the end of a number. This notation means "10 to a given exponent."
+    An "exponent" is the power to which a number is multiplied. In the $10^4$ example
+    given above, 4 is the exponent.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_80_1.png)
+
+
+    A floating point is a specific way of representing large numbers. Instead of writing
+    out the entire number, you can write the first part of it and then a factor to
+    multiply it by. This makes it so that by performing the multiplication, you get
+    essentially the same number you would have by writing it out in full. When you
+    do this, you move the decimal point in the number; hence the name "floating point."'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "For example, take the number three thousand, four hundred twenty-five. Written\
+    \ normally it would be: 3425 – written in floating point notation, it could be:\
+    \ $3.425 \\times 10^3$. Since $10^3$ is 1000, this means $3.425 \\times 1000 =\
+    \ 3425$.\n\nA \"float\" is a type of data used by computers. The \"float\" type\
+    \ is used to store numbers with a very high degree of accuracy. It is primarily\
+    \ used for mathematical purposes.\n\nLet's say we want a shorter way to write\
+    \ 100,000. We could write 10E 4.\n\n10E 4 means 10 X $10^4$ (10 multiplied by\
+    \ four times).\n\nIn JavaScript, all numbers are floating point numbers, and the\
+    \ limit of floating point numbers is $1.797693134862315\\times 10^{308}$ (meaning\
+    \ JavaScript can handle a much larger floating point number). Any number that\
+    \ is larger than $1.797693134862315\\times 10^{308}$ is considered \"infinity.\"\
+    \ As a note, this is a massive number far beyond the capability of most calculators\
+    \ and would take an excessive amount of lines to display.\n\n# OTHER NUMBERS\n\
+    \nIn JavaScript, there are three unique values that are considered numbers but\
+    \ actually do not act in the same way. They are:\n\n+   - NaN (short for \"Not\
+    \ a Number\")\n- Infinity (positive infinity)\n- -Infinity (negative infinity)\n\
+    \nThe best way to understand these is to put them into action. Here's an example:\
+    \ in a *new* Notepad++ document, write this code:\n\n```\n<!DOCTYPE html>\n<html>\n\
+    <body>\n  <p id=\"Not_a_Number\"></p>\n  <script>\n    document.getElementById(\"\
+    Not_a_Number\").innerHTML = 0/0;\n  </script>\n</body>\n</html>\n```\n\nSave your\
+    \ file as an .html document with a name of your choosing. Execute your code. The\
+    \ result is NaN because you can't divide 0 by 0."
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "We can check whether or not something is a number by using the NaN() function.\
+    \ Edit your code to the following:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n \
+    \ <p id=\"Not_a_Number\"></p>\n  <script>\n    document.getElementById('Not_a_Number').innerHTML\
+    \ = NaN('Hello');\n  </script>\n</body>\n</html>\n```\n\nSave and run your code.\
+    \ As you can see, the result is \"true\" because \"Hello World\" is not a number.\
+    \ Let's change our code to the following:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n\
+    \  <p id=\"Not_a_Number\"></p>\n  <script>\n    document.getElementById('Not_a_Number').innerHTML\
+    \ = NaN('007');\n  </script>\n</body>\n</html>\n```\n\nNote: the only difference\
+    \ was that we changed \"Hello World\" to \"007.\\ Save and run your code. Now\
+    \ it is false because 007 is a number.\n\nNow, delete your code and write the\
+    \ following:\n\n```\n<!DOCTYPE HTML>\n<html>\n<body>\n  <p id=\"Infinity\"></p>\n\
+    \  <script>\n    document.getElementById('Infinity').innerHTML = 1.797693148623157E+309;\n\
+    \  </script>\n</body>\n</html>\n```\n\nSave and execute your code. You can see\
+    \ the result \"infinity.\" This is because we entered a number larger than 1.797693148623157E+308."
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "To see -Infinity, simply change your code to a number lower than -1.7976931348623157E+308,\
+    \ such as the number below:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <p id=\"\
+    Infinity\"></p>\n  <script>\n    document.getElementById(\"Infinity\").innerHTML\
+    \ = -1.7976931348623157E+309;\n  </script>\n</body>\n</html>\n```\n\n# END OF\
+    \ CHAPTER CHALLENGE\n\nCreate your own program that returns the following:\n\n\
+    +   - Infinity,\n- -Infinity, and\n- NaN."
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# CHAPTER TWENTY
+
+    BOOLE LOGIC
+
+
+    “Logic” refers to actions, behavior and thinking that makes sense. When speaking
+    about computers, logic is the rules that form the foundation for a computer in
+    performing certain tasks. Computer logic is the guidelines for the computer uses
+    when making decisions.
+
+
+    Logical operators like "and," "or," and "not" are used to evaluate whether expression
+    is true or false.
+
+
+    George Bool was an English mathematician that developed Boolean logic. "Boolean
+    logic" is a form of logic in which the only possible results of a decision are
+    "true" and "false". There aren''t any vague or "almost" answers to a calculation
+    or decision – black or white, no gray.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_84_0.png)
+
+
+    An example of Boolean logic would be answering questions with only "yes" or "no".
+
+
+    Boolean logic is especially important for the construction and operation of digital
+    computers because it is relatively easy to create a machine where the result of
+    an operation is either "true" or "false".
+
+
+    This is done by comparing two or more items – items that can only be "true" or
+    "false".
+
+
+    Some common examples of such Boolean comparisons are "AND" and "OR".
+
+
+    With the Boolean comparison called "AND", the comparison is true only if all of
+    the involved comparisons are true.
+
+
+    Let''s look at some examples to show how this works:'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: 'In the following AND comparison, the result is true:
+
+
+    5 is more than 3 AND 10 is more than 5
+
+
+    Let''s break it down.
+
+
+    There are three comparisons happening here:
+
+
+    +   1. Comparing 5 and 3 to see if 5 is larger than 3 (is 5 larger than 3?)
+
+
+    +   2. Comparing 10 and 5 to see if 10 is larger than 5 (is 10 larger than 5)?
+
+
+    +   3. Comparing the results of those two comparisons, using the Boolean comparison
+    "AND" (are both comparisons true?)
+
+
+    This is the overall comparison.
+
+
+    It is true that 5 is greater than 3, so the first comparison is true.
+
+
+    It is also true that 10 is greater than 5 – so the second comparison is true as
+    well.
+
+
+    A Boolean AND comparison is true if the other comparisons are all true – so in
+    this example, the overall comparison is true, since the first comparison is true
+    and the second comparison is true.
+
+
+    In this next example, the result is false (not true):
+
+
+    5 is more than 7 AND 10 is more than 5
+
+
+    Even though 10 is more than 5, 5 is not more than 7 – so the overall comparison
+    is not true.
+
+
+    A "condition" is an item that must be before something else occurs. In the AND
+    comparison above, these are the two conditions checked for:
+
+
+    +   1. 5 is more than 7
+
+
+    +   2. 10 is more than 5
+
+
+    They’re conditions because the outcome is conditional upon (dependant on) these
+    two comparisons.'
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: 'A Boolean OR comparison checks for whether one or both conditions are true.
+    Here is an example:
+
+
+    4 is less than 9 OR 8 is less than 7
+
+
+    The result would be true because at least one of the comparisons is true (4 is
+    a smaller number 9).
+
+
+    In the following example, the result would be false since neither is true:
+
+
+    8 is less than 4 OR 9 is less than 3
+
+
+    And in this example, the result would be true because one or both (in this both)
+    are true:
+
+
+    7 is less than 8 OR 2 is less than 5
+
+
+    As a reminder, in writing instructions for a computer, we would use the greater
+    and lesser symbols (> and < respectively). For example: 7 > 3 means "seven is
+    greater than three", and 4 < 9 means "four is less than nine".
+
+
+    So, for example, instead of 10 is greater than 2, we would write:
+
+
+    ```
+
+    10 > 2
+
+    ```
+
+
+    And, again, if we wanted to say "greater than or equal to", we could use the symbol
+    >=.
+
+
+    For example:
+
+
+    ```
+
+    10 >= 8
+
+    ```
+
+
+    This would be true.
+
+
+    Like virtually all other programming languages, the Boolean values in JavaScript
+    are true and false.'
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "Delete the last code you wrote and write the following:\n\n```\n<!DOCTYPE html>\n\
+    <html>\n<body>\n  <script>\n    document.write(10 > 5);\n  </script>\n</body>\n\
+    </html>\n```\n\nSave and execute this code. You should see \"true\" displayed.\
+    \ That is because it is true that 10 is larger than 5. If we change our code to\
+    \ the following, we will see \"false\":\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n\
+    \  <script>\n    document.write(10 < 5);\n  </script>\n</body>\n</html>\n```\n\
+    \nThis is Boolean logic.\n\n# CONSOLE.LOG METHOD\n\nThe console.log method can\
+    \ be used to display data in the console within the browser. The console is a\
+    \ tool you can use within your browser to debug code.\n\nYou can access the console\
+    \ in a few ways, including:\n\n+   - Pressing the F12 key and then clicking on\
+    \ \"Console,\" or\n\n+   - Clicking the three upright dots in the top-right of\
+    \ the browser, selecting \"More tools,\" clicking \"Developer tools,\" and then\
+    \ selecting \"Console.\""
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "Replace the code you last wrote with this:\n\n```\n<!DOCTYPE html>\n<html>\n\
+    \  <script>\n    console.log(2 + 2);\n  </script>\n</body>\n</html>\n```\n\nSave\
+    \ and run your code. Don't see anything? That's because it's displayed in the\
+    \ console. Open the console, and you should see “4”!\n\n# TYPE COERCION\n\nIn\
+    \ English, “coercion” means to force or persuade someone, typically by use of\
+    \ threats or punishment. “Type coercion” in JavaScript is when the operands of\
+    \ an operator are different data types (such as “string” and “number” – like:\
+    \ “five” + 5).\n\nThe type coercion converts the value to the type it chooses.\
+    \ Let's try this code:\n\n```\n<!DOCTYPE html>\n<html>\n  <script>\n    document.write(\"\
+    10\" + 5);\n  </script>\n</body>\n</html>\n```\n\nMany other programming languages\
+    \ would return an error if we were to include two different data types within\
+    \ an operation.\n\n# END OF CHAPTER CHALLENGE\n\nWrite a program that includes\
+    \ the following:\n\n+   - Boolean logic that returns “true,”\n- Type coercion,\
+    \ and\n- Display “false” in the console.log using Boolean logic."
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: '# CHAPTER TWENTY ONE
+
+    COMPARISON OPERATORS
+
+
+    In JavaScript, we can utilize double and triple equal signs.
+
+
+    == (double equal sign) is a symbol used to show that a comparison should be made.
+    Specifically, this "==" symbol is an instruction to check whether the data on
+    the left side of the symbol is equal to the data on the right side. The answer
+    to this comparison is an answer of "true" or "false".
+
+
+    When the "==" symbol is used to check for equality, usually it is used like this:
+    [first item to compare] == [second item to compare]
+
+
+    For example: (10 + 5) == 15
+
+
+    In this example, we are asking the computer to check whether the result of adding
+    5 and 10 is equal to 15.
+
+
+    When the "==" symbol is used in this manner, we are asking the computer to give
+    a response after checking for equality. Usually, this is result in a "true" or
+    "false" manner. Here, the response would be "true", since (10 + 5) is equal to
+    15.
+
+
+    Another example: (10 + 6) == 15
+
+
+    Here, the computer respond with "false", since (10 + 6) is not equal to 15.
+
+
+    === (triple equal sign) is used to show that a comparison should be made. Specifically,
+    this "==" symbol is an instruction to check whether the data on the left side
+    of the symbol is equal to the data on the right side, and that it is the same
+    type of data (data type) as that on the right. The answer to this comparison is
+    an answer of "true" or "false".
+
+
+    For example, let''s say you want to check whether two birth dates are equal. You
+    have two pieces of data in the computer that represent these two birth dates:
+
+
+    +   1. DateOfBirth1 is of type "Date", and the value of the data is "1/1/1970."
+
+    2. DateOfBirth2 is of type "Date", and the value of the data is "1/1/1970."
+
+
+    You would use the "===" like this:
+
+
+    ```
+
+    DateOfBirth1 === DateOfBirth2
+
+    ```
+
+
+    This tells the computer to check whether the two pieces of data are equal in both
+    VALUE and TYPE. Since they are in this case, the computer responds with "true".'
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "Like all code, it's understood by writing it! Now, let's use a separate HTML\
+    \ document and JavaScript document again. First, open up an HTML file (if you\
+    \ don't have one, just make a new one) and write the following code:\n\n```\n\
+    <!DOCTYPE html>\n<body>\n  <script src=\"Test_1.js\">\n  </script>\n</body>\n\
+    </html>\n```\n\nEnsure this file is saved as HTML.html. Then open up your JavaScript\
+    \ code file (entitled Test_1.js - if you don't have this file, create a new file)\
+    \ and type the following code:\n\n```\ndocument.write(10 == 10);\n```\n\nAgain,\
+    \ ensure this is saved as Test_1.js. Then run your HTML.html code. It should return\
+    \ “true” (because 10 is equal to 10). To make it return “false,” simply change\
+    \ a number in your JavaScript, such as:\n\n```\ndocument.write(5 == 10);\n```\n\
+    \nNow, let's use ===. Write the following in your JavaScript code:\n\n```\nX =\
+    \ 0\nY = 1\ndocument.write(X === Y);\n```\n\nSave it and run the HTML code. This\
+    \ returns “true” because they are both variables and both have the value 10. You\
+    \ can make this false by changing it to:\n\n```\nX = 1\nY = 1\ndocument.write(X\
+    \ === Y);\n```\n\nSave it and then run the HTML code – it returns “false.” Even\
+    \ though are both variables, the values are different. We can also return false\
+    \ by writing the following JavaScript code:\n\n```\nX = \"Ten\"\ndocument.write(X\
+    \ === 10);\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: 'Write a program that includes the following:
+
+
+    +   - Double equal signs (==) and type coercion (i.e., use a variable and a value)
+    and get a "true" result displayed.
+
+    - Triple equal signs (==) to produce "true" and "false."'
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "# CHAPTER TWENTY TWO\nLOGICAL OPERATORS\n\nIn JavaScript, there are three Boolean\
+    \ logical operators:\n\n+   1. AND written: &&\n2. OR written: ||\n3. NOT written:\
+    \ !\n\nThe && operator determines the logic between values and variables, such\
+    \ as verifying that ____ and ____ are true (both must be true to return “true.”).\
+    \ If one or both is false, the code will return (“false”).\n\nWrite this code:\n\
+    \n```\n<!DOCTYPE html>\n<html>\n<body>\n  <script>\n    document.write(5 > 2 &&\
+    \ 10 > 4);\n  </script>\n</body>\n</html>\n```\n\nOur code returns “true” because\
+    \ five is greater than two, and ten is greater than four. We can make our code\
+    \ return “false” by changing one or both of the comparisons, such as:\n\n```\n\
+    <!DOCTYPE html>\n<html>\n<body>\n  <script>\n    document.write(5 > 10 && 10 >\
+    \ 4);\n  </script>\n</body>\n</html>\n```\n\nWrite, save and execute this code\
+    \ and it will return false."
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "The || (or) operator means what it sounds like and is best described through\n\
+    utilization. Write this code:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <script>\n\
+    \    document.write(5 > 10 || 10 > 4);\n  </script>\n</body>\n</html>\n```\n\n\
+    Save and execute your code. It returned \"true\" because, while 5 is not greater\n\
+    10, 10 is greater than 4. We can make it return \"false\" with the following code\n\
+    since neither is true:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <script>\n \
+    \   document.write(5 > 10 || 10 > 20);\n  </script>\n</body>\n</html>\n```\n\n\
+    The ! (not) operator checks whether or not something is true. If __ is not\npresent,\
+    \ \"true\" will be returned.\n\nWrite this code:\n\n```\n<!DOCTYPE html>\n<html>\n\
+    <body>\n  <p id=\"Not\"></p>\n  <script>\n    document.getElementById(\"Not\"\
+    ).innerHTML = ! (5 > 10);\n  </script>\n</body>\n</html>\n```\n\nSave and run\
+    \ your code. The result is \"true\" because 5 is not greater than 10."
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "And of course, if you want a “double negative,” write this code:\n\n```\n<!DOCTYPE\
+    \ html>\n<html>\n<body>\n  <p id=\"Not\"></p>\n  <script>\n    document.getElementById(\"\
+    Not\").innerHTML = !!(20 > 10);\n  </script>\n</body>\n</html>\n```\n\nSave and\
+    \ execute your code. We are saying that 20 is not not greater than 10."
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "# CHAPTER TWENTY THREE\nTERNARY OPERATORS\n\nTernary means “made up of three\
+    \ parts.” A ternary operator operates on three values. It can be used to assign\
+    \ a value to a variable, based on a condition. This is also referred to as a conditional\
+    \ operator in that it assigns a value to a variable based on a condition.\n\n\
+    The syntax of this is:\n\nName_of_variable = (condition) ? Value_1:Value_2\n\n\
+    The ternary operator is “?”. Write this code:\n\n```\n<!DOCTYPE html>\n<html>\n\
+    <body>\n  <script>\n    document.write(Bigger = (5 > 1) ? \"The number on the\
+    \ left is bigger.\" : \"The number on the right is bigger.\");\n  </script>\n\
+    </body>\n</html>\n```\n\nSave and execute your code.\n\nIn this code, we said,\
+    \ \"If it is true that 5 is bigger than 1, display 'The number on the left is\
+    \ bigger.\" If you change the numbers or flip the symbol to <, you can change\
+    \ the outcome of your code.\n\nInput is a command that has the user input data.\
+    \ It allows users to type in information within your program."
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: "Below is something more elaborate that we can do with ternary operators:\n\n\
+    ```\n<DOCTYPE html>\n<html>\n<body>\n  <p>Riders must be at least 52 centimeters\
+    \ tall to ride.</p>\n  <input id=\"Height\" value=\"52\" />\n  <button onclick=\"\
+    Ride_Function()\">Click here</button>\n  <p id=\"Ride\"></p>\n  <script>\n   \
+    \ function Ride_Function() {\n      var Height = document.getElementById(\"Height\"\
+    ).value;\n      var Can_ride = (Height < 52) ? \"You are too short;\" : \"You\
+    \ are tall enough;\";\n      document.getElementById(\"Ride\").innerHTML = Can_ride\
+    \ + \" to ride.\";\n    }\n  </script>\n</body>\n</html>\n```\n\nSave and execute\
+    \ your code.\n\n# END OF CHAPTER CHALLENGE\n\nWrite a program that includes the\
+    \ following:\n\n+   - A ternary operator, and\n- The input command."
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: '# CHAPTER TWENTY FOUR
+
+    OBJECT-ORIENTED PROGRAMMING
+
+
+    As we covered earlier, objects are items within computer programs that have both
+    state and behavior. The state of an object could be the weight, color, height,
+    etc. While the behavior of an object would be what the object does – the actions
+    it takes – such as jump, run, sit, etc.
+
+
+    Object-oriented is an approach to programming that focuses on objects and data
+    (as opposed to consecutive actions or some other approach).
+
+
+    You create objects by creating what are called “classes,” using one of the many
+    specialized computer programming languages. Classes are used to describe one or
+    more objects. This would be created by creating (or “declaring”) a class called
+    a “Customer” class. It is important to know that when you first create this class,
+    you are describing the POTENTIAL characteristics and behavior of TYPE of thing.
+    You will still need to create an actual one of those things. That process is called
+    “creating an INSTANCE” of the class, where “instance” means “an actual one” of
+    the things described when you declared the class. When you do this, the data that
+    makes up the object is kept in the computer’s memory.
+
+
+    For example, in a computer program designed to track pay records for all employees,
+    you could have a class called “Employee.” Each program element representing an
+    actual employee (John Smith, Sally Jackson, etc.) would be an instance of the
+    “Employee” class. You would have one instance for each employee you entered into
+    computer. Each time you created an “employee” object, the computer would first
+    find the “employee” class, then use the definition of that class in creating that
+    particular “employee” instance using the data for the actual employee.
+
+
+    # CLASS
+
+    OBJECTS
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_97_0.png)'
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# CONSTRUCTORS\n\nA \"constructor\" is a special part of a class (a template\
+    \ for defining an object item with state and behavior).\n\nThe constructor is\
+    \ a special part of the class that describes the default state of any new instance\
+    \ of the class that gets created. In other words, it gives default values for\
+    \ the properties of the class.\n\nFor example, let's say you had a class called\
+    \ \"Customer.\" The computer code to create the \"customer\" class might look\
+    \ something like this:\n\n```\nclass Customer\n{\n    string FullName;\n    Boolean\
+    \ Active;\n}\n```\n\nNow let's say that whenever you created a new instance of\
+    \ the \"customer\" class, you wanted it to be an active customer – in other words,\
+    \ you wanted the property \"Active\" to be set to \"true\".\n\nTo do this, you\
+    \ would make a constructor for the \"customer\" class. It would be a small subparagraph,\
+    \ inside the class, that would be used every time an instance of the \"customer\"\
+    \ class was created.\n\nThe constructor might look something like this:\n\n```\n\
+    Customer(string name) {\n    Fullname = name;\n    Active = true;\n}\n```\n\n\
+    The entire class would look like this:\n\n```\nclass Customer\n{\n    string FullName;\n\
+    \    Boolean Active;\n    Customer(string name) {\n        Fullname = name;\n\
+    \        Active = true;\n    }\n}\n```"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: 'The constructor would be used by asking for an instance of the “customer” class
+    to be created and passing along the desired name of the customer.
+
+
+    The call to create the instance of the class name would look like this:
+
+
+    ```
+
+    Customer cust = new Customer("Brenda Smith");
+
+    ```
+
+
+    This creates a new instance of the “customer” class using the constructor inside
+    the class. The constructor uses the string “Brenda Smith” that it was given to
+    set the value of the property “FullName” and uses the instruction in the constructor
+    to set the property “Active” to “true”.
+
+
+    The new instance of the “customer” class, which is the variable “cust” here, will,
+    therefore, have the properties:
+
+
+    ```
+
+    FullName = "Brenda Smith"
+
+    Active = true;
+
+    ```
+
+
+    Note: The above code is given as an example and is not meant to be executed. We
+    will create a constructor soon.
+
+
+    # KEYWORDS
+
+
+    As discussed earlier, JavaScript keywords identify actions to be performed. For
+    example, var is a keyword we use to assign variables.
+
+
+    An important aspect to keywords is that they cannot be used to name variables
+    or functions. For example: you can’t say var var = “variable".
+
+
+    Another type of keyword is the “new” keyword, which is used to create new objects.
+
+
+    We also have the “this” keyword. The “this” keyword indicates the object that
+    is the owner of the code. When used within an object, the value of “this” is the
+    object. When used with a function, the value of “this” is the object that possesses
+    the function.
+
+
+    We now just covered a lot of information about constructors, the “new” keyword,
+    the “this” keyword, and more. Let’s put this all to use.'
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "Write the following code within an HTML file:\n\n```\n<!DOCTYPE html>\n<html>\n\
+    <body>\n  <p id=\"Keywords_and_Constructors\"></p>\n  <script>\n  function Vehicle(Make,\
+    \ Model, Year, Color) {\n    this.VehicleMake = Make;\n    this.VehicleModel =\
+    \ Model;\n    this.VehicleYear = Year;\n    this.VehicleColor = Color;\n  }\n\
+    \  var Jack = new Vehicle(\"Dodge\", \"Viper\", 2021, \"Red\");\n  var Emily =\
+    \ new Vehicle(\"Jeep\", \"Trail Hawk\", 2020, \"White and Blue\");\n  var Erik\
+    \ = new Vehicle(\"Ford\", \"Pinto\", 1971, \"Mustard\");\n  document.getElementById(\"\
+    Keywords and Constructors\").innerHTML = =\n    \"Erik drives a \" + Erik.VehicleColor\
+    \ + \"-colored \" + Erik.VehicleModel +\n    \" manufactured in \" + Erik.VehicleYear\
+    \ + \";\n  </script>\n</body>\n</html>\n```\n\nSave and execute your code. This\
+    \ should print the following string:\n\nErik drives a Mustard-colored Pinto manufactured\
+    \ in 1971\n\nLet's inspect our code. The function \"Vehicle()\" is an object constructor.\n\
+    \n# REVED WORDS\n\nIn JavaScript, there are certain words you can't use as variables,\
+    \ labels (names assigned to sections of code), or functions. Examples of reserved\
+    \ words are: \"true\" and \"false\".\n\nIf you are interested, here is a link\
+    \ to a list of the reserved words in JavaScript:\n\nw3schools.com/js/js/reserved.asp\n\
+    \nThe reason you cannot use these words is that they already mean something else\
+    \ – they are reserved for JavaScript.\n\n# END OF CHAPTER CHALLENGE\n\nWrite a\
+    \ program that includes the following:\n\n+   * A class,\n* A constructor,\n*\
+    \ The \"new\" keyword, and\n* The \"this\" keyword."
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# CHAPTER TWENTY FIVE
+
+    IDENTIFIERS AND LITERALS
+
+
+    An “identifier” is a name for something. In JavaScript, identifiers are the names
+    of variables, functions, keywords, and labels. In the following code, “X” is the
+    identifier:
+
+
+    ```
+
+    var X = 10
+
+    ```
+
+
+    In contrast to an identifier, a literal is something that represents a value within
+    source code. Source code is the version of a computer program as it is originally
+    written (i.e., typed into a computer in some programming language) by the designer
+    of the program. Normally, when the programmer is done convert the code she wrote
+    the program in (the “source code”) to another format that is easier and faster
+    to use. In that new format, the program can’t be easily understood by people –
+    but it is very useful to the computer. It also can’t be modified by other programmers
+    at that point.
+
+
+    Look at this code:
+
+
+    ```
+
+    var X = 10
+
+    var Y = “Charlie”
+
+    ```
+
+
+    The 10 is the integer (whole number) literal, Charlie is the string literal, “X”
+    and “Y” are the identifiers.
+
+
+    A literal is the data exactly as it is meant to be processed. Whereas an identifier
+    is a name, the literal is the value itself.
+
+
+    # NESTED FUNCTIONS
+
+
+    Nested refers to something contained within something else. This can be a program
+    within a program or a set of instructions inside another set of instructions.
+
+
+    Sometimes the subprogram needs some information from the main program in order
+    to perform its tasks. When the subprogram is created, its description might include
+    this information. That information is called the “parameters” of the subprogram.
+
+
+    The parameters of the nested entity are explained within the larger (and enveloping)
+    entity. It''s nested because it is placed inside something else.
+
+
+    For example, a nested procedure would be a set of commands that is contained within
+    a larger procedure.'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "In JavaScript functions have access to the functions that are above them in\
+    \ the code. A nested function is a function under another function that is connected\
+    \ somehow.\n\nTo see this in action, write this code:\n\n```\n<!DOCTYPE html>\n\
+    <html>\n<body>\n<p id=\"Counting\"></p>\n<script>\ndocument.getElementById(\"\
+    Counting\").innerHTML = Count();\nfunction Count() {\n  var Starting_point = 9;\n\
+    \  function Plus_one() {\n    Starting_point += 1;\n    Plus_one();\n  }\n  return\
+    \ Starting_point;\n}\n</script>\n</body>\n</html>\n```\n\nSave and execute this\
+    \ code. \"10\" should be displayed. In our code, the Plus_one() function was the\
+    \ nested function.\n\n# SCOPE\n\nIn programming, code can have \"scope.\" Simply\
+    \ put, the scope is the functions, variables, and objects you have access to.\
+    \ Scope can be limited. Variables have scope in that they can be accessed by one,\
+    \ more than one, or all functions in a program. The scope of variables is either\
+    \ \"local\" or \"global\".\n\nIn JavaScript, a global variable can be accessed\
+    \ from any function within the program, whereas a local variable is only outside\
+    \ of the function it is assigned to.\n\nGlobal variables are declared outside\
+    \ of functions, and local variables are declared inside of functions."
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: "A global variable would be written as follows (write this code):\n\n```\n<!DOCTYPE\
+    \ html>\n<html>\n<body>\n  <script>\n    var X = 10;\n    function Add_numbers_1()\
+    \ {\n      document.write(20 + X + \"<br>\");\n    }\n    function Add_numbers_2()\
+    \ {\n      document.write(X + 100);\n    }\n    Add_numbers_1();\n    Add_numbers_2();\n\
+    \  </script>\n</body>\n</html>\n```\n\nSave and execute your code. It should return\
+    \ \"30\" and \"110.\" The variable X was assigned the value 10 outside of our\
+    \ function, but we still accessed it. Therefore, the above is an example of a\
+    \ global variable. As a reminder, <br> is the break tag and creates a line break\
+    \ in text (like pressing enter on your keyboard).\n\nNow, let's try a local variable.\
+    \ Write this code:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <script>\n    function\
+    \ Add_numbers_1() {\n      var X = 10;\n      document.write(20 + X + \"<br>\"\
+    );\n    }\n    function Add_numbers_2() {\n      document.write(X + 100);\n  \
+    \  }\n    Add_numbers_1();\n    Add_numbers_2();\n  </script>\n</body>\n</html>\n\
+    ```\n\nSave and execute your code. This time, it only returns \"30\" because the\
+    \ variable was local — meaning it was written within the function Add_numbers_1\
+    \ and couldn't be accessed outside of it."
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: "Let's say you wrote the above code and didn't understand why Add_numbers_2\
+    \ didn't display a result. We could use the console.log() to help us debug our\
+    \ code.\n\nChange your code to the following:\n\n```\n<!DOCTYPE html>\n<html>\n\
+    <body>\n  <script>\n    function Add_numbers_1() {\n      var X = 10;\n      console.log(15\
+    \ + X);\n    }\n  function Add_numbers_2() {\n    console.log(X + 100);\n  }\n\
+    \  Add_numbers_1();\n  Add_numbers_2();\n  </script>\n</body>\n</html>\n```\n\n\
+    Save and execute your code. You'll notice that no result is shown. Open the console,\
+    \ and there it is! It gives you the error \"X is not defined.\"\n\n# END OF CHAPTER\
+    \ CHALLENGE\n\nPerform the following actions:\n\n+   - Write your own nested function,\n\
+    - Assign a local variable, and\n- Assign a global variable."
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: "# CHAPTER TWENTY SIX\nCONDITIONAL STATEMENTS\n\n“If statements” are a type\
+    \ of conditional statement that specifies a section of code to be executed if\
+    \ a condition is true.\n\nWrite this code:\n\n```\n<!DOCTYPE HTML>\n<html>\n<body>\n\
+    \  <script>\n    if (1 < 2) {\n      document.write(\"The left number is smaller\
+    \ than the right number.\");\n    }\n  </script>\n</body>\n</html>\n```\n\nSave\
+    \ and execute your code. Since 1 is smaller than 2, the string is displayed.\n\
+    \nThe Date().getHours() method returns the hour in the specified date according\
+    \ to the local time, and the hours are listed as integers between 0 and 23. For\
+    \ example: 18 is equal to 60 p.m., 12 is noon.\n\nWe can get creative with “if”\
+    \ statements. Write this code:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <p id=\"\
+    Greeting\">How are you this evening?</p>\n  <script>\n    if (new Date().getHours()\
+    \ < 18) {\n      document.getElementById(\"Greeting\").innerHTML = \"How are you\
+    \ today?\";\n    }\n  </script>\n</body>\n</html>\n```\n\nSave and execute your\
+    \ code. In this program, we said, “If it is later than (greater than) 6:00 p.m.\
+    \ when I ran my code, display ‘How are you this evening?’ If it is earlier than\
+    \ 6:00 p.m. when I ran my code, ‘How are you today?’ will display.”\n\nSo, what\
+    \ if we want more choices?\n\n# ELSE STATEMENTS\n\nThe else statement specifies\
+    \ a block of code that will be executed if the condition is false (opposite of\
+    \ the if statement)."
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: "Write this code:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <p>Write your age:</p>\n\
+    \  <input id=\"Age\" value=\" />\n  <p id=\"How_old_are_you?\">Click here</p>\n\
+    \  <button onclick=\"Age_Function()\">Click here</button>\n  <script>\n  function\
+    \ Age_Function() {\n    var Age = document.getElementById(\"Age\").value;\n  \
+    \  if (Age >= 18) {\n      Vote = \"You are old enough to vote!\";\n    } else\
+    \ {\n      Vote = \"You are not old enough to vote!\";\n    }\n    document.getElementById(\"\
+    How_old_are_you?\").innerHTML = Vote;\n  }\n  </script>\n</body>\n</html>\n```\n\
+    \nSave and execute your code. You just created a program that determines if a\
+    \ person can vote!\n\nNow, what if we want even more choices?\n\n# ELSE IF STATEMENTS\n\
+    \nThe \"else if\" statement follows an \"if\" statement and is executed if the\
+    \ \"if\" statement is found to be false. For example:\n\n+   - Hungry, eat.\n\
+    - Else if thirsty, drink.\n- Else, rest."
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "Write this code:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <p id=\"Time_of_day\"\
+    ></p>\n  <script>\n  function Time_function() {\n    var Time = new Date().getHours();\n\
+    \    var Reply;\n    if (Time < 12 == Time > 0) {\n      Reply = \"It is morning\
+    \ time!\";\n    }\n    else if (Time > 12 == Time < 18) {\n      Reply = \"It\
+    \ is the afternoon.\";\n    }\n    else {\n      Reply = \"It is evening time.\"\
+    ;\n    }\n    document.getElementById(\"Time_of_day\").innerHTML = Reply;\n  }\n\
+    \  Time_function();\n  </script>\n</body>\n</html>\n```\n\nSave and run your code.\
+    \ You made a program that pulls the time from your computer and tells you what\
+    \ time of day it is!\n\n# END OF CHAPTER CHALLENGE\n\nPerform the following:\n\
+    \n+   * Write your own function that contains an \"if\" statement, \"else if\"\
+    \ statement and \"else\" statement."
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: "# CHAPTER TWENTY SEVEN\nSTRING METHODS\n\nJavaScript has string methods that\
+    \ allow you to perform tasks with strings.\n\nAs covered earlier, programming\
+    \ languages have certain data types built into them. These built-in data types\
+    \ are the most basic data types in the programming language and are referred to\
+    \ as primitive data types. One of the key traits of a primitive data type is that\
+    \ it cannot be simplified any further. A primitive data type of data that is built\
+    \ into the language.\n\nThere are five primitive data types in JavaScript – these\
+    \ are:\n\n+   1) String,\n2) Number,\n3) Boolean,\n4) Null, and\n5) Undefined.\n\
+    \nEverything else (non-primitive data types) are objects. Objects are created\
+    \ by the programmer, not predefined and built into the programming language.\n\
+    \n# CONCAT() METHOD\n\nThe concat() method concatenates (connects) two or more\
+    \ strings. Write this code:\n\n```\n<DOCTYPE html>\n<html>\n<body>\n  <p id=\"\
+    Concatenate\"></p>\n  <script>\n    var part_1 = \";\n    var part_2 = \";\n \
+    \   var part_3 = \";\n    var part_4 = \"sentence.\";\n    var whole_sentence\
+    \ = part_1.concat(part_2, part_3, part_4);\n    document.getElementById(\"Concatenate\"\
+    ).innerHTML = whole_sentence;\n  </script>\n</body>\n</html>\n```\n\nSave and\
+    \ execute your code. It displays the sentence as a whole!\n\n# SLICE() METHOD\n\
+    \nThe slice() method is a string method that extracts a section of a string and\
+    \ returns the extracted section in a new string."
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: "Write this code:\n\n```\n<!DOCTYPE html>\n<html>\n<body>\n  <p id=\"Slice\"\
+    ></p>\n  <script>\n    Var Sentence = \"All work and no play makes Johnny a dull\
+    \ boy\";\n    var Section = Sentence.slice(27,33);\n    document.getElementById(\"\
+    Slice\").innerHTML = Section;\n  </script>\n</body>\n</html>\n```\n\nSave and\
+    \ execute your code. The numbers choose which characters in your string will be\
+    \ cut out and displayed. Your code \"Johnny\" because those are the characters\
+    \ that are located between 27-33.\n\nHere are two points to keep in mind:\n\n\
+    +   1) Computers start counting at 0 - not 1.\n2) The spaces are included in the\
+    \ count.\n\n# END OF CHAPTER CHALLENGE\n\nYou will now be assigned some tasks\
+    \ we haven't taught yet – see if you can find the solutions with a bit of online\
+    \ research:\n\n+   1. Utilize the toUpperCase() method, and\n2. Utilize the search()\
+    \ method."
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: "# CHAPTER TWENTY EIGHT\nNUMBER METHODS\n\nNumber methods assist you in working\
+    \ with numbers in JavaScript. There are several number methods. One of these is\
+    \ the toPrecision() method which returns a string as a number of a specified length.\
+    \ Write this code:\n\n```\n<DOCTYPE html>\n<html>\n<body>\n  <p id=\"Precision\"\
+    ></p>\n  <script>\n    var X = 12938.3012987376112;\n    document.getElementById(\"\
+    precision\").innerHTML = X.toPrecision(10);\n  </script>\n</body>\n</html>\n```\n\
+    \nSave and run your code. You should get “12938.30130.” There are many number\
+    \ methods – the above two should give you an idea of how these work.\n\n# END\
+    \ OF CHAPTER CHALLENGE\n\nYou will now be assigned some tasks we haven't taught\
+    \ yet – research online for solutions:\n\n+   1. Utilize the toFixed() method.\n\
+    2. Utilize the valueOf() method.\n\nHere is a helpful link: w3schools.com/js/js_number_methods.asp"
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: "# CHAPTER TWENTY NINE\nFINAL CHALLENGE\n\nTo conclude this book, we're going\
+    \ to put it all together by creating a timer that will countdown by seconds. Here\
+    \ go we go!\n\nFirst, replace any existing code in your editor with the following:\n\
+    \n```\n<!DOCTYPE html>\n<html>\n  <body>\n    <p>How many seconds would you like\
+    \ to set your alarm for?</p>\n    <input id=\"seconds\" value=\"\" />\n    <button\
+    \ onclick=\"countdown()\">Click here</button>\n    <p id=\"timer\"></p>\n  </body>\n\
+    </html>\n```\n\nThe idea here is that the user will be asked how many seconds\
+    \ he/she like to set the timer. There is an input box available where a value\
+    \ may be entered. A button is also created so that when clicked, it will send\
+    \ the value out to be processed. The result will be a displayed countdown timer.\n\
+    \nRemember that the input tag deals with information that the user enters. The\
+    \ id \"minutes\" and the value \"\" are associated with the JavaScript code that\
+    \ we'll see shortly.\n\nThe \"button\" tag will create a button that, when clicked,\
+    \ will look in the JavaScript code for the \"countdown()\" function. The result\
+    \ that the countdown function produces depend upon what the user submitted when\
+    \ he/she clicked the button we made.\n\nThe tag with the id \"timer\" wants to\
+    \ know the result of the countdown function so that it can display a timer for\
+    \ the user to see. It will retrieve information from the associated JavaScript."
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "So, let's take a look at the HTML code again, this time, with the addition\
+    \ of the JavaScript code:\n\n```\n<DOCTYPE html>\n<html>\n  <body>\n  <p>How many\
+    \ seconds would you like to set your alarm?</p>\n  <input id=\"seconds\" value=\"\
+    \" />\n  <button onclick=\"countdown()\">Click here</button>\n  <p id=\"timer\"\
+    ></p>\n  <script>\n    function countdown() {\n      var seconds = document.getElementById(\"\
+    seconds\").value;\n\n    function tick() {\n      seconds = seconds - 1;\n   \
+    \   timer.innerHTML = seconds;\n      setTimeout(tick, 1000);\n      if(seconds\
+    \ == -1) {\n        alert(\"Time's up!\");\n      }\n    }\n      tick();\n  \
+    \  }\n  </script>\n  </body>\n</html>\n```\n\nYou'll notice right away that there\
+    \ are two separate functions in our JavaScript code. In fact, the \"tick\" function\
+    \ is sitting inside of the \"countdown\" function! As a reminder, this is called\
+    \ \"nesting functions.\"\n\nThe countdown function is called just one time, and\
+    \ it does only two things:\n\n+   1. It sets a variable named \"seconds\" to the\
+    \ value that the user inputs.\n2. It creates and runs the tick function.\n\nThe\
+    \ tick function, on the other hand, has several steps to execute and will end\
+    \ up repeating multiple times.\n\nImmediately after the countdown function has\
+    \ received the input value from the user, the tick function begins laying out\
+    \ its instructions. It's important to recognize that the tick function is not\
+    \ actually being executed yet. It is simply letting its instructions be made known\
+    \ in case the ever actually needs to be used. Once the interpreter reads the tick\
+    \ function, it finds out and sees the \"tick()\" instruction. Upon seeing this\
+    \ function, the Interpreter knows to immediately go back through the tick function.\
+    \ However, this time, instead of simply reading the function, it is actually going\
+    \ to run the function."
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'Take a look at the variable "seconds" within the tick function. It is taking
+    the value "seconds" from the countdown and subtracting 1 from it. The reason that
+    this value needs to be subtracted by 1 is that each time this function runs, it
+    will last just one second (as we will see), and we need the variable "seconds"
+    to subtract 1 each time a second goes by.
+
+
+    Right after 1 is subtracted from the user''s input the first time through the
+    tick function, that same number has been subtracted by 1 will be displayed for
+    the user to see. This happens because the timer.innerHTML is being assigned to
+    the user. Remember how we put "id=timer" in one of our HTML tags? That now holds
+    this number that we assigned.
+
+
+    The statement "setTimeout(tick, 1000);" simply means that the program is pausing
+    for 1,000 milliseconds (i.e., 1 second). This is important because this function
+    is going to potentially repeat multiple times – and every time it repeats, it
+    needs to do so for a duration of exactly one second.
+
+
+    We have here a conditional statement. What it''s telling us is that if the user''s
+    input counts all the way down to -1, stop everything and run the alert box. You
+    may be asking yourself, Why -1 instead of 0? The reason is that the interpreter
+    sees -1, it hasn''t actually displayed it to the user. The user is still seeing
+    a 0, therefore before the -1 is displayed, the alert box will show up, preventing
+    any other code from running. As a note, if the user clicks the OK button on the
+    alert box, he/she will see the timer continue to count down into the negatives.
+
+
+    Now, if the user''s input does not equal -1, the interpreter will simply step
+    out of the function like before. But wait; it''s going to run into "tick()" statement
+    again! Exactly. Do you see how our function will continue to repeat now? That
+    is, until our conditional statement is met – wherein the alert box is displayed.
+
+
+    Try it out for yourself and don''t worry if you have to read the code through
+    several times before it really begins to sink in!
+
+
+    # FINAL CHALLENGE
+
+
+    Here is your final assignment:
+
+
+    Through online research, find out how to end the program (i.e, stop the countdown)
+    when a user clicks the OK button on the alert box.'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# CHAPTER THIRTY
+
+    CONGRATULATIONS!
+
+
+    You have completed our book! Well done on your hard work and persistence!
+
+
+    You should now have a basic understanding of JavaScript and coding.
+
+
+    As the next step, we recommend enrolling in a Tech Academy boot camp. Our coding
+    boot camps were designed like this book: for beginners and assuming no prior knowledge
+    or experience.
+
+
+    Here are some of the reasons thousands of students have chosen to enroll at The
+    Tech Academy:
+
+
+    +   1) Our curriculum – modern, robust (strong; holds up over time), and covers
+    in-demand technologies. Our programs are thorough and cover more than just 1-2
+    languages. Our comprehensive curriculum ensures students aren''t pigeon-holed
+    (restricted to an exclusive category) within a small skillset. Understanding a
+    large array of technologies not only prepares graduates for the workforce, it
+    assists them greatly in picking up new skills in the future.
+
+
+    +   2) We price our boot camps affordably. In fact, our tuition is less than the
+    national average cost of coding boot camps.
+
+
+    +   3) We require no technical background or experience. You don''t have to already
+    know coding to learn to code. As long as students can read, write and perform
+    basic math, they can succeed at The Tech Academy.
+
+
+    +   4) We have a stellar online presence. Our average rating across the top review
+    sites ranges from 4.5-4.9 stars. We have received the Best Coding Camp award several
+    years in a row from SwitchUp.Org and CourseReport.Com (the top two boot camp review
+    sites) and are included on several other top coding camp lists as well. We were
+    also chosen as "The World''s Best School" by the television show "World''s Greatest.\
+    All of these awards and reviews are based on feedback from students and graduates
+    of our programs.
+
+
+    +   5) We are extremely flexible. Students choose their own schedule. They can
+    study from home, at one of our campuses or both. They have online access to their
+    program 24 hours a day. This ensures that students can enroll regardless of their
+    life circumstances. The fact that programs are self-paced is an aspect of our
+    flexibility – students can blast through content they know well already, and take
+    their time with new concepts. An additional factor in our flexibility is that
+    we offer open enrollment, which means students can start anytime.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_114_0.png)'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '6) Our admissions staff and enrollment process are transparent and helpful.
+    We answer questions and are polite, giving students a positive experience from
+    the start.
+
+
+    To get started, visit The Tech Academy''s website: learncodinganywhere.com'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# INDEX
+
+
+    =, 88
+
+    ==, 88
+
+    &&, 91
+
+    ||, 91
+
+    !, 91
+
+
+    Algorithm
+
+    definition, 33
+
+    Apostrophe handling,
+
+    59
+
+    Backslash, 59
+
+    Binary Operator, 70
+
+    Boolean Logic
+
+    definition, 83
+
+    history, 83
+
+    logical operators, 91
+
+    Branching, 34
+
+    Calling, 41
+
+    Class, 96
+
+    Code
+
+    definition, 13
+
+    Coding
+
+    definition, 17
+
+    Comparison
+
+    Operators, 88
+
+    Compiler, 27
+
+    Computer
+
+    definition, 11
+
+    Computer Language
+
+    definition, 15
+
+    Computer
+
+    Programming
+
+    definition, 22
+
+    example, 22
+
+    Concatenating, 59
+
+    Concat() method, 107
+
+    Conditional Statement,
+
+    104
+
+    Console.log, 86
+
+    Constructor, 97
+
+    keywords, 98
+
+    Control/Branching
+
+    definition, 34
+
+    loop, 38
+
+    Developer
+
+
+    definition, 14
+
+    Dictionary creation, 76
+
+    Division, 69
+
+    Document.getetelement
+
+    byid, 66
+
+    Document.write(), 57
+
+    Element, 49
+
+    Else If Statements, 105
+
+    Else Statements, 104
+
+    Entrance, 34
+
+    Execute
+
+    definition, 12
+
+    Exit, 41
+
+    Exponent, 79
+
+    Expressions
+
+    definition, 62
+
+    example, 62
+
+    File Path, 52
+
+    Final Challenge, 112
+
+    Five Elements, 34
+
+    control/branching,
+
+    34
+
+    entrance, 41
+
+    subprogram, 40
+
+    variables, 35
+
+    Floating point, 79
+
+    Function
+
+    definition, 64
+
+    invoking, 64
+
+    nesteded, 100
+
+    Grading papers
+
+    example, 34
+
+    "Hello, World"
+
+    in HTML, 50
+
+    in JavaScript, 54
+
+    History of JavaScript,
+
+    45
+
+    HTML
+
+    definition, 44
+
+    example, 48
+
+    Hypertext, 44
+
+    Identifiers, 100
+
+
+    If Statements, 104
+
+    Images,
+
+    Online, 51
+
+    Computer, 52
+
+    Increment Operator, 71
+
+    Infinity, 80
+
+    Input
+
+    definition, 94
+
+    Internet
+
+    definition, 19
+
+    Interpreter, 28
+
+    Invoking, 64
+
+    JavaScript
+
+    history, 45
+
+    Key-Value pairs, 74
+
+    Keywords, 98
+
+    Literal, 100
+
+    Logical Operators, 91
+
+    Loop, 38
+
+    Low Level Language
+
+    definition, 23
+
+    Machine
+
+    definition, 10
+
+    Machine Language
+
+    definition, 18
+
+    low-level language,
+
+    23
+
+    Main Program, 40
+
+    Markup, 42
+
+    Math.random(), 72
+
+    Method
+
+    concat(), 107
+
+    console.log, 86
+
+    date().get(),(), 104
+
+    definition, 55
+
+    document.write(), 57
+
+    slice(), 72
+
+    window.alert(), 56
+
+    Modulus Operation, 70
+
+    Multiple Variables, 60
+
+    Multiplication, 69
+
+    Nested Functions, 100'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# INDEX
+
+
+    +   Network definition, 19
+
+    Notepad, 16
+
+    Notepad++, features, 16 download, 48
+
+    Numbers addition, 68 binary, 70 division, 69 increment, 71 modulus operation,
+    70
+
+    multiple operators, 69
+
+    multiplication, 69 subtraction, 69
+
+    toPrecision(), 108
+
+    toString(), 108
+
+    unary, 70
+
+    Number Methods, 108
+
+    Object definition, 54, 74 examples, 74
+
+    Object-Oriented Programming, 95
+
+    Operator comparison, 88 definition, 58 examples, 58
+
+    logical, 91
+
+    ternary operator, 94
+
+    typeof, 77
+
+    with strings, 58
+
+    words, 77
+
+    Paragraph Element, 64
+
+
+    +   Path of Execution, 40
+
+    Program definition, 12 example, 12
+
+    Programming Language definition, 14 low-level language, 23
+
+    Protocol definition, 20 example, 20
+
+    Quotes apostrophe, 55 single vs double, 55
+
+    Reserved Words, 98
+
+    Runtime, 28
+
+    Scope, 101
+
+    Slice(), 107
+
+    Software definition, 13
+
+    String concatenation, 59 creating one, 58 definition, 46
+
+    str.fontcolor(""), 60
+
+    Subprograms calling, 41 definition, 40
+
+    Subtraction, 69
+
+    Tech Academy website, 114
+
+    Ternary Operator, 94
+
+    Timer Challenge, 110
+
+    Tips, 47
+
+    True/False, 83
+
+
+    +   Type Coercion, 87
+
+    Typeof, 77
+
+    Unary Operator, 70
+
+    Untyped Language, 24 Values boolean, 46 numbers, 46 objects, 46 strings, 46 undefined,
+    46
+
+    Variables, 25, 35 example, 25 multiple, 60
+
+    Window.alert(), 56
+
+    World Wide Web definition, 19
+
+    WWW (see World Wide Web)
+
+    Web (see World Wide Web)'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# OTHER READING
+
+
+    Be sure to check out other Tech Academy books, which are all available for purchase
+    on Amazon:
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_118_0.png)
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_118_1.png)'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '![](img/33a81fac26246d29975692e5ecda6e53_119_0.png)
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_119_1.png)'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# PROJECT MANAGEMENT
+
+    HANDBOOK
+
+
+    Simplified Agile, Scrum and DevOps for Beginners
+
+
+    Written By
+
+    Jack C. Stanley & Erik D. Gross
+
+    Co-Founders of The Tech Academy'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: 'Made in the USA
+
+    Columbia, SC
+
+    13 August 2020
+
+
+    16196957R00065'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# THE TECH ACADEMY
+
+
+    Ms. Ann Townsend Leverette
+
+    2524 Flair Knoll DE
+
+    Mill Creek
+
+    Atlanta, GA 30345-1316
+
+
+    JavaScript lists some lists as the most popular computer programming language
+    in the world. This book is an introduction to coding, using JavaScript, for individuals
+    with no past technical knowledge or experience.
+
+
+    Here are some questions for you:
+
+
+    +   - Are you interested in seeing what coding is like?
+
+    - Would you like to find out if computer programming is something you enjoy doing?
+
+    - Are you considering working in the tech industry?
+
+
+    If your answer is "yes" to any of these questions, then this book was written
+    for you.
+
+
+    You can complete this book in a matter of hours and at the end, you will not only
+    have a fundamental knowledge of Python, you will have a better understanding of
+    technology in general.
+
+
+    We hope you enjoy this book and good luck on your coding journey!
+
+
+    The Tech Academy is a technology school headquartered in Portland, Oregon, with
+    multiple campuses around the world. We specialize in coding boot camps (intensive
+    training programs at preparing graduates for entry-level technology positions,
+    that can be completed in a few months). We also offer custom training for companies,
+    and have published several books.
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_123_0.png)
+
+
+    To find out more about The Tech Academy, visit:
+
+    Learncodinganywhere.com
+
+
+    ![](img/33a81fac26246d29975692e5ecda6e53_123_1.png)'
+  merge: -1
+  pgno: 123
