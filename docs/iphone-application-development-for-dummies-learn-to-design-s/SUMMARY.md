@@ -1,0 +1,2 @@
++   [iPhone 应用开发初学者指南：学习设计用于盈利或娱乐的小型或大型 iPhone 应用，使用 Xcode 创建新的 iPhone 应用，将你的应用发布到 App Store，以及使用框架](README.md)
++   [iPhone 应用开发初学者指南：学习设计用于盈利或娱乐的小型或大型 iPhone 应用，使用 Xcode 创建新的 iPhone 应用，将你的应用发布到 App Store，以及使用框架](iphone-application-development-for-dummies-learn-to-design-s.md)
