@@ -1,0 +1,3782 @@
+- img_proc: true
+  md: '# PROCEEDINGS OF
+
+    THE 2017 INTERNATIONAL CONFERENCE ON
+
+    FOUNDATIONS OF COMPUTER SCIENCE
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_0_0.png)
+
+
+    # Editors
+
+    Hamid R. Arabnia
+
+    Fernando G. Tinetti
+
+
+    CSCE''17
+
+    July 17-20, 2017
+
+    Las Vegas Nevada, USA
+
+    americancse.org
+
+
+    ©CSREA Press'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: 'This volume contains papers presented at The 2017 International Conference
+    on Foundations of Computer Science FCS''17. Their inclusion in this publication
+    does not necessarily constitute endorsements by editors or by the publisher.
+
+
+    # Copyright and Reprint Permission
+
+
+    Copying without a fee is permitted provided that the copies are not made or distributed
+    for direct commercial advantage, and credit to source is given. Abstracting is
+    permitted with credit to the source. Please contact the publisher for other copying,
+    reprint, or republication permission.
+
+
+    > © 2017 CSREA Press
+
+    ISBN: 1-60132-456-1
+
+    Printed in the United States of America
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_1_0.png)'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Foreword
+
+
+    It gives us pleasure to introduce this collection of papers to be presented at
+    the 2017 International Conference on Foundations of Computer Science (FCS''17),
+    July 17-20, 2017, at Monte Carlo Resort, Las Vegas, USA.
+
+
+    An important mission of the World Congress in Computer Science, Computer Engineering,
+    and Application, CSE (a federated congress to which this conference is affiliated)
+    is providing a unique platform for a diverse community of constituents composed
+    of scholars, researchers, developers, and practitioners. The CSE makes concerted
+    effort to reach out to participants affiliated with diverse entities (such as
+    universities, institutions, organizations, government agencies, and research centers).
+    The congress also aims to include participants from institutes that have teaching
+    as their main mission and those that have research as their main mission. By any
+    definition of diversity, this congress is the most diverse scientific meeting
+    in USA. We are proud to report that this federated congress has participants from
+    64 different nations representing variety of personal and scientific experiences
+    that arise from differences in culture and values. As seen (see below), the program
+    committee of this conference as well as the program committee of all tracks of
+    the federated congress is as diverse as its authors and participants.
+
+
+    The program committee was to include all who submitted for consideration. About
+    half of the submissions were outside the United States. Each submitted paper was
+    peer-reviewed by two experts in the field for originality, clarity, impact, and
+    soundness. In cases of contradictory recommendations, a member of the program
+    committee was charged to make the final decision; often, this seeking help from
+    all interested editors. In papers whose authors included a member of the program
+    committee it was evaluated using the double-blind review process. One to the exception
+    above double-blind review was for papers that were submitted directly to chairs/organizers
+    of pre-approved sessions/workshops; in these cases, the chairs/organizers were
+    responsible for the evaluation of such submissions. The overall acceptance rate
+    for regular papers was 19%; 8% of the remaining papers were accepted as posters
+    (at the time of this writing, we had not accepted a couple of individual tracks).
+
+
+    We are very grateful to the many colleagues who offered their services in organizing
+    the conference. In particular, we would like to thank the members of Program Committee
+    of FCS''17, members of the steering Committee, and members of committees of federated
+    congress that have tracks within the scope of FCS. Many individuals listed below,
+    will be requested by the conference to provide their expertise and services for
+    selecting papers (extended versions) in journal special issues as well as for
+    publication in research books (to be prepared for publishers including: Springer,
+    Elsevier, BMC, and others).
+
+
+    +   * Prof. Hamid R. Arnalis (Steering Committee): Graduate Program Director (PhD,
+    MS, MAMS); University of Georgia, USA; Editor-in-Chief, Journal of Supercomputing
+    (Springer); Center of Excellence in Terrorism, Resilience, Intelligence & Organized
+    Crime Research (CENTRIC).
+
+    * Prof. Juan Martin Castillo: Director, The Antilles Tesla Research Group and
+    GIPE, Universidad Nacional Adriana, Venezuela
+
+    * Prof. Kevin Daimi (Steering Committee): Director Computer Science and Software
+    Engineering Programs, Department of Mathematics, University of Detroit,
+
+    * Prof. Zhangisina Gulavletzkhanova: Vice-rektor of the Science, Central-Asian
+    University, Kazakhstan, Almaty, Kazakhstan; Vice President of International Academy
+    of Informatization, Kazakhstan, Almaty, Republic of Kazakhstan'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '+   - Prof. Leonidas Gelidiannidis (Congress Steering Committee); Department
+    of Computer Information Systems, Wentworth Institute of Technology, Boston, Massachusetts,
+    USA; Visiting Professor, MIT, USA
+
+
+    +   - Prof. Tai-hoon Kim; School of Information and Computing Science, University
+    of Tasmania, Australia
+
+
+    +   - Prof. Dr Giam Lai; Computer Science and Technology, Sun Yat-Sen University,
+    Guangzhou, Hong Kong, Kennedy Town, Hong Kong; Chartered Member of The British
+    Computer Society, UK; Former Chairman of the British Computer Society (Hong Kong);
+    Chartered Engineer & Fellow of the Institute of Analysts and Programmers
+
+
+    +   - Dr. Vitus S. W. Lam; Senior IT Manager, Information Technology Services,
+    The University of Hong Kong, Kennedy Town, Hong Kong
+
+
+    +   - Prof. Dr. Eng. Robert Helen Okonkigen (Congress Steering Committee); Department
+    of Electrical & Electronics Engineering, Faculty of Engineering and Tech., Ambrose
+    Alli University, Edo State, Nigeria
+
+
+    +   - Prof. Igor Sachdev; Director of ITACS Ltd Kingdom (formerly a Professor
+    at London Metropolitan University, London)
+
+
+    +   - Chiranjivita Sahu; Head, Department of Computer Science and IT, Amman College,
+    Kathmandu, Nepal
+
+
+    +   - Ashu M.G. Saha (Physics), Fellow of British Computer Society, Principal/R&D
+    Engineer, Maverick Technologies Inc.
+
+
+    +   - Dr. Tse Tian Juan; Fernando G. Juan (Congress Steering Committee); School
+    of Computer Science; Universidad Nacional de La Plata, La Plata, Argentina; Editor-in-chief,
+    Journal of Computer Science and Technology (JCS&T)
+
+
+    +   - Varun Voh; Certified Information Security Manager (CISM); Certified Information
+    Systems Auditor (CISA); Associate Director (IT Audit), Merck, New Jersey, USA
+
+
+    +   - Prof. Wayne T. Watson (Congress Steering Committee); Fellow of IEEE; Fellow
+    of The National Institute of Aerospace; Professor of Computer Science, Mathematics,
+    and Aerospace Ocean Engineering, Virginia Polytechnic Institute & State University,
+    Blacksburg, Virginia, USA
+
+
+    +   - Prof. Jane You (Congress Steering Committee); Associate Head, Department
+    of Computing, The Hong Kong Polytechnic University, Kowloon, Hong Kong
+
+
+    We would like to extend our appreciation to the referees, the members of the program
+    committees of individual sessions, tracks, and workshops; their names do not appear
+    in this document; they are listed on the web sites of individual tracks.
+
+
+    As Sponsors-at-large partners, and/or organizations (each separated by semicolons)
+    provided help for at least one of the following: Conference Computer Research,
+    Education, and Applications Press (CSREA); US of World Academy of Science; American
+    Council on Education & Educational Research Council (http://www.americancouncil.org);
+    HoIP, Health Without Boundaries, however Internet Protocol, UK (http://www.hoip.org);
+    HoIP, Telecom, UK; WABT, Health Without Media; UNESCO, Paris, France (http://www.unesco.org);
+    various university faculty members and their staff (names appear on the cover
+    of the set of proceedings), several publishers of computer science and computer
+    engineering books and journals, chapters and/or task forces of computer science
+    associations/organizations from 3 regions, and developers of high-performance
+    machines and systems provided significant help in organizing the conference as
+    well as providing some resources. We are grateful to them all.
+
+
+    We express our gratitude to keynote, invited, and conference/tracks and tutorial
+    speakers-the list of speakers appearing on the cover. We would also like to thank
+    the following: UCMS (Universal Conference Management Systems & Support, California,
+    USA) for managing all aspects of the conference; Dr. Tim Field of APC for coordinating
+    and managing the proceedings of the proceedings; the staff Monte Carlo Resort
+    for the professional service we'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: 'provided. Last but not least, we would like to thank the Co-Editors of FCS’17:
+    Prof. Hamid R. Arabnia and Prof. Fernando G. Tinetti.
+
+
+    We present the proceedings of FCS’17.
+
+
+    # Steering Committee, 2017
+
+    http://americancse.org/'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# # Contents
+
+
+    # ## SESSION: GRAPH AND NETWORK BASED ALGORITHMS
+
+
+    ### Critical Graphs for the Minimum-Vertex-Cover Problem 3
+
+    Andreas Jakoby, Naveen Kumar Goswami, Eik List, Stefan Lucks
+
+
+    ### Some Hardness Results for Distance Dominating Set 10
+
+    Yong Zhang
+
+
+    # ## SESSION: SOFTWARE SYSTEMS AND RELATED ISSUES
+
+
+    ### User-level Deterministic Replay via Accurate Non-deterministic Event Capture
+    15
+
+    Jeongtaek Lim, Hosang Yoon, Hyunmin Yoon, Yoome Ko, Minsoo Ryu
+
+
+    ### Analysis and Evaluation of Locks Designed for NUMA System 19
+
+    Joohwan Hong, Seokyeong Jung, Kihyun Yun, Minsoo Ryu
+
+
+    # ## SESSION: NOVEL ALGORITHMS
+
+
+    ### A New Algorithm for Tiered Binary Search 25
+
+    Ahmed Tarek
+
+
+    ### Algorithms for the Majority Problem 32
+
+    Rajarshi Tarafdar, Yijie Han
+
+
+    ### Investigating the Benefits of Parallel Processing for Binary Search 38
+
+    Paul Mullins, Gennifer Elise Farrell, C. Ronald Baldwin'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# SESSION
+
+
+    # GRAPH AND NETWORK BASED ALGORITHMS
+
+
+    # Chair(s)
+
+
+    TBA'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# # Critical Graphs for the Minimum-Vertex-Cover Problem
+
+
+    Andreas Jakoby(2), Naveen Kumar Goswami, Eik List, Stefan Lucas
+
+
+    Faculty of Media, Bauhaus-Universität Weimar, Bauhausstr. 11, D-9943, Weimar,
+    Germany
+
+    <firstname.lastname>@uni-weimar.de
+
+
+    **Abstract—** In the context of the chromatic number, a critical graph is an instance
+    where the deletion of any element would decrease its chromatic number. Instances
+    have shown to be interesting objects of study for deepening the understanding
+    of the optimization problem.
+
+
+    This work introduces critical graphs in context of *Vertex Cover*. We discuss
+    their potential for the generation of larger graphs with known solutions. Firstly,
+    we propose a parametric-graph generation process which preserves the knowledge
+    of the minimum cover. Secondly, we conduct a systematic search for small critical
+    graphs. Thirdly, we evaluate the applicability for benchmarking by reporting on
+    a series of experiments using the state-of-the-art heuristic solver NuMVC.
+
+
+    **Keywords:** critical graphs, minimum vertex cover, graph generation, benchmark
+
+
+    # # 1. Introduction
+
+
+    *The Vertex Cover Problem.* A vertex cover $C$ for a graph $G = (V, E)$ defines
+    a subset of vertices $C \subseteq V$ such that every edge $e \in E$ is incident
+    to at least one vertex in $C$. A minimum vertex cover (MVC) is a cover with the
+    smallest possible size. The task of finding a minimum cover in a graph is a NP-hard
+    optimization problem [3], and its decision version of the 21 original NP-complete
+    problems solved by Karp [6]. While the construction of a maximal matching yields
+    a tight approximation-2 algorithm, it is NP-hard to approach within a factor of
+    2 [7] $P \neq NP$, according to the Unique Games Conjecture; however one can achieve
+    an approximation ratio of $2-o(1)$ [5].
+
+
+    The MVC problem is strongly related to others finding a minimum vertex cover is
+    equivalent to finding a Maximum Independent Set (MIS), i.e., a subset of vertices
+    where no two vertices share an edge. An instance can also be reduced into an instance
+    of Minimum-Size Clique (MVC) and moreover, there is a straight-forward reduction
+    of a (binary) Constraint Satisfaction Problem (CSP) to MIS. In practice, the MVC
+    problem plays an important role in network security, industrial machine assembly,
+    or facility location [7], [8], [16]. Furthermore, MVC algorithms can be used for
+    solving problems e.g., in of social networks, pattern recognition, and alignment
+    of protein sequences in bioinformatics [8], [10].
+
+
+    **Critical Graphs.** Graphs are called critical if they are minimal with regards
+    to a certain property. More precisely, an edge of graph $G$ is called a critical
+    element if its deletion would decrease the minimum cover. The concept of critical
+    graphs is mostly used in works on the chromatic number, but it can also be of
+    interest for the MVC problem, where we call a graph critical if it is critical
+    to help us understand the complexity of the Vertex Cover problem or to find more
+    efficient solvers.
+
+
+    **Randomized Graph Generation.** Critical graphs can serve as base for constructing
+    larger graphs. Since critical instances provide an easily determined cover, a
+    randomized graph-generation process of criticality could create large instances
+    while maintaining the knowledge about the solution. One application could be the
+    dedicated generation of hard instances for benchmarking. Following a series of
+    previous graph-generation methods [9], the use of critical graphs for the minimum
+    vertex cover has been benefited by Xu and al [15], [18] and revised in [12].
+
+
+    **Contribution.** This work studies critical graphs for the Minimum Vertex Cover
+    problem. We propose a new easily applicable graph-generation process which can
+    create possible graphs while preserving the knowledge of the minimum cover. To
+    implement this efficiently, we restrict the search to a set that ensures a critical
+    graph while maintaining the criticality. Secondly, we systematically search for
+    small critical instances. As an observation, if all critical graphs for the MVC
+    problem were known, our restricted process could generate all possible critical
+    graphs. We report on a series of experiments with the state-of-the-art heuristic
+    solver NuMVC [11] on instances that were generated by our randomized generation
+    process.
+
+
+    **Outline.** In Section 2 defines critical graphs. Section 3 describes our approach
+    for generating random hard graphs from critical graphs. Section 5 presents our
+    used instances, Extensions. Section 6 details the details of the experiments and
+    Section 7 concludes.'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# 2. Critical Graphs for the Minimum-Vertex-Color Problem
+
+
+    all graphs, and (2) preserves the knowledge of a hidden, up to the minimum vertex
+    color. This section presents a generation process.
+
+
+    **Definition 2.1:** A connected graph $G=(V,E)$ is edge-uncritical (hereafter)
+    according to an optimization problem $P$ if there exists an edge $e\in E$ such
+    that every solution for $P$ at $G''=(V,E)\setminus\{e\}$ is a solution for $P$
+    at $G$. A connected graph is edge-uncritical (critical) hereafter according to
+    an optimization problem $P$ if it is not uncritical. For the vertex-color problem,
+    if
+
+
+    **Definition 2.3:** Let $B=\{B_1, B_2,...\}$ be a set of graphs where each graph
+    is given by a triple $B_i=(U,V,E_i)$ with disjoint sets of vertices $U$ and $V$
+    that share a minimum vertex color for $(U\cup V)$. We define the following random
+    process:
+
+
+    +   - Given $B$ and $n$ for the vertex-color $\ell$, an upper bound $m$ for the
+    number of edges, and an upper bound $n$ for the number of vertices, $g_{B,n,m}$
+    is a random variable that generates a set of collections $S=\{S_1,...,S_k\}$ of
+    elements of $B$ that may repeat with $S_i=(U_i,V_i,E_i)$.
+
+
+    **Observation 2.2:** A connected graph $G=(V,E)$ is critical to the vertex-color
+    problem (in short: VC-critical) if deleting it reduces the minimum color.
+
+
+    ```
+
+    $|U_i| = \ell \quad \text{and} \quad |V_i| + \ell \leq n \quad \text{and} \quad
+    |E_i| \leq m$.
+
+    ```
+
+
+    Simple critical graphs are
+
+
+    **Theorem 2.3:** Cliques and cycles of odd length are uncritical.
+
+
+    ```
+
+    $C(S_1,...,S_k)=(U_1,V_1,E_1)...(U_k,V_k,E_k)$.
+
+    ```
+
+
+    Analyzing graphs with a perfect matching, one can show that cycles of even length
+    are uncritical. Now, we can easily prove the following:
+
+
+    **Observation 2.4:** Let $G=(V,E)$ be a connected graph that has a perfect matching
+    $E''$. The minimum size of a vertex is at most $|V|/2$. If the minimum size of
+    a vertex is exactly $|V|/2$, then $E=E''$ is its perfect matching, if $|E|>|E''|$,
+    and $G$ is G-critical.
+
+
+    +   - Given a triple $B=(U,V,E)$ with $|U| \leq n$, let $B^{(2)}$ will be the
+    triple of $(U'',V'',E'')$ where $U''$ and $V''$ are sets of vertices of $U$ and
+    $V$ that cover $U-V$ and $V-U$ respectively $(U''\cap U) \cup (V''\cap V)$.
+
+    - Given a triple $B=(U,V,E)$ with $|U| \leq n$, let $m$ be a random variable that
+    generates $m=[|E|]$ new edges $E'' \subset U \cup V$ of $B$. Since none of the
+    defined random process reduces the color, we can show:
+
+
+    Since exists a critical matching for cycles of even length we
+
+
+    **Corollary 2.5:** Cycles of even length $2k$ with $k \geq 2$ are GC-uncritical.
+
+
+    **Observation 2.6:** Let $G$ be a connected graph and $U \subset V$ be a minimum
+    vertex color for $G$. Assume that there exists an edge $e \in E$ such that both
+    endpoints of $e$ are in the color $U$ then $G$ is uncritical or there exists a
+    minimum vertex color $U''$ for $G$ where only one of the endpoints of $e$ is in
+    $U''$.
+
+
+    **Theorem 3.2:** Let $B=\{B_1, B_2,...\}$ be a set of graphs, where each graph
+    is given by a triple $B_i=(U,V,E_i)$ with disjoint sets of vertices $U$ and $V$
+    that share a minimum vertex color for $(U\cup V)$. Then, for every random process
+    $g_{B,n,m}$, $g_{B^{(2)},n,m}(g_{B,n,m}(G)))$ is a minimum vertex color for $(U''\cup
+    V'')$ of size $\ell$, and $G(U''\cup V'')$ has $n$ vertices.
+
+
+    Given a graph $G=(V,E)$ and a minimum color $U \subset V$, such that $[u,v]\in
+    E$ with $u,v \in U$ the graph is bipartite, then the minimum color is one of the
+    bipartite decomposition of vertex set
+
+
+    Furthermore, we can show that VC-critical graphs have to be 2-color.
+
+
+    **Theorem 2.7:** Let $G$ be a graph with an articulation vertex $u$, then $G$
+    is G-uncritical.
+
+
+    Another example is the following:
+
+
+    **Observation 2.8:** Let $G=(V,E)$ be a VC-critical graph. Then, for every vertex
+    $u \in V$, there exists a minimum color $C$ of $G$ with $u \in C$.
+
+
+    # 3. Generating Larger Graphs from Critical Instances
+
+
+    One relevant application of critical graphs is the construction of large graphs
+    for this purpose. Now we can use (random) generation process which constructs
+
+
+    Thus, the processes do not affect a-priority knowledge of the minimum vertex color.
+    It remains to show that any graph can be constructed by these processes.
+
+
+    **Theorem 3.3:** Let $B=\{B_1
+
+
+    **Definition 4.1:** A architecture GraphCircuit$(n,L)$ with $n \in \mathbb{N}$
+    and $L=\{1,...,lfloor n/2\rfloor\}$ is an undirected graph with vertices $v_0,...,v_{n-1}$
+    where each vertex $v_i$ is adjacent to vertices $v_{(i+j) \mod n}$ and $v_{(i-j)
+    \mod n}$ for all $j \in L$.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Int''l. Foundations of Computer Science | FCS''17
+
+
+    # Fig. 1
+
+    VISUALIZATION OF CIRCULAR GRAPHS OF DEGREE FOUR.
+
+
+    # Fig. 2
+
+    THE Critical Graph C15,3.
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_12_0.png)
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_12_1.png)
+
+
+    To determine critical graphs, we analyzed graphs of degree four, i.e. CirculantGraph(n,l)
+    with $n \in [2,80]$, $l=\{1,j\}$, and $j \in [2,20]$. We identified 121 critical
+    graphs with degree four in this range whose are visualized in Figure 1. Furthermore,
+    we implemented a search for critical circulant graphs of degree s, i.e. for CirculantGraph(n,L)
+    with $|L|=s$. We determined in total 127 critical graphs within this range. Due
+    to space limits, they are given in the full version [4]
+
+
+    To conclude this section, we present a general rule for the search of circulant
+    graphs to determine whether they are critical or not. We can see that Theorem
+    23 is the following
+
+
+    > Definition 5. Let $n, j \in \mathbb{N}$, define the circulant graph $C_{n,j}
+    = (\{u_0, \dots, u_{n-1}\}, E_{n,j})$ where $E_{n,j} = \{u_i, u_{i+j} \pmod n\}
+    \cup \{u_i, u_{i-j} \pmod n\\}$, where for all $i \in \{0, \dots, n-1\}$, it has
+
+    $$E_{n,j}^+ = \{u_i, u_{i+j} \pmod n\}, \quad E_{n,j}^- = \{u_i, u_{i-j} \pmod
+    n\}$$$
+
+
+    Thus, $C_{n,j} = CirculantGraph(n,L)$ where $L=\{j\}$. Figure 2 illustrates the
+    graph $C_{15,3}$.
+
+
+    +   Lemma 1. The minimum vertex cover of graph $C_{n,j}$ is $n-d_j$, a graph is
+    critical if $n \le 2d_j$ or $n-d_j$ is a multiple of $d_j$.
+
+
+    +   Theorem 4. $C_{n,j}$ is a critical graph if $n \le 2d_j$ or $n-d_j$ is a multiple
+    of $d_j$.
+
+
+    # 5. Extensions for the Efficient Generation of Graphs
+
+
+    To obtain a variety of graphs, one needs efficient generation methods and patterns.
+    This section introduces two methods which can produce critical graphs by extending
+    cycles of odd length. They are called the parallel extension (see Figure 3a),
+    and the chain extension (see Figure 3b). Here let us consider the parallel extension
+
+
+    First, let $G = (V,E)$ be an undirected graph and $U \subseteq V$ be a subset
+    of vertices of $G$. $U$ is called a VC-Overlap if for every vertex cover $C$ of
+    $G$, $U \subseteq C$. If for any vertex $u \in U$, there exists a vertex cover
+    $C$ of $G$ such that $u \in C$ and $U \setminus \{u\} \subseteq C$, then $U$ is
+    a 1-VC-Overlap. Let be be a new vertex and $U \subseteq V$. Then, the extension
+    of $G$ as $U$ and $V$ is
+
+
+    Definition 5.1. Let $G = (V,E)$ be an undirected graph and $U \subseteq V$ be
+    a subset of vertices of $G$. $U$ is called a VC-Overlap if for every vertex cover
+    $C$ of $G$, $U \subseteq C$. If for any vertex $u \in U$, there exists a vertex
+    cover $C$ of $G$ such that $u \in C$ and $U \setminus \{u\} \subseteq C$, then
+    $U$ is a 1-VC-Overlap.
+
+
+    $\Gamma(G,U) = \{{u,v\} \mid u \in U, v \in V}$
+
+
+    Observation 5.2. If $G = (V,E)$ is an VC-Overlap $U$ and $V$, then the minimum
+    vertex cover of $G \cup U$ is given by the size of a minimum vertex cover of $G$
+    plus $|U|$.
+
+
+    Observation 5.3. If $G$ is a critical graph $(V,E)$, a 1-VC-Overlap $U$, and a
+    new vertex $v$, then $\Gamma(G,U)$ is U-critical.
+
+
+    Theorem 5.4. If a graph $G=(V,E)$, a $U \subseteq V$ is a 1-VC-Overlap, and a
+    new vertex $u$ is added, then $G$ is critical if $\Gamma(G,U)$ is critical.
+
+
+    If $U$ is given by a vertex of $G$ its plus-neighbor, Theorem 5.4 does not provide
+    us with an efficient method for constructing critical graphs. For this purpose,
+    the following definition simplifies the extension $\Gamma(G,U)$.
+
+
+    Definition 5.3 (Parallel Extension): Let $G = (V,E)$ be an undirected graph and
+    $v \in V$ be a vertex of $G$. Define $G'' = (V \setminus \{v\}, E \cup \{{u,v\}
+    \mid u \in U\})$ to be the graph without $v$. For an undirected graph $G = (V,E)$
+    and a vertex $v \in N_G(v) = \{u \mid \{u,v\} \in E\}$, denote the degree of $v$
+    in $G$.
+
+
+    ISBN:10-6312-456-1, CSREA Press'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# TWO CRITICAL GRAPHS WHICH GENERATED FROM A CYCLE OF FIVE VERTICES.
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_13_0.png)
+
+
+    Let $e=\{u,v\} \in E$ be an edge of $G$. Then $v$ neighbor-equivalence $N_G(v)
+    \setminus \{v\} = N_G(u) \setminus \{v\}$. Moreover, let $G$ be a family of undirected
+    graphs, then the parallel extension $\Gamma_{e}(G)$ of $\Gamma(G)$ consists of
+    graphs that can be generated from any element of $G$. $G=(u,v) \in E$ by adding
+    at least one $v'' \in V$, it holds that $v'' \in N(u)'' \in N(v)'' \cupcup \{v''\}$.
+    We call the parallel extension of $e$.
+
+
+    Define $\Gamma_{e}^{0}(G) = \Gamma(G)$ and $\Gamma_{e}^{k}(G) = \Gamma_{e}^{k-1}(\Gamma(G))$.
+
+
+    ```
+
+    $\Gamma_{e}^{\infty}(G) = \bigcup_{k\in\{0,\\infty\}} \Gamma_{e}^{k}(G)$
+
+    ```
+
+
+    for the transitive closure of $G$. If $G=$ is a single graph, then we use $\Gamma_{e}(G)$
+    and $\Gamma_{e}^{\infty}(G)$ instead of $\Gamma_{u}(G)$ and $\Gamma_{v}(G)$.
+
+
+    A minimum vertex cover for any graph $G$ in $\Gamma_{e}^{\infty}(G)$ can be determined
+    from a minimum vertex cover of $G''$.
+
+
+    **Theorem 5.6.** *Let $G=(V,E)$ be an undirected graph and $e=\{u,v\} \in E$ such
+    that $u$ and $v$ are neighbor-equivalent. Let $U$ be a minimum vertex cover for
+    $G''$. Then $U \cup \{u\}$ is a minimum vertex cover for $G$.*
+
+
+    **Definition 5.7.** *Let $G$ be a family of graphs with minimum vertex cover size
+    $n$, then the minimum vertex cover size of graph $G$ in $\Gamma_{e}^{\infty}(G)$
+    is $n+k$.*
+
+
+    We show that a parallel extension of any critical graph gives a critical graph.
+
+
+    **Theorem 5.8.** *If $G$ is a critical graph, then all graphs in $\Gamma_{e}^{\infty}(G)$
+    are critical and critical.*
+
+
+    **Observation 5.9.** *Let $G$ be a critical graph. Then, all cliques and all clc
+    denote the family of all cycles of odd length.*
+
+
+    Let $C$ denote the family of length three, then we assume that a graph consists
+    of only one node is in $C$ and in $C''$. Moreover, we assume that a graph that
+    consists of only two connected nodes is in $C$. Then, we have
+
+
+    **Observation 5.10.** *Let $C \subset \Gamma_{e}(G)$ and $C'' \subset \Gamma_{e}(G_{1})$
+    where $G_{1}=\{u,v\}, \{u,y\}, \{y,v\} \cup \{e\}$ and if $G_{2}$ denotes the
+    cycle of length three, then we have
+
+
+    Thus, simple edges and cycles of length interest candidates to start a generation
+    process for critical graphs. Based on the following observation, one can show
+    that the relation-equivalence can be used to define equivalence classes.
+
+
+    The analysis of the equivalence classes leads to the observation that graphs can
+    be generated from two different cycles of odd length is always true. Thus, we
+    look for a cycle of odd length. Critical graph of Figure 3.b shows which a graph
+    yields a second type of cycle.
+
+
+    **Definition 5.12 (Chain Extension).** *Let $G=(V,E)$ be an undirected graph and
+    $e=\{u,v\} \in E$ be an edge of $G$. If we add a new node $x$ and add edges $\{u,x\},
+    \{x,y\}, \{y,v\} \cup \{e\}$, then it is called a chain extension of $e$.
+
+
+    Let $G$ be a family of undirected graphs, define $\Gamma_{e}(G)$ be the set of
+    graphs that can be generated from any $G=(u,v) \in E$ by one chain extension.
+    Then $\Gamma_{e}^{k}(G)$ denotes the transitive closure of length $k$ over $G$.
+
+
+    If we apply the extension $k$ times, then the set of graphs is denoted by $\Gamma_{e}^{k}(G)$.
+    If $G$ is a single graph, the graphs in $\Gamma_{e}^{k}(G)$ use the critical graph.
+
+
+    Chain extensions do not result in critical graphs if the original graph is critical.
+    A graph that consists of a single edge. This extension leads to a graph of four
+    vertices, and therefore in a critical graph.
+
+
+    **Theorem 5.13.** *Let an edge $e=\{u
+
+
+    **Theorem 5.14.** *Let $G$ be a family of critical graphs, If $G$ does not contain
+    the graph with a single node then the graph with each edge and if $G$ fulfills'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: "# Intl' Conf. Foundations of Computer Science | FCS'17\n\n![](img/447fbed58dc921d81e92b3d3f8047037_14_0.png)\n\
+    \n**Lemma 5.18: [Lower-Bound Lemma]** Let G=(V, E) be a graph generated according\
+    \ to Definition 3.1, where B is a graph generated according to chains of $\\Gamma_{\t\
+    ext{chain},\text{par}}(G \\cup \\{K_1, K_2\\})$. Let $(\\alpha_G; \\alpha_G(n-1);\
+    \ \\dots; \\alpha_1)$ denote the lexicographical minimal vector that follows the\
+    \ following equations\n\n```\n$n(G) = \\sum_{i=1}^{n(G)} i \\cdot \\alpha_i \\\
+    quad \\text{and} \\quad c(G) = \\sum_{i=1}^{c(G)} (i-1) \\cdot \\alpha_i$.\n```\n\
+    \nThen, we have $m(G) \\ge \\sum_{i=1}^{n(G)} \\frac{i \\cdot (i-1)}{2} \\cdot\
+    \ \\alpha_i$.\n\nWe conclude this with the observation that the vectors $\\vec{a}\
+    \ = (\\alpha_n, \\dots, \\alpha_1)$ fulfill\n\n```\n$n = \\sum_{i=1}^{n} i \\\
+    cdot \\alpha_i \\quad \\text{and} \\quad c = \\sum_{i=1}^{c} (i-1) \\cdot \\alpha_i$.\n\
+    ```\n\nOne can show that if $\\tilde{a} = (\\tilde{\\alpha}_n, \\dots, \\tilde{\\\
+    alpha}_1)$ there are two indices $i, j$ with $\tilde{\\alpha}_i > \\tilde{\\alpha}_j\
+    \ \\ge 0$ and $i < j$; then the vector $\\vec{a} = (\\alpha_n, \\dots, \\alpha_1)$\
+    \ satisfies\n\n```\n$\\alpha_k = \\begin{cases} \\tilde{\\alpha}_k & \\text{for\
+    \ } k \\notin \\{i, i-1, j, j+1\\} \\ \\tilde{\\alpha}_k & \\text{for } k \\in\
+    \ \\{i, j\\} \\ \\alpha_k & \\text{for } k \\in \\{i-1, j+1\\} \\end{cases}$\n\
+    ```\n\nis a solution for the two equations on $c$ and $n$. On the other hand,\n\
+    \nthe double-cover condition, then all graphs of $\\Gamma_{\text{chain}}(\\mathcal{G})$\
+    \ and $\\Gamma_{\text{par}}(\\mathcal{G})$ are critical and fulfill the double-cover\
+    \ condition.\n\n*Corollary 5.15.* Let $\\mathcal{G}$ be a family of critical graphs\
+    \ without the single-node graph and the single-edge graph fulfilling the double-cover\
+    \ condition, then any graph of $\\Gamma_{\text{chain}}(\\mathcal{G})$ is critical.\n\
+    \nSo, the parallel and chain extension preserve the property that a graph is critical\
+    \ or not. One can also show that the inverse preserves this property. The proofs\
+    \ for such extensions can be found in the full version of this work [4].\n\n*Definition\
+    \ 5.16.* Let $\\mathcal{G}$ be a family of undirected graphs, then $\\Gamma_{\t\
+    ext{chain},\\mathcal{G}} = \\Gamma_{\text{chain}}(\\mathcal{G}) \\cup \\Gamma_{\t\
+    ext{par}}(\\mathcal{G})$.\n\nLet $G^* \\in \\Gamma_{\text{chain},\\mathcal{G}}$\
+    \ denote the transitive closure of $\\mathcal{G}$ over $\\Gamma_{\text{chain}}$.\
+    \ If we extend the chain $k$ times, then the result of graphs is generated by\
+    \ $\\Gamma_{\text{par}}(G^*)$. If $\\mathcal{G}$ consists of a single graph $G$,\
+    \ we use the nodes $\\Gamma_{\text{chain}}(G)$ and $\\Gamma_{\text{par}}(G)$.\n\
+    \nThere are connected graphs that cannot be generated by chain and parallel extensions\
+    \ from a cycle of three. An example is illustrated in Figure 4.\n\nIn generating\
+    \ our benchmarks, we use the fact that the set of base graphs $B$ can be generated\
+    \ by parallel and chain extensions. For each such generated graph, we use upper\
+    \ bounds on the number of edges used, and lower bounds on the size of a minimum\
+    \ vertex cover. For a given graph $G=(V, E)$, define $n(G) = |V|$ as the number\
+    \ of vertices of $G$, $m(G)$ as the number of edges of $G$, and $c(G)$ as the\
+    \ size of the minimum vertex cover of $G$, and $\tilde{c}(G)$ as the number of\
+    \ vertices not in the cover. We use upper bounds on $m(G)$ and $\tilde{c}(G)$.\
+    \ Since there are no edges between two vertices that are not in the cover, we\
+    \ can conclude\n\n```\n$m(G) \\le \\frac{c(G)(n(G)+1)}{2} \\quad \\text{and} \\\
+    quad \\tilde{c}(G) \\le \\frac{(n(G)-c(G))(c(G)+1)}{2}$\n```\n\nGiven two vectors\
+    \ $\\vec{u} = (u_1, \\dots, u_n)$ and $\\vec{v} = (v_1, \\dots, v_n)$, we say\
+    \ $\\vec{u}$ lexicographically smaller than $\\vec{v}$, denoted by $\\vec{u} <\
+    \ \\vec{v}$, if both vectors are equal or if there exists an index $i \\in \\\
+    {1, \\dots, n\\}$ such that $u_i < v_i$ and $u_j = v_j$ for $j \\in \\{1, \\dots,\
+    \ i-1\\}$.\n\n*Observation 5.17.* For any graph $G$, it holds that\n\n```\n$m(G)\
+    \ \\le c(G) \\cdot (n(G)-c(G))$\n```\n\nThen we can conclude that the lexicographical\
+    \ minimal vector $c^*$ has at most two non-zero entries. If it has two non-zero\
+    \ entries, then they exist at consecutive positions $h, l$. If $h=l$, then $c^*\
+    \ = (n-c)$. If $h \\neq l$, then $c^*_h=n-c$, and $c^*_i=0$ for all $i \\notin\
+    \ \\{h, l\\}$.\n\n# 6. Application: Generating Hard Instances for Benchmarks\n\
+    \nOne application of our graphs and generation processes is based on the construction\
+    \ of graphs that are difficult to solve for algorithms focused on graph problems,\
+    \ e.g., the minimum vertex cover problem. Therefore, so-generated graphs have\
+    \ the potential of use as benchmarks for challenging current and future algorithms.\
+    \ This section shows the results of an exemplary test to\n\nISBN: 10-6132-456-1,\
+    \ CREA Press"
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# Intl''Conf. Foundations of Computer Science |FCS|17
+
+
+    # Fig. 5
+
+    ILL야 OF A GRAPH OF Gn_{n,m,n_c}
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_15_0.png)
+
+
+    | k | Distance of NuMVC | Opt. | Distance of Greedy Graph | Opt. | Avg. |
+
+    |---|---|---|---|---|-|
+
+    | 150 | 1522 | 10 | 0 | 171 | 0 | 26 |
+
+    | 150 | 811 | 10 | 0 | 105 | 0 | 25 |
+
+    | 150 | 1372 | 10 | 0 | 128 | 0 | 32 |
+
+    | 150 | 791 | 9 | 11 | 156 | 14 | 18 |
+
+    | 150 | 918 | 10 | 0 | 110 | 0 | 0 |
+
+    | 150 | 1326 | 10 | 0 | 80 | 0 | 54 |
+
+    | 150 | 1417 | 8 | 29 | 170 | 14 | 26 |
+
+    | 150 | 1428 | 10 | 0 | 10 | 0 | 0 |
+
+
+    Table 1
+
+    1500 SECONDS PER RUN OF NUMVC AND GREEDY FOR A MAXIMUM OF GRAPHS CONSTRUCTED WITH
+    OUR APPROACH; n(G) and m(G) = n denote THE NUMBER OF VERTICES AND EDGES, RESPECTIVELY
+    WE CONSTRUCTED TEN GRAPHS FOR EACH COMBINATION OF i and k.# OPT THE NUMBER OF
+    RUNS WHERE THE RESPECTIVE ALGORITHM FOUND THE OPTIMAL SOLUTION. AVG. AND DISTANCE
+    BETWEEN AVERAGE AND VERTICES ABOVE THE OPTIMUM.
+
+
+    results for NuMVC for number of vertices n and edges m, where m = n^n is determined
+    by a polynomial function on n. The table presents the quality of the fixed vertex
+    cover, where the first column, Avg. opt. presents the number of instances where
+    NuMVC found an optimal solution, and the remaining two columns show the average
+    and distance between the fixed vertex cover by NuMVC and the minimum vertex cover.
+    We can observe that the behavior of NuMVC take for k=1.7. For sparse or dense
+    graphs, k=1 to k=1.9, NuMVC finds an optimal solution. This leads to the variation
+    between 1.5 and 1.7.
+
+
+    state-of-the-art NuMVC and Greedy Reference as reference to solve within acceptable
+    time on our graphs.
+
+
+    **Generating Instances.** To find graphs that are hard to solve within acceptable
+    time we used a restricted version of the randomized graph generator based on Definition
+    3.1.
+
+
+    **Results for Greedy.** We observed that the Naive-Greedy algorithm produces a
+    result with a maximum degree within the expected range. The experiments show that
+    the Naive-Greedy can determine an optimal solution for dense graphs. As NuMVC
+    graphs, for k=1.7 it is difficult.
+
+
+    By generating graphs we can verify that two critical graphs in the first phase
+    of G_{f,m,n} are sufficient for finding hard graphs.
+
+
+    +   - We generated two critical graphs from B = G_{f,m,n}, such that their accumulated
+    minimum vertex cover is approximately n/4 (the process generates a graph with
+    minimum vertex cover of n/4 and stops execution).
+
+    - Upon, we adding the remaining vertices to get a graph of size n.
+
+    - Then, we add edges to obtain a graph with the desired number of edges, ensuring
+    that no two vertices are in the same edge cover.
+
+    - Finally, we perform the order of the vertices.
+
+
+    Throughout all steps, we keep track of one optimal vertex cover of the graph.
+
+
+    We analyzed the performance of the updated version of NuMVC (v2015.8), where we
+    used the original code by their authors.
+
+
+    **Results for NuMVC.** Table 1 summarizes our experi-
+
+
+    G_{n,m,n}, outputs a graph with n vertices and m
+
+    edges such that for a subset V ⊆ U of vertices
+
+    each edge is chosen from the set of edges
+
+    connecting a vertex of V with another vertex
+
+    of V (see Fig. 5).
+
+
+    Clearly, Vc is an upper bound for the minimum vertex cover of graphs generated
+    by G_{n,m,n}.
+
+    For our experiments, we chose n=3500 and generated random graphs for each n_c
+    in ∈ {2000, 2050, 2110, 2200}. For all generated graphs, NuMVC found a solution
+    after a simple improvement that has been within the upper bound of V_c.
+
+
+    > http://cls.ios.ac.cn/~cais/MVC.html
+
+
+    ISBN: 1-60132-456-1, CREA Press'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Intl'' Conf. Foundations of Computer Science | FCS''17 |
+
+
+    conclude from these results that using the structure of critical graphs increases
+    the probability of finding hard instances. Moreover, the exact size of a cover
+    is highly useful for determining the quality of the solutions determined by NuMVC
+
+
+    # 7. Conclusions
+
+
+    This paper introduced the concept of critical graphs for the vertex-cover problem,
+    which graphs cannot be reduced without reducing their number of vertices. By starting
+    with random vertices, it allows us to generate random graphs from which we can
+    estimate the size of optimal cover for testing. The random process is parameterized
+    by the number of vertices, cover as well as number of edges. We introduced a set
+    of extensions that allow us to generate a sufficiently large set of critical graphs
+    as base for constructing graphs. We showed that our extensions allow to refine
+    the process very effectively.
+
+
+    In general, another application potential is the construction of graphs with instances
+    that are difficult to solve. With our realistic heuristic NuMVC and Greedy we
+    estimated the minimum cover by more than 100 vertices for graphs generated with
+    our process with 3500 vertices. By analyzing the behavior of NuMVC and Greedy
+    on random graphs with a structure like ours, we observed that these instances
+    appear necessary for hard instances. We will continue this research in the future.
+
+
+    In general, critical graphs are interesting objects to study the understanding
+    of hard problems. Our proposed generation process, if we were aware of all critical
+    instances, one could easily create all graphs from our process. Through this,
+    we think that the task of finding critical instances is from complete. We have
+    started the systematic search of small instances and will continue report on their
+    findings in the future.
+
+
+    Furthermore, we analyzed the quality of GulantGraphs for benchmarking purposes.
+    At an early stage, we found that instances with a small size of internal cliques
+    were solvable by local-search algorithms such as NuMVC, which shows that the verification
+    of partial results is crucial. We plan to continue our research in the direction
+    of constructing larger graphs from GulantGraphs and will also report on them.
+
+
+    # References
+
+
+    +   [1] Shaowei Chen, Kai Su, Chao Liu, and Abdullah Sattar. NuMVC: An Efficient
+    Local Search Algorithm for Minimum Vertex Cover. J. Artif. Intell. Res. (JAIR),
+    668–617, 2016.
+
+
+    +   [2] Irit Dinur and Samuel Safra. On the Hardness of Approximating Minimum
+    Vertex Cover. Annals of Mathematics, 429–485, 2005.
+
+
+    +   [3] M. R. Garey and David Johnson, Computers and Intractability: A Guide to
+    the Theory of NP-Completeness, W H. Press, 1979.
+
+
+    +   [4] Alexander Jakobov, Nakamura Guitlin, and Stefan Luks. Critical graphs
+    for the Minimum-Vertex Cover Problem. arxiv:1705.04111, 2017. https://arxiv.org/abs/1705.04111.
+
+
+    +   [5] George Karloff. A polynomial approximation ratio for the vertex cover
+    problem. In CALCO, 5890 of LNCS, pages 1043–1050. Springer, 2000.
+
+
+    +   [6] Martin M. Karp. Reducibility Among Combinatorial Problems. In Complexity
+    of Computer Problems, IBM Business Research Center, 1972.
+
+
+    +   [7] Veliit Kavakar, Ayşe Yıld and Orhan Dagdelen. Distributed Vertex Cover
+    Algorithms For Wireless Sensor Networks. Int. J. Comput. Net., 18(4): 2215–2228,
+    2014.
+
+
+    +   [8] Sherefaziz Pirzada and Ayşe Dildar. Algorithms for Graph Partitioning.
+    In EAM, 11, pages 19–38, 2007.
+
+
+    +   [9] M. Mitchell and E. Lee, The Phase Transition in Binary Constraint Satisfaction
+    Problems. Artificial Intelligence, 91(1-2):85–118, 1996.
+
+
+    +   [10] Ke Xu. BHOSLIB: Benchmarks with Hidden Options in Graph Problems, 2005,
+    https://www.nlside.bua.edu.cn/
+
+
+    +   [11] Ke Xu, Frédéric Bousquet, Henry Ferry, and Isabelle Leclerc. Random Constraint
+    Satisfaction: Easy-Hard Transitions, 539:53–67, 2004.
+
+
+    +   [12] Ke Xu and Wei Li. Many Hard Instances in Exact Phase in Random Constraint
+    Satisfaction. Journal of Theoretical Computer Science, 335(3):291–302, 2006.
+
+
+    +   [13] Ke Xu and Wei Li. Many Hard Instances in Exact Phase Transitions. Theoretical
+    Computer Science, 355(3):291–302, 2006.
+
+
+    +   [14] Yong Wang, Yiyu Fischer, Jun Jiang, and Hong Zhou. Approximating the
+    Minimum Weak Vertex Cover. Theor. Comput. Sci. (TCS), 36(1):99–105, 2006.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# Some results for Distancing Dominating Set
+
+
+    Yong Zhang
+
+    Department of Computer Science, University of Pennsylvania, Kutztown, PA 19530
+
+
+    Abstract— We study the parameterized complexity of d-DISTANCE K-DOMINATING SET
+    in bipartite graphs and $K_{1,k}$-free graphs. We show that d-DISTANCE K-DOMINATING
+    SET is W[2]-hard in bipartite graphs and W[1]-hard in $K_{1,k}$-free graphs.
+
+
+    Keywords: parameterized complexity, dominating set
+
+
+    # 1. Introduction
+
+
+    Given a simple graph $G=(V,E)$, let $N(v)$ denote the open neighborhood of $v$
+    in $G$, and $N[v]$ denote the close neighborhood of $v$ in $G$. The distance $d(u,v)$
+    between $u$ and $v$ is the length of the path between them in $G$. A $d$-dominating
+    set of $G$ is a set of vertices $V$ of $G$ such that every vertex of $V$ is within
+    distance $d$ to some vertex in $V$.
+
+
+    Given a graph $G$, a $d$-DOMINATING SET and a positive integer $k$, the problem
+    is to determine whether $G$ has a $d$-dominating set of size at most $k$.
+
+
+    The well studied $k$-DOMINATING SET problem can be considered as a special case
+    of $d$-DOMINATING SET when $d=1$. The concept of dominating set was introduced
+    by Slater [1] and Hed [2]. The application of dominating set in wireless networks
+    was introduced by Wu and Li [3]; Prathiba et al. [4] studied the problem of finding
+    a dominating set in extended graphs [5]. For more details and references on distance
+    domination, see Hemming [6].
+
+
+    Parameterized complexity is a powerful framework that deals with intractable problems.
+    A parameterized problem is a set of instances $(x,k)$, where $x$ is the input
+    instance and $k$ is a nonnegative integer parameter. The parameterized problem
+    is said to be parameterized tractable if there is an algorithm that solves the
+    problem in time $f(k)|x|^c$, where $f$ is a function solely dependent on $k$,
+    and $|x|$ is the size of the input. A kernelization of a parameterized problem
+    is a reduction to a kernel, a polynomial-time algorithm to transform any input
+    $(x,k)$ to a reduced instance $(x'',k'')$ with $k'' \le k$ and $|x''| \le g(k)$.
+    A parameterized problem is fixed tractable if and only if it is kernelizable.
+    On the other hand, many fixed tractable problems are classified in a hierarchy
+    of complexity classes $W[1] \le W[2] \le \dots \le W[t]$. For example, $k$-INDEPENDENT
+    SET and $k$-CLIQUE
+
+
+    are known to be $W[1]$-complete and $k$-DOMINATING SET is known to be $W[2]$-complete.
+    We refer the readers to [7] for more details.
+
+
+    $d$-DOMINATING SET is known to be W[2]-hard in graphs of diameter $(d+1)$ [8]
+    and in interval graphs and their complements [9]. On the other hand, it has a
+    size kernel in any dense graph class [10]. We show that $d$-DOMINATING SET remains
+    W[2]-hard when restricted to special graph classes. In particular, we show that
+    $d$-DOMINATING SET remains W[2]-hard in bipartite graphs, and in triangle-free
+    graphs. $K_{1,k}$-free graph is a graph without We also show it remains W[1]-hard
+    in $K_{1,k}$-free graphs.
+
+
+    # 2. Main Results
+
+
+    We show that $d$-DOMINATING SET is W[2]-hard when restricted to bipartite graphs.
+
+
+    > Theorem 2: $d$-DOMINATING SET is W[2]-hard in bipartite graphs.
+
+
+    We prove the case $d=2$ and show how the construction can be generalized to the
+    case of $d$. We do this by reducing $W[2]$-complete [6], to $d$-DOMINATING SET.
+    Given an input graph $G=(V,E)$ for $k$-DOMINATING SET, we show construct a bipartite
+    graph $B=(V'',E'')$. Let $V_1 = \{v_1 |mid v \in V\}$, $V_2 = \{v_2 |mid v \in
+    V\}$, and $V_3 = \{v_3 |mid v \in V\}$. $V''$ is a union of $V_1, V_2$, and $V_3$
+    and three dummy vertices $\{x, y, z\}$ of the following:
+
+
+    +   $E_1 = \{\{v_1, v\} | v \in V\}$$
+
+    E_2 = \{\{v_2, v\} | v \in V\}$
+
+    E_3 = \{\{v_3, u\} | u \in N[v]\}$$
+
+    E_4 = \{\{x, y\}, \{x, z\}, \{y, z\}\}$
+
+
+    This completes the proof. It is easy to show that $B$ is bipartite. We show that
+    $G$ has a dominating set of size $k$ if and only if $B$ has a 2-dominating set
+    of size $k+1$. Let $D$ be a 2-dominating set of size $k+1$ in $G$. Then $D^* =
+    \{v_1 |mid v \in D\}$ is a 2-dominating set of size $k$. In the other direction,
+    let $x$ or $y$ be in $H$. If $y$ is, we replace $y$ with $x$'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "and still have a 2-dominating set $x$ because it dominates all vertices by\
+    \ $y$. By the same argument, for a vertex $v$ in $H$, if $v$ is a vertex of $V_2$\
+    \ or $V_3$, we can replace it with the corresponding vertex $v'$ in $V_1$ and\
+    \ still transform $H$ into a 2-dominating set $H'$ such that $H'$ contains at\
+    \ most $k-1$ vertices from $V_1$. Then $K = \\{H'\\}$ is a dominating clique of\
+    \ at most $k$ vertices. For any $u \notin K$, $u$ is 2-dominated by a vertex $v'\
+    \ \\in H'$, which must be dominated by $v$ in $K$.\n\nTo generalize to $d$-dominating\
+    \ set, we only need to modify the construction by replacing the edges $x$ and\
+    \ $v_1$, and $v_1$ and $v_2$ with chains of length $d-1$.\n\nNext we want to consider\
+    \ graph-free graphs, $K_{ij}$-free, $d$-DOMINATING SET is W[1]. We then reduce\
+    \ the problem to $k$-MULTICOLORE CLIQUE: Given a graph $G=(V,E)$ and a $k$-coloring\
+    \ $V\\to\\{1,2,\\dots,k\\}$, decide whether $G$ has a clique with $k$ vertices\
+    \ of each color. A $k$-MULTICOLORE CLIQUE is shown to be $W[1]$-complete by Fellows\
+    \ et al. [11].\n\n# Theorem 2.2. $d$-DOMINATING SET is $W[1]$-hard.\n\n*Proof.*\
+    \ We prove the case when $d=2$ and then show how to generalize it. For $G = (V,E)$\
+    \ we have an instance of $k$-MULTICOLORE CLIQUE. For each color $i$, $1 \\le i\
+    \ \\le k$, let $V_i$ be the set of vertices in $G$ with color $i$. Let $n_i$ be\
+    \ the number of vertices in $V_i$. Without loss of generality, we assume the two\
+    \ endpoints of any edge in $G$ have different color. For any two colors $i$ and\
+    \ $j$, $1 \\le i < j \\le k$, let $E_{ij}$ be the set of edges in $G$ that connect\
+    \ vertices in $V_i$ and $V_j$. Let $m_{ij}$ be the number of edges in $E_{ij}$.\n\
+    \nWe construct a graph $G'=(V',E')$. The vertex set $V'$ is a union of the following\
+    \ sets:\n\n+   $S_1 = \\{a_u^1 \\mid u \\in V_1\\}$\n$S_2 = \\{a_u^2 \\mid u \\\
+    in V_2\\}$\n$S_3 = \\{e_{u,v} \\mid (u,v) \\in E\\}$\n$S_4 = \\{e_{u,v}^3 \\mid\
+    \ (u,v) \\in E\\}$\n$S_5 = \\{c_{u,v} \\mid (u,v) \\in E\\}$\n$S_6 = \\{x_u^i\
+    \ \\mid 1 \\le i \\le k\\}$\n$S_7 = \\{y_u^j \\mid 1 \\le i < j \\le k\\}$\n\n\
+    Generally, we have two vertices for each vertex in $G$ ($S_1$ and $S_2$), and\
+    \ two vertices for each edge in $G$ ($S_3$ and $S_4$). The edges in $G'$ are described\
+    \ as follows: The sets of vertices in $S_1, S_2, S_3$, and $S_5$ form three separate\
+    \ induced cliques. In addition to the edges in the cliques, $G'$ also contains\
+    \ the following set\n\nedges:\n\n+   $T_1 = \\{(a_u^1, a_u^2) \\mid u \\in V\\\
+    }$\n$T_2 = \\{(b_u^1, b_u^2) \\mid u \\in V\\}$\n$T_3 = \\{(e_{u,v}^3, e_{u,v}^4)\
+    \ \\mid (u,v) \\in E\\}$\n$T_4 = \\{(x_u^i, x_u^j) \\mid u \\in V, 1 \\le i <\
+    \ j \\le k\\}$\n$T_5 = \\{(y_u^i, y_u^j) \\mid u \\in V, 1 \\le i < j \\le k\\\
+    }$\n$T_6 = \\{(y_u^i, y_v^j) \\mid uv \\in E_{ij}, 1 \\le i < j \\le k\\}$\n\n\
+    The construction is complete. There are three classes of edges and four sets of\
+    \ vertices arranged independently. One can easily see that the largest star in\
+    \ $G'$ is $K_{1,3}$.\n\nIf we have a $k$-clique in $G'$ then there is a 2-dominating\
+    \ set of size $k'=k+4$. For the direct implication, suppose $G=(V,E)$ has a $k$-multicolored\
+    \ clique $K$ such that $V(K)=\\{v_i \\mid 1 \\le i \\le k\\\\}$; then one can\
+    \ find the set $D$ of vertices in $V'$ which is a 2-dominating set of size $k'=k+4$.\n\
+    \nFor the reverse implication, suppose $D$ has a clique of size $k'$ in $G'$.\
+    \ For some $i$, either $x_u^i$ or $x_u^j$ with $u \\in V$ are in $D$. In De, we\
+    \ replace them with a random 2-dominating set $D_i$ of $V_i$ which is a 2-dominating\
+    \ set of $V_i$. By the same argument, the vertices $y_u^i$ and $y_v^j$ with $1\
+    \ \\le i < j \\le k$ and $uv \\in E_{ij}$ are in $D$. In D, we $D$. The set of\
+    \ vertices in $V$ must be dominated by either vertices of the form $a_u^1, a_u^2$,\
+    \ or $b_u^1$. Given a free vertex $b$ in $D$ with $e=(u,v)$, we dominate $u,v$\
+    \ and form a $k$-multicolored clique in $G$.\n\nTo generalize to $d$-dominating\
+    \ set, we must reconstruct the construction by replacing the edges between $a_u^1$\
+    \ and $a_u^2$, $x_u^i$ and $x_u^j$, and $y_u^i$ and $y_v^j$ with chains of length\
+    \ $d-1$. The argument follows similarly.\n\n# References\n\n[1] P. Steiner, \"\
+    Domination in graphs,\" Journal of Association for Computer Machinery, 23, pp.446-450,\
+    \ 1976.\n\n[2] M. A. Henning, O. R. Slater, and H. C. Stewart, \"Bounds on domination\
+    \ parameters,\" Journal of Combinatorics, Information and System Systems, 2(1),\
+    \ pp. 18-19, 1998.\n\n[3] J. W. Lu, \"Domination and its application in hoc networks\
+    \ with undirected links,\" in Proceedings of the 2000 International Conference\
+    \ on Parallel Processing, 2000, pp. 189-197."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '[4] E. Prathiba and S. P. M. and A. A. Kinsley, "Algorithms to determine the
+    distance (dominating sets of es(n, k))," Procedia Computer Science, pp. 342–350,
+    2015.
+
+
+    [5] M. A. Henning, "Distance domination in graphs," Domination in Graphs: Advanced
+    Topics, pp. 321–349, 1998.
+
+
+    [6] R. G. Downey and M. R. Fellows, Parameterized Complexity. Springer Berlin,
+    1999.
+
+
+    [7] J. Guo and R. Niedermeier, "Invitation to data reduction and problem complexity,"
+    SIAM News, vol. 40, no. 1, pp. 31–45, 2007.
+
+
+    [8] D. Lokshtano, N. Mishra, G. Philip, M. S. Ramanujan, and S. Saurabh, "Hardness
+    of d-dominating on graphs of diameter (d+1)," in International Conference on Parameterization
+    and Exact Computation, 2013, pp. 255–269.
+
+
+    [9] M. Jiang and Y. Zhang, "Parameterized complexity in multiple-interval partition,
+    separation methods," in Proceedings of the 17th Annual International Computing
+    and Combinatorics Conference, Lecture Notes in Computer Science, vol. 6842, 2011.
+
+
+    [10] K. Eckmeyner, A. C. Giannopoulou, S. Kreuter, O. Kwon, M. Pilipczak, R. Rabhanovich,
+    and S. Siebert, "Neighborhood problems for non-dense classes of graphs," 2016.
+
+
+    [11] M. R. Fellows, D. Hermelin, F. Rosamond, and S. Vialette, "On the parameterized
+    complexity of multiple-interval graph problems," Theoretical Computer Science,
+    vol. 410, pp. 53–61, 2009.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# SESSION
+
+
+    # SOFTWARE SYSTEMS AND RELATED ISSUES
+
+
+    Chair(s)
+
+
+    TBA'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# User-level Deterministic Replay via Accurate
+
+    Non-deterministic Event Capture
+
+
+    Jeongakta Lim, Hosong Yoon, Hyunmin Yoon, Yoomee Ko, and Minsoo Ryu
+
+    ¹Department of Computer Science and Engineering, Hanyang University, Seoul, Korea
+
+    ²Department of Electronics and Computer Engineering, Hanyang University, Seoul,
+    Korea
+
+    †jtlim, hsyon, hymun]@rtc.hanyang.ac.kr,ct20032002@naver.com, msryu@hanyang.ac.kr
+
+
+    Abstract – Recently, software that affects human life
+
+    has increased and. For example, we use software
+
+    am almost everything, such as cars, homes, appliances, and
+
+    smart phones. Since bugs can have a devastating effect on
+
+    people, ensuring stability is becoming important.
+
+    Many bugs have been difficult to eliminate. Debuggers do not help
+
+    in eliminating bugs, such as synchronization faults. These
+
+    bugs are caused by non-deterministic events. Events
+
+    our at unpredictable timing and affect the behavior
+
+    of user processes. In this paper, our approach captures and
+
+    plays non-deterministic events of single thread to make the
+
+    thread reproducible and useful for software
+
+    debugging. We replay the events at the end to
+
+    call the non-deterministic events. For this, we have
+
+    help of the ARM debug architecture without having to modify
+
+    our program.
+
+
+    Several bugs as GNU debugger (GDB) have
+
+    been developed to help developers remove these bugs. GDB
+
+    provides many features that allows developers to track and
+
+    modify the process to eliminate bugs. However, these
+
+    debuggers are not very helpful in resolving synchronization
+
+    fault. Bugs are caused not only by problems inside the
+
+    user thread but also by external factors. In this paper, we call
+
+    these non-deterministic faults/events. These non-\eterministic events occur in
+    a variety of ways, such as an
+
+    external interrupt or communication with an external thread. In order to detect
+    with bugs we must be able to capture,
+
+    play, and control non-deterministic events.
+
+
+    Keywords: deterministic replay, non-deterministic,
+
+    system call replay, thread communication
+
+
+    Our approach is to replay all non-deterministic events
+
+    can affect the target thread and perform a deterministic
+
+    replay of the thread based on the recorded events. To
+
+    accomplish this, we need to analyze what non-deterministic
+
+    events are in the thread. This uses the system
+
+    to request external resources or to request kernel
+
+    services. If we capture and replay the non-deterministic
+
+    ofactors of the system, we also need to determine
+
+    events that do not use system threads. Threads
+
+    access the same data by sharing memory and can send signals
+
+    to other to communicate. Non-deterministic events of
+
+    these specific cases are also captured and replayed to achieve
+
+    our goal.
+
+
+    # 1 Introduction
+
+
+    Recently, software has been applied to various
+
+    ologies. Software is becoming larger and complex
+
+    to provide more functionality. As such, software bugs are
+
+    more likely to occur. Research at Cambridge University
+
+    shows that the damage caused by the bugs around the
+
+    is more than $12 billion per year, with a
+
+    million lines of automotive and aircraft software directly
+
+    related to the user. Ensuring software
+
+    stability is very important. However, it is difficult
+
+    to guarantee the software reliability with the conventional
+
+    debugging and testing methods.
+
+
+    Software bugs affect user programs in a variety of ways,
+
+    d to varying degrees. Bugs can have an impact on other
+
+    programs, but they can also cause serious errors, such as
+
+    the termination of a program. Some bugs that occur or do
+
+    depending on the progress of the program. So it is
+
+    almost impossible to find and remove all bugs.
+
+
+    For our approach, we get help from the ARM debug
+
+    architecture. There is no need to modify the user
+
+    program for our approach.
+
+
+    # 2 Overview of Record-Replay
+
+
+    # 2.1 Main idea
+
+
+    The goal of our record-replay approach is to log all non-\eterministic factors
+    that can act on the target thread
+
+    during the record, and then replay the event at the
+
+    point in the replay. Non-deterministic factors affecting
+
+    target thread are unpredictable events and originating from
+
+    outside the program. These factors are caused by'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: '# Int''l Conf. Foundations of Computer Science | FCS''17 |
+
+
+    system calls or with processes and threads.
+
+    So our paper suggests a record-replay method of non-
+
+    deterministic factors of system calls and communication with
+
+    processes and threads that affect target.
+
+
+    handled, our system will record the signal number and
+
+    point in time when it is handled. This point of time
+
+    includes the user mode register of the target
+
+    and the instruction of target when the signal
+
+    is handled. In inter-thread communication using
+
+    shared memory, the recording method differs in
+
+    h it shares memory address, which is possible
+
+    without the kernel. It makes difficult to detect
+
+    all accessed shared memory. The page table needs to
+
+    modified to detect the shared memory area. We
+
+    change the access permission bit of page in the
+
+    shared memory area. Now, access to shared memory
+
+    caus the exception. We can get the data of the shared
+
+    memory to be accessed in the exception handler.
+
+
+    # 2.2 Recording mechanism
+
+
+    # 2.2.1 System call record
+
+
+    All system calls do not cause non-deterministic factors.
+
+    Therefore, there is no need to record-replay all calls.
+
+    For efficient record-replay, it is necessary to classify
+
+    calls that have non-deterministic factors. First, process control
+
+    functions such as fork() and clone() are deterministic in
+
+    the thread since they affect only the values of the process
+
+    control block. Second, memory control functions such as
+
+    map(), brk(), and munmap() manage virtual\memory functions are deterministic because
+
+    are not detected by hardware or external events.
+
+    The first kind of system calls does not need to be recorded.
+
+    However, I/O functions such as read() and recv() are used
+
+    in interacting with peripheral devices or with
+
+    other processes. These functions can be considered-
+
+    deterministic because it can have an unexpected effect on
+
+    the target. Our system records I/O functions.
+
+
+    We do not need to record the entire function process.
+
+    Our system records factors that may have a non-
+
+    deterministic effect on target thread. I/O system calls
+
+    to the user memory area and return the value of
+
+    system calls affects the thread. For example, read''s system
+
+    calls writes data from the kernel to the user space
+
+    returns the data size. Through recording of data, non-
+
+    deterministic factors of the system call can be recorded.
+
+
+    # 2.2.2 Communication event record
+
+
+    In fact, inter-process communication using message
+
+    or or socket can be handled by system call when
+
+    it happens because using system calls. However, Inter-
+
+    deterministic communication using system call does not use it.
+
+    after organizing shared memory, the process does not
+
+    system call to access shared memory. In this section we
+
+    will show you how to record inter-process communication
+
+    using signal and inter-thread communication using
+
+
+    # 2.3 Replaying mechanism
+
+
+    # 2.3.1 System call replay
+
+
+    I/O system calls can be emulated only by
+
+    copying data. In efficiently replay, we do not
+
+    perform the system call but replay only by copying the data in
+
+    tuser memory area and returning the value. It kicks
+
+    in kernel-operation of the system call and in-kernel
+
+    is faster than the record. Process control functions and memory
+
+    controls do not ensure their in-kernel
+
+    process is.
+
+
+    # 2.3.2 Communication event replay
+
+
+    Inter-process communication using system call be
+
+    produced by system call. First, we will explain the
+
+    replay mechanism of signals, not the Inter-process
+
+    communication method using system calls. The signal
+
+    contains the number of the signal the was
+
+    processed. We get the help of the ARM architecture to
+
+    reproduce exactly when the signal was processed. A set
+
+    block of the instruction in the user mode register
+
+    reaches the instruction where the breakpoint is.
+
+    Then if match in the Exception handler compared to the
+
+    block of instruction counter to the current instruction
+
+    counter, sends a signal to the target thread. These operations
+
+    work as the same signal processed in the record and the
+
+    replay is complete.
+
+
+    Inter-thread communication using shared memory
+
+    is similar to the record mechanism. Accessing the shared
+
+    memory area exceptions and replay shared memory
+
+    data with the log. If process access memory after
+
+    operation, you use the same data as the record. In this
+
+    ya, a replay of communication is performed.
+
+
+    First we know how to handle the signal. Linux
+
+    signal does not deal with a signal immediately when it receives
+
+    signal. It saves the signal in the signal queue, event
+
+    tkernel mode for various reasons as system call and
+
+    interrupt, and handles the signals in the queue by
+
+    one but returning to user mode. in order to
+
+    reproduce the signal, it is important to know not only which
+
+    signal, but when it was handled.
+
+
+    # 3 Implementation
+
+
+    # 3.1 Non-deterministic event record system'
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Int''l. Foundations of Computer Science | FCS''17 |
+
+
+    We illustrate our overall record implementation in Figure 1. As shown in Figure
+    1, Target thread invokes a system call to provide the service provided by kernel.
+    If resources are needed during the system calling, the kernel requires the hardware.
+    This communication affects the behavior of the target thread. The Record-Reply
+    module in the kernel catches external factors that have a non-deterministic effect
+    on the target thread and creates event list in the order processed. The list are
+    sent to the Record-Reply monitor. The Record-Reply Monitor processes stores this
+    list as the log in the storage.
+
+
+    The user mode is the user process context that is stored before the jump to kernel
+    mode.
+
+
+    When the target thread shares the shared memory, the Record-Reply module changes
+    the access permission of the shared memory page to No Access. When the target
+    thread accesses the shared memory, data exception occurs. When an exception occurs
+    to shared memory access, the Record-Reply module restores the permission so that
+    it can access memory. Next, the data from the shared memory that target thread
+    was trying to access. Finally, set a breakpoint interrupt in the user mode address
+    where the exception occurred. When return to user mode in kernel mode, the target
+    can access shared memory by executing the instruction that caused the exception.
+    After that, a breakpoint counter moves to the next instruction, a breakpoint mismatch
+    occurs. The Record-Reply module changes the bit of the shared memory page to No
+    Access in order to recover the state of the target thread.
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_24_0.png)
+
+
+    Figure 1. Overall implementation of record
+
+
+    Our approach is built upon the ARM Architecture: Breakpoint event based on instruction
+    match, instruction address mismatch, or context match. When a breakpoint event
+    occurs, and the instruction counter increments the number of instructions executed
+    by the target thread. We can see exactly how much the target thread has been executed.
+
+
+    When the target thread invokes a system call, the Record-Reply module creates
+    a SYS log. This log is necessary to process only the system call. SYS log is necessary
+    to process the correct signal at the time of the breakpoint technique. We use
+    the copy_to_user function to write to user memory area. The Record-Reply module
+    creates a log by capturing the data from the kernel and writing it to the copy-user
+    function. Finally, the system call finishes and the Record-Reply module returns
+    the return value of the system call and stores it as a RET log. Thus, we can record
+    all deterministic factors of the system.
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_24_1.png)
+
+
+    Figure 2. Breakpoint event occurrence
+
+
+    # 3.2 Deterministic replay system
+
+
+    We show our overall implementation. The Record-Reply monitor process takes the
+    saved logs and sends them to the Record-Reply module. Logs are logged in the order
+    in which the events occurs. During replay, the Record-Reply module controls all
+    deterministic factors. Obtaining hardware resources and in-kernel work may occur.
+
+
+    After finishing in kernel, the kernel handles the pending signals before returning
+    to user mode in kernel mode. When the kernel gets signals, the Record-Reply module
+    captures the signal number, instruction counter, and user mode registers and stores
+    them in the SIG log.
+
+
+    When the system call is invoked, remove SYS log. If it needs to be replayed. If
+    it is not a system call that needs to be replayed it is executed normally. However,
+    if the system should be replayed, Record-Reply module writes data to the user
+    memory area from log to system call exists, and returns the system call value
+    with the RET log. Thus we can continue the execution order. After processing the
+    system call, which kind of log is to be processed next. If the log is not SIG
+    log, it returns to user mode without any function. If the log is a SIG log, we
+    must determine if we need to replay the signal before returning to user mode.
+    If the user mode registers and instruction counter in SIG log match current state,
+    send a
+
+
+    ISBN: 1-60132-456-1, CREA Press'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '# Acknowledgement
+
+
+    This research was supported by MSIP(Ministry of S, ICT and Foundation Planning),
+    Korea, by the ICTInformation Technology Research Center) project(IITP-2017-2012-00628)
+    supervised by the IITInstitute for Information & communications Promotion) and
+    partly supported by Information & communications Promotion(IITP) grant funded
+    by the Korea government(MSIP) (R0114-16-046, Software Black Box for High Deployable
+    Computing Science, ICT & Future Planning), Korea, by the National Program for
+    Excellence in SW(R71161610270001002) supervised by the IITInstitute for Information
+    & communications ICT Technology
+
+
+    # References
+
+
+    +   [1] Hanjin Shin, Seoyoung Jung, Minsoo Yoo, “Replay and Application-Replay
+    Mechanism via Detecting Kernel-User Data Transfer” Foundations of Computer Science
+    (F), Las Vegas, USA, 2016.
+
+
+    +   [2] Dinesh Subravarti, Jateh Jain, “Record and replay: partial checkpointing
+    for replay debugging across heterogeneous systems” SIGMETRICS ‘11 International
+    conference on Measurement and modeling of computer systems
+
+
+    +   [3] ARM Architecture Reference Manual, “ARMv7-A and ARMv7-R edition”.
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_25_0.png)
+
+
+    Figure 3. Overall implementation of replay
+
+
+    signal to the process. If it does not match, use a breakpoint to find the state.
+    If a breakpoint is set in the user instruction address in the log and the instruction
+    counter is also in the matched breakpoint event handler, The Record-Replay module
+    determines that the content is same as the signal was recorded. When it sends
+    this signal, the system call is processed in the same manner could be done after
+    the checkpoint. Breakpoint events are processed prior to system call processing.
+    Since processing takes precedence over system call processing, check whether the
+    next log is a SIG or a SYS log. If the next log is a SYS log, then the exception
+    handler does nothing if the signal can be processed after system call processing.
+
+
+    Inter-thread communication replay with shared memory is similar to we record.
+    At the time of record, Record-Replay capture the data to be accessed. At the time
+    of replay, Record-Replay module handles the data to be accessed into the log.
+
+
+    # 4 Conclusions
+
+
+    In this paper, we implement a way to catch all nondeterministic factor in a single
+    thread and replay efficiently. Moreover, our implementation does not need to modify
+    the target user group. We can also reproduce the software generated by non-deterministic
+    factors, analyze the log to find out the problem is. Using our implementation
+    with a debugger such as Gnu debugger makes it easier to analyze bugs caused by
+    non-deterministic factors. On the other hand, the debug features supported by
+    each architecture differs. Our approach is applicable if any architecture can
+    catch and replay with non-deterministic factors. In addition, if we can replay
+    the scheduling events on our system, or replay in multi-threaded environment.
+    If we can capture and replay many events in various environments, our approach
+    can scale'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '# Analysis and Evaluation of Locks designed for NUMA system
+
+
+    Joohaan Hong, Seokyeong Jung, Kihyun Yun, and Minsoo Ryu
+
+    Department of Computer Science and Engineering, Hanyang University, Seoul, Korea
+
+    [jjhong, sykyung, kihyun]@rtcc.hanyang.ac.kr, msryu@hanyang.ac.kr
+
+
+    **Abstract** - As systems grow to multi-core and multicore systems for high performance,
+    Non-Uniform Memory Access (NUMA) architecture is widely adopted in recent computing
+    systems. In NUMA systems, lock primitives such as spinlock become bottleneck by
+    causing frequent inter-node traffic. For improving performance in NUMA architectures,
+    lock evaluation is cautiously necessary to maintain cache traffic and coherence.
+
+    in this paper, we evaluate two locks designed for NUMA architecture: Cohort Lock
+    and NUMA-Reader-Writer Lock. We analyze the performance with readwrite workloads
+    using a microbenchmark. We evaluate with various settings to improve throughput
+    in two parameters: handoff in Cohort Lock and maximum performance limit in NUMA-Reader-Writer
+    Lock Evaluation shows that throughput improved up to 3% when we apply appropriate
+    settings in tunable parameters.
+
+
+    **Keywords:** NUMA, reader-writer lock
+
+
+    # 1 Introduction
+
+
+    Currently, most performance systems use hardware platforms with two or more sockets
+    and several cores per socket. In this hardware platform, multicore and multi-socket
+    systems use Non-Uniform Memory Access (NUMA) architecture is structured as two
+    or more nodes which are connected by local caches and memory. Each cache and memory
+    of each node can be accessed by other nodes; however, the access time to inter-node
+    is less than to intra-node.
+
+
+    As the number of cores grows in a NUMA system, parallel programming is key for
+    performance since cores operate at the same time. Applications are designed for
+    parallel programming, performance is limited by shared resource that can be accessed
+    simultaneously. Especially, for shared resource is restricted for performance
+    caused by long latencies in NUMA system. The reason for this is inter-node traffic
+    after intra-node traffic. By using intra-node, reducing cache traffic, and minimizing
+    cache
+
+
+    misses are key for improving performance of lock algorithm.
+
+    MCS lock [3] is widely known as scalable in shared resource. MCS lock maintains
+    a queue-based wait list for acquiring the lock. The head becomes the head of the
+    queue-based list and the thread which tries to acquire the lock is added to the
+    tail of queue-based list, pointing to itself and on a local variable. When the
+    head is added to release the lock, the thread notifies its successor in the queue-based
+    list. When the successor receives the notification, it stops spinning and acquires
+    the lock, the thread becomes the head of the queue. This lock avoids bursts of
+    cache traffic. When a lock is released by permitting only the successor to acquire
+    the lock. However, the performance significantly suffered in NUMA system due to
+    the inter-node traffic updating and monitoring the tail of the lock.
+
+
+    The hierarchical Lock (HBO) [4] is designed for reducing remote access. When a
+    thread tries to acquire shared resource it waits for a backoff time until the
+    lock is expired, and tries to acquire the lock for shared resource again. The
+    backoff time can be adapted, so a shared holding thread can shorten the backoff
+    to reduce coherence changes. Adaptive lock can reduce cache coherence traffic;
+    however, it needs a lock parameter to get scalable result for every platform,
+    so cannot give a given performance and fairness issue [2].
+
+
+    We discussed two locks for the shared resources in multi-threaded, but the performance
+    is not scalable in NUMA system. Therefore, we need to analyze the lock in NUMA
+    system for further consideration.
+
+
+    In this paper, we examine the locks designed for the NUMA system, and evaluate
+    the performance in readwrite workload scenarios. We also attempt to find out appropriate
+    settings to improve throughput in tunable parameters. We describe to analyze the
+    scalable NUMA lock in Section 2. We provide an experimental evaluation in Section
+    3.'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# 2 Locks designed for NUMA system
+
+
+    # 2.1 Lock Cohorting
+
+
+    Cohort lock [2] is consisted of two levels of locks: global lock and local lock.
+    Global lock is shared by all threads in NUMA system, and local lock is only shared
+    with same node in NUMA system. The thread needs to acquire both locks by a sequence
+    of local lock and first global lock and then executes the critical section. When
+    a thread releases the lock it checks waiting thread in the same node. If there
+    is a waiting thread in the same node, a lock holding releases the local lock first,
+    then passes the global lock to the waiting thread in the same node.
+
+
+    Cohort lock gives priority to the thread in the same node using the intra-node
+    cache; inter-node traffic and misses can be reduced, however cohort lock occurs
+    in the thread trying to acquire the lock in other nodes. It is because cohort
+    lock holding does not release a global lock to the other nodes. To solve this
+    problem, cohort lock sets a threshold to make a global lock held in a specific
+    node continually. After a thread meets the threshold, it must release the global
+    lock to yield the lock to other nodes. This threshold is called handoff and is
+    set to 64.
+
+
+    Calciu et al. [1] sets patience limit to 1000:
+
+
+    (a) Read 98%, Writer 2%
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_27_0.png)
+
+
+    (b) Read 50%, Writer 50%
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_27_1.png)
+
+
+    # 2.2 NUMA-Reader-Writer Locks
+
+
+    NUMA-reader-writer lock [1] is designed based on cohort lock to limit migrations
+    between waiting writers by releasing global lock. When a writer meets the threshold
+    in the same node, a writer transfers global lock to other waiting writers in the
+    same node. Furthermore, to get high performance, this lock maximizes the concurrency
+    by balancing readers and writer operations. The readers actually do not need to
+    access the shared resource concurrently, so they do not execute the critical section
+    protected by the locks. To implement this, it uses reader indicators in each node,
+    adding when a reader acquires a lock and deallocating when it releases. Writers
+    for acquiring a lock only check the reader indicator whether a reader is in the
+    critical section.
+
+
+    NUMA-reader-writer locks present three different preferences: writer-preference,
+    reader-preference, and neutral preference. Writer-preference and reader-preference
+    give a priority to critical section regardless of order to critical section. This
+    may cause starvation operation to each preference. To overcome this, lock algorithm
+    adopts the patience limit blocking preference operation continuously. For example,
+    with a writer preference, a reader waits over patience limit, sets a barrier flag
+    and the writers are blocked until a barrier finish to execute critical section.
+
+
+    (c) Read 10%, Writer 90%
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_27_2.png)
+
+
+    Figure 1. The graph shows the average throughput of the critical section and non-critical
+    section executed alternately during 10 seconds varying reader-writer workload
+    ratios: 2%, 50%, 90% of writer operation in critical section'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: '# Intl Conf. Foundations of Computer Science | FCS''17 | 21
+
+
+    | Handoff bound | 4 Threads | 8 Threads | 12 Threads | 16 Threads | 20 Threads
+    | 24 Threads |
+
+    |---|---|---|---|---|---|--|
+
+    | 32 | 1.573E+07 | 2.196E+07 | 2.235E+07 | 2.199E+07 | 2.091E+07 | 2.023E+07 |
+
+    | 64 | 1.625E+07 | 2.187E+07 | 2.220E+07 | 2.214E+07 | 2.141E+07 | 2.070E+07 |
+
+    | 96 | 1.557E+07 | 2.201E+07 | 2.231E+07 | 2.222E+07 | 2.116E+07 | 2.081E+07 |
+
+    | 128 | 1.617E+07 | 2.203E+07 | 2.232E+07 | 2.227E+07 | 2.167E+07 | 2.106E+07
+    |
+
+
+    (a) CTL-TKT with Limit 50%, Write 50%
+
+
+    | Patience Limit | 4 Threads | 8 Threads | 12 Threads | 16 Threads | 20 Threads
+    | 24 Threads |
+
+    |---|---|---|---|---|---|--|
+
+    | 100 | 1.713E+07 | 2.129E+07 | 2.267E+07 | 2.298E+07 | 2.303E+07 | 2.296E+07
+    |
+
+    | 500 | 1.652E+07 | 2.116E+07 | 2.308E+07 | 2.398E+07 | 2.450E+07 | 2.450E+07
+    |
+
+    | 1000 | 1.624E+07 | 2.110E+07 | 2.257E+07 | 2.344E+07 | 2.408E+07 | 2.445E+07
+    |
+
+    | 5000 | 1.621E+07 | 2.110E+07 | 2.255E+07 | 2.326E+07 | 2.360E+07 | 2.374E+07
+    |
+
+    | 10000 | 1.656E+07 | 2.112E+07 | 2.258E+07 | 2.322E+07 | 2.368E+07 | 2.376E+07
+    |
+
+
+    (b) CW-WP with Limit 50%, Write 50%
+
+
+    **Table 1. Result of throughput with different tunable parameters: (a) handoff
+    bound in CTL-TKT, and (b) patience limit in CW-WP with mixed (read 50%, write
+    50%) during 10 seconds.
+
+
+    # 3 Evaluation
+
+
+    In this section, we evaluated the locks for NUMA system, and analyzed the performance
+    by varying write workload ratios. We also experimented with various values in
+    two tunable parameters: handoff bound in Cohort Lock and patience limit in NUMA-Reader
+    Writer Lock. We implemented all locks in C with GCC 4.6 at optimization level.
+    These 18 experiments were conducted on the machine with 2 nodes, 256 CPUs, six
+    cores per node, and each lock has two hardware threads, which means a total 24
+    hardware threads context.
+
+
+    Cohort lock be implemented with off-the-shelf locks, a partitioned lock, a MCS
+    queue lock, and a simple test-and-setback lock. We implemented two types of cohort
+    locks: CTL-TKT and C-MO-MCS. CTL-TKT is implemented for global lock and a partitioned
+    lock for a local lock. C-MO-MCS is a simple test-and-setback lock for local lock.
+    These cohort locks outperform any combination of cohort lock and NUMA-reader writer
+    lock based on de-facto values presented in this section.
+
+
+    external, outlying sections, probability for reading or writing. Each critical
+    section of reading and writing accesses one or two variables with 64 cores. We
+    evaluated 4 types of reading and critical section, and time of non-critical section
+    elapsed alternately during 10 seconds.
+
+
+    Figure 1 represents the throughput of various locks in 10 seconds in varying-read
+    workload loads. The locks designed for NUMA system show high performance than
+    the state-of-the-art locks, mocks, and pivot relax lock. Experimental CW-WP shows
+    better performance than the other lock. In read-domain case (Figure 1) (c), CW-WP
+    shows higher throughput than other NUMA locks, however, the difference of throughput
+    is not noticeable than read-heavy case.
+
+
+    # 3.2 Tunable parameters to improve the throughput
+
+
+    There are parameters to improve throughput in Cohort Lock and NUMA-Reader Writer
+    Lock. In Cohort Lock, handoff bound is a parameter to prevent a starvation by
+    releasing a lock if one node specifies sequentially performed critical section
+    until encounter occurs. We evaluated with four values of handoff bound in CTL-TKT
+    lock during 10 seconds as a game to Figure 1(b). Table 1a) shows the throughput
+    of CTL-TKT lock with different handoff bound, and we find out when we set bound
+    to 128 better than any other value. Calcius et al. [1] describe that patience
+    limit in C-WP is a tunable parameter for improving performance and set. We evaluate
+    C-WP with five patience limits: 100, 500, 1000, 5000, and 10000. Table 1b) shows
+    the result of throughput with different patience limit, and throughput is improved
+    with
+
+
+    # 3.1 Microbenchmark
+
+
+    We evaluate the locks and compare each other with microbenchmark described by
+    Calcius et al. [1]. The microbenchmark can vary by number of executing threads
+    concurrently, iterations of critical section and non-critical
+
+
+    ISBN: 16-01312-45-3, CRESA Press'
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: '# Int''l Conf. Foundations of Computer Science | FCS''17 |
+
+
+    patience limit value 500 than other patience limits. Consequently, we find out
+    appropriate settings in tunable parameters: 128 in bound CTL-TKT and 500 in patience
+    limit C-RW-WP.
+
+
+    We show that the throughput in C-RW-WP default values (64 in bound, 1000 in patience
+    limit) with appropriate settings in tunable parameters that we derived with experiments
+    in Table 1. Figure shows the throughput with 10 seconds as a same way as Figure
+    1b). The throughput is improved up to 3% with appropriate settings in tunable
+    parameters than default settings.
+
+
+    ITROC(Information Technology Research) support programIITP-2017-2012-00628) was
+    supervised by the IITP(Information & Communication Technology Promotion) and partly
+    supported by the ICT Technology Research grant funded by the Korea Ministry of
+    MSIP(R11-14-00652), Software Black Box (for Highly Dependable Computing) and partly
+    supported by the MSPIT of Science, ICT & Future Planning), Korea, under the National
+    Program for Excellence was supervised by SW(RR771610270001) supervised by the
+    IITP(Information for Communications and Communications Technology Promotion)
+
+
+    ![](img/447fbed58dc921d81e92b3d3f8047037_29_0.png)
+
+
+    # References
+
+
+    Figure 2 shows the average throughput for mixed load (read 50%, 50%) during 10
+    seconds. C-RW-WP stands for C-RW-WP with default parameters: 64 in bound and 1000
+    in patience limit. C-RW-WP stands with tunable parameters: 128 in bound and 500
+    in patience limit.
+
+
+    +   [11] Calvin, D. Dice, Y. V. Lech, J. V. Marathe, and N. Shavit. NUMA-aware
+    reader-writer locks. In Proceedings of the 18th ACM SIGPLAN Symposium on Principles
+    and Practice of Parallel Programming, 157–166 New York, NY, USA, 2013.
+
+
+    +   [2] D. U, V. J. Marathe, and N. Shavit. Lock Cohoring: A General Technique
+    for Designing NUMA Locks. In Proceedings of the 17th ACM SIGPLAN Symp. on Principles
+    and Practice of Parallel Programming, PoPP12, pages 247–256, 2012.
+
+
+    +   [3] J. M. Mellon-Crummey and M. L. Scott. Algorithms for scalable synchronization
+    on shared-memory processors. ACM Trans. Comput. Syst., 9(1):21–65, Feb. 1991.
+
+
+    +   [4] J. Radović and E. Hagersten. Hierarchical Backlocks for Nonuniform Memory
+    Architectures. In HPCA-9, pages 241–252, Anaheim, California, USA, Feb. 2003.
+
+
+    +   [5] D. Ice. A Partitioned Ticket Lock. In Proceedings of the 23rd ACM Symposium
+    on Parallelism in Algorithms and Architectures, pages 309–310, 2011.
+
+
+    # 4 Conclusions
+
+
+    We reviewed Cohort Lock and NUMA-Aware Reader Lock, and analyzed the performance
+    with various read-write workloads. These locks give higher performance than the
+    state-of-the-art. In NUMA system, reducing inter-node traffic and cache coherence
+    misses enables high performance in shared-resources. We also evaluated with different
+    values in tunable parameters in Cohort Lock and NUMA-Aware Reader, and worked
+    out the appropriate settings to improve throughput up to 3% than default values.
+
+
+    In the future, we will review the locks design for deep NUMA hierarchy with more
+    than two-cohort lock as NUMA system grows more complex with deep levels. In addition,
+    we will examine delegation lock that provides high throughput by lock holding
+    to execute other threads'' critical section. This lock allows shared resource
+    to be fetched in private cache and reduces data transfer between inter-node caches.
+
+
+    +   [6] A Agarwal and M. Cherian. Adaptive backoff synchronization techniques.
+    SIGARCH Comput. Arch. News, 17:396–406, April 1998.
+
+
+    # 5 Acknowledgement
+
+
+    This research was supported by the MSIP(Ministry of Science, ICT and Future Planning),
+    Korea, under the
+
+
+    ISBN: 1-60132-456-1, CSAREA Press'
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '# SESSION
+
+
+    # NOVEL ALGORITHMS
+
+
+    Chair(s)
+
+
+    TBA'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# A New Algorithm for Tiered Binary Search
+
+
+    Ahmed Tarek
+
+    Engineering, Physics and Computer Science, Montgomery College, Rockville, Maryland,
+    USA
+
+
+    **Abstract—Due to strong application flavor, binary search and its derivatives
+    are researched widely in literature. The new concept pertaining to multiple key
+    search strategy was introduced by the author in 2004. Since then, reverse investigations
+    are performed with a wide variety of multi-key searches. In this paper, a new
+    algorithm for tiered binary search is proposed. The proposed algorithm performs
+    multiple binary search through a tiered strategy that optimizes the search space
+    even further compared to other versions. The proposed tiered search is an extension
+    of the basic binary search to Newton''s root search strategy. This introduced
+    algorithm computes the n-th root of a non-negative real number. The underlying
+    concept pertaining to tiered binary search in finding multiple elements with a
+    single iteration in an organized search pool is fully described. The algorithm
+    is analyzed for clarity. Finally, application and future avenues are explored.
+
+
+    One improvement with the proposed multi-key search strategy over the traditional
+    binary search is the effective reduction in the search space, which accelerates
+    the key search computation. Additionally, instead of just two variants of the
+    key search strategy, which are searching the key element either in ascending or
+    a descending sorted pool, four variants are available to compute — which are ascending
+    key search inside an ascending search pool, ascending search inside a descending
+    pool, a descending key search or descending keys in an ascending search pool.
+    This diversity in computational model has extended the application paradigm for
+    the multiple key search paradigm over time [2], [4], etc. Multi-key binary search
+    as proposed in [1] keeps on computing the elements in order beginning with the
+    first key element. The proposed search employs a Balanced Binary Search strategy.
+    It starts with the middle element of the key array. It detects the position of
+    the middle element the key array in the larger search using a recursive version
+    of the binary search algorithm. The new algorithm confirms for the key portion
+    that contains keys larger than the middle element only continues the larger search.
+    For the keys, which are smaller than the middle, the algorithm confirms in that
+    part of the search pool, which contains elements smaller than the middle. Therefore,
+    instead of blending searches for the key element beginning and proceeding in succession,
+    the algorithm divides the key elements into two halves, and performs search in
+    each half of the search pool using the recursive binary search. Here, the proposed
+    algorithm performs the key search through a tiered binary search. By using two
+    partitions, the algorithm implements a balanced binary search strategy. Here,
+    the proposed algorithm performs a tiered element binary search strategy, which
+    is computationally efficient.
+
+
+    **Keywords:** Binary Search, Binary Search Strategy, Multi-key Elements, Search
+    Pool, Search Space Reduction, Tiered Binary Search
+
+
+    # 1. Introduction
+
+
+    Binary search and its variants are introduced in Computer Science literature due
+    to efficiency and strong application flavor. A simple, powerful application of
+    binary search, which may be conveniently used to compute the n-th root of a positive
+    number, is widely accepted and foundational to the tiered Binary Search as proposed
+    in this paper. As articulated, binary search has a vast arena of applications
+    both in out of Computer Science literature. With variations of the basic binary
+    search used in the Multiple key search paradigm for the author that dates back
+    to 2004 [1]. The concept pertaining to multi-key search strategy was introduced
+    by the author to the computing community back in
+
+
+    A search need not be restricted to computing a single key, x of a search pool.
+    This implies that advanced search could be designed that essentially compare between
+    two array elements [1] to identify the smaller key array elements inside the larger
+    search pool. With that perception, the concept pertaining to multiple key search
+    strategy was introduced by the author to the computing community back in
+
+
+    It is also possible to design an n-tiered binary search algorithm, where n ≥ 3.
+    For n tiers, the algorithm divides the list of key elements into n equal partitions.'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# 26 Int''l. Foundations of Computer Science | FCS''17 |
+
+
+    It computes the middle $K_i$ for two successive partitions, $i$ and $i+1$ for
+    each $i, 1, 2, \dots, (n-1)$. Assume $K_i$ is the middle between partitions $1$
+    and $2$. The next algorithm, computes the exact locations in the search pool (large)
+    for each partitioning $K_i$, $i=1, 2, \dots, (n-1)$. Denoting these locations
+    by $v_i$, $i=1, 2, \dots, (n-1)$ at each $L_i$, the algorithm computes the search
+    for each $K_i$ with only the $K_i$ within the search pool, which contains elements
+    smaller than $El[i]$ and larger than $El[i-1]$, which are essentially the elements
+    $y$, such that $El[i-1] < y < El[i]$. In the first turn, all elements from the
+    search pool are available to perform binary search to detect the keys $K_i, i=1,
+    2, \dots, (n-1)$. In the second turn, a portion of the search pool contains only
+    the elements from $El[i]$ to $El[j]$.
+
+
+    is known as the Keygap. Here, $i=1, 2, \dots, (m-1)$. For instance, the number
+    of elements between the keys, $k_j$ and $k_{j+1}$, is $t_{j+1}-t_j-1$. The Keygap
+    between these two keys is $g_j=t_{j+1}-t_j-1$. For uniformly distributed keys
+    in the search pool, $L_1, g_j \approx \sqrt{n}$ throughout the search pool.
+
+
+    **Definition 1.—Inter-Key Space Elements.** Elements in all successors of keys
+    are collectively known as the Inter-Key Space Elements (IKSE). By Identity, $I
+    = \sum_{j} (t_{j+1}-t_j-1)$. If a key is not included in the listed keys, then
+    $L_i$ is the number of elements between the first previous existent key within
+    the search pool and the next succeeding existent key $L_i=0$. If there is only
+    1 key, the $j$th key, $k_j$, is the number of elements before and after it, $L_j=0$
+    and $L_{j+1}=n-1$. If there are only 2 keys, then $L_i=0$ for $h < i \leq s$,
+    where $n=t_{s+1}-t_s-1$. Also, for other keys combinations may be determined analytically.
+
+
+    The paper is organized as follows. Section 2 introduces the terms and notations
+    used in the proposed method. Section 3 explores the performance of the proposed
+    algorithms. Section 4 describes the Root Finding Algorithm, which is motivational
+    and foundational to the proposed tiered binary search algorithms. The analysis
+    of the following sections: Section 5 represents the Tiered Binary Search. The
+    two version of the Tiered Binary Search is presented, which is followed by the
+    more generalized binary search. Section 6 presents the section analyzing the search
+    space. The space complexity due to tiered binary search is also considered. Section
+    7 considers tiered binary search variations for possible key and search combinations.
+
+
+    # 2. Terms and Notation
+
+
+    +   $n$: Total number of elements in the larger list, known as the Search Pool
+
+
+    +   $m$: Number of keys. Here, $m \geq 2$, and $n > m$.
+
+
+    +   $L_i$: List search with different keys.
+
+
+    +   $k_i$: The $i$th key in the list, $L_i=1, 2, \dots, m$.
+
+
+    +   $R$: Size to key ratio, which is $R=n/m$. For $n > m \gg 1$.
+
+
+    +   $t_i$: Index of the $i$th key, $k_i$, in the search pool, $L_1$.
+
+
+    +   $C_i$: If $1 \leq t_i \leq n$. Also $i \leq m$.
+
+
+    +   $El$: Index of the leftmost element in the search pool,
+
+
+    +   $Right$: Index of the rightmost element in the search pool, $L_1$.
+
+
+    +   $L$: Denotes the length of a list (search pool) or a search space.
+
+
+    +   $p$: Number of partitioning keys for the generalized tiered search,
+
+
+    **Definition 1.—Keygap.** $g_i$: The number of elements between two successive
+    keys, $k_i$ and $k_{i+1}$ in search pool, $L_1$
+
+
+    # 3. Formal Search
+
+
+    $SSF$ is the ratio of computational search space, $C_p$, if one key is searched
+    in the search space, $Cp$, explored by the proposed tiered binary search. $SSF
+    = Cp/C \gg 1$. In general, $SSF$, the better efficiency is encountered through
+    proposed tiered binary search.
+
+
+    With multiple key search strategies, strategy of bluntly looking for a key inside
+    a larger list, all keys are simultaneously searched. This significantly reduces
+    the computational overhead during the execution of the binary search with only
+    one key. Multiple-tiered binary search works with a very high yield with sorted
+    lists, which is required for fast search. With the proposed algorithm, there are
+    two sets. One set is $S_1$, the search pool (the list of distinct elements where
+    the proposed algorithm is applied to). The other set, $S_2$, contains the distinct
+    keys that are not mapped onto the set, $S_1$. Using set notation,
+
+
+    $|S_1|=n_1$ and $|S_2|=m$ and $n > m \gg 1$. $f$ is the mapping from $S_2$ to
+    $S_1$, here the function is an Identity Function, $f$, which maps each key from
+    the domain to the identical element in the co-domain of search pool, $L_1$. The
+    key index-domain for the mapping is: $U[0]$ for Java or C++ programming language
+    implementation. The element index co-domain in the search pool for the mapping
+    is: $Z[|U[0|-1]$ for programming language implementation. Assuming all keys from
+    $S_2$ may be mapped onto the corresponding elements in set, $S_1$,
+
+
+    ISBN: 1-60132-456-3, CSREA Press'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "# #4. Proposed nth Root Algorithm\n\nPredicate Logic for the mapping, $\\forall\
+    \ y(x \\in S_1 \\wedge (y = s(x)))$. The logical statement is, $\\exists x(y \\\
+    in S_2 \\wedge (y \\neq S_1 \\vee y \\neq x))$; Again, if $x = k$ and $y = Item_i$,\
+    \ then $\\forall j(j \\geq 0 \\wedge n \\wedge (x = k) \\to (y = Item_j))$.\n\n\
+    With distinct keys, the proposed algorithm essentially performs a One-to-one mapping\
+    \ from the $S_2$, to $S_1$, provided that every key in $S_2$, is in $S_1$. The\
+    \ mapping between the keys and elements is distinct (in bijection), so $|S_1|=|S_2|$\
+    \ with the same size search pool. Due to this, no key maps to two or more different\
+    \ search pools. As the algorithm performs a one-to-one mapping, which is not,\
+    \ therefore, the problem of Collision of Hashing is not avoided by the proposed\
+    \ ternary search model. Following is the completion of the logic model in detail,\
+    \ such as $\\forall x\\exists y(f(x) \\wedge (y = x) \\to (z = y) \\vee (y = f(x))\
+    \ \\vee (y = k) \\to (z = k))$.\n\nFollowing is the completion of the logic model\
+    \ in detail, such as $\\forall x\\exists y(f(x) \\wedge (y = x) \\to (z = y) \\\
+    vee (y = f(x)) \\vee (y = k) \\to (z = k))$.\n\nFurthermore, from all keys in\
+    \ $S_1$, which is represented by the $t_i$, $S_2$ becomes a subset of $S_1$. With\
+    \ the set theoretic notion, in this case $S_2$ is a subset of the Power Set, $\\\
+    psi$ of $S_1$. Normally, $\\forall y(y \\in S_2 \\subset S_1)$. If some keys are\
+    \ not present in $S_1 \\vee S_2$. In that case there is a third set, $S_3$, which\
+    \ is a subset of $S_2$ and $S_1$ that lies at the intersection of $S_2$ and $S_1$.\
+    \ Therefore, $S_3 = S_2 \\cap S_1$. Also, $(S_3 \\subset S_1) \\vee (S_3 \\subset\
+    \ S_2)$.\n\nThe Relation, between the sets $S_2$ and $S_1$, is Equality, which\
+    \ is a subset of the Cartesian Product, $S_2 \\times S_1$. Here, $R$ is the relation,\
+    \ such that $\\{(x,y) \\in S_2 \\times S_1 \\mid (y = x)\\}$. Then $R \\subseteq\
+    \ S_2 \\times S_1$. Here, $R$ is a binary relation between the sets. This relation,\
+    \ between $S_2$ and $S_1$ is Reflexive, Symmetric, and Transitive. It is an Equivalence\
+    \ Relation.\n\nInitially, the proposed algorithm searches through the search pool,\
+    \ containing $n$ different elements to identify the might key index. As $|S_1|=|S_2|$,\
+    \ there are $n$ one-to-one mappings from $S_2$ to $S_1$. Each $k_i$ is identified\
+    \ at location $t_i$ and selected only within the subset of $S_1$ search pools.\
+    \ The larger keys, $k_{i+1} \\dots k_n$, are explored only within the $(n-t_i-1)$\
+    \ search pools. Due to subset reduction, the key space is reduced, and eventually\
+    \ gets optimized.\n\nBeginning with the nth root algorithm as a variation to pure\
+    \ binary search, which gradually reduces the search space to converge to the closest\
+    \ nth, the proposed ternary binary search algorithm is presented as another variation\
+    \ to binary search.\n\nFollowing is the nth root algorithm that is efficient,\
+    \ and works for any non-negative root.\n\nAlgorithm: nthRoot\n\nPurpose: This\
+    \ algorithm computes the nth root of a non-negative integer.\n\nThe supplied parameters\
+    \ are:\nconstant PRECISION = 0.0000001\n\nRequire: $x \\in \\mathbb{Z}^+, x \\\
+    geq 0$.\n\nReturn: The value of the nth root of the supplied number $x$, is computed.\
+    \ Here $x \\geq 0$.\n\nInput non-negative root number $x$ by keyboard. [May prompt\
+    \ the user to input $x$ with $x \\geqgeq 0$.\n\n```\nwhile x < 2\n  a = 1\n  if\
+    \ x = 0\n    nth root = 0\n  else if x = 1\n    nth root = 1\n  else if x < 1.0\n\
+    \    b = x\n    while (a - b) > PRECISION\n      midPoint = (a + b)/2\n      if\
+    \ midPoint * midPoint * ... (n - time) < x\n        b = midPoint\n      else\n\
+    \        a = midPoint\n    end\n  Display nth root = midPoint\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "# Int'l. Foundations of Computer Science | FCSC'17 |\n\nend if\n\n# 4.1 nth\
+    \ Root Finding Analysis\n\nHere, a modified binary search technique is used to\
+    \ assign an $n^{th}$ root to a non-negative real value, $x$ to any variable root.\
+    \ There are four different cases associated with the computational scenario.\n\
+    \n+   - Case 1: $x = 0$. In this case, the $n^{th}$ root of $x$ is $0.0$.\n- Case\
+    \ 2: $x > 0$ and $x \neq 1.0$. The search proceeds to the root:\n  - Step 1: If\
+    \ $x < 1$, the $n^{th}$ root lies between $0$ and $x$.\n  - Step 2: Declare two\
+    \ variables $a$ and $b$. Initialize, $a = 1$ and $b = x$. If $x < 1$, swap $a$\
+    \ and $b$.\n  - Step 3: If fine then double the variables $a$ and $b$, and make\
+    \ them closer to each other by narrowing the root space. It is necessary to ensure\
+    \ that the root lies between $a$ and $b$. The invariant for the search is $b \\\
+    leq a$.\n- Case 3: $x = 1.0$. In this case, the $n^{th}$ root is $1.0$.\n- Case\
+    \ 4: $x > 1.0$. The $n^{th}$ root must lie in $1$ and $x$. The following steps\
+    \ are involved in:\n\nRequire: Both arrays $arr$ and $keys$ are required to be\
+    \ sorted. For this algorithm, both $arr[]$ and $keys[]$ are sorted in ascending\
+    \ order. Ensure: Proper key indices are inserted.\n\n```\nkeys[] = new int[keys.length];\
+    \ [Number of\nelements in locations[] = m = the number of\nelements in keys[]]\n\
+    startIndex = 0\nendIndex = arr.length - 1\nkeyFirst = 0\nkeyLast = keys.length\
+    \ - 1\nmiddleKey = (keyFirst + keyLast) / 2\nkeyLocations[middleKey] = =\nRecursiveBinarySearch(arr,\
+    \ startIndex, endIndex,\n); // Determine the $middleKey$ key lo-\ncation in the\
+    \ search space, arr[]);\nif (middleKey = -1)\nkeysLocations[] = =\n```\n\n# 5.\
+    \ Proposed Tiered Binary Search Algorithm\n\nFollowing is the Tiered Binary Search\
+    \ algorithm with $m$ keys, where $m \\geq 2$. Following algorithm uses only $1$\
+    \ partitioning key, which is the key in the $keys[]$ array\n\n```\nRecursiveBinarySearch(arr,\
+    \ startIndex, endIndex); [Use\na loop to determine the key indices in search array\
+    \ for all keys that are greater than\nmiddleKey).\nstartIndex = keyLocations[middleKey]\
+    \ + 1] [Shift position\nto next to current key.]\nfor (Next the algorithm performs\
+    \ a Bi-\nearch for the keys that are larger than the\nlast key index location,\
+    \ and at each iteration, the value of i is\ndecreased)\nif (keyLast=middleKey\
+    \ + 1)\nkeysLocations[] = RecursiveBinarySearch(arr,\nkeyLocations[middleKey+1],\
+    \ endIndex, keys[i]\nendIndex = keys[i]-1] [Shift position\nto insert an index\
+    \ before current key\nlocation)\nfor\nkeyLocations (Insert the array,\nkeys[])\
+    \ to insert the m key indices in\nthe calling program)\n```\n\nA generalized version\
+    \ is discussed in the following using $k$ partitioning keys, where $k \\geq 2$.\n\
+    \nTieredBinarySearch(Pm,key)\nPurpose: This algorithm uses $m$-tiered Binary Search\
+    \ with only 1 middle key.\n\nThe supplied parameters are: Search arr[]$, having\
+    \ $n$ elements where the keys are to be identified. An array of $m$ different\
+    \ keys, $keys[]$. Assumption: $n >> m$. $m$-key Tiered Binary Search returns the\
+    \ array $keyLocations[]$ (in Java) with the computed index positions for $m$ different\
+    \ keys.\n\nIf a key does not exist, the corresponding position in array $keyLocations[]$\
+    \ contains a $-1$.\n\nThe supplied parameters are: Search arr[]$, having $n$ elements\
+    \ where the keys are to be identified. An array of $m$ different keys, $keys[]$.\
+    \ Assumption: $n >> m$. Also, $k \\geq 2$ determines the number of partitioning\
+    \ keys.\n$m$-key Tiered Binary Search returns the array $keyLocations[]$ (in Java)\
+    \ with the identified index positions of $m$ different keys.\n\nISBN: 1-60132-456-1,\
+    \ CREA Press"
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: "# Intl' Conf. Foundations of Computer Science | FCS'17\n\nIf a key does not\
+    \ exist, the corresponding key in array, key[index] contains a -1.\n\nRequire:\
+    \ Both the arr[] and keys[] are required to be sorted. Both arr[] and keys[] are\
+    \ sorted in ascending order.\n\nEnsure: Proper key positions are identified.\n\
+    \n```\nint[] keyLocations = new int[keys.length]; // m = the number of keys in\
+    \ keyLocations\nint[] partitionKeys = new int[arr.length]; // To hold the partitioning\
+    \ keys.\nint[] partitionIndices = new int[m]; // To hold the indices of the partitioning.\n\
+    int start = 0; end = arr.length - 1;\nfor (int i = 0; i < keys.length; i++) {\n\
+    \    partitionKeys[i] = keyint(keys[i] / (k + 1)); // Determine each partitioning\
+    \ in key arr[], and load it the corresponding index in keyLocations[i]\n    partitionIndices[i]\
+    \ = int((keyLast) / (k + 1)); // Hold the Indices of Partition in partitionIndices[i].\n\
+    \    keyLocations[int((keyLast) / (k + 1))] = RecursiveBinarySearch(arr, start,\
+    \ end, keys[i]);\n    start = int((keyLast) / (k + 1)) + 1; // Shift the start\
+    \ position for the next partitioning key.\n}\n```\n\n```\nkeyLocations[indexMiddle]\
+    \ =\nRecursiveBinarySearch(arr, start, end);\nkeyLocations[partitionIndices[indexMiddle]-1]\
+    \ = keys[indexMiddle]; // Determine the key at indexMiddle inside the search pool,\
+    \ arr[] // Next apply Binary Search to the keys within the range of indexLeft\
+    \ and indexMiddle - 1\nfor (int j = indexLeft; j <= indexMiddle - 1; j++) {\n\
+    \    keyLocations[j] = RecursiveBinarySearch(arr, start, partitionIndices[indexMiddle]-1);\
+    \ // Use keys[j] to determine the key index in search pool, arr[] that are smaller\
+    \ than key[indexMiddle]\n}\nstart = int(partitionIndices[jLeft]) + 1; // This\
+    \ strategy identifies the position to the right key location, keyLocations[j]\
+    \ // This reduces the search space.\nend For the algorithm performs a Binary Search\
+    \ for the keys that are larger than keyLocations[indexMiddle].\nstart = int(partitionIndices[indexMiddle])\
+    \ + 1; // Adjust the beginning index for key search inside the search pool, arr[]\
+    \ one position right to the keyLocations[indexMiddle].\nend = arr.length - 1;\
+    \ // For the last interval, set the end of array arr[].nend = partitionIndices[i]-1;\
+    \ // Adjust the ending index for interval inside the search pool, arr[] one position\
+    \ left of the key partitioning.\nif (i < 0) {\n    indexLeft = BinaryRight(0,\
+    \ indexMiddle + 1);\n    keyLocations[indexLeft] = RecursiveBinarySearch(arr,\
+    \ start, end, keys[j]);\n    indexEnd, keys[j] = indexEnd = keyLocations[partitionIndices[j]-1];\
+    \ // Shift the value to an index immediately before the key location.\n}\nstart\
+    \ = keyLocations[partitionIndices[i] + 1; // Adjust the starting interval for\
+    \ the search pool, arr[] one position to the right of the current search space\
+    \ in arr[].\nreturn keyLocations; // Return the Java array, keyLocations[] containing\
+    \ m key positions to the calling program.\n```\n\nISBN: 1-60132-456-1 CS Press"
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# 5.1 Algorithm Analysis
+
+
+    The proposed element tiered binary search algorithm performs a balanced ranged-based
+    binary search to optimize the key space, and improves the search efficiency. This
+    is essentially a list-to-mapping, where the smaller list has m elements and the
+    larger, which the search pool has m elements. Here, m, n ≤. Tiered binary search
+    provides better time and space efficiency. It also performs the search by performing
+    a balanced partitioning. With the simpler key version, the middle element is in
+    the key array. Here, $middle\key\index$ is $\lfloor n/2\rfloor$.
+
+
+    The next key index for $middle\key$ inside the search pool,. Suppose, $middle\key$
+    is identified at position $i$ inside the array. If it does not exist, the algorithm
+    records the last index $left\_right\_index$ for the following through this binary
+    search strategy.
+
+
+    Next, the algorithm confirms for the key elements from 0 to $middle\key\index-1$
+    in the sub-array, $arr$ from 0 to $arr-1$, and confirms for the key elements at
+    $middle\key\index+1$ within the search pool, $arr+1$ to $n-1$ (as index begins
+    at 0).
+
+
+    Example Search Case: Comparison between list $L_1$ containing 10 elements, and
+    list $L_2$ with 100 elements. The middle element of $L_2$ lies at index 49 (assuming
+    index begins at 0 and goes up to 99). The middle element will be searched for
+    by the two binary searches.
+
+
+    So the binary searches are performed with $c = \log_2(10^6) = c\log_2(10^3) =
+    10$. So $c=10$. The number of searches performed for the middle key is $C$. Without
+    partitioning, the basic binary search for all $10^6$ keys would be $10^6 \times
+    c = 10^7 = 500,000$.
+
+
+    With only one partitioning key, assume simplicity, the keys are uniformly distributed
+    in the search pool $L_1$. The middle key will be identified half-way at $L_1$,
+    which is at 49999. So, search for the keys at index 0 through 498 will be confined
+    to the elements at index 0 through 49999. For the other half, from 50000 to 999999,
+    the search will be performed over a range of $499,998 \approx 500,000$ elements.
+    And as the list in the first half will be searched through a space of approximately,
+    2000 elements. The total search space is $50000+499000+498000+\dots+2000 \approx
+    1000 \times \frac{500000}{2000} = 125,000$. Since the binary search performed
+    with $c = \log_2(125000) = C \times \log_2(125000) \approx 8.1$. Since this is
+    binary search, the algorithm performs
+
+
+    # 6. Search Variations
+
+
+    another $8.1$ searches for the keys at index 500 through 999. So the binary search
+    is $\approx ((8.1+8.1)C = 16.2$. With the assumption, the search space reduces
+    by a factor of $\frac{500}{16.2} = 30.8$. So, the search space improves $F=30.8$.
+
+
+    Hence, the search space may be significantly enhanced through the $k$-partitioning
+    key version using the proposed tiered binary search algorithm.
+
+
+    As articulated before, the $m$ Root Finding Algorithm is might and foundational
+    to the proposed tiered binary search in gradually down the search space. With
+    different combinations of elements in $L_1$ and $L_2$ output strategies are as
+    variations to the proposed algorithm. These are precisely described below. The
+    arrays are not sorted.
+
+
+    Combination 1: When both $L_1$ and $L_2$ are in ascending order. This is the most
+    common method, and is used throughout this paper. Assume that the middle key,
+    $middle\key$, is identified at $middle\key$ with a simple partitioning key. The
+    keys smaller than this partitioning key are only within the sub-array, $arr[0]$
+    to $arr-1]$. Once a key is identified at index $i$, the left index is shifted
+    to $i+1$ for this sub-list. The right index remains at its original position.
+
+
+    Combination 2: When $L_1$ is in ascending and $L_2$ is in descending order. The
+    elements are organized from largest to smallest. Assume that the middle key, $middle\key$,
+    is identified at $middle\key$ with a simple partitioning key. The keys smaller
+    than this partitioning key are located in the right half of the key array which
+    are only only within the sub-array, $arr[0]$ to $arr-1]$.
+
+
+    As the proposed algorithm performs a balanced binary search, the keys with $k_{middle}$,
+    which are inside the left half of the list are searched within the sub-array,
+    $arr+1$ to $n-1]$, beginning with the key at $k_0$. Once it is identified at index
+    $t_0$, the leftmost index is shifted to $t_0+1$ for this subset. Hence, both the
+    left and the right positions are gradually narrowed down towards the partitioning
+    index, sequencing the key search'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '# Intl'' Conf. Foundations of Computer Science | FCS ''17 | 31
+
+
+    **Combination 3**: Here, $L_1$ and $L_2$ are in descending order. This combination
+    works pretty similarly to Combination 1. Assume the middle key, $k_{middle}$ is
+    identified at $i_{middle}$ with a single partitioning key. The keys larger than
+    this partitioning are searched within the search pool, $arr[0]$ through $arr[i_{middle}-1]$.
+    One key, $k$, is identified at index $i$, the leftmost is shifted to $l_{(m-1)}+1$
+    for sub-list. The rightmost remains at its original position.
+
+
+    +   Both the Search Pool and the Keys are Sorted in Descending Order.
+
+
+    +   The Search Pool is Sorted in Ascending Order and the Keys are Sorted in Descending
+    Order.
+
+
+    +   The Search Pool is Sorted in Descending Order and the Keys are Sorted in Ascending
+    Order. Computation times for all 4 combinations are compared to each other graphical
+    as well as tabular methods.
+
+
+    As the algorithm performs balanced binary search, the keys $k_{middle}$ are searched
+    within the sub-array, $arr[l+1]$ through $arr[n-1]$ with the smallest key or largest
+    key for first. Once $k$ is identified at index $i$, the rightmost is shifted to
+    $l_{(m-1)}+1 for this$. Hence, both left and right indices are slightly shifted
+    while searching the partitioning key, optimizing the search complexity.
+
+
+    As per the computational measures is concerned, finest will be implemented for
+    algorithm complexity.
+
+
+    **Combination 4**: With $L_1$ and $L_2$ are in descending order. The keys in $L_2$
+    are organized from higher to lower order. The middle key, $k_{middle}$, is identified
+    at $i_{middle}$ with 1 partitioning key. The keys larger than the partitioning
+    are searched within the left half and the keys smaller are searched only within
+    the sub-array, $arr[l+1]$ through $arr[n-1]$ with smallest or largest key for
+    first. Once $k$, is identified at index $i$, the rightmost is shifted to $l_{(m-1)}+1$
+    for sub-list. The rightmost remains at its original position.
+
+
+    +   Beginning with the index calculated for the middle key in search pool, the
+    left half of the search pool will be searched in descending order, and right half
+    of the search pool will be searched in descending order of keys.
+
+
+    +   Beginning with the index calculated for the middle key in search pool, the
+    left half of the search pool will be searched in descending order, and right half
+    of order.
+
+
+    +   Beginning with the index calculated for the middle key in search pool, both
+    search pool halves will be searched with descending order of keys.
+
+
+    As the proposed algorithm performs binary search, which are larger than $k$ in
+    the right half of the half keys are searched within the sub-array, $arr[0]$ through
+    $arr[i-1]$, with the largest key at $l_{(m-1)}$. Once it is identified at $i_{middle}$,
+    the leftmost is shifted to $l_{(m-1)}+1$ for sub-list. Hence, both left and right
+    index positions are gradually shifting towards the overall key search position.
+    The overall search space is optimized by shifting the boundaries towards the proposed
+    computational algorithm in this paper.
+
+
+    Binary search is poor due to its logarithmic efficiency, and the strong factor.
+    One of the most important future works will to be a significant application of
+    the proposed tiered binary search algorithm. The algorithm will be implemented
+    for different key and list order as stated above. The related algorithmic performance
+    will be evaluated, and compared to each other.
+
+
+    # 7. Conclusion and Future Research
+
+
+    # References
+
+
+    This paper proposes an algorithm for range-based tiered element binary search,
+    and search showing the effectiveness of the proposed algorithm in search reduction.
+    The proposed algorithm also explores a formal foundation to use the concepts introduced.
+    In future, to demonstrate the following computation time measurements were and
+    the Carried
+
+
+    +   [1] A. Tarek, "A Algorithm for Multiple Binary Search in Database," Proc.
+    SCO''04, 2004, pp. 222-227.
+
+
+    +   [2] A. Tarek, "A New Approach for Multiple Binary Search in Database Applications,"
+    IEEE-INTERNATIONAL JOURNAL OF COMPUTER SCIENCE, 6(2005),, pp. 279-285.
+
+
+    +   [3] A. Tarek, "Multi-key Search and the Related Performance," in Proc. WSEAS3
+    American Conference on Applied Mathematics, International Conference, 2008, pp.
+    712-716.
+
+
+    +   [4] A. Tarek, "A New Algorithm for Multiple Key Interpolation in Uniform List
+    of Numbers," Recent Advances in Applied Mathematics and Information Science, vol.
+    10 (2014).
+
+
+    +   [5] A. Tarek, "A New for Multiple Key Linear Interpolation with the Formal
+    Foundation," in Proc. CSC''14, 2014, paper CSC203.
+
+
+    ISBN: 1-60132-456-1, CRESA Press'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Algorithms for the Majority Problem
+
+
+    Rajarshi Tarafadar and Yijie Han
+
+    School of Computing and Engineering, University of Missouri at Kansas City, Kansas
+    City, MO 64110
+
+    rtck7@mail.umkc.edu, hanijy@umkc.edu
+
+
+    The main idea of the paper is to give solutions to the majority problem where
+    we are counting the number of occurrences of the majority element more than half
+    of the total number of elements in the input set also for the number of occurrences
+    of the element at least half of the total number of the elements in the input
+    set. In the model we use elements that cannot be used in an array and there is
+    no order for the input elements. Thus the outcome of the comparison of two elements
+    can be either equal or not equal and cannot be greater than smaller. The focus
+    of the paper is to propose algorithms for these problems and analyze their time
+    complexity. For both versions we show O(n) time algorithms. These results could
+    be compared with cases where elements can be ordered.
+
+
+    The first version has been studied in [4] and an O(n) time algorithm is presented.
+    In the studying of the majority problem we assume that input elements cannot be
+    ordered and cannot be used to index an element in an array. The comparison between
+    two elements can only be equal or not equal. That is the comparison will not return
+    the result of one element is “larger” or “smaller” than the other element.
+
+
+    Keywords: Algorithm, Majority, Complexity
+
+
+    Example 1 [3]: With more than half the number of times of the cardinality of the
+    input set: James stands at the pile of papers in front of him. His class has finished
+    voting in the election of a class representative. All pupils have written the
+    name of their preferred candidate on a piece of paper, and James has volunteered
+    to count the votes and determine the result of the election. Prior to the election
+    class agreed that a candidate should become class representative only if more
+    than half the class voted for him or her. None of the candidates wins the absolute
+    majority of the votes, the election will be repeated.
+
+
+    # ## 1. Introduction
+
+
+    The majority problem [3] is to find the element with occurrences at least half
+    of the number of elements in the input set. This element found is called the majority
+    element. Majority problem is an interesting problem in algorithms field [1][2][3][4].
+    We study two versions of this problem. The first version is the more than half
+    version in which the majority element occurs more than half of the cardinality
+    of the input set. The other version is the at least half version in which the
+    majority element occurs at least half of the number of times of the input set.
+    In this case there may exist two majority elements.
+
+
+    Example 2: With at least half the number of times of the cardinality of the input
+    set: In the previous case James is counting the number of votes of the candidates
+    to check whether they have received more than half of the total votes. But there
+    may exist some circumstances where one or two candidate(s) received the half of
+    the total number of the votes. The candidate(s) must be the winner/she received
+    half of the total number of the votes. What will be the approach that James'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: '# 2. Approaches
+
+
+    Approaches for solving the majority problem (the first version, Example 1): How
+    should James approach this? He doesn''t think about it much and decides to use
+    the most straightforward method, namely putting the names of all candidates that
+    receive votes on a piece of paper, and keeping a tally of how many votes each
+    of them has received. He picks up each of the ballot papers to see which name
+    has been written on it. If the name is not yet on his sheet, he writes the name
+    and puts one tally mark next to it. If the name is already on it, he simply adds
+    an extra tally mark next to that.
+
+
+    But he thinks something different. He thinks the complexity can be improved. So
+    he will come up with an algorithm that will reduce the complexity. Below is the
+    proposed algorithm.
+
+
+    # 3. Algorithms
+
+
+    ```
+
+    Procedure FindMajority1(A [0..n-1]) /* First version, not more than half. */
+
+    ```
+
+
+    Input: Array A [0..n-1] of n objects.
+
+
+    Output: Majority element a if it exists. Otherwise report no majority element.
+
+
+    ```
+
+    if(a=NO-MAJORITY-ELEMENT) then
+
+    return NO-MAJORITY-ELEMENT;
+
+    count=0;
+
+    for (i=0; i<n; i++) { if (B[i]=a) count++; }
+
+    if (count > n/2) return a
+
+    else return NO-MAJORITY-ELEMENT;
+
+    ```
+
+
+    ```
+
+    Sub Find(A[0..n-1])
+
+    {
+
+    if(n==1) return A[0];
+
+    if(n == 2) {
+
+    if A[0] == A[1] return A[0];
+
+    else return NO-MAJORITY-ELEMENT;
+
+    }
+
+    if(n==3) {
+
+    if (A[0] == A[1] | A[0] == A[2]) return A[0];
+
+    else if(A[1]==A[2]) return A[1];
+
+    else return NO-MAJORITY-ELEMENT;
+
+    }
+
+    (n%2==0) then n1=n; else n1=n-1;
+
+    j=0;
+
+    for(i=0; i<n/2; i++) {
+
+    if(A[2] == A[2+1]) { A[j]=A[2]; j++; }
+
+    }
+
+    if(n%2==1) then A[j]=A[n-1]; else j--;
+
+    Call Find(A[0..j]);
+
+    }
+
+    ```
+
+
+    ```
+
+    Main:
+
+    {
+
+    for (i=0; i<n; i++) B[i]=A[i];
+
+    a=Find(A[0..n-1]);
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: 'Note that if Find returns a which is not NO-MAJORITY-ELEMENT, a may not be
+    the majority element.
+
+
+    # Example 3:
+
+
+    Let the input sequence b a c a a d e f f. It consists of 10 elements. The Find
+    procedure returns f. But f is not a majority element. After we go g from Find
+    we compare it to all the n elements to make sure that it is/not the majority element.
+
+
+    In the above sequence we compare b with a. As they are not we will discard them.
+    Next we will compare c with a and the same action repeats. We will continue until
+    the last element. We will compare last two elements in the sequence. As they are
+    so we will keep one. Now assume that f is the majority element. It may or may
+    not be majority to the conclusion we must compare f with all the elements. If
+    the number of occurrences of f in the sequence exceeds more than half of the number
+    of elements (>5) then f is the majority element otherwise it is not.
+
+
+    # Time Complexity
+
+
+    Every iteration indexed by i in procedure Finds the number of element to at most
+    half. Thus the recursion is called for at most half of elements.
+
+
+    Thus the recursion relationship in this algorithm is T(n)=T(n/2)+n because each
+    recursion, with a call to problem of half size. The solution is T(n)=O(n).
+
+
+    # Find Majority 2 (Second version, at least half case):
+
+
+    Input: Array A[0..n] of n objects.
+
+
+    Output: Majority element (a, b). If a and/or b nil then it is not a majority element.
+
+
+    ```
+
+    Main:
+
+    {
+
+    if(n==1) return A[0], nil);
+
+    if (n == 2)
+
+    {
+
+    if(A[0]== A[1]) return A[0], nil);
+
+    else return (nil, nil);
+
+    }
+
+    n1=(n+n)%2/2;
+
+    (a, b)=Find Majority 2(A[0..n1]);
+
+    (c, d)=Find Majority 2(A[n1..n-1]);
+
+    counta=0; countb=0; countc=0;
+
+    for(i=0; i<cn; i++) {
+
+    if(A[i]==a) counta++;
+
+    if(A[i]==b) countb++;
+
+    if(A[i]==c) countc++;
+
+    if(A[i]==d) count++;
+
+    }
+
+    (e, f)=(nil, nil); count=0;
+
+    if (counta > (n+n)%2/2) { e=a; count++; }
+
+    if(countb > (n+n)%2/2) {
+
+    if(count==0) (e=b; count++;
+
+    else f=b;
+
+    }
+
+    if(count >= (n+n)%2/2) {
+
+    if(count==0) { e=c; count++; }
+
+    else f=c;
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '# Intl. Conf. Foundations of Computer Science | FCS''17 |
+
+
+    35
+
+
+    ```
+
+    if(count >= (n+n%2)/2)
+
+    ```
+
+
+    # 4. Further Improvement
+
+
+    ```
+
+    {
+
+    if(count==0) { e=d; count++; }
+
+    else f=d;
+
+    }
+
+    return (e, f);
+
+    }
+
+    ```
+
+
+    Algorithm Find Majority 3(A)
+
+
+    Input: set A of n elements.
+
+
+    Output: Majority element (a, b). If a and/or b is
+
+    nil then it is not a majority element.
+
+
+    Main
+
+
+    ```
+
+    {
+
+    for(i=0; i<n; i++) B[i]=A[i];
+
+    (a, b)= Find(A[..n-1]);
+
+    counta=0; countb=0;
+
+    for(i=0; i<n; i++) {
+
+    if(B[i]==a) counta++;
+
+    if(B[i]==b) countb++;
+
+    }
+
+    if(count&count == n/2) return (a, b);
+
+    else if(count >= n/2) return (a, nil);
+
+    else if(countb>=n/2) return (b, nil)
+
+    ```
+
+
+    Note that the second case where we are
+
+    looking for majority element(s) that occur at
+
+    halt of the times there may exist two
+
+    majority elements.
+
+
+    # Example 4:
+
+
+    4 4333434
+
+
+    Let us consider the sequence which
+
+    consists of 8 elements. The algorithm is
+
+    to study the majority element equal or
+
+    gthan than half. In this sequence the
+
+    number of 4''sthe number of 3s. The two
+
+    algorithm will return two majority
+
+    elements.(Here 4 and 3).
+
+
+    Sub Find
+
+
+    The correctness of Majority 2 follows from
+
+    t fact that each recursion level we check
+
+    to make sure that the elements returned
+
+    are not majority elements.
+
+
+    ```
+
+    {
+
+    if(n%2==1) call Majority 1(A)
+
+    else(n%2==0) Group every 4 elements in a
+
+    with the last 2 elements form another
+
+    group.
+
+    elelse /* n%4==0 */ Group every 4 elements in a
+
+    group.
+
+    ```
+
+
+    # Time Complexity:
+
+
+    Find Majority 2(A[..n-1]) have recursive calls
+
+    Find Majority 2(A[0..n1]) and Find Majority
+
+    2(A[n+1..n-1]), thus the recursion formula for
+
+    this algorithm is T(n)=2T(n/2)+O(n). The solution for
+
+    the time complexity is O(n log n).
+
+
+    ```
+
+    {
+
+    for every group of 4 elements, a, b, c, do
+
+    {
+
+    if(a==b && a==c && a==d)
+
+    ```
+
+
+    ISBN: 1-60132-456-1, CSREA Press ©'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Int''l Conf. Foundations of Computer Science | FCS''17 |
+
+
+    {
+
+
+    {
+
+
+    Discard any two elements and put the other two elements into set S;
+
+
+    Discard both a and b;
+
+
+    }
+
+
+    }
+
+
+    else if(three elements (say a, b, c) are equal and d is different)
+
+
+    Call Find Majority 3(S);
+
+
+    {
+
+
+    }
+
+
+    Discard b, c, d and put into a S;
+
+
+    **Theorem 1:** Majority find the majority element(s) in O(n) time
+
+
+    }
+
+
+    **Proof:** The correctness of Algorithm Majority 3 follows from the facts as shown
+    below:
+
+
+    else if(there are two pairs and elements within each pair are equal (say a==b
+    and c==d))
+
+
+    {
+
+
+    Let us consider a set of 44 elements which has 4 elements (a, a, a, a)
+
+
+    Discard b and d and put a and c in S;
+
+
+    So the algorithm will be designed in such a way that if all 4 elements are equal
+    then we keep the two element(here a) and discard the remaining elements. Because
+    at each recursion level we reduce the total number of elements to most half. If
+    a is a majority element it will be the majority element.
+
+
+    }
+
+
+    else if(there a pair of elements that are equal and other elements are not equal
+    (say a!=b && a!=c && a!=d & c!= d)
+
+
+    If the set consists of elements where there are 3 equal elements as in [a, a,
+    b] then we will keep one of the equal elements and discard the remaining elements.
+    Because a != b throw away the pair a and b will not affect the selection of the
+    majority element. For 2 a''s we keep one and not because the number of elements
+    is reduced to most half, thus if a is a majority element it will be the majority
+    element.
+
+
+    {
+
+
+    Discard b, c, d and put a in S;
+
+
+    }
+
+
+    else /* No two elements are equal among 4 elements */
+
+
+    If the set consists of two sets of equal elements such as [a, a, b] we will discard
+    one a and b and keep the remaining two. Because recursion reduced to a set of
+    most half the number of elements and if a and/or b are majority elements they
+    are kept.
+
+
+    {
+
+
+    Discard all 4 elements;
+
+
+    }
+
+
+    {
+
+
+    for the group of two elements a and b do
+
+
+    If the set consists of equal elements such as [a, a, b, c] then we discard a and
+    keep one of the equal elements (here a). Moving b and c will not affect the counting
+    of the majority element because b!=
+
+
+    if(a==b)
+
+
+    {
+
+
+    Discard a and put b in S;
+
+
+    Keep one a for the number of elements is reduced to most half and therefore if
+    a is a majority element it will be kept.
+
+
+    }
+
+
+    else
+
+
+    ISBN: 1-60132-456-1, CSREA Press ©'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: 'If the set consists of 4 different elements such as { a, b, c, d } we will
+    discard all of them. In this case we pair a and b and a!= b and we throw them
+    away. And we pair c and d and c!= d and we throw them away. These actions will
+    not affect the counting of the majority.
+
+
+    # Time Complexity
+
+
+    The recursion formula for this algorithm, T(n)=T(n/2)+O(n). Therefore the time
+    complexity will be O(n).
+
+
+    # 5. Conclusions
+
+
+    In this paper we have studied the majority problem. For both the half case and
+    the at least half case we provided optimal algorithms. We note that the model
+    used for the study of these algorithms is interesting and we plan to do further
+    research on the majority problem in the near future.
+
+
+    # References
+
+
+    +   [1]T. H. Corman, C. E. Leiserson, R. L. Rivest, C. Stein. Introduction to
+    Algorithms, Third Edition, MIT Press, 2009.
+
+
+    +   [2] S. Dasgupta , C. H. Papadimitriou, and U. V. Vazirani. Algorithms, McGraw-Hill
+    Education, 2006.
+
+
+    +   [3] Berthold Vocking Helmut Alt , Martin Dietzfelinger Rüdiger Reischuk Christian
+    Scheideler, Heribert Vollner Dorothea Wagner. Algorithms UnPlugged , Springer,
+    2011.
+
+
+    +   [4] Boyer, R. S.; Moore, J. S., ,MRJTY - A Fast Majority Vote Algorithm",
+    in Boyer, R. S.; Automated Reasoning: Essays in Honor of Woody Bledsoe, Automated
+    Reasoning Series, Dordrecht, The Netherlands: Kluwer Academic Publishers, 1991.'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# Investigating the Benefits of Parallel Processing for Binary Search
+
+
+    A. Paul Mullins Ph.D., Advisor¹, B. Gennifer Elisse Farrel², and C. Ronald Baldwin³
+
+    Department of Computer Science, Slippery Rock University, Slippery Rock, Pennsylvania,
+    USA
+
+
+    **Abstract -** explored possible benefits of parallel programming for binary search,
+    specifically relating to how divisions in a binary search affected efficiency
+    of the algorithm. A unique search, named Congruent Binary Search (CBS), was created
+    with the goal of avoiding the pitfalls of parallel binary search. Though it was
+    hypothesized that CBS could run on O(log(N/p)), where N is number of elements
+    in the search and p is number of processors. Compared to standard serial and paralyzed
+    searches, research found that CBS offers a performance boost over other searches.
+    The binary search is not a good candidate for parallel programming.
+
+
+    For the experiment, the Congruent Binary Search is created and tested against
+    its serial version, and the seemingly most common algorithm for parallel binary
+    search. The execution times are compared and speed factor is calculated, using
+    serial binary searches time for the same data sets. It is hypothesized that the
+    Congruent Binary Search will improve execution time. It executes in O(log p),
+    where p is number of processors. The array is split by even and odd indices. To
+    split the array in half, the first iteration of a binary search of these would
+    be thrown.
+
+
+    **Keywords:** Parallel programming, binary search, undergraduate research project
+
+
+    # 2 Report
+
+
+    First, two classes are created for testing. The first class has an array of size
+    one hundred. Each index in the array contains an integer with assigned value of
+    address. This is for easy to attain a large sorted array. Objects are created
+    and initialized with the value that is being searched for. Then there are methods
+    to perform the serial binary search and the Congruent Binary Search.
+
+
+    # 1 Introduction
+
+
+    This research project asks if the binary search can benefit from parallel programming.
+    This research investigates any speed factor equal to the number of threads used.
+    Current implementations of the parallel binary search tend to split an array into
+    small arrays many times. One example is ''''Efficient Binary Search on Sorted
+    Arrays'''' by Danny Z. Chen. [1] discusses that two arrays A and B with n and
+    m numbers that have a time complexity of
+
+
+    Though this is a valid approach there may be more desirable. One points where
+    an alternative is one that sorts in place and does not require overhead of splitting
+    data into multiple arrays. This notably causes an increase in space complexity.
+
+
+    The Congruent Binary Search was written as an alternative. In this algorithm we
+    only need to use a single array for storage; implementation is much simpler than,
+    and in theory should have a speed boost.
+
+
+    The Congruent Binary Search utilizes one array and two threads. Threads search
+    only even indices for the value and the other searches only odd indices. One threads
+    search the first the other searches
+
+
+    Furthermore, it is important because there is currently little established research.
+    According to many on stack overflow, the community is currently divided by how
+    this should be done, or if it is done at all [2] This obvious inconsistency in
+    the community programming gives ample reason for testing.
+
+
+    After creation, a test was was created for each search with the same number of
+    elements. All algorithms were run searching for the same value. This is done in
+    a few loop so each search can be executed and timed many times. Each search was
+    saved to a file before execution begins. Each individual search of search was
+    recorded with its time in nanoseconds, and number of iterations. After all iterations
+    it was used to find speed factor, average execution time of each search was used.
+    The serial algorithm was divided by the Congruent Binary Search to get its speed
+    factor. Then, the parallel algorithm average execution time is divided by the
+    Congruent Binary Search is an enhancement of'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: 'the two established algorithms, Ahmahl''s law is used to
+
+    calculate speed of the Congruent Binary Search compared
+
+    to established algorithms. Thus, by formula (1), speed
+
+    is found.
+
+
+    # Average execution time – enhancement
+
+    Average execution time – enhancement (1)
+
+
+    In this case scheduling by the operating system was
+
+    afecting the results, each test was run individually.
+
+    were approximately the same. Additionally, all three
+
+    algebras were running with one iteration and the
+
+    results; the first execution was slower than
+
+    than expected. This can be explained by the load
+
+    warm up machine. The first iteration is useful but it is
+
+    ligible. The many trials execute a more precise
+
+    answer, by the law of large numbers. That is why execution
+
+    times are recorded for multiple times.
+
+
+    To calculate time, the relationship between each
+
+    iterations is used to hypothesize the Congruent Binary
+
+    Search execution time. A value is chosen on either of
+
+    ray array to use up to worst-case scenario. Thus, 0
+
+    stored at index 0 is searched for. After analyzing all the data,
+
+    it concluded that the parallel search is not a good candidate
+
+
+    # 3 Data
+
+
+    Tables (i) and (ii) record execution time for the two parallel
+
+    alg that are compared. Table (iii) compares the
+
+    Congruent Binary Search to the Serial Binary. Serial
+
+    binary search is approximately five times faster, although not
+
+    dicted in the data table.
+
+
+    # (i) Average Found Through Looping
+
+
+    | Trials | Search | Average Execution time | Search Val |
+
+    |---|---|---|---|n| Million | Parallel (new) | 62455 | 1000 |
+
+    | Million | Parallel (old) | 62491 | 1000 |
+
+
+    Table 1: Difference: 32. (Nano seconds) in favor
+
+    of odd/even array split.
+
+    Speedup = 62491/62455 = 1.0006 (virtually no
+
+    speed increase)
+
+
+    # (ii) Average Found Through Iterations (two)
+
+    Threads)
+
+
+    | Trial | Standard Parallel Binary | Congruent Binary Search | Search Val |
+
+    |---|---|---|---||
+
+    | 1 | 143980 | 165702 | 1000 |
+
+    | 2 | 143050 | 140568 | 1000 |
+
+    | 3 | 136833 | 148635 | 1000 |
+
+    | 4 | 149256 | 153290 | 1000 |
+
+    | 5 | 159496 | 168495 | 1000 |
+
+    | 6 | 160737 | 154220 | 1000 |
+
+    | 7 | 160116 | 143981 | 1000 |
+
+    | 8 | 153290 | 152980 | 1000 |
+
+    | 9 | 148324 | 157014 | 1000 |
+
+    | 10 | 150807 | 142739 | 1000 |
+
+
+    Table ii: Difference: 49.2ns in favor of
+
+    even/odd split
+
+    Speedup = 153258.2ns/152762.4ns = 1.0032
+
+    (virtually no speed increase)
+
+
+    # (iii) Iterations Per Thread
+
+
+    | Thread 1 | Thread 2 | Serial |
+
+    |---|---|---||
+
+    | 0 | 1 | 1 |
+
+    | 10 | 2 | 2 |
+
+    | 13 | 2 | 2 |
+
+    | 15 | 3 | 3 |
+
+    | 29 | 3 | 3 |
+
+    | 30 | 4 | 4 |
+
+    | 61 | 4 | 4 |
+
+    | 75 | 5 | 5 |
+
+    | 150 | 6 | 6 |
+
+
+    Table iii: This data lists the number of
+
+    iterations for each thread, where n is the length of
+
+    array being searched.
+
+
+    # 4 Congruent Binary Search for evens and Odds
+
+
+    One thread has even indices and one thread
+
+    odd indices. For a thread of even and odd indices, ''left'' is set
+
+    ''right'' to the first even index or (first + 1). Further
+
+    to the first even index and for the odd index then is
+
+    calculated. With the even
+
+    midpoint is checked that it is even and odd in the
+
+    thread checked that it is. This is done via the
+
+    modulus operator. If the value of midpoint changes so
+
+    that it remains within its proper range. For example, it
+
+    is possible to find an odd midpoint between even indices.
+
+    This is not allowed because the midpoint must be
+
+    located within the even thread. If the midpoint isn''t, it is
+
+    shifted one space to the left.'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: "# Int'l. Conf. of Computer Science | FCS'17\n\nEither 'left' or 'right' are\
+    \ assigned a new index, depending on the value at the midpoint index when compared\
+    \ to the current value being searched. With new 'left' and 'right' points, the\
+    \ process of calculating the midpoint is repeating the cutting in half each iteration.\
+    \ The iteration stops when 'left' is greater than 'right' (indicating that value\
+    \ was not found within) or when midpoint is equal to the value being searched\
+    \ (indicating that the value was found).\n\n```\n@Override\n// binary search on\
+    \ odd indices\npublic void run() {\n    int left = 1;\n    int right = this.data.length\
+    \ - 1;\n    if (right % 2 == 0)\n        right--;\n    int mid = ((left + right)\
+    \ / 2);\n    if (mid % 2 == 0)\n        mid--;\n    while (left < right && flag\
+    \ == false) {\n        // cut off half values depending on mid mid point\n   \
+    \     if (this.searchVal(data[mid])) {\n            flag = true;\n        } else\
+    \ if (this.data[mid] != searchVal) {\n            right = mid - 2;\n         \
+    \   mid = ((left + right) / 2);\n            if (mid % 2 == 0)\n             \
+    \   mid--;\n        } else {\n            left = mid + 2;\n            mid = ((left\
+    \ + right) / 2);\n            if (mid % 2 == 0)\n                mid--;\n    \
+    \    }\n    }\n}/ /end */\n```\n\nThe above process is shown in the code in figures\
+    \ 1 and 2.\n\n```\n// binary search on even indexes\n@SuppressWarningsWarnings(\"\
+    deprecation\")\npublic void binaryThread() {\n    int left = 0;\n    int right\
+    \ = this.data.length - 1;\n\n    if (right % 2 != 0)\n        right--;\n\n   \
+    \ int mid = ((left + right) / 2);\n    if (mid % 2 == 0)\n        mid--;\n\n \
+    \   // cut off half values depending on mid point is\n    // or greater < the\
+    \ value we are searching for\n    while (left < right && flag == false) {\n  \
+    \      if (this.searchVal(data[mid])) {\n            flag = true;\n        } else\
+    \ if (this.data[mid] != searchVal) {\n            right = mid - 2;\n         \
+    \   mid = ((left + right) / 2);\n            if (mid % 2 == 0)\n             \
+    \   mid--;\n        } else {\n            left = mid + 2;\n            mid = ((left\
+    \ + right) / 2);\n            if (mid % 2 == 0)\n                mid--;\n    \
+    \    }\n    }\n}/\"/end*/\n```\n\nFigure 1: This is the code for the Congruent\
+    \ Binary Search that handles the thread of even indexes\n\nFigure 2: This is the\
+    \ code for the section of the Congruent Binary Search that handles the thread\
+    \ of odd indexes\n\n# 4.1 Generalizing the congruent Binary Search\n\nCurrently,\
+    \ research has only been performed on an array divided into two threads. The Congruent\
+    \ Binary Search can easily split an array into any number of threads. This can\
+    \ be generalized to any odd number of divisions, but these are not desirable for\
+    \ the experiment an odd number of divisions is desirable because each will contain\
+    \ both even and odd indexes. This causes problems: The Congruent Binary Search\
+    \ works on threads of just even or just odd indexes. Accommodation for a thread\
+    \ with both even and odd indexes would require a different algorithm. Even if\
+    \ the Congruent Binary Search could work within one of these threads with both\
+    \ even and odd indexes, new code would have to be written to accommodate the fact\
+    \ that midpoint could now be a decimal. This would be done by adding a call to\
+    \ the floor method.\n\nFor splitting the index into p threads, where p is an element\
+    \ of 2N, each thread will be a subset of the conjugacy classes [0], [1], ...,\
+    \ [p-1]. Each thread be the only subset of an individual class. Do not allow for\
+    \ more than one thread to be a subset of each conjugacy class.\n\nISBN: 1-60132-456-1,\
+    \ CSREA Press ©"
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Intl''Conf. Foundations of Computer Science | FCS''17 |
+
+
+    For each thread, Set Left to the first element of the concurrency class is a subset
+    of. The p(0),p(1), ..., p(n-1) is Left for each thread. Set Right to the left
+    (largest index) for each thread.
+
+
+    system interrupted often for other tasks that have higher priority in the system
+    queue. To get more accurate results a different environment may be better. An
+    ideal environment is a parallel programming model where the programmer has more
+    control over memory management as well as task management.
+
+
+    Within each thread, the algorithm will iterate through even or odd threads. Because
+    the array is divided between even and odd threads, there will be a thread that
+    contains both even and odd. It is possible that the midpoint between the Left
+    and Rights is not even within a thread of odd indices.
+
+
+    Additionally, the results find that the Congruent Binary Search offers a performance
+    boost compared to the binary search and the standard parallel search. In fact,
+    the binary search processes more elements. This could be because of underlying
+    parallelism an important to remember that in some cases execution is the most
+    performant, for smaller tasks. With such tasks multithreading overhead from parallelization
+    becomes more notable.
+
+
+    The general form for finding the midpoint, and determining if its value must be
+    changed to remain within the thread in question, is:
+
+
+    +   - Let ''a'' = first address in each thread.
+
+    - Let ''remainder'' = ''midpoint p''
+
+    - If(midpoint p!=a)
+
+    - Then mid = (remainder-a)
+
+    - Else, midpoint remains the same.
+
+
+    When midpoint is equal to a, a midpoint is located within the question and its
+    value does not need to be adjusted.
+
+
+    The theoretical time complexity of the Congruent Binary Search is determined to
+    be O(log n+k) where k is a constant for thread overhead. This is the case when
+    an event is an even or odd index, by the halving of the array, perhaps only one
+    iteration is saved compared to an array double size. This is the example complexity
+    of an array of 100,000,000, performed under the binary search and the Congruent
+    Binary Search, O(log (2+100,000,000)) = 26.58 and O(log n) = 25.58. The two are
+    still different iterations.
+
+
+    Following the form of the Congruent Binary Search, outlined above, either ''left''
+    or ''right'' are assigned a value at the midpoint in question and compared to
+    the value being searched. For an array divided into two threads will need Left
+    and Right that change in increments of p. For the example, in even and odd threads,
+    Left and Right''s values can change in increments of two. For an array divided
+    into four threads, Left and Right''s values can change in increments of four.
+
+
+    The search terminates under the same conditions as the above form. The iteration
+    stops when ''left'' is greater than ''right'' or midpoint is equal to the value
+    being searched for.
+
+
+    The fact that indexing by even and odd indices may have some potential or advantage
+    because of their steeper curve than that of logarithmic algorithms. The Congruent
+    Binary Search algorithm is parallel but not performant. It is concluded binary
+    search is a good candidate for parallel programming.
+
+
+    # 5 Conclusions
+
+
+    The hypothesis that Congruent Binary Search could offer a performance boost to
+    the binary search was not supported. In fact, any speed up was needed because
+    the same execution time was also achieved with the method. Some possibilities
+    for error could be accounted for by the fact that Java is not suitable for parallel
+    programming. In Java, all threads run within the Java Virtual Machine. Unfortunately,
+    it is not possible to see what the Operating System is doing in handling the threads.
+    The Java threads may have such low priority that the operating
+
+
+    For future, there are a few avenues of investigation for the potential effectiveness
+    of the Congruent Binary Search. Research is conducted on the effects of changes
+    to the Congruent Binary Search algorithm, utilizing its general form. These effects
+    are splitting the array into a larger number of threads, and adding a ''flag''
+    that allows communication between all threads. Also, current exploring variables
+    to the
+
+
+    ISBN: 1-60132-456-1,ing Press'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: 'compare each algorithm''s number of instructions. This offers a way of comparing
+    efficiency in terms of instruction rather than speed.
+
+
+    # References
+
+
+    +   [1] Chen, Danny Z., "Efficient Parallel Binary Search on Sorted Arrays" (1990).
+    Computer Science Technical Reports. Paper 11: http://docs.lib.purdue.edu/cstech/11.
+    [Accessed: 20-Feb- 2017]
+
+
+    +   [2] ''Parallel Binary Search'', 2012 [Online]. Available: http://stackoverflow.com/questions/8423873/parallel-binary-search.
+    [Accessed: 20- Feb- 2017]'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Author Index
+
+
+    +   Baldwin, C. Ronald - 38
+
+    Farrell, Gennifer Elise - 38
+
+    Goswami, Naveen Kumar - 3
+
+    Han, Yijie - 32
+
+    Hong, Joohwan - 19
+
+    Jakoby, Andreas - 3
+
+    Jung, Seokkyong - 19
+
+    Ko, Yoomee - 15
+
+    Lim, Jeongtaek - 15
+
+    List, Eik - 3
+
+    Lucks, Stefan - 3
+
+    Mullins, Paul - 38
+
+    Ryu, Minsoo - 15, 19
+
+    Tarafdar, Rajarshi - 32
+
+    Tarek, Ahmed - 25
+
+    Yoon, Hosang - 15
+
+    Yoon, Hyunmin - 15
+
+    Yun, Kihyun - 19
+
+    Zhang, Yong - 10'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: <!-- no content -->
+  merge: -1
+  pgno: 51
