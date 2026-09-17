@@ -1,0 +1,2492 @@
+- img_proc: true
+  md: '![](img/a962ec79491408ecc743f3f11c25a851_0_0.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_0_1.png)
+
+
+    # # Coding with Anna and Elsa
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_0_2.png)
+
+
+    A Frozen Guide to Blockly
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_0_3.png)'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# Would you like to learn a special language that can help you build your own
+    computer programs?
+
+    Join Anna and Elsa and discover how to write code that will allow you to create
+    amazing drawings and designs?
+
+
+    # Introduction
+
+
+    People around the world rely on uses computer programs to communicate with one
+    another in a variety of ways. How are these programs created and what makes them
+    work on a computer?
+
+
+    In this book, you will learn how to use blocks of code that tell a computer what
+    to do. But first, find out more about the world of coding by reading pages 4 and
+    5. Then discuss the questions and glossary below.
+
+
+    # Take a Book Tour
+
+
+    +   - Look at the picture on the cover. What do you think this book will be about?
+    Do you know who these characters are? Are you familiar with Frozen?
+
+    - The title of this book is Coding with Anna and Elsa. It is all about a kind
+    of coding that "tells" computers how to make decisions. What part do you think
+    the characters from Frozen will play in this adventure?
+
+    - Find the Contents page and look at the titles of each section. Are there terms
+    you already know? Where have you seen them before?
+
+    - There are 24 coding activities in this book. Skim pages 8 through 45. How are
+    the activity pages in each section similar? What part do you think the characters
+    play in each section?
+
+    - Read the two paragraphs at the top of page 6. Based on the information provided,
+    how do you think you will be using this book to learn about coding?
+
+
+    # Glossary-Words
+
+
+    As you use the language of computers, you will learn many new words. Here are
+    some important words you will need to know. Skip the first 16 pages. Can you find
+    these words? Next, locate them in the glossary on page 48. Remember to use the
+    glossary if you need help understanding some of the new words in this book.
+
+
+    ```
+
+    block-based language
+
+    code
+
+    debug
+
+    parameter
+
+    pattern
+
+    pixel
+
+    remix
+
+    sequence
+
+    ```
+
+
+    # Now, let''s get coding!'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# Disney FROZEN
+
+
+    # Coding WITHDRAWN with Anna and Elsa
+
+
+    A Frozen Guide to Blockly
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_2_0.png)
+
+
+    Written by Kiki Prottsman
+
+
+    Special thanks to Dr. AnnMarie Thomas, Simon Tatom, and Code.org
+
+
+    Lerner Publications ◆ Minneapolis
+
+
+    WINNETKA-NORTHFIELD PUBLIC LIBRARY DISTRICT WINNETKA, IL 60093 847-446-7220'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# Disney Educators:
+
+
+    Disney Learning''s Coding with Anna and Elsa: A Frozen Guide to Blockly offers
+    learners an introduction to computer programming. This book presents basic coding
+    concepts in child-friendly language, prompting readers to explore these concepts
+    through both online and off-line activities. Step-by-step instructions are provided
+    for every project, and children are encouraged to experiment and try different
+    solutions. Remember, the iterative process of assembling code, seeing what it
+    does, and making adjustments is more important than the end result. Learning to
+    code will help your students develop persistence, as well as skills in reasoning,
+    problem-solving, and creative thinking.
+
+
+    The Frozen project is created by Code.org, a nonprofit organization dedicated
+    to expanding access to computer science for all students. Code.org activities
+    are licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+    International Public License and are used with permission.
+
+
+    © 2019 Disney Enterprises, Inc. All rights reserved.
+
+
+    No part of this book may be reproduced, stored in a retrieval system, or transmitted
+    in any form or by any means—electronic, mechanical, photocopying, recording, or
+    otherwise—without the prior written permission of Lerner Publishing Group, Inc.,
+    except for the inclusion of brief quotations in an acknowledged review.
+
+
+    Lerner Publishing Company
+
+    A Division of Lerner Publishing Group, Inc.
+
+    241 First Avenue North
+
+    Minneapolis, MN 55401 USA
+
+
+    For reading levels and more information, look up this title at
+
+    www.lernerbooks.com.
+
+
+    Main body text set in Avenir LT 45 Book 12/14.5
+
+    Typeface provided by Linotype AG.
+
+
+    Library of Congress Cataloging-in-Publication Data
+
+
+    Names: Trottman, Kiki; author.
+
+    Title: Coding with Anna and Elsa : A frozen guide to Blockly / Kiki Trottman.
+
+    Minneapolis: Lerner Publishing, [2019] | Audience: Ages 7–11;
+
+    Audience: Grades 4 to 6.
+
+    Identifiers: LCCN 2018016843 | ISBN 9781541532662 (epbk) | ISBN 9781541532663
+    (fl; alk, paper) | ISBN 9781541532670 (alk, paper)
+
+    Subjects: LCSH: School (Computer programming)—Juvenile literature.
+
+    Computer programming—Juvenile literature. | Frozen (Motion picture : 2013 : Buck
+    and Lee)
+
+    Classification: LC QA76.73.B56 (ebook) | LC QA76.73.B56 .P76 (2019) | DDC 005.13/z3–de23
+
+
+    LC record available at https://lccn.loc.gov/2018016843
+
+
+    Manufactured in the United States of America
+
+    1-44852-35722-4/18/2018
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_3_0.png)'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# Contents
+
+
+    +   Why Code? . . . . . . . . . . . . . . . . . . . 4
+
+    Simplifying with Functions. . . . . . . . . . 32
+
+
+    +   Take a Tour . . . . . . . . . . . . . . . . . . . 6
+
+    For Loops . . . . . . . . . . . . . . . . . . . 33
+
+
+    +   Let''s Get Started! . . . . . . . . . . . . 8
+
+    For Loop Spirals . . . . . . . . . . . . . 34
+
+
+    +   Sequence. . . . . . . . . . . . . . . . . . 10
+
+    More Spiral Designs . . . . . . . . . . 36
+
+
+    +   Problem-Solving . . . . . . . . . . . . 11
+
+    A Grand Snowflake . . . . . . . . . . . 38
+
+
+    +   Draw Squares . . . . . . . . . . . . 14
+
+    Follow the Code . . . . . . . . . . . 40
+
+
+    +   Add a Triangle. . . . . . . . . . . 14
+
+    Review. . . . . . . . . . . . . . . . 41
+
+
+    +   Debugging . . . . . . . . . . . . . . 16
+
+    Get Inspired! . . . . . . . . . . . . 42
+
+
+    +   Repeat Loops . . . . . . . . . . . . 17
+
+    Try It Yourself! . . . . . . . . . . . . . . 44
+
+
+    +   Patterns That Repeat. . . . . . . 18
+
+    Answer Key . . . . . . . . . . . . . . . 46
+
+
+    +   "Sisters Design" with Loops . . . . 20
+
+    Glossary. . . . . . . . . . . . . . . 48
+
+
+    +   Nested Loops . . . . . . . . . . . . 22
+
+
+    +   Nested Designs. . . . . . . . . . . 24
+
+
+    +   Functions. . . . . . . . . . . . . . . 25
+
+
+    +   Draw Flowers with Functions. . . 26
+
+
+    +   More Flowers with Functions. . . 28
+
+
+    +   Nested Functions . . . . . . . . 30
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# Why Code?
+
+
+    Learning to code opens the door to a world of possibilities! When you write code,
+    you use a special language to talk directly to a computer or machine. Code that
+    tells computers how to complete specific tasks is called a program. Computer programs
+    let you do cool things like digital art, drive robots, and develop video games!
+
+
+    Professional computer programmers usually use text to write code. But we will
+    start our lessons using a block-based language. Instead of text, block-based languages
+    use code blocks that look like puzzle pieces. You drag and drop these blocks to
+    create programs. This is a fun, professional programmers use! The name of the
+    language we''ll be using is Blockly.
+
+
+    Coding is one part of a bigger subject called computer science. This is the study
+    of computers and computer-related ideas. When you study computer science, you
+    learn a lot of useful skills besides working with computers. You also practice
+    problem-solving, creative thinking, teamwork, and persistence. Being persistent
+    means that you keep trying, even when things get hard.
+
+
+    The activities in this book will help you use Blockly to create some amazing drawings
+    with your favorite characters. Grab a notebook and something to write with. As
+    you work on the projects, you will break large problems into smaller pieces. This
+    makes them easier to solve. After some practice, you will notice challenges in
+    the real world that you can handle the same way!
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_5_0.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_5_1.png)'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '![](img/a962ec79491408ecc743f3f11c25a851_6_0.png)
+
+
+    Many of the devices we use every day need code to work. Computers, phones, TVs,
+    and even cars all use software. Software refers to programs that run on a machine
+    or computer. You can''t touch software, but you can see the results of it almost
+    everywhere you go. When you use an app, see traffic signals change, or read a
+    car''s electronic display, software is at work!
+
+
+    computers what text and images to display when people visit their websites. And
+    Disney Imagineers use code to program Audio-Animatronic characters, telling them
+    how they should move and sound. As you see, code can be used to create really
+    amazing things!
+
+
+    A lot of the entertainment we enjoy also uses code. This includes movies, TV shows,
+    video games, and even theme rides. Special software helps filmmakers design and
+    animate characters in movies like Frozen. In code video games tells the game how
+    to react when the player does something. Web engineers use code to tell
+
+
+    # ## Did You Know?
+
+
+    +   * Computers are boxes full of circuits that shuffle electricity from one area
+    to another. They are not smart without code. It is only through code that computers
+    understand how to play music, show images, or run games.'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# # Take a Tour
+
+
+    It''s so much fun to build programs and watch them run! We will use the Frozen
+    project site at Code.org to create our programs. To access the website, we go
+    to studio.code.org/projects/frozen/.
+
+
+    Are you excited to create some drawings with Elsa and Anna? Great! The first thing
+    you''ll need to do is learn about the space you''ll be playing in. Let''s take
+    a tour of the coding website. There are three main areas to explore.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_7_0.png)
+
+
+    ### Play space:
+
+    This is the area where your code will run. After you''ve built your program, click
+    the **Run** button to see what your code does!
+
+
+    ### Toolbox:
+
+    This is where all of the code blocks are stored. The blocks are organized under
+    labels that describe the type of work they do. For example, you''ll find the **move
+    forward** block under the **Actions** label.
+
+
+    ### Workspace:
+
+    This is where you will build your code to make your drawings. Drag a block from
+    the toolbox here and click it in place to add it to your program. If you want
+    to remove any blocks, drag them back to the toolbox.'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# # Helpful Tips
+
+
+    * If you''d like to save your projects, you need to create an account before you
+    get started. Make sure to get an adult''s permission and help.
+
+
+    * To start a new project, use the **Create New** button at the top of the page.
+
+
+    * Use the **Rename** button to give your project name that describes what it does.
+    Choose a fun and memorable name!
+
+
+    * After you hit the **Run** button, it becomes a **Reset** button. Use **Reset**
+    to clear the play space and continue working on your program.
+
+
+    * Notice the slider to the right of the **Run** button. If you''d like the drawing
+    to be completed more quickly, move the slider toward the rabbit. If you''d like
+    the drawing to be completed more slowly, move the slider toward the turtle.
+
+
+    * The Frozen project site is available in many languages. The language selector
+    is is below the play space, at the bottom left. Click the button to see the available
+    languages. Then choose the language you want.
+
+
+    | العربية |
+
+    | Azərbaycan dili |
+
+    | български |
+
+    | Bosanski |
+
+    | Català |
+
+    | Čeština |
+
+    | Dansk |
+
+    | Deutsch |
+
+    | Ελληνικά |
+
+    | English |
+
+    | Español (España) |
+
+    | Español (México) |
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_8_0.png)'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# # Let''s Get Started!
+
+
+    It is a lovely winter day in Arendelle. Queen Elsa and Princess Anna are very
+    excited. They are hosting an ice-drawing event to thank the kingdom''s ice harvesters.
+    Let''s help them make this an event to remember!
+
+
+    +   1 Click on the Create New button. This will start a new project. Use the Rename
+    button to name your project "Warm-Up."
+
+
+    +   2 Help Elsa draw a straight line on the ice as she walks. First, click on
+    the Actions label. Then drag a move forward by 100 pixels to the workspace. Computer
+    images are made of tiny squares of color pixels. The move forward block tells
+    the computer how far many pixels—Elsa will move. Connect it to the bottom of the
+    when run block. What happens when you click the Run button?
+
+
+    +   3 It''s hard to see the line we just drew, since Elsa is standing in front
+    of it! Drag out a turn right by 90 degrees block. Slip it between the when run
+    block and the move forward by 100 pixels. Tap the Reset button. Then run your
+    program.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_9_0.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_9_1.png)
+
+
+    | when run |
+
+    | turn right by 90 degrees |
+
+    | move forward by 100 pixels |'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: 'Now let''s give Anna a try! Find the set character to Anna block under the
+    Actions label. Drag it into the workspace. Connect it between the when run block
+    and the turn right by 90 degrees block. Click Run to watch Anna draw her line.
+
+
+    Let''s see what happens when we change more parameters. Change the jump backward
+    parameter to "75." Change the move forward pixel parameter to "150." Then click
+    Run. What happened?
+
+
+    Anna wants to draw her line somewhere else on the ice! Grab the jump forward by
+    100 pixels block under Actions. Click it into your program below the set character
+    block. Do you see the little arrow next to the word "forward"? Click on that,
+    and you will see a drop-down menu with two options. Click the word "backward."
+    Now you have a block that says jump backward by 100 pixels.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_10_0.png)
+
+
+    | jump forward by 100 |
+
+    | forward |
+
+    | backward |
+
+
+    | when run to Anna |
+
+    | set character to Anna |
+
+    | jump backward by 75 pixels |
+
+    | turn right by 90 degrees |
+
+    | move forward by 150 pixels |
+
+
+    You will notice that many of the blocks have options that you can change. These
+    are called parameters, and they let you use one code block in many different ways.
+    The jump block has another parameter too: the number of pixels.
+
+
+    Play with your code some more. Experiment by changing parameters and rearranging
+    blocks!'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# Sequence
+
+
+    Olaf can''t wait to show off his designs! Look at these drawings. They''re created
+    with the same six code blocks. But the blocks appear in a different sequence,
+    or order, for each drawing. In your notebook, match the code with the drawing
+    it creates. HINT: Olaf is facing the bottom of the play space at the start of
+    each drawing.
+
+
+    ```
+
+    move forward by 50
+
+    turn left by 90
+
+    move forward by 50
+
+    move forward by 50
+
+    turn right by 90
+
+    move forward by 50
+
+    ```
+
+
+    # A
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_11_0.png)
+
+
+    ```
+
+    turn left by 90
+
+    move forward by 50
+
+    move forward by 50
+
+    turn right by 90
+
+    move forward by 50
+
+    move forward by 50
+
+    ```
+
+
+    # B
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_11_1.png)
+
+
+    ```
+
+    move forward by 50
+
+    turn right by 90
+
+    move forward by 50
+
+    turn left by 90
+
+    move forward by 50
+
+    move forward by 50
+
+    ```
+
+
+    # C
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_11_2.png)
+
+
+    ```
+
+    move forward by 50
+
+    move forward by 50
+
+    turn left by 90
+
+    turn right by 90
+
+    move forward by 50
+
+    move forward by 50
+
+    ```
+
+
+    # D
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_11_3.png)
+
+
+    1
+
+
+    2
+
+
+    3
+
+
+    4
+
+
+    1'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# # Problem-Solving
+
+
+    Anna draws a maze around Olaf and challenges him to find his way out. Make a copy
+    of this page. Can you help Olaf out of the maze? HINT: Olaf starts off facing
+    the bottom of the play space.
+
+
+    All the blocks needed to solve the maze appear in the program below. But two blocks
+    are in the wrong places! Read through the program line by line. Find the first
+    place where the code goes wrong. What happened? What should have happened? Which
+    block fixes the problem? On your copy of the page, draw stars next to the two
+    blocks that need to be switched.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_12_0.png)
+
+
+    | turn right by 90 | degrees |
+
+    |---|-|
+
+    | move forward by 100 | pixels |
+
+    | turn right by 90 | degrees |
+
+    | move forward by 100 | pixels |
+
+    | turn right by 90 | degrees |
+
+    | move forward by 100 | pixels |
+
+    | turn right by 90 | degrees |
+
+    | move forward by 150 | pixels |
+
+    | turn left by 90 | heaves |
+
+    | move forward by 200 | pixels |
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_12_1.png)
+
+
+    # # Did You Know?
+
+
+    +   * Every programmer makes mistakes. The important thing is to be able to find
+    and fix them! This process is called debugging, because you''re getting rid of
+    the problems, or "bugs," in a program.'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Draw Squares
+
+
+    Elsa is having a marvelous time creating designs on the ice. Let''s help her draw
+    some ice cubes. From the front, an ice cube looks like a simple square. Can you
+    use what you''ve learned to figure out how to draw a square?
+
+
+    +   1. Create a new project, and name it "Square."
+
+
+    +   2. Study this image to figure out what code blocks you''ll need to create
+    a square. Plan your program in your notebook.
+
+
+    +   3. When you''re done, build your program online and run it. If the drawing
+    isn''t exactly what you expected, don''t worry! Just do a little bit of debugging
+    to figure out what went wrong. You''ll get it!
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_13_0.png)
+
+
+    > **Helpful Tip** When you remix a project, it creates a new copy for you to play
+    with. This keeps the code for your original project safe.'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '4 Now help draw another square beside the first one. Click on the Remix button
+    at the top of the page. This creates a copy of the project. Rename the project
+    "Two Squares." Then add code blocks by copying the code for the first square.
+    Your program should look like this:
+
+
+    5 Look at your code again. What do you need to make to get a drawing that looks
+    like this? HINT: The second square is only 50 pixels long on each side.
+
+
+    ```
+
+    move forward [100] pixels
+
+    turn right [90] degrees
+
+    move forward [100] pixels
+
+    turn right [90] degrees
+
+    move forward [100] pixels
+
+    turn right [90] degrees
+
+    move forward [100] pixels
+
+    turn right [90] degrees
+
+    move forward [100] pixels
+
+    turn right [90] degrees
+
+    move forward [100] pixels
+
+    ```
+
+
+    6 Where would you need to add a jump forward by 100 pixels block to create a drawing
+    like this?
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_14_0.png)'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '# # Add a Triangle
+
+
+    Anna loves what Elsa has drawn! She wants to take it a step further by adding
+    a different shape. Let''s help her create a design that uses a square and a triangle.
+
+
+    +   Because Anna wants to include a square in her design, let''s reuse the code
+    from your "Square" project. First, open your "Square" project. Remix the project,
+    and rename it "Sisters Design.",
+
+
+    +   You''ll see that your project already has the code needed to draw a square.
+    That''s a nice shortcut! Since we are drawing with Anna in this activity, drag
+    the **set** character to **run** and **move forward** blocks to the workspace.
+    Place it between the when run blocks.
+
+
+    +   Now add code blocks to draw a triangle that overlaps the square. Here is an
+    example of how your program could look. Feel free to play around with the parameters.
+    Try making the design bigger or smaller until you''re happy with it.
+
+
+    ```
+
+    set characters to Anna
+
+    move forward by 100 steps
+
+    turn right by 90 degrees
+
+    move forward by 100 steps
+
+    turn right by 90 degrees
+
+    move forward by 100 steps
+
+    turn right by 90 degrees
+
+    move forward by 100 steps
+
+    turn right by 120 degrees
+
+    move forward by 120 steps
+
+    ```
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_15_0.png)
+
+
+    A pattern is something that repeats. Help Anna create a pattern with her design.
+    Remix and rename your project "Sisters Pattern." How would you change the code
+    if you wanted Anna to draw the design three times?
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_15_1.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Did You Know?
+
+
+    An angle tells us how big or small a turn is. You probably know some information
+    about angles already. Examples might include:
+
+
+    +   - Each angle in a square measures 90 degrees.
+
+    - A straight line measures 180 degrees.
+
+    - A circle measures 360 degrees.
+
+    - Each angle in an equilateral triangle measures 60 degrees.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_16_0.png)
+
+
+    You’ll notice Anna drew an equilateral triangle in the “Sisters Design.” Are you
+    wondering why we programmed the turn at 120 degrees instead of 60 degrees? Great
+    question! When Anna and Elsa draw shapes in your programs, they are outside of
+    the shape. They draw corners along the outside. We exterior angles for that shape.
+    Exterior angles are different from interior angles.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_16_1.png)
+
+
+    Let’s say we want to create a shape with interior angle of 60 degrees. We have
+    to make a turn of 120 degrees along the outside of that shape. This is because
+    120 degrees + 60 degrees = 180 degrees. The two angles added make a straight line,
+    which measures 180 degrees.
+
+
+    Think of this way: Elsa is walking in a straight line. Then she turns left by
+    120 degrees and keeps walking. The right side of the angle she just made measures
+    120 degrees. The left side of the angle measures 60 degrees.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_16_2.png)'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# # Debugging
+
+
+    Do you want to draw a snowman? Olaf sure does! But something is not quite right
+    in his drawings. Help Olaf fix the drawings by debugging the code below. Each
+    drawing has something that doesn''t belong. Look at the code. Make a copy of this
+    page. Then cross out the block that needs to be removed for the drawing to be
+    correct.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_17_0.png)
+
+
+    1
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_17_1.png)
+
+
+    2
+
+
+    +   - when run
+
+
+    +   - when run
+
+
+    +   - Draw Head
+
+
+    +   - Draw Head
+
+
+    +   - Draw Face
+
+
+    +   - Draw Face
+
+
+    +   - Draw Body
+
+
+    +   - Draw Medium Oval
+
+
+    +   - Draw Square
+
+
+    +   - Draw Face
+
+
+    +   - Draw Large Oval
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_17_2.png)
+
+
+    3
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_17_3.png)
+
+
+    4
+
+
+    +   - when run
+
+
+    +   - when run
+
+
+    +   - Draw Head
+
+
+    +   - Draw Head
+
+
+    +   - Draw Face
+
+
+    +   - Draw Face
+
+
+    +   - Draw Flower
+
+
+    +   - Draw Large Oval
+
+
+    +   - Draw Oval Body
+
+
+    +   - Draw Medium Oval
+
+
+    +   - Draw Feet
+
+
+    +   - Draw Large Oval'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "# # Repeat Loops\n\nAnna's designs below use the repeat loop. The code inside\
+    \ this block is a loop that will run as many times as you tell it to. This makes\
+    \ it easy to do something over, and over. In your notebook, match each program\
+    \ with the correct design. HINTS: Anna is facing the bottom of the play space\
+    \ when she starts drawing. Try tracing the design with your finger as you go through\
+    \ the code.\n\n```\nrepeat 4 times\n  move forward by 40 pixels\n  turn right\
+    \ by 90 degrees\n  move forward by 40 pixels\n  turn left by 90 degrees\n```\n\
+    \n1\n\nA\n\n![](img/a962ec79491408ecc743f3f11c25a851_18_0.png)\n\n```\nrepeat\
+    \ 4 times\n  turn left by 90 degrees\n  move forward by 40 pixels\n  turn right\
+    \ by 90 degrees\n  move forward by 40 pixels\n```\n\n2\n\nB\n\n![](img/a962ec79491408ecc743f3f11c25a851_18_1.png)\n\
+    \n```\nrepeat 3 times\n  turn right by 90 degrees\n  move forward by 60 pixels\n\
+    \  turn left by 90 degrees\n  move forward by 30 pixels\n```\n\n3\n\nC\n\n![](img/a962ec79491408ecc743f3f11c25a851_18_2.png)\n\
+    \n```\nrepeat 3 times\n  move forward by 60 pixels\n  turn left by 90 degrees\n\
+    \  move forward by 30 pixels\n  turn right by 90 degrees\n```\n\n4\n\nD\n\n![](img/a962ec79491408ecc743f3f11c25a851_18_3.png)"
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# # Patterns That Repeat
+
+
+    Anna enjoys making patterns on the ice. She''s thinking about using a stair design
+    to create a diamond pattern.
+
+
+    +   - Create a new project, and call it "Diamond Stairs."
+
+
+    +   - Now it''s time to create the **repeat** loop that makes one half of the
+    design. Add the code below after the **turn left** block in your workspace. Run
+    the program. The drawing will look like stairs that take Anna from the top of
+    the play space to the bottom.
+
+
+    +   - Start by having Anna jump all the way back to the top left using these blocks.
+
+
+    ```
+
+    set character to Anna
+
+    jump backward by 150 pixels
+
+    turn right by 90 degrees
+
+    jump forward by 150 pixels
+
+    turn left by 90 degrees
+
+    ```
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_19_0.png)
+
+
+    ```
+
+    repeat 6 times
+
+    move forward by 50 pixels
+
+    turn left by 90 degrees
+
+    move forward by 50 pixels
+
+    turn right by 90 degrees
+
+    ```
+
+
+    > ## Did You Know?
+
+    * Loops can save us a lot of work. Imagine if we had to code Anna''s staircase
+    design without **repeat** loops. That would mean coding every movement and turn,
+    line by line! Loops give us a powerful shortcut.'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: "To finish this design, have Anna turn by 180 degrees. Then repeat the stair\
+    \ code one more time. Wonderful work!\n\n![](img/a962ec79491408ecc743f3f11c25a851_20_0.png)\n\
+    \n```\nwhen character to Anna\n  jump backward by 150 pixels\n  turn right by\
+    \ 90 degrees\n  jump forward by 150 pixels\n  turn left by 90 degrees\n  repeat\
+    \ 6 times\n    move forward by 50 pixels\n    turn left by 90 degrees\n    move\
+    \ forward by 50 pixels\n    turn right by 90 degrees\n    repeat 6 times\n   \
+    \   move forward by 50 pixels\n      turn left by 90 degrees\n      move forward\
+    \ by 50 pixels\n      turn right by 90 degrees\n```\n\nGive these extra challenges\
+    \ to try!\n\n+   - What happens if Anna turns 180 degrees between repeat loops?\
+    \ Why do you think that happens?\n- What happens if Anna turns 170 degrees between\
+    \ repeat loops?\n- Remix your project, and play with your parameters. Try using\
+    \ 80 degrees instead of 90 degrees for each of the stair patterns. Try making\
+    \ each stair step longer or shorter. Try a different starting position for your\
+    \ drawing. Try changing the forward/backward and left/right parameters. Try changing\
+    \ the number in the repeat loop. Experiment and have fun!\n\n![](img/a962ec79491408ecc743f3f11c25a851_20_1.png)"
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# "Sisters Design" with Loops
+
+
+    Elsa really likes the stair design that Anna created. She wonders if she can use
+    a similar strategy to draw the "Sisters Design."
+
+
+    +   Find your "Sisters Design" project. Remix the project and rename it "Sisters
+    Loop.",
+
+
+    +   Change the set character parameter to "Elsa."
+
+
+    +   Drag a repeat loop into the workspace. Change the parameter to "4.\ Put the
+    first two lines of code for the square inside the loop. Now you can remove the
+    rest of the square code from the workspace.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_21_0.png)
+
+
+    > Helpful TipnClick on the My Projects button to see a list of your saved projects.
+    The Button is located in the top right corner of the page.'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: '# Drag another repeat loop into the workspace. Change the parameter to “3.\nPut
+    the first two lines of code for the triangle inside the loop. Remove the rest
+    of the triangle code.
+
+
+    ```
+
+    move forward 100 pixels
+
+    turn right 120 degrees
+
+    move forward 100 pixels
+
+    turn right 120 degrees
+
+    ```
+
+
+    ```
+
+    repeat 3 times
+
+    do move forward 100 pixels
+
+    turn right 120 degrees
+
+    ```
+
+
+    Click your two repeat loops into place under the set character block. Your program
+    will look like this:
+
+
+    ```
+
+    when run
+
+    set character to Elsa
+
+    repeat 4 times
+
+    do move forward 100 pixels
+
+    turn right 90 degrees
+
+    repeat 3 times
+
+    do move forward 100 pixels
+
+    turn right 90 degrees
+
+    ```
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_22_0.png)
+
+
+    Now run your code. You''ll see that Elsa''s design is the same as Anna''s from
+    page 14. You''ll also notice that using the repeat loops saves us from writing
+    several extra lines of code. These loops are really useful!
+
+
+    > Did You Know?
+
+    Even when they create the same design, Elsa and Anna''s drawings look slightly
+    different. This is because each have a unique drawing style. Elsa creates her
+    drawings with ice magic, and Anna creates hers with ice skates.'
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Nested Loops\n\nSeeing Elsa work with the \"Sisters Design\" has given Anna\
+    \ an idea. She thinks it could be used to make a beautiful snowflake!\n\n+   When\
+    \ you click Run, Anna will draw the \"Sisters\" pattern six times with a turn\
+    \ of 60 degrees between each one. That's an interesting snowflake you've helped\
+    \ Anna make!\n\n+   set the character parameter to \"Anna.\" Then add a turn right\
+    \ block to the end of your code. Change the degree parameter to \"60.\"\n\n![](img/a962ec79491408ecc743f3f11c25a851_23_0.png)\n\
+    \n+   Drag a repeat loop into the workspace, and change the parameter to \"6.\"\
+    \ Put the repeat loop directly under the set character block. Then drag the remaining\
+    \ code blocks inside the repeat loop.\n\n```\nwhen run\nset character to Anna\n\
+    repeat 6 times\n  repeat 4 times\n    move forward 100 pixels\n    turn right\
+    \ 90 degrees\n  repeat 3 times\n    move forward 100 pixels\n    turn right 120\
+    \ degrees\nturn right by 60 degrees\n```\n\nWhat do you need to change if you\
+    \ want to repeat the \"Sisters\" pattern seven, eight, or nine times?"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: "# Did You Know?\n\nIt's not hard to figure out how many degrees you need to\
+    \ spin a shape in order to take it around in a full circle. All you need is a\
+    \ little math!\n\n+   Figure out how many times you want the shape to go around.\n\
+    \n+   Divide 360 degrees (the number of degrees in a circle) by that number. The\
+    \ result is the number of degrees you need to turn!\n\nTake, for example, the\
+    \ snowflake Anna drew using the \"Sisters Design.\" She spun the design around\
+    \ 6 times. 360 degrees + 6 = 60 degrees. That is why we used 60 degrees in our\
+    \ code.\n\nLook at Elsa's design below. It uses 8 squares. 360 degrees + 8 = 45\
+    \ degrees. This means we need to turn 45 degrees after each square.\n\n![](img/a962ec79491408ecc743f3f11c25a851_24_0.png)\n\
+    \nHow many degrees would we use if we wanted to spin the square around 10 times?\
+    \ Complete this equation in your notebook to find the answer:\n\n360 degrees +\
+    \ ___ = ____\n\n```\nset character to Elsa\nrepeat 8 times\n  repeat 4 times\n\
+    \    do move forward 100 pixels\n    turn right 90 degrees\nturn right 45 degrees\n\
+    ```\n\n![](img/a962ec79491408ecc743f3f11c25a851_24_1.png)\n\n```\nset character\
+    \ to Elsa\nrepeat 10 times\n  do repeat 4 times\n    do move forward 100 pixels\n\
+    \    turn right 90 degrees\nturn right ?? degrees\n```"
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: "# # Nested Designs\n\nOlaf is inspired by Anna and Elsa. He wants to create\
+    \ some cool designs of his own. Make a copy of this page. The drawings below use\
+    \ nested loops. How many times do you need to repeat each block of code to get\
+    \ each image?\n\n# DRAWING\n\n# REPEAT OUTER LOOP\n\n1\n\n![](img/a962ec79491408ecc743f3f11c25a851_25_0.png)\n\
+    \n```\nrepeat 7 times\n  repeat 3 times\n    move forward by 100 pixels\n    turn\
+    \ right by 120 degrees\n  turn right by 60 degrees\n```\n\ntimes\n\n2\n\n![](img/a962ec79491408ecc743f3f11c25a851_25_1.png)\n\
+    \n```\nrepeat 7 times\n  repeat 4 times\n    move forward by 100 pixels\n    turn\
+    \ right by 90 degrees\n  turn right by 120 degrees\n```\n\ntimes\n\n3\n\n![](img/a962ec79491408ecc743f3f11c25a851_25_2.png)\n\
+    \n```\nrepeat 7 times\n  repeat 5 times\n    move forward by 100 pixels\n    turn\
+    \ right by 72 degrees\n  turn right by 120 degrees\n```\n\ntimes\n\n4\n\n![](img/a962ec79491408ecc743f3f11c25a851_25_3.png)\n\
+    \n```\nrepeat 7 times\n  repeat 2 times\n    move forward by 100 pixels\n    turn\
+    \ right by 60 degrees\n  move forward by 100 pixels\n  turn right by 120 degrees\n\
+    ```\n\ntimes"
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: "# Functions\n\nLoops are great when you want to repeat the same actions\nmany\
+    \ times in a row. But what if you want to do other things in\nbetween? That's\
+    \ when you use a function. This is a function block.\nYou can put code in it the\
+    \ same way that you put code into a repeat loop.\nThe difference is that each\
+    \ function has its own name, and you can call a function\n anywhere in your program!\n\
+    Use functions to help Elsa draw a series of shapes. In your notebook, write the\
+    \ functions\nin the correct order to create this design. HINT: Elsa will draw\
+    \ the shapes from left to right.\n\nThese are the functions you will call:\n\n\
+    ```\nDraw Circle\n```\n\n```\nDraw Diamond\n```\n\n```\nDraw Star\n```\n\n![](img/a962ec79491408ecc743f3f11c25a851_26_0.png)\n\
+    \n![](img/a962ec79491408ecc743f3f11c25a851_26_1.png)\n\n![](img/a962ec79491408ecc743f3f11c25a851_26_2.png)"
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# # Draw Flowers with Functions
+
+
+    The people of Arendelle love flowers, even in winter! Anna wants to draw a big
+    bouquet to show how much she appreciates everyone in the kingdom. Can you help
+    her?
+
+    Flowers can be difficult to draw, and they can take a lot of code to create. It
+    would be frustrating to have write all that code every time you wanted to make
+    another flower. Now you can use functions to save your code. That way, you can
+    make as many flowers as you like just by calling the function!
+
+
+    +   1. Create a new project, and call it "Flower."
+
+    Add the set character to Anna block.
+
+
+    +   3. A new window called the function editor will appear. Here, you can name
+    your function and describe what it does. There is also an area to define the function
+    by dropping in code, the same way you do in the workspace.
+
+
+    +   2. Go to the toolbox under Functions, and click the orange Create a Function
+    button.
+
+
+    +   4. Name your function something that clearly states what it will do, like
+    "Draw Flower."
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_27_0.png)
+
+
+    Function
+
+    Name your function:
+
+    do something
+
+    What is your function supposed to do?
+
+    do something'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "# Put all the code for your flower inside the green block in the function editor.\
+    \ You can make up your own, or you can use code like this:\n\n```\nDraw Flower\n\
+    ```\n\n+   repeat 6 times\n  repeat 2 times\n    move forward 20 pixels\n    turn\
+    \ right 60 degrees\n  move forward 30 pixels\n  turn right 120 degrees\nturn right\
+    \ 260 degrees\n\nRun your program. What does your flower look like? If you aren't\
+    \ happy with it, click the edit button in your Draw Flower function block. Try\
+    \ changing some of the parameters. You can keep editing your function until you're\
+    \ happy with your flower design.\n\nReady to see the power of functions? Let's\
+    \ move Anna around the play space with the jump blocks and call the function many\
+    \ times. Try using repeat loops or even nested loops! Try to fill the play space\
+    \ with flowers. Can you create a drawing that looks like this?\n\n![](img/a962ec79491408ecc743f3f11c25a851_28_0.png)\n\
+    \nClick Close to exit the function editor.\n\nBack in your main window, look under\
+    \ the Functions label in the toolbox. Find the Draw Flower block that has now\
+    \ appeared. Drag that block into the workspace under the set block.\n\nExperiment\
+    \ and come up with your own design and code! (Check out the Answer Key to see\
+    \ the code that created the drawing.)\n\n# Helpful Tips\n\nIf you run your program\
+    \ while you're creating your function for the first time, it won't work. That's\
+    \ because the Run button doesn't run what you see in the function editor. If it\
+    \ runs the program connected to the when run block in the meantime it works, close\
+    \ the function editor and add your function call block to the main program.\n\n\
+    Want to change the code for a function? Click the blue edit button on the function\
+    \ call block. This will open the function editor again."
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "# # More Flowers with Functions\n\nThe children of Arendelle have joined Anna\
+    \ in drawing flowers on the ice. They're creating a beautiful garden of ice flowers!\
+    \ Help Anna and the children fill their garden with different flowers by creating\
+    \ more functions.\n\n+   1. Remix your \"Flower\" project, and rename it \"More\
+    \ Flowers.\"\n\n+   2. Follow the directions from the last activity to make three\
+    \ more flower functions. Call them \"Draw Flower 2,\" \"Draw Flower 3,\" and \"\
+    Draw Flower 4.\" You can create your code, or create functions like these:\n\n\
+    ![](img/a962ec79491408ecc743f3f11c25a851_29_0.png)\n\n```\nDraw Flower 2\nrepeat\
+    \ 8 times\n  repeat 3 times\n    move forward by 40 pixels\n    turn right by\
+    \ 120 degrees\nturn right by 45 degrees\n```\n\n![](img/a962ec79491408ecc743f3f11c25a851_29_1.png)\n\
+    \n```\nDraw Flower 3\nrepeat 5 times\n  repeat 4 times\n    move forward by 40\
+    \ pixels\n    turn right by 90 degrees\nturn right by 72 degrees\n```\n\n![](img/a962ec79491408ecc743f3f11c25a851_29_2.png)\n\
+    \n```\nDraw Flower 4\nrepeat 4 times\n  repeat 6 times\n    move forward by 15\
+    \ pixels\n    turn right by 60 degrees\nturn right by 70 degrees\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: 'Once you have all four of your flower functions defined, go back to your main
+    program.
+
+
+    Adjust the code so that you call each of the flower functions. Try to create something
+    like this:
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_30_0.png)
+
+
+    (Check out the Answer Key to see the code that created the drawing above.)
+
+
+    Experiment and fill the play space with different flowers!
+
+
+    # Helpful Tip
+
+
+    Loops will help you remember when you like to draw curves in them. To draw a curve
+    move and turn with an angle. Repeating a loop 160 times will give you a really
+    shape to draw almost any time.'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: '# # Nested Functions
+
+
+    Elsa looks down and sees two different flowers drawn in the same spot. The combined
+    design looks like a glistening snowflake! Help Elsa draw flower snowflakes by
+    using functions inside another function! These are called **nested functions**.
+
+
+    +   1. Remix your "More Flowers" project, and rename it to "Flower Snowflakes."
+
+
+    +   5. Back in the workspace, remove all code after the **set character** block.
+
+
+    +   2. Under the **set character** parameter to "Elsa."
+
+
+    +   6. Add the **Draw Flower Snowflake** block under the **set character** block.
+    Run the program. What does your flower snowflake look like? Add code to your program
+    to fill the play space with flower snowflakes!
+
+
+    +   3. Under the **Functions** label in the toolbox, click the **Create a Function**
+    button.
+
+
+    +   7. Remix your project, and rename it "More Flower Snowflakes."
+
+
+    +   4. In the function editor, name your function "Draw Flower Snowflake." Draw
+    two of your flower functions into your "Draw Flower Snowflake" function. For example,
+
+
+    +   8. Create more flower snowflake functions. Page 31 shows some of Elsa''s flower
+    combinations. Can you create some similar designs? HINT: Refer to the code on
+    page 28. Adjust the parameters until you''re happy with the design. Then think
+    of different ways to combine your flower functions into snowflake functions.
+
+
+    ```
+
+    Draw Flower Snowflake
+
+    Draw Flower 2 edit
+
+    Draw Flower 4 edit
+
+    ```
+
+
+    Close the function editor.
+
+
+    +   9. Create a program that calls all your flower snowflake functions. Fill the
+    play space with your designs. Does it look as though there''s a blizzard in Arendelle?'
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '![](img/a962ec79491408ecc743f3f11c25a851_32_0.png)'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: "# # Simplifying with Functions\n\nOne way to simplify a program is to look\
+    \ for repeating code that can be pulled out into a function. Study this program.\
+    \ Find the section of code that repeats. In your notebook, write a function name\
+    \ for this code. Then write the simplified program using functions.\n\n```\nwhen\
+    \ run\n  jump to 100 over 100 down\n  turn left by 140 degrees\nrepeat 2 times\n\
+    \  do:\n    move forward by 50 pixels\n    turn left by 80 degrees\n    move forward\
+    \ by 50 pixels\n    turn left by 100 degrees\nturn right by 50 degrees\njump to\
+    \ 200 over 200 down\nturn left by 50 degrees\nrepeat 2 times\n  do:\n    move\
+    \ forward by 50 pixels\n    turn left by 80 degrees\n    move forward by 50 pixels\n\
+    \    turn left by 100 degrees\nturn right by 50 degrees\njump to 300 over 300\
+    \ down\nturn left by 50 degrees\nrepeat 2 times\n  do:\n    move forward by 50\
+    \ pixels\n    turn left by 80 degrees\n    move forward by 50 pixels\n    turn\
+    \ left by 100 degrees\n```\n\n![](img/a962ec79491408ecc743f3f11c25a851_33_0.png)"
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: '# For Loops
+
+
+    Now it''s time to learn about for loops! These loops use a counter to go from
+    a starting value to an ending value by an increment.
+
+
+    This program uses a for loop to draw dots in a spiral. See how it starts by drawing
+    one
+
+    dot, ends by drawing three dots, and adds one dot each time through?
+
+
+    The drawings below use all the code from this program.
+
+    The only differences are in the parameters used in the for loop.
+
+    In your notebook, fill in the for loop to get each drawing shown.
+
+    HINTS: Count the dots on each side of the spiral. Each drawing
+
+    starts at the center of the spiral.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_34_0.png)
+
+
+    # 1
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_34_1.png)
+
+
+    for counter from \_\_\_\_ to
+
+    count by \_\_\_\_
+
+
+    # 2
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_34_2.png)
+
+
+    for counter from \_\_\_\_ to
+
+    count by \_\_\_\_
+
+
+    # 3
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_34_3.png)
+
+
+    for counter from \_\_\_\_ to
+
+    count by \_\_\_\_
+
+
+    # 4
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_34_4.png)
+
+
+    for counter from \_\_\_\_ to
+
+    count by \_\_\_\_'
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: '# For Loop Spirals
+
+
+    Elsa is practicing her spirals. The ice looks quite elegant covered in swirls!
+
+    Do you want to help her create an amazing design using a for loop?
+
+    Let''s try it!
+
+
+    +   1. Create a new project, and call it "Square Spiral."
+
+
+    +   6. Finally, set the for loop''s starting value to "5" and ending value to
+    "300." Set the increment to "5." Here''s what the completed code looks like:
+
+
+    +   2. Drag a for loop into the workspace and click it place under the when run
+    block. You will find the for loop block under the Loops label in the toolbox.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_35_0.png)
+
+
+    +   3. Next, drag a move forward block and a turn right block into the for loop.
+
+
+    +   4. Grab the purple number block inside the move forward block, and drag it
+    back to the toolbox.
+
+
+    +   7. Click Run to see what happens. An amazing drawing!
+
+
+    +   5. Find the counter block under the Variables label in the toolbox. Drag it
+    into the move forward block. This tells Elsa to move the same amount as your counter
+    every time through the loop.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_35_1.png)'
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: 'Time to play around with your code! Remix your project, and rename it “Square
+    Spiral 2.” Let’s say you want more space between the lines of your spiral. No
+    problem! Just change the parameters in the for loop. Set the start value to “10”
+    and the increment to “10.” How do you like this spiral?
+
+
+    Can you figure out what code block to add to your program to create this drawing?
+    That''s right! Just add a turn right block before the for loop and set the degree
+    parameter to “45.”
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_36_0.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_36_1.png)
+
+
+    ```
+
+    for counter from 10 to 300 count by 10
+
+    move forward by counter pixels
+
+    turn right by 90 degrees
+
+    ```
+
+
+    ```
+
+    turn right by 45 degrees
+
+    for counter from 10 to 300 count by 10
+
+    move forward by counter pixels
+
+    turn right by 90 degrees
+
+    ```
+
+
+    Play with the parameters, and create your own spiral designs.
+
+
+    > Did You Know?
+
+    repeat loops, for loops are a powerful tool. With just a few times of code, you
+    can create intricate drawings like the spirals shown here. Can you think of other
+    ways to use a for loop?'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: '# More Spiral Designs
+
+
+    Anna wants to try something different with Elsa''s spiral design. She wonders
+    how to make spirals that are not perfectly square. Use your coding skills to help
+    Anna create a unique design!
+
+
+    +   1. Remix your "Square Spiral" project, and call it "More Spirals.",
+
+
+    +   2. Add the set character to Anna block between the wen run block and the for
+    loop.
+
+
+    +   3. Instead of turning by 90 degrees, try a slightly different angle.
+
+
+    +   4. Play around with the degree parameter until you have a design you like.
+
+
+    +   5. Next, try changing the color of your lines to give your spiral more personality!
+    You can find the set color block under the Actions label in the toolbox.
+
+
+    ```
+
+    when run
+
+    set character to Anna
+
+    for counter from 5 to 300 count by 5
+
+    move forward by counter pixels
+
+    turn right by 89 degrees
+
+    ```
+
+
+    These drawings use 89 degrees and 91 degrees, respectively. Look at how different
+    these drawings are from Elsa''s spiral. And the only change was a 1-degree difference
+    in each turn!
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_37_0.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_37_1.png)'
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: '6 Now change the increment parameter in the for loop. What happens when you
+    make the increment bigger or smaller? Here are some examples of spiral designs
+    you can try:
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_38_0.png)
+
+
+    ```
+
+    when run
+
+    set character to Anna
+
+    set color
+
+    for counter from 5 to 300 count by 2
+
+    move forward by counter pixels
+
+    turn right by 91 degrees
+
+    ```
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_38_1.png)
+
+
+    ```
+
+    when run
+
+    set character to Anna
+
+    set color
+
+    for counter from 3 to 300 count by 3
+
+    move forward by counter pixels
+
+    turn right by 93 degrees
+
+    ```
+
+
+    7 Experiment until you''re happy with unique spiral design.'
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: "# # A Grand Snowflake\n\nAs the people of Arendelle enjoy drawing on the ice,\
+    \ snowflakes begin to drift down from the sky. The gentle snowfall inspires Elsa\
+    \ to draw an intricate snowflake design.\n\nHelp Elsa create a design with overlapping\
+    \ shapes of different sizes. Think back to when you made shapes and spun them\
+    \ around a circle. For loops will let you do that in many sizes. Give it a try!\n\
+    \n+   1. Create a new project, name it “Grand Snowflake.\"\n\n+   2. Add the code\
+    \ below to your workspace. Click Run to see Elsa draw a snowflake made of different-sized\
+    \ pentagons. How lovely!\n\n![](img/a962ec79491408ecc743f3f11c25a851_39_0.png)\n\
+    \n```\nwhen run\n  for counter from 100 to 25 count by 25\n    set color to random\
+    \ color\n    repeat 5 times\n      repeat 5 times\n        move forward 72 pixels\n\
+    \        turn left 72 degrees\n\n```\n\n+   3. Perhaps you'd like the snowflake\
+    \ to be made from a different shape. You can just as easily use triangles, squares,\
+    \ hexagons, or even octagons! Just change the parameters for the innermost loop\
+    \ to make a new shape."
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# Experiment with different parameters until you are happy with your grand\
+    \ snowflake.\n\n# NUMBER OF SIDES \nCODE\n\n```\nrepeat 3 times\n  move forward\
+    \ by counter steps\n  turn left by 120 degrees\n```\n\n![](img/a962ec79491408ecc743f3f11c25a851_40_0.png)\n\
+    \n# 3\n\n```\nrepeat 4 times\n  move forward by counter steps\n  turn left by\
+    \ 90 degrees\n```\n\n![](img/a962ec79491408ecc743f3f11c25a851_40_1.png)\n\n# 4\n\
+    \n```\nrepeat 6 times\n  move forward by counter steps\n  turn left by 60 degrees\n\
+    ```\n\n![](img/a962ec79491408ecc743f3f11c25a851_40_2.png)\n\n# 6\n\n```\nrepeat\
+    \ 8 times\n  move forward by counter steps\n  turn left by 45 degrees\n```\n\n\
+    # 8\n\n![](img/a962ec79491408ecc743f3f11c25a851_40_3.png)\n\nLet's say you want\
+    \ to change how many times a shape is drawn each time the for loop runs. Which\
+    \ parameters would you need to change? HINTS: There are two parameters you need\
+    \ to adjust. The code on page 38 draws the shape five times in each iteration\
+    \ of the for loop."
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: '# Follow the Code
+
+
+    Olaf, Anna, and Elsa are having so much fun on the ice that they accidentally
+    draw over another''s designs. Oh dear!
+
+    This drawing is made up of three different designs. Can you figure out which part
+    of the drawing is made by Olaf? Look at the code for Olaf''s design, shown as
+    a function below. Copy this page, and draw his design in the empty box. HINTS:
+
+    The dot in the middle of the box shows where Olaf is standing before he begins
+    drawing. He is facing the bottom of the play space.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_41_0.png)
+
+
+    | Olaf''s Design |
+
+    | counter from 30 to 60 count by 30 |
+
+    | repeat 4 times |
+
+    | do move forward by counter pixels |
+
+    | turn left by 90 degrees |
+
+    | counter from 30 to 60 count by 30 |
+
+    | repeat 4 times |
+
+    | do move forward by counter pixels |
+
+    | turn left by 90 degrees |
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_41_1.png)
+
+
+    Each grid box represents 30 pixels across and 30 pixels down.'
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: "# Review\n\nThe sun is hanging low in the sky as the ice-drawing event comes\
+    \ to an end. Elsa, Anna, and Olaf work with the people of Arendelle to create\
+    \ one drawing. Everyone has had a great time today. They know they'll remember\
+    \ this wonderful day for a long time to come.\nYou should be proud of everything\
+    \ you've learned! Now it's time to review the ideas that you've explored in this\
+    \ book. Look at the code used to create the drawing below. Copy this page, and\
+    \ complete the following tasks.\n\n![](img/a962ec79491408ecc743f3f11c25a851_42_0.png)\n\
+    \n+   Draw an arrow pointing to the repeat loop in this code.\n\n+   Draw a check\
+    \ mark on top of the increment the for loop.\n\n+   Draw a triangle next to the\
+    \ for loop.\n\n+   Draw rectangles around all the parameters in this program.\n\
+    \n+   Draw a star next to the function call block.\n\n![](img/a962ec79491408ecc743f3f11c25a851_42_1.png)\n\
+    \n```\nwhen run\nfor counter from 15 to 140 count by 5\n  jump forward by counter\
+    \ pixels\n  turn left by 45 degrees\n  set color random color\n  repeat 5 times\n\
+    \    jump forward by 8 pixels\n    Draw Dot edit\n    jump backward by 8 pixels\n\
+    \    turn left by 72 degrees\n```"
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# # Get Inspired!
+
+
+    Congratulations on your adventures in coding! Let''s see what creative drawings
+    you can make using a handful of code blocks.
+
+    Make a copy of these pages. Each activity below presents five code blocks. Include
+    them in your own program to create a special drawing. You can arrange the blocks
+    in any way you like. Feel free to include other code blocks too. Adjust the code
+    until you''re happy with your drawing. When you''re done, draw the image your
+    code created.
+
+
+    ```
+
+    move forward by 30 pixels
+
+    turn right by 120 degrees
+
+    repeat 2 times
+
+    do
+
+    move forward by 30 pixels
+
+    turn right by 60 degrees
+
+    ```
+
+
+    ```
+
+    repeat 5 times
+
+    do
+
+    turn right by 72 degrees
+
+    move forward by 40 pixels
+
+    move forward by 10 pixels
+
+    turn right by 90 degrees
+
+    ```'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '![](img/a962ec79491408ecc743f3f11c25a851_44_0.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_1.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_2.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_3.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_4.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_5.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_6.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_7.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_8.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_9.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_10.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_11.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_12.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_13.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_14.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_15.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_16.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_44_17.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# # Try It Yourself!
+
+
+    As you''ve learned, you can do some amazing things with code. Are you ready for
+    more coding challenges? Look at the pictures below, and try to write code that
+    draws something similar. Then experiment with the ideas you''ve explored in this
+    book and create some drawings all on your own. Make a copy of page 45 to plan
+    a project to share with family and friends!
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_45_0.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_45_1.png)
+
+
+    # 1
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_45_2.png)
+
+
+    # 2
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_45_3.png)
+
+
+    # 3
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_45_4.png)
+
+
+    # 4
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_45_5.png)'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '![](img/a962ec79491408ecc743f3f11c25a851_46_0.png)'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Answer Key
+
+
+    # PAGE 10
+
+
+    # PAGE 17
+
+
+    # PAGE 29
+
+
+    +   1. B
+
+    2. C
+
+    3. A
+
+    4. D
+
+
+    +   1. C
+
+    2. A
+
+    3. D
+
+    4. B
+
+
+    when run
+
+    skateboard by Anna
+
+    jump backward by 150 pixels
+
+    turn right by 90 degrees
+
+    jump forward by 75 pixels
+
+    turn left by 90 degrees
+
+
+    # PAGE 11
+
+
+    # PAGE 24
+
+
+    when run
+
+    jump right by 100 pixels
+
+    move forward by 90 degrees
+
+    turn right by 90 degrees
+
+    move forward by 100 pixels
+
+    turn right by 90 degrees
+
+    move forward by 150 pixels
+
+    turn left by 90 degrees
+
+
+    +   1. 6
+
+    2. 3
+
+    3. 5
+
+    4. 8
+
+
+    repeat 2 times
+
+    Draw Diamond
+
+    tump forward by 100 pixels
+
+    Draw Flower 2
+
+    tump forward by 75 pixels
+
+    Draw Flower 3
+
+    turn left by 90 degrees
+
+    turn left by 90 degrees
+
+
+    # PAGE 25
+
+
+    when run
+
+    Draw Diamond
+
+    Draw Diamond
+
+    Draw Circle
+
+    Draw Star
+
+    Draw Circle
+
+    Draw Diamond
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_47_0.png)
+
+
+    # PAGE 16
+
+
+    # PAGE 27
+
+
+    # PAGE 32
+
+
+    +   1. when run
+
+    Draw Face
+
+    Draw Body
+
+    Draw Repeat
+
+    2. when run
+
+    Draw Head
+
+    Draw Face
+
+    Draw Oval
+
+    Draw Large Oval
+
+    3. when run
+
+    Draw Head
+
+    Draw Face
+
+    Draw Oval Body
+
+    Draw Feel
+
+    4. when run
+
+    Draw Head
+
+    Draw Face
+
+    Draw Medium Oval
+
+    Draw Large Oval
+
+
+    when run
+
+    set character to Anna
+
+    backward by 225 pixels
+
+    turn right by 90 degrees
+
+    jump backward by 150 pixels
+
+    turn left by 90 degrees
+
+    repeat 6 times
+
+    repeat 6 times
+
+    Draw Flower
+
+    forward by 75 pixels
+
+    turn right by 90 degrees
+
+    turn backward by 90 degrees
+
+    repeat 6 times
+
+    Draw Diamond Cone
+
+    tump forward by 75 pixels
+
+    turn left by 90 degrees
+
+    turn left by 90 degrees
+
+
+    Repeated Code
+
+    repeat 2 times
+
+    move forward by 50 pixels
+
+    turn left by 80 degrees
+
+    move forward by 50 pixels
+
+    turn left by 100 degrees
+
+    turn left by 90 degrees
+
+
+    # Name Your Function
+
+
+    Draw Diamond*
+
+
+    # Simplified Program
+
+
+    when run
+
+    jump to 100 over 100 dun
+
+    turn left by 140 degrees
+
+    Draw Diamond
+
+    turn right by 50 degrees
+
+    jump to 200 over 200 dun
+
+    turn left by 50 degrees
+
+    Draw Diamond
+
+    turn right by 50 degrees
+
+    jump to 300 over 200 dun
+
+    turn left by 50 degrees
+
+    Draw Diamond
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_47_1.png)
+
+
+    46'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# PAGE 33
+
+
+    +   1. for counter from 1 to 5 count by 1
+
+    2. for counter from 2 to 8 count by 2
+
+    3. for counter from 3 to 9 count by 3
+
+    4. for counter from 1 to 7 count by 1
+
+
+    # PAGE 40
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_48_0.png)
+
+
+    # PAGE 41
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_48_1.png)
+
+
+    * You may have given the function a different name. As long as your function calls
+    match your name, the program will work.
+
+
+    # PAGE 44
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_48_2.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_48_3.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_48_4.png)
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_48_5.png)'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: '# Glossary
+
+
+    **angle:**
+
+    The number of degrees that a line turns at a corner.
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_49_0.png)
+
+
+    **for loops:**
+
+    Loops where you can control the starting value, ending value, and increment.
+
+
+    **play space:**
+
+    The area of the website where you see your code does when it runs.
+
+
+    **block-based language:**
+
+    A programming language runs programs that have been created using code blocks
+    that resemble puzzle pieces.
+
+
+    **function:**
+
+    A named piece of code that you can call in a program whenever you need it.
+
+
+    **program:**
+
+    A set of instructions for a computer.
+
+
+    **Blockly:**
+
+    A visual programming language that lets you drag and drop code to create programs.
+
+
+    **function editor:**
+
+    A pop-up box that lets you create or edit the code inside your function.
+
+
+    **remix:**
+
+    To save a copy of a program you can build it into something new. This allows you
+    to use functions and sections of code you''ve already created, instead of rebuilding
+    them from scratch.
+
+
+    **call a function:**
+
+    To ask the computer to run the code inside a function.
+
+
+    **increment:**
+
+    The amount that your counter goes up (or down) each time for a loop.
+
+
+    **repeat loop:**
+
+    The block that allows you to loop a code sequence as many times as you tell it
+    to.
+
+
+    **code:**
+
+    Instructions for a computer.
+
+
+    **coding:**
+
+    The process of creating code.
+
+
+    **inner angles:**
+
+    The measurements of an angle from the inside of the shape.
+
+
+    **sequence:**
+
+    The order in which things are arranged.
+
+
+    **computer science:**
+
+    The study of computers and computer-related ideas.
+
+
+    **loop:**
+
+    A segment of code that runs over and without doing anything else in between.
+
+
+    **software:**
+
+    Programs that run on a machine or computer.
+
+
+    **counter:**
+
+    A placeholder that keeps track of a value that is added to (or subtracted from)
+    each time from a loop.
+
+
+    **nested functions:**
+
+    Functions placed inside other functions.
+
+
+    **starting value:**
+
+    The value where your counter will start in a loop.
+
+
+    **debugging:**
+
+    Finding and fixing errors in a program.
+
+
+    **nested loop:**
+
+    A loop placed inside another loop.
+
+
+    **toolbox:**
+
+    The area of the website where you find the code to create your program.
+
+
+    **define the function:**
+
+    To put code inside a function block that tells the computer what to do when that
+    function is called inside a program.
+
+
+    **parameters:**
+
+    Special places where you can customize blocks to do things in different ways.
+
+
+    **workspace:**
+
+    The area of the website where you drag code to create a program.
+
+
+    **ending value:**
+
+    The value where your counter will stop counting in a loop.
+
+
+    **pattern:**
+
+    Something that repeats multiple times.
+
+
+    **pixels:**
+
+    Small squares laid out in a grid that make up an image. A pixel can also be a
+    unit of measurement used to specify how far along grid something travels.
+
+
+    **exterior angles:**
+
+    The measurements of the outside of an angle.'
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# # Got the Answers?
+
+
+    The title of this book is *Coding with Anna and Elsa: A Frozen Guide to Blockly.*.
+    What is Blocky? How is it used in this book?
+
+
+    What is a nested loop? Can you explain how you used the nested loop to help Anna
+    create a snowflake
+
+
+    Anna wanted to draw flowers for the people of Arendelle, but creating a bouquet
+    of flowers would take time. Can you describe how to speed up the process using
+    functions?
+
+
+    How are pixels and angles used to create images on a computer?
+
+
+    When is it helpful to use a repeat loop?
+
+
+    What is the definition of a function? How is a function used in coding?
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_50_0.png)
+
+
+    # # Keep going, Anna!
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_50_1.png)
+
+
+    Anna learned how to make designs using squares and triangles. She wants to continue
+    the design in this picture by adding another square and triangle to it.
+
+
+    Use the information on page 14 to help Anna complete her picture.
+
+
+    > ### Congratulations!
+
+    > You created a symmetrical shape. Find out what symmetrical shapes are and try
+    to make some of your own.
+
+
+    # # REFLECTIONS
+
+
+    +   - Did you have fun building the programs and watching them run?
+
+    - Which activities did you enjoy the most? Why?
+
+    - Creating drawings is one example of ways to use code. Now that you have learned
+    some of the basics, do you think you would learn more about computer programming?
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_50_2.png)'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# Hands-on lessons featuring Frozen characters get you started coding in Blockly!
+
+
+    +   * USE CODE to create cool ice drawings with Anna, Elsa, and Olaf.
+
+    * WORK WITH BLOCKLY, a visual programming language great for coding beginners.
+
+    * EXPLORE COMPUTER PROGRAMMING, including sequencing, loops, and functions.
+
+    * STRENGTHEN YOUR SKILLS in logic, math, and problem solving.
+
+
+    Experiment and put your own spin on the fun projects in this book! What kind of
+    amazing ice drawing will you create?
+
+
+    ![](img/a962ec79491408ecc743f3f11c25a851_51_0.png)'
+  merge: -1
+  pgno: 51
