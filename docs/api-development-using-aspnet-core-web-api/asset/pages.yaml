@@ -1,0 +1,3706 @@
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_0_0.png)
+
+
+    # # API DEVELOPMENT IN ASP.NET CORE WEB API
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_0_1.png)
+
+
+    Sardar Mudassar Ali'
+  merge: -1
+  pgno: 0
+- img_proc: true
+  md: '# # API Development Using ASP.NET Core Web API
+
+
+    Practical approach for developing the API in asp.net core
+
+
+    By
+
+
+    **Sardar Mudassar Ali Khan**
+
+
+    Senior Software Engineer
+
+    Scientific Researcher
+
+    Blogger at C# Corner'
+  merge: -1
+  pgno: 1
+- img_proc: true
+  md: '# AUTHOR NOTE
+
+
+    I welcome you all in API Development using Asp.Net Core Web API the topic discussed
+    in this book based on practical knowledge of the industry. In this book we will
+    study the complete projects and discuss the project from start to end we will
+    apply all the software Development principles, Design Architecture and Design
+    Patterns, and Generics that are very beneficial for the development of software
+    products. We will architect a complete application from start to end using Different
+    Software Architectures.
+
+
+    This book is the property of the Author and copying any kind of Content is a criminal
+    offense if you see any mistake in this book then contact us at the official email
+    address paksoftvalley@gmail.com or the official email address Author mudassarali.official@gmail.com.
+
+
+    Every step taken to word the completion of this book is based on an expert review
+    of industry experts.
+
+
+    SARDAR MUDASSAR ALI KHAN
+
+    B at C# Corner
+
+    Senior Software Engineer
+
+    Scientific Researcher'
+  merge: -1
+  pgno: 2
+- img_proc: true
+  md: '# # DEDICATION
+
+
+    Every single step that was taken towards the completion of the book was because
+    of the strong background provided by my parents they supported me morally. Moreover,
+    the community of C# Corner helped me a lot in getting knowledge and solution where
+    I was stuck. They motivate me in every situation and always ask us to never give
+    up everything possible in the world. They held our hands firmly never letting
+    us get down and made it possible for us to get through. This book is also dedicated
+    to my seniors who motivated to guide us in this regard.
+
+
+    The pure dedication of my book is to my parents our soul parents- the teacher
+    and friends. Teachers always motivated and boosted us with full support whenever
+    required.'
+  merge: -1
+  pgno: 3
+- img_proc: true
+  md: '# # DECLARATION
+
+
+    I Sardar Mudassar Ali hereby declare that this book contains original work and
+    that not any part of it has been copied from any other sources. It is further
+    declaring that I have completed my book under the project of Free Education for
+    Humanity and with the guidance of my teachers and my senior colleagues and this
+    is entirely possible based on my efforts, and my ideas.
+
+
+    SARDAR MUDASSAR ALI KHAN
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_4_0.png)'
+  merge: -1
+  pgno: 4
+- img_proc: true
+  md: '# ACKNOWLEDGEMENT
+
+
+    It would be my pleasure and I am feeling ecstaticically rapturous to pay the heartiest
+    thanks. First, To Allah (SWT) who is most beneficent and most merciful he enabled
+    me and blessed me to take the pebble out of his multitude of bounties. To my dear
+    parents, their prayers become true towards the completion of my book. I am greatly
+    beholden to my esteemed honorable motivator and kind-hearted, teachers, friends,
+    and colleagues who supported my idea all the way and never let me down and corporate
+    with me in this way completely sincerely and heartedly.
+
+
+    Also, special thanks to those who helped me a lot in my way, but I have forgotten
+    them to mention here.'
+  merge: -1
+  pgno: 5
+- img_proc: true
+  md: '# PREFACE
+
+
+    API Development in asp.net core web API in this book we adopted a practical approach
+    for the development of software products. This book is divided into four parts
+    every part has its dimension. In this book, we will explain the fully featured
+    projects and how we architect the application using the following architectures.
+
+
+    +   * What is Restful Web Service
+
+    * Introduction to API Development
+
+    * API Development Using Asp.net Core
+
+    * API Development Using Onion Architecture.
+
+    * API Testing Using Swagger
+
+    * API Testing Using Postman
+
+    * API Deployment on Azure Cloud
+
+    * API Deployment on Hosting Server
+
+
+    # PART 1: API Development Using Asp.net Core
+
+
+    +   1) Introduction
+
+    2) Why Restful Web Service
+
+    3) Implementation
+
+    4) Conclusion
+
+    5) Complete Project GitHub URL
+
+
+    # PART 2: API Development Using Three-Tier Architecture.
+
+
+    +   1) Introduction
+
+    2) Complete Understanding of Three Tier Architecture
+
+    3) Practical Approach for Architecting the Application with Asp.net Core
+
+    4) Conclusion
+
+    5) Complete the Project GitHub URL
+
+
+    # PART 3: API Development Using Onion Architecture.
+
+
+    +   1) Introduction
+
+    2) Complete Understanding of Onion Architecture
+
+    3) Practical Approach for Architecting the Application with Asp.net Core
+
+    4) Conclusion
+
+    5) Complete the Project GitHub URL
+
+
+    # PART 4: API Testing Using Swagger.
+
+
+    +   1) Introduction
+
+    2) API Testing Using Swagger in Asp.net Core
+
+    3) Test POST, PUT, DELETE, GET, UPDATE Endpoints Using Swagger
+
+    4) Conclusion'
+  merge: -1
+  pgno: 6
+- img_proc: true
+  md: '# PART 5: API Testing Using Postman.
+
+
+    +   1) Introduction
+
+    2) API Testing Using Postman in Asp.net Core
+
+    3) Test POST, PUT, DELETE, GET, UPDATE Endpoints Using Postman
+
+    4) Conclusion
+
+
+    # PART 6: Application Deployment on Azure Cloud.
+
+
+    +   1) Introduction
+
+    2) Creation of App on Azure Cloud
+
+    3) Server Configuration in Visual Studio
+
+    4) Deployment Steps Using Visual Studio
+
+    5) Output on Azure Websites
+
+    6) Conclusion
+
+
+    # PART 7: Application Deployment on Server.
+
+
+    +   1) Introduction
+
+    2) Deployment Procedure
+
+    3) Server Configuration
+
+    4) Deployment Steps
+
+    5) Conclusion'
+  merge: -1
+  pgno: 7
+- img_proc: true
+  md: '# PUBLISHER
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_8_0.png)
+
+
+    # CSharp Corner
+
+
+    https://www.c-sharpcorner.com/
+
+
+    All rights reserved. No part of this publication may be reproduced, distributed
+    or transmitted in any form or by any means, including photocopying, recording,
+    or other electronic or mechanical methods, without the prior written permission
+    of the publisher, except in the case of brief quotations embodied in critical
+    reviews and certain other noncommercial uses permitted by copyright law. Although
+    the author/co-author and publisher have made every effort to ensure that the information
+    in this book was correct at press time, the author/co-author and publisher do
+    not assume and hereby decline any liability to any party for any loss, damage,
+    or disruption caused by errors or omissions, whether such errors or omissions
+    result from negligence, accident, or any other cause. The resources in this book
+    are provided for informational purposes only and should not be used to replace
+    the specialized training and professional judgment of a health care or mental
+    health professional. Neither the author/co-author nor the publisher can be held
+    responsible for the use of the information provided within this book. Please always
+    consult a trained professional before making any decision regarding the treatment
+    of yourself or others.
+
+
+    Author/Co-Author – Sardar Mudassar Ali Khan
+
+    Publisher – C# Corner
+
+    Editorial Team – Archie Vankar, Deepak Tewatia
+
+    Publishing Team – Praveen Kumar, Amit Kumar
+
+    Promotional & Media – Rohit Tomar, Rohit Sharma'
+  merge: -1
+  pgno: 8
+- img_proc: true
+  md: '# Contents
+
+
+    +   What is REST ARCHITECTURE? ................................................................................
+    11
+
+    API Development in Asp.Net Core Using Three Tier Architecture ............................
+    39
+
+    API Development in Asp.Net Core Using Onion Architecture ...................................
+    59
+
+    API Testing Using Postman...............................................................................................
+    93
+
+    API Testing Using Swagger ............................................................................................
+    105
+
+    Application Deployment on Microsoft Azure Cloud ................................................
+    117
+
+    Select the Net Working Options ................................................................................
+    123
+
+    Application Deployment on Server .......................................................................
+    135'
+  merge: -1
+  pgno: 9
+- img_proc: true
+  md: '# 1
+
+
+    # What is REST
+
+    ARCHITECTURE?
+
+
+    Overview
+
+
+    +   - What is RESTful Web Service?
+
+    - RESTful Web Service Features
+
+    - RESTful Web Service Methods
+
+    - Why RESTful Web Service
+
+    - RESTful Architecture
+
+    - RESTful Principals and Constraints
+
+    - RESTful Client-Server
+
+    - Layered System
+
+    - RESTful Web Services Interfaces
+
+    - Create your first RESTful Web service in Asp.net Core Web API
+
+    - Data Access Layer
+
+    - Business Access Layer
+
+    - Presentation Layer'
+  merge: -1
+  pgno: 10
+- img_proc: true
+  md: '# What is RESTful Web Service?
+
+
+    Restful Web services are a lightweight maintainable and scalable service that
+    is built on the REST Architecture. Restful Web service exposes API from your application
+    in a secure uniform stateless manner to the calling client can perform predefined
+    operations using the restful service the protocols for the REST is HTTP and Rest
+    is a Representational State Transfer. Representational state transfer (REST) is
+    a de-facto standard for a Software Architecture or Interactive applications that
+    use Web Service a Web Service that follows this standard is called RESTful web
+    web must provide its web resources in a textual representation and allow them
+    to be read and modified with stateless protocol and predefined set of operations
+    this standard allow interoperability between a Machine and the Internet that provide
+    these services. REST Architecture is alternative to SOAP Architecture is the way
+    to access a Web Service.
+
+
+    # RESTful Web Service Features
+
+
+    Rest Web services come a long way since their inception. In 2002 the Web Consortium
+    released the definition of WSDL and SOAP Web services and this formed the standard
+    of how web services are implemented in 2004 the web consortium also released the
+    definition of an additional standard called RESTful in past four to five years
+    this standard has become more popular and being used in many giants like Facebook
+    and Twitter Microsoft. REST is a way to access resources that lie in an articular
+    environment you could have a server that could be hosting important documents
+    or pictures or videos. All these are an example of the resources if a client says
+    a web browser needs any of these resources it must send a request to the server
+    to access the resources.
+
+
+    The key features of the RESTful implementation are as follows:
+
+
+    # Resources
+
+
+    The first key feature is the resource itself. Let us assume that a web application
+    on the server has a record of Persons if we want to access the records of the
+    Persons by Id the details are in the given below figure the coding part is also
+    given.'
+  merge: -1
+  pgno: 11
+- img_proc: true
+  md: '# Request Verbs
+
+
+    This describes what you want to do with the resources browser issues a GET verb
+    to instruct the endpoints it wants to get the data like POST is used to send the
+    data by hitting the endpoints in the postman or swagger and PUT is used to update
+    the data and DELETE is used to either soft delete the record or on permanent bases.
+
+
+    As shown in the below figure.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_12_0.png)'
+  merge: -1
+  pgno: 12
+- img_proc: true
+  md: '# Request Header
+
+
+    These are the additional instructions sent with the request these might define
+    the types of the response required or authorization details
+
+
+    # Request Body
+
+
+    Data is sent with the requested data is normally sent in the request when a POST
+    request is made to the REST web service in a POST call the client tells the rest
+    web Service it wants to add a resource to the server hence the request body would
+    have the details of the resources which is required to be added to the server.
+    As shown in the below.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_13_0.png)
+
+
+    # Response Body
+
+
+    This is the main body of the response so in our RESTful API Example if we were
+    to query the web service via the GET Request, we server returns the response in
+    the JSON format gives us the details of Persons according to the Person ID.
+
+
+    # For Posting the Data'
+  merge: -1
+  pgno: 13
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_14_0.png)
+
+
+    # # Response After Positing the Data into Database
+
+
+    # # Response Status Codes
+
+
+    These codes are the general codes that are returned along with the response from
+    the webserver the status code details are given below table.
+
+
+    | Code | Response |
+
+    |---|---||
+
+    | 1 | 100 - 199 | Informational Response |
+
+    | 2 | 200 - 299 | Successful Response |
+
+    | 3 | 300 - 399 | Redirects |
+
+    | 4 | 400 - 499 | Client Error |
+
+    | 5 | 500 - 599 | Server Error |
+
+
+    RESTful Web Service Methods
+
+    Web Resources were first defined on the world wide which is much generic and abstract
+    and includes everything it or action today the definition is much generic and
+    can be identified Named Address handled or performed in any way on the web in
+    a RESTful service makes requests to a resource URI gives us the response with
+    the payload formatted in HTML JSON or some other format, for example, the response
+    can be related resources the most common protocol is HTTP provides us following
+    HTTP Methods GET, POST, PUT, PATCH, DELETE, CONNECT, OPTIONS and TRACE.
+
+
+    The HTTP methods details are given below.
+
+
+    +   - POST is used to post the data from the webserver to the database using RESTful
+    Web Service.'
+  merge: -1
+  pgno: 14
+- img_proc: true
+  md: '+   * GET is used to get the list of all records from the database either all
+    records or based on specific I''d like Person ID or employed.
+
+    * DELETE is used to delete all the records from the database or based on a specific
+    Id.
+
+    * PUT is used to Replace the record or update a record based on Specific Id.
+
+    * PATCH method provides an entity containing the list of changes to be applied
+    to the resources using the HTTP Request-URI.
+
+    * OPTIONS The options method represents a request for information about the communication
+    options available on the request/response chain identified by Request-URI.
+
+    * TRACE The trace method performs a message look back test along the path to the
+    target resources providing a useful debugging mechanism.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_15_0.png)'
+  merge: -1
+  pgno: 15
+- img_proc: true
+  md: '# Why RESTful Service
+
+
+    Restful Mostly comes into popularity due to the following features.
+
+
+    +   - Heterogeneous language and environment this is one of the fundamental reasons
+    why is same as we have seen for SOAP as well
+
+    - It enables web applications that are built on various programming languages
+    to communicate with each other.
+
+    - RESTful web architecture helps the web applications to reside in different environments
+    some could be on windows and could be on Linux.
+
+    - RESTful web service offers this flexibility to applications built on various
+    programming languages and platforms to talk to each other.
+
+
+    # RESTful Architecture
+
+
+    An Application OR Architecture considered RESTful or Rest Style has the following
+    Characteristics
+
+
+    +   - A-State and functionality are divided into distributed resources which means
+    that every resource should be accessible via the normal HTTP Commands like getting,
+    POST, PUT, DELETE, if someone wanted to get a file from a server, they should
+    be able to issue the GET request and we want to put the file on the server, we
+    will use either POST or PUT request, and finally, if we want to delete the file
+    from the storage, we must use a DELETE request.
+
+    - The architecture is client/server stateless layered and supports the caching.
+
+    - The client-server is the typical architecture where the server can be web server
+    hosting the application and the client can be as simple as the web browsers.
+
+    - Stateless means that the state of the application is not maintained in REST
+
+
+    If we want to delete a resource from a server using the DELETE Command, you cannot
+    pass the deleted information to the next request. To ensure that the resources
+    you deleted you would need to issue the GET request first to get all the information
+    from the server after which one would need to see if the resource was deleted.
+
+
+    # RESTful Principals and Constraints
+
+
+    The REST architecture is based on few characteristics which are elaborated below
+    any RESTful web service must comply with the below characteristics for it to be
+    called RESTful these characteristics are known as design principle which need
+    to be filled when working with RESTful architecture.'
+  merge: -1
+  pgno: 16
+- img_proc: true
+  md: '# RESTful Client-Server
+
+
+    This is the most fundamental requirement of the REST Based architecture it means
+    that the server will have a RESTful web service that would provide the required
+    functionality to the client. The client sends a request to the web service on
+    the server would either reject the request on complying and provide adequate response
+    to the client,
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_17_0.png)
+
+
+    # Stateless
+
+
+    The concept of stateless means that it is up to the client to ensure that all
+    the required information is provided to the server. This is required so that server
+    can process the response appropriately the server should not maintain any soft
+    of the information between requests from the client requests the server and the
+    server give the response to the client appropriately.
+
+
+    # Cache
+
+
+    The Cache concept is to help with the problem of stateless which was described
+    in the last point since each client request is independent sometimes the client
+    might ask the server for the same request even though it had already asked for
+    it in the past. This is even though it had already asked for it in the past. This
+    request will go to the server and the server will give a response. This increase
+    the traffic across the network cache is the concept implemented on the client
+    to store requests which have already been sent to the server so if the same request
+    is given by the client instead of going to the server saves the amount of and
+    to fro network traffic from the client to the server.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_17_1.png)
+
+
+    # Layered System
+
+
+    The concept of a layered system is that any additional layer such as a middleware
+    layer can be inserted between the client and the actual server hosting the RESTful
+    web service middleware layer is where all the business logic is created this can
+    be an extra service created'
+  merge: -1
+  pgno: 17
+- img_proc: true
+  md: "with a client could interact with before it makes a call to the web service.\
+    \ the layered system needs to be transparent so that interaction between client\
+    \ and server should Not Be Affected in any way.\n\n# RESTful Web Services Interfaces\n\
+    \nThis is the underlying technology in the web service how RESTful should work.\
+    \ RESTful works on the HTTP web layer and uses the below key verb to work with\
+    \ resources on the server. Web Resources were first defined on the world wide\
+    \ web as documents of files identified by their URLs today the definition is much\
+    \ generic and abstract and includes everything or action that can be identified\
+    \ Named Addressed handled or performed any of the way in a RESTful web service\
+    \ requests made to a resources URI gives us the response with the payload formatted\
+    \ in HTML XML JSON or some format, for example, the response can be related resources\
+    \ the most common protocol is HTTP provides following HTTP Methods GET, POST,\
+    \ PUT, PATCH, DELETE, CONNECT, OPTIONS AND TRACE.\n\nThe HTTP methods details\
+    \ are given below.\n\n+   - **POST** is used to post the data from a web server\
+    \ to the database using the RESTful Web Service.\n- **GET** is used to get the\
+    \ list of all records from the database either all records or based on specific\
+    \ I would like Person ID or employ. \n- **DELETE** is used to delete all the records\
+    \ from the database or based on a specific Id.\n- **PUT** is used to Replace the\
+    \ record or update a record based on a Specific Id.\n- **PATCH** method provides\
+    \ an entity containing the list of changes to be applied to the resources requesting\
+    \ using the HTTP Request-URI.\n- **OPTIONS** The options method represents a request\
+    \ for information about the communication options available on the request/response\
+    \ chain identified by Request-URI.\n- **TRACE** The trace method performs a message\
+    \ look back test along the path to the target resources providing a useful debugging\
+    \ mechanism."
+  merge: -1
+  pgno: 18
+- img_proc: true
+  md: '# Create your first RESTful Web service in Asp.net Core Web API
+
+
+    Step 1 First, Create the Asp.net Core Web API in Visual Studio.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_19_0.png)
+
+
+    What is REST ARCHITECTURE
+
+
+    20'
+  merge: -1
+  pgno: 19
+- img_proc: true
+  md: '# Configure your new project
+
+
+    Step 2 Add the New Project in your Solution like Asp.net Core Class Library for
+    Business Access Layer and Data Access Layer
+
+
+    # Add a new project
+
+
+    What is REST ARCHITECTURE'
+  merge: -1
+  pgno: 20
+- img_proc: true
+  md: '# After Adding the BAL (Business Access Layer) DAL (Data Access Layer)
+
+
+    All the Data in Data Access Layer and All the Cr Operations are in Data Access
+    Layer for Business Logic we have Business Access layer in which we will do All
+    Operations Related to our Business.
+
+
+    # Data Access Layer
+
+
+    The given below picture is the structure of our project according to our Initial
+    steps.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_21_0.png)
+
+
+    Step 3 First, Add the Model Person in the Data Access Layer
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_21_1.png)'
+  merge: -1
+  pgno: 21
+- img_proc: true
+  md: "Code is Given Below\n\n```\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Text;\nusing System.ComponentModel.Annotations;\nusing System.ComponentModel.Annotations.Schema;\n\
+    namespace DAL.Model\n{\n    [Table(\"Persons\", Schema = \"dbo\")] public class\
+    \ Person\n    {\n        [Key]\n        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]\n\
+    \        public int Id { get; set; }\n\n        [Required]\n        [DisplayName(Name\
+    \ = \"UserName\")\\]\n        public string UserName { get; set; }\n\n       \
+    \ [Required]\n        [DisplayName(Name = \"Password\")\\]\n        public string\
+    \ Password { get; set; }\n\n        [Required]\n        [DisplayName(Name = \"\
+    UserEmail\")\\]\n        public string Email { get; set; }\n\n        [Required]\n\
+    \        [DisplayName(Name = \"CreatedOn\")]\n        public DateTime CreatedOn\
+    \ { get; set; } = DateTime.Now;\n\n        [Required]\n        [DisplayName(Name\
+    \ = \"IsDeleted\")\\]\n        public bool IsDeleted { get; set; } = false;\n\
+    \    }\n}\n```\n\nStep 4 Add the Enter face for all the operation you want to\
+    \ perform."
+  merge: -1
+  pgno: 22
+- img_proc: true
+  md: "# Code is Giver Below\n\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Text;\nusing System.Threading.Tasks;\n\nnamespace DAL.Interface\n\
+    \n```\n{\n    public interface IRepository<T>\n    {\n        public Task<T> Create(T\
+    \ _object);\n        public void Update(T _object);\n        public IEnumerable<T>\
+    \ GetAll();\n        public T GetById(int Id);\n        public void Delete(T _object);\n\
+    \    }\n}\n\n```\n\nWhat is REST ARCHITECTURE"
+  merge: -1
+  pgno: 23
+- img_proc: true
+  md: '# Step 5 Apply Repository Pattern in the pattern you add The Class Repository.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_24_0.png)
+
+
+    # Code is Given Below
+
+
+    using DAL.Data; using DAL.Interface; using DAL.Model; using System;
+
+    using System.Collections.Generic; using System.Linq;
+
+    using System.Text;
+
+    using System.Threading.Tasks;
+
+    namespace DAL.Repository
+
+
+    ```
+
+    {
+
+    public class RepositoryPerson : IRepository<Person>
+
+    {
+
+    ApplicationDbContext _dbContext;
+
+    public RepositoryPerson(ApplicationDbContext applicationDbContext)
+
+    {
+
+    _dbContext = applicationDbContext;
+
+    }
+
+    public async Task<Person> Create(Person _object)
+
+    ```'
+  merge: -1
+  pgno: 24
+- img_proc: true
+  md: '```
+
+    {
+
+    var obj = await _dbContext.Persons.AddAsync(_object);
+
+    _dbContext.SaveChanges(); return obj.Entity;
+
+    }
+
+    public void Delete(Person _object)
+
+    {
+
+    _dbContext.Remove(_object);
+
+    _dbContext.SaveChanges();
+
+    }
+
+    public IEnumerable<Person> GetAll()
+
+    {
+
+    try
+
+    {
+
+    return _dbContext.Persons.Where(x => x.IsDeleted == false).ToList();
+
+    }
+
+    catch (Exception ee)
+
+    {
+
+    throw;
+
+    }
+
+    }
+
+    public Person GetById(int Id)
+
+    {
+
+    return _dbContext.Persons.Where(x => x.IsDeleted == false && x.Id == Id).FirstOrDefault();
+
+    }
+
+
+    public void Update(Person _object)
+
+    {
+
+    ```'
+  merge: -1
+  pgno: 25
+- img_proc: true
+  md: '```
+
+    _dbContext.Persons.Update(_object);
+
+    ```
+
+
+    ```
+
+    _dbContext.SaveChanges();
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    ```
+
+    }
+
+    ```
+
+
+    # Step 6
+
+
+    Add the Data Folder and then add the Db Context Class set the database connection
+    using SQL Server before starting the migration check these four packages in All
+    of Your Project
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_26_0.png)'
+  merge: -1
+  pgno: 26
+- img_proc: true
+  md: '# Then the add references in All Project Directory in API Project BAL Project
+
+
+    Like
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_27_0.png)
+
+
+    Now modify the Start-up class in Project Solution.'
+  merge: -1
+  pgno: 27
+- img_proc: true
+  md: "Code of the start-up file is given below\n\n```\nusing\nBAL.Service;\nusing\
+    \ DAL.Data;\nusing\nDAL.Interface;\nusing DAL.Model;\nusing DAL.Repository;\n\
+    using Microsoft.AspNetCore.Builder;\nusing Microsoft.AspNetCore.Hosting;\nusing\
+    \ Microsoft.AspNetCore.HttpsPolicy;\nusing Microsoft.AspNetCore.Mvc;\nusing Microsoft.EntityFrameworkCore;\n\
+    using Microsoft.Extensions.Configuration;\nusing Microsoft.Extensions.DependencyInjection;\n\
+    using Microsoft.Extensions.Hosting;\nusing Microsoft.Extensions.Logging;\nusing\
+    \ Microsoft.OpenApi.Models;\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Threading.Tasks;\nnamespace AspNetCOREWebAPICrud\n\
+    {\n    public class Startup\n    {\n        private readonly IConfiguration _configuration;\n\
+    \        public Startup(IConfiguration configuration)\n        {\n    }\n```"
+  merge: -1
+  pgno: 28
+- img_proc: true
+  md: "```\n_configuration = configuration;\n}\n```\n\n```\n// This method gets called\
+    \ by the runtime. Use this method to add\nservices to the container.\npublic void\
+    \ ConfigureServices(IServiceCollection services)\n{\n    services.AddDbContext<ApplicationDbContext>(options\
+    \ =>\n        options.UseSqlServer(_configuration.ConnectionString(\"DefaultConnection\"\
+    )));\n    services.AddControllers();\n    services.AddHttpClient();\n    services.AddTransient<IRepository<Person,\
+    \ RepositoryPerson>>();\n    services.AddTransient<PersonService, PersonService>();\n\
+    \    services.AddControllers();\n    services.AddSwaggerGen(c =>\n{\n        c.SwaggerDoc(\"\
+    v1\", new OpenApiInfo { Title = \"AspNetCore5WebAPICrud\", Version = \"v1\" });\n\
+    \    });\n```\n\n```\n// This method gets called by the runtime. Use this method\
+    \ to\nconfigure the HTTP request pipeline.\npublic void Configure(IApplicationBuilder\
+    \ app, IWebHost env)\n{\n    if (env.IsDevelopment())\n    {\n        app.UseDeveloperExceptionPage();\n\
+    \        : app.UseSwagger();\n}\n```"
+  merge: -1
+  pgno: 29
+- img_proc: true
+  md: '```
+
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AspNetCoreWebAPICrud
+    v1");
+
+    });
+
+    ```
+
+
+    ```
+
+    app.UseHttpsRedirection(
+
+    ); app.UseRouting();
+
+    app.UseAuthorization();
+
+    ;
+
+    ```
+
+
+    ```
+
+    app.UseEndpoints(endpoints =>
+
+    {
+
+    endpoints.MapControllers();
+
+    });
+
+    ```
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_30_0.png)
+
+
+    Then Add the DB Set Property in your Application Db Context Class.
+
+
+    # What is REST ARCHITECTURE'
+  merge: -1
+  pgno: 30
+- img_proc: true
+  md: "# Code of Db Context Class is Given Below\n\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Text;\n\nusing DALModel;\nusing Microsoft.EntityFrameworkCore; using\
+    \ Microsoft.Extensions.Configuration;\nnamespace DAL.Data\n\n```\n{\n    public\
+    \ class ApplicationDbContext : DbContext\n    {\n        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>\
+    \ options) : base(options)\n        {\n        }\n        protected override void\
+    \ OnModelCreating(ModelBuilder builder)\n        {\n            base.OnModelCreating(builder);\n\
+    \        }\n        public DbSet<Person> Persons { get; set; }\n    }\n```"
+  merge: -1
+  pgno: 31
+- img_proc: true
+  md: '# Step 7 Now start the migration Command for Creating the Table in Database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_32_0.png)
+
+
+    After Executing the command, we have the migration folder in our Data Access Layer
+    that contain the Definition of Person Table'
+  merge: -1
+  pgno: 32
+- img_proc: true
+  md: '# Step 8 Add the Repository Person class then Implement the Interface and the
+    swift Action according to the action define in the Interface.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_33_0.png)
+
+
+    # Code ID Given Below.
+
+
+    using DAL.Data;
+
+
+    using
+
+    DAL.Interface;'
+  merge: -1
+  pgno: 33
+- img_proc: true
+  md: "```\nusing DAL.Model;\nusing System;\nusing System.Collections.Generic;\nusing\
+    \ System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\n```\n\n```\n\
+    namespace DAL.Repository\n{}\n```\n\n```\n    public class RepositoryPerson :\
+    \ IRepository<Person>\n    {\n        ApplicationDbContext _dbContext;\n     \
+    \   public RepositoryPerson(ApplicationDbContext applicationDbContext)\n     \
+    \   {\n            _dbContext = applicationDbContext;\n        }\n        public\
+    \ async Task<Person> Create(Person _object)\n        {\n            var obj =\
+    \ await _dbContext.Persons.AddAsync(_object);\n            _dbContext.SaveChanges();\n\
+    \            return obj.Entity;\n        }\n\n        public void Delete(Person\
+    \ _object)\n        {\n            _dbContext.Remove(_object);\n            _dbContext.SaveChanges();\n\
+    \        }\n```\n\n```\n    public IEnumerable<Person> GetAll()\n    {\n     \
+    \   try\n        {\n            return _dbContext.Persons.Where(x => x.IsDeleted\
+    \ == false).ToList();\n        }\n        catch (Exception ee)\n```"
+  merge: -1
+  pgno: 34
+- img_proc: true
+  md: "```\n{\n    throw;\n}\n\npublic Person GetById(int Id)\n{\n    return dbContext.Persons.Where(x\
+    \ => x.IsDeleted == false && x.Id == Id).FirstOrDefault();\n}\n\npublic void Update(Person\
+    \ _object)\n{\n    _dbContext.Persons.Update(_object);\n    _dbContext.SaveChanges();\n\
+    }\n```\n\n# # Step 10\n\nAgain, Modify the Start Up Class for Adding Transient\
+    \ to register the service business Layer and Data Access Layers Classes."
+  merge: -1
+  pgno: 35
+- img_proc: true
+  md: '# Code of the Start-up is given below.
+
+
+    using BAL.Service;
+
+    using DAL.Data;
+
+    using DAL.Interface;
+
+    using DAL.Model;
+
+
+    using DAL.Repository;
+
+    using Microsoft.AspNetCore.Builder;
+
+    using Microsoft.AspNetCore.Hosting;
+
+    using Microsoft.AspNetCore.HttpPolicy;
+
+    using Microsoft.AspNetCore.Mvc;
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_36_0.png)'
+  merge: -1
+  pgno: 36
+- img_proc: true
+  md: "using Microsoft.EntityFrameworkCore;\nusing Microsoft.Extensions.Configuration;\n\
+    using Microsoft.Extensions.DependencyInjection;\nusing Microsoft.Extensions.Hosting;\n\
+    using Microsoft.Extensions.Logging;\nusing Microsoft.OpenApi.Models;\nusing System;\n\
+    using System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\n\
+    \nnamespace AspNetCORE5WebAPICrud\n\n{\n\n```\n    public class Startup\n    {\n\
+    \        private readonly IConfiguration _configuration;\n\n        public Startup(IConfiguration\
+    \ configuration)\n        {\n            _configuration = configuration;\n   \
+    \     }\n\n        // This method gets called by the runtime. Use this method\
+    \ to add services to the container.\n        public void ConfigureServices(IServiceCollection\
+    \ services)\n        {\n            services.AddDbContext<ApplicationDbContext>(options\
+    \ =>\noptions.UseSqlServer(_configuration.GetConnectionString(\"DefaultConnection\"\
+    )));\n\n            services.AddControllers();\n            services.AddHttpClient();\n\
+    \n            services.AddTransient<IRepository<Person>, RepositoryPerson>();\n\
+    \            services.AddTransient<IPersonService, PersonService>();\n       \
+    \     services.AddControllers();\n\n            services.AddSwaggerGen(c =>\n\
+    \        }\n```"
+  merge: -1
+  pgno: 37
+- img_proc: true
+  md: "c.SwaggerDoc(\"v1\", new OpenApiInfo { Title = \"AspNetCORE5WebAPICrud\",nVersion\
+    \ = \"v1\" });\n\n// This method gets called by the runtime. Use this method to\
+    \ configure thenHTTP request pipeline.\n\n```\npublic void Configure(IApplicationBuilder\
+    \ app, IWebHostEnvironment env)\n{\n    if (env.IsDevelopment())\n    {\n    \
+    \    app.UseDeveloperPage();\n        app.UseSwagger();\n        app.UseSwaggerUI(c\
+    \ => c.SwaggerEndpoint(\"/v1/swagger.json\", \"AspNetCoreCORE5WebAPICrud v1\"\
+    ));\n    }\n\n    app.UseHttpsRedirection();\n    app.UseRouting();\n    app.UseAuthorization();\n\
+    \n    app.UseEndpoints(endpoints =>\n    {\n        endpoints.MapControllers();\n\
+    \    });\n}\n```"
+  merge: -1
+  pgno: 38
+- img_proc: true
+  md: '# Step 11
+
+
+    Add the Person Details API Controller for GET PUT POST AND DELETE end
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_39_0.png)'
+  merge: -1
+  pgno: 39
+- img_proc: true
+  md: "# After Adding the Controller in the API project\n\n![](img/ecf1b6d3def03c95166d6223c24cb862_40_0.png)\n\
+    \n# Code of the Controller for Person Details is Given Below\n\nusing BAL.Service;\
+    \ using DAL.Interface;\nusing DAL.Model;\nusing Microsoft.ApnetCore.Http;\nusing\
+    \ Microsoft.ApnetCore.Mvc;\nusing Microsoft.Extensions.Logging;\nusing Newtonsoft.Json;\n\
+    using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Threading.Tasks;\n\
+    \n```\nnamespace AspNetCORE5WebAPICrud.Controllers\n{\n    [Route(\"api/[controller]\"\
+    )] [ApiController]\n    public class PersonDetailsController : ControllerBase\n\
+    {\n        private readonly PersonService _personService; private readonly IRepository<Person>\
+    \ _Person;\n\n        public PersonDetailsController(IRepository<Person> Person,\
+    \ PersonService ProductService)\n{\n            _personService = ProductService;\n\
+    \            _Person = Person;\n```"
+  merge: -1
+  pgno: 40
+- img_proc: true
+  md: "```\n}\n//Add Post [HttpPost(\"AddPerson\"]\npublic async Task<Object> AddPerson([FromBody]\
+    \ Person)\n{\ntry\n{\n    await _personService.AddPerson(person); return true;\n\
+    }\ncatch (Exception)\n{\n    return false;\n}\n//Delete Person [HttpDelete(\"\
+    DeletePerson\")\npublic bool DeletePerson([FromBody] String UserEmail)\n{\ntry\n\
+    {\n}\n_personService.DeletePerson(UserEmail); return true;\n}catch (Exception)\n\
+    {\n    return false;\n}\n//Delete Person [HttpPut(\"UpdatePerson\")\npublic bool\
+    \ UpdatePerson([FromBody] String UserEmail)\n{\ntry\n{\n}\n_personService.UpdatePerson(UserEmail);\
+    \ return true;\n}catch (Exception)\n{\n    return false;\n}\n//GET All Person\
+    \ by Name [HttpGet(\"GetAllPersonByName\")\npublic Object GetAllPersonByName(string\
+    \ UserEmail)\n```"
+  merge: -1
+  pgno: 41
+- img_proc: true
+  md: '```
+
+    {
+
+    var data = _personService.GetPersonByUserName(UserEmail);
+
+    var json = JsonConvert.SerializeObject(data, Formatting.Indented, new JsonSerializerSettings{
+
+    ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+
+    });
+
+    return json;
+
+    }
+
+    ```
+
+
+    ```
+
+    //GET All Person ["GetAllPersons"] public Object GetAllPersons()\nvar data = _personService.GetAllPersons();
+
+    var json = JsonConvert.SerializeObject(data, Formatting.Indented,
+
+    new JsonSerializerSettings(
+
+    ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+
+    });
+
+    return json;
+
+    }
+
+    }
+
+    ```
+
+
+    # RESTful Web Service Results
+
+
+    To get the results of APIS We need to start the visual studio debugging process
+    and then using swagger API Testing we will test all endpoints of Project.
+
+
+    # Debug the project using visual studio
+
+
+    Swagger is Already Implemented in Our Project for Documenting the web service
+    in this Project We have Separate Endpoints for GET POST DELETE AND PUT'
+  merge: -1
+  pgno: 42
+- img_proc: true
+  md: '# Swagger UI
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_43_0.png)
+
+
+    # # AspNetCore5WebApiService
+
+
+    swagger/index.json
+
+
+    # # POST Endpoint in Web API Service
+
+
+    If we want to Create the New Person in the Database, we must send the JSON Object
+    to the End Point then is posted by Swagger UI to POST End Point in the Controller
+    Then Create Person Object Creates the Complete Person Object in the Database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_43_1.png)
+
+
+    What is REST ARCHITECTURE
+
+
+    44'
+  merge: -1
+  pgno: 43
+- img_proc: true
+  md: '# DELETE Endpoint in Web API Service
+
+
+    For deletion of person, we have a separate end delete employee from the database,
+    we must send the JSON object to the end point data is posted by swagger UI to
+    call the end point person in the controller then person object will be deleted
+    from the database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_44_0.png)'
+  merge: -1
+  pgno: 44
+- img_proc: true
+  md: '# GET All Endpoint in Web API Service
+
+
+    We have Separate End Points for All the operations Get All the Person Records
+    by the Database by Hitting the GET End Point that send the request to controller
+    and in controller we have the separate End Point for Fetching all the record from
+    the database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_45_0.png)
+
+
+    # GET End Point for Getting the Record by User Email
+
+
+    We have Separate End Points for All the operations like Get the Person by User
+    Email from the Database by Hitting the GET End Point that send the request to
+    controller and in controller we have the separate End Point for Fetching the record
+    based on User Email from the database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_45_1.png)'
+  merge: -1
+  pgno: 45
+- img_proc: true
+  md: '# What End Point for Deleting the Record by User Email
+
+
+    We have Separate End Points for All the operations Delete the Record of the Person
+    by User Email from the Database by Hitting the DELETE End Point that sends the
+    request to controller and in controller we have the separate End Point for Deleting
+    the record based on User Email from the database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_46_0.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_46_1.png)'
+  merge: -1
+  pgno: 46
+- img_proc: true
+  md: '# Update End Point for Updating the Record by User Email
+
+
+    We have Separate End Points for All the operations like Update the Record of the
+    Person by User Email from the Database by Hitting the UPDTAE End Point that send
+    the request to controller and in controller we have the Separate End for Updating
+    the record based on User Email from the database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_47_0.png)
+
+
+    # Testing the RESTful Web Service
+
+
+    Test the project using visual studio for that we need to follow given below steps
+
+
+    # Step 1 Run the Project
+
+
+    Run the project in the browser Swagger UI will be shown to the Tester
+
+
+    # Step 2 Test POST End Point
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_47_1.png)'
+  merge: -1
+  pgno: 47
+- img_proc: true
+  md: '# Conclusion
+
+
+    As a Software Engineer My Opinion about Restful web services are a lightweight
+    maintainable and scalable service that is built on the REST Architecture. Restful
+    Web service exposes API from your application in a secure uniform stateless manner
+    to the calling client can perform predefined operations using the restful service
+    the protocols for the REST is HTTP and Rest is a Representational State Transfer.
+    Representational state transfer (REST) is a de-facto standard for a software Architecture
+    or Interactive applications that use this standard is called RESTful such web
+    must provide its web resources in a textual representation and allow them to be
+    read and modified with stateless protocol and predefined set of operations this
+    standard allow interoperability between a Machine and the Internet that provide
+    these services. REST Architecture is alternative to SOAP and SOAP Architecture
+    is the way to access a Web Service.
+
+
+    # Complete Git Hub Project URL
+
+
+    Click here for complete project access'
+  merge: -1
+  pgno: 48
+- img_proc: true
+  md: "# # 2\n API Development in Asp.Net Core Using Three Tier Architecture\n\nOverview\n\
+    \n+   * Introduction\n* Project Structure\n* Presentation Layer (PL)\n* Business\
+    \ Access Layer (BAL)\n* Data Access Layer (DAL)\n* Add the References to the Project\n\
+    * Data Access Layer\n* Contacts\n* Data\n* Migrations\n* Models\n* Repository\n\
+    * Business Access Layer\n* Services\n* Presentation layer\n* Advantages of 3-Tier\
+    \ Architecture\n* Dis-Advantages of 3-Tier Architecture\n* Conclusion\n* Complete\
+    \ GitHub Project URL"
+  merge: -1
+  pgno: 49
+- img_proc: true
+  md: '# Introduction
+
+
+    In this chapter, we''ll look at three-tier architecture and how to incorporate
+    the Data Access Layer and Business Access Layer into a project, as well as how
+    these layers interact.
+
+
+    # Add the References to the Project
+
+
+    Now, in the Presentation Layer, add the references to the Data Access Layer and
+    the Business Access Layer.
+
+
+    Right Click on the Presentation layer and then click on =>> Reference
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_50_0.png)
+
+
+    Add the References by Checking the checkboxes
+
+
+    API Development in Asp.Net Core Using Three Tier Architecture 51'
+  merge: -1
+  pgno: 50
+- img_proc: true
+  md: '# API Development in Asp.Net Core Using Three Tier Architecture
+
+
+    References have been added for both DAL and BAL
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_51_0.png)
+
+
+    Now we add the Data Access layer project references to the Business layer.
+
+
+    +   - Right Click on the Business access layer and then Click Add Button => Project
+    References'
+  merge: -1
+  pgno: 51
+- img_proc: true
+  md: 'Remember that we have included the DAL BAL references in the project, so don''t
+    add the Presentation layer references in the business layer. We only need the
+    DAL layer references in the business layer
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_52_0.png)'
+  merge: -1
+  pgno: 52
+- img_proc: true
+  md: '# # Project References of DAL Has Been Added to BAL
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_53_0.png)
+
+
+    # # Project Structure
+
+
+    We use a three-tier architecture in this project, with a data access layer, a
+    business access layer, and an application presentation layer.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_53_1.png)
+
+
+    # ## Presentation Layer (PL)
+
+
+    The Presentation layer is the top-most layer of the 3-tier architecture, and its
+    major role is to display the results to the user, or to put it another way, to
+    present the data that we acquire from the business access layer and offer the
+    results to the front-end user.
+
+
+    # ## Business Access Layer (BAL)'
+  merge: -1
+  pgno: 53
+- img_proc: true
+  md: 'the logic layer interacts with the data access layer and the presentation layer
+    to process the activities that lead to logical decisions and assessments. This
+    layer''s primary job is to process data between other layers.
+
+
+    # Data Access Layer (DAL)
+
+
+    The main function of this layer is to access and store the data from the database
+    and the data of business access to the presentation layer against user request.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_54_0.png)
+
+
+    # Steps to Follow for configuring these layer
+
+
+    +   - Add the Class Library project of Asp.net for Data Access Layer
+
+    - Right Click on the project and then to add the new project window and then add
+    the Asp.net Core class library project.'
+  merge: -1
+  pgno: 54
+- img_proc: true
+  md: '# # Add a new project
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_55_0.png)
+
+
+    +   - After Adding the Data Access layer project now, we will add the Business
+    access folder
+
+
+    +   - Add the Class Library project of Asp.Net Core for Business Access
+
+
+    +   - Right Click on the button and go to add the new project and then add the
+    Asp.net Core class library project.
+
+
+    # # Add a new project
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_55_1.png)
+
+
+    API Development in Asp.Net Core Using Three Tier Architecture
+
+
+    56'
+  merge: -1
+  pgno: 55
+- img_proc: true
+  md: 'After adding the business access layer and data access layer, we must first
+    add the references of the Data Access layer and Business Access layer, so that
+    the project structure can be seen.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_56_0.png)
+
+
+    As you can see, our project now has a Presentation layer, Data Access Layer, and
+    Business Access layer.
+
+
+    # Data Access Layer
+
+
+    The Data Access Layer contains methods that assist the Business Access Layer in
+    writing business logic, whether the functions are linked to accessing or manipulating
+    data. The Data Access Layer''s major goal is to interface with the database and
+    the Business Access Layer in our project.
+
+
+    the structure will be like this.
+
+
+    In this Layer we have the Following Folders Add these folders to your Data access
+    layer
+
+
+    +   * Contacts
+
+    * Data
+
+    * Migrations
+
+    * Models
+
+    * Repositories
+
+
+    # Contacts
+
+
+    In the Contract Folder, we define the interface that has the following function
+    that performs the desired functionalities with the database like'
+  merge: -1
+  pgno: 56
+- img_proc: true
+  md: "using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing\
+    \ System.Text;\nusing System.Threading.Tasks;\n\nnamespace JWTokenAuthInAspNet6_DAL.Contracts\n\
+    {\n    public interface IRepository<T>\n    {\n        public Task<T> Create(T_object);\n\
+    \        public void Delete(T_object);\n        public void Update(T_object);\n\
+    \        public IEnumerable<T> GetAll();\n        public T GetById(int Id);\n\
+    \    }\n}\n\n\n![](img/ecf1b6d3def03c95166d6223c24cb862_57_0.png)"
+  merge: -1
+  pgno: 57
+- img_proc: true
+  md: '# Data
+
+
+    In the Data folder, we have Db Context Class this is very important for accessing
+    the data from the database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_58_0.png)
+
+
+    # Migrations
+
+
+    The Migration Folder contains information on all the migrations we performed during
+    the construction of this project. Migration Folder contains information on all
+    the migrations we performed during the construction of this project.
+
+
+    # Models
+
+
+    Our application models, which contain domain-specific data, and business logic
+    models, which represent the structure of the data as public attributes, business
+    logic, and methods, are stored in the Model folder.'
+  merge: -1
+  pgno: 58
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_59_0.png)
+
+
+    using Microsoft.AspNetCore.Identity;
+
+
+    using System;
+
+
+    using System.Collections.Generic;
+
+
+    using System.Linq;
+
+
+    using System.Text;
+
+
+    using System.Threading.Tasks;
+
+
+    namespace JWTTokenAuthInAspNetCore6_DAL.Models
+
+
+    {
+
+
+    public class AppUser : IdentityUser
+
+
+    {
+
+
+    ```
+
+    public int Id { get; set; }
+
+    public string? Name { get; set; }
+
+    public string? AccountType { get; set; }
+
+    public string? PhoneNo { get; set; }
+
+    public string? Password { get; set; }
+
+    public string? ShopName { get; set; }
+
+    public string? BusinessType { get; set; }
+
+    public string? UserRole { get; set; }
+
+    public bool? IsDeleted { get; set; }
+
+    ```
+
+
+    }
+
+
+    }
+
+
+    # Repository'
+  merge: -1
+  pgno: 59
+- img_proc: true
+  md: 'In the Repository folder, we add the repository classes against each model.
+    We write the CRUD function that communicates with the database using the entity
+    framework. We add the repository class that inherits our Interface that is present
+    in our contract folder.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_60_0.png)
+
+
+    using JWTTokenAuthInAspNet6_DAL_Contracts;
+
+    using JWTTokenAuthInAspNet6_DAL_Data;
+
+    using JWTTokenAuthInAspNet6_DAL_Models;
+
+    using Microsoft.Extensions.Logging;
+
+    using System;
+
+    using System.Collections.Generic;
+
+    using System.Linq;
+
+    using System.Text;
+
+    using System.Threading.Tasks;
+
+
+    namespace JWTTokenAuthInAspNet6_DAL.Repositories
+
+    {
+
+    public class RepositoryAppUser : IRepository<AppUser>
+
+    {
+
+    private readonly AppDbContext _appDbContext;
+
+    private readonly ILogger _logger;
+
+
+    public RepositoryAppUser(ILogger<AppUser> logger)
+
+    {
+
+    _logger = logger;
+
+    }'
+  merge: -1
+  pgno: 60
+- img_proc: true
+  md: "```\npublic async Task<AppUser> Create(AppUser appuser)\n{\n  try {\n    if\
+    \ (appuser != null) {\n      var obj = _appDbContext.Add<AppUser>(appuser);\n\
+    \      await _appDbContext.SaveChangesAsync();\n      return obj.Entity;\n   \
+    \ } else {\n      return null;\n    }\n  } catch (Exception) {\n    throw;\n \
+    \ }\n}\n```\n\n```\npublic void Delete(AppUser appuser)\n{\n  try {\n    if(appuser!=null)\
+    \ {\n      var obj = _appDbContext.Remove(appuser);\n      if(obj!=null) {\n \
+    \       _appDbContext.SaveChangesAsync();\n      }\n    }\n  } catch (Exception)\
+    \ {\n    throw;\n  }\n}\n```\n\n```\npublic IEnumerable<AppUser> GetAll()\n{\n\
+    ```"
+  merge: -1
+  pgno: 61
+- img_proc: true
+  md: "```\ntry\n{\n    var obj = _appDbContext.AppUsers.ToList();\n    if (obj !=\
+    \ null)\n        return obj;\n    else\n        return null;\n}\ncatch (Exception)\n\
+    {\n    throw;\n}\n```\n\n```\npublic AppUser GetById(int Id)\n{\n    try\n   \
+    \ {\n        if(Id!=null)\n        {\n            var obj = _appDbContext.AppUsers.FirstOrDefault(x\
+    \ => x.Id == Id);\n            if (obj != null)\n                return Obj;\n\
+    \            else\n                return null;\n        }\n    } else\n    {\n\
+    \        return null;\n    }\n}catch (Exception)\n{\n    throw;\n}\n```\n\n```\n\
+    public void Update(AppUser appuser)\n{\n    try\n    {\n        if (appuser !=\
+    \ null)\n```"
+  merge: -1
+  pgno: 62
+- img_proc: true
+  md: "```\n{\nvar obj = _appDbContext.Update(appuser);\nif (obj != null) {\n    _appDbContext.SaveChanges();\n\
+    }\n}\ncatch (Exception) {\n    throw;\n}\n}\n```\n\n# # Business Access Layer\n\
+    \nThe business layer communicates with the data access layer and the presentation\
+    \ layer logic process the actions that make the logical decision and evaluations\
+    \ the main function of this layer is to process the data between surrounding layers.\n\
+    \nOur Structure of the project in the Business Access Layer will be like this.\n\
+    \n![](img/ecf1b6d3def03c95166d6223c24cb862_63_0.png)\n\nIn this layer, we will\
+    \ have two folders\n\n+   - Extensions Method Folder\n- And Services Folder"
+  merge: -1
+  pgno: 63
+- img_proc: true
+  md: "In the business access layer, we have our services that communicate with the\
+    \ surrounding layers like the data layer and Presentation Layer.\n\n# Services\n\
+    \nServices define the application's business logic. We develop services that interact\
+    \ with the data layer and move data from the data layer to the presentation layer\
+    \ and from the presentation layer to the data access layer.\n\n# Example\n\n```\n\
+    using JWTWokenAuthInAspNet6_DAL.Contracts;\nusing JWTWokenAuthInAspNet6_DAL.Models;\n\
+    using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\n\
+    using System.Threading.Tasks;\n```\n\n```\nnamespace JWTWokenAuthInAspNet6_BAL.Services\n\
+    {\n    public class ServiceUser\n{\n        public readonly IRepository<AppUser>\
+    \ _repository;\n        public ServiceApp(IRepository<AppUser> repository)\n \
+    \       {\n            _repository = repository;\n        }\n\n        //Create\
+    \ Method\n        public async Task<AppUser> AddUser(AppUser appUser)\n      \
+    \  {\n            try\n            {\n                if (appUser == null)\n \
+    \               {\n                    throw new ArgumentNullException(nameof(appUser));\n\
+    \                }\n                else\n                {\n                \
+    \    return await _repository.Create(appUser);\n                }\n          \
+    \  }\n            catch (Exception)\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 64
+- img_proc: true
+  md: "```\n{\n  throw;\n}\n\npublic void DeleteUser(int Id)\n{\n  try {\n    if (Id\
+    \ != 0)\n    {\n      var obj = _repository.GetAll().Where(x => x.Id == Id).FirstOrDefault();\n\
+    \      _repository.Delete(obj);\n    }\n  } catch (Exception) {\n    throw;\n\
+    \  }\n}\n\npublic void UpdateUser(int Id)\n{\n  try {\n    if (Id != 0)\n    {\n\
+    \      var obj = _repository.GetAll().Where(x => x.Id == Id).FirstOrDefault();\n\
+    \      if (obj != null)\n        _repository.Update(obj);\n    }\n  } catch (Exception)\
+    \ {\n    throw;\n  }\n}\n```"
+  merge: -1
+  pgno: 65
+- img_proc: true
+  md: "```\npublic IIEnumerable<AppUser> GetAllUser()\n{\n    try {\n        return\
+    \ _repository.GetAll().ToList();\n    } catch (Exception) {\n        throw;\n\
+    \    }\n}\n\n```\n\n# ## Presentation layer\n\nThe top-most layer of the Three-Tier\
+    \ architecture is the Presentation layer the main function of this layer is to\
+    \ give the results to the user or in simple words to present the data that we\
+    \ get from the business access layer and give the results to the front-end user.\n\
+    \nIn the presentation layer, we have the default template of the asp.net core\
+    \ architecture here OUR structure of the application will be like this:\n\n![](img/ecf1b6d3def03c95166d6223c24cb862_66_0.png)"
+  merge: -1
+  pgno: 66
+- img_proc: true
+  md: 'The presentation layer is responsible to give the results to the user against
+    every HTTP request. Here we have a controller that is responsible for handling
+    the HTTP request and communicates with the business layer against each HTTP request
+    get the get data from the associated layer and then present it to the User.
+
+
+    # Advantages of 3-Tier Architecture
+
+
+    +   - It makes the logical separation between the presentation layer, business
+    layer, and data layer.
+
+    - Migration to a new environment is fast.
+
+    - In This Model, each tier is independent so we can set the different developers
+    on each tier for the fast development of applications
+
+    - Easy to maintain and understand the large-scale applications
+
+    - The business layer is in between the presentation layer and data layer the application
+    is more secured because the client will not have direct access to the database.
+
+    - The process data that is sent from business layer is validated at this level.
+
+    - The Posted data from the presentation layer will be validated at the business
+    layer before Inserting or Updating the Database
+
+    - Database security can be provided by BAL Layer
+
+    - Define the business logic in the BAL Layer and share it among the components
+    at the presentation layer
+
+    - Easy to Apply for Object-oriented Concepts
+
+    - Easy to update the data provided quires at DAL Layer
+
+
+    # Dis-Advantages of 3-Tier Architecture
+
+
+    +   - It takes a lot of time to build the small part of the application
+
+    - Need Good understanding of Object-Oriented programming
+
+
+    # Conclusion
+
+
+    In this chapter, we have learned about 3-tier Architecture and the three-layer
+    exchange data between them how we can add the Data Access Layer and Business access
+    layer in the project and studied how these layers communicate with each other.
+
+
+    # Presentation Layer (PL)
+
+
+    The top-most layer of the 3-Tier architecture is the Presentation layer the main
+    function of the layer is to give the results to the user or in simple words to
+    present the data that we get from the business access layer and give the results
+    to the front-end user.
+
+
+    # Business Access Layer (BAL)'
+  merge: -1
+  pgno: 67
+- img_proc: true
+  md: 'The logic layer communicates with the data access layer and the presentation
+    layer layer logic process the actions that make the logical decision and evaluations
+    the main function of this layer is to process the data between surrounding layers.
+
+
+    # Data Access Layer (DAL)
+
+
+    The main function of this application is to access and store the data from the
+    database and the process of the data to business access layer data goes to the
+    presentation layer against request.
+
+
+    # Complete Git Hub Project URL
+
+
+    Click here for complete project access'
+  merge: -1
+  pgno: 68
+- img_proc: true
+  md: '+   - Repository Layer
+
+    - Service Layer
+
+    - I Custom Service
+
+    - Custom Service
+
+    - Department Service
+
+    - Student Service
+
+    - Result Service
+
+    - Subject GPA Service
+
+    - Presentation Layer
+
+    - Dependency Injection
+
+    - Modify Program.cs File
+
+    - Controllers
+
+    - Output
+
+    - Conclusion'
+  merge: -1
+  pgno: 69
+- img_proc: true
+  md: '# Introduction
+
+
+    In this chapter, we will cover the onion architecture using the Asp.Net 6 Web
+    API. Onion architecture term introduces by Jeffrey Palermo in 2008 this architecture
+    provides us a better way to build applications using this architecture our applications
+    are better testable maintainable and dependable on infrastructures like databases
+    and services. Onion architecture solves common problems like coupling and separation
+    of concerns.
+
+
+    # What is Onion architecture
+
+
+    In onion architecture, we have the domain layer, repository layer, service layer,
+    and presentation layer. Onion architecture solves the problem that we face during
+    the enterprise applications like coupling and separations of concerns. Onion architecture
+    also solves the problem that we are confronted in three-tier architecture and
+    N-Layer architecture. In onion architecture, our layer communicates with each
+    other interfaces.
+
+
+    # Onion Architecture in Asp.Net Core Web API
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_70_0.png)
+
+
+    # Layers in Onion Architecture
+
+
+    Onion architecture uses the concept of the layer, but it is different from N-layer
+    architecture and 3-Tier architecture.
+
+
+    # Domain Layer'
+  merge: -1
+  pgno: 70
+- img_proc: true
+  md: 'This layer lies in the center of the architecture where we have application
+    entities which are the application model classes or database model classes using
+    the code first approach in the application development using Asp.net core these
+    entities are used to create the tables in the database.
+
+
+    # Repository Layer
+
+
+    The repository layer act as a middle layer between the service layer and model
+    objects we will maintain all the database migrations and database context Object
+    in this layer. We will add the interfaces that consist of the data access pattern
+    for reading and writing operations with the database.
+
+
+    # Service Layer
+
+
+    This layer is used to communicate with the presentation and repository layer.
+    The service layer holds all the business logic of the entity. In this services
+    interfaces keep separate from their implementation for loose coupling and separation
+    of concerns.
+
+
+    # Presentation Layer
+
+
+    In the case of the API Presentation layer presents us the object data from the
+    database using the HTTP request in the form of JSON Object. But in the case of
+    front-end applications, we present the data using the UI by consuming the APIS.
+
+
+    # Advantages of Onion Architecture
+
+
+    +   - Onion architecture provides us with the better maintainability of code because
+    code depends on layers.
+
+    - It provides better testability for unit tests we can write the separate test
+    cases in layers without affecting the other module in the application.
+
+    - Using the onion architecture our application is loosely coupled because our
+    layers communicate with each other using the interface.
+
+    - Domain entities are the core and center of the architecture and have access
+    to databases and UI Layer.
+
+    - A Complete implementation would be provided to the application at run time.
+
+    - The external layer never depends on the external layer.
+
+
+    # Implementation of Onion Architecture
+
+
+    Now we are going to develop the project using the Onion Architecture'
+  merge: -1
+  pgno: 71
+- img_proc: true
+  md: 'First, you need to create the Asp.Net Core web project using visual studio.
+    After creating the project, we will add our layer to the project after adding
+    all the layers our project structure will look like this.
+
+
+    # Project Structure.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_72_0.png)
+
+
+    # Domain Layer
+
+
+    This layer lies in the center of the architecture where we have application entities
+    for the application model classes or database model classes using the code first
+    approach in the application development using Asp.net core these entities are
+    used to create the tables in the database.
+
+
+    For the Domain layer, we need to add the library project to our application.
+
+
+    Write click on the Solution and then click on add option.'
+  merge: -1
+  pgno: 72
+- img_proc: true
+  md: '# API Development in Asp.Net.Core Using Onion Architecture'
+  merge: -1
+  pgno: 73
+- img_proc: true
+  md: "# # Models Folder\n\nFirst, you need to add the Models folder that will be\
+    \ used to create the database entities. In\nt Models folder, we will create the\
+    \ following database entities.\n\n![](img/ecf1b6d3def03c95166d6223c24cb862_74_0.png)\n\
+    \n# # Base Entity\n\nusing System;\nusing System.Collections.Generic;\nusing System.Linq;\n\
+    using System.Text;\nusing System.Threading.Tasks;\n\n```\nnamespace DomainLayer.Models\n\
+    {\n    public class BaseEntity\n{\n        public int Id { get; set; }\n     \
+    \   public DateTime CreatedDate { get; set; }\n        public DateTime ModifiedDate\
+    \ { get; set; }\n        public bool IsActive { get; set; }\n    }\n}\n```\n\n\
+    API Development in Asp.Net Core Using Onion Architecture"
+  merge: -1
+  pgno: 74
+- img_proc: true
+  md: "# Department\n\nDepartment entity will extend the base entity\n\n```\nusing\
+    \ System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\n\
+    using System.Threading.Tasks;\n\nnamespace DomainLayer.Models\n{\n    public class\
+    \ Departments :BaseEntity\n    {\n        public int Id { get; set; }\n      \
+    \  public string DepartmentName { get; set; }\n        public int StudentId {\
+    \ get; set; }\n        public Student Students { get; set; }\n    }\n}\n```\n\n\
+    # Result\n\nResult Entity will extend the base entity\n\n```\nusing System;\n\
+    using System.Collections.Generic;\nusing System.ComponentModel.DataAnnotations;\n\
+    using System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\n\nnamespace\
+    \ DomainLayer.Models\n{\n    public class Resultss : BaseEntity\n    {\n     \
+    \   [Key]\n        public int Id { get; set; }\n        public string? ResultStatus\
+    \ { get; set; }\n        public int StudentId { get; set; }\n        public Student\
+    \ Students { get; set; }\n    }\n}\n```"
+  merge: -1
+  pgno: 75
+- img_proc: true
+  md: "# Students\n\nStudent Entity will extend the base entity\n\n```\nusing System;\n\
+    using System.Collections.Generic;\nusing System.ComponentModel.DataAnnotations;\n\
+    using System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\n\nnamespace\
+    \ DomainLayer.Models\n{\n    public class Student : BaseEntity\n{\n        [Key]\n\
+    \        public int Id { get; set; }\n        public string Name { get; set; }\n\
+    \        public string Address { get; set; }\n        public string Emial { get;\
+    \ set; }\n        public string City { get; set; }\n        public string State\
+    \ { get; set; }\n        public string Country { get; set; }\n        public int\
+    \ Age { get; set; }\n        public DateTime BirthDate { get; set; }\n    }\n\
+    }\n```\n\n# SubjectGpa\n\nSubject GPA Entity will extend the Base Entity\n\n```\n\
+    using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\n\
+    using System.Threading.Tasks;\n\nnamespace DomainLayer.Models\n{\n    public class\
+    \ SubjectGpas : BaseEntity\n    {\n        public int Id { get; set; }\n     \
+    \   public string SubjectName { get; set; }\n    }\n}\n```"
+  merge: -1
+  pgno: 76
+- img_proc: true
+  md: '```
+
+    public float Gpa { get; set; }
+
+    public string SubjectPass { get; set; }
+
+    public int StudentId { get; set; }
+
+    public Student Students { get; set; }
+
+    }
+
+    }
+
+    ```
+
+
+    # Data Folder
+
+
+    Add the Data in the domain that is used to add the database context class. The
+    database context class is used to maintain the session with the underlying database
+    using which you can perform the CRUD operation.
+
+
+    Write click on the application and create the class ApplicationDbContext
+
+
+    ```
+
+    using DomainLayer.Models;
+
+    using Microsoft.EntityFrameworkCore;
+
+    using System;
+
+    using System.Collections.Generic;
+
+    using System.Linq;
+
+    using System.Text;
+
+    using System.Threading.Tasks;
+
+    ```
+
+
+    ```
+
+    namespace DomainLayer.Data
+
+    {
+
+    public class ApplicationDbContext : DbContext
+
+    {
+
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :
+    base(options)
+
+    {
+
+    }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+
+    {
+
+    base.OnModelCreating(builder);
+
+    }
+
+    public DbSet<Student> Students { get; set; }
+
+    public DbSet<Departments> Departments { get; set; }
+
+    public DbSet<SubjectGpas> SubjectGpas { get; set; }
+
+    public DbSet<Results> Results { get; set; }
+
+    }
+
+    }
+
+    ```'
+  merge: -1
+  pgno: 77
+- img_proc: true
+  md: 'After Adding the DB Set property we need to add the migration using the package
+    manager console and run the Command-Migration.
+
+
+    add-migration OnionArchitectureV1
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_78_0.png)
+
+
+    After executing the commands now, you need to update the database by executing
+    the update-database Command
+
+
+    # Migration Folder
+
+
+    After executing both commands now you can see the migration folder in the domain
+    layer.'
+  merge: -1
+  pgno: 78
+- img_proc: true
+  md: '# # Repository Layer
+
+
+    The repository layer act as a middle layer between the service layer and model
+    objects we will maintain all the database migrations and database context Object
+    in this layer. We will add the interfaces that consist of da data access pattern
+    for reading and writing operations with the database.
+
+
+    We now will work on Repository Layer we will follow the same project as we did
+    for the Domain layer add the library project in your applicant and give a name
+    to that project Repository layer.
+
+
+    **But here we need to add the project reference of the Domain layer in the repository
+    layer.** Write click on the project and click the Add button after that we will
+    add the project references in the Repository layer.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_79_0.png)'
+  merge: -1
+  pgno: 79
+- img_proc: true
+  md: '# API Development in Asp.Net Core Using Architecture
+
+
+    Click on reference now and select the Domain layer.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_80_0.png)
+
+
+    Now we need to add the two folders.
+
+
+    +   - I Repository
+
+    - Repository
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_80_1.png)
+
+
+    81'
+  merge: -1
+  pgno: 80
+- img_proc: true
+  md: "# IRepository\n\nIRepository folder contains the generic interface using this\
+    \ interface we will create the CRUD operation for all our entities.\n\nGeneric\
+    \ Interface will extend the Base-Entity for using some properties. The Code of\
+    \ the generic interface is given below.\n\nusing DomainLayer.Models;\n\nnamespace\
+    \ RepositoryLayer.IRepository\n\n```\n{\n    public interface IRepository<T> where\
+    \ T: BaseEntity\n{\n        IEnumerable<T> GetAll();\n        T Get(int Id);\n\
+    \        void Insert(T entity);\n        void Update(T entity);\n        void\
+    \ Delete(T entity);\n        void Remove(T entity);\n        void SaveChanges();\n\
+    \    }\n}\n```\n\n# Repository\n\nNow we create the Generic repository that extends\
+    \ the Generic IRepository Interface. The Code of the generic repository is given\
+    \ below.\n\nusing DomainLayer.Data;\nusing DomainLayer.Models;\nusing Microsoft.EntityFrameworkCore;\n\
+    using RepositoryLayer.IRepository;\nusing System;\nusing System.Collections.Generic;\n\
+    using System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\n\nnamespace\
+    \ RepositoryLayer.Repository\n\n```\n{\n    public class Repository<T> : IRepository<T>\
+    \ where T : BaseEntity\n{\n        #region property\n        private readonly\
+    \ ApplicationDbContext _applicationDbContext;\n```"
+  merge: -1
+  pgno: 81
+- img_proc: true
+  md: "```\nprivate DbSet<T> entities;\n#endregion\n\n#region Constructor\npublic\
+    \ Repository(ApplicationDbContext applicationDbContext)\n{\n    _applicationDbContext\
+    \ = applicationDbContext;\n    entities = _applicationDbContext.Set<T>();\n}\n\
+    #endregion\n```\n\n```\npublic void Delete(T entity)\n{\n    if (entity == null)\n\
+    \    {\n        throw new ArgumentException(\"entity\");\n    }\n    entities.Remove(entity);\n\
+    \    _applicationDbContext.SaveChanges();\n}\n```\n\n```\npublic T Get(int Id)\n\
+    {\n    return entities.SingleOrDefault(c => c.Id == Id);\n}\n```\n\n```\npublic\
+    \ IEnumerable<T> GetAll()\n{\n    return entities.AsEnumerable();\n}\n```\n\n\
+    ```\npublic void Insert(T entity)\n{\n    if (entity == null)\n    {\n       \
+    \ throw new ArgumentException(\"entity\");\n    }\n    entities.Add(entity);\n\
+    \    _applicationDbContext.SaveChanges();\n}\n```\n\n```\npublic void Remove(T\
+    \ entity)\n```"
+  merge: -1
+  pgno: 82
+- img_proc: true
+  md: "```\n{\n  if (entity == null)\n  {\n    throw new ArgumentNullException(\"\
+    entity\");\n  }\n  entities.Remove(entity);\n}\n\npublic void SaveChanges()\n\
+    {\n  _applicationDbContext.SaveChanges();\n}\n\npublic void Update(T entity)\n\
+    {\n  if (entity == null)\n  {\n    throw new ArgumentNullException(\"entity\"\
+    );\n  }\n  entities.Update(entity);\n  _applicationDbContext.SaveChanges();\n\
+    }\n}\n```\n\nWe will use this repository in our service layer.\n\n# Service Layer\n\
+    \nThis layer is used to communicate with the presentation and repository layer.\
+    \ The service layer holds all the business logic of the entity. In this service\
+    \ interfaces are kept separate from their implementation for loose coupling and\
+    \ separation of concerns.\n\nNow we need to add a new project to our solution\
+    \ that will be the service layer we will follow the same process for adding the\
+    \ library project in our application but here we need some extra work after adding\
+    \ the project we need to add the reference of the Repository Layer."
+  merge: -1
+  pgno: 83
+- img_proc: true
+  md: '# API Development in Asp.Net Core Using Onion Architecture
+
+
+    Our new service layer contains the reference of the repository layer.
+
+
+    In the service layer, we will create the two folders.
+
+
+    +   - ICustomServices
+
+    - CustomServices
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_84_0.png)'
+  merge: -1
+  pgno: 84
+- img_proc: true
+  md: "# ICustom Service\n\nNow in the ICustomServices folder, we will create the\
+    \ ICustomServices Interface this interface holds the signature of the method we\
+    \ will implement these methods in the customs service code of the ICustomServices\
+    \ Interface given below.\n\n```\nusing DomainLayer.Models;\nusing System;\nusing\
+    \ System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\n\
+    ```\n\n```\nnamespace ServiceLayer.ICustomServices\n```\n\n```\n{\n    public\
+    \ interface ICustomService<T> where T : class {\n        IEnumerable<T> GetAll();\n\
+    \        T Get(int Id);\n        void Insert(T entity);\n        void Update(T\
+    \ entity);\n        void Delete(T entity);\n        void Remove(T entity);\n \
+    \   }\n}\n```\n\n# Custom Service\n\nIn the custom service folder, we will create\
+    \ the custom service class that inherits the ICustomService interface code of\
+    \ the custom service class given below. We will write the crud for all our entities.\n\
+    \nFor every service, we will write the CRUD operation using our generic repository.\n\
+    \n# Department Service\n\n# Student Service\n\n```\nusing DomainLayer.Models;\n\
+    using RepositoryLayer.IRepository;\nusing ServiceLayer.ICustomServices;\nusing\
+    \ System;\nusing System.Collections.Generic;\nusing System.Linq;\n```"
+  merge: -1
+  pgno: 85
+- img_proc: true
+  md: "```\nusing System.Text;\nusing System.Threading.Tasks;\n\nnamespace ServiceLayer.CustomServices\n\
+    {\n    public class StudentService : ICustomService<Student>\n    {\n        private\
+    \ readonly IRepository<Student> _studentRepository;\n        public StudentService(IRepository<Student>\
+    \ studentRepository)\n        {\n            _studentRepository = studentRepository;\n\
+    \        }\n\n        public void Delete(Student entity)\n        {\n        \
+    \    try {\n                if(entity!=null)\n                {\n            \
+    \        _studentRepository.Delete(entity);\n                    _studentRepository.SaveChanges();\n\
+    \                }\n            } catch (Exception)\n            {\n         \
+    \       throw;\n            }\n        }\n\n        public Student Get(int Id)\n\
+    \        {\n            try {\n                var obj obj = _studentRepository.Get(Id);\n\
+    \                if(obj!=null)\n                {\n                    return\
+    \ obj;\n                }\n            } else\n            {\n               \
+    \ return null;\n            }\n        }\n    }\n```"
+  merge: -1
+  pgno: 86
+- img_proc: true
+  md: "```\n}\ncatch (Exception)\n{\n    throw;\n}\n\n```\n\n```\npublic IEnumerable<Student>\
+    \ GetAll()\n{\n    try\n{\n        var obj = _studentRepository.GetAll();\n  \
+    \      if (obj == null)\n        {\n            return obj;\n        }\n     \
+    \   else\n        {\n            return null;\n        }\n    } catch (Exception)\n\
+    {\n    throw;\n}\n\n```\n\n```\npublic void Insert(Student entity)\n{\n    try\n\
+    {\n        if (entity != null)\n        {\n            _studentRepository.Insert(entity);\n\
+    \            _studentRepository.SaveChanges();\n        }\n    } catch (Exception)\n\
+    {\n}\n\n```"
+  merge: -1
+  pgno: 87
+- img_proc: true
+  md: "```\nthrow;\n}\n\npublic void Remove(Student entity)\n{\n    try\n    {\n \
+    \       if(entity!=null)\n        {\n            _studentRepository.Remove(entity);\n\
+    \            _studentRepository.SaveChanges();\n        }\n    } catch (Exception)\n\
+    \    {\n        throw;\n    }\n}\npublicublic void Update(Student entity)\n{\n\
+    \    try\n    {\n        if(entity!=null)\n        {\n            _studentRepository.Update(entity);\n\
+    \            _studentRepository.SaveChanges();\n        }\n    } catch (Exception)\n\
+    \    {\n        throw;\n    }\n}\n}\n```\n\n# Result Service"
+  merge: -1
+  pgno: 88
+- img_proc: true
+  md: "```\nusing DomainLayer.Models;\nusing RepositoryLayer.IRepository;\nusing ServiceLayer.ICustomServices;\n\
+    using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\n\
+    using System.Threading.Tasks;\n```\n\n```\nnamespace ServiceLayer.CustomServices\n\
+    {\n    public class ResultService : ICustomService<Result>\n    {\n        private\
+    \ readonly IRepository<Result> _studentRepository;\n        public ResultService(IRepository<Result>\
+    \ studentRepository)\n        {\n            _studentRepository = studentRepository;\n\
+    \        }\n        public void Delete(Resultss entity)\n        {\n         \
+    \   try\n            {\n                if (entity != null)\n                {\n\
+    \                    _studentRepository.Delete(entity);\n                    _studentRepository.SaveChanges();\n\
+    \                }\n            }\n            catch (Exception)\n           \
+    \ {\n                throw;\n            }\n        }\n\n        public Resultss\
+    \ Get(int id)\n        {\n            try\n            {\n                var\
+    \ obj = _studentRepository.Get(id);\n                if (obj != null)\n      \
+    \          {\n                }\n    n}\n```"
+  merge: -1
+  pgno: 89
+- img_proc: true
+  md: "```\nreturn obj;\n}\nelse\n{\n    return null;\n}\n\ncatch (Exception)\n{\n\
+    \    throw;\n}\n```\n\n```\npublic Iumerable<Resultss> GetAll()\n{\ntry\n{\n \
+    \   var obj = _studentRepository.GetAll();\nif (obj != null)\n{\n    return obj;\n\
+    else\n{\n    return null;\n}\ncatch (Exception)\n{\n    throw;\n}\n```\n\n```\n\
+    public void Insert(Resultss entity)\n{\ntry\n{\n    if (entity != null)\n```"
+  merge: -1
+  pgno: 90
+- img_proc: true
+  md: "```\n_studentRepository.Insert(entity);\n_studentRepository.SaveChanges();\n\
+    }\ncatch (Exception)\n{\n    throw;\n}\n```\n\n```\npublic void Remove(Resultss\
+    \ entity)\n{\n    try {\n        if (entity != null)\n        {\n            _studentRepository.Remove(entity);\n\
+    \            _studentRepository.SaveChanges();\n        }\n    } catch (Exception)\n\
+    {\n        throw;\n    }\n}\n```\n\n```\npublic void Update(Resultss entity)\n\
+    {\n    try {\n        if (entity != null)\n        {\n            _studentRepository.Update(entity);\n\
+    \            _studentRepository.SaveChanges();\n        }\n    } catch (Exception)\n\
+    {\n        throw;\n    }\n}\n```"
+  merge: -1
+  pgno: 91
+- img_proc: true
+  md: "```\n}\n}\n}\n```\n\n# Subject GPA Service\n\n```\nusing DomainLayer.Models;\n\
+    using RepositoryLayer.IRepository;\nusing ServiceLayer.ICustomServices;\nusing\
+    \ System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\n\
+    using System.Threading.Tasks;\n```\n\n```\nnamespace ServiceLayer.CustomServices\n\
+    {\n    public class SubjectGpaService : ICustomService<SubjectGpa>\n    {\n  \
+    \      private readonly IRepository<SubjectGpa> _studentRepository;\n        public\
+    \ SubjectGpaService(IRepository<SubjectGpa> studentRepository)\n        {\n  \
+    \          _studentRepository = studentRepository;\n        }\n        public\
+    \ void Delete(SubjectGpa entity)\n        {\n            try\n            {\n\
+    \                if (entity != null)\n                {\n                    _studentRepository.Delete(entity);\n\
+    \                    _studentRepository.SaveChanges();\n                }\n  \
+    \          }\n            catch (Exception)\n            {\n                throw;\n\
+    \            }\n        }\n\n```\n\n```\npublic SubjectGpa Get(int Id\n```"
+  merge: -1
+  pgno: 92
+- img_proc: true
+  md: "```\n{\ntry {\n    var obj = _studentRepository.Get(Id);\n    if (obj != null)\
+    \ {\n        return obj;\n    }\n} else {\n        return null;\n    }\n} catch\
+    \ (Exception) {\n    throw;\n}\n}\npublicpublic IEnumerable<SubjectGpas> GetAll()\
+    \ {\ntry {\n    var obj = _studentRepository.GetAll();\n    if (obj != null) {\n\
+    \        return obj;\n    }\n} else {\n        return null;\n    }\n} catch (Exception)\
+    \ {\n    throw;\n}\n}\n```"
+  merge: -1
+  pgno: 93
+- img_proc: true
+  md: "```\npublic void Insert(SubjectGpas entity)\n{\n    try\n    {\n        if\
+    \ (entity != null)\n        {\n            _studentRepository.Insert(entity);\n\
+    \            _studentRepository.SaveChanges();\n        }\n    }\n    catch (Exception)\n\
+    \    {\n        throw;\n    }\n}\n```\n\n```\npublic void Remove(SubjectGpas entity)\n\
+    {\n    try\n    {\n        if (entity != null)\n        {\n            _studentRepository.Remove(entity);\n\
+    \            _studentRepository.SaveChanges();\n        }\n    }\n    catch (Exception)\n\
+    \    {\n        throw;\n    }\n}\n```\n\n```\npublic void Update(SubjectGpas entity)\n\
+    {\n    try\n    {\n        if (entity != null)\n        {\n            _studentRepository.Update(entity);\n\
+    \            _studentRepository.SaveChanges();\n        }\n    }\n}\n```"
+  merge: -1
+  pgno: 94
+- img_proc: true
+  md: "```\n}\ncatch (Exception)\n{\n  throw;\n}\n}\n```\n\n# Presentation Layer\n\
+    \nThe presentation layer is our final layer that presents the data to the front-end\
+    \ user on every HTTP request.\n\nIn the case of the API layer that presents us\
+    \ the object data from the database using the HTTP request in form of JSON Object.\
+    \ But in the case of front-end applications, we present the data by consuming\
+    \ the APIS.\n\nThe presentation layer is the default Asp.net core API project\
+    \ Now we need to add the project references of all the layers as we did before\n\
+    \n![](img/ecf1b6d3def03c95166d6223c24cb862_95_0.png)\n\n# Dependency Injection\n\
+    \nNow we need to add the Dependency Injection of all our services in the program.cs\
+    \ class"
+  merge: -1
+  pgno: 95
+- img_proc: true
+  md: '# Modify Program.cs File
+
+
+    The Code of the Startup Class is given below
+
+
+    using DomainLayer.Data;
+
+    using DomainLayer.Models;
+
+    using Microsoft.EntityFrameworkFrameworkCore;
+
+    using RepositoryLayer.IRepository;
+
+    using RepositoryLayer.Repository;
+
+    using ServiceLayer.CustomServices;
+
+    using ServiceLayer.ICustomServices;
+
+
+    ```
+
+    var builder = WebApplication.CreateBuilder(args);
+
+
+    // Add services to the container.
+
+    //Sql Dependency Injection
+
+    var ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+
+    options.UseSqlServer(ConnectionString));
+
+    builder.Services.AddControllers();
+
+    // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/buckle
+
+    builder.Services.AddEndpointsApiExplorer();
+
+    builder.Services.AddSwaggerGen();
+
+    #region Service Injected
+
+    builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+    ```
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_96_0.png)'
+  merge: -1
+  pgno: 96
+- img_proc: true
+  md: "```\nbuilder.Services.AddScoped<ICustomService<Student>,StudentService>();\n\
+    builder.Services.AddScoped<ICustomService<Result>,ResultService>();\nbuilder.Services.AddScoped<ICustomService<Departments>,SystemService>();\n\
+    builder.Services.AddScoped<ICustomService<SubjectGpas>,SubjectGpasService>();\n\
+    ```\n\n```\nvar app = builder.Build();\n\n// Configure the HTTP request pipeline.\n\
+    if (app.Environment.IsDevelopment())\n{\n    app.UseSwagger();\n    app.UseSwaggerUI();\n\
+    }\n\napp.UseHttpsRedirection();\n\napp.UseAuthorization();\n\napp.MapControllers();\n\
+    \napp.Run();\n```\n\n# Controllers\n\nControllers are used to handle the HTTP\
+    \ request. Now we need to add the student controller that will interact with our\
+    \ service layer and display the data to the users."
+  merge: -1
+  pgno: 97
+- img_proc: true
+  md: "# The Code of the Controller is given below.\n\nusing DomainLayer.Data;\nusing\
+    \ DomainLayer.Models;\nusing Microsoft.AspNetCoreNetCore.Http;\nusing Microsoft.AspNetCoreNetCore.Mvc;\n\
+    using Microsoft.EntityFrameworkCore;\nusing RepositoryLayer.IRepository;\nusing\
+    \ ServiceLayer.ICustomServices;\n\nnamespace OnionArchitectureInAspNetCore6WebAPI.Controllers\n\
+    {\n[Route(\"api/[controller]\")]\n[ApiController]\npublic class StudentsController\
+    \ : ControllerBase\n{\n    private readonly ICustomService<Student> _customService;\n\
+    \    private readonly ApplicationDbContext _applicationContext;\n    public StudentsController(ICustomService<Student>\
+    \ customService, ApplicationDbContext applicationContext)\n{\n        _customService\
+    \ = customService;\n        _applicationContext = applicationContext;\n    }\n\
+    }\n\n[HttpGet(nameof(GetStudentById()))\n\n![](img/ecf1b6d3def03c95166d6223c24cb862_98_0.png)"
+  merge: -1
+  pgno: 98
+- img_proc: true
+  md: "```\npublic IActionResult Result GetStudentById(int Id)\n{\n    var obj = _customService.Get(Id);\n\
+    \    if (obj == null)\n    {\n        return NotFound();\n    }\n    else\n  \
+    \  {\n        return Ok(obj);\n    }\n}\n[HttpGet(nameof(GetAllStudent))]\npublic\
+    \ IActionResult Result GetAllStudent()\n{\n    var obj = _customService.GetAll();\n\
+    \    if(obj== null)\n    {\n        return NotFound();\n    }\n    else\n    {\n\
+    \        return Ok(obj);\n    }\n}\n[HttpPost(nameof(CreateStudent))]\npublic\
+    \ IActionResult Result CreateStudent(Student student)\n{\n    if (student!=null)\n\
+    \    {\n        _customService.Insert(student);\n        return Ok(\"Created Successfully\"\
+    );\n    }\n    else\n    {\n        return BadRequest(\"Somethingwent wrong\"\
+    );\n    }\n}\n[HttpPost(nameof(UpdateStudent))]\npublic IActionResult Result UpdateStudent(Student\
+    \ student)\n{\n    if(student!=null)\n```"
+  merge: -1
+  pgno: 99
+- img_proc: true
+  md: "```\n{\n  _customService.Update(student);\n  return Ok(\"Updated SuccessFully\"\
+    );\n}\nelse\n{\n  return BadRequest();\n}\n\n[HttpDelete(nameof(DeleteStudent))]\n\
+    public IActionResult DeleteStudent(Student student)\n{\n  if(student!=null)\n\
+    \  {\n    _customService.Delete(student);\n    return Ok(\"Deleted Successfully\"\
+    );\n  }\n  else\n  {\n    return BadRequest(\"Something went wrong\");\n  }\n\
+    }\n}\n\n```\n\n# Output\n\nNow we will run the project and will see the output\
+    \ using the swagger."
+  merge: -1
+  pgno: 100
+- img_proc: true
+  md: '# # OnionArchitectureInAspNetCore6WebApi
+
+
+    Students
+
+
+    +   - GET /api/Students/GetStudentId
+
+    - GET /api/Students/GetAllStudents
+
+    - POST /api/Students/CreateStudent
+
+    - POST /api/Students/UpdateStudent
+
+    - DELETE /api/Students/DeleteStudent
+
+
+    Schemas
+
+
+    Now we can see when we hit the GetAllStudent Endpoint we can see the data of students
+    from the database in JSON projects.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_101_0.png)'
+  merge: -1
+  pgno: 101
+- img_proc: true
+  md: "```\n```json\n{\n  \"id\": \"0\",\n  \"name\": \"Product\",\n  \"description\"\
+    : \"Product description\",\n  \"price\": \"100\",\n  \"image\": \"66666666-6666-4666-8666-55555555555\"\
+    ,\n  \"created\": \"2023-01-01T00:00:00Z\",\n  \"updated\": \"2023-01-01T00:00:00Z\"\
+    \n}\n```\n```\n\n# Conclusion\n\nIn this chapter, we have implemented the Onion\
+    \ architecture using the Entity Framework and Code First approach. We have now\
+    \ the knowledge of how the layer communicates with each other's in onion architecture\
+    \ and how we can write the Generic code for the Interface repository and services.\
+    \ Now we can develop our project using onion architecture for API Development\
+    \ OR MVC Core Based projects.\n\n# Complete GitHub project URL\n\n[Click here\
+    \ for complete project](#)"
+  merge: -1
+  pgno: 102
+- img_proc: true
+  md: '# 4
+
+
+    # API Testing Using Postman
+
+
+    Overview
+
+
+    +   - Introduction
+
+    - How to Test API Web Service in Asp Net Core 5 Using Postman
+
+    - Test Post Call in Postman
+
+    - Test Get Call in Postman
+
+    - Test Put Call in Postman
+
+    - Test Delete Call in Postman
+
+    - Conclusion'
+  merge: -1
+  pgno: 103
+- img_proc: true
+  md: '# Introduction
+
+
+    In this article I will cover the complete procedure of How to test web API Service
+    using Postman It a simplest and very beautiful way to test and document your web
+    service. Postman is a collaboration platform for API development. Postman''s functions
+    simplify every step of building an API and streamline collaboration so you can
+    create better APIs—quicker.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_104_0.png)
+
+
+    # How to Test API Service in Asp Net 5 Using Postman
+
+
+    In Postman for API Testing the professional approach is the collection for API
+    Requests for collecting the responses like GET PUT POST DELETE Request Response.
+    Open the post man Click on Create Collection.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_104_1.png)'
+  merge: -1
+  pgno: 104
+- img_proc: true
+  md: 'Name the Collection in Postman.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_105_0.png)
+
+
+    The collection is ready for collecting the API Request Response.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_105_1.png)
+
+
+    API Testing with Postman
+
+
+    106'
+  merge: -1
+  pgno: 105
+- img_proc: true
+  md: '# Add the API Request Responses Like PUT,POST,DELETE AND GET,
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_106_0.png)
+
+
+    We are going to test the following case for this article. In this article I am
+    going to test the POST, GET, PUT, DELETE, AND UPDATE, Endpoints of Web.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_106_1.png)
+
+
+    Here in this example we are going to test the Web Servie using Postman Developed
+    using the Asp.Net Core 5 Web API'
+  merge: -1
+  pgno: 106
+- img_proc: true
+  md: "# Test Post Call in Postman\n\nHere we are going to send the JSON object with\
+    \ Following Properties\n\n```\n{\n  \"username\": \"string\",\n  \"userPassword\"\
+    : \"string\",\n  \"userEmail\": \"string\",\n  \"createdOn\": \"2021-04-16T20:38:41.0622\"\
+    ,\n  \"isDeleted\": true\n}\n```\n\nAPI Testing Using Postman"
+  merge: -1
+  pgno: 107
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_108_0.png)
+
+
+    Now Click on Raw and Select the JSON
+
+
+    If we want to Create the New Person in the Database, we must send the JSON Object
+    to the End Point then data is posted by Postman UI to End Point in the Controller
+    Then Create Person Object Creates the Complete Person Object in the Database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_108_1.png)'
+  merge: -1
+  pgno: 108
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_109_0.png)
+
+
+    Now you can see that our API give us the server response == true so it indicates
+    that a new record has been created in the data base against our JSON Object that
+    we have sent using Postman.
+
+
+    # # Test Delete Call in Postman
+
+
+    For Deletion of Person, we have a separate End Point Delete Employee from the
+    Database, we must send the JSON Object to the End Point then data is posted by
+    Postman UI to call the End Point DELETE Person in the Controller Then Person Object
+    will be Deleted from the Database.
+
+
+    In Deletion of the record just select body and select the form data pass the id
+    value for the record you want to to delete from the database.'
+  merge: -1
+  pgno: 109
+- img_proc: true
+  md: '# API Testing Using Postman
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_110_0.png)
+
+
+    We are going to delete the record against the given email if the API server response
+    equal to true then our record deleted from the database successfully.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_110_1.png)
+
+
+    In Above two pictures you can see that after hitting the Delete endpoint our server
+    response is true it indicates that our record has been delete from the database
+    against our desired Email.
+
+
+    111'
+  merge: -1
+  pgno: 110
+- img_proc: true
+  md: '# Test Call in Postman
+
+
+    If we want to get the record of all person''s data from the database, we will
+    hit the GET point in our Web Service using Postman after the completion of server
+    request all the data will be given to us by our GETAllPerson End point.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_111_0.png)
+
+
+    Hit the Endpoint for getting all record from the database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_111_1.png)
+
+
+    API Testing Using Postman
+
+
+    112'
+  merge: -1
+  pgno: 111
+- img_proc: true
+  md: "After the successful execution of Web service the record is visible to us in\
+    \ the form of JSON object in database we have Only One Record so that\n\n# Test\
+    \ Put Call in Postman\n\nIn put call we are going to update the record in database.\
+    \ We have Separate End Points for All the operations Update the Record of the\
+    \ Person by User Email from the Database by Hitting the UPDTAE End Point that\
+    \ sends to controller and in controller we have the separate End Point for Updating\
+    \ the record based on User Email from the database.\n\nWe are going to update\
+    \ the given below JSON Object in the database\n\n```\n{\n  \"id\": 0,\n  \"username\"\
+    : \"Mudassar Ali Khan\",\n  \"userPassword\": \"178593545\",\n  \"userEmail\"\
+    : \"mudassarali.official@gmail.com\",\n  \"createdOn\": \"2021-04-16T20:41:15.433Z\"\
+    ,\n  \"isDeleted\": false\n}\n```\n\nTo given below JSON object\n\n```\n{\n  \"\
+    username\": \"Sardar Mudassar Ali Khan\",\n  \"userPassword\": \"178593545\",\n\
+    \  \"userEmail\": \"mudassarali.official@gmail.com\",\n  \"createdOn\": \"2021-04-16T20:41:15.4332Z\"\
+    ,\n  \"isDeleted\": false\n}\n```\n\n![](img/ecf1b6d3def03c95166d6223c24cb862_112_0.png)"
+  merge: -1
+  pgno: 112
+- img_proc: true
+  md: 'We have sent the API JSON Response to PUT Endpoint for Updating the Record
+    in the database
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_113_0.png)
+
+
+    After the successful submission of data, you can see that our server response
+    is true it indicates that our data has been successfully submitted in the database
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_113_1.png)
+
+
+    API Testing Using Postman'
+  merge: -1
+  pgno: 113
+- img_proc: true
+  md: '# Conclusion
+
+
+    As a Software Engineer My Conclusion about the Postman is the best Open API for
+    Testing the RESTful API as a Developer I have a great experienced with Postman
+    for testing the restful API sending the Complete JSON Object and then getting
+    the response in a professional way. It is easy to implement in Asp.net core Web
+    API Project and after the configuration Developers can enjoy the beauty of Postman
+    Open API.'
+  merge: -1
+  pgno: 114
+- img_proc: true
+  md: '# 5
+
+
+    # # API Testing Using Swagger
+
+
+    +   Overview
+
+    * Introduction
+
+    * How to Test API Web Service in Asp Net Core 5 Using Swagger
+
+    * Test Post Call in Swagger
+
+    * Test Get Call in Swagger
+
+    * Test Put Call in Swagger
+
+    * Test Delete Call in Swagger
+
+    * Conclusion'
+  merge: -1
+  pgno: 115
+- img_proc: true
+  md: '# Introduction
+
+
+    In this article I will cover the complete procedure of How to test web API Service
+    using Swagger Open API It is the simplest and very beautiful way to test and document
+    your web service.
+
+
+    Swagger (Open API) is a language-agnostic specification for describing and documenting
+    the REST API. Allows Allows both the Machine and Developer to understand the working
+    and capabilities of the Machine without direct access to the source code of the
+    project the main objectives of swagger (Open API) are to:
+
+
+    +   Minimize the workload to connect Micro services.
+
+
+    Reduce the Time Needed to accurately document the Micro services.
+
+
+    # How to Test API Web Service in Asp Net Core 5 Using Swagger
+
+
+    We are going to test the following use case for this article. In this article
+    I am going to test the POST, GET, PUT, DELETE, AND UPDATE, Endpoints of Web Service.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_116_0.png)
+
+
+    Here in this example, we are going to test the Web Service using Swagger Developed
+    using the Asp.Net Core 5 Web API.'
+  merge: -1
+  pgno: 116
+- img_proc: true
+  md: '# Test POST Call in Swagger
+
+
+    Here we are going to send theJSON object with the Following Properties
+
+
+    +   1. {
+
+    2. "id": 0,
+
+    3. "userName": "string",
+
+    4. "userPassword": "string",
+
+    5. "userEmail": "string",
+
+    6. "createdAt": "2021-04-16T20:38:41.062Z",§. "isDeleted": true
+
+    8. }
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_117_0.png)'
+  merge: -1
+  pgno: 117
+- img_proc: true
+  md: '# Swagger UI
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_118_0.png)
+
+
+    Now click the try-out button.
+
+
+    # PersonDetails
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_118_1.png)
+
+
+    If we want to Create the New Person in the Database, we must send the JSON Object
+    to the End Point then data is posted by Swagger UI to POST End Point in the Controller
+    then Create Person Object Creates the Complete Person Object in the Database.'
+  merge: -1
+  pgno: 118
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_119_0.png)
+
+
+    Now you can see that the API gives us the server response == true so it indicates
+    that a new record has been created in the database against our JSON Object that
+    we have sent using Swagger.
+
+
+    # ### Test DELETE Call in Swagger
+
+
+    For Deletion of Person, we have a separate End Point Delete Employee from the
+    Database, we must send the JSON Object to the End Point then data is posted by
+    Swagger UI to call the End Point DELETE Person in the Controller Then Person Object
+    will be deleted from the Database.'
+  merge: -1
+  pgno: 119
+- img_proc: true
+  md: '# Now we are going to delete the record against a certain Id
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_120_0.png)
+
+
+    We are going to delete the record against the given email if the API service equal
+    to true then
+
+    our record deleted from the database successfully.'
+  merge: -1
+  pgno: 120
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_121_0.png)
+
+
+    In the above two pictures, you can see that after hitting the Delete Endpoint
+    our server response is true it indicates that our record has been deleted from
+    the database against our desired Email.
+
+
+    # ## Test GET Call in Swagger
+
+
+    If we want to get the record of all the personal data from the database, we will
+    hit the GET endpoint in our Web Service using swagner after the completion of
+    the server request all the data will be given to us by our GETALLPerson Endpoint.'
+  merge: -1
+  pgno: 121
+- img_proc: true
+  md: '# Swagger UI
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_122_0.png)
+
+
+    Now we are going to fetch all the record from the database.
+
+
+    # Swagger UI
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_122_1.png)
+
+
+    After the successful execution of Web service, all the record is visible to us
+    in the form of a JSON object in database we have Only One Record so that'
+  merge: -1
+  pgno: 122
+- img_proc: true
+  md: '# Test PUT Call in Swagger
+
+
+    In-call, we are going to update the record in the database. We have Separate End
+    Points for All the operations Update the Record of the Person by User Email from
+    the Database by Hitting the UPDATE End Point that sends the request to the controller
+    and in the controller we have a separate End Point for Updating the record based
+    on User Email from the database.
+
+
+    We are going to update the given below JSON Object in the database.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_123_0.png)
+
+
+    +   1. {
+
+    2. "id": 0,
+
+    3. "userName": "Mudassar Ali Khan",
+
+    4. "userPassword": "178593454@",
+
+    5. "userEmail": "mudassarali.official@gmail.com",
+
+    6. "createdAt": "2021-04-16T20:41:15.432Z",
+
+    7. "isDeleted": false
+
+    8. }
+
+
+    To given below JSON Object
+
+
+    +   1. {
+
+    2. "id": 0,
+
+    3. "userName": "Sardar Mudassar Ali Khan",
+
+    4. "userPassword": "178593454@",
+
+    5. "userEmail": "mudassarali.official@gmail.com",
+
+    6. "createdAt": "2021-04-16T20:41:15.432Z",
+
+    7. "isDeleted": false
+
+    8. }'
+  merge: -1
+  pgno: 123
+- img_proc: true
+  md: '# API Testing Using Swagger
+
+
+    After the successful submission of data, you can see that our server response
+    is true it indicates that our data has been successfully submitted to the database
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_124_0.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_124_1.png)
+
+
+    125'
+  merge: -1
+  pgno: 124
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_125_0.png)
+
+
+    # # Summary
+
+
+    Swagger (Open API) is a language-agnostic specification for describing and documenting
+    the REST API. Swagger Allows both the Machine and Developer to understand the
+    working and capabilities of Machine without direct access to the source code of
+    the project the main objectives of swagger (Open API) are to,
+
+
+    Minimize the workload to connect with Micro services.
+
+
+    Swagger is the Interface Description Language for describing the RESTful APIS
+    Expressed using JSON. Swagger is used to gathering with a set of open-source tools
+    to Design build documents and use Restful Web Services Swagger includes automated
+    documentation code generation and the generation. Three main components of Swashbuckle
+    Swashbuckle.AspNetCoreCore is the Object Model and Middleware to expose swagger
+    Document as JSON End Points.
+
+
+    Swashbuckle.AspNetCore.SwaggerGen Generator that builds Swagger Objects Directly
+    from your routes controllers and models this package is combined with swagger
+    endpoints middleware to automatically expose the Swagger JSON. Swashbuckle.AspNetCore.UI
+    is an Embedded version of the Swagger UI Tool that explains swagger JSON to build
+    a highly customizable practical for explaining the Web API Functionality it includes
+    a built-in test for the public Methods.'
+  merge: -1
+  pgno: 125
+- img_proc: true
+  md: '# Conclusion
+
+
+    Now My Conclusion about the Swagger Open API Swagger is the best Open API for
+    Documenting the Restful API as a Developer I have great experience with Swagger
+    for testing the restful API sending the Complete JSON Object and then getting
+    the response in an efficient way. It is easy to implement in Asp.net core Web
+    API Project and after the configuration, Developers can enjoy the beauty of Swagger
+    Open API.'
+  merge: -1
+  pgno: 126
+- img_proc: true
+  md: '# # 6 Application Deployment on Microsoft Azure Cloud
+
+
+    Overview
+
+
+    +   * Introduction
+
+    * Deployment Procedure
+
+    * Server Configuration
+
+    * Deployment Steps
+
+    * Conclusion'
+  merge: -1
+  pgno: 127
+- img_proc: true
+  md: '# Introduction
+
+
+    App Service Web Apps lets you quickly build, deploy, and scale enterprise-grade
+    web, mobile, and API apps running on any platform. Meet rigorous performance,
+    scalability, security and compliance requirements while using a fully managed
+    platform to perform infrastructure maintenance.
+
+
+    # Open Your Azure portal
+
+
+    First you need to open your Microsoft azure account after that go to home and
+    select the subscription where you want to create azure web app.
+
+
+    # Create Azure Web App
+
+
+    Select the app from resources then follow the steps that are necessary for the
+    azure application Select a subscription to manage deployed resources and costs.
+    Use resource groups like follow to organize and manage all your resources.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_128_0.png)
+
+
+    Application Deployment on Microsoft Azure Cloud'
+  merge: -1
+  pgno: 128
+- img_proc: true
+  md: '# Create the Azure Resource Group.
+
+
+    Now Select the Azure Subscription and create the Azure resource group.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_129_0.png)
+
+
+    # Select the Name of Your Application
+
+
+    Select the Azure App Name and I am selecting my web name is DOTNET-Auth-Api
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_129_1.png)'
+  merge: -1
+  pgno: 129
+- img_proc: true
+  md: '# Select the Runtime Stack
+
+
+    After selecting the name and Recourse group now select the code version for your
+    application and my application is using Microsoft Azure Asp.Net .NET 6 latest
+    stable Version.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_130_0.png)
+
+
+    # Select the Azure Region
+
+
+    After Selecting the Azure Code Runtime and then select the azure region where
+    you want to deploy your application regions are very important for application
+    cost and deployment cost. So I am Central US.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_130_1.png)'
+  merge: -1
+  pgno: 130
+- img_proc: true
+  md: '# Create App Service Plan
+
+
+    An App Service Plan defines a set of compute resources for a web app to run. These
+    compute resources are analogous to the server farm in conventional web hosting.
+    One or more apps can be deployed to run on the same computing resources (or in
+    the same App Service Plan).
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_131_0.png)
+
+
+    # Select the pricing plan.
+
+
+    Now select the Tier Dev/Test, Production, Isolated
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_131_1.png)'
+  merge: -1
+  pgno: 131
+- img_proc: true
+  md: '# # Now our purpose of application development and testing we are selecting
+    Dev/Test
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_132_0.png)
+
+
+    # # Selecting the Recommended Pricing Tier
+
+
+    Here we can see the recommended pricing tier and we are selecting the BI Green
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_132_1.png)'
+  merge: -1
+  pgno: 132
+- img_proc: true
+  md: '# Select the Deployment Option.
+
+
+    Enable GitHub Actions to continuously deploy your app. GitHub Actions is an automation
+    framework that can build, test, and deploy your app whenever a new commit is made
+    in your repository. If your code is in GitHub, choose your repository here and
+    we will add a workflow file to automatically deploy your app to App Service. If
+    your code is not in GitHub, go to the Deployment Center once the web app is created
+    to set up your deployment.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_133_0.png)
+
+
+    # Select the Net Working Options
+
+
+    Web Apps can be provisioned with the inbound address being public to the internet
+    or isolated to a Azure virtual network. Web Apps can also be provisioned with
+    outbound traffic to reach endpoints in a virtual network, governed by network
+    security groups or affected by virtual network routes. By default, your app is
+    open to the internet and cannot reach into a virtual network. These aspects can
+    also be changed after the app is provisioned.'
+  merge: -1
+  pgno: 133
+- img_proc: true
+  md: '# # Select the Azure Monitoring Options
+
+
+    Azure Monitor application insights is an Application Performance Management (APM)
+    service for developers and DevOps professionals. Enable it below to automatically
+    monitor your application. It will detect performance anomalies, and includes powerful
+    analytics tools to help you diagnose issues and understand what users actually
+    do with your app.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_134_0.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_134_1.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_134_2.png)'
+  merge: -1
+  pgno: 134
+- img_proc: true
+  md: '# Select the Tags Options
+
+
+    Tags are name/value pairs that enable you to categorize resources and view consolidated
+    billing by applying the same tag to multiple resources and resource groups.
+
+
+    Note that if you create tags and change resource settings on other tabs, your
+    tags will be automatically updated.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_135_0.png)
+
+
+    # Review and Create
+
+
+    Now Review all your Steps and Create the Azure App.'
+  merge: -1
+  pgno: 135
+- img_proc: true
+  md: "# Create Web App\n\n+   - Basics Deployment Networking Monitoring Tags | Review\
+    \ - Create\n\nSummary\n\n+   - Web App\n  by Microsoft\n\nDetails\n\n| Subscription\
+    \ | 27d5f4a1-b6e4-4a12-b2d7-c1d2f1164ed8 |\n| Resource Group | DOTNET-Test-Group\
+    \ |\n| Name | DOTNET-Auth-api |\n| Runtime stack | .NET 8 LTS |\n| Tags | DOTNET-DEV-Auth\
+    \ |\n\nApp Service Plan (New)\n\n| Name | DOTNET-Auth-api |\n| Operating System\
+    \ | Windows |\n\nCreate Next > Download a template for automation.\n\nHit the\
+    \ create button and then Azure app process will start.\n\n# Create Web App\n\n\
+    App Service Plan (New)\n\n| Name | DOTNET-Auth-api |\n| Operating System | Windows\
+    \ |\n| Region | UAE North |\n| SKU | Basic |\n| Size | S11vU |\n| Memory | 1.75\
+    \ GB memory |\n| Tags | DOTNET-DEV-Auth |\n\nMonitoring\n\n| Application insights\
+    \ | Not enabled |\n\nDeployment\n\n| Continuous deployment | Not enabled / Set\
+    \ up after app creation |\n\nCreate Next > Download a template for automation."
+  merge: -1
+  pgno: 136
+- img_proc: true
+  md: 'You can see in the below picture application deployment process is in progress.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_137_0.png)
+
+
+    Now you can see that our deployment process succeed and we can go to the Created
+    resource.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_137_1.png)
+
+
+    Our Azure App Creation Process Has Been Done.'
+  merge: -1
+  pgno: 137
+- img_proc: true
+  md: '# # DOTNET-Auth-API
+
+
+    Now you need to hit the Azure URL.
+
+
+    # # Application Status
+
+
+    Now You Can See That Our Application is Live on the Azure Cloud.'
+  merge: -1
+  pgno: 138
+- img_proc: true
+  md: '# Microsoft Azure
+
+
+    # Your app is running and waiting for your content
+
+
+    Your app is live, but we don''t have your content yet. If you''ve already deployed,
+    it could take up to 5 minutes for your content to show up. Come back soon.
+
+
+    +   Supporting Node.js, Java, .NET and more
+
+
+    Never deployed yet?
+
+    Use the deployment center to publish your code or set up deployment
+
+
+    Starting a new web app?
+
+    Follow our Quickstart guide to get a web app ready in minutes
+
+
+    # The publish profile.
+
+
+    Now you need to download the publish profile for deployment of Asp.net core using
+    Visual Studio.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_139_0.png)'
+  merge: -1
+  pgno: 139
+- img_proc: true
+  md: '# We have Downloaded Our Application Publish Profile
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_140_0.png)
+
+
+    # Publish the App Using Visual Studio
+
+
+    Now we will open the visual studio and open the Auth API Project after the Right
+    click on select the Publish Option.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_140_1.png)'
+  merge: -1
+  pgno: 140
+- img_proc: true
+  md: 'A new window will be visible in front of you and you can see the we have the
+    option for Add Publish Profile. Click the button add publish profile.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_141_0.png)
+
+
+    Now you can see that we have the option for Import Profile and we will import
+    the profile that we have downloaded from the Azure App Service portal. Click the
+    Import Profile.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_141_1.png)
+
+
+    Application Deployment on Microsoft Azure Cloud
+
+
+    142'
+  merge: -1
+  pgno: 141
+- img_proc: true
+  md: '# Browse the file for Azure App Publish Profile where you have saved the file.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_142_0.png)
+
+
+    # Select the Publish Profile
+
+
+    I have selected the file from the downloads now click the button after some processing
+    visual studio will get all the information in azure profile for our Azure App.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_142_1.png)
+
+
+    Now you can see that visual studio get all the information about our Azure App
+    you can see the URL of our application.'
+  merge: -1
+  pgno: 142
+- img_proc: true
+  md: '# Deployment Status
+
+
+    Our Publication on Azure Cloud has been done. You can see the publication status
+    successful.'
+  merge: -1
+  pgno: 143
+- img_proc: true
+  md: '# Application Deployed on Azure Cloud
+
+
+    Now Hit the URL Of Azure App after URL Just Write URL OF YOUR APPLICATION/Swagger
+    You can see that all our APIS Are Now Live on Azure Cloud Using Azure service.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_144_0.png)'
+  merge: -1
+  pgno: 144
+- img_proc: true
+  md: '# 6 Application Deployment on Server
+
+
+    Overview
+
+
+    +   * Introduction
+
+    * Deployment Procedure
+
+    * Server Configuration
+
+    * Deployment Steps
+
+    * Conclusion'
+  merge: -1
+  pgno: 145
+- img_proc: true
+  md: '# Introduction
+
+
+    In this chapter, we will learn how to deploy the asp.net core 5 websites on a
+    server using visual studio 2019.
+
+
+    # Step 1 Account Setup on Server
+
+
+    The first step for deployment of asp.net core web API is to create an account
+    on the hosting provider website that supports the asp.net web application framework
+    and then follow the steps in the given chapter.
+
+
+    +   - Create a website in the hosting panel.
+
+    - Then Create the SQL Website using the Hosting Panel
+
+
+    # Step 2 Create the project asp.net Core 5 Web API using Visual Studio
+
+
+    Create the project using visual studio and select the asp.net core version .Net
+    5. Current
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_146_0.png)
+
+
+    # Give the Name of your project that you want to develop My Project is ONP (Online
+    Prescription Application)'
+  merge: -1
+  pgno: 146
+- img_proc: true
+  md: "# Step 3 Set the Live Server Database Connection string in your application\
+    \ appsettings.json file\n\n```\n{\n  \"DefaultConnection\": \"Data Source=SQL5108.site4now.net;Initial\
+    \ Catalog=YOUR ONLINE DB NAME;User Id=YOUR ONLINE DB USERNAME;Password=YOUR ONLINE\
+    \ DB PASSWORD\",\n  \"Logging\": {\n    \"LogLevel\": {\n      \"Default\": \"\
+    Information\",\n      \"Microsoft\": \"Warning\",\n      \"Microsoft.Hosting.Lifetime\"\
+    : \"Information\"\n    },\n  \"AllowedHosts\": \"*\"\n}\n```\n\n# Step 4 Publish\
+    \ Your Project\n\nAfter Creating your project and Final Testing from QA Section\
+    \ now it's time to deploy your website Now go to solution explorer in visual studio\
+    \ 2019."
+  merge: -1
+  pgno: 147
+- img_proc: true
+  md: '# Application Deployment on Server
+
+
+    Right Click on your Project and select the option to publish.
+
+
+    Click the Publish option a new window will appear now select the project publication
+    here you have 5 to 6 options given below.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_148_0.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_148_1.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_148_2.png)'
+  merge: -1
+  pgno: 148
+- img_proc: true
+  md: '# Publish
+
+
+    Where are you publishing today?
+
+
+    | Target | Description |
+
+    | :--- | :--- |
+
+    | Azure | Publish your application to the Microsoft cloud |
+
+    | Docker Container Registry | Publish your application to any supported Container
+    Registry that works with Docker images |
+
+    | Folder | Publish your application to a local folder or file share |
+
+    | FTPS Server | Publish your application to an FTP/PS server |
+
+    | Web Server (IIS) | Publish your application to IIS using Web Deploy or Web Packing
+    Service |
+
+    | Other | Import your publish settings to deploy your app |
+
+
+    Now select the option Import to import profile.
+
+
+    After Selecting the Option Import Profile click next.'
+  merge: -1
+  pgno: 149
+- img_proc: true
+  md: '![](img/ecf1b6d3def03c95166d6223c24cb862_150_0.png)
+
+
+    But question will raise in your mind how to get the publish profile login to the
+    hosting proving server that supports Asp.net core website applications and then
+    go to the deployment option and get the publish profile file and download it in
+    your local system.
+
+
+    | Password | ******** [Modify] |
+
+    | :--- | :--- |
+
+    | Publishing XML | [Get Publish Setting] |
+
+    | Fix ACL | [Fix ACL] |
+
+
+    Close
+
+
+    You all get this type of option in your control panel just get the publish profile
+    from and down that file in your system.'
+  merge: -1
+  pgno: 150
+- img_proc: true
+  md: 'Then upload the file in the visual studio using the browse option from the
+    downloaded location.
+
+
+    After Uploading the publish profile setting in the visual studio just click on
+    the Finish option and you will get given the benefit below.'
+  merge: -1
+  pgno: 151
+- img_proc: true
+  md: '# Now Click on More Actions.
+
+
+    # Click the Edit Option.'
+  merge: -1
+  pgno: 152
+- img_proc: true
+  md: '# Click On Connection.
+
+
+    All the information will automatically upload fetched from the uploaded publish
+    profile and information will automatically save in the visual studio for future
+    deployments.
+
+
+    # Step 5 Validate the Connection
+
+
+    In this step, visual studio validates the connection with the server and then
+    you can publish your application on the server.'
+  merge: -1
+  pgno: 153
+- img_proc: true
+  md: 'Now you can see that our connection has been validated from visual studio with
+    the server
+
+    now we are ready to publish the application.
+
+
+    Now Click on Next
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_154_0.png)
+
+
+    Click Save the Setting
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_154_1.png)'
+  merge: -1
+  pgno: 154
+- img_proc: true
+  md: 'Now Click on Publish
+
+
+    But before the publication just checks your application should be in release mode
+    and the Webhost environment should be in production mode.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_155_0.png)
+
+
+    Publication of the website has been started.'
+  merge: -1
+  pgno: 155
+- img_proc: true
+  md: '# Our Deployment of the website on the server has been successfully done.
+
+
+    # Now we are live on the website.'
+  merge: -1
+  pgno: 156
+- img_proc: true
+  md: '# Conclusion
+
+
+    We learned how to publish our asp.net Core web application using Visual Studio
+    in this chapter, and in the next post, we''ll learn how to deploy our application
+    using FileZilla Software FTP.
+
+
+    > "Happy Coding"'
+  merge: -1
+  pgno: 157
+- img_proc: true
+  md: '# References
+
+
+    +   1. https://www.c-sharpcorner.com/
+
+    2. https://docs.microsoft.com/en-us/
+
+    3. https://google.com/
+
+    4. https://www.castsoftware.com/
+
+    5. https://www.guru99.com/restful-web-services.html'
+  merge: -1
+  pgno: 158
+- img_proc: true
+  md: '# Feedback
+
+
+    If you want to submit your feedback regarding the book book book content or any
+    other suggestion for improvement, then scan the QR Code and submit your feedback.
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_159_0.png)'
+  merge: -1
+  pgno: 159
+- img_proc: true
+  md: '# # C#Corner
+
+
+    # OUR MISSION
+
+
+    Free Education is Our Basic Need! Our mission is to empower millions of developers
+    worldwide by providing the latest unbiased news, advice, and tools for learning,
+    sharing, and career growth. We''re passionate about nurturing the next generation
+    and help them not only to become great programmers, but also exceptional human
+    beings.
+
+
+    # ABOUT US
+
+
+    CSharp Inc., headquartered in Philadelphia, PA, is an online global community
+    of software developers. C Corner served 29.4 million visitors in 2022. We publish
+    the latest news and articles on cutting-edge software development topics. Developers
+    share their knowledge and connect with content, forums, and chapters. Thousands
+    of members benefit from our monthly events, webinars, and conferences. All conferences
+    are managed under Global Tech Conferences, a CSharp Inc sister company. We also
+    provide tools for career growth such as career advice, resume writing, training,
+    certifications, books and white-papers, and videos. We also connect developers
+    with potential employees via our Job board. Visit C# Corner
+
+
+    # MORE BOOKS
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_160_0.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_160_1.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_160_2.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_160_3.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_160_4.png)
+
+
+    ![](img/ecf1b6d3def03c95166d6223c24cb862_160_5.png)'
+  merge: -1
+  pgno: 160
